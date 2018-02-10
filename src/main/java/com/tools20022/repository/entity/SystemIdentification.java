@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice;
 import com.tools20022.repository.datatype.Max35Text;
@@ -24,9 +25,8 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Parameters that identify a system.
@@ -64,21 +64,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice
- * MarketInfrastructureIdentification1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AutomatedTellerMachine3
- * AutomatedTellerMachine3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4
- * AutomatedTellerMachine4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AutomatedTellerMachine10
- * AutomatedTellerMachine10}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -106,10 +91,25 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice
+ * MarketInfrastructureIdentification1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AutomatedTellerMachine3
+ * AutomatedTellerMachine3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4
+ * AutomatedTellerMachine4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AutomatedTellerMachine10
+ * AutomatedTellerMachine10}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -125,8 +125,8 @@ public class SystemIdentification {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected System identificationForSystem;
 	/**
-	 * System which is identified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,8 +173,8 @@ public class SystemIdentification {
 	public static final MMBusinessAssociationEnd mmIdentificationForSystem = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(AutomatedTellerMachine3.mmIdentification, AutomatedTellerMachine4.mmIdentification, AutomatedTellerMachine10.mmIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForSystem";
 			definition = "System which is identified.";
@@ -187,8 +187,8 @@ public class SystemIdentification {
 	};
 	protected Max35Text model;
 	/**
-	 * Identification of a model for a given manufacturer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,8 +225,8 @@ public class SystemIdentification {
 	public static final MMBusinessAttribute mmModel = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponent1.mmModel, PointOfInteractionComponent2.mmModel);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Model";
 			definition = "Identification of a model for a given manufacturer.";
@@ -245,8 +245,8 @@ public class SystemIdentification {
 	};
 	protected Max35Text serialNumber;
 	/**
-	 * Serial number of a component.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -286,8 +286,8 @@ public class SystemIdentification {
 	public static final MMBusinessAttribute mmSerialNumber = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponent1.mmSerialNumber, PointOfInteractionComponent2.mmSerialNumber, PointOfInteractionComponentIdentification1.mmSerialNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SerialNumber";
 			definition = "Serial number of a component.";
@@ -306,9 +306,8 @@ public class SystemIdentification {
 	};
 	protected Max70Text approvalNumber;
 	/**
-	 * Unique approval number for a component, delivered by a certification
-	 * body.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -347,8 +346,8 @@ public class SystemIdentification {
 	public static final MMBusinessAttribute mmApprovalNumber = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponent1.mmApprovalNumber, PointOfInteractionComponent2.mmApprovalNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ApprovalNumber";
 			definition = "Unique approval number for a component, delivered by a certification body.";
@@ -367,8 +366,8 @@ public class SystemIdentification {
 	};
 	protected Max35Text systemVersion;
 	/**
-	 * Version of the system, eg, "4.0.1" to indicate version 4.0.1.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -398,6 +397,17 @@ public class SystemIdentification {
 	 * {@linkplain com.tools20022.repository.entity.SystemIdentification
 	 * SystemIdentification}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=SampleData, SampleData=<?xml version="1.0"
+	 * encoding="UTF-8"?> <InstanceInfo> <key KeyValue="Sample1"/> <key
+	 * KeyValue="Sample2"/> <key KeyValue="Sample3"/> <key KeyValue="Sample4"/>
+	 * <key KeyValue="Sample5"/> <key KeyValue="Sample6"/> <key
+	 * KeyValue="Sample7"/> <key KeyValue="Sample8"/> <key KeyValue="Sample9"/>
+	 * <key KeyValue="Sample10"/> </InstanceInfo>
+	 * 
+	 * 
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -413,8 +423,15 @@ public class SystemIdentification {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponent2.mmVersionNumber, PointOfInteractionComponentStatus1.mmVersionNumber, PointOfInteractionComponentStatus2.mmVersionNumber,
 					PointOfInteractionComponentStatus3.mmVersionNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
+			semanticMarkup_lazy = () -> Arrays
+					.asList(new OtherSemanticMarkup(
+							this,
+							"SampleData",
+							new String[]{
+									"SampleData",
+									"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<InstanceInfo>\n<key KeyValue=\"Sample1\"/>\n<key KeyValue=\"Sample2\"/>\n<key KeyValue=\"Sample3\"/>\n<key KeyValue=\"Sample4\"/>\n<key KeyValue=\"Sample5\"/>\n<key KeyValue=\"Sample6\"/>\n<key KeyValue=\"Sample7\"/>\n<key KeyValue=\"Sample8\"/>\n<key KeyValue=\"Sample9\"/>\n<key KeyValue=\"Sample10\"/>\n</InstanceInfo>\n\n\n"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemVersion";
 			definition = "Version of the system, eg, \"4.0.1\" to indicate version 4.0.1.";
@@ -433,8 +450,8 @@ public class SystemIdentification {
 	};
 	protected List<com.tools20022.repository.entity.SystemName> systemName;
 	/**
-	 * Name by which a system is known.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -482,8 +499,8 @@ public class SystemIdentification {
 	public static final MMBusinessAssociationEnd mmSystemName = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(AutomatedTellerMachine3.mmSequenceNumber, AutomatedTellerMachine4.mmSequenceNumber, AutomatedTellerMachine10.mmSequenceNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemName";
 			definition = "Name by which a system is known.";
@@ -495,8 +512,8 @@ public class SystemIdentification {
 	};
 	protected List<com.tools20022.repository.entity.GenericIdentification> identification;
 	/**
-	 * Identification of a system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -600,8 +617,8 @@ public class SystemIdentification {
 					CardPaymentTransaction33.mmPOIIdentification, ManagementPlan4.mmPOIIdentification, ManagementPlan4.mmTerminalManagerIdentification, CardPaymentTransaction50.mmPOIIdentification,
 					CardPaymentTransaction37.mmPOIIdentification, ManagementPlan5.mmPOIIdentification, ManagementPlan5.mmTerminalManagerIdentification, CardPaymentTransaction52.mmPOIIdentification,
 					CardPaymentTransaction65.mmPOIIdentification, ManagementPlan6.mmPOIIdentification, ManagementPlan6.mmTerminalManagerIdentification, CardPaymentTransaction73.mmPOIIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identification of a system.";
@@ -615,7 +632,7 @@ public class SystemIdentification {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemIdentification";
 				definition = "Parameters that identify a system.";
@@ -636,59 +653,66 @@ public class SystemIdentification {
 		return mmObject_lazy.get();
 	}
 
-	public System getIdentificationForSystem() {
-		return identificationForSystem;
+	public Optional<System> getIdentificationForSystem() {
+		return identificationForSystem == null ? Optional.empty() : Optional.of(identificationForSystem);
 	}
 
-	public void setIdentificationForSystem(com.tools20022.repository.entity.System identificationForSystem) {
+	public SystemIdentification setIdentificationForSystem(com.tools20022.repository.entity.System identificationForSystem) {
 		this.identificationForSystem = identificationForSystem;
+		return this;
 	}
 
 	public Max35Text getModel() {
 		return model;
 	}
 
-	public void setModel(Max35Text model) {
-		this.model = model;
+	public SystemIdentification setModel(Max35Text model) {
+		this.model = Objects.requireNonNull(model);
+		return this;
 	}
 
 	public Max35Text getSerialNumber() {
 		return serialNumber;
 	}
 
-	public void setSerialNumber(Max35Text serialNumber) {
-		this.serialNumber = serialNumber;
+	public SystemIdentification setSerialNumber(Max35Text serialNumber) {
+		this.serialNumber = Objects.requireNonNull(serialNumber);
+		return this;
 	}
 
 	public Max70Text getApprovalNumber() {
 		return approvalNumber;
 	}
 
-	public void setApprovalNumber(Max70Text approvalNumber) {
-		this.approvalNumber = approvalNumber;
+	public SystemIdentification setApprovalNumber(Max70Text approvalNumber) {
+		this.approvalNumber = Objects.requireNonNull(approvalNumber);
+		return this;
 	}
 
 	public Max35Text getSystemVersion() {
 		return systemVersion;
 	}
 
-	public void setSystemVersion(Max35Text systemVersion) {
-		this.systemVersion = systemVersion;
+	public SystemIdentification setSystemVersion(Max35Text systemVersion) {
+		this.systemVersion = Objects.requireNonNull(systemVersion);
+		return this;
 	}
 
 	public List<SystemName> getSystemName() {
-		return systemName;
+		return systemName == null ? systemName = new ArrayList<>() : systemName;
 	}
 
-	public void setSystemName(List<com.tools20022.repository.entity.SystemName> systemName) {
-		this.systemName = systemName;
+	public SystemIdentification setSystemName(List<com.tools20022.repository.entity.SystemName> systemName) {
+		this.systemName = Objects.requireNonNull(systemName);
+		return this;
 	}
 
 	public List<GenericIdentification> getIdentification() {
-		return identification;
+		return identification == null ? identification = new ArrayList<>() : identification;
 	}
 
-	public void setIdentification(List<com.tools20022.repository.entity.GenericIdentification> identification) {
-		this.identification = identification;
+	public SystemIdentification setIdentification(List<com.tools20022.repository.entity.GenericIdentification> identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 }

@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AssetClassSubProductTypeCode;
+import com.tools20022.repository.codeset.AssetClassSubProductType31Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines the sub-product of type Dry Freight.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode
- * AssetClassSubProductTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType31Code#mmDry
- * AssetClassSubProductType31Code.mmDry}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType31Code#Dry
+ * AssetClassSubProductType31Code.Dry}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode
+ * AssetClassSubProductTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,7 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the sub-product of type Dry Freight."</li>
  * </ul>
  */
-public class AssetClassSubProductType31Code extends AssetClassSubProductTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AssetClassSubProductType31Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -74,25 +79,55 @@ public class AssetClassSubProductType31Code extends AssetClassSubProductTypeCode
 	 * name} = "Dry"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDry = new MMCode() {
+	public static final AssetClassSubProductType31Code Dry = new AssetClassSubProductType31Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dry";
-			owner_lazy = () -> AssetClassSubProductType31Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductType31Code.mmObject();
+			codeName = AssetClassSubProductTypeCode.Dry.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AssetClassSubProductType31Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AssetClassSubProductType31Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductType31Code";
 				definition = "Defines the sub-product of type Dry Freight.";
-				code_lazy = () -> Arrays.asList(AssetClassSubProductType31Code.mmDry);
 				trace_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType31Code.Dry);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Dry.getCodeName().get(), Dry);
+	}
+
+	public static AssetClassSubProductType31Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AssetClassSubProductType31Code[] values() {
+		AssetClassSubProductType31Code[] values = new AssetClassSubProductType31Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AssetClassSubProductType31Code> {
+		@Override
+		public AssetClassSubProductType31Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AssetClassSubProductType31Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,16 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Account to or from which a cash entry is made."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountIdentificationDetails", propOrder = {"identification", "type"})
 public class AccountIdentificationDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected AccountIdentification1Choice identification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +114,7 @@ public class AccountIdentificationDetails {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
-			componentContext_lazy = () -> AccountIdentificationDetails.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentificationDetails.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +125,11 @@ public class AccountIdentificationDetails {
 			complexType_lazy = () -> AccountIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected CashAccountType2Code type;
 	/**
-	 * Specifies the nature, or use, of the cash account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +163,7 @@ public class AccountIdentificationDetails {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
-			componentContext_lazy = () -> AccountIdentificationDetails.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentificationDetails.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,9 +178,9 @@ public class AccountIdentificationDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountIdentificationDetails.mmIdentification, AccountIdentificationDetails.mmType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentificationDetails.mmIdentification, com.tools20022.repository.msg.AccountIdentificationDetails.mmType);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountIdentificationDetails";
 				definition = "Account to or from which a cash entry is made.";
@@ -186,21 +189,21 @@ public class AccountIdentificationDetails {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public AccountIdentification1Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(AccountIdentification1Choice identification) {
-		this.identification = identification;
+	public AccountIdentificationDetails setIdentification(AccountIdentification1Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public CashAccountType2Code getType() {
-		return type;
+	public Optional<CashAccountType2Code> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(CashAccountType2Code type) {
+	public AccountIdentificationDetails setType(CashAccountType2Code type) {
 		this.type = type;
+		return this;
 	}
 }

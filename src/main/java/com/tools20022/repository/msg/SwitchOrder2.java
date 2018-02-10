@@ -25,11 +25,9 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -45,8 +43,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SwitchOrder2#mmCashInOrCashOutRule
- * SwitchOrder2.mmCashInOrCashOutRule}</li>
+ * {@linkplain com.tools20022.repository.msg.SwitchOrder2#CashInOrCashOutRule
+ * SwitchOrder2.CashInOrCashOutRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -106,8 +104,22 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalSubscriptionAmountRule#forSwitchOrder2
+ * ConstraintTotalSubscriptionAmountRule.forSwitchOrder2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalRedemptionAmountRule#forSwitchOrder2
+ * ConstraintTotalRedemptionAmountRule.forSwitchOrder2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintFinancialInstrumentQuantity1Rule#forSwitchOrder2
+ * ConstraintFinancialInstrumentQuantity1Rule.forSwitchOrder2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -121,16 +133,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SwitchOrder2", propOrder = {"orderDateTime", "orderReference", "investmentAccountDetails", "totalRedemptionAmount", "totalSubscriptionAmount", "expiryDateTime", "additionalCashIn", "resultingCashOut", "cancellationRight",
 		"redemptionLegDetails", "subscriptionLegDetails", "cashSettlementDetails", "foreignExchangeDetails"})
 public class SwitchOrder2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrdrDtTm")
 	protected ISODateTime orderDateTime;
 	/**
-	 * Date and time at which the order was placed by the investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +176,7 @@ public class SwitchOrder2 {
 	public static final MMMessageAttribute mmOrderDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderDateTime;
-			componentContext_lazy = () -> SwitchOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,11 +187,11 @@ public class SwitchOrder2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrRef", required = true)
 	protected Max35Text orderReference;
 	/**
-	 * Unique and unambiguous identifier for an order, as assigned by the
-	 * instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -212,7 +225,7 @@ public class SwitchOrder2 {
 	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
-			componentContext_lazy = () -> SwitchOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,13 +236,11 @@ public class SwitchOrder2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	protected InvestmentAccount13 investmentAccountDetails;
 	/**
-	 * Account between an investor(s) and a fund manager or a fund. The account
-	 * can contain holdings in any investment fund or investment fund class
-	 * managed (or distributed) by the fund manager, within the same fund
-	 * family.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -262,7 +273,7 @@ public class SwitchOrder2 {
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
-			componentContext_lazy = () -> SwitchOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -274,11 +285,11 @@ public class SwitchOrder2 {
 			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount13.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlRedAmt")
 	protected ActiveOrHistoricCurrencyAndAmount totalRedemptionAmount;
 	/**
-	 * Amount of money used to derive the quantity of investment fund units to
-	 * be redeemed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -313,7 +324,7 @@ public class SwitchOrder2 {
 	public static final MMMessageAttribute mmTotalRedemptionAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmTotalRedemptionAmount;
-			componentContext_lazy = () -> SwitchOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlRedAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -324,11 +335,11 @@ public class SwitchOrder2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlSbcptAmt")
 	protected ActiveOrHistoricCurrencyAndAmount totalSubscriptionAmount;
 	/**
-	 * Amount of money used to derive the quantity of investment fund units to
-	 * be subscribed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -363,7 +374,7 @@ public class SwitchOrder2 {
 	public static final MMMessageAttribute mmTotalSubscriptionAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmTotalSubscriptionAmount;
-			componentContext_lazy = () -> SwitchOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlSbcptAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -374,10 +385,11 @@ public class SwitchOrder2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "XpryDtTm")
 	protected ISODateTime expiryDateTime;
 	/**
-	 * Date on which the order expires.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -409,7 +421,7 @@ public class SwitchOrder2 {
 	public static final MMMessageAttribute mmExpiryDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmExpiryDateTime;
-			componentContext_lazy = () -> SwitchOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -420,11 +432,11 @@ public class SwitchOrder2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlCshIn")
 	protected ActiveOrHistoricCurrencyAndAmount additionalCashIn;
 	/**
-	 * Additional amount of money paid by the investor in addition to the switch
-	 * redemption amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -459,7 +471,7 @@ public class SwitchOrder2 {
 	public static final MMMessageAttribute mmAdditionalCashIn = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmAdditionalCashIn;
-			componentContext_lazy = () -> SwitchOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlCshIn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -470,11 +482,11 @@ public class SwitchOrder2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RsltgCshOut")
 	protected ActiveOrHistoricCurrencyAndAmount resultingCashOut;
 	/**
-	 * Amount of money that results from a switch-out, that is not reinvested in
-	 * another investment fund, and is repaid to the investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -509,7 +521,7 @@ public class SwitchOrder2 {
 	public static final MMMessageAttribute mmResultingCashOut = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmResultingCashOut;
-			componentContext_lazy = () -> SwitchOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "RsltgCshOut";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -520,11 +532,11 @@ public class SwitchOrder2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CxlRght")
 	protected CancellationRight1 cancellationRight;
 	/**
-	 * Cancellation right of an investor with respect to an investment fund
-	 * order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -559,7 +571,7 @@ public class SwitchOrder2 {
 	public static final MMMessageAttribute mmCancellationRight = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmCancellationRight;
-			componentContext_lazy = () -> SwitchOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRght";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -570,10 +582,11 @@ public class SwitchOrder2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.CancellationRight1.mmObject();
 		}
 	};
+	@XmlElement(name = "RedLegDtls", required = true)
 	protected List<com.tools20022.repository.msg.SwitchRedemptionLegOrder2> redemptionLegDetails;
 	/**
-	 * Part of an investment fund switch order that is a redemption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -606,7 +619,7 @@ public class SwitchOrder2 {
 	public static final MMMessageAssociationEnd mmRedemptionLegDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmRedemptionLeg;
-			componentContext_lazy = () -> SwitchOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "RedLegDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -617,10 +630,11 @@ public class SwitchOrder2 {
 			type_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmObject();
 		}
 	};
+	@XmlElement(name = "SbcptLegDtls", required = true)
 	protected List<com.tools20022.repository.msg.SwitchSubscriptionLegOrder2> subscriptionLegDetails;
 	/**
-	 * Part of an investment fund switch order that is a subscription.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -653,7 +667,7 @@ public class SwitchOrder2 {
 	public static final MMMessageAssociationEnd mmSubscriptionLegDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmSubscriptionLeg;
-			componentContext_lazy = () -> SwitchOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptLegDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -664,10 +678,11 @@ public class SwitchOrder2 {
 			type_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmObject();
 		}
 	};
+	@XmlElement(name = "CshSttlmDtls")
 	protected PaymentTransaction20 cashSettlementDetails;
 	/**
-	 * Payment transaction resulting from the investment fund order execution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -700,7 +715,7 @@ public class SwitchOrder2 {
 	public static final MMMessageAssociationEnd mmCashSettlementDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentOffset;
-			componentContext_lazy = () -> SwitchOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "CshSttlmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -712,10 +727,11 @@ public class SwitchOrder2 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentTransaction20.mmObject();
 		}
 	};
+	@XmlElement(name = "FXDtls")
 	protected ForeignExchangeTerms5 foreignExchangeDetails;
 	/**
-	 * Information needed to process a currency exchange or conversion.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -747,7 +763,7 @@ public class SwitchOrder2 {
 	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
-			componentContext_lazy = () -> SwitchOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "FXDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -792,25 +808,29 @@ public class SwitchOrder2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmCashInOrCashOutRule = new MMXor() {
+	public static final MMXor CashInOrCashOutRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInOrCashOutRule";
 			definition = "Either AdditionalCashIn or ResultingCashOut must be present, but not both.";
-			messageComponent_lazy = () -> SwitchOrder2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(SwitchOrder2.mmAdditionalCashIn, SwitchOrder2.mmResultingCashOut);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrder2.mmAdditionalCashIn, com.tools20022.repository.msg.SwitchOrder2.mmResultingCashOut);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SwitchOrder2.mmOrderDateTime, SwitchOrder2.mmOrderReference, SwitchOrder2.mmInvestmentAccountDetails, SwitchOrder2.mmTotalRedemptionAmount, SwitchOrder2.mmTotalSubscriptionAmount,
-						SwitchOrder2.mmExpiryDateTime, SwitchOrder2.mmAdditionalCashIn, SwitchOrder2.mmResultingCashOut, SwitchOrder2.mmCancellationRight, SwitchOrder2.mmRedemptionLegDetails, SwitchOrder2.mmSubscriptionLegDetails,
-						SwitchOrder2.mmCashSettlementDetails, SwitchOrder2.mmForeignExchangeDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrder2.mmOrderDateTime, com.tools20022.repository.msg.SwitchOrder2.mmOrderReference,
+						com.tools20022.repository.msg.SwitchOrder2.mmInvestmentAccountDetails, com.tools20022.repository.msg.SwitchOrder2.mmTotalRedemptionAmount, com.tools20022.repository.msg.SwitchOrder2.mmTotalSubscriptionAmount,
+						com.tools20022.repository.msg.SwitchOrder2.mmExpiryDateTime, com.tools20022.repository.msg.SwitchOrder2.mmAdditionalCashIn, com.tools20022.repository.msg.SwitchOrder2.mmResultingCashOut,
+						com.tools20022.repository.msg.SwitchOrder2.mmCancellationRight, com.tools20022.repository.msg.SwitchOrder2.mmRedemptionLegDetails, com.tools20022.repository.msg.SwitchOrder2.mmSubscriptionLegDetails,
+						com.tools20022.repository.msg.SwitchOrder2.mmCashSettlementDetails, com.tools20022.repository.msg.SwitchOrder2.mmForeignExchangeDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SwitchOrderV02.mmSwitchOrderDetails);
 				trace_lazy = () -> SwitchOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalSubscriptionAmountRule.forSwitchOrder2, com.tools20022.repository.constraints.ConstraintTotalRedemptionAmountRule.forSwitchOrder2,
+						com.tools20022.repository.constraints.ConstraintFinancialInstrumentQuantity1Rule.forSwitchOrder2);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -821,126 +841,126 @@ public class SwitchOrder2 {
 				})).get();
 				name = "SwitchOrder2";
 				definition = "Transfer from one investment fund/fund class to another investment fund or investment fund class by the investor. A switch is composed of one or several subscription legs, and one or several redemption legs.";
-				xors_lazy = () -> Arrays.asList(SwitchOrder2.mmCashInOrCashOutRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrder2.CashInOrCashOutRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrdrDtTm")
-	public ISODateTime getOrderDateTime() {
-		return orderDateTime;
+	public Optional<ISODateTime> getOrderDateTime() {
+		return orderDateTime == null ? Optional.empty() : Optional.of(orderDateTime);
 	}
 
-	public void setOrderDateTime(ISODateTime orderDateTime) {
+	public SwitchOrder2 setOrderDateTime(ISODateTime orderDateTime) {
 		this.orderDateTime = orderDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
 
-	public void setOrderReference(Max35Text orderReference) {
-		this.orderReference = orderReference;
+	public SwitchOrder2 setOrderReference(Max35Text orderReference) {
+		this.orderReference = Objects.requireNonNull(orderReference);
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	public InvestmentAccount13 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
 
-	public void setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount13 investmentAccountDetails) {
-		this.investmentAccountDetails = investmentAccountDetails;
+	public SwitchOrder2 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount13 investmentAccountDetails) {
+		this.investmentAccountDetails = Objects.requireNonNull(investmentAccountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "TtlRedAmt")
-	public ActiveOrHistoricCurrencyAndAmount getTotalRedemptionAmount() {
-		return totalRedemptionAmount;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getTotalRedemptionAmount() {
+		return totalRedemptionAmount == null ? Optional.empty() : Optional.of(totalRedemptionAmount);
 	}
 
-	public void setTotalRedemptionAmount(ActiveOrHistoricCurrencyAndAmount totalRedemptionAmount) {
+	public SwitchOrder2 setTotalRedemptionAmount(ActiveOrHistoricCurrencyAndAmount totalRedemptionAmount) {
 		this.totalRedemptionAmount = totalRedemptionAmount;
+		return this;
 	}
 
-	@XmlElement(name = "TtlSbcptAmt")
-	public ActiveOrHistoricCurrencyAndAmount getTotalSubscriptionAmount() {
-		return totalSubscriptionAmount;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getTotalSubscriptionAmount() {
+		return totalSubscriptionAmount == null ? Optional.empty() : Optional.of(totalSubscriptionAmount);
 	}
 
-	public void setTotalSubscriptionAmount(ActiveOrHistoricCurrencyAndAmount totalSubscriptionAmount) {
+	public SwitchOrder2 setTotalSubscriptionAmount(ActiveOrHistoricCurrencyAndAmount totalSubscriptionAmount) {
 		this.totalSubscriptionAmount = totalSubscriptionAmount;
+		return this;
 	}
 
-	@XmlElement(name = "XpryDtTm")
-	public ISODateTime getExpiryDateTime() {
-		return expiryDateTime;
+	public Optional<ISODateTime> getExpiryDateTime() {
+		return expiryDateTime == null ? Optional.empty() : Optional.of(expiryDateTime);
 	}
 
-	public void setExpiryDateTime(ISODateTime expiryDateTime) {
+	public SwitchOrder2 setExpiryDateTime(ISODateTime expiryDateTime) {
 		this.expiryDateTime = expiryDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlCshIn")
-	public ActiveOrHistoricCurrencyAndAmount getAdditionalCashIn() {
-		return additionalCashIn;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getAdditionalCashIn() {
+		return additionalCashIn == null ? Optional.empty() : Optional.of(additionalCashIn);
 	}
 
-	public void setAdditionalCashIn(ActiveOrHistoricCurrencyAndAmount additionalCashIn) {
+	public SwitchOrder2 setAdditionalCashIn(ActiveOrHistoricCurrencyAndAmount additionalCashIn) {
 		this.additionalCashIn = additionalCashIn;
+		return this;
 	}
 
-	@XmlElement(name = "RsltgCshOut")
-	public ActiveOrHistoricCurrencyAndAmount getResultingCashOut() {
-		return resultingCashOut;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getResultingCashOut() {
+		return resultingCashOut == null ? Optional.empty() : Optional.of(resultingCashOut);
 	}
 
-	public void setResultingCashOut(ActiveOrHistoricCurrencyAndAmount resultingCashOut) {
+	public SwitchOrder2 setResultingCashOut(ActiveOrHistoricCurrencyAndAmount resultingCashOut) {
 		this.resultingCashOut = resultingCashOut;
+		return this;
 	}
 
-	@XmlElement(name = "CxlRght")
-	public CancellationRight1 getCancellationRight() {
-		return cancellationRight;
+	public Optional<CancellationRight1> getCancellationRight() {
+		return cancellationRight == null ? Optional.empty() : Optional.of(cancellationRight);
 	}
 
-	public void setCancellationRight(com.tools20022.repository.msg.CancellationRight1 cancellationRight) {
+	public SwitchOrder2 setCancellationRight(com.tools20022.repository.msg.CancellationRight1 cancellationRight) {
 		this.cancellationRight = cancellationRight;
+		return this;
 	}
 
-	@XmlElement(name = "RedLegDtls", required = true)
 	public List<SwitchRedemptionLegOrder2> getRedemptionLegDetails() {
-		return redemptionLegDetails;
+		return redemptionLegDetails == null ? redemptionLegDetails = new ArrayList<>() : redemptionLegDetails;
 	}
 
-	public void setRedemptionLegDetails(List<com.tools20022.repository.msg.SwitchRedemptionLegOrder2> redemptionLegDetails) {
-		this.redemptionLegDetails = redemptionLegDetails;
+	public SwitchOrder2 setRedemptionLegDetails(List<com.tools20022.repository.msg.SwitchRedemptionLegOrder2> redemptionLegDetails) {
+		this.redemptionLegDetails = Objects.requireNonNull(redemptionLegDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SbcptLegDtls", required = true)
 	public List<SwitchSubscriptionLegOrder2> getSubscriptionLegDetails() {
-		return subscriptionLegDetails;
+		return subscriptionLegDetails == null ? subscriptionLegDetails = new ArrayList<>() : subscriptionLegDetails;
 	}
 
-	public void setSubscriptionLegDetails(List<com.tools20022.repository.msg.SwitchSubscriptionLegOrder2> subscriptionLegDetails) {
-		this.subscriptionLegDetails = subscriptionLegDetails;
+	public SwitchOrder2 setSubscriptionLegDetails(List<com.tools20022.repository.msg.SwitchSubscriptionLegOrder2> subscriptionLegDetails) {
+		this.subscriptionLegDetails = Objects.requireNonNull(subscriptionLegDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CshSttlmDtls")
-	public PaymentTransaction20 getCashSettlementDetails() {
-		return cashSettlementDetails;
+	public Optional<PaymentTransaction20> getCashSettlementDetails() {
+		return cashSettlementDetails == null ? Optional.empty() : Optional.of(cashSettlementDetails);
 	}
 
-	public void setCashSettlementDetails(com.tools20022.repository.msg.PaymentTransaction20 cashSettlementDetails) {
+	public SwitchOrder2 setCashSettlementDetails(com.tools20022.repository.msg.PaymentTransaction20 cashSettlementDetails) {
 		this.cashSettlementDetails = cashSettlementDetails;
+		return this;
 	}
 
-	@XmlElement(name = "FXDtls")
-	public ForeignExchangeTerms5 getForeignExchangeDetails() {
-		return foreignExchangeDetails;
+	public Optional<ForeignExchangeTerms5> getForeignExchangeDetails() {
+		return foreignExchangeDetails == null ? Optional.empty() : Optional.of(foreignExchangeDetails);
 	}
 
-	public void setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms5 foreignExchangeDetails) {
+	public SwitchOrder2 setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms5 foreignExchangeDetails) {
 		this.foreignExchangeDetails = foreignExchangeDetails;
+		return this;
 	}
 }

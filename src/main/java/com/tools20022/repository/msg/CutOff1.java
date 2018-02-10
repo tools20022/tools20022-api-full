@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.SystemEventInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Information that describes a netting cut off held at a central system."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CutOff1", propOrder = {"cutOffUpdateIdentification", "currency", "cutOffTime", "valueDateOffset"})
 public class CutOff1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CutOffUpdId", required = true)
 	protected Max35Text cutOffUpdateIdentification;
 	/**
-	 * Identification for the updated netting cut off.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +116,7 @@ public class CutOff1 {
 	public static final MMMessageAttribute mmCutOffUpdateIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SystemEventInformation.mmObject();
-			componentContext_lazy = () -> CutOff1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CutOff1.mmObject();
 			isDerived = false;
 			xmlTag = "CutOffUpdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +127,11 @@ public class CutOff1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy", required = true)
 	protected ActiveCurrencyCode currency;
 	/**
-	 * Currency linked to the netting cut off.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +164,7 @@ public class CutOff1 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
-			componentContext_lazy = () -> CutOff1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CutOff1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,10 +175,11 @@ public class CutOff1 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CutOffTm", required = true)
 	protected ISOTime cutOffTime;
 	/**
-	 * Cut off time value for the netting cut off.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -207,7 +211,7 @@ public class CutOff1 {
 	public static final MMMessageAttribute mmCutOffTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemEventInformation.mmTime;
-			componentContext_lazy = () -> CutOff1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CutOff1.mmObject();
 			isDerived = false;
 			xmlTag = "CutOffTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,11 +222,11 @@ public class CutOff1 {
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
+	@XmlElement(name = "ValDtOffset", required = true)
 	protected DateOffsetText valueDateOffset;
 	/**
-	 * Specifies the offset in business days from the value date from which the
-	 * netting cut off is to be applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,7 +255,7 @@ public class CutOff1 {
 	 */
 	public static final MMMessageAttribute mmValueDateOffset = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CutOff1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CutOff1.mmObject();
 			isDerived = false;
 			xmlTag = "ValDtOffset";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,9 +270,10 @@ public class CutOff1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CutOff1.mmCutOffUpdateIdentification, CutOff1.mmCurrency, CutOff1.mmCutOffTime, CutOff1.mmValueDateOffset);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CutOff1.mmCutOffUpdateIdentification, com.tools20022.repository.msg.CutOff1.mmCurrency, com.tools20022.repository.msg.CutOff1.mmCutOffTime,
+						com.tools20022.repository.msg.CutOff1.mmValueDateOffset);
 				trace_lazy = () -> SystemAvailability.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CutOff1";
 				definition = "Information that describes a netting cut off held at a central system.";
@@ -277,39 +282,39 @@ public class CutOff1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CutOffUpdId", required = true)
 	public Max35Text getCutOffUpdateIdentification() {
 		return cutOffUpdateIdentification;
 	}
 
-	public void setCutOffUpdateIdentification(Max35Text cutOffUpdateIdentification) {
-		this.cutOffUpdateIdentification = cutOffUpdateIdentification;
+	public CutOff1 setCutOffUpdateIdentification(Max35Text cutOffUpdateIdentification) {
+		this.cutOffUpdateIdentification = Objects.requireNonNull(cutOffUpdateIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Ccy", required = true)
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
 
-	public void setCurrency(ActiveCurrencyCode currency) {
-		this.currency = currency;
+	public CutOff1 setCurrency(ActiveCurrencyCode currency) {
+		this.currency = Objects.requireNonNull(currency);
+		return this;
 	}
 
-	@XmlElement(name = "CutOffTm", required = true)
 	public ISOTime getCutOffTime() {
 		return cutOffTime;
 	}
 
-	public void setCutOffTime(ISOTime cutOffTime) {
-		this.cutOffTime = cutOffTime;
+	public CutOff1 setCutOffTime(ISOTime cutOffTime) {
+		this.cutOffTime = Objects.requireNonNull(cutOffTime);
+		return this;
 	}
 
-	@XmlElement(name = "ValDtOffset", required = true)
 	public DateOffsetText getValueDateOffset() {
 		return valueDateOffset;
 	}
 
-	public void setValueDateOffset(DateOffsetText valueDateOffset) {
-		this.valueDateOffset = valueDateOffset;
+	public CutOff1 setValueDateOffset(DateOffsetText valueDateOffset) {
+		this.valueDateOffset = Objects.requireNonNull(valueDateOffset);
+		return this;
 	}
 }

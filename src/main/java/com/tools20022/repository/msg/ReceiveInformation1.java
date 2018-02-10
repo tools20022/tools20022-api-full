@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +70,22 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule#forReceiveInformation1
+ * ConstraintPhysicalTransferDetailsRule.forReceiveInformation1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceiveInformation1
+ * ConstraintReceiversCustodianDetailsRule.forReceiveInformation1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversIntermediaryDetailsRule#forReceiveInformation1
+ * ConstraintReceiversIntermediaryDetailsRule.forReceiveInformation1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +96,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Parameters applied to the settlement of a security transfer."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReceiveInformation1", propOrder = {"settlementPartiesDetails", "physicalTransferIndicator", "physicalTransferDetails"})
 public class ReceiveInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SttlmPtiesDtls", required = true)
 	protected ReceivingPartiesAndAccount1 settlementPartiesDetails;
 	/**
-	 * Chain of parties involved in the settlement of a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -122,7 +139,7 @@ public class ReceiveInformation1 {
 	public static final MMMessageAssociationEnd mmSettlementPartiesDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
-			componentContext_lazy = () -> ReceiveInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReceiveInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPtiesDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +151,11 @@ public class ReceiveInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount1.mmObject();
 		}
 	};
+	@XmlElement(name = "PhysTrfInd", required = true)
 	protected YesNoIndicator physicalTransferIndicator;
 	/**
-	 * Indicates whether the financial instrument is to be physically delivered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +191,7 @@ public class ReceiveInformation1 {
 	public static final MMMessageAttribute mmPhysicalTransferIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
-			componentContext_lazy = () -> ReceiveInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReceiveInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PhysTrfInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,10 +202,11 @@ public class ReceiveInformation1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PhysTrfDtls")
 	protected DeliveryParameters2 physicalTransferDetails;
 	/**
-	 * Parameters of a physical delivery.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -219,7 +238,7 @@ public class ReceiveInformation1 {
 	public static final MMMessageAssociationEnd mmPhysicalTransferDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
-			componentContext_lazy = () -> ReceiveInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReceiveInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PhysTrfDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -235,10 +254,13 @@ public class ReceiveInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReceiveInformation1.mmSettlementPartiesDetails, ReceiveInformation1.mmPhysicalTransferIndicator, ReceiveInformation1.mmPhysicalTransferDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiveInformation1.mmSettlementPartiesDetails, com.tools20022.repository.msg.ReceiveInformation1.mmPhysicalTransferIndicator,
+						com.tools20022.repository.msg.ReceiveInformation1.mmPhysicalTransferDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(TransferOutInstruction.mmSettlementDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule.forReceiveInformation1,
+						com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceiveInformation1, com.tools20022.repository.constraints.ConstraintReceiversIntermediaryDetailsRule.forReceiveInformation1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReceiveInformation1";
 				definition = "Parameters applied to the settlement of a security transfer.";
@@ -247,30 +269,30 @@ public class ReceiveInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SttlmPtiesDtls", required = true)
 	public ReceivingPartiesAndAccount1 getSettlementPartiesDetails() {
 		return settlementPartiesDetails;
 	}
 
-	public void setSettlementPartiesDetails(com.tools20022.repository.msg.ReceivingPartiesAndAccount1 settlementPartiesDetails) {
-		this.settlementPartiesDetails = settlementPartiesDetails;
+	public ReceiveInformation1 setSettlementPartiesDetails(com.tools20022.repository.msg.ReceivingPartiesAndAccount1 settlementPartiesDetails) {
+		this.settlementPartiesDetails = Objects.requireNonNull(settlementPartiesDetails);
+		return this;
 	}
 
-	@XmlElement(name = "PhysTrfInd", required = true)
 	public YesNoIndicator getPhysicalTransferIndicator() {
 		return physicalTransferIndicator;
 	}
 
-	public void setPhysicalTransferIndicator(YesNoIndicator physicalTransferIndicator) {
-		this.physicalTransferIndicator = physicalTransferIndicator;
+	public ReceiveInformation1 setPhysicalTransferIndicator(YesNoIndicator physicalTransferIndicator) {
+		this.physicalTransferIndicator = Objects.requireNonNull(physicalTransferIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "PhysTrfDtls")
-	public DeliveryParameters2 getPhysicalTransferDetails() {
-		return physicalTransferDetails;
+	public Optional<DeliveryParameters2> getPhysicalTransferDetails() {
+		return physicalTransferDetails == null ? Optional.empty() : Optional.of(physicalTransferDetails);
 	}
 
-	public void setPhysicalTransferDetails(com.tools20022.repository.msg.DeliveryParameters2 physicalTransferDetails) {
+	public ReceiveInformation1 setPhysicalTransferDetails(com.tools20022.repository.msg.DeliveryParameters2 physicalTransferDetails) {
 		this.physicalTransferDetails = physicalTransferDetails;
+		return this;
 	}
 }

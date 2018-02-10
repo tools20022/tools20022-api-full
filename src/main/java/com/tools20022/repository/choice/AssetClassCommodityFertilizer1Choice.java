@@ -25,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Defines commodity attributes of a derivative where the type is fertilizer."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AssetClassCommodityFertilizer1Choice", propOrder = {"ammonia", "diammoniumPhosphate", "potash", "sulphur", "urea", "ureaAndAmmoniumNitrate"})
 public class AssetClassCommodityFertilizer1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ammn", required = true)
 	protected FertilizerCommodityAmmonia1 ammonia;
 	/**
-	 * Ammonia fertilizer commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -118,7 +120,7 @@ public class AssetClassCommodityFertilizer1Choice {
 	public static final MMMessageAssociationEnd mmAmmonia = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
-			componentContext_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ammn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +132,11 @@ public class AssetClassCommodityFertilizer1Choice {
 			type_lazy = () -> FertilizerCommodityAmmonia1.mmObject();
 		}
 	};
+	@XmlElement(name = "DmmnmPhspht", required = true)
 	protected FertilizerCommodityDiammoniumPhosphate1 diammoniumPhosphate;
 	/**
-	 * Diammonium phosphate fertilizer commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -166,7 +169,7 @@ public class AssetClassCommodityFertilizer1Choice {
 	public static final MMMessageAssociationEnd mmDiammoniumPhosphate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DmmnmPhspht";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +181,11 @@ public class AssetClassCommodityFertilizer1Choice {
 			type_lazy = () -> FertilizerCommodityDiammoniumPhosphate1.mmObject();
 		}
 	};
+	@XmlElement(name = "Ptsh", required = true)
 	protected FertilizerCommodityPotash1 potash;
 	/**
-	 * Potash fertilizer commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -214,7 +218,7 @@ public class AssetClassCommodityFertilizer1Choice {
 	public static final MMMessageAssociationEnd mmPotash = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ptsh";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,10 +230,11 @@ public class AssetClassCommodityFertilizer1Choice {
 			type_lazy = () -> FertilizerCommodityPotash1.mmObject();
 		}
 	};
+	@XmlElement(name = "Slphr", required = true)
 	protected FertilizerCommoditySulphur1 sulphur;
 	/**
-	 * Sulphur fertilizer commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -262,7 +267,7 @@ public class AssetClassCommodityFertilizer1Choice {
 	public static final MMMessageAssociationEnd mmSulphur = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Slphr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -274,10 +279,11 @@ public class AssetClassCommodityFertilizer1Choice {
 			type_lazy = () -> FertilizerCommoditySulphur1.mmObject();
 		}
 	};
+	@XmlElement(name = "Urea", required = true)
 	protected FertilizerCommodityUrea1 urea;
 	/**
-	 * Urea fertilizer commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -310,7 +316,7 @@ public class AssetClassCommodityFertilizer1Choice {
 	public static final MMMessageAssociationEnd mmUrea = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Urea";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -322,10 +328,11 @@ public class AssetClassCommodityFertilizer1Choice {
 			type_lazy = () -> FertilizerCommodityUrea1.mmObject();
 		}
 	};
+	@XmlElement(name = "UreaAndAmmnmNtrt", required = true)
 	protected FertilizerCommodityUreaAndAmmoniumNitrate1 ureaAndAmmoniumNitrate;
 	/**
-	 * Urea and ammonium nitrate fertilizer commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -359,7 +366,7 @@ public class AssetClassCommodityFertilizer1Choice {
 	public static final MMMessageAssociationEnd mmUreaAndAmmoniumNitrate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UreaAndAmmnmNtrt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -375,10 +382,11 @@ public class AssetClassCommodityFertilizer1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AssetClassCommodityFertilizer1Choice.mmAmmonia, AssetClassCommodityFertilizer1Choice.mmDiammoniumPhosphate, AssetClassCommodityFertilizer1Choice.mmPotash,
-						AssetClassCommodityFertilizer1Choice.mmSulphur, AssetClassCommodityFertilizer1Choice.mmUrea, AssetClassCommodityFertilizer1Choice.mmUreaAndAmmoniumNitrate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmAmmonia, com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmDiammoniumPhosphate,
+						com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmPotash, com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmSulphur,
+						com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmUrea, com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmUreaAndAmmoniumNitrate);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityFertilizer1Choice";
 				definition = "Defines commodity attributes of a derivative where the type is fertilizer.";
@@ -387,57 +395,57 @@ public class AssetClassCommodityFertilizer1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ammn", required = true)
 	public FertilizerCommodityAmmonia1 getAmmonia() {
 		return ammonia;
 	}
 
-	public void setAmmonia(FertilizerCommodityAmmonia1 ammonia) {
-		this.ammonia = ammonia;
+	public AssetClassCommodityFertilizer1Choice setAmmonia(FertilizerCommodityAmmonia1 ammonia) {
+		this.ammonia = Objects.requireNonNull(ammonia);
+		return this;
 	}
 
-	@XmlElement(name = "DmmnmPhspht", required = true)
 	public FertilizerCommodityDiammoniumPhosphate1 getDiammoniumPhosphate() {
 		return diammoniumPhosphate;
 	}
 
-	public void setDiammoniumPhosphate(FertilizerCommodityDiammoniumPhosphate1 diammoniumPhosphate) {
-		this.diammoniumPhosphate = diammoniumPhosphate;
+	public AssetClassCommodityFertilizer1Choice setDiammoniumPhosphate(FertilizerCommodityDiammoniumPhosphate1 diammoniumPhosphate) {
+		this.diammoniumPhosphate = Objects.requireNonNull(diammoniumPhosphate);
+		return this;
 	}
 
-	@XmlElement(name = "Ptsh", required = true)
 	public FertilizerCommodityPotash1 getPotash() {
 		return potash;
 	}
 
-	public void setPotash(FertilizerCommodityPotash1 potash) {
-		this.potash = potash;
+	public AssetClassCommodityFertilizer1Choice setPotash(FertilizerCommodityPotash1 potash) {
+		this.potash = Objects.requireNonNull(potash);
+		return this;
 	}
 
-	@XmlElement(name = "Slphr", required = true)
 	public FertilizerCommoditySulphur1 getSulphur() {
 		return sulphur;
 	}
 
-	public void setSulphur(FertilizerCommoditySulphur1 sulphur) {
-		this.sulphur = sulphur;
+	public AssetClassCommodityFertilizer1Choice setSulphur(FertilizerCommoditySulphur1 sulphur) {
+		this.sulphur = Objects.requireNonNull(sulphur);
+		return this;
 	}
 
-	@XmlElement(name = "Urea", required = true)
 	public FertilizerCommodityUrea1 getUrea() {
 		return urea;
 	}
 
-	public void setUrea(FertilizerCommodityUrea1 urea) {
-		this.urea = urea;
+	public AssetClassCommodityFertilizer1Choice setUrea(FertilizerCommodityUrea1 urea) {
+		this.urea = Objects.requireNonNull(urea);
+		return this;
 	}
 
-	@XmlElement(name = "UreaAndAmmnmNtrt", required = true)
 	public FertilizerCommodityUreaAndAmmoniumNitrate1 getUreaAndAmmoniumNitrate() {
 		return ureaAndAmmoniumNitrate;
 	}
 
-	public void setUreaAndAmmoniumNitrate(FertilizerCommodityUreaAndAmmoniumNitrate1 ureaAndAmmoniumNitrate) {
-		this.ureaAndAmmoniumNitrate = ureaAndAmmoniumNitrate;
+	public AssetClassCommodityFertilizer1Choice setUreaAndAmmoniumNitrate(FertilizerCommodityUreaAndAmmoniumNitrate1 ureaAndAmmoniumNitrate) {
+		this.ureaAndAmmoniumNitrate = Objects.requireNonNull(ureaAndAmmoniumNitrate);
+		return this;
 	}
 }

@@ -26,9 +26,8 @@ import com.tools20022.repository.choice.PartyIdentification36Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -67,20 +66,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
- * SecuritiesManagementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SctiesTxPdgRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -105,9 +90,40 @@ import javax.xml.bind.annotation.*;
  * SecuritiesTransactionPendingReportV02.mmTransactions}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SctiesTxPdgRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
+ * SecuritiesManagementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code semt.018.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesTransactionPendingReportV02
+ * ConstraintCoexistenceCharacterSetXRule.
+ * forSecuritiesTransactionPendingReportV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesTransactionPendingReportV02
+ * ConstraintCoexistenceIdentificationRule.
+ * forSecuritiesTransactionPendingReportV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionPendingReportV02
+ * ConstraintSecuritiesMarketPracticeGroupGuideline.
+ * forSecuritiesTransactionPendingReportV02}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -132,17 +148,16 @@ import javax.xml.bind.annotation.*;
  * SecuritiesTransactionPendingReportV01}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesTransactionPendingReportV02", propOrder = {"pagination", "statementGeneralDetails", "accountOwner", "safekeepingAccount", "status", "transactions"})
 public class SecuritiesTransactionPendingReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pgntn", required = true)
 	protected Pagination pagination;
 	/**
-	 * Page number of the message (within a statement) and continuation
-	 * indicator to indicate that the statement is to continue or that the
-	 * message is the last page of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,10 +198,11 @@ public class SecuritiesTransactionPendingReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "StmtGnlDtls", required = true)
 	protected Statement14 statementGeneralDetails;
 	/**
-	 * Provides general information on the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,10 +241,11 @@ public class SecuritiesTransactionPendingReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification36Choice accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -268,10 +285,11 @@ public class SecuritiesTransactionPendingReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SfkpgAcct", required = true)
 	protected SecuritiesAccount13 safekeepingAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -311,10 +329,11 @@ public class SecuritiesTransactionPendingReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Sts")
 	protected List<StatusAndReason7> status;
 	/**
-	 * Status information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -353,10 +372,11 @@ public class SecuritiesTransactionPendingReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Txs")
 	protected List<Transaction12> transactions;
 	/**
-	 * Details of the transactions reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -398,6 +418,9 @@ public class SecuritiesTransactionPendingReportV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesTransactionPendingReportV02,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTransactionPendingReportV02,
+						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionPendingReportV02";
 				definition = "Scope\r\nAn account servicer sends a SecuritiesTransactionPendingReport to an account owner to provide, as at a specified time, the details of pending increases and decreases of holdings, for all or selected securities in a specified safekeeping account, for all or selected reasons why the transaction is pending.\r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\r\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or\r\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\r\nUsage\r\nThe statement may also include future settlement or forward transactions which have become binding on the account owner.\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate).\r\nusing the relevant elements in the Business Application Header.\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
@@ -429,61 +452,61 @@ public class SecuritiesTransactionPendingReportV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
 
-	public void setPagination(Pagination pagination) {
-		this.pagination = pagination;
+	public SecuritiesTransactionPendingReportV02 setPagination(Pagination pagination) {
+		this.pagination = Objects.requireNonNull(pagination);
+		return this;
 	}
 
-	@XmlElement(name = "StmtGnlDtls", required = true)
 	public Statement14 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
 
-	public void setStatementGeneralDetails(Statement14 statementGeneralDetails) {
-		this.statementGeneralDetails = statementGeneralDetails;
+	public SecuritiesTransactionPendingReportV02 setStatementGeneralDetails(Statement14 statementGeneralDetails) {
+		this.statementGeneralDetails = Objects.requireNonNull(statementGeneralDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification36Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification36Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification36Choice accountOwner) {
+	public SecuritiesTransactionPendingReportV02 setAccountOwner(PartyIdentification36Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
 
-	public void setSafekeepingAccount(SecuritiesAccount13 safekeepingAccount) {
-		this.safekeepingAccount = safekeepingAccount;
+	public SecuritiesTransactionPendingReportV02 setSafekeepingAccount(SecuritiesAccount13 safekeepingAccount) {
+		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "Sts")
 	public List<StatusAndReason7> getStatus() {
-		return status;
+		return status == null ? status = new ArrayList<>() : status;
 	}
 
-	public void setStatus(List<StatusAndReason7> status) {
-		this.status = status;
+	public SecuritiesTransactionPendingReportV02 setStatus(List<StatusAndReason7> status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "Txs")
 	public List<Transaction12> getTransactions() {
-		return transactions;
+		return transactions == null ? transactions = new ArrayList<>() : transactions;
 	}
 
-	public void setTransactions(List<Transaction12> transactions) {
-		this.transactions = transactions;
+	public SecuritiesTransactionPendingReportV02 setTransactions(List<Transaction12> transactions) {
+		this.transactions = Objects.requireNonNull(transactions);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.018.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:semt.018.001.02")
 	static public class Document {
 		@XmlElement(name = "SctiesTxPdgRpt", required = true)
 		public SecuritiesTransactionPendingReportV02 messageBody;

@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ElectionTypeCode;
+import com.tools20022.repository.codeset.ElectionType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of election.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ElectionTypeCode
- * ElectionTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ElectionType1Code#mmNewElection
- * ElectionType1Code.mmNewElection}</li>
+ * {@linkplain com.tools20022.repository.codeset.ElectionType1Code#NewElection
+ * ElectionType1Code.NewElection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ElectionType1Code#mmOptionChange
- * ElectionType1Code.mmOptionChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.ElectionType1Code#OptionChange
+ * ElectionType1Code.OptionChange}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ElectionTypeCode
+ * ElectionTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of election."</li>
  * </ul>
  */
-public class ElectionType1Code extends ElectionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ElectionType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class ElectionType1Code extends ElectionTypeCode {
 	 * name} = "NewElection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNewElection = new MMCode() {
+	public static final ElectionType1Code NewElection = new ElectionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewElection";
-			owner_lazy = () -> ElectionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ElectionType1Code.mmObject();
+			codeName = ElectionTypeCode.NewElection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class ElectionType1Code extends ElectionTypeCode {
 	 * name} = "OptionChange"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOptionChange = new MMCode() {
+	public static final ElectionType1Code OptionChange = new ElectionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionChange";
-			owner_lazy = () -> ElectionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ElectionType1Code.mmObject();
+			codeName = ElectionTypeCode.OptionChange.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ElectionType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ElectionType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NEWM");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ElectionType1Code";
 				definition = "Specifies the type of election.";
-				code_lazy = () -> Arrays.asList(ElectionType1Code.mmNewElection, ElectionType1Code.mmOptionChange);
 				trace_lazy = () -> ElectionTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ElectionType1Code.NewElection, com.tools20022.repository.codeset.ElectionType1Code.OptionChange);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NewElection.getCodeName().get(), NewElection);
+		codesByName.put(OptionChange.getCodeName().get(), OptionChange);
+	}
+
+	public static ElectionType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ElectionType1Code[] values() {
+		ElectionType1Code[] values = new ElectionType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ElectionType1Code> {
+		@Override
+		public ElectionType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ElectionType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

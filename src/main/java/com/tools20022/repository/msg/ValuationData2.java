@@ -33,6 +33,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -83,8 +85,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,15 +99,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ValuationData2", propOrder = {"valuationReference", "settlementCurrency", "additionalValuationInformation", "settlementParty"})
 public class ValuationData2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ValtnRef", required = true)
 	protected Max35Text valuationReference;
 	/**
-	 * Reference to the latest trade identification of the NDF opening trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,7 +135,7 @@ public class ValuationData2 {
 	 */
 	public static final MMMessageAttribute mmValuationReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ValuationData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationData2.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,11 +146,11 @@ public class ValuationData2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmCcy")
 	protected ActiveOrHistoricCurrencyCode settlementCurrency;
 	/**
-	 * Specifies the currency in which the non deliverable trade has to be
-	 * settled ie the deliverable currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -182,7 +185,7 @@ public class ValuationData2 {
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NonDeliverableTrade.mmSettlementCurrency;
-			componentContext_lazy = () -> ValuationData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationData2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -193,11 +196,11 @@ public class ValuationData2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlValtnInf")
 	protected Max140Text additionalValuationInformation;
 	/**
-	 * Free format text that may contain information on the valuation such as
-	 * the currency, the place, the time or the source of the rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,7 +228,7 @@ public class ValuationData2 {
 	 */
 	public static final MMMessageAttribute mmAdditionalValuationInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ValuationData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationData2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlValtnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,11 +239,11 @@ public class ValuationData2 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmPty")
 	protected PartyIdentification8Choice settlementParty;
 	/**
-	 * Party through which the settlement will take place. It may contain the
-	 * BIC of a central settlement system eg CLSBUS33.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -275,7 +278,7 @@ public class ValuationData2 {
 	public static final MMMessageAttribute mmSettlementParty = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> ValuationData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationData2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -290,11 +293,12 @@ public class ValuationData2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ValuationData2.mmValuationReference, ValuationData2.mmSettlementCurrency, ValuationData2.mmAdditionalValuationInformation, ValuationData2.mmSettlementParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValuationData2.mmValuationReference, com.tools20022.repository.msg.ValuationData2.mmSettlementCurrency,
+						com.tools20022.repository.msg.ValuationData2.mmAdditionalValuationInformation, com.tools20022.repository.msg.ValuationData2.mmSettlementParty);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CreateNonDeliverableForwardValuationV02.mmValuationInformation, AmendNonDeliverableForwardValuationV02.mmValuationInformation,
 						CancelNonDeliverableForwardValuationV02.mmValuationInformation);
 				trace_lazy = () -> FixingCondition.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ValuationData2";
 				definition = "Set of data which contains the link to the opening of the non deliverable trade and supplementary information on its valuation.";
@@ -303,39 +307,39 @@ public class ValuationData2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ValtnRef", required = true)
 	public Max35Text getValuationReference() {
 		return valuationReference;
 	}
 
-	public void setValuationReference(Max35Text valuationReference) {
-		this.valuationReference = valuationReference;
+	public ValuationData2 setValuationReference(Max35Text valuationReference) {
+		this.valuationReference = Objects.requireNonNull(valuationReference);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmCcy")
-	public ActiveOrHistoricCurrencyCode getSettlementCurrency() {
-		return settlementCurrency;
+	public Optional<ActiveOrHistoricCurrencyCode> getSettlementCurrency() {
+		return settlementCurrency == null ? Optional.empty() : Optional.of(settlementCurrency);
 	}
 
-	public void setSettlementCurrency(ActiveOrHistoricCurrencyCode settlementCurrency) {
+	public ValuationData2 setSettlementCurrency(ActiveOrHistoricCurrencyCode settlementCurrency) {
 		this.settlementCurrency = settlementCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlValtnInf")
-	public Max140Text getAdditionalValuationInformation() {
-		return additionalValuationInformation;
+	public Optional<Max140Text> getAdditionalValuationInformation() {
+		return additionalValuationInformation == null ? Optional.empty() : Optional.of(additionalValuationInformation);
 	}
 
-	public void setAdditionalValuationInformation(Max140Text additionalValuationInformation) {
+	public ValuationData2 setAdditionalValuationInformation(Max140Text additionalValuationInformation) {
 		this.additionalValuationInformation = additionalValuationInformation;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmPty")
-	public PartyIdentification8Choice getSettlementParty() {
-		return settlementParty;
+	public Optional<PartyIdentification8Choice> getSettlementParty() {
+		return settlementParty == null ? Optional.empty() : Optional.of(settlementParty);
 	}
 
-	public void setSettlementParty(PartyIdentification8Choice settlementParty) {
+	public ValuationData2 setSettlementParty(PartyIdentification8Choice settlementParty) {
 		this.settlementParty = settlementParty;
+		return this;
 	}
 }

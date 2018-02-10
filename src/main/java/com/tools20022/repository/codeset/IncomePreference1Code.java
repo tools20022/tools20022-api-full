@@ -17,37 +17,44 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.IncomePreferenceCode;
+import com.tools20022.repository.codeset.IncomePreference1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the options for distribution of dividend income.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.IncomePreference1Code#Cash
+ * IncomePreference1Code.Cash}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.IncomePreference1Code#DividendReinvestment
+ * IncomePreference1Code.DividendReinvestment}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.IncomePreferenceCode
  * IncomePreferenceCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.IncomePreference1Code#mmCash
- * IncomePreference1Code.mmCash}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.IncomePreference1Code#mmDividendReinvestment
- * IncomePreference1Code.mmDividendReinvestment}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = ISO15022Synonym: :22F::CAOP</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the options for distribution of dividend income."</li>
  * </ul>
  */
-public class IncomePreference1Code extends IncomePreferenceCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class IncomePreference1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +91,12 @@ public class IncomePreference1Code extends IncomePreferenceCode {
 	 * name} = "Cash"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCash = new MMCode() {
+	public static final IncomePreference1Code Cash = new IncomePreference1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
-			owner_lazy = () -> IncomePreference1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IncomePreference1Code.mmObject();
+			codeName = IncomePreferenceCode.Cash.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +115,58 @@ public class IncomePreference1Code extends IncomePreferenceCode {
 	 * name} = "DividendReinvestment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividendReinvestment = new MMCode() {
+	public static final IncomePreference1Code DividendReinvestment = new IncomePreference1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestment";
-			owner_lazy = () -> IncomePreference1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IncomePreference1Code.mmObject();
+			codeName = IncomePreferenceCode.DividendReinvestment.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, IncomePreference1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected IncomePreference1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CAOP"));
 				example = Arrays.asList("CASH");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IncomePreference1Code";
 				definition = "Specifies the options for distribution of dividend income.";
-				code_lazy = () -> Arrays.asList(IncomePreference1Code.mmCash, IncomePreference1Code.mmDividendReinvestment);
 				trace_lazy = () -> IncomePreferenceCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IncomePreference1Code.Cash, com.tools20022.repository.codeset.IncomePreference1Code.DividendReinvestment);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Cash.getCodeName().get(), Cash);
+		codesByName.put(DividendReinvestment.getCodeName().get(), DividendReinvestment);
+	}
+
+	public static IncomePreference1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static IncomePreference1Code[] values() {
+		IncomePreference1Code[] values = new IncomePreference1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, IncomePreference1Code> {
+		@Override
+		public IncomePreference1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(IncomePreference1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

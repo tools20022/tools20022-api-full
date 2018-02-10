@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Amount of money associated with a service."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountRate1Choice", propOrder = {"amount", "rate"})
 public class AmountRate1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
-	 * Amount of money asked or paid for the charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +108,7 @@ public class AmountRate1Choice {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> AmountRate1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AmountRate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +119,11 @@ public class AmountRate1Choice {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Rate", required = true)
 	protected PercentageRate rate;
 	/**
-	 * Rate used to calculate the amount of the charge or fee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -154,7 +157,7 @@ public class AmountRate1Choice {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
-			componentContext_lazy = () -> AmountRate1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AmountRate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,9 +172,9 @@ public class AmountRate1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountRate1Choice.mmAmount, AmountRate1Choice.mmRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountRate1Choice.mmAmount, com.tools20022.repository.choice.AmountRate1Choice.mmRate);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AmountRate1Choice";
 				definition = "Amount of money associated with a service.";
@@ -180,21 +183,21 @@ public class AmountRate1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
-		this.amount = amount;
+	public AmountRate1Choice setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
 
-	public void setRate(PercentageRate rate) {
-		this.rate = rate;
+	public AmountRate1Choice setRate(PercentageRate rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.InterestRequestSequenceCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates whether the interest request is new or updated.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestRequestSequenceCode#mmInitial
- * InterestRequestSequenceCode.mmInitial}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestRequestSequenceCode#Initial
+ * InterestRequestSequenceCode.Initial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestRequestSequenceCode#mmUpdated
- * InterestRequestSequenceCode.mmUpdated}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestRequestSequenceCode#Updated
+ * InterestRequestSequenceCode.Updated}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates whether the interest request is new or updated."</li>
  * </ul>
  */
-public class InterestRequestSequenceCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InterestRequestSequenceCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,12 +98,12 @@ public class InterestRequestSequenceCode {
 	 * definition} = "Indicates this is a new interest payment request."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInitial = new MMCode() {
+	public static final InterestRequestSequenceCode Initial = new InterestRequestSequenceCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initial";
 			definition = "Indicates this is a new interest payment request.";
-			owner_lazy = () -> InterestRequestSequenceCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InterestRequestSequenceCode.mmObject();
 			codeName = "INIT";
 		}
 	};
@@ -122,28 +128,58 @@ public class InterestRequestSequenceCode {
 	 * definition} = "Indicates this is an updated interest payement request."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUpdated = new MMCode() {
+	public static final InterestRequestSequenceCode Updated = new InterestRequestSequenceCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Updated";
 			definition = "Indicates this is an updated interest payement request.";
-			owner_lazy = () -> InterestRequestSequenceCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InterestRequestSequenceCode.mmObject();
 			codeName = "UPDA";
 		}
 	};
+	final static private LinkedHashMap<String, InterestRequestSequenceCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InterestRequestSequenceCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("INIT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestRequestSequenceCode";
 				definition = "Indicates whether the interest request is new or updated.";
-				code_lazy = () -> Arrays.asList(InterestRequestSequenceCode.mmInitial, InterestRequestSequenceCode.mmUpdated);
 				derivation_lazy = () -> Arrays.asList(InterestRequestSequence1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestRequestSequenceCode.Initial, com.tools20022.repository.codeset.InterestRequestSequenceCode.Updated);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Initial.getCodeName().get(), Initial);
+		codesByName.put(Updated.getCodeName().get(), Updated);
+	}
+
+	public static InterestRequestSequenceCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InterestRequestSequenceCode[] values() {
+		InterestRequestSequenceCode[] values = new InterestRequestSequenceCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InterestRequestSequenceCode> {
+		@Override
+		public InterestRequestSequenceCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InterestRequestSequenceCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

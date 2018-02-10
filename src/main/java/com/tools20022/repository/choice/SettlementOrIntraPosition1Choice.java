@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.IntraPosition4;
 import com.tools20022.repository.msg.TransactionDetails52;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Choice between the intra-position movement or the settlement transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementOrIntraPosition1Choice", propOrder = {"intraPositionMovement", "settlementTransaction"})
 public class SettlementOrIntraPosition1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IntraPosMvmnt", required = true)
 	protected IntraPosition4 intraPositionMovement;
 	/**
-	 * Specifies the requested intra-position movement details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -97,7 +99,7 @@ public class SettlementOrIntraPosition1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmIntraPositionMovement = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementOrIntraPosition1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementOrIntraPosition1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntraPosMvmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,10 +111,11 @@ public class SettlementOrIntraPosition1Choice {
 			type_lazy = () -> IntraPosition4.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmTx", required = true)
 	protected TransactionDetails52 settlementTransaction;
 	/**
-	 * Specifies the requested settlement transaction details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -138,7 +141,7 @@ public class SettlementOrIntraPosition1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementOrIntraPosition1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementOrIntraPosition1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,8 +157,8 @@ public class SettlementOrIntraPosition1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementOrIntraPosition1Choice.mmIntraPositionMovement, SettlementOrIntraPosition1Choice.mmSettlementTransaction);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementOrIntraPosition1Choice.mmIntraPositionMovement, com.tools20022.repository.choice.SettlementOrIntraPosition1Choice.mmSettlementTransaction);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementOrIntraPosition1Choice";
 				definition = "Choice between the intra-position movement or the settlement transaction.";
@@ -164,21 +167,21 @@ public class SettlementOrIntraPosition1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IntraPosMvmnt", required = true)
 	public IntraPosition4 getIntraPositionMovement() {
 		return intraPositionMovement;
 	}
 
-	public void setIntraPositionMovement(IntraPosition4 intraPositionMovement) {
-		this.intraPositionMovement = intraPositionMovement;
+	public SettlementOrIntraPosition1Choice setIntraPositionMovement(IntraPosition4 intraPositionMovement) {
+		this.intraPositionMovement = Objects.requireNonNull(intraPositionMovement);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmTx", required = true)
 	public TransactionDetails52 getSettlementTransaction() {
 		return settlementTransaction;
 	}
 
-	public void setSettlementTransaction(TransactionDetails52 settlementTransaction) {
-		this.settlementTransaction = settlementTransaction;
+	public SettlementOrIntraPosition1Choice setSettlementTransaction(TransactionDetails52 settlementTransaction) {
+		this.settlementTransaction = Objects.requireNonNull(settlementTransaction);
+		return this;
 	}
 }

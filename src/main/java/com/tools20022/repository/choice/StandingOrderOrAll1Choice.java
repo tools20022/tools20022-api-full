@@ -24,9 +24,11 @@ import com.tools20022.repository.entity.CashStandingOrder;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.StandingOrderIdentification2;
 import com.tools20022.repository.msg.StandingOrderIdentification3;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,16 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StandingOrderOrAll1Choice", propOrder = {"standingOrder", "allStandingOrders"})
 public class StandingOrderOrAll1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StgOrdr", required = true)
 	protected List<StandingOrderIdentification2> standingOrder;
 	/**
-	 * Identification of single standing orders defined with specific
-	 * characteristics.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -114,7 +116,7 @@ public class StandingOrderOrAll1Choice {
 	public static final MMMessageAssociationEnd mmStandingOrder = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashStandingOrder.mmObject();
-			componentContext_lazy = () -> StandingOrderOrAll1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.StandingOrderOrAll1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StgOrdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,11 +127,11 @@ public class StandingOrderOrAll1Choice {
 			type_lazy = () -> StandingOrderIdentification2.mmObject();
 		}
 	};
+	@XmlElement(name = "AllStgOrdrs", required = true)
 	protected List<StandingOrderIdentification3> allStandingOrders;
 	/**
-	 * Identification of all standing orders defined with specific
-	 * characteristics.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -164,7 +166,7 @@ public class StandingOrderOrAll1Choice {
 	public static final MMMessageAssociationEnd mmAllStandingOrders = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashStandingOrder.mmObject();
-			componentContext_lazy = () -> StandingOrderOrAll1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.StandingOrderOrAll1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AllStgOrdrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,9 +181,9 @@ public class StandingOrderOrAll1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StandingOrderOrAll1Choice.mmStandingOrder, StandingOrderOrAll1Choice.mmAllStandingOrders);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrAll1Choice.mmStandingOrder, com.tools20022.repository.choice.StandingOrderOrAll1Choice.mmAllStandingOrders);
 				trace_lazy = () -> CashStandingOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderOrAll1Choice";
 				definition = "Characteristics of one or all standing orders set by the member and managed by the transaction administrator.";
@@ -190,21 +192,21 @@ public class StandingOrderOrAll1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StgOrdr", required = true)
 	public List<StandingOrderIdentification2> getStandingOrder() {
-		return standingOrder;
+		return standingOrder == null ? standingOrder = new ArrayList<>() : standingOrder;
 	}
 
-	public void setStandingOrder(List<StandingOrderIdentification2> standingOrder) {
-		this.standingOrder = standingOrder;
+	public StandingOrderOrAll1Choice setStandingOrder(List<StandingOrderIdentification2> standingOrder) {
+		this.standingOrder = Objects.requireNonNull(standingOrder);
+		return this;
 	}
 
-	@XmlElement(name = "AllStgOrdrs", required = true)
 	public List<StandingOrderIdentification3> getAllStandingOrders() {
-		return allStandingOrders;
+		return allStandingOrders == null ? allStandingOrders = new ArrayList<>() : allStandingOrders;
 	}
 
-	public void setAllStandingOrders(List<StandingOrderIdentification3> allStandingOrders) {
-		this.allStandingOrders = allStandingOrders;
+	public StandingOrderOrAll1Choice setAllStandingOrders(List<StandingOrderIdentification3> allStandingOrders) {
+		this.allStandingOrders = Objects.requireNonNull(allStandingOrders);
+		return this;
 	}
 }

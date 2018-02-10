@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +54,17 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule#forBusinessInformationCriteria
+ * ConstraintReturnCriteriaAndOrSearchCriteriaRule.
+ * forBusinessInformationCriteria}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BusinessInformationCriteria", propOrder = {"newQueryName", "searchCriteria", "returnCriteria"})
 public class BusinessInformationCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NewQryNm")
 	protected Max35Text newQueryName;
 	/**
-	 * Name of the query defined by the search criteria and return criteria.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +114,7 @@ public class BusinessInformationCriteria {
 	 */
 	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BusinessInformationCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessInformationCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "NewQryNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +125,11 @@ public class BusinessInformationCriteria {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SchCrit")
 	protected List<com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria> searchCriteria;
 	/**
-	 * Defines the criteria based on which the information is extracted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -147,7 +157,7 @@ public class BusinessInformationCriteria {
 	 */
 	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BusinessInformationCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessInformationCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "SchCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,10 +168,11 @@ public class BusinessInformationCriteria {
 			type_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.mmObject();
 		}
 	};
+	@XmlElement(name = "RtrCrit")
 	protected GeneralBusinessInformationReturnCriteria returnCriteria;
 	/**
-	 * Defines the expected report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -188,7 +199,7 @@ public class BusinessInformationCriteria {
 	 */
 	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BusinessInformationCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessInformationCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "RtrCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,8 +215,10 @@ public class BusinessInformationCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BusinessInformationCriteria.mmNewQueryName, BusinessInformationCriteria.mmSearchCriteria, BusinessInformationCriteria.mmReturnCriteria);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessInformationCriteria.mmNewQueryName, com.tools20022.repository.msg.BusinessInformationCriteria.mmSearchCriteria,
+						com.tools20022.repository.msg.BusinessInformationCriteria.mmReturnCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule.forBusinessInformationCriteria);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessInformationCriteria";
 				definition = "Defines the criteria used to search for business information and to report on the business information. A name may be given to the new query.";
@@ -214,30 +227,30 @@ public class BusinessInformationCriteria {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NewQryNm")
-	public Max35Text getNewQueryName() {
-		return newQueryName;
+	public Optional<Max35Text> getNewQueryName() {
+		return newQueryName == null ? Optional.empty() : Optional.of(newQueryName);
 	}
 
-	public void setNewQueryName(Max35Text newQueryName) {
+	public BusinessInformationCriteria setNewQueryName(Max35Text newQueryName) {
 		this.newQueryName = newQueryName;
+		return this;
 	}
 
-	@XmlElement(name = "SchCrit")
 	public List<GeneralBusinessInformationSearchCriteria> getSearchCriteria() {
-		return searchCriteria;
+		return searchCriteria == null ? searchCriteria = new ArrayList<>() : searchCriteria;
 	}
 
-	public void setSearchCriteria(List<com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria> searchCriteria) {
-		this.searchCriteria = searchCriteria;
+	public BusinessInformationCriteria setSearchCriteria(List<com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria> searchCriteria) {
+		this.searchCriteria = Objects.requireNonNull(searchCriteria);
+		return this;
 	}
 
-	@XmlElement(name = "RtrCrit")
-	public GeneralBusinessInformationReturnCriteria getReturnCriteria() {
-		return returnCriteria;
+	public Optional<GeneralBusinessInformationReturnCriteria> getReturnCriteria() {
+		return returnCriteria == null ? Optional.empty() : Optional.of(returnCriteria);
 	}
 
-	public void setReturnCriteria(com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria returnCriteria) {
+	public BusinessInformationCriteria setReturnCriteria(com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria returnCriteria) {
 		this.returnCriteria = returnCriteria;
+		return this;
 	}
 }

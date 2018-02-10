@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -30,6 +31,8 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -75,8 +78,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,16 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides transaction type and identification information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementTypeAndAdditionalParameters15", propOrder = {"securitiesMovementType", "payment", "commonIdentification"})
 public class SettlementTypeAndAdditionalParameters15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesMvmntTp", required = true)
 	protected ReceiveDelivery1Code securitiesMovementType;
 	/**
-	 * Specifies if the movement on a securities account results from a deliver
-	 * or a receive instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,6 +120,10 @@ public class SettlementTypeAndAdditionalParameters15 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesMvmntTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22H::REDE, ISO15022Synonym: MT 540-1
+	 * or 542-3</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -132,9 +139,10 @@ public class SettlementTypeAndAdditionalParameters15 {
 	public static final MMMessageAttribute mmSecuritiesMovementType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesMovementType;
-			componentContext_lazy = () -> SettlementTypeAndAdditionalParameters15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters15.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesMvmntTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22H::REDE"), new ISO15022Synonym(this, "MT 540-1 or 542-3"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovementType";
 			definition = "Specifies if the movement on a securities account results from a deliver or a receive instruction.";
@@ -143,11 +151,11 @@ public class SettlementTypeAndAdditionalParameters15 {
 			simpleType_lazy = () -> ReceiveDelivery1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Pmt", required = true)
 	protected DeliveryReceiptType2Code payment;
 	/**
-	 * Specifies how the transaction is to be settled, for example, against
-	 * payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,6 +176,10 @@ public class SettlementTypeAndAdditionalParameters15 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Pmt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22H::PAYM, ISO15022Synonym: MT
+	 * 541-543 or 540-542</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -183,9 +195,10 @@ public class SettlementTypeAndAdditionalParameters15 {
 	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementType;
-			componentContext_lazy = () -> SettlementTypeAndAdditionalParameters15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters15.mmObject();
 			isDerived = false;
 			xmlTag = "Pmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22H::PAYM"), new ISO15022Synonym(this, "MT 541-543 or 540-542"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Specifies how the transaction is to be settled, for example, against payment.";
@@ -194,11 +207,11 @@ public class SettlementTypeAndAdditionalParameters15 {
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "CmonId")
 	protected RestrictedFINXMax16Text commonIdentification;
 	/**
-	 * Unique reference agreed upon by the two trade counterparties to identify
-	 * the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -219,6 +232,9 @@ public class SettlementTypeAndAdditionalParameters15 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CmonId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::COMM</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -234,9 +250,10 @@ public class SettlementTypeAndAdditionalParameters15 {
 	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
-			componentContext_lazy = () -> SettlementTypeAndAdditionalParameters15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters15.mmObject();
 			isDerived = false;
 			xmlTag = "CmonId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::COMM"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonIdentification";
 			definition = "Unique reference agreed upon by the two trade counterparties to identify the trade.";
@@ -249,11 +266,12 @@ public class SettlementTypeAndAdditionalParameters15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementTypeAndAdditionalParameters15.mmSecuritiesMovementType, SettlementTypeAndAdditionalParameters15.mmPayment, SettlementTypeAndAdditionalParameters15.mmCommonIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters15.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters15.mmPayment,
+						com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters15.mmCommonIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotification002V05.mmSettlementTypeAndAdditionalParameters,
 						SecuritiesSettlementTransactionAllegementNotification002V06.mmSettlementTypeAndAdditionalParameters);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementTypeAndAdditionalParameters15";
 				definition = "Provides transaction type and identification information.";
@@ -262,30 +280,30 @@ public class SettlementTypeAndAdditionalParameters15 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesMvmntTp", required = true)
 	public ReceiveDelivery1Code getSecuritiesMovementType() {
 		return securitiesMovementType;
 	}
 
-	public void setSecuritiesMovementType(ReceiveDelivery1Code securitiesMovementType) {
-		this.securitiesMovementType = securitiesMovementType;
+	public SettlementTypeAndAdditionalParameters15 setSecuritiesMovementType(ReceiveDelivery1Code securitiesMovementType) {
+		this.securitiesMovementType = Objects.requireNonNull(securitiesMovementType);
+		return this;
 	}
 
-	@XmlElement(name = "Pmt", required = true)
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}
 
-	public void setPayment(DeliveryReceiptType2Code payment) {
-		this.payment = payment;
+	public SettlementTypeAndAdditionalParameters15 setPayment(DeliveryReceiptType2Code payment) {
+		this.payment = Objects.requireNonNull(payment);
+		return this;
 	}
 
-	@XmlElement(name = "CmonId")
-	public RestrictedFINXMax16Text getCommonIdentification() {
-		return commonIdentification;
+	public Optional<RestrictedFINXMax16Text> getCommonIdentification() {
+		return commonIdentification == null ? Optional.empty() : Optional.of(commonIdentification);
 	}
 
-	public void setCommonIdentification(RestrictedFINXMax16Text commonIdentification) {
+	public SettlementTypeAndAdditionalParameters15 setCommonIdentification(RestrictedFINXMax16Text commonIdentification) {
 		this.commonIdentification = commonIdentification;
+		return this;
 	}
 }

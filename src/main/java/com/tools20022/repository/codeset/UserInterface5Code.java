@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.UserInterfaceCode;
+import com.tools20022.repository.codeset.UserInterface5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Destination of the message.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.UserInterfaceCode
- * UserInterfaceCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UserInterface5Code#mmCardholderDisplay
- * UserInterface5Code.mmCardholderDisplay}</li>
+ * {@linkplain com.tools20022.repository.codeset.UserInterface5Code#CardholderDisplay
+ * UserInterface5Code.CardholderDisplay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UserInterface5Code#mmCardholderReceipt
- * UserInterface5Code.mmCardholderReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.UserInterface5Code#CardholderReceipt
+ * UserInterface5Code.CardholderReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UserInterface5Code#mmOtherCardholderInterface
- * UserInterface5Code.mmOtherCardholderInterface}</li>
+ * {@linkplain com.tools20022.repository.codeset.UserInterface5Code#OtherCardholderInterface
+ * UserInterface5Code.OtherCardholderInterface}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.UserInterfaceCode
+ * UserInterfaceCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * UserInterface4Code}</li>
  * </ul>
  */
-public class UserInterface5Code extends UserInterfaceCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class UserInterface5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,16 +90,17 @@ public class UserInterface5Code extends UserInterfaceCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UserInterface4Code#mmCardholderDisplay
-	 * UserInterface4Code.mmCardholderDisplay}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UserInterface4Code#CardholderDisplay
+	 * UserInterface4Code.CardholderDisplay}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardholderDisplay = new MMCode() {
+	public static final UserInterface5Code CardholderDisplay = new UserInterface5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderDisplay";
-			previousVersion_lazy = () -> UserInterface4Code.mmCardholderDisplay;
-			owner_lazy = () -> UserInterface5Code.mmObject();
+			previousVersion_lazy = () -> UserInterface4Code.CardholderDisplay;
+			owner_lazy = () -> com.tools20022.repository.codeset.UserInterface5Code.mmObject();
+			codeName = UserInterfaceCode.CardholderDisplay.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -114,16 +120,17 @@ public class UserInterface5Code extends UserInterfaceCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UserInterface4Code#mmCardholderReceipt
-	 * UserInterface4Code.mmCardholderReceipt}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UserInterface4Code#CardholderReceipt
+	 * UserInterface4Code.CardholderReceipt}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardholderReceipt = new MMCode() {
+	public static final UserInterface5Code CardholderReceipt = new UserInterface5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderReceipt";
-			previousVersion_lazy = () -> UserInterface4Code.mmCardholderReceipt;
-			owner_lazy = () -> UserInterface5Code.mmObject();
+			previousVersion_lazy = () -> UserInterface4Code.CardholderReceipt;
+			owner_lazy = () -> com.tools20022.repository.codeset.UserInterface5Code.mmObject();
+			codeName = UserInterfaceCode.CardholderReceipt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -143,31 +150,64 @@ public class UserInterface5Code extends UserInterfaceCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.UserInterface4Code#mmOtherCardholderInterface
-	 * UserInterface4Code.mmOtherCardholderInterface}</li>
+	 * {@linkplain com.tools20022.repository.codeset.UserInterface4Code#OtherCardholderInterface
+	 * UserInterface4Code.OtherCardholderInterface}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherCardholderInterface = new MMCode() {
+	public static final UserInterface5Code OtherCardholderInterface = new UserInterface5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCardholderInterface";
-			previousVersion_lazy = () -> UserInterface4Code.mmOtherCardholderInterface;
-			owner_lazy = () -> UserInterface5Code.mmObject();
+			previousVersion_lazy = () -> UserInterface4Code.OtherCardholderInterface;
+			owner_lazy = () -> com.tools20022.repository.codeset.UserInterface5Code.mmObject();
+			codeName = UserInterfaceCode.OtherCardholderInterface.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, UserInterface5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected UserInterface5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UserInterface5Code";
 				definition = "Destination of the message.";
 				previousVersion_lazy = () -> UserInterface4Code.mmObject();
-				code_lazy = () -> Arrays.asList(UserInterface5Code.mmCardholderDisplay, UserInterface5Code.mmCardholderReceipt, UserInterface5Code.mmOtherCardholderInterface);
 				trace_lazy = () -> UserInterfaceCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UserInterface5Code.CardholderDisplay, com.tools20022.repository.codeset.UserInterface5Code.CardholderReceipt,
+						com.tools20022.repository.codeset.UserInterface5Code.OtherCardholderInterface);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CardholderDisplay.getCodeName().get(), CardholderDisplay);
+		codesByName.put(CardholderReceipt.getCodeName().get(), CardholderReceipt);
+		codesByName.put(OtherCardholderInterface.getCodeName().get(), OtherCardholderInterface);
+	}
+
+	public static UserInterface5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static UserInterface5Code[] values() {
+		UserInterface5Code[] values = new UserInterface5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, UserInterface5Code> {
+		@Override
+		public UserInterface5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(UserInterface5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

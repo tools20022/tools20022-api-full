@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -29,6 +30,7 @@ import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDateAndDateCodeRule#forSecuritiesSettlement2
+ * ConstraintDateAndDateCodeRule.forSecuritiesSettlement2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Parameters applied to the settlement of a security transfer."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesSettlement2", propOrder = {"date", "dateCode", "placeOfSettlement"})
 public class SecuritiesSettlement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dt")
 	protected ISODate date;
 	/**
-	 * Date and time at which the securities are to be delivered or received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,6 +110,9 @@ public class SecuritiesSettlement2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Dt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 64</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -113,9 +127,10 @@ public class SecuritiesSettlement2 {
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
-			componentContext_lazy = () -> SecuritiesSettlement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "64"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date and time at which the securities are to be delivered or received.";
@@ -124,11 +139,11 @@ public class SecuritiesSettlement2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DtCd")
 	protected DateType1Choice dateCode;
 	/**
-	 * Indicates the date of settlement in coded form or using a data source
-	 * scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,6 +159,9 @@ public class SecuritiesSettlement2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DtCd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 63</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -158,9 +176,10 @@ public class SecuritiesSettlement2 {
 	 */
 	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesSettlement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "DtCd";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "63"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Indicates the date of settlement in coded form or using a data source scheme.";
@@ -169,10 +188,11 @@ public class SecuritiesSettlement2 {
 			complexType_lazy = () -> DateType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfSttlm")
 	protected PartyIdentification23 placeOfSettlement;
 	/**
-	 * Place where settlement of the securities takes place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -204,7 +224,7 @@ public class SecuritiesSettlement2 {
 	public static final MMMessageAssociationEnd mmPlaceOfSettlement = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SecuritiesSettlement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlement2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfSttlm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,9 +240,11 @@ public class SecuritiesSettlement2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesSettlement2.mmDate, SecuritiesSettlement2.mmDateCode, SecuritiesSettlement2.mmPlaceOfSettlement);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSettlement2.mmDate, com.tools20022.repository.msg.SecuritiesSettlement2.mmDateCode,
+						com.tools20022.repository.msg.SecuritiesSettlement2.mmPlaceOfSettlement);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDateAndDateCodeRule.forSecuritiesSettlement2);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesSettlement2";
 				definition = "Parameters applied to the settlement of a security transfer.";
@@ -231,30 +253,30 @@ public class SecuritiesSettlement2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dt")
-	public ISODate getDate() {
-		return date;
+	public Optional<ISODate> getDate() {
+		return date == null ? Optional.empty() : Optional.of(date);
 	}
 
-	public void setDate(ISODate date) {
+	public SecuritiesSettlement2 setDate(ISODate date) {
 		this.date = date;
+		return this;
 	}
 
-	@XmlElement(name = "DtCd")
-	public DateType1Choice getDateCode() {
-		return dateCode;
+	public Optional<DateType1Choice> getDateCode() {
+		return dateCode == null ? Optional.empty() : Optional.of(dateCode);
 	}
 
-	public void setDateCode(DateType1Choice dateCode) {
+	public SecuritiesSettlement2 setDateCode(DateType1Choice dateCode) {
 		this.dateCode = dateCode;
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfSttlm")
-	public PartyIdentification23 getPlaceOfSettlement() {
-		return placeOfSettlement;
+	public Optional<PartyIdentification23> getPlaceOfSettlement() {
+		return placeOfSettlement == null ? Optional.empty() : Optional.of(placeOfSettlement);
 	}
 
-	public void setPlaceOfSettlement(com.tools20022.repository.msg.PartyIdentification23 placeOfSettlement) {
+	public SecuritiesSettlement2 setPlaceOfSettlement(com.tools20022.repository.msg.PartyIdentification23 placeOfSettlement) {
 		this.placeOfSettlement = placeOfSettlement;
+		return this;
 	}
 }

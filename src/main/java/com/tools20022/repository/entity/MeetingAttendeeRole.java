@@ -25,9 +25,11 @@ import com.tools20022.repository.entity.MeetingPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecurityPosition1;
 import com.tools20022.repository.msg.SecurityPosition2;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Security holder who will attend and vote at the meeting in person and/or a
@@ -40,6 +42,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.MeetingPartyRole
+ * MeetingPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -48,9 +53,6 @@ import java.util.List;
  * MeetingAttendeeRole.mmPerson}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.MeetingPartyRole
- * MeetingPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -74,8 +76,8 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,8 +95,8 @@ public class MeetingAttendeeRole extends MeetingPartyRole {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.Person> person;
 	/**
-	 * Specifies the person who is registered to attend a meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -127,8 +129,8 @@ public class MeetingAttendeeRole extends MeetingPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmPerson = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingAttendeeRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingAttendeeRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Person";
 			definition = "Specifies the person who is registered to attend a meeting.";
@@ -142,7 +144,7 @@ public class MeetingAttendeeRole extends MeetingPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingAttendeeRole";
 				definition = "Security holder who will attend and vote at the meeting in person and/or a person assigned by the security holder to attend the meeting without having any voting rights or taking any action.";
@@ -161,10 +163,11 @@ public class MeetingAttendeeRole extends MeetingPartyRole {
 	}
 
 	public List<Person> getPerson() {
-		return person;
+		return person == null ? person = new ArrayList<>() : person;
 	}
 
-	public void setPerson(List<com.tools20022.repository.entity.Person> person) {
-		this.person = person;
+	public MeetingAttendeeRole setPerson(List<com.tools20022.repository.entity.Person> person) {
+		this.person = Objects.requireNonNull(person);
+		return this;
 	}
 }

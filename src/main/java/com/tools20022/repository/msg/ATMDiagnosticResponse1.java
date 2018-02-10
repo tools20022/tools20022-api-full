@@ -22,9 +22,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caam.ATMDiagnosticResponseV01;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Information related to the response of a diagnostic from an ATM manager."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMDiagnosticResponse1", propOrder = {"environment", "command"})
 public class ATMDiagnosticResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Envt", required = true)
 	protected ATMEnvironment6 environment;
 	/**
-	 * Environment of the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -106,7 +109,7 @@ public class ATMDiagnosticResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMDiagnosticResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDiagnosticResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +121,11 @@ public class ATMDiagnosticResponse1 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment6.mmObject();
 		}
 	};
+	@XmlElement(name = "Cmd")
 	protected List<com.tools20022.repository.msg.ATMCommand1> command;
 	/**
-	 * Maintenance command to perform on the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -147,7 +151,7 @@ public class ATMDiagnosticResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmCommand = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMDiagnosticResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDiagnosticResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Cmd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,9 +166,9 @@ public class ATMDiagnosticResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMDiagnosticResponse1.mmEnvironment, ATMDiagnosticResponse1.mmCommand);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDiagnosticResponse1.mmEnvironment, com.tools20022.repository.msg.ATMDiagnosticResponse1.mmCommand);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ATMDiagnosticResponseV01.mmATMDiagnosticResponse);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMDiagnosticResponse1";
 				definition = "Information related to the response of a diagnostic from an ATM manager.";
@@ -173,21 +177,21 @@ public class ATMDiagnosticResponse1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Envt", required = true)
 	public ATMEnvironment6 getEnvironment() {
 		return environment;
 	}
 
-	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment6 environment) {
-		this.environment = environment;
+	public ATMDiagnosticResponse1 setEnvironment(com.tools20022.repository.msg.ATMEnvironment6 environment) {
+		this.environment = Objects.requireNonNull(environment);
+		return this;
 	}
 
-	@XmlElement(name = "Cmd")
 	public List<ATMCommand1> getCommand() {
-		return command;
+		return command == null ? command = new ArrayList<>() : command;
 	}
 
-	public void setCommand(List<com.tools20022.repository.msg.ATMCommand1> command) {
-		this.command = command;
+	public ATMDiagnosticResponse1 setCommand(List<com.tools20022.repository.msg.ATMCommand1> command) {
+		this.command = Objects.requireNonNull(command);
+		return this;
 	}
 }

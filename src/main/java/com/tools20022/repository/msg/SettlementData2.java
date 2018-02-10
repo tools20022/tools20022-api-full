@@ -33,6 +33,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,8 +48,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SettlementData2#mmSettlementStatusOrExtendedSettlementStatusRule
- * SettlementData2.mmSettlementStatusOrExtendedSettlementStatusRule}</li>
+ * {@linkplain com.tools20022.repository.msg.SettlementData2#SettlementStatusOrExtendedSettlementStatusRule
+ * SettlementData2.SettlementStatusOrExtendedSettlementStatusRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -110,8 +112,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -123,16 +125,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information on the settlement of a treasury trade."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementData2", propOrder = {"cashFlowUniqueReference", "settlementSystemUniqueReference", "settlementAmount", "settledAmount", "rejectedAmount", "payingParty", "receivingParty", "settlementDate", "settlementStatus",
 		"extendedSettlementStatus", "settlementStatusSubType", "suspended", "pending"})
 public class SettlementData2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CshFlowUnqRef")
 	protected Max35Text cashFlowUniqueReference;
 	/**
-	 * Unique reference supplied by the trade processing system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +163,7 @@ public class SettlementData2 {
 	 */
 	public static final MMMessageAttribute mmCashFlowUniqueReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
 			isDerived = false;
 			xmlTag = "CshFlowUnqRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +174,11 @@ public class SettlementData2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmSysUnqRef")
 	protected Max35Text settlementSystemUniqueReference;
 	/**
-	 * Unique reference assigned by a settlement system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,7 +205,7 @@ public class SettlementData2 {
 	 */
 	public static final MMMessageAttribute mmSettlementSystemUniqueReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSysUnqRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,12 +216,11 @@ public class SettlementData2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmAmt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount settlementAmount;
 	/**
-	 * Original amount which should be settled. This information should be
-	 * provided when the trade is partially settled or when the settlement is
-	 * rejected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -253,7 +256,7 @@ public class SettlementData2 {
 	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
-			componentContext_lazy = () -> SettlementData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -264,10 +267,11 @@ public class SettlementData2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SttldAmt")
 	protected ActiveOrHistoricCurrencyAndAmount settledAmount;
 	/**
-	 * Funds which the trading side is expected to receive.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -301,7 +305,7 @@ public class SettlementData2 {
 	public static final MMMessageAttribute mmSettledAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
-			componentContext_lazy = () -> SettlementData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
 			isDerived = false;
 			xmlTag = "SttldAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -312,10 +316,11 @@ public class SettlementData2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RjctdAmt")
 	protected ActiveOrHistoricCurrencyAndAmount rejectedAmount;
 	/**
-	 * Amount that cannot be settled by a settlement system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -349,7 +354,7 @@ public class SettlementData2 {
 	public static final MMMessageAttribute mmRejectedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmRejectedAmount;
-			componentContext_lazy = () -> SettlementData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -360,10 +365,11 @@ public class SettlementData2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "PngPty", required = true)
 	protected PartyIdentification8Choice payingParty;
 	/**
-	 * Specifies the party that pays the settlement amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -396,7 +402,7 @@ public class SettlementData2 {
 	public static final MMMessageAssociationEnd mmPayingParty = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SettlementData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
 			isDerived = false;
 			xmlTag = "PngPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -408,10 +414,11 @@ public class SettlementData2 {
 			type_lazy = () -> PartyIdentification8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvgPty", required = true)
 	protected PartyIdentification8Choice receivingParty;
 	/**
-	 * Specifies the party that receives the settlement amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -444,7 +451,7 @@ public class SettlementData2 {
 	public static final MMMessageAssociationEnd mmReceivingParty = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SettlementData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -456,10 +463,11 @@ public class SettlementData2 {
 			type_lazy = () -> PartyIdentification8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmDt", required = true)
 	protected ISODate settlementDate;
 	/**
-	 * Date on which the settlement is due to settle.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -492,7 +500,7 @@ public class SettlementData2 {
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
-			componentContext_lazy = () -> SettlementData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -503,11 +511,11 @@ public class SettlementData2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmSts", required = true)
 	protected SettlementStatus1Code settlementStatus;
 	/**
-	 * Specifies the status of a settlement eg rejected, settled or awaiting
-	 * authorisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -543,7 +551,7 @@ public class SettlementData2 {
 	public static final MMMessageAttribute mmSettlementStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmSettlement;
-			componentContext_lazy = () -> SettlementData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -554,11 +562,11 @@ public class SettlementData2 {
 			simpleType_lazy = () -> SettlementStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedSttlmSts", required = true)
 	protected Extended350Code extendedSettlementStatus;
 	/**
-	 * Description of the status of the settlement of a trade when no coded form
-	 * is available.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -588,7 +596,7 @@ public class SettlementData2 {
 	 */
 	public static final MMMessageAttribute mmExtendedSettlementStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedSttlmSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -599,10 +607,11 @@ public class SettlementData2 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmStsSubTp")
 	protected Max70Text settlementStatusSubType;
 	/**
-	 * Additional information about the cause of the rejection of a settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -631,7 +640,7 @@ public class SettlementData2 {
 	 */
 	public static final MMMessageAttribute mmSettlementStatusSubType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmStsSubTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -642,10 +651,11 @@ public class SettlementData2 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Sspd", required = true)
 	protected YesNoIndicator suspended;
 	/**
-	 * Cash settlement is suspended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -679,7 +689,7 @@ public class SettlementData2 {
 	public static final MMMessageAttribute mmSuspended = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmSettlementSuspended;
-			componentContext_lazy = () -> SettlementData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
 			isDerived = false;
 			xmlTag = "Sspd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -690,10 +700,11 @@ public class SettlementData2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Pdg", required = true)
 	protected YesNoIndicator pending;
 	/**
-	 * Cash settlement is pending.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -727,7 +738,7 @@ public class SettlementData2 {
 	public static final MMMessageAttribute mmPending = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmPendingSettlement;
-			componentContext_lazy = () -> SettlementData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -766,24 +777,26 @@ public class SettlementData2 {
 	 * name} = "SettlementStatusOrExtendedSettlementStatusRule"</li>
 	 * </ul>
 	 */
-	public static final MMXor mmSettlementStatusOrExtendedSettlementStatusRule = new MMXor() {
+	public static final MMXor SettlementStatusOrExtendedSettlementStatusRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatusOrExtendedSettlementStatusRule";
-			messageComponent_lazy = () -> SettlementData2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(SettlementData2.mmSettlementStatus, SettlementData2.mmExtendedSettlementStatus);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementData2.mmSettlementStatus, com.tools20022.repository.msg.SettlementData2.mmExtendedSettlementStatus);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementData2.mmCashFlowUniqueReference, SettlementData2.mmSettlementSystemUniqueReference, SettlementData2.mmSettlementAmount, SettlementData2.mmSettledAmount,
-						SettlementData2.mmRejectedAmount, SettlementData2.mmPayingParty, SettlementData2.mmReceivingParty, SettlementData2.mmSettlementDate, SettlementData2.mmSettlementStatus, SettlementData2.mmExtendedSettlementStatus,
-						SettlementData2.mmSettlementStatusSubType, SettlementData2.mmSuspended, SettlementData2.mmPending);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementData2.mmCashFlowUniqueReference, com.tools20022.repository.msg.SettlementData2.mmSettlementSystemUniqueReference,
+						com.tools20022.repository.msg.SettlementData2.mmSettlementAmount, com.tools20022.repository.msg.SettlementData2.mmSettledAmount, com.tools20022.repository.msg.SettlementData2.mmRejectedAmount,
+						com.tools20022.repository.msg.SettlementData2.mmPayingParty, com.tools20022.repository.msg.SettlementData2.mmReceivingParty, com.tools20022.repository.msg.SettlementData2.mmSettlementDate,
+						com.tools20022.repository.msg.SettlementData2.mmSettlementStatus, com.tools20022.repository.msg.SettlementData2.mmExtendedSettlementStatus, com.tools20022.repository.msg.SettlementData2.mmSettlementStatusSubType,
+						com.tools20022.repository.msg.SettlementData2.mmSuspended, com.tools20022.repository.msg.SettlementData2.mmPending);
 				messageBuildingBlock_lazy = () -> Arrays.asList(NonDeliverableForwardNotificationV02.mmSettlementData, ForeignExchangeOptionNotificationV02.mmSettlementData);
 				trace_lazy = () -> PaymentObligation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -794,126 +807,126 @@ public class SettlementData2 {
 				})).get();
 				name = "SettlementData2";
 				definition = "Provides information on the settlement of a treasury trade.";
-				xors_lazy = () -> Arrays.asList(SettlementData2.mmSettlementStatusOrExtendedSettlementStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementData2.SettlementStatusOrExtendedSettlementStatusRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CshFlowUnqRef")
-	public Max35Text getCashFlowUniqueReference() {
-		return cashFlowUniqueReference;
+	public Optional<Max35Text> getCashFlowUniqueReference() {
+		return cashFlowUniqueReference == null ? Optional.empty() : Optional.of(cashFlowUniqueReference);
 	}
 
-	public void setCashFlowUniqueReference(Max35Text cashFlowUniqueReference) {
+	public SettlementData2 setCashFlowUniqueReference(Max35Text cashFlowUniqueReference) {
 		this.cashFlowUniqueReference = cashFlowUniqueReference;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmSysUnqRef")
-	public Max35Text getSettlementSystemUniqueReference() {
-		return settlementSystemUniqueReference;
+	public Optional<Max35Text> getSettlementSystemUniqueReference() {
+		return settlementSystemUniqueReference == null ? Optional.empty() : Optional.of(settlementSystemUniqueReference);
 	}
 
-	public void setSettlementSystemUniqueReference(Max35Text settlementSystemUniqueReference) {
+	public SettlementData2 setSettlementSystemUniqueReference(Max35Text settlementSystemUniqueReference) {
 		this.settlementSystemUniqueReference = settlementSystemUniqueReference;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getSettlementAmount() {
 		return settlementAmount;
 	}
 
-	public void setSettlementAmount(ActiveOrHistoricCurrencyAndAmount settlementAmount) {
-		this.settlementAmount = settlementAmount;
+	public SettlementData2 setSettlementAmount(ActiveOrHistoricCurrencyAndAmount settlementAmount) {
+		this.settlementAmount = Objects.requireNonNull(settlementAmount);
+		return this;
 	}
 
-	@XmlElement(name = "SttldAmt")
-	public ActiveOrHistoricCurrencyAndAmount getSettledAmount() {
-		return settledAmount;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getSettledAmount() {
+		return settledAmount == null ? Optional.empty() : Optional.of(settledAmount);
 	}
 
-	public void setSettledAmount(ActiveOrHistoricCurrencyAndAmount settledAmount) {
+	public SettlementData2 setSettledAmount(ActiveOrHistoricCurrencyAndAmount settledAmount) {
 		this.settledAmount = settledAmount;
+		return this;
 	}
 
-	@XmlElement(name = "RjctdAmt")
-	public ActiveOrHistoricCurrencyAndAmount getRejectedAmount() {
-		return rejectedAmount;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getRejectedAmount() {
+		return rejectedAmount == null ? Optional.empty() : Optional.of(rejectedAmount);
 	}
 
-	public void setRejectedAmount(ActiveOrHistoricCurrencyAndAmount rejectedAmount) {
+	public SettlementData2 setRejectedAmount(ActiveOrHistoricCurrencyAndAmount rejectedAmount) {
 		this.rejectedAmount = rejectedAmount;
+		return this;
 	}
 
-	@XmlElement(name = "PngPty", required = true)
 	public PartyIdentification8Choice getPayingParty() {
 		return payingParty;
 	}
 
-	public void setPayingParty(PartyIdentification8Choice payingParty) {
-		this.payingParty = payingParty;
+	public SettlementData2 setPayingParty(PartyIdentification8Choice payingParty) {
+		this.payingParty = Objects.requireNonNull(payingParty);
+		return this;
 	}
 
-	@XmlElement(name = "RcvgPty", required = true)
 	public PartyIdentification8Choice getReceivingParty() {
 		return receivingParty;
 	}
 
-	public void setReceivingParty(PartyIdentification8Choice receivingParty) {
-		this.receivingParty = receivingParty;
+	public SettlementData2 setReceivingParty(PartyIdentification8Choice receivingParty) {
+		this.receivingParty = Objects.requireNonNull(receivingParty);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmDt", required = true)
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
 
-	public void setSettlementDate(ISODate settlementDate) {
-		this.settlementDate = settlementDate;
+	public SettlementData2 setSettlementDate(ISODate settlementDate) {
+		this.settlementDate = Objects.requireNonNull(settlementDate);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmSts", required = true)
 	public SettlementStatus1Code getSettlementStatus() {
 		return settlementStatus;
 	}
 
-	public void setSettlementStatus(SettlementStatus1Code settlementStatus) {
-		this.settlementStatus = settlementStatus;
+	public SettlementData2 setSettlementStatus(SettlementStatus1Code settlementStatus) {
+		this.settlementStatus = Objects.requireNonNull(settlementStatus);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedSttlmSts", required = true)
 	public Extended350Code getExtendedSettlementStatus() {
 		return extendedSettlementStatus;
 	}
 
-	public void setExtendedSettlementStatus(Extended350Code extendedSettlementStatus) {
-		this.extendedSettlementStatus = extendedSettlementStatus;
+	public SettlementData2 setExtendedSettlementStatus(Extended350Code extendedSettlementStatus) {
+		this.extendedSettlementStatus = Objects.requireNonNull(extendedSettlementStatus);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmStsSubTp")
-	public Max70Text getSettlementStatusSubType() {
-		return settlementStatusSubType;
+	public Optional<Max70Text> getSettlementStatusSubType() {
+		return settlementStatusSubType == null ? Optional.empty() : Optional.of(settlementStatusSubType);
 	}
 
-	public void setSettlementStatusSubType(Max70Text settlementStatusSubType) {
+	public SettlementData2 setSettlementStatusSubType(Max70Text settlementStatusSubType) {
 		this.settlementStatusSubType = settlementStatusSubType;
+		return this;
 	}
 
-	@XmlElement(name = "Sspd", required = true)
 	public YesNoIndicator getSuspended() {
 		return suspended;
 	}
 
-	public void setSuspended(YesNoIndicator suspended) {
-		this.suspended = suspended;
+	public SettlementData2 setSuspended(YesNoIndicator suspended) {
+		this.suspended = Objects.requireNonNull(suspended);
+		return this;
 	}
 
-	@XmlElement(name = "Pdg", required = true)
 	public YesNoIndicator getPending() {
 		return pending;
 	}
 
-	public void setPending(YesNoIndicator pending) {
-		this.pending = pending;
+	public SettlementData2 setPending(YesNoIndicator pending) {
+		this.pending = Objects.requireNonNull(pending);
+		return this;
 	}
 }

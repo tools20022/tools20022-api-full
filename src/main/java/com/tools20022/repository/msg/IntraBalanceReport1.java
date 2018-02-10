@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -28,6 +29,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReportNumberRule#forIntraBalanceReport1
+ * ConstraintReportNumberRule.forIntraBalanceReport1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,15 +97,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Characteristics of the report."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IntraBalanceReport1", propOrder = {"reportNumber", "queryReference", "reportIdentification", "reportDateTime", "reportPeriod", "queryType", "frequency", "updateType", "activityIndicator"})
 public class IntraBalanceReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptNb")
 	protected Number3Choice reportNumber;
 	/**
-	 * Sequential number of the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,6 +122,9 @@ public class IntraBalanceReport1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RptNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13a::STAT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -122,9 +137,10 @@ public class IntraBalanceReport1 {
 	 */
 	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceReport1.mmObject();
 			isDerived = false;
 			xmlTag = "RptNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13a::STAT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the report.";
@@ -133,10 +149,11 @@ public class IntraBalanceReport1 {
 			complexType_lazy = () -> Number3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "QryRef")
 	protected Max35Text queryReference;
 	/**
-	 * Identification of the query message sent to request this statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,6 +168,9 @@ public class IntraBalanceReport1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QryRef"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::RELA</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -164,9 +184,10 @@ public class IntraBalanceReport1 {
 	 */
 	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceReport1.mmObject();
 			isDerived = false;
 			xmlTag = "QryRef";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::RELA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReference";
 			definition = "Identification of the query message sent to request this statement.";
@@ -175,10 +196,11 @@ public class IntraBalanceReport1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RptId")
 	protected Max35Text reportIdentification;
 	/**
-	 * Reference common to all pages of a statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -205,7 +227,7 @@ public class IntraBalanceReport1 {
 	 */
 	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceReport1.mmObject();
 			isDerived = false;
 			xmlTag = "RptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,10 +238,11 @@ public class IntraBalanceReport1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RptDtTm")
 	protected DateAndDateTimeChoice reportDateTime;
 	/**
-	 * Date and time when the report was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -235,6 +258,9 @@ public class IntraBalanceReport1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RptDtTm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::STAT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -247,9 +273,10 @@ public class IntraBalanceReport1 {
 	 */
 	public static final MMMessageAttribute mmReportDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceReport1.mmObject();
 			isDerived = false;
 			xmlTag = "RptDtTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::STAT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDateTime";
 			definition = "Date and time when the report was created.";
@@ -258,10 +285,11 @@ public class IntraBalanceReport1 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "RptPrd")
 	protected Period2Choice reportPeriod;
 	/**
-	 * Period for the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -277,6 +305,9 @@ public class IntraBalanceReport1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RptPrd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a::STAT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -289,9 +320,10 @@ public class IntraBalanceReport1 {
 	 */
 	public static final MMMessageAttribute mmReportPeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceReport1.mmObject();
 			isDerived = false;
 			xmlTag = "RptPrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a::STAT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportPeriod";
 			definition = "Period for the statement.";
@@ -300,10 +332,11 @@ public class IntraBalanceReport1 {
 			complexType_lazy = () -> Period2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "QryTp")
 	protected MovementResponseType1Code queryType;
 	/**
-	 * Defines the type of query.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -319,6 +352,9 @@ public class IntraBalanceReport1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QryTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::CODE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -331,9 +367,10 @@ public class IntraBalanceReport1 {
 	 */
 	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceReport1.mmObject();
 			isDerived = false;
 			xmlTag = "QryTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CODE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Defines the type of query.";
@@ -342,10 +379,11 @@ public class IntraBalanceReport1 {
 			simpleType_lazy = () -> MovementResponseType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Frqcy")
 	protected Frequency9Choice frequency;
 	/**
-	 * Frequency of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -359,6 +397,9 @@ public class IntraBalanceReport1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Frqcy"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::SFRE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -371,9 +412,10 @@ public class IntraBalanceReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmFrequency = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraBalanceReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceReport1.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::SFRE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the statement.";
@@ -383,10 +425,11 @@ public class IntraBalanceReport1 {
 			type_lazy = () -> Frequency9Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "UpdTp", required = true)
 	protected UpdateType2Choice updateType;
 	/**
-	 * Indicates whether the statement is complete or contains changes only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -399,6 +442,9 @@ public class IntraBalanceReport1 {
 	 * IntraBalanceReport1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UpdTp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::CODE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -413,9 +459,10 @@ public class IntraBalanceReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraBalanceReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceReport1.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CODE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the statement is complete or contains changes only.";
@@ -425,11 +472,11 @@ public class IntraBalanceReport1 {
 			type_lazy = () -> UpdateType2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ActvtyInd", required = true)
 	protected YesNoIndicator activityIndicator;
 	/**
-	 * Indicates whether there is activity or information update reported in the
-	 * statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -445,6 +492,9 @@ public class IntraBalanceReport1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ActvtyInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :17B::ACTI</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -459,9 +509,10 @@ public class IntraBalanceReport1 {
 	 */
 	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceReport1.mmObject();
 			isDerived = false;
 			xmlTag = "ActvtyInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":17B::ACTI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
@@ -474,9 +525,12 @@ public class IntraBalanceReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IntraBalanceReport1.mmReportNumber, IntraBalanceReport1.mmQueryReference, IntraBalanceReport1.mmReportIdentification, IntraBalanceReport1.mmReportDateTime,
-						IntraBalanceReport1.mmReportPeriod, IntraBalanceReport1.mmQueryType, IntraBalanceReport1.mmFrequency, IntraBalanceReport1.mmUpdateType, IntraBalanceReport1.mmActivityIndicator);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceReport1.mmReportNumber, com.tools20022.repository.msg.IntraBalanceReport1.mmQueryReference,
+						com.tools20022.repository.msg.IntraBalanceReport1.mmReportIdentification, com.tools20022.repository.msg.IntraBalanceReport1.mmReportDateTime, com.tools20022.repository.msg.IntraBalanceReport1.mmReportPeriod,
+						com.tools20022.repository.msg.IntraBalanceReport1.mmQueryType, com.tools20022.repository.msg.IntraBalanceReport1.mmFrequency, com.tools20022.repository.msg.IntraBalanceReport1.mmUpdateType,
+						com.tools20022.repository.msg.IntraBalanceReport1.mmActivityIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReportNumberRule.forIntraBalanceReport1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceReport1";
 				definition = "Characteristics of the report.";
@@ -485,84 +539,84 @@ public class IntraBalanceReport1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptNb")
-	public Number3Choice getReportNumber() {
-		return reportNumber;
+	public Optional<Number3Choice> getReportNumber() {
+		return reportNumber == null ? Optional.empty() : Optional.of(reportNumber);
 	}
 
-	public void setReportNumber(Number3Choice reportNumber) {
+	public IntraBalanceReport1 setReportNumber(Number3Choice reportNumber) {
 		this.reportNumber = reportNumber;
+		return this;
 	}
 
-	@XmlElement(name = "QryRef")
-	public Max35Text getQueryReference() {
-		return queryReference;
+	public Optional<Max35Text> getQueryReference() {
+		return queryReference == null ? Optional.empty() : Optional.of(queryReference);
 	}
 
-	public void setQueryReference(Max35Text queryReference) {
+	public IntraBalanceReport1 setQueryReference(Max35Text queryReference) {
 		this.queryReference = queryReference;
+		return this;
 	}
 
-	@XmlElement(name = "RptId")
-	public Max35Text getReportIdentification() {
-		return reportIdentification;
+	public Optional<Max35Text> getReportIdentification() {
+		return reportIdentification == null ? Optional.empty() : Optional.of(reportIdentification);
 	}
 
-	public void setReportIdentification(Max35Text reportIdentification) {
+	public IntraBalanceReport1 setReportIdentification(Max35Text reportIdentification) {
 		this.reportIdentification = reportIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "RptDtTm")
-	public DateAndDateTimeChoice getReportDateTime() {
-		return reportDateTime;
+	public Optional<DateAndDateTimeChoice> getReportDateTime() {
+		return reportDateTime == null ? Optional.empty() : Optional.of(reportDateTime);
 	}
 
-	public void setReportDateTime(DateAndDateTimeChoice reportDateTime) {
+	public IntraBalanceReport1 setReportDateTime(DateAndDateTimeChoice reportDateTime) {
 		this.reportDateTime = reportDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "RptPrd")
-	public Period2Choice getReportPeriod() {
-		return reportPeriod;
+	public Optional<Period2Choice> getReportPeriod() {
+		return reportPeriod == null ? Optional.empty() : Optional.of(reportPeriod);
 	}
 
-	public void setReportPeriod(Period2Choice reportPeriod) {
+	public IntraBalanceReport1 setReportPeriod(Period2Choice reportPeriod) {
 		this.reportPeriod = reportPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "QryTp")
-	public MovementResponseType1Code getQueryType() {
-		return queryType;
+	public Optional<MovementResponseType1Code> getQueryType() {
+		return queryType == null ? Optional.empty() : Optional.of(queryType);
 	}
 
-	public void setQueryType(MovementResponseType1Code queryType) {
+	public IntraBalanceReport1 setQueryType(MovementResponseType1Code queryType) {
 		this.queryType = queryType;
+		return this;
 	}
 
-	@XmlElement(name = "Frqcy")
-	public Frequency9Choice getFrequency() {
-		return frequency;
+	public Optional<Frequency9Choice> getFrequency() {
+		return frequency == null ? Optional.empty() : Optional.of(frequency);
 	}
 
-	public void setFrequency(Frequency9Choice frequency) {
+	public IntraBalanceReport1 setFrequency(Frequency9Choice frequency) {
 		this.frequency = frequency;
+		return this;
 	}
 
-	@XmlElement(name = "UpdTp", required = true)
 	public UpdateType2Choice getUpdateType() {
 		return updateType;
 	}
 
-	public void setUpdateType(UpdateType2Choice updateType) {
-		this.updateType = updateType;
+	public IntraBalanceReport1 setUpdateType(UpdateType2Choice updateType) {
+		this.updateType = Objects.requireNonNull(updateType);
+		return this;
 	}
 
-	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}
 
-	public void setActivityIndicator(YesNoIndicator activityIndicator) {
-		this.activityIndicator = activityIndicator;
+	public IntraBalanceReport1 setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = Objects.requireNonNull(activityIndicator);
+		return this;
 	}
 }

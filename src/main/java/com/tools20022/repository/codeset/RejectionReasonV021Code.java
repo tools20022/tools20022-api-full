@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RejectionReasonV2Code;
+import com.tools20022.repository.codeset.RejectionReasonV021Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason why the instruction/cancellation request has a rejected
@@ -31,42 +35,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RejectionReasonV2Code
- * RejectionReasonV2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReasonV021Code#mmInvalidSecurity
- * RejectionReasonV021Code.mmInvalidSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReasonV021Code#InvalidSecurity
+ * RejectionReasonV021Code.InvalidSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReasonV021Code#mmUnrecognisedIdentification
- * RejectionReasonV021Code.mmUnrecognisedIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReasonV021Code#UnrecognisedIdentification
+ * RejectionReasonV021Code.UnrecognisedIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReasonV021Code#mmUnknownSymbol
- * RejectionReasonV021Code.mmUnknownSymbol}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReasonV021Code#UnknownSymbol
+ * RejectionReasonV021Code.UnknownSymbol}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReasonV021Code#mmInsufficientCollateral
- * RejectionReasonV021Code.mmInsufficientCollateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReasonV021Code#InsufficientCollateral
+ * RejectionReasonV021Code.InsufficientCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReasonV021Code#mmConcentrationLimitExceeded
- * RejectionReasonV021Code.mmConcentrationLimitExceeded}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReasonV021Code#ConcentrationLimitExceeded
+ * RejectionReasonV021Code.ConcentrationLimitExceeded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReasonV021Code#mmNonEligibleSecurity
- * RejectionReasonV021Code.mmNonEligibleSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReasonV021Code#NonEligibleSecurity
+ * RejectionReasonV021Code.NonEligibleSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReasonV021Code#mmInvalidIdentification
- * RejectionReasonV021Code.mmInvalidIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReasonV021Code#InvalidIdentification
+ * RejectionReasonV021Code.InvalidIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReasonV021Code#mmOther
- * RejectionReasonV021Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReasonV021Code#Other
+ * RejectionReasonV021Code.Other}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RejectionReasonV2Code
+ * RejectionReasonV2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class RejectionReasonV021Code extends RejectionReasonV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RejectionReasonV021Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -104,11 +109,12 @@ public class RejectionReasonV021Code extends RejectionReasonV2Code {
 	 * name} = "InvalidSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalidSecurity = new MMCode() {
+	public static final RejectionReasonV021Code InvalidSecurity = new RejectionReasonV021Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidSecurity";
-			owner_lazy = () -> RejectionReasonV021Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReasonV021Code.mmObject();
+			codeName = RejectionReasonV2Code.InvalidSecurity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -127,11 +133,12 @@ public class RejectionReasonV021Code extends RejectionReasonV2Code {
 	 * name} = "UnrecognisedIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnrecognisedIdentification = new MMCode() {
+	public static final RejectionReasonV021Code UnrecognisedIdentification = new RejectionReasonV021Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnrecognisedIdentification";
-			owner_lazy = () -> RejectionReasonV021Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReasonV021Code.mmObject();
+			codeName = RejectionReasonV2Code.UnrecognisedIdentification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -150,11 +157,12 @@ public class RejectionReasonV021Code extends RejectionReasonV2Code {
 	 * name} = "UnknownSymbol"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknownSymbol = new MMCode() {
+	public static final RejectionReasonV021Code UnknownSymbol = new RejectionReasonV021Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownSymbol";
-			owner_lazy = () -> RejectionReasonV021Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReasonV021Code.mmObject();
+			codeName = RejectionReasonV2Code.UnknownSymbol.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -173,11 +181,12 @@ public class RejectionReasonV021Code extends RejectionReasonV2Code {
 	 * name} = "InsufficientCollateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInsufficientCollateral = new MMCode() {
+	public static final RejectionReasonV021Code InsufficientCollateral = new RejectionReasonV021Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientCollateral";
-			owner_lazy = () -> RejectionReasonV021Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReasonV021Code.mmObject();
+			codeName = RejectionReasonV2Code.InsufficientCollateral.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -196,11 +205,12 @@ public class RejectionReasonV021Code extends RejectionReasonV2Code {
 	 * name} = "ConcentrationLimitExceeded"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConcentrationLimitExceeded = new MMCode() {
+	public static final RejectionReasonV021Code ConcentrationLimitExceeded = new RejectionReasonV021Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConcentrationLimitExceeded";
-			owner_lazy = () -> RejectionReasonV021Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReasonV021Code.mmObject();
+			codeName = RejectionReasonV2Code.ConcentrationLimitExceeded.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -219,11 +229,12 @@ public class RejectionReasonV021Code extends RejectionReasonV2Code {
 	 * name} = "NonEligibleSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonEligibleSecurity = new MMCode() {
+	public static final RejectionReasonV021Code NonEligibleSecurity = new RejectionReasonV021Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonEligibleSecurity";
-			owner_lazy = () -> RejectionReasonV021Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReasonV021Code.mmObject();
+			codeName = RejectionReasonV2Code.NonEligibleSecurity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -242,11 +253,12 @@ public class RejectionReasonV021Code extends RejectionReasonV2Code {
 	 * name} = "InvalidIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalidIdentification = new MMCode() {
+	public static final RejectionReasonV021Code InvalidIdentification = new RejectionReasonV021Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidIdentification";
-			owner_lazy = () -> RejectionReasonV021Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReasonV021Code.mmObject();
+			codeName = RejectionReasonV2Code.InvalidIdentification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -265,27 +277,66 @@ public class RejectionReasonV021Code extends RejectionReasonV2Code {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final RejectionReasonV021Code Other = new RejectionReasonV021Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> RejectionReasonV021Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReasonV021Code.mmObject();
+			codeName = RejectionReasonV2Code.Other.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RejectionReasonV021Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RejectionReasonV021Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DSEC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReasonV021Code";
 				definition = "Specifies the reason why the instruction/cancellation request has a rejected status.";
-				code_lazy = () -> Arrays.asList(RejectionReasonV021Code.mmInvalidSecurity, RejectionReasonV021Code.mmUnrecognisedIdentification, RejectionReasonV021Code.mmUnknownSymbol, RejectionReasonV021Code.mmInsufficientCollateral,
-						RejectionReasonV021Code.mmConcentrationLimitExceeded, RejectionReasonV021Code.mmNonEligibleSecurity, RejectionReasonV021Code.mmInvalidIdentification, RejectionReasonV021Code.mmOther);
 				trace_lazy = () -> RejectionReasonV2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReasonV021Code.InvalidSecurity, com.tools20022.repository.codeset.RejectionReasonV021Code.UnrecognisedIdentification,
+						com.tools20022.repository.codeset.RejectionReasonV021Code.UnknownSymbol, com.tools20022.repository.codeset.RejectionReasonV021Code.InsufficientCollateral,
+						com.tools20022.repository.codeset.RejectionReasonV021Code.ConcentrationLimitExceeded, com.tools20022.repository.codeset.RejectionReasonV021Code.NonEligibleSecurity,
+						com.tools20022.repository.codeset.RejectionReasonV021Code.InvalidIdentification, com.tools20022.repository.codeset.RejectionReasonV021Code.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(InvalidSecurity.getCodeName().get(), InvalidSecurity);
+		codesByName.put(UnrecognisedIdentification.getCodeName().get(), UnrecognisedIdentification);
+		codesByName.put(UnknownSymbol.getCodeName().get(), UnknownSymbol);
+		codesByName.put(InsufficientCollateral.getCodeName().get(), InsufficientCollateral);
+		codesByName.put(ConcentrationLimitExceeded.getCodeName().get(), ConcentrationLimitExceeded);
+		codesByName.put(NonEligibleSecurity.getCodeName().get(), NonEligibleSecurity);
+		codesByName.put(InvalidIdentification.getCodeName().get(), InvalidIdentification);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static RejectionReasonV021Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RejectionReasonV021Code[] values() {
+		RejectionReasonV021Code[] values = new RejectionReasonV021Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RejectionReasonV021Code> {
+		@Override
+		public RejectionReasonV021Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RejectionReasonV021Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

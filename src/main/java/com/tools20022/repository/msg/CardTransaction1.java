@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,16 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CardTransaction1", propOrder = {"card", "POI", "transaction"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CardTransaction1", propOrder = {"card", "pOI", "transaction"})
 public class CardTransaction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Card")
 	protected PaymentCard4 card;
 	/**
-	 * Electronic money product that provides the cardholder with a portable and
-	 * specialised computer device, which typically contains a microprocessor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -123,7 +124,7 @@ public class CardTransaction1 {
 	public static final MMMessageAssociationEnd mmCard = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
-			componentContext_lazy = () -> CardTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "Card";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,11 +137,11 @@ public class CardTransaction1 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentCard4.mmObject();
 		}
 	};
+	@XmlElement(name = "POI")
 	protected PointOfInteraction1 pOI;
 	/**
-	 * Physical or logical card payment terminal containing software and
-	 * hardware components.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -181,7 +182,7 @@ public class CardTransaction1 {
 	public static final MMMessageAssociationEnd mmPOI = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmPointOfInteraction;
-			componentContext_lazy = () -> CardTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "POI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,11 +195,11 @@ public class CardTransaction1 {
 			type_lazy = () -> com.tools20022.repository.msg.PointOfInteraction1.mmObject();
 		}
 	};
+	@XmlElement(name = "Tx")
 	protected CardTransaction1Choice transaction;
 	/**
-	 * Card transaction details, which can be either globalised by the acquirer
-	 * or individual transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -240,7 +241,7 @@ public class CardTransaction1 {
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> CardTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,9 +258,9 @@ public class CardTransaction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardTransaction1.mmCard, CardTransaction1.mmPOI, CardTransaction1.mmTransaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction1.mmCard, com.tools20022.repository.msg.CardTransaction1.mmPOI, com.tools20022.repository.msg.CardTransaction1.mmTransaction);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransaction1";
 				definition = "Card transaction details.";
@@ -269,30 +270,30 @@ public class CardTransaction1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Card")
-	public PaymentCard4 getCard() {
-		return card;
+	public Optional<PaymentCard4> getCard() {
+		return card == null ? Optional.empty() : Optional.of(card);
 	}
 
-	public void setCard(com.tools20022.repository.msg.PaymentCard4 card) {
+	public CardTransaction1 setCard(com.tools20022.repository.msg.PaymentCard4 card) {
 		this.card = card;
+		return this;
 	}
 
-	@XmlElement(name = "POI")
-	public PointOfInteraction1 getPOI() {
-		return pOI;
+	public Optional<PointOfInteraction1> getPOI() {
+		return pOI == null ? Optional.empty() : Optional.of(pOI);
 	}
 
-	public void setPOI(com.tools20022.repository.msg.PointOfInteraction1 pOI) {
+	public CardTransaction1 setPOI(com.tools20022.repository.msg.PointOfInteraction1 pOI) {
 		this.pOI = pOI;
+		return this;
 	}
 
-	@XmlElement(name = "Tx")
-	public CardTransaction1Choice getTransaction() {
-		return transaction;
+	public Optional<CardTransaction1Choice> getTransaction() {
+		return transaction == null ? Optional.empty() : Optional.of(transaction);
 	}
 
-	public void setTransaction(CardTransaction1Choice transaction) {
+	public CardTransaction1 setTransaction(CardTransaction1Choice transaction) {
 		this.transaction = transaction;
+		return this;
 	}
 }

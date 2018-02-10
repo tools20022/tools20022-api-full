@@ -30,6 +30,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -44,8 +46,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IntentToPay1#mmByPurchaseOrderOrByCommercialInvoiceRule
- * IntentToPay1.mmByPurchaseOrderOrByCommercialInvoiceRule}</li>
+ * {@linkplain com.tools20022.repository.msg.IntentToPay1#ByPurchaseOrderOrByCommercialInvoiceRule
+ * IntentToPay1.ByPurchaseOrderOrByCommercialInvoiceRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -81,8 +83,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -102,15 +104,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IntentToPay1", propOrder = {"byPurchaseOrder", "byCommercialInvoice", "expectedPaymentDate", "settlementTerms"})
 public class IntentToPay1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ByPurchsOrdr", required = true)
 	protected ReportLine3 byPurchaseOrder;
 	/**
-	 * The intention to pay is based on a purchase order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -135,7 +138,7 @@ public class IntentToPay1 {
 	 */
 	public static final MMMessageAssociationEnd mmByPurchaseOrder = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntentToPay1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntentToPay1.mmObject();
 			isDerived = false;
 			xmlTag = "ByPurchsOrdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,10 +150,11 @@ public class IntentToPay1 {
 			type_lazy = () -> com.tools20022.repository.msg.ReportLine3.mmObject();
 		}
 	};
+	@XmlElement(name = "ByComrclInvc", required = true)
 	protected ReportLine4 byCommercialInvoice;
 	/**
-	 * The intention to pay is based on a commercial invoice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -175,7 +179,7 @@ public class IntentToPay1 {
 	 */
 	public static final MMMessageAssociationEnd mmByCommercialInvoice = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntentToPay1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntentToPay1.mmObject();
 			isDerived = false;
 			xmlTag = "ByComrclInvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,10 +191,11 @@ public class IntentToPay1 {
 			type_lazy = () -> com.tools20022.repository.msg.ReportLine4.mmObject();
 		}
 	};
+	@XmlElement(name = "XpctdPmtDt", required = true)
 	protected ISODate expectedPaymentDate;
 	/**
-	 * Date at which the payment would be effected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -230,7 +235,7 @@ public class IntentToPay1 {
 	public static final MMMessageAttribute mmExpectedPaymentDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
-			componentContext_lazy = () -> IntentToPay1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntentToPay1.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdPmtDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -242,10 +247,11 @@ public class IntentToPay1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmTerms")
 	protected SettlementTerms2 settlementTerms;
 	/**
-	 * Specifies the beneficiary's account information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -284,7 +290,7 @@ public class IntentToPay1 {
 	public static final MMMessageAssociationEnd mmSettlementTerms = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
-			componentContext_lazy = () -> IntentToPay1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntentToPay1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTerms";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -324,22 +330,23 @@ public class IntentToPay1 {
 	 * name} = "ByPurchaseOrderOrByCommercialInvoiceRule"</li>
 	 * </ul>
 	 */
-	public static final MMXor mmByPurchaseOrderOrByCommercialInvoiceRule = new MMXor() {
+	public static final MMXor ByPurchaseOrderOrByCommercialInvoiceRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ByPurchaseOrderOrByCommercialInvoiceRule";
-			messageComponent_lazy = () -> IntentToPay1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(IntentToPay1.mmByPurchaseOrder, IntentToPay1.mmByCommercialInvoice);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.IntentToPay1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntentToPay1.mmByPurchaseOrder, com.tools20022.repository.msg.IntentToPay1.mmByCommercialInvoice);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IntentToPay1.mmByPurchaseOrder, IntentToPay1.mmByCommercialInvoice, IntentToPay1.mmExpectedPaymentDate, IntentToPay1.mmSettlementTerms);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntentToPay1.mmByPurchaseOrder, com.tools20022.repository.msg.IntentToPay1.mmByCommercialInvoice,
+						com.tools20022.repository.msg.IntentToPay1.mmExpectedPaymentDate, com.tools20022.repository.msg.IntentToPay1.mmSettlementTerms);
 				messageBuildingBlock_lazy = () -> Arrays.asList(IntentToPayNotificationV01.mmIntentToPay, ForwardIntentToPayNotificationV01.mmIntentToPay);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -351,45 +358,45 @@ public class IntentToPay1 {
 				name = "IntentToPay1";
 				definition = "Specifies the details of an intention to pay based on purchase orders or commercial invoice.";
 				nextVersions_lazy = () -> Arrays.asList(IntentToPay2.mmObject());
-				xors_lazy = () -> Arrays.asList(IntentToPay1.mmByPurchaseOrderOrByCommercialInvoiceRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntentToPay1.ByPurchaseOrderOrByCommercialInvoiceRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ByPurchsOrdr", required = true)
 	public ReportLine3 getByPurchaseOrder() {
 		return byPurchaseOrder;
 	}
 
-	public void setByPurchaseOrder(com.tools20022.repository.msg.ReportLine3 byPurchaseOrder) {
-		this.byPurchaseOrder = byPurchaseOrder;
+	public IntentToPay1 setByPurchaseOrder(com.tools20022.repository.msg.ReportLine3 byPurchaseOrder) {
+		this.byPurchaseOrder = Objects.requireNonNull(byPurchaseOrder);
+		return this;
 	}
 
-	@XmlElement(name = "ByComrclInvc", required = true)
 	public ReportLine4 getByCommercialInvoice() {
 		return byCommercialInvoice;
 	}
 
-	public void setByCommercialInvoice(com.tools20022.repository.msg.ReportLine4 byCommercialInvoice) {
-		this.byCommercialInvoice = byCommercialInvoice;
+	public IntentToPay1 setByCommercialInvoice(com.tools20022.repository.msg.ReportLine4 byCommercialInvoice) {
+		this.byCommercialInvoice = Objects.requireNonNull(byCommercialInvoice);
+		return this;
 	}
 
-	@XmlElement(name = "XpctdPmtDt", required = true)
 	public ISODate getExpectedPaymentDate() {
 		return expectedPaymentDate;
 	}
 
-	public void setExpectedPaymentDate(ISODate expectedPaymentDate) {
-		this.expectedPaymentDate = expectedPaymentDate;
+	public IntentToPay1 setExpectedPaymentDate(ISODate expectedPaymentDate) {
+		this.expectedPaymentDate = Objects.requireNonNull(expectedPaymentDate);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmTerms")
-	public SettlementTerms2 getSettlementTerms() {
-		return settlementTerms;
+	public Optional<SettlementTerms2> getSettlementTerms() {
+		return settlementTerms == null ? Optional.empty() : Optional.of(settlementTerms);
 	}
 
-	public void setSettlementTerms(com.tools20022.repository.msg.SettlementTerms2 settlementTerms) {
+	public IntentToPay1 setSettlementTerms(com.tools20022.repository.msg.SettlementTerms2 settlementTerms) {
 		this.settlementTerms = settlementTerms;
+		return this;
 	}
 }

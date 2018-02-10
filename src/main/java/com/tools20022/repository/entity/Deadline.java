@@ -24,6 +24,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Specifies the different deadlines available for the different processes
@@ -52,20 +54,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Deadline.mmRelatedMeeting}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesBlockingDeadline
- * SecuritiesBlockingDeadline}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesRegistrationDeadline
- * SecuritiesRegistrationDeadline}</li>
- * <li>{@linkplain com.tools20022.repository.entity.MeetingDeadline
- * MeetingDeadline}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CorporateActionDeadline
- * CorporateActionDeadline}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -89,11 +77,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionDate55.mmBorrowerStockLendingDeadline}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesBlockingDeadline
+ * SecuritiesBlockingDeadline}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesRegistrationDeadline
+ * SecuritiesRegistrationDeadline}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MeetingDeadline
+ * MeetingDeadline}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CorporateActionDeadline
+ * CorporateActionDeadline}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,8 +113,8 @@ public class Deadline {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CorporateActionEvent relatedCorporateActionEvent;
 	/**
-	 * Related corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,8 +147,8 @@ public class Deadline {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCorporateActionEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Deadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Deadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCorporateActionEvent";
 			definition = "Related corporate action event.";
@@ -159,9 +161,8 @@ public class Deadline {
 	};
 	protected ISODateTime marketDeadline;
 	/**
-	 * Date by which the action should have been completed. This deadline is set
-	 * by the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -365,8 +366,8 @@ public class Deadline {
 					VoteParameters4.mmVoteMarketDeadline, VoteParameters4.mmRevocabilityMarketDeadline, VoteParameters4.mmVoteWithPremiumMarketDeadline, MeetingNotice4.mmAttendanceConfirmationMarketDeadline,
 					ProxyAppointmentInformation3.mmMarketDeadline, AdditionalRights2.mmAdditionalRightMarketDeadline, CorporateActionDate46.mmMarketDeadline, CorporateActionDate48.mmMarketDeadline, CorporateActionDate52.mmMarketDeadline,
 					CorporateActionDate55.mmMarketDeadline);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Deadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Deadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketDeadline";
 			definition = "Date by which the action should have been completed.  This deadline is set by the issuer.";
@@ -385,9 +386,8 @@ public class Deadline {
 	};
 	protected ISODateTime intermediaryDeadline;
 	/**
-	 * Date by which the action should have been completed. This deadline is set
-	 * by an intermediary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -525,8 +525,8 @@ public class Deadline {
 					EntitlementAssessment2.mmRegistrationParticipationDeadline, VoteParameters3.mmVoteDeadline, VoteParameters3.mmRevocabilityDeadline, VoteParameters3.mmVoteWithPremiumDeadline,
 					EntitlementAssessment3.mmSecuritiesBlockingDeadline, EntitlementAssessment3.mmRegistrationSecuritiesDeadline, EntitlementAssessment3.mmRegistrationParticipationDeadline, VoteParameters4.mmVoteDeadline,
 					VoteParameters4.mmRevocabilityDeadline, VoteParameters4.mmEarlyVoteWithPremiumDeadline, VoteParameters4.mmVoteWithPremiumDeadline, MeetingNotice4.mmAttendanceConfirmationDeadline);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Deadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Deadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IntermediaryDeadline";
 			definition = "Date by which the action should have been completed. This deadline is set by an intermediary.";
@@ -545,9 +545,8 @@ public class Deadline {
 	};
 	protected ISODateTime sTPDeadline;
 	/**
-	 * Date by which the action should have been completed. This deadline is set
-	 * by the issuer. (STP or Electronic mode)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -670,8 +669,8 @@ public class Deadline {
 					EntitlementAssessment2.mmRegistrationParticipationSTPDeadline, VoteParameters3.mmVoteSTPDeadline, VoteParameters3.mmRevocabilitySTPDeadline, VoteParameters3.mmVoteWithPremiumSTPDeadline,
 					EntitlementAssessment3.mmSecuritiesBlockingSTPDeadline, EntitlementAssessment3.mmRegistrationSecuritiesSTPDeadline, EntitlementAssessment3.mmRegistrationParticipationSTPDeadline, VoteParameters4.mmVoteSTPDeadline,
 					VoteParameters4.mmRevocabilitySTPDeadline, VoteParameters4.mmVoteWithPremiumSTPDeadline, MeetingNotice4.mmAttendanceConfirmationSTPDeadline);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Deadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Deadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "STPDeadline";
 			definition = "Date by which the action should have been completed. This deadline is set by the issuer. (STP or Electronic mode)";
@@ -690,8 +689,8 @@ public class Deadline {
 	};
 	protected Meeting relatedMeeting;
 	/**
-	 * Meeting for which deadlines are specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -722,8 +721,8 @@ public class Deadline {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedMeeting = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Deadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Deadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedMeeting";
 			definition = "Meeting for which deadlines are specified.";
@@ -738,7 +737,7 @@ public class Deadline {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Deadline";
 				definition = "Specifies the different deadlines available for the different processes related to corporate action processes.";
@@ -757,43 +756,48 @@ public class Deadline {
 		return mmObject_lazy.get();
 	}
 
-	public CorporateActionEvent getRelatedCorporateActionEvent() {
-		return relatedCorporateActionEvent;
+	public Optional<CorporateActionEvent> getRelatedCorporateActionEvent() {
+		return relatedCorporateActionEvent == null ? Optional.empty() : Optional.of(relatedCorporateActionEvent);
 	}
 
-	public void setRelatedCorporateActionEvent(com.tools20022.repository.entity.CorporateActionEvent relatedCorporateActionEvent) {
+	public Deadline setRelatedCorporateActionEvent(com.tools20022.repository.entity.CorporateActionEvent relatedCorporateActionEvent) {
 		this.relatedCorporateActionEvent = relatedCorporateActionEvent;
+		return this;
 	}
 
 	public ISODateTime getMarketDeadline() {
 		return marketDeadline;
 	}
 
-	public void setMarketDeadline(ISODateTime marketDeadline) {
-		this.marketDeadline = marketDeadline;
+	public Deadline setMarketDeadline(ISODateTime marketDeadline) {
+		this.marketDeadline = Objects.requireNonNull(marketDeadline);
+		return this;
 	}
 
 	public ISODateTime getIntermediaryDeadline() {
 		return intermediaryDeadline;
 	}
 
-	public void setIntermediaryDeadline(ISODateTime intermediaryDeadline) {
-		this.intermediaryDeadline = intermediaryDeadline;
+	public Deadline setIntermediaryDeadline(ISODateTime intermediaryDeadline) {
+		this.intermediaryDeadline = Objects.requireNonNull(intermediaryDeadline);
+		return this;
 	}
 
 	public ISODateTime getSTPDeadline() {
 		return sTPDeadline;
 	}
 
-	public void setSTPDeadline(ISODateTime sTPDeadline) {
-		this.sTPDeadline = sTPDeadline;
+	public Deadline setSTPDeadline(ISODateTime sTPDeadline) {
+		this.sTPDeadline = Objects.requireNonNull(sTPDeadline);
+		return this;
 	}
 
-	public Meeting getRelatedMeeting() {
-		return relatedMeeting;
+	public Optional<Meeting> getRelatedMeeting() {
+		return relatedMeeting == null ? Optional.empty() : Optional.of(relatedMeeting);
 	}
 
-	public void setRelatedMeeting(com.tools20022.repository.entity.Meeting relatedMeeting) {
+	public Deadline setRelatedMeeting(com.tools20022.repository.entity.Meeting relatedMeeting) {
 		this.relatedMeeting = relatedMeeting;
+		return this;
 	}
 }

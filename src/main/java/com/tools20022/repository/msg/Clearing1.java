@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNonGuaranteedTradePresenceRule#forClearing1
+ * ConstraintNonGuaranteedTradePresenceRule.forClearing1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,17 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides the clearing details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Clearing1", propOrder = {"nonClearingMember", "settlementNettingEligibleCode", "clearingSegment", "guaranteedTrade", "nonGuaranteedTrade"})
 public class Clearing1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NonClrMmb")
 	protected PartyIdentificationAndAccount31 nonClearingMember;
 	/**
-	 * Provides the identification for the non-clearing member. This is
-	 * mandatory if the clearing member identification equals a general clearing
-	 * member.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +129,7 @@ public class Clearing1 {
 	public static final MMMessageAttribute mmNonClearingMember = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Clearing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Clearing1.mmObject();
 			isDerived = false;
 			xmlTag = "NonClrMmb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,11 +140,11 @@ public class Clearing1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmNetgElgblCd", required = true)
 	protected NettingEligible1Code settlementNettingEligibleCode;
 	/**
-	 * Indicates to the clearing member whether the trade is elligible for
-	 * settlement netting or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,7 +179,7 @@ public class Clearing1 {
 	public static final MMMessageAttribute mmSettlementNettingEligibleCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmSettlementNetting;
-			componentContext_lazy = () -> Clearing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Clearing1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmNetgElgblCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,14 +190,11 @@ public class Clearing1 {
 			simpleType_lazy = () -> NettingEligible1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ClrSgmt")
 	protected PartyIdentification35Choice clearingSegment;
 	/**
-	 * Clearing organisation that will clear the trade.<br>
-	 * Note: This field allows clearing member firm to segregate flows coming
-	 * from clearing counterparty's clearing system. Indeed, clearing member
-	 * firms receive messages from the same system (same sender) and this field
-	 * allows them to know if the message is related to equities or derivatives.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -223,7 +229,7 @@ public class Clearing1 {
 	public static final MMMessageAttribute mmClearingSegment = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Clearing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Clearing1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrSgmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,11 +240,11 @@ public class Clearing1 {
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "GrntedTrad")
 	protected YesNoIndicator guaranteedTrade;
 	/**
-	 * Indicates if the central counterparty has to novate and guarantee the
-	 * trade or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -273,7 +279,7 @@ public class Clearing1 {
 	public static final MMMessageAttribute mmGuaranteedTrade = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Clearing.mmGuaranteedTrade;
-			componentContext_lazy = () -> Clearing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Clearing1.mmObject();
 			isDerived = false;
 			xmlTag = "GrntedTrad";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,13 +290,11 @@ public class Clearing1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "NonGrntedTrad")
 	protected NonGuaranteedTrade1 nonGuaranteedTrade;
 	/**
-	 * In case of trades that are not guaranteed by the central counterparty
-	 * (this is when the central counterparty did novate the trade), provides
-	 * details such as the trade counterparty member identification or the trade
-	 * counterparty clearing member identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -323,7 +327,7 @@ public class Clearing1 {
 	public static final MMMessageAssociationEnd mmNonGuaranteedTrade = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmRelatedTrade;
-			componentContext_lazy = () -> Clearing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Clearing1.mmObject();
 			isDerived = false;
 			xmlTag = "NonGrntedTrad";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -339,9 +343,11 @@ public class Clearing1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Clearing1.mmNonClearingMember, Clearing1.mmSettlementNettingEligibleCode, Clearing1.mmClearingSegment, Clearing1.mmGuaranteedTrade, Clearing1.mmNonGuaranteedTrade);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Clearing1.mmNonClearingMember, com.tools20022.repository.msg.Clearing1.mmSettlementNettingEligibleCode,
+						com.tools20022.repository.msg.Clearing1.mmClearingSegment, com.tools20022.repository.msg.Clearing1.mmGuaranteedTrade, com.tools20022.repository.msg.Clearing1.mmNonGuaranteedTrade);
 				trace_lazy = () -> Clearing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNonGuaranteedTradePresenceRule.forClearing1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Clearing1";
 				definition = "Provides the clearing details.";
@@ -350,48 +356,48 @@ public class Clearing1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NonClrMmb")
-	public PartyIdentificationAndAccount31 getNonClearingMember() {
-		return nonClearingMember;
+	public Optional<PartyIdentificationAndAccount31> getNonClearingMember() {
+		return nonClearingMember == null ? Optional.empty() : Optional.of(nonClearingMember);
 	}
 
-	public void setNonClearingMember(com.tools20022.repository.msg.PartyIdentificationAndAccount31 nonClearingMember) {
+	public Clearing1 setNonClearingMember(com.tools20022.repository.msg.PartyIdentificationAndAccount31 nonClearingMember) {
 		this.nonClearingMember = nonClearingMember;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmNetgElgblCd", required = true)
 	public NettingEligible1Code getSettlementNettingEligibleCode() {
 		return settlementNettingEligibleCode;
 	}
 
-	public void setSettlementNettingEligibleCode(NettingEligible1Code settlementNettingEligibleCode) {
-		this.settlementNettingEligibleCode = settlementNettingEligibleCode;
+	public Clearing1 setSettlementNettingEligibleCode(NettingEligible1Code settlementNettingEligibleCode) {
+		this.settlementNettingEligibleCode = Objects.requireNonNull(settlementNettingEligibleCode);
+		return this;
 	}
 
-	@XmlElement(name = "ClrSgmt")
-	public PartyIdentification35Choice getClearingSegment() {
-		return clearingSegment;
+	public Optional<PartyIdentification35Choice> getClearingSegment() {
+		return clearingSegment == null ? Optional.empty() : Optional.of(clearingSegment);
 	}
 
-	public void setClearingSegment(PartyIdentification35Choice clearingSegment) {
+	public Clearing1 setClearingSegment(PartyIdentification35Choice clearingSegment) {
 		this.clearingSegment = clearingSegment;
+		return this;
 	}
 
-	@XmlElement(name = "GrntedTrad")
-	public YesNoIndicator getGuaranteedTrade() {
-		return guaranteedTrade;
+	public Optional<YesNoIndicator> getGuaranteedTrade() {
+		return guaranteedTrade == null ? Optional.empty() : Optional.of(guaranteedTrade);
 	}
 
-	public void setGuaranteedTrade(YesNoIndicator guaranteedTrade) {
+	public Clearing1 setGuaranteedTrade(YesNoIndicator guaranteedTrade) {
 		this.guaranteedTrade = guaranteedTrade;
+		return this;
 	}
 
-	@XmlElement(name = "NonGrntedTrad")
-	public NonGuaranteedTrade1 getNonGuaranteedTrade() {
-		return nonGuaranteedTrade;
+	public Optional<NonGuaranteedTrade1> getNonGuaranteedTrade() {
+		return nonGuaranteedTrade == null ? Optional.empty() : Optional.of(nonGuaranteedTrade);
 	}
 
-	public void setNonGuaranteedTrade(com.tools20022.repository.msg.NonGuaranteedTrade1 nonGuaranteedTrade) {
+	public Clearing1 setNonGuaranteedTrade(com.tools20022.repository.msg.NonGuaranteedTrade1 nonGuaranteedTrade) {
 		this.nonGuaranteedTrade = nonGuaranteedTrade;
+		return this;
 	}
 }

@@ -20,64 +20,68 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DividendRateTypeCode;
+import com.tools20022.repository.codeset.NetDividendRateType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of net dividend rate.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode
- * DividendRateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#mmCapitalPortion
- * NetDividendRateType2Code.mmCapitalPortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#CapitalPortion
+ * NetDividendRateType2Code.CapitalPortion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#mmFullyFranked
- * NetDividendRateType2Code.mmFullyFranked}</li>
+ * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#FullyFranked
+ * NetDividendRateType2Code.FullyFranked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#mmIncomePortion
- * NetDividendRateType2Code.mmIncomePortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#IncomePortion
+ * NetDividendRateType2Code.IncomePortion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#mmInterest
- * NetDividendRateType2Code.mmInterest}</li>
+ * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#Interest
+ * NetDividendRateType2Code.Interest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#mmSundryOrOtherIncome
- * NetDividendRateType2Code.mmSundryOrOtherIncome}</li>
+ * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#SundryOrOtherIncome
+ * NetDividendRateType2Code.SundryOrOtherIncome}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#mmTaxablePortion
- * NetDividendRateType2Code.mmTaxablePortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#TaxablePortion
+ * NetDividendRateType2Code.TaxablePortion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#mmTaxDeferred
- * NetDividendRateType2Code.mmTaxDeferred}</li>
+ * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#TaxDeferred
+ * NetDividendRateType2Code.TaxDeferred}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#mmTaxFree
- * NetDividendRateType2Code.mmTaxFree}</li>
+ * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#TaxFree
+ * NetDividendRateType2Code.TaxFree}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#mmUnfranked
- * NetDividendRateType2Code.mmUnfranked}</li>
+ * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#Unfranked
+ * NetDividendRateType2Code.Unfranked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#mmFullPeriodUnitsIncomePortion
- * NetDividendRateType2Code.mmFullPeriodUnitsIncomePortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#FullPeriodUnitsIncomePortion
+ * NetDividendRateType2Code.FullPeriodUnitsIncomePortion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#mmPartWayPeriodUnitsIncomePortion
- * NetDividendRateType2Code.mmPartWayPeriodUnitsIncomePortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#PartWayPeriodUnitsIncomePortion
+ * NetDividendRateType2Code.PartWayPeriodUnitsIncomePortion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#mmRealEstatePropertyIncomePortion
- * NetDividendRateType2Code.mmRealEstatePropertyIncomePortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.NetDividendRateType2Code#RealEstatePropertyIncomePortion
+ * NetDividendRateType2Code.RealEstatePropertyIncomePortion}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode
+ * DividendRateTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -98,7 +102,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * NetDividendRateType1Code}</li>
  * </ul>
  */
-public class NetDividendRateType2Code extends DividendRateTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class NetDividendRateType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -117,11 +122,12 @@ public class NetDividendRateType2Code extends DividendRateTypeCode {
 	 * name} = "CapitalPortion"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCapitalPortion = new MMCode() {
+	public static final NetDividendRateType2Code CapitalPortion = new NetDividendRateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalPortion";
-			owner_lazy = () -> NetDividendRateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NetDividendRateType2Code.mmObject();
+			codeName = DividendRateTypeCode.CapitalPortion.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -140,11 +146,12 @@ public class NetDividendRateType2Code extends DividendRateTypeCode {
 	 * name} = "FullyFranked"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullyFranked = new MMCode() {
+	public static final NetDividendRateType2Code FullyFranked = new NetDividendRateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyFranked";
-			owner_lazy = () -> NetDividendRateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NetDividendRateType2Code.mmObject();
+			codeName = DividendRateTypeCode.FullyFranked.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -163,11 +170,12 @@ public class NetDividendRateType2Code extends DividendRateTypeCode {
 	 * name} = "IncomePortion"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncomePortion = new MMCode() {
+	public static final NetDividendRateType2Code IncomePortion = new NetDividendRateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomePortion";
-			owner_lazy = () -> NetDividendRateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NetDividendRateType2Code.mmObject();
+			codeName = DividendRateTypeCode.IncomePortion.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -186,11 +194,12 @@ public class NetDividendRateType2Code extends DividendRateTypeCode {
 	 * name} = "Interest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterest = new MMCode() {
+	public static final NetDividendRateType2Code Interest = new NetDividendRateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
-			owner_lazy = () -> NetDividendRateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NetDividendRateType2Code.mmObject();
+			codeName = DividendRateTypeCode.Interest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -209,11 +218,12 @@ public class NetDividendRateType2Code extends DividendRateTypeCode {
 	 * name} = "SundryOrOtherIncome"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSundryOrOtherIncome = new MMCode() {
+	public static final NetDividendRateType2Code SundryOrOtherIncome = new NetDividendRateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SundryOrOtherIncome";
-			owner_lazy = () -> NetDividendRateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NetDividendRateType2Code.mmObject();
+			codeName = DividendRateTypeCode.SundryOrOtherIncome.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -232,11 +242,12 @@ public class NetDividendRateType2Code extends DividendRateTypeCode {
 	 * name} = "TaxablePortion"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxablePortion = new MMCode() {
+	public static final NetDividendRateType2Code TaxablePortion = new NetDividendRateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxablePortion";
-			owner_lazy = () -> NetDividendRateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NetDividendRateType2Code.mmObject();
+			codeName = DividendRateTypeCode.TaxablePortion.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -255,11 +266,12 @@ public class NetDividendRateType2Code extends DividendRateTypeCode {
 	 * name} = "TaxDeferred"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxDeferred = new MMCode() {
+	public static final NetDividendRateType2Code TaxDeferred = new NetDividendRateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDeferred";
-			owner_lazy = () -> NetDividendRateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NetDividendRateType2Code.mmObject();
+			codeName = DividendRateTypeCode.TaxDeferred.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -278,11 +290,12 @@ public class NetDividendRateType2Code extends DividendRateTypeCode {
 	 * name} = "TaxFree"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxFree = new MMCode() {
+	public static final NetDividendRateType2Code TaxFree = new NetDividendRateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxFree";
-			owner_lazy = () -> NetDividendRateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NetDividendRateType2Code.mmObject();
+			codeName = DividendRateTypeCode.TaxFree.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -301,11 +314,12 @@ public class NetDividendRateType2Code extends DividendRateTypeCode {
 	 * name} = "Unfranked"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnfranked = new MMCode() {
+	public static final NetDividendRateType2Code Unfranked = new NetDividendRateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unfranked";
-			owner_lazy = () -> NetDividendRateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NetDividendRateType2Code.mmObject();
+			codeName = DividendRateTypeCode.Unfranked.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -324,11 +338,12 @@ public class NetDividendRateType2Code extends DividendRateTypeCode {
 	 * name} = "FullPeriodUnitsIncomePortion"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullPeriodUnitsIncomePortion = new MMCode() {
+	public static final NetDividendRateType2Code FullPeriodUnitsIncomePortion = new NetDividendRateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPeriodUnitsIncomePortion";
-			owner_lazy = () -> NetDividendRateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NetDividendRateType2Code.mmObject();
+			codeName = DividendRateTypeCode.FullPeriodUnitsIncomePortion.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -347,11 +362,12 @@ public class NetDividendRateType2Code extends DividendRateTypeCode {
 	 * name} = "PartWayPeriodUnitsIncomePortion"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartWayPeriodUnitsIncomePortion = new MMCode() {
+	public static final NetDividendRateType2Code PartWayPeriodUnitsIncomePortion = new NetDividendRateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartWayPeriodUnitsIncomePortion";
-			owner_lazy = () -> NetDividendRateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NetDividendRateType2Code.mmObject();
+			codeName = DividendRateTypeCode.PartWayPeriodUnitsIncomePortion.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -370,29 +386,73 @@ public class NetDividendRateType2Code extends DividendRateTypeCode {
 	 * name} = "RealEstatePropertyIncomePortion"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRealEstatePropertyIncomePortion = new MMCode() {
+	public static final NetDividendRateType2Code RealEstatePropertyIncomePortion = new NetDividendRateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RealEstatePropertyIncomePortion";
-			owner_lazy = () -> NetDividendRateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NetDividendRateType2Code.mmObject();
+			codeName = DividendRateTypeCode.RealEstatePropertyIncomePortion.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, NetDividendRateType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected NetDividendRateType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CAPO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetDividendRateType2Code";
 				definition = "Specifies the type of net dividend rate.";
 				previousVersion_lazy = () -> NetDividendRateType1Code.mmObject();
-				code_lazy = () -> Arrays.asList(NetDividendRateType2Code.mmCapitalPortion, NetDividendRateType2Code.mmFullyFranked, NetDividendRateType2Code.mmIncomePortion, NetDividendRateType2Code.mmInterest,
-						NetDividendRateType2Code.mmSundryOrOtherIncome, NetDividendRateType2Code.mmTaxablePortion, NetDividendRateType2Code.mmTaxDeferred, NetDividendRateType2Code.mmTaxFree, NetDividendRateType2Code.mmUnfranked,
-						NetDividendRateType2Code.mmFullPeriodUnitsIncomePortion, NetDividendRateType2Code.mmPartWayPeriodUnitsIncomePortion, NetDividendRateType2Code.mmRealEstatePropertyIncomePortion);
 				trace_lazy = () -> DividendRateTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NetDividendRateType2Code.CapitalPortion, com.tools20022.repository.codeset.NetDividendRateType2Code.FullyFranked,
+						com.tools20022.repository.codeset.NetDividendRateType2Code.IncomePortion, com.tools20022.repository.codeset.NetDividendRateType2Code.Interest,
+						com.tools20022.repository.codeset.NetDividendRateType2Code.SundryOrOtherIncome, com.tools20022.repository.codeset.NetDividendRateType2Code.TaxablePortion,
+						com.tools20022.repository.codeset.NetDividendRateType2Code.TaxDeferred, com.tools20022.repository.codeset.NetDividendRateType2Code.TaxFree, com.tools20022.repository.codeset.NetDividendRateType2Code.Unfranked,
+						com.tools20022.repository.codeset.NetDividendRateType2Code.FullPeriodUnitsIncomePortion, com.tools20022.repository.codeset.NetDividendRateType2Code.PartWayPeriodUnitsIncomePortion,
+						com.tools20022.repository.codeset.NetDividendRateType2Code.RealEstatePropertyIncomePortion);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CapitalPortion.getCodeName().get(), CapitalPortion);
+		codesByName.put(FullyFranked.getCodeName().get(), FullyFranked);
+		codesByName.put(IncomePortion.getCodeName().get(), IncomePortion);
+		codesByName.put(Interest.getCodeName().get(), Interest);
+		codesByName.put(SundryOrOtherIncome.getCodeName().get(), SundryOrOtherIncome);
+		codesByName.put(TaxablePortion.getCodeName().get(), TaxablePortion);
+		codesByName.put(TaxDeferred.getCodeName().get(), TaxDeferred);
+		codesByName.put(TaxFree.getCodeName().get(), TaxFree);
+		codesByName.put(Unfranked.getCodeName().get(), Unfranked);
+		codesByName.put(FullPeriodUnitsIncomePortion.getCodeName().get(), FullPeriodUnitsIncomePortion);
+		codesByName.put(PartWayPeriodUnitsIncomePortion.getCodeName().get(), PartWayPeriodUnitsIncomePortion);
+		codesByName.put(RealEstatePropertyIncomePortion.getCodeName().get(), RealEstatePropertyIncomePortion);
+	}
+
+	public static NetDividendRateType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static NetDividendRateType2Code[] values() {
+		NetDividendRateType2Code[] values = new NetDividendRateType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, NetDividendRateType2Code> {
+		@Override
+		public NetDividendRateType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(NetDividendRateType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

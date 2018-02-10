@@ -20,78 +20,81 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SettlementDateCode;
+import com.tools20022.repository.codeset.SettlementDate2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the date of settlement in coded form.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SettlementDateCode
- * SettlementDateCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmRegular
- * SettlementDate2Code.mmRegular}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmCash
- * SettlementDate2Code.mmCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#Regular
+ * SettlementDate2Code.Regular}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SettlementDate2Code#Cash
+ * SettlementDate2Code.Cash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmNextDay
- * SettlementDate2Code.mmNextDay}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#NextDay
+ * SettlementDate2Code.NextDay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmTPlusOne
- * SettlementDate2Code.mmTPlusOne}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#TPlusOne
+ * SettlementDate2Code.TPlusOne}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmTPlusTwo
- * SettlementDate2Code.mmTPlusTwo}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#TPlusTwo
+ * SettlementDate2Code.TPlusTwo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmTPlusThree
- * SettlementDate2Code.mmTPlusThree}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#TPlusThree
+ * SettlementDate2Code.TPlusThree}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmTPlusFour
- * SettlementDate2Code.mmTPlusFour}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#TPlusFour
+ * SettlementDate2Code.TPlusFour}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmTPlusFive
- * SettlementDate2Code.mmTPlusFive}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#TPlusFive
+ * SettlementDate2Code.TPlusFive}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmSellersOption
- * SettlementDate2Code.mmSellersOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#SellersOption
+ * SettlementDate2Code.SellersOption}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SettlementDate2Code#Future
+ * SettlementDate2Code.Future}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmFuture
- * SettlementDate2Code.mmFuture}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#AsSoonAsPossible
+ * SettlementDate2Code.AsSoonAsPossible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmAsSoonAsPossible
- * SettlementDate2Code.mmAsSoonAsPossible}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#AtEndOfContract
+ * SettlementDate2Code.AtEndOfContract}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmAtEndOfContract
- * SettlementDate2Code.mmAtEndOfContract}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#WhenAndIfIssued
+ * SettlementDate2Code.WhenAndIfIssued}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmWhenAndIfIssued
- * SettlementDate2Code.mmWhenAndIfIssued}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#WhenDistributed
+ * SettlementDate2Code.WhenDistributed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmWhenDistributed
- * SettlementDate2Code.mmWhenDistributed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#WhenIssuedOrDistributed
+ * SettlementDate2Code.WhenIssuedOrDistributed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmWhenIssuedOrDistributed
- * SettlementDate2Code.mmWhenIssuedOrDistributed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#ToBeAnnouncedTrade
+ * SettlementDate2Code.ToBeAnnouncedTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmToBeAnnouncedTrade
- * SettlementDate2Code.mmToBeAnnouncedTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#mmEndOfMonth
- * SettlementDate2Code.mmEndOfMonth}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate2Code#EndOfMonth
+ * SettlementDate2Code.EndOfMonth}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SettlementDateCode
+ * SettlementDateCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -108,7 +111,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates the date of settlement in coded form."</li>
  * </ul>
  */
-public class SettlementDate2Code extends SettlementDateCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SettlementDate2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -127,11 +131,12 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "Regular"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegular = new MMCode() {
+	public static final SettlementDate2Code Regular = new SettlementDate2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Regular";
-			owner_lazy = () -> SettlementDate2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate2Code.mmObject();
+			codeName = SettlementDateCode.Regular.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -150,11 +155,12 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "Cash"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCash = new MMCode() {
+	public static final SettlementDate2Code Cash = new SettlementDate2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
-			owner_lazy = () -> SettlementDate2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate2Code.mmObject();
+			codeName = SettlementDateCode.Cash.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -173,11 +179,12 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "NextDay"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNextDay = new MMCode() {
+	public static final SettlementDate2Code NextDay = new SettlementDate2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextDay";
-			owner_lazy = () -> SettlementDate2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate2Code.mmObject();
+			codeName = SettlementDateCode.NextDay.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -196,11 +203,12 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "TPlusOne"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTPlusOne = new MMCode() {
+	public static final SettlementDate2Code TPlusOne = new SettlementDate2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TPlusOne";
-			owner_lazy = () -> SettlementDate2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate2Code.mmObject();
+			codeName = SettlementDateCode.TPlusOne.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -219,11 +227,12 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "TPlusTwo"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTPlusTwo = new MMCode() {
+	public static final SettlementDate2Code TPlusTwo = new SettlementDate2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TPlusTwo";
-			owner_lazy = () -> SettlementDate2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate2Code.mmObject();
+			codeName = SettlementDateCode.TPlusTwo.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -242,11 +251,12 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "TPlusThree"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTPlusThree = new MMCode() {
+	public static final SettlementDate2Code TPlusThree = new SettlementDate2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TPlusThree";
-			owner_lazy = () -> SettlementDate2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate2Code.mmObject();
+			codeName = SettlementDateCode.TPlusThree.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -265,11 +275,12 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "TPlusFour"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTPlusFour = new MMCode() {
+	public static final SettlementDate2Code TPlusFour = new SettlementDate2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TPlusFour";
-			owner_lazy = () -> SettlementDate2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate2Code.mmObject();
+			codeName = SettlementDateCode.TPlusFour.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -288,11 +299,12 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "TPlusFive"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTPlusFive = new MMCode() {
+	public static final SettlementDate2Code TPlusFive = new SettlementDate2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TPlusFive";
-			owner_lazy = () -> SettlementDate2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate2Code.mmObject();
+			codeName = SettlementDateCode.TPlusFive.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -311,11 +323,12 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "SellersOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSellersOption = new MMCode() {
+	public static final SettlementDate2Code SellersOption = new SettlementDate2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellersOption";
-			owner_lazy = () -> SettlementDate2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate2Code.mmObject();
+			codeName = SettlementDateCode.SellersOption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -334,11 +347,12 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "Future"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFuture = new MMCode() {
+	public static final SettlementDate2Code Future = new SettlementDate2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Future";
-			owner_lazy = () -> SettlementDate2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate2Code.mmObject();
+			codeName = SettlementDateCode.Future.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -357,11 +371,12 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "AsSoonAsPossible"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAsSoonAsPossible = new MMCode() {
+	public static final SettlementDate2Code AsSoonAsPossible = new SettlementDate2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsSoonAsPossible";
-			owner_lazy = () -> SettlementDate2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate2Code.mmObject();
+			codeName = SettlementDateCode.AsSoonAsPossible.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -380,11 +395,12 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "AtEndOfContract"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAtEndOfContract = new MMCode() {
+	public static final SettlementDate2Code AtEndOfContract = new SettlementDate2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtEndOfContract";
-			owner_lazy = () -> SettlementDate2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate2Code.mmObject();
+			codeName = SettlementDateCode.AtEndOfContract.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -403,11 +419,12 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "WhenAndIfIssued"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWhenAndIfIssued = new MMCode() {
+	public static final SettlementDate2Code WhenAndIfIssued = new SettlementDate2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhenAndIfIssued";
-			owner_lazy = () -> SettlementDate2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate2Code.mmObject();
+			codeName = SettlementDateCode.WhenAndIfIssued.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -426,11 +443,12 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "WhenDistributed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWhenDistributed = new MMCode() {
+	public static final SettlementDate2Code WhenDistributed = new SettlementDate2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhenDistributed";
-			owner_lazy = () -> SettlementDate2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate2Code.mmObject();
+			codeName = SettlementDateCode.WhenDistributed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -449,11 +467,12 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "WhenIssuedOrDistributed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWhenIssuedOrDistributed = new MMCode() {
+	public static final SettlementDate2Code WhenIssuedOrDistributed = new SettlementDate2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhenIssuedOrDistributed";
-			owner_lazy = () -> SettlementDate2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate2Code.mmObject();
+			codeName = SettlementDateCode.WhenIssuedOrDistributed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -472,11 +491,12 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "ToBeAnnouncedTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmToBeAnnouncedTrade = new MMCode() {
+	public static final SettlementDate2Code ToBeAnnouncedTrade = new SettlementDate2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToBeAnnouncedTrade";
-			owner_lazy = () -> SettlementDate2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate2Code.mmObject();
+			codeName = SettlementDateCode.ToBeAnnouncedTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -495,28 +515,78 @@ public class SettlementDate2Code extends SettlementDateCode {
 	 * name} = "EndOfMonth"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEndOfMonth = new MMCode() {
+	public static final SettlementDate2Code EndOfMonth = new SettlementDate2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfMonth";
-			owner_lazy = () -> SettlementDate2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate2Code.mmObject();
+			codeName = SettlementDateCode.EndOfMonth.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SettlementDate2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SettlementDate2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("REGU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementDate2Code";
 				definition = "Indicates the date of settlement in coded form.";
-				code_lazy = () -> Arrays.asList(SettlementDate2Code.mmRegular, SettlementDate2Code.mmCash, SettlementDate2Code.mmNextDay, SettlementDate2Code.mmTPlusOne, SettlementDate2Code.mmTPlusTwo, SettlementDate2Code.mmTPlusThree,
-						SettlementDate2Code.mmTPlusFour, SettlementDate2Code.mmTPlusFive, SettlementDate2Code.mmSellersOption, SettlementDate2Code.mmFuture, SettlementDate2Code.mmAsSoonAsPossible, SettlementDate2Code.mmAtEndOfContract,
-						SettlementDate2Code.mmWhenAndIfIssued, SettlementDate2Code.mmWhenDistributed, SettlementDate2Code.mmWhenIssuedOrDistributed, SettlementDate2Code.mmToBeAnnouncedTrade, SettlementDate2Code.mmEndOfMonth);
 				trace_lazy = () -> SettlementDateCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementDate2Code.Regular, com.tools20022.repository.codeset.SettlementDate2Code.Cash, com.tools20022.repository.codeset.SettlementDate2Code.NextDay,
+						com.tools20022.repository.codeset.SettlementDate2Code.TPlusOne, com.tools20022.repository.codeset.SettlementDate2Code.TPlusTwo, com.tools20022.repository.codeset.SettlementDate2Code.TPlusThree,
+						com.tools20022.repository.codeset.SettlementDate2Code.TPlusFour, com.tools20022.repository.codeset.SettlementDate2Code.TPlusFive, com.tools20022.repository.codeset.SettlementDate2Code.SellersOption,
+						com.tools20022.repository.codeset.SettlementDate2Code.Future, com.tools20022.repository.codeset.SettlementDate2Code.AsSoonAsPossible, com.tools20022.repository.codeset.SettlementDate2Code.AtEndOfContract,
+						com.tools20022.repository.codeset.SettlementDate2Code.WhenAndIfIssued, com.tools20022.repository.codeset.SettlementDate2Code.WhenDistributed,
+						com.tools20022.repository.codeset.SettlementDate2Code.WhenIssuedOrDistributed, com.tools20022.repository.codeset.SettlementDate2Code.ToBeAnnouncedTrade,
+						com.tools20022.repository.codeset.SettlementDate2Code.EndOfMonth);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Regular.getCodeName().get(), Regular);
+		codesByName.put(Cash.getCodeName().get(), Cash);
+		codesByName.put(NextDay.getCodeName().get(), NextDay);
+		codesByName.put(TPlusOne.getCodeName().get(), TPlusOne);
+		codesByName.put(TPlusTwo.getCodeName().get(), TPlusTwo);
+		codesByName.put(TPlusThree.getCodeName().get(), TPlusThree);
+		codesByName.put(TPlusFour.getCodeName().get(), TPlusFour);
+		codesByName.put(TPlusFive.getCodeName().get(), TPlusFive);
+		codesByName.put(SellersOption.getCodeName().get(), SellersOption);
+		codesByName.put(Future.getCodeName().get(), Future);
+		codesByName.put(AsSoonAsPossible.getCodeName().get(), AsSoonAsPossible);
+		codesByName.put(AtEndOfContract.getCodeName().get(), AtEndOfContract);
+		codesByName.put(WhenAndIfIssued.getCodeName().get(), WhenAndIfIssued);
+		codesByName.put(WhenDistributed.getCodeName().get(), WhenDistributed);
+		codesByName.put(WhenIssuedOrDistributed.getCodeName().get(), WhenIssuedOrDistributed);
+		codesByName.put(ToBeAnnouncedTrade.getCodeName().get(), ToBeAnnouncedTrade);
+		codesByName.put(EndOfMonth.getCodeName().get(), EndOfMonth);
+	}
+
+	public static SettlementDate2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SettlementDate2Code[] values() {
+		SettlementDate2Code[] values = new SettlementDate2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SettlementDate2Code> {
+		@Override
+		public SettlementDate2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SettlementDate2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

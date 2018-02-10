@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -25,9 +26,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.SecuritiesQuoteVariable;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Bid3", propOrder = {"bidIdentification", "clientBidIdentification", "bidResponsePriceDetails"})
 public class Bid3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BidId")
 	protected Max35Text bidIdentification;
 	/**
-	 * Unique and unambiguous identification of the bid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -91,6 +92,9 @@ public class Bid3 {
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Bid3 Bid3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BidId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 390</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -104,9 +108,10 @@ public class Bid3 {
 	 */
 	public static final MMMessageAttribute mmBidIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Bid3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Bid3.mmObject();
 			isDerived = false;
 			xmlTag = "BidId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "390"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidIdentification";
 			definition = "Unique and unambiguous identification of the bid.";
@@ -115,11 +120,11 @@ public class Bid3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntBidId")
 	protected Max35Text clientBidIdentification;
 	/**
-	 * Unique identifier for a Bid Request as assigned by institution.
-	 * Uniqueness must be guaranteed within a single trading day.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,6 +136,9 @@ public class Bid3 {
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Bid3 Bid3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClntBidId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 391</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -146,9 +154,10 @@ public class Bid3 {
 	 */
 	public static final MMMessageAttribute mmClientBidIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Bid3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Bid3.mmObject();
 			isDerived = false;
 			xmlTag = "ClntBidId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "391"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientBidIdentification";
 			definition = "Unique identifier for a Bid Request as assigned by institution. Uniqueness must be guaranteed within a single trading day.";
@@ -157,10 +166,11 @@ public class Bid3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BidRspnPricDtls", required = true)
 	protected List<com.tools20022.repository.msg.BidResponsePrice2> bidResponsePriceDetails;
 	/**
-	 * Proposition of price for a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -190,7 +200,7 @@ public class Bid3 {
 	public static final MMMessageAssociationEnd mmBidResponsePriceDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmBidSide;
-			componentContext_lazy = () -> Bid3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Bid3.mmObject();
 			isDerived = false;
 			xmlTag = "BidRspnPricDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,9 +215,9 @@ public class Bid3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Bid3.mmBidIdentification, Bid3.mmClientBidIdentification, Bid3.mmBidResponsePriceDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Bid3.mmBidIdentification, com.tools20022.repository.msg.Bid3.mmClientBidIdentification, com.tools20022.repository.msg.Bid3.mmBidResponsePriceDetails);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Bid3";
 				definition = "Identification of an attempt to buy or sell a large number of financial instruments contained in or comprising a portfolio.";
@@ -216,30 +226,30 @@ public class Bid3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BidId")
-	public Max35Text getBidIdentification() {
-		return bidIdentification;
+	public Optional<Max35Text> getBidIdentification() {
+		return bidIdentification == null ? Optional.empty() : Optional.of(bidIdentification);
 	}
 
-	public void setBidIdentification(Max35Text bidIdentification) {
+	public Bid3 setBidIdentification(Max35Text bidIdentification) {
 		this.bidIdentification = bidIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ClntBidId")
-	public Max35Text getClientBidIdentification() {
-		return clientBidIdentification;
+	public Optional<Max35Text> getClientBidIdentification() {
+		return clientBidIdentification == null ? Optional.empty() : Optional.of(clientBidIdentification);
 	}
 
-	public void setClientBidIdentification(Max35Text clientBidIdentification) {
+	public Bid3 setClientBidIdentification(Max35Text clientBidIdentification) {
 		this.clientBidIdentification = clientBidIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "BidRspnPricDtls", required = true)
 	public List<BidResponsePrice2> getBidResponsePriceDetails() {
-		return bidResponsePriceDetails;
+		return bidResponsePriceDetails == null ? bidResponsePriceDetails = new ArrayList<>() : bidResponsePriceDetails;
 	}
 
-	public void setBidResponsePriceDetails(List<com.tools20022.repository.msg.BidResponsePrice2> bidResponsePriceDetails) {
-		this.bidResponsePriceDetails = bidResponsePriceDetails;
+	public Bid3 setBidResponsePriceDetails(List<com.tools20022.repository.msg.BidResponsePrice2> bidResponsePriceDetails) {
+		this.bidResponsePriceDetails = Objects.requireNonNull(bidResponsePriceDetails);
+		return this;
 	}
 }

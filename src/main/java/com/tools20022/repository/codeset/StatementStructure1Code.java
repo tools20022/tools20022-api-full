@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.StatementStructureCode;
+import com.tools20022.repository.codeset.StatementStructure1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of balances on which the statement is prepared.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.StatementStructureCode
- * StatementStructureCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementStructure1Code#mmStatuses
- * StatementStructure1Code.mmStatuses}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementStructure1Code#Statuses
+ * StatementStructure1Code.Statuses}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementStructure1Code#mmTransactions
- * StatementStructure1Code.mmTransactions}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementStructure1Code#Transactions
+ * StatementStructure1Code.Transactions}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.StatementStructureCode
+ * StatementStructureCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the type of balances on which the statement is prepared."</li>
  * </ul>
  */
-public class StatementStructure1Code extends StatementStructureCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class StatementStructure1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +89,12 @@ public class StatementStructure1Code extends StatementStructureCode {
 	 * name} = "Statuses"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStatuses = new MMCode() {
+	public static final StatementStructure1Code Statuses = new StatementStructure1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Statuses";
-			owner_lazy = () -> StatementStructure1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StatementStructure1Code.mmObject();
+			codeName = StatementStructureCode.Statuses.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,26 +113,57 @@ public class StatementStructure1Code extends StatementStructureCode {
 	 * name} = "Transactions"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransactions = new MMCode() {
+	public static final StatementStructure1Code Transactions = new StatementStructure1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transactions";
-			owner_lazy = () -> StatementStructure1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StatementStructure1Code.mmObject();
+			codeName = StatementStructureCode.Transactions.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, StatementStructure1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected StatementStructure1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("STAT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementStructure1Code";
 				definition = "Specifies the type of balances on which the statement is prepared.";
-				code_lazy = () -> Arrays.asList(StatementStructure1Code.mmStatuses, StatementStructure1Code.mmTransactions);
 				trace_lazy = () -> StatementStructureCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementStructure1Code.Statuses, com.tools20022.repository.codeset.StatementStructure1Code.Transactions);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Statuses.getCodeName().get(), Statuses);
+		codesByName.put(Transactions.getCodeName().get(), Transactions);
+	}
+
+	public static StatementStructure1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static StatementStructure1Code[] values() {
+		StatementStructure1Code[] values = new StatementStructure1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, StatementStructure1Code> {
+		@Override
+		public StatementStructure1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(StatementStructure1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

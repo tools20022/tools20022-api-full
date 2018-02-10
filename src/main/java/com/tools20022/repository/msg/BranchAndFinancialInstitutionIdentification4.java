@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -124,8 +126,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -138,17 +140,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BranchAndFinancialInstitutionIdentification4", propOrder = {"financialInstitutionIdentification", "branchIdentification"})
 public class BranchAndFinancialInstitutionIdentification4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FinInstnId", required = true)
 	protected FinancialInstitutionIdentification7 financialInstitutionIdentification;
 	/**
-	 * Unique and unambiguous identification of a financial institution, as
-	 * assigned under an internationally recognised or proprietary
-	 * identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -183,7 +184,7 @@ public class BranchAndFinancialInstitutionIdentification4 {
 	public static final MMMessageAssociationEnd mmFinancialInstitutionIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,14 +196,11 @@ public class BranchAndFinancialInstitutionIdentification4 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification7.mmObject();
 		}
 	};
+	@XmlElement(name = "BrnchId")
 	protected BranchData2 branchIdentification;
 	/**
-	 * Identifies a specific branch of a financial institution.
 	 * 
-	 * Usage: This component should be used in case the identification
-	 * information in the financial institution component does not provide
-	 * identification up to branch level.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -236,7 +234,7 @@ public class BranchAndFinancialInstitutionIdentification4 {
 	public static final MMMessageAssociationEnd mmBranchIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmObject();
 			isDerived = false;
 			xmlTag = "BrnchId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -252,7 +250,8 @@ public class BranchAndFinancialInstitutionIdentification4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BranchAndFinancialInstitutionIdentification4.mmFinancialInstitutionIdentification, BranchAndFinancialInstitutionIdentification4.mmBranchIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmFinancialInstitutionIdentification,
+						com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmBranchIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AccountAdditionalInformationRequestV01.mmAccountServicerIdentification, AccountClosingAdditionalInformationRequestV01.mmAccountServicerIdentification,
 						AccountClosingAdditionalInformationRequestV01.mmTransferAccountServicerIdentification, AccountClosingAmendmentRequestV01.mmAccountServicerIdentification,
 						AccountClosingAmendmentRequestV01.mmTransferAccountServicerIdentification, AccountClosingRequestV01.mmAccountServicerIdentification, AccountClosingRequestV01.mmTransferAccountServicerIdentification,
@@ -262,7 +261,7 @@ public class BranchAndFinancialInstitutionIdentification4 {
 						AccountReportRequestV01.mmAccountServicerIdentification, AccountReportV01.mmAccountServicerIdentification, AccountRequestAcknowledgementV01.mmAccountServicerIdentification,
 						AccountRequestRejectionV01.mmAccountServicerIdentification, InformationResponseSD1V01.mmAccountServicerIdentification);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BranchAndFinancialInstitutionIdentification4";
 				definition = "Set of elements used to uniquely and unambiguously identify a financial institution or a branch of a financial institution.";
@@ -271,21 +270,21 @@ public class BranchAndFinancialInstitutionIdentification4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FinInstnId", required = true)
 	public FinancialInstitutionIdentification7 getFinancialInstitutionIdentification() {
 		return financialInstitutionIdentification;
 	}
 
-	public void setFinancialInstitutionIdentification(com.tools20022.repository.msg.FinancialInstitutionIdentification7 financialInstitutionIdentification) {
-		this.financialInstitutionIdentification = financialInstitutionIdentification;
+	public BranchAndFinancialInstitutionIdentification4 setFinancialInstitutionIdentification(com.tools20022.repository.msg.FinancialInstitutionIdentification7 financialInstitutionIdentification) {
+		this.financialInstitutionIdentification = Objects.requireNonNull(financialInstitutionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "BrnchId")
-	public BranchData2 getBranchIdentification() {
-		return branchIdentification;
+	public Optional<BranchData2> getBranchIdentification() {
+		return branchIdentification == null ? Optional.empty() : Optional.of(branchIdentification);
 	}
 
-	public void setBranchIdentification(com.tools20022.repository.msg.BranchData2 branchIdentification) {
+	public BranchAndFinancialInstitutionIdentification4 setBranchIdentification(com.tools20022.repository.msg.BranchData2 branchIdentification) {
 		this.branchIdentification = branchIdentification;
+		return this;
 	}
 }

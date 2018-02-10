@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OtherTypeOfCollateral1", propOrder = {"description", "amount"})
 public class OtherTypeOfCollateral1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Desc", required = true)
 	protected Max140Text description;
 	/**
-	 * Provides details about the collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +121,7 @@ public class OtherTypeOfCollateral1 {
 	 */
 	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OtherTypeOfCollateral1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherTypeOfCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +133,11 @@ public class OtherTypeOfCollateral1 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * Amount of the other collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,7 +171,7 @@ public class OtherTypeOfCollateral1 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmHoldingValue;
-			componentContext_lazy = () -> OtherTypeOfCollateral1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherTypeOfCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,9 +186,9 @@ public class OtherTypeOfCollateral1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OtherTypeOfCollateral1.mmDescription, OtherTypeOfCollateral1.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherTypeOfCollateral1.mmDescription, com.tools20022.repository.msg.OtherTypeOfCollateral1.mmAmount);
 				trace_lazy = () -> Asset.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OtherTypeOfCollateral1";
 				definition = "Allows to specify other collateral type by providing a description and the amount.";
@@ -195,21 +198,21 @@ public class OtherTypeOfCollateral1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Desc", required = true)
 	public Max140Text getDescription() {
 		return description;
 	}
 
-	public void setDescription(Max140Text description) {
-		this.description = description;
+	public OtherTypeOfCollateral1 setDescription(Max140Text description) {
+		this.description = Objects.requireNonNull(description);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
-		this.amount = amount;
+	public OtherTypeOfCollateral1 setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 }

@@ -23,9 +23,11 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Fees related to securities trades.
@@ -37,6 +39,8 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Charges Charges}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -54,8 +58,6 @@ import java.util.List;
  * SecuritiesRelatedFees.mmShippingFeesAmount}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Charges Charges}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -67,8 +69,8 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,8 +86,8 @@ public class SecuritiesRelatedFees extends Charges {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.Security> security;
 	/**
-	 * Security for which fees are specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,8 +118,8 @@ public class SecuritiesRelatedFees extends Charges {
 	 */
 	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Security for which fees are specified.";
@@ -129,8 +131,8 @@ public class SecuritiesRelatedFees extends Charges {
 	};
 	protected CurrencyAndAmount postageFeeAmount;
 	/**
-	 * Amount of money paid for delivery by regular post mail.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -238,8 +240,8 @@ public class SecuritiesRelatedFees extends Charges {
 					CorporateActionAmounts13.mmPostageFeeAmount, CorporateActionAmounts4.mmPostageFeeAmount, CorporateActionAmounts7.mmPostageFeeAmount, CorporateActionAmounts10.mmPostageFeeAmount,
 					CorporateActionAmounts14.mmPostageFeeAmount, OtherAmounts4.mmPostageAmount, OtherAmounts5.mmPostageAmount, OtherAmounts3.mmPostageAmount, OtherAmounts7.mmPostageAmount, OtherAmounts9.mmPostageAmount,
 					OtherAmounts10.mmPostageAmount, OtherAmounts13.mmPostageAmount, OtherAmounts1.mmPostageAmount, CorporateActionAmounts1.mmPostageFeeAmount, OtherAmounts2.mmPostageAmount, OtherAmounts6.mmPostageAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PostageFeeAmount";
 			definition = "Amount of money paid for delivery by regular post mail.";
@@ -258,9 +260,8 @@ public class SecuritiesRelatedFees extends Charges {
 	};
 	protected CurrencyAndAmount regulatoryFeesAmount;
 	/**
-	 * Amount of money charged by a regulatory authority, eg, Securities and
-	 * Exchange fees.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -503,8 +504,8 @@ public class SecuritiesRelatedFees extends Charges {
 					OtherAmounts29.mmRegulatoryAmount, CorporateActionAmounts37.mmRegulatoryFeesAmount, CorporateActionAmounts36.mmRegulatoryFeesAmount, CorporateActionAmounts38.mmRegulatoryFeesAmount,
 					CorporateActionAmounts39.mmRegulatoryFeesAmount, CorporateActionAmounts41.mmRegulatoryFeesAmount, CorporateActionAmounts40.mmRegulatoryFeesAmount, OtherAmounts35.mmRegulatoryAmount, OtherAmounts34.mmRegulatoryAmount,
 					OtherAmounts38.mmRegulatoryAmount, OtherAmounts33.mmRegulatoryAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegulatoryFeesAmount";
 			definition = "Amount of money charged by a regulatory authority, eg, Securities and Exchange fees.";
@@ -523,8 +524,8 @@ public class SecuritiesRelatedFees extends Charges {
 	};
 	protected CurrencyAndAmount shippingFeesAmount;
 	/**
-	 * Amount of money (including insurance) paid for delivery by carrier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -762,8 +763,8 @@ public class SecuritiesRelatedFees extends Charges {
 					OtherAmounts28.mmShippingAmount, OtherAmounts30.mmShippingAmount, OtherAmounts31.mmShippingAmount, OtherAmounts29.mmShippingAmount, CorporateActionAmounts37.mmShippingFeesAmount,
 					CorporateActionAmounts36.mmShippingFeesAmount, CorporateActionAmounts38.mmShippingFeesAmount, CorporateActionAmounts39.mmShippingFeesAmount, CorporateActionAmounts41.mmShippingFeesAmount,
 					CorporateActionAmounts40.mmShippingFeesAmount, OtherAmounts35.mmShippingAmount, OtherAmounts34.mmShippingAmount, OtherAmounts38.mmShippingAmount, OtherAmounts33.mmShippingAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ShippingFeesAmount";
 			definition = "Amount of money (including insurance) paid for delivery by carrier.";
@@ -784,7 +785,7 @@ public class SecuritiesRelatedFees extends Charges {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesRelatedFees";
 				definition = "Fees related to securities trades.";
@@ -803,34 +804,38 @@ public class SecuritiesRelatedFees extends Charges {
 	}
 
 	public List<Security> getSecurity() {
-		return security;
+		return security == null ? security = new ArrayList<>() : security;
 	}
 
-	public void setSecurity(List<com.tools20022.repository.entity.Security> security) {
-		this.security = security;
+	public SecuritiesRelatedFees setSecurity(List<com.tools20022.repository.entity.Security> security) {
+		this.security = Objects.requireNonNull(security);
+		return this;
 	}
 
 	public CurrencyAndAmount getPostageFeeAmount() {
 		return postageFeeAmount;
 	}
 
-	public void setPostageFeeAmount(CurrencyAndAmount postageFeeAmount) {
-		this.postageFeeAmount = postageFeeAmount;
+	public SecuritiesRelatedFees setPostageFeeAmount(CurrencyAndAmount postageFeeAmount) {
+		this.postageFeeAmount = Objects.requireNonNull(postageFeeAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getRegulatoryFeesAmount() {
 		return regulatoryFeesAmount;
 	}
 
-	public void setRegulatoryFeesAmount(CurrencyAndAmount regulatoryFeesAmount) {
-		this.regulatoryFeesAmount = regulatoryFeesAmount;
+	public SecuritiesRelatedFees setRegulatoryFeesAmount(CurrencyAndAmount regulatoryFeesAmount) {
+		this.regulatoryFeesAmount = Objects.requireNonNull(regulatoryFeesAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getShippingFeesAmount() {
 		return shippingFeesAmount;
 	}
 
-	public void setShippingFeesAmount(CurrencyAndAmount shippingFeesAmount) {
-		this.shippingFeesAmount = shippingFeesAmount;
+	public SecuritiesRelatedFees setShippingFeesAmount(CurrencyAndAmount shippingFeesAmount) {
+		this.shippingFeesAmount = Objects.requireNonNull(shippingFeesAmount);
+		return this;
 	}
 }

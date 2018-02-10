@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification36;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * EnabledStatusReason2Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DisabledStatusReason2Choice", propOrder = {"code", "proprietary"})
 public class DisabledStatusReason2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected DisabledReason2Code code;
 	/**
-	 * Reason for the disabled account status expressed as a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +126,7 @@ public class DisabledStatusReason2Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DisabledStatusReason2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DisabledStatusReason2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,10 +139,11 @@ public class DisabledStatusReason2Choice {
 			simpleType_lazy = () -> DisabledReason2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification36 proprietary;
 	/**
-	 * Reason for the disabled account status expressed as a proprietary code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -182,7 +185,7 @@ public class DisabledStatusReason2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DisabledStatusReason2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DisabledStatusReason2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,8 +203,8 @@ public class DisabledStatusReason2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DisabledStatusReason2Choice.mmCode, DisabledStatusReason2Choice.mmProprietary);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DisabledStatusReason2Choice.mmCode, com.tools20022.repository.choice.DisabledStatusReason2Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DisabledStatusReason2Choice";
 				definition = "Choice of formats for a disabled reason code.";
@@ -212,21 +215,21 @@ public class DisabledStatusReason2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public DisabledReason2Code getCode() {
 		return code;
 	}
 
-	public void setCode(DisabledReason2Code code) {
-		this.code = code;
+	public DisabledStatusReason2Choice setCode(DisabledReason2Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification36 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification36 proprietary) {
-		this.proprietary = proprietary;
+	public DisabledStatusReason2Choice setProprietary(GenericIdentification36 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

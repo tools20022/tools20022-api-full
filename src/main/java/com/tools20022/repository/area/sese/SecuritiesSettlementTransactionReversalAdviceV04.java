@@ -25,9 +25,8 @@ import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -57,20 +56,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
- * SecuritiesSettlementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SctiesSttlmTxRvslAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -136,9 +121,58 @@ import javax.xml.bind.annotation.*;
  * SecuritiesSettlementTransactionReversalAdviceV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SctiesSttlmTxRvslAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
+ * SecuritiesSettlementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.026.001.04}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule#forSecuritiesSettlementTransactionReversalAdviceV04
+ * ConstraintCoexistenceAmountRule.
+ * forSecuritiesSettlementTransactionReversalAdviceV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesSettlementTransactionReversalAdviceV04
+ * ConstraintCoexistenceCharacterSetXRule.
+ * forSecuritiesSettlementTransactionReversalAdviceV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesSettlementTransactionReversalAdviceV04
+ * ConstraintCoexistenceIdentificationRule.
+ * forSecuritiesSettlementTransactionReversalAdviceV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBuyerSSIRule#forSecuritiesSettlementTransactionReversalAdviceV04
+ * ConstraintBuyerSSIRule.forSecuritiesSettlementTransactionReversalAdviceV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule#forSecuritiesSettlementTransactionReversalAdviceV04
+ * ConstraintReceivingDepositoryAndParty1Rule.
+ * forSecuritiesSettlementTransactionReversalAdviceV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule#forSecuritiesSettlementTransactionReversalAdviceV04
+ * ConstraintDeliveringDepositoryAndParty1Rule.
+ * forSecuritiesSettlementTransactionReversalAdviceV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettledAmountRule#forSecuritiesSettlementTransactionReversalAdviceV04
+ * ConstraintSettledAmountRule.
+ * forSecuritiesSettlementTransactionReversalAdviceV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSellerSSIRule#forSecuritiesSettlementTransactionReversalAdviceV04
+ * ConstraintSellerSSIRule.forSecuritiesSettlementTransactionReversalAdviceV04}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -163,17 +197,18 @@ import javax.xml.bind.annotation.*;
  * SecuritiesSettlementTransactionReversalAdviceV03}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesSettlementTransactionReversalAdviceV04", propOrder = {"transactionIdentificationDetails", "confirmationReference", "additionalParameters", "tradeDetails", "financialInstrumentIdentification",
 		"financialInstrumentAttributes", "quantityAndAccountDetails", "settlementParameters", "standingSettlementInstructionDetails", "deliveringSettlementParties", "receivingSettlementParties", "cashParties", "settledAmount",
 		"otherAmounts", "otherBusinessParties", "additionalPhysicalOrRegistrationDetails", "supplementaryData"})
 public class SecuritiesSettlementTransactionReversalAdviceV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxIdDtls", required = true)
 	protected SettlementTypeAndIdentification15 transactionIdentificationDetails;
 	/**
-	 * Provides transaction type and identification information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -231,11 +266,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV04 {
 			}
 		}
 	};
+	@XmlElement(name = "ConfRef", required = true)
 	protected Identification1 confirmationReference;
 	/**
-	 * Reference to the unambiguous identification of the confirmation as per
-	 * the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -293,10 +328,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV04 {
 			}
 		}
 	};
+	@XmlElement(name = "AddtlParams")
 	protected AdditionalParameters14 additionalParameters;
 	/**
-	 * Additional parameters to the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -351,10 +387,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV04 {
 			}
 		}
 	};
+	@XmlElement(name = "TradDtls", required = true)
 	protected SecuritiesTradeDetails31 tradeDetails;
 	/**
-	 * Details of the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -409,11 +446,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV04 {
 			}
 		}
 	};
+	@XmlElement(name = "FinInstrmId", required = true)
 	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
-	 * Financial instrument representing a sum of rights of the investor
-	 * vis-a-vis the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -472,10 +509,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV04 {
 			}
 		}
 	};
+	@XmlElement(name = "FinInstrmAttrbts")
 	protected FinancialInstrumentAttributes35 financialInstrumentAttributes;
 	/**
-	 * Elements characterising a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -532,10 +570,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV04 {
 			}
 		}
 	};
+	@XmlElement(name = "QtyAndAcctDtls", required = true)
 	protected QuantityAndAccount28 quantityAndAccountDetails;
 	/**
-	 * Details related to the account and quantity involved in the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -594,13 +633,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV04 {
 			}
 		}
 	};
+	@XmlElement(name = "SttlmParams", required = true)
 	protected SettlementDetails70 settlementParameters;
 	/**
-	 * Parameters which explicitly state the conditions that must be fulfilled
-	 * before a particular transaction of a financial instrument can be settled.
-	 * These parameters are defined by the instructing party in compliance with
-	 * settlement rules in the market the transaction will settle in.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -657,11 +694,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV04 {
 			}
 		}
 	};
+	@XmlElement(name = "StgSttlmInstrDtls")
 	protected StandingSettlementInstruction5 standingSettlementInstructionDetails;
 	/**
-	 * Specifies what settlement standing instruction database is to be used to
-	 * derive the settlement parties involved in the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -720,10 +757,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV04 {
 			}
 		}
 	};
+	@XmlElement(name = "DlvrgSttlmPties")
 	protected SettlementParties14 deliveringSettlementParties;
 	/**
-	 * Identifies the chain of delivering settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -780,10 +818,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV04 {
 			}
 		}
 	};
+	@XmlElement(name = "RcvgSttlmPties")
 	protected SettlementParties14 receivingSettlementParties;
 	/**
-	 * Identifies the chain of receiving settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -840,11 +879,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV04 {
 			}
 		}
 	};
+	@XmlElement(name = "CshPties")
 	protected CashParties9 cashParties;
 	/**
-	 * Cash parties involved in the transaction if different for the securities
-	 * settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -900,12 +939,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV04 {
 			}
 		}
 	};
+	@XmlElement(name = "SttldAmt")
 	protected AmountAndDirection36 settledAmount;
 	/**
-	 * Amount effectively settled and which will be credited to/debited from the
-	 * account owner's cash account. It may differ from the instructed
-	 * settlement amount based on market tolerance level.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -962,10 +1000,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV04 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrAmts")
 	protected OtherAmounts18 otherAmounts;
 	/**
-	 * Other amounts than the settlement amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1019,10 +1058,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV04 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrBizPties")
 	protected OtherParties19 otherBusinessParties;
 	/**
-	 * Other business parties relevant to the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1076,11 +1116,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV04 {
 			}
 		}
 	};
+	@XmlElement(name = "AddtlPhysOrRegnDtls")
 	protected RegistrationParameters1 additionalPhysicalOrRegistrationDetails;
 	/**
-	 * Provides information required for the registration or physical
-	 * settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1139,11 +1179,11 @@ public class SecuritiesSettlementTransactionReversalAdviceV04 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1203,6 +1243,14 @@ public class SecuritiesSettlementTransactionReversalAdviceV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesSettlementTransactionReversalAdviceV04,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionReversalAdviceV04,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionReversalAdviceV04,
+						com.tools20022.repository.constraints.ConstraintBuyerSSIRule.forSecuritiesSettlementTransactionReversalAdviceV04,
+						com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Rule.forSecuritiesSettlementTransactionReversalAdviceV04,
+						com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Rule.forSecuritiesSettlementTransactionReversalAdviceV04,
+						com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesSettlementTransactionReversalAdviceV04,
+						com.tools20022.repository.constraints.ConstraintSellerSSIRule.forSecuritiesSettlementTransactionReversalAdviceV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionReversalAdviceV04";
 				definition = "Scope\nAn account servicer sends a SecuritiesSettlementTransactionReversalAdvice to an account owner to reverse the confirmation of a partial or full delivery or receipt of financial instruments, free or against of payment, physically or by book-entry.\nThe account servicer/owner relationship may be:\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\n\nUsage\nThe message may also be used to:\n- re-send a message previously sent,\n- provide a third party with a copy of a message for information,\n- re-send to a third party a copy of a message for information\nusing the relevant elements in the Business Application Header.\n\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
@@ -1244,160 +1292,160 @@ public class SecuritiesSettlementTransactionReversalAdviceV04 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxIdDtls", required = true)
 	public SettlementTypeAndIdentification15 getTransactionIdentificationDetails() {
 		return transactionIdentificationDetails;
 	}
 
-	public void setTransactionIdentificationDetails(SettlementTypeAndIdentification15 transactionIdentificationDetails) {
-		this.transactionIdentificationDetails = transactionIdentificationDetails;
+	public SecuritiesSettlementTransactionReversalAdviceV04 setTransactionIdentificationDetails(SettlementTypeAndIdentification15 transactionIdentificationDetails) {
+		this.transactionIdentificationDetails = Objects.requireNonNull(transactionIdentificationDetails);
+		return this;
 	}
 
-	@XmlElement(name = "ConfRef", required = true)
 	public Identification1 getConfirmationReference() {
 		return confirmationReference;
 	}
 
-	public void setConfirmationReference(Identification1 confirmationReference) {
-		this.confirmationReference = confirmationReference;
+	public SecuritiesSettlementTransactionReversalAdviceV04 setConfirmationReference(Identification1 confirmationReference) {
+		this.confirmationReference = Objects.requireNonNull(confirmationReference);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlParams")
-	public AdditionalParameters14 getAdditionalParameters() {
-		return additionalParameters;
+	public Optional<AdditionalParameters14> getAdditionalParameters() {
+		return additionalParameters == null ? Optional.empty() : Optional.of(additionalParameters);
 	}
 
-	public void setAdditionalParameters(AdditionalParameters14 additionalParameters) {
+	public SecuritiesSettlementTransactionReversalAdviceV04 setAdditionalParameters(AdditionalParameters14 additionalParameters) {
 		this.additionalParameters = additionalParameters;
+		return this;
 	}
 
-	@XmlElement(name = "TradDtls", required = true)
 	public SecuritiesTradeDetails31 getTradeDetails() {
 		return tradeDetails;
 	}
 
-	public void setTradeDetails(SecuritiesTradeDetails31 tradeDetails) {
-		this.tradeDetails = tradeDetails;
+	public SecuritiesSettlementTransactionReversalAdviceV04 setTradeDetails(SecuritiesTradeDetails31 tradeDetails) {
+		this.tradeDetails = Objects.requireNonNull(tradeDetails);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
 
-	public void setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
-		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	public SecuritiesSettlementTransactionReversalAdviceV04 setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmAttrbts")
-	public FinancialInstrumentAttributes35 getFinancialInstrumentAttributes() {
-		return financialInstrumentAttributes;
+	public Optional<FinancialInstrumentAttributes35> getFinancialInstrumentAttributes() {
+		return financialInstrumentAttributes == null ? Optional.empty() : Optional.of(financialInstrumentAttributes);
 	}
 
-	public void setFinancialInstrumentAttributes(FinancialInstrumentAttributes35 financialInstrumentAttributes) {
+	public SecuritiesSettlementTransactionReversalAdviceV04 setFinancialInstrumentAttributes(FinancialInstrumentAttributes35 financialInstrumentAttributes) {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
+		return this;
 	}
 
-	@XmlElement(name = "QtyAndAcctDtls", required = true)
 	public QuantityAndAccount28 getQuantityAndAccountDetails() {
 		return quantityAndAccountDetails;
 	}
 
-	public void setQuantityAndAccountDetails(QuantityAndAccount28 quantityAndAccountDetails) {
-		this.quantityAndAccountDetails = quantityAndAccountDetails;
+	public SecuritiesSettlementTransactionReversalAdviceV04 setQuantityAndAccountDetails(QuantityAndAccount28 quantityAndAccountDetails) {
+		this.quantityAndAccountDetails = Objects.requireNonNull(quantityAndAccountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmParams", required = true)
 	public SettlementDetails70 getSettlementParameters() {
 		return settlementParameters;
 	}
 
-	public void setSettlementParameters(SettlementDetails70 settlementParameters) {
-		this.settlementParameters = settlementParameters;
+	public SecuritiesSettlementTransactionReversalAdviceV04 setSettlementParameters(SettlementDetails70 settlementParameters) {
+		this.settlementParameters = Objects.requireNonNull(settlementParameters);
+		return this;
 	}
 
-	@XmlElement(name = "StgSttlmInstrDtls")
-	public StandingSettlementInstruction5 getStandingSettlementInstructionDetails() {
-		return standingSettlementInstructionDetails;
+	public Optional<StandingSettlementInstruction5> getStandingSettlementInstructionDetails() {
+		return standingSettlementInstructionDetails == null ? Optional.empty() : Optional.of(standingSettlementInstructionDetails);
 	}
 
-	public void setStandingSettlementInstructionDetails(StandingSettlementInstruction5 standingSettlementInstructionDetails) {
+	public SecuritiesSettlementTransactionReversalAdviceV04 setStandingSettlementInstructionDetails(StandingSettlementInstruction5 standingSettlementInstructionDetails) {
 		this.standingSettlementInstructionDetails = standingSettlementInstructionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "DlvrgSttlmPties")
-	public SettlementParties14 getDeliveringSettlementParties() {
-		return deliveringSettlementParties;
+	public Optional<SettlementParties14> getDeliveringSettlementParties() {
+		return deliveringSettlementParties == null ? Optional.empty() : Optional.of(deliveringSettlementParties);
 	}
 
-	public void setDeliveringSettlementParties(SettlementParties14 deliveringSettlementParties) {
+	public SecuritiesSettlementTransactionReversalAdviceV04 setDeliveringSettlementParties(SettlementParties14 deliveringSettlementParties) {
 		this.deliveringSettlementParties = deliveringSettlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "RcvgSttlmPties")
-	public SettlementParties14 getReceivingSettlementParties() {
-		return receivingSettlementParties;
+	public Optional<SettlementParties14> getReceivingSettlementParties() {
+		return receivingSettlementParties == null ? Optional.empty() : Optional.of(receivingSettlementParties);
 	}
 
-	public void setReceivingSettlementParties(SettlementParties14 receivingSettlementParties) {
+	public SecuritiesSettlementTransactionReversalAdviceV04 setReceivingSettlementParties(SettlementParties14 receivingSettlementParties) {
 		this.receivingSettlementParties = receivingSettlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "CshPties")
-	public CashParties9 getCashParties() {
-		return cashParties;
+	public Optional<CashParties9> getCashParties() {
+		return cashParties == null ? Optional.empty() : Optional.of(cashParties);
 	}
 
-	public void setCashParties(CashParties9 cashParties) {
+	public SecuritiesSettlementTransactionReversalAdviceV04 setCashParties(CashParties9 cashParties) {
 		this.cashParties = cashParties;
+		return this;
 	}
 
-	@XmlElement(name = "SttldAmt")
-	public AmountAndDirection36 getSettledAmount() {
-		return settledAmount;
+	public Optional<AmountAndDirection36> getSettledAmount() {
+		return settledAmount == null ? Optional.empty() : Optional.of(settledAmount);
 	}
 
-	public void setSettledAmount(AmountAndDirection36 settledAmount) {
+	public SecuritiesSettlementTransactionReversalAdviceV04 setSettledAmount(AmountAndDirection36 settledAmount) {
 		this.settledAmount = settledAmount;
+		return this;
 	}
 
-	@XmlElement(name = "OthrAmts")
-	public OtherAmounts18 getOtherAmounts() {
-		return otherAmounts;
+	public Optional<OtherAmounts18> getOtherAmounts() {
+		return otherAmounts == null ? Optional.empty() : Optional.of(otherAmounts);
 	}
 
-	public void setOtherAmounts(OtherAmounts18 otherAmounts) {
+	public SecuritiesSettlementTransactionReversalAdviceV04 setOtherAmounts(OtherAmounts18 otherAmounts) {
 		this.otherAmounts = otherAmounts;
+		return this;
 	}
 
-	@XmlElement(name = "OthrBizPties")
-	public OtherParties19 getOtherBusinessParties() {
-		return otherBusinessParties;
+	public Optional<OtherParties19> getOtherBusinessParties() {
+		return otherBusinessParties == null ? Optional.empty() : Optional.of(otherBusinessParties);
 	}
 
-	public void setOtherBusinessParties(OtherParties19 otherBusinessParties) {
+	public SecuritiesSettlementTransactionReversalAdviceV04 setOtherBusinessParties(OtherParties19 otherBusinessParties) {
 		this.otherBusinessParties = otherBusinessParties;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlPhysOrRegnDtls")
-	public RegistrationParameters1 getAdditionalPhysicalOrRegistrationDetails() {
-		return additionalPhysicalOrRegistrationDetails;
+	public Optional<RegistrationParameters1> getAdditionalPhysicalOrRegistrationDetails() {
+		return additionalPhysicalOrRegistrationDetails == null ? Optional.empty() : Optional.of(additionalPhysicalOrRegistrationDetails);
 	}
 
-	public void setAdditionalPhysicalOrRegistrationDetails(RegistrationParameters1 additionalPhysicalOrRegistrationDetails) {
+	public SecuritiesSettlementTransactionReversalAdviceV04 setAdditionalPhysicalOrRegistrationDetails(RegistrationParameters1 additionalPhysicalOrRegistrationDetails) {
 		this.additionalPhysicalOrRegistrationDetails = additionalPhysicalOrRegistrationDetails;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecuritiesSettlementTransactionReversalAdviceV04 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.026.04.04")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.026.001.04")
 	static public class Document {
 		@XmlElement(name = "SctiesSttlmTxRvslAdvc", required = true)
 		public SecuritiesSettlementTransactionReversalAdviceV04 messageBody;

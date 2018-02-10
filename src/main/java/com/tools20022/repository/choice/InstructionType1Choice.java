@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MessageIdentification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,16 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Type of instruction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InstructionType1Choice", propOrder = {"instructionIdentification", "instructionCancellationIdentification"})
 public class InstructionType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InstrId", required = true)
 	protected MessageIdentification instructionIdentification;
 	/**
-	 * Identifies the meeting instruction message for which the status is
-	 * provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -116,7 +117,7 @@ public class InstructionType1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmInstructionIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InstructionType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InstrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,11 +129,11 @@ public class InstructionType1Choice {
 			type_lazy = () -> MessageIdentification.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrCxlId", required = true)
 	protected MessageIdentification instructionCancellationIdentification;
 	/**
-	 * Identifies the meeting instruction cancellation request message for which
-	 * the status is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -160,7 +161,7 @@ public class InstructionType1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmInstructionCancellationIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InstructionType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InstrCxlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,9 +177,9 @@ public class InstructionType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InstructionType1Choice.mmInstructionIdentification, InstructionType1Choice.mmInstructionCancellationIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstructionType1Choice.mmInstructionIdentification, com.tools20022.repository.choice.InstructionType1Choice.mmInstructionCancellationIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingInstructionStatusV03.mmInstructionType, MeetingInstructionStatusV04.mmInstructionType, MeetingInstructionStatusV05.mmInstructionType);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionType1Choice";
 				definition = "Type of instruction.";
@@ -187,21 +188,21 @@ public class InstructionType1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InstrId", required = true)
 	public MessageIdentification getInstructionIdentification() {
 		return instructionIdentification;
 	}
 
-	public void setInstructionIdentification(MessageIdentification instructionIdentification) {
-		this.instructionIdentification = instructionIdentification;
+	public InstructionType1Choice setInstructionIdentification(MessageIdentification instructionIdentification) {
+		this.instructionIdentification = Objects.requireNonNull(instructionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "InstrCxlId", required = true)
 	public MessageIdentification getInstructionCancellationIdentification() {
 		return instructionCancellationIdentification;
 	}
 
-	public void setInstructionCancellationIdentification(MessageIdentification instructionCancellationIdentification) {
-		this.instructionCancellationIdentification = instructionCancellationIdentification;
+	public InstructionType1Choice setInstructionCancellationIdentification(MessageIdentification instructionCancellationIdentification) {
+		this.instructionCancellationIdentification = Objects.requireNonNull(instructionCancellationIdentification);
+		return this;
 	}
 }

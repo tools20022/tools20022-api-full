@@ -31,6 +31,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,17 +48,17 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount16#mmTypeOrExtendedTypeRule
- * InvestmentAccount16.mmTypeOrExtendedTypeRule}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount16#TypeOrExtendedTypeRule
+ * InvestmentAccount16.TypeOrExtendedTypeRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount16#mmOwnershipTypeOrExtendedOwnershipTypeRule
- * InvestmentAccount16.mmOwnershipTypeOrExtendedOwnershipTypeRule}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount16#OwnershipTypeOrExtendedOwnershipTypeRule
+ * InvestmentAccount16.OwnershipTypeOrExtendedOwnershipTypeRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount16#mmTaxExemptionReasonOrExtendedTaxExemptionReasonRule
- * InvestmentAccount16.mmTaxExemptionReasonOrExtendedTaxExemptionReasonRule}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount16#TaxExemptionReasonOrExtendedTaxExemptionReasonRule
+ * InvestmentAccount16.TaxExemptionReasonOrExtendedTaxExemptionReasonRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccount16#mmStatementFrequencyOrOtherStatementFrequencyRule
- * InvestmentAccount16.mmStatementFrequencyOrOtherStatementFrequencyRule}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount16#StatementFrequencyOrOtherStatementFrequencyRule
+ * InvestmentAccount16.StatementFrequencyOrOtherStatementFrequencyRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -134,8 +136,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintFundDetailsGuideline#forInvestmentAccount16
+ * ConstraintFundDetailsGuideline.forInvestmentAccount16}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -149,18 +159,18 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvestmentAccount16", propOrder = {"identification", "name", "designation", "type", "extendedType", "ownershipType", "extendedOwnershipType", "taxExemptionReason", "extendedTaxExemptionReason", "statementFrequency",
 		"extendedStatementFrequency", "referenceCurrency", "language", "incomePreference", "taxWithholdingMethod", "letterIntentReference", "accumulationRightReference", "requiredSignatoriesNumber", "fundFamilyName", "fundDetails",
 		"roundingDetails", "accountServicer"})
 public class InvestmentAccount16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id")
 	protected AccountIdentification1 identification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,7 +206,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,12 +217,11 @@ public class InvestmentAccount16 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm")
 	protected Max35Text name;
 	/**
-	 * Name of the account. It provides an additional means of identification,
-	 * and is designated by the account servicer in agreement with the account
-	 * owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -247,7 +256,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,14 +267,11 @@ public class InvestmentAccount16 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Dsgnt")
 	protected Max35Text designation;
 	/**
-	 * Supplementary registration information applying to a specific block of
-	 * units for dealing and reporting purposes. The supplementary registration
-	 * information may be used when all the units are registered, for example,
-	 * to a funds supermarket, but holdings for each investor have to reconciled
-	 * individually.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -300,7 +306,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmDesignation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmDesignation;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "Dsgnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -311,11 +317,11 @@ public class InvestmentAccount16 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected FundCashAccount2Code type;
 	/**
-	 * Purpose of the account/source fund type. This is typically linked to an
-	 * investment product, eg, wrapper, PEP, ISA.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -351,7 +357,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentAccountType;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -362,11 +368,11 @@ public class InvestmentAccount16 {
 			simpleType_lazy = () -> FundCashAccount2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedTp")
 	protected Extended350Code extendedType;
 	/**
-	 * Purpose of the account/source fund type. This is typically linked to an
-	 * investment product, eg, wrapper, PEP, ISA.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -402,7 +408,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmExtendedType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentAccountType;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -413,10 +419,11 @@ public class InvestmentAccount16 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "OwnrshTp", required = true)
 	protected AccountOwnershipType2Code ownershipType;
 	/**
-	 * Ownership status of the account, eg, joint owners.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -450,7 +457,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmOwnershipType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmOwnershipType;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "OwnrshTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -461,10 +468,11 @@ public class InvestmentAccount16 {
 			simpleType_lazy = () -> AccountOwnershipType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedOwnrshTp", required = true)
 	protected Extended350Code extendedOwnershipType;
 	/**
-	 * Ownership status of the account, eg, joint owners.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -498,7 +506,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmExtendedOwnershipType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmOwnershipType;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedOwnrshTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -509,10 +517,11 @@ public class InvestmentAccount16 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxXmptnRsn")
 	protected TaxExemptReason1Code taxExemptionReason;
 	/**
-	 * Tax advantage specific to the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -546,7 +555,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmTaxExemptionReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmExemptionReason;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "TaxXmptnRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -557,10 +566,11 @@ public class InvestmentAccount16 {
 			simpleType_lazy = () -> TaxExemptReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedTaxXmptnRsn")
 	protected Extended350Code extendedTaxExemptionReason;
 	/**
-	 * Tax advantage specific to the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -594,7 +604,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmExtendedTaxExemptionReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmExemptionReason;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedTaxXmptnRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -605,10 +615,11 @@ public class InvestmentAccount16 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtFrqcy")
 	protected Frequency1Code statementFrequency;
 	/**
-	 * Regularity at which a statement is issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -642,7 +653,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmStatementFrequency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ReportingService.mmStatementFrequency;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "StmtFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -653,10 +664,11 @@ public class InvestmentAccount16 {
 			simpleType_lazy = () -> Frequency1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedStmtFrqcy")
 	protected Extended350Code extendedStatementFrequency;
 	/**
-	 * Regularity at which a statement is issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -690,7 +702,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmExtendedStatementFrequency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ReportingService.mmStatementFrequency;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedStmtFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -701,11 +713,11 @@ public class InvestmentAccount16 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RefCcy")
 	protected CurrencyCode referenceCurrency;
 	/**
-	 * Currency chosen for reporting purposes by the account owner in agreement
-	 * with the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -740,7 +752,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmReferenceCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmReferenceCurrency;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "RefCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -751,10 +763,11 @@ public class InvestmentAccount16 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Lang")
 	protected LanguageCode language;
 	/**
-	 * Language for all communication concerning the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -787,7 +800,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmLanguage = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmLanguage;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "Lang";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -798,11 +811,11 @@ public class InvestmentAccount16 {
 			simpleType_lazy = () -> LanguageCode.mmObject();
 		}
 	};
+	@XmlElement(name = "IncmPref")
 	protected IncomePreference1Code incomePreference;
 	/**
-	 * Dividend option chosen by the account owner based on the options offered
-	 * in the prospectus.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -838,7 +851,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmIncomePreference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountService.mmIncomePreference;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "IncmPref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -849,12 +862,11 @@ public class InvestmentAccount16 {
 			simpleType_lazy = () -> IncomePreference1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxWhldgMtd")
 	protected TaxWithholdingMethod1Code taxWithholdingMethod;
 	/**
-	 * Method by which the tax (withholding tax) is to be processed i.e. either
-	 * withheld at source or tax information reported to tax authorities or tax
-	 * information is reported due to the provision of a tax certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -890,7 +902,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmTaxWithholdingMethod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountService.mmTaxWithholdingMethod;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "TaxWhldgMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -901,13 +913,11 @@ public class InvestmentAccount16 {
 			simpleType_lazy = () -> TaxWithholdingMethod1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "LttrInttRef")
 	protected Max35Text letterIntentReference;
 	/**
-	 * Reference of a letter of intent program, in which sales commissions are
-	 * reduced based on the aggregate of a customer's actual purchase and
-	 * anticipated purchases, over a specific period of time, and as agreed by
-	 * the customer. A letter of intent program is mainly used in the US market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -942,7 +952,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmLetterIntentReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountContract.mmLetterIntentReference;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "LttrInttRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -953,13 +963,11 @@ public class InvestmentAccount16 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcmltnRghtRef")
 	protected Max35Text accumulationRightReference;
 	/**
-	 * Reference of an accumulation rights program, in which sales commissions
-	 * are based on a customer's present purchases of shares and the aggregate
-	 * quantity previously purchased by the customer. An accumulation rights
-	 * program is mainly used in the US market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -994,7 +1002,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmAccumulationRightReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountContract.mmAccumulationRightReference;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "AcmltnRghtRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1005,11 +1013,11 @@ public class InvestmentAccount16 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqrdSgntriesNb")
 	protected Number requiredSignatoriesNumber;
 	/**
-	 * Number of account owners or related parties required to authorise
-	 * transactions on the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1044,7 +1052,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmRequiredSignatoriesNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SignatureCondition.mmRequiredSignatureNumber;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "ReqrdSgntriesNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1055,10 +1063,11 @@ public class InvestmentAccount16 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "FndFmlyNm")
 	protected Max350Text fundFamilyName;
 	/**
-	 * Name of the investment fund family.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1091,7 +1100,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAttribute mmFundFamilyName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundFamily.mmFundFamilyName;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "FndFmlyNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1102,10 +1111,11 @@ public class InvestmentAccount16 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FndDtls")
 	protected FinancialInstrument6 fundDetails;
 	/**
-	 * Detailed information about the investment fund associated to the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1139,7 +1149,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAssociationEnd mmFundDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentFundClass;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "FndDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1151,11 +1161,11 @@ public class InvestmentAccount16 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument6.mmObject();
 		}
 	};
+	@XmlElement(name = "RndgDtls")
 	protected RoundingParameters1 roundingDetails;
 	/**
-	 * Parameters to be applied on deal amount for orders when the amount is a
-	 * fractional number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1189,7 +1199,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAssociationEnd mmRoundingDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountService.mmRoundingMethod;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "RndgDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1201,13 +1211,11 @@ public class InvestmentAccount16 {
 			type_lazy = () -> com.tools20022.repository.msg.RoundingParameters1.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcr")
 	protected PartyIdentification2Choice accountServicer;
 	/**
-	 * Party that manages the account on behalf of the account owner, that is
-	 * manages the registration and booking of entries on the account,
-	 * calculates balances on the account and provides information about the
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1242,7 +1250,7 @@ public class InvestmentAccount16 {
 	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> InvestmentAccount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1284,13 +1292,13 @@ public class InvestmentAccount16 {
 	 * definition} = "Either Type or ExtendedType may be present but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmTypeOrExtendedTypeRule = new MMXor() {
+	public static final MMXor TypeOrExtendedTypeRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOrExtendedTypeRule";
 			definition = "Either Type or ExtendedType may be present but not both.";
-			messageComponent_lazy = () -> InvestmentAccount16.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(InvestmentAccount16.mmType, InvestmentAccount16.mmExtendedType);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount16.mmType, com.tools20022.repository.msg.InvestmentAccount16.mmExtendedType);
 		}
 	};
 	/**
@@ -1327,13 +1335,13 @@ public class InvestmentAccount16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmOwnershipTypeOrExtendedOwnershipTypeRule = new MMXor() {
+	public static final MMXor OwnershipTypeOrExtendedOwnershipTypeRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnershipTypeOrExtendedOwnershipTypeRule";
 			definition = "Either OwnershipType or ExtendedOwnershipType must be present but not both.";
-			messageComponent_lazy = () -> InvestmentAccount16.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(InvestmentAccount16.mmOwnershipType, InvestmentAccount16.mmExtendedOwnershipType);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount16.mmOwnershipType, com.tools20022.repository.msg.InvestmentAccount16.mmExtendedOwnershipType);
 		}
 	};
 	/**
@@ -1370,13 +1378,13 @@ public class InvestmentAccount16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmTaxExemptionReasonOrExtendedTaxExemptionReasonRule = new MMXor() {
+	public static final MMXor TaxExemptionReasonOrExtendedTaxExemptionReasonRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxExemptionReasonOrExtendedTaxExemptionReasonRule";
 			definition = "Either TaxExemptionReason or ExtendedTaxExemptionReason may be present but not both.";
-			messageComponent_lazy = () -> InvestmentAccount16.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(InvestmentAccount16.mmTaxExemptionReason, InvestmentAccount16.mmExtendedTaxExemptionReason);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount16.mmTaxExemptionReason, com.tools20022.repository.msg.InvestmentAccount16.mmExtendedTaxExemptionReason);
 		}
 	};
 	/**
@@ -1413,26 +1421,31 @@ public class InvestmentAccount16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmStatementFrequencyOrOtherStatementFrequencyRule = new MMXor() {
+	public static final MMXor StatementFrequencyOrOtherStatementFrequencyRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementFrequencyOrOtherStatementFrequencyRule";
 			definition = "Either StatementFrequency or ExtendedStatementFrequency may be present but not both.";
-			messageComponent_lazy = () -> InvestmentAccount16.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(InvestmentAccount16.mmStatementFrequency, InvestmentAccount16.mmExtendedStatementFrequency);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.InvestmentAccount16.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount16.mmStatementFrequency, com.tools20022.repository.msg.InvestmentAccount16.mmExtendedStatementFrequency);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InvestmentAccount16.mmIdentification, InvestmentAccount16.mmName, InvestmentAccount16.mmDesignation, InvestmentAccount16.mmType, InvestmentAccount16.mmExtendedType,
-						InvestmentAccount16.mmOwnershipType, InvestmentAccount16.mmExtendedOwnershipType, InvestmentAccount16.mmTaxExemptionReason, InvestmentAccount16.mmExtendedTaxExemptionReason, InvestmentAccount16.mmStatementFrequency,
-						InvestmentAccount16.mmExtendedStatementFrequency, InvestmentAccount16.mmReferenceCurrency, InvestmentAccount16.mmLanguage, InvestmentAccount16.mmIncomePreference, InvestmentAccount16.mmTaxWithholdingMethod,
-						InvestmentAccount16.mmLetterIntentReference, InvestmentAccount16.mmAccumulationRightReference, InvestmentAccount16.mmRequiredSignatoriesNumber, InvestmentAccount16.mmFundFamilyName,
-						InvestmentAccount16.mmFundDetails, InvestmentAccount16.mmRoundingDetails, InvestmentAccount16.mmAccountServicer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount16.mmIdentification, com.tools20022.repository.msg.InvestmentAccount16.mmName,
+						com.tools20022.repository.msg.InvestmentAccount16.mmDesignation, com.tools20022.repository.msg.InvestmentAccount16.mmType, com.tools20022.repository.msg.InvestmentAccount16.mmExtendedType,
+						com.tools20022.repository.msg.InvestmentAccount16.mmOwnershipType, com.tools20022.repository.msg.InvestmentAccount16.mmExtendedOwnershipType, com.tools20022.repository.msg.InvestmentAccount16.mmTaxExemptionReason,
+						com.tools20022.repository.msg.InvestmentAccount16.mmExtendedTaxExemptionReason, com.tools20022.repository.msg.InvestmentAccount16.mmStatementFrequency,
+						com.tools20022.repository.msg.InvestmentAccount16.mmExtendedStatementFrequency, com.tools20022.repository.msg.InvestmentAccount16.mmReferenceCurrency, com.tools20022.repository.msg.InvestmentAccount16.mmLanguage,
+						com.tools20022.repository.msg.InvestmentAccount16.mmIncomePreference, com.tools20022.repository.msg.InvestmentAccount16.mmTaxWithholdingMethod,
+						com.tools20022.repository.msg.InvestmentAccount16.mmLetterIntentReference, com.tools20022.repository.msg.InvestmentAccount16.mmAccumulationRightReference,
+						com.tools20022.repository.msg.InvestmentAccount16.mmRequiredSignatoriesNumber, com.tools20022.repository.msg.InvestmentAccount16.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount16.mmFundDetails,
+						com.tools20022.repository.msg.InvestmentAccount16.mmRoundingDetails, com.tools20022.repository.msg.InvestmentAccount16.mmAccountServicer);
 				trace_lazy = () -> InvestmentAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount16);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -1443,208 +1456,208 @@ public class InvestmentAccount16 {
 				})).get();
 				name = "InvestmentAccount16";
 				definition = "Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.";
-				xors_lazy = () -> Arrays.asList(InvestmentAccount16.mmTypeOrExtendedTypeRule, InvestmentAccount16.mmOwnershipTypeOrExtendedOwnershipTypeRule, InvestmentAccount16.mmTaxExemptionReasonOrExtendedTaxExemptionReasonRule,
-						InvestmentAccount16.mmStatementFrequencyOrOtherStatementFrequencyRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount16.TypeOrExtendedTypeRule, com.tools20022.repository.msg.InvestmentAccount16.OwnershipTypeOrExtendedOwnershipTypeRule,
+						com.tools20022.repository.msg.InvestmentAccount16.TaxExemptionReasonOrExtendedTaxExemptionReasonRule, com.tools20022.repository.msg.InvestmentAccount16.StatementFrequencyOrOtherStatementFrequencyRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id")
-	public AccountIdentification1 getIdentification() {
-		return identification;
+	public Optional<AccountIdentification1> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.AccountIdentification1 identification) {
+	public InvestmentAccount16 setIdentification(com.tools20022.repository.msg.AccountIdentification1 identification) {
 		this.identification = identification;
+		return this;
 	}
 
-	@XmlElement(name = "Nm")
-	public Max35Text getName() {
-		return name;
+	public Optional<Max35Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max35Text name) {
+	public InvestmentAccount16 setName(Max35Text name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "Dsgnt")
-	public Max35Text getDesignation() {
-		return designation;
+	public Optional<Max35Text> getDesignation() {
+		return designation == null ? Optional.empty() : Optional.of(designation);
 	}
 
-	public void setDesignation(Max35Text designation) {
+	public InvestmentAccount16 setDesignation(Max35Text designation) {
 		this.designation = designation;
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public FundCashAccount2Code getType() {
-		return type;
+	public Optional<FundCashAccount2Code> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(FundCashAccount2Code type) {
+	public InvestmentAccount16 setType(FundCashAccount2Code type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "XtndedTp")
-	public Extended350Code getExtendedType() {
-		return extendedType;
+	public Optional<Extended350Code> getExtendedType() {
+		return extendedType == null ? Optional.empty() : Optional.of(extendedType);
 	}
 
-	public void setExtendedType(Extended350Code extendedType) {
+	public InvestmentAccount16 setExtendedType(Extended350Code extendedType) {
 		this.extendedType = extendedType;
+		return this;
 	}
 
-	@XmlElement(name = "OwnrshTp", required = true)
 	public AccountOwnershipType2Code getOwnershipType() {
 		return ownershipType;
 	}
 
-	public void setOwnershipType(AccountOwnershipType2Code ownershipType) {
-		this.ownershipType = ownershipType;
+	public InvestmentAccount16 setOwnershipType(AccountOwnershipType2Code ownershipType) {
+		this.ownershipType = Objects.requireNonNull(ownershipType);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedOwnrshTp", required = true)
 	public Extended350Code getExtendedOwnershipType() {
 		return extendedOwnershipType;
 	}
 
-	public void setExtendedOwnershipType(Extended350Code extendedOwnershipType) {
-		this.extendedOwnershipType = extendedOwnershipType;
+	public InvestmentAccount16 setExtendedOwnershipType(Extended350Code extendedOwnershipType) {
+		this.extendedOwnershipType = Objects.requireNonNull(extendedOwnershipType);
+		return this;
 	}
 
-	@XmlElement(name = "TaxXmptnRsn")
-	public TaxExemptReason1Code getTaxExemptionReason() {
-		return taxExemptionReason;
+	public Optional<TaxExemptReason1Code> getTaxExemptionReason() {
+		return taxExemptionReason == null ? Optional.empty() : Optional.of(taxExemptionReason);
 	}
 
-	public void setTaxExemptionReason(TaxExemptReason1Code taxExemptionReason) {
+	public InvestmentAccount16 setTaxExemptionReason(TaxExemptReason1Code taxExemptionReason) {
 		this.taxExemptionReason = taxExemptionReason;
+		return this;
 	}
 
-	@XmlElement(name = "XtndedTaxXmptnRsn")
-	public Extended350Code getExtendedTaxExemptionReason() {
-		return extendedTaxExemptionReason;
+	public Optional<Extended350Code> getExtendedTaxExemptionReason() {
+		return extendedTaxExemptionReason == null ? Optional.empty() : Optional.of(extendedTaxExemptionReason);
 	}
 
-	public void setExtendedTaxExemptionReason(Extended350Code extendedTaxExemptionReason) {
+	public InvestmentAccount16 setExtendedTaxExemptionReason(Extended350Code extendedTaxExemptionReason) {
 		this.extendedTaxExemptionReason = extendedTaxExemptionReason;
+		return this;
 	}
 
-	@XmlElement(name = "StmtFrqcy")
-	public Frequency1Code getStatementFrequency() {
-		return statementFrequency;
+	public Optional<Frequency1Code> getStatementFrequency() {
+		return statementFrequency == null ? Optional.empty() : Optional.of(statementFrequency);
 	}
 
-	public void setStatementFrequency(Frequency1Code statementFrequency) {
+	public InvestmentAccount16 setStatementFrequency(Frequency1Code statementFrequency) {
 		this.statementFrequency = statementFrequency;
+		return this;
 	}
 
-	@XmlElement(name = "XtndedStmtFrqcy")
-	public Extended350Code getExtendedStatementFrequency() {
-		return extendedStatementFrequency;
+	public Optional<Extended350Code> getExtendedStatementFrequency() {
+		return extendedStatementFrequency == null ? Optional.empty() : Optional.of(extendedStatementFrequency);
 	}
 
-	public void setExtendedStatementFrequency(Extended350Code extendedStatementFrequency) {
+	public InvestmentAccount16 setExtendedStatementFrequency(Extended350Code extendedStatementFrequency) {
 		this.extendedStatementFrequency = extendedStatementFrequency;
+		return this;
 	}
 
-	@XmlElement(name = "RefCcy")
-	public CurrencyCode getReferenceCurrency() {
-		return referenceCurrency;
+	public Optional<CurrencyCode> getReferenceCurrency() {
+		return referenceCurrency == null ? Optional.empty() : Optional.of(referenceCurrency);
 	}
 
-	public void setReferenceCurrency(CurrencyCode referenceCurrency) {
+	public InvestmentAccount16 setReferenceCurrency(CurrencyCode referenceCurrency) {
 		this.referenceCurrency = referenceCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "Lang")
-	public LanguageCode getLanguage() {
-		return language;
+	public Optional<LanguageCode> getLanguage() {
+		return language == null ? Optional.empty() : Optional.of(language);
 	}
 
-	public void setLanguage(LanguageCode language) {
+	public InvestmentAccount16 setLanguage(LanguageCode language) {
 		this.language = language;
+		return this;
 	}
 
-	@XmlElement(name = "IncmPref")
-	public IncomePreference1Code getIncomePreference() {
-		return incomePreference;
+	public Optional<IncomePreference1Code> getIncomePreference() {
+		return incomePreference == null ? Optional.empty() : Optional.of(incomePreference);
 	}
 
-	public void setIncomePreference(IncomePreference1Code incomePreference) {
+	public InvestmentAccount16 setIncomePreference(IncomePreference1Code incomePreference) {
 		this.incomePreference = incomePreference;
+		return this;
 	}
 
-	@XmlElement(name = "TaxWhldgMtd")
-	public TaxWithholdingMethod1Code getTaxWithholdingMethod() {
-		return taxWithholdingMethod;
+	public Optional<TaxWithholdingMethod1Code> getTaxWithholdingMethod() {
+		return taxWithholdingMethod == null ? Optional.empty() : Optional.of(taxWithholdingMethod);
 	}
 
-	public void setTaxWithholdingMethod(TaxWithholdingMethod1Code taxWithholdingMethod) {
+	public InvestmentAccount16 setTaxWithholdingMethod(TaxWithholdingMethod1Code taxWithholdingMethod) {
 		this.taxWithholdingMethod = taxWithholdingMethod;
+		return this;
 	}
 
-	@XmlElement(name = "LttrInttRef")
-	public Max35Text getLetterIntentReference() {
-		return letterIntentReference;
+	public Optional<Max35Text> getLetterIntentReference() {
+		return letterIntentReference == null ? Optional.empty() : Optional.of(letterIntentReference);
 	}
 
-	public void setLetterIntentReference(Max35Text letterIntentReference) {
+	public InvestmentAccount16 setLetterIntentReference(Max35Text letterIntentReference) {
 		this.letterIntentReference = letterIntentReference;
+		return this;
 	}
 
-	@XmlElement(name = "AcmltnRghtRef")
-	public Max35Text getAccumulationRightReference() {
-		return accumulationRightReference;
+	public Optional<Max35Text> getAccumulationRightReference() {
+		return accumulationRightReference == null ? Optional.empty() : Optional.of(accumulationRightReference);
 	}
 
-	public void setAccumulationRightReference(Max35Text accumulationRightReference) {
+	public InvestmentAccount16 setAccumulationRightReference(Max35Text accumulationRightReference) {
 		this.accumulationRightReference = accumulationRightReference;
+		return this;
 	}
 
-	@XmlElement(name = "ReqrdSgntriesNb")
-	public Number getRequiredSignatoriesNumber() {
-		return requiredSignatoriesNumber;
+	public Optional<Number> getRequiredSignatoriesNumber() {
+		return requiredSignatoriesNumber == null ? Optional.empty() : Optional.of(requiredSignatoriesNumber);
 	}
 
-	public void setRequiredSignatoriesNumber(Number requiredSignatoriesNumber) {
+	public InvestmentAccount16 setRequiredSignatoriesNumber(Number requiredSignatoriesNumber) {
 		this.requiredSignatoriesNumber = requiredSignatoriesNumber;
+		return this;
 	}
 
-	@XmlElement(name = "FndFmlyNm")
-	public Max350Text getFundFamilyName() {
-		return fundFamilyName;
+	public Optional<Max350Text> getFundFamilyName() {
+		return fundFamilyName == null ? Optional.empty() : Optional.of(fundFamilyName);
 	}
 
-	public void setFundFamilyName(Max350Text fundFamilyName) {
+	public InvestmentAccount16 setFundFamilyName(Max350Text fundFamilyName) {
 		this.fundFamilyName = fundFamilyName;
+		return this;
 	}
 
-	@XmlElement(name = "FndDtls")
-	public FinancialInstrument6 getFundDetails() {
-		return fundDetails;
+	public Optional<FinancialInstrument6> getFundDetails() {
+		return fundDetails == null ? Optional.empty() : Optional.of(fundDetails);
 	}
 
-	public void setFundDetails(com.tools20022.repository.msg.FinancialInstrument6 fundDetails) {
+	public InvestmentAccount16 setFundDetails(com.tools20022.repository.msg.FinancialInstrument6 fundDetails) {
 		this.fundDetails = fundDetails;
+		return this;
 	}
 
-	@XmlElement(name = "RndgDtls")
-	public RoundingParameters1 getRoundingDetails() {
-		return roundingDetails;
+	public Optional<RoundingParameters1> getRoundingDetails() {
+		return roundingDetails == null ? Optional.empty() : Optional.of(roundingDetails);
 	}
 
-	public void setRoundingDetails(com.tools20022.repository.msg.RoundingParameters1 roundingDetails) {
+	public InvestmentAccount16 setRoundingDetails(com.tools20022.repository.msg.RoundingParameters1 roundingDetails) {
 		this.roundingDetails = roundingDetails;
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcr")
-	public PartyIdentification2Choice getAccountServicer() {
-		return accountServicer;
+	public Optional<PartyIdentification2Choice> getAccountServicer() {
+		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public void setAccountServicer(PartyIdentification2Choice accountServicer) {
+	public InvestmentAccount16 setAccountServicer(PartyIdentification2Choice accountServicer) {
 		this.accountServicer = accountServicer;
+		return this;
 	}
 }

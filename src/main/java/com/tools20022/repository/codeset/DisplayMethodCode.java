@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DisplayMethodCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Instructions for the use of display quantity.
@@ -31,13 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DisplayMethodCode#mmInitial
- * DisplayMethodCode.mmInitial}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DisplayMethodCode#mmNew
- * DisplayMethodCode.mmNew}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DisplayMethodCode#mmRandom
- * DisplayMethodCode.mmRandom}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DisplayMethodCode#Initial
+ * DisplayMethodCode.Initial}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DisplayMethodCode#New
+ * DisplayMethodCode.New}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DisplayMethodCode#Random
+ * DisplayMethodCode.Random}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Instructions for the use of display quantity."</li>
  * </ul>
  */
-public class DisplayMethodCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DisplayMethodCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,12 +97,12 @@ public class DisplayMethodCode {
 	 * definition} = "Indicates that original quantity must be used."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInitial = new MMCode() {
+	public static final DisplayMethodCode Initial = new DisplayMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initial";
 			definition = "Indicates that original quantity must be used.";
-			owner_lazy = () -> DisplayMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisplayMethodCode.mmObject();
 			codeName = "INIT";
 		}
 	};
@@ -122,12 +127,12 @@ public class DisplayMethodCode {
 	 * definition} = "Indicates that Quantity must be refreshed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNew = new MMCode() {
+	public static final DisplayMethodCode New = new DisplayMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "New";
 			definition = "Indicates that Quantity must be refreshed.";
-			owner_lazy = () -> DisplayMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisplayMethodCode.mmObject();
 			codeName = "NEW1";
 		}
 	};
@@ -152,28 +157,59 @@ public class DisplayMethodCode {
 	 * definition} = "Randomize value."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRandom = new MMCode() {
+	public static final DisplayMethodCode Random = new DisplayMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Random";
 			definition = "Randomize value.";
-			owner_lazy = () -> DisplayMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisplayMethodCode.mmObject();
 			codeName = "RAND";
 		}
 	};
+	final static private LinkedHashMap<String, DisplayMethodCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DisplayMethodCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("INIT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DisplayMethodCode";
 				definition = "Instructions for the use of display quantity.";
-				code_lazy = () -> Arrays.asList(DisplayMethodCode.mmInitial, DisplayMethodCode.mmNew, DisplayMethodCode.mmRandom);
 				derivation_lazy = () -> Arrays.asList(DisplayMethod1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DisplayMethodCode.Initial, com.tools20022.repository.codeset.DisplayMethodCode.New, com.tools20022.repository.codeset.DisplayMethodCode.Random);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Initial.getCodeName().get(), Initial);
+		codesByName.put(New.getCodeName().get(), New);
+		codesByName.put(Random.getCodeName().get(), Random);
+	}
+
+	public static DisplayMethodCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DisplayMethodCode[] values() {
+		DisplayMethodCode[] values = new DisplayMethodCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DisplayMethodCode> {
+		@Override
+		public DisplayMethodCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DisplayMethodCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

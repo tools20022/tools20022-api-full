@@ -20,58 +20,56 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ProductTypeCode;
+import com.tools20022.repository.codeset.ProductType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of product or financial instrument.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductType1Code#Agency
+ * ProductType1Code.Agency}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductType1Code#Commodity
+ * ProductType1Code.Commodity}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductType1Code#Corporate
+ * ProductType1Code.Corporate}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductType1Code#Currency
+ * ProductType1Code.Currency}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductType1Code#Equity
+ * ProductType1Code.Equity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ProductType1Code#Government
+ * ProductType1Code.Government}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductType1Code#Loan
+ * ProductType1Code.Loan}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ProductType1Code#MoneyMarket
+ * ProductType1Code.MoneyMarket}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductType1Code#Mortgage
+ * ProductType1Code.Mortgage}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductType1Code#Municipal
+ * ProductType1Code.Municipal}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductType1Code#Financing
+ * ProductType1Code.Financing}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.ProductTypeCode
  * ProductTypeCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ProductType1Code#mmAgency
- * ProductType1Code.mmAgency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductType1Code#mmCommodity
- * ProductType1Code.mmCommodity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductType1Code#mmCorporate
- * ProductType1Code.mmCorporate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductType1Code#mmCurrency
- * ProductType1Code.mmCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProductType1Code#mmEquity
- * ProductType1Code.mmEquity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductType1Code#mmGovernment
- * ProductType1Code.mmGovernment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProductType1Code#mmLoan
- * ProductType1Code.mmLoan}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductType1Code#mmMoneyMarket
- * ProductType1Code.mmMoneyMarket}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductType1Code#mmMortgage
- * ProductType1Code.mmMortgage}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductType1Code#mmMunicipal
- * ProductType1Code.mmMunicipal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductType1Code#mmFinancing
- * ProductType1Code.mmFinancing}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of product or financial instrument."</li>
  * </ul>
  */
-public class ProductType1Code extends ProductTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProductType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -107,11 +106,12 @@ public class ProductType1Code extends ProductTypeCode {
 	 * name} = "Agency"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgency = new MMCode() {
+	public static final ProductType1Code Agency = new ProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agency";
-			owner_lazy = () -> ProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductType1Code.mmObject();
+			codeName = ProductTypeCode.Agency.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -130,11 +130,12 @@ public class ProductType1Code extends ProductTypeCode {
 	 * name} = "Commodity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommodity = new MMCode() {
+	public static final ProductType1Code Commodity = new ProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodity";
-			owner_lazy = () -> ProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductType1Code.mmObject();
+			codeName = ProductTypeCode.Commodity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -153,11 +154,12 @@ public class ProductType1Code extends ProductTypeCode {
 	 * name} = "Corporate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporate = new MMCode() {
+	public static final ProductType1Code Corporate = new ProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Corporate";
-			owner_lazy = () -> ProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductType1Code.mmObject();
+			codeName = ProductTypeCode.Corporate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -176,11 +178,12 @@ public class ProductType1Code extends ProductTypeCode {
 	 * name} = "Currency"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrency = new MMCode() {
+	public static final ProductType1Code Currency = new ProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
-			owner_lazy = () -> ProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductType1Code.mmObject();
+			codeName = ProductTypeCode.Currency.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -199,11 +202,12 @@ public class ProductType1Code extends ProductTypeCode {
 	 * name} = "Equity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEquity = new MMCode() {
+	public static final ProductType1Code Equity = new ProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity";
-			owner_lazy = () -> ProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductType1Code.mmObject();
+			codeName = ProductTypeCode.Equity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -222,11 +226,12 @@ public class ProductType1Code extends ProductTypeCode {
 	 * name} = "Government"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGovernment = new MMCode() {
+	public static final ProductType1Code Government = new ProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Government";
-			owner_lazy = () -> ProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductType1Code.mmObject();
+			codeName = ProductTypeCode.Government.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -245,11 +250,12 @@ public class ProductType1Code extends ProductTypeCode {
 	 * name} = "Loan"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLoan = new MMCode() {
+	public static final ProductType1Code Loan = new ProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loan";
-			owner_lazy = () -> ProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductType1Code.mmObject();
+			codeName = ProductTypeCode.Loan.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -268,11 +274,12 @@ public class ProductType1Code extends ProductTypeCode {
 	 * name} = "MoneyMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMoneyMarket = new MMCode() {
+	public static final ProductType1Code MoneyMarket = new ProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyMarket";
-			owner_lazy = () -> ProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductType1Code.mmObject();
+			codeName = ProductTypeCode.MoneyMarket.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -291,11 +298,12 @@ public class ProductType1Code extends ProductTypeCode {
 	 * name} = "Mortgage"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMortgage = new MMCode() {
+	public static final ProductType1Code Mortgage = new ProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mortgage";
-			owner_lazy = () -> ProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductType1Code.mmObject();
+			codeName = ProductTypeCode.Mortgage.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -314,11 +322,12 @@ public class ProductType1Code extends ProductTypeCode {
 	 * name} = "Municipal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMunicipal = new MMCode() {
+	public static final ProductType1Code Municipal = new ProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Municipal";
-			owner_lazy = () -> ProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductType1Code.mmObject();
+			codeName = ProductTypeCode.Municipal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -337,27 +346,69 @@ public class ProductType1Code extends ProductTypeCode {
 	 * name} = "Financing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinancing = new MMCode() {
+	public static final ProductType1Code Financing = new ProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Financing";
-			owner_lazy = () -> ProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductType1Code.mmObject();
+			codeName = ProductTypeCode.Financing.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ProductType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProductType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AGEN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductType1Code";
 				definition = "Specifies the type of product or financial instrument.";
-				code_lazy = () -> Arrays.asList(ProductType1Code.mmAgency, ProductType1Code.mmCommodity, ProductType1Code.mmCorporate, ProductType1Code.mmCurrency, ProductType1Code.mmEquity, ProductType1Code.mmGovernment,
-						ProductType1Code.mmLoan, ProductType1Code.mmMoneyMarket, ProductType1Code.mmMortgage, ProductType1Code.mmMunicipal, ProductType1Code.mmFinancing);
 				trace_lazy = () -> ProductTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductType1Code.Agency, com.tools20022.repository.codeset.ProductType1Code.Commodity, com.tools20022.repository.codeset.ProductType1Code.Corporate,
+						com.tools20022.repository.codeset.ProductType1Code.Currency, com.tools20022.repository.codeset.ProductType1Code.Equity, com.tools20022.repository.codeset.ProductType1Code.Government,
+						com.tools20022.repository.codeset.ProductType1Code.Loan, com.tools20022.repository.codeset.ProductType1Code.MoneyMarket, com.tools20022.repository.codeset.ProductType1Code.Mortgage,
+						com.tools20022.repository.codeset.ProductType1Code.Municipal, com.tools20022.repository.codeset.ProductType1Code.Financing);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Agency.getCodeName().get(), Agency);
+		codesByName.put(Commodity.getCodeName().get(), Commodity);
+		codesByName.put(Corporate.getCodeName().get(), Corporate);
+		codesByName.put(Currency.getCodeName().get(), Currency);
+		codesByName.put(Equity.getCodeName().get(), Equity);
+		codesByName.put(Government.getCodeName().get(), Government);
+		codesByName.put(Loan.getCodeName().get(), Loan);
+		codesByName.put(MoneyMarket.getCodeName().get(), MoneyMarket);
+		codesByName.put(Mortgage.getCodeName().get(), Mortgage);
+		codesByName.put(Municipal.getCodeName().get(), Municipal);
+		codesByName.put(Financing.getCodeName().get(), Financing);
+	}
+
+	public static ProductType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProductType1Code[] values() {
+		ProductType1Code[] values = new ProductType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProductType1Code> {
+		@Override
+		public ProductType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProductType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

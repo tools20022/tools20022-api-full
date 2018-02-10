@@ -24,9 +24,8 @@ import com.tools20022.repository.codeset.POIComponentType3Code;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.entity.SystemStatus;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PointOfInteractionComponent3", propOrder = {"type", "identification", "status", "standardCompliance", "characteristics", "assessment"})
 public class PointOfInteractionComponent3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected POIComponentType3Code type;
 	/**
-	 * Type of component belonging to a POI Terminal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +130,7 @@ public class PointOfInteractionComponent3 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PointOfInteractionComponent3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent3.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,10 +142,11 @@ public class PointOfInteractionComponent3 {
 			simpleType_lazy = () -> POIComponentType3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected PointOfInteractionComponentIdentification1 identification;
 	/**
-	 * Identification of the POI component.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -181,7 +182,7 @@ public class PointOfInteractionComponent3 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PointOfInteractionComponent3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -193,10 +194,11 @@ public class PointOfInteractionComponent3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts")
 	protected PointOfInteractionComponentStatus1 status;
 	/**
-	 * Status of the POI component.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -237,7 +239,7 @@ public class PointOfInteractionComponent3 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SystemStatus.mmObject();
-			componentContext_lazy = () -> PointOfInteractionComponent3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent3.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -249,10 +251,11 @@ public class PointOfInteractionComponent3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentStatus1.mmObject();
 		}
 	};
+	@XmlElement(name = "StdCmplc")
 	protected List<com.tools20022.repository.msg.GenericIdentification48> standardCompliance;
 	/**
-	 * Identification of the standard for which the component complies with.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -289,7 +292,7 @@ public class PointOfInteractionComponent3 {
 	 */
 	public static final MMMessageAttribute mmStandardCompliance = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PointOfInteractionComponent3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent3.mmObject();
 			isDerived = false;
 			xmlTag = "StdCmplc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -300,10 +303,11 @@ public class PointOfInteractionComponent3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification48.mmObject();
 		}
 	};
+	@XmlElement(name = "Chrtcs")
 	protected PointOfInteractionComponentCharacteristics1 characteristics;
 	/**
-	 * Characteristics of a POI component.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -339,7 +343,7 @@ public class PointOfInteractionComponent3 {
 	 */
 	public static final MMMessageAttribute mmCharacteristics = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PointOfInteractionComponent3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent3.mmObject();
 			isDerived = false;
 			xmlTag = "Chrtcs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -351,10 +355,11 @@ public class PointOfInteractionComponent3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1.mmObject();
 		}
 	};
+	@XmlElement(name = "Assmnt")
 	protected List<com.tools20022.repository.msg.PointOfInteractionComponentAssessment1> assessment;
 	/**
-	 * Assessments for the component of the point of interaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -391,7 +396,7 @@ public class PointOfInteractionComponent3 {
 	 */
 	public static final MMMessageAttribute mmAssessment = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PointOfInteractionComponent3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent3.mmObject();
 			isDerived = false;
 			xmlTag = "Assmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -406,10 +411,11 @@ public class PointOfInteractionComponent3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PointOfInteractionComponent3.mmType, PointOfInteractionComponent3.mmIdentification, PointOfInteractionComponent3.mmStatus, PointOfInteractionComponent3.mmStandardCompliance,
-						PointOfInteractionComponent3.mmCharacteristics, PointOfInteractionComponent3.mmAssessment);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent3.mmType, com.tools20022.repository.msg.PointOfInteractionComponent3.mmIdentification,
+						com.tools20022.repository.msg.PointOfInteractionComponent3.mmStatus, com.tools20022.repository.msg.PointOfInteractionComponent3.mmStandardCompliance,
+						com.tools20022.repository.msg.PointOfInteractionComponent3.mmCharacteristics, com.tools20022.repository.msg.PointOfInteractionComponent3.mmAssessment);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionComponent3";
 				definition = "Data related to a component of the POI performing the transaction.";
@@ -419,57 +425,57 @@ public class PointOfInteractionComponent3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public POIComponentType3Code getType() {
 		return type;
 	}
 
-	public void setType(POIComponentType3Code type) {
-		this.type = type;
+	public PointOfInteractionComponent3 setType(POIComponentType3Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public PointOfInteractionComponentIdentification1 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.PointOfInteractionComponentIdentification1 identification) {
-		this.identification = identification;
+	public PointOfInteractionComponent3 setIdentification(com.tools20022.repository.msg.PointOfInteractionComponentIdentification1 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Sts")
-	public PointOfInteractionComponentStatus1 getStatus() {
-		return status;
+	public Optional<PointOfInteractionComponentStatus1> getStatus() {
+		return status == null ? Optional.empty() : Optional.of(status);
 	}
 
-	public void setStatus(com.tools20022.repository.msg.PointOfInteractionComponentStatus1 status) {
+	public PointOfInteractionComponent3 setStatus(com.tools20022.repository.msg.PointOfInteractionComponentStatus1 status) {
 		this.status = status;
+		return this;
 	}
 
-	@XmlElement(name = "StdCmplc")
 	public List<GenericIdentification48> getStandardCompliance() {
-		return standardCompliance;
+		return standardCompliance == null ? standardCompliance = new ArrayList<>() : standardCompliance;
 	}
 
-	public void setStandardCompliance(List<com.tools20022.repository.msg.GenericIdentification48> standardCompliance) {
-		this.standardCompliance = standardCompliance;
+	public PointOfInteractionComponent3 setStandardCompliance(List<com.tools20022.repository.msg.GenericIdentification48> standardCompliance) {
+		this.standardCompliance = Objects.requireNonNull(standardCompliance);
+		return this;
 	}
 
-	@XmlElement(name = "Chrtcs")
-	public PointOfInteractionComponentCharacteristics1 getCharacteristics() {
-		return characteristics;
+	public Optional<PointOfInteractionComponentCharacteristics1> getCharacteristics() {
+		return characteristics == null ? Optional.empty() : Optional.of(characteristics);
 	}
 
-	public void setCharacteristics(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1 characteristics) {
+	public PointOfInteractionComponent3 setCharacteristics(com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics1 characteristics) {
 		this.characteristics = characteristics;
+		return this;
 	}
 
-	@XmlElement(name = "Assmnt")
 	public List<PointOfInteractionComponentAssessment1> getAssessment() {
-		return assessment;
+		return assessment == null ? assessment = new ArrayList<>() : assessment;
 	}
 
-	public void setAssessment(List<com.tools20022.repository.msg.PointOfInteractionComponentAssessment1> assessment) {
-		this.assessment = assessment;
+	public PointOfInteractionComponent3 setAssessment(List<com.tools20022.repository.msg.PointOfInteractionComponentAssessment1> assessment) {
+		this.assessment = Objects.requireNonNull(assessment);
+		return this;
 	}
 }

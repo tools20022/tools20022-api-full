@@ -17,73 +17,76 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TaxTypeCode;
+import com.tools20022.repository.codeset.TaxType16Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of tax.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TaxTypeCode TaxTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmConsumptionTax
- * TaxType16Code.mmConsumptionTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#mmTaxCredit
- * TaxType16Code.mmTaxCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#ConsumptionTax
+ * TaxType16Code.ConsumptionTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#TaxCredit
+ * TaxType16Code.TaxCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmEUTaxRetention
- * TaxType16Code.mmEUTaxRetention}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#EUTaxRetention
+ * TaxType16Code.EUTaxRetention}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmPaymentLevyTax
- * TaxType16Code.mmPaymentLevyTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#mmLocalTax
- * TaxType16Code.mmLocalTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#PaymentLevyTax
+ * TaxType16Code.PaymentLevyTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#LocalTax
+ * TaxType16Code.LocalTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#NationalTax
+ * TaxType16Code.NationalTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#Provincial
+ * TaxType16Code.Provincial}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#StampDuty
+ * TaxType16Code.StampDuty}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#StateTax
+ * TaxType16Code.StateTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmNationalTax
- * TaxType16Code.mmNationalTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#mmProvincial
- * TaxType16Code.mmProvincial}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#mmStampDuty
- * TaxType16Code.mmStampDuty}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#mmStateTax
- * TaxType16Code.mmStateTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#StockExchangeTax
+ * TaxType16Code.StockExchangeTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType16Code#TransferTax
+ * TaxType16Code.TransferTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmStockExchangeTax
- * TaxType16Code.mmStockExchangeTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#TransactionTax
+ * TaxType16Code.TransactionTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmTransferTax
- * TaxType16Code.mmTransferTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#ValueAddedTax
+ * TaxType16Code.ValueAddedTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmTransactionTax
- * TaxType16Code.mmTransactionTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#WithholdingTax
+ * TaxType16Code.WithholdingTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmValueAddedTax
- * TaxType16Code.mmValueAddedTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#CapitalLossCredit
+ * TaxType16Code.CapitalLossCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmWithholdingTax
- * TaxType16Code.mmWithholdingTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmCapitalLossCredit
- * TaxType16Code.mmCapitalLossCredit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType16Code#mmCapitalGainTax
- * TaxType16Code.mmCapitalGainTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType16Code#CapitalGainTax
+ * TaxType16Code.CapitalGainTax}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TaxTypeCode TaxTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,7 +97,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of tax."</li>
  * </ul>
  */
-public class TaxType16Code extends TaxTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TaxType16Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -113,11 +117,12 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "ConsumptionTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConsumptionTax = new MMCode() {
+	public static final TaxType16Code ConsumptionTax = new TaxType16Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsumptionTax";
-			owner_lazy = () -> TaxType16Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType16Code.mmObject();
+			codeName = TaxTypeCode.ConsumptionTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -136,11 +141,12 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "TaxCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxCredit = new MMCode() {
+	public static final TaxType16Code TaxCredit = new TaxType16Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCredit";
-			owner_lazy = () -> TaxType16Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType16Code.mmObject();
+			codeName = TaxTypeCode.TaxCredit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -159,11 +165,12 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "EUTaxRetention"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEUTaxRetention = new MMCode() {
+	public static final TaxType16Code EUTaxRetention = new TaxType16Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUTaxRetention";
-			owner_lazy = () -> TaxType16Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType16Code.mmObject();
+			codeName = TaxTypeCode.EUTaxRetention.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -174,6 +181,9 @@ public class TaxType16Code extends TaxTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TaxType16Code
 	 * TaxType16Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::LEVY</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -182,11 +192,13 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "PaymentLevyTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPaymentLevyTax = new MMCode() {
+	public static final TaxType16Code PaymentLevyTax = new TaxType16Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::LEVY"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentLevyTax";
-			owner_lazy = () -> TaxType16Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType16Code.mmObject();
+			codeName = TaxTypeCode.PaymentLevyTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -198,6 +210,9 @@ public class TaxType16Code extends TaxTypeCode {
 	 * {@linkplain com.tools20022.repository.codeset.TaxType16Code
 	 * TaxType16Code}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::LOCL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -205,11 +220,13 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "LocalTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLocalTax = new MMCode() {
+	public static final TaxType16Code LocalTax = new TaxType16Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::LOCL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalTax";
-			owner_lazy = () -> TaxType16Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType16Code.mmObject();
+			codeName = TaxTypeCode.LocalTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -228,11 +245,12 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "NationalTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNationalTax = new MMCode() {
+	public static final TaxType16Code NationalTax = new TaxType16Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalTax";
-			owner_lazy = () -> TaxType16Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType16Code.mmObject();
+			codeName = TaxTypeCode.NationalTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -251,11 +269,12 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "Provincial"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProvincial = new MMCode() {
+	public static final TaxType16Code Provincial = new TaxType16Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Provincial";
-			owner_lazy = () -> TaxType16Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType16Code.mmObject();
+			codeName = TaxTypeCode.Provincial.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -274,11 +293,12 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "StampDuty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStampDuty = new MMCode() {
+	public static final TaxType16Code StampDuty = new TaxType16Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
-			owner_lazy = () -> TaxType16Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType16Code.mmObject();
+			codeName = TaxTypeCode.StampDuty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -297,11 +317,12 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "StateTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStateTax = new MMCode() {
+	public static final TaxType16Code StateTax = new TaxType16Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StateTax";
-			owner_lazy = () -> TaxType16Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType16Code.mmObject();
+			codeName = TaxTypeCode.StateTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -312,6 +333,9 @@ public class TaxType16Code extends TaxTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TaxType16Code
 	 * TaxType16Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::STEX</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -320,11 +344,13 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "StockExchangeTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockExchangeTax = new MMCode() {
+	public static final TaxType16Code StockExchangeTax = new TaxType16Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::STEX"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchangeTax";
-			owner_lazy = () -> TaxType16Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType16Code.mmObject();
+			codeName = TaxTypeCode.StockExchangeTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -335,6 +361,9 @@ public class TaxType16Code extends TaxTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TaxType16Code
 	 * TaxType16Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::TRAN</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -343,11 +372,13 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "TransferTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransferTax = new MMCode() {
+	public static final TaxType16Code TransferTax = new TaxType16Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::TRAN"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferTax";
-			owner_lazy = () -> TaxType16Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType16Code.mmObject();
+			codeName = TaxTypeCode.TransferTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -358,6 +389,9 @@ public class TaxType16Code extends TaxTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.TaxType16Code
 	 * TaxType16Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::TRAX</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -366,11 +400,13 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "TransactionTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransactionTax = new MMCode() {
+	public static final TaxType16Code TransactionTax = new TaxType16Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::TRAX"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTax";
-			owner_lazy = () -> TaxType16Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType16Code.mmObject();
+			codeName = TaxTypeCode.TransactionTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -382,6 +418,9 @@ public class TaxType16Code extends TaxTypeCode {
 	 * {@linkplain com.tools20022.repository.codeset.TaxType16Code
 	 * TaxType16Code}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::VATA</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -389,11 +428,13 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "ValueAddedTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmValueAddedTax = new MMCode() {
+	public static final TaxType16Code ValueAddedTax = new TaxType16Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::VATA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
-			owner_lazy = () -> TaxType16Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType16Code.mmObject();
+			codeName = TaxTypeCode.ValueAddedTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -412,11 +453,12 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "WithholdingTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithholdingTax = new MMCode() {
+	public static final TaxType16Code WithholdingTax = new TaxType16Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
-			owner_lazy = () -> TaxType16Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType16Code.mmObject();
+			codeName = TaxTypeCode.WithholdingTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -435,11 +477,12 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "CapitalLossCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCapitalLossCredit = new MMCode() {
+	public static final TaxType16Code CapitalLossCredit = new TaxType16Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalLossCredit";
-			owner_lazy = () -> TaxType16Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType16Code.mmObject();
+			codeName = TaxTypeCode.CapitalLossCredit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -458,27 +501,75 @@ public class TaxType16Code extends TaxTypeCode {
 	 * name} = "CapitalGainTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCapitalGainTax = new MMCode() {
+	public static final TaxType16Code CapitalGainTax = new TaxType16Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGainTax";
-			owner_lazy = () -> TaxType16Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType16Code.mmObject();
+			codeName = TaxTypeCode.CapitalGainTax.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TaxType16Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TaxType16Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxType16Code";
 				definition = "Specifies the type of tax.";
-				code_lazy = () -> Arrays.asList(TaxType16Code.mmConsumptionTax, TaxType16Code.mmTaxCredit, TaxType16Code.mmEUTaxRetention, TaxType16Code.mmPaymentLevyTax, TaxType16Code.mmLocalTax, TaxType16Code.mmNationalTax,
-						TaxType16Code.mmProvincial, TaxType16Code.mmStampDuty, TaxType16Code.mmStateTax, TaxType16Code.mmStockExchangeTax, TaxType16Code.mmTransferTax, TaxType16Code.mmTransactionTax, TaxType16Code.mmValueAddedTax,
-						TaxType16Code.mmWithholdingTax, TaxType16Code.mmCapitalLossCredit, TaxType16Code.mmCapitalGainTax);
 				trace_lazy = () -> TaxTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType16Code.ConsumptionTax, com.tools20022.repository.codeset.TaxType16Code.TaxCredit, com.tools20022.repository.codeset.TaxType16Code.EUTaxRetention,
+						com.tools20022.repository.codeset.TaxType16Code.PaymentLevyTax, com.tools20022.repository.codeset.TaxType16Code.LocalTax, com.tools20022.repository.codeset.TaxType16Code.NationalTax,
+						com.tools20022.repository.codeset.TaxType16Code.Provincial, com.tools20022.repository.codeset.TaxType16Code.StampDuty, com.tools20022.repository.codeset.TaxType16Code.StateTax,
+						com.tools20022.repository.codeset.TaxType16Code.StockExchangeTax, com.tools20022.repository.codeset.TaxType16Code.TransferTax, com.tools20022.repository.codeset.TaxType16Code.TransactionTax,
+						com.tools20022.repository.codeset.TaxType16Code.ValueAddedTax, com.tools20022.repository.codeset.TaxType16Code.WithholdingTax, com.tools20022.repository.codeset.TaxType16Code.CapitalLossCredit,
+						com.tools20022.repository.codeset.TaxType16Code.CapitalGainTax);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ConsumptionTax.getCodeName().get(), ConsumptionTax);
+		codesByName.put(TaxCredit.getCodeName().get(), TaxCredit);
+		codesByName.put(EUTaxRetention.getCodeName().get(), EUTaxRetention);
+		codesByName.put(PaymentLevyTax.getCodeName().get(), PaymentLevyTax);
+		codesByName.put(LocalTax.getCodeName().get(), LocalTax);
+		codesByName.put(NationalTax.getCodeName().get(), NationalTax);
+		codesByName.put(Provincial.getCodeName().get(), Provincial);
+		codesByName.put(StampDuty.getCodeName().get(), StampDuty);
+		codesByName.put(StateTax.getCodeName().get(), StateTax);
+		codesByName.put(StockExchangeTax.getCodeName().get(), StockExchangeTax);
+		codesByName.put(TransferTax.getCodeName().get(), TransferTax);
+		codesByName.put(TransactionTax.getCodeName().get(), TransactionTax);
+		codesByName.put(ValueAddedTax.getCodeName().get(), ValueAddedTax);
+		codesByName.put(WithholdingTax.getCodeName().get(), WithholdingTax);
+		codesByName.put(CapitalLossCredit.getCodeName().get(), CapitalLossCredit);
+		codesByName.put(CapitalGainTax.getCodeName().get(), CapitalGainTax);
+	}
+
+	public static TaxType16Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TaxType16Code[] values() {
+		TaxType16Code[] values = new TaxType16Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TaxType16Code> {
+		@Override
+		public TaxType16Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TaxType16Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

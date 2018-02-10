@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.GeneralBusinessOrError1Choice;
 import com.tools20022.repository.choice.GeneralBusinessOrError2Choice;
@@ -29,6 +30,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Details about business information related to a system.
@@ -64,6 +67,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.System#mmSystemGeneratedInformation
+ * System.mmSystemGeneratedInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InformationQualifier#mmSystemBusinessInformation
+ * InformationQualifier.mmSystemBusinessInformation}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport#mmGeneralBusinessInformation
+ * GeneralBusinessReport.mmGeneralBusinessInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport2#mmGeneralBusinessInformation
+ * GeneralBusinessReport2.mmGeneralBusinessInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport3#mmGeneralBusinessOrError
+ * GeneralBusinessReport3.mmGeneralBusinessOrError}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport4#mmGeneralBusinessOrError
+ * GeneralBusinessReport4.mmGeneralBusinessOrError}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
  * <ul>
@@ -95,40 +128,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.System#mmSystemGeneratedInformation
- * System.mmSystemGeneratedInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InformationQualifier#mmSystemBusinessInformation
- * InformationQualifier.mmSystemBusinessInformation}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport#mmGeneralBusinessInformation
- * GeneralBusinessReport.mmGeneralBusinessInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport2#mmGeneralBusinessInformation
- * GeneralBusinessReport2.mmGeneralBusinessInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport3#mmGeneralBusinessOrError
- * GeneralBusinessReport3.mmGeneralBusinessOrError}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport4#mmGeneralBusinessOrError
- * GeneralBusinessReport4.mmGeneralBusinessOrError}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -144,9 +147,8 @@ public class SystemBusinessInformation {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected InformationQualifier qualifier;
 	/**
-	 * Further information about the criticality or importance of a general
-	 * business information system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,6 +181,17 @@ public class SystemBusinessInformation {
 	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation
 	 * SystemBusinessInformation}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=SampleData, SampleData=<?xml version="1.0"
+	 * encoding="UTF-8"?> <InstanceInfo> <key KeyValue="Sample1"/> <key
+	 * KeyValue="Sample2"/> <key KeyValue="Sample3"/> <key KeyValue="Sample4"/>
+	 * <key KeyValue="Sample5"/> <key KeyValue="Sample6"/> <key
+	 * KeyValue="Sample7"/> <key KeyValue="Sample8"/> <key KeyValue="Sample9"/>
+	 * <key KeyValue="Sample10"/> </InstanceInfo>
+	 * 
+	 * 
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -194,8 +207,15 @@ public class SystemBusinessInformation {
 	public static final MMBusinessAssociationEnd mmQualifier = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(GeneralBusinessInformation.mmQualifier, GeneralBusinessInformationSearchCriteria.mmQualifier);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
+			semanticMarkup_lazy = () -> Arrays
+					.asList(new OtherSemanticMarkup(
+							this,
+							"SampleData",
+							new String[]{
+									"SampleData",
+									"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<InstanceInfo>\n<key KeyValue=\"Sample1\"/>\n<key KeyValue=\"Sample2\"/>\n<key KeyValue=\"Sample3\"/>\n<key KeyValue=\"Sample4\"/>\n<key KeyValue=\"Sample5\"/>\n<key KeyValue=\"Sample6\"/>\n<key KeyValue=\"Sample7\"/>\n<key KeyValue=\"Sample8\"/>\n<key KeyValue=\"Sample9\"/>\n<key KeyValue=\"Sample10\"/>\n</InstanceInfo>\n\n\n"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Qualifier";
 			definition = "Further information about the criticality or importance of a general business information system.";
@@ -208,9 +228,8 @@ public class SystemBusinessInformation {
 	};
 	protected Max35Text subject;
 	/**
-	 * Subject line of an item of general business information, summarizing the
-	 * topic and intended destination of the information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,6 +253,17 @@ public class SystemBusinessInformation {
 	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation
 	 * SystemBusinessInformation}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=SampleData, SampleData=<?xml version="1.0"
+	 * encoding="UTF-8"?> <InstanceInfo> <key KeyValue="Sample1"/> <key
+	 * KeyValue="Sample2"/> <key KeyValue="Sample3"/> <key KeyValue="Sample4"/>
+	 * <key KeyValue="Sample5"/> <key KeyValue="Sample6"/> <key
+	 * KeyValue="Sample7"/> <key KeyValue="Sample8"/> <key KeyValue="Sample9"/>
+	 * <key KeyValue="Sample10"/> </InstanceInfo>
+	 * 
+	 * 
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -249,8 +279,15 @@ public class SystemBusinessInformation {
 	public static final MMBusinessAttribute mmSubject = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(GeneralBusinessInformation.mmSubject, GeneralBusinessInformationSearchCriteria.mmSubject);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
+			semanticMarkup_lazy = () -> Arrays
+					.asList(new OtherSemanticMarkup(
+							this,
+							"SampleData",
+							new String[]{
+									"SampleData",
+									"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<InstanceInfo>\n<key KeyValue=\"Sample1\"/>\n<key KeyValue=\"Sample2\"/>\n<key KeyValue=\"Sample3\"/>\n<key KeyValue=\"Sample4\"/>\n<key KeyValue=\"Sample5\"/>\n<key KeyValue=\"Sample6\"/>\n<key KeyValue=\"Sample7\"/>\n<key KeyValue=\"Sample8\"/>\n<key KeyValue=\"Sample9\"/>\n<key KeyValue=\"Sample10\"/>\n</InstanceInfo>\n\n\n"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Subject";
 			definition = "Subject line of an item of general business information, summarizing the topic and intended destination of the information.";
@@ -269,8 +306,8 @@ public class SystemBusinessInformation {
 	};
 	protected Max350Text subjectDetails;
 	/**
-	 * General business information, in unstructured form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -291,6 +328,17 @@ public class SystemBusinessInformation {
 	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation
 	 * SystemBusinessInformation}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=SampleData, SampleData=<?xml version="1.0"
+	 * encoding="UTF-8"?> <InstanceInfo> <key KeyValue="Sample1"/> <key
+	 * KeyValue="Sample2"/> <key KeyValue="Sample3"/> <key KeyValue="Sample4"/>
+	 * <key KeyValue="Sample5"/> <key KeyValue="Sample6"/> <key
+	 * KeyValue="Sample7"/> <key KeyValue="Sample8"/> <key KeyValue="Sample9"/>
+	 * <key KeyValue="Sample10"/> </InstanceInfo>
+	 * 
+	 * 
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -304,8 +352,15 @@ public class SystemBusinessInformation {
 	public static final MMBusinessAttribute mmSubjectDetails = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(GeneralBusinessInformation.mmSubjectDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
+			semanticMarkup_lazy = () -> Arrays
+					.asList(new OtherSemanticMarkup(
+							this,
+							"SampleData",
+							new String[]{
+									"SampleData",
+									"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<InstanceInfo>\n<key KeyValue=\"Sample1\"/>\n<key KeyValue=\"Sample2\"/>\n<key KeyValue=\"Sample3\"/>\n<key KeyValue=\"Sample4\"/>\n<key KeyValue=\"Sample5\"/>\n<key KeyValue=\"Sample6\"/>\n<key KeyValue=\"Sample7\"/>\n<key KeyValue=\"Sample8\"/>\n<key KeyValue=\"Sample9\"/>\n<key KeyValue=\"Sample10\"/>\n</InstanceInfo>\n\n\n"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubjectDetails";
 			definition = "General business information, in unstructured form.";
@@ -324,9 +379,8 @@ public class SystemBusinessInformation {
 	};
 	protected Max35Text identification;
 	/**
-	 * Unique and unambiguous identification of a general business information
-	 * system, as assigned by the system transaction administrator.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -372,8 +426,8 @@ public class SystemBusinessInformation {
 		{
 			derivation_lazy = () -> Arrays.asList(GeneralBusinessReport.mmBusinessInformationReference, GeneralBusinessReport2.mmBusinessInformationReference, GeneralBusinessReport3.mmBusinessInformationReference,
 					GeneralBusinessReport4.mmBusinessInformationReference);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification of a general business information system, as assigned by the system transaction administrator.";
@@ -392,9 +446,8 @@ public class SystemBusinessInformation {
 	};
 	protected Max35Text reference;
 	/**
-	 * Unique and unambiguous reference assigned to a general business
-	 * information system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -415,6 +468,17 @@ public class SystemBusinessInformation {
 	 * {@linkplain com.tools20022.repository.entity.SystemBusinessInformation
 	 * SystemBusinessInformation}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=SampleData, SampleData=<?xml version="1.0"
+	 * encoding="UTF-8"?> <InstanceInfo> <key KeyValue="Sample1"/> <key
+	 * KeyValue="Sample2"/> <key KeyValue="Sample3"/> <key KeyValue="Sample4"/>
+	 * <key KeyValue="Sample5"/> <key KeyValue="Sample6"/> <key
+	 * KeyValue="Sample7"/> <key KeyValue="Sample8"/> <key KeyValue="Sample9"/>
+	 * <key KeyValue="Sample10"/> </InstanceInfo>
+	 * 
+	 * 
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -430,8 +494,15 @@ public class SystemBusinessInformation {
 	public static final MMBusinessAttribute mmReference = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(GeneralBusinessInformationSearchCriteria.mmReference);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
+			semanticMarkup_lazy = () -> Arrays
+					.asList(new OtherSemanticMarkup(
+							this,
+							"SampleData",
+							new String[]{
+									"SampleData",
+									"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<InstanceInfo>\n<key KeyValue=\"Sample1\"/>\n<key KeyValue=\"Sample2\"/>\n<key KeyValue=\"Sample3\"/>\n<key KeyValue=\"Sample4\"/>\n<key KeyValue=\"Sample5\"/>\n<key KeyValue=\"Sample6\"/>\n<key KeyValue=\"Sample7\"/>\n<key KeyValue=\"Sample8\"/>\n<key KeyValue=\"Sample9\"/>\n<key KeyValue=\"Sample10\"/>\n</InstanceInfo>\n\n\n"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reference";
 			definition = "Unique and unambiguous reference assigned to a general business information system.";
@@ -450,8 +521,8 @@ public class SystemBusinessInformation {
 	};
 	protected System system;
 	/**
-	 * System for which business information is generated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -483,8 +554,8 @@ public class SystemBusinessInformation {
 	 */
 	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "System";
 			definition = "System for which business information is generated.";
@@ -499,7 +570,7 @@ public class SystemBusinessInformation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemBusinessInformation";
 				definition = "Details about business information related to a system.";
@@ -526,47 +597,53 @@ public class SystemBusinessInformation {
 		return qualifier;
 	}
 
-	public void setQualifier(com.tools20022.repository.entity.InformationQualifier qualifier) {
-		this.qualifier = qualifier;
+	public SystemBusinessInformation setQualifier(com.tools20022.repository.entity.InformationQualifier qualifier) {
+		this.qualifier = Objects.requireNonNull(qualifier);
+		return this;
 	}
 
 	public Max35Text getSubject() {
 		return subject;
 	}
 
-	public void setSubject(Max35Text subject) {
-		this.subject = subject;
+	public SystemBusinessInformation setSubject(Max35Text subject) {
+		this.subject = Objects.requireNonNull(subject);
+		return this;
 	}
 
 	public Max350Text getSubjectDetails() {
 		return subjectDetails;
 	}
 
-	public void setSubjectDetails(Max350Text subjectDetails) {
-		this.subjectDetails = subjectDetails;
+	public SystemBusinessInformation setSubjectDetails(Max350Text subjectDetails) {
+		this.subjectDetails = Objects.requireNonNull(subjectDetails);
+		return this;
 	}
 
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public SystemBusinessInformation setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
 	public Max35Text getReference() {
 		return reference;
 	}
 
-	public void setReference(Max35Text reference) {
-		this.reference = reference;
+	public SystemBusinessInformation setReference(Max35Text reference) {
+		this.reference = Objects.requireNonNull(reference);
+		return this;
 	}
 
-	public System getSystem() {
-		return system;
+	public Optional<System> getSystem() {
+		return system == null ? Optional.empty() : Optional.of(system);
 	}
 
-	public void setSystem(com.tools20022.repository.entity.System system) {
+	public SystemBusinessInformation setSystem(com.tools20022.repository.entity.System system) {
 		this.system = system;
+		return this;
 	}
 }

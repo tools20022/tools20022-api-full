@@ -27,6 +27,7 @@ import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -41,21 +42,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
- * TreasuryArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ForexNotificationsISOArchive
- * ForexNotificationsISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AmdNDFOpngV02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -80,6 +66,21 @@ import javax.xml.bind.annotation.*;
  * AmendNonDeliverableForwardOpeningV02.mmValuationConditions}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ForexNotificationsISOArchive
+ * ForexNotificationsISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AmdNDFOpngV02"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
+ * TreasuryArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code trea.002.001.02}</li>
@@ -95,16 +96,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmendNonDeliverableForwardOpeningV02", propOrder = {"tradeInformation", "tradingSideIdentification", "counterpartySideIdentification", "tradeAmounts", "agreedRate", "valuationConditions"})
 public class AmendNonDeliverableForwardOpeningV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradInf", required = true)
 	protected TradeAgreement2 tradeInformation;
 	/**
-	 * Provides references and date of the non deliverable trade which is
-	 * amended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,10 +146,11 @@ public class AmendNonDeliverableForwardOpeningV02 {
 			}
 		}
 	};
+	@XmlElement(name = "TradgSdId", required = true)
 	protected TradePartyIdentification3 tradingSideIdentification;
 	/**
-	 * Specifies the trading side of the non deliverable trade which is amended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,10 +192,11 @@ public class AmendNonDeliverableForwardOpeningV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CtrPtySdId", required = true)
 	protected TradePartyIdentification3 counterpartySideIdentification;
 	/**
-	 * Specifies the counterparty of the non deliverable trade which is amended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -235,10 +238,11 @@ public class AmendNonDeliverableForwardOpeningV02 {
 			}
 		}
 	};
+	@XmlElement(name = "TradAmts", required = true)
 	protected AmountsAndValueDate1 tradeAmounts;
 	/**
-	 * Specifies the amounts of the non deliverable trade which is amended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -279,10 +283,11 @@ public class AmendNonDeliverableForwardOpeningV02 {
 			}
 		}
 	};
+	@XmlElement(name = "AgrdRate", required = true)
 	protected AgreedRate1 agreedRate;
 	/**
-	 * Specifies the rate of the non deliverable trade which is amended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -322,11 +327,11 @@ public class AmendNonDeliverableForwardOpeningV02 {
 			}
 		}
 	};
+	@XmlElement(name = "ValtnConds", required = true)
 	protected NonDeliverableForwardValuationConditions2 valuationConditions;
 	/**
-	 * Specifies the valuation conditions of the non deliverable trade which is
-	 * amended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -401,61 +406,61 @@ public class AmendNonDeliverableForwardOpeningV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradInf", required = true)
 	public TradeAgreement2 getTradeInformation() {
 		return tradeInformation;
 	}
 
-	public void setTradeInformation(TradeAgreement2 tradeInformation) {
-		this.tradeInformation = tradeInformation;
+	public AmendNonDeliverableForwardOpeningV02 setTradeInformation(TradeAgreement2 tradeInformation) {
+		this.tradeInformation = Objects.requireNonNull(tradeInformation);
+		return this;
 	}
 
-	@XmlElement(name = "TradgSdId", required = true)
 	public TradePartyIdentification3 getTradingSideIdentification() {
 		return tradingSideIdentification;
 	}
 
-	public void setTradingSideIdentification(TradePartyIdentification3 tradingSideIdentification) {
-		this.tradingSideIdentification = tradingSideIdentification;
+	public AmendNonDeliverableForwardOpeningV02 setTradingSideIdentification(TradePartyIdentification3 tradingSideIdentification) {
+		this.tradingSideIdentification = Objects.requireNonNull(tradingSideIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CtrPtySdId", required = true)
 	public TradePartyIdentification3 getCounterpartySideIdentification() {
 		return counterpartySideIdentification;
 	}
 
-	public void setCounterpartySideIdentification(TradePartyIdentification3 counterpartySideIdentification) {
-		this.counterpartySideIdentification = counterpartySideIdentification;
+	public AmendNonDeliverableForwardOpeningV02 setCounterpartySideIdentification(TradePartyIdentification3 counterpartySideIdentification) {
+		this.counterpartySideIdentification = Objects.requireNonNull(counterpartySideIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TradAmts", required = true)
 	public AmountsAndValueDate1 getTradeAmounts() {
 		return tradeAmounts;
 	}
 
-	public void setTradeAmounts(AmountsAndValueDate1 tradeAmounts) {
-		this.tradeAmounts = tradeAmounts;
+	public AmendNonDeliverableForwardOpeningV02 setTradeAmounts(AmountsAndValueDate1 tradeAmounts) {
+		this.tradeAmounts = Objects.requireNonNull(tradeAmounts);
+		return this;
 	}
 
-	@XmlElement(name = "AgrdRate", required = true)
 	public AgreedRate1 getAgreedRate() {
 		return agreedRate;
 	}
 
-	public void setAgreedRate(AgreedRate1 agreedRate) {
-		this.agreedRate = agreedRate;
+	public AmendNonDeliverableForwardOpeningV02 setAgreedRate(AgreedRate1 agreedRate) {
+		this.agreedRate = Objects.requireNonNull(agreedRate);
+		return this;
 	}
 
-	@XmlElement(name = "ValtnConds", required = true)
 	public NonDeliverableForwardValuationConditions2 getValuationConditions() {
 		return valuationConditions;
 	}
 
-	public void setValuationConditions(NonDeliverableForwardValuationConditions2 valuationConditions) {
-		this.valuationConditions = valuationConditions;
+	public AmendNonDeliverableForwardOpeningV02 setValuationConditions(NonDeliverableForwardValuationConditions2 valuationConditions) {
+		this.valuationConditions = Objects.requireNonNull(valuationConditions);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:trea.002.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:trea.002.001.02")
 	static public class Document {
 		@XmlElement(name = "AmdNDFOpngV02", required = true)
 		public AmendNonDeliverableForwardOpeningV02 messageBody;

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -25,9 +26,8 @@ import com.tools20022.repository.choice.BalanceFormat5Choice;
 import com.tools20022.repository.choice.Quantity17Choice;
 import com.tools20022.repository.entity.CorporateActionEntitlement;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -102,8 +102,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -120,17 +120,18 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateActionBalanceDetails9}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionBalanceDetails30", propOrder = {"totalEligibleBalance", "uninstructedBalance", "totalInstructedBalanceDetails", "blockedBalance", "borrowedBalance", "collateralInBalance", "collateralOutBalance",
 		"onLoanBalance", "outForRegistrationBalance", "settlementPositionBalance", "streetPositionBalance", "tradeDatePositionBalance", "inTransshipmentBalance", "registeredBalance", "obligatedBalance", "pendingDeliveryBalance",
 		"pendingReceiptBalance"})
 public class CorporateActionBalanceDetails30 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlElgblBal", required = true)
 	protected Quantity17Choice totalEligibleBalance;
 	/**
-	 * Total quantity of financial instruments of the balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,6 +152,9 @@ public class CorporateActionBalanceDetails30 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlElgblBal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B::ELIG</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -169,9 +173,10 @@ public class CorporateActionBalanceDetails30 {
 	public static final MMMessageAttribute mmTotalEligibleBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmEligibleBalance;
-			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "TtlElgblBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::ELIG"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleBalance";
 			definition = "Total quantity of financial instruments of the balance.";
@@ -181,10 +186,11 @@ public class CorporateActionBalanceDetails30 {
 			complexType_lazy = () -> Quantity17Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "UinstdBal", required = true)
 	protected BalanceFormat5Choice uninstructedBalance;
 	/**
-	 * Quantity of securities in the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -205,6 +211,9 @@ public class CorporateActionBalanceDetails30 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UinstdBal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::UNBA</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -223,9 +232,10 @@ public class CorporateActionBalanceDetails30 {
 	public static final MMMessageAttribute mmUninstructedBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmUninstructedBalance;
-			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "UinstdBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::UNBA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UninstructedBalance";
 			definition = "Quantity of securities in the sub-balance.";
@@ -235,10 +245,11 @@ public class CorporateActionBalanceDetails30 {
 			complexType_lazy = () -> BalanceFormat5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlInstdBalDtls", required = true)
 	protected InstructedBalanceDetails5 totalInstructedBalanceDetails;
 	/**
-	 * Provides information about the total instructed balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -276,7 +287,7 @@ public class CorporateActionBalanceDetails30 {
 	public static final MMMessageAssociationEnd mmTotalInstructedBalanceDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
-			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "TtlInstdBalDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -289,10 +300,11 @@ public class CorporateActionBalanceDetails30 {
 			type_lazy = () -> com.tools20022.repository.msg.InstructedBalanceDetails5.mmObject();
 		}
 	};
+	@XmlElement(name = "BlckdBal")
 	protected SignedQuantityFormat6 blockedBalance;
 	/**
-	 * Balance of financial instruments that are blocked.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -313,6 +325,9 @@ public class CorporateActionBalanceDetails30 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BlckdBal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::BLOK</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -331,9 +346,10 @@ public class CorporateActionBalanceDetails30 {
 	public static final MMMessageAttribute mmBlockedBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
-			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "BlckdBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::BLOK"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedBalance";
 			definition = "Balance of financial instruments that are blocked.";
@@ -343,11 +359,11 @@ public class CorporateActionBalanceDetails30 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
 		}
 	};
+	@XmlElement(name = "BrrwdBal")
 	protected SignedQuantityFormat6 borrowedBalance;
 	/**
-	 * Balance of financial instruments that have been borrowed from another
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -367,6 +383,9 @@ public class CorporateActionBalanceDetails30 {
 	 * CorporateActionBalanceDetails30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BrrwdBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::BORR</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -388,9 +407,10 @@ public class CorporateActionBalanceDetails30 {
 	public static final MMMessageAttribute mmBorrowedBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
-			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "BrrwdBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::BORR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorrowedBalance";
 			definition = "Balance of financial instruments that have been borrowed from another party.";
@@ -400,11 +420,11 @@ public class CorporateActionBalanceDetails30 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
 		}
 	};
+	@XmlElement(name = "CollInBal")
 	protected SignedQuantityFormat6 collateralInBalance;
 	/**
-	 * Balance of securities that belong to a third party and that are held for
-	 * the purpose of collateralisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -424,6 +444,9 @@ public class CorporateActionBalanceDetails30 {
 	 * CorporateActionBalanceDetails30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CollInBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::COLI</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -445,9 +468,10 @@ public class CorporateActionBalanceDetails30 {
 	public static final MMMessageAttribute mmCollateralInBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
-			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "CollInBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::COLI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralInBalance";
 			definition = "Balance of securities that belong to a third party and that are held for the purpose of collateralisation.";
@@ -457,12 +481,11 @@ public class CorporateActionBalanceDetails30 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
 		}
 	};
+	@XmlElement(name = "CollOutBal")
 	protected SignedQuantityFormat6 collateralOutBalance;
 	/**
-	 * Balance of securities that belong to the safekeeping account indicated
-	 * within this message, and are deposited with a third party for the purpose
-	 * of collateralisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -482,6 +505,9 @@ public class CorporateActionBalanceDetails30 {
 	 * CorporateActionBalanceDetails30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CollOutBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::COLO</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -503,9 +529,10 @@ public class CorporateActionBalanceDetails30 {
 	public static final MMMessageAttribute mmCollateralOutBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
-			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "CollOutBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::COLO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralOutBalance";
 			definition = "Balance of securities that belong to the safekeeping account indicated within this message, and are deposited with a third party for the purpose of collateralisation.";
@@ -515,10 +542,11 @@ public class CorporateActionBalanceDetails30 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
 		}
 	};
+	@XmlElement(name = "OnLnBal")
 	protected SignedQuantityFormat6 onLoanBalance;
 	/**
-	 * Balance of financial instruments that have been loaned to a third party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -538,6 +566,9 @@ public class CorporateActionBalanceDetails30 {
 	 * CorporateActionBalanceDetails30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OnLnBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::LOAN</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -559,9 +590,10 @@ public class CorporateActionBalanceDetails30 {
 	public static final MMMessageAttribute mmOnLoanBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
-			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "OnLnBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::LOAN"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLoanBalance";
 			definition = "Balance of financial instruments that have been loaned to a third party.";
@@ -571,12 +603,11 @@ public class CorporateActionBalanceDetails30 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
 		}
 	};
+	@XmlElement(name = "OutForRegnBal")
 	protected SignedQuantityFormat6 outForRegistrationBalance;
 	/**
-	 * Balance of financial instruments currently being processed by the
-	 * institution responsible for registering the new beneficial owner (or
-	 * nominee).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -596,6 +627,9 @@ public class CorporateActionBalanceDetails30 {
 	 * CorporateActionBalanceDetails30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OutForRegnBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::REGO</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -617,9 +651,10 @@ public class CorporateActionBalanceDetails30 {
 	public static final MMMessageAttribute mmOutForRegistrationBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
-			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "OutForRegnBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::REGO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutForRegistrationBalance";
 			definition = "Balance of financial instruments currently being processed by the institution responsible for registering the new beneficial owner (or nominee).";
@@ -629,11 +664,11 @@ public class CorporateActionBalanceDetails30 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmPosBal")
 	protected SignedQuantityFormat6 settlementPositionBalance;
 	/**
-	 * Balance of securities representing only settled transactions; pending
-	 * transactions not included.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -653,6 +688,9 @@ public class CorporateActionBalanceDetails30 {
 	 * CorporateActionBalanceDetails30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmPosBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::SETT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -674,9 +712,10 @@ public class CorporateActionBalanceDetails30 {
 	public static final MMMessageAttribute mmSettlementPositionBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
-			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPosBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::SETT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPositionBalance";
 			definition = "Balance of securities representing only settled transactions; pending transactions not included.";
@@ -686,11 +725,11 @@ public class CorporateActionBalanceDetails30 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
 		}
 	};
+	@XmlElement(name = "StrtPosBal")
 	protected SignedQuantityFormat6 streetPositionBalance;
 	/**
-	 * Balance of financial instruments that remain registered in the name of
-	 * the prior beneficial owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -710,6 +749,9 @@ public class CorporateActionBalanceDetails30 {
 	 * CorporateActionBalanceDetails30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StrtPosBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::SPOS</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -731,9 +773,10 @@ public class CorporateActionBalanceDetails30 {
 	public static final MMMessageAttribute mmStreetPositionBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
-			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "StrtPosBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::SPOS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StreetPositionBalance";
 			definition = "Balance of financial instruments that remain registered in the name of the prior beneficial owner.";
@@ -743,11 +786,11 @@ public class CorporateActionBalanceDetails30 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDtPosBal")
 	protected SignedQuantityFormat6 tradeDatePositionBalance;
 	/**
-	 * Balance of securities based on trade date, for example, includes all
-	 * pending transactions in addition to the balance of settled transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -767,6 +810,9 @@ public class CorporateActionBalanceDetails30 {
 	 * CorporateActionBalanceDetails30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradDtPosBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::TRAD</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -788,9 +834,10 @@ public class CorporateActionBalanceDetails30 {
 	public static final MMMessageAttribute mmTradeDatePositionBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
-			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "TradDtPosBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::TRAD"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDatePositionBalance";
 			definition = "Balance of securities based on trade date, for example, includes all pending transactions in addition to the balance of settled transactions.";
@@ -800,11 +847,11 @@ public class CorporateActionBalanceDetails30 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
 		}
 	};
+	@XmlElement(name = "InTrnsShipmntBal")
 	protected SignedQuantityFormat6 inTransshipmentBalance;
 	/**
-	 * Balance of physical securities that are in the process of being
-	 * transferred from one depository/agent to another.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -824,6 +871,9 @@ public class CorporateActionBalanceDetails30 {
 	 * CorporateActionBalanceDetails30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InTrnsShipmntBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::TRAN</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -845,9 +895,10 @@ public class CorporateActionBalanceDetails30 {
 	public static final MMMessageAttribute mmInTransshipmentBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
-			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "InTrnsShipmntBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::TRAN"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InTransshipmentBalance";
 			definition = "Balance of physical securities that are in the process of being transferred from one depository/agent to another.";
@@ -857,11 +908,11 @@ public class CorporateActionBalanceDetails30 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
 		}
 	};
+	@XmlElement(name = "RegdBal")
 	protected SignedQuantityFormat6 registeredBalance;
 	/**
-	 * Balance of financial instruments that are registered (in the name of a
-	 * nominee name or of the beneficial owner).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -881,6 +932,9 @@ public class CorporateActionBalanceDetails30 {
 	 * CorporateActionBalanceDetails30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RegdBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::NOMI</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -902,9 +956,10 @@ public class CorporateActionBalanceDetails30 {
 	public static final MMMessageAttribute mmRegisteredBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
-			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "RegdBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::NOMI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredBalance";
 			definition = "Balance of financial instruments that are registered (in the name of a nominee name or of the beneficial owner).";
@@ -914,13 +969,11 @@ public class CorporateActionBalanceDetails30 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
 		}
 	};
+	@XmlElement(name = "OblgtdBal")
 	protected SignedQuantityFormat6 obligatedBalance;
 	/**
-	 * Position that account holders should return to the account servicer to
-	 * participate in the event or to fulfil their obligation for the event to
-	 * be complete, for example, return of securities for late announced
-	 * drawing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -940,6 +993,9 @@ public class CorporateActionBalanceDetails30 {
 	 * CorporateActionBalanceDetails30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OblgtdBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a:OBAL</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -961,9 +1017,10 @@ public class CorporateActionBalanceDetails30 {
 	public static final MMMessageAttribute mmObligatedBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
-			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "OblgtdBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a:OBAL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObligatedBalance";
 			definition = "Position that account holders should return to the account servicer to participate in the event or to fulfil their obligation for the event to be complete, for example, return of securities for late announced drawing.";
@@ -973,10 +1030,11 @@ public class CorporateActionBalanceDetails30 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
 		}
 	};
+	@XmlElement(name = "PdgDlvryBal")
 	protected List<com.tools20022.repository.msg.PendingBalance3> pendingDeliveryBalance;
 	/**
-	 * Balance of financial instruments that are pending delivery.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -994,6 +1052,9 @@ public class CorporateActionBalanceDetails30 {
 	 * CorporateActionBalanceDetails30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PdgDlvryBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::PEND</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1014,9 +1075,10 @@ public class CorporateActionBalanceDetails30 {
 	public static final MMMessageAssociationEnd mmPendingDeliveryBalance = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
-			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "PdgDlvryBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::PEND"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDeliveryBalance";
 			definition = "Balance of financial instruments that are pending delivery.";
@@ -1026,10 +1088,11 @@ public class CorporateActionBalanceDetails30 {
 			type_lazy = () -> com.tools20022.repository.msg.PendingBalance3.mmObject();
 		}
 	};
+	@XmlElement(name = "PdgRctBal")
 	protected List<com.tools20022.repository.msg.PendingBalance3> pendingReceiptBalance;
 	/**
-	 * Balance of financial instruments that are pending receipt.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1047,6 +1110,9 @@ public class CorporateActionBalanceDetails30 {
 	 * CorporateActionBalanceDetails30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PdgRctBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::PENR</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1067,9 +1133,10 @@ public class CorporateActionBalanceDetails30 {
 	public static final MMMessageAssociationEnd mmPendingReceiptBalance = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
-			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "PdgRctBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::PENR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceiptBalance";
 			definition = "Balance of financial instruments that are pending receipt.";
@@ -1083,14 +1150,17 @@ public class CorporateActionBalanceDetails30 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionBalanceDetails30.mmTotalEligibleBalance, CorporateActionBalanceDetails30.mmUninstructedBalance, CorporateActionBalanceDetails30.mmTotalInstructedBalanceDetails,
-						CorporateActionBalanceDetails30.mmBlockedBalance, CorporateActionBalanceDetails30.mmBorrowedBalance, CorporateActionBalanceDetails30.mmCollateralInBalance, CorporateActionBalanceDetails30.mmCollateralOutBalance,
-						CorporateActionBalanceDetails30.mmOnLoanBalance, CorporateActionBalanceDetails30.mmOutForRegistrationBalance, CorporateActionBalanceDetails30.mmSettlementPositionBalance,
-						CorporateActionBalanceDetails30.mmStreetPositionBalance, CorporateActionBalanceDetails30.mmTradeDatePositionBalance, CorporateActionBalanceDetails30.mmInTransshipmentBalance,
-						CorporateActionBalanceDetails30.mmRegisteredBalance, CorporateActionBalanceDetails30.mmObligatedBalance, CorporateActionBalanceDetails30.mmPendingDeliveryBalance,
-						CorporateActionBalanceDetails30.mmPendingReceiptBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmTotalEligibleBalance, com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmUninstructedBalance,
+						com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmTotalInstructedBalanceDetails, com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmBlockedBalance,
+						com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmBorrowedBalance, com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmCollateralInBalance,
+						com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmCollateralOutBalance, com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmOnLoanBalance,
+						com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmOutForRegistrationBalance, com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmSettlementPositionBalance,
+						com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmStreetPositionBalance, com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmTradeDatePositionBalance,
+						com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmInTransshipmentBalance, com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmRegisteredBalance,
+						com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObligatedBalance, com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmPendingDeliveryBalance,
+						com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmPendingReceiptBalance);
 				trace_lazy = () -> CorporateActionEntitlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionBalanceDetails30";
 				definition = "Eligible and not eligible balance of securities for a corporate action event.";
@@ -1100,156 +1170,156 @@ public class CorporateActionBalanceDetails30 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlElgblBal", required = true)
 	public Quantity17Choice getTotalEligibleBalance() {
 		return totalEligibleBalance;
 	}
 
-	public void setTotalEligibleBalance(Quantity17Choice totalEligibleBalance) {
-		this.totalEligibleBalance = totalEligibleBalance;
+	public CorporateActionBalanceDetails30 setTotalEligibleBalance(Quantity17Choice totalEligibleBalance) {
+		this.totalEligibleBalance = Objects.requireNonNull(totalEligibleBalance);
+		return this;
 	}
 
-	@XmlElement(name = "UinstdBal", required = true)
 	public BalanceFormat5Choice getUninstructedBalance() {
 		return uninstructedBalance;
 	}
 
-	public void setUninstructedBalance(BalanceFormat5Choice uninstructedBalance) {
-		this.uninstructedBalance = uninstructedBalance;
+	public CorporateActionBalanceDetails30 setUninstructedBalance(BalanceFormat5Choice uninstructedBalance) {
+		this.uninstructedBalance = Objects.requireNonNull(uninstructedBalance);
+		return this;
 	}
 
-	@XmlElement(name = "TtlInstdBalDtls", required = true)
 	public InstructedBalanceDetails5 getTotalInstructedBalanceDetails() {
 		return totalInstructedBalanceDetails;
 	}
 
-	public void setTotalInstructedBalanceDetails(com.tools20022.repository.msg.InstructedBalanceDetails5 totalInstructedBalanceDetails) {
-		this.totalInstructedBalanceDetails = totalInstructedBalanceDetails;
+	public CorporateActionBalanceDetails30 setTotalInstructedBalanceDetails(com.tools20022.repository.msg.InstructedBalanceDetails5 totalInstructedBalanceDetails) {
+		this.totalInstructedBalanceDetails = Objects.requireNonNull(totalInstructedBalanceDetails);
+		return this;
 	}
 
-	@XmlElement(name = "BlckdBal")
-	public SignedQuantityFormat6 getBlockedBalance() {
-		return blockedBalance;
+	public Optional<SignedQuantityFormat6> getBlockedBalance() {
+		return blockedBalance == null ? Optional.empty() : Optional.of(blockedBalance);
 	}
 
-	public void setBlockedBalance(com.tools20022.repository.msg.SignedQuantityFormat6 blockedBalance) {
+	public CorporateActionBalanceDetails30 setBlockedBalance(com.tools20022.repository.msg.SignedQuantityFormat6 blockedBalance) {
 		this.blockedBalance = blockedBalance;
+		return this;
 	}
 
-	@XmlElement(name = "BrrwdBal")
-	public SignedQuantityFormat6 getBorrowedBalance() {
-		return borrowedBalance;
+	public Optional<SignedQuantityFormat6> getBorrowedBalance() {
+		return borrowedBalance == null ? Optional.empty() : Optional.of(borrowedBalance);
 	}
 
-	public void setBorrowedBalance(com.tools20022.repository.msg.SignedQuantityFormat6 borrowedBalance) {
+	public CorporateActionBalanceDetails30 setBorrowedBalance(com.tools20022.repository.msg.SignedQuantityFormat6 borrowedBalance) {
 		this.borrowedBalance = borrowedBalance;
+		return this;
 	}
 
-	@XmlElement(name = "CollInBal")
-	public SignedQuantityFormat6 getCollateralInBalance() {
-		return collateralInBalance;
+	public Optional<SignedQuantityFormat6> getCollateralInBalance() {
+		return collateralInBalance == null ? Optional.empty() : Optional.of(collateralInBalance);
 	}
 
-	public void setCollateralInBalance(com.tools20022.repository.msg.SignedQuantityFormat6 collateralInBalance) {
+	public CorporateActionBalanceDetails30 setCollateralInBalance(com.tools20022.repository.msg.SignedQuantityFormat6 collateralInBalance) {
 		this.collateralInBalance = collateralInBalance;
+		return this;
 	}
 
-	@XmlElement(name = "CollOutBal")
-	public SignedQuantityFormat6 getCollateralOutBalance() {
-		return collateralOutBalance;
+	public Optional<SignedQuantityFormat6> getCollateralOutBalance() {
+		return collateralOutBalance == null ? Optional.empty() : Optional.of(collateralOutBalance);
 	}
 
-	public void setCollateralOutBalance(com.tools20022.repository.msg.SignedQuantityFormat6 collateralOutBalance) {
+	public CorporateActionBalanceDetails30 setCollateralOutBalance(com.tools20022.repository.msg.SignedQuantityFormat6 collateralOutBalance) {
 		this.collateralOutBalance = collateralOutBalance;
+		return this;
 	}
 
-	@XmlElement(name = "OnLnBal")
-	public SignedQuantityFormat6 getOnLoanBalance() {
-		return onLoanBalance;
+	public Optional<SignedQuantityFormat6> getOnLoanBalance() {
+		return onLoanBalance == null ? Optional.empty() : Optional.of(onLoanBalance);
 	}
 
-	public void setOnLoanBalance(com.tools20022.repository.msg.SignedQuantityFormat6 onLoanBalance) {
+	public CorporateActionBalanceDetails30 setOnLoanBalance(com.tools20022.repository.msg.SignedQuantityFormat6 onLoanBalance) {
 		this.onLoanBalance = onLoanBalance;
+		return this;
 	}
 
-	@XmlElement(name = "OutForRegnBal")
-	public SignedQuantityFormat6 getOutForRegistrationBalance() {
-		return outForRegistrationBalance;
+	public Optional<SignedQuantityFormat6> getOutForRegistrationBalance() {
+		return outForRegistrationBalance == null ? Optional.empty() : Optional.of(outForRegistrationBalance);
 	}
 
-	public void setOutForRegistrationBalance(com.tools20022.repository.msg.SignedQuantityFormat6 outForRegistrationBalance) {
+	public CorporateActionBalanceDetails30 setOutForRegistrationBalance(com.tools20022.repository.msg.SignedQuantityFormat6 outForRegistrationBalance) {
 		this.outForRegistrationBalance = outForRegistrationBalance;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmPosBal")
-	public SignedQuantityFormat6 getSettlementPositionBalance() {
-		return settlementPositionBalance;
+	public Optional<SignedQuantityFormat6> getSettlementPositionBalance() {
+		return settlementPositionBalance == null ? Optional.empty() : Optional.of(settlementPositionBalance);
 	}
 
-	public void setSettlementPositionBalance(com.tools20022.repository.msg.SignedQuantityFormat6 settlementPositionBalance) {
+	public CorporateActionBalanceDetails30 setSettlementPositionBalance(com.tools20022.repository.msg.SignedQuantityFormat6 settlementPositionBalance) {
 		this.settlementPositionBalance = settlementPositionBalance;
+		return this;
 	}
 
-	@XmlElement(name = "StrtPosBal")
-	public SignedQuantityFormat6 getStreetPositionBalance() {
-		return streetPositionBalance;
+	public Optional<SignedQuantityFormat6> getStreetPositionBalance() {
+		return streetPositionBalance == null ? Optional.empty() : Optional.of(streetPositionBalance);
 	}
 
-	public void setStreetPositionBalance(com.tools20022.repository.msg.SignedQuantityFormat6 streetPositionBalance) {
+	public CorporateActionBalanceDetails30 setStreetPositionBalance(com.tools20022.repository.msg.SignedQuantityFormat6 streetPositionBalance) {
 		this.streetPositionBalance = streetPositionBalance;
+		return this;
 	}
 
-	@XmlElement(name = "TradDtPosBal")
-	public SignedQuantityFormat6 getTradeDatePositionBalance() {
-		return tradeDatePositionBalance;
+	public Optional<SignedQuantityFormat6> getTradeDatePositionBalance() {
+		return tradeDatePositionBalance == null ? Optional.empty() : Optional.of(tradeDatePositionBalance);
 	}
 
-	public void setTradeDatePositionBalance(com.tools20022.repository.msg.SignedQuantityFormat6 tradeDatePositionBalance) {
+	public CorporateActionBalanceDetails30 setTradeDatePositionBalance(com.tools20022.repository.msg.SignedQuantityFormat6 tradeDatePositionBalance) {
 		this.tradeDatePositionBalance = tradeDatePositionBalance;
+		return this;
 	}
 
-	@XmlElement(name = "InTrnsShipmntBal")
-	public SignedQuantityFormat6 getInTransshipmentBalance() {
-		return inTransshipmentBalance;
+	public Optional<SignedQuantityFormat6> getInTransshipmentBalance() {
+		return inTransshipmentBalance == null ? Optional.empty() : Optional.of(inTransshipmentBalance);
 	}
 
-	public void setInTransshipmentBalance(com.tools20022.repository.msg.SignedQuantityFormat6 inTransshipmentBalance) {
+	public CorporateActionBalanceDetails30 setInTransshipmentBalance(com.tools20022.repository.msg.SignedQuantityFormat6 inTransshipmentBalance) {
 		this.inTransshipmentBalance = inTransshipmentBalance;
+		return this;
 	}
 
-	@XmlElement(name = "RegdBal")
-	public SignedQuantityFormat6 getRegisteredBalance() {
-		return registeredBalance;
+	public Optional<SignedQuantityFormat6> getRegisteredBalance() {
+		return registeredBalance == null ? Optional.empty() : Optional.of(registeredBalance);
 	}
 
-	public void setRegisteredBalance(com.tools20022.repository.msg.SignedQuantityFormat6 registeredBalance) {
+	public CorporateActionBalanceDetails30 setRegisteredBalance(com.tools20022.repository.msg.SignedQuantityFormat6 registeredBalance) {
 		this.registeredBalance = registeredBalance;
+		return this;
 	}
 
-	@XmlElement(name = "OblgtdBal")
-	public SignedQuantityFormat6 getObligatedBalance() {
-		return obligatedBalance;
+	public Optional<SignedQuantityFormat6> getObligatedBalance() {
+		return obligatedBalance == null ? Optional.empty() : Optional.of(obligatedBalance);
 	}
 
-	public void setObligatedBalance(com.tools20022.repository.msg.SignedQuantityFormat6 obligatedBalance) {
+	public CorporateActionBalanceDetails30 setObligatedBalance(com.tools20022.repository.msg.SignedQuantityFormat6 obligatedBalance) {
 		this.obligatedBalance = obligatedBalance;
+		return this;
 	}
 
-	@XmlElement(name = "PdgDlvryBal")
 	public List<PendingBalance3> getPendingDeliveryBalance() {
-		return pendingDeliveryBalance;
+		return pendingDeliveryBalance == null ? pendingDeliveryBalance = new ArrayList<>() : pendingDeliveryBalance;
 	}
 
-	public void setPendingDeliveryBalance(List<com.tools20022.repository.msg.PendingBalance3> pendingDeliveryBalance) {
-		this.pendingDeliveryBalance = pendingDeliveryBalance;
+	public CorporateActionBalanceDetails30 setPendingDeliveryBalance(List<com.tools20022.repository.msg.PendingBalance3> pendingDeliveryBalance) {
+		this.pendingDeliveryBalance = Objects.requireNonNull(pendingDeliveryBalance);
+		return this;
 	}
 
-	@XmlElement(name = "PdgRctBal")
 	public List<PendingBalance3> getPendingReceiptBalance() {
-		return pendingReceiptBalance;
+		return pendingReceiptBalance == null ? pendingReceiptBalance = new ArrayList<>() : pendingReceiptBalance;
 	}
 
-	public void setPendingReceiptBalance(List<com.tools20022.repository.msg.PendingBalance3> pendingReceiptBalance) {
-		this.pendingReceiptBalance = pendingReceiptBalance;
+	public CorporateActionBalanceDetails30 setPendingReceiptBalance(List<com.tools20022.repository.msg.PendingBalance3> pendingReceiptBalance) {
+		this.pendingReceiptBalance = Objects.requireNonNull(pendingReceiptBalance);
+		return this;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesBalanceType1Choice", propOrder = {"structured", "unstructured"})
 public class SecuritiesBalanceType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Strd", required = true)
 	protected SecuritiesBalanceType1Code structured;
 	/**
-	 * Balance reason in structured format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class SecuritiesBalanceType1Choice {
 	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
-			componentContext_lazy = () -> SecuritiesBalanceType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesBalanceType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Strd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class SecuritiesBalanceType1Choice {
 			simpleType_lazy = () -> SecuritiesBalanceType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Ustrd", required = true)
 	protected Max35Text unstructured;
 	/**
-	 * Balance reason in free text form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +161,7 @@ public class SecuritiesBalanceType1Choice {
 	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
-			componentContext_lazy = () -> SecuritiesBalanceType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesBalanceType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ustrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,9 +176,9 @@ public class SecuritiesBalanceType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesBalanceType1Choice.mmStructured, SecuritiesBalanceType1Choice.mmUnstructured);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesBalanceType1Choice.mmStructured, com.tools20022.repository.choice.SecuritiesBalanceType1Choice.mmUnstructured);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBalanceType1Choice";
 				definition = "Choice between specification of the balance type in structured or free text format.";
@@ -184,21 +187,21 @@ public class SecuritiesBalanceType1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Strd", required = true)
 	public SecuritiesBalanceType1Code getStructured() {
 		return structured;
 	}
 
-	public void setStructured(SecuritiesBalanceType1Code structured) {
-		this.structured = structured;
+	public SecuritiesBalanceType1Choice setStructured(SecuritiesBalanceType1Code structured) {
+		this.structured = Objects.requireNonNull(structured);
+		return this;
 	}
 
-	@XmlElement(name = "Ustrd", required = true)
 	public Max35Text getUnstructured() {
 		return unstructured;
 	}
 
-	public void setUnstructured(Max35Text unstructured) {
-		this.unstructured = unstructured;
+	public SecuritiesBalanceType1Choice setUnstructured(Max35Text unstructured) {
+		this.unstructured = Objects.requireNonNull(unstructured);
+		return this;
 	}
 }

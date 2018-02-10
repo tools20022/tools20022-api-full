@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -30,6 +31,7 @@ import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Order2", propOrder = {"type", "tradingCapacity", "tradeOriginationDate", "customerCapacity", "placeOfExecution", "quantityDetails"})
 public class Order2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp")
 	protected OrderType1Code type;
 	/**
-	 * Indicates the type of instruction to a broker or dealer to buy or sell a
-	 * financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,6 +107,9 @@ public class Order2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Tp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 40</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -120,9 +125,10 @@ public class Order2 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmType;
-			componentContext_lazy = () -> Order2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "40"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates the type of  instruction to a broker or dealer to buy or sell a financial instrument.";
@@ -131,12 +137,11 @@ public class Order2 {
 			simpleType_lazy = () -> OrderType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgCpcty")
 	protected TradingCapacity3Code tradingCapacity;
 	/**
-	 * Capacity of customer placing the order. Primarily used by futures
-	 * exchanges to indicate the CTI code (customer type indicator) as required
-	 * by the US CFTC (Commodity Futures Trading Commission).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,6 +161,9 @@ public class Order2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradgCpcty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 528</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -171,9 +179,10 @@ public class Order2 {
 	public static final MMMessageAttribute mmTradingCapacity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmCustomerCapacity;
-			componentContext_lazy = () -> Order2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order2.mmObject();
 			isDerived = false;
 			xmlTag = "TradgCpcty";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "528"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingCapacity";
 			definition = "Capacity of customer placing the order. Primarily used by futures exchanges to indicate the CTI code (customer type indicator) as required by the US CFTC (Commodity Futures Trading Commission).";
@@ -182,12 +191,11 @@ public class Order2 {
 			simpleType_lazy = () -> TradingCapacity3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TradOrgtnDt")
 	protected ISODateTime tradeOriginationDate;
 	/**
-	 * Indicates the date and time of the agreement in principal between
-	 * counter-parties prior to actual trade date. Used with fixed income for
-	 * municipal new issue markets.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,6 +214,9 @@ public class Order2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradOrgtnDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 229</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -221,9 +232,10 @@ public class Order2 {
 	public static final MMMessageAttribute mmTradeOriginationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeOriginationDate;
-			componentContext_lazy = () -> Order2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order2.mmObject();
 			isDerived = false;
 			xmlTag = "TradOrgtnDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "229"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeOriginationDate";
 			definition = "Indicates the date and time of the agreement in principal between counter-parties prior to actual trade date.\nUsed with fixed income for municipal new issue markets.";
@@ -232,12 +244,11 @@ public class Order2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "CstmrCpcty")
 	protected CustomerOrderCapacity1Code customerCapacity;
 	/**
-	 * Capacity of customer placing the order. Primarily used by futures
-	 * exchanges to indicate the CTI code (customer type indicator) as required
-	 * by the US CFTC (Commodity Futures Trading Commission).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -272,7 +283,7 @@ public class Order2 {
 	public static final MMMessageAttribute mmCustomerCapacity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmCustomerCapacity;
-			componentContext_lazy = () -> Order2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order2.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrCpcty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,10 +294,11 @@ public class Order2 {
 			simpleType_lazy = () -> CustomerOrderCapacity1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfExctn")
 	protected MarketIdentification1 placeOfExecution;
 	/**
-	 * Unique and unambiguous way to identify an organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -317,7 +329,7 @@ public class Order2 {
 	public static final MMMessageAssociationEnd mmPlaceOfExecution = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmPlaceOfTrade;
-			componentContext_lazy = () -> Order2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfExctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -329,10 +341,11 @@ public class Order2 {
 			type_lazy = () -> com.tools20022.repository.msg.MarketIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "QtyDtls")
 	protected OrderQuantity1 quantityDetails;
 	/**
-	 * Quantity of financial instrument to be ordered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -363,7 +376,7 @@ public class Order2 {
 	public static final MMMessageAssociationEnd mmQuantityDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
-			componentContext_lazy = () -> Order2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order2.mmObject();
 			isDerived = false;
 			xmlTag = "QtyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -379,9 +392,10 @@ public class Order2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Order2.mmType, Order2.mmTradingCapacity, Order2.mmTradeOriginationDate, Order2.mmCustomerCapacity, Order2.mmPlaceOfExecution, Order2.mmQuantityDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Order2.mmType, com.tools20022.repository.msg.Order2.mmTradingCapacity, com.tools20022.repository.msg.Order2.mmTradeOriginationDate,
+						com.tools20022.repository.msg.Order2.mmCustomerCapacity, com.tools20022.repository.msg.Order2.mmPlaceOfExecution, com.tools20022.repository.msg.Order2.mmQuantityDetails);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Order2";
 				definition = "Intention to transfer an ownership of a financial instrument.";
@@ -390,57 +404,57 @@ public class Order2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp")
-	public OrderType1Code getType() {
-		return type;
+	public Optional<OrderType1Code> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(OrderType1Code type) {
+	public Order2 setType(OrderType1Code type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "TradgCpcty")
-	public TradingCapacity3Code getTradingCapacity() {
-		return tradingCapacity;
+	public Optional<TradingCapacity3Code> getTradingCapacity() {
+		return tradingCapacity == null ? Optional.empty() : Optional.of(tradingCapacity);
 	}
 
-	public void setTradingCapacity(TradingCapacity3Code tradingCapacity) {
+	public Order2 setTradingCapacity(TradingCapacity3Code tradingCapacity) {
 		this.tradingCapacity = tradingCapacity;
+		return this;
 	}
 
-	@XmlElement(name = "TradOrgtnDt")
-	public ISODateTime getTradeOriginationDate() {
-		return tradeOriginationDate;
+	public Optional<ISODateTime> getTradeOriginationDate() {
+		return tradeOriginationDate == null ? Optional.empty() : Optional.of(tradeOriginationDate);
 	}
 
-	public void setTradeOriginationDate(ISODateTime tradeOriginationDate) {
+	public Order2 setTradeOriginationDate(ISODateTime tradeOriginationDate) {
 		this.tradeOriginationDate = tradeOriginationDate;
+		return this;
 	}
 
-	@XmlElement(name = "CstmrCpcty")
-	public CustomerOrderCapacity1Code getCustomerCapacity() {
-		return customerCapacity;
+	public Optional<CustomerOrderCapacity1Code> getCustomerCapacity() {
+		return customerCapacity == null ? Optional.empty() : Optional.of(customerCapacity);
 	}
 
-	public void setCustomerCapacity(CustomerOrderCapacity1Code customerCapacity) {
+	public Order2 setCustomerCapacity(CustomerOrderCapacity1Code customerCapacity) {
 		this.customerCapacity = customerCapacity;
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfExctn")
-	public MarketIdentification1 getPlaceOfExecution() {
-		return placeOfExecution;
+	public Optional<MarketIdentification1> getPlaceOfExecution() {
+		return placeOfExecution == null ? Optional.empty() : Optional.of(placeOfExecution);
 	}
 
-	public void setPlaceOfExecution(com.tools20022.repository.msg.MarketIdentification1 placeOfExecution) {
+	public Order2 setPlaceOfExecution(com.tools20022.repository.msg.MarketIdentification1 placeOfExecution) {
 		this.placeOfExecution = placeOfExecution;
+		return this;
 	}
 
-	@XmlElement(name = "QtyDtls")
-	public OrderQuantity1 getQuantityDetails() {
-		return quantityDetails;
+	public Optional<OrderQuantity1> getQuantityDetails() {
+		return quantityDetails == null ? Optional.empty() : Optional.of(quantityDetails);
 	}
 
-	public void setQuantityDetails(com.tools20022.repository.msg.OrderQuantity1 quantityDetails) {
+	public Order2 setQuantityDetails(com.tools20022.repository.msg.OrderQuantity1 quantityDetails) {
 		this.quantityDetails = quantityDetails;
+		return this;
 	}
 }

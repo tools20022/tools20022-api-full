@@ -24,9 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +73,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,17 +99,17 @@ import javax.xml.bind.annotation.XmlType;
  * StructuredRemittanceInformation10}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StructuredRemittanceInformation12", propOrder = {"referredDocumentInformation", "referredDocumentAmount", "creditorReferenceInformation", "invoicer", "invoicee", "taxRemittance", "garnishmentRemittance",
 		"additionalRemittanceInformation"})
 public class StructuredRemittanceInformation12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RfrdDocInf")
 	protected List<com.tools20022.repository.msg.ReferredDocumentInformation6> referredDocumentInformation;
 	/**
-	 * Set of elements used to identify the documents referred to in the
-	 * remittance information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -157,7 +156,7 @@ public class StructuredRemittanceInformation12 {
 	public static final MMMessageAssociationEnd mmReferredDocumentInformation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
-			componentContext_lazy = () -> StructuredRemittanceInformation12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdDocInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,10 +169,11 @@ public class StructuredRemittanceInformation12 {
 			type_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation6.mmObject();
 		}
 	};
+	@XmlElement(name = "RfrdDocAmt")
 	protected RemittanceAmount2 referredDocumentAmount;
 	/**
-	 * Provides details on the amounts of the referred document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -219,7 +219,7 @@ public class StructuredRemittanceInformation12 {
 	public static final MMMessageAssociationEnd mmReferredDocumentAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Document.mmAmount;
-			componentContext_lazy = () -> StructuredRemittanceInformation12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdDocAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,11 +233,11 @@ public class StructuredRemittanceInformation12 {
 			type_lazy = () -> com.tools20022.repository.msg.RemittanceAmount2.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtrRefInf")
 	protected CreditorReferenceInformation2 creditorReferenceInformation;
 	/**
-	 * Reference information provided by the creditor to allow the
-	 * identification of the underlying documents.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -285,7 +285,7 @@ public class StructuredRemittanceInformation12 {
 	public static final MMMessageAssociationEnd mmCreditorReferenceInformation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmCreditorReference;
-			componentContext_lazy = () -> StructuredRemittanceInformation12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrRefInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -299,11 +299,11 @@ public class StructuredRemittanceInformation12 {
 			type_lazy = () -> com.tools20022.repository.msg.CreditorReferenceInformation2.mmObject();
 		}
 	};
+	@XmlElement(name = "Invcr")
 	protected PartyIdentification43 invoicer;
 	/**
-	 * Identification of the organisation issuing the invoice, when it is
-	 * different from the creditor or ultimate creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -350,7 +350,7 @@ public class StructuredRemittanceInformation12 {
 	public static final MMMessageAssociationEnd mmInvoicer = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> StructuredRemittanceInformation12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "Invcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -364,11 +364,11 @@ public class StructuredRemittanceInformation12 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	@XmlElement(name = "Invcee")
 	protected PartyIdentification43 invoicee;
 	/**
-	 * Identification of the party to whom an invoice is issued, when it is
-	 * different from the debtor or ultimate debtor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -414,7 +414,7 @@ public class StructuredRemittanceInformation12 {
 	public static final MMMessageAssociationEnd mmInvoicee = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvoiceeRole.mmObject();
-			componentContext_lazy = () -> StructuredRemittanceInformation12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "Invcee";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -428,11 +428,11 @@ public class StructuredRemittanceInformation12 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxRmt")
 	protected TaxInformation4 taxRemittance;
 	/**
-	 * Provides remittance information about a payment made for tax-related
-	 * purposes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -474,7 +474,7 @@ public class StructuredRemittanceInformation12 {
 	public static final MMMessageAssociationEnd mmTaxRemittance = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmTaxOnPayment;
-			componentContext_lazy = () -> StructuredRemittanceInformation12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "TaxRmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -487,11 +487,11 @@ public class StructuredRemittanceInformation12 {
 			type_lazy = () -> com.tools20022.repository.msg.TaxInformation4.mmObject();
 		}
 	};
+	@XmlElement(name = "GrnshmtRmt")
 	protected Garnishment1 garnishmentRemittance;
 	/**
-	 * Provides remittance information about a payment for garnishment-related
-	 * purposes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -532,7 +532,7 @@ public class StructuredRemittanceInformation12 {
 	public static final MMMessageAssociationEnd mmGarnishmentRemittance = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Garnishment.mmObject();
-			componentContext_lazy = () -> StructuredRemittanceInformation12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "GrnshmtRmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -545,11 +545,11 @@ public class StructuredRemittanceInformation12 {
 			type_lazy = () -> com.tools20022.repository.msg.Garnishment1.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRmtInf")
 	protected List<Max140Text> additionalRemittanceInformation;
 	/**
-	 * Additional information, in free text form, to complement the structured
-	 * remittance information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -596,7 +596,7 @@ public class StructuredRemittanceInformation12 {
 	public static final MMMessageAttribute mmAdditionalRemittanceInformation = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
-			componentContext_lazy = () -> StructuredRemittanceInformation12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRmtInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -613,11 +613,13 @@ public class StructuredRemittanceInformation12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StructuredRemittanceInformation12.mmReferredDocumentInformation, StructuredRemittanceInformation12.mmReferredDocumentAmount,
-						StructuredRemittanceInformation12.mmCreditorReferenceInformation, StructuredRemittanceInformation12.mmInvoicer, StructuredRemittanceInformation12.mmInvoicee, StructuredRemittanceInformation12.mmTaxRemittance,
-						StructuredRemittanceInformation12.mmGarnishmentRemittance, StructuredRemittanceInformation12.mmAdditionalRemittanceInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StructuredRemittanceInformation12.mmReferredDocumentInformation,
+						com.tools20022.repository.msg.StructuredRemittanceInformation12.mmReferredDocumentAmount, com.tools20022.repository.msg.StructuredRemittanceInformation12.mmCreditorReferenceInformation,
+						com.tools20022.repository.msg.StructuredRemittanceInformation12.mmInvoicer, com.tools20022.repository.msg.StructuredRemittanceInformation12.mmInvoicee,
+						com.tools20022.repository.msg.StructuredRemittanceInformation12.mmTaxRemittance, com.tools20022.repository.msg.StructuredRemittanceInformation12.mmGarnishmentRemittance,
+						com.tools20022.repository.msg.StructuredRemittanceInformation12.mmAdditionalRemittanceInformation);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StructuredRemittanceInformation12";
 				definition = "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in a structured form.";
@@ -628,75 +630,75 @@ public class StructuredRemittanceInformation12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RfrdDocInf")
 	public List<ReferredDocumentInformation6> getReferredDocumentInformation() {
-		return referredDocumentInformation;
+		return referredDocumentInformation == null ? referredDocumentInformation = new ArrayList<>() : referredDocumentInformation;
 	}
 
-	public void setReferredDocumentInformation(List<com.tools20022.repository.msg.ReferredDocumentInformation6> referredDocumentInformation) {
-		this.referredDocumentInformation = referredDocumentInformation;
+	public StructuredRemittanceInformation12 setReferredDocumentInformation(List<com.tools20022.repository.msg.ReferredDocumentInformation6> referredDocumentInformation) {
+		this.referredDocumentInformation = Objects.requireNonNull(referredDocumentInformation);
+		return this;
 	}
 
-	@XmlElement(name = "RfrdDocAmt")
-	public RemittanceAmount2 getReferredDocumentAmount() {
-		return referredDocumentAmount;
+	public Optional<RemittanceAmount2> getReferredDocumentAmount() {
+		return referredDocumentAmount == null ? Optional.empty() : Optional.of(referredDocumentAmount);
 	}
 
-	public void setReferredDocumentAmount(com.tools20022.repository.msg.RemittanceAmount2 referredDocumentAmount) {
+	public StructuredRemittanceInformation12 setReferredDocumentAmount(com.tools20022.repository.msg.RemittanceAmount2 referredDocumentAmount) {
 		this.referredDocumentAmount = referredDocumentAmount;
+		return this;
 	}
 
-	@XmlElement(name = "CdtrRefInf")
-	public CreditorReferenceInformation2 getCreditorReferenceInformation() {
-		return creditorReferenceInformation;
+	public Optional<CreditorReferenceInformation2> getCreditorReferenceInformation() {
+		return creditorReferenceInformation == null ? Optional.empty() : Optional.of(creditorReferenceInformation);
 	}
 
-	public void setCreditorReferenceInformation(com.tools20022.repository.msg.CreditorReferenceInformation2 creditorReferenceInformation) {
+	public StructuredRemittanceInformation12 setCreditorReferenceInformation(com.tools20022.repository.msg.CreditorReferenceInformation2 creditorReferenceInformation) {
 		this.creditorReferenceInformation = creditorReferenceInformation;
+		return this;
 	}
 
-	@XmlElement(name = "Invcr")
-	public PartyIdentification43 getInvoicer() {
-		return invoicer;
+	public Optional<PartyIdentification43> getInvoicer() {
+		return invoicer == null ? Optional.empty() : Optional.of(invoicer);
 	}
 
-	public void setInvoicer(com.tools20022.repository.msg.PartyIdentification43 invoicer) {
+	public StructuredRemittanceInformation12 setInvoicer(com.tools20022.repository.msg.PartyIdentification43 invoicer) {
 		this.invoicer = invoicer;
+		return this;
 	}
 
-	@XmlElement(name = "Invcee")
-	public PartyIdentification43 getInvoicee() {
-		return invoicee;
+	public Optional<PartyIdentification43> getInvoicee() {
+		return invoicee == null ? Optional.empty() : Optional.of(invoicee);
 	}
 
-	public void setInvoicee(com.tools20022.repository.msg.PartyIdentification43 invoicee) {
+	public StructuredRemittanceInformation12 setInvoicee(com.tools20022.repository.msg.PartyIdentification43 invoicee) {
 		this.invoicee = invoicee;
+		return this;
 	}
 
-	@XmlElement(name = "TaxRmt")
-	public TaxInformation4 getTaxRemittance() {
-		return taxRemittance;
+	public Optional<TaxInformation4> getTaxRemittance() {
+		return taxRemittance == null ? Optional.empty() : Optional.of(taxRemittance);
 	}
 
-	public void setTaxRemittance(com.tools20022.repository.msg.TaxInformation4 taxRemittance) {
+	public StructuredRemittanceInformation12 setTaxRemittance(com.tools20022.repository.msg.TaxInformation4 taxRemittance) {
 		this.taxRemittance = taxRemittance;
+		return this;
 	}
 
-	@XmlElement(name = "GrnshmtRmt")
-	public Garnishment1 getGarnishmentRemittance() {
-		return garnishmentRemittance;
+	public Optional<Garnishment1> getGarnishmentRemittance() {
+		return garnishmentRemittance == null ? Optional.empty() : Optional.of(garnishmentRemittance);
 	}
 
-	public void setGarnishmentRemittance(com.tools20022.repository.msg.Garnishment1 garnishmentRemittance) {
+	public StructuredRemittanceInformation12 setGarnishmentRemittance(com.tools20022.repository.msg.Garnishment1 garnishmentRemittance) {
 		this.garnishmentRemittance = garnishmentRemittance;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRmtInf")
 	public List<Max140Text> getAdditionalRemittanceInformation() {
-		return additionalRemittanceInformation;
+		return additionalRemittanceInformation == null ? additionalRemittanceInformation = new ArrayList<>() : additionalRemittanceInformation;
 	}
 
-	public void setAdditionalRemittanceInformation(List<Max140Text> additionalRemittanceInformation) {
-		this.additionalRemittanceInformation = additionalRemittanceInformation;
+	public StructuredRemittanceInformation12 setAdditionalRemittanceInformation(List<Max140Text> additionalRemittanceInformation) {
+		this.additionalRemittanceInformation = Objects.requireNonNull(additionalRemittanceInformation);
+		return this;
 	}
 }

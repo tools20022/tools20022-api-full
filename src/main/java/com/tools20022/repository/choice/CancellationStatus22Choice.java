@@ -28,6 +28,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.RejectedStatus10;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Status is cancelled."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CancellationStatus22Choice", propOrder = {"status", "rejected"})
 public class CancellationStatus22Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts", required = true)
 	protected OrderCancellationStatus2Code status;
 	/**
-	 * Status of the order cancellation request is cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +109,7 @@ public class CancellationStatus22Choice {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmCancellationStatus;
-			componentContext_lazy = () -> CancellationStatus22Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationStatus22Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +120,11 @@ public class CancellationStatus22Choice {
 			simpleType_lazy = () -> OrderCancellationStatus2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Rjctd", required = true)
 	protected RejectedStatus10 rejected;
 	/**
-	 * Status of the order cancellation request is rejected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -153,7 +156,7 @@ public class CancellationStatus22Choice {
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
-			componentContext_lazy = () -> CancellationStatus22Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationStatus22Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,8 +172,8 @@ public class CancellationStatus22Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CancellationStatus22Choice.mmStatus, CancellationStatus22Choice.mmRejected);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationStatus22Choice.mmStatus, com.tools20022.repository.choice.CancellationStatus22Choice.mmRejected);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationStatus22Choice";
 				definition = "Status is cancelled.";
@@ -179,21 +182,21 @@ public class CancellationStatus22Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public OrderCancellationStatus2Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(OrderCancellationStatus2Code status) {
-		this.status = status;
+	public CancellationStatus22Choice setStatus(OrderCancellationStatus2Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "Rjctd", required = true)
 	public RejectedStatus10 getRejected() {
 		return rejected;
 	}
 
-	public void setRejected(RejectedStatus10 rejected) {
-		this.rejected = rejected;
+	public CancellationStatus22Choice setRejected(RejectedStatus10 rejected) {
+		this.rejected = Objects.requireNonNull(rejected);
+		return this;
 	}
 }

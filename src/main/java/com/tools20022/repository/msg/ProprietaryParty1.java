@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Set of elements to identify a proprietary party."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ProprietaryParty1", propOrder = {"type", "party"})
 public class ProprietaryParty1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected Max35Text type;
 	/**
-	 * Identifies the type of proprietary party reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +102,7 @@ public class ProprietaryParty1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProprietaryParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryParty1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +113,11 @@ public class ProprietaryParty1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Pty", required = true)
 	protected PartyIdentification8 party;
 	/**
-	 * Proprietary party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -146,7 +149,7 @@ public class ProprietaryParty1 {
 	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> ProprietaryParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryParty1.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,9 +165,9 @@ public class ProprietaryParty1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProprietaryParty1.mmType, ProprietaryParty1.mmParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryParty1.mmType, com.tools20022.repository.msg.ProprietaryParty1.mmParty);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProprietaryParty1";
 				definition = "Set of elements to identify a proprietary party.";
@@ -173,21 +176,21 @@ public class ProprietaryParty1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public Max35Text getType() {
 		return type;
 	}
 
-	public void setType(Max35Text type) {
-		this.type = type;
+	public ProprietaryParty1 setType(Max35Text type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Pty", required = true)
 	public PartyIdentification8 getParty() {
 		return party;
 	}
 
-	public void setParty(com.tools20022.repository.msg.PartyIdentification8 party) {
-		this.party = party;
+	public ProprietaryParty1 setParty(com.tools20022.repository.msg.PartyIdentification8 party) {
+		this.party = Objects.requireNonNull(party);
+		return this;
 	}
 }

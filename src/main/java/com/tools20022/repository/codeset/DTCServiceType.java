@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DTCServiceType.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the type of DTC (The Depository Trust Company) service, for example
@@ -33,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCServiceType#mmCashInLieuRoundUp
- * DTCServiceType.mmCashInLieuRoundUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCServiceType#CashInLieuRoundUp
+ * DTCServiceType.CashInLieuRoundUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCServiceType#mmUSTaxWithholding
- * DTCServiceType.mmUSTaxWithholding}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCServiceType#USTaxWithholding
+ * DTCServiceType.USTaxWithholding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCServiceType#mmForeignTaxRelief
- * DTCServiceType.mmForeignTaxRelief}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCServiceType#ForeignTaxRelief
+ * DTCServiceType.ForeignTaxRelief}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class DTCServiceType {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DTCServiceType extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,12 +103,12 @@ public class DTCServiceType {
 	 * definition} = "Cash In Lieu or Round Up service."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashInLieuRoundUp = new MMCode() {
+	public static final DTCServiceType CashInLieuRoundUp = new DTCServiceType() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuRoundUp";
 			definition = "Cash In Lieu or Round Up service.";
-			owner_lazy = () -> DTCServiceType.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCServiceType.mmObject();
 			codeName = "CILR";
 		}
 	};
@@ -127,12 +133,12 @@ public class DTCServiceType {
 	 * definition} = "U.S. Tax Withholding service."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSTaxWithholding = new MMCode() {
+	public static final DTCServiceType USTaxWithholding = new DTCServiceType() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USTaxWithholding";
 			definition = "U.S. Tax Withholding service.";
-			owner_lazy = () -> DTCServiceType.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCServiceType.mmObject();
 			codeName = "USTX";
 		}
 	};
@@ -157,28 +163,60 @@ public class DTCServiceType {
 	 * definition} = "Foreign Tax Relief service."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignTaxRelief = new MMCode() {
+	public static final DTCServiceType ForeignTaxRelief = new DTCServiceType() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignTaxRelief";
 			definition = "Foreign Tax Relief service.";
-			owner_lazy = () -> DTCServiceType.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCServiceType.mmObject();
 			codeName = "FTXR";
 		}
 	};
+	final static private LinkedHashMap<String, DTCServiceType> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DTCServiceType() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CILR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCServiceType";
 				definition = "Indicates the type of DTC (The Depository Trust Company) service, for example Cash In Lieu/ Round Up, Foreign Tax Relief, etc.";
-				code_lazy = () -> Arrays.asList(DTCServiceType.mmCashInLieuRoundUp, DTCServiceType.mmUSTaxWithholding, DTCServiceType.mmForeignTaxRelief);
 				derivation_lazy = () -> Arrays.asList(DTCServiceType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCServiceType.CashInLieuRoundUp, com.tools20022.repository.codeset.DTCServiceType.USTaxWithholding,
+						com.tools20022.repository.codeset.DTCServiceType.ForeignTaxRelief);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CashInLieuRoundUp.getCodeName().get(), CashInLieuRoundUp);
+		codesByName.put(USTaxWithholding.getCodeName().get(), USTaxWithholding);
+		codesByName.put(ForeignTaxRelief.getCodeName().get(), ForeignTaxRelief);
+	}
+
+	public static DTCServiceType valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DTCServiceType[] values() {
+		DTCServiceType[] values = new DTCServiceType[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DTCServiceType> {
+		@Override
+		public DTCServiceType unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DTCServiceType codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

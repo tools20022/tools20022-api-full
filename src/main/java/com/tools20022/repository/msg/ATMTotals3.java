@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.ATMTotal;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,18 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Totals of the ATM."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMTotals3", propOrder = {"identification", "additionalIdentification", "period", "currency", "count", "amount"})
 public class ATMTotals3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max70Text identification;
 	/**
-	 * Identification of the type of transaction. The following values are
-	 * predefined: Withdrawal, QuickWithdrawal, WithdrawalForDisabledPerson,
-	 * CashDeposit, Transfer, InternationalTransfer, PeriodicTransfer,
-	 * CheckCommand, MobileTopUp, Moneo.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +114,7 @@ public class ATMTotals3 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMTotals3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTotals3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,11 +125,11 @@ public class ATMTotals3 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlId")
 	protected Max70Text additionalIdentification;
 	/**
-	 * Additional identification of the type of transaction. The following
-	 * values are predefined: Vodaphone, TMobile, Verizon.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +157,7 @@ public class ATMTotals3 {
 	 */
 	public static final MMMessageAttribute mmAdditionalIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMTotals3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTotals3.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,10 +168,11 @@ public class ATMTotals3 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Prd", required = true)
 	protected ATMCounterType2Code period;
 	/**
-	 * Period of computation for the counters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,7 +204,7 @@ public class ATMTotals3 {
 	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> ATMTotal.mmObject();
-			componentContext_lazy = () -> ATMTotals3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTotals3.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,10 +215,11 @@ public class ATMTotals3 {
 			simpleType_lazy = () -> ATMCounterType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected ActiveCurrencyCode currency;
 	/**
-	 * Currency of the totals.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -250,7 +252,7 @@ public class ATMTotals3 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ATMTotal.mmCurrency;
-			componentContext_lazy = () -> ATMTotals3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTotals3.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -261,10 +263,11 @@ public class ATMTotals3 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Cnt", required = true)
 	protected Number count;
 	/**
-	 * Number of transaction with the defined currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -296,7 +299,7 @@ public class ATMTotals3 {
 	public static final MMMessageAttribute mmCount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ATMTotal.mmATMCurrentNumber;
-			componentContext_lazy = () -> ATMTotals3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTotals3.mmObject();
 			isDerived = false;
 			xmlTag = "Cnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -307,10 +310,11 @@ public class ATMTotals3 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt")
 	protected ImpliedCurrencyAndAmount amount;
 	/**
-	 * Amount of transaction with the defined currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -343,7 +347,7 @@ public class ATMTotals3 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ATMTotal.mmATMCurrent;
-			componentContext_lazy = () -> ATMTotals3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTotals3.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -358,9 +362,10 @@ public class ATMTotals3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMTotals3.mmIdentification, ATMTotals3.mmAdditionalIdentification, ATMTotals3.mmPeriod, ATMTotals3.mmCurrency, ATMTotals3.mmCount, ATMTotals3.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTotals3.mmIdentification, com.tools20022.repository.msg.ATMTotals3.mmAdditionalIdentification, com.tools20022.repository.msg.ATMTotals3.mmPeriod,
+						com.tools20022.repository.msg.ATMTotals3.mmCurrency, com.tools20022.repository.msg.ATMTotals3.mmCount, com.tools20022.repository.msg.ATMTotals3.mmAmount);
 				trace_lazy = () -> ATMTotal.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTotals3";
 				definition = "Totals of the ATM.";
@@ -369,57 +374,57 @@ public class ATMTotals3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max70Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max70Text identification) {
-		this.identification = identification;
+	public ATMTotals3 setIdentification(Max70Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlId")
-	public Max70Text getAdditionalIdentification() {
-		return additionalIdentification;
+	public Optional<Max70Text> getAdditionalIdentification() {
+		return additionalIdentification == null ? Optional.empty() : Optional.of(additionalIdentification);
 	}
 
-	public void setAdditionalIdentification(Max70Text additionalIdentification) {
+	public ATMTotals3 setAdditionalIdentification(Max70Text additionalIdentification) {
 		this.additionalIdentification = additionalIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Prd", required = true)
 	public ATMCounterType2Code getPeriod() {
 		return period;
 	}
 
-	public void setPeriod(ATMCounterType2Code period) {
-		this.period = period;
+	public ATMTotals3 setPeriod(ATMCounterType2Code period) {
+		this.period = Objects.requireNonNull(period);
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public ActiveCurrencyCode getCurrency() {
-		return currency;
+	public Optional<ActiveCurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(ActiveCurrencyCode currency) {
+	public ATMTotals3 setCurrency(ActiveCurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "Cnt", required = true)
 	public Number getCount() {
 		return count;
 	}
 
-	public void setCount(Number count) {
-		this.count = count;
+	public ATMTotals3 setCount(Number count) {
+		this.count = Objects.requireNonNull(count);
+		return this;
 	}
 
-	@XmlElement(name = "Amt")
-	public ImpliedCurrencyAndAmount getAmount() {
-		return amount;
+	public Optional<ImpliedCurrencyAndAmount> getAmount() {
+		return amount == null ? Optional.empty() : Optional.of(amount);
 	}
 
-	public void setAmount(ImpliedCurrencyAndAmount amount) {
+	public ATMTotals3 setAmount(ImpliedCurrencyAndAmount amount) {
 		this.amount = amount;
+		return this;
 	}
 }

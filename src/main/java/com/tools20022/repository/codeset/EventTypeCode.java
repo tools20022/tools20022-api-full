@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.EventTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies the type of event.
@@ -31,20 +36,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EventTypeCode#mmPut
- * EventTypeCode.mmPut}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventTypeCode#mmCall
- * EventTypeCode.mmCall}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventTypeCode#mmTender
- * EventTypeCode.mmTender}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EventTypeCode#mmActivation
- * EventTypeCode.mmActivation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventTypeCode#Put
+ * EventTypeCode.Put}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventTypeCode#Call
+ * EventTypeCode.Call}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventTypeCode#Tender
+ * EventTypeCode.Tender}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventTypeCode#Activation
+ * EventTypeCode.Activation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventTypeCode#Inactivation
+ * EventTypeCode.Inactivation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventTypeCode#mmInactivation
- * EventTypeCode.mmInactivation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventTypeCode#mmSinkingFundCall
- * EventTypeCode.mmSinkingFundCall}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventTypeCode#SinkingFundCall
+ * EventTypeCode.SinkingFundCall}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -57,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -75,7 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies the type of event."</li>
  * </ul>
  */
-public class EventTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EventTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -103,12 +108,12 @@ public class EventTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPut = new MMCode() {
+	public static final EventTypeCode Put = new EventTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Put";
 			definition = "In fixed income this is the put provision on the bond allowing the investor the right to \"redeem the bond at a specified price prior to maturity\".";
-			owner_lazy = () -> EventTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventTypeCode.mmObject();
 			codeName = "PUT1";
 		}
 	};
@@ -137,12 +142,12 @@ public class EventTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCall = new MMCode() {
+	public static final EventTypeCode Call = new EventTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Call";
 			definition = "In fixed income this is the call provision on the bond allowing the bond issuer \"the right to redeem [the bond] prior to its maturity date, under certain conditions.\"";
-			owner_lazy = () -> EventTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventTypeCode.mmObject();
 			codeName = "CALL";
 		}
 	};
@@ -170,12 +175,12 @@ public class EventTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTender = new MMCode() {
+	public static final EventTypeCode Tender = new EventTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tender";
 			definition = "Synonymous with Put but is the preferred term for certain asset classes in some markets.";
-			owner_lazy = () -> EventTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventTypeCode.mmObject();
 			codeName = "TEND";
 		}
 	};
@@ -201,12 +206,12 @@ public class EventTypeCode {
 	 * "Date when the security is activated for trading and clearing."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmActivation = new MMCode() {
+	public static final EventTypeCode Activation = new EventTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Activation";
 			definition = "Date when the security is activated for trading and clearing.";
-			owner_lazy = () -> EventTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventTypeCode.mmObject();
 			codeName = "ACTI";
 		}
 	};
@@ -233,12 +238,12 @@ public class EventTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInactivation = new MMCode() {
+	public static final EventTypeCode Inactivation = new EventTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactivation";
 			definition = "Date when the security is no longer available for trading and clearing.";
-			owner_lazy = () -> EventTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventTypeCode.mmObject();
 			codeName = "INAC";
 		}
 	};
@@ -270,28 +275,63 @@ public class EventTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSinkingFundCall = new MMCode() {
+	public static final EventTypeCode SinkingFundCall = new EventTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SinkingFundCall";
 			definition = "A provision allowing a bond issuer the opportunity to buy outstanding bonds from bondholders for a set rate, using money (a sinking fund) from the issuer's earnings saved specifically for security buybacks. Because it adds doubt for investors over whether the bond will continue to pay until its maturity date, a sinking fund call is seen as an additional risk for investors.";
-			owner_lazy = () -> EventTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventTypeCode.mmObject();
 			codeName = "SFCA";
 		}
 	};
+	final static private LinkedHashMap<String, EventTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EventTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PUT1");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventTypeCode";
 				definition = "Identifies the type of event.";
-				code_lazy = () -> Arrays.asList(EventTypeCode.mmPut, EventTypeCode.mmCall, EventTypeCode.mmTender, EventTypeCode.mmActivation, EventTypeCode.mmInactivation, EventTypeCode.mmSinkingFundCall);
 				derivation_lazy = () -> Arrays.asList(EventType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventTypeCode.Put, com.tools20022.repository.codeset.EventTypeCode.Call, com.tools20022.repository.codeset.EventTypeCode.Tender,
+						com.tools20022.repository.codeset.EventTypeCode.Activation, com.tools20022.repository.codeset.EventTypeCode.Inactivation, com.tools20022.repository.codeset.EventTypeCode.SinkingFundCall);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Put.getCodeName().get(), Put);
+		codesByName.put(Call.getCodeName().get(), Call);
+		codesByName.put(Tender.getCodeName().get(), Tender);
+		codesByName.put(Activation.getCodeName().get(), Activation);
+		codesByName.put(Inactivation.getCodeName().get(), Inactivation);
+		codesByName.put(SinkingFundCall.getCodeName().get(), SinkingFundCall);
+	}
+
+	public static EventTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EventTypeCode[] values() {
+		EventTypeCode[] values = new EventTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EventTypeCode> {
+		@Override
+		public EventTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EventTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

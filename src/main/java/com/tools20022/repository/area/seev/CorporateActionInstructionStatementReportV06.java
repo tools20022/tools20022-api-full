@@ -29,9 +29,11 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CorporateActionsISOLatestversion;
 import com.tools20022.repository.msgset.CorporateActionsMaintenance20162017;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -52,25 +54,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
- * SecuritiesEventsLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CorporateActionsISOLatestversion
- * CorporateActionsISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CorporateActionsMaintenance20162017
- * CorporateActionsMaintenance20162017}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CorpActnInstrStmtRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -89,9 +72,41 @@ import javax.xml.bind.annotation.*;
  * CorporateActionInstructionStatementReportV06.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CorporateActionsISOLatestversion
+ * CorporateActionsISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CorporateActionsMaintenance20162017
+ * CorporateActionsMaintenance20162017}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CorpActnInstrStmtRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
+ * SecuritiesEventsLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.042.001.06}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleAccountAndStatementDetailsRule#forCorporateActionInstructionStatementReportV06
+ * ConstraintMultipleAccountAndStatementDetailsRule.
+ * forCorporateActionInstructionStatementReportV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule#forCorporateActionInstructionStatementReportV06
+ * ConstraintCorporateActionEventAndBalanceRule.
+ * forCorporateActionInstructionStatementReportV06}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,17 +123,16 @@ import javax.xml.bind.annotation.*;
  * CorporateActionInstructionStatementReportV05}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionInstructionStatementReportV06", propOrder = {"pagination", "statementGeneralDetails", "accountAndStatementDetails", "supplementaryData"})
 public class CorporateActionInstructionStatementReportV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pgntn", required = true)
 	protected Pagination pagination;
 	/**
-	 * Page number of the message (within a statement) and continuation
-	 * indicator to indicate that the statement is to continue or that the
-	 * message is the last page of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,10 +179,11 @@ public class CorporateActionInstructionStatementReportV06 {
 			}
 		}
 	};
+	@XmlElement(name = "StmtGnlDtls", required = true)
 	protected Statement47 statementGeneralDetails;
 	/**
-	 * General characteristics related to a statement which reports information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,11 +230,11 @@ public class CorporateActionInstructionStatementReportV06 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctAndStmtDtls", required = true)
 	protected List<AccountIdentification40> accountAndStatementDetails;
 	/**
-	 * Account information and detailed account holdings information report for
-	 * corporate action events.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -267,11 +282,11 @@ public class CorporateActionInstructionStatementReportV06 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -322,6 +337,8 @@ public class CorporateActionInstructionStatementReportV06 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMultipleAccountAndStatementDetailsRule.forCorporateActionInstructionStatementReportV06,
+						com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule.forCorporateActionInstructionStatementReportV06);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstructionStatementReportV06";
 				definition = "Scope\r\nAn account servicer sends the CorporateActionInstructionStatementReport message to an account owner or its designated agent to report balances at the safekeeping account level for one or more corporate action events or at the corporate action event level for one or more safekeeping accounts.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).";
@@ -351,43 +368,43 @@ public class CorporateActionInstructionStatementReportV06 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
 
-	public void setPagination(Pagination pagination) {
-		this.pagination = pagination;
+	public CorporateActionInstructionStatementReportV06 setPagination(Pagination pagination) {
+		this.pagination = Objects.requireNonNull(pagination);
+		return this;
 	}
 
-	@XmlElement(name = "StmtGnlDtls", required = true)
 	public Statement47 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
 
-	public void setStatementGeneralDetails(Statement47 statementGeneralDetails) {
-		this.statementGeneralDetails = statementGeneralDetails;
+	public CorporateActionInstructionStatementReportV06 setStatementGeneralDetails(Statement47 statementGeneralDetails) {
+		this.statementGeneralDetails = Objects.requireNonNull(statementGeneralDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AcctAndStmtDtls", required = true)
 	public List<AccountIdentification40> getAccountAndStatementDetails() {
-		return accountAndStatementDetails;
+		return accountAndStatementDetails == null ? accountAndStatementDetails = new ArrayList<>() : accountAndStatementDetails;
 	}
 
-	public void setAccountAndStatementDetails(List<AccountIdentification40> accountAndStatementDetails) {
-		this.accountAndStatementDetails = accountAndStatementDetails;
+	public CorporateActionInstructionStatementReportV06 setAccountAndStatementDetails(List<AccountIdentification40> accountAndStatementDetails) {
+		this.accountAndStatementDetails = Objects.requireNonNull(accountAndStatementDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public CorporateActionInstructionStatementReportV06 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.042.06.06")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.042.001.06")
 	static public class Document {
 		@XmlElement(name = "CorpActnInstrStmtRpt", required = true)
 		public CorporateActionInstructionStatementReportV06 messageBody;

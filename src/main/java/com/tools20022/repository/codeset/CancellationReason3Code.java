@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CancellationReasonCode;
+import com.tools20022.repository.codeset.CancellationReason3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for requesting the cancellation of a payment
@@ -31,39 +35,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CancellationReasonCode
- * CancellationReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationReason3Code#mmRequestedByCustomer
- * CancellationReason3Code.mmRequestedByCustomer}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationReason3Code#RequestedByCustomer
+ * CancellationReason3Code.RequestedByCustomer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationReason3Code#mmDuplicatePayment
- * CancellationReason3Code.mmDuplicatePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationReason3Code#DuplicatePayment
+ * CancellationReason3Code.DuplicatePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationReason3Code#mmIncorrectAgent
- * CancellationReason3Code.mmIncorrectAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationReason3Code#IncorrectAgent
+ * CancellationReason3Code.IncorrectAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationReason3Code#mmIncorrectCurrency
- * CancellationReason3Code.mmIncorrectCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationReason3Code#IncorrectCurrency
+ * CancellationReason3Code.IncorrectCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationReason3Code#mmUnduePayment
- * CancellationReason3Code.mmUnduePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationReason3Code#UnduePayment
+ * CancellationReason3Code.UnduePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationReason3Code#mmInsufficientDebtorDetails
- * CancellationReason3Code.mmInsufficientDebtorDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationReason3Code#InsufficientDebtorDetails
+ * CancellationReason3Code.InsufficientDebtorDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationReason3Code#mmInsufficientCreditorDetails
- * CancellationReason3Code.mmInsufficientCreditorDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationReason3Code#InsufficientCreditorDetails
+ * CancellationReason3Code.InsufficientCreditorDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CancellationReasonCode
+ * CancellationReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CancellationReason3Code extends CancellationReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CancellationReason3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -101,11 +106,12 @@ public class CancellationReason3Code extends CancellationReasonCode {
 	 * name} = "RequestedByCustomer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRequestedByCustomer = new MMCode() {
+	public static final CancellationReason3Code RequestedByCustomer = new CancellationReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedByCustomer";
-			owner_lazy = () -> CancellationReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationReason3Code.mmObject();
+			codeName = CancellationReasonCode.RequestedByCustomer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -124,11 +130,12 @@ public class CancellationReason3Code extends CancellationReasonCode {
 	 * name} = "DuplicatePayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDuplicatePayment = new MMCode() {
+	public static final CancellationReason3Code DuplicatePayment = new CancellationReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplicatePayment";
-			owner_lazy = () -> CancellationReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationReason3Code.mmObject();
+			codeName = CancellationReasonCode.DuplicatePayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -147,11 +154,12 @@ public class CancellationReason3Code extends CancellationReasonCode {
 	 * name} = "IncorrectAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectAgent = new MMCode() {
+	public static final CancellationReason3Code IncorrectAgent = new CancellationReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAgent";
-			owner_lazy = () -> CancellationReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationReason3Code.mmObject();
+			codeName = CancellationReasonCode.IncorrectAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -170,11 +178,12 @@ public class CancellationReason3Code extends CancellationReasonCode {
 	 * name} = "IncorrectCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectCurrency = new MMCode() {
+	public static final CancellationReason3Code IncorrectCurrency = new CancellationReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCurrency";
-			owner_lazy = () -> CancellationReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationReason3Code.mmObject();
+			codeName = CancellationReasonCode.IncorrectCurrency.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -193,11 +202,12 @@ public class CancellationReason3Code extends CancellationReasonCode {
 	 * name} = "UnduePayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnduePayment = new MMCode() {
+	public static final CancellationReason3Code UnduePayment = new CancellationReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnduePayment";
-			owner_lazy = () -> CancellationReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationReason3Code.mmObject();
+			codeName = CancellationReasonCode.UnduePayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -216,11 +226,12 @@ public class CancellationReason3Code extends CancellationReasonCode {
 	 * name} = "InsufficientDebtorDetails"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInsufficientDebtorDetails = new MMCode() {
+	public static final CancellationReason3Code InsufficientDebtorDetails = new CancellationReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientDebtorDetails";
-			owner_lazy = () -> CancellationReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationReason3Code.mmObject();
+			codeName = CancellationReasonCode.InsufficientDebtorDetails.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -239,27 +250,65 @@ public class CancellationReason3Code extends CancellationReasonCode {
 	 * name} = "InsufficientCreditorDetails"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInsufficientCreditorDetails = new MMCode() {
+	public static final CancellationReason3Code InsufficientCreditorDetails = new CancellationReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientCreditorDetails";
-			owner_lazy = () -> CancellationReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationReason3Code.mmObject();
+			codeName = CancellationReasonCode.InsufficientCreditorDetails.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CancellationReason3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CancellationReason3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CUST");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationReason3Code";
 				definition = "Specifies the reason for requesting the cancellation of a payment instruction.";
-				code_lazy = () -> Arrays.asList(CancellationReason3Code.mmRequestedByCustomer, CancellationReason3Code.mmDuplicatePayment, CancellationReason3Code.mmIncorrectAgent, CancellationReason3Code.mmIncorrectCurrency,
-						CancellationReason3Code.mmUnduePayment, CancellationReason3Code.mmInsufficientDebtorDetails, CancellationReason3Code.mmInsufficientCreditorDetails);
 				trace_lazy = () -> CancellationReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationReason3Code.RequestedByCustomer, com.tools20022.repository.codeset.CancellationReason3Code.DuplicatePayment,
+						com.tools20022.repository.codeset.CancellationReason3Code.IncorrectAgent, com.tools20022.repository.codeset.CancellationReason3Code.IncorrectCurrency,
+						com.tools20022.repository.codeset.CancellationReason3Code.UnduePayment, com.tools20022.repository.codeset.CancellationReason3Code.InsufficientDebtorDetails,
+						com.tools20022.repository.codeset.CancellationReason3Code.InsufficientCreditorDetails);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(RequestedByCustomer.getCodeName().get(), RequestedByCustomer);
+		codesByName.put(DuplicatePayment.getCodeName().get(), DuplicatePayment);
+		codesByName.put(IncorrectAgent.getCodeName().get(), IncorrectAgent);
+		codesByName.put(IncorrectCurrency.getCodeName().get(), IncorrectCurrency);
+		codesByName.put(UnduePayment.getCodeName().get(), UnduePayment);
+		codesByName.put(InsufficientDebtorDetails.getCodeName().get(), InsufficientDebtorDetails);
+		codesByName.put(InsufficientCreditorDetails.getCodeName().get(), InsufficientCreditorDetails);
+	}
+
+	public static CancellationReason3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CancellationReason3Code[] values() {
+		CancellationReason3Code[] values = new CancellationReason3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CancellationReason3Code> {
+		@Override
+		public CancellationReason3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CancellationReason3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

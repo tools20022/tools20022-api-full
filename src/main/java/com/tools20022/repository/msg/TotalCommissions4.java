@@ -22,9 +22,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Total amount of commissions related to a specific order."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TotalCommissions4", propOrder = "commissionDetails")
 public class TotalCommissions4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ComssnDtls", required = true)
 	protected List<com.tools20022.repository.msg.Commission14> commissionDetails;
 	/**
-	 * Information related to a specific commission.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -100,7 +103,7 @@ public class TotalCommissions4 {
 	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Commission.mmObject();
-			componentContext_lazy = () -> TotalCommissions4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalCommissions4.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,9 +119,9 @@ public class TotalCommissions4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TotalCommissions4.mmCommissionDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalCommissions4.mmCommissionDetails);
 				trace_lazy = () -> Commission.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalCommissions4";
 				definition = "Total amount of commissions related to a specific order.";
@@ -127,12 +130,12 @@ public class TotalCommissions4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ComssnDtls", required = true)
 	public List<Commission14> getCommissionDetails() {
-		return commissionDetails;
+		return commissionDetails == null ? commissionDetails = new ArrayList<>() : commissionDetails;
 	}
 
-	public void setCommissionDetails(List<com.tools20022.repository.msg.Commission14> commissionDetails) {
-		this.commissionDetails = commissionDetails;
+	public TotalCommissions4 setCommissionDetails(List<com.tools20022.repository.msg.Commission14> commissionDetails) {
+		this.commissionDetails = Objects.requireNonNull(commissionDetails);
+		return this;
 	}
 }

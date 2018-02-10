@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * UnmatchedReason15Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnmatchedReason24Choice", propOrder = {"code", "proprietary"})
 public class UnmatchedReason24Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected UnmatchedReason13Code code;
 	/**
-	 * Specifies the reason why the instruction has an unmatched status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +122,7 @@ public class UnmatchedReason24Choice {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmUnmatchedReason;
-			componentContext_lazy = () -> UnmatchedReason24Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UnmatchedReason24Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +134,11 @@ public class UnmatchedReason24Choice {
 			simpleType_lazy = () -> UnmatchedReason13Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification30 proprietary;
 	/**
-	 * Specifies the reason why the instruction has an unmatched status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -175,7 +178,7 @@ public class UnmatchedReason24Choice {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmUnmatchedReason;
-			componentContext_lazy = () -> UnmatchedReason24Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UnmatchedReason24Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,9 +194,9 @@ public class UnmatchedReason24Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnmatchedReason24Choice.mmCode, UnmatchedReason24Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnmatchedReason24Choice.mmCode, com.tools20022.repository.choice.UnmatchedReason24Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnmatchedReason24Choice";
 				definition = "Choice of format for the securities financing unmatched reason.";
@@ -203,21 +206,21 @@ public class UnmatchedReason24Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public UnmatchedReason13Code getCode() {
 		return code;
 	}
 
-	public void setCode(UnmatchedReason13Code code) {
-		this.code = code;
+	public UnmatchedReason24Choice setCode(UnmatchedReason13Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification30 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification30 proprietary) {
-		this.proprietary = proprietary;
+	public UnmatchedReason24Choice setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

@@ -20,311 +20,312 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DTCAssetTypeCode;
+import com.tools20022.repository.codeset.DTCAssetType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies DTC (The Depository Trust Company) security sub-issue type.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DTCAssetTypeCode
- * DTCAssetTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmABSDenominUnitsorUndividedInterest
- * DTCAssetType2Code.mmABSDenominUnitsorUndividedInterest}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#ABSDenominUnitsorUndividedInterest
+ * DTCAssetType2Code.ABSDenominUnitsorUndividedInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmAmericanDepositaryReceiptADR
- * DTCAssetType2Code.mmAmericanDepositaryReceiptADR}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#AmericanDepositaryReceiptADR
+ * DTCAssetType2Code.AmericanDepositaryReceiptADR}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmAssetBackedSecurityABSorGlobalABSGABS
- * DTCAssetType2Code.mmAssetBackedSecurityABSorGlobalABSGABS}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#AssetBackedSecurityABSorGlobalABSGABS
+ * DTCAssetType2Code.AssetBackedSecurityABSorGlobalABSGABS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmAuctionRatePreferredStockARPS
- * DTCAssetType2Code.mmAuctionRatePreferredStockARPS}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#AuctionRatePreferredStockARPS
+ * DTCAssetType2Code.AuctionRatePreferredStockARPS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCertificatedMoneyMarketInstrument
- * DTCAssetType2Code.mmCertificatedMoneyMarketInstrument}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CertificatedMoneyMarketInstrument
+ * DTCAssetType2Code.CertificatedMoneyMarketInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmBearerCallableZeroCouponBond
- * DTCAssetType2Code.mmBearerCallableZeroCouponBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#BearerCallableZeroCouponBond
+ * DTCAssetType2Code.BearerCallableZeroCouponBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCertificatedMoneyMarketPeriodicPayer
- * DTCAssetType2Code.mmCertificatedMoneyMarketPeriodicPayer}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CertificatedMoneyMarketPeriodicPayer
+ * DTCAssetType2Code.CertificatedMoneyMarketPeriodicPayer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCertificatesOfDeposit
- * DTCAssetType2Code.mmCertificatesOfDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CertificatesOfDeposit
+ * DTCAssetType2Code.CertificatesOfDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmClosedEndFund
- * DTCAssetType2Code.mmClosedEndFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#ClosedEndFund
+ * DTCAssetType2Code.ClosedEndFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCMODenominUnitsorUndividedInterest
- * DTCAssetType2Code.mmCMODenominUnitsorUndividedInterest}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CMODenominUnitsorUndividedInterest
+ * DTCAssetType2Code.CMODenominUnitsorUndividedInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCollateralizedMtgeObligationorGlobalCMO
- * DTCAssetType2Code.mmCollateralizedMtgeObligationorGlobalCMO}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CollateralizedMtgeObligationorGlobalCMO
+ * DTCAssetType2Code.CollateralizedMtgeObligationorGlobalCMO}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCommonStock
- * DTCAssetType2Code.mmCommonStock}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CommonStock
+ * DTCAssetType2Code.CommonStock}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCommonStockREIT
- * DTCAssetType2Code.mmCommonStockREIT}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CommonStockREIT
+ * DTCAssetType2Code.CommonStockREIT}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmConvertibleCommonStock
- * DTCAssetType2Code.mmConvertibleCommonStock}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#ConvertibleCommonStock
+ * DTCAssetType2Code.ConvertibleCommonStock}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmConvertibleCorporateDebt
- * DTCAssetType2Code.mmConvertibleCorporateDebt}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#ConvertibleCorporateDebt
+ * DTCAssetType2Code.ConvertibleCorporateDebt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmConvertiblePreferredStock
- * DTCAssetType2Code.mmConvertiblePreferredStock}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#ConvertiblePreferredStock
+ * DTCAssetType2Code.ConvertiblePreferredStock}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCorporate144aDesignatedInvestors
- * DTCAssetType2Code.mmCorporate144aDesignatedInvestors}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#Corporate144aDesignatedInvestors
+ * DTCAssetType2Code.Corporate144aDesignatedInvestors}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCorporateAuctionRateNote
- * DTCAssetType2Code.mmCorporateAuctionRateNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CorporateAuctionRateNote
+ * DTCAssetType2Code.CorporateAuctionRateNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCorporateBondCBorGlobalCorpBondGCB
- * DTCAssetType2Code.mmCorporateBondCBorGlobalCorpBondGCB}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CorporateBondCBorGlobalCorpBondGCB
+ * DTCAssetType2Code.CorporateBondCBorGlobalCorpBondGCB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCorporateDebenture
- * DTCAssetType2Code.mmCorporateDebenture}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CorporateDebenture
+ * DTCAssetType2Code.CorporateDebenture}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCorporateDebtDerivative
- * DTCAssetType2Code.mmCorporateDebtDerivative}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CorporateDebtDerivative
+ * DTCAssetType2Code.CorporateDebtDerivative}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCorporateInsuredCustodialReceipt
- * DTCAssetType2Code.mmCorporateInsuredCustodialReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CorporateInsuredCustodialReceipt
+ * DTCAssetType2Code.CorporateInsuredCustodialReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCorporateOtherTaxExempt
- * DTCAssetType2Code.mmCorporateOtherTaxExempt}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CorporateOtherTaxExempt
+ * DTCAssetType2Code.CorporateOtherTaxExempt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCorporateShortTermNote
- * DTCAssetType2Code.mmCorporateShortTermNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CorporateShortTermNote
+ * DTCAssetType2Code.CorporateShortTermNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCorporateVariableModeObligationCVMO
- * DTCAssetType2Code.mmCorporateVariableModeObligationCVMO}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CorporateVariableModeObligationCVMO
+ * DTCAssetType2Code.CorporateVariableModeObligationCVMO}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCorporateVRDOMunicipalVRDOMMD
- * DTCAssetType2Code.mmCorporateVRDOMunicipalVRDOMMD}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CorporateVRDOMunicipalVRDOMMD
+ * DTCAssetType2Code.CorporateVRDOMunicipalVRDOMMD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCPIDiscountCommercialPaperCP
- * DTCAssetType2Code.mmCPIDiscountCommercialPaperCP}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CPIDiscountCommercialPaperCP
+ * DTCAssetType2Code.CPIDiscountCommercialPaperCP}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCPIInterestAtMaturityIAMCommercialPaper
- * DTCAssetType2Code.mmCPIInterestAtMaturityIAMCommercialPaper}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CPIInterestAtMaturityIAMCommercialPaper
+ * DTCAssetType2Code.CPIInterestAtMaturityIAMCommercialPaper}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmCustodyUserCUSIP
- * DTCAssetType2Code.mmCustodyUserCUSIP}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#CustodyUserCUSIP
+ * DTCAssetType2Code.CustodyUserCUSIP}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#DebtUnit
+ * DTCAssetType2Code.DebtUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmDebtUnit
- * DTCAssetType2Code.mmDebtUnit}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#DepositaryShare
+ * DTCAssetType2Code.DepositaryShare}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#Equity
+ * DTCAssetType2Code.Equity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmDepositaryShare
- * DTCAssetType2Code.mmDepositaryShare}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmEquity
- * DTCAssetType2Code.mmEquity}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#Equity144aDesignatedInvestors
+ * DTCAssetType2Code.Equity144aDesignatedInvestors}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmEquity144aDesignatedInvestors
- * DTCAssetType2Code.mmEquity144aDesignatedInvestors}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#EquityDerivative
+ * DTCAssetType2Code.EquityDerivative}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmEquityDerivative
- * DTCAssetType2Code.mmEquityDerivative}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#ExchangeTradedFunds
+ * DTCAssetType2Code.ExchangeTradedFunds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmExchangeTradedFunds
- * DTCAssetType2Code.mmExchangeTradedFunds}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#GNMAPassThroughSecurities
+ * DTCAssetType2Code.GNMAPassThroughSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmGNMAPassThroughSecurities
- * DTCAssetType2Code.mmGNMAPassThroughSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#GovernmentNatlMortgageAssociationGNMA
+ * DTCAssetType2Code.GovernmentNatlMortgageAssociationGNMA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmGovernmentNatlMortgageAssociationGNMA
- * DTCAssetType2Code.mmGovernmentNatlMortgageAssociationGNMA}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#GovernmentSecurity
+ * DTCAssetType2Code.GovernmentSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmGovernmentSecurity
- * DTCAssetType2Code.mmGovernmentSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#IssueDenominUnitsorUndividedInterest
+ * DTCAssetType2Code.IssueDenominUnitsorUndividedInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmIssueDenominUnitsorUndividedInterest
- * DTCAssetType2Code.mmIssueDenominUnitsorUndividedInterest}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#EquityUnit
+ * DTCAssetType2Code.EquityUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmEquityUnit
- * DTCAssetType2Code.mmEquityUnit}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#GlobalUnitTrust
+ * DTCAssetType2Code.GlobalUnitTrust}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmGlobalUnitTrust
- * DTCAssetType2Code.mmGlobalUnitTrust}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#GNMASerialNoteSecurities
+ * DTCAssetType2Code.GNMASerialNoteSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmGNMASerialNoteSecurities
- * DTCAssetType2Code.mmGNMASerialNoteSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#GNMASerialNote
+ * DTCAssetType2Code.GNMASerialNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmGNMASerialNote
- * DTCAssetType2Code.mmGNMASerialNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#GNMAREMICSecurities
+ * DTCAssetType2Code.GNMAREMICSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmGNMAREMICSecurities
- * DTCAssetType2Code.mmGNMAREMICSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#GovernmentTrustCertificate
+ * DTCAssetType2Code.GovernmentTrustCertificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmGovernmentTrustCertificate
- * DTCAssetType2Code.mmGovernmentTrustCertificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#IMMIInstitutionalMMIMutualFundShares
+ * DTCAssetType2Code.IMMIInstitutionalMMIMutualFundShares}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmIMMIInstitutionalMMIMutualFundShares
- * DTCAssetType2Code.mmIMMIInstitutionalMMIMutualFundShares}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#JunkAndTreasuryGrowthReceiptJGR
+ * DTCAssetType2Code.JunkAndTreasuryGrowthReceiptJGR}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmJunkAndTreasuryGrowthReceiptJGR
- * DTCAssetType2Code.mmJunkAndTreasuryGrowthReceiptJGR}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#LimitedPartnership
+ * DTCAssetType2Code.LimitedPartnership}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmLimitedPartnership
- * DTCAssetType2Code.mmLimitedPartnership}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MMIBankersAcceptanceNoteBA
+ * DTCAssetType2Code.MMIBankersAcceptanceNoteBA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMMIBankersAcceptanceNoteBA
- * DTCAssetType2Code.mmMMIBankersAcceptanceNoteBA}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MMICorporateCommercialPaper
+ * DTCAssetType2Code.MMICorporateCommercialPaper}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMMICorporateCommercialPaper
- * DTCAssetType2Code.mmMMICorporateCommercialPaper}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MMICorporateVRDOCP
+ * DTCAssetType2Code.MMICorporateVRDOCP}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMMICorporateVRDOCP
- * DTCAssetType2Code.mmMMICorporateVRDOCP}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MMIDepositNote
+ * DTCAssetType2Code.MMIDepositNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMMIDepositNote
- * DTCAssetType2Code.mmMMIDepositNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MMIDiscountNote
+ * DTCAssetType2Code.MMIDiscountNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMMIDiscountNote
- * DTCAssetType2Code.mmMMIDiscountNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MMIInstitutionalCertificatesofDeposit
+ * DTCAssetType2Code.MMIInstitutionalCertificatesofDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMMIInstitutionalCertificatesofDeposit
- * DTCAssetType2Code.mmMMIInstitutionalCertificatesofDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MMIMediumTermBankNote
+ * DTCAssetType2Code.MMIMediumTermBankNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMMIMediumTermBankNote
- * DTCAssetType2Code.mmMMIMediumTermBankNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MMIMediumTermNote
+ * DTCAssetType2Code.MMIMediumTermNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMMIMediumTermNote
- * DTCAssetType2Code.mmMMIMediumTermNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MMIMunicipalCommercialPaper
+ * DTCAssetType2Code.MMIMunicipalCommercialPaper}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMMIMunicipalCommercialPaper
- * DTCAssetType2Code.mmMMIMunicipalCommercialPaper}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MMIMunicipalVRDOCP
+ * DTCAssetType2Code.MMIMunicipalVRDOCP}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMMIMunicipalVRDOCP
- * DTCAssetType2Code.mmMMIMunicipalVRDOCP}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MMIPreferredStockinCPlikemode
+ * DTCAssetType2Code.MMIPreferredStockinCPlikemode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMMIPreferredStockinCPlikemode
- * DTCAssetType2Code.mmMMIPreferredStockinCPlikemode}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MMIShortTermBankNote
+ * DTCAssetType2Code.MMIShortTermBankNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMMIShortTermBankNote
- * DTCAssetType2Code.mmMMIShortTermBankNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MTNMediumTermNote
+ * DTCAssetType2Code.MTNMediumTermNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMTNMediumTermNote
- * DTCAssetType2Code.mmMTNMediumTermNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MunicipalAmortizedIssue
+ * DTCAssetType2Code.MunicipalAmortizedIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMunicipalAmortizedIssue
- * DTCAssetType2Code.mmMunicipalAmortizedIssue}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MunicipalAuctionRateNoteARN
+ * DTCAssetType2Code.MunicipalAuctionRateNoteARN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMunicipalAuctionRateNoteARN
- * DTCAssetType2Code.mmMunicipalAuctionRateNoteARN}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MunicipalBond
+ * DTCAssetType2Code.MunicipalBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMunicipalBond
- * DTCAssetType2Code.mmMunicipalBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MunicipalDerivative
+ * DTCAssetType2Code.MunicipalDerivative}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMunicipalDerivative
- * DTCAssetType2Code.mmMunicipalDerivative}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MunicipalInsuredCustodialReceipt
+ * DTCAssetType2Code.MunicipalInsuredCustodialReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMunicipalInsuredCustodialReceipt
- * DTCAssetType2Code.mmMunicipalInsuredCustodialReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MunicipalNote
+ * DTCAssetType2Code.MunicipalNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMunicipalNote
- * DTCAssetType2Code.mmMunicipalNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MunicipalOtherTaxExempt
+ * DTCAssetType2Code.MunicipalOtherTaxExempt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMunicipalOtherTaxExempt
- * DTCAssetType2Code.mmMunicipalOtherTaxExempt}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MunicipalOptionCallRight
+ * DTCAssetType2Code.MunicipalOptionCallRight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMunicipalOptionCallRight
- * DTCAssetType2Code.mmMunicipalOptionCallRight}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MunicipalVariableModeObligationVMO
+ * DTCAssetType2Code.MunicipalVariableModeObligationVMO}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMunicipalVariableModeObligationVMO
- * DTCAssetType2Code.mmMunicipalVariableModeObligationVMO}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MunicipalVariableRateDemandObligationVRDO
+ * DTCAssetType2Code.MunicipalVariableRateDemandObligationVRDO}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMunicipalVariableRateDemandObligationVRDO
- * DTCAssetType2Code.mmMunicipalVariableRateDemandObligationVRDO}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#MutualFund
+ * DTCAssetType2Code.MutualFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmMutualFund
- * DTCAssetType2Code.mmMutualFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#NonCMOABSAmortizingIssue
+ * DTCAssetType2Code.NonCMOABSAmortizingIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmNonCMOABSAmortizingIssue
- * DTCAssetType2Code.mmNonCMOABSAmortizingIssue}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#NonStandardAssetUserCUSIP
+ * DTCAssetType2Code.NonStandardAssetUserCUSIP}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmNonStandardAssetUserCUSIP
- * DTCAssetType2Code.mmNonStandardAssetUserCUSIP}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#OptionDerivative
+ * DTCAssetType2Code.OptionDerivative}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#Package
+ * DTCAssetType2Code.Package}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmOptionDerivative
- * DTCAssetType2Code.mmOptionDerivative}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#PeriodicPaymentCommercialPaper
+ * DTCAssetType2Code.PeriodicPaymentCommercialPaper}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmPackage
- * DTCAssetType2Code.mmPackage}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#PreferredStock
+ * DTCAssetType2Code.PreferredStock}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmPeriodicPaymentCommercialPaper
- * DTCAssetType2Code.mmPeriodicPaymentCommercialPaper}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#PreferredStockREIT
+ * DTCAssetType2Code.PreferredStockREIT}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmPreferredStock
- * DTCAssetType2Code.mmPreferredStock}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#RealEstateInvestmentTrustREIT
+ * DTCAssetType2Code.RealEstateInvestmentTrustREIT}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmPreferredStockREIT
- * DTCAssetType2Code.mmPreferredStockREIT}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#REMICRealEstateMtgeInvestmentConduit
+ * DTCAssetType2Code.REMICRealEstateMtgeInvestmentConduit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#Right
+ * DTCAssetType2Code.Right}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmRealEstateInvestmentTrustREIT
- * DTCAssetType2Code.mmRealEstateInvestmentTrustREIT}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#SealedEnvelope
+ * DTCAssetType2Code.SealedEnvelope}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmREMICRealEstateMtgeInvestmentConduit
- * DTCAssetType2Code.mmREMICRealEstateMtgeInvestmentConduit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmRight
- * DTCAssetType2Code.mmRight}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#TenderRateNote
+ * DTCAssetType2Code.TenderRateNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmSealedEnvelope
- * DTCAssetType2Code.mmSealedEnvelope}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#TenderRatePreferredStock
+ * DTCAssetType2Code.TenderRatePreferredStock}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmTenderRateNote
- * DTCAssetType2Code.mmTenderRateNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#UnitInvestmentTrustUIT
+ * DTCAssetType2Code.UnitInvestmentTrustUIT}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmTenderRatePreferredStock
- * DTCAssetType2Code.mmTenderRatePreferredStock}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#UnitInvestmentTrustUITNuveenOnly
+ * DTCAssetType2Code.UnitInvestmentTrustUITNuveenOnly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmUnitInvestmentTrustUIT
- * DTCAssetType2Code.mmUnitInvestmentTrustUIT}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#USGovernmentAgencySecurity
+ * DTCAssetType2Code.USGovernmentAgencySecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmUnitInvestmentTrustUITNuveenOnly
- * DTCAssetType2Code.mmUnitInvestmentTrustUITNuveenOnly}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#USTreasuryBill
+ * DTCAssetType2Code.USTreasuryBill}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmUSGovernmentAgencySecurity
- * DTCAssetType2Code.mmUSGovernmentAgencySecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#USTreasuryBond
+ * DTCAssetType2Code.USTreasuryBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmUSTreasuryBill
- * DTCAssetType2Code.mmUSTreasuryBill}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#USTreasurySecurity
+ * DTCAssetType2Code.USTreasurySecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmUSTreasuryBond
- * DTCAssetType2Code.mmUSTreasuryBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#USTreasuryNote
+ * DTCAssetType2Code.USTreasuryNote}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#Warrant
+ * DTCAssetType2Code.Warrant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmUSTreasurySecurity
- * DTCAssetType2Code.mmUSTreasurySecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#ZCPNDenominInitialPrincipalAmt
+ * DTCAssetType2Code.ZCPNDenominInitialPrincipalAmt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmUSTreasuryNote
- * DTCAssetType2Code.mmUSTreasuryNote}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmWarrant
- * DTCAssetType2Code.mmWarrant}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmZCPNDenominInitialPrincipalAmt
- * DTCAssetType2Code.mmZCPNDenominInitialPrincipalAmt}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#mmZeroCouponBond
- * DTCAssetType2Code.mmZeroCouponBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetType2Code#ZeroCouponBond
+ * DTCAssetType2Code.ZeroCouponBond}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DTCAssetTypeCode
+ * DTCAssetTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -336,7 +337,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies  DTC (The Depository Trust Company) security sub-issue type."</li>
  * </ul>
  */
-public class DTCAssetType2Code extends DTCAssetTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DTCAssetType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -355,11 +357,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "ABSDenominUnitsorUndividedInterest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmABSDenominUnitsorUndividedInterest = new MMCode() {
+	public static final DTCAssetType2Code ABSDenominUnitsorUndividedInterest = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ABSDenominUnitsorUndividedInterest";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.ABSDenominUnitsorUndividedInterest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -378,11 +381,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "AmericanDepositaryReceiptADR"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAmericanDepositaryReceiptADR = new MMCode() {
+	public static final DTCAssetType2Code AmericanDepositaryReceiptADR = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmericanDepositaryReceiptADR";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.AmericanDepositaryReceiptADR.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -401,11 +405,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "AssetBackedSecurityABSorGlobalABSGABS"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAssetBackedSecurityABSorGlobalABSGABS = new MMCode() {
+	public static final DTCAssetType2Code AssetBackedSecurityABSorGlobalABSGABS = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetBackedSecurityABSorGlobalABSGABS";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.AssetBackedSecurityABSorGlobalABSGABS.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -424,11 +429,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "AuctionRatePreferredStockARPS"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAuctionRatePreferredStockARPS = new MMCode() {
+	public static final DTCAssetType2Code AuctionRatePreferredStockARPS = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuctionRatePreferredStockARPS";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.AuctionRatePreferredStockARPS.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -447,11 +453,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CertificatedMoneyMarketInstrument"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertificatedMoneyMarketInstrument = new MMCode() {
+	public static final DTCAssetType2Code CertificatedMoneyMarketInstrument = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificatedMoneyMarketInstrument";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CertificatedMoneyMarketInstrument.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -470,11 +477,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "BearerCallableZeroCouponBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBearerCallableZeroCouponBond = new MMCode() {
+	public static final DTCAssetType2Code BearerCallableZeroCouponBond = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BearerCallableZeroCouponBond";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.BearerCallableZeroCouponBond.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -493,11 +501,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CertificatedMoneyMarketPeriodicPayer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertificatedMoneyMarketPeriodicPayer = new MMCode() {
+	public static final DTCAssetType2Code CertificatedMoneyMarketPeriodicPayer = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificatedMoneyMarketPeriodicPayer";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CertificatedMoneyMarketPeriodicPayer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -516,11 +525,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CertificatesOfDeposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertificatesOfDeposit = new MMCode() {
+	public static final DTCAssetType2Code CertificatesOfDeposit = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificatesOfDeposit";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CertificatesOfDeposit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -539,11 +549,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "ClosedEndFund"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClosedEndFund = new MMCode() {
+	public static final DTCAssetType2Code ClosedEndFund = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosedEndFund";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.ClosedEndFund.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -562,11 +573,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CMODenominUnitsorUndividedInterest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCMODenominUnitsorUndividedInterest = new MMCode() {
+	public static final DTCAssetType2Code CMODenominUnitsorUndividedInterest = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CMODenominUnitsorUndividedInterest";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CMODenominUnitsorUndividedInterest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -585,11 +597,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CollateralizedMtgeObligationorGlobalCMO"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateralizedMtgeObligationorGlobalCMO = new MMCode() {
+	public static final DTCAssetType2Code CollateralizedMtgeObligationorGlobalCMO = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralizedMtgeObligationorGlobalCMO";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CollateralizedMtgeObligationorGlobalCMO.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -608,11 +621,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CommonStock"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommonStock = new MMCode() {
+	public static final DTCAssetType2Code CommonStock = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonStock";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CommonStock.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -631,11 +645,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CommonStockREIT"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommonStockREIT = new MMCode() {
+	public static final DTCAssetType2Code CommonStockREIT = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonStockREIT";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CommonStockREIT.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -654,11 +669,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "ConvertibleCommonStock"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConvertibleCommonStock = new MMCode() {
+	public static final DTCAssetType2Code ConvertibleCommonStock = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConvertibleCommonStock";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.ConvertibleCommonStock.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -677,11 +693,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "ConvertibleCorporateDebt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConvertibleCorporateDebt = new MMCode() {
+	public static final DTCAssetType2Code ConvertibleCorporateDebt = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConvertibleCorporateDebt";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.ConvertibleCorporateDebt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -700,11 +717,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "ConvertiblePreferredStock"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConvertiblePreferredStock = new MMCode() {
+	public static final DTCAssetType2Code ConvertiblePreferredStock = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConvertiblePreferredStock";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.ConvertiblePreferredStock.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -723,11 +741,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "Corporate144aDesignatedInvestors"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporate144aDesignatedInvestors = new MMCode() {
+	public static final DTCAssetType2Code Corporate144aDesignatedInvestors = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Corporate144aDesignatedInvestors";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.Corporate144aDesignatedInvestors.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -746,11 +765,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CorporateAuctionRateNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateAuctionRateNote = new MMCode() {
+	public static final DTCAssetType2Code CorporateAuctionRateNote = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateAuctionRateNote";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CorporateAuctionRateNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -769,11 +789,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CorporateBondCBorGlobalCorpBondGCB"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateBondCBorGlobalCorpBondGCB = new MMCode() {
+	public static final DTCAssetType2Code CorporateBondCBorGlobalCorpBondGCB = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateBondCBorGlobalCorpBondGCB";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CorporateBondCBorGlobalCorpBondGCB.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -792,11 +813,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CorporateDebenture"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateDebenture = new MMCode() {
+	public static final DTCAssetType2Code CorporateDebenture = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateDebenture";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CorporateDebenture.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -815,11 +837,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CorporateDebtDerivative"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateDebtDerivative = new MMCode() {
+	public static final DTCAssetType2Code CorporateDebtDerivative = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateDebtDerivative";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CorporateDebtDerivative.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -838,11 +861,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CorporateInsuredCustodialReceipt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateInsuredCustodialReceipt = new MMCode() {
+	public static final DTCAssetType2Code CorporateInsuredCustodialReceipt = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateInsuredCustodialReceipt";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CorporateInsuredCustodialReceipt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -861,11 +885,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CorporateOtherTaxExempt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateOtherTaxExempt = new MMCode() {
+	public static final DTCAssetType2Code CorporateOtherTaxExempt = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateOtherTaxExempt";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CorporateOtherTaxExempt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -884,11 +909,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CorporateShortTermNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateShortTermNote = new MMCode() {
+	public static final DTCAssetType2Code CorporateShortTermNote = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateShortTermNote";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CorporateShortTermNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -907,11 +933,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CorporateVariableModeObligationCVMO"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateVariableModeObligationCVMO = new MMCode() {
+	public static final DTCAssetType2Code CorporateVariableModeObligationCVMO = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateVariableModeObligationCVMO";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CorporateVariableModeObligationCVMO.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -930,11 +957,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CorporateVRDOMunicipalVRDOMMD"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateVRDOMunicipalVRDOMMD = new MMCode() {
+	public static final DTCAssetType2Code CorporateVRDOMunicipalVRDOMMD = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateVRDOMunicipalVRDOMMD";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CorporateVRDOMunicipalVRDOMMD.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -953,11 +981,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CPIDiscountCommercialPaperCP"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCPIDiscountCommercialPaperCP = new MMCode() {
+	public static final DTCAssetType2Code CPIDiscountCommercialPaperCP = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CPIDiscountCommercialPaperCP";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CPIDiscountCommercialPaperCP.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -976,11 +1005,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CPIInterestAtMaturityIAMCommercialPaper"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCPIInterestAtMaturityIAMCommercialPaper = new MMCode() {
+	public static final DTCAssetType2Code CPIInterestAtMaturityIAMCommercialPaper = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CPIInterestAtMaturityIAMCommercialPaper";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CPIInterestAtMaturityIAMCommercialPaper.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -999,11 +1029,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "CustodyUserCUSIP"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustodyUserCUSIP = new MMCode() {
+	public static final DTCAssetType2Code CustodyUserCUSIP = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyUserCUSIP";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.CustodyUserCUSIP.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1022,11 +1053,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "DebtUnit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDebtUnit = new MMCode() {
+	public static final DTCAssetType2Code DebtUnit = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtUnit";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.DebtUnit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1045,11 +1077,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "DepositaryShare"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDepositaryShare = new MMCode() {
+	public static final DTCAssetType2Code DepositaryShare = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositaryShare";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.DepositaryShare.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1068,11 +1101,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "Equity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEquity = new MMCode() {
+	public static final DTCAssetType2Code Equity = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.Equity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1091,11 +1125,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "Equity144aDesignatedInvestors"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEquity144aDesignatedInvestors = new MMCode() {
+	public static final DTCAssetType2Code Equity144aDesignatedInvestors = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity144aDesignatedInvestors";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.Equity144aDesignatedInvestors.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1114,11 +1149,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "EquityDerivative"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEquityDerivative = new MMCode() {
+	public static final DTCAssetType2Code EquityDerivative = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EquityDerivative";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.EquityDerivative.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1137,11 +1173,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "ExchangeTradedFunds"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExchangeTradedFunds = new MMCode() {
+	public static final DTCAssetType2Code ExchangeTradedFunds = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeTradedFunds";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.ExchangeTradedFunds.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1160,11 +1197,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "GNMAPassThroughSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGNMAPassThroughSecurities = new MMCode() {
+	public static final DTCAssetType2Code GNMAPassThroughSecurities = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GNMAPassThroughSecurities";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.GNMAPassThroughSecurities.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1183,11 +1221,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "GovernmentNatlMortgageAssociationGNMA"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGovernmentNatlMortgageAssociationGNMA = new MMCode() {
+	public static final DTCAssetType2Code GovernmentNatlMortgageAssociationGNMA = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentNatlMortgageAssociationGNMA";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.GovernmentNatlMortgageAssociationGNMA.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1206,11 +1245,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "GovernmentSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGovernmentSecurity = new MMCode() {
+	public static final DTCAssetType2Code GovernmentSecurity = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentSecurity";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.GovernmentSecurity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1229,11 +1269,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "IssueDenominUnitsorUndividedInterest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssueDenominUnitsorUndividedInterest = new MMCode() {
+	public static final DTCAssetType2Code IssueDenominUnitsorUndividedInterest = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDenominUnitsorUndividedInterest";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.IssueDenominUnitsorUndividedInterest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1252,11 +1293,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "EquityUnit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEquityUnit = new MMCode() {
+	public static final DTCAssetType2Code EquityUnit = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EquityUnit";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.EquityUnit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1275,11 +1317,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "GlobalUnitTrust"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGlobalUnitTrust = new MMCode() {
+	public static final DTCAssetType2Code GlobalUnitTrust = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalUnitTrust";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.GlobalUnitTrust.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1298,11 +1341,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "GNMASerialNoteSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGNMASerialNoteSecurities = new MMCode() {
+	public static final DTCAssetType2Code GNMASerialNoteSecurities = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GNMASerialNoteSecurities";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.GNMASerialNoteSecurities.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1321,11 +1365,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "GNMASerialNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGNMASerialNote = new MMCode() {
+	public static final DTCAssetType2Code GNMASerialNote = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GNMASerialNote";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.GNMASerialNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1344,11 +1389,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "GNMAREMICSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGNMAREMICSecurities = new MMCode() {
+	public static final DTCAssetType2Code GNMAREMICSecurities = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GNMAREMICSecurities";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.GNMAREMICSecurities.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1367,11 +1413,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "GovernmentTrustCertificate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGovernmentTrustCertificate = new MMCode() {
+	public static final DTCAssetType2Code GovernmentTrustCertificate = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentTrustCertificate";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.GovernmentTrustCertificate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1390,11 +1437,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "IMMIInstitutionalMMIMutualFundShares"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIMMIInstitutionalMMIMutualFundShares = new MMCode() {
+	public static final DTCAssetType2Code IMMIInstitutionalMMIMutualFundShares = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IMMIInstitutionalMMIMutualFundShares";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.IMMIInstitutionalMMIMutualFundShares.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1413,11 +1461,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "JunkAndTreasuryGrowthReceiptJGR"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmJunkAndTreasuryGrowthReceiptJGR = new MMCode() {
+	public static final DTCAssetType2Code JunkAndTreasuryGrowthReceiptJGR = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JunkAndTreasuryGrowthReceiptJGR";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.JunkAndTreasuryGrowthReceiptJGR.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1436,11 +1485,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "LimitedPartnership"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLimitedPartnership = new MMCode() {
+	public static final DTCAssetType2Code LimitedPartnership = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedPartnership";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.LimitedPartnership.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1459,11 +1509,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MMIBankersAcceptanceNoteBA"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMMIBankersAcceptanceNoteBA = new MMCode() {
+	public static final DTCAssetType2Code MMIBankersAcceptanceNoteBA = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MMIBankersAcceptanceNoteBA";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MMIBankersAcceptanceNoteBA.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1482,11 +1533,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MMICorporateCommercialPaper"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMMICorporateCommercialPaper = new MMCode() {
+	public static final DTCAssetType2Code MMICorporateCommercialPaper = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MMICorporateCommercialPaper";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MMICorporateCommercialPaper.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1505,11 +1557,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MMICorporateVRDOCP"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMMICorporateVRDOCP = new MMCode() {
+	public static final DTCAssetType2Code MMICorporateVRDOCP = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MMICorporateVRDOCP";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MMICorporateVRDOCP.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1528,11 +1581,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MMIDepositNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMMIDepositNote = new MMCode() {
+	public static final DTCAssetType2Code MMIDepositNote = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MMIDepositNote";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MMIDepositNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1551,11 +1605,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MMIDiscountNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMMIDiscountNote = new MMCode() {
+	public static final DTCAssetType2Code MMIDiscountNote = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MMIDiscountNote";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MMIDiscountNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1574,11 +1629,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MMIInstitutionalCertificatesofDeposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMMIInstitutionalCertificatesofDeposit = new MMCode() {
+	public static final DTCAssetType2Code MMIInstitutionalCertificatesofDeposit = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MMIInstitutionalCertificatesofDeposit";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MMIInstitutionalCertificatesofDeposit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1597,11 +1653,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MMIMediumTermBankNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMMIMediumTermBankNote = new MMCode() {
+	public static final DTCAssetType2Code MMIMediumTermBankNote = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MMIMediumTermBankNote";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MMIMediumTermBankNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1620,11 +1677,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MMIMediumTermNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMMIMediumTermNote = new MMCode() {
+	public static final DTCAssetType2Code MMIMediumTermNote = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MMIMediumTermNote";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MMIMediumTermNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1643,11 +1701,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MMIMunicipalCommercialPaper"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMMIMunicipalCommercialPaper = new MMCode() {
+	public static final DTCAssetType2Code MMIMunicipalCommercialPaper = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MMIMunicipalCommercialPaper";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MMIMunicipalCommercialPaper.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1666,11 +1725,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MMIMunicipalVRDOCP"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMMIMunicipalVRDOCP = new MMCode() {
+	public static final DTCAssetType2Code MMIMunicipalVRDOCP = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MMIMunicipalVRDOCP";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MMIMunicipalVRDOCP.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1689,11 +1749,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MMIPreferredStockinCPlikemode"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMMIPreferredStockinCPlikemode = new MMCode() {
+	public static final DTCAssetType2Code MMIPreferredStockinCPlikemode = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MMIPreferredStockinCPlikemode";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MMIPreferredStockinCPlikemode.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1712,11 +1773,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MMIShortTermBankNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMMIShortTermBankNote = new MMCode() {
+	public static final DTCAssetType2Code MMIShortTermBankNote = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MMIShortTermBankNote";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MMIShortTermBankNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1735,11 +1797,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MTNMediumTermNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMTNMediumTermNote = new MMCode() {
+	public static final DTCAssetType2Code MTNMediumTermNote = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MTNMediumTermNote";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MTNMediumTermNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1758,11 +1821,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MunicipalAmortizedIssue"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMunicipalAmortizedIssue = new MMCode() {
+	public static final DTCAssetType2Code MunicipalAmortizedIssue = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalAmortizedIssue";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MunicipalAmortizedIssue.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1781,11 +1845,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MunicipalAuctionRateNoteARN"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMunicipalAuctionRateNoteARN = new MMCode() {
+	public static final DTCAssetType2Code MunicipalAuctionRateNoteARN = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalAuctionRateNoteARN";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MunicipalAuctionRateNoteARN.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1804,11 +1869,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MunicipalBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMunicipalBond = new MMCode() {
+	public static final DTCAssetType2Code MunicipalBond = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalBond";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MunicipalBond.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1827,11 +1893,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MunicipalDerivative"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMunicipalDerivative = new MMCode() {
+	public static final DTCAssetType2Code MunicipalDerivative = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalDerivative";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MunicipalDerivative.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1850,11 +1917,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MunicipalInsuredCustodialReceipt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMunicipalInsuredCustodialReceipt = new MMCode() {
+	public static final DTCAssetType2Code MunicipalInsuredCustodialReceipt = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalInsuredCustodialReceipt";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MunicipalInsuredCustodialReceipt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1873,11 +1941,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MunicipalNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMunicipalNote = new MMCode() {
+	public static final DTCAssetType2Code MunicipalNote = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalNote";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MunicipalNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1896,11 +1965,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MunicipalOtherTaxExempt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMunicipalOtherTaxExempt = new MMCode() {
+	public static final DTCAssetType2Code MunicipalOtherTaxExempt = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalOtherTaxExempt";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MunicipalOtherTaxExempt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1919,11 +1989,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MunicipalOptionCallRight"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMunicipalOptionCallRight = new MMCode() {
+	public static final DTCAssetType2Code MunicipalOptionCallRight = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalOptionCallRight";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MunicipalOptionCallRight.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1942,11 +2013,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MunicipalVariableModeObligationVMO"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMunicipalVariableModeObligationVMO = new MMCode() {
+	public static final DTCAssetType2Code MunicipalVariableModeObligationVMO = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalVariableModeObligationVMO";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MunicipalVariableModeObligationVMO.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1965,11 +2037,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MunicipalVariableRateDemandObligationVRDO"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMunicipalVariableRateDemandObligationVRDO = new MMCode() {
+	public static final DTCAssetType2Code MunicipalVariableRateDemandObligationVRDO = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalVariableRateDemandObligationVRDO";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MunicipalVariableRateDemandObligationVRDO.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1988,11 +2061,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "MutualFund"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMutualFund = new MMCode() {
+	public static final DTCAssetType2Code MutualFund = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MutualFund";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.MutualFund.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2011,11 +2085,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "NonCMOABSAmortizingIssue"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonCMOABSAmortizingIssue = new MMCode() {
+	public static final DTCAssetType2Code NonCMOABSAmortizingIssue = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonCMOABSAmortizingIssue";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.NonCMOABSAmortizingIssue.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2034,11 +2109,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "NonStandardAssetUserCUSIP"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonStandardAssetUserCUSIP = new MMCode() {
+	public static final DTCAssetType2Code NonStandardAssetUserCUSIP = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonStandardAssetUserCUSIP";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.NonStandardAssetUserCUSIP.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2057,11 +2133,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "OptionDerivative"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOptionDerivative = new MMCode() {
+	public static final DTCAssetType2Code OptionDerivative = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionDerivative";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.OptionDerivative.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2080,11 +2157,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "Package"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPackage = new MMCode() {
+	public static final DTCAssetType2Code Package = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Package";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.Package.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2103,11 +2181,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "PeriodicPaymentCommercialPaper"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPeriodicPaymentCommercialPaper = new MMCode() {
+	public static final DTCAssetType2Code PeriodicPaymentCommercialPaper = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PeriodicPaymentCommercialPaper";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.PeriodicPaymentCommercialPaper.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2126,11 +2205,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "PreferredStock"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreferredStock = new MMCode() {
+	public static final DTCAssetType2Code PreferredStock = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreferredStock";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.PreferredStock.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2149,11 +2229,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "PreferredStockREIT"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreferredStockREIT = new MMCode() {
+	public static final DTCAssetType2Code PreferredStockREIT = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreferredStockREIT";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.PreferredStockREIT.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2172,11 +2253,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "RealEstateInvestmentTrustREIT"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRealEstateInvestmentTrustREIT = new MMCode() {
+	public static final DTCAssetType2Code RealEstateInvestmentTrustREIT = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RealEstateInvestmentTrustREIT";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.RealEstateInvestmentTrustREIT.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2195,11 +2277,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "REMICRealEstateMtgeInvestmentConduit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmREMICRealEstateMtgeInvestmentConduit = new MMCode() {
+	public static final DTCAssetType2Code REMICRealEstateMtgeInvestmentConduit = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "REMICRealEstateMtgeInvestmentConduit";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.REMICRealEstateMtgeInvestmentConduit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2218,11 +2301,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "Right"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRight = new MMCode() {
+	public static final DTCAssetType2Code Right = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Right";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.Right.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2241,11 +2325,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "SealedEnvelope"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSealedEnvelope = new MMCode() {
+	public static final DTCAssetType2Code SealedEnvelope = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SealedEnvelope";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.SealedEnvelope.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2264,11 +2349,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "TenderRateNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTenderRateNote = new MMCode() {
+	public static final DTCAssetType2Code TenderRateNote = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TenderRateNote";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.TenderRateNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2287,11 +2373,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "TenderRatePreferredStock"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTenderRatePreferredStock = new MMCode() {
+	public static final DTCAssetType2Code TenderRatePreferredStock = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TenderRatePreferredStock";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.TenderRatePreferredStock.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2310,11 +2397,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "UnitInvestmentTrustUIT"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnitInvestmentTrustUIT = new MMCode() {
+	public static final DTCAssetType2Code UnitInvestmentTrustUIT = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitInvestmentTrustUIT";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.UnitInvestmentTrustUIT.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2333,11 +2421,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "UnitInvestmentTrustUITNuveenOnly"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnitInvestmentTrustUITNuveenOnly = new MMCode() {
+	public static final DTCAssetType2Code UnitInvestmentTrustUITNuveenOnly = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitInvestmentTrustUITNuveenOnly";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.UnitInvestmentTrustUITNuveenOnly.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2356,11 +2445,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "USGovernmentAgencySecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSGovernmentAgencySecurity = new MMCode() {
+	public static final DTCAssetType2Code USGovernmentAgencySecurity = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USGovernmentAgencySecurity";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.USGovernmentAgencySecurity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2379,11 +2469,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "USTreasuryBill"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSTreasuryBill = new MMCode() {
+	public static final DTCAssetType2Code USTreasuryBill = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USTreasuryBill";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.USTreasuryBill.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2402,11 +2493,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "USTreasuryBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSTreasuryBond = new MMCode() {
+	public static final DTCAssetType2Code USTreasuryBond = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USTreasuryBond";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.USTreasuryBond.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2425,11 +2517,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "USTreasurySecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSTreasurySecurity = new MMCode() {
+	public static final DTCAssetType2Code USTreasurySecurity = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USTreasurySecurity";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.USTreasurySecurity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2448,11 +2541,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "USTreasuryNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSTreasuryNote = new MMCode() {
+	public static final DTCAssetType2Code USTreasuryNote = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USTreasuryNote";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.USTreasuryNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2471,11 +2565,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "Warrant"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWarrant = new MMCode() {
+	public static final DTCAssetType2Code Warrant = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Warrant";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.Warrant.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2494,11 +2589,12 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "ZCPNDenominInitialPrincipalAmt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmZCPNDenominInitialPrincipalAmt = new MMCode() {
+	public static final DTCAssetType2Code ZCPNDenominInitialPrincipalAmt = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ZCPNDenominInitialPrincipalAmt";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.ZCPNDenominInitialPrincipalAmt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -2517,47 +2613,192 @@ public class DTCAssetType2Code extends DTCAssetTypeCode {
 	 * name} = "ZeroCouponBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmZeroCouponBond = new MMCode() {
+	public static final DTCAssetType2Code ZeroCouponBond = new DTCAssetType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ZeroCouponBond";
-			owner_lazy = () -> DTCAssetType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetType2Code.mmObject();
+			codeName = DTCAssetTypeCode.ZeroCouponBond.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DTCAssetType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DTCAssetType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCAssetType2Code";
 				definition = "Specifies  DTC (The Depository Trust Company) security sub-issue type.";
-				code_lazy = () -> Arrays.asList(DTCAssetType2Code.mmABSDenominUnitsorUndividedInterest, DTCAssetType2Code.mmAmericanDepositaryReceiptADR, DTCAssetType2Code.mmAssetBackedSecurityABSorGlobalABSGABS,
-						DTCAssetType2Code.mmAuctionRatePreferredStockARPS, DTCAssetType2Code.mmCertificatedMoneyMarketInstrument, DTCAssetType2Code.mmBearerCallableZeroCouponBond, DTCAssetType2Code.mmCertificatedMoneyMarketPeriodicPayer,
-						DTCAssetType2Code.mmCertificatesOfDeposit, DTCAssetType2Code.mmClosedEndFund, DTCAssetType2Code.mmCMODenominUnitsorUndividedInterest, DTCAssetType2Code.mmCollateralizedMtgeObligationorGlobalCMO,
-						DTCAssetType2Code.mmCommonStock, DTCAssetType2Code.mmCommonStockREIT, DTCAssetType2Code.mmConvertibleCommonStock, DTCAssetType2Code.mmConvertibleCorporateDebt, DTCAssetType2Code.mmConvertiblePreferredStock,
-						DTCAssetType2Code.mmCorporate144aDesignatedInvestors, DTCAssetType2Code.mmCorporateAuctionRateNote, DTCAssetType2Code.mmCorporateBondCBorGlobalCorpBondGCB, DTCAssetType2Code.mmCorporateDebenture,
-						DTCAssetType2Code.mmCorporateDebtDerivative, DTCAssetType2Code.mmCorporateInsuredCustodialReceipt, DTCAssetType2Code.mmCorporateOtherTaxExempt, DTCAssetType2Code.mmCorporateShortTermNote,
-						DTCAssetType2Code.mmCorporateVariableModeObligationCVMO, DTCAssetType2Code.mmCorporateVRDOMunicipalVRDOMMD, DTCAssetType2Code.mmCPIDiscountCommercialPaperCP,
-						DTCAssetType2Code.mmCPIInterestAtMaturityIAMCommercialPaper, DTCAssetType2Code.mmCustodyUserCUSIP, DTCAssetType2Code.mmDebtUnit, DTCAssetType2Code.mmDepositaryShare, DTCAssetType2Code.mmEquity,
-						DTCAssetType2Code.mmEquity144aDesignatedInvestors, DTCAssetType2Code.mmEquityDerivative, DTCAssetType2Code.mmExchangeTradedFunds, DTCAssetType2Code.mmGNMAPassThroughSecurities,
-						DTCAssetType2Code.mmGovernmentNatlMortgageAssociationGNMA, DTCAssetType2Code.mmGovernmentSecurity, DTCAssetType2Code.mmIssueDenominUnitsorUndividedInterest, DTCAssetType2Code.mmEquityUnit,
-						DTCAssetType2Code.mmGlobalUnitTrust, DTCAssetType2Code.mmGNMASerialNoteSecurities, DTCAssetType2Code.mmGNMASerialNote, DTCAssetType2Code.mmGNMAREMICSecurities, DTCAssetType2Code.mmGovernmentTrustCertificate,
-						DTCAssetType2Code.mmIMMIInstitutionalMMIMutualFundShares, DTCAssetType2Code.mmJunkAndTreasuryGrowthReceiptJGR, DTCAssetType2Code.mmLimitedPartnership, DTCAssetType2Code.mmMMIBankersAcceptanceNoteBA,
-						DTCAssetType2Code.mmMMICorporateCommercialPaper, DTCAssetType2Code.mmMMICorporateVRDOCP, DTCAssetType2Code.mmMMIDepositNote, DTCAssetType2Code.mmMMIDiscountNote,
-						DTCAssetType2Code.mmMMIInstitutionalCertificatesofDeposit, DTCAssetType2Code.mmMMIMediumTermBankNote, DTCAssetType2Code.mmMMIMediumTermNote, DTCAssetType2Code.mmMMIMunicipalCommercialPaper,
-						DTCAssetType2Code.mmMMIMunicipalVRDOCP, DTCAssetType2Code.mmMMIPreferredStockinCPlikemode, DTCAssetType2Code.mmMMIShortTermBankNote, DTCAssetType2Code.mmMTNMediumTermNote,
-						DTCAssetType2Code.mmMunicipalAmortizedIssue, DTCAssetType2Code.mmMunicipalAuctionRateNoteARN, DTCAssetType2Code.mmMunicipalBond, DTCAssetType2Code.mmMunicipalDerivative,
-						DTCAssetType2Code.mmMunicipalInsuredCustodialReceipt, DTCAssetType2Code.mmMunicipalNote, DTCAssetType2Code.mmMunicipalOtherTaxExempt, DTCAssetType2Code.mmMunicipalOptionCallRight,
-						DTCAssetType2Code.mmMunicipalVariableModeObligationVMO, DTCAssetType2Code.mmMunicipalVariableRateDemandObligationVRDO, DTCAssetType2Code.mmMutualFund, DTCAssetType2Code.mmNonCMOABSAmortizingIssue,
-						DTCAssetType2Code.mmNonStandardAssetUserCUSIP, DTCAssetType2Code.mmOptionDerivative, DTCAssetType2Code.mmPackage, DTCAssetType2Code.mmPeriodicPaymentCommercialPaper, DTCAssetType2Code.mmPreferredStock,
-						DTCAssetType2Code.mmPreferredStockREIT, DTCAssetType2Code.mmRealEstateInvestmentTrustREIT, DTCAssetType2Code.mmREMICRealEstateMtgeInvestmentConduit, DTCAssetType2Code.mmRight, DTCAssetType2Code.mmSealedEnvelope,
-						DTCAssetType2Code.mmTenderRateNote, DTCAssetType2Code.mmTenderRatePreferredStock, DTCAssetType2Code.mmUnitInvestmentTrustUIT, DTCAssetType2Code.mmUnitInvestmentTrustUITNuveenOnly,
-						DTCAssetType2Code.mmUSGovernmentAgencySecurity, DTCAssetType2Code.mmUSTreasuryBill, DTCAssetType2Code.mmUSTreasuryBond, DTCAssetType2Code.mmUSTreasurySecurity, DTCAssetType2Code.mmUSTreasuryNote,
-						DTCAssetType2Code.mmWarrant, DTCAssetType2Code.mmZCPNDenominInitialPrincipalAmt, DTCAssetType2Code.mmZeroCouponBond);
 				trace_lazy = () -> DTCAssetTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCAssetType2Code.ABSDenominUnitsorUndividedInterest, com.tools20022.repository.codeset.DTCAssetType2Code.AmericanDepositaryReceiptADR,
+						com.tools20022.repository.codeset.DTCAssetType2Code.AssetBackedSecurityABSorGlobalABSGABS, com.tools20022.repository.codeset.DTCAssetType2Code.AuctionRatePreferredStockARPS,
+						com.tools20022.repository.codeset.DTCAssetType2Code.CertificatedMoneyMarketInstrument, com.tools20022.repository.codeset.DTCAssetType2Code.BearerCallableZeroCouponBond,
+						com.tools20022.repository.codeset.DTCAssetType2Code.CertificatedMoneyMarketPeriodicPayer, com.tools20022.repository.codeset.DTCAssetType2Code.CertificatesOfDeposit,
+						com.tools20022.repository.codeset.DTCAssetType2Code.ClosedEndFund, com.tools20022.repository.codeset.DTCAssetType2Code.CMODenominUnitsorUndividedInterest,
+						com.tools20022.repository.codeset.DTCAssetType2Code.CollateralizedMtgeObligationorGlobalCMO, com.tools20022.repository.codeset.DTCAssetType2Code.CommonStock,
+						com.tools20022.repository.codeset.DTCAssetType2Code.CommonStockREIT, com.tools20022.repository.codeset.DTCAssetType2Code.ConvertibleCommonStock,
+						com.tools20022.repository.codeset.DTCAssetType2Code.ConvertibleCorporateDebt, com.tools20022.repository.codeset.DTCAssetType2Code.ConvertiblePreferredStock,
+						com.tools20022.repository.codeset.DTCAssetType2Code.Corporate144aDesignatedInvestors, com.tools20022.repository.codeset.DTCAssetType2Code.CorporateAuctionRateNote,
+						com.tools20022.repository.codeset.DTCAssetType2Code.CorporateBondCBorGlobalCorpBondGCB, com.tools20022.repository.codeset.DTCAssetType2Code.CorporateDebenture,
+						com.tools20022.repository.codeset.DTCAssetType2Code.CorporateDebtDerivative, com.tools20022.repository.codeset.DTCAssetType2Code.CorporateInsuredCustodialReceipt,
+						com.tools20022.repository.codeset.DTCAssetType2Code.CorporateOtherTaxExempt, com.tools20022.repository.codeset.DTCAssetType2Code.CorporateShortTermNote,
+						com.tools20022.repository.codeset.DTCAssetType2Code.CorporateVariableModeObligationCVMO, com.tools20022.repository.codeset.DTCAssetType2Code.CorporateVRDOMunicipalVRDOMMD,
+						com.tools20022.repository.codeset.DTCAssetType2Code.CPIDiscountCommercialPaperCP, com.tools20022.repository.codeset.DTCAssetType2Code.CPIInterestAtMaturityIAMCommercialPaper,
+						com.tools20022.repository.codeset.DTCAssetType2Code.CustodyUserCUSIP, com.tools20022.repository.codeset.DTCAssetType2Code.DebtUnit, com.tools20022.repository.codeset.DTCAssetType2Code.DepositaryShare,
+						com.tools20022.repository.codeset.DTCAssetType2Code.Equity, com.tools20022.repository.codeset.DTCAssetType2Code.Equity144aDesignatedInvestors, com.tools20022.repository.codeset.DTCAssetType2Code.EquityDerivative,
+						com.tools20022.repository.codeset.DTCAssetType2Code.ExchangeTradedFunds, com.tools20022.repository.codeset.DTCAssetType2Code.GNMAPassThroughSecurities,
+						com.tools20022.repository.codeset.DTCAssetType2Code.GovernmentNatlMortgageAssociationGNMA, com.tools20022.repository.codeset.DTCAssetType2Code.GovernmentSecurity,
+						com.tools20022.repository.codeset.DTCAssetType2Code.IssueDenominUnitsorUndividedInterest, com.tools20022.repository.codeset.DTCAssetType2Code.EquityUnit,
+						com.tools20022.repository.codeset.DTCAssetType2Code.GlobalUnitTrust, com.tools20022.repository.codeset.DTCAssetType2Code.GNMASerialNoteSecurities, com.tools20022.repository.codeset.DTCAssetType2Code.GNMASerialNote,
+						com.tools20022.repository.codeset.DTCAssetType2Code.GNMAREMICSecurities, com.tools20022.repository.codeset.DTCAssetType2Code.GovernmentTrustCertificate,
+						com.tools20022.repository.codeset.DTCAssetType2Code.IMMIInstitutionalMMIMutualFundShares, com.tools20022.repository.codeset.DTCAssetType2Code.JunkAndTreasuryGrowthReceiptJGR,
+						com.tools20022.repository.codeset.DTCAssetType2Code.LimitedPartnership, com.tools20022.repository.codeset.DTCAssetType2Code.MMIBankersAcceptanceNoteBA,
+						com.tools20022.repository.codeset.DTCAssetType2Code.MMICorporateCommercialPaper, com.tools20022.repository.codeset.DTCAssetType2Code.MMICorporateVRDOCP,
+						com.tools20022.repository.codeset.DTCAssetType2Code.MMIDepositNote, com.tools20022.repository.codeset.DTCAssetType2Code.MMIDiscountNote,
+						com.tools20022.repository.codeset.DTCAssetType2Code.MMIInstitutionalCertificatesofDeposit, com.tools20022.repository.codeset.DTCAssetType2Code.MMIMediumTermBankNote,
+						com.tools20022.repository.codeset.DTCAssetType2Code.MMIMediumTermNote, com.tools20022.repository.codeset.DTCAssetType2Code.MMIMunicipalCommercialPaper,
+						com.tools20022.repository.codeset.DTCAssetType2Code.MMIMunicipalVRDOCP, com.tools20022.repository.codeset.DTCAssetType2Code.MMIPreferredStockinCPlikemode,
+						com.tools20022.repository.codeset.DTCAssetType2Code.MMIShortTermBankNote, com.tools20022.repository.codeset.DTCAssetType2Code.MTNMediumTermNote,
+						com.tools20022.repository.codeset.DTCAssetType2Code.MunicipalAmortizedIssue, com.tools20022.repository.codeset.DTCAssetType2Code.MunicipalAuctionRateNoteARN,
+						com.tools20022.repository.codeset.DTCAssetType2Code.MunicipalBond, com.tools20022.repository.codeset.DTCAssetType2Code.MunicipalDerivative,
+						com.tools20022.repository.codeset.DTCAssetType2Code.MunicipalInsuredCustodialReceipt, com.tools20022.repository.codeset.DTCAssetType2Code.MunicipalNote,
+						com.tools20022.repository.codeset.DTCAssetType2Code.MunicipalOtherTaxExempt, com.tools20022.repository.codeset.DTCAssetType2Code.MunicipalOptionCallRight,
+						com.tools20022.repository.codeset.DTCAssetType2Code.MunicipalVariableModeObligationVMO, com.tools20022.repository.codeset.DTCAssetType2Code.MunicipalVariableRateDemandObligationVRDO,
+						com.tools20022.repository.codeset.DTCAssetType2Code.MutualFund, com.tools20022.repository.codeset.DTCAssetType2Code.NonCMOABSAmortizingIssue,
+						com.tools20022.repository.codeset.DTCAssetType2Code.NonStandardAssetUserCUSIP, com.tools20022.repository.codeset.DTCAssetType2Code.OptionDerivative, com.tools20022.repository.codeset.DTCAssetType2Code.Package,
+						com.tools20022.repository.codeset.DTCAssetType2Code.PeriodicPaymentCommercialPaper, com.tools20022.repository.codeset.DTCAssetType2Code.PreferredStock,
+						com.tools20022.repository.codeset.DTCAssetType2Code.PreferredStockREIT, com.tools20022.repository.codeset.DTCAssetType2Code.RealEstateInvestmentTrustREIT,
+						com.tools20022.repository.codeset.DTCAssetType2Code.REMICRealEstateMtgeInvestmentConduit, com.tools20022.repository.codeset.DTCAssetType2Code.Right,
+						com.tools20022.repository.codeset.DTCAssetType2Code.SealedEnvelope, com.tools20022.repository.codeset.DTCAssetType2Code.TenderRateNote, com.tools20022.repository.codeset.DTCAssetType2Code.TenderRatePreferredStock,
+						com.tools20022.repository.codeset.DTCAssetType2Code.UnitInvestmentTrustUIT, com.tools20022.repository.codeset.DTCAssetType2Code.UnitInvestmentTrustUITNuveenOnly,
+						com.tools20022.repository.codeset.DTCAssetType2Code.USGovernmentAgencySecurity, com.tools20022.repository.codeset.DTCAssetType2Code.USTreasuryBill, com.tools20022.repository.codeset.DTCAssetType2Code.USTreasuryBond,
+						com.tools20022.repository.codeset.DTCAssetType2Code.USTreasurySecurity, com.tools20022.repository.codeset.DTCAssetType2Code.USTreasuryNote, com.tools20022.repository.codeset.DTCAssetType2Code.Warrant,
+						com.tools20022.repository.codeset.DTCAssetType2Code.ZCPNDenominInitialPrincipalAmt, com.tools20022.repository.codeset.DTCAssetType2Code.ZeroCouponBond);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ABSDenominUnitsorUndividedInterest.getCodeName().get(), ABSDenominUnitsorUndividedInterest);
+		codesByName.put(AmericanDepositaryReceiptADR.getCodeName().get(), AmericanDepositaryReceiptADR);
+		codesByName.put(AssetBackedSecurityABSorGlobalABSGABS.getCodeName().get(), AssetBackedSecurityABSorGlobalABSGABS);
+		codesByName.put(AuctionRatePreferredStockARPS.getCodeName().get(), AuctionRatePreferredStockARPS);
+		codesByName.put(CertificatedMoneyMarketInstrument.getCodeName().get(), CertificatedMoneyMarketInstrument);
+		codesByName.put(BearerCallableZeroCouponBond.getCodeName().get(), BearerCallableZeroCouponBond);
+		codesByName.put(CertificatedMoneyMarketPeriodicPayer.getCodeName().get(), CertificatedMoneyMarketPeriodicPayer);
+		codesByName.put(CertificatesOfDeposit.getCodeName().get(), CertificatesOfDeposit);
+		codesByName.put(ClosedEndFund.getCodeName().get(), ClosedEndFund);
+		codesByName.put(CMODenominUnitsorUndividedInterest.getCodeName().get(), CMODenominUnitsorUndividedInterest);
+		codesByName.put(CollateralizedMtgeObligationorGlobalCMO.getCodeName().get(), CollateralizedMtgeObligationorGlobalCMO);
+		codesByName.put(CommonStock.getCodeName().get(), CommonStock);
+		codesByName.put(CommonStockREIT.getCodeName().get(), CommonStockREIT);
+		codesByName.put(ConvertibleCommonStock.getCodeName().get(), ConvertibleCommonStock);
+		codesByName.put(ConvertibleCorporateDebt.getCodeName().get(), ConvertibleCorporateDebt);
+		codesByName.put(ConvertiblePreferredStock.getCodeName().get(), ConvertiblePreferredStock);
+		codesByName.put(Corporate144aDesignatedInvestors.getCodeName().get(), Corporate144aDesignatedInvestors);
+		codesByName.put(CorporateAuctionRateNote.getCodeName().get(), CorporateAuctionRateNote);
+		codesByName.put(CorporateBondCBorGlobalCorpBondGCB.getCodeName().get(), CorporateBondCBorGlobalCorpBondGCB);
+		codesByName.put(CorporateDebenture.getCodeName().get(), CorporateDebenture);
+		codesByName.put(CorporateDebtDerivative.getCodeName().get(), CorporateDebtDerivative);
+		codesByName.put(CorporateInsuredCustodialReceipt.getCodeName().get(), CorporateInsuredCustodialReceipt);
+		codesByName.put(CorporateOtherTaxExempt.getCodeName().get(), CorporateOtherTaxExempt);
+		codesByName.put(CorporateShortTermNote.getCodeName().get(), CorporateShortTermNote);
+		codesByName.put(CorporateVariableModeObligationCVMO.getCodeName().get(), CorporateVariableModeObligationCVMO);
+		codesByName.put(CorporateVRDOMunicipalVRDOMMD.getCodeName().get(), CorporateVRDOMunicipalVRDOMMD);
+		codesByName.put(CPIDiscountCommercialPaperCP.getCodeName().get(), CPIDiscountCommercialPaperCP);
+		codesByName.put(CPIInterestAtMaturityIAMCommercialPaper.getCodeName().get(), CPIInterestAtMaturityIAMCommercialPaper);
+		codesByName.put(CustodyUserCUSIP.getCodeName().get(), CustodyUserCUSIP);
+		codesByName.put(DebtUnit.getCodeName().get(), DebtUnit);
+		codesByName.put(DepositaryShare.getCodeName().get(), DepositaryShare);
+		codesByName.put(Equity.getCodeName().get(), Equity);
+		codesByName.put(Equity144aDesignatedInvestors.getCodeName().get(), Equity144aDesignatedInvestors);
+		codesByName.put(EquityDerivative.getCodeName().get(), EquityDerivative);
+		codesByName.put(ExchangeTradedFunds.getCodeName().get(), ExchangeTradedFunds);
+		codesByName.put(GNMAPassThroughSecurities.getCodeName().get(), GNMAPassThroughSecurities);
+		codesByName.put(GovernmentNatlMortgageAssociationGNMA.getCodeName().get(), GovernmentNatlMortgageAssociationGNMA);
+		codesByName.put(GovernmentSecurity.getCodeName().get(), GovernmentSecurity);
+		codesByName.put(IssueDenominUnitsorUndividedInterest.getCodeName().get(), IssueDenominUnitsorUndividedInterest);
+		codesByName.put(EquityUnit.getCodeName().get(), EquityUnit);
+		codesByName.put(GlobalUnitTrust.getCodeName().get(), GlobalUnitTrust);
+		codesByName.put(GNMASerialNoteSecurities.getCodeName().get(), GNMASerialNoteSecurities);
+		codesByName.put(GNMASerialNote.getCodeName().get(), GNMASerialNote);
+		codesByName.put(GNMAREMICSecurities.getCodeName().get(), GNMAREMICSecurities);
+		codesByName.put(GovernmentTrustCertificate.getCodeName().get(), GovernmentTrustCertificate);
+		codesByName.put(IMMIInstitutionalMMIMutualFundShares.getCodeName().get(), IMMIInstitutionalMMIMutualFundShares);
+		codesByName.put(JunkAndTreasuryGrowthReceiptJGR.getCodeName().get(), JunkAndTreasuryGrowthReceiptJGR);
+		codesByName.put(LimitedPartnership.getCodeName().get(), LimitedPartnership);
+		codesByName.put(MMIBankersAcceptanceNoteBA.getCodeName().get(), MMIBankersAcceptanceNoteBA);
+		codesByName.put(MMICorporateCommercialPaper.getCodeName().get(), MMICorporateCommercialPaper);
+		codesByName.put(MMICorporateVRDOCP.getCodeName().get(), MMICorporateVRDOCP);
+		codesByName.put(MMIDepositNote.getCodeName().get(), MMIDepositNote);
+		codesByName.put(MMIDiscountNote.getCodeName().get(), MMIDiscountNote);
+		codesByName.put(MMIInstitutionalCertificatesofDeposit.getCodeName().get(), MMIInstitutionalCertificatesofDeposit);
+		codesByName.put(MMIMediumTermBankNote.getCodeName().get(), MMIMediumTermBankNote);
+		codesByName.put(MMIMediumTermNote.getCodeName().get(), MMIMediumTermNote);
+		codesByName.put(MMIMunicipalCommercialPaper.getCodeName().get(), MMIMunicipalCommercialPaper);
+		codesByName.put(MMIMunicipalVRDOCP.getCodeName().get(), MMIMunicipalVRDOCP);
+		codesByName.put(MMIPreferredStockinCPlikemode.getCodeName().get(), MMIPreferredStockinCPlikemode);
+		codesByName.put(MMIShortTermBankNote.getCodeName().get(), MMIShortTermBankNote);
+		codesByName.put(MTNMediumTermNote.getCodeName().get(), MTNMediumTermNote);
+		codesByName.put(MunicipalAmortizedIssue.getCodeName().get(), MunicipalAmortizedIssue);
+		codesByName.put(MunicipalAuctionRateNoteARN.getCodeName().get(), MunicipalAuctionRateNoteARN);
+		codesByName.put(MunicipalBond.getCodeName().get(), MunicipalBond);
+		codesByName.put(MunicipalDerivative.getCodeName().get(), MunicipalDerivative);
+		codesByName.put(MunicipalInsuredCustodialReceipt.getCodeName().get(), MunicipalInsuredCustodialReceipt);
+		codesByName.put(MunicipalNote.getCodeName().get(), MunicipalNote);
+		codesByName.put(MunicipalOtherTaxExempt.getCodeName().get(), MunicipalOtherTaxExempt);
+		codesByName.put(MunicipalOptionCallRight.getCodeName().get(), MunicipalOptionCallRight);
+		codesByName.put(MunicipalVariableModeObligationVMO.getCodeName().get(), MunicipalVariableModeObligationVMO);
+		codesByName.put(MunicipalVariableRateDemandObligationVRDO.getCodeName().get(), MunicipalVariableRateDemandObligationVRDO);
+		codesByName.put(MutualFund.getCodeName().get(), MutualFund);
+		codesByName.put(NonCMOABSAmortizingIssue.getCodeName().get(), NonCMOABSAmortizingIssue);
+		codesByName.put(NonStandardAssetUserCUSIP.getCodeName().get(), NonStandardAssetUserCUSIP);
+		codesByName.put(OptionDerivative.getCodeName().get(), OptionDerivative);
+		codesByName.put(Package.getCodeName().get(), Package);
+		codesByName.put(PeriodicPaymentCommercialPaper.getCodeName().get(), PeriodicPaymentCommercialPaper);
+		codesByName.put(PreferredStock.getCodeName().get(), PreferredStock);
+		codesByName.put(PreferredStockREIT.getCodeName().get(), PreferredStockREIT);
+		codesByName.put(RealEstateInvestmentTrustREIT.getCodeName().get(), RealEstateInvestmentTrustREIT);
+		codesByName.put(REMICRealEstateMtgeInvestmentConduit.getCodeName().get(), REMICRealEstateMtgeInvestmentConduit);
+		codesByName.put(Right.getCodeName().get(), Right);
+		codesByName.put(SealedEnvelope.getCodeName().get(), SealedEnvelope);
+		codesByName.put(TenderRateNote.getCodeName().get(), TenderRateNote);
+		codesByName.put(TenderRatePreferredStock.getCodeName().get(), TenderRatePreferredStock);
+		codesByName.put(UnitInvestmentTrustUIT.getCodeName().get(), UnitInvestmentTrustUIT);
+		codesByName.put(UnitInvestmentTrustUITNuveenOnly.getCodeName().get(), UnitInvestmentTrustUITNuveenOnly);
+		codesByName.put(USGovernmentAgencySecurity.getCodeName().get(), USGovernmentAgencySecurity);
+		codesByName.put(USTreasuryBill.getCodeName().get(), USTreasuryBill);
+		codesByName.put(USTreasuryBond.getCodeName().get(), USTreasuryBond);
+		codesByName.put(USTreasurySecurity.getCodeName().get(), USTreasurySecurity);
+		codesByName.put(USTreasuryNote.getCodeName().get(), USTreasuryNote);
+		codesByName.put(Warrant.getCodeName().get(), Warrant);
+		codesByName.put(ZCPNDenominInitialPrincipalAmt.getCodeName().get(), ZCPNDenominInitialPrincipalAmt);
+		codesByName.put(ZeroCouponBond.getCodeName().get(), ZeroCouponBond);
+	}
+
+	public static DTCAssetType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DTCAssetType2Code[] values() {
+		DTCAssetType2Code[] values = new DTCAssetType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DTCAssetType2Code> {
+		@Override
+		public DTCAssetType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DTCAssetType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

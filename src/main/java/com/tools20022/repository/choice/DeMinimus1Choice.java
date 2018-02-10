@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.DeMinimusApplicable1;
 import com.tools20022.repository.msg.DeMinimusNotApplicable1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,16 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "De minimus applicability conditions."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DeMinimus1Choice", propOrder = {"deMinimusApplicable", "deMinimusNotApplicable"})
 public class DeMinimus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DeMnmsAplbl", required = true)
 	protected DeMinimusApplicable1 deMinimusApplicable;
 	/**
-	 * Conditions applicable when the investor is covered by the "de minimis"
-	 * exemption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -108,7 +109,7 @@ public class DeMinimus1Choice {
 	public static final MMMessageAssociationEnd mmDeMinimusApplicable = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Investor.mmDeMinimusApplicable;
-			componentContext_lazy = () -> DeMinimus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DeMinimus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DeMnmsAplbl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,11 +121,11 @@ public class DeMinimus1Choice {
 			type_lazy = () -> DeMinimusApplicable1.mmObject();
 		}
 	};
+	@XmlElement(name = "DeMnmsNotAplbl", required = true)
 	protected DeMinimusNotApplicable1 deMinimusNotApplicable;
 	/**
-	 * Conditions applicable when the investor is not covered by the
-	 * "de minimis" exemption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -159,7 +160,7 @@ public class DeMinimus1Choice {
 	public static final MMMessageAssociationEnd mmDeMinimusNotApplicable = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Investor.mmDeMinimusApplicable;
-			componentContext_lazy = () -> DeMinimus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DeMinimus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DeMnmsNotAplbl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,9 +176,9 @@ public class DeMinimus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DeMinimus1Choice.mmDeMinimusApplicable, DeMinimus1Choice.mmDeMinimusNotApplicable);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DeMinimus1Choice.mmDeMinimusApplicable, com.tools20022.repository.choice.DeMinimus1Choice.mmDeMinimusNotApplicable);
 				trace_lazy = () -> Investor.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeMinimus1Choice";
 				definition = "De minimus applicability conditions.";
@@ -186,21 +187,21 @@ public class DeMinimus1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DeMnmsAplbl", required = true)
 	public DeMinimusApplicable1 getDeMinimusApplicable() {
 		return deMinimusApplicable;
 	}
 
-	public void setDeMinimusApplicable(DeMinimusApplicable1 deMinimusApplicable) {
-		this.deMinimusApplicable = deMinimusApplicable;
+	public DeMinimus1Choice setDeMinimusApplicable(DeMinimusApplicable1 deMinimusApplicable) {
+		this.deMinimusApplicable = Objects.requireNonNull(deMinimusApplicable);
+		return this;
 	}
 
-	@XmlElement(name = "DeMnmsNotAplbl", required = true)
 	public DeMinimusNotApplicable1 getDeMinimusNotApplicable() {
 		return deMinimusNotApplicable;
 	}
 
-	public void setDeMinimusNotApplicable(DeMinimusNotApplicable1 deMinimusNotApplicable) {
-		this.deMinimusNotApplicable = deMinimusNotApplicable;
+	public DeMinimus1Choice setDeMinimusNotApplicable(DeMinimusNotApplicable1 deMinimusNotApplicable) {
+		this.deMinimusNotApplicable = Objects.requireNonNull(deMinimusNotApplicable);
+		return this;
 	}
 }

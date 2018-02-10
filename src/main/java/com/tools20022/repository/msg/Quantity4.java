@@ -32,6 +32,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -45,8 +47,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Quantity4#mmUnitOfMeasureCodeOrOtherUnitOfMeasureRule
- * Quantity4.mmUnitOfMeasureCodeOrOtherUnitOfMeasureRule}</li>
+ * {@linkplain com.tools20022.repository.msg.Quantity4#UnitOfMeasureCodeOrOtherUnitOfMeasureRule
+ * Quantity4.UnitOfMeasureCodeOrOtherUnitOfMeasureRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -69,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -88,15 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Quantity4", propOrder = {"unitOfMeasureCode", "otherUnitOfMeasure", "value", "factor"})
 public class Quantity4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UnitOfMeasrCd", required = true)
 	protected UnitOfMeasure4Code unitOfMeasureCode;
 	/**
-	 * Specifies the unit of measurement. For example, kilo, tons.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +133,7 @@ public class Quantity4 {
 	public static final MMMessageAttribute mmUnitOfMeasureCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
-			componentContext_lazy = () -> Quantity4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity4.mmObject();
 			isDerived = false;
 			xmlTag = "UnitOfMeasrCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,10 +144,11 @@ public class Quantity4 {
 			simpleType_lazy = () -> UnitOfMeasure4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrUnitOfMeasr", required = true)
 	protected Max35Text otherUnitOfMeasure;
 	/**
-	 * Identifies the unit of measure not present in the code list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,7 +181,7 @@ public class Quantity4 {
 	public static final MMMessageAttribute mmOtherUnitOfMeasure = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
-			componentContext_lazy = () -> Quantity4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity4.mmObject();
 			isDerived = false;
 			xmlTag = "OthrUnitOfMeasr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,11 +192,11 @@ public class Quantity4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Val", required = true)
 	protected DecimalNumber value;
 	/**
-	 * Quantity of a product on a line specified by a number. For example, 100
-	 * (kgs), 50 (pieces).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,7 +238,7 @@ public class Quantity4 {
 	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmValue;
-			componentContext_lazy = () -> Quantity4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity4.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -246,11 +250,11 @@ public class Quantity4 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "Fctr")
 	protected Max15NumericText factor;
 	/**
-	 * Multiplication factor of measurement values. For example: goods that can
-	 * be ordered by 36 pieces.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -292,7 +296,7 @@ public class Quantity4 {
 	public static final MMMessageAttribute mmFactor = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmFactor;
-			componentContext_lazy = () -> Quantity4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity4.mmObject();
 			isDerived = false;
 			xmlTag = "Fctr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -338,22 +342,23 @@ public class Quantity4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmUnitOfMeasureCodeOrOtherUnitOfMeasureRule = new MMXor() {
+	public static final MMXor UnitOfMeasureCodeOrOtherUnitOfMeasureRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitOfMeasureCodeOrOtherUnitOfMeasureRule";
 			definition = "If UnitOfMeasureCode is present, then OtherUnitOfMeasure is not allowed. If UnitOfMeasureCode is not present, then OtherUnitOfMeasure is mandatory.";
-			messageComponent_lazy = () -> Quantity4.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(Quantity4.mmUnitOfMeasureCode, Quantity4.mmOtherUnitOfMeasure);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.Quantity4.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quantity4.mmUnitOfMeasureCode, com.tools20022.repository.msg.Quantity4.mmOtherUnitOfMeasure);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Quantity4.mmUnitOfMeasureCode, Quantity4.mmOtherUnitOfMeasure, Quantity4.mmValue, Quantity4.mmFactor);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quantity4.mmUnitOfMeasureCode, com.tools20022.repository.msg.Quantity4.mmOtherUnitOfMeasure, com.tools20022.repository.msg.Quantity4.mmValue,
+						com.tools20022.repository.msg.Quantity4.mmFactor);
 				trace_lazy = () -> ProductQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -365,45 +370,45 @@ public class Quantity4 {
 				name = "Quantity4";
 				definition = "Specifies the quantity of a product in a trade transaction.";
 				nextVersions_lazy = () -> Arrays.asList(Quantity9.mmObject());
-				xors_lazy = () -> Arrays.asList(Quantity4.mmUnitOfMeasureCodeOrOtherUnitOfMeasureRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quantity4.UnitOfMeasureCodeOrOtherUnitOfMeasureRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UnitOfMeasrCd", required = true)
 	public UnitOfMeasure4Code getUnitOfMeasureCode() {
 		return unitOfMeasureCode;
 	}
 
-	public void setUnitOfMeasureCode(UnitOfMeasure4Code unitOfMeasureCode) {
-		this.unitOfMeasureCode = unitOfMeasureCode;
+	public Quantity4 setUnitOfMeasureCode(UnitOfMeasure4Code unitOfMeasureCode) {
+		this.unitOfMeasureCode = Objects.requireNonNull(unitOfMeasureCode);
+		return this;
 	}
 
-	@XmlElement(name = "OthrUnitOfMeasr", required = true)
 	public Max35Text getOtherUnitOfMeasure() {
 		return otherUnitOfMeasure;
 	}
 
-	public void setOtherUnitOfMeasure(Max35Text otherUnitOfMeasure) {
-		this.otherUnitOfMeasure = otherUnitOfMeasure;
+	public Quantity4 setOtherUnitOfMeasure(Max35Text otherUnitOfMeasure) {
+		this.otherUnitOfMeasure = Objects.requireNonNull(otherUnitOfMeasure);
+		return this;
 	}
 
-	@XmlElement(name = "Val", required = true)
 	public DecimalNumber getValue() {
 		return value;
 	}
 
-	public void setValue(DecimalNumber value) {
-		this.value = value;
+	public Quantity4 setValue(DecimalNumber value) {
+		this.value = Objects.requireNonNull(value);
+		return this;
 	}
 
-	@XmlElement(name = "Fctr")
-	public Max15NumericText getFactor() {
-		return factor;
+	public Optional<Max15NumericText> getFactor() {
+		return factor == null ? Optional.empty() : Optional.of(factor);
 	}
 
-	public void setFactor(Max15NumericText factor) {
+	public Quantity4 setFactor(Max15NumericText factor) {
 		this.factor = factor;
+		return this;
 	}
 }

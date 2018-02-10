@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about short positions."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ShortPositionsReportDetails1", propOrder = {"participantIdentification", "participantAccount", "shortPositionAmount"})
 public class ShortPositionsReportDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PtcptId", required = true)
 	protected BranchAndFinancialInstitutionIdentification5 participantIdentification;
 	/**
-	 * Identification of participant account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -100,7 +102,7 @@ public class ShortPositionsReportDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmParticipantIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ShortPositionsReportDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ShortPositionsReportDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +114,11 @@ public class ShortPositionsReportDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "PtcptAcct", required = true)
 	protected CashAccount24 participantAccount;
 	/**
-	 * Information about participant account number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -141,7 +144,7 @@ public class ShortPositionsReportDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmParticipantAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ShortPositionsReportDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ShortPositionsReportDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,10 +156,11 @@ public class ShortPositionsReportDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "ShrtPosAmt", required = true)
 	protected ActiveCurrencyAndAmount shortPositionAmount;
 	/**
-	 * Information about participant account balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -184,7 +188,7 @@ public class ShortPositionsReportDetails1 {
 	 */
 	public static final MMMessageAttribute mmShortPositionAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ShortPositionsReportDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ShortPositionsReportDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtPosAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,8 +203,9 @@ public class ShortPositionsReportDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ShortPositionsReportDetails1.mmParticipantIdentification, ShortPositionsReportDetails1.mmParticipantAccount, ShortPositionsReportDetails1.mmShortPositionAmount);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ShortPositionsReportDetails1.mmParticipantIdentification, com.tools20022.repository.msg.ShortPositionsReportDetails1.mmParticipantAccount,
+						com.tools20022.repository.msg.ShortPositionsReportDetails1.mmShortPositionAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ShortPositionsReportDetails1";
 				definition = "Information about short positions.";
@@ -209,30 +214,30 @@ public class ShortPositionsReportDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PtcptId", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getParticipantIdentification() {
 		return participantIdentification;
 	}
 
-	public void setParticipantIdentification(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 participantIdentification) {
-		this.participantIdentification = participantIdentification;
+	public ShortPositionsReportDetails1 setParticipantIdentification(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 participantIdentification) {
+		this.participantIdentification = Objects.requireNonNull(participantIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PtcptAcct", required = true)
 	public CashAccount24 getParticipantAccount() {
 		return participantAccount;
 	}
 
-	public void setParticipantAccount(com.tools20022.repository.msg.CashAccount24 participantAccount) {
-		this.participantAccount = participantAccount;
+	public ShortPositionsReportDetails1 setParticipantAccount(com.tools20022.repository.msg.CashAccount24 participantAccount) {
+		this.participantAccount = Objects.requireNonNull(participantAccount);
+		return this;
 	}
 
-	@XmlElement(name = "ShrtPosAmt", required = true)
 	public ActiveCurrencyAndAmount getShortPositionAmount() {
 		return shortPositionAmount;
 	}
 
-	public void setShortPositionAmount(ActiveCurrencyAndAmount shortPositionAmount) {
-		this.shortPositionAmount = shortPositionAmount;
+	public ShortPositionsReportDetails1 setShortPositionAmount(ActiveCurrencyAndAmount shortPositionAmount) {
+		this.shortPositionAmount = Objects.requireNonNull(shortPositionAmount);
+		return this;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,17 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GeographicCoordinates1", propOrder = {"latitude", "longitude"})
 public class GeographicCoordinates1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Lat", required = true)
 	protected Max16Text latitude;
 	/**
-	 * Latitude measured in degrees, minutes and seconds, following by 'N' for
-	 * the north and 'S' for the south of the equator (for example 48°51'29" N
-	 * for the Eiffel Tower latitude).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -103,7 +103,7 @@ public class GeographicCoordinates1 {
 	 */
 	public static final MMMessageAttribute mmLatitude = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GeographicCoordinates1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GeographicCoordinates1.mmObject();
 			isDerived = false;
 			xmlTag = "Lat";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,14 +114,11 @@ public class GeographicCoordinates1 {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Long", required = true)
 	protected Max16Text longitude;
 	/**
-	 * Angular measurement of the distance of a location on the earth east or
-	 * west of the Greenwich observatory.<br>
-	 * The longitude is measured in degrees, minutes and seconds, following by
-	 * 'E' for the east and 'W' for the west (for example 2°17'40" E for the
-	 * Eiffel Tower longitude).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,7 +147,7 @@ public class GeographicCoordinates1 {
 	 */
 	public static final MMMessageAttribute mmLongitude = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GeographicCoordinates1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GeographicCoordinates1.mmObject();
 			isDerived = false;
 			xmlTag = "Long";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,8 +162,8 @@ public class GeographicCoordinates1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GeographicCoordinates1.mmLatitude, GeographicCoordinates1.mmLongitude);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeographicCoordinates1.mmLatitude, com.tools20022.repository.msg.GeographicCoordinates1.mmLongitude);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GeographicCoordinates1";
 				definition = "Location on the Earth specified by two numbers representing vertical and horizontal position.";
@@ -175,21 +172,21 @@ public class GeographicCoordinates1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Lat", required = true)
 	public Max16Text getLatitude() {
 		return latitude;
 	}
 
-	public void setLatitude(Max16Text latitude) {
-		this.latitude = latitude;
+	public GeographicCoordinates1 setLatitude(Max16Text latitude) {
+		this.latitude = Objects.requireNonNull(latitude);
+		return this;
 	}
 
-	@XmlElement(name = "Long", required = true)
 	public Max16Text getLongitude() {
 		return longitude;
 	}
 
-	public void setLongitude(Max16Text longitude) {
-		this.longitude = longitude;
+	public GeographicCoordinates1 setLongitude(Max16Text longitude) {
+		this.longitude = Objects.requireNonNull(longitude);
+		return this;
 	}
 }

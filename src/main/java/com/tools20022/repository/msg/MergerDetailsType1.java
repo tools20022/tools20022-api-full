@@ -24,9 +24,8 @@ import com.tools20022.repository.codeset.MergerCode;
 import com.tools20022.repository.codeset.MergerTypeCode;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,16 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides additional information about mergers."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MergerDetailsType1", propOrder = {"mergerType", "counterpartyDetails", "simplifiedMergerClassification", "shortFormMergerClassification", "shareUnitQuantityOfNewCompany"})
 public class MergerDetailsType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MrgrTp")
 	protected MergerTypeCode mergerType;
 	/**
-	 * Differentiation of different types of merger.<br>
-	 * 合併/株式交換/株式移転の区分
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +110,7 @@ public class MergerDetailsType1 {
 	 */
 	public static final MMMessageAttribute mmMergerType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MergerDetailsType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MergerDetailsType1.mmObject();
 			isDerived = false;
 			xmlTag = "MrgrTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,12 +121,11 @@ public class MergerDetailsType1 {
 			simpleType_lazy = () -> MergerTypeCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrPtyDtls")
 	protected List<com.tools20022.repository.msg.CounterpartyDetailsType1> counterpartyDetails;
 	/**
-	 * Information about the counterparty in case of [sankaku] gappei: the
-	 * scenario where a third party is involved as one of the counterparties in
-	 * the merger but there is no security movement from the third party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +155,7 @@ public class MergerDetailsType1 {
 	 */
 	public static final MMMessageAttribute mmCounterpartyDetails = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MergerDetailsType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MergerDetailsType1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,12 +165,11 @@ public class MergerDetailsType1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.CounterpartyDetailsType1.mmObject();
 		}
 	};
+	@XmlElement(name = "SmplfdMrgrClssfctn")
 	protected MergerCode simplifiedMergerClassification;
 	/**
-	 * Classification of the simplified merger regulatory condition of the
-	 * parent company.<br>
-	 * 簡易区分
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,7 +198,7 @@ public class MergerDetailsType1 {
 	 */
 	public static final MMMessageAttribute mmSimplifiedMergerClassification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MergerDetailsType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MergerDetailsType1.mmObject();
 			isDerived = false;
 			xmlTag = "SmplfdMrgrClssfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,12 +209,11 @@ public class MergerDetailsType1 {
 			simpleType_lazy = () -> MergerCode.mmObject();
 		}
 	};
+	@XmlElement(name = "ShrtFormMrgrClssfctn")
 	protected MergerCode shortFormMergerClassification;
 	/**
-	 * Classification of the short form merger regulatory condition of the
-	 * subsidiary company.<br>
-	 * 略式区分
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -246,7 +242,7 @@ public class MergerDetailsType1 {
 	 */
 	public static final MMMessageAttribute mmShortFormMergerClassification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MergerDetailsType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MergerDetailsType1.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtFormMrgrClssfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,11 +253,11 @@ public class MergerDetailsType1 {
 			simpleType_lazy = () -> MergerCode.mmObject();
 		}
 	};
+	@XmlElement(name = "ShrUnitQtyOfNewCpny")
 	protected Number shareUnitQuantityOfNewCompany;
 	/**
-	 * Share unit quantity of the shares of the new company.<br>
-	 * 新設会社の単元株数
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -289,7 +285,7 @@ public class MergerDetailsType1 {
 	 */
 	public static final MMMessageAttribute mmShareUnitQuantityOfNewCompany = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MergerDetailsType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MergerDetailsType1.mmObject();
 			isDerived = false;
 			xmlTag = "ShrUnitQtyOfNewCpny";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -304,9 +300,10 @@ public class MergerDetailsType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MergerDetailsType1.mmMergerType, MergerDetailsType1.mmCounterpartyDetails, MergerDetailsType1.mmSimplifiedMergerClassification, MergerDetailsType1.mmShortFormMergerClassification,
-						MergerDetailsType1.mmShareUnitQuantityOfNewCompany);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MergerDetailsType1.mmMergerType, com.tools20022.repository.msg.MergerDetailsType1.mmCounterpartyDetails,
+						com.tools20022.repository.msg.MergerDetailsType1.mmSimplifiedMergerClassification, com.tools20022.repository.msg.MergerDetailsType1.mmShortFormMergerClassification,
+						com.tools20022.repository.msg.MergerDetailsType1.mmShareUnitQuantityOfNewCompany);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MergerDetailsType1";
 				definition = "Provides additional information about mergers.";
@@ -315,48 +312,48 @@ public class MergerDetailsType1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MrgrTp")
-	public MergerTypeCode getMergerType() {
-		return mergerType;
+	public Optional<MergerTypeCode> getMergerType() {
+		return mergerType == null ? Optional.empty() : Optional.of(mergerType);
 	}
 
-	public void setMergerType(MergerTypeCode mergerType) {
+	public MergerDetailsType1 setMergerType(MergerTypeCode mergerType) {
 		this.mergerType = mergerType;
+		return this;
 	}
 
-	@XmlElement(name = "CtrPtyDtls")
 	public List<CounterpartyDetailsType1> getCounterpartyDetails() {
-		return counterpartyDetails;
+		return counterpartyDetails == null ? counterpartyDetails = new ArrayList<>() : counterpartyDetails;
 	}
 
-	public void setCounterpartyDetails(List<com.tools20022.repository.msg.CounterpartyDetailsType1> counterpartyDetails) {
-		this.counterpartyDetails = counterpartyDetails;
+	public MergerDetailsType1 setCounterpartyDetails(List<com.tools20022.repository.msg.CounterpartyDetailsType1> counterpartyDetails) {
+		this.counterpartyDetails = Objects.requireNonNull(counterpartyDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SmplfdMrgrClssfctn")
-	public MergerCode getSimplifiedMergerClassification() {
-		return simplifiedMergerClassification;
+	public Optional<MergerCode> getSimplifiedMergerClassification() {
+		return simplifiedMergerClassification == null ? Optional.empty() : Optional.of(simplifiedMergerClassification);
 	}
 
-	public void setSimplifiedMergerClassification(MergerCode simplifiedMergerClassification) {
+	public MergerDetailsType1 setSimplifiedMergerClassification(MergerCode simplifiedMergerClassification) {
 		this.simplifiedMergerClassification = simplifiedMergerClassification;
+		return this;
 	}
 
-	@XmlElement(name = "ShrtFormMrgrClssfctn")
-	public MergerCode getShortFormMergerClassification() {
-		return shortFormMergerClassification;
+	public Optional<MergerCode> getShortFormMergerClassification() {
+		return shortFormMergerClassification == null ? Optional.empty() : Optional.of(shortFormMergerClassification);
 	}
 
-	public void setShortFormMergerClassification(MergerCode shortFormMergerClassification) {
+	public MergerDetailsType1 setShortFormMergerClassification(MergerCode shortFormMergerClassification) {
 		this.shortFormMergerClassification = shortFormMergerClassification;
+		return this;
 	}
 
-	@XmlElement(name = "ShrUnitQtyOfNewCpny")
-	public Number getShareUnitQuantityOfNewCompany() {
-		return shareUnitQuantityOfNewCompany;
+	public Optional<Number> getShareUnitQuantityOfNewCompany() {
+		return shareUnitQuantityOfNewCompany == null ? Optional.empty() : Optional.of(shareUnitQuantityOfNewCompany);
 	}
 
-	public void setShareUnitQuantityOfNewCompany(Number shareUnitQuantityOfNewCompany) {
+	public MergerDetailsType1 setShareUnitQuantityOfNewCompany(Number shareUnitQuantityOfNewCompany) {
 		this.shareUnitQuantityOfNewCompany = shareUnitQuantityOfNewCompany;
+		return this;
 	}
 }

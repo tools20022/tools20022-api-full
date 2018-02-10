@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.SecuritiesTradeExecution;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice for specifying how the trade was executed off-market."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OffMarket1Choice", propOrder = {"offMarketIndicator", "systematicInternaliser"})
 public class OffMarket1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OffMktInd", required = true)
 	protected OffMarket1Code offMarketIndicator;
 	/**
-	 * Indicates that the trade was executed off-exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +112,7 @@ public class OffMarket1Choice {
 	public static final MMMessageAttribute mmOffMarketIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmOffMarketReason;
-			componentContext_lazy = () -> OffMarket1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.OffMarket1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OffMktInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +123,11 @@ public class OffMarket1Choice {
 			simpleType_lazy = () -> OffMarket1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SystmtcIntlr", required = true)
 	protected AnyBICIdentifier systematicInternaliser;
 	/**
-	 * Provides the BIC code of the systematic internaliser.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +161,7 @@ public class OffMarket1Choice {
 	public static final MMMessageAttribute mmSystematicInternaliser = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
-			componentContext_lazy = () -> OffMarket1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.OffMarket1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SystmtcIntlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,9 +176,9 @@ public class OffMarket1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OffMarket1Choice.mmOffMarketIndicator, OffMarket1Choice.mmSystematicInternaliser);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OffMarket1Choice.mmOffMarketIndicator, com.tools20022.repository.choice.OffMarket1Choice.mmSystematicInternaliser);
 				trace_lazy = () -> SecuritiesTradeExecution.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OffMarket1Choice";
 				definition = "Choice for specifying how the trade was executed off-market.";
@@ -184,21 +187,21 @@ public class OffMarket1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OffMktInd", required = true)
 	public OffMarket1Code getOffMarketIndicator() {
 		return offMarketIndicator;
 	}
 
-	public void setOffMarketIndicator(OffMarket1Code offMarketIndicator) {
-		this.offMarketIndicator = offMarketIndicator;
+	public OffMarket1Choice setOffMarketIndicator(OffMarket1Code offMarketIndicator) {
+		this.offMarketIndicator = Objects.requireNonNull(offMarketIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "SystmtcIntlr", required = true)
 	public AnyBICIdentifier getSystematicInternaliser() {
 		return systematicInternaliser;
 	}
 
-	public void setSystematicInternaliser(AnyBICIdentifier systematicInternaliser) {
-		this.systematicInternaliser = systematicInternaliser;
+	public OffMarket1Choice setSystematicInternaliser(AnyBICIdentifier systematicInternaliser) {
+		this.systematicInternaliser = Objects.requireNonNull(systematicInternaliser);
+		return this;
 	}
 }

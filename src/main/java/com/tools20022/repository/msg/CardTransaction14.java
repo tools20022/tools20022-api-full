@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardServiceType3Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * CardTransaction13}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardTransaction14", propOrder = {"keyExchangeType", "initiatorDateTime", "keyVerification", "key", "transactionResponse"})
 public class CardTransaction14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "KeyXchgTp", required = true)
 	protected CardServiceType3Code keyExchangeType;
 	/**
-	 * Type of key exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +115,7 @@ public class CardTransaction14 {
 	 */
 	public static final MMMessageAttribute mmKeyExchangeType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardTransaction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction14.mmObject();
 			isDerived = false;
 			xmlTag = "KeyXchgTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +126,11 @@ public class CardTransaction14 {
 			simpleType_lazy = () -> CardServiceType3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "InitrDtTm", required = true)
 	protected ISODateTime initiatorDateTime;
 	/**
-	 * Date and time of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,7 +157,7 @@ public class CardTransaction14 {
 	 */
 	public static final MMMessageAttribute mmInitiatorDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardTransaction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction14.mmObject();
 			isDerived = false;
 			xmlTag = "InitrDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,10 +168,11 @@ public class CardTransaction14 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "KeyVrfctn")
 	protected List<com.tools20022.repository.msg.KEKIdentifier3> keyVerification;
 	/**
-	 * Key that has been verified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -193,7 +198,7 @@ public class CardTransaction14 {
 	 */
 	public static final MMMessageAssociationEnd mmKeyVerification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardTransaction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction14.mmObject();
 			isDerived = false;
 			xmlTag = "KeyVrfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,10 +209,11 @@ public class CardTransaction14 {
 			type_lazy = () -> com.tools20022.repository.msg.KEKIdentifier3.mmObject();
 		}
 	};
+	@XmlElement(name = "Key")
 	protected List<com.tools20022.repository.msg.CryptographicKey6> key;
 	/**
-	 * Created key to be stored.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -238,7 +244,7 @@ public class CardTransaction14 {
 	 */
 	public static final MMMessageAssociationEnd mmKey = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardTransaction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction14.mmObject();
 			isDerived = false;
 			xmlTag = "Key";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -250,10 +256,11 @@ public class CardTransaction14 {
 			type_lazy = () -> com.tools20022.repository.msg.CryptographicKey6.mmObject();
 		}
 	};
+	@XmlElement(name = "TxRspn", required = true)
 	protected ResponseType2 transactionResponse;
 	/**
-	 * Response to the key exchange request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -279,7 +286,7 @@ public class CardTransaction14 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardTransaction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction14.mmObject();
 			isDerived = false;
 			xmlTag = "TxRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -295,8 +302,9 @@ public class CardTransaction14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardTransaction14.mmKeyExchangeType, CardTransaction14.mmInitiatorDateTime, CardTransaction14.mmKeyVerification, CardTransaction14.mmKey, CardTransaction14.mmTransactionResponse);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction14.mmKeyExchangeType, com.tools20022.repository.msg.CardTransaction14.mmInitiatorDateTime,
+						com.tools20022.repository.msg.CardTransaction14.mmKeyVerification, com.tools20022.repository.msg.CardTransaction14.mmKey, com.tools20022.repository.msg.CardTransaction14.mmTransactionResponse);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransaction14";
 				definition = "Key exchange transaction.";
@@ -306,48 +314,48 @@ public class CardTransaction14 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "KeyXchgTp", required = true)
 	public CardServiceType3Code getKeyExchangeType() {
 		return keyExchangeType;
 	}
 
-	public void setKeyExchangeType(CardServiceType3Code keyExchangeType) {
-		this.keyExchangeType = keyExchangeType;
+	public CardTransaction14 setKeyExchangeType(CardServiceType3Code keyExchangeType) {
+		this.keyExchangeType = Objects.requireNonNull(keyExchangeType);
+		return this;
 	}
 
-	@XmlElement(name = "InitrDtTm", required = true)
 	public ISODateTime getInitiatorDateTime() {
 		return initiatorDateTime;
 	}
 
-	public void setInitiatorDateTime(ISODateTime initiatorDateTime) {
-		this.initiatorDateTime = initiatorDateTime;
+	public CardTransaction14 setInitiatorDateTime(ISODateTime initiatorDateTime) {
+		this.initiatorDateTime = Objects.requireNonNull(initiatorDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "KeyVrfctn")
 	public List<KEKIdentifier3> getKeyVerification() {
-		return keyVerification;
+		return keyVerification == null ? keyVerification = new ArrayList<>() : keyVerification;
 	}
 
-	public void setKeyVerification(List<com.tools20022.repository.msg.KEKIdentifier3> keyVerification) {
-		this.keyVerification = keyVerification;
+	public CardTransaction14 setKeyVerification(List<com.tools20022.repository.msg.KEKIdentifier3> keyVerification) {
+		this.keyVerification = Objects.requireNonNull(keyVerification);
+		return this;
 	}
 
-	@XmlElement(name = "Key")
 	public List<CryptographicKey6> getKey() {
-		return key;
+		return key == null ? key = new ArrayList<>() : key;
 	}
 
-	public void setKey(List<com.tools20022.repository.msg.CryptographicKey6> key) {
-		this.key = key;
+	public CardTransaction14 setKey(List<com.tools20022.repository.msg.CryptographicKey6> key) {
+		this.key = Objects.requireNonNull(key);
+		return this;
 	}
 
-	@XmlElement(name = "TxRspn", required = true)
 	public ResponseType2 getTransactionResponse() {
 		return transactionResponse;
 	}
 
-	public void setTransactionResponse(com.tools20022.repository.msg.ResponseType2 transactionResponse) {
-		this.transactionResponse = transactionResponse;
+	public CardTransaction14 setTransactionResponse(com.tools20022.repository.msg.ResponseType2 transactionResponse) {
+		this.transactionResponse = Objects.requireNonNull(transactionResponse);
+		return this;
 	}
 }

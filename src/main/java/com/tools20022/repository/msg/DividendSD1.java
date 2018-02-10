@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Dividend;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,18 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Extension to specify rates of a corporate action."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DividendSD1", propOrder = {"placeAndName", "totalAnnualDividendRate", "maximumAnnualTotalDividendRate", "minimumAnnualTotalDividendRate"})
 public class DividendSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm")
 	protected Max350Text placeAndName;
 	/**
-	 * Unambiguous reference to the location where the supplementary data must
-	 * be inserted in the message instance. <br>
-	 * <br>
-	 * In the case of XML, this is expressed by a valid XPath.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +108,7 @@ public class DividendSD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DividendSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DividendSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +119,11 @@ public class DividendSD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlAnlDvddRate")
 	protected RateAndAmountFormat16Choice totalAnnualDividendRate;
 	/**
-	 * Provides the total annual dividend rate as announced by the Issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +157,7 @@ public class DividendSD1 {
 	public static final MMMessageAttribute mmTotalAnnualDividendRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmAnnualTotalDividendRate;
-			componentContext_lazy = () -> DividendSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DividendSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAnlDvddRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,11 +168,11 @@ public class DividendSD1 {
 			complexType_lazy = () -> RateAndAmountFormat16Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxAnlTtlDvddRate")
 	protected RateAndAmountFormat16Choice maximumAnnualTotalDividendRate;
 	/**
-	 * Provides the maximum annual total dividend rate as announced by the
-	 * Issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -207,7 +207,7 @@ public class DividendSD1 {
 	public static final MMMessageAttribute mmMaximumAnnualTotalDividendRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmAnnualTotalDividendRate;
-			componentContext_lazy = () -> DividendSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DividendSD1.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAnlTtlDvddRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,11 +218,11 @@ public class DividendSD1 {
 			complexType_lazy = () -> RateAndAmountFormat16Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MinAnlTtlDvddRate")
 	protected RateAndAmountFormat16Choice minimumAnnualTotalDividendRate;
 	/**
-	 * Provides the minimum annual total dividend rate as announced by the
-	 * Issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -257,7 +257,7 @@ public class DividendSD1 {
 	public static final MMMessageAttribute mmMinimumAnnualTotalDividendRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmAnnualTotalDividendRate;
-			componentContext_lazy = () -> DividendSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DividendSD1.mmObject();
 			isDerived = false;
 			xmlTag = "MinAnlTtlDvddRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,9 +272,10 @@ public class DividendSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DividendSD1.mmPlaceAndName, DividendSD1.mmTotalAnnualDividendRate, DividendSD1.mmMaximumAnnualTotalDividendRate, DividendSD1.mmMinimumAnnualTotalDividendRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DividendSD1.mmPlaceAndName, com.tools20022.repository.msg.DividendSD1.mmTotalAnnualDividendRate,
+						com.tools20022.repository.msg.DividendSD1.mmMaximumAnnualTotalDividendRate, com.tools20022.repository.msg.DividendSD1.mmMinimumAnnualTotalDividendRate);
 				trace_lazy = () -> Dividend.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DividendSD1";
 				definition = "Extension to specify rates of a corporate action.";
@@ -283,39 +284,39 @@ public class DividendSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm")
-	public Max350Text getPlaceAndName() {
-		return placeAndName;
+	public Optional<Max350Text> getPlaceAndName() {
+		return placeAndName == null ? Optional.empty() : Optional.of(placeAndName);
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
+	public DividendSD1 setPlaceAndName(Max350Text placeAndName) {
 		this.placeAndName = placeAndName;
+		return this;
 	}
 
-	@XmlElement(name = "TtlAnlDvddRate")
-	public RateAndAmountFormat16Choice getTotalAnnualDividendRate() {
-		return totalAnnualDividendRate;
+	public Optional<RateAndAmountFormat16Choice> getTotalAnnualDividendRate() {
+		return totalAnnualDividendRate == null ? Optional.empty() : Optional.of(totalAnnualDividendRate);
 	}
 
-	public void setTotalAnnualDividendRate(RateAndAmountFormat16Choice totalAnnualDividendRate) {
+	public DividendSD1 setTotalAnnualDividendRate(RateAndAmountFormat16Choice totalAnnualDividendRate) {
 		this.totalAnnualDividendRate = totalAnnualDividendRate;
+		return this;
 	}
 
-	@XmlElement(name = "MaxAnlTtlDvddRate")
-	public RateAndAmountFormat16Choice getMaximumAnnualTotalDividendRate() {
-		return maximumAnnualTotalDividendRate;
+	public Optional<RateAndAmountFormat16Choice> getMaximumAnnualTotalDividendRate() {
+		return maximumAnnualTotalDividendRate == null ? Optional.empty() : Optional.of(maximumAnnualTotalDividendRate);
 	}
 
-	public void setMaximumAnnualTotalDividendRate(RateAndAmountFormat16Choice maximumAnnualTotalDividendRate) {
+	public DividendSD1 setMaximumAnnualTotalDividendRate(RateAndAmountFormat16Choice maximumAnnualTotalDividendRate) {
 		this.maximumAnnualTotalDividendRate = maximumAnnualTotalDividendRate;
+		return this;
 	}
 
-	@XmlElement(name = "MinAnlTtlDvddRate")
-	public RateAndAmountFormat16Choice getMinimumAnnualTotalDividendRate() {
-		return minimumAnnualTotalDividendRate;
+	public Optional<RateAndAmountFormat16Choice> getMinimumAnnualTotalDividendRate() {
+		return minimumAnnualTotalDividendRate == null ? Optional.empty() : Optional.of(minimumAnnualTotalDividendRate);
 	}
 
-	public void setMinimumAnnualTotalDividendRate(RateAndAmountFormat16Choice minimumAnnualTotalDividendRate) {
+	public DividendSD1 setMinimumAnnualTotalDividendRate(RateAndAmountFormat16Choice minimumAnnualTotalDividendRate) {
 		this.minimumAnnualTotalDividendRate = minimumAnnualTotalDividendRate;
+		return this;
 	}
 }

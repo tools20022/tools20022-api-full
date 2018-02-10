@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AccountManagementTypeCode;
+import com.tools20022.repository.codeset.AccountManagementType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the instruction for which an status is required.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AccountManagementTypeCode
- * AccountManagementTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementType3Code#mmAccountModification
- * AccountManagementType3Code.mmAccountModification}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementType3Code#AccountModification
+ * AccountManagementType3Code.AccountModification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementType3Code#mmAccountOpening
- * AccountManagementType3Code.mmAccountOpening}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementType3Code#AccountOpening
+ * AccountManagementType3Code.AccountOpening}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementType3Code#mmGetAccountDetails
- * AccountManagementType3Code.mmGetAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementType3Code#GetAccountDetails
+ * AccountManagementType3Code.GetAccountDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementType3Code#mmAccountStatus
- * AccountManagementType3Code.mmAccountStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementType3Code#AccountStatus
+ * AccountManagementType3Code.AccountStatus}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementTypeCode
+ * AccountManagementTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the instruction for which an status is required."</li>
  * </ul>
  */
-public class AccountManagementType3Code extends AccountManagementTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AccountManagementType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class AccountManagementType3Code extends AccountManagementTypeCode {
 	 * name} = "AccountModification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountModification = new MMCode() {
+	public static final AccountManagementType3Code AccountModification = new AccountManagementType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountModification";
-			owner_lazy = () -> AccountManagementType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountManagementType3Code.mmObject();
+			codeName = AccountManagementTypeCode.AccountModification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,11 +112,12 @@ public class AccountManagementType3Code extends AccountManagementTypeCode {
 	 * name} = "AccountOpening"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountOpening = new MMCode() {
+	public static final AccountManagementType3Code AccountOpening = new AccountManagementType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOpening";
-			owner_lazy = () -> AccountManagementType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountManagementType3Code.mmObject();
+			codeName = AccountManagementTypeCode.AccountOpening.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -129,11 +136,12 @@ public class AccountManagementType3Code extends AccountManagementTypeCode {
 	 * name} = "GetAccountDetails"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGetAccountDetails = new MMCode() {
+	public static final AccountManagementType3Code GetAccountDetails = new AccountManagementType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GetAccountDetails";
-			owner_lazy = () -> AccountManagementType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountManagementType3Code.mmObject();
+			codeName = AccountManagementTypeCode.GetAccountDetails.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -152,25 +160,59 @@ public class AccountManagementType3Code extends AccountManagementTypeCode {
 	 * name} = "AccountStatus"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountStatus = new MMCode() {
+	public static final AccountManagementType3Code AccountStatus = new AccountManagementType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountStatus";
-			owner_lazy = () -> AccountManagementType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountManagementType3Code.mmObject();
+			codeName = AccountManagementTypeCode.AccountStatus.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AccountManagementType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AccountManagementType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementType3Code";
 				definition = "Specifies the instruction for which an status is required.";
-				code_lazy = () -> Arrays.asList(AccountManagementType3Code.mmAccountModification, AccountManagementType3Code.mmAccountOpening, AccountManagementType3Code.mmGetAccountDetails, AccountManagementType3Code.mmAccountStatus);
 				trace_lazy = () -> AccountManagementTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountManagementType3Code.AccountModification, com.tools20022.repository.codeset.AccountManagementType3Code.AccountOpening,
+						com.tools20022.repository.codeset.AccountManagementType3Code.GetAccountDetails, com.tools20022.repository.codeset.AccountManagementType3Code.AccountStatus);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccountModification.getCodeName().get(), AccountModification);
+		codesByName.put(AccountOpening.getCodeName().get(), AccountOpening);
+		codesByName.put(GetAccountDetails.getCodeName().get(), GetAccountDetails);
+		codesByName.put(AccountStatus.getCodeName().get(), AccountStatus);
+	}
+
+	public static AccountManagementType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AccountManagementType3Code[] values() {
+		AccountManagementType3Code[] values = new AccountManagementType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AccountManagementType3Code> {
+		@Override
+		public AccountManagementType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AccountManagementType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

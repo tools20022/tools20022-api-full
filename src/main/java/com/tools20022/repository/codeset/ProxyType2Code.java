@@ -20,35 +20,39 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ProxyTypeCode;
+import com.tools20022.repository.codeset.ProxyType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of proxy person.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ProxyTypeCode ProxyTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ProxyType2Code#mmChairman
- * ProxyType2Code.mmChairman}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProxyType2Code#Chairman
+ * ProxyType2Code.Chairman}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProxyType2Code#mmDiscretionary
- * ProxyType2Code.mmDiscretionary}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProxyType2Code#Discretionary
+ * ProxyType2Code.Discretionary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProxyType2Code#mmSecurityHolder
- * ProxyType2Code.mmSecurityHolder}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProxyType2Code#SecurityHolder
+ * ProxyType2Code.SecurityHolder}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ProxyTypeCode ProxyTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of proxy person."</li>
  * </ul>
  */
-public class ProxyType2Code extends ProxyTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProxyType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +89,12 @@ public class ProxyType2Code extends ProxyTypeCode {
 	 * name} = "Chairman"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmChairman = new MMCode() {
+	public static final ProxyType2Code Chairman = new ProxyType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Chairman";
-			owner_lazy = () -> ProxyType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProxyType2Code.mmObject();
+			codeName = ProxyTypeCode.Chairman.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,11 +113,12 @@ public class ProxyType2Code extends ProxyTypeCode {
 	 * name} = "Discretionary"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiscretionary = new MMCode() {
+	public static final ProxyType2Code Discretionary = new ProxyType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discretionary";
-			owner_lazy = () -> ProxyType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProxyType2Code.mmObject();
+			codeName = ProxyTypeCode.Discretionary.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -130,26 +137,58 @@ public class ProxyType2Code extends ProxyTypeCode {
 	 * name} = "SecurityHolder"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecurityHolder = new MMCode() {
+	public static final ProxyType2Code SecurityHolder = new ProxyType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityHolder";
-			owner_lazy = () -> ProxyType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProxyType2Code.mmObject();
+			codeName = ProxyTypeCode.SecurityHolder.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ProxyType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProxyType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CHRM");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProxyType2Code";
 				definition = "Specifies the type of proxy person.";
-				code_lazy = () -> Arrays.asList(ProxyType2Code.mmChairman, ProxyType2Code.mmDiscretionary, ProxyType2Code.mmSecurityHolder);
 				trace_lazy = () -> ProxyTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProxyType2Code.Chairman, com.tools20022.repository.codeset.ProxyType2Code.Discretionary, com.tools20022.repository.codeset.ProxyType2Code.SecurityHolder);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Chairman.getCodeName().get(), Chairman);
+		codesByName.put(Discretionary.getCodeName().get(), Discretionary);
+		codesByName.put(SecurityHolder.getCodeName().get(), SecurityHolder);
+	}
+
+	public static ProxyType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProxyType2Code[] values() {
+		ProxyType2Code[] values = new ProxyType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProxyType2Code> {
+		@Override
+		public ProxyType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProxyType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

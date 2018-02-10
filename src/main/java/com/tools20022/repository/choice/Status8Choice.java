@@ -24,6 +24,7 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -87,8 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStatusRule#forStatus8Choice
+ * ConstraintStatusRule.forStatus8Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,16 +115,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Status8Choice", propOrder = {"affirmationStatus", "allocationStatus", "repoCallRequestStatus", "corporateActionEventProcessingStatus", "corporateActionEventStage", "inferredMatchingStatus", "instructionProcessingStatus",
 		"matchingStatus", "registrationProcessingStatus", "responseStatus", "replacementProcessingStatus", "cancellationProcessingStatus", "settlementStatus", "settlementConditionModificationStatus"})
 public class Status8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AffirmSts", required = true)
 	protected AffirmationStatus1Choice affirmationStatus;
 	/**
-	 * Status of affirmation of a trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -156,7 +166,7 @@ public class Status8Choice {
 	public static final MMMessageAssociationEnd mmAffirmationStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
-			componentContext_lazy = () -> Status8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AffirmSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,10 +179,11 @@ public class Status8Choice {
 			type_lazy = () -> com.tools20022.repository.choice.AffirmationStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AllcnSts", required = true)
 	protected AllocationSatus1Choice allocationStatus;
 	/**
-	 * Provides the status of allocation of collateral to cover the instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -215,7 +226,7 @@ public class Status8Choice {
 	public static final MMMessageAssociationEnd mmAllocationStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmCollateralAllocationStatus;
-			componentContext_lazy = () -> Status8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AllcnSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,10 +239,11 @@ public class Status8Choice {
 			type_lazy = () -> com.tools20022.repository.choice.AllocationSatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RepoCallReqSts", required = true)
 	protected RepoCallRequestStatus1Choice repoCallRequestStatus;
 	/**
-	 * Provides the status of the repurchase agreement call request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -273,7 +285,7 @@ public class Status8Choice {
 	public static final MMMessageAssociationEnd mmRepoCallRequestStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmRepoCallRequestStatus;
-			componentContext_lazy = () -> Status8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RepoCallReqSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,10 +298,11 @@ public class Status8Choice {
 			type_lazy = () -> com.tools20022.repository.choice.RepoCallRequestStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CorpActnEvtPrcgSts", required = true)
 	protected CorporateActionEventProcessingStatus1Choice corporateActionEventProcessingStatus;
 	/**
-	 * Provides the status of a corporate action or the status of a payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -331,7 +344,7 @@ public class Status8Choice {
 	public static final MMMessageAssociationEnd mmCorporateActionEventProcessingStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmEventProcessingStatus;
-			componentContext_lazy = () -> Status8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnEvtPrcgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -344,10 +357,11 @@ public class Status8Choice {
 			type_lazy = () -> com.tools20022.repository.choice.CorporateActionEventProcessingStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CorpActnEvtStag", required = true)
 	protected CorporateActionEventStage1Choice corporateActionEventStage;
 	/**
-	 * Stage in the corporate action event life cycle.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -388,7 +402,7 @@ public class Status8Choice {
 	public static final MMMessageAssociationEnd mmCorporateActionEventStage = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventStage;
-			componentContext_lazy = () -> Status8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnEvtStag";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -401,12 +415,11 @@ public class Status8Choice {
 			type_lazy = () -> com.tools20022.repository.choice.CorporateActionEventStage1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IfrrdMtchgSts", required = true)
 	protected MatchingStatus1Choice inferredMatchingStatus;
 	/**
-	 * Provides the matching status of an instruction as known by the account
-	 * servicer based on an allegement. At this time no matching took place on
-	 * the market (at the CSD/ICSD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -449,7 +462,7 @@ public class Status8Choice {
 	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
-			componentContext_lazy = () -> Status8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IfrrdMtchgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -462,10 +475,11 @@ public class Status8Choice {
 			type_lazy = () -> com.tools20022.repository.choice.MatchingStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrPrcgSts", required = true)
 	protected InstructionProcessingStatus2Choice instructionProcessingStatus;
 	/**
-	 * Provides the status of an instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -506,7 +520,7 @@ public class Status8Choice {
 	public static final MMMessageAssociationEnd mmInstructionProcessingStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
-			componentContext_lazy = () -> Status8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InstrPrcgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -519,10 +533,11 @@ public class Status8Choice {
 			type_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MtchgSts", required = true)
 	protected MatchingStatus1Choice matchingStatus;
 	/**
-	 * Provides the matching status of the instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -563,7 +578,7 @@ public class Status8Choice {
 	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
-			componentContext_lazy = () -> Status8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MtchgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -576,10 +591,11 @@ public class Status8Choice {
 			type_lazy = () -> com.tools20022.repository.choice.MatchingStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RegnPrcgSts", required = true)
 	protected RegistrationProcessingStatus1Choice registrationProcessingStatus;
 	/**
-	 * Provides the status of the registration processing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -620,7 +636,7 @@ public class Status8Choice {
 	public static final MMMessageAssociationEnd mmRegistrationProcessingStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
-			componentContext_lazy = () -> Status8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RegnPrcgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -633,12 +649,11 @@ public class Status8Choice {
 			type_lazy = () -> com.tools20022.repository.choice.RegistrationProcessingStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RspnSts", required = true)
 	protected ResponseStatus1Choice responseStatus;
 	/**
-	 * Provides the status of the received collateral message (collateral claim,
-	 * a collateral proposal or a proposal/request for collateral substitution)
-	 * from a collateral management perspective.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -681,7 +696,7 @@ public class Status8Choice {
 	public static final MMMessageAssociationEnd mmResponseStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CollateralStatus.mmResponseStatus;
-			componentContext_lazy = () -> Status8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RspnSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -694,10 +709,11 @@ public class Status8Choice {
 			type_lazy = () -> com.tools20022.repository.choice.ResponseStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RplcmntPrcgSts", required = true)
 	protected ReplacementProcessingStatus1Choice replacementProcessingStatus;
 	/**
-	 * Provides the processing status of the replacement request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -739,7 +755,7 @@ public class Status8Choice {
 	public static final MMMessageAssociationEnd mmReplacementProcessingStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
-			componentContext_lazy = () -> Status8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RplcmntPrcgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -752,10 +768,11 @@ public class Status8Choice {
 			type_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CxlPrcgSts", required = true)
 	protected CancellationProcessingStatus1Choice cancellationProcessingStatus;
 	/**
-	 * Provides the status of a cancellation request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -796,7 +813,7 @@ public class Status8Choice {
 	public static final MMMessageAssociationEnd mmCancellationProcessingStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmCancellationProcessingStatus;
-			componentContext_lazy = () -> Status8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CxlPrcgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -809,10 +826,11 @@ public class Status8Choice {
 			type_lazy = () -> com.tools20022.repository.choice.CancellationProcessingStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmSts", required = true)
 	protected SettlementStatus5Choice settlementStatus;
 	/**
-	 * Provides the status of settlement of a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -853,7 +871,7 @@ public class Status8Choice {
 	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
-			componentContext_lazy = () -> Status8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -866,11 +884,11 @@ public class Status8Choice {
 			type_lazy = () -> com.tools20022.repository.choice.SettlementStatus5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmCondModSts", required = true)
 	protected SettlementConditionModificationStatus1Choice settlementConditionModificationStatus;
 	/**
-	 * Provides the status of a securities settlement condition modification
-	 * request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -913,7 +931,7 @@ public class Status8Choice {
 	public static final MMMessageAssociationEnd mmSettlementConditionModificationStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmSettlementConditionModificationStatus;
-			componentContext_lazy = () -> Status8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCondModSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -930,11 +948,16 @@ public class Status8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Status8Choice.mmAffirmationStatus, Status8Choice.mmAllocationStatus, Status8Choice.mmRepoCallRequestStatus, Status8Choice.mmCorporateActionEventProcessingStatus,
-						Status8Choice.mmCorporateActionEventStage, Status8Choice.mmInferredMatchingStatus, Status8Choice.mmInstructionProcessingStatus, Status8Choice.mmMatchingStatus, Status8Choice.mmRegistrationProcessingStatus,
-						Status8Choice.mmResponseStatus, Status8Choice.mmReplacementProcessingStatus, Status8Choice.mmCancellationProcessingStatus, Status8Choice.mmSettlementStatus, Status8Choice.mmSettlementConditionModificationStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status8Choice.mmAffirmationStatus, com.tools20022.repository.choice.Status8Choice.mmAllocationStatus,
+						com.tools20022.repository.choice.Status8Choice.mmRepoCallRequestStatus, com.tools20022.repository.choice.Status8Choice.mmCorporateActionEventProcessingStatus,
+						com.tools20022.repository.choice.Status8Choice.mmCorporateActionEventStage, com.tools20022.repository.choice.Status8Choice.mmInferredMatchingStatus,
+						com.tools20022.repository.choice.Status8Choice.mmInstructionProcessingStatus, com.tools20022.repository.choice.Status8Choice.mmMatchingStatus,
+						com.tools20022.repository.choice.Status8Choice.mmRegistrationProcessingStatus, com.tools20022.repository.choice.Status8Choice.mmResponseStatus,
+						com.tools20022.repository.choice.Status8Choice.mmReplacementProcessingStatus, com.tools20022.repository.choice.Status8Choice.mmCancellationProcessingStatus,
+						com.tools20022.repository.choice.Status8Choice.mmSettlementStatus, com.tools20022.repository.choice.Status8Choice.mmSettlementConditionModificationStatus);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusRule.forStatus8Choice);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status8Choice";
 				definition = "Choice of status.";
@@ -944,129 +967,129 @@ public class Status8Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AffirmSts", required = true)
 	public AffirmationStatus1Choice getAffirmationStatus() {
 		return affirmationStatus;
 	}
 
-	public void setAffirmationStatus(com.tools20022.repository.choice.AffirmationStatus1Choice affirmationStatus) {
-		this.affirmationStatus = affirmationStatus;
+	public Status8Choice setAffirmationStatus(com.tools20022.repository.choice.AffirmationStatus1Choice affirmationStatus) {
+		this.affirmationStatus = Objects.requireNonNull(affirmationStatus);
+		return this;
 	}
 
-	@XmlElement(name = "AllcnSts", required = true)
 	public AllocationSatus1Choice getAllocationStatus() {
 		return allocationStatus;
 	}
 
-	public void setAllocationStatus(com.tools20022.repository.choice.AllocationSatus1Choice allocationStatus) {
-		this.allocationStatus = allocationStatus;
+	public Status8Choice setAllocationStatus(com.tools20022.repository.choice.AllocationSatus1Choice allocationStatus) {
+		this.allocationStatus = Objects.requireNonNull(allocationStatus);
+		return this;
 	}
 
-	@XmlElement(name = "RepoCallReqSts", required = true)
 	public RepoCallRequestStatus1Choice getRepoCallRequestStatus() {
 		return repoCallRequestStatus;
 	}
 
-	public void setRepoCallRequestStatus(com.tools20022.repository.choice.RepoCallRequestStatus1Choice repoCallRequestStatus) {
-		this.repoCallRequestStatus = repoCallRequestStatus;
+	public Status8Choice setRepoCallRequestStatus(com.tools20022.repository.choice.RepoCallRequestStatus1Choice repoCallRequestStatus) {
+		this.repoCallRequestStatus = Objects.requireNonNull(repoCallRequestStatus);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnEvtPrcgSts", required = true)
 	public CorporateActionEventProcessingStatus1Choice getCorporateActionEventProcessingStatus() {
 		return corporateActionEventProcessingStatus;
 	}
 
-	public void setCorporateActionEventProcessingStatus(com.tools20022.repository.choice.CorporateActionEventProcessingStatus1Choice corporateActionEventProcessingStatus) {
-		this.corporateActionEventProcessingStatus = corporateActionEventProcessingStatus;
+	public Status8Choice setCorporateActionEventProcessingStatus(com.tools20022.repository.choice.CorporateActionEventProcessingStatus1Choice corporateActionEventProcessingStatus) {
+		this.corporateActionEventProcessingStatus = Objects.requireNonNull(corporateActionEventProcessingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnEvtStag", required = true)
 	public CorporateActionEventStage1Choice getCorporateActionEventStage() {
 		return corporateActionEventStage;
 	}
 
-	public void setCorporateActionEventStage(com.tools20022.repository.choice.CorporateActionEventStage1Choice corporateActionEventStage) {
-		this.corporateActionEventStage = corporateActionEventStage;
+	public Status8Choice setCorporateActionEventStage(com.tools20022.repository.choice.CorporateActionEventStage1Choice corporateActionEventStage) {
+		this.corporateActionEventStage = Objects.requireNonNull(corporateActionEventStage);
+		return this;
 	}
 
-	@XmlElement(name = "IfrrdMtchgSts", required = true)
 	public MatchingStatus1Choice getInferredMatchingStatus() {
 		return inferredMatchingStatus;
 	}
 
-	public void setInferredMatchingStatus(com.tools20022.repository.choice.MatchingStatus1Choice inferredMatchingStatus) {
-		this.inferredMatchingStatus = inferredMatchingStatus;
+	public Status8Choice setInferredMatchingStatus(com.tools20022.repository.choice.MatchingStatus1Choice inferredMatchingStatus) {
+		this.inferredMatchingStatus = Objects.requireNonNull(inferredMatchingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "InstrPrcgSts", required = true)
 	public InstructionProcessingStatus2Choice getInstructionProcessingStatus() {
 		return instructionProcessingStatus;
 	}
 
-	public void setInstructionProcessingStatus(com.tools20022.repository.choice.InstructionProcessingStatus2Choice instructionProcessingStatus) {
-		this.instructionProcessingStatus = instructionProcessingStatus;
+	public Status8Choice setInstructionProcessingStatus(com.tools20022.repository.choice.InstructionProcessingStatus2Choice instructionProcessingStatus) {
+		this.instructionProcessingStatus = Objects.requireNonNull(instructionProcessingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "MtchgSts", required = true)
 	public MatchingStatus1Choice getMatchingStatus() {
 		return matchingStatus;
 	}
 
-	public void setMatchingStatus(com.tools20022.repository.choice.MatchingStatus1Choice matchingStatus) {
-		this.matchingStatus = matchingStatus;
+	public Status8Choice setMatchingStatus(com.tools20022.repository.choice.MatchingStatus1Choice matchingStatus) {
+		this.matchingStatus = Objects.requireNonNull(matchingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "RegnPrcgSts", required = true)
 	public RegistrationProcessingStatus1Choice getRegistrationProcessingStatus() {
 		return registrationProcessingStatus;
 	}
 
-	public void setRegistrationProcessingStatus(com.tools20022.repository.choice.RegistrationProcessingStatus1Choice registrationProcessingStatus) {
-		this.registrationProcessingStatus = registrationProcessingStatus;
+	public Status8Choice setRegistrationProcessingStatus(com.tools20022.repository.choice.RegistrationProcessingStatus1Choice registrationProcessingStatus) {
+		this.registrationProcessingStatus = Objects.requireNonNull(registrationProcessingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "RspnSts", required = true)
 	public ResponseStatus1Choice getResponseStatus() {
 		return responseStatus;
 	}
 
-	public void setResponseStatus(com.tools20022.repository.choice.ResponseStatus1Choice responseStatus) {
-		this.responseStatus = responseStatus;
+	public Status8Choice setResponseStatus(com.tools20022.repository.choice.ResponseStatus1Choice responseStatus) {
+		this.responseStatus = Objects.requireNonNull(responseStatus);
+		return this;
 	}
 
-	@XmlElement(name = "RplcmntPrcgSts", required = true)
 	public ReplacementProcessingStatus1Choice getReplacementProcessingStatus() {
 		return replacementProcessingStatus;
 	}
 
-	public void setReplacementProcessingStatus(com.tools20022.repository.choice.ReplacementProcessingStatus1Choice replacementProcessingStatus) {
-		this.replacementProcessingStatus = replacementProcessingStatus;
+	public Status8Choice setReplacementProcessingStatus(com.tools20022.repository.choice.ReplacementProcessingStatus1Choice replacementProcessingStatus) {
+		this.replacementProcessingStatus = Objects.requireNonNull(replacementProcessingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "CxlPrcgSts", required = true)
 	public CancellationProcessingStatus1Choice getCancellationProcessingStatus() {
 		return cancellationProcessingStatus;
 	}
 
-	public void setCancellationProcessingStatus(com.tools20022.repository.choice.CancellationProcessingStatus1Choice cancellationProcessingStatus) {
-		this.cancellationProcessingStatus = cancellationProcessingStatus;
+	public Status8Choice setCancellationProcessingStatus(com.tools20022.repository.choice.CancellationProcessingStatus1Choice cancellationProcessingStatus) {
+		this.cancellationProcessingStatus = Objects.requireNonNull(cancellationProcessingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmSts", required = true)
 	public SettlementStatus5Choice getSettlementStatus() {
 		return settlementStatus;
 	}
 
-	public void setSettlementStatus(com.tools20022.repository.choice.SettlementStatus5Choice settlementStatus) {
-		this.settlementStatus = settlementStatus;
+	public Status8Choice setSettlementStatus(com.tools20022.repository.choice.SettlementStatus5Choice settlementStatus) {
+		this.settlementStatus = Objects.requireNonNull(settlementStatus);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmCondModSts", required = true)
 	public SettlementConditionModificationStatus1Choice getSettlementConditionModificationStatus() {
 		return settlementConditionModificationStatus;
 	}
 
-	public void setSettlementConditionModificationStatus(com.tools20022.repository.choice.SettlementConditionModificationStatus1Choice settlementConditionModificationStatus) {
-		this.settlementConditionModificationStatus = settlementConditionModificationStatus;
+	public Status8Choice setSettlementConditionModificationStatus(com.tools20022.repository.choice.SettlementConditionModificationStatus1Choice settlementConditionModificationStatus) {
+		this.settlementConditionModificationStatus = Objects.requireNonNull(settlementConditionModificationStatus);
+		return this;
 	}
 }

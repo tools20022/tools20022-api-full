@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,15 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMTransactionAmounts2", propOrder = {"currency", "maximumAuthorisableAmount", "minimumAllowedAmount", "maximumAllowedAmount", "dailyBalance", "weeklyBalance", "monthlyBalance"})
 public class ATMTransactionAmounts2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ccy")
 	protected ActiveCurrencyCode currency;
 	/**
-	 * Currency of the limits, if different from the requested amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +144,7 @@ public class ATMTransactionAmounts2 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCurrency;
-			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts2.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,11 +156,11 @@ public class ATMTransactionAmounts2 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxAuthsbAmt")
 	protected ImpliedCurrencyAndAmount maximumAuthorisableAmount;
 	/**
-	 * Maximum amount allowed in the authorised currency if the withdrawal was
-	 * not approved.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -202,7 +204,7 @@ public class ATMTransactionAmounts2 {
 	public static final MMMessageAttribute mmMaximumAuthorisableAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAvailableAmount;
-			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAuthsbAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,10 +216,11 @@ public class ATMTransactionAmounts2 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "MinAllwdAmt")
 	protected ImpliedCurrencyAndAmount minimumAllowedAmount;
 	/**
-	 * Minimum amount allowed for a withdrawal in the authorised currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -260,7 +263,7 @@ public class ATMTransactionAmounts2 {
 	public static final MMMessageAttribute mmMinimumAllowedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
-			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts2.mmObject();
 			isDerived = false;
 			xmlTag = "MinAllwdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,10 +275,11 @@ public class ATMTransactionAmounts2 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxAllwdAmt")
 	protected ImpliedCurrencyAndAmount maximumAllowedAmount;
 	/**
-	 * Maximum amount allowed for a withdrawal in the authorised currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -318,7 +322,7 @@ public class ATMTransactionAmounts2 {
 	public static final MMMessageAttribute mmMaximumAllowedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
-			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAllwdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -330,10 +334,11 @@ public class ATMTransactionAmounts2 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "DalyBal")
 	protected DetailedAmount4 dailyBalance;
 	/**
-	 * Remaining daily amount of the customer totals after the withdrawal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -373,7 +378,7 @@ public class ATMTransactionAmounts2 {
 	public static final MMMessageAssociationEnd mmDailyBalance = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts2.mmObject();
 			isDerived = false;
 			xmlTag = "DalyBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -386,10 +391,11 @@ public class ATMTransactionAmounts2 {
 			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
 		}
 	};
+	@XmlElement(name = "WklyBal")
 	protected DetailedAmount4 weeklyBalance;
 	/**
-	 * Remaining weekly amount of the customer totals after the withdrawal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -429,7 +435,7 @@ public class ATMTransactionAmounts2 {
 	public static final MMMessageAssociationEnd mmWeeklyBalance = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts2.mmObject();
 			isDerived = false;
 			xmlTag = "WklyBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -442,10 +448,11 @@ public class ATMTransactionAmounts2 {
 			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
 		}
 	};
+	@XmlElement(name = "MnthlyBal")
 	protected DetailedAmount4 monthlyBalance;
 	/**
-	 * Remaining monthly amount of the customer totals after the withdrawal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -485,7 +492,7 @@ public class ATMTransactionAmounts2 {
 	public static final MMMessageAssociationEnd mmMonthlyBalance = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> ATMTransactionAmounts2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts2.mmObject();
 			isDerived = false;
 			xmlTag = "MnthlyBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -502,10 +509,11 @@ public class ATMTransactionAmounts2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMTransactionAmounts2.mmCurrency, ATMTransactionAmounts2.mmMaximumAuthorisableAmount, ATMTransactionAmounts2.mmMinimumAllowedAmount, ATMTransactionAmounts2.mmMaximumAllowedAmount,
-						ATMTransactionAmounts2.mmDailyBalance, ATMTransactionAmounts2.mmWeeklyBalance, ATMTransactionAmounts2.mmMonthlyBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts2.mmCurrency, com.tools20022.repository.msg.ATMTransactionAmounts2.mmMaximumAuthorisableAmount,
+						com.tools20022.repository.msg.ATMTransactionAmounts2.mmMinimumAllowedAmount, com.tools20022.repository.msg.ATMTransactionAmounts2.mmMaximumAllowedAmount,
+						com.tools20022.repository.msg.ATMTransactionAmounts2.mmDailyBalance, com.tools20022.repository.msg.ATMTransactionAmounts2.mmWeeklyBalance, com.tools20022.repository.msg.ATMTransactionAmounts2.mmMonthlyBalance);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTransactionAmounts2";
 				definition = "Limit of amounts for the customer.";
@@ -515,66 +523,66 @@ public class ATMTransactionAmounts2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ccy")
-	public ActiveCurrencyCode getCurrency() {
-		return currency;
+	public Optional<ActiveCurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(ActiveCurrencyCode currency) {
+	public ATMTransactionAmounts2 setCurrency(ActiveCurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "MaxAuthsbAmt")
-	public ImpliedCurrencyAndAmount getMaximumAuthorisableAmount() {
-		return maximumAuthorisableAmount;
+	public Optional<ImpliedCurrencyAndAmount> getMaximumAuthorisableAmount() {
+		return maximumAuthorisableAmount == null ? Optional.empty() : Optional.of(maximumAuthorisableAmount);
 	}
 
-	public void setMaximumAuthorisableAmount(ImpliedCurrencyAndAmount maximumAuthorisableAmount) {
+	public ATMTransactionAmounts2 setMaximumAuthorisableAmount(ImpliedCurrencyAndAmount maximumAuthorisableAmount) {
 		this.maximumAuthorisableAmount = maximumAuthorisableAmount;
+		return this;
 	}
 
-	@XmlElement(name = "MinAllwdAmt")
-	public ImpliedCurrencyAndAmount getMinimumAllowedAmount() {
-		return minimumAllowedAmount;
+	public Optional<ImpliedCurrencyAndAmount> getMinimumAllowedAmount() {
+		return minimumAllowedAmount == null ? Optional.empty() : Optional.of(minimumAllowedAmount);
 	}
 
-	public void setMinimumAllowedAmount(ImpliedCurrencyAndAmount minimumAllowedAmount) {
+	public ATMTransactionAmounts2 setMinimumAllowedAmount(ImpliedCurrencyAndAmount minimumAllowedAmount) {
 		this.minimumAllowedAmount = minimumAllowedAmount;
+		return this;
 	}
 
-	@XmlElement(name = "MaxAllwdAmt")
-	public ImpliedCurrencyAndAmount getMaximumAllowedAmount() {
-		return maximumAllowedAmount;
+	public Optional<ImpliedCurrencyAndAmount> getMaximumAllowedAmount() {
+		return maximumAllowedAmount == null ? Optional.empty() : Optional.of(maximumAllowedAmount);
 	}
 
-	public void setMaximumAllowedAmount(ImpliedCurrencyAndAmount maximumAllowedAmount) {
+	public ATMTransactionAmounts2 setMaximumAllowedAmount(ImpliedCurrencyAndAmount maximumAllowedAmount) {
 		this.maximumAllowedAmount = maximumAllowedAmount;
+		return this;
 	}
 
-	@XmlElement(name = "DalyBal")
-	public DetailedAmount4 getDailyBalance() {
-		return dailyBalance;
+	public Optional<DetailedAmount4> getDailyBalance() {
+		return dailyBalance == null ? Optional.empty() : Optional.of(dailyBalance);
 	}
 
-	public void setDailyBalance(com.tools20022.repository.msg.DetailedAmount4 dailyBalance) {
+	public ATMTransactionAmounts2 setDailyBalance(com.tools20022.repository.msg.DetailedAmount4 dailyBalance) {
 		this.dailyBalance = dailyBalance;
+		return this;
 	}
 
-	@XmlElement(name = "WklyBal")
-	public DetailedAmount4 getWeeklyBalance() {
-		return weeklyBalance;
+	public Optional<DetailedAmount4> getWeeklyBalance() {
+		return weeklyBalance == null ? Optional.empty() : Optional.of(weeklyBalance);
 	}
 
-	public void setWeeklyBalance(com.tools20022.repository.msg.DetailedAmount4 weeklyBalance) {
+	public ATMTransactionAmounts2 setWeeklyBalance(com.tools20022.repository.msg.DetailedAmount4 weeklyBalance) {
 		this.weeklyBalance = weeklyBalance;
+		return this;
 	}
 
-	@XmlElement(name = "MnthlyBal")
-	public DetailedAmount4 getMonthlyBalance() {
-		return monthlyBalance;
+	public Optional<DetailedAmount4> getMonthlyBalance() {
+		return monthlyBalance == null ? Optional.empty() : Optional.of(monthlyBalance);
 	}
 
-	public void setMonthlyBalance(com.tools20022.repository.msg.DetailedAmount4 monthlyBalance) {
+	public ATMTransactionAmounts2 setMonthlyBalance(com.tools20022.repository.msg.DetailedAmount4 monthlyBalance) {
 		this.monthlyBalance = monthlyBalance;
+		return this;
 	}
 }

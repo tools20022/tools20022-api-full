@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Additional references linked to the order."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "Reference8", propOrder = {"quoteIdentification", "IOIIdentification", "referenceOrderIdentification"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "Reference8", propOrder = {"quoteIdentification", "iOIIdentification", "referenceOrderIdentification"})
 public class Reference8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QtId")
 	protected Max35Text quoteIdentification;
 	/**
-	 * Unique identifier for quote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -85,6 +88,9 @@ public class Reference8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 117</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -97,9 +103,10 @@ public class Reference8 {
 	 */
 	public static final MMMessageAttribute mmQuoteIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference8.mmObject();
 			isDerived = false;
 			xmlTag = "QtId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "117"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteIdentification";
 			definition = "Unique identifier for quote.";
@@ -108,10 +115,11 @@ public class Reference8 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IOIId")
 	protected Max35Text iOIIdentification;
 	/**
-	 * Unique identifier of indication of interest message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,6 +133,9 @@ public class Reference8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IOIId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 23</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -137,9 +148,10 @@ public class Reference8 {
 	 */
 	public static final MMMessageAttribute mmIOIIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference8.mmObject();
 			isDerived = false;
 			xmlTag = "IOIId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "23"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IOIIdentification";
 			definition = "Unique identifier of indication of interest message.";
@@ -148,11 +160,11 @@ public class Reference8 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RefOrdrId")
 	protected Max35Text referenceOrderIdentification;
 	/**
-	 * Refers to the identification reference to the order being hit or taken.
-	 * (Required for counter-order selection / Hit / Take Orders).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,6 +177,9 @@ public class Reference8 {
 	 * Reference8}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RefOrdrId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1080, FIXSynonym: 1081</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -180,9 +195,10 @@ public class Reference8 {
 	 */
 	public static final MMMessageAttribute mmReferenceOrderIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference8.mmObject();
 			isDerived = false;
 			xmlTag = "RefOrdrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1080"), new FIXSynonym(this, "1081"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceOrderIdentification";
 			definition = "Refers to the identification reference to the order being hit or taken. (Required for counter-order selection / Hit / Take Orders).";
@@ -195,8 +211,9 @@ public class Reference8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Reference8.mmQuoteIdentification, Reference8.mmIOIIdentification, Reference8.mmReferenceOrderIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference8.mmQuoteIdentification, com.tools20022.repository.msg.Reference8.mmIOIIdentification,
+						com.tools20022.repository.msg.Reference8.mmReferenceOrderIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference8";
 				definition = "Additional references linked to the order.";
@@ -205,30 +222,30 @@ public class Reference8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QtId")
-	public Max35Text getQuoteIdentification() {
-		return quoteIdentification;
+	public Optional<Max35Text> getQuoteIdentification() {
+		return quoteIdentification == null ? Optional.empty() : Optional.of(quoteIdentification);
 	}
 
-	public void setQuoteIdentification(Max35Text quoteIdentification) {
+	public Reference8 setQuoteIdentification(Max35Text quoteIdentification) {
 		this.quoteIdentification = quoteIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "IOIId")
-	public Max35Text getIOIIdentification() {
-		return iOIIdentification;
+	public Optional<Max35Text> getIOIIdentification() {
+		return iOIIdentification == null ? Optional.empty() : Optional.of(iOIIdentification);
 	}
 
-	public void setIOIIdentification(Max35Text iOIIdentification) {
+	public Reference8 setIOIIdentification(Max35Text iOIIdentification) {
 		this.iOIIdentification = iOIIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "RefOrdrId")
-	public Max35Text getReferenceOrderIdentification() {
-		return referenceOrderIdentification;
+	public Optional<Max35Text> getReferenceOrderIdentification() {
+		return referenceOrderIdentification == null ? Optional.empty() : Optional.of(referenceOrderIdentification);
 	}
 
-	public void setReferenceOrderIdentification(Max35Text referenceOrderIdentification) {
+	public Reference8 setReferenceOrderIdentification(Max35Text referenceOrderIdentification) {
 		this.referenceOrderIdentification = referenceOrderIdentification;
+		return this;
 	}
 }

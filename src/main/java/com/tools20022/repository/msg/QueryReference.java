@@ -24,6 +24,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,15 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Gives the name and the reference of the query."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "QueryReference", propOrder = {"queryReference", "queryName"})
 public class QueryReference {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QryRef", required = true)
 	protected Max35Text queryReference;
 	/**
-	 * Unique and unambiguous identification of the query.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -94,7 +97,7 @@ public class QueryReference {
 	 */
 	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> QueryReference.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QueryReference.mmObject();
 			isDerived = false;
 			xmlTag = "QryRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -105,10 +108,11 @@ public class QueryReference {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "QryNm")
 	protected Max35Text queryName;
 	/**
-	 * Name of the query.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,7 +138,7 @@ public class QueryReference {
 	 */
 	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> QueryReference.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QueryReference.mmObject();
 			isDerived = false;
 			xmlTag = "QryNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,8 +153,8 @@ public class QueryReference {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(QueryReference.mmQueryReference, QueryReference.mmQueryName);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QueryReference.mmQueryReference, com.tools20022.repository.msg.QueryReference.mmQueryName);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueryReference";
 				definition = "Gives the name and the reference of the query.";
@@ -159,21 +163,21 @@ public class QueryReference {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QryRef", required = true)
 	public Max35Text getQueryReference() {
 		return queryReference;
 	}
 
-	public void setQueryReference(Max35Text queryReference) {
-		this.queryReference = queryReference;
+	public QueryReference setQueryReference(Max35Text queryReference) {
+		this.queryReference = Objects.requireNonNull(queryReference);
+		return this;
 	}
 
-	@XmlElement(name = "QryNm")
-	public Max35Text getQueryName() {
-		return queryName;
+	public Optional<Max35Text> getQueryName() {
+		return queryName == null ? Optional.empty() : Optional.of(queryName);
 	}
 
-	public void setQueryName(Max35Text queryName) {
+	public QueryReference setQueryName(Max35Text queryName) {
 		this.queryName = queryName;
+		return this;
 	}
 }

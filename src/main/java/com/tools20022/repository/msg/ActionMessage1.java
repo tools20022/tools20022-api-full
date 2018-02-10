@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ActionMessage1", propOrder = {"messageDestination", "messageContent", "messageContentSignature"})
 public class ActionMessage1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgDstn", required = true)
 	protected UserInterface1Code messageDestination;
 	/**
-	 * Destination of the message to be displayed or printed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,7 +129,7 @@ public class ActionMessage1 {
 	public static final MMMessageAttribute mmMessageDestination = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmPointOfInteraction;
-			componentContext_lazy = () -> ActionMessage1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ActionMessage1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgDstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,11 +141,11 @@ public class ActionMessage1 {
 			simpleType_lazy = () -> UserInterface1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgCntt", required = true)
 	protected Max256Text messageContent;
 	/**
-	 * Text or graphic data to be display or printed to the cardholder or the
-	 * cashier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,7 +190,7 @@ public class ActionMessage1 {
 	public static final MMMessageAttribute mmMessageContent = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmActionMessage;
-			componentContext_lazy = () -> ActionMessage1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ActionMessage1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgCntt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,10 +202,11 @@ public class ActionMessage1 {
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgCnttSgntr")
 	protected Max70Text messageContentSignature;
 	/**
-	 * Electronic signature of the message to display or print.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,7 +240,7 @@ public class ActionMessage1 {
 	 */
 	public static final MMMessageAttribute mmMessageContentSignature = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ActionMessage1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ActionMessage1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgCnttSgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -252,9 +256,10 @@ public class ActionMessage1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ActionMessage1.mmMessageDestination, ActionMessage1.mmMessageContent, ActionMessage1.mmMessageContentSignature);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ActionMessage1.mmMessageDestination, com.tools20022.repository.msg.ActionMessage1.mmMessageContent,
+						com.tools20022.repository.msg.ActionMessage1.mmMessageContentSignature);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ActionMessage1";
 				definition = "Message to be displayed to the cardholder or the cashier.";
@@ -264,30 +269,30 @@ public class ActionMessage1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgDstn", required = true)
 	public UserInterface1Code getMessageDestination() {
 		return messageDestination;
 	}
 
-	public void setMessageDestination(UserInterface1Code messageDestination) {
-		this.messageDestination = messageDestination;
+	public ActionMessage1 setMessageDestination(UserInterface1Code messageDestination) {
+		this.messageDestination = Objects.requireNonNull(messageDestination);
+		return this;
 	}
 
-	@XmlElement(name = "MsgCntt", required = true)
 	public Max256Text getMessageContent() {
 		return messageContent;
 	}
 
-	public void setMessageContent(Max256Text messageContent) {
-		this.messageContent = messageContent;
+	public ActionMessage1 setMessageContent(Max256Text messageContent) {
+		this.messageContent = Objects.requireNonNull(messageContent);
+		return this;
 	}
 
-	@XmlElement(name = "MsgCnttSgntr")
-	public Max70Text getMessageContentSignature() {
-		return messageContentSignature;
+	public Optional<Max70Text> getMessageContentSignature() {
+		return messageContentSignature == null ? Optional.empty() : Optional.of(messageContentSignature);
 	}
 
-	public void setMessageContentSignature(Max70Text messageContentSignature) {
+	public ActionMessage1 setMessageContentSignature(Max70Text messageContentSignature) {
 		this.messageContentSignature = messageContentSignature;
+		return this;
 	}
 }

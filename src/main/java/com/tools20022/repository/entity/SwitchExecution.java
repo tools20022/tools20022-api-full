@@ -25,9 +25,11 @@ import com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExe
 import com.tools20022.repository.entity.InvestmentFundOrderExecution;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Execution of a switch order.
@@ -38,6 +40,10 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
+ * InvestmentFundOrderExecution}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -47,26 +53,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SwitchExecution#mmSubscriptionLeg
  * SwitchExecution.mmSubscriptionLeg}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
- * InvestmentFundOrderExecution}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchExecution3
- * SwitchExecution3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchExecution4
- * SwitchExecution4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrderConfirmation1
- * SwitchOrderConfirmation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchExecution5
- * SwitchExecution5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchExecution7
- * SwitchExecution7}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,10 +80,26 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchExecution3
+ * SwitchExecution3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchExecution4
+ * SwitchExecution4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrderConfirmation1
+ * SwitchOrderConfirmation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchExecution5
+ * SwitchExecution5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchExecution7
+ * SwitchExecution7}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -113,8 +115,8 @@ public class SwitchExecution extends InvestmentFundOrderExecution {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.SwitchExecutionRedemptionLeg> redemptionLeg;
 	/**
-	 * Redemption leg of a switch order execution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,8 +168,8 @@ public class SwitchExecution extends InvestmentFundOrderExecution {
 	public static final MMBusinessAssociationEnd mmRedemptionLeg = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SwitchExecution3.mmRedemptionLegDetails, SwitchExecution4.mmRedemptionLegDetails, SwitchExecution5.mmRedemptionLeg, SwitchExecution7.mmRedemptionLegDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchExecution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchExecution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RedemptionLeg";
 			definition = "Redemption leg of a switch order execution.";
@@ -179,8 +181,8 @@ public class SwitchExecution extends InvestmentFundOrderExecution {
 	};
 	protected List<com.tools20022.repository.entity.SwitchExecutionSubscriptionLeg> subscriptionLeg;
 	/**
-	 * Subscription leg of a switch order execution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -232,8 +234,8 @@ public class SwitchExecution extends InvestmentFundOrderExecution {
 	public static final MMBusinessAssociationEnd mmSubscriptionLeg = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SwitchExecution3.mmSubscriptionLegDetails, SwitchExecution4.mmSubscriptionLegDetails, SwitchExecution5.mmSubscriptionLeg, SwitchExecution7.mmSubscriptionLegDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchExecution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchExecution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubscriptionLeg";
 			definition = "Subscription leg of a switch order execution.";
@@ -247,7 +249,7 @@ public class SwitchExecution extends InvestmentFundOrderExecution {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchExecution";
 				definition = "Execution of a switch order.";
@@ -267,18 +269,20 @@ public class SwitchExecution extends InvestmentFundOrderExecution {
 	}
 
 	public List<SwitchExecutionRedemptionLeg> getRedemptionLeg() {
-		return redemptionLeg;
+		return redemptionLeg == null ? redemptionLeg = new ArrayList<>() : redemptionLeg;
 	}
 
-	public void setRedemptionLeg(List<com.tools20022.repository.entity.SwitchExecutionRedemptionLeg> redemptionLeg) {
-		this.redemptionLeg = redemptionLeg;
+	public SwitchExecution setRedemptionLeg(List<com.tools20022.repository.entity.SwitchExecutionRedemptionLeg> redemptionLeg) {
+		this.redemptionLeg = Objects.requireNonNull(redemptionLeg);
+		return this;
 	}
 
 	public List<SwitchExecutionSubscriptionLeg> getSubscriptionLeg() {
-		return subscriptionLeg;
+		return subscriptionLeg == null ? subscriptionLeg = new ArrayList<>() : subscriptionLeg;
 	}
 
-	public void setSubscriptionLeg(List<com.tools20022.repository.entity.SwitchExecutionSubscriptionLeg> subscriptionLeg) {
-		this.subscriptionLeg = subscriptionLeg;
+	public SwitchExecution setSubscriptionLeg(List<com.tools20022.repository.entity.SwitchExecutionSubscriptionLeg> subscriptionLeg) {
+		this.subscriptionLeg = Objects.requireNonNull(subscriptionLeg);
+		return this;
 	}
 }

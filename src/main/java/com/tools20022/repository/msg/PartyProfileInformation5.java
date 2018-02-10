@@ -36,6 +36,7 @@ import com.tools20022.repository.entity.PrivateCertificate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -100,8 +101,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -117,16 +118,17 @@ import javax.xml.bind.annotation.XmlType;
  * PartyProfileInformation4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyProfileInformation5", propOrder = {"certificationIndicator", "validatingParty", "checkingParty", "responsibleParty", "certificateType", "checkingDate", "checkingFrequency", "nextRevisionDate", "salaryRange",
 		"sourceOfWealth", "customerConductClassification", "riskLevel", "knowYourCustomerCheckType", "knowYourCustomerDatabaseCheck"})
 public class PartyProfileInformation5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CertfctnInd")
 	protected YesNoIndicator certificationIndicator;
 	/**
-	 * Indicates whether the certificate type has been obtained and verified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,7 +168,7 @@ public class PartyProfileInformation5 {
 	public static final MMMessageAttribute mmCertificationIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PrivateCertificate.mmCertificationIndicator;
-			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "CertfctnInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +180,11 @@ public class PartyProfileInformation5 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "VldtngPty")
 	protected Max140Text validatingParty;
 	/**
-	 * Identification of the person who validated the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -219,7 +222,7 @@ public class PartyProfileInformation5 {
 	public static final MMMessageAttribute mmValidatingParty = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "VldtngPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,10 +234,11 @@ public class PartyProfileInformation5 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ChckngPty")
 	protected Max140Text checkingParty;
 	/**
-	 * Identification of the person who checked the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -272,7 +276,7 @@ public class PartyProfileInformation5 {
 	public static final MMMessageAttribute mmCheckingParty = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "ChckngPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,10 +288,11 @@ public class PartyProfileInformation5 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RspnsblPty")
 	protected Max140Text responsibleParty;
 	/**
-	 * Identification of the person who is responsible for the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -326,7 +331,7 @@ public class PartyProfileInformation5 {
 	public static final MMMessageAttribute mmResponsibleParty = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "RspnsblPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -338,10 +343,11 @@ public class PartyProfileInformation5 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CertTp")
 	protected CertificationType1Choice certificateType;
 	/**
-	 * Type of certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -380,7 +386,7 @@ public class PartyProfileInformation5 {
 	public static final MMMessageAttribute mmCertificateType = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PrivateCertificate.mmObject();
-			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "CertTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -392,10 +398,11 @@ public class PartyProfileInformation5 {
 			complexType_lazy = () -> CertificationType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ChckngDt")
 	protected ISODate checkingDate;
 	/**
-	 * Date at which the certification check has been performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -434,7 +441,7 @@ public class PartyProfileInformation5 {
 	public static final MMMessageAttribute mmCheckingDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PrivateCertificate.mmCheckingDate;
-			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "ChckngDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -446,10 +453,11 @@ public class PartyProfileInformation5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ChckngFrqcy")
 	protected EventFrequency1Code checkingFrequency;
 	/**
-	 * Specifies how frequently the check is performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -488,7 +496,7 @@ public class PartyProfileInformation5 {
 	public static final MMMessageAttribute mmCheckingFrequency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PrivateCertificate.mmCheckingFrequency;
-			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "ChckngFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -500,11 +508,11 @@ public class PartyProfileInformation5 {
 			simpleType_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "NxtRvsnDt")
 	protected ISODate nextRevisionDate;
 	/**
-	 * Specifies the date at which the next certification check will be
-	 * performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -544,7 +552,7 @@ public class PartyProfileInformation5 {
 	public static final MMMessageAttribute mmNextRevisionDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PrivateCertificate.mmNextRevisionDate;
-			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "NxtRvsnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -556,10 +564,11 @@ public class PartyProfileInformation5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SlryRg")
 	protected Max35Text salaryRange;
 	/**
-	 * Limits between which a person's salary is estimated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -597,7 +606,7 @@ public class PartyProfileInformation5 {
 	public static final MMMessageAttribute mmSalaryRange = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PersonProfile.mmSalaryRange;
-			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "SlryRg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -609,10 +618,11 @@ public class PartyProfileInformation5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SrcOfWlth")
 	protected Max140Text sourceOfWealth;
 	/**
-	 * Indicates the main source of revenue.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -650,7 +660,7 @@ public class PartyProfileInformation5 {
 	public static final MMMessageAttribute mmSourceOfWealth = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PersonProfile.mmSourceOfWealth;
-			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "SrcOfWlth";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -662,11 +672,11 @@ public class PartyProfileInformation5 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CstmrCndctClssfctn")
 	protected CustomerConductClassification1Choice customerConductClassification;
 	/**
-	 * Specifies an assessment of the customer’s behaviour at the time of the
-	 * account opening application.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -701,7 +711,7 @@ public class PartyProfileInformation5 {
 	 */
 	public static final MMMessageAttribute mmCustomerConductClassification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrCndctClssfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -713,10 +723,11 @@ public class PartyProfileInformation5 {
 			complexType_lazy = () -> CustomerConductClassification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RskLvl")
 	protected RiskLevel2Choice riskLevel;
 	/**
-	 * Specifies the customer’s money laundering risk.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -749,7 +760,7 @@ public class PartyProfileInformation5 {
 	 */
 	public static final MMMessageAttribute mmRiskLevel = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "RskLvl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -761,12 +772,11 @@ public class PartyProfileInformation5 {
 			complexType_lazy = () -> RiskLevel2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "KnowYourCstmrChckTp")
 	protected KYCCheckType1Choice knowYourCustomerCheckType;
 	/**
-	 * Specifies the type of due diligence checks carried out on the investor or
-	 * account owner. For definitions of ordinary, simple and enhanced know your
-	 * customer checks, local market regulations should be consulted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -805,7 +815,7 @@ public class PartyProfileInformation5 {
 	public static final MMMessageAssociationEnd mmKnowYourCustomerCheckType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PersonProfile.mmKnowYourCustomerCheckType;
-			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "KnowYourCstmrChckTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -818,11 +828,11 @@ public class PartyProfileInformation5 {
 			type_lazy = () -> KYCCheckType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "KnowYourCstmrDBChck")
 	protected DataBaseCheck1 knowYourCustomerDatabaseCheck;
 	/**
-	 * Specifies whether a customer has been checked in a Know Your Customer
-	 * (KYC) database.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -855,7 +865,7 @@ public class PartyProfileInformation5 {
 	 */
 	public static final MMMessageAssociationEnd mmKnowYourCustomerDatabaseCheck = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyProfileInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "KnowYourCstmrDBChck";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -872,12 +882,15 @@ public class PartyProfileInformation5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyProfileInformation5.mmCertificationIndicator, PartyProfileInformation5.mmValidatingParty, PartyProfileInformation5.mmCheckingParty, PartyProfileInformation5.mmResponsibleParty,
-						PartyProfileInformation5.mmCertificateType, PartyProfileInformation5.mmCheckingDate, PartyProfileInformation5.mmCheckingFrequency, PartyProfileInformation5.mmNextRevisionDate, PartyProfileInformation5.mmSalaryRange,
-						PartyProfileInformation5.mmSourceOfWealth, PartyProfileInformation5.mmCustomerConductClassification, PartyProfileInformation5.mmRiskLevel, PartyProfileInformation5.mmKnowYourCustomerCheckType,
-						PartyProfileInformation5.mmKnowYourCustomerDatabaseCheck);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyProfileInformation5.mmCertificationIndicator, com.tools20022.repository.msg.PartyProfileInformation5.mmValidatingParty,
+						com.tools20022.repository.msg.PartyProfileInformation5.mmCheckingParty, com.tools20022.repository.msg.PartyProfileInformation5.mmResponsibleParty,
+						com.tools20022.repository.msg.PartyProfileInformation5.mmCertificateType, com.tools20022.repository.msg.PartyProfileInformation5.mmCheckingDate,
+						com.tools20022.repository.msg.PartyProfileInformation5.mmCheckingFrequency, com.tools20022.repository.msg.PartyProfileInformation5.mmNextRevisionDate,
+						com.tools20022.repository.msg.PartyProfileInformation5.mmSalaryRange, com.tools20022.repository.msg.PartyProfileInformation5.mmSourceOfWealth,
+						com.tools20022.repository.msg.PartyProfileInformation5.mmCustomerConductClassification, com.tools20022.repository.msg.PartyProfileInformation5.mmRiskLevel,
+						com.tools20022.repository.msg.PartyProfileInformation5.mmKnowYourCustomerCheckType, com.tools20022.repository.msg.PartyProfileInformation5.mmKnowYourCustomerDatabaseCheck);
 				trace_lazy = () -> PrivateCertificate.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyProfileInformation5";
 				definition = "Information to support the Know Your Customer (KYC) processes.";
@@ -887,129 +900,129 @@ public class PartyProfileInformation5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CertfctnInd")
-	public YesNoIndicator getCertificationIndicator() {
-		return certificationIndicator;
+	public Optional<YesNoIndicator> getCertificationIndicator() {
+		return certificationIndicator == null ? Optional.empty() : Optional.of(certificationIndicator);
 	}
 
-	public void setCertificationIndicator(YesNoIndicator certificationIndicator) {
+	public PartyProfileInformation5 setCertificationIndicator(YesNoIndicator certificationIndicator) {
 		this.certificationIndicator = certificationIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "VldtngPty")
-	public Max140Text getValidatingParty() {
-		return validatingParty;
+	public Optional<Max140Text> getValidatingParty() {
+		return validatingParty == null ? Optional.empty() : Optional.of(validatingParty);
 	}
 
-	public void setValidatingParty(Max140Text validatingParty) {
+	public PartyProfileInformation5 setValidatingParty(Max140Text validatingParty) {
 		this.validatingParty = validatingParty;
+		return this;
 	}
 
-	@XmlElement(name = "ChckngPty")
-	public Max140Text getCheckingParty() {
-		return checkingParty;
+	public Optional<Max140Text> getCheckingParty() {
+		return checkingParty == null ? Optional.empty() : Optional.of(checkingParty);
 	}
 
-	public void setCheckingParty(Max140Text checkingParty) {
+	public PartyProfileInformation5 setCheckingParty(Max140Text checkingParty) {
 		this.checkingParty = checkingParty;
+		return this;
 	}
 
-	@XmlElement(name = "RspnsblPty")
-	public Max140Text getResponsibleParty() {
-		return responsibleParty;
+	public Optional<Max140Text> getResponsibleParty() {
+		return responsibleParty == null ? Optional.empty() : Optional.of(responsibleParty);
 	}
 
-	public void setResponsibleParty(Max140Text responsibleParty) {
+	public PartyProfileInformation5 setResponsibleParty(Max140Text responsibleParty) {
 		this.responsibleParty = responsibleParty;
+		return this;
 	}
 
-	@XmlElement(name = "CertTp")
-	public CertificationType1Choice getCertificateType() {
-		return certificateType;
+	public Optional<CertificationType1Choice> getCertificateType() {
+		return certificateType == null ? Optional.empty() : Optional.of(certificateType);
 	}
 
-	public void setCertificateType(CertificationType1Choice certificateType) {
+	public PartyProfileInformation5 setCertificateType(CertificationType1Choice certificateType) {
 		this.certificateType = certificateType;
+		return this;
 	}
 
-	@XmlElement(name = "ChckngDt")
-	public ISODate getCheckingDate() {
-		return checkingDate;
+	public Optional<ISODate> getCheckingDate() {
+		return checkingDate == null ? Optional.empty() : Optional.of(checkingDate);
 	}
 
-	public void setCheckingDate(ISODate checkingDate) {
+	public PartyProfileInformation5 setCheckingDate(ISODate checkingDate) {
 		this.checkingDate = checkingDate;
+		return this;
 	}
 
-	@XmlElement(name = "ChckngFrqcy")
-	public EventFrequency1Code getCheckingFrequency() {
-		return checkingFrequency;
+	public Optional<EventFrequency1Code> getCheckingFrequency() {
+		return checkingFrequency == null ? Optional.empty() : Optional.of(checkingFrequency);
 	}
 
-	public void setCheckingFrequency(EventFrequency1Code checkingFrequency) {
+	public PartyProfileInformation5 setCheckingFrequency(EventFrequency1Code checkingFrequency) {
 		this.checkingFrequency = checkingFrequency;
+		return this;
 	}
 
-	@XmlElement(name = "NxtRvsnDt")
-	public ISODate getNextRevisionDate() {
-		return nextRevisionDate;
+	public Optional<ISODate> getNextRevisionDate() {
+		return nextRevisionDate == null ? Optional.empty() : Optional.of(nextRevisionDate);
 	}
 
-	public void setNextRevisionDate(ISODate nextRevisionDate) {
+	public PartyProfileInformation5 setNextRevisionDate(ISODate nextRevisionDate) {
 		this.nextRevisionDate = nextRevisionDate;
+		return this;
 	}
 
-	@XmlElement(name = "SlryRg")
-	public Max35Text getSalaryRange() {
-		return salaryRange;
+	public Optional<Max35Text> getSalaryRange() {
+		return salaryRange == null ? Optional.empty() : Optional.of(salaryRange);
 	}
 
-	public void setSalaryRange(Max35Text salaryRange) {
+	public PartyProfileInformation5 setSalaryRange(Max35Text salaryRange) {
 		this.salaryRange = salaryRange;
+		return this;
 	}
 
-	@XmlElement(name = "SrcOfWlth")
-	public Max140Text getSourceOfWealth() {
-		return sourceOfWealth;
+	public Optional<Max140Text> getSourceOfWealth() {
+		return sourceOfWealth == null ? Optional.empty() : Optional.of(sourceOfWealth);
 	}
 
-	public void setSourceOfWealth(Max140Text sourceOfWealth) {
+	public PartyProfileInformation5 setSourceOfWealth(Max140Text sourceOfWealth) {
 		this.sourceOfWealth = sourceOfWealth;
+		return this;
 	}
 
-	@XmlElement(name = "CstmrCndctClssfctn")
-	public CustomerConductClassification1Choice getCustomerConductClassification() {
-		return customerConductClassification;
+	public Optional<CustomerConductClassification1Choice> getCustomerConductClassification() {
+		return customerConductClassification == null ? Optional.empty() : Optional.of(customerConductClassification);
 	}
 
-	public void setCustomerConductClassification(CustomerConductClassification1Choice customerConductClassification) {
+	public PartyProfileInformation5 setCustomerConductClassification(CustomerConductClassification1Choice customerConductClassification) {
 		this.customerConductClassification = customerConductClassification;
+		return this;
 	}
 
-	@XmlElement(name = "RskLvl")
-	public RiskLevel2Choice getRiskLevel() {
-		return riskLevel;
+	public Optional<RiskLevel2Choice> getRiskLevel() {
+		return riskLevel == null ? Optional.empty() : Optional.of(riskLevel);
 	}
 
-	public void setRiskLevel(RiskLevel2Choice riskLevel) {
+	public PartyProfileInformation5 setRiskLevel(RiskLevel2Choice riskLevel) {
 		this.riskLevel = riskLevel;
+		return this;
 	}
 
-	@XmlElement(name = "KnowYourCstmrChckTp")
-	public KYCCheckType1Choice getKnowYourCustomerCheckType() {
-		return knowYourCustomerCheckType;
+	public Optional<KYCCheckType1Choice> getKnowYourCustomerCheckType() {
+		return knowYourCustomerCheckType == null ? Optional.empty() : Optional.of(knowYourCustomerCheckType);
 	}
 
-	public void setKnowYourCustomerCheckType(KYCCheckType1Choice knowYourCustomerCheckType) {
+	public PartyProfileInformation5 setKnowYourCustomerCheckType(KYCCheckType1Choice knowYourCustomerCheckType) {
 		this.knowYourCustomerCheckType = knowYourCustomerCheckType;
+		return this;
 	}
 
-	@XmlElement(name = "KnowYourCstmrDBChck")
-	public DataBaseCheck1 getKnowYourCustomerDatabaseCheck() {
-		return knowYourCustomerDatabaseCheck;
+	public Optional<DataBaseCheck1> getKnowYourCustomerDatabaseCheck() {
+		return knowYourCustomerDatabaseCheck == null ? Optional.empty() : Optional.of(knowYourCustomerDatabaseCheck);
 	}
 
-	public void setKnowYourCustomerDatabaseCheck(com.tools20022.repository.msg.DataBaseCheck1 knowYourCustomerDatabaseCheck) {
+	public PartyProfileInformation5 setKnowYourCustomerDatabaseCheck(com.tools20022.repository.msg.DataBaseCheck1 knowYourCustomerDatabaseCheck) {
 		this.knowYourCustomerDatabaseCheck = knowYourCustomerDatabaseCheck;
+		return this;
 	}
 }

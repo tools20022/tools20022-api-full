@@ -26,9 +26,11 @@ import com.tools20022.repository.choice.UnitOrFaceAmount1Choice;
 import com.tools20022.repository.entity.SecuritiesEntry;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides information about the underlying securities movement."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnderlyingSecurityMovement1", propOrder = {"securityIdentification", "securitiesQuantity", "accountDetails"})
 public class UnderlyingSecurityMovement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctyId", required = true)
 	protected SecurityIdentification7 securityIdentification;
 	/**
-	 * Identification of the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +127,7 @@ public class UnderlyingSecurityMovement1 {
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> UnderlyingSecurityMovement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +138,11 @@ public class UnderlyingSecurityMovement1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesQty", required = true)
 	protected UnitOrFaceAmount1Choice securitiesQuantity;
 	/**
-	 * Quantity of financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,7 +176,7 @@ public class UnderlyingSecurityMovement1 {
 	public static final MMMessageAttribute mmSecuritiesQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesEntry.mmFinancialInstrumentQuantity;
-			componentContext_lazy = () -> UnderlyingSecurityMovement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,10 +187,11 @@ public class UnderlyingSecurityMovement1 {
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctDtls", required = true)
 	protected List<com.tools20022.repository.msg.SecuritiesAccount8> accountDetails;
 	/**
-	 * Provides information about the debited/credited securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -219,7 +224,7 @@ public class UnderlyingSecurityMovement1 {
 	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesEntry.mmSecuritiesAccount;
-			componentContext_lazy = () -> UnderlyingSecurityMovement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -235,10 +240,11 @@ public class UnderlyingSecurityMovement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnderlyingSecurityMovement1.mmSecurityIdentification, UnderlyingSecurityMovement1.mmSecuritiesQuantity, UnderlyingSecurityMovement1.mmAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingSecurityMovement1.mmSecurityIdentification, com.tools20022.repository.msg.UnderlyingSecurityMovement1.mmSecuritiesQuantity,
+						com.tools20022.repository.msg.UnderlyingSecurityMovement1.mmAccountDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAMovementInstructionV01.mmUnderlyingSecuritiesMovementDetails);
 				trace_lazy = () -> SecuritiesEntry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingSecurityMovement1";
 				definition = "Provides information about the underlying securities movement.";
@@ -247,30 +253,30 @@ public class UnderlyingSecurityMovement1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification7 getSecurityIdentification() {
 		return securityIdentification;
 	}
 
-	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
-		this.securityIdentification = securityIdentification;
+	public UnderlyingSecurityMovement1 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
+		this.securityIdentification = Objects.requireNonNull(securityIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesQty", required = true)
 	public UnitOrFaceAmount1Choice getSecuritiesQuantity() {
 		return securitiesQuantity;
 	}
 
-	public void setSecuritiesQuantity(UnitOrFaceAmount1Choice securitiesQuantity) {
-		this.securitiesQuantity = securitiesQuantity;
+	public UnderlyingSecurityMovement1 setSecuritiesQuantity(UnitOrFaceAmount1Choice securitiesQuantity) {
+		this.securitiesQuantity = Objects.requireNonNull(securitiesQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "AcctDtls", required = true)
 	public List<SecuritiesAccount8> getAccountDetails() {
-		return accountDetails;
+		return accountDetails == null ? accountDetails = new ArrayList<>() : accountDetails;
 	}
 
-	public void setAccountDetails(List<com.tools20022.repository.msg.SecuritiesAccount8> accountDetails) {
-		this.accountDetails = accountDetails;
+	public UnderlyingSecurityMovement1 setAccountDetails(List<com.tools20022.repository.msg.SecuritiesAccount8> accountDetails) {
+		this.accountDetails = Objects.requireNonNull(accountDetails);
+		return this;
 	}
 }

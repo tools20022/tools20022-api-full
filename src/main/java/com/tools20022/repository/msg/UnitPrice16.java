@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.SecuritiesTax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnitPrice16", propOrder = {"unitPriceType", "value", "taxableIncomePerShare", "taxableIncomePerShareCalculated"})
 public class UnitPrice16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UnitPricTp", required = true)
 	protected UnitPriceType1Choice unitPriceType;
 	/**
-	 * Type of price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -127,7 +130,7 @@ public class UnitPrice16 {
 	public static final MMMessageAssociationEnd mmUnitPriceType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
-			componentContext_lazy = () -> UnitPrice16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice16.mmObject();
 			isDerived = false;
 			xmlTag = "UnitPricTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,10 +143,11 @@ public class UnitPrice16 {
 			type_lazy = () -> UnitPriceType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Val", required = true)
 	protected PriceValue1 value;
 	/**
-	 * Value of the price, eg, as a currency and value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -182,7 +186,7 @@ public class UnitPrice16 {
 	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
-			componentContext_lazy = () -> UnitPrice16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice16.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,12 +198,11 @@ public class UnitPrice16 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxblIncmPerShr")
 	protected ActiveCurrencyAnd13DecimalAmount taxableIncomePerShare;
 	/**
-	 * Amount included in the NAV that corresponds to gains directly or
-	 * indirectly derived from interest payment in the scope of the European
-	 * Directive on taxation of savings income in the form of interest payments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,7 +237,7 @@ public class UnitPrice16 {
 	public static final MMMessageAttribute mmTaxableIncomePerShare = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShare;
-			componentContext_lazy = () -> UnitPrice16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice16.mmObject();
 			isDerived = false;
 			xmlTag = "TaxblIncmPerShr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,10 +248,11 @@ public class UnitPrice16 {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxblIncmPerShrClctd")
 	protected TaxableIncomePerShareCalculatedType1Choice taxableIncomePerShareCalculated;
 	/**
-	 * Taxable income per share calculated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -280,7 +284,7 @@ public class UnitPrice16 {
 	public static final MMMessageAssociationEnd mmTaxableIncomePerShareCalculated = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShareCalculated;
-			componentContext_lazy = () -> UnitPrice16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice16.mmObject();
 			isDerived = false;
 			xmlTag = "TaxblIncmPerShrClctd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -296,9 +300,10 @@ public class UnitPrice16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnitPrice16.mmUnitPriceType, UnitPrice16.mmValue, UnitPrice16.mmTaxableIncomePerShare, UnitPrice16.mmTaxableIncomePerShareCalculated);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice16.mmUnitPriceType, com.tools20022.repository.msg.UnitPrice16.mmValue, com.tools20022.repository.msg.UnitPrice16.mmTaxableIncomePerShare,
+						com.tools20022.repository.msg.UnitPrice16.mmTaxableIncomePerShareCalculated);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UnitPrice16";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
@@ -308,39 +313,39 @@ public class UnitPrice16 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UnitPricTp", required = true)
 	public UnitPriceType1Choice getUnitPriceType() {
 		return unitPriceType;
 	}
 
-	public void setUnitPriceType(UnitPriceType1Choice unitPriceType) {
-		this.unitPriceType = unitPriceType;
+	public UnitPrice16 setUnitPriceType(UnitPriceType1Choice unitPriceType) {
+		this.unitPriceType = Objects.requireNonNull(unitPriceType);
+		return this;
 	}
 
-	@XmlElement(name = "Val", required = true)
 	public PriceValue1 getValue() {
 		return value;
 	}
 
-	public void setValue(com.tools20022.repository.msg.PriceValue1 value) {
-		this.value = value;
+	public UnitPrice16 setValue(com.tools20022.repository.msg.PriceValue1 value) {
+		this.value = Objects.requireNonNull(value);
+		return this;
 	}
 
-	@XmlElement(name = "TaxblIncmPerShr")
-	public ActiveCurrencyAnd13DecimalAmount getTaxableIncomePerShare() {
-		return taxableIncomePerShare;
+	public Optional<ActiveCurrencyAnd13DecimalAmount> getTaxableIncomePerShare() {
+		return taxableIncomePerShare == null ? Optional.empty() : Optional.of(taxableIncomePerShare);
 	}
 
-	public void setTaxableIncomePerShare(ActiveCurrencyAnd13DecimalAmount taxableIncomePerShare) {
+	public UnitPrice16 setTaxableIncomePerShare(ActiveCurrencyAnd13DecimalAmount taxableIncomePerShare) {
 		this.taxableIncomePerShare = taxableIncomePerShare;
+		return this;
 	}
 
-	@XmlElement(name = "TaxblIncmPerShrClctd")
-	public TaxableIncomePerShareCalculatedType1Choice getTaxableIncomePerShareCalculated() {
-		return taxableIncomePerShareCalculated;
+	public Optional<TaxableIncomePerShareCalculatedType1Choice> getTaxableIncomePerShareCalculated() {
+		return taxableIncomePerShareCalculated == null ? Optional.empty() : Optional.of(taxableIncomePerShareCalculated);
 	}
 
-	public void setTaxableIncomePerShareCalculated(TaxableIncomePerShareCalculatedType1Choice taxableIncomePerShareCalculated) {
+	public UnitPrice16 setTaxableIncomePerShareCalculated(TaxableIncomePerShareCalculatedType1Choice taxableIncomePerShareCalculated) {
 		this.taxableIncomePerShareCalculated = taxableIncomePerShareCalculated;
+		return this;
 	}
 }

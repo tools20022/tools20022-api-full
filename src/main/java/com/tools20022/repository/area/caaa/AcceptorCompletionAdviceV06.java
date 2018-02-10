@@ -29,6 +29,8 @@ import com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance2016201
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -42,22 +44,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVersion
- * AcceptortoAcquirerCardTransactionLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20162017
- * CAPEAcceptortoAcquirerMaintenance20162017}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AccptrCmpltnAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -73,6 +59,22 @@ import javax.xml.bind.annotation.*;
  * AcceptorCompletionAdviceV06.mmSecurityTrailer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20162017
+ * CAPEAcceptortoAcquirerMaintenance20162017}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AccptrCmpltnAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVersion
+ * AcceptortoAcquirerCardTransactionLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code caaa.003.001.06}</li>
@@ -92,15 +94,16 @@ import javax.xml.bind.annotation.*;
  * AcceptorCompletionAdviceV05}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcceptorCompletionAdviceV06", propOrder = {"header", "completionAdvice", "securityTrailer"})
 public class AcceptorCompletionAdviceV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header24 header;
 	/**
-	 * Completion advice message management information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,10 +148,11 @@ public class AcceptorCompletionAdviceV06 {
 			}
 		}
 	};
+	@XmlElement(name = "CmpltnAdvc", required = true)
 	protected AcceptorCompletionAdvice6 completionAdvice;
 	/**
-	 * Information related to the completion advice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -194,10 +198,11 @@ public class AcceptorCompletionAdviceV06 {
 			}
 		}
 	};
+	@XmlElement(name = "SctyTrlr")
 	protected ContentInformationType15 securityTrailer;
 	/**
-	 * Trailer of the message containing a MAC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -275,34 +280,34 @@ public class AcceptorCompletionAdviceV06 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header24 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header24 header) {
-		this.header = header;
+	public AcceptorCompletionAdviceV06 setHeader(Header24 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "CmpltnAdvc", required = true)
 	public AcceptorCompletionAdvice6 getCompletionAdvice() {
 		return completionAdvice;
 	}
 
-	public void setCompletionAdvice(AcceptorCompletionAdvice6 completionAdvice) {
-		this.completionAdvice = completionAdvice;
+	public AcceptorCompletionAdviceV06 setCompletionAdvice(AcceptorCompletionAdvice6 completionAdvice) {
+		this.completionAdvice = Objects.requireNonNull(completionAdvice);
+		return this;
 	}
 
-	@XmlElement(name = "SctyTrlr")
-	public ContentInformationType15 getSecurityTrailer() {
-		return securityTrailer;
+	public Optional<ContentInformationType15> getSecurityTrailer() {
+		return securityTrailer == null ? Optional.empty() : Optional.of(securityTrailer);
 	}
 
-	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+	public AcceptorCompletionAdviceV06 setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.003.06.06")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.003.001.06")
 	static public class Document {
 		@XmlElement(name = "AccptrCmpltnAdvc", required = true)
 		public AcceptorCompletionAdviceV06 messageBody;

@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.TransactionCriteria5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * TransactionCriteria1Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionCriteria2Choice", propOrder = {"queryName", "newCriteria"})
 public class TransactionCriteria2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QryNm", required = true)
 	protected Max35Text queryName;
 	/**
-	 * Recalls the criteria (search and return criteria) defined in a preceding
-	 * query.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +114,7 @@ public class TransactionCriteria2Choice {
 	 */
 	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionCriteria2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionCriteria2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QryNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +126,11 @@ public class TransactionCriteria2Choice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NewCrit", required = true)
 	protected TransactionCriteria5 newCriteria;
 	/**
-	 * Explicitly defines the query criteria.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -159,7 +161,7 @@ public class TransactionCriteria2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionCriteria2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionCriteria2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NewCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,8 +178,8 @@ public class TransactionCriteria2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionCriteria2Choice.mmQueryName, TransactionCriteria2Choice.mmNewCriteria);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionCriteria2Choice.mmQueryName, com.tools20022.repository.choice.TransactionCriteria2Choice.mmNewCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionCriteria2Choice";
 				definition = "Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria.";
@@ -187,21 +189,21 @@ public class TransactionCriteria2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QryNm", required = true)
 	public Max35Text getQueryName() {
 		return queryName;
 	}
 
-	public void setQueryName(Max35Text queryName) {
-		this.queryName = queryName;
+	public TransactionCriteria2Choice setQueryName(Max35Text queryName) {
+		this.queryName = Objects.requireNonNull(queryName);
+		return this;
 	}
 
-	@XmlElement(name = "NewCrit", required = true)
 	public TransactionCriteria5 getNewCriteria() {
 		return newCriteria;
 	}
 
-	public void setNewCriteria(TransactionCriteria5 newCriteria) {
-		this.newCriteria = newCriteria;
+	public TransactionCriteria2Choice setNewCriteria(TransactionCriteria5 newCriteria) {
+		this.newCriteria = Objects.requireNonNull(newCriteria);
+		return this;
 	}
 }

@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CurrencyDetails1", propOrder = {"alphaCode", "numericCode", "decimal", "name"})
 public class CurrencyDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AlphaCd", required = true)
 	protected CurrencyCode alphaCode;
 	/**
-	 * Alpha currency code (ISO 4217, 3 alphanumeric characters).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +120,7 @@ public class CurrencyDetails1 {
 	 */
 	public static final MMMessageAttribute mmAlphaCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "AlphaCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,10 +132,11 @@ public class CurrencyDetails1 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "NmrcCd", required = true)
 	protected Exact3NumericText numericCode;
 	/**
-	 * Numeric currency code (ISO 4217, 3 numeric characters).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,7 +172,7 @@ public class CurrencyDetails1 {
 	 */
 	public static final MMMessageAttribute mmNumericCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "NmrcCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,10 +184,11 @@ public class CurrencyDetails1 {
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Dcml", required = true)
 	protected Number decimal;
 	/**
-	 * Maximal number of digits after the decimal separator for the currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,7 +223,7 @@ public class CurrencyDetails1 {
 	 */
 	public static final MMMessageAttribute mmDecimal = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Dcml";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,10 +235,11 @@ public class CurrencyDetails1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm")
 	protected Max35Text name;
 	/**
-	 * Full name of the currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -267,7 +273,7 @@ public class CurrencyDetails1 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,8 +289,9 @@ public class CurrencyDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CurrencyDetails1.mmAlphaCode, CurrencyDetails1.mmNumericCode, CurrencyDetails1.mmDecimal, CurrencyDetails1.mmName);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyDetails1.mmAlphaCode, com.tools20022.repository.msg.CurrencyDetails1.mmNumericCode, com.tools20022.repository.msg.CurrencyDetails1.mmDecimal,
+						com.tools20022.repository.msg.CurrencyDetails1.mmName);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyDetails1";
 				definition = "Details of a currency.";
@@ -294,39 +301,39 @@ public class CurrencyDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AlphaCd", required = true)
 	public CurrencyCode getAlphaCode() {
 		return alphaCode;
 	}
 
-	public void setAlphaCode(CurrencyCode alphaCode) {
-		this.alphaCode = alphaCode;
+	public CurrencyDetails1 setAlphaCode(CurrencyCode alphaCode) {
+		this.alphaCode = Objects.requireNonNull(alphaCode);
+		return this;
 	}
 
-	@XmlElement(name = "NmrcCd", required = true)
 	public Exact3NumericText getNumericCode() {
 		return numericCode;
 	}
 
-	public void setNumericCode(Exact3NumericText numericCode) {
-		this.numericCode = numericCode;
+	public CurrencyDetails1 setNumericCode(Exact3NumericText numericCode) {
+		this.numericCode = Objects.requireNonNull(numericCode);
+		return this;
 	}
 
-	@XmlElement(name = "Dcml", required = true)
 	public Number getDecimal() {
 		return decimal;
 	}
 
-	public void setDecimal(Number decimal) {
-		this.decimal = decimal;
+	public CurrencyDetails1 setDecimal(Number decimal) {
+		this.decimal = Objects.requireNonNull(decimal);
+		return this;
 	}
 
-	@XmlElement(name = "Nm")
-	public Max35Text getName() {
-		return name;
+	public Optional<Max35Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max35Text name) {
+	public CurrencyDetails1 setName(Max35Text name) {
 		this.name = name;
+		return this;
 	}
 }

@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.MessageAndBusinessReference4;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -70,22 +72,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesTradePreviousVersion
- * SecuritiesTradePreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
- * InvestmentFundsISOPreviousversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "ReqForOrdrStsRptV03"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -101,6 +87,22 @@ import javax.xml.bind.annotation.*;
  * RequestForOrderStatusReportV03.mmExtension}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
+ * InvestmentFundsISOPreviousversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "ReqForOrdrStsRptV03"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesTradePreviousVersion
+ * SecuritiesTradePreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code setr.018.001.03}</li>
@@ -128,16 +130,16 @@ import javax.xml.bind.annotation.*;
  * RequestForOrderStatusReportV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RequestForOrderStatusReportV03", propOrder = {"messageIdentification", "requestDetails", "extension"})
 public class RequestForOrderStatusReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Reference that uniquely identifies a message from a business application
-	 * standpoint.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,10 +190,11 @@ public class RequestForOrderStatusReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "ReqDtls", required = true)
 	protected List<MessageAndBusinessReference4> requestDetails;
 	/**
-	 * Information to identify the order(s) for which the status is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -241,11 +244,11 @@ public class RequestForOrderStatusReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -327,34 +330,34 @@ public class RequestForOrderStatusReportV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public RequestForOrderStatusReportV03 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ReqDtls", required = true)
 	public List<MessageAndBusinessReference4> getRequestDetails() {
-		return requestDetails;
+		return requestDetails == null ? requestDetails = new ArrayList<>() : requestDetails;
 	}
 
-	public void setRequestDetails(List<MessageAndBusinessReference4> requestDetails) {
-		this.requestDetails = requestDetails;
+	public RequestForOrderStatusReportV03 setRequestDetails(List<MessageAndBusinessReference4> requestDetails) {
+		this.requestDetails = Objects.requireNonNull(requestDetails);
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<Extension1> extension) {
-		this.extension = extension;
+	public RequestForOrderStatusReportV03 setExtension(List<Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.018.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:setr.018.001.03")
 	static public class Document {
 		@XmlElement(name = "ReqForOrdrStsRptV03", required = true)
 		public RequestForOrderStatusReportV03 messageBody;

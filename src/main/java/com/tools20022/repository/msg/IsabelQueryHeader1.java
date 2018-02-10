@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max14AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IsabelQueryHeader1", propOrder = {"actualSenderIdentification", "payloadCreationDate", "transportIdentification", "requestModeAndType"})
 public class IsabelQueryHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ActlSndrId", required = true)
 	protected Max13AlphaNumericText actualSenderIdentification;
 	/**
-	 * Unique identification of the actual sender of the file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +112,7 @@ public class IsabelQueryHeader1 {
 	 */
 	public static final MMMessageAttribute mmActualSenderIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelQueryHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelQueryHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "ActlSndrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +123,11 @@ public class IsabelQueryHeader1 {
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "PyldCreDt", required = true)
 	protected DateAndDateTimeChoice payloadCreationDate;
 	/**
-	 * Date and time at which the file in the payload was actually created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -152,7 +155,7 @@ public class IsabelQueryHeader1 {
 	 */
 	public static final MMMessageAssociationEnd mmPayloadCreationDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelQueryHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelQueryHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "PyldCreDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,10 +167,11 @@ public class IsabelQueryHeader1 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "TrnsprtId", required = true)
 	protected Max14AlphaNumericText transportIdentification;
 	/**
-	 * Unique identification of the transport.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,7 +199,7 @@ public class IsabelQueryHeader1 {
 	 */
 	public static final MMMessageAttribute mmTransportIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelQueryHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelQueryHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,11 +210,11 @@ public class IsabelQueryHeader1 {
 			simpleType_lazy = () -> Max14AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqMdAndTp", required = true)
 	protected RequestModeType1Code requestModeAndType;
 	/**
-	 * Request criteria to identify the information to be returned in the
-	 * response to the query.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -240,7 +244,7 @@ public class IsabelQueryHeader1 {
 	 */
 	public static final MMMessageAttribute mmRequestModeAndType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelQueryHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelQueryHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqMdAndTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -255,8 +259,9 @@ public class IsabelQueryHeader1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IsabelQueryHeader1.mmActualSenderIdentification, IsabelQueryHeader1.mmPayloadCreationDate, IsabelQueryHeader1.mmTransportIdentification, IsabelQueryHeader1.mmRequestModeAndType);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelQueryHeader1.mmActualSenderIdentification, com.tools20022.repository.msg.IsabelQueryHeader1.mmPayloadCreationDate,
+						com.tools20022.repository.msg.IsabelQueryHeader1.mmTransportIdentification, com.tools20022.repository.msg.IsabelQueryHeader1.mmRequestModeAndType);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelQueryHeader1";
 				definition = "Specifies the header information for a query file, as part of the RequestForResponse flow.";
@@ -265,39 +270,39 @@ public class IsabelQueryHeader1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ActlSndrId", required = true)
 	public Max13AlphaNumericText getActualSenderIdentification() {
 		return actualSenderIdentification;
 	}
 
-	public void setActualSenderIdentification(Max13AlphaNumericText actualSenderIdentification) {
-		this.actualSenderIdentification = actualSenderIdentification;
+	public IsabelQueryHeader1 setActualSenderIdentification(Max13AlphaNumericText actualSenderIdentification) {
+		this.actualSenderIdentification = Objects.requireNonNull(actualSenderIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PyldCreDt", required = true)
 	public DateAndDateTimeChoice getPayloadCreationDate() {
 		return payloadCreationDate;
 	}
 
-	public void setPayloadCreationDate(DateAndDateTimeChoice payloadCreationDate) {
-		this.payloadCreationDate = payloadCreationDate;
+	public IsabelQueryHeader1 setPayloadCreationDate(DateAndDateTimeChoice payloadCreationDate) {
+		this.payloadCreationDate = Objects.requireNonNull(payloadCreationDate);
+		return this;
 	}
 
-	@XmlElement(name = "TrnsprtId", required = true)
 	public Max14AlphaNumericText getTransportIdentification() {
 		return transportIdentification;
 	}
 
-	public void setTransportIdentification(Max14AlphaNumericText transportIdentification) {
-		this.transportIdentification = transportIdentification;
+	public IsabelQueryHeader1 setTransportIdentification(Max14AlphaNumericText transportIdentification) {
+		this.transportIdentification = Objects.requireNonNull(transportIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ReqMdAndTp", required = true)
 	public RequestModeType1Code getRequestModeAndType() {
 		return requestModeAndType;
 	}
 
-	public void setRequestModeAndType(RequestModeType1Code requestModeAndType) {
-		this.requestModeAndType = requestModeAndType;
+	public IsabelQueryHeader1 setRequestModeAndType(RequestModeType1Code requestModeAndType) {
+		this.requestModeAndType = Objects.requireNonNull(requestModeAndType);
+		return this;
 	}
 }

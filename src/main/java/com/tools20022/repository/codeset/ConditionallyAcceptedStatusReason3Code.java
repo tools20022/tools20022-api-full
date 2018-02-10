@@ -20,86 +20,89 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode;
+import com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for a conditionally accepted status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode
- * ConditionallyAcceptedStatusReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmAwaitingDocuments
- * ConditionallyAcceptedStatusReason3Code.mmAwaitingDocuments}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#AwaitingDocuments
+ * ConditionallyAcceptedStatusReason3Code.AwaitingDocuments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmAwaitingSubscriptionMoney
- * ConditionallyAcceptedStatusReason3Code.mmAwaitingSubscriptionMoney}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#AwaitingSubscriptionMoney
+ * ConditionallyAcceptedStatusReason3Code.AwaitingSubscriptionMoney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmPossibleDuplicate
- * ConditionallyAcceptedStatusReason3Code.mmPossibleDuplicate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#PossibleDuplicate
+ * ConditionallyAcceptedStatusReason3Code.PossibleDuplicate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmTradingLimitExceeded
- * ConditionallyAcceptedStatusReason3Code.mmTradingLimitExceeded}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#TradingLimitExceeded
+ * ConditionallyAcceptedStatusReason3Code.TradingLimitExceeded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmBenefitPlanDeclaration
- * ConditionallyAcceptedStatusReason3Code.mmBenefitPlanDeclaration}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#BenefitPlanDeclaration
+ * ConditionallyAcceptedStatusReason3Code.BenefitPlanDeclaration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmERISADeclaration
- * ConditionallyAcceptedStatusReason3Code.mmERISADeclaration}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#ERISADeclaration
+ * ConditionallyAcceptedStatusReason3Code.ERISADeclaration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmAMLDocuments
- * ConditionallyAcceptedStatusReason3Code.mmAMLDocuments}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#AMLDocuments
+ * ConditionallyAcceptedStatusReason3Code.AMLDocuments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmAwaitingApproval
- * ConditionallyAcceptedStatusReason3Code.mmAwaitingApproval}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#AwaitingApproval
+ * ConditionallyAcceptedStatusReason3Code.AwaitingApproval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmAdditionalFundingRequired
- * ConditionallyAcceptedStatusReason3Code.mmAdditionalFundingRequired}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#AdditionalFundingRequired
+ * ConditionallyAcceptedStatusReason3Code.AdditionalFundingRequired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmBelowMinimumInitialInvestmentAmount
- * ConditionallyAcceptedStatusReason3Code.mmBelowMinimumInitialInvestmentAmount}
- * </li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#BelowMinimumInitialInvestmentAmount
+ * ConditionallyAcceptedStatusReason3Code.BelowMinimumInitialInvestmentAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmBelowMinimumTopUpAmount
- * ConditionallyAcceptedStatusReason3Code.mmBelowMinimumTopUpAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#BelowMinimumTopUpAmount
+ * ConditionallyAcceptedStatusReason3Code.BelowMinimumTopUpAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmInsufficientCapacity
- * ConditionallyAcceptedStatusReason3Code.mmInsufficientCapacity}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#InsufficientCapacity
+ * ConditionallyAcceptedStatusReason3Code.InsufficientCapacity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmPercentageHoldingBreach
- * ConditionallyAcceptedStatusReason3Code.mmPercentageHoldingBreach}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#PercentageHoldingBreach
+ * ConditionallyAcceptedStatusReason3Code.PercentageHoldingBreach}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmBelowMinimumRedemptionAmount
- * ConditionallyAcceptedStatusReason3Code.mmBelowMinimumRedemptionAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#BelowMinimumRedemptionAmount
+ * ConditionallyAcceptedStatusReason3Code.BelowMinimumRedemptionAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmBelowMinimumRetainedAmount
- * ConditionallyAcceptedStatusReason3Code.mmBelowMinimumRetainedAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#BelowMinimumRetainedAmount
+ * ConditionallyAcceptedStatusReason3Code.BelowMinimumRetainedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmLockUp
- * ConditionallyAcceptedStatusReason3Code.mmLockUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#LockUp
+ * ConditionallyAcceptedStatusReason3Code.LockUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmAssetsIlliquid
- * ConditionallyAcceptedStatusReason3Code.mmAssetsIlliquid}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#AssetsIlliquid
+ * ConditionallyAcceptedStatusReason3Code.AssetsIlliquid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmDiscretion
- * ConditionallyAcceptedStatusReason3Code.mmDiscretion}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#Discretion
+ * ConditionallyAcceptedStatusReason3Code.Discretion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#mmSubscriptionTopUpAmount
- * ConditionallyAcceptedStatusReason3Code.mmSubscriptionTopUpAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code#SubscriptionTopUpAmount
+ * ConditionallyAcceptedStatusReason3Code.SubscriptionTopUpAmount}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode
+ * ConditionallyAcceptedStatusReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -116,7 +119,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason for a conditionally accepted status."</li>
  * </ul>
  */
-public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAcceptedStatusReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ConditionallyAcceptedStatusReason3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -135,11 +139,12 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "AwaitingDocuments"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingDocuments = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code AwaitingDocuments = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingDocuments";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.AwaitingDocuments.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,11 +163,12 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "AwaitingSubscriptionMoney"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingSubscriptionMoney = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code AwaitingSubscriptionMoney = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSubscriptionMoney";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.AwaitingSubscriptionMoney.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -181,11 +187,12 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "PossibleDuplicate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPossibleDuplicate = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code PossibleDuplicate = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PossibleDuplicate";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.PossibleDuplicate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -204,11 +211,12 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "TradingLimitExceeded"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradingLimitExceeded = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code TradingLimitExceeded = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingLimitExceeded";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.TradingLimitExceeded.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -227,11 +235,12 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "BenefitPlanDeclaration"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBenefitPlanDeclaration = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code BenefitPlanDeclaration = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BenefitPlanDeclaration";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.BenefitPlanDeclaration.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -250,11 +259,12 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "ERISADeclaration"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmERISADeclaration = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code ERISADeclaration = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERISADeclaration";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.ERISADeclaration.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -273,11 +283,12 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "AMLDocuments"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAMLDocuments = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code AMLDocuments = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AMLDocuments";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.AMLDocuments.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -296,11 +307,12 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "AwaitingApproval"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingApproval = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code AwaitingApproval = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingApproval";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.AwaitingApproval.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -319,11 +331,12 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "AdditionalFundingRequired"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAdditionalFundingRequired = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code AdditionalFundingRequired = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalFundingRequired";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.AdditionalFundingRequired.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -342,11 +355,12 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "BelowMinimumInitialInvestmentAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBelowMinimumInitialInvestmentAmount = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code BelowMinimumInitialInvestmentAmount = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BelowMinimumInitialInvestmentAmount";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.BelowMinimumInitialInvestmentAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -365,11 +379,12 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "BelowMinimumTopUpAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBelowMinimumTopUpAmount = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code BelowMinimumTopUpAmount = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BelowMinimumTopUpAmount";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.BelowMinimumTopUpAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -388,11 +403,12 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "InsufficientCapacity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInsufficientCapacity = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code InsufficientCapacity = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientCapacity";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.InsufficientCapacity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -411,11 +427,12 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "PercentageHoldingBreach"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPercentageHoldingBreach = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code PercentageHoldingBreach = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageHoldingBreach";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.PercentageHoldingBreach.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -434,11 +451,12 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "BelowMinimumRedemptionAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBelowMinimumRedemptionAmount = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code BelowMinimumRedemptionAmount = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BelowMinimumRedemptionAmount";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.BelowMinimumRedemptionAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -457,11 +475,12 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "BelowMinimumRetainedAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBelowMinimumRetainedAmount = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code BelowMinimumRetainedAmount = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BelowMinimumRetainedAmount";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.BelowMinimumRetainedAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -480,11 +499,12 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "LockUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLockUp = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code LockUp = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LockUp";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.LockUp.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -503,11 +523,12 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "AssetsIlliquid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAssetsIlliquid = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code AssetsIlliquid = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetsIlliquid";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.AssetsIlliquid.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -526,11 +547,12 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "Discretion"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiscretion = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code Discretion = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discretion";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.Discretion.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -549,32 +571,83 @@ public class ConditionallyAcceptedStatusReason3Code extends ConditionallyAccepte
 	 * name} = "SubscriptionTopUpAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubscriptionTopUpAmount = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason3Code SubscriptionTopUpAmount = new ConditionallyAcceptedStatusReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionTopUpAmount";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.SubscriptionTopUpAmount.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ConditionallyAcceptedStatusReason3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ConditionallyAcceptedStatusReason3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DOCC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConditionallyAcceptedStatusReason3Code";
 				definition = "Specifies the reason for a conditionally accepted status.";
-				code_lazy = () -> Arrays.asList(ConditionallyAcceptedStatusReason3Code.mmAwaitingDocuments, ConditionallyAcceptedStatusReason3Code.mmAwaitingSubscriptionMoney, ConditionallyAcceptedStatusReason3Code.mmPossibleDuplicate,
-						ConditionallyAcceptedStatusReason3Code.mmTradingLimitExceeded, ConditionallyAcceptedStatusReason3Code.mmBenefitPlanDeclaration, ConditionallyAcceptedStatusReason3Code.mmERISADeclaration,
-						ConditionallyAcceptedStatusReason3Code.mmAMLDocuments, ConditionallyAcceptedStatusReason3Code.mmAwaitingApproval, ConditionallyAcceptedStatusReason3Code.mmAdditionalFundingRequired,
-						ConditionallyAcceptedStatusReason3Code.mmBelowMinimumInitialInvestmentAmount, ConditionallyAcceptedStatusReason3Code.mmBelowMinimumTopUpAmount, ConditionallyAcceptedStatusReason3Code.mmInsufficientCapacity,
-						ConditionallyAcceptedStatusReason3Code.mmPercentageHoldingBreach, ConditionallyAcceptedStatusReason3Code.mmBelowMinimumRedemptionAmount, ConditionallyAcceptedStatusReason3Code.mmBelowMinimumRetainedAmount,
-						ConditionallyAcceptedStatusReason3Code.mmLockUp, ConditionallyAcceptedStatusReason3Code.mmAssetsIlliquid, ConditionallyAcceptedStatusReason3Code.mmDiscretion,
-						ConditionallyAcceptedStatusReason3Code.mmSubscriptionTopUpAmount);
 				trace_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.AwaitingDocuments, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.AwaitingSubscriptionMoney,
+						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.PossibleDuplicate, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.TradingLimitExceeded,
+						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.BenefitPlanDeclaration, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.ERISADeclaration,
+						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.AMLDocuments, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.AwaitingApproval,
+						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.AdditionalFundingRequired, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.BelowMinimumInitialInvestmentAmount,
+						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.BelowMinimumTopUpAmount, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.InsufficientCapacity,
+						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.PercentageHoldingBreach, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.BelowMinimumRedemptionAmount,
+						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.BelowMinimumRetainedAmount, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.LockUp,
+						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.AssetsIlliquid, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.Discretion,
+						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code.SubscriptionTopUpAmount);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AwaitingDocuments.getCodeName().get(), AwaitingDocuments);
+		codesByName.put(AwaitingSubscriptionMoney.getCodeName().get(), AwaitingSubscriptionMoney);
+		codesByName.put(PossibleDuplicate.getCodeName().get(), PossibleDuplicate);
+		codesByName.put(TradingLimitExceeded.getCodeName().get(), TradingLimitExceeded);
+		codesByName.put(BenefitPlanDeclaration.getCodeName().get(), BenefitPlanDeclaration);
+		codesByName.put(ERISADeclaration.getCodeName().get(), ERISADeclaration);
+		codesByName.put(AMLDocuments.getCodeName().get(), AMLDocuments);
+		codesByName.put(AwaitingApproval.getCodeName().get(), AwaitingApproval);
+		codesByName.put(AdditionalFundingRequired.getCodeName().get(), AdditionalFundingRequired);
+		codesByName.put(BelowMinimumInitialInvestmentAmount.getCodeName().get(), BelowMinimumInitialInvestmentAmount);
+		codesByName.put(BelowMinimumTopUpAmount.getCodeName().get(), BelowMinimumTopUpAmount);
+		codesByName.put(InsufficientCapacity.getCodeName().get(), InsufficientCapacity);
+		codesByName.put(PercentageHoldingBreach.getCodeName().get(), PercentageHoldingBreach);
+		codesByName.put(BelowMinimumRedemptionAmount.getCodeName().get(), BelowMinimumRedemptionAmount);
+		codesByName.put(BelowMinimumRetainedAmount.getCodeName().get(), BelowMinimumRetainedAmount);
+		codesByName.put(LockUp.getCodeName().get(), LockUp);
+		codesByName.put(AssetsIlliquid.getCodeName().get(), AssetsIlliquid);
+		codesByName.put(Discretion.getCodeName().get(), Discretion);
+		codesByName.put(SubscriptionTopUpAmount.getCodeName().get(), SubscriptionTopUpAmount);
+	}
+
+	public static ConditionallyAcceptedStatusReason3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ConditionallyAcceptedStatusReason3Code[] values() {
+		ConditionallyAcceptedStatusReason3Code[] values = new ConditionallyAcceptedStatusReason3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ConditionallyAcceptedStatusReason3Code> {
+		@Override
+		public ConditionallyAcceptedStatusReason3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ConditionallyAcceptedStatusReason3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

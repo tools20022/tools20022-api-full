@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Reason for the reversal of the transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReversalReason3Choice", propOrder = {"code", "proprietary"})
 public class ReversalReason3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected TransactionReversalReason2Code code;
 	/**
-	 * Reason for the reversal in a coded form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +110,7 @@ public class ReversalReason3Choice {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmTransactionRejectionReason;
-			componentContext_lazy = () -> ReversalReason3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReversalReason3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +121,11 @@ public class ReversalReason3Choice {
 			simpleType_lazy = () -> TransactionReversalReason2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected RestrictedMS02MS03CodeText proprietary;
 	/**
-	 * Reason for the reversal not catered for by the available codes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +160,7 @@ public class ReversalReason3Choice {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmTransactionRejectionReason;
-			componentContext_lazy = () -> ReversalReason3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReversalReason3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +175,9 @@ public class ReversalReason3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReversalReason3Choice.mmCode, ReversalReason3Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReversalReason3Choice.mmCode, com.tools20022.repository.choice.ReversalReason3Choice.mmProprietary);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReversalReason3Choice";
 				definition = "Reason for the reversal of the transaction.";
@@ -183,21 +186,21 @@ public class ReversalReason3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public TransactionReversalReason2Code getCode() {
 		return code;
 	}
 
-	public void setCode(TransactionReversalReason2Code code) {
-		this.code = code;
+	public ReversalReason3Choice setCode(TransactionReversalReason2Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public RestrictedMS02MS03CodeText getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(RestrictedMS02MS03CodeText proprietary) {
-		this.proprietary = proprietary;
+	public ReversalReason3Choice setProprietary(RestrictedMS02MS03CodeText proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max100KBinary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * EncapsulatedContent1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "EncapsulatedContent2", propOrder = {"contentType", "content"})
 public class EncapsulatedContent2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CnttTp", required = true)
 	protected ContentType1Code contentType;
 	/**
-	 * Type of data which have been authenticated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +124,7 @@ public class EncapsulatedContent2 {
 	 */
 	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EncapsulatedContent2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent2.mmObject();
 			isDerived = false;
 			xmlTag = "CnttTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +137,11 @@ public class EncapsulatedContent2 {
 			simpleType_lazy = () -> ContentType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Cntt")
 	protected Max100KBinary content;
 	/**
-	 * Actual data to authenticate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,7 +182,7 @@ public class EncapsulatedContent2 {
 	 */
 	public static final MMMessageAttribute mmContent = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EncapsulatedContent2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent2.mmObject();
 			isDerived = false;
 			xmlTag = "Cntt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,8 +199,8 @@ public class EncapsulatedContent2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EncapsulatedContent2.mmContentType, EncapsulatedContent2.mmContent);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncapsulatedContent2.mmContentType, com.tools20022.repository.msg.EncapsulatedContent2.mmContent);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EncapsulatedContent2";
 				definition = "Data to authenticate.";
@@ -207,21 +211,21 @@ public class EncapsulatedContent2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CnttTp", required = true)
 	public ContentType1Code getContentType() {
 		return contentType;
 	}
 
-	public void setContentType(ContentType1Code contentType) {
-		this.contentType = contentType;
+	public EncapsulatedContent2 setContentType(ContentType1Code contentType) {
+		this.contentType = Objects.requireNonNull(contentType);
+		return this;
 	}
 
-	@XmlElement(name = "Cntt")
-	public Max100KBinary getContent() {
-		return content;
+	public Optional<Max100KBinary> getContent() {
+		return content == null ? Optional.empty() : Optional.of(content);
 	}
 
-	public void setContent(Max100KBinary content) {
+	public EncapsulatedContent2 setContent(Max100KBinary content) {
 		this.content = content;
+		return this;
 	}
 }

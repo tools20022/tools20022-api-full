@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -29,6 +30,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +72,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Indicates the price of the bid response."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BidResponsePrice1", propOrder = {"price", "commission", "grossIndicator", "side", "fairValue", "country", "tradingSession", "settlementDetails"})
 public class BidResponsePrice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pric")
 	protected Price1 price;
 	/**
-	 * Price of the instrument, applicable to the bid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,6 +112,9 @@ public class BidResponsePrice1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Pric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 44, FIXSynonym: 423</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -121,9 +128,10 @@ public class BidResponsePrice1 {
 	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmPrice;
-			componentContext_lazy = () -> BidResponsePrice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "44"), new FIXSynonym(this, "423"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Price of the instrument, applicable to the bid.";
@@ -132,10 +140,11 @@ public class BidResponsePrice1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	@XmlElement(name = "Comssn", required = true)
 	protected Commission2 commission;
 	/**
-	 * Amount of money due to a party as compensation for a service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,6 +164,9 @@ public class BidResponsePrice1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Comssn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 12, FIXSynonym: 13</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -169,9 +181,10 @@ public class BidResponsePrice1 {
 	public static final MMMessageAttribute mmCommission = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmCommission;
-			componentContext_lazy = () -> BidResponsePrice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "Comssn";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "12"), new FIXSynonym(this, "13"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commission";
 			definition = "Amount of money due to a party as compensation for a service.";
@@ -180,10 +193,11 @@ public class BidResponsePrice1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Commission2.mmObject();
 		}
 	};
+	@XmlElement(name = "GrssInd", required = true)
 	protected TrueFalseIndicator grossIndicator;
 	/**
-	 * Indicates whether the bid response price is gross.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,6 +218,9 @@ public class BidResponsePrice1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "GrssInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 430</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -217,9 +234,10 @@ public class BidResponsePrice1 {
 	public static final MMMessageAttribute mmGrossIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmGrossAmountIndicator;
-			componentContext_lazy = () -> BidResponsePrice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "GrssInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "430"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossIndicator";
 			definition = "Indicates whether the bid response price is gross.";
@@ -228,11 +246,11 @@ public class BidResponsePrice1 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Sd", required = true)
 	protected Side1Code side;
 	/**
-	 * Indicates that bid is required on assumption that SideValue1 is Buy or
-	 * Sell. SideValue2 can be derived by inference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -252,6 +270,9 @@ public class BidResponsePrice1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Sd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 54</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -267,9 +288,10 @@ public class BidResponsePrice1 {
 	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
-			componentContext_lazy = () -> BidResponsePrice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "Sd";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "54"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Indicates that bid is required on assumption that SideValue1 is Buy or Sell. SideValue2 can be derived by inference.";
@@ -278,12 +300,11 @@ public class BidResponsePrice1 {
 			simpleType_lazy = () -> Side1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "FairVal")
 	protected ActiveCurrencyAndAmount fairValue;
 	/**
-	 * Difference between the value of a future and the value of the underlying
-	 * equities after allowing for the discounted cash flows associated with the
-	 * underlying stocks.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -304,6 +325,9 @@ public class BidResponsePrice1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FairVal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 406</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -319,9 +343,10 @@ public class BidResponsePrice1 {
 	public static final MMMessageAttribute mmFairValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ExchangeForPhysicalTrade.mmFairValue;
-			componentContext_lazy = () -> BidResponsePrice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "FairVal";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "406"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FairValue";
 			definition = "Difference between the value of a future and the value of the underlying equities after allowing for the discounted cash flows associated with the underlying stocks.";
@@ -330,10 +355,11 @@ public class BidResponsePrice1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Ctry")
 	protected CountryCode country;
 	/**
-	 * Country to which the residential status is applicable.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -353,6 +379,9 @@ public class BidResponsePrice1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Ctry"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 421</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -366,9 +395,10 @@ public class BidResponsePrice1 {
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> BidResponsePrice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "421"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country to which the residential status is applicable.";
@@ -377,10 +407,11 @@ public class BidResponsePrice1 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgSsn")
 	protected TradingSession1 tradingSession;
 	/**
-	 * Established constraints under which a market operates
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -412,7 +443,7 @@ public class BidResponsePrice1 {
 	public static final MMMessageAssociationEnd mmTradingSession = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmQuoteTradingSession;
-			componentContext_lazy = () -> BidResponsePrice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -424,10 +455,11 @@ public class BidResponsePrice1 {
 			type_lazy = () -> com.tools20022.repository.msg.TradingSession1.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmDtls")
 	protected SecuritiesSettlement2 settlementDetails;
 	/**
-	 * Parameters applied to the settlement of a security transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -460,7 +492,7 @@ public class BidResponsePrice1 {
 	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
-			componentContext_lazy = () -> BidResponsePrice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -476,10 +508,11 @@ public class BidResponsePrice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BidResponsePrice1.mmPrice, BidResponsePrice1.mmCommission, BidResponsePrice1.mmGrossIndicator, BidResponsePrice1.mmSide, BidResponsePrice1.mmFairValue, BidResponsePrice1.mmCountry,
-						BidResponsePrice1.mmTradingSession, BidResponsePrice1.mmSettlementDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BidResponsePrice1.mmPrice, com.tools20022.repository.msg.BidResponsePrice1.mmCommission,
+						com.tools20022.repository.msg.BidResponsePrice1.mmGrossIndicator, com.tools20022.repository.msg.BidResponsePrice1.mmSide, com.tools20022.repository.msg.BidResponsePrice1.mmFairValue,
+						com.tools20022.repository.msg.BidResponsePrice1.mmCountry, com.tools20022.repository.msg.BidResponsePrice1.mmTradingSession, com.tools20022.repository.msg.BidResponsePrice1.mmSettlementDetails);
 				trace_lazy = () -> Quote.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BidResponsePrice1";
 				definition = "Indicates the price of the bid response.";
@@ -488,75 +521,75 @@ public class BidResponsePrice1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pric")
-	public Price1 getPrice() {
-		return price;
+	public Optional<Price1> getPrice() {
+		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public void setPrice(com.tools20022.repository.msg.Price1 price) {
+	public BidResponsePrice1 setPrice(com.tools20022.repository.msg.Price1 price) {
 		this.price = price;
+		return this;
 	}
 
-	@XmlElement(name = "Comssn", required = true)
 	public Commission2 getCommission() {
 		return commission;
 	}
 
-	public void setCommission(com.tools20022.repository.msg.Commission2 commission) {
-		this.commission = commission;
+	public BidResponsePrice1 setCommission(com.tools20022.repository.msg.Commission2 commission) {
+		this.commission = Objects.requireNonNull(commission);
+		return this;
 	}
 
-	@XmlElement(name = "GrssInd", required = true)
 	public TrueFalseIndicator getGrossIndicator() {
 		return grossIndicator;
 	}
 
-	public void setGrossIndicator(TrueFalseIndicator grossIndicator) {
-		this.grossIndicator = grossIndicator;
+	public BidResponsePrice1 setGrossIndicator(TrueFalseIndicator grossIndicator) {
+		this.grossIndicator = Objects.requireNonNull(grossIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "Sd", required = true)
 	public Side1Code getSide() {
 		return side;
 	}
 
-	public void setSide(Side1Code side) {
-		this.side = side;
+	public BidResponsePrice1 setSide(Side1Code side) {
+		this.side = Objects.requireNonNull(side);
+		return this;
 	}
 
-	@XmlElement(name = "FairVal")
-	public ActiveCurrencyAndAmount getFairValue() {
-		return fairValue;
+	public Optional<ActiveCurrencyAndAmount> getFairValue() {
+		return fairValue == null ? Optional.empty() : Optional.of(fairValue);
 	}
 
-	public void setFairValue(ActiveCurrencyAndAmount fairValue) {
+	public BidResponsePrice1 setFairValue(ActiveCurrencyAndAmount fairValue) {
 		this.fairValue = fairValue;
+		return this;
 	}
 
-	@XmlElement(name = "Ctry")
-	public CountryCode getCountry() {
-		return country;
+	public Optional<CountryCode> getCountry() {
+		return country == null ? Optional.empty() : Optional.of(country);
 	}
 
-	public void setCountry(CountryCode country) {
+	public BidResponsePrice1 setCountry(CountryCode country) {
 		this.country = country;
+		return this;
 	}
 
-	@XmlElement(name = "TradgSsn")
-	public TradingSession1 getTradingSession() {
-		return tradingSession;
+	public Optional<TradingSession1> getTradingSession() {
+		return tradingSession == null ? Optional.empty() : Optional.of(tradingSession);
 	}
 
-	public void setTradingSession(com.tools20022.repository.msg.TradingSession1 tradingSession) {
+	public BidResponsePrice1 setTradingSession(com.tools20022.repository.msg.TradingSession1 tradingSession) {
 		this.tradingSession = tradingSession;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmDtls")
-	public SecuritiesSettlement2 getSettlementDetails() {
-		return settlementDetails;
+	public Optional<SecuritiesSettlement2> getSettlementDetails() {
+		return settlementDetails == null ? Optional.empty() : Optional.of(settlementDetails);
 	}
 
-	public void setSettlementDetails(com.tools20022.repository.msg.SecuritiesSettlement2 settlementDetails) {
+	public BidResponsePrice1 setSettlementDetails(com.tools20022.repository.msg.SecuritiesSettlement2 settlementDetails) {
 		this.settlementDetails = settlementDetails;
+		return this;
 	}
 }

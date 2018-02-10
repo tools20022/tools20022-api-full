@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.CollateralProposalResponse3;
 import com.tools20022.repository.msg.CollateralProposalResponseType3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,16 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * CollateralProposalResponse2Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CollateralProposalResponse3Choice", propOrder = {"collateralProposal", "segregatedIndependentAmount"})
 public class CollateralProposalResponse3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CollPrpsl", required = true)
 	protected CollateralProposalResponse3 collateralProposal;
 	/**
-	 * Provides the collateral proposal response for the variation margin and
-	 * optionally the segregated independent amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -133,7 +134,7 @@ public class CollateralProposalResponse3Choice {
 	public static final MMMessageAssociationEnd mmCollateralProposal = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
-			componentContext_lazy = () -> CollateralProposalResponse3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralProposalResponse3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollPrpsl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,11 +147,11 @@ public class CollateralProposalResponse3Choice {
 			type_lazy = () -> CollateralProposalResponse3.mmObject();
 		}
 	};
+	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
 	protected CollateralProposalResponseType3 segregatedIndependentAmount;
 	/**
-	 * Provides the collateral proposal response for the segregated independent
-	 * amount only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -190,7 +191,7 @@ public class CollateralProposalResponse3Choice {
 	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CollateralMovement.mmSegregatedIndependentAmount;
-			componentContext_lazy = () -> CollateralProposalResponse3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralProposalResponse3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,10 +208,11 @@ public class CollateralProposalResponse3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CollateralProposalResponse3Choice.mmCollateralProposal, CollateralProposalResponse3Choice.mmSegregatedIndependentAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralProposalResponse3Choice.mmCollateralProposal,
+						com.tools20022.repository.choice.CollateralProposalResponse3Choice.mmSegregatedIndependentAmount);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralProposalResponseV05.mmProposalResponse);
 				trace_lazy = () -> CollateralProposal.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralProposalResponse3Choice";
 				definition = "Provides the collateral proposal response for the variation margin and the segregated independent amount, or the segregated independent amount only.";
@@ -220,21 +222,21 @@ public class CollateralProposalResponse3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CollPrpsl", required = true)
 	public CollateralProposalResponse3 getCollateralProposal() {
 		return collateralProposal;
 	}
 
-	public void setCollateralProposal(CollateralProposalResponse3 collateralProposal) {
-		this.collateralProposal = collateralProposal;
+	public CollateralProposalResponse3Choice setCollateralProposal(CollateralProposalResponse3 collateralProposal) {
+		this.collateralProposal = Objects.requireNonNull(collateralProposal);
+		return this;
 	}
 
-	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
 	public CollateralProposalResponseType3 getSegregatedIndependentAmount() {
 		return segregatedIndependentAmount;
 	}
 
-	public void setSegregatedIndependentAmount(CollateralProposalResponseType3 segregatedIndependentAmount) {
-		this.segregatedIndependentAmount = segregatedIndependentAmount;
+	public CollateralProposalResponse3Choice setSegregatedIndependentAmount(CollateralProposalResponseType3 segregatedIndependentAmount) {
+		this.segregatedIndependentAmount = Objects.requireNonNull(segregatedIndependentAmount);
+		return this;
 	}
 }

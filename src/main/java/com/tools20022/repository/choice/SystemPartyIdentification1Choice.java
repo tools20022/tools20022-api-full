@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SystemPartyIdentification3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SystemPartyIdentification1Choice", propOrder = {"organisationIdentification", "combinedIdentification"})
 public class SystemPartyIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgId", required = true)
 	protected PartyIdentification71Choice organisationIdentification;
 	/**
-	 * Provides the identification of a party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +114,7 @@ public class SystemPartyIdentification1Choice {
 	public static final MMMessageAttribute mmOrganisationIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SystemPartyIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,11 +125,11 @@ public class SystemPartyIdentification1Choice {
 			complexType_lazy = () -> com.tools20022.repository.choice.PartyIdentification71Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CmbndId", required = true)
 	protected SystemPartyIdentification3 combinedIdentification;
 	/**
-	 * Identifies the party with the combined identification of both the
-	 * responsible entity and the party itself.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -162,7 +164,7 @@ public class SystemPartyIdentification1Choice {
 	public static final MMMessageAssociationEnd mmCombinedIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SystemPartyRole.mmObject();
-			componentContext_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SystemPartyIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CmbndId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,9 +180,10 @@ public class SystemPartyIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SystemPartyIdentification1Choice.mmOrganisationIdentification, SystemPartyIdentification1Choice.mmCombinedIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemPartyIdentification1Choice.mmOrganisationIdentification,
+						com.tools20022.repository.choice.SystemPartyIdentification1Choice.mmCombinedIdentification);
 				trace_lazy = () -> SystemPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemPartyIdentification1Choice";
 				definition = "Choice between an identification of a party or a combination of the responsible party identification and the business identifier.";
@@ -189,21 +192,21 @@ public class SystemPartyIdentification1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgId", required = true)
 	public PartyIdentification71Choice getOrganisationIdentification() {
 		return organisationIdentification;
 	}
 
-	public void setOrganisationIdentification(com.tools20022.repository.choice.PartyIdentification71Choice organisationIdentification) {
-		this.organisationIdentification = organisationIdentification;
+	public SystemPartyIdentification1Choice setOrganisationIdentification(com.tools20022.repository.choice.PartyIdentification71Choice organisationIdentification) {
+		this.organisationIdentification = Objects.requireNonNull(organisationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CmbndId", required = true)
 	public SystemPartyIdentification3 getCombinedIdentification() {
 		return combinedIdentification;
 	}
 
-	public void setCombinedIdentification(SystemPartyIdentification3 combinedIdentification) {
-		this.combinedIdentification = combinedIdentification;
+	public SystemPartyIdentification1Choice setCombinedIdentification(SystemPartyIdentification3 combinedIdentification) {
+		this.combinedIdentification = Objects.requireNonNull(combinedIdentification);
+		return this;
 	}
 }

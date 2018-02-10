@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1;
 import com.tools20022.repository.msg.PledgeeTypeAndText2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,16 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PledgeeFormat2Choice", propOrder = {"typeAndIdentification", "identification", "proprietary"})
 public class PledgeeFormat2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TpAndId", required = true)
 	protected PledgeeTypeAndAnyBICIdentifier1 typeAndIdentification;
 	/**
-	 * Identification of the entity to which the financial instruments are
-	 * pledged expressed as a code and a BIC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -116,7 +117,7 @@ public class PledgeeFormat2Choice {
 	public static final MMMessageAssociationEnd mmTypeAndIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Pledgee.mmObject();
-			componentContext_lazy = () -> PledgeeFormat2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PledgeeFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TpAndId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,11 +129,11 @@ public class PledgeeFormat2Choice {
 			type_lazy = () -> PledgeeTypeAndAnyBICIdentifier1.mmObject();
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected PledgeeTypeAndText2 identification;
 	/**
-	 * Identification of the entity to which the financial instruments are
-	 * pledged expressed as a code and a narrative description.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -165,7 +166,7 @@ public class PledgeeFormat2Choice {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Pledgee.mmObject();
-			componentContext_lazy = () -> PledgeeFormat2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PledgeeFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,11 +178,11 @@ public class PledgeeFormat2Choice {
 			type_lazy = () -> PledgeeTypeAndText2.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification59 proprietary;
 	/**
-	 * Identification of the entity to which the financial instruments are
-	 * pledged expressed as a proprietary type and narrative description.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -216,7 +217,7 @@ public class PledgeeFormat2Choice {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> PledgeeFormat2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PledgeeFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,9 +233,10 @@ public class PledgeeFormat2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PledgeeFormat2Choice.mmTypeAndIdentification, PledgeeFormat2Choice.mmIdentification, PledgeeFormat2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PledgeeFormat2Choice.mmTypeAndIdentification, com.tools20022.repository.choice.PledgeeFormat2Choice.mmIdentification,
+						com.tools20022.repository.choice.PledgeeFormat2Choice.mmProprietary);
 				trace_lazy = () -> Pledgee.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PledgeeFormat2Choice";
 				definition = "Choice between formats for the entity to which the financial instruments are pledged.";
@@ -243,30 +245,30 @@ public class PledgeeFormat2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TpAndId", required = true)
 	public PledgeeTypeAndAnyBICIdentifier1 getTypeAndIdentification() {
 		return typeAndIdentification;
 	}
 
-	public void setTypeAndIdentification(PledgeeTypeAndAnyBICIdentifier1 typeAndIdentification) {
-		this.typeAndIdentification = typeAndIdentification;
+	public PledgeeFormat2Choice setTypeAndIdentification(PledgeeTypeAndAnyBICIdentifier1 typeAndIdentification) {
+		this.typeAndIdentification = Objects.requireNonNull(typeAndIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public PledgeeTypeAndText2 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(PledgeeTypeAndText2 identification) {
-		this.identification = identification;
+	public PledgeeFormat2Choice setIdentification(PledgeeTypeAndText2 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification59 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification59 proprietary) {
-		this.proprietary = proprietary;
+	public PledgeeFormat2Choice setProprietary(GenericIdentification59 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentType2Choice", propOrder = {"paymentType", "proprietaryPaymentType"})
 public class PaymentType2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmtTp", required = true)
 	protected PaymentType3Code paymentType;
 	/**
-	 * Type, or nature, of the payment, eg, express payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +112,7 @@ public class PaymentType2Choice {
 	public static final MMMessageAttribute mmPaymentType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmType;
-			componentContext_lazy = () -> PaymentType2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +123,11 @@ public class PaymentType2Choice {
 			simpleType_lazy = () -> PaymentType3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryPmtTp", required = true)
 	protected Max4AlphaNumericText proprietaryPaymentType;
 	/**
-	 * Payment type that is not included in a predefined list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +161,7 @@ public class PaymentType2Choice {
 	public static final MMMessageAttribute mmProprietaryPaymentType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmType;
-			componentContext_lazy = () -> PaymentType2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryPmtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,9 +176,9 @@ public class PaymentType2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentType2Choice.mmPaymentType, PaymentType2Choice.mmProprietaryPaymentType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentType2Choice.mmPaymentType, com.tools20022.repository.choice.PaymentType2Choice.mmProprietaryPaymentType);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentType2Choice";
 				definition = "Choice beween a payment type from a predefined list and a proprietary payment type.";
@@ -184,21 +187,21 @@ public class PaymentType2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmtTp", required = true)
 	public PaymentType3Code getPaymentType() {
 		return paymentType;
 	}
 
-	public void setPaymentType(PaymentType3Code paymentType) {
-		this.paymentType = paymentType;
+	public PaymentType2Choice setPaymentType(PaymentType3Code paymentType) {
+		this.paymentType = Objects.requireNonNull(paymentType);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryPmtTp", required = true)
 	public Max4AlphaNumericText getProprietaryPaymentType() {
 		return proprietaryPaymentType;
 	}
 
-	public void setProprietaryPaymentType(Max4AlphaNumericText proprietaryPaymentType) {
-		this.proprietaryPaymentType = proprietaryPaymentType;
+	public PaymentType2Choice setProprietaryPaymentType(Max4AlphaNumericText proprietaryPaymentType) {
+		this.proprietaryPaymentType = Objects.requireNonNull(proprietaryPaymentType);
+		return this;
 	}
 }

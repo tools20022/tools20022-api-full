@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Type of tax expressed in structured or free text form."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TaxTypeFormat2Choice", propOrder = {"unstructured", "structured"})
 public class TaxTypeFormat2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ustrd", required = true)
 	protected Max35Text unstructured;
 	/**
-	 * Specifies the type of tax in free text form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +102,7 @@ public class TaxTypeFormat2Choice {
 	 */
 	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxTypeFormat2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TaxTypeFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ustrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +113,11 @@ public class TaxTypeFormat2Choice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Strd", required = true)
 	protected TaxType2Code structured;
 	/**
-	 * Specifies the type of tax in structured form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +149,7 @@ public class TaxTypeFormat2Choice {
 	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
-			componentContext_lazy = () -> TaxTypeFormat2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TaxTypeFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Strd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,9 +164,9 @@ public class TaxTypeFormat2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TaxTypeFormat2Choice.mmUnstructured, TaxTypeFormat2Choice.mmStructured);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxTypeFormat2Choice.mmUnstructured, com.tools20022.repository.choice.TaxTypeFormat2Choice.mmStructured);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxTypeFormat2Choice";
 				definition = "Type of tax expressed in structured or free text form.";
@@ -172,21 +175,21 @@ public class TaxTypeFormat2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ustrd", required = true)
 	public Max35Text getUnstructured() {
 		return unstructured;
 	}
 
-	public void setUnstructured(Max35Text unstructured) {
-		this.unstructured = unstructured;
+	public TaxTypeFormat2Choice setUnstructured(Max35Text unstructured) {
+		this.unstructured = Objects.requireNonNull(unstructured);
+		return this;
 	}
 
-	@XmlElement(name = "Strd", required = true)
 	public TaxType2Code getStructured() {
 		return structured;
 	}
 
-	public void setStructured(TaxType2Code structured) {
-		this.structured = structured;
+	public TaxTypeFormat2Choice setStructured(TaxType2Code structured) {
+		this.structured = Objects.requireNonNull(structured);
+		return this;
 	}
 }

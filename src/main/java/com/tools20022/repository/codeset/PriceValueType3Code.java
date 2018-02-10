@@ -20,60 +20,62 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PriceValueTypeCode;
+import com.tools20022.repository.codeset.PriceValueType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies a type of value of the price.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode
- * PriceValueTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType3Code#mmDiscount
- * PriceValueType3Code.mmDiscount}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType3Code#Discount
+ * PriceValueType3Code.Discount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType3Code#mmPremium
- * PriceValueType3Code.mmPremium}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType3Code#mmPar
- * PriceValueType3Code.mmPar}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType3Code#Premium
+ * PriceValueType3Code.Premium}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType3Code#Par
+ * PriceValueType3Code.Par}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType3Code#Yield
+ * PriceValueType3Code.Yield}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceValueType3Code#Spread
+ * PriceValueType3Code.Spread}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType3Code#mmYield
- * PriceValueType3Code.mmYield}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType3Code#PerUnit
+ * PriceValueType3Code.PerUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType3Code#mmSpread
- * PriceValueType3Code.mmSpread}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType3Code#Absolute
+ * PriceValueType3Code.Absolute}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType3Code#mmPerUnit
- * PriceValueType3Code.mmPerUnit}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType3Code#TEDPrice
+ * PriceValueType3Code.TEDPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType3Code#mmAbsolute
- * PriceValueType3Code.mmAbsolute}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType3Code#TEDYield
+ * PriceValueType3Code.TEDYield}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType3Code#mmTEDPrice
- * PriceValueType3Code.mmTEDPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType3Code#FixedCabinetTrade
+ * PriceValueType3Code.FixedCabinetTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType3Code#mmTEDYield
- * PriceValueType3Code.mmTEDYield}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType3Code#mmFixedCabinetTrade
- * PriceValueType3Code.mmFixedCabinetTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType3Code#mmVariableCabinetTrade
- * PriceValueType3Code.mmVariableCabinetTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType3Code#VariableCabinetTrade
+ * PriceValueType3Code.VariableCabinetTrade}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode
+ * PriceValueTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies a type of value of the price."</li>
  * </ul>
  */
-public class PriceValueType3Code extends PriceValueTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PriceValueType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -109,11 +112,12 @@ public class PriceValueType3Code extends PriceValueTypeCode {
 	 * name} = "Discount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiscount = new MMCode() {
+	public static final PriceValueType3Code Discount = new PriceValueType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
-			owner_lazy = () -> PriceValueType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType3Code.mmObject();
+			codeName = PriceValueTypeCode.Discount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,11 +136,12 @@ public class PriceValueType3Code extends PriceValueTypeCode {
 	 * name} = "Premium"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPremium = new MMCode() {
+	public static final PriceValueType3Code Premium = new PriceValueType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
-			owner_lazy = () -> PriceValueType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType3Code.mmObject();
+			codeName = PriceValueTypeCode.Premium.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -155,11 +160,12 @@ public class PriceValueType3Code extends PriceValueTypeCode {
 	 * name} = "Par"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPar = new MMCode() {
+	public static final PriceValueType3Code Par = new PriceValueType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Par";
-			owner_lazy = () -> PriceValueType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType3Code.mmObject();
+			codeName = PriceValueTypeCode.Par.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -178,11 +184,12 @@ public class PriceValueType3Code extends PriceValueTypeCode {
 	 * name} = "Yield"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmYield = new MMCode() {
+	public static final PriceValueType3Code Yield = new PriceValueType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yield";
-			owner_lazy = () -> PriceValueType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType3Code.mmObject();
+			codeName = PriceValueTypeCode.Yield.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -201,11 +208,12 @@ public class PriceValueType3Code extends PriceValueTypeCode {
 	 * name} = "Spread"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpread = new MMCode() {
+	public static final PriceValueType3Code Spread = new PriceValueType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Spread";
-			owner_lazy = () -> PriceValueType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType3Code.mmObject();
+			codeName = PriceValueTypeCode.Spread.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -224,11 +232,12 @@ public class PriceValueType3Code extends PriceValueTypeCode {
 	 * name} = "PerUnit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPerUnit = new MMCode() {
+	public static final PriceValueType3Code PerUnit = new PriceValueType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
-			owner_lazy = () -> PriceValueType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType3Code.mmObject();
+			codeName = PriceValueTypeCode.PerUnit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -247,11 +256,12 @@ public class PriceValueType3Code extends PriceValueTypeCode {
 	 * name} = "Absolute"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAbsolute = new MMCode() {
+	public static final PriceValueType3Code Absolute = new PriceValueType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Absolute";
-			owner_lazy = () -> PriceValueType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType3Code.mmObject();
+			codeName = PriceValueTypeCode.Absolute.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -270,11 +280,12 @@ public class PriceValueType3Code extends PriceValueTypeCode {
 	 * name} = "TEDPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTEDPrice = new MMCode() {
+	public static final PriceValueType3Code TEDPrice = new PriceValueType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TEDPrice";
-			owner_lazy = () -> PriceValueType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType3Code.mmObject();
+			codeName = PriceValueTypeCode.TEDPrice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -293,11 +304,12 @@ public class PriceValueType3Code extends PriceValueTypeCode {
 	 * name} = "TEDYield"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTEDYield = new MMCode() {
+	public static final PriceValueType3Code TEDYield = new PriceValueType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TEDYield";
-			owner_lazy = () -> PriceValueType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType3Code.mmObject();
+			codeName = PriceValueTypeCode.TEDYield.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -316,11 +328,12 @@ public class PriceValueType3Code extends PriceValueTypeCode {
 	 * name} = "FixedCabinetTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFixedCabinetTrade = new MMCode() {
+	public static final PriceValueType3Code FixedCabinetTrade = new PriceValueType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedCabinetTrade";
-			owner_lazy = () -> PriceValueType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType3Code.mmObject();
+			codeName = PriceValueTypeCode.FixedCabinetTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -339,27 +352,69 @@ public class PriceValueType3Code extends PriceValueTypeCode {
 	 * name} = "VariableCabinetTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVariableCabinetTrade = new MMCode() {
+	public static final PriceValueType3Code VariableCabinetTrade = new PriceValueType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableCabinetTrade";
-			owner_lazy = () -> PriceValueType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType3Code.mmObject();
+			codeName = PriceValueTypeCode.VariableCabinetTrade.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PriceValueType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PriceValueType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DISC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceValueType3Code";
 				definition = "Specifies a type of value of the price.";
-				code_lazy = () -> Arrays.asList(PriceValueType3Code.mmDiscount, PriceValueType3Code.mmPremium, PriceValueType3Code.mmPar, PriceValueType3Code.mmYield, PriceValueType3Code.mmSpread, PriceValueType3Code.mmPerUnit,
-						PriceValueType3Code.mmAbsolute, PriceValueType3Code.mmTEDPrice, PriceValueType3Code.mmTEDYield, PriceValueType3Code.mmFixedCabinetTrade, PriceValueType3Code.mmVariableCabinetTrade);
 				trace_lazy = () -> PriceValueTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceValueType3Code.Discount, com.tools20022.repository.codeset.PriceValueType3Code.Premium, com.tools20022.repository.codeset.PriceValueType3Code.Par,
+						com.tools20022.repository.codeset.PriceValueType3Code.Yield, com.tools20022.repository.codeset.PriceValueType3Code.Spread, com.tools20022.repository.codeset.PriceValueType3Code.PerUnit,
+						com.tools20022.repository.codeset.PriceValueType3Code.Absolute, com.tools20022.repository.codeset.PriceValueType3Code.TEDPrice, com.tools20022.repository.codeset.PriceValueType3Code.TEDYield,
+						com.tools20022.repository.codeset.PriceValueType3Code.FixedCabinetTrade, com.tools20022.repository.codeset.PriceValueType3Code.VariableCabinetTrade);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Discount.getCodeName().get(), Discount);
+		codesByName.put(Premium.getCodeName().get(), Premium);
+		codesByName.put(Par.getCodeName().get(), Par);
+		codesByName.put(Yield.getCodeName().get(), Yield);
+		codesByName.put(Spread.getCodeName().get(), Spread);
+		codesByName.put(PerUnit.getCodeName().get(), PerUnit);
+		codesByName.put(Absolute.getCodeName().get(), Absolute);
+		codesByName.put(TEDPrice.getCodeName().get(), TEDPrice);
+		codesByName.put(TEDYield.getCodeName().get(), TEDYield);
+		codesByName.put(FixedCabinetTrade.getCodeName().get(), FixedCabinetTrade);
+		codesByName.put(VariableCabinetTrade.getCodeName().get(), VariableCabinetTrade);
+	}
+
+	public static PriceValueType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PriceValueType3Code[] values() {
+		PriceValueType3Code[] values = new PriceValueType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PriceValueType3Code> {
+		@Override
+		public PriceValueType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PriceValueType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

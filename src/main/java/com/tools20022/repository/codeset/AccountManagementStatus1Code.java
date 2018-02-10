@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AccountManagementStatusCode;
+import com.tools20022.repository.codeset.AccountManagementStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of an account management instruction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AccountManagementStatusCode
- * AccountManagementStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementStatus1Code#mmReceived
- * AccountManagementStatus1Code.mmReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementStatus1Code#Received
+ * AccountManagementStatus1Code.Received}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementStatus1Code#mmAccepted
- * AccountManagementStatus1Code.mmAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementStatus1Code#Accepted
+ * AccountManagementStatus1Code.Accepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementStatus1Code#mmProcessingOngoing
- * AccountManagementStatus1Code.mmProcessingOngoing}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementStatus1Code#ProcessingOngoing
+ * AccountManagementStatus1Code.ProcessingOngoing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementStatus1Code#mmSentToNextParty
- * AccountManagementStatus1Code.mmSentToNextParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementStatus1Code#SentToNextParty
+ * AccountManagementStatus1Code.SentToNextParty}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementStatusCode
+ * AccountManagementStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of an account management instruction."</li>
  * </ul>
  */
-public class AccountManagementStatus1Code extends AccountManagementStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AccountManagementStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class AccountManagementStatus1Code extends AccountManagementStatusCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceived = new MMCode() {
+	public static final AccountManagementStatus1Code Received = new AccountManagementStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
-			owner_lazy = () -> AccountManagementStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountManagementStatus1Code.mmObject();
+			codeName = AccountManagementStatusCode.Received.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class AccountManagementStatus1Code extends AccountManagementStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final AccountManagementStatus1Code Accepted = new AccountManagementStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> AccountManagementStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountManagementStatus1Code.mmObject();
+			codeName = AccountManagementStatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class AccountManagementStatus1Code extends AccountManagementStatusCode {
 	 * name} = "ProcessingOngoing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProcessingOngoing = new MMCode() {
+	public static final AccountManagementStatus1Code ProcessingOngoing = new AccountManagementStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingOngoing";
-			owner_lazy = () -> AccountManagementStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountManagementStatus1Code.mmObject();
+			codeName = AccountManagementStatusCode.ProcessingOngoing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,26 +166,60 @@ public class AccountManagementStatus1Code extends AccountManagementStatusCode {
 	 * name} = "SentToNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSentToNextParty = new MMCode() {
+	public static final AccountManagementStatus1Code SentToNextParty = new AccountManagementStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
-			owner_lazy = () -> AccountManagementStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountManagementStatus1Code.mmObject();
+			codeName = AccountManagementStatusCode.SentToNextParty.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AccountManagementStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AccountManagementStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RECE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementStatus1Code";
 				definition = "Specifies the status of an account management instruction.";
-				code_lazy = () -> Arrays.asList(AccountManagementStatus1Code.mmReceived, AccountManagementStatus1Code.mmAccepted, AccountManagementStatus1Code.mmProcessingOngoing, AccountManagementStatus1Code.mmSentToNextParty);
 				trace_lazy = () -> AccountManagementStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountManagementStatus1Code.Received, com.tools20022.repository.codeset.AccountManagementStatus1Code.Accepted,
+						com.tools20022.repository.codeset.AccountManagementStatus1Code.ProcessingOngoing, com.tools20022.repository.codeset.AccountManagementStatus1Code.SentToNextParty);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Received.getCodeName().get(), Received);
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+		codesByName.put(ProcessingOngoing.getCodeName().get(), ProcessingOngoing);
+		codesByName.put(SentToNextParty.getCodeName().get(), SentToNextParty);
+	}
+
+	public static AccountManagementStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AccountManagementStatus1Code[] values() {
+		AccountManagementStatus1Code[] values = new AccountManagementStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AccountManagementStatus1Code> {
+		@Override
+		public AccountManagementStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AccountManagementStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

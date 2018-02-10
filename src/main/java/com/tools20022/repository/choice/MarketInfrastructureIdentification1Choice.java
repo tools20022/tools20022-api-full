@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.SystemIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the market infrastructure identification."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MarketInfrastructureIdentification1Choice", propOrder = {"code", "proprietary"})
 public class MarketInfrastructureIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected ExternalMarketInfrastructure1Code code;
 	/**
-	 * Infrastructure through which the payment instruction is processed, as
-	 * published in an external clearing system identification code list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +112,7 @@ public class MarketInfrastructureIdentification1Choice {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SystemIdentification.mmObject();
-			componentContext_lazy = () -> MarketInfrastructureIdentification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +123,11 @@ public class MarketInfrastructureIdentification1Choice {
 			simpleType_lazy = () -> ExternalMarketInfrastructure1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected Max35Text proprietary;
 	/**
-	 * Clearing system identification in a proprietary form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +160,7 @@ public class MarketInfrastructureIdentification1Choice {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SystemIdentification.mmObject();
-			componentContext_lazy = () -> MarketInfrastructureIdentification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,9 +175,9 @@ public class MarketInfrastructureIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MarketInfrastructureIdentification1Choice.mmCode, MarketInfrastructureIdentification1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice.mmCode, com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice.mmProprietary);
 				trace_lazy = () -> SystemIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketInfrastructureIdentification1Choice";
 				definition = "Specifies the market infrastructure identification.";
@@ -184,21 +186,21 @@ public class MarketInfrastructureIdentification1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public ExternalMarketInfrastructure1Code getCode() {
 		return code;
 	}
 
-	public void setCode(ExternalMarketInfrastructure1Code code) {
-		this.code = code;
+	public MarketInfrastructureIdentification1Choice setCode(ExternalMarketInfrastructure1Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public Max35Text getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(Max35Text proprietary) {
-		this.proprietary = proprietary;
+	public MarketInfrastructureIdentification1Choice setProprietary(Max35Text proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

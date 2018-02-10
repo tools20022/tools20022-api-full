@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RegistrationProcessingStatusCode;
+import com.tools20022.repository.codeset.RegistrationProcessingStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of the registration processing.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RegistrationProcessingStatusCode
- * RegistrationProcessingStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegistrationProcessingStatus1Code#mmAcknowledgedAccepted
- * RegistrationProcessingStatus1Code.mmAcknowledgedAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegistrationProcessingStatus1Code#AcknowledgedAccepted
+ * RegistrationProcessingStatus1Code.AcknowledgedAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegistrationProcessingStatus1Code#mmRejected
- * RegistrationProcessingStatus1Code.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegistrationProcessingStatus1Code#Rejected
+ * RegistrationProcessingStatus1Code.Rejected}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RegistrationProcessingStatusCode
+ * RegistrationProcessingStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of the registration processing."</li>
  * </ul>
  */
-public class RegistrationProcessingStatus1Code extends RegistrationProcessingStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RegistrationProcessingStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class RegistrationProcessingStatus1Code extends RegistrationProcessingSta
 	 * name} = "AcknowledgedAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
+	public static final RegistrationProcessingStatus1Code AcknowledgedAccepted = new RegistrationProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
-			owner_lazy = () -> RegistrationProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RegistrationProcessingStatus1Code.mmObject();
+			codeName = RegistrationProcessingStatusCode.AcknowledgedAccepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class RegistrationProcessingStatus1Code extends RegistrationProcessingSta
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final RegistrationProcessingStatus1Code Rejected = new RegistrationProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> RegistrationProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RegistrationProcessingStatus1Code.mmObject();
+			codeName = RegistrationProcessingStatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RegistrationProcessingStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RegistrationProcessingStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PACK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegistrationProcessingStatus1Code";
 				definition = "Specifies the status of the registration processing.";
-				code_lazy = () -> Arrays.asList(RegistrationProcessingStatus1Code.mmAcknowledgedAccepted, RegistrationProcessingStatus1Code.mmRejected);
 				trace_lazy = () -> RegistrationProcessingStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegistrationProcessingStatus1Code.AcknowledgedAccepted, com.tools20022.repository.codeset.RegistrationProcessingStatus1Code.Rejected);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AcknowledgedAccepted.getCodeName().get(), AcknowledgedAccepted);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+	}
+
+	public static RegistrationProcessingStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RegistrationProcessingStatus1Code[] values() {
+		RegistrationProcessingStatus1Code[] values = new RegistrationProcessingStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RegistrationProcessingStatus1Code> {
+		@Override
+		public RegistrationProcessingStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RegistrationProcessingStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

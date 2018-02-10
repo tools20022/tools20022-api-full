@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * Parameter4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Parameter8", propOrder = {"digestAlgorithm", "maskGeneratorAlgorithm", "saltLength", "trailerField"})
 public class Parameter8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DgstAlgo", required = true)
 	protected Algorithm11Code digestAlgorithm;
 	/**
-	 * Identification of the digest algorithm.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +114,7 @@ public class Parameter8 {
 	 */
 	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Parameter8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter8.mmObject();
 			isDerived = false;
 			xmlTag = "DgstAlgo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +126,11 @@ public class Parameter8 {
 			simpleType_lazy = () -> Algorithm11Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MskGnrtrAlgo", required = true)
 	protected AlgorithmIdentification12 maskGeneratorAlgorithm;
 	/**
-	 * Mask generator function cryptographic algorithm and parameters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +163,7 @@ public class Parameter8 {
 	 */
 	public static final MMMessageAttribute mmMaskGeneratorAlgorithm = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Parameter8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter8.mmObject();
 			isDerived = false;
 			xmlTag = "MskGnrtrAlgo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +175,11 @@ public class Parameter8 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification12.mmObject();
 		}
 	};
+	@XmlElement(name = "SaltLngth", required = true)
 	protected Number saltLength;
 	/**
-	 * Length of the salt to include in the signature.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,7 +205,7 @@ public class Parameter8 {
 	 */
 	public static final MMMessageAttribute mmSaltLength = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Parameter8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter8.mmObject();
 			isDerived = false;
 			xmlTag = "SaltLngth";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,10 +216,11 @@ public class Parameter8 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "TrlrFld")
 	protected Number trailerField;
 	/**
-	 * Trailer field number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -240,7 +246,7 @@ public class Parameter8 {
 	 */
 	public static final MMMessageAttribute mmTrailerField = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Parameter8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter8.mmObject();
 			isDerived = false;
 			xmlTag = "TrlrFld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -255,8 +261,9 @@ public class Parameter8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Parameter8.mmDigestAlgorithm, Parameter8.mmMaskGeneratorAlgorithm, Parameter8.mmSaltLength, Parameter8.mmTrailerField);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter8.mmDigestAlgorithm, com.tools20022.repository.msg.Parameter8.mmMaskGeneratorAlgorithm, com.tools20022.repository.msg.Parameter8.mmSaltLength,
+						com.tools20022.repository.msg.Parameter8.mmTrailerField);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Parameter8";
 				definition = "Parameters of the RSASSA-PSS digital signature algorithm (RSA signature algorithm with appendix: Probabilistic Signature Scheme).";
@@ -266,39 +273,39 @@ public class Parameter8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DgstAlgo", required = true)
 	public Algorithm11Code getDigestAlgorithm() {
 		return digestAlgorithm;
 	}
 
-	public void setDigestAlgorithm(Algorithm11Code digestAlgorithm) {
-		this.digestAlgorithm = digestAlgorithm;
+	public Parameter8 setDigestAlgorithm(Algorithm11Code digestAlgorithm) {
+		this.digestAlgorithm = Objects.requireNonNull(digestAlgorithm);
+		return this;
 	}
 
-	@XmlElement(name = "MskGnrtrAlgo", required = true)
 	public AlgorithmIdentification12 getMaskGeneratorAlgorithm() {
 		return maskGeneratorAlgorithm;
 	}
 
-	public void setMaskGeneratorAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification12 maskGeneratorAlgorithm) {
-		this.maskGeneratorAlgorithm = maskGeneratorAlgorithm;
+	public Parameter8 setMaskGeneratorAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification12 maskGeneratorAlgorithm) {
+		this.maskGeneratorAlgorithm = Objects.requireNonNull(maskGeneratorAlgorithm);
+		return this;
 	}
 
-	@XmlElement(name = "SaltLngth", required = true)
 	public Number getSaltLength() {
 		return saltLength;
 	}
 
-	public void setSaltLength(Number saltLength) {
-		this.saltLength = saltLength;
+	public Parameter8 setSaltLength(Number saltLength) {
+		this.saltLength = Objects.requireNonNull(saltLength);
+		return this;
 	}
 
-	@XmlElement(name = "TrlrFld")
-	public Number getTrailerField() {
-		return trailerField;
+	public Optional<Number> getTrailerField() {
+		return trailerField == null ? Optional.empty() : Optional.of(trailerField);
 	}
 
-	public void setTrailerField(Number trailerField) {
+	public Parameter8 setTrailerField(Number trailerField) {
 		this.trailerField = trailerField;
+		return this;
 	}
 }

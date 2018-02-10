@@ -20,33 +20,36 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ChargeTypeCode;
+import com.tools20022.repository.codeset.ChargeType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of service for which a charge is asked or paid.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode ChargeTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType1Code#mmBrokerageFee
- * ChargeType1Code.mmBrokerageFee}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType1Code#mmCommission
- * ChargeType1Code.mmCommission}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType1Code#BrokerageFee
+ * ChargeType1Code.BrokerageFee}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType1Code#Commission
+ * ChargeType1Code.Commission}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode ChargeTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -63,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of service for which a charge is asked or paid."</li>
  * </ul>
  */
-public class ChargeType1Code extends ChargeTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ChargeType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,11 +86,12 @@ public class ChargeType1Code extends ChargeTypeCode {
 	 * name} = "BrokerageFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBrokerageFee = new MMCode() {
+	public static final ChargeType1Code BrokerageFee = new ChargeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerageFee";
-			owner_lazy = () -> ChargeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType1Code.mmObject();
+			codeName = ChargeTypeCode.BrokerageFee.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -105,26 +110,57 @@ public class ChargeType1Code extends ChargeTypeCode {
 	 * name} = "Commission"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommission = new MMCode() {
+	public static final ChargeType1Code Commission = new ChargeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commission";
-			owner_lazy = () -> ChargeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType1Code.mmObject();
+			codeName = ChargeTypeCode.Commission.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ChargeType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ChargeType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BRKF");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeType1Code";
 				definition = "Type of service for which a charge is asked or paid.";
-				code_lazy = () -> Arrays.asList(ChargeType1Code.mmBrokerageFee, ChargeType1Code.mmCommission);
 				trace_lazy = () -> ChargeTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType1Code.BrokerageFee, com.tools20022.repository.codeset.ChargeType1Code.Commission);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BrokerageFee.getCodeName().get(), BrokerageFee);
+		codesByName.put(Commission.getCodeName().get(), Commission);
+	}
+
+	public static ChargeType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ChargeType1Code[] values() {
+		ChargeType1Code[] values = new ChargeType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ChargeType1Code> {
+		@Override
+		public ChargeType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ChargeType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

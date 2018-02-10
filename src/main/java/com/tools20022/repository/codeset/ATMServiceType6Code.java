@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ATMServiceTypeCode;
+import com.tools20022.repository.codeset.ATMServiceType6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Describes the type of deposit service selected by the customer.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode
- * ATMServiceTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType6Code#mmMakingChange
- * ATMServiceType6Code.mmMakingChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType6Code#MakingChange
+ * ATMServiceType6Code.MakingChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType6Code#mmNonVerifiedDeposit
- * ATMServiceType6Code.mmNonVerifiedDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType6Code#NonVerifiedDeposit
+ * ATMServiceType6Code.NonVerifiedDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType6Code#mmVerifiedDeposit
- * ATMServiceType6Code.mmVerifiedDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType6Code#VerifiedDeposit
+ * ATMServiceType6Code.VerifiedDeposit}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode
+ * ATMServiceTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Describes the type of deposit service selected by the customer."</li>
  * </ul>
  */
-public class ATMServiceType6Code extends ATMServiceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ATMServiceType6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -81,11 +86,12 @@ public class ATMServiceType6Code extends ATMServiceTypeCode {
 	 * name} = "MakingChange"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMakingChange = new MMCode() {
+	public static final ATMServiceType6Code MakingChange = new ATMServiceType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MakingChange";
-			owner_lazy = () -> ATMServiceType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMServiceType6Code.mmObject();
+			codeName = ATMServiceTypeCode.MakingChange.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -104,11 +110,12 @@ public class ATMServiceType6Code extends ATMServiceTypeCode {
 	 * name} = "NonVerifiedDeposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonVerifiedDeposit = new MMCode() {
+	public static final ATMServiceType6Code NonVerifiedDeposit = new ATMServiceType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonVerifiedDeposit";
-			owner_lazy = () -> ATMServiceType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMServiceType6Code.mmObject();
+			codeName = ATMServiceTypeCode.NonVerifiedDeposit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -127,25 +134,58 @@ public class ATMServiceType6Code extends ATMServiceTypeCode {
 	 * name} = "VerifiedDeposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVerifiedDeposit = new MMCode() {
+	public static final ATMServiceType6Code VerifiedDeposit = new ATMServiceType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VerifiedDeposit";
-			owner_lazy = () -> ATMServiceType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMServiceType6Code.mmObject();
+			codeName = ATMServiceTypeCode.VerifiedDeposit.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ATMServiceType6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ATMServiceType6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMServiceType6Code";
 				definition = "Describes the type of deposit service selected by the customer.";
-				code_lazy = () -> Arrays.asList(ATMServiceType6Code.mmMakingChange, ATMServiceType6Code.mmNonVerifiedDeposit, ATMServiceType6Code.mmVerifiedDeposit);
 				trace_lazy = () -> ATMServiceTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceType6Code.MakingChange, com.tools20022.repository.codeset.ATMServiceType6Code.NonVerifiedDeposit,
+						com.tools20022.repository.codeset.ATMServiceType6Code.VerifiedDeposit);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(MakingChange.getCodeName().get(), MakingChange);
+		codesByName.put(NonVerifiedDeposit.getCodeName().get(), NonVerifiedDeposit);
+		codesByName.put(VerifiedDeposit.getCodeName().get(), VerifiedDeposit);
+	}
+
+	public static ATMServiceType6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ATMServiceType6Code[] values() {
+		ATMServiceType6Code[] values = new ATMServiceType6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ATMServiceType6Code> {
+		@Override
+		public ATMServiceType6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ATMServiceType6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.SecuritiesStatementTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the statement is an accounting or a custody statement.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesStatementTypeCode#mmCustody
- * SecuritiesStatementTypeCode.mmCustody}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesStatementTypeCode#Custody
+ * SecuritiesStatementTypeCode.Custody}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesStatementTypeCode#mmAccounting
- * SecuritiesStatementTypeCode.mmAccounting}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesStatementTypeCode#Accounting
+ * SecuritiesStatementTypeCode.Accounting}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies whether the statement is an accounting or a custody statement."</li>
  * </ul>
  */
-public class SecuritiesStatementTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SecuritiesStatementTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,12 +99,12 @@ public class SecuritiesStatementTypeCode {
 	 * definition} = "Statement is a custody statement."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustody = new MMCode() {
+	public static final SecuritiesStatementTypeCode Custody = new SecuritiesStatementTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Custody";
 			definition = "Statement is a custody statement.";
-			owner_lazy = () -> SecuritiesStatementTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesStatementTypeCode.mmObject();
 			codeName = "CUST";
 		}
 	};
@@ -123,28 +129,58 @@ public class SecuritiesStatementTypeCode {
 	 * definition} = "Statement is an accounting statement."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccounting = new MMCode() {
+	public static final SecuritiesStatementTypeCode Accounting = new SecuritiesStatementTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accounting";
 			definition = "Statement is an accounting statement.";
-			owner_lazy = () -> SecuritiesStatementTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesStatementTypeCode.mmObject();
 			codeName = "ACCT";
 		}
 	};
+	final static private LinkedHashMap<String, SecuritiesStatementTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SecuritiesStatementTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CUST");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesStatementTypeCode";
 				definition = "Specifies whether the statement is an accounting or a custody statement.";
-				code_lazy = () -> Arrays.asList(SecuritiesStatementTypeCode.mmCustody, SecuritiesStatementTypeCode.mmAccounting);
 				derivation_lazy = () -> Arrays.asList(SecuritiesStatementType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesStatementTypeCode.Custody, com.tools20022.repository.codeset.SecuritiesStatementTypeCode.Accounting);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Custody.getCodeName().get(), Custody);
+		codesByName.put(Accounting.getCodeName().get(), Accounting);
+	}
+
+	public static SecuritiesStatementTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SecuritiesStatementTypeCode[] values() {
+		SecuritiesStatementTypeCode[] values = new SecuritiesStatementTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SecuritiesStatementTypeCode> {
+		@Override
+		public SecuritiesStatementTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SecuritiesStatementTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,36 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DisplayMethodCode;
+import com.tools20022.repository.codeset.DisplayMethod1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Instructions for the use of display quantity.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DisplayMethod1Code#Initial
+ * DisplayMethod1Code.Initial}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DisplayMethod1Code#New
+ * DisplayMethod1Code.New}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DisplayMethod1Code#Random
+ * DisplayMethod1Code.Random}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.DisplayMethodCode
  * DisplayMethodCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DisplayMethod1Code#mmInitial
- * DisplayMethod1Code.mmInitial}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DisplayMethod1Code#mmNew
- * DisplayMethod1Code.mmNew}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DisplayMethod1Code#mmRandom
- * DisplayMethod1Code.mmRandom}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -66,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Instructions for the use of display quantity."</li>
  * </ul>
  */
-public class DisplayMethod1Code extends DisplayMethodCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DisplayMethod1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,11 +88,12 @@ public class DisplayMethod1Code extends DisplayMethodCode {
 	 * name} = "Initial"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInitial = new MMCode() {
+	public static final DisplayMethod1Code Initial = new DisplayMethod1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initial";
-			owner_lazy = () -> DisplayMethod1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisplayMethod1Code.mmObject();
+			codeName = DisplayMethodCode.Initial.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -108,11 +112,12 @@ public class DisplayMethod1Code extends DisplayMethodCode {
 	 * name} = "New"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNew = new MMCode() {
+	public static final DisplayMethod1Code New = new DisplayMethod1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "New";
-			owner_lazy = () -> DisplayMethod1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisplayMethod1Code.mmObject();
+			codeName = DisplayMethodCode.New.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -131,26 +136,58 @@ public class DisplayMethod1Code extends DisplayMethodCode {
 	 * name} = "Random"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRandom = new MMCode() {
+	public static final DisplayMethod1Code Random = new DisplayMethod1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Random";
-			owner_lazy = () -> DisplayMethod1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisplayMethod1Code.mmObject();
+			codeName = DisplayMethodCode.Random.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DisplayMethod1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DisplayMethod1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("INIT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DisplayMethod1Code";
 				definition = "Instructions for the use of display quantity.";
-				code_lazy = () -> Arrays.asList(DisplayMethod1Code.mmInitial, DisplayMethod1Code.mmNew, DisplayMethod1Code.mmRandom);
 				trace_lazy = () -> DisplayMethodCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DisplayMethod1Code.Initial, com.tools20022.repository.codeset.DisplayMethod1Code.New, com.tools20022.repository.codeset.DisplayMethod1Code.Random);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Initial.getCodeName().get(), Initial);
+		codesByName.put(New.getCodeName().get(), New);
+		codesByName.put(Random.getCodeName().get(), Random);
+	}
+
+	public static DisplayMethod1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DisplayMethod1Code[] values() {
+		DisplayMethod1Code[] values = new DisplayMethod1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DisplayMethod1Code> {
+		@Override
+		public DisplayMethod1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DisplayMethod1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

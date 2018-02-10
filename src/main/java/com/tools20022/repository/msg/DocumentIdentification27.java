@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,16 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identification and creation date of a document."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DocumentIdentification27", propOrder = {"identification", "creationDateTime", "copyDuplicate", "messageOriginator", "messageRecipient"})
 public class DocumentIdentification27 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Unique identifier of the document (message) assigned by the sender of the
-	 * document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +124,7 @@ public class DocumentIdentification27 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> DocumentIdentification27.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification27.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,10 +135,11 @@ public class DocumentIdentification27 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm")
 	protected DateAndDateTimeChoice creationDateTime;
 	/**
-	 * Date and time at which the document (message) was created by the sender.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,7 +175,7 @@ public class DocumentIdentification27 {
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
-			componentContext_lazy = () -> DocumentIdentification27.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification27.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,11 +186,11 @@ public class DocumentIdentification27 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "CpyDplct")
 	protected CopyDuplicate1Code copyDuplicate;
 	/**
-	 * Specifies if this document is a copy, a duplicate, or a duplicate of a
-	 * copy.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -223,7 +226,7 @@ public class DocumentIdentification27 {
 	public static final MMMessageAttribute mmCopyDuplicate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Document.mmCopyDuplicate;
-			componentContext_lazy = () -> DocumentIdentification27.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification27.mmObject();
 			isDerived = false;
 			xmlTag = "CpyDplct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,10 +237,11 @@ public class DocumentIdentification27 {
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgOrgtr")
 	protected PartyIdentification71Choice messageOriginator;
 	/**
-	 * Party that originated the message, if other than the sender.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -265,7 +269,7 @@ public class DocumentIdentification27 {
 	 */
 	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DocumentIdentification27.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification27.mmObject();
 			isDerived = false;
 			xmlTag = "MsgOrgtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -277,11 +281,11 @@ public class DocumentIdentification27 {
 			type_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgRcpt")
 	protected PartyIdentification71Choice messageRecipient;
 	/**
-	 * Party that is the final destination of the message, if other than the
-	 * receiver.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -310,7 +314,7 @@ public class DocumentIdentification27 {
 	 */
 	public static final MMMessageAssociationEnd mmMessageRecipient = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DocumentIdentification27.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification27.mmObject();
 			isDerived = false;
 			xmlTag = "MsgRcpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -326,10 +330,11 @@ public class DocumentIdentification27 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DocumentIdentification27.mmIdentification, DocumentIdentification27.mmCreationDateTime, DocumentIdentification27.mmCopyDuplicate, DocumentIdentification27.mmMessageOriginator,
-						DocumentIdentification27.mmMessageRecipient);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification27.mmIdentification, com.tools20022.repository.msg.DocumentIdentification27.mmCreationDateTime,
+						com.tools20022.repository.msg.DocumentIdentification27.mmCopyDuplicate, com.tools20022.repository.msg.DocumentIdentification27.mmMessageOriginator,
+						com.tools20022.repository.msg.DocumentIdentification27.mmMessageRecipient);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DocumentIdentification27";
 				definition = "Identification and creation date of a document.";
@@ -338,48 +343,48 @@ public class DocumentIdentification27 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public DocumentIdentification27 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm")
-	public DateAndDateTimeChoice getCreationDateTime() {
-		return creationDateTime;
+	public Optional<DateAndDateTimeChoice> getCreationDateTime() {
+		return creationDateTime == null ? Optional.empty() : Optional.of(creationDateTime);
 	}
 
-	public void setCreationDateTime(DateAndDateTimeChoice creationDateTime) {
+	public DocumentIdentification27 setCreationDateTime(DateAndDateTimeChoice creationDateTime) {
 		this.creationDateTime = creationDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "CpyDplct")
-	public CopyDuplicate1Code getCopyDuplicate() {
-		return copyDuplicate;
+	public Optional<CopyDuplicate1Code> getCopyDuplicate() {
+		return copyDuplicate == null ? Optional.empty() : Optional.of(copyDuplicate);
 	}
 
-	public void setCopyDuplicate(CopyDuplicate1Code copyDuplicate) {
+	public DocumentIdentification27 setCopyDuplicate(CopyDuplicate1Code copyDuplicate) {
 		this.copyDuplicate = copyDuplicate;
+		return this;
 	}
 
-	@XmlElement(name = "MsgOrgtr")
-	public PartyIdentification71Choice getMessageOriginator() {
-		return messageOriginator;
+	public Optional<PartyIdentification71Choice> getMessageOriginator() {
+		return messageOriginator == null ? Optional.empty() : Optional.of(messageOriginator);
 	}
 
-	public void setMessageOriginator(PartyIdentification71Choice messageOriginator) {
+	public DocumentIdentification27 setMessageOriginator(PartyIdentification71Choice messageOriginator) {
 		this.messageOriginator = messageOriginator;
+		return this;
 	}
 
-	@XmlElement(name = "MsgRcpt")
-	public PartyIdentification71Choice getMessageRecipient() {
-		return messageRecipient;
+	public Optional<PartyIdentification71Choice> getMessageRecipient() {
+		return messageRecipient == null ? Optional.empty() : Optional.of(messageRecipient);
 	}
 
-	public void setMessageRecipient(PartyIdentification71Choice messageRecipient) {
+	public DocumentIdentification27 setMessageRecipient(PartyIdentification71Choice messageRecipient) {
 		this.messageRecipient = messageRecipient;
+		return this;
 	}
 }

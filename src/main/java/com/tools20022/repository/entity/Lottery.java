@@ -26,6 +26,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * The parameters required to manage the organisation of a lottery.
@@ -52,6 +54,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmLottery
+ * SecuritiesQuantity.mmLottery}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmLottery
+ * CorporateActionEvent.mmLottery}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
  * <ul>
@@ -70,22 +84,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmLottery
- * SecuritiesQuantity.mmLottery}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmLottery
- * CorporateActionEvent.mmLottery}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,9 +104,8 @@ public class Lottery {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected ISODateTime lotteryDate;
 	/**
-	 * Date on which the lottery is run and applied to the holder's positions.
-	 * This is also applicable to partial calls.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,8 +194,8 @@ public class Lottery {
 					CorporateActionDate25.mmLotteryDate, CorporateActionDate27.mmLotteryDate, CorporateActionDate28.mmLotteryDate, CorporateActionDate2.mmLotteryDate, CorporateActionSD9.mmLotteryDate, CorporateActionSD10.mmLotteryDate,
 					CorporateActionDate41.mmLotteryDate, CorporateActionDate43.mmLotteryDate, CorporateActionDate45.mmLotteryDate, CorporateActionDate44.mmLotteryDate, CorporateActionDate54.mmLotteryDate,
 					CorporateActionDate58.mmLotteryDate, CorporateActionSD16.mmLotteryDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Lottery.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Lottery.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LotteryDate";
 			definition = "Date on which the lottery is run and applied to the holder's positions. This is also applicable to partial calls.";
@@ -213,9 +214,8 @@ public class Lottery {
 	};
 	protected SecuritiesQuantity incrementalDenomination;
 	/**
-	 * Amount used when the called amount is not met by running the lottery with
-	 * the base denomination.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -287,8 +287,8 @@ public class Lottery {
 			derivation_lazy = () -> Arrays.asList(CorporateActionQuantity1.mmIncrementalDenomination, CorporateActionQuantity2.mmIncrementalDenomination, CorporateActionQuantity3.mmIncrementalDenomination,
 					CorporateActionQuantity4.mmIncrementalDenomination, CorporateActionQuantity5.mmIncrementalDenomination, CorporateActionQuantity6.mmIncrementalDenomination, CorporateAction2.mmIncrementalDenomination,
 					CorporateActionQuantity7.mmIncrementalDenomination, CorporateActionQuantity8.mmIncrementalDenomination, CorporateActionQuantitySD2.mmIncrementalDenomination);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Lottery.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Lottery.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IncrementalDenomination";
 			definition = "Amount used when the called amount is not met by running the lottery with the base denomination.";
@@ -301,8 +301,8 @@ public class Lottery {
 	};
 	protected LotteryTypeCode lotteryType;
 	/**
-	 * Specifies the type of lottery announced.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -456,8 +456,8 @@ public class Lottery {
 					CorporateAction24.mmLotteryType, CorporateAction30.mmLotteryType, CorporateAction28.mmLotteryType, CorporateAction29.mmLotteryType, CorporateAction33.mmLotteryType, CorporateAction32.mmLotteryType,
 					CorporateAction31.mmLotteryType, LotteryTypeFormat4Choice.mmCode, LotteryTypeFormat4Choice.mmProprietary, CorporateAction34.mmLotteryType, CorporateAction35.mmLotteryType, CorporateAction36.mmLotteryType,
 					CorporateAction38.mmLotteryType, CorporateAction40.mmLotteryType, LotteryTypeFormat5Choice.mmCode, LotteryTypeFormat5Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Lottery.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Lottery.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LotteryType";
 			definition = "Specifies the type of lottery announced.";
@@ -476,8 +476,8 @@ public class Lottery {
 	};
 	protected CorporateActionEvent relatedCorporateEvent;
 	/**
-	 * Corporate event for which lottery information is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -511,8 +511,8 @@ public class Lottery {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCorporateEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Lottery.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Lottery.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCorporateEvent";
 			definition = "Corporate event for which lottery information is provided.";
@@ -527,7 +527,7 @@ public class Lottery {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Lottery";
 				definition = "The parameters required to manage the organisation of a lottery.";
@@ -550,31 +550,35 @@ public class Lottery {
 		return lotteryDate;
 	}
 
-	public void setLotteryDate(ISODateTime lotteryDate) {
-		this.lotteryDate = lotteryDate;
+	public Lottery setLotteryDate(ISODateTime lotteryDate) {
+		this.lotteryDate = Objects.requireNonNull(lotteryDate);
+		return this;
 	}
 
 	public SecuritiesQuantity getIncrementalDenomination() {
 		return incrementalDenomination;
 	}
 
-	public void setIncrementalDenomination(com.tools20022.repository.entity.SecuritiesQuantity incrementalDenomination) {
-		this.incrementalDenomination = incrementalDenomination;
+	public Lottery setIncrementalDenomination(com.tools20022.repository.entity.SecuritiesQuantity incrementalDenomination) {
+		this.incrementalDenomination = Objects.requireNonNull(incrementalDenomination);
+		return this;
 	}
 
 	public LotteryTypeCode getLotteryType() {
 		return lotteryType;
 	}
 
-	public void setLotteryType(LotteryTypeCode lotteryType) {
-		this.lotteryType = lotteryType;
+	public Lottery setLotteryType(LotteryTypeCode lotteryType) {
+		this.lotteryType = Objects.requireNonNull(lotteryType);
+		return this;
 	}
 
-	public CorporateActionEvent getRelatedCorporateEvent() {
-		return relatedCorporateEvent;
+	public Optional<CorporateActionEvent> getRelatedCorporateEvent() {
+		return relatedCorporateEvent == null ? Optional.empty() : Optional.of(relatedCorporateEvent);
 	}
 
-	public void setRelatedCorporateEvent(com.tools20022.repository.entity.CorporateActionEvent relatedCorporateEvent) {
+	public Lottery setRelatedCorporateEvent(com.tools20022.repository.entity.CorporateActionEvent relatedCorporateEvent) {
 		this.relatedCorporateEvent = relatedCorporateEvent;
+		return this;
 	}
 }

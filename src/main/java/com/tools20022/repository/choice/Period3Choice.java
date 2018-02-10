@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
@@ -27,6 +28,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Period4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between a period or a period code."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Period3Choice", propOrder = {"period", "periodCode"})
 public class Period3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Prd", required = true)
 	protected Period4 period;
 	/**
-	 * Time span defined by a start date and time, and an end date and time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -105,7 +108,7 @@ public class Period3Choice {
 	public static final MMMessageAssociationEnd mmPeriod = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> DateTimePeriod.mmObject();
-			componentContext_lazy = () -> Period3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Period3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +120,11 @@ public class Period3Choice {
 			type_lazy = () -> Period4.mmObject();
 		}
 	};
+	@XmlElement(name = "PrdCd", required = true)
 	protected DateType8Code periodCode;
 	/**
-	 * Standard code to specify the type of period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -136,6 +140,9 @@ public class Period3Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrdCd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69J:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -148,9 +155,10 @@ public class Period3Choice {
 	 */
 	public static final MMMessageAttribute mmPeriodCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Period3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Period3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrdCd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69J:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PeriodCode";
 			definition = "Standard code to specify the type of period.";
@@ -163,9 +171,9 @@ public class Period3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Period3Choice.mmPeriod, Period3Choice.mmPeriodCode);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Period3Choice.mmPeriod, com.tools20022.repository.choice.Period3Choice.mmPeriodCode);
 				trace_lazy = () -> DateTimePeriod.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Period3Choice";
 				definition = "Choice between a period or a period code.";
@@ -174,21 +182,21 @@ public class Period3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Prd", required = true)
 	public Period4 getPeriod() {
 		return period;
 	}
 
-	public void setPeriod(Period4 period) {
-		this.period = period;
+	public Period3Choice setPeriod(Period4 period) {
+		this.period = Objects.requireNonNull(period);
+		return this;
 	}
 
-	@XmlElement(name = "PrdCd", required = true)
 	public DateType8Code getPeriodCode() {
 		return periodCode;
 	}
 
-	public void setPeriodCode(DateType8Code periodCode) {
-		this.periodCode = periodCode;
+	public Period3Choice setPeriodCode(DateType8Code periodCode) {
+		this.periodCode = Objects.requireNonNull(periodCode);
+		return this;
 	}
 }

@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -71,8 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPartyNameOrLEIRule#forPartyIdentification59
+ * ConstraintPartyNameOrLEIRule.forPartyIdentification59}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +94,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyIdentification59", propOrder = {"partyName", "anyBIC", "accountNumber", "address", "clearingSystemIdentification", "legalEntityIdentifier"})
 public class PartyIdentification59 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PtyNm")
 	protected Max34Text partyName;
 	/**
-	 * Identification of the party expressed as the party's name.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -127,7 +137,7 @@ public class PartyIdentification59 {
 	public static final MMMessageAttribute mmPartyName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
-			componentContext_lazy = () -> PartyIdentification59.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification59.mmObject();
 			isDerived = false;
 			xmlTag = "PtyNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,11 +148,11 @@ public class PartyIdentification59 {
 			simpleType_lazy = () -> Max34Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AnyBIC")
 	protected PartyIdentification44 anyBIC;
 	/**
-	 * Identification of the party expressed as a BIC and an optional
-	 * alternative identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -176,7 +186,7 @@ public class PartyIdentification59 {
 	public static final MMMessageAssociationEnd mmAnyBIC = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
-			componentContext_lazy = () -> PartyIdentification59.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification59.mmObject();
 			isDerived = false;
 			xmlTag = "AnyBIC";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,10 +198,11 @@ public class PartyIdentification59 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification44.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctNb")
 	protected Max34Text accountNumber;
 	/**
-	 * Identification of the party's account number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -224,7 +235,7 @@ public class PartyIdentification59 {
 	public static final MMMessageAttribute mmAccountNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountPartyRole.mmAccount;
-			componentContext_lazy = () -> PartyIdentification59.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification59.mmObject();
 			isDerived = false;
 			xmlTag = "AcctNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -235,10 +246,11 @@ public class PartyIdentification59 {
 			simpleType_lazy = () -> Max34Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Adr")
 	protected Max105Text address;
 	/**
-	 * Identification of the party's address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -271,7 +283,7 @@ public class PartyIdentification59 {
 	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
-			componentContext_lazy = () -> PartyIdentification59.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification59.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -282,10 +294,11 @@ public class PartyIdentification59 {
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClrSysId")
 	protected ClearingSystemIdentification2Choice clearingSystemIdentification;
 	/**
-	 * Choice of a clearing system identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -319,7 +332,7 @@ public class PartyIdentification59 {
 	public static final MMMessageAttribute mmClearingSystemIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmClearingSystemMemberIdentificationType;
-			componentContext_lazy = () -> PartyIdentification59.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification59.mmObject();
 			isDerived = false;
 			xmlTag = "ClrSysId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -330,12 +343,11 @@ public class PartyIdentification59 {
 			complexType_lazy = () -> ClearingSystemIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LglNttyIdr")
 	protected LEIIdentifier legalEntityIdentifier;
 	/**
-	 * Identification of the Legal Entity Identifier. This is a code allocated
-	 * to a party as described in ISO 17442
-	 * "Financial Services - Legal Entity Identifier (LEI)".
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -371,7 +383,7 @@ public class PartyIdentification59 {
 	public static final MMMessageAttribute mmLegalEntityIdentifier = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
-			componentContext_lazy = () -> PartyIdentification59.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification59.mmObject();
 			isDerived = false;
 			xmlTag = "LglNttyIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -386,10 +398,12 @@ public class PartyIdentification59 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification59.mmPartyName, PartyIdentification59.mmAnyBIC, PartyIdentification59.mmAccountNumber, PartyIdentification59.mmAddress,
-						PartyIdentification59.mmClearingSystemIdentification, PartyIdentification59.mmLegalEntityIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification59.mmPartyName, com.tools20022.repository.msg.PartyIdentification59.mmAnyBIC,
+						com.tools20022.repository.msg.PartyIdentification59.mmAccountNumber, com.tools20022.repository.msg.PartyIdentification59.mmAddress, com.tools20022.repository.msg.PartyIdentification59.mmClearingSystemIdentification,
+						com.tools20022.repository.msg.PartyIdentification59.mmLegalEntityIdentifier);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartyNameOrLEIRule.forPartyIdentification59);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification59";
 				definition = "Identification of a party. The party can be identified by providing the party's name and optionally, the BIC, account number, address, clearing system identification or LEI can also be provided.";
@@ -398,57 +412,57 @@ public class PartyIdentification59 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PtyNm")
-	public Max34Text getPartyName() {
-		return partyName;
+	public Optional<Max34Text> getPartyName() {
+		return partyName == null ? Optional.empty() : Optional.of(partyName);
 	}
 
-	public void setPartyName(Max34Text partyName) {
+	public PartyIdentification59 setPartyName(Max34Text partyName) {
 		this.partyName = partyName;
+		return this;
 	}
 
-	@XmlElement(name = "AnyBIC")
-	public PartyIdentification44 getAnyBIC() {
-		return anyBIC;
+	public Optional<PartyIdentification44> getAnyBIC() {
+		return anyBIC == null ? Optional.empty() : Optional.of(anyBIC);
 	}
 
-	public void setAnyBIC(com.tools20022.repository.msg.PartyIdentification44 anyBIC) {
+	public PartyIdentification59 setAnyBIC(com.tools20022.repository.msg.PartyIdentification44 anyBIC) {
 		this.anyBIC = anyBIC;
+		return this;
 	}
 
-	@XmlElement(name = "AcctNb")
-	public Max34Text getAccountNumber() {
-		return accountNumber;
+	public Optional<Max34Text> getAccountNumber() {
+		return accountNumber == null ? Optional.empty() : Optional.of(accountNumber);
 	}
 
-	public void setAccountNumber(Max34Text accountNumber) {
+	public PartyIdentification59 setAccountNumber(Max34Text accountNumber) {
 		this.accountNumber = accountNumber;
+		return this;
 	}
 
-	@XmlElement(name = "Adr")
-	public Max105Text getAddress() {
-		return address;
+	public Optional<Max105Text> getAddress() {
+		return address == null ? Optional.empty() : Optional.of(address);
 	}
 
-	public void setAddress(Max105Text address) {
+	public PartyIdentification59 setAddress(Max105Text address) {
 		this.address = address;
+		return this;
 	}
 
-	@XmlElement(name = "ClrSysId")
-	public ClearingSystemIdentification2Choice getClearingSystemIdentification() {
-		return clearingSystemIdentification;
+	public Optional<ClearingSystemIdentification2Choice> getClearingSystemIdentification() {
+		return clearingSystemIdentification == null ? Optional.empty() : Optional.of(clearingSystemIdentification);
 	}
 
-	public void setClearingSystemIdentification(ClearingSystemIdentification2Choice clearingSystemIdentification) {
+	public PartyIdentification59 setClearingSystemIdentification(ClearingSystemIdentification2Choice clearingSystemIdentification) {
 		this.clearingSystemIdentification = clearingSystemIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "LglNttyIdr")
-	public LEIIdentifier getLegalEntityIdentifier() {
-		return legalEntityIdentifier;
+	public Optional<LEIIdentifier> getLegalEntityIdentifier() {
+		return legalEntityIdentifier == null ? Optional.empty() : Optional.of(legalEntityIdentifier);
 	}
 
-	public void setLegalEntityIdentifier(LEIIdentifier legalEntityIdentifier) {
+	public PartyIdentification59 setLegalEntityIdentifier(LEIIdentifier legalEntityIdentifier) {
 		this.legalEntityIdentifier = legalEntityIdentifier;
+		return this;
 	}
 }

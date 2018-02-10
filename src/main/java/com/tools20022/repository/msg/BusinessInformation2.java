@@ -21,9 +21,11 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,8 +48,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,15 +60,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Reports on business information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BusinessInformation2", propOrder = "generalBusinessReport")
 public class BusinessInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GnlBizRpt", required = true)
 	protected List<com.tools20022.repository.msg.GeneralBusinessReport2> generalBusinessReport;
 	/**
-	 * Reports either on the business information or on a business error.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -93,7 +96,7 @@ public class BusinessInformation2 {
 	 */
 	public static final MMMessageAssociationEnd mmGeneralBusinessReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BusinessInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "GnlBizRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,8 +111,8 @@ public class BusinessInformation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BusinessInformation2.mmGeneralBusinessReport);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessInformation2.mmGeneralBusinessReport);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessInformation2";
 				definition = "Reports on business information.";
@@ -118,12 +121,12 @@ public class BusinessInformation2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GnlBizRpt", required = true)
 	public List<GeneralBusinessReport2> getGeneralBusinessReport() {
-		return generalBusinessReport;
+		return generalBusinessReport == null ? generalBusinessReport = new ArrayList<>() : generalBusinessReport;
 	}
 
-	public void setGeneralBusinessReport(List<com.tools20022.repository.msg.GeneralBusinessReport2> generalBusinessReport) {
-		this.generalBusinessReport = generalBusinessReport;
+	public BusinessInformation2 setGeneralBusinessReport(List<com.tools20022.repository.msg.GeneralBusinessReport2> generalBusinessReport) {
+		this.generalBusinessReport = Objects.requireNonNull(generalBusinessReport);
+		return this;
 	}
 }

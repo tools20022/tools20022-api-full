@@ -30,6 +30,8 @@ import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandA
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -38,22 +40,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.ATMManagementLatestVersion
- * ATMManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion
- * ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "ATMXcptnAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -72,6 +58,22 @@ import javax.xml.bind.annotation.*;
  * ATMExceptionAdviceV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion
+ * ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "ATMXcptnAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.ATMManagementLatestVersion
+ * ATMManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code caam.011.001.01}</li>
@@ -87,16 +89,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "ATMExceptionAdviceV01", propOrder = {"header", "protectedATMExceptionAdvice", "ATMExceptionAdvice", "securityTrailer"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "ATMExceptionAdviceV01", propOrder = {"header", "protectedATMExceptionAdvice", "aTMExceptionAdvice", "securityTrailer"})
 public class ATMExceptionAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header32 header;
 	/**
-	 * Information related to the protocol management on a segment of the path
-	 * from the ATM to the acquirer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,10 +139,11 @@ public class ATMExceptionAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "PrtctdATMXcptnAdvc")
 	protected ContentInformationType10 protectedATMExceptionAdvice;
 	/**
-	 * Encrypted body of the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,10 +183,11 @@ public class ATMExceptionAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "ATMXcptnAdvc")
 	protected ATMExceptionAdvice1 aTMExceptionAdvice;
 	/**
-	 * Information related to exceptions occurring on the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -223,10 +227,11 @@ public class ATMExceptionAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SctyTrlr")
 	protected ContentInformationType15 securityTrailer;
 	/**
-	 * Trailer of the message containing a MAC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -297,43 +302,43 @@ public class ATMExceptionAdviceV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header32 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header32 header) {
-		this.header = header;
+	public ATMExceptionAdviceV01 setHeader(Header32 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "PrtctdATMXcptnAdvc")
-	public ContentInformationType10 getProtectedATMExceptionAdvice() {
-		return protectedATMExceptionAdvice;
+	public Optional<ContentInformationType10> getProtectedATMExceptionAdvice() {
+		return protectedATMExceptionAdvice == null ? Optional.empty() : Optional.of(protectedATMExceptionAdvice);
 	}
 
-	public void setProtectedATMExceptionAdvice(ContentInformationType10 protectedATMExceptionAdvice) {
+	public ATMExceptionAdviceV01 setProtectedATMExceptionAdvice(ContentInformationType10 protectedATMExceptionAdvice) {
 		this.protectedATMExceptionAdvice = protectedATMExceptionAdvice;
+		return this;
 	}
 
-	@XmlElement(name = "ATMXcptnAdvc")
-	public ATMExceptionAdvice1 getATMExceptionAdvice() {
-		return aTMExceptionAdvice;
+	public Optional<ATMExceptionAdvice1> getATMExceptionAdvice() {
+		return aTMExceptionAdvice == null ? Optional.empty() : Optional.of(aTMExceptionAdvice);
 	}
 
-	public void setATMExceptionAdvice(ATMExceptionAdvice1 aTMExceptionAdvice) {
+	public ATMExceptionAdviceV01 setATMExceptionAdvice(ATMExceptionAdvice1 aTMExceptionAdvice) {
 		this.aTMExceptionAdvice = aTMExceptionAdvice;
+		return this;
 	}
 
-	@XmlElement(name = "SctyTrlr")
-	public ContentInformationType15 getSecurityTrailer() {
-		return securityTrailer;
+	public Optional<ContentInformationType15> getSecurityTrailer() {
+		return securityTrailer == null ? Optional.empty() : Optional.of(securityTrailer);
 	}
 
-	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+	public ATMExceptionAdviceV01 setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caam.011.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:caam.011.001.01")
 	static public class Document {
 		@XmlElement(name = "ATMXcptnAdvc", required = true)
 		public ATMExceptionAdviceV01 messageBody;

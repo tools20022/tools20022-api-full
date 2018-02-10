@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PriorityCode;
+import com.tools20022.repository.codeset.Priority4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the priority level of an event.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PriorityCode PriorityCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Priority4Code#mmNormal
- * Priority4Code.mmNormal}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Priority4Code#mmUrgent
- * Priority4Code.mmUrgent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Priority4Code#Normal
+ * Priority4Code.Normal}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Priority4Code#Urgent
+ * Priority4Code.Urgent}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PriorityCode PriorityCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,7 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the priority level of an event."</li>
  * </ul>
  */
-public class Priority4Code extends PriorityCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Priority4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -74,11 +79,12 @@ public class Priority4Code extends PriorityCode {
 	 * name} = "Normal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNormal = new MMCode() {
+	public static final Priority4Code Normal = new Priority4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Normal";
-			owner_lazy = () -> Priority4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Priority4Code.mmObject();
+			codeName = PriorityCode.Normal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -97,25 +103,56 @@ public class Priority4Code extends PriorityCode {
 	 * name} = "Urgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUrgent = new MMCode() {
+	public static final Priority4Code Urgent = new Priority4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Urgent";
-			owner_lazy = () -> Priority4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Priority4Code.mmObject();
+			codeName = PriorityCode.Urgent.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Priority4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Priority4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Priority4Code";
 				definition = "Specifies the priority level of an event.";
-				code_lazy = () -> Arrays.asList(Priority4Code.mmNormal, Priority4Code.mmUrgent);
 				trace_lazy = () -> PriorityCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Priority4Code.Normal, com.tools20022.repository.codeset.Priority4Code.Urgent);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Normal.getCodeName().get(), Normal);
+		codesByName.put(Urgent.getCodeName().get(), Urgent);
+	}
+
+	public static Priority4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Priority4Code[] values() {
+		Priority4Code[] values = new Priority4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Priority4Code> {
+		@Override
+		public Priority4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Priority4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

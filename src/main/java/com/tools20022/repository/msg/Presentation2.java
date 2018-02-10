@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.UndertakingPresenter;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information for the presentation of documents."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Presentation2", propOrder = {"presenter", "beneficiaryPresentationDate"})
 public class Presentation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Presntr")
 	protected PartyIdentification43 presenter;
 	/**
-	 * Party, other than beneficiary, forwarding the documents.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -105,7 +107,7 @@ public class Presentation2 {
 	public static final MMMessageAssociationEnd mmPresenter = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingPresenter.mmObject();
-			componentContext_lazy = () -> Presentation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Presentation2.mmObject();
 			isDerived = false;
 			xmlTag = "Presntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +119,11 @@ public class Presentation2 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	@XmlElement(name = "BnfcryPresntnDt")
 	protected ISODate beneficiaryPresentationDate;
 	/**
-	 * Date on which the beneficiary presented the demand.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,7 +155,7 @@ public class Presentation2 {
 	public static final MMMessageAttribute mmBeneficiaryPresentationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Presentation.mmPresentationDate;
-			componentContext_lazy = () -> Presentation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Presentation2.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryPresntnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,9 +170,9 @@ public class Presentation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Presentation2.mmPresenter, Presentation2.mmBeneficiaryPresentationDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Presentation2.mmPresenter, com.tools20022.repository.msg.Presentation2.mmBeneficiaryPresentationDate);
 				trace_lazy = () -> Presentation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Presentation2";
 				definition = "Information for the presentation of documents.";
@@ -178,21 +181,21 @@ public class Presentation2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Presntr")
-	public PartyIdentification43 getPresenter() {
-		return presenter;
+	public Optional<PartyIdentification43> getPresenter() {
+		return presenter == null ? Optional.empty() : Optional.of(presenter);
 	}
 
-	public void setPresenter(com.tools20022.repository.msg.PartyIdentification43 presenter) {
+	public Presentation2 setPresenter(com.tools20022.repository.msg.PartyIdentification43 presenter) {
 		this.presenter = presenter;
+		return this;
 	}
 
-	@XmlElement(name = "BnfcryPresntnDt")
-	public ISODate getBeneficiaryPresentationDate() {
-		return beneficiaryPresentationDate;
+	public Optional<ISODate> getBeneficiaryPresentationDate() {
+		return beneficiaryPresentationDate == null ? Optional.empty() : Optional.of(beneficiaryPresentationDate);
 	}
 
-	public void setBeneficiaryPresentationDate(ISODate beneficiaryPresentationDate) {
+	public Presentation2 setBeneficiaryPresentationDate(ISODate beneficiaryPresentationDate) {
 		this.beneficiaryPresentationDate = beneficiaryPresentationDate;
+		return this;
 	}
 }

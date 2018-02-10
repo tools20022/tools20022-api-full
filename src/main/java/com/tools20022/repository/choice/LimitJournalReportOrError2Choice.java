@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.LimitJournal1;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LimitJournalReportOrError2Choice", propOrder = {"limitJournal", "businessError"})
 public class LimitJournalReportOrError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LmtJrnl", required = true)
 	protected LimitJournal1 limitJournal;
 	/**
-	 * Requested information on the limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -100,7 +103,7 @@ public class LimitJournalReportOrError2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmLimitJournal = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitJournalReportOrError2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.LimitJournalReportOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LmtJrnl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +115,11 @@ public class LimitJournalReportOrError2Choice {
 			type_lazy = () -> LimitJournal1.mmObject();
 		}
 	};
+	@XmlElement(name = "BizErr", required = true)
 	protected List<ErrorHandling3> businessError;
 	/**
-	 * Reason the requested business information is not given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -141,7 +145,7 @@ public class LimitJournalReportOrError2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitJournalReportOrError2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.LimitJournalReportOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,8 +160,8 @@ public class LimitJournalReportOrError2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LimitJournalReportOrError2Choice.mmLimitJournal, LimitJournalReportOrError2Choice.mmBusinessError);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitJournalReportOrError2Choice.mmLimitJournal, com.tools20022.repository.choice.LimitJournalReportOrError2Choice.mmBusinessError);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitJournalReportOrError2Choice";
 				definition = "Defines the limit business report as either a limit report or a business error.";
@@ -166,21 +170,21 @@ public class LimitJournalReportOrError2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LmtJrnl", required = true)
 	public LimitJournal1 getLimitJournal() {
 		return limitJournal;
 	}
 
-	public void setLimitJournal(LimitJournal1 limitJournal) {
-		this.limitJournal = limitJournal;
+	public LimitJournalReportOrError2Choice setLimitJournal(LimitJournal1 limitJournal) {
+		this.limitJournal = Objects.requireNonNull(limitJournal);
+		return this;
 	}
 
-	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling3> getBusinessError() {
-		return businessError;
+		return businessError == null ? businessError = new ArrayList<>() : businessError;
 	}
 
-	public void setBusinessError(List<ErrorHandling3> businessError) {
-		this.businessError = businessError;
+	public LimitJournalReportOrError2Choice setBusinessError(List<ErrorHandling3> businessError) {
+		this.businessError = Objects.requireNonNull(businessError);
+		return this;
 	}
 }

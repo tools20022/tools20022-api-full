@@ -27,9 +27,8 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -41,25 +40,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
- * CashManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
- * PostTradeForeignExchangeISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement
- * PostTradeForeignExchangeMaintenance20162017andSupplement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "PayInSchdl"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -84,6 +64,25 @@ import javax.xml.bind.annotation.*;
  * PayInScheduleV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
+ * PostTradeForeignExchangeISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement
+ * PostTradeForeignExchangeMaintenance20162017andSupplement}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "PayInSchdl"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
+ * CashManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.062.001.03}</li>
@@ -99,15 +98,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PayInScheduleV03", propOrder = {"partyIdentification", "reportData", "payInScheduleLongBalance", "payInScheduleItem", "payInFactors", "supplementaryData"})
 public class PayInScheduleV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PtyId", required = true)
 	protected PartyIdentification73Choice partyIdentification;
 	/**
-	 * Party for which the pay-in schedule is generated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,10 +147,11 @@ public class PayInScheduleV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RptData", required = true)
 	protected ReportData4 reportData;
 	/**
-	 * General information applicable to the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,11 +190,11 @@ public class PayInScheduleV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PayInSchdlLngBal")
 	protected List<BalanceStatus2> payInScheduleLongBalance;
 	/**
-	 * Projected net position for all currencies, projected long for the value
-	 * date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -233,10 +234,11 @@ public class PayInScheduleV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PayInSchdlItm")
 	protected List<PayInScheduleItems1> payInScheduleItem;
 	/**
-	 * Currency and total amount to be paid in by the corresponding deadline.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -276,10 +278,11 @@ public class PayInScheduleV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PayInFctrs")
 	protected PayInFactors1 payInFactors;
 	/**
-	 * Factors used in the calculation of the pay-in schedule.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -318,11 +321,11 @@ public class PayInScheduleV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -395,61 +398,61 @@ public class PayInScheduleV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PtyId", required = true)
 	public PartyIdentification73Choice getPartyIdentification() {
 		return partyIdentification;
 	}
 
-	public void setPartyIdentification(PartyIdentification73Choice partyIdentification) {
-		this.partyIdentification = partyIdentification;
+	public PayInScheduleV03 setPartyIdentification(PartyIdentification73Choice partyIdentification) {
+		this.partyIdentification = Objects.requireNonNull(partyIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RptData", required = true)
 	public ReportData4 getReportData() {
 		return reportData;
 	}
 
-	public void setReportData(ReportData4 reportData) {
-		this.reportData = reportData;
+	public PayInScheduleV03 setReportData(ReportData4 reportData) {
+		this.reportData = Objects.requireNonNull(reportData);
+		return this;
 	}
 
-	@XmlElement(name = "PayInSchdlLngBal")
 	public List<BalanceStatus2> getPayInScheduleLongBalance() {
-		return payInScheduleLongBalance;
+		return payInScheduleLongBalance == null ? payInScheduleLongBalance = new ArrayList<>() : payInScheduleLongBalance;
 	}
 
-	public void setPayInScheduleLongBalance(List<BalanceStatus2> payInScheduleLongBalance) {
-		this.payInScheduleLongBalance = payInScheduleLongBalance;
+	public PayInScheduleV03 setPayInScheduleLongBalance(List<BalanceStatus2> payInScheduleLongBalance) {
+		this.payInScheduleLongBalance = Objects.requireNonNull(payInScheduleLongBalance);
+		return this;
 	}
 
-	@XmlElement(name = "PayInSchdlItm")
 	public List<PayInScheduleItems1> getPayInScheduleItem() {
-		return payInScheduleItem;
+		return payInScheduleItem == null ? payInScheduleItem = new ArrayList<>() : payInScheduleItem;
 	}
 
-	public void setPayInScheduleItem(List<PayInScheduleItems1> payInScheduleItem) {
-		this.payInScheduleItem = payInScheduleItem;
+	public PayInScheduleV03 setPayInScheduleItem(List<PayInScheduleItems1> payInScheduleItem) {
+		this.payInScheduleItem = Objects.requireNonNull(payInScheduleItem);
+		return this;
 	}
 
-	@XmlElement(name = "PayInFctrs")
-	public PayInFactors1 getPayInFactors() {
-		return payInFactors;
+	public Optional<PayInFactors1> getPayInFactors() {
+		return payInFactors == null ? Optional.empty() : Optional.of(payInFactors);
 	}
 
-	public void setPayInFactors(PayInFactors1 payInFactors) {
+	public PayInScheduleV03 setPayInFactors(PayInFactors1 payInFactors) {
 		this.payInFactors = payInFactors;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public PayInScheduleV03 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.062.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.062.001.03")
 	static public class Document {
 		@XmlElement(name = "PayInSchdl", required = true)
 		public PayInScheduleV03 messageBody;

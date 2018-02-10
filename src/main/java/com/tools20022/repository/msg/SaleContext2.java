@@ -25,9 +25,8 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -82,8 +81,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,17 +96,17 @@ import javax.xml.bind.annotation.XmlType;
  * SaleContext1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SaleContext2", propOrder = {"saleIdentification", "saleReferenceNumber", "saleReconciliationIdentification", "cashierIdentification", "shiftNumber", "purchaseOrderNumber", "invoiceNumber", "deliveryNoteNumber",
 		"sponsoredMerchant", "splitPayment", "remainingAmount", "additionalSaleData"})
 public class SaleContext2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SaleId")
 	protected Max35Text saleIdentification;
 	/**
-	 * Identification of the sale terminal (electronic cash register or point of
-	 * sale terminal) or the sale system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,7 +139,7 @@ public class SaleContext2 {
 	 */
 	public static final MMMessageAttribute mmSaleIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SaleContext2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "SaleId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,10 +151,11 @@ public class SaleContext2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SaleRefNb")
 	protected Max35Text saleReferenceNumber;
 	/**
-	 * Identify a sale transaction assigned by the sale system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,7 +186,7 @@ public class SaleContext2 {
 	 */
 	public static final MMMessageAttribute mmSaleReferenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SaleContext2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "SaleRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,11 +198,11 @@ public class SaleContext2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SaleRcncltnId")
 	protected Max35Text saleReconciliationIdentification;
 	/**
-	 * Identifier of the reconciliation between the Sale system and the POI
-	 * system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -235,7 +235,7 @@ public class SaleContext2 {
 	 */
 	public static final MMMessageAttribute mmSaleReconciliationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SaleContext2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "SaleRcncltnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -247,10 +247,11 @@ public class SaleContext2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CshrId")
 	protected Max35Text cashierIdentification;
 	/**
-	 * Identification of the cashier who carried out the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -288,7 +289,7 @@ public class SaleContext2 {
 	public static final MMMessageAttribute mmCashierIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> SaleContext2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "CshrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -300,10 +301,11 @@ public class SaleContext2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ShftNb")
 	protected Max2NumericText shiftNumber;
 	/**
-	 * Identifies the shift of the cashier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -335,7 +337,7 @@ public class SaleContext2 {
 	 */
 	public static final MMMessageAttribute mmShiftNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SaleContext2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "ShftNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -347,10 +349,11 @@ public class SaleContext2 {
 			simpleType_lazy = () -> Max2NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "PurchsOrdrNb")
 	protected Max35Text purchaseOrderNumber;
 	/**
-	 * Identification of the purchase order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -376,7 +379,7 @@ public class SaleContext2 {
 	 */
 	public static final MMMessageAttribute mmPurchaseOrderNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SaleContext2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "PurchsOrdrNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -387,10 +390,11 @@ public class SaleContext2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "InvcNb")
 	protected Max35Text invoiceNumber;
 	/**
-	 * Identification of the invoice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -416,7 +420,7 @@ public class SaleContext2 {
 	 */
 	public static final MMMessageAttribute mmInvoiceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SaleContext2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "InvcNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -427,10 +431,11 @@ public class SaleContext2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvryNoteNb")
 	protected Max35Text deliveryNoteNumber;
 	/**
-	 * Identification allocated by the sale system and given to the customer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -457,7 +462,7 @@ public class SaleContext2 {
 	 */
 	public static final MMMessageAttribute mmDeliveryNoteNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SaleContext2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryNoteNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -468,11 +473,11 @@ public class SaleContext2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SpnsrdMrchnt")
 	protected List<com.tools20022.repository.msg.Organisation26> sponsoredMerchant;
 	/**
-	 * Merchant using the payment services of a payment facilitator, acting as a
-	 * card acceptor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -499,7 +504,7 @@ public class SaleContext2 {
 	 */
 	public static final MMMessageAssociationEnd mmSponsoredMerchant = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SaleContext2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "SpnsrdMrchnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -510,11 +515,11 @@ public class SaleContext2 {
 			type_lazy = () -> com.tools20022.repository.msg.Organisation26.mmObject();
 		}
 	};
+	@XmlElement(name = "SpltPmt")
 	protected TrueFalseIndicator splitPayment;
 	/**
-	 * True if the payment transaction is a partial payment of the sale
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -543,7 +548,7 @@ public class SaleContext2 {
 	 */
 	public static final MMMessageAttribute mmSplitPayment = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SaleContext2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "SpltPmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -554,11 +559,11 @@ public class SaleContext2 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "RmngAmt")
 	protected ImpliedCurrencyAndAmount remainingAmount;
 	/**
-	 * Remaining amount to complete the sale transaction, if a partial payment
-	 * has been completed for the sale transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -587,7 +592,7 @@ public class SaleContext2 {
 	 */
 	public static final MMMessageAttribute mmRemainingAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SaleContext2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "RmngAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -598,10 +603,11 @@ public class SaleContext2 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlSaleData")
 	protected Max70Text additionalSaleData;
 	/**
-	 * Additional information associated with the sale transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -633,7 +639,7 @@ public class SaleContext2 {
 	 */
 	public static final MMMessageAttribute mmAdditionalSaleData = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SaleContext2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SaleContext2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlSaleData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -649,11 +655,13 @@ public class SaleContext2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SaleContext2.mmSaleIdentification, SaleContext2.mmSaleReferenceNumber, SaleContext2.mmSaleReconciliationIdentification, SaleContext2.mmCashierIdentification,
-						SaleContext2.mmShiftNumber, SaleContext2.mmPurchaseOrderNumber, SaleContext2.mmInvoiceNumber, SaleContext2.mmDeliveryNoteNumber, SaleContext2.mmSponsoredMerchant, SaleContext2.mmSplitPayment,
-						SaleContext2.mmRemainingAmount, SaleContext2.mmAdditionalSaleData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SaleContext2.mmSaleIdentification, com.tools20022.repository.msg.SaleContext2.mmSaleReferenceNumber,
+						com.tools20022.repository.msg.SaleContext2.mmSaleReconciliationIdentification, com.tools20022.repository.msg.SaleContext2.mmCashierIdentification, com.tools20022.repository.msg.SaleContext2.mmShiftNumber,
+						com.tools20022.repository.msg.SaleContext2.mmPurchaseOrderNumber, com.tools20022.repository.msg.SaleContext2.mmInvoiceNumber, com.tools20022.repository.msg.SaleContext2.mmDeliveryNoteNumber,
+						com.tools20022.repository.msg.SaleContext2.mmSponsoredMerchant, com.tools20022.repository.msg.SaleContext2.mmSplitPayment, com.tools20022.repository.msg.SaleContext2.mmRemainingAmount,
+						com.tools20022.repository.msg.SaleContext2.mmAdditionalSaleData);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SaleContext2";
 				definition = "Sale context in which the transaction is performed.";
@@ -663,111 +671,111 @@ public class SaleContext2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SaleId")
-	public Max35Text getSaleIdentification() {
-		return saleIdentification;
+	public Optional<Max35Text> getSaleIdentification() {
+		return saleIdentification == null ? Optional.empty() : Optional.of(saleIdentification);
 	}
 
-	public void setSaleIdentification(Max35Text saleIdentification) {
+	public SaleContext2 setSaleIdentification(Max35Text saleIdentification) {
 		this.saleIdentification = saleIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "SaleRefNb")
-	public Max35Text getSaleReferenceNumber() {
-		return saleReferenceNumber;
+	public Optional<Max35Text> getSaleReferenceNumber() {
+		return saleReferenceNumber == null ? Optional.empty() : Optional.of(saleReferenceNumber);
 	}
 
-	public void setSaleReferenceNumber(Max35Text saleReferenceNumber) {
+	public SaleContext2 setSaleReferenceNumber(Max35Text saleReferenceNumber) {
 		this.saleReferenceNumber = saleReferenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "SaleRcncltnId")
-	public Max35Text getSaleReconciliationIdentification() {
-		return saleReconciliationIdentification;
+	public Optional<Max35Text> getSaleReconciliationIdentification() {
+		return saleReconciliationIdentification == null ? Optional.empty() : Optional.of(saleReconciliationIdentification);
 	}
 
-	public void setSaleReconciliationIdentification(Max35Text saleReconciliationIdentification) {
+	public SaleContext2 setSaleReconciliationIdentification(Max35Text saleReconciliationIdentification) {
 		this.saleReconciliationIdentification = saleReconciliationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CshrId")
-	public Max35Text getCashierIdentification() {
-		return cashierIdentification;
+	public Optional<Max35Text> getCashierIdentification() {
+		return cashierIdentification == null ? Optional.empty() : Optional.of(cashierIdentification);
 	}
 
-	public void setCashierIdentification(Max35Text cashierIdentification) {
+	public SaleContext2 setCashierIdentification(Max35Text cashierIdentification) {
 		this.cashierIdentification = cashierIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ShftNb")
-	public Max2NumericText getShiftNumber() {
-		return shiftNumber;
+	public Optional<Max2NumericText> getShiftNumber() {
+		return shiftNumber == null ? Optional.empty() : Optional.of(shiftNumber);
 	}
 
-	public void setShiftNumber(Max2NumericText shiftNumber) {
+	public SaleContext2 setShiftNumber(Max2NumericText shiftNumber) {
 		this.shiftNumber = shiftNumber;
+		return this;
 	}
 
-	@XmlElement(name = "PurchsOrdrNb")
-	public Max35Text getPurchaseOrderNumber() {
-		return purchaseOrderNumber;
+	public Optional<Max35Text> getPurchaseOrderNumber() {
+		return purchaseOrderNumber == null ? Optional.empty() : Optional.of(purchaseOrderNumber);
 	}
 
-	public void setPurchaseOrderNumber(Max35Text purchaseOrderNumber) {
+	public SaleContext2 setPurchaseOrderNumber(Max35Text purchaseOrderNumber) {
 		this.purchaseOrderNumber = purchaseOrderNumber;
+		return this;
 	}
 
-	@XmlElement(name = "InvcNb")
-	public Max35Text getInvoiceNumber() {
-		return invoiceNumber;
+	public Optional<Max35Text> getInvoiceNumber() {
+		return invoiceNumber == null ? Optional.empty() : Optional.of(invoiceNumber);
 	}
 
-	public void setInvoiceNumber(Max35Text invoiceNumber) {
+	public SaleContext2 setInvoiceNumber(Max35Text invoiceNumber) {
 		this.invoiceNumber = invoiceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "DlvryNoteNb")
-	public Max35Text getDeliveryNoteNumber() {
-		return deliveryNoteNumber;
+	public Optional<Max35Text> getDeliveryNoteNumber() {
+		return deliveryNoteNumber == null ? Optional.empty() : Optional.of(deliveryNoteNumber);
 	}
 
-	public void setDeliveryNoteNumber(Max35Text deliveryNoteNumber) {
+	public SaleContext2 setDeliveryNoteNumber(Max35Text deliveryNoteNumber) {
 		this.deliveryNoteNumber = deliveryNoteNumber;
+		return this;
 	}
 
-	@XmlElement(name = "SpnsrdMrchnt")
 	public List<Organisation26> getSponsoredMerchant() {
-		return sponsoredMerchant;
+		return sponsoredMerchant == null ? sponsoredMerchant = new ArrayList<>() : sponsoredMerchant;
 	}
 
-	public void setSponsoredMerchant(List<com.tools20022.repository.msg.Organisation26> sponsoredMerchant) {
-		this.sponsoredMerchant = sponsoredMerchant;
+	public SaleContext2 setSponsoredMerchant(List<com.tools20022.repository.msg.Organisation26> sponsoredMerchant) {
+		this.sponsoredMerchant = Objects.requireNonNull(sponsoredMerchant);
+		return this;
 	}
 
-	@XmlElement(name = "SpltPmt")
-	public TrueFalseIndicator getSplitPayment() {
-		return splitPayment;
+	public Optional<TrueFalseIndicator> getSplitPayment() {
+		return splitPayment == null ? Optional.empty() : Optional.of(splitPayment);
 	}
 
-	public void setSplitPayment(TrueFalseIndicator splitPayment) {
+	public SaleContext2 setSplitPayment(TrueFalseIndicator splitPayment) {
 		this.splitPayment = splitPayment;
+		return this;
 	}
 
-	@XmlElement(name = "RmngAmt")
-	public ImpliedCurrencyAndAmount getRemainingAmount() {
-		return remainingAmount;
+	public Optional<ImpliedCurrencyAndAmount> getRemainingAmount() {
+		return remainingAmount == null ? Optional.empty() : Optional.of(remainingAmount);
 	}
 
-	public void setRemainingAmount(ImpliedCurrencyAndAmount remainingAmount) {
+	public SaleContext2 setRemainingAmount(ImpliedCurrencyAndAmount remainingAmount) {
 		this.remainingAmount = remainingAmount;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlSaleData")
-	public Max70Text getAdditionalSaleData() {
-		return additionalSaleData;
+	public Optional<Max70Text> getAdditionalSaleData() {
+		return additionalSaleData == null ? Optional.empty() : Optional.of(additionalSaleData);
 	}
 
-	public void setAdditionalSaleData(Max70Text additionalSaleData) {
+	public SaleContext2 setAdditionalSaleData(Max70Text additionalSaleData) {
 		this.additionalSaleData = additionalSaleData;
+		return this;
 	}
 }

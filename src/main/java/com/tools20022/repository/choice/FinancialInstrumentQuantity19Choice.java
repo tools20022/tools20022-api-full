@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -28,6 +29,7 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * FinancialInstrumentQuantity16Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrumentQuantity19Choice", propOrder = {"unit", "faceAmount", "amortisedValue", "code"})
 public class FinancialInstrumentQuantity19Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Unit", required = true)
 	protected DecimalNumber unit;
 	/**
-	 * Quantity expressed as a number, for example, a number of shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,6 +110,9 @@ public class FinancialInstrumentQuantity19Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Unit"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: UNIT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -121,9 +127,10 @@ public class FinancialInstrumentQuantity19Choice {
 	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
-			componentContext_lazy = () -> FinancialInstrumentQuantity19Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Unit";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "UNIT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			definition = "Quantity expressed as a number, for example, a number of shares.";
@@ -132,11 +139,11 @@ public class FinancialInstrumentQuantity19Choice {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "FaceAmt", required = true)
 	protected ImpliedCurrencyAndAmount faceAmount;
 	/**
-	 * Quantity expressed as an amount representing the face amount, that is,
-	 * the principal, of a debt instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,6 +164,9 @@ public class FinancialInstrumentQuantity19Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FaceAmt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::4!c//FAMT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -172,9 +182,10 @@ public class FinancialInstrumentQuantity19Choice {
 	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
-			componentContext_lazy = () -> FinancialInstrumentQuantity19Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FaceAmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::4!c//FAMT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaceAmount";
 			definition = "Quantity expressed as an amount representing the face amount, that is, the principal, of a debt instrument.";
@@ -183,12 +194,11 @@ public class FinancialInstrumentQuantity19Choice {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtsdVal", required = true)
 	protected ImpliedCurrencyAndAmount amortisedValue;
 	/**
-	 * Quantity expressed as an amount representing the current amortised face
-	 * amount of a bond, for example, a periodic reduction/increase of a bond's
-	 * principal amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -209,6 +219,9 @@ public class FinancialInstrumentQuantity19Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AmtsdVal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::4!c//AMOR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -224,9 +237,10 @@ public class FinancialInstrumentQuantity19Choice {
 	public static final MMMessageAttribute mmAmortisedValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmAmortisedFaceValue;
-			componentContext_lazy = () -> FinancialInstrumentQuantity19Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtsdVal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::4!c//AMOR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmortisedValue";
 			definition = "Quantity expressed as an amount representing the current amortised face amount of a bond, for example, a periodic reduction/increase of a bond's principal amount.";
@@ -235,10 +249,11 @@ public class FinancialInstrumentQuantity19Choice {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Cd", required = true)
 	protected Quantity4Code code;
 	/**
-	 * Quantity expressed as a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,6 +274,9 @@ public class FinancialInstrumentQuantity19Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Cd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::4!c//4!c</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -272,9 +290,10 @@ public class FinancialInstrumentQuantity19Choice {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmCode;
-			componentContext_lazy = () -> FinancialInstrumentQuantity19Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::4!c//4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Quantity expressed as a code.";
@@ -287,10 +306,10 @@ public class FinancialInstrumentQuantity19Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentQuantity19Choice.mmUnit, FinancialInstrumentQuantity19Choice.mmFaceAmount, FinancialInstrumentQuantity19Choice.mmAmortisedValue,
-						FinancialInstrumentQuantity19Choice.mmCode);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice.mmUnit, com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice.mmFaceAmount,
+						com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice.mmAmortisedValue, com.tools20022.repository.choice.FinancialInstrumentQuantity19Choice.mmCode);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentQuantity19Choice";
 				definition = "Choice between formats for the quantity of security.";
@@ -300,39 +319,39 @@ public class FinancialInstrumentQuantity19Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Unit", required = true)
 	public DecimalNumber getUnit() {
 		return unit;
 	}
 
-	public void setUnit(DecimalNumber unit) {
-		this.unit = unit;
+	public FinancialInstrumentQuantity19Choice setUnit(DecimalNumber unit) {
+		this.unit = Objects.requireNonNull(unit);
+		return this;
 	}
 
-	@XmlElement(name = "FaceAmt", required = true)
 	public ImpliedCurrencyAndAmount getFaceAmount() {
 		return faceAmount;
 	}
 
-	public void setFaceAmount(ImpliedCurrencyAndAmount faceAmount) {
-		this.faceAmount = faceAmount;
+	public FinancialInstrumentQuantity19Choice setFaceAmount(ImpliedCurrencyAndAmount faceAmount) {
+		this.faceAmount = Objects.requireNonNull(faceAmount);
+		return this;
 	}
 
-	@XmlElement(name = "AmtsdVal", required = true)
 	public ImpliedCurrencyAndAmount getAmortisedValue() {
 		return amortisedValue;
 	}
 
-	public void setAmortisedValue(ImpliedCurrencyAndAmount amortisedValue) {
-		this.amortisedValue = amortisedValue;
+	public FinancialInstrumentQuantity19Choice setAmortisedValue(ImpliedCurrencyAndAmount amortisedValue) {
+		this.amortisedValue = Objects.requireNonNull(amortisedValue);
+		return this;
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public Quantity4Code getCode() {
 		return code;
 	}
 
-	public void setCode(Quantity4Code code) {
-		this.code = code;
+	public FinancialInstrumentQuantity19Choice setCode(Quantity4Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 }

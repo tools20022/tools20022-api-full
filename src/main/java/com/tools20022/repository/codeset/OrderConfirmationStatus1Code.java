@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OrderConfirmationStatusCode;
+import com.tools20022.repository.codeset.OrderConfirmationStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the current status of an order confirmation or of an order
@@ -31,30 +35,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatusCode
- * OrderConfirmationStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatus1Code#mmSentToNextParty
- * OrderConfirmationStatus1Code.mmSentToNextParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatus1Code#SentToNextParty
+ * OrderConfirmationStatus1Code.SentToNextParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatus1Code#mmCommunicationProblemNextParty
- * OrderConfirmationStatus1Code.mmCommunicationProblemNextParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatus1Code#CommunicationProblemNextParty
+ * OrderConfirmationStatus1Code.CommunicationProblemNextParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatus1Code#mmConfirmationAccepted
- * OrderConfirmationStatus1Code.mmConfirmationAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatus1Code#ConfirmationAccepted
+ * OrderConfirmationStatus1Code.ConfirmationAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatus1Code#mmConfirmationReceived
- * OrderConfirmationStatus1Code.mmConfirmationReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatus1Code#ConfirmationReceived
+ * OrderConfirmationStatus1Code.ConfirmationReceived}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.OrderConfirmationStatusCode
+ * OrderConfirmationStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class OrderConfirmationStatus1Code extends OrderConfirmationStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OrderConfirmationStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class OrderConfirmationStatus1Code extends OrderConfirmationStatusCode {
 	 * name} = "SentToNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSentToNextParty = new MMCode() {
+	public static final OrderConfirmationStatus1Code SentToNextParty = new OrderConfirmationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
-			owner_lazy = () -> OrderConfirmationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderConfirmationStatus1Code.mmObject();
+			codeName = OrderConfirmationStatusCode.SentToNextParty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class OrderConfirmationStatus1Code extends OrderConfirmationStatusCode {
 	 * name} = "CommunicationProblemNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommunicationProblemNextParty = new MMCode() {
+	public static final OrderConfirmationStatus1Code CommunicationProblemNextParty = new OrderConfirmationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommunicationProblemNextParty";
-			owner_lazy = () -> OrderConfirmationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderConfirmationStatus1Code.mmObject();
+			codeName = OrderConfirmationStatusCode.CommunicationProblemNextParty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class OrderConfirmationStatus1Code extends OrderConfirmationStatusCode {
 	 * name} = "ConfirmationAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConfirmationAccepted = new MMCode() {
+	public static final OrderConfirmationStatus1Code ConfirmationAccepted = new OrderConfirmationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationAccepted";
-			owner_lazy = () -> OrderConfirmationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderConfirmationStatus1Code.mmObject();
+			codeName = OrderConfirmationStatusCode.ConfirmationAccepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,27 +169,60 @@ public class OrderConfirmationStatus1Code extends OrderConfirmationStatusCode {
 	 * name} = "ConfirmationReceived"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConfirmationReceived = new MMCode() {
+	public static final OrderConfirmationStatus1Code ConfirmationReceived = new OrderConfirmationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationReceived";
-			owner_lazy = () -> OrderConfirmationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderConfirmationStatus1Code.mmObject();
+			codeName = OrderConfirmationStatusCode.ConfirmationReceived.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OrderConfirmationStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OrderConfirmationStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("STNP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderConfirmationStatus1Code";
 				definition = "Specifies the current status of an order confirmation or of an order confirmation amendment.";
-				code_lazy = () -> Arrays.asList(OrderConfirmationStatus1Code.mmSentToNextParty, OrderConfirmationStatus1Code.mmCommunicationProblemNextParty, OrderConfirmationStatus1Code.mmConfirmationAccepted,
-						OrderConfirmationStatus1Code.mmConfirmationReceived);
 				trace_lazy = () -> OrderConfirmationStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderConfirmationStatus1Code.SentToNextParty, com.tools20022.repository.codeset.OrderConfirmationStatus1Code.CommunicationProblemNextParty,
+						com.tools20022.repository.codeset.OrderConfirmationStatus1Code.ConfirmationAccepted, com.tools20022.repository.codeset.OrderConfirmationStatus1Code.ConfirmationReceived);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SentToNextParty.getCodeName().get(), SentToNextParty);
+		codesByName.put(CommunicationProblemNextParty.getCodeName().get(), CommunicationProblemNextParty);
+		codesByName.put(ConfirmationAccepted.getCodeName().get(), ConfirmationAccepted);
+		codesByName.put(ConfirmationReceived.getCodeName().get(), ConfirmationReceived);
+	}
+
+	public static OrderConfirmationStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OrderConfirmationStatus1Code[] values() {
+		OrderConfirmationStatus1Code[] values = new OrderConfirmationStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OrderConfirmationStatus1Code> {
+		@Override
+		public OrderConfirmationStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OrderConfirmationStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.SecuritiesAccountOrBusinessError1Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,16 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesAccountReport1", propOrder = {"securitiesAccountIdentification", "securitiesAccountOrError"})
 public class SecuritiesAccountReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesAcctId", required = true)
 	protected SecuritiesAccount13 securitiesAccountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -101,7 +102,7 @@ public class SecuritiesAccountReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAccountIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReport1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,11 +114,11 @@ public class SecuritiesAccountReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesAcctOrErr", required = true)
 	protected SecuritiesAccountOrBusinessError1Choice securitiesAccountOrError;
 	/**
-	 * Identifies the returned securities account reference data or error
-	 * information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -146,7 +147,7 @@ public class SecuritiesAccountReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAccountOrError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReport1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,8 +163,8 @@ public class SecuritiesAccountReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountReport1.mmSecuritiesAccountIdentification, SecuritiesAccountReport1.mmSecuritiesAccountOrError);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountReport1.mmSecuritiesAccountIdentification, com.tools20022.repository.msg.SecuritiesAccountReport1.mmSecuritiesAccountOrError);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountReport1";
 				definition = "Set of elements used to report information about securities account reference data.";
@@ -172,21 +173,21 @@ public class SecuritiesAccountReport1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesAcctId", required = true)
 	public SecuritiesAccount13 getSecuritiesAccountIdentification() {
 		return securitiesAccountIdentification;
 	}
 
-	public void setSecuritiesAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount13 securitiesAccountIdentification) {
-		this.securitiesAccountIdentification = securitiesAccountIdentification;
+	public SecuritiesAccountReport1 setSecuritiesAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount13 securitiesAccountIdentification) {
+		this.securitiesAccountIdentification = Objects.requireNonNull(securitiesAccountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesAcctOrErr", required = true)
 	public SecuritiesAccountOrBusinessError1Choice getSecuritiesAccountOrError() {
 		return securitiesAccountOrError;
 	}
 
-	public void setSecuritiesAccountOrError(SecuritiesAccountOrBusinessError1Choice securitiesAccountOrError) {
-		this.securitiesAccountOrError = securitiesAccountOrError;
+	public SecuritiesAccountReport1 setSecuritiesAccountOrError(SecuritiesAccountOrBusinessError1Choice securitiesAccountOrError) {
+		this.securitiesAccountOrError = Objects.requireNonNull(securitiesAccountOrError);
+		return this;
 	}
 }

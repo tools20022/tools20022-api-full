@@ -29,6 +29,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Reason for which a cancellation is rejected."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RejectedCancellationStatusReason1Choice", propOrder = {"reason", "extendedReason", "dataSourceScheme"})
 public class RejectedCancellationStatusReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rsn", required = true)
 	protected RejectedCancellationStatusReason1Code reason;
 	/**
-	 * Reason for the rejected status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +110,7 @@ public class RejectedCancellationStatusReason1Choice {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RejectedCancellationStatusReason1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +121,11 @@ public class RejectedCancellationStatusReason1Choice {
 			simpleType_lazy = () -> RejectedCancellationStatusReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedRsn", required = true)
 	protected Extended350Code extendedReason;
 	/**
-	 * Reason for the rejected status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,7 +153,7 @@ public class RejectedCancellationStatusReason1Choice {
 	 */
 	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RejectedCancellationStatusReason1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,10 +164,11 @@ public class RejectedCancellationStatusReason1Choice {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DataSrcSchme", required = true)
 	protected GenericIdentification1 dataSourceScheme;
 	/**
-	 * Proprietary identification of the reason for the rejected status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -197,7 +201,7 @@ public class RejectedCancellationStatusReason1Choice {
 	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
-			componentContext_lazy = () -> RejectedCancellationStatusReason1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,9 +217,10 @@ public class RejectedCancellationStatusReason1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RejectedCancellationStatusReason1Choice.mmReason, RejectedCancellationStatusReason1Choice.mmExtendedReason, RejectedCancellationStatusReason1Choice.mmDataSourceScheme);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.mmReason, com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.mmExtendedReason,
+						com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.mmDataSourceScheme);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectedCancellationStatusReason1Choice";
 				definition = "Reason for which a cancellation is rejected.";
@@ -224,30 +229,30 @@ public class RejectedCancellationStatusReason1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public RejectedCancellationStatusReason1Code getReason() {
 		return reason;
 	}
 
-	public void setReason(RejectedCancellationStatusReason1Code reason) {
-		this.reason = reason;
+	public RejectedCancellationStatusReason1Choice setReason(RejectedCancellationStatusReason1Code reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedRsn", required = true)
 	public Extended350Code getExtendedReason() {
 		return extendedReason;
 	}
 
-	public void setExtendedReason(Extended350Code extendedReason) {
-		this.extendedReason = extendedReason;
+	public RejectedCancellationStatusReason1Choice setExtendedReason(Extended350Code extendedReason) {
+		this.extendedReason = Objects.requireNonNull(extendedReason);
+		return this;
 	}
 
-	@XmlElement(name = "DataSrcSchme", required = true)
 	public GenericIdentification1 getDataSourceScheme() {
 		return dataSourceScheme;
 	}
 
-	public void setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
-		this.dataSourceScheme = dataSourceScheme;
+	public RejectedCancellationStatusReason1Choice setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
+		return this;
 	}
 }

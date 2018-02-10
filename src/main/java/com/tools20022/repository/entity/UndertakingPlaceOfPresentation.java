@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Place at which the documents must be presented.
@@ -38,25 +39,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole
+ * UndertakingPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
  * <li>
  * {@linkplain com.tools20022.repository.entity.UndertakingPlaceOfPresentation#mmPresentationUnderConfirmation
  * UndertakingPlaceOfPresentation.mmPresentationUnderConfirmation}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole
- * UndertakingPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1
- * PlaceOrUnderConfirmationChoice1}</li>
  * </ul>
  * </li>
  * <li>
@@ -69,10 +61,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1
+ * PlaceOrUnderConfirmationChoice1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,9 +89,8 @@ public class UndertakingPlaceOfPresentation extends UndertakingPartyRole {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected PresentationPartyCode presentationUnderConfirmation;
 	/**
-	 * Specifies the type of party to which a presentation under confirmation is
-	 * required.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,8 +118,8 @@ public class UndertakingPlaceOfPresentation extends UndertakingPartyRole {
 	 */
 	public static final MMBusinessAttribute mmPresentationUnderConfirmation = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingPlaceOfPresentation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingPlaceOfPresentation.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PresentationUnderConfirmation";
 			definition = "Specifies the type of party to which a presentation under confirmation is required.";
@@ -140,7 +140,7 @@ public class UndertakingPlaceOfPresentation extends UndertakingPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingPlaceOfPresentation";
 				definition = "Place at which the documents must be presented.";
@@ -162,7 +162,8 @@ public class UndertakingPlaceOfPresentation extends UndertakingPartyRole {
 		return presentationUnderConfirmation;
 	}
 
-	public void setPresentationUnderConfirmation(PresentationPartyCode presentationUnderConfirmation) {
-		this.presentationUnderConfirmation = presentationUnderConfirmation;
+	public UndertakingPlaceOfPresentation setPresentationUnderConfirmation(PresentationPartyCode presentationUnderConfirmation) {
+		this.presentationUnderConfirmation = Objects.requireNonNull(presentationUnderConfirmation);
+		return this;
 	}
 }

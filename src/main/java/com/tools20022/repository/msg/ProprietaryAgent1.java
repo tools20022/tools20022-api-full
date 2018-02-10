@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Set of elements to identify a proprietary party."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ProprietaryAgent1", propOrder = {"type", "agent"})
 public class ProprietaryAgent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected Max35Text type;
 	/**
-	 * Identifies the type of proprietary agent reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +102,7 @@ public class ProprietaryAgent1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProprietaryAgent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryAgent1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +113,11 @@ public class ProprietaryAgent1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Agt", required = true)
 	protected BranchAndFinancialInstitutionIdentification3 agent;
 	/**
-	 * Proprietary agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -147,7 +150,7 @@ public class ProprietaryAgent1 {
 	public static final MMMessageAssociationEnd mmAgent = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
-			componentContext_lazy = () -> ProprietaryAgent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryAgent1.mmObject();
 			isDerived = false;
 			xmlTag = "Agt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,9 +166,9 @@ public class ProprietaryAgent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProprietaryAgent1.mmType, ProprietaryAgent1.mmAgent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryAgent1.mmType, com.tools20022.repository.msg.ProprietaryAgent1.mmAgent);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProprietaryAgent1";
 				definition = "Set of elements to identify a proprietary party.";
@@ -174,21 +177,21 @@ public class ProprietaryAgent1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public Max35Text getType() {
 		return type;
 	}
 
-	public void setType(Max35Text type) {
-		this.type = type;
+	public ProprietaryAgent1 setType(Max35Text type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Agt", required = true)
 	public BranchAndFinancialInstitutionIdentification3 getAgent() {
 		return agent;
 	}
 
-	public void setAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 agent) {
-		this.agent = agent;
+	public ProprietaryAgent1 setAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 agent) {
+		this.agent = Objects.requireNonNull(agent);
+		return this;
 	}
 }

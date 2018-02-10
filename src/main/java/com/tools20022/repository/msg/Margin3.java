@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,17 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides details on the calculation of the margin."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Margin3", propOrder = {"initialMargin", "variationMargin", "otherMargin"})
 public class Margin3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InitlMrgn")
 	protected Amount2 initialMargin;
 	/**
-	 * Margin required for absorbing future market price fluctuations (market
-	 * risks) occurring between the default of a member and close-out of
-	 * unsettled securities positions by the central counterparty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -107,7 +105,7 @@ public class Margin3 {
 	public static final MMMessageAssociationEnd mmInitialMargin = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmInitialMargin;
-			componentContext_lazy = () -> Margin3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Margin3.mmObject();
 			isDerived = false;
 			xmlTag = "InitlMrgn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +117,11 @@ public class Margin3 {
 			type_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
 		}
 	};
+	@XmlElement(name = "VartnMrgn")
 	protected List<com.tools20022.repository.msg.VariationMargin3> variationMargin;
 	/**
-	 * Provides details on the calculation of the variation margin.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -154,7 +153,7 @@ public class Margin3 {
 	public static final MMMessageAssociationEnd mmVariationMargin = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmVariationMargin;
-			componentContext_lazy = () -> Margin3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Margin3.mmObject();
 			isDerived = false;
 			xmlTag = "VartnMrgn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,10 +164,11 @@ public class Margin3 {
 			type_lazy = () -> com.tools20022.repository.msg.VariationMargin3.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrMrgn")
 	protected List<com.tools20022.repository.msg.Margin4> otherMargin;
 	/**
-	 * Provides details on the margin type and amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,7 +199,7 @@ public class Margin3 {
 	public static final MMMessageAttribute mmOtherMargin = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> MarginCall.mmObject();
-			componentContext_lazy = () -> Margin3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Margin3.mmObject();
 			isDerived = false;
 			xmlTag = "OthrMrgn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,9 +213,9 @@ public class Margin3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Margin3.mmInitialMargin, Margin3.mmVariationMargin, Margin3.mmOtherMargin);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Margin3.mmInitialMargin, com.tools20022.repository.msg.Margin3.mmVariationMargin, com.tools20022.repository.msg.Margin3.mmOtherMargin);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Margin3";
 				definition = "Provides details on the calculation of the margin.";
@@ -224,30 +224,30 @@ public class Margin3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InitlMrgn")
-	public Amount2 getInitialMargin() {
-		return initialMargin;
+	public Optional<Amount2> getInitialMargin() {
+		return initialMargin == null ? Optional.empty() : Optional.of(initialMargin);
 	}
 
-	public void setInitialMargin(com.tools20022.repository.msg.Amount2 initialMargin) {
+	public Margin3 setInitialMargin(com.tools20022.repository.msg.Amount2 initialMargin) {
 		this.initialMargin = initialMargin;
+		return this;
 	}
 
-	@XmlElement(name = "VartnMrgn")
 	public List<VariationMargin3> getVariationMargin() {
-		return variationMargin;
+		return variationMargin == null ? variationMargin = new ArrayList<>() : variationMargin;
 	}
 
-	public void setVariationMargin(List<com.tools20022.repository.msg.VariationMargin3> variationMargin) {
-		this.variationMargin = variationMargin;
+	public Margin3 setVariationMargin(List<com.tools20022.repository.msg.VariationMargin3> variationMargin) {
+		this.variationMargin = Objects.requireNonNull(variationMargin);
+		return this;
 	}
 
-	@XmlElement(name = "OthrMrgn")
 	public List<Margin4> getOtherMargin() {
-		return otherMargin;
+		return otherMargin == null ? otherMargin = new ArrayList<>() : otherMargin;
 	}
 
-	public void setOtherMargin(List<com.tools20022.repository.msg.Margin4> otherMargin) {
-		this.otherMargin = otherMargin;
+	public Margin3 setOtherMargin(List<com.tools20022.repository.msg.Margin4> otherMargin) {
+		this.otherMargin = Objects.requireNonNull(otherMargin);
+		return this;
 	}
 }

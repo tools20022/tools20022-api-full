@@ -27,9 +27,8 @@ import com.tools20022.repository.msg.TransactionDetails2;
 import com.tools20022.repository.msg.TransactionDetails3;
 import com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -45,30 +44,14 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
- * AuthoritiesLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive
- * TransactionRegulatoryReportingISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "RgltryTxRptCxlReq"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#mmCancellationByPreviousReferenceOrTradeReferenceOrTransactionDetailsRule
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02#CancellationByPreviousReferenceOrTradeReferenceOrTransactionDetailsRule
  * RegulatoryTransactionReportCancellationRequestV02.
- * mmCancellationByPreviousReferenceOrTradeReferenceOrTransactionDetailsRule}</li>
+ * CancellationByPreviousReferenceOrTradeReferenceOrTransactionDetailsRule}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -95,6 +78,22 @@ import javax.xml.bind.annotation.*;
  * mmCancellationByTradeReference}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive
+ * TransactionRegulatoryReportingISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "RgltryTxRptCxlReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
+ * AuthoritiesLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code auth.009.001.02}</li>
@@ -110,7 +109,7 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RegulatoryTransactionReportCancellationRequestV02", propOrder = {"identification", "reportingInstitution", "reportingAgent", "cancellationByTransactionDetails", "previousReference", "cancellationByTradeReference"})
 public class RegulatoryTransactionReportCancellationRequestV02 {
 
@@ -158,7 +157,7 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmCancellationByPreviousReferenceOrTradeReferenceOrTransactionDetailsRule = new MMXor() {
+	public static final MMXor CancellationByPreviousReferenceOrTradeReferenceOrTransactionDetailsRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByPreviousReferenceOrTradeReferenceOrTransactionDetailsRule";
@@ -169,11 +168,11 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 					com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.mmCancellationByTradeReference);
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected DocumentIdentification8 identification;
 	/**
-	 * Identification of the RegulatoryTransactionReportCancellationRequest
-	 * document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,10 +214,11 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "RptgInstn", required = true)
 	protected PartyIdentification23Choice reportingInstitution;
 	/**
-	 * Identification of the firm that executed the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,11 +259,11 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "RptgAgt")
 	protected PartyIdentification24Choice reportingAgent;
 	/**
-	 * Identifies the intermediary which is reporting on behalf on the reporting
-	 * institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -305,11 +305,11 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CxlByTxDtls", required = true)
 	protected List<TransactionDetails3> cancellationByTransactionDetails;
 	/**
-	 * Provides all the details of the transaction report that needs to be
-	 * cancelled. More than one set of details can be provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -350,11 +350,11 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsRef", required = true)
 	protected DocumentIdentification9 previousReference;
 	/**
-	 * Provides the reference of the RegulatoryTransactionReport document that
-	 * was previously sent and that needs to be cancelled in its entirety.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -396,11 +396,11 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CxlByTradRef", required = true)
 	protected List<TransactionDetails2> cancellationByTradeReference;
 	/**
-	 * Provides the trade reference of the transaction report that needs to be
-	 * cancelled. More than one reference may be provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -449,7 +449,7 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 				name = "RegulatoryTransactionReportCancellationRequestV02";
 				definition = "Scope\r\nA reporting institution, eg, an investment bank, sends the RegulatoryTransactionReportCancellationRequest to a regulator or to an intermediary (eg a reporting agent), to request a cancellation of a previously sent RegulatoryTransactionReport.\r\nUsage\r\nThe message definition can be used to cancel an entire RegulatoryTransactionReport or to cancel one or more individual transactions in a previously sent RegulatoryTransactionReport.";
 				messageSet_lazy = () -> Arrays.asList(TransactionRegulatoryReportingISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.mmCancellationByPreviousReferenceOrTradeReferenceOrTransactionDetailsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationRequestV02.CancellationByPreviousReferenceOrTradeReferenceOrTransactionDetailsRule);
 				rootElement = "Document";
 				xmlTag = "RgltryTxRptCxlReq";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
@@ -476,61 +476,61 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(DocumentIdentification8 identification) {
-		this.identification = identification;
+	public RegulatoryTransactionReportCancellationRequestV02 setIdentification(DocumentIdentification8 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "RptgInstn", required = true)
 	public PartyIdentification23Choice getReportingInstitution() {
 		return reportingInstitution;
 	}
 
-	public void setReportingInstitution(PartyIdentification23Choice reportingInstitution) {
-		this.reportingInstitution = reportingInstitution;
+	public RegulatoryTransactionReportCancellationRequestV02 setReportingInstitution(PartyIdentification23Choice reportingInstitution) {
+		this.reportingInstitution = Objects.requireNonNull(reportingInstitution);
+		return this;
 	}
 
-	@XmlElement(name = "RptgAgt")
-	public PartyIdentification24Choice getReportingAgent() {
-		return reportingAgent;
+	public Optional<PartyIdentification24Choice> getReportingAgent() {
+		return reportingAgent == null ? Optional.empty() : Optional.of(reportingAgent);
 	}
 
-	public void setReportingAgent(PartyIdentification24Choice reportingAgent) {
+	public RegulatoryTransactionReportCancellationRequestV02 setReportingAgent(PartyIdentification24Choice reportingAgent) {
 		this.reportingAgent = reportingAgent;
+		return this;
 	}
 
-	@XmlElement(name = "CxlByTxDtls", required = true)
 	public List<TransactionDetails3> getCancellationByTransactionDetails() {
-		return cancellationByTransactionDetails;
+		return cancellationByTransactionDetails == null ? cancellationByTransactionDetails = new ArrayList<>() : cancellationByTransactionDetails;
 	}
 
-	public void setCancellationByTransactionDetails(List<TransactionDetails3> cancellationByTransactionDetails) {
-		this.cancellationByTransactionDetails = cancellationByTransactionDetails;
+	public RegulatoryTransactionReportCancellationRequestV02 setCancellationByTransactionDetails(List<TransactionDetails3> cancellationByTransactionDetails) {
+		this.cancellationByTransactionDetails = Objects.requireNonNull(cancellationByTransactionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef", required = true)
 	public DocumentIdentification9 getPreviousReference() {
 		return previousReference;
 	}
 
-	public void setPreviousReference(DocumentIdentification9 previousReference) {
-		this.previousReference = previousReference;
+	public RegulatoryTransactionReportCancellationRequestV02 setPreviousReference(DocumentIdentification9 previousReference) {
+		this.previousReference = Objects.requireNonNull(previousReference);
+		return this;
 	}
 
-	@XmlElement(name = "CxlByTradRef", required = true)
 	public List<TransactionDetails2> getCancellationByTradeReference() {
-		return cancellationByTradeReference;
+		return cancellationByTradeReference == null ? cancellationByTradeReference = new ArrayList<>() : cancellationByTradeReference;
 	}
 
-	public void setCancellationByTradeReference(List<TransactionDetails2> cancellationByTradeReference) {
-		this.cancellationByTradeReference = cancellationByTradeReference;
+	public RegulatoryTransactionReportCancellationRequestV02 setCancellationByTradeReference(List<TransactionDetails2> cancellationByTradeReference) {
+		this.cancellationByTradeReference = Objects.requireNonNull(cancellationByTradeReference);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.009.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:auth.009.001.02")
 	static public class Document {
 		@XmlElement(name = "RgltryTxRptCxlReq", required = true)
 		public RegulatoryTransactionReportCancellationRequestV02 messageBody;

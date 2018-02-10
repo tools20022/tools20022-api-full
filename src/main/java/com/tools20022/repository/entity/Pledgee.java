@@ -31,6 +31,8 @@ import com.tools20022.repository.msg.PledgeeTypeAndText2;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Organisation used as the pledgee for the securities.
@@ -41,6 +43,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole
+ * SecuritiesPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -48,31 +54,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Pledgee.mmPledgeeType}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Pledgee#mmSecuritiesBalance
  * Pledgee.mmSecuritiesBalance}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole
- * SecuritiesPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PledgeeTypeAndText1
- * PledgeeTypeAndText1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PledgeeFormat1Choice
- * PledgeeFormat1Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1
- * PledgeeTypeAndAnyBICIdentifier1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PledgeeFormat2Choice
- * PledgeeFormat2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PledgeeTypeAndText2
- * PledgeeTypeAndText2}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PledgeeFormat3Choice
- * PledgeeFormat3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PledgeeFormat4Choice
- * PledgeeFormat4Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -123,10 +104,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PledgeeTypeAndText1
+ * PledgeeTypeAndText1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PledgeeFormat1Choice
+ * PledgeeFormat1Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1
+ * PledgeeTypeAndAnyBICIdentifier1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PledgeeFormat2Choice
+ * PledgeeFormat2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PledgeeTypeAndText2
+ * PledgeeTypeAndText2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PledgeeFormat3Choice
+ * PledgeeFormat3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PledgeeFormat4Choice
+ * PledgeeFormat4Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -142,8 +144,8 @@ public class Pledgee extends SecuritiesPartyRole {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected PledgeeTypeCode pledgeeType;
 	/**
-	 * Specifies the type of pledgee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,8 +185,8 @@ public class Pledgee extends SecuritiesPartyRole {
 	public static final MMBusinessAttribute mmPledgeeType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PledgeeTypeAndText1.mmPledgeeType, PledgeeTypeAndAnyBICIdentifier1.mmPledgeeType, PledgeeTypeAndText2.mmPledgeeType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Pledgee.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Pledgee.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PledgeeType";
 			definition = "Specifies the type of pledgee.";
@@ -203,8 +205,8 @@ public class Pledgee extends SecuritiesPartyRole {
 	};
 	protected SecuritiesBalance securitiesBalance;
 	/**
-	 * Balance which is held by a pledgee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,8 +238,8 @@ public class Pledgee extends SecuritiesPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesBalance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Pledgee.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Pledgee.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesBalance";
 			definition = "Balance which is held by a pledgee.";
@@ -252,7 +254,7 @@ public class Pledgee extends SecuritiesPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Pledgee";
 				definition = "Organisation used as the pledgee for the securities.";
@@ -278,15 +280,17 @@ public class Pledgee extends SecuritiesPartyRole {
 		return pledgeeType;
 	}
 
-	public void setPledgeeType(PledgeeTypeCode pledgeeType) {
-		this.pledgeeType = pledgeeType;
+	public Pledgee setPledgeeType(PledgeeTypeCode pledgeeType) {
+		this.pledgeeType = Objects.requireNonNull(pledgeeType);
+		return this;
 	}
 
-	public SecuritiesBalance getSecuritiesBalance() {
-		return securitiesBalance;
+	public Optional<SecuritiesBalance> getSecuritiesBalance() {
+		return securitiesBalance == null ? Optional.empty() : Optional.of(securitiesBalance);
 	}
 
-	public void setSecuritiesBalance(com.tools20022.repository.entity.SecuritiesBalance securitiesBalance) {
+	public Pledgee setSecuritiesBalance(com.tools20022.repository.entity.SecuritiesBalance securitiesBalance) {
 		this.securitiesBalance = securitiesBalance;
+		return this;
 	}
 }

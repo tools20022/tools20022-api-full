@@ -30,6 +30,7 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -67,22 +68,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementArchive
- * CashManagementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "camt.008.002.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "camt.008.002.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -101,6 +86,22 @@ import javax.xml.bind.annotation.*;
  * RequestToCancelPayment.mmJustification}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "camt.008.002.01"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementArchive
+ * CashManagementArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "camt.008.002.01"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.008.002.01}</li>
@@ -116,15 +117,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "camt.008.002.01", propOrder = {"assignment", "case", "underlying", "justification"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "camt.008.002.01", propOrder = {"assignment", "case_", "underlying", "justification"})
 public class RequestToCancelPayment {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Assgnmt", required = true)
 	protected CaseAssignment assignment;
 	/**
-	 * Identifies the assignment of a case from an assigner to an assignee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,10 +166,11 @@ public class RequestToCancelPayment {
 			}
 		}
 	};
+	@XmlElement(name = "Case", required = true)
 	protected Case case_;
 	/**
-	 * Identifies the case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -205,10 +208,11 @@ public class RequestToCancelPayment {
 			}
 		}
 	};
+	@XmlElement(name = "Undrlyg", required = true)
 	protected PaymentInstructionExtract underlying;
 	/**
-	 * Identifies the payment instruction to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -248,10 +252,11 @@ public class RequestToCancelPayment {
 			}
 		}
 	};
+	@XmlElement(name = "Justfn", required = true)
 	protected DebitAuthorisationDetails justification;
 	/**
-	 * Defines the reason for requesting the cancellation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -323,43 +328,43 @@ public class RequestToCancelPayment {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment getAssignment() {
 		return assignment;
 	}
 
-	public void setAssignment(CaseAssignment assignment) {
-		this.assignment = assignment;
+	public RequestToCancelPayment setAssignment(CaseAssignment assignment) {
+		this.assignment = Objects.requireNonNull(assignment);
+		return this;
 	}
 
-	@XmlElement(name = "Case", required = true)
 	public Case getCase() {
 		return case_;
 	}
 
-	public void setCase(Case case_) {
-		this.case_ = case_;
+	public RequestToCancelPayment setCase(Case case_) {
+		this.case_ = Objects.requireNonNull(case_);
+		return this;
 	}
 
-	@XmlElement(name = "Undrlyg", required = true)
 	public PaymentInstructionExtract getUnderlying() {
 		return underlying;
 	}
 
-	public void setUnderlying(PaymentInstructionExtract underlying) {
-		this.underlying = underlying;
+	public RequestToCancelPayment setUnderlying(PaymentInstructionExtract underlying) {
+		this.underlying = Objects.requireNonNull(underlying);
+		return this;
 	}
 
-	@XmlElement(name = "Justfn", required = true)
 	public DebitAuthorisationDetails getJustification() {
 		return justification;
 	}
 
-	public void setJustification(DebitAuthorisationDetails justification) {
-		this.justification = justification;
+	public RequestToCancelPayment setJustification(DebitAuthorisationDetails justification) {
+		this.justification = Objects.requireNonNull(justification);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.008.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.008.002.01")
 	static public class Document {
 		@XmlElement(name = "camt.008.002.01", required = true)
 		public RequestToCancelPayment messageBody;

@@ -28,6 +28,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +74,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,17 +86,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Franking details"</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FrankingSD1", propOrder = {"placeAndName", "frankingClass", "fullyFrankedIndicator", "frankedPercentage", "unfrankedPercentage", "corporateTaxRateForFrankingCredit", "frankedAmountPerSecurity",
 		"unfrankedAmountPerSecurity", "conduitForeignIncomeAmount"})
 public class FrankingSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm")
 	protected Max350Text placeAndName;
 	/**
-	 * Unambiguous reference to the location where the supplementary data must
-	 * be inserted in the message instance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +124,7 @@ public class FrankingSD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FrankingSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FrankingSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,10 +135,11 @@ public class FrankingSD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FrnkgClss", required = true)
 	protected FrankingClass1Code frankingClass;
 	/**
-	 * Dividend / Distribution kind where the franking information apples to.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +167,7 @@ public class FrankingSD1 {
 	 */
 	public static final MMMessageAttribute mmFrankingClass = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FrankingSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FrankingSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FrnkgClss";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,10 +178,11 @@ public class FrankingSD1 {
 			simpleType_lazy = () -> FrankingClass1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "FullyFrnkdInd")
 	protected YesNoIndicator fullyFrankedIndicator;
 	/**
-	 * Indicator if the dividend is fully franked.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -205,7 +209,7 @@ public class FrankingSD1 {
 	 */
 	public static final MMMessageAttribute mmFullyFrankedIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FrankingSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FrankingSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FullyFrnkdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,10 +220,11 @@ public class FrankingSD1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "FrnkdPctg")
 	protected PercentageRate frankedPercentage;
 	/**
-	 * Percentage of dividend that is franked.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -246,7 +251,7 @@ public class FrankingSD1 {
 	 */
 	public static final MMMessageAttribute mmFrankedPercentage = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FrankingSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FrankingSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FrnkdPctg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,10 +262,11 @@ public class FrankingSD1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "UfrnkdPctg")
 	protected PercentageRate unfrankedPercentage;
 	/**
-	 * Percentage of dividend that is unfranked.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -287,7 +293,7 @@ public class FrankingSD1 {
 	 */
 	public static final MMMessageAttribute mmUnfrankedPercentage = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FrankingSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FrankingSD1.mmObject();
 			isDerived = false;
 			xmlTag = "UfrnkdPctg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -298,10 +304,11 @@ public class FrankingSD1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "CorpTaxRateForFrnkgCdt")
 	protected PercentageRate corporateTaxRateForFrankingCredit;
 	/**
-	 * The corporate tax rate for the for franking credit of the dividend.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -330,7 +337,7 @@ public class FrankingSD1 {
 	 */
 	public static final MMMessageAttribute mmCorporateTaxRateForFrankingCredit = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FrankingSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FrankingSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CorpTaxRateForFrnkgCdt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -341,10 +348,11 @@ public class FrankingSD1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "FrnkdAmtPerScty")
 	protected RestrictedFINActiveCurrencyAnd13DecimalAmount frankedAmountPerSecurity;
 	/**
-	 * Cents amount of the dividend which has been franked at 30%.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -372,7 +380,7 @@ public class FrankingSD1 {
 	 */
 	public static final MMMessageAttribute mmFrankedAmountPerSecurity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FrankingSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FrankingSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FrnkdAmtPerScty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -383,10 +391,11 @@ public class FrankingSD1 {
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "UfrnkdAmtPerScty")
 	protected RestrictedFINActiveCurrencyAnd13DecimalAmount unfrankedAmountPerSecurity;
 	/**
-	 * Amount of the dividend which has been unfranked. <br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -413,7 +422,7 @@ public class FrankingSD1 {
 	 */
 	public static final MMMessageAttribute mmUnfrankedAmountPerSecurity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FrankingSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FrankingSD1.mmObject();
 			isDerived = false;
 			xmlTag = "UfrnkdAmtPerScty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -424,10 +433,11 @@ public class FrankingSD1 {
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CndtFrgnIncmAmt")
 	protected RestrictedFINActiveCurrencyAnd13DecimalAmount conduitForeignIncomeAmount;
 	/**
-	 * Conduit foreign income (CFI) amount related to the corporate action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -455,7 +465,7 @@ public class FrankingSD1 {
 	 */
 	public static final MMMessageAttribute mmConduitForeignIncomeAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FrankingSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FrankingSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CndtFrgnIncmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -470,9 +480,11 @@ public class FrankingSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FrankingSD1.mmPlaceAndName, FrankingSD1.mmFrankingClass, FrankingSD1.mmFullyFrankedIndicator, FrankingSD1.mmFrankedPercentage, FrankingSD1.mmUnfrankedPercentage,
-						FrankingSD1.mmCorporateTaxRateForFrankingCredit, FrankingSD1.mmFrankedAmountPerSecurity, FrankingSD1.mmUnfrankedAmountPerSecurity, FrankingSD1.mmConduitForeignIncomeAmount);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FrankingSD1.mmPlaceAndName, com.tools20022.repository.msg.FrankingSD1.mmFrankingClass,
+						com.tools20022.repository.msg.FrankingSD1.mmFullyFrankedIndicator, com.tools20022.repository.msg.FrankingSD1.mmFrankedPercentage, com.tools20022.repository.msg.FrankingSD1.mmUnfrankedPercentage,
+						com.tools20022.repository.msg.FrankingSD1.mmCorporateTaxRateForFrankingCredit, com.tools20022.repository.msg.FrankingSD1.mmFrankedAmountPerSecurity,
+						com.tools20022.repository.msg.FrankingSD1.mmUnfrankedAmountPerSecurity, com.tools20022.repository.msg.FrankingSD1.mmConduitForeignIncomeAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FrankingSD1";
 				definition = "Franking details";
@@ -481,84 +493,84 @@ public class FrankingSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm")
-	public Max350Text getPlaceAndName() {
-		return placeAndName;
+	public Optional<Max350Text> getPlaceAndName() {
+		return placeAndName == null ? Optional.empty() : Optional.of(placeAndName);
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
+	public FrankingSD1 setPlaceAndName(Max350Text placeAndName) {
 		this.placeAndName = placeAndName;
+		return this;
 	}
 
-	@XmlElement(name = "FrnkgClss", required = true)
 	public FrankingClass1Code getFrankingClass() {
 		return frankingClass;
 	}
 
-	public void setFrankingClass(FrankingClass1Code frankingClass) {
-		this.frankingClass = frankingClass;
+	public FrankingSD1 setFrankingClass(FrankingClass1Code frankingClass) {
+		this.frankingClass = Objects.requireNonNull(frankingClass);
+		return this;
 	}
 
-	@XmlElement(name = "FullyFrnkdInd")
-	public YesNoIndicator getFullyFrankedIndicator() {
-		return fullyFrankedIndicator;
+	public Optional<YesNoIndicator> getFullyFrankedIndicator() {
+		return fullyFrankedIndicator == null ? Optional.empty() : Optional.of(fullyFrankedIndicator);
 	}
 
-	public void setFullyFrankedIndicator(YesNoIndicator fullyFrankedIndicator) {
+	public FrankingSD1 setFullyFrankedIndicator(YesNoIndicator fullyFrankedIndicator) {
 		this.fullyFrankedIndicator = fullyFrankedIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "FrnkdPctg")
-	public PercentageRate getFrankedPercentage() {
-		return frankedPercentage;
+	public Optional<PercentageRate> getFrankedPercentage() {
+		return frankedPercentage == null ? Optional.empty() : Optional.of(frankedPercentage);
 	}
 
-	public void setFrankedPercentage(PercentageRate frankedPercentage) {
+	public FrankingSD1 setFrankedPercentage(PercentageRate frankedPercentage) {
 		this.frankedPercentage = frankedPercentage;
+		return this;
 	}
 
-	@XmlElement(name = "UfrnkdPctg")
-	public PercentageRate getUnfrankedPercentage() {
-		return unfrankedPercentage;
+	public Optional<PercentageRate> getUnfrankedPercentage() {
+		return unfrankedPercentage == null ? Optional.empty() : Optional.of(unfrankedPercentage);
 	}
 
-	public void setUnfrankedPercentage(PercentageRate unfrankedPercentage) {
+	public FrankingSD1 setUnfrankedPercentage(PercentageRate unfrankedPercentage) {
 		this.unfrankedPercentage = unfrankedPercentage;
+		return this;
 	}
 
-	@XmlElement(name = "CorpTaxRateForFrnkgCdt")
-	public PercentageRate getCorporateTaxRateForFrankingCredit() {
-		return corporateTaxRateForFrankingCredit;
+	public Optional<PercentageRate> getCorporateTaxRateForFrankingCredit() {
+		return corporateTaxRateForFrankingCredit == null ? Optional.empty() : Optional.of(corporateTaxRateForFrankingCredit);
 	}
 
-	public void setCorporateTaxRateForFrankingCredit(PercentageRate corporateTaxRateForFrankingCredit) {
+	public FrankingSD1 setCorporateTaxRateForFrankingCredit(PercentageRate corporateTaxRateForFrankingCredit) {
 		this.corporateTaxRateForFrankingCredit = corporateTaxRateForFrankingCredit;
+		return this;
 	}
 
-	@XmlElement(name = "FrnkdAmtPerScty")
-	public RestrictedFINActiveCurrencyAnd13DecimalAmount getFrankedAmountPerSecurity() {
-		return frankedAmountPerSecurity;
+	public Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> getFrankedAmountPerSecurity() {
+		return frankedAmountPerSecurity == null ? Optional.empty() : Optional.of(frankedAmountPerSecurity);
 	}
 
-	public void setFrankedAmountPerSecurity(RestrictedFINActiveCurrencyAnd13DecimalAmount frankedAmountPerSecurity) {
+	public FrankingSD1 setFrankedAmountPerSecurity(RestrictedFINActiveCurrencyAnd13DecimalAmount frankedAmountPerSecurity) {
 		this.frankedAmountPerSecurity = frankedAmountPerSecurity;
+		return this;
 	}
 
-	@XmlElement(name = "UfrnkdAmtPerScty")
-	public RestrictedFINActiveCurrencyAnd13DecimalAmount getUnfrankedAmountPerSecurity() {
-		return unfrankedAmountPerSecurity;
+	public Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> getUnfrankedAmountPerSecurity() {
+		return unfrankedAmountPerSecurity == null ? Optional.empty() : Optional.of(unfrankedAmountPerSecurity);
 	}
 
-	public void setUnfrankedAmountPerSecurity(RestrictedFINActiveCurrencyAnd13DecimalAmount unfrankedAmountPerSecurity) {
+	public FrankingSD1 setUnfrankedAmountPerSecurity(RestrictedFINActiveCurrencyAnd13DecimalAmount unfrankedAmountPerSecurity) {
 		this.unfrankedAmountPerSecurity = unfrankedAmountPerSecurity;
+		return this;
 	}
 
-	@XmlElement(name = "CndtFrgnIncmAmt")
-	public RestrictedFINActiveCurrencyAnd13DecimalAmount getConduitForeignIncomeAmount() {
-		return conduitForeignIncomeAmount;
+	public Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> getConduitForeignIncomeAmount() {
+		return conduitForeignIncomeAmount == null ? Optional.empty() : Optional.of(conduitForeignIncomeAmount);
 	}
 
-	public void setConduitForeignIncomeAmount(RestrictedFINActiveCurrencyAnd13DecimalAmount conduitForeignIncomeAmount) {
+	public FrankingSD1 setConduitForeignIncomeAmount(RestrictedFINActiveCurrencyAnd13DecimalAmount conduitForeignIncomeAmount) {
 		this.conduitForeignIncomeAmount = conduitForeignIncomeAmount;
+		return this;
 	}
 }

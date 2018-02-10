@@ -20,40 +20,43 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.FailureReasonCode;
+import com.tools20022.repository.codeset.FailureReason6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Reason for which the key has been stopped.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.FailureReasonCode
- * FailureReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason6Code#mmCompromised
- * FailureReason6Code.mmCompromised}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason6Code#Compromised
+ * FailureReason6Code.Compromised}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailureReason6Code#Expired
+ * FailureReason6Code.Expired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason6Code#mmExpired
- * FailureReason6Code.mmExpired}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason6Code#InvalidKCV
+ * FailureReason6Code.InvalidKCV}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason6Code#mmInvalidKCV
- * FailureReason6Code.mmInvalidKCV}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason6Code#mmKeyLoadError
- * FailureReason6Code.mmKeyLoadError}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason6Code#KeyLoadError
+ * FailureReason6Code.KeyLoadError}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.FailureReasonCode
+ * FailureReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Reason for which the key has been stopped."</li>
  * </ul>
  */
-public class FailureReason6Code extends FailureReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FailureReason6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +87,12 @@ public class FailureReason6Code extends FailureReasonCode {
 	 * name} = "Compromised"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompromised = new MMCode() {
+	public static final FailureReason6Code Compromised = new FailureReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compromised";
-			owner_lazy = () -> FailureReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason6Code.mmObject();
+			codeName = FailureReasonCode.Compromised.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,11 +111,12 @@ public class FailureReason6Code extends FailureReasonCode {
 	 * name} = "Expired"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExpired = new MMCode() {
+	public static final FailureReason6Code Expired = new FailureReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expired";
-			owner_lazy = () -> FailureReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason6Code.mmObject();
+			codeName = FailureReasonCode.Expired.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -129,11 +135,12 @@ public class FailureReason6Code extends FailureReasonCode {
 	 * name} = "InvalidKCV"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalidKCV = new MMCode() {
+	public static final FailureReason6Code InvalidKCV = new FailureReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidKCV";
-			owner_lazy = () -> FailureReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason6Code.mmObject();
+			codeName = FailureReasonCode.InvalidKCV.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -152,25 +159,59 @@ public class FailureReason6Code extends FailureReasonCode {
 	 * name} = "KeyLoadError"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmKeyLoadError = new MMCode() {
+	public static final FailureReason6Code KeyLoadError = new FailureReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyLoadError";
-			owner_lazy = () -> FailureReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason6Code.mmObject();
+			codeName = FailureReasonCode.KeyLoadError.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, FailureReason6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FailureReason6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FailureReason6Code";
 				definition = "Reason for which the key has been stopped.";
-				code_lazy = () -> Arrays.asList(FailureReason6Code.mmCompromised, FailureReason6Code.mmExpired, FailureReason6Code.mmInvalidKCV, FailureReason6Code.mmKeyLoadError);
 				trace_lazy = () -> FailureReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FailureReason6Code.Compromised, com.tools20022.repository.codeset.FailureReason6Code.Expired,
+						com.tools20022.repository.codeset.FailureReason6Code.InvalidKCV, com.tools20022.repository.codeset.FailureReason6Code.KeyLoadError);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Compromised.getCodeName().get(), Compromised);
+		codesByName.put(Expired.getCodeName().get(), Expired);
+		codesByName.put(InvalidKCV.getCodeName().get(), InvalidKCV);
+		codesByName.put(KeyLoadError.getCodeName().get(), KeyLoadError);
+	}
+
+	public static FailureReason6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FailureReason6Code[] values() {
+		FailureReason6Code[] values = new FailureReason6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FailureReason6Code> {
+		@Override
+		public FailureReason6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FailureReason6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

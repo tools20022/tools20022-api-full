@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * PartiallySettledStatus1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartiallySettledStatus10", propOrder = {"reason", "additionalInformation"})
 public class PartiallySettledStatus10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rsn", required = true)
 	protected PartiallySettled21Choice reason;
 	/**
-	 * Reason for the partially settled status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -118,7 +121,7 @@ public class PartiallySettledStatus10 {
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmPartiallySettledStatusReason;
-			componentContext_lazy = () -> PartiallySettledStatus10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartiallySettledStatus10.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +134,11 @@ public class PartiallySettledStatus10 {
 			type_lazy = () -> PartiallySettled21Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected Max350Text additionalInformation;
 	/**
-	 * Additional information about the partially settled reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +177,7 @@ public class PartiallySettledStatus10 {
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> PartiallySettledStatus10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartiallySettledStatus10.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,9 +193,9 @@ public class PartiallySettledStatus10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartiallySettledStatus10.mmReason, PartiallySettledStatus10.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartiallySettledStatus10.mmReason, com.tools20022.repository.msg.PartiallySettledStatus10.mmAdditionalInformation);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartiallySettledStatus10";
 				definition = "Reason for a partially settled status.";
@@ -201,21 +205,21 @@ public class PartiallySettledStatus10 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public PartiallySettled21Choice getReason() {
 		return reason;
 	}
 
-	public void setReason(PartiallySettled21Choice reason) {
-		this.reason = reason;
+	public PartiallySettledStatus10 setReason(PartiallySettled21Choice reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public Max350Text getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<Max350Text> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(Max350Text additionalInformation) {
+	public PartiallySettledStatus10 setAdditionalInformation(Max350Text additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 }

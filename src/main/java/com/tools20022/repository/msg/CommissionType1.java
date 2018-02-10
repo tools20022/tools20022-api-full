@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherCodeRule#forCommissionType1
+ * ConstraintOtherCodeRule.forCommissionType1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specification of the commission type."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CommissionType1", propOrder = {"structured", "additionalInformation"})
 public class CommissionType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Strd", required = true)
 	protected CommissionType5Code structured;
 	/**
-	 * Structured format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +117,7 @@ public class CommissionType1 {
 	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
-			componentContext_lazy = () -> CommissionType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommissionType1.mmObject();
 			isDerived = false;
 			xmlTag = "Strd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +128,11 @@ public class CommissionType1 {
 			simpleType_lazy = () -> CommissionType5Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected Max350Text additionalInformation;
 	/**
-	 * Additional information about the type of commission.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,7 +165,7 @@ public class CommissionType1 {
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
-			componentContext_lazy = () -> CommissionType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommissionType1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,9 +180,10 @@ public class CommissionType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CommissionType1.mmStructured, CommissionType1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommissionType1.mmStructured, com.tools20022.repository.msg.CommissionType1.mmAdditionalInformation);
 				trace_lazy = () -> Commission.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherCodeRule.forCommissionType1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommissionType1";
 				definition = "Specification of the commission type.";
@@ -179,21 +192,21 @@ public class CommissionType1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Strd", required = true)
 	public CommissionType5Code getStructured() {
 		return structured;
 	}
 
-	public void setStructured(CommissionType5Code structured) {
-		this.structured = structured;
+	public CommissionType1 setStructured(CommissionType5Code structured) {
+		this.structured = Objects.requireNonNull(structured);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public Max350Text getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<Max350Text> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(Max350Text additionalInformation) {
+	public CommissionType1 setAdditionalInformation(Max350Text additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 }

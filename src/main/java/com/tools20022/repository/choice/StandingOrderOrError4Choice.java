@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling4;
 import com.tools20022.repository.msg.StandingOrder2;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * StandingOrderOrError2Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StandingOrderOrError4Choice", propOrder = {"standingOrder", "businessError"})
 public class StandingOrderOrError4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StgOrdr", required = true)
 	protected StandingOrder2 standingOrder;
 	/**
-	 * Requested information on the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +112,7 @@ public class StandingOrderOrError4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmStandingOrder = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StandingOrderOrError4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.StandingOrderOrError4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StgOrdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +125,11 @@ public class StandingOrderOrError4Choice {
 			type_lazy = () -> StandingOrder2.mmObject();
 		}
 	};
+	@XmlElement(name = "BizErr", required = true)
 	protected List<ErrorHandling4> businessError;
 	/**
-	 * Reason the requested business information is not given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -156,7 +160,7 @@ public class StandingOrderOrError4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StandingOrderOrError4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.StandingOrderOrError4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,8 +176,8 @@ public class StandingOrderOrError4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StandingOrderOrError4Choice.mmStandingOrder, StandingOrderOrError4Choice.mmBusinessError);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrError4Choice.mmStandingOrder, com.tools20022.repository.choice.StandingOrderOrError4Choice.mmBusinessError);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingOrderOrError4Choice";
 				definition = "Choice between the standing order details or a business error when the requested data cannot be retrieved.";
@@ -183,21 +187,21 @@ public class StandingOrderOrError4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StgOrdr", required = true)
 	public StandingOrder2 getStandingOrder() {
 		return standingOrder;
 	}
 
-	public void setStandingOrder(StandingOrder2 standingOrder) {
-		this.standingOrder = standingOrder;
+	public StandingOrderOrError4Choice setStandingOrder(StandingOrder2 standingOrder) {
+		this.standingOrder = Objects.requireNonNull(standingOrder);
+		return this;
 	}
 
-	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling4> getBusinessError() {
-		return businessError;
+		return businessError == null ? businessError = new ArrayList<>() : businessError;
 	}
 
-	public void setBusinessError(List<ErrorHandling4> businessError) {
-		this.businessError = businessError;
+	public StandingOrderOrError4Choice setBusinessError(List<ErrorHandling4> businessError) {
+		this.businessError = Objects.requireNonNull(businessError);
+		return this;
 	}
 }

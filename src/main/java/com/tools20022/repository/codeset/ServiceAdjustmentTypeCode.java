@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ServiceAdjustmentTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines the type of allowed service adjustment.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServiceAdjustmentTypeCode#mmCompensable
- * ServiceAdjustmentTypeCode.mmCompensable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServiceAdjustmentTypeCode#Compensable
+ * ServiceAdjustmentTypeCode.Compensable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServiceAdjustmentTypeCode#mmNonCompensable
- * ServiceAdjustmentTypeCode.mmNonCompensable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServiceAdjustmentTypeCode#NonCompensable
+ * ServiceAdjustmentTypeCode.NonCompensable}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the type of allowed service adjustment."</li>
  * </ul>
  */
-public class ServiceAdjustmentTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ServiceAdjustmentTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,12 +101,12 @@ public class ServiceAdjustmentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompensable = new MMCode() {
+	public static final ServiceAdjustmentTypeCode Compensable = new ServiceAdjustmentTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compensable";
 			definition = "Adjustment applies to a service which is balance compensable. Earnings credits based on average balances maintained in the account can be used to offset the service charge.";
-			owner_lazy = () -> ServiceAdjustmentTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ServiceAdjustmentTypeCode.mmObject();
 			codeName = "COMP";
 		}
 	};
@@ -128,28 +134,58 @@ public class ServiceAdjustmentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonCompensable = new MMCode() {
+	public static final ServiceAdjustmentTypeCode NonCompensable = new ServiceAdjustmentTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonCompensable";
 			definition = "Adjustment applies to a service which is not balance compensable. Balance based credits cannot be used to offset the service charge.";
-			owner_lazy = () -> ServiceAdjustmentTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ServiceAdjustmentTypeCode.mmObject();
 			codeName = "NCMP";
 		}
 	};
+	final static private LinkedHashMap<String, ServiceAdjustmentTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ServiceAdjustmentTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ServiceAdjustmentTypeCode";
 				definition = "Defines the type of allowed service adjustment.";
-				code_lazy = () -> Arrays.asList(ServiceAdjustmentTypeCode.mmCompensable, ServiceAdjustmentTypeCode.mmNonCompensable);
 				derivation_lazy = () -> Arrays.asList(ServiceAdjustmentType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ServiceAdjustmentTypeCode.Compensable, com.tools20022.repository.codeset.ServiceAdjustmentTypeCode.NonCompensable);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Compensable.getCodeName().get(), Compensable);
+		codesByName.put(NonCompensable.getCodeName().get(), NonCompensable);
+	}
+
+	public static ServiceAdjustmentTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ServiceAdjustmentTypeCode[] values() {
+		ServiceAdjustmentTypeCode[] values = new ServiceAdjustmentTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ServiceAdjustmentTypeCode> {
+		@Override
+		public ServiceAdjustmentTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ServiceAdjustmentTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

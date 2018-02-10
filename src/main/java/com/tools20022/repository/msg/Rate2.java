@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.InterestCalculation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSignRule#forRate2
+ * ConstraintSignRule.forRate2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Set of elements qualifying the interest rate."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Rate2", propOrder = {"sign", "rate"})
 public class Rate2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sgn")
 	protected PlusOrMinusIndicator sign;
 	/**
-	 * Indicates the sign of the rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,7 +108,7 @@ public class Rate2 {
 	 */
 	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Rate2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
 			isDerived = false;
 			xmlTag = "Sgn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,13 +119,11 @@ public class Rate2 {
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Rate", required = true)
 	protected PercentageRate rate;
 	/**
-	 * Percentage charged for the use of an amount of money, usually expressed
-	 * at an annual rate. The interest rate is the ratio of the amount of
-	 * interest paid during a certain period of time compared to the principal
-	 * amount of the interest bearing financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,7 +158,7 @@ public class Rate2 {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
-			componentContext_lazy = () -> Rate2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,9 +173,10 @@ public class Rate2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Rate2.mmSign, Rate2.mmRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Rate2.mmSign, com.tools20022.repository.msg.Rate2.mmRate);
 				trace_lazy = () -> InterestCalculation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSignRule.forRate2);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Rate2";
 				definition = "Set of elements qualifying the interest rate.";
@@ -175,21 +185,21 @@ public class Rate2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sgn")
-	public PlusOrMinusIndicator getSign() {
-		return sign;
+	public Optional<PlusOrMinusIndicator> getSign() {
+		return sign == null ? Optional.empty() : Optional.of(sign);
 	}
 
-	public void setSign(PlusOrMinusIndicator sign) {
+	public Rate2 setSign(PlusOrMinusIndicator sign) {
 		this.sign = sign;
+		return this;
 	}
 
-	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
 
-	public void setRate(PercentageRate rate) {
-		this.rate = rate;
+	public Rate2 setRate(PercentageRate rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 }

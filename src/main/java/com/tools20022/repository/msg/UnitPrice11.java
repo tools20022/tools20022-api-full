@@ -31,6 +31,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -44,8 +46,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnitPrice11#mmTypeOrExtendedTypeRule
- * UnitPrice11.mmTypeOrExtendedTypeRule}</li>
+ * {@linkplain com.tools20022.repository.msg.UnitPrice11#TypeOrExtendedTypeRule
+ * UnitPrice11.TypeOrExtendedTypeRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -68,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -88,15 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnitPrice11", propOrder = {"type", "extendedType", "value", "priceMethod"})
 public class UnitPrice11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected TypeOfPrice10Code type;
 	/**
-	 * Type and information about a price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -129,7 +132,7 @@ public class UnitPrice11 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
-			componentContext_lazy = () -> UnitPrice11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice11.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,10 +143,11 @@ public class UnitPrice11 {
 			simpleType_lazy = () -> TypeOfPrice10Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedTp", required = true)
 	protected Extended350Code extendedType;
 	/**
-	 * Type and information about a price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,7 +180,7 @@ public class UnitPrice11 {
 	public static final MMMessageAttribute mmExtendedType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
-			componentContext_lazy = () -> UnitPrice11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice11.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,10 +191,11 @@ public class UnitPrice11 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Val", required = true)
 	protected PriceValue1 value;
 	/**
-	 * Value of the price, eg, as a currency and value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -229,7 +234,7 @@ public class UnitPrice11 {
 	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
-			componentContext_lazy = () -> UnitPrice11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice11.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,10 +246,11 @@ public class UnitPrice11 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
 		}
 	};
+	@XmlElement(name = "PricMtd")
 	protected PriceMethod1Code priceMethod;
 	/**
-	 * Type of pricing calculation method.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -284,7 +290,7 @@ public class UnitPrice11 {
 	public static final MMMessageAttribute mmPriceMethod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceMethod;
-			componentContext_lazy = () -> UnitPrice11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice11.mmObject();
 			isDerived = false;
 			xmlTag = "PricMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,22 +331,23 @@ public class UnitPrice11 {
 	 * "Either Type or ExtendedType must be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmTypeOrExtendedTypeRule = new MMXor() {
+	public static final MMXor TypeOrExtendedTypeRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOrExtendedTypeRule";
 			definition = "Either Type or ExtendedType must be present, but not both.";
-			messageComponent_lazy = () -> UnitPrice11.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(UnitPrice11.mmType, UnitPrice11.mmExtendedType);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.UnitPrice11.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice11.mmType, com.tools20022.repository.msg.UnitPrice11.mmExtendedType);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnitPrice11.mmType, UnitPrice11.mmExtendedType, UnitPrice11.mmValue, UnitPrice11.mmPriceMethod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice11.mmType, com.tools20022.repository.msg.UnitPrice11.mmExtendedType, com.tools20022.repository.msg.UnitPrice11.mmValue,
+						com.tools20022.repository.msg.UnitPrice11.mmPriceMethod);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -352,45 +359,45 @@ public class UnitPrice11 {
 				name = "UnitPrice11";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
 				nextVersions_lazy = () -> Arrays.asList(UnitPrice20.mmObject());
-				xors_lazy = () -> Arrays.asList(UnitPrice11.mmTypeOrExtendedTypeRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice11.TypeOrExtendedTypeRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public TypeOfPrice10Code getType() {
 		return type;
 	}
 
-	public void setType(TypeOfPrice10Code type) {
-		this.type = type;
+	public UnitPrice11 setType(TypeOfPrice10Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedTp", required = true)
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}
 
-	public void setExtendedType(Extended350Code extendedType) {
-		this.extendedType = extendedType;
+	public UnitPrice11 setExtendedType(Extended350Code extendedType) {
+		this.extendedType = Objects.requireNonNull(extendedType);
+		return this;
 	}
 
-	@XmlElement(name = "Val", required = true)
 	public PriceValue1 getValue() {
 		return value;
 	}
 
-	public void setValue(com.tools20022.repository.msg.PriceValue1 value) {
-		this.value = value;
+	public UnitPrice11 setValue(com.tools20022.repository.msg.PriceValue1 value) {
+		this.value = Objects.requireNonNull(value);
+		return this;
 	}
 
-	@XmlElement(name = "PricMtd")
-	public PriceMethod1Code getPriceMethod() {
-		return priceMethod;
+	public Optional<PriceMethod1Code> getPriceMethod() {
+		return priceMethod == null ? Optional.empty() : Optional.of(priceMethod);
 	}
 
-	public void setPriceMethod(PriceMethod1Code priceMethod) {
+	public UnitPrice11 setPriceMethod(PriceMethod1Code priceMethod) {
 		this.priceMethod = priceMethod;
+		return this;
 	}
 }

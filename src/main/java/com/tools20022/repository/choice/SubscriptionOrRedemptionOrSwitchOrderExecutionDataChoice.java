@@ -30,6 +30,7 @@ import com.tools20022.repository.msg.SubscriptionExecution8;
 import com.tools20022.repository.msg.SwitchExecution5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice", propOrder = {"subscriptionDetails", "redemptionDetails", "switchDetails"})
 public class SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SbcptDtls", required = true)
 	protected SubscriptionExecution8 subscriptionDetails;
 	/**
-	 * Subscription order confirmation data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -119,7 +121,7 @@ public class SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice {
 	public static final MMMessageAssociationEnd mmSubscriptionDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SubscriptionExecution.mmObject();
-			componentContext_lazy = () -> SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +133,11 @@ public class SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice {
 			type_lazy = () -> SubscriptionExecution8.mmObject();
 		}
 	};
+	@XmlElement(name = "RedDtls", required = true)
 	protected RedemptionExecution11 redemptionDetails;
 	/**
-	 * Redemption order confirmation data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -166,7 +169,7 @@ public class SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice {
 	public static final MMMessageAssociationEnd mmRedemptionDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RedemptionExecution.mmObject();
-			componentContext_lazy = () -> SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmObject();
 			isDerived = false;
 			xmlTag = "RedDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +181,11 @@ public class SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice {
 			type_lazy = () -> RedemptionExecution11.mmObject();
 		}
 	};
+	@XmlElement(name = "SwtchDtls", required = true)
 	protected SwitchExecution5 switchDetails;
 	/**
-	 * Switch order confirmation data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -213,7 +217,7 @@ public class SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice {
 	public static final MMMessageAssociationEnd mmSwitchDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SwitchExecution.mmObject();
-			componentContext_lazy = () -> SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmObject();
 			isDerived = false;
 			xmlTag = "SwtchDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,10 +233,11 @@ public class SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmSubscriptionDetails, SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmRedemptionDetails,
-						SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmSwitchDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmSubscriptionDetails,
+						com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmRedemptionDetails,
+						com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmSwitchDetails);
 				trace_lazy = () -> InvestmentFundTransaction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice";
 				definition = "Choice of subscription details executed, or redemption details executed, or switch order details executed.";
@@ -241,30 +246,30 @@ public class SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SbcptDtls", required = true)
 	public SubscriptionExecution8 getSubscriptionDetails() {
 		return subscriptionDetails;
 	}
 
-	public void setSubscriptionDetails(SubscriptionExecution8 subscriptionDetails) {
-		this.subscriptionDetails = subscriptionDetails;
+	public SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice setSubscriptionDetails(SubscriptionExecution8 subscriptionDetails) {
+		this.subscriptionDetails = Objects.requireNonNull(subscriptionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "RedDtls", required = true)
 	public RedemptionExecution11 getRedemptionDetails() {
 		return redemptionDetails;
 	}
 
-	public void setRedemptionDetails(RedemptionExecution11 redemptionDetails) {
-		this.redemptionDetails = redemptionDetails;
+	public SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice setRedemptionDetails(RedemptionExecution11 redemptionDetails) {
+		this.redemptionDetails = Objects.requireNonNull(redemptionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SwtchDtls", required = true)
 	public SwitchExecution5 getSwitchDetails() {
 		return switchDetails;
 	}
 
-	public void setSwitchDetails(SwitchExecution5 switchDetails) {
-		this.switchDetails = switchDetails;
+	public SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice setSwitchDetails(SwitchExecution5 switchDetails) {
+		this.switchDetails = Objects.requireNonNull(switchDetails);
+		return this;
 	}
 }

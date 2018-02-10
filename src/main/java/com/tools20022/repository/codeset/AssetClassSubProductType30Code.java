@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AssetClassSubProductTypeCode;
+import com.tools20022.repository.codeset.AssetClassSubProductType30Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines the sub-product of type Weather.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode
- * AssetClassSubProductTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType30Code#mmWeather
- * AssetClassSubProductType30Code.mmWeather}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType30Code#Weather
+ * AssetClassSubProductType30Code.Weather}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode
+ * AssetClassSubProductTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,7 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the sub-product of type Weather."</li>
  * </ul>
  */
-public class AssetClassSubProductType30Code extends AssetClassSubProductTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AssetClassSubProductType30Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -74,25 +79,55 @@ public class AssetClassSubProductType30Code extends AssetClassSubProductTypeCode
 	 * name} = "Weather"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWeather = new MMCode() {
+	public static final AssetClassSubProductType30Code Weather = new AssetClassSubProductType30Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weather";
-			owner_lazy = () -> AssetClassSubProductType30Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductType30Code.mmObject();
+			codeName = AssetClassSubProductTypeCode.Weather.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AssetClassSubProductType30Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AssetClassSubProductType30Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductType30Code";
 				definition = "Defines the sub-product of type Weather.";
-				code_lazy = () -> Arrays.asList(AssetClassSubProductType30Code.mmWeather);
 				trace_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType30Code.Weather);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Weather.getCodeName().get(), Weather);
+	}
+
+	public static AssetClassSubProductType30Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AssetClassSubProductType30Code[] values() {
+		AssetClassSubProductType30Code[] values = new AssetClassSubProductType30Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AssetClassSubProductType30Code> {
+		@Override
+		public AssetClassSubProductType30Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AssetClassSubProductType30Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

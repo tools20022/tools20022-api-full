@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,16 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Owner of the account."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StandingOrderIdentification1", propOrder = {"standingOrderReference", "accountIdentification", "accountType", "accountOwner"})
 public class StandingOrderIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StgOrdrRef")
 	protected Max35Text standingOrderReference;
 	/**
-	 * Unique and unambiguous identification for a standing order, as assigned
-	 * by the account servicer or the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +120,7 @@ public class StandingOrderIdentification1 {
 	public static final MMMessageAttribute mmStandingOrderReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmIdentification;
-			componentContext_lazy = () -> StandingOrderIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "StgOrdrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,11 +131,11 @@ public class StandingOrderIdentification1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctId", required = true)
 	protected AccountIdentification1Choice accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,7 +171,7 @@ public class StandingOrderIdentification1 {
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> StandingOrderIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,10 +182,11 @@ public class StandingOrderIdentification1 {
 			complexType_lazy = () -> AccountIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctTp")
 	protected CashAccountType2Code accountType;
 	/**
-	 * Specifies the nature, or use, of the cash account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,7 +220,7 @@ public class StandingOrderIdentification1 {
 	public static final MMMessageAttribute mmAccountType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
-			componentContext_lazy = () -> StandingOrderIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,10 +231,11 @@ public class StandingOrderIdentification1 {
 			simpleType_lazy = () -> CashAccountType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected BICIdentifier accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -265,7 +269,7 @@ public class StandingOrderIdentification1 {
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> StandingOrderIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,10 +284,10 @@ public class StandingOrderIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StandingOrderIdentification1.mmStandingOrderReference, StandingOrderIdentification1.mmAccountIdentification, StandingOrderIdentification1.mmAccountType,
-						StandingOrderIdentification1.mmAccountOwner);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderIdentification1.mmStandingOrderReference, com.tools20022.repository.msg.StandingOrderIdentification1.mmAccountIdentification,
+						com.tools20022.repository.msg.StandingOrderIdentification1.mmAccountType, com.tools20022.repository.msg.StandingOrderIdentification1.mmAccountOwner);
 				trace_lazy = () -> CashStandingOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderIdentification1";
 				definition = "Owner of the account.";
@@ -292,39 +296,39 @@ public class StandingOrderIdentification1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StgOrdrRef")
-	public Max35Text getStandingOrderReference() {
-		return standingOrderReference;
+	public Optional<Max35Text> getStandingOrderReference() {
+		return standingOrderReference == null ? Optional.empty() : Optional.of(standingOrderReference);
 	}
 
-	public void setStandingOrderReference(Max35Text standingOrderReference) {
+	public StandingOrderIdentification1 setStandingOrderReference(Max35Text standingOrderReference) {
 		this.standingOrderReference = standingOrderReference;
+		return this;
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public AccountIdentification1Choice getAccountIdentification() {
 		return accountIdentification;
 	}
 
-	public void setAccountIdentification(AccountIdentification1Choice accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public StandingOrderIdentification1 setAccountIdentification(AccountIdentification1Choice accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctTp")
-	public CashAccountType2Code getAccountType() {
-		return accountType;
+	public Optional<CashAccountType2Code> getAccountType() {
+		return accountType == null ? Optional.empty() : Optional.of(accountType);
 	}
 
-	public void setAccountType(CashAccountType2Code accountType) {
+	public StandingOrderIdentification1 setAccountType(CashAccountType2Code accountType) {
 		this.accountType = accountType;
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public BICIdentifier getAccountOwner() {
-		return accountOwner;
+	public Optional<BICIdentifier> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(BICIdentifier accountOwner) {
+	public StandingOrderIdentification1 setAccountOwner(BICIdentifier accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 }

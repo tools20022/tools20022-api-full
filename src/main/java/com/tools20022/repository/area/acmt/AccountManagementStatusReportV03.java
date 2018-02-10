@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -54,20 +56,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AccountManagementArchive
- * AccountManagementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AcctMgmtStsRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -83,6 +71,20 @@ import javax.xml.bind.annotation.*;
  * AccountManagementStatusReportV03.mmStatusReport}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AcctMgmtStsRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AccountManagementArchive
+ * AccountManagementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code acmt.006.001.03}</li>
@@ -110,15 +112,16 @@ import javax.xml.bind.annotation.*;
  * AccountManagementStatusReportV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountManagementStatusReportV03", propOrder = {"messageIdentification", "relatedReference", "statusReport"})
 public class AccountManagementStatusReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Identifies the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,10 +170,11 @@ public class AccountManagementStatusReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdRef", required = true)
 	protected List<AdditionalReference3> relatedReference;
 	/**
-	 * Reference to a linked message that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -220,11 +224,11 @@ public class AccountManagementStatusReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "StsRpt", required = true)
 	protected AccountManagementStatusAndReason2 statusReport;
 	/**
-	 * Status report details of an account opening instruction or account
-	 * modification instruction that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -308,34 +312,34 @@ public class AccountManagementStatusReportV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public AccountManagementStatusReportV03 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RltdRef", required = true)
 	public List<AdditionalReference3> getRelatedReference() {
-		return relatedReference;
+		return relatedReference == null ? relatedReference = new ArrayList<>() : relatedReference;
 	}
 
-	public void setRelatedReference(List<AdditionalReference3> relatedReference) {
-		this.relatedReference = relatedReference;
+	public AccountManagementStatusReportV03 setRelatedReference(List<AdditionalReference3> relatedReference) {
+		this.relatedReference = Objects.requireNonNull(relatedReference);
+		return this;
 	}
 
-	@XmlElement(name = "StsRpt", required = true)
 	public AccountManagementStatusAndReason2 getStatusReport() {
 		return statusReport;
 	}
 
-	public void setStatusReport(AccountManagementStatusAndReason2 statusReport) {
-		this.statusReport = statusReport;
+	public AccountManagementStatusReportV03 setStatusReport(AccountManagementStatusAndReason2 statusReport) {
+		this.statusReport = Objects.requireNonNull(statusReport);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.006.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.006.001.03")
 	static public class Document {
 		@XmlElement(name = "AcctMgmtStsRpt", required = true)
 		public AccountManagementStatusReportV03 messageBody;

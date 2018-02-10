@@ -19,8 +19,12 @@ package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMText;
+import com.tools20022.repository.datatype.Min3Max4NumericText.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies a numeric string with a minimum length of 3 digits, and a maximum
@@ -33,8 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -47,14 +51,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
 public class Min3Max4NumericText {
 
 	final static private AtomicReference<MMText> mmObject_lazy = new AtomicReference<>();
+	protected String value;
 
 	final static public MMText mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMText() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Min3Max4NumericText";
 				definition = "Specifies a numeric string with a minimum length of 3 digits, and a maximum length of 4 digits.";
@@ -62,5 +68,26 @@ public class Min3Max4NumericText {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Min3Max4NumericText(String value) {
+		this.value = value;
+	}
+
+	@Override
+	public String toString() {
+		return value;
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Min3Max4NumericText> {
+		@Override
+		public Min3Max4NumericText unmarshal(String value) {
+			return new Min3Max4NumericText(value);
+		}
+
+		@Override
+		public String marshal(Min3Max4NumericText typedData) {
+			return typedData.value;
+		}
 	}
 }

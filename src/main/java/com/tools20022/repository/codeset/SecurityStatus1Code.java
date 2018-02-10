@@ -20,34 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SecurityStatusCode;
+import com.tools20022.repository.codeset.SecurityStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Denotes the current state of the Instrument (Used for derivatives).
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SecurityStatus1Code#Active
+ * SecurityStatus1Code.Active}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecurityStatus1Code#Inactive
+ * SecurityStatus1Code.Inactive}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.SecurityStatusCode
  * SecurityStatusCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecurityStatus1Code#mmActive
- * SecurityStatus1Code.mmActive}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecurityStatus1Code#mmInactive
- * SecurityStatus1Code.mmInactive}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Denotes the current state of the Instrument (Used for derivatives)."</li>
  * </ul>
  */
-public class SecurityStatus1Code extends SecurityStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SecurityStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +88,12 @@ public class SecurityStatus1Code extends SecurityStatusCode {
 	 * name} = "Active"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmActive = new MMCode() {
+	public static final SecurityStatus1Code Active = new SecurityStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
-			owner_lazy = () -> SecurityStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecurityStatus1Code.mmObject();
+			codeName = SecurityStatusCode.Active.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,26 +112,57 @@ public class SecurityStatus1Code extends SecurityStatusCode {
 	 * name} = "Inactive"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInactive = new MMCode() {
+	public static final SecurityStatus1Code Inactive = new SecurityStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactive";
-			owner_lazy = () -> SecurityStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecurityStatus1Code.mmObject();
+			codeName = SecurityStatusCode.Inactive.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SecurityStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SecurityStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACTV");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityStatus1Code";
 				definition = "Denotes the current state of the Instrument (Used for derivatives).";
-				code_lazy = () -> Arrays.asList(SecurityStatus1Code.mmActive, SecurityStatus1Code.mmInactive);
 				trace_lazy = () -> SecurityStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecurityStatus1Code.Active, com.tools20022.repository.codeset.SecurityStatus1Code.Inactive);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Active.getCodeName().get(), Active);
+		codesByName.put(Inactive.getCodeName().get(), Inactive);
+	}
+
+	public static SecurityStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SecurityStatus1Code[] values() {
+		SecurityStatus1Code[] values = new SecurityStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SecurityStatus1Code> {
+		@Override
+		public SecurityStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SecurityStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

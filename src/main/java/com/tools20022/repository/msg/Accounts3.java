@@ -22,9 +22,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Reports on accounts."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Accounts3", propOrder = "accountReport")
 public class Accounts3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctRpt", required = true)
 	protected List<com.tools20022.repository.msg.AccountReport8> accountReport;
 	/**
-	 * Reports either on the account information or on a business error.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -101,7 +104,7 @@ public class Accounts3 {
 	public static final MMMessageAssociationEnd mmAccountReport = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountContract;
-			componentContext_lazy = () -> Accounts3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Accounts3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,9 +119,9 @@ public class Accounts3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Accounts3.mmAccountReport);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Accounts3.mmAccountReport);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Accounts3";
 				definition = "Reports on accounts.";
@@ -127,12 +130,12 @@ public class Accounts3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctRpt", required = true)
 	public List<AccountReport8> getAccountReport() {
-		return accountReport;
+		return accountReport == null ? accountReport = new ArrayList<>() : accountReport;
 	}
 
-	public void setAccountReport(List<com.tools20022.repository.msg.AccountReport8> accountReport) {
-		this.accountReport = accountReport;
+	public Accounts3 setAccountReport(List<com.tools20022.repository.msg.AccountReport8> accountReport) {
+		this.accountReport = Objects.requireNonNull(accountReport);
+		return this;
 	}
 }

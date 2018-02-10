@@ -22,9 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "MaintenanceDelegationRequest1", propOrder = {"TMIdentification", "masterTMIdentification", "requestedDelegation"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "MaintenanceDelegationRequest1", propOrder = {"tMIdentification", "masterTMIdentification", "requestedDelegation"})
 public class MaintenanceDelegationRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TMId", required = true)
 	protected GenericIdentification72 tMIdentification;
 	/**
-	 * Terminal manager identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -125,7 +125,7 @@ public class MaintenanceDelegationRequest1 {
 	 */
 	public static final MMMessageAssociationEnd mmTMIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MaintenanceDelegationRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegationRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "TMId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,10 +138,11 @@ public class MaintenanceDelegationRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification72.mmObject();
 		}
 	};
+	@XmlElement(name = "MstrTMId")
 	protected GenericIdentification72 masterTMIdentification;
 	/**
-	 * Master terminal manager identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -176,7 +177,7 @@ public class MaintenanceDelegationRequest1 {
 	 */
 	public static final MMMessageAssociationEnd mmMasterTMIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MaintenanceDelegationRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegationRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "MstrTMId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,10 +190,11 @@ public class MaintenanceDelegationRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification72.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdDlgtn", required = true)
 	protected List<com.tools20022.repository.msg.MaintenanceDelegation1> requestedDelegation;
 	/**
-	 * Information on the delegation of a maintenance action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -226,7 +228,7 @@ public class MaintenanceDelegationRequest1 {
 	 */
 	public static final MMMessageAssociationEnd mmRequestedDelegation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MaintenanceDelegationRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegationRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdDlgtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -242,9 +244,10 @@ public class MaintenanceDelegationRequest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MaintenanceDelegationRequest1.mmTMIdentification, MaintenanceDelegationRequest1.mmMasterTMIdentification, MaintenanceDelegationRequest1.mmRequestedDelegation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegationRequest1.mmTMIdentification, com.tools20022.repository.msg.MaintenanceDelegationRequest1.mmMasterTMIdentification,
+						com.tools20022.repository.msg.MaintenanceDelegationRequest1.mmRequestedDelegation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MaintenanceDelegationRequestV01.mmMaintenanceDelegationRequest);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MaintenanceDelegationRequest1";
 				definition = "Information related to the the request of maintenance delegations.";
@@ -254,30 +257,30 @@ public class MaintenanceDelegationRequest1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TMId", required = true)
 	public GenericIdentification72 getTMIdentification() {
 		return tMIdentification;
 	}
 
-	public void setTMIdentification(com.tools20022.repository.msg.GenericIdentification72 tMIdentification) {
-		this.tMIdentification = tMIdentification;
+	public MaintenanceDelegationRequest1 setTMIdentification(com.tools20022.repository.msg.GenericIdentification72 tMIdentification) {
+		this.tMIdentification = Objects.requireNonNull(tMIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "MstrTMId")
-	public GenericIdentification72 getMasterTMIdentification() {
-		return masterTMIdentification;
+	public Optional<GenericIdentification72> getMasterTMIdentification() {
+		return masterTMIdentification == null ? Optional.empty() : Optional.of(masterTMIdentification);
 	}
 
-	public void setMasterTMIdentification(com.tools20022.repository.msg.GenericIdentification72 masterTMIdentification) {
+	public MaintenanceDelegationRequest1 setMasterTMIdentification(com.tools20022.repository.msg.GenericIdentification72 masterTMIdentification) {
 		this.masterTMIdentification = masterTMIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ReqdDlgtn", required = true)
 	public List<MaintenanceDelegation1> getRequestedDelegation() {
-		return requestedDelegation;
+		return requestedDelegation == null ? requestedDelegation = new ArrayList<>() : requestedDelegation;
 	}
 
-	public void setRequestedDelegation(List<com.tools20022.repository.msg.MaintenanceDelegation1> requestedDelegation) {
-		this.requestedDelegation = requestedDelegation;
+	public MaintenanceDelegationRequest1 setRequestedDelegation(List<com.tools20022.repository.msg.MaintenanceDelegation1> requestedDelegation) {
+		this.requestedDelegation = Objects.requireNonNull(requestedDelegation);
+		return this;
 	}
 }

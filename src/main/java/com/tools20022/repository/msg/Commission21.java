@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * Commission9}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Commission21", propOrder = {"commissionType", "commissionApplied"})
 public class Commission21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ComssnTp", required = true)
 	protected CommissionType5Choice commissionType;
 	/**
-	 * Type of commission.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +111,7 @@ public class Commission21 {
 	public static final MMMessageAssociationEnd mmCommissionType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
-			componentContext_lazy = () -> Commission21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission21.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +123,11 @@ public class Commission21 {
 			type_lazy = () -> CommissionType5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ComssnApld", required = true)
 	protected AmountOrRate3Choice commissionApplied;
 	/**
-	 * Commission amount or commission rate applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +158,7 @@ public class Commission21 {
 	public static final MMMessageAssociationEnd mmCommissionApplied = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> Commission21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission21.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnApld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,9 +174,9 @@ public class Commission21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Commission21.mmCommissionType, Commission21.mmCommissionApplied);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission21.mmCommissionType, com.tools20022.repository.msg.Commission21.mmCommissionApplied);
 				trace_lazy = () -> Commission.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Commission21";
 				definition = "Amount of money due to a party as compensation for a service.";
@@ -183,21 +186,21 @@ public class Commission21 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ComssnTp", required = true)
 	public CommissionType5Choice getCommissionType() {
 		return commissionType;
 	}
 
-	public void setCommissionType(CommissionType5Choice commissionType) {
-		this.commissionType = commissionType;
+	public Commission21 setCommissionType(CommissionType5Choice commissionType) {
+		this.commissionType = Objects.requireNonNull(commissionType);
+		return this;
 	}
 
-	@XmlElement(name = "ComssnApld", required = true)
 	public AmountOrRate3Choice getCommissionApplied() {
 		return commissionApplied;
 	}
 
-	public void setCommissionApplied(AmountOrRate3Choice commissionApplied) {
-		this.commissionApplied = commissionApplied;
+	public Commission21 setCommissionApplied(AmountOrRate3Choice commissionApplied) {
+		this.commissionApplied = Objects.requireNonNull(commissionApplied);
+		return this;
 	}
 }

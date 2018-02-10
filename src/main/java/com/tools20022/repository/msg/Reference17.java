@@ -24,6 +24,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information related to a linked transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Reference17", propOrder = {"collateralSubstitutionRequestIdentification", "collateralSubstitutionResponseIdentification"})
 public class Reference17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CollSbstitnReqId", required = true)
 	protected Max35Text collateralSubstitutionRequestIdentification;
 	/**
-	 * Identification of the collateral substitution request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -95,7 +98,7 @@ public class Reference17 {
 	 */
 	public static final MMMessageAttribute mmCollateralSubstitutionRequestIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference17.mmObject();
 			isDerived = false;
 			xmlTag = "CollSbstitnReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -106,10 +109,11 @@ public class Reference17 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CollSbstitnRspnId")
 	protected Max35Text collateralSubstitutionResponseIdentification;
 	/**
-	 * Identification of the collateral substitution response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,7 +139,7 @@ public class Reference17 {
 	 */
 	public static final MMMessageAttribute mmCollateralSubstitutionResponseIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference17.mmObject();
 			isDerived = false;
 			xmlTag = "CollSbstitnRspnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -150,8 +154,8 @@ public class Reference17 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Reference17.mmCollateralSubstitutionRequestIdentification, Reference17.mmCollateralSubstitutionResponseIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference17.mmCollateralSubstitutionRequestIdentification, com.tools20022.repository.msg.Reference17.mmCollateralSubstitutionResponseIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reference17";
 				definition = "Information related to a linked transaction.";
@@ -160,21 +164,21 @@ public class Reference17 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CollSbstitnReqId", required = true)
 	public Max35Text getCollateralSubstitutionRequestIdentification() {
 		return collateralSubstitutionRequestIdentification;
 	}
 
-	public void setCollateralSubstitutionRequestIdentification(Max35Text collateralSubstitutionRequestIdentification) {
-		this.collateralSubstitutionRequestIdentification = collateralSubstitutionRequestIdentification;
+	public Reference17 setCollateralSubstitutionRequestIdentification(Max35Text collateralSubstitutionRequestIdentification) {
+		this.collateralSubstitutionRequestIdentification = Objects.requireNonNull(collateralSubstitutionRequestIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CollSbstitnRspnId")
-	public Max35Text getCollateralSubstitutionResponseIdentification() {
-		return collateralSubstitutionResponseIdentification;
+	public Optional<Max35Text> getCollateralSubstitutionResponseIdentification() {
+		return collateralSubstitutionResponseIdentification == null ? Optional.empty() : Optional.of(collateralSubstitutionResponseIdentification);
 	}
 
-	public void setCollateralSubstitutionResponseIdentification(Max35Text collateralSubstitutionResponseIdentification) {
+	public Reference17 setCollateralSubstitutionResponseIdentification(Max35Text collateralSubstitutionResponseIdentification) {
 		this.collateralSubstitutionResponseIdentification = collateralSubstitutionResponseIdentification;
+		return this;
 	}
 }

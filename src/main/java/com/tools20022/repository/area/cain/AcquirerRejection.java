@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.AcquirertoIssuerCardMessagesISOLatestver
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -36,22 +37,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AcquirertoIssuerCardTransactionLatestVersion
- * AcquirertoIssuerCardTransactionLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.AcquirertoIssuerCardMessagesISOLatestversion
- * AcquirertoIssuerCardMessagesISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AcqrrRjctn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -64,6 +49,22 @@ import javax.xml.bind.annotation.*;
  * AcquirerRejection.mmReject}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.AcquirertoIssuerCardMessagesISOLatestversion
+ * AcquirertoIssuerCardMessagesISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AcqrrRjctn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AcquirertoIssuerCardTransactionLatestVersion
+ * AcquirertoIssuerCardTransactionLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code cain.013.001.01}</li>
@@ -79,15 +80,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcquirerRejection", propOrder = {"header", "reject"})
 public class AcquirerRejection {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header19 header;
 	/**
-	 * Information related to the protocol management.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,10 +128,11 @@ public class AcquirerRejection {
 			}
 		}
 	};
+	@XmlElement(name = "Rjct", required = true)
 	protected AcceptorRejection4 reject;
 	/**
-	 * Information related to the reject.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,25 +202,25 @@ public class AcquirerRejection {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header19 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header19 header) {
-		this.header = header;
+	public AcquirerRejection setHeader(Header19 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "Rjct", required = true)
 	public AcceptorRejection4 getReject() {
 		return reject;
 	}
 
-	public void setReject(AcceptorRejection4 reject) {
-		this.reject = reject;
+	public AcquirerRejection setReject(AcceptorRejection4 reject) {
+		this.reject = Objects.requireNonNull(reject);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:cain.013.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:cain.013.001.01")
 	static public class Document {
 		@XmlElement(name = "AcqrrRjctn", required = true)
 		public AcquirerRejection messageBody;

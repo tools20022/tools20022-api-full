@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Information about the meeting, specifying the participation requirements and
@@ -40,6 +41,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Meeting Meeting}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -72,13 +75,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * IssuerMeeting.mmCapitalStock}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Meeting Meeting}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,9 +97,8 @@ public class IssuerMeeting extends Meeting {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Max35Text issuerMeetingIdentification;
 	/**
-	 * Identification assigned to a meeting by the issuer. It must be unique for
-	 * the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,8 +166,8 @@ public class IssuerMeeting extends Meeting {
 			derivation_lazy = () -> Arrays.asList(MeetingNotice1.mmIssuerMeetingIdentification, MeetingNotice2.mmIssuerMeetingIdentification, MeetingNotice3.mmIssuerMeetingIdentification, MeetingReference1.mmIssuerMeetingIdentification,
 					MeetingReference2.mmIssuerMeetingIdentification, MeetingReference5.mmIssuerMeetingIdentification, MeetingReference3.mmIssuerMeetingIdentification, MeetingReference4.mmIssuerMeetingIdentification,
 					MeetingReference7.mmIssuerMeetingIdentification, MeetingReference6.mmIssuerMeetingIdentification, MeetingNotice4.mmIssuerMeetingIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssuerMeetingIdentification";
 			definition = "Identification assigned to a meeting by the issuer. It must be unique for the issuer.";
@@ -186,10 +186,8 @@ public class IssuerMeeting extends Meeting {
 	};
 	protected YesNoIndicator nomineePowerOfAttorneyIndicator;
 	/**
-	 * Indicates that a power of attorney must be provided by the beneficial
-	 * owner to the nominee in order for the nominee to vote on behalf of the
-	 * beneficial owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,8 +215,8 @@ public class IssuerMeeting extends Meeting {
 	 */
 	public static final MMBusinessAttribute mmNomineePowerOfAttorneyIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NomineePowerOfAttorneyIndicator";
 			definition = "Indicates that a power of attorney must be provided by the beneficial owner to the nominee in order for the nominee to vote on behalf of the beneficial owner.";
@@ -237,8 +235,8 @@ public class IssuerMeeting extends Meeting {
 	};
 	protected YesNoIndicator nomineeVotingIndicator;
 	/**
-	 * Indicates whether an agent can vote on behalf of the beneficial owners.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -266,8 +264,8 @@ public class IssuerMeeting extends Meeting {
 	 */
 	public static final MMBusinessAttribute mmNomineeVotingIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NomineeVotingIndicator";
 			definition = "Indicates whether an agent can vote on behalf of the beneficial owners.";
@@ -286,9 +284,8 @@ public class IssuerMeeting extends Meeting {
 	};
 	protected YesNoIndicator nomineeBeneficialOwnerIndicator;
 	/**
-	 * Indicates whether the beneficiary details, for example, name and address,
-	 * must be supplied in order to take part in the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -316,8 +313,8 @@ public class IssuerMeeting extends Meeting {
 	 */
 	public static final MMBusinessAttribute mmNomineeBeneficialOwnerIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NomineeBeneficialOwnerIndicator";
 			definition = "Indicates whether the beneficiary details, for example, name and address, must be supplied in order to take part in the event.";
@@ -336,9 +333,8 @@ public class IssuerMeeting extends Meeting {
 	};
 	protected YesNoIndicator proxyVotingIndicator;
 	/**
-	 * Indicates that the beneficial owner may give authority to a third party
-	 * to vote on his behalf.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -366,8 +362,8 @@ public class IssuerMeeting extends Meeting {
 	 */
 	public static final MMBusinessAttribute mmProxyVotingIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProxyVotingIndicator";
 			definition = "Indicates that the beneficial owner may give authority to a third party to vote on his behalf.";
@@ -386,9 +382,8 @@ public class IssuerMeeting extends Meeting {
 	};
 	protected YesNoIndicator proxyBeneficialOwnerIndicator;
 	/**
-	 * Indicates whether the beneficiary details of the proxy, for example, name
-	 * and address, must be supplied in order to take part in the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -416,8 +411,8 @@ public class IssuerMeeting extends Meeting {
 	 */
 	public static final MMBusinessAttribute mmProxyBeneficialOwnerIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProxyBeneficialOwnerIndicator";
 			definition = "Indicates whether the beneficiary details of the proxy, for example, name and address, must be supplied in order to take part in the event.";
@@ -436,10 +431,8 @@ public class IssuerMeeting extends Meeting {
 	};
 	protected YesNoIndicator proxyPowerOfAttorneyIndicator;
 	/**
-	 * Indicates that a power of attorney must be provided by the beneficial
-	 * owner to the proxy in order for the proxy to vote on behalf of the
-	 * beneficial owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -467,8 +460,8 @@ public class IssuerMeeting extends Meeting {
 	 */
 	public static final MMBusinessAttribute mmProxyPowerOfAttorneyIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProxyPowerOfAttorneyIndicator";
 			definition = "Indicates that a power of attorney must be provided by the beneficial owner to the proxy in order for the proxy to vote on behalf of the beneficial owner.";
@@ -487,9 +480,8 @@ public class IssuerMeeting extends Meeting {
 	};
 	protected YesNoIndicator validCreditorIndicator;
 	/**
-	 * Indicates that the participant must be a creditor of the company in order
-	 * to vote on the resolutions of the meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -517,8 +509,8 @@ public class IssuerMeeting extends Meeting {
 	 */
 	public static final MMBusinessAttribute mmValidCreditorIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidCreditorIndicator";
 			definition = "Indicates that the participant must be a creditor of the company in order to vote on the resolutions of the meeting.";
@@ -537,9 +529,8 @@ public class IssuerMeeting extends Meeting {
 	};
 	protected CurrencyAndAmount capitalStock;
 	/**
-	 * Total amount of stock, common or preferred, that a corporation has issued
-	 * uder its certificate of incorporation or charter.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -567,8 +558,8 @@ public class IssuerMeeting extends Meeting {
 	 */
 	public static final MMBusinessAttribute mmCapitalStock = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CapitalStock";
 			definition = "Total amount of stock, common or preferred, that a corporation has issued uder its certificate of incorporation or charter.";
@@ -589,7 +580,7 @@ public class IssuerMeeting extends Meeting {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IssuerMeeting";
 				definition = "Information about the meeting, specifying the participation requirements and the voting procedures.";
@@ -612,71 +603,80 @@ public class IssuerMeeting extends Meeting {
 		return issuerMeetingIdentification;
 	}
 
-	public void setIssuerMeetingIdentification(Max35Text issuerMeetingIdentification) {
-		this.issuerMeetingIdentification = issuerMeetingIdentification;
+	public IssuerMeeting setIssuerMeetingIdentification(Max35Text issuerMeetingIdentification) {
+		this.issuerMeetingIdentification = Objects.requireNonNull(issuerMeetingIdentification);
+		return this;
 	}
 
 	public YesNoIndicator getNomineePowerOfAttorneyIndicator() {
 		return nomineePowerOfAttorneyIndicator;
 	}
 
-	public void setNomineePowerOfAttorneyIndicator(YesNoIndicator nomineePowerOfAttorneyIndicator) {
-		this.nomineePowerOfAttorneyIndicator = nomineePowerOfAttorneyIndicator;
+	public IssuerMeeting setNomineePowerOfAttorneyIndicator(YesNoIndicator nomineePowerOfAttorneyIndicator) {
+		this.nomineePowerOfAttorneyIndicator = Objects.requireNonNull(nomineePowerOfAttorneyIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getNomineeVotingIndicator() {
 		return nomineeVotingIndicator;
 	}
 
-	public void setNomineeVotingIndicator(YesNoIndicator nomineeVotingIndicator) {
-		this.nomineeVotingIndicator = nomineeVotingIndicator;
+	public IssuerMeeting setNomineeVotingIndicator(YesNoIndicator nomineeVotingIndicator) {
+		this.nomineeVotingIndicator = Objects.requireNonNull(nomineeVotingIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getNomineeBeneficialOwnerIndicator() {
 		return nomineeBeneficialOwnerIndicator;
 	}
 
-	public void setNomineeBeneficialOwnerIndicator(YesNoIndicator nomineeBeneficialOwnerIndicator) {
-		this.nomineeBeneficialOwnerIndicator = nomineeBeneficialOwnerIndicator;
+	public IssuerMeeting setNomineeBeneficialOwnerIndicator(YesNoIndicator nomineeBeneficialOwnerIndicator) {
+		this.nomineeBeneficialOwnerIndicator = Objects.requireNonNull(nomineeBeneficialOwnerIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getProxyVotingIndicator() {
 		return proxyVotingIndicator;
 	}
 
-	public void setProxyVotingIndicator(YesNoIndicator proxyVotingIndicator) {
-		this.proxyVotingIndicator = proxyVotingIndicator;
+	public IssuerMeeting setProxyVotingIndicator(YesNoIndicator proxyVotingIndicator) {
+		this.proxyVotingIndicator = Objects.requireNonNull(proxyVotingIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getProxyBeneficialOwnerIndicator() {
 		return proxyBeneficialOwnerIndicator;
 	}
 
-	public void setProxyBeneficialOwnerIndicator(YesNoIndicator proxyBeneficialOwnerIndicator) {
-		this.proxyBeneficialOwnerIndicator = proxyBeneficialOwnerIndicator;
+	public IssuerMeeting setProxyBeneficialOwnerIndicator(YesNoIndicator proxyBeneficialOwnerIndicator) {
+		this.proxyBeneficialOwnerIndicator = Objects.requireNonNull(proxyBeneficialOwnerIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getProxyPowerOfAttorneyIndicator() {
 		return proxyPowerOfAttorneyIndicator;
 	}
 
-	public void setProxyPowerOfAttorneyIndicator(YesNoIndicator proxyPowerOfAttorneyIndicator) {
-		this.proxyPowerOfAttorneyIndicator = proxyPowerOfAttorneyIndicator;
+	public IssuerMeeting setProxyPowerOfAttorneyIndicator(YesNoIndicator proxyPowerOfAttorneyIndicator) {
+		this.proxyPowerOfAttorneyIndicator = Objects.requireNonNull(proxyPowerOfAttorneyIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getValidCreditorIndicator() {
 		return validCreditorIndicator;
 	}
 
-	public void setValidCreditorIndicator(YesNoIndicator validCreditorIndicator) {
-		this.validCreditorIndicator = validCreditorIndicator;
+	public IssuerMeeting setValidCreditorIndicator(YesNoIndicator validCreditorIndicator) {
+		this.validCreditorIndicator = Objects.requireNonNull(validCreditorIndicator);
+		return this;
 	}
 
 	public CurrencyAndAmount getCapitalStock() {
 		return capitalStock;
 	}
 
-	public void setCapitalStock(CurrencyAndAmount capitalStock) {
-		this.capitalStock = capitalStock;
+	public IssuerMeeting setCapitalStock(CurrencyAndAmount capitalStock) {
+		this.capitalStock = Objects.requireNonNull(capitalStock);
+		return this;
 	}
 }

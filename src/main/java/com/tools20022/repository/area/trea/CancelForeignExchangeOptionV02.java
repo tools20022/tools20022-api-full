@@ -29,6 +29,8 @@ import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -44,21 +46,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
- * TreasuryArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ForexNotificationsISOArchive
- * ForexNotificationsISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CclFXOptnV02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -77,6 +64,21 @@ import javax.xml.bind.annotation.*;
  * CancelForeignExchangeOptionV02.mmOption}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ForexNotificationsISOArchive
+ * ForexNotificationsISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CclFXOptnV02"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
+ * TreasuryArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code trea.011.001.02}</li>
@@ -92,16 +94,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CancelForeignExchangeOptionV02", propOrder = {"tradeInformation", "tradingSideIdentification", "counterpartySideIdentification", "option"})
 public class CancelForeignExchangeOptionV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradInf", required = true)
 	protected TradeAgreement2 tradeInformation;
 	/**
-	 * Provides reference and date of the foreign exchange option trade which is
-	 * cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,11 +144,11 @@ public class CancelForeignExchangeOptionV02 {
 			}
 		}
 	};
+	@XmlElement(name = "TradgSdId")
 	protected TradePartyIdentification4 tradingSideIdentification;
 	/**
-	 * Specifies the trading side of the currency option trade which is
-	 * cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,11 +190,11 @@ public class CancelForeignExchangeOptionV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CtrPtySdId")
 	protected TradePartyIdentification4 counterpartySideIdentification;
 	/**
-	 * Specifies the counterparty of the currency option trade which is
-	 * cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,11 +236,11 @@ public class CancelForeignExchangeOptionV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Optn")
 	protected Option3 option;
 	/**
-	 * Specifies the parameters of the currency option which is bought by the
-	 * trading side.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -311,43 +313,43 @@ public class CancelForeignExchangeOptionV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradInf", required = true)
 	public TradeAgreement2 getTradeInformation() {
 		return tradeInformation;
 	}
 
-	public void setTradeInformation(TradeAgreement2 tradeInformation) {
-		this.tradeInformation = tradeInformation;
+	public CancelForeignExchangeOptionV02 setTradeInformation(TradeAgreement2 tradeInformation) {
+		this.tradeInformation = Objects.requireNonNull(tradeInformation);
+		return this;
 	}
 
-	@XmlElement(name = "TradgSdId")
-	public TradePartyIdentification4 getTradingSideIdentification() {
-		return tradingSideIdentification;
+	public Optional<TradePartyIdentification4> getTradingSideIdentification() {
+		return tradingSideIdentification == null ? Optional.empty() : Optional.of(tradingSideIdentification);
 	}
 
-	public void setTradingSideIdentification(TradePartyIdentification4 tradingSideIdentification) {
+	public CancelForeignExchangeOptionV02 setTradingSideIdentification(TradePartyIdentification4 tradingSideIdentification) {
 		this.tradingSideIdentification = tradingSideIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CtrPtySdId")
-	public TradePartyIdentification4 getCounterpartySideIdentification() {
-		return counterpartySideIdentification;
+	public Optional<TradePartyIdentification4> getCounterpartySideIdentification() {
+		return counterpartySideIdentification == null ? Optional.empty() : Optional.of(counterpartySideIdentification);
 	}
 
-	public void setCounterpartySideIdentification(TradePartyIdentification4 counterpartySideIdentification) {
+	public CancelForeignExchangeOptionV02 setCounterpartySideIdentification(TradePartyIdentification4 counterpartySideIdentification) {
 		this.counterpartySideIdentification = counterpartySideIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Optn")
-	public Option3 getOption() {
-		return option;
+	public Optional<Option3> getOption() {
+		return option == null ? Optional.empty() : Optional.of(option);
 	}
 
-	public void setOption(Option3 option) {
+	public CancelForeignExchangeOptionV02 setOption(Option3 option) {
 		this.option = option;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:trea.011.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:trea.011.001.02")
 	static public class Document {
 		@XmlElement(name = "CclFXOptnV02", required = true)
 		public CancelForeignExchangeOptionV02 messageBody;

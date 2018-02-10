@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.SecuritiesQuantityTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * TSE/JASDEC codes for planned, maximum and minimum of shares to be purchased.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesQuantityTypeCode#mmNo
- * SecuritiesQuantityTypeCode.mmNo}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesQuantityTypeCode#No
+ * SecuritiesQuantityTypeCode.No}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesQuantityTypeCode#mmYes
- * SecuritiesQuantityTypeCode.mmYes}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesQuantityTypeCode#Yes
+ * SecuritiesQuantityTypeCode.Yes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesQuantityTypeCode#mmUnknown
- * SecuritiesQuantityTypeCode.mmUnknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesQuantityTypeCode#Unknown
+ * SecuritiesQuantityTypeCode.Unknown}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class SecuritiesQuantityTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SecuritiesQuantityTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,12 +98,12 @@ public class SecuritiesQuantityTypeCode {
 	 * definition} = "No Maximum / Minimum number provided."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNo = new MMCode() {
+	public static final SecuritiesQuantityTypeCode No = new SecuritiesQuantityTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "No";
 			definition = "No Maximum / Minimum number provided.";
-			owner_lazy = () -> SecuritiesQuantityTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesQuantityTypeCode.mmObject();
 			codeName = "SQNO";
 		}
 	};
@@ -122,12 +128,12 @@ public class SecuritiesQuantityTypeCode {
 	 * definition} = "Maximum / Minimum number provided."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmYes = new MMCode() {
+	public static final SecuritiesQuantityTypeCode Yes = new SecuritiesQuantityTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yes";
 			definition = "Maximum / Minimum number provided.";
-			owner_lazy = () -> SecuritiesQuantityTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesQuantityTypeCode.mmObject();
 			codeName = "SQYS";
 		}
 	};
@@ -152,27 +158,59 @@ public class SecuritiesQuantityTypeCode {
 	 * definition} = "Maximum / Minimum number is unknown or not decided."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknown = new MMCode() {
+	public static final SecuritiesQuantityTypeCode Unknown = new SecuritiesQuantityTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			definition = "Maximum / Minimum number is unknown or not decided.";
-			owner_lazy = () -> SecuritiesQuantityTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesQuantityTypeCode.mmObject();
 			codeName = "UKWN";
 		}
 	};
+	final static private LinkedHashMap<String, SecuritiesQuantityTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SecuritiesQuantityTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesQuantityTypeCode";
 				definition = "TSE/JASDEC codes for planned, maximum and minimum of shares to be purchased.";
-				code_lazy = () -> Arrays.asList(SecuritiesQuantityTypeCode.mmNo, SecuritiesQuantityTypeCode.mmYes, SecuritiesQuantityTypeCode.mmUnknown);
 				derivation_lazy = () -> Arrays.asList(SecuritiesQuantity1Code.mmObject(), SecuritiesQuantity2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesQuantityTypeCode.No, com.tools20022.repository.codeset.SecuritiesQuantityTypeCode.Yes,
+						com.tools20022.repository.codeset.SecuritiesQuantityTypeCode.Unknown);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(No.getCodeName().get(), No);
+		codesByName.put(Yes.getCodeName().get(), Yes);
+		codesByName.put(Unknown.getCodeName().get(), Unknown);
+	}
+
+	public static SecuritiesQuantityTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SecuritiesQuantityTypeCode[] values() {
+		SecuritiesQuantityTypeCode[] values = new SecuritiesQuantityTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SecuritiesQuantityTypeCode> {
+		@Override
+		public SecuritiesQuantityTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SecuritiesQuantityTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

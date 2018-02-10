@@ -30,9 +30,8 @@ import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022Varia
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion;
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -62,28 +61,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestversionsubsetvariant
- * SecuritiesSettlementLatestversionsubsetvariant}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOLatestversion
- * SettlementAndReconciliationISO15022VariantsISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants
- * SettlementandReconciliationMaintenance20162017ISO15022Variants}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion
- * SettlementAndReconciliationISO15022VariantsISOPreviousversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SctiesTxStsQry"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -102,6 +79,28 @@ import javax.xml.bind.annotation.*;
  * SecuritiesTransactionStatusQuery002V04.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOLatestversion
+ * SettlementAndReconciliationISO15022VariantsISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants
+ * SettlementandReconciliationMaintenance20162017ISO15022Variants}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion
+ * SettlementAndReconciliationISO15022VariantsISOPreviousversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SctiesTxStsQry"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestversionsubsetvariant
+ * SecuritiesSettlementLatestversionsubsetvariant}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.021.002.04}</li>
@@ -117,15 +116,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesTransactionStatusQuery002V04", propOrder = {"statusAdviceRequested", "accountOwner", "safekeepingAccount", "supplementaryData"})
 public class SecuritiesTransactionStatusQuery002V04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StsAdvcReqd", required = true)
 	protected DocumentNumber15 statusAdviceRequested;
 	/**
-	 * Description of the status advise requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,10 +165,11 @@ public class SecuritiesTransactionStatusQuery002V04 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification109 accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,10 +209,11 @@ public class SecuritiesTransactionStatusQuery002V04 {
 			}
 		}
 	};
+	@XmlElement(name = "SfkpgAcct", required = true)
 	protected SecuritiesAccount27 safekeepingAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,11 +253,11 @@ public class SecuritiesTransactionStatusQuery002V04 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -329,43 +331,43 @@ public class SecuritiesTransactionStatusQuery002V04 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StsAdvcReqd", required = true)
 	public DocumentNumber15 getStatusAdviceRequested() {
 		return statusAdviceRequested;
 	}
 
-	public void setStatusAdviceRequested(DocumentNumber15 statusAdviceRequested) {
-		this.statusAdviceRequested = statusAdviceRequested;
+	public SecuritiesTransactionStatusQuery002V04 setStatusAdviceRequested(DocumentNumber15 statusAdviceRequested) {
+		this.statusAdviceRequested = Objects.requireNonNull(statusAdviceRequested);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification109 getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification109> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification109 accountOwner) {
+	public SecuritiesTransactionStatusQuery002V04 setAccountOwner(PartyIdentification109 accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount27 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
 
-	public void setSafekeepingAccount(SecuritiesAccount27 safekeepingAccount) {
-		this.safekeepingAccount = safekeepingAccount;
+	public SecuritiesTransactionStatusQuery002V04 setSafekeepingAccount(SecuritiesAccount27 safekeepingAccount) {
+		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecuritiesTransactionStatusQuery002V04 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.021.04.04")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.021.002.04")
 	static public class Document {
 		@XmlElement(name = "SctiesTxStsQry", required = true)
 		public SecuritiesTransactionStatusQuery002V04 messageBody;

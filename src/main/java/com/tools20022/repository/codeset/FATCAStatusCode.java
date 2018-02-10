@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.FATCAStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the Foreign Account Tax Compliance Act (FATCA) status.
@@ -31,28 +36,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#mmFATCA101
- * FATCAStatusCode.mmFATCA101}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#mmFATCA102
- * FATCAStatusCode.mmFATCA102}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#mmFATCA103
- * FATCAStatusCode.mmFATCA103}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#mmFATCA104
- * FATCAStatusCode.mmFATCA104}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#mmFATCA105
- * FATCAStatusCode.mmFATCA105}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#mmFATCA201
- * FATCAStatusCode.mmFATCA201}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#mmFATCA202
- * FATCAStatusCode.mmFATCA202}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#mmFATCA203
- * FATCAStatusCode.mmFATCA203}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#mmFATCA204
- * FATCAStatusCode.mmFATCA204}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#mmFATCA205
- * FATCAStatusCode.mmFATCA205}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#mmFATCA206
- * FATCAStatusCode.mmFATCA206}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#FATCA101
+ * FATCAStatusCode.FATCA101}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#FATCA102
+ * FATCAStatusCode.FATCA102}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#FATCA103
+ * FATCAStatusCode.FATCA103}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#FATCA104
+ * FATCAStatusCode.FATCA104}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#FATCA105
+ * FATCAStatusCode.FATCA105}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#FATCA201
+ * FATCAStatusCode.FATCA201}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#FATCA202
+ * FATCAStatusCode.FATCA202}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#FATCA203
+ * FATCAStatusCode.FATCA203}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#FATCA204
+ * FATCAStatusCode.FATCA204}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#FATCA205
+ * FATCAStatusCode.FATCA205}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FATCAStatusCode#FATCA206
+ * FATCAStatusCode.FATCA206}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -65,8 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the Foreign Account Tax Compliance Act (FATCA) status."</li>
  * </ul>
  */
-public class FATCAStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FATCAStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -105,12 +111,12 @@ public class FATCAStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFATCA101 = new MMCode() {
+	public static final FATCAStatusCode FATCA101 = new FATCAStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA101";
 			definition = "Account holder type is an owner-documented financial institution with specified US owner(s).";
-			owner_lazy = () -> FATCAStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCAStatusCode.mmObject();
 			codeName = "F101";
 		}
 	};
@@ -138,12 +144,12 @@ public class FATCAStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFATCA102 = new MMCode() {
+	public static final FATCAStatusCode FATCA102 = new FATCAStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA102";
 			definition = "Account holder type is a passive non-financial entity with substantial US owner(s).";
-			owner_lazy = () -> FATCAStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCAStatusCode.mmObject();
 			codeName = "F102";
 		}
 	};
@@ -169,12 +175,12 @@ public class FATCAStatusCode {
 	 * "Account holder type is a non-participating financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFATCA103 = new MMCode() {
+	public static final FATCAStatusCode FATCA103 = new FATCAStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA103";
 			definition = "Account holder type is a non-participating financial institution.";
-			owner_lazy = () -> FATCAStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCAStatusCode.mmObject();
 			codeName = "F103";
 		}
 	};
@@ -199,12 +205,12 @@ public class FATCAStatusCode {
 	 * definition} = "Account holder type is a specified US person."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFATCA104 = new MMCode() {
+	public static final FATCAStatusCode FATCA104 = new FATCAStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA104";
 			definition = "Account holder type is a specified US person.";
-			owner_lazy = () -> FATCAStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCAStatusCode.mmObject();
 			codeName = "F104";
 		}
 	};
@@ -232,12 +238,12 @@ public class FATCAStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFATCA105 = new MMCode() {
+	public static final FATCAStatusCode FATCA105 = new FATCAStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA105";
 			definition = "Account holder type is a direct reporting non-financial foreign entity (NFFE).";
-			owner_lazy = () -> FATCAStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCAStatusCode.mmObject();
 			codeName = "F105";
 		}
 	};
@@ -265,12 +271,12 @@ public class FATCAStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFATCA201 = new MMCode() {
+	public static final FATCAStatusCode FATCA201 = new FATCAStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA201";
 			definition = "Account pool reporting type is a recalcitrant account holder with US indicia.";
-			owner_lazy = () -> FATCAStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCAStatusCode.mmObject();
 			codeName = "F201";
 		}
 	};
@@ -298,12 +304,12 @@ public class FATCAStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFATCA202 = new MMCode() {
+	public static final FATCAStatusCode FATCA202 = new FATCAStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA202";
 			definition = "Account pool reporting type is a recalcitrant account holder without US indicia.";
-			owner_lazy = () -> FATCAStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCAStatusCode.mmObject();
 			codeName = "F202";
 		}
 	};
@@ -328,12 +334,12 @@ public class FATCAStatusCode {
 	 * definition} = "Account pool reporting type is a dormant account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFATCA203 = new MMCode() {
+	public static final FATCAStatusCode FATCA203 = new FATCAStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA203";
 			definition = "Account pool reporting type is a dormant account.";
-			owner_lazy = () -> FATCAStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCAStatusCode.mmObject();
 			codeName = "F203";
 		}
 	};
@@ -361,12 +367,12 @@ public class FATCAStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFATCA204 = new MMCode() {
+	public static final FATCAStatusCode FATCA204 = new FATCAStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA204";
 			definition = "Account pool reporting type is a non-participating foreign financial institution.";
-			owner_lazy = () -> FATCAStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCAStatusCode.mmObject();
 			codeName = "F204";
 		}
 	};
@@ -394,12 +400,12 @@ public class FATCAStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFATCA205 = new MMCode() {
+	public static final FATCAStatusCode FATCA205 = new FATCAStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA205";
 			definition = "Account pool reporting type is a recalcitrant account holder that is a US person.";
-			owner_lazy = () -> FATCAStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCAStatusCode.mmObject();
 			codeName = "F205";
 		}
 	};
@@ -427,28 +433,69 @@ public class FATCAStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFATCA206 = new MMCode() {
+	public static final FATCAStatusCode FATCA206 = new FATCAStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCA206";
 			definition = "Account pool reporting type is recalcitrant account holder that is a passive non-financial foreign entity (NFFE).";
-			owner_lazy = () -> FATCAStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCAStatusCode.mmObject();
 			codeName = "F206";
 		}
 	};
+	final static private LinkedHashMap<String, FATCAStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FATCAStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FATCAStatusCode";
 				definition = "Specifies the Foreign Account Tax Compliance Act (FATCA) status.";
-				code_lazy = () -> Arrays.asList(FATCAStatusCode.mmFATCA101, FATCAStatusCode.mmFATCA102, FATCAStatusCode.mmFATCA103, FATCAStatusCode.mmFATCA104, FATCAStatusCode.mmFATCA105, FATCAStatusCode.mmFATCA201,
-						FATCAStatusCode.mmFATCA202, FATCAStatusCode.mmFATCA203, FATCAStatusCode.mmFATCA204, FATCAStatusCode.mmFATCA205, FATCAStatusCode.mmFATCA206);
 				derivation_lazy = () -> Arrays.asList(FATCAStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FATCAStatusCode.FATCA101, com.tools20022.repository.codeset.FATCAStatusCode.FATCA102, com.tools20022.repository.codeset.FATCAStatusCode.FATCA103,
+						com.tools20022.repository.codeset.FATCAStatusCode.FATCA104, com.tools20022.repository.codeset.FATCAStatusCode.FATCA105, com.tools20022.repository.codeset.FATCAStatusCode.FATCA201,
+						com.tools20022.repository.codeset.FATCAStatusCode.FATCA202, com.tools20022.repository.codeset.FATCAStatusCode.FATCA203, com.tools20022.repository.codeset.FATCAStatusCode.FATCA204,
+						com.tools20022.repository.codeset.FATCAStatusCode.FATCA205, com.tools20022.repository.codeset.FATCAStatusCode.FATCA206);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(FATCA101.getCodeName().get(), FATCA101);
+		codesByName.put(FATCA102.getCodeName().get(), FATCA102);
+		codesByName.put(FATCA103.getCodeName().get(), FATCA103);
+		codesByName.put(FATCA104.getCodeName().get(), FATCA104);
+		codesByName.put(FATCA105.getCodeName().get(), FATCA105);
+		codesByName.put(FATCA201.getCodeName().get(), FATCA201);
+		codesByName.put(FATCA202.getCodeName().get(), FATCA202);
+		codesByName.put(FATCA203.getCodeName().get(), FATCA203);
+		codesByName.put(FATCA204.getCodeName().get(), FATCA204);
+		codesByName.put(FATCA205.getCodeName().get(), FATCA205);
+		codesByName.put(FATCA206.getCodeName().get(), FATCA206);
+	}
+
+	public static FATCAStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FATCAStatusCode[] values() {
+		FATCAStatusCode[] values = new FATCAStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FATCAStatusCode> {
+		@Override
+		public FATCAStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FATCAStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

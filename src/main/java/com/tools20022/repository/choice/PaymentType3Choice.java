@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentType3Choice", propOrder = {"code", "proprietary"})
 public class PaymentType3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected PaymentType3Code code;
 	/**
-	 * Type, or nature, of the payment, such as express payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,7 +127,7 @@ public class PaymentType3Choice {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmType;
-			componentContext_lazy = () -> PaymentType3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentType3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,10 +139,11 @@ public class PaymentType3Choice {
 			simpleType_lazy = () -> PaymentType3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected Max4AlphaNumericText proprietary;
 	/**
-	 * Payment type that is not included in a predefined list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -182,7 +185,7 @@ public class PaymentType3Choice {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmType;
-			componentContext_lazy = () -> PaymentType3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentType3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,9 +201,9 @@ public class PaymentType3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentType3Choice.mmCode, PaymentType3Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentType3Choice.mmCode, com.tools20022.repository.choice.PaymentType3Choice.mmProprietary);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentType3Choice";
 				definition = "Choice between a payment type from a predefined list and a proprietary payment type.";
@@ -210,21 +213,21 @@ public class PaymentType3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public PaymentType3Code getCode() {
 		return code;
 	}
 
-	public void setCode(PaymentType3Code code) {
-		this.code = code;
+	public PaymentType3Choice setCode(PaymentType3Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public Max4AlphaNumericText getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(Max4AlphaNumericText proprietary) {
-		this.proprietary = proprietary;
+	public PaymentType3Choice setProprietary(Max4AlphaNumericText proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

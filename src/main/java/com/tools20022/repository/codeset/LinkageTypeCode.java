@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.LinkageTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of linkage requested.
@@ -31,12 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.LinkageTypeCode#mmLink
- * LinkageTypeCode.mmLink}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LinkageTypeCode#mmUnlink
- * LinkageTypeCode.mmUnlink}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LinkageTypeCode#mmSoft
- * LinkageTypeCode.mmSoft}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LinkageTypeCode#Link
+ * LinkageTypeCode.Link}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LinkageTypeCode#Unlink
+ * LinkageTypeCode.Unlink}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LinkageTypeCode#Soft
+ * LinkageTypeCode.Soft}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of linkage requested."</li>
  * </ul>
  */
-public class LinkageTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class LinkageTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,12 +97,12 @@ public class LinkageTypeCode {
 	 * definition} = "Request is to link the referenced transactions."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLink = new MMCode() {
+	public static final LinkageTypeCode Link = new LinkageTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Link";
 			definition = "Request is to link the referenced transactions.";
-			owner_lazy = () -> LinkageTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LinkageTypeCode.mmObject();
 			codeName = "LINK";
 		}
 	};
@@ -121,12 +127,12 @@ public class LinkageTypeCode {
 	 * definition} = "Request is to unlink the referenced transactions."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnlink = new MMCode() {
+	public static final LinkageTypeCode Unlink = new LinkageTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unlink";
 			definition = "Request is to unlink the referenced transactions.";
-			owner_lazy = () -> LinkageTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LinkageTypeCode.mmObject();
 			codeName = "UNLK";
 		}
 	};
@@ -151,28 +157,59 @@ public class LinkageTypeCode {
 	 * definition} = "Request is to soft link the referenced transactions."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSoft = new MMCode() {
+	public static final LinkageTypeCode Soft = new LinkageTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Soft";
 			definition = "Request is to soft link the referenced transactions.";
-			owner_lazy = () -> LinkageTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LinkageTypeCode.mmObject();
 			codeName = "SOFT";
 		}
 	};
+	final static private LinkedHashMap<String, LinkageTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected LinkageTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("LINK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LinkageTypeCode";
 				definition = "Type of linkage requested.";
-				code_lazy = () -> Arrays.asList(LinkageTypeCode.mmLink, LinkageTypeCode.mmUnlink, LinkageTypeCode.mmSoft);
 				derivation_lazy = () -> Arrays.asList(LinkageType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LinkageTypeCode.Link, com.tools20022.repository.codeset.LinkageTypeCode.Unlink, com.tools20022.repository.codeset.LinkageTypeCode.Soft);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Link.getCodeName().get(), Link);
+		codesByName.put(Unlink.getCodeName().get(), Unlink);
+		codesByName.put(Soft.getCodeName().get(), Soft);
+	}
+
+	public static LinkageTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static LinkageTypeCode[] values() {
+		LinkageTypeCode[] values = new LinkageTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, LinkageTypeCode> {
+		@Override
+		public LinkageTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(LinkageTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

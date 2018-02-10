@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +73,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies generic information about an investigation report."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReportHeader", propOrder = {"identification", "from", "to", "creationDateTime"})
 public class ReportHeader {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Identification of the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +120,7 @@ public class ReportHeader {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportHeader.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportHeader.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,10 +131,11 @@ public class ReportHeader {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Fr", required = true)
 	protected AnyBICIdentifier from;
 	/**
-	 * Party reporting the status of the case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +162,7 @@ public class ReportHeader {
 	 */
 	public static final MMMessageAttribute mmFrom = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportHeader.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportHeader.mmObject();
 			isDerived = false;
 			xmlTag = "Fr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,10 +173,11 @@ public class ReportHeader {
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "To", required = true)
 	protected AnyBICIdentifier to;
 	/**
-	 * Party to which the status of the case is reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,7 +204,7 @@ public class ReportHeader {
 	 */
 	public static final MMMessageAttribute mmTo = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportHeader.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportHeader.mmObject();
 			isDerived = false;
 			xmlTag = "To";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,10 +215,11 @@ public class ReportHeader {
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm", required = true)
 	protected ISODateTime creationDateTime;
 	/**
-	 * Creation date and time of the report generation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -240,7 +245,7 @@ public class ReportHeader {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportHeader.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportHeader.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -255,9 +260,10 @@ public class ReportHeader {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReportHeader.mmIdentification, ReportHeader.mmFrom, ReportHeader.mmTo, ReportHeader.mmCreationDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportHeader.mmIdentification, com.tools20022.repository.msg.ReportHeader.mmFrom, com.tools20022.repository.msg.ReportHeader.mmTo,
+						com.tools20022.repository.msg.ReportHeader.mmCreationDateTime);
 				messageBuildingBlock_lazy = () -> Arrays.asList(NotificationOfCaseAssignment.mmHeader, CaseStatusReportRequest.mmRequestHeader, CaseStatusReport.mmHeader);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportHeader";
 				definition = "Specifies generic information about an investigation report.";
@@ -266,39 +272,39 @@ public class ReportHeader {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public ReportHeader setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Fr", required = true)
 	public AnyBICIdentifier getFrom() {
 		return from;
 	}
 
-	public void setFrom(AnyBICIdentifier from) {
-		this.from = from;
+	public ReportHeader setFrom(AnyBICIdentifier from) {
+		this.from = Objects.requireNonNull(from);
+		return this;
 	}
 
-	@XmlElement(name = "To", required = true)
 	public AnyBICIdentifier getTo() {
 		return to;
 	}
 
-	public void setTo(AnyBICIdentifier to) {
-		this.to = to;
+	public ReportHeader setTo(AnyBICIdentifier to) {
+		this.to = Objects.requireNonNull(to);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
-		this.creationDateTime = creationDateTime;
+	public ReportHeader setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = Objects.requireNonNull(creationDateTime);
+		return this;
 	}
 }

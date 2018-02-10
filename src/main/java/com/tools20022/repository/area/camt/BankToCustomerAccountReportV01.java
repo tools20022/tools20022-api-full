@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.AccountReport9;
 import com.tools20022.repository.msg.GroupHeader23;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -54,20 +56,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementArchive
- * CashManagementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "BkToCstmrAcctRptV01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -80,6 +68,20 @@ import javax.xml.bind.annotation.*;
  * BankToCustomerAccountReportV01.mmReport}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "BkToCstmrAcctRptV01"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementArchive
+ * CashManagementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.052.001.01}</li>
@@ -103,15 +105,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BankToCustomerAccountReportV01", propOrder = {"groupHeader", "report"})
 public class BankToCustomerAccountReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader23 groupHeader;
 	/**
-	 * Common information for the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,10 +153,11 @@ public class BankToCustomerAccountReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "Rpt", required = true)
 	protected List<AccountReport9> report;
 	/**
-	 * Reports on a cash account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,25 +226,25 @@ public class BankToCustomerAccountReportV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader23 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader23 groupHeader) {
-		this.groupHeader = groupHeader;
+	public BankToCustomerAccountReportV01 setGroupHeader(GroupHeader23 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "Rpt", required = true)
 	public List<AccountReport9> getReport() {
-		return report;
+		return report == null ? report = new ArrayList<>() : report;
 	}
 
-	public void setReport(List<AccountReport9> report) {
-		this.report = report;
+	public BankToCustomerAccountReportV01 setReport(List<AccountReport9> report) {
+		this.report = Objects.requireNonNull(report);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.052.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.052.001.01")
 	static public class Document {
 		@XmlElement(name = "BkToCstmrAcctRptV01", required = true)
 		public BankToCustomerAccountReportV01 messageBody;

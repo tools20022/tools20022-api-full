@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode;
+import com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for a conditionally accepted status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode
- * ConditionallyAcceptedStatusReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code#mmAwaitingDocuments
- * ConditionallyAcceptedStatusReason2Code.mmAwaitingDocuments}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code#AwaitingDocuments
+ * ConditionallyAcceptedStatusReason2Code.AwaitingDocuments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code#mmAwaitingRedemptionMoney
- * ConditionallyAcceptedStatusReason2Code.mmAwaitingRedemptionMoney}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code#AwaitingRedemptionMoney
+ * ConditionallyAcceptedStatusReason2Code.AwaitingRedemptionMoney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code#mmAwaitingSubscriptionMoney
- * ConditionallyAcceptedStatusReason2Code.mmAwaitingSubscriptionMoney}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code#AwaitingSubscriptionMoney
+ * ConditionallyAcceptedStatusReason2Code.AwaitingSubscriptionMoney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code#mmPossibleDuplicate
- * ConditionallyAcceptedStatusReason2Code.mmPossibleDuplicate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code#PossibleDuplicate
+ * ConditionallyAcceptedStatusReason2Code.PossibleDuplicate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code#mmTradingLimitExceeded
- * ConditionallyAcceptedStatusReason2Code.mmTradingLimitExceeded}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code#TradingLimitExceeded
+ * ConditionallyAcceptedStatusReason2Code.TradingLimitExceeded}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode
+ * ConditionallyAcceptedStatusReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason for a conditionally accepted status."</li>
  * </ul>
  */
-public class ConditionallyAcceptedStatusReason2Code extends ConditionallyAcceptedStatusReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ConditionallyAcceptedStatusReason2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class ConditionallyAcceptedStatusReason2Code extends ConditionallyAccepte
 	 * name} = "AwaitingDocuments"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingDocuments = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason2Code AwaitingDocuments = new ConditionallyAcceptedStatusReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingDocuments";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.AwaitingDocuments.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class ConditionallyAcceptedStatusReason2Code extends ConditionallyAccepte
 	 * name} = "AwaitingRedemptionMoney"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingRedemptionMoney = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason2Code AwaitingRedemptionMoney = new ConditionallyAcceptedStatusReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingRedemptionMoney";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.AwaitingRedemptionMoney.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class ConditionallyAcceptedStatusReason2Code extends ConditionallyAccepte
 	 * name} = "AwaitingSubscriptionMoney"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingSubscriptionMoney = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason2Code AwaitingSubscriptionMoney = new ConditionallyAcceptedStatusReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSubscriptionMoney";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.AwaitingSubscriptionMoney.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +169,12 @@ public class ConditionallyAcceptedStatusReason2Code extends ConditionallyAccepte
 	 * name} = "PossibleDuplicate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPossibleDuplicate = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason2Code PossibleDuplicate = new ConditionallyAcceptedStatusReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PossibleDuplicate";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.PossibleDuplicate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,27 +193,62 @@ public class ConditionallyAcceptedStatusReason2Code extends ConditionallyAccepte
 	 * name} = "TradingLimitExceeded"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradingLimitExceeded = new MMCode() {
+	public static final ConditionallyAcceptedStatusReason2Code TradingLimitExceeded = new ConditionallyAcceptedStatusReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingLimitExceeded";
-			owner_lazy = () -> ConditionallyAcceptedStatusReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code.mmObject();
+			codeName = ConditionallyAcceptedStatusReasonCode.TradingLimitExceeded.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ConditionallyAcceptedStatusReason2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ConditionallyAcceptedStatusReason2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DOCC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConditionallyAcceptedStatusReason2Code";
 				definition = "Specifies the reason for a conditionally accepted status.";
-				code_lazy = () -> Arrays.asList(ConditionallyAcceptedStatusReason2Code.mmAwaitingDocuments, ConditionallyAcceptedStatusReason2Code.mmAwaitingRedemptionMoney,
-						ConditionallyAcceptedStatusReason2Code.mmAwaitingSubscriptionMoney, ConditionallyAcceptedStatusReason2Code.mmPossibleDuplicate, ConditionallyAcceptedStatusReason2Code.mmTradingLimitExceeded);
 				trace_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code.AwaitingDocuments, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code.AwaitingRedemptionMoney,
+						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code.AwaitingSubscriptionMoney, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code.PossibleDuplicate,
+						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code.TradingLimitExceeded);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AwaitingDocuments.getCodeName().get(), AwaitingDocuments);
+		codesByName.put(AwaitingRedemptionMoney.getCodeName().get(), AwaitingRedemptionMoney);
+		codesByName.put(AwaitingSubscriptionMoney.getCodeName().get(), AwaitingSubscriptionMoney);
+		codesByName.put(PossibleDuplicate.getCodeName().get(), PossibleDuplicate);
+		codesByName.put(TradingLimitExceeded.getCodeName().get(), TradingLimitExceeded);
+	}
+
+	public static ConditionallyAcceptedStatusReason2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ConditionallyAcceptedStatusReason2Code[] values() {
+		ConditionallyAcceptedStatusReason2Code[] values = new ConditionallyAcceptedStatusReason2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ConditionallyAcceptedStatusReason2Code> {
+		@Override
+		public ConditionallyAcceptedStatusReason2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ConditionallyAcceptedStatusReason2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

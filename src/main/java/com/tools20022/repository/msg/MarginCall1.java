@@ -36,6 +36,7 @@ import com.tools20022.repository.entity.VariationMarginTerm;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -107,8 +108,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -119,17 +120,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of the margin call request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MarginCall1", propOrder = {"exposedAmountPartyA", "exposedAmountPartyB", "exposureConvention", "independentAmountPartyA", "independentAmountPartyB", "marginTerms", "collateralBalance"})
 public class MarginCall1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "XpsdAmtPtyA")
 	protected ActiveCurrencyAndAmount exposedAmountPartyA;
 	/**
-	 * Sum of the exposures of all transactions which are in the favour of party
-	 * A. That is, all transactions which would have an amount payable by party
-	 * B to party A if they were being terminated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +164,7 @@ public class MarginCall1 {
 	public static final MMMessageAttribute mmExposedAmountPartyA = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalExposedAmount;
-			componentContext_lazy = () -> MarginCall1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall1.mmObject();
 			isDerived = false;
 			xmlTag = "XpsdAmtPtyA";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,12 +175,11 @@ public class MarginCall1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "XpsdAmtPtyB")
 	protected ActiveCurrencyAndAmount exposedAmountPartyB;
 	/**
-	 * Sum of the exposures of all transactions which are in the favour of party
-	 * B. That is, all transactions which would have an amount payable by party
-	 * A to party B if they were being terminated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,7 +214,7 @@ public class MarginCall1 {
 	public static final MMMessageAttribute mmExposedAmountPartyB = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalExposedAmount;
-			componentContext_lazy = () -> MarginCall1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall1.mmObject();
 			isDerived = false;
 			xmlTag = "XpsdAmtPtyB";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,15 +225,11 @@ public class MarginCall1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "XpsrCnvntn")
 	protected ExposureConventionType1Code exposureConvention;
 	/**
-	 * Determines how the variation margin requirement is to be calculated:<br>
-	 * - either Net, in which the exposure of all transactions in favour of
-	 * party A and the the exposure of all transactions in favour of party B
-	 * will be netted together or<br>
-	 * - gross in which two separate variation margin requirements will be
-	 * determined.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -269,7 +264,7 @@ public class MarginCall1 {
 	public static final MMMessageAttribute mmExposureConvention = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CollateralAgreement.mmMarginConvention;
-			componentContext_lazy = () -> MarginCall1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall1.mmObject();
 			isDerived = false;
 			xmlTag = "XpsrCnvntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,11 +275,11 @@ public class MarginCall1 {
 			simpleType_lazy = () -> ExposureConventionType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "IndpdntAmtPtyA")
 	protected AggregatedIndependentAmount1 independentAmountPartyA;
 	/**
-	 * Amount applied as an add-on to the exposure (to party A) usually intended
-	 * to cover a possible increase in exposure before the next valuation date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -318,7 +313,7 @@ public class MarginCall1 {
 	public static final MMMessageAssociationEnd mmIndependentAmountPartyA = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmCurrentIndependentAmount;
-			componentContext_lazy = () -> MarginCall1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall1.mmObject();
 			isDerived = false;
 			xmlTag = "IndpdntAmtPtyA";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -330,12 +325,11 @@ public class MarginCall1 {
 			type_lazy = () -> com.tools20022.repository.msg.AggregatedIndependentAmount1.mmObject();
 		}
 	};
+	@XmlElement(name = "IndpdntAmtPtyB")
 	protected AggregatedIndependentAmount1 independentAmountPartyB;
 	/**
-	 * An amount applied as an add-on to the exposure (to party B) usually
-	 * intended to cover a possible increase in exposure before the next
-	 * valuation date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -369,7 +363,7 @@ public class MarginCall1 {
 	public static final MMMessageAssociationEnd mmIndependentAmountPartyB = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmCurrentIndependentAmount;
-			componentContext_lazy = () -> MarginCall1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall1.mmObject();
 			isDerived = false;
 			xmlTag = "IndpdntAmtPtyB";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -381,12 +375,11 @@ public class MarginCall1 {
 			type_lazy = () -> com.tools20022.repository.msg.AggregatedIndependentAmount1.mmObject();
 		}
 	};
+	@XmlElement(name = "MrgnTerms")
 	protected MarginTerms1Choice marginTerms;
 	/**
-	 * Provides information like threshold amount, threshold type, minimum
-	 * transfer amount, rouding amount or rounding convention, that applies to
-	 * either the variation margin or the segregated independent amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -419,7 +412,7 @@ public class MarginCall1 {
 	public static final MMMessageAssociationEnd mmMarginTerms = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> VariationMarginTerm.mmObject();
-			componentContext_lazy = () -> MarginCall1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall1.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnTerms";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -431,12 +424,11 @@ public class MarginCall1 {
 			type_lazy = () -> MarginTerms1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CollBal")
 	protected CollateralBalance1Choice collateralBalance;
 	/**
-	 * Provides details about the collateral held, in transit or that still
-	 * needs to be agreed by both parties with a segregation between variation
-	 * margin and segregated independent amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -470,7 +462,7 @@ public class MarginCall1 {
 	public static final MMMessageAssociationEnd mmCollateralBalance = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalCollateralCurrentValue;
-			componentContext_lazy = () -> MarginCall1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall1.mmObject();
 			isDerived = false;
 			xmlTag = "CollBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -486,13 +478,14 @@ public class MarginCall1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MarginCall1.mmExposedAmountPartyA, MarginCall1.mmExposedAmountPartyB, MarginCall1.mmExposureConvention, MarginCall1.mmIndependentAmountPartyA, MarginCall1.mmIndependentAmountPartyB,
-						MarginCall1.mmMarginTerms, MarginCall1.mmCollateralBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginCall1.mmExposedAmountPartyA, com.tools20022.repository.msg.MarginCall1.mmExposedAmountPartyB,
+						com.tools20022.repository.msg.MarginCall1.mmExposureConvention, com.tools20022.repository.msg.MarginCall1.mmIndependentAmountPartyA, com.tools20022.repository.msg.MarginCall1.mmIndependentAmountPartyB,
+						com.tools20022.repository.msg.MarginCall1.mmMarginTerms, com.tools20022.repository.msg.MarginCall1.mmCollateralBalance);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MarginCallResponseV03.mmMarginDetailsDueToA, MarginCallResponseV03.mmMarginDetailsDueToB, MarginCallRequestV03.mmMarginDetailsDueToA,
 						MarginCallRequestV03.mmMarginDetailsDueToB, MarginCallRequestV04.mmMarginDetailsDueToA, MarginCallRequestV04.mmMarginDetailsDueToB, MarginCallResponseV04.mmMarginDetailsDueToA,
 						MarginCallResponseV04.mmMarginDetailsDueToB);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginCall1";
 				definition = "Details of the margin call request.";
@@ -501,66 +494,66 @@ public class MarginCall1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "XpsdAmtPtyA")
-	public ActiveCurrencyAndAmount getExposedAmountPartyA() {
-		return exposedAmountPartyA;
+	public Optional<ActiveCurrencyAndAmount> getExposedAmountPartyA() {
+		return exposedAmountPartyA == null ? Optional.empty() : Optional.of(exposedAmountPartyA);
 	}
 
-	public void setExposedAmountPartyA(ActiveCurrencyAndAmount exposedAmountPartyA) {
+	public MarginCall1 setExposedAmountPartyA(ActiveCurrencyAndAmount exposedAmountPartyA) {
 		this.exposedAmountPartyA = exposedAmountPartyA;
+		return this;
 	}
 
-	@XmlElement(name = "XpsdAmtPtyB")
-	public ActiveCurrencyAndAmount getExposedAmountPartyB() {
-		return exposedAmountPartyB;
+	public Optional<ActiveCurrencyAndAmount> getExposedAmountPartyB() {
+		return exposedAmountPartyB == null ? Optional.empty() : Optional.of(exposedAmountPartyB);
 	}
 
-	public void setExposedAmountPartyB(ActiveCurrencyAndAmount exposedAmountPartyB) {
+	public MarginCall1 setExposedAmountPartyB(ActiveCurrencyAndAmount exposedAmountPartyB) {
 		this.exposedAmountPartyB = exposedAmountPartyB;
+		return this;
 	}
 
-	@XmlElement(name = "XpsrCnvntn")
-	public ExposureConventionType1Code getExposureConvention() {
-		return exposureConvention;
+	public Optional<ExposureConventionType1Code> getExposureConvention() {
+		return exposureConvention == null ? Optional.empty() : Optional.of(exposureConvention);
 	}
 
-	public void setExposureConvention(ExposureConventionType1Code exposureConvention) {
+	public MarginCall1 setExposureConvention(ExposureConventionType1Code exposureConvention) {
 		this.exposureConvention = exposureConvention;
+		return this;
 	}
 
-	@XmlElement(name = "IndpdntAmtPtyA")
-	public AggregatedIndependentAmount1 getIndependentAmountPartyA() {
-		return independentAmountPartyA;
+	public Optional<AggregatedIndependentAmount1> getIndependentAmountPartyA() {
+		return independentAmountPartyA == null ? Optional.empty() : Optional.of(independentAmountPartyA);
 	}
 
-	public void setIndependentAmountPartyA(com.tools20022.repository.msg.AggregatedIndependentAmount1 independentAmountPartyA) {
+	public MarginCall1 setIndependentAmountPartyA(com.tools20022.repository.msg.AggregatedIndependentAmount1 independentAmountPartyA) {
 		this.independentAmountPartyA = independentAmountPartyA;
+		return this;
 	}
 
-	@XmlElement(name = "IndpdntAmtPtyB")
-	public AggregatedIndependentAmount1 getIndependentAmountPartyB() {
-		return independentAmountPartyB;
+	public Optional<AggregatedIndependentAmount1> getIndependentAmountPartyB() {
+		return independentAmountPartyB == null ? Optional.empty() : Optional.of(independentAmountPartyB);
 	}
 
-	public void setIndependentAmountPartyB(com.tools20022.repository.msg.AggregatedIndependentAmount1 independentAmountPartyB) {
+	public MarginCall1 setIndependentAmountPartyB(com.tools20022.repository.msg.AggregatedIndependentAmount1 independentAmountPartyB) {
 		this.independentAmountPartyB = independentAmountPartyB;
+		return this;
 	}
 
-	@XmlElement(name = "MrgnTerms")
-	public MarginTerms1Choice getMarginTerms() {
-		return marginTerms;
+	public Optional<MarginTerms1Choice> getMarginTerms() {
+		return marginTerms == null ? Optional.empty() : Optional.of(marginTerms);
 	}
 
-	public void setMarginTerms(MarginTerms1Choice marginTerms) {
+	public MarginCall1 setMarginTerms(MarginTerms1Choice marginTerms) {
 		this.marginTerms = marginTerms;
+		return this;
 	}
 
-	@XmlElement(name = "CollBal")
-	public CollateralBalance1Choice getCollateralBalance() {
-		return collateralBalance;
+	public Optional<CollateralBalance1Choice> getCollateralBalance() {
+		return collateralBalance == null ? Optional.empty() : Optional.of(collateralBalance);
 	}
 
-	public void setCollateralBalance(CollateralBalance1Choice collateralBalance) {
+	public MarginCall1 setCollateralBalance(CollateralBalance1Choice collateralBalance) {
 		this.collateralBalance = collateralBalance;
+		return this;
 	}
 }

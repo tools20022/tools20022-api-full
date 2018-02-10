@@ -31,6 +31,7 @@ import com.tools20022.repository.msg.UndertakingAmount4;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Amount of an undertaking such as a guarantee or standby letter of credit.
@@ -60,26 +61,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.UndertakingAmount#mmInterest
  * UndertakingAmount.mmInterest}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Amount1Choice Amount1Choice}
- * </li>
- * <li>{@linkplain com.tools20022.repository.msg.UndertakingAmount2
- * UndertakingAmount2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UndertakingAmount1
- * UndertakingAmount1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UndertakingAmount4
- * UndertakingAmount4}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AmountOrPercentage1Choice
- * AmountOrPercentage1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UndertakingAmount3
- * UndertakingAmount3}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AmountType1FormatChoice
- * AmountType1FormatChoice}</li>
  * </ul>
  * </li>
  * <li>
@@ -113,10 +94,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.Amount1Choice Amount1Choice}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.msg.UndertakingAmount2
+ * UndertakingAmount2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UndertakingAmount1
+ * UndertakingAmount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UndertakingAmount4
+ * UndertakingAmount4}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AmountOrPercentage1Choice
+ * AmountOrPercentage1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UndertakingAmount3
+ * UndertakingAmount3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AmountType1FormatChoice
+ * AmountType1FormatChoice}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -133,8 +134,8 @@ public class UndertakingAmount {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Undertaking undertaking;
 	/**
-	 * Undertaking for which an amount is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,8 +168,8 @@ public class UndertakingAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmUndertaking = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Undertaking";
 			definition = "Undertaking for which an amount is specified.";
@@ -181,8 +182,8 @@ public class UndertakingAmount {
 	};
 	protected CurrencyAndAmount amount;
 	/**
-	 * Amount of the undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -220,8 +221,8 @@ public class UndertakingAmount {
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UndertakingAmount1.mmAmount, UndertakingAmount3.mmAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Amount of the undertaking.";
@@ -240,9 +241,8 @@ public class UndertakingAmount {
 	};
 	protected Tolerance tolerance;
 	/**
-	 * Percentage (original or updated in case of amendment) by which the amount
-	 * claimed under the undertaking may vary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -286,8 +286,8 @@ public class UndertakingAmount {
 	public static final MMBusinessAssociationEnd mmTolerance = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(UndertakingAmount1.mmPlusTolerance);
-			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Tolerance";
 			definition = "Percentage (original or updated in case of amendment) by which the amount claimed under the undertaking may vary.";
@@ -300,9 +300,8 @@ public class UndertakingAmount {
 	};
 	protected CurrencyAndAmount balanceAmount;
 	/**
-	 * Calculated undertaking available balance amount resulting from the
-	 * application of the variation amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -339,8 +338,8 @@ public class UndertakingAmount {
 	public static final MMBusinessAttribute mmBalanceAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UndertakingAmount4.mmBalanceAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BalanceAmount";
 			definition = "Calculated undertaking available balance amount resulting from the application of the variation amount.";
@@ -359,9 +358,8 @@ public class UndertakingAmount {
 	};
 	protected AmountTypeCode type;
 	/**
-	 * Qualification of the costs and other amounts covered by the amount of the
-	 * undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -401,8 +399,8 @@ public class UndertakingAmount {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountType1FormatChoice.mmCode, AmountType1FormatChoice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Qualification of the costs and other amounts covered by the amount of the undertaking.";
@@ -421,8 +419,8 @@ public class UndertakingAmount {
 	};
 	protected Interest interest;
 	/**
-	 * Interest associated with the undertaking amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -454,8 +452,8 @@ public class UndertakingAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
 			definition = "Interest associated with the undertaking amount.";
@@ -470,7 +468,7 @@ public class UndertakingAmount {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingAmount";
 				definition = "Amount of an undertaking such as a guarantee or standby letter of credit.";
@@ -496,47 +494,53 @@ public class UndertakingAmount {
 		return undertaking;
 	}
 
-	public void setUndertaking(com.tools20022.repository.entity.Undertaking undertaking) {
-		this.undertaking = undertaking;
+	public UndertakingAmount setUndertaking(com.tools20022.repository.entity.Undertaking undertaking) {
+		this.undertaking = Objects.requireNonNull(undertaking);
+		return this;
 	}
 
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
-		this.amount = amount;
+	public UndertakingAmount setAmount(CurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
 	public Tolerance getTolerance() {
 		return tolerance;
 	}
 
-	public void setTolerance(com.tools20022.repository.entity.Tolerance tolerance) {
-		this.tolerance = tolerance;
+	public UndertakingAmount setTolerance(com.tools20022.repository.entity.Tolerance tolerance) {
+		this.tolerance = Objects.requireNonNull(tolerance);
+		return this;
 	}
 
 	public CurrencyAndAmount getBalanceAmount() {
 		return balanceAmount;
 	}
 
-	public void setBalanceAmount(CurrencyAndAmount balanceAmount) {
-		this.balanceAmount = balanceAmount;
+	public UndertakingAmount setBalanceAmount(CurrencyAndAmount balanceAmount) {
+		this.balanceAmount = Objects.requireNonNull(balanceAmount);
+		return this;
 	}
 
 	public AmountTypeCode getType() {
 		return type;
 	}
 
-	public void setType(AmountTypeCode type) {
-		this.type = type;
+	public UndertakingAmount setType(AmountTypeCode type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
 	public Interest getInterest() {
 		return interest;
 	}
 
-	public void setInterest(com.tools20022.repository.entity.Interest interest) {
-		this.interest = interest;
+	public UndertakingAmount setInterest(com.tools20022.repository.entity.Interest interest) {
+		this.interest = Objects.requireNonNull(interest);
+		return this;
 	}
 }

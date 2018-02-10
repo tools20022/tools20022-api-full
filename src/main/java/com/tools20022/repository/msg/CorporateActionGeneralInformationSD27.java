@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -28,6 +29,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateActionGeneralInformationSD25}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionGeneralInformationSD27", propOrder = {"placeAndName", "eventGroup", "eventType", "subEventType", "redemptionIdentification"})
 public class CorporateActionGeneralInformationSD27 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +125,7 @@ public class CorporateActionGeneralInformationSD27 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD27.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,10 +137,11 @@ public class CorporateActionGeneralInformationSD27 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtGrp")
 	protected EventGroup2Code eventGroup;
 	/**
-	 * DTC processing domain/ category for event types.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,6 +156,9 @@ public class CorporateActionGeneralInformationSD27 {
 	 * CorporateActionGeneralInformationSD27}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EvtGrp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Event Group</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -169,9 +177,10 @@ public class CorporateActionGeneralInformationSD27 {
 	 */
 	public static final MMMessageAttribute mmEventGroup = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD27.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.mmObject();
 			isDerived = false;
 			xmlTag = "EvtGrp";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Event Group"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventGroup";
 			definition = "DTC processing domain/ category for event types.";
@@ -181,14 +190,11 @@ public class CorporateActionGeneralInformationSD27 {
 			simpleType_lazy = () -> EventGroup2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtTp")
 	protected ExtendedEventType4Code eventType;
 	/**
-	 * DTCC (The Depository Trust and Clearing Corporation) native corporate
-	 * action event type name. Used in place for the events that cannot be
-	 * classified by ISO code and mapped to OTHR or when two or more distinct
-	 * events (in DTCC model) use same ISO code and there are no additional data
-	 * elements that distinguish those two or more events.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,6 +209,9 @@ public class CorporateActionGeneralInformationSD27 {
 	 * CorporateActionGeneralInformationSD27}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EvtTp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Event Type</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -223,9 +232,10 @@ public class CorporateActionGeneralInformationSD27 {
 	 */
 	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD27.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.mmObject();
 			isDerived = false;
 			xmlTag = "EvtTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Event Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action event type name. Used in place for the events that cannot be classified by ISO code and mapped to OTHR or when two  or more distinct events (in DTCC model)  use same ISO code and there are no additional data elements that distinguish those two or more events.";
@@ -235,11 +245,11 @@ public class CorporateActionGeneralInformationSD27 {
 			simpleType_lazy = () -> ExtendedEventType4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SubEvtTp")
 	protected DTCCSubEventType5Code subEventType;
 	/**
-	 * DTCC (The Depository Trust and Clearing Corporation) native corporate
-	 * action sub event type name further defines the event type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -254,6 +264,9 @@ public class CorporateActionGeneralInformationSD27 {
 	 * CorporateActionGeneralInformationSD27}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SubEvtTp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Sub Event Type</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -274,9 +287,10 @@ public class CorporateActionGeneralInformationSD27 {
 	 */
 	public static final MMMessageAttribute mmSubEventType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD27.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.mmObject();
 			isDerived = false;
 			xmlTag = "SubEvtTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Sub Event Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubEventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action sub event type name further defines the event type. ";
@@ -286,12 +300,11 @@ public class CorporateActionGeneralInformationSD27 {
 			simpleType_lazy = () -> DTCCSubEventType5Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RedId")
 	protected Max10NumericText redemptionIdentification;
 	/**
-	 * Unique number systemically assigned to all Lottery and Non-Lottery events
-	 * announced in DTC Redemptions (REDS) Participant Terminal System (PTS)/
-	 * Particinant Browser System(PBS) function.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -326,7 +339,7 @@ public class CorporateActionGeneralInformationSD27 {
 	 */
 	public static final MMMessageAttribute mmRedemptionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD27.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.mmObject();
 			isDerived = false;
 			xmlTag = "RedId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -342,9 +355,10 @@ public class CorporateActionGeneralInformationSD27 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD27.mmPlaceAndName, CorporateActionGeneralInformationSD27.mmEventGroup, CorporateActionGeneralInformationSD27.mmEventType,
-						CorporateActionGeneralInformationSD27.mmSubEventType, CorporateActionGeneralInformationSD27.mmRedemptionIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.mmEventGroup,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.mmSubEventType,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationSD27.mmRedemptionIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionGeneralInformationSD27";
 				definition = "Provides additional information regarding corporate action general information details.";
@@ -354,48 +368,48 @@ public class CorporateActionGeneralInformationSD27 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionGeneralInformationSD27 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "EvtGrp")
-	public EventGroup2Code getEventGroup() {
-		return eventGroup;
+	public Optional<EventGroup2Code> getEventGroup() {
+		return eventGroup == null ? Optional.empty() : Optional.of(eventGroup);
 	}
 
-	public void setEventGroup(EventGroup2Code eventGroup) {
+	public CorporateActionGeneralInformationSD27 setEventGroup(EventGroup2Code eventGroup) {
 		this.eventGroup = eventGroup;
+		return this;
 	}
 
-	@XmlElement(name = "EvtTp")
-	public ExtendedEventType4Code getEventType() {
-		return eventType;
+	public Optional<ExtendedEventType4Code> getEventType() {
+		return eventType == null ? Optional.empty() : Optional.of(eventType);
 	}
 
-	public void setEventType(ExtendedEventType4Code eventType) {
+	public CorporateActionGeneralInformationSD27 setEventType(ExtendedEventType4Code eventType) {
 		this.eventType = eventType;
+		return this;
 	}
 
-	@XmlElement(name = "SubEvtTp")
-	public DTCCSubEventType5Code getSubEventType() {
-		return subEventType;
+	public Optional<DTCCSubEventType5Code> getSubEventType() {
+		return subEventType == null ? Optional.empty() : Optional.of(subEventType);
 	}
 
-	public void setSubEventType(DTCCSubEventType5Code subEventType) {
+	public CorporateActionGeneralInformationSD27 setSubEventType(DTCCSubEventType5Code subEventType) {
 		this.subEventType = subEventType;
+		return this;
 	}
 
-	@XmlElement(name = "RedId")
-	public Max10NumericText getRedemptionIdentification() {
-		return redemptionIdentification;
+	public Optional<Max10NumericText> getRedemptionIdentification() {
+		return redemptionIdentification == null ? Optional.empty() : Optional.of(redemptionIdentification);
 	}
 
-	public void setRedemptionIdentification(Max10NumericText redemptionIdentification) {
+	public CorporateActionGeneralInformationSD27 setRedemptionIdentification(Max10NumericText redemptionIdentification) {
 		this.redemptionIdentification = redemptionIdentification;
+		return this;
 	}
 }

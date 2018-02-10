@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.PlaceOfSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,16 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Transparency calculation specific details for an energy commodity."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CommodityDerivate6", propOrder = "settlementLocation")
 public class CommodityDerivate6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SttlmLctn", required = true)
 	protected Max25Text settlementLocation;
 	/**
-	 * Place where the delivery and the cash settlement of the base product
-	 * occurs.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +108,7 @@ public class CommodityDerivate6 {
 	public static final MMMessageAttribute mmSettlementLocation = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PlaceOfSettlement.mmObject();
-			componentContext_lazy = () -> CommodityDerivate6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommodityDerivate6.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmLctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,9 +123,9 @@ public class CommodityDerivate6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CommodityDerivate6.mmSettlementLocation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommodityDerivate6.mmSettlementLocation);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommodityDerivate6";
 				definition = "Transparency calculation specific details for an energy commodity.";
@@ -133,12 +134,12 @@ public class CommodityDerivate6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SttlmLctn", required = true)
 	public Max25Text getSettlementLocation() {
 		return settlementLocation;
 	}
 
-	public void setSettlementLocation(Max25Text settlementLocation) {
-		this.settlementLocation = settlementLocation;
+	public CommodityDerivate6 setSettlementLocation(Max25Text settlementLocation) {
+		this.settlementLocation = Objects.requireNonNull(settlementLocation);
+		return this;
 	}
 }

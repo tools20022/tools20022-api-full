@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.TransportBySea;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between proposed and actual shipment date."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ShipmentDate1Choice", propOrder = {"proposedShipmentDate", "actualShipmentDate"})
 public class ShipmentDate1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PropsdShipmntDt", required = true)
 	protected ISODate proposedShipmentDate;
 	/**
-	 * Proposed date on which the goods should be shipped.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +109,7 @@ public class ShipmentDate1Choice {
 	public static final MMMessageAttribute mmProposedShipmentDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ShipmentDateRange.mmShipmentDate;
-			componentContext_lazy = () -> ShipmentDate1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ShipmentDate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PropsdShipmntDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +120,11 @@ public class ShipmentDate1Choice {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ActlShipmntDt", required = true)
 	protected ISODate actualShipmentDate;
 	/**
-	 * Actual date whereby the goods were shipped.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -154,7 +157,7 @@ public class ShipmentDate1Choice {
 	public static final MMMessageAttribute mmActualShipmentDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ShipmentDateRange.mmShipmentDate;
-			componentContext_lazy = () -> ShipmentDate1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ShipmentDate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ActlShipmntDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,9 +172,9 @@ public class ShipmentDate1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ShipmentDate1Choice.mmProposedShipmentDate, ShipmentDate1Choice.mmActualShipmentDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ShipmentDate1Choice.mmProposedShipmentDate, com.tools20022.repository.choice.ShipmentDate1Choice.mmActualShipmentDate);
 				trace_lazy = () -> TransportBySea.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ShipmentDate1Choice";
 				definition = "Choice between proposed and actual shipment date.";
@@ -180,21 +183,21 @@ public class ShipmentDate1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PropsdShipmntDt", required = true)
 	public ISODate getProposedShipmentDate() {
 		return proposedShipmentDate;
 	}
 
-	public void setProposedShipmentDate(ISODate proposedShipmentDate) {
-		this.proposedShipmentDate = proposedShipmentDate;
+	public ShipmentDate1Choice setProposedShipmentDate(ISODate proposedShipmentDate) {
+		this.proposedShipmentDate = Objects.requireNonNull(proposedShipmentDate);
+		return this;
 	}
 
-	@XmlElement(name = "ActlShipmntDt", required = true)
 	public ISODate getActualShipmentDate() {
 		return actualShipmentDate;
 	}
 
-	public void setActualShipmentDate(ISODate actualShipmentDate) {
-		this.actualShipmentDate = actualShipmentDate;
+	public ShipmentDate1Choice setActualShipmentDate(ISODate actualShipmentDate) {
+		this.actualShipmentDate = Objects.requireNonNull(actualShipmentDate);
+		return this;
 	}
 }

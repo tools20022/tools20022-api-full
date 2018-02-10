@@ -29,6 +29,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Quantity4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +73,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,15 +95,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CertifiedCharacteristics1Choice", propOrder = {"origin", "quality", "analysis", "weight", "quantity", "healthIndication", "phytosanitaryIndication"})
 public class CertifiedCharacteristics1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Orgn", required = true)
 	protected CountryCode origin;
 	/**
-	 * Country of origin of the goods, as proven by the certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,7 +146,7 @@ public class CertifiedCharacteristics1Choice {
 	public static final MMMessageAttribute mmOrigin = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Product.mmOrigin;
-			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Orgn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +158,11 @@ public class CertifiedCharacteristics1Choice {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Qlty", required = true)
 	protected Max70Text quality;
 	/**
-	 * Quality of the goods, as proven by the certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,7 +203,7 @@ public class CertifiedCharacteristics1Choice {
 	public static final MMMessageAttribute mmQuality = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Product.mmQuality;
-			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qlty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,10 +215,11 @@ public class CertifiedCharacteristics1Choice {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Anlys", required = true)
 	protected Max70Text analysis;
 	/**
-	 * Analysis of the goods, as proven by the certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -256,7 +260,7 @@ public class CertifiedCharacteristics1Choice {
 	public static final MMMessageAttribute mmAnalysis = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Goods.mmAnalysis;
-			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Anlys";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -268,10 +272,11 @@ public class CertifiedCharacteristics1Choice {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Wght", required = true)
 	protected Quantity4 weight;
 	/**
-	 * Weight of the goods, as proven by the certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -312,7 +317,7 @@ public class CertifiedCharacteristics1Choice {
 	public static final MMMessageAttribute mmWeight = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Product.mmQuantity;
-			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Wght";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -324,10 +329,11 @@ public class CertifiedCharacteristics1Choice {
 			complexType_lazy = () -> Quantity4.mmObject();
 		}
 	};
+	@XmlElement(name = "Qty", required = true)
 	protected Quantity4 quantity;
 	/**
-	 * Quantity of the goods, as proven by the certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -368,7 +374,7 @@ public class CertifiedCharacteristics1Choice {
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Product.mmQuantity;
-			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -380,10 +386,11 @@ public class CertifiedCharacteristics1Choice {
 			complexType_lazy = () -> Quantity4.mmObject();
 		}
 	};
+	@XmlElement(name = "HlthIndctn", required = true)
 	protected YesNoIndicator healthIndication;
 	/**
-	 * Indicates if the goods have passed the health check.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -425,7 +432,7 @@ public class CertifiedCharacteristics1Choice {
 	public static final MMMessageAttribute mmHealthIndication = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Goods.mmHealthCheck;
-			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "HlthIndctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -437,10 +444,11 @@ public class CertifiedCharacteristics1Choice {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PhytosntryIndctn", required = true)
 	protected YesNoIndicator phytosanitaryIndication;
 	/**
-	 * Indicates if the goods have passed the phytosanitary check.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -483,7 +491,7 @@ public class CertifiedCharacteristics1Choice {
 	public static final MMMessageAttribute mmPhytosanitaryIndication = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Goods.mmPhytosanitaryInspection;
-			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PhytosntryIndctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -499,10 +507,12 @@ public class CertifiedCharacteristics1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CertifiedCharacteristics1Choice.mmOrigin, CertifiedCharacteristics1Choice.mmQuality, CertifiedCharacteristics1Choice.mmAnalysis, CertifiedCharacteristics1Choice.mmWeight,
-						CertifiedCharacteristics1Choice.mmQuantity, CertifiedCharacteristics1Choice.mmHealthIndication, CertifiedCharacteristics1Choice.mmPhytosanitaryIndication);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmOrigin, com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmQuality,
+						com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmAnalysis, com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmWeight,
+						com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmQuantity, com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmHealthIndication,
+						com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmPhytosanitaryIndication);
 				trace_lazy = () -> Product.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertifiedCharacteristics1Choice";
 				definition = "Characteristics of the goods that are certified, in the context of a commercial trade transaction.";
@@ -512,66 +522,66 @@ public class CertifiedCharacteristics1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Orgn", required = true)
 	public CountryCode getOrigin() {
 		return origin;
 	}
 
-	public void setOrigin(CountryCode origin) {
-		this.origin = origin;
+	public CertifiedCharacteristics1Choice setOrigin(CountryCode origin) {
+		this.origin = Objects.requireNonNull(origin);
+		return this;
 	}
 
-	@XmlElement(name = "Qlty", required = true)
 	public Max70Text getQuality() {
 		return quality;
 	}
 
-	public void setQuality(Max70Text quality) {
-		this.quality = quality;
+	public CertifiedCharacteristics1Choice setQuality(Max70Text quality) {
+		this.quality = Objects.requireNonNull(quality);
+		return this;
 	}
 
-	@XmlElement(name = "Anlys", required = true)
 	public Max70Text getAnalysis() {
 		return analysis;
 	}
 
-	public void setAnalysis(Max70Text analysis) {
-		this.analysis = analysis;
+	public CertifiedCharacteristics1Choice setAnalysis(Max70Text analysis) {
+		this.analysis = Objects.requireNonNull(analysis);
+		return this;
 	}
 
-	@XmlElement(name = "Wght", required = true)
 	public Quantity4 getWeight() {
 		return weight;
 	}
 
-	public void setWeight(Quantity4 weight) {
-		this.weight = weight;
+	public CertifiedCharacteristics1Choice setWeight(Quantity4 weight) {
+		this.weight = Objects.requireNonNull(weight);
+		return this;
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public Quantity4 getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(Quantity4 quantity) {
-		this.quantity = quantity;
+	public CertifiedCharacteristics1Choice setQuantity(Quantity4 quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	@XmlElement(name = "HlthIndctn", required = true)
 	public YesNoIndicator getHealthIndication() {
 		return healthIndication;
 	}
 
-	public void setHealthIndication(YesNoIndicator healthIndication) {
-		this.healthIndication = healthIndication;
+	public CertifiedCharacteristics1Choice setHealthIndication(YesNoIndicator healthIndication) {
+		this.healthIndication = Objects.requireNonNull(healthIndication);
+		return this;
 	}
 
-	@XmlElement(name = "PhytosntryIndctn", required = true)
 	public YesNoIndicator getPhytosanitaryIndication() {
 		return phytosanitaryIndication;
 	}
 
-	public void setPhytosanitaryIndication(YesNoIndicator phytosanitaryIndication) {
-		this.phytosanitaryIndication = phytosanitaryIndication;
+	public CertifiedCharacteristics1Choice setPhytosanitaryIndication(YesNoIndicator phytosanitaryIndication) {
+		this.phytosanitaryIndication = Objects.requireNonNull(phytosanitaryIndication);
+		return this;
 	}
 }

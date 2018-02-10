@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.VoteInstructionRequest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * VoteDetails2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "VoteDetails3", propOrder = {"voteInstructionForAgendaResolution", "voteInstructionForMeetingResolution"})
 public class VoteDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "VoteInstrForAgndRsltn", required = true)
 	protected Vote3Choice voteInstructionForAgendaResolution;
 	/**
-	 * Indicates the vote instruction for the resolutions that are announced via
-	 * the meeting agenda in advance of the meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -116,7 +118,7 @@ public class VoteDetails3 {
 	public static final MMMessageAssociationEnd mmVoteInstructionForAgendaResolution = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVotePerResolution;
-			componentContext_lazy = () -> VoteDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "VoteInstrForAgndRsltn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,11 +131,11 @@ public class VoteDetails3 {
 			type_lazy = () -> Vote3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "VoteInstrForMtgRsltn")
 	protected VoteInstructionForMeetingResolution2Choice voteInstructionForMeetingResolution;
 	/**
-	 * Indicates the vote instruction for the resolutions that may arise at the
-	 * meeting but were not previously provided in the agenda.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -172,7 +174,7 @@ public class VoteDetails3 {
 	public static final MMMessageAssociationEnd mmVoteInstructionForMeetingResolution = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteForMeetingResolution;
-			componentContext_lazy = () -> VoteDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "VoteInstrForMtgRsltn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,9 +191,9 @@ public class VoteDetails3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(VoteDetails3.mmVoteInstructionForAgendaResolution, VoteDetails3.mmVoteInstructionForMeetingResolution);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteDetails3.mmVoteInstructionForAgendaResolution, com.tools20022.repository.msg.VoteDetails3.mmVoteInstructionForMeetingResolution);
 				trace_lazy = () -> VoteInstructionRequest.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VoteDetails3";
 				definition = "Specifies detailed voting instructions.";
@@ -201,21 +203,21 @@ public class VoteDetails3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "VoteInstrForAgndRsltn", required = true)
 	public Vote3Choice getVoteInstructionForAgendaResolution() {
 		return voteInstructionForAgendaResolution;
 	}
 
-	public void setVoteInstructionForAgendaResolution(Vote3Choice voteInstructionForAgendaResolution) {
-		this.voteInstructionForAgendaResolution = voteInstructionForAgendaResolution;
+	public VoteDetails3 setVoteInstructionForAgendaResolution(Vote3Choice voteInstructionForAgendaResolution) {
+		this.voteInstructionForAgendaResolution = Objects.requireNonNull(voteInstructionForAgendaResolution);
+		return this;
 	}
 
-	@XmlElement(name = "VoteInstrForMtgRsltn")
-	public VoteInstructionForMeetingResolution2Choice getVoteInstructionForMeetingResolution() {
-		return voteInstructionForMeetingResolution;
+	public Optional<VoteInstructionForMeetingResolution2Choice> getVoteInstructionForMeetingResolution() {
+		return voteInstructionForMeetingResolution == null ? Optional.empty() : Optional.of(voteInstructionForMeetingResolution);
 	}
 
-	public void setVoteInstructionForMeetingResolution(VoteInstructionForMeetingResolution2Choice voteInstructionForMeetingResolution) {
+	public VoteDetails3 setVoteInstructionForMeetingResolution(VoteInstructionForMeetingResolution2Choice voteInstructionForMeetingResolution) {
 		this.voteInstructionForMeetingResolution = voteInstructionForMeetingResolution;
+		return this;
 	}
 }

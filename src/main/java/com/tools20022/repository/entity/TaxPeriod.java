@@ -25,6 +25,8 @@ import com.tools20022.repository.msg.TaxPeriod1;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Period of time details related to the tax payment.
@@ -51,13 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TaxPeriod1 TaxPeriod1}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -68,10 +63,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxPeriod1 TaxPeriod1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,8 +89,8 @@ public class TaxPeriod {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected TaxRecord taxRecord;
 	/**
-	 * Tax record for which a period is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,8 +122,8 @@ public class TaxPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmTaxRecord = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxRecord";
 			definition = "Tax record for which a period is specified.";
@@ -134,8 +136,8 @@ public class TaxPeriod {
 	};
 	protected ISODate year;
 	/**
-	 * Year related to the tax payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,8 +169,8 @@ public class TaxPeriod {
 	public static final MMBusinessAttribute mmYear = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxPeriod1.mmYear);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Year";
 			definition = "Year related to the tax payment.";
@@ -187,8 +189,8 @@ public class TaxPeriod {
 	};
 	protected TaxRecordPeriodCode type;
 	/**
-	 * Identification of the period related to the tax payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -221,8 +223,8 @@ public class TaxPeriod {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxPeriod1.mmType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Identification of the period related to the tax payment.";
@@ -241,9 +243,8 @@ public class TaxPeriod {
 	};
 	protected DateTimePeriod fromToDate;
 	/**
-	 * Range of time between a start date and an end date for which the tax
-	 * report is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -285,8 +286,8 @@ public class TaxPeriod {
 	public static final MMBusinessAssociationEnd mmFromToDate = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxPeriod1.mmFromToDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FromToDate";
 			definition = "Range of time between a start date and an end date for which the tax report is provided.";
@@ -299,8 +300,8 @@ public class TaxPeriod {
 	};
 	protected ISODate endOfFiscalYear;
 	/**
-	 * Date on which the fiscal year is closed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -324,8 +325,8 @@ public class TaxPeriod {
 	 */
 	public static final MMBusinessAttribute mmEndOfFiscalYear = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EndOfFiscalYear";
 			definition = "Date on which the fiscal year is closed.";
@@ -346,7 +347,7 @@ public class TaxPeriod {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxPeriod";
 				definition = "Period of time details related to the tax payment.";
@@ -364,43 +365,48 @@ public class TaxPeriod {
 		return mmObject_lazy.get();
 	}
 
-	public TaxRecord getTaxRecord() {
-		return taxRecord;
+	public Optional<TaxRecord> getTaxRecord() {
+		return taxRecord == null ? Optional.empty() : Optional.of(taxRecord);
 	}
 
-	public void setTaxRecord(com.tools20022.repository.entity.TaxRecord taxRecord) {
+	public TaxPeriod setTaxRecord(com.tools20022.repository.entity.TaxRecord taxRecord) {
 		this.taxRecord = taxRecord;
+		return this;
 	}
 
 	public ISODate getYear() {
 		return year;
 	}
 
-	public void setYear(ISODate year) {
-		this.year = year;
+	public TaxPeriod setYear(ISODate year) {
+		this.year = Objects.requireNonNull(year);
+		return this;
 	}
 
 	public TaxRecordPeriodCode getType() {
 		return type;
 	}
 
-	public void setType(TaxRecordPeriodCode type) {
-		this.type = type;
+	public TaxPeriod setType(TaxRecordPeriodCode type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
 	public DateTimePeriod getFromToDate() {
 		return fromToDate;
 	}
 
-	public void setFromToDate(com.tools20022.repository.entity.DateTimePeriod fromToDate) {
-		this.fromToDate = fromToDate;
+	public TaxPeriod setFromToDate(com.tools20022.repository.entity.DateTimePeriod fromToDate) {
+		this.fromToDate = Objects.requireNonNull(fromToDate);
+		return this;
 	}
 
 	public ISODate getEndOfFiscalYear() {
 		return endOfFiscalYear;
 	}
 
-	public void setEndOfFiscalYear(ISODate endOfFiscalYear) {
-		this.endOfFiscalYear = endOfFiscalYear;
+	public TaxPeriod setEndOfFiscalYear(ISODate endOfFiscalYear) {
+		this.endOfFiscalYear = Objects.requireNonNull(endOfFiscalYear);
+		return this;
 	}
 }

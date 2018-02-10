@@ -31,9 +31,8 @@ import com.tools20022.repository.entity.Demand;
 import com.tools20022.repository.entity.Expiry;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -92,8 +91,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedExpiryDate1Rule#forDemand1
+ * ConstraintRequestedExpiryDate1Rule.forDemand1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedExpiryDate2Rule#forDemand1
+ * ConstraintRequestedExpiryDate2Rule.forDemand1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,17 +114,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of the demand."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Demand1", propOrder = {"identification", "type", "undertakingIdentification", "demandAmount", "advisingPartyReferenceNumber", "secondAdvisingPartyReferenceNumber", "confirmerReferenceNumber", "settlementAccount",
 		"presentationDetails", "requestedExpiryDate", "demandDocumentation", "additionalInformation"})
 public class Demand1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Unique and unambiguous identifier assigned by the presenting party to the
-	 * demand.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +152,7 @@ public class Demand1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Demand1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,10 +163,11 @@ public class Demand1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected DemandType1Code type;
 	/**
-	 * Type of demand.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,7 +200,7 @@ public class Demand1 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Demand.mmType;
-			componentContext_lazy = () -> Demand1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,10 +211,11 @@ public class Demand1 {
 			simpleType_lazy = () -> DemandType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "UdrtkgId", required = true)
 	protected Undertaking6 undertakingIdentification;
 	/**
-	 * Details related to the undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -233,7 +245,7 @@ public class Demand1 {
 	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Undertaking.mmObject();
-			componentContext_lazy = () -> Demand1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,10 +257,11 @@ public class Demand1 {
 			type_lazy = () -> com.tools20022.repository.msg.Undertaking6.mmObject();
 		}
 	};
+	@XmlElement(name = "DmndAmt", required = true)
 	protected UndertakingAmount3 demandAmount;
 	/**
-	 * Details related to the demand amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -279,7 +292,7 @@ public class Demand1 {
 	public static final MMMessageAssociationEnd mmDemandAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Demand.mmDemandAmount;
-			componentContext_lazy = () -> Demand1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "DmndAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -291,11 +304,11 @@ public class Demand1 {
 			type_lazy = () -> com.tools20022.repository.msg.UndertakingAmount3.mmObject();
 		}
 	};
+	@XmlElement(name = "AdvsgPtyRefNb")
 	protected Max35Text advisingPartyReferenceNumber;
 	/**
-	 * Unique and unambiguous identifier assigned by the advising party to the
-	 * undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -323,7 +336,7 @@ public class Demand1 {
 	 */
 	public static final MMMessageAttribute mmAdvisingPartyReferenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Demand1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "AdvsgPtyRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -334,11 +347,11 @@ public class Demand1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ScndAdvsgPtyRefNb")
 	protected Max35Text secondAdvisingPartyReferenceNumber;
 	/**
-	 * Unique and unambiguous identifier assigned by the second advising party
-	 * to the undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -366,7 +379,7 @@ public class Demand1 {
 	 */
 	public static final MMMessageAttribute mmSecondAdvisingPartyReferenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Demand1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "ScndAdvsgPtyRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -377,11 +390,11 @@ public class Demand1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CnfrmrRefNb")
 	protected Max35Text confirmerReferenceNumber;
 	/**
-	 * Unique and unambiguous identifier assigned by the confirmer to the
-	 * undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -409,7 +422,7 @@ public class Demand1 {
 	 */
 	public static final MMMessageAttribute mmConfirmerReferenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Demand1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "CnfrmrRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -420,10 +433,11 @@ public class Demand1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmAcct")
 	protected List<com.tools20022.repository.msg.CashAccount27> settlementAccount;
 	/**
-	 * Details related to the settlement account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -454,7 +468,7 @@ public class Demand1 {
 	public static final MMMessageAssociationEnd mmSettlementAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmSettlementAccount;
-			componentContext_lazy = () -> Demand1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -465,10 +479,11 @@ public class Demand1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount27.mmObject();
 		}
 	};
+	@XmlElement(name = "PresntnDtls")
 	protected Presentation2 presentationDetails;
 	/**
-	 * Details of the beneficiary's presentation of documents.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -499,7 +514,7 @@ public class Demand1 {
 	public static final MMMessageAssociationEnd mmPresentationDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmPresentation;
-			componentContext_lazy = () -> Demand1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "PresntnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -511,10 +526,11 @@ public class Demand1 {
 			type_lazy = () -> com.tools20022.repository.msg.Presentation2.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdXpryDt")
 	protected ISODate requestedExpiryDate;
 	/**
-	 * Requested new expiry date as an alternative to payment of the demand.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -547,7 +563,7 @@ public class Demand1 {
 	public static final MMMessageAttribute mmRequestedExpiryDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Expiry.mmExpiryDateTime;
-			componentContext_lazy = () -> Demand1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdXpryDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -558,10 +574,11 @@ public class Demand1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DmndDcmnttn")
 	protected DemandDocumentation1 demandDocumentation;
 	/**
-	 * Document(s) presented for examination.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -586,7 +603,7 @@ public class Demand1 {
 	 */
 	public static final MMMessageAssociationEnd mmDemandDocumentation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Demand1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "DmndDcmnttn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -598,10 +615,11 @@ public class Demand1 {
 			type_lazy = () -> com.tools20022.repository.msg.DemandDocumentation1.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected List<Max2000Text> additionalInformation;
 	/**
-	 * Additional information related to the demand.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -627,7 +645,7 @@ public class Demand1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Demand1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -642,12 +660,14 @@ public class Demand1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Demand1.mmIdentification, Demand1.mmType, Demand1.mmUndertakingIdentification, Demand1.mmDemandAmount, Demand1.mmAdvisingPartyReferenceNumber,
-						Demand1.mmSecondAdvisingPartyReferenceNumber, Demand1.mmConfirmerReferenceNumber, Demand1.mmSettlementAccount, Demand1.mmPresentationDetails, Demand1.mmRequestedExpiryDate, Demand1.mmDemandDocumentation,
-						Demand1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Demand1.mmIdentification, com.tools20022.repository.msg.Demand1.mmType, com.tools20022.repository.msg.Demand1.mmUndertakingIdentification,
+						com.tools20022.repository.msg.Demand1.mmDemandAmount, com.tools20022.repository.msg.Demand1.mmAdvisingPartyReferenceNumber, com.tools20022.repository.msg.Demand1.mmSecondAdvisingPartyReferenceNumber,
+						com.tools20022.repository.msg.Demand1.mmConfirmerReferenceNumber, com.tools20022.repository.msg.Demand1.mmSettlementAccount, com.tools20022.repository.msg.Demand1.mmPresentationDetails,
+						com.tools20022.repository.msg.Demand1.mmRequestedExpiryDate, com.tools20022.repository.msg.Demand1.mmDemandDocumentation, com.tools20022.repository.msg.Demand1.mmAdditionalInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingDemandV01.mmUndertakingDemandDetails);
 				trace_lazy = () -> Demand.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequestedExpiryDate1Rule.forDemand1, com.tools20022.repository.constraints.ConstraintRequestedExpiryDate2Rule.forDemand1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Demand1";
 				definition = "Details of the demand.";
@@ -656,111 +676,111 @@ public class Demand1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public Demand1 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public DemandType1Code getType() {
 		return type;
 	}
 
-	public void setType(DemandType1Code type) {
-		this.type = type;
+	public Demand1 setType(DemandType1Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "UdrtkgId", required = true)
 	public Undertaking6 getUndertakingIdentification() {
 		return undertakingIdentification;
 	}
 
-	public void setUndertakingIdentification(com.tools20022.repository.msg.Undertaking6 undertakingIdentification) {
-		this.undertakingIdentification = undertakingIdentification;
+	public Demand1 setUndertakingIdentification(com.tools20022.repository.msg.Undertaking6 undertakingIdentification) {
+		this.undertakingIdentification = Objects.requireNonNull(undertakingIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "DmndAmt", required = true)
 	public UndertakingAmount3 getDemandAmount() {
 		return demandAmount;
 	}
 
-	public void setDemandAmount(com.tools20022.repository.msg.UndertakingAmount3 demandAmount) {
-		this.demandAmount = demandAmount;
+	public Demand1 setDemandAmount(com.tools20022.repository.msg.UndertakingAmount3 demandAmount) {
+		this.demandAmount = Objects.requireNonNull(demandAmount);
+		return this;
 	}
 
-	@XmlElement(name = "AdvsgPtyRefNb")
-	public Max35Text getAdvisingPartyReferenceNumber() {
-		return advisingPartyReferenceNumber;
+	public Optional<Max35Text> getAdvisingPartyReferenceNumber() {
+		return advisingPartyReferenceNumber == null ? Optional.empty() : Optional.of(advisingPartyReferenceNumber);
 	}
 
-	public void setAdvisingPartyReferenceNumber(Max35Text advisingPartyReferenceNumber) {
+	public Demand1 setAdvisingPartyReferenceNumber(Max35Text advisingPartyReferenceNumber) {
 		this.advisingPartyReferenceNumber = advisingPartyReferenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "ScndAdvsgPtyRefNb")
-	public Max35Text getSecondAdvisingPartyReferenceNumber() {
-		return secondAdvisingPartyReferenceNumber;
+	public Optional<Max35Text> getSecondAdvisingPartyReferenceNumber() {
+		return secondAdvisingPartyReferenceNumber == null ? Optional.empty() : Optional.of(secondAdvisingPartyReferenceNumber);
 	}
 
-	public void setSecondAdvisingPartyReferenceNumber(Max35Text secondAdvisingPartyReferenceNumber) {
+	public Demand1 setSecondAdvisingPartyReferenceNumber(Max35Text secondAdvisingPartyReferenceNumber) {
 		this.secondAdvisingPartyReferenceNumber = secondAdvisingPartyReferenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "CnfrmrRefNb")
-	public Max35Text getConfirmerReferenceNumber() {
-		return confirmerReferenceNumber;
+	public Optional<Max35Text> getConfirmerReferenceNumber() {
+		return confirmerReferenceNumber == null ? Optional.empty() : Optional.of(confirmerReferenceNumber);
 	}
 
-	public void setConfirmerReferenceNumber(Max35Text confirmerReferenceNumber) {
+	public Demand1 setConfirmerReferenceNumber(Max35Text confirmerReferenceNumber) {
 		this.confirmerReferenceNumber = confirmerReferenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmAcct")
 	public List<CashAccount27> getSettlementAccount() {
-		return settlementAccount;
+		return settlementAccount == null ? settlementAccount = new ArrayList<>() : settlementAccount;
 	}
 
-	public void setSettlementAccount(List<com.tools20022.repository.msg.CashAccount27> settlementAccount) {
-		this.settlementAccount = settlementAccount;
+	public Demand1 setSettlementAccount(List<com.tools20022.repository.msg.CashAccount27> settlementAccount) {
+		this.settlementAccount = Objects.requireNonNull(settlementAccount);
+		return this;
 	}
 
-	@XmlElement(name = "PresntnDtls")
-	public Presentation2 getPresentationDetails() {
-		return presentationDetails;
+	public Optional<Presentation2> getPresentationDetails() {
+		return presentationDetails == null ? Optional.empty() : Optional.of(presentationDetails);
 	}
 
-	public void setPresentationDetails(com.tools20022.repository.msg.Presentation2 presentationDetails) {
+	public Demand1 setPresentationDetails(com.tools20022.repository.msg.Presentation2 presentationDetails) {
 		this.presentationDetails = presentationDetails;
+		return this;
 	}
 
-	@XmlElement(name = "ReqdXpryDt")
-	public ISODate getRequestedExpiryDate() {
-		return requestedExpiryDate;
+	public Optional<ISODate> getRequestedExpiryDate() {
+		return requestedExpiryDate == null ? Optional.empty() : Optional.of(requestedExpiryDate);
 	}
 
-	public void setRequestedExpiryDate(ISODate requestedExpiryDate) {
+	public Demand1 setRequestedExpiryDate(ISODate requestedExpiryDate) {
 		this.requestedExpiryDate = requestedExpiryDate;
+		return this;
 	}
 
-	@XmlElement(name = "DmndDcmnttn")
-	public DemandDocumentation1 getDemandDocumentation() {
-		return demandDocumentation;
+	public Optional<DemandDocumentation1> getDemandDocumentation() {
+		return demandDocumentation == null ? Optional.empty() : Optional.of(demandDocumentation);
 	}
 
-	public void setDemandDocumentation(com.tools20022.repository.msg.DemandDocumentation1 demandDocumentation) {
+	public Demand1 setDemandDocumentation(com.tools20022.repository.msg.DemandDocumentation1 demandDocumentation) {
 		this.demandDocumentation = demandDocumentation;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
-		return additionalInformation;
+		return additionalInformation == null ? additionalInformation = new ArrayList<>() : additionalInformation;
 	}
 
-	public void setAdditionalInformation(List<Max2000Text> additionalInformation) {
-		this.additionalInformation = additionalInformation;
+	public Demand1 setAdditionalInformation(List<Max2000Text> additionalInformation) {
+		this.additionalInformation = Objects.requireNonNull(additionalInformation);
+		return this;
 	}
 }

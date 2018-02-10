@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,7 @@ import com.tools20022.repository.entity.CorporateActionPrice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies prices."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionPrice4", propOrder = {"indicativePrice", "marketPrice"})
 public class CorporateActionPrice4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IndctvPric")
 	protected PriceFormat2Choice indicativePrice;
 	/**
-	 * Estimated price, eg, for valuation purposes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +110,7 @@ public class CorporateActionPrice4 {
 	public static final MMMessageAttribute mmIndicativePrice = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionPrice.mmObject();
-			componentContext_lazy = () -> CorporateActionPrice4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice4.mmObject();
 			isDerived = false;
 			xmlTag = "IndctvPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +121,11 @@ public class CorporateActionPrice4 {
 			complexType_lazy = () -> PriceFormat2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MktPric")
 	protected PriceFormat2Choice marketPrice;
 	/**
-	 * Last reported/known price of a financial instrument in a market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,6 +146,9 @@ public class CorporateActionPrice4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MktPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::MRKT//</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -156,9 +163,10 @@ public class CorporateActionPrice4 {
 	public static final MMMessageAttribute mmMarketPrice = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionPrice.mmObject();
-			componentContext_lazy = () -> CorporateActionPrice4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice4.mmObject();
 			isDerived = false;
 			xmlTag = "MktPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::MRKT//"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPrice";
 			definition = "Last reported/known price of a financial instrument in a market.";
@@ -171,9 +179,9 @@ public class CorporateActionPrice4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionPrice4.mmIndicativePrice, CorporateActionPrice4.mmMarketPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice4.mmIndicativePrice, com.tools20022.repository.msg.CorporateActionPrice4.mmMarketPrice);
 				trace_lazy = () -> CorporateActionPrice.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice4";
 				definition = "Specifies prices.";
@@ -182,21 +190,21 @@ public class CorporateActionPrice4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IndctvPric")
-	public PriceFormat2Choice getIndicativePrice() {
-		return indicativePrice;
+	public Optional<PriceFormat2Choice> getIndicativePrice() {
+		return indicativePrice == null ? Optional.empty() : Optional.of(indicativePrice);
 	}
 
-	public void setIndicativePrice(PriceFormat2Choice indicativePrice) {
+	public CorporateActionPrice4 setIndicativePrice(PriceFormat2Choice indicativePrice) {
 		this.indicativePrice = indicativePrice;
+		return this;
 	}
 
-	@XmlElement(name = "MktPric")
-	public PriceFormat2Choice getMarketPrice() {
-		return marketPrice;
+	public Optional<PriceFormat2Choice> getMarketPrice() {
+		return marketPrice == null ? Optional.empty() : Optional.of(marketPrice);
 	}
 
-	public void setMarketPrice(PriceFormat2Choice marketPrice) {
+	public CorporateActionPrice4 setMarketPrice(PriceFormat2Choice marketPrice) {
 		this.marketPrice = marketPrice;
+		return this;
 	}
 }

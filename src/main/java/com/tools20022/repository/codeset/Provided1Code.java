@@ -20,32 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ProvidedCode;
+import com.tools20022.repository.codeset.Provided1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether items have been provided.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ProvidedCode ProvidedCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Provided1Code#mmNotProvided
- * Provided1Code.mmNotProvided}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Provided1Code#mmProvided
- * Provided1Code.mmProvided}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Provided1Code#NotProvided
+ * Provided1Code.NotProvided}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Provided1Code#Provided
+ * Provided1Code.Provided}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ProvidedCode ProvidedCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -62,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies whether items have been provided."</li>
  * </ul>
  */
-public class Provided1Code extends ProvidedCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Provided1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -81,11 +85,12 @@ public class Provided1Code extends ProvidedCode {
 	 * name} = "NotProvided"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotProvided = new MMCode() {
+	public static final Provided1Code NotProvided = new Provided1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotProvided";
-			owner_lazy = () -> Provided1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Provided1Code.mmObject();
+			codeName = ProvidedCode.NotProvided.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -104,26 +109,57 @@ public class Provided1Code extends ProvidedCode {
 	 * name} = "Provided"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProvided = new MMCode() {
+	public static final Provided1Code Provided = new Provided1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Provided";
-			owner_lazy = () -> Provided1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Provided1Code.mmObject();
+			codeName = ProvidedCode.Provided.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Provided1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Provided1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NPRO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Provided1Code";
 				definition = "Specifies whether items have been provided.";
-				code_lazy = () -> Arrays.asList(Provided1Code.mmNotProvided, Provided1Code.mmProvided);
 				trace_lazy = () -> ProvidedCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Provided1Code.NotProvided, com.tools20022.repository.codeset.Provided1Code.Provided);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NotProvided.getCodeName().get(), NotProvided);
+		codesByName.put(Provided.getCodeName().get(), Provided);
+	}
+
+	public static Provided1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Provided1Code[] values() {
+		Provided1Code[] values = new Provided1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Provided1Code> {
+		@Override
+		public Provided1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Provided1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Date by which the securities should be blocked.
@@ -37,6 +38,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Deadline Deadline}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -45,13 +48,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesBlockingDeadline.mmBlockingPeriod}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Deadline Deadline}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,9 +68,8 @@ public class SecuritiesBlockingDeadline extends Deadline {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected DateTimePeriod blockingPeriod;
 	/**
-	 * Period during which the securities are blocked, ie, not available for
-	 * exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,8 +122,8 @@ public class SecuritiesBlockingDeadline extends Deadline {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmBlockingPeriod, CorporateActionPeriod6.mmBlockingPeriod, CorporateActionPeriod8.mmBlockingPeriod, EligibilityDates.mmBlockingPeriod,
 					CorporateActionPeriod1.mmBlockingPeriod, CorporateActionPeriod10.mmBlockingPeriod);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesBlockingDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesBlockingDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BlockingPeriod";
 			definition = "Period during which the securities are blocked, ie, not available for exchange.";
@@ -144,7 +144,7 @@ public class SecuritiesBlockingDeadline extends Deadline {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBlockingDeadline";
 				definition = "Date by which the securities should be blocked.";
@@ -164,7 +164,8 @@ public class SecuritiesBlockingDeadline extends Deadline {
 		return blockingPeriod;
 	}
 
-	public void setBlockingPeriod(com.tools20022.repository.entity.DateTimePeriod blockingPeriod) {
-		this.blockingPeriod = blockingPeriod;
+	public SecuritiesBlockingDeadline setBlockingPeriod(com.tools20022.repository.entity.DateTimePeriod blockingPeriod) {
+		this.blockingPeriod = Objects.requireNonNull(blockingPeriod);
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -29,6 +30,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -85,8 +88,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,16 +111,17 @@ import javax.xml.bind.annotation.XmlType;
  * CashOptionSD1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CashOptionSD6", propOrder = {"placeAndName", "DTCPayMethod", "DTCPayOrder", "entitlementCalculationMethod", "estimatedRateFlag", "NRATaxReportableFlag", "protectChargeFlag", "declaredCashRate", "declaredGrossRate",
-		"declaredNetRate", "declaredFeeRate", "DTCUSTaxInstructionPeriod", "RDPReferenceNumber"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CashOptionSD6", propOrder = {"placeAndName", "dTCPayMethod", "dTCPayOrder", "entitlementCalculationMethod", "estimatedRateFlag", "nRATaxReportableFlag", "protectChargeFlag", "declaredCashRate", "declaredGrossRate",
+		"declaredNetRate", "declaredFeeRate", "dTCUSTaxInstructionPeriod", "rDPReferenceNumber"})
 public class CashOptionSD6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +160,7 @@ public class CashOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,12 +173,11 @@ public class CashOptionSD6 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCPayMtd")
 	protected Max3Text dTCPayMethod;
 	/**
-	 * Indicates the type of payment. Used in stock dividends processing at DTC
-	 * (The Depository Trust Corporation). Valid values list will be maintained
-	 * separately from the schema.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,6 +190,9 @@ public class CashOptionSD6 {
 	 * {@linkplain com.tools20022.repository.msg.CashOptionSD6 CashOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCPayMtd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Pay Method</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -215,9 +221,10 @@ public class CashOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmDTCPayMethod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DTCPayMtd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Pay Method"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayMethod";
 			definition = "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema. ";
@@ -228,12 +235,11 @@ public class CashOptionSD6 {
 			simpleType_lazy = () -> Max3Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCPayOrdr")
 	protected Max3Text dTCPayOrder;
 	/**
-	 * Indicates the payment order. Used in stock dividends processing at DTC
-	 * (The Depository Trust Corporation). Valid values list will be maintained
-	 * separately from the schema.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -246,6 +252,9 @@ public class CashOptionSD6 {
 	 * {@linkplain com.tools20022.repository.msg.CashOptionSD6 CashOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCPayOrdr"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Pay Order</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -274,9 +283,10 @@ public class CashOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmDTCPayOrder = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DTCPayOrdr";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Pay Order"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayOrder";
 			definition = "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema.";
@@ -287,10 +297,11 @@ public class CashOptionSD6 {
 			simpleType_lazy = () -> Max3Text.mmObject();
 		}
 	};
+	@XmlElement(name = "EntitlmntClctnMtd")
 	protected DTCEntitlementCalculationMethod1Code entitlementCalculationMethod;
 	/**
-	 * Indicates how the entitlements were calculated optional dividends.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -304,6 +315,9 @@ public class CashOptionSD6 {
 	 * {@linkplain com.tools20022.repository.msg.CashOptionSD6 CashOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EntitlmntClctnMtd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Entitlement Calculation Method</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -331,9 +345,10 @@ public class CashOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmEntitlementCalculationMethod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "EntitlmntClctnMtd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Entitlement Calculation Method"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementCalculationMethod";
 			definition = "Indicates how the entitlements were calculated optional dividends.";
@@ -344,10 +359,11 @@ public class CashOptionSD6 {
 			simpleType_lazy = () -> DTCEntitlementCalculationMethod1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "EstmtdRateFlg")
 	protected YesNoIndicator estimatedRateFlag;
 	/**
-	 * Denotes whether the rate is approximate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -361,6 +377,9 @@ public class CashOptionSD6 {
 	 * {@linkplain com.tools20022.repository.msg.CashOptionSD6 CashOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EstmtdRateFlg"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Estimated Rate Flag</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -387,9 +406,10 @@ public class CashOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmEstimatedRateFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdRateFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Estimated Rate Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedRateFlag";
 			definition = "Denotes whether the rate is approximate.";
@@ -400,11 +420,11 @@ public class CashOptionSD6 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "NRATaxRptblFlg")
 	protected YesNoIndicator nRATaxReportableFlag;
 	/**
-	 * Identifies the income events which are subject to withholding tax if paid
-	 * to a non-U.S. resident alien (NRA).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -418,6 +438,9 @@ public class CashOptionSD6 {
 	 * {@linkplain com.tools20022.repository.msg.CashOptionSD6 CashOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NRATaxRptblFlg"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: NRA Tax Reportable Flag</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -446,9 +469,10 @@ public class CashOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmNRATaxReportableFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "NRATaxRptblFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "NRA Tax Reportable Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NRATaxReportableFlag";
 			definition = "Identifies the income events which are subject to withholding tax if paid to a non-U.S. resident alien (NRA).";
@@ -459,15 +483,11 @@ public class CashOptionSD6 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctChrgFlg")
 	protected YesNoIndicator protectChargeFlag;
 	/**
-	 * Indicates whether a charge is levied on the protect instructions at the
-	 * time when the protect is submitted or at the time of the cover. Applies
-	 * to warrants or rights exercise scenario where the holder must put up
-	 * money with rights or warrants execution. When this flag is set to yes -
-	 * charges are due at the time of the protect, when it is set to "no"
-	 * changes are due when protect is covered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -481,6 +501,9 @@ public class CashOptionSD6 {
 	 * {@linkplain com.tools20022.repository.msg.CashOptionSD6 CashOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrtctChrgFlg"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Protect Charge Flag</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -509,9 +532,10 @@ public class CashOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmProtectChargeFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctChrgFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Protect Charge Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectChargeFlag";
 			definition = "Indicates whether a charge is levied on the protect instructions at the time when the protect is submitted or at the time of the cover. Applies to warrants or rights exercise scenario where the holder must put up money with rights or warrants execution. When this flag is set to yes - charges are due at the time of the protect, when it is set to \"no\" changes are due when protect is covered.";
@@ -522,11 +546,11 @@ public class CashOptionSD6 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "DclrdCshRate")
 	protected PriceFormatSD1Choice declaredCashRate;
 	/**
-	 * Cash rate associated to the payout as declared on the market by the
-	 * issuer or offeror.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -540,6 +564,9 @@ public class CashOptionSD6 {
 	 * {@linkplain com.tools20022.repository.msg.CashOptionSD6 CashOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DclrdCshRate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Declared Cash Rate</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -568,9 +595,10 @@ public class CashOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmDeclaredCashRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdCshRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Declared Cash Rate"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredCashRate";
 			definition = "Cash rate associated to the payout as declared  on the market by the issuer or offeror.";
@@ -581,11 +609,11 @@ public class CashOptionSD6 {
 			complexType_lazy = () -> PriceFormatSD1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DclrdGrssRate")
 	protected PriceFormatSD1Choice declaredGrossRate;
 	/**
-	 * Gross cash rate associated to the payout as declared on the market by the
-	 * issuer or offeror.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -599,6 +627,9 @@ public class CashOptionSD6 {
 	 * {@linkplain com.tools20022.repository.msg.CashOptionSD6 CashOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DclrdGrssRate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Declared Gross Rate</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -627,9 +658,10 @@ public class CashOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmDeclaredGrossRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdGrssRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Declared Gross Rate"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredGrossRate";
 			definition = "Gross cash rate associated to the payout as declared on the market by the issuer or offeror.";
@@ -640,11 +672,11 @@ public class CashOptionSD6 {
 			complexType_lazy = () -> PriceFormatSD1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DclrdNetRate")
 	protected PriceFormatSD1Choice declaredNetRate;
 	/**
-	 * Net cash rate associated to the payout as declared on the market by the
-	 * issuer or offeror.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -658,6 +690,9 @@ public class CashOptionSD6 {
 	 * {@linkplain com.tools20022.repository.msg.CashOptionSD6 CashOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DclrdNetRate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Declared Net Rate</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -686,9 +721,10 @@ public class CashOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmDeclaredNetRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdNetRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Declared Net Rate"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredNetRate";
 			definition = "Net cash rate associated to the payout as declared on the market by the issuer or offeror.";
@@ -699,10 +735,11 @@ public class CashOptionSD6 {
 			complexType_lazy = () -> PriceFormatSD1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DclrdFeeRate")
 	protected PriceFormatSD1Choice declaredFeeRate;
 	/**
-	 * Rate at which the fee will be charged to a DTC participant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -716,6 +753,10 @@ public class CashOptionSD6 {
 	 * {@linkplain com.tools20022.repository.msg.CashOptionSD6 CashOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DclrdFeeRate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Declared Fee Rate, DTCCSynonym: Currency
+	 * (Declared Fee Rate)</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -743,9 +784,10 @@ public class CashOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmDeclaredFeeRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdFeeRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Declared Fee Rate"), new DTCCSynonym(this, "Currency (Declared Fee Rate)"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredFeeRate";
 			definition = "Rate at which the fee will be charged to a DTC participant.";
@@ -756,11 +798,11 @@ public class CashOptionSD6 {
 			complexType_lazy = () -> PriceFormatSD1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCUSTaxInstrPrd")
 	protected Period3 dTCUSTaxInstructionPeriod;
 	/**
-	 * Indicates the period during which the instructions for DTC (The
-	 * Depository Trust Corporation) US Tax service will be accepted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -773,6 +815,10 @@ public class CashOptionSD6 {
 	 * {@linkplain com.tools20022.repository.msg.CashOptionSD6 CashOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCUSTaxInstrPrd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC NRA Tax Instruction Expiration Date,
+	 * DTCCSynonym: DTC NRA Tax Instruction Start Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -801,9 +847,10 @@ public class CashOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmDTCUSTaxInstructionPeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DTCUSTaxInstrPrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC NRA Tax Instruction Expiration Date"), new DTCCSynonym(this, "DTC NRA Tax Instruction Start Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCUSTaxInstructionPeriod";
 			definition = "Indicates the period during which the instructions for DTC (The Depository Trust Corporation) US Tax service will be accepted.";
@@ -814,17 +861,11 @@ public class CashOptionSD6 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
 		}
 	};
+	@XmlElement(name = "RDPRefNb")
 	protected Exact32AlphaNumericText rDPReferenceNumber;
 	/**
-	 * Unique DTCC legacy reference used for matching and reconciling legacy
-	 * records. The number algorhithm is as follows: Department ID (1:1),
-	 * Activity Type (2:3), Cusip Country Code (5:2), Cusip (7:9), Record Date
-	 * (15:8), Payable Date (22:8), Sequence Number (29:3), RDP Issue Type
-	 * (31:1). <br>
-	 * USAGE RULE: this sequence can be populated /extended to event details,
-	 * option details or a movement, depending on sequence number coordinality
-	 * to an event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -861,7 +902,7 @@ public class CashOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmRDPReferenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "RDPRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -877,10 +918,12 @@ public class CashOptionSD6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashOptionSD6.mmPlaceAndName, CashOptionSD6.mmDTCPayMethod, CashOptionSD6.mmDTCPayOrder, CashOptionSD6.mmEntitlementCalculationMethod, CashOptionSD6.mmEstimatedRateFlag,
-						CashOptionSD6.mmNRATaxReportableFlag, CashOptionSD6.mmProtectChargeFlag, CashOptionSD6.mmDeclaredCashRate, CashOptionSD6.mmDeclaredGrossRate, CashOptionSD6.mmDeclaredNetRate, CashOptionSD6.mmDeclaredFeeRate,
-						CashOptionSD6.mmDTCUSTaxInstructionPeriod, CashOptionSD6.mmRDPReferenceNumber);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD6.mmPlaceAndName, com.tools20022.repository.msg.CashOptionSD6.mmDTCPayMethod, com.tools20022.repository.msg.CashOptionSD6.mmDTCPayOrder,
+						com.tools20022.repository.msg.CashOptionSD6.mmEntitlementCalculationMethod, com.tools20022.repository.msg.CashOptionSD6.mmEstimatedRateFlag, com.tools20022.repository.msg.CashOptionSD6.mmNRATaxReportableFlag,
+						com.tools20022.repository.msg.CashOptionSD6.mmProtectChargeFlag, com.tools20022.repository.msg.CashOptionSD6.mmDeclaredCashRate, com.tools20022.repository.msg.CashOptionSD6.mmDeclaredGrossRate,
+						com.tools20022.repository.msg.CashOptionSD6.mmDeclaredNetRate, com.tools20022.repository.msg.CashOptionSD6.mmDeclaredFeeRate, com.tools20022.repository.msg.CashOptionSD6.mmDTCUSTaxInstructionPeriod,
+						com.tools20022.repository.msg.CashOptionSD6.mmRDPReferenceNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashOptionSD6";
 				definition = "Provides additional information regarding corporate action option cash movement details.";
@@ -891,120 +934,120 @@ public class CashOptionSD6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CashOptionSD6 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "DTCPayMtd")
-	public Max3Text getDTCPayMethod() {
-		return dTCPayMethod;
+	public Optional<Max3Text> getDTCPayMethod() {
+		return dTCPayMethod == null ? Optional.empty() : Optional.of(dTCPayMethod);
 	}
 
-	public void setDTCPayMethod(Max3Text dTCPayMethod) {
+	public CashOptionSD6 setDTCPayMethod(Max3Text dTCPayMethod) {
 		this.dTCPayMethod = dTCPayMethod;
+		return this;
 	}
 
-	@XmlElement(name = "DTCPayOrdr")
-	public Max3Text getDTCPayOrder() {
-		return dTCPayOrder;
+	public Optional<Max3Text> getDTCPayOrder() {
+		return dTCPayOrder == null ? Optional.empty() : Optional.of(dTCPayOrder);
 	}
 
-	public void setDTCPayOrder(Max3Text dTCPayOrder) {
+	public CashOptionSD6 setDTCPayOrder(Max3Text dTCPayOrder) {
 		this.dTCPayOrder = dTCPayOrder;
+		return this;
 	}
 
-	@XmlElement(name = "EntitlmntClctnMtd")
-	public DTCEntitlementCalculationMethod1Code getEntitlementCalculationMethod() {
-		return entitlementCalculationMethod;
+	public Optional<DTCEntitlementCalculationMethod1Code> getEntitlementCalculationMethod() {
+		return entitlementCalculationMethod == null ? Optional.empty() : Optional.of(entitlementCalculationMethod);
 	}
 
-	public void setEntitlementCalculationMethod(DTCEntitlementCalculationMethod1Code entitlementCalculationMethod) {
+	public CashOptionSD6 setEntitlementCalculationMethod(DTCEntitlementCalculationMethod1Code entitlementCalculationMethod) {
 		this.entitlementCalculationMethod = entitlementCalculationMethod;
+		return this;
 	}
 
-	@XmlElement(name = "EstmtdRateFlg")
-	public YesNoIndicator getEstimatedRateFlag() {
-		return estimatedRateFlag;
+	public Optional<YesNoIndicator> getEstimatedRateFlag() {
+		return estimatedRateFlag == null ? Optional.empty() : Optional.of(estimatedRateFlag);
 	}
 
-	public void setEstimatedRateFlag(YesNoIndicator estimatedRateFlag) {
+	public CashOptionSD6 setEstimatedRateFlag(YesNoIndicator estimatedRateFlag) {
 		this.estimatedRateFlag = estimatedRateFlag;
+		return this;
 	}
 
-	@XmlElement(name = "NRATaxRptblFlg")
-	public YesNoIndicator getNRATaxReportableFlag() {
-		return nRATaxReportableFlag;
+	public Optional<YesNoIndicator> getNRATaxReportableFlag() {
+		return nRATaxReportableFlag == null ? Optional.empty() : Optional.of(nRATaxReportableFlag);
 	}
 
-	public void setNRATaxReportableFlag(YesNoIndicator nRATaxReportableFlag) {
+	public CashOptionSD6 setNRATaxReportableFlag(YesNoIndicator nRATaxReportableFlag) {
 		this.nRATaxReportableFlag = nRATaxReportableFlag;
+		return this;
 	}
 
-	@XmlElement(name = "PrtctChrgFlg")
-	public YesNoIndicator getProtectChargeFlag() {
-		return protectChargeFlag;
+	public Optional<YesNoIndicator> getProtectChargeFlag() {
+		return protectChargeFlag == null ? Optional.empty() : Optional.of(protectChargeFlag);
 	}
 
-	public void setProtectChargeFlag(YesNoIndicator protectChargeFlag) {
+	public CashOptionSD6 setProtectChargeFlag(YesNoIndicator protectChargeFlag) {
 		this.protectChargeFlag = protectChargeFlag;
+		return this;
 	}
 
-	@XmlElement(name = "DclrdCshRate")
-	public PriceFormatSD1Choice getDeclaredCashRate() {
-		return declaredCashRate;
+	public Optional<PriceFormatSD1Choice> getDeclaredCashRate() {
+		return declaredCashRate == null ? Optional.empty() : Optional.of(declaredCashRate);
 	}
 
-	public void setDeclaredCashRate(PriceFormatSD1Choice declaredCashRate) {
+	public CashOptionSD6 setDeclaredCashRate(PriceFormatSD1Choice declaredCashRate) {
 		this.declaredCashRate = declaredCashRate;
+		return this;
 	}
 
-	@XmlElement(name = "DclrdGrssRate")
-	public PriceFormatSD1Choice getDeclaredGrossRate() {
-		return declaredGrossRate;
+	public Optional<PriceFormatSD1Choice> getDeclaredGrossRate() {
+		return declaredGrossRate == null ? Optional.empty() : Optional.of(declaredGrossRate);
 	}
 
-	public void setDeclaredGrossRate(PriceFormatSD1Choice declaredGrossRate) {
+	public CashOptionSD6 setDeclaredGrossRate(PriceFormatSD1Choice declaredGrossRate) {
 		this.declaredGrossRate = declaredGrossRate;
+		return this;
 	}
 
-	@XmlElement(name = "DclrdNetRate")
-	public PriceFormatSD1Choice getDeclaredNetRate() {
-		return declaredNetRate;
+	public Optional<PriceFormatSD1Choice> getDeclaredNetRate() {
+		return declaredNetRate == null ? Optional.empty() : Optional.of(declaredNetRate);
 	}
 
-	public void setDeclaredNetRate(PriceFormatSD1Choice declaredNetRate) {
+	public CashOptionSD6 setDeclaredNetRate(PriceFormatSD1Choice declaredNetRate) {
 		this.declaredNetRate = declaredNetRate;
+		return this;
 	}
 
-	@XmlElement(name = "DclrdFeeRate")
-	public PriceFormatSD1Choice getDeclaredFeeRate() {
-		return declaredFeeRate;
+	public Optional<PriceFormatSD1Choice> getDeclaredFeeRate() {
+		return declaredFeeRate == null ? Optional.empty() : Optional.of(declaredFeeRate);
 	}
 
-	public void setDeclaredFeeRate(PriceFormatSD1Choice declaredFeeRate) {
+	public CashOptionSD6 setDeclaredFeeRate(PriceFormatSD1Choice declaredFeeRate) {
 		this.declaredFeeRate = declaredFeeRate;
+		return this;
 	}
 
-	@XmlElement(name = "DTCUSTaxInstrPrd")
-	public Period3 getDTCUSTaxInstructionPeriod() {
-		return dTCUSTaxInstructionPeriod;
+	public Optional<Period3> getDTCUSTaxInstructionPeriod() {
+		return dTCUSTaxInstructionPeriod == null ? Optional.empty() : Optional.of(dTCUSTaxInstructionPeriod);
 	}
 
-	public void setDTCUSTaxInstructionPeriod(com.tools20022.repository.msg.Period3 dTCUSTaxInstructionPeriod) {
+	public CashOptionSD6 setDTCUSTaxInstructionPeriod(com.tools20022.repository.msg.Period3 dTCUSTaxInstructionPeriod) {
 		this.dTCUSTaxInstructionPeriod = dTCUSTaxInstructionPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "RDPRefNb")
-	public Exact32AlphaNumericText getRDPReferenceNumber() {
-		return rDPReferenceNumber;
+	public Optional<Exact32AlphaNumericText> getRDPReferenceNumber() {
+		return rDPReferenceNumber == null ? Optional.empty() : Optional.of(rDPReferenceNumber);
 	}
 
-	public void setRDPReferenceNumber(Exact32AlphaNumericText rDPReferenceNumber) {
+	public CashOptionSD6 setRDPReferenceNumber(Exact32AlphaNumericText rDPReferenceNumber) {
 		this.rDPReferenceNumber = rDPReferenceNumber;
+		return this;
 	}
 }

@@ -20,38 +20,40 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.LimitStatusCode;
+import com.tools20022.repository.codeset.LimitStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the current status of a limit.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.LimitStatus1Code#Enabled
+ * LimitStatus1Code.Enabled}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LimitStatus1Code#Disabled
+ * LimitStatus1Code.Disabled}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LimitStatus1Code#Deleted
+ * LimitStatus1Code.Deleted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LimitStatus1Code#Requested
+ * LimitStatus1Code.Requested}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.LimitStatusCode
  * LimitStatusCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.LimitStatus1Code#mmEnabled
- * LimitStatus1Code.mmEnabled}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitStatus1Code#mmDisabled
- * LimitStatus1Code.mmDisabled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LimitStatus1Code#mmDeleted
- * LimitStatus1Code.mmDeleted}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitStatus1Code#mmRequested
- * LimitStatus1Code.mmRequested}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the current status of a limit."</li>
  * </ul>
  */
-public class LimitStatus1Code extends LimitStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class LimitStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,11 +90,12 @@ public class LimitStatus1Code extends LimitStatusCode {
 	 * name} = "Enabled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEnabled = new MMCode() {
+	public static final LimitStatus1Code Enabled = new LimitStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabled";
-			owner_lazy = () -> LimitStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LimitStatus1Code.mmObject();
+			codeName = LimitStatusCode.Enabled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +114,12 @@ public class LimitStatus1Code extends LimitStatusCode {
 	 * name} = "Disabled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisabled = new MMCode() {
+	public static final LimitStatus1Code Disabled = new LimitStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disabled";
-			owner_lazy = () -> LimitStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LimitStatus1Code.mmObject();
+			codeName = LimitStatusCode.Disabled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,11 +138,12 @@ public class LimitStatus1Code extends LimitStatusCode {
 	 * name} = "Deleted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeleted = new MMCode() {
+	public static final LimitStatus1Code Deleted = new LimitStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
-			owner_lazy = () -> LimitStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LimitStatus1Code.mmObject();
+			codeName = LimitStatusCode.Deleted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -156,26 +162,60 @@ public class LimitStatus1Code extends LimitStatusCode {
 	 * name} = "Requested"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRequested = new MMCode() {
+	public static final LimitStatus1Code Requested = new LimitStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Requested";
-			owner_lazy = () -> LimitStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LimitStatus1Code.mmObject();
+			codeName = LimitStatusCode.Requested.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, LimitStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected LimitStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ENAB");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LimitStatus1Code";
 				definition = "Specifies the current status of a limit.";
-				code_lazy = () -> Arrays.asList(LimitStatus1Code.mmEnabled, LimitStatus1Code.mmDisabled, LimitStatus1Code.mmDeleted, LimitStatus1Code.mmRequested);
 				trace_lazy = () -> LimitStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LimitStatus1Code.Enabled, com.tools20022.repository.codeset.LimitStatus1Code.Disabled, com.tools20022.repository.codeset.LimitStatus1Code.Deleted,
+						com.tools20022.repository.codeset.LimitStatus1Code.Requested);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Enabled.getCodeName().get(), Enabled);
+		codesByName.put(Disabled.getCodeName().get(), Disabled);
+		codesByName.put(Deleted.getCodeName().get(), Deleted);
+		codesByName.put(Requested.getCodeName().get(), Requested);
+	}
+
+	public static LimitStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static LimitStatus1Code[] values() {
+		LimitStatus1Code[] values = new LimitStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, LimitStatus1Code> {
+		@Override
+		public LimitStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(LimitStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

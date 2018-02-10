@@ -20,45 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ATMCommandCode;
+import com.tools20022.repository.codeset.ATMCommand1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of command to be performed by an ATM.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ATMCommandCode ATMCommandCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand1Code#ATMBalance
+ * ATMCommand1Code.ATMBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#mmATMBalance
- * ATMCommand1Code.mmATMBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#ATMStatusUpdate
+ * ATMCommand1Code.ATMStatusUpdate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#mmATMStatusUpdate
- * ATMCommand1Code.mmATMStatusUpdate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#ConfigurationUpdate
+ * ATMCommand1Code.ConfigurationUpdate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#mmConfigurationUpdate
- * ATMCommand1Code.mmConfigurationUpdate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#CountersInquiry
+ * ATMCommand1Code.CountersInquiry}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand1Code#Disconnect
+ * ATMCommand1Code.Disconnect}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#mmCountersInquiry
- * ATMCommand1Code.mmCountersInquiry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#mmDisconnect
- * ATMCommand1Code.mmDisconnect}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#mmSendMessage
- * ATMCommand1Code.mmSendMessage}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand1Code#SendMessage
+ * ATMCommand1Code.SendMessage}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandCode ATMCommandCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of command to be performed by an ATM."</li>
  * </ul>
  */
-public class ATMCommand1Code extends ATMCommandCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ATMCommand1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,11 +91,12 @@ public class ATMCommand1Code extends ATMCommandCode {
 	 * name} = "ATMBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmATMBalance = new MMCode() {
+	public static final ATMCommand1Code ATMBalance = new ATMCommand1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMBalance";
-			owner_lazy = () -> ATMCommand1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand1Code.mmObject();
+			codeName = ATMCommandCode.ATMBalance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -111,11 +115,12 @@ public class ATMCommand1Code extends ATMCommandCode {
 	 * name} = "ATMStatusUpdate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmATMStatusUpdate = new MMCode() {
+	public static final ATMCommand1Code ATMStatusUpdate = new ATMCommand1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMStatusUpdate";
-			owner_lazy = () -> ATMCommand1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand1Code.mmObject();
+			codeName = ATMCommandCode.ATMStatusUpdate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -134,11 +139,12 @@ public class ATMCommand1Code extends ATMCommandCode {
 	 * name} = "ConfigurationUpdate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConfigurationUpdate = new MMCode() {
+	public static final ATMCommand1Code ConfigurationUpdate = new ATMCommand1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfigurationUpdate";
-			owner_lazy = () -> ATMCommand1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand1Code.mmObject();
+			codeName = ATMCommandCode.ConfigurationUpdate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -157,11 +163,12 @@ public class ATMCommand1Code extends ATMCommandCode {
 	 * name} = "CountersInquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCountersInquiry = new MMCode() {
+	public static final ATMCommand1Code CountersInquiry = new ATMCommand1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersInquiry";
-			owner_lazy = () -> ATMCommand1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand1Code.mmObject();
+			codeName = ATMCommandCode.CountersInquiry.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -180,11 +187,12 @@ public class ATMCommand1Code extends ATMCommandCode {
 	 * name} = "Disconnect"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisconnect = new MMCode() {
+	public static final ATMCommand1Code Disconnect = new ATMCommand1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disconnect";
-			owner_lazy = () -> ATMCommand1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand1Code.mmObject();
+			codeName = ATMCommandCode.Disconnect.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -203,26 +211,62 @@ public class ATMCommand1Code extends ATMCommandCode {
 	 * name} = "SendMessage"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSendMessage = new MMCode() {
+	public static final ATMCommand1Code SendMessage = new ATMCommand1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendMessage";
-			owner_lazy = () -> ATMCommand1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand1Code.mmObject();
+			codeName = ATMCommandCode.SendMessage.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ATMCommand1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ATMCommand1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand1Code";
 				definition = "Type of command to be performed by an ATM.";
-				code_lazy = () -> Arrays.asList(ATMCommand1Code.mmATMBalance, ATMCommand1Code.mmATMStatusUpdate, ATMCommand1Code.mmConfigurationUpdate, ATMCommand1Code.mmCountersInquiry, ATMCommand1Code.mmDisconnect,
-						ATMCommand1Code.mmSendMessage);
 				trace_lazy = () -> ATMCommandCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCommand1Code.ATMBalance, com.tools20022.repository.codeset.ATMCommand1Code.ATMStatusUpdate,
+						com.tools20022.repository.codeset.ATMCommand1Code.ConfigurationUpdate, com.tools20022.repository.codeset.ATMCommand1Code.CountersInquiry, com.tools20022.repository.codeset.ATMCommand1Code.Disconnect,
+						com.tools20022.repository.codeset.ATMCommand1Code.SendMessage);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ATMBalance.getCodeName().get(), ATMBalance);
+		codesByName.put(ATMStatusUpdate.getCodeName().get(), ATMStatusUpdate);
+		codesByName.put(ConfigurationUpdate.getCodeName().get(), ConfigurationUpdate);
+		codesByName.put(CountersInquiry.getCodeName().get(), CountersInquiry);
+		codesByName.put(Disconnect.getCodeName().get(), Disconnect);
+		codesByName.put(SendMessage.getCodeName().get(), SendMessage);
+	}
+
+	public static ATMCommand1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ATMCommand1Code[] values() {
+		ATMCommand1Code[] values = new ATMCommand1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ATMCommand1Code> {
+		@Override
+		public ATMCommand1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ATMCommand1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

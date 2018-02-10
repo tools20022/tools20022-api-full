@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DistributionInstructionTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of distribution instruction.
@@ -32,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#mmGlobalDebitOrder
- * DistributionInstructionTypeCode.mmGlobalDebitOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#GlobalDebitOrder
+ * DistributionInstructionTypeCode.GlobalDebitOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#mmIndividualOrder
- * DistributionInstructionTypeCode.mmIndividualOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#IndividualOrder
+ * DistributionInstructionTypeCode.IndividualOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#mmGlobalReturnOrder
- * DistributionInstructionTypeCode.mmGlobalReturnOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#GlobalReturnOrder
+ * DistributionInstructionTypeCode.GlobalReturnOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#mmOptionChangeOrder
- * DistributionInstructionTypeCode.mmOptionChangeOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#OptionChangeOrder
+ * DistributionInstructionTypeCode.OptionChangeOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#mmIndividualReturnOrder
- * DistributionInstructionTypeCode.mmIndividualReturnOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#IndividualReturnOrder
+ * DistributionInstructionTypeCode.IndividualReturnOrder}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -59,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of distribution instruction."</li>
  * </ul>
  */
-public class DistributionInstructionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DistributionInstructionTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -105,12 +111,12 @@ public class DistributionInstructionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmGlobalDebitOrder = new MMCode() {
+	public static final DistributionInstructionTypeCode GlobalDebitOrder = new DistributionInstructionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GlobalDebitOrder";
 			definition = "Instruction to debit the positions held under all clients accounts in the underlying resouces of the given event and option. This order applies to all clients who are eligible to participate to the CA event.";
-			owner_lazy = () -> DistributionInstructionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DistributionInstructionTypeCode.mmObject();
 			codeName = "GDEB";
 		}
 	};
@@ -139,12 +145,12 @@ public class DistributionInstructionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmIndividualOrder = new MMCode() {
+	public static final DistributionInstructionTypeCode IndividualOrder = new DistributionInstructionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndividualOrder";
 			definition = "An instruction, on a per client basis, to debit the position held in the underlying resources (securities and/or cash) and/or the credit of the proceeds (securities and/or cash).";
-			owner_lazy = () -> DistributionInstructionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DistributionInstructionTypeCode.mmObject();
 			codeName = "IDEB";
 		}
 	};
@@ -172,12 +178,12 @@ public class DistributionInstructionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmGlobalReturnOrder = new MMCode() {
+	public static final DistributionInstructionTypeCode GlobalReturnOrder = new DistributionInstructionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GlobalReturnOrder";
 			definition = "Instruction to transfer securities from the clients sequestered balances back to the respective available balances.";
-			owner_lazy = () -> DistributionInstructionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DistributionInstructionTypeCode.mmObject();
 			codeName = "GRET";
 		}
 	};
@@ -206,12 +212,12 @@ public class DistributionInstructionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOptionChangeOrder = new MMCode() {
+	public static final DistributionInstructionTypeCode OptionChangeOrder = new DistributionInstructionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionChangeOrder";
 			definition = "Instruction to transfer the position from one sequestered balance (related to a CA option) to another sequestered balalnce (related to another CA option).";
-			owner_lazy = () -> DistributionInstructionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DistributionInstructionTypeCode.mmObject();
 			codeName = "CHAN";
 		}
 	};
@@ -239,29 +245,63 @@ public class DistributionInstructionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmIndividualReturnOrder = new MMCode() {
+	public static final DistributionInstructionTypeCode IndividualReturnOrder = new DistributionInstructionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndividualReturnOrder";
 			definition = "Instruction to transfer securities from a client sequestered balance back to its available balance.";
-			owner_lazy = () -> DistributionInstructionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DistributionInstructionTypeCode.mmObject();
 			codeName = "IRET";
 		}
 	};
+	final static private LinkedHashMap<String, DistributionInstructionTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DistributionInstructionTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("GDEB");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DistributionInstructionTypeCode";
 				definition = "Specifies the type of distribution instruction.";
-				code_lazy = () -> Arrays.asList(DistributionInstructionTypeCode.mmGlobalDebitOrder, DistributionInstructionTypeCode.mmIndividualOrder, DistributionInstructionTypeCode.mmGlobalReturnOrder,
-						DistributionInstructionTypeCode.mmOptionChangeOrder, DistributionInstructionTypeCode.mmIndividualReturnOrder);
 				derivation_lazy = () -> Arrays.asList(DistributionInstructionType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionInstructionTypeCode.GlobalDebitOrder, com.tools20022.repository.codeset.DistributionInstructionTypeCode.IndividualOrder,
+						com.tools20022.repository.codeset.DistributionInstructionTypeCode.GlobalReturnOrder, com.tools20022.repository.codeset.DistributionInstructionTypeCode.OptionChangeOrder,
+						com.tools20022.repository.codeset.DistributionInstructionTypeCode.IndividualReturnOrder);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(GlobalDebitOrder.getCodeName().get(), GlobalDebitOrder);
+		codesByName.put(IndividualOrder.getCodeName().get(), IndividualOrder);
+		codesByName.put(GlobalReturnOrder.getCodeName().get(), GlobalReturnOrder);
+		codesByName.put(OptionChangeOrder.getCodeName().get(), OptionChangeOrder);
+		codesByName.put(IndividualReturnOrder.getCodeName().get(), IndividualReturnOrder);
+	}
+
+	public static DistributionInstructionTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DistributionInstructionTypeCode[] values() {
+		DistributionInstructionTypeCode[] values = new DistributionInstructionTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DistributionInstructionTypeCode> {
+		@Override
+		public DistributionInstructionTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DistributionInstructionTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

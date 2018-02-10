@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.InvestigatedPartiesCode;
+import com.tools20022.repository.codeset.InvestigatedParties1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the investigated parties.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.InvestigatedPartiesCode
- * InvestigatedPartiesCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigatedParties1Code#mmAllParties
- * InvestigatedParties1Code.mmAllParties}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigatedParties1Code#AllParties
+ * InvestigatedParties1Code.AllParties}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigatedParties1Code#mmOwner
- * InvestigatedParties1Code.mmOwner}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigatedParties1Code#Owner
+ * InvestigatedParties1Code.Owner}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.InvestigatedPartiesCode
+ * InvestigatedPartiesCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the investigated parties."</li>
  * </ul>
  */
-public class InvestigatedParties1Code extends InvestigatedPartiesCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InvestigatedParties1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class InvestigatedParties1Code extends InvestigatedPartiesCode {
 	 * name} = "AllParties"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAllParties = new MMCode() {
+	public static final InvestigatedParties1Code AllParties = new InvestigatedParties1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllParties";
-			owner_lazy = () -> InvestigatedParties1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestigatedParties1Code.mmObject();
+			codeName = InvestigatedPartiesCode.AllParties.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class InvestigatedParties1Code extends InvestigatedPartiesCode {
 	 * name} = "Owner"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOwner = new MMCode() {
+	public static final InvestigatedParties1Code Owner = new InvestigatedParties1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Owner";
-			owner_lazy = () -> InvestigatedParties1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestigatedParties1Code.mmObject();
+			codeName = InvestigatedPartiesCode.Owner.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, InvestigatedParties1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InvestigatedParties1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ALLP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestigatedParties1Code";
 				definition = "Specifies the investigated parties.";
-				code_lazy = () -> Arrays.asList(InvestigatedParties1Code.mmAllParties, InvestigatedParties1Code.mmOwner);
 				trace_lazy = () -> InvestigatedPartiesCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestigatedParties1Code.AllParties, com.tools20022.repository.codeset.InvestigatedParties1Code.Owner);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AllParties.getCodeName().get(), AllParties);
+		codesByName.put(Owner.getCodeName().get(), Owner);
+	}
+
+	public static InvestigatedParties1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InvestigatedParties1Code[] values() {
+		InvestigatedParties1Code[] values = new InvestigatedParties1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InvestigatedParties1Code> {
+		@Override
+		public InvestigatedParties1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InvestigatedParties1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

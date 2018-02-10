@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -30,6 +31,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +77,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,16 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * Statement19}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Statement46", propOrder = {"counterpartyPortfolioTransferNotificationReference", "reportNumber", "statementIdentification", "statementDateTime", "updateType", "activityIndicator"})
 public class Statement46 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CtrPtyPrtflTrfNtfctnRef")
 	protected Max35Text counterpartyPortfolioTransferNotificationReference;
 	/**
-	 * Identification assigned by the portfolio transfer counterpart to
-	 * unambiguously identify a portfolio transfer notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,7 +134,7 @@ public class Statement46 {
 	 */
 	public static final MMMessageAttribute mmCounterpartyPortfolioTransferNotificationReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement46.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement46.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyPrtflTrfNtfctnRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,10 +146,11 @@ public class Statement46 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RptNb")
 	protected Number3Choice reportNumber;
 	/**
-	 * Sequential number of the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,6 +164,9 @@ public class Statement46 {
 	 * {@linkplain com.tools20022.repository.msg.Statement46 Statement46}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RptNb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13a::STAT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -178,9 +185,10 @@ public class Statement46 {
 	 */
 	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement46.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement46.mmObject();
 			isDerived = false;
 			xmlTag = "RptNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13a::STAT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the report.";
@@ -190,10 +198,11 @@ public class Statement46 {
 			complexType_lazy = () -> Number3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtId")
 	protected Max35Text statementIdentification;
 	/**
-	 * Reference common to all pages of a statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -224,7 +233,7 @@ public class Statement46 {
 	 */
 	public static final MMMessageAttribute mmStatementIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement46.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement46.mmObject();
 			isDerived = false;
 			xmlTag = "StmtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,10 +245,11 @@ public class Statement46 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtDtTm", required = true)
 	protected DateAndDateTimeChoice statementDateTime;
 	/**
-	 * Date and time of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -253,6 +263,9 @@ public class Statement46 {
 	 * {@linkplain com.tools20022.repository.msg.Statement46 Statement46}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StmtDtTm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::STAT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -271,9 +284,10 @@ public class Statement46 {
 	 */
 	public static final MMMessageAttribute mmStatementDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement46.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement46.mmObject();
 			isDerived = false;
 			xmlTag = "StmtDtTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::STAT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDateTime";
 			definition = "Date and time of the statement.";
@@ -283,10 +297,11 @@ public class Statement46 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "UpdTp")
 	protected UpdateType15Choice updateType;
 	/**
-	 * Indicates whether the statement is complete or contains changes only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -298,6 +313,9 @@ public class Statement46 {
 	 * {@linkplain com.tools20022.repository.msg.Statement46 Statement46}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UpdTp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::CODE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -317,9 +335,10 @@ public class Statement46 {
 	 */
 	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Statement46.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement46.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CODE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the statement is complete or contains changes only.";
@@ -330,11 +349,11 @@ public class Statement46 {
 			type_lazy = () -> UpdateType15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ActvtyInd", required = true)
 	protected YesNoIndicator activityIndicator;
 	/**
-	 * Indicates whether there is activity or information update reported in the
-	 * statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -348,6 +367,9 @@ public class Statement46 {
 	 * {@linkplain com.tools20022.repository.msg.Statement46 Statement46}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ActvtyInd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :17B::ACTI</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -368,9 +390,10 @@ public class Statement46 {
 	 */
 	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement46.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement46.mmObject();
 			isDerived = false;
 			xmlTag = "ActvtyInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":17B::ACTI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
@@ -384,10 +407,11 @@ public class Statement46 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Statement46.mmCounterpartyPortfolioTransferNotificationReference, Statement46.mmReportNumber, Statement46.mmStatementIdentification, Statement46.mmStatementDateTime,
-						Statement46.mmUpdateType, Statement46.mmActivityIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement46.mmCounterpartyPortfolioTransferNotificationReference, com.tools20022.repository.msg.Statement46.mmReportNumber,
+						com.tools20022.repository.msg.Statement46.mmStatementIdentification, com.tools20022.repository.msg.Statement46.mmStatementDateTime, com.tools20022.repository.msg.Statement46.mmUpdateType,
+						com.tools20022.repository.msg.Statement46.mmActivityIndicator);
 				messageBuildingBlock_lazy = () -> Arrays.asList(PortfolioTransferNotificationV04.mmStatementGeneralDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Statement46";
 				definition = "Characteristics of the statement.";
@@ -397,57 +421,57 @@ public class Statement46 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CtrPtyPrtflTrfNtfctnRef")
-	public Max35Text getCounterpartyPortfolioTransferNotificationReference() {
-		return counterpartyPortfolioTransferNotificationReference;
+	public Optional<Max35Text> getCounterpartyPortfolioTransferNotificationReference() {
+		return counterpartyPortfolioTransferNotificationReference == null ? Optional.empty() : Optional.of(counterpartyPortfolioTransferNotificationReference);
 	}
 
-	public void setCounterpartyPortfolioTransferNotificationReference(Max35Text counterpartyPortfolioTransferNotificationReference) {
+	public Statement46 setCounterpartyPortfolioTransferNotificationReference(Max35Text counterpartyPortfolioTransferNotificationReference) {
 		this.counterpartyPortfolioTransferNotificationReference = counterpartyPortfolioTransferNotificationReference;
+		return this;
 	}
 
-	@XmlElement(name = "RptNb")
-	public Number3Choice getReportNumber() {
-		return reportNumber;
+	public Optional<Number3Choice> getReportNumber() {
+		return reportNumber == null ? Optional.empty() : Optional.of(reportNumber);
 	}
 
-	public void setReportNumber(Number3Choice reportNumber) {
+	public Statement46 setReportNumber(Number3Choice reportNumber) {
 		this.reportNumber = reportNumber;
+		return this;
 	}
 
-	@XmlElement(name = "StmtId")
-	public Max35Text getStatementIdentification() {
-		return statementIdentification;
+	public Optional<Max35Text> getStatementIdentification() {
+		return statementIdentification == null ? Optional.empty() : Optional.of(statementIdentification);
 	}
 
-	public void setStatementIdentification(Max35Text statementIdentification) {
+	public Statement46 setStatementIdentification(Max35Text statementIdentification) {
 		this.statementIdentification = statementIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "StmtDtTm", required = true)
 	public DateAndDateTimeChoice getStatementDateTime() {
 		return statementDateTime;
 	}
 
-	public void setStatementDateTime(DateAndDateTimeChoice statementDateTime) {
-		this.statementDateTime = statementDateTime;
+	public Statement46 setStatementDateTime(DateAndDateTimeChoice statementDateTime) {
+		this.statementDateTime = Objects.requireNonNull(statementDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "UpdTp")
-	public UpdateType15Choice getUpdateType() {
-		return updateType;
+	public Optional<UpdateType15Choice> getUpdateType() {
+		return updateType == null ? Optional.empty() : Optional.of(updateType);
 	}
 
-	public void setUpdateType(UpdateType15Choice updateType) {
+	public Statement46 setUpdateType(UpdateType15Choice updateType) {
 		this.updateType = updateType;
+		return this;
 	}
 
-	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}
 
-	public void setActivityIndicator(YesNoIndicator activityIndicator) {
-		this.activityIndicator = activityIndicator;
+	public Statement46 setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = Objects.requireNonNull(activityIndicator);
+		return this;
 	}
 }

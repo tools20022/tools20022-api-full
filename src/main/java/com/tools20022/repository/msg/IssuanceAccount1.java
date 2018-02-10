@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IssuanceAccount1", propOrder = {"issuanceAccount", "primaryAccountIndicator"})
 public class IssuanceAccount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IssncAcct", required = true)
 	protected SecuritiesAccount13 issuanceAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +102,7 @@ public class IssuanceAccount1 {
 	 */
 	public static final MMMessageAttribute mmIssuanceAccount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IssuanceAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IssuanceAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "IssncAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +113,11 @@ public class IssuanceAccount1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	@XmlElement(name = "PmryAcctInd", required = true)
 	protected YesNoIndicator primaryAccountIndicator;
 	/**
-	 * Defines if the related issuance account is the primary account or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +146,7 @@ public class IssuanceAccount1 {
 	 */
 	public static final MMMessageAttribute mmPrimaryAccountIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IssuanceAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IssuanceAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "PmryAcctInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,8 +161,8 @@ public class IssuanceAccount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IssuanceAccount1.mmIssuanceAccount, IssuanceAccount1.mmPrimaryAccountIndicator);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuanceAccount1.mmIssuanceAccount, com.tools20022.repository.msg.IssuanceAccount1.mmPrimaryAccountIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IssuanceAccount1";
 				definition = "Defines the account to or from which a securities entry is made and the usage type.";
@@ -168,21 +171,21 @@ public class IssuanceAccount1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IssncAcct", required = true)
 	public SecuritiesAccount13 getIssuanceAccount() {
 		return issuanceAccount;
 	}
 
-	public void setIssuanceAccount(com.tools20022.repository.msg.SecuritiesAccount13 issuanceAccount) {
-		this.issuanceAccount = issuanceAccount;
+	public IssuanceAccount1 setIssuanceAccount(com.tools20022.repository.msg.SecuritiesAccount13 issuanceAccount) {
+		this.issuanceAccount = Objects.requireNonNull(issuanceAccount);
+		return this;
 	}
 
-	@XmlElement(name = "PmryAcctInd", required = true)
 	public YesNoIndicator getPrimaryAccountIndicator() {
 		return primaryAccountIndicator;
 	}
 
-	public void setPrimaryAccountIndicator(YesNoIndicator primaryAccountIndicator) {
-		this.primaryAccountIndicator = primaryAccountIndicator;
+	public IssuanceAccount1 setPrimaryAccountIndicator(YesNoIndicator primaryAccountIndicator) {
+		this.primaryAccountIndicator = Objects.requireNonNull(primaryAccountIndicator);
+		return this;
 	}
 }

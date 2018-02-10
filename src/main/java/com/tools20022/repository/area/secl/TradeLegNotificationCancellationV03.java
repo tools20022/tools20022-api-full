@@ -26,9 +26,8 @@ import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -45,22 +44,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
- * SecuritiesClearingLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion
- * CentralCounterPartyCCPSecuritiesClearingISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "TradLegNtfctnCxl"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -91,9 +74,34 @@ import javax.xml.bind.annotation.*;
  * TradeLegNotificationCancellationV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion
+ * CentralCounterPartyCCPSecuritiesClearingISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "TradLegNtfctnCxl"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
+ * SecuritiesClearingLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code secl.002.001.03}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDepositoryOrPlaceOfListingPresenceRule#forTradeLegNotificationCancellationV03
+ * ConstraintDepositoryOrPlaceOfListingPresenceRule.
+ * forTradeLegNotificationCancellationV03}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,16 +114,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TradeLegNotificationCancellationV03", propOrder = {"clearingMember", "clearingAccount", "deliveryAccount", "nonClearingMember", "clearingDetails", "tradeLegDetails", "settlementDetails", "supplementaryData"})
 public class TradeLegNotificationCancellationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ClrMmb", required = true)
 	protected PartyIdentification35Choice clearingMember;
 	/**
-	 * Provides the identification of the account owner, that is the clearing
-	 * member (individual clearing member or general clearing member).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,11 +165,11 @@ public class TradeLegNotificationCancellationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "ClrAcct", required = true)
 	protected SecuritiesAccount18 clearingAccount;
 	/**
-	 * Identifies the clearing member account at the Central counterparty
-	 * through which the trade must be cleared.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,13 +211,11 @@ public class TradeLegNotificationCancellationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "DlvryAcct")
 	protected SecuritiesAccount19 deliveryAccount;
 	/**
-	 * An account opened by the central counterparty in the name of the clearing
-	 * member or its settlement agent within the account structure, for
-	 * settlement purposes (gives information about the clearing member/its
-	 * settlement agent account at the central securities depository).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,11 +257,11 @@ public class TradeLegNotificationCancellationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "NonClrMmb")
 	protected PartyIdentificationAndAccount31 nonClearingMember;
 	/**
-	 * Provides details about the non clearing member identification and
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -297,11 +303,11 @@ public class TradeLegNotificationCancellationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "ClrDtls")
 	protected Clearing4 clearingDetails;
 	/**
-	 * Provides clearing details such as the non clearing member identification
-	 * or the settlement netting (or not) eligibility code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -342,11 +348,11 @@ public class TradeLegNotificationCancellationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "TradLegDtls", required = true)
 	protected TradeLeg8 tradeLegDetails;
 	/**
-	 * Provides details about the trade leg such as the trade date, the
-	 * settlement date or the trading currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -387,11 +393,11 @@ public class TradeLegNotificationCancellationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SttlmDtls", required = true)
 	protected Settlement1 settlementDetails;
 	/**
-	 * Provides details about the settlement details of the trade leg such as
-	 * the settlement currency or the place of settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -432,11 +438,11 @@ public class TradeLegNotificationCancellationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -481,6 +487,7 @@ public class TradeLegNotificationCancellationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDepositoryOrPlaceOfListingPresenceRule.forTradeLegNotificationCancellationV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeLegNotificationCancellationV03";
 				definition = "Scope\r\nThe TradeLegNotificationCancellation message is sent by the central counterparty (CCP) to a clearing member to notify the cancellation of a TradeLegNotification message previously sent.\r\n\r\nThe message definition is intended for use with the ISO20022 Business Application Header.\r\n\r\nUsage\r\nThe previously sent message must be the Trade Leg Notification message.";
@@ -511,79 +518,79 @@ public class TradeLegNotificationCancellationV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ClrMmb", required = true)
 	public PartyIdentification35Choice getClearingMember() {
 		return clearingMember;
 	}
 
-	public void setClearingMember(PartyIdentification35Choice clearingMember) {
-		this.clearingMember = clearingMember;
+	public TradeLegNotificationCancellationV03 setClearingMember(PartyIdentification35Choice clearingMember) {
+		this.clearingMember = Objects.requireNonNull(clearingMember);
+		return this;
 	}
 
-	@XmlElement(name = "ClrAcct", required = true)
 	public SecuritiesAccount18 getClearingAccount() {
 		return clearingAccount;
 	}
 
-	public void setClearingAccount(SecuritiesAccount18 clearingAccount) {
-		this.clearingAccount = clearingAccount;
+	public TradeLegNotificationCancellationV03 setClearingAccount(SecuritiesAccount18 clearingAccount) {
+		this.clearingAccount = Objects.requireNonNull(clearingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "DlvryAcct")
-	public SecuritiesAccount19 getDeliveryAccount() {
-		return deliveryAccount;
+	public Optional<SecuritiesAccount19> getDeliveryAccount() {
+		return deliveryAccount == null ? Optional.empty() : Optional.of(deliveryAccount);
 	}
 
-	public void setDeliveryAccount(SecuritiesAccount19 deliveryAccount) {
+	public TradeLegNotificationCancellationV03 setDeliveryAccount(SecuritiesAccount19 deliveryAccount) {
 		this.deliveryAccount = deliveryAccount;
+		return this;
 	}
 
-	@XmlElement(name = "NonClrMmb")
-	public PartyIdentificationAndAccount31 getNonClearingMember() {
-		return nonClearingMember;
+	public Optional<PartyIdentificationAndAccount31> getNonClearingMember() {
+		return nonClearingMember == null ? Optional.empty() : Optional.of(nonClearingMember);
 	}
 
-	public void setNonClearingMember(PartyIdentificationAndAccount31 nonClearingMember) {
+	public TradeLegNotificationCancellationV03 setNonClearingMember(PartyIdentificationAndAccount31 nonClearingMember) {
 		this.nonClearingMember = nonClearingMember;
+		return this;
 	}
 
-	@XmlElement(name = "ClrDtls")
-	public Clearing4 getClearingDetails() {
-		return clearingDetails;
+	public Optional<Clearing4> getClearingDetails() {
+		return clearingDetails == null ? Optional.empty() : Optional.of(clearingDetails);
 	}
 
-	public void setClearingDetails(Clearing4 clearingDetails) {
+	public TradeLegNotificationCancellationV03 setClearingDetails(Clearing4 clearingDetails) {
 		this.clearingDetails = clearingDetails;
+		return this;
 	}
 
-	@XmlElement(name = "TradLegDtls", required = true)
 	public TradeLeg8 getTradeLegDetails() {
 		return tradeLegDetails;
 	}
 
-	public void setTradeLegDetails(TradeLeg8 tradeLegDetails) {
-		this.tradeLegDetails = tradeLegDetails;
+	public TradeLegNotificationCancellationV03 setTradeLegDetails(TradeLeg8 tradeLegDetails) {
+		this.tradeLegDetails = Objects.requireNonNull(tradeLegDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmDtls", required = true)
 	public Settlement1 getSettlementDetails() {
 		return settlementDetails;
 	}
 
-	public void setSettlementDetails(Settlement1 settlementDetails) {
-		this.settlementDetails = settlementDetails;
+	public TradeLegNotificationCancellationV03 setSettlementDetails(Settlement1 settlementDetails) {
+		this.settlementDetails = Objects.requireNonNull(settlementDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public TradeLegNotificationCancellationV03 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:secl.002.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:secl.002.001.03")
 	static public class Document {
 		@XmlElement(name = "TradLegNtfctnCxl", required = true)
 		public TradeLegNotificationCancellationV03 messageBody;

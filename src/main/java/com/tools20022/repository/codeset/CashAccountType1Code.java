@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CashAccountTypeCode;
+import com.tools20022.repository.codeset.CashAccountType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the nature, or use, of the cash account.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CashAccountTypeCode
- * CashAccountTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType1Code#mmSettlement
- * CashAccountType1Code.mmSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType1Code#Settlement
+ * CashAccountType1Code.Settlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType1Code#mmCurrent
- * CashAccountType1Code.mmCurrent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType1Code#Current
+ * CashAccountType1Code.Current}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType1Code#mmSavings
- * CashAccountType1Code.mmSavings}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType1Code#Savings
+ * CashAccountType1Code.Savings}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CashAccountTypeCode
+ * CashAccountTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the nature, or use, of the cash account."</li>
  * </ul>
  */
-public class CashAccountType1Code extends CashAccountTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CashAccountType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class CashAccountType1Code extends CashAccountTypeCode {
 	 * name} = "Settlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlement = new MMCode() {
+	public static final CashAccountType1Code Settlement = new CashAccountType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settlement";
-			owner_lazy = () -> CashAccountType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType1Code.mmObject();
+			codeName = CashAccountTypeCode.Settlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class CashAccountType1Code extends CashAccountTypeCode {
 	 * name} = "Current"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrent = new MMCode() {
+	public static final CashAccountType1Code Current = new CashAccountType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
-			owner_lazy = () -> CashAccountType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType1Code.mmObject();
+			codeName = CashAccountTypeCode.Current.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class CashAccountType1Code extends CashAccountTypeCode {
 	 * name} = "Savings"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSavings = new MMCode() {
+	public static final CashAccountType1Code Savings = new CashAccountType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Savings";
-			owner_lazy = () -> CashAccountType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType1Code.mmObject();
+			codeName = CashAccountTypeCode.Savings.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CashAccountType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CashAccountType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SACC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccountType1Code";
 				definition = "Specifies the nature, or use, of the cash account.";
-				code_lazy = () -> Arrays.asList(CashAccountType1Code.mmSettlement, CashAccountType1Code.mmCurrent, CashAccountType1Code.mmSavings);
 				trace_lazy = () -> CashAccountTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashAccountType1Code.Settlement, com.tools20022.repository.codeset.CashAccountType1Code.Current,
+						com.tools20022.repository.codeset.CashAccountType1Code.Savings);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Settlement.getCodeName().get(), Settlement);
+		codesByName.put(Current.getCodeName().get(), Current);
+		codesByName.put(Savings.getCodeName().get(), Savings);
+	}
+
+	public static CashAccountType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CashAccountType1Code[] values() {
+		CashAccountType1Code[] values = new CashAccountType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CashAccountType1Code> {
+		@Override
+		public CashAccountType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CashAccountType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

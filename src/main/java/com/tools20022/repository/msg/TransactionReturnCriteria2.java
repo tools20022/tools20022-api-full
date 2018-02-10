@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionReturnCriteria2", propOrder = {"paymentToReturnCriteria", "paymentFromReturnCriteria", "accountCashEntryReturnCriteria", "paymentReturnCriteria"})
 public class TransactionReturnCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmtToRtrCrit")
 	protected SystemReturnCriteria2 paymentToReturnCriteria;
 	/**
-	 * Destination of the payment (be it a member or a system or both).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -102,7 +104,7 @@ public class TransactionReturnCriteria2 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentToReturnCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionReturnCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtToRtrCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,10 +116,11 @@ public class TransactionReturnCriteria2 {
 			type_lazy = () -> com.tools20022.repository.msg.SystemReturnCriteria2.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtFrRtrCrit")
 	protected SystemReturnCriteria2 paymentFromReturnCriteria;
 	/**
-	 * Origin of the payment (be it a member or a system or both).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -144,7 +147,7 @@ public class TransactionReturnCriteria2 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentFromReturnCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionReturnCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtFrRtrCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +159,11 @@ public class TransactionReturnCriteria2 {
 			type_lazy = () -> com.tools20022.repository.msg.SystemReturnCriteria2.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctCshNtryRtrCrit")
 	protected AccountCashEntryReturnCriteria2 accountCashEntryReturnCriteria;
 	/**
-	 * Defines the criteria used to report on the cash entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -186,7 +190,7 @@ public class TransactionReturnCriteria2 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountCashEntryReturnCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionReturnCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctCshNtryRtrCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,10 +202,11 @@ public class TransactionReturnCriteria2 {
 			type_lazy = () -> com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtRtrCrit")
 	protected PaymentReturnCriteria2 paymentReturnCriteria;
 	/**
-	 * Defines the criteria used to report on the payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -227,7 +232,7 @@ public class TransactionReturnCriteria2 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentReturnCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionReturnCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtRtrCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,9 +248,9 @@ public class TransactionReturnCriteria2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionReturnCriteria2.mmPaymentToReturnCriteria, TransactionReturnCriteria2.mmPaymentFromReturnCriteria, TransactionReturnCriteria2.mmAccountCashEntryReturnCriteria,
-						TransactionReturnCriteria2.mmPaymentReturnCriteria);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReturnCriteria2.mmPaymentToReturnCriteria, com.tools20022.repository.msg.TransactionReturnCriteria2.mmPaymentFromReturnCriteria,
+						com.tools20022.repository.msg.TransactionReturnCriteria2.mmAccountCashEntryReturnCriteria, com.tools20022.repository.msg.TransactionReturnCriteria2.mmPaymentReturnCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionReturnCriteria2";
 				definition = "Defines the criteria used to report on a payment transaction.";
@@ -254,39 +259,39 @@ public class TransactionReturnCriteria2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmtToRtrCrit")
-	public SystemReturnCriteria2 getPaymentToReturnCriteria() {
-		return paymentToReturnCriteria;
+	public Optional<SystemReturnCriteria2> getPaymentToReturnCriteria() {
+		return paymentToReturnCriteria == null ? Optional.empty() : Optional.of(paymentToReturnCriteria);
 	}
 
-	public void setPaymentToReturnCriteria(com.tools20022.repository.msg.SystemReturnCriteria2 paymentToReturnCriteria) {
+	public TransactionReturnCriteria2 setPaymentToReturnCriteria(com.tools20022.repository.msg.SystemReturnCriteria2 paymentToReturnCriteria) {
 		this.paymentToReturnCriteria = paymentToReturnCriteria;
+		return this;
 	}
 
-	@XmlElement(name = "PmtFrRtrCrit")
-	public SystemReturnCriteria2 getPaymentFromReturnCriteria() {
-		return paymentFromReturnCriteria;
+	public Optional<SystemReturnCriteria2> getPaymentFromReturnCriteria() {
+		return paymentFromReturnCriteria == null ? Optional.empty() : Optional.of(paymentFromReturnCriteria);
 	}
 
-	public void setPaymentFromReturnCriteria(com.tools20022.repository.msg.SystemReturnCriteria2 paymentFromReturnCriteria) {
+	public TransactionReturnCriteria2 setPaymentFromReturnCriteria(com.tools20022.repository.msg.SystemReturnCriteria2 paymentFromReturnCriteria) {
 		this.paymentFromReturnCriteria = paymentFromReturnCriteria;
+		return this;
 	}
 
-	@XmlElement(name = "AcctCshNtryRtrCrit")
-	public AccountCashEntryReturnCriteria2 getAccountCashEntryReturnCriteria() {
-		return accountCashEntryReturnCriteria;
+	public Optional<AccountCashEntryReturnCriteria2> getAccountCashEntryReturnCriteria() {
+		return accountCashEntryReturnCriteria == null ? Optional.empty() : Optional.of(accountCashEntryReturnCriteria);
 	}
 
-	public void setAccountCashEntryReturnCriteria(com.tools20022.repository.msg.AccountCashEntryReturnCriteria2 accountCashEntryReturnCriteria) {
+	public TransactionReturnCriteria2 setAccountCashEntryReturnCriteria(com.tools20022.repository.msg.AccountCashEntryReturnCriteria2 accountCashEntryReturnCriteria) {
 		this.accountCashEntryReturnCriteria = accountCashEntryReturnCriteria;
+		return this;
 	}
 
-	@XmlElement(name = "PmtRtrCrit")
-	public PaymentReturnCriteria2 getPaymentReturnCriteria() {
-		return paymentReturnCriteria;
+	public Optional<PaymentReturnCriteria2> getPaymentReturnCriteria() {
+		return paymentReturnCriteria == null ? Optional.empty() : Optional.of(paymentReturnCriteria);
 	}
 
-	public void setPaymentReturnCriteria(com.tools20022.repository.msg.PaymentReturnCriteria2 paymentReturnCriteria) {
+	public TransactionReturnCriteria2 setPaymentReturnCriteria(com.tools20022.repository.msg.PaymentReturnCriteria2 paymentReturnCriteria) {
 		this.paymentReturnCriteria = paymentReturnCriteria;
+		return this;
 	}
 }

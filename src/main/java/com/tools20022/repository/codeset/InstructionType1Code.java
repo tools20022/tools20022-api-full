@@ -20,34 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.InstructionTypeCode;
+import com.tools20022.repository.codeset.InstructionType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the action that the TSU must take on a baseline.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.InstructionType1Code#Lodge
+ * InstructionType1Code.Lodge}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionType1Code#FullPushThrough
+ * InstructionType1Code.FullPushThrough}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode
  * InstructionTypeCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionType1Code#mmLodge
- * InstructionType1Code.mmLodge}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionType1Code#mmFullPushThrough
- * InstructionType1Code.mmFullPushThrough}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the action that the TSU must take on a baseline."</li>
  * </ul>
  */
-public class InstructionType1Code extends InstructionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InstructionType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +87,12 @@ public class InstructionType1Code extends InstructionTypeCode {
 	 * name} = "Lodge"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLodge = new MMCode() {
+	public static final InstructionType1Code Lodge = new InstructionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lodge";
-			owner_lazy = () -> InstructionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionType1Code.mmObject();
+			codeName = InstructionTypeCode.Lodge.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +111,57 @@ public class InstructionType1Code extends InstructionTypeCode {
 	 * name} = "FullPushThrough"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullPushThrough = new MMCode() {
+	public static final InstructionType1Code FullPushThrough = new InstructionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPushThrough";
-			owner_lazy = () -> InstructionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionType1Code.mmObject();
+			codeName = InstructionTypeCode.FullPushThrough.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, InstructionType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InstructionType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("LODG");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionType1Code";
 				definition = "Specifies the action that the TSU must take on a baseline.";
-				code_lazy = () -> Arrays.asList(InstructionType1Code.mmLodge, InstructionType1Code.mmFullPushThrough);
 				trace_lazy = () -> InstructionTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionType1Code.Lodge, com.tools20022.repository.codeset.InstructionType1Code.FullPushThrough);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Lodge.getCodeName().get(), Lodge);
+		codesByName.put(FullPushThrough.getCodeName().get(), FullPushThrough);
+	}
+
+	public static InstructionType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InstructionType1Code[] values() {
+		InstructionType1Code[] values = new InstructionType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InstructionType1Code> {
+		@Override
+		public InstructionType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InstructionType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

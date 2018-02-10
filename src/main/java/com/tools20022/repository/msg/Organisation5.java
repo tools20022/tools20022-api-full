@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Organisation5", propOrder = {"identification", "commonName", "locationCategory", "address", "countryCode", "schemeData"})
 public class Organisation5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id")
 	protected GenericIdentification32 identification;
 	/**
-	 * Identification of the merchant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -123,7 +125,7 @@ public class Organisation5 {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Organisation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation5.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +137,11 @@ public class Organisation5 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	@XmlElement(name = "CmonNm")
 	protected Max35Text commonName;
 	/**
-	 * Name of the merchant as appearing on the receipt.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,7 +173,7 @@ public class Organisation5 {
 	public static final MMMessageAttribute mmCommonName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
-			componentContext_lazy = () -> Organisation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation5.mmObject();
 			isDerived = false;
 			xmlTag = "CmonNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,11 +184,11 @@ public class Organisation5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "LctnCtgy")
 	protected LocationCategory1Code locationCategory;
 	/**
-	 * Location category of the place where the merchant actually performed the
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -214,7 +217,7 @@ public class Organisation5 {
 	 */
 	public static final MMMessageAttribute mmLocationCategory = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Organisation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation5.mmObject();
 			isDerived = false;
 			xmlTag = "LctnCtgy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,11 +228,11 @@ public class Organisation5 {
 			simpleType_lazy = () -> LocationCategory1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Adr")
 	protected Max70Text address;
 	/**
-	 * Location of the merchant where the transaction took place, as appearing
-	 * on the receipt.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -263,7 +266,7 @@ public class Organisation5 {
 	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
-			componentContext_lazy = () -> Organisation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation5.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -274,10 +277,11 @@ public class Organisation5 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CtryCd")
 	protected ISO3ACountryCode countryCode;
 	/**
-	 * Country of the merchant where the transaction took place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -311,7 +315,7 @@ public class Organisation5 {
 	public static final MMMessageAttribute mmCountryCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> Organisation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation5.mmObject();
 			isDerived = false;
 			xmlTag = "CtryCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -322,10 +326,11 @@ public class Organisation5 {
 			simpleType_lazy = () -> ISO3ACountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "SchmeData")
 	protected Max140Text schemeData;
 	/**
-	 * Additional merchant data required by a card scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -351,7 +356,7 @@ public class Organisation5 {
 	 */
 	public static final MMMessageAttribute mmSchemeData = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Organisation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation5.mmObject();
 			isDerived = false;
 			xmlTag = "SchmeData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -366,9 +371,11 @@ public class Organisation5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Organisation5.mmIdentification, Organisation5.mmCommonName, Organisation5.mmLocationCategory, Organisation5.mmAddress, Organisation5.mmCountryCode, Organisation5.mmSchemeData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation5.mmIdentification, com.tools20022.repository.msg.Organisation5.mmCommonName,
+						com.tools20022.repository.msg.Organisation5.mmLocationCategory, com.tools20022.repository.msg.Organisation5.mmAddress, com.tools20022.repository.msg.Organisation5.mmCountryCode,
+						com.tools20022.repository.msg.Organisation5.mmSchemeData);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Organisation5";
 				definition = "Merchant performing the transaction.";
@@ -378,57 +385,57 @@ public class Organisation5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id")
-	public GenericIdentification32 getIdentification() {
-		return identification;
+	public Optional<GenericIdentification32> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+	public Organisation5 setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
 		this.identification = identification;
+		return this;
 	}
 
-	@XmlElement(name = "CmonNm")
-	public Max35Text getCommonName() {
-		return commonName;
+	public Optional<Max35Text> getCommonName() {
+		return commonName == null ? Optional.empty() : Optional.of(commonName);
 	}
 
-	public void setCommonName(Max35Text commonName) {
+	public Organisation5 setCommonName(Max35Text commonName) {
 		this.commonName = commonName;
+		return this;
 	}
 
-	@XmlElement(name = "LctnCtgy")
-	public LocationCategory1Code getLocationCategory() {
-		return locationCategory;
+	public Optional<LocationCategory1Code> getLocationCategory() {
+		return locationCategory == null ? Optional.empty() : Optional.of(locationCategory);
 	}
 
-	public void setLocationCategory(LocationCategory1Code locationCategory) {
+	public Organisation5 setLocationCategory(LocationCategory1Code locationCategory) {
 		this.locationCategory = locationCategory;
+		return this;
 	}
 
-	@XmlElement(name = "Adr")
-	public Max70Text getAddress() {
-		return address;
+	public Optional<Max70Text> getAddress() {
+		return address == null ? Optional.empty() : Optional.of(address);
 	}
 
-	public void setAddress(Max70Text address) {
+	public Organisation5 setAddress(Max70Text address) {
 		this.address = address;
+		return this;
 	}
 
-	@XmlElement(name = "CtryCd")
-	public ISO3ACountryCode getCountryCode() {
-		return countryCode;
+	public Optional<ISO3ACountryCode> getCountryCode() {
+		return countryCode == null ? Optional.empty() : Optional.of(countryCode);
 	}
 
-	public void setCountryCode(ISO3ACountryCode countryCode) {
+	public Organisation5 setCountryCode(ISO3ACountryCode countryCode) {
 		this.countryCode = countryCode;
+		return this;
 	}
 
-	@XmlElement(name = "SchmeData")
-	public Max140Text getSchemeData() {
-		return schemeData;
+	public Optional<Max140Text> getSchemeData() {
+		return schemeData == null ? Optional.empty() : Optional.of(schemeData);
 	}
 
-	public void setSchemeData(Max140Text schemeData) {
+	public Organisation5 setSchemeData(Max140Text schemeData) {
 		this.schemeData = schemeData;
+		return this;
 	}
 }

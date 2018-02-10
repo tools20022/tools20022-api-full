@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherStatusRule#forPendingSettlementStatusReason1
+ * ConstraintOtherStatusRule.forPendingSettlementStatusReason1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Reason for a  pending settlement status."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PendingSettlementStatusReason1", propOrder = {"structured", "additionalInformation"})
 public class PendingSettlementStatusReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Strd", required = true)
 	protected PendingSettlementStatusReason1Code structured;
 	/**
-	 * Reason for a settlement pending status in structured form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +122,7 @@ public class PendingSettlementStatusReason1 {
 	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmPendingSettlementReason;
-			componentContext_lazy = () -> PendingSettlementStatusReason1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PendingSettlementStatusReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Strd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,11 +133,11 @@ public class PendingSettlementStatusReason1 {
 			simpleType_lazy = () -> PendingSettlementStatusReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected Max350Text additionalInformation;
 	/**
-	 * Additional information about the reason for the settlement pending status
-	 * in textual form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +172,7 @@ public class PendingSettlementStatusReason1 {
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> PendingSettlementStatusReason1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PendingSettlementStatusReason1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,9 +187,10 @@ public class PendingSettlementStatusReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PendingSettlementStatusReason1.mmStructured, PendingSettlementStatusReason1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingSettlementStatusReason1.mmStructured, com.tools20022.repository.msg.PendingSettlementStatusReason1.mmAdditionalInformation);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherStatusRule.forPendingSettlementStatusReason1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingSettlementStatusReason1";
 				definition = "Reason for a  pending settlement status.";
@@ -187,21 +199,21 @@ public class PendingSettlementStatusReason1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Strd", required = true)
 	public PendingSettlementStatusReason1Code getStructured() {
 		return structured;
 	}
 
-	public void setStructured(PendingSettlementStatusReason1Code structured) {
-		this.structured = structured;
+	public PendingSettlementStatusReason1 setStructured(PendingSettlementStatusReason1Code structured) {
+		this.structured = Objects.requireNonNull(structured);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public Max350Text getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<Max350Text> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(Max350Text additionalInformation) {
+	public PendingSettlementStatusReason1 setAdditionalInformation(Max350Text additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 }

@@ -25,9 +25,11 @@ import com.tools20022.repository.entity.SubmittingPartyRole;
 import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.entity.TreasuryTradingParty;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,16 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TradePartyIdentification5", propOrder = {"submittingParty", "tradeParty", "fundIdentification"})
 public class TradePartyIdentification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SubmitgPty", required = true)
 	protected PartyIdentification19Choice submittingParty;
 	/**
-	 * Party that submits the foreign exchange trade to the matching system or
-	 * to the settlement system or to the counterparty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -122,7 +124,7 @@ public class TradePartyIdentification5 {
 	public static final MMMessageAssociationEnd mmSubmittingParty = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SubmittingPartyRole.mmObject();
-			componentContext_lazy = () -> TradePartyIdentification5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "SubmitgPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,11 +136,11 @@ public class TradePartyIdentification5 {
 			type_lazy = () -> PartyIdentification19Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TradPty", required = true)
 	protected PartyIdentification19Choice tradeParty;
 	/**
-	 * Party that originated the foreign exchange trade. This party may be the
-	 * same as the submitting party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -173,7 +175,7 @@ public class TradePartyIdentification5 {
 	public static final MMMessageAssociationEnd mmTradeParty = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> TreasuryTradingParty.mmObject();
-			componentContext_lazy = () -> TradePartyIdentification5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "TradPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,11 +187,11 @@ public class TradePartyIdentification5 {
 			type_lazy = () -> PartyIdentification19Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FndId")
 	protected List<com.tools20022.repository.msg.FundIdentification3> fundIdentification;
 	/**
-	 * Identifies the fund that is one of the parties in the foreign exchange
-	 * trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -223,7 +225,7 @@ public class TradePartyIdentification5 {
 	public static final MMMessageAssociationEnd mmFundIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradingParty.mmInvestmentFund;
-			componentContext_lazy = () -> TradePartyIdentification5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "FndId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -238,9 +240,10 @@ public class TradePartyIdentification5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TradePartyIdentification5.mmSubmittingParty, TradePartyIdentification5.mmTradeParty, TradePartyIdentification5.mmFundIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradePartyIdentification5.mmSubmittingParty, com.tools20022.repository.msg.TradePartyIdentification5.mmTradeParty,
+						com.tools20022.repository.msg.TradePartyIdentification5.mmFundIdentification);
 				trace_lazy = () -> TradePartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradePartyIdentification5";
 				definition = "Entity involved in an activity.";
@@ -250,30 +253,30 @@ public class TradePartyIdentification5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SubmitgPty", required = true)
 	public PartyIdentification19Choice getSubmittingParty() {
 		return submittingParty;
 	}
 
-	public void setSubmittingParty(PartyIdentification19Choice submittingParty) {
-		this.submittingParty = submittingParty;
+	public TradePartyIdentification5 setSubmittingParty(PartyIdentification19Choice submittingParty) {
+		this.submittingParty = Objects.requireNonNull(submittingParty);
+		return this;
 	}
 
-	@XmlElement(name = "TradPty", required = true)
 	public PartyIdentification19Choice getTradeParty() {
 		return tradeParty;
 	}
 
-	public void setTradeParty(PartyIdentification19Choice tradeParty) {
-		this.tradeParty = tradeParty;
+	public TradePartyIdentification5 setTradeParty(PartyIdentification19Choice tradeParty) {
+		this.tradeParty = Objects.requireNonNull(tradeParty);
+		return this;
 	}
 
-	@XmlElement(name = "FndId")
 	public List<FundIdentification3> getFundIdentification() {
-		return fundIdentification;
+		return fundIdentification == null ? fundIdentification = new ArrayList<>() : fundIdentification;
 	}
 
-	public void setFundIdentification(List<com.tools20022.repository.msg.FundIdentification3> fundIdentification) {
-		this.fundIdentification = fundIdentification;
+	public TradePartyIdentification5 setFundIdentification(List<com.tools20022.repository.msg.FundIdentification3> fundIdentification) {
+		this.fundIdentification = Objects.requireNonNull(fundIdentification);
+		return this;
 	}
 }

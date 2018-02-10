@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +77,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,16 +90,17 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides additional information regarding corporate action date details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CorporateActionDateSD5", propOrder = {"placeAndName", "DTCLastDayForEarlyRedemption", "DTCPositionCaptureDate", "newYorkCutOffDate", "DTCExtendedCutOffDate", "effectiveDateByExchange", "dateDeclaredWorthless",
-		"deleteWorthlessSecurityDate", "DTCExitDate", "subscriptionBeginDate"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CorporateActionDateSD5", propOrder = {"placeAndName", "dTCLastDayForEarlyRedemption", "dTCPositionCaptureDate", "newYorkCutOffDate", "dTCExtendedCutOffDate", "effectiveDateByExchange", "dateDeclaredWorthless",
+		"deleteWorthlessSecurityDate", "dTCExitDate", "subscriptionBeginDate"})
 public class CorporateActionDateSD5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +127,7 @@ public class CorporateActionDateSD5 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDateSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD5.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,12 +138,11 @@ public class CorporateActionDateSD5 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCLastDayForEarlyRed")
 	protected ISODate dTCLastDayForEarlyRedemption;
 	/**
-	 * Last day on which DTC (The Depository Trust Corporation) will accept
-	 * instructions for CD early redemptions. This is specific to CDs when the
-	 * registered holder is deceased.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,6 +156,9 @@ public class CorporateActionDateSD5 {
 	 * CorporateActionDateSD5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCLastDayForEarlyRed"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Last Day for Early Redemption</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -168,9 +174,10 @@ public class CorporateActionDateSD5 {
 	 */
 	public static final MMMessageAttribute mmDTCLastDayForEarlyRedemption = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDateSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD5.mmObject();
 			isDerived = false;
 			xmlTag = "DTCLastDayForEarlyRed";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Last Day for Early Redemption"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCLastDayForEarlyRedemption";
 			definition = "Last day on which DTC (The Depository Trust Corporation) will accept instructions for CD early redemptions. This is specific to CDs when the registered holder is deceased.";
@@ -179,11 +186,11 @@ public class CorporateActionDateSD5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCPosCaptrDt")
 	protected ISODate dTCPositionCaptureDate;
 	/**
-	 * Date when positions are captured and entitlements are calculated in the
-	 * system at DTC (The Depository Trust Corporation).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,6 +204,9 @@ public class CorporateActionDateSD5 {
 	 * CorporateActionDateSD5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCPosCaptrDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Position Capture Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -212,9 +222,10 @@ public class CorporateActionDateSD5 {
 	 */
 	public static final MMMessageAttribute mmDTCPositionCaptureDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDateSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD5.mmObject();
 			isDerived = false;
 			xmlTag = "DTCPosCaptrDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Position Capture Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPositionCaptureDate";
 			definition = "Date when positions are captured and entitlements are calculated in the system at DTC (The Depository Trust Corporation).";
@@ -223,12 +234,11 @@ public class CorporateActionDateSD5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "NewYorkCutOffDt")
 	protected ISODate newYorkCutOffDate;
 	/**
-	 * Last day to deposit securities at DTC and receive the entitlement for an
-	 * event approaching record date. Issues that have a New York cut-off date
-	 * have an out-of-town agent on DTC's records.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -242,6 +252,9 @@ public class CorporateActionDateSD5 {
 	 * CorporateActionDateSD5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NewYorkCutOffDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: New York Cut-Off Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -257,9 +270,10 @@ public class CorporateActionDateSD5 {
 	 */
 	public static final MMMessageAttribute mmNewYorkCutOffDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDateSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD5.mmObject();
 			isDerived = false;
 			xmlTag = "NewYorkCutOffDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "New York Cut-Off Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewYorkCutOffDate";
 			definition = "Last day to deposit securities at DTC and receive the entitlement for an event approaching record date. Issues that have a New York cut-off date have an out-of-town agent on DTC's records.";
@@ -268,14 +282,11 @@ public class CorporateActionDateSD5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCXtndedCutOffDt")
 	protected ISODate dTCExtendedCutOffDate;
 	/**
-	 * Cutoff date for DTC (The Depository Trust Corporation) deposit and
-	 * withdrawal activity. Certain events require an earlier cutoff date. This
-	 * is typically used on event securities requiring the submission of bearer
-	 * coupons. Those events usually stop deposit and withdrawal activity one
-	 * month prior to the declared record date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -289,6 +300,9 @@ public class CorporateActionDateSD5 {
 	 * CorporateActionDateSD5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCXtndedCutOffDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Extended Cut-Off Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -304,9 +318,10 @@ public class CorporateActionDateSD5 {
 	 */
 	public static final MMMessageAttribute mmDTCExtendedCutOffDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDateSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD5.mmObject();
 			isDerived = false;
 			xmlTag = "DTCXtndedCutOffDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Extended Cut-Off Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCExtendedCutOffDate";
 			definition = "Cutoff date for DTC (The Depository Trust Corporation) deposit and withdrawal activity. Certain events require an earlier cutoff date. This is typically used on event securities requiring the submission of bearer coupons. Those events usually stop deposit and withdrawal activity one month prior to the declared record date.";
@@ -315,12 +330,11 @@ public class CorporateActionDateSD5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "FctvDtByXchg")
 	protected ISODate effectiveDateByExchange;
 	/**
-	 * Effective date as declared by the primary exchange that generally
-	 * coincides with cessation of trading in the old security and commencement
-	 * of trading in the new security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -334,6 +348,9 @@ public class CorporateActionDateSD5 {
 	 * CorporateActionDateSD5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FctvDtByXchg"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Effective Date (Exchange)</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -349,9 +366,10 @@ public class CorporateActionDateSD5 {
 	 */
 	public static final MMMessageAttribute mmEffectiveDateByExchange = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDateSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD5.mmObject();
 			isDerived = false;
 			xmlTag = "FctvDtByXchg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Effective Date (Exchange)"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDateByExchange";
 			definition = "Effective date as declared by the primary exchange that generally coincides with cessation of trading in the old security and commencement of trading in the new security.";
@@ -360,11 +378,11 @@ public class CorporateActionDateSD5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DtDclrdWrthls")
 	protected ISODate dateDeclaredWorthless;
 	/**
-	 * Date that DTC received formal notification from the agent/issuer stating
-	 * that the securities are null and void.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -378,6 +396,9 @@ public class CorporateActionDateSD5 {
 	 * CorporateActionDateSD5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DtDclrdWrthls"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Date Declared Worthless</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -393,9 +414,10 @@ public class CorporateActionDateSD5 {
 	 */
 	public static final MMMessageAttribute mmDateDeclaredWorthless = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDateSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD5.mmObject();
 			isDerived = false;
 			xmlTag = "DtDclrdWrthls";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Date Declared Worthless"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDeclaredWorthless";
 			definition = "Date that DTC received formal notification from the agent/issuer stating that the securities are null and void. ";
@@ -404,11 +426,11 @@ public class CorporateActionDateSD5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DelWrthlsSctyDt")
 	protected ISODate deleteWorthlessSecurityDate;
 	/**
-	 * Date when DTC participant positions will be deleted. Typically used for
-	 * expired rights and warrants.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -422,6 +444,9 @@ public class CorporateActionDateSD5 {
 	 * CorporateActionDateSD5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DelWrthlsSctyDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Delete Worthless Security Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -437,9 +462,10 @@ public class CorporateActionDateSD5 {
 	 */
 	public static final MMMessageAttribute mmDeleteWorthlessSecurityDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDateSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD5.mmObject();
 			isDerived = false;
 			xmlTag = "DelWrthlsSctyDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Delete Worthless Security Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeleteWorthlessSecurityDate";
 			definition = "Date when DTC participant positions will be deleted. Typically used for expired rights and warrants.";
@@ -448,11 +474,11 @@ public class CorporateActionDateSD5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCExitDt")
 	protected ISODate dTCExitDate;
 	/**
-	 * Date on which securities will be exited to DTC participants from DTC (The
-	 * Depository Trust Corporation).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -466,6 +492,9 @@ public class CorporateActionDateSD5 {
 	 * CorporateActionDateSD5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCExitDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Exit Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -481,9 +510,10 @@ public class CorporateActionDateSD5 {
 	 */
 	public static final MMMessageAttribute mmDTCExitDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDateSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD5.mmObject();
 			isDerived = false;
 			xmlTag = "DTCExitDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Exit Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCExitDate";
 			definition = "Date on which securities will be exited to DTC participants from DTC (The Depository Trust Corporation).";
@@ -492,10 +522,11 @@ public class CorporateActionDateSD5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SbcptBegnDt")
 	protected ISODate subscriptionBeginDate;
 	/**
-	 * Date on which a holder can begin to subscribe for new/additional shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -509,6 +540,9 @@ public class CorporateActionDateSD5 {
 	 * CorporateActionDateSD5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SbcptBegnDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Subscription Begin Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -524,9 +558,10 @@ public class CorporateActionDateSD5 {
 	 */
 	public static final MMMessageAttribute mmSubscriptionBeginDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDateSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD5.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptBegnDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Subscription Begin Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionBeginDate";
 			definition = "Date on which a holder can begin to subscribe for new/additional shares.";
@@ -539,10 +574,12 @@ public class CorporateActionDateSD5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionDateSD5.mmPlaceAndName, CorporateActionDateSD5.mmDTCLastDayForEarlyRedemption, CorporateActionDateSD5.mmDTCPositionCaptureDate,
-						CorporateActionDateSD5.mmNewYorkCutOffDate, CorporateActionDateSD5.mmDTCExtendedCutOffDate, CorporateActionDateSD5.mmEffectiveDateByExchange, CorporateActionDateSD5.mmDateDeclaredWorthless,
-						CorporateActionDateSD5.mmDeleteWorthlessSecurityDate, CorporateActionDateSD5.mmDTCExitDate, CorporateActionDateSD5.mmSubscriptionBeginDate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDateSD5.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionDateSD5.mmDTCLastDayForEarlyRedemption,
+						com.tools20022.repository.msg.CorporateActionDateSD5.mmDTCPositionCaptureDate, com.tools20022.repository.msg.CorporateActionDateSD5.mmNewYorkCutOffDate,
+						com.tools20022.repository.msg.CorporateActionDateSD5.mmDTCExtendedCutOffDate, com.tools20022.repository.msg.CorporateActionDateSD5.mmEffectiveDateByExchange,
+						com.tools20022.repository.msg.CorporateActionDateSD5.mmDateDeclaredWorthless, com.tools20022.repository.msg.CorporateActionDateSD5.mmDeleteWorthlessSecurityDate,
+						com.tools20022.repository.msg.CorporateActionDateSD5.mmDTCExitDate, com.tools20022.repository.msg.CorporateActionDateSD5.mmSubscriptionBeginDate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDateSD5";
 				definition = "Provides additional information regarding corporate action date details.";
@@ -551,93 +588,93 @@ public class CorporateActionDateSD5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionDateSD5 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "DTCLastDayForEarlyRed")
-	public ISODate getDTCLastDayForEarlyRedemption() {
-		return dTCLastDayForEarlyRedemption;
+	public Optional<ISODate> getDTCLastDayForEarlyRedemption() {
+		return dTCLastDayForEarlyRedemption == null ? Optional.empty() : Optional.of(dTCLastDayForEarlyRedemption);
 	}
 
-	public void setDTCLastDayForEarlyRedemption(ISODate dTCLastDayForEarlyRedemption) {
+	public CorporateActionDateSD5 setDTCLastDayForEarlyRedemption(ISODate dTCLastDayForEarlyRedemption) {
 		this.dTCLastDayForEarlyRedemption = dTCLastDayForEarlyRedemption;
+		return this;
 	}
 
-	@XmlElement(name = "DTCPosCaptrDt")
-	public ISODate getDTCPositionCaptureDate() {
-		return dTCPositionCaptureDate;
+	public Optional<ISODate> getDTCPositionCaptureDate() {
+		return dTCPositionCaptureDate == null ? Optional.empty() : Optional.of(dTCPositionCaptureDate);
 	}
 
-	public void setDTCPositionCaptureDate(ISODate dTCPositionCaptureDate) {
+	public CorporateActionDateSD5 setDTCPositionCaptureDate(ISODate dTCPositionCaptureDate) {
 		this.dTCPositionCaptureDate = dTCPositionCaptureDate;
+		return this;
 	}
 
-	@XmlElement(name = "NewYorkCutOffDt")
-	public ISODate getNewYorkCutOffDate() {
-		return newYorkCutOffDate;
+	public Optional<ISODate> getNewYorkCutOffDate() {
+		return newYorkCutOffDate == null ? Optional.empty() : Optional.of(newYorkCutOffDate);
 	}
 
-	public void setNewYorkCutOffDate(ISODate newYorkCutOffDate) {
+	public CorporateActionDateSD5 setNewYorkCutOffDate(ISODate newYorkCutOffDate) {
 		this.newYorkCutOffDate = newYorkCutOffDate;
+		return this;
 	}
 
-	@XmlElement(name = "DTCXtndedCutOffDt")
-	public ISODate getDTCExtendedCutOffDate() {
-		return dTCExtendedCutOffDate;
+	public Optional<ISODate> getDTCExtendedCutOffDate() {
+		return dTCExtendedCutOffDate == null ? Optional.empty() : Optional.of(dTCExtendedCutOffDate);
 	}
 
-	public void setDTCExtendedCutOffDate(ISODate dTCExtendedCutOffDate) {
+	public CorporateActionDateSD5 setDTCExtendedCutOffDate(ISODate dTCExtendedCutOffDate) {
 		this.dTCExtendedCutOffDate = dTCExtendedCutOffDate;
+		return this;
 	}
 
-	@XmlElement(name = "FctvDtByXchg")
-	public ISODate getEffectiveDateByExchange() {
-		return effectiveDateByExchange;
+	public Optional<ISODate> getEffectiveDateByExchange() {
+		return effectiveDateByExchange == null ? Optional.empty() : Optional.of(effectiveDateByExchange);
 	}
 
-	public void setEffectiveDateByExchange(ISODate effectiveDateByExchange) {
+	public CorporateActionDateSD5 setEffectiveDateByExchange(ISODate effectiveDateByExchange) {
 		this.effectiveDateByExchange = effectiveDateByExchange;
+		return this;
 	}
 
-	@XmlElement(name = "DtDclrdWrthls")
-	public ISODate getDateDeclaredWorthless() {
-		return dateDeclaredWorthless;
+	public Optional<ISODate> getDateDeclaredWorthless() {
+		return dateDeclaredWorthless == null ? Optional.empty() : Optional.of(dateDeclaredWorthless);
 	}
 
-	public void setDateDeclaredWorthless(ISODate dateDeclaredWorthless) {
+	public CorporateActionDateSD5 setDateDeclaredWorthless(ISODate dateDeclaredWorthless) {
 		this.dateDeclaredWorthless = dateDeclaredWorthless;
+		return this;
 	}
 
-	@XmlElement(name = "DelWrthlsSctyDt")
-	public ISODate getDeleteWorthlessSecurityDate() {
-		return deleteWorthlessSecurityDate;
+	public Optional<ISODate> getDeleteWorthlessSecurityDate() {
+		return deleteWorthlessSecurityDate == null ? Optional.empty() : Optional.of(deleteWorthlessSecurityDate);
 	}
 
-	public void setDeleteWorthlessSecurityDate(ISODate deleteWorthlessSecurityDate) {
+	public CorporateActionDateSD5 setDeleteWorthlessSecurityDate(ISODate deleteWorthlessSecurityDate) {
 		this.deleteWorthlessSecurityDate = deleteWorthlessSecurityDate;
+		return this;
 	}
 
-	@XmlElement(name = "DTCExitDt")
-	public ISODate getDTCExitDate() {
-		return dTCExitDate;
+	public Optional<ISODate> getDTCExitDate() {
+		return dTCExitDate == null ? Optional.empty() : Optional.of(dTCExitDate);
 	}
 
-	public void setDTCExitDate(ISODate dTCExitDate) {
+	public CorporateActionDateSD5 setDTCExitDate(ISODate dTCExitDate) {
 		this.dTCExitDate = dTCExitDate;
+		return this;
 	}
 
-	@XmlElement(name = "SbcptBegnDt")
-	public ISODate getSubscriptionBeginDate() {
-		return subscriptionBeginDate;
+	public Optional<ISODate> getSubscriptionBeginDate() {
+		return subscriptionBeginDate == null ? Optional.empty() : Optional.of(subscriptionBeginDate);
 	}
 
-	public void setSubscriptionBeginDate(ISODate subscriptionBeginDate) {
+	public CorporateActionDateSD5 setSubscriptionBeginDate(ISODate subscriptionBeginDate) {
 		this.subscriptionBeginDate = subscriptionBeginDate;
+		return this;
 	}
 }

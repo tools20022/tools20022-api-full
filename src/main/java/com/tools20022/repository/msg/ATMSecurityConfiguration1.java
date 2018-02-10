@@ -25,9 +25,8 @@ import com.tools20022.repository.codeset.Algorithm11Code;
 import com.tools20022.repository.codeset.Algorithm12Code;
 import com.tools20022.repository.codeset.MessageProtection1Code;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "ATMSecurityConfiguration1", propOrder = {"keys", "encryption", "MACAlgorithm", "digestAlgorithm", "digitalSignature", "PIN", "messageProtection"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "ATMSecurityConfiguration1", propOrder = {"keys", "encryption", "mACAlgorithm", "digestAlgorithm", "digitalSignature", "pIN", "messageProtection"})
 public class ATMSecurityConfiguration1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Keys")
 	protected ATMSecurityConfiguration2 keys;
 	/**
-	 * Configuration of the cryptographic keys.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -122,7 +122,7 @@ public class ATMSecurityConfiguration1 {
 	 */
 	public static final MMMessageAssociationEnd mmKeys = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMSecurityConfiguration1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
 			isDerived = false;
 			xmlTag = "Keys";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,11 +134,11 @@ public class ATMSecurityConfiguration1 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration2.mmObject();
 		}
 	};
+	@XmlElement(name = "Ncrptn")
 	protected ATMSecurityConfiguration3 encryption;
 	/**
-	 * Configuration of the encryption or digital envelope, if the security
-	 * module is able to perform encryption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -167,7 +167,7 @@ public class ATMSecurityConfiguration1 {
 	 */
 	public static final MMMessageAssociationEnd mmEncryption = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMSecurityConfiguration1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
 			isDerived = false;
 			xmlTag = "Ncrptn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,11 +179,11 @@ public class ATMSecurityConfiguration1 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration3.mmObject();
 		}
 	};
+	@XmlElement(name = "MACAlgo")
 	protected List<Algorithm12Code> mACAlgorithm;
 	/**
-	 * MAC (Message Authentication Code) algorithm the security module is able
-	 * to manage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,7 +213,7 @@ public class ATMSecurityConfiguration1 {
 	 */
 	public static final MMMessageAttribute mmMACAlgorithm = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMSecurityConfiguration1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
 			isDerived = false;
 			xmlTag = "MACAlgo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,10 +223,11 @@ public class ATMSecurityConfiguration1 {
 			simpleType_lazy = () -> Algorithm12Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DgstAlgo")
 	protected List<Algorithm11Code> digestAlgorithm;
 	/**
-	 * Digest algorithm the security module is able to manage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -254,7 +255,7 @@ public class ATMSecurityConfiguration1 {
 	 */
 	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMSecurityConfiguration1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
 			isDerived = false;
 			xmlTag = "DgstAlgo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -264,11 +265,11 @@ public class ATMSecurityConfiguration1 {
 			simpleType_lazy = () -> Algorithm11Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DgtlSgntr")
 	protected ATMSecurityConfiguration4 digitalSignature;
 	/**
-	 * Configuration of the digital signatures if the security module is able to
-	 * perform digital signatures with an asymmetric key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -297,7 +298,7 @@ public class ATMSecurityConfiguration1 {
 	 */
 	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMSecurityConfiguration1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
 			isDerived = false;
 			xmlTag = "DgtlSgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -309,10 +310,11 @@ public class ATMSecurityConfiguration1 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration4.mmObject();
 		}
 	};
+	@XmlElement(name = "PIN")
 	protected ATMSecurityConfiguration5 pIN;
 	/**
-	 * Configuration of the PIN online verification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -339,7 +341,7 @@ public class ATMSecurityConfiguration1 {
 	 */
 	public static final MMMessageAssociationEnd mmPIN = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMSecurityConfiguration1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
 			isDerived = false;
 			xmlTag = "PIN";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -351,10 +353,11 @@ public class ATMSecurityConfiguration1 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration5.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgPrtcn")
 	protected List<MessageProtection1Code> messageProtection;
 	/**
-	 * Mechanism used to protect the message of the ATM protocol.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -383,7 +386,7 @@ public class ATMSecurityConfiguration1 {
 	 */
 	public static final MMMessageAttribute mmMessageProtection = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMSecurityConfiguration1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgPrtcn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -397,9 +400,10 @@ public class ATMSecurityConfiguration1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMSecurityConfiguration1.mmKeys, ATMSecurityConfiguration1.mmEncryption, ATMSecurityConfiguration1.mmMACAlgorithm, ATMSecurityConfiguration1.mmDigestAlgorithm,
-						ATMSecurityConfiguration1.mmDigitalSignature, ATMSecurityConfiguration1.mmPIN, ATMSecurityConfiguration1.mmMessageProtection);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityConfiguration1.mmKeys, com.tools20022.repository.msg.ATMSecurityConfiguration1.mmEncryption,
+						com.tools20022.repository.msg.ATMSecurityConfiguration1.mmMACAlgorithm, com.tools20022.repository.msg.ATMSecurityConfiguration1.mmDigestAlgorithm,
+						com.tools20022.repository.msg.ATMSecurityConfiguration1.mmDigitalSignature, com.tools20022.repository.msg.ATMSecurityConfiguration1.mmPIN, com.tools20022.repository.msg.ATMSecurityConfiguration1.mmMessageProtection);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityConfiguration1";
 				definition = "Configuration parameters in use by the security device.";
@@ -409,66 +413,66 @@ public class ATMSecurityConfiguration1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Keys")
-	public ATMSecurityConfiguration2 getKeys() {
-		return keys;
+	public Optional<ATMSecurityConfiguration2> getKeys() {
+		return keys == null ? Optional.empty() : Optional.of(keys);
 	}
 
-	public void setKeys(com.tools20022.repository.msg.ATMSecurityConfiguration2 keys) {
+	public ATMSecurityConfiguration1 setKeys(com.tools20022.repository.msg.ATMSecurityConfiguration2 keys) {
 		this.keys = keys;
+		return this;
 	}
 
-	@XmlElement(name = "Ncrptn")
-	public ATMSecurityConfiguration3 getEncryption() {
-		return encryption;
+	public Optional<ATMSecurityConfiguration3> getEncryption() {
+		return encryption == null ? Optional.empty() : Optional.of(encryption);
 	}
 
-	public void setEncryption(com.tools20022.repository.msg.ATMSecurityConfiguration3 encryption) {
+	public ATMSecurityConfiguration1 setEncryption(com.tools20022.repository.msg.ATMSecurityConfiguration3 encryption) {
 		this.encryption = encryption;
+		return this;
 	}
 
-	@XmlElement(name = "MACAlgo")
 	public List<Algorithm12Code> getMACAlgorithm() {
-		return mACAlgorithm;
+		return mACAlgorithm == null ? mACAlgorithm = new ArrayList<>() : mACAlgorithm;
 	}
 
-	public void setMACAlgorithm(List<Algorithm12Code> mACAlgorithm) {
-		this.mACAlgorithm = mACAlgorithm;
+	public ATMSecurityConfiguration1 setMACAlgorithm(List<Algorithm12Code> mACAlgorithm) {
+		this.mACAlgorithm = Objects.requireNonNull(mACAlgorithm);
+		return this;
 	}
 
-	@XmlElement(name = "DgstAlgo")
 	public List<Algorithm11Code> getDigestAlgorithm() {
-		return digestAlgorithm;
+		return digestAlgorithm == null ? digestAlgorithm = new ArrayList<>() : digestAlgorithm;
 	}
 
-	public void setDigestAlgorithm(List<Algorithm11Code> digestAlgorithm) {
-		this.digestAlgorithm = digestAlgorithm;
+	public ATMSecurityConfiguration1 setDigestAlgorithm(List<Algorithm11Code> digestAlgorithm) {
+		this.digestAlgorithm = Objects.requireNonNull(digestAlgorithm);
+		return this;
 	}
 
-	@XmlElement(name = "DgtlSgntr")
-	public ATMSecurityConfiguration4 getDigitalSignature() {
-		return digitalSignature;
+	public Optional<ATMSecurityConfiguration4> getDigitalSignature() {
+		return digitalSignature == null ? Optional.empty() : Optional.of(digitalSignature);
 	}
 
-	public void setDigitalSignature(com.tools20022.repository.msg.ATMSecurityConfiguration4 digitalSignature) {
+	public ATMSecurityConfiguration1 setDigitalSignature(com.tools20022.repository.msg.ATMSecurityConfiguration4 digitalSignature) {
 		this.digitalSignature = digitalSignature;
+		return this;
 	}
 
-	@XmlElement(name = "PIN")
-	public ATMSecurityConfiguration5 getPIN() {
-		return pIN;
+	public Optional<ATMSecurityConfiguration5> getPIN() {
+		return pIN == null ? Optional.empty() : Optional.of(pIN);
 	}
 
-	public void setPIN(com.tools20022.repository.msg.ATMSecurityConfiguration5 pIN) {
+	public ATMSecurityConfiguration1 setPIN(com.tools20022.repository.msg.ATMSecurityConfiguration5 pIN) {
 		this.pIN = pIN;
+		return this;
 	}
 
-	@XmlElement(name = "MsgPrtcn")
 	public List<MessageProtection1Code> getMessageProtection() {
-		return messageProtection;
+		return messageProtection == null ? messageProtection = new ArrayList<>() : messageProtection;
 	}
 
-	public void setMessageProtection(List<MessageProtection1Code> messageProtection) {
-		this.messageProtection = messageProtection;
+	public ATMSecurityConfiguration1 setMessageProtection(List<MessageProtection1Code> messageProtection) {
+		this.messageProtection = Objects.requireNonNull(messageProtection);
+		return this;
 	}
 }

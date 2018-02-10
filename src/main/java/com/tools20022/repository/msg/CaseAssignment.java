@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -107,8 +108,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,15 +122,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CaseAssignment", propOrder = {"identification", "assigner", "assignee", "creationDateTime"})
 public class CaseAssignment {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Identification of an assignment within a case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +163,7 @@ public class CaseAssignment {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestigationCase.mmAssignmentIdentification;
-			componentContext_lazy = () -> CaseAssignment.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CaseAssignment.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,11 +174,11 @@ public class CaseAssignment {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Assgnr", required = true)
 	protected AnyBICIdentifier assigner;
 	/**
-	 * Party that assigns the case to another party. This is also the sender of
-	 * the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,7 +213,7 @@ public class CaseAssignment {
 	public static final MMMessageAttribute mmAssigner = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CaseAssignment.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CaseAssignment.mmObject();
 			isDerived = false;
 			xmlTag = "Assgnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,11 +224,11 @@ public class CaseAssignment {
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Assgne", required = true)
 	protected AnyBICIdentifier assignee;
 	/**
-	 * Party that the case is assigned to. This is also the receiver of the
-	 * message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -261,7 +263,7 @@ public class CaseAssignment {
 	public static final MMMessageAttribute mmAssignee = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CaseAssignment.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CaseAssignment.mmObject();
 			isDerived = false;
 			xmlTag = "Assgne";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,10 +274,11 @@ public class CaseAssignment {
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm", required = true)
 	protected ISODateTime creationDateTime;
 	/**
-	 * Date and time at which the assignment was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -307,7 +310,7 @@ public class CaseAssignment {
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestigationCase.mmCreationDateTime;
-			componentContext_lazy = () -> CaseAssignment.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CaseAssignment.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -322,12 +325,13 @@ public class CaseAssignment {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CaseAssignment.mmIdentification, CaseAssignment.mmAssigner, CaseAssignment.mmAssignee, CaseAssignment.mmCreationDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CaseAssignment.mmIdentification, com.tools20022.repository.msg.CaseAssignment.mmAssigner, com.tools20022.repository.msg.CaseAssignment.mmAssignee,
+						com.tools20022.repository.msg.CaseAssignment.mmCreationDateTime);
 				messageBuildingBlock_lazy = () -> Arrays.asList(RequestToModifyPayment.mmAssignment, RequestToCancelPayment.mmAssignment, UnableToApply.mmAssignment, ClaimNonReceipt.mmAssignment, AdditionalPaymentInformation.mmAssignment,
 						ResolutionOfInvestigation.mmAssignment, NotificationOfCaseAssignment.mmAssignment, RejectCaseAssignment.mmAssignment, RequestForDuplicateInstruction.mmAssignment, DebitAuthorisationResponse.mmAssignment,
 						DebitAuthorisationRequest.mmAssignment, CaseStatusReport.mmNewAssignment, CancelCaseAssignment.mmAssignment);
 				trace_lazy = () -> InvestigationCase.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CaseAssignment";
 				definition = "Represents the assignment of a case to a party. Assignment is a step in the overall process of managing a case.";
@@ -336,39 +340,39 @@ public class CaseAssignment {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public CaseAssignment setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Assgnr", required = true)
 	public AnyBICIdentifier getAssigner() {
 		return assigner;
 	}
 
-	public void setAssigner(AnyBICIdentifier assigner) {
-		this.assigner = assigner;
+	public CaseAssignment setAssigner(AnyBICIdentifier assigner) {
+		this.assigner = Objects.requireNonNull(assigner);
+		return this;
 	}
 
-	@XmlElement(name = "Assgne", required = true)
 	public AnyBICIdentifier getAssignee() {
 		return assignee;
 	}
 
-	public void setAssignee(AnyBICIdentifier assignee) {
-		this.assignee = assignee;
+	public CaseAssignment setAssignee(AnyBICIdentifier assignee) {
+		this.assignee = Objects.requireNonNull(assignee);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
-		this.creationDateTime = creationDateTime;
+	public CaseAssignment setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = Objects.requireNonNull(creationDateTime);
+		return this;
 	}
 }

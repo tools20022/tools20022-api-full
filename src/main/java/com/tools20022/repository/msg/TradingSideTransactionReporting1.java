@@ -27,9 +27,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.ReportingPartyRole;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TradingSideTransactionReporting1", propOrder = {"reportingJurisdiction", "reportingParty", "tradingSideUniqueTransactionIdentifier"})
 public class TradingSideTransactionReporting1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptgJursdctn")
 	protected Max35Text reportingJurisdiction;
 	/**
-	 * Specifies the supervisory party to which the trade needs to be reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +119,7 @@ public class TradingSideTransactionReporting1 {
 	public static final MMMessageAttribute mmReportingJurisdiction = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> TradingSideTransactionReporting1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingSideTransactionReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgJursdctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,11 +130,11 @@ public class TradingSideTransactionReporting1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RptgPty")
 	protected PartyIdentification73Choice reportingParty;
 	/**
-	 * Identifies the party that is responsible for reporting the trade to the
-	 * trade repository.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,7 +170,7 @@ public class TradingSideTransactionReporting1 {
 	public static final MMMessageAttribute mmReportingParty = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> TradingSideTransactionReporting1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingSideTransactionReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,15 +181,11 @@ public class TradingSideTransactionReporting1 {
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgSdUnqTxIdr")
 	protected List<com.tools20022.repository.msg.UniqueTransactionIdentifier2> tradingSideUniqueTransactionIdentifier;
 	/**
-	 * Specifies the unique transaction identifier (UTI) to be created at the
-	 * time a transaction is first executed, shared with all registered entities
-	 * and counterparties involved in the transaction, and used to track that
-	 * particular transaction over its life. This identifier can also be known
-	 * as the Unique Swap Identifier (USI). This is the UTI from the Trading
-	 * Side party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,7 +221,7 @@ public class TradingSideTransactionReporting1 {
 	public static final MMMessageAttribute mmTradingSideUniqueTransactionIdentifier = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeRelatedIdentifications;
-			componentContext_lazy = () -> TradingSideTransactionReporting1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingSideTransactionReporting1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSdUnqTxIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,10 +235,10 @@ public class TradingSideTransactionReporting1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TradingSideTransactionReporting1.mmReportingJurisdiction, TradingSideTransactionReporting1.mmReportingParty,
-						TradingSideTransactionReporting1.mmTradingSideUniqueTransactionIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradingSideTransactionReporting1.mmReportingJurisdiction, com.tools20022.repository.msg.TradingSideTransactionReporting1.mmReportingParty,
+						com.tools20022.repository.msg.TradingSideTransactionReporting1.mmTradingSideUniqueTransactionIdentifier);
 				trace_lazy = () -> ReportingPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingSideTransactionReporting1";
 				definition = "This is regulatory transaction reporting information from the Trading Side party.";
@@ -251,30 +247,30 @@ public class TradingSideTransactionReporting1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptgJursdctn")
-	public Max35Text getReportingJurisdiction() {
-		return reportingJurisdiction;
+	public Optional<Max35Text> getReportingJurisdiction() {
+		return reportingJurisdiction == null ? Optional.empty() : Optional.of(reportingJurisdiction);
 	}
 
-	public void setReportingJurisdiction(Max35Text reportingJurisdiction) {
+	public TradingSideTransactionReporting1 setReportingJurisdiction(Max35Text reportingJurisdiction) {
 		this.reportingJurisdiction = reportingJurisdiction;
+		return this;
 	}
 
-	@XmlElement(name = "RptgPty")
-	public PartyIdentification73Choice getReportingParty() {
-		return reportingParty;
+	public Optional<PartyIdentification73Choice> getReportingParty() {
+		return reportingParty == null ? Optional.empty() : Optional.of(reportingParty);
 	}
 
-	public void setReportingParty(PartyIdentification73Choice reportingParty) {
+	public TradingSideTransactionReporting1 setReportingParty(PartyIdentification73Choice reportingParty) {
 		this.reportingParty = reportingParty;
+		return this;
 	}
 
-	@XmlElement(name = "TradgSdUnqTxIdr")
 	public List<UniqueTransactionIdentifier2> getTradingSideUniqueTransactionIdentifier() {
-		return tradingSideUniqueTransactionIdentifier;
+		return tradingSideUniqueTransactionIdentifier == null ? tradingSideUniqueTransactionIdentifier = new ArrayList<>() : tradingSideUniqueTransactionIdentifier;
 	}
 
-	public void setTradingSideUniqueTransactionIdentifier(List<com.tools20022.repository.msg.UniqueTransactionIdentifier2> tradingSideUniqueTransactionIdentifier) {
-		this.tradingSideUniqueTransactionIdentifier = tradingSideUniqueTransactionIdentifier;
+	public TradingSideTransactionReporting1 setTradingSideUniqueTransactionIdentifier(List<com.tools20022.repository.msg.UniqueTransactionIdentifier2> tradingSideUniqueTransactionIdentifier) {
+		this.tradingSideUniqueTransactionIdentifier = Objects.requireNonNull(tradingSideUniqueTransactionIdentifier);
+		return this;
 	}
 }

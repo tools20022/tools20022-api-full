@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +75,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,15 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * CashCollateral1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashCollateral2", propOrder = {"collateralIdentification", "cashAccountIdentification", "returnExcess", "depositAmount", "depositType", "maturityDate", "valueDate", "exchangeRate", "collateralValue", "haircut"})
 public class CashCollateral2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CollId")
 	protected Max35Text collateralIdentification;
 	/**
-	 * Provides the identification of the proposed collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +126,7 @@ public class CashCollateral2 {
 	 */
 	public static final MMMessageAttribute mmCollateralIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashCollateral2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral2.mmObject();
 			isDerived = false;
 			xmlTag = "CollId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +137,11 @@ public class CashCollateral2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAcctId")
 	protected AccountIdentification4Choice cashAccountIdentification;
 	/**
-	 * Provides the identification of the clearing member 's cash account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -171,7 +175,7 @@ public class CashCollateral2 {
 	public static final MMMessageAssociationEnd mmCashAccountIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> CashCollateral2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral2.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,10 +187,11 @@ public class CashCollateral2 {
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RtrXcss")
 	protected YesNoIndicator returnExcess;
 	/**
-	 * Indicates whether excess of cash should be returned or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,7 +220,7 @@ public class CashCollateral2 {
 	 */
 	public static final MMMessageAttribute mmReturnExcess = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashCollateral2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral2.mmObject();
 			isDerived = false;
 			xmlTag = "RtrXcss";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,10 +231,11 @@ public class CashCollateral2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "DpstAmt")
 	protected ActiveCurrencyAndAmount depositAmount;
 	/**
-	 * Amount of the deposit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -268,7 +274,7 @@ public class CashCollateral2 {
 	public static final MMMessageAttribute mmDepositAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Money.mmCashAmount;
-			componentContext_lazy = () -> CashCollateral2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral2.mmObject();
 			isDerived = false;
 			xmlTag = "DpstAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,10 +286,11 @@ public class CashCollateral2 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "DpstTp")
 	protected DepositType1Code depositType;
 	/**
-	 * Specifies whether the deposit is fixed term or call/notice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -323,7 +330,7 @@ public class CashCollateral2 {
 	public static final MMMessageAttribute mmDepositType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deposit.mmDepositType;
-			componentContext_lazy = () -> CashCollateral2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral2.mmObject();
 			isDerived = false;
 			xmlTag = "DpstTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -335,10 +342,11 @@ public class CashCollateral2 {
 			simpleType_lazy = () -> DepositType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MtrtyDt")
 	protected ISODate maturityDate;
 	/**
-	 * Planned final repayment date at the time of issuance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -376,7 +384,7 @@ public class CashCollateral2 {
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
-			componentContext_lazy = () -> CashCollateral2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral2.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -388,10 +396,11 @@ public class CashCollateral2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ValDt")
 	protected ISODate valueDate;
 	/**
-	 * Valuation date of the cash taken as collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -429,7 +438,7 @@ public class CashCollateral2 {
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CollateralValuation.mmCollateralValuationDate;
-			componentContext_lazy = () -> CashCollateral2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral2.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -441,10 +450,11 @@ public class CashCollateral2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "XchgRate")
 	protected BaseOneRate exchangeRate;
 	/**
-	 * Exchange rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -482,7 +492,7 @@ public class CashCollateral2 {
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmExchangeRate;
-			componentContext_lazy = () -> CashCollateral2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral2.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -494,10 +504,11 @@ public class CashCollateral2 {
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	@XmlElement(name = "CollVal", required = true)
 	protected ActiveCurrencyAndAmount collateralValue;
 	/**
-	 * Value of the collateral after taking into account the haircut.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -537,7 +548,7 @@ public class CashCollateral2 {
 	public static final MMMessageAttribute mmCollateralValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmRiskAdjustedValue;
-			componentContext_lazy = () -> CashCollateral2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral2.mmObject();
 			isDerived = false;
 			xmlTag = "CollVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -549,10 +560,11 @@ public class CashCollateral2 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Hrcut")
 	protected PercentageRate haircut;
 	/**
-	 * Haircut or valuation factor on the collateral expressed as a percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -593,7 +605,7 @@ public class CashCollateral2 {
 	public static final MMMessageAttribute mmHaircut = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> HaircutValuation.mmHaircut;
-			componentContext_lazy = () -> CashCollateral2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral2.mmObject();
 			isDerived = false;
 			xmlTag = "Hrcut";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -609,10 +621,12 @@ public class CashCollateral2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashCollateral2.mmCollateralIdentification, CashCollateral2.mmCashAccountIdentification, CashCollateral2.mmReturnExcess, CashCollateral2.mmDepositAmount,
-						CashCollateral2.mmDepositType, CashCollateral2.mmMaturityDate, CashCollateral2.mmValueDate, CashCollateral2.mmExchangeRate, CashCollateral2.mmCollateralValue, CashCollateral2.mmHaircut);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashCollateral2.mmCollateralIdentification, com.tools20022.repository.msg.CashCollateral2.mmCashAccountIdentification,
+						com.tools20022.repository.msg.CashCollateral2.mmReturnExcess, com.tools20022.repository.msg.CashCollateral2.mmDepositAmount, com.tools20022.repository.msg.CashCollateral2.mmDepositType,
+						com.tools20022.repository.msg.CashCollateral2.mmMaturityDate, com.tools20022.repository.msg.CashCollateral2.mmValueDate, com.tools20022.repository.msg.CashCollateral2.mmExchangeRate,
+						com.tools20022.repository.msg.CashCollateral2.mmCollateralValue, com.tools20022.repository.msg.CashCollateral2.mmHaircut);
 				trace_lazy = () -> Money.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashCollateral2";
 				definition = "Provides details about the cash posted as collateral.";
@@ -622,93 +636,93 @@ public class CashCollateral2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CollId")
-	public Max35Text getCollateralIdentification() {
-		return collateralIdentification;
+	public Optional<Max35Text> getCollateralIdentification() {
+		return collateralIdentification == null ? Optional.empty() : Optional.of(collateralIdentification);
 	}
 
-	public void setCollateralIdentification(Max35Text collateralIdentification) {
+	public CashCollateral2 setCollateralIdentification(Max35Text collateralIdentification) {
 		this.collateralIdentification = collateralIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CshAcctId")
-	public AccountIdentification4Choice getCashAccountIdentification() {
-		return cashAccountIdentification;
+	public Optional<AccountIdentification4Choice> getCashAccountIdentification() {
+		return cashAccountIdentification == null ? Optional.empty() : Optional.of(cashAccountIdentification);
 	}
 
-	public void setCashAccountIdentification(AccountIdentification4Choice cashAccountIdentification) {
+	public CashCollateral2 setCashAccountIdentification(AccountIdentification4Choice cashAccountIdentification) {
 		this.cashAccountIdentification = cashAccountIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "RtrXcss")
-	public YesNoIndicator getReturnExcess() {
-		return returnExcess;
+	public Optional<YesNoIndicator> getReturnExcess() {
+		return returnExcess == null ? Optional.empty() : Optional.of(returnExcess);
 	}
 
-	public void setReturnExcess(YesNoIndicator returnExcess) {
+	public CashCollateral2 setReturnExcess(YesNoIndicator returnExcess) {
 		this.returnExcess = returnExcess;
+		return this;
 	}
 
-	@XmlElement(name = "DpstAmt")
-	public ActiveCurrencyAndAmount getDepositAmount() {
-		return depositAmount;
+	public Optional<ActiveCurrencyAndAmount> getDepositAmount() {
+		return depositAmount == null ? Optional.empty() : Optional.of(depositAmount);
 	}
 
-	public void setDepositAmount(ActiveCurrencyAndAmount depositAmount) {
+	public CashCollateral2 setDepositAmount(ActiveCurrencyAndAmount depositAmount) {
 		this.depositAmount = depositAmount;
+		return this;
 	}
 
-	@XmlElement(name = "DpstTp")
-	public DepositType1Code getDepositType() {
-		return depositType;
+	public Optional<DepositType1Code> getDepositType() {
+		return depositType == null ? Optional.empty() : Optional.of(depositType);
 	}
 
-	public void setDepositType(DepositType1Code depositType) {
+	public CashCollateral2 setDepositType(DepositType1Code depositType) {
 		this.depositType = depositType;
+		return this;
 	}
 
-	@XmlElement(name = "MtrtyDt")
-	public ISODate getMaturityDate() {
-		return maturityDate;
+	public Optional<ISODate> getMaturityDate() {
+		return maturityDate == null ? Optional.empty() : Optional.of(maturityDate);
 	}
 
-	public void setMaturityDate(ISODate maturityDate) {
+	public CashCollateral2 setMaturityDate(ISODate maturityDate) {
 		this.maturityDate = maturityDate;
+		return this;
 	}
 
-	@XmlElement(name = "ValDt")
-	public ISODate getValueDate() {
-		return valueDate;
+	public Optional<ISODate> getValueDate() {
+		return valueDate == null ? Optional.empty() : Optional.of(valueDate);
 	}
 
-	public void setValueDate(ISODate valueDate) {
+	public CashCollateral2 setValueDate(ISODate valueDate) {
 		this.valueDate = valueDate;
+		return this;
 	}
 
-	@XmlElement(name = "XchgRate")
-	public BaseOneRate getExchangeRate() {
-		return exchangeRate;
+	public Optional<BaseOneRate> getExchangeRate() {
+		return exchangeRate == null ? Optional.empty() : Optional.of(exchangeRate);
 	}
 
-	public void setExchangeRate(BaseOneRate exchangeRate) {
+	public CashCollateral2 setExchangeRate(BaseOneRate exchangeRate) {
 		this.exchangeRate = exchangeRate;
+		return this;
 	}
 
-	@XmlElement(name = "CollVal", required = true)
 	public ActiveCurrencyAndAmount getCollateralValue() {
 		return collateralValue;
 	}
 
-	public void setCollateralValue(ActiveCurrencyAndAmount collateralValue) {
-		this.collateralValue = collateralValue;
+	public CashCollateral2 setCollateralValue(ActiveCurrencyAndAmount collateralValue) {
+		this.collateralValue = Objects.requireNonNull(collateralValue);
+		return this;
 	}
 
-	@XmlElement(name = "Hrcut")
-	public PercentageRate getHaircut() {
-		return haircut;
+	public Optional<PercentageRate> getHaircut() {
+		return haircut == null ? Optional.empty() : Optional.of(haircut);
 	}
 
-	public void setHaircut(PercentageRate haircut) {
+	public CashCollateral2 setHaircut(PercentageRate haircut) {
 		this.haircut = haircut;
+		return this;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ConsentTypeFormat1Choice", propOrder = {"code", "proprietary"})
 public class ConsentTypeFormat1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected ConsentType1Code code;
 	/**
-	 * Standard code to specify the consent type required.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -127,7 +129,7 @@ public class ConsentTypeFormat1Choice {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmConsentType;
-			componentContext_lazy = () -> ConsentTypeFormat1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ConsentTypeFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,10 +141,11 @@ public class ConsentTypeFormat1Choice {
 			simpleType_lazy = () -> ConsentType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification20 proprietary;
 	/**
-	 * Proprietary identification of the consent type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -183,7 +186,7 @@ public class ConsentTypeFormat1Choice {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmConsentType;
-			componentContext_lazy = () -> ConsentTypeFormat1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ConsentTypeFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,9 +203,9 @@ public class ConsentTypeFormat1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ConsentTypeFormat1Choice.mmCode, ConsentTypeFormat1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ConsentTypeFormat1Choice.mmCode, com.tools20022.repository.choice.ConsentTypeFormat1Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConsentTypeFormat1Choice";
 				definition = "Choice between a standard code or proprietary code to specify the consent type format required.";
@@ -212,21 +215,21 @@ public class ConsentTypeFormat1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public ConsentType1Code getCode() {
 		return code;
 	}
 
-	public void setCode(ConsentType1Code code) {
-		this.code = code;
+	public ConsentTypeFormat1Choice setCode(ConsentType1Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification20 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification20 proprietary) {
-		this.proprietary = proprietary;
+	public ConsentTypeFormat1Choice setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

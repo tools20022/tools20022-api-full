@@ -20,32 +20,36 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AlgorithmCode;
+import com.tools20022.repository.codeset.Algorithm7Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Asymmetric encryption algorithm of a transport key.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AlgorithmCode AlgorithmCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm7Code#mmRSAEncryption
- * Algorithm7Code.mmRSAEncryption}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm7Code#mmRSAESOAEP
- * Algorithm7Code.mmRSAESOAEP}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm7Code#RSAEncryption
+ * Algorithm7Code.RSAEncryption}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm7Code#RSAESOAEP
+ * Algorithm7Code.RSAESOAEP}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode AlgorithmCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -62,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Asymmetric encryption algorithm of a transport key."</li>
  * </ul>
  */
-public class Algorithm7Code extends AlgorithmCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Algorithm7Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -81,11 +86,12 @@ public class Algorithm7Code extends AlgorithmCode {
 	 * name} = "RSAEncryption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRSAEncryption = new MMCode() {
+	public static final Algorithm7Code RSAEncryption = new Algorithm7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RSAEncryption";
-			owner_lazy = () -> Algorithm7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm7Code.mmObject();
+			codeName = AlgorithmCode.RSAEncryption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -104,26 +110,57 @@ public class Algorithm7Code extends AlgorithmCode {
 	 * name} = "RSAES-OAEP"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRSAESOAEP = new MMCode() {
+	public static final Algorithm7Code RSAESOAEP = new Algorithm7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RSAES-OAEP";
-			owner_lazy = () -> Algorithm7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm7Code.mmObject();
+			codeName = AlgorithmCode.RSAESOAEP.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Algorithm7Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Algorithm7Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ERSA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Algorithm7Code";
 				definition = "Asymmetric encryption algorithm of a transport key.";
-				code_lazy = () -> Arrays.asList(Algorithm7Code.mmRSAEncryption, Algorithm7Code.mmRSAESOAEP);
 				trace_lazy = () -> AlgorithmCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm7Code.RSAEncryption, com.tools20022.repository.codeset.Algorithm7Code.RSAESOAEP);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(RSAEncryption.getCodeName().get(), RSAEncryption);
+		codesByName.put(RSAESOAEP.getCodeName().get(), RSAESOAEP);
+	}
+
+	public static Algorithm7Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Algorithm7Code[] values() {
+		Algorithm7Code[] values = new Algorithm7Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Algorithm7Code> {
+		@Override
+		public Algorithm7Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Algorithm7Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

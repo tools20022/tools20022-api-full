@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.AccountAndParties2;
 import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4;
 import com.tools20022.repository.msgset.SupplementaryDataISOLatestversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -38,22 +40,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SupplementaryDataLatestVersion
- * SupplementaryDataLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.SupplementaryDataISOLatestversion
- * SupplementaryDataISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "InfRspnSD1"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -72,6 +58,22 @@ import javax.xml.bind.annotation.*;
  * InformationResponseSD1V01.mmAccountAndParties}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SupplementaryDataISOLatestversion
+ * SupplementaryDataISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "InfRspnSD1"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SupplementaryDataLatestVersion
+ * SupplementaryDataLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code supl.027.001.01}</li>
@@ -85,15 +87,16 @@ import javax.xml.bind.annotation.*;
  * definition} = "This extends the message InformationRequestResponse."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InformationResponseSD1V01", propOrder = {"investigationIdentification", "creationDateTime", "accountServicerIdentification", "accountAndParties"})
 public class InformationResponseSD1V01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InvstgtnId", required = true)
 	protected Max35Text investigationIdentification;
 	/**
-	 * Information used to identify the request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,10 +135,11 @@ public class InformationResponseSD1V01 {
 			}
 		}
 	};
+	@XmlElement(name = "CreDtTm", required = true)
 	protected ISODateTime creationDateTime;
 	/**
-	 * Date and time of creation of the extension.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,10 +178,11 @@ public class InformationResponseSD1V01 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctSvcrId", required = true)
 	protected BranchAndFinancialInstitutionIdentification4 accountServicerIdentification;
 	/**
-	 * Identifies the account servicing institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,10 +222,11 @@ public class InformationResponseSD1V01 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctAndPties", required = true)
 	protected List<AccountAndParties2> accountAndParties;
 	/**
-	 * Requested account and its owners.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -290,43 +296,43 @@ public class InformationResponseSD1V01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InvstgtnId", required = true)
 	public Max35Text getInvestigationIdentification() {
 		return investigationIdentification;
 	}
 
-	public void setInvestigationIdentification(Max35Text investigationIdentification) {
-		this.investigationIdentification = investigationIdentification;
+	public InformationResponseSD1V01 setInvestigationIdentification(Max35Text investigationIdentification) {
+		this.investigationIdentification = Objects.requireNonNull(investigationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
-		this.creationDateTime = creationDateTime;
+	public InformationResponseSD1V01 setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = Objects.requireNonNull(creationDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcrId", required = true)
 	public BranchAndFinancialInstitutionIdentification4 getAccountServicerIdentification() {
 		return accountServicerIdentification;
 	}
 
-	public void setAccountServicerIdentification(BranchAndFinancialInstitutionIdentification4 accountServicerIdentification) {
-		this.accountServicerIdentification = accountServicerIdentification;
+	public InformationResponseSD1V01 setAccountServicerIdentification(BranchAndFinancialInstitutionIdentification4 accountServicerIdentification) {
+		this.accountServicerIdentification = Objects.requireNonNull(accountServicerIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctAndPties", required = true)
 	public List<AccountAndParties2> getAccountAndParties() {
-		return accountAndParties;
+		return accountAndParties == null ? accountAndParties = new ArrayList<>() : accountAndParties;
 	}
 
-	public void setAccountAndParties(List<AccountAndParties2> accountAndParties) {
-		this.accountAndParties = accountAndParties;
+	public InformationResponseSD1V01 setAccountAndParties(List<AccountAndParties2> accountAndParties) {
+		this.accountAndParties = Objects.requireNonNull(accountAndParties);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:supl.027.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:supl.027.001.01")
 	static public class Document {
 		@XmlElement(name = "InfRspnSD1", required = true)
 		public InformationResponseSD1V01 messageBody;

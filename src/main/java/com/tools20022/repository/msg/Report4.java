@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -84,8 +86,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,16 +98,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "General characteristics of the report."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Report4", propOrder = {"reportNumber", "queryReference", "reportIdentification", "reportDateTime", "creationDateTime", "previousReportDateTime", "frequency", "updateType", "reportBasis", "reportPeriod", "reportSource",
 		"auditedIndicator", "activityIndicator"})
 public class Report4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptNb")
 	protected Max5NumericText reportNumber;
 	/**
-	 * Sequential number of the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,7 +135,7 @@ public class Report4 {
 	 */
 	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Report4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
 			xmlTag = "RptNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,11 +146,11 @@ public class Report4 {
 			simpleType_lazy = () -> Max5NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "QryRef")
 	protected Max35Text queryReference;
 	/**
-	 * Identification of the SecuritiesStatementQuery message sent to request
-	 * this statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -175,7 +178,7 @@ public class Report4 {
 	 */
 	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Report4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
 			xmlTag = "QryRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,10 +189,11 @@ public class Report4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RptId")
 	protected Max35Text reportIdentification;
 	/**
-	 * Unique identification of the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,7 +219,7 @@ public class Report4 {
 	 */
 	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Report4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
 			xmlTag = "RptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,10 +230,11 @@ public class Report4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RptDtTm", required = true)
 	protected DateAndDateTimeChoice reportDateTime;
 	/**
-	 * Date and time of the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -256,7 +261,7 @@ public class Report4 {
 	 */
 	public static final MMMessageAttribute mmReportDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Report4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
 			xmlTag = "RptDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,10 +272,11 @@ public class Report4 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm")
 	protected DateAndDateTimeChoice creationDateTime;
 	/**
-	 * Preparation date and time of the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -303,7 +309,7 @@ public class Report4 {
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
-			componentContext_lazy = () -> Report4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -314,10 +320,11 @@ public class Report4 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsRptDtTm")
 	protected DateAndDateTimeChoice previousReportDateTime;
 	/**
-	 * Previous report date and time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -344,7 +351,7 @@ public class Report4 {
 	 */
 	public static final MMMessageAttribute mmPreviousReportDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Report4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsRptDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -355,10 +362,11 @@ public class Report4 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Frqcy", required = true)
 	protected Frequency8Choice frequency;
 	/**
-	 * Specifies the frequency of the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -385,7 +393,7 @@ public class Report4 {
 	 */
 	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Report4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -396,10 +404,11 @@ public class Report4 {
 			complexType_lazy = () -> Frequency8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "UpdTp", required = true)
 	protected UpdateType4Choice updateType;
 	/**
-	 * Specifies whether the report is complete or contains changes only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -427,7 +436,7 @@ public class Report4 {
 	 */
 	public static final MMMessageAttribute mmUpdateType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Report4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -438,10 +447,11 @@ public class Report4 {
 			complexType_lazy = () -> UpdateType4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RptBsis", required = true)
 	protected StatementBasis6Choice reportBasis;
 	/**
-	 * Specifies the type of balance on which the report is prepared.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -469,7 +479,7 @@ public class Report4 {
 	 */
 	public static final MMMessageAttribute mmReportBasis = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Report4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
 			xmlTag = "RptBsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -480,10 +490,11 @@ public class Report4 {
 			complexType_lazy = () -> StatementBasis6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RptPrd")
 	protected DatePeriodDetails reportPeriod;
 	/**
-	 * Period for which the report is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -510,7 +521,7 @@ public class Report4 {
 	 */
 	public static final MMMessageAttribute mmReportPeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Report4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
 			xmlTag = "RptPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -521,10 +532,11 @@ public class Report4 {
 			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails.mmObject();
 		}
 	};
+	@XmlElement(name = "RptSrc")
 	protected StatementSource1Choice reportSource;
 	/**
-	 * Specifies the source of the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -551,7 +563,7 @@ public class Report4 {
 	 */
 	public static final MMMessageAttribute mmReportSource = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Report4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
 			xmlTag = "RptSrc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -562,10 +574,11 @@ public class Report4 {
 			complexType_lazy = () -> StatementSource1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AudtdInd")
 	protected YesNoIndicator auditedIndicator;
 	/**
-	 * Indicates whether the report is audited or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -592,7 +605,7 @@ public class Report4 {
 	 */
 	public static final MMMessageAttribute mmAuditedIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Report4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
 			xmlTag = "AudtdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -603,11 +616,11 @@ public class Report4 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ActvtyInd")
 	protected YesNoIndicator activityIndicator;
 	/**
-	 * Indicates whether there is activity or an information update reported in
-	 * the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -636,7 +649,7 @@ public class Report4 {
 	 */
 	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Report4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
 			xmlTag = "ActvtyInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -651,10 +664,12 @@ public class Report4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Report4.mmReportNumber, Report4.mmQueryReference, Report4.mmReportIdentification, Report4.mmReportDateTime, Report4.mmCreationDateTime, Report4.mmPreviousReportDateTime,
-						Report4.mmFrequency, Report4.mmUpdateType, Report4.mmReportBasis, Report4.mmReportPeriod, Report4.mmReportSource, Report4.mmAuditedIndicator, Report4.mmActivityIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Report4.mmReportNumber, com.tools20022.repository.msg.Report4.mmQueryReference, com.tools20022.repository.msg.Report4.mmReportIdentification,
+						com.tools20022.repository.msg.Report4.mmReportDateTime, com.tools20022.repository.msg.Report4.mmCreationDateTime, com.tools20022.repository.msg.Report4.mmPreviousReportDateTime,
+						com.tools20022.repository.msg.Report4.mmFrequency, com.tools20022.repository.msg.Report4.mmUpdateType, com.tools20022.repository.msg.Report4.mmReportBasis, com.tools20022.repository.msg.Report4.mmReportPeriod,
+						com.tools20022.repository.msg.Report4.mmReportSource, com.tools20022.repository.msg.Report4.mmAuditedIndicator, com.tools20022.repository.msg.Report4.mmActivityIndicator);
 				messageBuildingBlock_lazy = () -> Arrays.asList(TotalPortfolioValuationReportV01.mmReportGeneralDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Report4";
 				definition = "General characteristics of the report.";
@@ -663,120 +678,120 @@ public class Report4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptNb")
-	public Max5NumericText getReportNumber() {
-		return reportNumber;
+	public Optional<Max5NumericText> getReportNumber() {
+		return reportNumber == null ? Optional.empty() : Optional.of(reportNumber);
 	}
 
-	public void setReportNumber(Max5NumericText reportNumber) {
+	public Report4 setReportNumber(Max5NumericText reportNumber) {
 		this.reportNumber = reportNumber;
+		return this;
 	}
 
-	@XmlElement(name = "QryRef")
-	public Max35Text getQueryReference() {
-		return queryReference;
+	public Optional<Max35Text> getQueryReference() {
+		return queryReference == null ? Optional.empty() : Optional.of(queryReference);
 	}
 
-	public void setQueryReference(Max35Text queryReference) {
+	public Report4 setQueryReference(Max35Text queryReference) {
 		this.queryReference = queryReference;
+		return this;
 	}
 
-	@XmlElement(name = "RptId")
-	public Max35Text getReportIdentification() {
-		return reportIdentification;
+	public Optional<Max35Text> getReportIdentification() {
+		return reportIdentification == null ? Optional.empty() : Optional.of(reportIdentification);
 	}
 
-	public void setReportIdentification(Max35Text reportIdentification) {
+	public Report4 setReportIdentification(Max35Text reportIdentification) {
 		this.reportIdentification = reportIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "RptDtTm", required = true)
 	public DateAndDateTimeChoice getReportDateTime() {
 		return reportDateTime;
 	}
 
-	public void setReportDateTime(DateAndDateTimeChoice reportDateTime) {
-		this.reportDateTime = reportDateTime;
+	public Report4 setReportDateTime(DateAndDateTimeChoice reportDateTime) {
+		this.reportDateTime = Objects.requireNonNull(reportDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm")
-	public DateAndDateTimeChoice getCreationDateTime() {
-		return creationDateTime;
+	public Optional<DateAndDateTimeChoice> getCreationDateTime() {
+		return creationDateTime == null ? Optional.empty() : Optional.of(creationDateTime);
 	}
 
-	public void setCreationDateTime(DateAndDateTimeChoice creationDateTime) {
+	public Report4 setCreationDateTime(DateAndDateTimeChoice creationDateTime) {
 		this.creationDateTime = creationDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRptDtTm")
-	public DateAndDateTimeChoice getPreviousReportDateTime() {
-		return previousReportDateTime;
+	public Optional<DateAndDateTimeChoice> getPreviousReportDateTime() {
+		return previousReportDateTime == null ? Optional.empty() : Optional.of(previousReportDateTime);
 	}
 
-	public void setPreviousReportDateTime(DateAndDateTimeChoice previousReportDateTime) {
+	public Report4 setPreviousReportDateTime(DateAndDateTimeChoice previousReportDateTime) {
 		this.previousReportDateTime = previousReportDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "Frqcy", required = true)
 	public Frequency8Choice getFrequency() {
 		return frequency;
 	}
 
-	public void setFrequency(Frequency8Choice frequency) {
-		this.frequency = frequency;
+	public Report4 setFrequency(Frequency8Choice frequency) {
+		this.frequency = Objects.requireNonNull(frequency);
+		return this;
 	}
 
-	@XmlElement(name = "UpdTp", required = true)
 	public UpdateType4Choice getUpdateType() {
 		return updateType;
 	}
 
-	public void setUpdateType(UpdateType4Choice updateType) {
-		this.updateType = updateType;
+	public Report4 setUpdateType(UpdateType4Choice updateType) {
+		this.updateType = Objects.requireNonNull(updateType);
+		return this;
 	}
 
-	@XmlElement(name = "RptBsis", required = true)
 	public StatementBasis6Choice getReportBasis() {
 		return reportBasis;
 	}
 
-	public void setReportBasis(StatementBasis6Choice reportBasis) {
-		this.reportBasis = reportBasis;
+	public Report4 setReportBasis(StatementBasis6Choice reportBasis) {
+		this.reportBasis = Objects.requireNonNull(reportBasis);
+		return this;
 	}
 
-	@XmlElement(name = "RptPrd")
-	public DatePeriodDetails getReportPeriod() {
-		return reportPeriod;
+	public Optional<DatePeriodDetails> getReportPeriod() {
+		return reportPeriod == null ? Optional.empty() : Optional.of(reportPeriod);
 	}
 
-	public void setReportPeriod(com.tools20022.repository.msg.DatePeriodDetails reportPeriod) {
+	public Report4 setReportPeriod(com.tools20022.repository.msg.DatePeriodDetails reportPeriod) {
 		this.reportPeriod = reportPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "RptSrc")
-	public StatementSource1Choice getReportSource() {
-		return reportSource;
+	public Optional<StatementSource1Choice> getReportSource() {
+		return reportSource == null ? Optional.empty() : Optional.of(reportSource);
 	}
 
-	public void setReportSource(StatementSource1Choice reportSource) {
+	public Report4 setReportSource(StatementSource1Choice reportSource) {
 		this.reportSource = reportSource;
+		return this;
 	}
 
-	@XmlElement(name = "AudtdInd")
-	public YesNoIndicator getAuditedIndicator() {
-		return auditedIndicator;
+	public Optional<YesNoIndicator> getAuditedIndicator() {
+		return auditedIndicator == null ? Optional.empty() : Optional.of(auditedIndicator);
 	}
 
-	public void setAuditedIndicator(YesNoIndicator auditedIndicator) {
+	public Report4 setAuditedIndicator(YesNoIndicator auditedIndicator) {
 		this.auditedIndicator = auditedIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "ActvtyInd")
-	public YesNoIndicator getActivityIndicator() {
-		return activityIndicator;
+	public Optional<YesNoIndicator> getActivityIndicator() {
+		return activityIndicator == null ? Optional.empty() : Optional.of(activityIndicator);
 	}
 
-	public void setActivityIndicator(YesNoIndicator activityIndicator) {
+	public Report4 setActivityIndicator(YesNoIndicator activityIndicator) {
 		this.activityIndicator = activityIndicator;
+		return this;
 	}
 }

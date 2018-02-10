@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Defines the criteria used to report on business day information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BusinessDayInformationReturnCriteria", propOrder = {"systemStatusIndicator", "eventIndicator", "sessionPeriodIndicator", "closureInformationIndicator"})
 public class BusinessDayInformationReturnCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SysStsInd")
 	protected RequestedIndicator systemStatusIndicator;
 	/**
-	 * Indicates whether the system status is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +106,7 @@ public class BusinessDayInformationReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmSystemStatusIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BusinessDayInformationReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "SysStsInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +117,11 @@ public class BusinessDayInformationReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtInd")
 	protected RequestedIndicator eventIndicator;
 	/**
-	 * Indicates whether the events are requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +149,7 @@ public class BusinessDayInformationReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmEventIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BusinessDayInformationReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "EvtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,10 +160,11 @@ public class BusinessDayInformationReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "SsnPrdInd")
 	protected RequestedIndicator sessionPeriodIndicator;
 	/**
-	 * Indicates whether the session period is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,7 +192,7 @@ public class BusinessDayInformationReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmSessionPeriodIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BusinessDayInformationReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "SsnPrdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,10 +203,11 @@ public class BusinessDayInformationReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ClsrInfInd")
 	protected RequestedIndicator closureInformationIndicator;
 	/**
-	 * Indicates whether the closure information is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -230,7 +235,7 @@ public class BusinessDayInformationReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmClosureInformationIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BusinessDayInformationReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "ClsrInfInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,9 +250,9 @@ public class BusinessDayInformationReturnCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BusinessDayInformationReturnCriteria.mmSystemStatusIndicator, BusinessDayInformationReturnCriteria.mmEventIndicator, BusinessDayInformationReturnCriteria.mmSessionPeriodIndicator,
-						BusinessDayInformationReturnCriteria.mmClosureInformationIndicator);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDayInformationReturnCriteria.mmSystemStatusIndicator, com.tools20022.repository.msg.BusinessDayInformationReturnCriteria.mmEventIndicator,
+						com.tools20022.repository.msg.BusinessDayInformationReturnCriteria.mmSessionPeriodIndicator, com.tools20022.repository.msg.BusinessDayInformationReturnCriteria.mmClosureInformationIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDayInformationReturnCriteria";
 				definition = "Defines the criteria used to report on business day information.";
@@ -256,39 +261,39 @@ public class BusinessDayInformationReturnCriteria {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SysStsInd")
-	public RequestedIndicator getSystemStatusIndicator() {
-		return systemStatusIndicator;
+	public Optional<RequestedIndicator> getSystemStatusIndicator() {
+		return systemStatusIndicator == null ? Optional.empty() : Optional.of(systemStatusIndicator);
 	}
 
-	public void setSystemStatusIndicator(RequestedIndicator systemStatusIndicator) {
+	public BusinessDayInformationReturnCriteria setSystemStatusIndicator(RequestedIndicator systemStatusIndicator) {
 		this.systemStatusIndicator = systemStatusIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "EvtInd")
-	public RequestedIndicator getEventIndicator() {
-		return eventIndicator;
+	public Optional<RequestedIndicator> getEventIndicator() {
+		return eventIndicator == null ? Optional.empty() : Optional.of(eventIndicator);
 	}
 
-	public void setEventIndicator(RequestedIndicator eventIndicator) {
+	public BusinessDayInformationReturnCriteria setEventIndicator(RequestedIndicator eventIndicator) {
 		this.eventIndicator = eventIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "SsnPrdInd")
-	public RequestedIndicator getSessionPeriodIndicator() {
-		return sessionPeriodIndicator;
+	public Optional<RequestedIndicator> getSessionPeriodIndicator() {
+		return sessionPeriodIndicator == null ? Optional.empty() : Optional.of(sessionPeriodIndicator);
 	}
 
-	public void setSessionPeriodIndicator(RequestedIndicator sessionPeriodIndicator) {
+	public BusinessDayInformationReturnCriteria setSessionPeriodIndicator(RequestedIndicator sessionPeriodIndicator) {
 		this.sessionPeriodIndicator = sessionPeriodIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "ClsrInfInd")
-	public RequestedIndicator getClosureInformationIndicator() {
-		return closureInformationIndicator;
+	public Optional<RequestedIndicator> getClosureInformationIndicator() {
+		return closureInformationIndicator == null ? Optional.empty() : Optional.of(closureInformationIndicator);
 	}
 
-	public void setClosureInformationIndicator(RequestedIndicator closureInformationIndicator) {
+	public BusinessDayInformationReturnCriteria setClosureInformationIndicator(RequestedIndicator closureInformationIndicator) {
 		this.closureInformationIndicator = closureInformationIndicator;
+		return this;
 	}
 }

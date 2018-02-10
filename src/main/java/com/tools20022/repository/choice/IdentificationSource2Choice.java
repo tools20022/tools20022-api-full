@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IdentificationSource2Choice", propOrder = {"domestic", "proprietary"})
 public class IdentificationSource2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dmst", required = true)
 	protected CountryCode domestic;
 	/**
-	 * Country of the proprietary identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +114,7 @@ public class IdentificationSource2Choice {
 	public static final MMMessageAttribute mmDomestic = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> IdentificationIssuerRole.mmCountry;
-			componentContext_lazy = () -> IdentificationSource2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationSource2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dmst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +125,11 @@ public class IdentificationSource2Choice {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected RestrictedFINExact2Text proprietary;
 	/**
-	 * Entity that issues the proprietary identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +163,7 @@ public class IdentificationSource2Choice {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
-			componentContext_lazy = () -> IdentificationSource2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationSource2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,9 +178,9 @@ public class IdentificationSource2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IdentificationSource2Choice.mmDomestic, IdentificationSource2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationSource2Choice.mmDomestic, com.tools20022.repository.choice.IdentificationSource2Choice.mmProprietary);
 				trace_lazy = () -> IdentificationIssuerRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IdentificationSource2Choice";
 				definition = "Choice of proprietary or domestic identification scheme that uniquely identifies a security.";
@@ -186,21 +189,21 @@ public class IdentificationSource2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dmst", required = true)
 	public CountryCode getDomestic() {
 		return domestic;
 	}
 
-	public void setDomestic(CountryCode domestic) {
-		this.domestic = domestic;
+	public IdentificationSource2Choice setDomestic(CountryCode domestic) {
+		this.domestic = Objects.requireNonNull(domestic);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public RestrictedFINExact2Text getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(RestrictedFINExact2Text proprietary) {
-		this.proprietary = proprietary;
+	public IdentificationSource2Choice setProprietary(RestrictedFINExact2Text proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

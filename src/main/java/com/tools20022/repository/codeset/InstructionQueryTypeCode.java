@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.InstructionQueryTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of instruction queried.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionQueryTypeCode#mmSettlementInstruction
- * InstructionQueryTypeCode.mmSettlementInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionQueryTypeCode#SettlementInstruction
+ * InstructionQueryTypeCode.SettlementInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionQueryTypeCode#mmIntraPositionMovement
- * InstructionQueryTypeCode.mmIntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionQueryTypeCode#IntraPositionMovement
+ * InstructionQueryTypeCode.IntraPositionMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionQueryTypeCode#mmSettlementAndIntraPosition
- * InstructionQueryTypeCode.mmSettlementAndIntraPosition}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionQueryTypeCode#SettlementAndIntraPosition
+ * InstructionQueryTypeCode.SettlementAndIntraPosition}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of instruction queried."</li>
  * </ul>
  */
-public class InstructionQueryTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InstructionQueryTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -94,12 +100,12 @@ public class InstructionQueryTypeCode {
 	 * definition} = "Query is performed on settlement transactions."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementInstruction = new MMCode() {
+	public static final InstructionQueryTypeCode SettlementInstruction = new InstructionQueryTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementInstruction";
 			definition = "Query is performed on settlement transactions.";
-			owner_lazy = () -> InstructionQueryTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionQueryTypeCode.mmObject();
 			codeName = "SETT";
 		}
 	};
@@ -124,12 +130,12 @@ public class InstructionQueryTypeCode {
 	 * definition} = "Query is performed on intra-position movements."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntraPositionMovement = new MMCode() {
+	public static final InstructionQueryTypeCode IntraPositionMovement = new InstructionQueryTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionMovement";
 			definition = "Query is performed on intra-position movements.";
-			owner_lazy = () -> InstructionQueryTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionQueryTypeCode.mmObject();
 			codeName = "IPOS";
 		}
 	};
@@ -157,28 +163,60 @@ public class InstructionQueryTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementAndIntraPosition = new MMCode() {
+	public static final InstructionQueryTypeCode SettlementAndIntraPosition = new InstructionQueryTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAndIntraPosition";
 			definition = "Query is performed on both settlement transactions and intra-position movements.";
-			owner_lazy = () -> InstructionQueryTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionQueryTypeCode.mmObject();
 			codeName = "BOTH";
 		}
 	};
+	final static private LinkedHashMap<String, InstructionQueryTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InstructionQueryTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SETT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionQueryTypeCode";
 				definition = "Specifies the type of instruction queried.";
-				code_lazy = () -> Arrays.asList(InstructionQueryTypeCode.mmSettlementInstruction, InstructionQueryTypeCode.mmIntraPositionMovement, InstructionQueryTypeCode.mmSettlementAndIntraPosition);
 				derivation_lazy = () -> Arrays.asList(InstructionQueryType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionQueryTypeCode.SettlementInstruction, com.tools20022.repository.codeset.InstructionQueryTypeCode.IntraPositionMovement,
+						com.tools20022.repository.codeset.InstructionQueryTypeCode.SettlementAndIntraPosition);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SettlementInstruction.getCodeName().get(), SettlementInstruction);
+		codesByName.put(IntraPositionMovement.getCodeName().get(), IntraPositionMovement);
+		codesByName.put(SettlementAndIntraPosition.getCodeName().get(), SettlementAndIntraPosition);
+	}
+
+	public static InstructionQueryTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InstructionQueryTypeCode[] values() {
+		InstructionQueryTypeCode[] values = new InstructionQueryTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InstructionQueryTypeCode> {
+		@Override
+		public InstructionQueryTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InstructionQueryTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

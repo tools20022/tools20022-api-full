@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.Sector;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,16 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SectorAndLocation1", propOrder = {"sector", "location"})
 public class SectorAndLocation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sctr", required = true)
 	protected SNA2008SectorIdentifier sector;
 	/**
-	 * Represents the counterparty institutional section (such as non-financial
-	 * corporation, central bank, ...).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,7 +133,7 @@ public class SectorAndLocation1 {
 	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Sector.mmIdentification;
-			componentContext_lazy = () -> SectorAndLocation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SectorAndLocation1.mmObject();
 			isDerived = false;
 			xmlTag = "Sctr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -144,10 +145,11 @@ public class SectorAndLocation1 {
 			simpleType_lazy = () -> SNA2008SectorIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Lctn", required = true)
 	protected CountryCode location;
 	/**
-	 * Location of the country in which the counterparty is incorporated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,7 +191,7 @@ public class SectorAndLocation1 {
 	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
-			componentContext_lazy = () -> SectorAndLocation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SectorAndLocation1.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,9 +207,9 @@ public class SectorAndLocation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SectorAndLocation1.mmSector, SectorAndLocation1.mmLocation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SectorAndLocation1.mmSector, com.tools20022.repository.msg.SectorAndLocation1.mmLocation);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SectorAndLocation1";
 				definition = "Provides the identification of the reported party through the sector and the location.";
@@ -217,21 +219,21 @@ public class SectorAndLocation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sctr", required = true)
 	public SNA2008SectorIdentifier getSector() {
 		return sector;
 	}
 
-	public void setSector(SNA2008SectorIdentifier sector) {
-		this.sector = sector;
+	public SectorAndLocation1 setSector(SNA2008SectorIdentifier sector) {
+		this.sector = Objects.requireNonNull(sector);
+		return this;
 	}
 
-	@XmlElement(name = "Lctn", required = true)
 	public CountryCode getLocation() {
 		return location;
 	}
 
-	public void setLocation(CountryCode location) {
-		this.location = location;
+	public SectorAndLocation1 setLocation(CountryCode location) {
+		this.location = Objects.requireNonNull(location);
+		return this;
 	}
 }

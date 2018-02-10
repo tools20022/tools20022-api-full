@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ChargeTaxBasisCode;
+import com.tools20022.repository.codeset.ChargeTaxBasis1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Define the Charges/tax basis for the trade being allocated.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ChargeTaxBasisCode
- * ChargeTaxBasisCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTaxBasis1Code#mmFlatOrAbsolute
- * ChargeTaxBasis1Code.mmFlatOrAbsolute}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTaxBasis1Code#FlatOrAbsolute
+ * ChargeTaxBasis1Code.FlatOrAbsolute}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeTaxBasis1Code#mmPerUnit
- * ChargeTaxBasis1Code.mmPerUnit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeTaxBasis1Code#PerUnit
+ * ChargeTaxBasis1Code.PerUnit}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ChargeTaxBasisCode
+ * ChargeTaxBasisCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Define the Charges/tax basis for the trade being allocated."</li>
  * </ul>
  */
-public class ChargeTaxBasis1Code extends ChargeTaxBasisCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ChargeTaxBasis1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class ChargeTaxBasis1Code extends ChargeTaxBasisCode {
 	 * name} = "FlatOrAbsolute"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFlatOrAbsolute = new MMCode() {
+	public static final ChargeTaxBasis1Code FlatOrAbsolute = new ChargeTaxBasis1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FlatOrAbsolute";
-			owner_lazy = () -> ChargeTaxBasis1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeTaxBasis1Code.mmObject();
+			codeName = ChargeTaxBasisCode.FlatOrAbsolute.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class ChargeTaxBasis1Code extends ChargeTaxBasisCode {
 	 * name} = "PerUnit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPerUnit = new MMCode() {
+	public static final ChargeTaxBasis1Code PerUnit = new ChargeTaxBasis1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
-			owner_lazy = () -> ChargeTaxBasis1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeTaxBasis1Code.mmObject();
+			codeName = ChargeTaxBasisCode.PerUnit.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ChargeTaxBasis1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ChargeTaxBasis1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FLAT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeTaxBasis1Code";
 				definition = "Define the Charges/tax basis for the trade being allocated.";
-				code_lazy = () -> Arrays.asList(ChargeTaxBasis1Code.mmFlatOrAbsolute, ChargeTaxBasis1Code.mmPerUnit);
 				trace_lazy = () -> ChargeTaxBasisCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeTaxBasis1Code.FlatOrAbsolute, com.tools20022.repository.codeset.ChargeTaxBasis1Code.PerUnit);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(FlatOrAbsolute.getCodeName().get(), FlatOrAbsolute);
+		codesByName.put(PerUnit.getCodeName().get(), PerUnit);
+	}
+
+	public static ChargeTaxBasis1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ChargeTaxBasis1Code[] values() {
+		ChargeTaxBasis1Code[] values = new ChargeTaxBasis1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ChargeTaxBasis1Code> {
+		@Override
+		public ChargeTaxBasis1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ChargeTaxBasis1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

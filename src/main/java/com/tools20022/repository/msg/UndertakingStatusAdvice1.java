@@ -31,9 +31,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.entity.UndertakingStatus;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -101,8 +100,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -113,16 +112,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Undertaking status information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UndertakingStatusAdvice1", propOrder = {"initiatingParty", "undertakingIdentification", "amendmentSequenceNumber", "advisingPartyReferenceNumber", "confirmerReferenceNumber", "statusCategory", "status", "statusReason",
 		"reportedAmount", "originalMessageDetails", "enclosedFile", "additionalInformation"})
 public class UndertakingStatusAdvice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InitgPty", required = true)
 	protected PartyIdentification43 initiatingParty;
 	/**
-	 * Details related to the party that initiated the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -154,7 +154,7 @@ public class UndertakingStatusAdvice1 {
 	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "InitgPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,10 +166,11 @@ public class UndertakingStatusAdvice1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	@XmlElement(name = "UdrtkgId")
 	protected Undertaking8 undertakingIdentification;
 	/**
-	 * Details related to the identification of the undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -202,7 +203,7 @@ public class UndertakingStatusAdvice1 {
 	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> UndertakingStatus.mmUndertaking;
-			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,11 +215,11 @@ public class UndertakingStatusAdvice1 {
 			type_lazy = () -> com.tools20022.repository.msg.Undertaking8.mmObject();
 		}
 	};
+	@XmlElement(name = "AmdmntSeqNb")
 	protected Number amendmentSequenceNumber;
 	/**
-	 * Sequence number assigned by the issuer to each amendment of the
-	 * undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -247,7 +248,7 @@ public class UndertakingStatusAdvice1 {
 	 */
 	public static final MMMessageAttribute mmAmendmentSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntSeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,11 +259,11 @@ public class UndertakingStatusAdvice1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "AdvsgPtyRefNb")
 	protected Max35Text advisingPartyReferenceNumber;
 	/**
-	 * Unique and unambiguous identifier assigned by the advising party to the
-	 * undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -291,7 +292,7 @@ public class UndertakingStatusAdvice1 {
 	 */
 	public static final MMMessageAttribute mmAdvisingPartyReferenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "AdvsgPtyRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -302,11 +303,11 @@ public class UndertakingStatusAdvice1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CnfrmrRefNb")
 	protected Max35Text confirmerReferenceNumber;
 	/**
-	 * Unique and unambiguous identifier assigned by the confirmer to the
-	 * undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -335,7 +336,7 @@ public class UndertakingStatusAdvice1 {
 	 */
 	public static final MMMessageAttribute mmConfirmerReferenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "CnfrmrRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -346,10 +347,11 @@ public class UndertakingStatusAdvice1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "StsCtgy", required = true)
 	protected ExternalUndertakingStatusCategory1Code statusCategory;
 	/**
-	 * Specifies the category of the status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -383,7 +385,7 @@ public class UndertakingStatusAdvice1 {
 	public static final MMMessageAttribute mmStatusCategory = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> UndertakingStatus.mmStatusCategory;
-			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "StsCtgy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -394,10 +396,11 @@ public class UndertakingStatusAdvice1 {
 			simpleType_lazy = () -> ExternalUndertakingStatusCategory1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts", required = true)
 	protected UndertakingStatus3Code status;
 	/**
-	 * Specifies the reported status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -431,7 +434,7 @@ public class UndertakingStatusAdvice1 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> UndertakingStatus.mmStatus;
-			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -442,11 +445,11 @@ public class UndertakingStatusAdvice1 {
 			simpleType_lazy = () -> UndertakingStatus3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StsRsn")
 	protected List<com.tools20022.repository.msg.StatusReasonInformation8> statusReason;
 	/**
-	 * Set of elements used to provide detailed information on the status
-	 * reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -481,7 +484,7 @@ public class UndertakingStatusAdvice1 {
 	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> UndertakingStatus.mmUndertakingStatusReason;
-			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -492,10 +495,11 @@ public class UndertakingStatusAdvice1 {
 			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation8.mmObject();
 		}
 	};
+	@XmlElement(name = "RptdAmt")
 	protected List<com.tools20022.repository.msg.ReportedAmount1> reportedAmount;
 	/**
-	 * Amount reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -522,7 +526,7 @@ public class UndertakingStatusAdvice1 {
 	 */
 	public static final MMMessageAttribute mmReportedAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "RptdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -532,11 +536,11 @@ public class UndertakingStatusAdvice1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.ReportedAmount1.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlMsgDtls")
 	protected OriginalMessage1 originalMessageDetails;
 	/**
-	 * Information concerning the original message to which the status report
-	 * may be sent in response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -564,7 +568,7 @@ public class UndertakingStatusAdvice1 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalMessageDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -576,10 +580,11 @@ public class UndertakingStatusAdvice1 {
 			type_lazy = () -> com.tools20022.repository.msg.OriginalMessage1.mmObject();
 		}
 	};
+	@XmlElement(name = "NclsdFile")
 	protected List<com.tools20022.repository.msg.Document9> enclosedFile;
 	/**
-	 * Document or template enclosed in the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -610,7 +615,7 @@ public class UndertakingStatusAdvice1 {
 	public static final MMMessageAssociationEnd mmEnclosedFile = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmSpecifiedDocument;
-			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "NclsdFile";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -621,10 +626,11 @@ public class UndertakingStatusAdvice1 {
 			type_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected List<Max2000Text> additionalInformation;
 	/**
-	 * Additional information related to the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -651,7 +657,7 @@ public class UndertakingStatusAdvice1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UndertakingStatusAdvice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingStatusAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -666,13 +672,15 @@ public class UndertakingStatusAdvice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UndertakingStatusAdvice1.mmInitiatingParty, UndertakingStatusAdvice1.mmUndertakingIdentification, UndertakingStatusAdvice1.mmAmendmentSequenceNumber,
-						UndertakingStatusAdvice1.mmAdvisingPartyReferenceNumber, UndertakingStatusAdvice1.mmConfirmerReferenceNumber, UndertakingStatusAdvice1.mmStatusCategory, UndertakingStatusAdvice1.mmStatus,
-						UndertakingStatusAdvice1.mmStatusReason, UndertakingStatusAdvice1.mmReportedAmount, UndertakingStatusAdvice1.mmOriginalMessageDetails, UndertakingStatusAdvice1.mmEnclosedFile,
-						UndertakingStatusAdvice1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingStatusAdvice1.mmInitiatingParty, com.tools20022.repository.msg.UndertakingStatusAdvice1.mmUndertakingIdentification,
+						com.tools20022.repository.msg.UndertakingStatusAdvice1.mmAmendmentSequenceNumber, com.tools20022.repository.msg.UndertakingStatusAdvice1.mmAdvisingPartyReferenceNumber,
+						com.tools20022.repository.msg.UndertakingStatusAdvice1.mmConfirmerReferenceNumber, com.tools20022.repository.msg.UndertakingStatusAdvice1.mmStatusCategory,
+						com.tools20022.repository.msg.UndertakingStatusAdvice1.mmStatus, com.tools20022.repository.msg.UndertakingStatusAdvice1.mmStatusReason, com.tools20022.repository.msg.UndertakingStatusAdvice1.mmReportedAmount,
+						com.tools20022.repository.msg.UndertakingStatusAdvice1.mmOriginalMessageDetails, com.tools20022.repository.msg.UndertakingStatusAdvice1.mmEnclosedFile,
+						com.tools20022.repository.msg.UndertakingStatusAdvice1.mmAdditionalInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingStatusReportV01.mmUndertakingStatusReportDetails);
 				trace_lazy = () -> UndertakingStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingStatusAdvice1";
 				definition = "Undertaking status information.";
@@ -681,111 +689,111 @@ public class UndertakingStatusAdvice1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InitgPty", required = true)
 	public PartyIdentification43 getInitiatingParty() {
 		return initiatingParty;
 	}
 
-	public void setInitiatingParty(com.tools20022.repository.msg.PartyIdentification43 initiatingParty) {
-		this.initiatingParty = initiatingParty;
+	public UndertakingStatusAdvice1 setInitiatingParty(com.tools20022.repository.msg.PartyIdentification43 initiatingParty) {
+		this.initiatingParty = Objects.requireNonNull(initiatingParty);
+		return this;
 	}
 
-	@XmlElement(name = "UdrtkgId")
-	public Undertaking8 getUndertakingIdentification() {
-		return undertakingIdentification;
+	public Optional<Undertaking8> getUndertakingIdentification() {
+		return undertakingIdentification == null ? Optional.empty() : Optional.of(undertakingIdentification);
 	}
 
-	public void setUndertakingIdentification(com.tools20022.repository.msg.Undertaking8 undertakingIdentification) {
+	public UndertakingStatusAdvice1 setUndertakingIdentification(com.tools20022.repository.msg.Undertaking8 undertakingIdentification) {
 		this.undertakingIdentification = undertakingIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AmdmntSeqNb")
-	public Number getAmendmentSequenceNumber() {
-		return amendmentSequenceNumber;
+	public Optional<Number> getAmendmentSequenceNumber() {
+		return amendmentSequenceNumber == null ? Optional.empty() : Optional.of(amendmentSequenceNumber);
 	}
 
-	public void setAmendmentSequenceNumber(Number amendmentSequenceNumber) {
+	public UndertakingStatusAdvice1 setAmendmentSequenceNumber(Number amendmentSequenceNumber) {
 		this.amendmentSequenceNumber = amendmentSequenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "AdvsgPtyRefNb")
-	public Max35Text getAdvisingPartyReferenceNumber() {
-		return advisingPartyReferenceNumber;
+	public Optional<Max35Text> getAdvisingPartyReferenceNumber() {
+		return advisingPartyReferenceNumber == null ? Optional.empty() : Optional.of(advisingPartyReferenceNumber);
 	}
 
-	public void setAdvisingPartyReferenceNumber(Max35Text advisingPartyReferenceNumber) {
+	public UndertakingStatusAdvice1 setAdvisingPartyReferenceNumber(Max35Text advisingPartyReferenceNumber) {
 		this.advisingPartyReferenceNumber = advisingPartyReferenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "CnfrmrRefNb")
-	public Max35Text getConfirmerReferenceNumber() {
-		return confirmerReferenceNumber;
+	public Optional<Max35Text> getConfirmerReferenceNumber() {
+		return confirmerReferenceNumber == null ? Optional.empty() : Optional.of(confirmerReferenceNumber);
 	}
 
-	public void setConfirmerReferenceNumber(Max35Text confirmerReferenceNumber) {
+	public UndertakingStatusAdvice1 setConfirmerReferenceNumber(Max35Text confirmerReferenceNumber) {
 		this.confirmerReferenceNumber = confirmerReferenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "StsCtgy", required = true)
 	public ExternalUndertakingStatusCategory1Code getStatusCategory() {
 		return statusCategory;
 	}
 
-	public void setStatusCategory(ExternalUndertakingStatusCategory1Code statusCategory) {
-		this.statusCategory = statusCategory;
+	public UndertakingStatusAdvice1 setStatusCategory(ExternalUndertakingStatusCategory1Code statusCategory) {
+		this.statusCategory = Objects.requireNonNull(statusCategory);
+		return this;
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public UndertakingStatus3Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(UndertakingStatus3Code status) {
-		this.status = status;
+	public UndertakingStatusAdvice1 setStatus(UndertakingStatus3Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "StsRsn")
 	public List<StatusReasonInformation8> getStatusReason() {
-		return statusReason;
+		return statusReason == null ? statusReason = new ArrayList<>() : statusReason;
 	}
 
-	public void setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation8> statusReason) {
-		this.statusReason = statusReason;
+	public UndertakingStatusAdvice1 setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation8> statusReason) {
+		this.statusReason = Objects.requireNonNull(statusReason);
+		return this;
 	}
 
-	@XmlElement(name = "RptdAmt")
 	public List<ReportedAmount1> getReportedAmount() {
-		return reportedAmount;
+		return reportedAmount == null ? reportedAmount = new ArrayList<>() : reportedAmount;
 	}
 
-	public void setReportedAmount(List<com.tools20022.repository.msg.ReportedAmount1> reportedAmount) {
-		this.reportedAmount = reportedAmount;
+	public UndertakingStatusAdvice1 setReportedAmount(List<com.tools20022.repository.msg.ReportedAmount1> reportedAmount) {
+		this.reportedAmount = Objects.requireNonNull(reportedAmount);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlMsgDtls")
-	public OriginalMessage1 getOriginalMessageDetails() {
-		return originalMessageDetails;
+	public Optional<OriginalMessage1> getOriginalMessageDetails() {
+		return originalMessageDetails == null ? Optional.empty() : Optional.of(originalMessageDetails);
 	}
 
-	public void setOriginalMessageDetails(com.tools20022.repository.msg.OriginalMessage1 originalMessageDetails) {
+	public UndertakingStatusAdvice1 setOriginalMessageDetails(com.tools20022.repository.msg.OriginalMessage1 originalMessageDetails) {
 		this.originalMessageDetails = originalMessageDetails;
+		return this;
 	}
 
-	@XmlElement(name = "NclsdFile")
 	public List<Document9> getEnclosedFile() {
-		return enclosedFile;
+		return enclosedFile == null ? enclosedFile = new ArrayList<>() : enclosedFile;
 	}
 
-	public void setEnclosedFile(List<com.tools20022.repository.msg.Document9> enclosedFile) {
-		this.enclosedFile = enclosedFile;
+	public UndertakingStatusAdvice1 setEnclosedFile(List<com.tools20022.repository.msg.Document9> enclosedFile) {
+		this.enclosedFile = Objects.requireNonNull(enclosedFile);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
-		return additionalInformation;
+		return additionalInformation == null ? additionalInformation = new ArrayList<>() : additionalInformation;
 	}
 
-	public void setAdditionalInformation(List<Max2000Text> additionalInformation) {
-		this.additionalInformation = additionalInformation;
+	public UndertakingStatusAdvice1 setAdditionalInformation(List<Max2000Text> additionalInformation) {
+		this.additionalInformation = Objects.requireNonNull(additionalInformation);
+		return this;
 	}
 }

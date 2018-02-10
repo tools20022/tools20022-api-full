@@ -25,9 +25,8 @@ import com.tools20022.repository.area.SecuritiesTradeArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -51,22 +50,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesTradeArchive
- * SecuritiesTradeArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "setr.003.001.02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "setr.003.001.02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -97,9 +80,33 @@ import javax.xml.bind.annotation.*;
  * RedemptionBulkOrderConfirmationV02.mmExtension}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "setr.003.001.02"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesTradeArchive
+ * SecuritiesTradeArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "setr.003.001.02"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code setr.003.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forRedemptionBulkOrderConfirmationV02
+ * ConstraintAccountIdentificationRule.forRedemptionBulkOrderConfirmationV02}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -120,16 +127,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "setr.003.001.02", propOrder = {"masterReference", "poolReference", "previousReference", "relatedReference", "bulkExecutionDetails", "intermediaryDetails", "copyDetails", "extension"})
 public class RedemptionBulkOrderConfirmationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MstrRef")
 	protected AdditionalReference3 masterReference;
 	/**
-	 * Reference assigned to a set of orders or trades in order to link them
-	 * together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,10 +178,11 @@ public class RedemptionBulkOrderConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PoolRef")
 	protected AdditionalReference3 poolReference;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -214,10 +222,11 @@ public class RedemptionBulkOrderConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsRef")
 	protected List<AdditionalReference3> previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -256,10 +265,11 @@ public class RedemptionBulkOrderConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdRef", required = true)
 	protected AdditionalReference3 relatedReference;
 	/**
-	 * Reference to a linked message that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -300,10 +310,11 @@ public class RedemptionBulkOrderConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "BlkExctnDtls", required = true)
 	protected RedemptionBulkExecution2 bulkExecutionDetails;
 	/**
-	 * General information related to the execution of investment fund orders.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -345,10 +356,11 @@ public class RedemptionBulkOrderConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "IntrmyDtls")
 	protected List<Intermediary4> intermediaryDetails;
 	/**
-	 * Information related to an intermediary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -387,10 +399,11 @@ public class RedemptionBulkOrderConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CpyDtls")
 	protected CopyInformation1 copyDetails;
 	/**
-	 * Information provided when the message is a copy of a previous message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -431,11 +444,11 @@ public class RedemptionBulkOrderConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -479,6 +492,7 @@ public class RedemptionBulkOrderConfirmationV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forRedemptionBulkOrderConfirmationV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionBulkOrderConfirmationV02";
 				definition = "Scope\r\nThe RedemptionBulkOrderConfirmation message is sent by an executing party, eg, a transfer agent, to an instructing party, eg, an investment manager or its authorised representative. There may be one or more intermediary parties between the executing party and the instructing party. The intermediary party is, for example, an intermediary or a concentrator.\r\nThis message is used to confirm the details of the execution of a RedemptionBulkOrder message.\r\nUsage\r\nThe RedemptionBulkOrderConfirmation message is sent, after the price has been determined, to confirm the execution of all individual orders.\r\nThere is usually one bulk confirmation message for one bulk order message.\r\nA RedemptionBulkOrder must in all cases be responded to by a RedemptionBulkOrderConfirmation and in no circumstances by a RedemptionMultipleOrderConfirmation.\r\nIf the executing party needs to confirm a RedemptionMultipleOrder message, then the RedemptionMultipleOrderConfirmation message must be used.";
@@ -511,79 +525,79 @@ public class RedemptionBulkOrderConfirmationV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MstrRef")
-	public AdditionalReference3 getMasterReference() {
-		return masterReference;
+	public Optional<AdditionalReference3> getMasterReference() {
+		return masterReference == null ? Optional.empty() : Optional.of(masterReference);
 	}
 
-	public void setMasterReference(AdditionalReference3 masterReference) {
+	public RedemptionBulkOrderConfirmationV02 setMasterReference(AdditionalReference3 masterReference) {
 		this.masterReference = masterReference;
+		return this;
 	}
 
-	@XmlElement(name = "PoolRef")
-	public AdditionalReference3 getPoolReference() {
-		return poolReference;
+	public Optional<AdditionalReference3> getPoolReference() {
+		return poolReference == null ? Optional.empty() : Optional.of(poolReference);
 	}
 
-	public void setPoolReference(AdditionalReference3 poolReference) {
+	public RedemptionBulkOrderConfirmationV02 setPoolReference(AdditionalReference3 poolReference) {
 		this.poolReference = poolReference;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef")
 	public List<AdditionalReference3> getPreviousReference() {
-		return previousReference;
+		return previousReference == null ? previousReference = new ArrayList<>() : previousReference;
 	}
 
-	public void setPreviousReference(List<AdditionalReference3> previousReference) {
-		this.previousReference = previousReference;
+	public RedemptionBulkOrderConfirmationV02 setPreviousReference(List<AdditionalReference3> previousReference) {
+		this.previousReference = Objects.requireNonNull(previousReference);
+		return this;
 	}
 
-	@XmlElement(name = "RltdRef", required = true)
 	public AdditionalReference3 getRelatedReference() {
 		return relatedReference;
 	}
 
-	public void setRelatedReference(AdditionalReference3 relatedReference) {
-		this.relatedReference = relatedReference;
+	public RedemptionBulkOrderConfirmationV02 setRelatedReference(AdditionalReference3 relatedReference) {
+		this.relatedReference = Objects.requireNonNull(relatedReference);
+		return this;
 	}
 
-	@XmlElement(name = "BlkExctnDtls", required = true)
 	public RedemptionBulkExecution2 getBulkExecutionDetails() {
 		return bulkExecutionDetails;
 	}
 
-	public void setBulkExecutionDetails(RedemptionBulkExecution2 bulkExecutionDetails) {
-		this.bulkExecutionDetails = bulkExecutionDetails;
+	public RedemptionBulkOrderConfirmationV02 setBulkExecutionDetails(RedemptionBulkExecution2 bulkExecutionDetails) {
+		this.bulkExecutionDetails = Objects.requireNonNull(bulkExecutionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "IntrmyDtls")
 	public List<Intermediary4> getIntermediaryDetails() {
-		return intermediaryDetails;
+		return intermediaryDetails == null ? intermediaryDetails = new ArrayList<>() : intermediaryDetails;
 	}
 
-	public void setIntermediaryDetails(List<Intermediary4> intermediaryDetails) {
-		this.intermediaryDetails = intermediaryDetails;
+	public RedemptionBulkOrderConfirmationV02 setIntermediaryDetails(List<Intermediary4> intermediaryDetails) {
+		this.intermediaryDetails = Objects.requireNonNull(intermediaryDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CpyDtls")
-	public CopyInformation1 getCopyDetails() {
-		return copyDetails;
+	public Optional<CopyInformation1> getCopyDetails() {
+		return copyDetails == null ? Optional.empty() : Optional.of(copyDetails);
 	}
 
-	public void setCopyDetails(CopyInformation1 copyDetails) {
+	public RedemptionBulkOrderConfirmationV02 setCopyDetails(CopyInformation1 copyDetails) {
 		this.copyDetails = copyDetails;
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<Extension1> extension) {
-		this.extension = extension;
+	public RedemptionBulkOrderConfirmationV02 setExtension(List<Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.003.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:setr.003.001.02")
 	static public class Document {
 		@XmlElement(name = "setr.003.001.02", required = true)
 		public RedemptionBulkOrderConfirmationV02 messageBody;

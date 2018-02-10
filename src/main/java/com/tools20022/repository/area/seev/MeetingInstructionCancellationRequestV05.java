@@ -25,9 +25,8 @@ import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ProxyVotingISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -46,21 +45,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
- * SecuritiesEventsLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ProxyVotingISOLatestversion
- * ProxyVotingISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "MtgInstrCxlReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -83,9 +67,33 @@ import javax.xml.bind.annotation.*;
  * MeetingInstructionCancellationRequestV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ProxyVotingISOLatestversion
+ * ProxyVotingISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "MtgInstrCxlReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
+ * SecuritiesEventsLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.005.001.05}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCancellation3Guideline#forMeetingInstructionCancellationRequestV05
+ * ConstraintCancellation3Guideline.forMeetingInstructionCancellationRequestV05}
+ * </li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,15 +110,16 @@ import javax.xml.bind.annotation.*;
  * MeetingInstructionCancellationRequestV04}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MeetingInstructionCancellationRequestV05", propOrder = {"previousReference", "meetingReference", "financialInstrumentIdentification", "instructedPosition", "supplementaryData"})
 public class MeetingInstructionCancellationRequestV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrvsRef", required = true)
 	protected MessageIdentification previousReference;
 	/**
-	 * Identifies the instruction to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,10 +165,11 @@ public class MeetingInstructionCancellationRequestV05 {
 			}
 		}
 	};
+	@XmlElement(name = "MtgRef")
 	protected MeetingReference7 meetingReference;
 	/**
-	 * Series of elements which allow to identify a meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -205,10 +215,11 @@ public class MeetingInstructionCancellationRequestV05 {
 			}
 		}
 	};
+	@XmlElement(name = "FinInstrmId")
 	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
-	 * Identifies the security for which the meeting is organised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -255,11 +266,11 @@ public class MeetingInstructionCancellationRequestV05 {
 			}
 		}
 	};
+	@XmlElement(name = "InstdPos")
 	protected List<SafekeepingAccount6> instructedPosition;
 	/**
-	 * Identifies the account and instructed positions for which the instruction
-	 * cancellation request applies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -306,11 +317,11 @@ public class MeetingInstructionCancellationRequestV05 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -355,6 +366,7 @@ public class MeetingInstructionCancellationRequestV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCancellation3Guideline.forMeetingInstructionCancellationRequestV05);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingInstructionCancellationRequestV05";
 				definition = "Scope\r\nThe MeetingInstructionCancellationRequest message is sent by the same party that sent the MeetingInstruction message. It is sent to request the cancellation of all instructions included in the original the MeetingInstruction message.\r\nUsage\r\nThis message must be answered by a MeetingInstructionStatus message. Some instructions in the previously sent MeetingInstruction message may have already been executed and cannot be cancelled. This information should appear clearly in the status message.\r\nThis message definition is intended for use with the Business Application Header (head.001.001.01).";
@@ -384,52 +396,52 @@ public class MeetingInstructionCancellationRequestV05 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrvsRef", required = true)
 	public MessageIdentification getPreviousReference() {
 		return previousReference;
 	}
 
-	public void setPreviousReference(MessageIdentification previousReference) {
-		this.previousReference = previousReference;
+	public MeetingInstructionCancellationRequestV05 setPreviousReference(MessageIdentification previousReference) {
+		this.previousReference = Objects.requireNonNull(previousReference);
+		return this;
 	}
 
-	@XmlElement(name = "MtgRef")
-	public MeetingReference7 getMeetingReference() {
-		return meetingReference;
+	public Optional<MeetingReference7> getMeetingReference() {
+		return meetingReference == null ? Optional.empty() : Optional.of(meetingReference);
 	}
 
-	public void setMeetingReference(MeetingReference7 meetingReference) {
+	public MeetingInstructionCancellationRequestV05 setMeetingReference(MeetingReference7 meetingReference) {
 		this.meetingReference = meetingReference;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmId")
-	public SecurityIdentification14 getFinancialInstrumentIdentification() {
-		return financialInstrumentIdentification;
+	public Optional<SecurityIdentification14> getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification == null ? Optional.empty() : Optional.of(financialInstrumentIdentification);
 	}
 
-	public void setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
+	public MeetingInstructionCancellationRequestV05 setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "InstdPos")
 	public List<SafekeepingAccount6> getInstructedPosition() {
-		return instructedPosition;
+		return instructedPosition == null ? instructedPosition = new ArrayList<>() : instructedPosition;
 	}
 
-	public void setInstructedPosition(List<SafekeepingAccount6> instructedPosition) {
-		this.instructedPosition = instructedPosition;
+	public MeetingInstructionCancellationRequestV05 setInstructedPosition(List<SafekeepingAccount6> instructedPosition) {
+		this.instructedPosition = Objects.requireNonNull(instructedPosition);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public MeetingInstructionCancellationRequestV05 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.005.05.05")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.005.001.05")
 	static public class Document {
 		@XmlElement(name = "MtgInstrCxlReq", required = true)
 		public MeetingInstructionCancellationRequestV05 messageBody;

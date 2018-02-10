@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,16 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Additional references linked to the order modification request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Reference10", propOrder = {"originalClientOrderIdentification", "originalOrderModificationTime"})
 public class Reference10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgnlClntOrdrId", required = true)
 	protected Max35Text originalClientOrderIdentification;
 	/**
-	 * Client order identification of the previous non-rejected order (not the
-	 * initial order of the day) when cancelling or replacing an order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -85,6 +88,9 @@ public class Reference10 {
 	 * {@linkplain com.tools20022.repository.msg.Reference10 Reference10}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrgnlClntOrdrId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 41</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -100,9 +106,10 @@ public class Reference10 {
 	 */
 	public static final MMMessageAttribute mmOriginalClientOrderIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference10.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlClntOrdrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "41"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalClientOrderIdentification";
 			definition = "Client order identification of the previous non-rejected order (not the initial order of the day) when cancelling or replacing an order.";
@@ -111,13 +118,11 @@ public class Reference10 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlOrdrModTm")
 	protected ISODateTime originalOrderModificationTime;
 	/**
-	 * TransactionTime of the last state change that occurred to the original
-	 * order. The original order modification time is provided as an optional
-	 * field in the order modification request to identify that the state of the
-	 * order has not changed since the request was issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,7 +150,7 @@ public class Reference10 {
 	 */
 	public static final MMMessageAttribute mmOriginalOrderModificationTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference10.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlOrdrModTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,8 +165,8 @@ public class Reference10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Reference10.mmOriginalClientOrderIdentification, Reference10.mmOriginalOrderModificationTime);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference10.mmOriginalClientOrderIdentification, com.tools20022.repository.msg.Reference10.mmOriginalOrderModificationTime);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference10";
 				definition = "Additional references linked to the order modification request.";
@@ -170,21 +175,21 @@ public class Reference10 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgnlClntOrdrId", required = true)
 	public Max35Text getOriginalClientOrderIdentification() {
 		return originalClientOrderIdentification;
 	}
 
-	public void setOriginalClientOrderIdentification(Max35Text originalClientOrderIdentification) {
-		this.originalClientOrderIdentification = originalClientOrderIdentification;
+	public Reference10 setOriginalClientOrderIdentification(Max35Text originalClientOrderIdentification) {
+		this.originalClientOrderIdentification = Objects.requireNonNull(originalClientOrderIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlOrdrModTm")
-	public ISODateTime getOriginalOrderModificationTime() {
-		return originalOrderModificationTime;
+	public Optional<ISODateTime> getOriginalOrderModificationTime() {
+		return originalOrderModificationTime == null ? Optional.empty() : Optional.of(originalOrderModificationTime);
 	}
 
-	public void setOriginalOrderModificationTime(ISODateTime originalOrderModificationTime) {
+	public Reference10 setOriginalOrderModificationTime(ISODateTime originalOrderModificationTime) {
 		this.originalOrderModificationTime = originalOrderModificationTime;
+		return this;
 	}
 }

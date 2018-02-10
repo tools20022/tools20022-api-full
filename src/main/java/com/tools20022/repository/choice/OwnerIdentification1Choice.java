@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OwnerIdentification1Choice", propOrder = {"individualOwnerIdentification", "organisationOwnerIdentification"})
 public class OwnerIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IndvOwnrId", required = true)
 	protected IndividualPersonIdentificationChoice individualOwnerIdentification;
 	/**
-	 * Identification of an individual person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -118,7 +120,7 @@ public class OwnerIdentification1Choice {
 	public static final MMMessageAssociationEnd mmIndividualOwnerIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Person.mmPersonIdentification;
-			componentContext_lazy = () -> OwnerIdentification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.OwnerIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndvOwnrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +133,11 @@ public class OwnerIdentification1Choice {
 			type_lazy = () -> com.tools20022.repository.choice.IndividualPersonIdentificationChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgOwnrId", required = true)
 	protected PartyIdentification5Choice organisationOwnerIdentification;
 	/**
-	 * Identification of an organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -175,7 +178,7 @@ public class OwnerIdentification1Choice {
 	public static final MMMessageAssociationEnd mmOrganisationOwnerIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> OwnerIdentification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.OwnerIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgOwnrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,8 +195,9 @@ public class OwnerIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OwnerIdentification1Choice.mmIndividualOwnerIdentification, OwnerIdentification1Choice.mmOrganisationOwnerIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OwnerIdentification1Choice.mmIndividualOwnerIdentification,
+						com.tools20022.repository.choice.OwnerIdentification1Choice.mmOrganisationOwnerIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OwnerIdentification1Choice";
 				definition = "Choice of individual or organisation details.";
@@ -203,21 +207,21 @@ public class OwnerIdentification1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IndvOwnrId", required = true)
 	public IndividualPersonIdentificationChoice getIndividualOwnerIdentification() {
 		return individualOwnerIdentification;
 	}
 
-	public void setIndividualOwnerIdentification(com.tools20022.repository.choice.IndividualPersonIdentificationChoice individualOwnerIdentification) {
-		this.individualOwnerIdentification = individualOwnerIdentification;
+	public OwnerIdentification1Choice setIndividualOwnerIdentification(com.tools20022.repository.choice.IndividualPersonIdentificationChoice individualOwnerIdentification) {
+		this.individualOwnerIdentification = Objects.requireNonNull(individualOwnerIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OrgOwnrId", required = true)
 	public PartyIdentification5Choice getOrganisationOwnerIdentification() {
 		return organisationOwnerIdentification;
 	}
 
-	public void setOrganisationOwnerIdentification(com.tools20022.repository.choice.PartyIdentification5Choice organisationOwnerIdentification) {
-		this.organisationOwnerIdentification = organisationOwnerIdentification;
+	public OwnerIdentification1Choice setOrganisationOwnerIdentification(com.tools20022.repository.choice.PartyIdentification5Choice organisationOwnerIdentification) {
+		this.organisationOwnerIdentification = Objects.requireNonNull(organisationOwnerIdentification);
+		return this;
 	}
 }

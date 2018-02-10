@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -31,6 +32,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDateAndDateCodeRule#forSecuritiesSettlement1
+ * ConstraintDateAndDateCodeRule.forSecuritiesSettlement1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -80,15 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Parameters applied to the settlement of a security transfer."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesSettlement1", propOrder = {"currency", "date", "dateCode", "placeOfSettlement", "safekeepingAccountDetails"})
 public class SecuritiesSettlement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ccy")
 	protected CurrencyCode currency;
 	/**
-	 * Currency to be used for settlement of the settlement amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,6 +119,10 @@ public class SecuritiesSettlement1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Ccy"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 656, FIXSynonym: 657, FIXSynonym: 156,
+	 * FIXSynonym: 120</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -122,9 +137,10 @@ public class SecuritiesSettlement1 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSettlementCurrency;
-			componentContext_lazy = () -> SecuritiesSettlement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlement1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "656"), new FIXSynonym(this, "657"), new FIXSynonym(this, "156"), new FIXSynonym(this, "120"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency to be used for settlement of the settlement amount.";
@@ -133,10 +149,11 @@ public class SecuritiesSettlement1 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Dt")
 	protected ISODate date;
 	/**
-	 * Date and time at which the securities are to be delivered or received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,6 +173,9 @@ public class SecuritiesSettlement1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Dt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 64</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -170,9 +190,10 @@ public class SecuritiesSettlement1 {
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
-			componentContext_lazy = () -> SecuritiesSettlement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlement1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "64"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date and time at which the securities are to be delivered or received.";
@@ -181,11 +202,11 @@ public class SecuritiesSettlement1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DtCd")
 	protected DateType1Choice dateCode;
 	/**
-	 * Indicates the date of settlement in coded form or using a data source
-	 * scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,6 +222,9 @@ public class SecuritiesSettlement1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DtCd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 63</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -215,9 +239,10 @@ public class SecuritiesSettlement1 {
 	 */
 	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesSettlement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlement1.mmObject();
 			isDerived = false;
 			xmlTag = "DtCd";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "63"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Indicates the date of settlement in coded form or using a data source scheme.";
@@ -226,10 +251,11 @@ public class SecuritiesSettlement1 {
 			complexType_lazy = () -> DateType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfSttlm")
 	protected PartyIdentification23 placeOfSettlement;
 	/**
-	 * Place where settlement of the securities takes place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -261,7 +287,7 @@ public class SecuritiesSettlement1 {
 	public static final MMMessageAssociationEnd mmPlaceOfSettlement = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SecuritiesSettlement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlement1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfSttlm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,11 +299,11 @@ public class SecuritiesSettlement1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification23.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgAcctDtls")
 	protected SecuritiesAccount2 safekeepingAccountDetails;
 	/**
-	 * A business relationship between two entities; one entity is the account
-	 * owner, the other entity is the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -311,7 +337,7 @@ public class SecuritiesSettlement1 {
 	public static final MMMessageAssociationEnd mmSafekeepingAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesAccount;
-			componentContext_lazy = () -> SecuritiesSettlement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlement1.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -327,10 +353,12 @@ public class SecuritiesSettlement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesSettlement1.mmCurrency, SecuritiesSettlement1.mmDate, SecuritiesSettlement1.mmDateCode, SecuritiesSettlement1.mmPlaceOfSettlement,
-						SecuritiesSettlement1.mmSafekeepingAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSettlement1.mmCurrency, com.tools20022.repository.msg.SecuritiesSettlement1.mmDate,
+						com.tools20022.repository.msg.SecuritiesSettlement1.mmDateCode, com.tools20022.repository.msg.SecuritiesSettlement1.mmPlaceOfSettlement,
+						com.tools20022.repository.msg.SecuritiesSettlement1.mmSafekeepingAccountDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDateAndDateCodeRule.forSecuritiesSettlement1);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -346,48 +374,48 @@ public class SecuritiesSettlement1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ccy")
-	public CurrencyCode getCurrency() {
-		return currency;
+	public Optional<CurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(CurrencyCode currency) {
+	public SecuritiesSettlement1 setCurrency(CurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "Dt")
-	public ISODate getDate() {
-		return date;
+	public Optional<ISODate> getDate() {
+		return date == null ? Optional.empty() : Optional.of(date);
 	}
 
-	public void setDate(ISODate date) {
+	public SecuritiesSettlement1 setDate(ISODate date) {
 		this.date = date;
+		return this;
 	}
 
-	@XmlElement(name = "DtCd")
-	public DateType1Choice getDateCode() {
-		return dateCode;
+	public Optional<DateType1Choice> getDateCode() {
+		return dateCode == null ? Optional.empty() : Optional.of(dateCode);
 	}
 
-	public void setDateCode(DateType1Choice dateCode) {
+	public SecuritiesSettlement1 setDateCode(DateType1Choice dateCode) {
 		this.dateCode = dateCode;
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfSttlm")
-	public PartyIdentification23 getPlaceOfSettlement() {
-		return placeOfSettlement;
+	public Optional<PartyIdentification23> getPlaceOfSettlement() {
+		return placeOfSettlement == null ? Optional.empty() : Optional.of(placeOfSettlement);
 	}
 
-	public void setPlaceOfSettlement(com.tools20022.repository.msg.PartyIdentification23 placeOfSettlement) {
+	public SecuritiesSettlement1 setPlaceOfSettlement(com.tools20022.repository.msg.PartyIdentification23 placeOfSettlement) {
 		this.placeOfSettlement = placeOfSettlement;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcctDtls")
-	public SecuritiesAccount2 getSafekeepingAccountDetails() {
-		return safekeepingAccountDetails;
+	public Optional<SecuritiesAccount2> getSafekeepingAccountDetails() {
+		return safekeepingAccountDetails == null ? Optional.empty() : Optional.of(safekeepingAccountDetails);
 	}
 
-	public void setSafekeepingAccountDetails(com.tools20022.repository.msg.SecuritiesAccount2 safekeepingAccountDetails) {
+	public SecuritiesSettlement1 setSafekeepingAccountDetails(com.tools20022.repository.msg.SecuritiesAccount2 safekeepingAccountDetails) {
 		this.safekeepingAccountDetails = safekeepingAccountDetails;
+		return this;
 	}
 }

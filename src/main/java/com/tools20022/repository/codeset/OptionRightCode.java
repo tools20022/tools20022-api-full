@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.OptionRightCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the option rights.
@@ -31,17 +36,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionRightCode#mmExercise
- * OptionRightCode.mmExercise}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionRightCode#Exercise
+ * OptionRightCode.Exercise}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionRightCode#Assignment
+ * OptionRightCode.Assignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionRightCode#mmAssignment
- * OptionRightCode.mmAssignment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionRightCode#mmRenouncement
- * OptionRightCode.mmRenouncement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionRightCode#mmExpiration
- * OptionRightCode.mmExpiration}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionRightCode#Renouncement
+ * OptionRightCode.Renouncement}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionRightCode#Expiration
+ * OptionRightCode.Expiration}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -72,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the option rights."</li>
  * </ul>
  */
-public class OptionRightCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OptionRightCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -96,12 +100,12 @@ public class OptionRightCode {
 	 * definition} = "Exercise option right."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExercise = new MMCode() {
+	public static final OptionRightCode Exercise = new OptionRightCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exercise";
 			definition = "Exercise option right.";
-			owner_lazy = () -> OptionRightCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionRightCode.mmObject();
 			codeName = "EXER";
 		}
 	};
@@ -126,12 +130,12 @@ public class OptionRightCode {
 	 * definition} = "Option right assignment."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAssignment = new MMCode() {
+	public static final OptionRightCode Assignment = new OptionRightCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignment";
 			definition = "Option right assignment.";
-			owner_lazy = () -> OptionRightCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionRightCode.mmObject();
 			codeName = "ASGN";
 		}
 	};
@@ -156,12 +160,12 @@ public class OptionRightCode {
 	 * definition} = "The option right is renounced."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRenouncement = new MMCode() {
+	public static final OptionRightCode Renouncement = new OptionRightCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Renouncement";
 			definition = "The option right is renounced.";
-			owner_lazy = () -> OptionRightCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionRightCode.mmObject();
 			codeName = "RENO";
 		}
 	};
@@ -186,28 +190,61 @@ public class OptionRightCode {
 	 * definition} = "Option right expires."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExpiration = new MMCode() {
+	public static final OptionRightCode Expiration = new OptionRightCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expiration";
 			definition = "Option right expires.";
-			owner_lazy = () -> OptionRightCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionRightCode.mmObject();
 			codeName = "EXPI";
 		}
 	};
+	final static private LinkedHashMap<String, OptionRightCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OptionRightCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("EXER");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionRightCode";
 				definition = "Specifies the option rights.";
-				code_lazy = () -> Arrays.asList(OptionRightCode.mmExercise, OptionRightCode.mmAssignment, OptionRightCode.mmRenouncement, OptionRightCode.mmExpiration);
 				derivation_lazy = () -> Arrays.asList(OptionRight1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionRightCode.Exercise, com.tools20022.repository.codeset.OptionRightCode.Assignment, com.tools20022.repository.codeset.OptionRightCode.Renouncement,
+						com.tools20022.repository.codeset.OptionRightCode.Expiration);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Exercise.getCodeName().get(), Exercise);
+		codesByName.put(Assignment.getCodeName().get(), Assignment);
+		codesByName.put(Renouncement.getCodeName().get(), Renouncement);
+		codesByName.put(Expiration.getCodeName().get(), Expiration);
+	}
+
+	public static OptionRightCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OptionRightCode[] values() {
+		OptionRightCode[] values = new OptionRightCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OptionRightCode> {
+		@Override
+		public OptionRightCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OptionRightCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

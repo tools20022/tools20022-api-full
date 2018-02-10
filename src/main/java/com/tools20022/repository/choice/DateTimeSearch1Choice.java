@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DateTimePeriodDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Choice between search criteria based on dates and date ranges."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DateTimeSearch1Choice", propOrder = {"fromDateTime", "toDateTime", "fromToDateTime", "equalDateTime", "notEqualDateTime"})
 public class DateTimeSearch1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FrDtTm", required = true)
 	protected ISODateTime fromDateTime;
 	/**
-	 * Start date of the range.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +110,7 @@ public class DateTimeSearch1Choice {
 	 */
 	public static final MMMessageAttribute mmFromDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateTimeSearch1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateTimeSearch1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +121,11 @@ public class DateTimeSearch1Choice {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "ToDtTm", required = true)
 	protected ISODateTime toDateTime;
 	/**
-	 * End date of the range.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,7 +152,7 @@ public class DateTimeSearch1Choice {
 	 */
 	public static final MMMessageAttribute mmToDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateTimeSearch1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateTimeSearch1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ToDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,10 +163,11 @@ public class DateTimeSearch1Choice {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "FrToDtTm", required = true)
 	protected DateTimePeriodDetails fromToDateTime;
 	/**
-	 * Particular time span specified between a start date and an end date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -190,7 +194,7 @@ public class DateTimeSearch1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmFromToDateTime = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DateTimeSearch1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateTimeSearch1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrToDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,10 +206,11 @@ public class DateTimeSearch1Choice {
 			type_lazy = () -> DateTimePeriodDetails.mmObject();
 		}
 	};
+	@XmlElement(name = "EQDtTm", required = true)
 	protected ISODateTime equalDateTime;
 	/**
-	 * Specified date to match.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -232,7 +237,7 @@ public class DateTimeSearch1Choice {
 	 */
 	public static final MMMessageAttribute mmEqualDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateTimeSearch1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateTimeSearch1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EQDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,10 +248,11 @@ public class DateTimeSearch1Choice {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "NEQDtTm", required = true)
 	protected ISODateTime notEqualDateTime;
 	/**
-	 * Specified date to be excluded from the search.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -273,7 +279,7 @@ public class DateTimeSearch1Choice {
 	 */
 	public static final MMMessageAttribute mmNotEqualDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateTimeSearch1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateTimeSearch1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NEQDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,9 +294,10 @@ public class DateTimeSearch1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DateTimeSearch1Choice.mmFromDateTime, DateTimeSearch1Choice.mmToDateTime, DateTimeSearch1Choice.mmFromToDateTime, DateTimeSearch1Choice.mmEqualDateTime,
-						DateTimeSearch1Choice.mmNotEqualDateTime);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateTimeSearch1Choice.mmFromDateTime, com.tools20022.repository.choice.DateTimeSearch1Choice.mmToDateTime,
+						com.tools20022.repository.choice.DateTimeSearch1Choice.mmFromToDateTime, com.tools20022.repository.choice.DateTimeSearch1Choice.mmEqualDateTime,
+						com.tools20022.repository.choice.DateTimeSearch1Choice.mmNotEqualDateTime);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DateTimeSearch1Choice";
 				definition = "Choice between search criteria based on dates and date ranges.";
@@ -299,48 +306,48 @@ public class DateTimeSearch1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FrDtTm", required = true)
 	public ISODateTime getFromDateTime() {
 		return fromDateTime;
 	}
 
-	public void setFromDateTime(ISODateTime fromDateTime) {
-		this.fromDateTime = fromDateTime;
+	public DateTimeSearch1Choice setFromDateTime(ISODateTime fromDateTime) {
+		this.fromDateTime = Objects.requireNonNull(fromDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "ToDtTm", required = true)
 	public ISODateTime getToDateTime() {
 		return toDateTime;
 	}
 
-	public void setToDateTime(ISODateTime toDateTime) {
-		this.toDateTime = toDateTime;
+	public DateTimeSearch1Choice setToDateTime(ISODateTime toDateTime) {
+		this.toDateTime = Objects.requireNonNull(toDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "FrToDtTm", required = true)
 	public DateTimePeriodDetails getFromToDateTime() {
 		return fromToDateTime;
 	}
 
-	public void setFromToDateTime(DateTimePeriodDetails fromToDateTime) {
-		this.fromToDateTime = fromToDateTime;
+	public DateTimeSearch1Choice setFromToDateTime(DateTimePeriodDetails fromToDateTime) {
+		this.fromToDateTime = Objects.requireNonNull(fromToDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "EQDtTm", required = true)
 	public ISODateTime getEqualDateTime() {
 		return equalDateTime;
 	}
 
-	public void setEqualDateTime(ISODateTime equalDateTime) {
-		this.equalDateTime = equalDateTime;
+	public DateTimeSearch1Choice setEqualDateTime(ISODateTime equalDateTime) {
+		this.equalDateTime = Objects.requireNonNull(equalDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "NEQDtTm", required = true)
 	public ISODateTime getNotEqualDateTime() {
 		return notEqualDateTime;
 	}
 
-	public void setNotEqualDateTime(ISODateTime notEqualDateTime) {
-		this.notEqualDateTime = notEqualDateTime;
+	public DateTimeSearch1Choice setNotEqualDateTime(ISODateTime notEqualDateTime) {
+		this.notEqualDateTime = Objects.requireNonNull(notEqualDateTime);
+		return this;
 	}
 }

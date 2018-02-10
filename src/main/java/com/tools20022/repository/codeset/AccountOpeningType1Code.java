@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AccountOpeningTypeCode;
+import com.tools20022.repository.codeset.AccountOpeningType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of account to which an account opening request is related,
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AccountOpeningTypeCode
- * AccountOpeningTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOpeningType1Code#mmNewAccountOpening
- * AccountOpeningType1Code.mmNewAccountOpening}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOpeningType1Code#NewAccountOpening
+ * AccountOpeningType1Code.NewAccountOpening}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOpeningType1Code#mmSupplementaryAccountOpening
- * AccountOpeningType1Code.mmSupplementaryAccountOpening}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOpeningType1Code#SupplementaryAccountOpening
+ * AccountOpeningType1Code.SupplementaryAccountOpening}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AccountOpeningTypeCode
+ * AccountOpeningTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class AccountOpeningType1Code extends AccountOpeningTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AccountOpeningType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class AccountOpeningType1Code extends AccountOpeningTypeCode {
 	 * name} = "NewAccountOpening"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNewAccountOpening = new MMCode() {
+	public static final AccountOpeningType1Code NewAccountOpening = new AccountOpeningType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewAccountOpening";
-			owner_lazy = () -> AccountOpeningType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOpeningType1Code.mmObject();
+			codeName = AccountOpeningTypeCode.NewAccountOpening.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,57 @@ public class AccountOpeningType1Code extends AccountOpeningTypeCode {
 	 * name} = "SupplementaryAccountOpening"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSupplementaryAccountOpening = new MMCode() {
+	public static final AccountOpeningType1Code SupplementaryAccountOpening = new AccountOpeningType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryAccountOpening";
-			owner_lazy = () -> AccountOpeningType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOpeningType1Code.mmObject();
+			codeName = AccountOpeningTypeCode.SupplementaryAccountOpening.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AccountOpeningType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AccountOpeningType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NEWA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountOpeningType1Code";
 				definition = "Specifies the type of account to which an account opening request is related, eg, a new account.";
-				code_lazy = () -> Arrays.asList(AccountOpeningType1Code.mmNewAccountOpening, AccountOpeningType1Code.mmSupplementaryAccountOpening);
 				trace_lazy = () -> AccountOpeningTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountOpeningType1Code.NewAccountOpening, com.tools20022.repository.codeset.AccountOpeningType1Code.SupplementaryAccountOpening);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NewAccountOpening.getCodeName().get(), NewAccountOpening);
+		codesByName.put(SupplementaryAccountOpening.getCodeName().get(), SupplementaryAccountOpening);
+	}
+
+	public static AccountOpeningType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AccountOpeningType1Code[] values() {
+		AccountOpeningType1Code[] values = new AccountOpeningType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AccountOpeningType1Code> {
+		@Override
+		public AccountOpeningType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AccountOpeningType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

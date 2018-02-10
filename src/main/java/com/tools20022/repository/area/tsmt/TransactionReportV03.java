@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.TransactionReportItems3;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -46,25 +48,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
- * TradeServicesManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion
- * TradeServicesManagementISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion
- * TradeServicesManagementISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "TxRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -80,6 +63,25 @@ import javax.xml.bind.annotation.*;
  * TransactionReportV03.mmReportedItems}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion
+ * TradeServicesManagementISOPreviousversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion
+ * TradeServicesManagementISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "TxRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
+ * TradeServicesManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code tsmt.041.001.03}</li>
@@ -95,15 +97,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionReportV03", propOrder = {"reportIdentification", "relatedMessageReference", "reportedItems"})
 public class TransactionReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptId", required = true)
 	protected MessageIdentification1 reportIdentification;
 	/**
-	 * Identifies the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,10 +146,11 @@ public class TransactionReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdMsgRef", required = true)
 	protected MessageIdentification1 relatedMessageReference;
 	/**
-	 * Reference to the previous message requesting the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,11 +190,11 @@ public class TransactionReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RptdItms")
 	protected List<TransactionReportItems3> reportedItems;
 	/**
-	 * Detailed description of the items that correspond to the parameters set
-	 * in the request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -262,34 +266,34 @@ public class TransactionReportV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptId", required = true)
 	public MessageIdentification1 getReportIdentification() {
 		return reportIdentification;
 	}
 
-	public void setReportIdentification(MessageIdentification1 reportIdentification) {
-		this.reportIdentification = reportIdentification;
+	public TransactionReportV03 setReportIdentification(MessageIdentification1 reportIdentification) {
+		this.reportIdentification = Objects.requireNonNull(reportIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RltdMsgRef", required = true)
 	public MessageIdentification1 getRelatedMessageReference() {
 		return relatedMessageReference;
 	}
 
-	public void setRelatedMessageReference(MessageIdentification1 relatedMessageReference) {
-		this.relatedMessageReference = relatedMessageReference;
+	public TransactionReportV03 setRelatedMessageReference(MessageIdentification1 relatedMessageReference) {
+		this.relatedMessageReference = Objects.requireNonNull(relatedMessageReference);
+		return this;
 	}
 
-	@XmlElement(name = "RptdItms")
 	public List<TransactionReportItems3> getReportedItems() {
-		return reportedItems;
+		return reportedItems == null ? reportedItems = new ArrayList<>() : reportedItems;
 	}
 
-	public void setReportedItems(List<TransactionReportItems3> reportedItems) {
-		this.reportedItems = reportedItems;
+	public TransactionReportV03 setReportedItems(List<TransactionReportItems3> reportedItems) {
+		this.reportedItems = Objects.requireNonNull(reportedItems);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.041.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.041.001.03")
 	static public class Document {
 		@XmlElement(name = "TxRpt", required = true)
 		public TransactionReportV03 messageBody;

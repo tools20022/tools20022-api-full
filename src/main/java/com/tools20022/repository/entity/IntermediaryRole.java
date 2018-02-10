@@ -39,37 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} = {@linkplain com.tools20022.repository.entity.AccountPartyRole
  * AccountPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary5 Intermediary5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary12 Intermediary12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary1 Intermediary1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary7 Intermediary7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary6 Intermediary6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary13 Intermediary13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary11 Intermediary11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary2 Intermediary2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary3 Intermediary3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary21 Intermediary21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary23 Intermediary23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary22 Intermediary22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary17 Intermediary17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary18 Intermediary18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary24 Intermediary24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary26 Intermediary26}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary25 Intermediary25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary27 Intermediary27}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary28 Intermediary28}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary32 Intermediary32}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary36 Intermediary36}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary34 Intermediary34}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary33 Intermediary33}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary35 Intermediary35}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Intermediary37 Intermediary37}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
@@ -210,10 +179,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary5 Intermediary5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary12 Intermediary12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary1 Intermediary1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary7 Intermediary7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary6 Intermediary6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary13 Intermediary13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary11 Intermediary11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary2 Intermediary2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary3 Intermediary3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary21 Intermediary21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary23 Intermediary23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary22 Intermediary22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary17 Intermediary17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary18 Intermediary18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary24 Intermediary24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary26 Intermediary26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary25 Intermediary25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary27 Intermediary27}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary28 Intermediary28}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary32 Intermediary32}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary36 Intermediary36}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary34 Intermediary34}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary33 Intermediary33}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary35 Intermediary35}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary37 Intermediary37}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -233,7 +233,7 @@ public class IntermediaryRole extends AccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IntermediaryRole";
 				definition = "Party that provides services relating to financial products to investors, for example, advice on products and placement of orders.";

@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.SidePocket;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,16 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Information that identifies a side pocket in investment fund orders."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SidePocketInformation1", propOrder = {"sidePocketInclusionIndicator", "sidePocketIdentification", "sidePocketQuantity"})
 public class SidePocketInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SdPcktInclsnInd")
 	protected YesNoIndicator sidePocketInclusionIndicator;
 	/**
-	 * Indicates whether the investor wants to participate in the optional side
-	 * pocket.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +117,7 @@ public class SidePocketInformation1 {
 	public static final MMMessageAttribute mmSidePocketInclusionIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SidePocket.mmSidePocketInclusionIndicator;
-			componentContext_lazy = () -> SidePocketInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SidePocketInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "SdPcktInclsnInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +128,11 @@ public class SidePocketInformation1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "SdPcktId")
 	protected Max35Text sidePocketIdentification;
 	/**
-	 * Identification of the side pocket.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +165,7 @@ public class SidePocketInformation1 {
 	public static final MMMessageAttribute mmSidePocketIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SidePocket.mmSidePocketIdentification;
-			componentContext_lazy = () -> SidePocketInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SidePocketInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "SdPcktId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +176,11 @@ public class SidePocketInformation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SdPcktQty")
 	protected SidePocketUnitsOrAmountOrRate1Choice sidePocketQuantity;
 	/**
-	 * Quantity of the side pocket.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -210,7 +213,7 @@ public class SidePocketInformation1 {
 	public static final MMMessageAssociationEnd mmSidePocketQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SidePocket.mmSidePocketQuantity;
-			componentContext_lazy = () -> SidePocketInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SidePocketInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "SdPcktQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,9 +229,10 @@ public class SidePocketInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SidePocketInformation1.mmSidePocketInclusionIndicator, SidePocketInformation1.mmSidePocketIdentification, SidePocketInformation1.mmSidePocketQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SidePocketInformation1.mmSidePocketInclusionIndicator, com.tools20022.repository.msg.SidePocketInformation1.mmSidePocketIdentification,
+						com.tools20022.repository.msg.SidePocketInformation1.mmSidePocketQuantity);
 				trace_lazy = () -> SidePocket.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SidePocketInformation1";
 				definition = "Information that identifies a side pocket in investment fund orders.";
@@ -237,30 +241,30 @@ public class SidePocketInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SdPcktInclsnInd")
-	public YesNoIndicator getSidePocketInclusionIndicator() {
-		return sidePocketInclusionIndicator;
+	public Optional<YesNoIndicator> getSidePocketInclusionIndicator() {
+		return sidePocketInclusionIndicator == null ? Optional.empty() : Optional.of(sidePocketInclusionIndicator);
 	}
 
-	public void setSidePocketInclusionIndicator(YesNoIndicator sidePocketInclusionIndicator) {
+	public SidePocketInformation1 setSidePocketInclusionIndicator(YesNoIndicator sidePocketInclusionIndicator) {
 		this.sidePocketInclusionIndicator = sidePocketInclusionIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "SdPcktId")
-	public Max35Text getSidePocketIdentification() {
-		return sidePocketIdentification;
+	public Optional<Max35Text> getSidePocketIdentification() {
+		return sidePocketIdentification == null ? Optional.empty() : Optional.of(sidePocketIdentification);
 	}
 
-	public void setSidePocketIdentification(Max35Text sidePocketIdentification) {
+	public SidePocketInformation1 setSidePocketIdentification(Max35Text sidePocketIdentification) {
 		this.sidePocketIdentification = sidePocketIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "SdPcktQty")
-	public SidePocketUnitsOrAmountOrRate1Choice getSidePocketQuantity() {
-		return sidePocketQuantity;
+	public Optional<SidePocketUnitsOrAmountOrRate1Choice> getSidePocketQuantity() {
+		return sidePocketQuantity == null ? Optional.empty() : Optional.of(sidePocketQuantity);
 	}
 
-	public void setSidePocketQuantity(SidePocketUnitsOrAmountOrRate1Choice sidePocketQuantity) {
+	public SidePocketInformation1 setSidePocketQuantity(SidePocketUnitsOrAmountOrRate1Choice sidePocketQuantity) {
 		this.sidePocketQuantity = sidePocketQuantity;
+		return this;
 	}
 }

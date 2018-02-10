@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.UndertakingNameCode;
+import com.tools20022.repository.codeset.UndertakingName1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the named type of the undertaking.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.UndertakingNameCode
- * UndertakingNameCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingName1Code#mmStandbyLetterOfCredit
- * UndertakingName1Code.mmStandbyLetterOfCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingName1Code#StandbyLetterOfCredit
+ * UndertakingName1Code.StandbyLetterOfCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingName1Code#mmDemandGuarantee
- * UndertakingName1Code.mmDemandGuarantee}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingName1Code#DemandGuarantee
+ * UndertakingName1Code.DemandGuarantee}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.UndertakingNameCode
+ * UndertakingNameCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the named type of the undertaking."</li>
  * </ul>
  */
-public class UndertakingName1Code extends UndertakingNameCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class UndertakingName1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class UndertakingName1Code extends UndertakingNameCode {
 	 * name} = "StandbyLetterOfCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStandbyLetterOfCredit = new MMCode() {
+	public static final UndertakingName1Code StandbyLetterOfCredit = new UndertakingName1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandbyLetterOfCredit";
-			owner_lazy = () -> UndertakingName1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UndertakingName1Code.mmObject();
+			codeName = UndertakingNameCode.StandbyLetterOfCredit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class UndertakingName1Code extends UndertakingNameCode {
 	 * name} = "DemandGuarantee"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDemandGuarantee = new MMCode() {
+	public static final UndertakingName1Code DemandGuarantee = new UndertakingName1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DemandGuarantee";
-			owner_lazy = () -> UndertakingName1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UndertakingName1Code.mmObject();
+			codeName = UndertakingNameCode.DemandGuarantee.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, UndertakingName1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected UndertakingName1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("STBY");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingName1Code";
 				definition = "Specifies the named type of the undertaking.";
-				code_lazy = () -> Arrays.asList(UndertakingName1Code.mmStandbyLetterOfCredit, UndertakingName1Code.mmDemandGuarantee);
 				trace_lazy = () -> UndertakingNameCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UndertakingName1Code.StandbyLetterOfCredit, com.tools20022.repository.codeset.UndertakingName1Code.DemandGuarantee);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(StandbyLetterOfCredit.getCodeName().get(), StandbyLetterOfCredit);
+		codesByName.put(DemandGuarantee.getCodeName().get(), DemandGuarantee);
+	}
+
+	public static UndertakingName1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static UndertakingName1Code[] values() {
+		UndertakingName1Code[] values = new UndertakingName1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, UndertakingName1Code> {
+		@Override
+		public UndertakingName1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(UndertakingName1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -17,13 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OptionStyleCode;
+import com.tools20022.repository.codeset.OptionStyle7Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies how an option for a derivative or securities derivative can be
@@ -31,31 +36,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle7Code#American
+ * OptionStyle7Code.American}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle7Code#Asian
+ * OptionStyle7Code.Asian}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle7Code#Bermudan
+ * OptionStyle7Code.Bermudan}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle7Code#European
+ * OptionStyle7Code.European}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle7Code#Other
+ * OptionStyle7Code.Other}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.OptionStyleCode
  * OptionStyleCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionStyle7Code#mmAmerican
- * OptionStyle7Code.mmAmerican}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle7Code#mmAsian
- * OptionStyle7Code.mmAsian}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionStyle7Code#mmBermudan
- * OptionStyle7Code.mmBermudan}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionStyle7Code#mmEuropean
- * OptionStyle7Code.mmEuropean}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle7Code#mmOther
- * OptionStyle7Code.mmOther}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class OptionStyle7Code extends OptionStyleCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OptionStyle7Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,6 +83,9 @@ public class OptionStyle7Code extends OptionStyleCode {
 	 * {@linkplain com.tools20022.repository.codeset.OptionStyle7Code
 	 * OptionStyle7Code}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :12a::OPST//AMER</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -87,11 +93,13 @@ public class OptionStyle7Code extends OptionStyleCode {
 	 * name} = "American"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAmerican = new MMCode() {
+	public static final OptionStyle7Code American = new OptionStyle7Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":12a::OPST//AMER"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "American";
-			owner_lazy = () -> OptionStyle7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionStyle7Code.mmObject();
+			codeName = OptionStyleCode.American.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +118,12 @@ public class OptionStyle7Code extends OptionStyleCode {
 	 * name} = "Asian"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAsian = new MMCode() {
+	public static final OptionStyle7Code Asian = new OptionStyle7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Asian";
-			owner_lazy = () -> OptionStyle7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionStyle7Code.mmObject();
+			codeName = OptionStyleCode.Asian.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,11 +142,12 @@ public class OptionStyle7Code extends OptionStyleCode {
 	 * name} = "Bermudan"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBermudan = new MMCode() {
+	public static final OptionStyle7Code Bermudan = new OptionStyle7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bermudan";
-			owner_lazy = () -> OptionStyle7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionStyle7Code.mmObject();
+			codeName = OptionStyleCode.Bermudan.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -149,6 +159,9 @@ public class OptionStyle7Code extends OptionStyleCode {
 	 * {@linkplain com.tools20022.repository.codeset.OptionStyle7Code
 	 * OptionStyle7Code}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :12a::OPST//EURO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -156,11 +169,13 @@ public class OptionStyle7Code extends OptionStyleCode {
 	 * name} = "European"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEuropean = new MMCode() {
+	public static final OptionStyle7Code European = new OptionStyle7Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":12a::OPST//EURO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "European";
-			owner_lazy = () -> OptionStyle7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionStyle7Code.mmObject();
+			codeName = OptionStyleCode.European.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -179,25 +194,60 @@ public class OptionStyle7Code extends OptionStyleCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final OptionStyle7Code Other = new OptionStyle7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> OptionStyle7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionStyle7Code.mmObject();
+			codeName = OptionStyleCode.Other.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OptionStyle7Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OptionStyle7Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionStyle7Code";
 				definition = "Specifies how an option  for a derivative or securities derivative can be exercised.";
-				code_lazy = () -> Arrays.asList(OptionStyle7Code.mmAmerican, OptionStyle7Code.mmAsian, OptionStyle7Code.mmBermudan, OptionStyle7Code.mmEuropean, OptionStyle7Code.mmOther);
 				trace_lazy = () -> OptionStyleCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionStyle7Code.American, com.tools20022.repository.codeset.OptionStyle7Code.Asian, com.tools20022.repository.codeset.OptionStyle7Code.Bermudan,
+						com.tools20022.repository.codeset.OptionStyle7Code.European, com.tools20022.repository.codeset.OptionStyle7Code.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(American.getCodeName().get(), American);
+		codesByName.put(Asian.getCodeName().get(), Asian);
+		codesByName.put(Bermudan.getCodeName().get(), Bermudan);
+		codesByName.put(European.getCodeName().get(), European);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static OptionStyle7Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OptionStyle7Code[] values() {
+		OptionStyle7Code[] values = new OptionStyle7Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OptionStyle7Code> {
+		@Override
+		public OptionStyle7Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OptionStyle7Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

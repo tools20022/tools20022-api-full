@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -24,9 +26,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.RestrictedFINXMax35Text;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +89,16 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateActionGeneralInformationSD16}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionGeneralInformationSD17", propOrder = {"placeAndName", "securityIdentification", "safekeepingAccount", "unallocatedDetails"})
 public class CorporateActionGeneralInformationSD17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,7 +138,7 @@ public class CorporateActionGeneralInformationSD17 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD17.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,10 +151,11 @@ public class CorporateActionGeneralInformationSD17 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyId", required = true)
 	protected SecurityIdentification15 securityIdentification;
 	/**
-	 * Identifies the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,6 +170,9 @@ public class CorporateActionGeneralInformationSD17 {
 	 * CorporateActionGeneralInformationSD17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctyId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :35B:, DTCCSynonym: Event Security Id</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -190,9 +199,10 @@ public class CorporateActionGeneralInformationSD17 {
 	 */
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD17.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":35B:"), new DTCCSynonym(this, "Event Security Id"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identifies the financial instrument.";
@@ -203,10 +213,11 @@ public class CorporateActionGeneralInformationSD17 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgAcct", required = true)
 	protected RestrictedFINXMax35Text safekeepingAccount;
 	/**
-	 * Account where financial instruments are maintained.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -221,6 +232,10 @@ public class CorporateActionGeneralInformationSD17 {
 	 * CorporateActionGeneralInformationSD17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SfkpgAcct"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :97A::SAFE, DTCCSynonym: Participant
+	 * Number</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -247,9 +262,10 @@ public class CorporateActionGeneralInformationSD17 {
 	 */
 	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD17.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":97A::SAFE"), new DTCCSynonym(this, "Participant Number"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account where financial instruments are maintained.";
@@ -260,10 +276,11 @@ public class CorporateActionGeneralInformationSD17 {
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "UallctdDtls")
 	protected List<com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD3> unallocatedDetails;
 	/**
-	 * Additional information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -277,6 +294,9 @@ public class CorporateActionGeneralInformationSD17 {
 	 * CorporateActionGeneralInformationSD17}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UallctdDtls"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Unallocated Details</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -303,9 +323,10 @@ public class CorporateActionGeneralInformationSD17 {
 	 */
 	public static final MMMessageAssociationEnd mmUnallocatedDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD17.mmObject();
 			isDerived = false;
 			xmlTag = "UallctdDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Unallocated Details"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedDetails";
 			definition = "Additional information about the corporate action event.";
@@ -320,9 +341,9 @@ public class CorporateActionGeneralInformationSD17 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD17.mmPlaceAndName, CorporateActionGeneralInformationSD17.mmSecurityIdentification, CorporateActionGeneralInformationSD17.mmSafekeepingAccount,
-						CorporateActionGeneralInformationSD17.mmUnallocatedDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD17.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD17.mmSecurityIdentification,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationSD17.mmSafekeepingAccount, com.tools20022.repository.msg.CorporateActionGeneralInformationSD17.mmUnallocatedDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionGeneralInformationSD17";
 				definition = "Provides additional information regarding corporate action general information.";
@@ -333,39 +354,39 @@ public class CorporateActionGeneralInformationSD17 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionGeneralInformationSD17 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification15 getSecurityIdentification() {
 		return securityIdentification;
 	}
 
-	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 securityIdentification) {
-		this.securityIdentification = securityIdentification;
+	public CorporateActionGeneralInformationSD17 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 securityIdentification) {
+		this.securityIdentification = Objects.requireNonNull(securityIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct", required = true)
 	public RestrictedFINXMax35Text getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
 
-	public void setSafekeepingAccount(RestrictedFINXMax35Text safekeepingAccount) {
-		this.safekeepingAccount = safekeepingAccount;
+	public CorporateActionGeneralInformationSD17 setSafekeepingAccount(RestrictedFINXMax35Text safekeepingAccount) {
+		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "UallctdDtls")
 	public List<CorporateActionUnallocatedDetailsSD3> getUnallocatedDetails() {
-		return unallocatedDetails;
+		return unallocatedDetails == null ? unallocatedDetails = new ArrayList<>() : unallocatedDetails;
 	}
 
-	public void setUnallocatedDetails(List<com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD3> unallocatedDetails) {
-		this.unallocatedDetails = unallocatedDetails;
+	public CorporateActionGeneralInformationSD17 setUnallocatedDetails(List<com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD3> unallocatedDetails) {
+		this.unallocatedDetails = Objects.requireNonNull(unallocatedDetails);
+		return this;
 	}
 }

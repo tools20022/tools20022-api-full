@@ -29,9 +29,8 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -69,23 +68,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
- * SecuritiesSettlementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion
- * SettlementAndReconciliationISOPreviousversion}</li>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SctiesTxStsQry"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -104,9 +86,39 @@ import javax.xml.bind.annotation.*;
  * SecuritiesTransactionStatusQueryV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion
+ * SettlementAndReconciliationISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SctiesTxStsQry"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
+ * SecuritiesSettlementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.021.001.03}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesTransactionStatusQueryV03
+ * ConstraintCoexistenceCharacterSetXRule.forSecuritiesTransactionStatusQueryV03
+ * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesTransactionStatusQueryV03
+ * ConstraintCoexistenceIdentificationRule.
+ * forSecuritiesTransactionStatusQueryV03}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -131,15 +143,16 @@ import javax.xml.bind.annotation.*;
  * SecuritiesTransactionStatusQueryV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesTransactionStatusQueryV03", propOrder = {"statusAdviceRequested", "accountOwner", "safekeepingAccount", "supplementaryData"})
 public class SecuritiesTransactionStatusQueryV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StsAdvcReqd", required = true)
 	protected DocumentNumber9 statusAdviceRequested;
 	/**
-	 * Description of the status advise requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,10 +200,11 @@ public class SecuritiesTransactionStatusQueryV03 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification36Choice accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -239,10 +253,11 @@ public class SecuritiesTransactionStatusQueryV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SfkpgAcct", required = true)
 	protected SecuritiesAccount13 safekeepingAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -291,11 +306,11 @@ public class SecuritiesTransactionStatusQueryV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -349,6 +364,8 @@ public class SecuritiesTransactionStatusQueryV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesTransactionStatusQueryV03,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTransactionStatusQueryV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionStatusQueryV03";
 				definition = "Scope\nThis version is identical to the previous version. It was created automatically during the 2011/2012 maintenance cycle, at the same time as new versions of other Settlement and Reconciliation messages that were truly impacted by change requests. This should not have been the case. In future releases, SWIFT will ensure that a new version of a message is not created if identical to the previous version.\nAn account owner sends a SecuritiesTransactionStatusQuery to an account servicer to request a status on a securities transaction.\nThe account owner/servicer relationship may be:\n- a global custodian which has an account with a local custodian, or\n- an investment management institution which manage a fund account opened at a custodian, or\n- a broker which has an account with a custodian, or\n- a central securities depository participant which has an account with a central securities depository, or\n- a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure, or\n- a central counterparty or a stock exchange or a trade matching utility which need to instruct to a central securities depository or another settlement market infrastructure.\n\nUsage\nThe message may also be used to:\n- re-send a message previously sent,\n- provide a third party with a copy of a message for information,\n- re-send to a third party a copy of a message for information\nusing the relevant elements in the Business Application Header.\n\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
@@ -379,43 +396,43 @@ public class SecuritiesTransactionStatusQueryV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StsAdvcReqd", required = true)
 	public DocumentNumber9 getStatusAdviceRequested() {
 		return statusAdviceRequested;
 	}
 
-	public void setStatusAdviceRequested(DocumentNumber9 statusAdviceRequested) {
-		this.statusAdviceRequested = statusAdviceRequested;
+	public SecuritiesTransactionStatusQueryV03 setStatusAdviceRequested(DocumentNumber9 statusAdviceRequested) {
+		this.statusAdviceRequested = Objects.requireNonNull(statusAdviceRequested);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification36Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification36Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification36Choice accountOwner) {
+	public SecuritiesTransactionStatusQueryV03 setAccountOwner(PartyIdentification36Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
 
-	public void setSafekeepingAccount(SecuritiesAccount13 safekeepingAccount) {
-		this.safekeepingAccount = safekeepingAccount;
+	public SecuritiesTransactionStatusQueryV03 setSafekeepingAccount(SecuritiesAccount13 safekeepingAccount) {
+		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecuritiesTransactionStatusQueryV03 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.021.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.021.001.03")
 	static public class Document {
 		@XmlElement(name = "SctiesTxStsQry", required = true)
 		public SecuritiesTransactionStatusQueryV03 messageBody;

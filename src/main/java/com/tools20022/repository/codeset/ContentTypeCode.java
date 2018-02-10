@@ -17,12 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ContentTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identification of the type of protection for a protected data.
@@ -31,24 +37,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ContentTypeCode#PlainData
+ * ContentTypeCode.PlainData}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ContentTypeCode#SignedData
+ * ContentTypeCode.SignedData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#mmPlainData
- * ContentTypeCode.mmPlainData}</li>
+ * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#EnvelopedData
+ * ContentTypeCode.EnvelopedData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#mmSignedData
- * ContentTypeCode.mmSignedData}</li>
+ * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#DigestedData
+ * ContentTypeCode.DigestedData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#mmEnvelopedData
- * ContentTypeCode.mmEnvelopedData}</li>
+ * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#EncryptedData
+ * ContentTypeCode.EncryptedData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#mmDigestedData
- * ContentTypeCode.mmDigestedData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#mmEncryptedData
- * ContentTypeCode.mmEncryptedData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#mmAuthenticatedData
- * ContentTypeCode.mmAuthenticatedData}</li>
+ * {@linkplain com.tools20022.repository.codeset.ContentTypeCode#AuthenticatedData
+ * ContentTypeCode.AuthenticatedData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -63,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Identification of the type of protection for a protected data."</li>
  * </ul>
  */
-public class ContentTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ContentTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,6 +102,9 @@ public class ContentTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DATA"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=Synonym, context=ASN.1, value=id-data</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -109,12 +117,13 @@ public class ContentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPlainData = new MMCode() {
+	public static final ContentTypeCode PlainData = new ContentTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "ASN.1"}, new String[]{"value", "id-data"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlainData";
 			definition = "Generic, non cryptographic, or unqualified data content - (ASN.1 Object Identifier: id-data).";
-			owner_lazy = () -> ContentTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ContentTypeCode.mmObject();
 			codeName = "DATA";
 		}
 	};
@@ -129,6 +138,9 @@ public class ContentTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SIGN"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=Synonym, context=ASN.1, value=id-signedData</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -140,12 +152,13 @@ public class ContentTypeCode {
 	 * "Digital signature - (ASN.1 Object Identifier: id-signedData)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSignedData = new MMCode() {
+	public static final ContentTypeCode SignedData = new ContentTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "ASN.1"}, new String[]{"value", "id-signedData"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SignedData";
 			definition = "Digital signature - (ASN.1 Object Identifier: id-signedData).";
-			owner_lazy = () -> ContentTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ContentTypeCode.mmObject();
 			codeName = "SIGN";
 		}
 	};
@@ -161,6 +174,9 @@ public class ContentTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "EVLP"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=Synonym, context=ASN.1, value=id-envelopedData</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -173,12 +189,13 @@ public class ContentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEnvelopedData = new MMCode() {
+	public static final ContentTypeCode EnvelopedData = new ContentTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "ASN.1"}, new String[]{"value", "id-envelopedData"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EnvelopedData";
 			definition = "Encrypted data, with encryption key - (ASN.1 Object Identifier: id-envelopedData).";
-			owner_lazy = () -> ContentTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ContentTypeCode.mmObject();
 			codeName = "EVLP";
 		}
 	};
@@ -193,6 +210,9 @@ public class ContentTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DGST"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=Synonym, context=ASN.1, value=id-digestedData</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -204,12 +224,13 @@ public class ContentTypeCode {
 	 * "Message digest - (ASN.1 Object Identifier: id-digestedData)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDigestedData = new MMCode() {
+	public static final ContentTypeCode DigestedData = new ContentTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "ASN.1"}, new String[]{"value", "id-digestedData"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DigestedData";
 			definition = "Message digest - (ASN.1 Object Identifier: id-digestedData).";
-			owner_lazy = () -> ContentTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ContentTypeCode.mmObject();
 			codeName = "DGST";
 		}
 	};
@@ -224,6 +245,9 @@ public class ContentTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ECRP"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=Synonym, context=ASN.1, value=id-encryptedData</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -235,12 +259,13 @@ public class ContentTypeCode {
 	 * "Encrypted data - (ASN.1 Object Identifier: id-encryptedData)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEncryptedData = new MMCode() {
+	public static final ContentTypeCode EncryptedData = new ContentTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "ASN.1"}, new String[]{"value", "id-encryptedData"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EncryptedData";
 			definition = "Encrypted data - (ASN.1 Object Identifier: id-encryptedData).";
-			owner_lazy = () -> ContentTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ContentTypeCode.mmObject();
 			codeName = "ECRP";
 		}
 	};
@@ -256,6 +281,9 @@ public class ContentTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "AUTH"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=Synonym, context=ASN.1, value=id-ct-authData</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -268,29 +296,64 @@ public class ContentTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAuthenticatedData = new MMCode() {
+	public static final ContentTypeCode AuthenticatedData = new ContentTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "ASN.1"}, new String[]{"value", "id-ct-authData"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthenticatedData";
 			definition = "MAC (Message Authentication Code), with encryption key - (ASN.1 Object Identifier: id-ct-authData).";
-			owner_lazy = () -> ContentTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ContentTypeCode.mmObject();
 			codeName = "AUTH";
 		}
 	};
+	final static private LinkedHashMap<String, ContentTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ContentTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DATA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentTypeCode";
 				definition = "Identification of the type of protection for a protected data.";
-				code_lazy = () -> Arrays.asList(ContentTypeCode.mmPlainData, ContentTypeCode.mmSignedData, ContentTypeCode.mmEnvelopedData, ContentTypeCode.mmDigestedData, ContentTypeCode.mmEncryptedData,
-						ContentTypeCode.mmAuthenticatedData);
 				derivation_lazy = () -> Arrays.asList(ContentType1Code.mmObject(), ContentType2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ContentTypeCode.PlainData, com.tools20022.repository.codeset.ContentTypeCode.SignedData, com.tools20022.repository.codeset.ContentTypeCode.EnvelopedData,
+						com.tools20022.repository.codeset.ContentTypeCode.DigestedData, com.tools20022.repository.codeset.ContentTypeCode.EncryptedData, com.tools20022.repository.codeset.ContentTypeCode.AuthenticatedData);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PlainData.getCodeName().get(), PlainData);
+		codesByName.put(SignedData.getCodeName().get(), SignedData);
+		codesByName.put(EnvelopedData.getCodeName().get(), EnvelopedData);
+		codesByName.put(DigestedData.getCodeName().get(), DigestedData);
+		codesByName.put(EncryptedData.getCodeName().get(), EncryptedData);
+		codesByName.put(AuthenticatedData.getCodeName().get(), AuthenticatedData);
+	}
+
+	public static ContentTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ContentTypeCode[] values() {
+		ContentTypeCode[] values = new ContentTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ContentTypeCode> {
+		@Override
+		public ContentTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ContentTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

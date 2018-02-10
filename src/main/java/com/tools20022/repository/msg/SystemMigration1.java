@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Data about participant migration to new payment system process."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "SystemMigration1", propOrder = {"NPSParticipantIndicator", "plannedMigrationDate", "balanceReceivedIndicator", "migrated", "lastDate"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "SystemMigration1", propOrder = {"nPSParticipantIndicator", "plannedMigrationDate", "balanceReceivedIndicator", "migrated", "lastDate"})
 public class SystemMigration1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NPSPtcptInd")
 	protected YesNoIndicator nPSParticipantIndicator;
 	/**
-	 * Indicates whether the participant is a member of a new payment system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +109,7 @@ public class SystemMigration1 {
 	 */
 	public static final MMMessageAttribute mmNPSParticipantIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemMigration1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemMigration1.mmObject();
 			isDerived = false;
 			xmlTag = "NPSPtcptInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +120,11 @@ public class SystemMigration1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PlandMgrtnDt")
 	protected ISODateTime plannedMigrationDate;
 	/**
-	 * Planned migration date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,7 +151,7 @@ public class SystemMigration1 {
 	 */
 	public static final MMMessageAttribute mmPlannedMigrationDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemMigration1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemMigration1.mmObject();
 			isDerived = false;
 			xmlTag = "PlandMgrtnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,10 +162,11 @@ public class SystemMigration1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "BalRcvdInd")
 	protected YesNoIndicator balanceReceivedIndicator;
 	/**
-	 * Indicates whether the balance was received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +194,7 @@ public class SystemMigration1 {
 	 */
 	public static final MMMessageAttribute mmBalanceReceivedIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemMigration1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemMigration1.mmObject();
 			isDerived = false;
 			xmlTag = "BalRcvdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,10 +205,11 @@ public class SystemMigration1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Mgrtd")
 	protected YesNoIndicator migrated;
 	/**
-	 * Indicates whether the participant was migrated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -232,7 +237,7 @@ public class SystemMigration1 {
 	 */
 	public static final MMMessageAttribute mmMigrated = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemMigration1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemMigration1.mmObject();
 			isDerived = false;
 			xmlTag = "Mgrtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,10 +248,11 @@ public class SystemMigration1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "LastDt")
 	protected ISODateTime lastDate;
 	/**
-	 * Date of the latest RABIS service
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -273,7 +279,7 @@ public class SystemMigration1 {
 	 */
 	public static final MMMessageAttribute mmLastDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemMigration1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemMigration1.mmObject();
 			isDerived = false;
 			xmlTag = "LastDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,9 +294,9 @@ public class SystemMigration1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SystemMigration1.mmNPSParticipantIndicator, SystemMigration1.mmPlannedMigrationDate, SystemMigration1.mmBalanceReceivedIndicator, SystemMigration1.mmMigrated,
-						SystemMigration1.mmLastDate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemMigration1.mmNPSParticipantIndicator, com.tools20022.repository.msg.SystemMigration1.mmPlannedMigrationDate,
+						com.tools20022.repository.msg.SystemMigration1.mmBalanceReceivedIndicator, com.tools20022.repository.msg.SystemMigration1.mmMigrated, com.tools20022.repository.msg.SystemMigration1.mmLastDate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemMigration1";
 				definition = "Data about participant migration to new payment system process.";
@@ -299,48 +305,48 @@ public class SystemMigration1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NPSPtcptInd")
-	public YesNoIndicator getNPSParticipantIndicator() {
-		return nPSParticipantIndicator;
+	public Optional<YesNoIndicator> getNPSParticipantIndicator() {
+		return nPSParticipantIndicator == null ? Optional.empty() : Optional.of(nPSParticipantIndicator);
 	}
 
-	public void setNPSParticipantIndicator(YesNoIndicator nPSParticipantIndicator) {
+	public SystemMigration1 setNPSParticipantIndicator(YesNoIndicator nPSParticipantIndicator) {
 		this.nPSParticipantIndicator = nPSParticipantIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PlandMgrtnDt")
-	public ISODateTime getPlannedMigrationDate() {
-		return plannedMigrationDate;
+	public Optional<ISODateTime> getPlannedMigrationDate() {
+		return plannedMigrationDate == null ? Optional.empty() : Optional.of(plannedMigrationDate);
 	}
 
-	public void setPlannedMigrationDate(ISODateTime plannedMigrationDate) {
+	public SystemMigration1 setPlannedMigrationDate(ISODateTime plannedMigrationDate) {
 		this.plannedMigrationDate = plannedMigrationDate;
+		return this;
 	}
 
-	@XmlElement(name = "BalRcvdInd")
-	public YesNoIndicator getBalanceReceivedIndicator() {
-		return balanceReceivedIndicator;
+	public Optional<YesNoIndicator> getBalanceReceivedIndicator() {
+		return balanceReceivedIndicator == null ? Optional.empty() : Optional.of(balanceReceivedIndicator);
 	}
 
-	public void setBalanceReceivedIndicator(YesNoIndicator balanceReceivedIndicator) {
+	public SystemMigration1 setBalanceReceivedIndicator(YesNoIndicator balanceReceivedIndicator) {
 		this.balanceReceivedIndicator = balanceReceivedIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "Mgrtd")
-	public YesNoIndicator getMigrated() {
-		return migrated;
+	public Optional<YesNoIndicator> getMigrated() {
+		return migrated == null ? Optional.empty() : Optional.of(migrated);
 	}
 
-	public void setMigrated(YesNoIndicator migrated) {
+	public SystemMigration1 setMigrated(YesNoIndicator migrated) {
 		this.migrated = migrated;
+		return this;
 	}
 
-	@XmlElement(name = "LastDt")
-	public ISODateTime getLastDate() {
-		return lastDate;
+	public Optional<ISODateTime> getLastDate() {
+		return lastDate == null ? Optional.empty() : Optional.of(lastDate);
 	}
 
-	public void setLastDate(ISODateTime lastDate) {
+	public SystemMigration1 setLastDate(ISODateTime lastDate) {
 		this.lastDate = lastDate;
+		return this;
 	}
 }

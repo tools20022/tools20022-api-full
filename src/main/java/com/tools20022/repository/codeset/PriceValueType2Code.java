@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PriceValueTypeCode;
+import com.tools20022.repository.codeset.PriceValueType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies a type of value of the price.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode
- * PriceValueTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType2Code#mmDiscount
- * PriceValueType2Code.mmDiscount}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType2Code#Discount
+ * PriceValueType2Code.Discount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType2Code#mmPremium
- * PriceValueType2Code.mmPremium}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType2Code#Premium
+ * PriceValueType2Code.Premium}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode
+ * PriceValueTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies a type of value of the price."</li>
  * </ul>
  */
-public class PriceValueType2Code extends PriceValueTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PriceValueType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class PriceValueType2Code extends PriceValueTypeCode {
 	 * name} = "Discount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiscount = new MMCode() {
+	public static final PriceValueType2Code Discount = new PriceValueType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
-			owner_lazy = () -> PriceValueType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType2Code.mmObject();
+			codeName = PriceValueTypeCode.Discount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class PriceValueType2Code extends PriceValueTypeCode {
 	 * name} = "Premium"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPremium = new MMCode() {
+	public static final PriceValueType2Code Premium = new PriceValueType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
-			owner_lazy = () -> PriceValueType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType2Code.mmObject();
+			codeName = PriceValueTypeCode.Premium.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PriceValueType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PriceValueType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DISC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceValueType2Code";
 				definition = "Specifies a type of value of the price.";
-				code_lazy = () -> Arrays.asList(PriceValueType2Code.mmDiscount, PriceValueType2Code.mmPremium);
 				trace_lazy = () -> PriceValueTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceValueType2Code.Discount, com.tools20022.repository.codeset.PriceValueType2Code.Premium);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Discount.getCodeName().get(), Discount);
+		codesByName.put(Premium.getCodeName().get(), Premium);
+	}
+
+	public static PriceValueType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PriceValueType2Code[] values() {
+		PriceValueType2Code[] values = new PriceValueType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PriceValueType2Code> {
+		@Override
+		public PriceValueType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PriceValueType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

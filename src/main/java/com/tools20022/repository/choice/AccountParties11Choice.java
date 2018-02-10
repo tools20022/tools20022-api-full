@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,17 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * AccountParties9Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountParties11Choice", propOrder = {"primaryOwner", "trustee", "nominee", "jointOwner"})
 public class AccountParties11Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmryOwnr", required = true)
 	protected InvestmentAccountOwnershipInformation15 primaryOwner;
 	/**
-	 * Single owner of the investment account or, when the ownership is split
-	 * among several owners, the primary owner is the one giving its address and
-	 * account details for the registration.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -126,7 +127,7 @@ public class AccountParties11Choice {
 	public static final MMMessageAssociationEnd mmPrimaryOwner = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PrimaryOwner.mmObject();
-			componentContext_lazy = () -> AccountParties11Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountParties11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PmryOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,11 +140,11 @@ public class AccountParties11Choice {
 			type_lazy = () -> InvestmentAccountOwnershipInformation15.mmObject();
 		}
 	};
+	@XmlElement(name = "Trstee", required = true)
 	protected List<InvestmentAccountOwnershipInformation15> trustee;
 	/**
-	 * Legal owners of the property. However, the beneficiary has the equitable
-	 * or beneficial ownership.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -182,7 +183,7 @@ public class AccountParties11Choice {
 	public static final MMMessageAssociationEnd mmTrustee = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> TrusteeRole.mmObject();
-			componentContext_lazy = () -> AccountParties11Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountParties11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Trstee";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,11 +196,11 @@ public class AccountParties11Choice {
 			type_lazy = () -> InvestmentAccountOwnershipInformation15.mmObject();
 		}
 	};
+	@XmlElement(name = "Nmnee", required = true)
 	protected InvestmentAccountOwnershipInformation15 nominee;
 	/**
-	 * Entity named by the beneficial owner to act on its behalf, often to
-	 * facilitate dealing, or to conceal the identity of the beneficiary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -238,7 +239,7 @@ public class AccountParties11Choice {
 	public static final MMMessageAssociationEnd mmNominee = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Nominee.mmObject();
-			componentContext_lazy = () -> AccountParties11Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountParties11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Nmnee";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,11 +252,11 @@ public class AccountParties11Choice {
 			type_lazy = () -> InvestmentAccountOwnershipInformation15.mmObject();
 		}
 	};
+	@XmlElement(name = "JntOwnr", required = true)
 	protected List<InvestmentAccountOwnershipInformation15> jointOwner;
 	/**
-	 * Co-owner of the investment account when the ownership is assigned to more
-	 * than one party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -294,7 +295,7 @@ public class AccountParties11Choice {
 	public static final MMMessageAssociationEnd mmJointOwner = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> JointOwner.mmObject();
-			componentContext_lazy = () -> AccountParties11Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountParties11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "JntOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -311,9 +312,10 @@ public class AccountParties11Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountParties11Choice.mmPrimaryOwner, AccountParties11Choice.mmTrustee, AccountParties11Choice.mmNominee, AccountParties11Choice.mmJointOwner);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountParties11Choice.mmPrimaryOwner, com.tools20022.repository.choice.AccountParties11Choice.mmTrustee,
+						com.tools20022.repository.choice.AccountParties11Choice.mmNominee, com.tools20022.repository.choice.AccountParties11Choice.mmJointOwner);
 				trace_lazy = () -> InvestmentAccountPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountParties11Choice";
 				definition = "Information about a party's account.";
@@ -323,39 +325,39 @@ public class AccountParties11Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmryOwnr", required = true)
 	public InvestmentAccountOwnershipInformation15 getPrimaryOwner() {
 		return primaryOwner;
 	}
 
-	public void setPrimaryOwner(InvestmentAccountOwnershipInformation15 primaryOwner) {
-		this.primaryOwner = primaryOwner;
+	public AccountParties11Choice setPrimaryOwner(InvestmentAccountOwnershipInformation15 primaryOwner) {
+		this.primaryOwner = Objects.requireNonNull(primaryOwner);
+		return this;
 	}
 
-	@XmlElement(name = "Trstee", required = true)
 	public List<InvestmentAccountOwnershipInformation15> getTrustee() {
-		return trustee;
+		return trustee == null ? trustee = new ArrayList<>() : trustee;
 	}
 
-	public void setTrustee(List<InvestmentAccountOwnershipInformation15> trustee) {
-		this.trustee = trustee;
+	public AccountParties11Choice setTrustee(List<InvestmentAccountOwnershipInformation15> trustee) {
+		this.trustee = Objects.requireNonNull(trustee);
+		return this;
 	}
 
-	@XmlElement(name = "Nmnee", required = true)
 	public InvestmentAccountOwnershipInformation15 getNominee() {
 		return nominee;
 	}
 
-	public void setNominee(InvestmentAccountOwnershipInformation15 nominee) {
-		this.nominee = nominee;
+	public AccountParties11Choice setNominee(InvestmentAccountOwnershipInformation15 nominee) {
+		this.nominee = Objects.requireNonNull(nominee);
+		return this;
 	}
 
-	@XmlElement(name = "JntOwnr", required = true)
 	public List<InvestmentAccountOwnershipInformation15> getJointOwner() {
-		return jointOwner;
+		return jointOwner == null ? jointOwner = new ArrayList<>() : jointOwner;
 	}
 
-	public void setJointOwner(List<InvestmentAccountOwnershipInformation15> jointOwner) {
-		this.jointOwner = jointOwner;
+	public AccountParties11Choice setJointOwner(List<InvestmentAccountOwnershipInformation15> jointOwner) {
+		this.jointOwner = Objects.requireNonNull(jointOwner);
+		return this;
 	}
 }

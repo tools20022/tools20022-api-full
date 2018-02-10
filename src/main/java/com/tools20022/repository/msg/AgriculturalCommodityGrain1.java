@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.Commodity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,16 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AgriculturalCommodityGrain1", propOrder = {"baseProduct", "subProduct", "additionalSubProduct"})
 public class AgriculturalCommodityGrain1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BasePdct", required = true)
 	protected AssetClassProductType1Code baseProduct;
 	/**
-	 * Base product for the underlying asset class as specified in the
-	 * classification of commodities derivatives table.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +119,7 @@ public class AgriculturalCommodityGrain1 {
 	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
-			componentContext_lazy = () -> AgriculturalCommodityGrain1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AgriculturalCommodityGrain1.mmObject();
 			isDerived = false;
 			xmlTag = "BasePdct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +130,11 @@ public class AgriculturalCommodityGrain1 {
 			simpleType_lazy = () -> AssetClassProductType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SubPdct", required = true)
 	protected AssetClassSubProductType5Code subProduct;
 	/**
-	 * Sub-product for the underlying asset class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +168,7 @@ public class AgriculturalCommodityGrain1 {
 	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AgriculturalCommodityGrain1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AgriculturalCommodityGrain1.mmObject();
 			isDerived = false;
 			xmlTag = "SubPdct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,11 +179,11 @@ public class AgriculturalCommodityGrain1 {
 			simpleType_lazy = () -> AssetClassSubProductType5Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlSubPdct")
 	protected AssetClassDetailedSubProductType15Code additionalSubProduct;
 	/**
-	 * Further subproduct type related to instruments that have a non-financial
-	 * instrument or commodity as underlying.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,7 +213,7 @@ public class AgriculturalCommodityGrain1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalSubProduct = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AgriculturalCommodityGrain1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AgriculturalCommodityGrain1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlSubPdct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,9 +228,10 @@ public class AgriculturalCommodityGrain1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AgriculturalCommodityGrain1.mmBaseProduct, AgriculturalCommodityGrain1.mmSubProduct, AgriculturalCommodityGrain1.mmAdditionalSubProduct);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgriculturalCommodityGrain1.mmBaseProduct, com.tools20022.repository.msg.AgriculturalCommodityGrain1.mmSubProduct,
+						com.tools20022.repository.msg.AgriculturalCommodityGrain1.mmAdditionalSubProduct);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgriculturalCommodityGrain1";
 				definition = "Defines commodity sub-product attributes of an agricultural derivative of type grain.";
@@ -236,30 +240,30 @@ public class AgriculturalCommodityGrain1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BasePdct", required = true)
 	public AssetClassProductType1Code getBaseProduct() {
 		return baseProduct;
 	}
 
-	public void setBaseProduct(AssetClassProductType1Code baseProduct) {
-		this.baseProduct = baseProduct;
+	public AgriculturalCommodityGrain1 setBaseProduct(AssetClassProductType1Code baseProduct) {
+		this.baseProduct = Objects.requireNonNull(baseProduct);
+		return this;
 	}
 
-	@XmlElement(name = "SubPdct", required = true)
 	public AssetClassSubProductType5Code getSubProduct() {
 		return subProduct;
 	}
 
-	public void setSubProduct(AssetClassSubProductType5Code subProduct) {
-		this.subProduct = subProduct;
+	public AgriculturalCommodityGrain1 setSubProduct(AssetClassSubProductType5Code subProduct) {
+		this.subProduct = Objects.requireNonNull(subProduct);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlSubPdct")
-	public AssetClassDetailedSubProductType15Code getAdditionalSubProduct() {
-		return additionalSubProduct;
+	public Optional<AssetClassDetailedSubProductType15Code> getAdditionalSubProduct() {
+		return additionalSubProduct == null ? Optional.empty() : Optional.of(additionalSubProduct);
 	}
 
-	public void setAdditionalSubProduct(AssetClassDetailedSubProductType15Code additionalSubProduct) {
+	public AgriculturalCommodityGrain1 setAdditionalSubProduct(AssetClassDetailedSubProductType15Code additionalSubProduct) {
 		this.additionalSubProduct = additionalSubProduct;
+		return this;
 	}
 }

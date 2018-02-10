@@ -27,6 +27,7 @@ import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversi
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -60,33 +61,17 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
- * SecuritiesEventsLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
- * IssuersAgentsCommunicationISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AgtCAMvmntStsAdvc"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01#mmStatusIdentificationRule
- * AgentCAMovementStatusAdviceV01.mmStatusIdentificationRule}</li>
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01#StatusIdentificationRule
+ * AgentCAMovementStatusAdviceV01.StatusIdentificationRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01#mmMovementStatusDetailsOrMovementCancellationStatusDetailsRule
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01#MovementStatusDetailsOrMovementCancellationStatusDetailsRule
  * AgentCAMovementStatusAdviceV01.
- * mmMovementStatusDetailsOrMovementCancellationStatusDetailsRule}</li>
+ * MovementStatusDetailsOrMovementCancellationStatusDetailsRule}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -119,9 +104,37 @@ import javax.xml.bind.annotation.*;
  * AgentCAMovementStatusAdviceV01.mmMovementCancellationStatusDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
+ * IssuersAgentsCommunicationISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AgtCAMvmntStsAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
+ * SecuritiesEventsLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.022.001.01}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMovementStatusDetailsRule#forAgentCAMovementStatusAdviceV01
+ * ConstraintMovementStatusDetailsRule.forAgentCAMovementStatusAdviceV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMovementCancellationStatusDetailsRule#forAgentCAMovementStatusAdviceV01
+ * ConstraintMovementCancellationStatusDetailsRule.
+ * forAgentCAMovementStatusAdviceV01}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -134,7 +147,7 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AgentCAMovementStatusAdviceV01", propOrder = {"identification", "agentCAElectionStatusAdviceIdentification", "agentCAGlobalDistributionStatusAdviceIdentification", "agentCAMovementInstructionIdentification",
 		"agentCAMovementCancellationRequestIdentification", "corporateActionGeneralInformation", "movementStatusDetails", "movementCancellationStatusDetails"})
 public class AgentCAMovementStatusAdviceV01 {
@@ -187,7 +200,7 @@ public class AgentCAMovementStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmStatusIdentificationRule = new MMXor() {
+	public static final MMXor StatusIdentificationRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusIdentificationRule";
@@ -234,7 +247,7 @@ public class AgentCAMovementStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmMovementStatusDetailsOrMovementCancellationStatusDetailsRule = new MMXor() {
+	public static final MMXor MovementStatusDetailsOrMovementCancellationStatusDetailsRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementStatusDetailsOrMovementCancellationStatusDetailsRule";
@@ -244,11 +257,11 @@ public class AgentCAMovementStatusAdviceV01 {
 					com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmMovementCancellationStatusDetails);
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected DocumentIdentification8 identification;
 	/**
-	 * Identification assigned by the Sender to unambiguously identify the
-	 * status advice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -290,10 +303,11 @@ public class AgentCAMovementStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AgtCAElctnStsAdvcId", required = true)
 	protected DocumentIdentification8 agentCAElectionStatusAdviceIdentification;
 	/**
-	 * Identification of the Agent Corporate Action Election Status Advice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -334,11 +348,11 @@ public class AgentCAMovementStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AgtCAGblDstrbtnStsAdvcId", required = true)
 	protected DocumentIdentification8 agentCAGlobalDistributionStatusAdviceIdentification;
 	/**
-	 * Identification of the Agent Corporate Action Global Distribution Status
-	 * Advice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -380,11 +394,11 @@ public class AgentCAMovementStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AgtCAMvmntInstrId", required = true)
 	protected DocumentIdentification8 agentCAMovementInstructionIdentification;
 	/**
-	 * Identification of the linked Agent CA Movement Instruction for which a
-	 * status is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -426,11 +440,11 @@ public class AgentCAMovementStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AgtCAMvmntCxlReqId", required = true)
 	protected DocumentIdentification8 agentCAMovementCancellationRequestIdentification;
 	/**
-	 * Identification of the linked Agent CA Movement Cancellation Request for
-	 * which a status is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -472,10 +486,11 @@ public class AgentCAMovementStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
-	 * General information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -515,10 +530,11 @@ public class AgentCAMovementStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "MvmntStsDtls", required = true)
 	protected CorporateActionMovementStatus1Choice movementStatusDetails;
 	/**
-	 * Status of the movement instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -558,10 +574,11 @@ public class AgentCAMovementStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "MvmntCxlStsDtls", required = true)
 	protected CorporateMovementStatus2 movementCancellationStatusDetails;
 	/**
-	 * Status of the movement cancellation request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -605,12 +622,14 @@ public class AgentCAMovementStatusAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMovementStatusDetailsRule.forAgentCAMovementStatusAdviceV01,
+						com.tools20022.repository.constraints.ConstraintMovementCancellationStatusDetailsRule.forAgentCAMovementStatusAdviceV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentCAMovementStatusAdviceV01";
 				definition = "Scope\r\nThis message is sent by a CSD to an issuer (or its agent) to report the status, or a change in status, of\r\n- a global distribution status advice released by an issuer (or its agent);\r\n- a movement instruction released by an issuer (or its agent);\r\n- a movement cancellation request sent by the issuer (or its agent); and\r\n- the non-settlement of the movements at the CSD.\r\nUsage\r\nThis message is used to report the status of:\r\n- the movements resulting from a movement instruction message, in which case, the Agent Corporate Action Movement Instruction Identification must be present;\r\n- the movements resulting from a global distribution status advice message (with the status, authorised), in which case, the Agent Corporate Action Global Distribution Status Advice Identification must be present;\r\n- the movement cancellation request, in which case, the Agent Corporate Action Movement Cancellation Request Identification must be present; and\r\n- the movements resulting from an election status advice (if the status of the election advice is rejected or if the status of the election cancellation request or amendment request is accepted) in case there is a settlement problem. The Election Status Advice Identification must be present.\r\nIn the case of a failed settlement, the message contains details of the movement, such as account details, securities or cash information and the reason of the failure.\r\nThis message should not be used to provide the confirmation of the settlement; the Agent Corporate Action Movement Confirmation message should be used instead.";
 				messageSet_lazy = () -> Arrays.asList(IssuersAgentsCommunicationISOLatestversion.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmStatusIdentificationRule,
-						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.mmMovementStatusDetailsOrMovementCancellationStatusDetailsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.StatusIdentificationRule,
+						com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01.MovementStatusDetailsOrMovementCancellationStatusDetailsRule);
 				rootElement = "Document";
 				xmlTag = "AgtCAMvmntStsAdvc";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
@@ -639,79 +658,79 @@ public class AgentCAMovementStatusAdviceV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(DocumentIdentification8 identification) {
-		this.identification = identification;
+	public AgentCAMovementStatusAdviceV01 setIdentification(DocumentIdentification8 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "AgtCAElctnStsAdvcId", required = true)
 	public DocumentIdentification8 getAgentCAElectionStatusAdviceIdentification() {
 		return agentCAElectionStatusAdviceIdentification;
 	}
 
-	public void setAgentCAElectionStatusAdviceIdentification(DocumentIdentification8 agentCAElectionStatusAdviceIdentification) {
-		this.agentCAElectionStatusAdviceIdentification = agentCAElectionStatusAdviceIdentification;
+	public AgentCAMovementStatusAdviceV01 setAgentCAElectionStatusAdviceIdentification(DocumentIdentification8 agentCAElectionStatusAdviceIdentification) {
+		this.agentCAElectionStatusAdviceIdentification = Objects.requireNonNull(agentCAElectionStatusAdviceIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AgtCAGblDstrbtnStsAdvcId", required = true)
 	public DocumentIdentification8 getAgentCAGlobalDistributionStatusAdviceIdentification() {
 		return agentCAGlobalDistributionStatusAdviceIdentification;
 	}
 
-	public void setAgentCAGlobalDistributionStatusAdviceIdentification(DocumentIdentification8 agentCAGlobalDistributionStatusAdviceIdentification) {
-		this.agentCAGlobalDistributionStatusAdviceIdentification = agentCAGlobalDistributionStatusAdviceIdentification;
+	public AgentCAMovementStatusAdviceV01 setAgentCAGlobalDistributionStatusAdviceIdentification(DocumentIdentification8 agentCAGlobalDistributionStatusAdviceIdentification) {
+		this.agentCAGlobalDistributionStatusAdviceIdentification = Objects.requireNonNull(agentCAGlobalDistributionStatusAdviceIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AgtCAMvmntInstrId", required = true)
 	public DocumentIdentification8 getAgentCAMovementInstructionIdentification() {
 		return agentCAMovementInstructionIdentification;
 	}
 
-	public void setAgentCAMovementInstructionIdentification(DocumentIdentification8 agentCAMovementInstructionIdentification) {
-		this.agentCAMovementInstructionIdentification = agentCAMovementInstructionIdentification;
+	public AgentCAMovementStatusAdviceV01 setAgentCAMovementInstructionIdentification(DocumentIdentification8 agentCAMovementInstructionIdentification) {
+		this.agentCAMovementInstructionIdentification = Objects.requireNonNull(agentCAMovementInstructionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AgtCAMvmntCxlReqId", required = true)
 	public DocumentIdentification8 getAgentCAMovementCancellationRequestIdentification() {
 		return agentCAMovementCancellationRequestIdentification;
 	}
 
-	public void setAgentCAMovementCancellationRequestIdentification(DocumentIdentification8 agentCAMovementCancellationRequestIdentification) {
-		this.agentCAMovementCancellationRequestIdentification = agentCAMovementCancellationRequestIdentification;
+	public AgentCAMovementStatusAdviceV01 setAgentCAMovementCancellationRequestIdentification(DocumentIdentification8 agentCAMovementCancellationRequestIdentification) {
+		this.agentCAMovementCancellationRequestIdentification = Objects.requireNonNull(agentCAMovementCancellationRequestIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
 
-	public void setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
-		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	public AgentCAMovementStatusAdviceV01 setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = Objects.requireNonNull(corporateActionGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "MvmntStsDtls", required = true)
 	public CorporateActionMovementStatus1Choice getMovementStatusDetails() {
 		return movementStatusDetails;
 	}
 
-	public void setMovementStatusDetails(CorporateActionMovementStatus1Choice movementStatusDetails) {
-		this.movementStatusDetails = movementStatusDetails;
+	public AgentCAMovementStatusAdviceV01 setMovementStatusDetails(CorporateActionMovementStatus1Choice movementStatusDetails) {
+		this.movementStatusDetails = Objects.requireNonNull(movementStatusDetails);
+		return this;
 	}
 
-	@XmlElement(name = "MvmntCxlStsDtls", required = true)
 	public CorporateMovementStatus2 getMovementCancellationStatusDetails() {
 		return movementCancellationStatusDetails;
 	}
 
-	public void setMovementCancellationStatusDetails(CorporateMovementStatus2 movementCancellationStatusDetails) {
-		this.movementCancellationStatusDetails = movementCancellationStatusDetails;
+	public AgentCAMovementStatusAdviceV01 setMovementCancellationStatusDetails(CorporateMovementStatus2 movementCancellationStatusDetails) {
+		this.movementCancellationStatusDetails = Objects.requireNonNull(movementCancellationStatusDetails);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.022.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.022.001.01")
 	static public class Document {
 		@XmlElement(name = "AgtCAMvmntStsAdvc", required = true)
 		public AgentCAMovementStatusAdviceV01 messageBody;

@@ -29,9 +29,8 @@ import com.tools20022.repository.msg.UnderlyingSecurity3;
 import com.tools20022.repository.msg.UpdatedAdditionalInformation2;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -59,20 +58,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
- * SecuritiesEventsArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CorpActnNrrtv"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -94,9 +79,34 @@ import javax.xml.bind.annotation.*;
  * CorporateActionNarrativeV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CorpActnNrrtv"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
+ * SecuritiesEventsArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.038.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forCorporateActionNarrativeV02
+ * ConstraintCoexistenceCharacterSetXRule.forCorporateActionNarrativeV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forCorporateActionNarrativeV02
+ * ConstraintCoexistenceIdentificationRule.forCorporateActionNarrativeV02}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,15 +131,16 @@ import javax.xml.bind.annotation.*;
  * CorporateActionNarrativeV01}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionNarrativeV02", propOrder = {"accountDetails", "underlyingSecurity", "corporateActionGeneralInformation", "additionalInformation", "supplementaryData"})
 public class CorporateActionNarrativeV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctDtls")
 	protected AccountIdentification14Choice accountDetails;
 	/**
-	 * General information about the safekeeping account and the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,10 +182,11 @@ public class CorporateActionNarrativeV02 {
 			}
 		}
 	};
+	@XmlElement(name = "UndrlygScty")
 	protected UnderlyingSecurity3 underlyingSecurity;
 	/**
-	 * Provides information about the securitised right for entitlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,10 +227,11 @@ public class CorporateActionNarrativeV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	protected CorporateActionGeneralInformation10 corporateActionGeneralInformation;
 	/**
-	 * General information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -258,10 +271,11 @@ public class CorporateActionNarrativeV02 {
 			}
 		}
 	};
+	@XmlElement(name = "AddtlInf", required = true)
 	protected UpdatedAdditionalInformation2 additionalInformation;
 	/**
-	 * Provides additional information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -301,11 +315,11 @@ public class CorporateActionNarrativeV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -350,6 +364,8 @@ public class CorporateActionNarrativeV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionNarrativeV02,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionNarrativeV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrativeV02";
 				definition = "Scope\r\nThe CorporateActionNarrative message is sent between an account servicer and an account owner or its designated agent to cater for tax reclaims, restrictions, documentation requirements. This message is bi-directional.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).\nISO 15022 - 20022 COEXISTENCE\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
@@ -380,52 +396,52 @@ public class CorporateActionNarrativeV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctDtls")
-	public AccountIdentification14Choice getAccountDetails() {
-		return accountDetails;
+	public Optional<AccountIdentification14Choice> getAccountDetails() {
+		return accountDetails == null ? Optional.empty() : Optional.of(accountDetails);
 	}
 
-	public void setAccountDetails(AccountIdentification14Choice accountDetails) {
+	public CorporateActionNarrativeV02 setAccountDetails(AccountIdentification14Choice accountDetails) {
 		this.accountDetails = accountDetails;
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygScty")
-	public UnderlyingSecurity3 getUnderlyingSecurity() {
-		return underlyingSecurity;
+	public Optional<UnderlyingSecurity3> getUnderlyingSecurity() {
+		return underlyingSecurity == null ? Optional.empty() : Optional.of(underlyingSecurity);
 	}
 
-	public void setUnderlyingSecurity(UnderlyingSecurity3 underlyingSecurity) {
+	public CorporateActionNarrativeV02 setUnderlyingSecurity(UnderlyingSecurity3 underlyingSecurity) {
 		this.underlyingSecurity = underlyingSecurity;
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionGeneralInformation10 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
 
-	public void setCorporateActionGeneralInformation(CorporateActionGeneralInformation10 corporateActionGeneralInformation) {
-		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	public CorporateActionNarrativeV02 setCorporateActionGeneralInformation(CorporateActionGeneralInformation10 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = Objects.requireNonNull(corporateActionGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf", required = true)
 	public UpdatedAdditionalInformation2 getAdditionalInformation() {
 		return additionalInformation;
 	}
 
-	public void setAdditionalInformation(UpdatedAdditionalInformation2 additionalInformation) {
-		this.additionalInformation = additionalInformation;
+	public CorporateActionNarrativeV02 setAdditionalInformation(UpdatedAdditionalInformation2 additionalInformation) {
+		this.additionalInformation = Objects.requireNonNull(additionalInformation);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public CorporateActionNarrativeV02 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.038.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.038.001.02")
 	static public class Document {
 		@XmlElement(name = "CorpActnNrrtv", required = true)
 		public CorporateActionNarrativeV02 messageBody;

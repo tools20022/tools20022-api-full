@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ExtendedEventTypeCode;
+import com.tools20022.repository.codeset.ExtendedEventType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies DTCC (The Depository Trust and Clearing Corporation) defined
@@ -31,36 +35,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventTypeCode
- * ExtendedEventTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType1Code#mmRightsPlanAdoption
- * ExtendedEventType1Code.mmRightsPlanAdoption}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType1Code#RightsPlanAdoption
+ * ExtendedEventType1Code.RightsPlanAdoption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType1Code#mmTermination
- * ExtendedEventType1Code.mmTermination}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType1Code#Termination
+ * ExtendedEventType1Code.Termination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType1Code#mmBonusRightsIssue
- * ExtendedEventType1Code.mmBonusRightsIssue}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType1Code#BonusRightsIssue
+ * ExtendedEventType1Code.BonusRightsIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType1Code#mmFullPrerefunding
- * ExtendedEventType1Code.mmFullPrerefunding}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType1Code#FullPrerefunding
+ * ExtendedEventType1Code.FullPrerefunding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType1Code#mmPartialDefeasance
- * ExtendedEventType1Code.mmPartialDefeasance}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType1Code#PartialDefeasance
+ * ExtendedEventType1Code.PartialDefeasance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType1Code#mmPartialPrerefunding
- * ExtendedEventType1Code.mmPartialPrerefunding}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType1Code#PartialPrerefunding
+ * ExtendedEventType1Code.PartialPrerefunding}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventTypeCode
+ * ExtendedEventTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ExtendedEventType1Code extends ExtendedEventTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ExtendedEventType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,11 +103,12 @@ public class ExtendedEventType1Code extends ExtendedEventTypeCode {
 	 * name} = "RightsPlanAdoption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRightsPlanAdoption = new MMCode() {
+	public static final ExtendedEventType1Code RightsPlanAdoption = new ExtendedEventType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsPlanAdoption";
-			owner_lazy = () -> ExtendedEventType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType1Code.mmObject();
+			codeName = ExtendedEventTypeCode.RightsPlanAdoption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -121,11 +127,12 @@ public class ExtendedEventType1Code extends ExtendedEventTypeCode {
 	 * name} = "Termination"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTermination = new MMCode() {
+	public static final ExtendedEventType1Code Termination = new ExtendedEventType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Termination";
-			owner_lazy = () -> ExtendedEventType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType1Code.mmObject();
+			codeName = ExtendedEventTypeCode.Termination.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -144,11 +151,12 @@ public class ExtendedEventType1Code extends ExtendedEventTypeCode {
 	 * name} = "BonusRightsIssue"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBonusRightsIssue = new MMCode() {
+	public static final ExtendedEventType1Code BonusRightsIssue = new ExtendedEventType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BonusRightsIssue";
-			owner_lazy = () -> ExtendedEventType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType1Code.mmObject();
+			codeName = ExtendedEventTypeCode.BonusRightsIssue.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -167,11 +175,12 @@ public class ExtendedEventType1Code extends ExtendedEventTypeCode {
 	 * name} = "FullPrerefunding"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullPrerefunding = new MMCode() {
+	public static final ExtendedEventType1Code FullPrerefunding = new ExtendedEventType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPrerefunding";
-			owner_lazy = () -> ExtendedEventType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType1Code.mmObject();
+			codeName = ExtendedEventTypeCode.FullPrerefunding.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -190,11 +199,12 @@ public class ExtendedEventType1Code extends ExtendedEventTypeCode {
 	 * name} = "PartialDefeasance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialDefeasance = new MMCode() {
+	public static final ExtendedEventType1Code PartialDefeasance = new ExtendedEventType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialDefeasance";
-			owner_lazy = () -> ExtendedEventType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType1Code.mmObject();
+			codeName = ExtendedEventTypeCode.PartialDefeasance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -213,27 +223,63 @@ public class ExtendedEventType1Code extends ExtendedEventTypeCode {
 	 * name} = "PartialPrerefunding"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialPrerefunding = new MMCode() {
+	public static final ExtendedEventType1Code PartialPrerefunding = new ExtendedEventType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialPrerefunding";
-			owner_lazy = () -> ExtendedEventType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType1Code.mmObject();
+			codeName = ExtendedEventTypeCode.PartialPrerefunding.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ExtendedEventType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ExtendedEventType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RPLA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExtendedEventType1Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined corporate action event type.";
-				code_lazy = () -> Arrays.asList(ExtendedEventType1Code.mmRightsPlanAdoption, ExtendedEventType1Code.mmTermination, ExtendedEventType1Code.mmBonusRightsIssue, ExtendedEventType1Code.mmFullPrerefunding,
-						ExtendedEventType1Code.mmPartialDefeasance, ExtendedEventType1Code.mmPartialPrerefunding);
 				trace_lazy = () -> ExtendedEventTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExtendedEventType1Code.RightsPlanAdoption, com.tools20022.repository.codeset.ExtendedEventType1Code.Termination,
+						com.tools20022.repository.codeset.ExtendedEventType1Code.BonusRightsIssue, com.tools20022.repository.codeset.ExtendedEventType1Code.FullPrerefunding,
+						com.tools20022.repository.codeset.ExtendedEventType1Code.PartialDefeasance, com.tools20022.repository.codeset.ExtendedEventType1Code.PartialPrerefunding);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(RightsPlanAdoption.getCodeName().get(), RightsPlanAdoption);
+		codesByName.put(Termination.getCodeName().get(), Termination);
+		codesByName.put(BonusRightsIssue.getCodeName().get(), BonusRightsIssue);
+		codesByName.put(FullPrerefunding.getCodeName().get(), FullPrerefunding);
+		codesByName.put(PartialDefeasance.getCodeName().get(), PartialDefeasance);
+		codesByName.put(PartialPrerefunding.getCodeName().get(), PartialPrerefunding);
+	}
+
+	public static ExtendedEventType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ExtendedEventType1Code[] values() {
+		ExtendedEventType1Code[] values = new ExtendedEventType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ExtendedEventType1Code> {
+		@Override
+		public ExtendedEventType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ExtendedEventType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -26,9 +26,8 @@ import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.PriceCorrection2;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -48,22 +47,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.ReferenceDataArchive
- * ReferenceDataArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "reda.003.001.02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "reda.003.001.02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -79,9 +62,33 @@ import javax.xml.bind.annotation.*;
  * PriceReportCorrectionV02.mmPriceCorrectionDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "reda.003.001.02"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.ReferenceDataArchive
+ * ReferenceDataArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "reda.003.001.02"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code reda.003.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPriceCorrectionRepeatRule#forPriceReportCorrectionV02
+ * ConstraintPriceCorrectionRepeatRule.forPriceReportCorrectionV02}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,15 +108,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "reda.003.001.02", propOrder = {"poolReference", "previousReference", "priceCorrectionDetails"})
 public class PriceReportCorrectionV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PoolRef")
 	protected AdditionalReference3 poolReference;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,10 +157,11 @@ public class PriceReportCorrectionV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsRef", required = true)
 	protected AdditionalReference3 previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,11 +201,11 @@ public class PriceReportCorrectionV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PricCrrctnDtls", required = true)
 	protected List<PriceCorrection2> priceCorrectionDetails;
 	/**
-	 * Information related to the correction of a price of a financial
-	 * instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -241,6 +250,7 @@ public class PriceReportCorrectionV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPriceCorrectionRepeatRule.forPriceReportCorrectionV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceReportCorrectionV02";
 				definition = "Scope\r\nThe PriceReportCorrection message is sent by a report provider, eg, a fund accountant, transfer agent, market data provider, or any other interested party, to a report user, eg, a fund management company, a transfer agent, market data provider, regulator or any other interested party.\r\nThe message is used to correct at least one of the prices, of a financial instrument, that was quoted in a previously sent PriceReport message.\r\nUsage\r\nThe PriceReportCorrection message is used to correct information in a PriceReport message that was previously sent by the fund accountant. If an entire PriceReport message must be corrected, eg, due to an incorrect trade date, it is recommended that a PriceReportCancellation message is used to cancel the entire PriceReport message and a new PriceReport message is sent.";
@@ -270,34 +280,34 @@ public class PriceReportCorrectionV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PoolRef")
-	public AdditionalReference3 getPoolReference() {
-		return poolReference;
+	public Optional<AdditionalReference3> getPoolReference() {
+		return poolReference == null ? Optional.empty() : Optional.of(poolReference);
 	}
 
-	public void setPoolReference(AdditionalReference3 poolReference) {
+	public PriceReportCorrectionV02 setPoolReference(AdditionalReference3 poolReference) {
 		this.poolReference = poolReference;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef", required = true)
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
 
-	public void setPreviousReference(AdditionalReference3 previousReference) {
-		this.previousReference = previousReference;
+	public PriceReportCorrectionV02 setPreviousReference(AdditionalReference3 previousReference) {
+		this.previousReference = Objects.requireNonNull(previousReference);
+		return this;
 	}
 
-	@XmlElement(name = "PricCrrctnDtls", required = true)
 	public List<PriceCorrection2> getPriceCorrectionDetails() {
-		return priceCorrectionDetails;
+		return priceCorrectionDetails == null ? priceCorrectionDetails = new ArrayList<>() : priceCorrectionDetails;
 	}
 
-	public void setPriceCorrectionDetails(List<PriceCorrection2> priceCorrectionDetails) {
-		this.priceCorrectionDetails = priceCorrectionDetails;
+	public PriceReportCorrectionV02 setPriceCorrectionDetails(List<PriceCorrection2> priceCorrectionDetails) {
+		this.priceCorrectionDetails = Objects.requireNonNull(priceCorrectionDetails);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:reda.003.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:reda.003.001.02")
 	static public class Document {
 		@XmlElement(name = "reda.003.001.02", required = true)
 		public PriceReportCorrectionV02 messageBody;

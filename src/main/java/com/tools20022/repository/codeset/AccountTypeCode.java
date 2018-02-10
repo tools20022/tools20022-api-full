@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AccountTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of account.
@@ -31,11 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountTypeCode#mmCash
- * AccountTypeCode.mmCash}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountTypeCode#mmSecurities
- * AccountTypeCode.mmSecurities}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountTypeCode#Cash
+ * AccountTypeCode.Cash}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountTypeCode#Securities
+ * AccountTypeCode.Securities}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -66,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of account."</li>
  * </ul>
  */
-public class AccountTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AccountTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,12 +95,12 @@ public class AccountTypeCode {
 	 * definition} = "Cash account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCash = new MMCode() {
+	public static final AccountTypeCode Cash = new AccountTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cash";
 			definition = "Cash account.";
-			owner_lazy = () -> AccountTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountTypeCode.mmObject();
 			codeName = "CASH";
 		}
 	};
@@ -120,28 +125,58 @@ public class AccountTypeCode {
 	 * definition} = "Securities account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecurities = new MMCode() {
+	public static final AccountTypeCode Securities = new AccountTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Securities";
 			definition = "Securities account.";
-			owner_lazy = () -> AccountTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountTypeCode.mmObject();
 			codeName = "SECU";
 		}
 	};
+	final static private LinkedHashMap<String, AccountTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AccountTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CASH");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountTypeCode";
 				definition = "Specifies the type of account.";
-				code_lazy = () -> Arrays.asList(AccountTypeCode.mmCash, AccountTypeCode.mmSecurities);
 				derivation_lazy = () -> Arrays.asList(AccountType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountTypeCode.Cash, com.tools20022.repository.codeset.AccountTypeCode.Securities);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Cash.getCodeName().get(), Cash);
+		codesByName.put(Securities.getCodeName().get(), Securities);
+	}
+
+	public static AccountTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AccountTypeCode[] values() {
+		AccountTypeCode[] values = new AccountTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AccountTypeCode> {
+		@Override
+		public AccountTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AccountTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

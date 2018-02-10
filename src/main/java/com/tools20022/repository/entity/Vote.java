@@ -23,9 +23,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Number of votes assigned to each voting option.
@@ -69,17 +68,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Vote1 Vote1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote4 Vote4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote7 Vote7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote6 Vote6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote8 Vote8}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -93,10 +81,21 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote1 Vote1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote4 Vote4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote7 Vote7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote6 Vote6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote8 Vote8}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,8 +111,8 @@ public class Vote {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected VoteInstructionRequest voteRequest;
 	/**
-	 * Request which contains the vote instructions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,8 +145,8 @@ public class Vote {
 	 */
 	public static final MMBusinessAssociationEnd mmVoteRequest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VoteRequest";
 			definition = "Request which contains the vote instructions.";
@@ -160,8 +159,8 @@ public class Vote {
 	};
 	protected Number for_;
 	/**
-	 * Number of votes in favour of one resolution
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,8 +197,8 @@ public class Vote {
 	public static final MMBusinessAttribute mmFor = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote1.mmFor, Vote4.mmFor, Vote2.mmFor, Vote5.mmFor, Vote7.mmFor, Vote6.mmFor, Vote8.mmFor);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "For";
 			definition = "Number of votes in favour of one resolution";
@@ -218,8 +217,8 @@ public class Vote {
 	};
 	protected Number against;
 	/**
-	 * Number of votes against one resolution
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -263,8 +262,8 @@ public class Vote {
 	public static final MMBusinessAttribute mmAgainst = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote1.mmAgainst, Vote4.mmAgainst, Vote2.mmAgainst, Vote5.mmAgainst, Vote7.mmAgainst, Vote6.mmAgainst, Vote8.mmAgainst);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Against";
 			definition = "Number of votes against one resolution";
@@ -283,8 +282,8 @@ public class Vote {
 	};
 	protected Number abstain;
 	/**
-	 * Number of votes declared abstained for one resolution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -328,8 +327,8 @@ public class Vote {
 	public static final MMBusinessAttribute mmAbstain = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote1.mmAbstain, Vote4.mmAbstain, Vote2.mmAbstain, Vote5.mmAbstain, Vote7.mmAbstain, Vote6.mmAbstain, Vote8.mmAbstain);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Abstain";
 			definition = "Number of votes declared abstained for one resolution.";
@@ -348,8 +347,8 @@ public class Vote {
 	};
 	protected Number withhold;
 	/**
-	 * Number of votes withheld for one resolution
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -393,8 +392,8 @@ public class Vote {
 	public static final MMBusinessAttribute mmWithhold = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote1.mmWithhold, Vote4.mmWithhold, Vote2.mmWithhold, Vote5.mmWithhold, Vote7.mmWithhold, Vote6.mmWithhold, Vote8.mmWithhold);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Withhold";
 			definition = "Number of votes withheld for one resolution";
@@ -413,8 +412,8 @@ public class Vote {
 	};
 	protected Number withManagement;
 	/**
-	 * Number of votes in line with the votes of the management.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -453,8 +452,8 @@ public class Vote {
 	public static final MMBusinessAttribute mmWithManagement = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote1.mmWithManagement, Vote4.mmWithManagement, Vote6.mmWithManagement, Vote8.mmWithManagement);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WithManagement";
 			definition = "Number of votes in line with the votes of the management.";
@@ -473,8 +472,8 @@ public class Vote {
 	};
 	protected Number againstManagement;
 	/**
-	 * Number of votes against the voting recommendation of the management.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -513,8 +512,8 @@ public class Vote {
 	public static final MMBusinessAttribute mmAgainstManagement = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote1.mmAgainstManagement, Vote4.mmAgainstManagement, Vote6.mmAgainstManagement, Vote8.mmAgainstManagement);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AgainstManagement";
 			definition = "Number of votes against the voting recommendation of the management.";
@@ -533,8 +532,8 @@ public class Vote {
 	};
 	protected List<com.tools20022.repository.entity.Resolution> resolution;
 	/**
-	 * Specifies the agenda item on which a vote is/was cast.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -566,8 +565,8 @@ public class Vote {
 	 */
 	public static final MMBusinessAssociationEnd mmResolution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Resolution";
 			definition = "Specifies the agenda item on which a vote is/was cast.";
@@ -579,8 +578,8 @@ public class Vote {
 	};
 	protected Number noAction;
 	/**
-	 * Number of votes for which no action has been taken.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -620,8 +619,8 @@ public class Vote {
 	public static final MMBusinessAttribute mmNoAction = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote4.mmNoAction, Vote5.mmNoAction, Vote7.mmNoAction, Vote6.mmNoAction, Vote8.mmNoAction);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoAction";
 			definition = "Number of votes for which no action has been taken.";
@@ -640,8 +639,8 @@ public class Vote {
 	};
 	protected VoteResult result;
 	/**
-	 * Information on the vote result for a specific resolution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -674,8 +673,8 @@ public class Vote {
 	 */
 	public static final MMBusinessAssociationEnd mmResult = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Result";
 			definition = "Information on the vote result for a specific resolution.";
@@ -688,9 +687,8 @@ public class Vote {
 	};
 	protected Number twoYears;
 	/**
-	 * Number of votes in favour of two years for "say on pay" type of
-	 * resolution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -728,8 +726,8 @@ public class Vote {
 	public static final MMBusinessAttribute mmTwoYears = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote7.mmTwoYears, Vote6.mmTwoYears, Vote8.mmTwoYears);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TwoYears";
 			definition = "Number of votes in favour of two years for \"say on pay\" type of resolution.";
@@ -748,9 +746,8 @@ public class Vote {
 	};
 	protected Number oneYear;
 	/**
-	 * Number of votes in favour for one year for "say on pay" type of
-	 * resolution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -788,8 +785,8 @@ public class Vote {
 	public static final MMBusinessAttribute mmOneYear = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote7.mmOneYear, Vote6.mmOneYear, Vote8.mmOneYear);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OneYear";
 			definition = "Number of votes in favour for one year for \"say on pay\" type of resolution.";
@@ -808,8 +805,8 @@ public class Vote {
 	};
 	protected YesNoIndicator withdrawn;
 	/**
-	 * Resolution withdrawn at the meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -842,8 +839,8 @@ public class Vote {
 	public static final MMBusinessAttribute mmWithdrawn = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote6.mmWithdrawn);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Withdrawn";
 			definition = "Resolution withdrawn at the meeting.";
@@ -862,9 +859,8 @@ public class Vote {
 	};
 	protected Number threeYears;
 	/**
-	 * Number of votes in favour of three years for "say on pay" type of
-	 * resolution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -902,8 +898,8 @@ public class Vote {
 	public static final MMBusinessAttribute mmThreeYears = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote7.mmThreeYears, Vote6.mmThreeYears, Vote8.mmThreeYears);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ThreeYears";
 			definition = "Number of votes in favour of three years for \"say on pay\" type of resolution.";
@@ -924,7 +920,7 @@ public class Vote {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Vote";
 				definition = "Number of votes assigned to each voting option.";
@@ -945,115 +941,129 @@ public class Vote {
 		return mmObject_lazy.get();
 	}
 
-	public VoteInstructionRequest getVoteRequest() {
-		return voteRequest;
+	public Optional<VoteInstructionRequest> getVoteRequest() {
+		return voteRequest == null ? Optional.empty() : Optional.of(voteRequest);
 	}
 
-	public void setVoteRequest(com.tools20022.repository.entity.VoteInstructionRequest voteRequest) {
+	public Vote setVoteRequest(com.tools20022.repository.entity.VoteInstructionRequest voteRequest) {
 		this.voteRequest = voteRequest;
+		return this;
 	}
 
 	public Number getFor() {
 		return for_;
 	}
 
-	public void setFor(Number for_) {
-		this.for_ = for_;
+	public Vote setFor(Number for_) {
+		this.for_ = Objects.requireNonNull(for_);
+		return this;
 	}
 
 	public Number getAgainst() {
 		return against;
 	}
 
-	public void setAgainst(Number against) {
-		this.against = against;
+	public Vote setAgainst(Number against) {
+		this.against = Objects.requireNonNull(against);
+		return this;
 	}
 
 	public Number getAbstain() {
 		return abstain;
 	}
 
-	public void setAbstain(Number abstain) {
-		this.abstain = abstain;
+	public Vote setAbstain(Number abstain) {
+		this.abstain = Objects.requireNonNull(abstain);
+		return this;
 	}
 
 	public Number getWithhold() {
 		return withhold;
 	}
 
-	public void setWithhold(Number withhold) {
-		this.withhold = withhold;
+	public Vote setWithhold(Number withhold) {
+		this.withhold = Objects.requireNonNull(withhold);
+		return this;
 	}
 
 	public Number getWithManagement() {
 		return withManagement;
 	}
 
-	public void setWithManagement(Number withManagement) {
-		this.withManagement = withManagement;
+	public Vote setWithManagement(Number withManagement) {
+		this.withManagement = Objects.requireNonNull(withManagement);
+		return this;
 	}
 
 	public Number getAgainstManagement() {
 		return againstManagement;
 	}
 
-	public void setAgainstManagement(Number againstManagement) {
-		this.againstManagement = againstManagement;
+	public Vote setAgainstManagement(Number againstManagement) {
+		this.againstManagement = Objects.requireNonNull(againstManagement);
+		return this;
 	}
 
 	public List<Resolution> getResolution() {
-		return resolution;
+		return resolution == null ? resolution = new ArrayList<>() : resolution;
 	}
 
-	public void setResolution(List<com.tools20022.repository.entity.Resolution> resolution) {
-		this.resolution = resolution;
+	public Vote setResolution(List<com.tools20022.repository.entity.Resolution> resolution) {
+		this.resolution = Objects.requireNonNull(resolution);
+		return this;
 	}
 
 	public Number getNoAction() {
 		return noAction;
 	}
 
-	public void setNoAction(Number noAction) {
-		this.noAction = noAction;
+	public Vote setNoAction(Number noAction) {
+		this.noAction = Objects.requireNonNull(noAction);
+		return this;
 	}
 
-	public VoteResult getResult() {
-		return result;
+	public Optional<VoteResult> getResult() {
+		return result == null ? Optional.empty() : Optional.of(result);
 	}
 
-	public void setResult(com.tools20022.repository.entity.VoteResult result) {
+	public Vote setResult(com.tools20022.repository.entity.VoteResult result) {
 		this.result = result;
+		return this;
 	}
 
 	public Number getTwoYears() {
 		return twoYears;
 	}
 
-	public void setTwoYears(Number twoYears) {
-		this.twoYears = twoYears;
+	public Vote setTwoYears(Number twoYears) {
+		this.twoYears = Objects.requireNonNull(twoYears);
+		return this;
 	}
 
 	public Number getOneYear() {
 		return oneYear;
 	}
 
-	public void setOneYear(Number oneYear) {
-		this.oneYear = oneYear;
+	public Vote setOneYear(Number oneYear) {
+		this.oneYear = Objects.requireNonNull(oneYear);
+		return this;
 	}
 
 	public YesNoIndicator getWithdrawn() {
 		return withdrawn;
 	}
 
-	public void setWithdrawn(YesNoIndicator withdrawn) {
-		this.withdrawn = withdrawn;
+	public Vote setWithdrawn(YesNoIndicator withdrawn) {
+		this.withdrawn = Objects.requireNonNull(withdrawn);
+		return this;
 	}
 
 	public Number getThreeYears() {
 		return threeYears;
 	}
 
-	public void setThreeYears(Number threeYears) {
-		this.threeYears = threeYears;
+	public Vote setThreeYears(Number threeYears) {
+		this.threeYears = Objects.requireNonNull(threeYears);
+		return this;
 	}
 }

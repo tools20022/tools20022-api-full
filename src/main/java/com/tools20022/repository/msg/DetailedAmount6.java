@@ -32,6 +32,8 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,15 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * DetailedAmount4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "DetailedAmount6", propOrder = {"amount", "dateTime", "cardDataEntryMode", "ICCRelatedData", "label"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "DetailedAmount6", propOrder = {"amount", "dateTime", "cardDataEntryMode", "iCCRelatedData", "label"})
 public class DetailedAmount6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ImpliedCurrencyAndAmount amount;
 	/**
-	 * Amount value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +146,7 @@ public class DetailedAmount6 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
-			componentContext_lazy = () -> DetailedAmount6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +159,11 @@ public class DetailedAmount6 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "DtTm", required = true)
 	protected ISODateTime dateTime;
 	/**
-	 * Date and time of the payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,7 +204,7 @@ public class DetailedAmount6 {
 	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
-			componentContext_lazy = () -> DetailedAmount6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,10 +216,11 @@ public class DetailedAmount6 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "CardDataNtryMd")
 	protected CardDataReading1Code cardDataEntryMode;
 	/**
-	 * Card data entry mode for the related payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,7 +256,7 @@ public class DetailedAmount6 {
 	 */
 	public static final MMMessageAttribute mmCardDataEntryMode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DetailedAmount6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmObject();
 			isDerived = false;
 			xmlTag = "CardDataNtryMd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,10 +268,11 @@ public class DetailedAmount6 {
 			simpleType_lazy = () -> CardDataReading1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ICCRltdData")
 	protected Max10000Binary iCCRelatedData;
 	/**
-	 * Data of an integrated circuit card application for the related payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -310,7 +316,7 @@ public class DetailedAmount6 {
 	public static final MMMessageAttribute mmICCRelatedData = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmICCRelatedData;
-			componentContext_lazy = () -> DetailedAmount6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmObject();
 			isDerived = false;
 			xmlTag = "ICCRltdData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -322,10 +328,11 @@ public class DetailedAmount6 {
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "Labl")
 	protected Max140Text label;
 	/**
-	 * Short description of the amount to display or print.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -364,7 +371,7 @@ public class DetailedAmount6 {
 	 */
 	public static final MMMessageAttribute mmLabel = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DetailedAmount6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmObject();
 			isDerived = false;
 			xmlTag = "Labl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -381,9 +388,10 @@ public class DetailedAmount6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DetailedAmount6.mmAmount, DetailedAmount6.mmDateTime, DetailedAmount6.mmCardDataEntryMode, DetailedAmount6.mmICCRelatedData, DetailedAmount6.mmLabel);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount6.mmAmount, com.tools20022.repository.msg.DetailedAmount6.mmDateTime, com.tools20022.repository.msg.DetailedAmount6.mmCardDataEntryMode,
+						com.tools20022.repository.msg.DetailedAmount6.mmICCRelatedData, com.tools20022.repository.msg.DetailedAmount6.mmLabel);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DetailedAmount6";
 				definition = "Detailed amounts associated with the total amount of transaction.";
@@ -394,48 +402,48 @@ public class DetailedAmount6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ImpliedCurrencyAndAmount amount) {
-		this.amount = amount;
+	public DetailedAmount6 setAmount(ImpliedCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "DtTm", required = true)
 	public ISODateTime getDateTime() {
 		return dateTime;
 	}
 
-	public void setDateTime(ISODateTime dateTime) {
-		this.dateTime = dateTime;
+	public DetailedAmount6 setDateTime(ISODateTime dateTime) {
+		this.dateTime = Objects.requireNonNull(dateTime);
+		return this;
 	}
 
-	@XmlElement(name = "CardDataNtryMd")
-	public CardDataReading1Code getCardDataEntryMode() {
-		return cardDataEntryMode;
+	public Optional<CardDataReading1Code> getCardDataEntryMode() {
+		return cardDataEntryMode == null ? Optional.empty() : Optional.of(cardDataEntryMode);
 	}
 
-	public void setCardDataEntryMode(CardDataReading1Code cardDataEntryMode) {
+	public DetailedAmount6 setCardDataEntryMode(CardDataReading1Code cardDataEntryMode) {
 		this.cardDataEntryMode = cardDataEntryMode;
+		return this;
 	}
 
-	@XmlElement(name = "ICCRltdData")
-	public Max10000Binary getICCRelatedData() {
-		return iCCRelatedData;
+	public Optional<Max10000Binary> getICCRelatedData() {
+		return iCCRelatedData == null ? Optional.empty() : Optional.of(iCCRelatedData);
 	}
 
-	public void setICCRelatedData(Max10000Binary iCCRelatedData) {
+	public DetailedAmount6 setICCRelatedData(Max10000Binary iCCRelatedData) {
 		this.iCCRelatedData = iCCRelatedData;
+		return this;
 	}
 
-	@XmlElement(name = "Labl")
-	public Max140Text getLabel() {
-		return label;
+	public Optional<Max140Text> getLabel() {
+		return label == null ? Optional.empty() : Optional.of(label);
 	}
 
-	public void setLabel(Max140Text label) {
+	public DetailedAmount6 setLabel(Max140Text label) {
 		this.label = label;
+		return this;
 	}
 }

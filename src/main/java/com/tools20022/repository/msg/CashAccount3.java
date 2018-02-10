@@ -33,6 +33,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -76,16 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information used for identifying an account."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashAccount3", propOrder = {"identification", "type", "currency", "name"})
 public class CashAccount3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected AccountIdentification1Choice identification;
 	/**
-	 * Unique and unambiguous identification of the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +122,7 @@ public class CashAccount3 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> CashAccount3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +133,11 @@ public class CashAccount3 {
 			complexType_lazy = () -> AccountIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected CashAccountType3Code type;
 	/**
-	 * Nature, or use, of the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +170,7 @@ public class CashAccount3 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
-			componentContext_lazy = () -> CashAccount3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,14 +181,11 @@ public class CashAccount3 {
 			simpleType_lazy = () -> CashAccountType3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected CurrencyCode currency;
 	/**
-	 * Identification of the currency in which the account is held.
 	 * 
-	 * Usage: Currency should only be used in case one and the same account
-	 * number covers several currencies and the initiating party needs to
-	 * identify which currency needs to be used for settlement on the account.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -219,7 +219,7 @@ public class CashAccount3 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
-			componentContext_lazy = () -> CashAccount3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,17 +230,11 @@ public class CashAccount3 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm")
 	protected Max70Text name;
 	/**
-	 * Name of the account, assigned by the account servicing institution in
-	 * agreement with the account owner in order to provide an additional means
-	 * of identification of the account.
 	 * 
-	 * Usage : the account name is different from the account owner name. The
-	 * account name is used in certain user communities to provide a means of
-	 * identifying the account, in addition to the account owner's identity and
-	 * the account number.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -274,7 +268,7 @@ public class CashAccount3 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
-			componentContext_lazy = () -> CashAccount3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -289,9 +283,10 @@ public class CashAccount3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashAccount3.mmIdentification, CashAccount3.mmType, CashAccount3.mmCurrency, CashAccount3.mmName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount3.mmIdentification, com.tools20022.repository.msg.CashAccount3.mmType, com.tools20022.repository.msg.CashAccount3.mmCurrency,
+						com.tools20022.repository.msg.CashAccount3.mmName);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -307,39 +302,39 @@ public class CashAccount3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public AccountIdentification1Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(AccountIdentification1Choice identification) {
-		this.identification = identification;
+	public CashAccount3 setIdentification(AccountIdentification1Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public CashAccountType3Code getType() {
-		return type;
+	public Optional<CashAccountType3Code> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(CashAccountType3Code type) {
+	public CashAccount3 setType(CashAccountType3Code type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public CurrencyCode getCurrency() {
-		return currency;
+	public Optional<CurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(CurrencyCode currency) {
+	public CashAccount3 setCurrency(CurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "Nm")
-	public Max70Text getName() {
-		return name;
+	public Optional<Max70Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max70Text name) {
+	public CashAccount3 setName(Max70Text name) {
 		this.name = name;
+		return this;
 	}
 }

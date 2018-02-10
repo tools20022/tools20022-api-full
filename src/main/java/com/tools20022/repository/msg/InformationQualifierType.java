@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.InformationQualifier;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InformationQualifierType", propOrder = {"isFormatted", "priority"})
 public class InformationQualifierType {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IsFrmtd")
 	protected YesNoIndicator isFormatted;
 	/**
-	 * Indicates whether the information is formatted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class InformationQualifierType {
 	public static final MMMessageAttribute mmIsFormatted = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InformationQualifier.mmIsFormatted;
-			componentContext_lazy = () -> InformationQualifierType.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InformationQualifierType.mmObject();
 			isDerived = false;
 			xmlTag = "IsFrmtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class InformationQualifierType {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Prty")
 	protected Priority1Code priority;
 	/**
-	 * Priority of the information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +162,7 @@ public class InformationQualifierType {
 	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InformationQualifier.mmPriority;
-			componentContext_lazy = () -> InformationQualifierType.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InformationQualifierType.mmObject();
 			isDerived = false;
 			xmlTag = "Prty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,9 +177,9 @@ public class InformationQualifierType {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InformationQualifierType.mmIsFormatted, InformationQualifierType.mmPriority);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InformationQualifierType.mmIsFormatted, com.tools20022.repository.msg.InformationQualifierType.mmPriority);
 				trace_lazy = () -> InformationQualifier.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InformationQualifierType";
 				definition = "Further qualifies the information provided in terms of its importance and its format.";
@@ -185,21 +188,21 @@ public class InformationQualifierType {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IsFrmtd")
-	public YesNoIndicator getIsFormatted() {
-		return isFormatted;
+	public Optional<YesNoIndicator> getIsFormatted() {
+		return isFormatted == null ? Optional.empty() : Optional.of(isFormatted);
 	}
 
-	public void setIsFormatted(YesNoIndicator isFormatted) {
+	public InformationQualifierType setIsFormatted(YesNoIndicator isFormatted) {
 		this.isFormatted = isFormatted;
+		return this;
 	}
 
-	@XmlElement(name = "Prty")
-	public Priority1Code getPriority() {
-		return priority;
+	public Optional<Priority1Code> getPriority() {
+		return priority == null ? Optional.empty() : Optional.of(priority);
 	}
 
-	public void setPriority(Priority1Code priority) {
+	public InformationQualifierType setPriority(Priority1Code priority) {
 		this.priority = priority;
+		return this;
 	}
 }

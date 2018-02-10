@@ -21,9 +21,11 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of the Bank To Customer Account Report message."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BankToCustomerAccountReportCopy1", propOrder = {"groupHeader", "report", "supplementaryData"})
 public class BankToCustomerAccountReportCopy1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader58 groupHeader;
 	/**
-	 * Common information for the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -98,7 +101,7 @@ public class BankToCustomerAccountReportCopy1 {
 	 */
 	public static final MMMessageAssociationEnd mmGroupHeader = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BankToCustomerAccountReportCopy1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.mmObject();
 			isDerived = false;
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,10 +113,11 @@ public class BankToCustomerAccountReportCopy1 {
 			type_lazy = () -> com.tools20022.repository.msg.GroupHeader58.mmObject();
 		}
 	};
+	@XmlElement(name = "Rpt", required = true)
 	protected List<com.tools20022.repository.msg.AccountReport19> report;
 	/**
-	 * Reports on a cash account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -139,7 +143,7 @@ public class BankToCustomerAccountReportCopy1 {
 	 */
 	public static final MMMessageAssociationEnd mmReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BankToCustomerAccountReportCopy1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.mmObject();
 			isDerived = false;
 			xmlTag = "Rpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -150,11 +154,11 @@ public class BankToCustomerAccountReportCopy1 {
 			type_lazy = () -> com.tools20022.repository.msg.AccountReport19.mmObject();
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -182,7 +186,7 @@ public class BankToCustomerAccountReportCopy1 {
 	 */
 	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BankToCustomerAccountReportCopy1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,8 +201,9 @@ public class BankToCustomerAccountReportCopy1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BankToCustomerAccountReportCopy1.mmGroupHeader, BankToCustomerAccountReportCopy1.mmReport, BankToCustomerAccountReportCopy1.mmSupplementaryData);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.mmGroupHeader, com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.mmReport,
+						com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.mmSupplementaryData);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BankToCustomerAccountReportCopy1";
 				definition = "Details of the Bank To Customer Account Report message.";
@@ -207,30 +212,30 @@ public class BankToCustomerAccountReportCopy1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader58 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(com.tools20022.repository.msg.GroupHeader58 groupHeader) {
-		this.groupHeader = groupHeader;
+	public BankToCustomerAccountReportCopy1 setGroupHeader(com.tools20022.repository.msg.GroupHeader58 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "Rpt", required = true)
 	public List<AccountReport19> getReport() {
-		return report;
+		return report == null ? report = new ArrayList<>() : report;
 	}
 
-	public void setReport(List<com.tools20022.repository.msg.AccountReport19> report) {
-		this.report = report;
+	public BankToCustomerAccountReportCopy1 setReport(List<com.tools20022.repository.msg.AccountReport19> report) {
+		this.report = Objects.requireNonNull(report);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public BankToCustomerAccountReportCopy1 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 }

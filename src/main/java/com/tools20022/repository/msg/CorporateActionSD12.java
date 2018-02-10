@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides additional information regarding corporate action details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionSD12", propOrder = {"placeAndName", "eventStage"})
 public class CorporateActionSD12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,7 +102,7 @@ public class CorporateActionSD12 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionSD12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD12.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,10 +113,11 @@ public class CorporateActionSD12 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtStag")
 	protected CorporateActionEventStage4Code eventStage;
 	/**
-	 * Stage in the corporate action event life cycle.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,7 +151,7 @@ public class CorporateActionSD12 {
 	public static final MMMessageAttribute mmEventStage = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionEvent.mmObject();
-			componentContext_lazy = () -> CorporateActionSD12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD12.mmObject();
 			isDerived = false;
 			xmlTag = "EvtStag";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,8 +166,8 @@ public class CorporateActionSD12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionSD12.mmPlaceAndName, CorporateActionSD12.mmEventStage);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD12.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionSD12.mmEventStage);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionSD12";
 				definition = "Provides additional information regarding corporate action details.";
@@ -172,21 +176,21 @@ public class CorporateActionSD12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionSD12 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "EvtStag")
-	public CorporateActionEventStage4Code getEventStage() {
-		return eventStage;
+	public Optional<CorporateActionEventStage4Code> getEventStage() {
+		return eventStage == null ? Optional.empty() : Optional.of(eventStage);
 	}
 
-	public void setEventStage(CorporateActionEventStage4Code eventStage) {
+	public CorporateActionSD12 setEventStage(CorporateActionEventStage4Code eventStage) {
 		this.eventStage = eventStage;
+		return this;
 	}
 }

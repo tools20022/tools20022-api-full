@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,9 +26,11 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountAndBalance7;
 import com.tools20022.repository.msg.AccountIdentification10;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountIdentification8Choice", propOrder = {"forAllAccounts", "accountsListAndBalanceDetails"})
 public class AccountIdentification8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ForAllAccts", required = true)
 	protected AccountIdentification10 forAllAccounts;
 	/**
-	 * All safekeeping accounts that own underlying financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -99,6 +103,9 @@ public class AccountIdentification8Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ForAllAccts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :97C::SAFE//GENR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -113,9 +120,10 @@ public class AccountIdentification8Choice {
 	public static final MMMessageAssociationEnd mmForAllAccounts = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
-			componentContext_lazy = () -> AccountIdentification8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ForAllAccts";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":97C::SAFE//GENR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForAllAccounts";
 			definition = "All safekeeping accounts that own underlying financial instrument.";
@@ -125,11 +133,11 @@ public class AccountIdentification8Choice {
 			type_lazy = () -> AccountIdentification10.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctsListAndBalDtls", required = true)
 	protected List<AccountAndBalance7> accountsListAndBalanceDetails;
 	/**
-	 * Selected safekeeping accounts list (and optionally balance information)
-	 * to which the corporate action event applies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -163,7 +171,7 @@ public class AccountIdentification8Choice {
 	public static final MMMessageAssociationEnd mmAccountsListAndBalanceDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
-			componentContext_lazy = () -> AccountIdentification8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AcctsListAndBalDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,9 +186,9 @@ public class AccountIdentification8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountIdentification8Choice.mmForAllAccounts, AccountIdentification8Choice.mmAccountsListAndBalanceDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification8Choice.mmForAllAccounts, com.tools20022.repository.choice.AccountIdentification8Choice.mmAccountsListAndBalanceDetails);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification8Choice";
 				definition = "Choice between all accounts (GENR - General in ISO 15022) or one or more selected accounts and balance information.";
@@ -189,21 +197,21 @@ public class AccountIdentification8Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ForAllAccts", required = true)
 	public AccountIdentification10 getForAllAccounts() {
 		return forAllAccounts;
 	}
 
-	public void setForAllAccounts(AccountIdentification10 forAllAccounts) {
-		this.forAllAccounts = forAllAccounts;
+	public AccountIdentification8Choice setForAllAccounts(AccountIdentification10 forAllAccounts) {
+		this.forAllAccounts = Objects.requireNonNull(forAllAccounts);
+		return this;
 	}
 
-	@XmlElement(name = "AcctsListAndBalDtls", required = true)
 	public List<AccountAndBalance7> getAccountsListAndBalanceDetails() {
-		return accountsListAndBalanceDetails;
+		return accountsListAndBalanceDetails == null ? accountsListAndBalanceDetails = new ArrayList<>() : accountsListAndBalanceDetails;
 	}
 
-	public void setAccountsListAndBalanceDetails(List<AccountAndBalance7> accountsListAndBalanceDetails) {
-		this.accountsListAndBalanceDetails = accountsListAndBalanceDetails;
+	public AccountIdentification8Choice setAccountsListAndBalanceDetails(List<AccountAndBalance7> accountsListAndBalanceDetails) {
+		this.accountsListAndBalanceDetails = Objects.requireNonNull(accountsListAndBalanceDetails);
+		return this;
 	}
 }

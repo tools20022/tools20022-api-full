@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport1;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesAccountAuditTrailOrOperationalError1Choice", propOrder = {"securitiesAccountAuditTrailReport", "operationalError"})
 public class SecuritiesAccountAuditTrailOrOperationalError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesAcctAudtTrlRpt", required = true)
 	protected List<SecuritiesAccountAuditTrailReport1> securitiesAccountAuditTrailReport;
 	/**
-	 * Report information about securities account reference data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -103,7 +106,7 @@ public class SecuritiesAccountAuditTrailOrOperationalError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAccountAuditTrailReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountAuditTrailOrOperationalError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountAuditTrailOrOperationalError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctAudtTrlRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,10 +117,11 @@ public class SecuritiesAccountAuditTrailOrOperationalError1Choice {
 			type_lazy = () -> SecuritiesAccountAuditTrailReport1.mmObject();
 		}
 	};
+	@XmlElement(name = "OprlErr", required = true)
 	protected List<ErrorHandling3> operationalError;
 	/**
-	 * Operational error resulting from a rejection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -143,7 +147,7 @@ public class SecuritiesAccountAuditTrailOrOperationalError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountAuditTrailOrOperationalError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountAuditTrailOrOperationalError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,8 +162,9 @@ public class SecuritiesAccountAuditTrailOrOperationalError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountAuditTrailOrOperationalError1Choice.mmSecuritiesAccountAuditTrailReport, SecuritiesAccountAuditTrailOrOperationalError1Choice.mmOperationalError);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesAccountAuditTrailOrOperationalError1Choice.mmSecuritiesAccountAuditTrailReport,
+						com.tools20022.repository.choice.SecuritiesAccountAuditTrailOrOperationalError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountAuditTrailOrOperationalError1Choice";
 				definition = "Used to report between the securities account reference data or an operational error.";
@@ -168,21 +173,21 @@ public class SecuritiesAccountAuditTrailOrOperationalError1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesAcctAudtTrlRpt", required = true)
 	public List<SecuritiesAccountAuditTrailReport1> getSecuritiesAccountAuditTrailReport() {
-		return securitiesAccountAuditTrailReport;
+		return securitiesAccountAuditTrailReport == null ? securitiesAccountAuditTrailReport = new ArrayList<>() : securitiesAccountAuditTrailReport;
 	}
 
-	public void setSecuritiesAccountAuditTrailReport(List<SecuritiesAccountAuditTrailReport1> securitiesAccountAuditTrailReport) {
-		this.securitiesAccountAuditTrailReport = securitiesAccountAuditTrailReport;
+	public SecuritiesAccountAuditTrailOrOperationalError1Choice setSecuritiesAccountAuditTrailReport(List<SecuritiesAccountAuditTrailReport1> securitiesAccountAuditTrailReport) {
+		this.securitiesAccountAuditTrailReport = Objects.requireNonNull(securitiesAccountAuditTrailReport);
+		return this;
 	}
 
-	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling3> getOperationalError() {
-		return operationalError;
+		return operationalError == null ? operationalError = new ArrayList<>() : operationalError;
 	}
 
-	public void setOperationalError(List<ErrorHandling3> operationalError) {
-		this.operationalError = operationalError;
+	public SecuritiesAccountAuditTrailOrOperationalError1Choice setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = Objects.requireNonNull(operationalError);
+		return this;
 	}
 }

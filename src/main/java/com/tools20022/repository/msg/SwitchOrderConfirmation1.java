@@ -25,9 +25,11 @@ import com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationIn
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SwitchExecution;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +71,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility4Rule#forSwitchOrderConfirmation1
+ * ConstraintOrderOriginatorEligibility4Rule.forSwitchOrderConfirmation1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule#forSwitchOrderConfirmation1
+ * ConstraintMultipleSwitchExecutionRule.forSwitchOrderConfirmation1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,16 +94,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Switch order confirmation details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SwitchOrderConfirmation1", propOrder = {"amendmentIndicator", "switchExecutionDetails", "extension"})
 public class SwitchOrderConfirmation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AmdmntInd", required = true)
 	protected YesNoIndicator amendmentIndicator;
 	/**
-	 * Indicates whether a confirmation amendment message will follow the
-	 * confirmation cancellation instruction or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +133,7 @@ public class SwitchOrderConfirmation1 {
 	 */
 	public static final MMMessageAttribute mmAmendmentIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SwitchOrderConfirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +144,11 @@ public class SwitchOrderConfirmation1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "SwtchExctnDtls", required = true)
 	protected List<com.tools20022.repository.msg.SwitchExecution4> switchExecutionDetails;
 	/**
-	 * Information related to a switch execution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -166,7 +180,7 @@ public class SwitchOrderConfirmation1 {
 	public static final MMMessageAssociationEnd mmSwitchExecutionDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SwitchExecution.mmObject();
-			componentContext_lazy = () -> SwitchOrderConfirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "SwtchExctnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,11 +191,11 @@ public class SwitchOrderConfirmation1 {
 			type_lazy = () -> com.tools20022.repository.msg.SwitchExecution4.mmObject();
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -208,7 +222,7 @@ public class SwitchOrderConfirmation1 {
 	 */
 	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SwitchOrderConfirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,10 +237,13 @@ public class SwitchOrderConfirmation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SwitchOrderConfirmation1.mmAmendmentIndicator, SwitchOrderConfirmation1.mmSwitchExecutionDetails, SwitchOrderConfirmation1.mmExtension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderConfirmation1.mmAmendmentIndicator, com.tools20022.repository.msg.SwitchOrderConfirmation1.mmSwitchExecutionDetails,
+						com.tools20022.repository.msg.SwitchOrderConfirmation1.mmExtension);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SwitchOrderConfirmationCancellationInstructionV01.mmCancellationByOrderConfirmationDetails);
 				trace_lazy = () -> SwitchExecution.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility4Rule.forSwitchOrderConfirmation1,
+						com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule.forSwitchOrderConfirmation1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrderConfirmation1";
 				definition = "Switch order confirmation details.";
@@ -235,30 +252,30 @@ public class SwitchOrderConfirmation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AmdmntInd", required = true)
 	public YesNoIndicator getAmendmentIndicator() {
 		return amendmentIndicator;
 	}
 
-	public void setAmendmentIndicator(YesNoIndicator amendmentIndicator) {
-		this.amendmentIndicator = amendmentIndicator;
+	public SwitchOrderConfirmation1 setAmendmentIndicator(YesNoIndicator amendmentIndicator) {
+		this.amendmentIndicator = Objects.requireNonNull(amendmentIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "SwtchExctnDtls", required = true)
 	public List<SwitchExecution4> getSwitchExecutionDetails() {
-		return switchExecutionDetails;
+		return switchExecutionDetails == null ? switchExecutionDetails = new ArrayList<>() : switchExecutionDetails;
 	}
 
-	public void setSwitchExecutionDetails(List<com.tools20022.repository.msg.SwitchExecution4> switchExecutionDetails) {
-		this.switchExecutionDetails = switchExecutionDetails;
+	public SwitchOrderConfirmation1 setSwitchExecutionDetails(List<com.tools20022.repository.msg.SwitchExecution4> switchExecutionDetails) {
+		this.switchExecutionDetails = Objects.requireNonNull(switchExecutionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
-		this.extension = extension;
+	public SwitchOrderConfirmation1 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 }

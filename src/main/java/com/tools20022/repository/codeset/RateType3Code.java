@@ -20,33 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RateTypeCode;
+import com.tools20022.repository.codeset.RateType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of tax rate.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RateTypeCode RateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType3Code#mmImputed
- * RateType3Code.mmImputed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType3Code#mmPrecompte
- * RateType3Code.mmPrecompte}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType3Code#mmOneTierTax
- * RateType3Code.mmOneTierTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType3Code#Imputed
+ * RateType3Code.Imputed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType3Code#Precompte
+ * RateType3Code.Precompte}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType3Code#OneTierTax
+ * RateType3Code.OneTierTax}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RateTypeCode RateTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -63,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of tax rate."</li>
  * </ul>
  */
-public class RateType3Code extends RateTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RateType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,11 +87,12 @@ public class RateType3Code extends RateTypeCode {
 	 * name} = "Imputed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmImputed = new MMCode() {
+	public static final RateType3Code Imputed = new RateType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Imputed";
-			owner_lazy = () -> RateType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType3Code.mmObject();
+			codeName = RateTypeCode.Imputed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -105,11 +111,12 @@ public class RateType3Code extends RateTypeCode {
 	 * name} = "Precompte"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrecompte = new MMCode() {
+	public static final RateType3Code Precompte = new RateType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Precompte";
-			owner_lazy = () -> RateType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType3Code.mmObject();
+			codeName = RateTypeCode.Precompte.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -128,26 +135,58 @@ public class RateType3Code extends RateTypeCode {
 	 * name} = "OneTierTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOneTierTax = new MMCode() {
+	public static final RateType3Code OneTierTax = new RateType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneTierTax";
-			owner_lazy = () -> RateType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType3Code.mmObject();
+			codeName = RateTypeCode.OneTierTax.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RateType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RateType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("IMPU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateType3Code";
 				definition = "Specifies the type of tax rate.";
-				code_lazy = () -> Arrays.asList(RateType3Code.mmImputed, RateType3Code.mmPrecompte, RateType3Code.mmOneTierTax);
 				trace_lazy = () -> RateTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType3Code.Imputed, com.tools20022.repository.codeset.RateType3Code.Precompte, com.tools20022.repository.codeset.RateType3Code.OneTierTax);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Imputed.getCodeName().get(), Imputed);
+		codesByName.put(Precompte.getCodeName().get(), Precompte);
+		codesByName.put(OneTierTax.getCodeName().get(), OneTierTax);
+	}
+
+	public static RateType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RateType3Code[] values() {
+		RateType3Code[] values = new RateType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RateType3Code> {
+		@Override
+		public RateType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RateType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

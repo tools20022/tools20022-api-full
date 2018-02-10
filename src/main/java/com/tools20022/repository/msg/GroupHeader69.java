@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -71,8 +73,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,16 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * GroupHeader12}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GroupHeader69", propOrder = {"identification", "issuedDate", "reportCategory", "taxReportPurpose", "originalIdentification", "sellerTaxRepresentative", "buyerTaxRepresentative", "languageCode"})
 public class GroupHeader69 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Report identification, for example invoice number or report number from
-	 * point of sales system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +132,7 @@ public class GroupHeader69 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader69.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,10 +144,11 @@ public class GroupHeader69 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IssdDt", required = true)
 	protected ISODate issuedDate;
 	/**
-	 * Date at which the status report was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,7 +179,7 @@ public class GroupHeader69 {
 	 */
 	public static final MMMessageAttribute mmIssuedDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader69.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "IssdDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,11 +191,11 @@ public class GroupHeader69 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "RptCtgy", required = true)
 	protected ExternalDocumentType1Code reportCategory;
 	/**
-	 * Specifies if the report is based on debit invoice, credit invoice, card
-	 * transaction or cash transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,6 +209,15 @@ public class GroupHeader69 {
 	 * {@linkplain com.tools20022.repository.msg.GroupHeader69 GroupHeader69}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RptCtgy"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+	 * constraint} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintR3#forReportCategory
+	 * ConstraintR3.forReportCategory}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -221,9 +233,10 @@ public class GroupHeader69 {
 	 */
 	public static final MMMessageAttribute mmReportCategory = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader69.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "RptCtgy";
+			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR3.forReportCategory);
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportCategory";
 			definition = "Specifies if the report is based on debit invoice, credit invoice, card transaction or cash transaction. ";
@@ -232,10 +245,11 @@ public class GroupHeader69 {
 			simpleType_lazy = () -> ExternalDocumentType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxRptPurp", required = true)
 	protected ExternalDocumentType1Code taxReportPurpose;
 	/**
-	 * Specifies if the TaxReport is new, correction or remove.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -250,6 +264,15 @@ public class GroupHeader69 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TaxRptPurp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+	 * constraint} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintR4#forTaxReportPurpose
+	 * ConstraintR4.forTaxReportPurpose}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -262,9 +285,10 @@ public class GroupHeader69 {
 	 */
 	public static final MMMessageAttribute mmTaxReportPurpose = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader69.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "TaxRptPurp";
+			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR4.forTaxReportPurpose);
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxReportPurpose";
 			definition = "Specifies if the TaxReport is new, correction or remove.";
@@ -273,11 +297,11 @@ public class GroupHeader69 {
 			simpleType_lazy = () -> ExternalDocumentType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlId")
 	protected Max35Text originalIdentification;
 	/**
-	 * Original tax report identification, used for example original invoice
-	 * number with credit notes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -305,7 +329,7 @@ public class GroupHeader69 {
 	 */
 	public static final MMMessageAttribute mmOriginalIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader69.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -316,12 +340,11 @@ public class GroupHeader69 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SellrTaxRprtv")
 	protected PartyIdentification116 sellerTaxRepresentative;
 	/**
-	 * Details of tax representative. The corporate (seller) is allowed to use a
-	 * tax representative for value added tax responsibilities in case the
-	 * seller is not registered in a specific value added tax registry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -348,7 +371,7 @@ public class GroupHeader69 {
 	 */
 	public static final MMMessageAssociationEnd mmSellerTaxRepresentative = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> GroupHeader69.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "SellrTaxRprtv";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -360,12 +383,11 @@ public class GroupHeader69 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification116.mmObject();
 		}
 	};
+	@XmlElement(name = "BuyrTaxRprtv")
 	protected PartyIdentification116 buyerTaxRepresentative;
 	/**
-	 * Details of tax representative. The corporate (buyer) is allowed to use a
-	 * tax representative for value added tax responsibilities in case the buyer
-	 * is not registered in a specific value added tax registry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -392,7 +414,7 @@ public class GroupHeader69 {
 	 */
 	public static final MMMessageAssociationEnd mmBuyerTaxRepresentative = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> GroupHeader69.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrTaxRprtv";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -404,10 +426,11 @@ public class GroupHeader69 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification116.mmObject();
 		}
 	};
+	@XmlElement(name = "LangCd")
 	protected LanguageCode languageCode;
 	/**
-	 * Specifies the language used in the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -421,6 +444,15 @@ public class GroupHeader69 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LangCd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+	 * constraint} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintR5#forLanguageCode
+	 * ConstraintR5.forLanguageCode}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -433,9 +465,10 @@ public class GroupHeader69 {
 	 */
 	public static final MMMessageAttribute mmLanguageCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader69.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
 			xmlTag = "LangCd";
+			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR5.forLanguageCode);
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LanguageCode";
 			definition = "Specifies the language used in the message.";
@@ -448,10 +481,11 @@ public class GroupHeader69 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GroupHeader69.mmIdentification, GroupHeader69.mmIssuedDate, GroupHeader69.mmReportCategory, GroupHeader69.mmTaxReportPurpose, GroupHeader69.mmOriginalIdentification,
-						GroupHeader69.mmSellerTaxRepresentative, GroupHeader69.mmBuyerTaxRepresentative, GroupHeader69.mmLanguageCode);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader69.mmIdentification, com.tools20022.repository.msg.GroupHeader69.mmIssuedDate, com.tools20022.repository.msg.GroupHeader69.mmReportCategory,
+						com.tools20022.repository.msg.GroupHeader69.mmTaxReportPurpose, com.tools20022.repository.msg.GroupHeader69.mmOriginalIdentification, com.tools20022.repository.msg.GroupHeader69.mmSellerTaxRepresentative,
+						com.tools20022.repository.msg.GroupHeader69.mmBuyerTaxRepresentative, com.tools20022.repository.msg.GroupHeader69.mmLanguageCode);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GroupHeader69";
 				definition = "Set of characteristics shared by all individual transactions included in the message.";
@@ -461,75 +495,75 @@ public class GroupHeader69 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public GroupHeader69 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "IssdDt", required = true)
 	public ISODate getIssuedDate() {
 		return issuedDate;
 	}
 
-	public void setIssuedDate(ISODate issuedDate) {
-		this.issuedDate = issuedDate;
+	public GroupHeader69 setIssuedDate(ISODate issuedDate) {
+		this.issuedDate = Objects.requireNonNull(issuedDate);
+		return this;
 	}
 
-	@XmlElement(name = "RptCtgy", required = true)
 	public ExternalDocumentType1Code getReportCategory() {
 		return reportCategory;
 	}
 
-	public void setReportCategory(ExternalDocumentType1Code reportCategory) {
-		this.reportCategory = reportCategory;
+	public GroupHeader69 setReportCategory(ExternalDocumentType1Code reportCategory) {
+		this.reportCategory = Objects.requireNonNull(reportCategory);
+		return this;
 	}
 
-	@XmlElement(name = "TaxRptPurp", required = true)
 	public ExternalDocumentType1Code getTaxReportPurpose() {
 		return taxReportPurpose;
 	}
 
-	public void setTaxReportPurpose(ExternalDocumentType1Code taxReportPurpose) {
-		this.taxReportPurpose = taxReportPurpose;
+	public GroupHeader69 setTaxReportPurpose(ExternalDocumentType1Code taxReportPurpose) {
+		this.taxReportPurpose = Objects.requireNonNull(taxReportPurpose);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlId")
-	public Max35Text getOriginalIdentification() {
-		return originalIdentification;
+	public Optional<Max35Text> getOriginalIdentification() {
+		return originalIdentification == null ? Optional.empty() : Optional.of(originalIdentification);
 	}
 
-	public void setOriginalIdentification(Max35Text originalIdentification) {
+	public GroupHeader69 setOriginalIdentification(Max35Text originalIdentification) {
 		this.originalIdentification = originalIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "SellrTaxRprtv")
-	public PartyIdentification116 getSellerTaxRepresentative() {
-		return sellerTaxRepresentative;
+	public Optional<PartyIdentification116> getSellerTaxRepresentative() {
+		return sellerTaxRepresentative == null ? Optional.empty() : Optional.of(sellerTaxRepresentative);
 	}
 
-	public void setSellerTaxRepresentative(com.tools20022.repository.msg.PartyIdentification116 sellerTaxRepresentative) {
+	public GroupHeader69 setSellerTaxRepresentative(com.tools20022.repository.msg.PartyIdentification116 sellerTaxRepresentative) {
 		this.sellerTaxRepresentative = sellerTaxRepresentative;
+		return this;
 	}
 
-	@XmlElement(name = "BuyrTaxRprtv")
-	public PartyIdentification116 getBuyerTaxRepresentative() {
-		return buyerTaxRepresentative;
+	public Optional<PartyIdentification116> getBuyerTaxRepresentative() {
+		return buyerTaxRepresentative == null ? Optional.empty() : Optional.of(buyerTaxRepresentative);
 	}
 
-	public void setBuyerTaxRepresentative(com.tools20022.repository.msg.PartyIdentification116 buyerTaxRepresentative) {
+	public GroupHeader69 setBuyerTaxRepresentative(com.tools20022.repository.msg.PartyIdentification116 buyerTaxRepresentative) {
 		this.buyerTaxRepresentative = buyerTaxRepresentative;
+		return this;
 	}
 
-	@XmlElement(name = "LangCd")
-	public LanguageCode getLanguageCode() {
-		return languageCode;
+	public Optional<LanguageCode> getLanguageCode() {
+		return languageCode == null ? Optional.empty() : Optional.of(languageCode);
 	}
 
-	public void setLanguageCode(LanguageCode languageCode) {
+	public GroupHeader69 setLanguageCode(LanguageCode languageCode) {
 		this.languageCode = languageCode;
+		return this;
 	}
 }

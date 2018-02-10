@@ -31,6 +31,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -76,18 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PartyIdentification7Choice", propOrder = {"BICOrBEI", "nameAndAddress"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PartyIdentification7Choice", propOrder = {"bICOrBEI", "nameAndAddress"})
 public class PartyIdentification7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BICOrBEI", required = true)
 	protected AnyBICIdentifier bICOrBEI;
 	/**
-	 * Bank Identifier Code. Code allocated to financial institutions by the
-	 * Registration Authority, under an international identification scheme, as
-	 * described in the latest version of the standard ISO 9362 Banking (Banking
-	 * telecommunication messages, Bank Identifier Codes).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +122,7 @@ public class PartyIdentification7Choice {
 	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
-			componentContext_lazy = () -> PartyIdentification7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BICOrBEI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +133,11 @@ public class PartyIdentification7Choice {
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "NmAndAdr", required = true)
 	protected NameAndAddress5 nameAndAddress;
 	/**
-	 * Name and address of a party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -169,7 +169,7 @@ public class PartyIdentification7Choice {
 	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> PartyIdentification7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,9 +185,9 @@ public class PartyIdentification7Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification7Choice.mmBICOrBEI, PartyIdentification7Choice.mmNameAndAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification7Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification7Choice.mmNameAndAddress);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -203,21 +203,21 @@ public class PartyIdentification7Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BICOrBEI", required = true)
 	public AnyBICIdentifier getBICOrBEI() {
 		return bICOrBEI;
 	}
 
-	public void setBICOrBEI(AnyBICIdentifier bICOrBEI) {
-		this.bICOrBEI = bICOrBEI;
+	public PartyIdentification7Choice setBICOrBEI(AnyBICIdentifier bICOrBEI) {
+		this.bICOrBEI = Objects.requireNonNull(bICOrBEI);
+		return this;
 	}
 
-	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress5 getNameAndAddress() {
 		return nameAndAddress;
 	}
 
-	public void setNameAndAddress(NameAndAddress5 nameAndAddress) {
-		this.nameAndAddress = nameAndAddress;
+	public PartyIdentification7Choice setNameAndAddress(NameAndAddress5 nameAndAddress) {
+		this.nameAndAddress = Objects.requireNonNull(nameAndAddress);
+		return this;
 	}
 }

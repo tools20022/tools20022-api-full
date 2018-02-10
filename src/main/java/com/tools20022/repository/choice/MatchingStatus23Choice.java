@@ -28,6 +28,8 @@ import com.tools20022.repository.msg.ProprietaryReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +76,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,15 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * MatchingStatus9Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MatchingStatus23Choice", propOrder = {"matched", "matchedWithTolerance", "matchingAlleged", "unmatched", "proprietaryStatus"})
 public class MatchingStatus23Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Mtchd", required = true)
 	protected ProprietaryReason1 matched;
 	/**
-	 * Trade is matched.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -135,7 +138,7 @@ public class MatchingStatus23Choice {
 	public static final MMMessageAssociationEnd mmMatched = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
-			componentContext_lazy = () -> MatchingStatus23Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Mtchd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,10 +151,11 @@ public class MatchingStatus23Choice {
 			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "MtchdWthTlrnce", required = true)
 	protected ProprietaryReason1 matchedWithTolerance;
 	/**
-	 * Trade is matched with tolerance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +194,7 @@ public class MatchingStatus23Choice {
 	public static final MMMessageAttribute mmMatchedWithTolerance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
-			componentContext_lazy = () -> MatchingStatus23Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MtchdWthTlrnce";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,10 +206,11 @@ public class MatchingStatus23Choice {
 			complexType_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "MtchgAllgd", required = true)
 	protected MatchingReason4Choice matchingAlleged;
 	/**
-	 * Trade is matched alleged.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -243,7 +248,7 @@ public class MatchingStatus23Choice {
 	public static final MMMessageAssociationEnd mmMatchingAlleged = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
-			componentContext_lazy = () -> MatchingStatus23Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MtchgAllgd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,10 +261,11 @@ public class MatchingStatus23Choice {
 			type_lazy = () -> com.tools20022.repository.choice.MatchingReason4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Umtchd", required = true)
 	protected MatchingReason1Choice unmatched;
 	/**
-	 * Trade is unmatched or mismatched.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -297,7 +303,7 @@ public class MatchingStatus23Choice {
 	public static final MMMessageAssociationEnd mmUnmatched = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
-			componentContext_lazy = () -> MatchingStatus23Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Umtchd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -310,11 +316,11 @@ public class MatchingStatus23Choice {
 			type_lazy = () -> com.tools20022.repository.choice.MatchingReason1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtrySts")
 	protected ProprietaryStatusAndReason1 proprietaryStatus;
 	/**
-	 * Provides a proprietary status and a proprietary reason of the processing
-	 * status of the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -354,7 +360,7 @@ public class MatchingStatus23Choice {
 	public static final MMMessageAssociationEnd mmProprietaryStatus = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
-			componentContext_lazy = () -> MatchingStatus23Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtrySts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -371,11 +377,12 @@ public class MatchingStatus23Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MatchingStatus23Choice.mmMatched, MatchingStatus23Choice.mmMatchedWithTolerance, MatchingStatus23Choice.mmMatchingAlleged, MatchingStatus23Choice.mmUnmatched,
-						MatchingStatus23Choice.mmProprietaryStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus23Choice.mmMatched, com.tools20022.repository.choice.MatchingStatus23Choice.mmMatchedWithTolerance,
+						com.tools20022.repository.choice.MatchingStatus23Choice.mmMatchingAlleged, com.tools20022.repository.choice.MatchingStatus23Choice.mmUnmatched,
+						com.tools20022.repository.choice.MatchingStatus23Choice.mmProprietaryStatus);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV02.mmMatchingStatus);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MatchingStatus23Choice";
 				definition = "Choice of status for the matching.";
@@ -385,48 +392,48 @@ public class MatchingStatus23Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Mtchd", required = true)
 	public ProprietaryReason1 getMatched() {
 		return matched;
 	}
 
-	public void setMatched(ProprietaryReason1 matched) {
-		this.matched = matched;
+	public MatchingStatus23Choice setMatched(ProprietaryReason1 matched) {
+		this.matched = Objects.requireNonNull(matched);
+		return this;
 	}
 
-	@XmlElement(name = "MtchdWthTlrnce", required = true)
 	public ProprietaryReason1 getMatchedWithTolerance() {
 		return matchedWithTolerance;
 	}
 
-	public void setMatchedWithTolerance(ProprietaryReason1 matchedWithTolerance) {
-		this.matchedWithTolerance = matchedWithTolerance;
+	public MatchingStatus23Choice setMatchedWithTolerance(ProprietaryReason1 matchedWithTolerance) {
+		this.matchedWithTolerance = Objects.requireNonNull(matchedWithTolerance);
+		return this;
 	}
 
-	@XmlElement(name = "MtchgAllgd", required = true)
 	public MatchingReason4Choice getMatchingAlleged() {
 		return matchingAlleged;
 	}
 
-	public void setMatchingAlleged(com.tools20022.repository.choice.MatchingReason4Choice matchingAlleged) {
-		this.matchingAlleged = matchingAlleged;
+	public MatchingStatus23Choice setMatchingAlleged(com.tools20022.repository.choice.MatchingReason4Choice matchingAlleged) {
+		this.matchingAlleged = Objects.requireNonNull(matchingAlleged);
+		return this;
 	}
 
-	@XmlElement(name = "Umtchd", required = true)
 	public MatchingReason1Choice getUnmatched() {
 		return unmatched;
 	}
 
-	public void setUnmatched(com.tools20022.repository.choice.MatchingReason1Choice unmatched) {
-		this.unmatched = unmatched;
+	public MatchingStatus23Choice setUnmatched(com.tools20022.repository.choice.MatchingReason1Choice unmatched) {
+		this.unmatched = Objects.requireNonNull(unmatched);
+		return this;
 	}
 
-	@XmlElement(name = "PrtrySts")
-	public ProprietaryStatusAndReason1 getProprietaryStatus() {
-		return proprietaryStatus;
+	public Optional<ProprietaryStatusAndReason1> getProprietaryStatus() {
+		return proprietaryStatus == null ? Optional.empty() : Optional.of(proprietaryStatus);
 	}
 
-	public void setProprietaryStatus(ProprietaryStatusAndReason1 proprietaryStatus) {
+	public MatchingStatus23Choice setProprietaryStatus(ProprietaryStatusAndReason1 proprietaryStatus) {
 		this.proprietaryStatus = proprietaryStatus;
+		return this;
 	}
 }

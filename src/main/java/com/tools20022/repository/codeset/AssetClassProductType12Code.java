@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AssetClassProductTypeCode;
+import com.tools20022.repository.codeset.AssetClassProductType12Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Commodity derivative base product code list for Inflation.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode
- * AssetClassProductTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductType12Code#mmInflation
- * AssetClassProductType12Code.mmInflation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductType12Code#Inflation
+ * AssetClassProductType12Code.Inflation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode
+ * AssetClassProductTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,7 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Commodity derivative base product code list for Inflation."</li>
  * </ul>
  */
-public class AssetClassProductType12Code extends AssetClassProductTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AssetClassProductType12Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -74,25 +79,55 @@ public class AssetClassProductType12Code extends AssetClassProductTypeCode {
 	 * name} = "Inflation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInflation = new MMCode() {
+	public static final AssetClassProductType12Code Inflation = new AssetClassProductType12Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inflation";
-			owner_lazy = () -> AssetClassProductType12Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassProductType12Code.mmObject();
+			codeName = AssetClassProductTypeCode.Inflation.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AssetClassProductType12Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AssetClassProductType12Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassProductType12Code";
 				definition = "Commodity derivative base product code list for Inflation.";
-				code_lazy = () -> Arrays.asList(AssetClassProductType12Code.mmInflation);
 				trace_lazy = () -> AssetClassProductTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassProductType12Code.Inflation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Inflation.getCodeName().get(), Inflation);
+	}
+
+	public static AssetClassProductType12Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AssetClassProductType12Code[] values() {
+		AssetClassProductType12Code[] values = new AssetClassProductType12Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AssetClassProductType12Code> {
+		@Override
+		public AssetClassProductType12Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AssetClassProductType12Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

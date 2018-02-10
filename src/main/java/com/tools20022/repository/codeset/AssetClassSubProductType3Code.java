@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AssetClassSubProductTypeCode;
+import com.tools20022.repository.codeset.AssetClassSubProductType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines the sub-product of type Olive Oil.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode
- * AssetClassSubProductTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType3Code#mmOliveOil
- * AssetClassSubProductType3Code.mmOliveOil}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType3Code#OliveOil
+ * AssetClassSubProductType3Code.OliveOil}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode
+ * AssetClassSubProductTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,7 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the sub-product of type Olive Oil."</li>
  * </ul>
  */
-public class AssetClassSubProductType3Code extends AssetClassSubProductTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AssetClassSubProductType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -74,25 +79,55 @@ public class AssetClassSubProductType3Code extends AssetClassSubProductTypeCode 
 	 * name} = "OliveOil"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOliveOil = new MMCode() {
+	public static final AssetClassSubProductType3Code OliveOil = new AssetClassSubProductType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OliveOil";
-			owner_lazy = () -> AssetClassSubProductType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductType3Code.mmObject();
+			codeName = AssetClassSubProductTypeCode.OliveOil.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AssetClassSubProductType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AssetClassSubProductType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductType3Code";
 				definition = "Defines the sub-product of type Olive Oil.";
-				code_lazy = () -> Arrays.asList(AssetClassSubProductType3Code.mmOliveOil);
 				trace_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType3Code.OliveOil);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(OliveOil.getCodeName().get(), OliveOil);
+	}
+
+	public static AssetClassSubProductType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AssetClassSubProductType3Code[] values() {
+		AssetClassSubProductType3Code[] values = new AssetClassSubProductType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AssetClassSubProductType3Code> {
+		@Override
+		public AssetClassSubProductType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AssetClassSubProductType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

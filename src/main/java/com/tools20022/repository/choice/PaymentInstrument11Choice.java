@@ -30,6 +30,7 @@ import com.tools20022.repository.msg.CreditTransfer6;
 import com.tools20022.repository.msg.InvestmentAccount20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,16 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentInstrument11Choice", propOrder = {"creditTransferDetails", "chequeDetails", "bankersDraftDetails", "cashAccountDetails"})
 public class PaymentInstrument11Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CdtTrfDtls", required = true)
 	protected CreditTransfer6 creditTransferDetails;
 	/**
-	 * Payment instrument between a debtor and a creditor, which flows through
-	 * one or more financial institutions or systems.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -136,7 +137,7 @@ public class PaymentInstrument11Choice {
 	public static final MMMessageAssociationEnd mmCreditTransferDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CreditTransfer.mmObject();
-			componentContext_lazy = () -> PaymentInstrument11Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CdtTrfDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,12 +150,11 @@ public class PaymentInstrument11Choice {
 			type_lazy = () -> CreditTransfer6.mmObject();
 		}
 	};
+	@XmlElement(name = "ChqDtls", required = true)
 	protected Cheque3 chequeDetails;
 	/**
-	 * Written order on which instructions are given to an account holder (a
-	 * financial institution) to pay a stated sum to a named recipient (the
-	 * payee).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -194,7 +194,7 @@ public class PaymentInstrument11Choice {
 	public static final MMMessageAssociationEnd mmChequeDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
-			componentContext_lazy = () -> PaymentInstrument11Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ChqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,11 +207,11 @@ public class PaymentInstrument11Choice {
 			type_lazy = () -> Cheque3.mmObject();
 		}
 	};
+	@XmlElement(name = "BkrsDrftDtls", required = true)
 	protected Cheque3 bankersDraftDetails;
 	/**
-	 * Cheque drawn by a bank on itself or its agent. A person who owes money to
-	 * another buys the draft from a bank for cash and hands it to the creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -251,7 +251,7 @@ public class PaymentInstrument11Choice {
 	public static final MMMessageAssociationEnd mmBankersDraftDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
-			componentContext_lazy = () -> PaymentInstrument11Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BkrsDrftDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -264,10 +264,11 @@ public class PaymentInstrument11Choice {
 			type_lazy = () -> Cheque3.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAcctDtls", required = true)
 	protected InvestmentAccount20 cashAccountDetails;
 	/**
-	 * Part of the investment account to or from which cash entries are made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -308,7 +309,7 @@ public class PaymentInstrument11Choice {
 	public static final MMMessageAssociationEnd mmCashAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmCashAccount;
-			componentContext_lazy = () -> PaymentInstrument11Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,10 +326,10 @@ public class PaymentInstrument11Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentInstrument11Choice.mmCreditTransferDetails, PaymentInstrument11Choice.mmChequeDetails, PaymentInstrument11Choice.mmBankersDraftDetails,
-						PaymentInstrument11Choice.mmCashAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument11Choice.mmCreditTransferDetails, com.tools20022.repository.choice.PaymentInstrument11Choice.mmChequeDetails,
+						com.tools20022.repository.choice.PaymentInstrument11Choice.mmBankersDraftDetails, com.tools20022.repository.choice.PaymentInstrument11Choice.mmCashAccountDetails);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrument11Choice";
 				definition = "Choice between types of payment instrument, ie, cheque, credit transfer or investment account.";
@@ -338,39 +339,39 @@ public class PaymentInstrument11Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CdtTrfDtls", required = true)
 	public CreditTransfer6 getCreditTransferDetails() {
 		return creditTransferDetails;
 	}
 
-	public void setCreditTransferDetails(CreditTransfer6 creditTransferDetails) {
-		this.creditTransferDetails = creditTransferDetails;
+	public PaymentInstrument11Choice setCreditTransferDetails(CreditTransfer6 creditTransferDetails) {
+		this.creditTransferDetails = Objects.requireNonNull(creditTransferDetails);
+		return this;
 	}
 
-	@XmlElement(name = "ChqDtls", required = true)
 	public Cheque3 getChequeDetails() {
 		return chequeDetails;
 	}
 
-	public void setChequeDetails(Cheque3 chequeDetails) {
-		this.chequeDetails = chequeDetails;
+	public PaymentInstrument11Choice setChequeDetails(Cheque3 chequeDetails) {
+		this.chequeDetails = Objects.requireNonNull(chequeDetails);
+		return this;
 	}
 
-	@XmlElement(name = "BkrsDrftDtls", required = true)
 	public Cheque3 getBankersDraftDetails() {
 		return bankersDraftDetails;
 	}
 
-	public void setBankersDraftDetails(Cheque3 bankersDraftDetails) {
-		this.bankersDraftDetails = bankersDraftDetails;
+	public PaymentInstrument11Choice setBankersDraftDetails(Cheque3 bankersDraftDetails) {
+		this.bankersDraftDetails = Objects.requireNonNull(bankersDraftDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CshAcctDtls", required = true)
 	public InvestmentAccount20 getCashAccountDetails() {
 		return cashAccountDetails;
 	}
 
-	public void setCashAccountDetails(InvestmentAccount20 cashAccountDetails) {
-		this.cashAccountDetails = cashAccountDetails;
+	public PaymentInstrument11Choice setCashAccountDetails(InvestmentAccount20 cashAccountDetails) {
+		this.cashAccountDetails = Objects.requireNonNull(cashAccountDetails);
+		return this;
 	}
 }

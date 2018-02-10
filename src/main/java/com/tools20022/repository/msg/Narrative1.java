@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.NarrativeType1Choice;
 import com.tools20022.repository.datatype.Max20000Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +48,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +60,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Narrative information for an undertaking."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Narrative1", propOrder = {"type", "text"})
 public class Narrative1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp")
 	protected NarrativeType1Choice type;
 	/**
-	 * Type of term or condition.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -96,7 +96,7 @@ public class Narrative1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Narrative1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Narrative1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -107,10 +107,11 @@ public class Narrative1 {
 			complexType_lazy = () -> NarrativeType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Txt", required = true)
 	protected List<Max20000Text> text;
 	/**
-	 * Narrative text.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,7 +138,7 @@ public class Narrative1 {
 	 */
 	public static final MMMessageAttribute mmText = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Narrative1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Narrative1.mmObject();
 			isDerived = false;
 			xmlTag = "Txt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,8 +153,8 @@ public class Narrative1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Narrative1.mmType, Narrative1.mmText);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Narrative1.mmType, com.tools20022.repository.msg.Narrative1.mmText);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Narrative1";
 				definition = "Narrative information for an undertaking.";
@@ -162,21 +163,21 @@ public class Narrative1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp")
-	public NarrativeType1Choice getType() {
-		return type;
+	public Optional<NarrativeType1Choice> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(NarrativeType1Choice type) {
+	public Narrative1 setType(NarrativeType1Choice type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "Txt", required = true)
 	public List<Max20000Text> getText() {
-		return text;
+		return text == null ? text = new ArrayList<>() : text;
 	}
 
-	public void setText(List<Max20000Text> text) {
-		this.text = text;
+	public Narrative1 setText(List<Max20000Text> text) {
+		this.text = Objects.requireNonNull(text);
+		return this;
 	}
 }

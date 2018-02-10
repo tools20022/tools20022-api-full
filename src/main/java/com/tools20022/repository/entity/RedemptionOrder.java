@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Instruction from an investor to sell investment fund units back to the fund.
@@ -38,81 +39,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder
+ * InvestmentFundOrder}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
  * <li>
  * {@linkplain com.tools20022.repository.entity.RedemptionOrder#mmHoldingsRedemptionRate
  * RedemptionOrder.mmHoldingsRedemptionRate}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SwitchRedemptionLeg
- * SwitchRedemptionLeg}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder
- * InvestmentFundOrder}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder3
- * RedemptionOrder3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionBulkOrder2
- * RedemptionBulkOrder2}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrderInstruction1
- * RedemptionBulkOrderInstruction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder5
- * RedemptionOrder5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionBulkOrder3
- * RedemptionBulkOrder3}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrderInstruction2
- * RedemptionBulkOrderInstruction2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder7
- * RedemptionOrder7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionBulkOrder4
- * RedemptionBulkOrder4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder4
- * RedemptionOrder4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder2
- * RedemptionMultipleOrder2}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrderInstruction1
- * RedemptionMultipleOrderInstruction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder6
- * RedemptionOrder6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder3
- * RedemptionMultipleOrder3}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrderInstruction2
- * RedemptionMultipleOrderInstruction2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder8
- * RedemptionOrder8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4
- * RedemptionMultipleOrder4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder9
- * RedemptionOrder9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder10
- * RedemptionOrder10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder11
- * RedemptionOrder11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder5
- * RedemptionMultipleOrder5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder6
- * RedemptionMultipleOrder6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionBulkOrder6
- * RedemptionBulkOrder6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder14
- * RedemptionOrder14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder15
- * RedemptionOrder15}</li>
  * </ul>
  * </li>
  * <li>
@@ -193,11 +129,76 @@ import java.util.concurrent.atomic.AtomicReference;
  * RedemptionExecution15.mmStaffClientBreakdown}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.SwitchRedemptionLeg
+ * SwitchRedemptionLeg}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder3
+ * RedemptionOrder3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionBulkOrder2
+ * RedemptionBulkOrder2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrderInstruction1
+ * RedemptionBulkOrderInstruction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder5
+ * RedemptionOrder5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionBulkOrder3
+ * RedemptionBulkOrder3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkOrderInstruction2
+ * RedemptionBulkOrderInstruction2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder7
+ * RedemptionOrder7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionBulkOrder4
+ * RedemptionBulkOrder4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder4
+ * RedemptionOrder4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder2
+ * RedemptionMultipleOrder2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrderInstruction1
+ * RedemptionMultipleOrderInstruction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder6
+ * RedemptionOrder6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder3
+ * RedemptionMultipleOrder3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrderInstruction2
+ * RedemptionMultipleOrderInstruction2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder8
+ * RedemptionOrder8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder4
+ * RedemptionMultipleOrder4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder9
+ * RedemptionOrder9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder10
+ * RedemptionOrder10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder11
+ * RedemptionOrder11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder5
+ * RedemptionMultipleOrder5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder6
+ * RedemptionMultipleOrder6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionBulkOrder6
+ * RedemptionBulkOrder6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder14
+ * RedemptionOrder14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RedemptionOrder15
+ * RedemptionOrder15}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -215,9 +216,8 @@ public class RedemptionOrder extends InvestmentFundOrder {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected PercentageRate holdingsRedemptionRate;
 	/**
-	 * Portion of the investor's holdings, in a specific investment fund/ fund
-	 * class, that is redeemed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -322,8 +322,8 @@ public class RedemptionOrder extends InvestmentFundOrder {
 					FinancialInstrumentQuantity5Choice.mmHoldingsRedemptionRate, SwitchRedemptionLegExecution2.mmHoldingsRedemptionRate, SwitchRedemptionLegExecution3.mmHoldingsRedemptionRate,
 					FinancialInstrumentQuantity3.mmHoldingsRedemptionRate, FundOrderData5.mmHoldingsRedemptionRate, FinancialInstrumentQuantity29Choice.mmHoldingsRedemptionRate, FinancialInstrumentQuantity28Choice.mmHoldingsRedemptionRate,
 					RedemptionExecution16.mmHoldingsRedemptionRate, RedemptionExecution15.mmHoldingsRedemptionRate, SwitchRedemptionLegExecution4.mmHoldingsRedemptionRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.RedemptionOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RedemptionOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HoldingsRedemptionRate";
 			definition = "Portion of the investor's holdings, in a specific investment fund/ fund class, that is redeemed.";
@@ -344,7 +344,7 @@ public class RedemptionOrder extends InvestmentFundOrder {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionOrder";
 				definition = "Instruction from an investor to sell investment fund units back to the fund.";
@@ -377,7 +377,8 @@ public class RedemptionOrder extends InvestmentFundOrder {
 		return holdingsRedemptionRate;
 	}
 
-	public void setHoldingsRedemptionRate(PercentageRate holdingsRedemptionRate) {
-		this.holdingsRedemptionRate = holdingsRedemptionRate;
+	public RedemptionOrder setHoldingsRedemptionRate(PercentageRate holdingsRedemptionRate) {
+		this.holdingsRedemptionRate = Objects.requireNonNull(holdingsRedemptionRate);
+		return this;
 	}
 }

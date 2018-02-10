@@ -17,14 +17,14 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,16 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateActionUnallocatedDetailsSD3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionUnallocatedDetailsSD4", propOrder = {"unallocatedDistributionBalance", "unallocatedRedemptionBalance", "unallocatedSecuritiesTransactionDetails", "unallocatedCashTransactionDetails"})
 public class CorporateActionUnallocatedDetailsSD4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UallctdDstrbtnBal")
 	protected CorporateActionUnallocatedBalanceSD2Choice unallocatedDistributionBalance;
 	/**
-	 * Type of Participants positions distribution balance concerned in
-	 * unallocated payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -105,6 +105,9 @@ public class CorporateActionUnallocatedDetailsSD4 {
 	 * CorporateActionUnallocatedDetailsSD4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UallctdDstrbtnBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Unallocated Balance</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -133,9 +136,10 @@ public class CorporateActionUnallocatedDetailsSD4 {
 	 */
 	public static final MMMessageAssociationEnd mmUnallocatedDistributionBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedDetailsSD4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.mmObject();
 			isDerived = false;
 			xmlTag = "UallctdDstrbtnBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Unallocated Balance"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedDistributionBalance";
 			definition = "Type of Participants positions distribution balance concerned in unallocated payment.";
@@ -147,11 +151,11 @@ public class CorporateActionUnallocatedDetailsSD4 {
 			type_lazy = () -> CorporateActionUnallocatedBalanceSD2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "UallctdRedBal")
 	protected CorporateActionUnallocatedBalanceSD1 unallocatedRedemptionBalance;
 	/**
-	 * Type of Participants positions redemption balance concerned in
-	 * unallocated payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -193,7 +197,7 @@ public class CorporateActionUnallocatedDetailsSD4 {
 	 */
 	public static final MMMessageAssociationEnd mmUnallocatedRedemptionBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedDetailsSD4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.mmObject();
 			isDerived = false;
 			xmlTag = "UallctdRedBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,10 +211,11 @@ public class CorporateActionUnallocatedDetailsSD4 {
 			type_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmObject();
 		}
 	};
+	@XmlElement(name = "UallctdSctiesTxDtls")
 	protected List<com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD5> unallocatedSecuritiesTransactionDetails;
 	/**
-	 * Details of the securities transactions concerned in unallocated payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -224,6 +229,9 @@ public class CorporateActionUnallocatedDetailsSD4 {
 	 * CorporateActionUnallocatedDetailsSD4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UallctdSctiesTxDtls"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Payout (Cash)</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -254,9 +262,10 @@ public class CorporateActionUnallocatedDetailsSD4 {
 	 */
 	public static final MMMessageAssociationEnd mmUnallocatedSecuritiesTransactionDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedDetailsSD4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.mmObject();
 			isDerived = false;
 			xmlTag = "UallctdSctiesTxDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Payout (Cash)"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedSecuritiesTransactionDetails";
 			definition = "Details of the securities transactions concerned in unallocated payment.";
@@ -267,10 +276,11 @@ public class CorporateActionUnallocatedDetailsSD4 {
 			type_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmObject();
 		}
 	};
+	@XmlElement(name = "UallctdCshTxDtls")
 	protected List<com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4> unallocatedCashTransactionDetails;
 	/**
-	 * Details of the cash transactions concerned in unallocated payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -284,6 +294,9 @@ public class CorporateActionUnallocatedDetailsSD4 {
 	 * CorporateActionUnallocatedDetailsSD4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UallctdCshTxDtls"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Payout (Securities)</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -313,9 +326,10 @@ public class CorporateActionUnallocatedDetailsSD4 {
 	 */
 	public static final MMMessageAssociationEnd mmUnallocatedCashTransactionDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedDetailsSD4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.mmObject();
 			isDerived = false;
 			xmlTag = "UallctdCshTxDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Payout (Securities)"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedCashTransactionDetails";
 			definition = "Details of the cash transactions concerned in unallocated payment.";
@@ -330,9 +344,10 @@ public class CorporateActionUnallocatedDetailsSD4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionUnallocatedDetailsSD4.mmUnallocatedDistributionBalance, CorporateActionUnallocatedDetailsSD4.mmUnallocatedRedemptionBalance,
-						CorporateActionUnallocatedDetailsSD4.mmUnallocatedSecuritiesTransactionDetails, CorporateActionUnallocatedDetailsSD4.mmUnallocatedCashTransactionDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.mmUnallocatedDistributionBalance,
+						com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.mmUnallocatedRedemptionBalance, com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.mmUnallocatedSecuritiesTransactionDetails,
+						com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.mmUnallocatedCashTransactionDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionUnallocatedDetailsSD4";
 				definition = "Provides additional information regarding the corporate action event.";
@@ -343,39 +358,39 @@ public class CorporateActionUnallocatedDetailsSD4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UallctdDstrbtnBal")
-	public CorporateActionUnallocatedBalanceSD2Choice getUnallocatedDistributionBalance() {
-		return unallocatedDistributionBalance;
+	public Optional<CorporateActionUnallocatedBalanceSD2Choice> getUnallocatedDistributionBalance() {
+		return unallocatedDistributionBalance == null ? Optional.empty() : Optional.of(unallocatedDistributionBalance);
 	}
 
-	public void setUnallocatedDistributionBalance(CorporateActionUnallocatedBalanceSD2Choice unallocatedDistributionBalance) {
+	public CorporateActionUnallocatedDetailsSD4 setUnallocatedDistributionBalance(CorporateActionUnallocatedBalanceSD2Choice unallocatedDistributionBalance) {
 		this.unallocatedDistributionBalance = unallocatedDistributionBalance;
+		return this;
 	}
 
-	@XmlElement(name = "UallctdRedBal")
-	public CorporateActionUnallocatedBalanceSD1 getUnallocatedRedemptionBalance() {
-		return unallocatedRedemptionBalance;
+	public Optional<CorporateActionUnallocatedBalanceSD1> getUnallocatedRedemptionBalance() {
+		return unallocatedRedemptionBalance == null ? Optional.empty() : Optional.of(unallocatedRedemptionBalance);
 	}
 
-	public void setUnallocatedRedemptionBalance(com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1 unallocatedRedemptionBalance) {
+	public CorporateActionUnallocatedDetailsSD4 setUnallocatedRedemptionBalance(com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1 unallocatedRedemptionBalance) {
 		this.unallocatedRedemptionBalance = unallocatedRedemptionBalance;
+		return this;
 	}
 
-	@XmlElement(name = "UallctdSctiesTxDtls")
 	public List<CorporateActionUnallocatedSecuritiesTransactionDetailsSD5> getUnallocatedSecuritiesTransactionDetails() {
-		return unallocatedSecuritiesTransactionDetails;
+		return unallocatedSecuritiesTransactionDetails == null ? unallocatedSecuritiesTransactionDetails = new ArrayList<>() : unallocatedSecuritiesTransactionDetails;
 	}
 
-	public void setUnallocatedSecuritiesTransactionDetails(List<com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD5> unallocatedSecuritiesTransactionDetails) {
-		this.unallocatedSecuritiesTransactionDetails = unallocatedSecuritiesTransactionDetails;
+	public CorporateActionUnallocatedDetailsSD4 setUnallocatedSecuritiesTransactionDetails(List<com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD5> unallocatedSecuritiesTransactionDetails) {
+		this.unallocatedSecuritiesTransactionDetails = Objects.requireNonNull(unallocatedSecuritiesTransactionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "UallctdCshTxDtls")
 	public List<CorporateActionUnallocatedCashTransactionDetailsSD4> getUnallocatedCashTransactionDetails() {
-		return unallocatedCashTransactionDetails;
+		return unallocatedCashTransactionDetails == null ? unallocatedCashTransactionDetails = new ArrayList<>() : unallocatedCashTransactionDetails;
 	}
 
-	public void setUnallocatedCashTransactionDetails(List<com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4> unallocatedCashTransactionDetails) {
-		this.unallocatedCashTransactionDetails = unallocatedCashTransactionDetails;
+	public CorporateActionUnallocatedDetailsSD4 setUnallocatedCashTransactionDetails(List<com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4> unallocatedCashTransactionDetails) {
+		this.unallocatedCashTransactionDetails = Objects.requireNonNull(unallocatedCashTransactionDetails);
+		return this;
 	}
 }

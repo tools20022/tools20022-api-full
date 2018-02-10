@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.StatementSourceCode;
+import com.tools20022.repository.codeset.StatementSource1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the source of the report.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.StatementSourceCode
- * StatementSourceCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementSource1Code#mmAccounting
- * StatementSource1Code.mmAccounting}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementSource1Code#Accounting
+ * StatementSource1Code.Accounting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementSource1Code#mmCustody
- * StatementSource1Code.mmCustody}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementSource1Code#Custody
+ * StatementSource1Code.Custody}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.StatementSourceCode
+ * StatementSourceCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the source of the report."</li>
  * </ul>
  */
-public class StatementSource1Code extends StatementSourceCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class StatementSource1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class StatementSource1Code extends StatementSourceCode {
 	 * name} = "Accounting"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccounting = new MMCode() {
+	public static final StatementSource1Code Accounting = new StatementSource1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accounting";
-			owner_lazy = () -> StatementSource1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StatementSource1Code.mmObject();
+			codeName = StatementSourceCode.Accounting.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class StatementSource1Code extends StatementSourceCode {
 	 * name} = "Custody"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustody = new MMCode() {
+	public static final StatementSource1Code Custody = new StatementSource1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Custody";
-			owner_lazy = () -> StatementSource1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StatementSource1Code.mmObject();
+			codeName = StatementSourceCode.Custody.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, StatementSource1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected StatementSource1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACCT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementSource1Code";
 				definition = "Specifies the source of the report.";
-				code_lazy = () -> Arrays.asList(StatementSource1Code.mmAccounting, StatementSource1Code.mmCustody);
 				trace_lazy = () -> StatementSourceCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementSource1Code.Accounting, com.tools20022.repository.codeset.StatementSource1Code.Custody);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Accounting.getCodeName().get(), Accounting);
+		codesByName.put(Custody.getCodeName().get(), Custody);
+	}
+
+	public static StatementSource1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static StatementSource1Code[] values() {
+		StatementSource1Code[] values = new StatementSource1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, StatementSource1Code> {
+		@Override
+		public StatementSource1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(StatementSource1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -25,9 +25,11 @@ import com.tools20022.repository.choice.NettingIdentification1Choice;
 import com.tools20022.repository.entity.Netting;
 import com.tools20022.repository.entity.SystemAvailability;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NettingCutOff1", propOrder = {"nettingIdentification", "newCutOff"})
 public class NettingCutOff1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NetgId", required = true)
 	protected NettingIdentification1Choice nettingIdentification;
 	/**
-	 * Identifies the netting party or group.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -112,7 +115,7 @@ public class NettingCutOff1 {
 	 */
 	public static final MMMessageAssociationEnd mmNettingIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> NettingCutOff1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NettingCutOff1.mmObject();
 			isDerived = false;
 			xmlTag = "NetgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +127,11 @@ public class NettingCutOff1 {
 			type_lazy = () -> NettingIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NewCutOff", required = true)
 	protected List<com.tools20022.repository.msg.CutOff1> newCutOff;
 	/**
-	 * Specifies the information regarding the updated netting cut off.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -158,7 +162,7 @@ public class NettingCutOff1 {
 	public static final MMMessageAssociationEnd mmNewCutOff = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SystemAvailability.mmObject();
-			componentContext_lazy = () -> NettingCutOff1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NettingCutOff1.mmObject();
 			isDerived = false;
 			xmlTag = "NewCutOff";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +177,10 @@ public class NettingCutOff1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NettingCutOff1.mmNettingIdentification, NettingCutOff1.mmNewCutOff);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NettingCutOff1.mmNettingIdentification, com.tools20022.repository.msg.NettingCutOff1.mmNewCutOff);
 				messageBuildingBlock_lazy = () -> Arrays.asList(NettingCutOffReferenceDataUpdateRequestV01.mmNettingCutOffRequest);
 				trace_lazy = () -> Netting.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NettingCutOff1";
 				definition = "Provides the details for one to many netting cut off update requests to be actioned by a central system.";
@@ -185,21 +189,21 @@ public class NettingCutOff1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NetgId", required = true)
 	public NettingIdentification1Choice getNettingIdentification() {
 		return nettingIdentification;
 	}
 
-	public void setNettingIdentification(NettingIdentification1Choice nettingIdentification) {
-		this.nettingIdentification = nettingIdentification;
+	public NettingCutOff1 setNettingIdentification(NettingIdentification1Choice nettingIdentification) {
+		this.nettingIdentification = Objects.requireNonNull(nettingIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "NewCutOff", required = true)
 	public List<CutOff1> getNewCutOff() {
-		return newCutOff;
+		return newCutOff == null ? newCutOff = new ArrayList<>() : newCutOff;
 	}
 
-	public void setNewCutOff(List<com.tools20022.repository.msg.CutOff1> newCutOff) {
-		this.newCutOff = newCutOff;
+	public NettingCutOff1 setNewCutOff(List<com.tools20022.repository.msg.CutOff1> newCutOff) {
+		this.newCutOff = Objects.requireNonNull(newCutOff);
+		return this;
 	}
 }

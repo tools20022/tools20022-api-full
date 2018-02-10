@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -45,22 +46,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementArchive
- * CashManagementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "camt.033.001.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "camt.033.001.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -73,6 +58,22 @@ import javax.xml.bind.annotation.*;
  * RequestForDuplicateInstruction.mmCase}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "camt.033.001.01"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementArchive
+ * CashManagementArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "camt.033.001.01"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.033.001.01}</li>
@@ -88,15 +89,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "camt.033.001.01", propOrder = {"assignment", "case"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "camt.033.001.01", propOrder = {"assignment", "case_"})
 public class RequestForDuplicateInstruction {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Assgnmt", required = true)
 	protected CaseAssignment assignment;
 	/**
-	 * (No doc)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,10 +133,11 @@ public class RequestForDuplicateInstruction {
 			}
 		}
 	};
+	@XmlElement(name = "Case", required = true)
 	protected Case case_;
 	/**
-	 * (No doc)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,25 +202,25 @@ public class RequestForDuplicateInstruction {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment getAssignment() {
 		return assignment;
 	}
 
-	public void setAssignment(CaseAssignment assignment) {
-		this.assignment = assignment;
+	public RequestForDuplicateInstruction setAssignment(CaseAssignment assignment) {
+		this.assignment = Objects.requireNonNull(assignment);
+		return this;
 	}
 
-	@XmlElement(name = "Case", required = true)
 	public Case getCase() {
 		return case_;
 	}
 
-	public void setCase(Case case_) {
-		this.case_ = case_;
+	public RequestForDuplicateInstruction setCase(Case case_) {
+		this.case_ = Objects.requireNonNull(case_);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.033.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.033.001.01")
 	static public class Document {
 		@XmlElement(name = "camt.033.001.01", required = true)
 		public RequestForDuplicateInstruction messageBody;

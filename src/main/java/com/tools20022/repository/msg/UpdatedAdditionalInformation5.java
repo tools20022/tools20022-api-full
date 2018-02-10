@@ -24,9 +24,8 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.RestrictedFINXMax140Text;
 import com.tools20022.repository.datatype.RestrictedFINXMax350Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Additional information with update description and date."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UpdatedAdditionalInformation5", propOrder = {"updateDescription", "updateDate", "additionalInformation"})
 public class UpdatedAdditionalInformation5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UpdDesc")
 	protected RestrictedFINXMax140Text updateDescription;
 	/**
-	 * Specifies the amendments made to the narrative since the last message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +104,7 @@ public class UpdatedAdditionalInformation5 {
 	 */
 	public static final MMMessageAttribute mmUpdateDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "UpdDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +115,11 @@ public class UpdatedAdditionalInformation5 {
 			simpleType_lazy = () -> RestrictedFINXMax140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "UpdDt")
 	protected ISODate updateDate;
 	/**
-	 * Specifies the date at which the narrative has been updated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +147,7 @@ public class UpdatedAdditionalInformation5 {
 	 */
 	public static final MMMessageAttribute mmUpdateDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "UpdDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,10 +158,11 @@ public class UpdatedAdditionalInformation5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf", required = true)
 	protected List<RestrictedFINXMax350Text> additionalInformation;
 	/**
-	 * Provides additional textual information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,7 +190,7 @@ public class UpdatedAdditionalInformation5 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,8 +204,9 @@ public class UpdatedAdditionalInformation5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UpdatedAdditionalInformation5.mmUpdateDescription, UpdatedAdditionalInformation5.mmUpdateDate, UpdatedAdditionalInformation5.mmAdditionalInformation);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation5.mmUpdateDescription, com.tools20022.repository.msg.UpdatedAdditionalInformation5.mmUpdateDate,
+						com.tools20022.repository.msg.UpdatedAdditionalInformation5.mmAdditionalInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UpdatedAdditionalInformation5";
 				definition = "Additional information with update description and date.";
@@ -212,30 +215,30 @@ public class UpdatedAdditionalInformation5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UpdDesc")
-	public RestrictedFINXMax140Text getUpdateDescription() {
-		return updateDescription;
+	public Optional<RestrictedFINXMax140Text> getUpdateDescription() {
+		return updateDescription == null ? Optional.empty() : Optional.of(updateDescription);
 	}
 
-	public void setUpdateDescription(RestrictedFINXMax140Text updateDescription) {
+	public UpdatedAdditionalInformation5 setUpdateDescription(RestrictedFINXMax140Text updateDescription) {
 		this.updateDescription = updateDescription;
+		return this;
 	}
 
-	@XmlElement(name = "UpdDt")
-	public ISODate getUpdateDate() {
-		return updateDate;
+	public Optional<ISODate> getUpdateDate() {
+		return updateDate == null ? Optional.empty() : Optional.of(updateDate);
 	}
 
-	public void setUpdateDate(ISODate updateDate) {
+	public UpdatedAdditionalInformation5 setUpdateDate(ISODate updateDate) {
 		this.updateDate = updateDate;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf", required = true)
 	public List<RestrictedFINXMax350Text> getAdditionalInformation() {
-		return additionalInformation;
+		return additionalInformation == null ? additionalInformation = new ArrayList<>() : additionalInformation;
 	}
 
-	public void setAdditionalInformation(List<RestrictedFINXMax350Text> additionalInformation) {
-		this.additionalInformation = additionalInformation;
+	public UpdatedAdditionalInformation5 setAdditionalInformation(List<RestrictedFINXMax350Text> additionalInformation) {
+		this.additionalInformation = Objects.requireNonNull(additionalInformation);
+		return this;
 	}
 }

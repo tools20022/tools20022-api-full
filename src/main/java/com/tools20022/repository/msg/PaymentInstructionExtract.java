@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -92,8 +93,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,16 +107,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentInstructionExtract", propOrder = {"assignerInstructionIdentification", "assigneeInstructionIdentification", "currencyAmount", "valueDate"})
 public class PaymentInstructionExtract {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AssgnrInstrId")
 	protected Max35Text assignerInstructionIdentification;
 	/**
-	 * Identification of the payment instruction (eg, field 20 of an MT 103)
-	 * when meaningful to the case assigner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,7 +151,7 @@ public class PaymentInstructionExtract {
 	public static final MMMessageAttribute mmAssignerInstructionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
-			componentContext_lazy = () -> PaymentInstructionExtract.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract.mmObject();
 			isDerived = false;
 			xmlTag = "AssgnrInstrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,11 +162,11 @@ public class PaymentInstructionExtract {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AssgneInstrId")
 	protected Max35Text assigneeInstructionIdentification;
 	/**
-	 * Identification of the payment instruction (eg, field 20 of an MT 103)
-	 * when meaningful to the case assignee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,7 +201,7 @@ public class PaymentInstructionExtract {
 	public static final MMMessageAttribute mmAssigneeInstructionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
-			componentContext_lazy = () -> PaymentInstructionExtract.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract.mmObject();
 			isDerived = false;
 			xmlTag = "AssgneInstrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,12 +212,11 @@ public class PaymentInstructionExtract {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CcyAmt")
 	protected CurrencyAndAmount currencyAmount;
 	/**
-	 * Amount of the payment. Depending on the context it can be either the
-	 * amount settled (UnableToApply) or the instructed amount (RequestToCancel,
-	 * RequestToModify, ClaimNonReceipt).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -252,7 +252,7 @@ public class PaymentInstructionExtract {
 	public static final MMMessageAttribute mmCurrencyAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
-			componentContext_lazy = () -> PaymentInstructionExtract.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract.mmObject();
 			isDerived = false;
 			xmlTag = "CcyAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,10 +263,11 @@ public class PaymentInstructionExtract {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ValDt")
 	protected ISODateTime valueDate;
 	/**
-	 * Value date of the payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -299,7 +300,7 @@ public class PaymentInstructionExtract {
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
-			componentContext_lazy = () -> PaymentInstructionExtract.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -314,12 +315,13 @@ public class PaymentInstructionExtract {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentInstructionExtract.mmAssignerInstructionIdentification, PaymentInstructionExtract.mmAssigneeInstructionIdentification, PaymentInstructionExtract.mmCurrencyAmount,
-						PaymentInstructionExtract.mmValueDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionExtract.mmAssignerInstructionIdentification,
+						com.tools20022.repository.msg.PaymentInstructionExtract.mmAssigneeInstructionIdentification, com.tools20022.repository.msg.PaymentInstructionExtract.mmCurrencyAmount,
+						com.tools20022.repository.msg.PaymentInstructionExtract.mmValueDate);
 				messageBuildingBlock_lazy = () -> Arrays.asList(RequestToModifyPayment.mmUnderlying, RequestToCancelPayment.mmUnderlying, UnableToApply.mmUnderlying, ClaimNonReceipt.mmUnderlying, AdditionalPaymentInformation.mmUnderlying,
 						ResolutionOfInvestigation.mmCorrectionTransaction, DebitAuthorisationRequest.mmUnderlying);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstructionExtract";
 				definition = "Details of a payment instruction. The information contained in this component is sufficient to retrieve a payment instruction.";
@@ -328,39 +330,39 @@ public class PaymentInstructionExtract {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AssgnrInstrId")
-	public Max35Text getAssignerInstructionIdentification() {
-		return assignerInstructionIdentification;
+	public Optional<Max35Text> getAssignerInstructionIdentification() {
+		return assignerInstructionIdentification == null ? Optional.empty() : Optional.of(assignerInstructionIdentification);
 	}
 
-	public void setAssignerInstructionIdentification(Max35Text assignerInstructionIdentification) {
+	public PaymentInstructionExtract setAssignerInstructionIdentification(Max35Text assignerInstructionIdentification) {
 		this.assignerInstructionIdentification = assignerInstructionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AssgneInstrId")
-	public Max35Text getAssigneeInstructionIdentification() {
-		return assigneeInstructionIdentification;
+	public Optional<Max35Text> getAssigneeInstructionIdentification() {
+		return assigneeInstructionIdentification == null ? Optional.empty() : Optional.of(assigneeInstructionIdentification);
 	}
 
-	public void setAssigneeInstructionIdentification(Max35Text assigneeInstructionIdentification) {
+	public PaymentInstructionExtract setAssigneeInstructionIdentification(Max35Text assigneeInstructionIdentification) {
 		this.assigneeInstructionIdentification = assigneeInstructionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CcyAmt")
-	public CurrencyAndAmount getCurrencyAmount() {
-		return currencyAmount;
+	public Optional<CurrencyAndAmount> getCurrencyAmount() {
+		return currencyAmount == null ? Optional.empty() : Optional.of(currencyAmount);
 	}
 
-	public void setCurrencyAmount(CurrencyAndAmount currencyAmount) {
+	public PaymentInstructionExtract setCurrencyAmount(CurrencyAndAmount currencyAmount) {
 		this.currencyAmount = currencyAmount;
+		return this;
 	}
 
-	@XmlElement(name = "ValDt")
-	public ISODateTime getValueDate() {
-		return valueDate;
+	public Optional<ISODateTime> getValueDate() {
+		return valueDate == null ? Optional.empty() : Optional.of(valueDate);
 	}
 
-	public void setValueDate(ISODateTime valueDate) {
+	public PaymentInstructionExtract setValueDate(ISODateTime valueDate) {
 		this.valueDate = valueDate;
+		return this;
 	}
 }

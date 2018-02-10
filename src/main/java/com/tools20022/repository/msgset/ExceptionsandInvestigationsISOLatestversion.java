@@ -82,8 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
  * businessProcessCatalogue} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmcatalogue
- * GeneratedRepository.mmcatalogue}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
+ * GeneratedRepository.catalogue}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,7 +103,7 @@ public class ExceptionsandInvestigationsISOLatestversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Exceptions and Investigations - ISO - Latest version";
 				definition = "Set of messages to support payment-related investigation activities such as cancellation, modification, unable to apply and claim of non-receipt.\r\n";

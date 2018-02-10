@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.RoutingTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the type of routing.
@@ -31,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RoutingTypeCode#mmAllowed
- * RoutingTypeCode.mmAllowed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RoutingTypeCode#mmBlocked
- * RoutingTypeCode.mmBlocked}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RoutingTypeCode#Allowed
+ * RoutingTypeCode.Allowed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RoutingTypeCode#Blocked
+ * RoutingTypeCode.Blocked}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates the type of routing."</li>
  * </ul>
  */
-public class RoutingTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RoutingTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,12 +95,12 @@ public class RoutingTypeCode {
 	 * definition} = "Indicates that routing is allowed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAllowed = new MMCode() {
+	public static final RoutingTypeCode Allowed = new RoutingTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Allowed";
 			definition = "Indicates that routing is allowed.";
-			owner_lazy = () -> RoutingTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RoutingTypeCode.mmObject();
 			codeName = "ALLO";
 		}
 	};
@@ -119,28 +125,58 @@ public class RoutingTypeCode {
 	 * definition} = "Indicates that routing is blocked."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBlocked = new MMCode() {
+	public static final RoutingTypeCode Blocked = new RoutingTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
 			definition = "Indicates that routing is blocked.";
-			owner_lazy = () -> RoutingTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RoutingTypeCode.mmObject();
 			codeName = "BLOC";
 		}
 	};
+	final static private LinkedHashMap<String, RoutingTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RoutingTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ALLO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RoutingTypeCode";
 				definition = "Indicates the type of routing.";
-				code_lazy = () -> Arrays.asList(RoutingTypeCode.mmAllowed, RoutingTypeCode.mmBlocked);
 				derivation_lazy = () -> Arrays.asList(RoutingType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RoutingTypeCode.Allowed, com.tools20022.repository.codeset.RoutingTypeCode.Blocked);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Allowed.getCodeName().get(), Allowed);
+		codesByName.put(Blocked.getCodeName().get(), Blocked);
+	}
+
+	public static RoutingTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RoutingTypeCode[] values() {
+		RoutingTypeCode[] values = new RoutingTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RoutingTypeCode> {
+		@Override
+		public RoutingTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RoutingTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

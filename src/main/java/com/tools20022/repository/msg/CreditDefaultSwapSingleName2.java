@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.Swaps;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,16 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CreditDefaultSwapSingleName2", propOrder = {"sovereignIssuer", "referenceParty", "notionalCurrency"})
 public class CreditDefaultSwapSingleName2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SvrgnIssr", required = true)
 	protected TrueFalseIndicator sovereignIssuer;
 	/**
-	 * Reference entity of a single name credit default swap (CDS) or a
-	 * derivative on single name CDS.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +124,7 @@ public class CreditDefaultSwapSingleName2 {
 	public static final MMMessageAttribute mmSovereignIssuer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Swaps.mmSovereignIssuer;
-			componentContext_lazy = () -> CreditDefaultSwapSingleName2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDefaultSwapSingleName2.mmObject();
 			isDerived = false;
 			xmlTag = "SvrgnIssr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,11 +135,11 @@ public class CreditDefaultSwapSingleName2 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "RefPty")
 	protected DerivativePartyIdentification1Choice referenceParty;
 	/**
-	 * Reference entity of a single name credit default swap (CDS) or a
-	 * derivative on single name credit default swap (CDS).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -172,7 +174,7 @@ public class CreditDefaultSwapSingleName2 {
 	public static final MMMessageAssociationEnd mmReferenceParty = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RegistrarRole.mmObject();
-			componentContext_lazy = () -> CreditDefaultSwapSingleName2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDefaultSwapSingleName2.mmObject();
 			isDerived = false;
 			xmlTag = "RefPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,10 +186,11 @@ public class CreditDefaultSwapSingleName2 {
 			type_lazy = () -> DerivativePartyIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NtnlCcy", required = true)
 	protected ActiveOrHistoricCurrencyCode notionalCurrency;
 	/**
-	 * Currency in which the notional is denominated.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -221,7 +224,7 @@ public class CreditDefaultSwapSingleName2 {
 	public static final MMMessageAttribute mmNotionalCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrency;
-			componentContext_lazy = () -> CreditDefaultSwapSingleName2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDefaultSwapSingleName2.mmObject();
 			isDerived = false;
 			xmlTag = "NtnlCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,9 +239,10 @@ public class CreditDefaultSwapSingleName2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CreditDefaultSwapSingleName2.mmSovereignIssuer, CreditDefaultSwapSingleName2.mmReferenceParty, CreditDefaultSwapSingleName2.mmNotionalCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditDefaultSwapSingleName2.mmSovereignIssuer, com.tools20022.repository.msg.CreditDefaultSwapSingleName2.mmReferenceParty,
+						com.tools20022.repository.msg.CreditDefaultSwapSingleName2.mmNotionalCurrency);
 				trace_lazy = () -> CreditDefaultSwap.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditDefaultSwapSingleName2";
 				definition = "Credit default swap derivative specific for reporting on a single name credit default swap.";
@@ -247,30 +251,30 @@ public class CreditDefaultSwapSingleName2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SvrgnIssr", required = true)
 	public TrueFalseIndicator getSovereignIssuer() {
 		return sovereignIssuer;
 	}
 
-	public void setSovereignIssuer(TrueFalseIndicator sovereignIssuer) {
-		this.sovereignIssuer = sovereignIssuer;
+	public CreditDefaultSwapSingleName2 setSovereignIssuer(TrueFalseIndicator sovereignIssuer) {
+		this.sovereignIssuer = Objects.requireNonNull(sovereignIssuer);
+		return this;
 	}
 
-	@XmlElement(name = "RefPty")
-	public DerivativePartyIdentification1Choice getReferenceParty() {
-		return referenceParty;
+	public Optional<DerivativePartyIdentification1Choice> getReferenceParty() {
+		return referenceParty == null ? Optional.empty() : Optional.of(referenceParty);
 	}
 
-	public void setReferenceParty(DerivativePartyIdentification1Choice referenceParty) {
+	public CreditDefaultSwapSingleName2 setReferenceParty(DerivativePartyIdentification1Choice referenceParty) {
 		this.referenceParty = referenceParty;
+		return this;
 	}
 
-	@XmlElement(name = "NtnlCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getNotionalCurrency() {
 		return notionalCurrency;
 	}
 
-	public void setNotionalCurrency(ActiveOrHistoricCurrencyCode notionalCurrency) {
-		this.notionalCurrency = notionalCurrency;
+	public CreditDefaultSwapSingleName2 setNotionalCurrency(ActiveOrHistoricCurrencyCode notionalCurrency) {
+		this.notionalCurrency = Objects.requireNonNull(notionalCurrency);
+		return this;
 	}
 }

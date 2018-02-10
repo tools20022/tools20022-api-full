@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Alternate identification of a security."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AlternateIdentification2", propOrder = {"identification", "identificationSource"})
 public class AlternateIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected RestrictedFINXMax31Text identification;
 	/**
-	 * Unique and unambiguous identifier of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class AlternateIdentification2 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> AlternateIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class AlternateIdentification2 {
 			simpleType_lazy = () -> RestrictedFINXMax31Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IdSrc", required = true)
 	protected IdentificationSource2Choice identificationSource;
 	/**
-	 * Source of the security identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -158,7 +161,7 @@ public class AlternateIdentification2 {
 	public static final MMMessageAssociationEnd mmIdentificationSource = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
-			componentContext_lazy = () -> AlternateIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "IdSrc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,9 +177,9 @@ public class AlternateIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AlternateIdentification2.mmIdentification, AlternateIdentification2.mmIdentificationSource);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateIdentification2.mmIdentification, com.tools20022.repository.msg.AlternateIdentification2.mmIdentificationSource);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlternateIdentification2";
 				definition = "Alternate identification of a security.";
@@ -185,21 +188,21 @@ public class AlternateIdentification2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public RestrictedFINXMax31Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(RestrictedFINXMax31Text identification) {
-		this.identification = identification;
+	public AlternateIdentification2 setIdentification(RestrictedFINXMax31Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "IdSrc", required = true)
 	public IdentificationSource2Choice getIdentificationSource() {
 		return identificationSource;
 	}
 
-	public void setIdentificationSource(IdentificationSource2Choice identificationSource) {
-		this.identificationSource = identificationSource;
+	public AlternateIdentification2 setIdentificationSource(IdentificationSource2Choice identificationSource) {
+		this.identificationSource = Objects.requireNonNull(identificationSource);
+		return this;
 	}
 }

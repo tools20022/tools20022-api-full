@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.PartyReport1;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Report between the party reference data or an operational error."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyOrOperationalError1Choice", propOrder = {"partyReport", "operationalError"})
 public class PartyOrOperationalError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PtyRpt", required = true)
 	protected List<PartyReport1> partyReport;
 	/**
-	 * Report information about party reference data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -98,7 +101,7 @@ public class PartyOrOperationalError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPartyReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyOrOperationalError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyOrOperationalError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PtyRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,10 +112,11 @@ public class PartyOrOperationalError1Choice {
 			type_lazy = () -> PartyReport1.mmObject();
 		}
 	};
+	@XmlElement(name = "OprlErr", required = true)
 	protected List<ErrorHandling3> operationalError;
 	/**
-	 * Operational error resulting from a rejection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -138,7 +142,7 @@ public class PartyOrOperationalError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyOrOperationalError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyOrOperationalError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,8 +157,8 @@ public class PartyOrOperationalError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyOrOperationalError1Choice.mmPartyReport, PartyOrOperationalError1Choice.mmOperationalError);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyOrOperationalError1Choice.mmPartyReport, com.tools20022.repository.choice.PartyOrOperationalError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyOrOperationalError1Choice";
 				definition = "Report between the party reference data or an operational error.";
@@ -163,21 +167,21 @@ public class PartyOrOperationalError1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PtyRpt", required = true)
 	public List<PartyReport1> getPartyReport() {
-		return partyReport;
+		return partyReport == null ? partyReport = new ArrayList<>() : partyReport;
 	}
 
-	public void setPartyReport(List<PartyReport1> partyReport) {
-		this.partyReport = partyReport;
+	public PartyOrOperationalError1Choice setPartyReport(List<PartyReport1> partyReport) {
+		this.partyReport = Objects.requireNonNull(partyReport);
+		return this;
 	}
 
-	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling3> getOperationalError() {
-		return operationalError;
+		return operationalError == null ? operationalError = new ArrayList<>() : operationalError;
 	}
 
-	public void setOperationalError(List<ErrorHandling3> operationalError) {
-		this.operationalError = operationalError;
+	public PartyOrOperationalError1Choice setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = Objects.requireNonNull(operationalError);
+		return this;
 	}
 }

@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.RestrictedFINXMax8Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RateName2", propOrder = {"issuer", "rateName"})
 public class RateName2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Issr")
 	protected RestrictedFINXMax8Text issuer;
 	/**
-	 * Entity that assigns the identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +101,7 @@ public class RateName2 {
 	 */
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RateName2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateName2.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,11 +112,11 @@ public class RateName2 {
 			simpleType_lazy = () -> RestrictedFINXMax8Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RateNm", required = true)
 	protected RestrictedFINXMax24Text rateName;
 	/**
-	 * Rate Name specifies the reference rate or basis rate on which a variable
-	 * rate is based (ex: EONIA, EURIBOR, LIBOR, FEFUND, EURREPO).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +145,7 @@ public class RateName2 {
 	 */
 	public static final MMMessageAttribute mmRateName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RateName2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateName2.mmObject();
 			isDerived = false;
 			xmlTag = "RateNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,8 +160,8 @@ public class RateName2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RateName2.mmIssuer, RateName2.mmRateName);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateName2.mmIssuer, com.tools20022.repository.msg.RateName2.mmRateName);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateName2";
 				definition = "Rate name specifies the reference rate or basis rate on which a variable rate is based (ex: EONIA, EURIBOR, LIBOR, FEFUND, EURREPO).";
@@ -167,21 +170,21 @@ public class RateName2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Issr")
-	public RestrictedFINXMax8Text getIssuer() {
-		return issuer;
+	public Optional<RestrictedFINXMax8Text> getIssuer() {
+		return issuer == null ? Optional.empty() : Optional.of(issuer);
 	}
 
-	public void setIssuer(RestrictedFINXMax8Text issuer) {
+	public RateName2 setIssuer(RestrictedFINXMax8Text issuer) {
 		this.issuer = issuer;
+		return this;
 	}
 
-	@XmlElement(name = "RateNm", required = true)
 	public RestrictedFINXMax24Text getRateName() {
 		return rateName;
 	}
 
-	public void setRateName(RestrictedFINXMax24Text rateName) {
-		this.rateName = rateName;
+	public RateName2 setRateName(RestrictedFINXMax24Text rateName) {
+		this.rateName = Objects.requireNonNull(rateName);
+		return this;
 	}
 }

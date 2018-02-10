@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -36,6 +37,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -77,8 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forStatement30
+ * ConstraintCoexistenceIdentificationRule.forStatement30}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -91,16 +102,16 @@ import javax.xml.bind.annotation.XmlType;
  * "General characteristics related to a statement which reports information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Statement30", propOrder = {"statementType", "reportingType", "statementIdentification", "reportNumber", "statementDateTime", "frequency", "updateType", "activityIndicator", "notificationDeadlinePeriod"})
 public class Statement30 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StmtTp", required = true)
 	protected CorporateActionStatementType1Code statementType;
 	/**
-	 * Indicates whether the statement contains missing instructions only or all
-	 * instructions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -129,7 +140,7 @@ public class Statement30 {
 	 */
 	public static final MMMessageAttribute mmStatementType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement30.mmObject();
 			isDerived = false;
 			xmlTag = "StmtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,12 +151,11 @@ public class Statement30 {
 			simpleType_lazy = () -> CorporateActionStatementType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RptgTp", required = true)
 	protected CorporateActionStatementReportingType1Code reportingType;
 	/**
-	 * Indicates whether the statement report on account holdings for corporate
-	 * action events is for single account/multiple events or multiple
-	 * accounts/single event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,7 +184,7 @@ public class Statement30 {
 	 */
 	public static final MMMessageAttribute mmReportingType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement30.mmObject();
 			isDerived = false;
 			xmlTag = "RptgTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,10 +195,11 @@ public class Statement30 {
 			simpleType_lazy = () -> CorporateActionStatementReportingType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtId", required = true)
 	protected RestrictedFINXMax16Text statementIdentification;
 	/**
-	 * Reference of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,7 +226,7 @@ public class Statement30 {
 	 */
 	public static final MMMessageAttribute mmStatementIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement30.mmObject();
 			isDerived = false;
 			xmlTag = "StmtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,10 +237,11 @@ public class Statement30 {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RptNb")
 	protected Max5NumericText reportNumber;
 	/**
-	 * Sequential number of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,6 +256,9 @@ public class Statement30 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RptNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13a::STAT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -256,9 +271,10 @@ public class Statement30 {
 	 */
 	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement30.mmObject();
 			isDerived = false;
 			xmlTag = "RptNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13a::STAT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the statement.";
@@ -267,10 +283,11 @@ public class Statement30 {
 			simpleType_lazy = () -> Max5NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtDtTm", required = true)
 	protected DateAndDateTimeChoice statementDateTime;
 	/**
-	 * Date of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -284,6 +301,9 @@ public class Statement30 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StmtDtTm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::STAT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -296,9 +316,10 @@ public class Statement30 {
 	 */
 	public static final MMMessageAssociationEnd mmStatementDateTime = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Statement30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement30.mmObject();
 			isDerived = false;
 			xmlTag = "StmtDtTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::STAT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDateTime";
 			definition = "Date of the statement.";
@@ -308,10 +329,11 @@ public class Statement30 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Frqcy", required = true)
 	protected Frequency6Choice frequency;
 	/**
-	 * Frequency of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -323,6 +345,9 @@ public class Statement30 {
 	 * {@linkplain com.tools20022.repository.msg.Statement30 Statement30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Frqcy"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::SFRE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -336,9 +361,10 @@ public class Statement30 {
 	 */
 	public static final MMMessageAssociationEnd mmFrequency = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Statement30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement30.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::SFRE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the statement.";
@@ -348,10 +374,11 @@ public class Statement30 {
 			type_lazy = () -> Frequency6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "UpdTp", required = true)
 	protected UpdateType3Choice updateType;
 	/**
-	 * Indicates whether the report is complete or contains changes only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -363,6 +390,9 @@ public class Statement30 {
 	 * {@linkplain com.tools20022.repository.msg.Statement30 Statement30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UpdTp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::CODE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -377,9 +407,10 @@ public class Statement30 {
 	 */
 	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Statement30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement30.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CODE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the report is complete or contains changes only.";
@@ -389,11 +420,11 @@ public class Statement30 {
 			type_lazy = () -> UpdateType3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ActvtyInd", required = true)
 	protected YesNoIndicator activityIndicator;
 	/**
-	 * Indicates whether there is activity or information update reported in the
-	 * statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -407,6 +438,9 @@ public class Statement30 {
 	 * {@linkplain com.tools20022.repository.msg.Statement30 Statement30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ActvtyInd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :17B::ACTI</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -422,9 +456,10 @@ public class Statement30 {
 	 */
 	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement30.mmObject();
 			isDerived = false;
 			xmlTag = "ActvtyInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":17B::ACTI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
@@ -433,10 +468,11 @@ public class Statement30 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "NtfctnDdlnPrd")
 	protected DateOrDateTimePeriodChoice notificationDeadlinePeriod;
 	/**
-	 * Period during which identification deadline has been set.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -463,7 +499,7 @@ public class Statement30 {
 	 */
 	public static final MMMessageAssociationEnd mmNotificationDeadlinePeriod = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Statement30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement30.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnDdlnPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -479,9 +515,12 @@ public class Statement30 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Statement30.mmStatementType, Statement30.mmReportingType, Statement30.mmStatementIdentification, Statement30.mmReportNumber, Statement30.mmStatementDateTime,
-						Statement30.mmFrequency, Statement30.mmUpdateType, Statement30.mmActivityIndicator, Statement30.mmNotificationDeadlinePeriod);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement30.mmStatementType, com.tools20022.repository.msg.Statement30.mmReportingType,
+						com.tools20022.repository.msg.Statement30.mmStatementIdentification, com.tools20022.repository.msg.Statement30.mmReportNumber, com.tools20022.repository.msg.Statement30.mmStatementDateTime,
+						com.tools20022.repository.msg.Statement30.mmFrequency, com.tools20022.repository.msg.Statement30.mmUpdateType, com.tools20022.repository.msg.Statement30.mmActivityIndicator,
+						com.tools20022.repository.msg.Statement30.mmNotificationDeadlinePeriod);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forStatement30);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -497,84 +536,84 @@ public class Statement30 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StmtTp", required = true)
 	public CorporateActionStatementType1Code getStatementType() {
 		return statementType;
 	}
 
-	public void setStatementType(CorporateActionStatementType1Code statementType) {
-		this.statementType = statementType;
+	public Statement30 setStatementType(CorporateActionStatementType1Code statementType) {
+		this.statementType = Objects.requireNonNull(statementType);
+		return this;
 	}
 
-	@XmlElement(name = "RptgTp", required = true)
 	public CorporateActionStatementReportingType1Code getReportingType() {
 		return reportingType;
 	}
 
-	public void setReportingType(CorporateActionStatementReportingType1Code reportingType) {
-		this.reportingType = reportingType;
+	public Statement30 setReportingType(CorporateActionStatementReportingType1Code reportingType) {
+		this.reportingType = Objects.requireNonNull(reportingType);
+		return this;
 	}
 
-	@XmlElement(name = "StmtId", required = true)
 	public RestrictedFINXMax16Text getStatementIdentification() {
 		return statementIdentification;
 	}
 
-	public void setStatementIdentification(RestrictedFINXMax16Text statementIdentification) {
-		this.statementIdentification = statementIdentification;
+	public Statement30 setStatementIdentification(RestrictedFINXMax16Text statementIdentification) {
+		this.statementIdentification = Objects.requireNonNull(statementIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RptNb")
-	public Max5NumericText getReportNumber() {
-		return reportNumber;
+	public Optional<Max5NumericText> getReportNumber() {
+		return reportNumber == null ? Optional.empty() : Optional.of(reportNumber);
 	}
 
-	public void setReportNumber(Max5NumericText reportNumber) {
+	public Statement30 setReportNumber(Max5NumericText reportNumber) {
 		this.reportNumber = reportNumber;
+		return this;
 	}
 
-	@XmlElement(name = "StmtDtTm", required = true)
 	public DateAndDateTimeChoice getStatementDateTime() {
 		return statementDateTime;
 	}
 
-	public void setStatementDateTime(DateAndDateTimeChoice statementDateTime) {
-		this.statementDateTime = statementDateTime;
+	public Statement30 setStatementDateTime(DateAndDateTimeChoice statementDateTime) {
+		this.statementDateTime = Objects.requireNonNull(statementDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "Frqcy", required = true)
 	public Frequency6Choice getFrequency() {
 		return frequency;
 	}
 
-	public void setFrequency(Frequency6Choice frequency) {
-		this.frequency = frequency;
+	public Statement30 setFrequency(Frequency6Choice frequency) {
+		this.frequency = Objects.requireNonNull(frequency);
+		return this;
 	}
 
-	@XmlElement(name = "UpdTp", required = true)
 	public UpdateType3Choice getUpdateType() {
 		return updateType;
 	}
 
-	public void setUpdateType(UpdateType3Choice updateType) {
-		this.updateType = updateType;
+	public Statement30 setUpdateType(UpdateType3Choice updateType) {
+		this.updateType = Objects.requireNonNull(updateType);
+		return this;
 	}
 
-	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}
 
-	public void setActivityIndicator(YesNoIndicator activityIndicator) {
-		this.activityIndicator = activityIndicator;
+	public Statement30 setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = Objects.requireNonNull(activityIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "NtfctnDdlnPrd")
-	public DateOrDateTimePeriodChoice getNotificationDeadlinePeriod() {
-		return notificationDeadlinePeriod;
+	public Optional<DateOrDateTimePeriodChoice> getNotificationDeadlinePeriod() {
+		return notificationDeadlinePeriod == null ? Optional.empty() : Optional.of(notificationDeadlinePeriod);
 	}
 
-	public void setNotificationDeadlinePeriod(DateOrDateTimePeriodChoice notificationDeadlinePeriod) {
+	public Statement30 setNotificationDeadlinePeriod(DateOrDateTimePeriodChoice notificationDeadlinePeriod) {
 		this.notificationDeadlinePeriod = notificationDeadlinePeriod;
+		return this;
 	}
 }

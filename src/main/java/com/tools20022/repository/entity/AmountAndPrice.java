@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Expression of amount.
@@ -56,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,8 +74,8 @@ public class AmountAndPrice {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyAndAmount amount;
 	/**
-	 * Amount expressed as an amount of money.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,8 +110,8 @@ public class AmountAndPrice {
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountPrice1Choice.mmAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndPrice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndPrice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Amount expressed as an amount of money.";
@@ -129,8 +130,8 @@ public class AmountAndPrice {
 	};
 	protected SecuritiesPricing price;
 	/**
-	 * Amount expressed as a price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,8 +166,8 @@ public class AmountAndPrice {
 	public static final MMBusinessAttribute mmPrice = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountPrice1Choice.mmUnitPrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndPrice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndPrice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Price";
 			definition = "Amount expressed as a price.";
@@ -187,7 +188,7 @@ public class AmountAndPrice {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndPrice";
 				definition = "Expression of amount.";
@@ -207,15 +208,17 @@ public class AmountAndPrice {
 		return amount;
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
-		this.amount = amount;
+	public AmountAndPrice setAmount(CurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
 	public SecuritiesPricing getPrice() {
 		return price;
 	}
 
-	public void setPrice(com.tools20022.repository.entity.SecuritiesPricing price) {
-		this.price = price;
+	public AmountAndPrice setPrice(com.tools20022.repository.entity.SecuritiesPricing price) {
+		this.price = Objects.requireNonNull(price);
+		return this;
 	}
 }

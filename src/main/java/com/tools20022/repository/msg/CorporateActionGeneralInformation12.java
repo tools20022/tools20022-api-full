@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -32,6 +33,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +73,20 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintEventTypeRule#forCorporateActionGeneralInformation12
+ * ConstraintEventTypeRule.forCorporateActionGeneralInformation12}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forCorporateActionGeneralInformation12
+ * ConstraintCoexistenceIdentificationRule.
+ * forCorporateActionGeneralInformation12}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -83,16 +98,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "General information about the corporate action event."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionGeneralInformation12", propOrder = {"corporateActionEventIdentification", "officialCorporateActionEventIdentification", "classActionNumber", "eventType", "mandatoryVoluntaryEventType"})
 public class CorporateActionGeneralInformation12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CorpActnEvtId", required = true)
 	protected Max35Text corporateActionEventIdentification;
 	/**
-	 * Reference assigned by the account servicer to unambiguously identify a
-	 * corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,6 +127,9 @@ public class CorporateActionGeneralInformation12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CorpActnEvtId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::CORP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -127,9 +145,10 @@ public class CorporateActionGeneralInformation12 {
 	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
-			componentContext_lazy = () -> CorporateActionGeneralInformation12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnEvtId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::CORP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Reference assigned by the account servicer to unambiguously identify a corporate action event.";
@@ -138,12 +157,11 @@ public class CorporateActionGeneralInformation12 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OffclCorpActnEvtId")
 	protected Max35Text officialCorporateActionEventIdentification;
 	/**
-	 * Official and unique reference assigned by the official central
-	 * body/entity within each market at the beginning of a corporate action
-	 * event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,6 +182,9 @@ public class CorporateActionGeneralInformation12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OffclCorpActnEvtId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::COAF</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -179,9 +200,10 @@ public class CorporateActionGeneralInformation12 {
 	public static final MMMessageAttribute mmOfficialCorporateActionEventIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification;
-			componentContext_lazy = () -> CorporateActionGeneralInformation12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "OffclCorpActnEvtId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::COAF"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialCorporateActionEventIdentification";
 			definition = "Official and unique reference assigned by the official central body/entity within each market at the beginning of a corporate action event.";
@@ -190,10 +212,11 @@ public class CorporateActionGeneralInformation12 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClssActnNb")
 	protected Max35Text classActionNumber;
 	/**
-	 * Reference assigned by a court to a class action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,6 +236,9 @@ public class CorporateActionGeneralInformation12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClssActnNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::CACN</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -226,9 +252,10 @@ public class CorporateActionGeneralInformation12 {
 	public static final MMMessageAttribute mmClassActionNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ClassAction.mmClassActionNumber;
-			componentContext_lazy = () -> CorporateActionGeneralInformation12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "ClssActnNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::CACN"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassActionNumber";
 			definition = "Reference assigned by a court to a class action.";
@@ -237,10 +264,11 @@ public class CorporateActionGeneralInformation12 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtTp", required = true)
 	protected CorporateActionEventType3Choice eventType;
 	/**
-	 * Type of corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -261,6 +289,9 @@ public class CorporateActionGeneralInformation12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EvtTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::CAEV</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -274,9 +305,10 @@ public class CorporateActionGeneralInformation12 {
 	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
-			componentContext_lazy = () -> CorporateActionGeneralInformation12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "EvtTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CAEV"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "Type of corporate action event.";
@@ -285,11 +317,11 @@ public class CorporateActionGeneralInformation12 {
 			complexType_lazy = () -> CorporateActionEventType3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MndtryVlntryEvtTp")
 	protected CorporateActionMandatoryVoluntary1Choice mandatoryVoluntaryEventType;
 	/**
-	 * Specifies whether the event is mandatory, mandatory with options or
-	 * voluntary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -310,6 +342,9 @@ public class CorporateActionGeneralInformation12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MndtryVlntryEvtTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::CAMV</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -325,9 +360,10 @@ public class CorporateActionGeneralInformation12 {
 	public static final MMMessageAttribute mmMandatoryVoluntaryEventType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmMandatoryVoluntaryEventType;
-			componentContext_lazy = () -> CorporateActionGeneralInformation12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation12.mmObject();
 			isDerived = false;
 			xmlTag = "MndtryVlntryEvtTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CAMV"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryVoluntaryEventType";
 			definition = "Specifies whether the event is mandatory, mandatory with options or voluntary.";
@@ -340,10 +376,13 @@ public class CorporateActionGeneralInformation12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionGeneralInformation12.mmCorporateActionEventIdentification, CorporateActionGeneralInformation12.mmOfficialCorporateActionEventIdentification,
-						CorporateActionGeneralInformation12.mmClassActionNumber, CorporateActionGeneralInformation12.mmEventType, CorporateActionGeneralInformation12.mmMandatoryVoluntaryEventType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation12.mmCorporateActionEventIdentification,
+						com.tools20022.repository.msg.CorporateActionGeneralInformation12.mmOfficialCorporateActionEventIdentification, com.tools20022.repository.msg.CorporateActionGeneralInformation12.mmClassActionNumber,
+						com.tools20022.repository.msg.CorporateActionGeneralInformation12.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation12.mmMandatoryVoluntaryEventType);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation12,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionGeneralInformation12);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -359,48 +398,48 @@ public class CorporateActionGeneralInformation12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CorpActnEvtId", required = true)
 	public Max35Text getCorporateActionEventIdentification() {
 		return corporateActionEventIdentification;
 	}
 
-	public void setCorporateActionEventIdentification(Max35Text corporateActionEventIdentification) {
-		this.corporateActionEventIdentification = corporateActionEventIdentification;
+	public CorporateActionGeneralInformation12 setCorporateActionEventIdentification(Max35Text corporateActionEventIdentification) {
+		this.corporateActionEventIdentification = Objects.requireNonNull(corporateActionEventIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OffclCorpActnEvtId")
-	public Max35Text getOfficialCorporateActionEventIdentification() {
-		return officialCorporateActionEventIdentification;
+	public Optional<Max35Text> getOfficialCorporateActionEventIdentification() {
+		return officialCorporateActionEventIdentification == null ? Optional.empty() : Optional.of(officialCorporateActionEventIdentification);
 	}
 
-	public void setOfficialCorporateActionEventIdentification(Max35Text officialCorporateActionEventIdentification) {
+	public CorporateActionGeneralInformation12 setOfficialCorporateActionEventIdentification(Max35Text officialCorporateActionEventIdentification) {
 		this.officialCorporateActionEventIdentification = officialCorporateActionEventIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ClssActnNb")
-	public Max35Text getClassActionNumber() {
-		return classActionNumber;
+	public Optional<Max35Text> getClassActionNumber() {
+		return classActionNumber == null ? Optional.empty() : Optional.of(classActionNumber);
 	}
 
-	public void setClassActionNumber(Max35Text classActionNumber) {
+	public CorporateActionGeneralInformation12 setClassActionNumber(Max35Text classActionNumber) {
 		this.classActionNumber = classActionNumber;
+		return this;
 	}
 
-	@XmlElement(name = "EvtTp", required = true)
 	public CorporateActionEventType3Choice getEventType() {
 		return eventType;
 	}
 
-	public void setEventType(CorporateActionEventType3Choice eventType) {
-		this.eventType = eventType;
+	public CorporateActionGeneralInformation12 setEventType(CorporateActionEventType3Choice eventType) {
+		this.eventType = Objects.requireNonNull(eventType);
+		return this;
 	}
 
-	@XmlElement(name = "MndtryVlntryEvtTp")
-	public CorporateActionMandatoryVoluntary1Choice getMandatoryVoluntaryEventType() {
-		return mandatoryVoluntaryEventType;
+	public Optional<CorporateActionMandatoryVoluntary1Choice> getMandatoryVoluntaryEventType() {
+		return mandatoryVoluntaryEventType == null ? Optional.empty() : Optional.of(mandatoryVoluntaryEventType);
 	}
 
-	public void setMandatoryVoluntaryEventType(CorporateActionMandatoryVoluntary1Choice mandatoryVoluntaryEventType) {
+	public CorporateActionGeneralInformation12 setMandatoryVoluntaryEventType(CorporateActionMandatoryVoluntary1Choice mandatoryVoluntaryEventType) {
 		this.mandatoryVoluntaryEventType = mandatoryVoluntaryEventType;
+		return this;
 	}
 }

@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RejectionReasonV3Code;
+import com.tools20022.repository.codeset.PendingCancellationReason5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason why the cancellation request has a pending status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RejectionReasonV3Code
- * RejectionReasonV3Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#mmAccountServicerDeadlineMissed
- * PendingCancellationReason5Code.mmAccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#AccountServicerDeadlineMissed
+ * PendingCancellationReason5Code.AccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#mmQuantityRejection
- * PendingCancellationReason5Code.mmQuantityRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#QuantityRejection
+ * PendingCancellationReason5Code.QuantityRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#mmAmountRejection
- * PendingCancellationReason5Code.mmAmountRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#AmountRejection
+ * PendingCancellationReason5Code.AmountRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#mmMarketDeadlineMissed
- * PendingCancellationReason5Code.mmMarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#MarketDeadlineMissed
+ * PendingCancellationReason5Code.MarketDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#mmOther
- * PendingCancellationReason5Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason5Code#Other
+ * PendingCancellationReason5Code.Other}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RejectionReasonV3Code
+ * RejectionReasonV3Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the reason why the cancellation request has a pending status."</li>
  * </ul>
  */
-public class PendingCancellationReason5Code extends RejectionReasonV3Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PendingCancellationReason5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,11 +92,12 @@ public class PendingCancellationReason5Code extends RejectionReasonV3Code {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
+	public static final PendingCancellationReason5Code AccountServicerDeadlineMissed = new PendingCancellationReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
-			owner_lazy = () -> PendingCancellationReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingCancellationReason5Code.mmObject();
+			codeName = RejectionReasonV3Code.AccountServicerDeadlineMissed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +116,12 @@ public class PendingCancellationReason5Code extends RejectionReasonV3Code {
 	 * name} = "QuantityRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQuantityRejection = new MMCode() {
+	public static final PendingCancellationReason5Code QuantityRejection = new PendingCancellationReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRejection";
-			owner_lazy = () -> PendingCancellationReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingCancellationReason5Code.mmObject();
+			codeName = RejectionReasonV3Code.QuantityRejection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,11 +140,12 @@ public class PendingCancellationReason5Code extends RejectionReasonV3Code {
 	 * name} = "AmountRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAmountRejection = new MMCode() {
+	public static final PendingCancellationReason5Code AmountRejection = new PendingCancellationReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountRejection";
-			owner_lazy = () -> PendingCancellationReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingCancellationReason5Code.mmObject();
+			codeName = RejectionReasonV3Code.AmountRejection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -156,11 +164,12 @@ public class PendingCancellationReason5Code extends RejectionReasonV3Code {
 	 * name} = "MarketDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
+	public static final PendingCancellationReason5Code MarketDeadlineMissed = new PendingCancellationReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
-			owner_lazy = () -> PendingCancellationReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingCancellationReason5Code.mmObject();
+			codeName = RejectionReasonV3Code.MarketDeadlineMissed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -179,26 +188,61 @@ public class PendingCancellationReason5Code extends RejectionReasonV3Code {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final PendingCancellationReason5Code Other = new PendingCancellationReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> PendingCancellationReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingCancellationReason5Code.mmObject();
+			codeName = RejectionReasonV3Code.Other.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PendingCancellationReason5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PendingCancellationReason5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingCancellationReason5Code";
 				definition = "Specifies the reason why the cancellation request has a pending status.";
-				code_lazy = () -> Arrays.asList(PendingCancellationReason5Code.mmAccountServicerDeadlineMissed, PendingCancellationReason5Code.mmQuantityRejection, PendingCancellationReason5Code.mmAmountRejection,
-						PendingCancellationReason5Code.mmMarketDeadlineMissed, PendingCancellationReason5Code.mmOther);
 				trace_lazy = () -> RejectionReasonV3Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingCancellationReason5Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingCancellationReason5Code.QuantityRejection,
+						com.tools20022.repository.codeset.PendingCancellationReason5Code.AmountRejection, com.tools20022.repository.codeset.PendingCancellationReason5Code.MarketDeadlineMissed,
+						com.tools20022.repository.codeset.PendingCancellationReason5Code.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccountServicerDeadlineMissed.getCodeName().get(), AccountServicerDeadlineMissed);
+		codesByName.put(QuantityRejection.getCodeName().get(), QuantityRejection);
+		codesByName.put(AmountRejection.getCodeName().get(), AmountRejection);
+		codesByName.put(MarketDeadlineMissed.getCodeName().get(), MarketDeadlineMissed);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static PendingCancellationReason5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PendingCancellationReason5Code[] values() {
+		PendingCancellationReason5Code[] values = new PendingCancellationReason5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PendingCancellationReason5Code> {
+		@Override
+		public PendingCancellationReason5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PendingCancellationReason5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -30,6 +30,8 @@ import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandA
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -42,22 +44,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.ATMCardTransactionLatestVersion
- * ATMCardTransactionLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion
- * ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "ATMDpstCmpltnAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -76,6 +62,22 @@ import javax.xml.bind.annotation.*;
  * ATMDepositCompletionAdviceV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion
+ * ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "ATMDpstCmpltnAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.ATMCardTransactionLatestVersion
+ * ATMCardTransactionLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code catp.014.001.01}</li>
@@ -91,16 +93,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "ATMDepositCompletionAdviceV01", propOrder = {"header", "protectedATMDepositCompletionAdvice", "ATMDepositCompletionAdvice", "securityTrailer"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "ATMDepositCompletionAdviceV01", propOrder = {"header", "protectedATMDepositCompletionAdvice", "aTMDepositCompletionAdvice", "securityTrailer"})
 public class ATMDepositCompletionAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header32 header;
 	/**
-	 * Information related to the protocol management on a segment of the path
-	 * from the ATM to the acquirer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,10 +143,11 @@ public class ATMDepositCompletionAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "PrtctdATMDpstCmpltnAdvc")
 	protected ContentInformationType10 protectedATMDepositCompletionAdvice;
 	/**
-	 * Encrypted body of the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -184,11 +187,11 @@ public class ATMDepositCompletionAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "ATMDpstCmpltnAdvc")
 	protected ATMDepositCompletionAdvice1 aTMDepositCompletionAdvice;
 	/**
-	 * Information related to the completion of a deposit transaction on the
-	 * ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -230,10 +233,11 @@ public class ATMDepositCompletionAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SctyTrlr")
 	protected ContentInformationType15 securityTrailer;
 	/**
-	 * Trailer of the message containing a MAC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -305,43 +309,43 @@ public class ATMDepositCompletionAdviceV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header32 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header32 header) {
-		this.header = header;
+	public ATMDepositCompletionAdviceV01 setHeader(Header32 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "PrtctdATMDpstCmpltnAdvc")
-	public ContentInformationType10 getProtectedATMDepositCompletionAdvice() {
-		return protectedATMDepositCompletionAdvice;
+	public Optional<ContentInformationType10> getProtectedATMDepositCompletionAdvice() {
+		return protectedATMDepositCompletionAdvice == null ? Optional.empty() : Optional.of(protectedATMDepositCompletionAdvice);
 	}
 
-	public void setProtectedATMDepositCompletionAdvice(ContentInformationType10 protectedATMDepositCompletionAdvice) {
+	public ATMDepositCompletionAdviceV01 setProtectedATMDepositCompletionAdvice(ContentInformationType10 protectedATMDepositCompletionAdvice) {
 		this.protectedATMDepositCompletionAdvice = protectedATMDepositCompletionAdvice;
+		return this;
 	}
 
-	@XmlElement(name = "ATMDpstCmpltnAdvc")
-	public ATMDepositCompletionAdvice1 getATMDepositCompletionAdvice() {
-		return aTMDepositCompletionAdvice;
+	public Optional<ATMDepositCompletionAdvice1> getATMDepositCompletionAdvice() {
+		return aTMDepositCompletionAdvice == null ? Optional.empty() : Optional.of(aTMDepositCompletionAdvice);
 	}
 
-	public void setATMDepositCompletionAdvice(ATMDepositCompletionAdvice1 aTMDepositCompletionAdvice) {
+	public ATMDepositCompletionAdviceV01 setATMDepositCompletionAdvice(ATMDepositCompletionAdvice1 aTMDepositCompletionAdvice) {
 		this.aTMDepositCompletionAdvice = aTMDepositCompletionAdvice;
+		return this;
 	}
 
-	@XmlElement(name = "SctyTrlr")
-	public ContentInformationType15 getSecurityTrailer() {
-		return securityTrailer;
+	public Optional<ContentInformationType15> getSecurityTrailer() {
+		return securityTrailer == null ? Optional.empty() : Optional.of(securityTrailer);
 	}
 
-	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+	public ATMDepositCompletionAdviceV01 setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catp.014.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:catp.014.001.01")
 	static public class Document {
 		@XmlElement(name = "ATMDpstCmpltnAdvc", required = true)
 		public ATMDepositCompletionAdviceV01 messageBody;

@@ -26,6 +26,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,8 +41,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IndividualMovementStatus1#mmProcessedStatusOrRejectedStatusRule
- * IndividualMovementStatus1.mmProcessedStatusOrRejectedStatusRule}</li>
+ * {@linkplain com.tools20022.repository.msg.IndividualMovementStatus1#ProcessedStatusOrRejectedStatusRule
+ * IndividualMovementStatus1.ProcessedStatusOrRejectedStatusRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -70,8 +72,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -83,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information about the processing status."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IndividualMovementStatus1", propOrder = {"movementIdentification", "processedStatus", "rejectedStatus"})
 public class IndividualMovementStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MvmntId")
 	protected Max35Text movementIdentification;
 	/**
-	 * Identification of the movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +121,7 @@ public class IndividualMovementStatus1 {
 	 */
 	public static final MMMessageAttribute mmMovementIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IndividualMovementStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualMovementStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "MvmntId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,10 +132,11 @@ public class IndividualMovementStatus1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcdSts", required = true)
 	protected MovementProcessingStatus1 processedStatus;
 	/**
-	 * Provides information about the processing status of individual movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -161,7 +165,7 @@ public class IndividualMovementStatus1 {
 	 */
 	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IndividualMovementStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualMovementStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcdSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +177,11 @@ public class IndividualMovementStatus1 {
 			type_lazy = () -> com.tools20022.repository.msg.MovementProcessingStatus1.mmObject();
 		}
 	};
+	@XmlElement(name = "RjctdSts", required = true)
 	protected DistributionRejectionStatus1 rejectedStatus;
 	/**
-	 * Provides information about the rejection status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -203,7 +208,7 @@ public class IndividualMovementStatus1 {
 	 */
 	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IndividualMovementStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualMovementStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -246,22 +251,23 @@ public class IndividualMovementStatus1 {
 	 * definition} = "Either ProcessedStatus or RejectedStatus."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmProcessedStatusOrRejectedStatusRule = new MMXor() {
+	public static final MMXor ProcessedStatusOrRejectedStatusRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedStatusOrRejectedStatusRule";
 			definition = "Either ProcessedStatus or RejectedStatus.";
-			messageComponent_lazy = () -> IndividualMovementStatus1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(IndividualMovementStatus1.mmProcessedStatus, IndividualMovementStatus1.mmRejectedStatus);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.IndividualMovementStatus1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualMovementStatus1.mmProcessedStatus, com.tools20022.repository.msg.IndividualMovementStatus1.mmRejectedStatus);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IndividualMovementStatus1.mmMovementIdentification, IndividualMovementStatus1.mmProcessedStatus, IndividualMovementStatus1.mmRejectedStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualMovementStatus1.mmMovementIdentification, com.tools20022.repository.msg.IndividualMovementStatus1.mmProcessedStatus,
+						com.tools20022.repository.msg.IndividualMovementStatus1.mmRejectedStatus);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAGlobalDistributionStatusAdviceV01.mmIndividualMovementStatus);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -272,36 +278,36 @@ public class IndividualMovementStatus1 {
 				})).get();
 				name = "IndividualMovementStatus1";
 				definition = "Provides information about the processing status.";
-				xors_lazy = () -> Arrays.asList(IndividualMovementStatus1.mmProcessedStatusOrRejectedStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualMovementStatus1.ProcessedStatusOrRejectedStatusRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MvmntId")
-	public Max35Text getMovementIdentification() {
-		return movementIdentification;
+	public Optional<Max35Text> getMovementIdentification() {
+		return movementIdentification == null ? Optional.empty() : Optional.of(movementIdentification);
 	}
 
-	public void setMovementIdentification(Max35Text movementIdentification) {
+	public IndividualMovementStatus1 setMovementIdentification(Max35Text movementIdentification) {
 		this.movementIdentification = movementIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PrcdSts", required = true)
 	public MovementProcessingStatus1 getProcessedStatus() {
 		return processedStatus;
 	}
 
-	public void setProcessedStatus(com.tools20022.repository.msg.MovementProcessingStatus1 processedStatus) {
-		this.processedStatus = processedStatus;
+	public IndividualMovementStatus1 setProcessedStatus(com.tools20022.repository.msg.MovementProcessingStatus1 processedStatus) {
+		this.processedStatus = Objects.requireNonNull(processedStatus);
+		return this;
 	}
 
-	@XmlElement(name = "RjctdSts", required = true)
 	public DistributionRejectionStatus1 getRejectedStatus() {
 		return rejectedStatus;
 	}
 
-	public void setRejectedStatus(com.tools20022.repository.msg.DistributionRejectionStatus1 rejectedStatus) {
-		this.rejectedStatus = rejectedStatus;
+	public IndividualMovementStatus1 setRejectedStatus(com.tools20022.repository.msg.DistributionRejectionStatus1 rejectedStatus) {
+		this.rejectedStatus = Objects.requireNonNull(rejectedStatus);
+		return this;
 	}
 }

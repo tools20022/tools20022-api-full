@@ -25,9 +25,11 @@ import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -55,27 +57,13 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
- * SecuritiesSettlementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "TrfCxlStsRptV02"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV02#mmRelatedReferenceOrOtherReferenceRule
- * TransferCancellationStatusReportV02.mmRelatedReferenceOrOtherReferenceRule}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV02#RelatedReferenceOrOtherReferenceRule
+ * TransferCancellationStatusReportV02.RelatedReferenceOrOtherReferenceRule}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -97,9 +85,34 @@ import javax.xml.bind.annotation.*;
  * TransferCancellationStatusReportV02.mmExtension}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "TrfCxlStsRptV02"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
+ * SecuritiesSettlementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.010.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceRule#forTransferCancellationStatusReportV02
+ * ConstraintOtherReferenceRule.forTransferCancellationStatusReportV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedReferenceRule#forTransferCancellationStatusReportV02
+ * ConstraintRelatedReferenceRule.forTransferCancellationStatusReportV02}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -124,7 +137,7 @@ import javax.xml.bind.annotation.*;
  * TransferCancellationStatusReport}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransferCancellationStatusReportV02", propOrder = {"messageIdentification", "relatedReference", "otherReference", "statusReport", "extension"})
 public class TransferCancellationStatusReportV02 {
 
@@ -164,7 +177,7 @@ public class TransferCancellationStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmRelatedReferenceOrOtherReferenceRule = new MMXor() {
+	public static final MMXor RelatedReferenceOrOtherReferenceRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceOrOtherReferenceRule";
@@ -174,11 +187,11 @@ public class TransferCancellationStatusReportV02 {
 					com.tools20022.repository.area.sese.TransferCancellationStatusReportV02.mmOtherReference);
 		}
 	};
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Reference that uniquely identifies a message from a business application
-	 * standpoint.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -220,10 +233,11 @@ public class TransferCancellationStatusReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdRef")
 	protected List<AdditionalReference3> relatedReference;
 	/**
-	 * Reference to a linked message that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -264,11 +278,11 @@ public class TransferCancellationStatusReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrRef")
 	protected List<AdditionalReference3> otherReference;
 	/**
-	 * Reference to the linked message sent in a proprietary way or the
-	 * reference of a system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -310,10 +324,11 @@ public class TransferCancellationStatusReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "StsRpt", required = true)
 	protected CancellationStatusAndReason2 statusReport;
 	/**
-	 * Status of the transfer cancellation instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -353,11 +368,11 @@ public class TransferCancellationStatusReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -401,13 +416,15 @@ public class TransferCancellationStatusReportV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forTransferCancellationStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintRelatedReferenceRule.forTransferCancellationStatusReportV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferCancellationStatusReportV02";
 				definition = "Scope\r\nAn executing party, eg, a transfer agent, sends the TransferCancellationStatusReport message to the instructing party, eg, an investment manager or one of its authorised representatives to provide the status of a previously received transfer cancellation instruction.\r\nUsage\r\nThe TransferCancellationStatusReport message is used to report on the status of a transfer in or transfer out cancellation request.\r\nThe reference of the transfer instruction for which the cancellation status is reported is identified in TransferReference. The message identification of the transfer cancellation request message in which the transfer instruction was conveyed may also be quoted in RelatedReference.\r\nThe message identification of the transfer instruction request message in which the transfer instruction was conveyed may also be quoted in RelatedReference.\r\nOne of the following statuses can be reported:\r\n- the transfer cancellation is accepted, or,\r\n- the transfer cancellation has been sent to the next party, or,\r\n- the transfer cancellation is complete and the reason for the status,\r\n- the transfer cancellation pending and the reason for the status,\r\n- the transfer cancellation is rejected and the reason for the status.";
 				nextVersions_lazy = () -> Arrays.asList(TransferCancellationStatusReportV03.mmObject());
 				previousVersion_lazy = () -> TransferCancellationStatusReport.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferCancellationStatusReportV02.mmRelatedReferenceOrOtherReferenceRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferCancellationStatusReportV02.RelatedReferenceOrOtherReferenceRule);
 				rootElement = "Document";
 				xmlTag = "TrfCxlStsRptV02";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
@@ -432,52 +449,52 @@ public class TransferCancellationStatusReportV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public TransferCancellationStatusReportV02 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RltdRef")
 	public List<AdditionalReference3> getRelatedReference() {
-		return relatedReference;
+		return relatedReference == null ? relatedReference = new ArrayList<>() : relatedReference;
 	}
 
-	public void setRelatedReference(List<AdditionalReference3> relatedReference) {
-		this.relatedReference = relatedReference;
+	public TransferCancellationStatusReportV02 setRelatedReference(List<AdditionalReference3> relatedReference) {
+		this.relatedReference = Objects.requireNonNull(relatedReference);
+		return this;
 	}
 
-	@XmlElement(name = "OthrRef")
 	public List<AdditionalReference3> getOtherReference() {
-		return otherReference;
+		return otherReference == null ? otherReference = new ArrayList<>() : otherReference;
 	}
 
-	public void setOtherReference(List<AdditionalReference3> otherReference) {
-		this.otherReference = otherReference;
+	public TransferCancellationStatusReportV02 setOtherReference(List<AdditionalReference3> otherReference) {
+		this.otherReference = Objects.requireNonNull(otherReference);
+		return this;
 	}
 
-	@XmlElement(name = "StsRpt", required = true)
 	public CancellationStatusAndReason2 getStatusReport() {
 		return statusReport;
 	}
 
-	public void setStatusReport(CancellationStatusAndReason2 statusReport) {
-		this.statusReport = statusReport;
+	public TransferCancellationStatusReportV02 setStatusReport(CancellationStatusAndReason2 statusReport) {
+		this.statusReport = Objects.requireNonNull(statusReport);
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<Extension1> extension) {
-		this.extension = extension;
+	public TransferCancellationStatusReportV02 setExtension(List<Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.010.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.010.001.02")
 	static public class Document {
 		@XmlElement(name = "TrfCxlStsRptV02", required = true)
 		public TransferCancellationStatusReportV02 messageBody;

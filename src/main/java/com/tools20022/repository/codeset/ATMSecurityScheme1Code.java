@@ -20,55 +20,59 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ATMSecuritySchemeCode;
+import com.tools20022.repository.codeset.ATMSecurityScheme1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Key exchange security scheme in activation on the ATM for the host manager.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ATMSecuritySchemeCode
- * ATMSecuritySchemeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code#mmApplicationRemoteKeyLoading
- * ATMSecurityScheme1Code.mmApplicationRemoteKeyLoading}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code#ApplicationRemoteKeyLoading
+ * ATMSecurityScheme1Code.ApplicationRemoteKeyLoading}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code#mmCertificateRemoteKeyLoading
- * ATMSecurityScheme1Code.mmCertificateRemoteKeyLoading}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code#CertificateRemoteKeyLoading
+ * ATMSecurityScheme1Code.CertificateRemoteKeyLoading}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code#mmFrenchRemoteKeyLoading
- * ATMSecurityScheme1Code.mmFrenchRemoteKeyLoading}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code#FrenchRemoteKeyLoading
+ * ATMSecurityScheme1Code.FrenchRemoteKeyLoading}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code#mmGermanRemoteKeyLoading
- * ATMSecurityScheme1Code.mmGermanRemoteKeyLoading}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code#GermanRemoteKeyLoading
+ * ATMSecurityScheme1Code.GermanRemoteKeyLoading}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code#mmLuxemburgRemoteKeyLoading
- * ATMSecurityScheme1Code.mmLuxemburgRemoteKeyLoading}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code#LuxemburgRemoteKeyLoading
+ * ATMSecurityScheme1Code.LuxemburgRemoteKeyLoading}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code#mmManualKeyEntry
- * ATMSecurityScheme1Code.mmManualKeyEntry}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code#ManualKeyEntry
+ * ATMSecurityScheme1Code.ManualKeyEntry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code#mmPKIKeyDownload
- * ATMSecurityScheme1Code.mmPKIKeyDownload}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code#PKIKeyDownload
+ * ATMSecurityScheme1Code.PKIKeyDownload}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code#mmSignatureRemoteKeyLoading
- * ATMSecurityScheme1Code.mmSignatureRemoteKeyLoading}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code#SignatureRemoteKeyLoading
+ * ATMSecurityScheme1Code.SignatureRemoteKeyLoading}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code#mmUnitialised
- * ATMSecurityScheme1Code.mmUnitialised}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code#Unitialised
+ * ATMSecurityScheme1Code.Unitialised}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ATMSecuritySchemeCode
+ * ATMSecuritySchemeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,7 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ATMSecurityScheme1Code extends ATMSecuritySchemeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ATMSecurityScheme1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -100,11 +105,12 @@ public class ATMSecurityScheme1Code extends ATMSecuritySchemeCode {
 	 * name} = "ApplicationRemoteKeyLoading"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmApplicationRemoteKeyLoading = new MMCode() {
+	public static final ATMSecurityScheme1Code ApplicationRemoteKeyLoading = new ATMSecurityScheme1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationRemoteKeyLoading";
-			owner_lazy = () -> ATMSecurityScheme1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecurityScheme1Code.mmObject();
+			codeName = ATMSecuritySchemeCode.ApplicationRemoteKeyLoading.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -123,11 +129,12 @@ public class ATMSecurityScheme1Code extends ATMSecuritySchemeCode {
 	 * name} = "CertificateRemoteKeyLoading"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertificateRemoteKeyLoading = new MMCode() {
+	public static final ATMSecurityScheme1Code CertificateRemoteKeyLoading = new ATMSecurityScheme1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateRemoteKeyLoading";
-			owner_lazy = () -> ATMSecurityScheme1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecurityScheme1Code.mmObject();
+			codeName = ATMSecuritySchemeCode.CertificateRemoteKeyLoading.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -146,11 +153,12 @@ public class ATMSecurityScheme1Code extends ATMSecuritySchemeCode {
 	 * name} = "FrenchRemoteKeyLoading"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFrenchRemoteKeyLoading = new MMCode() {
+	public static final ATMSecurityScheme1Code FrenchRemoteKeyLoading = new ATMSecurityScheme1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrenchRemoteKeyLoading";
-			owner_lazy = () -> ATMSecurityScheme1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecurityScheme1Code.mmObject();
+			codeName = ATMSecuritySchemeCode.FrenchRemoteKeyLoading.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -169,11 +177,12 @@ public class ATMSecurityScheme1Code extends ATMSecuritySchemeCode {
 	 * name} = "GermanRemoteKeyLoading"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGermanRemoteKeyLoading = new MMCode() {
+	public static final ATMSecurityScheme1Code GermanRemoteKeyLoading = new ATMSecurityScheme1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GermanRemoteKeyLoading";
-			owner_lazy = () -> ATMSecurityScheme1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecurityScheme1Code.mmObject();
+			codeName = ATMSecuritySchemeCode.GermanRemoteKeyLoading.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -192,11 +201,12 @@ public class ATMSecurityScheme1Code extends ATMSecuritySchemeCode {
 	 * name} = "LuxemburgRemoteKeyLoading"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLuxemburgRemoteKeyLoading = new MMCode() {
+	public static final ATMSecurityScheme1Code LuxemburgRemoteKeyLoading = new ATMSecurityScheme1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LuxemburgRemoteKeyLoading";
-			owner_lazy = () -> ATMSecurityScheme1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecurityScheme1Code.mmObject();
+			codeName = ATMSecuritySchemeCode.LuxemburgRemoteKeyLoading.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -215,11 +225,12 @@ public class ATMSecurityScheme1Code extends ATMSecuritySchemeCode {
 	 * name} = "ManualKeyEntry"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmManualKeyEntry = new MMCode() {
+	public static final ATMSecurityScheme1Code ManualKeyEntry = new ATMSecurityScheme1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualKeyEntry";
-			owner_lazy = () -> ATMSecurityScheme1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecurityScheme1Code.mmObject();
+			codeName = ATMSecuritySchemeCode.ManualKeyEntry.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -238,11 +249,12 @@ public class ATMSecurityScheme1Code extends ATMSecuritySchemeCode {
 	 * name} = "PKIKeyDownload"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPKIKeyDownload = new MMCode() {
+	public static final ATMSecurityScheme1Code PKIKeyDownload = new ATMSecurityScheme1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PKIKeyDownload";
-			owner_lazy = () -> ATMSecurityScheme1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecurityScheme1Code.mmObject();
+			codeName = ATMSecuritySchemeCode.PKIKeyDownload.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -261,11 +273,12 @@ public class ATMSecurityScheme1Code extends ATMSecuritySchemeCode {
 	 * name} = "SignatureRemoteKeyLoading"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSignatureRemoteKeyLoading = new MMCode() {
+	public static final ATMSecurityScheme1Code SignatureRemoteKeyLoading = new ATMSecurityScheme1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureRemoteKeyLoading";
-			owner_lazy = () -> ATMSecurityScheme1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecurityScheme1Code.mmObject();
+			codeName = ATMSecuritySchemeCode.SignatureRemoteKeyLoading.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -284,27 +297,67 @@ public class ATMSecurityScheme1Code extends ATMSecuritySchemeCode {
 	 * name} = "Unitialised"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnitialised = new MMCode() {
+	public static final ATMSecurityScheme1Code Unitialised = new ATMSecurityScheme1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unitialised";
-			owner_lazy = () -> ATMSecurityScheme1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecurityScheme1Code.mmObject();
+			codeName = ATMSecuritySchemeCode.Unitialised.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ATMSecurityScheme1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ATMSecurityScheme1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityScheme1Code";
 				definition = "Key exchange security scheme in activation on the ATM for the host manager.";
-				code_lazy = () -> Arrays.asList(ATMSecurityScheme1Code.mmApplicationRemoteKeyLoading, ATMSecurityScheme1Code.mmCertificateRemoteKeyLoading, ATMSecurityScheme1Code.mmFrenchRemoteKeyLoading,
-						ATMSecurityScheme1Code.mmGermanRemoteKeyLoading, ATMSecurityScheme1Code.mmLuxemburgRemoteKeyLoading, ATMSecurityScheme1Code.mmManualKeyEntry, ATMSecurityScheme1Code.mmPKIKeyDownload,
-						ATMSecurityScheme1Code.mmSignatureRemoteKeyLoading, ATMSecurityScheme1Code.mmUnitialised);
 				trace_lazy = () -> ATMSecuritySchemeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMSecurityScheme1Code.ApplicationRemoteKeyLoading, com.tools20022.repository.codeset.ATMSecurityScheme1Code.CertificateRemoteKeyLoading,
+						com.tools20022.repository.codeset.ATMSecurityScheme1Code.FrenchRemoteKeyLoading, com.tools20022.repository.codeset.ATMSecurityScheme1Code.GermanRemoteKeyLoading,
+						com.tools20022.repository.codeset.ATMSecurityScheme1Code.LuxemburgRemoteKeyLoading, com.tools20022.repository.codeset.ATMSecurityScheme1Code.ManualKeyEntry,
+						com.tools20022.repository.codeset.ATMSecurityScheme1Code.PKIKeyDownload, com.tools20022.repository.codeset.ATMSecurityScheme1Code.SignatureRemoteKeyLoading,
+						com.tools20022.repository.codeset.ATMSecurityScheme1Code.Unitialised);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ApplicationRemoteKeyLoading.getCodeName().get(), ApplicationRemoteKeyLoading);
+		codesByName.put(CertificateRemoteKeyLoading.getCodeName().get(), CertificateRemoteKeyLoading);
+		codesByName.put(FrenchRemoteKeyLoading.getCodeName().get(), FrenchRemoteKeyLoading);
+		codesByName.put(GermanRemoteKeyLoading.getCodeName().get(), GermanRemoteKeyLoading);
+		codesByName.put(LuxemburgRemoteKeyLoading.getCodeName().get(), LuxemburgRemoteKeyLoading);
+		codesByName.put(ManualKeyEntry.getCodeName().get(), ManualKeyEntry);
+		codesByName.put(PKIKeyDownload.getCodeName().get(), PKIKeyDownload);
+		codesByName.put(SignatureRemoteKeyLoading.getCodeName().get(), SignatureRemoteKeyLoading);
+		codesByName.put(Unitialised.getCodeName().get(), Unitialised);
+	}
+
+	public static ATMSecurityScheme1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ATMSecurityScheme1Code[] values() {
+		ATMSecurityScheme1Code[] values = new ATMSecurityScheme1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ATMSecurityScheme1Code> {
+		@Override
+		public ATMSecurityScheme1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ATMSecurityScheme1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -35,6 +35,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundOrderData2#mmCashInOrCashOutRule
- * FundOrderData2.mmCashInOrCashOutRule}</li>
+ * {@linkplain com.tools20022.repository.msg.FundOrderData2#CashInOrCashOutRule
+ * FundOrderData2.CashInOrCashOutRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -87,8 +88,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -106,16 +107,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FundOrderData2", propOrder = {"totalRedemptionAmount", "totalSubscriptionAmount", "settlementAmount", "settlementMethod", "additionalCashIn", "resultingCashOut", "unitCurrency", "quotedCurrency"})
 public class FundOrderData2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlRedAmt")
 	protected ActiveOrHistoricCurrencyAndAmount totalRedemptionAmount;
 	/**
-	 * Amount of money used to derive the quantity of investment fund units to
-	 * be redeemed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,7 +151,7 @@ public class FundOrderData2 {
 	public static final MMMessageAttribute mmTotalRedemptionAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmTotalRedemptionAmount;
-			componentContext_lazy = () -> FundOrderData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundOrderData2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlRedAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,11 +162,11 @@ public class FundOrderData2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlSbcptAmt")
 	protected ActiveOrHistoricCurrencyAndAmount totalSubscriptionAmount;
 	/**
-	 * Amount of money used to derive the quantity of investment fund units to
-	 * be subscribed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,7 +201,7 @@ public class FundOrderData2 {
 	public static final MMMessageAttribute mmTotalSubscriptionAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmTotalSubscriptionAmount;
-			componentContext_lazy = () -> FundOrderData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundOrderData2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlSbcptAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,11 +212,11 @@ public class FundOrderData2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmAmt")
 	protected ActiveCurrencyAndAmount settlementAmount;
 	/**
-	 * Amount of money to be transferred between the debtor and creditor before
-	 * bank transaction charges.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -258,7 +259,7 @@ public class FundOrderData2 {
 	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
-			componentContext_lazy = () -> FundOrderData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundOrderData2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,10 +271,11 @@ public class FundOrderData2 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmMtd")
 	protected DeliveryReceiptType2Code settlementMethod;
 	/**
-	 * Method by which the transaction is settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -314,7 +316,7 @@ public class FundOrderData2 {
 	public static final MMMessageAttribute mmSettlementMethod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementType;
-			componentContext_lazy = () -> FundOrderData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundOrderData2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -326,11 +328,11 @@ public class FundOrderData2 {
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlCshIn")
 	protected ActiveOrHistoricCurrencyAndAmount additionalCashIn;
 	/**
-	 * Additional amount of money paid by the investor in addition to the switch
-	 * redemption amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -365,7 +367,7 @@ public class FundOrderData2 {
 	public static final MMMessageAttribute mmAdditionalCashIn = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmAdditionalCashIn;
-			componentContext_lazy = () -> FundOrderData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundOrderData2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlCshIn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -376,11 +378,11 @@ public class FundOrderData2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RsltgCshOut")
 	protected ActiveOrHistoricCurrencyAndAmount resultingCashOut;
 	/**
-	 * Amount of money that results from a switch-out, that is not reinvested in
-	 * another investment fund, and is repaid to the investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -415,7 +417,7 @@ public class FundOrderData2 {
 	public static final MMMessageAttribute mmResultingCashOut = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmResultingCashOut;
-			componentContext_lazy = () -> FundOrderData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundOrderData2.mmObject();
 			isDerived = false;
 			xmlTag = "RsltgCshOut";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -426,11 +428,11 @@ public class FundOrderData2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "UnitCcy")
 	protected ActiveOrHistoricCurrencyCode unitCurrency;
 	/**
-	 * Currency in which the rate of exchange is expressed in a currency
-	 * exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -473,7 +475,7 @@ public class FundOrderData2 {
 	public static final MMMessageAttribute mmUnitCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmUnitCurrency;
-			componentContext_lazy = () -> FundOrderData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundOrderData2.mmObject();
 			isDerived = false;
 			xmlTag = "UnitCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -485,11 +487,11 @@ public class FundOrderData2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "QtdCcy")
 	protected ActiveOrHistoricCurrencyCode quotedCurrency;
 	/**
-	 * Currency into which the base currency is converted, in a currency
-	 * exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -532,7 +534,7 @@ public class FundOrderData2 {
 	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotedCurrency;
-			componentContext_lazy = () -> FundOrderData2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundOrderData2.mmObject();
 			isDerived = false;
 			xmlTag = "QtdCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -576,23 +578,24 @@ public class FundOrderData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmCashInOrCashOutRule = new MMXor() {
+	public static final MMXor CashInOrCashOutRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInOrCashOutRule";
 			definition = "Either AdditionalCashIn or ResultingCashOut may be present, but not both.";
-			messageComponent_lazy = () -> FundOrderData2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(FundOrderData2.mmAdditionalCashIn, FundOrderData2.mmResultingCashOut);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.FundOrderData2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData2.mmAdditionalCashIn, com.tools20022.repository.msg.FundOrderData2.mmResultingCashOut);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FundOrderData2.mmTotalRedemptionAmount, FundOrderData2.mmTotalSubscriptionAmount, FundOrderData2.mmSettlementAmount, FundOrderData2.mmSettlementMethod,
-						FundOrderData2.mmAdditionalCashIn, FundOrderData2.mmResultingCashOut, FundOrderData2.mmUnitCurrency, FundOrderData2.mmQuotedCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData2.mmTotalRedemptionAmount, com.tools20022.repository.msg.FundOrderData2.mmTotalSubscriptionAmount,
+						com.tools20022.repository.msg.FundOrderData2.mmSettlementAmount, com.tools20022.repository.msg.FundOrderData2.mmSettlementMethod, com.tools20022.repository.msg.FundOrderData2.mmAdditionalCashIn,
+						com.tools20022.repository.msg.FundOrderData2.mmResultingCashOut, com.tools20022.repository.msg.FundOrderData2.mmUnitCurrency, com.tools20022.repository.msg.FundOrderData2.mmQuotedCurrency);
 				trace_lazy = () -> SwitchOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -604,81 +607,81 @@ public class FundOrderData2 {
 				name = "FundOrderData2";
 				definition = "Extract of trade data for an investment fund switch order.";
 				nextVersions_lazy = () -> Arrays.asList(FundOrderData6.mmObject());
-				xors_lazy = () -> Arrays.asList(FundOrderData2.mmCashInOrCashOutRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData2.CashInOrCashOutRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlRedAmt")
-	public ActiveOrHistoricCurrencyAndAmount getTotalRedemptionAmount() {
-		return totalRedemptionAmount;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getTotalRedemptionAmount() {
+		return totalRedemptionAmount == null ? Optional.empty() : Optional.of(totalRedemptionAmount);
 	}
 
-	public void setTotalRedemptionAmount(ActiveOrHistoricCurrencyAndAmount totalRedemptionAmount) {
+	public FundOrderData2 setTotalRedemptionAmount(ActiveOrHistoricCurrencyAndAmount totalRedemptionAmount) {
 		this.totalRedemptionAmount = totalRedemptionAmount;
+		return this;
 	}
 
-	@XmlElement(name = "TtlSbcptAmt")
-	public ActiveOrHistoricCurrencyAndAmount getTotalSubscriptionAmount() {
-		return totalSubscriptionAmount;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getTotalSubscriptionAmount() {
+		return totalSubscriptionAmount == null ? Optional.empty() : Optional.of(totalSubscriptionAmount);
 	}
 
-	public void setTotalSubscriptionAmount(ActiveOrHistoricCurrencyAndAmount totalSubscriptionAmount) {
+	public FundOrderData2 setTotalSubscriptionAmount(ActiveOrHistoricCurrencyAndAmount totalSubscriptionAmount) {
 		this.totalSubscriptionAmount = totalSubscriptionAmount;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmAmt")
-	public ActiveCurrencyAndAmount getSettlementAmount() {
-		return settlementAmount;
+	public Optional<ActiveCurrencyAndAmount> getSettlementAmount() {
+		return settlementAmount == null ? Optional.empty() : Optional.of(settlementAmount);
 	}
 
-	public void setSettlementAmount(ActiveCurrencyAndAmount settlementAmount) {
+	public FundOrderData2 setSettlementAmount(ActiveCurrencyAndAmount settlementAmount) {
 		this.settlementAmount = settlementAmount;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmMtd")
-	public DeliveryReceiptType2Code getSettlementMethod() {
-		return settlementMethod;
+	public Optional<DeliveryReceiptType2Code> getSettlementMethod() {
+		return settlementMethod == null ? Optional.empty() : Optional.of(settlementMethod);
 	}
 
-	public void setSettlementMethod(DeliveryReceiptType2Code settlementMethod) {
+	public FundOrderData2 setSettlementMethod(DeliveryReceiptType2Code settlementMethod) {
 		this.settlementMethod = settlementMethod;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlCshIn")
-	public ActiveOrHistoricCurrencyAndAmount getAdditionalCashIn() {
-		return additionalCashIn;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getAdditionalCashIn() {
+		return additionalCashIn == null ? Optional.empty() : Optional.of(additionalCashIn);
 	}
 
-	public void setAdditionalCashIn(ActiveOrHistoricCurrencyAndAmount additionalCashIn) {
+	public FundOrderData2 setAdditionalCashIn(ActiveOrHistoricCurrencyAndAmount additionalCashIn) {
 		this.additionalCashIn = additionalCashIn;
+		return this;
 	}
 
-	@XmlElement(name = "RsltgCshOut")
-	public ActiveOrHistoricCurrencyAndAmount getResultingCashOut() {
-		return resultingCashOut;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getResultingCashOut() {
+		return resultingCashOut == null ? Optional.empty() : Optional.of(resultingCashOut);
 	}
 
-	public void setResultingCashOut(ActiveOrHistoricCurrencyAndAmount resultingCashOut) {
+	public FundOrderData2 setResultingCashOut(ActiveOrHistoricCurrencyAndAmount resultingCashOut) {
 		this.resultingCashOut = resultingCashOut;
+		return this;
 	}
 
-	@XmlElement(name = "UnitCcy")
-	public ActiveOrHistoricCurrencyCode getUnitCurrency() {
-		return unitCurrency;
+	public Optional<ActiveOrHistoricCurrencyCode> getUnitCurrency() {
+		return unitCurrency == null ? Optional.empty() : Optional.of(unitCurrency);
 	}
 
-	public void setUnitCurrency(ActiveOrHistoricCurrencyCode unitCurrency) {
+	public FundOrderData2 setUnitCurrency(ActiveOrHistoricCurrencyCode unitCurrency) {
 		this.unitCurrency = unitCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "QtdCcy")
-	public ActiveOrHistoricCurrencyCode getQuotedCurrency() {
-		return quotedCurrency;
+	public Optional<ActiveOrHistoricCurrencyCode> getQuotedCurrency() {
+		return quotedCurrency == null ? Optional.empty() : Optional.of(quotedCurrency);
 	}
 
-	public void setQuotedCurrency(ActiveOrHistoricCurrencyCode quotedCurrency) {
+	public FundOrderData2 setQuotedCurrency(ActiveOrHistoricCurrencyCode quotedCurrency) {
 		this.quotedCurrency = quotedCurrency;
+		return this;
 	}
 }

@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provide the processing status information of information advice."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionInformationProcessingStatus1", propOrder = {"status", "additionalInformation"})
 public class CorporateActionInformationProcessingStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts", required = true)
 	protected ProcessedStatus5FormatChoice status;
 	/**
-	 * The processing status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +113,7 @@ public class CorporateActionInformationProcessingStatus1 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
-			componentContext_lazy = () -> CorporateActionInformationProcessingStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInformationProcessingStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +124,11 @@ public class CorporateActionInformationProcessingStatus1 {
 			complexType_lazy = () -> ProcessedStatus5FormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected Max350Text additionalInformation;
 	/**
-	 * Additional information about the status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +161,7 @@ public class CorporateActionInformationProcessingStatus1 {
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDescription;
-			componentContext_lazy = () -> CorporateActionInformationProcessingStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInformationProcessingStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +176,10 @@ public class CorporateActionInformationProcessingStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionInformationProcessingStatus1.mmStatus, CorporateActionInformationProcessingStatus1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.msg.CorporateActionInformationProcessingStatus1.mmStatus, com.tools20022.repository.msg.CorporateActionInformationProcessingStatus1.mmAdditionalInformation);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInformationProcessingStatus1";
 				definition = "Provide the processing status information of information advice.";
@@ -183,21 +188,21 @@ public class CorporateActionInformationProcessingStatus1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public ProcessedStatus5FormatChoice getStatus() {
 		return status;
 	}
 
-	public void setStatus(ProcessedStatus5FormatChoice status) {
-		this.status = status;
+	public CorporateActionInformationProcessingStatus1 setStatus(ProcessedStatus5FormatChoice status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public Max350Text getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<Max350Text> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(Max350Text additionalInformation) {
+	public CorporateActionInformationProcessingStatus1 setAdditionalInformation(Max350Text additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 }

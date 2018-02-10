@@ -25,6 +25,8 @@ import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Status of an account."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OtherAccountStatus1", propOrder = {"status", "reason"})
 public class OtherAccountStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts", required = true)
 	protected GenericIdentification36 status;
 	/**
-	 * Status of the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -104,7 +107,7 @@ public class OtherAccountStatus1 {
 	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmStatus;
-			componentContext_lazy = () -> OtherAccountStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAccountStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +119,11 @@ public class OtherAccountStatus1 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification36.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn")
 	protected GenericIdentification36 reason;
 	/**
-	 * Reason for the status of the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -152,7 +156,7 @@ public class OtherAccountStatus1 {
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
-			componentContext_lazy = () -> OtherAccountStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAccountStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,9 +172,9 @@ public class OtherAccountStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OtherAccountStatus1.mmStatus, OtherAccountStatus1.mmReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherAccountStatus1.mmStatus, com.tools20022.repository.msg.OtherAccountStatus1.mmReason);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OtherAccountStatus1";
 				definition = "Status of an account.";
@@ -179,21 +183,21 @@ public class OtherAccountStatus1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public GenericIdentification36 getStatus() {
 		return status;
 	}
 
-	public void setStatus(com.tools20022.repository.msg.GenericIdentification36 status) {
-		this.status = status;
+	public OtherAccountStatus1 setStatus(com.tools20022.repository.msg.GenericIdentification36 status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "Rsn")
-	public GenericIdentification36 getReason() {
-		return reason;
+	public Optional<GenericIdentification36> getReason() {
+		return reason == null ? Optional.empty() : Optional.of(reason);
 	}
 
-	public void setReason(com.tools20022.repository.msg.GenericIdentification36 reason) {
+	public OtherAccountStatus1 setReason(com.tools20022.repository.msg.GenericIdentification36 reason) {
 		this.reason = reason;
+		return this;
 	}
 }

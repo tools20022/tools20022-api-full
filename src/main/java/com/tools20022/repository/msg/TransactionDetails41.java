@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -29,6 +30,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -89,8 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionIdentificationPresenceRule#forTransactionDetails41
+ * ConstraintTransactionIdentificationPresenceRule.forTransactionDetails41}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,17 +119,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionDetails41", propOrder = {"accountOwnerTransactionIdentification", "accountServicerTransactionIdentification", "marketInfrastructureTransactionIdentification", "processorTransactionIdentification",
 		"otherTransactionIdentification", "accountOwner", "safekeepingAccount", "transactionDetails"})
 public class TransactionDetails41 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctOwnrTxId", required = true)
 	protected SettlementTypeAndIdentification3 accountOwnerTransactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as known by the account
-	 * owner (or the instructing party managing the account).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -161,7 +172,7 @@ public class TransactionDetails41 {
 	public static final MMMessageAssociationEnd mmAccountOwnerTransactionIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
-			componentContext_lazy = () -> TransactionDetails41.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails41.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,11 +185,11 @@ public class TransactionDetails41 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndIdentification3.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcrTxId")
 	protected Max35Text accountServicerTransactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as known by the account
-	 * servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,6 +208,9 @@ public class TransactionDetails41 {
 	 * TransactionDetails41}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctSvcrTxId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::PREV or ASRF</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -221,9 +235,10 @@ public class TransactionDetails41 {
 	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
-			componentContext_lazy = () -> TransactionDetails41.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails41.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrTxId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::PREV or ASRF"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account servicer.";
@@ -233,11 +248,11 @@ public class TransactionDetails41 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MktInfrstrctrTxId")
 	protected Max35Text marketInfrastructureTransactionIdentification;
 	/**
-	 * Identification of a transaction assigned by a market infrastructure other
-	 * than a central securities depository, for example, Target2-Securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -257,6 +272,9 @@ public class TransactionDetails41 {
 	 * TransactionDetails41}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MktInfrstrctrTxId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a::ACOW</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -281,9 +299,10 @@ public class TransactionDetails41 {
 	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification;
-			componentContext_lazy = () -> TransactionDetails41.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails41.mmObject();
 			isDerived = false;
 			xmlTag = "MktInfrstrctrTxId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::ACOW"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketInfrastructureTransactionIdentification";
 			definition = "Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.";
@@ -293,12 +312,11 @@ public class TransactionDetails41 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcrTxId")
 	protected Max35Text processorTransactionIdentification;
 	/**
-	 * Identification of the transaction assigned by the processor of the
-	 * instruction other than the account owner the account servicer and the
-	 * market infrastructure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -341,7 +359,7 @@ public class TransactionDetails41 {
 	public static final MMMessageAttribute mmProcessorTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmProcessorTransactionIdentification;
-			componentContext_lazy = () -> TransactionDetails41.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails41.mmObject();
 			isDerived = false;
 			xmlTag = "PrcrTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -353,11 +371,11 @@ public class TransactionDetails41 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrTxId")
 	protected Max35Text otherTransactionIdentification;
 	/**
-	 * Identification of a transaction that cannot be identified using a
-	 * standard reference element present in the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -400,7 +418,7 @@ public class TransactionDetails41 {
 	public static final MMMessageAttribute mmOtherTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
-			componentContext_lazy = () -> TransactionDetails41.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails41.mmObject();
 			isDerived = false;
 			xmlTag = "OthrTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -412,10 +430,11 @@ public class TransactionDetails41 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification36Choice accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -456,7 +475,7 @@ public class TransactionDetails41 {
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> TransactionDetails41.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails41.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -469,10 +488,11 @@ public class TransactionDetails41 {
 			type_lazy = () -> PartyIdentification36Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgAcct", required = true)
 	protected SecuritiesAccount13 safekeepingAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -512,7 +532,7 @@ public class TransactionDetails41 {
 	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesAccount;
-			componentContext_lazy = () -> TransactionDetails41.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails41.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -525,11 +545,11 @@ public class TransactionDetails41 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	@XmlElement(name = "TxDtls")
 	protected TransactionDetails29 transactionDetails;
 	/**
-	 * Provides additional details on the transaction which can not be included
-	 * within the structured fields of the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -571,7 +591,7 @@ public class TransactionDetails41 {
 	public static final MMMessageAssociationEnd mmTransactionDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTrade.mmObject();
-			componentContext_lazy = () -> TransactionDetails41.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails41.mmObject();
 			isDerived = false;
 			xmlTag = "TxDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -588,12 +608,14 @@ public class TransactionDetails41 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionDetails41.mmAccountOwnerTransactionIdentification, TransactionDetails41.mmAccountServicerTransactionIdentification,
-						TransactionDetails41.mmMarketInfrastructureTransactionIdentification, TransactionDetails41.mmProcessorTransactionIdentification, TransactionDetails41.mmOtherTransactionIdentification,
-						TransactionDetails41.mmAccountOwner, TransactionDetails41.mmSafekeepingAccount, TransactionDetails41.mmTransactionDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails41.mmAccountOwnerTransactionIdentification,
+						com.tools20022.repository.msg.TransactionDetails41.mmAccountServicerTransactionIdentification, com.tools20022.repository.msg.TransactionDetails41.mmMarketInfrastructureTransactionIdentification,
+						com.tools20022.repository.msg.TransactionDetails41.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionDetails41.mmOtherTransactionIdentification,
+						com.tools20022.repository.msg.TransactionDetails41.mmAccountOwner, com.tools20022.repository.msg.TransactionDetails41.mmSafekeepingAccount, com.tools20022.repository.msg.TransactionDetails41.mmTransactionDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionModificationRequestV01.mmModifiedTransactionDetails, SecuritiesSettlementTransactionModificationRequestV02.mmModifiedTransactionDetails);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionIdentificationPresenceRule.forTransactionDetails41);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionDetails41";
 				definition = "Identifies the details of the transaction.";
@@ -603,75 +625,75 @@ public class TransactionDetails41 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctOwnrTxId", required = true)
 	public SettlementTypeAndIdentification3 getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
 
-	public void setAccountOwnerTransactionIdentification(com.tools20022.repository.msg.SettlementTypeAndIdentification3 accountOwnerTransactionIdentification) {
-		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
+	public TransactionDetails41 setAccountOwnerTransactionIdentification(com.tools20022.repository.msg.SettlementTypeAndIdentification3 accountOwnerTransactionIdentification) {
+		this.accountOwnerTransactionIdentification = Objects.requireNonNull(accountOwnerTransactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcrTxId")
-	public Max35Text getAccountServicerTransactionIdentification() {
-		return accountServicerTransactionIdentification;
+	public Optional<Max35Text> getAccountServicerTransactionIdentification() {
+		return accountServicerTransactionIdentification == null ? Optional.empty() : Optional.of(accountServicerTransactionIdentification);
 	}
 
-	public void setAccountServicerTransactionIdentification(Max35Text accountServicerTransactionIdentification) {
+	public TransactionDetails41 setAccountServicerTransactionIdentification(Max35Text accountServicerTransactionIdentification) {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "MktInfrstrctrTxId")
-	public Max35Text getMarketInfrastructureTransactionIdentification() {
-		return marketInfrastructureTransactionIdentification;
+	public Optional<Max35Text> getMarketInfrastructureTransactionIdentification() {
+		return marketInfrastructureTransactionIdentification == null ? Optional.empty() : Optional.of(marketInfrastructureTransactionIdentification);
 	}
 
-	public void setMarketInfrastructureTransactionIdentification(Max35Text marketInfrastructureTransactionIdentification) {
+	public TransactionDetails41 setMarketInfrastructureTransactionIdentification(Max35Text marketInfrastructureTransactionIdentification) {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PrcrTxId")
-	public Max35Text getProcessorTransactionIdentification() {
-		return processorTransactionIdentification;
+	public Optional<Max35Text> getProcessorTransactionIdentification() {
+		return processorTransactionIdentification == null ? Optional.empty() : Optional.of(processorTransactionIdentification);
 	}
 
-	public void setProcessorTransactionIdentification(Max35Text processorTransactionIdentification) {
+	public TransactionDetails41 setProcessorTransactionIdentification(Max35Text processorTransactionIdentification) {
 		this.processorTransactionIdentification = processorTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "OthrTxId")
-	public Max35Text getOtherTransactionIdentification() {
-		return otherTransactionIdentification;
+	public Optional<Max35Text> getOtherTransactionIdentification() {
+		return otherTransactionIdentification == null ? Optional.empty() : Optional.of(otherTransactionIdentification);
 	}
 
-	public void setOtherTransactionIdentification(Max35Text otherTransactionIdentification) {
+	public TransactionDetails41 setOtherTransactionIdentification(Max35Text otherTransactionIdentification) {
 		this.otherTransactionIdentification = otherTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification36Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification36Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification36Choice accountOwner) {
+	public TransactionDetails41 setAccountOwner(PartyIdentification36Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
 
-	public void setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
-		this.safekeepingAccount = safekeepingAccount;
+	public TransactionDetails41 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
+		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "TxDtls")
-	public TransactionDetails29 getTransactionDetails() {
-		return transactionDetails;
+	public Optional<TransactionDetails29> getTransactionDetails() {
+		return transactionDetails == null ? Optional.empty() : Optional.of(transactionDetails);
 	}
 
-	public void setTransactionDetails(com.tools20022.repository.msg.TransactionDetails29 transactionDetails) {
+	public TransactionDetails41 setTransactionDetails(com.tools20022.repository.msg.TransactionDetails29 transactionDetails) {
 		this.transactionDetails = transactionDetails;
+		return this;
 	}
 }

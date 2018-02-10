@@ -24,9 +24,11 @@ import com.tools20022.repository.entity.VoteInstructionRequest;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Vote1;
 import com.tools20022.repository.msg.Vote3;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,18 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Determines how the voting instructions are specified."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "VoteChoice", propOrder = {"voteInstruction", "globalVoteInstruction"})
 public class VoteChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "VoteInstr", required = true)
 	protected List<Vote1> voteInstruction;
 	/**
-	 * Instruction specifying the instructed quantity of voting rights per
-	 * resolution. Split votes can be indicated. If only one type of decision is
-	 * indicated, the number of votes cast must not be adjusted if the position
-	 * of the voting party increases.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -110,7 +110,7 @@ public class VoteChoice {
 	public static final MMMessageAssociationEnd mmVoteInstruction = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVotePerResolution;
-			componentContext_lazy = () -> VoteChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.VoteChoice.mmObject();
 			isDerived = false;
 			xmlTag = "VoteInstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,11 +122,11 @@ public class VoteChoice {
 			type_lazy = () -> Vote1.mmObject();
 		}
 	};
+	@XmlElement(name = "GblVoteInstr", required = true)
 	protected List<Vote3> globalVoteInstruction;
 	/**
-	 * Instruction specifiying a vote instruction per resolution for the entire
-	 * entitlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -158,7 +158,7 @@ public class VoteChoice {
 	public static final MMMessageAssociationEnd mmGlobalVoteInstruction = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmGlobalVoteInstruction;
-			componentContext_lazy = () -> VoteChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.VoteChoice.mmObject();
 			isDerived = false;
 			xmlTag = "GblVoteInstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,9 +174,9 @@ public class VoteChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(VoteChoice.mmVoteInstruction, VoteChoice.mmGlobalVoteInstruction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.VoteChoice.mmVoteInstruction, com.tools20022.repository.choice.VoteChoice.mmGlobalVoteInstruction);
 				trace_lazy = () -> VoteInstructionRequest.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "VoteChoice";
 				definition = "Determines how the voting instructions are specified.";
@@ -185,21 +185,21 @@ public class VoteChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "VoteInstr", required = true)
 	public List<Vote1> getVoteInstruction() {
-		return voteInstruction;
+		return voteInstruction == null ? voteInstruction = new ArrayList<>() : voteInstruction;
 	}
 
-	public void setVoteInstruction(List<Vote1> voteInstruction) {
-		this.voteInstruction = voteInstruction;
+	public VoteChoice setVoteInstruction(List<Vote1> voteInstruction) {
+		this.voteInstruction = Objects.requireNonNull(voteInstruction);
+		return this;
 	}
 
-	@XmlElement(name = "GblVoteInstr", required = true)
 	public List<Vote3> getGlobalVoteInstruction() {
-		return globalVoteInstruction;
+		return globalVoteInstruction == null ? globalVoteInstruction = new ArrayList<>() : globalVoteInstruction;
 	}
 
-	public void setGlobalVoteInstruction(List<Vote3> globalVoteInstruction) {
-		this.globalVoteInstruction = globalVoteInstruction;
+	public VoteChoice setGlobalVoteInstruction(List<Vote3> globalVoteInstruction) {
+		this.globalVoteInstruction = Objects.requireNonNull(globalVoteInstruction);
+		return this;
 	}
 }

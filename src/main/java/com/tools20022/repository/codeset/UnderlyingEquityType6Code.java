@@ -20,52 +20,56 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.UnderlyingTypeV3Code;
+import com.tools20022.repository.codeset.UnderlyingEquityType6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type for a contract for equity derivatives.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code
- * UnderlyingTypeV3Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#mmBasket
- * UnderlyingEquityType6Code.mmBasket}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#Basket
+ * UnderlyingEquityType6Code.Basket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#mmDividendIndex
- * UnderlyingEquityType6Code.mmDividendIndex}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#DividendIndex
+ * UnderlyingEquityType6Code.DividendIndex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#mmExchangeTradedFund
- * UnderlyingEquityType6Code.mmExchangeTradedFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#ExchangeTradedFund
+ * UnderlyingEquityType6Code.ExchangeTradedFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#mmOther
- * UnderlyingEquityType6Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#Other
+ * UnderlyingEquityType6Code.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#mmShare
- * UnderlyingEquityType6Code.mmShare}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#Share
+ * UnderlyingEquityType6Code.Share}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#mmStockDividend
- * UnderlyingEquityType6Code.mmStockDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#StockDividend
+ * UnderlyingEquityType6Code.StockDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#mmStockIndex
- * UnderlyingEquityType6Code.mmStockIndex}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#StockIndex
+ * UnderlyingEquityType6Code.StockIndex}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#mmVolatilityIndex
- * UnderlyingEquityType6Code.mmVolatilityIndex}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingEquityType6Code#VolatilityIndex
+ * UnderlyingEquityType6Code.VolatilityIndex}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code
+ * UnderlyingTypeV3Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type for a contract for equity derivatives."</li>
  * </ul>
  */
-public class UnderlyingEquityType6Code extends UnderlyingTypeV3Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class UnderlyingEquityType6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,11 +100,12 @@ public class UnderlyingEquityType6Code extends UnderlyingTypeV3Code {
 	 * name} = "Basket"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBasket = new MMCode() {
+	public static final UnderlyingEquityType6Code Basket = new UnderlyingEquityType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basket";
-			owner_lazy = () -> UnderlyingEquityType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingEquityType6Code.mmObject();
+			codeName = UnderlyingTypeV3Code.Basket.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -118,11 +124,12 @@ public class UnderlyingEquityType6Code extends UnderlyingTypeV3Code {
 	 * name} = "DividendIndex"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividendIndex = new MMCode() {
+	public static final UnderlyingEquityType6Code DividendIndex = new UnderlyingEquityType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendIndex";
-			owner_lazy = () -> UnderlyingEquityType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingEquityType6Code.mmObject();
+			codeName = UnderlyingTypeV3Code.DividendIndex.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -141,11 +148,12 @@ public class UnderlyingEquityType6Code extends UnderlyingTypeV3Code {
 	 * name} = "ExchangeTradedFund"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExchangeTradedFund = new MMCode() {
+	public static final UnderlyingEquityType6Code ExchangeTradedFund = new UnderlyingEquityType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeTradedFund";
-			owner_lazy = () -> UnderlyingEquityType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingEquityType6Code.mmObject();
+			codeName = UnderlyingTypeV3Code.ExchangeTradedFund.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -164,11 +172,12 @@ public class UnderlyingEquityType6Code extends UnderlyingTypeV3Code {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final UnderlyingEquityType6Code Other = new UnderlyingEquityType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> UnderlyingEquityType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingEquityType6Code.mmObject();
+			codeName = UnderlyingTypeV3Code.Other.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -187,11 +196,12 @@ public class UnderlyingEquityType6Code extends UnderlyingTypeV3Code {
 	 * name} = "Share"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmShare = new MMCode() {
+	public static final UnderlyingEquityType6Code Share = new UnderlyingEquityType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Share";
-			owner_lazy = () -> UnderlyingEquityType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingEquityType6Code.mmObject();
+			codeName = UnderlyingTypeV3Code.Share.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -210,11 +220,12 @@ public class UnderlyingEquityType6Code extends UnderlyingTypeV3Code {
 	 * name} = "StockDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockDividend = new MMCode() {
+	public static final UnderlyingEquityType6Code StockDividend = new UnderlyingEquityType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockDividend";
-			owner_lazy = () -> UnderlyingEquityType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingEquityType6Code.mmObject();
+			codeName = UnderlyingTypeV3Code.StockDividend.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -233,11 +244,12 @@ public class UnderlyingEquityType6Code extends UnderlyingTypeV3Code {
 	 * name} = "StockIndex"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockIndex = new MMCode() {
+	public static final UnderlyingEquityType6Code StockIndex = new UnderlyingEquityType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockIndex";
-			owner_lazy = () -> UnderlyingEquityType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingEquityType6Code.mmObject();
+			codeName = UnderlyingTypeV3Code.StockIndex.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -256,26 +268,65 @@ public class UnderlyingEquityType6Code extends UnderlyingTypeV3Code {
 	 * name} = "VolatilityIndex"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVolatilityIndex = new MMCode() {
+	public static final UnderlyingEquityType6Code VolatilityIndex = new UnderlyingEquityType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VolatilityIndex";
-			owner_lazy = () -> UnderlyingEquityType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingEquityType6Code.mmObject();
+			codeName = UnderlyingTypeV3Code.VolatilityIndex.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, UnderlyingEquityType6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected UnderlyingEquityType6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingEquityType6Code";
 				definition = "Specifies the type for a contract for equity derivatives.";
-				code_lazy = () -> Arrays.asList(UnderlyingEquityType6Code.mmBasket, UnderlyingEquityType6Code.mmDividendIndex, UnderlyingEquityType6Code.mmExchangeTradedFund, UnderlyingEquityType6Code.mmOther,
-						UnderlyingEquityType6Code.mmShare, UnderlyingEquityType6Code.mmStockDividend, UnderlyingEquityType6Code.mmStockIndex, UnderlyingEquityType6Code.mmVolatilityIndex);
 				trace_lazy = () -> UnderlyingTypeV3Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingEquityType6Code.Basket, com.tools20022.repository.codeset.UnderlyingEquityType6Code.DividendIndex,
+						com.tools20022.repository.codeset.UnderlyingEquityType6Code.ExchangeTradedFund, com.tools20022.repository.codeset.UnderlyingEquityType6Code.Other, com.tools20022.repository.codeset.UnderlyingEquityType6Code.Share,
+						com.tools20022.repository.codeset.UnderlyingEquityType6Code.StockDividend, com.tools20022.repository.codeset.UnderlyingEquityType6Code.StockIndex,
+						com.tools20022.repository.codeset.UnderlyingEquityType6Code.VolatilityIndex);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Basket.getCodeName().get(), Basket);
+		codesByName.put(DividendIndex.getCodeName().get(), DividendIndex);
+		codesByName.put(ExchangeTradedFund.getCodeName().get(), ExchangeTradedFund);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(Share.getCodeName().get(), Share);
+		codesByName.put(StockDividend.getCodeName().get(), StockDividend);
+		codesByName.put(StockIndex.getCodeName().get(), StockIndex);
+		codesByName.put(VolatilityIndex.getCodeName().get(), VolatilityIndex);
+	}
+
+	public static UnderlyingEquityType6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static UnderlyingEquityType6Code[] values() {
+		UnderlyingEquityType6Code[] values = new UnderlyingEquityType6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, UnderlyingEquityType6Code> {
+		@Override
+		public UnderlyingEquityType6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(UnderlyingEquityType6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -30,6 +30,7 @@ import com.tools20022.repository.msg.TimeFrame3;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * TimeFrame or period concept that allows definition of a period as number of
@@ -68,23 +69,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.TimeFrame3Choice
- * TimeFrame3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Timeframe2Choice
- * Timeframe2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TimeFrame3 TimeFrame3}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TimeFrame5Choice
- * TimeFrame5Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TimeFrame4Choice
- * TimeFrame4Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TimeFrame1Choice
- * TimeFrame1Choice}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -112,10 +96,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.TimeFrame3Choice
+ * TimeFrame3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Timeframe2Choice
+ * Timeframe2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TimeFrame3 TimeFrame3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TimeFrame5Choice
+ * TimeFrame5Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TimeFrame4Choice
+ * TimeFrame4Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TimeFrame1Choice
+ * TimeFrame1Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -133,10 +134,8 @@ public class TimeFrame {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Number tradeMinus;
 	/**
-	 * An agreed number of days before the Trade date (T) used to define
-	 * standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition<br>
-	 * Where = T is the date that the price is applied to a transaction,
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,8 +175,8 @@ public class TimeFrame {
 	public static final MMBusinessAttribute mmTradeMinus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TimeFrame3Choice.mmTradeMinus, TimeFrame3.mmTradeMinus, TimeFrame1Choice.mmTradeMinus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeMinus";
 			definition = "An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition\r\nWhere = T is the date that the price is applied to a transaction,";
@@ -196,9 +195,8 @@ public class TimeFrame {
 	};
 	protected Number renunciationMinus;
 	/**
-	 * An agreed number of days before the Renunciation of Title documents are
-	 * received used to define standard timeframes in redemption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,8 +234,8 @@ public class TimeFrame {
 	public static final MMBusinessAttribute mmRenunciationMinus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TimeFrame3Choice.mmRenunciationMinus, TimeFrame1Choice.mmRenunciationMinus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RenunciationMinus";
 			definition = "An agreed number of days before the Renunciation of Title documents are received used to define standard timeframes in redemption.";
@@ -256,8 +254,8 @@ public class TimeFrame {
 	};
 	protected InvestmentFundClassProcessingCharacteristics subscriptionSettlementRelatedFundProcessing;
 	/**
-	 * Fund processing characteristics related to a subscription cycle.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -291,8 +289,8 @@ public class TimeFrame {
 	 */
 	public static final MMBusinessAssociationEnd mmSubscriptionSettlementRelatedFundProcessing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubscriptionSettlementRelatedFundProcessing";
 			definition = "Fund processing characteristics related to a subscription cycle.";
@@ -305,10 +303,8 @@ public class TimeFrame {
 	};
 	protected Number tradePlus;
 	/**
-	 * An agreed number of days after the Trade date (T) used to define standard
-	 * timeframes e.g T+3 settlement period. <br>
-	 * Where = T is the date that the price is applied to a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -352,8 +348,8 @@ public class TimeFrame {
 	public static final MMBusinessAttribute mmTradePlus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Timeframe2Choice.mmTradePlus, TimeFrame5Choice.mmTradePlus, TimeFrame4Choice.mmTradePlus, TimeFrame1Choice.mmTradePlus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradePlus";
 			definition = "An agreed number of days after the Trade date (T) used to define standard timeframes e.g T+3 settlement period. \r\nWhere = T is the date that the price is applied to a transaction.";
@@ -372,10 +368,8 @@ public class TimeFrame {
 	};
 	protected Number renunciationPlus;
 	/**
-	 * An agreed number of days after the renunciation of title documents are
-	 * received used to define standard timeframes in Redemption e.g R+3
-	 * Redemption settlement cycle.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -416,8 +410,8 @@ public class TimeFrame {
 	public static final MMBusinessAttribute mmRenunciationPlus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Timeframe2Choice.mmRenunciationPlus, TimeFrame4Choice.mmRenunciationPlus, TimeFrame1Choice.mmRenunciationPlus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RenunciationPlus";
 			definition = "An agreed number of days after the renunciation of title documents are received used to define standard timeframes in Redemption e.g R+3 Redemption settlement cycle.";
@@ -436,8 +430,8 @@ public class TimeFrame {
 	};
 	protected YesNoIndicator prepayment;
 	/**
-	 * Indicates whether pre-payment is necessary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -474,8 +468,8 @@ public class TimeFrame {
 	public static final MMBusinessAttribute mmPrepayment = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Timeframe2Choice.mmPrepayment, TimeFrame5Choice.mmPrepayment);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Prepayment";
 			definition = "Indicates whether pre-payment is necessary.";
@@ -494,9 +488,8 @@ public class TimeFrame {
 	};
 	protected Max350Text otherTimeFrameDescription;
 	/**
-	 * Specifies a description of any other TimeFrame that may be used for the
-	 * DealingCutOffTimeFrame
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -531,8 +524,8 @@ public class TimeFrame {
 	public static final MMBusinessAttribute mmOtherTimeFrameDescription = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TimeFrame3.mmOtherTimeFrameDescription);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OtherTimeFrameDescription";
 			definition = "Specifies a description of any other TimeFrame that may be used for the DealingCutOffTimeFrame";
@@ -551,8 +544,8 @@ public class TimeFrame {
 	};
 	protected InvestmentFundClassProcessingCharacteristics relatedProcessingCharacteristics;
 	/**
-	 * Processing characteristics for which a cut off time frame is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -587,8 +580,8 @@ public class TimeFrame {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedProcessingCharacteristics = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedProcessingCharacteristics";
 			definition = "Processing characteristics for which a cut off time frame is specified.";
@@ -603,7 +596,7 @@ public class TimeFrame {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TimeFrame";
 				definition = "TimeFrame or period concept that allows definition of a period as number of days before or after a defined activity.";
@@ -628,63 +621,71 @@ public class TimeFrame {
 		return tradeMinus;
 	}
 
-	public void setTradeMinus(Number tradeMinus) {
-		this.tradeMinus = tradeMinus;
+	public TimeFrame setTradeMinus(Number tradeMinus) {
+		this.tradeMinus = Objects.requireNonNull(tradeMinus);
+		return this;
 	}
 
 	public Number getRenunciationMinus() {
 		return renunciationMinus;
 	}
 
-	public void setRenunciationMinus(Number renunciationMinus) {
-		this.renunciationMinus = renunciationMinus;
+	public TimeFrame setRenunciationMinus(Number renunciationMinus) {
+		this.renunciationMinus = Objects.requireNonNull(renunciationMinus);
+		return this;
 	}
 
 	public InvestmentFundClassProcessingCharacteristics getSubscriptionSettlementRelatedFundProcessing() {
 		return subscriptionSettlementRelatedFundProcessing;
 	}
 
-	public void setSubscriptionSettlementRelatedFundProcessing(com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics subscriptionSettlementRelatedFundProcessing) {
-		this.subscriptionSettlementRelatedFundProcessing = subscriptionSettlementRelatedFundProcessing;
+	public TimeFrame setSubscriptionSettlementRelatedFundProcessing(com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics subscriptionSettlementRelatedFundProcessing) {
+		this.subscriptionSettlementRelatedFundProcessing = Objects.requireNonNull(subscriptionSettlementRelatedFundProcessing);
+		return this;
 	}
 
 	public Number getTradePlus() {
 		return tradePlus;
 	}
 
-	public void setTradePlus(Number tradePlus) {
-		this.tradePlus = tradePlus;
+	public TimeFrame setTradePlus(Number tradePlus) {
+		this.tradePlus = Objects.requireNonNull(tradePlus);
+		return this;
 	}
 
 	public Number getRenunciationPlus() {
 		return renunciationPlus;
 	}
 
-	public void setRenunciationPlus(Number renunciationPlus) {
-		this.renunciationPlus = renunciationPlus;
+	public TimeFrame setRenunciationPlus(Number renunciationPlus) {
+		this.renunciationPlus = Objects.requireNonNull(renunciationPlus);
+		return this;
 	}
 
 	public YesNoIndicator getPrepayment() {
 		return prepayment;
 	}
 
-	public void setPrepayment(YesNoIndicator prepayment) {
-		this.prepayment = prepayment;
+	public TimeFrame setPrepayment(YesNoIndicator prepayment) {
+		this.prepayment = Objects.requireNonNull(prepayment);
+		return this;
 	}
 
 	public Max350Text getOtherTimeFrameDescription() {
 		return otherTimeFrameDescription;
 	}
 
-	public void setOtherTimeFrameDescription(Max350Text otherTimeFrameDescription) {
-		this.otherTimeFrameDescription = otherTimeFrameDescription;
+	public TimeFrame setOtherTimeFrameDescription(Max350Text otherTimeFrameDescription) {
+		this.otherTimeFrameDescription = Objects.requireNonNull(otherTimeFrameDescription);
+		return this;
 	}
 
 	public InvestmentFundClassProcessingCharacteristics getRelatedProcessingCharacteristics() {
 		return relatedProcessingCharacteristics;
 	}
 
-	public void setRelatedProcessingCharacteristics(com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics relatedProcessingCharacteristics) {
-		this.relatedProcessingCharacteristics = relatedProcessingCharacteristics;
+	public TimeFrame setRelatedProcessingCharacteristics(com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics relatedProcessingCharacteristics) {
+		this.relatedProcessingCharacteristics = Objects.requireNonNull(relatedProcessingCharacteristics);
+		return this;
 	}
 }

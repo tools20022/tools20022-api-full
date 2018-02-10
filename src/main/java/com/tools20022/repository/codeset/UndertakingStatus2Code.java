@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.UndertakingStatusCode;
+import com.tools20022.repository.codeset.UndertakingStatus2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the undertaking amendment status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.UndertakingStatusCode
- * UndertakingStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingStatus2Code#mmAccepted
- * UndertakingStatus2Code.mmAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingStatus2Code#Accepted
+ * UndertakingStatus2Code.Accepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingStatus2Code#mmRejected
- * UndertakingStatus2Code.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingStatus2Code#Rejected
+ * UndertakingStatus2Code.Rejected}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.UndertakingStatusCode
+ * UndertakingStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the undertaking amendment status."</li>
  * </ul>
  */
-public class UndertakingStatus2Code extends UndertakingStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class UndertakingStatus2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class UndertakingStatus2Code extends UndertakingStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final UndertakingStatus2Code Accepted = new UndertakingStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> UndertakingStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UndertakingStatus2Code.mmObject();
+			codeName = UndertakingStatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class UndertakingStatus2Code extends UndertakingStatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final UndertakingStatus2Code Rejected = new UndertakingStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> UndertakingStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UndertakingStatus2Code.mmObject();
+			codeName = UndertakingStatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, UndertakingStatus2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected UndertakingStatus2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACCP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingStatus2Code";
 				definition = "Specifies the undertaking amendment status.";
-				code_lazy = () -> Arrays.asList(UndertakingStatus2Code.mmAccepted, UndertakingStatus2Code.mmRejected);
 				trace_lazy = () -> UndertakingStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UndertakingStatus2Code.Accepted, com.tools20022.repository.codeset.UndertakingStatus2Code.Rejected);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+	}
+
+	public static UndertakingStatus2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static UndertakingStatus2Code[] values() {
+		UndertakingStatus2Code[] values = new UndertakingStatus2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, UndertakingStatus2Code> {
+		@Override
+		public UndertakingStatus2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(UndertakingStatus2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

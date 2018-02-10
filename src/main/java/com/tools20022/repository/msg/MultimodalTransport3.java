@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,16 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information related to multimodal transportation of goods."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MultimodalTransport3", propOrder = {"takingInCharge", "placeOfFinalDestination"})
 public class MultimodalTransport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TakngInChrg", required = true)
 	protected Max35Text takingInCharge;
 	/**
-	 * Identifies the location where the goods are take in charge for
-	 * transportation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +109,7 @@ public class MultimodalTransport3 {
 	public static final MMMessageAttribute mmTakingInCharge = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
-			componentContext_lazy = () -> MultimodalTransport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport3.mmObject();
 			isDerived = false;
 			xmlTag = "TakngInChrg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +120,11 @@ public class MultimodalTransport3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfFnlDstn", required = true)
 	protected Max35Text placeOfFinalDestination;
 	/**
-	 * Identifies the location of the final destination of the goods.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +158,7 @@ public class MultimodalTransport3 {
 	public static final MMMessageAttribute mmPlaceOfFinalDestination = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
-			componentContext_lazy = () -> MultimodalTransport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport3.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfFnlDstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,9 +173,9 @@ public class MultimodalTransport3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MultimodalTransport3.mmTakingInCharge, MultimodalTransport3.mmPlaceOfFinalDestination);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MultimodalTransport3.mmTakingInCharge, com.tools20022.repository.msg.MultimodalTransport3.mmPlaceOfFinalDestination);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MultimodalTransport3";
 				definition = "Information related to multimodal transportation of goods.";
@@ -182,21 +184,21 @@ public class MultimodalTransport3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TakngInChrg", required = true)
 	public Max35Text getTakingInCharge() {
 		return takingInCharge;
 	}
 
-	public void setTakingInCharge(Max35Text takingInCharge) {
-		this.takingInCharge = takingInCharge;
+	public MultimodalTransport3 setTakingInCharge(Max35Text takingInCharge) {
+		this.takingInCharge = Objects.requireNonNull(takingInCharge);
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfFnlDstn", required = true)
 	public Max35Text getPlaceOfFinalDestination() {
 		return placeOfFinalDestination;
 	}
 
-	public void setPlaceOfFinalDestination(Max35Text placeOfFinalDestination) {
-		this.placeOfFinalDestination = placeOfFinalDestination;
+	public MultimodalTransport3 setPlaceOfFinalDestination(Max35Text placeOfFinalDestination) {
+		this.placeOfFinalDestination = Objects.requireNonNull(placeOfFinalDestination);
+		return this;
 	}
 }

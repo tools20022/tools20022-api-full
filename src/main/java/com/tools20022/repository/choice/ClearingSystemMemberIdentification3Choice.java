@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.CashClearingSystemMember;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,16 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ClearingSystemMemberIdentification3Choice", propOrder = {"identification", "proprietary"})
 public class ClearingSystemMemberIdentification3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected ExternalClearingSystemMemberCode identification;
 	/**
-	 * Identification for a clearing system member, identified in the list of
-	 * clearing system member identifications published externally.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +117,7 @@ public class ClearingSystemMemberIdentification3Choice {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> CashClearingSystemMember.mmObject();
-			componentContext_lazy = () -> ClearingSystemMemberIdentification3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,11 +128,11 @@ public class ClearingSystemMemberIdentification3Choice {
 			simpleType_lazy = () -> ExternalClearingSystemMemberCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected Max35Text proprietary;
 	/**
-	 * Identification Code for a clearing system, that has not yet been
-	 * identified in the list of clearing systems.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,7 +167,7 @@ public class ClearingSystemMemberIdentification3Choice {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> CashClearingSystemMember.mmObject();
-			componentContext_lazy = () -> ClearingSystemMemberIdentification3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,9 +182,10 @@ public class ClearingSystemMemberIdentification3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ClearingSystemMemberIdentification3Choice.mmIdentification, ClearingSystemMemberIdentification3Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.choice.ClearingSystemMemberIdentification3Choice.mmIdentification, com.tools20022.repository.choice.ClearingSystemMemberIdentification3Choice.mmProprietary);
 				trace_lazy = () -> CashClearingSystemMember.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClearingSystemMemberIdentification3Choice";
 				definition = "Choice of identifiers for a clearing system member, as assigned by the clearing system. In some clearing systems, the accounts of the clearing system members are also assigned an identifier.";
@@ -192,21 +194,21 @@ public class ClearingSystemMemberIdentification3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public ExternalClearingSystemMemberCode getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(ExternalClearingSystemMemberCode identification) {
-		this.identification = identification;
+	public ClearingSystemMemberIdentification3Choice setIdentification(ExternalClearingSystemMemberCode identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public Max35Text getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(Max35Text proprietary) {
-		this.proprietary = proprietary;
+	public ClearingSystemMemberIdentification3Choice setProprietary(Max35Text proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

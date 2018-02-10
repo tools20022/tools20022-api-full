@@ -32,9 +32,8 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -107,8 +106,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -130,17 +129,17 @@ import javax.xml.bind.annotation.XmlType;
  * AccountNotification7}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountNotification11", propOrder = {"identification", "notificationPagination", "electronicSequenceNumber", "legalSequenceNumber", "creationDateTime", "fromToDate", "copyDuplicateIndicator", "reportingSource", "account",
 		"relatedAccount", "interest", "transactionsSummary", "entry", "additionalNotificationInformation"})
 public class AccountNotification11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Unique identification, as assigned by the account servicer, to
-	 * unambiguously identify the account notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -182,7 +181,7 @@ public class AccountNotification11 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountNotification11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification11.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,13 +194,11 @@ public class AccountNotification11 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NtfctnPgntn")
 	protected Pagination notificationPagination;
 	/**
-	 * Provides details on the page number of the notification.<br>
-	 * <br>
-	 * Usage: The pagination of the notification is only allowed when agreed
-	 * between the parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -243,7 +240,7 @@ public class AccountNotification11 {
 	 */
 	public static final MMMessageAttribute mmNotificationPagination = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountNotification11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification11.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnPgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,12 +253,11 @@ public class AccountNotification11 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
 		}
 	};
+	@XmlElement(name = "ElctrncSeqNb")
 	protected Number electronicSequenceNumber;
 	/**
-	 * Sequential number of the notification, as assigned by the account
-	 * servicer. Usage: The sequential number is increased incrementally for
-	 * each notification sent electronically.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -303,7 +299,7 @@ public class AccountNotification11 {
 	 */
 	public static final MMMessageAttribute mmElectronicSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountNotification11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification11.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncSeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -316,11 +312,11 @@ public class AccountNotification11 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "LglSeqNb")
 	protected Number legalSequenceNumber;
 	/**
-	 * Legal sequential number of the notification, as assigned by the account
-	 * servicer. It is increased incrementally for each notification sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -362,7 +358,7 @@ public class AccountNotification11 {
 	 */
 	public static final MMMessageAttribute mmLegalSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountNotification11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification11.mmObject();
 			isDerived = false;
 			xmlTag = "LglSeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -375,10 +371,11 @@ public class AccountNotification11 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm", required = true)
 	protected ISODateTime creationDateTime;
 	/**
-	 * Date and time at which the message was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -418,7 +415,7 @@ public class AccountNotification11 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountNotification11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification11.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -431,11 +428,11 @@ public class AccountNotification11 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "FrToDt")
 	protected DateTimePeriodDetails fromToDate;
 	/**
-	 * Range of time between a start date and an end date for which the account
-	 * notification is issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -482,7 +479,7 @@ public class AccountNotification11 {
 	public static final MMMessageAssociationEnd mmFromToDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmReportedPeriod;
-			componentContext_lazy = () -> AccountNotification11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification11.mmObject();
 			isDerived = false;
 			xmlTag = "FrToDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -496,11 +493,11 @@ public class AccountNotification11 {
 			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails.mmObject();
 		}
 	};
+	@XmlElement(name = "CpyDplctInd")
 	protected CopyDuplicate1Code copyDuplicateIndicator;
 	/**
-	 * Indicates whether the document is a copy, a duplicate, or a duplicate of
-	 * a copy.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -543,7 +540,7 @@ public class AccountNotification11 {
 	 */
 	public static final MMMessageAttribute mmCopyDuplicateIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountNotification11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification11.mmObject();
 			isDerived = false;
 			xmlTag = "CpyDplctInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -556,10 +553,11 @@ public class AccountNotification11 {
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RptgSrc")
 	protected ReportingSource1Choice reportingSource;
 	/**
-	 * Specifies the application used to generate the reporting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -600,7 +598,7 @@ public class AccountNotification11 {
 	 */
 	public static final MMMessageAssociationEnd mmReportingSource = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountNotification11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification11.mmObject();
 			isDerived = false;
 			xmlTag = "RptgSrc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -614,11 +612,11 @@ public class AccountNotification11 {
 			type_lazy = () -> ReportingSource1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Acct", required = true)
 	protected CashAccount25 account;
 	/**
-	 * Unambiguous identification of the account to which credit and debit
-	 * entries are made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -665,7 +663,7 @@ public class AccountNotification11 {
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCashAccount;
-			componentContext_lazy = () -> AccountNotification11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification11.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -679,11 +677,11 @@ public class AccountNotification11 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount25.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdAcct")
 	protected CashAccount24 relatedAccount;
 	/**
-	 * Identifies the parent account of the account for which the notification
-	 * has been issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -730,7 +728,7 @@ public class AccountNotification11 {
 	public static final MMMessageAssociationEnd mmRelatedAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCashAccount;
-			componentContext_lazy = () -> AccountNotification11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification11.mmObject();
 			isDerived = false;
 			xmlTag = "RltdAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -744,11 +742,11 @@ public class AccountNotification11 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "Intrst")
 	protected List<com.tools20022.repository.msg.AccountInterest3> interest;
 	/**
-	 * Provides general interest information that applies to the account at a
-	 * particular moment in time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -795,7 +793,7 @@ public class AccountNotification11 {
 	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
-			componentContext_lazy = () -> AccountNotification11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification11.mmObject();
 			isDerived = false;
 			xmlTag = "Intrst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -808,10 +806,11 @@ public class AccountNotification11 {
 			type_lazy = () -> com.tools20022.repository.msg.AccountInterest3.mmObject();
 		}
 	};
+	@XmlElement(name = "TxsSummry")
 	protected TotalTransactions4 transactionsSummary;
 	/**
-	 * Provides summary information on entries.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -850,7 +849,7 @@ public class AccountNotification11 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionsSummary = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountNotification11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification11.mmObject();
 			isDerived = false;
 			xmlTag = "TxsSummry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -864,21 +863,11 @@ public class AccountNotification11 {
 			type_lazy = () -> com.tools20022.repository.msg.TotalTransactions4.mmObject();
 		}
 	};
+	@XmlElement(name = "Ntry")
 	protected List<com.tools20022.repository.msg.ReportEntry7> entry;
 	/**
-	 * Specifies an entry in the debit credit notification.<br>
-	 * Usage: At least one reference must be provided to identify the entry and
-	 * its underlying transaction(s).<br>
-	 * <br>
-	 * Usage Rule: In case of a Payments R-transaction the creditor / debtor
-	 * referenced of the original payment initiation messages is also used for
-	 * reporting of the R-transaction. The original debtor/creditor in the
-	 * reporting of R-Transactions is not inverted. <br>
-	 * Following elements all defined in the TransactionDetails in
-	 * RelatedParties or RelatedAgents are impacted by this usage rule:<br>
-	 * Creditor, UltimateCreditor, CreditorAccount, CreditorAgent, Debtor,
-	 * UltimateDebtor, DebtorAccount and DebtorAgent.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -925,7 +914,7 @@ public class AccountNotification11 {
 	public static final MMMessageAssociationEnd mmEntry = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCashBalanceEntry;
-			componentContext_lazy = () -> AccountNotification11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification11.mmObject();
 			isDerived = false;
 			xmlTag = "Ntry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -938,10 +927,11 @@ public class AccountNotification11 {
 			type_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlNtfctnInf")
 	protected Max500Text additionalNotificationInformation;
 	/**
-	 * Further details of the account notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -981,7 +971,7 @@ public class AccountNotification11 {
 	 */
 	public static final MMMessageAttribute mmAdditionalNotificationInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountNotification11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification11.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlNtfctnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -998,13 +988,15 @@ public class AccountNotification11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountNotification11.mmIdentification, AccountNotification11.mmNotificationPagination, AccountNotification11.mmElectronicSequenceNumber,
-						AccountNotification11.mmLegalSequenceNumber, AccountNotification11.mmCreationDateTime, AccountNotification11.mmFromToDate, AccountNotification11.mmCopyDuplicateIndicator, AccountNotification11.mmReportingSource,
-						AccountNotification11.mmAccount, AccountNotification11.mmRelatedAccount, AccountNotification11.mmInterest, AccountNotification11.mmTransactionsSummary, AccountNotification11.mmEntry,
-						AccountNotification11.mmAdditionalNotificationInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification11.mmIdentification, com.tools20022.repository.msg.AccountNotification11.mmNotificationPagination,
+						com.tools20022.repository.msg.AccountNotification11.mmElectronicSequenceNumber, com.tools20022.repository.msg.AccountNotification11.mmLegalSequenceNumber,
+						com.tools20022.repository.msg.AccountNotification11.mmCreationDateTime, com.tools20022.repository.msg.AccountNotification11.mmFromToDate, com.tools20022.repository.msg.AccountNotification11.mmCopyDuplicateIndicator,
+						com.tools20022.repository.msg.AccountNotification11.mmReportingSource, com.tools20022.repository.msg.AccountNotification11.mmAccount, com.tools20022.repository.msg.AccountNotification11.mmRelatedAccount,
+						com.tools20022.repository.msg.AccountNotification11.mmInterest, com.tools20022.repository.msg.AccountNotification11.mmTransactionsSummary, com.tools20022.repository.msg.AccountNotification11.mmEntry,
+						com.tools20022.repository.msg.AccountNotification11.mmAdditionalNotificationInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(BankToCustomerDebitCreditNotificationV05.mmNotification);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountNotification11";
 				definition = "Provides further details of the account notification.";
@@ -1015,129 +1007,129 @@ public class AccountNotification11 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public AccountNotification11 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "NtfctnPgntn")
-	public Pagination getNotificationPagination() {
-		return notificationPagination;
+	public Optional<Pagination> getNotificationPagination() {
+		return notificationPagination == null ? Optional.empty() : Optional.of(notificationPagination);
 	}
 
-	public void setNotificationPagination(com.tools20022.repository.msg.Pagination notificationPagination) {
+	public AccountNotification11 setNotificationPagination(com.tools20022.repository.msg.Pagination notificationPagination) {
 		this.notificationPagination = notificationPagination;
+		return this;
 	}
 
-	@XmlElement(name = "ElctrncSeqNb")
-	public Number getElectronicSequenceNumber() {
-		return electronicSequenceNumber;
+	public Optional<Number> getElectronicSequenceNumber() {
+		return electronicSequenceNumber == null ? Optional.empty() : Optional.of(electronicSequenceNumber);
 	}
 
-	public void setElectronicSequenceNumber(Number electronicSequenceNumber) {
+	public AccountNotification11 setElectronicSequenceNumber(Number electronicSequenceNumber) {
 		this.electronicSequenceNumber = electronicSequenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "LglSeqNb")
-	public Number getLegalSequenceNumber() {
-		return legalSequenceNumber;
+	public Optional<Number> getLegalSequenceNumber() {
+		return legalSequenceNumber == null ? Optional.empty() : Optional.of(legalSequenceNumber);
 	}
 
-	public void setLegalSequenceNumber(Number legalSequenceNumber) {
+	public AccountNotification11 setLegalSequenceNumber(Number legalSequenceNumber) {
 		this.legalSequenceNumber = legalSequenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
-		this.creationDateTime = creationDateTime;
+	public AccountNotification11 setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = Objects.requireNonNull(creationDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "FrToDt")
-	public DateTimePeriodDetails getFromToDate() {
-		return fromToDate;
+	public Optional<DateTimePeriodDetails> getFromToDate() {
+		return fromToDate == null ? Optional.empty() : Optional.of(fromToDate);
 	}
 
-	public void setFromToDate(com.tools20022.repository.msg.DateTimePeriodDetails fromToDate) {
+	public AccountNotification11 setFromToDate(com.tools20022.repository.msg.DateTimePeriodDetails fromToDate) {
 		this.fromToDate = fromToDate;
+		return this;
 	}
 
-	@XmlElement(name = "CpyDplctInd")
-	public CopyDuplicate1Code getCopyDuplicateIndicator() {
-		return copyDuplicateIndicator;
+	public Optional<CopyDuplicate1Code> getCopyDuplicateIndicator() {
+		return copyDuplicateIndicator == null ? Optional.empty() : Optional.of(copyDuplicateIndicator);
 	}
 
-	public void setCopyDuplicateIndicator(CopyDuplicate1Code copyDuplicateIndicator) {
+	public AccountNotification11 setCopyDuplicateIndicator(CopyDuplicate1Code copyDuplicateIndicator) {
 		this.copyDuplicateIndicator = copyDuplicateIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "RptgSrc")
-	public ReportingSource1Choice getReportingSource() {
-		return reportingSource;
+	public Optional<ReportingSource1Choice> getReportingSource() {
+		return reportingSource == null ? Optional.empty() : Optional.of(reportingSource);
 	}
 
-	public void setReportingSource(ReportingSource1Choice reportingSource) {
+	public AccountNotification11 setReportingSource(ReportingSource1Choice reportingSource) {
 		this.reportingSource = reportingSource;
+		return this;
 	}
 
-	@XmlElement(name = "Acct", required = true)
 	public CashAccount25 getAccount() {
 		return account;
 	}
 
-	public void setAccount(com.tools20022.repository.msg.CashAccount25 account) {
-		this.account = account;
+	public AccountNotification11 setAccount(com.tools20022.repository.msg.CashAccount25 account) {
+		this.account = Objects.requireNonNull(account);
+		return this;
 	}
 
-	@XmlElement(name = "RltdAcct")
-	public CashAccount24 getRelatedAccount() {
-		return relatedAccount;
+	public Optional<CashAccount24> getRelatedAccount() {
+		return relatedAccount == null ? Optional.empty() : Optional.of(relatedAccount);
 	}
 
-	public void setRelatedAccount(com.tools20022.repository.msg.CashAccount24 relatedAccount) {
+	public AccountNotification11 setRelatedAccount(com.tools20022.repository.msg.CashAccount24 relatedAccount) {
 		this.relatedAccount = relatedAccount;
+		return this;
 	}
 
-	@XmlElement(name = "Intrst")
 	public List<AccountInterest3> getInterest() {
-		return interest;
+		return interest == null ? interest = new ArrayList<>() : interest;
 	}
 
-	public void setInterest(List<com.tools20022.repository.msg.AccountInterest3> interest) {
-		this.interest = interest;
+	public AccountNotification11 setInterest(List<com.tools20022.repository.msg.AccountInterest3> interest) {
+		this.interest = Objects.requireNonNull(interest);
+		return this;
 	}
 
-	@XmlElement(name = "TxsSummry")
-	public TotalTransactions4 getTransactionsSummary() {
-		return transactionsSummary;
+	public Optional<TotalTransactions4> getTransactionsSummary() {
+		return transactionsSummary == null ? Optional.empty() : Optional.of(transactionsSummary);
 	}
 
-	public void setTransactionsSummary(com.tools20022.repository.msg.TotalTransactions4 transactionsSummary) {
+	public AccountNotification11 setTransactionsSummary(com.tools20022.repository.msg.TotalTransactions4 transactionsSummary) {
 		this.transactionsSummary = transactionsSummary;
+		return this;
 	}
 
-	@XmlElement(name = "Ntry")
 	public List<ReportEntry7> getEntry() {
-		return entry;
+		return entry == null ? entry = new ArrayList<>() : entry;
 	}
 
-	public void setEntry(List<com.tools20022.repository.msg.ReportEntry7> entry) {
-		this.entry = entry;
+	public AccountNotification11 setEntry(List<com.tools20022.repository.msg.ReportEntry7> entry) {
+		this.entry = Objects.requireNonNull(entry);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlNtfctnInf")
-	public Max500Text getAdditionalNotificationInformation() {
-		return additionalNotificationInformation;
+	public Optional<Max500Text> getAdditionalNotificationInformation() {
+		return additionalNotificationInformation == null ? Optional.empty() : Optional.of(additionalNotificationInformation);
 	}
 
-	public void setAdditionalNotificationInformation(Max500Text additionalNotificationInformation) {
+	public AccountNotification11 setAdditionalNotificationInformation(Max500Text additionalNotificationInformation) {
 		this.additionalNotificationInformation = additionalNotificationInformation;
+		return this;
 	}
 }

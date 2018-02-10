@@ -30,6 +30,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -80,8 +81,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -93,18 +94,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Unique and unambiguous way to identify an organisation."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "OrganisationIdentification2", propOrder = {"BIC", "IBEI", "BEI", "EANGLN", "CHIPSUniversalIdentification", "DUNS", "bankPartyIdentification", "taxIdentificationNumber", "proprietaryIdentification"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "OrganisationIdentification2", propOrder = {"bIC", "iBEI", "bEI", "eANGLN", "cHIPSUniversalIdentification", "dUNS", "bankPartyIdentification", "taxIdentificationNumber", "proprietaryIdentification"})
 public class OrganisationIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BIC")
 	protected BICIdentifier bIC;
 	/**
-	 * Code allocated to a financial institution by the ISO 9362 Registration
-	 * Authority as described in ISO 9362
-	 * "Banking - Banking telecommunication messages - Business identifier code (BIC)"
-	 * .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,7 +139,7 @@ public class OrganisationIdentification2 {
 	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> OrganisationIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "BIC";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,12 +150,11 @@ public class OrganisationIdentification2 {
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "IBEI")
 	protected IBEIIdentifier iBEI;
 	/**
-	 * International Business Entity Identifier to uniquely identify business
-	 * entities playing a role in the lifecycle of and events related to a
-	 * financial instrument. (tentative - to be confirmed)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,7 +190,7 @@ public class OrganisationIdentification2 {
 	public static final MMMessageAttribute mmIBEI = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICNonFI;
-			componentContext_lazy = () -> OrganisationIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "IBEI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,13 +201,11 @@ public class OrganisationIdentification2 {
 			simpleType_lazy = () -> IBEIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "BEI")
 	protected BEIIdentifier bEI;
 	/**
-	 * Code allocated to a non-financial institution by the ISO 9362
-	 * Registration Authority as described in ISO 9362
-	 * "Banking - Banking telecommunication messages - Business identifier code (BIC)"
-	 * .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,7 +241,7 @@ public class OrganisationIdentification2 {
 	public static final MMMessageAttribute mmBEI = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICNonFI;
-			componentContext_lazy = () -> OrganisationIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "BEI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,14 +252,11 @@ public class OrganisationIdentification2 {
 			simpleType_lazy = () -> BEIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "EANGLN")
 	protected EANGLNIdentifier eANGLN;
 	/**
-	 * Global Location Number. A non-significant reference number used to
-	 * identify legal entities, functional entities, or physical entities
-	 * according to the European Association for Numbering (EAN) numbering
-	 * scheme rules.The number is used to retrieve detailed information that is
-	 * linked to it.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -299,7 +292,7 @@ public class OrganisationIdentification2 {
 	public static final MMMessageAttribute mmEANGLN = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmEANGLN;
-			componentContext_lazy = () -> OrganisationIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "EANGLN";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -310,13 +303,11 @@ public class OrganisationIdentification2 {
 			simpleType_lazy = () -> EANGLNIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "USCHU")
 	protected CHIPSUniversalIdentifier cHIPSUniversalIdentification;
 	/**
-	 * (United States) Clearing House Interbank Payments System (CHIPS)
-	 * Universal Identification (UID) - identifies entities that own accounts at
-	 * CHIPS participating financial institutions, through which CHIPS payments
-	 * are effected. The CHIPS UID is assigned by the New York Clearing House.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -352,7 +343,7 @@ public class OrganisationIdentification2 {
 	public static final MMMessageAttribute mmCHIPSUniversalIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmCHIPSUniversalIdentifier;
-			componentContext_lazy = () -> OrganisationIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "USCHU";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -363,11 +354,11 @@ public class OrganisationIdentification2 {
 			simpleType_lazy = () -> CHIPSUniversalIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "DUNS")
 	protected DunsIdentifier dUNS;
 	/**
-	 * Data Universal Numbering System. A unique identification number provided
-	 * by Dun &amp; Bradstreet to identify an organization.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -403,7 +394,7 @@ public class OrganisationIdentification2 {
 	public static final MMMessageAttribute mmDUNS = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmDUNS;
-			componentContext_lazy = () -> OrganisationIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "DUNS";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -414,11 +405,11 @@ public class OrganisationIdentification2 {
 			simpleType_lazy = () -> DunsIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "BkPtyId")
 	protected Max35Text bankPartyIdentification;
 	/**
-	 * Unique and unambiguous assignment made by a specific bank to identify a
-	 * relationship as defined between the bank and its client.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -453,7 +444,7 @@ public class OrganisationIdentification2 {
 	public static final MMMessageAttribute mmBankPartyIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBankPartyIdentification;
-			componentContext_lazy = () -> OrganisationIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "BkPtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -464,10 +455,11 @@ public class OrganisationIdentification2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxIdNb")
 	protected Max35Text taxIdentificationNumber;
 	/**
-	 * Number assigned by a tax authority to an entity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -500,7 +492,7 @@ public class OrganisationIdentification2 {
 	public static final MMMessageAttribute mmTaxIdentificationNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTaxIdentificationNumber;
-			componentContext_lazy = () -> OrganisationIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "TaxIdNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -511,11 +503,11 @@ public class OrganisationIdentification2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryId")
 	protected GenericIdentification3 proprietaryIdentification;
 	/**
-	 * Unique and unambiguous identifier for an organisation that is allocated
-	 * by an institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -549,7 +541,7 @@ public class OrganisationIdentification2 {
 	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> OrganisationIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -565,11 +557,13 @@ public class OrganisationIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OrganisationIdentification2.mmBIC, OrganisationIdentification2.mmIBEI, OrganisationIdentification2.mmBEI, OrganisationIdentification2.mmEANGLN,
-						OrganisationIdentification2.mmCHIPSUniversalIdentification, OrganisationIdentification2.mmDUNS, OrganisationIdentification2.mmBankPartyIdentification, OrganisationIdentification2.mmTaxIdentificationNumber,
-						OrganisationIdentification2.mmProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrganisationIdentification2.mmBIC, com.tools20022.repository.msg.OrganisationIdentification2.mmIBEI,
+						com.tools20022.repository.msg.OrganisationIdentification2.mmBEI, com.tools20022.repository.msg.OrganisationIdentification2.mmEANGLN,
+						com.tools20022.repository.msg.OrganisationIdentification2.mmCHIPSUniversalIdentification, com.tools20022.repository.msg.OrganisationIdentification2.mmDUNS,
+						com.tools20022.repository.msg.OrganisationIdentification2.mmBankPartyIdentification, com.tools20022.repository.msg.OrganisationIdentification2.mmTaxIdentificationNumber,
+						com.tools20022.repository.msg.OrganisationIdentification2.mmProprietaryIdentification);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -585,84 +579,84 @@ public class OrganisationIdentification2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BIC")
-	public BICIdentifier getBIC() {
-		return bIC;
+	public Optional<BICIdentifier> getBIC() {
+		return bIC == null ? Optional.empty() : Optional.of(bIC);
 	}
 
-	public void setBIC(BICIdentifier bIC) {
+	public OrganisationIdentification2 setBIC(BICIdentifier bIC) {
 		this.bIC = bIC;
+		return this;
 	}
 
-	@XmlElement(name = "IBEI")
-	public IBEIIdentifier getIBEI() {
-		return iBEI;
+	public Optional<IBEIIdentifier> getIBEI() {
+		return iBEI == null ? Optional.empty() : Optional.of(iBEI);
 	}
 
-	public void setIBEI(IBEIIdentifier iBEI) {
+	public OrganisationIdentification2 setIBEI(IBEIIdentifier iBEI) {
 		this.iBEI = iBEI;
+		return this;
 	}
 
-	@XmlElement(name = "BEI")
-	public BEIIdentifier getBEI() {
-		return bEI;
+	public Optional<BEIIdentifier> getBEI() {
+		return bEI == null ? Optional.empty() : Optional.of(bEI);
 	}
 
-	public void setBEI(BEIIdentifier bEI) {
+	public OrganisationIdentification2 setBEI(BEIIdentifier bEI) {
 		this.bEI = bEI;
+		return this;
 	}
 
-	@XmlElement(name = "EANGLN")
-	public EANGLNIdentifier getEANGLN() {
-		return eANGLN;
+	public Optional<EANGLNIdentifier> getEANGLN() {
+		return eANGLN == null ? Optional.empty() : Optional.of(eANGLN);
 	}
 
-	public void setEANGLN(EANGLNIdentifier eANGLN) {
+	public OrganisationIdentification2 setEANGLN(EANGLNIdentifier eANGLN) {
 		this.eANGLN = eANGLN;
+		return this;
 	}
 
-	@XmlElement(name = "USCHU")
-	public CHIPSUniversalIdentifier getCHIPSUniversalIdentification() {
-		return cHIPSUniversalIdentification;
+	public Optional<CHIPSUniversalIdentifier> getCHIPSUniversalIdentification() {
+		return cHIPSUniversalIdentification == null ? Optional.empty() : Optional.of(cHIPSUniversalIdentification);
 	}
 
-	public void setCHIPSUniversalIdentification(CHIPSUniversalIdentifier cHIPSUniversalIdentification) {
+	public OrganisationIdentification2 setCHIPSUniversalIdentification(CHIPSUniversalIdentifier cHIPSUniversalIdentification) {
 		this.cHIPSUniversalIdentification = cHIPSUniversalIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "DUNS")
-	public DunsIdentifier getDUNS() {
-		return dUNS;
+	public Optional<DunsIdentifier> getDUNS() {
+		return dUNS == null ? Optional.empty() : Optional.of(dUNS);
 	}
 
-	public void setDUNS(DunsIdentifier dUNS) {
+	public OrganisationIdentification2 setDUNS(DunsIdentifier dUNS) {
 		this.dUNS = dUNS;
+		return this;
 	}
 
-	@XmlElement(name = "BkPtyId")
-	public Max35Text getBankPartyIdentification() {
-		return bankPartyIdentification;
+	public Optional<Max35Text> getBankPartyIdentification() {
+		return bankPartyIdentification == null ? Optional.empty() : Optional.of(bankPartyIdentification);
 	}
 
-	public void setBankPartyIdentification(Max35Text bankPartyIdentification) {
+	public OrganisationIdentification2 setBankPartyIdentification(Max35Text bankPartyIdentification) {
 		this.bankPartyIdentification = bankPartyIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TaxIdNb")
-	public Max35Text getTaxIdentificationNumber() {
-		return taxIdentificationNumber;
+	public Optional<Max35Text> getTaxIdentificationNumber() {
+		return taxIdentificationNumber == null ? Optional.empty() : Optional.of(taxIdentificationNumber);
 	}
 
-	public void setTaxIdentificationNumber(Max35Text taxIdentificationNumber) {
+	public OrganisationIdentification2 setTaxIdentificationNumber(Max35Text taxIdentificationNumber) {
 		this.taxIdentificationNumber = taxIdentificationNumber;
+		return this;
 	}
 
-	@XmlElement(name = "PrtryId")
-	public GenericIdentification3 getProprietaryIdentification() {
-		return proprietaryIdentification;
+	public Optional<GenericIdentification3> getProprietaryIdentification() {
+		return proprietaryIdentification == null ? Optional.empty() : Optional.of(proprietaryIdentification);
 	}
 
-	public void setProprietaryIdentification(com.tools20022.repository.msg.GenericIdentification3 proprietaryIdentification) {
+	public OrganisationIdentification2 setProprietaryIdentification(com.tools20022.repository.msg.GenericIdentification3 proprietaryIdentification) {
 		this.proprietaryIdentification = proprietaryIdentification;
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.TimeOutCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for time-out.
@@ -32,10 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TimeOutCode#mmLatestShipmentDateDue
- * TimeOutCode.mmLatestShipmentDateDue}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TimeOutCode#mmNoAction
- * TimeOutCode.mmNoAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.TimeOutCode#LatestShipmentDateDue
+ * TimeOutCode.LatestShipmentDateDue}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TimeOutCode#NoAction
+ * TimeOutCode.NoAction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason for time-out."</li>
  * </ul>
  */
-public class TimeOutCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TimeOutCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,12 +95,12 @@ public class TimeOutCode {
 	 * "Reason for time-out is the reaching of latest shipment date."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLatestShipmentDateDue = new MMCode() {
+	public static final TimeOutCode LatestShipmentDateDue = new TimeOutCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LatestShipmentDateDue";
 			definition = "Reason for time-out is the reaching of latest shipment date.";
-			owner_lazy = () -> TimeOutCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TimeOutCode.mmObject();
 			codeName = "LSDD";
 		}
 	};
@@ -119,28 +125,58 @@ public class TimeOutCode {
 	 * "Reason for time-out is the lack of action from the user side."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoAction = new MMCode() {
+	public static final TimeOutCode NoAction = new TimeOutCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAction";
 			definition = "Reason for time-out is the lack of action from the user side.";
-			owner_lazy = () -> TimeOutCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TimeOutCode.mmObject();
 			codeName = "NACT";
 		}
 	};
+	final static private LinkedHashMap<String, TimeOutCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TimeOutCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("LSDD");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TimeOutCode";
 				definition = "Specifies the reason for time-out.";
-				code_lazy = () -> Arrays.asList(TimeOutCode.mmLatestShipmentDateDue, TimeOutCode.mmNoAction);
 				derivation_lazy = () -> Arrays.asList(TimeOut1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TimeOutCode.LatestShipmentDateDue, com.tools20022.repository.codeset.TimeOutCode.NoAction);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(LatestShipmentDateDue.getCodeName().get(), LatestShipmentDateDue);
+		codesByName.put(NoAction.getCodeName().get(), NoAction);
+	}
+
+	public static TimeOutCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TimeOutCode[] values() {
+		TimeOutCode[] values = new TimeOutCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TimeOutCode> {
+		@Override
+		public TimeOutCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TimeOutCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

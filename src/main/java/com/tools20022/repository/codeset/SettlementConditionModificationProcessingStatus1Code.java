@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.InstructionProcessingStatusCode;
+import com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of a securities settlement condition modification
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode
- * InstructionProcessingStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code#mmAcknowledgedAccepted
- * SettlementConditionModificationProcessingStatus1Code.mmAcknowledgedAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code#AcknowledgedAccepted
+ * SettlementConditionModificationProcessingStatus1Code.AcknowledgedAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code#mmRejected
- * SettlementConditionModificationProcessingStatus1Code.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code#Rejected
+ * SettlementConditionModificationProcessingStatus1Code.Rejected}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode
+ * InstructionProcessingStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class SettlementConditionModificationProcessingStatus1Code extends InstructionProcessingStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SettlementConditionModificationProcessingStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class SettlementConditionModificationProcessingStatus1Code extends Instru
 	 * name} = "AcknowledgedAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
+	public static final SettlementConditionModificationProcessingStatus1Code AcknowledgedAccepted = new SettlementConditionModificationProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
-			owner_lazy = () -> SettlementConditionModificationProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code.mmObject();
+			codeName = InstructionProcessingStatusCode.AcknowledgedAccepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,58 @@ public class SettlementConditionModificationProcessingStatus1Code extends Instru
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final SettlementConditionModificationProcessingStatus1Code Rejected = new SettlementConditionModificationProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> SettlementConditionModificationProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code.mmObject();
+			codeName = InstructionProcessingStatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SettlementConditionModificationProcessingStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SettlementConditionModificationProcessingStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PACK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementConditionModificationProcessingStatus1Code";
 				definition = "Specifies the status of a securities settlement condition modification request.";
-				code_lazy = () -> Arrays.asList(SettlementConditionModificationProcessingStatus1Code.mmAcknowledgedAccepted, SettlementConditionModificationProcessingStatus1Code.mmRejected);
 				trace_lazy = () -> InstructionProcessingStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code.AcknowledgedAccepted,
+						com.tools20022.repository.codeset.SettlementConditionModificationProcessingStatus1Code.Rejected);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AcknowledgedAccepted.getCodeName().get(), AcknowledgedAccepted);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+	}
+
+	public static SettlementConditionModificationProcessingStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SettlementConditionModificationProcessingStatus1Code[] values() {
+		SettlementConditionModificationProcessingStatus1Code[] values = new SettlementConditionModificationProcessingStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SettlementConditionModificationProcessingStatus1Code> {
+		@Override
+		public SettlementConditionModificationProcessingStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SettlementConditionModificationProcessingStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

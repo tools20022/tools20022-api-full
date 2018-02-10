@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CancellationRightCode;
+import com.tools20022.repository.codeset.CancellationRight2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies if the investor has the right to cancel an instruction or, if not,
@@ -31,33 +35,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CancellationRightCode
- * CancellationRightCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationRight2Code#mmEntitled
- * CancellationRight2Code.mmEntitled}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationRight2Code#Entitled
+ * CancellationRight2Code.Entitled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationRight2Code#mmExecutionOnly
- * CancellationRight2Code.mmExecutionOnly}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationRight2Code#ExecutionOnly
+ * CancellationRight2Code.ExecutionOnly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationRight2Code#mmWaiverAgreement
- * CancellationRight2Code.mmWaiverAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationRight2Code#WaiverAgreement
+ * CancellationRight2Code.WaiverAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationRight2Code#mmInstitutional
- * CancellationRight2Code.mmInstitutional}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationRight2Code#Institutional
+ * CancellationRight2Code.Institutional}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationRight2Code#mmOther
- * CancellationRight2Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationRight2Code#Other
+ * CancellationRight2Code.Other}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CancellationRightCode
+ * CancellationRightCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -76,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CancellationRight2Code extends CancellationRightCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CancellationRight2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,11 +100,12 @@ public class CancellationRight2Code extends CancellationRightCode {
 	 * name} = "Entitled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEntitled = new MMCode() {
+	public static final CancellationRight2Code Entitled = new CancellationRight2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Entitled";
-			owner_lazy = () -> CancellationRight2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationRight2Code.mmObject();
+			codeName = CancellationRightCode.Entitled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -118,11 +124,12 @@ public class CancellationRight2Code extends CancellationRightCode {
 	 * name} = "ExecutionOnly"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExecutionOnly = new MMCode() {
+	public static final CancellationRight2Code ExecutionOnly = new CancellationRight2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutionOnly";
-			owner_lazy = () -> CancellationRight2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationRight2Code.mmObject();
+			codeName = CancellationRightCode.ExecutionOnly.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -141,11 +148,12 @@ public class CancellationRight2Code extends CancellationRightCode {
 	 * name} = "WaiverAgreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWaiverAgreement = new MMCode() {
+	public static final CancellationRight2Code WaiverAgreement = new CancellationRight2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaiverAgreement";
-			owner_lazy = () -> CancellationRight2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationRight2Code.mmObject();
+			codeName = CancellationRightCode.WaiverAgreement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -164,11 +172,12 @@ public class CancellationRight2Code extends CancellationRightCode {
 	 * name} = "Institutional"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstitutional = new MMCode() {
+	public static final CancellationRight2Code Institutional = new CancellationRight2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Institutional";
-			owner_lazy = () -> CancellationRight2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationRight2Code.mmObject();
+			codeName = CancellationRightCode.Institutional.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -187,26 +196,61 @@ public class CancellationRight2Code extends CancellationRightCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final CancellationRight2Code Other = new CancellationRight2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> CancellationRight2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationRight2Code.mmObject();
+			codeName = CancellationRightCode.Other.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CancellationRight2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CancellationRight2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("VALI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationRight2Code";
 				definition = "Specifies if the investor has the right to cancel an instruction or, if not, the reason the investor cannot cancel.";
-				code_lazy = () -> Arrays.asList(CancellationRight2Code.mmEntitled, CancellationRight2Code.mmExecutionOnly, CancellationRight2Code.mmWaiverAgreement, CancellationRight2Code.mmInstitutional, CancellationRight2Code.mmOther);
 				trace_lazy = () -> CancellationRightCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationRight2Code.Entitled, com.tools20022.repository.codeset.CancellationRight2Code.ExecutionOnly,
+						com.tools20022.repository.codeset.CancellationRight2Code.WaiverAgreement, com.tools20022.repository.codeset.CancellationRight2Code.Institutional, com.tools20022.repository.codeset.CancellationRight2Code.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Entitled.getCodeName().get(), Entitled);
+		codesByName.put(ExecutionOnly.getCodeName().get(), ExecutionOnly);
+		codesByName.put(WaiverAgreement.getCodeName().get(), WaiverAgreement);
+		codesByName.put(Institutional.getCodeName().get(), Institutional);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static CancellationRight2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CancellationRight2Code[] values() {
+		CancellationRight2Code[] values = new CancellationRight2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CancellationRight2Code> {
+		@Override
+		public CancellationRight2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CancellationRight2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

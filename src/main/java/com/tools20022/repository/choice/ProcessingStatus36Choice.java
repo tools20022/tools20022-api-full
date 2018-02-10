@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.ProprietaryStatusAndReason3;
 import com.tools20022.repository.msg.Reason3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ProcessingStatus36Choice", propOrder = {"acknowledgedAccepted", "pendingProcessing", "rejected", "completed", "proprietary"})
 public class ProcessingStatus36Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AckdAccptd", required = true)
 	protected Reason3 acknowledgedAccepted;
 	/**
-	 * Instruction has been acknowledged by the executing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -132,7 +134,7 @@ public class ProcessingStatus36Choice {
 	public static final MMMessageAssociationEnd mmAcknowledgedAccepted = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
-			componentContext_lazy = () -> ProcessingStatus36Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus36Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AckdAccptd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,10 +147,11 @@ public class ProcessingStatus36Choice {
 			type_lazy = () -> Reason3.mmObject();
 		}
 	};
+	@XmlElement(name = "PdgPrcg", required = true)
 	protected Reason3Choice pendingProcessing;
 	/**
-	 * Instruction is pendingprocessing by the executing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -188,7 +191,7 @@ public class ProcessingStatus36Choice {
 	public static final MMMessageAssociationEnd mmPendingProcessing = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
-			componentContext_lazy = () -> ProcessingStatus36Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus36Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PdgPrcg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,10 +204,11 @@ public class ProcessingStatus36Choice {
 			type_lazy = () -> com.tools20022.repository.choice.Reason3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Rjctd", required = true)
 	protected Reason3Choice rejected;
 	/**
-	 * Instruction is rejected by the executing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -244,7 +248,7 @@ public class ProcessingStatus36Choice {
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
-			componentContext_lazy = () -> ProcessingStatus36Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus36Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,10 +261,11 @@ public class ProcessingStatus36Choice {
 			type_lazy = () -> com.tools20022.repository.choice.Reason3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Cmpltd", required = true)
 	protected Reason3 completed;
 	/**
-	 * Instruction has been completed by the executing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -291,7 +296,7 @@ public class ProcessingStatus36Choice {
 	public static final MMMessageAssociationEnd mmCompleted = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-			componentContext_lazy = () -> ProcessingStatus36Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus36Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cmpltd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -303,11 +308,11 @@ public class ProcessingStatus36Choice {
 			type_lazy = () -> Reason3.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected ProprietaryStatusAndReason3 proprietary;
 	/**
-	 * Status that cannot be reported using one of the available standard
-	 * status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -350,7 +355,7 @@ public class ProcessingStatus36Choice {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-			componentContext_lazy = () -> ProcessingStatus36Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus36Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -367,10 +372,10 @@ public class ProcessingStatus36Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProcessingStatus36Choice.mmAcknowledgedAccepted, ProcessingStatus36Choice.mmPendingProcessing, ProcessingStatus36Choice.mmRejected, ProcessingStatus36Choice.mmCompleted,
-						ProcessingStatus36Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingStatus36Choice.mmAcknowledgedAccepted, com.tools20022.repository.choice.ProcessingStatus36Choice.mmPendingProcessing,
+						com.tools20022.repository.choice.ProcessingStatus36Choice.mmRejected, com.tools20022.repository.choice.ProcessingStatus36Choice.mmCompleted, com.tools20022.repository.choice.ProcessingStatus36Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ProcessingStatus36Choice";
 				definition = "Specifies the status and the reason of the operation.";
@@ -380,48 +385,48 @@ public class ProcessingStatus36Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AckdAccptd", required = true)
 	public Reason3 getAcknowledgedAccepted() {
 		return acknowledgedAccepted;
 	}
 
-	public void setAcknowledgedAccepted(Reason3 acknowledgedAccepted) {
-		this.acknowledgedAccepted = acknowledgedAccepted;
+	public ProcessingStatus36Choice setAcknowledgedAccepted(Reason3 acknowledgedAccepted) {
+		this.acknowledgedAccepted = Objects.requireNonNull(acknowledgedAccepted);
+		return this;
 	}
 
-	@XmlElement(name = "PdgPrcg", required = true)
 	public Reason3Choice getPendingProcessing() {
 		return pendingProcessing;
 	}
 
-	public void setPendingProcessing(com.tools20022.repository.choice.Reason3Choice pendingProcessing) {
-		this.pendingProcessing = pendingProcessing;
+	public ProcessingStatus36Choice setPendingProcessing(com.tools20022.repository.choice.Reason3Choice pendingProcessing) {
+		this.pendingProcessing = Objects.requireNonNull(pendingProcessing);
+		return this;
 	}
 
-	@XmlElement(name = "Rjctd", required = true)
 	public Reason3Choice getRejected() {
 		return rejected;
 	}
 
-	public void setRejected(com.tools20022.repository.choice.Reason3Choice rejected) {
-		this.rejected = rejected;
+	public ProcessingStatus36Choice setRejected(com.tools20022.repository.choice.Reason3Choice rejected) {
+		this.rejected = Objects.requireNonNull(rejected);
+		return this;
 	}
 
-	@XmlElement(name = "Cmpltd", required = true)
 	public Reason3 getCompleted() {
 		return completed;
 	}
 
-	public void setCompleted(Reason3 completed) {
-		this.completed = completed;
+	public ProcessingStatus36Choice setCompleted(Reason3 completed) {
+		this.completed = Objects.requireNonNull(completed);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryStatusAndReason3 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(ProprietaryStatusAndReason3 proprietary) {
-		this.proprietary = proprietary;
+	public ProcessingStatus36Choice setProprietary(ProprietaryStatusAndReason3 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

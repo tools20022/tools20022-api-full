@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about the type of notification required."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Notification2", propOrder = {"notificationType", "required", "distributionType"})
 public class Notification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NtfctnTp", required = true)
 	protected Max35Text notificationType;
 	/**
-	 * Type of notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +103,7 @@ public class Notification2 {
 	 */
 	public static final MMMessageAttribute mmNotificationType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Notification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Notification2.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +114,11 @@ public class Notification2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Reqrd", required = true)
 	protected YesNoIndicator required;
 	/**
-	 * Indicates whether the notification is required.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,7 +145,7 @@ public class Notification2 {
 	 */
 	public static final MMMessageAttribute mmRequired = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Notification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Notification2.mmObject();
 			isDerived = false;
 			xmlTag = "Reqrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,10 +156,11 @@ public class Notification2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "DstrbtnTp")
 	protected InformationDistribution1Choice distributionType;
 	/**
-	 * Specifies how the notification is sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -181,7 +186,7 @@ public class Notification2 {
 	 */
 	public static final MMMessageAssociationEnd mmDistributionType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Notification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Notification2.mmObject();
 			isDerived = false;
 			xmlTag = "DstrbtnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,8 +202,9 @@ public class Notification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Notification2.mmNotificationType, Notification2.mmRequired, Notification2.mmDistributionType);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Notification2.mmNotificationType, com.tools20022.repository.msg.Notification2.mmRequired,
+						com.tools20022.repository.msg.Notification2.mmDistributionType);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Notification2";
 				definition = "Information about the type of notification required.";
@@ -207,30 +213,30 @@ public class Notification2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NtfctnTp", required = true)
 	public Max35Text getNotificationType() {
 		return notificationType;
 	}
 
-	public void setNotificationType(Max35Text notificationType) {
-		this.notificationType = notificationType;
+	public Notification2 setNotificationType(Max35Text notificationType) {
+		this.notificationType = Objects.requireNonNull(notificationType);
+		return this;
 	}
 
-	@XmlElement(name = "Reqrd", required = true)
 	public YesNoIndicator getRequired() {
 		return required;
 	}
 
-	public void setRequired(YesNoIndicator required) {
-		this.required = required;
+	public Notification2 setRequired(YesNoIndicator required) {
+		this.required = Objects.requireNonNull(required);
+		return this;
 	}
 
-	@XmlElement(name = "DstrbtnTp")
-	public InformationDistribution1Choice getDistributionType() {
-		return distributionType;
+	public Optional<InformationDistribution1Choice> getDistributionType() {
+		return distributionType == null ? Optional.empty() : Optional.of(distributionType);
 	}
 
-	public void setDistributionType(InformationDistribution1Choice distributionType) {
+	public Notification2 setDistributionType(InformationDistribution1Choice distributionType) {
 		this.distributionType = distributionType;
+		return this;
 	}
 }

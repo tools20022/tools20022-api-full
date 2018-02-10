@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification18;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of format for the classification."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ClassificationType4Choice", propOrder = {"classificationFinancialInstrument", "alternateClassification"})
 public class ClassificationType4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ClssfctnFinInstrm", required = true)
 	protected CFIIdentifier classificationFinancialInstrument;
 	/**
-	 * ISO 10962 Classification of Financial Instrument (CFI)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +111,7 @@ public class ClassificationType4Choice {
 	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
-			componentContext_lazy = () -> ClassificationType4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ClassificationType4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ClssfctnFinInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +122,11 @@ public class ClassificationType4Choice {
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "AltrnClssfctn", required = true)
 	protected GenericIdentification18 alternateClassification;
 	/**
-	 * Proprietary classification of financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -156,7 +159,7 @@ public class ClassificationType4Choice {
 	public static final MMMessageAssociationEnd mmAlternateClassification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
-			componentContext_lazy = () -> ClassificationType4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ClassificationType4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnClssfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +175,9 @@ public class ClassificationType4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ClassificationType4Choice.mmClassificationFinancialInstrument, ClassificationType4Choice.mmAlternateClassification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClassificationType4Choice.mmClassificationFinancialInstrument, com.tools20022.repository.choice.ClassificationType4Choice.mmAlternateClassification);
 				trace_lazy = () -> AssetClassification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClassificationType4Choice";
 				definition = "Choice of format for the classification.";
@@ -183,21 +186,21 @@ public class ClassificationType4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ClssfctnFinInstrm", required = true)
 	public CFIIdentifier getClassificationFinancialInstrument() {
 		return classificationFinancialInstrument;
 	}
 
-	public void setClassificationFinancialInstrument(CFIIdentifier classificationFinancialInstrument) {
-		this.classificationFinancialInstrument = classificationFinancialInstrument;
+	public ClassificationType4Choice setClassificationFinancialInstrument(CFIIdentifier classificationFinancialInstrument) {
+		this.classificationFinancialInstrument = Objects.requireNonNull(classificationFinancialInstrument);
+		return this;
 	}
 
-	@XmlElement(name = "AltrnClssfctn", required = true)
 	public GenericIdentification18 getAlternateClassification() {
 		return alternateClassification;
 	}
 
-	public void setAlternateClassification(GenericIdentification18 alternateClassification) {
-		this.alternateClassification = alternateClassification;
+	public ClassificationType4Choice setAlternateClassification(GenericIdentification18 alternateClassification) {
+		this.alternateClassification = Objects.requireNonNull(alternateClassification);
+		return this;
 	}
 }

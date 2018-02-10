@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -84,8 +86,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,17 +104,17 @@ import javax.xml.bind.annotation.XmlType;
  * IndividualOrderConfirmationStatusAndReason1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IndividualOrderConfirmationStatusAndReason2", propOrder = {"masterReference", "orderReference", "confirmation", "clientReference", "dealReference", "statusInitiator", "investmentAccountDetails",
 		"financialInstrumentDetails"})
 public class IndividualOrderConfirmationStatusAndReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MstrRef")
 	protected Max35Text masterReference;
 	/**
-	 * Reference assigned to a set of orders or trades in order to link them
-	 * together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,7 +154,7 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
-			componentContext_lazy = () -> IndividualOrderConfirmationStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,11 +166,11 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrRef", required = true)
 	protected Max35Text orderReference;
 	/**
-	 * Unique and unambiguous identifier for the order, as assigned by the
-	 * instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,7 +210,7 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
-			componentContext_lazy = () -> IndividualOrderConfirmationStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,10 +222,11 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Conf", required = true)
 	protected ConfirmationStatus1Choice confirmation;
 	/**
-	 * Status of the order confirmation cancellation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -256,7 +259,7 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 	public static final MMMessageAssociationEnd mmConfirmation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmStatus;
-			componentContext_lazy = () -> IndividualOrderConfirmationStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Conf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -268,12 +271,11 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 			type_lazy = () -> ConfirmationStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntRef")
 	protected Max35Text clientReference;
 	/**
-	 * Unique and unambiguous investor's identification of an order. This
-	 * reference can typically be used in a hub scenario to give the reference
-	 * of the order as assigned by the underlying client.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -313,7 +315,7 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
-			componentContext_lazy = () -> IndividualOrderConfirmationStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,11 +327,11 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DealRef")
 	protected Max35Text dealReference;
 	/**
-	 * Unique and unambiguous identifier for the order execution, as assigned by
-	 * the confirming party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -369,7 +371,7 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
-			componentContext_lazy = () -> IndividualOrderConfirmationStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "DealRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -381,10 +383,11 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "StsInitr")
 	protected PartyIdentification113 statusInitiator;
 	/**
-	 * Party that initiates the status of the order confirmation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -422,7 +425,7 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> IndividualOrderConfirmationStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "StsInitr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -435,11 +438,11 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstmtAcctDtls")
 	protected InvestmentAccount58 investmentAccountDetails;
 	/**
-	 * Account information of the individual order confirmation for which the
-	 * status is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -478,7 +481,7 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
-			componentContext_lazy = () -> IndividualOrderConfirmationStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -491,11 +494,11 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount58.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmDtls")
 	protected FinancialInstrument57 financialInstrumentDetails;
 	/**
-	 * Financial instrument information of the individual order confirmation for
-	 * which the status is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -535,7 +538,7 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
-			componentContext_lazy = () -> IndividualOrderConfirmationStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -552,12 +555,14 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IndividualOrderConfirmationStatusAndReason2.mmMasterReference, IndividualOrderConfirmationStatusAndReason2.mmOrderReference,
-						IndividualOrderConfirmationStatusAndReason2.mmConfirmation, IndividualOrderConfirmationStatusAndReason2.mmClientReference, IndividualOrderConfirmationStatusAndReason2.mmDealReference,
-						IndividualOrderConfirmationStatusAndReason2.mmStatusInitiator, IndividualOrderConfirmationStatusAndReason2.mmInvestmentAccountDetails, IndividualOrderConfirmationStatusAndReason2.mmFinancialInstrumentDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmMasterReference,
+						com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmOrderReference, com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmConfirmation,
+						com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmClientReference, com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmDealReference,
+						com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmStatusInitiator, com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmInvestmentAccountDetails,
+						com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2.mmFinancialInstrumentDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(OrderConfirmationStatusReportV02.mmIndividualOrderConfirmationDetailsReport);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndividualOrderConfirmationStatusAndReason2";
 				definition = "Status report of the individual orders confirmation that was previously received.";
@@ -567,75 +572,75 @@ public class IndividualOrderConfirmationStatusAndReason2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MstrRef")
-	public Max35Text getMasterReference() {
-		return masterReference;
+	public Optional<Max35Text> getMasterReference() {
+		return masterReference == null ? Optional.empty() : Optional.of(masterReference);
 	}
 
-	public void setMasterReference(Max35Text masterReference) {
+	public IndividualOrderConfirmationStatusAndReason2 setMasterReference(Max35Text masterReference) {
 		this.masterReference = masterReference;
+		return this;
 	}
 
-	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
 
-	public void setOrderReference(Max35Text orderReference) {
-		this.orderReference = orderReference;
+	public IndividualOrderConfirmationStatusAndReason2 setOrderReference(Max35Text orderReference) {
+		this.orderReference = Objects.requireNonNull(orderReference);
+		return this;
 	}
 
-	@XmlElement(name = "Conf", required = true)
 	public ConfirmationStatus1Choice getConfirmation() {
 		return confirmation;
 	}
 
-	public void setConfirmation(ConfirmationStatus1Choice confirmation) {
-		this.confirmation = confirmation;
+	public IndividualOrderConfirmationStatusAndReason2 setConfirmation(ConfirmationStatus1Choice confirmation) {
+		this.confirmation = Objects.requireNonNull(confirmation);
+		return this;
 	}
 
-	@XmlElement(name = "ClntRef")
-	public Max35Text getClientReference() {
-		return clientReference;
+	public Optional<Max35Text> getClientReference() {
+		return clientReference == null ? Optional.empty() : Optional.of(clientReference);
 	}
 
-	public void setClientReference(Max35Text clientReference) {
+	public IndividualOrderConfirmationStatusAndReason2 setClientReference(Max35Text clientReference) {
 		this.clientReference = clientReference;
+		return this;
 	}
 
-	@XmlElement(name = "DealRef")
-	public Max35Text getDealReference() {
-		return dealReference;
+	public Optional<Max35Text> getDealReference() {
+		return dealReference == null ? Optional.empty() : Optional.of(dealReference);
 	}
 
-	public void setDealReference(Max35Text dealReference) {
+	public IndividualOrderConfirmationStatusAndReason2 setDealReference(Max35Text dealReference) {
 		this.dealReference = dealReference;
+		return this;
 	}
 
-	@XmlElement(name = "StsInitr")
-	public PartyIdentification113 getStatusInitiator() {
-		return statusInitiator;
+	public Optional<PartyIdentification113> getStatusInitiator() {
+		return statusInitiator == null ? Optional.empty() : Optional.of(statusInitiator);
 	}
 
-	public void setStatusInitiator(com.tools20022.repository.msg.PartyIdentification113 statusInitiator) {
+	public IndividualOrderConfirmationStatusAndReason2 setStatusInitiator(com.tools20022.repository.msg.PartyIdentification113 statusInitiator) {
 		this.statusInitiator = statusInitiator;
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtAcctDtls")
-	public InvestmentAccount58 getInvestmentAccountDetails() {
-		return investmentAccountDetails;
+	public Optional<InvestmentAccount58> getInvestmentAccountDetails() {
+		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public void setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount58 investmentAccountDetails) {
+	public IndividualOrderConfirmationStatusAndReason2 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount58 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmDtls")
-	public FinancialInstrument57 getFinancialInstrumentDetails() {
-		return financialInstrumentDetails;
+	public Optional<FinancialInstrument57> getFinancialInstrumentDetails() {
+		return financialInstrumentDetails == null ? Optional.empty() : Optional.of(financialInstrumentDetails);
 	}
 
-	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument57 financialInstrumentDetails) {
+	public IndividualOrderConfirmationStatusAndReason2 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument57 financialInstrumentDetails) {
 		this.financialInstrumentDetails = financialInstrumentDetails;
+		return this;
 	}
 }

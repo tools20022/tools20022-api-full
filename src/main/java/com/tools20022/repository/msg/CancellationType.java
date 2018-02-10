@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,7 @@ import com.tools20022.repository.entity.QuoteStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Reason for the cancellation."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CancellationType", propOrder = "cancellationType")
 public class CancellationType {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CxlTp", required = true)
 	protected QuoteStatus2Code cancellationType;
 	/**
-	 * Reason for the cancellation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -91,6 +94,9 @@ public class CancellationType {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CxlTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 298</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -104,9 +110,10 @@ public class CancellationType {
 	public static final MMMessageAttribute mmCancellationType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> QuoteStatus.mmStatus;
-			componentContext_lazy = () -> CancellationType.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationType.mmObject();
 			isDerived = false;
 			xmlTag = "CxlTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "298"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationType";
 			definition = "Reason for the cancellation.";
@@ -119,9 +126,9 @@ public class CancellationType {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CancellationType.mmCancellationType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationType.mmCancellationType);
 				trace_lazy = () -> QuoteStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CancellationType";
 				definition = "Reason for the cancellation.";
@@ -130,12 +137,12 @@ public class CancellationType {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CxlTp", required = true)
 	public QuoteStatus2Code getCancellationType() {
 		return cancellationType;
 	}
 
-	public void setCancellationType(QuoteStatus2Code cancellationType) {
-		this.cancellationType = cancellationType;
+	public CancellationType setCancellationType(QuoteStatus2Code cancellationType) {
+		this.cancellationType = Objects.requireNonNull(cancellationType);
+		return this;
 	}
 }

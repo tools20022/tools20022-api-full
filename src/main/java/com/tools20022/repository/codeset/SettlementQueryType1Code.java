@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SettlementQueryTypeCode;
+import com.tools20022.repository.codeset.SettlementQueryType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of settlement instruction query to be executed.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SettlementQueryTypeCode
- * SettlementQueryTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementQueryType1Code#mmInstruction
- * SettlementQueryType1Code.mmInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementQueryType1Code#Instruction
+ * SettlementQueryType1Code.Instruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementQueryType1Code#mmStatus
- * SettlementQueryType1Code.mmStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementQueryType1Code#Status
+ * SettlementQueryType1Code.Status}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementQueryType1Code#mmStatusPeriod
- * SettlementQueryType1Code.mmStatusPeriod}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementQueryType1Code#StatusPeriod
+ * SettlementQueryType1Code.StatusPeriod}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SettlementQueryTypeCode
+ * SettlementQueryTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the type of settlement instruction query to be executed."</li>
  * </ul>
  */
-public class SettlementQueryType1Code extends SettlementQueryTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SettlementQueryType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,11 +92,12 @@ public class SettlementQueryType1Code extends SettlementQueryTypeCode {
 	 * name} = "Instruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstruction = new MMCode() {
+	public static final SettlementQueryType1Code Instruction = new SettlementQueryType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instruction";
-			owner_lazy = () -> SettlementQueryType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementQueryType1Code.mmObject();
+			codeName = SettlementQueryTypeCode.Instruction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +116,12 @@ public class SettlementQueryType1Code extends SettlementQueryTypeCode {
 	 * name} = "Status"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStatus = new MMCode() {
+	public static final SettlementQueryType1Code Status = new SettlementQueryType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
-			owner_lazy = () -> SettlementQueryType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementQueryType1Code.mmObject();
+			codeName = SettlementQueryTypeCode.Status.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,26 +140,59 @@ public class SettlementQueryType1Code extends SettlementQueryTypeCode {
 	 * name} = "StatusPeriod"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStatusPeriod = new MMCode() {
+	public static final SettlementQueryType1Code StatusPeriod = new SettlementQueryType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusPeriod";
-			owner_lazy = () -> SettlementQueryType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementQueryType1Code.mmObject();
+			codeName = SettlementQueryTypeCode.StatusPeriod.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SettlementQueryType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SettlementQueryType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("INST");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementQueryType1Code";
 				definition = "Specifies the type of settlement instruction query to be executed.";
-				code_lazy = () -> Arrays.asList(SettlementQueryType1Code.mmInstruction, SettlementQueryType1Code.mmStatus, SettlementQueryType1Code.mmStatusPeriod);
 				trace_lazy = () -> SettlementQueryTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementQueryType1Code.Instruction, com.tools20022.repository.codeset.SettlementQueryType1Code.Status,
+						com.tools20022.repository.codeset.SettlementQueryType1Code.StatusPeriod);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Instruction.getCodeName().get(), Instruction);
+		codesByName.put(Status.getCodeName().get(), Status);
+		codesByName.put(StatusPeriod.getCodeName().get(), StatusPeriod);
+	}
+
+	public static SettlementQueryType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SettlementQueryType1Code[] values() {
+		SettlementQueryType1Code[] values = new SettlementQueryType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SettlementQueryType1Code> {
+		@Override
+		public SettlementQueryType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SettlementQueryType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

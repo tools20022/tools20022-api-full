@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.MessageItemConditionCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Rule to apply for the presence and the value of a message item.
@@ -32,26 +37,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#mmMandatory
- * MessageItemConditionCode.mmMandatory}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#Mandatory
+ * MessageItemConditionCode.Mandatory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#mmConfiguredValue
- * MessageItemConditionCode.mmConfiguredValue}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#ConfiguredValue
+ * MessageItemConditionCode.ConfiguredValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#mmDefaultValue
- * MessageItemConditionCode.mmDefaultValue}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#DefaultValue
+ * MessageItemConditionCode.DefaultValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#mmAllowedValues
- * MessageItemConditionCode.mmAllowedValues}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#AllowedValues
+ * MessageItemConditionCode.AllowedValues}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#mmIfAvailable
- * MessageItemConditionCode.mmIfAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#IfAvailable
+ * MessageItemConditionCode.IfAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#mmCopy
- * MessageItemConditionCode.mmCopy}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#Copy
+ * MessageItemConditionCode.Copy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#mmNotSupported
- * MessageItemConditionCode.mmNotSupported}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageItemConditionCode#NotSupported
+ * MessageItemConditionCode.NotSupported}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -64,8 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Rule to apply for the presence and the value of a message item."</li>
  * </ul>
  */
-public class MessageItemConditionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MessageItemConditionCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -107,12 +113,12 @@ public class MessageItemConditionCode {
 	 * definition} = "Message item must be present."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMandatory = new MMCode() {
+	public static final MessageItemConditionCode Mandatory = new MessageItemConditionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Mandatory";
 			definition = "Message item must be present.";
-			owner_lazy = () -> MessageItemConditionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageItemConditionCode.mmObject();
 			codeName = "MNDT";
 		}
 	};
@@ -137,12 +143,12 @@ public class MessageItemConditionCode {
 	 * definition} = "Message item must be present with the configured value."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConfiguredValue = new MMCode() {
+	public static final MessageItemConditionCode ConfiguredValue = new MessageItemConditionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConfiguredValue";
 			definition = "Message item must be present with the configured value.";
-			owner_lazy = () -> MessageItemConditionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageItemConditionCode.mmObject();
 			codeName = "CFVL";
 		}
 	};
@@ -168,12 +174,12 @@ public class MessageItemConditionCode {
 	 * "Message item has the configured value if the item is absent."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDefaultValue = new MMCode() {
+	public static final MessageItemConditionCode DefaultValue = new MessageItemConditionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DefaultValue";
 			definition = "Message item has the configured value if the item is absent.";
-			owner_lazy = () -> MessageItemConditionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageItemConditionCode.mmObject();
 			codeName = "DFLT";
 		}
 	};
@@ -198,12 +204,12 @@ public class MessageItemConditionCode {
 	 * definition} = "Message item must have one of the configured values."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAllowedValues = new MMCode() {
+	public static final MessageItemConditionCode AllowedValues = new MessageItemConditionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllowedValues";
 			definition = "Message item must have one of the configured values.";
-			owner_lazy = () -> MessageItemConditionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageItemConditionCode.mmObject();
 			codeName = "ALWV";
 		}
 	};
@@ -228,12 +234,12 @@ public class MessageItemConditionCode {
 	 * definition} = "Message item has to be present if available."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIfAvailable = new MMCode() {
+	public static final MessageItemConditionCode IfAvailable = new MessageItemConditionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IfAvailable";
 			definition = "Message item has to be present if available.";
-			owner_lazy = () -> MessageItemConditionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageItemConditionCode.mmObject();
 			codeName = "IFAV";
 		}
 	};
@@ -261,12 +267,12 @@ public class MessageItemConditionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCopy = new MMCode() {
+	public static final MessageItemConditionCode Copy = new MessageItemConditionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Copy";
 			definition = "Message item is present if it was present in a previous related message with the same value.";
-			owner_lazy = () -> MessageItemConditionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageItemConditionCode.mmObject();
 			codeName = "COPY";
 		}
 	};
@@ -291,29 +297,65 @@ public class MessageItemConditionCode {
 	 * definition} = "Message item is not supported and has to be absent."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotSupported = new MMCode() {
+	public static final MessageItemConditionCode NotSupported = new MessageItemConditionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotSupported";
 			definition = "Message item is not supported and has to be absent.";
-			owner_lazy = () -> MessageItemConditionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageItemConditionCode.mmObject();
 			codeName = "UNSP";
 		}
 	};
+	final static private LinkedHashMap<String, MessageItemConditionCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MessageItemConditionCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MNDT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageItemConditionCode";
 				definition = "Rule to apply for the presence and the value of a message item.";
-				code_lazy = () -> Arrays.asList(MessageItemConditionCode.mmMandatory, MessageItemConditionCode.mmConfiguredValue, MessageItemConditionCode.mmDefaultValue, MessageItemConditionCode.mmAllowedValues,
-						MessageItemConditionCode.mmIfAvailable, MessageItemConditionCode.mmCopy, MessageItemConditionCode.mmNotSupported);
 				derivation_lazy = () -> Arrays.asList(MessageItemCondition1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageItemConditionCode.Mandatory, com.tools20022.repository.codeset.MessageItemConditionCode.ConfiguredValue,
+						com.tools20022.repository.codeset.MessageItemConditionCode.DefaultValue, com.tools20022.repository.codeset.MessageItemConditionCode.AllowedValues,
+						com.tools20022.repository.codeset.MessageItemConditionCode.IfAvailable, com.tools20022.repository.codeset.MessageItemConditionCode.Copy, com.tools20022.repository.codeset.MessageItemConditionCode.NotSupported);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Mandatory.getCodeName().get(), Mandatory);
+		codesByName.put(ConfiguredValue.getCodeName().get(), ConfiguredValue);
+		codesByName.put(DefaultValue.getCodeName().get(), DefaultValue);
+		codesByName.put(AllowedValues.getCodeName().get(), AllowedValues);
+		codesByName.put(IfAvailable.getCodeName().get(), IfAvailable);
+		codesByName.put(Copy.getCodeName().get(), Copy);
+		codesByName.put(NotSupported.getCodeName().get(), NotSupported);
+	}
+
+	public static MessageItemConditionCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MessageItemConditionCode[] values() {
+		MessageItemConditionCode[] values = new MessageItemConditionCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MessageItemConditionCode> {
+		@Override
+		public MessageItemConditionCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MessageItemConditionCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

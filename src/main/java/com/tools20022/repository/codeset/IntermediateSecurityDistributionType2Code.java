@@ -20,46 +20,50 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.IntermediateSecurityDistributionTypeCode;
+import com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of intermediate security distribution.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionTypeCode
- * IntermediateSecurityDistributionTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#mmReverseRights
- * IntermediateSecurityDistributionType2Code.mmReverseRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#ReverseRights
+ * IntermediateSecurityDistributionType2Code.ReverseRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#mmBonusRights
- * IntermediateSecurityDistributionType2Code.mmBonusRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#BonusRights
+ * IntermediateSecurityDistributionType2Code.BonusRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#mmDividendReinvestment
- * IntermediateSecurityDistributionType2Code.mmDividendReinvestment}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#DividendReinvestment
+ * IntermediateSecurityDistributionType2Code.DividendReinvestment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#mmDividendOption
- * IntermediateSecurityDistributionType2Code.mmDividendOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#DividendOption
+ * IntermediateSecurityDistributionType2Code.DividendOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#mmSubscriptionRights
- * IntermediateSecurityDistributionType2Code.mmSubscriptionRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#SubscriptionRights
+ * IntermediateSecurityDistributionType2Code.SubscriptionRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#mmOpenOfferRights
- * IntermediateSecurityDistributionType2Code.mmOpenOfferRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code#OpenOfferRights
+ * IntermediateSecurityDistributionType2Code.OpenOfferRights}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.IntermediateSecurityDistributionTypeCode
+ * IntermediateSecurityDistributionTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -76,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of intermediate security distribution."</li>
  * </ul>
  */
-public class IntermediateSecurityDistributionType2Code extends IntermediateSecurityDistributionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class IntermediateSecurityDistributionType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,11 +100,12 @@ public class IntermediateSecurityDistributionType2Code extends IntermediateSecur
 	 * name} = "ReverseRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReverseRights = new MMCode() {
+	public static final IntermediateSecurityDistributionType2Code ReverseRights = new IntermediateSecurityDistributionType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReverseRights";
-			owner_lazy = () -> IntermediateSecurityDistributionType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.mmObject();
+			codeName = IntermediateSecurityDistributionTypeCode.ReverseRights.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -118,11 +124,12 @@ public class IntermediateSecurityDistributionType2Code extends IntermediateSecur
 	 * name} = "BonusRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBonusRights = new MMCode() {
+	public static final IntermediateSecurityDistributionType2Code BonusRights = new IntermediateSecurityDistributionType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BonusRights";
-			owner_lazy = () -> IntermediateSecurityDistributionType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.mmObject();
+			codeName = IntermediateSecurityDistributionTypeCode.BonusRights.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -141,11 +148,12 @@ public class IntermediateSecurityDistributionType2Code extends IntermediateSecur
 	 * name} = "DividendReinvestment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividendReinvestment = new MMCode() {
+	public static final IntermediateSecurityDistributionType2Code DividendReinvestment = new IntermediateSecurityDistributionType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestment";
-			owner_lazy = () -> IntermediateSecurityDistributionType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.mmObject();
+			codeName = IntermediateSecurityDistributionTypeCode.DividendReinvestment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -164,11 +172,12 @@ public class IntermediateSecurityDistributionType2Code extends IntermediateSecur
 	 * name} = "DividendOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividendOption = new MMCode() {
+	public static final IntermediateSecurityDistributionType2Code DividendOption = new IntermediateSecurityDistributionType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendOption";
-			owner_lazy = () -> IntermediateSecurityDistributionType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.mmObject();
+			codeName = IntermediateSecurityDistributionTypeCode.DividendOption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -187,11 +196,12 @@ public class IntermediateSecurityDistributionType2Code extends IntermediateSecur
 	 * name} = "SubscriptionRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubscriptionRights = new MMCode() {
+	public static final IntermediateSecurityDistributionType2Code SubscriptionRights = new IntermediateSecurityDistributionType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionRights";
-			owner_lazy = () -> IntermediateSecurityDistributionType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.mmObject();
+			codeName = IntermediateSecurityDistributionTypeCode.SubscriptionRights.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -210,27 +220,63 @@ public class IntermediateSecurityDistributionType2Code extends IntermediateSecur
 	 * name} = "OpenOfferRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOpenOfferRights = new MMCode() {
+	public static final IntermediateSecurityDistributionType2Code OpenOfferRights = new IntermediateSecurityDistributionType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenOfferRights";
-			owner_lazy = () -> IntermediateSecurityDistributionType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.mmObject();
+			codeName = IntermediateSecurityDistributionTypeCode.OpenOfferRights.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, IntermediateSecurityDistributionType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected IntermediateSecurityDistributionType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BIDS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IntermediateSecurityDistributionType2Code";
 				definition = "Specifies the type of intermediate security distribution.";
-				code_lazy = () -> Arrays.asList(IntermediateSecurityDistributionType2Code.mmReverseRights, IntermediateSecurityDistributionType2Code.mmBonusRights, IntermediateSecurityDistributionType2Code.mmDividendReinvestment,
-						IntermediateSecurityDistributionType2Code.mmDividendOption, IntermediateSecurityDistributionType2Code.mmSubscriptionRights, IntermediateSecurityDistributionType2Code.mmOpenOfferRights);
 				trace_lazy = () -> IntermediateSecurityDistributionTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.ReverseRights, com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.BonusRights,
+						com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.DividendReinvestment, com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.DividendOption,
+						com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.SubscriptionRights, com.tools20022.repository.codeset.IntermediateSecurityDistributionType2Code.OpenOfferRights);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ReverseRights.getCodeName().get(), ReverseRights);
+		codesByName.put(BonusRights.getCodeName().get(), BonusRights);
+		codesByName.put(DividendReinvestment.getCodeName().get(), DividendReinvestment);
+		codesByName.put(DividendOption.getCodeName().get(), DividendOption);
+		codesByName.put(SubscriptionRights.getCodeName().get(), SubscriptionRights);
+		codesByName.put(OpenOfferRights.getCodeName().get(), OpenOfferRights);
+	}
+
+	public static IntermediateSecurityDistributionType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static IntermediateSecurityDistributionType2Code[] values() {
+		IntermediateSecurityDistributionType2Code[] values = new IntermediateSecurityDistributionType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, IntermediateSecurityDistributionType2Code> {
+		@Override
+		public IntermediateSecurityDistributionType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(IntermediateSecurityDistributionType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

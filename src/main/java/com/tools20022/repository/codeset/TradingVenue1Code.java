@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TradingVenueCode;
+import com.tools20022.repository.codeset.TradingVenue1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of a trading venue which must use the market
@@ -31,30 +35,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TradingVenueCode
- * TradingVenueCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingVenue1Code#mmSystematicInternaliser
- * TradingVenue1Code.mmSystematicInternaliser}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingVenue1Code#SystematicInternaliser
+ * TradingVenue1Code.SystematicInternaliser}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingVenue1Code#mmMultilateralTradingFacility
- * TradingVenue1Code.mmMultilateralTradingFacility}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingVenue1Code#MultilateralTradingFacility
+ * TradingVenue1Code.MultilateralTradingFacility}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingVenue1Code#mmOrganisedTradingFacility
- * TradingVenue1Code.mmOrganisedTradingFacility}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingVenue1Code#OrganisedTradingFacility
+ * TradingVenue1Code.OrganisedTradingFacility}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingVenue1Code#mmRegulatedMarket
- * TradingVenue1Code.mmRegulatedMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingVenue1Code#RegulatedMarket
+ * TradingVenue1Code.RegulatedMarket}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TradingVenueCode
+ * TradingVenueCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TradingVenue1Code extends TradingVenueCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TradingVenue1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class TradingVenue1Code extends TradingVenueCode {
 	 * name} = "SystematicInternaliser"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSystematicInternaliser = new MMCode() {
+	public static final TradingVenue1Code SystematicInternaliser = new TradingVenue1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystematicInternaliser";
-			owner_lazy = () -> TradingVenue1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingVenue1Code.mmObject();
+			codeName = TradingVenueCode.SystematicInternaliser.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class TradingVenue1Code extends TradingVenueCode {
 	 * name} = "MultilateralTradingFacility"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMultilateralTradingFacility = new MMCode() {
+	public static final TradingVenue1Code MultilateralTradingFacility = new TradingVenue1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultilateralTradingFacility";
-			owner_lazy = () -> TradingVenue1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingVenue1Code.mmObject();
+			codeName = TradingVenueCode.MultilateralTradingFacility.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,11 +139,12 @@ public class TradingVenue1Code extends TradingVenueCode {
 	 * name} = "OrganisedTradingFacility"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOrganisedTradingFacility = new MMCode() {
+	public static final TradingVenue1Code OrganisedTradingFacility = new TradingVenue1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisedTradingFacility";
-			owner_lazy = () -> TradingVenue1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingVenue1Code.mmObject();
+			codeName = TradingVenueCode.OrganisedTradingFacility.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -155,25 +163,59 @@ public class TradingVenue1Code extends TradingVenueCode {
 	 * name} = "RegulatedMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegulatedMarket = new MMCode() {
+	public static final TradingVenue1Code RegulatedMarket = new TradingVenue1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatedMarket";
-			owner_lazy = () -> TradingVenue1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingVenue1Code.mmObject();
+			codeName = TradingVenueCode.RegulatedMarket.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TradingVenue1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TradingVenue1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingVenue1Code";
 				definition = "Specifies the type of a trading venue which must use the market identification code (MIC). ";
-				code_lazy = () -> Arrays.asList(TradingVenue1Code.mmSystematicInternaliser, TradingVenue1Code.mmMultilateralTradingFacility, TradingVenue1Code.mmOrganisedTradingFacility, TradingVenue1Code.mmRegulatedMarket);
 				trace_lazy = () -> TradingVenueCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingVenue1Code.SystematicInternaliser, com.tools20022.repository.codeset.TradingVenue1Code.MultilateralTradingFacility,
+						com.tools20022.repository.codeset.TradingVenue1Code.OrganisedTradingFacility, com.tools20022.repository.codeset.TradingVenue1Code.RegulatedMarket);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SystematicInternaliser.getCodeName().get(), SystematicInternaliser);
+		codesByName.put(MultilateralTradingFacility.getCodeName().get(), MultilateralTradingFacility);
+		codesByName.put(OrganisedTradingFacility.getCodeName().get(), OrganisedTradingFacility);
+		codesByName.put(RegulatedMarket.getCodeName().get(), RegulatedMarket);
+	}
+
+	public static TradingVenue1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TradingVenue1Code[] values() {
+		TradingVenue1Code[] values = new TradingVenue1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TradingVenue1Code> {
+		@Override
+		public TradingVenue1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TradingVenue1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

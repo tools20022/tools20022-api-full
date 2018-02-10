@@ -30,6 +30,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -43,8 +44,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReversedStatus1#mmReasonOrDataSourceSchemeOrNoSpecifiedReasonRule
- * ReversedStatus1.mmReasonOrDataSourceSchemeOrNoSpecifiedReasonRule}</li>
+ * {@linkplain com.tools20022.repository.msg.ReversedStatus1#ReasonOrDataSourceSchemeOrNoSpecifiedReasonRule
+ * ReversedStatus1.ReasonOrDataSourceSchemeOrNoSpecifiedReasonRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -68,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -88,15 +89,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReversedStatus1", propOrder = {"reason", "dataSourceScheme", "noSpecifiedReason"})
 public class ReversedStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rsn", required = true)
 	protected Max350Text reason;
 	/**
-	 * Reason for the reversal status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,7 +133,7 @@ public class ReversedStatus1 {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReversedStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReversedStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,10 +145,11 @@ public class ReversedStatus1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DataSrcSchme", required = true)
 	protected GenericIdentification1 dataSourceScheme;
 	/**
-	 * Proprietary identification of the reason for the reversed status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -187,7 +190,7 @@ public class ReversedStatus1 {
 	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
-			componentContext_lazy = () -> ReversedStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReversedStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,10 +203,11 @@ public class ReversedStatus1 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	protected NoReasonCode noSpecifiedReason;
 	/**
-	 * Indicates that there is no reason available or to report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,7 +249,7 @@ public class ReversedStatus1 {
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
-			componentContext_lazy = () -> ReversedStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReversedStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -293,22 +297,24 @@ public class ReversedStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmReasonOrDataSourceSchemeOrNoSpecifiedReasonRule = new MMXor() {
+	public static final MMXor ReasonOrDataSourceSchemeOrNoSpecifiedReasonRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonOrDataSourceSchemeOrNoSpecifiedReasonRule";
 			definition = "One and only one message element in the list (Reason, DataSourceScheme, NoSpecifiedReason) must be present.";
-			messageComponent_lazy = () -> ReversedStatus1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(ReversedStatus1.mmReason, ReversedStatus1.mmDataSourceScheme, ReversedStatus1.mmNoSpecifiedReason);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.ReversedStatus1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReversedStatus1.mmReason, com.tools20022.repository.msg.ReversedStatus1.mmDataSourceScheme,
+					com.tools20022.repository.msg.ReversedStatus1.mmNoSpecifiedReason);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReversedStatus1.mmReason, ReversedStatus1.mmDataSourceScheme, ReversedStatus1.mmNoSpecifiedReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReversedStatus1.mmReason, com.tools20022.repository.msg.ReversedStatus1.mmDataSourceScheme,
+						com.tools20022.repository.msg.ReversedStatus1.mmNoSpecifiedReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -320,36 +326,36 @@ public class ReversedStatus1 {
 				name = "ReversedStatus1";
 				definition = "Reason for the reversed status.";
 				nextVersions_lazy = () -> Arrays.asList(ReversedStatus2Choice.mmObject());
-				xors_lazy = () -> Arrays.asList(ReversedStatus1.mmReasonOrDataSourceSchemeOrNoSpecifiedReasonRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReversedStatus1.ReasonOrDataSourceSchemeOrNoSpecifiedReasonRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public Max350Text getReason() {
 		return reason;
 	}
 
-	public void setReason(Max350Text reason) {
-		this.reason = reason;
+	public ReversedStatus1 setReason(Max350Text reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	@XmlElement(name = "DataSrcSchme", required = true)
 	public GenericIdentification1 getDataSourceScheme() {
 		return dataSourceScheme;
 	}
 
-	public void setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
-		this.dataSourceScheme = dataSourceScheme;
+	public ReversedStatus1 setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
+		return this;
 	}
 
-	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}
 
-	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
-		this.noSpecifiedReason = noSpecifiedReason;
+	public ReversedStatus1 setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = Objects.requireNonNull(noSpecifiedReason);
+		return this;
 	}
 }

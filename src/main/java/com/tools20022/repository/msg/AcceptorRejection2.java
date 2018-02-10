@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.CardPaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -80,8 +82,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -105,15 +107,16 @@ import javax.xml.bind.annotation.XmlType;
  * AcceptorRejection1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcceptorRejection2", propOrder = {"rejectReason", "additionalInformation", "messageInError"})
 public class AcceptorRejection2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RjctRsn", required = true)
 	protected RejectReason1Code rejectReason;
 	/**
-	 * Reject reason of the request or the advice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +166,7 @@ public class AcceptorRejection2 {
 	public static final MMMessageAttribute mmRejectReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentStatus.mmRejectionReason;
-			componentContext_lazy = () -> AcceptorRejection2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorRejection2.mmObject();
 			isDerived = false;
 			xmlTag = "RjctRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,10 +179,11 @@ public class AcceptorRejection2 {
 			simpleType_lazy = () -> RejectReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected Max500Text additionalInformation;
 	/**
-	 * Additional information related to the reject of the exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -220,7 +224,7 @@ public class AcceptorRejection2 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AcceptorRejection2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorRejection2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,10 +237,11 @@ public class AcceptorRejection2 {
 			simpleType_lazy = () -> Max500Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgInErr")
 	protected Max100KBinary messageInError;
 	/**
-	 * Original request that caused the recipient party to reject it.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -281,7 +286,7 @@ public class AcceptorRejection2 {
 	 */
 	public static final MMMessageAttribute mmMessageInError = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AcceptorRejection2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorRejection2.mmObject();
 			isDerived = false;
 			xmlTag = "MsgInErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -298,10 +303,11 @@ public class AcceptorRejection2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AcceptorRejection2.mmRejectReason, AcceptorRejection2.mmAdditionalInformation, AcceptorRejection2.mmMessageInError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorRejection2.mmRejectReason, com.tools20022.repository.msg.AcceptorRejection2.mmAdditionalInformation,
+						com.tools20022.repository.msg.AcceptorRejection2.mmMessageInError);
 				messageBuildingBlock_lazy = () -> Arrays.asList(TerminalManagementRejectionV02.mmReject, AcceptorRejectionV03.mmReject, AcceptorRejectionV04.mmReject, AcceptorRejectionV05.mmReject);
 				trace_lazy = () -> CardPaymentStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorRejection2";
 				definition = "Reject of an exchange.";
@@ -312,30 +318,30 @@ public class AcceptorRejection2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RjctRsn", required = true)
 	public RejectReason1Code getRejectReason() {
 		return rejectReason;
 	}
 
-	public void setRejectReason(RejectReason1Code rejectReason) {
-		this.rejectReason = rejectReason;
+	public AcceptorRejection2 setRejectReason(RejectReason1Code rejectReason) {
+		this.rejectReason = Objects.requireNonNull(rejectReason);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public Max500Text getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<Max500Text> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(Max500Text additionalInformation) {
+	public AcceptorRejection2 setAdditionalInformation(Max500Text additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 
-	@XmlElement(name = "MsgInErr")
-	public Max100KBinary getMessageInError() {
-		return messageInError;
+	public Optional<Max100KBinary> getMessageInError() {
+		return messageInError == null ? Optional.empty() : Optional.of(messageInError);
 	}
 
-	public void setMessageInError(Max100KBinary messageInError) {
+	public AcceptorRejection2 setMessageInError(Max100KBinary messageInError) {
 		this.messageInError = messageInError;
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.FundOrderTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the category of the investment fund order.
@@ -32,88 +37,85 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmBedAndBreakfast
- * FundOrderTypeCode.mmBedAndBreakfast}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#BedAndBreakfast
+ * FundOrderTypeCode.BedAndBreakfast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmInvestmentPlan
- * FundOrderTypeCode.mmInvestmentPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#InvestmentPlan
+ * FundOrderTypeCode.InvestmentPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmPreAdvice
- * FundOrderTypeCode.mmPreAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#PreAdvice
+ * FundOrderTypeCode.PreAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmStaffOrder
- * FundOrderTypeCode.mmStaffOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#StaffOrder
+ * FundOrderTypeCode.StaffOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmRegularSavingsPlan
- * FundOrderTypeCode.mmRegularSavingsPlan}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmOther
- * FundOrderTypeCode.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#RegularSavingsPlan
+ * FundOrderTypeCode.RegularSavingsPlan}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#Other
+ * FundOrderTypeCode.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmRegularSavingsPlanUpdate
- * FundOrderTypeCode.mmRegularSavingsPlanUpdate}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#RegularSavingsPlanUpdate
+ * FundOrderTypeCode.RegularSavingsPlanUpdate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmReinvestmentOfDividend
- * FundOrderTypeCode.mmReinvestmentOfDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#ReinvestmentOfDividend
+ * FundOrderTypeCode.ReinvestmentOfDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmNormalStaffPortion
- * FundOrderTypeCode.mmNormalStaffPortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#NormalStaffPortion
+ * FundOrderTypeCode.NormalStaffPortion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmNormalClientPortion
- * FundOrderTypeCode.mmNormalClientPortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#NormalClientPortion
+ * FundOrderTypeCode.NormalClientPortion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmStaffWithSavingsPlan
- * FundOrderTypeCode.mmStaffWithSavingsPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#StaffWithSavingsPlan
+ * FundOrderTypeCode.StaffWithSavingsPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmClientWithSavingsPlan
- * FundOrderTypeCode.mmClientWithSavingsPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#ClientWithSavingsPlan
+ * FundOrderTypeCode.ClientWithSavingsPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmNonUnitized
- * FundOrderTypeCode.mmNonUnitized}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#NonUnitized
+ * FundOrderTypeCode.NonUnitized}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmSidePocketComponent
- * FundOrderTypeCode.mmSidePocketComponent}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#SidePocketComponent
+ * FundOrderTypeCode.SidePocketComponent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmSidePocketOrder
- * FundOrderTypeCode.mmSidePocketOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#SidePocketOrder
+ * FundOrderTypeCode.SidePocketOrder}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#Unitized
+ * FundOrderTypeCode.Unitized}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmUnitized
- * FundOrderTypeCode.mmUnitized}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#Subscription
+ * FundOrderTypeCode.Subscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmSubscription
- * FundOrderTypeCode.mmSubscription}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#Redemption
+ * FundOrderTypeCode.Redemption}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#Switch
+ * FundOrderTypeCode.Switch}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#TopUp
+ * FundOrderTypeCode.TopUp}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#HoldBack
+ * FundOrderTypeCode.HoldBack}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#All
+ * FundOrderTypeCode.All}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmRedemption
- * FundOrderTypeCode.mmRedemption}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmSwitch
- * FundOrderTypeCode.mmSwitch}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmTopUp
- * FundOrderTypeCode.mmTopUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#SwitchFrom
+ * FundOrderTypeCode.SwitchFrom}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#SwitchTo
+ * FundOrderTypeCode.SwitchTo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmHoldBack
- * FundOrderTypeCode.mmHoldBack}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmAll
- * FundOrderTypeCode.mmAll}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#TransferIn
+ * FundOrderTypeCode.TransferIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmSwitchFrom
- * FundOrderTypeCode.mmSwitchFrom}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#TransferOut
+ * FundOrderTypeCode.TransferOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmSwitchTo
- * FundOrderTypeCode.mmSwitchTo}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#SecuritiesPurchase
+ * FundOrderTypeCode.SecuritiesPurchase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmTransferIn
- * FundOrderTypeCode.mmTransferIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#SecuritiesSale
+ * FundOrderTypeCode.SecuritiesSale}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmTransferOut
- * FundOrderTypeCode.mmTransferOut}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmSecuritiesPurchase
- * FundOrderTypeCode.mmSecuritiesPurchase}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmSecuritiesSale
- * FundOrderTypeCode.mmSecuritiesSale}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#mmWithdrawal
- * FundOrderTypeCode.mmWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode#Withdrawal
+ * FundOrderTypeCode.Withdrawal}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -144,8 +146,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -162,7 +164,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the category of the investment fund order."</li>
  * </ul>
  */
-public class FundOrderTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FundOrderTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -187,12 +190,12 @@ public class FundOrderTypeCode {
 	 * "Investment fund order is part of a bed and breakfast transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBedAndBreakfast = new MMCode() {
+	public static final FundOrderTypeCode BedAndBreakfast = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BedAndBreakfast";
 			definition = "Investment fund order is part of a bed and breakfast transaction.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "BEDB";
 		}
 	};
@@ -220,12 +223,12 @@ public class FundOrderTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestmentPlan = new MMCode() {
+	public static final FundOrderTypeCode InvestmentPlan = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentPlan";
 			definition = "Investment fund order is related to an investment plan (only applicable to a subscription).";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "INVP";
 		}
 	};
@@ -251,12 +254,12 @@ public class FundOrderTypeCode {
 	 * "Investment fund order is executed with specific pre-advice conditions."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreAdvice = new MMCode() {
+	public static final FundOrderTypeCode PreAdvice = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreAdvice";
 			definition = "Investment fund order is executed with specific pre-advice conditions.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "PREA";
 		}
 	};
@@ -281,12 +284,12 @@ public class FundOrderTypeCode {
 	 * definition} = "Investment fund order is a staff order."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStaffOrder = new MMCode() {
+	public static final FundOrderTypeCode StaffOrder = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StaffOrder";
 			definition = "Investment fund order is a staff order.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "STAF";
 		}
 	};
@@ -314,12 +317,12 @@ public class FundOrderTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegularSavingsPlan = new MMCode() {
+	public static final FundOrderTypeCode RegularSavingsPlan = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegularSavingsPlan";
 			definition = "Investment fund order is a regular savings plan (only applicable to a subscription).";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "RGSV";
 		}
 	};
@@ -344,12 +347,12 @@ public class FundOrderTypeCode {
 	 * definition} = "Another type of investment fund order."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final FundOrderTypeCode Other = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Other";
 			definition = "Another type of investment fund order.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "OTHR";
 		}
 	};
@@ -377,12 +380,12 @@ public class FundOrderTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegularSavingsPlanUpdate = new MMCode() {
+	public static final FundOrderTypeCode RegularSavingsPlanUpdate = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegularSavingsPlanUpdate";
 			definition = "Investment fund order is paying extra money into to an existing plan (only applicable to a subscription).";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "RGSU";
 		}
 	};
@@ -410,12 +413,12 @@ public class FundOrderTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmReinvestmentOfDividend = new MMCode() {
+	public static final FundOrderTypeCode ReinvestmentOfDividend = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReinvestmentOfDividend";
 			definition = "Investment fund order is a dividend reinvestment (only applicable to a subscription).";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "RDIV";
 		}
 	};
@@ -443,12 +446,12 @@ public class FundOrderTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNormalStaffPortion = new MMCode() {
+	public static final FundOrderTypeCode NormalStaffPortion = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NormalStaffPortion";
 			definition = "That part of an investment fund order attributed to a normal staff portion.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "NSPN";
 		}
 	};
@@ -476,12 +479,12 @@ public class FundOrderTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNormalClientPortion = new MMCode() {
+	public static final FundOrderTypeCode NormalClientPortion = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NormalClientPortion";
 			definition = "That part of an investment fund order attributed to a normal client portion.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "NCPN";
 		}
 	};
@@ -509,12 +512,12 @@ public class FundOrderTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmStaffWithSavingsPlan = new MMCode() {
+	public static final FundOrderTypeCode StaffWithSavingsPlan = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StaffWithSavingsPlan";
 			definition = "That part of an investment fund order attributed to a staff member with a savings plan.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "SWSP";
 		}
 	};
@@ -542,12 +545,12 @@ public class FundOrderTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmClientWithSavingsPlan = new MMCode() {
+	public static final FundOrderTypeCode ClientWithSavingsPlan = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClientWithSavingsPlan";
 			definition = "That part of an investment fund order attributed to a client with a savings plan.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "CWSP";
 		}
 	};
@@ -573,12 +576,12 @@ public class FundOrderTypeCode {
 	 * "Investment fund order is for a limited partnership instrument."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonUnitized = new MMCode() {
+	public static final FundOrderTypeCode NonUnitized = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonUnitized";
 			definition = "Investment fund order is for a limited partnership instrument.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "NUNI";
 		}
 	};
@@ -603,12 +606,12 @@ public class FundOrderTypeCode {
 	 * definition} = "Investment fund order contains a side pocket component."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSidePocketComponent = new MMCode() {
+	public static final FundOrderTypeCode SidePocketComponent = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketComponent";
 			definition = "Investment fund order contains a side pocket component.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "SPCM";
 		}
 	};
@@ -633,12 +636,12 @@ public class FundOrderTypeCode {
 	 * definition} = "Investment fund order is a side pocket order."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSidePocketOrder = new MMCode() {
+	public static final FundOrderTypeCode SidePocketOrder = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketOrder";
 			definition = "Investment fund order is a side pocket order.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "SPOR";
 		}
 	};
@@ -663,12 +666,12 @@ public class FundOrderTypeCode {
 	 * definition} = "Investment fund order is for a unitized instrument."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnitized = new MMCode() {
+	public static final FundOrderTypeCode Unitized = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unitized";
 			definition = "Investment fund order is for a unitized instrument.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "UNIT";
 		}
 	};
@@ -693,12 +696,12 @@ public class FundOrderTypeCode {
 	 * definition} = "Investment fund order is a subscription."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubscription = new MMCode() {
+	public static final FundOrderTypeCode Subscription = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscription";
 			definition = "Investment fund order is a subscription.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "SUBS";
 		}
 	};
@@ -723,12 +726,12 @@ public class FundOrderTypeCode {
 	 * definition} = "Investment fund order is a redemption."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRedemption = new MMCode() {
+	public static final FundOrderTypeCode Redemption = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
 			definition = "Investment fund order is a redemption.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "REDM";
 		}
 	};
@@ -753,12 +756,12 @@ public class FundOrderTypeCode {
 	 * definition} = "Investment fund order is a switch."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSwitch = new MMCode() {
+	public static final FundOrderTypeCode Switch = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Switch";
 			definition = "Investment fund order is a switch.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "SWIT";
 		}
 	};
@@ -783,12 +786,12 @@ public class FundOrderTypeCode {
 	 * definition} = "Investment fund order specifies a top up."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTopUp = new MMCode() {
+	public static final FundOrderTypeCode TopUp = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TopUp";
 			definition = "Investment fund order specifies a top up.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "TOPU";
 		}
 	};
@@ -813,12 +816,12 @@ public class FundOrderTypeCode {
 	 * definition} = "Investment fund order specifies a hold back."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHoldBack = new MMCode() {
+	public static final FundOrderTypeCode HoldBack = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldBack";
 			definition = "Investment fund order specifies a hold back.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "HOLD";
 		}
 	};
@@ -843,12 +846,12 @@ public class FundOrderTypeCode {
 	 * definition} = "All type of orders."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAll = new MMCode() {
+	public static final FundOrderTypeCode All = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
 			definition = "All type of orders.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "ALLL";
 		}
 	};
@@ -873,12 +876,12 @@ public class FundOrderTypeCode {
 	 * definition} = "Switch out or switch from."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSwitchFrom = new MMCode() {
+	public static final FundOrderTypeCode SwitchFrom = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchFrom";
 			definition = "Switch out or switch from.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "SWII";
 		}
 	};
@@ -903,12 +906,12 @@ public class FundOrderTypeCode {
 	 * definition} = "Switch in or switch to."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSwitchTo = new MMCode() {
+	public static final FundOrderTypeCode SwitchTo = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchTo";
 			definition = "Switch in or switch to.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "SWIO";
 		}
 	};
@@ -933,12 +936,12 @@ public class FundOrderTypeCode {
 	 * definition} = "Transfer in."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransferIn = new MMCode() {
+	public static final FundOrderTypeCode TransferIn = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferIn";
 			definition = "Transfer in.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "TRAI";
 		}
 	};
@@ -963,12 +966,12 @@ public class FundOrderTypeCode {
 	 * definition} = "Transfer out."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransferOut = new MMCode() {
+	public static final FundOrderTypeCode TransferOut = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferOut";
 			definition = "Transfer out.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "TRAO";
 		}
 	};
@@ -993,12 +996,12 @@ public class FundOrderTypeCode {
 	 * definition} = "Purchase of securities."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesPurchase = new MMCode() {
+	public static final FundOrderTypeCode SecuritiesPurchase = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesPurchase";
 			definition = "Purchase of securities.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "BUYI";
 		}
 	};
@@ -1023,12 +1026,12 @@ public class FundOrderTypeCode {
 	 * definition} = "Sale of securities."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesSale = new MMCode() {
+	public static final FundOrderTypeCode SecuritiesSale = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSale";
 			definition = "Sale of securities.";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "SELL";
 		}
 	};
@@ -1056,34 +1059,96 @@ public class FundOrderTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithdrawal = new MMCode() {
+	public static final FundOrderTypeCode Withdrawal = new FundOrderTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withdrawal";
 			definition = "Investment fund order is for a withdrawal investment plan (only applicable to a redemption).";
-			owner_lazy = () -> FundOrderTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderTypeCode.mmObject();
 			codeName = "WIDP";
 		}
 	};
+	final static private LinkedHashMap<String, FundOrderTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FundOrderTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BEDB");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundOrderTypeCode";
 				definition = "Specifies the category of the investment fund order.";
-				code_lazy = () -> Arrays.asList(FundOrderTypeCode.mmBedAndBreakfast, FundOrderTypeCode.mmInvestmentPlan, FundOrderTypeCode.mmPreAdvice, FundOrderTypeCode.mmStaffOrder, FundOrderTypeCode.mmRegularSavingsPlan,
-						FundOrderTypeCode.mmOther, FundOrderTypeCode.mmRegularSavingsPlanUpdate, FundOrderTypeCode.mmReinvestmentOfDividend, FundOrderTypeCode.mmNormalStaffPortion, FundOrderTypeCode.mmNormalClientPortion,
-						FundOrderTypeCode.mmStaffWithSavingsPlan, FundOrderTypeCode.mmClientWithSavingsPlan, FundOrderTypeCode.mmNonUnitized, FundOrderTypeCode.mmSidePocketComponent, FundOrderTypeCode.mmSidePocketOrder,
-						FundOrderTypeCode.mmUnitized, FundOrderTypeCode.mmSubscription, FundOrderTypeCode.mmRedemption, FundOrderTypeCode.mmSwitch, FundOrderTypeCode.mmTopUp, FundOrderTypeCode.mmHoldBack, FundOrderTypeCode.mmAll,
-						FundOrderTypeCode.mmSwitchFrom, FundOrderTypeCode.mmSwitchTo, FundOrderTypeCode.mmTransferIn, FundOrderTypeCode.mmTransferOut, FundOrderTypeCode.mmSecuritiesPurchase, FundOrderTypeCode.mmSecuritiesSale,
-						FundOrderTypeCode.mmWithdrawal);
 				derivation_lazy = () -> Arrays.asList(FundOrderType2Code.mmObject(), FundOrderType6Code.mmObject(), FundOrderType3Code.mmObject(), FundOrderType5Code.mmObject(), FundOrderType4Code.mmObject(),
 						HedgeFundOrderType2Code.mmObject(), HedgeFundOrderType1Code.mmObject(), FundOrderType1Code.mmObject(), FundOrderType7Code.mmObject(), FundOrderType8Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundOrderTypeCode.BedAndBreakfast, com.tools20022.repository.codeset.FundOrderTypeCode.InvestmentPlan,
+						com.tools20022.repository.codeset.FundOrderTypeCode.PreAdvice, com.tools20022.repository.codeset.FundOrderTypeCode.StaffOrder, com.tools20022.repository.codeset.FundOrderTypeCode.RegularSavingsPlan,
+						com.tools20022.repository.codeset.FundOrderTypeCode.Other, com.tools20022.repository.codeset.FundOrderTypeCode.RegularSavingsPlanUpdate, com.tools20022.repository.codeset.FundOrderTypeCode.ReinvestmentOfDividend,
+						com.tools20022.repository.codeset.FundOrderTypeCode.NormalStaffPortion, com.tools20022.repository.codeset.FundOrderTypeCode.NormalClientPortion,
+						com.tools20022.repository.codeset.FundOrderTypeCode.StaffWithSavingsPlan, com.tools20022.repository.codeset.FundOrderTypeCode.ClientWithSavingsPlan, com.tools20022.repository.codeset.FundOrderTypeCode.NonUnitized,
+						com.tools20022.repository.codeset.FundOrderTypeCode.SidePocketComponent, com.tools20022.repository.codeset.FundOrderTypeCode.SidePocketOrder, com.tools20022.repository.codeset.FundOrderTypeCode.Unitized,
+						com.tools20022.repository.codeset.FundOrderTypeCode.Subscription, com.tools20022.repository.codeset.FundOrderTypeCode.Redemption, com.tools20022.repository.codeset.FundOrderTypeCode.Switch,
+						com.tools20022.repository.codeset.FundOrderTypeCode.TopUp, com.tools20022.repository.codeset.FundOrderTypeCode.HoldBack, com.tools20022.repository.codeset.FundOrderTypeCode.All,
+						com.tools20022.repository.codeset.FundOrderTypeCode.SwitchFrom, com.tools20022.repository.codeset.FundOrderTypeCode.SwitchTo, com.tools20022.repository.codeset.FundOrderTypeCode.TransferIn,
+						com.tools20022.repository.codeset.FundOrderTypeCode.TransferOut, com.tools20022.repository.codeset.FundOrderTypeCode.SecuritiesPurchase, com.tools20022.repository.codeset.FundOrderTypeCode.SecuritiesSale,
+						com.tools20022.repository.codeset.FundOrderTypeCode.Withdrawal);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BedAndBreakfast.getCodeName().get(), BedAndBreakfast);
+		codesByName.put(InvestmentPlan.getCodeName().get(), InvestmentPlan);
+		codesByName.put(PreAdvice.getCodeName().get(), PreAdvice);
+		codesByName.put(StaffOrder.getCodeName().get(), StaffOrder);
+		codesByName.put(RegularSavingsPlan.getCodeName().get(), RegularSavingsPlan);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(RegularSavingsPlanUpdate.getCodeName().get(), RegularSavingsPlanUpdate);
+		codesByName.put(ReinvestmentOfDividend.getCodeName().get(), ReinvestmentOfDividend);
+		codesByName.put(NormalStaffPortion.getCodeName().get(), NormalStaffPortion);
+		codesByName.put(NormalClientPortion.getCodeName().get(), NormalClientPortion);
+		codesByName.put(StaffWithSavingsPlan.getCodeName().get(), StaffWithSavingsPlan);
+		codesByName.put(ClientWithSavingsPlan.getCodeName().get(), ClientWithSavingsPlan);
+		codesByName.put(NonUnitized.getCodeName().get(), NonUnitized);
+		codesByName.put(SidePocketComponent.getCodeName().get(), SidePocketComponent);
+		codesByName.put(SidePocketOrder.getCodeName().get(), SidePocketOrder);
+		codesByName.put(Unitized.getCodeName().get(), Unitized);
+		codesByName.put(Subscription.getCodeName().get(), Subscription);
+		codesByName.put(Redemption.getCodeName().get(), Redemption);
+		codesByName.put(Switch.getCodeName().get(), Switch);
+		codesByName.put(TopUp.getCodeName().get(), TopUp);
+		codesByName.put(HoldBack.getCodeName().get(), HoldBack);
+		codesByName.put(All.getCodeName().get(), All);
+		codesByName.put(SwitchFrom.getCodeName().get(), SwitchFrom);
+		codesByName.put(SwitchTo.getCodeName().get(), SwitchTo);
+		codesByName.put(TransferIn.getCodeName().get(), TransferIn);
+		codesByName.put(TransferOut.getCodeName().get(), TransferOut);
+		codesByName.put(SecuritiesPurchase.getCodeName().get(), SecuritiesPurchase);
+		codesByName.put(SecuritiesSale.getCodeName().get(), SecuritiesSale);
+		codesByName.put(Withdrawal.getCodeName().get(), Withdrawal);
+	}
+
+	public static FundOrderTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FundOrderTypeCode[] values() {
+		FundOrderTypeCode[] values = new FundOrderTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FundOrderTypeCode> {
+		@Override
+		public FundOrderTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FundOrderTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

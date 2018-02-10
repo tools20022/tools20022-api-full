@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.MeetingParticipation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -76,8 +77,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,15 +96,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Participation3", propOrder = {"totalNumberOfVotingRights", "percentageOfVotingRights", "totalNumberOfSecuritiesOutstanding", "calculationDate"})
 public class Participation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlNbOfVtngRghts")
 	protected Number totalNumberOfVotingRights;
 	/**
-	 * Number of rights admitted to the vote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +145,7 @@ public class Participation3 {
 	public static final MMMessageAttribute mmTotalNumberOfVotingRights = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MeetingParticipation.mmTotalNumberOfVotingRights;
-			componentContext_lazy = () -> Participation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Participation3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfVtngRghts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,11 +157,11 @@ public class Participation3 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "PctgOfVtngRghts")
 	protected PercentageRate percentageOfVotingRights;
 	/**
-	 * Percentage of rights participating to the vote versus total voting
-	 * rights.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,7 +198,7 @@ public class Participation3 {
 	 */
 	public static final MMMessageAttribute mmPercentageOfVotingRights = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Participation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Participation3.mmObject();
 			isDerived = false;
 			xmlTag = "PctgOfVtngRghts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,11 +210,11 @@ public class Participation3 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNbOfSctiesOutsdng")
 	protected ActiveCurrencyAndAmount totalNumberOfSecuritiesOutstanding;
 	/**
-	 * Number of securities admitted to the vote, expressed as an amount and a
-	 * currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -255,7 +257,7 @@ public class Participation3 {
 	public static final MMMessageAttribute mmTotalNumberOfSecuritiesOutstanding = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MeetingParticipation.mmTotalNumberOfSecuritiesOutstanding;
-			componentContext_lazy = () -> Participation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Participation3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfSctiesOutsdng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,10 +269,11 @@ public class Participation3 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ClctnDt")
 	protected ISODate calculationDate;
 	/**
-	 * Date of calculation of the total number of oustanding securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -311,7 +314,7 @@ public class Participation3 {
 	public static final MMMessageAttribute mmCalculationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MeetingParticipation.mmCalculationDate;
-			componentContext_lazy = () -> Participation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Participation3.mmObject();
 			isDerived = false;
 			xmlTag = "ClctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -327,10 +330,11 @@ public class Participation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Participation3.mmTotalNumberOfVotingRights, Participation3.mmPercentageOfVotingRights, Participation3.mmTotalNumberOfSecuritiesOutstanding, Participation3.mmCalculationDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Participation3.mmTotalNumberOfVotingRights, com.tools20022.repository.msg.Participation3.mmPercentageOfVotingRights,
+						com.tools20022.repository.msg.Participation3.mmTotalNumberOfSecuritiesOutstanding, com.tools20022.repository.msg.Participation3.mmCalculationDate);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingResultDisseminationV03.mmParticipation, MeetingResultDisseminationV04.mmParticipation);
 				trace_lazy = () -> MeetingParticipation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Participation3";
 				definition = "Specifies the level of participation to a shareholders meeting.";
@@ -340,39 +344,39 @@ public class Participation3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlNbOfVtngRghts")
-	public Number getTotalNumberOfVotingRights() {
-		return totalNumberOfVotingRights;
+	public Optional<Number> getTotalNumberOfVotingRights() {
+		return totalNumberOfVotingRights == null ? Optional.empty() : Optional.of(totalNumberOfVotingRights);
 	}
 
-	public void setTotalNumberOfVotingRights(Number totalNumberOfVotingRights) {
+	public Participation3 setTotalNumberOfVotingRights(Number totalNumberOfVotingRights) {
 		this.totalNumberOfVotingRights = totalNumberOfVotingRights;
+		return this;
 	}
 
-	@XmlElement(name = "PctgOfVtngRghts")
-	public PercentageRate getPercentageOfVotingRights() {
-		return percentageOfVotingRights;
+	public Optional<PercentageRate> getPercentageOfVotingRights() {
+		return percentageOfVotingRights == null ? Optional.empty() : Optional.of(percentageOfVotingRights);
 	}
 
-	public void setPercentageOfVotingRights(PercentageRate percentageOfVotingRights) {
+	public Participation3 setPercentageOfVotingRights(PercentageRate percentageOfVotingRights) {
 		this.percentageOfVotingRights = percentageOfVotingRights;
+		return this;
 	}
 
-	@XmlElement(name = "TtlNbOfSctiesOutsdng")
-	public ActiveCurrencyAndAmount getTotalNumberOfSecuritiesOutstanding() {
-		return totalNumberOfSecuritiesOutstanding;
+	public Optional<ActiveCurrencyAndAmount> getTotalNumberOfSecuritiesOutstanding() {
+		return totalNumberOfSecuritiesOutstanding == null ? Optional.empty() : Optional.of(totalNumberOfSecuritiesOutstanding);
 	}
 
-	public void setTotalNumberOfSecuritiesOutstanding(ActiveCurrencyAndAmount totalNumberOfSecuritiesOutstanding) {
+	public Participation3 setTotalNumberOfSecuritiesOutstanding(ActiveCurrencyAndAmount totalNumberOfSecuritiesOutstanding) {
 		this.totalNumberOfSecuritiesOutstanding = totalNumberOfSecuritiesOutstanding;
+		return this;
 	}
 
-	@XmlElement(name = "ClctnDt")
-	public ISODate getCalculationDate() {
-		return calculationDate;
+	public Optional<ISODate> getCalculationDate() {
+		return calculationDate == null ? Optional.empty() : Optional.of(calculationDate);
 	}
 
-	public void setCalculationDate(ISODate calculationDate) {
+	public Participation3 setCalculationDate(ISODate calculationDate) {
 		this.calculationDate = calculationDate;
+		return this;
 	}
 }

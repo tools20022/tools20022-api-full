@@ -31,9 +31,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -80,8 +79,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,16 +95,17 @@ import javax.xml.bind.annotation.XmlType;
  * FundSettlementParameters3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FundSettlementParameters12", propOrder = {"settlementDate", "settlementPlace", "safekeepingPlace", "securitiesSettlementSystemIdentification", "tradeTransactionCondition", "settlementTransactionCondition",
 		"receivingSideDetails", "deliveringSideDetails"})
 public class FundSettlementParameters12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SttlmDt")
 	protected ISODate settlementDate;
 	/**
-	 * Date and time at which the securities are to be delivered or received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,7 +144,7 @@ public class FundSettlementParameters12 {
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> FundSettlementParameters12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters12.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,13 +156,11 @@ public class FundSettlementParameters12 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmPlc", required = true)
 	protected PartyIdentification113 settlementPlace;
 	/**
-	 * Place where the settlement of the transaction will take place. In the
-	 * context of investment funds, the place of settlement is the transfer
-	 * agent, a Central Securities Depository (CSD) or an International Central
-	 * Securities Depository (ICSD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,7 +201,7 @@ public class FundSettlementParameters12 {
 	public static final MMMessageAttribute mmSettlementPlace = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> FundSettlementParameters12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters12.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPlc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,12 +213,11 @@ public class FundSettlementParameters12 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgPlc")
 	protected SafekeepingPlaceFormat8Choice safekeepingPlace;
 	/**
-	 * Place where the securities are safe-kept, physically or notionally. This
-	 * place can be, for example, a local custodian, a Central Securities
-	 * Depository or an International Central Securities Depository.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -261,7 +258,7 @@ public class FundSettlementParameters12 {
 	public static final MMMessageAttribute mmSafekeepingPlace = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> FundSettlementParameters12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters12.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,10 +270,11 @@ public class FundSettlementParameters12 {
 			complexType_lazy = () -> SafekeepingPlaceFormat8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesSttlmSysId")
 	protected Max35Text securitiesSettlementSystemIdentification;
 	/**
-	 * Identifies the securities settlement system to be used.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -314,7 +312,7 @@ public class FundSettlementParameters12 {
 	public static final MMMessageAttribute mmSecuritiesSettlementSystemIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> FundSettlementParameters12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters12.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSttlmSysId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -326,11 +324,11 @@ public class FundSettlementParameters12 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TradTxCond")
 	protected List<TradeTransactionCondition8Choice> tradeTransactionCondition;
 	/**
-	 * Condition under which the order/trade is to be/was executed. This may be
-	 * required for settlement through T2S.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -366,7 +364,7 @@ public class FundSettlementParameters12 {
 	public static final MMMessageAttribute mmTradeTransactionCondition = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeTransactionCondition;
-			componentContext_lazy = () -> FundSettlementParameters12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters12.mmObject();
 			isDerived = false;
 			xmlTag = "TradTxCond";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -376,11 +374,11 @@ public class FundSettlementParameters12 {
 			complexType_lazy = () -> TradeTransactionCondition8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmTxCond")
 	protected List<SettlementTransactionCondition30Choice> settlementTransactionCondition;
 	/**
-	 * Condition under which the order/trade is to be settled. This may be
-	 * required for settlement through T2S.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -415,7 +413,7 @@ public class FundSettlementParameters12 {
 	public static final MMMessageAssociationEnd mmSettlementTransactionCondition = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
-			componentContext_lazy = () -> FundSettlementParameters12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters12.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTxCond";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -426,11 +424,11 @@ public class FundSettlementParameters12 {
 			type_lazy = () -> SettlementTransactionCondition30Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvgSdDtls")
 	protected ReceivingPartiesAndAccount16 receivingSideDetails;
 	/**
-	 * Chain of parties involved in the settlement of a transaction resulting in
-	 * the movement of a security from one account to another.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -470,7 +468,7 @@ public class FundSettlementParameters12 {
 	public static final MMMessageAssociationEnd mmReceivingSideDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
-			componentContext_lazy = () -> FundSettlementParameters12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters12.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSdDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -483,11 +481,11 @@ public class FundSettlementParameters12 {
 			type_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount16.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvrgSdDtls", required = true)
 	protected DeliveringPartiesAndAccount16 deliveringSideDetails;
 	/**
-	 * Chain of parties involved in the settlement of a transaction resulting in
-	 * the movement of a security from one account to another.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -527,7 +525,7 @@ public class FundSettlementParameters12 {
 	public static final MMMessageAssociationEnd mmDeliveringSideDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
-			componentContext_lazy = () -> FundSettlementParameters12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters12.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSdDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -544,11 +542,12 @@ public class FundSettlementParameters12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FundSettlementParameters12.mmSettlementDate, FundSettlementParameters12.mmSettlementPlace, FundSettlementParameters12.mmSafekeepingPlace,
-						FundSettlementParameters12.mmSecuritiesSettlementSystemIdentification, FundSettlementParameters12.mmTradeTransactionCondition, FundSettlementParameters12.mmSettlementTransactionCondition,
-						FundSettlementParameters12.mmReceivingSideDetails, FundSettlementParameters12.mmDeliveringSideDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundSettlementParameters12.mmSettlementDate, com.tools20022.repository.msg.FundSettlementParameters12.mmSettlementPlace,
+						com.tools20022.repository.msg.FundSettlementParameters12.mmSafekeepingPlace, com.tools20022.repository.msg.FundSettlementParameters12.mmSecuritiesSettlementSystemIdentification,
+						com.tools20022.repository.msg.FundSettlementParameters12.mmTradeTransactionCondition, com.tools20022.repository.msg.FundSettlementParameters12.mmSettlementTransactionCondition,
+						com.tools20022.repository.msg.FundSettlementParameters12.mmReceivingSideDetails, com.tools20022.repository.msg.FundSettlementParameters12.mmDeliveringSideDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundSettlementParameters12";
 				definition = "Parameters applied to the settlement of a security transfer.";
@@ -558,75 +557,75 @@ public class FundSettlementParameters12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SttlmDt")
-	public ISODate getSettlementDate() {
-		return settlementDate;
+	public Optional<ISODate> getSettlementDate() {
+		return settlementDate == null ? Optional.empty() : Optional.of(settlementDate);
 	}
 
-	public void setSettlementDate(ISODate settlementDate) {
+	public FundSettlementParameters12 setSettlementDate(ISODate settlementDate) {
 		this.settlementDate = settlementDate;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmPlc", required = true)
 	public PartyIdentification113 getSettlementPlace() {
 		return settlementPlace;
 	}
 
-	public void setSettlementPlace(com.tools20022.repository.msg.PartyIdentification113 settlementPlace) {
-		this.settlementPlace = settlementPlace;
+	public FundSettlementParameters12 setSettlementPlace(com.tools20022.repository.msg.PartyIdentification113 settlementPlace) {
+		this.settlementPlace = Objects.requireNonNull(settlementPlace);
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgPlc")
-	public SafekeepingPlaceFormat8Choice getSafekeepingPlace() {
-		return safekeepingPlace;
+	public Optional<SafekeepingPlaceFormat8Choice> getSafekeepingPlace() {
+		return safekeepingPlace == null ? Optional.empty() : Optional.of(safekeepingPlace);
 	}
 
-	public void setSafekeepingPlace(SafekeepingPlaceFormat8Choice safekeepingPlace) {
+	public FundSettlementParameters12 setSafekeepingPlace(SafekeepingPlaceFormat8Choice safekeepingPlace) {
 		this.safekeepingPlace = safekeepingPlace;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesSttlmSysId")
-	public Max35Text getSecuritiesSettlementSystemIdentification() {
-		return securitiesSettlementSystemIdentification;
+	public Optional<Max35Text> getSecuritiesSettlementSystemIdentification() {
+		return securitiesSettlementSystemIdentification == null ? Optional.empty() : Optional.of(securitiesSettlementSystemIdentification);
 	}
 
-	public void setSecuritiesSettlementSystemIdentification(Max35Text securitiesSettlementSystemIdentification) {
+	public FundSettlementParameters12 setSecuritiesSettlementSystemIdentification(Max35Text securitiesSettlementSystemIdentification) {
 		this.securitiesSettlementSystemIdentification = securitiesSettlementSystemIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TradTxCond")
 	public List<TradeTransactionCondition8Choice> getTradeTransactionCondition() {
-		return tradeTransactionCondition;
+		return tradeTransactionCondition == null ? tradeTransactionCondition = new ArrayList<>() : tradeTransactionCondition;
 	}
 
-	public void setTradeTransactionCondition(List<TradeTransactionCondition8Choice> tradeTransactionCondition) {
-		this.tradeTransactionCondition = tradeTransactionCondition;
+	public FundSettlementParameters12 setTradeTransactionCondition(List<TradeTransactionCondition8Choice> tradeTransactionCondition) {
+		this.tradeTransactionCondition = Objects.requireNonNull(tradeTransactionCondition);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmTxCond")
 	public List<SettlementTransactionCondition30Choice> getSettlementTransactionCondition() {
-		return settlementTransactionCondition;
+		return settlementTransactionCondition == null ? settlementTransactionCondition = new ArrayList<>() : settlementTransactionCondition;
 	}
 
-	public void setSettlementTransactionCondition(List<SettlementTransactionCondition30Choice> settlementTransactionCondition) {
-		this.settlementTransactionCondition = settlementTransactionCondition;
+	public FundSettlementParameters12 setSettlementTransactionCondition(List<SettlementTransactionCondition30Choice> settlementTransactionCondition) {
+		this.settlementTransactionCondition = Objects.requireNonNull(settlementTransactionCondition);
+		return this;
 	}
 
-	@XmlElement(name = "RcvgSdDtls")
-	public ReceivingPartiesAndAccount16 getReceivingSideDetails() {
-		return receivingSideDetails;
+	public Optional<ReceivingPartiesAndAccount16> getReceivingSideDetails() {
+		return receivingSideDetails == null ? Optional.empty() : Optional.of(receivingSideDetails);
 	}
 
-	public void setReceivingSideDetails(com.tools20022.repository.msg.ReceivingPartiesAndAccount16 receivingSideDetails) {
+	public FundSettlementParameters12 setReceivingSideDetails(com.tools20022.repository.msg.ReceivingPartiesAndAccount16 receivingSideDetails) {
 		this.receivingSideDetails = receivingSideDetails;
+		return this;
 	}
 
-	@XmlElement(name = "DlvrgSdDtls", required = true)
 	public DeliveringPartiesAndAccount16 getDeliveringSideDetails() {
 		return deliveringSideDetails;
 	}
 
-	public void setDeliveringSideDetails(com.tools20022.repository.msg.DeliveringPartiesAndAccount16 deliveringSideDetails) {
-		this.deliveringSideDetails = deliveringSideDetails;
+	public FundSettlementParameters12 setDeliveringSideDetails(com.tools20022.repository.msg.DeliveringPartiesAndAccount16 deliveringSideDetails) {
+		this.deliveringSideDetails = Objects.requireNonNull(deliveringSideDetails);
+		return this;
 	}
 }

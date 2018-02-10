@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversio
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -42,25 +43,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
- * TradeServicesManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion
- * TradeServicesManagementISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion
- * TradeServicesManagementISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "RoleAndBaselnAccptnc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -76,6 +58,25 @@ import javax.xml.bind.annotation.*;
  * RoleAndBaselineAcceptanceV01.mmTransactionIdentification}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion
+ * TradeServicesManagementISOPreviousversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion
+ * TradeServicesManagementISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "RoleAndBaselnAccptnc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
+ * TradeServicesManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code tsmt.049.001.01}</li>
@@ -91,15 +92,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RoleAndBaselineAcceptanceV01", propOrder = {"acceptanceIdentification", "relatedMessageReference", "transactionIdentification"})
 public class RoleAndBaselineAcceptanceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AccptncId", required = true)
 	protected MessageIdentification1 acceptanceIdentification;
 	/**
-	 * Identifies the acceptance message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,10 +141,11 @@ public class RoleAndBaselineAcceptanceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdMsgRef", required = true)
 	protected MessageIdentification1 relatedMessageReference;
 	/**
-	 * Reference to the message that contained the baseline and is accepted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,12 +186,11 @@ public class RoleAndBaselineAcceptanceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "TxId", required = true)
 	protected SimpleIdentificationInformation transactionIdentification;
 	/**
-	 * Unique identification assigned by the matching application to the
-	 * transaction. This identification is to be used in any communication
-	 * between the parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -261,34 +263,34 @@ public class RoleAndBaselineAcceptanceV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AccptncId", required = true)
 	public MessageIdentification1 getAcceptanceIdentification() {
 		return acceptanceIdentification;
 	}
 
-	public void setAcceptanceIdentification(MessageIdentification1 acceptanceIdentification) {
-		this.acceptanceIdentification = acceptanceIdentification;
+	public RoleAndBaselineAcceptanceV01 setAcceptanceIdentification(MessageIdentification1 acceptanceIdentification) {
+		this.acceptanceIdentification = Objects.requireNonNull(acceptanceIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RltdMsgRef", required = true)
 	public MessageIdentification1 getRelatedMessageReference() {
 		return relatedMessageReference;
 	}
 
-	public void setRelatedMessageReference(MessageIdentification1 relatedMessageReference) {
-		this.relatedMessageReference = relatedMessageReference;
+	public RoleAndBaselineAcceptanceV01 setRelatedMessageReference(MessageIdentification1 relatedMessageReference) {
+		this.relatedMessageReference = Objects.requireNonNull(relatedMessageReference);
+		return this;
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public RoleAndBaselineAcceptanceV01 setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.049.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.049.001.01")
 	static public class Document {
 		@XmlElement(name = "RoleAndBaselnAccptnc", required = true)
 		public RoleAndBaselineAcceptanceV01 messageBody;

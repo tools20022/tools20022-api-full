@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.MeetingEntitlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -98,8 +99,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintEntitlementAssesment1Rule#forEntitlementAssessment3
+ * ConstraintEntitlementAssesment1Rule.forEntitlementAssessment3}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -116,18 +125,18 @@ import javax.xml.bind.annotation.XmlType;
  * EntitlementAssessment2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "EntitlementAssessment3", propOrder = {"securitiesBlockingDeadline", "securitiesBlockingSTPDeadline", "securitiesBlockingMarketDeadline", "securitiesBlockingPeriodEndDate", "entitlementFixingDate",
 		"registrationSecuritiesDeadline", "registrationSecuritiesSTPDeadline", "registrationSecuritiesMarketDeadline", "registrationParticipationDeadline", "registrationParticipationSTPDeadline", "registrationParticipationMarketDeadline",
 		"entitlement"})
 public class EntitlementAssessment3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesBlckgDdln")
 	protected DateFormat29Choice securitiesBlockingDeadline;
 	/**
-	 * Date by which the securities should be blocked. This deadline is set by
-	 * an intermediary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,7 +177,7 @@ public class EntitlementAssessment3 {
 	public static final MMMessageAttribute mmSecuritiesBlockingDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmIntermediaryDeadline;
-			componentContext_lazy = () -> EntitlementAssessment3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment3.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesBlckgDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,11 +189,11 @@ public class EntitlementAssessment3 {
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesBlckgSTPDdln")
 	protected DateFormat29Choice securitiesBlockingSTPDeadline;
 	/**
-	 * Date by which the securities should be blocked. This deadline is set by
-	 * the issuer (STP mode).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,7 +234,7 @@ public class EntitlementAssessment3 {
 	public static final MMMessageAttribute mmSecuritiesBlockingSTPDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmSTPDeadline;
-			componentContext_lazy = () -> EntitlementAssessment3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment3.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesBlckgSTPDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,11 +246,11 @@ public class EntitlementAssessment3 {
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesBlckgMktDdln")
 	protected DateFormat29Choice securitiesBlockingMarketDeadline;
 	/**
-	 * Date by which the securities should be blocked. This deadline is set by
-	 * the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -282,7 +291,7 @@ public class EntitlementAssessment3 {
 	public static final MMMessageAttribute mmSecuritiesBlockingMarketDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
-			componentContext_lazy = () -> EntitlementAssessment3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment3.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesBlckgMktDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -294,10 +303,11 @@ public class EntitlementAssessment3 {
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesBlckgPrdEndDt")
 	protected ISODateTime securitiesBlockingPeriodEndDate;
 	/**
-	 * Date by which the blocking period for the securities should end.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -336,7 +346,7 @@ public class EntitlementAssessment3 {
 	public static final MMMessageAttribute mmSecuritiesBlockingPeriodEndDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
-			componentContext_lazy = () -> EntitlementAssessment3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment3.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesBlckgPrdEndDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -348,11 +358,11 @@ public class EntitlementAssessment3 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "EntitlmntFxgDt")
 	protected DateFormat1 entitlementFixingDate;
 	/**
-	 * Date at which the positions are struck to note which parties will receive
-	 * the entitlement, for example. record date, book close date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -392,7 +402,7 @@ public class EntitlementAssessment3 {
 	public static final MMMessageAttribute mmEntitlementFixingDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MeetingEntitlement.mmEntitlementFixingDate;
-			componentContext_lazy = () -> EntitlementAssessment3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment3.mmObject();
 			isDerived = false;
 			xmlTag = "EntitlmntFxgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -404,11 +414,11 @@ public class EntitlementAssessment3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.DateFormat1.mmObject();
 		}
 	};
+	@XmlElement(name = "RegnSctiesDdln")
 	protected DateFormat29Choice registrationSecuritiesDeadline;
 	/**
-	 * Date by which the securities have to be registered. This deadline is
-	 * specified by an intermediary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -449,7 +459,7 @@ public class EntitlementAssessment3 {
 	public static final MMMessageAttribute mmRegistrationSecuritiesDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmIntermediaryDeadline;
-			componentContext_lazy = () -> EntitlementAssessment3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment3.mmObject();
 			isDerived = false;
 			xmlTag = "RegnSctiesDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -461,11 +471,11 @@ public class EntitlementAssessment3 {
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RegnSctiesSTPDdln")
 	protected DateFormat29Choice registrationSecuritiesSTPDeadline;
 	/**
-	 * Date by which the securities have to be registered. This deadline is
-	 * specified by an intermediary (STP mode).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -506,7 +516,7 @@ public class EntitlementAssessment3 {
 	public static final MMMessageAttribute mmRegistrationSecuritiesSTPDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmSTPDeadline;
-			componentContext_lazy = () -> EntitlementAssessment3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment3.mmObject();
 			isDerived = false;
 			xmlTag = "RegnSctiesSTPDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -518,11 +528,11 @@ public class EntitlementAssessment3 {
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RegnSctiesMktDdln")
 	protected DateFormat29Choice registrationSecuritiesMarketDeadline;
 	/**
-	 * Date by which the securities have to be registered. This deadline is set
-	 * by the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -563,7 +573,7 @@ public class EntitlementAssessment3 {
 	public static final MMMessageAttribute mmRegistrationSecuritiesMarketDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
-			componentContext_lazy = () -> EntitlementAssessment3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment3.mmObject();
 			isDerived = false;
 			xmlTag = "RegnSctiesMktDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -575,12 +585,11 @@ public class EntitlementAssessment3 {
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RegnPrtcptnDdln")
 	protected DateFormat29Choice registrationParticipationDeadline;
 	/**
-	 * Date by which the holder needs to register its intention to participate
-	 * in the meeting process in order to be allowed to participate in the
-	 * meeting event. This deadline is specified by an intermediary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -621,7 +630,7 @@ public class EntitlementAssessment3 {
 	public static final MMMessageAttribute mmRegistrationParticipationDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmIntermediaryDeadline;
-			componentContext_lazy = () -> EntitlementAssessment3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment3.mmObject();
 			isDerived = false;
 			xmlTag = "RegnPrtcptnDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -633,12 +642,11 @@ public class EntitlementAssessment3 {
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RegnPrtcptnSTPDdln")
 	protected DateFormat29Choice registrationParticipationSTPDeadline;
 	/**
-	 * Date by which the holder needs to register its intention to participate
-	 * in the meeting process in order to be allowed to participate in the
-	 * meeting event. This deadline is specified by an intermediary (STP mode).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -679,7 +687,7 @@ public class EntitlementAssessment3 {
 	public static final MMMessageAttribute mmRegistrationParticipationSTPDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmSTPDeadline;
-			componentContext_lazy = () -> EntitlementAssessment3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment3.mmObject();
 			isDerived = false;
 			xmlTag = "RegnPrtcptnSTPDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -691,12 +699,11 @@ public class EntitlementAssessment3 {
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RegnPrtcptnMktDdln")
 	protected DateFormat29Choice registrationParticipationMarketDeadline;
 	/**
-	 * Date by which the holder needs to register its intention to participate
-	 * in the meeting process in order to be allowed to participate in the
-	 * meeting event. This deadline is set by the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -737,7 +744,7 @@ public class EntitlementAssessment3 {
 	public static final MMMessageAttribute mmRegistrationParticipationMarketDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
-			componentContext_lazy = () -> EntitlementAssessment3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment3.mmObject();
 			isDerived = false;
 			xmlTag = "RegnPrtcptnMktDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -749,10 +756,11 @@ public class EntitlementAssessment3 {
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Entitlmnt")
 	protected Entitlement1Choice entitlement;
 	/**
-	 * Number of votes assigned to one security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -791,7 +799,7 @@ public class EntitlementAssessment3 {
 	public static final MMMessageAttribute mmEntitlement = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> MeetingEntitlement.mmObject();
-			componentContext_lazy = () -> EntitlementAssessment3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment3.mmObject();
 			isDerived = false;
 			xmlTag = "Entitlmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -807,13 +815,16 @@ public class EntitlementAssessment3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EntitlementAssessment3.mmSecuritiesBlockingDeadline, EntitlementAssessment3.mmSecuritiesBlockingSTPDeadline, EntitlementAssessment3.mmSecuritiesBlockingMarketDeadline,
-						EntitlementAssessment3.mmSecuritiesBlockingPeriodEndDate, EntitlementAssessment3.mmEntitlementFixingDate, EntitlementAssessment3.mmRegistrationSecuritiesDeadline,
-						EntitlementAssessment3.mmRegistrationSecuritiesSTPDeadline, EntitlementAssessment3.mmRegistrationSecuritiesMarketDeadline, EntitlementAssessment3.mmRegistrationParticipationDeadline,
-						EntitlementAssessment3.mmRegistrationParticipationSTPDeadline, EntitlementAssessment3.mmRegistrationParticipationMarketDeadline, EntitlementAssessment3.mmEntitlement);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntitlementAssessment3.mmSecuritiesBlockingDeadline, com.tools20022.repository.msg.EntitlementAssessment3.mmSecuritiesBlockingSTPDeadline,
+						com.tools20022.repository.msg.EntitlementAssessment3.mmSecuritiesBlockingMarketDeadline, com.tools20022.repository.msg.EntitlementAssessment3.mmSecuritiesBlockingPeriodEndDate,
+						com.tools20022.repository.msg.EntitlementAssessment3.mmEntitlementFixingDate, com.tools20022.repository.msg.EntitlementAssessment3.mmRegistrationSecuritiesDeadline,
+						com.tools20022.repository.msg.EntitlementAssessment3.mmRegistrationSecuritiesSTPDeadline, com.tools20022.repository.msg.EntitlementAssessment3.mmRegistrationSecuritiesMarketDeadline,
+						com.tools20022.repository.msg.EntitlementAssessment3.mmRegistrationParticipationDeadline, com.tools20022.repository.msg.EntitlementAssessment3.mmRegistrationParticipationSTPDeadline,
+						com.tools20022.repository.msg.EntitlementAssessment3.mmRegistrationParticipationMarketDeadline, com.tools20022.repository.msg.EntitlementAssessment3.mmEntitlement);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV05.mmEntitlementSpecification);
 				trace_lazy = () -> MeetingEntitlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEntitlementAssesment1Rule.forEntitlementAssessment3);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EntitlementAssessment3";
 				definition = "Specifies the parameters, such as dates, used to calculate the entitlement to vote at a general meeting.";
@@ -823,111 +834,111 @@ public class EntitlementAssessment3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesBlckgDdln")
-	public DateFormat29Choice getSecuritiesBlockingDeadline() {
-		return securitiesBlockingDeadline;
+	public Optional<DateFormat29Choice> getSecuritiesBlockingDeadline() {
+		return securitiesBlockingDeadline == null ? Optional.empty() : Optional.of(securitiesBlockingDeadline);
 	}
 
-	public void setSecuritiesBlockingDeadline(DateFormat29Choice securitiesBlockingDeadline) {
+	public EntitlementAssessment3 setSecuritiesBlockingDeadline(DateFormat29Choice securitiesBlockingDeadline) {
 		this.securitiesBlockingDeadline = securitiesBlockingDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesBlckgSTPDdln")
-	public DateFormat29Choice getSecuritiesBlockingSTPDeadline() {
-		return securitiesBlockingSTPDeadline;
+	public Optional<DateFormat29Choice> getSecuritiesBlockingSTPDeadline() {
+		return securitiesBlockingSTPDeadline == null ? Optional.empty() : Optional.of(securitiesBlockingSTPDeadline);
 	}
 
-	public void setSecuritiesBlockingSTPDeadline(DateFormat29Choice securitiesBlockingSTPDeadline) {
+	public EntitlementAssessment3 setSecuritiesBlockingSTPDeadline(DateFormat29Choice securitiesBlockingSTPDeadline) {
 		this.securitiesBlockingSTPDeadline = securitiesBlockingSTPDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesBlckgMktDdln")
-	public DateFormat29Choice getSecuritiesBlockingMarketDeadline() {
-		return securitiesBlockingMarketDeadline;
+	public Optional<DateFormat29Choice> getSecuritiesBlockingMarketDeadline() {
+		return securitiesBlockingMarketDeadline == null ? Optional.empty() : Optional.of(securitiesBlockingMarketDeadline);
 	}
 
-	public void setSecuritiesBlockingMarketDeadline(DateFormat29Choice securitiesBlockingMarketDeadline) {
+	public EntitlementAssessment3 setSecuritiesBlockingMarketDeadline(DateFormat29Choice securitiesBlockingMarketDeadline) {
 		this.securitiesBlockingMarketDeadline = securitiesBlockingMarketDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesBlckgPrdEndDt")
-	public ISODateTime getSecuritiesBlockingPeriodEndDate() {
-		return securitiesBlockingPeriodEndDate;
+	public Optional<ISODateTime> getSecuritiesBlockingPeriodEndDate() {
+		return securitiesBlockingPeriodEndDate == null ? Optional.empty() : Optional.of(securitiesBlockingPeriodEndDate);
 	}
 
-	public void setSecuritiesBlockingPeriodEndDate(ISODateTime securitiesBlockingPeriodEndDate) {
+	public EntitlementAssessment3 setSecuritiesBlockingPeriodEndDate(ISODateTime securitiesBlockingPeriodEndDate) {
 		this.securitiesBlockingPeriodEndDate = securitiesBlockingPeriodEndDate;
+		return this;
 	}
 
-	@XmlElement(name = "EntitlmntFxgDt")
-	public DateFormat1 getEntitlementFixingDate() {
-		return entitlementFixingDate;
+	public Optional<DateFormat1> getEntitlementFixingDate() {
+		return entitlementFixingDate == null ? Optional.empty() : Optional.of(entitlementFixingDate);
 	}
 
-	public void setEntitlementFixingDate(com.tools20022.repository.msg.DateFormat1 entitlementFixingDate) {
+	public EntitlementAssessment3 setEntitlementFixingDate(com.tools20022.repository.msg.DateFormat1 entitlementFixingDate) {
 		this.entitlementFixingDate = entitlementFixingDate;
+		return this;
 	}
 
-	@XmlElement(name = "RegnSctiesDdln")
-	public DateFormat29Choice getRegistrationSecuritiesDeadline() {
-		return registrationSecuritiesDeadline;
+	public Optional<DateFormat29Choice> getRegistrationSecuritiesDeadline() {
+		return registrationSecuritiesDeadline == null ? Optional.empty() : Optional.of(registrationSecuritiesDeadline);
 	}
 
-	public void setRegistrationSecuritiesDeadline(DateFormat29Choice registrationSecuritiesDeadline) {
+	public EntitlementAssessment3 setRegistrationSecuritiesDeadline(DateFormat29Choice registrationSecuritiesDeadline) {
 		this.registrationSecuritiesDeadline = registrationSecuritiesDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "RegnSctiesSTPDdln")
-	public DateFormat29Choice getRegistrationSecuritiesSTPDeadline() {
-		return registrationSecuritiesSTPDeadline;
+	public Optional<DateFormat29Choice> getRegistrationSecuritiesSTPDeadline() {
+		return registrationSecuritiesSTPDeadline == null ? Optional.empty() : Optional.of(registrationSecuritiesSTPDeadline);
 	}
 
-	public void setRegistrationSecuritiesSTPDeadline(DateFormat29Choice registrationSecuritiesSTPDeadline) {
+	public EntitlementAssessment3 setRegistrationSecuritiesSTPDeadline(DateFormat29Choice registrationSecuritiesSTPDeadline) {
 		this.registrationSecuritiesSTPDeadline = registrationSecuritiesSTPDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "RegnSctiesMktDdln")
-	public DateFormat29Choice getRegistrationSecuritiesMarketDeadline() {
-		return registrationSecuritiesMarketDeadline;
+	public Optional<DateFormat29Choice> getRegistrationSecuritiesMarketDeadline() {
+		return registrationSecuritiesMarketDeadline == null ? Optional.empty() : Optional.of(registrationSecuritiesMarketDeadline);
 	}
 
-	public void setRegistrationSecuritiesMarketDeadline(DateFormat29Choice registrationSecuritiesMarketDeadline) {
+	public EntitlementAssessment3 setRegistrationSecuritiesMarketDeadline(DateFormat29Choice registrationSecuritiesMarketDeadline) {
 		this.registrationSecuritiesMarketDeadline = registrationSecuritiesMarketDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "RegnPrtcptnDdln")
-	public DateFormat29Choice getRegistrationParticipationDeadline() {
-		return registrationParticipationDeadline;
+	public Optional<DateFormat29Choice> getRegistrationParticipationDeadline() {
+		return registrationParticipationDeadline == null ? Optional.empty() : Optional.of(registrationParticipationDeadline);
 	}
 
-	public void setRegistrationParticipationDeadline(DateFormat29Choice registrationParticipationDeadline) {
+	public EntitlementAssessment3 setRegistrationParticipationDeadline(DateFormat29Choice registrationParticipationDeadline) {
 		this.registrationParticipationDeadline = registrationParticipationDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "RegnPrtcptnSTPDdln")
-	public DateFormat29Choice getRegistrationParticipationSTPDeadline() {
-		return registrationParticipationSTPDeadline;
+	public Optional<DateFormat29Choice> getRegistrationParticipationSTPDeadline() {
+		return registrationParticipationSTPDeadline == null ? Optional.empty() : Optional.of(registrationParticipationSTPDeadline);
 	}
 
-	public void setRegistrationParticipationSTPDeadline(DateFormat29Choice registrationParticipationSTPDeadline) {
+	public EntitlementAssessment3 setRegistrationParticipationSTPDeadline(DateFormat29Choice registrationParticipationSTPDeadline) {
 		this.registrationParticipationSTPDeadline = registrationParticipationSTPDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "RegnPrtcptnMktDdln")
-	public DateFormat29Choice getRegistrationParticipationMarketDeadline() {
-		return registrationParticipationMarketDeadline;
+	public Optional<DateFormat29Choice> getRegistrationParticipationMarketDeadline() {
+		return registrationParticipationMarketDeadline == null ? Optional.empty() : Optional.of(registrationParticipationMarketDeadline);
 	}
 
-	public void setRegistrationParticipationMarketDeadline(DateFormat29Choice registrationParticipationMarketDeadline) {
+	public EntitlementAssessment3 setRegistrationParticipationMarketDeadline(DateFormat29Choice registrationParticipationMarketDeadline) {
 		this.registrationParticipationMarketDeadline = registrationParticipationMarketDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "Entitlmnt")
-	public Entitlement1Choice getEntitlement() {
-		return entitlement;
+	public Optional<Entitlement1Choice> getEntitlement() {
+		return entitlement == null ? Optional.empty() : Optional.of(entitlement);
 	}
 
-	public void setEntitlement(Entitlement1Choice entitlement) {
+	public EntitlementAssessment3 setEntitlement(Entitlement1Choice entitlement) {
 		this.entitlement = entitlement;
+		return this;
 	}
 }

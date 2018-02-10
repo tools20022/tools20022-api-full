@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.BondTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of bonds.
@@ -31,28 +36,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.BondTypeCode#SovereignBond
+ * BondTypeCode.SovereignBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BondTypeCode#mmSovereignBond
- * BondTypeCode.mmSovereignBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.BondTypeCode#NonEuropeanSovereignBond
+ * BondTypeCode.NonEuropeanSovereignBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BondTypeCode#mmNonEuropeanSovereignBond
- * BondTypeCode.mmNonEuropeanSovereignBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.BondTypeCode#OtherPublicBond
+ * BondTypeCode.OtherPublicBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BondTypeCode#mmOtherPublicBond
- * BondTypeCode.mmOtherPublicBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.BondTypeCode#ConvertibleBond
+ * BondTypeCode.ConvertibleBond}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BondTypeCode#CoveredBond
+ * BondTypeCode.CoveredBond}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BondTypeCode#CorporateBond
+ * BondTypeCode.CorporateBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BondTypeCode#mmConvertibleBond
- * BondTypeCode.mmConvertibleBond}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BondTypeCode#mmCoveredBond
- * BondTypeCode.mmCoveredBond}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BondTypeCode#mmCorporateBond
- * BondTypeCode.mmCorporateBond}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BondTypeCode#mmOtherNonEuropeanPublicBond
- * BondTypeCode.mmOtherNonEuropeanPublicBond}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BondTypeCode#mmOther
- * BondTypeCode.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.BondTypeCode#OtherNonEuropeanPublicBond
+ * BondTypeCode.OtherNonEuropeanPublicBond}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BondTypeCode#Other
+ * BondTypeCode.Other}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -65,8 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of bonds."</li>
  * </ul>
  */
-public class BondTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BondTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -100,12 +104,12 @@ public class BondTypeCode {
 	 * definition} = "Bond of type sovereign bond.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSovereignBond = new MMCode() {
+	public static final BondTypeCode SovereignBond = new BondTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SovereignBond";
 			definition = "Bond of type sovereign bond.\r\n";
-			owner_lazy = () -> BondTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BondTypeCode.mmObject();
 			codeName = "EUSB";
 		}
 	};
@@ -129,12 +133,12 @@ public class BondTypeCode {
 	 * definition} = "Bond of type non-european sovereign bond."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonEuropeanSovereignBond = new MMCode() {
+	public static final BondTypeCode NonEuropeanSovereignBond = new BondTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonEuropeanSovereignBond";
 			definition = "Bond of type non-european sovereign bond.";
-			owner_lazy = () -> BondTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BondTypeCode.mmObject();
 			codeName = "NESB";
 		}
 	};
@@ -158,12 +162,12 @@ public class BondTypeCode {
 	 * definition} = "Bond of type other public bond."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherPublicBond = new MMCode() {
+	public static final BondTypeCode OtherPublicBond = new BondTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherPublicBond";
 			definition = "Bond of type other public bond.";
-			owner_lazy = () -> BondTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BondTypeCode.mmObject();
 			codeName = "OEPB";
 		}
 	};
@@ -187,12 +191,12 @@ public class BondTypeCode {
 	 * definition} = "Bond of type convertible bond."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConvertibleBond = new MMCode() {
+	public static final BondTypeCode ConvertibleBond = new BondTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConvertibleBond";
 			definition = "Bond of type convertible bond.";
-			owner_lazy = () -> BondTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BondTypeCode.mmObject();
 			codeName = "CVTB";
 		}
 	};
@@ -216,12 +220,12 @@ public class BondTypeCode {
 	 * definition} = "Bond of type covered Bond."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCoveredBond = new MMCode() {
+	public static final BondTypeCode CoveredBond = new BondTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoveredBond";
 			definition = "Bond of type covered Bond.";
-			owner_lazy = () -> BondTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BondTypeCode.mmObject();
 			codeName = "CVDB";
 		}
 	};
@@ -245,12 +249,12 @@ public class BondTypeCode {
 	 * definition} = "Bond of type corporate Bond.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateBond = new MMCode() {
+	public static final BondTypeCode CorporateBond = new BondTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateBond";
 			definition = "Bond of type corporate Bond.\r\n";
-			owner_lazy = () -> BondTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BondTypeCode.mmObject();
 			codeName = "CRPB";
 		}
 	};
@@ -274,12 +278,12 @@ public class BondTypeCode {
 	 * definition} = "Bond of type other non-european public bond."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherNonEuropeanPublicBond = new MMCode() {
+	public static final BondTypeCode OtherNonEuropeanPublicBond = new BondTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherNonEuropeanPublicBond";
 			definition = "Bond of type other non-european public bond.";
-			owner_lazy = () -> BondTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BondTypeCode.mmObject();
 			codeName = "ONEP";
 		}
 	};
@@ -303,28 +307,65 @@ public class BondTypeCode {
 	 * definition} = "Other bond type."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final BondTypeCode Other = new BondTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other bond type.";
-			owner_lazy = () -> BondTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BondTypeCode.mmObject();
 			codeName = "OTHR";
 		}
 	};
+	final static private LinkedHashMap<String, BondTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BondTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BondTypeCode";
 				definition = "Specifies the type of bonds.";
-				code_lazy = () -> Arrays.asList(BondTypeCode.mmSovereignBond, BondTypeCode.mmNonEuropeanSovereignBond, BondTypeCode.mmOtherPublicBond, BondTypeCode.mmConvertibleBond, BondTypeCode.mmCoveredBond,
-						BondTypeCode.mmCorporateBond, BondTypeCode.mmOtherNonEuropeanPublicBond, BondTypeCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(BondType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BondTypeCode.SovereignBond, com.tools20022.repository.codeset.BondTypeCode.NonEuropeanSovereignBond,
+						com.tools20022.repository.codeset.BondTypeCode.OtherPublicBond, com.tools20022.repository.codeset.BondTypeCode.ConvertibleBond, com.tools20022.repository.codeset.BondTypeCode.CoveredBond,
+						com.tools20022.repository.codeset.BondTypeCode.CorporateBond, com.tools20022.repository.codeset.BondTypeCode.OtherNonEuropeanPublicBond, com.tools20022.repository.codeset.BondTypeCode.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SovereignBond.getCodeName().get(), SovereignBond);
+		codesByName.put(NonEuropeanSovereignBond.getCodeName().get(), NonEuropeanSovereignBond);
+		codesByName.put(OtherPublicBond.getCodeName().get(), OtherPublicBond);
+		codesByName.put(ConvertibleBond.getCodeName().get(), ConvertibleBond);
+		codesByName.put(CoveredBond.getCodeName().get(), CoveredBond);
+		codesByName.put(CorporateBond.getCodeName().get(), CorporateBond);
+		codesByName.put(OtherNonEuropeanPublicBond.getCodeName().get(), OtherNonEuropeanPublicBond);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static BondTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BondTypeCode[] values() {
+		BondTypeCode[] values = new BondTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BondTypeCode> {
+		@Override
+		public BondTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BondTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

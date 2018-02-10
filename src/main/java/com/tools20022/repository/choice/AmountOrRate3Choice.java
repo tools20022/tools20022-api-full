@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between an amount or rate."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountOrRate3Choice", propOrder = {"amount", "rate"})
 public class AmountOrRate3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
-	 * Amount of money.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +106,7 @@ public class AmountOrRate3Choice {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> AmountOrRate3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AmountOrRate3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +117,11 @@ public class AmountOrRate3Choice {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Rate", required = true)
 	protected PercentageRate rate;
 	/**
-	 * Rate used to calculate the amount
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,7 +155,7 @@ public class AmountOrRate3Choice {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
-			componentContext_lazy = () -> AmountOrRate3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AmountOrRate3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,8 +170,8 @@ public class AmountOrRate3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountOrRate3Choice.mmAmount, AmountOrRate3Choice.mmRate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountOrRate3Choice.mmAmount, com.tools20022.repository.choice.AmountOrRate3Choice.mmRate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountOrRate3Choice";
 				definition = "Choice between an amount or rate.";
@@ -177,21 +180,21 @@ public class AmountOrRate3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
-		this.amount = amount;
+	public AmountOrRate3Choice setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
 
-	public void setRate(PercentageRate rate) {
-		this.rate = rate;
+	public AmountOrRate3Choice setRate(PercentageRate rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 }

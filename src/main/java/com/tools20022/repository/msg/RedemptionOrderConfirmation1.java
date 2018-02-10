@@ -26,9 +26,11 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.RedemptionExecution;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +75,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOrderReferenceRule#forRedemptionOrderConfirmation1
+ * ConstraintOrderReferenceRule.forRedemptionOrderConfirmation1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule#forRedemptionOrderConfirmation1
+ * ConstraintRelatedPartiesDetailsRule.forRedemptionOrderConfirmation1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,16 +98,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Order confirmation details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RedemptionOrderConfirmation1", propOrder = {"amendmentIndicator", "multipleExecutionDetails", "relatedPartyDetails", "extension"})
 public class RedemptionOrderConfirmation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AmdmntInd", required = true)
 	protected YesNoIndicator amendmentIndicator;
 	/**
-	 * Indicates whether a confirmation amendment message will follow the
-	 * confirmation cancellation instruction or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +137,7 @@ public class RedemptionOrderConfirmation1 {
 	 */
 	public static final MMMessageAttribute mmAmendmentIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RedemptionOrderConfirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionOrderConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +148,11 @@ public class RedemptionOrderConfirmation1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "MltplExctnDtls", required = true)
 	protected RedemptionMultipleExecution3 multipleExecutionDetails;
 	/**
-	 * General information related to the execution of investment fund orders.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -173,7 +187,7 @@ public class RedemptionOrderConfirmation1 {
 	public static final MMMessageAssociationEnd mmMultipleExecutionDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RedemptionExecution.mmObject();
-			componentContext_lazy = () -> RedemptionOrderConfirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionOrderConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "MltplExctnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,10 +199,11 @@ public class RedemptionOrderConfirmation1 {
 			type_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleExecution3.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdPtyDtls")
 	protected List<com.tools20022.repository.msg.Intermediary9> relatedPartyDetails;
 	/**
-	 * Information about parties related to the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -220,7 +235,7 @@ public class RedemptionOrderConfirmation1 {
 	public static final MMMessageAssociationEnd mmRelatedPartyDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
-			componentContext_lazy = () -> RedemptionOrderConfirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionOrderConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPtyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,11 +247,11 @@ public class RedemptionOrderConfirmation1 {
 			type_lazy = () -> com.tools20022.repository.msg.Intermediary9.mmObject();
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -263,7 +278,7 @@ public class RedemptionOrderConfirmation1 {
 	 */
 	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RedemptionOrderConfirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionOrderConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -278,11 +293,13 @@ public class RedemptionOrderConfirmation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RedemptionOrderConfirmation1.mmAmendmentIndicator, RedemptionOrderConfirmation1.mmMultipleExecutionDetails, RedemptionOrderConfirmation1.mmRelatedPartyDetails,
-						RedemptionOrderConfirmation1.mmExtension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionOrderConfirmation1.mmAmendmentIndicator, com.tools20022.repository.msg.RedemptionOrderConfirmation1.mmMultipleExecutionDetails,
+						com.tools20022.repository.msg.RedemptionOrderConfirmation1.mmRelatedPartyDetails, com.tools20022.repository.msg.RedemptionOrderConfirmation1.mmExtension);
 				messageBuildingBlock_lazy = () -> Arrays.asList(RedemptionOrderConfirmationCancellationInstructionV01.mmCancellationByOrderConfirmationDetails);
 				trace_lazy = () -> RedemptionExecution.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderReferenceRule.forRedemptionOrderConfirmation1,
+						com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule.forRedemptionOrderConfirmation1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionOrderConfirmation1";
 				definition = "Order confirmation details.";
@@ -291,39 +308,39 @@ public class RedemptionOrderConfirmation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AmdmntInd", required = true)
 	public YesNoIndicator getAmendmentIndicator() {
 		return amendmentIndicator;
 	}
 
-	public void setAmendmentIndicator(YesNoIndicator amendmentIndicator) {
-		this.amendmentIndicator = amendmentIndicator;
+	public RedemptionOrderConfirmation1 setAmendmentIndicator(YesNoIndicator amendmentIndicator) {
+		this.amendmentIndicator = Objects.requireNonNull(amendmentIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "MltplExctnDtls", required = true)
 	public RedemptionMultipleExecution3 getMultipleExecutionDetails() {
 		return multipleExecutionDetails;
 	}
 
-	public void setMultipleExecutionDetails(com.tools20022.repository.msg.RedemptionMultipleExecution3 multipleExecutionDetails) {
-		this.multipleExecutionDetails = multipleExecutionDetails;
+	public RedemptionOrderConfirmation1 setMultipleExecutionDetails(com.tools20022.repository.msg.RedemptionMultipleExecution3 multipleExecutionDetails) {
+		this.multipleExecutionDetails = Objects.requireNonNull(multipleExecutionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "RltdPtyDtls")
 	public List<Intermediary9> getRelatedPartyDetails() {
-		return relatedPartyDetails;
+		return relatedPartyDetails == null ? relatedPartyDetails = new ArrayList<>() : relatedPartyDetails;
 	}
 
-	public void setRelatedPartyDetails(List<com.tools20022.repository.msg.Intermediary9> relatedPartyDetails) {
-		this.relatedPartyDetails = relatedPartyDetails;
+	public RedemptionOrderConfirmation1 setRelatedPartyDetails(List<com.tools20022.repository.msg.Intermediary9> relatedPartyDetails) {
+		this.relatedPartyDetails = Objects.requireNonNull(relatedPartyDetails);
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
-		this.extension = extension;
+	public RedemptionOrderConfirmation1 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 }

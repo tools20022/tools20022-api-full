@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the criteria used to report on the cash balance."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashBalanceReturnCriteria", propOrder = {"typeIndicator", "statusIndicator", "valueDateIndicator", "numberOfPaymentsIndicator"})
 public class CashBalanceReturnCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TpInd", required = true)
 	protected RequestedIndicator typeIndicator;
 	/**
-	 * Indicates whether the balance type is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -103,7 +105,7 @@ public class CashBalanceReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmTypeIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashBalanceReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "TpInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,10 +116,11 @@ public class CashBalanceReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "StsInd", required = true)
 	protected RequestedIndicator statusIndicator;
 	/**
-	 * Indicates whether the balance status is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,7 +148,7 @@ public class CashBalanceReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmStatusIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashBalanceReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "StsInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +159,11 @@ public class CashBalanceReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ValDtInd", required = true)
 	protected RequestedIndicator valueDateIndicator;
 	/**
-	 * Indicates whether the value date is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,7 +191,7 @@ public class CashBalanceReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmValueDateIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashBalanceReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "ValDtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,10 +202,11 @@ public class CashBalanceReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfPmtsInd", required = true)
 	protected RequestedIndicator numberOfPaymentsIndicator;
 	/**
-	 * Indicates whether the number of payment is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -229,7 +234,7 @@ public class CashBalanceReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmNumberOfPaymentsIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashBalanceReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfPmtsInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,9 +249,9 @@ public class CashBalanceReturnCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashBalanceReturnCriteria.mmTypeIndicator, CashBalanceReturnCriteria.mmStatusIndicator, CashBalanceReturnCriteria.mmValueDateIndicator,
-						CashBalanceReturnCriteria.mmNumberOfPaymentsIndicator);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceReturnCriteria.mmTypeIndicator, com.tools20022.repository.msg.CashBalanceReturnCriteria.mmStatusIndicator,
+						com.tools20022.repository.msg.CashBalanceReturnCriteria.mmValueDateIndicator, com.tools20022.repository.msg.CashBalanceReturnCriteria.mmNumberOfPaymentsIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashBalanceReturnCriteria";
 				definition = "Defines the criteria used to report on the cash balance.";
@@ -255,39 +260,39 @@ public class CashBalanceReturnCriteria {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TpInd", required = true)
 	public RequestedIndicator getTypeIndicator() {
 		return typeIndicator;
 	}
 
-	public void setTypeIndicator(RequestedIndicator typeIndicator) {
-		this.typeIndicator = typeIndicator;
+	public CashBalanceReturnCriteria setTypeIndicator(RequestedIndicator typeIndicator) {
+		this.typeIndicator = Objects.requireNonNull(typeIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "StsInd", required = true)
 	public RequestedIndicator getStatusIndicator() {
 		return statusIndicator;
 	}
 
-	public void setStatusIndicator(RequestedIndicator statusIndicator) {
-		this.statusIndicator = statusIndicator;
+	public CashBalanceReturnCriteria setStatusIndicator(RequestedIndicator statusIndicator) {
+		this.statusIndicator = Objects.requireNonNull(statusIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "ValDtInd", required = true)
 	public RequestedIndicator getValueDateIndicator() {
 		return valueDateIndicator;
 	}
 
-	public void setValueDateIndicator(RequestedIndicator valueDateIndicator) {
-		this.valueDateIndicator = valueDateIndicator;
+	public CashBalanceReturnCriteria setValueDateIndicator(RequestedIndicator valueDateIndicator) {
+		this.valueDateIndicator = Objects.requireNonNull(valueDateIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "NbOfPmtsInd", required = true)
 	public RequestedIndicator getNumberOfPaymentsIndicator() {
 		return numberOfPaymentsIndicator;
 	}
 
-	public void setNumberOfPaymentsIndicator(RequestedIndicator numberOfPaymentsIndicator) {
-		this.numberOfPaymentsIndicator = numberOfPaymentsIndicator;
+	public CashBalanceReturnCriteria setNumberOfPaymentsIndicator(RequestedIndicator numberOfPaymentsIndicator) {
+		this.numberOfPaymentsIndicator = Objects.requireNonNull(numberOfPaymentsIndicator);
+		return this;
 	}
 }

@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMailingIndicatorRule#forPostalAddress3
+ * ConstraintMailingIndicatorRule.forPostalAddress3}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,15 +93,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PostalAddress3", propOrder = {"addressType", "mailingIndicator", "registrationAddressIndicator", "nameAndAddress"})
 public class PostalAddress3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AdrTp", required = true)
 	protected AddressType1Code addressType;
 	/**
-	 * Type of address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,7 +143,7 @@ public class PostalAddress3 {
 	public static final MMMessageAttribute mmAddressType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmAddressType;
-			componentContext_lazy = () -> PostalAddress3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress3.mmObject();
 			isDerived = false;
 			xmlTag = "AdrTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,10 +155,11 @@ public class PostalAddress3 {
 			simpleType_lazy = () -> AddressType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MlngInd", required = true)
 	protected YesNoIndicator mailingIndicator;
 	/**
-	 * Indicates whether mail should be sent to an address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,7 +200,7 @@ public class PostalAddress3 {
 	public static final MMMessageAttribute mmMailingIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MailingInstructions.mmMailingIndicator;
-			componentContext_lazy = () -> PostalAddress3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress3.mmObject();
 			isDerived = false;
 			xmlTag = "MlngInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,10 +212,11 @@ public class PostalAddress3 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "RegnAdrInd", required = true)
 	protected YesNoIndicator registrationAddressIndicator;
 	/**
-	 * Indicates whether the address is the official address of the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -246,7 +258,7 @@ public class PostalAddress3 {
 	public static final MMMessageAttribute mmRegistrationAddressIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MailingInstructions.mmRegistrationAddressIndicator;
-			componentContext_lazy = () -> PostalAddress3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress3.mmObject();
 			isDerived = false;
 			xmlTag = "RegnAdrInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,11 +270,11 @@ public class PostalAddress3 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "NmAndAdr", required = true)
 	protected NameAndAddress4 nameAndAddress;
 	/**
-	 * Information that locates and identifies a specific address, as defined by
-	 * postal services.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -295,7 +307,7 @@ public class PostalAddress3 {
 	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ContactPoint.mmRelatedParty;
-			componentContext_lazy = () -> PostalAddress3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress3.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -311,9 +323,11 @@ public class PostalAddress3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PostalAddress3.mmAddressType, PostalAddress3.mmMailingIndicator, PostalAddress3.mmRegistrationAddressIndicator, PostalAddress3.mmNameAndAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress3.mmAddressType, com.tools20022.repository.msg.PostalAddress3.mmMailingIndicator,
+						com.tools20022.repository.msg.PostalAddress3.mmRegistrationAddressIndicator, com.tools20022.repository.msg.PostalAddress3.mmNameAndAddress);
 				trace_lazy = () -> PostalAddress.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMailingIndicatorRule.forPostalAddress3);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PostalAddress3";
 				definition = "Information that locates and identifies a specific address, as defined by postal services.";
@@ -323,39 +337,39 @@ public class PostalAddress3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AdrTp", required = true)
 	public AddressType1Code getAddressType() {
 		return addressType;
 	}
 
-	public void setAddressType(AddressType1Code addressType) {
-		this.addressType = addressType;
+	public PostalAddress3 setAddressType(AddressType1Code addressType) {
+		this.addressType = Objects.requireNonNull(addressType);
+		return this;
 	}
 
-	@XmlElement(name = "MlngInd", required = true)
 	public YesNoIndicator getMailingIndicator() {
 		return mailingIndicator;
 	}
 
-	public void setMailingIndicator(YesNoIndicator mailingIndicator) {
-		this.mailingIndicator = mailingIndicator;
+	public PostalAddress3 setMailingIndicator(YesNoIndicator mailingIndicator) {
+		this.mailingIndicator = Objects.requireNonNull(mailingIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "RegnAdrInd", required = true)
 	public YesNoIndicator getRegistrationAddressIndicator() {
 		return registrationAddressIndicator;
 	}
 
-	public void setRegistrationAddressIndicator(YesNoIndicator registrationAddressIndicator) {
-		this.registrationAddressIndicator = registrationAddressIndicator;
+	public PostalAddress3 setRegistrationAddressIndicator(YesNoIndicator registrationAddressIndicator) {
+		this.registrationAddressIndicator = Objects.requireNonNull(registrationAddressIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress4 getNameAndAddress() {
 		return nameAndAddress;
 	}
 
-	public void setNameAndAddress(com.tools20022.repository.msg.NameAndAddress4 nameAndAddress) {
-		this.nameAndAddress = nameAndAddress;
+	public PostalAddress3 setNameAndAddress(com.tools20022.repository.msg.NameAndAddress4 nameAndAddress) {
+		this.nameAndAddress = Objects.requireNonNull(nameAndAddress);
+		return this;
 	}
 }

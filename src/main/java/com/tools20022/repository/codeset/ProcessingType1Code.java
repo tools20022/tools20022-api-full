@@ -20,55 +20,59 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ProcessingTypeCode;
+import com.tools20022.repository.codeset.ProcessingType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of processing restrictions the central system must apply.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ProcessingTypeCode
- * ProcessingTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingType1Code#mmRejection
- * ProcessingType1Code.mmRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingType1Code#Rejection
+ * ProcessingType1Code.Rejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingType1Code#mmCSDValidationHold
- * ProcessingType1Code.mmCSDValidationHold}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingType1Code#CSDValidationHold
+ * ProcessingType1Code.CSDValidationHold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingType1Code#mmReservation
- * ProcessingType1Code.mmReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingType1Code#Reservation
+ * ProcessingType1Code.Reservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingType1Code#mmBlocking
- * ProcessingType1Code.mmBlocking}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingType1Code#Blocking
+ * ProcessingType1Code.Blocking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingType1Code#mmEarmarking
- * ProcessingType1Code.mmEarmarking}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingType1Code#Earmarking
+ * ProcessingType1Code.Earmarking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingType1Code#mmEarmarkingForAutoCollateralisation
- * ProcessingType1Code.mmEarmarkingForAutoCollateralisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingType1Code#EarmarkingForAutoCollateralisation
+ * ProcessingType1Code.EarmarkingForAutoCollateralisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingType1Code#mmDeliverable
- * ProcessingType1Code.mmDeliverable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingType1Code#Deliverable
+ * ProcessingType1Code.Deliverable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingType1Code#mmCollateralised
- * ProcessingType1Code.mmCollateralised}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingType1Code#Collateralised
+ * ProcessingType1Code.Collateralised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingType1Code#mmCoSDBlocking
- * ProcessingType1Code.mmCoSDBlocking}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingType1Code#CoSDBlocking
+ * ProcessingType1Code.CoSDBlocking}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ProcessingTypeCode
+ * ProcessingTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ProcessingType1Code extends ProcessingTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProcessingType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -106,11 +111,12 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	 * name} = "Rejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejection = new MMCode() {
+	public static final ProcessingType1Code Rejection = new ProcessingType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejection";
-			owner_lazy = () -> ProcessingType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingType1Code.mmObject();
+			codeName = ProcessingTypeCode.Rejection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -129,11 +135,12 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	 * name} = "CSDValidationHold"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCSDValidationHold = new MMCode() {
+	public static final ProcessingType1Code CSDValidationHold = new ProcessingType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDValidationHold";
-			owner_lazy = () -> ProcessingType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingType1Code.mmObject();
+			codeName = ProcessingTypeCode.CSDValidationHold.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -152,11 +159,12 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	 * name} = "Reservation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReservation = new MMCode() {
+	public static final ProcessingType1Code Reservation = new ProcessingType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reservation";
-			owner_lazy = () -> ProcessingType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingType1Code.mmObject();
+			codeName = ProcessingTypeCode.Reservation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -175,11 +183,12 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	 * name} = "Blocking"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBlocking = new MMCode() {
+	public static final ProcessingType1Code Blocking = new ProcessingType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocking";
-			owner_lazy = () -> ProcessingType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingType1Code.mmObject();
+			codeName = ProcessingTypeCode.Blocking.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -198,11 +207,12 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	 * name} = "Earmarking"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEarmarking = new MMCode() {
+	public static final ProcessingType1Code Earmarking = new ProcessingType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Earmarking";
-			owner_lazy = () -> ProcessingType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingType1Code.mmObject();
+			codeName = ProcessingTypeCode.Earmarking.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -221,11 +231,12 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	 * name} = "EarmarkingForAutoCollateralisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEarmarkingForAutoCollateralisation = new MMCode() {
+	public static final ProcessingType1Code EarmarkingForAutoCollateralisation = new ProcessingType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarmarkingForAutoCollateralisation";
-			owner_lazy = () -> ProcessingType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingType1Code.mmObject();
+			codeName = ProcessingTypeCode.EarmarkingForAutoCollateralisation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -244,11 +255,12 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	 * name} = "Deliverable"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeliverable = new MMCode() {
+	public static final ProcessingType1Code Deliverable = new ProcessingType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deliverable";
-			owner_lazy = () -> ProcessingType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingType1Code.mmObject();
+			codeName = ProcessingTypeCode.Deliverable.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -267,11 +279,12 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	 * name} = "Collateralised"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateralised = new MMCode() {
+	public static final ProcessingType1Code Collateralised = new ProcessingType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collateralised";
-			owner_lazy = () -> ProcessingType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingType1Code.mmObject();
+			codeName = ProcessingTypeCode.Collateralised.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -290,27 +303,67 @@ public class ProcessingType1Code extends ProcessingTypeCode {
 	 * name} = "CoSDBlocking"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCoSDBlocking = new MMCode() {
+	public static final ProcessingType1Code CoSDBlocking = new ProcessingType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoSDBlocking";
-			owner_lazy = () -> ProcessingType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingType1Code.mmObject();
+			codeName = ProcessingTypeCode.CoSDBlocking.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ProcessingType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProcessingType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RJCT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingType1Code";
 				definition = "Specifies the type of processing restrictions the central system must apply.";
-				code_lazy = () -> Arrays.asList(ProcessingType1Code.mmRejection, ProcessingType1Code.mmCSDValidationHold, ProcessingType1Code.mmReservation, ProcessingType1Code.mmBlocking, ProcessingType1Code.mmEarmarking,
-						ProcessingType1Code.mmEarmarkingForAutoCollateralisation, ProcessingType1Code.mmDeliverable, ProcessingType1Code.mmCollateralised, ProcessingType1Code.mmCoSDBlocking);
 				trace_lazy = () -> ProcessingTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessingType1Code.Rejection, com.tools20022.repository.codeset.ProcessingType1Code.CSDValidationHold,
+						com.tools20022.repository.codeset.ProcessingType1Code.Reservation, com.tools20022.repository.codeset.ProcessingType1Code.Blocking, com.tools20022.repository.codeset.ProcessingType1Code.Earmarking,
+						com.tools20022.repository.codeset.ProcessingType1Code.EarmarkingForAutoCollateralisation, com.tools20022.repository.codeset.ProcessingType1Code.Deliverable,
+						com.tools20022.repository.codeset.ProcessingType1Code.Collateralised, com.tools20022.repository.codeset.ProcessingType1Code.CoSDBlocking);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Rejection.getCodeName().get(), Rejection);
+		codesByName.put(CSDValidationHold.getCodeName().get(), CSDValidationHold);
+		codesByName.put(Reservation.getCodeName().get(), Reservation);
+		codesByName.put(Blocking.getCodeName().get(), Blocking);
+		codesByName.put(Earmarking.getCodeName().get(), Earmarking);
+		codesByName.put(EarmarkingForAutoCollateralisation.getCodeName().get(), EarmarkingForAutoCollateralisation);
+		codesByName.put(Deliverable.getCodeName().get(), Deliverable);
+		codesByName.put(Collateralised.getCodeName().get(), Collateralised);
+		codesByName.put(CoSDBlocking.getCodeName().get(), CoSDBlocking);
+	}
+
+	public static ProcessingType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProcessingType1Code[] values() {
+		ProcessingType1Code[] values = new ProcessingType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProcessingType1Code> {
+		@Override
+		public ProcessingType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProcessingType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

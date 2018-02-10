@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementParties1", propOrder = {"deliveryAgent", "intermediary", "receivingAgent", "beneficiaryInstitution"})
 public class SettlementParties1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DlvryAgt")
 	protected PartyIdentification8Choice deliveryAgent;
 	/**
-	 * Financial institution from which cash will be transferred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -117,7 +120,7 @@ public class SettlementParties1 {
 	public static final MMMessageAssociationEnd mmDeliveryAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SettlementParties1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,11 +132,11 @@ public class SettlementParties1 {
 			type_lazy = () -> PartyIdentification8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Intrmy")
 	protected PartyIdentification8Choice intermediary;
 	/**
-	 * Party, within the settlement chain, between the delivery and receiving
-	 * agents.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -168,7 +171,7 @@ public class SettlementParties1 {
 	public static final MMMessageAssociationEnd mmIntermediary = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SettlementParties1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties1.mmObject();
 			isDerived = false;
 			xmlTag = "Intrmy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,11 +183,11 @@ public class SettlementParties1 {
 			type_lazy = () -> PartyIdentification8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvgAgt", required = true)
 	protected PartyIdentification8Choice receivingAgent;
 	/**
-	 * Identifies the financial institution where the payee will receive the
-	 * funds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -219,7 +222,7 @@ public class SettlementParties1 {
 	public static final MMMessageAssociationEnd mmReceivingAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SettlementParties1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,11 +234,11 @@ public class SettlementParties1 {
 			type_lazy = () -> PartyIdentification8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "BnfcryInstn")
 	protected PartyIdentification8Choice beneficiaryInstitution;
 	/**
-	 * Identifies the ultimate institution that will receive the funds when
-	 * different than the trading or counterparty side.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -270,7 +273,7 @@ public class SettlementParties1 {
 	public static final MMMessageAssociationEnd mmBeneficiaryInstitution = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SettlementParties1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties1.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryInstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,9 +289,10 @@ public class SettlementParties1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementParties1.mmDeliveryAgent, SettlementParties1.mmIntermediary, SettlementParties1.mmReceivingAgent, SettlementParties1.mmBeneficiaryInstitution);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementParties1.mmDeliveryAgent, com.tools20022.repository.msg.SettlementParties1.mmIntermediary,
+						com.tools20022.repository.msg.SettlementParties1.mmReceivingAgent, com.tools20022.repository.msg.SettlementParties1.mmBeneficiaryInstitution);
 				trace_lazy = () -> PaymentPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementParties1";
 				definition = "Identification of a settlement party by a choice between a BIC or a name and address.";
@@ -297,39 +301,39 @@ public class SettlementParties1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DlvryAgt")
-	public PartyIdentification8Choice getDeliveryAgent() {
-		return deliveryAgent;
+	public Optional<PartyIdentification8Choice> getDeliveryAgent() {
+		return deliveryAgent == null ? Optional.empty() : Optional.of(deliveryAgent);
 	}
 
-	public void setDeliveryAgent(PartyIdentification8Choice deliveryAgent) {
+	public SettlementParties1 setDeliveryAgent(PartyIdentification8Choice deliveryAgent) {
 		this.deliveryAgent = deliveryAgent;
+		return this;
 	}
 
-	@XmlElement(name = "Intrmy")
-	public PartyIdentification8Choice getIntermediary() {
-		return intermediary;
+	public Optional<PartyIdentification8Choice> getIntermediary() {
+		return intermediary == null ? Optional.empty() : Optional.of(intermediary);
 	}
 
-	public void setIntermediary(PartyIdentification8Choice intermediary) {
+	public SettlementParties1 setIntermediary(PartyIdentification8Choice intermediary) {
 		this.intermediary = intermediary;
+		return this;
 	}
 
-	@XmlElement(name = "RcvgAgt", required = true)
 	public PartyIdentification8Choice getReceivingAgent() {
 		return receivingAgent;
 	}
 
-	public void setReceivingAgent(PartyIdentification8Choice receivingAgent) {
-		this.receivingAgent = receivingAgent;
+	public SettlementParties1 setReceivingAgent(PartyIdentification8Choice receivingAgent) {
+		this.receivingAgent = Objects.requireNonNull(receivingAgent);
+		return this;
 	}
 
-	@XmlElement(name = "BnfcryInstn")
-	public PartyIdentification8Choice getBeneficiaryInstitution() {
-		return beneficiaryInstitution;
+	public Optional<PartyIdentification8Choice> getBeneficiaryInstitution() {
+		return beneficiaryInstitution == null ? Optional.empty() : Optional.of(beneficiaryInstitution);
 	}
 
-	public void setBeneficiaryInstitution(PartyIdentification8Choice beneficiaryInstitution) {
+	public SettlementParties1 setBeneficiaryInstitution(PartyIdentification8Choice beneficiaryInstitution) {
 		this.beneficiaryInstitution = beneficiaryInstitution;
+		return this;
 	}
 }

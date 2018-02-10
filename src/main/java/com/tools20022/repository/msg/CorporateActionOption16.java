@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,9 +27,11 @@ import com.tools20022.repository.entity.CashProceedsDefinition;
 import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOptionTypeRule#forCorporateActionOption16
+ * ConstraintOptionTypeRule.forCorporateActionOption16}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information about the corporate action option."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionOption16", propOrder = {"optionNumber", "optionType", "securitiesMovementDetails", "cashMovementDetails"})
 public class CorporateActionOption16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OptnNb", required = true)
 	protected OptionNumber1Choice optionNumber;
 	/**
-	 * Number identifying the available corporate action options.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -102,6 +114,9 @@ public class CorporateActionOption16 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OptnNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13A::CAON</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -116,9 +131,10 @@ public class CorporateActionOption16 {
 	public static final MMMessageAssociationEnd mmOptionNumber = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
-			componentContext_lazy = () -> CorporateActionOption16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption16.mmObject();
 			isDerived = false;
 			xmlTag = "OptnNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13A::CAON"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
@@ -128,10 +144,11 @@ public class CorporateActionOption16 {
 			type_lazy = () -> OptionNumber1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnTp", required = true)
 	protected CorporateActionOption8Choice optionType;
 	/**
-	 * Specifies the corporate action options available to the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -151,6 +168,9 @@ public class CorporateActionOption16 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OptnTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::CAOP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -165,9 +185,10 @@ public class CorporateActionOption16 {
 	public static final MMMessageAssociationEnd mmOptionType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
-			componentContext_lazy = () -> CorporateActionOption16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption16.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CAOP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
@@ -177,11 +198,11 @@ public class CorporateActionOption16 {
 			type_lazy = () -> CorporateActionOption8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesMvmntDtls")
 	protected List<com.tools20022.repository.msg.SecuritiesOption11> securitiesMovementDetails;
 	/**
-	 * Provides information about the securities movement linked to the
-	 * corporate action option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -200,6 +221,9 @@ public class CorporateActionOption16 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesMvmntDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :16R::SECMOVE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -215,9 +239,10 @@ public class CorporateActionOption16 {
 	public static final MMMessageAssociationEnd mmSecuritiesMovementDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement;
-			componentContext_lazy = () -> CorporateActionOption16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption16.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesMvmntDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":16R::SECMOVE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovementDetails";
 			definition = "Provides information about the securities movement linked to the corporate action option.";
@@ -226,11 +251,11 @@ public class CorporateActionOption16 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesOption11.mmObject();
 		}
 	};
+	@XmlElement(name = "CshMvmntDtls")
 	protected List<com.tools20022.repository.msg.CashOption7> cashMovementDetails;
 	/**
-	 * Provides information about the cash movement related to a corporate
-	 * action option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -249,6 +274,9 @@ public class CorporateActionOption16 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CshMvmntDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :16R:CASHMOVE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -264,9 +292,10 @@ public class CorporateActionOption16 {
 	public static final MMMessageAssociationEnd mmCashMovementDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashProceedsDefinition.mmObject();
-			componentContext_lazy = () -> CorporateActionOption16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption16.mmObject();
 			isDerived = false;
 			xmlTag = "CshMvmntDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":16R:CASHMOVE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashMovementDetails";
 			definition = "Provides information about the cash movement related to a corporate action option.";
@@ -279,9 +308,11 @@ public class CorporateActionOption16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionOption16.mmOptionNumber, CorporateActionOption16.mmOptionType, CorporateActionOption16.mmSecuritiesMovementDetails, CorporateActionOption16.mmCashMovementDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption16.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption16.mmOptionType,
+						com.tools20022.repository.msg.CorporateActionOption16.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption16.mmCashMovementDetails);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionOption16);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOption16";
 				definition = "Provides information about the corporate action option.";
@@ -290,39 +321,39 @@ public class CorporateActionOption16 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OptnNb", required = true)
 	public OptionNumber1Choice getOptionNumber() {
 		return optionNumber;
 	}
 
-	public void setOptionNumber(OptionNumber1Choice optionNumber) {
-		this.optionNumber = optionNumber;
+	public CorporateActionOption16 setOptionNumber(OptionNumber1Choice optionNumber) {
+		this.optionNumber = Objects.requireNonNull(optionNumber);
+		return this;
 	}
 
-	@XmlElement(name = "OptnTp", required = true)
 	public CorporateActionOption8Choice getOptionType() {
 		return optionType;
 	}
 
-	public void setOptionType(CorporateActionOption8Choice optionType) {
-		this.optionType = optionType;
+	public CorporateActionOption16 setOptionType(CorporateActionOption8Choice optionType) {
+		this.optionType = Objects.requireNonNull(optionType);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesMvmntDtls")
 	public List<SecuritiesOption11> getSecuritiesMovementDetails() {
-		return securitiesMovementDetails;
+		return securitiesMovementDetails == null ? securitiesMovementDetails = new ArrayList<>() : securitiesMovementDetails;
 	}
 
-	public void setSecuritiesMovementDetails(List<com.tools20022.repository.msg.SecuritiesOption11> securitiesMovementDetails) {
-		this.securitiesMovementDetails = securitiesMovementDetails;
+	public CorporateActionOption16 setSecuritiesMovementDetails(List<com.tools20022.repository.msg.SecuritiesOption11> securitiesMovementDetails) {
+		this.securitiesMovementDetails = Objects.requireNonNull(securitiesMovementDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CshMvmntDtls")
 	public List<CashOption7> getCashMovementDetails() {
-		return cashMovementDetails;
+		return cashMovementDetails == null ? cashMovementDetails = new ArrayList<>() : cashMovementDetails;
 	}
 
-	public void setCashMovementDetails(List<com.tools20022.repository.msg.CashOption7> cashMovementDetails) {
-		this.cashMovementDetails = cashMovementDetails;
+	public CorporateActionOption16 setCashMovementDetails(List<com.tools20022.repository.msg.CashOption7> cashMovementDetails) {
+		this.cashMovementDetails = Objects.requireNonNull(cashMovementDetails);
+		return this;
 	}
 }

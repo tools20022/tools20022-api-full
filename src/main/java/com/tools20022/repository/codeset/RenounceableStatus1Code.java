@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RenounceableStatusCode;
+import com.tools20022.repository.codeset.RenounceableStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the renounceable status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RenounceableStatusCode
- * RenounceableStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RenounceableStatus1Code#mmNonRenounceable
- * RenounceableStatus1Code.mmNonRenounceable}</li>
+ * {@linkplain com.tools20022.repository.codeset.RenounceableStatus1Code#NonRenounceable
+ * RenounceableStatus1Code.NonRenounceable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RenounceableStatus1Code#mmRenounceable
- * RenounceableStatus1Code.mmRenounceable}</li>
+ * {@linkplain com.tools20022.repository.codeset.RenounceableStatus1Code#Renounceable
+ * RenounceableStatus1Code.Renounceable}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RenounceableStatusCode
+ * RenounceableStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the renounceable status."</li>
  * </ul>
  */
-public class RenounceableStatus1Code extends RenounceableStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RenounceableStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class RenounceableStatus1Code extends RenounceableStatusCode {
 	 * name} = "NonRenounceable"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonRenounceable = new MMCode() {
+	public static final RenounceableStatus1Code NonRenounceable = new RenounceableStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonRenounceable";
-			owner_lazy = () -> RenounceableStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RenounceableStatus1Code.mmObject();
+			codeName = RenounceableStatusCode.NonRenounceable.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class RenounceableStatus1Code extends RenounceableStatusCode {
 	 * name} = "Renounceable"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRenounceable = new MMCode() {
+	public static final RenounceableStatus1Code Renounceable = new RenounceableStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Renounceable";
-			owner_lazy = () -> RenounceableStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RenounceableStatus1Code.mmObject();
+			codeName = RenounceableStatusCode.Renounceable.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RenounceableStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RenounceableStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NREN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RenounceableStatus1Code";
 				definition = "Specifies the renounceable status.";
-				code_lazy = () -> Arrays.asList(RenounceableStatus1Code.mmNonRenounceable, RenounceableStatus1Code.mmRenounceable);
 				trace_lazy = () -> RenounceableStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RenounceableStatus1Code.NonRenounceable, com.tools20022.repository.codeset.RenounceableStatus1Code.Renounceable);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NonRenounceable.getCodeName().get(), NonRenounceable);
+		codesByName.put(Renounceable.getCodeName().get(), Renounceable);
+	}
+
+	public static RenounceableStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RenounceableStatus1Code[] values() {
+		RenounceableStatus1Code[] values = new RenounceableStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RenounceableStatus1Code> {
+		@Override
+		public RenounceableStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RenounceableStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

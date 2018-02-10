@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ShareRankingCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the shares are ranking for dividend or pari passu.
@@ -31,12 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ShareRankingCode#mmDividend
- * ShareRankingCode.mmDividend}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ShareRankingCode#mmPariPassu
- * ShareRankingCode.mmPariPassu}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ShareRankingCode#Dividend
+ * ShareRankingCode.Dividend}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ShareRankingCode#PariPassu
+ * ShareRankingCode.PariPassu}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies whether the shares are ranking for dividend or pari passu."</li>
  * </ul>
  */
-public class ShareRankingCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ShareRankingCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,12 +96,12 @@ public class ShareRankingCode {
 	 * definition} = "Payable on the date specified."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividend = new MMCode() {
+	public static final ShareRankingCode Dividend = new ShareRankingCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Dividend";
 			definition = "Payable on the date specified.";
-			owner_lazy = () -> ShareRankingCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ShareRankingCode.mmObject();
 			codeName = "DIVI";
 		}
 	};
@@ -123,28 +127,58 @@ public class ShareRankingCode {
 	 * "Pari Passu. With equal rights as other shares of the company."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPariPassu = new MMCode() {
+	public static final ShareRankingCode PariPassu = new ShareRankingCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PariPassu";
 			definition = "Pari Passu. With equal rights as other shares of the company.";
-			owner_lazy = () -> ShareRankingCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ShareRankingCode.mmObject();
 			codeName = "PARI";
 		}
 	};
+	final static private LinkedHashMap<String, ShareRankingCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ShareRankingCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DIVI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ShareRankingCode";
 				definition = "Specifies whether the shares are ranking for dividend or pari passu.";
-				code_lazy = () -> Arrays.asList(ShareRankingCode.mmDividend, ShareRankingCode.mmPariPassu);
 				derivation_lazy = () -> Arrays.asList(ShareRanking1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ShareRankingCode.Dividend, com.tools20022.repository.codeset.ShareRankingCode.PariPassu);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Dividend.getCodeName().get(), Dividend);
+		codesByName.put(PariPassu.getCodeName().get(), PariPassu);
+	}
+
+	public static ShareRankingCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ShareRankingCode[] values() {
+		ShareRankingCode[] values = new ShareRankingCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ShareRankingCode> {
+		@Override
+		public ShareRankingCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ShareRankingCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

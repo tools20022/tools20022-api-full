@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.InstructionProcessingStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of an instruction.
@@ -32,110 +37,110 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmCancellation1
- * InstructionProcessingStatusCode.mmCancellation1}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#Cancellation1
+ * InstructionProcessingStatusCode.Cancellation1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmCancellation2
- * InstructionProcessingStatusCode.mmCancellation2}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#Cancellation2
+ * InstructionProcessingStatusCode.Cancellation2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmCancellation3
- * InstructionProcessingStatusCode.mmCancellation3}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#Cancellation3
+ * InstructionProcessingStatusCode.Cancellation3}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmCancelled
- * InstructionProcessingStatusCode.mmCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#Cancelled
+ * InstructionProcessingStatusCode.Cancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmCancelledByAnotherParty
- * InstructionProcessingStatusCode.mmCancelledByAnotherParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#CancelledByAnotherParty
+ * InstructionProcessingStatusCode.CancelledByAnotherParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmPendingCancellation
- * InstructionProcessingStatusCode.mmPendingCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#PendingCancellation
+ * InstructionProcessingStatusCode.PendingCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmGenerated
- * InstructionProcessingStatusCode.mmGenerated}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#Generated
+ * InstructionProcessingStatusCode.Generated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmFullyExecutedConfirmationSent
- * InstructionProcessingStatusCode.mmFullyExecutedConfirmationSent}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#FullyExecutedConfirmationSent
+ * InstructionProcessingStatusCode.FullyExecutedConfirmationSent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmCancellationRequested
- * InstructionProcessingStatusCode.mmCancellationRequested}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#CancellationRequested
+ * InstructionProcessingStatusCode.CancellationRequested}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmDefaultAction
- * InstructionProcessingStatusCode.mmDefaultAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#DefaultAction
+ * InstructionProcessingStatusCode.DefaultAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmDone
- * InstructionProcessingStatusCode.mmDone}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#Done
+ * InstructionProcessingStatusCode.Done}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmPartiallyFilledOrder
- * InstructionProcessingStatusCode.mmPartiallyFilledOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#PartiallyFilledOrder
+ * InstructionProcessingStatusCode.PartiallyFilledOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmReceivedAtStockExchange
- * InstructionProcessingStatusCode.mmReceivedAtStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#ReceivedAtStockExchange
+ * InstructionProcessingStatusCode.ReceivedAtStockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmFullyExecutedExecutionSent
- * InstructionProcessingStatusCode.mmFullyExecutedExecutionSent}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#FullyExecutedExecutionSent
+ * InstructionProcessingStatusCode.FullyExecutedExecutionSent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmForcedRejection
- * InstructionProcessingStatusCode.mmForcedRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#ForcedRejection
+ * InstructionProcessingStatusCode.ForcedRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmFuture
- * InstructionProcessingStatusCode.mmFuture}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#Future
+ * InstructionProcessingStatusCode.Future}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmReceivedAtIntermediary
- * InstructionProcessingStatusCode.mmReceivedAtIntermediary}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#ReceivedAtIntermediary
+ * InstructionProcessingStatusCode.ReceivedAtIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmNoInstruction
- * InstructionProcessingStatusCode.mmNoInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#NoInstruction
+ * InstructionProcessingStatusCode.NoInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmAlreadyMatchedAndAffirmed
- * InstructionProcessingStatusCode.mmAlreadyMatchedAndAffirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#AlreadyMatchedAndAffirmed
+ * InstructionProcessingStatusCode.AlreadyMatchedAndAffirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmOpenOrder
- * InstructionProcessingStatusCode.mmOpenOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#OpenOrder
+ * InstructionProcessingStatusCode.OpenOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmOverAllocated
- * InstructionProcessingStatusCode.mmOverAllocated}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#OverAllocated
+ * InstructionProcessingStatusCode.OverAllocated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmAcknowledgedAccepted
- * InstructionProcessingStatusCode.mmAcknowledgedAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#AcknowledgedAccepted
+ * InstructionProcessingStatusCode.AcknowledgedAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmPartialFill
- * InstructionProcessingStatusCode.mmPartialFill}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#PartialFill
+ * InstructionProcessingStatusCode.PartialFill}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmPartialCancel
- * InstructionProcessingStatusCode.mmPartialCancel}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#PartialCancel
+ * InstructionProcessingStatusCode.PartialCancel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmPendingProcessing
- * InstructionProcessingStatusCode.mmPendingProcessing}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#PendingProcessing
+ * InstructionProcessingStatusCode.PendingProcessing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmRejected
- * InstructionProcessingStatusCode.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#Rejected
+ * InstructionProcessingStatusCode.Rejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmInRepair
- * InstructionProcessingStatusCode.mmInRepair}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#InRepair
+ * InstructionProcessingStatusCode.InRepair}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmSettlementInstructionSent
- * InstructionProcessingStatusCode.mmSettlementInstructionSent}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#SettlementInstructionSent
+ * InstructionProcessingStatusCode.SettlementInstructionSent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmStandingInstruction
- * InstructionProcessingStatusCode.mmStandingInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#StandingInstruction
+ * InstructionProcessingStatusCode.StandingInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmTradingSuspendedByStockExchange
- * InstructionProcessingStatusCode.mmTradingSuspendedByStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#TradingSuspendedByStockExchange
+ * InstructionProcessingStatusCode.TradingSuspendedByStockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmTreated
- * InstructionProcessingStatusCode.mmTreated}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#Treated
+ * InstructionProcessingStatusCode.Treated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmUnderAllocated
- * InstructionProcessingStatusCode.mmUnderAllocated}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#UnderAllocated
+ * InstructionProcessingStatusCode.UnderAllocated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmModificationRequested
- * InstructionProcessingStatusCode.mmModificationRequested}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#ModificationRequested
+ * InstructionProcessingStatusCode.ModificationRequested}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmAcknowledgedAcceptedByAccountOwner
- * InstructionProcessingStatusCode.mmAcknowledgedAcceptedByAccountOwner}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#AcknowledgedAcceptedByAccountOwner
+ * InstructionProcessingStatusCode.AcknowledgedAcceptedByAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#mmRejectedByAccountOwner
- * InstructionProcessingStatusCode.mmRejectedByAccountOwner}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode#RejectedByAccountOwner
+ * InstructionProcessingStatusCode.RejectedByAccountOwner}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -167,8 +172,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -185,7 +190,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of an instruction."</li>
  * </ul>
  */
-public class InstructionProcessingStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InstructionProcessingStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -212,12 +218,12 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellation1 = new MMCode() {
+	public static final InstructionProcessingStatusCode Cancellation1 = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation1";
 			definition = "Pending cancellation; only one side has been input and a cancellation request has been sent.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "CAN1";
 		}
 	};
@@ -245,12 +251,12 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellation2 = new MMCode() {
+	public static final InstructionProcessingStatusCode Cancellation2 = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation2";
 			definition = "Pending cancellation; both sides have been input, the trade has not yet been matched, and one side has sent a cancellation request.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "CAN2";
 		}
 	};
@@ -278,12 +284,12 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellation3 = new MMCode() {
+	public static final InstructionProcessingStatusCode Cancellation3 = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation3";
 			definition = "Pending cancellation; both sides have been input, the trade is matched, and one side has sent a cancellation request.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "CAN3";
 		}
 	};
@@ -308,12 +314,12 @@ public class InstructionProcessingStatusCode {
 	 * definition} = "Instruction has been cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelled = new MMCode() {
+	public static final InstructionProcessingStatusCode Cancelled = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			definition = "Instruction has been cancelled.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "CAND";
 		}
 	};
@@ -341,12 +347,12 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelledByAnotherParty = new MMCode() {
+	public static final InstructionProcessingStatusCode CancelledByAnotherParty = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByAnotherParty";
 			definition = "Instruction has been cancelled by another party than the instructing party, for example, market infrastructure such as a stock exchange.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "CANO";
 		}
 	};
@@ -374,12 +380,12 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingCancellation = new MMCode() {
+	public static final InstructionProcessingStatusCode PendingCancellation = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellation";
 			definition = "Cancellation request from yourself for this instruction is pending waiting for further processing.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "CANP";
 		}
 	};
@@ -407,12 +413,12 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmGenerated = new MMCode() {
+	public static final InstructionProcessingStatusCode Generated = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Generated";
 			definition = "Account servicer or third party created the transaction. It was not instructed directly by the account owner.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "CGEN";
 		}
 	};
@@ -437,12 +443,12 @@ public class InstructionProcessingStatusCode {
 	 * definition} = "Order is fully executed and the confirmation was sent."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullyExecutedConfirmationSent = new MMCode() {
+	public static final InstructionProcessingStatusCode FullyExecutedConfirmationSent = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyExecutedConfirmationSent";
 			definition = "Order is fully executed and the confirmation was sent.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "COSE";
 		}
 	};
@@ -470,12 +476,12 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellationRequested = new MMCode() {
+	public static final InstructionProcessingStatusCode CancellationRequested = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRequested";
 			definition = "Cancellation request from the counterparty is awaiting for your cancellation request or your concent.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "CPRC";
 		}
 	};
@@ -500,12 +506,12 @@ public class InstructionProcessingStatusCode {
 	 * definition} = "Default action is taken."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDefaultAction = new MMCode() {
+	public static final InstructionProcessingStatusCode DefaultAction = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultAction";
 			definition = "Default action is taken.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "DFLA";
 		}
 	};
@@ -533,12 +539,12 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDone = new MMCode() {
+	public static final InstructionProcessingStatusCode Done = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Done";
 			definition = "Order is partially filled and no further executions forthcoming for the trading day.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "DONE";
 		}
 	};
@@ -564,12 +570,12 @@ public class InstructionProcessingStatusCode {
 	 * "Order is partially filled and no further executions will take place."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartiallyFilledOrder = new MMCode() {
+	public static final InstructionProcessingStatusCode PartiallyFilledOrder = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyFilledOrder";
 			definition = "Order is partially filled and no further executions will take place.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "DONF";
 		}
 	};
@@ -594,12 +600,12 @@ public class InstructionProcessingStatusCode {
 	 * definition} = "Order has been received at the stock exchange."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceivedAtStockExchange = new MMCode() {
+	public static final InstructionProcessingStatusCode ReceivedAtStockExchange = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedAtStockExchange";
 			definition = "Order has been received at the stock exchange.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "EXCH";
 		}
 	};
@@ -624,12 +630,12 @@ public class InstructionProcessingStatusCode {
 	 * definition} = "Order was fully executed and the execution sent."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullyExecutedExecutionSent = new MMCode() {
+	public static final InstructionProcessingStatusCode FullyExecutedExecutionSent = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyExecutedExecutionSent";
 			definition = "Order was fully executed and the execution sent.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "EXSE";
 		}
 	};
@@ -657,12 +663,12 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmForcedRejection = new MMCode() {
+	public static final InstructionProcessingStatusCode ForcedRejection = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForcedRejection";
 			definition = "Message has been sent automatically by the service provider to notify that settlement will not take place.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "FORC";
 		}
 	};
@@ -690,12 +696,12 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFuture = new MMCode() {
+	public static final InstructionProcessingStatusCode Future = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Future";
 			definition = "All checks relative to the instruction (except collateral) are successful.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "FUTU";
 		}
 	};
@@ -720,12 +726,12 @@ public class InstructionProcessingStatusCode {
 	 * definition} = "Order has been received at the intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceivedAtIntermediary = new MMCode() {
+	public static final InstructionProcessingStatusCode ReceivedAtIntermediary = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedAtIntermediary";
 			definition = "Order has been received at the intermediary.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "INTE";
 		}
 	};
@@ -753,12 +759,12 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoInstruction = new MMCode() {
+	public static final InstructionProcessingStatusCode NoInstruction = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoInstruction";
 			definition = "No/incomplete instruction was received for the corporate action event. No further processing has been carried out.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "NOIN";
 		}
 	};
@@ -786,12 +792,12 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAlreadyMatchedAndAffirmed = new MMCode() {
+	public static final InstructionProcessingStatusCode AlreadyMatchedAndAffirmed = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlreadyMatchedAndAffirmed";
 			definition = "Instruction cannot be cancelled as it has already been matched and affirmed.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "NOTC";
 		}
 	};
@@ -816,12 +822,12 @@ public class InstructionProcessingStatusCode {
 	 * definition} = "Order is open."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOpenOrder = new MMCode() {
+	public static final InstructionProcessingStatusCode OpenOrder = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenOrder";
 			definition = "Order is open.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "OPOD";
 		}
 	};
@@ -849,12 +855,12 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOverAllocated = new MMCode() {
+	public static final InstructionProcessingStatusCode OverAllocated = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverAllocated";
 			definition = "Quantity of financial instrument of the block trade has been overallocated.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "OVER";
 		}
 	};
@@ -882,12 +888,12 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
+	public static final InstructionProcessingStatusCode AcknowledgedAccepted = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
 			definition = "Instruction has been acknowledged/accepted for further processing by the account servicer.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "PACK";
 		}
 	};
@@ -914,12 +920,12 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialFill = new MMCode() {
+	public static final InstructionProcessingStatusCode PartialFill = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialFill";
 			definition = "Order has been partially filled and the remaining quantity is warehoused.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "PAFI";
 		}
 	};
@@ -944,12 +950,12 @@ public class InstructionProcessingStatusCode {
 	 * definition} = "Order has been partially cancelled as requested."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialCancel = new MMCode() {
+	public static final InstructionProcessingStatusCode PartialCancel = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialCancel";
 			definition = "Order has been partially cancelled as requested.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "PART";
 		}
 	};
@@ -974,12 +980,12 @@ public class InstructionProcessingStatusCode {
 	 * definition} = "Processing of the instruction is pending."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingProcessing = new MMCode() {
+	public static final InstructionProcessingStatusCode PendingProcessing = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingProcessing";
 			definition = "Processing of the instruction is pending.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "PPRC";
 		}
 	};
@@ -1004,12 +1010,12 @@ public class InstructionProcessingStatusCode {
 	 * definition} = "Instruction has been rejected for further processing."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final InstructionProcessingStatusCode Rejected = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Instruction has been rejected for further processing.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "REJT";
 		}
 	};
@@ -1034,12 +1040,12 @@ public class InstructionProcessingStatusCode {
 	 * definition} = "Instruction is accepted but in repair."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInRepair = new MMCode() {
+	public static final InstructionProcessingStatusCode InRepair = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InRepair";
 			definition = "Instruction is accepted but in repair.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "REPR";
 		}
 	};
@@ -1064,12 +1070,12 @@ public class InstructionProcessingStatusCode {
 	 * definition} = "Settlement instruction has been sent to your custodian."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementInstructionSent = new MMCode() {
+	public static final InstructionProcessingStatusCode SettlementInstructionSent = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementInstructionSent";
 			definition = "Settlement instruction has been sent to your custodian.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "SESE";
 		}
 	};
@@ -1094,12 +1100,12 @@ public class InstructionProcessingStatusCode {
 	 * definition} = "Standing instruction has been applied."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStandingInstruction = new MMCode() {
+	public static final InstructionProcessingStatusCode StandingInstruction = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstruction";
 			definition = "Standing instruction has been applied.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "STIN";
 		}
 	};
@@ -1124,12 +1130,12 @@ public class InstructionProcessingStatusCode {
 	 * definition} = "Trading is suspended by the stock exchange."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradingSuspendedByStockExchange = new MMCode() {
+	public static final InstructionProcessingStatusCode TradingSuspendedByStockExchange = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSuspendedByStockExchange";
 			definition = "Trading is suspended by the stock exchange.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "SUSP";
 		}
 	};
@@ -1155,12 +1161,12 @@ public class InstructionProcessingStatusCode {
 	 * "Transaction has been treated (triparty collateral status)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTreated = new MMCode() {
+	public static final InstructionProcessingStatusCode Treated = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Treated";
 			definition = "Transaction has been treated (triparty collateral status).";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "TREA";
 		}
 	};
@@ -1188,12 +1194,12 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnderAllocated = new MMCode() {
+	public static final InstructionProcessingStatusCode UnderAllocated = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderAllocated";
 			definition = "Quantity of financial instrument of the block trade has been under allocated.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "UNDE";
 		}
 	};
@@ -1221,12 +1227,12 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmModificationRequested = new MMCode() {
+	public static final InstructionProcessingStatusCode ModificationRequested = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationRequested";
 			definition = "Modification request from the counterparty is awaiting for your modification request or your concent.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "MPRC";
 		}
 	};
@@ -1254,12 +1260,12 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcknowledgedAcceptedByAccountOwner = new MMCode() {
+	public static final InstructionProcessingStatusCode AcknowledgedAcceptedByAccountOwner = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAcceptedByAccountOwner";
 			definition = "Transaction terms communicated have been acknowledged/accepted for further processing by the account owner.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "ACAO";
 		}
 	};
@@ -1287,38 +1293,109 @@ public class InstructionProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejectedByAccountOwner = new MMCode() {
+	public static final InstructionProcessingStatusCode RejectedByAccountOwner = new InstructionProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedByAccountOwner";
 			definition = "Transaction terms communicated have been rejected for further processing by the account owner.";
-			owner_lazy = () -> InstructionProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionProcessingStatusCode.mmObject();
 			codeName = "RJAO";
 		}
 	};
+	final static private LinkedHashMap<String, InstructionProcessingStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InstructionProcessingStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CAN1");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionProcessingStatusCode";
 				definition = "Specifies the status of an instruction.";
-				code_lazy = () -> Arrays.asList(InstructionProcessingStatusCode.mmCancellation1, InstructionProcessingStatusCode.mmCancellation2, InstructionProcessingStatusCode.mmCancellation3, InstructionProcessingStatusCode.mmCancelled,
-						InstructionProcessingStatusCode.mmCancelledByAnotherParty, InstructionProcessingStatusCode.mmPendingCancellation, InstructionProcessingStatusCode.mmGenerated,
-						InstructionProcessingStatusCode.mmFullyExecutedConfirmationSent, InstructionProcessingStatusCode.mmCancellationRequested, InstructionProcessingStatusCode.mmDefaultAction, InstructionProcessingStatusCode.mmDone,
-						InstructionProcessingStatusCode.mmPartiallyFilledOrder, InstructionProcessingStatusCode.mmReceivedAtStockExchange, InstructionProcessingStatusCode.mmFullyExecutedExecutionSent,
-						InstructionProcessingStatusCode.mmForcedRejection, InstructionProcessingStatusCode.mmFuture, InstructionProcessingStatusCode.mmReceivedAtIntermediary, InstructionProcessingStatusCode.mmNoInstruction,
-						InstructionProcessingStatusCode.mmAlreadyMatchedAndAffirmed, InstructionProcessingStatusCode.mmOpenOrder, InstructionProcessingStatusCode.mmOverAllocated, InstructionProcessingStatusCode.mmAcknowledgedAccepted,
-						InstructionProcessingStatusCode.mmPartialFill, InstructionProcessingStatusCode.mmPartialCancel, InstructionProcessingStatusCode.mmPendingProcessing, InstructionProcessingStatusCode.mmRejected,
-						InstructionProcessingStatusCode.mmInRepair, InstructionProcessingStatusCode.mmSettlementInstructionSent, InstructionProcessingStatusCode.mmStandingInstruction,
-						InstructionProcessingStatusCode.mmTradingSuspendedByStockExchange, InstructionProcessingStatusCode.mmTreated, InstructionProcessingStatusCode.mmUnderAllocated,
-						InstructionProcessingStatusCode.mmModificationRequested, InstructionProcessingStatusCode.mmAcknowledgedAcceptedByAccountOwner, InstructionProcessingStatusCode.mmRejectedByAccountOwner);
 				derivation_lazy = () -> Arrays.asList(InstructionProcessingStatus1Code.mmObject(), TransactionProcessingStatus3Code.mmObject(), TransactionProcessingStatus4Code.mmObject(), TransactionProcessingStatus1Code.mmObject(),
 						TransactionProcessingStatus2Code.mmObject(), SettlementConditionModificationProcessingStatus1Code.mmObject(), IntraPositionTransactionProcessingStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionProcessingStatusCode.Cancellation1, com.tools20022.repository.codeset.InstructionProcessingStatusCode.Cancellation2,
+						com.tools20022.repository.codeset.InstructionProcessingStatusCode.Cancellation3, com.tools20022.repository.codeset.InstructionProcessingStatusCode.Cancelled,
+						com.tools20022.repository.codeset.InstructionProcessingStatusCode.CancelledByAnotherParty, com.tools20022.repository.codeset.InstructionProcessingStatusCode.PendingCancellation,
+						com.tools20022.repository.codeset.InstructionProcessingStatusCode.Generated, com.tools20022.repository.codeset.InstructionProcessingStatusCode.FullyExecutedConfirmationSent,
+						com.tools20022.repository.codeset.InstructionProcessingStatusCode.CancellationRequested, com.tools20022.repository.codeset.InstructionProcessingStatusCode.DefaultAction,
+						com.tools20022.repository.codeset.InstructionProcessingStatusCode.Done, com.tools20022.repository.codeset.InstructionProcessingStatusCode.PartiallyFilledOrder,
+						com.tools20022.repository.codeset.InstructionProcessingStatusCode.ReceivedAtStockExchange, com.tools20022.repository.codeset.InstructionProcessingStatusCode.FullyExecutedExecutionSent,
+						com.tools20022.repository.codeset.InstructionProcessingStatusCode.ForcedRejection, com.tools20022.repository.codeset.InstructionProcessingStatusCode.Future,
+						com.tools20022.repository.codeset.InstructionProcessingStatusCode.ReceivedAtIntermediary, com.tools20022.repository.codeset.InstructionProcessingStatusCode.NoInstruction,
+						com.tools20022.repository.codeset.InstructionProcessingStatusCode.AlreadyMatchedAndAffirmed, com.tools20022.repository.codeset.InstructionProcessingStatusCode.OpenOrder,
+						com.tools20022.repository.codeset.InstructionProcessingStatusCode.OverAllocated, com.tools20022.repository.codeset.InstructionProcessingStatusCode.AcknowledgedAccepted,
+						com.tools20022.repository.codeset.InstructionProcessingStatusCode.PartialFill, com.tools20022.repository.codeset.InstructionProcessingStatusCode.PartialCancel,
+						com.tools20022.repository.codeset.InstructionProcessingStatusCode.PendingProcessing, com.tools20022.repository.codeset.InstructionProcessingStatusCode.Rejected,
+						com.tools20022.repository.codeset.InstructionProcessingStatusCode.InRepair, com.tools20022.repository.codeset.InstructionProcessingStatusCode.SettlementInstructionSent,
+						com.tools20022.repository.codeset.InstructionProcessingStatusCode.StandingInstruction, com.tools20022.repository.codeset.InstructionProcessingStatusCode.TradingSuspendedByStockExchange,
+						com.tools20022.repository.codeset.InstructionProcessingStatusCode.Treated, com.tools20022.repository.codeset.InstructionProcessingStatusCode.UnderAllocated,
+						com.tools20022.repository.codeset.InstructionProcessingStatusCode.ModificationRequested, com.tools20022.repository.codeset.InstructionProcessingStatusCode.AcknowledgedAcceptedByAccountOwner,
+						com.tools20022.repository.codeset.InstructionProcessingStatusCode.RejectedByAccountOwner);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Cancellation1.getCodeName().get(), Cancellation1);
+		codesByName.put(Cancellation2.getCodeName().get(), Cancellation2);
+		codesByName.put(Cancellation3.getCodeName().get(), Cancellation3);
+		codesByName.put(Cancelled.getCodeName().get(), Cancelled);
+		codesByName.put(CancelledByAnotherParty.getCodeName().get(), CancelledByAnotherParty);
+		codesByName.put(PendingCancellation.getCodeName().get(), PendingCancellation);
+		codesByName.put(Generated.getCodeName().get(), Generated);
+		codesByName.put(FullyExecutedConfirmationSent.getCodeName().get(), FullyExecutedConfirmationSent);
+		codesByName.put(CancellationRequested.getCodeName().get(), CancellationRequested);
+		codesByName.put(DefaultAction.getCodeName().get(), DefaultAction);
+		codesByName.put(Done.getCodeName().get(), Done);
+		codesByName.put(PartiallyFilledOrder.getCodeName().get(), PartiallyFilledOrder);
+		codesByName.put(ReceivedAtStockExchange.getCodeName().get(), ReceivedAtStockExchange);
+		codesByName.put(FullyExecutedExecutionSent.getCodeName().get(), FullyExecutedExecutionSent);
+		codesByName.put(ForcedRejection.getCodeName().get(), ForcedRejection);
+		codesByName.put(Future.getCodeName().get(), Future);
+		codesByName.put(ReceivedAtIntermediary.getCodeName().get(), ReceivedAtIntermediary);
+		codesByName.put(NoInstruction.getCodeName().get(), NoInstruction);
+		codesByName.put(AlreadyMatchedAndAffirmed.getCodeName().get(), AlreadyMatchedAndAffirmed);
+		codesByName.put(OpenOrder.getCodeName().get(), OpenOrder);
+		codesByName.put(OverAllocated.getCodeName().get(), OverAllocated);
+		codesByName.put(AcknowledgedAccepted.getCodeName().get(), AcknowledgedAccepted);
+		codesByName.put(PartialFill.getCodeName().get(), PartialFill);
+		codesByName.put(PartialCancel.getCodeName().get(), PartialCancel);
+		codesByName.put(PendingProcessing.getCodeName().get(), PendingProcessing);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+		codesByName.put(InRepair.getCodeName().get(), InRepair);
+		codesByName.put(SettlementInstructionSent.getCodeName().get(), SettlementInstructionSent);
+		codesByName.put(StandingInstruction.getCodeName().get(), StandingInstruction);
+		codesByName.put(TradingSuspendedByStockExchange.getCodeName().get(), TradingSuspendedByStockExchange);
+		codesByName.put(Treated.getCodeName().get(), Treated);
+		codesByName.put(UnderAllocated.getCodeName().get(), UnderAllocated);
+		codesByName.put(ModificationRequested.getCodeName().get(), ModificationRequested);
+		codesByName.put(AcknowledgedAcceptedByAccountOwner.getCodeName().get(), AcknowledgedAcceptedByAccountOwner);
+		codesByName.put(RejectedByAccountOwner.getCodeName().get(), RejectedByAccountOwner);
+	}
+
+	public static InstructionProcessingStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InstructionProcessingStatusCode[] values() {
+		InstructionProcessingStatusCode[] values = new InstructionProcessingStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InstructionProcessingStatusCode> {
+		@Override
+		public InstructionProcessingStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InstructionProcessingStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

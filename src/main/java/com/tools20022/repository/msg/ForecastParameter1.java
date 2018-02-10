@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ReportParameter2Choice;
 import com.tools20022.repository.entity.FundsCashFlow;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ForecastParameter1", propOrder = {"reportParameter", "estimatedCashInForecastDetails", "estimatedCashOutForecastDetails", "estimatedNetCashForecastDetails"})
 public class ForecastParameter1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptParam", required = true)
 	protected ReportParameter2Choice reportParameter;
 	/**
-	 * Type of parameter used for grouping the information in a report, eg,
-	 * country code, currency code, BIC or a user defined parameter.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +117,7 @@ public class ForecastParameter1 {
 	 */
 	public static final MMMessageAttribute mmReportParameter = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ForecastParameter1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForecastParameter1.mmObject();
 			isDerived = false;
 			xmlTag = "RptParam";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,11 +128,11 @@ public class ForecastParameter1 {
 			complexType_lazy = () -> ReportParameter2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "EstmtdCshInFcstDtls")
 	protected List<com.tools20022.repository.msg.CashInForecast1> estimatedCashInForecastDetails;
 	/**
-	 * Cash movements into a fund as a result of investment funds transactions,
-	 * eg, subscriptions or switch-in.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -164,7 +166,7 @@ public class ForecastParameter1 {
 	public static final MMMessageAssociationEnd mmEstimatedCashInForecastDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
-			componentContext_lazy = () -> ForecastParameter1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForecastParameter1.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdCshInFcstDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,11 +177,11 @@ public class ForecastParameter1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashInForecast1.mmObject();
 		}
 	};
+	@XmlElement(name = "EstmtdCshOutFcstDtls")
 	protected List<com.tools20022.repository.msg.CashOutForecast1> estimatedCashOutForecastDetails;
 	/**
-	 * Cash movements out of a fund as a result of investment funds
-	 * transactions, eg, redemptions or switch-out.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -213,7 +215,7 @@ public class ForecastParameter1 {
 	public static final MMMessageAssociationEnd mmEstimatedCashOutForecastDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
-			componentContext_lazy = () -> ForecastParameter1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForecastParameter1.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdCshOutFcstDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,11 +226,11 @@ public class ForecastParameter1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashOutForecast1.mmObject();
 		}
 	};
+	@XmlElement(name = "EstmtdNetCshFcstDtls")
 	protected List<com.tools20022.repository.msg.NetCashForecast1> estimatedNetCashForecastDetails;
 	/**
-	 * Net cash movements to a fund as a result of investment funds
-	 * transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -262,7 +264,7 @@ public class ForecastParameter1 {
 	public static final MMMessageAssociationEnd mmEstimatedNetCashForecastDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
-			componentContext_lazy = () -> ForecastParameter1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForecastParameter1.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdNetCshFcstDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -277,10 +279,10 @@ public class ForecastParameter1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ForecastParameter1.mmReportParameter, ForecastParameter1.mmEstimatedCashInForecastDetails, ForecastParameter1.mmEstimatedCashOutForecastDetails,
-						ForecastParameter1.mmEstimatedNetCashForecastDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForecastParameter1.mmReportParameter, com.tools20022.repository.msg.ForecastParameter1.mmEstimatedCashInForecastDetails,
+						com.tools20022.repository.msg.ForecastParameter1.mmEstimatedCashOutForecastDetails, com.tools20022.repository.msg.ForecastParameter1.mmEstimatedNetCashForecastDetails);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForecastParameter1";
 				definition = "Parameters used to report cash movements,eg, country code, currency code, BIC or a user defined parameter.";
@@ -289,39 +291,39 @@ public class ForecastParameter1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptParam", required = true)
 	public ReportParameter2Choice getReportParameter() {
 		return reportParameter;
 	}
 
-	public void setReportParameter(ReportParameter2Choice reportParameter) {
-		this.reportParameter = reportParameter;
+	public ForecastParameter1 setReportParameter(ReportParameter2Choice reportParameter) {
+		this.reportParameter = Objects.requireNonNull(reportParameter);
+		return this;
 	}
 
-	@XmlElement(name = "EstmtdCshInFcstDtls")
 	public List<CashInForecast1> getEstimatedCashInForecastDetails() {
-		return estimatedCashInForecastDetails;
+		return estimatedCashInForecastDetails == null ? estimatedCashInForecastDetails = new ArrayList<>() : estimatedCashInForecastDetails;
 	}
 
-	public void setEstimatedCashInForecastDetails(List<com.tools20022.repository.msg.CashInForecast1> estimatedCashInForecastDetails) {
-		this.estimatedCashInForecastDetails = estimatedCashInForecastDetails;
+	public ForecastParameter1 setEstimatedCashInForecastDetails(List<com.tools20022.repository.msg.CashInForecast1> estimatedCashInForecastDetails) {
+		this.estimatedCashInForecastDetails = Objects.requireNonNull(estimatedCashInForecastDetails);
+		return this;
 	}
 
-	@XmlElement(name = "EstmtdCshOutFcstDtls")
 	public List<CashOutForecast1> getEstimatedCashOutForecastDetails() {
-		return estimatedCashOutForecastDetails;
+		return estimatedCashOutForecastDetails == null ? estimatedCashOutForecastDetails = new ArrayList<>() : estimatedCashOutForecastDetails;
 	}
 
-	public void setEstimatedCashOutForecastDetails(List<com.tools20022.repository.msg.CashOutForecast1> estimatedCashOutForecastDetails) {
-		this.estimatedCashOutForecastDetails = estimatedCashOutForecastDetails;
+	public ForecastParameter1 setEstimatedCashOutForecastDetails(List<com.tools20022.repository.msg.CashOutForecast1> estimatedCashOutForecastDetails) {
+		this.estimatedCashOutForecastDetails = Objects.requireNonNull(estimatedCashOutForecastDetails);
+		return this;
 	}
 
-	@XmlElement(name = "EstmtdNetCshFcstDtls")
 	public List<NetCashForecast1> getEstimatedNetCashForecastDetails() {
-		return estimatedNetCashForecastDetails;
+		return estimatedNetCashForecastDetails == null ? estimatedNetCashForecastDetails = new ArrayList<>() : estimatedNetCashForecastDetails;
 	}
 
-	public void setEstimatedNetCashForecastDetails(List<com.tools20022.repository.msg.NetCashForecast1> estimatedNetCashForecastDetails) {
-		this.estimatedNetCashForecastDetails = estimatedNetCashForecastDetails;
+	public ForecastParameter1 setEstimatedNetCashForecastDetails(List<com.tools20022.repository.msg.NetCashForecast1> estimatedNetCashForecastDetails) {
+		this.estimatedNetCashForecastDetails = Objects.requireNonNull(estimatedNetCashForecastDetails);
+		return this;
 	}
 }

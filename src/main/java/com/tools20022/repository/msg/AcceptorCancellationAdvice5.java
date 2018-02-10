@@ -25,6 +25,8 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,15 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * AcceptorCancellationAdvice4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcceptorCancellationAdvice5", propOrder = {"environment", "context", "transaction"})
 public class AcceptorCancellationAdvice5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Envt", required = true)
 	protected CardPaymentEnvironment49 environment;
 	/**
-	 * Environment of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -142,7 +145,7 @@ public class AcceptorCancellationAdvice5 {
 	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> AcceptorCancellationAdvice5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCancellationAdvice5.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +159,11 @@ public class AcceptorCancellationAdvice5 {
 			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment49.mmObject();
 		}
 	};
+	@XmlElement(name = "Cntxt")
 	protected CardPaymentContext17 context;
 	/**
-	 * Context in which the transaction is performed (payment and sale).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -205,7 +209,7 @@ public class AcceptorCancellationAdvice5 {
 	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentAcquiring;
-			componentContext_lazy = () -> AcceptorCancellationAdvice5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCancellationAdvice5.mmObject();
 			isDerived = false;
 			xmlTag = "Cntxt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,10 +223,11 @@ public class AcceptorCancellationAdvice5 {
 			type_lazy = () -> com.tools20022.repository.msg.CardPaymentContext17.mmObject();
 		}
 	};
+	@XmlElement(name = "Tx", required = true)
 	protected CardPaymentTransaction59 transaction;
 	/**
-	 * Cancellation transaction between an acceptor and an acquirer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -268,7 +273,7 @@ public class AcceptorCancellationAdvice5 {
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> AcceptorCancellationAdvice5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCancellationAdvice5.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,10 +291,11 @@ public class AcceptorCancellationAdvice5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AcceptorCancellationAdvice5.mmEnvironment, AcceptorCancellationAdvice5.mmContext, AcceptorCancellationAdvice5.mmTransaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCancellationAdvice5.mmEnvironment, com.tools20022.repository.msg.AcceptorCancellationAdvice5.mmContext,
+						com.tools20022.repository.msg.AcceptorCancellationAdvice5.mmTransaction);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorCancellationAdviceV05.mmCancellationAdvice);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCancellationAdvice5";
 				definition = "Cancellation transaction between an acceptor and an acquirer.";
@@ -300,30 +306,30 @@ public class AcceptorCancellationAdvice5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment49 getEnvironment() {
 		return environment;
 	}
 
-	public void setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment49 environment) {
-		this.environment = environment;
+	public AcceptorCancellationAdvice5 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment49 environment) {
+		this.environment = Objects.requireNonNull(environment);
+		return this;
 	}
 
-	@XmlElement(name = "Cntxt")
-	public CardPaymentContext17 getContext() {
-		return context;
+	public Optional<CardPaymentContext17> getContext() {
+		return context == null ? Optional.empty() : Optional.of(context);
 	}
 
-	public void setContext(com.tools20022.repository.msg.CardPaymentContext17 context) {
+	public AcceptorCancellationAdvice5 setContext(com.tools20022.repository.msg.CardPaymentContext17 context) {
 		this.context = context;
+		return this;
 	}
 
-	@XmlElement(name = "Tx", required = true)
 	public CardPaymentTransaction59 getTransaction() {
 		return transaction;
 	}
 
-	public void setTransaction(com.tools20022.repository.msg.CardPaymentTransaction59 transaction) {
-		this.transaction = transaction;
+	public AcceptorCancellationAdvice5 setTransaction(com.tools20022.repository.msg.CardPaymentTransaction59 transaction) {
+		this.transaction = Objects.requireNonNull(transaction);
+		return this;
 	}
 }

@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.IdentificationTypeCode;
+import com.tools20022.repository.codeset.IdentificationType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the source of the party identification.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.IdentificationTypeCode
- * IdentificationTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IdentificationType1Code#mmBankSortCode
- * IdentificationType1Code.mmBankSortCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationType1Code#BankSortCode
+ * IdentificationType1Code.BankSortCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IdentificationType1Code#mmBIC
- * IdentificationType1Code.mmBIC}</li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationType1Code#BIC
+ * IdentificationType1Code.BIC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IdentificationType1Code#mmCFETS
- * IdentificationType1Code.mmCFETS}</li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationType1Code#CFETS
+ * IdentificationType1Code.CFETS}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.IdentificationTypeCode
+ * IdentificationTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates the source of the party identification."</li>
  * </ul>
  */
-public class IdentificationType1Code extends IdentificationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class IdentificationType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,11 +85,12 @@ public class IdentificationType1Code extends IdentificationTypeCode {
 	 * name} = "BankSortCode"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBankSortCode = new MMCode() {
+	public static final IdentificationType1Code BankSortCode = new IdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankSortCode";
-			owner_lazy = () -> IdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IdentificationType1Code.mmObject();
+			codeName = IdentificationTypeCode.BankSortCode.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -103,11 +109,12 @@ public class IdentificationType1Code extends IdentificationTypeCode {
 	 * name} = "BIC"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBIC = new MMCode() {
+	public static final IdentificationType1Code BIC = new IdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BIC";
-			owner_lazy = () -> IdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IdentificationType1Code.mmObject();
+			codeName = IdentificationTypeCode.BIC.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -126,25 +133,58 @@ public class IdentificationType1Code extends IdentificationTypeCode {
 	 * name} = "CFETS"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCFETS = new MMCode() {
+	public static final IdentificationType1Code CFETS = new IdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CFETS";
-			owner_lazy = () -> IdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IdentificationType1Code.mmObject();
+			codeName = IdentificationTypeCode.CFETS.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, IdentificationType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected IdentificationType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IdentificationType1Code";
 				definition = "Indicates the source of the party identification.";
-				code_lazy = () -> Arrays.asList(IdentificationType1Code.mmBankSortCode, IdentificationType1Code.mmBIC, IdentificationType1Code.mmCFETS);
 				trace_lazy = () -> IdentificationTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IdentificationType1Code.BankSortCode, com.tools20022.repository.codeset.IdentificationType1Code.BIC,
+						com.tools20022.repository.codeset.IdentificationType1Code.CFETS);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BankSortCode.getCodeName().get(), BankSortCode);
+		codesByName.put(BIC.getCodeName().get(), BIC);
+		codesByName.put(CFETS.getCodeName().get(), CFETS);
+	}
+
+	public static IdentificationType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static IdentificationType1Code[] values() {
+		IdentificationType1Code[] values = new IdentificationType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, IdentificationType1Code> {
+		@Override
+		public IdentificationType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(IdentificationType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

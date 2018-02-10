@@ -27,9 +27,11 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Further information on the return reason of the transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReturnReasonInformation7", propOrder = {"returnOriginator", "returnReason", "additionalReturnReasonInformation"})
 public class ReturnReasonInformation7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RtrOrgtr", required = true)
 	protected PartyIdentification14 returnOriginator;
 	/**
-	 * Party issuing the return.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -113,7 +116,7 @@ public class ReturnReasonInformation7 {
 	public static final MMMessageAssociationEnd mmReturnOriginator = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> ReturnReasonInformation7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnReasonInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "RtrOrgtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +128,11 @@ public class ReturnReasonInformation7 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification14.mmObject();
 		}
 	};
+	@XmlElement(name = "RtrRsn", required = true)
 	protected ReturnReason4Choice returnReason;
 	/**
-	 * Specifies the reason for the return.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -160,7 +164,7 @@ public class ReturnReasonInformation7 {
 	public static final MMMessageAssociationEnd mmReturnReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
-			componentContext_lazy = () -> ReturnReasonInformation7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnReasonInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "RtrRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,10 +176,11 @@ public class ReturnReasonInformation7 {
 			type_lazy = () -> ReturnReason4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRtrRsnInf")
 	protected List<Max105Text> additionalReturnReasonInformation;
 	/**
-	 * Further details on the return reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -202,7 +207,7 @@ public class ReturnReasonInformation7 {
 	 */
 	public static final MMMessageAttribute mmAdditionalReturnReasonInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReturnReasonInformation7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnReasonInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRtrRsnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,9 +221,10 @@ public class ReturnReasonInformation7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReturnReasonInformation7.mmReturnOriginator, ReturnReasonInformation7.mmReturnReason, ReturnReasonInformation7.mmAdditionalReturnReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReturnReasonInformation7.mmReturnOriginator, com.tools20022.repository.msg.ReturnReasonInformation7.mmReturnReason,
+						com.tools20022.repository.msg.ReturnReasonInformation7.mmAdditionalReturnReasonInformation);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReturnReasonInformation7";
 				definition = "Further information on the return reason of the transaction.";
@@ -227,30 +233,30 @@ public class ReturnReasonInformation7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RtrOrgtr", required = true)
 	public PartyIdentification14 getReturnOriginator() {
 		return returnOriginator;
 	}
 
-	public void setReturnOriginator(com.tools20022.repository.msg.PartyIdentification14 returnOriginator) {
-		this.returnOriginator = returnOriginator;
+	public ReturnReasonInformation7 setReturnOriginator(com.tools20022.repository.msg.PartyIdentification14 returnOriginator) {
+		this.returnOriginator = Objects.requireNonNull(returnOriginator);
+		return this;
 	}
 
-	@XmlElement(name = "RtrRsn", required = true)
 	public ReturnReason4Choice getReturnReason() {
 		return returnReason;
 	}
 
-	public void setReturnReason(ReturnReason4Choice returnReason) {
-		this.returnReason = returnReason;
+	public ReturnReasonInformation7 setReturnReason(ReturnReason4Choice returnReason) {
+		this.returnReason = Objects.requireNonNull(returnReason);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRtrRsnInf")
 	public List<Max105Text> getAdditionalReturnReasonInformation() {
-		return additionalReturnReasonInformation;
+		return additionalReturnReasonInformation == null ? additionalReturnReasonInformation = new ArrayList<>() : additionalReturnReasonInformation;
 	}
 
-	public void setAdditionalReturnReasonInformation(List<Max105Text> additionalReturnReasonInformation) {
-		this.additionalReturnReasonInformation = additionalReturnReasonInformation;
+	public ReturnReasonInformation7 setAdditionalReturnReasonInformation(List<Max105Text> additionalReturnReasonInformation) {
+		this.additionalReturnReasonInformation = Objects.requireNonNull(additionalReturnReasonInformation);
+		return this;
 	}
 }

@@ -31,6 +31,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -76,16 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Identification expressed as a proprietary type and narrative description."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GenericIdentification38", propOrder = {"identification", "issuer", "schemeName"})
 public class GenericIdentification38 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Exact4AlphaNumericText identification;
 	/**
-	 * Proprietary information, often a code, issued by the data source scheme
-	 * issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +123,7 @@ public class GenericIdentification38 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> GenericIdentification38.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification38.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +134,11 @@ public class GenericIdentification38 {
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Issr", required = true)
 	protected Max35Text issuer;
 	/**
-	 * Entity that assigns the identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,7 +171,7 @@ public class GenericIdentification38 {
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
-			componentContext_lazy = () -> GenericIdentification38.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification38.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,10 +182,11 @@ public class GenericIdentification38 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SchmeNm")
 	protected Max35Text schemeName;
 	/**
-	 * Short textual description of the scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,7 +219,7 @@ public class GenericIdentification38 {
 	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmNameShort;
-			componentContext_lazy = () -> GenericIdentification38.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification38.mmObject();
 			isDerived = false;
 			xmlTag = "SchmeNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,9 +234,10 @@ public class GenericIdentification38 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GenericIdentification38.mmIdentification, GenericIdentification38.mmIssuer, GenericIdentification38.mmSchemeName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification38.mmIdentification, com.tools20022.repository.msg.GenericIdentification38.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification38.mmSchemeName);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -248,30 +253,30 @@ public class GenericIdentification38 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Exact4AlphaNumericText getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Exact4AlphaNumericText identification) {
-		this.identification = identification;
+	public GenericIdentification38 setIdentification(Exact4AlphaNumericText identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Issr", required = true)
 	public Max35Text getIssuer() {
 		return issuer;
 	}
 
-	public void setIssuer(Max35Text issuer) {
-		this.issuer = issuer;
+	public GenericIdentification38 setIssuer(Max35Text issuer) {
+		this.issuer = Objects.requireNonNull(issuer);
+		return this;
 	}
 
-	@XmlElement(name = "SchmeNm")
-	public Max35Text getSchemeName() {
-		return schemeName;
+	public Optional<Max35Text> getSchemeName() {
+		return schemeName == null ? Optional.empty() : Optional.of(schemeName);
 	}
 
-	public void setSchemeName(Max35Text schemeName) {
+	public GenericIdentification38 setSchemeName(Max35Text schemeName) {
 		this.schemeName = schemeName;
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.SupportDocumentTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies a type of supporting document.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SupportDocumentTypeCode#mmSupportingDocument
- * SupportDocumentTypeCode.mmSupportingDocument}</li>
+ * {@linkplain com.tools20022.repository.codeset.SupportDocumentTypeCode#SupportingDocument
+ * SupportDocumentTypeCode.SupportingDocument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SupportDocumentTypeCode#mmLetterFromBank
- * SupportDocumentTypeCode.mmLetterFromBank}</li>
+ * {@linkplain com.tools20022.repository.codeset.SupportDocumentTypeCode#LetterFromBank
+ * SupportDocumentTypeCode.LetterFromBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SupportDocumentTypeCode#mmLetterToBank
- * SupportDocumentTypeCode.mmLetterToBank}</li>
+ * {@linkplain com.tools20022.repository.codeset.SupportDocumentTypeCode#LetterToBank
+ * SupportDocumentTypeCode.LetterToBank}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies a type of supporting document."</li>
  * </ul>
  */
-public class SupportDocumentTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SupportDocumentTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,12 +94,12 @@ public class SupportDocumentTypeCode {
 	 * definition} = "Document is a supporting document."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSupportingDocument = new MMCode() {
+	public static final SupportDocumentTypeCode SupportingDocument = new SupportDocumentTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupportingDocument";
 			definition = "Document is a supporting document.";
-			owner_lazy = () -> SupportDocumentTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SupportDocumentTypeCode.mmObject();
 			codeName = "SUPP";
 		}
 	};
@@ -118,12 +124,12 @@ public class SupportDocumentTypeCode {
 	 * definition} = "Document is a letter from the bank."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLetterFromBank = new MMCode() {
+	public static final SupportDocumentTypeCode LetterFromBank = new SupportDocumentTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterFromBank";
 			definition = "Document is a letter from the bank.";
-			owner_lazy = () -> SupportDocumentTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SupportDocumentTypeCode.mmObject();
 			codeName = "LFBK";
 		}
 	};
@@ -148,27 +154,59 @@ public class SupportDocumentTypeCode {
 	 * definition} = "Document is a letter to the bank."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLetterToBank = new MMCode() {
+	public static final SupportDocumentTypeCode LetterToBank = new SupportDocumentTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterToBank";
 			definition = "Document is a letter to the bank.";
-			owner_lazy = () -> SupportDocumentTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SupportDocumentTypeCode.mmObject();
 			codeName = "LTBK";
 		}
 	};
+	final static private LinkedHashMap<String, SupportDocumentTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SupportDocumentTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SupportDocumentTypeCode";
 				definition = "Specifies a type of supporting document.";
-				code_lazy = () -> Arrays.asList(SupportDocumentTypeCode.mmSupportingDocument, SupportDocumentTypeCode.mmLetterFromBank, SupportDocumentTypeCode.mmLetterToBank);
 				derivation_lazy = () -> Arrays.asList(SupportDocumentType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SupportDocumentTypeCode.SupportingDocument, com.tools20022.repository.codeset.SupportDocumentTypeCode.LetterFromBank,
+						com.tools20022.repository.codeset.SupportDocumentTypeCode.LetterToBank);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SupportingDocument.getCodeName().get(), SupportingDocument);
+		codesByName.put(LetterFromBank.getCodeName().get(), LetterFromBank);
+		codesByName.put(LetterToBank.getCodeName().get(), LetterToBank);
+	}
+
+	public static SupportDocumentTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SupportDocumentTypeCode[] values() {
+		SupportDocumentTypeCode[] values = new SupportDocumentTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SupportDocumentTypeCode> {
+		@Override
+		public SupportDocumentTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SupportDocumentTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

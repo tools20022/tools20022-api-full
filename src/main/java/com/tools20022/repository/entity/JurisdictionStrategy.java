@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.PortfolioStrategy;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Strategy is jurisdiction based.
@@ -36,6 +38,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.PortfolioStrategy
+ * PortfolioStrategy}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -44,9 +49,6 @@ import java.util.List;
  * JurisdictionStrategy.mmJurisdiction}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.PortfolioStrategy
- * PortfolioStrategy}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -59,8 +61,8 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,8 +78,8 @@ public class JurisdictionStrategy extends PortfolioStrategy {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.Jurisdiction> jurisdiction;
 	/**
-	 * Jurisdiction (country, county, state, province, city) of the investment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,8 +114,8 @@ public class JurisdictionStrategy extends PortfolioStrategy {
 	 */
 	public static final MMBusinessAssociationEnd mmJurisdiction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.JurisdictionStrategy.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.JurisdictionStrategy.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Jurisdiction";
 			definition = "Jurisdiction (country, county, state, province, city) of the investment.";
@@ -127,7 +129,7 @@ public class JurisdictionStrategy extends PortfolioStrategy {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "JurisdictionStrategy";
 				definition = "Strategy is jurisdiction based.";
@@ -145,10 +147,11 @@ public class JurisdictionStrategy extends PortfolioStrategy {
 	}
 
 	public List<Jurisdiction> getJurisdiction() {
-		return jurisdiction;
+		return jurisdiction == null ? jurisdiction = new ArrayList<>() : jurisdiction;
 	}
 
-	public void setJurisdiction(List<com.tools20022.repository.entity.Jurisdiction> jurisdiction) {
-		this.jurisdiction = jurisdiction;
+	public JurisdictionStrategy setJurisdiction(List<com.tools20022.repository.entity.Jurisdiction> jurisdiction) {
+		this.jurisdiction = Objects.requireNonNull(jurisdiction);
+		return this;
 	}
 }

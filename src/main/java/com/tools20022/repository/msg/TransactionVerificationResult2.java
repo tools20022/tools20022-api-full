@@ -25,9 +25,8 @@ import com.tools20022.repository.codeset.CSCResult1Code;
 import com.tools20022.repository.datatype.Max500Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * TransactionVerificationResult1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "TransactionVerificationResult2", propOrder = {"electronicCommerceAuthenticationResult", "CSCResult", "cardholderAddressVerificationResult", "declinedProductCode"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "TransactionVerificationResult2", propOrder = {"electronicCommerceAuthenticationResult", "cSCResult", "cardholderAddressVerificationResult", "declinedProductCode"})
 public class TransactionVerificationResult2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ElctrncComrcAuthntcnRslt")
 	protected Max500Text electronicCommerceAuthenticationResult;
 	/**
-	 * Result of an e-commerce authentication process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +120,7 @@ public class TransactionVerificationResult2 {
 	 */
 	public static final MMMessageAttribute mmElectronicCommerceAuthenticationResult = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionVerificationResult2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult2.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncComrcAuthntcnRslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +131,11 @@ public class TransactionVerificationResult2 {
 			simpleType_lazy = () -> Max500Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CSCRslt")
 	protected CSCResult1Code cSCResult;
 	/**
-	 * Result of the printed card security code (CSC) validation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +164,7 @@ public class TransactionVerificationResult2 {
 	 */
 	public static final MMMessageAttribute mmCSCResult = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionVerificationResult2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult2.mmObject();
 			isDerived = false;
 			xmlTag = "CSCRslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,11 +175,11 @@ public class TransactionVerificationResult2 {
 			simpleType_lazy = () -> CSCResult1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "CrdhldrAdrVrfctnRslt")
 	protected List<CardholderAddressVerificationResult1Code> cardholderAddressVerificationResult;
 	/**
-	 * Result of the cardholder verification address checks on the street number
-	 * and the postal code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,7 +209,7 @@ public class TransactionVerificationResult2 {
 	 */
 	public static final MMMessageAttribute mmCardholderAddressVerificationResult = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionVerificationResult2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult2.mmObject();
 			isDerived = false;
 			xmlTag = "CrdhldrAdrVrfctnRslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,10 +219,11 @@ public class TransactionVerificationResult2 {
 			simpleType_lazy = () -> CardholderAddressVerificationResult1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DclndPdctCd")
 	protected List<Max70Text> declinedProductCode;
 	/**
-	 * Product code for which the authorisation was declined.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -248,7 +250,7 @@ public class TransactionVerificationResult2 {
 	 */
 	public static final MMMessageAttribute mmDeclinedProductCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionVerificationResult2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult2.mmObject();
 			isDerived = false;
 			xmlTag = "DclndPdctCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -262,9 +264,9 @@ public class TransactionVerificationResult2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionVerificationResult2.mmElectronicCommerceAuthenticationResult, TransactionVerificationResult2.mmCSCResult,
-						TransactionVerificationResult2.mmCardholderAddressVerificationResult, TransactionVerificationResult2.mmDeclinedProductCode);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionVerificationResult2.mmElectronicCommerceAuthenticationResult, com.tools20022.repository.msg.TransactionVerificationResult2.mmCSCResult,
+						com.tools20022.repository.msg.TransactionVerificationResult2.mmCardholderAddressVerificationResult, com.tools20022.repository.msg.TransactionVerificationResult2.mmDeclinedProductCode);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionVerificationResult2";
 				definition = "Result of the verifications performed by the issuer to deliver or decline the authorisation.";
@@ -275,39 +277,39 @@ public class TransactionVerificationResult2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ElctrncComrcAuthntcnRslt")
-	public Max500Text getElectronicCommerceAuthenticationResult() {
-		return electronicCommerceAuthenticationResult;
+	public Optional<Max500Text> getElectronicCommerceAuthenticationResult() {
+		return electronicCommerceAuthenticationResult == null ? Optional.empty() : Optional.of(electronicCommerceAuthenticationResult);
 	}
 
-	public void setElectronicCommerceAuthenticationResult(Max500Text electronicCommerceAuthenticationResult) {
+	public TransactionVerificationResult2 setElectronicCommerceAuthenticationResult(Max500Text electronicCommerceAuthenticationResult) {
 		this.electronicCommerceAuthenticationResult = electronicCommerceAuthenticationResult;
+		return this;
 	}
 
-	@XmlElement(name = "CSCRslt")
-	public CSCResult1Code getCSCResult() {
-		return cSCResult;
+	public Optional<CSCResult1Code> getCSCResult() {
+		return cSCResult == null ? Optional.empty() : Optional.of(cSCResult);
 	}
 
-	public void setCSCResult(CSCResult1Code cSCResult) {
+	public TransactionVerificationResult2 setCSCResult(CSCResult1Code cSCResult) {
 		this.cSCResult = cSCResult;
+		return this;
 	}
 
-	@XmlElement(name = "CrdhldrAdrVrfctnRslt")
 	public List<CardholderAddressVerificationResult1Code> getCardholderAddressVerificationResult() {
-		return cardholderAddressVerificationResult;
+		return cardholderAddressVerificationResult == null ? cardholderAddressVerificationResult = new ArrayList<>() : cardholderAddressVerificationResult;
 	}
 
-	public void setCardholderAddressVerificationResult(List<CardholderAddressVerificationResult1Code> cardholderAddressVerificationResult) {
-		this.cardholderAddressVerificationResult = cardholderAddressVerificationResult;
+	public TransactionVerificationResult2 setCardholderAddressVerificationResult(List<CardholderAddressVerificationResult1Code> cardholderAddressVerificationResult) {
+		this.cardholderAddressVerificationResult = Objects.requireNonNull(cardholderAddressVerificationResult);
+		return this;
 	}
 
-	@XmlElement(name = "DclndPdctCd")
 	public List<Max70Text> getDeclinedProductCode() {
-		return declinedProductCode;
+		return declinedProductCode == null ? declinedProductCode = new ArrayList<>() : declinedProductCode;
 	}
 
-	public void setDeclinedProductCode(List<Max70Text> declinedProductCode) {
-		this.declinedProductCode = declinedProductCode;
+	public TransactionVerificationResult2 setDeclinedProductCode(List<Max70Text> declinedProductCode) {
+		this.declinedProductCode = Objects.requireNonNull(declinedProductCode);
+		return this;
 	}
 }

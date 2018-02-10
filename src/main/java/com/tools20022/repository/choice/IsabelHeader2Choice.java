@@ -24,6 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the type of file provided in the payload."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IsabelHeader2Choice", propOrder = {"payment", "report", "query", "queryResponse", "notification", "administration"})
 public class IsabelHeader2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pmt", required = true)
 	protected IsabelPaymentHeader2 payment;
 	/**
-	 * File provided in the payload contains payment initiation requests.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -107,7 +109,7 @@ public class IsabelHeader2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPayment = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelHeader2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IsabelHeader2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +121,11 @@ public class IsabelHeader2Choice {
 			type_lazy = () -> IsabelPaymentHeader2.mmObject();
 		}
 	};
+	@XmlElement(name = "Rpt", required = true)
 	protected IsabelReportHeader3 report;
 	/**
-	 * File provided in the payload contains reporting data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -148,7 +151,7 @@ public class IsabelHeader2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelHeader2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IsabelHeader2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,11 +163,11 @@ public class IsabelHeader2Choice {
 			type_lazy = () -> IsabelReportHeader3.mmObject();
 		}
 	};
+	@XmlElement(name = "Qry", required = true)
 	protected IsabelQueryHeader1 query;
 	/**
-	 * File provided in the payload contains query data, as part of the
-	 * RequestForReponse data flow.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -192,7 +195,7 @@ public class IsabelHeader2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmQuery = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelHeader2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IsabelHeader2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,12 +207,11 @@ public class IsabelHeader2Choice {
 			type_lazy = () -> IsabelQueryHeader1.mmObject();
 		}
 	};
+	@XmlElement(name = "QryRspn", required = true)
 	protected IsabelReportHeader4 queryResponse;
 	/**
-	 * File provided in the payload contains in response to an original query,
-	 * as part of the RequestForReponse<br>
-	 * data flow.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -237,7 +239,7 @@ public class IsabelHeader2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmQueryResponse = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelHeader2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IsabelHeader2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QryRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -249,10 +251,11 @@ public class IsabelHeader2Choice {
 			type_lazy = () -> IsabelReportHeader4.mmObject();
 		}
 	};
+	@XmlElement(name = "Ntfctn", required = true)
 	protected IsabelNotificationHeader2 notification;
 	/**
-	 * File provided in the payload contains ISANot instances.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -279,7 +282,7 @@ public class IsabelHeader2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmNotification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelHeader2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IsabelHeader2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ntfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -291,10 +294,11 @@ public class IsabelHeader2Choice {
 			type_lazy = () -> IsabelNotificationHeader2.mmObject();
 		}
 	};
+	@XmlElement(name = "Admstn", required = true)
 	protected IsabelAdminHeader2 administration;
 	/**
-	 * File provided in the payload contains administrative instances.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -321,7 +325,7 @@ public class IsabelHeader2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAdministration = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelHeader2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IsabelHeader2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Admstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -337,9 +341,10 @@ public class IsabelHeader2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IsabelHeader2Choice.mmPayment, IsabelHeader2Choice.mmReport, IsabelHeader2Choice.mmQuery, IsabelHeader2Choice.mmQueryResponse, IsabelHeader2Choice.mmNotification,
-						IsabelHeader2Choice.mmAdministration);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IsabelHeader2Choice.mmPayment, com.tools20022.repository.choice.IsabelHeader2Choice.mmReport,
+						com.tools20022.repository.choice.IsabelHeader2Choice.mmQuery, com.tools20022.repository.choice.IsabelHeader2Choice.mmQueryResponse, com.tools20022.repository.choice.IsabelHeader2Choice.mmNotification,
+						com.tools20022.repository.choice.IsabelHeader2Choice.mmAdministration);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelHeader2Choice";
 				definition = "Specifies the type of file provided in the payload.";
@@ -348,57 +353,57 @@ public class IsabelHeader2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pmt", required = true)
 	public IsabelPaymentHeader2 getPayment() {
 		return payment;
 	}
 
-	public void setPayment(IsabelPaymentHeader2 payment) {
-		this.payment = payment;
+	public IsabelHeader2Choice setPayment(IsabelPaymentHeader2 payment) {
+		this.payment = Objects.requireNonNull(payment);
+		return this;
 	}
 
-	@XmlElement(name = "Rpt", required = true)
 	public IsabelReportHeader3 getReport() {
 		return report;
 	}
 
-	public void setReport(IsabelReportHeader3 report) {
-		this.report = report;
+	public IsabelHeader2Choice setReport(IsabelReportHeader3 report) {
+		this.report = Objects.requireNonNull(report);
+		return this;
 	}
 
-	@XmlElement(name = "Qry", required = true)
 	public IsabelQueryHeader1 getQuery() {
 		return query;
 	}
 
-	public void setQuery(IsabelQueryHeader1 query) {
-		this.query = query;
+	public IsabelHeader2Choice setQuery(IsabelQueryHeader1 query) {
+		this.query = Objects.requireNonNull(query);
+		return this;
 	}
 
-	@XmlElement(name = "QryRspn", required = true)
 	public IsabelReportHeader4 getQueryResponse() {
 		return queryResponse;
 	}
 
-	public void setQueryResponse(IsabelReportHeader4 queryResponse) {
-		this.queryResponse = queryResponse;
+	public IsabelHeader2Choice setQueryResponse(IsabelReportHeader4 queryResponse) {
+		this.queryResponse = Objects.requireNonNull(queryResponse);
+		return this;
 	}
 
-	@XmlElement(name = "Ntfctn", required = true)
 	public IsabelNotificationHeader2 getNotification() {
 		return notification;
 	}
 
-	public void setNotification(IsabelNotificationHeader2 notification) {
-		this.notification = notification;
+	public IsabelHeader2Choice setNotification(IsabelNotificationHeader2 notification) {
+		this.notification = Objects.requireNonNull(notification);
+		return this;
 	}
 
-	@XmlElement(name = "Admstn", required = true)
 	public IsabelAdminHeader2 getAdministration() {
 		return administration;
 	}
 
-	public void setAdministration(IsabelAdminHeader2 administration) {
-		this.administration = administration;
+	public IsabelHeader2Choice setAdministration(IsabelAdminHeader2 administration) {
+		this.administration = Objects.requireNonNull(administration);
+		return this;
 	}
 }

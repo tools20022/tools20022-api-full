@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStatementTypeRule#forStatement29
+ * ConstraintStatementTypeRule.forStatement29}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStatementBasisRule#forStatement29
+ * ConstraintStatementBasisRule.forStatement29}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Characteristics of the statement."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Statement29", propOrder = {"statementDateOrPeriod", "frequency", "updateType", "statementBasis", "statementType"})
 public class Statement29 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StmtDtOrPrd")
 	protected DateAndPeriod1Choice statementDateOrPeriod;
 	/**
-	 * Date or period of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -88,6 +102,9 @@ public class Statement29 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StmtDtOrPrd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::STAT or :69a::STAT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -100,9 +117,10 @@ public class Statement29 {
 	 */
 	public static final MMMessageAssociationEnd mmStatementDateOrPeriod = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Statement29.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement29.mmObject();
 			isDerived = false;
 			xmlTag = "StmtDtOrPrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::STAT or :69a::STAT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDateOrPeriod";
 			definition = "Date or period of the statement.";
@@ -112,10 +130,11 @@ public class Statement29 {
 			type_lazy = () -> DateAndPeriod1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Frqcy")
 	protected Frequency6Choice frequency;
 	/**
-	 * Frequency of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -127,6 +146,9 @@ public class Statement29 {
 	 * {@linkplain com.tools20022.repository.msg.Statement29 Statement29}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Frqcy"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::SFRE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -140,9 +162,10 @@ public class Statement29 {
 	 */
 	public static final MMMessageAssociationEnd mmFrequency = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Statement29.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement29.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::SFRE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the statement.";
@@ -152,10 +175,11 @@ public class Statement29 {
 			type_lazy = () -> Frequency6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "UpdTp")
 	protected UpdateType3Choice updateType;
 	/**
-	 * Indicates whether the statement is complete or contains changes only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -167,6 +191,9 @@ public class Statement29 {
 	 * {@linkplain com.tools20022.repository.msg.Statement29 Statement29}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UpdTp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::CODE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -181,9 +208,10 @@ public class Statement29 {
 	 */
 	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Statement29.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement29.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CODE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the statement is complete or contains changes only.";
@@ -193,10 +221,11 @@ public class Statement29 {
 			type_lazy = () -> UpdateType3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtBsis")
 	protected StatementBasis4Choice statementBasis;
 	/**
-	 * Type of balance on which the statement is prepared.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -210,6 +239,9 @@ public class Statement29 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StmtBsis"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::STBA</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -222,9 +254,10 @@ public class Statement29 {
 	 */
 	public static final MMMessageAssociationEnd mmStatementBasis = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Statement29.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement29.mmObject();
 			isDerived = false;
 			xmlTag = "StmtBsis";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::STBA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementBasis";
 			definition = "Type of balance on which the statement is prepared.";
@@ -234,10 +267,11 @@ public class Statement29 {
 			type_lazy = () -> StatementBasis4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtTp")
 	protected StatementType3Choice statementType;
 	/**
-	 * Type of balance on which the statement is prepared.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -251,6 +285,9 @@ public class Statement29 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StmtTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::STTY</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -263,9 +300,10 @@ public class Statement29 {
 	 */
 	public static final MMMessageAssociationEnd mmStatementType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Statement29.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement29.mmObject();
 			isDerived = false;
 			xmlTag = "StmtTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::STTY"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementType";
 			definition = "Type of balance on which the statement is prepared.";
@@ -279,8 +317,10 @@ public class Statement29 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Statement29.mmStatementDateOrPeriod, Statement29.mmFrequency, Statement29.mmUpdateType, Statement29.mmStatementBasis, Statement29.mmStatementType);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement29.mmStatementDateOrPeriod, com.tools20022.repository.msg.Statement29.mmFrequency, com.tools20022.repository.msg.Statement29.mmUpdateType,
+						com.tools20022.repository.msg.Statement29.mmStatementBasis, com.tools20022.repository.msg.Statement29.mmStatementType);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatementTypeRule.forStatement29, com.tools20022.repository.constraints.ConstraintStatementBasisRule.forStatement29);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Statement29";
 				definition = "Characteristics of the statement.";
@@ -289,48 +329,48 @@ public class Statement29 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StmtDtOrPrd")
-	public DateAndPeriod1Choice getStatementDateOrPeriod() {
-		return statementDateOrPeriod;
+	public Optional<DateAndPeriod1Choice> getStatementDateOrPeriod() {
+		return statementDateOrPeriod == null ? Optional.empty() : Optional.of(statementDateOrPeriod);
 	}
 
-	public void setStatementDateOrPeriod(DateAndPeriod1Choice statementDateOrPeriod) {
+	public Statement29 setStatementDateOrPeriod(DateAndPeriod1Choice statementDateOrPeriod) {
 		this.statementDateOrPeriod = statementDateOrPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "Frqcy")
-	public Frequency6Choice getFrequency() {
-		return frequency;
+	public Optional<Frequency6Choice> getFrequency() {
+		return frequency == null ? Optional.empty() : Optional.of(frequency);
 	}
 
-	public void setFrequency(Frequency6Choice frequency) {
+	public Statement29 setFrequency(Frequency6Choice frequency) {
 		this.frequency = frequency;
+		return this;
 	}
 
-	@XmlElement(name = "UpdTp")
-	public UpdateType3Choice getUpdateType() {
-		return updateType;
+	public Optional<UpdateType3Choice> getUpdateType() {
+		return updateType == null ? Optional.empty() : Optional.of(updateType);
 	}
 
-	public void setUpdateType(UpdateType3Choice updateType) {
+	public Statement29 setUpdateType(UpdateType3Choice updateType) {
 		this.updateType = updateType;
+		return this;
 	}
 
-	@XmlElement(name = "StmtBsis")
-	public StatementBasis4Choice getStatementBasis() {
-		return statementBasis;
+	public Optional<StatementBasis4Choice> getStatementBasis() {
+		return statementBasis == null ? Optional.empty() : Optional.of(statementBasis);
 	}
 
-	public void setStatementBasis(StatementBasis4Choice statementBasis) {
+	public Statement29 setStatementBasis(StatementBasis4Choice statementBasis) {
 		this.statementBasis = statementBasis;
+		return this;
 	}
 
-	@XmlElement(name = "StmtTp")
-	public StatementType3Choice getStatementType() {
-		return statementType;
+	public Optional<StatementType3Choice> getStatementType() {
+		return statementType == null ? Optional.empty() : Optional.of(statementType);
 	}
 
-	public void setStatementType(StatementType3Choice statementType) {
+	public Statement29 setStatementType(StatementType3Choice statementType) {
 		this.statementType = statementType;
+		return this;
 	}
 }

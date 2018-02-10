@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Organisation represented by a person, or for which a person works.
@@ -37,6 +39,8 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -45,8 +49,6 @@ import java.util.List;
  * EmployingPartyRole.mmEmployee}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -118,8 +120,8 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -136,8 +138,8 @@ public class EmployingPartyRole extends Role {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.Person> employee;
 	/**
-	 * Identifies the employee of a party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,8 +171,8 @@ public class EmployingPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmEmployee = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.EmployingPartyRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.EmployingPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Employee";
 			definition = "Identifies the employee of a party.";
@@ -184,7 +186,7 @@ public class EmployingPartyRole extends Role {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EmployingPartyRole";
 				definition = "Organisation represented by a person, or for which a person works.";
@@ -206,10 +208,11 @@ public class EmployingPartyRole extends Role {
 	}
 
 	public List<Person> getEmployee() {
-		return employee;
+		return employee == null ? employee = new ArrayList<>() : employee;
 	}
 
-	public void setEmployee(List<com.tools20022.repository.entity.Person> employee) {
-		this.employee = employee;
+	public EmployingPartyRole setEmployee(List<com.tools20022.repository.entity.Person> employee) {
+		this.employee = Objects.requireNonNull(employee);
+		return this;
 	}
 }

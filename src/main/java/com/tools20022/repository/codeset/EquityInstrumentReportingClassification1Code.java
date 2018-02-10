@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode;
+import com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the equity financial instruments.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode
- * FinancialInstrumentReportingClassificationCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#mmShare
- * EquityInstrumentReportingClassification1Code.mmShare}</li>
+ * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#Share
+ * EquityInstrumentReportingClassification1Code.Share}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#mmOther
- * EquityInstrumentReportingClassification1Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#Other
+ * EquityInstrumentReportingClassification1Code.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#mmElectronicTradedFund
- * EquityInstrumentReportingClassification1Code.mmElectronicTradedFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#ElectronicTradedFund
+ * EquityInstrumentReportingClassification1Code.ElectronicTradedFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#mmDepositaryReceipt
- * EquityInstrumentReportingClassification1Code.mmDepositaryReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#DepositaryReceipt
+ * EquityInstrumentReportingClassification1Code.DepositaryReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#mmCertificate
- * EquityInstrumentReportingClassification1Code.mmCertificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code#Certificate
+ * EquityInstrumentReportingClassification1Code.Certificate}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode
+ * FinancialInstrumentReportingClassificationCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the equity financial instruments."</li>
  * </ul>
  */
-public class EquityInstrumentReportingClassification1Code extends FinancialInstrumentReportingClassificationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EquityInstrumentReportingClassification1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class EquityInstrumentReportingClassification1Code extends FinancialInstr
 	 * name} = "Share"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmShare = new MMCode() {
+	public static final EquityInstrumentReportingClassification1Code Share = new EquityInstrumentReportingClassification1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Share";
-			owner_lazy = () -> EquityInstrumentReportingClassification1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.mmObject();
+			codeName = FinancialInstrumentReportingClassificationCode.Share.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class EquityInstrumentReportingClassification1Code extends FinancialInstr
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final EquityInstrumentReportingClassification1Code Other = new EquityInstrumentReportingClassification1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> EquityInstrumentReportingClassification1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.mmObject();
+			codeName = FinancialInstrumentReportingClassificationCode.Other.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,11 +139,12 @@ public class EquityInstrumentReportingClassification1Code extends FinancialInstr
 	 * name} = "ElectronicTradedFund"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmElectronicTradedFund = new MMCode() {
+	public static final EquityInstrumentReportingClassification1Code ElectronicTradedFund = new EquityInstrumentReportingClassification1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicTradedFund";
-			owner_lazy = () -> EquityInstrumentReportingClassification1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.mmObject();
+			codeName = FinancialInstrumentReportingClassificationCode.ElectronicTradedFund.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -155,11 +163,12 @@ public class EquityInstrumentReportingClassification1Code extends FinancialInstr
 	 * name} = "DepositaryReceipt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDepositaryReceipt = new MMCode() {
+	public static final EquityInstrumentReportingClassification1Code DepositaryReceipt = new EquityInstrumentReportingClassification1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositaryReceipt";
-			owner_lazy = () -> EquityInstrumentReportingClassification1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.mmObject();
+			codeName = FinancialInstrumentReportingClassificationCode.DepositaryReceipt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -178,26 +187,61 @@ public class EquityInstrumentReportingClassification1Code extends FinancialInstr
 	 * name} = "Certificate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertificate = new MMCode() {
+	public static final EquityInstrumentReportingClassification1Code Certificate = new EquityInstrumentReportingClassification1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
-			owner_lazy = () -> EquityInstrumentReportingClassification1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.mmObject();
+			codeName = FinancialInstrumentReportingClassificationCode.Certificate.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, EquityInstrumentReportingClassification1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EquityInstrumentReportingClassification1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EquityInstrumentReportingClassification1Code";
 				definition = "Specifies the equity financial instruments.";
-				code_lazy = () -> Arrays.asList(EquityInstrumentReportingClassification1Code.mmShare, EquityInstrumentReportingClassification1Code.mmOther, EquityInstrumentReportingClassification1Code.mmElectronicTradedFund,
-						EquityInstrumentReportingClassification1Code.mmDepositaryReceipt, EquityInstrumentReportingClassification1Code.mmCertificate);
 				trace_lazy = () -> FinancialInstrumentReportingClassificationCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.Share, com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.Other,
+						com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.ElectronicTradedFund, com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.DepositaryReceipt,
+						com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.Certificate);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Share.getCodeName().get(), Share);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(ElectronicTradedFund.getCodeName().get(), ElectronicTradedFund);
+		codesByName.put(DepositaryReceipt.getCodeName().get(), DepositaryReceipt);
+		codesByName.put(Certificate.getCodeName().get(), Certificate);
+	}
+
+	public static EquityInstrumentReportingClassification1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EquityInstrumentReportingClassification1Code[] values() {
+		EquityInstrumentReportingClassification1Code[] values = new EquityInstrumentReportingClassification1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EquityInstrumentReportingClassification1Code> {
+		@Override
+		public EquityInstrumentReportingClassification1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EquityInstrumentReportingClassification1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

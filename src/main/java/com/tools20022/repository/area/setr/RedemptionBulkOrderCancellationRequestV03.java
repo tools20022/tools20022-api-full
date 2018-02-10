@@ -24,6 +24,8 @@ import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -68,30 +70,14 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesTradePreviousVersion
- * SecuritiesTradePreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
- * InvestmentFundsISOPreviousversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "RedBlkOrdrCxlReqV03"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#mmCancellationByReferenceOrByOrderDetailsRule
+ * {@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03#CancellationByReferenceOrByOrderDetailsRule
  * RedemptionBulkOrderCancellationRequestV03.
- * mmCancellationByReferenceOrByOrderDetailsRule}</li>
+ * CancellationByReferenceOrByOrderDetailsRule}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -116,9 +102,34 @@ import javax.xml.bind.annotation.*;
  * RedemptionBulkOrderCancellationRequestV03.mmCopyDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
+ * InvestmentFundsISOPreviousversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "RedBlkOrdrCxlReqV03"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesTradePreviousVersion
+ * SecuritiesTradePreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code setr.002.001.03}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forRedemptionBulkOrderCancellationRequestV03
+ * ConstraintAccountIdentificationRule.
+ * forRedemptionBulkOrderCancellationRequestV03}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -143,7 +154,7 @@ import javax.xml.bind.annotation.*;
  * RedemptionBulkOrderCancellationInstructionV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RedemptionBulkOrderCancellationRequestV03", propOrder = {"messageIdentification", "poolReference", "previousReference", "cancellationByReference", "cancellationByOrderDetails", "copyDetails"})
 public class RedemptionBulkOrderCancellationRequestV03 {
 
@@ -183,7 +194,7 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmCancellationByReferenceOrByOrderDetailsRule = new MMXor() {
+	public static final MMXor CancellationByReferenceOrByOrderDetailsRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReferenceOrByOrderDetailsRule";
@@ -193,11 +204,11 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 					com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.mmCancellationByOrderDetails);
 		}
 	};
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Reference that uniquely identifies a message from a business application
-	 * standpoint.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -248,10 +259,11 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PoolRef")
 	protected AdditionalReference3 poolReference;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -300,10 +312,11 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsRef")
 	protected AdditionalReference3 previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -352,10 +365,11 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 			}
 		}
 	};
+	@XmlElement(name = "CxlByRef")
 	protected InvestmentFundOrder1 cancellationByReference;
 	/**
-	 * References of the orders to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -395,10 +409,11 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 			}
 		}
 	};
+	@XmlElement(name = "CxlByOrdrDtls")
 	protected RedemptionBulkOrderInstruction2 cancellationByOrderDetails;
 	/**
-	 * Common information related to all the orders to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -439,10 +454,11 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 			}
 		}
 	};
+	@XmlElement(name = "CpyDtls")
 	protected CopyInformation2 copyDetails;
 	/**
-	 * Message is a copy.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -495,13 +511,14 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forRedemptionBulkOrderCancellationRequestV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionBulkOrderCancellationRequestV03";
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative, sends the RedemptionBulkOrderCancellationRequest message to the executing party, for example, a transfer agent, to request the cancellation of a previously sent RedemptionBulkOrder instruction.\r\nUsage\r\nThe RedemptionBulkOrderCancellationRequest message is used to either:\r\n- request the cancellation of an entire RedemptionBulkOrder message, that is, all the individual orders that it contained, or,\r\n- request the cancellation of one or more individual orders included in a previously sent RedemptionBulkOrder message. There is no amendment, but a cancellation and re-instruct policy.\r\nThere are two ways to use the message.\r\n(1) When the RedemptionBulkOrderCancellationRequest message is used to request the cancellation of an entire RedemptionBulkOrder message, this can be done by either:\r\n- quoting the order references of all the individual orders listed in the RedemptionBulkOrder message, or,\r\n- quoting the details of all the individual orders (this includes the OrderReference) listed in RedemptionBulkOrder message, but this is not recommended.\r\nThe message identification of the RedemptionBulkOrder message may also be quoted in PreviousReference.\r\nIt is also possible to request the cancellation of an entire RedemptionBulkOrder message by quoting its message identification in PreviousReference, but this is not recommended.\r\n(2) When the RedemptionBulkOrderCancellationRequest message is used to request the cancellation of one or more individual orders, this can be done by either:\r\n- quoting the OrderReference of each individual order listed in the RedemptionOrder message, or,\r\n- quoting the details of each individual order (including the OrderReference) listed in RedemptionOrder message, but this is not recommended.\r\nThe message identification of the RedemptionBulkOrder message in which the individual order was conveyed may also be quoted in PreviousReference.\r\nThe deadline and acceptance of a cancellation request is subject to a service level agreement (SLA). This cancellation message is a cancellation request. There is no automatic acceptance of the cancellation.";
 				nextVersions_lazy = () -> Arrays.asList(RedemptionBulkOrderCancellationRequestV04.mmObject());
 				previousVersion_lazy = () -> RedemptionBulkOrderCancellationInstructionV02.mmObject();
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.mmCancellationByReferenceOrByOrderDetailsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV03.CancellationByReferenceOrByOrderDetailsRule);
 				rootElement = "Document";
 				xmlTag = "RedBlkOrdrCxlReqV03";
 				businessArea_lazy = () -> SecuritiesTradePreviousVersion.mmObject();
@@ -527,61 +544,61 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public RedemptionBulkOrderCancellationRequestV03 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PoolRef")
-	public AdditionalReference3 getPoolReference() {
-		return poolReference;
+	public Optional<AdditionalReference3> getPoolReference() {
+		return poolReference == null ? Optional.empty() : Optional.of(poolReference);
 	}
 
-	public void setPoolReference(AdditionalReference3 poolReference) {
+	public RedemptionBulkOrderCancellationRequestV03 setPoolReference(AdditionalReference3 poolReference) {
 		this.poolReference = poolReference;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef")
-	public AdditionalReference3 getPreviousReference() {
-		return previousReference;
+	public Optional<AdditionalReference3> getPreviousReference() {
+		return previousReference == null ? Optional.empty() : Optional.of(previousReference);
 	}
 
-	public void setPreviousReference(AdditionalReference3 previousReference) {
+	public RedemptionBulkOrderCancellationRequestV03 setPreviousReference(AdditionalReference3 previousReference) {
 		this.previousReference = previousReference;
+		return this;
 	}
 
-	@XmlElement(name = "CxlByRef")
-	public InvestmentFundOrder1 getCancellationByReference() {
-		return cancellationByReference;
+	public Optional<InvestmentFundOrder1> getCancellationByReference() {
+		return cancellationByReference == null ? Optional.empty() : Optional.of(cancellationByReference);
 	}
 
-	public void setCancellationByReference(InvestmentFundOrder1 cancellationByReference) {
+	public RedemptionBulkOrderCancellationRequestV03 setCancellationByReference(InvestmentFundOrder1 cancellationByReference) {
 		this.cancellationByReference = cancellationByReference;
+		return this;
 	}
 
-	@XmlElement(name = "CxlByOrdrDtls")
-	public RedemptionBulkOrderInstruction2 getCancellationByOrderDetails() {
-		return cancellationByOrderDetails;
+	public Optional<RedemptionBulkOrderInstruction2> getCancellationByOrderDetails() {
+		return cancellationByOrderDetails == null ? Optional.empty() : Optional.of(cancellationByOrderDetails);
 	}
 
-	public void setCancellationByOrderDetails(RedemptionBulkOrderInstruction2 cancellationByOrderDetails) {
+	public RedemptionBulkOrderCancellationRequestV03 setCancellationByOrderDetails(RedemptionBulkOrderInstruction2 cancellationByOrderDetails) {
 		this.cancellationByOrderDetails = cancellationByOrderDetails;
+		return this;
 	}
 
-	@XmlElement(name = "CpyDtls")
-	public CopyInformation2 getCopyDetails() {
-		return copyDetails;
+	public Optional<CopyInformation2> getCopyDetails() {
+		return copyDetails == null ? Optional.empty() : Optional.of(copyDetails);
 	}
 
-	public void setCopyDetails(CopyInformation2 copyDetails) {
+	public RedemptionBulkOrderCancellationRequestV03 setCopyDetails(CopyInformation2 copyDetails) {
 		this.copyDetails = copyDetails;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.002.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:setr.002.001.03")
 	static public class Document {
 		@XmlElement(name = "RedBlkOrdrCxlReqV03", required = true)
 		public RedemptionBulkOrderCancellationRequestV03 messageBody;

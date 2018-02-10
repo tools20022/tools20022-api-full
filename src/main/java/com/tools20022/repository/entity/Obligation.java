@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.ExposureTypeV2Code;
@@ -26,9 +27,8 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Specifies the assets (quantity of securities, goods, services, and cash
@@ -70,27 +70,6 @@ import java.util.List;
  * Obligation.mmExposureType}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentObligation
- * PaymentObligation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation
- * SecuritiesDeliveryObligation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ProductDeliveryObligation
- * ProductDeliveryObligation}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.PriorityNumeric3Choice
- * PriorityNumeric3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetObligation1 NetObligation1}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -122,11 +101,32 @@ import java.util.List;
  * NetObligation1.mmObligationIdentification}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentObligation
+ * PaymentObligation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation
+ * SecuritiesDeliveryObligation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ProductDeliveryObligation
+ * ProductDeliveryObligation}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.PriorityNumeric3Choice
+ * PriorityNumeric3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetObligation1 NetObligation1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -144,13 +144,8 @@ public class Obligation {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected ISODateTime requestedSettlementDate;
 	/**
-	 * Date and time at which a trade must be executed. For a direct debit, it
-	 * is the date and time at which the creditor requests that the amount of
-	 * money is to be collected from the debtor. For a credit transfer, it is
-	 * the date and time at which the debtor requests the clearing agent to
-	 * process the payment. For a securities trade, it is the date and time at
-	 * which the securities are to be delivered or received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1206,6 +1201,9 @@ public class Obligation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Obligation Obligation}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::RSET</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1302,8 +1300,9 @@ public class Obligation {
 					TransactionDetails96.mmExpectedSettlementDate, TransactionDetails96.mmSettlementDate, IntraPositionMovementDetails13.mmSettlementDate, TransactionDetails95.mmSettlementDate, SecuritiesTradeDetails69.mmSettlementDate,
 					SecuritiesTradeDetails70.mmSettlementDate, SecuritiesFinancingTransactionDetails36.mmExpectedSettlementDate, IntraPositionMovementDetails14.mmSettlementDate, TransactionDetails100.mmExpectedSettlementDate,
 					TransactionDetails100.mmSettlementDate, TransactionDetails99.mmExpectedSettlementDate, TransactionDetails99.mmSettlementDate, TransactionDetails98.mmSettlementDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::RSET"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedSettlementDate";
 			definition = "Date and time at which a trade must be executed. For a direct debit, it is the date and time at which the creditor requests that the amount of money is to be collected from the debtor. For a credit transfer, it is the date and time at which the debtor requests the clearing agent to process the payment. For a securities trade, it is the date and time at which the securities are to be delivered or received.";
@@ -1322,8 +1321,8 @@ public class Obligation {
 	};
 	protected CurrencyAndAmount requestedSettlementAmount;
 	/**
-	 * Total amount of money to be paid or received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1412,6 +1411,9 @@ public class Obligation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Obligation Obligation}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::SETT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1430,8 +1432,9 @@ public class Obligation {
 					ExpectedExecutionDetails3.mmExpectedExecutedAmount, IntraBalanceMovement2.mmSettlementAmount, SecuritiesTradeDetails35.mmSettlementAmount, SecuritiesTradeDetails42.mmSettlementAmount,
 					SecuritiesTradeDetails49.mmSettlementAmount, SecuritiesTradeDetails48.mmSettlementAmount, SecuritiesTradeDetails57.mmSettlementAmount, SecuritiesTradeDetails61.mmSettlementAmount, NetObligation1.mmAmount,
 					SecuritiesTradeDetails68.mmSettlementAmount, SecuritiesTradeDetails69.mmSettlementAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::SETT"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedSettlementAmount";
 			definition = "Total amount of money to be paid or received.";
@@ -1450,8 +1453,8 @@ public class Obligation {
 	};
 	protected Max4AlphaNumericText priority;
 	/**
-	 * Specifies whether the transaction is to be executed with a high priority.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1697,6 +1700,9 @@ public class Obligation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Obligation Obligation}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::PRIR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1724,8 +1730,9 @@ public class Obligation {
 					SettlementDetails96.mmPriority, SettlementDetails97.mmPriority, SettlementDetails101.mmPriority, SettlementDetails105.mmPriority, SettlementDetails106.mmPriority, SettlementDetails104.mmPriority,
 					SettlementDetails111.mmPriority, RequestDetails16.mmPriority, IntraPositionDetails36.mmPriority, SettlementDetails112.mmPriority, SettlementDetails110.mmPriority, SettlementDetails128.mmPriority,
 					SettlementDetails120.mmPriority, SettlementDetails119.mmPriority, SettlementDetails134.mmPriority, SettlementDetails137.mmPriority, SettlementDetails132.mmPriority);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PRIR"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Priority";
 			definition = "Specifies whether the transaction is to be executed with a high priority.";
@@ -1744,9 +1751,8 @@ public class Obligation {
 	};
 	protected Trade trade;
 	/**
-	 * Specifies the trade which originates the obligation to deliver a product,
-	 * cash or securities..
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1779,8 +1785,8 @@ public class Obligation {
 	 */
 	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trade";
 			definition = "Specifies the trade which originates the obligation to deliver a product, cash or securities..";
@@ -1793,8 +1799,8 @@ public class Obligation {
 	};
 	protected TransactionRisk transactionRisk;
 	/**
-	 * Transaction risk calculated per obligation type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1826,8 +1832,8 @@ public class Obligation {
 	 */
 	public static final MMBusinessAssociationEnd mmTransactionRisk = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionRisk";
 			definition = "Transaction risk calculated per obligation type.";
@@ -1840,8 +1846,8 @@ public class Obligation {
 	};
 	protected Obligation parentObligation;
 	/**
-	 * Obligation which is divided into several sub-obligations.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1874,8 +1880,8 @@ public class Obligation {
 	 */
 	public static final MMBusinessAssociationEnd mmParentObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ParentObligation";
 			definition = "Obligation which is divided into several sub-obligations.";
@@ -1888,10 +1894,8 @@ public class Obligation {
 	};
 	protected List<com.tools20022.repository.entity.Obligation> subObligation;
 	/**
-	 * Specifies an obligation resulting from another existing obligation, for
-	 * instance each leg of a financing agreement is a sub-obligation of the
-	 * global financing obligation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1925,8 +1929,8 @@ public class Obligation {
 	 */
 	public static final MMBusinessAssociationEnd mmSubObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubObligation";
 			definition = "Specifies an obligation resulting from another existing obligation, for instance each leg of a financing agreement is a sub-obligation of the global financing obligation.";
@@ -1938,8 +1942,8 @@ public class Obligation {
 	};
 	protected ObligationFulfilment offset;
 	/**
-	 * Specifies the method used to settle a specific obligation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1973,8 +1977,8 @@ public class Obligation {
 	 */
 	public static final MMBusinessAssociationEnd mmOffset = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Offset";
 			definition = "Specifies the method used to settle a specific obligation.";
@@ -1987,9 +1991,8 @@ public class Obligation {
 	};
 	protected ObligationFulfilment originalObligationProcess;
 	/**
-	 * Obligation fulfilment process which did not extinguish the obligation but
-	 * replaced it by a new one, for instance in case of netting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2024,8 +2027,8 @@ public class Obligation {
 	 */
 	public static final MMBusinessAssociationEnd mmOriginalObligationProcess = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OriginalObligationProcess";
 			definition = "Obligation fulfilment process which did not extinguish the obligation but replaced it by a new one, for instance in case of netting.";
@@ -2038,8 +2041,8 @@ public class Obligation {
 	};
 	protected ExposureTypeV2Code exposureType;
 	/**
-	 * Type of exposure related to this obligation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2099,8 +2102,8 @@ public class Obligation {
 			derivation_lazy = () -> Arrays.asList(SettlementDetails43.mmExposureType, AggregateBalancePerSafekeepingPlace24.mmExposureType, AggregateBalancePerSafekeepingPlace25.mmExposureType,
 					AggregateBalancePerSafekeepingPlace26.mmExposureType, AggregateBalancePerSafekeepingPlace27.mmExposureType, AggregateBalancePerSafekeepingPlace28.mmExposureType, AggregateBalancePerSafekeepingPlace29.mmExposureType,
 					AggregateBalancePerSafekeepingPlace31.mmExposureType, AggregateBalancePerSafekeepingPlace30.mmExposureType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExposureType";
 			definition = "Type of exposure related to this obligation.";
@@ -2121,7 +2124,7 @@ public class Obligation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Obligation";
 				definition = "Specifies the assets (quantity of securities, goods, services, and cash amounts) that have to be delivered.";
@@ -2148,79 +2151,89 @@ public class Obligation {
 		return requestedSettlementDate;
 	}
 
-	public void setRequestedSettlementDate(ISODateTime requestedSettlementDate) {
-		this.requestedSettlementDate = requestedSettlementDate;
+	public Obligation setRequestedSettlementDate(ISODateTime requestedSettlementDate) {
+		this.requestedSettlementDate = Objects.requireNonNull(requestedSettlementDate);
+		return this;
 	}
 
 	public CurrencyAndAmount getRequestedSettlementAmount() {
 		return requestedSettlementAmount;
 	}
 
-	public void setRequestedSettlementAmount(CurrencyAndAmount requestedSettlementAmount) {
-		this.requestedSettlementAmount = requestedSettlementAmount;
+	public Obligation setRequestedSettlementAmount(CurrencyAndAmount requestedSettlementAmount) {
+		this.requestedSettlementAmount = Objects.requireNonNull(requestedSettlementAmount);
+		return this;
 	}
 
 	public Max4AlphaNumericText getPriority() {
 		return priority;
 	}
 
-	public void setPriority(Max4AlphaNumericText priority) {
-		this.priority = priority;
+	public Obligation setPriority(Max4AlphaNumericText priority) {
+		this.priority = Objects.requireNonNull(priority);
+		return this;
 	}
 
 	public Trade getTrade() {
 		return trade;
 	}
 
-	public void setTrade(com.tools20022.repository.entity.Trade trade) {
-		this.trade = trade;
+	public Obligation setTrade(com.tools20022.repository.entity.Trade trade) {
+		this.trade = Objects.requireNonNull(trade);
+		return this;
 	}
 
 	public TransactionRisk getTransactionRisk() {
 		return transactionRisk;
 	}
 
-	public void setTransactionRisk(com.tools20022.repository.entity.TransactionRisk transactionRisk) {
-		this.transactionRisk = transactionRisk;
+	public Obligation setTransactionRisk(com.tools20022.repository.entity.TransactionRisk transactionRisk) {
+		this.transactionRisk = Objects.requireNonNull(transactionRisk);
+		return this;
 	}
 
 	public Obligation getParentObligation() {
 		return parentObligation;
 	}
 
-	public void setParentObligation(com.tools20022.repository.entity.Obligation parentObligation) {
-		this.parentObligation = parentObligation;
+	public Obligation setParentObligation(com.tools20022.repository.entity.Obligation parentObligation) {
+		this.parentObligation = Objects.requireNonNull(parentObligation);
+		return this;
 	}
 
 	public List<Obligation> getSubObligation() {
-		return subObligation;
+		return subObligation == null ? subObligation = new ArrayList<>() : subObligation;
 	}
 
-	public void setSubObligation(List<com.tools20022.repository.entity.Obligation> subObligation) {
-		this.subObligation = subObligation;
+	public Obligation setSubObligation(List<com.tools20022.repository.entity.Obligation> subObligation) {
+		this.subObligation = Objects.requireNonNull(subObligation);
+		return this;
 	}
 
-	public ObligationFulfilment getOffset() {
-		return offset;
+	public Optional<ObligationFulfilment> getOffset() {
+		return offset == null ? Optional.empty() : Optional.of(offset);
 	}
 
-	public void setOffset(com.tools20022.repository.entity.ObligationFulfilment offset) {
+	public Obligation setOffset(com.tools20022.repository.entity.ObligationFulfilment offset) {
 		this.offset = offset;
+		return this;
 	}
 
 	public ObligationFulfilment getOriginalObligationProcess() {
 		return originalObligationProcess;
 	}
 
-	public void setOriginalObligationProcess(com.tools20022.repository.entity.ObligationFulfilment originalObligationProcess) {
-		this.originalObligationProcess = originalObligationProcess;
+	public Obligation setOriginalObligationProcess(com.tools20022.repository.entity.ObligationFulfilment originalObligationProcess) {
+		this.originalObligationProcess = Objects.requireNonNull(originalObligationProcess);
+		return this;
 	}
 
 	public ExposureTypeV2Code getExposureType() {
 		return exposureType;
 	}
 
-	public void setExposureType(ExposureTypeV2Code exposureType) {
-		this.exposureType = exposureType;
+	public Obligation setExposureType(ExposureTypeV2Code exposureType) {
+		this.exposureType = Objects.requireNonNull(exposureType);
+		return this;
 	}
 }

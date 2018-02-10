@@ -32,9 +32,8 @@ import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -106,8 +105,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -125,17 +124,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountReport12", propOrder = {"identification", "reportPagination", "electronicSequenceNumber", "legalSequenceNumber", "creationDateTime", "fromToDate", "copyDuplicateIndicator", "reportingSource", "account",
 		"relatedAccount", "interest", "balance", "transactionsSummary", "entry", "additionalReportInformation"})
 public class AccountReport12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Unique identification, as assigned by the account servicer, to
-	 * unambiguously identify the account report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +163,7 @@ public class AccountReport12 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport12.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,13 +174,11 @@ public class AccountReport12 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RptPgntn")
 	protected Pagination reportPagination;
 	/**
-	 * Provides details on the page number of the report.<br>
-	 * <br>
-	 * Usage: The pagination of the report is only allowed when agreed between
-	 * the parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,7 +207,7 @@ public class AccountReport12 {
 	 */
 	public static final MMMessageAttribute mmReportPagination = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport12.mmObject();
 			isDerived = false;
 			xmlTag = "RptPgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,12 +218,11 @@ public class AccountReport12 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
 		}
 	};
+	@XmlElement(name = "ElctrncSeqNb")
 	protected Number electronicSequenceNumber;
 	/**
-	 * Sequential number of the report, as assigned by the account servicer.
-	 * Usage: The sequential number is increased incrementally for each report
-	 * sent electronically.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -255,7 +251,7 @@ public class AccountReport12 {
 	 */
 	public static final MMMessageAttribute mmElectronicSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport12.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncSeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,11 +262,11 @@ public class AccountReport12 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "LglSeqNb")
 	protected Number legalSequenceNumber;
 	/**
-	 * Legal sequential number of the report, as assigned by the account
-	 * servicer. It is increased incrementally for each report sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -299,7 +295,7 @@ public class AccountReport12 {
 	 */
 	public static final MMMessageAttribute mmLegalSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport12.mmObject();
 			isDerived = false;
 			xmlTag = "LglSeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -310,10 +306,11 @@ public class AccountReport12 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm", required = true)
 	protected ISODateTime creationDateTime;
 	/**
-	 * Date and time at which the message was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -340,7 +337,7 @@ public class AccountReport12 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport12.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -351,11 +348,11 @@ public class AccountReport12 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "FrToDt")
 	protected DateTimePeriodDetails fromToDate;
 	/**
-	 * Range of time between a start date and an end date for which the account
-	 * report is issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -383,7 +380,7 @@ public class AccountReport12 {
 	 */
 	public static final MMMessageAssociationEnd mmFromToDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport12.mmObject();
 			isDerived = false;
 			xmlTag = "FrToDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -395,11 +392,11 @@ public class AccountReport12 {
 			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails.mmObject();
 		}
 	};
+	@XmlElement(name = "CpyDplctInd")
 	protected CopyDuplicate1Code copyDuplicateIndicator;
 	/**
-	 * Indicates whether the document is a copy, a duplicate, or a duplicate of
-	 * a copy.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -429,7 +426,7 @@ public class AccountReport12 {
 	 */
 	public static final MMMessageAttribute mmCopyDuplicateIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport12.mmObject();
 			isDerived = false;
 			xmlTag = "CpyDplctInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -440,10 +437,11 @@ public class AccountReport12 {
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RptgSrc")
 	protected ReportingSource1Choice reportingSource;
 	/**
-	 * Specifies the application used to generate the reporting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -471,7 +469,7 @@ public class AccountReport12 {
 	 */
 	public static final MMMessageAssociationEnd mmReportingSource = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport12.mmObject();
 			isDerived = false;
 			xmlTag = "RptgSrc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -483,11 +481,11 @@ public class AccountReport12 {
 			type_lazy = () -> ReportingSource1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Acct", required = true)
 	protected CashAccount25 account;
 	/**
-	 * Unambiguous identification of the account to which credit and debit
-	 * entries are made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -521,7 +519,7 @@ public class AccountReport12 {
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCashAccount;
-			componentContext_lazy = () -> AccountReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport12.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -533,11 +531,11 @@ public class AccountReport12 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount25.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdAcct")
 	protected CashAccount24 relatedAccount;
 	/**
-	 * Identifies the parent account of the account for which the report has
-	 * been issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -570,7 +568,7 @@ public class AccountReport12 {
 	public static final MMMessageAssociationEnd mmRelatedAccount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
-			componentContext_lazy = () -> AccountReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport12.mmObject();
 			isDerived = false;
 			xmlTag = "RltdAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -582,11 +580,11 @@ public class AccountReport12 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "Intrst")
 	protected List<com.tools20022.repository.msg.AccountInterest3> interest;
 	/**
-	 * Provides general interest information that applies to the account at a
-	 * particular moment in time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -620,7 +618,7 @@ public class AccountReport12 {
 	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
-			componentContext_lazy = () -> AccountReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport12.mmObject();
 			isDerived = false;
 			xmlTag = "Intrst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -631,12 +629,11 @@ public class AccountReport12 {
 			type_lazy = () -> com.tools20022.repository.msg.AccountInterest3.mmObject();
 		}
 	};
+	@XmlElement(name = "Bal")
 	protected List<com.tools20022.repository.msg.CashBalance3> balance;
 	/**
-	 * Set of elements used to define the balance as a numerical representation
-	 * of the net increases and decreases in an account at a specific point in
-	 * time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -669,7 +666,7 @@ public class AccountReport12 {
 	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashBalance.mmObject();
-			componentContext_lazy = () -> AccountReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport12.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -680,10 +677,11 @@ public class AccountReport12 {
 			type_lazy = () -> com.tools20022.repository.msg.CashBalance3.mmObject();
 		}
 	};
+	@XmlElement(name = "TxsSummry")
 	protected TotalTransactions3 transactionsSummary;
 	/**
-	 * Provides summary information on entries.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -709,7 +707,7 @@ public class AccountReport12 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionsSummary = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport12.mmObject();
 			isDerived = false;
 			xmlTag = "TxsSummry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -721,12 +719,11 @@ public class AccountReport12 {
 			type_lazy = () -> com.tools20022.repository.msg.TotalTransactions3.mmObject();
 		}
 	};
+	@XmlElement(name = "Ntry")
 	protected List<com.tools20022.repository.msg.ReportEntry3> entry;
 	/**
-	 * Set of elements used to specify an entry in the report. Usage: At least
-	 * one reference must be provided to identify the entry and its underlying
-	 * transaction(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -760,7 +757,7 @@ public class AccountReport12 {
 	public static final MMMessageAssociationEnd mmEntry = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCashBalanceEntry;
-			componentContext_lazy = () -> AccountReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport12.mmObject();
 			isDerived = false;
 			xmlTag = "Ntry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -771,10 +768,11 @@ public class AccountReport12 {
 			type_lazy = () -> com.tools20022.repository.msg.ReportEntry3.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRptInf")
 	protected Max500Text additionalReportInformation;
 	/**
-	 * Further details of the account report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -801,7 +799,7 @@ public class AccountReport12 {
 	 */
 	public static final MMMessageAttribute mmAdditionalReportInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport12.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRptInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -816,12 +814,15 @@ public class AccountReport12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountReport12.mmIdentification, AccountReport12.mmReportPagination, AccountReport12.mmElectronicSequenceNumber, AccountReport12.mmLegalSequenceNumber,
-						AccountReport12.mmCreationDateTime, AccountReport12.mmFromToDate, AccountReport12.mmCopyDuplicateIndicator, AccountReport12.mmReportingSource, AccountReport12.mmAccount, AccountReport12.mmRelatedAccount,
-						AccountReport12.mmInterest, AccountReport12.mmBalance, AccountReport12.mmTransactionsSummary, AccountReport12.mmEntry, AccountReport12.mmAdditionalReportInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountReport12.mmIdentification, com.tools20022.repository.msg.AccountReport12.mmReportPagination,
+						com.tools20022.repository.msg.AccountReport12.mmElectronicSequenceNumber, com.tools20022.repository.msg.AccountReport12.mmLegalSequenceNumber, com.tools20022.repository.msg.AccountReport12.mmCreationDateTime,
+						com.tools20022.repository.msg.AccountReport12.mmFromToDate, com.tools20022.repository.msg.AccountReport12.mmCopyDuplicateIndicator, com.tools20022.repository.msg.AccountReport12.mmReportingSource,
+						com.tools20022.repository.msg.AccountReport12.mmAccount, com.tools20022.repository.msg.AccountReport12.mmRelatedAccount, com.tools20022.repository.msg.AccountReport12.mmInterest,
+						com.tools20022.repository.msg.AccountReport12.mmBalance, com.tools20022.repository.msg.AccountReport12.mmTransactionsSummary, com.tools20022.repository.msg.AccountReport12.mmEntry,
+						com.tools20022.repository.msg.AccountReport12.mmAdditionalReportInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(BankToCustomerAccountReportV03.mmReport);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountReport12";
 				definition = "Provides further details of the account report.";
@@ -831,138 +832,138 @@ public class AccountReport12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public AccountReport12 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "RptPgntn")
-	public Pagination getReportPagination() {
-		return reportPagination;
+	public Optional<Pagination> getReportPagination() {
+		return reportPagination == null ? Optional.empty() : Optional.of(reportPagination);
 	}
 
-	public void setReportPagination(com.tools20022.repository.msg.Pagination reportPagination) {
+	public AccountReport12 setReportPagination(com.tools20022.repository.msg.Pagination reportPagination) {
 		this.reportPagination = reportPagination;
+		return this;
 	}
 
-	@XmlElement(name = "ElctrncSeqNb")
-	public Number getElectronicSequenceNumber() {
-		return electronicSequenceNumber;
+	public Optional<Number> getElectronicSequenceNumber() {
+		return electronicSequenceNumber == null ? Optional.empty() : Optional.of(electronicSequenceNumber);
 	}
 
-	public void setElectronicSequenceNumber(Number electronicSequenceNumber) {
+	public AccountReport12 setElectronicSequenceNumber(Number electronicSequenceNumber) {
 		this.electronicSequenceNumber = electronicSequenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "LglSeqNb")
-	public Number getLegalSequenceNumber() {
-		return legalSequenceNumber;
+	public Optional<Number> getLegalSequenceNumber() {
+		return legalSequenceNumber == null ? Optional.empty() : Optional.of(legalSequenceNumber);
 	}
 
-	public void setLegalSequenceNumber(Number legalSequenceNumber) {
+	public AccountReport12 setLegalSequenceNumber(Number legalSequenceNumber) {
 		this.legalSequenceNumber = legalSequenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
-		this.creationDateTime = creationDateTime;
+	public AccountReport12 setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = Objects.requireNonNull(creationDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "FrToDt")
-	public DateTimePeriodDetails getFromToDate() {
-		return fromToDate;
+	public Optional<DateTimePeriodDetails> getFromToDate() {
+		return fromToDate == null ? Optional.empty() : Optional.of(fromToDate);
 	}
 
-	public void setFromToDate(com.tools20022.repository.msg.DateTimePeriodDetails fromToDate) {
+	public AccountReport12 setFromToDate(com.tools20022.repository.msg.DateTimePeriodDetails fromToDate) {
 		this.fromToDate = fromToDate;
+		return this;
 	}
 
-	@XmlElement(name = "CpyDplctInd")
-	public CopyDuplicate1Code getCopyDuplicateIndicator() {
-		return copyDuplicateIndicator;
+	public Optional<CopyDuplicate1Code> getCopyDuplicateIndicator() {
+		return copyDuplicateIndicator == null ? Optional.empty() : Optional.of(copyDuplicateIndicator);
 	}
 
-	public void setCopyDuplicateIndicator(CopyDuplicate1Code copyDuplicateIndicator) {
+	public AccountReport12 setCopyDuplicateIndicator(CopyDuplicate1Code copyDuplicateIndicator) {
 		this.copyDuplicateIndicator = copyDuplicateIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "RptgSrc")
-	public ReportingSource1Choice getReportingSource() {
-		return reportingSource;
+	public Optional<ReportingSource1Choice> getReportingSource() {
+		return reportingSource == null ? Optional.empty() : Optional.of(reportingSource);
 	}
 
-	public void setReportingSource(ReportingSource1Choice reportingSource) {
+	public AccountReport12 setReportingSource(ReportingSource1Choice reportingSource) {
 		this.reportingSource = reportingSource;
+		return this;
 	}
 
-	@XmlElement(name = "Acct", required = true)
 	public CashAccount25 getAccount() {
 		return account;
 	}
 
-	public void setAccount(com.tools20022.repository.msg.CashAccount25 account) {
-		this.account = account;
+	public AccountReport12 setAccount(com.tools20022.repository.msg.CashAccount25 account) {
+		this.account = Objects.requireNonNull(account);
+		return this;
 	}
 
-	@XmlElement(name = "RltdAcct")
-	public CashAccount24 getRelatedAccount() {
-		return relatedAccount;
+	public Optional<CashAccount24> getRelatedAccount() {
+		return relatedAccount == null ? Optional.empty() : Optional.of(relatedAccount);
 	}
 
-	public void setRelatedAccount(com.tools20022.repository.msg.CashAccount24 relatedAccount) {
+	public AccountReport12 setRelatedAccount(com.tools20022.repository.msg.CashAccount24 relatedAccount) {
 		this.relatedAccount = relatedAccount;
+		return this;
 	}
 
-	@XmlElement(name = "Intrst")
 	public List<AccountInterest3> getInterest() {
-		return interest;
+		return interest == null ? interest = new ArrayList<>() : interest;
 	}
 
-	public void setInterest(List<com.tools20022.repository.msg.AccountInterest3> interest) {
-		this.interest = interest;
+	public AccountReport12 setInterest(List<com.tools20022.repository.msg.AccountInterest3> interest) {
+		this.interest = Objects.requireNonNull(interest);
+		return this;
 	}
 
-	@XmlElement(name = "Bal")
 	public List<CashBalance3> getBalance() {
-		return balance;
+		return balance == null ? balance = new ArrayList<>() : balance;
 	}
 
-	public void setBalance(List<com.tools20022.repository.msg.CashBalance3> balance) {
-		this.balance = balance;
+	public AccountReport12 setBalance(List<com.tools20022.repository.msg.CashBalance3> balance) {
+		this.balance = Objects.requireNonNull(balance);
+		return this;
 	}
 
-	@XmlElement(name = "TxsSummry")
-	public TotalTransactions3 getTransactionsSummary() {
-		return transactionsSummary;
+	public Optional<TotalTransactions3> getTransactionsSummary() {
+		return transactionsSummary == null ? Optional.empty() : Optional.of(transactionsSummary);
 	}
 
-	public void setTransactionsSummary(com.tools20022.repository.msg.TotalTransactions3 transactionsSummary) {
+	public AccountReport12 setTransactionsSummary(com.tools20022.repository.msg.TotalTransactions3 transactionsSummary) {
 		this.transactionsSummary = transactionsSummary;
+		return this;
 	}
 
-	@XmlElement(name = "Ntry")
 	public List<ReportEntry3> getEntry() {
-		return entry;
+		return entry == null ? entry = new ArrayList<>() : entry;
 	}
 
-	public void setEntry(List<com.tools20022.repository.msg.ReportEntry3> entry) {
-		this.entry = entry;
+	public AccountReport12 setEntry(List<com.tools20022.repository.msg.ReportEntry3> entry) {
+		this.entry = Objects.requireNonNull(entry);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRptInf")
-	public Max500Text getAdditionalReportInformation() {
-		return additionalReportInformation;
+	public Optional<Max500Text> getAdditionalReportInformation() {
+		return additionalReportInformation == null ? Optional.empty() : Optional.of(additionalReportInformation);
 	}
 
-	public void setAdditionalReportInformation(Max500Text additionalReportInformation) {
+	public AccountReport12 setAdditionalReportInformation(Max500Text additionalReportInformation) {
 		this.additionalReportInformation = additionalReportInformation;
+		return this;
 	}
 }

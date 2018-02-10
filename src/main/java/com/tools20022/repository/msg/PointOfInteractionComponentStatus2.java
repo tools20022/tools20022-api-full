@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.SystemStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * PointOfInteractionComponentStatus1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PointOfInteractionComponentStatus2", propOrder = {"versionNumber", "status"})
 public class PointOfInteractionComponentStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "VrsnNb")
 	protected Max256Text versionNumber;
 	/**
-	 * Current version of the component that might include the release number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,7 +137,7 @@ public class PointOfInteractionComponentStatus2 {
 	public static final MMMessageAttribute mmVersionNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemIdentification.mmSystemVersion;
-			componentContext_lazy = () -> PointOfInteractionComponentStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "VrsnNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,10 +150,11 @@ public class PointOfInteractionComponentStatus2 {
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts")
 	protected POIComponentStatus1Code status;
 	/**
-	 * Current status of the component.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,7 +201,7 @@ public class PointOfInteractionComponentStatus2 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemStatus.mmStatus;
-			componentContext_lazy = () -> PointOfInteractionComponentStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,9 +218,9 @@ public class PointOfInteractionComponentStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PointOfInteractionComponentStatus2.mmVersionNumber, PointOfInteractionComponentStatus2.mmStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentStatus2.mmVersionNumber, com.tools20022.repository.msg.PointOfInteractionComponentStatus2.mmStatus);
 				trace_lazy = () -> SystemStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionComponentStatus2";
 				definition = "Status of a POI component (Point of Interaction).";
@@ -228,21 +231,21 @@ public class PointOfInteractionComponentStatus2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "VrsnNb")
-	public Max256Text getVersionNumber() {
-		return versionNumber;
+	public Optional<Max256Text> getVersionNumber() {
+		return versionNumber == null ? Optional.empty() : Optional.of(versionNumber);
 	}
 
-	public void setVersionNumber(Max256Text versionNumber) {
+	public PointOfInteractionComponentStatus2 setVersionNumber(Max256Text versionNumber) {
 		this.versionNumber = versionNumber;
+		return this;
 	}
 
-	@XmlElement(name = "Sts")
-	public POIComponentStatus1Code getStatus() {
-		return status;
+	public Optional<POIComponentStatus1Code> getStatus() {
+		return status == null ? Optional.empty() : Optional.of(status);
 	}
 
-	public void setStatus(POIComponentStatus1Code status) {
+	public PointOfInteractionComponentStatus2 setStatus(POIComponentStatus1Code status) {
 		this.status = status;
+		return this;
 	}
 }

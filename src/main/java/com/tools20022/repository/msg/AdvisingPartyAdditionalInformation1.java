@@ -24,9 +24,8 @@ import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.UndertakingAdvisingParty;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Additional information related to the advising party."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AdvisingPartyAdditionalInformation1", propOrder = {"referenceNumber", "bankToBeneficiaryInformation"})
 public class AdvisingPartyAdditionalInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RefNb")
 	protected Max35Text referenceNumber;
 	/**
-	 * Unique and unambiguous identifier assigned as a reference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +104,7 @@ public class AdvisingPartyAdditionalInformation1 {
 	 */
 	public static final MMMessageAttribute mmReferenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AdvisingPartyAdditionalInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "RefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +115,11 @@ public class AdvisingPartyAdditionalInformation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BkToBnfcryInf")
 	protected List<Max2000Text> bankToBeneficiaryInformation;
 	/**
-	 * Additional information specific to the bank-to-beneficiary communication.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,7 +148,7 @@ public class AdvisingPartyAdditionalInformation1 {
 	 */
 	public static final MMMessageAttribute mmBankToBeneficiaryInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AdvisingPartyAdditionalInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "BkToBnfcryInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,9 +163,10 @@ public class AdvisingPartyAdditionalInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AdvisingPartyAdditionalInformation1.mmReferenceNumber, AdvisingPartyAdditionalInformation1.mmBankToBeneficiaryInformation);
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1.mmReferenceNumber, com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1.mmBankToBeneficiaryInformation);
 				trace_lazy = () -> UndertakingAdvisingParty.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdvisingPartyAdditionalInformation1";
 				definition = "Additional information related to the advising party.";
@@ -173,21 +175,21 @@ public class AdvisingPartyAdditionalInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RefNb")
-	public Max35Text getReferenceNumber() {
-		return referenceNumber;
+	public Optional<Max35Text> getReferenceNumber() {
+		return referenceNumber == null ? Optional.empty() : Optional.of(referenceNumber);
 	}
 
-	public void setReferenceNumber(Max35Text referenceNumber) {
+	public AdvisingPartyAdditionalInformation1 setReferenceNumber(Max35Text referenceNumber) {
 		this.referenceNumber = referenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "BkToBnfcryInf")
 	public List<Max2000Text> getBankToBeneficiaryInformation() {
-		return bankToBeneficiaryInformation;
+		return bankToBeneficiaryInformation == null ? bankToBeneficiaryInformation = new ArrayList<>() : bankToBeneficiaryInformation;
 	}
 
-	public void setBankToBeneficiaryInformation(List<Max2000Text> bankToBeneficiaryInformation) {
-		this.bankToBeneficiaryInformation = bankToBeneficiaryInformation;
+	public AdvisingPartyAdditionalInformation1 setBankToBeneficiaryInformation(List<Max2000Text> bankToBeneficiaryInformation) {
+		this.bankToBeneficiaryInformation = Objects.requireNonNull(bankToBeneficiaryInformation);
+		return this;
 	}
 }

@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.EquityReturnParameterCode;
+import com.tools20022.repository.codeset.EquityReturnParameter1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies an equity derivative return parameter.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.EquityReturnParameterCode
- * EquityReturnParameterCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EquityReturnParameter1Code#mmParameterReturnDividend
- * EquityReturnParameter1Code.mmParameterReturnDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.EquityReturnParameter1Code#ParameterReturnDividend
+ * EquityReturnParameter1Code.ParameterReturnDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EquityReturnParameter1Code#mmParameterReturnVariance
- * EquityReturnParameter1Code.mmParameterReturnVariance}</li>
+ * {@linkplain com.tools20022.repository.codeset.EquityReturnParameter1Code#ParameterReturnVariance
+ * EquityReturnParameter1Code.ParameterReturnVariance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EquityReturnParameter1Code#mmParameterReturnVolatility
- * EquityReturnParameter1Code.mmParameterReturnVolatility}</li>
+ * {@linkplain com.tools20022.repository.codeset.EquityReturnParameter1Code#ParameterReturnVolatility
+ * EquityReturnParameter1Code.ParameterReturnVolatility}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EquityReturnParameter1Code#mmPriceReturnBasicPerformanceParameter
- * EquityReturnParameter1Code.mmPriceReturnBasicPerformanceParameter}</li>
+ * {@linkplain com.tools20022.repository.codeset.EquityReturnParameter1Code#PriceReturnBasicPerformanceParameter
+ * EquityReturnParameter1Code.PriceReturnBasicPerformanceParameter}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.EquityReturnParameterCode
+ * EquityReturnParameterCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies an equity derivative return parameter."</li>
  * </ul>
  */
-public class EquityReturnParameter1Code extends EquityReturnParameterCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EquityReturnParameter1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class EquityReturnParameter1Code extends EquityReturnParameterCode {
 	 * name} = "ParameterReturnDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmParameterReturnDividend = new MMCode() {
+	public static final EquityReturnParameter1Code ParameterReturnDividend = new EquityReturnParameter1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParameterReturnDividend";
-			owner_lazy = () -> EquityReturnParameter1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EquityReturnParameter1Code.mmObject();
+			codeName = EquityReturnParameterCode.ParameterReturnDividend.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,11 +112,12 @@ public class EquityReturnParameter1Code extends EquityReturnParameterCode {
 	 * name} = "ParameterReturnVariance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmParameterReturnVariance = new MMCode() {
+	public static final EquityReturnParameter1Code ParameterReturnVariance = new EquityReturnParameter1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParameterReturnVariance";
-			owner_lazy = () -> EquityReturnParameter1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EquityReturnParameter1Code.mmObject();
+			codeName = EquityReturnParameterCode.ParameterReturnVariance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -129,11 +136,12 @@ public class EquityReturnParameter1Code extends EquityReturnParameterCode {
 	 * name} = "ParameterReturnVolatility"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmParameterReturnVolatility = new MMCode() {
+	public static final EquityReturnParameter1Code ParameterReturnVolatility = new EquityReturnParameter1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParameterReturnVolatility";
-			owner_lazy = () -> EquityReturnParameter1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EquityReturnParameter1Code.mmObject();
+			codeName = EquityReturnParameterCode.ParameterReturnVolatility.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -152,26 +160,59 @@ public class EquityReturnParameter1Code extends EquityReturnParameterCode {
 	 * name} = "PriceReturnBasicPerformanceParameter"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPriceReturnBasicPerformanceParameter = new MMCode() {
+	public static final EquityReturnParameter1Code PriceReturnBasicPerformanceParameter = new EquityReturnParameter1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceReturnBasicPerformanceParameter";
-			owner_lazy = () -> EquityReturnParameter1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EquityReturnParameter1Code.mmObject();
+			codeName = EquityReturnParameterCode.PriceReturnBasicPerformanceParameter.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, EquityReturnParameter1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EquityReturnParameter1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EquityReturnParameter1Code";
 				definition = "Specifies an equity derivative return parameter.";
-				code_lazy = () -> Arrays.asList(EquityReturnParameter1Code.mmParameterReturnDividend, EquityReturnParameter1Code.mmParameterReturnVariance, EquityReturnParameter1Code.mmParameterReturnVolatility,
-						EquityReturnParameter1Code.mmPriceReturnBasicPerformanceParameter);
 				trace_lazy = () -> EquityReturnParameterCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EquityReturnParameter1Code.ParameterReturnDividend, com.tools20022.repository.codeset.EquityReturnParameter1Code.ParameterReturnVariance,
+						com.tools20022.repository.codeset.EquityReturnParameter1Code.ParameterReturnVolatility, com.tools20022.repository.codeset.EquityReturnParameter1Code.PriceReturnBasicPerformanceParameter);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ParameterReturnDividend.getCodeName().get(), ParameterReturnDividend);
+		codesByName.put(ParameterReturnVariance.getCodeName().get(), ParameterReturnVariance);
+		codesByName.put(ParameterReturnVolatility.getCodeName().get(), ParameterReturnVolatility);
+		codesByName.put(PriceReturnBasicPerformanceParameter.getCodeName().get(), PriceReturnBasicPerformanceParameter);
+	}
+
+	public static EquityReturnParameter1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EquityReturnParameter1Code[] values() {
+		EquityReturnParameter1Code[] values = new EquityReturnParameter1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EquityReturnParameter1Code> {
+		@Override
+		public EquityReturnParameter1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EquityReturnParameter1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

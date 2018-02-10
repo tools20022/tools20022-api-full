@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AccountPermissionTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies different levels of permission.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountPermissionTypeCode#mmNoRight
- * AccountPermissionTypeCode.mmNoRight}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountPermissionTypeCode#NoRight
+ * AccountPermissionTypeCode.NoRight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountPermissionTypeCode#mmRightToUseAlone
- * AccountPermissionTypeCode.mmRightToUseAlone}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountPermissionTypeCode#RightToUseAlone
+ * AccountPermissionTypeCode.RightToUseAlone}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountPermissionTypeCode#mmRightToUseWithOther
- * AccountPermissionTypeCode.mmRightToUseWithOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountPermissionTypeCode#RightToUseWithOther
+ * AccountPermissionTypeCode.RightToUseWithOther}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies different levels of permission."</li>
  * </ul>
  */
-public class AccountPermissionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AccountPermissionTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,12 +94,12 @@ public class AccountPermissionTypeCode {
 	 * definition} = "No right to use the account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoRight = new MMCode() {
+	public static final AccountPermissionTypeCode NoRight = new AccountPermissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoRight";
 			definition = "No right to use the account.";
-			owner_lazy = () -> AccountPermissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountPermissionTypeCode.mmObject();
 			codeName = "NORI";
 		}
 	};
@@ -118,12 +124,12 @@ public class AccountPermissionTypeCode {
 	 * definition} = "Right to use the account alone."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRightToUseAlone = new MMCode() {
+	public static final AccountPermissionTypeCode RightToUseAlone = new AccountPermissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightToUseAlone";
 			definition = "Right to use the account alone.";
-			owner_lazy = () -> AccountPermissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountPermissionTypeCode.mmObject();
 			codeName = "RIAL";
 		}
 	};
@@ -148,27 +154,59 @@ public class AccountPermissionTypeCode {
 	 * definition} = "Right to use the account together with another person."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRightToUseWithOther = new MMCode() {
+	public static final AccountPermissionTypeCode RightToUseWithOther = new AccountPermissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightToUseWithOther";
 			definition = "Right to use the account together with another person.";
-			owner_lazy = () -> AccountPermissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountPermissionTypeCode.mmObject();
 			codeName = "RIWI";
 		}
 	};
+	final static private LinkedHashMap<String, AccountPermissionTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AccountPermissionTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountPermissionTypeCode";
 				definition = "Specifies different levels of permission.";
-				code_lazy = () -> Arrays.asList(AccountPermissionTypeCode.mmNoRight, AccountPermissionTypeCode.mmRightToUseAlone, AccountPermissionTypeCode.mmRightToUseWithOther);
 				derivation_lazy = () -> Arrays.asList(AccountPermissionType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountPermissionTypeCode.NoRight, com.tools20022.repository.codeset.AccountPermissionTypeCode.RightToUseAlone,
+						com.tools20022.repository.codeset.AccountPermissionTypeCode.RightToUseWithOther);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NoRight.getCodeName().get(), NoRight);
+		codesByName.put(RightToUseAlone.getCodeName().get(), RightToUseAlone);
+		codesByName.put(RightToUseWithOther.getCodeName().get(), RightToUseWithOther);
+	}
+
+	public static AccountPermissionTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AccountPermissionTypeCode[] values() {
+		AccountPermissionTypeCode[] values = new AccountPermissionTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AccountPermissionTypeCode> {
+		@Override
+		public AccountPermissionTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AccountPermissionTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

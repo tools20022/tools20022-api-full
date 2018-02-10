@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.CashAccountContract;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountReport13", propOrder = {"accountIdentification", "accountOrError"})
 public class AccountReport13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId", required = true)
 	protected AccountIdentification4Choice accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -129,7 +130,7 @@ public class AccountReport13 {
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> AccountReport13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport13.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,11 +142,11 @@ public class AccountReport13 {
 			complexType_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOrErr", required = true)
 	protected AccountOrBusinessError1Choice accountOrError;
 	/**
-	 * Requested information on the account or business error when information
-	 * has not been found.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -188,7 +189,7 @@ public class AccountReport13 {
 	public static final MMMessageAssociationEnd mmAccountOrError = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashAccountContract.mmCashAccount;
-			componentContext_lazy = () -> AccountReport13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport13.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,9 +206,9 @@ public class AccountReport13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountReport13.mmAccountIdentification, AccountReport13.mmAccountOrError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountReport13.mmAccountIdentification, com.tools20022.repository.msg.AccountReport13.mmAccountOrError);
 				trace_lazy = () -> CashAccountContract.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountReport13";
 				definition = "Reports either on the account information or on a business error.";
@@ -217,21 +218,21 @@ public class AccountReport13 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public AccountIdentification4Choice getAccountIdentification() {
 		return accountIdentification;
 	}
 
-	public void setAccountIdentification(AccountIdentification4Choice accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public AccountReport13 setAccountIdentification(AccountIdentification4Choice accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOrErr", required = true)
 	public AccountOrBusinessError1Choice getAccountOrError() {
 		return accountOrError;
 	}
 
-	public void setAccountOrError(AccountOrBusinessError1Choice accountOrError) {
-		this.accountOrError = accountOrError;
+	public AccountReport13 setAccountOrError(AccountOrBusinessError1Choice accountOrError) {
+		this.accountOrError = Objects.requireNonNull(accountOrError);
+		return this;
 	}
 }

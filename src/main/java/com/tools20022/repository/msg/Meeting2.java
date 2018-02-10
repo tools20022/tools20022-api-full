@@ -29,11 +29,9 @@ import com.tools20022.repository.entity.Meeting;
 import com.tools20022.repository.entity.Quorum;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +46,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Meeting2#mmQuorumQuantityOrPercentageRule
- * Meeting2.mmQuorumQuantityOrPercentageRule}</li>
+ * {@linkplain com.tools20022.repository.msg.Meeting2#QuorumQuantityOrPercentageRule
+ * Meeting2.QuorumQuantityOrPercentageRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -85,8 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDateAndTimeAndDateStatus1Rule#forMeeting2
+ * ConstraintDateAndTimeAndDateStatus1Rule.forMeeting2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -100,15 +106,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Meeting2", propOrder = {"dateAndTime", "dateStatus", "quorumRequired", "location", "quorumQuantity", "quorumQuantityPercentage"})
 public class Meeting2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DtAndTm", required = true)
 	protected DateFormat2Choice dateAndTime;
 	/**
-	 * Date and time at which the meeting will take place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,7 +148,7 @@ public class Meeting2 {
 	public static final MMMessageAttribute mmDateAndTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmDateAndTime;
-			componentContext_lazy = () -> Meeting2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting2.mmObject();
 			isDerived = false;
 			xmlTag = "DtAndTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,10 +159,11 @@ public class Meeting2 {
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DtSts")
 	protected MeetingDateStatus1Code dateStatus;
 	/**
-	 * Indicates the status of a meeting date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,7 +196,7 @@ public class Meeting2 {
 	public static final MMMessageAttribute mmDateStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmDateStatus;
-			componentContext_lazy = () -> Meeting2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting2.mmObject();
 			isDerived = false;
 			xmlTag = "DtSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,11 +207,11 @@ public class Meeting2 {
 			simpleType_lazy = () -> MeetingDateStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "QrmReqrd", required = true)
 	protected YesNoIndicator quorumRequired;
 	/**
-	 * Specifies whether a minimum number of security representation is required
-	 * to hold a meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -238,7 +246,7 @@ public class Meeting2 {
 	public static final MMMessageAttribute mmQuorumRequired = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Quorum.mmQuorumRequired;
-			componentContext_lazy = () -> Meeting2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting2.mmObject();
 			isDerived = false;
 			xmlTag = "QrmReqrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -249,10 +257,11 @@ public class Meeting2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Lctn", required = true)
 	protected List<LocationFormat1Choice> location;
 	/**
-	 * Specifies location where meeting will take place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -284,7 +293,7 @@ public class Meeting2 {
 	public static final MMMessageAssociationEnd mmLocation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmMeetingLocation;
-			componentContext_lazy = () -> Meeting2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting2.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -296,10 +305,11 @@ public class Meeting2 {
 			type_lazy = () -> LocationFormat1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "QrmQty")
 	protected Max35Text quorumQuantity;
 	/**
-	 * Minimum quantity of securities required to hold a meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -332,7 +342,7 @@ public class Meeting2 {
 	public static final MMMessageAttribute mmQuorumQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Quorum.mmQuantity;
-			componentContext_lazy = () -> Meeting2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting2.mmObject();
 			isDerived = false;
 			xmlTag = "QrmQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -343,11 +353,11 @@ public class Meeting2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "QrmQtyPctg")
 	protected PercentageRate quorumQuantityPercentage;
 	/**
-	 * Minimum quantity of securities, expressed as a percentage, required to
-	 * hold a meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -382,7 +392,7 @@ public class Meeting2 {
 	public static final MMMessageAttribute mmQuorumQuantityPercentage = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Quorum.mmPercentage;
-			componentContext_lazy = () -> Meeting2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting2.mmObject();
 			isDerived = false;
 			xmlTag = "QrmQtyPctg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -425,23 +435,25 @@ public class Meeting2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmQuorumQuantityOrPercentageRule = new MMXor() {
+	public static final MMXor QuorumQuantityOrPercentageRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuorumQuantityOrPercentageRule";
 			definition = "Either QuorumQuantity or QuorumQuantityPercentage may be present, but not both.";
-			messageComponent_lazy = () -> Meeting2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(Meeting2.mmQuorumQuantity, Meeting2.mmQuorumQuantityPercentage);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.Meeting2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting2.mmQuorumQuantity, com.tools20022.repository.msg.Meeting2.mmQuorumQuantityPercentage);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Meeting2.mmDateAndTime, Meeting2.mmDateStatus, Meeting2.mmQuorumRequired, Meeting2.mmLocation, Meeting2.mmQuorumQuantity, Meeting2.mmQuorumQuantityPercentage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting2.mmDateAndTime, com.tools20022.repository.msg.Meeting2.mmDateStatus, com.tools20022.repository.msg.Meeting2.mmQuorumRequired,
+						com.tools20022.repository.msg.Meeting2.mmLocation, com.tools20022.repository.msg.Meeting2.mmQuorumQuantity, com.tools20022.repository.msg.Meeting2.mmQuorumQuantityPercentage);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV02.mmMeetingDetails);
 				trace_lazy = () -> Meeting.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDateAndTimeAndDateStatus1Rule.forMeeting2);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -452,63 +464,63 @@ public class Meeting2 {
 				})).get();
 				name = "Meeting2";
 				definition = "Specifies the physical parameters of a shareholders meeting. Several dates and places can be defined for a meeting";
-				xors_lazy = () -> Arrays.asList(Meeting2.mmQuorumQuantityOrPercentageRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting2.QuorumQuantityOrPercentageRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DtAndTm", required = true)
 	public DateFormat2Choice getDateAndTime() {
 		return dateAndTime;
 	}
 
-	public void setDateAndTime(DateFormat2Choice dateAndTime) {
-		this.dateAndTime = dateAndTime;
+	public Meeting2 setDateAndTime(DateFormat2Choice dateAndTime) {
+		this.dateAndTime = Objects.requireNonNull(dateAndTime);
+		return this;
 	}
 
-	@XmlElement(name = "DtSts")
-	public MeetingDateStatus1Code getDateStatus() {
-		return dateStatus;
+	public Optional<MeetingDateStatus1Code> getDateStatus() {
+		return dateStatus == null ? Optional.empty() : Optional.of(dateStatus);
 	}
 
-	public void setDateStatus(MeetingDateStatus1Code dateStatus) {
+	public Meeting2 setDateStatus(MeetingDateStatus1Code dateStatus) {
 		this.dateStatus = dateStatus;
+		return this;
 	}
 
-	@XmlElement(name = "QrmReqrd", required = true)
 	public YesNoIndicator getQuorumRequired() {
 		return quorumRequired;
 	}
 
-	public void setQuorumRequired(YesNoIndicator quorumRequired) {
-		this.quorumRequired = quorumRequired;
+	public Meeting2 setQuorumRequired(YesNoIndicator quorumRequired) {
+		this.quorumRequired = Objects.requireNonNull(quorumRequired);
+		return this;
 	}
 
-	@XmlElement(name = "Lctn", required = true)
 	public List<LocationFormat1Choice> getLocation() {
-		return location;
+		return location == null ? location = new ArrayList<>() : location;
 	}
 
-	public void setLocation(List<LocationFormat1Choice> location) {
-		this.location = location;
+	public Meeting2 setLocation(List<LocationFormat1Choice> location) {
+		this.location = Objects.requireNonNull(location);
+		return this;
 	}
 
-	@XmlElement(name = "QrmQty")
-	public Max35Text getQuorumQuantity() {
-		return quorumQuantity;
+	public Optional<Max35Text> getQuorumQuantity() {
+		return quorumQuantity == null ? Optional.empty() : Optional.of(quorumQuantity);
 	}
 
-	public void setQuorumQuantity(Max35Text quorumQuantity) {
+	public Meeting2 setQuorumQuantity(Max35Text quorumQuantity) {
 		this.quorumQuantity = quorumQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "QrmQtyPctg")
-	public PercentageRate getQuorumQuantityPercentage() {
-		return quorumQuantityPercentage;
+	public Optional<PercentageRate> getQuorumQuantityPercentage() {
+		return quorumQuantityPercentage == null ? Optional.empty() : Optional.of(quorumQuantityPercentage);
 	}
 
-	public void setQuorumQuantityPercentage(PercentageRate quorumQuantityPercentage) {
+	public Meeting2 setQuorumQuantityPercentage(PercentageRate quorumQuantityPercentage) {
 		this.quorumQuantityPercentage = quorumQuantityPercentage;
+		return this;
 	}
 }

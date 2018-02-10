@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DeliveryStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Provides an explicit indication whether the delivery attempt resulted in
@@ -32,12 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryStatusCode#mmFailure
- * DeliveryStatusCode.mmFailure}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryStatusCode#mmSuccess
- * DeliveryStatusCode.mmSuccess}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DeliveryStatusCode#Failure
+ * DeliveryStatusCode.Failure}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DeliveryStatusCode#Success
+ * DeliveryStatusCode.Success}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class DeliveryStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DeliveryStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,12 +92,12 @@ public class DeliveryStatusCode {
 	 * definition} = "Delivery failed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFailure = new MMCode() {
+	public static final DeliveryStatusCode Failure = new DeliveryStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failure";
 			definition = "Delivery failed.";
-			owner_lazy = () -> DeliveryStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DeliveryStatusCode.mmObject();
 			codeName = "FAIL";
 		}
 	};
@@ -118,27 +122,57 @@ public class DeliveryStatusCode {
 	 * definition} = "Delivery succeeded."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuccess = new MMCode() {
+	public static final DeliveryStatusCode Success = new DeliveryStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Success";
 			definition = "Delivery succeeded.";
-			owner_lazy = () -> DeliveryStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DeliveryStatusCode.mmObject();
 			codeName = "SUCC";
 		}
 	};
+	final static private LinkedHashMap<String, DeliveryStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DeliveryStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DeliveryStatusCode";
 				definition = "Provides an explicit indication whether the delivery attempt resulted in success or failure. ";
-				code_lazy = () -> Arrays.asList(DeliveryStatusCode.mmFailure, DeliveryStatusCode.mmSuccess);
 				derivation_lazy = () -> Arrays.asList(DeliveryStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryStatusCode.Failure, com.tools20022.repository.codeset.DeliveryStatusCode.Success);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Failure.getCodeName().get(), Failure);
+		codesByName.put(Success.getCodeName().get(), Success);
+	}
+
+	public static DeliveryStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DeliveryStatusCode[] values() {
+		DeliveryStatusCode[] values = new DeliveryStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DeliveryStatusCode> {
+		@Override
+		public DeliveryStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DeliveryStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

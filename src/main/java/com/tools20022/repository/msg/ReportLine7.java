@@ -27,9 +27,11 @@ import com.tools20022.repository.entity.LineItem;
 import com.tools20022.repository.entity.Price;
 import com.tools20022.repository.entity.PurchaseOrder;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,16 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * ReportLine2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReportLine7", propOrder = {"transactionIdentification", "purchaseOrderReference", "adjustment", "netAmount"})
 public class ReportLine7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId", required = true)
 	protected Max35Text transactionIdentification;
 	/**
-	 * Unique identification assigned by the matching application to the
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +121,7 @@ public class ReportLine7 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportLine7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine7.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +133,11 @@ public class ReportLine7 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PurchsOrdrRef", required = true)
 	protected DocumentIdentification7 purchaseOrderReference;
 	/**
-	 * Unique identification of the purchase order, assigned by the buyer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +176,7 @@ public class ReportLine7 {
 	public static final MMMessageAttribute mmPurchaseOrderReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PurchaseOrder.mmIdentification;
-			componentContext_lazy = () -> ReportLine7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine7.mmObject();
 			isDerived = false;
 			xmlTag = "PurchsOrdrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,10 +188,11 @@ public class ReportLine7 {
 			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();
 		}
 	};
+	@XmlElement(name = "Adjstmnt")
 	protected List<com.tools20022.repository.msg.Adjustment6> adjustment;
 	/**
-	 * Specifies the adjustments applied to obtain the net amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -225,7 +229,7 @@ public class ReportLine7 {
 	public static final MMMessageAssociationEnd mmAdjustment = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Price.mmPriceAdjustment;
-			componentContext_lazy = () -> ReportLine7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine7.mmObject();
 			isDerived = false;
 			xmlTag = "Adjstmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,10 +241,11 @@ public class ReportLine7 {
 			type_lazy = () -> com.tools20022.repository.msg.Adjustment6.mmObject();
 		}
 	};
+	@XmlElement(name = "NetAmt", required = true)
 	protected CurrencyAndAmount netAmount;
 	/**
-	 * Net amount, after adjustments, intended to be paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -278,7 +283,7 @@ public class ReportLine7 {
 	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LineItem.mmNetAmount;
-			componentContext_lazy = () -> ReportLine7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine7.mmObject();
 			isDerived = false;
 			xmlTag = "NetAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -294,9 +299,10 @@ public class ReportLine7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReportLine7.mmTransactionIdentification, ReportLine7.mmPurchaseOrderReference, ReportLine7.mmAdjustment, ReportLine7.mmNetAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportLine7.mmTransactionIdentification, com.tools20022.repository.msg.ReportLine7.mmPurchaseOrderReference,
+						com.tools20022.repository.msg.ReportLine7.mmAdjustment, com.tools20022.repository.msg.ReportLine7.mmNetAmount);
 				trace_lazy = () -> PurchaseOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportLine7";
 				definition = "Information about a payment against a purchase order.";
@@ -306,39 +312,39 @@ public class ReportLine7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public ReportLine7 setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PurchsOrdrRef", required = true)
 	public DocumentIdentification7 getPurchaseOrderReference() {
 		return purchaseOrderReference;
 	}
 
-	public void setPurchaseOrderReference(com.tools20022.repository.msg.DocumentIdentification7 purchaseOrderReference) {
-		this.purchaseOrderReference = purchaseOrderReference;
+	public ReportLine7 setPurchaseOrderReference(com.tools20022.repository.msg.DocumentIdentification7 purchaseOrderReference) {
+		this.purchaseOrderReference = Objects.requireNonNull(purchaseOrderReference);
+		return this;
 	}
 
-	@XmlElement(name = "Adjstmnt")
 	public List<Adjustment6> getAdjustment() {
-		return adjustment;
+		return adjustment == null ? adjustment = new ArrayList<>() : adjustment;
 	}
 
-	public void setAdjustment(List<com.tools20022.repository.msg.Adjustment6> adjustment) {
-		this.adjustment = adjustment;
+	public ReportLine7 setAdjustment(List<com.tools20022.repository.msg.Adjustment6> adjustment) {
+		this.adjustment = Objects.requireNonNull(adjustment);
+		return this;
 	}
 
-	@XmlElement(name = "NetAmt", required = true)
 	public CurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
 
-	public void setNetAmount(CurrencyAndAmount netAmount) {
-		this.netAmount = netAmount;
+	public ReportLine7 setNetAmount(CurrencyAndAmount netAmount) {
+		this.netAmount = Objects.requireNonNull(netAmount);
+		return this;
 	}
 }

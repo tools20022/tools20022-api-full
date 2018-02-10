@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -26,6 +27,7 @@ import com.tools20022.repository.datatype.ISOTime;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * DateCodeAndTimeFormat1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DateCodeAndTimeFormat3", propOrder = {"dateCode", "time"})
 public class DateCodeAndTimeFormat3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DtCd", required = true)
 	protected DateCode21Choice dateCode;
 	/**
-	 * Specifies the type of date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -87,6 +90,9 @@ public class DateCodeAndTimeFormat3 {
 	 * DateCodeAndTimeFormat3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DtCd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98B::4!c/4!c[4c]/4!c</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -105,9 +111,10 @@ public class DateCodeAndTimeFormat3 {
 	 */
 	public static final MMMessageAssociationEnd mmDateCode = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DateCodeAndTimeFormat3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateCodeAndTimeFormat3.mmObject();
 			isDerived = false;
 			xmlTag = "DtCd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98B::4!c/4!c[4c]/4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Specifies the type of date.";
@@ -118,10 +125,11 @@ public class DateCodeAndTimeFormat3 {
 			type_lazy = () -> DateCode21Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Tm", required = true)
 	protected ISOTime time;
 	/**
-	 * Specifies the time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,7 +161,7 @@ public class DateCodeAndTimeFormat3 {
 	 */
 	public static final MMMessageAttribute mmTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateCodeAndTimeFormat3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateCodeAndTimeFormat3.mmObject();
 			isDerived = false;
 			xmlTag = "Tm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,8 +177,8 @@ public class DateCodeAndTimeFormat3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DateCodeAndTimeFormat3.mmDateCode, DateCodeAndTimeFormat3.mmTime);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DateCodeAndTimeFormat3.mmDateCode, com.tools20022.repository.msg.DateCodeAndTimeFormat3.mmTime);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateCodeAndTimeFormat3";
 				definition = "Specifies  a date code and a time.";
@@ -180,21 +188,21 @@ public class DateCodeAndTimeFormat3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DtCd", required = true)
 	public DateCode21Choice getDateCode() {
 		return dateCode;
 	}
 
-	public void setDateCode(DateCode21Choice dateCode) {
-		this.dateCode = dateCode;
+	public DateCodeAndTimeFormat3 setDateCode(DateCode21Choice dateCode) {
+		this.dateCode = Objects.requireNonNull(dateCode);
+		return this;
 	}
 
-	@XmlElement(name = "Tm", required = true)
 	public ISOTime getTime() {
 		return time;
 	}
 
-	public void setTime(ISOTime time) {
-		this.time = time;
+	public DateCodeAndTimeFormat3 setTime(ISOTime time) {
+		this.time = Objects.requireNonNull(time);
+		return this;
 	}
 }

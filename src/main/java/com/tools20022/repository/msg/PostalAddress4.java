@@ -25,9 +25,11 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.Country;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PostalAddress4", propOrder = {"addressLine", "country"})
 public class PostalAddress4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AdrLine")
 	protected List<Max70Text> addressLine;
 	/**
-	 * Information that locates and identifies a specific address, as defined by
-	 * postal services, that is presented in free format text.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +108,7 @@ public class PostalAddress4 {
 	 */
 	public static final MMMessageAttribute mmAddressLine = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PostalAddress4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress4.mmObject();
 			isDerived = false;
 			xmlTag = "AdrLine";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +119,11 @@ public class PostalAddress4 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Ctry", required = true)
 	protected CountryCode country;
 	/**
-	 * Nation with its own government.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,7 +155,7 @@ public class PostalAddress4 {
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> PostalAddress4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress4.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,9 +170,9 @@ public class PostalAddress4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PostalAddress4.mmAddressLine, PostalAddress4.mmCountry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress4.mmAddressLine, com.tools20022.repository.msg.PostalAddress4.mmCountry);
 				trace_lazy = () -> PostalAddress.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PostalAddress4";
 				definition = "Information that locates and identifies a specific address, as defined by postal services.";
@@ -178,21 +181,21 @@ public class PostalAddress4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AdrLine")
 	public List<Max70Text> getAddressLine() {
-		return addressLine;
+		return addressLine == null ? addressLine = new ArrayList<>() : addressLine;
 	}
 
-	public void setAddressLine(List<Max70Text> addressLine) {
-		this.addressLine = addressLine;
+	public PostalAddress4 setAddressLine(List<Max70Text> addressLine) {
+		this.addressLine = Objects.requireNonNull(addressLine);
+		return this;
 	}
 
-	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
 
-	public void setCountry(CountryCode country) {
-		this.country = country;
+	public PostalAddress4 setCountry(CountryCode country) {
+		this.country = Objects.requireNonNull(country);
+		return this;
 	}
 }

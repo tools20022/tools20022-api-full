@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides the settlement details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementDetails21", propOrder = {"settlementAmount", "depository"})
 public class SettlementDetails21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SttlmAmt", required = true)
 	protected AmountAndDirection20 settlementAmount;
 	/**
-	 * Total amount to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -106,7 +109,7 @@ public class SettlementDetails21 {
 	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
-			componentContext_lazy = () -> SettlementDetails21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails21.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +121,11 @@ public class SettlementDetails21 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
 		}
 	};
+	@XmlElement(name = "Dpstry")
 	protected PartyIdentification34Choice depository;
 	/**
-	 * Place where settlement of the securities takes place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -154,7 +158,7 @@ public class SettlementDetails21 {
 	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SettlementDetails21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails21.mmObject();
 			isDerived = false;
 			xmlTag = "Dpstry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,9 +174,9 @@ public class SettlementDetails21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementDetails21.mmSettlementAmount, SettlementDetails21.mmDepository);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails21.mmSettlementAmount, com.tools20022.repository.msg.SettlementDetails21.mmDepository);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementDetails21";
 				definition = "Provides the settlement details.";
@@ -181,21 +185,21 @@ public class SettlementDetails21 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SttlmAmt", required = true)
 	public AmountAndDirection20 getSettlementAmount() {
 		return settlementAmount;
 	}
 
-	public void setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection20 settlementAmount) {
-		this.settlementAmount = settlementAmount;
+	public SettlementDetails21 setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection20 settlementAmount) {
+		this.settlementAmount = Objects.requireNonNull(settlementAmount);
+		return this;
 	}
 
-	@XmlElement(name = "Dpstry")
-	public PartyIdentification34Choice getDepository() {
-		return depository;
+	public Optional<PartyIdentification34Choice> getDepository() {
+		return depository == null ? Optional.empty() : Optional.of(depository);
 	}
 
-	public void setDepository(PartyIdentification34Choice depository) {
+	public SettlementDetails21 setDepository(PartyIdentification34Choice depository) {
 		this.depository = depository;
+		return this;
 	}
 }

@@ -33,6 +33,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -136,8 +137,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -148,7 +149,7 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Extra dates, amounts and related indicators."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DateAndAmountSD1", propOrder = {"placeAndName", "firstSettlementDateOfDeferredTrades", "typeOfPaymentDate", "equivalentLocalAmountAnnouncementDate", "typeOfEquivalentLocalAmountAnnouncementDate",
 		"equivalentForeignAmountAnnouncementDate", "typeOfEquivalentForeignAmountAnnouncementDate", "typeOfIssueDate", "pariPassuFromIssueDateIndicator", "lodgementOfSecurityHolderResolutionDate",
 		"typeOfLodgementOfSecurityHolderResolutionDate", "selectiveReturnOfCapitalIndicator", "specialAmountPerSecurityAnnouncementDate", "typeOfSpecialAmountPerSecurityAnnouncementDate", "scripAmountPerSecurityAnnouncementDate",
@@ -158,13 +159,11 @@ import javax.xml.bind.annotation.XmlType;
 public class DateAndAmountSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm")
 	protected Max350Text placeAndName;
 	/**
-	 * Unambiguous reference to the location where the supplementary data must
-	 * be inserted in the message instance. <br>
-	 * <br>
-	 * In the case of XML, this is expressed by a valid XPath.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,7 +192,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,10 +203,11 @@ public class DateAndAmountSD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FrstSttlmDtOfDfrrdTrds")
 	protected DateFormat22Choice firstSettlementDateOfDeferredTrades;
 	/**
-	 * First settlement of deferred settlement trades and normal T+3 trades.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -235,7 +235,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmFirstSettlementDateOfDeferredTrades = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FrstSttlmDtOfDfrrdTrds";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -247,10 +247,11 @@ public class DateAndAmountSD1 {
 			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TpOfPmtDt")
 	protected TypeOfDate1Code typeOfPaymentDate;
 	/**
-	 * Specifies whether the payment date is estimated or actual.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -279,7 +280,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAttribute mmTypeOfPaymentDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TpOfPmtDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -290,10 +291,11 @@ public class DateAndAmountSD1 {
 			simpleType_lazy = () -> TypeOfDate1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "EqvtLclAmtAnncmntDt")
 	protected DateFormat22Choice equivalentLocalAmountAnnouncementDate;
 	/**
-	 * Date when the equivalent amount in the local currency will be announced.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -321,7 +323,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmEquivalentLocalAmountAnnouncementDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "EqvtLclAmtAnncmntDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -333,11 +335,11 @@ public class DateAndAmountSD1 {
 			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TpOfEqvtLclAmtAnncmntDt")
 	protected TypeOfAmount4Code typeOfEquivalentLocalAmountAnnouncementDate;
 	/**
-	 * Specifies whether the Equivalent Local Amount Announcement Date is
-	 * estimated or actual.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -367,7 +369,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAttribute mmTypeOfEquivalentLocalAmountAnnouncementDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TpOfEqvtLclAmtAnncmntDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -378,11 +380,11 @@ public class DateAndAmountSD1 {
 			simpleType_lazy = () -> TypeOfAmount4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "EqvtFrgnAmtAnncmntDt")
 	protected DateFormat22Choice equivalentForeignAmountAnnouncementDate;
 	/**
-	 * Date when the equivalent amount in the foreign currency will be
-	 * announced.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -410,7 +412,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmEquivalentForeignAmountAnnouncementDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "EqvtFrgnAmtAnncmntDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -422,11 +424,11 @@ public class DateAndAmountSD1 {
 			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TpOfEqvtFrgnAmtAnncmntDt")
 	protected TypeOfAmount4Code typeOfEquivalentForeignAmountAnnouncementDate;
 	/**
-	 * Specifies whether the Equivalent Foreign Amount Announcement Date is
-	 * estimated or actual.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -456,7 +458,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAttribute mmTypeOfEquivalentForeignAmountAnnouncementDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TpOfEqvtFrgnAmtAnncmntDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -467,10 +469,11 @@ public class DateAndAmountSD1 {
 			simpleType_lazy = () -> TypeOfAmount4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TpOfIsseDt")
 	protected TypeOfDate1Code typeOfIssueDate;
 	/**
-	 * Specifies whether the securities issue date is estimated or actual.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -499,7 +502,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAttribute mmTypeOfIssueDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TpOfIsseDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -510,11 +513,11 @@ public class DateAndAmountSD1 {
 			simpleType_lazy = () -> TypeOfDate1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrpssFrIsseDtInd")
 	protected TrueFalseIndicator pariPassuFromIssueDateIndicator;
 	/**
-	 * Specifies whether the securities rank pari passu from issue date.<br>
-	 * TRUE means yes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -544,7 +547,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAttribute mmPariPassuFromIssueDateIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrpssFrIsseDtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -555,11 +558,11 @@ public class DateAndAmountSD1 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "LdgmntOfSctyHldrRsltnDt")
 	protected DateFormat22Choice lodgementOfSecurityHolderResolutionDate;
 	/**
-	 * Anticipated or actual date of lodgement of security holder resolution
-	 * approving the capital return with ASIC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -587,7 +590,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmLodgementOfSecurityHolderResolutionDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "LdgmntOfSctyHldrRsltnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -599,11 +602,11 @@ public class DateAndAmountSD1 {
 			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TpOfLdgmntOfSctyHldrRsltnDt")
 	protected TypeOfDate1Code typeOfLodgementOfSecurityHolderResolutionDate;
 	/**
-	 * Specifies whether the Lodgement Of Security Holder Resolution Date is
-	 * estimated or actual.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -633,7 +636,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAttribute mmTypeOfLodgementOfSecurityHolderResolutionDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TpOfLdgmntOfSctyHldrRsltnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -644,12 +647,11 @@ public class DateAndAmountSD1 {
 			simpleType_lazy = () -> TypeOfDate1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SelctvRtrOfCptlInd")
 	protected TrueFalseIndicator selectiveReturnOfCapitalIndicator;
 	/**
-	 * Indicator to determine if the capital return is a selective reduction of
-	 * capital.<br>
-	 * TRUE means yes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -679,7 +681,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAttribute mmSelectiveReturnOfCapitalIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "SelctvRtrOfCptlInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -690,10 +692,11 @@ public class DateAndAmountSD1 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "SpclAmtPerSctyAnncmntDt")
 	protected DateFormat22Choice specialAmountPerSecurityAnnouncementDate;
 	/**
-	 * Date or approximate date, that actual special dividend will be announced
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -721,7 +724,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmSpecialAmountPerSecurityAnnouncementDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "SpclAmtPerSctyAnncmntDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -733,11 +736,11 @@ public class DateAndAmountSD1 {
 			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TpOfSpclAmtPerSctyAnncmntDt")
 	protected TypeOfDateCode typeOfSpecialAmountPerSecurityAnnouncementDate;
 	/**
-	 * Specifies whether the Special Amount Per Security Announcement Date is
-	 * actual or estimated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -767,7 +770,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAttribute mmTypeOfSpecialAmountPerSecurityAnnouncementDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TpOfSpclAmtPerSctyAnncmntDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -778,11 +781,11 @@ public class DateAndAmountSD1 {
 			simpleType_lazy = () -> TypeOfDateCode.mmObject();
 		}
 	};
+	@XmlElement(name = "ScripAmtPerSctyAnncmntDt")
 	protected DateFormat22Choice scripAmountPerSecurityAnnouncementDate;
 	/**
-	 * Date or approximate date, that the actual scrip dividend will be
-	 * announced.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -810,7 +813,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmScripAmountPerSecurityAnnouncementDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "ScripAmtPerSctyAnncmntDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -822,11 +825,11 @@ public class DateAndAmountSD1 {
 			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TpOfScripAmtPerSctyAnncmntDt")
 	protected TypeOfDateCode typeOfScripAmountPerSecurityAnnouncementDate;
 	/**
-	 * Specifies whether the Special Amount Per Security Announcement Date is
-	 * actual or estimated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -856,7 +859,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAttribute mmTypeOfScripAmountPerSecurityAnnouncementDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TpOfScripAmtPerSctyAnncmntDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -867,11 +870,11 @@ public class DateAndAmountSD1 {
 			simpleType_lazy = () -> TypeOfDateCode.mmObject();
 		}
 	};
+	@XmlElement(name = "SplmtryAmtPerSctyAnncmntDt")
 	protected DateFormat22Choice supplementaryAmountPerSecurityAnnouncementDate;
 	/**
-	 * Date or approximate date, that the actual supplementary dividend will be
-	 * announced.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -899,7 +902,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmSupplementaryAmountPerSecurityAnnouncementDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryAmtPerSctyAnncmntDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -911,11 +914,11 @@ public class DateAndAmountSD1 {
 			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TpOfSplmtryAmtPerSctyAnncmntDt")
 	protected TypeOfDateCode typeOfSupplementaryAmountPerSecurityAnnouncementDate;
 	/**
-	 * Specifies whether the Suppmentary Amount Per Security Announcement Date
-	 * is actual or estimated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -945,7 +948,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAttribute mmTypeOfSupplementaryAmountPerSecurityAnnouncementDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TpOfSplmtryAmtPerSctyAnncmntDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -956,11 +959,11 @@ public class DateAndAmountSD1 {
 			simpleType_lazy = () -> TypeOfDateCode.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtPerSctyAnncmntDt")
 	protected DateFormat22Choice amountPerSecurityAnnouncementDate;
 	/**
-	 * Date or approximate date, that actual ordinary dividend will be
-	 * announced.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -988,7 +991,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmAmountPerSecurityAnnouncementDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AmtPerSctyAnncmntDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1000,11 +1003,11 @@ public class DateAndAmountSD1 {
 			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TpOfAmtPerSctyAnncmntDt")
 	protected TypeOfDateCode typeOfAmountPerSecurityAnnouncementDate;
 	/**
-	 * Specifies whether the ordinary Amount Per Security Announcement Date is
-	 * actual or estimated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1034,7 +1037,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAttribute mmTypeOfAmountPerSecurityAnnouncementDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TpOfAmtPerSctyAnncmntDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1045,10 +1048,11 @@ public class DateAndAmountSD1 {
 			simpleType_lazy = () -> TypeOfDateCode.mmObject();
 		}
 	};
+	@XmlElement(name = "TpOfGrssDvddRate")
 	protected TypeOfAmount4Code typeOfGrossDividendRate;
 	/**
-	 * Specifies whether the Gross Dividend Rate is estimated or actual.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1077,7 +1081,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAttribute mmTypeOfGrossDividendRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TpOfGrssDvddRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1088,11 +1092,11 @@ public class DateAndAmountSD1 {
 			simpleType_lazy = () -> TypeOfAmount4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "EndDtOfDvddPrd")
 	protected DateFormat22Choice endDateOfDividendPeriod;
 	/**
-	 * Date which marks the end of the period for which the dividend is to be
-	 * declared.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1120,7 +1124,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmEndDateOfDividendPeriod = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "EndDtOfDvddPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1132,10 +1136,11 @@ public class DateAndAmountSD1 {
 			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LastTradgDayForOrgnlScties")
 	protected DateFormat22Choice lastTradingDayForOriginalSecurities;
 	/**
-	 * Last day for trading in pre-reorganisation securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1161,7 +1166,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmLastTradingDayForOriginalSecurities = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "LastTradgDayForOrgnlScties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1173,11 +1178,11 @@ public class DateAndAmountSD1 {
 			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "EarlstPstCnsldtnNtfctnDt")
 	protected DateFormat22Choice earliestPostConsolidationNotificationDate;
 	/**
-	 * First day to send notices to security holders and register securities on
-	 * a post-reorganisation basis.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1205,7 +1210,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmEarliestPostConsolidationNotificationDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "EarlstPstCnsldtnNtfctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1217,11 +1222,11 @@ public class DateAndAmountSD1 {
 			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MinAmtForPrtcptn")
 	protected ActiveCurrencyAnd13DecimalAmount minimumAmountForParticipation;
 	/**
-	 * Minimum amount for a single securityholder participating in the plan, in
-	 * the primary currency. <br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1251,7 +1256,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAttribute mmMinimumAmountForParticipation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "MinAmtForPrtcptn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1262,11 +1267,11 @@ public class DateAndAmountSD1 {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxAmtForPrtcptn")
 	protected ActiveCurrencyAnd13DecimalAmount maximumAmountForParticipation;
 	/**
-	 * Maximum amount for a single security holder participating in the plan, in
-	 * the primary currency. <br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1296,7 +1301,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAttribute mmMaximumAmountForParticipation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAmtForPrtcptn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1307,11 +1312,11 @@ public class DateAndAmountSD1 {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RinvstmtDscntRate")
 	protected RateFormat6Choice reinvestmentDiscountRate;
 	/**
-	 * Percentage discount applied to the weighted average DRP/BSP/Plan issue
-	 * price calculated as part of the DRP/BSP/Plan.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1339,7 +1344,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmReinvestmentDiscountRate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RinvstmtDscntRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1351,10 +1356,11 @@ public class DateAndAmountSD1 {
 			type_lazy = () -> RateFormat6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RinvstmtPlanTp")
 	protected ReinvestmentPlan1Code reinvestmentPlanType;
 	/**
-	 * Indicates for whom this reinvestment plan applies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1382,7 +1388,7 @@ public class DateAndAmountSD1 {
 	 */
 	public static final MMMessageAttribute mmReinvestmentPlanType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndAmountSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RinvstmtPlanTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1397,16 +1403,21 @@ public class DateAndAmountSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DateAndAmountSD1.mmPlaceAndName, DateAndAmountSD1.mmFirstSettlementDateOfDeferredTrades, DateAndAmountSD1.mmTypeOfPaymentDate,
-						DateAndAmountSD1.mmEquivalentLocalAmountAnnouncementDate, DateAndAmountSD1.mmTypeOfEquivalentLocalAmountAnnouncementDate, DateAndAmountSD1.mmEquivalentForeignAmountAnnouncementDate,
-						DateAndAmountSD1.mmTypeOfEquivalentForeignAmountAnnouncementDate, DateAndAmountSD1.mmTypeOfIssueDate, DateAndAmountSD1.mmPariPassuFromIssueDateIndicator, DateAndAmountSD1.mmLodgementOfSecurityHolderResolutionDate,
-						DateAndAmountSD1.mmTypeOfLodgementOfSecurityHolderResolutionDate, DateAndAmountSD1.mmSelectiveReturnOfCapitalIndicator, DateAndAmountSD1.mmSpecialAmountPerSecurityAnnouncementDate,
-						DateAndAmountSD1.mmTypeOfSpecialAmountPerSecurityAnnouncementDate, DateAndAmountSD1.mmScripAmountPerSecurityAnnouncementDate, DateAndAmountSD1.mmTypeOfScripAmountPerSecurityAnnouncementDate,
-						DateAndAmountSD1.mmSupplementaryAmountPerSecurityAnnouncementDate, DateAndAmountSD1.mmTypeOfSupplementaryAmountPerSecurityAnnouncementDate, DateAndAmountSD1.mmAmountPerSecurityAnnouncementDate,
-						DateAndAmountSD1.mmTypeOfAmountPerSecurityAnnouncementDate, DateAndAmountSD1.mmTypeOfGrossDividendRate, DateAndAmountSD1.mmEndDateOfDividendPeriod, DateAndAmountSD1.mmLastTradingDayForOriginalSecurities,
-						DateAndAmountSD1.mmEarliestPostConsolidationNotificationDate, DateAndAmountSD1.mmMinimumAmountForParticipation, DateAndAmountSD1.mmMaximumAmountForParticipation, DateAndAmountSD1.mmReinvestmentDiscountRate,
-						DateAndAmountSD1.mmReinvestmentPlanType);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DateAndAmountSD1.mmPlaceAndName, com.tools20022.repository.msg.DateAndAmountSD1.mmFirstSettlementDateOfDeferredTrades,
+						com.tools20022.repository.msg.DateAndAmountSD1.mmTypeOfPaymentDate, com.tools20022.repository.msg.DateAndAmountSD1.mmEquivalentLocalAmountAnnouncementDate,
+						com.tools20022.repository.msg.DateAndAmountSD1.mmTypeOfEquivalentLocalAmountAnnouncementDate, com.tools20022.repository.msg.DateAndAmountSD1.mmEquivalentForeignAmountAnnouncementDate,
+						com.tools20022.repository.msg.DateAndAmountSD1.mmTypeOfEquivalentForeignAmountAnnouncementDate, com.tools20022.repository.msg.DateAndAmountSD1.mmTypeOfIssueDate,
+						com.tools20022.repository.msg.DateAndAmountSD1.mmPariPassuFromIssueDateIndicator, com.tools20022.repository.msg.DateAndAmountSD1.mmLodgementOfSecurityHolderResolutionDate,
+						com.tools20022.repository.msg.DateAndAmountSD1.mmTypeOfLodgementOfSecurityHolderResolutionDate, com.tools20022.repository.msg.DateAndAmountSD1.mmSelectiveReturnOfCapitalIndicator,
+						com.tools20022.repository.msg.DateAndAmountSD1.mmSpecialAmountPerSecurityAnnouncementDate, com.tools20022.repository.msg.DateAndAmountSD1.mmTypeOfSpecialAmountPerSecurityAnnouncementDate,
+						com.tools20022.repository.msg.DateAndAmountSD1.mmScripAmountPerSecurityAnnouncementDate, com.tools20022.repository.msg.DateAndAmountSD1.mmTypeOfScripAmountPerSecurityAnnouncementDate,
+						com.tools20022.repository.msg.DateAndAmountSD1.mmSupplementaryAmountPerSecurityAnnouncementDate, com.tools20022.repository.msg.DateAndAmountSD1.mmTypeOfSupplementaryAmountPerSecurityAnnouncementDate,
+						com.tools20022.repository.msg.DateAndAmountSD1.mmAmountPerSecurityAnnouncementDate, com.tools20022.repository.msg.DateAndAmountSD1.mmTypeOfAmountPerSecurityAnnouncementDate,
+						com.tools20022.repository.msg.DateAndAmountSD1.mmTypeOfGrossDividendRate, com.tools20022.repository.msg.DateAndAmountSD1.mmEndDateOfDividendPeriod,
+						com.tools20022.repository.msg.DateAndAmountSD1.mmLastTradingDayForOriginalSecurities, com.tools20022.repository.msg.DateAndAmountSD1.mmEarliestPostConsolidationNotificationDate,
+						com.tools20022.repository.msg.DateAndAmountSD1.mmMinimumAmountForParticipation, com.tools20022.repository.msg.DateAndAmountSD1.mmMaximumAmountForParticipation,
+						com.tools20022.repository.msg.DateAndAmountSD1.mmReinvestmentDiscountRate, com.tools20022.repository.msg.DateAndAmountSD1.mmReinvestmentPlanType);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateAndAmountSD1";
 				definition = "Extra dates, amounts and related indicators.";
@@ -1415,255 +1426,255 @@ public class DateAndAmountSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm")
-	public Max350Text getPlaceAndName() {
-		return placeAndName;
+	public Optional<Max350Text> getPlaceAndName() {
+		return placeAndName == null ? Optional.empty() : Optional.of(placeAndName);
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
+	public DateAndAmountSD1 setPlaceAndName(Max350Text placeAndName) {
 		this.placeAndName = placeAndName;
+		return this;
 	}
 
-	@XmlElement(name = "FrstSttlmDtOfDfrrdTrds")
-	public DateFormat22Choice getFirstSettlementDateOfDeferredTrades() {
-		return firstSettlementDateOfDeferredTrades;
+	public Optional<DateFormat22Choice> getFirstSettlementDateOfDeferredTrades() {
+		return firstSettlementDateOfDeferredTrades == null ? Optional.empty() : Optional.of(firstSettlementDateOfDeferredTrades);
 	}
 
-	public void setFirstSettlementDateOfDeferredTrades(DateFormat22Choice firstSettlementDateOfDeferredTrades) {
+	public DateAndAmountSD1 setFirstSettlementDateOfDeferredTrades(DateFormat22Choice firstSettlementDateOfDeferredTrades) {
 		this.firstSettlementDateOfDeferredTrades = firstSettlementDateOfDeferredTrades;
+		return this;
 	}
 
-	@XmlElement(name = "TpOfPmtDt")
-	public TypeOfDate1Code getTypeOfPaymentDate() {
-		return typeOfPaymentDate;
+	public Optional<TypeOfDate1Code> getTypeOfPaymentDate() {
+		return typeOfPaymentDate == null ? Optional.empty() : Optional.of(typeOfPaymentDate);
 	}
 
-	public void setTypeOfPaymentDate(TypeOfDate1Code typeOfPaymentDate) {
+	public DateAndAmountSD1 setTypeOfPaymentDate(TypeOfDate1Code typeOfPaymentDate) {
 		this.typeOfPaymentDate = typeOfPaymentDate;
+		return this;
 	}
 
-	@XmlElement(name = "EqvtLclAmtAnncmntDt")
-	public DateFormat22Choice getEquivalentLocalAmountAnnouncementDate() {
-		return equivalentLocalAmountAnnouncementDate;
+	public Optional<DateFormat22Choice> getEquivalentLocalAmountAnnouncementDate() {
+		return equivalentLocalAmountAnnouncementDate == null ? Optional.empty() : Optional.of(equivalentLocalAmountAnnouncementDate);
 	}
 
-	public void setEquivalentLocalAmountAnnouncementDate(DateFormat22Choice equivalentLocalAmountAnnouncementDate) {
+	public DateAndAmountSD1 setEquivalentLocalAmountAnnouncementDate(DateFormat22Choice equivalentLocalAmountAnnouncementDate) {
 		this.equivalentLocalAmountAnnouncementDate = equivalentLocalAmountAnnouncementDate;
+		return this;
 	}
 
-	@XmlElement(name = "TpOfEqvtLclAmtAnncmntDt")
-	public TypeOfAmount4Code getTypeOfEquivalentLocalAmountAnnouncementDate() {
-		return typeOfEquivalentLocalAmountAnnouncementDate;
+	public Optional<TypeOfAmount4Code> getTypeOfEquivalentLocalAmountAnnouncementDate() {
+		return typeOfEquivalentLocalAmountAnnouncementDate == null ? Optional.empty() : Optional.of(typeOfEquivalentLocalAmountAnnouncementDate);
 	}
 
-	public void setTypeOfEquivalentLocalAmountAnnouncementDate(TypeOfAmount4Code typeOfEquivalentLocalAmountAnnouncementDate) {
+	public DateAndAmountSD1 setTypeOfEquivalentLocalAmountAnnouncementDate(TypeOfAmount4Code typeOfEquivalentLocalAmountAnnouncementDate) {
 		this.typeOfEquivalentLocalAmountAnnouncementDate = typeOfEquivalentLocalAmountAnnouncementDate;
+		return this;
 	}
 
-	@XmlElement(name = "EqvtFrgnAmtAnncmntDt")
-	public DateFormat22Choice getEquivalentForeignAmountAnnouncementDate() {
-		return equivalentForeignAmountAnnouncementDate;
+	public Optional<DateFormat22Choice> getEquivalentForeignAmountAnnouncementDate() {
+		return equivalentForeignAmountAnnouncementDate == null ? Optional.empty() : Optional.of(equivalentForeignAmountAnnouncementDate);
 	}
 
-	public void setEquivalentForeignAmountAnnouncementDate(DateFormat22Choice equivalentForeignAmountAnnouncementDate) {
+	public DateAndAmountSD1 setEquivalentForeignAmountAnnouncementDate(DateFormat22Choice equivalentForeignAmountAnnouncementDate) {
 		this.equivalentForeignAmountAnnouncementDate = equivalentForeignAmountAnnouncementDate;
+		return this;
 	}
 
-	@XmlElement(name = "TpOfEqvtFrgnAmtAnncmntDt")
-	public TypeOfAmount4Code getTypeOfEquivalentForeignAmountAnnouncementDate() {
-		return typeOfEquivalentForeignAmountAnnouncementDate;
+	public Optional<TypeOfAmount4Code> getTypeOfEquivalentForeignAmountAnnouncementDate() {
+		return typeOfEquivalentForeignAmountAnnouncementDate == null ? Optional.empty() : Optional.of(typeOfEquivalentForeignAmountAnnouncementDate);
 	}
 
-	public void setTypeOfEquivalentForeignAmountAnnouncementDate(TypeOfAmount4Code typeOfEquivalentForeignAmountAnnouncementDate) {
+	public DateAndAmountSD1 setTypeOfEquivalentForeignAmountAnnouncementDate(TypeOfAmount4Code typeOfEquivalentForeignAmountAnnouncementDate) {
 		this.typeOfEquivalentForeignAmountAnnouncementDate = typeOfEquivalentForeignAmountAnnouncementDate;
+		return this;
 	}
 
-	@XmlElement(name = "TpOfIsseDt")
-	public TypeOfDate1Code getTypeOfIssueDate() {
-		return typeOfIssueDate;
+	public Optional<TypeOfDate1Code> getTypeOfIssueDate() {
+		return typeOfIssueDate == null ? Optional.empty() : Optional.of(typeOfIssueDate);
 	}
 
-	public void setTypeOfIssueDate(TypeOfDate1Code typeOfIssueDate) {
+	public DateAndAmountSD1 setTypeOfIssueDate(TypeOfDate1Code typeOfIssueDate) {
 		this.typeOfIssueDate = typeOfIssueDate;
+		return this;
 	}
 
-	@XmlElement(name = "PrpssFrIsseDtInd")
-	public TrueFalseIndicator getPariPassuFromIssueDateIndicator() {
-		return pariPassuFromIssueDateIndicator;
+	public Optional<TrueFalseIndicator> getPariPassuFromIssueDateIndicator() {
+		return pariPassuFromIssueDateIndicator == null ? Optional.empty() : Optional.of(pariPassuFromIssueDateIndicator);
 	}
 
-	public void setPariPassuFromIssueDateIndicator(TrueFalseIndicator pariPassuFromIssueDateIndicator) {
+	public DateAndAmountSD1 setPariPassuFromIssueDateIndicator(TrueFalseIndicator pariPassuFromIssueDateIndicator) {
 		this.pariPassuFromIssueDateIndicator = pariPassuFromIssueDateIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "LdgmntOfSctyHldrRsltnDt")
-	public DateFormat22Choice getLodgementOfSecurityHolderResolutionDate() {
-		return lodgementOfSecurityHolderResolutionDate;
+	public Optional<DateFormat22Choice> getLodgementOfSecurityHolderResolutionDate() {
+		return lodgementOfSecurityHolderResolutionDate == null ? Optional.empty() : Optional.of(lodgementOfSecurityHolderResolutionDate);
 	}
 
-	public void setLodgementOfSecurityHolderResolutionDate(DateFormat22Choice lodgementOfSecurityHolderResolutionDate) {
+	public DateAndAmountSD1 setLodgementOfSecurityHolderResolutionDate(DateFormat22Choice lodgementOfSecurityHolderResolutionDate) {
 		this.lodgementOfSecurityHolderResolutionDate = lodgementOfSecurityHolderResolutionDate;
+		return this;
 	}
 
-	@XmlElement(name = "TpOfLdgmntOfSctyHldrRsltnDt")
-	public TypeOfDate1Code getTypeOfLodgementOfSecurityHolderResolutionDate() {
-		return typeOfLodgementOfSecurityHolderResolutionDate;
+	public Optional<TypeOfDate1Code> getTypeOfLodgementOfSecurityHolderResolutionDate() {
+		return typeOfLodgementOfSecurityHolderResolutionDate == null ? Optional.empty() : Optional.of(typeOfLodgementOfSecurityHolderResolutionDate);
 	}
 
-	public void setTypeOfLodgementOfSecurityHolderResolutionDate(TypeOfDate1Code typeOfLodgementOfSecurityHolderResolutionDate) {
+	public DateAndAmountSD1 setTypeOfLodgementOfSecurityHolderResolutionDate(TypeOfDate1Code typeOfLodgementOfSecurityHolderResolutionDate) {
 		this.typeOfLodgementOfSecurityHolderResolutionDate = typeOfLodgementOfSecurityHolderResolutionDate;
+		return this;
 	}
 
-	@XmlElement(name = "SelctvRtrOfCptlInd")
-	public TrueFalseIndicator getSelectiveReturnOfCapitalIndicator() {
-		return selectiveReturnOfCapitalIndicator;
+	public Optional<TrueFalseIndicator> getSelectiveReturnOfCapitalIndicator() {
+		return selectiveReturnOfCapitalIndicator == null ? Optional.empty() : Optional.of(selectiveReturnOfCapitalIndicator);
 	}
 
-	public void setSelectiveReturnOfCapitalIndicator(TrueFalseIndicator selectiveReturnOfCapitalIndicator) {
+	public DateAndAmountSD1 setSelectiveReturnOfCapitalIndicator(TrueFalseIndicator selectiveReturnOfCapitalIndicator) {
 		this.selectiveReturnOfCapitalIndicator = selectiveReturnOfCapitalIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "SpclAmtPerSctyAnncmntDt")
-	public DateFormat22Choice getSpecialAmountPerSecurityAnnouncementDate() {
-		return specialAmountPerSecurityAnnouncementDate;
+	public Optional<DateFormat22Choice> getSpecialAmountPerSecurityAnnouncementDate() {
+		return specialAmountPerSecurityAnnouncementDate == null ? Optional.empty() : Optional.of(specialAmountPerSecurityAnnouncementDate);
 	}
 
-	public void setSpecialAmountPerSecurityAnnouncementDate(DateFormat22Choice specialAmountPerSecurityAnnouncementDate) {
+	public DateAndAmountSD1 setSpecialAmountPerSecurityAnnouncementDate(DateFormat22Choice specialAmountPerSecurityAnnouncementDate) {
 		this.specialAmountPerSecurityAnnouncementDate = specialAmountPerSecurityAnnouncementDate;
+		return this;
 	}
 
-	@XmlElement(name = "TpOfSpclAmtPerSctyAnncmntDt")
-	public TypeOfDateCode getTypeOfSpecialAmountPerSecurityAnnouncementDate() {
-		return typeOfSpecialAmountPerSecurityAnnouncementDate;
+	public Optional<TypeOfDateCode> getTypeOfSpecialAmountPerSecurityAnnouncementDate() {
+		return typeOfSpecialAmountPerSecurityAnnouncementDate == null ? Optional.empty() : Optional.of(typeOfSpecialAmountPerSecurityAnnouncementDate);
 	}
 
-	public void setTypeOfSpecialAmountPerSecurityAnnouncementDate(TypeOfDateCode typeOfSpecialAmountPerSecurityAnnouncementDate) {
+	public DateAndAmountSD1 setTypeOfSpecialAmountPerSecurityAnnouncementDate(TypeOfDateCode typeOfSpecialAmountPerSecurityAnnouncementDate) {
 		this.typeOfSpecialAmountPerSecurityAnnouncementDate = typeOfSpecialAmountPerSecurityAnnouncementDate;
+		return this;
 	}
 
-	@XmlElement(name = "ScripAmtPerSctyAnncmntDt")
-	public DateFormat22Choice getScripAmountPerSecurityAnnouncementDate() {
-		return scripAmountPerSecurityAnnouncementDate;
+	public Optional<DateFormat22Choice> getScripAmountPerSecurityAnnouncementDate() {
+		return scripAmountPerSecurityAnnouncementDate == null ? Optional.empty() : Optional.of(scripAmountPerSecurityAnnouncementDate);
 	}
 
-	public void setScripAmountPerSecurityAnnouncementDate(DateFormat22Choice scripAmountPerSecurityAnnouncementDate) {
+	public DateAndAmountSD1 setScripAmountPerSecurityAnnouncementDate(DateFormat22Choice scripAmountPerSecurityAnnouncementDate) {
 		this.scripAmountPerSecurityAnnouncementDate = scripAmountPerSecurityAnnouncementDate;
+		return this;
 	}
 
-	@XmlElement(name = "TpOfScripAmtPerSctyAnncmntDt")
-	public TypeOfDateCode getTypeOfScripAmountPerSecurityAnnouncementDate() {
-		return typeOfScripAmountPerSecurityAnnouncementDate;
+	public Optional<TypeOfDateCode> getTypeOfScripAmountPerSecurityAnnouncementDate() {
+		return typeOfScripAmountPerSecurityAnnouncementDate == null ? Optional.empty() : Optional.of(typeOfScripAmountPerSecurityAnnouncementDate);
 	}
 
-	public void setTypeOfScripAmountPerSecurityAnnouncementDate(TypeOfDateCode typeOfScripAmountPerSecurityAnnouncementDate) {
+	public DateAndAmountSD1 setTypeOfScripAmountPerSecurityAnnouncementDate(TypeOfDateCode typeOfScripAmountPerSecurityAnnouncementDate) {
 		this.typeOfScripAmountPerSecurityAnnouncementDate = typeOfScripAmountPerSecurityAnnouncementDate;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryAmtPerSctyAnncmntDt")
-	public DateFormat22Choice getSupplementaryAmountPerSecurityAnnouncementDate() {
-		return supplementaryAmountPerSecurityAnnouncementDate;
+	public Optional<DateFormat22Choice> getSupplementaryAmountPerSecurityAnnouncementDate() {
+		return supplementaryAmountPerSecurityAnnouncementDate == null ? Optional.empty() : Optional.of(supplementaryAmountPerSecurityAnnouncementDate);
 	}
 
-	public void setSupplementaryAmountPerSecurityAnnouncementDate(DateFormat22Choice supplementaryAmountPerSecurityAnnouncementDate) {
+	public DateAndAmountSD1 setSupplementaryAmountPerSecurityAnnouncementDate(DateFormat22Choice supplementaryAmountPerSecurityAnnouncementDate) {
 		this.supplementaryAmountPerSecurityAnnouncementDate = supplementaryAmountPerSecurityAnnouncementDate;
+		return this;
 	}
 
-	@XmlElement(name = "TpOfSplmtryAmtPerSctyAnncmntDt")
-	public TypeOfDateCode getTypeOfSupplementaryAmountPerSecurityAnnouncementDate() {
-		return typeOfSupplementaryAmountPerSecurityAnnouncementDate;
+	public Optional<TypeOfDateCode> getTypeOfSupplementaryAmountPerSecurityAnnouncementDate() {
+		return typeOfSupplementaryAmountPerSecurityAnnouncementDate == null ? Optional.empty() : Optional.of(typeOfSupplementaryAmountPerSecurityAnnouncementDate);
 	}
 
-	public void setTypeOfSupplementaryAmountPerSecurityAnnouncementDate(TypeOfDateCode typeOfSupplementaryAmountPerSecurityAnnouncementDate) {
+	public DateAndAmountSD1 setTypeOfSupplementaryAmountPerSecurityAnnouncementDate(TypeOfDateCode typeOfSupplementaryAmountPerSecurityAnnouncementDate) {
 		this.typeOfSupplementaryAmountPerSecurityAnnouncementDate = typeOfSupplementaryAmountPerSecurityAnnouncementDate;
+		return this;
 	}
 
-	@XmlElement(name = "AmtPerSctyAnncmntDt")
-	public DateFormat22Choice getAmountPerSecurityAnnouncementDate() {
-		return amountPerSecurityAnnouncementDate;
+	public Optional<DateFormat22Choice> getAmountPerSecurityAnnouncementDate() {
+		return amountPerSecurityAnnouncementDate == null ? Optional.empty() : Optional.of(amountPerSecurityAnnouncementDate);
 	}
 
-	public void setAmountPerSecurityAnnouncementDate(DateFormat22Choice amountPerSecurityAnnouncementDate) {
+	public DateAndAmountSD1 setAmountPerSecurityAnnouncementDate(DateFormat22Choice amountPerSecurityAnnouncementDate) {
 		this.amountPerSecurityAnnouncementDate = amountPerSecurityAnnouncementDate;
+		return this;
 	}
 
-	@XmlElement(name = "TpOfAmtPerSctyAnncmntDt")
-	public TypeOfDateCode getTypeOfAmountPerSecurityAnnouncementDate() {
-		return typeOfAmountPerSecurityAnnouncementDate;
+	public Optional<TypeOfDateCode> getTypeOfAmountPerSecurityAnnouncementDate() {
+		return typeOfAmountPerSecurityAnnouncementDate == null ? Optional.empty() : Optional.of(typeOfAmountPerSecurityAnnouncementDate);
 	}
 
-	public void setTypeOfAmountPerSecurityAnnouncementDate(TypeOfDateCode typeOfAmountPerSecurityAnnouncementDate) {
+	public DateAndAmountSD1 setTypeOfAmountPerSecurityAnnouncementDate(TypeOfDateCode typeOfAmountPerSecurityAnnouncementDate) {
 		this.typeOfAmountPerSecurityAnnouncementDate = typeOfAmountPerSecurityAnnouncementDate;
+		return this;
 	}
 
-	@XmlElement(name = "TpOfGrssDvddRate")
-	public TypeOfAmount4Code getTypeOfGrossDividendRate() {
-		return typeOfGrossDividendRate;
+	public Optional<TypeOfAmount4Code> getTypeOfGrossDividendRate() {
+		return typeOfGrossDividendRate == null ? Optional.empty() : Optional.of(typeOfGrossDividendRate);
 	}
 
-	public void setTypeOfGrossDividendRate(TypeOfAmount4Code typeOfGrossDividendRate) {
+	public DateAndAmountSD1 setTypeOfGrossDividendRate(TypeOfAmount4Code typeOfGrossDividendRate) {
 		this.typeOfGrossDividendRate = typeOfGrossDividendRate;
+		return this;
 	}
 
-	@XmlElement(name = "EndDtOfDvddPrd")
-	public DateFormat22Choice getEndDateOfDividendPeriod() {
-		return endDateOfDividendPeriod;
+	public Optional<DateFormat22Choice> getEndDateOfDividendPeriod() {
+		return endDateOfDividendPeriod == null ? Optional.empty() : Optional.of(endDateOfDividendPeriod);
 	}
 
-	public void setEndDateOfDividendPeriod(DateFormat22Choice endDateOfDividendPeriod) {
+	public DateAndAmountSD1 setEndDateOfDividendPeriod(DateFormat22Choice endDateOfDividendPeriod) {
 		this.endDateOfDividendPeriod = endDateOfDividendPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "LastTradgDayForOrgnlScties")
-	public DateFormat22Choice getLastTradingDayForOriginalSecurities() {
-		return lastTradingDayForOriginalSecurities;
+	public Optional<DateFormat22Choice> getLastTradingDayForOriginalSecurities() {
+		return lastTradingDayForOriginalSecurities == null ? Optional.empty() : Optional.of(lastTradingDayForOriginalSecurities);
 	}
 
-	public void setLastTradingDayForOriginalSecurities(DateFormat22Choice lastTradingDayForOriginalSecurities) {
+	public DateAndAmountSD1 setLastTradingDayForOriginalSecurities(DateFormat22Choice lastTradingDayForOriginalSecurities) {
 		this.lastTradingDayForOriginalSecurities = lastTradingDayForOriginalSecurities;
+		return this;
 	}
 
-	@XmlElement(name = "EarlstPstCnsldtnNtfctnDt")
-	public DateFormat22Choice getEarliestPostConsolidationNotificationDate() {
-		return earliestPostConsolidationNotificationDate;
+	public Optional<DateFormat22Choice> getEarliestPostConsolidationNotificationDate() {
+		return earliestPostConsolidationNotificationDate == null ? Optional.empty() : Optional.of(earliestPostConsolidationNotificationDate);
 	}
 
-	public void setEarliestPostConsolidationNotificationDate(DateFormat22Choice earliestPostConsolidationNotificationDate) {
+	public DateAndAmountSD1 setEarliestPostConsolidationNotificationDate(DateFormat22Choice earliestPostConsolidationNotificationDate) {
 		this.earliestPostConsolidationNotificationDate = earliestPostConsolidationNotificationDate;
+		return this;
 	}
 
-	@XmlElement(name = "MinAmtForPrtcptn")
-	public ActiveCurrencyAnd13DecimalAmount getMinimumAmountForParticipation() {
-		return minimumAmountForParticipation;
+	public Optional<ActiveCurrencyAnd13DecimalAmount> getMinimumAmountForParticipation() {
+		return minimumAmountForParticipation == null ? Optional.empty() : Optional.of(minimumAmountForParticipation);
 	}
 
-	public void setMinimumAmountForParticipation(ActiveCurrencyAnd13DecimalAmount minimumAmountForParticipation) {
+	public DateAndAmountSD1 setMinimumAmountForParticipation(ActiveCurrencyAnd13DecimalAmount minimumAmountForParticipation) {
 		this.minimumAmountForParticipation = minimumAmountForParticipation;
+		return this;
 	}
 
-	@XmlElement(name = "MaxAmtForPrtcptn")
-	public ActiveCurrencyAnd13DecimalAmount getMaximumAmountForParticipation() {
-		return maximumAmountForParticipation;
+	public Optional<ActiveCurrencyAnd13DecimalAmount> getMaximumAmountForParticipation() {
+		return maximumAmountForParticipation == null ? Optional.empty() : Optional.of(maximumAmountForParticipation);
 	}
 
-	public void setMaximumAmountForParticipation(ActiveCurrencyAnd13DecimalAmount maximumAmountForParticipation) {
+	public DateAndAmountSD1 setMaximumAmountForParticipation(ActiveCurrencyAnd13DecimalAmount maximumAmountForParticipation) {
 		this.maximumAmountForParticipation = maximumAmountForParticipation;
+		return this;
 	}
 
-	@XmlElement(name = "RinvstmtDscntRate")
-	public RateFormat6Choice getReinvestmentDiscountRate() {
-		return reinvestmentDiscountRate;
+	public Optional<RateFormat6Choice> getReinvestmentDiscountRate() {
+		return reinvestmentDiscountRate == null ? Optional.empty() : Optional.of(reinvestmentDiscountRate);
 	}
 
-	public void setReinvestmentDiscountRate(RateFormat6Choice reinvestmentDiscountRate) {
+	public DateAndAmountSD1 setReinvestmentDiscountRate(RateFormat6Choice reinvestmentDiscountRate) {
 		this.reinvestmentDiscountRate = reinvestmentDiscountRate;
+		return this;
 	}
 
-	@XmlElement(name = "RinvstmtPlanTp")
-	public ReinvestmentPlan1Code getReinvestmentPlanType() {
-		return reinvestmentPlanType;
+	public Optional<ReinvestmentPlan1Code> getReinvestmentPlanType() {
+		return reinvestmentPlanType == null ? Optional.empty() : Optional.of(reinvestmentPlanType);
 	}
 
-	public void setReinvestmentPlanType(ReinvestmentPlan1Code reinvestmentPlanType) {
+	public DateAndAmountSD1 setReinvestmentPlanType(ReinvestmentPlan1Code reinvestmentPlanType) {
 		this.reinvestmentPlanType = reinvestmentPlanType;
+		return this;
 	}
 }

@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,20 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BusinessApplicationHeader3", propOrder = {"from", "to", "businessMessageIdentifier", "messageDefinitionIdentifier", "businessService", "creationDate"})
 public class BusinessApplicationHeader3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Fr", required = true)
 	protected Party29Choice from;
 	/**
-	 * The sending MessagingEndpoint that has created this Business Message for
-	 * the receiving MessagingEndpoint that will process this Business Message.<br>
-	 * <br>
-	 * Note the sending MessagingEndpoint might be different from the sending
-	 * address potentially contained in the transport header (as defined in the
-	 * transport layer).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -120,7 +118,7 @@ public class BusinessApplicationHeader3 {
 	 */
 	public static final MMMessageAssociationEnd mmFrom = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BusinessApplicationHeader3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessApplicationHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "Fr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,15 +130,11 @@ public class BusinessApplicationHeader3 {
 			type_lazy = () -> Party29Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "To", required = true)
 	protected Party29Choice to;
 	/**
-	 * The MessagingEndpoint designated by the sending MessagingEndpoint to be
-	 * the recipient who will ultimately process this Business Message.<br>
-	 * <br>
-	 * Note the receiving MessagingEndpoint might be different from the
-	 * receiving address potentially contained in the transport header (as
-	 * defined in the transport layer).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -168,7 +162,7 @@ public class BusinessApplicationHeader3 {
 	 */
 	public static final MMMessageAssociationEnd mmTo = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BusinessApplicationHeader3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessApplicationHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "To";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,11 +174,11 @@ public class BusinessApplicationHeader3 {
 			type_lazy = () -> Party29Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "BizMsgIdr", required = true)
 	protected Max35Text businessMessageIdentifier;
 	/**
-	 * Unambiguously identifies the Business Message to the MessagingEndpoint
-	 * that has created the Business Message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,7 +207,7 @@ public class BusinessApplicationHeader3 {
 	 */
 	public static final MMMessageAttribute mmBusinessMessageIdentifier = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BusinessApplicationHeader3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessApplicationHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "BizMsgIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,13 +218,11 @@ public class BusinessApplicationHeader3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgDefIdr", required = true)
 	protected Max35Text messageDefinitionIdentifier;
 	/**
-	 * Contains the MessageIdentifier that defines the BusinessMessage.<br>
-	 * It must contain a MessageIdentifier published on the ISO 20022 website.<br>
-	 * <br>
-	 * example camt.001.001.03
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,7 +251,7 @@ public class BusinessApplicationHeader3 {
 	 */
 	public static final MMMessageAttribute mmMessageDefinitionIdentifier = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BusinessApplicationHeader3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessApplicationHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "MsgDefIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,14 +262,11 @@ public class BusinessApplicationHeader3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BizSvc")
 	protected Max35Text businessService;
 	/**
-	 * Specifies the business service agreed between the two MessagingEndpoints
-	 * under which rules this Business Message is exchanged.<br>
-	 * To be used when there is a choice of processing services or processing
-	 * service levels.<br>
-	 * Example: E&amp;I
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -306,7 +295,7 @@ public class BusinessApplicationHeader3 {
 	 */
 	public static final MMMessageAttribute mmBusinessService = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BusinessApplicationHeader3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessApplicationHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "BizSvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -317,11 +306,11 @@ public class BusinessApplicationHeader3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDt", required = true)
 	protected ISONormalisedDateTime creationDate;
 	/**
-	 * Date and time when this Business Message (header) was created.<br>
-	 * Note Times must be normalized, using the "Z" annotation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -351,7 +340,7 @@ public class BusinessApplicationHeader3 {
 	 */
 	public static final MMMessageAttribute mmCreationDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BusinessApplicationHeader3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessApplicationHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "CreDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -366,9 +355,10 @@ public class BusinessApplicationHeader3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BusinessApplicationHeader3.mmFrom, BusinessApplicationHeader3.mmTo, BusinessApplicationHeader3.mmBusinessMessageIdentifier, BusinessApplicationHeader3.mmMessageDefinitionIdentifier,
-						BusinessApplicationHeader3.mmBusinessService, BusinessApplicationHeader3.mmCreationDate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessApplicationHeader3.mmFrom, com.tools20022.repository.msg.BusinessApplicationHeader3.mmTo,
+						com.tools20022.repository.msg.BusinessApplicationHeader3.mmBusinessMessageIdentifier, com.tools20022.repository.msg.BusinessApplicationHeader3.mmMessageDefinitionIdentifier,
+						com.tools20022.repository.msg.BusinessApplicationHeader3.mmBusinessService, com.tools20022.repository.msg.BusinessApplicationHeader3.mmCreationDate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessApplicationHeader3";
 				definition = "Specifies specific data from the Business Application Header of the Business Message.";
@@ -377,57 +367,57 @@ public class BusinessApplicationHeader3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Fr", required = true)
 	public Party29Choice getFrom() {
 		return from;
 	}
 
-	public void setFrom(Party29Choice from) {
-		this.from = from;
+	public BusinessApplicationHeader3 setFrom(Party29Choice from) {
+		this.from = Objects.requireNonNull(from);
+		return this;
 	}
 
-	@XmlElement(name = "To", required = true)
 	public Party29Choice getTo() {
 		return to;
 	}
 
-	public void setTo(Party29Choice to) {
-		this.to = to;
+	public BusinessApplicationHeader3 setTo(Party29Choice to) {
+		this.to = Objects.requireNonNull(to);
+		return this;
 	}
 
-	@XmlElement(name = "BizMsgIdr", required = true)
 	public Max35Text getBusinessMessageIdentifier() {
 		return businessMessageIdentifier;
 	}
 
-	public void setBusinessMessageIdentifier(Max35Text businessMessageIdentifier) {
-		this.businessMessageIdentifier = businessMessageIdentifier;
+	public BusinessApplicationHeader3 setBusinessMessageIdentifier(Max35Text businessMessageIdentifier) {
+		this.businessMessageIdentifier = Objects.requireNonNull(businessMessageIdentifier);
+		return this;
 	}
 
-	@XmlElement(name = "MsgDefIdr", required = true)
 	public Max35Text getMessageDefinitionIdentifier() {
 		return messageDefinitionIdentifier;
 	}
 
-	public void setMessageDefinitionIdentifier(Max35Text messageDefinitionIdentifier) {
-		this.messageDefinitionIdentifier = messageDefinitionIdentifier;
+	public BusinessApplicationHeader3 setMessageDefinitionIdentifier(Max35Text messageDefinitionIdentifier) {
+		this.messageDefinitionIdentifier = Objects.requireNonNull(messageDefinitionIdentifier);
+		return this;
 	}
 
-	@XmlElement(name = "BizSvc")
-	public Max35Text getBusinessService() {
-		return businessService;
+	public Optional<Max35Text> getBusinessService() {
+		return businessService == null ? Optional.empty() : Optional.of(businessService);
 	}
 
-	public void setBusinessService(Max35Text businessService) {
+	public BusinessApplicationHeader3 setBusinessService(Max35Text businessService) {
 		this.businessService = businessService;
+		return this;
 	}
 
-	@XmlElement(name = "CreDt", required = true)
 	public ISONormalisedDateTime getCreationDate() {
 		return creationDate;
 	}
 
-	public void setCreationDate(ISONormalisedDateTime creationDate) {
-		this.creationDate = creationDate;
+	public BusinessApplicationHeader3 setCreationDate(ISONormalisedDateTime creationDate) {
+		this.creationDate = Objects.requireNonNull(creationDate);
+		return this;
 	}
 }

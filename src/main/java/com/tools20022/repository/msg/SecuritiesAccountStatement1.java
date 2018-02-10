@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides system date for all of the changes occurred for an entity."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesAccountStatement1", propOrder = {"systemDate", "change"})
 public class SecuritiesAccountStatement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SysDt", required = true)
 	protected ISODate systemDate;
 	/**
-	 * Date for which the statement is valid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,7 +102,7 @@ public class SecuritiesAccountStatement1 {
 	 */
 	public static final MMMessageAttribute mmSystemDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountStatement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "SysDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,11 +113,11 @@ public class SecuritiesAccountStatement1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "Chng")
 	protected List<com.tools20022.repository.msg.SecuritiesAccountReferenceDataChange1> change;
 	/**
-	 * Provides information on the actual change occurred to a securities
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -143,7 +146,7 @@ public class SecuritiesAccountStatement1 {
 	 */
 	public static final MMMessageAssociationEnd mmChange = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountStatement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "Chng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,8 +161,8 @@ public class SecuritiesAccountStatement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountStatement1.mmSystemDate, SecuritiesAccountStatement1.mmChange);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountStatement1.mmSystemDate, com.tools20022.repository.msg.SecuritiesAccountStatement1.mmChange);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountStatement1";
 				definition = "Provides system date for all of the changes occurred for an entity.";
@@ -168,21 +171,21 @@ public class SecuritiesAccountStatement1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SysDt", required = true)
 	public ISODate getSystemDate() {
 		return systemDate;
 	}
 
-	public void setSystemDate(ISODate systemDate) {
-		this.systemDate = systemDate;
+	public SecuritiesAccountStatement1 setSystemDate(ISODate systemDate) {
+		this.systemDate = Objects.requireNonNull(systemDate);
+		return this;
 	}
 
-	@XmlElement(name = "Chng")
 	public List<SecuritiesAccountReferenceDataChange1> getChange() {
-		return change;
+		return change == null ? change = new ArrayList<>() : change;
 	}
 
-	public void setChange(List<com.tools20022.repository.msg.SecuritiesAccountReferenceDataChange1> change) {
-		this.change = change;
+	public SecuritiesAccountStatement1 setChange(List<com.tools20022.repository.msg.SecuritiesAccountReferenceDataChange1> change) {
+		this.change = Objects.requireNonNull(change);
+		return this;
 	}
 }

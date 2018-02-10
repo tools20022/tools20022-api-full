@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Association of the TM identifier and the MTM identifier of an entity."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "MaintenanceIdentificationAssociation1", propOrder = {"masterTMIdentification", "TMIdentification"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "MaintenanceIdentificationAssociation1", propOrder = {"masterTMIdentification", "tMIdentification"})
 public class MaintenanceIdentificationAssociation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MstrTMId", required = true)
 	protected Max35Text masterTMIdentification;
 	/**
-	 * Identifier for the master terminal manager.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,7 +99,7 @@ public class MaintenanceIdentificationAssociation1 {
 	 */
 	public static final MMMessageAttribute mmMasterTMIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MaintenanceIdentificationAssociation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceIdentificationAssociation1.mmObject();
 			isDerived = false;
 			xmlTag = "MstrTMId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,10 +110,11 @@ public class MaintenanceIdentificationAssociation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TMId", required = true)
 	protected Max35Text tMIdentification;
 	/**
-	 * Identifier for the terminal manager requesting the delegation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +142,7 @@ public class MaintenanceIdentificationAssociation1 {
 	 */
 	public static final MMMessageAttribute mmTMIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MaintenanceIdentificationAssociation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceIdentificationAssociation1.mmObject();
 			isDerived = false;
 			xmlTag = "TMId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,8 +157,8 @@ public class MaintenanceIdentificationAssociation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MaintenanceIdentificationAssociation1.mmMasterTMIdentification, MaintenanceIdentificationAssociation1.mmTMIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceIdentificationAssociation1.mmMasterTMIdentification, com.tools20022.repository.msg.MaintenanceIdentificationAssociation1.mmTMIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MaintenanceIdentificationAssociation1";
 				definition = "Association of the TM identifier and the MTM identifier of an entity.";
@@ -164,21 +167,21 @@ public class MaintenanceIdentificationAssociation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MstrTMId", required = true)
 	public Max35Text getMasterTMIdentification() {
 		return masterTMIdentification;
 	}
 
-	public void setMasterTMIdentification(Max35Text masterTMIdentification) {
-		this.masterTMIdentification = masterTMIdentification;
+	public MaintenanceIdentificationAssociation1 setMasterTMIdentification(Max35Text masterTMIdentification) {
+		this.masterTMIdentification = Objects.requireNonNull(masterTMIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TMId", required = true)
 	public Max35Text getTMIdentification() {
 		return tMIdentification;
 	}
 
-	public void setTMIdentification(Max35Text tMIdentification) {
-		this.tMIdentification = tMIdentification;
+	public MaintenanceIdentificationAssociation1 setTMIdentification(Max35Text tMIdentification) {
+		this.tMIdentification = Objects.requireNonNull(tMIdentification);
+		return this;
 	}
 }

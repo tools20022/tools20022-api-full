@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -29,6 +30,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +59,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistence35to30TextFieldRule#forMarketIdentification7
+ * ConstraintCoexistence35to30TextFieldRule.forMarketIdentification7}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -70,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides information about market identification and market type."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MarketIdentification7", propOrder = {"type", "identification"})
 public class MarketIdentification7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected MarketTypeFormat2Choice type;
 	/**
-	 * Specifies the type of market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -98,6 +110,9 @@ public class MarketIdentification7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Tp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94B::4!c/[8c]/4!c</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -111,9 +126,10 @@ public class MarketIdentification7 {
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmType;
-			componentContext_lazy = () -> MarketIdentification7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification7.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94B::4!c/[8c]/4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of market.";
@@ -123,10 +139,11 @@ public class MarketIdentification7 {
 			type_lazy = () -> MarketTypeFormat2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Id")
 	protected MarketIdentification2Choice identification;
 	/**
-	 * Identifies the market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -146,6 +163,9 @@ public class MarketIdentification7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Id"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94B::PLIS//4!c/[30x]</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -159,9 +179,10 @@ public class MarketIdentification7 {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
-			componentContext_lazy = () -> MarketIdentification7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification7.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94B::PLIS//4!c/[30x]"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the market.";
@@ -175,9 +196,10 @@ public class MarketIdentification7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MarketIdentification7.mmType, MarketIdentification7.mmIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification7.mmType, com.tools20022.repository.msg.MarketIdentification7.mmIdentification);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistence35to30TextFieldRule.forMarketIdentification7);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -193,21 +215,21 @@ public class MarketIdentification7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public MarketTypeFormat2Choice getType() {
 		return type;
 	}
 
-	public void setType(MarketTypeFormat2Choice type) {
-		this.type = type;
+	public MarketIdentification7 setType(MarketTypeFormat2Choice type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Id")
-	public MarketIdentification2Choice getIdentification() {
-		return identification;
+	public Optional<MarketIdentification2Choice> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(MarketIdentification2Choice identification) {
+	public MarketIdentification7 setIdentification(MarketIdentification2Choice identification) {
 		this.identification = identification;
+		return this;
 	}
 }

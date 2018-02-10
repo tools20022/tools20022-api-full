@@ -30,6 +30,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -79,8 +81,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,19 +93,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Set of elements that identify the identification assignment."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IdentificationAssignment1", propOrder = {"messageIdentification", "creationDateTime", "creator", "assigner", "assignee"})
 public class IdentificationAssignment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected Max35Text messageIdentification;
 	/**
-	 * Point to point reference, as assigned by the assigner, and sent to the
-	 * next party in the chain to unambiguously identify the message.<br>
-	 * <br>
-	 * Usage: The assigner has to make sure that MessageIdentification is unique
-	 * per assignee for a pre-agreed period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,7 +131,7 @@ public class IdentificationAssignment1 {
 	 */
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IdentificationAssignment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationAssignment1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,10 +142,11 @@ public class IdentificationAssignment1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm", required = true)
 	protected ISODateTime creationDateTime;
 	/**
-	 * Date and time at which the identification assignment was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,7 +174,7 @@ public class IdentificationAssignment1 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IdentificationAssignment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationAssignment1.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,10 +185,11 @@ public class IdentificationAssignment1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "Cretr")
 	protected Party7Choice creator;
 	/**
-	 * Party that created the identification assignment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -214,7 +215,7 @@ public class IdentificationAssignment1 {
 	 */
 	public static final MMMessageAssociationEnd mmCreator = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IdentificationAssignment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationAssignment1.mmObject();
 			isDerived = false;
 			xmlTag = "Cretr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,11 +227,11 @@ public class IdentificationAssignment1 {
 			type_lazy = () -> Party7Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Assgnr", required = true)
 	protected Party7Choice assigner;
 	/**
-	 * Party that assigns the identification assignment to another party. This
-	 * is also the sender of the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -258,7 +259,7 @@ public class IdentificationAssignment1 {
 	 */
 	public static final MMMessageAssociationEnd mmAssigner = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IdentificationAssignment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationAssignment1.mmObject();
 			isDerived = false;
 			xmlTag = "Assgnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,11 +271,11 @@ public class IdentificationAssignment1 {
 			type_lazy = () -> Party7Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Assgne", required = true)
 	protected Party7Choice assignee;
 	/**
-	 * Party that the identification assignment is assigned to. This is also the
-	 * receiver of the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -302,7 +303,7 @@ public class IdentificationAssignment1 {
 	 */
 	public static final MMMessageAssociationEnd mmAssignee = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IdentificationAssignment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationAssignment1.mmObject();
 			isDerived = false;
 			xmlTag = "Assgne";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -318,10 +319,10 @@ public class IdentificationAssignment1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IdentificationAssignment1.mmMessageIdentification, IdentificationAssignment1.mmCreationDateTime, IdentificationAssignment1.mmCreator, IdentificationAssignment1.mmAssigner,
-						IdentificationAssignment1.mmAssignee);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IdentificationAssignment1.mmMessageIdentification, com.tools20022.repository.msg.IdentificationAssignment1.mmCreationDateTime,
+						com.tools20022.repository.msg.IdentificationAssignment1.mmCreator, com.tools20022.repository.msg.IdentificationAssignment1.mmAssigner, com.tools20022.repository.msg.IdentificationAssignment1.mmAssignee);
 				messageBuildingBlock_lazy = () -> Arrays.asList(IdentificationModificationAdviceV01.mmAssignment, IdentificationVerificationRequestV01.mmAssignment, IdentificationVerificationReportV01.mmAssignment);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IdentificationAssignment1";
 				definition = "Set of elements that identify the identification assignment.";
@@ -330,48 +331,48 @@ public class IdentificationAssignment1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(Max35Text messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public IdentificationAssignment1 setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
-		this.creationDateTime = creationDateTime;
+	public IdentificationAssignment1 setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = Objects.requireNonNull(creationDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "Cretr")
-	public Party7Choice getCreator() {
-		return creator;
+	public Optional<Party7Choice> getCreator() {
+		return creator == null ? Optional.empty() : Optional.of(creator);
 	}
 
-	public void setCreator(Party7Choice creator) {
+	public IdentificationAssignment1 setCreator(Party7Choice creator) {
 		this.creator = creator;
+		return this;
 	}
 
-	@XmlElement(name = "Assgnr", required = true)
 	public Party7Choice getAssigner() {
 		return assigner;
 	}
 
-	public void setAssigner(Party7Choice assigner) {
-		this.assigner = assigner;
+	public IdentificationAssignment1 setAssigner(Party7Choice assigner) {
+		this.assigner = Objects.requireNonNull(assigner);
+		return this;
 	}
 
-	@XmlElement(name = "Assgne", required = true)
 	public Party7Choice getAssignee() {
 		return assignee;
 	}
 
-	public void setAssignee(Party7Choice assignee) {
-		this.assignee = assignee;
+	public IdentificationAssignment1 setAssignee(Party7Choice assignee) {
+		this.assignee = Objects.requireNonNull(assignee);
+		return this;
 	}
 }

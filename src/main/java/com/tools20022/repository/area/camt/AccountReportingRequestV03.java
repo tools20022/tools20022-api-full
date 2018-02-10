@@ -29,9 +29,11 @@ import com.tools20022.repository.msgset.BanktoCustomerCashManagementISOLatestver
 import com.tools20022.repository.msgset.BanktoCustomerCashManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -49,26 +51,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
- * CashManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.BanktoCustomerCashManagementISOLatestversion
- * BanktoCustomerCashManagementISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.BanktoCustomerCashManagementISOPreviousversion
- * BanktoCustomerCashManagementISOPreviousversion}</li>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AcctRptgReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -84,6 +66,26 @@ import javax.xml.bind.annotation.*;
  * AccountReportingRequestV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.BanktoCustomerCashManagementISOLatestversion
+ * BanktoCustomerCashManagementISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.BanktoCustomerCashManagementISOPreviousversion
+ * BanktoCustomerCashManagementISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AcctRptgReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
+ * CashManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.060.001.03}</li>
@@ -103,15 +105,16 @@ import javax.xml.bind.annotation.*;
  * AccountReportingRequestV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountReportingRequestV03", propOrder = {"groupHeader", "reportingRequest", "supplementaryData"})
 public class AccountReportingRequestV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader59 groupHeader;
 	/**
-	 * Set of elements used to provide further details on the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,10 +154,11 @@ public class AccountReportingRequestV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RptgReq", required = true)
 	protected List<ReportingRequest3> reportingRequest;
 	/**
-	 * Set of elements used to provide further details on the reporting request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,11 +199,11 @@ public class AccountReportingRequestV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -272,34 +276,34 @@ public class AccountReportingRequestV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader59 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader59 groupHeader) {
-		this.groupHeader = groupHeader;
+	public AccountReportingRequestV03 setGroupHeader(GroupHeader59 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "RptgReq", required = true)
 	public List<ReportingRequest3> getReportingRequest() {
-		return reportingRequest;
+		return reportingRequest == null ? reportingRequest = new ArrayList<>() : reportingRequest;
 	}
 
-	public void setReportingRequest(List<ReportingRequest3> reportingRequest) {
-		this.reportingRequest = reportingRequest;
+	public AccountReportingRequestV03 setReportingRequest(List<ReportingRequest3> reportingRequest) {
+		this.reportingRequest = Objects.requireNonNull(reportingRequest);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public AccountReportingRequestV03 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.060.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.060.001.03")
 	static public class Document {
 		@XmlElement(name = "AcctRptgReq", required = true)
 		public AccountReportingRequestV03 messageBody;

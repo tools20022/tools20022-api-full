@@ -24,6 +24,7 @@ import com.tools20022.repository.entity.Packaging;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Consignment1", propOrder = {"totalQuantity", "totalVolume", "totalWeight"})
 public class Consignment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlQty")
 	protected Quantity3 totalQuantity;
 	/**
-	 * Total quantity of packaging units, eg number of boxes, containers,
-	 * pallets, etc
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +121,7 @@ public class Consignment1 {
 	public static final MMMessageAttribute mmTotalQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Packaging.mmTotalConsignmentQuantity;
-			componentContext_lazy = () -> Consignment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Consignment1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +133,11 @@ public class Consignment1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Quantity3.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlVol")
 	protected Quantity3 totalVolume;
 	/**
-	 * Total volume of goods shipped, eg number of cubic meters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -175,7 +177,7 @@ public class Consignment1 {
 	public static final MMMessageAttribute mmTotalVolume = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Packaging.mmTotalVolume;
-			componentContext_lazy = () -> Consignment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Consignment1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlVol";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,10 +189,11 @@ public class Consignment1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Quantity3.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlWght")
 	protected Quantity3 totalWeight;
 	/**
-	 * Total weight of goods shipped, eg number of kg, tons.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -229,7 +232,7 @@ public class Consignment1 {
 	public static final MMMessageAttribute mmTotalWeight = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Packaging.mmTotalWeight;
-			componentContext_lazy = () -> Consignment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Consignment1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlWght";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,9 +248,9 @@ public class Consignment1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Consignment1.mmTotalQuantity, Consignment1.mmTotalVolume, Consignment1.mmTotalWeight);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment1.mmTotalQuantity, com.tools20022.repository.msg.Consignment1.mmTotalVolume, com.tools20022.repository.msg.Consignment1.mmTotalWeight);
 				trace_lazy = () -> Packaging.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Consignment1";
 				definition = "Physical packaging of goods for transport.";
@@ -257,30 +260,30 @@ public class Consignment1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlQty")
-	public Quantity3 getTotalQuantity() {
-		return totalQuantity;
+	public Optional<Quantity3> getTotalQuantity() {
+		return totalQuantity == null ? Optional.empty() : Optional.of(totalQuantity);
 	}
 
-	public void setTotalQuantity(com.tools20022.repository.msg.Quantity3 totalQuantity) {
+	public Consignment1 setTotalQuantity(com.tools20022.repository.msg.Quantity3 totalQuantity) {
 		this.totalQuantity = totalQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "TtlVol")
-	public Quantity3 getTotalVolume() {
-		return totalVolume;
+	public Optional<Quantity3> getTotalVolume() {
+		return totalVolume == null ? Optional.empty() : Optional.of(totalVolume);
 	}
 
-	public void setTotalVolume(com.tools20022.repository.msg.Quantity3 totalVolume) {
+	public Consignment1 setTotalVolume(com.tools20022.repository.msg.Quantity3 totalVolume) {
 		this.totalVolume = totalVolume;
+		return this;
 	}
 
-	@XmlElement(name = "TtlWght")
-	public Quantity3 getTotalWeight() {
-		return totalWeight;
+	public Optional<Quantity3> getTotalWeight() {
+		return totalWeight == null ? Optional.empty() : Optional.of(totalWeight);
 	}
 
-	public void setTotalWeight(com.tools20022.repository.msg.Quantity3 totalWeight) {
+	public Consignment1 setTotalWeight(com.tools20022.repository.msg.Quantity3 totalWeight) {
 		this.totalWeight = totalWeight;
+		return this;
 	}
 }

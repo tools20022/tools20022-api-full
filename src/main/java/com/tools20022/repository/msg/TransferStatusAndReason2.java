@@ -31,6 +31,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -44,8 +46,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#mmTypeOfStatusRule
- * TransferStatusAndReason2.mmTypeOfStatusRule}</li>
+ * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason2#TypeOfStatusRule
+ * TransferStatusAndReason2.TypeOfStatusRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -120,8 +122,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -141,18 +143,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransferStatusAndReason2", propOrder = {"masterReference", "transferReference", "clientReference", "cancellationReference", "status", "pendingSettlement", "unmatched", "inRepair", "rejected", "failedSettlement",
 		"cancelled", "reversed", "cancellationPending", "tradeDate", "sendOutDate", "statusInitiator"})
 public class TransferStatusAndReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MstrRef")
 	protected Max35Text masterReference;
 	/**
-	 * Unique and unambiguous identifier for a group of individual transfers as
-	 * assigned by the instructing party. This identifier links the individual
-	 * transfers together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,7 +196,7 @@ public class TransferStatusAndReason2 {
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
-			componentContext_lazy = () -> TransferStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,11 +208,11 @@ public class TransferStatusAndReason2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfRef", required = true)
 	protected Max35Text transferReference;
 	/**
-	 * Unique and unambiguous identification of a transfer, as assigned by the
-	 * instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -254,7 +255,7 @@ public class TransferStatusAndReason2 {
 	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmIdentification;
-			componentContext_lazy = () -> TransferStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "TrfRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,12 +267,11 @@ public class TransferStatusAndReason2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntRef")
 	protected Max35Text clientReference;
 	/**
-	 * Unique and unambiguous investor's identification of a transfer. This
-	 * reference can typically be used in a hub scenario to give the reference
-	 * of the transfer as assigned by the underlying client.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -314,7 +314,7 @@ public class TransferStatusAndReason2 {
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
-			componentContext_lazy = () -> TransferStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -326,11 +326,11 @@ public class TransferStatusAndReason2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CxlRef")
 	protected Max35Text cancellationReference;
 	/**
-	 * Unique and unambiguous identifier for a transfer cancellation, as
-	 * assigned by the instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -367,7 +367,7 @@ public class TransferStatusAndReason2 {
 	 */
 	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransferStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -379,11 +379,11 @@ public class TransferStatusAndReason2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts", required = true)
 	protected TransferInstructionStatus2 status;
 	/**
-	 * Status of the transfer is accepted, sent to next party, matched, already
-	 * executed, or settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -418,7 +418,7 @@ public class TransferStatusAndReason2 {
 	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
-			componentContext_lazy = () -> TransferStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -430,10 +430,11 @@ public class TransferStatusAndReason2 {
 			type_lazy = () -> com.tools20022.repository.msg.TransferInstructionStatus2.mmObject();
 		}
 	};
+	@XmlElement(name = "PdgSttlm", required = true)
 	protected PendingSettlementStatus2 pendingSettlement;
 	/**
-	 * Status of the transfer is pending settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -466,7 +467,7 @@ public class TransferStatusAndReason2 {
 	public static final MMMessageAssociationEnd mmPendingSettlement = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
-			componentContext_lazy = () -> TransferStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "PdgSttlm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -478,10 +479,11 @@ public class TransferStatusAndReason2 {
 			type_lazy = () -> com.tools20022.repository.msg.PendingSettlementStatus2.mmObject();
 		}
 	};
+	@XmlElement(name = "Umtchd", required = true)
 	protected TransferUnmatchedStatus2 unmatched;
 	/**
-	 * Status of the transfer is unmatched.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -514,7 +516,7 @@ public class TransferStatusAndReason2 {
 	public static final MMMessageAssociationEnd mmUnmatched = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
-			componentContext_lazy = () -> TransferStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Umtchd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -526,10 +528,11 @@ public class TransferStatusAndReason2 {
 			type_lazy = () -> com.tools20022.repository.msg.TransferUnmatchedStatus2.mmObject();
 		}
 	};
+	@XmlElement(name = "InRpr", required = true)
 	protected InRepairStatus3 inRepair;
 	/**
-	 * Status of the transfer is in repair.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -561,7 +564,7 @@ public class TransferStatusAndReason2 {
 	public static final MMMessageAssociationEnd mmInRepair = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
-			componentContext_lazy = () -> TransferStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "InRpr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -573,10 +576,11 @@ public class TransferStatusAndReason2 {
 			type_lazy = () -> com.tools20022.repository.msg.InRepairStatus3.mmObject();
 		}
 	};
+	@XmlElement(name = "Rjctd", required = true)
 	protected RejectedStatus8Choice rejected;
 	/**
-	 * Status of the transfer is rejected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -609,7 +613,7 @@ public class TransferStatusAndReason2 {
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
-			componentContext_lazy = () -> TransferStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -621,12 +625,11 @@ public class TransferStatusAndReason2 {
 			type_lazy = () -> RejectedStatus8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FaildSttlm", required = true)
 	protected FailedSettlementStatus1 failedSettlement;
 	/**
-	 * Status of the transfer is failed settlement, ie, settlement in the
-	 * International Central Securities Depository (ICSD) or Central Securities
-	 * Depository (CSD) failed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -661,7 +664,7 @@ public class TransferStatusAndReason2 {
 	public static final MMMessageAssociationEnd mmFailedSettlement = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
-			componentContext_lazy = () -> TransferStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "FaildSttlm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -673,10 +676,11 @@ public class TransferStatusAndReason2 {
 			type_lazy = () -> com.tools20022.repository.msg.FailedSettlementStatus1.mmObject();
 		}
 	};
+	@XmlElement(name = "Canc", required = true)
 	protected CancelledStatus3 cancelled;
 	/**
-	 * Status of the transfer is cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -708,7 +712,7 @@ public class TransferStatusAndReason2 {
 	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
-			componentContext_lazy = () -> TransferStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Canc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -720,10 +724,11 @@ public class TransferStatusAndReason2 {
 			type_lazy = () -> com.tools20022.repository.msg.CancelledStatus3.mmObject();
 		}
 	};
+	@XmlElement(name = "Rvsd", required = true)
 	protected ReversedStatus1 reversed;
 	/**
-	 * Status of the transfer is reversed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -755,7 +760,7 @@ public class TransferStatusAndReason2 {
 	public static final MMMessageAssociationEnd mmReversed = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
-			componentContext_lazy = () -> TransferStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Rvsd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -767,10 +772,11 @@ public class TransferStatusAndReason2 {
 			type_lazy = () -> com.tools20022.repository.msg.ReversedStatus1.mmObject();
 		}
 	};
+	@XmlElement(name = "CxlPdg", required = true)
 	protected CancellationPendingStatus1 cancellationPending;
 	/**
-	 * Status of the transfer is cancellation pending.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -803,7 +809,7 @@ public class TransferStatusAndReason2 {
 	public static final MMMessageAssociationEnd mmCancellationPending = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
-			componentContext_lazy = () -> TransferStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "CxlPdg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -815,10 +821,11 @@ public class TransferStatusAndReason2 {
 			type_lazy = () -> com.tools20022.repository.msg.CancellationPendingStatus1.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDt")
 	protected ISODate tradeDate;
 	/**
-	 * Date and time at which the transfer was executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -859,7 +866,7 @@ public class TransferStatusAndReason2 {
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> TransferStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -871,10 +878,11 @@ public class TransferStatusAndReason2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SndOutDt")
 	protected ISODate sendOutDate;
 	/**
-	 * Date on which the document, for example, the application form, was sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -911,7 +919,7 @@ public class TransferStatusAndReason2 {
 	 */
 	public static final MMMessageAttribute mmSendOutDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransferStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "SndOutDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -923,10 +931,11 @@ public class TransferStatusAndReason2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "StsInitr")
 	protected PartyIdentification2Choice statusInitiator;
 	/**
-	 * Party that initiates the status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -967,7 +976,7 @@ public class TransferStatusAndReason2 {
 	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> TransferStatusAndReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "StsInitr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1036,27 +1045,31 @@ public class TransferStatusAndReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmTypeOfStatusRule = new MMXor() {
+	public static final MMXor TypeOfStatusRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOfStatusRule";
 			definition = "One and only one message element in the list (Status, PendingSettlement, Unmatched, InRepair, Rejected, FailedSettlement,  Cancelled, Reversed, CancellationPending) must be present.";
-			messageComponent_lazy = () -> TransferStatusAndReason2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(TransferStatusAndReason2.mmStatus, TransferStatusAndReason2.mmPendingSettlement, TransferStatusAndReason2.mmUnmatched, TransferStatusAndReason2.mmInRepair,
-					TransferStatusAndReason2.mmRejected, TransferStatusAndReason2.mmFailedSettlement, TransferStatusAndReason2.mmCancelled, TransferStatusAndReason2.mmReversed, TransferStatusAndReason2.mmCancellationPending);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferStatusAndReason2.mmStatus, com.tools20022.repository.msg.TransferStatusAndReason2.mmPendingSettlement,
+					com.tools20022.repository.msg.TransferStatusAndReason2.mmUnmatched, com.tools20022.repository.msg.TransferStatusAndReason2.mmInRepair, com.tools20022.repository.msg.TransferStatusAndReason2.mmRejected,
+					com.tools20022.repository.msg.TransferStatusAndReason2.mmFailedSettlement, com.tools20022.repository.msg.TransferStatusAndReason2.mmCancelled, com.tools20022.repository.msg.TransferStatusAndReason2.mmReversed,
+					com.tools20022.repository.msg.TransferStatusAndReason2.mmCancellationPending);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransferStatusAndReason2.mmMasterReference, TransferStatusAndReason2.mmTransferReference, TransferStatusAndReason2.mmClientReference,
-						TransferStatusAndReason2.mmCancellationReference, TransferStatusAndReason2.mmStatus, TransferStatusAndReason2.mmPendingSettlement, TransferStatusAndReason2.mmUnmatched, TransferStatusAndReason2.mmInRepair,
-						TransferStatusAndReason2.mmRejected, TransferStatusAndReason2.mmFailedSettlement, TransferStatusAndReason2.mmCancelled, TransferStatusAndReason2.mmReversed, TransferStatusAndReason2.mmCancellationPending,
-						TransferStatusAndReason2.mmTradeDate, TransferStatusAndReason2.mmSendOutDate, TransferStatusAndReason2.mmStatusInitiator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferStatusAndReason2.mmMasterReference, com.tools20022.repository.msg.TransferStatusAndReason2.mmTransferReference,
+						com.tools20022.repository.msg.TransferStatusAndReason2.mmClientReference, com.tools20022.repository.msg.TransferStatusAndReason2.mmCancellationReference,
+						com.tools20022.repository.msg.TransferStatusAndReason2.mmStatus, com.tools20022.repository.msg.TransferStatusAndReason2.mmPendingSettlement, com.tools20022.repository.msg.TransferStatusAndReason2.mmUnmatched,
+						com.tools20022.repository.msg.TransferStatusAndReason2.mmInRepair, com.tools20022.repository.msg.TransferStatusAndReason2.mmRejected, com.tools20022.repository.msg.TransferStatusAndReason2.mmFailedSettlement,
+						com.tools20022.repository.msg.TransferStatusAndReason2.mmCancelled, com.tools20022.repository.msg.TransferStatusAndReason2.mmReversed, com.tools20022.repository.msg.TransferStatusAndReason2.mmCancellationPending,
+						com.tools20022.repository.msg.TransferStatusAndReason2.mmTradeDate, com.tools20022.repository.msg.TransferStatusAndReason2.mmSendOutDate, com.tools20022.repository.msg.TransferStatusAndReason2.mmStatusInitiator);
 				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInstructionStatusReportV02.mmStatusReport, TransferInstructionStatusReportV03.mmStatusReport);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -1068,153 +1081,153 @@ public class TransferStatusAndReason2 {
 				name = "TransferStatusAndReason2";
 				definition = "Information about the status of a transfer instruction and its reason.";
 				nextVersions_lazy = () -> Arrays.asList(TransferStatusAndReason3.mmObject());
-				xors_lazy = () -> Arrays.asList(TransferStatusAndReason2.mmTypeOfStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferStatusAndReason2.TypeOfStatusRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MstrRef")
-	public Max35Text getMasterReference() {
-		return masterReference;
+	public Optional<Max35Text> getMasterReference() {
+		return masterReference == null ? Optional.empty() : Optional.of(masterReference);
 	}
 
-	public void setMasterReference(Max35Text masterReference) {
+	public TransferStatusAndReason2 setMasterReference(Max35Text masterReference) {
 		this.masterReference = masterReference;
+		return this;
 	}
 
-	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
 
-	public void setTransferReference(Max35Text transferReference) {
-		this.transferReference = transferReference;
+	public TransferStatusAndReason2 setTransferReference(Max35Text transferReference) {
+		this.transferReference = Objects.requireNonNull(transferReference);
+		return this;
 	}
 
-	@XmlElement(name = "ClntRef")
-	public Max35Text getClientReference() {
-		return clientReference;
+	public Optional<Max35Text> getClientReference() {
+		return clientReference == null ? Optional.empty() : Optional.of(clientReference);
 	}
 
-	public void setClientReference(Max35Text clientReference) {
+	public TransferStatusAndReason2 setClientReference(Max35Text clientReference) {
 		this.clientReference = clientReference;
+		return this;
 	}
 
-	@XmlElement(name = "CxlRef")
-	public Max35Text getCancellationReference() {
-		return cancellationReference;
+	public Optional<Max35Text> getCancellationReference() {
+		return cancellationReference == null ? Optional.empty() : Optional.of(cancellationReference);
 	}
 
-	public void setCancellationReference(Max35Text cancellationReference) {
+	public TransferStatusAndReason2 setCancellationReference(Max35Text cancellationReference) {
 		this.cancellationReference = cancellationReference;
+		return this;
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public TransferInstructionStatus2 getStatus() {
 		return status;
 	}
 
-	public void setStatus(com.tools20022.repository.msg.TransferInstructionStatus2 status) {
-		this.status = status;
+	public TransferStatusAndReason2 setStatus(com.tools20022.repository.msg.TransferInstructionStatus2 status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "PdgSttlm", required = true)
 	public PendingSettlementStatus2 getPendingSettlement() {
 		return pendingSettlement;
 	}
 
-	public void setPendingSettlement(com.tools20022.repository.msg.PendingSettlementStatus2 pendingSettlement) {
-		this.pendingSettlement = pendingSettlement;
+	public TransferStatusAndReason2 setPendingSettlement(com.tools20022.repository.msg.PendingSettlementStatus2 pendingSettlement) {
+		this.pendingSettlement = Objects.requireNonNull(pendingSettlement);
+		return this;
 	}
 
-	@XmlElement(name = "Umtchd", required = true)
 	public TransferUnmatchedStatus2 getUnmatched() {
 		return unmatched;
 	}
 
-	public void setUnmatched(com.tools20022.repository.msg.TransferUnmatchedStatus2 unmatched) {
-		this.unmatched = unmatched;
+	public TransferStatusAndReason2 setUnmatched(com.tools20022.repository.msg.TransferUnmatchedStatus2 unmatched) {
+		this.unmatched = Objects.requireNonNull(unmatched);
+		return this;
 	}
 
-	@XmlElement(name = "InRpr", required = true)
 	public InRepairStatus3 getInRepair() {
 		return inRepair;
 	}
 
-	public void setInRepair(com.tools20022.repository.msg.InRepairStatus3 inRepair) {
-		this.inRepair = inRepair;
+	public TransferStatusAndReason2 setInRepair(com.tools20022.repository.msg.InRepairStatus3 inRepair) {
+		this.inRepair = Objects.requireNonNull(inRepair);
+		return this;
 	}
 
-	@XmlElement(name = "Rjctd", required = true)
 	public RejectedStatus8Choice getRejected() {
 		return rejected;
 	}
 
-	public void setRejected(RejectedStatus8Choice rejected) {
-		this.rejected = rejected;
+	public TransferStatusAndReason2 setRejected(RejectedStatus8Choice rejected) {
+		this.rejected = Objects.requireNonNull(rejected);
+		return this;
 	}
 
-	@XmlElement(name = "FaildSttlm", required = true)
 	public FailedSettlementStatus1 getFailedSettlement() {
 		return failedSettlement;
 	}
 
-	public void setFailedSettlement(com.tools20022.repository.msg.FailedSettlementStatus1 failedSettlement) {
-		this.failedSettlement = failedSettlement;
+	public TransferStatusAndReason2 setFailedSettlement(com.tools20022.repository.msg.FailedSettlementStatus1 failedSettlement) {
+		this.failedSettlement = Objects.requireNonNull(failedSettlement);
+		return this;
 	}
 
-	@XmlElement(name = "Canc", required = true)
 	public CancelledStatus3 getCancelled() {
 		return cancelled;
 	}
 
-	public void setCancelled(com.tools20022.repository.msg.CancelledStatus3 cancelled) {
-		this.cancelled = cancelled;
+	public TransferStatusAndReason2 setCancelled(com.tools20022.repository.msg.CancelledStatus3 cancelled) {
+		this.cancelled = Objects.requireNonNull(cancelled);
+		return this;
 	}
 
-	@XmlElement(name = "Rvsd", required = true)
 	public ReversedStatus1 getReversed() {
 		return reversed;
 	}
 
-	public void setReversed(com.tools20022.repository.msg.ReversedStatus1 reversed) {
-		this.reversed = reversed;
+	public TransferStatusAndReason2 setReversed(com.tools20022.repository.msg.ReversedStatus1 reversed) {
+		this.reversed = Objects.requireNonNull(reversed);
+		return this;
 	}
 
-	@XmlElement(name = "CxlPdg", required = true)
 	public CancellationPendingStatus1 getCancellationPending() {
 		return cancellationPending;
 	}
 
-	public void setCancellationPending(com.tools20022.repository.msg.CancellationPendingStatus1 cancellationPending) {
-		this.cancellationPending = cancellationPending;
+	public TransferStatusAndReason2 setCancellationPending(com.tools20022.repository.msg.CancellationPendingStatus1 cancellationPending) {
+		this.cancellationPending = Objects.requireNonNull(cancellationPending);
+		return this;
 	}
 
-	@XmlElement(name = "TradDt")
-	public ISODate getTradeDate() {
-		return tradeDate;
+	public Optional<ISODate> getTradeDate() {
+		return tradeDate == null ? Optional.empty() : Optional.of(tradeDate);
 	}
 
-	public void setTradeDate(ISODate tradeDate) {
+	public TransferStatusAndReason2 setTradeDate(ISODate tradeDate) {
 		this.tradeDate = tradeDate;
+		return this;
 	}
 
-	@XmlElement(name = "SndOutDt")
-	public ISODate getSendOutDate() {
-		return sendOutDate;
+	public Optional<ISODate> getSendOutDate() {
+		return sendOutDate == null ? Optional.empty() : Optional.of(sendOutDate);
 	}
 
-	public void setSendOutDate(ISODate sendOutDate) {
+	public TransferStatusAndReason2 setSendOutDate(ISODate sendOutDate) {
 		this.sendOutDate = sendOutDate;
+		return this;
 	}
 
-	@XmlElement(name = "StsInitr")
-	public PartyIdentification2Choice getStatusInitiator() {
-		return statusInitiator;
+	public Optional<PartyIdentification2Choice> getStatusInitiator() {
+		return statusInitiator == null ? Optional.empty() : Optional.of(statusInitiator);
 	}
 
-	public void setStatusInitiator(PartyIdentification2Choice statusInitiator) {
+	public TransferStatusAndReason2 setStatusInitiator(PartyIdentification2Choice statusInitiator) {
 		this.statusInitiator = statusInitiator;
+		return this;
 	}
 }

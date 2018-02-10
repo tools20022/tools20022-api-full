@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.Investor;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,17 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DeMinimusApplicable1", propOrder = {"newIssuePermission", "percentage"})
 public class DeMinimusApplicable1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NewIssePrmssn", required = true)
 	protected YesNoIndicator newIssuePermission;
 	/**
-	 * Indicates whether the investor permits its beneficial owners that are
-	 * restricted persons, if any, to participate in profits and losses
-	 * allocated to the investor that are attribute to new issue securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +115,7 @@ public class DeMinimusApplicable1 {
 	public static final MMMessageAttribute mmNewIssuePermission = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Investor.mmNewIssuePermission;
-			componentContext_lazy = () -> DeMinimusApplicable1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeMinimusApplicable1.mmObject();
 			isDerived = false;
 			xmlTag = "NewIssePrmssn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,11 +126,11 @@ public class DeMinimusApplicable1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Pctg")
 	protected PercentageRate percentage;
 	/**
-	 * Percentage of the new issue profits and losses that it receives to
-	 * beneficial owners that are restricted persons.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +160,7 @@ public class DeMinimusApplicable1 {
 	 */
 	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DeMinimusApplicable1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeMinimusApplicable1.mmObject();
 			isDerived = false;
 			xmlTag = "Pctg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,9 +175,9 @@ public class DeMinimusApplicable1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DeMinimusApplicable1.mmNewIssuePermission, DeMinimusApplicable1.mmPercentage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeMinimusApplicable1.mmNewIssuePermission, com.tools20022.repository.msg.DeMinimusApplicable1.mmPercentage);
 				trace_lazy = () -> Investor.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeMinimusApplicable1";
 				definition = "Conditions applicable when the investor is covered by the \"de minimis\" exemption.";
@@ -185,21 +186,21 @@ public class DeMinimusApplicable1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NewIssePrmssn", required = true)
 	public YesNoIndicator getNewIssuePermission() {
 		return newIssuePermission;
 	}
 
-	public void setNewIssuePermission(YesNoIndicator newIssuePermission) {
-		this.newIssuePermission = newIssuePermission;
+	public DeMinimusApplicable1 setNewIssuePermission(YesNoIndicator newIssuePermission) {
+		this.newIssuePermission = Objects.requireNonNull(newIssuePermission);
+		return this;
 	}
 
-	@XmlElement(name = "Pctg")
-	public PercentageRate getPercentage() {
-		return percentage;
+	public Optional<PercentageRate> getPercentage() {
+		return percentage == null ? Optional.empty() : Optional.of(percentage);
 	}
 
-	public void setPercentage(PercentageRate percentage) {
+	public DeMinimusApplicable1 setPercentage(PercentageRate percentage) {
 		this.percentage = percentage;
+		return this;
 	}
 }

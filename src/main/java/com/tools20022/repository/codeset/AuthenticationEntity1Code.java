@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AuthenticationEntityCode;
+import com.tools20022.repository.codeset.AuthenticationEntity1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Entity or object in charge of verifying the cardholder authenticity.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AuthenticationEntityCode
- * AuthenticationEntityCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity1Code#mmICC
- * AuthenticationEntity1Code.mmICC}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity1Code#ICC
+ * AuthenticationEntity1Code.ICC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity1Code#mmAuthorisedAgent
- * AuthenticationEntity1Code.mmAuthorisedAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity1Code#AuthorisedAgent
+ * AuthenticationEntity1Code.AuthorisedAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity1Code#mmMerchant
- * AuthenticationEntity1Code.mmMerchant}</li>
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity1Code#Merchant
+ * AuthenticationEntity1Code.Merchant}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AuthenticationEntityCode
+ * AuthenticationEntityCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -75,7 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class AuthenticationEntity1Code extends AuthenticationEntityCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AuthenticationEntity1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -96,18 +101,19 @@ public class AuthenticationEntity1Code extends AuthenticationEntityCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code#mmICC
-	 * AuthenticationEntity2Code.mmICC}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code#ICC
+	 * AuthenticationEntity2Code.ICC}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmICC = new MMCode() {
+	public static final AuthenticationEntity1Code ICC = new AuthenticationEntity1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ICC";
-			nextVersions_lazy = () -> Arrays.asList(AuthenticationEntity2Code.mmICC);
-			owner_lazy = () -> AuthenticationEntity1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(AuthenticationEntity2Code.ICC);
+			owner_lazy = () -> com.tools20022.repository.codeset.AuthenticationEntity1Code.mmObject();
+			codeName = AuthenticationEntityCode.ICC.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -128,18 +134,19 @@ public class AuthenticationEntity1Code extends AuthenticationEntityCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code#mmAuthorisedAgent
-	 * AuthenticationEntity2Code.mmAuthorisedAgent}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code#AuthorisedAgent
+	 * AuthenticationEntity2Code.AuthorisedAgent}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAuthorisedAgent = new MMCode() {
+	public static final AuthenticationEntity1Code AuthorisedAgent = new AuthenticationEntity1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisedAgent";
-			nextVersions_lazy = () -> Arrays.asList(AuthenticationEntity2Code.mmAuthorisedAgent);
-			owner_lazy = () -> AuthenticationEntity1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(AuthenticationEntity2Code.AuthorisedAgent);
+			owner_lazy = () -> com.tools20022.repository.codeset.AuthenticationEntity1Code.mmObject();
+			codeName = AuthenticationEntityCode.AuthorisedAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -160,34 +167,67 @@ public class AuthenticationEntity1Code extends AuthenticationEntityCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code#mmMerchant
-	 * AuthenticationEntity2Code.mmMerchant}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AuthenticationEntity2Code#Merchant
+	 * AuthenticationEntity2Code.Merchant}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMerchant = new MMCode() {
+	public static final AuthenticationEntity1Code Merchant = new AuthenticationEntity1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Merchant";
-			nextVersions_lazy = () -> Arrays.asList(AuthenticationEntity2Code.mmMerchant);
-			owner_lazy = () -> AuthenticationEntity1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(AuthenticationEntity2Code.Merchant);
+			owner_lazy = () -> com.tools20022.repository.codeset.AuthenticationEntity1Code.mmObject();
+			codeName = AuthenticationEntityCode.Merchant.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AuthenticationEntity1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AuthenticationEntity1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ICCD");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AuthenticationEntity1Code";
 				definition = "Entity or object in charge of verifying the cardholder authenticity.";
 				nextVersions_lazy = () -> Arrays.asList(AuthenticationEntity2Code.mmObject());
-				code_lazy = () -> Arrays.asList(AuthenticationEntity1Code.mmICC, AuthenticationEntity1Code.mmAuthorisedAgent, AuthenticationEntity1Code.mmMerchant);
 				trace_lazy = () -> AuthenticationEntityCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AuthenticationEntity1Code.ICC, com.tools20022.repository.codeset.AuthenticationEntity1Code.AuthorisedAgent,
+						com.tools20022.repository.codeset.AuthenticationEntity1Code.Merchant);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ICC.getCodeName().get(), ICC);
+		codesByName.put(AuthorisedAgent.getCodeName().get(), AuthorisedAgent);
+		codesByName.put(Merchant.getCodeName().get(), Merchant);
+	}
+
+	public static AuthenticationEntity1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AuthenticationEntity1Code[] values() {
+		AuthenticationEntity1Code[] values = new AuthenticationEntity1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AuthenticationEntity1Code> {
+		@Override
+		public AuthenticationEntity1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AuthenticationEntity1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

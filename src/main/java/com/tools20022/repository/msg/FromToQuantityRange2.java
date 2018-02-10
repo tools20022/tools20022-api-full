@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * FromToQuantityRange1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FromToQuantityRange2", propOrder = {"fromQuantity", "toQuantity"})
 public class FromToQuantityRange2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FrQty", required = true)
 	protected DecimalNumber fromQuantity;
 	/**
-	 * Lower boundary of a range of quantity values.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +108,7 @@ public class FromToQuantityRange2 {
 	 */
 	public static final MMMessageAttribute mmFromQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FromToQuantityRange2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FromToQuantityRange2.mmObject();
 			isDerived = false;
 			xmlTag = "FrQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +120,11 @@ public class FromToQuantityRange2 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "ToQty", required = true)
 	protected DecimalNumber toQuantity;
 	/**
-	 * Upper boundary of a range of quantity values.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -154,7 +157,7 @@ public class FromToQuantityRange2 {
 	 */
 	public static final MMMessageAttribute mmToQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FromToQuantityRange2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FromToQuantityRange2.mmObject();
 			isDerived = false;
 			xmlTag = "ToQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,8 +173,8 @@ public class FromToQuantityRange2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FromToQuantityRange2.mmFromQuantity, FromToQuantityRange2.mmToQuantity);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FromToQuantityRange2.mmFromQuantity, com.tools20022.repository.msg.FromToQuantityRange2.mmToQuantity);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FromToQuantityRange2";
 				definition = "Range of quantities.";
@@ -181,21 +184,21 @@ public class FromToQuantityRange2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FrQty", required = true)
 	public DecimalNumber getFromQuantity() {
 		return fromQuantity;
 	}
 
-	public void setFromQuantity(DecimalNumber fromQuantity) {
-		this.fromQuantity = fromQuantity;
+	public FromToQuantityRange2 setFromQuantity(DecimalNumber fromQuantity) {
+		this.fromQuantity = Objects.requireNonNull(fromQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "ToQty", required = true)
 	public DecimalNumber getToQuantity() {
 		return toQuantity;
 	}
 
-	public void setToQuantity(DecimalNumber toQuantity) {
-		this.toQuantity = toQuantity;
+	public FromToQuantityRange2 setToQuantity(DecimalNumber toQuantity) {
+		this.toQuantity = Objects.requireNonNull(toQuantity);
+		return this;
 	}
 }

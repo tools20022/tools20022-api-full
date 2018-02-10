@@ -40,8 +40,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
  * businessProcessCatalogue} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmcatalogue
- * GeneratedRepository.mmcatalogue}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
+ * GeneratedRepository.catalogue}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +61,7 @@ public class FinancialInvoiceISOArchive {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Financial Invoice - ISO - Archive";
 				definition = "Invoice message that supports the provision of financial and related services, where there is a requirement to exchange invoice information.\r\n";

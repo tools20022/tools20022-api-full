@@ -24,9 +24,11 @@ import com.tools20022.repository.codeset.PartyType7Code;
 import com.tools20022.repository.codeset.POICommunicationType1Code;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * CommunicationCharacteristics1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CommunicationCharacteristics2", propOrder = {"communicationType", "remoteParty", "active"})
 public class CommunicationCharacteristics2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ComTp", required = true)
 	protected POICommunicationType1Code communicationType;
 	/**
-	 * Type of low level communication.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +133,7 @@ public class CommunicationCharacteristics2 {
 	 */
 	public static final MMMessageAttribute mmCommunicationType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CommunicationCharacteristics2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics2.mmObject();
 			isDerived = false;
 			xmlTag = "ComTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,11 +146,11 @@ public class CommunicationCharacteristics2 {
 			simpleType_lazy = () -> POICommunicationType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RmotPty", required = true)
 	protected List<PartyType7Code> remoteParty;
 	/**
-	 * Entity that communicate with the current component, using this
-	 * communication device.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +193,7 @@ public class CommunicationCharacteristics2 {
 	 */
 	public static final MMMessageAttribute mmRemoteParty = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CommunicationCharacteristics2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics2.mmObject();
 			isDerived = false;
 			xmlTag = "RmotPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,10 +205,11 @@ public class CommunicationCharacteristics2 {
 			simpleType_lazy = () -> PartyType7Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Actv", required = true)
 	protected TrueFalseIndicator active;
 	/**
-	 * Communication hardware is activated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -246,7 +250,7 @@ public class CommunicationCharacteristics2 {
 	 */
 	public static final MMMessageAttribute mmActive = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CommunicationCharacteristics2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics2.mmObject();
 			isDerived = false;
 			xmlTag = "Actv";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,8 +267,9 @@ public class CommunicationCharacteristics2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CommunicationCharacteristics2.mmCommunicationType, CommunicationCharacteristics2.mmRemoteParty, CommunicationCharacteristics2.mmActive);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationCharacteristics2.mmCommunicationType, com.tools20022.repository.msg.CommunicationCharacteristics2.mmRemoteParty,
+						com.tools20022.repository.msg.CommunicationCharacteristics2.mmActive);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommunicationCharacteristics2";
 				definition = "Low level communication of the hardware or software component toward another component or an external entity.";
@@ -275,30 +280,30 @@ public class CommunicationCharacteristics2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ComTp", required = true)
 	public POICommunicationType1Code getCommunicationType() {
 		return communicationType;
 	}
 
-	public void setCommunicationType(POICommunicationType1Code communicationType) {
-		this.communicationType = communicationType;
+	public CommunicationCharacteristics2 setCommunicationType(POICommunicationType1Code communicationType) {
+		this.communicationType = Objects.requireNonNull(communicationType);
+		return this;
 	}
 
-	@XmlElement(name = "RmotPty", required = true)
 	public List<PartyType7Code> getRemoteParty() {
-		return remoteParty;
+		return remoteParty == null ? remoteParty = new ArrayList<>() : remoteParty;
 	}
 
-	public void setRemoteParty(List<PartyType7Code> remoteParty) {
-		this.remoteParty = remoteParty;
+	public CommunicationCharacteristics2 setRemoteParty(List<PartyType7Code> remoteParty) {
+		this.remoteParty = Objects.requireNonNull(remoteParty);
+		return this;
 	}
 
-	@XmlElement(name = "Actv", required = true)
 	public TrueFalseIndicator getActive() {
 		return active;
 	}
 
-	public void setActive(TrueFalseIndicator active) {
-		this.active = active;
+	public CommunicationCharacteristics2 setActive(TrueFalseIndicator active) {
+		this.active = Objects.requireNonNull(active);
+		return this;
 	}
 }

@@ -24,11 +24,9 @@ import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.entity.RiskManagementLimit;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -43,8 +41,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure3#mmSingleOrAllLimitsRule
- * LimitDetailsStructure3.mmSingleOrAllLimitsRule}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitDetailsStructure3#SingleOrAllLimitsRule
+ * LimitDetailsStructure3.SingleOrAllLimitsRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -65,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -80,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LimitDetailsStructure3", propOrder = {"currentLimitIdentification", "allCurrentLimits"})
 public class LimitDetailsStructure3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CurLmtId", required = true)
 	protected List<com.tools20022.repository.msg.LimitIdentificationDetails2> currentLimitIdentification;
 	/**
-	 * Identification of the current limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -121,7 +120,7 @@ public class LimitDetailsStructure3 {
 	public static final MMMessageAssociationEnd mmCurrentLimitIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
-			componentContext_lazy = () -> LimitDetailsStructure3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitDetailsStructure3.mmObject();
 			isDerived = false;
 			xmlTag = "CurLmtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +131,11 @@ public class LimitDetailsStructure3 {
 			type_lazy = () -> com.tools20022.repository.msg.LimitIdentificationDetails2.mmObject();
 		}
 	};
+	@XmlElement(name = "AllCurLmts", required = true)
 	protected List<com.tools20022.repository.msg.LimitIdentificationDetails3> allCurrentLimits;
 	/**
-	 * Identification of the current limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -168,7 +168,7 @@ public class LimitDetailsStructure3 {
 	public static final MMMessageAssociationEnd mmAllCurrentLimits = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
-			componentContext_lazy = () -> LimitDetailsStructure3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitDetailsStructure3.mmObject();
 			isDerived = false;
 			xmlTag = "AllCurLmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,22 +211,22 @@ public class LimitDetailsStructure3 {
 	 * "Each ModifyLimit message can only modify one type of limit."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmSingleOrAllLimitsRule = new MMXor() {
+	public static final MMXor SingleOrAllLimitsRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleOrAllLimitsRule";
 			definition = "Each ModifyLimit message can only modify one type of limit.";
-			messageComponent_lazy = () -> LimitDetailsStructure3.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(LimitDetailsStructure3.mmCurrentLimitIdentification, LimitDetailsStructure3.mmAllCurrentLimits);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.LimitDetailsStructure3.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetailsStructure3.mmCurrentLimitIdentification, com.tools20022.repository.msg.LimitDetailsStructure3.mmAllCurrentLimits);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LimitDetailsStructure3.mmCurrentLimitIdentification, LimitDetailsStructure3.mmAllCurrentLimits);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetailsStructure3.mmCurrentLimitIdentification, com.tools20022.repository.msg.LimitDetailsStructure3.mmAllCurrentLimits);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -237,27 +237,27 @@ public class LimitDetailsStructure3 {
 				})).get();
 				name = "LimitDetailsStructure3";
 				definition = "Limit details of one particular limit set by the member and managed by the transaction administrator.";
-				xors_lazy = () -> Arrays.asList(LimitDetailsStructure3.mmSingleOrAllLimitsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetailsStructure3.SingleOrAllLimitsRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CurLmtId", required = true)
 	public List<LimitIdentificationDetails2> getCurrentLimitIdentification() {
-		return currentLimitIdentification;
+		return currentLimitIdentification == null ? currentLimitIdentification = new ArrayList<>() : currentLimitIdentification;
 	}
 
-	public void setCurrentLimitIdentification(List<com.tools20022.repository.msg.LimitIdentificationDetails2> currentLimitIdentification) {
-		this.currentLimitIdentification = currentLimitIdentification;
+	public LimitDetailsStructure3 setCurrentLimitIdentification(List<com.tools20022.repository.msg.LimitIdentificationDetails2> currentLimitIdentification) {
+		this.currentLimitIdentification = Objects.requireNonNull(currentLimitIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AllCurLmts", required = true)
 	public List<LimitIdentificationDetails3> getAllCurrentLimits() {
-		return allCurrentLimits;
+		return allCurrentLimits == null ? allCurrentLimits = new ArrayList<>() : allCurrentLimits;
 	}
 
-	public void setAllCurrentLimits(List<com.tools20022.repository.msg.LimitIdentificationDetails3> allCurrentLimits) {
-		this.allCurrentLimits = allCurrentLimits;
+	public LimitDetailsStructure3 setAllCurrentLimits(List<com.tools20022.repository.msg.LimitIdentificationDetails3> allCurrentLimits) {
+		this.allCurrentLimits = Objects.requireNonNull(allCurrentLimits);
+		return this;
 	}
 }

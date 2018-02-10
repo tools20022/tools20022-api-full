@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ConsolidationTypeCode;
+import com.tools20022.repository.codeset.ConsolidationType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the consolidation type.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ConsolidationTypeCode
- * ConsolidationTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConsolidationType1Code#mmGeneral
- * ConsolidationType1Code.mmGeneral}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConsolidationType1Code#General
+ * ConsolidationType1Code.General}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConsolidationType1Code#mmParticipation
- * ConsolidationType1Code.mmParticipation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConsolidationType1Code#Participation
+ * ConsolidationType1Code.Participation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ConsolidationTypeCode
+ * ConsolidationTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the consolidation type."</li>
  * </ul>
  */
-public class ConsolidationType1Code extends ConsolidationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ConsolidationType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class ConsolidationType1Code extends ConsolidationTypeCode {
 	 * name} = "General"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGeneral = new MMCode() {
+	public static final ConsolidationType1Code General = new ConsolidationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "General";
-			owner_lazy = () -> ConsolidationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConsolidationType1Code.mmObject();
+			codeName = ConsolidationTypeCode.General.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class ConsolidationType1Code extends ConsolidationTypeCode {
 	 * name} = "Participation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmParticipation = new MMCode() {
+	public static final ConsolidationType1Code Participation = new ConsolidationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Participation";
-			owner_lazy = () -> ConsolidationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConsolidationType1Code.mmObject();
+			codeName = ConsolidationTypeCode.Participation.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ConsolidationType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ConsolidationType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConsolidationType1Code";
 				definition = "Specifies the consolidation type.";
-				code_lazy = () -> Arrays.asList(ConsolidationType1Code.mmGeneral, ConsolidationType1Code.mmParticipation);
 				trace_lazy = () -> ConsolidationTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConsolidationType1Code.General, com.tools20022.repository.codeset.ConsolidationType1Code.Participation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(General.getCodeName().get(), General);
+		codesByName.put(Participation.getCodeName().get(), Participation);
+	}
+
+	public static ConsolidationType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ConsolidationType1Code[] values() {
+		ConsolidationType1Code[] values = new ConsolidationType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ConsolidationType1Code> {
+		@Override
+		public ConsolidationType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ConsolidationType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

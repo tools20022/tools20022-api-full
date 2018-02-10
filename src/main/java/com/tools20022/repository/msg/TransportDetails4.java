@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ShipmentDate1Choice;
 import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * TransportDetails3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransportDetails4", propOrder = {"transportDocumentReference", "transportedGoods", "consignment", "routingSummary", "shipmentDate", "freightCharges", "incoterms"})
 public class TransportDetails4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TrnsprtDocRef", required = true)
 	protected List<com.tools20022.repository.msg.DocumentIdentification7> transportDocumentReference;
 	/**
-	 * Reference to the identification of the underlying transport document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -127,7 +127,7 @@ public class TransportDetails4 {
 	 */
 	public static final MMMessageAssociationEnd mmTransportDocumentReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransportDetails4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtDocRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,10 +139,11 @@ public class TransportDetails4 {
 			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();
 		}
 	};
+	@XmlElement(name = "TrnsprtdGoods", required = true)
 	protected List<com.tools20022.repository.msg.TransportedGoods1> transportedGoods;
 	/**
-	 * Goods that are transported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -179,7 +180,7 @@ public class TransportDetails4 {
 	public static final MMMessageAssociationEnd mmTransportedGoods = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmTransportedGoods;
-			componentContext_lazy = () -> TransportDetails4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtdGoods";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,10 +192,11 @@ public class TransportDetails4 {
 			type_lazy = () -> com.tools20022.repository.msg.TransportedGoods1.mmObject();
 		}
 	};
+	@XmlElement(name = "Consgnmt")
 	protected Consignment3 consignment;
 	/**
-	 * Physical packaging of goods for transport.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -231,7 +233,7 @@ public class TransportDetails4 {
 	public static final MMMessageAssociationEnd mmConsignment = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPackaging;
-			componentContext_lazy = () -> TransportDetails4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "Consgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,10 +246,11 @@ public class TransportDetails4 {
 			type_lazy = () -> com.tools20022.repository.msg.Consignment3.mmObject();
 		}
 	};
+	@XmlElement(name = "RtgSummry", required = true)
 	protected TransportMeans6 routingSummary;
 	/**
-	 * Information related to the conveyance of goods.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -283,7 +286,7 @@ public class TransportDetails4 {
 	public static final MMMessageAssociationEnd mmRoutingSummary = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Transport.mmObject();
-			componentContext_lazy = () -> TransportDetails4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "RtgSummry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -296,10 +299,11 @@ public class TransportDetails4 {
 			type_lazy = () -> com.tools20022.repository.msg.TransportMeans6.mmObject();
 		}
 	};
+	@XmlElement(name = "ShipmntDt", required = true)
 	protected ShipmentDate1Choice shipmentDate;
 	/**
-	 * Shipment date, actual or proposed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -336,7 +340,7 @@ public class TransportDetails4 {
 	public static final MMMessageAssociationEnd mmShipmentDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmShipmentDates;
-			componentContext_lazy = () -> TransportDetails4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "ShipmntDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -349,10 +353,11 @@ public class TransportDetails4 {
 			type_lazy = () -> ShipmentDate1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FrghtChrgs")
 	protected Charge25 freightCharges;
 	/**
-	 * Charges related to the conveyance of goods.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -388,7 +393,7 @@ public class TransportDetails4 {
 	public static final MMMessageAssociationEnd mmFreightCharges = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmTransportCharges;
-			componentContext_lazy = () -> TransportDetails4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "FrghtChrgs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -401,10 +406,11 @@ public class TransportDetails4 {
 			type_lazy = () -> com.tools20022.repository.msg.Charge25.mmObject();
 		}
 	};
+	@XmlElement(name = "Incotrms")
 	protected Incoterms4 incoterms;
 	/**
-	 * Specifies the applicable Incoterm and associated location.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -441,7 +447,7 @@ public class TransportDetails4 {
 	public static final MMMessageAssociationEnd mmIncoterms = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmIncoterms;
-			componentContext_lazy = () -> TransportDetails4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "Incotrms";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -458,10 +464,11 @@ public class TransportDetails4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransportDetails4.mmTransportDocumentReference, TransportDetails4.mmTransportedGoods, TransportDetails4.mmConsignment, TransportDetails4.mmRoutingSummary,
-						TransportDetails4.mmShipmentDate, TransportDetails4.mmFreightCharges, TransportDetails4.mmIncoterms);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportDetails4.mmTransportDocumentReference, com.tools20022.repository.msg.TransportDetails4.mmTransportedGoods,
+						com.tools20022.repository.msg.TransportDetails4.mmConsignment, com.tools20022.repository.msg.TransportDetails4.mmRoutingSummary, com.tools20022.repository.msg.TransportDetails4.mmShipmentDate,
+						com.tools20022.repository.msg.TransportDetails4.mmFreightCharges, com.tools20022.repository.msg.TransportDetails4.mmIncoterms);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransportDetails4";
 				definition = "Information on the shipment date, the charges, the routing and the goods described in the transport document.";
@@ -471,66 +478,66 @@ public class TransportDetails4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TrnsprtDocRef", required = true)
 	public List<DocumentIdentification7> getTransportDocumentReference() {
-		return transportDocumentReference;
+		return transportDocumentReference == null ? transportDocumentReference = new ArrayList<>() : transportDocumentReference;
 	}
 
-	public void setTransportDocumentReference(List<com.tools20022.repository.msg.DocumentIdentification7> transportDocumentReference) {
-		this.transportDocumentReference = transportDocumentReference;
+	public TransportDetails4 setTransportDocumentReference(List<com.tools20022.repository.msg.DocumentIdentification7> transportDocumentReference) {
+		this.transportDocumentReference = Objects.requireNonNull(transportDocumentReference);
+		return this;
 	}
 
-	@XmlElement(name = "TrnsprtdGoods", required = true)
 	public List<TransportedGoods1> getTransportedGoods() {
-		return transportedGoods;
+		return transportedGoods == null ? transportedGoods = new ArrayList<>() : transportedGoods;
 	}
 
-	public void setTransportedGoods(List<com.tools20022.repository.msg.TransportedGoods1> transportedGoods) {
-		this.transportedGoods = transportedGoods;
+	public TransportDetails4 setTransportedGoods(List<com.tools20022.repository.msg.TransportedGoods1> transportedGoods) {
+		this.transportedGoods = Objects.requireNonNull(transportedGoods);
+		return this;
 	}
 
-	@XmlElement(name = "Consgnmt")
-	public Consignment3 getConsignment() {
-		return consignment;
+	public Optional<Consignment3> getConsignment() {
+		return consignment == null ? Optional.empty() : Optional.of(consignment);
 	}
 
-	public void setConsignment(com.tools20022.repository.msg.Consignment3 consignment) {
+	public TransportDetails4 setConsignment(com.tools20022.repository.msg.Consignment3 consignment) {
 		this.consignment = consignment;
+		return this;
 	}
 
-	@XmlElement(name = "RtgSummry", required = true)
 	public TransportMeans6 getRoutingSummary() {
 		return routingSummary;
 	}
 
-	public void setRoutingSummary(com.tools20022.repository.msg.TransportMeans6 routingSummary) {
-		this.routingSummary = routingSummary;
+	public TransportDetails4 setRoutingSummary(com.tools20022.repository.msg.TransportMeans6 routingSummary) {
+		this.routingSummary = Objects.requireNonNull(routingSummary);
+		return this;
 	}
 
-	@XmlElement(name = "ShipmntDt", required = true)
 	public ShipmentDate1Choice getShipmentDate() {
 		return shipmentDate;
 	}
 
-	public void setShipmentDate(ShipmentDate1Choice shipmentDate) {
-		this.shipmentDate = shipmentDate;
+	public TransportDetails4 setShipmentDate(ShipmentDate1Choice shipmentDate) {
+		this.shipmentDate = Objects.requireNonNull(shipmentDate);
+		return this;
 	}
 
-	@XmlElement(name = "FrghtChrgs")
-	public Charge25 getFreightCharges() {
-		return freightCharges;
+	public Optional<Charge25> getFreightCharges() {
+		return freightCharges == null ? Optional.empty() : Optional.of(freightCharges);
 	}
 
-	public void setFreightCharges(com.tools20022.repository.msg.Charge25 freightCharges) {
+	public TransportDetails4 setFreightCharges(com.tools20022.repository.msg.Charge25 freightCharges) {
 		this.freightCharges = freightCharges;
+		return this;
 	}
 
-	@XmlElement(name = "Incotrms")
-	public Incoterms4 getIncoterms() {
-		return incoterms;
+	public Optional<Incoterms4> getIncoterms() {
+		return incoterms == null ? Optional.empty() : Optional.of(incoterms);
 	}
 
-	public void setIncoterms(com.tools20022.repository.msg.Incoterms4 incoterms) {
+	public TransportDetails4 setIncoterms(com.tools20022.repository.msg.Incoterms4 incoterms) {
 		this.incoterms = incoterms;
+		return this;
 	}
 }

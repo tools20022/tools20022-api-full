@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RejectionReasonCode;
+import com.tools20022.repository.codeset.RejectionReason11Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason of a rejection of the notification cancellation request.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RejectionReasonCode
- * RejectionReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason11Code#mmFailedValidation
- * RejectionReason11Code.mmFailedValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason11Code#FailedValidation
+ * RejectionReason11Code.FailedValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason11Code#mmRejectedSinceAlreadyCancelled
- * RejectionReason11Code.mmRejectedSinceAlreadyCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason11Code#RejectedSinceAlreadyCancelled
+ * RejectionReason11Code.RejectedSinceAlreadyCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason11Code#mmRejectedSinceInProgress
- * RejectionReason11Code.mmRejectedSinceInProgress}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason11Code#RejectedSinceInProgress
+ * RejectionReason11Code.RejectedSinceInProgress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason11Code#mmInvalidCAIdentification
- * RejectionReason11Code.mmInvalidCAIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason11Code#InvalidCAIdentification
+ * RejectionReason11Code.InvalidCAIdentification}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RejectionReasonCode
+ * RejectionReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -72,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class RejectionReason11Code extends RejectionReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RejectionReason11Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,11 +96,12 @@ public class RejectionReason11Code extends RejectionReasonCode {
 	 * name} = "FailedValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFailedValidation = new MMCode() {
+	public static final RejectionReason11Code FailedValidation = new RejectionReason11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailedValidation";
-			owner_lazy = () -> RejectionReason11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason11Code.mmObject();
+			codeName = RejectionReasonCode.FailedValidation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -114,11 +120,12 @@ public class RejectionReason11Code extends RejectionReasonCode {
 	 * name} = "RejectedSinceAlreadyCancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejectedSinceAlreadyCancelled = new MMCode() {
+	public static final RejectionReason11Code RejectedSinceAlreadyCancelled = new RejectionReason11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedSinceAlreadyCancelled";
-			owner_lazy = () -> RejectionReason11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason11Code.mmObject();
+			codeName = RejectionReasonCode.RejectedSinceAlreadyCancelled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -137,11 +144,12 @@ public class RejectionReason11Code extends RejectionReasonCode {
 	 * name} = "RejectedSinceInProgress"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejectedSinceInProgress = new MMCode() {
+	public static final RejectionReason11Code RejectedSinceInProgress = new RejectionReason11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedSinceInProgress";
-			owner_lazy = () -> RejectionReason11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason11Code.mmObject();
+			codeName = RejectionReasonCode.RejectedSinceInProgress.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -160,27 +168,60 @@ public class RejectionReason11Code extends RejectionReasonCode {
 	 * name} = "InvalidCAIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalidCAIdentification = new MMCode() {
+	public static final RejectionReason11Code InvalidCAIdentification = new RejectionReason11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidCAIdentification";
-			owner_lazy = () -> RejectionReason11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason11Code.mmObject();
+			codeName = RejectionReasonCode.InvalidCAIdentification.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RejectionReason11Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RejectionReason11Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FAIL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason11Code";
 				definition = "Specifies the reason of a rejection of the notification cancellation request.";
-				code_lazy = () -> Arrays.asList(RejectionReason11Code.mmFailedValidation, RejectionReason11Code.mmRejectedSinceAlreadyCancelled, RejectionReason11Code.mmRejectedSinceInProgress,
-						RejectionReason11Code.mmInvalidCAIdentification);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason11Code.FailedValidation, com.tools20022.repository.codeset.RejectionReason11Code.RejectedSinceAlreadyCancelled,
+						com.tools20022.repository.codeset.RejectionReason11Code.RejectedSinceInProgress, com.tools20022.repository.codeset.RejectionReason11Code.InvalidCAIdentification);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(FailedValidation.getCodeName().get(), FailedValidation);
+		codesByName.put(RejectedSinceAlreadyCancelled.getCodeName().get(), RejectedSinceAlreadyCancelled);
+		codesByName.put(RejectedSinceInProgress.getCodeName().get(), RejectedSinceInProgress);
+		codesByName.put(InvalidCAIdentification.getCodeName().get(), InvalidCAIdentification);
+	}
+
+	public static RejectionReason11Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RejectionReason11Code[] values() {
+		RejectionReason11Code[] values = new RejectionReason11Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RejectionReason11Code> {
+		@Override
+		public RejectionReason11Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RejectionReason11Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

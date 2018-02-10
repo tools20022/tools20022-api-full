@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -31,6 +32,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -86,8 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPendingToFailingRule#forSettlementStatus2Choice
+ * ConstraintPendingToFailingRule.forSettlementStatus2Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -109,16 +119,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementStatus2Choice", propOrder = {"pending", "failing", "proprietary"})
 public class SettlementStatus2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pdg", required = true)
 	protected PendingStatus3Choice pending;
 	/**
-	 * Instruction is pending. Settlement at the instructed settlement date is
-	 * still possible.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -138,6 +148,9 @@ public class SettlementStatus2Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Pdg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::SETT//PEND</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -153,9 +166,10 @@ public class SettlementStatus2Choice {
 	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
-			componentContext_lazy = () -> SettlementStatus2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::SETT//PEND"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Instruction is pending. Settlement at the instructed settlement date is still possible.";
@@ -165,11 +179,11 @@ public class SettlementStatus2Choice {
 			type_lazy = () -> com.tools20022.repository.choice.PendingStatus3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Flng", required = true)
 	protected FailingStatus1Choice failing;
 	/**
-	 * Instruction is failing. Settlement at the instructed settlement date is
-	 * no longer possible.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -189,6 +203,9 @@ public class SettlementStatus2Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Flng"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::SETT//PENF</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -204,9 +221,10 @@ public class SettlementStatus2Choice {
 	public static final MMMessageAssociationEnd mmFailing = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
-			componentContext_lazy = () -> SettlementStatus2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Flng";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::SETT//PENF"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failing";
 			definition = "Instruction is failing. Settlement at the instructed settlement date is no longer possible.";
@@ -216,10 +234,11 @@ public class SettlementStatus2Choice {
 			type_lazy = () -> com.tools20022.repository.choice.FailingStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected ProprietaryStatusAndReason1 proprietary;
 	/**
-	 * Proprietary status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -239,6 +258,9 @@ public class SettlementStatus2Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Prtry"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::SETT/4!c[4c]/4!c</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -252,9 +274,10 @@ public class SettlementStatus2Choice {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
-			componentContext_lazy = () -> SettlementStatus2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::SETT/4!c[4c]/4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary status.";
@@ -268,12 +291,14 @@ public class SettlementStatus2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementStatus2Choice.mmPending, SettlementStatus2Choice.mmFailing, SettlementStatus2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus2Choice.mmPending, com.tools20022.repository.choice.SettlementStatus2Choice.mmFailing,
+						com.tools20022.repository.choice.SettlementStatus2Choice.mmProprietary);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdviceV01.mmSettlementStatus, SecuritiesSettlementTransactionStatusAdviceV02.mmSettlementStatus,
 						IntraPositionMovementStatusAdviceV01.mmSettlementStatus, IntraPositionMovementStatusAdviceV02.mmSettlementStatus, SecuritiesFinancingStatusAdviceV01.mmSettlementStatus,
 						SecuritiesFinancingStatusAdviceV02.mmSettlementStatus);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPendingToFailingRule.forSettlementStatus2Choice);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementStatus2Choice";
 				definition = "Choice of format for the settlement status.";
@@ -283,30 +308,30 @@ public class SettlementStatus2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pdg", required = true)
 	public PendingStatus3Choice getPending() {
 		return pending;
 	}
 
-	public void setPending(com.tools20022.repository.choice.PendingStatus3Choice pending) {
-		this.pending = pending;
+	public SettlementStatus2Choice setPending(com.tools20022.repository.choice.PendingStatus3Choice pending) {
+		this.pending = Objects.requireNonNull(pending);
+		return this;
 	}
 
-	@XmlElement(name = "Flng", required = true)
 	public FailingStatus1Choice getFailing() {
 		return failing;
 	}
 
-	public void setFailing(com.tools20022.repository.choice.FailingStatus1Choice failing) {
-		this.failing = failing;
+	public SettlementStatus2Choice setFailing(com.tools20022.repository.choice.FailingStatus1Choice failing) {
+		this.failing = Objects.requireNonNull(failing);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryStatusAndReason1 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(ProprietaryStatusAndReason1 proprietary) {
-		this.proprietary = proprietary;
+	public SettlementStatus2Choice setProprietary(ProprietaryStatusAndReason1 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

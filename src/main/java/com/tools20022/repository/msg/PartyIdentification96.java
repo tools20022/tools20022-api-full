@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOrganisationIdentificationRule#forPartyIdentification96
+ * ConstraintOrganisationIdentificationRule.forPartyIdentification96}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * PartyIdentification95}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyIdentification96", propOrder = {"identification", "legalEntityIdentifier"})
 public class PartyIdentification96 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id")
 	protected PartyIdentification96Choice identification;
 	/**
-	 * Identification of the organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +128,7 @@ public class PartyIdentification96 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> PartyIdentification96.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification96.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,12 +140,11 @@ public class PartyIdentification96 {
 			complexType_lazy = () -> PartyIdentification96Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LglNttyIdr")
 	protected LEIIdentifier legalEntityIdentifier;
 	/**
-	 * Identification of the organisation with a Legal Entity Identifier. This
-	 * is a code allocated to a party as described in ISO 17442
-	 * "Financial Services - Legal Entity Identifier (LEI)".
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,7 +185,7 @@ public class PartyIdentification96 {
 	public static final MMMessageAttribute mmLegalEntityIdentifier = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
-			componentContext_lazy = () -> PartyIdentification96.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification96.mmObject();
 			isDerived = false;
 			xmlTag = "LglNttyIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,9 +201,10 @@ public class PartyIdentification96 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification96.mmIdentification, PartyIdentification96.mmLegalEntityIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification96.mmIdentification, com.tools20022.repository.msg.PartyIdentification96.mmLegalEntityIdentifier);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrganisationIdentificationRule.forPartyIdentification96);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification96";
 				definition = "Identification of a person or an organisation.";
@@ -204,21 +214,21 @@ public class PartyIdentification96 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id")
-	public PartyIdentification96Choice getIdentification() {
-		return identification;
+	public Optional<PartyIdentification96Choice> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(PartyIdentification96Choice identification) {
+	public PartyIdentification96 setIdentification(PartyIdentification96Choice identification) {
 		this.identification = identification;
+		return this;
 	}
 
-	@XmlElement(name = "LglNttyIdr")
-	public LEIIdentifier getLegalEntityIdentifier() {
-		return legalEntityIdentifier;
+	public Optional<LEIIdentifier> getLegalEntityIdentifier() {
+		return legalEntityIdentifier == null ? Optional.empty() : Optional.of(legalEntityIdentifier);
 	}
 
-	public void setLegalEntityIdentifier(LEIIdentifier legalEntityIdentifier) {
+	public PartyIdentification96 setLegalEntityIdentifier(LEIIdentifier legalEntityIdentifier) {
 		this.legalEntityIdentifier = legalEntityIdentifier;
+		return this;
 	}
 }

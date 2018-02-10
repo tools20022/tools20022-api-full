@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.NotificationTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies which type of action a user must take or is prevented to take.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NotificationTypeCode#mmMustWithdrawFromTransaction
- * NotificationTypeCode.mmMustWithdrawFromTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.NotificationTypeCode#MustWithdrawFromTransaction
+ * NotificationTypeCode.MustWithdrawFromTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NotificationTypeCode#mmCannotSubmitDataSet
- * NotificationTypeCode.mmCannotSubmitDataSet}</li>
+ * {@linkplain com.tools20022.repository.codeset.NotificationTypeCode#CannotSubmitDataSet
+ * NotificationTypeCode.CannotSubmitDataSet}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies which type of action a user must take or is prevented to take."</li>
  * </ul>
  */
-public class NotificationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class NotificationTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,12 +99,12 @@ public class NotificationTypeCode {
 	 * "User must withdraw from transaction because of Force Majeure."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMustWithdrawFromTransaction = new MMCode() {
+	public static final NotificationTypeCode MustWithdrawFromTransaction = new NotificationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MustWithdrawFromTransaction";
 			definition = "User must withdraw from transaction because of Force Majeure.";
-			owner_lazy = () -> NotificationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NotificationTypeCode.mmObject();
 			codeName = "MWFT";
 		}
 	};
@@ -123,28 +129,58 @@ public class NotificationTypeCode {
 	 * definition} = "User is unable to submit data set(s)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCannotSubmitDataSet = new MMCode() {
+	public static final NotificationTypeCode CannotSubmitDataSet = new NotificationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CannotSubmitDataSet";
 			definition = "User is unable to submit data set(s).";
-			owner_lazy = () -> NotificationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NotificationTypeCode.mmObject();
 			codeName = "CSDS";
 		}
 	};
+	final static private LinkedHashMap<String, NotificationTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected NotificationTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MWFT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NotificationTypeCode";
 				definition = "Specifies which type of action a user must take or is prevented to take.";
-				code_lazy = () -> Arrays.asList(NotificationTypeCode.mmMustWithdrawFromTransaction, NotificationTypeCode.mmCannotSubmitDataSet);
 				derivation_lazy = () -> Arrays.asList(NotificationType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NotificationTypeCode.MustWithdrawFromTransaction, com.tools20022.repository.codeset.NotificationTypeCode.CannotSubmitDataSet);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(MustWithdrawFromTransaction.getCodeName().get(), MustWithdrawFromTransaction);
+		codesByName.put(CannotSubmitDataSet.getCodeName().get(), CannotSubmitDataSet);
+	}
+
+	public static NotificationTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static NotificationTypeCode[] values() {
+		NotificationTypeCode[] values = new NotificationTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, NotificationTypeCode> {
+		@Override
+		public NotificationTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(NotificationTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

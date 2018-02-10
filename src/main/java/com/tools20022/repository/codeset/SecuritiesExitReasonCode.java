@@ -17,12 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.SecuritiesExitReasonCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for DTC (The Depository Trust Company) to exit the
@@ -33,14 +39,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesExitReasonCode#mmRestricted
- * SecuritiesExitReasonCode.mmRestricted}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesExitReasonCode#Restricted
+ * SecuritiesExitReasonCode.Restricted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesExitReasonCode#mmNonTransferable
- * SecuritiesExitReasonCode.mmNonTransferable}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesExitReasonCode#NonTransferable
+ * SecuritiesExitReasonCode.NonTransferable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesExitReasonCode#mmOther
- * SecuritiesExitReasonCode.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesExitReasonCode#Other
+ * SecuritiesExitReasonCode.Other}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +59,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = DTCCSynonym: DTCC Exit Explanation Code</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class SecuritiesExitReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SecuritiesExitReasonCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,12 +107,12 @@ public class SecuritiesExitReasonCode {
 	 * definition} = "Shares are restricted."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRestricted = new MMCode() {
+	public static final SecuritiesExitReasonCode Restricted = new SecuritiesExitReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
 			definition = "Shares are restricted.";
-			owner_lazy = () -> SecuritiesExitReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesExitReasonCode.mmObject();
 			codeName = "REST";
 		}
 	};
@@ -127,12 +137,12 @@ public class SecuritiesExitReasonCode {
 	 * definition} = "Shares are non transferable."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonTransferable = new MMCode() {
+	public static final SecuritiesExitReasonCode NonTransferable = new SecuritiesExitReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonTransferable";
 			definition = "Shares are non transferable.";
-			owner_lazy = () -> SecuritiesExitReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesExitReasonCode.mmObject();
 			codeName = "NTRN";
 		}
 	};
@@ -157,28 +167,61 @@ public class SecuritiesExitReasonCode {
 	 * definition} = "Other reason."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final SecuritiesExitReasonCode Other = new SecuritiesExitReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other reason.";
-			owner_lazy = () -> SecuritiesExitReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesExitReasonCode.mmObject();
 			codeName = "OTHR";
 		}
 	};
+	final static private LinkedHashMap<String, SecuritiesExitReasonCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SecuritiesExitReasonCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTCC Exit Explanation Code"));
 				example = Arrays.asList("REST");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesExitReasonCode";
 				definition = "Specifies the reason for DTC (The Depository Trust Company) to exit the shares. ";
-				code_lazy = () -> Arrays.asList(SecuritiesExitReasonCode.mmRestricted, SecuritiesExitReasonCode.mmNonTransferable, SecuritiesExitReasonCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(SecuritiesExitReason1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesExitReasonCode.Restricted, com.tools20022.repository.codeset.SecuritiesExitReasonCode.NonTransferable,
+						com.tools20022.repository.codeset.SecuritiesExitReasonCode.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Restricted.getCodeName().get(), Restricted);
+		codesByName.put(NonTransferable.getCodeName().get(), NonTransferable);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static SecuritiesExitReasonCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SecuritiesExitReasonCode[] values() {
+		SecuritiesExitReasonCode[] values = new SecuritiesExitReasonCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SecuritiesExitReasonCode> {
+		@Override
+		public SecuritiesExitReasonCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SecuritiesExitReasonCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

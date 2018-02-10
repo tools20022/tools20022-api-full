@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TonsOrCurrency2Choice", propOrder = {"number", "amount"})
 public class TonsOrCurrency2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nb", required = true)
 	protected DecimalNumber number;
 	/**
-	 * Total number of specific transactions expresses in tons.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,7 +103,7 @@ public class TonsOrCurrency2Choice {
 	 */
 	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TonsOrCurrency2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TonsOrCurrency2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,11 +114,11 @@ public class TonsOrCurrency2Choice {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount amount;
 	/**
-	 * Total volume of specific transactions expresses in currency and amount
-	 * format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +148,7 @@ public class TonsOrCurrency2Choice {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TonsOrCurrency2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TonsOrCurrency2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,8 +163,8 @@ public class TonsOrCurrency2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TonsOrCurrency2Choice.mmNumber, TonsOrCurrency2Choice.mmAmount);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TonsOrCurrency2Choice.mmNumber, com.tools20022.repository.choice.TonsOrCurrency2Choice.mmAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TonsOrCurrency2Choice";
 				definition = "Specifies the commodity quantity in tons or the amount and currency used (for example carbone dioxide).\r\n";
@@ -171,21 +173,21 @@ public class TonsOrCurrency2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nb", required = true)
 	public DecimalNumber getNumber() {
 		return number;
 	}
 
-	public void setNumber(DecimalNumber number) {
-		this.number = number;
+	public TonsOrCurrency2Choice setNumber(DecimalNumber number) {
+		this.number = Objects.requireNonNull(number);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
-		this.amount = amount;
+	public TonsOrCurrency2Choice setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 }

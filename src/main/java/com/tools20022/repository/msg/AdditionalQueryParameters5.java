@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,9 +28,8 @@ import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,16 +93,16 @@ import javax.xml.bind.annotation.XmlType;
  * AdditionalQueryParameters3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AdditionalQueryParameters5", propOrder = {"status", "reason", "financialInstrumentIdentification"})
 public class AdditionalQueryParameters5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts")
 	protected Status8Choice status;
 	/**
-	 * Request to obtain a Securities Transaction Pending Report for
-	 * transactions with the specified status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -120,6 +120,9 @@ public class AdditionalQueryParameters5 {
 	 * AdditionalQueryParameters5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Sts"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -144,9 +147,10 @@ public class AdditionalQueryParameters5 {
 	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
-			componentContext_lazy = () -> AdditionalQueryParameters5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalQueryParameters5.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Request to obtain a Securities Transaction Pending Report for transactions with the specified status.";
@@ -157,11 +161,11 @@ public class AdditionalQueryParameters5 {
 			type_lazy = () -> Status8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn")
 	protected List<Reason7Choice> reason;
 	/**
-	 * Request to obtain a Securities Transaction Pending Report for
-	 * transactions with the specified status reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -179,6 +183,9 @@ public class AdditionalQueryParameters5 {
 	 * AdditionalQueryParameters5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Rsn"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :24B:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -203,9 +210,10 @@ public class AdditionalQueryParameters5 {
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> AdditionalQueryParameters5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalQueryParameters5.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":24B:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Request to obtain a Securities Transaction Pending Report for transactions with the specified status reason.";
@@ -215,11 +223,11 @@ public class AdditionalQueryParameters5 {
 			type_lazy = () -> Reason7Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmId")
 	protected List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification;
 	/**
-	 * Financial instruments representing a sum of rights of the investor
-	 * vis-a-vis the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -238,6 +246,9 @@ public class AdditionalQueryParameters5 {
 	 * AdditionalQueryParameters5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FinInstrmId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :35B:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -262,9 +273,10 @@ public class AdditionalQueryParameters5 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> AdditionalQueryParameters5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalQueryParameters5.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":35B:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
@@ -278,10 +290,11 @@ public class AdditionalQueryParameters5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AdditionalQueryParameters5.mmStatus, AdditionalQueryParameters5.mmReason, AdditionalQueryParameters5.mmFinancialInstrumentIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalQueryParameters5.mmStatus, com.tools20022.repository.msg.AdditionalQueryParameters5.mmReason,
+						com.tools20022.repository.msg.AdditionalQueryParameters5.mmFinancialInstrumentIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesStatementQueryV03.mmAdditionalQueryParameters);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalQueryParameters5";
 				definition = "Additional specific query criteria.";
@@ -292,30 +305,30 @@ public class AdditionalQueryParameters5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts")
-	public Status8Choice getStatus() {
-		return status;
+	public Optional<Status8Choice> getStatus() {
+		return status == null ? Optional.empty() : Optional.of(status);
 	}
 
-	public void setStatus(Status8Choice status) {
+	public AdditionalQueryParameters5 setStatus(Status8Choice status) {
 		this.status = status;
+		return this;
 	}
 
-	@XmlElement(name = "Rsn")
 	public List<Reason7Choice> getReason() {
-		return reason;
+		return reason == null ? reason = new ArrayList<>() : reason;
 	}
 
-	public void setReason(List<Reason7Choice> reason) {
-		this.reason = reason;
+	public AdditionalQueryParameters5 setReason(List<Reason7Choice> reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmId")
 	public List<SecurityIdentification14> getFinancialInstrumentIdentification() {
-		return financialInstrumentIdentification;
+		return financialInstrumentIdentification == null ? financialInstrumentIdentification = new ArrayList<>() : financialInstrumentIdentification;
 	}
 
-	public void setFinancialInstrumentIdentification(List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification) {
-		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	public AdditionalQueryParameters5 setFinancialInstrumentIdentification(List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
+		return this;
 	}
 }

@@ -33,6 +33,8 @@ import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,15 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashBalance6", propOrder = {"amount", "creditDebitIndicator", "type", "status", "valueDate", "numberOfPayments"})
 public class CashBalance6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ImpliedCurrencyAndAmount amount;
 	/**
-	 * Currency and amount of money of the cash balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -136,7 +139,7 @@ public class CashBalance6 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmAmount;
-			componentContext_lazy = () -> CashBalance6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,11 +151,11 @@ public class CashBalance6 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd", required = true)
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Indicates whether the balance is a credit or a debit balance. A zero
-	 * balance is considered to be a credit balance
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,7 +198,7 @@ public class CashBalance6 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmCreditDebitIndicator;
-			componentContext_lazy = () -> CashBalance6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,10 +210,11 @@ public class CashBalance6 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected BalanceType9Choice type;
 	/**
-	 * Specifies the nature of a balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -248,7 +252,7 @@ public class CashBalance6 {
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
-			componentContext_lazy = () -> CashBalance6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -261,10 +265,11 @@ public class CashBalance6 {
 			type_lazy = () -> BalanceType9Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts")
 	protected BalanceStatus1Code status;
 	/**
-	 * Current status of a cash balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -297,7 +302,7 @@ public class CashBalance6 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmBalanceStatus;
-			componentContext_lazy = () -> CashBalance6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -308,10 +313,11 @@ public class CashBalance6 {
 			simpleType_lazy = () -> BalanceStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ValDt")
 	protected DateAndDateTimeChoice valueDate;
 	/**
-	 * Date and time at which the balance is or will be available.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -345,7 +351,7 @@ public class CashBalance6 {
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmValueDate;
-			componentContext_lazy = () -> CashBalance6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -356,11 +362,11 @@ public class CashBalance6 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfPmts")
 	protected Number numberOfPayments;
 	/**
-	 * Number of payments taken into account for the calculation of the cash
-	 * balance value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -388,7 +394,7 @@ public class CashBalance6 {
 	 */
 	public static final MMMessageAttribute mmNumberOfPayments = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashBalance6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfPmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -403,9 +409,10 @@ public class CashBalance6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashBalance6.mmAmount, CashBalance6.mmCreditDebitIndicator, CashBalance6.mmType, CashBalance6.mmStatus, CashBalance6.mmValueDate, CashBalance6.mmNumberOfPayments);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalance6.mmAmount, com.tools20022.repository.msg.CashBalance6.mmCreditDebitIndicator, com.tools20022.repository.msg.CashBalance6.mmType,
+						com.tools20022.repository.msg.CashBalance6.mmStatus, com.tools20022.repository.msg.CashBalance6.mmValueDate, com.tools20022.repository.msg.CashBalance6.mmNumberOfPayments);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashBalance6";
 				definition = "Balance details for a cash account.";
@@ -415,57 +422,57 @@ public class CashBalance6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ImpliedCurrencyAndAmount amount) {
-		this.amount = amount;
+	public CashBalance6 setAmount(ImpliedCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
-		this.creditDebitIndicator = creditDebitIndicator;
+	public CashBalance6 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = Objects.requireNonNull(creditDebitIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public BalanceType9Choice getType() {
-		return type;
+	public Optional<BalanceType9Choice> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(BalanceType9Choice type) {
+	public CashBalance6 setType(BalanceType9Choice type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "Sts")
-	public BalanceStatus1Code getStatus() {
-		return status;
+	public Optional<BalanceStatus1Code> getStatus() {
+		return status == null ? Optional.empty() : Optional.of(status);
 	}
 
-	public void setStatus(BalanceStatus1Code status) {
+	public CashBalance6 setStatus(BalanceStatus1Code status) {
 		this.status = status;
+		return this;
 	}
 
-	@XmlElement(name = "ValDt")
-	public DateAndDateTimeChoice getValueDate() {
-		return valueDate;
+	public Optional<DateAndDateTimeChoice> getValueDate() {
+		return valueDate == null ? Optional.empty() : Optional.of(valueDate);
 	}
 
-	public void setValueDate(DateAndDateTimeChoice valueDate) {
+	public CashBalance6 setValueDate(DateAndDateTimeChoice valueDate) {
 		this.valueDate = valueDate;
+		return this;
 	}
 
-	@XmlElement(name = "NbOfPmts")
-	public Number getNumberOfPayments() {
-		return numberOfPayments;
+	public Optional<Number> getNumberOfPayments() {
+		return numberOfPayments == null ? Optional.empty() : Optional.of(numberOfPayments);
 	}
 
-	public void setNumberOfPayments(Number numberOfPayments) {
+	public CashBalance6 setNumberOfPayments(Number numberOfPayments) {
 		this.numberOfPayments = numberOfPayments;
+		return this;
 	}
 }

@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,16 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMCustomerProfile1", propOrder = {"retrievalMode", "profileReference", "customerIdentification"})
 public class ATMCustomerProfile1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RtrvlMd", required = true)
 	protected ATMCustomerProfile1Code retrievalMode;
 	/**
-	 * Describes the main way customer information was collected to build up the
-	 * customer menu and the withdrawal request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class ATMCustomerProfile1 {
 	 */
 	public static final MMMessageAttribute mmRetrievalMode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCustomerProfile1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "RtrvlMd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class ATMCustomerProfile1 {
 			simpleType_lazy = () -> ATMCustomerProfile1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrflRef")
 	protected Max35Text profileReference;
 	/**
-	 * Reference of the customer profile.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +163,7 @@ public class ATMCustomerProfile1 {
 	 */
 	public static final MMMessageAttribute mmProfileReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCustomerProfile1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "PrflRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,10 +175,11 @@ public class ATMCustomerProfile1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CstmrId")
 	protected Max35Text customerIdentification;
 	/**
-	 * Identification of the customer for the bank.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,7 +214,7 @@ public class ATMCustomerProfile1 {
 	 */
 	public static final MMMessageAttribute mmCustomerIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCustomerProfile1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,8 +230,9 @@ public class ATMCustomerProfile1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMCustomerProfile1.mmRetrievalMode, ATMCustomerProfile1.mmProfileReference, ATMCustomerProfile1.mmCustomerIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomerProfile1.mmRetrievalMode, com.tools20022.repository.msg.ATMCustomerProfile1.mmProfileReference,
+						com.tools20022.repository.msg.ATMCustomerProfile1.mmCustomerIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomerProfile1";
 				definition = "Profile of the customer selected by an ATM.";
@@ -237,30 +242,30 @@ public class ATMCustomerProfile1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RtrvlMd", required = true)
 	public ATMCustomerProfile1Code getRetrievalMode() {
 		return retrievalMode;
 	}
 
-	public void setRetrievalMode(ATMCustomerProfile1Code retrievalMode) {
-		this.retrievalMode = retrievalMode;
+	public ATMCustomerProfile1 setRetrievalMode(ATMCustomerProfile1Code retrievalMode) {
+		this.retrievalMode = Objects.requireNonNull(retrievalMode);
+		return this;
 	}
 
-	@XmlElement(name = "PrflRef")
-	public Max35Text getProfileReference() {
-		return profileReference;
+	public Optional<Max35Text> getProfileReference() {
+		return profileReference == null ? Optional.empty() : Optional.of(profileReference);
 	}
 
-	public void setProfileReference(Max35Text profileReference) {
+	public ATMCustomerProfile1 setProfileReference(Max35Text profileReference) {
 		this.profileReference = profileReference;
+		return this;
 	}
 
-	@XmlElement(name = "CstmrId")
-	public Max35Text getCustomerIdentification() {
-		return customerIdentification;
+	public Optional<Max35Text> getCustomerIdentification() {
+		return customerIdentification == null ? Optional.empty() : Optional.of(customerIdentification);
 	}
 
-	public void setCustomerIdentification(Max35Text customerIdentification) {
+	public ATMCustomerProfile1 setCustomerIdentification(Max35Text customerIdentification) {
 		this.customerIdentification = customerIdentification;
+		return this;
 	}
 }

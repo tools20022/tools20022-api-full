@@ -25,9 +25,8 @@ import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ProxyVotingISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -47,21 +46,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
- * SecuritiesEventsLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ProxyVotingISOLatestversion
- * ProxyVotingISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "MtgRsltDssmntn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -89,6 +73,21 @@ import javax.xml.bind.annotation.*;
  * MeetingResultDisseminationV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ProxyVotingISOLatestversion
+ * ProxyVotingISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "MtgRsltDssmntn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
+ * SecuritiesEventsLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.008.001.05}</li>
@@ -108,15 +107,16 @@ import javax.xml.bind.annotation.*;
  * MeetingResultDisseminationV04}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MeetingResultDisseminationV05", propOrder = {"amendment", "meetingReference", "security", "voteResult", "participation", "additionalInformation", "supplementaryData"})
 public class MeetingResultDisseminationV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amdmnt")
 	protected AmendInformation3 amendment;
 	/**
-	 * Information specific to an amendment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,10 +162,11 @@ public class MeetingResultDisseminationV05 {
 			}
 		}
 	};
+	@XmlElement(name = "MtgRef", required = true)
 	protected MeetingReference7 meetingReference;
 	/**
-	 * Series of elements which allow to identify a meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,10 +212,11 @@ public class MeetingResultDisseminationV05 {
 			}
 		}
 	};
+	@XmlElement(name = "Scty", required = true)
 	protected List<SecurityPosition8> security;
 	/**
-	 * Identifies the securities for which the meeting is organised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -261,10 +263,11 @@ public class MeetingResultDisseminationV05 {
 			}
 		}
 	};
+	@XmlElement(name = "VoteRslt", required = true)
 	protected List<Vote7> voteResult;
 	/**
-	 * Results per resolution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -308,10 +311,11 @@ public class MeetingResultDisseminationV05 {
 			}
 		}
 	};
+	@XmlElement(name = "Prtcptn")
 	protected Participation4 participation;
 	/**
-	 * Information about the participation to the voting process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -357,10 +361,11 @@ public class MeetingResultDisseminationV05 {
 			}
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected CommunicationAddress4 additionalInformation;
 	/**
-	 * Information on where additional information can be received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -407,11 +412,11 @@ public class MeetingResultDisseminationV05 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -486,70 +491,70 @@ public class MeetingResultDisseminationV05 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amdmnt")
-	public AmendInformation3 getAmendment() {
-		return amendment;
+	public Optional<AmendInformation3> getAmendment() {
+		return amendment == null ? Optional.empty() : Optional.of(amendment);
 	}
 
-	public void setAmendment(AmendInformation3 amendment) {
+	public MeetingResultDisseminationV05 setAmendment(AmendInformation3 amendment) {
 		this.amendment = amendment;
+		return this;
 	}
 
-	@XmlElement(name = "MtgRef", required = true)
 	public MeetingReference7 getMeetingReference() {
 		return meetingReference;
 	}
 
-	public void setMeetingReference(MeetingReference7 meetingReference) {
-		this.meetingReference = meetingReference;
+	public MeetingResultDisseminationV05 setMeetingReference(MeetingReference7 meetingReference) {
+		this.meetingReference = Objects.requireNonNull(meetingReference);
+		return this;
 	}
 
-	@XmlElement(name = "Scty", required = true)
 	public List<SecurityPosition8> getSecurity() {
-		return security;
+		return security == null ? security = new ArrayList<>() : security;
 	}
 
-	public void setSecurity(List<SecurityPosition8> security) {
-		this.security = security;
+	public MeetingResultDisseminationV05 setSecurity(List<SecurityPosition8> security) {
+		this.security = Objects.requireNonNull(security);
+		return this;
 	}
 
-	@XmlElement(name = "VoteRslt", required = true)
 	public List<Vote7> getVoteResult() {
-		return voteResult;
+		return voteResult == null ? voteResult = new ArrayList<>() : voteResult;
 	}
 
-	public void setVoteResult(List<Vote7> voteResult) {
-		this.voteResult = voteResult;
+	public MeetingResultDisseminationV05 setVoteResult(List<Vote7> voteResult) {
+		this.voteResult = Objects.requireNonNull(voteResult);
+		return this;
 	}
 
-	@XmlElement(name = "Prtcptn")
-	public Participation4 getParticipation() {
-		return participation;
+	public Optional<Participation4> getParticipation() {
+		return participation == null ? Optional.empty() : Optional.of(participation);
 	}
 
-	public void setParticipation(Participation4 participation) {
+	public MeetingResultDisseminationV05 setParticipation(Participation4 participation) {
 		this.participation = participation;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public CommunicationAddress4 getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<CommunicationAddress4> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(CommunicationAddress4 additionalInformation) {
+	public MeetingResultDisseminationV05 setAdditionalInformation(CommunicationAddress4 additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public MeetingResultDisseminationV05 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.008.05.05")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.008.001.05")
 	static public class Document {
 		@XmlElement(name = "MtgRsltDssmntn", required = true)
 		public MeetingResultDisseminationV05 messageBody;

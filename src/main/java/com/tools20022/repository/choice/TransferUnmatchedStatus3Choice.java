@@ -30,6 +30,7 @@ import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.TransferUnmatchedStatus2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * TransferUnmatchedStatus2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransferUnmatchedStatus3Choice", propOrder = {"noSpecifiedReason", "reason", "extendedReason", "dataSourceScheme"})
 public class TransferUnmatchedStatus3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	protected NoReasonCode noSpecifiedReason;
 	/**
-	 * Indicates that there is no reason available or to report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -127,7 +129,7 @@ public class TransferUnmatchedStatus3Choice {
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
-			componentContext_lazy = () -> TransferUnmatchedStatus3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,10 +141,11 @@ public class TransferUnmatchedStatus3Choice {
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn", required = true)
 	protected TransferUnmatchedReason2Code reason;
 	/**
-	 * Reason for the unmatched status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,7 +183,7 @@ public class TransferUnmatchedStatus3Choice {
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
-			componentContext_lazy = () -> TransferUnmatchedStatus3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,10 +195,11 @@ public class TransferUnmatchedStatus3Choice {
 			simpleType_lazy = () -> TransferUnmatchedReason2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedRsn", required = true)
 	protected Extended350Code extendedReason;
 	/**
-	 * Reason for the unmatched status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -233,7 +237,7 @@ public class TransferUnmatchedStatus3Choice {
 	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
-			componentContext_lazy = () -> TransferUnmatchedStatus3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,10 +249,11 @@ public class TransferUnmatchedStatus3Choice {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DataSrcSchme", required = true)
 	protected GenericIdentification1 dataSourceScheme;
 	/**
-	 * Proprietary identification of the reason for the unmatched status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -286,7 +291,7 @@ public class TransferUnmatchedStatus3Choice {
 	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
-			componentContext_lazy = () -> TransferUnmatchedStatus3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -303,10 +308,10 @@ public class TransferUnmatchedStatus3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransferUnmatchedStatus3Choice.mmNoSpecifiedReason, TransferUnmatchedStatus3Choice.mmReason, TransferUnmatchedStatus3Choice.mmExtendedReason,
-						TransferUnmatchedStatus3Choice.mmDataSourceScheme);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmReason,
+						com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmExtendedReason, com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmDataSourceScheme);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferUnmatchedStatus3Choice";
 				definition = "Reason for the unmatched status.";
@@ -316,39 +321,39 @@ public class TransferUnmatchedStatus3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}
 
-	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
-		this.noSpecifiedReason = noSpecifiedReason;
+	public TransferUnmatchedStatus3Choice setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = Objects.requireNonNull(noSpecifiedReason);
+		return this;
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public TransferUnmatchedReason2Code getReason() {
 		return reason;
 	}
 
-	public void setReason(TransferUnmatchedReason2Code reason) {
-		this.reason = reason;
+	public TransferUnmatchedStatus3Choice setReason(TransferUnmatchedReason2Code reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedRsn", required = true)
 	public Extended350Code getExtendedReason() {
 		return extendedReason;
 	}
 
-	public void setExtendedReason(Extended350Code extendedReason) {
-		this.extendedReason = extendedReason;
+	public TransferUnmatchedStatus3Choice setExtendedReason(Extended350Code extendedReason) {
+		this.extendedReason = Objects.requireNonNull(extendedReason);
+		return this;
 	}
 
-	@XmlElement(name = "DataSrcSchme", required = true)
 	public GenericIdentification1 getDataSourceScheme() {
 		return dataSourceScheme;
 	}
 
-	public void setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
-		this.dataSourceScheme = dataSourceScheme;
+	public TransferUnmatchedStatus3Choice setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
+		return this;
 	}
 }

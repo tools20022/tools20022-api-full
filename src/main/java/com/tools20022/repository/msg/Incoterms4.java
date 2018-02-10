@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.Incoterms;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * Incoterms3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Incoterms4", propOrder = {"incotermsCode", "location"})
 public class Incoterms4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IncotrmsCd", required = true)
 	protected Incoterms4Choice incotermsCode;
 	/**
-	 * Specifies the Incoterms.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,7 +114,7 @@ public class Incoterms4 {
 	public static final MMMessageAssociationEnd mmIncotermsCode = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Incoterms.mmCode;
-			componentContext_lazy = () -> Incoterms4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Incoterms4.mmObject();
 			isDerived = false;
 			xmlTag = "IncotrmsCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,12 +127,11 @@ public class Incoterms4 {
 			type_lazy = () -> Incoterms4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Lctn")
 	protected Max70Text location;
 	/**
-	 * Location where the Incoterms are actioned. Reference UN/ECE
-	 * Recommendation 16 - LOCODE - Code for Trade and Transport Locations
-	 * (www.unece.org/cefact/recommendations).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,7 +170,7 @@ public class Incoterms4 {
 	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Incoterms.mmLocation;
-			componentContext_lazy = () -> Incoterms4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Incoterms4.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,9 +186,9 @@ public class Incoterms4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Incoterms4.mmIncotermsCode, Incoterms4.mmLocation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Incoterms4.mmIncotermsCode, com.tools20022.repository.msg.Incoterms4.mmLocation);
 				trace_lazy = () -> Incoterms.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Incoterms4";
 				definition = "Specifies the applicable Incoterm and associated location.";
@@ -196,21 +198,21 @@ public class Incoterms4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IncotrmsCd", required = true)
 	public Incoterms4Choice getIncotermsCode() {
 		return incotermsCode;
 	}
 
-	public void setIncotermsCode(Incoterms4Choice incotermsCode) {
-		this.incotermsCode = incotermsCode;
+	public Incoterms4 setIncotermsCode(Incoterms4Choice incotermsCode) {
+		this.incotermsCode = Objects.requireNonNull(incotermsCode);
+		return this;
 	}
 
-	@XmlElement(name = "Lctn")
-	public Max70Text getLocation() {
-		return location;
+	public Optional<Max70Text> getLocation() {
+		return location == null ? Optional.empty() : Optional.of(location);
 	}
 
-	public void setLocation(Max70Text location) {
+	public Incoterms4 setLocation(Max70Text location) {
 		this.location = location;
+		return this;
 	}
 }

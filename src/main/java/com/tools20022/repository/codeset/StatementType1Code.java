@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.MessageTypeCode;
+import com.tools20022.repository.codeset.StatementType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the statement message.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.MessageTypeCode
- * MessageTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementType1Code#mmAccountingHoldings
- * StatementType1Code.mmAccountingHoldings}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementType1Code#AccountingHoldings
+ * StatementType1Code.AccountingHoldings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementType1Code#mmCustodyHoldings
- * StatementType1Code.mmCustodyHoldings}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementType1Code#CustodyHoldings
+ * StatementType1Code.CustodyHoldings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementType1Code#mmInvestmentFundTransactions
- * StatementType1Code.mmInvestmentFundTransactions}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementType1Code#InvestmentFundTransactions
+ * StatementType1Code.InvestmentFundTransactions}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.MessageTypeCode
+ * MessageTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the statement message."</li>
  * </ul>
  */
-public class StatementType1Code extends MessageTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class StatementType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class StatementType1Code extends MessageTypeCode {
 	 * name} = "AccountingHoldings"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountingHoldings = new MMCode() {
+	public static final StatementType1Code AccountingHoldings = new StatementType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountingHoldings";
-			owner_lazy = () -> StatementType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StatementType1Code.mmObject();
+			codeName = MessageTypeCode.AccountingHoldings.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class StatementType1Code extends MessageTypeCode {
 	 * name} = "CustodyHoldings"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustodyHoldings = new MMCode() {
+	public static final StatementType1Code CustodyHoldings = new StatementType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyHoldings";
-			owner_lazy = () -> StatementType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StatementType1Code.mmObject();
+			codeName = MessageTypeCode.CustodyHoldings.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class StatementType1Code extends MessageTypeCode {
 	 * name} = "InvestmentFundTransactions"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestmentFundTransactions = new MMCode() {
+	public static final StatementType1Code InvestmentFundTransactions = new StatementType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFundTransactions";
-			owner_lazy = () -> StatementType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StatementType1Code.mmObject();
+			codeName = MessageTypeCode.InvestmentFundTransactions.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, StatementType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected StatementType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ST03");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementType1Code";
 				definition = "Specifies the statement message.";
-				code_lazy = () -> Arrays.asList(StatementType1Code.mmAccountingHoldings, StatementType1Code.mmCustodyHoldings, StatementType1Code.mmInvestmentFundTransactions);
 				trace_lazy = () -> MessageTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementType1Code.AccountingHoldings, com.tools20022.repository.codeset.StatementType1Code.CustodyHoldings,
+						com.tools20022.repository.codeset.StatementType1Code.InvestmentFundTransactions);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccountingHoldings.getCodeName().get(), AccountingHoldings);
+		codesByName.put(CustodyHoldings.getCodeName().get(), CustodyHoldings);
+		codesByName.put(InvestmentFundTransactions.getCodeName().get(), InvestmentFundTransactions);
+	}
+
+	public static StatementType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static StatementType1Code[] values() {
+		StatementType1Code[] values = new StatementType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, StatementType1Code> {
+		@Override
+		public StatementType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(StatementType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

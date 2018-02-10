@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AssetClassSubProductTypeCode;
+import com.tools20022.repository.codeset.AssetClassSubProductType6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines the sub-product of type Electricity.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode
- * AssetClassSubProductTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType6Code#mmElectricity
- * AssetClassSubProductType6Code.mmElectricity}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType6Code#Electricity
+ * AssetClassSubProductType6Code.Electricity}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode
+ * AssetClassSubProductTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,7 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the sub-product of type Electricity."</li>
  * </ul>
  */
-public class AssetClassSubProductType6Code extends AssetClassSubProductTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AssetClassSubProductType6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -74,25 +79,55 @@ public class AssetClassSubProductType6Code extends AssetClassSubProductTypeCode 
 	 * name} = "Electricity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmElectricity = new MMCode() {
+	public static final AssetClassSubProductType6Code Electricity = new AssetClassSubProductType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electricity";
-			owner_lazy = () -> AssetClassSubProductType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductType6Code.mmObject();
+			codeName = AssetClassSubProductTypeCode.Electricity.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AssetClassSubProductType6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AssetClassSubProductType6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductType6Code";
 				definition = "Defines the sub-product of type Electricity.";
-				code_lazy = () -> Arrays.asList(AssetClassSubProductType6Code.mmElectricity);
 				trace_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType6Code.Electricity);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Electricity.getCodeName().get(), Electricity);
+	}
+
+	public static AssetClassSubProductType6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AssetClassSubProductType6Code[] values() {
+		AssetClassSubProductType6Code[] values = new AssetClassSubProductType6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AssetClassSubProductType6Code> {
+		@Override
+		public AssetClassSubProductType6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AssetClassSubProductType6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

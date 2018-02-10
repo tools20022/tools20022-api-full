@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max13AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IsabelEbanking1Choice", propOrder = {"userIdentification", "contractIdentification"})
 public class IsabelEbanking1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UsrId", required = true)
 	protected Max13AlphaNumericText userIdentification;
 	/**
-	 * Identification of the e-banking through a user identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,7 +103,7 @@ public class IsabelEbanking1Choice {
 	 */
 	public static final MMMessageAttribute mmUserIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelEbanking1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IsabelEbanking1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UsrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +114,11 @@ public class IsabelEbanking1Choice {
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrctId", required = true)
 	protected Max13AlphaNumericText contractIdentification;
 	/**
-	 * Identification of the e-banking through a contract identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,7 +147,7 @@ public class IsabelEbanking1Choice {
 	 */
 	public static final MMMessageAttribute mmContractIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelEbanking1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IsabelEbanking1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,8 +162,8 @@ public class IsabelEbanking1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IsabelEbanking1Choice.mmUserIdentification, IsabelEbanking1Choice.mmContractIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IsabelEbanking1Choice.mmUserIdentification, com.tools20022.repository.choice.IsabelEbanking1Choice.mmContractIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelEbanking1Choice";
 				definition = "Specifies the choice of identification of the e-banking application as a contract or a user identification.";
@@ -169,21 +172,21 @@ public class IsabelEbanking1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UsrId", required = true)
 	public Max13AlphaNumericText getUserIdentification() {
 		return userIdentification;
 	}
 
-	public void setUserIdentification(Max13AlphaNumericText userIdentification) {
-		this.userIdentification = userIdentification;
+	public IsabelEbanking1Choice setUserIdentification(Max13AlphaNumericText userIdentification) {
+		this.userIdentification = Objects.requireNonNull(userIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CtrctId", required = true)
 	public Max13AlphaNumericText getContractIdentification() {
 		return contractIdentification;
 	}
 
-	public void setContractIdentification(Max13AlphaNumericText contractIdentification) {
-		this.contractIdentification = contractIdentification;
+	public IsabelEbanking1Choice setContractIdentification(Max13AlphaNumericText contractIdentification) {
+		this.contractIdentification = Objects.requireNonNull(contractIdentification);
+		return this;
 	}
 }

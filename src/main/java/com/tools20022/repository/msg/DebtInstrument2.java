@@ -32,6 +32,8 @@ import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DebtInstrument2", propOrder = {"totalIssuedNominalAmount", "maturityDate", "nominalValuePerUnit", "interestRate", "debtSeniority"})
 public class DebtInstrument2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlIssdNmnlAmt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount totalIssuedNominalAmount;
 	/**
-	 * Total issued nominal amount in monetary value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +124,7 @@ public class DebtInstrument2 {
 	 */
 	public static final MMMessageAttribute mmTotalIssuedNominalAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DebtInstrument2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DebtInstrument2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlIssdNmnlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +135,11 @@ public class DebtInstrument2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "MtrtyDt")
 	protected ISODate maturityDate;
 	/**
-	 * Maturity date of the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,7 +180,7 @@ public class DebtInstrument2 {
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
-			componentContext_lazy = () -> DebtInstrument2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DebtInstrument2.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,11 +192,11 @@ public class DebtInstrument2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "NmnlValPerUnit", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount nominalValuePerUnit;
 	/**
-	 * Nominal value of each instrument. If not available, the minimum traded
-	 * value should be populated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,7 +232,7 @@ public class DebtInstrument2 {
 	public static final MMMessageAttribute mmNominalValuePerUnit = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmHoldingValue;
-			componentContext_lazy = () -> DebtInstrument2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DebtInstrument2.mmObject();
 			isDerived = false;
 			xmlTag = "NmnlValPerUnit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,10 +243,11 @@ public class DebtInstrument2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstRate", required = true)
 	protected InterestRate6Choice interestRate;
 	/**
-	 * Interest rate of the debt instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -274,7 +279,7 @@ public class DebtInstrument2 {
 	public static final MMMessageAssociationEnd mmInterestRate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
-			componentContext_lazy = () -> DebtInstrument2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DebtInstrument2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,10 +291,11 @@ public class DebtInstrument2 {
 			type_lazy = () -> InterestRate6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DebtSnrty")
 	protected DebtInstrumentSeniorityType1Code debtSeniority;
 	/**
-	 * Seniority for a specific debt instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -317,7 +323,7 @@ public class DebtInstrument2 {
 	 */
 	public static final MMMessageAttribute mmDebtSeniority = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DebtInstrument2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DebtInstrument2.mmObject();
 			isDerived = false;
 			xmlTag = "DebtSnrty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -332,9 +338,10 @@ public class DebtInstrument2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DebtInstrument2.mmTotalIssuedNominalAmount, DebtInstrument2.mmMaturityDate, DebtInstrument2.mmNominalValuePerUnit, DebtInstrument2.mmInterestRate, DebtInstrument2.mmDebtSeniority);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebtInstrument2.mmTotalIssuedNominalAmount, com.tools20022.repository.msg.DebtInstrument2.mmMaturityDate,
+						com.tools20022.repository.msg.DebtInstrument2.mmNominalValuePerUnit, com.tools20022.repository.msg.DebtInstrument2.mmInterestRate, com.tools20022.repository.msg.DebtInstrument2.mmDebtSeniority);
 				trace_lazy = () -> Debt.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DebtInstrument2";
 				definition = "Specifies the debit instrument.";
@@ -344,48 +351,48 @@ public class DebtInstrument2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlIssdNmnlAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getTotalIssuedNominalAmount() {
 		return totalIssuedNominalAmount;
 	}
 
-	public void setTotalIssuedNominalAmount(ActiveOrHistoricCurrencyAndAmount totalIssuedNominalAmount) {
-		this.totalIssuedNominalAmount = totalIssuedNominalAmount;
+	public DebtInstrument2 setTotalIssuedNominalAmount(ActiveOrHistoricCurrencyAndAmount totalIssuedNominalAmount) {
+		this.totalIssuedNominalAmount = Objects.requireNonNull(totalIssuedNominalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "MtrtyDt")
-	public ISODate getMaturityDate() {
-		return maturityDate;
+	public Optional<ISODate> getMaturityDate() {
+		return maturityDate == null ? Optional.empty() : Optional.of(maturityDate);
 	}
 
-	public void setMaturityDate(ISODate maturityDate) {
+	public DebtInstrument2 setMaturityDate(ISODate maturityDate) {
 		this.maturityDate = maturityDate;
+		return this;
 	}
 
-	@XmlElement(name = "NmnlValPerUnit", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getNominalValuePerUnit() {
 		return nominalValuePerUnit;
 	}
 
-	public void setNominalValuePerUnit(ActiveOrHistoricCurrencyAndAmount nominalValuePerUnit) {
-		this.nominalValuePerUnit = nominalValuePerUnit;
+	public DebtInstrument2 setNominalValuePerUnit(ActiveOrHistoricCurrencyAndAmount nominalValuePerUnit) {
+		this.nominalValuePerUnit = Objects.requireNonNull(nominalValuePerUnit);
+		return this;
 	}
 
-	@XmlElement(name = "IntrstRate", required = true)
 	public InterestRate6Choice getInterestRate() {
 		return interestRate;
 	}
 
-	public void setInterestRate(InterestRate6Choice interestRate) {
-		this.interestRate = interestRate;
+	public DebtInstrument2 setInterestRate(InterestRate6Choice interestRate) {
+		this.interestRate = Objects.requireNonNull(interestRate);
+		return this;
 	}
 
-	@XmlElement(name = "DebtSnrty")
-	public DebtInstrumentSeniorityType1Code getDebtSeniority() {
-		return debtSeniority;
+	public Optional<DebtInstrumentSeniorityType1Code> getDebtSeniority() {
+		return debtSeniority == null ? Optional.empty() : Optional.of(debtSeniority);
 	}
 
-	public void setDebtSeniority(DebtInstrumentSeniorityType1Code debtSeniority) {
+	public DebtInstrument2 setDebtSeniority(DebtInstrumentSeniorityType1Code debtSeniority) {
 		this.debtSeniority = debtSeniority;
+		return this;
 	}
 }

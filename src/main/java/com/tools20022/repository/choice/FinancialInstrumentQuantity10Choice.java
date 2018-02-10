@@ -28,6 +28,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Choice between ways to express the quantity of the financial instrument."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrumentQuantity10Choice", propOrder = {"unitsNumber", "orderedAmount", "holdingsRate"})
 public class FinancialInstrumentQuantity10Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UnitsNb", required = true)
 	protected FinancialInstrumentQuantity1 unitsNumber;
 	/**
-	 * Total quantity of units to be redeemed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +116,7 @@ public class FinancialInstrumentQuantity10Choice {
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmUnitsNumber;
-			componentContext_lazy = () -> FinancialInstrumentQuantity10Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +127,11 @@ public class FinancialInstrumentQuantity10Choice {
 			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrdAmt", required = true)
 	protected ActiveCurrencyAndAmount orderedAmount;
 	/**
-	 * Amount of money instructed for the redemption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +165,7 @@ public class FinancialInstrumentQuantity10Choice {
 	public static final MMMessageAttribute mmOrderedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedAmount;
-			componentContext_lazy = () -> FinancialInstrumentQuantity10Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +176,11 @@ public class FinancialInstrumentQuantity10Choice {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "HldgsRate", required = true)
 	protected PercentageRate holdingsRate;
 	/**
-	 * Percentage of the holding to be redeemed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,7 +214,7 @@ public class FinancialInstrumentQuantity10Choice {
 	public static final MMMessageAttribute mmHoldingsRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmHoldingsRate;
-			componentContext_lazy = () -> FinancialInstrumentQuantity10Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "HldgsRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,9 +229,10 @@ public class FinancialInstrumentQuantity10Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentQuantity10Choice.mmUnitsNumber, FinancialInstrumentQuantity10Choice.mmOrderedAmount, FinancialInstrumentQuantity10Choice.mmHoldingsRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice.mmUnitsNumber, com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice.mmOrderedAmount,
+						com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice.mmHoldingsRate);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentQuantity10Choice";
 				definition = "Choice between ways to express the quantity of the financial instrument.";
@@ -236,30 +241,30 @@ public class FinancialInstrumentQuantity10Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
 
-	public void setUnitsNumber(FinancialInstrumentQuantity1 unitsNumber) {
-		this.unitsNumber = unitsNumber;
+	public FinancialInstrumentQuantity10Choice setUnitsNumber(FinancialInstrumentQuantity1 unitsNumber) {
+		this.unitsNumber = Objects.requireNonNull(unitsNumber);
+		return this;
 	}
 
-	@XmlElement(name = "OrdrdAmt", required = true)
 	public ActiveCurrencyAndAmount getOrderedAmount() {
 		return orderedAmount;
 	}
 
-	public void setOrderedAmount(ActiveCurrencyAndAmount orderedAmount) {
-		this.orderedAmount = orderedAmount;
+	public FinancialInstrumentQuantity10Choice setOrderedAmount(ActiveCurrencyAndAmount orderedAmount) {
+		this.orderedAmount = Objects.requireNonNull(orderedAmount);
+		return this;
 	}
 
-	@XmlElement(name = "HldgsRate", required = true)
 	public PercentageRate getHoldingsRate() {
 		return holdingsRate;
 	}
 
-	public void setHoldingsRate(PercentageRate holdingsRate) {
-		this.holdingsRate = holdingsRate;
+	public FinancialInstrumentQuantity10Choice setHoldingsRate(PercentageRate holdingsRate) {
+		this.holdingsRate = Objects.requireNonNull(holdingsRate);
+		return this;
 	}
 }

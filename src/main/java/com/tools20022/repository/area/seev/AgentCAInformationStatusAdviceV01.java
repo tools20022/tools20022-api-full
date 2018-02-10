@@ -29,6 +29,8 @@ import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversi
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -44,22 +46,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
- * SecuritiesEventsLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
- * IssuersAgentsCommunicationISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AgtCAInfStsAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -78,6 +64,22 @@ import javax.xml.bind.annotation.*;
  * AgentCAInformationStatusAdviceV01.mmInformationStatusDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
+ * IssuersAgentsCommunicationISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AgtCAInfStsAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
+ * SecuritiesEventsLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.024.001.01}</li>
@@ -93,16 +95,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AgentCAInformationStatusAdviceV01", propOrder = {"identification", "agentCAInformationAdviceIdentification", "corporateActionAdditionalInformation", "informationStatusDetails"})
 public class AgentCAInformationStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected DocumentIdentification8 identification;
 	/**
-	 * Identification assigned by the Sender to unambiguously identify the
-	 * status advice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,11 +146,11 @@ public class AgentCAInformationStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AgtCAInfAdvcId", required = true)
 	protected DocumentIdentification8 agentCAInformationAdviceIdentification;
 	/**
-	 * Identification of the linked Agent CA Information Advice for which a
-	 * status is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,11 +192,11 @@ public class AgentCAInformationStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnAddtlInf")
 	protected CorporateActionAdditionalInformation1 corporateActionAdditionalInformation;
 	/**
-	 * Additional information about the corporate action such as the delivery
-	 * details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,10 +238,11 @@ public class AgentCAInformationStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "InfStsDtls", required = true)
 	protected CorporateActionInformationStatus1Choice informationStatusDetails;
 	/**
-	 * Status of the information advice sent by the CSD.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -311,43 +314,43 @@ public class AgentCAInformationStatusAdviceV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(DocumentIdentification8 identification) {
-		this.identification = identification;
+	public AgentCAInformationStatusAdviceV01 setIdentification(DocumentIdentification8 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "AgtCAInfAdvcId", required = true)
 	public DocumentIdentification8 getAgentCAInformationAdviceIdentification() {
 		return agentCAInformationAdviceIdentification;
 	}
 
-	public void setAgentCAInformationAdviceIdentification(DocumentIdentification8 agentCAInformationAdviceIdentification) {
-		this.agentCAInformationAdviceIdentification = agentCAInformationAdviceIdentification;
+	public AgentCAInformationStatusAdviceV01 setAgentCAInformationAdviceIdentification(DocumentIdentification8 agentCAInformationAdviceIdentification) {
+		this.agentCAInformationAdviceIdentification = Objects.requireNonNull(agentCAInformationAdviceIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnAddtlInf")
-	public CorporateActionAdditionalInformation1 getCorporateActionAdditionalInformation() {
-		return corporateActionAdditionalInformation;
+	public Optional<CorporateActionAdditionalInformation1> getCorporateActionAdditionalInformation() {
+		return corporateActionAdditionalInformation == null ? Optional.empty() : Optional.of(corporateActionAdditionalInformation);
 	}
 
-	public void setCorporateActionAdditionalInformation(CorporateActionAdditionalInformation1 corporateActionAdditionalInformation) {
+	public AgentCAInformationStatusAdviceV01 setCorporateActionAdditionalInformation(CorporateActionAdditionalInformation1 corporateActionAdditionalInformation) {
 		this.corporateActionAdditionalInformation = corporateActionAdditionalInformation;
+		return this;
 	}
 
-	@XmlElement(name = "InfStsDtls", required = true)
 	public CorporateActionInformationStatus1Choice getInformationStatusDetails() {
 		return informationStatusDetails;
 	}
 
-	public void setInformationStatusDetails(CorporateActionInformationStatus1Choice informationStatusDetails) {
-		this.informationStatusDetails = informationStatusDetails;
+	public AgentCAInformationStatusAdviceV01 setInformationStatusDetails(CorporateActionInformationStatus1Choice informationStatusDetails) {
+		this.informationStatusDetails = Objects.requireNonNull(informationStatusDetails);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.024.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.024.001.01")
 	static public class Document {
 		@XmlElement(name = "AgtCAInfStsAdvc", required = true)
 		public AgentCAInformationStatusAdviceV01 messageBody;

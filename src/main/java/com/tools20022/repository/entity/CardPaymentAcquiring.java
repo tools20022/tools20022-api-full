@@ -23,9 +23,8 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Payment processes initiated by a payment card.
@@ -126,141 +125,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmCountry
  * CardPaymentAcquiring.mmCountry}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionIdentifier1
- * TransactionIdentifier1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext3
- * PaymentContext3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext1
- * PaymentContext1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SaleContext1 SaleContext1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext3
- * CardPaymentContext3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext4
- * PaymentContext4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext4
- * CardPaymentContext4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ActionMessage1 ActionMessage1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Action1 Action1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Action2 Action2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext1
- * CardPaymentContext1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext2
- * PaymentContext2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext2
- * CardPaymentContext2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext7
- * PaymentContext7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext7
- * CardPaymentContext7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext6
- * PaymentContext6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext6
- * CardPaymentContext6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext5
- * CardPaymentContext5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext5
- * PaymentContext5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Action3 Action3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext10
- * PaymentContext10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext8
- * CardPaymentContext8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext8
- * PaymentContext8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext11
- * CardPaymentContext11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext11
- * PaymentContext11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext13
- * CardPaymentContext13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext13
- * PaymentContext13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext9
- * CardPaymentContext9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext9
- * PaymentContext9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext12
- * CardPaymentContext12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ActionMessage2 ActionMessage2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext10
- * CardPaymentContext10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext12
- * PaymentContext12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Action4 Action4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Action5 Action5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ActionMessage4 ActionMessage4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ActionMessage3 ActionMessage3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransactionContext3
- * CardTransactionContext3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionIdentifier2
- * TransactionIdentifier2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransactionContext1
- * CardTransactionContext1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransaction3
- * CardTransaction3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransactionContext4
- * CardTransactionContext4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransactionContext2
- * CardTransactionContext2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext18
- * CardPaymentContext18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext17
- * PaymentContext17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext14
- * CardPaymentContext14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext14
- * PaymentContext14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SaleContext2 SaleContext2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext17
- * CardPaymentContext17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext19
- * CardPaymentContext19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext18
- * PaymentContext18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ActionMessage5 ActionMessage5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext16
- * CardPaymentContext16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Action6 Action6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext19
- * PaymentContext19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext16
- * PaymentContext16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext15
- * PaymentContext15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext15
- * CardPaymentContext15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Action7 Action7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext22
- * PaymentContext22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext25
- * CardPaymentContext25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext24
- * CardPaymentContext24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext24
- * PaymentContext24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext20
- * CardPaymentContext20}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext20
- * PaymentContext20}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Action8 Action8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext25
- * PaymentContext25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext21
- * CardPaymentContext21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext21
- * PaymentContext21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext22
- * CardPaymentContext22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext23
- * CardPaymentContext23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentContext23
- * PaymentContext23}</li>
  * </ul>
  * </li>
  * <li>
@@ -455,10 +319,145 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionIdentifier1
+ * TransactionIdentifier1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext3
+ * PaymentContext3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext1
+ * PaymentContext1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SaleContext1 SaleContext1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext3
+ * CardPaymentContext3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext4
+ * PaymentContext4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext4
+ * CardPaymentContext4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ActionMessage1 ActionMessage1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Action1 Action1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Action2 Action2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext1
+ * CardPaymentContext1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext2
+ * PaymentContext2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext2
+ * CardPaymentContext2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext7
+ * PaymentContext7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext7
+ * CardPaymentContext7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext6
+ * PaymentContext6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext6
+ * CardPaymentContext6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext5
+ * CardPaymentContext5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext5
+ * PaymentContext5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Action3 Action3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext10
+ * PaymentContext10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext8
+ * CardPaymentContext8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext8
+ * PaymentContext8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext11
+ * CardPaymentContext11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext11
+ * PaymentContext11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext13
+ * CardPaymentContext13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext13
+ * PaymentContext13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext9
+ * CardPaymentContext9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext9
+ * PaymentContext9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext12
+ * CardPaymentContext12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ActionMessage2 ActionMessage2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext10
+ * CardPaymentContext10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext12
+ * PaymentContext12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Action4 Action4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Action5 Action5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ActionMessage4 ActionMessage4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ActionMessage3 ActionMessage3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransactionContext3
+ * CardTransactionContext3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionIdentifier2
+ * TransactionIdentifier2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransactionContext1
+ * CardTransactionContext1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransaction3
+ * CardTransaction3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransactionContext4
+ * CardTransactionContext4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransactionContext2
+ * CardTransactionContext2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext18
+ * CardPaymentContext18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext17
+ * PaymentContext17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext14
+ * CardPaymentContext14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext14
+ * PaymentContext14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SaleContext2 SaleContext2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext17
+ * CardPaymentContext17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext19
+ * CardPaymentContext19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext18
+ * PaymentContext18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ActionMessage5 ActionMessage5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext16
+ * CardPaymentContext16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Action6 Action6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext19
+ * PaymentContext19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext16
+ * PaymentContext16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext15
+ * PaymentContext15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext15
+ * CardPaymentContext15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Action7 Action7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext22
+ * PaymentContext22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext25
+ * CardPaymentContext25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext24
+ * CardPaymentContext24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext24
+ * PaymentContext24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext20
+ * CardPaymentContext20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext20
+ * PaymentContext20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Action8 Action8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext25
+ * PaymentContext25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext21
+ * CardPaymentContext21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext21
+ * PaymentContext21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext22
+ * CardPaymentContext22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentContext23
+ * CardPaymentContext23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentContext23
+ * PaymentContext23}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -474,9 +473,8 @@ public class CardPaymentAcquiring {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected PointOfInteraction pointOfInteraction;
 	/**
-	 * Describes the Point of Interaction through which the payment by card was
-	 * initiated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -754,8 +752,8 @@ public class CardPaymentAcquiring {
 					CardPaymentEnvironment45.mmPOI, CardPaymentEnvironment55.mmPOIIdentification, CardPaymentEnvironment54.mmPOIIdentification, CardPaymentEnvironment53.mmPOI, CardPaymentEnvironment47.mmPOI, CardPaymentEnvironment61.mmPOI,
 					CardPaymentEnvironment64.mmPOIIdentification, CardPaymentEnvironment60.mmPOI, CardPaymentEnvironment65.mmPOIIdentification, CardPaymentEnvironment67.mmPOIIdentification, CardPaymentEnvironment66.mmPOIIdentification,
 					CardPaymentEnvironment62.mmPOI, CardPaymentEnvironment63.mmPOI, CardPaymentEnvironment58.mmPOI, CardPaymentEnvironment59.mmPOI, CardPaymentEnvironment57.mmPOI);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PointOfInteraction";
 			definition = "Describes the Point of Interaction through which the payment by card was initiated.";
@@ -768,8 +766,8 @@ public class CardPaymentAcquiring {
 	};
 	protected CardPaymentServiceTypeCode cardPaymentService;
 	/**
-	 * Type of service provided by the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1210,8 +1208,8 @@ public class CardPaymentAcquiring {
 					CardPaymentTransaction72.mmTransactionType, CardPaymentTransaction72.mmAdditionalService, CardPaymentTransaction72.mmServiceAttribute, CardPaymentTransaction76.mmTransactionType,
 					CardPaymentTransaction76.mmAdditionalService, CardPaymentTransaction76.mmServiceAttribute, CommonData6.mmTransactionType, CommonData6.mmAdditionalService, CommonData6.mmServiceAttribute,
 					CardPaymentTransaction69.mmTransactionType, CardPaymentTransaction69.mmAdditionalService, CardPaymentTransaction69.mmServiceAttribute);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardPaymentService";
 			definition = "Type of service provided by the transaction.";
@@ -1230,9 +1228,8 @@ public class CardPaymentAcquiring {
 	};
 	protected Max35Text transactionIdentification;
 	/**
-	 * Identification of the transaction assigned by the POI (Point Of
-	 * Interaction).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1568,8 +1565,8 @@ public class CardPaymentAcquiring {
 					CardPaymentTransaction70.mmTransactionIdentification, CardPaymentTransaction73.mmTransactionIdentification, CardPaymentTransaction72.mmTransactionIdentification, CardPaymentTransaction76.mmTransactionIdentification,
 					CardPaymentTransaction69.mmTransactionIdentification, CardPaymentTransaction69.mmInitiatorTransactionIdentification, CardPaymentTransaction77.mmTransactionIdentification,
 					CardPaymentTransaction78.mmTransactionIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Identification of the transaction assigned by the POI (Point Of Interaction).";
@@ -1588,9 +1585,8 @@ public class CardPaymentAcquiring {
 	};
 	protected ISODateTime transactionDateTime;
 	/**
-	 * Local date and time of the transaction assigned by the POI (Point Of
-	 * Interaction).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1652,8 +1648,8 @@ public class CardPaymentAcquiring {
 			derivation_lazy = () -> Arrays.asList(TransactionIdentifier1.mmTransactionDateTime, CardPaymentTransactionDetails8.mmTransactionDateTime, CardTransaction4.mmAcceptorTransactionDateTime,
 					CardTransaction8.mmAcceptorTransactionDateTime, CardTransaction5.mmAcceptorTransactionDateTime, CardTransaction3.mmAcceptorTransactionDateTime, CardTransaction15.mmAcceptorTransactionDateTime,
 					CardTransaction7.mmAcceptorTransactionDateTime, CardTransaction6.mmAcceptorTransactionDateTime);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionDateTime";
 			definition = "Local date and time of the transaction assigned by the POI (Point Of Interaction).";
@@ -1672,8 +1668,8 @@ public class CardPaymentAcquiring {
 	};
 	protected Max10000Binary iCCRelatedData;
 	/**
-	 * Data related to the interface of an integrated circuit card application.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1843,8 +1839,8 @@ public class CardPaymentAcquiring {
 					CardPaymentTransactionDetails27.mmICCRelatedData, CardPaymentTransactionDetails31.mmICCRelatedData, DetailedAmount14.mmICCRelatedData, CardPaymentTransactionDetails34.mmICCRelatedData,
 					CardPaymentTransactionDetails39.mmICCRelatedData, CardPaymentTransactionDetails38.mmICCRelatedData, CardPaymentTransactionDetails41.mmICCRelatedData, CardPaymentTransactionDetails37.mmICCRelatedData,
 					CardPaymentTransactionDetails40.mmICCRelatedData, CardPaymentTransactionDetails42.mmICCRelatedData, CardPaymentTransactionDetails43.mmICCRelatedData);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ICCRelatedData";
 			definition = "Data related to the interface of an integrated circuit card application.";
@@ -1863,8 +1859,8 @@ public class CardPaymentAcquiring {
 	};
 	protected CardPayment relatedCardPayment;
 	/**
-	 * Card payment which is at the origin of the acquiring process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1916,8 +1912,8 @@ public class CardPaymentAcquiring {
 	public static final MMBusinessAssociationEnd mmRelatedCardPayment = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(ATMCompletionAdvice1.mmTransaction, ATMCompletionAcknowledgement1.mmTransaction, ATMCompletionAdvice2.mmTransaction, ATMCompletionAcknowledgement2.mmTransaction);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCardPayment";
 			definition = "Card payment which is at the origin of the acquiring process.";
@@ -1930,9 +1926,8 @@ public class CardPaymentAcquiring {
 	};
 	protected TrueFalseIndicator cardPresent;
 	/**
-	 * Indicates whether the transaction has been initiated by a card physically
-	 * present or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2048,8 +2043,8 @@ public class CardPaymentAcquiring {
 					PaymentContext12.mmCardPresent, CardTransactionContext2.mmCardPresent, PaymentContext17.mmCardPresent, PaymentContext14.mmCardPresent, PaymentContext18.mmCardPresent, PaymentContext19.mmCardPresent,
 					PaymentContext16.mmCardPresent, PaymentContext15.mmCardPresent, PaymentContext22.mmCardPresent, PaymentContext24.mmCardPresent, PaymentContext20.mmCardPresent, PaymentContext25.mmCardPresent,
 					PaymentContext21.mmCardPresent, PaymentContext23.mmCardPresent);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardPresent";
 			definition = "Indicates whether the transaction has been initiated by a card physically present or not.";
@@ -2068,9 +2063,8 @@ public class CardPaymentAcquiring {
 	};
 	protected TrueFalseIndicator cardholderPresent;
 	/**
-	 * Indicates whether the transaction has been initiated in presence of the
-	 * cardholder or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2187,8 +2181,8 @@ public class CardPaymentAcquiring {
 					PaymentContext14.mmCardholderPresent, PaymentContext18.mmCardholderPresent, PaymentContext19.mmCardholderPresent, PaymentContext16.mmCardholderPresent, PaymentContext15.mmCardholderPresent,
 					PaymentContext22.mmCardholderPresent, PaymentContext24.mmCardholderPresent, PaymentContext20.mmCardholderPresent, PaymentContext25.mmCardholderPresent, PaymentContext21.mmCardholderPresent,
 					PaymentContext23.mmCardholderPresent);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardholderPresent";
 			definition = "Indicates whether the transaction has been initiated in presence of the cardholder or not.";
@@ -2207,8 +2201,8 @@ public class CardPaymentAcquiring {
 	};
 	protected TrueFalseIndicator onLineContext;
 	/**
-	 * On-line or off-line context of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2293,8 +2287,8 @@ public class CardPaymentAcquiring {
 			derivation_lazy = () -> Arrays.asList(PaymentContext3.mmOnLineContext, PaymentContext1.mmOnLineContext, PaymentContext4.mmOnLineContext, PaymentContext2.mmOnLineContext, PaymentContext7.mmOnLineContext,
 					PaymentContext6.mmOnLineContext, PaymentContext10.mmOnLineContext, PaymentContext11.mmOnLineContext, PaymentContext13.mmOnLineContext, PaymentContext9.mmOnLineContext, PaymentContext12.mmOnLineContext,
 					PaymentContext17.mmOnLineContext, PaymentContext18.mmOnLineContext, PaymentContext15.mmOnLineContext, PaymentContext24.mmOnLineContext, PaymentContext21.mmOnLineContext, PaymentContext23.mmOnLineContext);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OnLineContext";
 			definition = "On-line or off-line context of the transaction.";
@@ -2313,8 +2307,8 @@ public class CardPaymentAcquiring {
 	};
 	protected AttendanceContextCode attendanceContext;
 	/**
-	 * Human attendance at the POI location during the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2449,8 +2443,8 @@ public class CardPaymentAcquiring {
 					PaymentContext17.mmAttendanceContext, PaymentContext14.mmAttendanceContext, PaymentContext18.mmAttendanceContext, PaymentContext19.mmAttendanceContext, PaymentContext16.mmAttendanceContext,
 					PaymentContext15.mmAttendanceContext, PaymentContext22.mmAttendanceContext, PaymentContext24.mmAttendanceContext, PaymentContext20.mmAttendanceContext, PaymentContext25.mmAttendanceContext,
 					PaymentContext21.mmAttendanceContext, StatusReportContent6.mmAttendanceContext, PaymentContext23.mmAttendanceContext);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AttendanceContext";
 			definition = "Human attendance at the POI location during the transaction.";
@@ -2469,8 +2463,8 @@ public class CardPaymentAcquiring {
 	};
 	protected TransactionEnvironmentCode transactionEnvironment;
 	/**
-	 * Indicates the environment of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2585,8 +2579,8 @@ public class CardPaymentAcquiring {
 					CardTransactionContext2.mmTransactionEnvironment, PaymentContext17.mmTransactionEnvironment, PaymentContext14.mmTransactionEnvironment, PaymentContext18.mmTransactionEnvironment,
 					PaymentContext19.mmTransactionEnvironment, PaymentContext16.mmTransactionEnvironment, PaymentContext15.mmTransactionEnvironment, PaymentContext22.mmTransactionEnvironment, PaymentContext24.mmTransactionEnvironment,
 					PaymentContext20.mmTransactionEnvironment, PaymentContext25.mmTransactionEnvironment, PaymentContext21.mmTransactionEnvironment, PaymentContext23.mmTransactionEnvironment);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionEnvironment";
 			definition = "Indicates the environment of the transaction.";
@@ -2605,9 +2599,8 @@ public class CardPaymentAcquiring {
 	};
 	protected TransactionChannelCode transactionChannel;
 	/**
-	 * Identifies the type of the communication channels used by the cardholder
-	 * to the acceptor system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2724,8 +2717,8 @@ public class CardPaymentAcquiring {
 					PaymentContext14.mmTransactionChannel, PaymentContext18.mmTransactionChannel, PaymentContext19.mmTransactionChannel, PaymentContext16.mmTransactionChannel, PaymentContext15.mmTransactionChannel,
 					PaymentContext22.mmTransactionChannel, PaymentContext24.mmTransactionChannel, PaymentContext20.mmTransactionChannel, PaymentContext25.mmTransactionChannel, PaymentContext21.mmTransactionChannel,
 					PaymentContext23.mmTransactionChannel);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionChannel";
 			definition = "Identifies the type of the communication channels used by the cardholder to the acceptor system.";
@@ -2744,9 +2737,8 @@ public class CardPaymentAcquiring {
 	};
 	protected TrueFalseIndicator attendantMessageCapable;
 	/**
-	 * Indicates whether a message can be sent or not on an attendant display
-	 * (attendant display present or not).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2834,8 +2826,8 @@ public class CardPaymentAcquiring {
 					PaymentContext5.mmAttendantMessageCapable, PaymentContext10.mmAttendantMessageCapable, PaymentContext8.mmAttendantMessageCapable, PaymentContext13.mmAttendantMessageCapable, PaymentContext12.mmAttendantMessageCapable,
 					PaymentContext14.mmAttendantMessageCapable, PaymentContext18.mmAttendantMessageCapable, PaymentContext19.mmAttendantMessageCapable, PaymentContext16.mmAttendantMessageCapable, PaymentContext22.mmAttendantMessageCapable,
 					PaymentContext24.mmAttendantMessageCapable, PaymentContext20.mmAttendantMessageCapable, PaymentContext25.mmAttendantMessageCapable);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AttendantMessageCapable";
 			definition = "Indicates whether a message can be sent or not on an attendant display (attendant display present or not).";
@@ -2854,8 +2846,8 @@ public class CardPaymentAcquiring {
 	};
 	protected ISO2ALanguageCode attendantLanguage;
 	/**
-	 * Language used to display messages to the attendant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2941,8 +2933,8 @@ public class CardPaymentAcquiring {
 					PaymentContext10.mmAttendantLanguage, PaymentContext8.mmAttendantLanguage, PaymentContext13.mmAttendantLanguage, PaymentContext12.mmAttendantLanguage, PaymentContext14.mmAttendantLanguage,
 					PaymentContext18.mmAttendantLanguage, PaymentContext19.mmAttendantLanguage, PaymentContext16.mmAttendantLanguage, PaymentContext22.mmAttendantLanguage, PaymentContext24.mmAttendantLanguage,
 					PaymentContext20.mmAttendantLanguage, PaymentContext25.mmAttendantLanguage);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AttendantLanguage";
 			definition = "Language used to display messages to the attendant.";
@@ -2961,8 +2953,8 @@ public class CardPaymentAcquiring {
 	};
 	protected CardDataReadingCode cardDataEntryMode;
 	/**
-	 * Entry mode of the card data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3077,8 +3069,8 @@ public class CardPaymentAcquiring {
 					PaymentContext14.mmCardDataEntryMode, PaymentContext18.mmCardDataEntryMode, PaymentContext19.mmCardDataEntryMode, PaymentContext16.mmCardDataEntryMode, PaymentContext15.mmCardDataEntryMode,
 					PaymentContext22.mmCardDataEntryMode, PaymentContext24.mmCardDataEntryMode, PaymentContext20.mmCardDataEntryMode, PaymentContext25.mmCardDataEntryMode, PaymentContext21.mmCardDataEntryMode,
 					PaymentContext23.mmCardDataEntryMode);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardDataEntryMode";
 			definition = "Entry mode of the card data.";
@@ -3097,8 +3089,8 @@ public class CardPaymentAcquiring {
 	};
 	protected TrueFalseIndicator fallbackIndicator;
 	/**
-	 * Indicator of a transaction fallback.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3152,8 +3144,8 @@ public class CardPaymentAcquiring {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentContext3.mmFallbackIndicator, PaymentContext1.mmFallbackIndicator, PaymentContext4.mmFallbackIndicator, PaymentContext2.mmFallbackIndicator, PaymentContext7.mmFallbackIndicator,
 					PaymentContext6.mmFallbackIndicator, PaymentContext5.mmFallbackIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FallbackIndicator";
 			definition = "Indicator of a transaction fallback.";
@@ -3172,10 +3164,8 @@ public class CardPaymentAcquiring {
 	};
 	protected List<com.tools20022.repository.entity.TerminalManagementSystem> tMSTrigger;
 	/**
-	 * Instructs the POI (Point Of Interaction) how to contact the host of the
-	 * terminal management system (TMS), to initiate the maintenance of the
-	 * terminal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3287,8 +3277,8 @@ public class CardPaymentAcquiring {
 					AcceptorDiagnosticResponse3.mmTMSTrigger, AcceptorCancellationAdviceResponse3.mmTMSTrigger, AcceptorCompletionAdviceResponse3.mmTMSTrigger, AcceptorDiagnosticResponse4.mmTMSTrigger,
 					AcceptorCancellationAdviceResponse4.mmTMSTrigger, AcceptorCompletionAdviceResponse4.mmTMSTrigger, AuthorisationResult4.mmTMSTrigger, AuthorisationResult6.mmTMSTrigger, AcceptorCancellationAdviceResponse5.mmTMSTrigger,
 					AcceptorCompletionAdviceResponse5.mmTMSTrigger, AuthorisationResult12.mmTMSTrigger, AuthorisationResult10.mmTMSTrigger, AcceptorCancellationAdviceResponse6.mmTMSTrigger, AcceptorCompletionAdviceResponse6.mmTMSTrigger);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TMSTrigger";
 			definition = "Instructs the POI (Point Of Interaction) how to contact the host of the terminal management system (TMS), to initiate the maintenance of the terminal.";
@@ -3300,9 +3290,8 @@ public class CardPaymentAcquiring {
 	};
 	protected Max35Text initiatorTransactionIdentifier;
 	/**
-	 * Identification of the transaction assigned by the initiating party for
-	 * the recipient party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3421,8 +3410,8 @@ public class CardPaymentAcquiring {
 					CardTransaction6.mmInitiatorTransactionIdentification, CardPaymentTransaction52.mmInitiatorTransactionIdentification, CardPaymentTransaction60.mmInitiatorTransactionIdentification,
 					CardPaymentTransaction51.mmInitiatorTransactionIdentification, CardPaymentTransaction62.mmInitiatorTransactionIdentification, CardPaymentTransaction71.mmInitiatorTransactionIdentification,
 					CardPaymentTransaction70.mmInitiatorTransactionIdentification, CardPaymentTransaction76.mmInitiatorTransactionIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InitiatorTransactionIdentifier";
 			definition = "Identification of the transaction assigned by the initiating party for the recipient party.";
@@ -3441,9 +3430,8 @@ public class CardPaymentAcquiring {
 	};
 	protected TrueFalseIndicator reversal;
 	/**
-	 * Notify that a previous transaction has to be reversed if this original
-	 * transaction has been approved by the acquirer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3547,8 +3535,8 @@ public class CardPaymentAcquiring {
 					CardPaymentTransaction30.mmReversal, CardPaymentTransaction44.mmReversal, CardPaymentTransaction45.mmReversal, CardPaymentTransaction46.mmReversal, CardPaymentTransaction40.mmReversal,
 					CardPaymentTransaction60.mmReversal, CardPaymentTransaction61.mmReversal, CardPaymentTransaction59.mmReversal, CardPaymentTransaction55.mmReversal, CardPaymentTransaction75.mmReversal,
 					CardPaymentTransaction70.mmReversal, CardPaymentTransaction69.mmReversal);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reversal";
 			definition = "Notify that a previous transaction has to be reversed if this original transaction has been approved by the acquirer.";
@@ -3567,8 +3555,8 @@ public class CardPaymentAcquiring {
 	};
 	protected Max35Text interchangeData;
 	/**
-	 * Interchange information related to the card scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3714,8 +3702,8 @@ public class CardPaymentAcquiring {
 					CardPaymentTransaction63.mmInterchangeData, CardPaymentTransaction60.mmInterchangeData, CardPaymentTransaction57.mmInterchangeData, CardPaymentTransaction61.mmInterchangeData, CardPaymentTransaction53.mmInterchangeData,
 					CardPaymentTransaction59.mmInterchangeData, CardPaymentTransaction55.mmInterchangeData, CardPaymentTransaction75.mmInterchangeData, CardPaymentTransaction70.mmInterchangeData, CardPaymentTransaction69.mmInterchangeData,
 					CardPaymentTransaction77.mmInterchangeData, CardPaymentTransaction78.mmInterchangeData);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterchangeData";
 			definition = "Interchange information related to the card scheme.";
@@ -3734,8 +3722,8 @@ public class CardPaymentAcquiring {
 	};
 	protected Max35NumericText unattendedLevelCategory;
 	/**
-	 * Transaction category level on an unattended POI (Point Of Interaction).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3838,8 +3826,8 @@ public class CardPaymentAcquiring {
 					CardTransactionDetail1.mmUnattendedLevelCategory, CardPaymentTransactionDetails29.mmUnattendedLevelCategory, CardPaymentTransactionDetails30.mmUnattendedLevelCategory,
 					CardPaymentTransactionDetails27.mmUnattendedLevelCategory, CardPaymentTransactionDetails31.mmUnattendedLevelCategory, CardPaymentTransactionDetails39.mmUnattendedLevelCategory,
 					CardPaymentTransactionDetails38.mmUnattendedLevelCategory, CardPaymentTransactionDetails41.mmUnattendedLevelCategory, CardPaymentTransactionDetails37.mmUnattendedLevelCategory);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnattendedLevelCategory";
 			definition = "Transaction category level on an unattended POI (Point Of Interaction).";
@@ -3858,8 +3846,8 @@ public class CardPaymentAcquiring {
 	};
 	protected List<com.tools20022.repository.entity.CardPaymentValidation> validation;
 	/**
-	 * Results and parameters of the card payment verification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4031,8 +4019,8 @@ public class CardPaymentAcquiring {
 					CardPaymentTransaction59.mmAuthorisationResult, CardPaymentTransaction54.mmAuthorisationResult, CardPaymentTransaction55.mmAuthorisationResult, CardPaymentTransaction58.mmAuthorisationResult,
 					ATMTransaction14.mmAuthorisationResult, ATMTransaction17.mmAuthorisationResult, ATMTransaction20.mmAuthorisationResult, CardPaymentTransaction75.mmAuthorisationResult, CardPaymentTransaction67.mmAuthorisationResult,
 					CardPaymentTransaction70.mmAuthorisationResult, CardPaymentTransaction68.mmAuthorisationResult, CardPaymentTransaction69.mmAuthorisationResult);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Validation";
 			definition = "Results and parameters of the card payment verification.";
@@ -4044,9 +4032,8 @@ public class CardPaymentAcquiring {
 	};
 	protected TrueFalseIndicator completionRequired;
 	/**
-	 * Indicates whether the acquirer requires a further exchange after the
-	 * completion of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4089,8 +4076,8 @@ public class CardPaymentAcquiring {
 	public static final MMBusinessAttribute mmCompletionRequired = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AuthorisationResult1.mmCompletionRequired, AuthorisationResult4.mmCompletionRequired, AuthorisationResult10.mmCompletionRequired);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CompletionRequired";
 			definition = "Indicates whether the acquirer requires a further exchange after the completion of the transaction.";
@@ -4109,8 +4096,8 @@ public class CardPaymentAcquiring {
 	};
 	protected ActionTypeCode actionType;
 	/**
-	 * Type of action to be performed by the POI (Point Of Interaction) system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4160,8 +4147,8 @@ public class CardPaymentAcquiring {
 	public static final MMBusinessAttribute mmActionType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Action1.mmActionType, Action2.mmActionType, Action3.mmActionType, Action4.mmActionType, Action5.mmActionType, Action6.mmActionType, Action7.mmActionType, Action8.mmActionType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ActionType";
 			definition = "Type of action to be performed by the POI (Point Of Interaction) system.";
@@ -4180,8 +4167,8 @@ public class CardPaymentAcquiring {
 	};
 	protected Max256Text actionMessage;
 	/**
-	 * Message to be displayed or printed to the cardholder or the cashier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4243,8 +4230,8 @@ public class CardPaymentAcquiring {
 		{
 			derivation_lazy = () -> Arrays.asList(ActionMessage1.mmMessageContent, Action1.mmMessageToPresent, Action2.mmMessageToPresent, Action3.mmMessageToPresent, ActionMessage2.mmMessageContent, Action4.mmMessageToPresent,
 					Action5.mmMessageToPresent, ActionMessage4.mmMessage, ActionMessage3.mmContent, ActionMessage5.mmMessageContent, Action6.mmMessageToPresent, Action7.mmMessageToPresent, Action8.mmMessageToPresent);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ActionMessage";
 			definition = "Message to be displayed or printed to the cardholder or the cashier.";
@@ -4263,8 +4250,8 @@ public class CardPaymentAcquiring {
 	};
 	protected TrueFalseIndicator captureIndicator;
 	/**
-	 * Indicates whether the transaction is captured or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4290,8 +4277,8 @@ public class CardPaymentAcquiring {
 	 */
 	public static final MMBusinessAttribute mmCaptureIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CaptureIndicator";
 			definition = "Indicates whether the transaction is captured or not.";
@@ -4310,9 +4297,8 @@ public class CardPaymentAcquiring {
 	};
 	protected Max35Text recipientTransactionIdentification;
 	/**
-	 * Identification of the transaction assigned by the recipient party for the
-	 * initiating party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4339,8 +4325,8 @@ public class CardPaymentAcquiring {
 	 */
 	public static final MMBusinessAttribute mmRecipientTransactionIdentification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RecipientTransactionIdentification";
 			definition = "Identification of the transaction assigned by the recipient party for the initiating party.";
@@ -4359,9 +4345,8 @@ public class CardPaymentAcquiring {
 	};
 	protected LocationCategoryCode location;
 	/**
-	 * Location category of the place where the merchant actually performed the
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4398,8 +4383,8 @@ public class CardPaymentAcquiring {
 	public static final MMBusinessAttribute mmLocation = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CardTransactionContext2.mmLocationCategory);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Location";
 			definition = "Location category of the place where the merchant actually performed the transaction.";
@@ -4418,8 +4403,8 @@ public class CardPaymentAcquiring {
 	};
 	protected Country country;
 	/**
-	 * Country of the merchant where the transaction took place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4452,8 +4437,8 @@ public class CardPaymentAcquiring {
 	 */
 	public static final MMBusinessAssociationEnd mmCountry = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Country";
 			definition = "Country of the merchant where the transaction took place.";
@@ -4468,7 +4453,7 @@ public class CardPaymentAcquiring {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentAcquiring";
 				definition = "Payment processes initiated by a payment card.";
@@ -4522,235 +4507,264 @@ public class CardPaymentAcquiring {
 		return mmObject_lazy.get();
 	}
 
-	public PointOfInteraction getPointOfInteraction() {
-		return pointOfInteraction;
+	public Optional<PointOfInteraction> getPointOfInteraction() {
+		return pointOfInteraction == null ? Optional.empty() : Optional.of(pointOfInteraction);
 	}
 
-	public void setPointOfInteraction(com.tools20022.repository.entity.PointOfInteraction pointOfInteraction) {
+	public CardPaymentAcquiring setPointOfInteraction(com.tools20022.repository.entity.PointOfInteraction pointOfInteraction) {
 		this.pointOfInteraction = pointOfInteraction;
+		return this;
 	}
 
 	public CardPaymentServiceTypeCode getCardPaymentService() {
 		return cardPaymentService;
 	}
 
-	public void setCardPaymentService(CardPaymentServiceTypeCode cardPaymentService) {
-		this.cardPaymentService = cardPaymentService;
+	public CardPaymentAcquiring setCardPaymentService(CardPaymentServiceTypeCode cardPaymentService) {
+		this.cardPaymentService = Objects.requireNonNull(cardPaymentService);
+		return this;
 	}
 
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public CardPaymentAcquiring setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
 	public ISODateTime getTransactionDateTime() {
 		return transactionDateTime;
 	}
 
-	public void setTransactionDateTime(ISODateTime transactionDateTime) {
-		this.transactionDateTime = transactionDateTime;
+	public CardPaymentAcquiring setTransactionDateTime(ISODateTime transactionDateTime) {
+		this.transactionDateTime = Objects.requireNonNull(transactionDateTime);
+		return this;
 	}
 
 	public Max10000Binary getICCRelatedData() {
 		return iCCRelatedData;
 	}
 
-	public void setICCRelatedData(Max10000Binary iCCRelatedData) {
-		this.iCCRelatedData = iCCRelatedData;
+	public CardPaymentAcquiring setICCRelatedData(Max10000Binary iCCRelatedData) {
+		this.iCCRelatedData = Objects.requireNonNull(iCCRelatedData);
+		return this;
 	}
 
-	public CardPayment getRelatedCardPayment() {
-		return relatedCardPayment;
+	public Optional<CardPayment> getRelatedCardPayment() {
+		return relatedCardPayment == null ? Optional.empty() : Optional.of(relatedCardPayment);
 	}
 
-	public void setRelatedCardPayment(com.tools20022.repository.entity.CardPayment relatedCardPayment) {
+	public CardPaymentAcquiring setRelatedCardPayment(com.tools20022.repository.entity.CardPayment relatedCardPayment) {
 		this.relatedCardPayment = relatedCardPayment;
+		return this;
 	}
 
 	public TrueFalseIndicator getCardPresent() {
 		return cardPresent;
 	}
 
-	public void setCardPresent(TrueFalseIndicator cardPresent) {
-		this.cardPresent = cardPresent;
+	public CardPaymentAcquiring setCardPresent(TrueFalseIndicator cardPresent) {
+		this.cardPresent = Objects.requireNonNull(cardPresent);
+		return this;
 	}
 
 	public TrueFalseIndicator getCardholderPresent() {
 		return cardholderPresent;
 	}
 
-	public void setCardholderPresent(TrueFalseIndicator cardholderPresent) {
-		this.cardholderPresent = cardholderPresent;
+	public CardPaymentAcquiring setCardholderPresent(TrueFalseIndicator cardholderPresent) {
+		this.cardholderPresent = Objects.requireNonNull(cardholderPresent);
+		return this;
 	}
 
 	public TrueFalseIndicator getOnLineContext() {
 		return onLineContext;
 	}
 
-	public void setOnLineContext(TrueFalseIndicator onLineContext) {
-		this.onLineContext = onLineContext;
+	public CardPaymentAcquiring setOnLineContext(TrueFalseIndicator onLineContext) {
+		this.onLineContext = Objects.requireNonNull(onLineContext);
+		return this;
 	}
 
 	public AttendanceContextCode getAttendanceContext() {
 		return attendanceContext;
 	}
 
-	public void setAttendanceContext(AttendanceContextCode attendanceContext) {
-		this.attendanceContext = attendanceContext;
+	public CardPaymentAcquiring setAttendanceContext(AttendanceContextCode attendanceContext) {
+		this.attendanceContext = Objects.requireNonNull(attendanceContext);
+		return this;
 	}
 
 	public TransactionEnvironmentCode getTransactionEnvironment() {
 		return transactionEnvironment;
 	}
 
-	public void setTransactionEnvironment(TransactionEnvironmentCode transactionEnvironment) {
-		this.transactionEnvironment = transactionEnvironment;
+	public CardPaymentAcquiring setTransactionEnvironment(TransactionEnvironmentCode transactionEnvironment) {
+		this.transactionEnvironment = Objects.requireNonNull(transactionEnvironment);
+		return this;
 	}
 
 	public TransactionChannelCode getTransactionChannel() {
 		return transactionChannel;
 	}
 
-	public void setTransactionChannel(TransactionChannelCode transactionChannel) {
-		this.transactionChannel = transactionChannel;
+	public CardPaymentAcquiring setTransactionChannel(TransactionChannelCode transactionChannel) {
+		this.transactionChannel = Objects.requireNonNull(transactionChannel);
+		return this;
 	}
 
 	public TrueFalseIndicator getAttendantMessageCapable() {
 		return attendantMessageCapable;
 	}
 
-	public void setAttendantMessageCapable(TrueFalseIndicator attendantMessageCapable) {
-		this.attendantMessageCapable = attendantMessageCapable;
+	public CardPaymentAcquiring setAttendantMessageCapable(TrueFalseIndicator attendantMessageCapable) {
+		this.attendantMessageCapable = Objects.requireNonNull(attendantMessageCapable);
+		return this;
 	}
 
 	public ISO2ALanguageCode getAttendantLanguage() {
 		return attendantLanguage;
 	}
 
-	public void setAttendantLanguage(ISO2ALanguageCode attendantLanguage) {
-		this.attendantLanguage = attendantLanguage;
+	public CardPaymentAcquiring setAttendantLanguage(ISO2ALanguageCode attendantLanguage) {
+		this.attendantLanguage = Objects.requireNonNull(attendantLanguage);
+		return this;
 	}
 
 	public CardDataReadingCode getCardDataEntryMode() {
 		return cardDataEntryMode;
 	}
 
-	public void setCardDataEntryMode(CardDataReadingCode cardDataEntryMode) {
-		this.cardDataEntryMode = cardDataEntryMode;
+	public CardPaymentAcquiring setCardDataEntryMode(CardDataReadingCode cardDataEntryMode) {
+		this.cardDataEntryMode = Objects.requireNonNull(cardDataEntryMode);
+		return this;
 	}
 
 	public TrueFalseIndicator getFallbackIndicator() {
 		return fallbackIndicator;
 	}
 
-	public void setFallbackIndicator(TrueFalseIndicator fallbackIndicator) {
-		this.fallbackIndicator = fallbackIndicator;
+	public CardPaymentAcquiring setFallbackIndicator(TrueFalseIndicator fallbackIndicator) {
+		this.fallbackIndicator = Objects.requireNonNull(fallbackIndicator);
+		return this;
 	}
 
 	public List<TerminalManagementSystem> getTMSTrigger() {
-		return tMSTrigger;
+		return tMSTrigger == null ? tMSTrigger = new ArrayList<>() : tMSTrigger;
 	}
 
-	public void setTMSTrigger(List<com.tools20022.repository.entity.TerminalManagementSystem> tMSTrigger) {
-		this.tMSTrigger = tMSTrigger;
+	public CardPaymentAcquiring setTMSTrigger(List<com.tools20022.repository.entity.TerminalManagementSystem> tMSTrigger) {
+		this.tMSTrigger = Objects.requireNonNull(tMSTrigger);
+		return this;
 	}
 
 	public Max35Text getInitiatorTransactionIdentifier() {
 		return initiatorTransactionIdentifier;
 	}
 
-	public void setInitiatorTransactionIdentifier(Max35Text initiatorTransactionIdentifier) {
-		this.initiatorTransactionIdentifier = initiatorTransactionIdentifier;
+	public CardPaymentAcquiring setInitiatorTransactionIdentifier(Max35Text initiatorTransactionIdentifier) {
+		this.initiatorTransactionIdentifier = Objects.requireNonNull(initiatorTransactionIdentifier);
+		return this;
 	}
 
 	public TrueFalseIndicator getReversal() {
 		return reversal;
 	}
 
-	public void setReversal(TrueFalseIndicator reversal) {
-		this.reversal = reversal;
+	public CardPaymentAcquiring setReversal(TrueFalseIndicator reversal) {
+		this.reversal = Objects.requireNonNull(reversal);
+		return this;
 	}
 
 	public Max35Text getInterchangeData() {
 		return interchangeData;
 	}
 
-	public void setInterchangeData(Max35Text interchangeData) {
-		this.interchangeData = interchangeData;
+	public CardPaymentAcquiring setInterchangeData(Max35Text interchangeData) {
+		this.interchangeData = Objects.requireNonNull(interchangeData);
+		return this;
 	}
 
 	public Max35NumericText getUnattendedLevelCategory() {
 		return unattendedLevelCategory;
 	}
 
-	public void setUnattendedLevelCategory(Max35NumericText unattendedLevelCategory) {
-		this.unattendedLevelCategory = unattendedLevelCategory;
+	public CardPaymentAcquiring setUnattendedLevelCategory(Max35NumericText unattendedLevelCategory) {
+		this.unattendedLevelCategory = Objects.requireNonNull(unattendedLevelCategory);
+		return this;
 	}
 
 	public List<CardPaymentValidation> getValidation() {
-		return validation;
+		return validation == null ? validation = new ArrayList<>() : validation;
 	}
 
-	public void setValidation(List<com.tools20022.repository.entity.CardPaymentValidation> validation) {
-		this.validation = validation;
+	public CardPaymentAcquiring setValidation(List<com.tools20022.repository.entity.CardPaymentValidation> validation) {
+		this.validation = Objects.requireNonNull(validation);
+		return this;
 	}
 
 	public TrueFalseIndicator getCompletionRequired() {
 		return completionRequired;
 	}
 
-	public void setCompletionRequired(TrueFalseIndicator completionRequired) {
-		this.completionRequired = completionRequired;
+	public CardPaymentAcquiring setCompletionRequired(TrueFalseIndicator completionRequired) {
+		this.completionRequired = Objects.requireNonNull(completionRequired);
+		return this;
 	}
 
 	public ActionTypeCode getActionType() {
 		return actionType;
 	}
 
-	public void setActionType(ActionTypeCode actionType) {
-		this.actionType = actionType;
+	public CardPaymentAcquiring setActionType(ActionTypeCode actionType) {
+		this.actionType = Objects.requireNonNull(actionType);
+		return this;
 	}
 
 	public Max256Text getActionMessage() {
 		return actionMessage;
 	}
 
-	public void setActionMessage(Max256Text actionMessage) {
-		this.actionMessage = actionMessage;
+	public CardPaymentAcquiring setActionMessage(Max256Text actionMessage) {
+		this.actionMessage = Objects.requireNonNull(actionMessage);
+		return this;
 	}
 
 	public TrueFalseIndicator getCaptureIndicator() {
 		return captureIndicator;
 	}
 
-	public void setCaptureIndicator(TrueFalseIndicator captureIndicator) {
-		this.captureIndicator = captureIndicator;
+	public CardPaymentAcquiring setCaptureIndicator(TrueFalseIndicator captureIndicator) {
+		this.captureIndicator = Objects.requireNonNull(captureIndicator);
+		return this;
 	}
 
 	public Max35Text getRecipientTransactionIdentification() {
 		return recipientTransactionIdentification;
 	}
 
-	public void setRecipientTransactionIdentification(Max35Text recipientTransactionIdentification) {
-		this.recipientTransactionIdentification = recipientTransactionIdentification;
+	public CardPaymentAcquiring setRecipientTransactionIdentification(Max35Text recipientTransactionIdentification) {
+		this.recipientTransactionIdentification = Objects.requireNonNull(recipientTransactionIdentification);
+		return this;
 	}
 
 	public LocationCategoryCode getLocation() {
 		return location;
 	}
 
-	public void setLocation(LocationCategoryCode location) {
-		this.location = location;
+	public CardPaymentAcquiring setLocation(LocationCategoryCode location) {
+		this.location = Objects.requireNonNull(location);
+		return this;
 	}
 
-	public Country getCountry() {
-		return country;
+	public Optional<Country> getCountry() {
+		return country == null ? Optional.empty() : Optional.of(country);
 	}
 
-	public void setCountry(com.tools20022.repository.entity.Country country) {
+	public CardPaymentAcquiring setCountry(com.tools20022.repository.entity.Country country) {
 		this.country = country;
+		return this;
 	}
 }

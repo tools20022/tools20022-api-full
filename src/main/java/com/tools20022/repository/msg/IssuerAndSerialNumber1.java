@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Binary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Certificate issuer name and serial number  (see X.509)."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IssuerAndSerialNumber1", propOrder = {"issuer", "serialNumber"})
 public class IssuerAndSerialNumber1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Issr", required = true)
 	protected CertificateIssuer1 issuer;
 	/**
-	 * Certificate issuer name (see X.509).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -96,7 +98,7 @@ public class IssuerAndSerialNumber1 {
 	 */
 	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IssuerAndSerialNumber1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAndSerialNumber1.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,10 +110,11 @@ public class IssuerAndSerialNumber1 {
 			type_lazy = () -> com.tools20022.repository.msg.CertificateIssuer1.mmObject();
 		}
 	};
+	@XmlElement(name = "SrlNb", required = true)
 	protected Max35Binary serialNumber;
 	/**
-	 * Certificate serial number (see X.509).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -138,7 +141,7 @@ public class IssuerAndSerialNumber1 {
 	 */
 	public static final MMMessageAttribute mmSerialNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IssuerAndSerialNumber1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAndSerialNumber1.mmObject();
 			isDerived = false;
 			xmlTag = "SrlNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,8 +156,8 @@ public class IssuerAndSerialNumber1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IssuerAndSerialNumber1.mmIssuer, IssuerAndSerialNumber1.mmSerialNumber);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAndSerialNumber1.mmIssuer, com.tools20022.repository.msg.IssuerAndSerialNumber1.mmSerialNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IssuerAndSerialNumber1";
 				definition = "Certificate issuer name and serial number  (see X.509).";
@@ -163,21 +166,21 @@ public class IssuerAndSerialNumber1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Issr", required = true)
 	public CertificateIssuer1 getIssuer() {
 		return issuer;
 	}
 
-	public void setIssuer(com.tools20022.repository.msg.CertificateIssuer1 issuer) {
-		this.issuer = issuer;
+	public IssuerAndSerialNumber1 setIssuer(com.tools20022.repository.msg.CertificateIssuer1 issuer) {
+		this.issuer = Objects.requireNonNull(issuer);
+		return this;
 	}
 
-	@XmlElement(name = "SrlNb", required = true)
 	public Max35Binary getSerialNumber() {
 		return serialNumber;
 	}
 
-	public void setSerialNumber(Max35Binary serialNumber) {
-		this.serialNumber = serialNumber;
+	public IssuerAndSerialNumber1 setSerialNumber(Max35Binary serialNumber) {
+		this.serialNumber = Objects.requireNonNull(serialNumber);
+		return this;
 	}
 }

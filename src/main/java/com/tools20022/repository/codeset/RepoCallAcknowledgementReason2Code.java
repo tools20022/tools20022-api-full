@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode;
+import com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies additional information about the repurchase agreement call
@@ -31,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode
- * RepoCallAcknowledgementReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code#mmInProcess
- * RepoCallAcknowledgementReason2Code.mmInProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code#InProcess
+ * RepoCallAcknowledgementReason2Code.InProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code#mmProcessed
- * RepoCallAcknowledgementReason2Code.mmProcessed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code#Processed
+ * RepoCallAcknowledgementReason2Code.Processed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code#mmAccountServicerDeadlineMissed
- * RepoCallAcknowledgementReason2Code.mmAccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code#AccountServicerDeadlineMissed
+ * RepoCallAcknowledgementReason2Code.AccountServicerDeadlineMissed}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode
+ * RepoCallAcknowledgementReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class RepoCallAcknowledgementReason2Code extends RepoCallAcknowledgementReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RepoCallAcknowledgementReason2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class RepoCallAcknowledgementReason2Code extends RepoCallAcknowledgementR
 	 * name} = "InProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInProcess = new MMCode() {
+	public static final RepoCallAcknowledgementReason2Code InProcess = new RepoCallAcknowledgementReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InProcess";
-			owner_lazy = () -> RepoCallAcknowledgementReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code.mmObject();
+			codeName = RepoCallAcknowledgementReasonCode.InProcess.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class RepoCallAcknowledgementReason2Code extends RepoCallAcknowledgementR
 	 * name} = "Processed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProcessed = new MMCode() {
+	public static final RepoCallAcknowledgementReason2Code Processed = new RepoCallAcknowledgementReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Processed";
-			owner_lazy = () -> RepoCallAcknowledgementReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code.mmObject();
+			codeName = RepoCallAcknowledgementReasonCode.Processed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,26 +142,59 @@ public class RepoCallAcknowledgementReason2Code extends RepoCallAcknowledgementR
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
+	public static final RepoCallAcknowledgementReason2Code AccountServicerDeadlineMissed = new RepoCallAcknowledgementReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
-			owner_lazy = () -> RepoCallAcknowledgementReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code.mmObject();
+			codeName = RepoCallAcknowledgementReasonCode.AccountServicerDeadlineMissed.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RepoCallAcknowledgementReason2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RepoCallAcknowledgementReason2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CALD");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RepoCallAcknowledgementReason2Code";
 				definition = "Specifies additional information about the repurchase agreement call processed instruction";
-				code_lazy = () -> Arrays.asList(RepoCallAcknowledgementReason2Code.mmInProcess, RepoCallAcknowledgementReason2Code.mmProcessed, RepoCallAcknowledgementReason2Code.mmAccountServicerDeadlineMissed);
 				trace_lazy = () -> RepoCallAcknowledgementReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code.InProcess, com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code.Processed,
+						com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code.AccountServicerDeadlineMissed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(InProcess.getCodeName().get(), InProcess);
+		codesByName.put(Processed.getCodeName().get(), Processed);
+		codesByName.put(AccountServicerDeadlineMissed.getCodeName().get(), AccountServicerDeadlineMissed);
+	}
+
+	public static RepoCallAcknowledgementReason2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RepoCallAcknowledgementReason2Code[] values() {
+		RepoCallAcknowledgementReason2Code[] values = new RepoCallAcknowledgementReason2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RepoCallAcknowledgementReason2Code> {
+		@Override
+		public RepoCallAcknowledgementReason2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RepoCallAcknowledgementReason2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

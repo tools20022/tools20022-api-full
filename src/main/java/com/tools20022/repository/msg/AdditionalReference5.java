@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,17 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AdditionalReference5", propOrder = {"reference", "messageName"})
 public class AdditionalReference5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ref", required = true)
 	protected RestrictedFINMax16Text reference;
 	/**
-	 * Business reference of a message assigned by the party issuing the
-	 * message. This reference must be unique amongst all messages of the same
-	 * name sent by the same party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +118,7 @@ public class AdditionalReference5 {
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> AdditionalReference5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalReference5.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +129,11 @@ public class AdditionalReference5 {
 			simpleType_lazy = () -> RestrictedFINMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgNm")
 	protected RestrictedFINMax15Text messageName;
 	/**
-	 * Name of a message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +161,7 @@ public class AdditionalReference5 {
 	 */
 	public static final MMMessageAttribute mmMessageName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AdditionalReference5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalReference5.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,9 +176,9 @@ public class AdditionalReference5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AdditionalReference5.mmReference, AdditionalReference5.mmMessageName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference5.mmReference, com.tools20022.repository.msg.AdditionalReference5.mmMessageName);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalReference5";
 				definition = "References a related message or provides another reference, such as a pool reference, linking a set of messages. The party which issued the related reference may be the Sender of the referenced message or a party other than the Sender.";
@@ -185,21 +187,21 @@ public class AdditionalReference5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ref", required = true)
 	public RestrictedFINMax16Text getReference() {
 		return reference;
 	}
 
-	public void setReference(RestrictedFINMax16Text reference) {
-		this.reference = reference;
+	public AdditionalReference5 setReference(RestrictedFINMax16Text reference) {
+		this.reference = Objects.requireNonNull(reference);
+		return this;
 	}
 
-	@XmlElement(name = "MsgNm")
-	public RestrictedFINMax15Text getMessageName() {
-		return messageName;
+	public Optional<RestrictedFINMax15Text> getMessageName() {
+		return messageName == null ? Optional.empty() : Optional.of(messageName);
 	}
 
-	public void setMessageName(RestrictedFINMax15Text messageName) {
+	public AdditionalReference5 setMessageName(RestrictedFINMax15Text messageName) {
 		this.messageName = messageName;
+		return this;
 	}
 }

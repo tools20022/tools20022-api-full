@@ -28,6 +28,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -42,8 +44,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.NewIssueAllocation1#mmDeMinimusApplicableOrNotApplicableRule
- * NewIssueAllocation1.mmDeMinimusApplicableOrNotApplicableRule}</li>
+ * {@linkplain com.tools20022.repository.msg.NewIssueAllocation1#DeMinimusApplicableOrNotApplicableRule
+ * NewIssueAllocation1.DeMinimusApplicableOrNotApplicableRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,8 +95,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -115,16 +117,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NewIssueAllocation1", propOrder = {"restricted", "exemptPersonReason", "deMinimusApplicable", "deMinimusNotApplicable"})
 public class NewIssueAllocation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rstrctd", required = true)
 	protected YesNoIndicator restricted;
 	/**
-	 * Indicates whether the investor is eligible to participate in the profits
-	 * and losses from a new issue.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,7 +170,7 @@ public class NewIssueAllocation1 {
 	public static final MMMessageAttribute mmRestricted = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Investor.mmRestricted;
-			componentContext_lazy = () -> NewIssueAllocation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "Rstrctd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,10 +182,11 @@ public class NewIssueAllocation1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "XmptPrsnRsn")
 	protected Max350Text exemptPersonReason;
 	/**
-	 * Reason for exemption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,7 +221,7 @@ public class NewIssueAllocation1 {
 	 */
 	public static final MMMessageAttribute mmExemptPersonReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NewIssueAllocation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "XmptPrsnRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,11 +233,11 @@ public class NewIssueAllocation1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DeMnmsAplbl")
 	protected DeMinimusApplicable1 deMinimusApplicable;
 	/**
-	 * Conditions applicable when the investor is covered by the "de minimis"
-	 * exemption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -268,7 +271,7 @@ public class NewIssueAllocation1 {
 	public static final MMMessageAssociationEnd mmDeMinimusApplicable = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Investor.mmDeMinimusApplicable;
-			componentContext_lazy = () -> NewIssueAllocation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "DeMnmsAplbl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,11 +283,11 @@ public class NewIssueAllocation1 {
 			type_lazy = () -> com.tools20022.repository.msg.DeMinimusApplicable1.mmObject();
 		}
 	};
+	@XmlElement(name = "DeMnmsNotAplbl")
 	protected DeMinimusNotApplicable1 deMinimusNotApplicable;
 	/**
-	 * Conditions applicable when the investor is not covered by the
-	 * "de minimis" exemption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -318,7 +321,7 @@ public class NewIssueAllocation1 {
 	public static final MMMessageAssociationEnd mmDeMinimusNotApplicable = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Investor.mmObject();
-			componentContext_lazy = () -> NewIssueAllocation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "DeMnmsNotAplbl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -364,24 +367,25 @@ public class NewIssueAllocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmDeMinimusApplicableOrNotApplicableRule = new MMXor() {
+	public static final MMXor DeMinimusApplicableOrNotApplicableRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeMinimusApplicableOrNotApplicableRule";
 			definition = "Either DeMinimusApplicable Or DeMinimusNotApplicable maybe present, but not both.";
-			messageComponent_lazy = () -> NewIssueAllocation1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(NewIssueAllocation1.mmDeMinimusApplicable, NewIssueAllocation1.mmDeMinimusNotApplicable);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NewIssueAllocation1.mmDeMinimusApplicable, com.tools20022.repository.msg.NewIssueAllocation1.mmDeMinimusNotApplicable);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NewIssueAllocation1.mmRestricted, NewIssueAllocation1.mmExemptPersonReason, NewIssueAllocation1.mmDeMinimusApplicable, NewIssueAllocation1.mmDeMinimusNotApplicable);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NewIssueAllocation1.mmRestricted, com.tools20022.repository.msg.NewIssueAllocation1.mmExemptPersonReason,
+						com.tools20022.repository.msg.NewIssueAllocation1.mmDeMinimusApplicable, com.tools20022.repository.msg.NewIssueAllocation1.mmDeMinimusNotApplicable);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV02.mmNewIssueAllocation, AccountDetailsConfirmationV03.mmNewIssueAllocation, AccountOpeningInstructionV02.mmNewIssueAllocation,
 						AccountOpeningInstructionV03.mmNewIssueAllocation, AccountDetailsConfirmationV04.mmNewIssueAllocation, AccountOpeningInstructionV04.mmNewIssueAllocation);
 				trace_lazy = () -> Investor.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -393,45 +397,45 @@ public class NewIssueAllocation1 {
 				name = "NewIssueAllocation1";
 				definition = "Information about the investment account ownership with respect to new issue allocation for a hedge fund.";
 				nextVersions_lazy = () -> Arrays.asList(NewIssueAllocation2.mmObject());
-				xors_lazy = () -> Arrays.asList(NewIssueAllocation1.mmDeMinimusApplicableOrNotApplicableRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NewIssueAllocation1.DeMinimusApplicableOrNotApplicableRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rstrctd", required = true)
 	public YesNoIndicator getRestricted() {
 		return restricted;
 	}
 
-	public void setRestricted(YesNoIndicator restricted) {
-		this.restricted = restricted;
+	public NewIssueAllocation1 setRestricted(YesNoIndicator restricted) {
+		this.restricted = Objects.requireNonNull(restricted);
+		return this;
 	}
 
-	@XmlElement(name = "XmptPrsnRsn")
-	public Max350Text getExemptPersonReason() {
-		return exemptPersonReason;
+	public Optional<Max350Text> getExemptPersonReason() {
+		return exemptPersonReason == null ? Optional.empty() : Optional.of(exemptPersonReason);
 	}
 
-	public void setExemptPersonReason(Max350Text exemptPersonReason) {
+	public NewIssueAllocation1 setExemptPersonReason(Max350Text exemptPersonReason) {
 		this.exemptPersonReason = exemptPersonReason;
+		return this;
 	}
 
-	@XmlElement(name = "DeMnmsAplbl")
-	public DeMinimusApplicable1 getDeMinimusApplicable() {
-		return deMinimusApplicable;
+	public Optional<DeMinimusApplicable1> getDeMinimusApplicable() {
+		return deMinimusApplicable == null ? Optional.empty() : Optional.of(deMinimusApplicable);
 	}
 
-	public void setDeMinimusApplicable(com.tools20022.repository.msg.DeMinimusApplicable1 deMinimusApplicable) {
+	public NewIssueAllocation1 setDeMinimusApplicable(com.tools20022.repository.msg.DeMinimusApplicable1 deMinimusApplicable) {
 		this.deMinimusApplicable = deMinimusApplicable;
+		return this;
 	}
 
-	@XmlElement(name = "DeMnmsNotAplbl")
-	public DeMinimusNotApplicable1 getDeMinimusNotApplicable() {
-		return deMinimusNotApplicable;
+	public Optional<DeMinimusNotApplicable1> getDeMinimusNotApplicable() {
+		return deMinimusNotApplicable == null ? Optional.empty() : Optional.of(deMinimusNotApplicable);
 	}
 
-	public void setDeMinimusNotApplicable(com.tools20022.repository.msg.DeMinimusNotApplicable1 deMinimusNotApplicable) {
+	public NewIssueAllocation1 setDeMinimusNotApplicable(com.tools20022.repository.msg.DeMinimusNotApplicable1 deMinimusNotApplicable) {
 		this.deMinimusNotApplicable = deMinimusNotApplicable;
+		return this;
 	}
 }

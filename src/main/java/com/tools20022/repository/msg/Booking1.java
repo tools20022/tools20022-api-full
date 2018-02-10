@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -28,6 +29,7 @@ import com.tools20022.repository.entity.SecuritiesPostTradeBooking;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information used to book the executions of a trade."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Booking1", propOrder = {"dayBooking", "bookingUnit", "preAllocationMethod", "bookingType"})
 public class Booking1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DayBookg")
 	protected DayBookingInstruction1Code dayBooking;
 	/**
-	 * Indicates whether or not automatic booking can occur.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,6 +102,9 @@ public class Booking1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DayBookg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 589</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -112,9 +118,10 @@ public class Booking1 {
 	public static final MMMessageAttribute mmDayBooking = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPostTradeBooking.mmDayBooking;
-			componentContext_lazy = () -> Booking1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Booking1.mmObject();
 			isDerived = false;
 			xmlTag = "DayBookg";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "589"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DayBooking";
 			definition = "Indicates whether or not automatic booking can occur.";
@@ -123,11 +130,11 @@ public class Booking1 {
 			simpleType_lazy = () -> DayBookingInstruction1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "BookgUnit")
 	protected BookingUnit1Choice bookingUnit;
 	/**
-	 * Indicates what constitutes a bookable unit, ie, a partial execution, or
-	 * an aggregated execution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,6 +154,9 @@ public class Booking1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BookgUnit"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 590</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -162,9 +172,10 @@ public class Booking1 {
 	public static final MMMessageAttribute mmBookingUnit = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPostTradeBooking.mmBookingUnit;
-			componentContext_lazy = () -> Booking1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Booking1.mmObject();
 			isDerived = false;
 			xmlTag = "BookgUnit";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "590"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookingUnit";
 			definition = "Indicates what constitutes a bookable unit, ie, a partial execution, or an aggregated execution.";
@@ -173,10 +184,11 @@ public class Booking1 {
 			complexType_lazy = () -> BookingUnit1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PreAllcnMtd")
 	protected PreAllocationMethod1Code preAllocationMethod;
 	/**
-	 * Indicates the method of preallocation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,6 +208,9 @@ public class Booking1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PreAllcnMtd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 591</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -209,9 +224,10 @@ public class Booking1 {
 	public static final MMMessageAttribute mmPreAllocationMethod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPostTradeBooking.mmPreAllocationMethod;
-			componentContext_lazy = () -> Booking1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Booking1.mmObject();
 			isDerived = false;
 			xmlTag = "PreAllcnMtd";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "591"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAllocationMethod";
 			definition = "Indicates the method of preallocation.";
@@ -220,10 +236,11 @@ public class Booking1 {
 			simpleType_lazy = () -> PreAllocationMethod1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "BookgTp")
 	protected BookingType1Code bookingType;
 	/**
-	 * Method for booking out an order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -243,6 +260,9 @@ public class Booking1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BookgTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 775</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -256,9 +276,10 @@ public class Booking1 {
 	public static final MMMessageAttribute mmBookingType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPostTradeBooking.mmBookingType;
-			componentContext_lazy = () -> Booking1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Booking1.mmObject();
 			isDerived = false;
 			xmlTag = "BookgTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "775"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookingType";
 			definition = "Method for booking out an order.";
@@ -271,9 +292,10 @@ public class Booking1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Booking1.mmDayBooking, Booking1.mmBookingUnit, Booking1.mmPreAllocationMethod, Booking1.mmBookingType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Booking1.mmDayBooking, com.tools20022.repository.msg.Booking1.mmBookingUnit, com.tools20022.repository.msg.Booking1.mmPreAllocationMethod,
+						com.tools20022.repository.msg.Booking1.mmBookingType);
 				trace_lazy = () -> SecuritiesPostTradeBooking.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Booking1";
 				definition = "Information used to book the executions of a trade.";
@@ -282,39 +304,39 @@ public class Booking1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DayBookg")
-	public DayBookingInstruction1Code getDayBooking() {
-		return dayBooking;
+	public Optional<DayBookingInstruction1Code> getDayBooking() {
+		return dayBooking == null ? Optional.empty() : Optional.of(dayBooking);
 	}
 
-	public void setDayBooking(DayBookingInstruction1Code dayBooking) {
+	public Booking1 setDayBooking(DayBookingInstruction1Code dayBooking) {
 		this.dayBooking = dayBooking;
+		return this;
 	}
 
-	@XmlElement(name = "BookgUnit")
-	public BookingUnit1Choice getBookingUnit() {
-		return bookingUnit;
+	public Optional<BookingUnit1Choice> getBookingUnit() {
+		return bookingUnit == null ? Optional.empty() : Optional.of(bookingUnit);
 	}
 
-	public void setBookingUnit(BookingUnit1Choice bookingUnit) {
+	public Booking1 setBookingUnit(BookingUnit1Choice bookingUnit) {
 		this.bookingUnit = bookingUnit;
+		return this;
 	}
 
-	@XmlElement(name = "PreAllcnMtd")
-	public PreAllocationMethod1Code getPreAllocationMethod() {
-		return preAllocationMethod;
+	public Optional<PreAllocationMethod1Code> getPreAllocationMethod() {
+		return preAllocationMethod == null ? Optional.empty() : Optional.of(preAllocationMethod);
 	}
 
-	public void setPreAllocationMethod(PreAllocationMethod1Code preAllocationMethod) {
+	public Booking1 setPreAllocationMethod(PreAllocationMethod1Code preAllocationMethod) {
 		this.preAllocationMethod = preAllocationMethod;
+		return this;
 	}
 
-	@XmlElement(name = "BookgTp")
-	public BookingType1Code getBookingType() {
-		return bookingType;
+	public Optional<BookingType1Code> getBookingType() {
+		return bookingType == null ? Optional.empty() : Optional.of(bookingType);
 	}
 
-	public void setBookingType(BookingType1Code bookingType) {
+	public Booking1 setBookingType(BookingType1Code bookingType) {
 		this.bookingType = bookingType;
+		return this;
 	}
 }

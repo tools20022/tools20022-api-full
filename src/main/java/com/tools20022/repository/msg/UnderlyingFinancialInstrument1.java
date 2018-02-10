@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,8 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnderlyingFinancialInstrument1", propOrder = {"identification", "attributes"})
 public class UnderlyingFinancialInstrument1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected SecurityIdentification14 identification;
 	/**
-	 * Identification of the underlying security by an ISIN.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,6 +113,9 @@ public class UnderlyingFinancialInstrument1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Id"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :35B:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -122,9 +129,10 @@ public class UnderlyingFinancialInstrument1 {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> UnderlyingFinancialInstrument1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingFinancialInstrument1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":35B:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the underlying security by an ISIN.";
@@ -134,11 +142,11 @@ public class UnderlyingFinancialInstrument1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	@XmlElement(name = "Attrbts")
 	protected FinancialInstrumentAttributes31 attributes;
 	/**
-	 * Underlying financial instrument attributes to which an trade confirmation
-	 * is related.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -172,7 +180,7 @@ public class UnderlyingFinancialInstrument1 {
 	public static final MMMessageAssociationEnd mmAttributes = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
-			componentContext_lazy = () -> UnderlyingFinancialInstrument1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingFinancialInstrument1.mmObject();
 			isDerived = false;
 			xmlTag = "Attrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,10 +196,10 @@ public class UnderlyingFinancialInstrument1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnderlyingFinancialInstrument1.mmIdentification, UnderlyingFinancialInstrument1.mmAttributes);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingFinancialInstrument1.mmIdentification, com.tools20022.repository.msg.UnderlyingFinancialInstrument1.mmAttributes);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationV01.mmUnderlyingFinancialInstrument);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingFinancialInstrument1";
 				definition = "Underlying financial instrument to which an trade confirmation is related.";
@@ -201,21 +209,21 @@ public class UnderlyingFinancialInstrument1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification14 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.SecurityIdentification14 identification) {
-		this.identification = identification;
+	public UnderlyingFinancialInstrument1 setIdentification(com.tools20022.repository.msg.SecurityIdentification14 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Attrbts")
-	public FinancialInstrumentAttributes31 getAttributes() {
-		return attributes;
+	public Optional<FinancialInstrumentAttributes31> getAttributes() {
+		return attributes == null ? Optional.empty() : Optional.of(attributes);
 	}
 
-	public void setAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes31 attributes) {
+	public UnderlyingFinancialInstrument1 setAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes31 attributes) {
 		this.attributes = attributes;
+		return this;
 	}
 }

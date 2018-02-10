@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of intermediary role."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IntermediaryRoleChoice1", propOrder = {"role", "proprietary"})
 public class IntermediaryRoleChoice1 {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Role", required = true)
 	protected InvestmentFundRole4Code role;
 	/**
-	 * Role of the party in the activity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +111,7 @@ public class IntermediaryRoleChoice1 {
 	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundPartyRole.mmObject();
-			componentContext_lazy = () -> IntermediaryRoleChoice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IntermediaryRoleChoice1.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +122,11 @@ public class IntermediaryRoleChoice1 {
 			simpleType_lazy = () -> InvestmentFundRole4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification13 proprietary;
 	/**
-	 * Role of the party in the activity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +160,7 @@ public class IntermediaryRoleChoice1 {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundPartyRole.mmObject();
-			componentContext_lazy = () -> IntermediaryRoleChoice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IntermediaryRoleChoice1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +175,9 @@ public class IntermediaryRoleChoice1 {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IntermediaryRoleChoice1.mmRole, IntermediaryRoleChoice1.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IntermediaryRoleChoice1.mmRole, com.tools20022.repository.choice.IntermediaryRoleChoice1.mmProprietary);
 				trace_lazy = () -> InvestmentFundPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntermediaryRoleChoice1";
 				definition = "Choice of intermediary role.";
@@ -183,21 +186,21 @@ public class IntermediaryRoleChoice1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Role", required = true)
 	public InvestmentFundRole4Code getRole() {
 		return role;
 	}
 
-	public void setRole(InvestmentFundRole4Code role) {
-		this.role = role;
+	public IntermediaryRoleChoice1 setRole(InvestmentFundRole4Code role) {
+		this.role = Objects.requireNonNull(role);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification13 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification13 proprietary) {
-		this.proprietary = proprietary;
+	public IntermediaryRoleChoice1 setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

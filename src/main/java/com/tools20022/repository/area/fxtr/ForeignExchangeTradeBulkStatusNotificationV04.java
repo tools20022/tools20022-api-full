@@ -30,9 +30,8 @@ import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -43,28 +42,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.ForeignExchangeTradeLatestVersion
- * ForeignExchangeTradeLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
- * PostTradeForeignExchangeISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017
- * PostTradeForeignExchangeMaintenance20162017}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement
- * PostTradeForeignExchangeMaintenance20162017andSupplement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "FXTradBlkStsNtfctn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -83,9 +60,40 @@ import javax.xml.bind.annotation.*;
  * ForeignExchangeTradeBulkStatusNotificationV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
+ * PostTradeForeignExchangeISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017
+ * PostTradeForeignExchangeMaintenance20162017}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement
+ * PostTradeForeignExchangeMaintenance20162017andSupplement}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "FXTradBlkStsNtfctn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.ForeignExchangeTradeLatestVersion
+ * ForeignExchangeTradeLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code fxtr.030.001.04}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementSessionIdentifierRule#forForeignExchangeTradeBulkStatusNotificationV04
+ * ConstraintSettlementSessionIdentifierRule.
+ * forForeignExchangeTradeBulkStatusNotificationV04}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,15 +106,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ForeignExchangeTradeBulkStatusNotificationV04", propOrder = {"statusDetails", "tradeData", "messagePagination", "supplementaryData"})
 public class ForeignExchangeTradeBulkStatusNotificationV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StsDtls", required = true)
 	protected TradeData12 statusDetails;
 	/**
-	 * Information on the status of the trade in the central system.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,10 +155,11 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "TradData", required = true)
 	protected List<TradeData11> tradeData;
 	/**
-	 * Identifies one or more trades for which the status notification is sent.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,12 +199,11 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "MsgPgntn")
 	protected Pagination messagePagination;
 	/**
-	 * Page number of the message (within the status report) and continuation
-	 * indicator to indicate that the statement is to continue or that the
-	 * message is the last page of the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -235,11 +244,11 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -284,6 +293,7 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementSessionIdentifierRule.forForeignExchangeTradeBulkStatusNotificationV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeTradeBulkStatusNotificationV04";
 				definition = "Scope\r\r\nThe ForeignExchangeTradeBulkStatusNotification message is sent by a central system to the participant to provide notification of the current status of one or more foreign exchange trades. ";
@@ -312,43 +322,43 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StsDtls", required = true)
 	public TradeData12 getStatusDetails() {
 		return statusDetails;
 	}
 
-	public void setStatusDetails(TradeData12 statusDetails) {
-		this.statusDetails = statusDetails;
+	public ForeignExchangeTradeBulkStatusNotificationV04 setStatusDetails(TradeData12 statusDetails) {
+		this.statusDetails = Objects.requireNonNull(statusDetails);
+		return this;
 	}
 
-	@XmlElement(name = "TradData", required = true)
 	public List<TradeData11> getTradeData() {
-		return tradeData;
+		return tradeData == null ? tradeData = new ArrayList<>() : tradeData;
 	}
 
-	public void setTradeData(List<TradeData11> tradeData) {
-		this.tradeData = tradeData;
+	public ForeignExchangeTradeBulkStatusNotificationV04 setTradeData(List<TradeData11> tradeData) {
+		this.tradeData = Objects.requireNonNull(tradeData);
+		return this;
 	}
 
-	@XmlElement(name = "MsgPgntn")
-	public Pagination getMessagePagination() {
-		return messagePagination;
+	public Optional<Pagination> getMessagePagination() {
+		return messagePagination == null ? Optional.empty() : Optional.of(messagePagination);
 	}
 
-	public void setMessagePagination(Pagination messagePagination) {
+	public ForeignExchangeTradeBulkStatusNotificationV04 setMessagePagination(Pagination messagePagination) {
 		this.messagePagination = messagePagination;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public ForeignExchangeTradeBulkStatusNotificationV04 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:fxtr.030.04.04")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:fxtr.030.001.04")
 	static public class Document {
 		@XmlElement(name = "FXTradBlkStsNtfctn", required = true)
 		public ForeignExchangeTradeBulkStatusNotificationV04 messageBody;

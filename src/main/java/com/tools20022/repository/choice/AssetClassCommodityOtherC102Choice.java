@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.OtherC10CommodityDeliverable2;
 import com.tools20022.repository.msg.OtherC10CommodityNonDeliverable2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Defines commodity attributes of a derivative where the type is other C10."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AssetClassCommodityOtherC102Choice", propOrder = {"deliverable", "nonDeliverable"})
 public class AssetClassCommodityOtherC102Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dlvrbl", required = true)
 	protected OtherC10CommodityDeliverable2 deliverable;
 	/**
-	 * Other C10 deliverable commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -107,7 +109,7 @@ public class AssetClassCommodityOtherC102Choice {
 	public static final MMMessageAssociationEnd mmDeliverable = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityOtherC102Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dlvrbl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +121,11 @@ public class AssetClassCommodityOtherC102Choice {
 			type_lazy = () -> OtherC10CommodityDeliverable2.mmObject();
 		}
 	};
+	@XmlElement(name = "NonDlvrbl", required = true)
 	protected OtherC10CommodityNonDeliverable2 nonDeliverable;
 	/**
-	 * Other C10 non-deliverable commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +158,7 @@ public class AssetClassCommodityOtherC102Choice {
 	public static final MMMessageAssociationEnd mmNonDeliverable = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityOtherC102Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NonDlvrbl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,9 +174,9 @@ public class AssetClassCommodityOtherC102Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AssetClassCommodityOtherC102Choice.mmDeliverable, AssetClassCommodityOtherC102Choice.mmNonDeliverable);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice.mmDeliverable, com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice.mmNonDeliverable);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityOtherC102Choice";
 				definition = "Defines commodity attributes of a derivative where the type is other C10.";
@@ -182,21 +185,21 @@ public class AssetClassCommodityOtherC102Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dlvrbl", required = true)
 	public OtherC10CommodityDeliverable2 getDeliverable() {
 		return deliverable;
 	}
 
-	public void setDeliverable(OtherC10CommodityDeliverable2 deliverable) {
-		this.deliverable = deliverable;
+	public AssetClassCommodityOtherC102Choice setDeliverable(OtherC10CommodityDeliverable2 deliverable) {
+		this.deliverable = Objects.requireNonNull(deliverable);
+		return this;
 	}
 
-	@XmlElement(name = "NonDlvrbl", required = true)
 	public OtherC10CommodityNonDeliverable2 getNonDeliverable() {
 		return nonDeliverable;
 	}
 
-	public void setNonDeliverable(OtherC10CommodityNonDeliverable2 nonDeliverable) {
-		this.nonDeliverable = nonDeliverable;
+	public AssetClassCommodityOtherC102Choice setNonDeliverable(OtherC10CommodityNonDeliverable2 nonDeliverable) {
+		this.nonDeliverable = Objects.requireNonNull(nonDeliverable);
+		return this;
 	}
 }

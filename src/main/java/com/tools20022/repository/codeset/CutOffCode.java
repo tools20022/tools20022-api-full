@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CutOffCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the cut-off type.
@@ -32,12 +37,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CutOffCode#mmAnticipatedEarlyCutoff
- * CutOffCode.mmAnticipatedEarlyCutoff}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CutOffCode#mmEarly
- * CutOffCode.mmEarly}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CutOffCode#mmLate
- * CutOffCode.mmLate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CutOffCode#AnticipatedEarlyCutoff
+ * CutOffCode.AnticipatedEarlyCutoff}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CutOffCode#Early
+ * CutOffCode.Early}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CutOffCode#Late
+ * CutOffCode.Late}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the cut-off  type."</li>
  * </ul>
  */
-public class CutOffCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CutOffCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,12 +96,12 @@ public class CutOffCode {
 	 * definition} = "Cut-off may change to early."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAnticipatedEarlyCutoff = new MMCode() {
+	public static final CutOffCode AnticipatedEarlyCutoff = new CutOffCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnticipatedEarlyCutoff";
 			definition = "Cut-off may change to early.";
-			owner_lazy = () -> CutOffCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CutOffCode.mmObject();
 			codeName = "AERL";
 		}
 	};
@@ -123,12 +129,12 @@ public class CutOffCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEarly = new MMCode() {
+	public static final CutOffCode Early = new CutOffCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Early";
 			definition = "Cutoff occurs before the DTCC (The Depository Trust and Clearing Corporation) standard settlement cutoff. Early cutoff usually 1:30 Eastern Standard Time.";
-			owner_lazy = () -> CutOffCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CutOffCode.mmObject();
 			codeName = "EARL";
 		}
 	};
@@ -155,28 +161,59 @@ public class CutOffCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmLate = new MMCode() {
+	public static final CutOffCode Late = new CutOffCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Late";
 			definition = "Cutoff is after settlement at DTCC (The Depository Trust and Clearing Corporation). ";
-			owner_lazy = () -> CutOffCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CutOffCode.mmObject();
 			codeName = "LATE";
 		}
 	};
+	final static private LinkedHashMap<String, CutOffCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CutOffCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AERL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CutOffCode";
 				definition = "Specifies the cut-off  type.";
-				code_lazy = () -> Arrays.asList(CutOffCode.mmAnticipatedEarlyCutoff, CutOffCode.mmEarly, CutOffCode.mmLate);
 				derivation_lazy = () -> Arrays.asList(CutOff1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CutOffCode.AnticipatedEarlyCutoff, com.tools20022.repository.codeset.CutOffCode.Early, com.tools20022.repository.codeset.CutOffCode.Late);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AnticipatedEarlyCutoff.getCodeName().get(), AnticipatedEarlyCutoff);
+		codesByName.put(Early.getCodeName().get(), Early);
+		codesByName.put(Late.getCodeName().get(), Late);
+	}
+
+	public static CutOffCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CutOffCode[] values() {
+		CutOffCode[] values = new CutOffCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CutOffCode> {
+		@Override
+		public CutOffCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CutOffCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

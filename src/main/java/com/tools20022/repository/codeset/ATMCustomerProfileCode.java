@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ATMCustomerProfileCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Describes the main way customer information was collected to build up the
@@ -33,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfileCode#mmCardInformation
- * ATMCustomerProfileCode.mmCardInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfileCode#CardInformation
+ * ATMCustomerProfileCode.CardInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfileCode#mmProfileRequest
- * ATMCustomerProfileCode.mmProfileRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfileCode#ProfileRequest
+ * ATMCustomerProfileCode.ProfileRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfileCode#mmOtherRequest
- * ATMCustomerProfileCode.mmOtherRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfileCode#OtherRequest
+ * ATMCustomerProfileCode.OtherRequest}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ATMCustomerProfileCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ATMCustomerProfileCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -94,12 +100,12 @@ public class ATMCustomerProfileCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardInformation = new MMCode() {
+	public static final ATMCustomerProfileCode CardInformation = new ATMCustomerProfileCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardInformation";
 			definition = "Customer profile is deduced from the card data and the local configuration.";
-			owner_lazy = () -> ATMCustomerProfileCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCustomerProfileCode.mmObject();
 			codeName = "CRDF";
 		}
 	};
@@ -125,12 +131,12 @@ public class ATMCustomerProfileCode {
 	 * "Customer profile is built via a specific profile message exchange."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProfileRequest = new MMCode() {
+	public static final ATMCustomerProfileCode ProfileRequest = new ATMCustomerProfileCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileRequest";
 			definition = "Customer profile is built via a specific profile message exchange.";
-			owner_lazy = () -> ATMCustomerProfileCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCustomerProfileCode.mmObject();
 			codeName = "PREQ";
 		}
 	};
@@ -156,27 +162,59 @@ public class ATMCustomerProfileCode {
 	 * "Customer profile is sent via an account enquiry selecting an account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherRequest = new MMCode() {
+	public static final ATMCustomerProfileCode OtherRequest = new ATMCustomerProfileCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherRequest";
 			definition = "Customer profile is sent via an account enquiry selecting an account.";
-			owner_lazy = () -> ATMCustomerProfileCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCustomerProfileCode.mmObject();
 			codeName = "OREQ";
 		}
 	};
+	final static private LinkedHashMap<String, ATMCustomerProfileCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ATMCustomerProfileCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomerProfileCode";
 				definition = "Describes the main way customer information was collected to build up the customer menu and the withdrawal request.";
-				code_lazy = () -> Arrays.asList(ATMCustomerProfileCode.mmCardInformation, ATMCustomerProfileCode.mmProfileRequest, ATMCustomerProfileCode.mmOtherRequest);
 				derivation_lazy = () -> Arrays.asList(ATMCustomerProfile1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCustomerProfileCode.CardInformation, com.tools20022.repository.codeset.ATMCustomerProfileCode.ProfileRequest,
+						com.tools20022.repository.codeset.ATMCustomerProfileCode.OtherRequest);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CardInformation.getCodeName().get(), CardInformation);
+		codesByName.put(ProfileRequest.getCodeName().get(), ProfileRequest);
+		codesByName.put(OtherRequest.getCodeName().get(), OtherRequest);
+	}
+
+	public static ATMCustomerProfileCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ATMCustomerProfileCode[] values() {
+		ATMCustomerProfileCode[] values = new ATMCustomerProfileCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ATMCustomerProfileCode> {
+		@Override
+		public ATMCustomerProfileCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ATMCustomerProfileCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Action5", propOrder = {"actionType", "messageToPresent", "requestToPerform"})
 public class Action5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ActnTp", required = true)
 	protected ActionType6Code actionType;
 	/**
-	 * Type of action to be performed by the card acceptor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +119,7 @@ public class Action5 {
 	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmActionType;
-			componentContext_lazy = () -> Action5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Action5.mmObject();
 			isDerived = false;
 			xmlTag = "ActnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +131,11 @@ public class Action5 {
 			simpleType_lazy = () -> ActionType6Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgToPres")
 	protected ActionMessage4 messageToPresent;
 	/**
-	 * Information to display, print or log.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -167,7 +171,7 @@ public class Action5 {
 	public static final MMMessageAssociationEnd mmMessageToPresent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmActionMessage;
-			componentContext_lazy = () -> Action5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Action5.mmObject();
 			isDerived = false;
 			xmlTag = "MsgToPres";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,10 +184,11 @@ public class Action5 {
 			type_lazy = () -> com.tools20022.repository.msg.ActionMessage4.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqToPrfrm")
 	protected MessageFunction7Code requestToPerform;
 	/**
-	 * Message to send before the completion of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,7 +216,7 @@ public class Action5 {
 	 */
 	public static final MMMessageAttribute mmRequestToPerform = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Action5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Action5.mmObject();
 			isDerived = false;
 			xmlTag = "ReqToPrfrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,9 +231,9 @@ public class Action5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Action5.mmActionType, Action5.mmMessageToPresent, Action5.mmRequestToPerform);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Action5.mmActionType, com.tools20022.repository.msg.Action5.mmMessageToPresent, com.tools20022.repository.msg.Action5.mmRequestToPerform);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Action5";
 				definition = "Set of actions to be performed by the card acceptor.";
@@ -238,30 +243,30 @@ public class Action5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ActnTp", required = true)
 	public ActionType6Code getActionType() {
 		return actionType;
 	}
 
-	public void setActionType(ActionType6Code actionType) {
-		this.actionType = actionType;
+	public Action5 setActionType(ActionType6Code actionType) {
+		this.actionType = Objects.requireNonNull(actionType);
+		return this;
 	}
 
-	@XmlElement(name = "MsgToPres")
-	public ActionMessage4 getMessageToPresent() {
-		return messageToPresent;
+	public Optional<ActionMessage4> getMessageToPresent() {
+		return messageToPresent == null ? Optional.empty() : Optional.of(messageToPresent);
 	}
 
-	public void setMessageToPresent(com.tools20022.repository.msg.ActionMessage4 messageToPresent) {
+	public Action5 setMessageToPresent(com.tools20022.repository.msg.ActionMessage4 messageToPresent) {
 		this.messageToPresent = messageToPresent;
+		return this;
 	}
 
-	@XmlElement(name = "ReqToPrfrm")
-	public MessageFunction7Code getRequestToPerform() {
-		return requestToPerform;
+	public Optional<MessageFunction7Code> getRequestToPerform() {
+		return requestToPerform == null ? Optional.empty() : Optional.of(requestToPerform);
 	}
 
-	public void setRequestToPerform(MessageFunction7Code requestToPerform) {
+	public Action5 setRequestToPerform(MessageFunction7Code requestToPerform) {
 		this.requestToPerform = requestToPerform;
+		return this;
 	}
 }

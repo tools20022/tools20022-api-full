@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.RedemptionCompletionCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the redemption status of the redemption order.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RedemptionCompletionCode#mmRedemptionYes
- * RedemptionCompletionCode.mmRedemptionYes}</li>
+ * {@linkplain com.tools20022.repository.codeset.RedemptionCompletionCode#RedemptionYes
+ * RedemptionCompletionCode.RedemptionYes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RedemptionCompletionCode#mmRedemptionNo
- * RedemptionCompletionCode.mmRedemptionNo}</li>
+ * {@linkplain com.tools20022.repository.codeset.RedemptionCompletionCode#RedemptionNo
+ * RedemptionCompletionCode.RedemptionNo}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the redemption status of the redemption order."</li>
  * </ul>
  */
-public class RedemptionCompletionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RedemptionCompletionCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,12 +94,12 @@ public class RedemptionCompletionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRedemptionYes = new MMCode() {
+	public static final RedemptionCompletionCode RedemptionYes = new RedemptionCompletionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionYes";
 			definition = "Additional redemption order instructions must be sent to the executing party order to have the rest of the redemption executed.";
-			owner_lazy = () -> RedemptionCompletionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RedemptionCompletionCode.mmObject();
 			codeName = "RED1";
 		}
 	};
@@ -122,27 +128,57 @@ public class RedemptionCompletionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRedemptionNo = new MMCode() {
+	public static final RedemptionCompletionCode RedemptionNo = new RedemptionCompletionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionNo";
 			definition = "It is not necessary to send more redemption order instructions to the executing party to complete the redemption, the executing will generate redemption confirmations automatically.";
-			owner_lazy = () -> RedemptionCompletionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RedemptionCompletionCode.mmObject();
 			codeName = "RED0";
 		}
 	};
+	final static private LinkedHashMap<String, RedemptionCompletionCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RedemptionCompletionCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionCompletionCode";
 				definition = "Specifies the redemption status of the redemption order.";
-				code_lazy = () -> Arrays.asList(RedemptionCompletionCode.mmRedemptionYes, RedemptionCompletionCode.mmRedemptionNo);
 				derivation_lazy = () -> Arrays.asList(RedemptionCompletion1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RedemptionCompletionCode.RedemptionYes, com.tools20022.repository.codeset.RedemptionCompletionCode.RedemptionNo);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(RedemptionYes.getCodeName().get(), RedemptionYes);
+		codesByName.put(RedemptionNo.getCodeName().get(), RedemptionNo);
+	}
+
+	public static RedemptionCompletionCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RedemptionCompletionCode[] values() {
+		RedemptionCompletionCode[] values = new RedemptionCompletionCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RedemptionCompletionCode> {
+		@Override
+		public RedemptionCompletionCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RedemptionCompletionCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

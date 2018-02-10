@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -26,6 +27,7 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -80,8 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeclaredRateRule#forCorporateActionRate56
+ * ConstraintDeclaredRateRule.forCorporateActionRate56}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,16 +102,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies rates of a corporate action."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionRate56", propOrder = {"interest", "percentageSought", "relatedIndex", "spread", "bidInterval", "previousFactor", "nextFactor", "reinvestmentDiscountRateToMarket", "interestShortfall", "realisedLoss",
 		"declaredRate"})
 public class CorporateActionRate56 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Intrst")
 	protected RateAndAmountFormat16Choice interest;
 	/**
-	 * Annual rate of a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -121,6 +132,9 @@ public class CorporateActionRate56 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Intrst"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::INTR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -134,9 +148,10 @@ public class CorporateActionRate56 {
 	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashProceedsDefinition.mmInterest;
-			componentContext_lazy = () -> CorporateActionRate56.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate56.mmObject();
 			isDerived = false;
 			xmlTag = "Intrst";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::INTR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
 			definition = "Annual rate of a financial instrument.";
@@ -146,11 +161,11 @@ public class CorporateActionRate56 {
 			type_lazy = () -> RateAndAmountFormat16Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PctgSght")
 	protected RateFormat7Choice percentageSought;
 	/**
-	 * Percentage of securities the offeror/issuer will purchase or redeem under
-	 * the terms of the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -169,6 +184,9 @@ public class CorporateActionRate56 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PctgSght"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::PTSC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -184,9 +202,10 @@ public class CorporateActionRate56 {
 	public static final MMMessageAssociationEnd mmPercentageSought = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmPercentageSought;
-			componentContext_lazy = () -> CorporateActionRate56.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate56.mmObject();
 			isDerived = false;
 			xmlTag = "PctgSght";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::PTSC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageSought";
 			definition = "Percentage of securities the offeror/issuer will purchase or redeem under the terms of the event.";
@@ -196,11 +215,11 @@ public class CorporateActionRate56 {
 			type_lazy = () -> RateFormat7Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdIndx")
 	protected RateFormat3Choice relatedIndex;
 	/**
-	 * Index rate related to the interest rate of the forthcoming interest
-	 * payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -219,6 +238,9 @@ public class CorporateActionRate56 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RltdIndx"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::RINR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -234,9 +256,10 @@ public class CorporateActionRate56 {
 	public static final MMMessageAssociationEnd mmRelatedIndex = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRelatedIndex;
-			componentContext_lazy = () -> CorporateActionRate56.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate56.mmObject();
 			isDerived = false;
 			xmlTag = "RltdIndx";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::RINR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedIndex";
 			definition = "Index rate related to the interest rate of the forthcoming interest payment.";
@@ -246,10 +269,11 @@ public class CorporateActionRate56 {
 			type_lazy = () -> RateFormat3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Sprd")
 	protected RateFormat3Choice spread;
 	/**
-	 * Margin allowed over or under a given rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -268,6 +292,9 @@ public class CorporateActionRate56 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Sprd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::RSPR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -281,9 +308,10 @@ public class CorporateActionRate56 {
 	public static final MMMessageAssociationEnd mmSpread = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSpread;
-			componentContext_lazy = () -> CorporateActionRate56.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate56.mmObject();
 			isDerived = false;
 			xmlTag = "Sprd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::RSPR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Spread";
 			definition = "Margin allowed over or under a given rate.";
@@ -293,10 +321,11 @@ public class CorporateActionRate56 {
 			type_lazy = () -> RateFormat3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "BidIntrvl")
 	protected RateAndAmountFormat28Choice bidInterval;
 	/**
-	 * Acceptable price increment used for submitting a bid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -316,6 +345,9 @@ public class CorporateActionRate56 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BidIntrvl"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::BIDI</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -329,9 +361,10 @@ public class CorporateActionRate56 {
 	public static final MMMessageAssociationEnd mmBidInterval = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmBidInterval;
-			componentContext_lazy = () -> CorporateActionRate56.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate56.mmObject();
 			isDerived = false;
 			xmlTag = "BidIntrvl";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::BIDI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidInterval";
 			definition = "Acceptable price increment used for submitting a bid.";
@@ -341,12 +374,11 @@ public class CorporateActionRate56 {
 			type_lazy = () -> RateAndAmountFormat28Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsFctr")
 	protected RateFormat12Choice previousFactor;
 	/**
-	 * Factor used to calculate the value of the outstanding principal of the
-	 * financial instrument (for factored securities) until the next redemption
-	 * (factor) date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -365,6 +397,9 @@ public class CorporateActionRate56 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrvsFctr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92A::PRFC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -380,9 +415,10 @@ public class CorporateActionRate56 {
 	public static final MMMessageAssociationEnd mmPreviousFactor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmFactor;
-			componentContext_lazy = () -> CorporateActionRate56.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate56.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsFctr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92A::PRFC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousFactor";
 			definition = "Factor used to calculate the value of the outstanding principal of the financial instrument (for factored securities) until the next redemption (factor) date.";
@@ -392,12 +428,11 @@ public class CorporateActionRate56 {
 			type_lazy = () -> RateFormat12Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NxtFctr")
 	protected RateFormat12Choice nextFactor;
 	/**
-	 * Factor used to calculate the value of the outstanding principal of the
-	 * financial instrument (for factored securities) that will applicable after
-	 * the redemption (factor) date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -416,6 +451,9 @@ public class CorporateActionRate56 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NxtFctr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92A::NWFC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -431,9 +469,10 @@ public class CorporateActionRate56 {
 	public static final MMMessageAssociationEnd mmNextFactor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmFactor;
-			componentContext_lazy = () -> CorporateActionRate56.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate56.mmObject();
 			isDerived = false;
 			xmlTag = "NxtFctr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92A::NWFC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextFactor";
 			definition = "Factor used to calculate the value of the outstanding principal of the financial instrument (for factored securities) that will applicable after the redemption (factor) date.";
@@ -443,11 +482,11 @@ public class CorporateActionRate56 {
 			type_lazy = () -> RateFormat12Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RinvstmtDscntRateToMkt")
 	protected RateFormat3Choice reinvestmentDiscountRateToMarket;
 	/**
-	 * Rate of discount for securities purchased through a reinvestment scheme
-	 * as compared to the current market price of security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -466,6 +505,9 @@ public class CorporateActionRate56 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RinvstmtDscntRateToMkt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::RDIS</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -481,9 +523,10 @@ public class CorporateActionRate56 {
 	public static final MMMessageAssociationEnd mmReinvestmentDiscountRateToMarket = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmReinvestmentDiscountToMarket;
-			componentContext_lazy = () -> CorporateActionRate56.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate56.mmObject();
 			isDerived = false;
 			xmlTag = "RinvstmtDscntRateToMkt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::RDIS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentDiscountRateToMarket";
 			definition = "Rate of discount for securities purchased through a reinvestment scheme as compared to the current market price of security.";
@@ -493,13 +536,11 @@ public class CorporateActionRate56 {
 			type_lazy = () -> RateFormat3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstShrtfll")
 	protected RateAndAmountFormat6Choice interestShortfall;
 	/**
-	 * For structured security issues where there is a set schedule of principal
-	 * and interest payments for the life of the issue, this is the difference
-	 * between the actual rate of the interest payment and the expected or
-	 * scheduled rate of the interest payment .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -535,7 +576,7 @@ public class CorporateActionRate56 {
 	public static final MMMessageAttribute mmInterestShortfall = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmInterestShortfall;
-			componentContext_lazy = () -> CorporateActionRate56.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate56.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstShrtfll";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -546,13 +587,11 @@ public class CorporateActionRate56 {
 			complexType_lazy = () -> RateAndAmountFormat6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RealsdLoss")
 	protected RateAndAmountFormat6Choice realisedLoss;
 	/**
-	 * For structured security issues where there is a set schedule of principal
-	 * and interest payments for the life of the issue, this is the difference
-	 * between the actual rate of the capital or principal repayment and the
-	 * scheduled capital repayment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -588,7 +627,7 @@ public class CorporateActionRate56 {
 	public static final MMMessageAttribute mmRealisedLoss = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmRealisedLoss;
-			componentContext_lazy = () -> CorporateActionRate56.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate56.mmObject();
 			isDerived = false;
 			xmlTag = "RealsdLoss";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -599,10 +638,11 @@ public class CorporateActionRate56 {
 			complexType_lazy = () -> RateAndAmountFormat6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DclrdRate")
 	protected RateAndAmountFormat6Choice declaredRate;
 	/**
-	 * Dividend or interest rate declared by the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -630,7 +670,7 @@ public class CorporateActionRate56 {
 	 */
 	public static final MMMessageAttribute mmDeclaredRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionRate56.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate56.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -645,11 +685,14 @@ public class CorporateActionRate56 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionRate56.mmInterest, CorporateActionRate56.mmPercentageSought, CorporateActionRate56.mmRelatedIndex, CorporateActionRate56.mmSpread,
-						CorporateActionRate56.mmBidInterval, CorporateActionRate56.mmPreviousFactor, CorporateActionRate56.mmNextFactor, CorporateActionRate56.mmReinvestmentDiscountRateToMarket, CorporateActionRate56.mmInterestShortfall,
-						CorporateActionRate56.mmRealisedLoss, CorporateActionRate56.mmDeclaredRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate56.mmInterest, com.tools20022.repository.msg.CorporateActionRate56.mmPercentageSought,
+						com.tools20022.repository.msg.CorporateActionRate56.mmRelatedIndex, com.tools20022.repository.msg.CorporateActionRate56.mmSpread, com.tools20022.repository.msg.CorporateActionRate56.mmBidInterval,
+						com.tools20022.repository.msg.CorporateActionRate56.mmPreviousFactor, com.tools20022.repository.msg.CorporateActionRate56.mmNextFactor,
+						com.tools20022.repository.msg.CorporateActionRate56.mmReinvestmentDiscountRateToMarket, com.tools20022.repository.msg.CorporateActionRate56.mmInterestShortfall,
+						com.tools20022.repository.msg.CorporateActionRate56.mmRealisedLoss, com.tools20022.repository.msg.CorporateActionRate56.mmDeclaredRate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeclaredRateRule.forCorporateActionRate56);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRate56";
 				definition = "Specifies rates of a corporate action.";
@@ -658,102 +701,102 @@ public class CorporateActionRate56 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Intrst")
-	public RateAndAmountFormat16Choice getInterest() {
-		return interest;
+	public Optional<RateAndAmountFormat16Choice> getInterest() {
+		return interest == null ? Optional.empty() : Optional.of(interest);
 	}
 
-	public void setInterest(RateAndAmountFormat16Choice interest) {
+	public CorporateActionRate56 setInterest(RateAndAmountFormat16Choice interest) {
 		this.interest = interest;
+		return this;
 	}
 
-	@XmlElement(name = "PctgSght")
-	public RateFormat7Choice getPercentageSought() {
-		return percentageSought;
+	public Optional<RateFormat7Choice> getPercentageSought() {
+		return percentageSought == null ? Optional.empty() : Optional.of(percentageSought);
 	}
 
-	public void setPercentageSought(RateFormat7Choice percentageSought) {
+	public CorporateActionRate56 setPercentageSought(RateFormat7Choice percentageSought) {
 		this.percentageSought = percentageSought;
+		return this;
 	}
 
-	@XmlElement(name = "RltdIndx")
-	public RateFormat3Choice getRelatedIndex() {
-		return relatedIndex;
+	public Optional<RateFormat3Choice> getRelatedIndex() {
+		return relatedIndex == null ? Optional.empty() : Optional.of(relatedIndex);
 	}
 
-	public void setRelatedIndex(RateFormat3Choice relatedIndex) {
+	public CorporateActionRate56 setRelatedIndex(RateFormat3Choice relatedIndex) {
 		this.relatedIndex = relatedIndex;
+		return this;
 	}
 
-	@XmlElement(name = "Sprd")
-	public RateFormat3Choice getSpread() {
-		return spread;
+	public Optional<RateFormat3Choice> getSpread() {
+		return spread == null ? Optional.empty() : Optional.of(spread);
 	}
 
-	public void setSpread(RateFormat3Choice spread) {
+	public CorporateActionRate56 setSpread(RateFormat3Choice spread) {
 		this.spread = spread;
+		return this;
 	}
 
-	@XmlElement(name = "BidIntrvl")
-	public RateAndAmountFormat28Choice getBidInterval() {
-		return bidInterval;
+	public Optional<RateAndAmountFormat28Choice> getBidInterval() {
+		return bidInterval == null ? Optional.empty() : Optional.of(bidInterval);
 	}
 
-	public void setBidInterval(RateAndAmountFormat28Choice bidInterval) {
+	public CorporateActionRate56 setBidInterval(RateAndAmountFormat28Choice bidInterval) {
 		this.bidInterval = bidInterval;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsFctr")
-	public RateFormat12Choice getPreviousFactor() {
-		return previousFactor;
+	public Optional<RateFormat12Choice> getPreviousFactor() {
+		return previousFactor == null ? Optional.empty() : Optional.of(previousFactor);
 	}
 
-	public void setPreviousFactor(RateFormat12Choice previousFactor) {
+	public CorporateActionRate56 setPreviousFactor(RateFormat12Choice previousFactor) {
 		this.previousFactor = previousFactor;
+		return this;
 	}
 
-	@XmlElement(name = "NxtFctr")
-	public RateFormat12Choice getNextFactor() {
-		return nextFactor;
+	public Optional<RateFormat12Choice> getNextFactor() {
+		return nextFactor == null ? Optional.empty() : Optional.of(nextFactor);
 	}
 
-	public void setNextFactor(RateFormat12Choice nextFactor) {
+	public CorporateActionRate56 setNextFactor(RateFormat12Choice nextFactor) {
 		this.nextFactor = nextFactor;
+		return this;
 	}
 
-	@XmlElement(name = "RinvstmtDscntRateToMkt")
-	public RateFormat3Choice getReinvestmentDiscountRateToMarket() {
-		return reinvestmentDiscountRateToMarket;
+	public Optional<RateFormat3Choice> getReinvestmentDiscountRateToMarket() {
+		return reinvestmentDiscountRateToMarket == null ? Optional.empty() : Optional.of(reinvestmentDiscountRateToMarket);
 	}
 
-	public void setReinvestmentDiscountRateToMarket(RateFormat3Choice reinvestmentDiscountRateToMarket) {
+	public CorporateActionRate56 setReinvestmentDiscountRateToMarket(RateFormat3Choice reinvestmentDiscountRateToMarket) {
 		this.reinvestmentDiscountRateToMarket = reinvestmentDiscountRateToMarket;
+		return this;
 	}
 
-	@XmlElement(name = "IntrstShrtfll")
-	public RateAndAmountFormat6Choice getInterestShortfall() {
-		return interestShortfall;
+	public Optional<RateAndAmountFormat6Choice> getInterestShortfall() {
+		return interestShortfall == null ? Optional.empty() : Optional.of(interestShortfall);
 	}
 
-	public void setInterestShortfall(RateAndAmountFormat6Choice interestShortfall) {
+	public CorporateActionRate56 setInterestShortfall(RateAndAmountFormat6Choice interestShortfall) {
 		this.interestShortfall = interestShortfall;
+		return this;
 	}
 
-	@XmlElement(name = "RealsdLoss")
-	public RateAndAmountFormat6Choice getRealisedLoss() {
-		return realisedLoss;
+	public Optional<RateAndAmountFormat6Choice> getRealisedLoss() {
+		return realisedLoss == null ? Optional.empty() : Optional.of(realisedLoss);
 	}
 
-	public void setRealisedLoss(RateAndAmountFormat6Choice realisedLoss) {
+	public CorporateActionRate56 setRealisedLoss(RateAndAmountFormat6Choice realisedLoss) {
 		this.realisedLoss = realisedLoss;
+		return this;
 	}
 
-	@XmlElement(name = "DclrdRate")
-	public RateAndAmountFormat6Choice getDeclaredRate() {
-		return declaredRate;
+	public Optional<RateAndAmountFormat6Choice> getDeclaredRate() {
+		return declaredRate == null ? Optional.empty() : Optional.of(declaredRate);
 	}
 
-	public void setDeclaredRate(RateAndAmountFormat6Choice declaredRate) {
+	public CorporateActionRate56 setDeclaredRate(RateAndAmountFormat6Choice declaredRate) {
 		this.declaredRate = declaredRate;
+		return this;
 	}
 }

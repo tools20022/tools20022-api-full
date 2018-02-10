@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ExposureTypeV2Code;
+import com.tools20022.repository.codeset.ExposureType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the underlying business area/type of trade causing the collateral
@@ -31,107 +35,104 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ExposureTypeV2Code
- * ExposureTypeV2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmCrossCurrencyIRS
- * ExposureType3Code.mmCrossCurrencyIRS}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#CrossCurrencyIRS
+ * ExposureType3Code.CrossCurrencyIRS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmCommodities
- * ExposureType3Code.mmCommodities}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#Commodities
+ * ExposureType3Code.Commodities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmCreditDefaultSwap
- * ExposureType3Code.mmCreditDefaultSwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#CreditDefaultSwap
+ * ExposureType3Code.CreditDefaultSwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmCrossProduct
- * ExposureType3Code.mmCrossProduct}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#CrossProduct
+ * ExposureType3Code.CrossProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmCreditSupport
- * ExposureType3Code.mmCreditSupport}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#CreditSupport
+ * ExposureType3Code.CreditSupport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmCreditLine
- * ExposureType3Code.mmCreditLine}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#CreditLine
+ * ExposureType3Code.CreditLine}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmEquityOption
- * ExposureType3Code.mmEquityOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#EquityOption
+ * ExposureType3Code.EquityOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmEquitySwap
- * ExposureType3Code.mmEquitySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#EquitySwap
+ * ExposureType3Code.EquitySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmExoticOption
- * ExposureType3Code.mmExoticOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#ExoticOption
+ * ExposureType3Code.ExoticOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmExchangeTradedDerivatives
- * ExposureType3Code.mmExchangeTradedDerivatives}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#ExchangeTradedDerivatives
+ * ExposureType3Code.ExchangeTradedDerivatives}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmFixedIncome
- * ExposureType3Code.mmFixedIncome}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#FixedIncome
+ * ExposureType3Code.FixedIncome}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmForwardForeignExchange
- * ExposureType3Code.mmForwardForeignExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#ForwardForeignExchange
+ * ExposureType3Code.ForwardForeignExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmForeignExchange
- * ExposureType3Code.mmForeignExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#ForeignExchange
+ * ExposureType3Code.ForeignExchange}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExposureType3Code#Futures
+ * ExposureType3Code.Futures}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmFutures
- * ExposureType3Code.mmFutures}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#Liquidity
+ * ExposureType3Code.Liquidity}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExposureType3Code#FXOption
+ * ExposureType3Code.FXOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmLiquidity
- * ExposureType3Code.mmLiquidity}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#OTCDerivatives
+ * ExposureType3Code.OTCDerivatives}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmFXOption
- * ExposureType3Code.mmFXOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#CashSettlement
+ * ExposureType3Code.CashSettlement}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExposureType3Code#Repo
+ * ExposureType3Code.Repo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmOTCDerivatives
- * ExposureType3Code.mmOTCDerivatives}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#SecuritiesBuySellSellBuyBack
+ * ExposureType3Code.SecuritiesBuySellSellBuyBack}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmCashSettlement
- * ExposureType3Code.mmCashSettlement}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmRepo
- * ExposureType3Code.mmRepo}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#SingleCurrencyIRSExotic
+ * ExposureType3Code.SingleCurrencyIRSExotic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmSecuritiesBuySellSellBuyBack
- * ExposureType3Code.mmSecuritiesBuySellSellBuyBack}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#SingleCurrencyIRS
+ * ExposureType3Code.SingleCurrencyIRS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmSingleCurrencyIRSExotic
- * ExposureType3Code.mmSingleCurrencyIRSExotic}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#SecuritiesCrossProducts
+ * ExposureType3Code.SecuritiesCrossProducts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmSingleCurrencyIRS
- * ExposureType3Code.mmSingleCurrencyIRS}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#SecuritiesLendingAndBorrowing
+ * ExposureType3Code.SecuritiesLendingAndBorrowing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmSecuritiesCrossProducts
- * ExposureType3Code.mmSecuritiesCrossProducts}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#SecuredLoan
+ * ExposureType3Code.SecuredLoan}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExposureType3Code#Swaption
+ * ExposureType3Code.Swaption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmSecuritiesLendingAndBorrowing
- * ExposureType3Code.mmSecuritiesLendingAndBorrowing}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#TreasuryCrossProduct
+ * ExposureType3Code.TreasuryCrossProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmSecuredLoan
- * ExposureType3Code.mmSecuredLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#BondForward
+ * ExposureType3Code.BondForward}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmSwaption
- * ExposureType3Code.mmSwaption}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#ReverseRepurchaseAgreement
+ * ExposureType3Code.ReverseRepurchaseAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmTreasuryCrossProduct
- * ExposureType3Code.mmTreasuryCrossProduct}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmBondForward
- * ExposureType3Code.mmBondForward}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmReverseRepurchaseAgreement
- * ExposureType3Code.mmReverseRepurchaseAgreement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#mmToBeAnnounced
- * ExposureType3Code.mmToBeAnnounced}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureType3Code#ToBeAnnounced
+ * ExposureType3Code.ToBeAnnounced}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ExposureTypeV2Code
+ * ExposureTypeV2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -150,7 +151,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ExposureType3Code extends ExposureTypeV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ExposureType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -169,11 +171,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "CrossCurrencyIRS"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCrossCurrencyIRS = new MMCode() {
+	public static final ExposureType3Code CrossCurrencyIRS = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossCurrencyIRS";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.CrossCurrencyIRS.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -192,11 +195,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "Commodities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommodities = new MMCode() {
+	public static final ExposureType3Code Commodities = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodities";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.Commodities.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -215,11 +219,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "CreditDefaultSwap"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreditDefaultSwap = new MMCode() {
+	public static final ExposureType3Code CreditDefaultSwap = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDefaultSwap";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.CreditDefaultSwap.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -238,11 +243,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "CrossProduct"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCrossProduct = new MMCode() {
+	public static final ExposureType3Code CrossProduct = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossProduct";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.CrossProduct.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -261,11 +267,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "CreditSupport"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreditSupport = new MMCode() {
+	public static final ExposureType3Code CreditSupport = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditSupport";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.CreditSupport.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -284,11 +291,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "CreditLine"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreditLine = new MMCode() {
+	public static final ExposureType3Code CreditLine = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditLine";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.CreditLine.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -307,11 +315,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "EquityOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEquityOption = new MMCode() {
+	public static final ExposureType3Code EquityOption = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EquityOption";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.EquityOption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -330,11 +339,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "EquitySwap"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEquitySwap = new MMCode() {
+	public static final ExposureType3Code EquitySwap = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EquitySwap";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.EquitySwap.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -353,11 +363,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "ExoticOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExoticOption = new MMCode() {
+	public static final ExposureType3Code ExoticOption = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExoticOption";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.ExoticOption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -376,11 +387,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "ExchangeTradedDerivatives"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExchangeTradedDerivatives = new MMCode() {
+	public static final ExposureType3Code ExchangeTradedDerivatives = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeTradedDerivatives";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.ExchangeTradedDerivatives.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -399,11 +411,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "FixedIncome"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFixedIncome = new MMCode() {
+	public static final ExposureType3Code FixedIncome = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedIncome";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.FixedIncome.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -422,11 +435,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "ForwardForeignExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForwardForeignExchange = new MMCode() {
+	public static final ExposureType3Code ForwardForeignExchange = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardForeignExchange";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.ForwardForeignExchange.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -445,11 +459,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "ForeignExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignExchange = new MMCode() {
+	public static final ExposureType3Code ForeignExchange = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchange";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.ForeignExchange.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -468,11 +483,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "Futures"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFutures = new MMCode() {
+	public static final ExposureType3Code Futures = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Futures";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.Futures.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -491,11 +507,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "Liquidity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLiquidity = new MMCode() {
+	public static final ExposureType3Code Liquidity = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Liquidity";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.Liquidity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -514,11 +531,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "FXOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFXOption = new MMCode() {
+	public static final ExposureType3Code FXOption = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXOption";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.FXOption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -537,11 +555,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "OTCDerivatives"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOTCDerivatives = new MMCode() {
+	public static final ExposureType3Code OTCDerivatives = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OTCDerivatives";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.OTCDerivatives.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -560,11 +579,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "CashSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashSettlement = new MMCode() {
+	public static final ExposureType3Code CashSettlement = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlement";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.CashSettlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -583,11 +603,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "Repo"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRepo = new MMCode() {
+	public static final ExposureType3Code Repo = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Repo";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.Repo.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -606,11 +627,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "SecuritiesBuySellSellBuyBack"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesBuySellSellBuyBack = new MMCode() {
+	public static final ExposureType3Code SecuritiesBuySellSellBuyBack = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesBuySellSellBuyBack";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.SecuritiesBuySellSellBuyBack.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -629,11 +651,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "SingleCurrencyIRSExotic"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSingleCurrencyIRSExotic = new MMCode() {
+	public static final ExposureType3Code SingleCurrencyIRSExotic = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleCurrencyIRSExotic";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.SingleCurrencyIRSExotic.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -652,11 +675,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "SingleCurrencyIRS"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSingleCurrencyIRS = new MMCode() {
+	public static final ExposureType3Code SingleCurrencyIRS = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleCurrencyIRS";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.SingleCurrencyIRS.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -675,11 +699,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "SecuritiesCrossProducts"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesCrossProducts = new MMCode() {
+	public static final ExposureType3Code SecuritiesCrossProducts = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCrossProducts";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.SecuritiesCrossProducts.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -698,11 +723,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "SecuritiesLendingAndBorrowing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesLendingAndBorrowing = new MMCode() {
+	public static final ExposureType3Code SecuritiesLendingAndBorrowing = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesLendingAndBorrowing";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.SecuritiesLendingAndBorrowing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -721,11 +747,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "SecuredLoan"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuredLoan = new MMCode() {
+	public static final ExposureType3Code SecuredLoan = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuredLoan";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.SecuredLoan.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -744,11 +771,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "Swaption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSwaption = new MMCode() {
+	public static final ExposureType3Code Swaption = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swaption";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.Swaption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -767,11 +795,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "TreasuryCrossProduct"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTreasuryCrossProduct = new MMCode() {
+	public static final ExposureType3Code TreasuryCrossProduct = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TreasuryCrossProduct";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.TreasuryCrossProduct.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -790,11 +819,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "BondForward"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBondForward = new MMCode() {
+	public static final ExposureType3Code BondForward = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondForward";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.BondForward.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -813,11 +843,12 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "ReverseRepurchaseAgreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReverseRepurchaseAgreement = new MMCode() {
+	public static final ExposureType3Code ReverseRepurchaseAgreement = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReverseRepurchaseAgreement";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.ReverseRepurchaseAgreement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -836,31 +867,95 @@ public class ExposureType3Code extends ExposureTypeV2Code {
 	 * name} = "ToBeAnnounced"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmToBeAnnounced = new MMCode() {
+	public static final ExposureType3Code ToBeAnnounced = new ExposureType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToBeAnnounced";
-			owner_lazy = () -> ExposureType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureType3Code.mmObject();
+			codeName = ExposureTypeV2Code.ToBeAnnounced.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ExposureType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ExposureType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CCIR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExposureType3Code";
 				definition = "Specifies the underlying business area/type of trade causing the collateral movement.";
-				code_lazy = () -> Arrays.asList(ExposureType3Code.mmCrossCurrencyIRS, ExposureType3Code.mmCommodities, ExposureType3Code.mmCreditDefaultSwap, ExposureType3Code.mmCrossProduct, ExposureType3Code.mmCreditSupport,
-						ExposureType3Code.mmCreditLine, ExposureType3Code.mmEquityOption, ExposureType3Code.mmEquitySwap, ExposureType3Code.mmExoticOption, ExposureType3Code.mmExchangeTradedDerivatives, ExposureType3Code.mmFixedIncome,
-						ExposureType3Code.mmForwardForeignExchange, ExposureType3Code.mmForeignExchange, ExposureType3Code.mmFutures, ExposureType3Code.mmLiquidity, ExposureType3Code.mmFXOption, ExposureType3Code.mmOTCDerivatives,
-						ExposureType3Code.mmCashSettlement, ExposureType3Code.mmRepo, ExposureType3Code.mmSecuritiesBuySellSellBuyBack, ExposureType3Code.mmSingleCurrencyIRSExotic, ExposureType3Code.mmSingleCurrencyIRS,
-						ExposureType3Code.mmSecuritiesCrossProducts, ExposureType3Code.mmSecuritiesLendingAndBorrowing, ExposureType3Code.mmSecuredLoan, ExposureType3Code.mmSwaption, ExposureType3Code.mmTreasuryCrossProduct,
-						ExposureType3Code.mmBondForward, ExposureType3Code.mmReverseRepurchaseAgreement, ExposureType3Code.mmToBeAnnounced);
 				trace_lazy = () -> ExposureTypeV2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExposureType3Code.CrossCurrencyIRS, com.tools20022.repository.codeset.ExposureType3Code.Commodities,
+						com.tools20022.repository.codeset.ExposureType3Code.CreditDefaultSwap, com.tools20022.repository.codeset.ExposureType3Code.CrossProduct, com.tools20022.repository.codeset.ExposureType3Code.CreditSupport,
+						com.tools20022.repository.codeset.ExposureType3Code.CreditLine, com.tools20022.repository.codeset.ExposureType3Code.EquityOption, com.tools20022.repository.codeset.ExposureType3Code.EquitySwap,
+						com.tools20022.repository.codeset.ExposureType3Code.ExoticOption, com.tools20022.repository.codeset.ExposureType3Code.ExchangeTradedDerivatives, com.tools20022.repository.codeset.ExposureType3Code.FixedIncome,
+						com.tools20022.repository.codeset.ExposureType3Code.ForwardForeignExchange, com.tools20022.repository.codeset.ExposureType3Code.ForeignExchange, com.tools20022.repository.codeset.ExposureType3Code.Futures,
+						com.tools20022.repository.codeset.ExposureType3Code.Liquidity, com.tools20022.repository.codeset.ExposureType3Code.FXOption, com.tools20022.repository.codeset.ExposureType3Code.OTCDerivatives,
+						com.tools20022.repository.codeset.ExposureType3Code.CashSettlement, com.tools20022.repository.codeset.ExposureType3Code.Repo, com.tools20022.repository.codeset.ExposureType3Code.SecuritiesBuySellSellBuyBack,
+						com.tools20022.repository.codeset.ExposureType3Code.SingleCurrencyIRSExotic, com.tools20022.repository.codeset.ExposureType3Code.SingleCurrencyIRS,
+						com.tools20022.repository.codeset.ExposureType3Code.SecuritiesCrossProducts, com.tools20022.repository.codeset.ExposureType3Code.SecuritiesLendingAndBorrowing,
+						com.tools20022.repository.codeset.ExposureType3Code.SecuredLoan, com.tools20022.repository.codeset.ExposureType3Code.Swaption, com.tools20022.repository.codeset.ExposureType3Code.TreasuryCrossProduct,
+						com.tools20022.repository.codeset.ExposureType3Code.BondForward, com.tools20022.repository.codeset.ExposureType3Code.ReverseRepurchaseAgreement, com.tools20022.repository.codeset.ExposureType3Code.ToBeAnnounced);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CrossCurrencyIRS.getCodeName().get(), CrossCurrencyIRS);
+		codesByName.put(Commodities.getCodeName().get(), Commodities);
+		codesByName.put(CreditDefaultSwap.getCodeName().get(), CreditDefaultSwap);
+		codesByName.put(CrossProduct.getCodeName().get(), CrossProduct);
+		codesByName.put(CreditSupport.getCodeName().get(), CreditSupport);
+		codesByName.put(CreditLine.getCodeName().get(), CreditLine);
+		codesByName.put(EquityOption.getCodeName().get(), EquityOption);
+		codesByName.put(EquitySwap.getCodeName().get(), EquitySwap);
+		codesByName.put(ExoticOption.getCodeName().get(), ExoticOption);
+		codesByName.put(ExchangeTradedDerivatives.getCodeName().get(), ExchangeTradedDerivatives);
+		codesByName.put(FixedIncome.getCodeName().get(), FixedIncome);
+		codesByName.put(ForwardForeignExchange.getCodeName().get(), ForwardForeignExchange);
+		codesByName.put(ForeignExchange.getCodeName().get(), ForeignExchange);
+		codesByName.put(Futures.getCodeName().get(), Futures);
+		codesByName.put(Liquidity.getCodeName().get(), Liquidity);
+		codesByName.put(FXOption.getCodeName().get(), FXOption);
+		codesByName.put(OTCDerivatives.getCodeName().get(), OTCDerivatives);
+		codesByName.put(CashSettlement.getCodeName().get(), CashSettlement);
+		codesByName.put(Repo.getCodeName().get(), Repo);
+		codesByName.put(SecuritiesBuySellSellBuyBack.getCodeName().get(), SecuritiesBuySellSellBuyBack);
+		codesByName.put(SingleCurrencyIRSExotic.getCodeName().get(), SingleCurrencyIRSExotic);
+		codesByName.put(SingleCurrencyIRS.getCodeName().get(), SingleCurrencyIRS);
+		codesByName.put(SecuritiesCrossProducts.getCodeName().get(), SecuritiesCrossProducts);
+		codesByName.put(SecuritiesLendingAndBorrowing.getCodeName().get(), SecuritiesLendingAndBorrowing);
+		codesByName.put(SecuredLoan.getCodeName().get(), SecuredLoan);
+		codesByName.put(Swaption.getCodeName().get(), Swaption);
+		codesByName.put(TreasuryCrossProduct.getCodeName().get(), TreasuryCrossProduct);
+		codesByName.put(BondForward.getCodeName().get(), BondForward);
+		codesByName.put(ReverseRepurchaseAgreement.getCodeName().get(), ReverseRepurchaseAgreement);
+		codesByName.put(ToBeAnnounced.getCodeName().get(), ToBeAnnounced);
+	}
+
+	public static ExposureType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ExposureType3Code[] values() {
+		ExposureType3Code[] values = new ExposureType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ExposureType3Code> {
+		@Override
+		public ExposureType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ExposureType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.RiskManagementLimit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * LimitReport4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LimitReport5", propOrder = {"limitIdentification", "limitOrError"})
 public class LimitReport5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LmtId", required = true)
 	protected LimitIdentification1 limitIdentification;
 	/**
-	 * Identification of the limit on which information is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -113,7 +115,7 @@ public class LimitReport5 {
 	public static final MMMessageAssociationEnd mmLimitIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
-			componentContext_lazy = () -> LimitReport5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitReport5.mmObject();
 			isDerived = false;
 			xmlTag = "LmtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,11 +128,11 @@ public class LimitReport5 {
 			type_lazy = () -> com.tools20022.repository.msg.LimitIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "LmtOrErr", required = true)
 	protected LimitOrError2Choice limitOrError;
 	/**
-	 * Requested information on the limit or business error report when
-	 * information has not been found.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -162,7 +164,7 @@ public class LimitReport5 {
 	 */
 	public static final MMMessageAssociationEnd mmLimitOrError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitReport5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitReport5.mmObject();
 			isDerived = false;
 			xmlTag = "LmtOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,9 +181,9 @@ public class LimitReport5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LimitReport5.mmLimitIdentification, LimitReport5.mmLimitOrError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport5.mmLimitIdentification, com.tools20022.repository.msg.LimitReport5.mmLimitOrError);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LimitReport5";
 				definition = "Reports either on the risk management limit or on a business error.";
@@ -191,21 +193,21 @@ public class LimitReport5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LmtId", required = true)
 	public LimitIdentification1 getLimitIdentification() {
 		return limitIdentification;
 	}
 
-	public void setLimitIdentification(com.tools20022.repository.msg.LimitIdentification1 limitIdentification) {
-		this.limitIdentification = limitIdentification;
+	public LimitReport5 setLimitIdentification(com.tools20022.repository.msg.LimitIdentification1 limitIdentification) {
+		this.limitIdentification = Objects.requireNonNull(limitIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "LmtOrErr", required = true)
 	public LimitOrError2Choice getLimitOrError() {
 		return limitOrError;
 	}
 
-	public void setLimitOrError(LimitOrError2Choice limitOrError) {
-		this.limitOrError = limitOrError;
+	public LimitReport5 setLimitOrError(LimitOrError2Choice limitOrError) {
+		this.limitOrError = Objects.requireNonNull(limitOrError);
+		return this;
 	}
 }

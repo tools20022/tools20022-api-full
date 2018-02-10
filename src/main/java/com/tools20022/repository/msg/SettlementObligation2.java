@@ -27,9 +27,11 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -76,8 +78,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,16 +90,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides details about the settlement obligation."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementObligation2", propOrder = {"settlementObligationIdentification", "financialInstrumentIdentification", "intendedSettlementDate", "quantity", "settlementAmount", "additionalSettlementObligationDetails",
 		"placeOfTrade", "tradeDate"})
 public class SettlementObligation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SttlmOblgtnId", required = true)
 	protected Max35Text settlementObligationIdentification;
 	/**
-	 * Provides the identification of the settlement obligation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,7 +128,7 @@ public class SettlementObligation2 {
 	 */
 	public static final MMMessageAttribute mmSettlementObligationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementObligation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmOblgtnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +139,11 @@ public class SettlementObligation2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmId", required = true)
 	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
-	 * Provides details about the security identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -172,7 +176,7 @@ public class SettlementObligation2 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> SettlementObligation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation2.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,10 +188,11 @@ public class SettlementObligation2 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	@XmlElement(name = "IntnddSttlmDt", required = true)
 	protected DateFormat11Choice intendedSettlementDate;
 	/**
-	 * Intended settlement date of the position.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -221,7 +226,7 @@ public class SettlementObligation2 {
 	public static final MMMessageAttribute mmIntendedSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
-			componentContext_lazy = () -> SettlementObligation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation2.mmObject();
 			isDerived = false;
 			xmlTag = "IntnddSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,10 +237,11 @@ public class SettlementObligation2 {
 			complexType_lazy = () -> DateFormat11Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Qty", required = true)
 	protected FinancialInstrumentQuantity1Choice quantity;
 	/**
-	 * Specifies the quantity related to the settlement obligation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -269,7 +275,7 @@ public class SettlementObligation2 {
 	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
-			componentContext_lazy = () -> SettlementObligation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation2.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,10 +287,11 @@ public class SettlementObligation2 {
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmAmt", required = true)
 	protected AmountAndDirection20 settlementAmount;
 	/**
-	 * Provides the total amount to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -316,7 +323,7 @@ public class SettlementObligation2 {
 	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
-			componentContext_lazy = () -> SettlementObligation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -328,10 +335,11 @@ public class SettlementObligation2 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlSttlmOblgtnDtls")
 	protected List<com.tools20022.repository.msg.SettlementObligation3> additionalSettlementObligationDetails;
 	/**
-	 * Provides additional information about the settlement obligation details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -365,7 +373,7 @@ public class SettlementObligation2 {
 	public static final MMMessageAssociationEnd mmAdditionalSettlementObligationDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesDeliveryObligation;
-			componentContext_lazy = () -> SettlementObligation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlSttlmOblgtnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -376,10 +384,11 @@ public class SettlementObligation2 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementObligation3.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfTrad", required = true)
 	protected MarketIdentification20 placeOfTrade;
 	/**
-	 * Place at which the security is traded.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -413,7 +422,7 @@ public class SettlementObligation2 {
 	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
-			componentContext_lazy = () -> SettlementObligation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -424,10 +433,11 @@ public class SettlementObligation2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.MarketIdentification20.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDt", required = true)
 	protected ISODate tradeDate;
 	/**
-	 * Provides the trade date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -460,7 +470,7 @@ public class SettlementObligation2 {
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> SettlementObligation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation2.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -475,10 +485,12 @@ public class SettlementObligation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementObligation2.mmSettlementObligationIdentification, SettlementObligation2.mmFinancialInstrumentIdentification, SettlementObligation2.mmIntendedSettlementDate,
-						SettlementObligation2.mmQuantity, SettlementObligation2.mmSettlementAmount, SettlementObligation2.mmAdditionalSettlementObligationDetails, SettlementObligation2.mmPlaceOfTrade, SettlementObligation2.mmTradeDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementObligation2.mmSettlementObligationIdentification, com.tools20022.repository.msg.SettlementObligation2.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.msg.SettlementObligation2.mmIntendedSettlementDate, com.tools20022.repository.msg.SettlementObligation2.mmQuantity, com.tools20022.repository.msg.SettlementObligation2.mmSettlementAmount,
+						com.tools20022.repository.msg.SettlementObligation2.mmAdditionalSettlementObligationDetails, com.tools20022.repository.msg.SettlementObligation2.mmPlaceOfTrade,
+						com.tools20022.repository.msg.SettlementObligation2.mmTradeDate);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementObligation2";
 				definition = "Provides details about the settlement obligation.";
@@ -487,75 +499,75 @@ public class SettlementObligation2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SttlmOblgtnId", required = true)
 	public Max35Text getSettlementObligationIdentification() {
 		return settlementObligationIdentification;
 	}
 
-	public void setSettlementObligationIdentification(Max35Text settlementObligationIdentification) {
-		this.settlementObligationIdentification = settlementObligationIdentification;
+	public SettlementObligation2 setSettlementObligationIdentification(Max35Text settlementObligationIdentification) {
+		this.settlementObligationIdentification = Objects.requireNonNull(settlementObligationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
 
-	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
-		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	public SettlementObligation2 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "IntnddSttlmDt", required = true)
 	public DateFormat11Choice getIntendedSettlementDate() {
 		return intendedSettlementDate;
 	}
 
-	public void setIntendedSettlementDate(DateFormat11Choice intendedSettlementDate) {
-		this.intendedSettlementDate = intendedSettlementDate;
+	public SettlementObligation2 setIntendedSettlementDate(DateFormat11Choice intendedSettlementDate) {
+		this.intendedSettlementDate = Objects.requireNonNull(intendedSettlementDate);
+		return this;
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity1Choice getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(FinancialInstrumentQuantity1Choice quantity) {
-		this.quantity = quantity;
+	public SettlementObligation2 setQuantity(FinancialInstrumentQuantity1Choice quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmAmt", required = true)
 	public AmountAndDirection20 getSettlementAmount() {
 		return settlementAmount;
 	}
 
-	public void setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection20 settlementAmount) {
-		this.settlementAmount = settlementAmount;
+	public SettlementObligation2 setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection20 settlementAmount) {
+		this.settlementAmount = Objects.requireNonNull(settlementAmount);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlSttlmOblgtnDtls")
 	public List<SettlementObligation3> getAdditionalSettlementObligationDetails() {
-		return additionalSettlementObligationDetails;
+		return additionalSettlementObligationDetails == null ? additionalSettlementObligationDetails = new ArrayList<>() : additionalSettlementObligationDetails;
 	}
 
-	public void setAdditionalSettlementObligationDetails(List<com.tools20022.repository.msg.SettlementObligation3> additionalSettlementObligationDetails) {
-		this.additionalSettlementObligationDetails = additionalSettlementObligationDetails;
+	public SettlementObligation2 setAdditionalSettlementObligationDetails(List<com.tools20022.repository.msg.SettlementObligation3> additionalSettlementObligationDetails) {
+		this.additionalSettlementObligationDetails = Objects.requireNonNull(additionalSettlementObligationDetails);
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfTrad", required = true)
 	public MarketIdentification20 getPlaceOfTrade() {
 		return placeOfTrade;
 	}
 
-	public void setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification20 placeOfTrade) {
-		this.placeOfTrade = placeOfTrade;
+	public SettlementObligation2 setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification20 placeOfTrade) {
+		this.placeOfTrade = Objects.requireNonNull(placeOfTrade);
+		return this;
 	}
 
-	@XmlElement(name = "TradDt", required = true)
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
 
-	public void setTradeDate(ISODate tradeDate) {
-		this.tradeDate = tradeDate;
+	public SettlementObligation2 setTradeDate(ISODate tradeDate) {
+		this.tradeDate = Objects.requireNonNull(tradeDate);
+		return this;
 	}
 }

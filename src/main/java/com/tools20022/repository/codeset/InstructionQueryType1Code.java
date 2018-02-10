@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.InstructionQueryTypeCode;
+import com.tools20022.repository.codeset.InstructionQueryType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of instruction queried.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.InstructionQueryTypeCode
- * InstructionQueryTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionQueryType1Code#mmSettlementInstruction
- * InstructionQueryType1Code.mmSettlementInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionQueryType1Code#SettlementInstruction
+ * InstructionQueryType1Code.SettlementInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionQueryType1Code#mmIntraPositionMovement
- * InstructionQueryType1Code.mmIntraPositionMovement}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionQueryType1Code#IntraPositionMovement
+ * InstructionQueryType1Code.IntraPositionMovement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionQueryType1Code#mmSettlementAndIntraPosition
- * InstructionQueryType1Code.mmSettlementAndIntraPosition}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionQueryType1Code#SettlementAndIntraPosition
+ * InstructionQueryType1Code.SettlementAndIntraPosition}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.InstructionQueryTypeCode
+ * InstructionQueryTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of instruction queried."</li>
  * </ul>
  */
-public class InstructionQueryType1Code extends InstructionQueryTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InstructionQueryType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class InstructionQueryType1Code extends InstructionQueryTypeCode {
 	 * name} = "SettlementInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementInstruction = new MMCode() {
+	public static final InstructionQueryType1Code SettlementInstruction = new InstructionQueryType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementInstruction";
-			owner_lazy = () -> InstructionQueryType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionQueryType1Code.mmObject();
+			codeName = InstructionQueryTypeCode.SettlementInstruction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class InstructionQueryType1Code extends InstructionQueryTypeCode {
 	 * name} = "IntraPositionMovement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntraPositionMovement = new MMCode() {
+	public static final InstructionQueryType1Code IntraPositionMovement = new InstructionQueryType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionMovement";
-			owner_lazy = () -> InstructionQueryType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionQueryType1Code.mmObject();
+			codeName = InstructionQueryTypeCode.IntraPositionMovement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class InstructionQueryType1Code extends InstructionQueryTypeCode {
 	 * name} = "SettlementAndIntraPosition"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementAndIntraPosition = new MMCode() {
+	public static final InstructionQueryType1Code SettlementAndIntraPosition = new InstructionQueryType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAndIntraPosition";
-			owner_lazy = () -> InstructionQueryType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionQueryType1Code.mmObject();
+			codeName = InstructionQueryTypeCode.SettlementAndIntraPosition.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, InstructionQueryType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InstructionQueryType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SETT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionQueryType1Code";
 				definition = "Specifies the type of instruction queried.";
-				code_lazy = () -> Arrays.asList(InstructionQueryType1Code.mmSettlementInstruction, InstructionQueryType1Code.mmIntraPositionMovement, InstructionQueryType1Code.mmSettlementAndIntraPosition);
 				trace_lazy = () -> InstructionQueryTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionQueryType1Code.SettlementInstruction, com.tools20022.repository.codeset.InstructionQueryType1Code.IntraPositionMovement,
+						com.tools20022.repository.codeset.InstructionQueryType1Code.SettlementAndIntraPosition);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SettlementInstruction.getCodeName().get(), SettlementInstruction);
+		codesByName.put(IntraPositionMovement.getCodeName().get(), IntraPositionMovement);
+		codesByName.put(SettlementAndIntraPosition.getCodeName().get(), SettlementAndIntraPosition);
+	}
+
+	public static InstructionQueryType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InstructionQueryType1Code[] values() {
+		InstructionQueryType1Code[] values = new InstructionQueryType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InstructionQueryType1Code> {
+		@Override
+		public InstructionQueryType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InstructionQueryType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

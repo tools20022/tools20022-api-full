@@ -29,11 +29,9 @@ import com.tools20022.repository.entity.SecuritiesTax;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -47,11 +45,11 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalTaxes3#mmEUDividendStatusOrExtendedEUDividendStatusRule
- * TotalTaxes3.mmEUDividendStatusOrExtendedEUDividendStatusRule}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalTaxes3#EUDividendStatusOrExtendedEUDividendStatusRule
+ * TotalTaxes3.EUDividendStatusOrExtendedEUDividendStatusRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TotalTaxes3#mmEUCapitalGainOrExtendedEUCapitalGainRule
- * TotalTaxes3.mmEUCapitalGainOrExtendedEUCapitalGainRule}</li>
+ * {@linkplain com.tools20022.repository.msg.TotalTaxes3#EUCapitalGainOrExtendedEUCapitalGainRule
+ * TotalTaxes3.EUCapitalGainOrExtendedEUCapitalGainRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -87,8 +85,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -107,15 +105,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "TotalTaxes3", propOrder = {"totalAmountOfTaxes", "taxableIncomePerDividend", "EUCapitalGain", "extendedEUCapitalGain", "EUDividendStatus", "extendedEUDividendStatus", "percentageOfDebtClaim", "taxDetails"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "TotalTaxes3", propOrder = {"totalAmountOfTaxes", "taxableIncomePerDividend", "eUCapitalGain", "extendedEUCapitalGain", "eUDividendStatus", "extendedEUDividendStatus", "percentageOfDebtClaim", "taxDetails"})
 public class TotalTaxes3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlAmtOfTaxs")
 	protected ActiveCurrencyAnd13DecimalAmount totalAmountOfTaxes;
 	/**
-	 * Total value of the taxes for a specific order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,7 +146,7 @@ public class TotalTaxes3 {
 	public static final MMMessageAttribute mmTotalAmountOfTaxes = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> TotalTaxes3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalTaxes3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmtOfTaxs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,12 +157,11 @@ public class TotalTaxes3 {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxblIncmPerDvdd")
 	protected ActiveCurrencyAndAmount taxableIncomePerDividend;
 	/**
-	 * Amount included in the dividend that corresponds to gains directly or
-	 * indirectly derived from interest payment in the scope of the European
-	 * Directive on taxation of savings income in the form of interest payments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,7 +196,7 @@ public class TotalTaxes3 {
 	public static final MMMessageAttribute mmTaxableIncomePerDividend = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerDividend;
-			componentContext_lazy = () -> TotalTaxes3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalTaxes3.mmObject();
 			isDerived = false;
 			xmlTag = "TaxblIncmPerDvdd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,13 +207,11 @@ public class TotalTaxes3 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "EUCptlGn")
 	protected EUCapitalGain2Code eUCapitalGain;
 	/**
-	 * Specifies whether capital gain is in the scope of the European directive
-	 * on taxation of savings income in the form of interest payments (Council
-	 * Directive 2003/48/EC 3 June), or an income realised upon sale, a refund
-	 * or redemption of shares and units, etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -250,7 +246,7 @@ public class TotalTaxes3 {
 	public static final MMMessageAttribute mmEUCapitalGain = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
-			componentContext_lazy = () -> TotalTaxes3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalTaxes3.mmObject();
 			isDerived = false;
 			xmlTag = "EUCptlGn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -261,13 +257,11 @@ public class TotalTaxes3 {
 			simpleType_lazy = () -> EUCapitalGain2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedEUCptlGn")
 	protected Extended350Code extendedEUCapitalGain;
 	/**
-	 * Specifies whether capital gain is in the scope of the European directive
-	 * on taxation of savings income in the form of interest payments (Council
-	 * Directive 2003/48/EC 3 June), or an income realised upon sale, a refund
-	 * or redemption of shares and units, etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -302,7 +296,7 @@ public class TotalTaxes3 {
 	public static final MMMessageAttribute mmExtendedEUCapitalGain = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
-			componentContext_lazy = () -> TotalTaxes3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalTaxes3.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedEUCptlGn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -313,13 +307,11 @@ public class TotalTaxes3 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "EUDvddSts")
 	protected EUDividendStatus1Code eUDividendStatus;
 	/**
-	 * Specifies whether dividend is in the scope of the European directive on
-	 * taxation of savings income in the form of interest payments (Council
-	 * Directive 2003/48/EC 3 June), or an income realised upon sale, a refund
-	 * or redemption of shares and units, etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -354,7 +346,7 @@ public class TotalTaxes3 {
 	public static final MMMessageAttribute mmEUDividendStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUDividendStatus;
-			componentContext_lazy = () -> TotalTaxes3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalTaxes3.mmObject();
 			isDerived = false;
 			xmlTag = "EUDvddSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -365,13 +357,11 @@ public class TotalTaxes3 {
 			simpleType_lazy = () -> EUDividendStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedEUDvddSts")
 	protected Extended350Code extendedEUDividendStatus;
 	/**
-	 * Specifies whether dividend is in the scope of the European directive on
-	 * taxation of savings income in the form of interest payments (Council
-	 * Directive 2003/48/EC 3 June), or an income realised upon sale, a refund
-	 * or redemption of shares and units, etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -406,7 +396,7 @@ public class TotalTaxes3 {
 	public static final MMMessageAttribute mmExtendedEUDividendStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUDividendStatus;
-			componentContext_lazy = () -> TotalTaxes3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalTaxes3.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedEUDvddSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -417,13 +407,11 @@ public class TotalTaxes3 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PctgOfDebtClm")
 	protected PercentageRate percentageOfDebtClaim;
 	/**
-	 * Percentage of the underlying assets of the funds that represents a debt
-	 * and is in the scope of the European directive on taxation of savings
-	 * income in the form of interest payments (Council Directive 2003/48/EC 3
-	 * June).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -458,7 +446,7 @@ public class TotalTaxes3 {
 	public static final MMMessageAttribute mmPercentageOfDebtClaim = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTax.mmPercentageOfDebtClaim;
-			componentContext_lazy = () -> TotalTaxes3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalTaxes3.mmObject();
 			isDerived = false;
 			xmlTag = "PctgOfDebtClm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -469,10 +457,11 @@ public class TotalTaxes3 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxDtls")
 	protected List<com.tools20022.repository.msg.Tax14> taxDetails;
 	/**
-	 * Information related to a specific tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -502,7 +491,7 @@ public class TotalTaxes3 {
 	public static final MMMessageAssociationEnd mmTaxDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
-			componentContext_lazy = () -> TotalTaxes3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalTaxes3.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -546,13 +535,13 @@ public class TotalTaxes3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmEUDividendStatusOrExtendedEUDividendStatusRule = new MMXor() {
+	public static final MMXor EUDividendStatusOrExtendedEUDividendStatusRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUDividendStatusOrExtendedEUDividendStatusRule";
 			definition = "Either EUDividendStatus or ExtendedEUDividendStatus may be present, but not both.";
-			messageComponent_lazy = () -> TotalTaxes3.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(TotalTaxes3.mmEUDividendStatus, TotalTaxes3.mmExtendedEUDividendStatus);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.TotalTaxes3.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes3.mmEUDividendStatus, com.tools20022.repository.msg.TotalTaxes3.mmExtendedEUDividendStatus);
 		}
 	};
 	/**
@@ -588,23 +577,24 @@ public class TotalTaxes3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmEUCapitalGainOrExtendedEUCapitalGainRule = new MMXor() {
+	public static final MMXor EUCapitalGainOrExtendedEUCapitalGainRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUCapitalGainOrExtendedEUCapitalGainRule";
 			definition = "Either EUCapitalGain or ExtendedEUCapitalGain may be present, but not both.";
-			messageComponent_lazy = () -> TotalTaxes3.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(TotalTaxes3.mmEUCapitalGain, TotalTaxes3.mmExtendedEUCapitalGain);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.TotalTaxes3.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes3.mmEUCapitalGain, com.tools20022.repository.msg.TotalTaxes3.mmExtendedEUCapitalGain);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TotalTaxes3.mmTotalAmountOfTaxes, TotalTaxes3.mmTaxableIncomePerDividend, TotalTaxes3.mmEUCapitalGain, TotalTaxes3.mmExtendedEUCapitalGain, TotalTaxes3.mmEUDividendStatus,
-						TotalTaxes3.mmExtendedEUDividendStatus, TotalTaxes3.mmPercentageOfDebtClaim, TotalTaxes3.mmTaxDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes3.mmTotalAmountOfTaxes, com.tools20022.repository.msg.TotalTaxes3.mmTaxableIncomePerDividend,
+						com.tools20022.repository.msg.TotalTaxes3.mmEUCapitalGain, com.tools20022.repository.msg.TotalTaxes3.mmExtendedEUCapitalGain, com.tools20022.repository.msg.TotalTaxes3.mmEUDividendStatus,
+						com.tools20022.repository.msg.TotalTaxes3.mmExtendedEUDividendStatus, com.tools20022.repository.msg.TotalTaxes3.mmPercentageOfDebtClaim, com.tools20022.repository.msg.TotalTaxes3.mmTaxDetails);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -616,81 +606,81 @@ public class TotalTaxes3 {
 				name = "TotalTaxes3";
 				definition = "Information regarding the total amount of taxes.";
 				nextVersions_lazy = () -> Arrays.asList(InformativeTax1.mmObject());
-				xors_lazy = () -> Arrays.asList(TotalTaxes3.mmEUDividendStatusOrExtendedEUDividendStatusRule, TotalTaxes3.mmEUCapitalGainOrExtendedEUCapitalGainRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalTaxes3.EUDividendStatusOrExtendedEUDividendStatusRule, com.tools20022.repository.msg.TotalTaxes3.EUCapitalGainOrExtendedEUCapitalGainRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlAmtOfTaxs")
-	public ActiveCurrencyAnd13DecimalAmount getTotalAmountOfTaxes() {
-		return totalAmountOfTaxes;
+	public Optional<ActiveCurrencyAnd13DecimalAmount> getTotalAmountOfTaxes() {
+		return totalAmountOfTaxes == null ? Optional.empty() : Optional.of(totalAmountOfTaxes);
 	}
 
-	public void setTotalAmountOfTaxes(ActiveCurrencyAnd13DecimalAmount totalAmountOfTaxes) {
+	public TotalTaxes3 setTotalAmountOfTaxes(ActiveCurrencyAnd13DecimalAmount totalAmountOfTaxes) {
 		this.totalAmountOfTaxes = totalAmountOfTaxes;
+		return this;
 	}
 
-	@XmlElement(name = "TaxblIncmPerDvdd")
-	public ActiveCurrencyAndAmount getTaxableIncomePerDividend() {
-		return taxableIncomePerDividend;
+	public Optional<ActiveCurrencyAndAmount> getTaxableIncomePerDividend() {
+		return taxableIncomePerDividend == null ? Optional.empty() : Optional.of(taxableIncomePerDividend);
 	}
 
-	public void setTaxableIncomePerDividend(ActiveCurrencyAndAmount taxableIncomePerDividend) {
+	public TotalTaxes3 setTaxableIncomePerDividend(ActiveCurrencyAndAmount taxableIncomePerDividend) {
 		this.taxableIncomePerDividend = taxableIncomePerDividend;
+		return this;
 	}
 
-	@XmlElement(name = "EUCptlGn")
-	public EUCapitalGain2Code getEUCapitalGain() {
-		return eUCapitalGain;
+	public Optional<EUCapitalGain2Code> getEUCapitalGain() {
+		return eUCapitalGain == null ? Optional.empty() : Optional.of(eUCapitalGain);
 	}
 
-	public void setEUCapitalGain(EUCapitalGain2Code eUCapitalGain) {
+	public TotalTaxes3 setEUCapitalGain(EUCapitalGain2Code eUCapitalGain) {
 		this.eUCapitalGain = eUCapitalGain;
+		return this;
 	}
 
-	@XmlElement(name = "XtndedEUCptlGn")
-	public Extended350Code getExtendedEUCapitalGain() {
-		return extendedEUCapitalGain;
+	public Optional<Extended350Code> getExtendedEUCapitalGain() {
+		return extendedEUCapitalGain == null ? Optional.empty() : Optional.of(extendedEUCapitalGain);
 	}
 
-	public void setExtendedEUCapitalGain(Extended350Code extendedEUCapitalGain) {
+	public TotalTaxes3 setExtendedEUCapitalGain(Extended350Code extendedEUCapitalGain) {
 		this.extendedEUCapitalGain = extendedEUCapitalGain;
+		return this;
 	}
 
-	@XmlElement(name = "EUDvddSts")
-	public EUDividendStatus1Code getEUDividendStatus() {
-		return eUDividendStatus;
+	public Optional<EUDividendStatus1Code> getEUDividendStatus() {
+		return eUDividendStatus == null ? Optional.empty() : Optional.of(eUDividendStatus);
 	}
 
-	public void setEUDividendStatus(EUDividendStatus1Code eUDividendStatus) {
+	public TotalTaxes3 setEUDividendStatus(EUDividendStatus1Code eUDividendStatus) {
 		this.eUDividendStatus = eUDividendStatus;
+		return this;
 	}
 
-	@XmlElement(name = "XtndedEUDvddSts")
-	public Extended350Code getExtendedEUDividendStatus() {
-		return extendedEUDividendStatus;
+	public Optional<Extended350Code> getExtendedEUDividendStatus() {
+		return extendedEUDividendStatus == null ? Optional.empty() : Optional.of(extendedEUDividendStatus);
 	}
 
-	public void setExtendedEUDividendStatus(Extended350Code extendedEUDividendStatus) {
+	public TotalTaxes3 setExtendedEUDividendStatus(Extended350Code extendedEUDividendStatus) {
 		this.extendedEUDividendStatus = extendedEUDividendStatus;
+		return this;
 	}
 
-	@XmlElement(name = "PctgOfDebtClm")
-	public PercentageRate getPercentageOfDebtClaim() {
-		return percentageOfDebtClaim;
+	public Optional<PercentageRate> getPercentageOfDebtClaim() {
+		return percentageOfDebtClaim == null ? Optional.empty() : Optional.of(percentageOfDebtClaim);
 	}
 
-	public void setPercentageOfDebtClaim(PercentageRate percentageOfDebtClaim) {
+	public TotalTaxes3 setPercentageOfDebtClaim(PercentageRate percentageOfDebtClaim) {
 		this.percentageOfDebtClaim = percentageOfDebtClaim;
+		return this;
 	}
 
-	@XmlElement(name = "TaxDtls")
 	public List<Tax14> getTaxDetails() {
-		return taxDetails;
+		return taxDetails == null ? taxDetails = new ArrayList<>() : taxDetails;
 	}
 
-	public void setTaxDetails(List<com.tools20022.repository.msg.Tax14> taxDetails) {
-		this.taxDetails = taxDetails;
+	public TotalTaxes3 setTaxDetails(List<com.tools20022.repository.msg.Tax14> taxDetails) {
+		this.taxDetails = Objects.requireNonNull(taxDetails);
+		return this;
 	}
 }

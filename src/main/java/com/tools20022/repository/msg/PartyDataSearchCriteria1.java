@@ -30,6 +30,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Set of search criteria for querying party reference data."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PartyDataSearchCriteria1", propOrder = {"openingDate", "closingDate", "type", "CSDOrNCB", "identification", "restrictionIdentification", "restrictionIssueDate"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PartyDataSearchCriteria1", propOrder = {"openingDate", "closingDate", "type", "cSDOrNCB", "identification", "restrictionIdentification", "restrictionIssueDate"})
 public class PartyDataSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OpngDt")
 	protected DateSearchChoice openingDate;
 	/**
-	 * Specifies the opening date of the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +120,7 @@ public class PartyDataSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "OpngDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,10 +131,11 @@ public class PartyDataSearchCriteria1 {
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "ClsgDt")
 	protected DateSearchChoice closingDate;
 	/**
-	 * Specifies the closing date of the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +163,7 @@ public class PartyDataSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +174,11 @@ public class PartyDataSearchCriteria1 {
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected SystemPartyType1Code type;
 	/**
-	 * Specifies the type classification of the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -202,7 +206,7 @@ public class PartyDataSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,11 +217,11 @@ public class PartyDataSearchCriteria1 {
 			simpleType_lazy = () -> SystemPartyType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "CSDOrNCB")
 	protected CSDOrNCB1Choice cSDOrNCB;
 	/**
-	 * Identifies the central security depository or the national central bank
-	 * which initially created the party reference data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -245,7 +249,7 @@ public class PartyDataSearchCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmCSDOrNCB = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CSDOrNCB";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,11 +261,11 @@ public class PartyDataSearchCriteria1 {
 			type_lazy = () -> CSDOrNCB1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Id")
 	protected BICFIIdentifier identification;
 	/**
-	 * Unique identification to unambiguously identify the party within the
-	 * system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -291,7 +295,7 @@ public class PartyDataSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -302,10 +306,11 @@ public class PartyDataSearchCriteria1 {
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "RstrctnId")
 	protected Max35Text restrictionIdentification;
 	/**
-	 * Specifies the identification of a restriction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -332,7 +337,7 @@ public class PartyDataSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmRestrictionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -343,10 +348,11 @@ public class PartyDataSearchCriteria1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RstrctnIsseDt")
 	protected DateAndDateTimeSearchChoice restrictionIssueDate;
 	/**
-	 * Specifies the date when the restriction for the party has been issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -375,7 +381,7 @@ public class PartyDataSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmRestrictionIssueDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyDataSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctnIsseDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -390,9 +396,10 @@ public class PartyDataSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyDataSearchCriteria1.mmOpeningDate, PartyDataSearchCriteria1.mmClosingDate, PartyDataSearchCriteria1.mmType, PartyDataSearchCriteria1.mmCSDOrNCB,
-						PartyDataSearchCriteria1.mmIdentification, PartyDataSearchCriteria1.mmRestrictionIdentification, PartyDataSearchCriteria1.mmRestrictionIssueDate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyDataSearchCriteria1.mmOpeningDate, com.tools20022.repository.msg.PartyDataSearchCriteria1.mmClosingDate,
+						com.tools20022.repository.msg.PartyDataSearchCriteria1.mmType, com.tools20022.repository.msg.PartyDataSearchCriteria1.mmCSDOrNCB, com.tools20022.repository.msg.PartyDataSearchCriteria1.mmIdentification,
+						com.tools20022.repository.msg.PartyDataSearchCriteria1.mmRestrictionIdentification, com.tools20022.repository.msg.PartyDataSearchCriteria1.mmRestrictionIssueDate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyDataSearchCriteria1";
 				definition = "Set of search criteria for querying party reference data.";
@@ -401,66 +408,66 @@ public class PartyDataSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OpngDt")
-	public DateSearchChoice getOpeningDate() {
-		return openingDate;
+	public Optional<DateSearchChoice> getOpeningDate() {
+		return openingDate == null ? Optional.empty() : Optional.of(openingDate);
 	}
 
-	public void setOpeningDate(DateSearchChoice openingDate) {
+	public PartyDataSearchCriteria1 setOpeningDate(DateSearchChoice openingDate) {
 		this.openingDate = openingDate;
+		return this;
 	}
 
-	@XmlElement(name = "ClsgDt")
-	public DateSearchChoice getClosingDate() {
-		return closingDate;
+	public Optional<DateSearchChoice> getClosingDate() {
+		return closingDate == null ? Optional.empty() : Optional.of(closingDate);
 	}
 
-	public void setClosingDate(DateSearchChoice closingDate) {
+	public PartyDataSearchCriteria1 setClosingDate(DateSearchChoice closingDate) {
 		this.closingDate = closingDate;
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public SystemPartyType1Code getType() {
-		return type;
+	public Optional<SystemPartyType1Code> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(SystemPartyType1Code type) {
+	public PartyDataSearchCriteria1 setType(SystemPartyType1Code type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "CSDOrNCB")
-	public CSDOrNCB1Choice getCSDOrNCB() {
-		return cSDOrNCB;
+	public Optional<CSDOrNCB1Choice> getCSDOrNCB() {
+		return cSDOrNCB == null ? Optional.empty() : Optional.of(cSDOrNCB);
 	}
 
-	public void setCSDOrNCB(CSDOrNCB1Choice cSDOrNCB) {
+	public PartyDataSearchCriteria1 setCSDOrNCB(CSDOrNCB1Choice cSDOrNCB) {
 		this.cSDOrNCB = cSDOrNCB;
+		return this;
 	}
 
-	@XmlElement(name = "Id")
-	public BICFIIdentifier getIdentification() {
-		return identification;
+	public Optional<BICFIIdentifier> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(BICFIIdentifier identification) {
+	public PartyDataSearchCriteria1 setIdentification(BICFIIdentifier identification) {
 		this.identification = identification;
+		return this;
 	}
 
-	@XmlElement(name = "RstrctnId")
-	public Max35Text getRestrictionIdentification() {
-		return restrictionIdentification;
+	public Optional<Max35Text> getRestrictionIdentification() {
+		return restrictionIdentification == null ? Optional.empty() : Optional.of(restrictionIdentification);
 	}
 
-	public void setRestrictionIdentification(Max35Text restrictionIdentification) {
+	public PartyDataSearchCriteria1 setRestrictionIdentification(Max35Text restrictionIdentification) {
 		this.restrictionIdentification = restrictionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "RstrctnIsseDt")
-	public DateAndDateTimeSearchChoice getRestrictionIssueDate() {
-		return restrictionIssueDate;
+	public Optional<DateAndDateTimeSearchChoice> getRestrictionIssueDate() {
+		return restrictionIssueDate == null ? Optional.empty() : Optional.of(restrictionIssueDate);
 	}
 
-	public void setRestrictionIssueDate(DateAndDateTimeSearchChoice restrictionIssueDate) {
+	public PartyDataSearchCriteria1 setRestrictionIssueDate(DateAndDateTimeSearchChoice restrictionIssueDate) {
 		this.restrictionIssueDate = restrictionIssueDate;
+		return this;
 	}
 }

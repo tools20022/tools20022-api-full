@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.SubscriptionExecution;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalAmountYearToDateRule#forSubscriptionInformation
+ * ConstraintTotalAmountYearToDateRule.forSubscriptionInformation}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Execution of a subscription order."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SubscriptionInformation", propOrder = {"dateOfFirstSubscription", "equityComponent", "cashComponent", "totalAmountYearToDate"})
 public class SubscriptionInformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DtOfFrstSbcpt", required = true)
 	protected ISODate dateOfFirstSubscription;
 	/**
-	 * Date the investment plan starts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +126,7 @@ public class SubscriptionInformation {
 	public static final MMMessageAttribute mmDateOfFirstSubscription = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
-			componentContext_lazy = () -> SubscriptionInformation.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionInformation.mmObject();
 			isDerived = false;
 			xmlTag = "DtOfFrstSbcpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,11 +137,11 @@ public class SubscriptionInformation {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "EqtyCmpnt")
 	protected CurrencyAndAmount equityComponent;
 	/**
-	 * Amount subscribed in the current tax year into equity (not including
-	 * dividends).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,7 +177,7 @@ public class SubscriptionInformation {
 	public static final MMMessageAttribute mmEquityComponent = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SubscriptionExecution.mmEquityComponent;
-			componentContext_lazy = () -> SubscriptionInformation.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionInformation.mmObject();
 			isDerived = false;
 			xmlTag = "EqtyCmpnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,10 +188,11 @@ public class SubscriptionInformation {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CshCmpnt")
 	protected CurrencyAndAmount cashComponent;
 	/**
-	 * Amount subscribed in the current tax year into cash.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -214,7 +226,7 @@ public class SubscriptionInformation {
 	public static final MMMessageAttribute mmCashComponent = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SubscriptionExecution.mmCashComponent;
-			componentContext_lazy = () -> SubscriptionInformation.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionInformation.mmObject();
 			isDerived = false;
 			xmlTag = "CshCmpnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,10 +237,11 @@ public class SubscriptionInformation {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlAmtYrToDt", required = true)
 	protected CurrencyAndAmount totalAmountYearToDate;
 	/**
-	 * Total amount subscribed in the current tax year.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -262,7 +275,7 @@ public class SubscriptionInformation {
 	public static final MMMessageAttribute mmTotalAmountYearToDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmTotalAmount;
-			componentContext_lazy = () -> SubscriptionInformation.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionInformation.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmtYrToDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -277,10 +290,11 @@ public class SubscriptionInformation {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SubscriptionInformation.mmDateOfFirstSubscription, SubscriptionInformation.mmEquityComponent, SubscriptionInformation.mmCashComponent,
-						SubscriptionInformation.mmTotalAmountYearToDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionInformation.mmDateOfFirstSubscription, com.tools20022.repository.msg.SubscriptionInformation.mmEquityComponent,
+						com.tools20022.repository.msg.SubscriptionInformation.mmCashComponent, com.tools20022.repository.msg.SubscriptionInformation.mmTotalAmountYearToDate);
 				trace_lazy = () -> SubscriptionExecution.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalAmountYearToDateRule.forSubscriptionInformation);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SubscriptionInformation";
 				definition = "Execution of a subscription order.";
@@ -289,39 +303,39 @@ public class SubscriptionInformation {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DtOfFrstSbcpt", required = true)
 	public ISODate getDateOfFirstSubscription() {
 		return dateOfFirstSubscription;
 	}
 
-	public void setDateOfFirstSubscription(ISODate dateOfFirstSubscription) {
-		this.dateOfFirstSubscription = dateOfFirstSubscription;
+	public SubscriptionInformation setDateOfFirstSubscription(ISODate dateOfFirstSubscription) {
+		this.dateOfFirstSubscription = Objects.requireNonNull(dateOfFirstSubscription);
+		return this;
 	}
 
-	@XmlElement(name = "EqtyCmpnt")
-	public CurrencyAndAmount getEquityComponent() {
-		return equityComponent;
+	public Optional<CurrencyAndAmount> getEquityComponent() {
+		return equityComponent == null ? Optional.empty() : Optional.of(equityComponent);
 	}
 
-	public void setEquityComponent(CurrencyAndAmount equityComponent) {
+	public SubscriptionInformation setEquityComponent(CurrencyAndAmount equityComponent) {
 		this.equityComponent = equityComponent;
+		return this;
 	}
 
-	@XmlElement(name = "CshCmpnt")
-	public CurrencyAndAmount getCashComponent() {
-		return cashComponent;
+	public Optional<CurrencyAndAmount> getCashComponent() {
+		return cashComponent == null ? Optional.empty() : Optional.of(cashComponent);
 	}
 
-	public void setCashComponent(CurrencyAndAmount cashComponent) {
+	public SubscriptionInformation setCashComponent(CurrencyAndAmount cashComponent) {
 		this.cashComponent = cashComponent;
+		return this;
 	}
 
-	@XmlElement(name = "TtlAmtYrToDt", required = true)
 	public CurrencyAndAmount getTotalAmountYearToDate() {
 		return totalAmountYearToDate;
 	}
 
-	public void setTotalAmountYearToDate(CurrencyAndAmount totalAmountYearToDate) {
-		this.totalAmountYearToDate = totalAmountYearToDate;
+	public SubscriptionInformation setTotalAmountYearToDate(CurrencyAndAmount totalAmountYearToDate) {
+		this.totalAmountYearToDate = Objects.requireNonNull(totalAmountYearToDate);
+		return this;
 	}
 }

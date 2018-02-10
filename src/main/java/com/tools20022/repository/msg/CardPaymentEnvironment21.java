@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,15 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * CardPaymentEnvironment11}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CardPaymentEnvironment21", propOrder = {"acquirerIdentification", "merchantIdentification", "POIIdentification", "protectedCardData", "plainCardData"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CardPaymentEnvironment21", propOrder = {"acquirerIdentification", "merchantIdentification", "pOIIdentification", "protectedCardData", "plainCardData"})
 public class CardPaymentEnvironment21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcqrrId")
 	protected GenericIdentification32 acquirerIdentification;
 	/**
-	 * Acquirer involved in the card payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -142,7 +145,7 @@ public class CardPaymentEnvironment21 {
 	public static final MMMessageAssociationEnd mmAcquirerIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> AcquirerRole.mmObject();
-			componentContext_lazy = () -> CardPaymentEnvironment21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment21.mmObject();
 			isDerived = false;
 			xmlTag = "AcqrrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +159,11 @@ public class CardPaymentEnvironment21 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	@XmlElement(name = "MrchntId")
 	protected GenericIdentification32 merchantIdentification;
 	/**
-	 * Identification of the merchant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -205,7 +209,7 @@ public class CardPaymentEnvironment21 {
 	public static final MMMessageAssociationEnd mmMerchantIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> CardPaymentEnvironment21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment21.mmObject();
 			isDerived = false;
 			xmlTag = "MrchntId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,11 +223,11 @@ public class CardPaymentEnvironment21 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	@XmlElement(name = "POIId", required = true)
 	protected GenericIdentification32 pOIIdentification;
 	/**
-	 * Identification of the POI (Point Of Interaction) performing the
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -271,7 +275,7 @@ public class CardPaymentEnvironment21 {
 	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmPointOfInteraction;
-			componentContext_lazy = () -> CardPaymentEnvironment21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment21.mmObject();
 			isDerived = false;
 			xmlTag = "POIId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -285,11 +289,11 @@ public class CardPaymentEnvironment21 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctdCardData")
 	protected ContentInformationType7 protectedCardData;
 	/**
-	 * Replacement of the message element PlainCardData by a digital envelope
-	 * using a cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -323,7 +327,7 @@ public class CardPaymentEnvironment21 {
 	 */
 	public static final MMMessageAssociationEnd mmProtectedCardData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardPaymentEnvironment21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment21.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctdCardData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -336,10 +340,11 @@ public class CardPaymentEnvironment21 {
 			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType7.mmObject();
 		}
 	};
+	@XmlElement(name = "PlainCardData")
 	protected PlainCardData5 plainCardData;
 	/**
-	 * Payment card performing the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -377,7 +382,7 @@ public class CardPaymentEnvironment21 {
 	public static final MMMessageAttribute mmPlainCardData = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
-			componentContext_lazy = () -> CardPaymentEnvironment21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment21.mmObject();
 			isDerived = false;
 			xmlTag = "PlainCardData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -393,10 +398,11 @@ public class CardPaymentEnvironment21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardPaymentEnvironment21.mmAcquirerIdentification, CardPaymentEnvironment21.mmMerchantIdentification, CardPaymentEnvironment21.mmPOIIdentification,
-						CardPaymentEnvironment21.mmProtectedCardData, CardPaymentEnvironment21.mmPlainCardData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentEnvironment21.mmAcquirerIdentification, com.tools20022.repository.msg.CardPaymentEnvironment21.mmMerchantIdentification,
+						com.tools20022.repository.msg.CardPaymentEnvironment21.mmPOIIdentification, com.tools20022.repository.msg.CardPaymentEnvironment21.mmProtectedCardData,
+						com.tools20022.repository.msg.CardPaymentEnvironment21.mmPlainCardData);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentEnvironment21";
 				definition = "Environment of the transaction given in a response to a request.";
@@ -407,48 +413,48 @@ public class CardPaymentEnvironment21 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcqrrId")
-	public GenericIdentification32 getAcquirerIdentification() {
-		return acquirerIdentification;
+	public Optional<GenericIdentification32> getAcquirerIdentification() {
+		return acquirerIdentification == null ? Optional.empty() : Optional.of(acquirerIdentification);
 	}
 
-	public void setAcquirerIdentification(com.tools20022.repository.msg.GenericIdentification32 acquirerIdentification) {
+	public CardPaymentEnvironment21 setAcquirerIdentification(com.tools20022.repository.msg.GenericIdentification32 acquirerIdentification) {
 		this.acquirerIdentification = acquirerIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "MrchntId")
-	public GenericIdentification32 getMerchantIdentification() {
-		return merchantIdentification;
+	public Optional<GenericIdentification32> getMerchantIdentification() {
+		return merchantIdentification == null ? Optional.empty() : Optional.of(merchantIdentification);
 	}
 
-	public void setMerchantIdentification(com.tools20022.repository.msg.GenericIdentification32 merchantIdentification) {
+	public CardPaymentEnvironment21 setMerchantIdentification(com.tools20022.repository.msg.GenericIdentification32 merchantIdentification) {
 		this.merchantIdentification = merchantIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "POIId", required = true)
 	public GenericIdentification32 getPOIIdentification() {
 		return pOIIdentification;
 	}
 
-	public void setPOIIdentification(com.tools20022.repository.msg.GenericIdentification32 pOIIdentification) {
-		this.pOIIdentification = pOIIdentification;
+	public CardPaymentEnvironment21 setPOIIdentification(com.tools20022.repository.msg.GenericIdentification32 pOIIdentification) {
+		this.pOIIdentification = Objects.requireNonNull(pOIIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PrtctdCardData")
-	public ContentInformationType7 getProtectedCardData() {
-		return protectedCardData;
+	public Optional<ContentInformationType7> getProtectedCardData() {
+		return protectedCardData == null ? Optional.empty() : Optional.of(protectedCardData);
 	}
 
-	public void setProtectedCardData(com.tools20022.repository.msg.ContentInformationType7 protectedCardData) {
+	public CardPaymentEnvironment21 setProtectedCardData(com.tools20022.repository.msg.ContentInformationType7 protectedCardData) {
 		this.protectedCardData = protectedCardData;
+		return this;
 	}
 
-	@XmlElement(name = "PlainCardData")
-	public PlainCardData5 getPlainCardData() {
-		return plainCardData;
+	public Optional<PlainCardData5> getPlainCardData() {
+		return plainCardData == null ? Optional.empty() : Optional.of(plainCardData);
 	}
 
-	public void setPlainCardData(com.tools20022.repository.msg.PlainCardData5 plainCardData) {
+	public CardPaymentEnvironment21 setPlainCardData(com.tools20022.repository.msg.PlainCardData5 plainCardData) {
 		this.plainCardData = plainCardData;
+		return this;
 	}
 }

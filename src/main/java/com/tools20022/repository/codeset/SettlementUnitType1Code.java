@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SettlementUnitTypeCode;
+import com.tools20022.repository.codeset.SettlementUnitType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of settlement foreseen for the security.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SettlementUnitTypeCode
- * SettlementUnitTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementUnitType1Code#mmFaceAmount
- * SettlementUnitType1Code.mmFaceAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementUnitType1Code#FaceAmount
+ * SettlementUnitType1Code.FaceAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementUnitType1Code#mmUnit
- * SettlementUnitType1Code.mmUnit}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementUnitType1Code#Unit
+ * SettlementUnitType1Code.Unit}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SettlementUnitTypeCode
+ * SettlementUnitTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of settlement foreseen for the security."</li>
  * </ul>
  */
-public class SettlementUnitType1Code extends SettlementUnitTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SettlementUnitType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class SettlementUnitType1Code extends SettlementUnitTypeCode {
 	 * name} = "FaceAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFaceAmount = new MMCode() {
+	public static final SettlementUnitType1Code FaceAmount = new SettlementUnitType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaceAmount";
-			owner_lazy = () -> SettlementUnitType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementUnitType1Code.mmObject();
+			codeName = SettlementUnitTypeCode.FaceAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class SettlementUnitType1Code extends SettlementUnitTypeCode {
 	 * name} = "Unit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnit = new MMCode() {
+	public static final SettlementUnitType1Code Unit = new SettlementUnitType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
-			owner_lazy = () -> SettlementUnitType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementUnitType1Code.mmObject();
+			codeName = SettlementUnitTypeCode.Unit.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SettlementUnitType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SettlementUnitType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FAMT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementUnitType1Code";
 				definition = "Type of settlement foreseen for the security.";
-				code_lazy = () -> Arrays.asList(SettlementUnitType1Code.mmFaceAmount, SettlementUnitType1Code.mmUnit);
 				trace_lazy = () -> SettlementUnitTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementUnitType1Code.FaceAmount, com.tools20022.repository.codeset.SettlementUnitType1Code.Unit);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(FaceAmount.getCodeName().get(), FaceAmount);
+		codesByName.put(Unit.getCodeName().get(), Unit);
+	}
+
+	public static SettlementUnitType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SettlementUnitType1Code[] values() {
+		SettlementUnitType1Code[] values = new SettlementUnitType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SettlementUnitType1Code> {
+		@Override
+		public SettlementUnitType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SettlementUnitType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

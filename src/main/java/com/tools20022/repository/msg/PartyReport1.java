@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.PartyOrBusinessError1Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,16 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Report information about party reference data."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyReport1", propOrder = {"partyIdentification", "partyOrError"})
 public class PartyReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PtyId", required = true)
 	protected SystemPartyIdentification3 partyIdentification;
 	/**
-	 * Unique identification to unambiguously identify the party within the
-	 * system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,7 +100,7 @@ public class PartyReport1 {
 	 */
 	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyReport1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,10 +111,11 @@ public class PartyReport1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
 		}
 	};
+	@XmlElement(name = "PtyOrErr", required = true)
 	protected PartyOrBusinessError1Choice partyOrError;
 	/**
-	 * Identifies the returned party reference data or error information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -140,7 +142,7 @@ public class PartyReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmPartyOrError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyReport1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,8 +158,8 @@ public class PartyReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyReport1.mmPartyIdentification, PartyReport1.mmPartyOrError);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyReport1.mmPartyIdentification, com.tools20022.repository.msg.PartyReport1.mmPartyOrError);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyReport1";
 				definition = "Report information about party reference data.";
@@ -166,21 +168,21 @@ public class PartyReport1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PtyId", required = true)
 	public SystemPartyIdentification3 getPartyIdentification() {
 		return partyIdentification;
 	}
 
-	public void setPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 partyIdentification) {
-		this.partyIdentification = partyIdentification;
+	public PartyReport1 setPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 partyIdentification) {
+		this.partyIdentification = Objects.requireNonNull(partyIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PtyOrErr", required = true)
 	public PartyOrBusinessError1Choice getPartyOrError() {
 		return partyOrError;
 	}
 
-	public void setPartyOrError(PartyOrBusinessError1Choice partyOrError) {
-		this.partyOrError = partyOrError;
+	public PartyReport1 setPartyOrError(PartyOrBusinessError1Choice partyOrError) {
+		this.partyOrError = Objects.requireNonNull(partyOrError);
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AccountInformationTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of account information.
@@ -32,134 +37,134 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmSecuritiesCustodianAccountNumber
- * AccountInformationTypeCode.mmSecuritiesCustodianAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#SecuritiesCustodianAccountNumber
+ * AccountInformationTypeCode.SecuritiesCustodianAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmSecuritiesCustodianAccountName
- * AccountInformationTypeCode.mmSecuritiesCustodianAccountName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#SecuritiesCustodianAccountName
+ * AccountInformationTypeCode.SecuritiesCustodianAccountName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmMarginSettlementAccountNumber
- * AccountInformationTypeCode.mmMarginSettlementAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#MarginSettlementAccountNumber
+ * AccountInformationTypeCode.MarginSettlementAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmMarginCustodianAccountNumber
- * AccountInformationTypeCode.mmMarginCustodianAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#MarginCustodianAccountNumber
+ * AccountInformationTypeCode.MarginCustodianAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmMarginSettlementBankName
- * AccountInformationTypeCode.mmMarginSettlementBankName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#MarginSettlementBankName
+ * AccountInformationTypeCode.MarginSettlementBankName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmIntermediaryBankNameOfContraCurrency
- * AccountInformationTypeCode.mmIntermediaryBankNameOfContraCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#IntermediaryBankNameOfContraCurrency
+ * AccountInformationTypeCode.IntermediaryBankNameOfContraCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmBeneficiaryInstitutionNameOfDealtCurrency
- * AccountInformationTypeCode.mmBeneficiaryInstitutionNameOfDealtCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#BeneficiaryInstitutionNameOfDealtCurrency
+ * AccountInformationTypeCode.BeneficiaryInstitutionNameOfDealtCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmCorrespondentBankBICCodeOfContraCurrency
- * AccountInformationTypeCode.mmCorrespondentBankBICCodeOfContraCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#CorrespondentBankBICCodeOfContraCurrency
+ * AccountInformationTypeCode.CorrespondentBankBICCodeOfContraCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmBeneficiaryInstitutionBICCodeOfDealtCurrency
- * AccountInformationTypeCode.mmBeneficiaryInstitutionBICCodeOfDealtCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#BeneficiaryInstitutionBICCodeOfDealtCurrency
+ * AccountInformationTypeCode.BeneficiaryInstitutionBICCodeOfDealtCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmCorrespondentBankNameOfContraCurrency
- * AccountInformationTypeCode.mmCorrespondentBankNameOfContraCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#CorrespondentBankNameOfContraCurrency
+ * AccountInformationTypeCode.CorrespondentBankNameOfContraCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmBeneficiaryInstitutionNumberOfDealtCurrency
- * AccountInformationTypeCode.mmBeneficiaryInstitutionNumberOfDealtCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#BeneficiaryInstitutionNumberOfDealtCurrency
+ * AccountInformationTypeCode.BeneficiaryInstitutionNumberOfDealtCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmCorrespondentBankNumberOfContraCurrency
- * AccountInformationTypeCode.mmCorrespondentBankNumberOfContraCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#CorrespondentBankNumberOfContraCurrency
+ * AccountInformationTypeCode.CorrespondentBankNumberOfContraCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmCorrespondentBankNameOfDealtCurrency
- * AccountInformationTypeCode.mmCorrespondentBankNameOfDealtCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#CorrespondentBankNameOfDealtCurrency
+ * AccountInformationTypeCode.CorrespondentBankNameOfDealtCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmBeneficiaryInstitutionBICCodeOfContraCurrency
- * AccountInformationTypeCode.mmBeneficiaryInstitutionBICCodeOfContraCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#BeneficiaryInstitutionBICCodeOfContraCurrency
+ * AccountInformationTypeCode.BeneficiaryInstitutionBICCodeOfContraCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmCorrespondentBankBICCodeOfDealtCurrency
- * AccountInformationTypeCode.mmCorrespondentBankBICCodeOfDealtCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#CorrespondentBankBICCodeOfDealtCurrency
+ * AccountInformationTypeCode.CorrespondentBankBICCodeOfDealtCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmBeneficiaryInstitutionNameOfContraCurrency
- * AccountInformationTypeCode.mmBeneficiaryInstitutionNameOfContraCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#BeneficiaryInstitutionNameOfContraCurrency
+ * AccountInformationTypeCode.BeneficiaryInstitutionNameOfContraCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmCorrespondentBankNumberOfDealtCurrency
- * AccountInformationTypeCode.mmCorrespondentBankNumberOfDealtCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#CorrespondentBankNumberOfDealtCurrency
+ * AccountInformationTypeCode.CorrespondentBankNumberOfDealtCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmBeneficiaryInstitutionNumberOfContraCurrency
- * AccountInformationTypeCode.mmBeneficiaryInstitutionNumberOfContraCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#BeneficiaryInstitutionNumberOfContraCurrency
+ * AccountInformationTypeCode.BeneficiaryInstitutionNumberOfContraCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmIntermediaryBankNameOfDealtCurrency
- * AccountInformationTypeCode.mmIntermediaryBankNameOfDealtCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#IntermediaryBankNameOfDealtCurrency
+ * AccountInformationTypeCode.IntermediaryBankNameOfDealtCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmNoteOfContraCurrency
- * AccountInformationTypeCode.mmNoteOfContraCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#NoteOfContraCurrency
+ * AccountInformationTypeCode.NoteOfContraCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmIntermediaryBankBICCodeOfDealtCurrency
- * AccountInformationTypeCode.mmIntermediaryBankBICCodeOfDealtCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#IntermediaryBankBICCodeOfDealtCurrency
+ * AccountInformationTypeCode.IntermediaryBankBICCodeOfDealtCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmIntermediaryBankNumberOfContraCurrency
- * AccountInformationTypeCode.mmIntermediaryBankNumberOfContraCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#IntermediaryBankNumberOfContraCurrency
+ * AccountInformationTypeCode.IntermediaryBankNumberOfContraCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmIntermediaryBankNumberOfDealtCurrency
- * AccountInformationTypeCode.mmIntermediaryBankNumberOfDealtCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#IntermediaryBankNumberOfDealtCurrency
+ * AccountInformationTypeCode.IntermediaryBankNumberOfDealtCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmSecuritiesCustodianAccountChineseName
- * AccountInformationTypeCode.mmSecuritiesCustodianAccountChineseName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#SecuritiesCustodianAccountChineseName
+ * AccountInformationTypeCode.SecuritiesCustodianAccountChineseName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmCurrentAccount
- * AccountInformationTypeCode.mmCurrentAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#CurrentAccount
+ * AccountInformationTypeCode.CurrentAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmDepositAccount
- * AccountInformationTypeCode.mmDepositAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#DepositAccount
+ * AccountInformationTypeCode.DepositAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmMultiCurrencyAccountDescription
- * AccountInformationTypeCode.mmMultiCurrencyAccountDescription}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#MultiCurrencyAccountDescription
+ * AccountInformationTypeCode.MultiCurrencyAccountDescription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmOtherMarginSettlementAccountNumber
- * AccountInformationTypeCode.mmOtherMarginSettlementAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#OtherMarginSettlementAccountNumber
+ * AccountInformationTypeCode.OtherMarginSettlementAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmCFETSMarginSettlementAccountNumber
- * AccountInformationTypeCode.mmCFETSMarginSettlementAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#CFETSMarginSettlementAccountNumber
+ * AccountInformationTypeCode.CFETSMarginSettlementAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmSecuritiesCustodianInstitutionCode
- * AccountInformationTypeCode.mmSecuritiesCustodianInstitutionCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#SecuritiesCustodianInstitutionCode
+ * AccountInformationTypeCode.SecuritiesCustodianInstitutionCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmMarginCustodianInstitutionCode
- * AccountInformationTypeCode.mmMarginCustodianInstitutionCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#MarginCustodianInstitutionCode
+ * AccountInformationTypeCode.MarginCustodianInstitutionCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmMarginSettlementBankSortCode
- * AccountInformationTypeCode.mmMarginSettlementBankSortCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#MarginSettlementBankSortCode
+ * AccountInformationTypeCode.MarginSettlementBankSortCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmStatusOfCashAccount
- * AccountInformationTypeCode.mmStatusOfCashAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#StatusOfCashAccount
+ * AccountInformationTypeCode.StatusOfCashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmStatusOfSecuritiesCustodianAccount
- * AccountInformationTypeCode.mmStatusOfSecuritiesCustodianAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#StatusOfSecuritiesCustodianAccount
+ * AccountInformationTypeCode.StatusOfSecuritiesCustodianAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmMarginCustodianAccountName
- * AccountInformationTypeCode.mmMarginCustodianAccountName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#MarginCustodianAccountName
+ * AccountInformationTypeCode.MarginCustodianAccountName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmMarginSettlementAccountName
- * AccountInformationTypeCode.mmMarginSettlementAccountName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#MarginSettlementAccountName
+ * AccountInformationTypeCode.MarginSettlementAccountName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmFundCustodianAccountName
- * AccountInformationTypeCode.mmFundCustodianAccountName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#FundCustodianAccountName
+ * AccountInformationTypeCode.FundCustodianAccountName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmFundCustodianAccountNumber
- * AccountInformationTypeCode.mmFundCustodianAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#FundCustodianAccountNumber
+ * AccountInformationTypeCode.FundCustodianAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmFundCustodianBankName
- * AccountInformationTypeCode.mmFundCustodianBankName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#FundCustodianBankName
+ * AccountInformationTypeCode.FundCustodianBankName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmSecuritiesCustodianInstitutionName
- * AccountInformationTypeCode.mmSecuritiesCustodianInstitutionName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#SecuritiesCustodianInstitutionName
+ * AccountInformationTypeCode.SecuritiesCustodianInstitutionName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmMarginCustodianInstitutionName
- * AccountInformationTypeCode.mmMarginCustodianInstitutionName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#MarginCustodianInstitutionName
+ * AccountInformationTypeCode.MarginCustodianInstitutionName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmNoteOfDealtCurrency
- * AccountInformationTypeCode.mmNoteOfDealtCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#NoteOfDealtCurrency
+ * AccountInformationTypeCode.NoteOfDealtCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#mmIntermediaryBankBICCodeOfContraCurrency
- * AccountInformationTypeCode.mmIntermediaryBankBICCodeOfContraCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountInformationTypeCode#IntermediaryBankBICCodeOfContraCurrency
+ * AccountInformationTypeCode.IntermediaryBankBICCodeOfContraCurrency}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -173,8 +178,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -185,7 +190,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of account information."</li>
  * </ul>
  */
-public class AccountInformationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AccountInformationTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -209,12 +215,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Account number of securities custodians."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesCustodianAccountNumber = new MMCode() {
+	public static final AccountInformationTypeCode SecuritiesCustodianAccountNumber = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCustodianAccountNumber";
 			definition = "Account number of securities custodians.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "SCAN";
 		}
 	};
@@ -239,12 +245,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Account name of securities custodians."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesCustodianAccountName = new MMCode() {
+	public static final AccountInformationTypeCode SecuritiesCustodianAccountName = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCustodianAccountName";
 			definition = "Account name of securities custodians.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "SCAA";
 		}
 	};
@@ -269,12 +275,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Margin settlement account number of CDC."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarginSettlementAccountNumber = new MMCode() {
+	public static final AccountInformationTypeCode MarginSettlementAccountNumber = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginSettlementAccountNumber";
 			definition = "Margin settlement account number of CDC.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "MSAN";
 		}
 	};
@@ -299,12 +305,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Custodian account number of margin."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarginCustodianAccountNumber = new MMCode() {
+	public static final AccountInformationTypeCode MarginCustodianAccountNumber = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCustodianAccountNumber";
 			definition = "Custodian account number of margin.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "MCAN";
 		}
 	};
@@ -329,12 +335,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Settlement bank name of margin."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarginSettlementBankName = new MMCode() {
+	public static final AccountInformationTypeCode MarginSettlementBankName = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginSettlementBankName";
 			definition = "Settlement bank name of margin.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "MSBN";
 		}
 	};
@@ -359,12 +365,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Name of intermediary bank for contra currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntermediaryBankNameOfContraCurrency = new MMCode() {
+	public static final AccountInformationTypeCode IntermediaryBankNameOfContraCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryBankNameOfContraCurrency";
 			definition = "Name of intermediary bank for contra currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "IBNC";
 		}
 	};
@@ -389,12 +395,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Name of beneficiary institution for dealt currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBeneficiaryInstitutionNameOfDealtCurrency = new MMCode() {
+	public static final AccountInformationTypeCode BeneficiaryInstitutionNameOfDealtCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryInstitutionNameOfDealtCurrency";
 			definition = "Name of beneficiary institution for dealt currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "BIND";
 		}
 	};
@@ -419,12 +425,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "BIC code of correspondent bank for contra currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorrespondentBankBICCodeOfContraCurrency = new MMCode() {
+	public static final AccountInformationTypeCode CorrespondentBankBICCodeOfContraCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankBICCodeOfContraCurrency";
 			definition = "BIC code of correspondent bank for contra currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "CBBC";
 		}
 	};
@@ -449,12 +455,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "BIC code of beneficiary institution for dealt currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBeneficiaryInstitutionBICCodeOfDealtCurrency = new MMCode() {
+	public static final AccountInformationTypeCode BeneficiaryInstitutionBICCodeOfDealtCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryInstitutionBICCodeOfDealtCurrency";
 			definition = "BIC code of beneficiary institution for dealt currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "BIBD";
 		}
 	};
@@ -479,12 +485,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Name of correspondent bank for contra currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorrespondentBankNameOfContraCurrency = new MMCode() {
+	public static final AccountInformationTypeCode CorrespondentBankNameOfContraCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankNameOfContraCurrency";
 			definition = "Name of correspondent bank for contra currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "CBNC";
 		}
 	};
@@ -509,12 +515,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Number of beneficiary institution for dealt currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBeneficiaryInstitutionNumberOfDealtCurrency = new MMCode() {
+	public static final AccountInformationTypeCode BeneficiaryInstitutionNumberOfDealtCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryInstitutionNumberOfDealtCurrency";
 			definition = "Number of beneficiary institution for dealt currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "BIDC";
 		}
 	};
@@ -539,12 +545,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Number of correspondent bank for contra currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorrespondentBankNumberOfContraCurrency = new MMCode() {
+	public static final AccountInformationTypeCode CorrespondentBankNumberOfContraCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankNumberOfContraCurrency";
 			definition = "Number of correspondent bank for contra currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "CBCC";
 		}
 	};
@@ -569,12 +575,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Name of correspondent bank for dealt currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorrespondentBankNameOfDealtCurrency = new MMCode() {
+	public static final AccountInformationTypeCode CorrespondentBankNameOfDealtCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankNameOfDealtCurrency";
 			definition = "Name of correspondent bank for dealt currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "CBND";
 		}
 	};
@@ -599,12 +605,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "BIC code of beneficiary institution for contra currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBeneficiaryInstitutionBICCodeOfContraCurrency = new MMCode() {
+	public static final AccountInformationTypeCode BeneficiaryInstitutionBICCodeOfContraCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryInstitutionBICCodeOfContraCurrency";
 			definition = "BIC code of beneficiary institution for contra currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "BIBC";
 		}
 	};
@@ -629,12 +635,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "BIC code of correspondent bank for dealt currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorrespondentBankBICCodeOfDealtCurrency = new MMCode() {
+	public static final AccountInformationTypeCode CorrespondentBankBICCodeOfDealtCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankBICCodeOfDealtCurrency";
 			definition = "BIC code of correspondent bank for dealt currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "CBBD";
 		}
 	};
@@ -659,12 +665,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Name of beneficiary institution for contra currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBeneficiaryInstitutionNameOfContraCurrency = new MMCode() {
+	public static final AccountInformationTypeCode BeneficiaryInstitutionNameOfContraCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryInstitutionNameOfContraCurrency";
 			definition = "Name of beneficiary institution for contra currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "BINC";
 		}
 	};
@@ -689,12 +695,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Number of correspondent bank for dealt currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorrespondentBankNumberOfDealtCurrency = new MMCode() {
+	public static final AccountInformationTypeCode CorrespondentBankNumberOfDealtCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankNumberOfDealtCurrency";
 			definition = "Number of correspondent bank for dealt currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "CBDC";
 		}
 	};
@@ -719,12 +725,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Number of beneficiary institution for contra currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBeneficiaryInstitutionNumberOfContraCurrency = new MMCode() {
+	public static final AccountInformationTypeCode BeneficiaryInstitutionNumberOfContraCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryInstitutionNumberOfContraCurrency";
 			definition = "Number of beneficiary institution for contra currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "BICC";
 		}
 	};
@@ -749,12 +755,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Name of intermediary bank for dealt currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntermediaryBankNameOfDealtCurrency = new MMCode() {
+	public static final AccountInformationTypeCode IntermediaryBankNameOfDealtCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryBankNameOfDealtCurrency";
 			definition = "Name of intermediary bank for dealt currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "IBND";
 		}
 	};
@@ -779,12 +785,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Note for contra currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoteOfContraCurrency = new MMCode() {
+	public static final AccountInformationTypeCode NoteOfContraCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoteOfContraCurrency";
 			definition = "Note for contra currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "NOCC";
 		}
 	};
@@ -809,12 +815,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "BIC code of intermediary bank for dealt currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntermediaryBankBICCodeOfDealtCurrency = new MMCode() {
+	public static final AccountInformationTypeCode IntermediaryBankBICCodeOfDealtCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryBankBICCodeOfDealtCurrency";
 			definition = "BIC code of intermediary bank for dealt currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "IBBD";
 		}
 	};
@@ -839,12 +845,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Number of intermediary bank for contra currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntermediaryBankNumberOfContraCurrency = new MMCode() {
+	public static final AccountInformationTypeCode IntermediaryBankNumberOfContraCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryBankNumberOfContraCurrency";
 			definition = "Number of intermediary bank for contra currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "IBCC";
 		}
 	};
@@ -869,12 +875,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Number of intermediary bank for dealt currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntermediaryBankNumberOfDealtCurrency = new MMCode() {
+	public static final AccountInformationTypeCode IntermediaryBankNumberOfDealtCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryBankNumberOfDealtCurrency";
 			definition = "Number of intermediary bank for dealt currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "IBDC";
 		}
 	};
@@ -899,12 +905,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Account chinese name of securities custodians."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesCustodianAccountChineseName = new MMCode() {
+	public static final AccountInformationTypeCode SecuritiesCustodianAccountChineseName = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCustodianAccountChineseName";
 			definition = "Account chinese name of securities custodians.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "SCAC";
 		}
 	};
@@ -929,12 +935,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Specifies the current account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrentAccount = new MMCode() {
+	public static final AccountInformationTypeCode CurrentAccount = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentAccount";
 			definition = "Specifies the current account.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "CUAC";
 		}
 	};
@@ -959,12 +965,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Specifies the deposit account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDepositAccount = new MMCode() {
+	public static final AccountInformationTypeCode DepositAccount = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositAccount";
 			definition = "Specifies the deposit account.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "DEAC";
 		}
 	};
@@ -989,12 +995,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Description of multi currency account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMultiCurrencyAccountDescription = new MMCode() {
+	public static final AccountInformationTypeCode MultiCurrencyAccountDescription = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiCurrencyAccountDescription";
 			definition = "Description of multi currency account.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "MCAD";
 		}
 	};
@@ -1019,12 +1025,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Margin settlement account number of other institutions."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherMarginSettlementAccountNumber = new MMCode() {
+	public static final AccountInformationTypeCode OtherMarginSettlementAccountNumber = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherMarginSettlementAccountNumber";
 			definition = "Margin settlement account number of other institutions.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "OMSA";
 		}
 	};
@@ -1049,12 +1055,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Margin settlement account number of CFETS."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCFETSMarginSettlementAccountNumber = new MMCode() {
+	public static final AccountInformationTypeCode CFETSMarginSettlementAccountNumber = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CFETSMarginSettlementAccountNumber";
 			definition = "Margin settlement account number of CFETS.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "CMSA";
 		}
 	};
@@ -1079,12 +1085,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Code of securities custodian institution."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesCustodianInstitutionCode = new MMCode() {
+	public static final AccountInformationTypeCode SecuritiesCustodianInstitutionCode = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCustodianInstitutionCode";
 			definition = "Code of securities custodian institution.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "SCIC";
 		}
 	};
@@ -1109,12 +1115,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Code of margin custodian institution."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarginCustodianInstitutionCode = new MMCode() {
+	public static final AccountInformationTypeCode MarginCustodianInstitutionCode = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCustodianInstitutionCode";
 			definition = "Code of margin custodian institution.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "MCIC";
 		}
 	};
@@ -1139,12 +1145,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Settlement bank sort code of margin."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarginSettlementBankSortCode = new MMCode() {
+	public static final AccountInformationTypeCode MarginSettlementBankSortCode = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginSettlementBankSortCode";
 			definition = "Settlement bank sort code of margin.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "MSBS";
 		}
 	};
@@ -1169,12 +1175,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Status of cash account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStatusOfCashAccount = new MMCode() {
+	public static final AccountInformationTypeCode StatusOfCashAccount = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusOfCashAccount";
 			definition = "Status of cash account.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "SOCA";
 		}
 	};
@@ -1199,12 +1205,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Status of securities custodian account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStatusOfSecuritiesCustodianAccount = new MMCode() {
+	public static final AccountInformationTypeCode StatusOfSecuritiesCustodianAccount = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusOfSecuritiesCustodianAccount";
 			definition = "Status of securities custodian account.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "SSCA";
 		}
 	};
@@ -1229,12 +1235,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Custodian account name of margin."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarginCustodianAccountName = new MMCode() {
+	public static final AccountInformationTypeCode MarginCustodianAccountName = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCustodianAccountName";
 			definition = "Custodian account name of margin.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "MCAA";
 		}
 	};
@@ -1259,12 +1265,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Settlement account name of margin."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarginSettlementAccountName = new MMCode() {
+	public static final AccountInformationTypeCode MarginSettlementAccountName = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginSettlementAccountName";
 			definition = "Settlement account name of margin.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "MSAA";
 		}
 	};
@@ -1289,12 +1295,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Account name of fund custodian."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFundCustodianAccountName = new MMCode() {
+	public static final AccountInformationTypeCode FundCustodianAccountName = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundCustodianAccountName";
 			definition = "Account name of fund custodian.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "FCAA";
 		}
 	};
@@ -1319,12 +1325,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Account number of fund custodian."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFundCustodianAccountNumber = new MMCode() {
+	public static final AccountInformationTypeCode FundCustodianAccountNumber = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundCustodianAccountNumber";
 			definition = "Account number of fund custodian.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "FCAN";
 		}
 	};
@@ -1349,12 +1355,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Name of fund custodian bank."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFundCustodianBankName = new MMCode() {
+	public static final AccountInformationTypeCode FundCustodianBankName = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundCustodianBankName";
 			definition = "Name of fund custodian bank.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "FCBN";
 		}
 	};
@@ -1379,12 +1385,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Name of securities custodian institution."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesCustodianInstitutionName = new MMCode() {
+	public static final AccountInformationTypeCode SecuritiesCustodianInstitutionName = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCustodianInstitutionName";
 			definition = "Name of securities custodian institution.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "SCIN";
 		}
 	};
@@ -1409,12 +1415,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Name of margin custodian institution."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarginCustodianInstitutionName = new MMCode() {
+	public static final AccountInformationTypeCode MarginCustodianInstitutionName = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCustodianInstitutionName";
 			definition = "Name of margin custodian institution.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "MCIN";
 		}
 	};
@@ -1439,12 +1445,12 @@ public class AccountInformationTypeCode {
 	 * definition} = "Note for dealt currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoteOfDealtCurrency = new MMCode() {
+	public static final AccountInformationTypeCode NoteOfDealtCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoteOfDealtCurrency";
 			definition = "Note for dealt currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "NODC";
 		}
 	};
@@ -1469,42 +1475,119 @@ public class AccountInformationTypeCode {
 	 * definition} = "BIC code of intermediary bank for contra currency."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntermediaryBankBICCodeOfContraCurrency = new MMCode() {
+	public static final AccountInformationTypeCode IntermediaryBankBICCodeOfContraCurrency = new AccountInformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryBankBICCodeOfContraCurrency";
 			definition = "BIC code of intermediary bank for contra currency.";
-			owner_lazy = () -> AccountInformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountInformationTypeCode.mmObject();
 			codeName = "IBBC";
 		}
 	};
+	final static private LinkedHashMap<String, AccountInformationTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AccountInformationTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountInformationTypeCode";
 				definition = "Specifies the type of account information.";
-				code_lazy = () -> Arrays.asList(AccountInformationTypeCode.mmSecuritiesCustodianAccountNumber, AccountInformationTypeCode.mmSecuritiesCustodianAccountName, AccountInformationTypeCode.mmMarginSettlementAccountNumber,
-						AccountInformationTypeCode.mmMarginCustodianAccountNumber, AccountInformationTypeCode.mmMarginSettlementBankName, AccountInformationTypeCode.mmIntermediaryBankNameOfContraCurrency,
-						AccountInformationTypeCode.mmBeneficiaryInstitutionNameOfDealtCurrency, AccountInformationTypeCode.mmCorrespondentBankBICCodeOfContraCurrency,
-						AccountInformationTypeCode.mmBeneficiaryInstitutionBICCodeOfDealtCurrency, AccountInformationTypeCode.mmCorrespondentBankNameOfContraCurrency,
-						AccountInformationTypeCode.mmBeneficiaryInstitutionNumberOfDealtCurrency, AccountInformationTypeCode.mmCorrespondentBankNumberOfContraCurrency, AccountInformationTypeCode.mmCorrespondentBankNameOfDealtCurrency,
-						AccountInformationTypeCode.mmBeneficiaryInstitutionBICCodeOfContraCurrency, AccountInformationTypeCode.mmCorrespondentBankBICCodeOfDealtCurrency,
-						AccountInformationTypeCode.mmBeneficiaryInstitutionNameOfContraCurrency, AccountInformationTypeCode.mmCorrespondentBankNumberOfDealtCurrency,
-						AccountInformationTypeCode.mmBeneficiaryInstitutionNumberOfContraCurrency, AccountInformationTypeCode.mmIntermediaryBankNameOfDealtCurrency, AccountInformationTypeCode.mmNoteOfContraCurrency,
-						AccountInformationTypeCode.mmIntermediaryBankBICCodeOfDealtCurrency, AccountInformationTypeCode.mmIntermediaryBankNumberOfContraCurrency, AccountInformationTypeCode.mmIntermediaryBankNumberOfDealtCurrency,
-						AccountInformationTypeCode.mmSecuritiesCustodianAccountChineseName, AccountInformationTypeCode.mmCurrentAccount, AccountInformationTypeCode.mmDepositAccount,
-						AccountInformationTypeCode.mmMultiCurrencyAccountDescription, AccountInformationTypeCode.mmOtherMarginSettlementAccountNumber, AccountInformationTypeCode.mmCFETSMarginSettlementAccountNumber,
-						AccountInformationTypeCode.mmSecuritiesCustodianInstitutionCode, AccountInformationTypeCode.mmMarginCustodianInstitutionCode, AccountInformationTypeCode.mmMarginSettlementBankSortCode,
-						AccountInformationTypeCode.mmStatusOfCashAccount, AccountInformationTypeCode.mmStatusOfSecuritiesCustodianAccount, AccountInformationTypeCode.mmMarginCustodianAccountName,
-						AccountInformationTypeCode.mmMarginSettlementAccountName, AccountInformationTypeCode.mmFundCustodianAccountName, AccountInformationTypeCode.mmFundCustodianAccountNumber,
-						AccountInformationTypeCode.mmFundCustodianBankName, AccountInformationTypeCode.mmSecuritiesCustodianInstitutionName, AccountInformationTypeCode.mmMarginCustodianInstitutionName,
-						AccountInformationTypeCode.mmNoteOfDealtCurrency, AccountInformationTypeCode.mmIntermediaryBankBICCodeOfContraCurrency);
 				derivation_lazy = () -> Arrays.asList(AccountInformationType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountInformationTypeCode.SecuritiesCustodianAccountNumber, com.tools20022.repository.codeset.AccountInformationTypeCode.SecuritiesCustodianAccountName,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.MarginSettlementAccountNumber, com.tools20022.repository.codeset.AccountInformationTypeCode.MarginCustodianAccountNumber,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.MarginSettlementBankName, com.tools20022.repository.codeset.AccountInformationTypeCode.IntermediaryBankNameOfContraCurrency,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.BeneficiaryInstitutionNameOfDealtCurrency, com.tools20022.repository.codeset.AccountInformationTypeCode.CorrespondentBankBICCodeOfContraCurrency,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.BeneficiaryInstitutionBICCodeOfDealtCurrency, com.tools20022.repository.codeset.AccountInformationTypeCode.CorrespondentBankNameOfContraCurrency,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.BeneficiaryInstitutionNumberOfDealtCurrency, com.tools20022.repository.codeset.AccountInformationTypeCode.CorrespondentBankNumberOfContraCurrency,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.CorrespondentBankNameOfDealtCurrency, com.tools20022.repository.codeset.AccountInformationTypeCode.BeneficiaryInstitutionBICCodeOfContraCurrency,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.CorrespondentBankBICCodeOfDealtCurrency, com.tools20022.repository.codeset.AccountInformationTypeCode.BeneficiaryInstitutionNameOfContraCurrency,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.CorrespondentBankNumberOfDealtCurrency, com.tools20022.repository.codeset.AccountInformationTypeCode.BeneficiaryInstitutionNumberOfContraCurrency,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.IntermediaryBankNameOfDealtCurrency, com.tools20022.repository.codeset.AccountInformationTypeCode.NoteOfContraCurrency,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.IntermediaryBankBICCodeOfDealtCurrency, com.tools20022.repository.codeset.AccountInformationTypeCode.IntermediaryBankNumberOfContraCurrency,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.IntermediaryBankNumberOfDealtCurrency, com.tools20022.repository.codeset.AccountInformationTypeCode.SecuritiesCustodianAccountChineseName,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.CurrentAccount, com.tools20022.repository.codeset.AccountInformationTypeCode.DepositAccount,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.MultiCurrencyAccountDescription, com.tools20022.repository.codeset.AccountInformationTypeCode.OtherMarginSettlementAccountNumber,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.CFETSMarginSettlementAccountNumber, com.tools20022.repository.codeset.AccountInformationTypeCode.SecuritiesCustodianInstitutionCode,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.MarginCustodianInstitutionCode, com.tools20022.repository.codeset.AccountInformationTypeCode.MarginSettlementBankSortCode,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.StatusOfCashAccount, com.tools20022.repository.codeset.AccountInformationTypeCode.StatusOfSecuritiesCustodianAccount,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.MarginCustodianAccountName, com.tools20022.repository.codeset.AccountInformationTypeCode.MarginSettlementAccountName,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.FundCustodianAccountName, com.tools20022.repository.codeset.AccountInformationTypeCode.FundCustodianAccountNumber,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.FundCustodianBankName, com.tools20022.repository.codeset.AccountInformationTypeCode.SecuritiesCustodianInstitutionName,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.MarginCustodianInstitutionName, com.tools20022.repository.codeset.AccountInformationTypeCode.NoteOfDealtCurrency,
+						com.tools20022.repository.codeset.AccountInformationTypeCode.IntermediaryBankBICCodeOfContraCurrency);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SecuritiesCustodianAccountNumber.getCodeName().get(), SecuritiesCustodianAccountNumber);
+		codesByName.put(SecuritiesCustodianAccountName.getCodeName().get(), SecuritiesCustodianAccountName);
+		codesByName.put(MarginSettlementAccountNumber.getCodeName().get(), MarginSettlementAccountNumber);
+		codesByName.put(MarginCustodianAccountNumber.getCodeName().get(), MarginCustodianAccountNumber);
+		codesByName.put(MarginSettlementBankName.getCodeName().get(), MarginSettlementBankName);
+		codesByName.put(IntermediaryBankNameOfContraCurrency.getCodeName().get(), IntermediaryBankNameOfContraCurrency);
+		codesByName.put(BeneficiaryInstitutionNameOfDealtCurrency.getCodeName().get(), BeneficiaryInstitutionNameOfDealtCurrency);
+		codesByName.put(CorrespondentBankBICCodeOfContraCurrency.getCodeName().get(), CorrespondentBankBICCodeOfContraCurrency);
+		codesByName.put(BeneficiaryInstitutionBICCodeOfDealtCurrency.getCodeName().get(), BeneficiaryInstitutionBICCodeOfDealtCurrency);
+		codesByName.put(CorrespondentBankNameOfContraCurrency.getCodeName().get(), CorrespondentBankNameOfContraCurrency);
+		codesByName.put(BeneficiaryInstitutionNumberOfDealtCurrency.getCodeName().get(), BeneficiaryInstitutionNumberOfDealtCurrency);
+		codesByName.put(CorrespondentBankNumberOfContraCurrency.getCodeName().get(), CorrespondentBankNumberOfContraCurrency);
+		codesByName.put(CorrespondentBankNameOfDealtCurrency.getCodeName().get(), CorrespondentBankNameOfDealtCurrency);
+		codesByName.put(BeneficiaryInstitutionBICCodeOfContraCurrency.getCodeName().get(), BeneficiaryInstitutionBICCodeOfContraCurrency);
+		codesByName.put(CorrespondentBankBICCodeOfDealtCurrency.getCodeName().get(), CorrespondentBankBICCodeOfDealtCurrency);
+		codesByName.put(BeneficiaryInstitutionNameOfContraCurrency.getCodeName().get(), BeneficiaryInstitutionNameOfContraCurrency);
+		codesByName.put(CorrespondentBankNumberOfDealtCurrency.getCodeName().get(), CorrespondentBankNumberOfDealtCurrency);
+		codesByName.put(BeneficiaryInstitutionNumberOfContraCurrency.getCodeName().get(), BeneficiaryInstitutionNumberOfContraCurrency);
+		codesByName.put(IntermediaryBankNameOfDealtCurrency.getCodeName().get(), IntermediaryBankNameOfDealtCurrency);
+		codesByName.put(NoteOfContraCurrency.getCodeName().get(), NoteOfContraCurrency);
+		codesByName.put(IntermediaryBankBICCodeOfDealtCurrency.getCodeName().get(), IntermediaryBankBICCodeOfDealtCurrency);
+		codesByName.put(IntermediaryBankNumberOfContraCurrency.getCodeName().get(), IntermediaryBankNumberOfContraCurrency);
+		codesByName.put(IntermediaryBankNumberOfDealtCurrency.getCodeName().get(), IntermediaryBankNumberOfDealtCurrency);
+		codesByName.put(SecuritiesCustodianAccountChineseName.getCodeName().get(), SecuritiesCustodianAccountChineseName);
+		codesByName.put(CurrentAccount.getCodeName().get(), CurrentAccount);
+		codesByName.put(DepositAccount.getCodeName().get(), DepositAccount);
+		codesByName.put(MultiCurrencyAccountDescription.getCodeName().get(), MultiCurrencyAccountDescription);
+		codesByName.put(OtherMarginSettlementAccountNumber.getCodeName().get(), OtherMarginSettlementAccountNumber);
+		codesByName.put(CFETSMarginSettlementAccountNumber.getCodeName().get(), CFETSMarginSettlementAccountNumber);
+		codesByName.put(SecuritiesCustodianInstitutionCode.getCodeName().get(), SecuritiesCustodianInstitutionCode);
+		codesByName.put(MarginCustodianInstitutionCode.getCodeName().get(), MarginCustodianInstitutionCode);
+		codesByName.put(MarginSettlementBankSortCode.getCodeName().get(), MarginSettlementBankSortCode);
+		codesByName.put(StatusOfCashAccount.getCodeName().get(), StatusOfCashAccount);
+		codesByName.put(StatusOfSecuritiesCustodianAccount.getCodeName().get(), StatusOfSecuritiesCustodianAccount);
+		codesByName.put(MarginCustodianAccountName.getCodeName().get(), MarginCustodianAccountName);
+		codesByName.put(MarginSettlementAccountName.getCodeName().get(), MarginSettlementAccountName);
+		codesByName.put(FundCustodianAccountName.getCodeName().get(), FundCustodianAccountName);
+		codesByName.put(FundCustodianAccountNumber.getCodeName().get(), FundCustodianAccountNumber);
+		codesByName.put(FundCustodianBankName.getCodeName().get(), FundCustodianBankName);
+		codesByName.put(SecuritiesCustodianInstitutionName.getCodeName().get(), SecuritiesCustodianInstitutionName);
+		codesByName.put(MarginCustodianInstitutionName.getCodeName().get(), MarginCustodianInstitutionName);
+		codesByName.put(NoteOfDealtCurrency.getCodeName().get(), NoteOfDealtCurrency);
+		codesByName.put(IntermediaryBankBICCodeOfContraCurrency.getCodeName().get(), IntermediaryBankBICCodeOfContraCurrency);
+	}
+
+	public static AccountInformationTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AccountInformationTypeCode[] values() {
+		AccountInformationTypeCode[] values = new AccountInformationTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AccountInformationTypeCode> {
+		@Override
+		public AccountInformationTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AccountInformationTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

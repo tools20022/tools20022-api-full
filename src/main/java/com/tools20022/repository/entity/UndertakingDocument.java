@@ -31,6 +31,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Document presented.
@@ -41,6 +42,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.FinancialDocument
+ * FinancialDocument}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -59,30 +63,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.UndertakingDocument#mmDemand
  * UndertakingDocument.mmDemand}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.FinancialDocument
- * FinancialDocument}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.UndertakingDocumentType1Choice
- * UndertakingDocumentType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.DocumentFormat1Choice
- * DocumentFormat1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Document9 Document9}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PresentationDocumentFormat1Choice
- * PresentationDocumentFormat1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Document11 Document11}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.UndertakingDocumentType2Choice
- * UndertakingDocumentType2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Document10 Document10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Document8 Document8}</li>
  * </ul>
  * </li>
  * <li>
@@ -111,10 +91,31 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.UndertakingDocumentType1Choice
+ * UndertakingDocumentType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.DocumentFormat1Choice
+ * DocumentFormat1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Document9 Document9}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PresentationDocumentFormat1Choice
+ * PresentationDocumentFormat1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Document11 Document11}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.UndertakingDocumentType2Choice
+ * UndertakingDocumentType2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Document10 Document10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Document8 Document8}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -130,8 +131,8 @@ public class UndertakingDocument extends FinancialDocument {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected ExternalUndertakingDocumentTypeCode documentType;
 	/**
-	 * Type of document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -182,8 +183,8 @@ public class UndertakingDocument extends FinancialDocument {
 		{
 			derivation_lazy = () -> Arrays.asList(UndertakingDocumentType1Choice.mmCode, UndertakingDocumentType1Choice.mmProprietary, Document9.mmType, UndertakingDocumentType2Choice.mmCode, UndertakingDocumentType2Choice.mmProprietary,
 					Document10.mmDocumentType, Document8.mmType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DocumentType";
 			definition = "Type of document.";
@@ -202,8 +203,8 @@ public class UndertakingDocument extends FinancialDocument {
 	};
 	protected ExternalDocumentFormatCode format;
 	/**
-	 * Format of the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -257,8 +258,8 @@ public class UndertakingDocument extends FinancialDocument {
 		{
 			derivation_lazy = () -> Arrays.asList(DocumentFormat1Choice.mmCode, DocumentFormat1Choice.mmProprietary, Document9.mmFormat, PresentationDocumentFormat1Choice.mmCode, PresentationDocumentFormat1Choice.mmProprietary,
 					Presentation3.mmFormat, Document11.mmType, Document10.mmDocumentFormat);
-			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Format";
 			definition = "Format of the document.";
@@ -277,8 +278,8 @@ public class UndertakingDocument extends FinancialDocument {
 	};
 	protected Undertaking undertaking;
 	/**
-	 * Undertaking for which document content is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -311,8 +312,8 @@ public class UndertakingDocument extends FinancialDocument {
 	 */
 	public static final MMBusinessAssociationEnd mmUndertaking = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Undertaking";
 			definition = "Undertaking for which document content is specified.";
@@ -325,8 +326,8 @@ public class UndertakingDocument extends FinancialDocument {
 	};
 	protected YesNoIndicator copyIndicator;
 	/**
-	 * Indicates whether the document is a copy.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -360,8 +361,8 @@ public class UndertakingDocument extends FinancialDocument {
 	public static final MMBusinessAttribute mmCopyIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Document10.mmCopyIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CopyIndicator";
 			definition = "Indicates whether the document is a copy.";
@@ -380,8 +381,8 @@ public class UndertakingDocument extends FinancialDocument {
 	};
 	protected Demand demand;
 	/**
-	 * Demand for which associated documents are specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -413,8 +414,8 @@ public class UndertakingDocument extends FinancialDocument {
 	 */
 	public static final MMBusinessAssociationEnd mmDemand = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Demand";
 			definition = "Demand for which associated documents are specified.";
@@ -429,7 +430,7 @@ public class UndertakingDocument extends FinancialDocument {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingDocument";
 				definition = "Document presented.";
@@ -454,39 +455,44 @@ public class UndertakingDocument extends FinancialDocument {
 		return documentType;
 	}
 
-	public void setDocumentType(ExternalUndertakingDocumentTypeCode documentType) {
-		this.documentType = documentType;
+	public UndertakingDocument setDocumentType(ExternalUndertakingDocumentTypeCode documentType) {
+		this.documentType = Objects.requireNonNull(documentType);
+		return this;
 	}
 
 	public ExternalDocumentFormatCode getFormat() {
 		return format;
 	}
 
-	public void setFormat(ExternalDocumentFormatCode format) {
-		this.format = format;
+	public UndertakingDocument setFormat(ExternalDocumentFormatCode format) {
+		this.format = Objects.requireNonNull(format);
+		return this;
 	}
 
 	public Undertaking getUndertaking() {
 		return undertaking;
 	}
 
-	public void setUndertaking(com.tools20022.repository.entity.Undertaking undertaking) {
-		this.undertaking = undertaking;
+	public UndertakingDocument setUndertaking(com.tools20022.repository.entity.Undertaking undertaking) {
+		this.undertaking = Objects.requireNonNull(undertaking);
+		return this;
 	}
 
 	public YesNoIndicator getCopyIndicator() {
 		return copyIndicator;
 	}
 
-	public void setCopyIndicator(YesNoIndicator copyIndicator) {
-		this.copyIndicator = copyIndicator;
+	public UndertakingDocument setCopyIndicator(YesNoIndicator copyIndicator) {
+		this.copyIndicator = Objects.requireNonNull(copyIndicator);
+		return this;
 	}
 
 	public Demand getDemand() {
 		return demand;
 	}
 
-	public void setDemand(com.tools20022.repository.entity.Demand demand) {
-		this.demand = demand;
+	public UndertakingDocument setDemand(com.tools20022.repository.entity.Demand demand) {
+		this.demand = Objects.requireNonNull(demand);
+		return this;
 	}
 }

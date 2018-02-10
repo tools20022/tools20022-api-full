@@ -24,6 +24,8 @@ import com.tools20022.repository.area.catm.StatusReportV04;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * StatusReport3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "StatusReport4", propOrder = {"POIIdentification", "terminalManagerIdentification", "dataSet"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "StatusReport4", propOrder = {"pOIIdentification", "terminalManagerIdentification", "dataSet"})
 public class StatusReport4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "POIId", required = true)
 	protected GenericIdentification71 pOIIdentification;
 	/**
-	 * Identification of the point of interaction for terminal management.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -132,7 +135,7 @@ public class StatusReport4 {
 	 */
 	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusReport4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReport4.mmObject();
 			isDerived = false;
 			xmlTag = "POIId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,11 +149,11 @@ public class StatusReport4 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
 		}
 	};
+	@XmlElement(name = "TermnlMgrId")
 	protected GenericIdentification71 terminalManagerIdentification;
 	/**
-	 * Identification of the terminal management system (TMS) to contact for the
-	 * maintenance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -191,7 +194,7 @@ public class StatusReport4 {
 	 */
 	public static final MMMessageAssociationEnd mmTerminalManagerIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusReport4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReport4.mmObject();
 			isDerived = false;
 			xmlTag = "TermnlMgrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,10 +208,11 @@ public class StatusReport4 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
 		}
 	};
+	@XmlElement(name = "DataSet", required = true)
 	protected TerminalManagementDataSet13 dataSet;
 	/**
-	 * Data related to a status report of a point of interaction (POI).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -247,7 +251,7 @@ public class StatusReport4 {
 	 */
 	public static final MMMessageAssociationEnd mmDataSet = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusReport4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReport4.mmObject();
 			isDerived = false;
 			xmlTag = "DataSet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -265,9 +269,10 @@ public class StatusReport4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatusReport4.mmPOIIdentification, StatusReport4.mmTerminalManagerIdentification, StatusReport4.mmDataSet);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReport4.mmPOIIdentification, com.tools20022.repository.msg.StatusReport4.mmTerminalManagerIdentification,
+						com.tools20022.repository.msg.StatusReport4.mmDataSet);
 				messageBuildingBlock_lazy = () -> Arrays.asList(StatusReportV04.mmStatusReport);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusReport4";
 				definition = "Status of the acceptor system containing the identification of the POI (Point Of Interaction), its components and their installed versions.";
@@ -278,30 +283,30 @@ public class StatusReport4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "POIId", required = true)
 	public GenericIdentification71 getPOIIdentification() {
 		return pOIIdentification;
 	}
 
-	public void setPOIIdentification(com.tools20022.repository.msg.GenericIdentification71 pOIIdentification) {
-		this.pOIIdentification = pOIIdentification;
+	public StatusReport4 setPOIIdentification(com.tools20022.repository.msg.GenericIdentification71 pOIIdentification) {
+		this.pOIIdentification = Objects.requireNonNull(pOIIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TermnlMgrId")
-	public GenericIdentification71 getTerminalManagerIdentification() {
-		return terminalManagerIdentification;
+	public Optional<GenericIdentification71> getTerminalManagerIdentification() {
+		return terminalManagerIdentification == null ? Optional.empty() : Optional.of(terminalManagerIdentification);
 	}
 
-	public void setTerminalManagerIdentification(com.tools20022.repository.msg.GenericIdentification71 terminalManagerIdentification) {
+	public StatusReport4 setTerminalManagerIdentification(com.tools20022.repository.msg.GenericIdentification71 terminalManagerIdentification) {
 		this.terminalManagerIdentification = terminalManagerIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "DataSet", required = true)
 	public TerminalManagementDataSet13 getDataSet() {
 		return dataSet;
 	}
 
-	public void setDataSet(com.tools20022.repository.msg.TerminalManagementDataSet13 dataSet) {
-		this.dataSet = dataSet;
+	public StatusReport4 setDataSet(com.tools20022.repository.msg.TerminalManagementDataSet13 dataSet) {
+		this.dataSet = Objects.requireNonNull(dataSet);
+		return this;
 	}
 }

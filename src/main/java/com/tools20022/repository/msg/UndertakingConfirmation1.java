@@ -27,9 +27,11 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Confirmation information for the issued undertaking."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UndertakingConfirmation1", propOrder = {"confirmer", "referenceNumber", "date", "confirmation"})
 public class UndertakingConfirmation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cnfrmr", required = true)
 	protected PartyIdentification43 confirmer;
 	/**
-	 * Party that adds its undertaking to honour the undertaking or amendment of
-	 * the undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -119,7 +121,7 @@ public class UndertakingConfirmation1 {
 	public static final MMMessageAssociationEnd mmConfirmer = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> UndertakingConfirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "Cnfrmr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,11 +133,11 @@ public class UndertakingConfirmation1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	@XmlElement(name = "RefNb", required = true)
 	protected Max35Text referenceNumber;
 	/**
-	 * Unique and unambiguous identifier assigned by the confirmer to the
-	 * undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +166,7 @@ public class UndertakingConfirmation1 {
 	 */
 	public static final MMMessageAttribute mmReferenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UndertakingConfirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "RefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,11 +177,11 @@ public class UndertakingConfirmation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Dt", required = true)
 	protected DateAndDateTimeChoice date;
 	/**
-	 * Date and time when the undertaking or amendment of the undertaking was
-	 * confirmed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,7 +217,7 @@ public class UndertakingConfirmation1 {
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmDateOfAdvice;
-			componentContext_lazy = () -> UndertakingConfirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,11 +228,11 @@ public class UndertakingConfirmation1 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Conf")
 	protected List<Max2000Text> confirmation;
 	/**
-	 * Confirmation of the undertaking or amendment of the confirmed
-	 * undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,7 +261,7 @@ public class UndertakingConfirmation1 {
 	 */
 	public static final MMMessageAttribute mmConfirmation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UndertakingConfirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingConfirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "Conf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -274,9 +276,10 @@ public class UndertakingConfirmation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UndertakingConfirmation1.mmConfirmer, UndertakingConfirmation1.mmReferenceNumber, UndertakingConfirmation1.mmDate, UndertakingConfirmation1.mmConfirmation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingConfirmation1.mmConfirmer, com.tools20022.repository.msg.UndertakingConfirmation1.mmReferenceNumber,
+						com.tools20022.repository.msg.UndertakingConfirmation1.mmDate, com.tools20022.repository.msg.UndertakingConfirmation1.mmConfirmation);
 				trace_lazy = () -> Undertaking.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingConfirmation1";
 				definition = "Confirmation information for the issued undertaking.";
@@ -285,39 +288,39 @@ public class UndertakingConfirmation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cnfrmr", required = true)
 	public PartyIdentification43 getConfirmer() {
 		return confirmer;
 	}
 
-	public void setConfirmer(com.tools20022.repository.msg.PartyIdentification43 confirmer) {
-		this.confirmer = confirmer;
+	public UndertakingConfirmation1 setConfirmer(com.tools20022.repository.msg.PartyIdentification43 confirmer) {
+		this.confirmer = Objects.requireNonNull(confirmer);
+		return this;
 	}
 
-	@XmlElement(name = "RefNb", required = true)
 	public Max35Text getReferenceNumber() {
 		return referenceNumber;
 	}
 
-	public void setReferenceNumber(Max35Text referenceNumber) {
-		this.referenceNumber = referenceNumber;
+	public UndertakingConfirmation1 setReferenceNumber(Max35Text referenceNumber) {
+		this.referenceNumber = Objects.requireNonNull(referenceNumber);
+		return this;
 	}
 
-	@XmlElement(name = "Dt", required = true)
 	public DateAndDateTimeChoice getDate() {
 		return date;
 	}
 
-	public void setDate(DateAndDateTimeChoice date) {
-		this.date = date;
+	public UndertakingConfirmation1 setDate(DateAndDateTimeChoice date) {
+		this.date = Objects.requireNonNull(date);
+		return this;
 	}
 
-	@XmlElement(name = "Conf")
 	public List<Max2000Text> getConfirmation() {
-		return confirmation;
+		return confirmation == null ? confirmation = new ArrayList<>() : confirmation;
 	}
 
-	public void setConfirmation(List<Max2000Text> confirmation) {
-		this.confirmation = confirmation;
+	public UndertakingConfirmation1 setConfirmation(List<Max2000Text> confirmation) {
+		this.confirmation = Objects.requireNonNull(confirmation);
+		return this;
 	}
 }

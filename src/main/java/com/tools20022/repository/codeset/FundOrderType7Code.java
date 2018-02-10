@@ -20,54 +20,58 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.FundOrderTypeCode;
+import com.tools20022.repository.codeset.FundOrderType7Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the fund order type.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType7Code#All
+ * FundOrderType7Code.All}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#SecuritiesPurchase
+ * FundOrderType7Code.SecuritiesPurchase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#SecuritiesSale
+ * FundOrderType7Code.SecuritiesSale}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#SwitchFrom
+ * FundOrderType7Code.SwitchFrom}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#SwitchTo
+ * FundOrderType7Code.SwitchTo}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#TransferIn
+ * FundOrderType7Code.TransferIn}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#TransferOut
+ * FundOrderType7Code.TransferOut}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#Subscription
+ * FundOrderType7Code.Subscription}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#Redemption
+ * FundOrderType7Code.Redemption}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode
  * FundOrderTypeCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType7Code#mmAll
- * FundOrderType7Code.mmAll}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#mmSecuritiesPurchase
- * FundOrderType7Code.mmSecuritiesPurchase}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#mmSecuritiesSale
- * FundOrderType7Code.mmSecuritiesSale}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#mmSwitchFrom
- * FundOrderType7Code.mmSwitchFrom}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#mmSwitchTo
- * FundOrderType7Code.mmSwitchTo}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#mmTransferIn
- * FundOrderType7Code.mmTransferIn}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#mmTransferOut
- * FundOrderType7Code.mmTransferOut}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#mmSubscription
- * FundOrderType7Code.mmSubscription}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType7Code#mmRedemption
- * FundOrderType7Code.mmRedemption}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the fund order type."</li>
  * </ul>
  */
-public class FundOrderType7Code extends FundOrderTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FundOrderType7Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,11 +102,12 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	 * name} = "All"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAll = new MMCode() {
+	public static final FundOrderType7Code All = new FundOrderType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
-			owner_lazy = () -> FundOrderType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderType7Code.mmObject();
+			codeName = FundOrderTypeCode.All.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -120,11 +126,12 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	 * name} = "SecuritiesPurchase"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesPurchase = new MMCode() {
+	public static final FundOrderType7Code SecuritiesPurchase = new FundOrderType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesPurchase";
-			owner_lazy = () -> FundOrderType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderType7Code.mmObject();
+			codeName = FundOrderTypeCode.SecuritiesPurchase.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -143,11 +150,12 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	 * name} = "SecuritiesSale"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesSale = new MMCode() {
+	public static final FundOrderType7Code SecuritiesSale = new FundOrderType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSale";
-			owner_lazy = () -> FundOrderType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderType7Code.mmObject();
+			codeName = FundOrderTypeCode.SecuritiesSale.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -166,11 +174,12 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	 * name} = "SwitchFrom"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSwitchFrom = new MMCode() {
+	public static final FundOrderType7Code SwitchFrom = new FundOrderType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchFrom";
-			owner_lazy = () -> FundOrderType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderType7Code.mmObject();
+			codeName = FundOrderTypeCode.SwitchFrom.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -189,11 +198,12 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	 * name} = "SwitchTo"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSwitchTo = new MMCode() {
+	public static final FundOrderType7Code SwitchTo = new FundOrderType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchTo";
-			owner_lazy = () -> FundOrderType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderType7Code.mmObject();
+			codeName = FundOrderTypeCode.SwitchTo.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -212,11 +222,12 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	 * name} = "TransferIn"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransferIn = new MMCode() {
+	public static final FundOrderType7Code TransferIn = new FundOrderType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferIn";
-			owner_lazy = () -> FundOrderType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderType7Code.mmObject();
+			codeName = FundOrderTypeCode.TransferIn.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -235,11 +246,12 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	 * name} = "TransferOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransferOut = new MMCode() {
+	public static final FundOrderType7Code TransferOut = new FundOrderType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferOut";
-			owner_lazy = () -> FundOrderType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderType7Code.mmObject();
+			codeName = FundOrderTypeCode.TransferOut.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -258,11 +270,12 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	 * name} = "Subscription"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubscription = new MMCode() {
+	public static final FundOrderType7Code Subscription = new FundOrderType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscription";
-			owner_lazy = () -> FundOrderType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderType7Code.mmObject();
+			codeName = FundOrderTypeCode.Subscription.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -281,26 +294,66 @@ public class FundOrderType7Code extends FundOrderTypeCode {
 	 * name} = "Redemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRedemption = new MMCode() {
+	public static final FundOrderType7Code Redemption = new FundOrderType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
-			owner_lazy = () -> FundOrderType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderType7Code.mmObject();
+			codeName = FundOrderTypeCode.Redemption.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, FundOrderType7Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FundOrderType7Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundOrderType7Code";
 				definition = "Specifies the fund order type.";
-				code_lazy = () -> Arrays.asList(FundOrderType7Code.mmAll, FundOrderType7Code.mmSecuritiesPurchase, FundOrderType7Code.mmSecuritiesSale, FundOrderType7Code.mmSwitchFrom, FundOrderType7Code.mmSwitchTo,
-						FundOrderType7Code.mmTransferIn, FundOrderType7Code.mmTransferOut, FundOrderType7Code.mmSubscription, FundOrderType7Code.mmRedemption);
 				trace_lazy = () -> FundOrderTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundOrderType7Code.All, com.tools20022.repository.codeset.FundOrderType7Code.SecuritiesPurchase,
+						com.tools20022.repository.codeset.FundOrderType7Code.SecuritiesSale, com.tools20022.repository.codeset.FundOrderType7Code.SwitchFrom, com.tools20022.repository.codeset.FundOrderType7Code.SwitchTo,
+						com.tools20022.repository.codeset.FundOrderType7Code.TransferIn, com.tools20022.repository.codeset.FundOrderType7Code.TransferOut, com.tools20022.repository.codeset.FundOrderType7Code.Subscription,
+						com.tools20022.repository.codeset.FundOrderType7Code.Redemption);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(All.getCodeName().get(), All);
+		codesByName.put(SecuritiesPurchase.getCodeName().get(), SecuritiesPurchase);
+		codesByName.put(SecuritiesSale.getCodeName().get(), SecuritiesSale);
+		codesByName.put(SwitchFrom.getCodeName().get(), SwitchFrom);
+		codesByName.put(SwitchTo.getCodeName().get(), SwitchTo);
+		codesByName.put(TransferIn.getCodeName().get(), TransferIn);
+		codesByName.put(TransferOut.getCodeName().get(), TransferOut);
+		codesByName.put(Subscription.getCodeName().get(), Subscription);
+		codesByName.put(Redemption.getCodeName().get(), Redemption);
+	}
+
+	public static FundOrderType7Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FundOrderType7Code[] values() {
+		FundOrderType7Code[] values = new FundOrderType7Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FundOrderType7Code> {
+		@Override
+		public FundOrderType7Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FundOrderType7Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

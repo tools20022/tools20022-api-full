@@ -17,12 +17,14 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,15 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between a date and period."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DateAndPeriod1Choice", propOrder = {"statementDate", "statementPeriod"})
 public class DateAndPeriod1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StmtDt", required = true)
 	protected DateAndDateTimeChoice statementDate;
 	/**
-	 * Date of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -84,6 +87,9 @@ public class DateAndPeriod1Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StmtDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::STAT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -96,9 +102,10 @@ public class DateAndPeriod1Choice {
 	 */
 	public static final MMMessageAttribute mmStatementDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndPeriod1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndPeriod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StmtDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::STAT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDate";
 			definition = "Date of the statement.";
@@ -107,10 +114,11 @@ public class DateAndPeriod1Choice {
 			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtPrd", required = true)
 	protected Period2Choice statementPeriod;
 	/**
-	 * Period for the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,6 +134,9 @@ public class DateAndPeriod1Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StmtPrd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a::STAT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -138,9 +149,10 @@ public class DateAndPeriod1Choice {
 	 */
 	public static final MMMessageAttribute mmStatementPeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndPeriod1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndPeriod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StmtPrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a::STAT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementPeriod";
 			definition = "Period for the statement.";
@@ -153,8 +165,8 @@ public class DateAndPeriod1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DateAndPeriod1Choice.mmStatementDate, DateAndPeriod1Choice.mmStatementPeriod);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateAndPeriod1Choice.mmStatementDate, com.tools20022.repository.choice.DateAndPeriod1Choice.mmStatementPeriod);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateAndPeriod1Choice";
 				definition = "Choice between a date and period.";
@@ -163,21 +175,21 @@ public class DateAndPeriod1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StmtDt", required = true)
 	public DateAndDateTimeChoice getStatementDate() {
 		return statementDate;
 	}
 
-	public void setStatementDate(com.tools20022.repository.choice.DateAndDateTimeChoice statementDate) {
-		this.statementDate = statementDate;
+	public DateAndPeriod1Choice setStatementDate(com.tools20022.repository.choice.DateAndDateTimeChoice statementDate) {
+		this.statementDate = Objects.requireNonNull(statementDate);
+		return this;
 	}
 
-	@XmlElement(name = "StmtPrd", required = true)
 	public Period2Choice getStatementPeriod() {
 		return statementPeriod;
 	}
 
-	public void setStatementPeriod(com.tools20022.repository.choice.Period2Choice statementPeriod) {
-		this.statementPeriod = statementPeriod;
+	public DateAndPeriod1Choice setStatementPeriod(com.tools20022.repository.choice.Period2Choice statementPeriod) {
+		this.statementPeriod = Objects.requireNonNull(statementPeriod);
+		return this;
 	}
 }

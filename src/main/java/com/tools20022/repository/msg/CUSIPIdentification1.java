@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,8 @@ import com.tools20022.repository.datatype.CUSIPIdentifier;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides the CUSIP identification of a security."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CUSIPIdentification1", propOrder = {"CUSIPCountry", "CUSIPIdentification"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CUSIPIdentification1", propOrder = {"cUSIPCountry", "cUSIPIdentification"})
 public class CUSIPIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CUSIPCtry")
 	protected CountryCode cUSIPCountry;
 	/**
-	 * Country in which the CUSIP has been assigned.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -85,6 +89,9 @@ public class CUSIPIdentification1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CUSIPCtry"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: CUSIP Country</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -97,9 +104,10 @@ public class CUSIPIdentification1 {
 	 */
 	public static final MMMessageAttribute mmCUSIPCountry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CUSIPIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CUSIPIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "CUSIPCtry";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "CUSIP Country"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CUSIPCountry";
 			definition = "Country in which the CUSIP has been assigned.";
@@ -108,10 +116,11 @@ public class CUSIPIdentification1 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CUSIPId", required = true)
 	protected CUSIPIdentifier cUSIPIdentification;
 	/**
-	 * CUSIP identification of the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -127,6 +136,9 @@ public class CUSIPIdentification1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CUSIPId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: CUSIP ID</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -139,9 +151,10 @@ public class CUSIPIdentification1 {
 	 */
 	public static final MMMessageAttribute mmCUSIPIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CUSIPIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CUSIPIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "CUSIPId";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "CUSIP ID"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CUSIPIdentification";
 			definition = "CUSIP identification of the security.";
@@ -154,8 +167,8 @@ public class CUSIPIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CUSIPIdentification1.mmCUSIPCountry, CUSIPIdentification1.mmCUSIPIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CUSIPIdentification1.mmCUSIPCountry, com.tools20022.repository.msg.CUSIPIdentification1.mmCUSIPIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CUSIPIdentification1";
 				definition = "Provides the CUSIP identification of a security.";
@@ -164,21 +177,21 @@ public class CUSIPIdentification1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CUSIPCtry")
-	public CountryCode getCUSIPCountry() {
-		return cUSIPCountry;
+	public Optional<CountryCode> getCUSIPCountry() {
+		return cUSIPCountry == null ? Optional.empty() : Optional.of(cUSIPCountry);
 	}
 
-	public void setCUSIPCountry(CountryCode cUSIPCountry) {
+	public CUSIPIdentification1 setCUSIPCountry(CountryCode cUSIPCountry) {
 		this.cUSIPCountry = cUSIPCountry;
+		return this;
 	}
 
-	@XmlElement(name = "CUSIPId", required = true)
 	public CUSIPIdentifier getCUSIPIdentification() {
 		return cUSIPIdentification;
 	}
 
-	public void setCUSIPIdentification(CUSIPIdentifier cUSIPIdentification) {
-		this.cUSIPIdentification = cUSIPIdentification;
+	public CUSIPIdentification1 setCUSIPIdentification(CUSIPIdentifier cUSIPIdentification) {
+		this.cUSIPIdentification = Objects.requireNonNull(cUSIPIdentification);
+		return this;
 	}
 }

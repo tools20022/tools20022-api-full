@@ -25,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Value given to a price analytic.
@@ -62,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,8 +80,8 @@ public class AnalyticsValue {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyAndAmount amount;
 	/**
-	 * Analytics expressed as a currency and value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,8 +107,8 @@ public class AnalyticsValue {
 	 */
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.AnalyticsValue.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AnalyticsValue.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Analytics expressed as a currency and value.";
@@ -126,8 +127,8 @@ public class AnalyticsValue {
 	};
 	protected PercentageRate rate;
 	/**
-	 * Analytics expressed as a rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,8 +154,8 @@ public class AnalyticsValue {
 	 */
 	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.AnalyticsValue.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AnalyticsValue.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
 			definition = "Analytics expressed as a rate.";
@@ -173,8 +174,8 @@ public class AnalyticsValue {
 	};
 	protected Number numberOfYears;
 	/**
-	 * Analytics expressed as a number of years.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,8 +200,8 @@ public class AnalyticsValue {
 	 */
 	public static final MMBusinessAttribute mmNumberOfYears = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.AnalyticsValue.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AnalyticsValue.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberOfYears";
 			definition = "Analytics expressed as a number of years.";
@@ -219,8 +220,8 @@ public class AnalyticsValue {
 	};
 	protected AnalyticsCalculation analyticsCalculation;
 	/**
-	 * Analytics calculation for which an analytics value is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -255,8 +256,8 @@ public class AnalyticsValue {
 	 */
 	public static final MMBusinessAssociationEnd mmAnalyticsCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.AnalyticsValue.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AnalyticsValue.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AnalyticsCalculation";
 			definition = "Analytics calculation for which an analytics value is specified.";
@@ -271,7 +272,7 @@ public class AnalyticsValue {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AnalyticsValue";
 				definition = "Value given to a price analytic.";
@@ -292,31 +293,35 @@ public class AnalyticsValue {
 		return amount;
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
-		this.amount = amount;
+	public AnalyticsValue setAmount(CurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
 	public PercentageRate getRate() {
 		return rate;
 	}
 
-	public void setRate(PercentageRate rate) {
-		this.rate = rate;
+	public AnalyticsValue setRate(PercentageRate rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 
 	public Number getNumberOfYears() {
 		return numberOfYears;
 	}
 
-	public void setNumberOfYears(Number numberOfYears) {
-		this.numberOfYears = numberOfYears;
+	public AnalyticsValue setNumberOfYears(Number numberOfYears) {
+		this.numberOfYears = Objects.requireNonNull(numberOfYears);
+		return this;
 	}
 
 	public AnalyticsCalculation getAnalyticsCalculation() {
 		return analyticsCalculation;
 	}
 
-	public void setAnalyticsCalculation(com.tools20022.repository.entity.AnalyticsCalculation analyticsCalculation) {
-		this.analyticsCalculation = analyticsCalculation;
+	public AnalyticsValue setAnalyticsCalculation(com.tools20022.repository.entity.AnalyticsCalculation analyticsCalculation) {
+		this.analyticsCalculation = Objects.requireNonNull(analyticsCalculation);
+		return this;
 	}
 }

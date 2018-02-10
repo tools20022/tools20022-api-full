@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * ChargesDetails1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ChargesDetails3", propOrder = {"type", "amountOrPercentage"})
 public class ChargesDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected ChargesType1Choice type;
 	/**
-	 * Specifies the type of charges as a code or free text.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -107,7 +109,7 @@ public class ChargesDetails3 {
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
-			componentContext_lazy = () -> ChargesDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +121,11 @@ public class ChargesDetails3 {
 			type_lazy = () -> ChargesType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtOrPctg", required = true)
 	protected AmountOrPercentage2Choice amountOrPercentage;
 	/**
-	 * Specifies if it is a fixed amount or a percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -149,7 +152,7 @@ public class ChargesDetails3 {
 	 */
 	public static final MMMessageAssociationEnd mmAmountOrPercentage = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ChargesDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "AmtOrPctg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,9 +168,9 @@ public class ChargesDetails3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ChargesDetails3.mmType, ChargesDetails3.mmAmountOrPercentage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargesDetails3.mmType, com.tools20022.repository.msg.ChargesDetails3.mmAmountOrPercentage);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargesDetails3";
 				definition = "Amount of money associated with a service.";
@@ -177,21 +180,21 @@ public class ChargesDetails3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public ChargesType1Choice getType() {
 		return type;
 	}
 
-	public void setType(ChargesType1Choice type) {
-		this.type = type;
+	public ChargesDetails3 setType(ChargesType1Choice type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "AmtOrPctg", required = true)
 	public AmountOrPercentage2Choice getAmountOrPercentage() {
 		return amountOrPercentage;
 	}
 
-	public void setAmountOrPercentage(AmountOrPercentage2Choice amountOrPercentage) {
-		this.amountOrPercentage = amountOrPercentage;
+	public ChargesDetails3 setAmountOrPercentage(AmountOrPercentage2Choice amountOrPercentage) {
+		this.amountOrPercentage = Objects.requireNonNull(amountOrPercentage);
+		return this;
 	}
 }

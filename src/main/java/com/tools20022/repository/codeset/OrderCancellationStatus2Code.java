@@ -17,43 +17,48 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OrderCancellationStatusCode;
+import com.tools20022.repository.codeset.OrderCancellationStatus2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the current status of the order cancellation request.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatusCode
- * OrderCancellationStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus2Code#mmSentToNextParty
- * OrderCancellationStatus2Code.mmSentToNextParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus2Code#SentToNextParty
+ * OrderCancellationStatus2Code.SentToNextParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus2Code#mmReceived
- * OrderCancellationStatus2Code.mmReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus2Code#Received
+ * OrderCancellationStatus2Code.Received}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus2Code#mmCancellationPending
- * OrderCancellationStatus2Code.mmCancellationPending}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus2Code#CancellationPending
+ * OrderCancellationStatus2Code.CancellationPending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus2Code#mmCancellationCompleted
- * OrderCancellationStatus2Code.mmCancellationCompleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus2Code#CancellationCompleted
+ * OrderCancellationStatus2Code.CancellationCompleted}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatusCode
+ * OrderCancellationStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the current status of the order cancellation request."</li>
  * </ul>
  */
-public class OrderCancellationStatus2Code extends OrderCancellationStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OrderCancellationStatus2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +90,12 @@ public class OrderCancellationStatus2Code extends OrderCancellationStatusCode {
 	 * name} = "SentToNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSentToNextParty = new MMCode() {
+	public static final OrderCancellationStatus2Code SentToNextParty = new OrderCancellationStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
-			owner_lazy = () -> OrderCancellationStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderCancellationStatus2Code.mmObject();
+			codeName = OrderCancellationStatusCode.SentToNextParty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,11 +114,12 @@ public class OrderCancellationStatus2Code extends OrderCancellationStatusCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceived = new MMCode() {
+	public static final OrderCancellationStatus2Code Received = new OrderCancellationStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
-			owner_lazy = () -> OrderCancellationStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderCancellationStatus2Code.mmObject();
+			codeName = OrderCancellationStatusCode.Received.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -123,6 +131,9 @@ public class OrderCancellationStatus2Code extends OrderCancellationStatusCode {
 	 * {@linkplain com.tools20022.repository.codeset.OrderCancellationStatus2Code
 	 * OrderCancellationStatus2Code}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -130,11 +141,13 @@ public class OrderCancellationStatus2Code extends OrderCancellationStatusCode {
 	 * name} = "CancellationPending"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellationPending = new MMCode() {
+	public static final OrderCancellationStatus2Code CancellationPending = new OrderCancellationStatus2Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationPending";
-			owner_lazy = () -> OrderCancellationStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderCancellationStatus2Code.mmObject();
+			codeName = OrderCancellationStatusCode.CancellationPending.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -153,26 +166,59 @@ public class OrderCancellationStatus2Code extends OrderCancellationStatusCode {
 	 * name} = "CancellationCompleted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellationCompleted = new MMCode() {
+	public static final OrderCancellationStatus2Code CancellationCompleted = new OrderCancellationStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationCompleted";
-			owner_lazy = () -> OrderCancellationStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderCancellationStatus2Code.mmObject();
+			codeName = OrderCancellationStatusCode.CancellationCompleted.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OrderCancellationStatus2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OrderCancellationStatus2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderCancellationStatus2Code";
 				definition = "Specifies the current status of the order cancellation request.";
-				code_lazy = () -> Arrays.asList(OrderCancellationStatus2Code.mmSentToNextParty, OrderCancellationStatus2Code.mmReceived, OrderCancellationStatus2Code.mmCancellationPending,
-						OrderCancellationStatus2Code.mmCancellationCompleted);
 				trace_lazy = () -> OrderCancellationStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderCancellationStatus2Code.SentToNextParty, com.tools20022.repository.codeset.OrderCancellationStatus2Code.Received,
+						com.tools20022.repository.codeset.OrderCancellationStatus2Code.CancellationPending, com.tools20022.repository.codeset.OrderCancellationStatus2Code.CancellationCompleted);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SentToNextParty.getCodeName().get(), SentToNextParty);
+		codesByName.put(Received.getCodeName().get(), Received);
+		codesByName.put(CancellationPending.getCodeName().get(), CancellationPending);
+		codesByName.put(CancellationCompleted.getCodeName().get(), CancellationCompleted);
+	}
+
+	public static OrderCancellationStatus2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OrderCancellationStatus2Code[] values() {
+		OrderCancellationStatus2Code[] values = new OrderCancellationStatus2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OrderCancellationStatus2Code> {
+		@Override
+		public OrderCancellationStatus2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OrderCancellationStatus2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

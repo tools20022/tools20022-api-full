@@ -20,81 +20,80 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TradeStatusCode;
+import com.tools20022.repository.codeset.TradeStatus4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of a trade in a central matching and settlement system.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus4Code#Rejected
+ * TradeStatus4Code.Rejected}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus4Code#Matched
+ * TradeStatus4Code.Matched}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus4Code#Suspended
+ * TradeStatus4Code.Suspended}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#SettlementMature
+ * TradeStatus4Code.SettlementMature}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#NotAuthorised
+ * TradeStatus4Code.NotAuthorised}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus4Code#Unmatched
+ * TradeStatus4Code.Unmatched}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus4Code#Split
+ * TradeStatus4Code.Split}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus4Code#Invalid
+ * TradeStatus4Code.Invalid}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#SettlementMemberNotAuthorised
+ * TradeStatus4Code.SettlementMemberNotAuthorised}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus4Code#Settled
+ * TradeStatus4Code.Settled}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus4Code#Rescinded
+ * TradeStatus4Code.Rescinded}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#SettlementMemberAuthorised
+ * TradeStatus4Code.SettlementMemberAuthorised}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus4Code#Validated
+ * TradeStatus4Code.Validated}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#RegulatoryChecked
+ * TradeStatus4Code.RegulatoryChecked}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#MatchedValued
+ * TradeStatus4Code.MatchedValued}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#PartiallySettled
+ * TradeStatus4Code.PartiallySettled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#RegulatorySuspended
+ * TradeStatus4Code.RegulatorySuspended}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#SettlementRejected
+ * TradeStatus4Code.SettlementRejected}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#OptionMature
+ * TradeStatus4Code.OptionMature}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.TradeStatusCode
  * TradeStatusCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmRejected
- * TradeStatus4Code.mmRejected}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmMatched
- * TradeStatus4Code.mmMatched}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmSuspended
- * TradeStatus4Code.mmSuspended}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmSettlementMature
- * TradeStatus4Code.mmSettlementMature}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmNotAuthorised
- * TradeStatus4Code.mmNotAuthorised}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmUnmatched
- * TradeStatus4Code.mmUnmatched}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmSplit
- * TradeStatus4Code.mmSplit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmInvalid
- * TradeStatus4Code.mmInvalid}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmSettlementMemberNotAuthorised
- * TradeStatus4Code.mmSettlementMemberNotAuthorised}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmSettled
- * TradeStatus4Code.mmSettled}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmRescinded
- * TradeStatus4Code.mmRescinded}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmSettlementMemberAuthorised
- * TradeStatus4Code.mmSettlementMemberAuthorised}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmValidated
- * TradeStatus4Code.mmValidated}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmRegulatoryChecked
- * TradeStatus4Code.mmRegulatoryChecked}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmMatchedValued
- * TradeStatus4Code.mmMatchedValued}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmPartiallySettled
- * TradeStatus4Code.mmPartiallySettled}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmRegulatorySuspended
- * TradeStatus4Code.mmRegulatorySuspended}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmSettlementRejected
- * TradeStatus4Code.mmSettlementRejected}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeStatus4Code#mmOptionMature
- * TradeStatus4Code.mmOptionMature}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -113,7 +112,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TradeStatus4Code extends TradeStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TradeStatus4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -132,11 +132,12 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final TradeStatus4Code Rejected = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -155,11 +156,12 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "Matched"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMatched = new MMCode() {
+	public static final TradeStatus4Code Matched = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.Matched.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -178,11 +180,12 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "Suspended"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuspended = new MMCode() {
+	public static final TradeStatus4Code Suspended = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.Suspended.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -201,11 +204,12 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "SettlementMature"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementMature = new MMCode() {
+	public static final TradeStatus4Code SettlementMature = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMature";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.SettlementMature.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -224,11 +228,12 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "NotAuthorised"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotAuthorised = new MMCode() {
+	public static final TradeStatus4Code NotAuthorised = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAuthorised";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.NotAuthorised.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -247,11 +252,12 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "Unmatched"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnmatched = new MMCode() {
+	public static final TradeStatus4Code Unmatched = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.Unmatched.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -270,11 +276,12 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "Split"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSplit = new MMCode() {
+	public static final TradeStatus4Code Split = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Split";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.Split.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -293,11 +300,12 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "Invalid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalid = new MMCode() {
+	public static final TradeStatus4Code Invalid = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invalid";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.Invalid.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -316,11 +324,12 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "SettlementMemberNotAuthorised"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementMemberNotAuthorised = new MMCode() {
+	public static final TradeStatus4Code SettlementMemberNotAuthorised = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMemberNotAuthorised";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.SettlementMemberNotAuthorised.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -339,11 +348,12 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "Settled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettled = new MMCode() {
+	public static final TradeStatus4Code Settled = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.Settled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -362,11 +372,12 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "Rescinded"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRescinded = new MMCode() {
+	public static final TradeStatus4Code Rescinded = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rescinded";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.Rescinded.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -385,11 +396,12 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "SettlementMemberAuthorised"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementMemberAuthorised = new MMCode() {
+	public static final TradeStatus4Code SettlementMemberAuthorised = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMemberAuthorised";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.SettlementMemberAuthorised.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -408,11 +420,12 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "Validated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmValidated = new MMCode() {
+	public static final TradeStatus4Code Validated = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Validated";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.Validated.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -431,11 +444,12 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "RegulatoryChecked"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegulatoryChecked = new MMCode() {
+	public static final TradeStatus4Code RegulatoryChecked = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryChecked";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.RegulatoryChecked.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -454,11 +468,12 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "MatchedValued"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMatchedValued = new MMCode() {
+	public static final TradeStatus4Code MatchedValued = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchedValued";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.MatchedValued.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -477,11 +492,12 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "PartiallySettled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartiallySettled = new MMCode() {
+	public static final TradeStatus4Code PartiallySettled = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallySettled";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.PartiallySettled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -500,11 +516,12 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "RegulatorySuspended"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegulatorySuspended = new MMCode() {
+	public static final TradeStatus4Code RegulatorySuspended = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatorySuspended";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.RegulatorySuspended.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -523,11 +540,12 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "SettlementRejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementRejected = new MMCode() {
+	public static final TradeStatus4Code SettlementRejected = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementRejected";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.SettlementRejected.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -546,29 +564,80 @@ public class TradeStatus4Code extends TradeStatusCode {
 	 * name} = "OptionMature"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOptionMature = new MMCode() {
+	public static final TradeStatus4Code OptionMature = new TradeStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionMature";
-			owner_lazy = () -> TradeStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatus4Code.mmObject();
+			codeName = TradeStatusCode.OptionMature.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TradeStatus4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TradeStatus4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RJCT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeStatus4Code";
 				definition = "Specifies the status of a trade in a central matching and settlement system.";
-				code_lazy = () -> Arrays.asList(TradeStatus4Code.mmRejected, TradeStatus4Code.mmMatched, TradeStatus4Code.mmSuspended, TradeStatus4Code.mmSettlementMature, TradeStatus4Code.mmNotAuthorised, TradeStatus4Code.mmUnmatched,
-						TradeStatus4Code.mmSplit, TradeStatus4Code.mmInvalid, TradeStatus4Code.mmSettlementMemberNotAuthorised, TradeStatus4Code.mmSettled, TradeStatus4Code.mmRescinded, TradeStatus4Code.mmSettlementMemberAuthorised,
-						TradeStatus4Code.mmValidated, TradeStatus4Code.mmRegulatoryChecked, TradeStatus4Code.mmMatchedValued, TradeStatus4Code.mmPartiallySettled, TradeStatus4Code.mmRegulatorySuspended,
-						TradeStatus4Code.mmSettlementRejected, TradeStatus4Code.mmOptionMature);
 				trace_lazy = () -> TradeStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus4Code.Rejected, com.tools20022.repository.codeset.TradeStatus4Code.Matched, com.tools20022.repository.codeset.TradeStatus4Code.Suspended,
+						com.tools20022.repository.codeset.TradeStatus4Code.SettlementMature, com.tools20022.repository.codeset.TradeStatus4Code.NotAuthorised, com.tools20022.repository.codeset.TradeStatus4Code.Unmatched,
+						com.tools20022.repository.codeset.TradeStatus4Code.Split, com.tools20022.repository.codeset.TradeStatus4Code.Invalid, com.tools20022.repository.codeset.TradeStatus4Code.SettlementMemberNotAuthorised,
+						com.tools20022.repository.codeset.TradeStatus4Code.Settled, com.tools20022.repository.codeset.TradeStatus4Code.Rescinded, com.tools20022.repository.codeset.TradeStatus4Code.SettlementMemberAuthorised,
+						com.tools20022.repository.codeset.TradeStatus4Code.Validated, com.tools20022.repository.codeset.TradeStatus4Code.RegulatoryChecked, com.tools20022.repository.codeset.TradeStatus4Code.MatchedValued,
+						com.tools20022.repository.codeset.TradeStatus4Code.PartiallySettled, com.tools20022.repository.codeset.TradeStatus4Code.RegulatorySuspended, com.tools20022.repository.codeset.TradeStatus4Code.SettlementRejected,
+						com.tools20022.repository.codeset.TradeStatus4Code.OptionMature);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+		codesByName.put(Matched.getCodeName().get(), Matched);
+		codesByName.put(Suspended.getCodeName().get(), Suspended);
+		codesByName.put(SettlementMature.getCodeName().get(), SettlementMature);
+		codesByName.put(NotAuthorised.getCodeName().get(), NotAuthorised);
+		codesByName.put(Unmatched.getCodeName().get(), Unmatched);
+		codesByName.put(Split.getCodeName().get(), Split);
+		codesByName.put(Invalid.getCodeName().get(), Invalid);
+		codesByName.put(SettlementMemberNotAuthorised.getCodeName().get(), SettlementMemberNotAuthorised);
+		codesByName.put(Settled.getCodeName().get(), Settled);
+		codesByName.put(Rescinded.getCodeName().get(), Rescinded);
+		codesByName.put(SettlementMemberAuthorised.getCodeName().get(), SettlementMemberAuthorised);
+		codesByName.put(Validated.getCodeName().get(), Validated);
+		codesByName.put(RegulatoryChecked.getCodeName().get(), RegulatoryChecked);
+		codesByName.put(MatchedValued.getCodeName().get(), MatchedValued);
+		codesByName.put(PartiallySettled.getCodeName().get(), PartiallySettled);
+		codesByName.put(RegulatorySuspended.getCodeName().get(), RegulatorySuspended);
+		codesByName.put(SettlementRejected.getCodeName().get(), SettlementRejected);
+		codesByName.put(OptionMature.getCodeName().get(), OptionMature);
+	}
+
+	public static TradeStatus4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TradeStatus4Code[] values() {
+		TradeStatus4Code[] values = new TradeStatus4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TradeStatus4Code> {
+		@Override
+		public TradeStatus4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TradeStatus4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

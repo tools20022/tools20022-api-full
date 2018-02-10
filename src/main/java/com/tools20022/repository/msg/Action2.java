@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Action2", propOrder = {"actionType", "messageToPresent"})
 public class Action2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ActnTp", required = true)
 	protected ActionType2Code actionType;
 	/**
-	 * Type of action to be performed by the POI (Point Of Interaction) system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +127,7 @@ public class Action2 {
 	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmActionType;
-			componentContext_lazy = () -> Action2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Action2.mmObject();
 			isDerived = false;
 			xmlTag = "ActnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +139,11 @@ public class Action2 {
 			simpleType_lazy = () -> ActionType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgToPres")
 	protected ActionMessage1 messageToPresent;
 	/**
-	 * Message to be displayed to the cardholder or the cashier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -178,7 +182,7 @@ public class Action2 {
 	public static final MMMessageAssociationEnd mmMessageToPresent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmActionMessage;
-			componentContext_lazy = () -> Action2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Action2.mmObject();
 			isDerived = false;
 			xmlTag = "MsgToPres";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,9 +199,9 @@ public class Action2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Action2.mmActionType, Action2.mmMessageToPresent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Action2.mmActionType, com.tools20022.repository.msg.Action2.mmMessageToPresent);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Action2";
 				definition = "Set of actions to be performed by the POI (Point Of Interaction) system.";
@@ -208,21 +212,21 @@ public class Action2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ActnTp", required = true)
 	public ActionType2Code getActionType() {
 		return actionType;
 	}
 
-	public void setActionType(ActionType2Code actionType) {
-		this.actionType = actionType;
+	public Action2 setActionType(ActionType2Code actionType) {
+		this.actionType = Objects.requireNonNull(actionType);
+		return this;
 	}
 
-	@XmlElement(name = "MsgToPres")
-	public ActionMessage1 getMessageToPresent() {
-		return messageToPresent;
+	public Optional<ActionMessage1> getMessageToPresent() {
+		return messageToPresent == null ? Optional.empty() : Optional.of(messageToPresent);
 	}
 
-	public void setMessageToPresent(com.tools20022.repository.msg.ActionMessage1 messageToPresent) {
+	public Action2 setMessageToPresent(com.tools20022.repository.msg.ActionMessage1 messageToPresent) {
 		this.messageToPresent = messageToPresent;
+		return this;
 	}
 }

@@ -20,37 +20,40 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.EventFrequencyCode;
+import com.tools20022.repository.codeset.EventFrequency6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the regularity of an event.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency6Code#Daily
+ * EventFrequency6Code.Daily}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency6Code#IntraDay
+ * EventFrequency6Code.IntraDay}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency6Code#OnDemand
+ * EventFrequency6Code.OnDemand}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.EventFrequencyCode
  * EventFrequencyCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency6Code#mmDaily
- * EventFrequency6Code.mmDaily}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency6Code#mmIntraDay
- * EventFrequency6Code.mmIntraDay}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency6Code#mmOnDemand
- * EventFrequency6Code.mmOnDemand}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the regularity of an event."</li>
  * </ul>
  */
-public class EventFrequency6Code extends EventFrequencyCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EventFrequency6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +90,12 @@ public class EventFrequency6Code extends EventFrequencyCode {
 	 * name} = "Daily"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDaily = new MMCode() {
+	public static final EventFrequency6Code Daily = new EventFrequency6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Daily";
-			owner_lazy = () -> EventFrequency6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency6Code.mmObject();
+			codeName = EventFrequencyCode.Daily.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +114,12 @@ public class EventFrequency6Code extends EventFrequencyCode {
 	 * name} = "IntraDay"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntraDay = new MMCode() {
+	public static final EventFrequency6Code IntraDay = new EventFrequency6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraDay";
-			owner_lazy = () -> EventFrequency6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency6Code.mmObject();
+			codeName = EventFrequencyCode.IntraDay.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +138,58 @@ public class EventFrequency6Code extends EventFrequencyCode {
 	 * name} = "OnDemand"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOnDemand = new MMCode() {
+	public static final EventFrequency6Code OnDemand = new EventFrequency6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnDemand";
-			owner_lazy = () -> EventFrequency6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency6Code.mmObject();
+			codeName = EventFrequencyCode.OnDemand.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, EventFrequency6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EventFrequency6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DAIL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventFrequency6Code";
 				definition = "Specifies the regularity of an event.";
-				code_lazy = () -> Arrays.asList(EventFrequency6Code.mmDaily, EventFrequency6Code.mmIntraDay, EventFrequency6Code.mmOnDemand);
 				trace_lazy = () -> EventFrequencyCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency6Code.Daily, com.tools20022.repository.codeset.EventFrequency6Code.IntraDay, com.tools20022.repository.codeset.EventFrequency6Code.OnDemand);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Daily.getCodeName().get(), Daily);
+		codesByName.put(IntraDay.getCodeName().get(), IntraDay);
+		codesByName.put(OnDemand.getCodeName().get(), OnDemand);
+	}
+
+	public static EventFrequency6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EventFrequency6Code[] values() {
+		EventFrequency6Code[] values = new EventFrequency6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EventFrequency6Code> {
+		@Override
+		public EventFrequency6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EventFrequency6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

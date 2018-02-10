@@ -28,6 +28,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SimpleIdentificationInformation4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,20 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * AccountIdentification1Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "AccountIdentification31Choice", propOrder = {"IBAN", "BBAN", "UPIC", "domesticAccount"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "AccountIdentification31Choice", propOrder = {"iBAN", "bBAN", "uPIC", "domesticAccount"})
 public class AccountIdentification31Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IBAN", required = true)
 	protected IBANIdentifier iBAN;
 	/**
-	 * International Bank Account Number (IBAN) - identifier used
-	 * internationally by financial institutions to uniquely identify the
-	 * account of a customer. Further specifications of the format and content
-	 * of the IBAN can be found in the standard ISO 13616
-	 * "Banking and related financial services - International Bank Account Number (IBAN)"
-	 * version 1997-10-01, or later revisions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,7 +130,7 @@ public class AccountIdentification31Choice {
 	public static final MMMessageAttribute mmIBAN = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmIBAN;
-			componentContext_lazy = () -> AccountIdentification31Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification31Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IBAN";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,13 +142,11 @@ public class AccountIdentification31Choice {
 			simpleType_lazy = () -> IBANIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "BBAN", required = true)
 	protected BBANIdentifier bBAN;
 	/**
-	 * Basic Bank Account Number (BBAN) - identifier used nationally by
-	 * financial institutions, ie, in individual countries, generally as part of
-	 * a National Account Numbering Scheme(s), to uniquely identify the account
-	 * of a customer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,7 +187,7 @@ public class AccountIdentification31Choice {
 	public static final MMMessageAttribute mmBBAN = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmBBAN;
-			componentContext_lazy = () -> AccountIdentification31Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification31Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BBAN";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,13 +199,11 @@ public class AccountIdentification31Choice {
 			simpleType_lazy = () -> BBANIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "UPIC", required = true)
 	protected UPICIdentifier uPIC;
 	/**
-	 * Universal Payment Identification Code (UPIC) - identifier used by the New
-	 * York Clearing House to mask confidential data, such as bank accounts and
-	 * bank routing numbers. UPIC numbers remain with business customers,
-	 * regardless of banking relationship changes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,7 +244,7 @@ public class AccountIdentification31Choice {
 	public static final MMMessageAttribute mmUPIC = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmUPIC;
-			componentContext_lazy = () -> AccountIdentification31Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification31Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UPIC";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,12 +256,11 @@ public class AccountIdentification31Choice {
 			simpleType_lazy = () -> UPICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "DmstAcct", required = true)
 	protected SimpleIdentificationInformation4 domesticAccount;
 	/**
-	 * Account number used by financial institutions in individual countries to
-	 * identify an account of a customer, but not necessarily the bank and
-	 * branch of the financial institution in which the account is held.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -309,7 +301,7 @@ public class AccountIdentification31Choice {
 	public static final MMMessageAttribute mmDomesticAccount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmProprietaryIdentification;
-			componentContext_lazy = () -> AccountIdentification31Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification31Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DmstAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,9 +317,10 @@ public class AccountIdentification31Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountIdentification31Choice.mmIBAN, AccountIdentification31Choice.mmBBAN, AccountIdentification31Choice.mmUPIC, AccountIdentification31Choice.mmDomesticAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification31Choice.mmIBAN, com.tools20022.repository.choice.AccountIdentification31Choice.mmBBAN,
+						com.tools20022.repository.choice.AccountIdentification31Choice.mmUPIC, com.tools20022.repository.choice.AccountIdentification31Choice.mmDomesticAccount);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification31Choice";
 				definition = "Unique identifier of an account, as assigned by the account servicer.";
@@ -337,39 +330,39 @@ public class AccountIdentification31Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IBAN", required = true)
 	public IBANIdentifier getIBAN() {
 		return iBAN;
 	}
 
-	public void setIBAN(IBANIdentifier iBAN) {
-		this.iBAN = iBAN;
+	public AccountIdentification31Choice setIBAN(IBANIdentifier iBAN) {
+		this.iBAN = Objects.requireNonNull(iBAN);
+		return this;
 	}
 
-	@XmlElement(name = "BBAN", required = true)
 	public BBANIdentifier getBBAN() {
 		return bBAN;
 	}
 
-	public void setBBAN(BBANIdentifier bBAN) {
-		this.bBAN = bBAN;
+	public AccountIdentification31Choice setBBAN(BBANIdentifier bBAN) {
+		this.bBAN = Objects.requireNonNull(bBAN);
+		return this;
 	}
 
-	@XmlElement(name = "UPIC", required = true)
 	public UPICIdentifier getUPIC() {
 		return uPIC;
 	}
 
-	public void setUPIC(UPICIdentifier uPIC) {
-		this.uPIC = uPIC;
+	public AccountIdentification31Choice setUPIC(UPICIdentifier uPIC) {
+		this.uPIC = Objects.requireNonNull(uPIC);
+		return this;
 	}
 
-	@XmlElement(name = "DmstAcct", required = true)
 	public SimpleIdentificationInformation4 getDomesticAccount() {
 		return domesticAccount;
 	}
 
-	public void setDomesticAccount(SimpleIdentificationInformation4 domesticAccount) {
-		this.domesticAccount = domesticAccount;
+	public AccountIdentification31Choice setDomesticAccount(SimpleIdentificationInformation4 domesticAccount) {
+		this.domesticAccount = Objects.requireNonNull(domesticAccount);
+		return this;
 	}
 }

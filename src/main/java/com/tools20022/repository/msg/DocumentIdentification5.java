@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -143,8 +144,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -156,15 +157,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Identifies a document by a unique identification and its issuer."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DocumentIdentification5", propOrder = {"identification", "identificationIssuer"})
 public class DocumentIdentification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Identification of a set of data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,7 +199,7 @@ public class DocumentIdentification5 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> DocumentIdentification5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,11 +210,11 @@ public class DocumentIdentification5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IdIssr", required = true)
 	protected BICIdentification1 identificationIssuer;
 	/**
-	 * Uniquely identifies the financial institution which has issued the
-	 * identification of the set of data by using a BIC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -246,7 +248,7 @@ public class DocumentIdentification5 {
 	public static final MMMessageAssociationEnd mmIdentificationIssuer = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
-			componentContext_lazy = () -> DocumentIdentification5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "IdIssr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -262,7 +264,7 @@ public class DocumentIdentification5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DocumentIdentification5.mmIdentification, DocumentIdentification5.mmIdentificationIssuer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification5.mmIdentification, com.tools20022.repository.msg.DocumentIdentification5.mmIdentificationIssuer);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcknowledgementV03.mmUserTransactionReference, AmendmentAcceptanceNotificationV03.mmUserTransactionReference, AmendmentRejectionNotificationV03.mmUserTransactionReference,
 						BaselineMatchReportV03.mmUserTransactionReference, BaselineReportV03.mmUserTransactionReference, DataSetMatchReportV03.mmUserTransactionReference, DeltaReportV03.mmUserTransactionReference,
 						ErrorReportV03.mmUserTransactionReference, FullPushThroughReportV03.mmUserTransactionReference, MisMatchAcceptanceNotificationV03.mmUserTransactionReference,
@@ -273,7 +275,7 @@ public class DocumentIdentification5 {
 						RoleAndBaselineRejectionNotificationV01.mmUserTransactionReference, FullPushThroughReportV04.mmUserTransactionReference, ForwardIntentToPayNotificationV02.mmUserTransactionReference,
 						BaselineReportV04.mmUserTransactionReference, FullPushThroughReportV05.mmUserTransactionReference);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification5";
 				definition = "Identifies a document by a unique identification and its issuer.";
@@ -282,21 +284,21 @@ public class DocumentIdentification5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public DocumentIdentification5 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "IdIssr", required = true)
 	public BICIdentification1 getIdentificationIssuer() {
 		return identificationIssuer;
 	}
 
-	public void setIdentificationIssuer(com.tools20022.repository.msg.BICIdentification1 identificationIssuer) {
-		this.identificationIssuer = identificationIssuer;
+	public DocumentIdentification5 setIdentificationIssuer(com.tools20022.repository.msg.BICIdentification1 identificationIssuer) {
+		this.identificationIssuer = Objects.requireNonNull(identificationIssuer);
+		return this;
 	}
 }

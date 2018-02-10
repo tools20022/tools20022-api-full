@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.Statement12;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -59,20 +61,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
- * SecuritiesEventsArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CorpActnInstrStmtRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -91,9 +79,44 @@ import javax.xml.bind.annotation.*;
  * CorporateActionInstructionStatementReportV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CorpActnInstrStmtRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
+ * SecuritiesEventsArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.042.001.03}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleAccountAndStatementDetailsRule#forCorporateActionInstructionStatementReportV03
+ * ConstraintMultipleAccountAndStatementDetailsRule.
+ * forCorporateActionInstructionStatementReportV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule#forCorporateActionInstructionStatementReportV03
+ * ConstraintCorporateActionEventAndBalanceRule.
+ * forCorporateActionInstructionStatementReportV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forCorporateActionInstructionStatementReportV03
+ * ConstraintCoexistenceCharacterSetXRule.
+ * forCorporateActionInstructionStatementReportV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forCorporateActionInstructionStatementReportV03
+ * ConstraintCoexistenceIdentificationRule.
+ * forCorporateActionInstructionStatementReportV03}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -118,17 +141,16 @@ import javax.xml.bind.annotation.*;
  * CorporateActionInstructionStatementReportV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionInstructionStatementReportV03", propOrder = {"pagination", "statementGeneralDetails", "accountAndStatementDetails", "supplementaryData"})
 public class CorporateActionInstructionStatementReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pgntn", required = true)
 	protected Pagination pagination;
 	/**
-	 * Page number of the message (within a statement) and continuation
-	 * indicator to indicate that the statement is to continue or that the
-	 * message is the last page of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,10 +191,11 @@ public class CorporateActionInstructionStatementReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "StmtGnlDtls", required = true)
 	protected Statement12 statementGeneralDetails;
 	/**
-	 * General characteristics related to a statement which reports information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,11 +236,11 @@ public class CorporateActionInstructionStatementReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctAndStmtDtls", required = true)
 	protected List<AccountIdentification23> accountAndStatementDetails;
 	/**
-	 * Account information and detailed account holdings information report for
-	 * corporate action events.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -258,11 +281,11 @@ public class CorporateActionInstructionStatementReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -307,6 +330,10 @@ public class CorporateActionInstructionStatementReportV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMultipleAccountAndStatementDetailsRule.forCorporateActionInstructionStatementReportV03,
+						com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule.forCorporateActionInstructionStatementReportV03,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionStatementReportV03,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionStatementReportV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstructionStatementReportV03";
 				definition = "Scope\r\nAn account servicer sends the CorporateActionInstructionStatementReport message to an account owner or its designated agent to report balances at the safekeeping account level for one or more corporate action events or at the corporate action event level for one or more safekeeping accounts.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate).\r\nusing the relevant elements in the business application header (BAH).\nISO 15022 - 20022 COEXISTENCE\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
@@ -337,43 +364,43 @@ public class CorporateActionInstructionStatementReportV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
 
-	public void setPagination(Pagination pagination) {
-		this.pagination = pagination;
+	public CorporateActionInstructionStatementReportV03 setPagination(Pagination pagination) {
+		this.pagination = Objects.requireNonNull(pagination);
+		return this;
 	}
 
-	@XmlElement(name = "StmtGnlDtls", required = true)
 	public Statement12 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
 
-	public void setStatementGeneralDetails(Statement12 statementGeneralDetails) {
-		this.statementGeneralDetails = statementGeneralDetails;
+	public CorporateActionInstructionStatementReportV03 setStatementGeneralDetails(Statement12 statementGeneralDetails) {
+		this.statementGeneralDetails = Objects.requireNonNull(statementGeneralDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AcctAndStmtDtls", required = true)
 	public List<AccountIdentification23> getAccountAndStatementDetails() {
-		return accountAndStatementDetails;
+		return accountAndStatementDetails == null ? accountAndStatementDetails = new ArrayList<>() : accountAndStatementDetails;
 	}
 
-	public void setAccountAndStatementDetails(List<AccountIdentification23> accountAndStatementDetails) {
-		this.accountAndStatementDetails = accountAndStatementDetails;
+	public CorporateActionInstructionStatementReportV03 setAccountAndStatementDetails(List<AccountIdentification23> accountAndStatementDetails) {
+		this.accountAndStatementDetails = Objects.requireNonNull(accountAndStatementDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public CorporateActionInstructionStatementReportV03 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.042.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.042.001.03")
 	static public class Document {
 		@XmlElement(name = "CorpActnInstrStmtRpt", required = true)
 		public CorporateActionInstructionStatementReportV03 messageBody;

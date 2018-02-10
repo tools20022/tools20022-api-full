@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +28,7 @@ import com.tools20022.repository.entity.SecuritiesOrderParameters;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * "The quantities, amount or price of a financial instrument to be ordered."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OrderQuantity3", propOrder = {"minimumQuantity", "price", "matchIncrement", "maxPriceLevels", "previousClosingPrice"})
 public class OrderQuantity3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MinQty")
 	protected FinancialInstrumentQuantityChoice minimumQuantity;
 	/**
-	 * Minimum quantity of financial instrument to be bought or sold if the
-	 * entire order cannot be executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,6 +107,9 @@ public class OrderQuantity3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MinQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 110</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -120,9 +125,10 @@ public class OrderQuantity3 {
 	public static final MMMessageAttribute mmMinimumQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmMinimumQuantity;
-			componentContext_lazy = () -> OrderQuantity3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderQuantity3.mmObject();
 			isDerived = false;
 			xmlTag = "MinQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "110"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumQuantity";
 			definition = "Minimum quantity of financial instrument to be bought or sold if the \nentire order cannot be executed.";
@@ -131,11 +137,11 @@ public class OrderQuantity3 {
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Pric")
 	protected Price1 price;
 	/**
-	 * Indicates the requested price for the order. This can be a "stop" price a
-	 * "limit" price or a "deal" price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,7 +174,7 @@ public class OrderQuantity3 {
 	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderPrice;
-			componentContext_lazy = () -> OrderQuantity3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderQuantity3.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,13 +185,11 @@ public class OrderQuantity3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	@XmlElement(name = "MtchIncrmt")
 	protected FinancialInstrumentQuantityChoice matchIncrement;
 	/**
-	 * Allows orders to specify a minimum quantity that applies to every
-	 * execution. (one execution could be for multiple counter-orders). The
-	 * order may still fill against smaller orders, but the cumulative quantity
-	 * of the execution must be in multiples of the MatchIncrement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -205,6 +209,9 @@ public class OrderQuantity3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MtchIncrmt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1089</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -220,9 +227,10 @@ public class OrderQuantity3 {
 	public static final MMMessageAttribute mmMatchIncrement = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmMatchIncrement;
-			componentContext_lazy = () -> OrderQuantity3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderQuantity3.mmObject();
 			isDerived = false;
 			xmlTag = "MtchIncrmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1089"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchIncrement";
 			definition = "Allows orders to specify a minimum quantity that applies to every execution. (one execution could be for multiple counter-orders). The order may still fill against smaller orders, but the cumulative quantity of the execution must be in multiples of the MatchIncrement.";
@@ -231,11 +239,11 @@ public class OrderQuantity3 {
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "MxPricLvls")
 	protected Number maxPriceLevels;
 	/**
-	 * Allows an order to specify a maximum number of price levels to trade
-	 * through.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -254,6 +262,9 @@ public class OrderQuantity3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MxPricLvls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1090</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -269,9 +280,10 @@ public class OrderQuantity3 {
 	public static final MMMessageAttribute mmMaxPriceLevels = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmMaxPriceLevels;
-			componentContext_lazy = () -> OrderQuantity3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderQuantity3.mmObject();
 			isDerived = false;
 			xmlTag = "MxPricLvls";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1090"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaxPriceLevels";
 			definition = "Allows an order to specify a maximum number of price levels to trade through.";
@@ -280,10 +292,11 @@ public class OrderQuantity3 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsClsgPric")
 	protected Price1 previousClosingPrice;
 	/**
-	 * Previous closing price of security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -301,6 +314,9 @@ public class OrderQuantity3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrvsClsgPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 140</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -314,9 +330,10 @@ public class OrderQuantity3 {
 	public static final MMMessageAttribute mmPreviousClosingPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmPreviousClosingPrice;
-			componentContext_lazy = () -> OrderQuantity3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderQuantity3.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsClsgPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "140"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousClosingPrice";
 			definition = "Previous closing price of security.";
@@ -329,9 +346,10 @@ public class OrderQuantity3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OrderQuantity3.mmMinimumQuantity, OrderQuantity3.mmPrice, OrderQuantity3.mmMatchIncrement, OrderQuantity3.mmMaxPriceLevels, OrderQuantity3.mmPreviousClosingPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderQuantity3.mmMinimumQuantity, com.tools20022.repository.msg.OrderQuantity3.mmPrice, com.tools20022.repository.msg.OrderQuantity3.mmMatchIncrement,
+						com.tools20022.repository.msg.OrderQuantity3.mmMaxPriceLevels, com.tools20022.repository.msg.OrderQuantity3.mmPreviousClosingPrice);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OrderQuantity3";
 				definition = "The quantities, amount or price of a financial instrument to be ordered.";
@@ -340,48 +358,48 @@ public class OrderQuantity3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MinQty")
-	public FinancialInstrumentQuantityChoice getMinimumQuantity() {
-		return minimumQuantity;
+	public Optional<FinancialInstrumentQuantityChoice> getMinimumQuantity() {
+		return minimumQuantity == null ? Optional.empty() : Optional.of(minimumQuantity);
 	}
 
-	public void setMinimumQuantity(FinancialInstrumentQuantityChoice minimumQuantity) {
+	public OrderQuantity3 setMinimumQuantity(FinancialInstrumentQuantityChoice minimumQuantity) {
 		this.minimumQuantity = minimumQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "Pric")
-	public Price1 getPrice() {
-		return price;
+	public Optional<Price1> getPrice() {
+		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public void setPrice(com.tools20022.repository.msg.Price1 price) {
+	public OrderQuantity3 setPrice(com.tools20022.repository.msg.Price1 price) {
 		this.price = price;
+		return this;
 	}
 
-	@XmlElement(name = "MtchIncrmt")
-	public FinancialInstrumentQuantityChoice getMatchIncrement() {
-		return matchIncrement;
+	public Optional<FinancialInstrumentQuantityChoice> getMatchIncrement() {
+		return matchIncrement == null ? Optional.empty() : Optional.of(matchIncrement);
 	}
 
-	public void setMatchIncrement(FinancialInstrumentQuantityChoice matchIncrement) {
+	public OrderQuantity3 setMatchIncrement(FinancialInstrumentQuantityChoice matchIncrement) {
 		this.matchIncrement = matchIncrement;
+		return this;
 	}
 
-	@XmlElement(name = "MxPricLvls")
-	public Number getMaxPriceLevels() {
-		return maxPriceLevels;
+	public Optional<Number> getMaxPriceLevels() {
+		return maxPriceLevels == null ? Optional.empty() : Optional.of(maxPriceLevels);
 	}
 
-	public void setMaxPriceLevels(Number maxPriceLevels) {
+	public OrderQuantity3 setMaxPriceLevels(Number maxPriceLevels) {
 		this.maxPriceLevels = maxPriceLevels;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsClsgPric")
-	public Price1 getPreviousClosingPrice() {
-		return previousClosingPrice;
+	public Optional<Price1> getPreviousClosingPrice() {
+		return previousClosingPrice == null ? Optional.empty() : Optional.of(previousClosingPrice);
 	}
 
-	public void setPreviousClosingPrice(com.tools20022.repository.msg.Price1 previousClosingPrice) {
+	public OrderQuantity3 setPreviousClosingPrice(com.tools20022.repository.msg.Price1 previousClosingPrice) {
 		this.previousClosingPrice = previousClosingPrice;
+		return this;
 	}
 }

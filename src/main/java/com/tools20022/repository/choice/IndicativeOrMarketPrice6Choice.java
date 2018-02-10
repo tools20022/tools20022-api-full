@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between an indicative price or a market price."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IndicativeOrMarketPrice6Choice", propOrder = {"indicativePrice", "marketPrice"})
 public class IndicativeOrMarketPrice6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IndctvPric", required = true)
 	protected PriceFormat25Choice indicativePrice;
 	/**
-	 * Estimated price, for example, for valuation purposes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -86,6 +89,9 @@ public class IndicativeOrMarketPrice6Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IndctvPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::INDC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -98,9 +104,10 @@ public class IndicativeOrMarketPrice6Choice {
 	 */
 	public static final MMMessageAssociationEnd mmIndicativePrice = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IndicativeOrMarketPrice6Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IndicativeOrMarketPrice6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndctvPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::INDC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndicativePrice";
 			definition = "Estimated price, for example, for valuation purposes.";
@@ -110,10 +117,11 @@ public class IndicativeOrMarketPrice6Choice {
 			type_lazy = () -> com.tools20022.repository.choice.PriceFormat25Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MktPric", required = true)
 	protected PriceFormat25Choice marketPrice;
 	/**
-	 * Last reported/known price of a financial instrument in a market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -126,6 +134,9 @@ public class IndicativeOrMarketPrice6Choice {
 	 * IndicativeOrMarketPrice6Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MktPric"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::MRKT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -140,9 +151,10 @@ public class IndicativeOrMarketPrice6Choice {
 	 */
 	public static final MMMessageAssociationEnd mmMarketPrice = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IndicativeOrMarketPrice6Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IndicativeOrMarketPrice6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MktPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::MRKT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPrice";
 			definition = "Last reported/known price of a financial instrument in a market.";
@@ -156,9 +168,9 @@ public class IndicativeOrMarketPrice6Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IndicativeOrMarketPrice6Choice.mmIndicativePrice, IndicativeOrMarketPrice6Choice.mmMarketPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndicativeOrMarketPrice6Choice.mmIndicativePrice, com.tools20022.repository.choice.IndicativeOrMarketPrice6Choice.mmMarketPrice);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndicativeOrMarketPrice6Choice";
 				definition = "Choice between an indicative price or a market price.";
@@ -167,21 +179,21 @@ public class IndicativeOrMarketPrice6Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IndctvPric", required = true)
 	public PriceFormat25Choice getIndicativePrice() {
 		return indicativePrice;
 	}
 
-	public void setIndicativePrice(com.tools20022.repository.choice.PriceFormat25Choice indicativePrice) {
-		this.indicativePrice = indicativePrice;
+	public IndicativeOrMarketPrice6Choice setIndicativePrice(com.tools20022.repository.choice.PriceFormat25Choice indicativePrice) {
+		this.indicativePrice = Objects.requireNonNull(indicativePrice);
+		return this;
 	}
 
-	@XmlElement(name = "MktPric", required = true)
 	public PriceFormat25Choice getMarketPrice() {
 		return marketPrice;
 	}
 
-	public void setMarketPrice(com.tools20022.repository.choice.PriceFormat25Choice marketPrice) {
-		this.marketPrice = marketPrice;
+	public IndicativeOrMarketPrice6Choice setMarketPrice(com.tools20022.repository.choice.PriceFormat25Choice marketPrice) {
+		this.marketPrice = Objects.requireNonNull(marketPrice);
+		return this;
 	}
 }

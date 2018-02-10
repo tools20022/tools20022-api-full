@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.TransactionOrError2Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * TransactionReport1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionReport2", propOrder = {"paymentIdentification", "transactionOrError"})
 public class TransactionReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmtId", required = true)
 	protected PaymentIdentification4Choice paymentIdentification;
 	/**
-	 * Reference to the instruction related to the payment for which information
-	 * is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +110,7 @@ public class TransactionReport2 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReport2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,11 +123,11 @@ public class TransactionReport2 {
 			type_lazy = () -> PaymentIdentification4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TxOrErr", required = true)
 	protected TransactionOrError2Choice transactionOrError;
 	/**
-	 * Requested information on the payment transaction when information has not
-	 * been found.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -160,7 +161,7 @@ public class TransactionReport2 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionOrError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReport2.mmObject();
 			isDerived = false;
 			xmlTag = "TxOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,8 +178,8 @@ public class TransactionReport2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionReport2.mmPaymentIdentification, TransactionReport2.mmTransactionOrError);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReport2.mmPaymentIdentification, com.tools20022.repository.msg.TransactionReport2.mmTransactionOrError);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionReport2";
 				definition = "Provides details on the payment transactions.";
@@ -188,21 +189,21 @@ public class TransactionReport2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmtId", required = true)
 	public PaymentIdentification4Choice getPaymentIdentification() {
 		return paymentIdentification;
 	}
 
-	public void setPaymentIdentification(PaymentIdentification4Choice paymentIdentification) {
-		this.paymentIdentification = paymentIdentification;
+	public TransactionReport2 setPaymentIdentification(PaymentIdentification4Choice paymentIdentification) {
+		this.paymentIdentification = Objects.requireNonNull(paymentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TxOrErr", required = true)
 	public TransactionOrError2Choice getTransactionOrError() {
 		return transactionOrError;
 	}
 
-	public void setTransactionOrError(TransactionOrError2Choice transactionOrError) {
-		this.transactionOrError = transactionOrError;
+	public TransactionReport2 setTransactionOrError(TransactionOrError2Choice transactionOrError) {
+		this.transactionOrError = Objects.requireNonNull(transactionOrError);
+		return this;
 	}
 }

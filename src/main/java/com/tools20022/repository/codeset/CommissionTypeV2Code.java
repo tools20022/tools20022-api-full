@@ -17,12 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CommissionTypeV2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of service for which the commission is asked or paid.
@@ -32,80 +38,79 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmClientDirected
- * CommissionTypeV2Code.mmClientDirected}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#ClientDirected
+ * CommissionTypeV2Code.ClientDirected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmStepOut
- * CommissionTypeV2Code.mmStepOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#StepOut
+ * CommissionTypeV2Code.StepOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmFrontEndLoad
- * CommissionTypeV2Code.mmFrontEndLoad}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#FrontEndLoad
+ * CommissionTypeV2Code.FrontEndLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmInitial
- * CommissionTypeV2Code.mmInitial}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#Initial
+ * CommissionTypeV2Code.Initial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmBackEndLoad
- * CommissionTypeV2Code.mmBackEndLoad}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#BackEndLoad
+ * CommissionTypeV2Code.BackEndLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmTrailer
- * CommissionTypeV2Code.mmTrailer}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#Trailer
+ * CommissionTypeV2Code.Trailer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmRegular
- * CommissionTypeV2Code.mmRegular}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#Regular
+ * CommissionTypeV2Code.Regular}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmStepIn
- * CommissionTypeV2Code.mmStepIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#StepIn
+ * CommissionTypeV2Code.StepIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmSoftDollar
- * CommissionTypeV2Code.mmSoftDollar}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#SoftDollar
+ * CommissionTypeV2Code.SoftDollar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmSoftDollarStepIn
- * CommissionTypeV2Code.mmSoftDollarStepIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#SoftDollarStepIn
+ * CommissionTypeV2Code.SoftDollarStepIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmSoftDollarStepOut
- * CommissionTypeV2Code.mmSoftDollarStepOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#SoftDollarStepOut
+ * CommissionTypeV2Code.SoftDollarStepOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmPlanSponsor
- * CommissionTypeV2Code.mmPlanSponsor}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#PlanSponsor
+ * CommissionTypeV2Code.PlanSponsor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmPercentageOfPrincipal
- * CommissionTypeV2Code.mmPercentageOfPrincipal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#PercentageOfPrincipal
+ * CommissionTypeV2Code.PercentageOfPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmMarkup
- * CommissionTypeV2Code.mmMarkup}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#Markup
+ * CommissionTypeV2Code.Markup}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmCommissionDePlacement
- * CommissionTypeV2Code.mmCommissionDePlacement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#CommissionDePlacement
+ * CommissionTypeV2Code.CommissionDePlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmBrokerCredit
- * CommissionTypeV2Code.mmBrokerCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#BrokerCredit
+ * CommissionTypeV2Code.BrokerCredit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#Other
+ * CommissionTypeV2Code.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmOther
- * CommissionTypeV2Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#FundBasedRenewal
+ * CommissionTypeV2Code.FundBasedRenewal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmFundBasedRenewal
- * CommissionTypeV2Code.mmFundBasedRenewal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#FlatFee
+ * CommissionTypeV2Code.FlatFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmFlatFee
- * CommissionTypeV2Code.mmFlatFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#PointsPerBondOrContract
+ * CommissionTypeV2Code.PointsPerBondOrContract}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmPointsPerBondOrContract
- * CommissionTypeV2Code.mmPointsPerBondOrContract}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#DifferentialOrDeferredPayment
+ * CommissionTypeV2Code.DifferentialOrDeferredPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmDifferentialOrDeferredPayment
- * CommissionTypeV2Code.mmDifferentialOrDeferredPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#BrokerageRate
+ * CommissionTypeV2Code.BrokerageRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmBrokerageRate
- * CommissionTypeV2Code.mmBrokerageRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#PerUnit
+ * CommissionTypeV2Code.PerUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmPerUnit
- * CommissionTypeV2Code.mmPerUnit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#PercentageCommissionWaivedAsCashDiscount
+ * CommissionTypeV2Code.PercentageCommissionWaivedAsCashDiscount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmPercentageCommissionWaivedAsCashDiscount
- * CommissionTypeV2Code.mmPercentageCommissionWaivedAsCashDiscount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#mmPercentageCommissionWaivedAsAdditionalUnits
- * CommissionTypeV2Code.mmPercentageCommissionWaivedAsAdditionalUnits}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code#PercentageCommissionWaivedAsAdditionalUnits
+ * CommissionTypeV2Code.PercentageCommissionWaivedAsAdditionalUnits}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -124,8 +129,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -142,7 +147,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of service for which the commission is asked or paid."</li>
  * </ul>
  */
-public class CommissionTypeV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CommissionTypeV2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -156,6 +162,9 @@ public class CommissionTypeV2Code {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CLDI"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22a::COST//CLDI</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -166,12 +175,13 @@ public class CommissionTypeV2Code {
 	 * definition} = "Commission is as per client agreement."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClientDirected = new MMCode() {
+	public static final CommissionTypeV2Code ClientDirected = new CommissionTypeV2Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22a::COST//CLDI"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClientDirected";
 			definition = "Commission is as per client agreement.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "CLDI";
 		}
 	};
@@ -186,6 +196,9 @@ public class CommissionTypeV2Code {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "STEP"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22a::COST//STEP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -197,12 +210,13 @@ public class CommissionTypeV2Code {
 	 * "Commission for a step-out trade, charged by the step-out broker."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStepOut = new MMCode() {
+	public static final CommissionTypeV2Code StepOut = new CommissionTypeV2Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22a::COST//STEP"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StepOut";
 			definition = "Commission for a step-out trade, charged by the step-out broker.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "STEP";
 		}
 	};
@@ -230,12 +244,12 @@ public class CommissionTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFrontEndLoad = new MMCode() {
+	public static final CommissionTypeV2Code FrontEndLoad = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FrontEndLoad";
 			definition = "Commission for subscribing to an investment, paid at the time of the subscription.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "FEND";
 		}
 	};
@@ -260,12 +274,12 @@ public class CommissionTypeV2Code {
 	 * definition} = "Commission paid at the time of first subscription."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInitial = new MMCode() {
+	public static final CommissionTypeV2Code Initial = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Initial";
 			definition = "Commission paid at the time of first subscription.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "INIT";
 		}
 	};
@@ -293,12 +307,12 @@ public class CommissionTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBackEndLoad = new MMCode() {
+	public static final CommissionTypeV2Code BackEndLoad = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BackEndLoad";
 			definition = "Commission for redeeming  an investment, when an investor redeems an investment fund within a certain period of time.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "BEND";
 		}
 	};
@@ -324,12 +338,12 @@ public class CommissionTypeV2Code {
 	 * "Commission that is calculated on the position of an account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTrailer = new MMCode() {
+	public static final CommissionTypeV2Code Trailer = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trailer";
 			definition = "Commission that is calculated on the position of an account.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "TRAI";
 		}
 	};
@@ -354,12 +368,12 @@ public class CommissionTypeV2Code {
 	 * definition} = "Commission that is regular."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegular = new MMCode() {
+	public static final CommissionTypeV2Code Regular = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Regular";
 			definition = "Commission that is regular.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "REGU";
 		}
 	};
@@ -385,12 +399,12 @@ public class CommissionTypeV2Code {
 	 * "Commission for a step-in trade, charged by the step-in broker."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStepIn = new MMCode() {
+	public static final CommissionTypeV2Code StepIn = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StepIn";
 			definition = "Commission for a step-in trade, charged by the step-in broker.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "STEI";
 		}
 	};
@@ -435,12 +449,12 @@ public class CommissionTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSoftDollar = new MMCode() {
+	public static final CommissionTypeV2Code SoftDollar = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SoftDollar";
 			definition = "Commission designated by the broker for third party services. The soft dollar arrangement refers to an arrangement wherean investment manager directs transactions to a brokerand, in exchange, the broker provides brokerage and research services to the investment manager. Soft dollar arrangements include proprietary and third party research arrangements, but do not include client-directed brokerage arrangements. The U.S. Securities Exchange Act of 1934, Section 238(e), created a \"safe harbor\" to protect investment managers from claims that they had breached their fiduciary duties by using their client commissions to pay a higher commission than they might have paid for execution services to acquire investment research. The SEC defines soft dollars as: The Commission has defined soft dollar practices as arrangements under which products or services, other than execution of securities transactions, are obtained through an adviser or a broker-dealer in exchange for the direction by the adviser of client brokerage transactions to the broker-dealer. An individual or firm must exercise \"investment discretion\" over an account, as defined in Section 3(a)(35) of the Exchange Act, in order to use client commissions to obtain research under Section 28(e) of the Exchange Act (\"Section 28(e)\").";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "SOFT";
 		}
 	};
@@ -468,12 +482,12 @@ public class CommissionTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSoftDollarStepIn = new MMCode() {
+	public static final CommissionTypeV2Code SoftDollarStepIn = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SoftDollarStepIn";
 			definition = "Commission that combines soft dollar and step-in commission characteristics.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "SOIN";
 		}
 	};
@@ -501,12 +515,12 @@ public class CommissionTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSoftDollarStepOut = new MMCode() {
+	public static final CommissionTypeV2Code SoftDollarStepOut = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SoftDollarStepOut";
 			definition = "Commission that combines soft dollar and step-out commission characteristics.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "SOUT";
 		}
 	};
@@ -531,12 +545,12 @@ public class CommissionTypeV2Code {
 	 * definition} = "Commission for a plan sponsor's services."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPlanSponsor = new MMCode() {
+	public static final CommissionTypeV2Code PlanSponsor = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlanSponsor";
 			definition = "Commission for a plan sponsor's services.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "PLAN";
 		}
 	};
@@ -551,6 +565,9 @@ public class CommissionTypeV2Code {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PERN"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22a::COST//PERN</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -561,12 +578,13 @@ public class CommissionTypeV2Code {
 	 * definition} = "Commission is a percentage of principal."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPercentageOfPrincipal = new MMCode() {
+	public static final CommissionTypeV2Code PercentageOfPrincipal = new CommissionTypeV2Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22a::COST//PERN"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PercentageOfPrincipal";
 			definition = "Commission is a percentage of principal.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "PERN";
 		}
 	};
@@ -595,12 +613,12 @@ public class CommissionTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarkup = new MMCode() {
+	public static final CommissionTypeV2Code Markup = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Markup";
 			definition = "Amount or percentage that is added to an offer price when an investor buys from a broker or market maker.  In this case, the price is adjusted to reflect changing market conditions.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "MARK";
 		}
 	};
@@ -628,12 +646,12 @@ public class CommissionTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommissionDePlacement = new MMCode() {
+	public static final CommissionTypeV2Code CommissionDePlacement = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommissionDePlacement";
 			definition = "Amount of cash due to an intermediary for selling a product, or services, to a third party.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "CDPL";
 		}
 	};
@@ -658,12 +676,12 @@ public class CommissionTypeV2Code {
 	 * definition} = "Amount financed to cover the back-end load."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBrokerCredit = new MMCode() {
+	public static final CommissionTypeV2Code BrokerCredit = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BrokerCredit";
 			definition = "Amount financed to cover the back-end load.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "BCRD";
 		}
 	};
@@ -688,12 +706,12 @@ public class CommissionTypeV2Code {
 	 * definition} = "Commission is another type of transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final CommissionTypeV2Code Other = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Other";
 			definition = "Commission is another type of transaction.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "OTHR";
 		}
 	};
@@ -721,12 +739,12 @@ public class CommissionTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFundBasedRenewal = new MMCode() {
+	public static final CommissionTypeV2Code FundBasedRenewal = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundBasedRenewal";
 			definition = "Annual fund based renewal commission, expressed as a percentage of the deal.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "RNEW";
 		}
 	};
@@ -751,12 +769,12 @@ public class CommissionTypeV2Code {
 	 * definition} = "Commission is a flat fee."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFlatFee = new MMCode() {
+	public static final CommissionTypeV2Code FlatFee = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FlatFee";
 			definition = "Commission is a flat fee.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "FLAT";
 		}
 	};
@@ -781,12 +799,12 @@ public class CommissionTypeV2Code {
 	 * definition} = "Commission is based on points per bond or contract."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPointsPerBondOrContract = new MMCode() {
+	public static final CommissionTypeV2Code PointsPerBondOrContract = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PointsPerBondOrContract";
 			definition = "Commission is based on points per bond or contract.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "PBOC";
 		}
 	};
@@ -811,12 +829,12 @@ public class CommissionTypeV2Code {
 	 * definition} = "Differential or deferred payment commission rate.  "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDifferentialOrDeferredPayment = new MMCode() {
+	public static final CommissionTypeV2Code DifferentialOrDeferredPayment = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DifferentialOrDeferredPayment";
 			definition = "Differential or deferred payment commission rate.  ";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "DFDP";
 		}
 	};
@@ -841,12 +859,12 @@ public class CommissionTypeV2Code {
 	 * definition} = "Brokerage commission."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBrokerageRate = new MMCode() {
+	public static final CommissionTypeV2Code BrokerageRate = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerageRate";
 			definition = "Brokerage commission.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "BRKR";
 		}
 	};
@@ -871,12 +889,12 @@ public class CommissionTypeV2Code {
 	 * definition} = "Commission is per unit of financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPerUnit = new MMCode() {
+	public static final CommissionTypeV2Code PerUnit = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
 			definition = "Commission is per unit of financial instrument.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "PERU";
 		}
 	};
@@ -902,12 +920,12 @@ public class CommissionTypeV2Code {
 	 * "Commission is a percentage commission waived as cash discount."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPercentageCommissionWaivedAsCashDiscount = new MMCode() {
+	public static final CommissionTypeV2Code PercentageCommissionWaivedAsCashDiscount = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageCommissionWaivedAsCashDiscount";
 			definition = "Commission is a percentage commission waived as cash discount.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "PWCD";
 		}
 	};
@@ -933,32 +951,90 @@ public class CommissionTypeV2Code {
 	 * "Commission is a percentage commission waived as additional units."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPercentageCommissionWaivedAsAdditionalUnits = new MMCode() {
+	public static final CommissionTypeV2Code PercentageCommissionWaivedAsAdditionalUnits = new CommissionTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageCommissionWaivedAsAdditionalUnits";
 			definition = "Commission is a percentage commission waived as additional units.";
-			owner_lazy = () -> CommissionTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeV2Code.mmObject();
 			codeName = "PWEU";
 		}
 	};
+	final static private LinkedHashMap<String, CommissionTypeV2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CommissionTypeV2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CLDI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommissionTypeV2Code";
 				definition = "Type of service for which the commission is asked or paid.";
-				code_lazy = () -> Arrays.asList(CommissionTypeV2Code.mmClientDirected, CommissionTypeV2Code.mmStepOut, CommissionTypeV2Code.mmFrontEndLoad, CommissionTypeV2Code.mmInitial, CommissionTypeV2Code.mmBackEndLoad,
-						CommissionTypeV2Code.mmTrailer, CommissionTypeV2Code.mmRegular, CommissionTypeV2Code.mmStepIn, CommissionTypeV2Code.mmSoftDollar, CommissionTypeV2Code.mmSoftDollarStepIn, CommissionTypeV2Code.mmSoftDollarStepOut,
-						CommissionTypeV2Code.mmPlanSponsor, CommissionTypeV2Code.mmPercentageOfPrincipal, CommissionTypeV2Code.mmMarkup, CommissionTypeV2Code.mmCommissionDePlacement, CommissionTypeV2Code.mmBrokerCredit,
-						CommissionTypeV2Code.mmOther, CommissionTypeV2Code.mmFundBasedRenewal, CommissionTypeV2Code.mmFlatFee, CommissionTypeV2Code.mmPointsPerBondOrContract, CommissionTypeV2Code.mmDifferentialOrDeferredPayment,
-						CommissionTypeV2Code.mmBrokerageRate, CommissionTypeV2Code.mmPerUnit, CommissionTypeV2Code.mmPercentageCommissionWaivedAsCashDiscount, CommissionTypeV2Code.mmPercentageCommissionWaivedAsAdditionalUnits);
 				derivation_lazy = () -> Arrays.asList(CommissionType7Code.mmObject(), CommissionType9Code.mmObject(), CommissionType6Code.mmObject(), CommissionType8Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommissionTypeV2Code.ClientDirected, com.tools20022.repository.codeset.CommissionTypeV2Code.StepOut,
+						com.tools20022.repository.codeset.CommissionTypeV2Code.FrontEndLoad, com.tools20022.repository.codeset.CommissionTypeV2Code.Initial, com.tools20022.repository.codeset.CommissionTypeV2Code.BackEndLoad,
+						com.tools20022.repository.codeset.CommissionTypeV2Code.Trailer, com.tools20022.repository.codeset.CommissionTypeV2Code.Regular, com.tools20022.repository.codeset.CommissionTypeV2Code.StepIn,
+						com.tools20022.repository.codeset.CommissionTypeV2Code.SoftDollar, com.tools20022.repository.codeset.CommissionTypeV2Code.SoftDollarStepIn, com.tools20022.repository.codeset.CommissionTypeV2Code.SoftDollarStepOut,
+						com.tools20022.repository.codeset.CommissionTypeV2Code.PlanSponsor, com.tools20022.repository.codeset.CommissionTypeV2Code.PercentageOfPrincipal, com.tools20022.repository.codeset.CommissionTypeV2Code.Markup,
+						com.tools20022.repository.codeset.CommissionTypeV2Code.CommissionDePlacement, com.tools20022.repository.codeset.CommissionTypeV2Code.BrokerCredit, com.tools20022.repository.codeset.CommissionTypeV2Code.Other,
+						com.tools20022.repository.codeset.CommissionTypeV2Code.FundBasedRenewal, com.tools20022.repository.codeset.CommissionTypeV2Code.FlatFee,
+						com.tools20022.repository.codeset.CommissionTypeV2Code.PointsPerBondOrContract, com.tools20022.repository.codeset.CommissionTypeV2Code.DifferentialOrDeferredPayment,
+						com.tools20022.repository.codeset.CommissionTypeV2Code.BrokerageRate, com.tools20022.repository.codeset.CommissionTypeV2Code.PerUnit,
+						com.tools20022.repository.codeset.CommissionTypeV2Code.PercentageCommissionWaivedAsCashDiscount, com.tools20022.repository.codeset.CommissionTypeV2Code.PercentageCommissionWaivedAsAdditionalUnits);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ClientDirected.getCodeName().get(), ClientDirected);
+		codesByName.put(StepOut.getCodeName().get(), StepOut);
+		codesByName.put(FrontEndLoad.getCodeName().get(), FrontEndLoad);
+		codesByName.put(Initial.getCodeName().get(), Initial);
+		codesByName.put(BackEndLoad.getCodeName().get(), BackEndLoad);
+		codesByName.put(Trailer.getCodeName().get(), Trailer);
+		codesByName.put(Regular.getCodeName().get(), Regular);
+		codesByName.put(StepIn.getCodeName().get(), StepIn);
+		codesByName.put(SoftDollar.getCodeName().get(), SoftDollar);
+		codesByName.put(SoftDollarStepIn.getCodeName().get(), SoftDollarStepIn);
+		codesByName.put(SoftDollarStepOut.getCodeName().get(), SoftDollarStepOut);
+		codesByName.put(PlanSponsor.getCodeName().get(), PlanSponsor);
+		codesByName.put(PercentageOfPrincipal.getCodeName().get(), PercentageOfPrincipal);
+		codesByName.put(Markup.getCodeName().get(), Markup);
+		codesByName.put(CommissionDePlacement.getCodeName().get(), CommissionDePlacement);
+		codesByName.put(BrokerCredit.getCodeName().get(), BrokerCredit);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(FundBasedRenewal.getCodeName().get(), FundBasedRenewal);
+		codesByName.put(FlatFee.getCodeName().get(), FlatFee);
+		codesByName.put(PointsPerBondOrContract.getCodeName().get(), PointsPerBondOrContract);
+		codesByName.put(DifferentialOrDeferredPayment.getCodeName().get(), DifferentialOrDeferredPayment);
+		codesByName.put(BrokerageRate.getCodeName().get(), BrokerageRate);
+		codesByName.put(PerUnit.getCodeName().get(), PerUnit);
+		codesByName.put(PercentageCommissionWaivedAsCashDiscount.getCodeName().get(), PercentageCommissionWaivedAsCashDiscount);
+		codesByName.put(PercentageCommissionWaivedAsAdditionalUnits.getCodeName().get(), PercentageCommissionWaivedAsAdditionalUnits);
+	}
+
+	public static CommissionTypeV2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CommissionTypeV2Code[] values() {
+		CommissionTypeV2Code[] values = new CommissionTypeV2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CommissionTypeV2Code> {
+		@Override
+		public CommissionTypeV2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CommissionTypeV2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

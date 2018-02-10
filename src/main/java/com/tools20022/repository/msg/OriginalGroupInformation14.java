@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,16 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OriginalGroupInformation14", propOrder = {"originalMessageIdentification", "originalMessageNameIdentification", "reversalReasonInformation"})
 public class OriginalGroupInformation14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgnlMsgId", required = true)
 	protected Max35Text originalMessageIdentification;
 	/**
-	 * Point to point reference assigned by the original instructing party to
-	 * unambiguously identify the original group of individual transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +119,7 @@ public class OriginalGroupInformation14 {
 	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
-			componentContext_lazy = () -> OriginalGroupInformation14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation14.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,11 +130,11 @@ public class OriginalGroupInformation14 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlMsgNmId", required = true)
 	protected Max35Text originalMessageNameIdentification;
 	/**
-	 * Specifies the original message name identifier to which the message
-	 * refers, eg, pacs.003.001.01 or MT103.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +163,7 @@ public class OriginalGroupInformation14 {
 	 */
 	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OriginalGroupInformation14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation14.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgNmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,10 +174,11 @@ public class OriginalGroupInformation14 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RvslRsnInf")
 	protected ReversalReasonInformation4 reversalReasonInformation;
 	/**
-	 * Detailed information on the reversal reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -208,7 +211,7 @@ public class OriginalGroupInformation14 {
 	public static final MMMessageAssociationEnd mmReversalReasonInformation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmTransactionRejectionReason;
-			componentContext_lazy = () -> OriginalGroupInformation14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation14.mmObject();
 			isDerived = false;
 			xmlTag = "RvslRsnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,9 +227,10 @@ public class OriginalGroupInformation14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OriginalGroupInformation14.mmOriginalMessageIdentification, OriginalGroupInformation14.mmOriginalMessageNameIdentification, OriginalGroupInformation14.mmReversalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalGroupInformation14.mmOriginalMessageIdentification,
+						com.tools20022.repository.msg.OriginalGroupInformation14.mmOriginalMessageNameIdentification, com.tools20022.repository.msg.OriginalGroupInformation14.mmReversalReasonInformation);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OriginalGroupInformation14";
 				definition = "Unique and unambiguous identifier of the group of transactions as assigned by the original instructing party.";
@@ -235,30 +239,30 @@ public class OriginalGroupInformation14 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgnlMsgId", required = true)
 	public Max35Text getOriginalMessageIdentification() {
 		return originalMessageIdentification;
 	}
 
-	public void setOriginalMessageIdentification(Max35Text originalMessageIdentification) {
-		this.originalMessageIdentification = originalMessageIdentification;
+	public OriginalGroupInformation14 setOriginalMessageIdentification(Max35Text originalMessageIdentification) {
+		this.originalMessageIdentification = Objects.requireNonNull(originalMessageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlMsgNmId", required = true)
 	public Max35Text getOriginalMessageNameIdentification() {
 		return originalMessageNameIdentification;
 	}
 
-	public void setOriginalMessageNameIdentification(Max35Text originalMessageNameIdentification) {
-		this.originalMessageNameIdentification = originalMessageNameIdentification;
+	public OriginalGroupInformation14 setOriginalMessageNameIdentification(Max35Text originalMessageNameIdentification) {
+		this.originalMessageNameIdentification = Objects.requireNonNull(originalMessageNameIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RvslRsnInf")
-	public ReversalReasonInformation4 getReversalReasonInformation() {
-		return reversalReasonInformation;
+	public Optional<ReversalReasonInformation4> getReversalReasonInformation() {
+		return reversalReasonInformation == null ? Optional.empty() : Optional.of(reversalReasonInformation);
 	}
 
-	public void setReversalReasonInformation(com.tools20022.repository.msg.ReversalReasonInformation4 reversalReasonInformation) {
+	public OriginalGroupInformation14 setReversalReasonInformation(com.tools20022.repository.msg.ReversalReasonInformation4 reversalReasonInformation) {
 		this.reversalReasonInformation = reversalReasonInformation;
+		return this;
 	}
 }

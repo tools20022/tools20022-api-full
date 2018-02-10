@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +76,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,17 +94,17 @@ import javax.xml.bind.annotation.XmlType;
  * IndividualOrderStatusAndReason4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IndividualOrderStatusAndReason8", propOrder = {"masterReference", "orderReference", "clientReference", "cancellationReference", "cancellationStatus", "statusInitiator", "investmentAccountDetails",
 		"financialInstrumentDetails"})
 public class IndividualOrderStatusAndReason8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MstrRef")
 	protected Max35Text masterReference;
 	/**
-	 * Reference assigned to a set of orders or trades in order to link them
-	 * together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +144,7 @@ public class IndividualOrderStatusAndReason8 {
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
-			componentContext_lazy = () -> IndividualOrderStatusAndReason8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason8.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,11 +156,11 @@ public class IndividualOrderStatusAndReason8 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrRef", required = true)
 	protected Max35Text orderReference;
 	/**
-	 * Unique and unambiguous identifier for the order, as assigned by the
-	 * instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,7 +200,7 @@ public class IndividualOrderStatusAndReason8 {
 	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
-			componentContext_lazy = () -> IndividualOrderStatusAndReason8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason8.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,12 +212,11 @@ public class IndividualOrderStatusAndReason8 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntRef")
 	protected Max35Text clientReference;
 	/**
-	 * Unique and unambiguous investor's identification of the order. This
-	 * reference can typically be used in a hub scenario to give the reference
-	 * of the order as assigned by the underlying client.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -255,7 +256,7 @@ public class IndividualOrderStatusAndReason8 {
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
-			componentContext_lazy = () -> IndividualOrderStatusAndReason8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason8.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,11 +268,11 @@ public class IndividualOrderStatusAndReason8 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CxlRef")
 	protected Max35Text cancellationReference;
 	/**
-	 * Unique and unambiguous identifier for the order cancellation, as assigned
-	 * by the instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -305,7 +306,7 @@ public class IndividualOrderStatusAndReason8 {
 	 */
 	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IndividualOrderStatusAndReason8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason8.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -317,10 +318,11 @@ public class IndividualOrderStatusAndReason8 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CxlSts", required = true)
 	protected CancellationStatus22Choice cancellationStatus;
 	/**
-	 * Cancellation status of the order cancellation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -347,7 +349,7 @@ public class IndividualOrderStatusAndReason8 {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IndividualOrderStatusAndReason8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason8.mmObject();
 			isDerived = false;
 			xmlTag = "CxlSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -359,10 +361,11 @@ public class IndividualOrderStatusAndReason8 {
 			type_lazy = () -> CancellationStatus22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "StsInitr")
 	protected PartyIdentification113 statusInitiator;
 	/**
-	 * Party that initiates the status of the individual order cancellation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -400,7 +403,7 @@ public class IndividualOrderStatusAndReason8 {
 	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> IndividualOrderStatusAndReason8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason8.mmObject();
 			isDerived = false;
 			xmlTag = "StsInitr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -413,11 +416,11 @@ public class IndividualOrderStatusAndReason8 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstmtAcctDtls")
 	protected InvestmentAccount58 investmentAccountDetails;
 	/**
-	 * Account information of the individual order cancellation for which the
-	 * status is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -456,7 +459,7 @@ public class IndividualOrderStatusAndReason8 {
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
-			componentContext_lazy = () -> IndividualOrderStatusAndReason8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason8.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -469,11 +472,11 @@ public class IndividualOrderStatusAndReason8 {
 			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount58.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmDtls")
 	protected FinancialInstrument57 financialInstrumentDetails;
 	/**
-	 * Financial instrument information of the individual order cancellation for
-	 * which the status is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -512,7 +515,7 @@ public class IndividualOrderStatusAndReason8 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
-			componentContext_lazy = () -> IndividualOrderStatusAndReason8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason8.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -529,11 +532,12 @@ public class IndividualOrderStatusAndReason8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IndividualOrderStatusAndReason8.mmMasterReference, IndividualOrderStatusAndReason8.mmOrderReference, IndividualOrderStatusAndReason8.mmClientReference,
-						IndividualOrderStatusAndReason8.mmCancellationReference, IndividualOrderStatusAndReason8.mmCancellationStatus, IndividualOrderStatusAndReason8.mmStatusInitiator,
-						IndividualOrderStatusAndReason8.mmInvestmentAccountDetails, IndividualOrderStatusAndReason8.mmFinancialInstrumentDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualOrderStatusAndReason8.mmMasterReference, com.tools20022.repository.msg.IndividualOrderStatusAndReason8.mmOrderReference,
+						com.tools20022.repository.msg.IndividualOrderStatusAndReason8.mmClientReference, com.tools20022.repository.msg.IndividualOrderStatusAndReason8.mmCancellationReference,
+						com.tools20022.repository.msg.IndividualOrderStatusAndReason8.mmCancellationStatus, com.tools20022.repository.msg.IndividualOrderStatusAndReason8.mmStatusInitiator,
+						com.tools20022.repository.msg.IndividualOrderStatusAndReason8.mmInvestmentAccountDetails, com.tools20022.repository.msg.IndividualOrderStatusAndReason8.mmFinancialInstrumentDetails);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndividualOrderStatusAndReason8";
 				definition = "Status report of an individual order of a bulk or multiple or switch order cancellation instruction that was previously received.";
@@ -543,75 +547,75 @@ public class IndividualOrderStatusAndReason8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MstrRef")
-	public Max35Text getMasterReference() {
-		return masterReference;
+	public Optional<Max35Text> getMasterReference() {
+		return masterReference == null ? Optional.empty() : Optional.of(masterReference);
 	}
 
-	public void setMasterReference(Max35Text masterReference) {
+	public IndividualOrderStatusAndReason8 setMasterReference(Max35Text masterReference) {
 		this.masterReference = masterReference;
+		return this;
 	}
 
-	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
 
-	public void setOrderReference(Max35Text orderReference) {
-		this.orderReference = orderReference;
+	public IndividualOrderStatusAndReason8 setOrderReference(Max35Text orderReference) {
+		this.orderReference = Objects.requireNonNull(orderReference);
+		return this;
 	}
 
-	@XmlElement(name = "ClntRef")
-	public Max35Text getClientReference() {
-		return clientReference;
+	public Optional<Max35Text> getClientReference() {
+		return clientReference == null ? Optional.empty() : Optional.of(clientReference);
 	}
 
-	public void setClientReference(Max35Text clientReference) {
+	public IndividualOrderStatusAndReason8 setClientReference(Max35Text clientReference) {
 		this.clientReference = clientReference;
+		return this;
 	}
 
-	@XmlElement(name = "CxlRef")
-	public Max35Text getCancellationReference() {
-		return cancellationReference;
+	public Optional<Max35Text> getCancellationReference() {
+		return cancellationReference == null ? Optional.empty() : Optional.of(cancellationReference);
 	}
 
-	public void setCancellationReference(Max35Text cancellationReference) {
+	public IndividualOrderStatusAndReason8 setCancellationReference(Max35Text cancellationReference) {
 		this.cancellationReference = cancellationReference;
+		return this;
 	}
 
-	@XmlElement(name = "CxlSts", required = true)
 	public CancellationStatus22Choice getCancellationStatus() {
 		return cancellationStatus;
 	}
 
-	public void setCancellationStatus(CancellationStatus22Choice cancellationStatus) {
-		this.cancellationStatus = cancellationStatus;
+	public IndividualOrderStatusAndReason8 setCancellationStatus(CancellationStatus22Choice cancellationStatus) {
+		this.cancellationStatus = Objects.requireNonNull(cancellationStatus);
+		return this;
 	}
 
-	@XmlElement(name = "StsInitr")
-	public PartyIdentification113 getStatusInitiator() {
-		return statusInitiator;
+	public Optional<PartyIdentification113> getStatusInitiator() {
+		return statusInitiator == null ? Optional.empty() : Optional.of(statusInitiator);
 	}
 
-	public void setStatusInitiator(com.tools20022.repository.msg.PartyIdentification113 statusInitiator) {
+	public IndividualOrderStatusAndReason8 setStatusInitiator(com.tools20022.repository.msg.PartyIdentification113 statusInitiator) {
 		this.statusInitiator = statusInitiator;
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtAcctDtls")
-	public InvestmentAccount58 getInvestmentAccountDetails() {
-		return investmentAccountDetails;
+	public Optional<InvestmentAccount58> getInvestmentAccountDetails() {
+		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public void setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount58 investmentAccountDetails) {
+	public IndividualOrderStatusAndReason8 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount58 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmDtls")
-	public FinancialInstrument57 getFinancialInstrumentDetails() {
-		return financialInstrumentDetails;
+	public Optional<FinancialInstrument57> getFinancialInstrumentDetails() {
+		return financialInstrumentDetails == null ? Optional.empty() : Optional.of(financialInstrumentDetails);
 	}
 
-	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument57 financialInstrumentDetails) {
+	public IndividualOrderStatusAndReason8 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument57 financialInstrumentDetails) {
 		this.financialInstrumentDetails = financialInstrumentDetails;
+		return this;
 	}
 }

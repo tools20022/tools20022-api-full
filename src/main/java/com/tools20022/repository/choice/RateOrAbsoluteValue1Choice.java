@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.RateAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between a rate or an absolute value."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RateOrAbsoluteValue1Choice", propOrder = {"rateValue", "absoluteValue"})
 public class RateOrAbsoluteValue1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RateVal", required = true)
 	protected PercentageRate rateValue;
 	/**
-	 * A rate expressed as a percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +110,7 @@ public class RateOrAbsoluteValue1Choice {
 	public static final MMMessageAttribute mmRateValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
-			componentContext_lazy = () -> RateOrAbsoluteValue1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RateOrAbsoluteValue1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RateVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +121,11 @@ public class RateOrAbsoluteValue1Choice {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "AbsVal", required = true)
 	protected Number absoluteValue;
 	/**
-	 * Absolute value determined with a number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +158,7 @@ public class RateOrAbsoluteValue1Choice {
 	public static final MMMessageAttribute mmAbsoluteValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAbsoluteValue;
-			componentContext_lazy = () -> RateOrAbsoluteValue1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RateOrAbsoluteValue1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AbsVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,9 +173,9 @@ public class RateOrAbsoluteValue1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RateOrAbsoluteValue1Choice.mmRateValue, RateOrAbsoluteValue1Choice.mmAbsoluteValue);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateOrAbsoluteValue1Choice.mmRateValue, com.tools20022.repository.choice.RateOrAbsoluteValue1Choice.mmAbsoluteValue);
 				trace_lazy = () -> RateAndAmount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateOrAbsoluteValue1Choice";
 				definition = "Choice between a rate or an absolute value.";
@@ -181,21 +184,21 @@ public class RateOrAbsoluteValue1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RateVal", required = true)
 	public PercentageRate getRateValue() {
 		return rateValue;
 	}
 
-	public void setRateValue(PercentageRate rateValue) {
-		this.rateValue = rateValue;
+	public RateOrAbsoluteValue1Choice setRateValue(PercentageRate rateValue) {
+		this.rateValue = Objects.requireNonNull(rateValue);
+		return this;
 	}
 
-	@XmlElement(name = "AbsVal", required = true)
 	public Number getAbsoluteValue() {
 		return absoluteValue;
 	}
 
-	public void setAbsoluteValue(Number absoluteValue) {
-		this.absoluteValue = absoluteValue;
+	public RateOrAbsoluteValue1Choice setAbsoluteValue(Number absoluteValue) {
+		this.absoluteValue = Objects.requireNonNull(absoluteValue);
+		return this;
 	}
 }

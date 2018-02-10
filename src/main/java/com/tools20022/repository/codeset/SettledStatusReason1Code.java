@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SettledStatusReasonCode;
+import com.tools20022.repository.codeset.SettledStatusReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for a partially settled status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode
- * SettledStatusReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettledStatusReason1Code#mmUnitsPartiallySettled
- * SettledStatusReason1Code.mmUnitsPartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettledStatusReason1Code#UnitsPartiallySettled
+ * SettledStatusReason1Code.UnitsPartiallySettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettledStatusReason1Code#mmCashPartiallySettled
- * SettledStatusReason1Code.mmCashPartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettledStatusReason1Code#CashPartiallySettled
+ * SettledStatusReason1Code.CashPartiallySettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettledStatusReason1Code#mmUnitsCashPartiallySettled
- * SettledStatusReason1Code.mmUnitsCashPartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettledStatusReason1Code#UnitsCashPartiallySettled
+ * SettledStatusReason1Code.UnitsCashPartiallySettled}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode
+ * SettledStatusReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason for a partially settled status."</li>
  * </ul>
  */
-public class SettledStatusReason1Code extends SettledStatusReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SettledStatusReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class SettledStatusReason1Code extends SettledStatusReasonCode {
 	 * name} = "UnitsPartiallySettled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnitsPartiallySettled = new MMCode() {
+	public static final SettledStatusReason1Code UnitsPartiallySettled = new SettledStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsPartiallySettled";
-			owner_lazy = () -> SettledStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettledStatusReason1Code.mmObject();
+			codeName = SettledStatusReasonCode.UnitsPartiallySettled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class SettledStatusReason1Code extends SettledStatusReasonCode {
 	 * name} = "CashPartiallySettled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashPartiallySettled = new MMCode() {
+	public static final SettledStatusReason1Code CashPartiallySettled = new SettledStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPartiallySettled";
-			owner_lazy = () -> SettledStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettledStatusReason1Code.mmObject();
+			codeName = SettledStatusReasonCode.CashPartiallySettled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class SettledStatusReason1Code extends SettledStatusReasonCode {
 	 * name} = "UnitsCashPartiallySettled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnitsCashPartiallySettled = new MMCode() {
+	public static final SettledStatusReason1Code UnitsCashPartiallySettled = new SettledStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsCashPartiallySettled";
-			owner_lazy = () -> SettledStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettledStatusReason1Code.mmObject();
+			codeName = SettledStatusReasonCode.UnitsCashPartiallySettled.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SettledStatusReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SettledStatusReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("UPST");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettledStatusReason1Code";
 				definition = "Specifies the reason for a partially settled status.";
-				code_lazy = () -> Arrays.asList(SettledStatusReason1Code.mmUnitsPartiallySettled, SettledStatusReason1Code.mmCashPartiallySettled, SettledStatusReason1Code.mmUnitsCashPartiallySettled);
 				trace_lazy = () -> SettledStatusReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettledStatusReason1Code.UnitsPartiallySettled, com.tools20022.repository.codeset.SettledStatusReason1Code.CashPartiallySettled,
+						com.tools20022.repository.codeset.SettledStatusReason1Code.UnitsCashPartiallySettled);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(UnitsPartiallySettled.getCodeName().get(), UnitsPartiallySettled);
+		codesByName.put(CashPartiallySettled.getCodeName().get(), CashPartiallySettled);
+		codesByName.put(UnitsCashPartiallySettled.getCodeName().get(), UnitsCashPartiallySettled);
+	}
+
+	public static SettledStatusReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SettledStatusReason1Code[] values() {
+		SettledStatusReason1Code[] values = new SettledStatusReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SettledStatusReason1Code> {
+		@Override
+		public SettledStatusReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SettledStatusReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

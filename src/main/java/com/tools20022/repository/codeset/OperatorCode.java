@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.OperatorCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Code containing the operator used to indicate the relationship between a
@@ -32,18 +37,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OperatorCode#mmSmallerThan
- * OperatorCode.mmSmallerThan}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OperatorCode#SmallerThan
+ * OperatorCode.SmallerThan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OperatorCode#mmSmallerOrEqualTo
- * OperatorCode.mmSmallerOrEqualTo}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OperatorCode#mmGreaterThan
- * OperatorCode.mmGreaterThan}</li>
+ * {@linkplain com.tools20022.repository.codeset.OperatorCode#SmallerOrEqualTo
+ * OperatorCode.SmallerOrEqualTo}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OperatorCode#GreaterThan
+ * OperatorCode.GreaterThan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OperatorCode#mmGreaterOrEqualTo
- * OperatorCode.mmGreaterOrEqualTo}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OperatorCode#mmEqualTo
- * OperatorCode.mmEqualTo}</li>
+ * {@linkplain com.tools20022.repository.codeset.OperatorCode#GreaterOrEqualTo
+ * OperatorCode.GreaterOrEqualTo}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OperatorCode#EqualTo
+ * OperatorCode.EqualTo}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -56,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -76,7 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class OperatorCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OperatorCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -99,12 +105,12 @@ public class OperatorCode {
 	 * definition} = "Smaller than."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSmallerThan = new MMCode() {
+	public static final OperatorCode SmallerThan = new OperatorCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SmallerThan";
 			definition = "Smaller than.";
-			owner_lazy = () -> OperatorCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OperatorCode.mmObject();
 			codeName = "SMAL";
 		}
 	};
@@ -128,12 +134,12 @@ public class OperatorCode {
 	 * definition} = "Smaller or equal to."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSmallerOrEqualTo = new MMCode() {
+	public static final OperatorCode SmallerOrEqualTo = new OperatorCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SmallerOrEqualTo";
 			definition = "Smaller or equal to.";
-			owner_lazy = () -> OperatorCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OperatorCode.mmObject();
 			codeName = "SMEQ";
 		}
 	};
@@ -157,12 +163,12 @@ public class OperatorCode {
 	 * definition} = "Greater than."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGreaterThan = new MMCode() {
+	public static final OperatorCode GreaterThan = new OperatorCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GreaterThan";
 			definition = "Greater than.";
-			owner_lazy = () -> OperatorCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OperatorCode.mmObject();
 			codeName = "GREA";
 		}
 	};
@@ -186,12 +192,12 @@ public class OperatorCode {
 	 * definition} = "Greater or equal to."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGreaterOrEqualTo = new MMCode() {
+	public static final OperatorCode GreaterOrEqualTo = new OperatorCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GreaterOrEqualTo";
 			definition = "Greater or equal to.";
-			owner_lazy = () -> OperatorCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OperatorCode.mmObject();
 			codeName = "GREQ";
 		}
 	};
@@ -215,28 +221,62 @@ public class OperatorCode {
 	 * definition} = "Equal to."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEqualTo = new MMCode() {
+	public static final OperatorCode EqualTo = new OperatorCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualTo";
 			definition = "Equal to.";
-			owner_lazy = () -> OperatorCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OperatorCode.mmObject();
 			codeName = "EQAL";
 		}
 	};
+	final static private LinkedHashMap<String, OperatorCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OperatorCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SMAL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OperatorCode";
 				definition = "Code containing the operator used to indicate the relationship between a variable and a fixed value.";
-				code_lazy = () -> Arrays.asList(OperatorCode.mmSmallerThan, OperatorCode.mmSmallerOrEqualTo, OperatorCode.mmGreaterThan, OperatorCode.mmGreaterOrEqualTo, OperatorCode.mmEqualTo);
 				derivation_lazy = () -> Arrays.asList(Operator1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OperatorCode.SmallerThan, com.tools20022.repository.codeset.OperatorCode.SmallerOrEqualTo, com.tools20022.repository.codeset.OperatorCode.GreaterThan,
+						com.tools20022.repository.codeset.OperatorCode.GreaterOrEqualTo, com.tools20022.repository.codeset.OperatorCode.EqualTo);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SmallerThan.getCodeName().get(), SmallerThan);
+		codesByName.put(SmallerOrEqualTo.getCodeName().get(), SmallerOrEqualTo);
+		codesByName.put(GreaterThan.getCodeName().get(), GreaterThan);
+		codesByName.put(GreaterOrEqualTo.getCodeName().get(), GreaterOrEqualTo);
+		codesByName.put(EqualTo.getCodeName().get(), EqualTo);
+	}
+
+	public static OperatorCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OperatorCode[] values() {
+		OperatorCode[] values = new OperatorCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OperatorCode> {
+		@Override
+		public OperatorCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OperatorCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

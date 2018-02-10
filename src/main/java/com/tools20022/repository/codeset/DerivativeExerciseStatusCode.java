@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DerivativeExerciseStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the exercise status of the derivative products.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DerivativeExerciseStatusCode#mmExercised
- * DerivativeExerciseStatusCode.mmExercised}</li>
+ * {@linkplain com.tools20022.repository.codeset.DerivativeExerciseStatusCode#Exercised
+ * DerivativeExerciseStatusCode.Exercised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DerivativeExerciseStatusCode#mmExpired
- * DerivativeExerciseStatusCode.mmExpired}</li>
+ * {@linkplain com.tools20022.repository.codeset.DerivativeExerciseStatusCode#Expired
+ * DerivativeExerciseStatusCode.Expired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DerivativeExerciseStatusCode#mmValid
- * DerivativeExerciseStatusCode.mmValid}</li>
+ * {@linkplain com.tools20022.repository.codeset.DerivativeExerciseStatusCode#Valid
+ * DerivativeExerciseStatusCode.Valid}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the exercise status of the derivative products."</li>
  * </ul>
  */
-public class DerivativeExerciseStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DerivativeExerciseStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,12 +95,12 @@ public class DerivativeExerciseStatusCode {
 	 * definition} = "Derivative is exercised."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExercised = new MMCode() {
+	public static final DerivativeExerciseStatusCode Exercised = new DerivativeExerciseStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exercised";
 			definition = "Derivative is exercised.";
-			owner_lazy = () -> DerivativeExerciseStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DerivativeExerciseStatusCode.mmObject();
 			codeName = "EXEC";
 		}
 	};
@@ -119,12 +125,12 @@ public class DerivativeExerciseStatusCode {
 	 * definition} = "Derivative is expired and will not be exercised."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExpired = new MMCode() {
+	public static final DerivativeExerciseStatusCode Expired = new DerivativeExerciseStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expired";
 			definition = "Derivative is expired and will not be exercised.";
-			owner_lazy = () -> DerivativeExerciseStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DerivativeExerciseStatusCode.mmObject();
 			codeName = "EXPI";
 		}
 	};
@@ -149,27 +155,59 @@ public class DerivativeExerciseStatusCode {
 	 * definition} = "Derivative is not exercised."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmValid = new MMCode() {
+	public static final DerivativeExerciseStatusCode Valid = new DerivativeExerciseStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Valid";
 			definition = "Derivative is not exercised.";
-			owner_lazy = () -> DerivativeExerciseStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DerivativeExerciseStatusCode.mmObject();
 			codeName = "VALI";
 		}
 	};
+	final static private LinkedHashMap<String, DerivativeExerciseStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DerivativeExerciseStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DerivativeExerciseStatusCode";
 				definition = "Specifies the exercise status of the derivative products.";
-				code_lazy = () -> Arrays.asList(DerivativeExerciseStatusCode.mmExercised, DerivativeExerciseStatusCode.mmExpired, DerivativeExerciseStatusCode.mmValid);
 				derivation_lazy = () -> Arrays.asList(DerivativeExerciseStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DerivativeExerciseStatusCode.Exercised, com.tools20022.repository.codeset.DerivativeExerciseStatusCode.Expired,
+						com.tools20022.repository.codeset.DerivativeExerciseStatusCode.Valid);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Exercised.getCodeName().get(), Exercised);
+		codesByName.put(Expired.getCodeName().get(), Expired);
+		codesByName.put(Valid.getCodeName().get(), Valid);
+	}
+
+	public static DerivativeExerciseStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DerivativeExerciseStatusCode[] values() {
+		DerivativeExerciseStatusCode[] values = new DerivativeExerciseStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DerivativeExerciseStatusCode> {
+		@Override
+		public DerivativeExerciseStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DerivativeExerciseStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

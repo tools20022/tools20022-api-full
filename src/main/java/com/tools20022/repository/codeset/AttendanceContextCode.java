@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AttendanceContextCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Human attendance at the POI location during the transaction.
@@ -32,29 +37,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#mmAttended
- * AttendanceContextCode.mmAttended}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#Attended
+ * AttendanceContextCode.Attended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#mmSemiAttended
- * AttendanceContextCode.mmSemiAttended}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#SemiAttended
+ * AttendanceContextCode.SemiAttended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#mmUnattended
- * AttendanceContextCode.mmUnattended}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#Unattended
+ * AttendanceContextCode.Unattended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#mmAttendantDelivery
- * AttendanceContextCode.mmAttendantDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#AttendantDelivery
+ * AttendanceContextCode.AttendantDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#mmCustomerDelivery
- * AttendanceContextCode.mmCustomerDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#CustomerDelivery
+ * AttendanceContextCode.CustomerDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#mmCarrierDelivery
- * AttendanceContextCode.mmCarrierDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#CarrierDelivery
+ * AttendanceContextCode.CarrierDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#mmFullServe
- * AttendanceContextCode.mmFullServe}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#FullServe
+ * AttendanceContextCode.FullServe}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#mmSelfServe
- * AttendanceContextCode.mmSelfServe}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode#SelfServe
+ * AttendanceContextCode.SelfServe}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -69,8 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Human attendance at the POI location during the transaction."</li>
  * </ul>
  */
-public class AttendanceContextCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AttendanceContextCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -111,12 +117,12 @@ public class AttendanceContextCode {
 	 * definition} = "Attended payment, with an attendant."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAttended = new MMCode() {
+	public static final AttendanceContextCode Attended = new AttendanceContextCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Attended";
 			definition = "Attended payment, with an attendant.";
-			owner_lazy = () -> AttendanceContextCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttendanceContextCode.mmObject();
 			codeName = "ATTD";
 		}
 	};
@@ -144,12 +150,12 @@ public class AttendanceContextCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSemiAttended = new MMCode() {
+	public static final AttendanceContextCode SemiAttended = new AttendanceContextCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SemiAttended";
 			definition = "Semi-attended, including self checkout. An attendant supervises several payment, and could be called to help the cardholder.";
-			owner_lazy = () -> AttendanceContextCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttendanceContextCode.mmObject();
 			codeName = "SATT";
 		}
 	};
@@ -174,12 +180,12 @@ public class AttendanceContextCode {
 	 * definition} = "Unattended payment, no attendant present."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnattended = new MMCode() {
+	public static final AttendanceContextCode Unattended = new AttendanceContextCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Unattended";
 			definition = "Unattended payment, no attendant present.";
-			owner_lazy = () -> AttendanceContextCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttendanceContextCode.mmObject();
 			codeName = "UATT";
 		}
 	};
@@ -204,12 +210,12 @@ public class AttendanceContextCode {
 	 * definition} = "Delivery by an attendant."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAttendantDelivery = new MMCode() {
+	public static final AttendanceContextCode AttendantDelivery = new AttendanceContextCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendantDelivery";
 			definition = "Delivery by an attendant.";
-			owner_lazy = () -> AttendanceContextCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttendanceContextCode.mmObject();
 			codeName = "ATTL";
 		}
 	};
@@ -234,12 +240,12 @@ public class AttendanceContextCode {
 	 * definition} = "Delivery by the customer."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustomerDelivery = new MMCode() {
+	public static final AttendanceContextCode CustomerDelivery = new AttendanceContextCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerDelivery";
 			definition = "Delivery by the customer.";
-			owner_lazy = () -> AttendanceContextCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttendanceContextCode.mmObject();
 			codeName = "CUST";
 		}
 	};
@@ -264,12 +270,12 @@ public class AttendanceContextCode {
 	 * definition} = "Delivery by a carrier."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCarrierDelivery = new MMCode() {
+	public static final AttendanceContextCode CarrierDelivery = new AttendanceContextCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarrierDelivery";
 			definition = "Delivery by a carrier.";
-			owner_lazy = () -> AttendanceContextCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttendanceContextCode.mmObject();
 			codeName = "CARR";
 		}
 	};
@@ -294,12 +300,12 @@ public class AttendanceContextCode {
 	 * definition} = "Full service for fuel distribution."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullServe = new MMCode() {
+	public static final AttendanceContextCode FullServe = new AttendanceContextCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullServe";
 			definition = "Full service for fuel distribution.";
-			owner_lazy = () -> AttendanceContextCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttendanceContextCode.mmObject();
 			codeName = "FULL";
 		}
 	};
@@ -324,29 +330,67 @@ public class AttendanceContextCode {
 	 * definition} = "Self service for fuel distribution."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSelfServe = new MMCode() {
+	public static final AttendanceContextCode SelfServe = new AttendanceContextCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfServe";
 			definition = "Self service for fuel distribution.";
-			owner_lazy = () -> AttendanceContextCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttendanceContextCode.mmObject();
 			codeName = "SELF";
 		}
 	};
+	final static private LinkedHashMap<String, AttendanceContextCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AttendanceContextCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ATTD");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AttendanceContextCode";
 				definition = "Human attendance at the POI location during the transaction.";
-				code_lazy = () -> Arrays.asList(AttendanceContextCode.mmAttended, AttendanceContextCode.mmSemiAttended, AttendanceContextCode.mmUnattended, AttendanceContextCode.mmAttendantDelivery,
-						AttendanceContextCode.mmCustomerDelivery, AttendanceContextCode.mmCarrierDelivery, AttendanceContextCode.mmFullServe, AttendanceContextCode.mmSelfServe);
 				derivation_lazy = () -> Arrays.asList(AttendanceContext1Code.mmObject(), AttendanceContext2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttendanceContextCode.Attended, com.tools20022.repository.codeset.AttendanceContextCode.SemiAttended,
+						com.tools20022.repository.codeset.AttendanceContextCode.Unattended, com.tools20022.repository.codeset.AttendanceContextCode.AttendantDelivery,
+						com.tools20022.repository.codeset.AttendanceContextCode.CustomerDelivery, com.tools20022.repository.codeset.AttendanceContextCode.CarrierDelivery, com.tools20022.repository.codeset.AttendanceContextCode.FullServe,
+						com.tools20022.repository.codeset.AttendanceContextCode.SelfServe);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Attended.getCodeName().get(), Attended);
+		codesByName.put(SemiAttended.getCodeName().get(), SemiAttended);
+		codesByName.put(Unattended.getCodeName().get(), Unattended);
+		codesByName.put(AttendantDelivery.getCodeName().get(), AttendantDelivery);
+		codesByName.put(CustomerDelivery.getCodeName().get(), CustomerDelivery);
+		codesByName.put(CarrierDelivery.getCodeName().get(), CarrierDelivery);
+		codesByName.put(FullServe.getCodeName().get(), FullServe);
+		codesByName.put(SelfServe.getCodeName().get(), SelfServe);
+	}
+
+	public static AttendanceContextCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AttendanceContextCode[] values() {
+		AttendanceContextCode[] values = new AttendanceContextCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AttendanceContextCode> {
+		@Override
+		public AttendanceContextCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AttendanceContextCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

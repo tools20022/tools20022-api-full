@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Regulatory information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RegulatoryInformation1", propOrder = {"sector", "branch", "group", "other"})
 public class RegulatoryInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sctr")
 	protected Max35Text sector;
 	/**
-	 * Sector of economic activity, for example, SAE in the Italian market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,7 +103,7 @@ public class RegulatoryInformation1 {
 	 */
 	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RegulatoryInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Sctr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +114,11 @@ public class RegulatoryInformation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Brnch")
 	protected Max35Text branch;
 	/**
-	 * Branch of economic activity, for example, RAE in the Italian market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +146,7 @@ public class RegulatoryInformation1 {
 	 */
 	public static final MMMessageAttribute mmBranch = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RegulatoryInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Brnch";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,10 +157,11 @@ public class RegulatoryInformation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Grp")
 	protected Max35Text group;
 	/**
-	 * Group of economic activity, for example, a code issued by a regulator.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -185,7 +189,7 @@ public class RegulatoryInformation1 {
 	 */
 	public static final MMMessageAttribute mmGroup = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RegulatoryInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Grp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -196,10 +200,11 @@ public class RegulatoryInformation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Othr")
 	protected Max35Text other;
 	/**
-	 * Other regulatory information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -226,7 +231,7 @@ public class RegulatoryInformation1 {
 	 */
 	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RegulatoryInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,8 +246,9 @@ public class RegulatoryInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RegulatoryInformation1.mmSector, RegulatoryInformation1.mmBranch, RegulatoryInformation1.mmGroup, RegulatoryInformation1.mmOther);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryInformation1.mmSector, com.tools20022.repository.msg.RegulatoryInformation1.mmBranch,
+						com.tools20022.repository.msg.RegulatoryInformation1.mmGroup, com.tools20022.repository.msg.RegulatoryInformation1.mmOther);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegulatoryInformation1";
 				definition = "Regulatory information.";
@@ -251,39 +257,39 @@ public class RegulatoryInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sctr")
-	public Max35Text getSector() {
-		return sector;
+	public Optional<Max35Text> getSector() {
+		return sector == null ? Optional.empty() : Optional.of(sector);
 	}
 
-	public void setSector(Max35Text sector) {
+	public RegulatoryInformation1 setSector(Max35Text sector) {
 		this.sector = sector;
+		return this;
 	}
 
-	@XmlElement(name = "Brnch")
-	public Max35Text getBranch() {
-		return branch;
+	public Optional<Max35Text> getBranch() {
+		return branch == null ? Optional.empty() : Optional.of(branch);
 	}
 
-	public void setBranch(Max35Text branch) {
+	public RegulatoryInformation1 setBranch(Max35Text branch) {
 		this.branch = branch;
+		return this;
 	}
 
-	@XmlElement(name = "Grp")
-	public Max35Text getGroup() {
-		return group;
+	public Optional<Max35Text> getGroup() {
+		return group == null ? Optional.empty() : Optional.of(group);
 	}
 
-	public void setGroup(Max35Text group) {
+	public RegulatoryInformation1 setGroup(Max35Text group) {
 		this.group = group;
+		return this;
 	}
 
-	@XmlElement(name = "Othr")
-	public Max35Text getOther() {
-		return other;
+	public Optional<Max35Text> getOther() {
+		return other == null ? Optional.empty() : Optional.of(other);
 	}
 
-	public void setOther(Max35Text other) {
+	public RegulatoryInformation1 setOther(Max35Text other) {
 		this.other = other;
+		return this;
 	}
 }

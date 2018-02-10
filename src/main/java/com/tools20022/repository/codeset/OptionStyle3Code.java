@@ -20,36 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OptionStyleCode;
+import com.tools20022.repository.codeset.OptionStyle3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines how an option can be exercised.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle3Code#American
+ * OptionStyle3Code.American}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle3Code#European
+ * OptionStyle3Code.European}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle3Code#Asian
+ * OptionStyle3Code.Asian}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.OptionStyleCode
  * OptionStyleCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionStyle3Code#mmAmerican
- * OptionStyle3Code.mmAmerican}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionStyle3Code#mmEuropean
- * OptionStyle3Code.mmEuropean}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle3Code#mmAsian
- * OptionStyle3Code.mmAsian}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -66,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines how an option can be exercised."</li>
  * </ul>
  */
-public class OptionStyle3Code extends OptionStyleCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OptionStyle3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,11 +88,12 @@ public class OptionStyle3Code extends OptionStyleCode {
 	 * name} = "American"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAmerican = new MMCode() {
+	public static final OptionStyle3Code American = new OptionStyle3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "American";
-			owner_lazy = () -> OptionStyle3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionStyle3Code.mmObject();
+			codeName = OptionStyleCode.American.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -108,11 +112,12 @@ public class OptionStyle3Code extends OptionStyleCode {
 	 * name} = "European"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEuropean = new MMCode() {
+	public static final OptionStyle3Code European = new OptionStyle3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "European";
-			owner_lazy = () -> OptionStyle3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionStyle3Code.mmObject();
+			codeName = OptionStyleCode.European.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -131,26 +136,58 @@ public class OptionStyle3Code extends OptionStyleCode {
 	 * name} = "Asian"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAsian = new MMCode() {
+	public static final OptionStyle3Code Asian = new OptionStyle3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Asian";
-			owner_lazy = () -> OptionStyle3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionStyle3Code.mmObject();
+			codeName = OptionStyleCode.Asian.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OptionStyle3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OptionStyle3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AMER");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionStyle3Code";
 				definition = "Defines how an option can be exercised.";
-				code_lazy = () -> Arrays.asList(OptionStyle3Code.mmAmerican, OptionStyle3Code.mmEuropean, OptionStyle3Code.mmAsian);
 				trace_lazy = () -> OptionStyleCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionStyle3Code.American, com.tools20022.repository.codeset.OptionStyle3Code.European, com.tools20022.repository.codeset.OptionStyle3Code.Asian);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(American.getCodeName().get(), American);
+		codesByName.put(European.getCodeName().get(), European);
+		codesByName.put(Asian.getCodeName().get(), Asian);
+	}
+
+	public static OptionStyle3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OptionStyle3Code[] values() {
+		OptionStyle3Code[] values = new OptionStyle3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OptionStyle3Code> {
+		@Override
+		public OptionStyle3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OptionStyle3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

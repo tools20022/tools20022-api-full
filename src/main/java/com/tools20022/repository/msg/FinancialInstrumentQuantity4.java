@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,7 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Quantity of a security."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrumentQuantity4", propOrder = "unit")
 public class FinancialInstrumentQuantity4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Unit", required = true)
 	protected RestrictedFINDecimalNumber unit;
 	/**
-	 * Quantity expressed as a number, eg, a number of shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -91,6 +94,9 @@ public class FinancialInstrumentQuantity4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Unit"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: UNIT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -104,9 +110,10 @@ public class FinancialInstrumentQuantity4 {
 	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
-			componentContext_lazy = () -> FinancialInstrumentQuantity4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity4.mmObject();
 			isDerived = false;
 			xmlTag = "Unit";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "UNIT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			definition = "Quantity expressed as a number, eg, a number of shares.";
@@ -119,9 +126,9 @@ public class FinancialInstrumentQuantity4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentQuantity4.mmUnit);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentQuantity4.mmUnit);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentQuantity4";
 				definition = "Quantity of a security.";
@@ -130,12 +137,12 @@ public class FinancialInstrumentQuantity4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Unit", required = true)
 	public RestrictedFINDecimalNumber getUnit() {
 		return unit;
 	}
 
-	public void setUnit(RestrictedFINDecimalNumber unit) {
-		this.unit = unit;
+	public FinancialInstrumentQuantity4 setUnit(RestrictedFINDecimalNumber unit) {
+		this.unit = Objects.requireNonNull(unit);
+		return this;
 	}
 }

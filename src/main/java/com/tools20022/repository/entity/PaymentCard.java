@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Electronic money product that provides the cardholder with a portable and
@@ -90,73 +89,6 @@ import java.util.List;
  * PaymentCard.mmCardCountryCode}</li>
  * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmCardProgramme
  * PaymentCard.mmCardProgramme}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard2 PaymentCard2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TrackData1 TrackData1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardSecurityInformation1
- * CardSecurityInformation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData1 PlainCardData1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard4 PaymentCard4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData3 PlainCardData3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionData1
- * TransactionData1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData2 PlainCardData2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard3 PaymentCard3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard6 PaymentCard6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard1 PaymentCard1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard5 PaymentCard5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialCard1 FinancialCard1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard7 PaymentCard7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData4 PlainCardData4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard8 PaymentCard8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData6 PlainCardData6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData5 PlainCardData5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard10 PaymentCard10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard9 PaymentCard9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData7 PlainCardData7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData9 PlainCardData9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard11 PaymentCard11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData11
- * PlainCardData11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData10
- * PlainCardData10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard12 PaymentCard12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData12
- * PlainCardData12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard13 PaymentCard13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard15 PaymentCard15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard14 PaymentCard14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData8 PlainCardData8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard16 PaymentCard16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData14
- * PlainCardData14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData13
- * PlainCardData13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard17 PaymentCard17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard18 PaymentCard18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard20 PaymentCard20}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard19 PaymentCard19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData16
- * PlainCardData16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData17
- * PlainCardData17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData15
- * PlainCardData15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard21 PaymentCard21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard23 PaymentCard23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard22 PaymentCard22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData18
- * PlainCardData18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PlainCardData19
- * PlainCardData19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard25 PaymentCard25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard26 PaymentCard26}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentCard27 PaymentCard27}</li>
  * </ul>
  * </li>
  * <li>
@@ -289,10 +221,77 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard2 PaymentCard2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TrackData1 TrackData1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardSecurityInformation1
+ * CardSecurityInformation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData1 PlainCardData1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard4 PaymentCard4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData3 PlainCardData3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionData1
+ * TransactionData1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData2 PlainCardData2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard3 PaymentCard3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard6 PaymentCard6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard1 PaymentCard1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard5 PaymentCard5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialCard1 FinancialCard1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard7 PaymentCard7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData4 PlainCardData4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard8 PaymentCard8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData6 PlainCardData6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData5 PlainCardData5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard10 PaymentCard10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard9 PaymentCard9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData7 PlainCardData7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData9 PlainCardData9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard11 PaymentCard11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData11
+ * PlainCardData11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData10
+ * PlainCardData10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard12 PaymentCard12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData12
+ * PlainCardData12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard13 PaymentCard13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard15 PaymentCard15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard14 PaymentCard14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData8 PlainCardData8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard16 PaymentCard16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData14
+ * PlainCardData14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData13
+ * PlainCardData13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard17 PaymentCard17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard18 PaymentCard18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard20 PaymentCard20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard19 PaymentCard19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData16
+ * PlainCardData16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData17
+ * PlainCardData17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData15
+ * PlainCardData15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard21 PaymentCard21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard23 PaymentCard23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard22 PaymentCard22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData18
+ * PlainCardData18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PlainCardData19
+ * PlainCardData19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard25 PaymentCard25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard26 PaymentCard26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard27 PaymentCard27}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -310,8 +309,8 @@ public class PaymentCard {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CardPayment payment;
 	/**
-	 * Payment for which a payment card is used.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -343,8 +342,8 @@ public class PaymentCard {
 	 */
 	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
 			definition = "Payment for which a payment card is used.";
@@ -357,8 +356,8 @@ public class PaymentCard {
 	};
 	protected CardTypeCode type;
 	/**
-	 * Type of card, eg, credit card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -394,8 +393,8 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentCard2.mmType, PaymentCard18.mmType, PaymentCard25.mmType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Type of card, eg, credit card.";
@@ -414,9 +413,8 @@ public class PaymentCard {
 	};
 	protected Max35Text number;
 	/**
-	 * Number embossed on a card that links the card to the account owner and
-	 * account servicer (sometimes called personal account number or PAN).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -494,8 +492,8 @@ public class PaymentCard {
 			derivation_lazy = () -> Arrays.asList(PaymentCard2.mmNumber, PlainCardData1.mmPAN, PlainCardData3.mmPAN, PlainCardData2.mmPAN, PlainCardData4.mmPAN, PlainCardData6.mmPAN, PlainCardData5.mmPAN, PlainCardData7.mmPAN,
 					PlainCardData9.mmPAN, PlainCardData11.mmPAN, PlainCardData10.mmPAN, PlainCardData12.mmPAN, PlainCardData8.mmPAN, PlainCardData14.mmPAN, PlainCardData13.mmPAN, PaymentCard18.mmNumber, PlainCardData16.mmPAN,
 					PlainCardData17.mmPAN, PlainCardData15.mmPAN, PlainCardData18.mmPAN, PlainCardData19.mmPAN, PaymentCard25.mmNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Number";
 			definition = "Number embossed on a card that links the card to the account owner and account servicer (sometimes called personal account number or PAN).";
@@ -514,8 +512,8 @@ public class PaymentCard {
 	};
 	protected ISOYearMonth startDate;
 	/**
-	 * Year and month the card is available for use.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -561,8 +559,8 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmStartDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentCard2.mmStartDate, PlainCardData1.mmEffectiveDate, PlainCardData3.mmEffectiveDate, PlainCardData2.mmEffectiveDate, PaymentCard18.mmStartDate, PaymentCard25.mmStartDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StartDate";
 			definition = "Year and month the card is available for use.";
@@ -581,8 +579,8 @@ public class PaymentCard {
 	};
 	protected ISOYearMonth expiryDate;
 	/**
-	 * Year and month the card expires.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -628,8 +626,8 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmExpiryDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentCard2.mmExpiryDate, PlainCardData1.mmExpiryDate, PlainCardData3.mmExpiryDate, PlainCardData2.mmExpiryDate, PaymentCard18.mmExpiryDate, PaymentCard25.mmExpiryDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpiryDate";
 			definition = "Year and month the card expires.";
@@ -648,9 +646,8 @@ public class PaymentCard {
 	};
 	protected Max35Text securityCode;
 	/**
-	 * Security code written on the card, sometimes called card security code
-	 * (CSC).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -694,8 +691,8 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmSecurityCode = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentCard2.mmSecurityCode, CardSecurityInformation1.mmCSCValue, PaymentCard18.mmSecurityCode, PaymentCard25.mmSecurityCode);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecurityCode";
 			definition = "Security code written on the card, sometimes called card security code (CSC).";
@@ -714,8 +711,8 @@ public class PaymentCard {
 	};
 	protected Max35Text sequenceNumber;
 	/**
-	 * Identifies a card inside a set of cards with the same number (or PAN).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -812,8 +809,8 @@ public class PaymentCard {
 					PlainCardData6.mmCardSequenceNumber, PlainCardData5.mmCardSequenceNumber, PlainCardData7.mmCardSequenceNumber, PlainCardData9.mmCardSequenceNumber, PlainCardData11.mmCardSequenceNumber,
 					PlainCardData10.mmCardSequenceNumber, PlainCardData12.mmCardSequenceNumber, PlainCardData8.mmCardSequenceNumber, PlainCardData14.mmCardSequenceNumber, PlainCardData13.mmCardSequenceNumber,
 					PaymentCard18.mmSequenceNumber, PlainCardData16.mmCardSequenceNumber, PlainCardData15.mmCardSequenceNumber, PlainCardData18.mmCardSequenceNumber, PlainCardData19.mmCardSequenceNumber, PaymentCard25.mmSequenceNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SequenceNumber";
 			definition = "Identifies a card inside a set of cards with the same number (or PAN).";
@@ -832,8 +829,8 @@ public class PaymentCard {
 	};
 	protected Exact3NumericText serviceCode;
 	/**
-	 * Services attached to the card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -901,8 +898,8 @@ public class PaymentCard {
 		{
 			derivation_lazy = () -> Arrays.asList(PlainCardData1.mmServiceCode, PlainCardData2.mmServiceCode, PlainCardData4.mmServiceCode, PlainCardData6.mmServiceCode, PlainCardData7.mmServiceCode, PlainCardData9.mmServiceCode,
 					PlainCardData11.mmServiceCode, PlainCardData10.mmServiceCode, PlainCardData13.mmServiceCode, PlainCardData16.mmServiceCode, PlainCardData15.mmServiceCode, PlainCardData18.mmServiceCode);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ServiceCode";
 			definition = "Services attached to the card.";
@@ -921,8 +918,8 @@ public class PaymentCard {
 	};
 	protected Max140Text trackValue;
 	/**
-	 * Card track content or equivalent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -954,8 +951,8 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmTrackValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TrackData1.mmTrackValue);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TrackValue";
 			definition = "Card track content or equivalent.";
@@ -974,8 +971,8 @@ public class PaymentCard {
 	};
 	protected CSCManagementCode securityCodeManagement;
 	/**
-	 * Card Security Code management associated with the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1010,8 +1007,8 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmSecurityCodeManagement = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CardSecurityInformation1.mmCSCManagement);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecurityCodeManagement";
 			definition = "Card Security Code management associated with the transaction.";
@@ -1030,8 +1027,8 @@ public class PaymentCard {
 	};
 	protected Max35Text cardBrand;
 	/**
-	 * Brand name of the card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1089,8 +1086,8 @@ public class PaymentCard {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentCard4.mmCardBrand, TransactionData1.mmCardBrand, PaymentCard3.mmCardBrand, PaymentCard6.mmCardBrand, PaymentCard1.mmCardBrand, PaymentCard5.mmCardBrand, PaymentCard7.mmCardBrand,
 					PaymentCard8.mmCardBrand, PaymentCard9.mmCardBrand, PaymentCard11.mmCardBrand, PaymentCard20.mmCardBrand, PaymentCard21.mmCardBrand, PaymentCard26.mmCardBrand);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardBrand";
 			definition = "Brand name of the card.";
@@ -1109,8 +1106,8 @@ public class PaymentCard {
 	};
 	protected List<com.tools20022.repository.entity.CashAccount> relatedAccount;
 	/**
-	 * Account linked to the card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1157,8 +1154,8 @@ public class PaymentCard {
 	public static final MMBusinessAssociationEnd mmRelatedAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionData1.mmPrePaidAccount, CardTransaction2.mmPrePaidAccount, CardEntry2.mmPrePaidAccount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedAccount";
 			definition = "Account linked to the card.";
@@ -1170,9 +1167,8 @@ public class PaymentCard {
 	};
 	protected Max5NumericText profileNumber;
 	/**
-	 * Defines a category of cards related the acceptance processing rules
-	 * defined by the acquirer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1220,8 +1216,8 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmProfileNumber = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentCard3.mmCardProductProfile, PaymentCard6.mmCardProductProfile, PaymentCard1.mmCardProductProfile, PaymentCard5.mmCardProductProfile, PaymentCard8.mmCardProductProfile);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProfileNumber";
 			definition = "Defines a category of cards related the acceptance processing rules defined by the acquirer.";
@@ -1240,8 +1236,8 @@ public class PaymentCard {
 	};
 	protected CardAccountTypeCode relatedAccountType;
 	/**
-	 * Type of cardholder account used for the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1375,8 +1371,8 @@ public class PaymentCard {
 					CardPaymentTransactionDetails28.mmAccountType, CardPaymentTransactionDetails29.mmAccountType, CardPaymentTransactionDetails30.mmAccountType, CardPaymentTransactionDetails27.mmAccountType,
 					CardPaymentTransactionDetails31.mmAccountType, CardPaymentTransactionDetails39.mmAccountType, CardPaymentTransactionDetails38.mmAccountType, CardPaymentTransactionDetails41.mmAccountType,
 					CardPaymentTransactionDetails37.mmAccountType, CardPaymentTransactionDetails42.mmAccountType, CardPaymentTransactionDetails43.mmAccountType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedAccountType";
 			definition = "Type of cardholder account used for the transaction.";
@@ -1395,8 +1391,8 @@ public class PaymentCard {
 	};
 	protected CurrencyAndAmount creditAvailableAmount;
 	/**
-	 * Monetary value of the credit available for this financial card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1431,8 +1427,8 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmCreditAvailableAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialCard1.mmCreditAvailableAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditAvailableAmount";
 			definition = "Monetary value of the credit available for this financial card.";
@@ -1451,8 +1447,8 @@ public class PaymentCard {
 	};
 	protected List<com.tools20022.repository.entity.Limit> limit;
 	/**
-	 * Limit specified on a payment card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1497,8 +1493,8 @@ public class PaymentCard {
 	public static final MMBusinessAssociationEnd mmLimit = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(ATMTransaction2.mmLimits, ATMTransaction3.mmLimits, ATMTransaction14.mmLimits, ATMTransaction17.mmLimits);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Limit";
 			definition = "Limit specified on a payment card.";
@@ -1510,8 +1506,8 @@ public class PaymentCard {
 	};
 	protected CurrencyCode cardCurrencyCode;
 	/**
-	 * Currency code of the card issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1556,8 +1552,8 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmCardCurrencyCode = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentCard7.mmCardCurrencyCode, PaymentCard8.mmCardCurrencyCode, PaymentCard14.mmCardCurrencyCode, PaymentCard17.mmCardCurrencyCode, PaymentCard23.mmCardCurrencyCode);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardCurrencyCode";
 			definition = "Currency code of the card issuer.";
@@ -1576,8 +1572,8 @@ public class PaymentCard {
 	};
 	protected Interest interest;
 	/**
-	 * Interest applied on amounts due for credit card payments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1609,8 +1605,8 @@ public class PaymentCard {
 	 */
 	public static final MMBusinessAssociationEnd mmInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
 			definition = "Interest applied on amounts due for credit card payments.";
@@ -1623,8 +1619,8 @@ public class PaymentCard {
 	};
 	protected Country cardCountryCode;
 	/**
-	 * Country code attached to the card by the card issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1718,8 +1714,8 @@ public class PaymentCard {
 					PaymentCard7.mmCardCountryCode, PaymentCard8.mmCardCountryCode, PaymentCard9.mmCardCountryCode, PaymentCard11.mmCardCountryCode, PaymentCard12.mmCardCountryCode, PaymentCard14.mmCardCountryCode,
 					PaymentCard16.mmCardCountryCode, PaymentCard17.mmCardCountryCode, PaymentCard20.mmCardCountryCode, PaymentCard21.mmCardCountryCode, PaymentCard23.mmCardCountryCode, PaymentCard22.mmCardCountryCode,
 					PaymentCard26.mmCardCountryCode);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardCountryCode";
 			definition = "Country code attached to the card by the card issuer.";
@@ -1732,9 +1728,8 @@ public class PaymentCard {
 	};
 	protected Max35Text cardProgramme;
 	/**
-	 * The card programme associated by a retailer to a cardholder among a
-	 * series of payment programmes offered by the retailer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1811,8 +1806,8 @@ public class PaymentCard {
 					CardPaymentTransaction75.mmCardProgrammeApplied, PaymentCard27.mmCardProductSubType, CardPaymentTransaction74.mmCardProgrammeProposed, CardPaymentTransaction74.mmCardProgrammeApplied,
 					CardPaymentTransaction70.mmCardProgrammeProposed, CardPaymentTransaction70.mmCardProgrammeApplied, CardPaymentTransaction76.mmCardProgrammeProposed, CardPaymentTransaction76.mmCardProgrammeApplied,
 					CardPaymentTransaction69.mmCardProgrammeProposed, CardPaymentTransaction69.mmCardProgrammeApplied);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardProgramme";
 			definition = "The card programme associated by a retailer to a cardholder among a series of payment programmes offered by the retailer.";
@@ -1833,7 +1828,7 @@ public class PaymentCard {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentCard";
 				definition = "Electronic money product that provides the cardholder with a portable and specialised computer device that typically contains a microprocessor.";
@@ -1871,163 +1866,183 @@ public class PaymentCard {
 		return mmObject_lazy.get();
 	}
 
-	public CardPayment getPayment() {
-		return payment;
+	public Optional<CardPayment> getPayment() {
+		return payment == null ? Optional.empty() : Optional.of(payment);
 	}
 
-	public void setPayment(com.tools20022.repository.entity.CardPayment payment) {
+	public PaymentCard setPayment(com.tools20022.repository.entity.CardPayment payment) {
 		this.payment = payment;
+		return this;
 	}
 
 	public CardTypeCode getType() {
 		return type;
 	}
 
-	public void setType(CardTypeCode type) {
-		this.type = type;
+	public PaymentCard setType(CardTypeCode type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
 	public Max35Text getNumber() {
 		return number;
 	}
 
-	public void setNumber(Max35Text number) {
-		this.number = number;
+	public PaymentCard setNumber(Max35Text number) {
+		this.number = Objects.requireNonNull(number);
+		return this;
 	}
 
 	public ISOYearMonth getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(ISOYearMonth startDate) {
-		this.startDate = startDate;
+	public PaymentCard setStartDate(ISOYearMonth startDate) {
+		this.startDate = Objects.requireNonNull(startDate);
+		return this;
 	}
 
 	public ISOYearMonth getExpiryDate() {
 		return expiryDate;
 	}
 
-	public void setExpiryDate(ISOYearMonth expiryDate) {
-		this.expiryDate = expiryDate;
+	public PaymentCard setExpiryDate(ISOYearMonth expiryDate) {
+		this.expiryDate = Objects.requireNonNull(expiryDate);
+		return this;
 	}
 
 	public Max35Text getSecurityCode() {
 		return securityCode;
 	}
 
-	public void setSecurityCode(Max35Text securityCode) {
-		this.securityCode = securityCode;
+	public PaymentCard setSecurityCode(Max35Text securityCode) {
+		this.securityCode = Objects.requireNonNull(securityCode);
+		return this;
 	}
 
 	public Max35Text getSequenceNumber() {
 		return sequenceNumber;
 	}
 
-	public void setSequenceNumber(Max35Text sequenceNumber) {
-		this.sequenceNumber = sequenceNumber;
+	public PaymentCard setSequenceNumber(Max35Text sequenceNumber) {
+		this.sequenceNumber = Objects.requireNonNull(sequenceNumber);
+		return this;
 	}
 
 	public Exact3NumericText getServiceCode() {
 		return serviceCode;
 	}
 
-	public void setServiceCode(Exact3NumericText serviceCode) {
-		this.serviceCode = serviceCode;
+	public PaymentCard setServiceCode(Exact3NumericText serviceCode) {
+		this.serviceCode = Objects.requireNonNull(serviceCode);
+		return this;
 	}
 
 	public Max140Text getTrackValue() {
 		return trackValue;
 	}
 
-	public void setTrackValue(Max140Text trackValue) {
-		this.trackValue = trackValue;
+	public PaymentCard setTrackValue(Max140Text trackValue) {
+		this.trackValue = Objects.requireNonNull(trackValue);
+		return this;
 	}
 
 	public CSCManagementCode getSecurityCodeManagement() {
 		return securityCodeManagement;
 	}
 
-	public void setSecurityCodeManagement(CSCManagementCode securityCodeManagement) {
-		this.securityCodeManagement = securityCodeManagement;
+	public PaymentCard setSecurityCodeManagement(CSCManagementCode securityCodeManagement) {
+		this.securityCodeManagement = Objects.requireNonNull(securityCodeManagement);
+		return this;
 	}
 
 	public Max35Text getCardBrand() {
 		return cardBrand;
 	}
 
-	public void setCardBrand(Max35Text cardBrand) {
-		this.cardBrand = cardBrand;
+	public PaymentCard setCardBrand(Max35Text cardBrand) {
+		this.cardBrand = Objects.requireNonNull(cardBrand);
+		return this;
 	}
 
 	public List<CashAccount> getRelatedAccount() {
-		return relatedAccount;
+		return relatedAccount == null ? relatedAccount = new ArrayList<>() : relatedAccount;
 	}
 
-	public void setRelatedAccount(List<com.tools20022.repository.entity.CashAccount> relatedAccount) {
-		this.relatedAccount = relatedAccount;
+	public PaymentCard setRelatedAccount(List<com.tools20022.repository.entity.CashAccount> relatedAccount) {
+		this.relatedAccount = Objects.requireNonNull(relatedAccount);
+		return this;
 	}
 
 	public Max5NumericText getProfileNumber() {
 		return profileNumber;
 	}
 
-	public void setProfileNumber(Max5NumericText profileNumber) {
-		this.profileNumber = profileNumber;
+	public PaymentCard setProfileNumber(Max5NumericText profileNumber) {
+		this.profileNumber = Objects.requireNonNull(profileNumber);
+		return this;
 	}
 
 	public CardAccountTypeCode getRelatedAccountType() {
 		return relatedAccountType;
 	}
 
-	public void setRelatedAccountType(CardAccountTypeCode relatedAccountType) {
-		this.relatedAccountType = relatedAccountType;
+	public PaymentCard setRelatedAccountType(CardAccountTypeCode relatedAccountType) {
+		this.relatedAccountType = Objects.requireNonNull(relatedAccountType);
+		return this;
 	}
 
 	public CurrencyAndAmount getCreditAvailableAmount() {
 		return creditAvailableAmount;
 	}
 
-	public void setCreditAvailableAmount(CurrencyAndAmount creditAvailableAmount) {
-		this.creditAvailableAmount = creditAvailableAmount;
+	public PaymentCard setCreditAvailableAmount(CurrencyAndAmount creditAvailableAmount) {
+		this.creditAvailableAmount = Objects.requireNonNull(creditAvailableAmount);
+		return this;
 	}
 
 	public List<Limit> getLimit() {
-		return limit;
+		return limit == null ? limit = new ArrayList<>() : limit;
 	}
 
-	public void setLimit(List<com.tools20022.repository.entity.Limit> limit) {
-		this.limit = limit;
+	public PaymentCard setLimit(List<com.tools20022.repository.entity.Limit> limit) {
+		this.limit = Objects.requireNonNull(limit);
+		return this;
 	}
 
 	public CurrencyCode getCardCurrencyCode() {
 		return cardCurrencyCode;
 	}
 
-	public void setCardCurrencyCode(CurrencyCode cardCurrencyCode) {
-		this.cardCurrencyCode = cardCurrencyCode;
+	public PaymentCard setCardCurrencyCode(CurrencyCode cardCurrencyCode) {
+		this.cardCurrencyCode = Objects.requireNonNull(cardCurrencyCode);
+		return this;
 	}
 
 	public Interest getInterest() {
 		return interest;
 	}
 
-	public void setInterest(com.tools20022.repository.entity.Interest interest) {
-		this.interest = interest;
+	public PaymentCard setInterest(com.tools20022.repository.entity.Interest interest) {
+		this.interest = Objects.requireNonNull(interest);
+		return this;
 	}
 
 	public Country getCardCountryCode() {
 		return cardCountryCode;
 	}
 
-	public void setCardCountryCode(com.tools20022.repository.entity.Country cardCountryCode) {
-		this.cardCountryCode = cardCountryCode;
+	public PaymentCard setCardCountryCode(com.tools20022.repository.entity.Country cardCountryCode) {
+		this.cardCountryCode = Objects.requireNonNull(cardCountryCode);
+		return this;
 	}
 
 	public Max35Text getCardProgramme() {
 		return cardProgramme;
 	}
 
-	public void setCardProgramme(Max35Text cardProgramme) {
-		this.cardProgramme = cardProgramme;
+	public PaymentCard setCardProgramme(Max35Text cardProgramme) {
+		this.cardProgramme = Objects.requireNonNull(cardProgramme);
+		return this;
 	}
 }

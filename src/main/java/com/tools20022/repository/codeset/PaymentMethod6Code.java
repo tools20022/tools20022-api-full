@@ -20,34 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PaymentMethodCode;
+import com.tools20022.repository.codeset.PaymentMethod6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the method of payment.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentMethod6Code#Direct
+ * PaymentMethod6Code.Direct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentMethod6Code#Classical
+ * PaymentMethod6Code.Classical}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.PaymentMethodCode
  * PaymentMethodCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentMethod6Code#mmDirect
- * PaymentMethod6Code.mmDirect}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentMethod6Code#mmClassical
- * PaymentMethod6Code.mmClassical}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the method of payment."</li>
  * </ul>
  */
-public class PaymentMethod6Code extends PaymentMethodCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PaymentMethod6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +87,12 @@ public class PaymentMethod6Code extends PaymentMethodCode {
 	 * name} = "Direct"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDirect = new MMCode() {
+	public static final PaymentMethod6Code Direct = new PaymentMethod6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Direct";
-			owner_lazy = () -> PaymentMethod6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentMethod6Code.mmObject();
+			codeName = PaymentMethodCode.Direct.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +111,57 @@ public class PaymentMethod6Code extends PaymentMethodCode {
 	 * name} = "Classical"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClassical = new MMCode() {
+	public static final PaymentMethod6Code Classical = new PaymentMethod6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Classical";
-			owner_lazy = () -> PaymentMethod6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentMethod6Code.mmObject();
+			codeName = PaymentMethodCode.Classical.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PaymentMethod6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PaymentMethod6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DIRE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentMethod6Code";
 				definition = "Specifies the method of payment.";
-				code_lazy = () -> Arrays.asList(PaymentMethod6Code.mmDirect, PaymentMethod6Code.mmClassical);
 				trace_lazy = () -> PaymentMethodCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentMethod6Code.Direct, com.tools20022.repository.codeset.PaymentMethod6Code.Classical);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Direct.getCodeName().get(), Direct);
+		codesByName.put(Classical.getCodeName().get(), Classical);
+	}
+
+	public static PaymentMethod6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PaymentMethod6Code[] values() {
+		PaymentMethod6Code[] values = new PaymentMethod6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PaymentMethod6Code> {
+		@Override
+		public PaymentMethod6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PaymentMethod6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -30,6 +30,7 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -39,23 +40,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TerminalManagementPreviousVersion
- * TerminalManagementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20132014
- * CAPETerminalManagementMaintenance20132014}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "StsRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -70,6 +54,23 @@ import javax.xml.bind.annotation.*;
  * StatusReportV03.mmSecurityTrailer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20132014
+ * CAPETerminalManagementMaintenance20132014}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "StsRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TerminalManagementPreviousVersion
+ * TerminalManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code catm.001.001.03}</li>
@@ -96,15 +97,16 @@ import javax.xml.bind.annotation.*;
  * StatusReportV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatusReportV03", propOrder = {"header", "statusReport", "securityTrailer"})
 public class StatusReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header4 header;
 	/**
-	 * Set of characteristics related to the transfer of the status report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,11 +161,11 @@ public class StatusReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "StsRpt", required = true)
 	protected StatusReport3 statusReport;
 	/**
-	 * Status of the point of interaction (POI), its components and their
-	 * installed versions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -219,10 +221,11 @@ public class StatusReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SctyTrlr", required = true)
 	protected ContentInformationType9 securityTrailer;
 	/**
-	 * Trailer of the message containing a MAC or a digital signature.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -311,34 +314,34 @@ public class StatusReportV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header4 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header4 header) {
-		this.header = header;
+	public StatusReportV03 setHeader(Header4 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "StsRpt", required = true)
 	public StatusReport3 getStatusReport() {
 		return statusReport;
 	}
 
-	public void setStatusReport(StatusReport3 statusReport) {
-		this.statusReport = statusReport;
+	public StatusReportV03 setStatusReport(StatusReport3 statusReport) {
+		this.statusReport = Objects.requireNonNull(statusReport);
+		return this;
 	}
 
-	@XmlElement(name = "SctyTrlr", required = true)
 	public ContentInformationType9 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
-	public void setSecurityTrailer(ContentInformationType9 securityTrailer) {
-		this.securityTrailer = securityTrailer;
+	public StatusReportV03 setSecurityTrailer(ContentInformationType9 securityTrailer) {
+		this.securityTrailer = Objects.requireNonNull(securityTrailer);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catm.001.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:catm.001.001.03")
 	static public class Document {
 		@XmlElement(name = "StsRpt", required = true)
 		public StatusReportV03 messageBody;

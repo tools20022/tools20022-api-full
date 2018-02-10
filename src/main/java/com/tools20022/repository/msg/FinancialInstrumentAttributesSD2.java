@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,17 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrumentAttributesSD2", propOrder = {"declaredDisbursedSecurityIdentification", "declaredDisbursedSecurityDescription"})
 public class FinancialInstrumentAttributesSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DclrdDsbrsdSctyId")
 	protected SecurityIdentification15 declaredDisbursedSecurityIdentification;
 	/**
-	 * Security identification of the security that is being distributed as a
-	 * result of a corporate action as declared by the issuer or offeror on the
-	 * market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -90,6 +91,9 @@ public class FinancialInstrumentAttributesSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DclrdDsbrsdSctyId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Disbursed Security ID</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -104,9 +108,10 @@ public class FinancialInstrumentAttributesSD2 {
 	 */
 	public static final MMMessageAttribute mmDeclaredDisbursedSecurityIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdDsbrsdSctyId";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Disbursed Security ID"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredDisbursedSecurityIdentification";
 			definition = "Security identification of the security that is being distributed as a result of a corporate action as declared by the issuer or offeror on the market.";
@@ -115,10 +120,11 @@ public class FinancialInstrumentAttributesSD2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
 		}
 	};
+	@XmlElement(name = "DclrdDsbrsdSctyDesc")
 	protected Max140Text declaredDisbursedSecurityDescription;
 	/**
-	 * Declared disbursed security description.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,6 +139,10 @@ public class FinancialInstrumentAttributesSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DclrdDsbrsdSctyDesc"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Security Description (DTC Disbursed
+	 * Security)</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -145,9 +155,10 @@ public class FinancialInstrumentAttributesSD2 {
 	 */
 	public static final MMMessageAttribute mmDeclaredDisbursedSecurityDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdDsbrsdSctyDesc";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Security Description (DTC Disbursed Security)"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredDisbursedSecurityDescription";
 			definition = "Declared disbursed security description.";
@@ -160,8 +171,9 @@ public class FinancialInstrumentAttributesSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD2.mmDeclaredDisbursedSecurityIdentification, FinancialInstrumentAttributesSD2.mmDeclaredDisbursedSecurityDescription);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD2.mmDeclaredDisbursedSecurityIdentification,
+						com.tools20022.repository.msg.FinancialInstrumentAttributesSD2.mmDeclaredDisbursedSecurityDescription);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAttributesSD2";
 				definition = "Provides additional information regarding security that will be distributed as part of entitlement.";
@@ -170,21 +182,21 @@ public class FinancialInstrumentAttributesSD2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DclrdDsbrsdSctyId")
-	public SecurityIdentification15 getDeclaredDisbursedSecurityIdentification() {
-		return declaredDisbursedSecurityIdentification;
+	public Optional<SecurityIdentification15> getDeclaredDisbursedSecurityIdentification() {
+		return declaredDisbursedSecurityIdentification == null ? Optional.empty() : Optional.of(declaredDisbursedSecurityIdentification);
 	}
 
-	public void setDeclaredDisbursedSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 declaredDisbursedSecurityIdentification) {
+	public FinancialInstrumentAttributesSD2 setDeclaredDisbursedSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 declaredDisbursedSecurityIdentification) {
 		this.declaredDisbursedSecurityIdentification = declaredDisbursedSecurityIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "DclrdDsbrsdSctyDesc")
-	public Max140Text getDeclaredDisbursedSecurityDescription() {
-		return declaredDisbursedSecurityDescription;
+	public Optional<Max140Text> getDeclaredDisbursedSecurityDescription() {
+		return declaredDisbursedSecurityDescription == null ? Optional.empty() : Optional.of(declaredDisbursedSecurityDescription);
 	}
 
-	public void setDeclaredDisbursedSecurityDescription(Max140Text declaredDisbursedSecurityDescription) {
+	public FinancialInstrumentAttributesSD2 setDeclaredDisbursedSecurityDescription(Max140Text declaredDisbursedSecurityDescription) {
 		this.declaredDisbursedSecurityDescription = declaredDisbursedSecurityDescription;
+		return this;
 	}
 }

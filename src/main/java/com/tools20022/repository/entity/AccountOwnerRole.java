@@ -40,18 +40,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} = {@linkplain com.tools20022.repository.entity.AccountPartyRole
  * AccountPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OwnerType1 OwnerType1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountRole1 AccountRole1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AccountOwner1Choice
- * AccountOwner1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AccountOwner2Choice
- * AccountOwner2Choice}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
@@ -85,10 +73,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.OwnerType1 OwnerType1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountRole1 AccountRole1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AccountOwner1Choice
+ * AccountOwner1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AccountOwner2Choice
+ * AccountOwner2Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,7 +106,7 @@ public class AccountOwnerRole extends AccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountOwnerRole";
 				definition = "Party that legally owns the account.";

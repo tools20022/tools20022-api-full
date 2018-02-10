@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.SecuritiesReferenceDataReport5;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -39,23 +41,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
- * AuthoritiesLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting 
- * FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting
- * }</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "FinInstrmRptgRefDataRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -71,6 +56,23 @@ import javax.xml.bind.annotation.*;
  * FinancialInstrumentReportingReferenceDataReportV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting 
+ * FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting
+ * }</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "FinInstrmRptgRefDataRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
+ * AuthoritiesLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code auth.017.001.01}</li>
@@ -86,15 +88,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrumentReportingReferenceDataReportV01", propOrder = {"reportHeader", "referenceData", "supplementaryData"})
 public class FinancialInstrumentReportingReferenceDataReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptHdr", required = true)
 	protected SecuritiesMarketReportHeader1 reportHeader;
 	/**
-	 * Header information related to the global report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,10 +137,11 @@ public class FinancialInstrumentReportingReferenceDataReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "RefData", required = true)
 	protected List<SecuritiesReferenceDataReport5> referenceData;
 	/**
-	 * Details of the reference data reported by the trading venue.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,11 +181,11 @@ public class FinancialInstrumentReportingReferenceDataReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -253,34 +257,34 @@ public class FinancialInstrumentReportingReferenceDataReportV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptHdr", required = true)
 	public SecuritiesMarketReportHeader1 getReportHeader() {
 		return reportHeader;
 	}
 
-	public void setReportHeader(SecuritiesMarketReportHeader1 reportHeader) {
-		this.reportHeader = reportHeader;
+	public FinancialInstrumentReportingReferenceDataReportV01 setReportHeader(SecuritiesMarketReportHeader1 reportHeader) {
+		this.reportHeader = Objects.requireNonNull(reportHeader);
+		return this;
 	}
 
-	@XmlElement(name = "RefData", required = true)
 	public List<SecuritiesReferenceDataReport5> getReferenceData() {
-		return referenceData;
+		return referenceData == null ? referenceData = new ArrayList<>() : referenceData;
 	}
 
-	public void setReferenceData(List<SecuritiesReferenceDataReport5> referenceData) {
-		this.referenceData = referenceData;
+	public FinancialInstrumentReportingReferenceDataReportV01 setReferenceData(List<SecuritiesReferenceDataReport5> referenceData) {
+		this.referenceData = Objects.requireNonNull(referenceData);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public FinancialInstrumentReportingReferenceDataReportV01 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.017.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:auth.017.001.01")
 	static public class Document {
 		@XmlElement(name = "FinInstrmRptgRefDataRpt", required = true)
 		public FinancialInstrumentReportingReferenceDataReportV01 messageBody;

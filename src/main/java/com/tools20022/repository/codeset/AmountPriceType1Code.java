@@ -20,39 +20,43 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AmountPriceTypeCode;
+import com.tools20022.repository.codeset.AmountPriceType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the amount price type.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AmountPriceTypeCode
- * AmountPriceTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountPriceType1Code#mmActualAmount
- * AmountPriceType1Code.mmActualAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountPriceType1Code#ActualAmount
+ * AmountPriceType1Code.ActualAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountPriceType1Code#mmDiscount
- * AmountPriceType1Code.mmDiscount}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AmountPriceType1Code#mmLot
- * AmountPriceType1Code.mmLot}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountPriceType1Code#Discount
+ * AmountPriceType1Code.Discount}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AmountPriceType1Code#Lot
+ * AmountPriceType1Code.Lot}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountPriceType1Code#mmPremium
- * AmountPriceType1Code.mmPremium}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountPriceType1Code#Premium
+ * AmountPriceType1Code.Premium}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AmountPriceTypeCode
+ * AmountPriceTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the amount price type."</li>
  * </ul>
  */
-public class AmountPriceType1Code extends AmountPriceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AmountPriceType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,11 +93,12 @@ public class AmountPriceType1Code extends AmountPriceTypeCode {
 	 * name} = "ActualAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmActualAmount = new MMCode() {
+	public static final AmountPriceType1Code ActualAmount = new AmountPriceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualAmount";
-			owner_lazy = () -> AmountPriceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AmountPriceType1Code.mmObject();
+			codeName = AmountPriceTypeCode.ActualAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -111,11 +117,12 @@ public class AmountPriceType1Code extends AmountPriceTypeCode {
 	 * name} = "Discount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiscount = new MMCode() {
+	public static final AmountPriceType1Code Discount = new AmountPriceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
-			owner_lazy = () -> AmountPriceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AmountPriceType1Code.mmObject();
+			codeName = AmountPriceTypeCode.Discount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -134,11 +141,12 @@ public class AmountPriceType1Code extends AmountPriceTypeCode {
 	 * name} = "Lot"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLot = new MMCode() {
+	public static final AmountPriceType1Code Lot = new AmountPriceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lot";
-			owner_lazy = () -> AmountPriceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AmountPriceType1Code.mmObject();
+			codeName = AmountPriceTypeCode.Lot.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -157,26 +165,60 @@ public class AmountPriceType1Code extends AmountPriceTypeCode {
 	 * name} = "Premium"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPremium = new MMCode() {
+	public static final AmountPriceType1Code Premium = new AmountPriceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
-			owner_lazy = () -> AmountPriceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AmountPriceType1Code.mmObject();
+			codeName = AmountPriceTypeCode.Premium.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AmountPriceType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AmountPriceType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACTU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountPriceType1Code";
 				definition = "Specifies the amount price type.";
-				code_lazy = () -> Arrays.asList(AmountPriceType1Code.mmActualAmount, AmountPriceType1Code.mmDiscount, AmountPriceType1Code.mmLot, AmountPriceType1Code.mmPremium);
 				trace_lazy = () -> AmountPriceTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountPriceType1Code.ActualAmount, com.tools20022.repository.codeset.AmountPriceType1Code.Discount,
+						com.tools20022.repository.codeset.AmountPriceType1Code.Lot, com.tools20022.repository.codeset.AmountPriceType1Code.Premium);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ActualAmount.getCodeName().get(), ActualAmount);
+		codesByName.put(Discount.getCodeName().get(), Discount);
+		codesByName.put(Lot.getCodeName().get(), Lot);
+		codesByName.put(Premium.getCodeName().get(), Premium);
+	}
+
+	public static AmountPriceType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AmountPriceType1Code[] values() {
+		AmountPriceType1Code[] values = new AmountPriceType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AmountPriceType1Code> {
+		@Override
+		public AmountPriceType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AmountPriceType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

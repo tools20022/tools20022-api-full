@@ -24,11 +24,9 @@ import com.tools20022.repository.choice.DisputeResolutionType1Choice;
 import com.tools20022.repository.entity.DisputeManagement;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -73,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SegregatedIndependentAmountDispute1", propOrder = {"disputeDetails", "disputeResolutionType1Choice"})
 public class SegregatedIndependentAmountDispute1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DsptDtls", required = true)
 	protected Dispute1 disputeDetails;
 	/**
-	 * Details of the disputed instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -106,7 +105,7 @@ public class SegregatedIndependentAmountDispute1 {
 	 */
 	public static final MMMessageAssociationEnd mmDisputeDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SegregatedIndependentAmountDispute1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SegregatedIndependentAmountDispute1.mmObject();
 			isDerived = false;
 			xmlTag = "DsptDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,11 +117,11 @@ public class SegregatedIndependentAmountDispute1 {
 			type_lazy = () -> com.tools20022.repository.msg.Dispute1.mmObject();
 		}
 	};
+	@XmlElement(name = "DsptRsltnTp1Chc")
 	protected List<DisputeResolutionType1Choice> disputeResolutionType1Choice;
 	/**
-	 * Specifies the type of dispute that is to be resolved regarding the
-	 * disputed collateral amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -151,7 +150,7 @@ public class SegregatedIndependentAmountDispute1 {
 	 */
 	public static final MMMessageAssociationEnd mmDisputeResolutionType1Choice = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SegregatedIndependentAmountDispute1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SegregatedIndependentAmountDispute1.mmObject();
 			isDerived = false;
 			xmlTag = "DsptRsltnTp1Chc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,9 +165,9 @@ public class SegregatedIndependentAmountDispute1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SegregatedIndependentAmountDispute1.mmDisputeDetails, SegregatedIndependentAmountDispute1.mmDisputeResolutionType1Choice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SegregatedIndependentAmountDispute1.mmDisputeDetails, com.tools20022.repository.msg.SegregatedIndependentAmountDispute1.mmDisputeResolutionType1Choice);
 				trace_lazy = () -> DisputeManagement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -184,21 +183,21 @@ public class SegregatedIndependentAmountDispute1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DsptDtls", required = true)
 	public Dispute1 getDisputeDetails() {
 		return disputeDetails;
 	}
 
-	public void setDisputeDetails(com.tools20022.repository.msg.Dispute1 disputeDetails) {
-		this.disputeDetails = disputeDetails;
+	public SegregatedIndependentAmountDispute1 setDisputeDetails(com.tools20022.repository.msg.Dispute1 disputeDetails) {
+		this.disputeDetails = Objects.requireNonNull(disputeDetails);
+		return this;
 	}
 
-	@XmlElement(name = "DsptRsltnTp1Chc")
 	public List<DisputeResolutionType1Choice> getDisputeResolutionType1Choice() {
-		return disputeResolutionType1Choice;
+		return disputeResolutionType1Choice == null ? disputeResolutionType1Choice = new ArrayList<>() : disputeResolutionType1Choice;
 	}
 
-	public void setDisputeResolutionType1Choice(List<DisputeResolutionType1Choice> disputeResolutionType1Choice) {
-		this.disputeResolutionType1Choice = disputeResolutionType1Choice;
+	public SegregatedIndependentAmountDispute1 setDisputeResolutionType1Choice(List<DisputeResolutionType1Choice> disputeResolutionType1Choice) {
+		this.disputeResolutionType1Choice = Objects.requireNonNull(disputeResolutionType1Choice);
+		return this;
 	}
 }

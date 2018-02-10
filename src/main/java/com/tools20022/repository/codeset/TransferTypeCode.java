@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.TransferTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the financial instrument is transferred as an asset or as
@@ -32,10 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TransferTypeCode#mmAsset
- * TransferTypeCode.mmAsset}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TransferTypeCode#mmCash
- * TransferTypeCode.mmCash}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TransferTypeCode#Asset
+ * TransferTypeCode.Asset}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TransferTypeCode#Cash
+ * TransferTypeCode.Cash}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TransferTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransferTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,12 +98,12 @@ public class TransferTypeCode {
 	 * definition} = "Transfer as asset."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAsset = new MMCode() {
+	public static final TransferTypeCode Asset = new TransferTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Asset";
 			definition = "Transfer as asset.";
-			owner_lazy = () -> TransferTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferTypeCode.mmObject();
 			codeName = "SECU";
 		}
 	};
@@ -122,28 +128,58 @@ public class TransferTypeCode {
 	 * definition} = "Transfer as cash."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCash = new MMCode() {
+	public static final TransferTypeCode Cash = new TransferTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
 			definition = "Transfer as cash.";
-			owner_lazy = () -> TransferTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferTypeCode.mmObject();
 			codeName = "CASH";
 		}
 	};
+	final static private LinkedHashMap<String, TransferTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransferTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SECU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferTypeCode";
 				definition = "Specifies whether the financial instrument is transferred as an asset or as cash.";
-				code_lazy = () -> Arrays.asList(TransferTypeCode.mmAsset, TransferTypeCode.mmCash);
 				derivation_lazy = () -> Arrays.asList(TransferType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferTypeCode.Asset, com.tools20022.repository.codeset.TransferTypeCode.Cash);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Asset.getCodeName().get(), Asset);
+		codesByName.put(Cash.getCodeName().get(), Cash);
+	}
+
+	public static TransferTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransferTypeCode[] values() {
+		TransferTypeCode[] values = new TransferTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransferTypeCode> {
+		@Override
+		public TransferTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransferTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

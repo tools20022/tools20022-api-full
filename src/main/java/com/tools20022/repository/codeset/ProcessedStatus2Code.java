@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateActionProcessedStatusCode;
+import com.tools20022.repository.codeset.ProcessedStatus2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the processing status of a cancellation request.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode
- * CorporateActionProcessedStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessedStatus2Code#mmReceived
- * ProcessedStatus2Code.mmReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessedStatus2Code#Received
+ * ProcessedStatus2Code.Received}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessedStatus2Code#mmCompleted
- * ProcessedStatus2Code.mmCompleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessedStatus2Code#Completed
+ * ProcessedStatus2Code.Completed}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode
+ * CorporateActionProcessedStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the processing status of a cancellation request."</li>
  * </ul>
  */
-public class ProcessedStatus2Code extends CorporateActionProcessedStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProcessedStatus2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class ProcessedStatus2Code extends CorporateActionProcessedStatusCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceived = new MMCode() {
+	public static final ProcessedStatus2Code Received = new ProcessedStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
-			owner_lazy = () -> ProcessedStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessedStatus2Code.mmObject();
+			codeName = CorporateActionProcessedStatusCode.Received.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class ProcessedStatus2Code extends CorporateActionProcessedStatusCode {
 	 * name} = "Completed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompleted = new MMCode() {
+	public static final ProcessedStatus2Code Completed = new ProcessedStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
-			owner_lazy = () -> ProcessedStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessedStatus2Code.mmObject();
+			codeName = CorporateActionProcessedStatusCode.Completed.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ProcessedStatus2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProcessedStatus2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RECE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessedStatus2Code";
 				definition = "Specifies the processing status of a cancellation request.";
-				code_lazy = () -> Arrays.asList(ProcessedStatus2Code.mmReceived, ProcessedStatus2Code.mmCompleted);
 				trace_lazy = () -> CorporateActionProcessedStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessedStatus2Code.Received, com.tools20022.repository.codeset.ProcessedStatus2Code.Completed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Received.getCodeName().get(), Received);
+		codesByName.put(Completed.getCodeName().get(), Completed);
+	}
+
+	public static ProcessedStatus2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProcessedStatus2Code[] values() {
+		ProcessedStatus2Code[] values = new ProcessedStatus2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProcessedStatus2Code> {
+		@Override
+		public ProcessedStatus2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProcessedStatus2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

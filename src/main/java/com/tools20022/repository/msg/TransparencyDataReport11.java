@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +28,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -89,8 +92,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintValidISINRule#forTransparencyDataReport11
+ * ConstraintValidISINRule.forTransparencyDataReport11}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintValidMICRule#forTransparencyDataReport11
+ * ConstraintValidMICRule.forTransparencyDataReport11}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,20 +117,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransparencyDataReport11", propOrder = {"technicalRecordIdentification", "identification", "fullName", "tradingVenue", "reportingDate", "financialInstrumentClassification", "numberOutstandingInstruments",
 		"holdingsExceedingTotalVotingRightThreshold", "issuanceSize", "instrumentPrice"})
 public class TransparencyDataReport11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TechRcrdId")
 	protected Max35Text technicalRecordIdentification;
 	/**
-	 * Unique identifier of a record in a message used as part of error
-	 * management and status advice messages.<br>
-	 * <br>
-	 * Usage:<br>
-	 * This identification will be used in the status advice report sent back.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,7 +156,7 @@ public class TransparencyDataReport11 {
 	 */
 	public static final MMMessageAttribute mmTechnicalRecordIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransparencyDataReport11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
 			isDerived = false;
 			xmlTag = "TechRcrdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +167,11 @@ public class TransparencyDataReport11 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected ISINOct2015Identifier identification;
 	/**
-	 * Identifies the financial instrument using an ISIN.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,7 +205,7 @@ public class TransparencyDataReport11 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
-			componentContext_lazy = () -> TransparencyDataReport11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,10 +216,11 @@ public class TransparencyDataReport11 {
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	@XmlElement(name = "FullNm")
 	protected Max350Text fullName;
 	/**
-	 * Full name or description of the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -240,7 +253,7 @@ public class TransparencyDataReport11 {
 	public static final MMMessageAttribute mmFullName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
-			componentContext_lazy = () -> TransparencyDataReport11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
 			isDerived = false;
 			xmlTag = "FullNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,11 +264,11 @@ public class TransparencyDataReport11 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgVn")
 	protected MICIdentifier tradingVenue;
 	/**
-	 * Segment MIC for the trading venue where applicable, otherwise the
-	 * operational MIC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -291,7 +304,7 @@ public class TransparencyDataReport11 {
 	public static final MMMessageAttribute mmTradingVenue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
-			componentContext_lazy = () -> TransparencyDataReport11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
 			isDerived = false;
 			xmlTag = "TradgVn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -302,10 +315,11 @@ public class TransparencyDataReport11 {
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "RptgDt")
 	protected ISODate reportingDate;
 	/**
-	 * Date for which the data is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -338,7 +352,7 @@ public class TransparencyDataReport11 {
 	public static final MMMessageAttribute mmReportingDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> TransparencyDataReport11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
 			isDerived = false;
 			xmlTag = "RptgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -349,10 +363,11 @@ public class TransparencyDataReport11 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmClssfctn", required = true)
 	protected EquityInstrumentReportingClassification1Code financialInstrumentClassification;
 	/**
-	 * Specifies the classification of the equity instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -373,6 +388,10 @@ public class TransparencyDataReport11 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FinInstrmClssfctn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=Synonym, context=MiFIR,
+	 * value=MiFIRInstrumentClassification</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -386,9 +405,10 @@ public class TransparencyDataReport11 {
 	public static final MMMessageAttribute mmFinancialInstrumentClassification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
-			componentContext_lazy = () -> TransparencyDataReport11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmClssfctn";
+			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "MiFIR"}, new String[]{"value", "MiFIRInstrumentClassification"}));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentClassification";
 			definition = "Specifies the classification of the equity instrument.";
@@ -397,12 +417,11 @@ public class TransparencyDataReport11 {
 			simpleType_lazy = () -> EquityInstrumentReportingClassification1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOutsdngInstrms")
 	protected DecimalNumberFraction5 numberOutstandingInstruments;
 	/**
-	 * For shares and depositary receipts, the total number of outstanding
-	 * instruments. <br>
-	 * For ETFs, the number of units issued for trading.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -432,7 +451,7 @@ public class TransparencyDataReport11 {
 	 */
 	public static final MMMessageAttribute mmNumberOutstandingInstruments = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransparencyDataReport11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
 			isDerived = false;
 			xmlTag = "NbOutsdngInstrms";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -443,13 +462,11 @@ public class TransparencyDataReport11 {
 			simpleType_lazy = () -> DecimalNumberFraction5.mmObject();
 		}
 	};
+	@XmlElement(name = "HldgsExcdgTtlVtngRghtThrshld")
 	protected DecimalNumberFraction5 holdingsExceedingTotalVotingRightThreshold;
 	/**
-	 * The total number of shares corresponding to holdings exceeding 5% of
-	 * total voting rights of the issuer unless such a holding is held by a
-	 * collective investment undertaking or a pension fund. This field is to be
-	 * populated only when actual information is known.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -485,7 +502,7 @@ public class TransparencyDataReport11 {
 	public static final MMMessageAttribute mmHoldingsExceedingTotalVotingRightThreshold = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssueSize;
-			componentContext_lazy = () -> TransparencyDataReport11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
 			isDerived = false;
 			xmlTag = "HldgsExcdgTtlVtngRghtThrshld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -496,10 +513,11 @@ public class TransparencyDataReport11 {
 			simpleType_lazy = () -> DecimalNumberFraction5.mmObject();
 		}
 	};
+	@XmlElement(name = "IssncSz")
 	protected ActiveCurrencyAndAmount issuanceSize;
 	/**
-	 * Issuance size of the certificate expressed in Euros.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -533,7 +551,7 @@ public class TransparencyDataReport11 {
 	public static final MMMessageAttribute mmIssuanceSize = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssuePrice;
-			componentContext_lazy = () -> TransparencyDataReport11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
 			isDerived = false;
 			xmlTag = "IssncSz";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -544,16 +562,11 @@ public class TransparencyDataReport11 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrmPric")
 	protected ActiveCurrencyAnd13DecimalAmount instrumentPrice;
 	/**
-	 * Before the first admission to trading of the instrument, the price of the
-	 * instrument as it will stand at the start of the first day of trading.<br>
-	 * <br>
-	 * After the first admission to trading of the instrument, the price of the
-	 * instrument at the last trading day of the previous year, or at the end of
-	 * the day on which a corporate action is effective. The price should be
-	 * expressed in Euros. To be reported for shares and depositary receipts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -589,7 +602,7 @@ public class TransparencyDataReport11 {
 	public static final MMMessageAttribute mmInstrumentPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
-			componentContext_lazy = () -> TransparencyDataReport11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -604,12 +617,15 @@ public class TransparencyDataReport11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransparencyDataReport11.mmTechnicalRecordIdentification, TransparencyDataReport11.mmIdentification, TransparencyDataReport11.mmFullName, TransparencyDataReport11.mmTradingVenue,
-						TransparencyDataReport11.mmReportingDate, TransparencyDataReport11.mmFinancialInstrumentClassification, TransparencyDataReport11.mmNumberOutstandingInstruments,
-						TransparencyDataReport11.mmHoldingsExceedingTotalVotingRightThreshold, TransparencyDataReport11.mmIssuanceSize, TransparencyDataReport11.mmInstrumentPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransparencyDataReport11.mmTechnicalRecordIdentification, com.tools20022.repository.msg.TransparencyDataReport11.mmIdentification,
+						com.tools20022.repository.msg.TransparencyDataReport11.mmFullName, com.tools20022.repository.msg.TransparencyDataReport11.mmTradingVenue, com.tools20022.repository.msg.TransparencyDataReport11.mmReportingDate,
+						com.tools20022.repository.msg.TransparencyDataReport11.mmFinancialInstrumentClassification, com.tools20022.repository.msg.TransparencyDataReport11.mmNumberOutstandingInstruments,
+						com.tools20022.repository.msg.TransparencyDataReport11.mmHoldingsExceedingTotalVotingRightThreshold, com.tools20022.repository.msg.TransparencyDataReport11.mmIssuanceSize,
+						com.tools20022.repository.msg.TransparencyDataReport11.mmInstrumentPrice);
 				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingEquityTransparencyDataReportV01.mmEquityTransparencyData);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintValidISINRule.forTransparencyDataReport11, com.tools20022.repository.constraints.ConstraintValidMICRule.forTransparencyDataReport11);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransparencyDataReport11";
 				definition = "Provides for reporting qualitative details of equity instruments as part of Transparency calculations.";
@@ -618,93 +634,93 @@ public class TransparencyDataReport11 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TechRcrdId")
-	public Max35Text getTechnicalRecordIdentification() {
-		return technicalRecordIdentification;
+	public Optional<Max35Text> getTechnicalRecordIdentification() {
+		return technicalRecordIdentification == null ? Optional.empty() : Optional.of(technicalRecordIdentification);
 	}
 
-	public void setTechnicalRecordIdentification(Max35Text technicalRecordIdentification) {
+	public TransparencyDataReport11 setTechnicalRecordIdentification(Max35Text technicalRecordIdentification) {
 		this.technicalRecordIdentification = technicalRecordIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public ISINOct2015Identifier getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(ISINOct2015Identifier identification) {
-		this.identification = identification;
+	public TransparencyDataReport11 setIdentification(ISINOct2015Identifier identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "FullNm")
-	public Max350Text getFullName() {
-		return fullName;
+	public Optional<Max350Text> getFullName() {
+		return fullName == null ? Optional.empty() : Optional.of(fullName);
 	}
 
-	public void setFullName(Max350Text fullName) {
+	public TransparencyDataReport11 setFullName(Max350Text fullName) {
 		this.fullName = fullName;
+		return this;
 	}
 
-	@XmlElement(name = "TradgVn")
-	public MICIdentifier getTradingVenue() {
-		return tradingVenue;
+	public Optional<MICIdentifier> getTradingVenue() {
+		return tradingVenue == null ? Optional.empty() : Optional.of(tradingVenue);
 	}
 
-	public void setTradingVenue(MICIdentifier tradingVenue) {
+	public TransparencyDataReport11 setTradingVenue(MICIdentifier tradingVenue) {
 		this.tradingVenue = tradingVenue;
+		return this;
 	}
 
-	@XmlElement(name = "RptgDt")
-	public ISODate getReportingDate() {
-		return reportingDate;
+	public Optional<ISODate> getReportingDate() {
+		return reportingDate == null ? Optional.empty() : Optional.of(reportingDate);
 	}
 
-	public void setReportingDate(ISODate reportingDate) {
+	public TransparencyDataReport11 setReportingDate(ISODate reportingDate) {
 		this.reportingDate = reportingDate;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmClssfctn", required = true)
 	public EquityInstrumentReportingClassification1Code getFinancialInstrumentClassification() {
 		return financialInstrumentClassification;
 	}
 
-	public void setFinancialInstrumentClassification(EquityInstrumentReportingClassification1Code financialInstrumentClassification) {
-		this.financialInstrumentClassification = financialInstrumentClassification;
+	public TransparencyDataReport11 setFinancialInstrumentClassification(EquityInstrumentReportingClassification1Code financialInstrumentClassification) {
+		this.financialInstrumentClassification = Objects.requireNonNull(financialInstrumentClassification);
+		return this;
 	}
 
-	@XmlElement(name = "NbOutsdngInstrms")
-	public DecimalNumberFraction5 getNumberOutstandingInstruments() {
-		return numberOutstandingInstruments;
+	public Optional<DecimalNumberFraction5> getNumberOutstandingInstruments() {
+		return numberOutstandingInstruments == null ? Optional.empty() : Optional.of(numberOutstandingInstruments);
 	}
 
-	public void setNumberOutstandingInstruments(DecimalNumberFraction5 numberOutstandingInstruments) {
+	public TransparencyDataReport11 setNumberOutstandingInstruments(DecimalNumberFraction5 numberOutstandingInstruments) {
 		this.numberOutstandingInstruments = numberOutstandingInstruments;
+		return this;
 	}
 
-	@XmlElement(name = "HldgsExcdgTtlVtngRghtThrshld")
-	public DecimalNumberFraction5 getHoldingsExceedingTotalVotingRightThreshold() {
-		return holdingsExceedingTotalVotingRightThreshold;
+	public Optional<DecimalNumberFraction5> getHoldingsExceedingTotalVotingRightThreshold() {
+		return holdingsExceedingTotalVotingRightThreshold == null ? Optional.empty() : Optional.of(holdingsExceedingTotalVotingRightThreshold);
 	}
 
-	public void setHoldingsExceedingTotalVotingRightThreshold(DecimalNumberFraction5 holdingsExceedingTotalVotingRightThreshold) {
+	public TransparencyDataReport11 setHoldingsExceedingTotalVotingRightThreshold(DecimalNumberFraction5 holdingsExceedingTotalVotingRightThreshold) {
 		this.holdingsExceedingTotalVotingRightThreshold = holdingsExceedingTotalVotingRightThreshold;
+		return this;
 	}
 
-	@XmlElement(name = "IssncSz")
-	public ActiveCurrencyAndAmount getIssuanceSize() {
-		return issuanceSize;
+	public Optional<ActiveCurrencyAndAmount> getIssuanceSize() {
+		return issuanceSize == null ? Optional.empty() : Optional.of(issuanceSize);
 	}
 
-	public void setIssuanceSize(ActiveCurrencyAndAmount issuanceSize) {
+	public TransparencyDataReport11 setIssuanceSize(ActiveCurrencyAndAmount issuanceSize) {
 		this.issuanceSize = issuanceSize;
+		return this;
 	}
 
-	@XmlElement(name = "InstrmPric")
-	public ActiveCurrencyAnd13DecimalAmount getInstrumentPrice() {
-		return instrumentPrice;
+	public Optional<ActiveCurrencyAnd13DecimalAmount> getInstrumentPrice() {
+		return instrumentPrice == null ? Optional.empty() : Optional.of(instrumentPrice);
 	}
 
-	public void setInstrumentPrice(ActiveCurrencyAnd13DecimalAmount instrumentPrice) {
+	public TransparencyDataReport11 setInstrumentPrice(ActiveCurrencyAnd13DecimalAmount instrumentPrice) {
 		this.instrumentPrice = instrumentPrice;
+		return this;
 	}
 }

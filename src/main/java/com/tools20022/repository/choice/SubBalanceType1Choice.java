@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of SubBalance type."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SubBalanceType1Choice", propOrder = {"subBalanceType", "proprietary"})
 public class SubBalanceType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SubBalTp", required = true)
 	protected SecuritiesBalanceType4Code subBalanceType;
 	/**
-	 * Reason for the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +110,7 @@ public class SubBalanceType1Choice {
 	public static final MMMessageAttribute mmSubBalanceType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
-			componentContext_lazy = () -> SubBalanceType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SubBalanceType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SubBalTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,12 +121,11 @@ public class SubBalanceType1Choice {
 			simpleType_lazy = () -> SecuritiesBalanceType4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification13 proprietary;
 	/**
-	 * Reason a security is not available or additional information about the
-	 * financial instrument for which the balance is given, for example,
-	 * unregistered, registered in nominee name.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +161,7 @@ public class SubBalanceType1Choice {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
-			componentContext_lazy = () -> SubBalanceType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SubBalanceType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,9 +176,9 @@ public class SubBalanceType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SubBalanceType1Choice.mmSubBalanceType, SubBalanceType1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SubBalanceType1Choice.mmSubBalanceType, com.tools20022.repository.choice.SubBalanceType1Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SubBalanceType1Choice";
 				definition = "Choice of SubBalance type.";
@@ -186,21 +187,21 @@ public class SubBalanceType1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SubBalTp", required = true)
 	public SecuritiesBalanceType4Code getSubBalanceType() {
 		return subBalanceType;
 	}
 
-	public void setSubBalanceType(SecuritiesBalanceType4Code subBalanceType) {
-		this.subBalanceType = subBalanceType;
+	public SubBalanceType1Choice setSubBalanceType(SecuritiesBalanceType4Code subBalanceType) {
+		this.subBalanceType = Objects.requireNonNull(subBalanceType);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification13 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification13 proprietary) {
-		this.proprietary = proprietary;
+	public SubBalanceType1Choice setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.InstructionProcessingStatusCode;
+import com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Provides the processing status of a transaction (at account servicer level).
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode
- * InstructionProcessingStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code#mmCancelled
- * IntraPositionTransactionProcessingStatus1Code.mmCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code#Cancelled
+ * IntraPositionTransactionProcessingStatus1Code.Cancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code#mmAcknowledgedAccepted
- * IntraPositionTransactionProcessingStatus1Code.mmAcknowledgedAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code#AcknowledgedAccepted
+ * IntraPositionTransactionProcessingStatus1Code.AcknowledgedAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code#mmRejected
- * IntraPositionTransactionProcessingStatus1Code.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code#Rejected
+ * IntraPositionTransactionProcessingStatus1Code.Rejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code#mmInRepair
- * IntraPositionTransactionProcessingStatus1Code.mmInRepair}</li>
+ * {@linkplain com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code#InRepair
+ * IntraPositionTransactionProcessingStatus1Code.InRepair}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode
+ * InstructionProcessingStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -72,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class IntraPositionTransactionProcessingStatus1Code extends InstructionProcessingStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class IntraPositionTransactionProcessingStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,11 +96,12 @@ public class IntraPositionTransactionProcessingStatus1Code extends InstructionPr
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelled = new MMCode() {
+	public static final IntraPositionTransactionProcessingStatus1Code Cancelled = new IntraPositionTransactionProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
-			owner_lazy = () -> IntraPositionTransactionProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code.mmObject();
+			codeName = InstructionProcessingStatusCode.Cancelled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -114,11 +120,12 @@ public class IntraPositionTransactionProcessingStatus1Code extends InstructionPr
 	 * name} = "AcknowledgedAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
+	public static final IntraPositionTransactionProcessingStatus1Code AcknowledgedAccepted = new IntraPositionTransactionProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
-			owner_lazy = () -> IntraPositionTransactionProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code.mmObject();
+			codeName = InstructionProcessingStatusCode.AcknowledgedAccepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -137,11 +144,12 @@ public class IntraPositionTransactionProcessingStatus1Code extends InstructionPr
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final IntraPositionTransactionProcessingStatus1Code Rejected = new IntraPositionTransactionProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> IntraPositionTransactionProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code.mmObject();
+			codeName = InstructionProcessingStatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -160,27 +168,61 @@ public class IntraPositionTransactionProcessingStatus1Code extends InstructionPr
 	 * name} = "InRepair"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInRepair = new MMCode() {
+	public static final IntraPositionTransactionProcessingStatus1Code InRepair = new IntraPositionTransactionProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InRepair";
-			owner_lazy = () -> IntraPositionTransactionProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code.mmObject();
+			codeName = InstructionProcessingStatusCode.InRepair.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, IntraPositionTransactionProcessingStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected IntraPositionTransactionProcessingStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CAND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IntraPositionTransactionProcessingStatus1Code";
 				definition = "Provides the processing status of a transaction (at account servicer level).";
-				code_lazy = () -> Arrays.asList(IntraPositionTransactionProcessingStatus1Code.mmCancelled, IntraPositionTransactionProcessingStatus1Code.mmAcknowledgedAccepted, IntraPositionTransactionProcessingStatus1Code.mmRejected,
-						IntraPositionTransactionProcessingStatus1Code.mmInRepair);
 				trace_lazy = () -> InstructionProcessingStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code.Cancelled,
+						com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code.AcknowledgedAccepted, com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code.Rejected,
+						com.tools20022.repository.codeset.IntraPositionTransactionProcessingStatus1Code.InRepair);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Cancelled.getCodeName().get(), Cancelled);
+		codesByName.put(AcknowledgedAccepted.getCodeName().get(), AcknowledgedAccepted);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+		codesByName.put(InRepair.getCodeName().get(), InRepair);
+	}
+
+	public static IntraPositionTransactionProcessingStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static IntraPositionTransactionProcessingStatus1Code[] values() {
+		IntraPositionTransactionProcessingStatus1Code[] values = new IntraPositionTransactionProcessingStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, IntraPositionTransactionProcessingStatus1Code> {
+		@Override
+		public IntraPositionTransactionProcessingStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(IntraPositionTransactionProcessingStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

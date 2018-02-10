@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.CommercialTradeSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the payment terms of the underlying transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "EarlyPaymentsVAT1", propOrder = {"taxRate", "discountTaxType", "discountTaxAmount"})
 public class EarlyPaymentsVAT1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TaxRate", required = true)
 	protected PercentageRate taxRate;
 	/**
-	 * Tax rate to be applied for early payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +108,7 @@ public class EarlyPaymentsVAT1 {
 	 */
 	public static final MMMessageAttribute mmTaxRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EarlyPaymentsVAT1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPaymentsVAT1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +119,11 @@ public class EarlyPaymentsVAT1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "DscntTaxTp", required = true)
 	protected Max4Text discountTaxType;
 	/**
-	 * Type of tax applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,6 +138,15 @@ public class EarlyPaymentsVAT1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DscntTaxTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+	 * constraint} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintR8#forDiscountTaxType
+	 * ConstraintR8.forDiscountTaxType}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -147,9 +159,10 @@ public class EarlyPaymentsVAT1 {
 	 */
 	public static final MMMessageAttribute mmDiscountTaxType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EarlyPaymentsVAT1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPaymentsVAT1.mmObject();
 			isDerived = false;
 			xmlTag = "DscntTaxTp";
+			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR8.forDiscountTaxType);
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountTaxType";
 			definition = "Type of tax applied.";
@@ -158,10 +171,11 @@ public class EarlyPaymentsVAT1 {
 			simpleType_lazy = () -> Max4Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DscntTaxAmt", required = true)
 	protected CurrencyAndAmount discountTaxAmount;
 	/**
-	 * Early payment discount tax amount calculated using defined tax rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +204,7 @@ public class EarlyPaymentsVAT1 {
 	 */
 	public static final MMMessageAttribute mmDiscountTaxAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EarlyPaymentsVAT1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPaymentsVAT1.mmObject();
 			isDerived = false;
 			xmlTag = "DscntTaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,9 +219,10 @@ public class EarlyPaymentsVAT1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EarlyPaymentsVAT1.mmTaxRate, EarlyPaymentsVAT1.mmDiscountTaxType, EarlyPaymentsVAT1.mmDiscountTaxAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EarlyPaymentsVAT1.mmTaxRate, com.tools20022.repository.msg.EarlyPaymentsVAT1.mmDiscountTaxType,
+						com.tools20022.repository.msg.EarlyPaymentsVAT1.mmDiscountTaxAmount);
 				trace_lazy = () -> CommercialTradeSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EarlyPaymentsVAT1";
 				definition = "Specifies the payment terms of the underlying transaction.";
@@ -216,30 +231,30 @@ public class EarlyPaymentsVAT1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TaxRate", required = true)
 	public PercentageRate getTaxRate() {
 		return taxRate;
 	}
 
-	public void setTaxRate(PercentageRate taxRate) {
-		this.taxRate = taxRate;
+	public EarlyPaymentsVAT1 setTaxRate(PercentageRate taxRate) {
+		this.taxRate = Objects.requireNonNull(taxRate);
+		return this;
 	}
 
-	@XmlElement(name = "DscntTaxTp", required = true)
 	public Max4Text getDiscountTaxType() {
 		return discountTaxType;
 	}
 
-	public void setDiscountTaxType(Max4Text discountTaxType) {
-		this.discountTaxType = discountTaxType;
+	public EarlyPaymentsVAT1 setDiscountTaxType(Max4Text discountTaxType) {
+		this.discountTaxType = Objects.requireNonNull(discountTaxType);
+		return this;
 	}
 
-	@XmlElement(name = "DscntTaxAmt", required = true)
 	public CurrencyAndAmount getDiscountTaxAmount() {
 		return discountTaxAmount;
 	}
 
-	public void setDiscountTaxAmount(CurrencyAndAmount discountTaxAmount) {
-		this.discountTaxAmount = discountTaxAmount;
+	public EarlyPaymentsVAT1 setDiscountTaxAmount(CurrencyAndAmount discountTaxAmount) {
+		this.discountTaxAmount = Objects.requireNonNull(discountTaxAmount);
+		return this;
 	}
 }

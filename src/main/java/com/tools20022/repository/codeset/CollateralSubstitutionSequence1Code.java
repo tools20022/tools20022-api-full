@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CollateralSubstitutionSequenceCode;
+import com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates whether the collateral substitution request is new or updated.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionSequenceCode
- * CollateralSubstitutionSequenceCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code#mmInitial
- * CollateralSubstitutionSequence1Code.mmInitial}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code#Initial
+ * CollateralSubstitutionSequence1Code.Initial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code#mmUpdated
- * CollateralSubstitutionSequence1Code.mmUpdated}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code#Updated
+ * CollateralSubstitutionSequence1Code.Updated}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionSequenceCode
+ * CollateralSubstitutionSequenceCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Indicates whether the collateral substitution request is new or updated."</li>
  * </ul>
  */
-public class CollateralSubstitutionSequence1Code extends CollateralSubstitutionSequenceCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CollateralSubstitutionSequence1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +89,12 @@ public class CollateralSubstitutionSequence1Code extends CollateralSubstitutionS
 	 * name} = "Initial"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInitial = new MMCode() {
+	public static final CollateralSubstitutionSequence1Code Initial = new CollateralSubstitutionSequence1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initial";
-			owner_lazy = () -> CollateralSubstitutionSequence1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code.mmObject();
+			codeName = CollateralSubstitutionSequenceCode.Initial.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,26 +113,57 @@ public class CollateralSubstitutionSequence1Code extends CollateralSubstitutionS
 	 * name} = "Updated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUpdated = new MMCode() {
+	public static final CollateralSubstitutionSequence1Code Updated = new CollateralSubstitutionSequence1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Updated";
-			owner_lazy = () -> CollateralSubstitutionSequence1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code.mmObject();
+			codeName = CollateralSubstitutionSequenceCode.Updated.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CollateralSubstitutionSequence1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CollateralSubstitutionSequence1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("INIT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralSubstitutionSequence1Code";
 				definition = "Indicates whether the collateral substitution request is new or updated.";
-				code_lazy = () -> Arrays.asList(CollateralSubstitutionSequence1Code.mmInitial, CollateralSubstitutionSequence1Code.mmUpdated);
 				trace_lazy = () -> CollateralSubstitutionSequenceCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code.Initial, com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code.Updated);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Initial.getCodeName().get(), Initial);
+		codesByName.put(Updated.getCodeName().get(), Updated);
+	}
+
+	public static CollateralSubstitutionSequence1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CollateralSubstitutionSequence1Code[] values() {
+		CollateralSubstitutionSequence1Code[] values = new CollateralSubstitutionSequence1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CollateralSubstitutionSequence1Code> {
+		@Override
+		public CollateralSubstitutionSequence1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CollateralSubstitutionSequence1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

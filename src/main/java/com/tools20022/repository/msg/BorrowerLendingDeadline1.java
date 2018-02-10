@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.CorporateActionPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,16 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Stock lending deadline assigned to a borrower of the stock."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BorrowerLendingDeadline1", propOrder = {"stockLendingDeadline", "borrower"})
 public class BorrowerLendingDeadline1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StockLndgDdln", required = true)
 	protected DateFormat31Choice stockLendingDeadline;
 	/**
-	 * Date/time set as the deadline to respond, with instructions, to an
-	 * outstanding event, for which the underlying security is out on loan.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,7 +112,7 @@ public class BorrowerLendingDeadline1 {
 	public static final MMMessageAssociationEnd mmStockLendingDeadline = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmStockLendingDeadline;
-			componentContext_lazy = () -> BorrowerLendingDeadline1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BorrowerLendingDeadline1.mmObject();
 			isDerived = false;
 			xmlTag = "StockLndgDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +124,11 @@ public class BorrowerLendingDeadline1 {
 			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Brrwr", required = true)
 	protected PartyIdentification92Choice borrower;
 	/**
-	 * Party who has borrowed stocks on loan.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -159,7 +161,7 @@ public class BorrowerLendingDeadline1 {
 	public static final MMMessageAssociationEnd mmBorrower = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionPartyRole.mmObject();
-			componentContext_lazy = () -> BorrowerLendingDeadline1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BorrowerLendingDeadline1.mmObject();
 			isDerived = false;
 			xmlTag = "Brrwr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,9 +177,9 @@ public class BorrowerLendingDeadline1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BorrowerLendingDeadline1.mmStockLendingDeadline, BorrowerLendingDeadline1.mmBorrower);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BorrowerLendingDeadline1.mmStockLendingDeadline, com.tools20022.repository.msg.BorrowerLendingDeadline1.mmBorrower);
 				trace_lazy = () -> CorporateActionDeadline.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BorrowerLendingDeadline1";
 				definition = "Stock lending deadline assigned to a borrower of the stock.";
@@ -186,21 +188,21 @@ public class BorrowerLendingDeadline1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StockLndgDdln", required = true)
 	public DateFormat31Choice getStockLendingDeadline() {
 		return stockLendingDeadline;
 	}
 
-	public void setStockLendingDeadline(DateFormat31Choice stockLendingDeadline) {
-		this.stockLendingDeadline = stockLendingDeadline;
+	public BorrowerLendingDeadline1 setStockLendingDeadline(DateFormat31Choice stockLendingDeadline) {
+		this.stockLendingDeadline = Objects.requireNonNull(stockLendingDeadline);
+		return this;
 	}
 
-	@XmlElement(name = "Brrwr", required = true)
 	public PartyIdentification92Choice getBorrower() {
 		return borrower;
 	}
 
-	public void setBorrower(PartyIdentification92Choice borrower) {
-		this.borrower = borrower;
+	public BorrowerLendingDeadline1 setBorrower(PartyIdentification92Choice borrower) {
+		this.borrower = Objects.requireNonNull(borrower);
+		return this;
 	}
 }

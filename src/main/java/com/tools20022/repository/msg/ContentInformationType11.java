@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.*;
 import com.tools20022.repository.codeset.ContentType2Code;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -100,8 +102,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -124,15 +126,16 @@ import javax.xml.bind.annotation.XmlType;
  * ContentInformationType8}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ContentInformationType11", propOrder = {"contentType", "authenticatedData"})
 public class ContentInformationType11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CnttTp", required = true)
 	protected ContentType2Code contentType;
 	/**
-	 * Type of data protection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +176,7 @@ public class ContentInformationType11 {
 	 */
 	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ContentInformationType11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType11.mmObject();
 			isDerived = false;
 			xmlTag = "CnttTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,10 +189,11 @@ public class ContentInformationType11 {
 			simpleType_lazy = () -> ContentType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AuthntcdData")
 	protected List<com.tools20022.repository.msg.AuthenticatedData4> authenticatedData;
 	/**
-	 * Data protection by a message authentication code (MAC).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -228,7 +232,7 @@ public class ContentInformationType11 {
 	 */
 	public static final MMMessageAssociationEnd mmAuthenticatedData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ContentInformationType11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType11.mmObject();
 			isDerived = false;
 			xmlTag = "AuthntcdData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,12 +249,12 @@ public class ContentInformationType11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ContentInformationType11.mmContentType, ContentInformationType11.mmAuthenticatedData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType11.mmContentType, com.tools20022.repository.msg.ContentInformationType11.mmAuthenticatedData);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorCompletionAdviceV04.mmSecurityTrailer, AcceptorDiagnosticResponseV04.mmSecurityTrailer, AcceptorReconciliationResponseV04.mmSecurityTrailer,
 						AcceptorCurrencyConversionRequestV02.mmSecurityTrailer, AcceptorCancellationAdviceResponseV04.mmSecurityTrailer, AcceptorDiagnosticRequestV04.mmSecurityTrailer, AcceptorCancellationResponseV04.mmSecurityTrailer,
 						AcceptorCurrencyConversionResponseV02.mmSecurityTrailer, AcceptorCompletionAdviceResponseV04.mmSecurityTrailer, AcceptorAuthorisationResponseV04.mmSecurityTrailer, AcceptorCancellationAdviceV04.mmSecurityTrailer,
 						AcceptorCancellationRequestV04.mmSecurityTrailer, AcceptorReconciliationRequestV04.mmSecurityTrailer, AcceptorAuthorisationRequestV04.mmSecurityTrailer);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType11";
 				definition = "General cryptographic message syntax (CMS) containing authenticated data.";
@@ -261,21 +265,21 @@ public class ContentInformationType11 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CnttTp", required = true)
 	public ContentType2Code getContentType() {
 		return contentType;
 	}
 
-	public void setContentType(ContentType2Code contentType) {
-		this.contentType = contentType;
+	public ContentInformationType11 setContentType(ContentType2Code contentType) {
+		this.contentType = Objects.requireNonNull(contentType);
+		return this;
 	}
 
-	@XmlElement(name = "AuthntcdData")
 	public List<AuthenticatedData4> getAuthenticatedData() {
-		return authenticatedData;
+		return authenticatedData == null ? authenticatedData = new ArrayList<>() : authenticatedData;
 	}
 
-	public void setAuthenticatedData(List<com.tools20022.repository.msg.AuthenticatedData4> authenticatedData) {
-		this.authenticatedData = authenticatedData;
+	public ContentInformationType11 setAuthenticatedData(List<com.tools20022.repository.msg.AuthenticatedData4> authenticatedData) {
+		this.authenticatedData = Objects.requireNonNull(authenticatedData);
+		return this;
 	}
 }

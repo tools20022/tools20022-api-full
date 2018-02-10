@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvestmentAccountInformationType1", propOrder = {"investmentAccount", "accountParties", "intermediaries", "investmentPlan", "cashSettlement", "serviceLevelAgreement"})
 public class InvestmentAccountInformationType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InvstmtAcct", required = true)
 	protected YesNoIndicator investmentAccount;
 	/**
-	 * Indicates if the core investment account information must be selected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +115,7 @@ public class InvestmentAccountInformationType1 {
 	 */
 	public static final MMMessageAttribute mmInvestmentAccount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentAccountInformationType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountInformationType1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +126,11 @@ public class InvestmentAccountInformationType1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctPties", required = true)
 	protected YesNoIndicator accountParties;
 	/**
-	 * Indicates if the information about account parties must be selected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +159,7 @@ public class InvestmentAccountInformationType1 {
 	 */
 	public static final MMMessageAttribute mmAccountParties = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentAccountInformationType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountInformationType1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,10 +170,11 @@ public class InvestmentAccountInformationType1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Intrmies", required = true)
 	protected YesNoIndicator intermediaries;
 	/**
-	 * Indicates if the information about the intermediaries must be selected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,7 +204,7 @@ public class InvestmentAccountInformationType1 {
 	 */
 	public static final MMMessageAttribute mmIntermediaries = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentAccountInformationType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountInformationType1.mmObject();
 			isDerived = false;
 			xmlTag = "Intrmies";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,11 +215,11 @@ public class InvestmentAccountInformationType1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstmtPlan", required = true)
 	protected YesNoIndicator investmentPlan;
 	/**
-	 * Indicates if the information about the investment plan(s) must be
-	 * selected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,7 +249,7 @@ public class InvestmentAccountInformationType1 {
 	 */
 	public static final MMMessageAttribute mmInvestmentPlan = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentAccountInformationType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountInformationType1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtPlan";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,10 +260,11 @@ public class InvestmentAccountInformationType1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CshSttlm", required = true)
 	protected YesNoIndicator cashSettlement;
 	/**
-	 * Indicates if the cash settlement information must be selected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -288,7 +293,7 @@ public class InvestmentAccountInformationType1 {
 	 */
 	public static final MMMessageAttribute mmCashSettlement = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentAccountInformationType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountInformationType1.mmObject();
 			isDerived = false;
 			xmlTag = "CshSttlm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -299,10 +304,11 @@ public class InvestmentAccountInformationType1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "SvcLvlAgrmt", required = true)
 	protected YesNoIndicator serviceLevelAgreement;
 	/**
-	 * Indicates if the Service Level Agreement information must be selected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -331,7 +337,7 @@ public class InvestmentAccountInformationType1 {
 	 */
 	public static final MMMessageAttribute mmServiceLevelAgreement = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentAccountInformationType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountInformationType1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcLvlAgrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -346,9 +352,10 @@ public class InvestmentAccountInformationType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InvestmentAccountInformationType1.mmInvestmentAccount, InvestmentAccountInformationType1.mmAccountParties, InvestmentAccountInformationType1.mmIntermediaries,
-						InvestmentAccountInformationType1.mmInvestmentPlan, InvestmentAccountInformationType1.mmCashSettlement, InvestmentAccountInformationType1.mmServiceLevelAgreement);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountInformationType1.mmInvestmentAccount, com.tools20022.repository.msg.InvestmentAccountInformationType1.mmAccountParties,
+						com.tools20022.repository.msg.InvestmentAccountInformationType1.mmIntermediaries, com.tools20022.repository.msg.InvestmentAccountInformationType1.mmInvestmentPlan,
+						com.tools20022.repository.msg.InvestmentAccountInformationType1.mmCashSettlement, com.tools20022.repository.msg.InvestmentAccountInformationType1.mmServiceLevelAgreement);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentAccountInformationType1";
 				definition = "Select the type(s) of information to be retrieved about a registered investment account.";
@@ -357,57 +364,57 @@ public class InvestmentAccountInformationType1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InvstmtAcct", required = true)
 	public YesNoIndicator getInvestmentAccount() {
 		return investmentAccount;
 	}
 
-	public void setInvestmentAccount(YesNoIndicator investmentAccount) {
-		this.investmentAccount = investmentAccount;
+	public InvestmentAccountInformationType1 setInvestmentAccount(YesNoIndicator investmentAccount) {
+		this.investmentAccount = Objects.requireNonNull(investmentAccount);
+		return this;
 	}
 
-	@XmlElement(name = "AcctPties", required = true)
 	public YesNoIndicator getAccountParties() {
 		return accountParties;
 	}
 
-	public void setAccountParties(YesNoIndicator accountParties) {
-		this.accountParties = accountParties;
+	public InvestmentAccountInformationType1 setAccountParties(YesNoIndicator accountParties) {
+		this.accountParties = Objects.requireNonNull(accountParties);
+		return this;
 	}
 
-	@XmlElement(name = "Intrmies", required = true)
 	public YesNoIndicator getIntermediaries() {
 		return intermediaries;
 	}
 
-	public void setIntermediaries(YesNoIndicator intermediaries) {
-		this.intermediaries = intermediaries;
+	public InvestmentAccountInformationType1 setIntermediaries(YesNoIndicator intermediaries) {
+		this.intermediaries = Objects.requireNonNull(intermediaries);
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtPlan", required = true)
 	public YesNoIndicator getInvestmentPlan() {
 		return investmentPlan;
 	}
 
-	public void setInvestmentPlan(YesNoIndicator investmentPlan) {
-		this.investmentPlan = investmentPlan;
+	public InvestmentAccountInformationType1 setInvestmentPlan(YesNoIndicator investmentPlan) {
+		this.investmentPlan = Objects.requireNonNull(investmentPlan);
+		return this;
 	}
 
-	@XmlElement(name = "CshSttlm", required = true)
 	public YesNoIndicator getCashSettlement() {
 		return cashSettlement;
 	}
 
-	public void setCashSettlement(YesNoIndicator cashSettlement) {
-		this.cashSettlement = cashSettlement;
+	public InvestmentAccountInformationType1 setCashSettlement(YesNoIndicator cashSettlement) {
+		this.cashSettlement = Objects.requireNonNull(cashSettlement);
+		return this;
 	}
 
-	@XmlElement(name = "SvcLvlAgrmt", required = true)
 	public YesNoIndicator getServiceLevelAgreement() {
 		return serviceLevelAgreement;
 	}
 
-	public void setServiceLevelAgreement(YesNoIndicator serviceLevelAgreement) {
-		this.serviceLevelAgreement = serviceLevelAgreement;
+	public InvestmentAccountInformationType1 setServiceLevelAgreement(YesNoIndicator serviceLevelAgreement) {
+		this.serviceLevelAgreement = Objects.requireNonNull(serviceLevelAgreement);
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -33,6 +34,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -87,8 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule#forFinancialInstrumentAttributes25
+ * ConstraintCoexistenceQuantityRule.forFinancialInstrumentAttributes25}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -108,16 +119,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrumentAttributes25", propOrder = {"securityIdentification", "quantity", "renounceableEntitlementStatusType", "fractionDisposition", "intermediateSecuritiesToUnderlyingRatio", "marketPrice", "expiryDate",
 		"postingDate", "tradingPeriod", "uninstructedBalance", "instructedBalance"})
 public class FinancialInstrumentAttributes25 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctyId", required = true)
 	protected SecurityIdentification15 securityIdentification;
 	/**
-	 * Identifies the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -137,6 +149,9 @@ public class FinancialInstrumentAttributes25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctyId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :35B:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -150,9 +165,10 @@ public class FinancialInstrumentAttributes25 {
 	public static final MMMessageAssociationEnd mmSecurityIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> FinancialInstrumentAttributes25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":35B:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identifies the financial instrument.";
@@ -162,11 +178,11 @@ public class FinancialInstrumentAttributes25 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
 		}
 	};
+	@XmlElement(name = "Qty")
 	protected RestrictedFINDecimalNumber quantity;
 	/**
-	 * Quantity of entitled intermediate securities based on the balance of
-	 * underlying securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,6 +203,9 @@ public class FinancialInstrumentAttributes25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Qty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36a::QINT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -202,9 +221,10 @@ public class FinancialInstrumentAttributes25 {
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
-			componentContext_lazy = () -> FinancialInstrumentAttributes25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36a::QINT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of entitled intermediate securities based on the balance of underlying securities.";
@@ -213,10 +233,11 @@ public class FinancialInstrumentAttributes25 {
 			simpleType_lazy = () -> RestrictedFINDecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "RnncblEntitlmntStsTp")
 	protected RenounceableEntitlementStatusTypeFormat2Choice renounceableEntitlementStatusType;
 	/**
-	 * Specifies whether terms of the event allow resale of the rights.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -237,6 +258,9 @@ public class FinancialInstrumentAttributes25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RnncblEntitlmntStsTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::SELL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -251,9 +275,10 @@ public class FinancialInstrumentAttributes25 {
 	public static final MMMessageAssociationEnd mmRenounceableEntitlementStatusType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionSecuritiesEntitlement.mmRenounceableEntitlementStatusType;
-			componentContext_lazy = () -> FinancialInstrumentAttributes25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmObject();
 			isDerived = false;
 			xmlTag = "RnncblEntitlmntStsTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::SELL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RenounceableEntitlementStatusType";
 			definition = "Specifies whether terms of the event allow resale of the rights.";
@@ -263,12 +288,11 @@ public class FinancialInstrumentAttributes25 {
 			type_lazy = () -> RenounceableEntitlementStatusTypeFormat2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FrctnDspstn")
 	protected FractionDispositionType14Choice fractionDisposition;
 	/**
-	 * Specifies how fractions resulting from derived securities will be
-	 * processed or how prorated decisions will be rounding, if provided with a
-	 * pro ration rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -288,6 +312,9 @@ public class FinancialInstrumentAttributes25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FrctnDspstn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::DISF</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -303,9 +330,10 @@ public class FinancialInstrumentAttributes25 {
 	public static final MMMessageAssociationEnd mmFractionDisposition = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmFractionDisposition;
-			componentContext_lazy = () -> FinancialInstrumentAttributes25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmObject();
 			isDerived = false;
 			xmlTag = "FrctnDspstn";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::DISF"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionDisposition";
 			definition = "Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
@@ -315,11 +343,11 @@ public class FinancialInstrumentAttributes25 {
 			type_lazy = () -> FractionDispositionType14Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrmdtSctiesToUndrlygRatio")
 	protected QuantityToQuantityRatio2 intermediateSecuritiesToUnderlyingRatio;
 	/**
-	 * Quantity of intermediate securities awarded for a given quantity of
-	 * underlying security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -339,6 +367,9 @@ public class FinancialInstrumentAttributes25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IntrmdtSctiesToUndrlygRatio"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92D::RTUN</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -354,9 +385,10 @@ public class FinancialInstrumentAttributes25 {
 	public static final MMMessageAssociationEnd mmIntermediateSecuritiesToUnderlyingRatio = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmIntermediateSecuritiesToUnderlyingRatio;
-			componentContext_lazy = () -> FinancialInstrumentAttributes25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmdtSctiesToUndrlygRatio";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92D::RTUN"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesToUnderlyingRatio";
 			definition = "Quantity of intermediate securities awarded for a given quantity of underlying security.";
@@ -366,10 +398,11 @@ public class FinancialInstrumentAttributes25 {
 			type_lazy = () -> com.tools20022.repository.msg.QuantityToQuantityRatio2.mmObject();
 		}
 	};
+	@XmlElement(name = "MktPric")
 	protected AmountPrice4 marketPrice;
 	/**
-	 * Last reported/known price of a financial instrument in a market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -388,6 +421,9 @@ public class FinancialInstrumentAttributes25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MktPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::MRKT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -402,9 +438,10 @@ public class FinancialInstrumentAttributes25 {
 	public static final MMMessageAssociationEnd mmMarketPrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmMarketValue;
-			componentContext_lazy = () -> FinancialInstrumentAttributes25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmObject();
 			isDerived = false;
 			xmlTag = "MktPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::MRKT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPrice";
 			definition = "Last reported/known price of a financial instrument in a market.";
@@ -414,11 +451,11 @@ public class FinancialInstrumentAttributes25 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountPrice4.mmObject();
 		}
 	};
+	@XmlElement(name = "XpryDt", required = true)
 	protected DateFormat17Choice expiryDate;
 	/**
-	 * Date on which an order expires or at which a privilege or offer
-	 * terminates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -437,6 +474,9 @@ public class FinancialInstrumentAttributes25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XpryDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::EXPI</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -452,9 +492,10 @@ public class FinancialInstrumentAttributes25 {
 	public static final MMMessageAssociationEnd mmExpiryDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmExpiryDate;
-			componentContext_lazy = () -> FinancialInstrumentAttributes25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::EXPI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date on which an order expires or at which a privilege or offer terminates.";
@@ -464,10 +505,11 @@ public class FinancialInstrumentAttributes25 {
 			type_lazy = () -> DateFormat17Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PstngDt", required = true)
 	protected DateFormat17Choice postingDate;
 	/**
-	 * Date of the posting (credit or debit) to the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -486,6 +528,9 @@ public class FinancialInstrumentAttributes25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PstngDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::POST</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -499,9 +544,10 @@ public class FinancialInstrumentAttributes25 {
 	public static final MMMessageAssociationEnd mmPostingDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingDateTime;
-			componentContext_lazy = () -> FinancialInstrumentAttributes25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmObject();
 			isDerived = false;
 			xmlTag = "PstngDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::POST"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDate";
 			definition = "Date of the posting (credit or debit) to the account.";
@@ -511,11 +557,11 @@ public class FinancialInstrumentAttributes25 {
 			type_lazy = () -> DateFormat17Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgPrd")
 	protected Period4 tradingPeriod;
 	/**
-	 * Period during which intermediate or outturn securities are tradable in a
-	 * secondary market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -533,6 +579,9 @@ public class FinancialInstrumentAttributes25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradgPrd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a::TRDP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -548,9 +597,10 @@ public class FinancialInstrumentAttributes25 {
 	public static final MMMessageAssociationEnd mmTradingPeriod = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmTradingPeriod;
-			componentContext_lazy = () -> FinancialInstrumentAttributes25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmObject();
 			isDerived = false;
 			xmlTag = "TradgPrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a::TRDP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingPeriod";
 			definition = "Period during which intermediate or outturn securities are tradable in a secondary market.";
@@ -560,10 +610,11 @@ public class FinancialInstrumentAttributes25 {
 			type_lazy = () -> com.tools20022.repository.msg.Period4.mmObject();
 		}
 	};
+	@XmlElement(name = "UinstdBal")
 	protected BalanceFormat2Choice uninstructedBalance;
 	/**
-	 * Balance of uninstructed position.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -583,6 +634,9 @@ public class FinancialInstrumentAttributes25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UinstdBal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::UNBA</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -596,9 +650,10 @@ public class FinancialInstrumentAttributes25 {
 	public static final MMMessageAssociationEnd mmUninstructedBalance = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmUninstructedBalance;
-			componentContext_lazy = () -> FinancialInstrumentAttributes25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmObject();
 			isDerived = false;
 			xmlTag = "UinstdBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::UNBA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UninstructedBalance";
 			definition = "Balance of uninstructed position.";
@@ -608,10 +663,11 @@ public class FinancialInstrumentAttributes25 {
 			type_lazy = () -> BalanceFormat2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "InstdBal")
 	protected BalanceFormat2Choice instructedBalance;
 	/**
-	 * Balance of instructed position.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -631,6 +687,9 @@ public class FinancialInstrumentAttributes25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InstdBal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::INBA</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -644,9 +703,10 @@ public class FinancialInstrumentAttributes25 {
 	public static final MMMessageAssociationEnd mmInstructedBalance = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
-			componentContext_lazy = () -> FinancialInstrumentAttributes25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmObject();
 			isDerived = false;
 			xmlTag = "InstdBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::INBA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedBalance";
 			definition = "Balance of instructed position.";
@@ -660,12 +720,15 @@ public class FinancialInstrumentAttributes25 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentAttributes25.mmSecurityIdentification, FinancialInstrumentAttributes25.mmQuantity, FinancialInstrumentAttributes25.mmRenounceableEntitlementStatusType,
-						FinancialInstrumentAttributes25.mmFractionDisposition, FinancialInstrumentAttributes25.mmIntermediateSecuritiesToUnderlyingRatio, FinancialInstrumentAttributes25.mmMarketPrice,
-						FinancialInstrumentAttributes25.mmExpiryDate, FinancialInstrumentAttributes25.mmPostingDate, FinancialInstrumentAttributes25.mmTradingPeriod, FinancialInstrumentAttributes25.mmUninstructedBalance,
-						FinancialInstrumentAttributes25.mmInstructedBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmSecurityIdentification, com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmQuantity,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmRenounceableEntitlementStatusType, com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmFractionDisposition,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmIntermediateSecuritiesToUnderlyingRatio, com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmMarketPrice,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmPostingDate,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmTradingPeriod, com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmUninstructedBalance,
+						com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmInstructedBalance);
 				trace_lazy = () -> Asset.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule.forFinancialInstrumentAttributes25);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -682,102 +745,102 @@ public class FinancialInstrumentAttributes25 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification15 getSecurityIdentification() {
 		return securityIdentification;
 	}
 
-	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 securityIdentification) {
-		this.securityIdentification = securityIdentification;
+	public FinancialInstrumentAttributes25 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 securityIdentification) {
+		this.securityIdentification = Objects.requireNonNull(securityIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Qty")
-	public RestrictedFINDecimalNumber getQuantity() {
-		return quantity;
+	public Optional<RestrictedFINDecimalNumber> getQuantity() {
+		return quantity == null ? Optional.empty() : Optional.of(quantity);
 	}
 
-	public void setQuantity(RestrictedFINDecimalNumber quantity) {
+	public FinancialInstrumentAttributes25 setQuantity(RestrictedFINDecimalNumber quantity) {
 		this.quantity = quantity;
+		return this;
 	}
 
-	@XmlElement(name = "RnncblEntitlmntStsTp")
-	public RenounceableEntitlementStatusTypeFormat2Choice getRenounceableEntitlementStatusType() {
-		return renounceableEntitlementStatusType;
+	public Optional<RenounceableEntitlementStatusTypeFormat2Choice> getRenounceableEntitlementStatusType() {
+		return renounceableEntitlementStatusType == null ? Optional.empty() : Optional.of(renounceableEntitlementStatusType);
 	}
 
-	public void setRenounceableEntitlementStatusType(RenounceableEntitlementStatusTypeFormat2Choice renounceableEntitlementStatusType) {
+	public FinancialInstrumentAttributes25 setRenounceableEntitlementStatusType(RenounceableEntitlementStatusTypeFormat2Choice renounceableEntitlementStatusType) {
 		this.renounceableEntitlementStatusType = renounceableEntitlementStatusType;
+		return this;
 	}
 
-	@XmlElement(name = "FrctnDspstn")
-	public FractionDispositionType14Choice getFractionDisposition() {
-		return fractionDisposition;
+	public Optional<FractionDispositionType14Choice> getFractionDisposition() {
+		return fractionDisposition == null ? Optional.empty() : Optional.of(fractionDisposition);
 	}
 
-	public void setFractionDisposition(FractionDispositionType14Choice fractionDisposition) {
+	public FinancialInstrumentAttributes25 setFractionDisposition(FractionDispositionType14Choice fractionDisposition) {
 		this.fractionDisposition = fractionDisposition;
+		return this;
 	}
 
-	@XmlElement(name = "IntrmdtSctiesToUndrlygRatio")
-	public QuantityToQuantityRatio2 getIntermediateSecuritiesToUnderlyingRatio() {
-		return intermediateSecuritiesToUnderlyingRatio;
+	public Optional<QuantityToQuantityRatio2> getIntermediateSecuritiesToUnderlyingRatio() {
+		return intermediateSecuritiesToUnderlyingRatio == null ? Optional.empty() : Optional.of(intermediateSecuritiesToUnderlyingRatio);
 	}
 
-	public void setIntermediateSecuritiesToUnderlyingRatio(com.tools20022.repository.msg.QuantityToQuantityRatio2 intermediateSecuritiesToUnderlyingRatio) {
+	public FinancialInstrumentAttributes25 setIntermediateSecuritiesToUnderlyingRatio(com.tools20022.repository.msg.QuantityToQuantityRatio2 intermediateSecuritiesToUnderlyingRatio) {
 		this.intermediateSecuritiesToUnderlyingRatio = intermediateSecuritiesToUnderlyingRatio;
+		return this;
 	}
 
-	@XmlElement(name = "MktPric")
-	public AmountPrice4 getMarketPrice() {
-		return marketPrice;
+	public Optional<AmountPrice4> getMarketPrice() {
+		return marketPrice == null ? Optional.empty() : Optional.of(marketPrice);
 	}
 
-	public void setMarketPrice(com.tools20022.repository.msg.AmountPrice4 marketPrice) {
+	public FinancialInstrumentAttributes25 setMarketPrice(com.tools20022.repository.msg.AmountPrice4 marketPrice) {
 		this.marketPrice = marketPrice;
+		return this;
 	}
 
-	@XmlElement(name = "XpryDt", required = true)
 	public DateFormat17Choice getExpiryDate() {
 		return expiryDate;
 	}
 
-	public void setExpiryDate(DateFormat17Choice expiryDate) {
-		this.expiryDate = expiryDate;
+	public FinancialInstrumentAttributes25 setExpiryDate(DateFormat17Choice expiryDate) {
+		this.expiryDate = Objects.requireNonNull(expiryDate);
+		return this;
 	}
 
-	@XmlElement(name = "PstngDt", required = true)
 	public DateFormat17Choice getPostingDate() {
 		return postingDate;
 	}
 
-	public void setPostingDate(DateFormat17Choice postingDate) {
-		this.postingDate = postingDate;
+	public FinancialInstrumentAttributes25 setPostingDate(DateFormat17Choice postingDate) {
+		this.postingDate = Objects.requireNonNull(postingDate);
+		return this;
 	}
 
-	@XmlElement(name = "TradgPrd")
-	public Period4 getTradingPeriod() {
-		return tradingPeriod;
+	public Optional<Period4> getTradingPeriod() {
+		return tradingPeriod == null ? Optional.empty() : Optional.of(tradingPeriod);
 	}
 
-	public void setTradingPeriod(com.tools20022.repository.msg.Period4 tradingPeriod) {
+	public FinancialInstrumentAttributes25 setTradingPeriod(com.tools20022.repository.msg.Period4 tradingPeriod) {
 		this.tradingPeriod = tradingPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "UinstdBal")
-	public BalanceFormat2Choice getUninstructedBalance() {
-		return uninstructedBalance;
+	public Optional<BalanceFormat2Choice> getUninstructedBalance() {
+		return uninstructedBalance == null ? Optional.empty() : Optional.of(uninstructedBalance);
 	}
 
-	public void setUninstructedBalance(BalanceFormat2Choice uninstructedBalance) {
+	public FinancialInstrumentAttributes25 setUninstructedBalance(BalanceFormat2Choice uninstructedBalance) {
 		this.uninstructedBalance = uninstructedBalance;
+		return this;
 	}
 
-	@XmlElement(name = "InstdBal")
-	public BalanceFormat2Choice getInstructedBalance() {
-		return instructedBalance;
+	public Optional<BalanceFormat2Choice> getInstructedBalance() {
+		return instructedBalance == null ? Optional.empty() : Optional.of(instructedBalance);
 	}
 
-	public void setInstructedBalance(BalanceFormat2Choice instructedBalance) {
+	public FinancialInstrumentAttributes25 setInstructedBalance(BalanceFormat2Choice instructedBalance) {
 		this.instructedBalance = instructedBalance;
+		return this;
 	}
 }

@@ -25,6 +25,8 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Prices related to a corporate action.
@@ -62,134 +64,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmPricingCalculation
  * CorporateActionPrice.mmPricingCalculation}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice8
- * CorporateActionPrice8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice11
- * CorporateActionPrice11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice19
- * CorporateActionPrice19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice20
- * CorporateActionPrice20}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice29
- * CorporateActionPrice29}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice35
- * CorporateActionPrice35}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice5
- * CorporateActionPrice5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice9
- * CorporateActionPrice9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice7
- * CorporateActionPrice7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice12
- * CorporateActionPrice12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice21
- * CorporateActionPrice21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice22
- * CorporateActionPrice22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice30
- * CorporateActionPrice30}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice27
- * CorporateActionPrice27}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice36
- * CorporateActionPrice36}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice33
- * CorporateActionPrice33}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice39
- * CorporateActionPrice39}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice40
- * CorporateActionPrice40}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice6
- * CorporateActionPrice6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice10
- * CorporateActionPrice10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice14
- * CorporateActionPrice14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice13
- * CorporateActionPrice13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice16
- * CorporateActionPrice16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice18
- * CorporateActionPrice18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice23
- * CorporateActionPrice23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice24
- * CorporateActionPrice24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice28
- * CorporateActionPrice28}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice26
- * CorporateActionPrice26}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice34
- * CorporateActionPrice34}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice32
- * CorporateActionPrice32}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice38
- * CorporateActionPrice38}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice41
- * CorporateActionPrice41}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice3
- * CorporateActionPrice3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice15
- * CorporateActionPrice15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice17
- * CorporateActionPrice17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice25
- * CorporateActionPrice25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice31
- * CorporateActionPrice31}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice37
- * CorporateActionPrice37}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice2
- * CorporateActionPrice2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice1
- * CorporateActionPrice1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice4
- * CorporateActionPrice4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice42
- * CorporateActionPrice42}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice43
- * CorporateActionPrice43}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice44
- * CorporateActionPrice44}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice45
- * CorporateActionPrice45}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice50
- * CorporateActionPrice50}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice52
- * CorporateActionPrice52}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice55
- * CorporateActionPrice55}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice51
- * CorporateActionPrice51}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice59
- * CorporateActionPrice59}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice56
- * CorporateActionPrice56}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice60
- * CorporateActionPrice60}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice58
- * CorporateActionPrice58}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice61
- * CorporateActionPrice61}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice57
- * CorporateActionPrice57}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice63
- * CorporateActionPrice63}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice65
- * CorporateActionPrice65}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice62
- * CorporateActionPrice62}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice66
- * CorporateActionPrice66}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice67
- * CorporateActionPrice67}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice64
- * CorporateActionPrice64}</li>
  * </ul>
  * </li>
  * <li>
@@ -337,10 +211,138 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice8
+ * CorporateActionPrice8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice11
+ * CorporateActionPrice11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice19
+ * CorporateActionPrice19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice20
+ * CorporateActionPrice20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice29
+ * CorporateActionPrice29}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice35
+ * CorporateActionPrice35}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice5
+ * CorporateActionPrice5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice9
+ * CorporateActionPrice9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice7
+ * CorporateActionPrice7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice12
+ * CorporateActionPrice12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice21
+ * CorporateActionPrice21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice22
+ * CorporateActionPrice22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice30
+ * CorporateActionPrice30}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice27
+ * CorporateActionPrice27}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice36
+ * CorporateActionPrice36}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice33
+ * CorporateActionPrice33}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice39
+ * CorporateActionPrice39}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice40
+ * CorporateActionPrice40}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice6
+ * CorporateActionPrice6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice10
+ * CorporateActionPrice10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice14
+ * CorporateActionPrice14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice13
+ * CorporateActionPrice13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice16
+ * CorporateActionPrice16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice18
+ * CorporateActionPrice18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice23
+ * CorporateActionPrice23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice24
+ * CorporateActionPrice24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice28
+ * CorporateActionPrice28}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice26
+ * CorporateActionPrice26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice34
+ * CorporateActionPrice34}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice32
+ * CorporateActionPrice32}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice38
+ * CorporateActionPrice38}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice41
+ * CorporateActionPrice41}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice3
+ * CorporateActionPrice3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice15
+ * CorporateActionPrice15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice17
+ * CorporateActionPrice17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice25
+ * CorporateActionPrice25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice31
+ * CorporateActionPrice31}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice37
+ * CorporateActionPrice37}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice2
+ * CorporateActionPrice2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice1
+ * CorporateActionPrice1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice4
+ * CorporateActionPrice4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice42
+ * CorporateActionPrice42}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice43
+ * CorporateActionPrice43}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice44
+ * CorporateActionPrice44}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice45
+ * CorporateActionPrice45}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice50
+ * CorporateActionPrice50}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice52
+ * CorporateActionPrice52}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice55
+ * CorporateActionPrice55}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice51
+ * CorporateActionPrice51}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice59
+ * CorporateActionPrice59}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice56
+ * CorporateActionPrice56}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice60
+ * CorporateActionPrice60}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice58
+ * CorporateActionPrice58}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice61
+ * CorporateActionPrice61}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice57
+ * CorporateActionPrice57}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice63
+ * CorporateActionPrice63}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice65
+ * CorporateActionPrice65}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice62
+ * CorporateActionPrice62}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice66
+ * CorporateActionPrice66}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice67
+ * CorporateActionPrice67}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice64
+ * CorporateActionPrice64}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -356,8 +358,8 @@ public class CorporateActionPrice {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CorporateActionEvent corporateActionEvent;
 	/**
-	 * Corporate event for which a price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -391,8 +393,8 @@ public class CorporateActionPrice {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionEvent";
 			definition = "Corporate event for which a price is specified.";
@@ -405,13 +407,8 @@ public class CorporateActionPrice {
 	};
 	protected SecuritiesPricing corporateActionExercisePrice;
 	/**
-	 * 1. Price at which security will be purchased/sold if warrant is
-	 * exercised, either as an actual amount or a percentage.<br>
-	 * 2. Price at which a bond is converted to underlying security either as an
-	 * actual amount or a percentage.<br>
-	 * 3. Strike price of an option, represented either as an actual amount or a
-	 * percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -480,8 +477,8 @@ public class CorporateActionPrice {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPrice8.mmExercisePrice, CorporateActionPrice11.mmExercisePrice, CorporateActionPrice19.mmExercisePrice, CorporateActionPrice20.mmExercisePrice,
 					CorporateActionPrice5.mmExercisePrice, CorporateActionPrice7.mmExercisePrice, CorporateActionPrice6.mmExercisePrice, CorporateActionPrice14.mmExercisePrice, CorporateActionPrice1.mmExercisePrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionExercisePrice";
 			definition = "1. Price at which security will be purchased/sold if warrant is exercised, either as an actual amount or a percentage.\r\n2. Price at which a bond is converted to underlying security either as an actual amount or a percentage.\r\n3. Strike price of an option, represented either as an actual amount or a percentage.";
@@ -494,9 +491,8 @@ public class CorporateActionPrice {
 	};
 	protected SecuritiesPricing genericCashPriceReceivedPerProduct;
 	/**
-	 * Generic cash price received per product by the underlying security holder
-	 * either as a percentage or an amount, eg, redemption price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -745,8 +741,8 @@ public class CorporateActionPrice {
 					PriceDetails23.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice56.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice60.mmGenericCashPriceReceivedPerProduct,
 					PriceDetails22.mmGenericCashPriceReceivedPerProduct, PriceDetails24.mmGenericCashPriceReceivedPerProduct, PriceDetails25.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice62.mmGenericCashPriceReceivedPerProduct,
 					CorporateActionPrice66.mmGenericCashPriceReceivedPerProduct, CorporateActionPrice64.mmGenericCashPriceReceivedPerProduct);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GenericCashPriceReceivedPerProduct";
 			definition = "Generic cash price received per product by the underlying security holder either as a percentage or an amount, eg, redemption price.";
@@ -759,10 +755,8 @@ public class CorporateActionPrice {
 	};
 	protected SecuritiesPricing genericCashPricePaidPerProduct;
 	/**
-	 * Amount included in the dividend/NAV that is identified as gains directly
-	 * or indirectly derived from interest payments within the scope of the EU
-	 * Savings directive.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -975,8 +969,8 @@ public class CorporateActionPrice {
 					CorporateActionPrice51.mmGenericCashPricePaidPerProduct, CorporateActionPrice59.mmGenericCashPricePaidPerProduct, PriceDetails23.mmGenericCashPricePaidPerProduct, CorporateActionPrice56.mmGenericCashPricePaidPerProduct,
 					CorporateActionPrice60.mmGenericCashPricePaidPerProduct, PriceDetails22.mmGenericCashPricePaidPerProduct, PriceDetails24.mmGenericCashPricePaidPerProduct, PriceDetails25.mmGenericCashPricePaidPerProduct,
 					CorporateActionPrice62.mmGenericCashPricePaidPerProduct, CorporateActionPrice66.mmGenericCashPricePaidPerProduct, CorporateActionPrice64.mmGenericCashPricePaidPerProduct);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GenericCashPricePaidPerProduct";
 			definition = "Amount included in the dividend/NAV that is identified as gains directly or indirectly derived from interest payments within the scope of the EU Savings directive.";
@@ -989,9 +983,8 @@ public class CorporateActionPrice {
 	};
 	protected SecuritiesPricing cashInLieuOfSharePrice;
 	/**
-	 * Cash disbursement in lieu of equities; usually in lieu of fractional
-	 * quantity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1165,8 +1158,8 @@ public class CorporateActionPrice {
 					CorporateActionPrice55.mmCashInLieuOfSharePrice, CorporateActionPrice51.mmCashInLieuOfSharePrice, CorporateActionPrice59.mmCashInLieuOfSharePrice, CorporateActionPrice56.mmCashInLieuOfSharePrice,
 					CorporateActionPrice58.mmCashInLieuOfSharePrice, CorporateActionPrice61.mmCashInLieuOfSharePrice, CorporateActionPrice63.mmCashInLieuOfSharePrice, CorporateActionPrice65.mmCashInLieuOfSharePrice,
 					CorporateActionPrice66.mmCashInLieuOfSharePrice, CorporateActionPrice64.mmCashInLieuOfSharePrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashInLieuOfSharePrice";
 			definition = "Cash disbursement in lieu of equities; usually in lieu of fractional quantity.";
@@ -1179,9 +1172,8 @@ public class CorporateActionPrice {
 	};
 	protected SecuritiesPricing overSubscriptionDepositPrice;
 	/**
-	 * Amount of money required per over-subscribed equity as defined by the
-	 * issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1277,8 +1269,8 @@ public class CorporateActionPrice {
 					CorporateActionPrice14.mmOverSubscriptionDepositPrice, CorporateActionPrice16.mmOverSubscriptionDepositPrice, CorporateActionPrice23.mmOverSubscriptionDepositPrice, CorporateActionPrice28.mmOverSubscriptionDepositPrice,
 					CorporateActionPrice34.mmOverSubscriptionDepositPrice, CorporateActionPrice1.mmOverSubscriptionDepositPrice, CorporateActionPrice58.mmOverSubscriptionDepositPrice, CorporateActionPrice61.mmOverSubscriptionDepositPrice,
 					CorporateActionPrice63.mmOverSubscriptionDepositPrice, CorporateActionPrice65.mmOverSubscriptionDepositPrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OverSubscriptionDepositPrice";
 			definition = "Amount of money required per over-subscribed equity as defined by the issuer.";
@@ -1291,9 +1283,8 @@ public class CorporateActionPrice {
 	};
 	protected SecuritiesPricing cashValueForTax;
 	/**
-	 * Cash value of resulting securities proceeds for tax calculation and/or
-	 * reporting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1391,8 +1382,8 @@ public class CorporateActionPrice {
 					CorporateActionPrice26.mmCashValueForTax, CorporateActionPrice32.mmCashValueForTax, CorporateActionPrice38.mmCashValueForTax, CorporateActionPrice41.mmCashValueForTax, CorporateActionPrice31.mmCashValueForTax,
 					CorporateActionPrice37.mmCashValueForTax, CorporateActionPrice43.mmCashValueForTax, CorporateActionPrice45.mmCashValueForTax, CorporateActionPrice55.mmCashValueForTax, CorporateActionPrice51.mmCashValueForTax,
 					CorporateActionPrice59.mmCashValueForTax, CorporateActionPrice56.mmCashValueForTax, CorporateActionPrice66.mmCashValueForTax, CorporateActionPrice64.mmCashValueForTax);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashValueForTax";
 			definition = "Cash value of resulting securities proceeds for tax calculation and/or reporting.";
@@ -1405,8 +1396,8 @@ public class CorporateActionPrice {
 	};
 	protected SecuritiesPricing pricingCalculation;
 	/**
-	 * Specifies the parameters taken into account to calculate the price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1440,8 +1431,8 @@ public class CorporateActionPrice {
 	 */
 	public static final MMBusinessAssociationEnd mmPricingCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PricingCalculation";
 			definition = "Specifies the parameters taken into account to calculate the price.";
@@ -1456,7 +1447,7 @@ public class CorporateActionPrice {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice";
 				definition = "Prices related to a corporate action.";
@@ -1500,67 +1491,75 @@ public class CorporateActionPrice {
 		return mmObject_lazy.get();
 	}
 
-	public CorporateActionEvent getCorporateActionEvent() {
-		return corporateActionEvent;
+	public Optional<CorporateActionEvent> getCorporateActionEvent() {
+		return corporateActionEvent == null ? Optional.empty() : Optional.of(corporateActionEvent);
 	}
 
-	public void setCorporateActionEvent(com.tools20022.repository.entity.CorporateActionEvent corporateActionEvent) {
+	public CorporateActionPrice setCorporateActionEvent(com.tools20022.repository.entity.CorporateActionEvent corporateActionEvent) {
 		this.corporateActionEvent = corporateActionEvent;
+		return this;
 	}
 
 	public SecuritiesPricing getCorporateActionExercisePrice() {
 		return corporateActionExercisePrice;
 	}
 
-	public void setCorporateActionExercisePrice(com.tools20022.repository.entity.SecuritiesPricing corporateActionExercisePrice) {
-		this.corporateActionExercisePrice = corporateActionExercisePrice;
+	public CorporateActionPrice setCorporateActionExercisePrice(com.tools20022.repository.entity.SecuritiesPricing corporateActionExercisePrice) {
+		this.corporateActionExercisePrice = Objects.requireNonNull(corporateActionExercisePrice);
+		return this;
 	}
 
 	public SecuritiesPricing getGenericCashPriceReceivedPerProduct() {
 		return genericCashPriceReceivedPerProduct;
 	}
 
-	public void setGenericCashPriceReceivedPerProduct(com.tools20022.repository.entity.SecuritiesPricing genericCashPriceReceivedPerProduct) {
-		this.genericCashPriceReceivedPerProduct = genericCashPriceReceivedPerProduct;
+	public CorporateActionPrice setGenericCashPriceReceivedPerProduct(com.tools20022.repository.entity.SecuritiesPricing genericCashPriceReceivedPerProduct) {
+		this.genericCashPriceReceivedPerProduct = Objects.requireNonNull(genericCashPriceReceivedPerProduct);
+		return this;
 	}
 
 	public SecuritiesPricing getGenericCashPricePaidPerProduct() {
 		return genericCashPricePaidPerProduct;
 	}
 
-	public void setGenericCashPricePaidPerProduct(com.tools20022.repository.entity.SecuritiesPricing genericCashPricePaidPerProduct) {
-		this.genericCashPricePaidPerProduct = genericCashPricePaidPerProduct;
+	public CorporateActionPrice setGenericCashPricePaidPerProduct(com.tools20022.repository.entity.SecuritiesPricing genericCashPricePaidPerProduct) {
+		this.genericCashPricePaidPerProduct = Objects.requireNonNull(genericCashPricePaidPerProduct);
+		return this;
 	}
 
 	public SecuritiesPricing getCashInLieuOfSharePrice() {
 		return cashInLieuOfSharePrice;
 	}
 
-	public void setCashInLieuOfSharePrice(com.tools20022.repository.entity.SecuritiesPricing cashInLieuOfSharePrice) {
-		this.cashInLieuOfSharePrice = cashInLieuOfSharePrice;
+	public CorporateActionPrice setCashInLieuOfSharePrice(com.tools20022.repository.entity.SecuritiesPricing cashInLieuOfSharePrice) {
+		this.cashInLieuOfSharePrice = Objects.requireNonNull(cashInLieuOfSharePrice);
+		return this;
 	}
 
 	public SecuritiesPricing getOverSubscriptionDepositPrice() {
 		return overSubscriptionDepositPrice;
 	}
 
-	public void setOverSubscriptionDepositPrice(com.tools20022.repository.entity.SecuritiesPricing overSubscriptionDepositPrice) {
-		this.overSubscriptionDepositPrice = overSubscriptionDepositPrice;
+	public CorporateActionPrice setOverSubscriptionDepositPrice(com.tools20022.repository.entity.SecuritiesPricing overSubscriptionDepositPrice) {
+		this.overSubscriptionDepositPrice = Objects.requireNonNull(overSubscriptionDepositPrice);
+		return this;
 	}
 
 	public SecuritiesPricing getCashValueForTax() {
 		return cashValueForTax;
 	}
 
-	public void setCashValueForTax(com.tools20022.repository.entity.SecuritiesPricing cashValueForTax) {
-		this.cashValueForTax = cashValueForTax;
+	public CorporateActionPrice setCashValueForTax(com.tools20022.repository.entity.SecuritiesPricing cashValueForTax) {
+		this.cashValueForTax = Objects.requireNonNull(cashValueForTax);
+		return this;
 	}
 
 	public SecuritiesPricing getPricingCalculation() {
 		return pricingCalculation;
 	}
 
-	public void setPricingCalculation(com.tools20022.repository.entity.SecuritiesPricing pricingCalculation) {
-		this.pricingCalculation = pricingCalculation;
+	public CorporateActionPrice setPricingCalculation(com.tools20022.repository.entity.SecuritiesPricing pricingCalculation) {
+		this.pricingCalculation = Objects.requireNonNull(pricingCalculation);
+		return this;
 	}
 }

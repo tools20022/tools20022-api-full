@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
+import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -28,6 +30,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +60,11 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = FIXSynonym: Comm</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Commission2", propOrder = {"commission", "recipientIdentification", "type"})
 public class Commission2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Comssn", required = true)
 	protected AmountOrRate1Choice commission;
 	/**
-	 * Commission expressed as an amount of money or a rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -96,6 +104,9 @@ public class Commission2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Comssn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 12, FIXSynonym: 479</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -109,9 +120,10 @@ public class Commission2 {
 	public static final MMMessageAttribute mmCommission = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> Commission.mmObject();
-			componentContext_lazy = () -> Commission2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission2.mmObject();
 			isDerived = false;
 			xmlTag = "Comssn";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "12"), new FIXSynonym(this, "479"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commission";
 			definition = "Commission expressed as an amount of money or a rate.";
@@ -120,11 +132,11 @@ public class Commission2 {
 			complexType_lazy = () -> AmountOrRate1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RcptId")
 	protected PartyIdentification23 recipientIdentification;
 	/**
-	 * Information related to an identification, eg, party identification or
-	 * account identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -142,6 +154,9 @@ public class Commission2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RcptId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=Synonym, context=ISO, value=15022</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -157,9 +172,10 @@ public class Commission2 {
 	public static final MMMessageAssociationEnd mmRecipientIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Commission2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission2.mmObject();
 			isDerived = false;
 			xmlTag = "RcptId";
+			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "ISO"}, new String[]{"value", "15022"}));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientIdentification";
 			definition = "Information related to an identification, eg, party identification or account identification.";
@@ -169,10 +185,11 @@ public class Commission2 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification23.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected CommissionType1Choice type;
 	/**
-	 * Specification of the commission type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -191,6 +208,9 @@ public class Commission2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Tp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 13</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -204,9 +224,10 @@ public class Commission2 {
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
-			componentContext_lazy = () -> Commission2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "13"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specification of the commission type.";
@@ -220,9 +241,10 @@ public class Commission2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Commission2.mmCommission, Commission2.mmRecipientIdentification, Commission2.mmType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission2.mmCommission, com.tools20022.repository.msg.Commission2.mmRecipientIdentification, com.tools20022.repository.msg.Commission2.mmType);
 				trace_lazy = () -> Commission.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "Comm"));
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Commission2";
 				definition = "Amount of money due to a party as compensation for a service.";
@@ -231,30 +253,30 @@ public class Commission2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Comssn", required = true)
 	public AmountOrRate1Choice getCommission() {
 		return commission;
 	}
 
-	public void setCommission(AmountOrRate1Choice commission) {
-		this.commission = commission;
+	public Commission2 setCommission(AmountOrRate1Choice commission) {
+		this.commission = Objects.requireNonNull(commission);
+		return this;
 	}
 
-	@XmlElement(name = "RcptId")
-	public PartyIdentification23 getRecipientIdentification() {
-		return recipientIdentification;
+	public Optional<PartyIdentification23> getRecipientIdentification() {
+		return recipientIdentification == null ? Optional.empty() : Optional.of(recipientIdentification);
 	}
 
-	public void setRecipientIdentification(com.tools20022.repository.msg.PartyIdentification23 recipientIdentification) {
+	public Commission2 setRecipientIdentification(com.tools20022.repository.msg.PartyIdentification23 recipientIdentification) {
 		this.recipientIdentification = recipientIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public CommissionType1Choice getType() {
 		return type;
 	}
 
-	public void setType(CommissionType1Choice type) {
-		this.type = type;
+	public Commission2 setType(CommissionType1Choice type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -28,6 +29,7 @@ import com.tools20022.repository.entity.NonDisclosedListTrading;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,16 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NonDisclosedBid2", propOrder = {"bidByCurrency", "bidBySector", "bidByIndex", "fairValue"})
 public class NonDisclosedBid2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BidByCcy")
 	protected CountryCode bidByCurrency;
 	/**
-	 * Identifies a type of bid based on a common characteristic (the currency)
-	 * of all securities of a list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,6 +108,9 @@ public class NonDisclosedBid2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BidByCcy"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 421</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -121,9 +126,10 @@ public class NonDisclosedBid2 {
 	public static final MMMessageAttribute mmBidByCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmBidByCurrency;
-			componentContext_lazy = () -> NonDisclosedBid2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NonDisclosedBid2.mmObject();
 			isDerived = false;
 			xmlTag = "BidByCcy";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "421"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidByCurrency";
 			definition = "Identifies a type of bid based on a common characteristic (the currency) of all securities of a list.";
@@ -132,11 +138,11 @@ public class NonDisclosedBid2 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "BidBySctr")
 	protected Max128Text bidBySector;
 	/**
-	 * Identifies a type of bid based on a common characteristic (the sector) of
-	 * all securities of a list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,6 +162,9 @@ public class NonDisclosedBid2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BidBySctr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 400</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -171,9 +180,10 @@ public class NonDisclosedBid2 {
 	public static final MMMessageAttribute mmBidBySector = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmBidBySector;
-			componentContext_lazy = () -> NonDisclosedBid2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NonDisclosedBid2.mmObject();
 			isDerived = false;
 			xmlTag = "BidBySctr";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "400"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidBySector";
 			definition = "Identifies a type of bid based on a common characteristic (the sector) of all securities of a list.";
@@ -182,11 +192,11 @@ public class NonDisclosedBid2 {
 			simpleType_lazy = () -> Max128Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BidByIndx")
 	protected Max128Text bidByIndex;
 	/**
-	 * Identifies a type of bid based on a common characteristic (the index) of
-	 * all securities of a list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -221,7 +231,7 @@ public class NonDisclosedBid2 {
 	public static final MMMessageAttribute mmBidByIndex = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmBidByIndex;
-			componentContext_lazy = () -> NonDisclosedBid2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NonDisclosedBid2.mmObject();
 			isDerived = false;
 			xmlTag = "BidByIndx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,12 +242,11 @@ public class NonDisclosedBid2 {
 			simpleType_lazy = () -> Max128Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FairVal")
 	protected ActiveCurrencyAndAmount fairValue;
 	/**
-	 * Difference between the value of a future and the value of the underlying
-	 * equities after allowing for the discounted cash flows associated with the
-	 * underlying stocks.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -258,6 +267,9 @@ public class NonDisclosedBid2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FairVal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 406</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -273,9 +285,10 @@ public class NonDisclosedBid2 {
 	public static final MMMessageAttribute mmFairValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ExchangeForPhysicalTrade.mmFairValue;
-			componentContext_lazy = () -> NonDisclosedBid2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NonDisclosedBid2.mmObject();
 			isDerived = false;
 			xmlTag = "FairVal";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "406"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FairValue";
 			definition = "Difference between the value of a future and the value of the underlying equities after allowing for the discounted cash flows associated with the underlying stocks.";
@@ -288,9 +301,10 @@ public class NonDisclosedBid2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NonDisclosedBid2.mmBidByCurrency, NonDisclosedBid2.mmBidBySector, NonDisclosedBid2.mmBidByIndex, NonDisclosedBid2.mmFairValue);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonDisclosedBid2.mmBidByCurrency, com.tools20022.repository.msg.NonDisclosedBid2.mmBidBySector,
+						com.tools20022.repository.msg.NonDisclosedBid2.mmBidByIndex, com.tools20022.repository.msg.NonDisclosedBid2.mmFairValue);
 				trace_lazy = () -> NonDisclosedListTrading.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "NonDisclosedBid2";
 				definition = "List trading by which the buy-side provides details to the sell-side information about the sector, country, index and potential market impact of the financial instrument to be bought or sold. Using this information, the sell-side firms bid for the trade.";
@@ -299,39 +313,39 @@ public class NonDisclosedBid2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BidByCcy")
-	public CountryCode getBidByCurrency() {
-		return bidByCurrency;
+	public Optional<CountryCode> getBidByCurrency() {
+		return bidByCurrency == null ? Optional.empty() : Optional.of(bidByCurrency);
 	}
 
-	public void setBidByCurrency(CountryCode bidByCurrency) {
+	public NonDisclosedBid2 setBidByCurrency(CountryCode bidByCurrency) {
 		this.bidByCurrency = bidByCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "BidBySctr")
-	public Max128Text getBidBySector() {
-		return bidBySector;
+	public Optional<Max128Text> getBidBySector() {
+		return bidBySector == null ? Optional.empty() : Optional.of(bidBySector);
 	}
 
-	public void setBidBySector(Max128Text bidBySector) {
+	public NonDisclosedBid2 setBidBySector(Max128Text bidBySector) {
 		this.bidBySector = bidBySector;
+		return this;
 	}
 
-	@XmlElement(name = "BidByIndx")
-	public Max128Text getBidByIndex() {
-		return bidByIndex;
+	public Optional<Max128Text> getBidByIndex() {
+		return bidByIndex == null ? Optional.empty() : Optional.of(bidByIndex);
 	}
 
-	public void setBidByIndex(Max128Text bidByIndex) {
+	public NonDisclosedBid2 setBidByIndex(Max128Text bidByIndex) {
 		this.bidByIndex = bidByIndex;
+		return this;
 	}
 
-	@XmlElement(name = "FairVal")
-	public ActiveCurrencyAndAmount getFairValue() {
-		return fairValue;
+	public Optional<ActiveCurrencyAndAmount> getFairValue() {
+		return fairValue == null ? Optional.empty() : Optional.of(fairValue);
 	}
 
-	public void setFairValue(ActiveCurrencyAndAmount fairValue) {
+	public NonDisclosedBid2 setFairValue(ActiveCurrencyAndAmount fairValue) {
 		this.fairValue = fairValue;
+		return this;
 	}
 }

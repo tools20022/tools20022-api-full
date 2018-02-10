@@ -25,9 +25,8 @@ import com.tools20022.repository.choice.AccountIdentificationFormatChoice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,16 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Parameters for which a user defined report is requested."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GenericReportParameters", propOrder = {"accountIdentification", "financialInstrumentDetails", "reportDescription", "date", "userDefinedParameter"})
 public class GenericReportParameters {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId")
 	protected List<AccountIdentificationFormatChoice> accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +111,7 @@ public class GenericReportParameters {
 	 */
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericReportParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericReportParameters.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +121,11 @@ public class GenericReportParameters {
 			complexType_lazy = () -> AccountIdentificationFormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmDtls")
 	protected List<com.tools20022.repository.msg.FinancialInstrument17> financialInstrumentDetails;
 	/**
-	 * Financial instrument for which the user-defined report is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -152,7 +152,7 @@ public class GenericReportParameters {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> GenericReportParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericReportParameters.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,10 +163,11 @@ public class GenericReportParameters {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument17.mmObject();
 		}
 	};
+	@XmlElement(name = "RptDesc", required = true)
 	protected Max70Text reportDescription;
 	/**
-	 * Type of report requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,7 +194,7 @@ public class GenericReportParameters {
 	 */
 	public static final MMMessageAttribute mmReportDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericReportParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericReportParameters.mmObject();
 			isDerived = false;
 			xmlTag = "RptDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,10 +205,11 @@ public class GenericReportParameters {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Dt")
 	protected ISODate date;
 	/**
-	 * Date for which the report is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,7 +236,7 @@ public class GenericReportParameters {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericReportParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericReportParameters.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,10 +247,11 @@ public class GenericReportParameters {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "UsrDfndParam")
 	protected List<Max70Text> userDefinedParameter;
 	/**
-	 * Parameters that cannot be specifed in the structured fields provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -276,7 +279,7 @@ public class GenericReportParameters {
 	 */
 	public static final MMMessageAttribute mmUserDefinedParameter = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericReportParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericReportParameters.mmObject();
 			isDerived = false;
 			xmlTag = "UsrDfndParam";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -291,9 +294,9 @@ public class GenericReportParameters {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GenericReportParameters.mmAccountIdentification, GenericReportParameters.mmFinancialInstrumentDetails, GenericReportParameters.mmReportDescription, GenericReportParameters.mmDate,
-						GenericReportParameters.mmUserDefinedParameter);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericReportParameters.mmAccountIdentification, com.tools20022.repository.msg.GenericReportParameters.mmFinancialInstrumentDetails,
+						com.tools20022.repository.msg.GenericReportParameters.mmReportDescription, com.tools20022.repository.msg.GenericReportParameters.mmDate, com.tools20022.repository.msg.GenericReportParameters.mmUserDefinedParameter);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GenericReportParameters";
 				definition = "Parameters for which a user defined report is requested.";
@@ -302,48 +305,48 @@ public class GenericReportParameters {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId")
 	public List<AccountIdentificationFormatChoice> getAccountIdentification() {
-		return accountIdentification;
+		return accountIdentification == null ? accountIdentification = new ArrayList<>() : accountIdentification;
 	}
 
-	public void setAccountIdentification(List<AccountIdentificationFormatChoice> accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public GenericReportParameters setAccountIdentification(List<AccountIdentificationFormatChoice> accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmDtls")
 	public List<FinancialInstrument17> getFinancialInstrumentDetails() {
-		return financialInstrumentDetails;
+		return financialInstrumentDetails == null ? financialInstrumentDetails = new ArrayList<>() : financialInstrumentDetails;
 	}
 
-	public void setFinancialInstrumentDetails(List<com.tools20022.repository.msg.FinancialInstrument17> financialInstrumentDetails) {
-		this.financialInstrumentDetails = financialInstrumentDetails;
+	public GenericReportParameters setFinancialInstrumentDetails(List<com.tools20022.repository.msg.FinancialInstrument17> financialInstrumentDetails) {
+		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
+		return this;
 	}
 
-	@XmlElement(name = "RptDesc", required = true)
 	public Max70Text getReportDescription() {
 		return reportDescription;
 	}
 
-	public void setReportDescription(Max70Text reportDescription) {
-		this.reportDescription = reportDescription;
+	public GenericReportParameters setReportDescription(Max70Text reportDescription) {
+		this.reportDescription = Objects.requireNonNull(reportDescription);
+		return this;
 	}
 
-	@XmlElement(name = "Dt")
-	public ISODate getDate() {
-		return date;
+	public Optional<ISODate> getDate() {
+		return date == null ? Optional.empty() : Optional.of(date);
 	}
 
-	public void setDate(ISODate date) {
+	public GenericReportParameters setDate(ISODate date) {
 		this.date = date;
+		return this;
 	}
 
-	@XmlElement(name = "UsrDfndParam")
 	public List<Max70Text> getUserDefinedParameter() {
-		return userDefinedParameter;
+		return userDefinedParameter == null ? userDefinedParameter = new ArrayList<>() : userDefinedParameter;
 	}
 
-	public void setUserDefinedParameter(List<Max70Text> userDefinedParameter) {
-		this.userDefinedParameter = userDefinedParameter;
+	public GenericReportParameters setUserDefinedParameter(List<Max70Text> userDefinedParameter) {
+		this.userDefinedParameter = Objects.requireNonNull(userDefinedParameter);
+		return this;
 	}
 }

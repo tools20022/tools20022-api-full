@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RejectionReasonCode;
+import com.tools20022.repository.codeset.RejectionReason15Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason of a rejection of an information advice.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RejectionReasonCode
- * RejectionReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason15Code#mmFailedValidation
- * RejectionReason15Code.mmFailedValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason15Code#FailedValidation
+ * RejectionReason15Code.FailedValidation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RejectionReasonCode
+ * RejectionReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -62,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class RejectionReason15Code extends RejectionReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RejectionReason15Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -81,26 +86,56 @@ public class RejectionReason15Code extends RejectionReasonCode {
 	 * name} = "FailedValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFailedValidation = new MMCode() {
+	public static final RejectionReason15Code FailedValidation = new RejectionReason15Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailedValidation";
-			owner_lazy = () -> RejectionReason15Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason15Code.mmObject();
+			codeName = RejectionReasonCode.FailedValidation.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RejectionReason15Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RejectionReason15Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FAIL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason15Code";
 				definition = "Specifies the reason of a rejection of an information advice.";
-				code_lazy = () -> Arrays.asList(RejectionReason15Code.mmFailedValidation);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason15Code.FailedValidation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(FailedValidation.getCodeName().get(), FailedValidation);
+	}
+
+	public static RejectionReason15Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RejectionReason15Code[] values() {
+		RejectionReason15Code[] values = new RejectionReason15Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RejectionReason15Code> {
+		@Override
+		public RejectionReason15Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RejectionReason15Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

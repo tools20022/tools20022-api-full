@@ -27,9 +27,8 @@ import com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -59,20 +58,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
- * SecuritiesManagementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "IntraPosMvmntConf"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -103,9 +88,36 @@ import javax.xml.bind.annotation.*;
  * IntraPositionMovementConfirmationV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "IntraPosMvmntConf"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
+ * SecuritiesManagementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code semt.015.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forIntraPositionMovementConfirmationV02
+ * ConstraintCoexistenceCharacterSetXRule.
+ * forIntraPositionMovementConfirmationV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forIntraPositionMovementConfirmationV02
+ * ConstraintCoexistenceIdentificationRule.
+ * forIntraPositionMovementConfirmationV02}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -130,16 +142,17 @@ import javax.xml.bind.annotation.*;
  * IntraPositionMovementConfirmationV01}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IntraPositionMovementConfirmationV02", propOrder = {"additionalParameters", "accountOwner", "safekeepingAccount", "safekeepingPlace", "financialInstrumentIdentification", "financialInstrumentAttributes",
 		"intraPositionDetails", "supplementaryData"})
 public class IntraPositionMovementConfirmationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AddtlParams")
 	protected AdditionalParameters8 additionalParameters;
 	/**
-	 * Additional parameters to the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,10 +192,11 @@ public class IntraPositionMovementConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification36Choice accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,10 +236,11 @@ public class IntraPositionMovementConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SfkpgAcct", required = true)
 	protected SecuritiesAccount13 safekeepingAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -265,13 +280,11 @@ public class IntraPositionMovementConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SfkpgPlc")
 	protected SafekeepingPlaceFormat3Choice safekeepingPlace;
 	/**
-	 * Place where the securities are safe-kept, physically or notionally. This
-	 * place can be, for example, a local custodian, a Central Securities
-	 * Depository (CSD) or an International Central Securities Depository
-	 * (ICSD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -313,11 +326,11 @@ public class IntraPositionMovementConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "FinInstrmId", required = true)
 	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
-	 * Financial instrument representing a sum of rights of the investor
-	 * vis-a-vis the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -359,10 +372,11 @@ public class IntraPositionMovementConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "FinInstrmAttrbts")
 	protected FinancialInstrumentAttributes21 financialInstrumentAttributes;
 	/**
-	 * Elements characterising a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -402,10 +416,11 @@ public class IntraPositionMovementConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "IntraPosDtls", required = true)
 	protected IntraPositionDetails12 intraPositionDetails;
 	/**
-	 * Intra-position movement transaction details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -445,11 +460,11 @@ public class IntraPositionMovementConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -494,6 +509,8 @@ public class IntraPositionMovementConfirmationV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forIntraPositionMovementConfirmationV02,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forIntraPositionMovementConfirmationV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IntraPositionMovementConfirmationV02";
 				definition = "Scope\r\nAn account servicer sends a IntraPositionMovementConfirmation to an account owner to confirm the movement of securities within its holding from one sub-balance to another, for example, blocking of securities.\r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\r\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or\r\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\r\nThe message may also be used to:\n- re-send a message previously sent,\n- provide a third party with a copy of a message for information,\n- re-send to a third party a copy of a message for information.\nusing the relevant elements in the Business Application Header.\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
@@ -526,79 +543,79 @@ public class IntraPositionMovementConfirmationV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AddtlParams")
-	public AdditionalParameters8 getAdditionalParameters() {
-		return additionalParameters;
+	public Optional<AdditionalParameters8> getAdditionalParameters() {
+		return additionalParameters == null ? Optional.empty() : Optional.of(additionalParameters);
 	}
 
-	public void setAdditionalParameters(AdditionalParameters8 additionalParameters) {
+	public IntraPositionMovementConfirmationV02 setAdditionalParameters(AdditionalParameters8 additionalParameters) {
 		this.additionalParameters = additionalParameters;
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification36Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification36Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification36Choice accountOwner) {
+	public IntraPositionMovementConfirmationV02 setAccountOwner(PartyIdentification36Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
 
-	public void setSafekeepingAccount(SecuritiesAccount13 safekeepingAccount) {
-		this.safekeepingAccount = safekeepingAccount;
+	public IntraPositionMovementConfirmationV02 setSafekeepingAccount(SecuritiesAccount13 safekeepingAccount) {
+		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgPlc")
-	public SafekeepingPlaceFormat3Choice getSafekeepingPlace() {
-		return safekeepingPlace;
+	public Optional<SafekeepingPlaceFormat3Choice> getSafekeepingPlace() {
+		return safekeepingPlace == null ? Optional.empty() : Optional.of(safekeepingPlace);
 	}
 
-	public void setSafekeepingPlace(SafekeepingPlaceFormat3Choice safekeepingPlace) {
+	public IntraPositionMovementConfirmationV02 setSafekeepingPlace(SafekeepingPlaceFormat3Choice safekeepingPlace) {
 		this.safekeepingPlace = safekeepingPlace;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
 
-	public void setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
-		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	public IntraPositionMovementConfirmationV02 setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmAttrbts")
-	public FinancialInstrumentAttributes21 getFinancialInstrumentAttributes() {
-		return financialInstrumentAttributes;
+	public Optional<FinancialInstrumentAttributes21> getFinancialInstrumentAttributes() {
+		return financialInstrumentAttributes == null ? Optional.empty() : Optional.of(financialInstrumentAttributes);
 	}
 
-	public void setFinancialInstrumentAttributes(FinancialInstrumentAttributes21 financialInstrumentAttributes) {
+	public IntraPositionMovementConfirmationV02 setFinancialInstrumentAttributes(FinancialInstrumentAttributes21 financialInstrumentAttributes) {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
+		return this;
 	}
 
-	@XmlElement(name = "IntraPosDtls", required = true)
 	public IntraPositionDetails12 getIntraPositionDetails() {
 		return intraPositionDetails;
 	}
 
-	public void setIntraPositionDetails(IntraPositionDetails12 intraPositionDetails) {
-		this.intraPositionDetails = intraPositionDetails;
+	public IntraPositionMovementConfirmationV02 setIntraPositionDetails(IntraPositionDetails12 intraPositionDetails) {
+		this.intraPositionDetails = Objects.requireNonNull(intraPositionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public IntraPositionMovementConfirmationV02 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.015.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:semt.015.001.02")
 	static public class Document {
 		@XmlElement(name = "IntraPosMvmntConf", required = true)
 		public IntraPositionMovementConfirmationV02 messageBody;

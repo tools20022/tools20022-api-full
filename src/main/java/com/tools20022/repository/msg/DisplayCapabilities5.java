@@ -25,9 +25,8 @@ import com.tools20022.repository.codeset.OutputFormat1Code;
 import com.tools20022.repository.codeset.UserInterface5Code;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * DisplayCapabilities4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DisplayCapabilities5", propOrder = {"destination", "availableFormat", "numberOfLines", "lineWidth", "availableLanguage"})
 public class DisplayCapabilities5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dstn", required = true)
 	protected List<UserInterface5Code> destination;
 	/**
-	 * Destination of the message to present.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +120,7 @@ public class DisplayCapabilities5 {
 	 */
 	public static final MMMessageAttribute mmDestination = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DisplayCapabilities5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities5.mmObject();
 			isDerived = false;
 			xmlTag = "Dstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +131,11 @@ public class DisplayCapabilities5 {
 			simpleType_lazy = () -> UserInterface5Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AvlblFrmt")
 	protected List<OutputFormat1Code> availableFormat;
 	/**
-	 * Available message format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +168,7 @@ public class DisplayCapabilities5 {
 	 */
 	public static final MMMessageAttribute mmAvailableFormat = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DisplayCapabilities5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities5.mmObject();
 			isDerived = false;
 			xmlTag = "AvlblFrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +179,11 @@ public class DisplayCapabilities5 {
 			simpleType_lazy = () -> OutputFormat1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfLines")
 	protected Number numberOfLines;
 	/**
-	 * Number of lines of the display.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,7 +215,7 @@ public class DisplayCapabilities5 {
 	 */
 	public static final MMMessageAttribute mmNumberOfLines = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DisplayCapabilities5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities5.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfLines";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,10 +227,11 @@ public class DisplayCapabilities5 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "LineWidth")
 	protected Number lineWidth;
 	/**
-	 * Number of columns of the display or printer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -260,7 +263,7 @@ public class DisplayCapabilities5 {
 	 */
 	public static final MMMessageAttribute mmLineWidth = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DisplayCapabilities5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities5.mmObject();
 			isDerived = false;
 			xmlTag = "LineWidth";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,11 +275,11 @@ public class DisplayCapabilities5 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "AvlblLang")
 	protected List<LanguageCode> availableLanguage;
 	/**
-	 * Available language for the message. Reference ISO 639-1 (alpha-2) et ISO
-	 * 639-2 (alpha-3).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -310,7 +313,7 @@ public class DisplayCapabilities5 {
 	 */
 	public static final MMMessageAttribute mmAvailableLanguage = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DisplayCapabilities5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities5.mmObject();
 			isDerived = false;
 			xmlTag = "AvlblLang";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,9 +328,9 @@ public class DisplayCapabilities5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DisplayCapabilities5.mmDestination, DisplayCapabilities5.mmAvailableFormat, DisplayCapabilities5.mmNumberOfLines, DisplayCapabilities5.mmLineWidth,
-						DisplayCapabilities5.mmAvailableLanguage);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisplayCapabilities5.mmDestination, com.tools20022.repository.msg.DisplayCapabilities5.mmAvailableFormat,
+						com.tools20022.repository.msg.DisplayCapabilities5.mmNumberOfLines, com.tools20022.repository.msg.DisplayCapabilities5.mmLineWidth, com.tools20022.repository.msg.DisplayCapabilities5.mmAvailableLanguage);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DisplayCapabilities5";
 				definition = "Capabilities of the display components performing the transaction.";
@@ -337,48 +340,48 @@ public class DisplayCapabilities5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dstn", required = true)
 	public List<UserInterface5Code> getDestination() {
-		return destination;
+		return destination == null ? destination = new ArrayList<>() : destination;
 	}
 
-	public void setDestination(List<UserInterface5Code> destination) {
-		this.destination = destination;
+	public DisplayCapabilities5 setDestination(List<UserInterface5Code> destination) {
+		this.destination = Objects.requireNonNull(destination);
+		return this;
 	}
 
-	@XmlElement(name = "AvlblFrmt")
 	public List<OutputFormat1Code> getAvailableFormat() {
-		return availableFormat;
+		return availableFormat == null ? availableFormat = new ArrayList<>() : availableFormat;
 	}
 
-	public void setAvailableFormat(List<OutputFormat1Code> availableFormat) {
-		this.availableFormat = availableFormat;
+	public DisplayCapabilities5 setAvailableFormat(List<OutputFormat1Code> availableFormat) {
+		this.availableFormat = Objects.requireNonNull(availableFormat);
+		return this;
 	}
 
-	@XmlElement(name = "NbOfLines")
-	public Number getNumberOfLines() {
-		return numberOfLines;
+	public Optional<Number> getNumberOfLines() {
+		return numberOfLines == null ? Optional.empty() : Optional.of(numberOfLines);
 	}
 
-	public void setNumberOfLines(Number numberOfLines) {
+	public DisplayCapabilities5 setNumberOfLines(Number numberOfLines) {
 		this.numberOfLines = numberOfLines;
+		return this;
 	}
 
-	@XmlElement(name = "LineWidth")
-	public Number getLineWidth() {
-		return lineWidth;
+	public Optional<Number> getLineWidth() {
+		return lineWidth == null ? Optional.empty() : Optional.of(lineWidth);
 	}
 
-	public void setLineWidth(Number lineWidth) {
+	public DisplayCapabilities5 setLineWidth(Number lineWidth) {
 		this.lineWidth = lineWidth;
+		return this;
 	}
 
-	@XmlElement(name = "AvlblLang")
 	public List<LanguageCode> getAvailableLanguage() {
-		return availableLanguage;
+		return availableLanguage == null ? availableLanguage = new ArrayList<>() : availableLanguage;
 	}
 
-	public void setAvailableLanguage(List<LanguageCode> availableLanguage) {
-		this.availableLanguage = availableLanguage;
+	public DisplayCapabilities5 setAvailableLanguage(List<LanguageCode> availableLanguage) {
+		this.availableLanguage = Objects.requireNonNull(availableLanguage);
+		return this;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.CashParties24;
 import com.tools20022.repository.msg.SettlementParties35;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of securities or cash parties."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesOrCash1Choice", propOrder = {"securitiesDetails", "cashPartiesDetails"})
 public class SecuritiesOrCash1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesDtls", required = true)
 	protected SettlementParties35 securitiesDetails;
 	/**
-	 * Securities settlement chain parties, accounts and other details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -107,7 +109,7 @@ public class SecuritiesOrCash1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesOrCash1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesOrCash1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +121,11 @@ public class SecuritiesOrCash1Choice {
 			type_lazy = () -> SettlementParties35.mmObject();
 		}
 	};
+	@XmlElement(name = "CshPtiesDtls", required = true)
 	protected CashParties24 cashPartiesDetails;
 	/**
-	 * Cash settlement chain parties and accounts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -148,7 +151,7 @@ public class SecuritiesOrCash1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCashPartiesDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesOrCash1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesOrCash1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshPtiesDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,9 +167,9 @@ public class SecuritiesOrCash1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesOrCash1Choice.mmSecuritiesDetails, SecuritiesOrCash1Choice.mmCashPartiesDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesOrCash1Choice.mmSecuritiesDetails, com.tools20022.repository.choice.SecuritiesOrCash1Choice.mmCashPartiesDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(StandingSettlementInstructionV01.mmSettlementDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesOrCash1Choice";
 				definition = "Choice of securities or cash parties.";
@@ -175,21 +178,21 @@ public class SecuritiesOrCash1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesDtls", required = true)
 	public SettlementParties35 getSecuritiesDetails() {
 		return securitiesDetails;
 	}
 
-	public void setSecuritiesDetails(SettlementParties35 securitiesDetails) {
-		this.securitiesDetails = securitiesDetails;
+	public SecuritiesOrCash1Choice setSecuritiesDetails(SettlementParties35 securitiesDetails) {
+		this.securitiesDetails = Objects.requireNonNull(securitiesDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CshPtiesDtls", required = true)
 	public CashParties24 getCashPartiesDetails() {
 		return cashPartiesDetails;
 	}
 
-	public void setCashPartiesDetails(CashParties24 cashPartiesDetails) {
-		this.cashPartiesDetails = cashPartiesDetails;
+	public SecuritiesOrCash1Choice setCashPartiesDetails(CashParties24 cashPartiesDetails) {
+		this.cashPartiesDetails = Objects.requireNonNull(cashPartiesDetails);
+		return this;
 	}
 }

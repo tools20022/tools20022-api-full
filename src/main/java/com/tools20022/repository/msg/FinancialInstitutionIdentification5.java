@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstitutionIdentification5", propOrder = "proprietaryIdentification")
 public class FinancialInstitutionIdentification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrtryId", required = true)
 	protected RestrictedIdentification1 proprietaryIdentification;
 	/**
-	 * Unique and unambiguous identifier, as assigned to a financial institution
-	 * using a proprietary identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -110,7 +111,7 @@ public class FinancialInstitutionIdentification5 {
 	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> FinancialInstitutionIdentification5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,9 +127,9 @@ public class FinancialInstitutionIdentification5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstitutionIdentification5.mmProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstitutionIdentification5.mmProprietaryIdentification);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstitutionIdentification5";
 				definition = "Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.";
@@ -137,12 +138,12 @@ public class FinancialInstitutionIdentification5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrtryId", required = true)
 	public RestrictedIdentification1 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}
 
-	public void setProprietaryIdentification(com.tools20022.repository.msg.RestrictedIdentification1 proprietaryIdentification) {
-		this.proprietaryIdentification = proprietaryIdentification;
+	public FinancialInstitutionIdentification5 setProprietaryIdentification(com.tools20022.repository.msg.RestrictedIdentification1 proprietaryIdentification) {
+		this.proprietaryIdentification = Objects.requireNonNull(proprietaryIdentification);
+		return this;
 	}
 }

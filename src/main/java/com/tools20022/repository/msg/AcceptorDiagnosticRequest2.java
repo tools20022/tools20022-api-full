@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * AcceptorDiagnosticRequest1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcceptorDiagnosticRequest2", propOrder = "environment")
 public class AcceptorDiagnosticRequest2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Envt", required = true)
 	protected CardPaymentEnvironment17 environment;
 	/**
-	 * Environment of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -130,7 +132,7 @@ public class AcceptorDiagnosticRequest2 {
 	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> AcceptorDiagnosticRequest2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorDiagnosticRequest2.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,10 +149,10 @@ public class AcceptorDiagnosticRequest2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AcceptorDiagnosticRequest2.mmEnvironment);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorDiagnosticRequest2.mmEnvironment);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorDiagnosticRequestV02.mmDiagnosticRequest);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorDiagnosticRequest2";
 				definition = "Diagnostic request from an acceptor.";
@@ -161,12 +163,12 @@ public class AcceptorDiagnosticRequest2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment17 getEnvironment() {
 		return environment;
 	}
 
-	public void setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment17 environment) {
-		this.environment = environment;
+	public AcceptorDiagnosticRequest2 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment17 environment) {
+		this.environment = Objects.requireNonNull(environment);
+		return this;
 	}
 }

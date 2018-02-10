@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.RegulatoryAuthorityRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Entity requiring the regulatory reporting information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RegulatoryAuthority", propOrder = {"authorityName", "authorityCountry"})
 public class RegulatoryAuthority {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AuthrtyNm")
 	protected Max70Text authorityName;
 	/**
-	 * Name of the entity requiring the regulatory reporting information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class RegulatoryAuthority {
 	public static final MMMessageAttribute mmAuthorityName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
-			componentContext_lazy = () -> RegulatoryAuthority.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryAuthority.mmObject();
 			isDerived = false;
 			xmlTag = "AuthrtyNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class RegulatoryAuthority {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AuthrtyCtry")
 	protected CountryCode authorityCountry;
 	/**
-	 * Country of the entity requiring the regulatory reporting information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +162,7 @@ public class RegulatoryAuthority {
 	public static final MMMessageAttribute mmAuthorityCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> RegulatoryAuthority.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryAuthority.mmObject();
 			isDerived = false;
 			xmlTag = "AuthrtyCtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,9 +177,9 @@ public class RegulatoryAuthority {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RegulatoryAuthority.mmAuthorityName, RegulatoryAuthority.mmAuthorityCountry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryAuthority.mmAuthorityName, com.tools20022.repository.msg.RegulatoryAuthority.mmAuthorityCountry);
 				trace_lazy = () -> RegulatoryAuthorityRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegulatoryAuthority";
 				definition = "Entity requiring the regulatory reporting information.";
@@ -185,21 +188,21 @@ public class RegulatoryAuthority {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AuthrtyNm")
-	public Max70Text getAuthorityName() {
-		return authorityName;
+	public Optional<Max70Text> getAuthorityName() {
+		return authorityName == null ? Optional.empty() : Optional.of(authorityName);
 	}
 
-	public void setAuthorityName(Max70Text authorityName) {
+	public RegulatoryAuthority setAuthorityName(Max70Text authorityName) {
 		this.authorityName = authorityName;
+		return this;
 	}
 
-	@XmlElement(name = "AuthrtyCtry")
-	public CountryCode getAuthorityCountry() {
-		return authorityCountry;
+	public Optional<CountryCode> getAuthorityCountry() {
+		return authorityCountry == null ? Optional.empty() : Optional.of(authorityCountry);
 	}
 
-	public void setAuthorityCountry(CountryCode authorityCountry) {
+	public RegulatoryAuthority setAuthorityCountry(CountryCode authorityCountry) {
 		this.authorityCountry = authorityCountry;
+		return this;
 	}
 }

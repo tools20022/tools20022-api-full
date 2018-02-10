@@ -20,35 +20,39 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TaxTypeCode;
+import com.tools20022.repository.codeset.TaxType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of tax.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TaxTypeCode TaxTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType2Code#mmStampDuty
- * TaxType2Code.mmStampDuty}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType2Code#StampDuty
+ * TaxType2Code.StampDuty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType2Code#mmWithholdingTax
- * TaxType2Code.mmWithholdingTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType2Code#WithholdingTax
+ * TaxType2Code.WithholdingTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType2Code#mmEUTaxRetention
- * TaxType2Code.mmEUTaxRetention}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType2Code#EUTaxRetention
+ * TaxType2Code.EUTaxRetention}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TaxTypeCode TaxTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of tax."</li>
  * </ul>
  */
-public class TaxType2Code extends TaxTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TaxType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class TaxType2Code extends TaxTypeCode {
 	 * name} = "StampDuty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStampDuty = new MMCode() {
+	public static final TaxType2Code StampDuty = new TaxType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
-			owner_lazy = () -> TaxType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType2Code.mmObject();
+			codeName = TaxTypeCode.StampDuty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -105,11 +111,12 @@ public class TaxType2Code extends TaxTypeCode {
 	 * name} = "WithholdingTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithholdingTax = new MMCode() {
+	public static final TaxType2Code WithholdingTax = new TaxType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
-			owner_lazy = () -> TaxType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType2Code.mmObject();
+			codeName = TaxTypeCode.WithholdingTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -127,26 +134,58 @@ public class TaxType2Code extends TaxTypeCode {
 	 * name} = "EUTaxRetention"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEUTaxRetention = new MMCode() {
+	public static final TaxType2Code EUTaxRetention = new TaxType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUTaxRetention";
-			owner_lazy = () -> TaxType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType2Code.mmObject();
+			codeName = TaxTypeCode.EUTaxRetention.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TaxType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TaxType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("STAM");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxType2Code";
 				definition = "Specifies the type of tax.";
-				code_lazy = () -> Arrays.asList(TaxType2Code.mmStampDuty, TaxType2Code.mmWithholdingTax, TaxType2Code.mmEUTaxRetention);
 				trace_lazy = () -> TaxTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType2Code.StampDuty, com.tools20022.repository.codeset.TaxType2Code.WithholdingTax, com.tools20022.repository.codeset.TaxType2Code.EUTaxRetention);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(StampDuty.getCodeName().get(), StampDuty);
+		codesByName.put(WithholdingTax.getCodeName().get(), WithholdingTax);
+		codesByName.put(EUTaxRetention.getCodeName().get(), EUTaxRetention);
+	}
+
+	public static TaxType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TaxType2Code[] values() {
+		TaxType2Code[] values = new TaxType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TaxType2Code> {
+		@Override
+		public TaxType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TaxType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

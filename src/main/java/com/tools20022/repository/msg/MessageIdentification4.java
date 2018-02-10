@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,19 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MessageIdentification4", propOrder = {"messageIdentification", "creationDateTime"})
 public class MessageIdentification4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId")
 	protected Max35Text messageIdentification;
 	/**
-	 * Point to point reference, as assigned by the assigner, and sent to the
-	 * next party in the chain to unambiguously identify the message.<br>
-	 * <br>
-	 * Usage: The assigner has to make sure that MessageIdentification is unique
-	 * per assignee for a pre-agreed period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +114,7 @@ public class MessageIdentification4 {
 	 */
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MessageIdentification4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageIdentification4.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +125,11 @@ public class MessageIdentification4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm")
 	protected ISODateTime creationDateTime;
 	/**
-	 * Date and time at which the message was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +156,7 @@ public class MessageIdentification4 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MessageIdentification4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageIdentification4.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +171,9 @@ public class MessageIdentification4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MessageIdentification4.mmMessageIdentification, MessageIdentification4.mmCreationDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageIdentification4.mmMessageIdentification, com.tools20022.repository.msg.MessageIdentification4.mmCreationDateTime);
 				messageBuildingBlock_lazy = () -> Arrays.asList(IdentificationVerificationReportV01.mmOriginalAssignment);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageIdentification4";
 				definition = "Set of element to identify a message by a unique identifier and the date and time when the message was created by the sender.";
@@ -183,21 +182,21 @@ public class MessageIdentification4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId")
-	public Max35Text getMessageIdentification() {
-		return messageIdentification;
+	public Optional<Max35Text> getMessageIdentification() {
+		return messageIdentification == null ? Optional.empty() : Optional.of(messageIdentification);
 	}
 
-	public void setMessageIdentification(Max35Text messageIdentification) {
+	public MessageIdentification4 setMessageIdentification(Max35Text messageIdentification) {
 		this.messageIdentification = messageIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm")
-	public ISODateTime getCreationDateTime() {
-		return creationDateTime;
+	public Optional<ISODateTime> getCreationDateTime() {
+		return creationDateTime == null ? Optional.empty() : Optional.of(creationDateTime);
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
+	public MessageIdentification4 setCreationDateTime(ISODateTime creationDateTime) {
 		this.creationDateTime = creationDateTime;
+		return this;
 	}
 }

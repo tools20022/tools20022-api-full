@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max10Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about funds that have been arrested. "</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ArrestedFunds1", propOrder = {"arrestIdentification", "totalAmount", "remainingUnpaidAmount", "arrestedAmount"})
 public class ArrestedFunds1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ArrstId")
 	protected Max10Text arrestIdentification;
 	/**
-	 * Identification of the arrest order assigned by the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +105,7 @@ public class ArrestedFunds1 {
 	 */
 	public static final MMMessageAttribute mmArrestIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ArrestedFunds1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ArrestedFunds1.mmObject();
 			isDerived = false;
 			xmlTag = "ArrstId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +116,11 @@ public class ArrestedFunds1 {
 			simpleType_lazy = () -> Max10Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlAmt")
 	protected ActiveCurrencyAndAmount totalAmount;
 	/**
-	 * Total amount owed subject to arrest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +147,7 @@ public class ArrestedFunds1 {
 	 */
 	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ArrestedFunds1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ArrestedFunds1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,10 +158,11 @@ public class ArrestedFunds1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RmngUnpdAmt", required = true)
 	protected ActiveCurrencyAndAmount remainingUnpaidAmount;
 	/**
-	 * Remaining unpaid amount out of total amount owed subject to arrest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -185,7 +190,7 @@ public class ArrestedFunds1 {
 	 */
 	public static final MMMessageAttribute mmRemainingUnpaidAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ArrestedFunds1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ArrestedFunds1.mmObject();
 			isDerived = false;
 			xmlTag = "RmngUnpdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -196,10 +201,11 @@ public class ArrestedFunds1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ArrstdAmt")
 	protected ActiveCurrencyAndAmount arrestedAmount;
 	/**
-	 * Funds blocked for settlement of the arrest order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -226,7 +232,7 @@ public class ArrestedFunds1 {
 	 */
 	public static final MMMessageAttribute mmArrestedAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ArrestedFunds1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ArrestedFunds1.mmObject();
 			isDerived = false;
 			xmlTag = "ArrstdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,8 +247,9 @@ public class ArrestedFunds1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ArrestedFunds1.mmArrestIdentification, ArrestedFunds1.mmTotalAmount, ArrestedFunds1.mmRemainingUnpaidAmount, ArrestedFunds1.mmArrestedAmount);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ArrestedFunds1.mmArrestIdentification, com.tools20022.repository.msg.ArrestedFunds1.mmTotalAmount,
+						com.tools20022.repository.msg.ArrestedFunds1.mmRemainingUnpaidAmount, com.tools20022.repository.msg.ArrestedFunds1.mmArrestedAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ArrestedFunds1";
 				definition = "Information about funds that have been arrested. ";
@@ -251,39 +258,39 @@ public class ArrestedFunds1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ArrstId")
-	public Max10Text getArrestIdentification() {
-		return arrestIdentification;
+	public Optional<Max10Text> getArrestIdentification() {
+		return arrestIdentification == null ? Optional.empty() : Optional.of(arrestIdentification);
 	}
 
-	public void setArrestIdentification(Max10Text arrestIdentification) {
+	public ArrestedFunds1 setArrestIdentification(Max10Text arrestIdentification) {
 		this.arrestIdentification = arrestIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TtlAmt")
-	public ActiveCurrencyAndAmount getTotalAmount() {
-		return totalAmount;
+	public Optional<ActiveCurrencyAndAmount> getTotalAmount() {
+		return totalAmount == null ? Optional.empty() : Optional.of(totalAmount);
 	}
 
-	public void setTotalAmount(ActiveCurrencyAndAmount totalAmount) {
+	public ArrestedFunds1 setTotalAmount(ActiveCurrencyAndAmount totalAmount) {
 		this.totalAmount = totalAmount;
+		return this;
 	}
 
-	@XmlElement(name = "RmngUnpdAmt", required = true)
 	public ActiveCurrencyAndAmount getRemainingUnpaidAmount() {
 		return remainingUnpaidAmount;
 	}
 
-	public void setRemainingUnpaidAmount(ActiveCurrencyAndAmount remainingUnpaidAmount) {
-		this.remainingUnpaidAmount = remainingUnpaidAmount;
+	public ArrestedFunds1 setRemainingUnpaidAmount(ActiveCurrencyAndAmount remainingUnpaidAmount) {
+		this.remainingUnpaidAmount = Objects.requireNonNull(remainingUnpaidAmount);
+		return this;
 	}
 
-	@XmlElement(name = "ArrstdAmt")
-	public ActiveCurrencyAndAmount getArrestedAmount() {
-		return arrestedAmount;
+	public Optional<ActiveCurrencyAndAmount> getArrestedAmount() {
+		return arrestedAmount == null ? Optional.empty() : Optional.of(arrestedAmount);
 	}
 
-	public void setArrestedAmount(ActiveCurrencyAndAmount arrestedAmount) {
+	public ArrestedFunds1 setArrestedAmount(ActiveCurrencyAndAmount arrestedAmount) {
 		this.arrestedAmount = arrestedAmount;
+		return this;
 	}
 }

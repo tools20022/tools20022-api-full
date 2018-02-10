@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.OrderClassificationCode;
 import com.tools20022.repository.datatype.YesNoIndicator;
@@ -26,6 +27,8 @@ import com.tools20022.repository.msg.Order9;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Information related to order and required for regulatory purposes.
@@ -63,8 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,9 +84,8 @@ public class SecuritiesRegulatoryDetails {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected OrderClassificationCode orderRestrictions;
 	/**
-	 * Classification and restrictions linked to an order (for regulatory
-	 * purpose).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,8 +123,8 @@ public class SecuritiesRegulatoryDetails {
 	public static final MMBusinessAttribute mmOrderRestrictions = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order9.mmOrderRestrictions, Order6.mmOrderRestrictions);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRegulatoryDetails.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRegulatoryDetails.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderRestrictions";
 			definition = "Classification and restrictions linked to an order (for regulatory purpose).";
@@ -141,10 +143,8 @@ public class SecuritiesRegulatoryDetails {
 	};
 	protected YesNoIndicator brokerSolicitedTrade;
 	/**
-	 * Indicates whether the trading party has suggested to his client to
-	 * buy/sell a financial instrument or whether the investor acts on its own
-	 * without advice from its trading party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,6 +157,9 @@ public class SecuritiesRegulatoryDetails {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesRegulatoryDetails
 	 * SecuritiesRegulatoryDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22a::TRCN</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -172,8 +175,9 @@ public class SecuritiesRegulatoryDetails {
 	 */
 	public static final MMBusinessAttribute mmBrokerSolicitedTrade = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRegulatoryDetails.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRegulatoryDetails.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22a::TRCN"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BrokerSolicitedTrade";
 			definition = "Indicates whether the trading party has suggested to his client to buy/sell a financial instrument or whether the investor acts on its own without advice from its trading party.";
@@ -192,8 +196,8 @@ public class SecuritiesRegulatoryDetails {
 	};
 	protected SecuritiesOrder relatedOrder;
 	/**
-	 * Order for which legal parameters are provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -226,8 +230,8 @@ public class SecuritiesRegulatoryDetails {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRegulatoryDetails.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRegulatoryDetails.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOrder";
 			definition = "Order for which legal parameters are provided.";
@@ -242,7 +246,7 @@ public class SecuritiesRegulatoryDetails {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesRegulatoryDetails";
 				definition = "Information related to order and required for regulatory purposes.";
@@ -263,23 +267,26 @@ public class SecuritiesRegulatoryDetails {
 		return orderRestrictions;
 	}
 
-	public void setOrderRestrictions(OrderClassificationCode orderRestrictions) {
-		this.orderRestrictions = orderRestrictions;
+	public SecuritiesRegulatoryDetails setOrderRestrictions(OrderClassificationCode orderRestrictions) {
+		this.orderRestrictions = Objects.requireNonNull(orderRestrictions);
+		return this;
 	}
 
 	public YesNoIndicator getBrokerSolicitedTrade() {
 		return brokerSolicitedTrade;
 	}
 
-	public void setBrokerSolicitedTrade(YesNoIndicator brokerSolicitedTrade) {
-		this.brokerSolicitedTrade = brokerSolicitedTrade;
+	public SecuritiesRegulatoryDetails setBrokerSolicitedTrade(YesNoIndicator brokerSolicitedTrade) {
+		this.brokerSolicitedTrade = Objects.requireNonNull(brokerSolicitedTrade);
+		return this;
 	}
 
-	public SecuritiesOrder getRelatedOrder() {
-		return relatedOrder;
+	public Optional<SecuritiesOrder> getRelatedOrder() {
+		return relatedOrder == null ? Optional.empty() : Optional.of(relatedOrder);
 	}
 
-	public void setRelatedOrder(com.tools20022.repository.entity.SecuritiesOrder relatedOrder) {
+	public SecuritiesRegulatoryDetails setRelatedOrder(com.tools20022.repository.entity.SecuritiesOrder relatedOrder) {
 		this.relatedOrder = relatedOrder;
+		return this;
 	}
 }

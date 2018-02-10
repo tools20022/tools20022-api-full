@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,17 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CollateralValuation3", propOrder = {"nominalAmount", "ISIN"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CollateralValuation3", propOrder = {"nominalAmount", "iSIN"})
 public class CollateralValuation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NmnlAmt")
 	protected ActiveCurrencyAndAmount nominalAmount;
 	/**
-	 * Nominal amount of the security pledged as collateral. Except for
-	 * tri-party repos and any other transaction in which the security pledged
-	 * is not identified via a single ISIN.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -129,7 +130,7 @@ public class CollateralValuation3 {
 	public static final MMMessageAttribute mmNominalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralAmount;
-			componentContext_lazy = () -> CollateralValuation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "NmnlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,16 +142,11 @@ public class CollateralValuation3 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ISIN", required = true)
 	protected ISINIdentifier iSIN;
 	/**
-	 * International Securities Identification Number (ISIN). A numbering system
-	 * designed by the United Nation's International Organisation for
-	 * Standardisation (ISO). The ISIN is composed of a 2-character prefix
-	 * representing the country of issue, followed by the national security
-	 * number (if one exists), and a check digit. Each country has a national
-	 * numbering agency that assigns ISIN numbers for securities in that
-	 * country.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -194,7 +190,7 @@ public class CollateralValuation3 {
 	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
-			componentContext_lazy = () -> CollateralValuation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "ISIN";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,9 +206,9 @@ public class CollateralValuation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CollateralValuation3.mmNominalAmount, CollateralValuation3.mmISIN);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation3.mmNominalAmount, com.tools20022.repository.msg.CollateralValuation3.mmISIN);
 				trace_lazy = () -> CollateralValuation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralValuation3";
 				definition = "Provides the valuation of a collateral, identified through an ISIN.";
@@ -222,21 +218,21 @@ public class CollateralValuation3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NmnlAmt")
-	public ActiveCurrencyAndAmount getNominalAmount() {
-		return nominalAmount;
+	public Optional<ActiveCurrencyAndAmount> getNominalAmount() {
+		return nominalAmount == null ? Optional.empty() : Optional.of(nominalAmount);
 	}
 
-	public void setNominalAmount(ActiveCurrencyAndAmount nominalAmount) {
+	public CollateralValuation3 setNominalAmount(ActiveCurrencyAndAmount nominalAmount) {
 		this.nominalAmount = nominalAmount;
+		return this;
 	}
 
-	@XmlElement(name = "ISIN", required = true)
 	public ISINIdentifier getISIN() {
 		return iSIN;
 	}
 
-	public void setISIN(ISINIdentifier iSIN) {
-		this.iSIN = iSIN;
+	public CollateralValuation3 setISIN(ISINIdentifier iSIN) {
+		this.iSIN = Objects.requireNonNull(iSIN);
+		return this;
 	}
 }

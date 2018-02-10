@@ -46,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
  * businessProcessCatalogue} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmcatalogue
- * GeneratedRepository.mmcatalogue}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
+ * GeneratedRepository.catalogue}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,7 +67,7 @@ public class SupplementaryDataISOLatestversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Supplementary Data - ISO - Latest version";
 				definition = "Messages that add new components to existing message definitions in existing business areas. The messages are each a separate extension of an existing message and should always be linked to the supplementary data component in the (core) registered message.";

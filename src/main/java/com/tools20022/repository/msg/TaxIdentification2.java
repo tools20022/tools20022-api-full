@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * TaxIdentification1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TaxIdentification2", propOrder = {"identification", "taxIdentificationType", "issuer", "issueDate", "expiryDate", "issuerCountry"})
 public class TaxIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Tax identification number or identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +126,7 @@ public class TaxIdentification2 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmIdentification;
-			componentContext_lazy = () -> TaxIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +137,11 @@ public class TaxIdentification2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxIdTp", required = true)
 	protected TaxIdentificationType1Choice taxIdentificationType;
 	/**
-	 * Type of tax identification number or identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +175,7 @@ public class TaxIdentification2 {
 	public static final MMMessageAttribute mmTaxIdentificationType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxIdentificationType;
-			componentContext_lazy = () -> TaxIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "TaxIdTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,10 +186,11 @@ public class TaxIdentification2 {
 			complexType_lazy = () -> TaxIdentificationType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Issr")
 	protected Max35Text issuer;
 	/**
-	 * Entity that assigns the identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,7 +223,7 @@ public class TaxIdentification2 {
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAdministrationZone;
-			componentContext_lazy = () -> TaxIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,10 +234,11 @@ public class TaxIdentification2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IsseDt")
 	protected ISODate issueDate;
 	/**
-	 * Date at which the identification was issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,7 +265,7 @@ public class TaxIdentification2 {
 	 */
 	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,10 +276,11 @@ public class TaxIdentification2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "XpryDt")
 	protected ISODate expiryDate;
 	/**
-	 * Date at which the identification expires.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -300,7 +307,7 @@ public class TaxIdentification2 {
 	 */
 	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -311,10 +318,11 @@ public class TaxIdentification2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "IssrCtry", required = true)
 	protected CountryCode issuerCountry;
 	/**
-	 * Country that issued the tax identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -352,7 +360,7 @@ public class TaxIdentification2 {
 	public static final MMMessageAttribute mmIssuerCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmTaxationConditions;
-			componentContext_lazy = () -> TaxIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "IssrCtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -368,10 +376,11 @@ public class TaxIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TaxIdentification2.mmIdentification, TaxIdentification2.mmTaxIdentificationType, TaxIdentification2.mmIssuer, TaxIdentification2.mmIssueDate, TaxIdentification2.mmExpiryDate,
-						TaxIdentification2.mmIssuerCountry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxIdentification2.mmIdentification, com.tools20022.repository.msg.TaxIdentification2.mmTaxIdentificationType,
+						com.tools20022.repository.msg.TaxIdentification2.mmIssuer, com.tools20022.repository.msg.TaxIdentification2.mmIssueDate, com.tools20022.repository.msg.TaxIdentification2.mmExpiryDate,
+						com.tools20022.repository.msg.TaxIdentification2.mmIssuerCountry);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TaxIdentification2";
 				definition = "Tax identification information.";
@@ -381,57 +390,57 @@ public class TaxIdentification2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public TaxIdentification2 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "TaxIdTp", required = true)
 	public TaxIdentificationType1Choice getTaxIdentificationType() {
 		return taxIdentificationType;
 	}
 
-	public void setTaxIdentificationType(TaxIdentificationType1Choice taxIdentificationType) {
-		this.taxIdentificationType = taxIdentificationType;
+	public TaxIdentification2 setTaxIdentificationType(TaxIdentificationType1Choice taxIdentificationType) {
+		this.taxIdentificationType = Objects.requireNonNull(taxIdentificationType);
+		return this;
 	}
 
-	@XmlElement(name = "Issr")
-	public Max35Text getIssuer() {
-		return issuer;
+	public Optional<Max35Text> getIssuer() {
+		return issuer == null ? Optional.empty() : Optional.of(issuer);
 	}
 
-	public void setIssuer(Max35Text issuer) {
+	public TaxIdentification2 setIssuer(Max35Text issuer) {
 		this.issuer = issuer;
+		return this;
 	}
 
-	@XmlElement(name = "IsseDt")
-	public ISODate getIssueDate() {
-		return issueDate;
+	public Optional<ISODate> getIssueDate() {
+		return issueDate == null ? Optional.empty() : Optional.of(issueDate);
 	}
 
-	public void setIssueDate(ISODate issueDate) {
+	public TaxIdentification2 setIssueDate(ISODate issueDate) {
 		this.issueDate = issueDate;
+		return this;
 	}
 
-	@XmlElement(name = "XpryDt")
-	public ISODate getExpiryDate() {
-		return expiryDate;
+	public Optional<ISODate> getExpiryDate() {
+		return expiryDate == null ? Optional.empty() : Optional.of(expiryDate);
 	}
 
-	public void setExpiryDate(ISODate expiryDate) {
+	public TaxIdentification2 setExpiryDate(ISODate expiryDate) {
 		this.expiryDate = expiryDate;
+		return this;
 	}
 
-	@XmlElement(name = "IssrCtry", required = true)
 	public CountryCode getIssuerCountry() {
 		return issuerCountry;
 	}
 
-	public void setIssuerCountry(CountryCode issuerCountry) {
-		this.issuerCountry = issuerCountry;
+	public TaxIdentification2 setIssuerCountry(CountryCode issuerCountry) {
+		this.issuerCountry = Objects.requireNonNull(issuerCountry);
+		return this;
 	}
 }

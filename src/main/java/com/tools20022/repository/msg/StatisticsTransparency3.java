@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,16 +85,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatisticsTransparency3", propOrder = {"averageDailyTurnover", "averageTransactionValue", "largeInScale", "standardMarketSize", "averageDailyNumberOfTransactions", "totalNumberOfTransactionsExecuted",
 		"totalVolumeOfTransactionsExecuted", "totalNumberOfTradingDays"})
 public class StatisticsTransparency3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AvrgDalyTrnvr")
 	protected ActiveCurrencyAndAmount averageDailyTurnover;
 	/**
-	 * Average Daily Turnover for the instrument in Euros.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +123,7 @@ public class StatisticsTransparency3 {
 	 */
 	public static final MMMessageAttribute mmAverageDailyTurnover = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency3.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgDalyTrnvr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +134,11 @@ public class StatisticsTransparency3 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "AvrgTxVal")
 	protected ActiveCurrencyAndAmount averageTransactionValue;
 	/**
-	 * Average value of the transactions for the instrument in Euro.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +167,7 @@ public class StatisticsTransparency3 {
 	 */
 	public static final MMMessageAttribute mmAverageTransactionValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency3.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgTxVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,15 +178,11 @@ public class StatisticsTransparency3 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "LrgInScale")
 	protected DecimalNumber largeInScale;
 	/**
-	 * Large in scale order in respect of a share, depositary receipt,
-	 * certificate or other similar financial instrument shall be considered
-	 * large in scale compared with normal market size if, on the basis of the
-	 * average daily turnover for that financial instrument, the order is equal
-	 * to or larger than the minimum size of orders set out in the local
-	 * regulation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,7 +212,7 @@ public class StatisticsTransparency3 {
 	 */
 	public static final MMMessageAttribute mmLargeInScale = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency3.mmObject();
 			isDerived = false;
 			xmlTag = "LrgInScale";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,14 +223,11 @@ public class StatisticsTransparency3 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "StdMktSz")
 	protected DecimalNumber standardMarketSize;
 	/**
-	 * Standard market size for shares, depositary receipts, ETFs, certificates
-	 * and other similar financial instruments for which there is a liquid
-	 * market shall be determined on the basis of the average value of
-	 * transactions for each financial instrument and in accordance with the
-	 * local regulation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -261,7 +257,7 @@ public class StatisticsTransparency3 {
 	 */
 	public static final MMMessageAttribute mmStandardMarketSize = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency3.mmObject();
 			isDerived = false;
 			xmlTag = "StdMktSz";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,11 +268,11 @@ public class StatisticsTransparency3 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "AvrgDalyNbOfTxs")
 	protected DecimalNumber averageDailyNumberOfTransactions;
 	/**
-	 * Average daily number of transactions that have been performed on this
-	 * market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -306,7 +302,7 @@ public class StatisticsTransparency3 {
 	 */
 	public static final MMMessageAttribute mmAverageDailyNumberOfTransactions = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency3.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgDalyNbOfTxs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -317,10 +313,11 @@ public class StatisticsTransparency3 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNbOfTxsExctd")
 	protected DecimalNumber totalNumberOfTransactionsExecuted;
 	/**
-	 * Total number of transactions that have been performed on this market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -349,7 +346,7 @@ public class StatisticsTransparency3 {
 	 */
 	public static final MMMessageAttribute mmTotalNumberOfTransactionsExecuted = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfTxsExctd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -360,10 +357,11 @@ public class StatisticsTransparency3 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlVolOfTxsExctd")
 	protected DecimalNumber totalVolumeOfTransactionsExecuted;
 	/**
-	 * Total volume of transactions that have been performed on this market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -392,7 +390,7 @@ public class StatisticsTransparency3 {
 	 */
 	public static final MMMessageAttribute mmTotalVolumeOfTransactionsExecuted = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlVolOfTxsExctd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -403,10 +401,11 @@ public class StatisticsTransparency3 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNbOfTradgDays")
 	protected Number totalNumberOfTradingDays;
 	/**
-	 * The total number of trading days for which the data is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -434,7 +433,7 @@ public class StatisticsTransparency3 {
 	 */
 	public static final MMMessageAttribute mmTotalNumberOfTradingDays = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatisticsTransparency3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfTradgDays";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -449,10 +448,11 @@ public class StatisticsTransparency3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatisticsTransparency3.mmAverageDailyTurnover, StatisticsTransparency3.mmAverageTransactionValue, StatisticsTransparency3.mmLargeInScale,
-						StatisticsTransparency3.mmStandardMarketSize, StatisticsTransparency3.mmAverageDailyNumberOfTransactions, StatisticsTransparency3.mmTotalNumberOfTransactionsExecuted,
-						StatisticsTransparency3.mmTotalVolumeOfTransactionsExecuted, StatisticsTransparency3.mmTotalNumberOfTradingDays);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatisticsTransparency3.mmAverageDailyTurnover, com.tools20022.repository.msg.StatisticsTransparency3.mmAverageTransactionValue,
+						com.tools20022.repository.msg.StatisticsTransparency3.mmLargeInScale, com.tools20022.repository.msg.StatisticsTransparency3.mmStandardMarketSize,
+						com.tools20022.repository.msg.StatisticsTransparency3.mmAverageDailyNumberOfTransactions, com.tools20022.repository.msg.StatisticsTransparency3.mmTotalNumberOfTransactionsExecuted,
+						com.tools20022.repository.msg.StatisticsTransparency3.mmTotalVolumeOfTransactionsExecuted, com.tools20022.repository.msg.StatisticsTransparency3.mmTotalNumberOfTradingDays);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatisticsTransparency3";
 				definition = "Statistics for a financial instrument generated as part of transparency calculations.";
@@ -461,75 +461,75 @@ public class StatisticsTransparency3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AvrgDalyTrnvr")
-	public ActiveCurrencyAndAmount getAverageDailyTurnover() {
-		return averageDailyTurnover;
+	public Optional<ActiveCurrencyAndAmount> getAverageDailyTurnover() {
+		return averageDailyTurnover == null ? Optional.empty() : Optional.of(averageDailyTurnover);
 	}
 
-	public void setAverageDailyTurnover(ActiveCurrencyAndAmount averageDailyTurnover) {
+	public StatisticsTransparency3 setAverageDailyTurnover(ActiveCurrencyAndAmount averageDailyTurnover) {
 		this.averageDailyTurnover = averageDailyTurnover;
+		return this;
 	}
 
-	@XmlElement(name = "AvrgTxVal")
-	public ActiveCurrencyAndAmount getAverageTransactionValue() {
-		return averageTransactionValue;
+	public Optional<ActiveCurrencyAndAmount> getAverageTransactionValue() {
+		return averageTransactionValue == null ? Optional.empty() : Optional.of(averageTransactionValue);
 	}
 
-	public void setAverageTransactionValue(ActiveCurrencyAndAmount averageTransactionValue) {
+	public StatisticsTransparency3 setAverageTransactionValue(ActiveCurrencyAndAmount averageTransactionValue) {
 		this.averageTransactionValue = averageTransactionValue;
+		return this;
 	}
 
-	@XmlElement(name = "LrgInScale")
-	public DecimalNumber getLargeInScale() {
-		return largeInScale;
+	public Optional<DecimalNumber> getLargeInScale() {
+		return largeInScale == null ? Optional.empty() : Optional.of(largeInScale);
 	}
 
-	public void setLargeInScale(DecimalNumber largeInScale) {
+	public StatisticsTransparency3 setLargeInScale(DecimalNumber largeInScale) {
 		this.largeInScale = largeInScale;
+		return this;
 	}
 
-	@XmlElement(name = "StdMktSz")
-	public DecimalNumber getStandardMarketSize() {
-		return standardMarketSize;
+	public Optional<DecimalNumber> getStandardMarketSize() {
+		return standardMarketSize == null ? Optional.empty() : Optional.of(standardMarketSize);
 	}
 
-	public void setStandardMarketSize(DecimalNumber standardMarketSize) {
+	public StatisticsTransparency3 setStandardMarketSize(DecimalNumber standardMarketSize) {
 		this.standardMarketSize = standardMarketSize;
+		return this;
 	}
 
-	@XmlElement(name = "AvrgDalyNbOfTxs")
-	public DecimalNumber getAverageDailyNumberOfTransactions() {
-		return averageDailyNumberOfTransactions;
+	public Optional<DecimalNumber> getAverageDailyNumberOfTransactions() {
+		return averageDailyNumberOfTransactions == null ? Optional.empty() : Optional.of(averageDailyNumberOfTransactions);
 	}
 
-	public void setAverageDailyNumberOfTransactions(DecimalNumber averageDailyNumberOfTransactions) {
+	public StatisticsTransparency3 setAverageDailyNumberOfTransactions(DecimalNumber averageDailyNumberOfTransactions) {
 		this.averageDailyNumberOfTransactions = averageDailyNumberOfTransactions;
+		return this;
 	}
 
-	@XmlElement(name = "TtlNbOfTxsExctd")
-	public DecimalNumber getTotalNumberOfTransactionsExecuted() {
-		return totalNumberOfTransactionsExecuted;
+	public Optional<DecimalNumber> getTotalNumberOfTransactionsExecuted() {
+		return totalNumberOfTransactionsExecuted == null ? Optional.empty() : Optional.of(totalNumberOfTransactionsExecuted);
 	}
 
-	public void setTotalNumberOfTransactionsExecuted(DecimalNumber totalNumberOfTransactionsExecuted) {
+	public StatisticsTransparency3 setTotalNumberOfTransactionsExecuted(DecimalNumber totalNumberOfTransactionsExecuted) {
 		this.totalNumberOfTransactionsExecuted = totalNumberOfTransactionsExecuted;
+		return this;
 	}
 
-	@XmlElement(name = "TtlVolOfTxsExctd")
-	public DecimalNumber getTotalVolumeOfTransactionsExecuted() {
-		return totalVolumeOfTransactionsExecuted;
+	public Optional<DecimalNumber> getTotalVolumeOfTransactionsExecuted() {
+		return totalVolumeOfTransactionsExecuted == null ? Optional.empty() : Optional.of(totalVolumeOfTransactionsExecuted);
 	}
 
-	public void setTotalVolumeOfTransactionsExecuted(DecimalNumber totalVolumeOfTransactionsExecuted) {
+	public StatisticsTransparency3 setTotalVolumeOfTransactionsExecuted(DecimalNumber totalVolumeOfTransactionsExecuted) {
 		this.totalVolumeOfTransactionsExecuted = totalVolumeOfTransactionsExecuted;
+		return this;
 	}
 
-	@XmlElement(name = "TtlNbOfTradgDays")
-	public Number getTotalNumberOfTradingDays() {
-		return totalNumberOfTradingDays;
+	public Optional<Number> getTotalNumberOfTradingDays() {
+		return totalNumberOfTradingDays == null ? Optional.empty() : Optional.of(totalNumberOfTradingDays);
 	}
 
-	public void setTotalNumberOfTradingDays(Number totalNumberOfTradingDays) {
+	public StatisticsTransparency3 setTotalNumberOfTradingDays(Number totalNumberOfTradingDays) {
 		this.totalNumberOfTradingDays = totalNumberOfTradingDays;
+		return this;
 	}
 }

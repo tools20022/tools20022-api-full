@@ -24,6 +24,8 @@ import com.tools20022.repository.choice.DateAndDateTimeSearch2Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementInstructionQueryStatus1", propOrder = {"type", "datePeriod"})
 public class SettlementInstructionQueryStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected SettlementTransactionStatusType1 type;
 	/**
-	 * Defines the status type of query criteria.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -99,7 +102,7 @@ public class SettlementInstructionQueryStatus1 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +114,11 @@ public class SettlementInstructionQueryStatus1 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementTransactionStatusType1.mmObject();
 		}
 	};
+	@XmlElement(name = "DtPrd")
 	protected DateAndDateTimeSearch2Choice datePeriod;
 	/**
-	 * Specified date period of the status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -141,7 +145,7 @@ public class SettlementInstructionQueryStatus1 {
 	 */
 	public static final MMMessageAssociationEnd mmDatePeriod = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "DtPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,8 +161,8 @@ public class SettlementInstructionQueryStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementInstructionQueryStatus1.mmType, SettlementInstructionQueryStatus1.mmDatePeriod);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInstructionQueryStatus1.mmType, com.tools20022.repository.msg.SettlementInstructionQueryStatus1.mmDatePeriod);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementInstructionQueryStatus1";
 				definition = "Defines the settlement instruction status query criteria including the status period.";
@@ -167,21 +171,21 @@ public class SettlementInstructionQueryStatus1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public SettlementTransactionStatusType1 getType() {
 		return type;
 	}
 
-	public void setType(com.tools20022.repository.msg.SettlementTransactionStatusType1 type) {
-		this.type = type;
+	public SettlementInstructionQueryStatus1 setType(com.tools20022.repository.msg.SettlementTransactionStatusType1 type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "DtPrd")
-	public DateAndDateTimeSearch2Choice getDatePeriod() {
-		return datePeriod;
+	public Optional<DateAndDateTimeSearch2Choice> getDatePeriod() {
+		return datePeriod == null ? Optional.empty() : Optional.of(datePeriod);
 	}
 
-	public void setDatePeriod(DateAndDateTimeSearch2Choice datePeriod) {
+	public SettlementInstructionQueryStatus1 setDatePeriod(DateAndDateTimeSearch2Choice datePeriod) {
 		this.datePeriod = datePeriod;
+		return this;
 	}
 }

@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Collateral;
 import com.tools20022.repository.entity.CollateralProposal;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCollateralResponsePresenceRule#forCollateralResponse1
+ * ConstraintCollateralResponsePresenceRule.forCollateralResponse1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +89,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CollateralResponse1", propOrder = {"securitiesCollateralResponse", "cashCollateralResponse", "otherCollateralResponse"})
 public class CollateralResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesCollRspn")
 	protected List<com.tools20022.repository.msg.SecuritiesCollateralResponse1> securitiesCollateralResponse;
 	/**
-	 * Provides details on the securities collateral proposal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -128,7 +139,7 @@ public class CollateralResponse1 {
 	public static final MMMessageAssociationEnd mmSecuritiesCollateralResponse = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmStatus;
-			componentContext_lazy = () -> CollateralResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesCollRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,10 +151,11 @@ public class CollateralResponse1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateralResponse1.mmObject();
 		}
 	};
+	@XmlElement(name = "CshCollRspn")
 	protected List<com.tools20022.repository.msg.CashCollateralResponse1> cashCollateralResponse;
 	/**
-	 * Provides details on the cash collateral proposal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -184,7 +196,7 @@ public class CollateralResponse1 {
 	public static final MMMessageAssociationEnd mmCashCollateralResponse = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmStatus;
-			componentContext_lazy = () -> CollateralResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "CshCollRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -196,10 +208,11 @@ public class CollateralResponse1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrCollRspn")
 	protected List<com.tools20022.repository.msg.OtherCollateralResponse1> otherCollateralResponse;
 	/**
-	 * Provides details on other collateral proposal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -240,7 +253,7 @@ public class CollateralResponse1 {
 	public static final MMMessageAssociationEnd mmOtherCollateralResponse = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmStatus;
-			componentContext_lazy = () -> CollateralResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrCollRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,9 +269,11 @@ public class CollateralResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CollateralResponse1.mmSecuritiesCollateralResponse, CollateralResponse1.mmCashCollateralResponse, CollateralResponse1.mmOtherCollateralResponse);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralResponse1.mmSecuritiesCollateralResponse, com.tools20022.repository.msg.CollateralResponse1.mmCashCollateralResponse,
+						com.tools20022.repository.msg.CollateralResponse1.mmOtherCollateralResponse);
 				trace_lazy = () -> CollateralProposal.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCollateralResponsePresenceRule.forCollateralResponse1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralResponse1";
 				definition = "Provides additional information on the collateral proposal(s), that is either in cash, securities or other types.";
@@ -268,30 +283,30 @@ public class CollateralResponse1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesCollRspn")
 	public List<SecuritiesCollateralResponse1> getSecuritiesCollateralResponse() {
-		return securitiesCollateralResponse;
+		return securitiesCollateralResponse == null ? securitiesCollateralResponse = new ArrayList<>() : securitiesCollateralResponse;
 	}
 
-	public void setSecuritiesCollateralResponse(List<com.tools20022.repository.msg.SecuritiesCollateralResponse1> securitiesCollateralResponse) {
-		this.securitiesCollateralResponse = securitiesCollateralResponse;
+	public CollateralResponse1 setSecuritiesCollateralResponse(List<com.tools20022.repository.msg.SecuritiesCollateralResponse1> securitiesCollateralResponse) {
+		this.securitiesCollateralResponse = Objects.requireNonNull(securitiesCollateralResponse);
+		return this;
 	}
 
-	@XmlElement(name = "CshCollRspn")
 	public List<CashCollateralResponse1> getCashCollateralResponse() {
-		return cashCollateralResponse;
+		return cashCollateralResponse == null ? cashCollateralResponse = new ArrayList<>() : cashCollateralResponse;
 	}
 
-	public void setCashCollateralResponse(List<com.tools20022.repository.msg.CashCollateralResponse1> cashCollateralResponse) {
-		this.cashCollateralResponse = cashCollateralResponse;
+	public CollateralResponse1 setCashCollateralResponse(List<com.tools20022.repository.msg.CashCollateralResponse1> cashCollateralResponse) {
+		this.cashCollateralResponse = Objects.requireNonNull(cashCollateralResponse);
+		return this;
 	}
 
-	@XmlElement(name = "OthrCollRspn")
 	public List<OtherCollateralResponse1> getOtherCollateralResponse() {
-		return otherCollateralResponse;
+		return otherCollateralResponse == null ? otherCollateralResponse = new ArrayList<>() : otherCollateralResponse;
 	}
 
-	public void setOtherCollateralResponse(List<com.tools20022.repository.msg.OtherCollateralResponse1> otherCollateralResponse) {
-		this.otherCollateralResponse = otherCollateralResponse;
+	public CollateralResponse1 setOtherCollateralResponse(List<com.tools20022.repository.msg.OtherCollateralResponse1> otherCollateralResponse) {
+		this.otherCollateralResponse = Objects.requireNonNull(otherCollateralResponse);
+		return this;
 	}
 }

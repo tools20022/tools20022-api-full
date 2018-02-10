@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ServiceLevelCode;
+import com.tools20022.repository.codeset.ServiceLevel3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the pre-agreed level of service between the parties.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ServiceLevelCode
- * ServiceLevelCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServiceLevel3Code#mmSingleEuroPaymentsArea
- * ServiceLevel3Code.mmSingleEuroPaymentsArea}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServiceLevel3Code#SingleEuroPaymentsArea
+ * ServiceLevel3Code.SingleEuroPaymentsArea}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ServiceLevelCode
+ * ServiceLevelCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -62,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the pre-agreed level of service between the parties."</li>
  * </ul>
  */
-public class ServiceLevel3Code extends ServiceLevelCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ServiceLevel3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -81,26 +86,56 @@ public class ServiceLevel3Code extends ServiceLevelCode {
 	 * name} = "SingleEuroPaymentsArea"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSingleEuroPaymentsArea = new MMCode() {
+	public static final ServiceLevel3Code SingleEuroPaymentsArea = new ServiceLevel3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleEuroPaymentsArea";
-			owner_lazy = () -> ServiceLevel3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ServiceLevel3Code.mmObject();
+			codeName = ServiceLevelCode.SingleEuroPaymentsArea.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ServiceLevel3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ServiceLevel3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SEPA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ServiceLevel3Code";
 				definition = "Specifies the pre-agreed level of service between the parties.";
-				code_lazy = () -> Arrays.asList(ServiceLevel3Code.mmSingleEuroPaymentsArea);
 				trace_lazy = () -> ServiceLevelCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ServiceLevel3Code.SingleEuroPaymentsArea);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SingleEuroPaymentsArea.getCodeName().get(), SingleEuroPaymentsArea);
+	}
+
+	public static ServiceLevel3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ServiceLevel3Code[] values() {
+		ServiceLevel3Code[] values = new ServiceLevel3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ServiceLevel3Code> {
+		@Override
+		public ServiceLevel3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ServiceLevel3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

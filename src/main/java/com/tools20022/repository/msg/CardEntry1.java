@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,16 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CardEntry1", propOrder = {"card", "POI", "aggregatedEntry"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CardEntry1", propOrder = {"card", "pOI", "aggregatedEntry"})
 public class CardEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Card")
 	protected PaymentCard4 card;
 	/**
-	 * Electronic money product that provides the cardholder with a portable and
-	 * specialised computer device, which typically contains a microprocessor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -120,7 +121,7 @@ public class CardEntry1 {
 	public static final MMMessageAssociationEnd mmCard = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
-			componentContext_lazy = () -> CardEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Card";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,11 +134,11 @@ public class CardEntry1 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentCard4.mmObject();
 		}
 	};
+	@XmlElement(name = "POI")
 	protected PointOfInteraction1 pOI;
 	/**
-	 * Physical or logical card payment terminal containing software and
-	 * hardware components.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -177,7 +178,7 @@ public class CardEntry1 {
 	public static final MMMessageAssociationEnd mmPOI = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmPointOfInteraction;
-			componentContext_lazy = () -> CardEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "POI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,11 +191,11 @@ public class CardEntry1 {
 			type_lazy = () -> com.tools20022.repository.msg.PointOfInteraction1.mmObject();
 		}
 	};
+	@XmlElement(name = "AggtdNtry")
 	protected CardAggregated1 aggregatedEntry;
 	/**
-	 * Card entry details, based on card transaction aggregated data performed
-	 * by the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -234,7 +235,7 @@ public class CardEntry1 {
 	public static final MMMessageAssociationEnd mmAggregatedEntry = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> CardEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "AggtdNtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,9 +252,9 @@ public class CardEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardEntry1.mmCard, CardEntry1.mmPOI, CardEntry1.mmAggregatedEntry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardEntry1.mmCard, com.tools20022.repository.msg.CardEntry1.mmPOI, com.tools20022.repository.msg.CardEntry1.mmAggregatedEntry);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardEntry1";
 				definition = "Card transaction entry.";
@@ -263,30 +264,30 @@ public class CardEntry1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Card")
-	public PaymentCard4 getCard() {
-		return card;
+	public Optional<PaymentCard4> getCard() {
+		return card == null ? Optional.empty() : Optional.of(card);
 	}
 
-	public void setCard(com.tools20022.repository.msg.PaymentCard4 card) {
+	public CardEntry1 setCard(com.tools20022.repository.msg.PaymentCard4 card) {
 		this.card = card;
+		return this;
 	}
 
-	@XmlElement(name = "POI")
-	public PointOfInteraction1 getPOI() {
-		return pOI;
+	public Optional<PointOfInteraction1> getPOI() {
+		return pOI == null ? Optional.empty() : Optional.of(pOI);
 	}
 
-	public void setPOI(com.tools20022.repository.msg.PointOfInteraction1 pOI) {
+	public CardEntry1 setPOI(com.tools20022.repository.msg.PointOfInteraction1 pOI) {
 		this.pOI = pOI;
+		return this;
 	}
 
-	@XmlElement(name = "AggtdNtry")
-	public CardAggregated1 getAggregatedEntry() {
-		return aggregatedEntry;
+	public Optional<CardAggregated1> getAggregatedEntry() {
+		return aggregatedEntry == null ? Optional.empty() : Optional.of(aggregatedEntry);
 	}
 
-	public void setAggregatedEntry(com.tools20022.repository.msg.CardAggregated1 aggregatedEntry) {
+	public CardEntry1 setAggregatedEntry(com.tools20022.repository.msg.CardAggregated1 aggregatedEntry) {
 		this.aggregatedEntry = aggregatedEntry;
+		return this;
 	}
 }

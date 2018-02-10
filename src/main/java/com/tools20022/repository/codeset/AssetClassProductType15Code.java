@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AssetClassProductTypeCode;
+import com.tools20022.repository.codeset.AssetClassProductType15Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Commodity derivative base product code list for Other.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode
- * AssetClassProductTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductType15Code#mmOther
- * AssetClassProductType15Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductType15Code#Other
+ * AssetClassProductType15Code.Other}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode
+ * AssetClassProductTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,7 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Commodity derivative base product code list for Other."</li>
  * </ul>
  */
-public class AssetClassProductType15Code extends AssetClassProductTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AssetClassProductType15Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -74,25 +79,55 @@ public class AssetClassProductType15Code extends AssetClassProductTypeCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final AssetClassProductType15Code Other = new AssetClassProductType15Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> AssetClassProductType15Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassProductType15Code.mmObject();
+			codeName = AssetClassProductTypeCode.Other.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AssetClassProductType15Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AssetClassProductType15Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassProductType15Code";
 				definition = "Commodity derivative base product code list for Other.";
-				code_lazy = () -> Arrays.asList(AssetClassProductType15Code.mmOther);
 				trace_lazy = () -> AssetClassProductTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassProductType15Code.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static AssetClassProductType15Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AssetClassProductType15Code[] values() {
+		AssetClassProductType15Code[] values = new AssetClassProductType15Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AssetClassProductType15Code> {
+		@Override
+		public AssetClassProductType15Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AssetClassProductType15Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,7 @@ import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule#forOtherParties30
+ * ConstraintInvestorCountryCodeRule.forOtherParties30}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,16 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Other parties information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OtherParties30", propOrder = {"investor", "stockExchange", "tradeRegulator"})
 public class OtherParties30 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Invstr")
 	protected PartyIdentification110 investor;
 	/**
-	 * Party, either an individual or organisation, whose assets are being
-	 * invested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -91,6 +101,9 @@ public class OtherParties30 {
 	 * {@linkplain com.tools20022.repository.msg.OtherParties30 OtherParties30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Invstr"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a::INVE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -112,9 +125,10 @@ public class OtherParties30 {
 	public static final MMMessageAssociationEnd mmInvestor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> OtherParties30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties30.mmObject();
 			isDerived = false;
 			xmlTag = "Invstr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::INVE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
 			definition = "Party, either an individual or organisation, whose assets are being invested.";
@@ -125,11 +139,11 @@ public class OtherParties30 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification110.mmObject();
 		}
 	};
+	@XmlElement(name = "StockXchg")
 	protected PartyIdentification111 stockExchange;
 	/**
-	 * Identification of the stock exchange to which transaction reporting will
-	 * be done.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -146,6 +160,9 @@ public class OtherParties30 {
 	 * {@linkplain com.tools20022.repository.msg.OtherParties30 OtherParties30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StockXchg"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a::EXCH</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -167,9 +184,10 @@ public class OtherParties30 {
 	public static final MMMessageAssociationEnd mmStockExchange = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> OtherParties30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties30.mmObject();
 			isDerived = false;
 			xmlTag = "StockXchg";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::EXCH"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
 			definition = "Identification of the stock exchange to which transaction reporting will be done.";
@@ -180,10 +198,11 @@ public class OtherParties30 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification111.mmObject();
 		}
 	};
+	@XmlElement(name = "TradRgltr")
 	protected PartyIdentification111 tradeRegulator;
 	/**
-	 * Institution to which a trade must be reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -200,6 +219,9 @@ public class OtherParties30 {
 	 * {@linkplain com.tools20022.repository.msg.OtherParties30 OtherParties30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradRgltr"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a::TRRE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -219,9 +241,10 @@ public class OtherParties30 {
 	public static final MMMessageAssociationEnd mmTradeRegulator = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> OtherParties30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties30.mmObject();
 			isDerived = false;
 			xmlTag = "TradRgltr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::TRRE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeRegulator";
 			definition = "Institution to which a trade must be reported.";
@@ -236,9 +259,10 @@ public class OtherParties30 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OtherParties30.mmInvestor, OtherParties30.mmStockExchange, OtherParties30.mmTradeRegulator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties30.mmInvestor, com.tools20022.repository.msg.OtherParties30.mmStockExchange, com.tools20022.repository.msg.OtherParties30.mmTradeRegulator);
 				trace_lazy = () -> Role.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forOtherParties30);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OtherParties30";
 				definition = "Other parties information.";
@@ -247,30 +271,30 @@ public class OtherParties30 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Invstr")
-	public PartyIdentification110 getInvestor() {
-		return investor;
+	public Optional<PartyIdentification110> getInvestor() {
+		return investor == null ? Optional.empty() : Optional.of(investor);
 	}
 
-	public void setInvestor(com.tools20022.repository.msg.PartyIdentification110 investor) {
+	public OtherParties30 setInvestor(com.tools20022.repository.msg.PartyIdentification110 investor) {
 		this.investor = investor;
+		return this;
 	}
 
-	@XmlElement(name = "StockXchg")
-	public PartyIdentification111 getStockExchange() {
-		return stockExchange;
+	public Optional<PartyIdentification111> getStockExchange() {
+		return stockExchange == null ? Optional.empty() : Optional.of(stockExchange);
 	}
 
-	public void setStockExchange(com.tools20022.repository.msg.PartyIdentification111 stockExchange) {
+	public OtherParties30 setStockExchange(com.tools20022.repository.msg.PartyIdentification111 stockExchange) {
 		this.stockExchange = stockExchange;
+		return this;
 	}
 
-	@XmlElement(name = "TradRgltr")
-	public PartyIdentification111 getTradeRegulator() {
-		return tradeRegulator;
+	public Optional<PartyIdentification111> getTradeRegulator() {
+		return tradeRegulator == null ? Optional.empty() : Optional.of(tradeRegulator);
 	}
 
-	public void setTradeRegulator(com.tools20022.repository.msg.PartyIdentification111 tradeRegulator) {
+	public OtherParties30 setTradeRegulator(com.tools20022.repository.msg.PartyIdentification111 tradeRegulator) {
 		this.tradeRegulator = tradeRegulator;
+		return this;
 	}
 }

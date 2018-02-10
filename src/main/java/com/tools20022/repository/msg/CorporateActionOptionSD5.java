@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +28,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides additional information regarding corporate action option details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionOptionSD5", propOrder = {"placeAndName", "optionStatus", "randomLotPreferenceFlag", "newShareDispatchedDate"})
 public class CorporateActionOptionSD5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +110,7 @@ public class CorporateActionOptionSD5 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,11 +121,11 @@ public class CorporateActionOptionSD5 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnSts")
 	protected WorkflowStatus1Code optionStatus;
 	/**
-	 * Workflow status of the specified option based on the consistency of the
-	 * issuer declared data elements (excluding DTC data elements).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,6 +141,9 @@ public class CorporateActionOptionSD5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OptnSts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Declared Option Status</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -151,9 +158,10 @@ public class CorporateActionOptionSD5 {
 	 */
 	public static final MMMessageAttribute mmOptionStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "OptnSts";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Declared Option Status"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionStatus";
 			definition = "Workflow status of the specified option based on the consistency of the issuer declared data elements (excluding DTC data elements).";
@@ -162,15 +170,11 @@ public class CorporateActionOptionSD5 {
 			simpleType_lazy = () -> WorkflowStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RandLotPrefFlg")
 	protected YesNoIndicator randomLotPreferenceFlag;
 	/**
-	 * Indicates whether or not the offeror will select random lots if the offer
-	 * has been prorated. The offeror may accept or reject conditional tenders
-	 * on a random basis. Holders must indicate their willingness to have their
-	 * rejected conditional tender accepted by random lot (if necessary). The
-	 * holder must surrender all shares held in order to be eligible for this
-	 * preference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,6 +190,9 @@ public class CorporateActionOptionSD5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RandLotPrefFlg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Random Lot Preference Flag</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -200,9 +207,10 @@ public class CorporateActionOptionSD5 {
 	 */
 	public static final MMMessageAttribute mmRandomLotPreferenceFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "RandLotPrefFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Random Lot Preference Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RandomLotPreferenceFlag";
 			definition = "Indicates whether or not the offeror will select random lots if the offer has been prorated. The offeror may accept or reject conditional tenders on a random basis. Holders must indicate their willingness to have their rejected conditional tender accepted by random lot (if necessary). The holder must surrender all shares held in order to be eligible for this preference. ";
@@ -211,12 +219,11 @@ public class CorporateActionOptionSD5 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "NewShrDsptchdDt")
 	protected ISODate newShareDispatchedDate;
 	/**
-	 * Date on which the new shares to be issued will be distributed, as opposed
-	 * to the "declared payable date." This date is typically used in some Asian
-	 * markets.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -230,6 +237,9 @@ public class CorporateActionOptionSD5 {
 	 * CorporateActionOptionSD5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NewShrDsptchdDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: New Share Dispatched Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -245,9 +255,10 @@ public class CorporateActionOptionSD5 {
 	 */
 	public static final MMMessageAttribute mmNewShareDispatchedDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "NewShrDsptchdDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "New Share Dispatched Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewShareDispatchedDate";
 			definition = "Date on which the new shares to be issued will be distributed, as opposed to the \"declared payable date.\" This date is typically used in some Asian markets.";
@@ -260,9 +271,9 @@ public class CorporateActionOptionSD5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionOptionSD5.mmPlaceAndName, CorporateActionOptionSD5.mmOptionStatus, CorporateActionOptionSD5.mmRandomLotPreferenceFlag,
-						CorporateActionOptionSD5.mmNewShareDispatchedDate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD5.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionOptionSD5.mmOptionStatus,
+						com.tools20022.repository.msg.CorporateActionOptionSD5.mmRandomLotPreferenceFlag, com.tools20022.repository.msg.CorporateActionOptionSD5.mmNewShareDispatchedDate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionOptionSD5";
 				definition = "Provides additional information regarding corporate action option details.";
@@ -271,39 +282,39 @@ public class CorporateActionOptionSD5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionOptionSD5 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "OptnSts")
-	public WorkflowStatus1Code getOptionStatus() {
-		return optionStatus;
+	public Optional<WorkflowStatus1Code> getOptionStatus() {
+		return optionStatus == null ? Optional.empty() : Optional.of(optionStatus);
 	}
 
-	public void setOptionStatus(WorkflowStatus1Code optionStatus) {
+	public CorporateActionOptionSD5 setOptionStatus(WorkflowStatus1Code optionStatus) {
 		this.optionStatus = optionStatus;
+		return this;
 	}
 
-	@XmlElement(name = "RandLotPrefFlg")
-	public YesNoIndicator getRandomLotPreferenceFlag() {
-		return randomLotPreferenceFlag;
+	public Optional<YesNoIndicator> getRandomLotPreferenceFlag() {
+		return randomLotPreferenceFlag == null ? Optional.empty() : Optional.of(randomLotPreferenceFlag);
 	}
 
-	public void setRandomLotPreferenceFlag(YesNoIndicator randomLotPreferenceFlag) {
+	public CorporateActionOptionSD5 setRandomLotPreferenceFlag(YesNoIndicator randomLotPreferenceFlag) {
 		this.randomLotPreferenceFlag = randomLotPreferenceFlag;
+		return this;
 	}
 
-	@XmlElement(name = "NewShrDsptchdDt")
-	public ISODate getNewShareDispatchedDate() {
-		return newShareDispatchedDate;
+	public Optional<ISODate> getNewShareDispatchedDate() {
+		return newShareDispatchedDate == null ? Optional.empty() : Optional.of(newShareDispatchedDate);
 	}
 
-	public void setNewShareDispatchedDate(ISODate newShareDispatchedDate) {
+	public CorporateActionOptionSD5 setNewShareDispatchedDate(ISODate newShareDispatchedDate) {
 		this.newShareDispatchedDate = newShareDispatchedDate;
+		return this;
 	}
 }

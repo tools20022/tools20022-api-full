@@ -20,61 +20,65 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.BlockedReasonCode;
+import com.tools20022.repository.codeset.DisabledReason2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason an account is disabled.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode
- * BlockedReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmAccountClosingInProcess
- * DisabledReason2Code.mmAccountClosingInProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#AccountClosingInProcess
+ * DisabledReason2Code.AccountClosingInProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmBankruptcy
- * DisabledReason2Code.mmBankruptcy}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#Bankruptcy
+ * DisabledReason2Code.Bankruptcy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmCommitment
- * DisabledReason2Code.mmCommitment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#Commitment
+ * DisabledReason2Code.Commitment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmConfiscation
- * DisabledReason2Code.mmConfiscation}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#Confiscation
+ * DisabledReason2Code.Confiscation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmMortisCausa
- * DisabledReason2Code.mmMortisCausa}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#MortisCausa
+ * DisabledReason2Code.MortisCausa}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmPendingComplianceVerification
- * DisabledReason2Code.mmPendingComplianceVerification}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#PendingComplianceVerification
+ * DisabledReason2Code.PendingComplianceVerification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmPledged
- * DisabledReason2Code.mmPledged}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#Pledged
+ * DisabledReason2Code.Pledged}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmReregistration
- * DisabledReason2Code.mmReregistration}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#Reregistration
+ * DisabledReason2Code.Reregistration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmSanctions
- * DisabledReason2Code.mmSanctions}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#Sanctions
+ * DisabledReason2Code.Sanctions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmTransfer
- * DisabledReason2Code.mmTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#Transfer
+ * DisabledReason2Code.Transfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#mmRejected
- * DisabledReason2Code.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisabledReason2Code#Rejected
+ * DisabledReason2Code.Rejected}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode
+ * BlockedReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,7 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason an account is disabled."</li>
  * </ul>
  */
-public class DisabledReason2Code extends BlockedReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DisabledReason2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -104,11 +109,12 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "AccountClosingInProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountClosingInProcess = new MMCode() {
+	public static final DisabledReason2Code AccountClosingInProcess = new DisabledReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountClosingInProcess";
-			owner_lazy = () -> DisabledReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisabledReason2Code.mmObject();
+			codeName = BlockedReasonCode.AccountClosingInProcess.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -127,11 +133,12 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "Bankruptcy"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBankruptcy = new MMCode() {
+	public static final DisabledReason2Code Bankruptcy = new DisabledReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bankruptcy";
-			owner_lazy = () -> DisabledReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisabledReason2Code.mmObject();
+			codeName = BlockedReasonCode.Bankruptcy.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -150,11 +157,12 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "Commitment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommitment = new MMCode() {
+	public static final DisabledReason2Code Commitment = new DisabledReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commitment";
-			owner_lazy = () -> DisabledReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisabledReason2Code.mmObject();
+			codeName = BlockedReasonCode.Commitment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -173,11 +181,12 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "Confiscation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConfiscation = new MMCode() {
+	public static final DisabledReason2Code Confiscation = new DisabledReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confiscation";
-			owner_lazy = () -> DisabledReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisabledReason2Code.mmObject();
+			codeName = BlockedReasonCode.Confiscation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -196,11 +205,12 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "MortisCausa"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMortisCausa = new MMCode() {
+	public static final DisabledReason2Code MortisCausa = new DisabledReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MortisCausa";
-			owner_lazy = () -> DisabledReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisabledReason2Code.mmObject();
+			codeName = BlockedReasonCode.MortisCausa.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -219,11 +229,12 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "PendingComplianceVerification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingComplianceVerification = new MMCode() {
+	public static final DisabledReason2Code PendingComplianceVerification = new DisabledReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingComplianceVerification";
-			owner_lazy = () -> DisabledReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisabledReason2Code.mmObject();
+			codeName = BlockedReasonCode.PendingComplianceVerification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -242,11 +253,12 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "Pledged"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPledged = new MMCode() {
+	public static final DisabledReason2Code Pledged = new DisabledReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pledged";
-			owner_lazy = () -> DisabledReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisabledReason2Code.mmObject();
+			codeName = BlockedReasonCode.Pledged.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -265,11 +277,12 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "Reregistration"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReregistration = new MMCode() {
+	public static final DisabledReason2Code Reregistration = new DisabledReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reregistration";
-			owner_lazy = () -> DisabledReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisabledReason2Code.mmObject();
+			codeName = BlockedReasonCode.Reregistration.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -288,11 +301,12 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "Sanctions"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSanctions = new MMCode() {
+	public static final DisabledReason2Code Sanctions = new DisabledReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sanctions";
-			owner_lazy = () -> DisabledReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisabledReason2Code.mmObject();
+			codeName = BlockedReasonCode.Sanctions.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -311,11 +325,12 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "Transfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransfer = new MMCode() {
+	public static final DisabledReason2Code Transfer = new DisabledReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transfer";
-			owner_lazy = () -> DisabledReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisabledReason2Code.mmObject();
+			codeName = BlockedReasonCode.Transfer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -334,27 +349,69 @@ public class DisabledReason2Code extends BlockedReasonCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final DisabledReason2Code Rejected = new DisabledReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> DisabledReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisabledReason2Code.mmObject();
+			codeName = BlockedReasonCode.Rejected.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DisabledReason2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DisabledReason2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DisabledReason2Code";
 				definition = "Specifies the reason an account is disabled.";
-				code_lazy = () -> Arrays.asList(DisabledReason2Code.mmAccountClosingInProcess, DisabledReason2Code.mmBankruptcy, DisabledReason2Code.mmCommitment, DisabledReason2Code.mmConfiscation, DisabledReason2Code.mmMortisCausa,
-						DisabledReason2Code.mmPendingComplianceVerification, DisabledReason2Code.mmPledged, DisabledReason2Code.mmReregistration, DisabledReason2Code.mmSanctions, DisabledReason2Code.mmTransfer,
-						DisabledReason2Code.mmRejected);
 				trace_lazy = () -> BlockedReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DisabledReason2Code.AccountClosingInProcess, com.tools20022.repository.codeset.DisabledReason2Code.Bankruptcy,
+						com.tools20022.repository.codeset.DisabledReason2Code.Commitment, com.tools20022.repository.codeset.DisabledReason2Code.Confiscation, com.tools20022.repository.codeset.DisabledReason2Code.MortisCausa,
+						com.tools20022.repository.codeset.DisabledReason2Code.PendingComplianceVerification, com.tools20022.repository.codeset.DisabledReason2Code.Pledged,
+						com.tools20022.repository.codeset.DisabledReason2Code.Reregistration, com.tools20022.repository.codeset.DisabledReason2Code.Sanctions, com.tools20022.repository.codeset.DisabledReason2Code.Transfer,
+						com.tools20022.repository.codeset.DisabledReason2Code.Rejected);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccountClosingInProcess.getCodeName().get(), AccountClosingInProcess);
+		codesByName.put(Bankruptcy.getCodeName().get(), Bankruptcy);
+		codesByName.put(Commitment.getCodeName().get(), Commitment);
+		codesByName.put(Confiscation.getCodeName().get(), Confiscation);
+		codesByName.put(MortisCausa.getCodeName().get(), MortisCausa);
+		codesByName.put(PendingComplianceVerification.getCodeName().get(), PendingComplianceVerification);
+		codesByName.put(Pledged.getCodeName().get(), Pledged);
+		codesByName.put(Reregistration.getCodeName().get(), Reregistration);
+		codesByName.put(Sanctions.getCodeName().get(), Sanctions);
+		codesByName.put(Transfer.getCodeName().get(), Transfer);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+	}
+
+	public static DisabledReason2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DisabledReason2Code[] values() {
+		DisabledReason2Code[] values = new DisabledReason2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DisabledReason2Code> {
+		@Override
+		public DisabledReason2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DisabledReason2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

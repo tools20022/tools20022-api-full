@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BusinessDay4;
 import com.tools20022.repository.msg.ErrorHandling3;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * BusinessDayReportOrError2Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BusinessDayReportOrError4Choice", propOrder = {"businessDayInformation", "businessError"})
 public class BusinessDayReportOrError4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BizDayInf", required = true)
 	protected BusinessDay4 businessDayInformation;
 	/**
-	 * Requested system details for a specific business day.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +112,7 @@ public class BusinessDayReportOrError4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmBusinessDayInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BusinessDayReportOrError4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.BusinessDayReportOrError4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizDayInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +125,11 @@ public class BusinessDayReportOrError4Choice {
 			type_lazy = () -> BusinessDay4.mmObject();
 		}
 	};
+	@XmlElement(name = "BizErr", required = true)
 	protected List<ErrorHandling3> businessError;
 	/**
-	 * Reason the requested business information is not given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -156,7 +160,7 @@ public class BusinessDayReportOrError4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BusinessDayReportOrError4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.BusinessDayReportOrError4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,8 +176,8 @@ public class BusinessDayReportOrError4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BusinessDayReportOrError4Choice.mmBusinessDayInformation, BusinessDayReportOrError4Choice.mmBusinessError);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BusinessDayReportOrError4Choice.mmBusinessDayInformation, com.tools20022.repository.choice.BusinessDayReportOrError4Choice.mmBusinessError);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDayReportOrError4Choice";
 				definition = "Choice between business day information details or a business error when the requested data cannot be retrieved.";
@@ -183,21 +187,21 @@ public class BusinessDayReportOrError4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BizDayInf", required = true)
 	public BusinessDay4 getBusinessDayInformation() {
 		return businessDayInformation;
 	}
 
-	public void setBusinessDayInformation(BusinessDay4 businessDayInformation) {
-		this.businessDayInformation = businessDayInformation;
+	public BusinessDayReportOrError4Choice setBusinessDayInformation(BusinessDay4 businessDayInformation) {
+		this.businessDayInformation = Objects.requireNonNull(businessDayInformation);
+		return this;
 	}
 
-	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling3> getBusinessError() {
-		return businessError;
+		return businessError == null ? businessError = new ArrayList<>() : businessError;
 	}
 
-	public void setBusinessError(List<ErrorHandling3> businessError) {
-		this.businessError = businessError;
+	public BusinessDayReportOrError4Choice setBusinessError(List<ErrorHandling3> businessError) {
+		this.businessError = Objects.requireNonNull(businessError);
+		return this;
 	}
 }

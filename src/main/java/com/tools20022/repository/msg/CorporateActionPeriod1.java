@@ -24,6 +24,7 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,16 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies periods."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionPeriod1", propOrder = {"actionPeriod", "compulsoryPurchasePeriod", "interestPeriod", "blockingPeriod", "priceCalculationPeriod"})
 public class CorporateActionPeriod1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ActnPrd")
 	protected Period1 actionPeriod;
 	/**
-	 * Period during which the specified option, or all options of the event,
-	 * remains valid, eg, offer period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +118,7 @@ public class CorporateActionPeriod1 {
 	public static final MMMessageAttribute mmActionPeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmActionPeriod;
-			componentContext_lazy = () -> CorporateActionPeriod1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "ActnPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,11 +129,11 @@ public class CorporateActionPeriod1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
 		}
 	};
+	@XmlElement(name = "CmplsryPurchsPrd")
 	protected Period1 compulsoryPurchasePeriod;
 	/**
-	 * Period during a take-over where any outstanding equity must be purchased
-	 * by the take-over company.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +168,7 @@ public class CorporateActionPeriod1 {
 	public static final MMMessageAttribute mmCompulsoryPurchasePeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmCompulsoryPurchasePeriod;
-			componentContext_lazy = () -> CorporateActionPeriod1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "CmplsryPurchsPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +179,11 @@ public class CorporateActionPeriod1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstPrd")
 	protected Period1 interestPeriod;
 	/**
-	 * Period during which the interest rate has been applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -214,7 +216,7 @@ public class CorporateActionPeriod1 {
 	public static final MMMessageAttribute mmInterestPeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterestPeriod;
-			componentContext_lazy = () -> CorporateActionPeriod1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,10 +227,11 @@ public class CorporateActionPeriod1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
 		}
 	};
+	@XmlElement(name = "BlckgPrd")
 	protected Period1 blockingPeriod;
 	/**
-	 * Period during which the security is blocked.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -261,7 +264,7 @@ public class CorporateActionPeriod1 {
 	public static final MMMessageAttribute mmBlockingPeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBlockingDeadline.mmBlockingPeriod;
-			componentContext_lazy = () -> CorporateActionPeriod1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "BlckgPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,10 +275,11 @@ public class CorporateActionPeriod1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
 		}
 	};
+	@XmlElement(name = "PricClctnPrd")
 	protected Period1 priceCalculationPeriod;
 	/**
-	 * Period during which the price of a security is determined.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -309,7 +313,7 @@ public class CorporateActionPeriod1 {
 	public static final MMMessageAttribute mmPriceCalculationPeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceCalculationPeriod;
-			componentContext_lazy = () -> CorporateActionPeriod1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "PricClctnPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -324,10 +328,11 @@ public class CorporateActionPeriod1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionPeriod1.mmActionPeriod, CorporateActionPeriod1.mmCompulsoryPurchasePeriod, CorporateActionPeriod1.mmInterestPeriod, CorporateActionPeriod1.mmBlockingPeriod,
-						CorporateActionPeriod1.mmPriceCalculationPeriod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod1.mmActionPeriod, com.tools20022.repository.msg.CorporateActionPeriod1.mmCompulsoryPurchasePeriod,
+						com.tools20022.repository.msg.CorporateActionPeriod1.mmInterestPeriod, com.tools20022.repository.msg.CorporateActionPeriod1.mmBlockingPeriod,
+						com.tools20022.repository.msg.CorporateActionPeriod1.mmPriceCalculationPeriod);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPeriod1";
 				definition = "Specifies periods.";
@@ -336,48 +341,48 @@ public class CorporateActionPeriod1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ActnPrd")
-	public Period1 getActionPeriod() {
-		return actionPeriod;
+	public Optional<Period1> getActionPeriod() {
+		return actionPeriod == null ? Optional.empty() : Optional.of(actionPeriod);
 	}
 
-	public void setActionPeriod(com.tools20022.repository.msg.Period1 actionPeriod) {
+	public CorporateActionPeriod1 setActionPeriod(com.tools20022.repository.msg.Period1 actionPeriod) {
 		this.actionPeriod = actionPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "CmplsryPurchsPrd")
-	public Period1 getCompulsoryPurchasePeriod() {
-		return compulsoryPurchasePeriod;
+	public Optional<Period1> getCompulsoryPurchasePeriod() {
+		return compulsoryPurchasePeriod == null ? Optional.empty() : Optional.of(compulsoryPurchasePeriod);
 	}
 
-	public void setCompulsoryPurchasePeriod(com.tools20022.repository.msg.Period1 compulsoryPurchasePeriod) {
+	public CorporateActionPeriod1 setCompulsoryPurchasePeriod(com.tools20022.repository.msg.Period1 compulsoryPurchasePeriod) {
 		this.compulsoryPurchasePeriod = compulsoryPurchasePeriod;
+		return this;
 	}
 
-	@XmlElement(name = "IntrstPrd")
-	public Period1 getInterestPeriod() {
-		return interestPeriod;
+	public Optional<Period1> getInterestPeriod() {
+		return interestPeriod == null ? Optional.empty() : Optional.of(interestPeriod);
 	}
 
-	public void setInterestPeriod(com.tools20022.repository.msg.Period1 interestPeriod) {
+	public CorporateActionPeriod1 setInterestPeriod(com.tools20022.repository.msg.Period1 interestPeriod) {
 		this.interestPeriod = interestPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "BlckgPrd")
-	public Period1 getBlockingPeriod() {
-		return blockingPeriod;
+	public Optional<Period1> getBlockingPeriod() {
+		return blockingPeriod == null ? Optional.empty() : Optional.of(blockingPeriod);
 	}
 
-	public void setBlockingPeriod(com.tools20022.repository.msg.Period1 blockingPeriod) {
+	public CorporateActionPeriod1 setBlockingPeriod(com.tools20022.repository.msg.Period1 blockingPeriod) {
 		this.blockingPeriod = blockingPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "PricClctnPrd")
-	public Period1 getPriceCalculationPeriod() {
-		return priceCalculationPeriod;
+	public Optional<Period1> getPriceCalculationPeriod() {
+		return priceCalculationPeriod == null ? Optional.empty() : Optional.of(priceCalculationPeriod);
 	}
 
-	public void setPriceCalculationPeriod(com.tools20022.repository.msg.Period1 priceCalculationPeriod) {
+	public CorporateActionPeriod1 setPriceCalculationPeriod(com.tools20022.repository.msg.Period1 priceCalculationPeriod) {
 		this.priceCalculationPeriod = priceCalculationPeriod;
+		return this;
 	}
 }

@@ -20,35 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TaxationBasisCode;
+import com.tools20022.repository.codeset.TaxationBasis3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the tax basis.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis3Code#Flat
+ * TaxationBasis3Code.Flat}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis3Code#PerUnit
+ * TaxationBasis3Code.PerUnit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis3Code#Other
+ * TaxationBasis3Code.Other}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode
  * TaxationBasisCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis3Code#mmFlat
- * TaxationBasis3Code.mmFlat}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxationBasis3Code#mmPerUnit
- * TaxationBasis3Code.mmPerUnit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis3Code#mmOther
- * TaxationBasis3Code.mmOther}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the tax basis."</li>
  * </ul>
  */
-public class TaxationBasis3Code extends TaxationBasisCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TaxationBasis3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +88,12 @@ public class TaxationBasis3Code extends TaxationBasisCode {
 	 * name} = "Flat"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFlat = new MMCode() {
+	public static final TaxationBasis3Code Flat = new TaxationBasis3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Flat";
-			owner_lazy = () -> TaxationBasis3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxationBasis3Code.mmObject();
+			codeName = TaxationBasisCode.Flat.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,11 +112,12 @@ public class TaxationBasis3Code extends TaxationBasisCode {
 	 * name} = "PerUnit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPerUnit = new MMCode() {
+	public static final TaxationBasis3Code PerUnit = new TaxationBasis3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
-			owner_lazy = () -> TaxationBasis3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxationBasis3Code.mmObject();
+			codeName = TaxationBasisCode.PerUnit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -130,26 +136,58 @@ public class TaxationBasis3Code extends TaxationBasisCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final TaxationBasis3Code Other = new TaxationBasis3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> TaxationBasis3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxationBasis3Code.mmObject();
+			codeName = TaxationBasisCode.Other.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TaxationBasis3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TaxationBasis3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FLAT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxationBasis3Code";
 				definition = "Specifies the tax basis.";
-				code_lazy = () -> Arrays.asList(TaxationBasis3Code.mmFlat, TaxationBasis3Code.mmPerUnit, TaxationBasis3Code.mmOther);
 				trace_lazy = () -> TaxationBasisCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxationBasis3Code.Flat, com.tools20022.repository.codeset.TaxationBasis3Code.PerUnit, com.tools20022.repository.codeset.TaxationBasis3Code.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Flat.getCodeName().get(), Flat);
+		codesByName.put(PerUnit.getCodeName().get(), PerUnit);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static TaxationBasis3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TaxationBasis3Code[] values() {
+		TaxationBasis3Code[] values = new TaxationBasis3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TaxationBasis3Code> {
+		@Override
+		public TaxationBasis3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TaxationBasis3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

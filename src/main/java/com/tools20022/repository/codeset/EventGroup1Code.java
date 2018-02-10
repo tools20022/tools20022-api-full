@@ -20,30 +20,33 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.EventGroupCode;
+import com.tools20022.repository.codeset.EventGroup1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies DTC (The Depository Trust Company) processing domain for the event.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.EventGroupCode EventGroupCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventGroup1Code#mmRedemption
- * EventGroup1Code.mmRedemption}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventGroup1Code#Redemption
+ * EventGroup1Code.Redemption}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.EventGroupCode EventGroupCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -62,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class EventGroup1Code extends EventGroupCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EventGroup1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -81,26 +85,56 @@ public class EventGroup1Code extends EventGroupCode {
 	 * name} = "Redemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRedemption = new MMCode() {
+	public static final EventGroup1Code Redemption = new EventGroup1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
-			owner_lazy = () -> EventGroup1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventGroup1Code.mmObject();
+			codeName = EventGroupCode.Redemption.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, EventGroup1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EventGroup1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("REDM");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventGroup1Code";
 				definition = "Specifies DTC (The Depository Trust Company) processing domain for the event.";
-				code_lazy = () -> Arrays.asList(EventGroup1Code.mmRedemption);
 				trace_lazy = () -> EventGroupCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventGroup1Code.Redemption);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Redemption.getCodeName().get(), Redemption);
+	}
+
+	public static EventGroup1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EventGroup1Code[] values() {
+		EventGroup1Code[] values = new EventGroup1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EventGroup1Code> {
+		@Override
+		public EventGroup1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EventGroup1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

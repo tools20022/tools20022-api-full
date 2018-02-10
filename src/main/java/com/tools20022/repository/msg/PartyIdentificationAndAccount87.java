@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Entity involved in an activity."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyIdentificationAndAccount87", propOrder = {"identification", "processingIdentification", "additionalInformation", "alternateIdentification"})
 public class PartyIdentificationAndAccount87 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected PartyIdentification70Choice identification;
 	/**
-	 * Unique and unambiguous way to identify an organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +119,7 @@ public class PartyIdentificationAndAccount87 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> PartyIdentificationAndAccount87.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount87.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +130,11 @@ public class PartyIdentificationAndAccount87 {
 			complexType_lazy = () -> PartyIdentification70Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcgId")
 	protected Max35Text processingIdentification;
 	/**
-	 * Reference meaningful to the party identified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +161,7 @@ public class PartyIdentificationAndAccount87 {
 	 */
 	public static final MMMessageAttribute mmProcessingIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentificationAndAccount87.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount87.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,10 +172,11 @@ public class PartyIdentificationAndAccount87 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected PartyTextInformation1 additionalInformation;
 	/**
-	 * Provides additional information regarding the party,
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -203,7 +208,7 @@ public class PartyIdentificationAndAccount87 {
 	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> PartyIdentificationAndAccount87.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount87.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,10 +220,11 @@ public class PartyIdentificationAndAccount87 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyTextInformation1.mmObject();
 		}
 	};
+	@XmlElement(name = "AltrnId")
 	protected AlternatePartyIdentification6 alternateIdentification;
 	/**
-	 * Entity involved in an activity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -251,7 +257,7 @@ public class PartyIdentificationAndAccount87 {
 	public static final MMMessageAssociationEnd mmAlternateIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> PartyIdentificationAndAccount87.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount87.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,10 +273,10 @@ public class PartyIdentificationAndAccount87 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentificationAndAccount87.mmIdentification, PartyIdentificationAndAccount87.mmProcessingIdentification, PartyIdentificationAndAccount87.mmAdditionalInformation,
-						PartyIdentificationAndAccount87.mmAlternateIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount87.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount87.mmProcessingIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount87.mmAdditionalInformation, com.tools20022.repository.msg.PartyIdentificationAndAccount87.mmAlternateIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationAndAccount87";
 				definition = "Entity involved in an activity.";
@@ -279,39 +285,39 @@ public class PartyIdentificationAndAccount87 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public PartyIdentification70Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(PartyIdentification70Choice identification) {
-		this.identification = identification;
+	public PartyIdentificationAndAccount87 setIdentification(PartyIdentification70Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "PrcgId")
-	public Max35Text getProcessingIdentification() {
-		return processingIdentification;
+	public Optional<Max35Text> getProcessingIdentification() {
+		return processingIdentification == null ? Optional.empty() : Optional.of(processingIdentification);
 	}
 
-	public void setProcessingIdentification(Max35Text processingIdentification) {
+	public PartyIdentificationAndAccount87 setProcessingIdentification(Max35Text processingIdentification) {
 		this.processingIdentification = processingIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public PartyTextInformation1 getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<PartyTextInformation1> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(com.tools20022.repository.msg.PartyTextInformation1 additionalInformation) {
+	public PartyIdentificationAndAccount87 setAdditionalInformation(com.tools20022.repository.msg.PartyTextInformation1 additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 
-	@XmlElement(name = "AltrnId")
-	public AlternatePartyIdentification6 getAlternateIdentification() {
-		return alternateIdentification;
+	public Optional<AlternatePartyIdentification6> getAlternateIdentification() {
+		return alternateIdentification == null ? Optional.empty() : Optional.of(alternateIdentification);
 	}
 
-	public void setAlternateIdentification(com.tools20022.repository.msg.AlternatePartyIdentification6 alternateIdentification) {
+	public PartyIdentificationAndAccount87 setAlternateIdentification(com.tools20022.repository.msg.AlternatePartyIdentification6 alternateIdentification) {
 		this.alternateIdentification = alternateIdentification;
+		return this;
 	}
 }

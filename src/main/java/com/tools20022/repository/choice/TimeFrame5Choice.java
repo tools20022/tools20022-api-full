@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.TimeFrame;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,18 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TimeFrame5Choice", propOrder = {"tradePlus", "prepayment"})
 public class TimeFrame5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TPlus", required = true)
 	protected Number tradePlus;
 	/**
-	 * An agreed number of days after the Trade date (T) used to define standard
-	 * timeframes e.g T+3 settlement period.
 	 * 
-	 * Where = T is the date that the price is applied to a transaction.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +113,7 @@ public class TimeFrame5Choice {
 	public static final MMMessageAttribute mmTradePlus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmTradePlus;
-			componentContext_lazy = () -> TimeFrame5Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TimeFrame5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TPlus";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +124,11 @@ public class TimeFrame5Choice {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Prepmt", required = true)
 	protected YesNoIndicator prepayment;
 	/**
-	 * Indicates whether pre-payment is necessary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +162,7 @@ public class TimeFrame5Choice {
 	public static final MMMessageAttribute mmPrepayment = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmPrepayment;
-			componentContext_lazy = () -> TimeFrame5Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TimeFrame5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prepmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,9 +177,9 @@ public class TimeFrame5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TimeFrame5Choice.mmTradePlus, TimeFrame5Choice.mmPrepayment);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TimeFrame5Choice.mmTradePlus, com.tools20022.repository.choice.TimeFrame5Choice.mmPrepayment);
 				trace_lazy = () -> TimeFrame.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TimeFrame5Choice";
 				definition = "Choice between TimeFrame elements that define a period as number of days after an activity.";
@@ -188,21 +188,21 @@ public class TimeFrame5Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TPlus", required = true)
 	public Number getTradePlus() {
 		return tradePlus;
 	}
 
-	public void setTradePlus(Number tradePlus) {
-		this.tradePlus = tradePlus;
+	public TimeFrame5Choice setTradePlus(Number tradePlus) {
+		this.tradePlus = Objects.requireNonNull(tradePlus);
+		return this;
 	}
 
-	@XmlElement(name = "Prepmt", required = true)
 	public YesNoIndicator getPrepayment() {
 		return prepayment;
 	}
 
-	public void setPrepayment(YesNoIndicator prepayment) {
-		this.prepayment = prepayment;
+	public TimeFrame5Choice setPrepayment(YesNoIndicator prepayment) {
+		this.prepayment = Objects.requireNonNull(prepayment);
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.OutputFormatCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Available message format to display or print.
@@ -32,16 +37,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OutputFormatCode#mmSimpleText
- * OutputFormatCode.mmSimpleText}</li>
+ * {@linkplain com.tools20022.repository.codeset.OutputFormatCode#SimpleText
+ * OutputFormatCode.SimpleText}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OutputFormatCode#mmMessageReference
- * OutputFormatCode.mmMessageReference}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OutputFormatCode#mmXHTML
- * OutputFormatCode.mmXHTML}</li>
+ * {@linkplain com.tools20022.repository.codeset.OutputFormatCode#MessageReference
+ * OutputFormatCode.MessageReference}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OutputFormatCode#XHTML
+ * OutputFormatCode.XHTML}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OutputFormatCode#mmScreenReference
- * OutputFormatCode.mmScreenReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.OutputFormatCode#ScreenReference
+ * OutputFormatCode.ScreenReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -56,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Available message format to display or print."</li>
  * </ul>
  */
-public class OutputFormatCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OutputFormatCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,12 +98,12 @@ public class OutputFormatCode {
 	 * definition} = "Text without format attributes."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSimpleText = new MMCode() {
+	public static final OutputFormatCode SimpleText = new OutputFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SimpleText";
 			definition = "Text without format attributes.";
-			owner_lazy = () -> OutputFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OutputFormatCode.mmObject();
 			codeName = "TEXT";
 		}
 	};
@@ -123,12 +129,12 @@ public class OutputFormatCode {
 	 * "Predefined configured messages, identified by a reference."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMessageReference = new MMCode() {
+	public static final OutputFormatCode MessageReference = new OutputFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageReference";
 			definition = "Predefined configured messages, identified by a reference.";
-			owner_lazy = () -> OutputFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OutputFormatCode.mmObject();
 			codeName = "MREF";
 		}
 	};
@@ -154,12 +160,12 @@ public class OutputFormatCode {
 	 * "XHTML document which includes a subset of the XHTML output tag."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmXHTML = new MMCode() {
+	public static final OutputFormatCode XHTML = new OutputFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "XHTML";
 			definition = "XHTML document which includes a subset of the XHTML output tag.";
-			owner_lazy = () -> OutputFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OutputFormatCode.mmObject();
 			codeName = "HTML";
 		}
 	};
@@ -184,27 +190,60 @@ public class OutputFormatCode {
 	 * definition} = "Screen to display identified by a reference."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmScreenReference = new MMCode() {
+	public static final OutputFormatCode ScreenReference = new OutputFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScreenReference";
 			definition = "Screen to display identified by a reference.";
-			owner_lazy = () -> OutputFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OutputFormatCode.mmObject();
 			codeName = "SREF";
 		}
 	};
+	final static private LinkedHashMap<String, OutputFormatCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OutputFormatCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OutputFormatCode";
 				definition = "Available message format to display or print.";
-				code_lazy = () -> Arrays.asList(OutputFormatCode.mmSimpleText, OutputFormatCode.mmMessageReference, OutputFormatCode.mmXHTML, OutputFormatCode.mmScreenReference);
 				derivation_lazy = () -> Arrays.asList(OutputFormat1Code.mmObject(), OutputFormat2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OutputFormatCode.SimpleText, com.tools20022.repository.codeset.OutputFormatCode.MessageReference, com.tools20022.repository.codeset.OutputFormatCode.XHTML,
+						com.tools20022.repository.codeset.OutputFormatCode.ScreenReference);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SimpleText.getCodeName().get(), SimpleText);
+		codesByName.put(MessageReference.getCodeName().get(), MessageReference);
+		codesByName.put(XHTML.getCodeName().get(), XHTML);
+		codesByName.put(ScreenReference.getCodeName().get(), ScreenReference);
+	}
+
+	public static OutputFormatCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OutputFormatCode[] values() {
+		OutputFormatCode[] values = new OutputFormatCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OutputFormatCode> {
+		@Override
+		public OutputFormatCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OutputFormatCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

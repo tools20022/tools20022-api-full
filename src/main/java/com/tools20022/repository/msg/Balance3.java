@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +57,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountRule#forBalance3
+ * ConstraintBalanceForAccountOrSubAccountRule.forBalance3}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Balance3", propOrder = {"safekeepingAccount", "balanceForAccount", "subAccountDetails", "accountBaseCurrencyTotalAmounts"})
 public class Balance3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SfkpgAcct", required = true)
 	protected SecuritiesAccount13 safekeepingAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,7 +119,7 @@ public class Balance3 {
 	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesAccount;
-			componentContext_lazy = () -> Balance3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Balance3.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,11 +131,11 @@ public class Balance3 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	@XmlElement(name = "BalForAcct")
 	protected List<com.tools20022.repository.msg.AggregateBalanceInformation20> balanceForAccount;
 	/**
-	 * Report on the net position of a security, on a single securities account,
-	 * for a certain date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -161,7 +169,7 @@ public class Balance3 {
 	public static final MMMessageAssociationEnd mmBalanceForAccount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
-			componentContext_lazy = () -> Balance3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Balance3.mmObject();
 			isDerived = false;
 			xmlTag = "BalForAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,10 +180,11 @@ public class Balance3 {
 			type_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation20.mmObject();
 		}
 	};
+	@XmlElement(name = "SubAcctDtls")
 	protected List<com.tools20022.repository.msg.SubAccountIdentification27> subAccountDetails;
 	/**
-	 * Sub-account of the safekeeping or investment account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -207,7 +216,7 @@ public class Balance3 {
 	public static final MMMessageAssociationEnd mmSubAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> Balance3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Balance3.mmObject();
 			isDerived = false;
 			xmlTag = "SubAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,10 +227,11 @@ public class Balance3 {
 			type_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification27.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctBaseCcyTtlAmts")
 	protected TotalValueInPageAndStatement1 accountBaseCurrencyTotalAmounts;
 	/**
-	 * Total valuation amounts provided in the base currency of the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -248,7 +258,7 @@ public class Balance3 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountBaseCurrencyTotalAmounts = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Balance3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Balance3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctBaseCcyTtlAmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -264,9 +274,11 @@ public class Balance3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Balance3.mmSafekeepingAccount, Balance3.mmBalanceForAccount, Balance3.mmSubAccountDetails, Balance3.mmAccountBaseCurrencyTotalAmounts);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Balance3.mmSafekeepingAccount, com.tools20022.repository.msg.Balance3.mmBalanceForAccount, com.tools20022.repository.msg.Balance3.mmSubAccountDetails,
+						com.tools20022.repository.msg.Balance3.mmAccountBaseCurrencyTotalAmounts);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountRule.forBalance3);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Balance3";
 				definition = "Report on the net position of a security, on a single securities account, for a certain date.";
@@ -275,39 +287,39 @@ public class Balance3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
 
-	public void setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
-		this.safekeepingAccount = safekeepingAccount;
+	public Balance3 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
+		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "BalForAcct")
 	public List<AggregateBalanceInformation20> getBalanceForAccount() {
-		return balanceForAccount;
+		return balanceForAccount == null ? balanceForAccount = new ArrayList<>() : balanceForAccount;
 	}
 
-	public void setBalanceForAccount(List<com.tools20022.repository.msg.AggregateBalanceInformation20> balanceForAccount) {
-		this.balanceForAccount = balanceForAccount;
+	public Balance3 setBalanceForAccount(List<com.tools20022.repository.msg.AggregateBalanceInformation20> balanceForAccount) {
+		this.balanceForAccount = Objects.requireNonNull(balanceForAccount);
+		return this;
 	}
 
-	@XmlElement(name = "SubAcctDtls")
 	public List<SubAccountIdentification27> getSubAccountDetails() {
-		return subAccountDetails;
+		return subAccountDetails == null ? subAccountDetails = new ArrayList<>() : subAccountDetails;
 	}
 
-	public void setSubAccountDetails(List<com.tools20022.repository.msg.SubAccountIdentification27> subAccountDetails) {
-		this.subAccountDetails = subAccountDetails;
+	public Balance3 setSubAccountDetails(List<com.tools20022.repository.msg.SubAccountIdentification27> subAccountDetails) {
+		this.subAccountDetails = Objects.requireNonNull(subAccountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AcctBaseCcyTtlAmts")
-	public TotalValueInPageAndStatement1 getAccountBaseCurrencyTotalAmounts() {
-		return accountBaseCurrencyTotalAmounts;
+	public Optional<TotalValueInPageAndStatement1> getAccountBaseCurrencyTotalAmounts() {
+		return accountBaseCurrencyTotalAmounts == null ? Optional.empty() : Optional.of(accountBaseCurrencyTotalAmounts);
 	}
 
-	public void setAccountBaseCurrencyTotalAmounts(com.tools20022.repository.msg.TotalValueInPageAndStatement1 accountBaseCurrencyTotalAmounts) {
+	public Balance3 setAccountBaseCurrencyTotalAmounts(com.tools20022.repository.msg.TotalValueInPageAndStatement1 accountBaseCurrencyTotalAmounts) {
 		this.accountBaseCurrencyTotalAmounts = accountBaseCurrencyTotalAmounts;
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -29,6 +30,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +61,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule#forBalance4
+ * ConstraintCoexistenceQuantityRule.forBalance4}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -82,15 +93,16 @@ import javax.xml.bind.annotation.XmlType;
  * Balance1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Balance4", propOrder = {"shortLongIndicator", "quantity"})
 public class Balance4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ShrtLngInd")
 	protected ShortLong1Code shortLongIndicator;
 	/**
-	 * Indication that the position is short or long.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,6 +121,9 @@ public class Balance4 {
 	 * Balance4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ShrtLngInd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B::4!c/[4!c[4c]]/4!c/[N]</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -131,9 +146,10 @@ public class Balance4 {
 	public static final MMMessageAttribute mmShortLongIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmShortLong;
-			componentContext_lazy = () -> Balance4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Balance4.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtLngInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::4!c/[4!c[4c]]/4!c/[N]"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongIndicator";
 			definition = "Indication that the position is short or long.";
@@ -143,10 +159,11 @@ public class Balance4 {
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Qty", required = true)
 	protected BalanceQuantity4Choice quantity;
 	/**
-	 * Total quantity of financial instruments of the balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,6 +182,9 @@ public class Balance4 {
 	 * Balance4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Qty"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B::4!c/[4!c[4c]]/4!c/[N]15d</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -186,9 +206,10 @@ public class Balance4 {
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
-			componentContext_lazy = () -> Balance4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Balance4.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::4!c/[4!c[4c]]/4!c/[N]15d"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Total quantity of financial instruments of the balance.";
@@ -202,9 +223,10 @@ public class Balance4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Balance4.mmShortLongIndicator, Balance4.mmQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Balance4.mmShortLongIndicator, com.tools20022.repository.msg.Balance4.mmQuantity);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule.forBalance4);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -222,21 +244,21 @@ public class Balance4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ShrtLngInd")
-	public ShortLong1Code getShortLongIndicator() {
-		return shortLongIndicator;
+	public Optional<ShortLong1Code> getShortLongIndicator() {
+		return shortLongIndicator == null ? Optional.empty() : Optional.of(shortLongIndicator);
 	}
 
-	public void setShortLongIndicator(ShortLong1Code shortLongIndicator) {
+	public Balance4 setShortLongIndicator(ShortLong1Code shortLongIndicator) {
 		this.shortLongIndicator = shortLongIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public BalanceQuantity4Choice getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(BalanceQuantity4Choice quantity) {
-		this.quantity = quantity;
+	public Balance4 setQuantity(BalanceQuantity4Choice quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 }

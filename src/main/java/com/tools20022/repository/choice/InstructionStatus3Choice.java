@@ -24,9 +24,11 @@ import com.tools20022.repository.entity.MeetingStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DetailedInstructionStatus8;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,16 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InstructionStatus3Choice", propOrder = {"globalInstructionStatus", "detailedInstructionStatus"})
 public class InstructionStatus3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GblInstrSts", required = true)
 	protected InstructionStatus4Choice globalInstructionStatus;
 	/**
-	 * Status applying globally to the instruction received. The instruction is
-	 * identified by the InstructionIdentification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -126,7 +128,7 @@ public class InstructionStatus3Choice {
 	public static final MMMessageAssociationEnd mmGlobalInstructionStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
-			componentContext_lazy = () -> InstructionStatus3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "GblInstrSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,10 +141,11 @@ public class InstructionStatus3Choice {
 			type_lazy = () -> com.tools20022.repository.choice.InstructionStatus4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DtldInstrSts", required = true)
 	protected List<DetailedInstructionStatus8> detailedInstructionStatus;
 	/**
-	 * Status applying to individual instructions of a MeetingInstruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -184,7 +187,7 @@ public class InstructionStatus3Choice {
 	public static final MMMessageAssociationEnd mmDetailedInstructionStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
-			componentContext_lazy = () -> InstructionStatus3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DtldInstrSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,9 +203,9 @@ public class InstructionStatus3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InstructionStatus3Choice.mmGlobalInstructionStatus, InstructionStatus3Choice.mmDetailedInstructionStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstructionStatus3Choice.mmGlobalInstructionStatus, com.tools20022.repository.choice.InstructionStatus3Choice.mmDetailedInstructionStatus);
 				trace_lazy = () -> MeetingStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionStatus3Choice";
 				definition = "Status applying to the instruction request received.";
@@ -212,21 +215,21 @@ public class InstructionStatus3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GblInstrSts", required = true)
 	public InstructionStatus4Choice getGlobalInstructionStatus() {
 		return globalInstructionStatus;
 	}
 
-	public void setGlobalInstructionStatus(com.tools20022.repository.choice.InstructionStatus4Choice globalInstructionStatus) {
-		this.globalInstructionStatus = globalInstructionStatus;
+	public InstructionStatus3Choice setGlobalInstructionStatus(com.tools20022.repository.choice.InstructionStatus4Choice globalInstructionStatus) {
+		this.globalInstructionStatus = Objects.requireNonNull(globalInstructionStatus);
+		return this;
 	}
 
-	@XmlElement(name = "DtldInstrSts", required = true)
 	public List<DetailedInstructionStatus8> getDetailedInstructionStatus() {
-		return detailedInstructionStatus;
+		return detailedInstructionStatus == null ? detailedInstructionStatus = new ArrayList<>() : detailedInstructionStatus;
 	}
 
-	public void setDetailedInstructionStatus(List<DetailedInstructionStatus8> detailedInstructionStatus) {
-		this.detailedInstructionStatus = detailedInstructionStatus;
+	public InstructionStatus3Choice setDetailedInstructionStatus(List<DetailedInstructionStatus8> detailedInstructionStatus) {
+		this.detailedInstructionStatus = Objects.requireNonNull(detailedInstructionStatus);
+		return this;
 	}
 }

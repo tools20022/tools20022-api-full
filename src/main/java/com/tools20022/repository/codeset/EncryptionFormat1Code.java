@@ -20,34 +20,36 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.EncryptionFormatCode;
+import com.tools20022.repository.codeset.EncryptionFormat1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Format of data before encryption, if the format is not plaintext or implicit.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EncryptionFormat1Code#TR31
+ * EncryptionFormat1Code.TR31}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EncryptionFormat1Code#TR34
+ * EncryptionFormat1Code.TR34}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.EncryptionFormatCode
  * EncryptionFormatCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EncryptionFormat1Code#mmTR31
- * EncryptionFormat1Code.mmTR31}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EncryptionFormat1Code#mmTR34
- * EncryptionFormat1Code.mmTR34}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class EncryptionFormat1Code extends EncryptionFormatCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EncryptionFormat1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -79,11 +82,12 @@ public class EncryptionFormat1Code extends EncryptionFormatCode {
 	 * name} = "TR31"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTR31 = new MMCode() {
+	public static final EncryptionFormat1Code TR31 = new EncryptionFormat1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TR31";
-			owner_lazy = () -> EncryptionFormat1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EncryptionFormat1Code.mmObject();
+			codeName = EncryptionFormatCode.TR31.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -102,25 +106,56 @@ public class EncryptionFormat1Code extends EncryptionFormatCode {
 	 * name} = "TR34"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTR34 = new MMCode() {
+	public static final EncryptionFormat1Code TR34 = new EncryptionFormat1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TR34";
-			owner_lazy = () -> EncryptionFormat1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EncryptionFormat1Code.mmObject();
+			codeName = EncryptionFormatCode.TR34.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, EncryptionFormat1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EncryptionFormat1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EncryptionFormat1Code";
 				definition = "Format of data before encryption, if the format is not plaintext or implicit.";
-				code_lazy = () -> Arrays.asList(EncryptionFormat1Code.mmTR31, EncryptionFormat1Code.mmTR34);
 				trace_lazy = () -> EncryptionFormatCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EncryptionFormat1Code.TR31, com.tools20022.repository.codeset.EncryptionFormat1Code.TR34);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(TR31.getCodeName().get(), TR31);
+		codesByName.put(TR34.getCodeName().get(), TR34);
+	}
+
+	public static EncryptionFormat1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EncryptionFormat1Code[] values() {
+		EncryptionFormat1Code[] values = new EncryptionFormat1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EncryptionFormat1Code> {
+		@Override
+		public EncryptionFormat1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EncryptionFormat1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

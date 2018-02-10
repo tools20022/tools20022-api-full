@@ -24,6 +24,8 @@ import com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReport002V
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Totals for the value of the holdings reported in the statement or page."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TotalValueInPageAndStatement4", propOrder = {"totalHoldingsValueOfPage", "totalHoldingsValueOfStatement", "totalBookValueOfStatement"})
 public class TotalValueInPageAndStatement4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlHldgsValOfPg")
 	protected AmountAndDirection14 totalHoldingsValueOfPage;
 	/**
-	 * Total value of positions reported in this message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -112,7 +115,7 @@ public class TotalValueInPageAndStatement4 {
 	 */
 	public static final MMMessageAssociationEnd mmTotalHoldingsValueOfPage = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TotalValueInPageAndStatement4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalValueInPageAndStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlHldgsValOfPg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,11 +127,11 @@ public class TotalValueInPageAndStatement4 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection14.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlHldgsValOfStmt", required = true)
 	protected AmountAndDirection14 totalHoldingsValueOfStatement;
 	/**
-	 * Total value of positions reported in this statement (a statement may
-	 * comprise one or more messages).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -156,7 +159,7 @@ public class TotalValueInPageAndStatement4 {
 	 */
 	public static final MMMessageAssociationEnd mmTotalHoldingsValueOfStatement = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TotalValueInPageAndStatement4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalValueInPageAndStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlHldgsValOfStmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,11 +171,11 @@ public class TotalValueInPageAndStatement4 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection14.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlBookValOfStmt")
 	protected AmountAndDirection14 totalBookValueOfStatement;
 	/**
-	 * Total book value of positions reported in this statement (a statement may
-	 * comprise one or more messages).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -200,7 +203,7 @@ public class TotalValueInPageAndStatement4 {
 	 */
 	public static final MMMessageAssociationEnd mmTotalBookValueOfStatement = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TotalValueInPageAndStatement4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalValueInPageAndStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlBookValOfStmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,9 +219,10 @@ public class TotalValueInPageAndStatement4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TotalValueInPageAndStatement4.mmTotalHoldingsValueOfPage, TotalValueInPageAndStatement4.mmTotalHoldingsValueOfStatement, TotalValueInPageAndStatement4.mmTotalBookValueOfStatement);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalValueInPageAndStatement4.mmTotalHoldingsValueOfPage, com.tools20022.repository.msg.TotalValueInPageAndStatement4.mmTotalHoldingsValueOfStatement,
+						com.tools20022.repository.msg.TotalValueInPageAndStatement4.mmTotalBookValueOfStatement);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesBalanceAccountingReport002V09.mmAccountBaseCurrencyTotalAmounts, SecuritiesBalanceAccountingReport002V09.mmAlternateReportingCurrencyTotalAmounts);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalValueInPageAndStatement4";
 				definition = "Totals for the value of the holdings reported in the statement or page.";
@@ -227,30 +231,30 @@ public class TotalValueInPageAndStatement4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlHldgsValOfPg")
-	public AmountAndDirection14 getTotalHoldingsValueOfPage() {
-		return totalHoldingsValueOfPage;
+	public Optional<AmountAndDirection14> getTotalHoldingsValueOfPage() {
+		return totalHoldingsValueOfPage == null ? Optional.empty() : Optional.of(totalHoldingsValueOfPage);
 	}
 
-	public void setTotalHoldingsValueOfPage(com.tools20022.repository.msg.AmountAndDirection14 totalHoldingsValueOfPage) {
+	public TotalValueInPageAndStatement4 setTotalHoldingsValueOfPage(com.tools20022.repository.msg.AmountAndDirection14 totalHoldingsValueOfPage) {
 		this.totalHoldingsValueOfPage = totalHoldingsValueOfPage;
+		return this;
 	}
 
-	@XmlElement(name = "TtlHldgsValOfStmt", required = true)
 	public AmountAndDirection14 getTotalHoldingsValueOfStatement() {
 		return totalHoldingsValueOfStatement;
 	}
 
-	public void setTotalHoldingsValueOfStatement(com.tools20022.repository.msg.AmountAndDirection14 totalHoldingsValueOfStatement) {
-		this.totalHoldingsValueOfStatement = totalHoldingsValueOfStatement;
+	public TotalValueInPageAndStatement4 setTotalHoldingsValueOfStatement(com.tools20022.repository.msg.AmountAndDirection14 totalHoldingsValueOfStatement) {
+		this.totalHoldingsValueOfStatement = Objects.requireNonNull(totalHoldingsValueOfStatement);
+		return this;
 	}
 
-	@XmlElement(name = "TtlBookValOfStmt")
-	public AmountAndDirection14 getTotalBookValueOfStatement() {
-		return totalBookValueOfStatement;
+	public Optional<AmountAndDirection14> getTotalBookValueOfStatement() {
+		return totalBookValueOfStatement == null ? Optional.empty() : Optional.of(totalBookValueOfStatement);
 	}
 
-	public void setTotalBookValueOfStatement(com.tools20022.repository.msg.AmountAndDirection14 totalBookValueOfStatement) {
+	public TotalValueInPageAndStatement4 setTotalBookValueOfStatement(com.tools20022.repository.msg.AmountAndDirection14 totalBookValueOfStatement) {
 		this.totalBookValueOfStatement = totalBookValueOfStatement;
+		return this;
 	}
 }

@@ -30,6 +30,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -75,18 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "FinancialInstitutionIdentification4Choice", propOrder = {"BIC", "nameAndAddress"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "FinancialInstitutionIdentification4Choice", propOrder = {"bIC", "nameAndAddress"})
 public class FinancialInstitutionIdentification4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BIC", required = true)
 	protected BICIdentifier bIC;
 	/**
-	 * Code allocated to a financial institution by the ISO 9362 Registration
-	 * Authority as described in ISO 9362
-	 * "Banking - Banking telecommunication messages - Business identifier code (BIC)"
-	 * .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +121,7 @@ public class FinancialInstitutionIdentification4Choice {
 	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> FinancialInstitutionIdentification4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstitutionIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BIC";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,10 +132,11 @@ public class FinancialInstitutionIdentification4Choice {
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "NmAndAdr", required = true)
 	protected NameAndAddress6 nameAndAddress;
 	/**
-	 * Name and address of an institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -168,7 +168,7 @@ public class FinancialInstitutionIdentification4Choice {
 	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
-			componentContext_lazy = () -> FinancialInstitutionIdentification4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstitutionIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,9 +184,9 @@ public class FinancialInstitutionIdentification4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstitutionIdentification4Choice.mmBIC, FinancialInstitutionIdentification4Choice.mmNameAndAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstitutionIdentification4Choice.mmBIC, com.tools20022.repository.choice.FinancialInstitutionIdentification4Choice.mmNameAndAddress);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -202,21 +202,21 @@ public class FinancialInstitutionIdentification4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BIC", required = true)
 	public BICIdentifier getBIC() {
 		return bIC;
 	}
 
-	public void setBIC(BICIdentifier bIC) {
-		this.bIC = bIC;
+	public FinancialInstitutionIdentification4Choice setBIC(BICIdentifier bIC) {
+		this.bIC = Objects.requireNonNull(bIC);
+		return this;
 	}
 
-	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress6 getNameAndAddress() {
 		return nameAndAddress;
 	}
 
-	public void setNameAndAddress(NameAndAddress6 nameAndAddress) {
-		this.nameAndAddress = nameAndAddress;
+	public FinancialInstitutionIdentification4Choice setNameAndAddress(NameAndAddress6 nameAndAddress) {
+		this.nameAndAddress = Objects.requireNonNull(nameAndAddress);
+		return this;
 	}
 }

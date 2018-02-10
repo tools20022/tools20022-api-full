@@ -30,6 +30,8 @@ import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -47,22 +49,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestVersion
- * SecuritiesManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOLatestversion
- * InvestmentFundsISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "StmtOfInvstmtFndTxsCxl"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -86,6 +72,22 @@ import javax.xml.bind.annotation.*;
  * }</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOLatestversion
+ * InvestmentFundsISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "StmtOfInvstmtFndTxsCxl"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestVersion
+ * SecuritiesManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code semt.007.001.03}</li>
@@ -105,16 +107,16 @@ import javax.xml.bind.annotation.*;
  * StatementOfInvestmentFundTransactionsCancellationV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatementOfInvestmentFundTransactionsCancellationV03", propOrder = {"messageIdentification", "previousReference", "relatedReference", "messagePagination", "statementToBeCancelled"})
 public class StatementOfInvestmentFundTransactionsCancellationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Reference that uniquely identifies a message from a business application
-	 * standpoint.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,10 +165,11 @@ public class StatementOfInvestmentFundTransactionsCancellationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsRef")
 	protected AdditionalReference2 previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,10 +216,11 @@ public class StatementOfInvestmentFundTransactionsCancellationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdRef")
 	protected AdditionalReference2 relatedReference;
 	/**
-	 * Reference to a linked message that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -263,10 +267,11 @@ public class StatementOfInvestmentFundTransactionsCancellationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "MsgPgntn", required = true)
 	protected Pagination messagePagination;
 	/**
-	 * Pagination of the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -312,10 +317,11 @@ public class StatementOfInvestmentFundTransactionsCancellationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "StmtToBeCanc")
 	protected StatementOfInvestmentFundTransactions3 statementToBeCancelled;
 	/**
-	 * The Statement of Investment Fund Transactions message to cancel.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -398,52 +404,52 @@ public class StatementOfInvestmentFundTransactionsCancellationV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public StatementOfInvestmentFundTransactionsCancellationV03 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef")
-	public AdditionalReference2 getPreviousReference() {
-		return previousReference;
+	public Optional<AdditionalReference2> getPreviousReference() {
+		return previousReference == null ? Optional.empty() : Optional.of(previousReference);
 	}
 
-	public void setPreviousReference(AdditionalReference2 previousReference) {
+	public StatementOfInvestmentFundTransactionsCancellationV03 setPreviousReference(AdditionalReference2 previousReference) {
 		this.previousReference = previousReference;
+		return this;
 	}
 
-	@XmlElement(name = "RltdRef")
-	public AdditionalReference2 getRelatedReference() {
-		return relatedReference;
+	public Optional<AdditionalReference2> getRelatedReference() {
+		return relatedReference == null ? Optional.empty() : Optional.of(relatedReference);
 	}
 
-	public void setRelatedReference(AdditionalReference2 relatedReference) {
+	public StatementOfInvestmentFundTransactionsCancellationV03 setRelatedReference(AdditionalReference2 relatedReference) {
 		this.relatedReference = relatedReference;
+		return this;
 	}
 
-	@XmlElement(name = "MsgPgntn", required = true)
 	public Pagination getMessagePagination() {
 		return messagePagination;
 	}
 
-	public void setMessagePagination(Pagination messagePagination) {
-		this.messagePagination = messagePagination;
+	public StatementOfInvestmentFundTransactionsCancellationV03 setMessagePagination(Pagination messagePagination) {
+		this.messagePagination = Objects.requireNonNull(messagePagination);
+		return this;
 	}
 
-	@XmlElement(name = "StmtToBeCanc")
-	public StatementOfInvestmentFundTransactions3 getStatementToBeCancelled() {
-		return statementToBeCancelled;
+	public Optional<StatementOfInvestmentFundTransactions3> getStatementToBeCancelled() {
+		return statementToBeCancelled == null ? Optional.empty() : Optional.of(statementToBeCancelled);
 	}
 
-	public void setStatementToBeCancelled(StatementOfInvestmentFundTransactions3 statementToBeCancelled) {
+	public StatementOfInvestmentFundTransactionsCancellationV03 setStatementToBeCancelled(StatementOfInvestmentFundTransactions3 statementToBeCancelled) {
 		this.statementToBeCancelled = statementToBeCancelled;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.007.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:semt.007.001.03")
 	static public class Document {
 		@XmlElement(name = "StmtOfInvstmtFndTxsCxl", required = true)
 		public StatementOfInvestmentFundTransactionsCancellationV03 messageBody;

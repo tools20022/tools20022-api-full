@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.StatusCode;
+import com.tools20022.repository.codeset.Status4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of an instruction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.StatusCode StatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Status4Code#mmRejected
- * Status4Code.mmRejected}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status4Code#mmAccepted
- * Status4Code.mmAccepted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status4Code#Rejected
+ * Status4Code.Rejected}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status4Code#Accepted
+ * Status4Code.Accepted}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.StatusCode StatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of an instruction."</li>
  * </ul>
  */
-public class Status4Code extends StatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Status4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -79,11 +84,12 @@ public class Status4Code extends StatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final Status4Code Rejected = new Status4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> Status4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status4Code.mmObject();
+			codeName = StatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -101,26 +107,57 @@ public class Status4Code extends StatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final Status4Code Accepted = new Status4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> Status4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status4Code.mmObject();
+			codeName = StatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Status4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Status4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("REJT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status4Code";
 				definition = "Specifies the status of an instruction.";
-				code_lazy = () -> Arrays.asList(Status4Code.mmRejected, Status4Code.mmAccepted);
 				trace_lazy = () -> StatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Status4Code.Rejected, com.tools20022.repository.codeset.Status4Code.Accepted);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+	}
+
+	public static Status4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Status4Code[] values() {
+		Status4Code[] values = new Status4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Status4Code> {
+		@Override
+		public Status4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Status4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

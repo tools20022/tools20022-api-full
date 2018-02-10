@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,18 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies information about the letter of intent."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LetterIntent1", propOrder = {"letterIntentReference", "amount", "startDate", "endDate"})
 public class LetterIntent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LttrInttRef", required = true)
 	protected Max35Text letterIntentReference;
 	/**
-	 * Reference of a letter of intent program, in which sales commissions are
-	 * reduced based on the aggregate of a customer's actual purchase and
-	 * anticipated purchases, over a specific period of time, and as agreed by
-	 * the customer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +105,7 @@ public class LetterIntent1 {
 	 */
 	public static final MMMessageAttribute mmLetterIntentReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LetterIntent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LetterIntent1.mmObject();
 			isDerived = false;
 			xmlTag = "LttrInttRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +116,11 @@ public class LetterIntent1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt")
 	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
-	 * Amount stated on the letter of intent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +147,7 @@ public class LetterIntent1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LetterIntent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LetterIntent1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,10 +158,11 @@ public class LetterIntent1 {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "StartDt")
 	protected ISODate startDate;
 	/**
-	 * Start date stated on the letter of intent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,7 +188,7 @@ public class LetterIntent1 {
 	 */
 	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LetterIntent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LetterIntent1.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,10 +199,11 @@ public class LetterIntent1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "EndDt")
 	protected ISODate endDate;
 	/**
-	 * End date stated on the letter of intent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -226,7 +229,7 @@ public class LetterIntent1 {
 	 */
 	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LetterIntent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LetterIntent1.mmObject();
 			isDerived = false;
 			xmlTag = "EndDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,8 +244,9 @@ public class LetterIntent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LetterIntent1.mmLetterIntentReference, LetterIntent1.mmAmount, LetterIntent1.mmStartDate, LetterIntent1.mmEndDate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LetterIntent1.mmLetterIntentReference, com.tools20022.repository.msg.LetterIntent1.mmAmount, com.tools20022.repository.msg.LetterIntent1.mmStartDate,
+						com.tools20022.repository.msg.LetterIntent1.mmEndDate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LetterIntent1";
 				definition = "Specifies information about the letter of intent.";
@@ -251,39 +255,39 @@ public class LetterIntent1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LttrInttRef", required = true)
 	public Max35Text getLetterIntentReference() {
 		return letterIntentReference;
 	}
 
-	public void setLetterIntentReference(Max35Text letterIntentReference) {
-		this.letterIntentReference = letterIntentReference;
+	public LetterIntent1 setLetterIntentReference(Max35Text letterIntentReference) {
+		this.letterIntentReference = Objects.requireNonNull(letterIntentReference);
+		return this;
 	}
 
-	@XmlElement(name = "Amt")
-	public ActiveCurrencyAnd13DecimalAmount getAmount() {
-		return amount;
+	public Optional<ActiveCurrencyAnd13DecimalAmount> getAmount() {
+		return amount == null ? Optional.empty() : Optional.of(amount);
 	}
 
-	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+	public LetterIntent1 setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
 		this.amount = amount;
+		return this;
 	}
 
-	@XmlElement(name = "StartDt")
-	public ISODate getStartDate() {
-		return startDate;
+	public Optional<ISODate> getStartDate() {
+		return startDate == null ? Optional.empty() : Optional.of(startDate);
 	}
 
-	public void setStartDate(ISODate startDate) {
+	public LetterIntent1 setStartDate(ISODate startDate) {
 		this.startDate = startDate;
+		return this;
 	}
 
-	@XmlElement(name = "EndDt")
-	public ISODate getEndDate() {
-		return endDate;
+	public Optional<ISODate> getEndDate() {
+		return endDate == null ? Optional.empty() : Optional.of(endDate);
 	}
 
-	public void setEndDate(ISODate endDate) {
+	public LetterIntent1 setEndDate(ISODate endDate) {
 		this.endDate = endDate;
+		return this;
 	}
 }

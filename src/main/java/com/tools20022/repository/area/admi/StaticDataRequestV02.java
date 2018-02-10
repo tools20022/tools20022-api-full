@@ -29,9 +29,8 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -40,25 +39,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AdministrationLatestVersion
- * AdministrationLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
- * PostTradeForeignExchangeISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement
- * PostTradeForeignExchangeMaintenance20162017andSupplement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "StatcDataReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -77,6 +57,25 @@ import javax.xml.bind.annotation.*;
  * StaticDataRequestV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
+ * PostTradeForeignExchangeISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement
+ * PostTradeForeignExchangeMaintenance20162017andSupplement}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "StatcDataReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AdministrationLatestVersion
+ * AdministrationLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code admi.009.001.02}</li>
@@ -92,16 +91,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StaticDataRequestV02", propOrder = {"messageIdentification", "settlementSessionIdentifier", "dataRequestDetails", "supplementaryData"})
 public class StaticDataRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected Max35Text messageIdentification;
 	/**
-	 * Unique and unambiguous identifier for the message, as assigned by the
-	 * sender.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,11 +141,11 @@ public class StaticDataRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SttlmSsnIdr")
 	protected Exact4AlphaNumericText settlementSessionIdentifier;
 	/**
-	 * To indicate the requested CLS Settlement Session that the related trade
-	 * is part of.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,10 +187,11 @@ public class StaticDataRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "DataReqDtls", required = true)
 	protected RequestDetails3 dataRequestDetails;
 	/**
-	 * Details of the request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -230,11 +230,11 @@ public class StaticDataRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -306,43 +306,43 @@ public class StaticDataRequestV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(Max35Text messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public StaticDataRequestV02 setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmSsnIdr")
-	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
-		return settlementSessionIdentifier;
+	public Optional<Exact4AlphaNumericText> getSettlementSessionIdentifier() {
+		return settlementSessionIdentifier == null ? Optional.empty() : Optional.of(settlementSessionIdentifier);
 	}
 
-	public void setSettlementSessionIdentifier(Exact4AlphaNumericText settlementSessionIdentifier) {
+	public StaticDataRequestV02 setSettlementSessionIdentifier(Exact4AlphaNumericText settlementSessionIdentifier) {
 		this.settlementSessionIdentifier = settlementSessionIdentifier;
+		return this;
 	}
 
-	@XmlElement(name = "DataReqDtls", required = true)
 	public RequestDetails3 getDataRequestDetails() {
 		return dataRequestDetails;
 	}
 
-	public void setDataRequestDetails(RequestDetails3 dataRequestDetails) {
-		this.dataRequestDetails = dataRequestDetails;
+	public StaticDataRequestV02 setDataRequestDetails(RequestDetails3 dataRequestDetails) {
+		this.dataRequestDetails = Objects.requireNonNull(dataRequestDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public StaticDataRequestV02 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:admi.009.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:admi.009.001.02")
 	static public class Document {
 		@XmlElement(name = "StatcDataReq", required = true)
 		public StaticDataRequestV02 messageBody;

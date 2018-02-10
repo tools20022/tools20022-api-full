@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.TargetCompanyAgreementCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * TSE/JASDEC extension codes for the agreement of the target company.
@@ -32,21 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TargetCompanyAgreementCode#mmNo
- * TargetCompanyAgreementCode.mmNo}</li>
+ * {@linkplain com.tools20022.repository.codeset.TargetCompanyAgreementCode#No
+ * TargetCompanyAgreementCode.No}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TargetCompanyAgreementCode#mmYes
- * TargetCompanyAgreementCode.mmYes}</li>
+ * {@linkplain com.tools20022.repository.codeset.TargetCompanyAgreementCode#Yes
+ * TargetCompanyAgreementCode.Yes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TargetCompanyAgreementCode#mmNotDecided
- * TargetCompanyAgreementCode.mmNotDecided}</li>
+ * {@linkplain com.tools20022.repository.codeset.TargetCompanyAgreementCode#NotDecided
+ * TargetCompanyAgreementCode.NotDecided}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "TSE/JASDEC extension codes for the agreement of the target company."</li>
  * </ul>
  */
-public class TargetCompanyAgreementCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TargetCompanyAgreementCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,12 +88,12 @@ public class TargetCompanyAgreementCode {
 	 * definition} = "No agreement of the target company."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNo = new MMCode() {
+	public static final TargetCompanyAgreementCode No = new TargetCompanyAgreementCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "No";
 			definition = "No agreement of the target company.";
-			owner_lazy = () -> TargetCompanyAgreementCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TargetCompanyAgreementCode.mmObject();
 			codeName = "AGNO";
 		}
 	};
@@ -112,12 +118,12 @@ public class TargetCompanyAgreementCode {
 	 * definition} = "Agreement of the target company."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmYes = new MMCode() {
+	public static final TargetCompanyAgreementCode Yes = new TargetCompanyAgreementCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yes";
 			definition = "Agreement of the target company.";
-			owner_lazy = () -> TargetCompanyAgreementCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TargetCompanyAgreementCode.mmObject();
 			codeName = "AGYS";
 		}
 	};
@@ -142,26 +148,58 @@ public class TargetCompanyAgreementCode {
 	 * definition} = "Agreement of the target company is not decided."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotDecided = new MMCode() {
+	public static final TargetCompanyAgreementCode NotDecided = new TargetCompanyAgreementCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotDecided";
 			definition = "Agreement of the target company is not decided.";
-			owner_lazy = () -> TargetCompanyAgreementCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TargetCompanyAgreementCode.mmObject();
 			codeName = "AGND";
 		}
 	};
+	final static private LinkedHashMap<String, TargetCompanyAgreementCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TargetCompanyAgreementCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TargetCompanyAgreementCode";
 				definition = "TSE/JASDEC extension codes for the agreement of the target company.";
-				code_lazy = () -> Arrays.asList(TargetCompanyAgreementCode.mmNo, TargetCompanyAgreementCode.mmYes, TargetCompanyAgreementCode.mmNotDecided);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TargetCompanyAgreementCode.No, com.tools20022.repository.codeset.TargetCompanyAgreementCode.Yes,
+						com.tools20022.repository.codeset.TargetCompanyAgreementCode.NotDecided);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(No.getCodeName().get(), No);
+		codesByName.put(Yes.getCodeName().get(), Yes);
+		codesByName.put(NotDecided.getCodeName().get(), NotDecided);
+	}
+
+	public static TargetCompanyAgreementCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TargetCompanyAgreementCode[] values() {
+		TargetCompanyAgreementCode[] values = new TargetCompanyAgreementCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TargetCompanyAgreementCode> {
+		@Override
+		public TargetCompanyAgreementCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TargetCompanyAgreementCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

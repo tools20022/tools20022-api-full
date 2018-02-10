@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Allowance;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementAllowanceCharge1", propOrder = {"allowanceChargeIndicator", "actualAmount", "reason"})
 public class SettlementAllowanceCharge1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AllwncChrgInd")
 	protected YesNoIndicator allowanceChargeIndicator;
 	/**
-	 * Indication of whether or not this allowance charge is a charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +117,7 @@ public class SettlementAllowanceCharge1 {
 	public static final MMMessageAttribute mmAllowanceChargeIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAllowanceChargeIndicator;
-			componentContext_lazy = () -> SettlementAllowanceCharge1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementAllowanceCharge1.mmObject();
 			isDerived = false;
 			xmlTag = "AllwncChrgInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +128,11 @@ public class SettlementAllowanceCharge1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ActlAmt")
 	protected List<CurrencyAndAmount> actualAmount;
 	/**
-	 * Actual monetary amount specified for the allowance or charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,7 +167,7 @@ public class SettlementAllowanceCharge1 {
 	public static final MMMessageAttribute mmActualAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> SettlementAllowanceCharge1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementAllowanceCharge1.mmObject();
 			isDerived = false;
 			xmlTag = "ActlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,10 +177,11 @@ public class SettlementAllowanceCharge1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn")
 	protected DiscountOrChargeType1Choice reason;
 	/**
-	 * Reason, expressed as text, for this allowance or charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,7 +215,7 @@ public class SettlementAllowanceCharge1 {
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmReason;
-			componentContext_lazy = () -> SettlementAllowanceCharge1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementAllowanceCharge1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,9 +230,10 @@ public class SettlementAllowanceCharge1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementAllowanceCharge1.mmAllowanceChargeIndicator, SettlementAllowanceCharge1.mmActualAmount, SettlementAllowanceCharge1.mmReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementAllowanceCharge1.mmAllowanceChargeIndicator, com.tools20022.repository.msg.SettlementAllowanceCharge1.mmActualAmount,
+						com.tools20022.repository.msg.SettlementAllowanceCharge1.mmReason);
 				trace_lazy = () -> Allowance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementAllowanceCharge1";
 				definition = "Specifies a pricing component, such as a service, promotion, allowance or charge, for this trade settlement.";
@@ -239,30 +242,30 @@ public class SettlementAllowanceCharge1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AllwncChrgInd")
-	public YesNoIndicator getAllowanceChargeIndicator() {
-		return allowanceChargeIndicator;
+	public Optional<YesNoIndicator> getAllowanceChargeIndicator() {
+		return allowanceChargeIndicator == null ? Optional.empty() : Optional.of(allowanceChargeIndicator);
 	}
 
-	public void setAllowanceChargeIndicator(YesNoIndicator allowanceChargeIndicator) {
+	public SettlementAllowanceCharge1 setAllowanceChargeIndicator(YesNoIndicator allowanceChargeIndicator) {
 		this.allowanceChargeIndicator = allowanceChargeIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "ActlAmt")
 	public List<CurrencyAndAmount> getActualAmount() {
-		return actualAmount;
+		return actualAmount == null ? actualAmount = new ArrayList<>() : actualAmount;
 	}
 
-	public void setActualAmount(List<CurrencyAndAmount> actualAmount) {
-		this.actualAmount = actualAmount;
+	public SettlementAllowanceCharge1 setActualAmount(List<CurrencyAndAmount> actualAmount) {
+		this.actualAmount = Objects.requireNonNull(actualAmount);
+		return this;
 	}
 
-	@XmlElement(name = "Rsn")
-	public DiscountOrChargeType1Choice getReason() {
-		return reason;
+	public Optional<DiscountOrChargeType1Choice> getReason() {
+		return reason == null ? Optional.empty() : Optional.of(reason);
 	}
 
-	public void setReason(DiscountOrChargeType1Choice reason) {
+	public SettlementAllowanceCharge1 setReason(DiscountOrChargeType1Choice reason) {
 		this.reason = reason;
+		return this;
 	}
 }

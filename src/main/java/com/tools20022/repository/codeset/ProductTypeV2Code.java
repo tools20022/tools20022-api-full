@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ProductTypeV2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of product or financial instrument.
@@ -31,51 +36,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#mmAgency
- * ProductTypeV2Code.mmAgency}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#Agency
+ * ProductTypeV2Code.Agency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#mmCommodity
- * ProductTypeV2Code.mmCommodity}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#Commodity
+ * ProductTypeV2Code.Commodity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#mmCorporate
- * ProductTypeV2Code.mmCorporate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#Corporate
+ * ProductTypeV2Code.Corporate}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#Currency
+ * ProductTypeV2Code.Currency}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#Equity
+ * ProductTypeV2Code.Equity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#mmCurrency
- * ProductTypeV2Code.mmCurrency}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#mmEquity
- * ProductTypeV2Code.mmEquity}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#Government
+ * ProductTypeV2Code.Government}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#Loan
+ * ProductTypeV2Code.Loan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#mmGovernment
- * ProductTypeV2Code.mmGovernment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#mmLoan
- * ProductTypeV2Code.mmLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#MoneyMarket
+ * ProductTypeV2Code.MoneyMarket}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#Mortgage
+ * ProductTypeV2Code.Mortgage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#mmMoneyMarket
- * ProductTypeV2Code.mmMoneyMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#Municipal
+ * ProductTypeV2Code.Municipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#mmMortgage
- * ProductTypeV2Code.mmMortgage}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#Financing
+ * ProductTypeV2Code.Financing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#Property
+ * ProductTypeV2Code.Property}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#Swap
+ * ProductTypeV2Code.Swap}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#Other
+ * ProductTypeV2Code.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#mmMunicipal
- * ProductTypeV2Code.mmMunicipal}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#InterestRate
+ * ProductTypeV2Code.InterestRate}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#Credit
+ * ProductTypeV2Code.Credit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#mmFinancing
- * ProductTypeV2Code.mmFinancing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#mmProperty
- * ProductTypeV2Code.mmProperty}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#mmSwap
- * ProductTypeV2Code.mmSwap}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#mmOther
- * ProductTypeV2Code.mmOther}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#mmInterestRate
- * ProductTypeV2Code.mmInterestRate}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#mmCredit
- * ProductTypeV2Code.mmCredit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#mmEmissionAllowance
- * ProductTypeV2Code.mmEmissionAllowance}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code#EmissionAllowance
+ * ProductTypeV2Code.EmissionAllowance}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -88,8 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -106,7 +108,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of product or financial instrument."</li>
  * </ul>
  */
-public class ProductTypeV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProductTypeV2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -131,12 +134,12 @@ public class ProductTypeV2Code {
 	 * "Identifies categories of instruments issued by federal agencies."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgency = new MMCode() {
+	public static final ProductTypeV2Code Agency = new ProductTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agency";
 			definition = "Identifies categories of instruments issued by federal agencies.";
-			owner_lazy = () -> ProductTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductTypeV2Code.mmObject();
 			codeName = "AGEN";
 		}
 	};
@@ -162,12 +165,12 @@ public class ProductTypeV2Code {
 	 * "Identifies categories of instruments that are commodities."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommodity = new MMCode() {
+	public static final ProductTypeV2Code Commodity = new ProductTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodity";
 			definition = "Identifies categories of instruments that are commodities.";
-			owner_lazy = () -> ProductTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductTypeV2Code.mmObject();
 			codeName = "COMM";
 		}
 	};
@@ -193,12 +196,12 @@ public class ProductTypeV2Code {
 	 * "Identifies categories of instruments issued by corporates."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporate = new MMCode() {
+	public static final ProductTypeV2Code Corporate = new ProductTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Corporate";
 			definition = "Identifies categories of instruments issued by corporates.";
-			owner_lazy = () -> ProductTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductTypeV2Code.mmObject();
 			codeName = "CORP";
 		}
 	};
@@ -223,12 +226,12 @@ public class ProductTypeV2Code {
 	 * definition} = "Identifies categories of currency instruments."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrency = new MMCode() {
+	public static final ProductTypeV2Code Currency = new ProductTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Identifies categories of currency instruments.";
-			owner_lazy = () -> ProductTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductTypeV2Code.mmObject();
 			codeName = "CURR";
 		}
 	};
@@ -253,12 +256,12 @@ public class ProductTypeV2Code {
 	 * definition} = "Identifies the nature or type of an equity."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEquity = new MMCode() {
+	public static final ProductTypeV2Code Equity = new ProductTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity";
 			definition = "Identifies the nature or type of an equity.";
-			owner_lazy = () -> ProductTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductTypeV2Code.mmObject();
 			codeName = "EQUI";
 		}
 	};
@@ -284,12 +287,12 @@ public class ProductTypeV2Code {
 	 * "Identifies categories of obligations issued by a government."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGovernment = new MMCode() {
+	public static final ProductTypeV2Code Government = new ProductTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Government";
 			definition = "Identifies categories of obligations issued by a government.";
-			owner_lazy = () -> ProductTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductTypeV2Code.mmObject();
 			codeName = "GOVE";
 		}
 	};
@@ -314,12 +317,12 @@ public class ProductTypeV2Code {
 	 * definition} = "Identifies categories of loans."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLoan = new MMCode() {
+	public static final ProductTypeV2Code Loan = new ProductTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loan";
 			definition = "Identifies categories of loans.";
-			owner_lazy = () -> ProductTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductTypeV2Code.mmObject();
 			codeName = "LOAN";
 		}
 	};
@@ -347,12 +350,12 @@ public class ProductTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMoneyMarket = new MMCode() {
+	public static final ProductTypeV2Code MoneyMarket = new ProductTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyMarket";
 			definition = "Identifies categories of short-term debt securities maturing in less than one year.";
-			owner_lazy = () -> ProductTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductTypeV2Code.mmObject();
 			codeName = "MOMA";
 		}
 	};
@@ -377,12 +380,12 @@ public class ProductTypeV2Code {
 	 * definition} = "Identifies categories of mortgage securities."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMortgage = new MMCode() {
+	public static final ProductTypeV2Code Mortgage = new ProductTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mortgage";
 			definition = "Identifies categories of mortgage securities.";
-			owner_lazy = () -> ProductTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductTypeV2Code.mmObject();
 			codeName = "MORT";
 		}
 	};
@@ -410,12 +413,12 @@ public class ProductTypeV2Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMunicipal = new MMCode() {
+	public static final ProductTypeV2Code Municipal = new ProductTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Municipal";
 			definition = "Identifies categories of securities issued by states and local governments.";
-			owner_lazy = () -> ProductTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductTypeV2Code.mmObject();
 			codeName = "MUNI";
 		}
 	};
@@ -440,12 +443,12 @@ public class ProductTypeV2Code {
 	 * definition} = "Identifies categories of financing instruments."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinancing = new MMCode() {
+	public static final ProductTypeV2Code Financing = new ProductTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Financing";
 			definition = "Identifies categories of financing instruments.";
-			owner_lazy = () -> ProductTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductTypeV2Code.mmObject();
 			codeName = "FINA";
 		}
 	};
@@ -470,12 +473,12 @@ public class ProductTypeV2Code {
 	 * definition} = "The asset type is property."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProperty = new MMCode() {
+	public static final ProductTypeV2Code Property = new ProductTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Property";
 			definition = "The asset type is property.";
-			owner_lazy = () -> ProductTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductTypeV2Code.mmObject();
 			codeName = "PROP";
 		}
 	};
@@ -500,12 +503,12 @@ public class ProductTypeV2Code {
 	 * definition} = "The asset type is a swap."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSwap = new MMCode() {
+	public static final ProductTypeV2Code Swap = new ProductTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swap";
 			definition = "The asset type is a swap.";
-			owner_lazy = () -> ProductTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductTypeV2Code.mmObject();
 			codeName = "SWAP";
 		}
 	};
@@ -530,12 +533,12 @@ public class ProductTypeV2Code {
 	 * definition} = "Other asset type."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final ProductTypeV2Code Other = new ProductTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other asset type.";
-			owner_lazy = () -> ProductTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductTypeV2Code.mmObject();
 			codeName = "OTHR";
 		}
 	};
@@ -561,12 +564,12 @@ public class ProductTypeV2Code {
 	 * "Identifies categories of instruments that are interest rates based."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterestRate = new MMCode() {
+	public static final ProductTypeV2Code InterestRate = new ProductTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
 			definition = "Identifies categories of instruments that are interest rates based.";
-			owner_lazy = () -> ProductTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductTypeV2Code.mmObject();
 			codeName = "INTR";
 		}
 	};
@@ -591,12 +594,12 @@ public class ProductTypeV2Code {
 	 * definition} = "Identifies categories of instruments that are credits."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCredit = new MMCode() {
+	public static final ProductTypeV2Code Credit = new ProductTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Credit";
 			definition = "Identifies categories of instruments that are credits.";
-			owner_lazy = () -> ProductTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductTypeV2Code.mmObject();
 			codeName = "CRDT";
 		}
 	};
@@ -622,30 +625,78 @@ public class ProductTypeV2Code {
 	 * "Identifies categories of instruments related to Emission Allowance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEmissionAllowance = new MMCode() {
+	public static final ProductTypeV2Code EmissionAllowance = new ProductTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmissionAllowance";
 			definition = "Identifies categories of instruments related to Emission Allowance";
-			owner_lazy = () -> ProductTypeV2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductTypeV2Code.mmObject();
 			codeName = "EMAL";
 		}
 	};
+	final static private LinkedHashMap<String, ProductTypeV2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProductTypeV2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AGEN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductTypeV2Code";
 				definition = "Specifies the type of product or financial instrument.";
-				code_lazy = () -> Arrays.asList(ProductTypeV2Code.mmAgency, ProductTypeV2Code.mmCommodity, ProductTypeV2Code.mmCorporate, ProductTypeV2Code.mmCurrency, ProductTypeV2Code.mmEquity, ProductTypeV2Code.mmGovernment,
-						ProductTypeV2Code.mmLoan, ProductTypeV2Code.mmMoneyMarket, ProductTypeV2Code.mmMortgage, ProductTypeV2Code.mmMunicipal, ProductTypeV2Code.mmFinancing, ProductTypeV2Code.mmProperty, ProductTypeV2Code.mmSwap,
-						ProductTypeV2Code.mmOther, ProductTypeV2Code.mmInterestRate, ProductTypeV2Code.mmCredit, ProductTypeV2Code.mmEmissionAllowance);
 				derivation_lazy = () -> Arrays.asList(ProductType5Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductTypeV2Code.Agency, com.tools20022.repository.codeset.ProductTypeV2Code.Commodity, com.tools20022.repository.codeset.ProductTypeV2Code.Corporate,
+						com.tools20022.repository.codeset.ProductTypeV2Code.Currency, com.tools20022.repository.codeset.ProductTypeV2Code.Equity, com.tools20022.repository.codeset.ProductTypeV2Code.Government,
+						com.tools20022.repository.codeset.ProductTypeV2Code.Loan, com.tools20022.repository.codeset.ProductTypeV2Code.MoneyMarket, com.tools20022.repository.codeset.ProductTypeV2Code.Mortgage,
+						com.tools20022.repository.codeset.ProductTypeV2Code.Municipal, com.tools20022.repository.codeset.ProductTypeV2Code.Financing, com.tools20022.repository.codeset.ProductTypeV2Code.Property,
+						com.tools20022.repository.codeset.ProductTypeV2Code.Swap, com.tools20022.repository.codeset.ProductTypeV2Code.Other, com.tools20022.repository.codeset.ProductTypeV2Code.InterestRate,
+						com.tools20022.repository.codeset.ProductTypeV2Code.Credit, com.tools20022.repository.codeset.ProductTypeV2Code.EmissionAllowance);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Agency.getCodeName().get(), Agency);
+		codesByName.put(Commodity.getCodeName().get(), Commodity);
+		codesByName.put(Corporate.getCodeName().get(), Corporate);
+		codesByName.put(Currency.getCodeName().get(), Currency);
+		codesByName.put(Equity.getCodeName().get(), Equity);
+		codesByName.put(Government.getCodeName().get(), Government);
+		codesByName.put(Loan.getCodeName().get(), Loan);
+		codesByName.put(MoneyMarket.getCodeName().get(), MoneyMarket);
+		codesByName.put(Mortgage.getCodeName().get(), Mortgage);
+		codesByName.put(Municipal.getCodeName().get(), Municipal);
+		codesByName.put(Financing.getCodeName().get(), Financing);
+		codesByName.put(Property.getCodeName().get(), Property);
+		codesByName.put(Swap.getCodeName().get(), Swap);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(InterestRate.getCodeName().get(), InterestRate);
+		codesByName.put(Credit.getCodeName().get(), Credit);
+		codesByName.put(EmissionAllowance.getCodeName().get(), EmissionAllowance);
+	}
+
+	public static ProductTypeV2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProductTypeV2Code[] values() {
+		ProductTypeV2Code[] values = new ProductTypeV2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProductTypeV2Code> {
+		@Override
+		public ProductTypeV2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProductTypeV2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

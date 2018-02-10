@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,16 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountLinkUpdate1", propOrder = "validTo")
 public class AccountLinkUpdate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "VldTo", required = true)
 	protected DateAndDateTimeChoice validTo;
 	/**
-	 * Defines the date until when the securities account is linked to the cash
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +111,7 @@ public class AccountLinkUpdate1 {
 	public static final MMMessageAttribute mmValidTo = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
-			componentContext_lazy = () -> AccountLinkUpdate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLinkUpdate1.mmObject();
 			isDerived = false;
 			xmlTag = "VldTo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,9 +126,9 @@ public class AccountLinkUpdate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountLinkUpdate1.mmValidTo);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLinkUpdate1.mmValidTo);
 				trace_lazy = () -> AccountLink.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountLinkUpdate1";
 				definition = "Defines which data, representing the link between the securities account and the cash account, needs to be updated.";
@@ -136,12 +137,12 @@ public class AccountLinkUpdate1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "VldTo", required = true)
 	public DateAndDateTimeChoice getValidTo() {
 		return validTo;
 	}
 
-	public void setValidTo(DateAndDateTimeChoice validTo) {
-		this.validTo = validTo;
+	public AccountLinkUpdate1 setValidTo(DateAndDateTimeChoice validTo) {
+		this.validTo = Objects.requireNonNull(validTo);
+		return this;
 	}
 }

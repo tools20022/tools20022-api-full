@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max240Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CounterpartyDetailsType1", propOrder = {"financialInstrumentIdentification", "postEffectiveDateClassification", "abbreviatedLocalLanguageSecurityName"})
 public class CounterpartyDetailsType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FinInstrmId", required = true)
 	protected SecurityIdentification15 financialInstrumentIdentification;
 	/**
-	 * Identifies the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +108,7 @@ public class CounterpartyDetailsType1 {
 	 */
 	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CounterpartyDetailsType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CounterpartyDetailsType1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,13 +119,11 @@ public class CounterpartyDetailsType1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
 		}
 	};
+	@XmlElement(name = "PstFctvDtClssfctn")
 	protected InstitutionalClassificationCode postEffectiveDateClassification;
 	/**
-	 * Classification of the Issuer or the Counterparty institution in case of a
-	 * merger.<br>
-	 * 存続/消滅/親会社/子会社/未定の区分<br>
-	 * ※イベントタイプがMRGRの場合に、存続会社or消滅会社、親会社or子会社の通知を見分けるために必要。
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,7 +153,7 @@ public class CounterpartyDetailsType1 {
 	 */
 	public static final MMMessageAttribute mmPostEffectiveDateClassification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CounterpartyDetailsType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CounterpartyDetailsType1.mmObject();
 			isDerived = false;
 			xmlTag = "PstFctvDtClssfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,13 +164,11 @@ public class CounterpartyDetailsType1 {
 			simpleType_lazy = () -> InstitutionalClassificationCode.mmObject();
 		}
 	};
+	@XmlElement(name = "AbbrvtdLclLangSctyNm", required = true)
 	protected Max240Text abbreviatedLocalLanguageSecurityName;
 	/**
-	 * Abbreviated name of underlying securities in the local language.<br>
-	 * Note that in case of non-listed securities, it will be a full local
-	 * language security name.<br>
-	 * 銘柄名（銘柄略称）
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,7 +197,7 @@ public class CounterpartyDetailsType1 {
 	 */
 	public static final MMMessageAttribute mmAbbreviatedLocalLanguageSecurityName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CounterpartyDetailsType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CounterpartyDetailsType1.mmObject();
 			isDerived = false;
 			xmlTag = "AbbrvtdLclLangSctyNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,9 +212,9 @@ public class CounterpartyDetailsType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CounterpartyDetailsType1.mmFinancialInstrumentIdentification, CounterpartyDetailsType1.mmPostEffectiveDateClassification,
-						CounterpartyDetailsType1.mmAbbreviatedLocalLanguageSecurityName);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CounterpartyDetailsType1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.CounterpartyDetailsType1.mmPostEffectiveDateClassification,
+						com.tools20022.repository.msg.CounterpartyDetailsType1.mmAbbreviatedLocalLanguageSecurityName);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CounterpartyDetailsType1";
 				definition = "Information of the counterparty in case of [sankaku] gappei (a third party is involved as one of the counterparties in the merger but there is no security movement from the third party).";
@@ -224,30 +223,30 @@ public class CounterpartyDetailsType1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification15 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
 
-	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification15 financialInstrumentIdentification) {
-		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	public CounterpartyDetailsType1 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification15 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PstFctvDtClssfctn")
-	public InstitutionalClassificationCode getPostEffectiveDateClassification() {
-		return postEffectiveDateClassification;
+	public Optional<InstitutionalClassificationCode> getPostEffectiveDateClassification() {
+		return postEffectiveDateClassification == null ? Optional.empty() : Optional.of(postEffectiveDateClassification);
 	}
 
-	public void setPostEffectiveDateClassification(InstitutionalClassificationCode postEffectiveDateClassification) {
+	public CounterpartyDetailsType1 setPostEffectiveDateClassification(InstitutionalClassificationCode postEffectiveDateClassification) {
 		this.postEffectiveDateClassification = postEffectiveDateClassification;
+		return this;
 	}
 
-	@XmlElement(name = "AbbrvtdLclLangSctyNm", required = true)
 	public Max240Text getAbbreviatedLocalLanguageSecurityName() {
 		return abbreviatedLocalLanguageSecurityName;
 	}
 
-	public void setAbbreviatedLocalLanguageSecurityName(Max240Text abbreviatedLocalLanguageSecurityName) {
-		this.abbreviatedLocalLanguageSecurityName = abbreviatedLocalLanguageSecurityName;
+	public CounterpartyDetailsType1 setAbbreviatedLocalLanguageSecurityName(Max240Text abbreviatedLocalLanguageSecurityName) {
+		this.abbreviatedLocalLanguageSecurityName = Objects.requireNonNull(abbreviatedLocalLanguageSecurityName);
+		return this;
 	}
 }

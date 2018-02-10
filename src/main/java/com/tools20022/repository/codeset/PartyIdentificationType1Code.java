@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PartyIdentificationTypeCode;
+import com.tools20022.repository.codeset.PartyIdentificationType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies an alternative identification of a trading party, for example,
@@ -31,129 +35,129 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationTypeCode
- * PartyIdentificationTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmFXMemberID
- * PartyIdentificationType1Code.mmFXMemberID}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#FXMemberID
+ * PartyIdentificationType1Code.FXMemberID}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmFXSystemEnglishShortName
- * PartyIdentificationType1Code.mmFXSystemEnglishShortName}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#FXSystemEnglishShortName
+ * PartyIdentificationType1Code.FXSystemEnglishShortName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmInstitutionGroupName
- * PartyIdentificationType1Code.mmInstitutionGroupName}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#InstitutionGroupName
+ * PartyIdentificationType1Code.InstitutionGroupName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmInstitutionIdentificationInComStarSystem
- * PartyIdentificationType1Code.mmInstitutionIdentificationInComStarSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#InstitutionIdentificationInComStarSystem
+ * PartyIdentificationType1Code.InstitutionIdentificationInComStarSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmInternalGroupTheTraderBelongedTo
- * PartyIdentificationType1Code.mmInternalGroupTheTraderBelongedTo}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#InternalGroupTheTraderBelongedTo
+ * PartyIdentificationType1Code.InternalGroupTheTraderBelongedTo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmMarketMaker
- * PartyIdentificationType1Code.mmMarketMaker}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#MarketMaker
+ * PartyIdentificationType1Code.MarketMaker}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmMembersOrClients
- * PartyIdentificationType1Code.mmMembersOrClients}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#MembersOrClients
+ * PartyIdentificationType1Code.MembersOrClients}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmMemberType
- * PartyIdentificationType1Code.mmMemberType}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#MemberType
+ * PartyIdentificationType1Code.MemberType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmNonMarketMaker
- * PartyIdentificationType1Code.mmNonMarketMaker}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#NonMarketMaker
+ * PartyIdentificationType1Code.NonMarketMaker}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmOtherSystemCode
- * PartyIdentificationType1Code.mmOtherSystemCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#OtherSystemCode
+ * PartyIdentificationType1Code.OtherSystemCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmPassword
- * PartyIdentificationType1Code.mmPassword}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#Password
+ * PartyIdentificationType1Code.Password}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmPhoneNumber
- * PartyIdentificationType1Code.mmPhoneNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#PhoneNumber
+ * PartyIdentificationType1Code.PhoneNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmPostalAddress
- * PartyIdentificationType1Code.mmPostalAddress}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#PostalAddress
+ * PartyIdentificationType1Code.PostalAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmRMBMemberIdentification
- * PartyIdentificationType1Code.mmRMBMemberIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#RMBMemberIdentification
+ * PartyIdentificationType1Code.RMBMemberIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmShortLegalChineseNameOfFirm
- * PartyIdentificationType1Code.mmShortLegalChineseNameOfFirm}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#ShortLegalChineseNameOfFirm
+ * PartyIdentificationType1Code.ShortLegalChineseNameOfFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmShortLegalNameOfFirm
- * PartyIdentificationType1Code.mmShortLegalNameOfFirm}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#ShortLegalNameOfFirm
+ * PartyIdentificationType1Code.ShortLegalNameOfFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmTraderChineseName
- * PartyIdentificationType1Code.mmTraderChineseName}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#TraderChineseName
+ * PartyIdentificationType1Code.TraderChineseName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmTraderCode
- * PartyIdentificationType1Code.mmTraderCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#TraderCode
+ * PartyIdentificationType1Code.TraderCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmTraderName
- * PartyIdentificationType1Code.mmTraderName}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#TraderName
+ * PartyIdentificationType1Code.TraderName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmUserInputTrades
- * PartyIdentificationType1Code.mmUserInputTrades}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#UserInputTrades
+ * PartyIdentificationType1Code.UserInputTrades}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmUserName
- * PartyIdentificationType1Code.mmUserName}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#UserName
+ * PartyIdentificationType1Code.UserName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmAgentUserInputTrades
- * PartyIdentificationType1Code.mmAgentUserInputTrades}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#AgentUserInputTrades
+ * PartyIdentificationType1Code.AgentUserInputTrades}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmBranchIdentification
- * PartyIdentificationType1Code.mmBranchIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#BranchIdentification
+ * PartyIdentificationType1Code.BranchIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmClearingInstitution
- * PartyIdentificationType1Code.mmClearingInstitution}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#ClearingInstitution
+ * PartyIdentificationType1Code.ClearingInstitution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmCollateralManagementInstitution
- * PartyIdentificationType1Code.mmCollateralManagementInstitution}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#CollateralManagementInstitution
+ * PartyIdentificationType1Code.CollateralManagementInstitution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmCollateralManagementInstitutionName
- * PartyIdentificationType1Code.mmCollateralManagementInstitutionName}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#CollateralManagementInstitutionName
+ * PartyIdentificationType1Code.CollateralManagementInstitutionName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmContactMethodOfTrader
- * PartyIdentificationType1Code.mmContactMethodOfTrader}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#ContactMethodOfTrader
+ * PartyIdentificationType1Code.ContactMethodOfTrader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmContactName
- * PartyIdentificationType1Code.mmContactName}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#ContactName
+ * PartyIdentificationType1Code.ContactName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmCustodyManagementInstitution
- * PartyIdentificationType1Code.mmCustodyManagementInstitution}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#CustodyManagementInstitution
+ * PartyIdentificationType1Code.CustodyManagementInstitution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmDealConfirmContactName
- * PartyIdentificationType1Code.mmDealConfirmContactName}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#DealConfirmContactName
+ * PartyIdentificationType1Code.DealConfirmContactName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmDepartment
- * PartyIdentificationType1Code.mmDepartment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#Department
+ * PartyIdentificationType1Code.Department}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmEligibleCounterparty
- * PartyIdentificationType1Code.mmEligibleCounterparty}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#EligibleCounterparty
+ * PartyIdentificationType1Code.EligibleCounterparty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmExecutionVenue
- * PartyIdentificationType1Code.mmExecutionVenue}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#ExecutionVenue
+ * PartyIdentificationType1Code.ExecutionVenue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmFirmCode
- * PartyIdentificationType1Code.mmFirmCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#FirmCode
+ * PartyIdentificationType1Code.FirmCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmFirmIdentification
- * PartyIdentificationType1Code.mmFirmIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#FirmIdentification
+ * PartyIdentificationType1Code.FirmIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmFullLegalChineseNameOfFirm
- * PartyIdentificationType1Code.mmFullLegalChineseNameOfFirm}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#FullLegalChineseNameOfFirm
+ * PartyIdentificationType1Code.FullLegalChineseNameOfFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#mmFullLegalNameOfFirm
- * PartyIdentificationType1Code.mmFullLegalNameOfFirm}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType1Code#FullLegalNameOfFirm
+ * PartyIdentificationType1Code.FullLegalNameOfFirm}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationTypeCode
+ * PartyIdentificationTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -166,7 +170,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PartyIdentificationType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -185,11 +190,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "FXMemberID"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFXMemberID = new MMCode() {
+	public static final PartyIdentificationType1Code FXMemberID = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXMemberID";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.FXMemberID.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -208,11 +214,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "FXSystemEnglishShortName"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFXSystemEnglishShortName = new MMCode() {
+	public static final PartyIdentificationType1Code FXSystemEnglishShortName = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXSystemEnglishShortName";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.FXSystemEnglishShortName.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -231,11 +238,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "InstitutionGroupName"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstitutionGroupName = new MMCode() {
+	public static final PartyIdentificationType1Code InstitutionGroupName = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstitutionGroupName";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.InstitutionGroupName.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -254,11 +262,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "InstitutionIdentificationInComStarSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstitutionIdentificationInComStarSystem = new MMCode() {
+	public static final PartyIdentificationType1Code InstitutionIdentificationInComStarSystem = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstitutionIdentificationInComStarSystem";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.InstitutionIdentificationInComStarSystem.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -277,11 +286,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "InternalGroupTheTraderBelongedTo"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInternalGroupTheTraderBelongedTo = new MMCode() {
+	public static final PartyIdentificationType1Code InternalGroupTheTraderBelongedTo = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternalGroupTheTraderBelongedTo";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.InternalGroupTheTraderBelongedTo.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -300,11 +310,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "MarketMaker"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarketMaker = new MMCode() {
+	public static final PartyIdentificationType1Code MarketMaker = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketMaker";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.MarketMaker.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -323,11 +334,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "MembersOrClients"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMembersOrClients = new MMCode() {
+	public static final PartyIdentificationType1Code MembersOrClients = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MembersOrClients";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.MembersOrClients.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -346,11 +358,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "MemberType"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMemberType = new MMCode() {
+	public static final PartyIdentificationType1Code MemberType = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberType";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.MemberType.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -369,11 +382,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "NonMarketMaker"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonMarketMaker = new MMCode() {
+	public static final PartyIdentificationType1Code NonMarketMaker = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonMarketMaker";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.NonMarketMaker.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -392,11 +406,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "OtherSystemCode"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherSystemCode = new MMCode() {
+	public static final PartyIdentificationType1Code OtherSystemCode = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherSystemCode";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.OtherSystemCode.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -415,11 +430,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "Password"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPassword = new MMCode() {
+	public static final PartyIdentificationType1Code Password = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Password";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.Password.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -438,11 +454,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "PhoneNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPhoneNumber = new MMCode() {
+	public static final PartyIdentificationType1Code PhoneNumber = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhoneNumber";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.PhoneNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -461,11 +478,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "PostalAddress"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPostalAddress = new MMCode() {
+	public static final PartyIdentificationType1Code PostalAddress = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.PostalAddress.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -484,11 +502,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "RMBMemberIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRMBMemberIdentification = new MMCode() {
+	public static final PartyIdentificationType1Code RMBMemberIdentification = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RMBMemberIdentification";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.RMBMemberIdentification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -507,11 +526,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "ShortLegalChineseNameOfFirm"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmShortLegalChineseNameOfFirm = new MMCode() {
+	public static final PartyIdentificationType1Code ShortLegalChineseNameOfFirm = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLegalChineseNameOfFirm";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.ShortLegalChineseNameOfFirm.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -530,11 +550,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "ShortLegalNameOfFirm"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmShortLegalNameOfFirm = new MMCode() {
+	public static final PartyIdentificationType1Code ShortLegalNameOfFirm = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLegalNameOfFirm";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.ShortLegalNameOfFirm.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -553,11 +574,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "TraderChineseName"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTraderChineseName = new MMCode() {
+	public static final PartyIdentificationType1Code TraderChineseName = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TraderChineseName";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.TraderChineseName.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -576,11 +598,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "TraderCode"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTraderCode = new MMCode() {
+	public static final PartyIdentificationType1Code TraderCode = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TraderCode";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.TraderCode.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -599,11 +622,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "TraderName"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTraderName = new MMCode() {
+	public static final PartyIdentificationType1Code TraderName = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TraderName";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.TraderName.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -622,11 +646,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "UserInputTrades"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUserInputTrades = new MMCode() {
+	public static final PartyIdentificationType1Code UserInputTrades = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserInputTrades";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.UserInputTrades.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -645,11 +670,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "UserName"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUserName = new MMCode() {
+	public static final PartyIdentificationType1Code UserName = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserName";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.UserName.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -668,11 +694,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "AgentUserInputTrades"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgentUserInputTrades = new MMCode() {
+	public static final PartyIdentificationType1Code AgentUserInputTrades = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentUserInputTrades";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.AgentUserInputTrades.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -691,11 +718,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "BranchIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBranchIdentification = new MMCode() {
+	public static final PartyIdentificationType1Code BranchIdentification = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BranchIdentification";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.BranchIdentification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -714,11 +742,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "ClearingInstitution"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClearingInstitution = new MMCode() {
+	public static final PartyIdentificationType1Code ClearingInstitution = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingInstitution";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.ClearingInstitution.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -737,11 +766,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "CollateralManagementInstitution"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateralManagementInstitution = new MMCode() {
+	public static final PartyIdentificationType1Code CollateralManagementInstitution = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralManagementInstitution";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.CollateralManagementInstitution.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -760,11 +790,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "CollateralManagementInstitutionName"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateralManagementInstitutionName = new MMCode() {
+	public static final PartyIdentificationType1Code CollateralManagementInstitutionName = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralManagementInstitutionName";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.CollateralManagementInstitutionName.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -783,11 +814,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "ContactMethodOfTrader"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmContactMethodOfTrader = new MMCode() {
+	public static final PartyIdentificationType1Code ContactMethodOfTrader = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactMethodOfTrader";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.ContactMethodOfTrader.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -806,11 +838,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "ContactName"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmContactName = new MMCode() {
+	public static final PartyIdentificationType1Code ContactName = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactName";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.ContactName.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -829,11 +862,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "CustodyManagementInstitution"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustodyManagementInstitution = new MMCode() {
+	public static final PartyIdentificationType1Code CustodyManagementInstitution = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyManagementInstitution";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.CustodyManagementInstitution.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -852,11 +886,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "DealConfirmContactName"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDealConfirmContactName = new MMCode() {
+	public static final PartyIdentificationType1Code DealConfirmContactName = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealConfirmContactName";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.DealConfirmContactName.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -875,11 +910,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "Department"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDepartment = new MMCode() {
+	public static final PartyIdentificationType1Code Department = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Department";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.Department.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -898,11 +934,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "EligibleCounterparty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEligibleCounterparty = new MMCode() {
+	public static final PartyIdentificationType1Code EligibleCounterparty = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleCounterparty";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.EligibleCounterparty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -921,11 +958,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "ExecutionVenue"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExecutionVenue = new MMCode() {
+	public static final PartyIdentificationType1Code ExecutionVenue = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutionVenue";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.ExecutionVenue.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -944,11 +982,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "FirmCode"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFirmCode = new MMCode() {
+	public static final PartyIdentificationType1Code FirmCode = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirmCode";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.FirmCode.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -967,11 +1006,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "FirmIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFirmIdentification = new MMCode() {
+	public static final PartyIdentificationType1Code FirmIdentification = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirmIdentification";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.FirmIdentification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -990,11 +1030,12 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "FullLegalChineseNameOfFirm"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullLegalChineseNameOfFirm = new MMCode() {
+	public static final PartyIdentificationType1Code FullLegalChineseNameOfFirm = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullLegalChineseNameOfFirm";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.FullLegalChineseNameOfFirm.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1013,35 +1054,109 @@ public class PartyIdentificationType1Code extends PartyIdentificationTypeCode {
 	 * name} = "FullLegalNameOfFirm"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullLegalNameOfFirm = new MMCode() {
+	public static final PartyIdentificationType1Code FullLegalNameOfFirm = new PartyIdentificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullLegalNameOfFirm";
-			owner_lazy = () -> PartyIdentificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType1Code.mmObject();
+			codeName = PartyIdentificationTypeCode.FullLegalNameOfFirm.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PartyIdentificationType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PartyIdentificationType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationType1Code";
 				definition = "Specifies an alternative identification of a trading party, for example, trader code, trader name, short legal name of firm and so on.";
-				code_lazy = () -> Arrays.asList(PartyIdentificationType1Code.mmFXMemberID, PartyIdentificationType1Code.mmFXSystemEnglishShortName, PartyIdentificationType1Code.mmInstitutionGroupName,
-						PartyIdentificationType1Code.mmInstitutionIdentificationInComStarSystem, PartyIdentificationType1Code.mmInternalGroupTheTraderBelongedTo, PartyIdentificationType1Code.mmMarketMaker,
-						PartyIdentificationType1Code.mmMembersOrClients, PartyIdentificationType1Code.mmMemberType, PartyIdentificationType1Code.mmNonMarketMaker, PartyIdentificationType1Code.mmOtherSystemCode,
-						PartyIdentificationType1Code.mmPassword, PartyIdentificationType1Code.mmPhoneNumber, PartyIdentificationType1Code.mmPostalAddress, PartyIdentificationType1Code.mmRMBMemberIdentification,
-						PartyIdentificationType1Code.mmShortLegalChineseNameOfFirm, PartyIdentificationType1Code.mmShortLegalNameOfFirm, PartyIdentificationType1Code.mmTraderChineseName, PartyIdentificationType1Code.mmTraderCode,
-						PartyIdentificationType1Code.mmTraderName, PartyIdentificationType1Code.mmUserInputTrades, PartyIdentificationType1Code.mmUserName, PartyIdentificationType1Code.mmAgentUserInputTrades,
-						PartyIdentificationType1Code.mmBranchIdentification, PartyIdentificationType1Code.mmClearingInstitution, PartyIdentificationType1Code.mmCollateralManagementInstitution,
-						PartyIdentificationType1Code.mmCollateralManagementInstitutionName, PartyIdentificationType1Code.mmContactMethodOfTrader, PartyIdentificationType1Code.mmContactName,
-						PartyIdentificationType1Code.mmCustodyManagementInstitution, PartyIdentificationType1Code.mmDealConfirmContactName, PartyIdentificationType1Code.mmDepartment, PartyIdentificationType1Code.mmEligibleCounterparty,
-						PartyIdentificationType1Code.mmExecutionVenue, PartyIdentificationType1Code.mmFirmCode, PartyIdentificationType1Code.mmFirmIdentification, PartyIdentificationType1Code.mmFullLegalChineseNameOfFirm,
-						PartyIdentificationType1Code.mmFullLegalNameOfFirm);
 				trace_lazy = () -> PartyIdentificationTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyIdentificationType1Code.FXMemberID, com.tools20022.repository.codeset.PartyIdentificationType1Code.FXSystemEnglishShortName,
+						com.tools20022.repository.codeset.PartyIdentificationType1Code.InstitutionGroupName, com.tools20022.repository.codeset.PartyIdentificationType1Code.InstitutionIdentificationInComStarSystem,
+						com.tools20022.repository.codeset.PartyIdentificationType1Code.InternalGroupTheTraderBelongedTo, com.tools20022.repository.codeset.PartyIdentificationType1Code.MarketMaker,
+						com.tools20022.repository.codeset.PartyIdentificationType1Code.MembersOrClients, com.tools20022.repository.codeset.PartyIdentificationType1Code.MemberType,
+						com.tools20022.repository.codeset.PartyIdentificationType1Code.NonMarketMaker, com.tools20022.repository.codeset.PartyIdentificationType1Code.OtherSystemCode,
+						com.tools20022.repository.codeset.PartyIdentificationType1Code.Password, com.tools20022.repository.codeset.PartyIdentificationType1Code.PhoneNumber,
+						com.tools20022.repository.codeset.PartyIdentificationType1Code.PostalAddress, com.tools20022.repository.codeset.PartyIdentificationType1Code.RMBMemberIdentification,
+						com.tools20022.repository.codeset.PartyIdentificationType1Code.ShortLegalChineseNameOfFirm, com.tools20022.repository.codeset.PartyIdentificationType1Code.ShortLegalNameOfFirm,
+						com.tools20022.repository.codeset.PartyIdentificationType1Code.TraderChineseName, com.tools20022.repository.codeset.PartyIdentificationType1Code.TraderCode,
+						com.tools20022.repository.codeset.PartyIdentificationType1Code.TraderName, com.tools20022.repository.codeset.PartyIdentificationType1Code.UserInputTrades,
+						com.tools20022.repository.codeset.PartyIdentificationType1Code.UserName, com.tools20022.repository.codeset.PartyIdentificationType1Code.AgentUserInputTrades,
+						com.tools20022.repository.codeset.PartyIdentificationType1Code.BranchIdentification, com.tools20022.repository.codeset.PartyIdentificationType1Code.ClearingInstitution,
+						com.tools20022.repository.codeset.PartyIdentificationType1Code.CollateralManagementInstitution, com.tools20022.repository.codeset.PartyIdentificationType1Code.CollateralManagementInstitutionName,
+						com.tools20022.repository.codeset.PartyIdentificationType1Code.ContactMethodOfTrader, com.tools20022.repository.codeset.PartyIdentificationType1Code.ContactName,
+						com.tools20022.repository.codeset.PartyIdentificationType1Code.CustodyManagementInstitution, com.tools20022.repository.codeset.PartyIdentificationType1Code.DealConfirmContactName,
+						com.tools20022.repository.codeset.PartyIdentificationType1Code.Department, com.tools20022.repository.codeset.PartyIdentificationType1Code.EligibleCounterparty,
+						com.tools20022.repository.codeset.PartyIdentificationType1Code.ExecutionVenue, com.tools20022.repository.codeset.PartyIdentificationType1Code.FirmCode,
+						com.tools20022.repository.codeset.PartyIdentificationType1Code.FirmIdentification, com.tools20022.repository.codeset.PartyIdentificationType1Code.FullLegalChineseNameOfFirm,
+						com.tools20022.repository.codeset.PartyIdentificationType1Code.FullLegalNameOfFirm);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(FXMemberID.getCodeName().get(), FXMemberID);
+		codesByName.put(FXSystemEnglishShortName.getCodeName().get(), FXSystemEnglishShortName);
+		codesByName.put(InstitutionGroupName.getCodeName().get(), InstitutionGroupName);
+		codesByName.put(InstitutionIdentificationInComStarSystem.getCodeName().get(), InstitutionIdentificationInComStarSystem);
+		codesByName.put(InternalGroupTheTraderBelongedTo.getCodeName().get(), InternalGroupTheTraderBelongedTo);
+		codesByName.put(MarketMaker.getCodeName().get(), MarketMaker);
+		codesByName.put(MembersOrClients.getCodeName().get(), MembersOrClients);
+		codesByName.put(MemberType.getCodeName().get(), MemberType);
+		codesByName.put(NonMarketMaker.getCodeName().get(), NonMarketMaker);
+		codesByName.put(OtherSystemCode.getCodeName().get(), OtherSystemCode);
+		codesByName.put(Password.getCodeName().get(), Password);
+		codesByName.put(PhoneNumber.getCodeName().get(), PhoneNumber);
+		codesByName.put(PostalAddress.getCodeName().get(), PostalAddress);
+		codesByName.put(RMBMemberIdentification.getCodeName().get(), RMBMemberIdentification);
+		codesByName.put(ShortLegalChineseNameOfFirm.getCodeName().get(), ShortLegalChineseNameOfFirm);
+		codesByName.put(ShortLegalNameOfFirm.getCodeName().get(), ShortLegalNameOfFirm);
+		codesByName.put(TraderChineseName.getCodeName().get(), TraderChineseName);
+		codesByName.put(TraderCode.getCodeName().get(), TraderCode);
+		codesByName.put(TraderName.getCodeName().get(), TraderName);
+		codesByName.put(UserInputTrades.getCodeName().get(), UserInputTrades);
+		codesByName.put(UserName.getCodeName().get(), UserName);
+		codesByName.put(AgentUserInputTrades.getCodeName().get(), AgentUserInputTrades);
+		codesByName.put(BranchIdentification.getCodeName().get(), BranchIdentification);
+		codesByName.put(ClearingInstitution.getCodeName().get(), ClearingInstitution);
+		codesByName.put(CollateralManagementInstitution.getCodeName().get(), CollateralManagementInstitution);
+		codesByName.put(CollateralManagementInstitutionName.getCodeName().get(), CollateralManagementInstitutionName);
+		codesByName.put(ContactMethodOfTrader.getCodeName().get(), ContactMethodOfTrader);
+		codesByName.put(ContactName.getCodeName().get(), ContactName);
+		codesByName.put(CustodyManagementInstitution.getCodeName().get(), CustodyManagementInstitution);
+		codesByName.put(DealConfirmContactName.getCodeName().get(), DealConfirmContactName);
+		codesByName.put(Department.getCodeName().get(), Department);
+		codesByName.put(EligibleCounterparty.getCodeName().get(), EligibleCounterparty);
+		codesByName.put(ExecutionVenue.getCodeName().get(), ExecutionVenue);
+		codesByName.put(FirmCode.getCodeName().get(), FirmCode);
+		codesByName.put(FirmIdentification.getCodeName().get(), FirmIdentification);
+		codesByName.put(FullLegalChineseNameOfFirm.getCodeName().get(), FullLegalChineseNameOfFirm);
+		codesByName.put(FullLegalNameOfFirm.getCodeName().get(), FullLegalNameOfFirm);
+	}
+
+	public static PartyIdentificationType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PartyIdentificationType1Code[] values() {
+		PartyIdentificationType1Code[] values = new PartyIdentificationType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PartyIdentificationType1Code> {
+		@Override
+		public PartyIdentificationType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PartyIdentificationType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

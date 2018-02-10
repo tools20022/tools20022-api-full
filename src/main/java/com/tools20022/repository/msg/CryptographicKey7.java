@@ -27,9 +27,8 @@ import com.tools20022.repository.codeset.KeyUsage1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -84,8 +83,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,16 +106,17 @@ import javax.xml.bind.annotation.XmlType;
  * CryptographicKey6}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CryptographicKey7", propOrder = {"name", "identification", "securityDomainIdentification", "additionalIdentification", "version", "sequenceCounter", "type", "function", "activationDate", "deactivationDate",
 		"keyCheckValue", "currentStatus", "failureReason"})
 public class CryptographicKey7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nm")
 	protected Max140Text name;
 	/**
-	 * Name or label of the key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +155,7 @@ public class CryptographicKey7 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,10 +168,11 @@ public class CryptographicKey7 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Id")
 	protected Max140Text identification;
 	/**
-	 * Name of the cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,7 +212,7 @@ public class CryptographicKey7 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,10 +225,11 @@ public class CryptographicKey7 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyDomnId")
 	protected Max35Text securityDomainIdentification;
 	/**
-	 * Identification of the security domain.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -262,7 +264,7 @@ public class CryptographicKey7 {
 	 */
 	public static final MMMessageAttribute mmSecurityDomainIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "SctyDomnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -274,10 +276,11 @@ public class CryptographicKey7 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlId")
 	protected Max35Binary additionalIdentification;
 	/**
-	 * Additional identification of the key, for instance to derive the key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -313,7 +316,7 @@ public class CryptographicKey7 {
 	 */
 	public static final MMMessageAttribute mmAdditionalIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,10 +328,11 @@ public class CryptographicKey7 {
 			simpleType_lazy = () -> Max35Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "Vrsn", required = true)
 	protected Max256Text version;
 	/**
-	 * Version of the cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -368,7 +372,7 @@ public class CryptographicKey7 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -381,10 +385,11 @@ public class CryptographicKey7 {
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SeqCntr")
 	protected Number sequenceCounter;
 	/**
-	 * Sequence counter of the cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -411,7 +416,7 @@ public class CryptographicKey7 {
 	 */
 	public static final MMMessageAttribute mmSequenceCounter = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "SeqCntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -422,10 +427,11 @@ public class CryptographicKey7 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected CryptographicKeyType3Code type;
 	/**
-	 * Type of algorithm used by the cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -465,7 +471,7 @@ public class CryptographicKey7 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -478,10 +484,11 @@ public class CryptographicKey7 {
 			simpleType_lazy = () -> CryptographicKeyType3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Fctn", required = true)
 	protected List<KeyUsage1Code> function;
 	/**
-	 * Allowed usage of the key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -522,7 +529,7 @@ public class CryptographicKey7 {
 	 */
 	public static final MMMessageAttribute mmFunction = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "Fctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -534,10 +541,11 @@ public class CryptographicKey7 {
 			simpleType_lazy = () -> KeyUsage1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ActvtnDt")
 	protected ISODateTime activationDate;
 	/**
-	 * Date and time on which the key must be activated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -577,7 +585,7 @@ public class CryptographicKey7 {
 	 */
 	public static final MMMessageAttribute mmActivationDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "ActvtnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -590,10 +598,11 @@ public class CryptographicKey7 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "DeactvtnDt")
 	protected ISODateTime deactivationDate;
 	/**
-	 * Date and time on which the key must be deactivated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -633,7 +642,7 @@ public class CryptographicKey7 {
 	 */
 	public static final MMMessageAttribute mmDeactivationDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "DeactvtnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -646,10 +655,11 @@ public class CryptographicKey7 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "KeyChckVal")
 	protected Max35Binary keyCheckValue;
 	/**
-	 * Value for checking a cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -684,7 +694,7 @@ public class CryptographicKey7 {
 	 */
 	public static final MMMessageAttribute mmKeyCheckValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "KeyChckVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -696,10 +706,11 @@ public class CryptographicKey7 {
 			simpleType_lazy = () -> Max35Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "CurSts", required = true)
 	protected ATMStatus3Code currentStatus;
 	/**
-	 * Current status of the key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -727,7 +738,7 @@ public class CryptographicKey7 {
 	 */
 	public static final MMMessageAttribute mmCurrentStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "CurSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -738,10 +749,11 @@ public class CryptographicKey7 {
 			simpleType_lazy = () -> ATMStatus3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "FailrRsn")
 	protected FailureReason6Code failureReason;
 	/**
-	 * Reason for which the key has been stopped.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -769,7 +781,7 @@ public class CryptographicKey7 {
 	 */
 	public static final MMMessageAttribute mmFailureReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "FailrRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -784,10 +796,12 @@ public class CryptographicKey7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CryptographicKey7.mmName, CryptographicKey7.mmIdentification, CryptographicKey7.mmSecurityDomainIdentification, CryptographicKey7.mmAdditionalIdentification,
-						CryptographicKey7.mmVersion, CryptographicKey7.mmSequenceCounter, CryptographicKey7.mmType, CryptographicKey7.mmFunction, CryptographicKey7.mmActivationDate, CryptographicKey7.mmDeactivationDate,
-						CryptographicKey7.mmKeyCheckValue, CryptographicKey7.mmCurrentStatus, CryptographicKey7.mmFailureReason);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey7.mmName, com.tools20022.repository.msg.CryptographicKey7.mmIdentification,
+						com.tools20022.repository.msg.CryptographicKey7.mmSecurityDomainIdentification, com.tools20022.repository.msg.CryptographicKey7.mmAdditionalIdentification, com.tools20022.repository.msg.CryptographicKey7.mmVersion,
+						com.tools20022.repository.msg.CryptographicKey7.mmSequenceCounter, com.tools20022.repository.msg.CryptographicKey7.mmType, com.tools20022.repository.msg.CryptographicKey7.mmFunction,
+						com.tools20022.repository.msg.CryptographicKey7.mmActivationDate, com.tools20022.repository.msg.CryptographicKey7.mmDeactivationDate, com.tools20022.repository.msg.CryptographicKey7.mmKeyCheckValue,
+						com.tools20022.repository.msg.CryptographicKey7.mmCurrentStatus, com.tools20022.repository.msg.CryptographicKey7.mmFailureReason);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CryptographicKey7";
 				definition = "Cryptographic Key component.";
@@ -798,120 +812,120 @@ public class CryptographicKey7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nm")
-	public Max140Text getName() {
-		return name;
+	public Optional<Max140Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max140Text name) {
+	public CryptographicKey7 setName(Max140Text name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "Id")
-	public Max140Text getIdentification() {
-		return identification;
+	public Optional<Max140Text> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(Max140Text identification) {
+	public CryptographicKey7 setIdentification(Max140Text identification) {
 		this.identification = identification;
+		return this;
 	}
 
-	@XmlElement(name = "SctyDomnId")
-	public Max35Text getSecurityDomainIdentification() {
-		return securityDomainIdentification;
+	public Optional<Max35Text> getSecurityDomainIdentification() {
+		return securityDomainIdentification == null ? Optional.empty() : Optional.of(securityDomainIdentification);
 	}
 
-	public void setSecurityDomainIdentification(Max35Text securityDomainIdentification) {
+	public CryptographicKey7 setSecurityDomainIdentification(Max35Text securityDomainIdentification) {
 		this.securityDomainIdentification = securityDomainIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlId")
-	public Max35Binary getAdditionalIdentification() {
-		return additionalIdentification;
+	public Optional<Max35Binary> getAdditionalIdentification() {
+		return additionalIdentification == null ? Optional.empty() : Optional.of(additionalIdentification);
 	}
 
-	public void setAdditionalIdentification(Max35Binary additionalIdentification) {
+	public CryptographicKey7 setAdditionalIdentification(Max35Binary additionalIdentification) {
 		this.additionalIdentification = additionalIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Vrsn", required = true)
 	public Max256Text getVersion() {
 		return version;
 	}
 
-	public void setVersion(Max256Text version) {
-		this.version = version;
+	public CryptographicKey7 setVersion(Max256Text version) {
+		this.version = Objects.requireNonNull(version);
+		return this;
 	}
 
-	@XmlElement(name = "SeqCntr")
-	public Number getSequenceCounter() {
-		return sequenceCounter;
+	public Optional<Number> getSequenceCounter() {
+		return sequenceCounter == null ? Optional.empty() : Optional.of(sequenceCounter);
 	}
 
-	public void setSequenceCounter(Number sequenceCounter) {
+	public CryptographicKey7 setSequenceCounter(Number sequenceCounter) {
 		this.sequenceCounter = sequenceCounter;
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public CryptographicKeyType3Code getType() {
 		return type;
 	}
 
-	public void setType(CryptographicKeyType3Code type) {
-		this.type = type;
+	public CryptographicKey7 setType(CryptographicKeyType3Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Fctn", required = true)
 	public List<KeyUsage1Code> getFunction() {
-		return function;
+		return function == null ? function = new ArrayList<>() : function;
 	}
 
-	public void setFunction(List<KeyUsage1Code> function) {
-		this.function = function;
+	public CryptographicKey7 setFunction(List<KeyUsage1Code> function) {
+		this.function = Objects.requireNonNull(function);
+		return this;
 	}
 
-	@XmlElement(name = "ActvtnDt")
-	public ISODateTime getActivationDate() {
-		return activationDate;
+	public Optional<ISODateTime> getActivationDate() {
+		return activationDate == null ? Optional.empty() : Optional.of(activationDate);
 	}
 
-	public void setActivationDate(ISODateTime activationDate) {
+	public CryptographicKey7 setActivationDate(ISODateTime activationDate) {
 		this.activationDate = activationDate;
+		return this;
 	}
 
-	@XmlElement(name = "DeactvtnDt")
-	public ISODateTime getDeactivationDate() {
-		return deactivationDate;
+	public Optional<ISODateTime> getDeactivationDate() {
+		return deactivationDate == null ? Optional.empty() : Optional.of(deactivationDate);
 	}
 
-	public void setDeactivationDate(ISODateTime deactivationDate) {
+	public CryptographicKey7 setDeactivationDate(ISODateTime deactivationDate) {
 		this.deactivationDate = deactivationDate;
+		return this;
 	}
 
-	@XmlElement(name = "KeyChckVal")
-	public Max35Binary getKeyCheckValue() {
-		return keyCheckValue;
+	public Optional<Max35Binary> getKeyCheckValue() {
+		return keyCheckValue == null ? Optional.empty() : Optional.of(keyCheckValue);
 	}
 
-	public void setKeyCheckValue(Max35Binary keyCheckValue) {
+	public CryptographicKey7 setKeyCheckValue(Max35Binary keyCheckValue) {
 		this.keyCheckValue = keyCheckValue;
+		return this;
 	}
 
-	@XmlElement(name = "CurSts", required = true)
 	public ATMStatus3Code getCurrentStatus() {
 		return currentStatus;
 	}
 
-	public void setCurrentStatus(ATMStatus3Code currentStatus) {
-		this.currentStatus = currentStatus;
+	public CryptographicKey7 setCurrentStatus(ATMStatus3Code currentStatus) {
+		this.currentStatus = Objects.requireNonNull(currentStatus);
+		return this;
 	}
 
-	@XmlElement(name = "FailrRsn")
-	public FailureReason6Code getFailureReason() {
-		return failureReason;
+	public Optional<FailureReason6Code> getFailureReason() {
+		return failureReason == null ? Optional.empty() : Optional.of(failureReason);
 	}
 
-	public void setFailureReason(FailureReason6Code failureReason) {
+	public CryptographicKey7 setFailureReason(FailureReason6Code failureReason) {
 		this.failureReason = failureReason;
+		return this;
 	}
 }

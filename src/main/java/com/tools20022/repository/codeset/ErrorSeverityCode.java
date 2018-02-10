@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ErrorSeverityCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the severity of the related error code.
@@ -32,10 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ErrorSeverityCode#mmTransient
- * ErrorSeverityCode.mmTransient}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ErrorSeverityCode#mmFatal
- * ErrorSeverityCode.mmFatal}</li>
+ * {@linkplain com.tools20022.repository.codeset.ErrorSeverityCode#Transient
+ * ErrorSeverityCode.Transient}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ErrorSeverityCode#Fatal
+ * ErrorSeverityCode.Fatal}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates the severity of the related error code."</li>
  * </ul>
  */
-public class ErrorSeverityCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ErrorSeverityCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,12 +90,12 @@ public class ErrorSeverityCode {
 	 * definition} = "The error is considered transient."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransient = new MMCode() {
+	public static final ErrorSeverityCode Transient = new ErrorSeverityCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transient";
 			definition = "The error is considered transient.";
-			owner_lazy = () -> ErrorSeverityCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ErrorSeverityCode.mmObject();
 			codeName = "TRAN";
 		}
 	};
@@ -114,27 +120,57 @@ public class ErrorSeverityCode {
 	 * definition} = "The error is considered fatal."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFatal = new MMCode() {
+	public static final ErrorSeverityCode Fatal = new ErrorSeverityCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fatal";
 			definition = "The error is considered fatal.";
-			owner_lazy = () -> ErrorSeverityCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ErrorSeverityCode.mmObject();
 			codeName = "FATL";
 		}
 	};
+	final static private LinkedHashMap<String, ErrorSeverityCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ErrorSeverityCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ErrorSeverityCode";
 				definition = "Indicates the severity of the related error code.";
-				code_lazy = () -> Arrays.asList(ErrorSeverityCode.mmTransient, ErrorSeverityCode.mmFatal);
 				derivation_lazy = () -> Arrays.asList(ErrorSeverity1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ErrorSeverityCode.Transient, com.tools20022.repository.codeset.ErrorSeverityCode.Fatal);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Transient.getCodeName().get(), Transient);
+		codesByName.put(Fatal.getCodeName().get(), Fatal);
+	}
+
+	public static ErrorSeverityCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ErrorSeverityCode[] values() {
+		ErrorSeverityCode[] values = new ErrorSeverityCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ErrorSeverityCode> {
+		@Override
+		public ErrorSeverityCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ErrorSeverityCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

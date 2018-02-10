@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -77,8 +79,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,17 +92,17 @@ import javax.xml.bind.annotation.XmlType;
  * "Specifies a collection of monetary totals for this settlement."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementMonetarySummation1", propOrder = {"lineTotalAmount", "allowanceTotalAmount", "totalDiscountAmount", "chargeTotalAmount", "totalPrepaidAmount", "taxTotalAmount", "taxBasisAmount", "roundingAmount",
 		"grandTotalAmount", "informationAmount"})
 public class SettlementMonetarySummation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LineTtlAmt")
 	protected List<CurrencyAndAmount> lineTotalAmount;
 	/**
-	 * Monetary value of the line amount total being reported for this
-	 * settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -136,7 +138,7 @@ public class SettlementMonetarySummation1 {
 	public static final MMMessageAttribute mmLineTotalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LineItem.mmGrossAmount;
-			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "LineTtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,10 +148,11 @@ public class SettlementMonetarySummation1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "AllwncTtlAmt")
 	protected List<CurrencyAndAmount> allowanceTotalAmount;
 	/**
-	 * Monetary value of the allowance total being reported for this settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -185,7 +188,7 @@ public class SettlementMonetarySummation1 {
 	public static final MMMessageAttribute mmAllowanceTotalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Allowance.mmTotalAllowance;
-			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "AllwncTtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,10 +198,11 @@ public class SettlementMonetarySummation1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlDscntAmt")
 	protected List<CurrencyAndAmount> totalDiscountAmount;
 	/**
-	 * Monetary value of the total discount being reported for this settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,7 +238,7 @@ public class SettlementMonetarySummation1 {
 	public static final MMMessageAttribute mmTotalDiscountAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Discount.mmDiscountAppliedAmount;
-			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlDscntAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,11 +248,11 @@ public class SettlementMonetarySummation1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgTtlAmt")
 	protected List<CurrencyAndAmount> chargeTotalAmount;
 	/**
-	 * Monetary value of the charge amount total being reported for this
-	 * settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -284,7 +288,7 @@ public class SettlementMonetarySummation1 {
 	public static final MMMessageAttribute mmChargeTotalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmTotalCharge;
-			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgTtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -294,11 +298,11 @@ public class SettlementMonetarySummation1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlPrepdAmt")
 	protected List<CurrencyAndAmount> totalPrepaidAmount;
 	/**
-	 * Monetary value of the total prepaid amount being reported for this
-	 * settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -334,7 +338,7 @@ public class SettlementMonetarySummation1 {
 	public static final MMMessageAttribute mmTotalPrepaidAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmTotalPrepaidAmount;
-			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlPrepdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -344,11 +348,11 @@ public class SettlementMonetarySummation1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxTtlAmt")
 	protected List<CurrencyAndAmount> taxTotalAmount;
 	/**
-	 * Monetary value of the total of all tax basis amounts being reported for
-	 * this settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -384,7 +388,7 @@ public class SettlementMonetarySummation1 {
 	public static final MMMessageAttribute mmTaxTotalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmTotalTaxAmount;
-			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxTtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -394,11 +398,11 @@ public class SettlementMonetarySummation1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxBsisAmt")
 	protected List<CurrencyAndAmount> taxBasisAmount;
 	/**
-	 * Monetary value of the total of all tax basis amounts being reported for
-	 * this settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -434,7 +438,7 @@ public class SettlementMonetarySummation1 {
 	public static final MMMessageAttribute mmTaxBasisAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
-			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxBsisAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -444,11 +448,11 @@ public class SettlementMonetarySummation1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RndgAmt")
 	protected List<CurrencyAndAmount> roundingAmount;
 	/**
-	 * Monetary value of a rounding amount being applied and reported for this
-	 * settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -478,7 +482,7 @@ public class SettlementMonetarySummation1 {
 	 */
 	public static final MMMessageAttribute mmRoundingAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "RndgAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -488,11 +492,11 @@ public class SettlementMonetarySummation1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "GrdTtlAmt")
 	protected List<CurrencyAndAmount> grandTotalAmount;
 	/**
-	 * Monetary value of the grand total being reported for this settlement, to
-	 * include addition and subtraction of individual summation amounts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -528,7 +532,7 @@ public class SettlementMonetarySummation1 {
 	public static final MMMessageAttribute mmGrandTotalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmTotalInvoiceAmount;
-			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "GrdTtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -538,11 +542,11 @@ public class SettlementMonetarySummation1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "InfAmt")
 	protected List<CurrencyAndAmount> informationAmount;
 	/**
-	 * Monetary value of an amount being reported as information for this
-	 * settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -572,7 +576,7 @@ public class SettlementMonetarySummation1 {
 	 */
 	public static final MMMessageAttribute mmInformationAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "InfAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -586,11 +590,13 @@ public class SettlementMonetarySummation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementMonetarySummation1.mmLineTotalAmount, SettlementMonetarySummation1.mmAllowanceTotalAmount, SettlementMonetarySummation1.mmTotalDiscountAmount,
-						SettlementMonetarySummation1.mmChargeTotalAmount, SettlementMonetarySummation1.mmTotalPrepaidAmount, SettlementMonetarySummation1.mmTaxTotalAmount, SettlementMonetarySummation1.mmTaxBasisAmount,
-						SettlementMonetarySummation1.mmRoundingAmount, SettlementMonetarySummation1.mmGrandTotalAmount, SettlementMonetarySummation1.mmInformationAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementMonetarySummation1.mmLineTotalAmount, com.tools20022.repository.msg.SettlementMonetarySummation1.mmAllowanceTotalAmount,
+						com.tools20022.repository.msg.SettlementMonetarySummation1.mmTotalDiscountAmount, com.tools20022.repository.msg.SettlementMonetarySummation1.mmChargeTotalAmount,
+						com.tools20022.repository.msg.SettlementMonetarySummation1.mmTotalPrepaidAmount, com.tools20022.repository.msg.SettlementMonetarySummation1.mmTaxTotalAmount,
+						com.tools20022.repository.msg.SettlementMonetarySummation1.mmTaxBasisAmount, com.tools20022.repository.msg.SettlementMonetarySummation1.mmRoundingAmount,
+						com.tools20022.repository.msg.SettlementMonetarySummation1.mmGrandTotalAmount, com.tools20022.repository.msg.SettlementMonetarySummation1.mmInformationAmount);
 				trace_lazy = () -> Invoice.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementMonetarySummation1";
 				definition = "Specifies a collection of monetary totals for this settlement.";
@@ -599,93 +605,93 @@ public class SettlementMonetarySummation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LineTtlAmt")
 	public List<CurrencyAndAmount> getLineTotalAmount() {
-		return lineTotalAmount;
+		return lineTotalAmount == null ? lineTotalAmount = new ArrayList<>() : lineTotalAmount;
 	}
 
-	public void setLineTotalAmount(List<CurrencyAndAmount> lineTotalAmount) {
-		this.lineTotalAmount = lineTotalAmount;
+	public SettlementMonetarySummation1 setLineTotalAmount(List<CurrencyAndAmount> lineTotalAmount) {
+		this.lineTotalAmount = Objects.requireNonNull(lineTotalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "AllwncTtlAmt")
 	public List<CurrencyAndAmount> getAllowanceTotalAmount() {
-		return allowanceTotalAmount;
+		return allowanceTotalAmount == null ? allowanceTotalAmount = new ArrayList<>() : allowanceTotalAmount;
 	}
 
-	public void setAllowanceTotalAmount(List<CurrencyAndAmount> allowanceTotalAmount) {
-		this.allowanceTotalAmount = allowanceTotalAmount;
+	public SettlementMonetarySummation1 setAllowanceTotalAmount(List<CurrencyAndAmount> allowanceTotalAmount) {
+		this.allowanceTotalAmount = Objects.requireNonNull(allowanceTotalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "TtlDscntAmt")
 	public List<CurrencyAndAmount> getTotalDiscountAmount() {
-		return totalDiscountAmount;
+		return totalDiscountAmount == null ? totalDiscountAmount = new ArrayList<>() : totalDiscountAmount;
 	}
 
-	public void setTotalDiscountAmount(List<CurrencyAndAmount> totalDiscountAmount) {
-		this.totalDiscountAmount = totalDiscountAmount;
+	public SettlementMonetarySummation1 setTotalDiscountAmount(List<CurrencyAndAmount> totalDiscountAmount) {
+		this.totalDiscountAmount = Objects.requireNonNull(totalDiscountAmount);
+		return this;
 	}
 
-	@XmlElement(name = "ChrgTtlAmt")
 	public List<CurrencyAndAmount> getChargeTotalAmount() {
-		return chargeTotalAmount;
+		return chargeTotalAmount == null ? chargeTotalAmount = new ArrayList<>() : chargeTotalAmount;
 	}
 
-	public void setChargeTotalAmount(List<CurrencyAndAmount> chargeTotalAmount) {
-		this.chargeTotalAmount = chargeTotalAmount;
+	public SettlementMonetarySummation1 setChargeTotalAmount(List<CurrencyAndAmount> chargeTotalAmount) {
+		this.chargeTotalAmount = Objects.requireNonNull(chargeTotalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "TtlPrepdAmt")
 	public List<CurrencyAndAmount> getTotalPrepaidAmount() {
-		return totalPrepaidAmount;
+		return totalPrepaidAmount == null ? totalPrepaidAmount = new ArrayList<>() : totalPrepaidAmount;
 	}
 
-	public void setTotalPrepaidAmount(List<CurrencyAndAmount> totalPrepaidAmount) {
-		this.totalPrepaidAmount = totalPrepaidAmount;
+	public SettlementMonetarySummation1 setTotalPrepaidAmount(List<CurrencyAndAmount> totalPrepaidAmount) {
+		this.totalPrepaidAmount = Objects.requireNonNull(totalPrepaidAmount);
+		return this;
 	}
 
-	@XmlElement(name = "TaxTtlAmt")
 	public List<CurrencyAndAmount> getTaxTotalAmount() {
-		return taxTotalAmount;
+		return taxTotalAmount == null ? taxTotalAmount = new ArrayList<>() : taxTotalAmount;
 	}
 
-	public void setTaxTotalAmount(List<CurrencyAndAmount> taxTotalAmount) {
-		this.taxTotalAmount = taxTotalAmount;
+	public SettlementMonetarySummation1 setTaxTotalAmount(List<CurrencyAndAmount> taxTotalAmount) {
+		this.taxTotalAmount = Objects.requireNonNull(taxTotalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "TaxBsisAmt")
 	public List<CurrencyAndAmount> getTaxBasisAmount() {
-		return taxBasisAmount;
+		return taxBasisAmount == null ? taxBasisAmount = new ArrayList<>() : taxBasisAmount;
 	}
 
-	public void setTaxBasisAmount(List<CurrencyAndAmount> taxBasisAmount) {
-		this.taxBasisAmount = taxBasisAmount;
+	public SettlementMonetarySummation1 setTaxBasisAmount(List<CurrencyAndAmount> taxBasisAmount) {
+		this.taxBasisAmount = Objects.requireNonNull(taxBasisAmount);
+		return this;
 	}
 
-	@XmlElement(name = "RndgAmt")
 	public List<CurrencyAndAmount> getRoundingAmount() {
-		return roundingAmount;
+		return roundingAmount == null ? roundingAmount = new ArrayList<>() : roundingAmount;
 	}
 
-	public void setRoundingAmount(List<CurrencyAndAmount> roundingAmount) {
-		this.roundingAmount = roundingAmount;
+	public SettlementMonetarySummation1 setRoundingAmount(List<CurrencyAndAmount> roundingAmount) {
+		this.roundingAmount = Objects.requireNonNull(roundingAmount);
+		return this;
 	}
 
-	@XmlElement(name = "GrdTtlAmt")
 	public List<CurrencyAndAmount> getGrandTotalAmount() {
-		return grandTotalAmount;
+		return grandTotalAmount == null ? grandTotalAmount = new ArrayList<>() : grandTotalAmount;
 	}
 
-	public void setGrandTotalAmount(List<CurrencyAndAmount> grandTotalAmount) {
-		this.grandTotalAmount = grandTotalAmount;
+	public SettlementMonetarySummation1 setGrandTotalAmount(List<CurrencyAndAmount> grandTotalAmount) {
+		this.grandTotalAmount = Objects.requireNonNull(grandTotalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "InfAmt")
 	public List<CurrencyAndAmount> getInformationAmount() {
-		return informationAmount;
+		return informationAmount == null ? informationAmount = new ArrayList<>() : informationAmount;
 	}
 
-	public void setInformationAmount(List<CurrencyAndAmount> informationAmount) {
-		this.informationAmount = informationAmount;
+	public SettlementMonetarySummation1 setInformationAmount(List<CurrencyAndAmount> informationAmount) {
+		this.informationAmount = Objects.requireNonNull(informationAmount);
+		return this;
 	}
 }

@@ -34,6 +34,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -47,13 +49,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Charge15#mmTypeOrExtendedTypeRule
- * Charge15.mmTypeOrExtendedTypeRule}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge15#mmAmountOrRateRule
- * Charge15.mmAmountOrRateRule}</li>
+ * {@linkplain com.tools20022.repository.msg.Charge15#TypeOrExtendedTypeRule
+ * Charge15.TypeOrExtendedTypeRule}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge15#AmountOrRateRule
+ * Charge15.AmountOrRateRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Charge15#mmCalculationBasisOrExtendedCalculationBasisRule
- * Charge15.mmCalculationBasisOrExtendedCalculationBasisRule}</li>
+ * {@linkplain com.tools20022.repository.msg.Charge15#CalculationBasisOrExtendedCalculationBasisRule
+ * Charge15.CalculationBasisOrExtendedCalculationBasisRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -80,8 +82,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -93,15 +95,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Amount of money associated with a service."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Charge15", propOrder = {"type", "extendedType", "amount", "rate", "calculationBasis", "extendedCalculationBasis"})
 public class Charge15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected ChargeType9Code type;
 	/**
-	 * Type of service for which a charge is asked or paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,7 +137,7 @@ public class Charge15 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
-			componentContext_lazy = () -> Charge15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge15.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,10 +148,11 @@ public class Charge15 {
 			simpleType_lazy = () -> ChargeType9Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedTp", required = true)
 	protected Extended350Code extendedType;
 	/**
-	 * Type of service for which a charge is asked or paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -181,7 +185,7 @@ public class Charge15 {
 	public static final MMMessageAttribute mmExtendedType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
-			componentContext_lazy = () -> Charge15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge15.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,10 +196,11 @@ public class Charge15 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
-	 * Amount of money asked or paid for the charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,7 +233,7 @@ public class Charge15 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> Charge15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge15.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,10 +244,11 @@ public class Charge15 {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Rate", required = true)
 	protected PercentageRate rate;
 	/**
-	 * Rate used to calculate the amount of the charge or fee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -275,7 +281,7 @@ public class Charge15 {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
-			componentContext_lazy = () -> Charge15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge15.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,10 +292,11 @@ public class Charge15 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "ClctnBsis")
 	protected CalculationBasis2Code calculationBasis;
 	/**
-	 * Calculation basis for the charge or fee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -322,7 +329,7 @@ public class Charge15 {
 	public static final MMMessageAttribute mmCalculationBasis = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmCalculationBasis;
-			componentContext_lazy = () -> Charge15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge15.mmObject();
 			isDerived = false;
 			xmlTag = "ClctnBsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -333,10 +340,11 @@ public class Charge15 {
 			simpleType_lazy = () -> CalculationBasis2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedClctnBsis")
 	protected Extended350Code extendedCalculationBasis;
 	/**
-	 * Calculation basis for the charge or fee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -369,7 +377,7 @@ public class Charge15 {
 	public static final MMMessageAttribute mmExtendedCalculationBasis = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmCalculationBasis;
-			componentContext_lazy = () -> Charge15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge15.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedClctnBsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -409,13 +417,13 @@ public class Charge15 {
 	 * "Either Type or ExtendedType must be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmTypeOrExtendedTypeRule = new MMXor() {
+	public static final MMXor TypeOrExtendedTypeRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOrExtendedTypeRule";
 			definition = "Either Type or ExtendedType must be present, but not both.";
-			messageComponent_lazy = () -> Charge15.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(Charge15.mmType, Charge15.mmExtendedType);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.Charge15.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge15.mmType, com.tools20022.repository.msg.Charge15.mmExtendedType);
 		}
 	};
 	/**
@@ -446,13 +454,13 @@ public class Charge15 {
 	 * definition} = "Either Amount or Rate must be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmAmountOrRateRule = new MMXor() {
+	public static final MMXor AmountOrRateRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountOrRateRule";
 			definition = "Either Amount or Rate must be present, but not both.";
-			messageComponent_lazy = () -> Charge15.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(Charge15.mmAmount, Charge15.mmRate);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.Charge15.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge15.mmAmount, com.tools20022.repository.msg.Charge15.mmRate);
 		}
 	};
 	/**
@@ -488,22 +496,23 @@ public class Charge15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmCalculationBasisOrExtendedCalculationBasisRule = new MMXor() {
+	public static final MMXor CalculationBasisOrExtendedCalculationBasisRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationBasisOrExtendedCalculationBasisRule";
 			definition = "Either CalculationBasis or ExtendedCalculationBasis may be present, but not both.";
-			messageComponent_lazy = () -> Charge15.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(Charge15.mmCalculationBasis, Charge15.mmExtendedCalculationBasis);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.Charge15.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge15.mmCalculationBasis, com.tools20022.repository.msg.Charge15.mmExtendedCalculationBasis);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Charge15.mmType, Charge15.mmExtendedType, Charge15.mmAmount, Charge15.mmRate, Charge15.mmCalculationBasis, Charge15.mmExtendedCalculationBasis);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge15.mmType, com.tools20022.repository.msg.Charge15.mmExtendedType, com.tools20022.repository.msg.Charge15.mmAmount,
+						com.tools20022.repository.msg.Charge15.mmRate, com.tools20022.repository.msg.Charge15.mmCalculationBasis, com.tools20022.repository.msg.Charge15.mmExtendedCalculationBasis);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -514,63 +523,64 @@ public class Charge15 {
 				})).get();
 				name = "Charge15";
 				definition = "Amount of money associated with a service.";
-				xors_lazy = () -> Arrays.asList(Charge15.mmTypeOrExtendedTypeRule, Charge15.mmAmountOrRateRule, Charge15.mmCalculationBasisOrExtendedCalculationBasisRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge15.TypeOrExtendedTypeRule, com.tools20022.repository.msg.Charge15.AmountOrRateRule,
+						com.tools20022.repository.msg.Charge15.CalculationBasisOrExtendedCalculationBasisRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public ChargeType9Code getType() {
 		return type;
 	}
 
-	public void setType(ChargeType9Code type) {
-		this.type = type;
+	public Charge15 setType(ChargeType9Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedTp", required = true)
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}
 
-	public void setExtendedType(Extended350Code extendedType) {
-		this.extendedType = extendedType;
+	public Charge15 setExtendedType(Extended350Code extendedType) {
+		this.extendedType = Objects.requireNonNull(extendedType);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
-		this.amount = amount;
+	public Charge15 setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
 
-	public void setRate(PercentageRate rate) {
-		this.rate = rate;
+	public Charge15 setRate(PercentageRate rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 
-	@XmlElement(name = "ClctnBsis")
-	public CalculationBasis2Code getCalculationBasis() {
-		return calculationBasis;
+	public Optional<CalculationBasis2Code> getCalculationBasis() {
+		return calculationBasis == null ? Optional.empty() : Optional.of(calculationBasis);
 	}
 
-	public void setCalculationBasis(CalculationBasis2Code calculationBasis) {
+	public Charge15 setCalculationBasis(CalculationBasis2Code calculationBasis) {
 		this.calculationBasis = calculationBasis;
+		return this;
 	}
 
-	@XmlElement(name = "XtndedClctnBsis")
-	public Extended350Code getExtendedCalculationBasis() {
-		return extendedCalculationBasis;
+	public Optional<Extended350Code> getExtendedCalculationBasis() {
+		return extendedCalculationBasis == null ? Optional.empty() : Optional.of(extendedCalculationBasis);
 	}
 
-	public void setExtendedCalculationBasis(Extended350Code extendedCalculationBasis) {
+	public Charge15 setExtendedCalculationBasis(Extended350Code extendedCalculationBasis) {
 		this.extendedCalculationBasis = extendedCalculationBasis;
+		return this;
 	}
 }

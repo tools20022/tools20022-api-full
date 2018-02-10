@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +70,22 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintValidCFIRule#forSecurityInstrumentDescription9
+ * ConstraintValidCFIRule.forSecurityInstrumentDescription9}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintValidISINRule#forSecurityInstrumentDescription9
+ * ConstraintValidISINRule.forSecurityInstrumentDescription9}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintValidShortNameRule#forSecurityInstrumentDescription9
+ * ConstraintValidShortNameRule.forSecurityInstrumentDescription9}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,15 +106,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecurityInstrumentDescription9", propOrder = {"identification", "fullName", "shortName", "classificationType", "notionalCurrency", "commodityDerivativeIndicator"})
 public class SecurityInstrumentDescription9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected ISINOct2015Identifier identification;
 	/**
-	 * Code used to identify the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,7 +157,7 @@ public class SecurityInstrumentDescription9 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> SecurityInstrumentDescription9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,10 +169,11 @@ public class SecurityInstrumentDescription9 {
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	@XmlElement(name = "FullNm", required = true)
 	protected Max350Text fullName;
 	/**
-	 * Full name of the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,7 +214,7 @@ public class SecurityInstrumentDescription9 {
 	public static final MMMessageAttribute mmFullName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
-			componentContext_lazy = () -> SecurityInstrumentDescription9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmObject();
 			isDerived = false;
 			xmlTag = "FullNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,10 +226,11 @@ public class SecurityInstrumentDescription9 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ShrtNm")
 	protected Max35Text shortName;
 	/**
-	 * Short name of financial instrument in accordance with ISO 18774.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,7 +264,7 @@ public class SecurityInstrumentDescription9 {
 	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmShortName;
-			componentContext_lazy = () -> SecurityInstrumentDescription9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,11 +275,11 @@ public class SecurityInstrumentDescription9 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClssfctnTp", required = true)
 	protected CFIOct2015Identifier classificationType;
 	/**
-	 * Classification type of the financial instrument, as per the ISO
-	 * Classification of Financial Instrument (CFI) codification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -304,7 +323,7 @@ public class SecurityInstrumentDescription9 {
 	public static final MMMessageAttribute mmClassificationType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
-			componentContext_lazy = () -> SecurityInstrumentDescription9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmObject();
 			isDerived = false;
 			xmlTag = "ClssfctnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -316,10 +335,11 @@ public class SecurityInstrumentDescription9 {
 			simpleType_lazy = () -> CFIOct2015Identifier.mmObject();
 		}
 	};
+	@XmlElement(name = "NtnlCcy", required = true)
 	protected ActiveOrHistoricCurrencyCode notionalCurrency;
 	/**
-	 * Currency in which the notional is denominated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -361,7 +381,7 @@ public class SecurityInstrumentDescription9 {
 	public static final MMMessageAttribute mmNotionalCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrency;
-			componentContext_lazy = () -> SecurityInstrumentDescription9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmObject();
 			isDerived = false;
 			xmlTag = "NtnlCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -373,11 +393,11 @@ public class SecurityInstrumentDescription9 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CmmdtyDerivInd", required = true)
 	protected TrueFalseIndicator commodityDerivativeIndicator;
 	/**
-	 * Indicates whether the financial instrument falls within the definition of
-	 * commodities derivative under the local regulation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -407,7 +427,7 @@ public class SecurityInstrumentDescription9 {
 	 */
 	public static final MMMessageAttribute mmCommodityDerivativeIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityInstrumentDescription9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmObject();
 			isDerived = false;
 			xmlTag = "CmmdtyDerivInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -422,10 +442,13 @@ public class SecurityInstrumentDescription9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityInstrumentDescription9.mmIdentification, SecurityInstrumentDescription9.mmFullName, SecurityInstrumentDescription9.mmShortName,
-						SecurityInstrumentDescription9.mmClassificationType, SecurityInstrumentDescription9.mmNotionalCurrency, SecurityInstrumentDescription9.mmCommodityDerivativeIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityInstrumentDescription9.mmIdentification, com.tools20022.repository.msg.SecurityInstrumentDescription9.mmFullName,
+						com.tools20022.repository.msg.SecurityInstrumentDescription9.mmShortName, com.tools20022.repository.msg.SecurityInstrumentDescription9.mmClassificationType,
+						com.tools20022.repository.msg.SecurityInstrumentDescription9.mmNotionalCurrency, com.tools20022.repository.msg.SecurityInstrumentDescription9.mmCommodityDerivativeIndicator);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintValidCFIRule.forSecurityInstrumentDescription9,
+						com.tools20022.repository.constraints.ConstraintValidISINRule.forSecurityInstrumentDescription9, com.tools20022.repository.constraints.ConstraintValidShortNameRule.forSecurityInstrumentDescription9);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityInstrumentDescription9";
 				definition = "Identifies the security instrument by its name and typical characteristics.";
@@ -435,57 +458,57 @@ public class SecurityInstrumentDescription9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public ISINOct2015Identifier getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(ISINOct2015Identifier identification) {
-		this.identification = identification;
+	public SecurityInstrumentDescription9 setIdentification(ISINOct2015Identifier identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "FullNm", required = true)
 	public Max350Text getFullName() {
 		return fullName;
 	}
 
-	public void setFullName(Max350Text fullName) {
-		this.fullName = fullName;
+	public SecurityInstrumentDescription9 setFullName(Max350Text fullName) {
+		this.fullName = Objects.requireNonNull(fullName);
+		return this;
 	}
 
-	@XmlElement(name = "ShrtNm")
-	public Max35Text getShortName() {
-		return shortName;
+	public Optional<Max35Text> getShortName() {
+		return shortName == null ? Optional.empty() : Optional.of(shortName);
 	}
 
-	public void setShortName(Max35Text shortName) {
+	public SecurityInstrumentDescription9 setShortName(Max35Text shortName) {
 		this.shortName = shortName;
+		return this;
 	}
 
-	@XmlElement(name = "ClssfctnTp", required = true)
 	public CFIOct2015Identifier getClassificationType() {
 		return classificationType;
 	}
 
-	public void setClassificationType(CFIOct2015Identifier classificationType) {
-		this.classificationType = classificationType;
+	public SecurityInstrumentDescription9 setClassificationType(CFIOct2015Identifier classificationType) {
+		this.classificationType = Objects.requireNonNull(classificationType);
+		return this;
 	}
 
-	@XmlElement(name = "NtnlCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getNotionalCurrency() {
 		return notionalCurrency;
 	}
 
-	public void setNotionalCurrency(ActiveOrHistoricCurrencyCode notionalCurrency) {
-		this.notionalCurrency = notionalCurrency;
+	public SecurityInstrumentDescription9 setNotionalCurrency(ActiveOrHistoricCurrencyCode notionalCurrency) {
+		this.notionalCurrency = Objects.requireNonNull(notionalCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "CmmdtyDerivInd", required = true)
 	public TrueFalseIndicator getCommodityDerivativeIndicator() {
 		return commodityDerivativeIndicator;
 	}
 
-	public void setCommodityDerivativeIndicator(TrueFalseIndicator commodityDerivativeIndicator) {
-		this.commodityDerivativeIndicator = commodityDerivativeIndicator;
+	public SecurityInstrumentDescription9 setCommodityDerivativeIndicator(TrueFalseIndicator commodityDerivativeIndicator) {
+		this.commodityDerivativeIndicator = Objects.requireNonNull(commodityDerivativeIndicator);
+		return this;
 	}
 }

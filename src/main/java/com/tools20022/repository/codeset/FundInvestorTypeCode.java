@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.FundInvestorTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of investor.
@@ -32,15 +37,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundInvestorTypeCode#mmRetail
- * FundInvestorTypeCode.mmRetail}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundInvestorTypeCode#Retail
+ * FundInvestorTypeCode.Retail}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -56,7 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of investor."</li>
  * </ul>
  */
-public class FundInvestorTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FundInvestorTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,27 +86,56 @@ public class FundInvestorTypeCode {
 	 * definition} = "Investor is a retail investor."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRetail = new MMCode() {
+	public static final FundInvestorTypeCode Retail = new FundInvestorTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Retail";
 			definition = "Investor is a retail investor.";
-			owner_lazy = () -> FundInvestorTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundInvestorTypeCode.mmObject();
 			codeName = "RETA";
 		}
 	};
+	final static private LinkedHashMap<String, FundInvestorTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FundInvestorTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RETA");
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "FundInvestorTypeCode";
 				definition = "Specifies the type of investor.";
-				code_lazy = () -> Arrays.asList(FundInvestorTypeCode.mmRetail);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundInvestorTypeCode.Retail);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Retail.getCodeName().get(), Retail);
+	}
+
+	public static FundInvestorTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FundInvestorTypeCode[] values() {
+		FundInvestorTypeCode[] values = new FundInvestorTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FundInvestorTypeCode> {
+		@Override
+		public FundInvestorTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FundInvestorTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TMSContactLevelCode;
+import com.tools20022.repository.codeset.TMSContactLevel1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Level of urgency in contacting the terminal management system.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode
- * TMSContactLevelCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TMSContactLevel1Code#mmCritical
- * TMSContactLevel1Code.mmCritical}</li>
+ * {@linkplain com.tools20022.repository.codeset.TMSContactLevel1Code#Critical
+ * TMSContactLevel1Code.Critical}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TMSContactLevel1Code#mmAsSoonAsPossible
- * TMSContactLevel1Code.mmAsSoonAsPossible}</li>
+ * {@linkplain com.tools20022.repository.codeset.TMSContactLevel1Code#AsSoonAsPossible
+ * TMSContactLevel1Code.AsSoonAsPossible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TMSContactLevel1Code#mmDateTime
- * TMSContactLevel1Code.mmDateTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.TMSContactLevel1Code#DateTime
+ * TMSContactLevel1Code.DateTime}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode
+ * TMSContactLevelCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Level of urgency in contacting the terminal management system."</li>
  * </ul>
  */
-public class TMSContactLevel1Code extends TMSContactLevelCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TMSContactLevel1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,11 +92,12 @@ public class TMSContactLevel1Code extends TMSContactLevelCode {
 	 * name} = "Critical"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCritical = new MMCode() {
+	public static final TMSContactLevel1Code Critical = new TMSContactLevel1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Critical";
-			owner_lazy = () -> TMSContactLevel1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TMSContactLevel1Code.mmObject();
+			codeName = TMSContactLevelCode.Critical.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +116,12 @@ public class TMSContactLevel1Code extends TMSContactLevelCode {
 	 * name} = "AsSoonAsPossible"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAsSoonAsPossible = new MMCode() {
+	public static final TMSContactLevel1Code AsSoonAsPossible = new TMSContactLevel1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsSoonAsPossible";
-			owner_lazy = () -> TMSContactLevel1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TMSContactLevel1Code.mmObject();
+			codeName = TMSContactLevelCode.AsSoonAsPossible.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,26 +140,59 @@ public class TMSContactLevel1Code extends TMSContactLevelCode {
 	 * name} = "DateTime"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDateTime = new MMCode() {
+	public static final TMSContactLevel1Code DateTime = new TMSContactLevel1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
-			owner_lazy = () -> TMSContactLevel1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TMSContactLevel1Code.mmObject();
+			codeName = TMSContactLevelCode.DateTime.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TMSContactLevel1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TMSContactLevel1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CRIT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TMSContactLevel1Code";
 				definition = "Level of urgency in contacting the terminal management system.";
-				code_lazy = () -> Arrays.asList(TMSContactLevel1Code.mmCritical, TMSContactLevel1Code.mmAsSoonAsPossible, TMSContactLevel1Code.mmDateTime);
 				trace_lazy = () -> TMSContactLevelCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TMSContactLevel1Code.Critical, com.tools20022.repository.codeset.TMSContactLevel1Code.AsSoonAsPossible,
+						com.tools20022.repository.codeset.TMSContactLevel1Code.DateTime);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Critical.getCodeName().get(), Critical);
+		codesByName.put(AsSoonAsPossible.getCodeName().get(), AsSoonAsPossible);
+		codesByName.put(DateTime.getCodeName().get(), DateTime);
+	}
+
+	public static TMSContactLevel1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TMSContactLevel1Code[] values() {
+		TMSContactLevel1Code[] values = new TMSContactLevel1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TMSContactLevel1Code> {
+		@Override
+		public TMSContactLevel1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TMSContactLevel1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

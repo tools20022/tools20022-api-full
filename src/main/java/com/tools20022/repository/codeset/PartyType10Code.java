@@ -20,54 +20,56 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PartyTypeCode;
+import com.tools20022.repository.codeset.PartyType10Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of identified entity.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PartyTypeCode PartyTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType10Code#mmAcceptor
- * PartyType10Code.mmAcceptor}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType10Code#mmAcquirer
- * PartyType10Code.mmAcquirer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType10Code#Acceptor
+ * PartyType10Code.Acceptor}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType10Code#Acquirer
+ * PartyType10Code.Acquirer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType10Code#ATMManager
+ * PartyType10Code.ATMManager}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType10Code#CardIssuer
+ * PartyType10Code.CardIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType10Code#mmATMManager
- * PartyType10Code.mmATMManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType10Code#DelegateIssuer
+ * PartyType10Code.DelegateIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType10Code#mmCardIssuer
- * PartyType10Code.mmCardIssuer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType10Code#HostingEntity
+ * PartyType10Code.HostingEntity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType10Code#mmDelegateIssuer
- * PartyType10Code.mmDelegateIssuer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType10Code#IntermediaryAgent
+ * PartyType10Code.IntermediaryAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType10Code#Merchant
+ * PartyType10Code.Merchant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType10Code#mmHostingEntity
- * PartyType10Code.mmHostingEntity}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType10Code#OriginatingATM
+ * PartyType10Code.OriginatingATM}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType10Code#mmIntermediaryAgent
- * PartyType10Code.mmIntermediaryAgent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType10Code#mmMerchant
- * PartyType10Code.mmMerchant}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType10Code#mmOriginatingATM
- * PartyType10Code.mmOriginatingATM}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType10Code#mmOriginatingPOI
- * PartyType10Code.mmOriginatingPOI}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType10Code#OriginatingPOI
+ * PartyType10Code.OriginatingPOI}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PartyTypeCode PartyTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of identified entity."</li>
  * </ul>
  */
-public class PartyType10Code extends PartyTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PartyType10Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,11 +100,12 @@ public class PartyType10Code extends PartyTypeCode {
 	 * name} = "Acceptor"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptor = new MMCode() {
+	public static final PartyType10Code Acceptor = new PartyType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acceptor";
-			owner_lazy = () -> PartyType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType10Code.mmObject();
+			codeName = PartyTypeCode.Acceptor.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -120,11 +124,12 @@ public class PartyType10Code extends PartyTypeCode {
 	 * name} = "Acquirer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcquirer = new MMCode() {
+	public static final PartyType10Code Acquirer = new PartyType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
-			owner_lazy = () -> PartyType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType10Code.mmObject();
+			codeName = PartyTypeCode.Acquirer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -143,11 +148,12 @@ public class PartyType10Code extends PartyTypeCode {
 	 * name} = "ATMManager"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmATMManager = new MMCode() {
+	public static final PartyType10Code ATMManager = new PartyType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMManager";
-			owner_lazy = () -> PartyType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType10Code.mmObject();
+			codeName = PartyTypeCode.ATMManager.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -166,11 +172,12 @@ public class PartyType10Code extends PartyTypeCode {
 	 * name} = "CardIssuer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardIssuer = new MMCode() {
+	public static final PartyType10Code CardIssuer = new PartyType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardIssuer";
-			owner_lazy = () -> PartyType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType10Code.mmObject();
+			codeName = PartyTypeCode.CardIssuer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -189,11 +196,12 @@ public class PartyType10Code extends PartyTypeCode {
 	 * name} = "DelegateIssuer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDelegateIssuer = new MMCode() {
+	public static final PartyType10Code DelegateIssuer = new PartyType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegateIssuer";
-			owner_lazy = () -> PartyType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType10Code.mmObject();
+			codeName = PartyTypeCode.DelegateIssuer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -212,11 +220,12 @@ public class PartyType10Code extends PartyTypeCode {
 	 * name} = "HostingEntity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHostingEntity = new MMCode() {
+	public static final PartyType10Code HostingEntity = new PartyType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostingEntity";
-			owner_lazy = () -> PartyType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType10Code.mmObject();
+			codeName = PartyTypeCode.HostingEntity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -235,11 +244,12 @@ public class PartyType10Code extends PartyTypeCode {
 	 * name} = "IntermediaryAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntermediaryAgent = new MMCode() {
+	public static final PartyType10Code IntermediaryAgent = new PartyType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent";
-			owner_lazy = () -> PartyType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType10Code.mmObject();
+			codeName = PartyTypeCode.IntermediaryAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -258,11 +268,12 @@ public class PartyType10Code extends PartyTypeCode {
 	 * name} = "Merchant"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMerchant = new MMCode() {
+	public static final PartyType10Code Merchant = new PartyType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Merchant";
-			owner_lazy = () -> PartyType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType10Code.mmObject();
+			codeName = PartyTypeCode.Merchant.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -281,11 +292,12 @@ public class PartyType10Code extends PartyTypeCode {
 	 * name} = "OriginatingATM"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOriginatingATM = new MMCode() {
+	public static final PartyType10Code OriginatingATM = new PartyType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatingATM";
-			owner_lazy = () -> PartyType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType10Code.mmObject();
+			codeName = PartyTypeCode.OriginatingATM.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -304,26 +316,67 @@ public class PartyType10Code extends PartyTypeCode {
 	 * name} = "OriginatingPOI"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOriginatingPOI = new MMCode() {
+	public static final PartyType10Code OriginatingPOI = new PartyType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatingPOI";
-			owner_lazy = () -> PartyType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType10Code.mmObject();
+			codeName = PartyTypeCode.OriginatingPOI.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PartyType10Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PartyType10Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyType10Code";
 				definition = "Type of identified entity.";
-				code_lazy = () -> Arrays.asList(PartyType10Code.mmAcceptor, PartyType10Code.mmAcquirer, PartyType10Code.mmATMManager, PartyType10Code.mmCardIssuer, PartyType10Code.mmDelegateIssuer, PartyType10Code.mmHostingEntity,
-						PartyType10Code.mmIntermediaryAgent, PartyType10Code.mmMerchant, PartyType10Code.mmOriginatingATM, PartyType10Code.mmOriginatingPOI);
 				trace_lazy = () -> PartyTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType10Code.Acceptor, com.tools20022.repository.codeset.PartyType10Code.Acquirer, com.tools20022.repository.codeset.PartyType10Code.ATMManager,
+						com.tools20022.repository.codeset.PartyType10Code.CardIssuer, com.tools20022.repository.codeset.PartyType10Code.DelegateIssuer, com.tools20022.repository.codeset.PartyType10Code.HostingEntity,
+						com.tools20022.repository.codeset.PartyType10Code.IntermediaryAgent, com.tools20022.repository.codeset.PartyType10Code.Merchant, com.tools20022.repository.codeset.PartyType10Code.OriginatingATM,
+						com.tools20022.repository.codeset.PartyType10Code.OriginatingPOI);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Acceptor.getCodeName().get(), Acceptor);
+		codesByName.put(Acquirer.getCodeName().get(), Acquirer);
+		codesByName.put(ATMManager.getCodeName().get(), ATMManager);
+		codesByName.put(CardIssuer.getCodeName().get(), CardIssuer);
+		codesByName.put(DelegateIssuer.getCodeName().get(), DelegateIssuer);
+		codesByName.put(HostingEntity.getCodeName().get(), HostingEntity);
+		codesByName.put(IntermediaryAgent.getCodeName().get(), IntermediaryAgent);
+		codesByName.put(Merchant.getCodeName().get(), Merchant);
+		codesByName.put(OriginatingATM.getCodeName().get(), OriginatingATM);
+		codesByName.put(OriginatingPOI.getCodeName().get(), OriginatingPOI);
+	}
+
+	public static PartyType10Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PartyType10Code[] values() {
+		PartyType10Code[] values = new PartyType10Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PartyType10Code> {
+		@Override
+		public PartyType10Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PartyType10Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

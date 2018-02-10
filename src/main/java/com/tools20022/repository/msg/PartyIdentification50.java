@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -32,9 +33,8 @@ import com.tools20022.repository.entity.Country;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -88,8 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeclarationDetailsRule#forPartyIdentification50
+ * ConstraintDeclarationDetailsRule.forPartyIdentification50}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,16 +116,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyIdentification50", propOrder = {"ownerIdentification", "alternateIdentification", "domicileCountry", "nonDomicileCountry", "ownedSecuritiesQuantity", "certificationType", "declarationDetails"})
 public class PartyIdentification50 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OwnrId", required = true)
 	protected PartyIdentification48Choice ownerIdentification;
 	/**
-	 * Party that is the beneficial owner of the specified quantity of
-	 * securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -137,6 +145,9 @@ public class PartyIdentification50 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OwnrId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a::OWND</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -152,9 +163,10 @@ public class PartyIdentification50 {
 	public static final MMMessageAssociationEnd mmOwnerIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> BeneficialOwner.mmObject();
-			componentContext_lazy = () -> PartyIdentification50.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification50.mmObject();
 			isDerived = false;
 			xmlTag = "OwnrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::OWND"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnerIdentification";
 			definition = "Party that is the beneficial owner of the specified quantity of securities.";
@@ -164,10 +176,11 @@ public class PartyIdentification50 {
 			type_lazy = () -> PartyIdentification48Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AltrnId")
 	protected List<com.tools20022.repository.msg.AlternatePartyIdentification2> alternateIdentification;
 	/**
-	 * Alternate identification for a party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -187,6 +200,9 @@ public class PartyIdentification50 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AltrnId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -200,9 +216,10 @@ public class PartyIdentification50 {
 	public static final MMMessageAssociationEnd mmAlternateIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> PartyIdentification50.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification50.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateIdentification";
 			definition = "Alternate identification for a party.";
@@ -211,11 +228,11 @@ public class PartyIdentification50 {
 			type_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification2.mmObject();
 		}
 	};
+	@XmlElement(name = "DmclCtry")
 	protected CountryCode domicileCountry;
 	/**
-	 * Country in which a person is permanently domiciled (the place of a
-	 * persons permanent home).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -235,6 +252,9 @@ public class PartyIdentification50 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DmclCtry"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94C::DOMI</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -250,9 +270,10 @@ public class PartyIdentification50 {
 	public static final MMMessageAttribute mmDomicileCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> PartyIdentification50.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification50.mmObject();
 			isDerived = false;
 			xmlTag = "DmclCtry";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94C::DOMI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomicileCountry";
 			definition = "Country in which a person is permanently domiciled (the place of a persons permanent home).";
@@ -261,11 +282,11 @@ public class PartyIdentification50 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "NonDmclCtry")
 	protected List<CountryCode> nonDomicileCountry;
 	/**
-	 * Holder of the security certifies, in line with the terms of the corporate
-	 * action, that it is not domiciled in the country indicated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -285,6 +306,9 @@ public class PartyIdentification50 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NonDmclCtry"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94C::NDOM</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -300,9 +324,10 @@ public class PartyIdentification50 {
 	public static final MMMessageAttribute mmNonDomicileCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> PartyIdentification50.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification50.mmObject();
 			isDerived = false;
 			xmlTag = "NonDmclCtry";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94C::NDOM"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDomicileCountry";
 			definition = "Holder of the security certifies, in line with the terms of the corporate action, that it is not domiciled in the country indicated.";
@@ -310,10 +335,11 @@ public class PartyIdentification50 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "OwndSctiesQty", required = true)
 	protected FinancialInstrumentQuantity1Choice ownedSecuritiesQuantity;
 	/**
-	 * Quantity of securities belonging to the beneficial owner specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -333,6 +359,9 @@ public class PartyIdentification50 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OwndSctiesQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::OWND</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -347,9 +376,10 @@ public class PartyIdentification50 {
 	public static final MMMessageAssociationEnd mmOwnedSecuritiesQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
-			componentContext_lazy = () -> PartyIdentification50.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification50.mmObject();
 			isDerived = false;
 			xmlTag = "OwndSctiesQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::OWND"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnedSecuritiesQuantity";
 			definition = "Quantity of securities belonging to the beneficial owner specified.";
@@ -359,10 +389,11 @@ public class PartyIdentification50 {
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CertfctnTp")
 	protected List<BeneficiaryCertificationType2Choice> certificationType;
 	/**
-	 * Type of certification which is required.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -382,6 +413,9 @@ public class PartyIdentification50 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CertfctnTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::CETI</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -395,9 +429,10 @@ public class PartyIdentification50 {
 	public static final MMMessageAssociationEnd mmCertificationType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationType;
-			componentContext_lazy = () -> PartyIdentification50.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification50.mmObject();
 			isDerived = false;
 			xmlTag = "CertfctnTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CETI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationType";
 			definition = "Type of certification which is required.";
@@ -406,11 +441,11 @@ public class PartyIdentification50 {
 			type_lazy = () -> BeneficiaryCertificationType2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DclrtnDtls")
 	protected Max350Text declarationDetails;
 	/**
-	 * Provides details relative to the beneficial owner not included within
-	 * structured fields of this message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -430,6 +465,9 @@ public class PartyIdentification50 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DclrtnDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E::DECL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -445,9 +483,10 @@ public class PartyIdentification50 {
 	public static final MMMessageAttribute mmDeclarationDetails = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmDeclaration;
-			componentContext_lazy = () -> PartyIdentification50.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification50.mmObject();
 			isDerived = false;
 			xmlTag = "DclrtnDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E::DECL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclarationDetails";
 			definition = "Provides details relative to the beneficial owner not included within structured fields of this message.";
@@ -460,11 +499,14 @@ public class PartyIdentification50 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification50.mmOwnerIdentification, PartyIdentification50.mmAlternateIdentification, PartyIdentification50.mmDomicileCountry, PartyIdentification50.mmNonDomicileCountry,
-						PartyIdentification50.mmOwnedSecuritiesQuantity, PartyIdentification50.mmCertificationType, PartyIdentification50.mmDeclarationDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification50.mmOwnerIdentification, com.tools20022.repository.msg.PartyIdentification50.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentification50.mmDomicileCountry, com.tools20022.repository.msg.PartyIdentification50.mmNonDomicileCountry,
+						com.tools20022.repository.msg.PartyIdentification50.mmOwnedSecuritiesQuantity, com.tools20022.repository.msg.PartyIdentification50.mmCertificationType,
+						com.tools20022.repository.msg.PartyIdentification50.mmDeclarationDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV02.mmBeneficialOwnerDetails);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeclarationDetailsRule.forPartyIdentification50);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification50";
 				definition = "Provides information about the beneficial owner of the securities.";
@@ -474,66 +516,66 @@ public class PartyIdentification50 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OwnrId", required = true)
 	public PartyIdentification48Choice getOwnerIdentification() {
 		return ownerIdentification;
 	}
 
-	public void setOwnerIdentification(PartyIdentification48Choice ownerIdentification) {
-		this.ownerIdentification = ownerIdentification;
+	public PartyIdentification50 setOwnerIdentification(PartyIdentification48Choice ownerIdentification) {
+		this.ownerIdentification = Objects.requireNonNull(ownerIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AltrnId")
 	public List<AlternatePartyIdentification2> getAlternateIdentification() {
-		return alternateIdentification;
+		return alternateIdentification == null ? alternateIdentification = new ArrayList<>() : alternateIdentification;
 	}
 
-	public void setAlternateIdentification(List<com.tools20022.repository.msg.AlternatePartyIdentification2> alternateIdentification) {
-		this.alternateIdentification = alternateIdentification;
+	public PartyIdentification50 setAlternateIdentification(List<com.tools20022.repository.msg.AlternatePartyIdentification2> alternateIdentification) {
+		this.alternateIdentification = Objects.requireNonNull(alternateIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "DmclCtry")
-	public CountryCode getDomicileCountry() {
-		return domicileCountry;
+	public Optional<CountryCode> getDomicileCountry() {
+		return domicileCountry == null ? Optional.empty() : Optional.of(domicileCountry);
 	}
 
-	public void setDomicileCountry(CountryCode domicileCountry) {
+	public PartyIdentification50 setDomicileCountry(CountryCode domicileCountry) {
 		this.domicileCountry = domicileCountry;
+		return this;
 	}
 
-	@XmlElement(name = "NonDmclCtry")
 	public List<CountryCode> getNonDomicileCountry() {
-		return nonDomicileCountry;
+		return nonDomicileCountry == null ? nonDomicileCountry = new ArrayList<>() : nonDomicileCountry;
 	}
 
-	public void setNonDomicileCountry(List<CountryCode> nonDomicileCountry) {
-		this.nonDomicileCountry = nonDomicileCountry;
+	public PartyIdentification50 setNonDomicileCountry(List<CountryCode> nonDomicileCountry) {
+		this.nonDomicileCountry = Objects.requireNonNull(nonDomicileCountry);
+		return this;
 	}
 
-	@XmlElement(name = "OwndSctiesQty", required = true)
 	public FinancialInstrumentQuantity1Choice getOwnedSecuritiesQuantity() {
 		return ownedSecuritiesQuantity;
 	}
 
-	public void setOwnedSecuritiesQuantity(FinancialInstrumentQuantity1Choice ownedSecuritiesQuantity) {
-		this.ownedSecuritiesQuantity = ownedSecuritiesQuantity;
+	public PartyIdentification50 setOwnedSecuritiesQuantity(FinancialInstrumentQuantity1Choice ownedSecuritiesQuantity) {
+		this.ownedSecuritiesQuantity = Objects.requireNonNull(ownedSecuritiesQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "CertfctnTp")
 	public List<BeneficiaryCertificationType2Choice> getCertificationType() {
-		return certificationType;
+		return certificationType == null ? certificationType = new ArrayList<>() : certificationType;
 	}
 
-	public void setCertificationType(List<BeneficiaryCertificationType2Choice> certificationType) {
-		this.certificationType = certificationType;
+	public PartyIdentification50 setCertificationType(List<BeneficiaryCertificationType2Choice> certificationType) {
+		this.certificationType = Objects.requireNonNull(certificationType);
+		return this;
 	}
 
-	@XmlElement(name = "DclrtnDtls")
-	public Max350Text getDeclarationDetails() {
-		return declarationDetails;
+	public Optional<Max350Text> getDeclarationDetails() {
+		return declarationDetails == null ? Optional.empty() : Optional.of(declarationDetails);
 	}
 
-	public void setDeclarationDetails(Max350Text declarationDetails) {
+	public PartyIdentification50 setDeclarationDetails(Max350Text declarationDetails) {
 		this.declarationDetails = declarationDetails;
+		return this;
 	}
 }

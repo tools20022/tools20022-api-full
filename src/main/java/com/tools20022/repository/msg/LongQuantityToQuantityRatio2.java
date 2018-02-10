@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.QuantityRatio;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Ratio expressed as a quotient of quantities."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LongQuantityToQuantityRatio2", propOrder = {"longQuantity1", "longQuantity2"})
 public class LongQuantityToQuantityRatio2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LngQty1", required = true)
 	protected LongDecimalNumber longQuantity1;
 	/**
-	 * High precision numerator of the quotient of quantities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +109,7 @@ public class LongQuantityToQuantityRatio2 {
 	public static final MMMessageAttribute mmLongQuantity1 = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> QuantityRatio.mmQuantity1;
-			componentContext_lazy = () -> LongQuantityToQuantityRatio2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LongQuantityToQuantityRatio2.mmObject();
 			isDerived = false;
 			xmlTag = "LngQty1";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +120,11 @@ public class LongQuantityToQuantityRatio2 {
 			simpleType_lazy = () -> LongDecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "LngQty2", required = true)
 	protected LongDecimalNumber longQuantity2;
 	/**
-	 * High precision denominator of the quotient of quantities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +159,7 @@ public class LongQuantityToQuantityRatio2 {
 	public static final MMMessageAttribute mmLongQuantity2 = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> QuantityRatio.mmQuantity2;
-			componentContext_lazy = () -> LongQuantityToQuantityRatio2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LongQuantityToQuantityRatio2.mmObject();
 			isDerived = false;
 			xmlTag = "LngQty2";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,9 +174,9 @@ public class LongQuantityToQuantityRatio2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LongQuantityToQuantityRatio2.mmLongQuantity1, LongQuantityToQuantityRatio2.mmLongQuantity2);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LongQuantityToQuantityRatio2.mmLongQuantity1, com.tools20022.repository.msg.LongQuantityToQuantityRatio2.mmLongQuantity2);
 				trace_lazy = () -> QuantityRatio.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LongQuantityToQuantityRatio2";
 				definition = "Ratio expressed as a quotient of quantities.";
@@ -182,21 +185,21 @@ public class LongQuantityToQuantityRatio2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LngQty1", required = true)
 	public LongDecimalNumber getLongQuantity1() {
 		return longQuantity1;
 	}
 
-	public void setLongQuantity1(LongDecimalNumber longQuantity1) {
-		this.longQuantity1 = longQuantity1;
+	public LongQuantityToQuantityRatio2 setLongQuantity1(LongDecimalNumber longQuantity1) {
+		this.longQuantity1 = Objects.requireNonNull(longQuantity1);
+		return this;
 	}
 
-	@XmlElement(name = "LngQty2", required = true)
 	public LongDecimalNumber getLongQuantity2() {
 		return longQuantity2;
 	}
 
-	public void setLongQuantity2(LongDecimalNumber longQuantity2) {
-		this.longQuantity2 = longQuantity2;
+	public LongQuantityToQuantityRatio2 setLongQuantity2(LongDecimalNumber longQuantity2) {
+		this.longQuantity2 = Objects.requireNonNull(longQuantity2);
+		return this;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -78,8 +79,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,15 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information specific to an amendment or cancellation."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmendInformation1", propOrder = {"previousReference", "reconfirmInstructions"})
 public class AmendInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrvsRef", required = true)
 	protected MessageIdentification previousReference;
 	/**
-	 * Identifies the linked message which was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -124,7 +126,7 @@ public class AmendInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AmendInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmendInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,12 +138,11 @@ public class AmendInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.MessageIdentification.mmObject();
 		}
 	};
+	@XmlElement(name = "RcnfrmInstrs", required = true)
 	protected YesNoIndicator reconfirmInstructions;
 	/**
-	 * Indicates whether instructions must be resent (in case of modification of
-	 * the parameters of a meeting for which instructions have already been
-	 * sent).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +172,7 @@ public class AmendInformation1 {
 	 */
 	public static final MMMessageAttribute mmReconfirmInstructions = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AmendInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmendInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "RcnfrmInstrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,10 +187,10 @@ public class AmendInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmendInformation1.mmPreviousReference, AmendInformation1.mmReconfirmInstructions);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmendInformation1.mmPreviousReference, com.tools20022.repository.msg.AmendInformation1.mmReconfirmInstructions);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV02.mmAmendment, MeetingNotificationV03.mmAmendment, MeetingNotificationV04.mmAmendment, MeetingCancellationV02.mmMessageCancellation,
 						MeetingCancellationV03.mmMessageCancellation, MeetingCancellationV04.mmMessageCancellation, MeetingNotificationV05.mmAmendment);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmendInformation1";
 				definition = "Information specific to an amendment or cancellation.";
@@ -198,21 +199,21 @@ public class AmendInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrvsRef", required = true)
 	public MessageIdentification getPreviousReference() {
 		return previousReference;
 	}
 
-	public void setPreviousReference(com.tools20022.repository.msg.MessageIdentification previousReference) {
-		this.previousReference = previousReference;
+	public AmendInformation1 setPreviousReference(com.tools20022.repository.msg.MessageIdentification previousReference) {
+		this.previousReference = Objects.requireNonNull(previousReference);
+		return this;
 	}
 
-	@XmlElement(name = "RcnfrmInstrs", required = true)
 	public YesNoIndicator getReconfirmInstructions() {
 		return reconfirmInstructions;
 	}
 
-	public void setReconfirmInstructions(YesNoIndicator reconfirmInstructions) {
-		this.reconfirmInstructions = reconfirmInstructions;
+	public AmendInformation1 setReconfirmInstructions(YesNoIndicator reconfirmInstructions) {
+		this.reconfirmInstructions = Objects.requireNonNull(reconfirmInstructions);
+		return this;
 	}
 }

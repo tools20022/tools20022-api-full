@@ -20,54 +20,55 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.BalanceTypeCode;
+import com.tools20022.repository.codeset.BalanceType13Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the kind of the balance.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode
- * BalanceTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#mmInvestments
- * BalanceType13Code.mmInvestments}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#Investments
+ * BalanceType13Code.Investments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#mmCashAndCashEquivalents
- * BalanceType13Code.mmCashAndCashEquivalents}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#CashAndCashEquivalents
+ * BalanceType13Code.CashAndCashEquivalents}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#mmBorrowings
- * BalanceType13Code.mmBorrowings}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#Borrowings
+ * BalanceType13Code.Borrowings}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceType13Code#Revenues
+ * BalanceType13Code.Revenues}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceType13Code#Expenses
+ * BalanceType13Code.Expenses}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#mmRevenues
- * BalanceType13Code.mmRevenues}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#InvestorInflowOutflow
+ * BalanceType13Code.InvestorInflowOutflow}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceType13Code#Other
+ * BalanceType13Code.Other}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceType13Code#Payables
+ * BalanceType13Code.Payables}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#mmExpenses
- * BalanceType13Code.mmExpenses}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#mmInvestorInflowOutflow
- * BalanceType13Code.mmInvestorInflowOutflow}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceType13Code#mmOther
- * BalanceType13Code.mmOther}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#mmPayables
- * BalanceType13Code.mmPayables}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#mmReceivables
- * BalanceType13Code.mmReceivables}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceType13Code#Receivables
+ * BalanceType13Code.Receivables}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode
+ * BalanceTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the kind of the balance."</li>
  * </ul>
  */
-public class BalanceType13Code extends BalanceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BalanceType13Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -103,11 +105,12 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 * name} = "Investments"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestments = new MMCode() {
+	public static final BalanceType13Code Investments = new BalanceType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investments";
-			owner_lazy = () -> BalanceType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceType13Code.mmObject();
+			codeName = BalanceTypeCode.Investments.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -126,11 +129,12 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 * name} = "CashAndCashEquivalents"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashAndCashEquivalents = new MMCode() {
+	public static final BalanceType13Code CashAndCashEquivalents = new BalanceType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAndCashEquivalents";
-			owner_lazy = () -> BalanceType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceType13Code.mmObject();
+			codeName = BalanceTypeCode.CashAndCashEquivalents.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -149,11 +153,12 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 * name} = "Borrowings"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBorrowings = new MMCode() {
+	public static final BalanceType13Code Borrowings = new BalanceType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Borrowings";
-			owner_lazy = () -> BalanceType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceType13Code.mmObject();
+			codeName = BalanceTypeCode.Borrowings.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -172,11 +177,12 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 * name} = "Revenues"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRevenues = new MMCode() {
+	public static final BalanceType13Code Revenues = new BalanceType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Revenues";
-			owner_lazy = () -> BalanceType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceType13Code.mmObject();
+			codeName = BalanceTypeCode.Revenues.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -195,11 +201,12 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 * name} = "Expenses"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExpenses = new MMCode() {
+	public static final BalanceType13Code Expenses = new BalanceType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expenses";
-			owner_lazy = () -> BalanceType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceType13Code.mmObject();
+			codeName = BalanceTypeCode.Expenses.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -218,11 +225,12 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 * name} = "InvestorInflowOutflow"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestorInflowOutflow = new MMCode() {
+	public static final BalanceType13Code InvestorInflowOutflow = new BalanceType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorInflowOutflow";
-			owner_lazy = () -> BalanceType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceType13Code.mmObject();
+			codeName = BalanceTypeCode.InvestorInflowOutflow.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -241,11 +249,12 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final BalanceType13Code Other = new BalanceType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> BalanceType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceType13Code.mmObject();
+			codeName = BalanceTypeCode.Other.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -264,11 +273,12 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 * name} = "Payables"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPayables = new MMCode() {
+	public static final BalanceType13Code Payables = new BalanceType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payables";
-			owner_lazy = () -> BalanceType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceType13Code.mmObject();
+			codeName = BalanceTypeCode.Payables.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -287,27 +297,67 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 * name} = "Receivables"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceivables = new MMCode() {
+	public static final BalanceType13Code Receivables = new BalanceType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Receivables";
-			owner_lazy = () -> BalanceType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceType13Code.mmObject();
+			codeName = BalanceTypeCode.Receivables.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, BalanceType13Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BalanceType13Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("INVE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceType13Code";
 				definition = "Specifies the kind of the balance.";
-				code_lazy = () -> Arrays.asList(BalanceType13Code.mmInvestments, BalanceType13Code.mmCashAndCashEquivalents, BalanceType13Code.mmBorrowings, BalanceType13Code.mmRevenues, BalanceType13Code.mmExpenses,
-						BalanceType13Code.mmInvestorInflowOutflow, BalanceType13Code.mmOther, BalanceType13Code.mmPayables, BalanceType13Code.mmReceivables);
 				trace_lazy = () -> BalanceTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BalanceType13Code.Investments, com.tools20022.repository.codeset.BalanceType13Code.CashAndCashEquivalents,
+						com.tools20022.repository.codeset.BalanceType13Code.Borrowings, com.tools20022.repository.codeset.BalanceType13Code.Revenues, com.tools20022.repository.codeset.BalanceType13Code.Expenses,
+						com.tools20022.repository.codeset.BalanceType13Code.InvestorInflowOutflow, com.tools20022.repository.codeset.BalanceType13Code.Other, com.tools20022.repository.codeset.BalanceType13Code.Payables,
+						com.tools20022.repository.codeset.BalanceType13Code.Receivables);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Investments.getCodeName().get(), Investments);
+		codesByName.put(CashAndCashEquivalents.getCodeName().get(), CashAndCashEquivalents);
+		codesByName.put(Borrowings.getCodeName().get(), Borrowings);
+		codesByName.put(Revenues.getCodeName().get(), Revenues);
+		codesByName.put(Expenses.getCodeName().get(), Expenses);
+		codesByName.put(InvestorInflowOutflow.getCodeName().get(), InvestorInflowOutflow);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(Payables.getCodeName().get(), Payables);
+		codesByName.put(Receivables.getCodeName().get(), Receivables);
+	}
+
+	public static BalanceType13Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BalanceType13Code[] values() {
+		BalanceType13Code[] values = new BalanceType13Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BalanceType13Code> {
+		@Override
+		public BalanceType13Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BalanceType13Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

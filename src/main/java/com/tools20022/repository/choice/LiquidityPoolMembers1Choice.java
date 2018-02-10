@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.AccountOwnerAndIdentification1;
 import com.tools20022.repository.msg.AccountOwnerAndIdentificationList1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LiquidityPoolMembers1Choice", propOrder = {"headMemberDetails", "subordinateMemberDetails"})
 public class LiquidityPoolMembers1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "HeadMmbDtls", required = true)
 	protected AccountOwnerAndIdentification1 headMemberDetails;
 	/**
-	 * Information about head member of liquidity pool.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -100,7 +102,7 @@ public class LiquidityPoolMembers1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmHeadMemberDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LiquidityPoolMembers1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.LiquidityPoolMembers1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "HeadMmbDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +114,11 @@ public class LiquidityPoolMembers1Choice {
 			type_lazy = () -> AccountOwnerAndIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "SubrdntMmbDtls", required = true)
 	protected AccountOwnerAndIdentificationList1 subordinateMemberDetails;
 	/**
-	 * List of subordinate liquidity pool member.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -142,7 +145,7 @@ public class LiquidityPoolMembers1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSubordinateMemberDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LiquidityPoolMembers1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.LiquidityPoolMembers1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SubrdntMmbDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,8 +161,8 @@ public class LiquidityPoolMembers1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LiquidityPoolMembers1Choice.mmHeadMemberDetails, LiquidityPoolMembers1Choice.mmSubordinateMemberDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LiquidityPoolMembers1Choice.mmHeadMemberDetails, com.tools20022.repository.choice.LiquidityPoolMembers1Choice.mmSubordinateMemberDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LiquidityPoolMembers1Choice";
 				definition = "Choice between head member or subordinate member identifiers of liquidity pool. ";
@@ -168,21 +171,21 @@ public class LiquidityPoolMembers1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "HeadMmbDtls", required = true)
 	public AccountOwnerAndIdentification1 getHeadMemberDetails() {
 		return headMemberDetails;
 	}
 
-	public void setHeadMemberDetails(AccountOwnerAndIdentification1 headMemberDetails) {
-		this.headMemberDetails = headMemberDetails;
+	public LiquidityPoolMembers1Choice setHeadMemberDetails(AccountOwnerAndIdentification1 headMemberDetails) {
+		this.headMemberDetails = Objects.requireNonNull(headMemberDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SubrdntMmbDtls", required = true)
 	public AccountOwnerAndIdentificationList1 getSubordinateMemberDetails() {
 		return subordinateMemberDetails;
 	}
 
-	public void setSubordinateMemberDetails(AccountOwnerAndIdentificationList1 subordinateMemberDetails) {
-		this.subordinateMemberDetails = subordinateMemberDetails;
+	public LiquidityPoolMembers1Choice setSubordinateMemberDetails(AccountOwnerAndIdentificationList1 subordinateMemberDetails) {
+		this.subordinateMemberDetails = Objects.requireNonNull(subordinateMemberDetails);
+		return this;
 	}
 }

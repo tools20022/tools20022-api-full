@@ -28,9 +28,8 @@ import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Discount;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * PaymentTerms3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "EarlyPayment1", propOrder = {"earlyPaymentDate", "discountPercent", "discountAmount", "earlyPaymentTaxSpecification", "earlyPaymentTaxTotal", "duePayableAmountWithEarlyPayment"})
 public class EarlyPayment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "EarlyPmtDt", required = true)
 	protected ISODate earlyPaymentDate;
 	/**
-	 * Date before which the early payment discount is valid for payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +119,7 @@ public class EarlyPayment1 {
 	 */
 	public static final MMMessageAttribute mmEarlyPaymentDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EarlyPayment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPayment1.mmObject();
 			isDerived = false;
 			xmlTag = "EarlyPmtDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +130,11 @@ public class EarlyPayment1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DscntPct", required = true)
 	protected PercentageRate discountPercent;
 	/**
-	 * Discount percent for early payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +172,7 @@ public class EarlyPayment1 {
 	public static final MMMessageAttribute mmDiscountPercent = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
-			componentContext_lazy = () -> EarlyPayment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPayment1.mmObject();
 			isDerived = false;
 			xmlTag = "DscntPct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,10 +184,11 @@ public class EarlyPayment1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "DscntAmt", required = true)
 	protected CurrencyAndAmount discountAmount;
 	/**
-	 * Early payment discount with tax, with currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -224,7 +226,7 @@ public class EarlyPayment1 {
 	public static final MMMessageAttribute mmDiscountAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Discount.mmDiscountAppliedAmount;
-			componentContext_lazy = () -> EarlyPayment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPayment1.mmObject();
 			isDerived = false;
 			xmlTag = "DscntAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,11 +238,11 @@ public class EarlyPayment1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "EarlyPmtTaxSpcfctn")
 	protected List<com.tools20022.repository.msg.EarlyPaymentsVAT1> earlyPaymentTaxSpecification;
 	/**
-	 * In tax specification for early payment discount one defined the applied
-	 * tax rates for specific early payment. VAT stands for value added tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -273,7 +275,7 @@ public class EarlyPayment1 {
 	public static final MMMessageAssociationEnd mmEarlyPaymentTaxSpecification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmTradeSettlement;
-			componentContext_lazy = () -> EarlyPayment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPayment1.mmObject();
 			isDerived = false;
 			xmlTag = "EarlyPmtTaxSpcfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,10 +286,11 @@ public class EarlyPayment1 {
 			type_lazy = () -> com.tools20022.repository.msg.EarlyPaymentsVAT1.mmObject();
 		}
 	};
+	@XmlElement(name = "EarlyPmtTaxTtl")
 	protected CurrencyAndAmount earlyPaymentTaxTotal;
 	/**
-	 * Tax total in early payment, with currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -314,7 +317,7 @@ public class EarlyPayment1 {
 	 */
 	public static final MMMessageAttribute mmEarlyPaymentTaxTotal = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EarlyPayment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPayment1.mmObject();
 			isDerived = false;
 			xmlTag = "EarlyPmtTaxTtl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,10 +328,11 @@ public class EarlyPayment1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "DuePyblAmtWthEarlyPmt")
 	protected CurrencyAndAmount duePayableAmountWithEarlyPayment;
 	/**
-	 * Payable amount with discount of early payment, with currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -356,7 +360,7 @@ public class EarlyPayment1 {
 	 */
 	public static final MMMessageAttribute mmDuePayableAmountWithEarlyPayment = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EarlyPayment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPayment1.mmObject();
 			isDerived = false;
 			xmlTag = "DuePyblAmtWthEarlyPmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -371,10 +375,11 @@ public class EarlyPayment1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EarlyPayment1.mmEarlyPaymentDate, EarlyPayment1.mmDiscountPercent, EarlyPayment1.mmDiscountAmount, EarlyPayment1.mmEarlyPaymentTaxSpecification,
-						EarlyPayment1.mmEarlyPaymentTaxTotal, EarlyPayment1.mmDuePayableAmountWithEarlyPayment);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EarlyPayment1.mmEarlyPaymentDate, com.tools20022.repository.msg.EarlyPayment1.mmDiscountPercent,
+						com.tools20022.repository.msg.EarlyPayment1.mmDiscountAmount, com.tools20022.repository.msg.EarlyPayment1.mmEarlyPaymentTaxSpecification, com.tools20022.repository.msg.EarlyPayment1.mmEarlyPaymentTaxTotal,
+						com.tools20022.repository.msg.EarlyPayment1.mmDuePayableAmountWithEarlyPayment);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EarlyPayment1";
 				definition = "Specifies the payment terms of the underlying transaction.";
@@ -384,57 +389,57 @@ public class EarlyPayment1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "EarlyPmtDt", required = true)
 	public ISODate getEarlyPaymentDate() {
 		return earlyPaymentDate;
 	}
 
-	public void setEarlyPaymentDate(ISODate earlyPaymentDate) {
-		this.earlyPaymentDate = earlyPaymentDate;
+	public EarlyPayment1 setEarlyPaymentDate(ISODate earlyPaymentDate) {
+		this.earlyPaymentDate = Objects.requireNonNull(earlyPaymentDate);
+		return this;
 	}
 
-	@XmlElement(name = "DscntPct", required = true)
 	public PercentageRate getDiscountPercent() {
 		return discountPercent;
 	}
 
-	public void setDiscountPercent(PercentageRate discountPercent) {
-		this.discountPercent = discountPercent;
+	public EarlyPayment1 setDiscountPercent(PercentageRate discountPercent) {
+		this.discountPercent = Objects.requireNonNull(discountPercent);
+		return this;
 	}
 
-	@XmlElement(name = "DscntAmt", required = true)
 	public CurrencyAndAmount getDiscountAmount() {
 		return discountAmount;
 	}
 
-	public void setDiscountAmount(CurrencyAndAmount discountAmount) {
-		this.discountAmount = discountAmount;
+	public EarlyPayment1 setDiscountAmount(CurrencyAndAmount discountAmount) {
+		this.discountAmount = Objects.requireNonNull(discountAmount);
+		return this;
 	}
 
-	@XmlElement(name = "EarlyPmtTaxSpcfctn")
 	public List<EarlyPaymentsVAT1> getEarlyPaymentTaxSpecification() {
-		return earlyPaymentTaxSpecification;
+		return earlyPaymentTaxSpecification == null ? earlyPaymentTaxSpecification = new ArrayList<>() : earlyPaymentTaxSpecification;
 	}
 
-	public void setEarlyPaymentTaxSpecification(List<com.tools20022.repository.msg.EarlyPaymentsVAT1> earlyPaymentTaxSpecification) {
-		this.earlyPaymentTaxSpecification = earlyPaymentTaxSpecification;
+	public EarlyPayment1 setEarlyPaymentTaxSpecification(List<com.tools20022.repository.msg.EarlyPaymentsVAT1> earlyPaymentTaxSpecification) {
+		this.earlyPaymentTaxSpecification = Objects.requireNonNull(earlyPaymentTaxSpecification);
+		return this;
 	}
 
-	@XmlElement(name = "EarlyPmtTaxTtl")
-	public CurrencyAndAmount getEarlyPaymentTaxTotal() {
-		return earlyPaymentTaxTotal;
+	public Optional<CurrencyAndAmount> getEarlyPaymentTaxTotal() {
+		return earlyPaymentTaxTotal == null ? Optional.empty() : Optional.of(earlyPaymentTaxTotal);
 	}
 
-	public void setEarlyPaymentTaxTotal(CurrencyAndAmount earlyPaymentTaxTotal) {
+	public EarlyPayment1 setEarlyPaymentTaxTotal(CurrencyAndAmount earlyPaymentTaxTotal) {
 		this.earlyPaymentTaxTotal = earlyPaymentTaxTotal;
+		return this;
 	}
 
-	@XmlElement(name = "DuePyblAmtWthEarlyPmt")
-	public CurrencyAndAmount getDuePayableAmountWithEarlyPayment() {
-		return duePayableAmountWithEarlyPayment;
+	public Optional<CurrencyAndAmount> getDuePayableAmountWithEarlyPayment() {
+		return duePayableAmountWithEarlyPayment == null ? Optional.empty() : Optional.of(duePayableAmountWithEarlyPayment);
 	}
 
-	public void setDuePayableAmountWithEarlyPayment(CurrencyAndAmount duePayableAmountWithEarlyPayment) {
+	public EarlyPayment1 setDuePayableAmountWithEarlyPayment(CurrencyAndAmount duePayableAmountWithEarlyPayment) {
 		this.duePayableAmountWithEarlyPayment = duePayableAmountWithEarlyPayment;
+		return this;
 	}
 }

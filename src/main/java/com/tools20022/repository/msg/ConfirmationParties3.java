@@ -25,6 +25,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +74,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,16 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ConfirmationParties3", propOrder = {"affirmingParty", "buyer", "borrower", "seller", "lender", "tradeBeneficiaryParty"})
 public class ConfirmationParties3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AffrmgPty", required = true)
 	protected ConfirmationPartyDetails4 affirmingParty;
 	/**
-	 * Party (buyer or seller) that positively affirms the details of a
-	 * previously agreed security trade confirmation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,7 +133,7 @@ public class ConfirmationParties3 {
 	public static final MMMessageAttribute mmAffirmingParty = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AffirmingPartyRole.mmObject();
-			componentContext_lazy = () -> ConfirmationParties3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties3.mmObject();
 			isDerived = false;
 			xmlTag = "AffrmgPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,10 +144,11 @@ public class ConfirmationParties3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails4.mmObject();
 		}
 	};
+	@XmlElement(name = "Buyr")
 	protected ConfirmationPartyDetails2 buyer;
 	/**
-	 * Party that buys goods or services, or a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,7 +182,7 @@ public class ConfirmationParties3 {
 	public static final MMMessageAttribute mmBuyer = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> BuyerRole.mmObject();
-			componentContext_lazy = () -> ConfirmationParties3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties3.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,16 +193,11 @@ public class ConfirmationParties3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails2.mmObject();
 		}
 	};
+	@XmlElement(name = "Brrwr")
 	protected ConfirmationPartyDetails2 borrower;
 	/**
-	 * Party that has applied, met specific requirements, and received a
-	 * monetary or securities loan from a lender. The party initiating the
-	 * request signs a promissory note agreeing to pay the lien holder back
-	 * during a specified timeframe for the entire loan amount plus any
-	 * additional fees. The borrower is legally responsible for repayment of the
-	 * loan and is subject to any penalties for not repaying the loan back based
-	 * on the lending terms agreed upon.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,7 +232,7 @@ public class ConfirmationParties3 {
 	public static final MMMessageAttribute mmBorrower = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> Borrower.mmObject();
-			componentContext_lazy = () -> ConfirmationParties3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties3.mmObject();
 			isDerived = false;
 			xmlTag = "Brrwr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,10 +243,11 @@ public class ConfirmationParties3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails2.mmObject();
 		}
 	};
+	@XmlElement(name = "Sellr")
 	protected ConfirmationPartyDetails2 seller;
 	/**
-	 * Party that sells goods or services, or a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -282,7 +281,7 @@ public class ConfirmationParties3 {
 	public static final MMMessageAttribute mmSeller = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SellerRole.mmObject();
-			componentContext_lazy = () -> ConfirmationParties3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties3.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -293,11 +292,11 @@ public class ConfirmationParties3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails2.mmObject();
 		}
 	};
+	@XmlElement(name = "Lndr")
 	protected ConfirmationPartyDetails2 lender;
 	/**
-	 * A private, public or institutional entity which makes funds available to
-	 * others to borrow.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -332,7 +331,7 @@ public class ConfirmationParties3 {
 	public static final MMMessageAttribute mmLender = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> Lender.mmObject();
-			componentContext_lazy = () -> ConfirmationParties3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties3.mmObject();
 			isDerived = false;
 			xmlTag = "Lndr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -343,10 +342,11 @@ public class ConfirmationParties3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails2.mmObject();
 		}
 	};
+	@XmlElement(name = "TradBnfcryPty")
 	protected ConfirmationPartyDetails3 tradeBeneficiaryParty;
 	/**
-	 * Party involved in a legal proceeding, agreement, or other transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -382,7 +382,7 @@ public class ConfirmationParties3 {
 	public static final MMMessageAttribute mmTradeBeneficiaryParty = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> BeneficialOwner.mmObject();
-			componentContext_lazy = () -> ConfirmationParties3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties3.mmObject();
 			isDerived = false;
 			xmlTag = "TradBnfcryPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -397,11 +397,12 @@ public class ConfirmationParties3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ConfirmationParties3.mmAffirmingParty, ConfirmationParties3.mmBuyer, ConfirmationParties3.mmBorrower, ConfirmationParties3.mmSeller, ConfirmationParties3.mmLender,
-						ConfirmationParties3.mmTradeBeneficiaryParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties3.mmAffirmingParty, com.tools20022.repository.msg.ConfirmationParties3.mmBuyer,
+						com.tools20022.repository.msg.ConfirmationParties3.mmBorrower, com.tools20022.repository.msg.ConfirmationParties3.mmSeller, com.tools20022.repository.msg.ConfirmationParties3.mmLender,
+						com.tools20022.repository.msg.ConfirmationParties3.mmTradeBeneficiaryParty);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationResponseV01.mmConfirmationParties);
 				trace_lazy = () -> TradePartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationParties3";
 				definition = "Parties used for acting parties that apply either to the whole message or to individual sides.";
@@ -410,57 +411,57 @@ public class ConfirmationParties3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AffrmgPty", required = true)
 	public ConfirmationPartyDetails4 getAffirmingParty() {
 		return affirmingParty;
 	}
 
-	public void setAffirmingParty(com.tools20022.repository.msg.ConfirmationPartyDetails4 affirmingParty) {
-		this.affirmingParty = affirmingParty;
+	public ConfirmationParties3 setAffirmingParty(com.tools20022.repository.msg.ConfirmationPartyDetails4 affirmingParty) {
+		this.affirmingParty = Objects.requireNonNull(affirmingParty);
+		return this;
 	}
 
-	@XmlElement(name = "Buyr")
-	public ConfirmationPartyDetails2 getBuyer() {
-		return buyer;
+	public Optional<ConfirmationPartyDetails2> getBuyer() {
+		return buyer == null ? Optional.empty() : Optional.of(buyer);
 	}
 
-	public void setBuyer(com.tools20022.repository.msg.ConfirmationPartyDetails2 buyer) {
+	public ConfirmationParties3 setBuyer(com.tools20022.repository.msg.ConfirmationPartyDetails2 buyer) {
 		this.buyer = buyer;
+		return this;
 	}
 
-	@XmlElement(name = "Brrwr")
-	public ConfirmationPartyDetails2 getBorrower() {
-		return borrower;
+	public Optional<ConfirmationPartyDetails2> getBorrower() {
+		return borrower == null ? Optional.empty() : Optional.of(borrower);
 	}
 
-	public void setBorrower(com.tools20022.repository.msg.ConfirmationPartyDetails2 borrower) {
+	public ConfirmationParties3 setBorrower(com.tools20022.repository.msg.ConfirmationPartyDetails2 borrower) {
 		this.borrower = borrower;
+		return this;
 	}
 
-	@XmlElement(name = "Sellr")
-	public ConfirmationPartyDetails2 getSeller() {
-		return seller;
+	public Optional<ConfirmationPartyDetails2> getSeller() {
+		return seller == null ? Optional.empty() : Optional.of(seller);
 	}
 
-	public void setSeller(com.tools20022.repository.msg.ConfirmationPartyDetails2 seller) {
+	public ConfirmationParties3 setSeller(com.tools20022.repository.msg.ConfirmationPartyDetails2 seller) {
 		this.seller = seller;
+		return this;
 	}
 
-	@XmlElement(name = "Lndr")
-	public ConfirmationPartyDetails2 getLender() {
-		return lender;
+	public Optional<ConfirmationPartyDetails2> getLender() {
+		return lender == null ? Optional.empty() : Optional.of(lender);
 	}
 
-	public void setLender(com.tools20022.repository.msg.ConfirmationPartyDetails2 lender) {
+	public ConfirmationParties3 setLender(com.tools20022.repository.msg.ConfirmationPartyDetails2 lender) {
 		this.lender = lender;
+		return this;
 	}
 
-	@XmlElement(name = "TradBnfcryPty")
-	public ConfirmationPartyDetails3 getTradeBeneficiaryParty() {
-		return tradeBeneficiaryParty;
+	public Optional<ConfirmationPartyDetails3> getTradeBeneficiaryParty() {
+		return tradeBeneficiaryParty == null ? Optional.empty() : Optional.of(tradeBeneficiaryParty);
 	}
 
-	public void setTradeBeneficiaryParty(com.tools20022.repository.msg.ConfirmationPartyDetails3 tradeBeneficiaryParty) {
+	public ConfirmationParties3 setTradeBeneficiaryParty(com.tools20022.repository.msg.ConfirmationPartyDetails3 tradeBeneficiaryParty) {
 		this.tradeBeneficiaryParty = tradeBeneficiaryParty;
+		return this;
 	}
 }

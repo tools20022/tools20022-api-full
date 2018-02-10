@@ -25,9 +25,8 @@ import com.tools20022.repository.area.AccountManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.BankAccountManagementISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -44,22 +43,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AccountManagementLatestVersion
- * AccountManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.BankAccountManagementISOLatestversion
- * BankAccountManagementISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AcctExcldMndtMntncReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -96,6 +79,22 @@ import javax.xml.bind.annotation.*;
  * AccountExcludedMandateMaintenanceRequestV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.BankAccountManagementISOLatestversion
+ * BankAccountManagementISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AcctExcldMndtMntncReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AccountManagementLatestVersion
+ * AccountManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code acmt.015.001.02}</li>
@@ -115,17 +114,17 @@ import javax.xml.bind.annotation.*;
  * AccountExcludedMandateMaintenanceRequestV01}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountExcludedMandateMaintenanceRequestV02", propOrder = {"references", "from", "contractDates", "underlyingMasterAgreement", "account", "accountServicerIdentification", "organisation", "additionalMessageInformation",
 		"digitalSignature", "supplementaryData"})
 public class AccountExcludedMandateMaintenanceRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Refs", required = true)
 	protected References4 references;
 	/**
-	 * Set of elements for the identification of the message and related
-	 * references.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,11 +165,11 @@ public class AccountExcludedMandateMaintenanceRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Fr")
 	protected OrganisationIdentification8 from;
 	/**
-	 * Identifies the business sender of the message, if it is not the account
-	 * owner or account servicing financial institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -212,10 +211,11 @@ public class AccountExcludedMandateMaintenanceRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CtrctDts")
 	protected AccountContract2 contractDates;
 	/**
-	 * Specifies target dates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -255,12 +255,11 @@ public class AccountExcludedMandateMaintenanceRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "UndrlygMstrAgrmt")
 	protected ContractDocument1 underlyingMasterAgreement;
 	/**
-	 * Account contract established between the organisation or the group to
-	 * which the organisation belongs, and the account servicer. This contract
-	 * has to be applied for the new account to be opened and maintained.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -302,11 +301,11 @@ public class AccountExcludedMandateMaintenanceRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Acct", required = true)
 	protected CustomerAccountModification1 account;
 	/**
-	 * Unique and unambiguous identification of the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -348,11 +347,11 @@ public class AccountExcludedMandateMaintenanceRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctSvcrId", required = true)
 	protected BranchAndFinancialInstitutionIdentification5 accountServicerIdentification;
 	/**
-	 * Unique and unambiguous identifier of a financial institution, as assigned
-	 * under an internationally recognised or proprietary identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -394,12 +393,11 @@ public class AccountExcludedMandateMaintenanceRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Org", required = true)
 	protected OrganisationModification1 organisation;
 	/**
-	 * Organised structure that is set up for a particular purpose, for example,
-	 * a business, government body, department, charity, or financial
-	 * institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -441,10 +439,11 @@ public class AccountExcludedMandateMaintenanceRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "AddtlMsgInf")
 	protected AdditionalInformation5 additionalMessageInformation;
 	/**
-	 * Contains additional information related to the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -484,11 +483,11 @@ public class AccountExcludedMandateMaintenanceRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "DgtlSgntr")
 	protected List<PartyAndSignature2> digitalSignature;
 	/**
-	 * Contains the signature with its components, namely signed info, signature
-	 * value, key info and the object.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -529,11 +528,11 @@ public class AccountExcludedMandateMaintenanceRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -610,97 +609,97 @@ public class AccountExcludedMandateMaintenanceRequestV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Refs", required = true)
 	public References4 getReferences() {
 		return references;
 	}
 
-	public void setReferences(References4 references) {
-		this.references = references;
+	public AccountExcludedMandateMaintenanceRequestV02 setReferences(References4 references) {
+		this.references = Objects.requireNonNull(references);
+		return this;
 	}
 
-	@XmlElement(name = "Fr")
-	public OrganisationIdentification8 getFrom() {
-		return from;
+	public Optional<OrganisationIdentification8> getFrom() {
+		return from == null ? Optional.empty() : Optional.of(from);
 	}
 
-	public void setFrom(OrganisationIdentification8 from) {
+	public AccountExcludedMandateMaintenanceRequestV02 setFrom(OrganisationIdentification8 from) {
 		this.from = from;
+		return this;
 	}
 
-	@XmlElement(name = "CtrctDts")
-	public AccountContract2 getContractDates() {
-		return contractDates;
+	public Optional<AccountContract2> getContractDates() {
+		return contractDates == null ? Optional.empty() : Optional.of(contractDates);
 	}
 
-	public void setContractDates(AccountContract2 contractDates) {
+	public AccountExcludedMandateMaintenanceRequestV02 setContractDates(AccountContract2 contractDates) {
 		this.contractDates = contractDates;
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygMstrAgrmt")
-	public ContractDocument1 getUnderlyingMasterAgreement() {
-		return underlyingMasterAgreement;
+	public Optional<ContractDocument1> getUnderlyingMasterAgreement() {
+		return underlyingMasterAgreement == null ? Optional.empty() : Optional.of(underlyingMasterAgreement);
 	}
 
-	public void setUnderlyingMasterAgreement(ContractDocument1 underlyingMasterAgreement) {
+	public AccountExcludedMandateMaintenanceRequestV02 setUnderlyingMasterAgreement(ContractDocument1 underlyingMasterAgreement) {
 		this.underlyingMasterAgreement = underlyingMasterAgreement;
+		return this;
 	}
 
-	@XmlElement(name = "Acct", required = true)
 	public CustomerAccountModification1 getAccount() {
 		return account;
 	}
 
-	public void setAccount(CustomerAccountModification1 account) {
-		this.account = account;
+	public AccountExcludedMandateMaintenanceRequestV02 setAccount(CustomerAccountModification1 account) {
+		this.account = Objects.requireNonNull(account);
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcrId", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getAccountServicerIdentification() {
 		return accountServicerIdentification;
 	}
 
-	public void setAccountServicerIdentification(BranchAndFinancialInstitutionIdentification5 accountServicerIdentification) {
-		this.accountServicerIdentification = accountServicerIdentification;
+	public AccountExcludedMandateMaintenanceRequestV02 setAccountServicerIdentification(BranchAndFinancialInstitutionIdentification5 accountServicerIdentification) {
+		this.accountServicerIdentification = Objects.requireNonNull(accountServicerIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Org", required = true)
 	public OrganisationModification1 getOrganisation() {
 		return organisation;
 	}
 
-	public void setOrganisation(OrganisationModification1 organisation) {
-		this.organisation = organisation;
+	public AccountExcludedMandateMaintenanceRequestV02 setOrganisation(OrganisationModification1 organisation) {
+		this.organisation = Objects.requireNonNull(organisation);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlMsgInf")
-	public AdditionalInformation5 getAdditionalMessageInformation() {
-		return additionalMessageInformation;
+	public Optional<AdditionalInformation5> getAdditionalMessageInformation() {
+		return additionalMessageInformation == null ? Optional.empty() : Optional.of(additionalMessageInformation);
 	}
 
-	public void setAdditionalMessageInformation(AdditionalInformation5 additionalMessageInformation) {
+	public AccountExcludedMandateMaintenanceRequestV02 setAdditionalMessageInformation(AdditionalInformation5 additionalMessageInformation) {
 		this.additionalMessageInformation = additionalMessageInformation;
+		return this;
 	}
 
-	@XmlElement(name = "DgtlSgntr")
 	public List<PartyAndSignature2> getDigitalSignature() {
-		return digitalSignature;
+		return digitalSignature == null ? digitalSignature = new ArrayList<>() : digitalSignature;
 	}
 
-	public void setDigitalSignature(List<PartyAndSignature2> digitalSignature) {
-		this.digitalSignature = digitalSignature;
+	public AccountExcludedMandateMaintenanceRequestV02 setDigitalSignature(List<PartyAndSignature2> digitalSignature) {
+		this.digitalSignature = Objects.requireNonNull(digitalSignature);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public AccountExcludedMandateMaintenanceRequestV02 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.015.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.015.001.02")
 	static public class Document {
 		@XmlElement(name = "AcctExcldMndtMntncReq", required = true)
 		public AccountExcludedMandateMaintenanceRequestV02 messageBody;

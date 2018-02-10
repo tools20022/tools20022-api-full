@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LimitDetails", propOrder = {"amount", "creditDebitIndicator"})
 public class LimitDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected AmountChoice amount;
 	/**
-	 * Amount of money of the limit, expressed in an eligible currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +110,7 @@ public class LimitDetails {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
-			componentContext_lazy = () -> LimitDetails.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitDetails.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +121,11 @@ public class LimitDetails {
 			complexType_lazy = () -> AmountChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd", required = true)
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Specifies if a limit is a debit limit or a credit limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +158,7 @@ public class LimitDetails {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCreditDebitIndicator;
-			componentContext_lazy = () -> LimitDetails.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitDetails.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,9 +173,9 @@ public class LimitDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LimitDetails.mmAmount, LimitDetails.mmCreditDebitIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetails.mmAmount, com.tools20022.repository.msg.LimitDetails.mmCreditDebitIndicator);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitDetails";
 				definition = "Maximum value used for risk containment in a system or towards counterparts. The limit may be a current limit or a default limit.";
@@ -181,21 +184,21 @@ public class LimitDetails {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public AmountChoice getAmount() {
 		return amount;
 	}
 
-	public void setAmount(AmountChoice amount) {
-		this.amount = amount;
+	public LimitDetails setAmount(AmountChoice amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
-		this.creditDebitIndicator = creditDebitIndicator;
+	public LimitDetails setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = Objects.requireNonNull(creditDebitIndicator);
+		return this;
 	}
 }

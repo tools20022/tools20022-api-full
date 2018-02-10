@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.TerminalManagementSystem;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "TMSTrigger1", propOrder = {"TMSContactLevel", "TMSIdentification", "TMSContactDateTime"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "TMSTrigger1", propOrder = {"tMSContactLevel", "tMSIdentification", "tMSContactDateTime"})
 public class TMSTrigger1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TMSCtctLvl", required = true)
 	protected TMSContactLevel1Code tMSContactLevel;
 	/**
-	 * Level of urgency in contacting the maintenance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +118,7 @@ public class TMSTrigger1 {
 	public static final MMMessageAttribute mmTMSContactLevel = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementSystem.mmContactLevel;
-			componentContext_lazy = () -> TMSTrigger1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSTrigger1.mmObject();
 			isDerived = false;
 			xmlTag = "TMSCtctLvl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +129,11 @@ public class TMSTrigger1 {
 			simpleType_lazy = () -> TMSContactLevel1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TMSId")
 	protected Max35Text tMSIdentification;
 	/**
-	 * Identification of the host to contact for the maintenance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +160,7 @@ public class TMSTrigger1 {
 	 */
 	public static final MMMessageAttribute mmTMSIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TMSTrigger1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSTrigger1.mmObject();
 			isDerived = false;
 			xmlTag = "TMSId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,10 +171,11 @@ public class TMSTrigger1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TMSCtctDtTm")
 	protected ISODateTime tMSContactDateTime;
 	/**
-	 * Date and time for calling the maintenance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -202,7 +207,7 @@ public class TMSTrigger1 {
 	public static final MMMessageAttribute mmTMSContactDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementSystem.mmContactDateTime;
-			componentContext_lazy = () -> TMSTrigger1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSTrigger1.mmObject();
 			isDerived = false;
 			xmlTag = "TMSCtctDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,9 +222,10 @@ public class TMSTrigger1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TMSTrigger1.mmTMSContactLevel, TMSTrigger1.mmTMSIdentification, TMSTrigger1.mmTMSContactDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSTrigger1.mmTMSContactLevel, com.tools20022.repository.msg.TMSTrigger1.mmTMSIdentification,
+						com.tools20022.repository.msg.TMSTrigger1.mmTMSContactDateTime);
 				trace_lazy = () -> TerminalManagementSystem.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TMSTrigger1";
 				definition = "Instructs the POI (Point Of Interaction) how to contact the host of the terminal management system (TMS), to initiate the maintenance of the terminal.";
@@ -228,30 +234,30 @@ public class TMSTrigger1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TMSCtctLvl", required = true)
 	public TMSContactLevel1Code getTMSContactLevel() {
 		return tMSContactLevel;
 	}
 
-	public void setTMSContactLevel(TMSContactLevel1Code tMSContactLevel) {
-		this.tMSContactLevel = tMSContactLevel;
+	public TMSTrigger1 setTMSContactLevel(TMSContactLevel1Code tMSContactLevel) {
+		this.tMSContactLevel = Objects.requireNonNull(tMSContactLevel);
+		return this;
 	}
 
-	@XmlElement(name = "TMSId")
-	public Max35Text getTMSIdentification() {
-		return tMSIdentification;
+	public Optional<Max35Text> getTMSIdentification() {
+		return tMSIdentification == null ? Optional.empty() : Optional.of(tMSIdentification);
 	}
 
-	public void setTMSIdentification(Max35Text tMSIdentification) {
+	public TMSTrigger1 setTMSIdentification(Max35Text tMSIdentification) {
 		this.tMSIdentification = tMSIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TMSCtctDtTm")
-	public ISODateTime getTMSContactDateTime() {
-		return tMSContactDateTime;
+	public Optional<ISODateTime> getTMSContactDateTime() {
+		return tMSContactDateTime == null ? Optional.empty() : Optional.of(tMSContactDateTime);
 	}
 
-	public void setTMSContactDateTime(ISODateTime tMSContactDateTime) {
+	public TMSTrigger1 setTMSContactDateTime(ISODateTime tMSContactDateTime) {
 		this.tMSContactDateTime = tMSContactDateTime;
+		return this;
 	}
 }

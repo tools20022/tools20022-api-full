@@ -25,9 +25,11 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.IndividualOrderStatusAndReason7;
 import com.tools20022.repository.msg.OrderStatusAndReason10;
 import com.tools20022.repository.msg.SwitchOrderStatusAndReason2;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,17 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of status."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Status24Choice", propOrder = {"orderDetailsReport", "individualOrderDetailsReport", "switchOrderDetailsReport"})
 public class Status24Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrdrDtlsRpt", required = true)
 	protected OrderStatusAndReason10 orderDetailsReport;
 	/**
-	 * Status report details of all the individual orders conveyed in a bulk or
-	 * multiple order message. Can be used if all the individual orders conveyed
-	 * in a bulk or multiple order message have the same status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -115,7 +116,7 @@ public class Status24Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOrderDetailsReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Status24Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status24Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrDtlsRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +128,11 @@ public class Status24Choice {
 			type_lazy = () -> OrderStatusAndReason10.mmObject();
 		}
 	};
+	@XmlElement(name = "IndvOrdrDtlsRpt", required = true)
 	protected List<IndividualOrderStatusAndReason7> individualOrderDetailsReport;
 	/**
-	 * Status report details of an individual order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -157,7 +159,7 @@ public class Status24Choice {
 	 */
 	public static final MMMessageAssociationEnd mmIndividualOrderDetailsReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Status24Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status24Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndvOrdrDtlsRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,10 +170,11 @@ public class Status24Choice {
 			type_lazy = () -> IndividualOrderStatusAndReason7.mmObject();
 		}
 	};
+	@XmlElement(name = "SwtchOrdrDtlsRpt", required = true)
 	protected List<SwitchOrderStatusAndReason2> switchOrderDetailsReport;
 	/**
-	 * Status report details of a switch order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -198,7 +201,7 @@ public class Status24Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSwitchOrderDetailsReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Status24Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status24Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SwtchOrdrDtlsRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,9 +216,10 @@ public class Status24Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Status24Choice.mmOrderDetailsReport, Status24Choice.mmIndividualOrderDetailsReport, Status24Choice.mmSwitchOrderDetailsReport);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status24Choice.mmOrderDetailsReport, com.tools20022.repository.choice.Status24Choice.mmIndividualOrderDetailsReport,
+						com.tools20022.repository.choice.Status24Choice.mmSwitchOrderDetailsReport);
 				messageBuildingBlock_lazy = () -> Arrays.asList(OrderInstructionStatusReportV04.mmStatusReport);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status24Choice";
 				definition = "Choice of status.";
@@ -224,30 +228,30 @@ public class Status24Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrdrDtlsRpt", required = true)
 	public OrderStatusAndReason10 getOrderDetailsReport() {
 		return orderDetailsReport;
 	}
 
-	public void setOrderDetailsReport(OrderStatusAndReason10 orderDetailsReport) {
-		this.orderDetailsReport = orderDetailsReport;
+	public Status24Choice setOrderDetailsReport(OrderStatusAndReason10 orderDetailsReport) {
+		this.orderDetailsReport = Objects.requireNonNull(orderDetailsReport);
+		return this;
 	}
 
-	@XmlElement(name = "IndvOrdrDtlsRpt", required = true)
 	public List<IndividualOrderStatusAndReason7> getIndividualOrderDetailsReport() {
-		return individualOrderDetailsReport;
+		return individualOrderDetailsReport == null ? individualOrderDetailsReport = new ArrayList<>() : individualOrderDetailsReport;
 	}
 
-	public void setIndividualOrderDetailsReport(List<IndividualOrderStatusAndReason7> individualOrderDetailsReport) {
-		this.individualOrderDetailsReport = individualOrderDetailsReport;
+	public Status24Choice setIndividualOrderDetailsReport(List<IndividualOrderStatusAndReason7> individualOrderDetailsReport) {
+		this.individualOrderDetailsReport = Objects.requireNonNull(individualOrderDetailsReport);
+		return this;
 	}
 
-	@XmlElement(name = "SwtchOrdrDtlsRpt", required = true)
 	public List<SwitchOrderStatusAndReason2> getSwitchOrderDetailsReport() {
-		return switchOrderDetailsReport;
+		return switchOrderDetailsReport == null ? switchOrderDetailsReport = new ArrayList<>() : switchOrderDetailsReport;
 	}
 
-	public void setSwitchOrderDetailsReport(List<SwitchOrderStatusAndReason2> switchOrderDetailsReport) {
-		this.switchOrderDetailsReport = switchOrderDetailsReport;
+	public Status24Choice setSwitchOrderDetailsReport(List<SwitchOrderStatusAndReason2> switchOrderDetailsReport) {
+		this.switchOrderDetailsReport = Objects.requireNonNull(switchOrderDetailsReport);
+		return this;
 	}
 }

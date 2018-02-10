@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCurrentInstructionNumberRule#forTotalNumber1
+ * ConstraintCurrentInstructionNumberRule.forTotalNumber1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBlockTradeGuideline#forTotalNumber1
+ * ConstraintBlockTradeGuideline.forTotalNumber1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,16 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Settlement transaction numbering information"</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TotalNumber1", propOrder = {"currentInstructionNumber", "totalOfLinkedInstructions"})
 public class TotalNumber1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CurInstrNb", required = true)
 	protected Exact3NumericText currentInstructionNumber;
 	/**
-	 * Sequential number of the instruction in a range of linked settlement
-	 * instructions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -84,6 +97,9 @@ public class TotalNumber1 {
 	 * {@linkplain com.tools20022.repository.msg.TotalNumber1 TotalNumber1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CurInstrNb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :99B::SETT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -99,9 +115,10 @@ public class TotalNumber1 {
 	 */
 	public static final MMMessageAttribute mmCurrentInstructionNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TotalNumber1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalNumber1.mmObject();
 			isDerived = false;
 			xmlTag = "CurInstrNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":99B::SETT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentInstructionNumber";
 			definition = "Sequential number of the instruction in a range of linked settlement instructions.";
@@ -110,10 +127,11 @@ public class TotalNumber1 {
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlOfLkdInstrs", required = true)
 	protected Exact3NumericText totalOfLinkedInstructions;
 	/**
-	 * Total number of settlement instructions that are linked together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,6 +146,9 @@ public class TotalNumber1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlOfLkdInstrs"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :99B::TOSE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -141,9 +162,10 @@ public class TotalNumber1 {
 	 */
 	public static final MMMessageAttribute mmTotalOfLinkedInstructions = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TotalNumber1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalNumber1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlOfLkdInstrs";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":99B::TOSE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalOfLinkedInstructions";
 			definition = "Total number of settlement instructions that are linked together.";
@@ -156,8 +178,9 @@ public class TotalNumber1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TotalNumber1.mmCurrentInstructionNumber, TotalNumber1.mmTotalOfLinkedInstructions);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalNumber1.mmCurrentInstructionNumber, com.tools20022.repository.msg.TotalNumber1.mmTotalOfLinkedInstructions);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCurrentInstructionNumberRule.forTotalNumber1, com.tools20022.repository.constraints.ConstraintBlockTradeGuideline.forTotalNumber1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalNumber1";
 				definition = "Settlement transaction numbering information";
@@ -166,21 +189,21 @@ public class TotalNumber1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CurInstrNb", required = true)
 	public Exact3NumericText getCurrentInstructionNumber() {
 		return currentInstructionNumber;
 	}
 
-	public void setCurrentInstructionNumber(Exact3NumericText currentInstructionNumber) {
-		this.currentInstructionNumber = currentInstructionNumber;
+	public TotalNumber1 setCurrentInstructionNumber(Exact3NumericText currentInstructionNumber) {
+		this.currentInstructionNumber = Objects.requireNonNull(currentInstructionNumber);
+		return this;
 	}
 
-	@XmlElement(name = "TtlOfLkdInstrs", required = true)
 	public Exact3NumericText getTotalOfLinkedInstructions() {
 		return totalOfLinkedInstructions;
 	}
 
-	public void setTotalOfLinkedInstructions(Exact3NumericText totalOfLinkedInstructions) {
-		this.totalOfLinkedInstructions = totalOfLinkedInstructions;
+	public TotalNumber1 setTotalOfLinkedInstructions(Exact3NumericText totalOfLinkedInstructions) {
+		this.totalOfLinkedInstructions = Objects.requireNonNull(totalOfLinkedInstructions);
+		return this;
 	}
 }

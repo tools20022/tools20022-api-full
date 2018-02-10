@@ -30,6 +30,8 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -56,20 +58,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
- * CashManagementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CaseStsRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -88,6 +76,20 @@ import javax.xml.bind.annotation.*;
  * CaseStatusReportV03.mmNewAssignment}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CaseStsRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
+ * CashManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.039.001.03}</li>
@@ -110,15 +112,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CaseStatusReportV03", propOrder = {"header", "case", "status", "newAssignment"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CaseStatusReportV03", propOrder = {"header", "case_", "status", "newAssignment"})
 public class CaseStatusReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected ReportHeader2 header;
 	/**
-	 * Specifies generic information about an investigation report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,10 +161,11 @@ public class CaseStatusReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Case", required = true)
 	protected Case2 case_;
 	/**
-	 * Identifies the investigation case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,10 +203,11 @@ public class CaseStatusReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Sts", required = true)
 	protected CaseStatus2 status;
 	/**
-	 * Defines the status of the case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -241,12 +246,11 @@ public class CaseStatusReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "NewAssgnmt")
 	protected CaseAssignment2 newAssignment;
 	/**
-	 * Identifies the change of an assignment for an investigation case from an
-	 * assigner to a new assignee. Usage: The Assigner must be the sender of
-	 * this confirmation and the Assignee must be the receiver.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -319,43 +323,43 @@ public class CaseStatusReportV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public ReportHeader2 getHeader() {
 		return header;
 	}
 
-	public void setHeader(ReportHeader2 header) {
-		this.header = header;
+	public CaseStatusReportV03 setHeader(ReportHeader2 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "Case", required = true)
 	public Case2 getCase() {
 		return case_;
 	}
 
-	public void setCase(Case2 case_) {
-		this.case_ = case_;
+	public CaseStatusReportV03 setCase(Case2 case_) {
+		this.case_ = Objects.requireNonNull(case_);
+		return this;
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public CaseStatus2 getStatus() {
 		return status;
 	}
 
-	public void setStatus(CaseStatus2 status) {
-		this.status = status;
+	public CaseStatusReportV03 setStatus(CaseStatus2 status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "NewAssgnmt")
-	public CaseAssignment2 getNewAssignment() {
-		return newAssignment;
+	public Optional<CaseAssignment2> getNewAssignment() {
+		return newAssignment == null ? Optional.empty() : Optional.of(newAssignment);
 	}
 
-	public void setNewAssignment(CaseAssignment2 newAssignment) {
+	public CaseStatusReportV03 setNewAssignment(CaseAssignment2 newAssignment) {
 		this.newAssignment = newAssignment;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.039.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.039.001.03")
 	static public class Document {
 		@XmlElement(name = "CaseStsRpt", required = true)
 		public CaseStatusReportV03 messageBody;

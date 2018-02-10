@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.CurrencyAndAmountRange;
 import com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Search for an amount with or without the currency."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountRangeChoice", propOrder = {"impliedCurrencyAndAmountRange", "currencyAndAmountRange"})
 public class AmountRangeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ImpldCcyAndAmtRg", required = true)
 	protected ImpliedCurrencyAndAmountRange impliedCurrencyAndAmountRange;
 	/**
-	 * Expresses an amount or an amount range with an explicit debit/credit
-	 * indicator and where the currency is implied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +110,7 @@ public class AmountRangeChoice {
 	public static final MMMessageAssociationEnd mmImpliedCurrencyAndAmountRange = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
-			componentContext_lazy = () -> AmountRangeChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AmountRangeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "ImpldCcyAndAmtRg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,11 +122,11 @@ public class AmountRangeChoice {
 			type_lazy = () -> ImpliedCurrencyAndAmountRange.mmObject();
 		}
 	};
+	@XmlElement(name = "CcyAndAmtRg", required = true)
 	protected CurrencyAndAmountRange currencyAndAmountRange;
 	/**
-	 * Expresses an amount or an amount range with the currency and where the
-	 * credit/debit indicator is explicit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -158,7 +159,7 @@ public class AmountRangeChoice {
 	public static final MMMessageAssociationEnd mmCurrencyAndAmountRange = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
-			componentContext_lazy = () -> AmountRangeChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AmountRangeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "CcyAndAmtRg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,9 +175,9 @@ public class AmountRangeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountRangeChoice.mmImpliedCurrencyAndAmountRange, AmountRangeChoice.mmCurrencyAndAmountRange);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountRangeChoice.mmImpliedCurrencyAndAmountRange, com.tools20022.repository.choice.AmountRangeChoice.mmCurrencyAndAmountRange);
 				trace_lazy = () -> AmountRange.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AmountRangeChoice";
 				definition = "Search for an amount with or without the currency.";
@@ -185,21 +186,21 @@ public class AmountRangeChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ImpldCcyAndAmtRg", required = true)
 	public ImpliedCurrencyAndAmountRange getImpliedCurrencyAndAmountRange() {
 		return impliedCurrencyAndAmountRange;
 	}
 
-	public void setImpliedCurrencyAndAmountRange(ImpliedCurrencyAndAmountRange impliedCurrencyAndAmountRange) {
-		this.impliedCurrencyAndAmountRange = impliedCurrencyAndAmountRange;
+	public AmountRangeChoice setImpliedCurrencyAndAmountRange(ImpliedCurrencyAndAmountRange impliedCurrencyAndAmountRange) {
+		this.impliedCurrencyAndAmountRange = Objects.requireNonNull(impliedCurrencyAndAmountRange);
+		return this;
 	}
 
-	@XmlElement(name = "CcyAndAmtRg", required = true)
 	public CurrencyAndAmountRange getCurrencyAndAmountRange() {
 		return currencyAndAmountRange;
 	}
 
-	public void setCurrencyAndAmountRange(CurrencyAndAmountRange currencyAndAmountRange) {
-		this.currencyAndAmountRange = currencyAndAmountRange;
+	public AmountRangeChoice setCurrencyAndAmountRange(CurrencyAndAmountRange currencyAndAmountRange) {
+		this.currencyAndAmountRange = Objects.requireNonNull(currencyAndAmountRange);
+		return this;
 	}
 }

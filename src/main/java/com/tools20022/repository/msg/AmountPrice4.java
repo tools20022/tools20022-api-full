@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Price expressed as an actual amount."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountPrice4", propOrder = {"amountPriceType", "priceValue"})
 public class AmountPrice4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AmtPricTp", required = true)
 	protected AmountPriceType2Code amountPriceType;
 	/**
-	 * Type of amount price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -92,6 +95,9 @@ public class AmountPrice4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AmtPricTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90B::4!c//4!c</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -105,9 +111,10 @@ public class AmountPrice4 {
 	public static final MMMessageAttribute mmAmountPriceType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmTypeOfAmount;
-			componentContext_lazy = () -> AmountPrice4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPrice4.mmObject();
 			isDerived = false;
 			xmlTag = "AmtPricTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90B::4!c//4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPriceType";
 			definition = "Type of amount price.";
@@ -116,10 +123,11 @@ public class AmountPrice4 {
 			simpleType_lazy = () -> AmountPriceType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PricVal", required = true)
 	protected RestrictedFINActiveCurrencyAnd13DecimalAmount priceValue;
 	/**
-	 * Value of the price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,6 +147,9 @@ public class AmountPrice4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PricVal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90B::4!c//4!c/3!a15d</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -152,9 +163,10 @@ public class AmountPrice4 {
 	public static final MMMessageAttribute mmPriceValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
-			componentContext_lazy = () -> AmountPrice4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPrice4.mmObject();
 			isDerived = false;
 			xmlTag = "PricVal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90B::4!c//4!c/3!a15d"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceValue";
 			definition = "Value of the price.";
@@ -167,9 +179,9 @@ public class AmountPrice4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountPrice4.mmAmountPriceType, AmountPrice4.mmPriceValue);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountPrice4.mmAmountPriceType, com.tools20022.repository.msg.AmountPrice4.mmPriceValue);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountPrice4";
 				definition = "Price expressed as an actual amount.";
@@ -178,21 +190,21 @@ public class AmountPrice4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AmtPricTp", required = true)
 	public AmountPriceType2Code getAmountPriceType() {
 		return amountPriceType;
 	}
 
-	public void setAmountPriceType(AmountPriceType2Code amountPriceType) {
-		this.amountPriceType = amountPriceType;
+	public AmountPrice4 setAmountPriceType(AmountPriceType2Code amountPriceType) {
+		this.amountPriceType = Objects.requireNonNull(amountPriceType);
+		return this;
 	}
 
-	@XmlElement(name = "PricVal", required = true)
 	public RestrictedFINActiveCurrencyAnd13DecimalAmount getPriceValue() {
 		return priceValue;
 	}
 
-	public void setPriceValue(RestrictedFINActiveCurrencyAnd13DecimalAmount priceValue) {
-		this.priceValue = priceValue;
+	public AmountPrice4 setPriceValue(RestrictedFINActiveCurrencyAnd13DecimalAmount priceValue) {
+		this.priceValue = Objects.requireNonNull(priceValue);
+		return this;
 	}
 }

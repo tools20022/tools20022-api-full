@@ -27,9 +27,8 @@ import com.tools20022.repository.choice.PaymentStatusReasonCode5Choice;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentStatus1", propOrder = {"code", "dateTime", "reason"})
 public class PaymentStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd")
 	protected PaymentStatusCode5Choice code;
 	/**
-	 * Status of a transfer, in coded form, as assigned by the transaction
-	 * administrator.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -126,7 +125,7 @@ public class PaymentStatus1 {
 	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
-			componentContext_lazy = () -> PaymentStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,10 +138,11 @@ public class PaymentStatus1 {
 			type_lazy = () -> PaymentStatusCode5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DtTm")
 	protected DateAndDateTimeChoice dateTime;
 	/**
-	 * Date and time at which the status was assigned to the transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,7 +183,7 @@ public class PaymentStatus1 {
 	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
-			componentContext_lazy = () -> PaymentStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,10 +195,11 @@ public class PaymentStatus1 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn")
 	protected List<PaymentStatusReasonCode5Choice> reason;
 	/**
-	 * Reason provided for the status of a transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -237,7 +238,7 @@ public class PaymentStatus1 {
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
-			componentContext_lazy = () -> PaymentStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -253,9 +254,9 @@ public class PaymentStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentStatus1.mmCode, PaymentStatus1.mmDateTime, PaymentStatus1.mmReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentStatus1.mmCode, com.tools20022.repository.msg.PaymentStatus1.mmDateTime, com.tools20022.repository.msg.PaymentStatus1.mmReason);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentStatus1";
 				definition = "Payment status details.";
@@ -265,30 +266,30 @@ public class PaymentStatus1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd")
-	public PaymentStatusCode5Choice getCode() {
-		return code;
+	public Optional<PaymentStatusCode5Choice> getCode() {
+		return code == null ? Optional.empty() : Optional.of(code);
 	}
 
-	public void setCode(PaymentStatusCode5Choice code) {
+	public PaymentStatus1 setCode(PaymentStatusCode5Choice code) {
 		this.code = code;
+		return this;
 	}
 
-	@XmlElement(name = "DtTm")
-	public DateAndDateTimeChoice getDateTime() {
-		return dateTime;
+	public Optional<DateAndDateTimeChoice> getDateTime() {
+		return dateTime == null ? Optional.empty() : Optional.of(dateTime);
 	}
 
-	public void setDateTime(DateAndDateTimeChoice dateTime) {
+	public PaymentStatus1 setDateTime(DateAndDateTimeChoice dateTime) {
 		this.dateTime = dateTime;
+		return this;
 	}
 
-	@XmlElement(name = "Rsn")
 	public List<PaymentStatusReasonCode5Choice> getReason() {
-		return reason;
+		return reason == null ? reason = new ArrayList<>() : reason;
 	}
 
-	public void setReason(List<PaymentStatusReasonCode5Choice> reason) {
-		this.reason = reason;
+	public PaymentStatus1 setReason(List<PaymentStatusReasonCode5Choice> reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 }

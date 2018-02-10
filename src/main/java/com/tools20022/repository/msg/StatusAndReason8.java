@@ -17,15 +17,18 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Status4Choice;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Status and reason of an instructed order."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatusAndReason8", propOrder = {"statusAndReason", "transaction"})
 public class StatusAndReason8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StsAndRsn", required = true)
 	protected Status4Choice statusAndReason;
 	/**
-	 * Status and reason for the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -90,6 +94,9 @@ public class StatusAndReason8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StsAndRsn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :16R:STAT [and 16R:REAS]</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -103,9 +110,10 @@ public class StatusAndReason8 {
 	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
-			componentContext_lazy = () -> StatusAndReason8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason8.mmObject();
 			isDerived = false;
 			xmlTag = "StsAndRsn";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":16R:STAT [and 16R:REAS]"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReason";
 			definition = "Status and reason for the transaction.";
@@ -115,10 +123,11 @@ public class StatusAndReason8 {
 			type_lazy = () -> Status4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Tx")
 	protected List<com.tools20022.repository.msg.Transaction15> transaction;
 	/**
-	 * Details of the transactions reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -132,6 +141,9 @@ public class StatusAndReason8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Tx"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :16R:TRAN</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -144,9 +156,10 @@ public class StatusAndReason8 {
 	 */
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusAndReason8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason8.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":16R:TRAN"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Details of the transactions reported.";
@@ -159,9 +172,9 @@ public class StatusAndReason8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatusAndReason8.mmStatusAndReason, StatusAndReason8.mmTransaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason8.mmStatusAndReason, com.tools20022.repository.msg.StatusAndReason8.mmTransaction);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusAndReason8";
 				definition = "Status and reason of an instructed order.";
@@ -170,21 +183,21 @@ public class StatusAndReason8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StsAndRsn", required = true)
 	public Status4Choice getStatusAndReason() {
 		return statusAndReason;
 	}
 
-	public void setStatusAndReason(Status4Choice statusAndReason) {
-		this.statusAndReason = statusAndReason;
+	public StatusAndReason8 setStatusAndReason(Status4Choice statusAndReason) {
+		this.statusAndReason = Objects.requireNonNull(statusAndReason);
+		return this;
 	}
 
-	@XmlElement(name = "Tx")
 	public List<Transaction15> getTransaction() {
-		return transaction;
+		return transaction == null ? transaction = new ArrayList<>() : transaction;
 	}
 
-	public void setTransaction(List<com.tools20022.repository.msg.Transaction15> transaction) {
-		this.transaction = transaction;
+	public StatusAndReason8 setTransaction(List<com.tools20022.repository.msg.Transaction15> transaction) {
+		this.transaction = Objects.requireNonNull(transaction);
+		return this;
 	}
 }

@@ -20,55 +20,59 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TerminalManagementActionResultCode;
+import com.tools20022.repository.codeset.TerminalManagementActionResult2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Final result of the processed command at the ATM.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode
- * TerminalManagementActionResultCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#mmConnectionError
- * TerminalManagementActionResult2Code.mmConnectionError}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#ConnectionError
+ * TerminalManagementActionResult2Code.ConnectionError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#mmFormatError
- * TerminalManagementActionResult2Code.mmFormatError}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#FormatError
+ * TerminalManagementActionResult2Code.FormatError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#mmHardware
- * TerminalManagementActionResult2Code.mmHardware}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#Hardware
+ * TerminalManagementActionResult2Code.Hardware}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#mmNotSupported
- * TerminalManagementActionResult2Code.mmNotSupported}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#NotSupported
+ * TerminalManagementActionResult2Code.NotSupported}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#mmSecurity
- * TerminalManagementActionResult2Code.mmSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#Security
+ * TerminalManagementActionResult2Code.Security}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#mmSuccess
- * TerminalManagementActionResult2Code.mmSuccess}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#Success
+ * TerminalManagementActionResult2Code.Success}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#mmSyntaxError
- * TerminalManagementActionResult2Code.mmSyntaxError}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#SyntaxError
+ * TerminalManagementActionResult2Code.SyntaxError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#mmTimeout
- * TerminalManagementActionResult2Code.mmTimeout}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#Timeout
+ * TerminalManagementActionResult2Code.Timeout}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#mmUnknownKeyReference
- * TerminalManagementActionResult2Code.mmUnknownKeyReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult2Code#UnknownKeyReference
+ * TerminalManagementActionResult2Code.UnknownKeyReference}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResultCode
+ * TerminalManagementActionResultCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,7 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Final result of the processed command at the ATM."</li>
  * </ul>
  */
-public class TerminalManagementActionResult2Code extends TerminalManagementActionResultCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TerminalManagementActionResult2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,11 +103,12 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 * name} = "ConnectionError"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConnectionError = new MMCode() {
+	public static final TerminalManagementActionResult2Code ConnectionError = new TerminalManagementActionResult2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConnectionError";
-			owner_lazy = () -> TerminalManagementActionResult2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmObject();
+			codeName = TerminalManagementActionResultCode.ConnectionError.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -121,11 +127,12 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 * name} = "FormatError"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFormatError = new MMCode() {
+	public static final TerminalManagementActionResult2Code FormatError = new TerminalManagementActionResult2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FormatError";
-			owner_lazy = () -> TerminalManagementActionResult2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmObject();
+			codeName = TerminalManagementActionResultCode.FormatError.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -144,11 +151,12 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 * name} = "Hardware"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHardware = new MMCode() {
+	public static final TerminalManagementActionResult2Code Hardware = new TerminalManagementActionResult2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hardware";
-			owner_lazy = () -> TerminalManagementActionResult2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmObject();
+			codeName = TerminalManagementActionResultCode.Hardware.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -167,11 +175,12 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 * name} = "NotSupported"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotSupported = new MMCode() {
+	public static final TerminalManagementActionResult2Code NotSupported = new TerminalManagementActionResult2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSupported";
-			owner_lazy = () -> TerminalManagementActionResult2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmObject();
+			codeName = TerminalManagementActionResultCode.NotSupported.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -190,11 +199,12 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 * name} = "Security"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecurity = new MMCode() {
+	public static final TerminalManagementActionResult2Code Security = new TerminalManagementActionResult2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
-			owner_lazy = () -> TerminalManagementActionResult2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmObject();
+			codeName = TerminalManagementActionResultCode.Security.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -213,11 +223,12 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 * name} = "Success"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuccess = new MMCode() {
+	public static final TerminalManagementActionResult2Code Success = new TerminalManagementActionResult2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Success";
-			owner_lazy = () -> TerminalManagementActionResult2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmObject();
+			codeName = TerminalManagementActionResultCode.Success.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -236,11 +247,12 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 * name} = "SyntaxError"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSyntaxError = new MMCode() {
+	public static final TerminalManagementActionResult2Code SyntaxError = new TerminalManagementActionResult2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SyntaxError";
-			owner_lazy = () -> TerminalManagementActionResult2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmObject();
+			codeName = TerminalManagementActionResultCode.SyntaxError.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -259,11 +271,12 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 * name} = "Timeout"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTimeout = new MMCode() {
+	public static final TerminalManagementActionResult2Code Timeout = new TerminalManagementActionResult2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Timeout";
-			owner_lazy = () -> TerminalManagementActionResult2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmObject();
+			codeName = TerminalManagementActionResultCode.Timeout.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -282,27 +295,67 @@ public class TerminalManagementActionResult2Code extends TerminalManagementActio
 	 * name} = "UnknownKeyReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknownKeyReference = new MMCode() {
+	public static final TerminalManagementActionResult2Code UnknownKeyReference = new TerminalManagementActionResult2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownKeyReference";
-			owner_lazy = () -> TerminalManagementActionResult2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult2Code.mmObject();
+			codeName = TerminalManagementActionResultCode.UnknownKeyReference.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TerminalManagementActionResult2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TerminalManagementActionResult2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementActionResult2Code";
 				definition = "Final result of the processed command at the ATM.";
-				code_lazy = () -> Arrays.asList(TerminalManagementActionResult2Code.mmConnectionError, TerminalManagementActionResult2Code.mmFormatError, TerminalManagementActionResult2Code.mmHardware,
-						TerminalManagementActionResult2Code.mmNotSupported, TerminalManagementActionResult2Code.mmSecurity, TerminalManagementActionResult2Code.mmSuccess, TerminalManagementActionResult2Code.mmSyntaxError,
-						TerminalManagementActionResult2Code.mmTimeout, TerminalManagementActionResult2Code.mmUnknownKeyReference);
 				trace_lazy = () -> TerminalManagementActionResultCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementActionResult2Code.ConnectionError, com.tools20022.repository.codeset.TerminalManagementActionResult2Code.FormatError,
+						com.tools20022.repository.codeset.TerminalManagementActionResult2Code.Hardware, com.tools20022.repository.codeset.TerminalManagementActionResult2Code.NotSupported,
+						com.tools20022.repository.codeset.TerminalManagementActionResult2Code.Security, com.tools20022.repository.codeset.TerminalManagementActionResult2Code.Success,
+						com.tools20022.repository.codeset.TerminalManagementActionResult2Code.SyntaxError, com.tools20022.repository.codeset.TerminalManagementActionResult2Code.Timeout,
+						com.tools20022.repository.codeset.TerminalManagementActionResult2Code.UnknownKeyReference);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ConnectionError.getCodeName().get(), ConnectionError);
+		codesByName.put(FormatError.getCodeName().get(), FormatError);
+		codesByName.put(Hardware.getCodeName().get(), Hardware);
+		codesByName.put(NotSupported.getCodeName().get(), NotSupported);
+		codesByName.put(Security.getCodeName().get(), Security);
+		codesByName.put(Success.getCodeName().get(), Success);
+		codesByName.put(SyntaxError.getCodeName().get(), SyntaxError);
+		codesByName.put(Timeout.getCodeName().get(), Timeout);
+		codesByName.put(UnknownKeyReference.getCodeName().get(), UnknownKeyReference);
+	}
+
+	public static TerminalManagementActionResult2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TerminalManagementActionResult2Code[] values() {
+		TerminalManagementActionResult2Code[] values = new TerminalManagementActionResult2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TerminalManagementActionResult2Code> {
+		@Override
+		public TerminalManagementActionResult2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TerminalManagementActionResult2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

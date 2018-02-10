@@ -25,9 +25,11 @@ import com.tools20022.repository.entity.InvestmentFundOrder;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Transfer from one investment fund/fund class to another investment fund or
@@ -40,6 +42,10 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder
+ * InvestmentFundOrder}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -60,31 +66,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SwitchOrder#mmSubscriptionLeg
  * SwitchOrder.mmSubscriptionLeg}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrder
- * InvestmentFundOrder}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FundOrderData2 FundOrderData2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1
- * SwitchOrderStatusAndReason1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder2 SwitchOrder2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrderInstruction1
- * SwitchOrderInstruction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrderInstruction2
- * SwitchOrderInstruction2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder4 SwitchOrder4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder5 SwitchOrder5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7 SwitchOrder7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2
- * SwitchOrderStatusAndReason2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundOrderData6 FundOrderData6}</li>
  * </ul>
  * </li>
  * <li>
@@ -121,10 +102,31 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.FundOrderData2 FundOrderData2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1
+ * SwitchOrderStatusAndReason1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder2 SwitchOrder2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrderInstruction1
+ * SwitchOrderInstruction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder3 SwitchOrder3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrderInstruction2
+ * SwitchOrderInstruction2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder4 SwitchOrder4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder5 SwitchOrder5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrder7 SwitchOrder7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason2
+ * SwitchOrderStatusAndReason2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundOrderData6 FundOrderData6}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -142,9 +144,8 @@ public class SwitchOrder extends InvestmentFundOrder {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyAndAmount additionalCashIn;
 	/**
-	 * Additional amount of money paid by the investor in addition to the switch
-	 * redemption amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,8 +209,8 @@ public class SwitchOrder extends InvestmentFundOrder {
 		{
 			derivation_lazy = () -> Arrays.asList(FundOrderData2.mmAdditionalCashIn, SwitchOrder2.mmAdditionalCashIn, SwitchOrder3.mmAdditionalCashIn, SwitchExecution3.mmAdditionalCashIn, SwitchExecution4.mmAdditionalCashIn,
 					SwitchOrder4.mmAdditionalCashIn, SwitchExecution7.mmAdditionalAmount, SwitchOrder7.mmAdditionalAmount, AdditionalAmount1Choice.mmAdditionalCashIn, FundOrderData6.mmAdditionalAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdditionalCashIn";
 			definition = "Additional amount of money paid by the investor in addition to the switch redemption amount.";
@@ -228,9 +229,8 @@ public class SwitchOrder extends InvestmentFundOrder {
 	};
 	protected CurrencyAndAmount resultingCashOut;
 	/**
-	 * Amount of money that results from a switch-out, that is not reinvested in
-	 * another investment fund, and is repaid to the investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -285,8 +285,8 @@ public class SwitchOrder extends InvestmentFundOrder {
 		{
 			derivation_lazy = () -> Arrays.asList(FundOrderData2.mmResultingCashOut, SwitchOrder2.mmResultingCashOut, SwitchOrder3.mmResultingCashOut, SwitchExecution3.mmResultingCashOut, SwitchExecution4.mmResultingCashOut,
 					SwitchOrder4.mmResultingCashOut, AdditionalAmount1Choice.mmResultingCashOut);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResultingCashOut";
 			definition = "Amount of money that results from a switch-out, that is not reinvested in another investment fund, and is repaid to the investor.";
@@ -305,9 +305,8 @@ public class SwitchOrder extends InvestmentFundOrder {
 	};
 	protected CurrencyAndAmount totalRedemptionAmount;
 	/**
-	 * Amount of money used to derive the quantity of investment fund units to
-	 * be redeemed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -359,8 +358,8 @@ public class SwitchOrder extends InvestmentFundOrder {
 		{
 			derivation_lazy = () -> Arrays.asList(FundOrderData2.mmTotalRedemptionAmount, SwitchOrder2.mmTotalRedemptionAmount, SwitchOrder3.mmTotalRedemptionAmount, SwitchExecution3.mmTotalRedemptionAmount,
 					SwitchExecution4.mmTotalRedemptionAmount, SwitchOrder4.mmTotalRedemptionAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalRedemptionAmount";
 			definition = "Amount of money used to derive the quantity of investment fund units to be redeemed.";
@@ -379,9 +378,8 @@ public class SwitchOrder extends InvestmentFundOrder {
 	};
 	protected CurrencyAndAmount totalSubscriptionAmount;
 	/**
-	 * Amount of money used to derive the quantity of investment fund units to
-	 * be subscribed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -433,8 +431,8 @@ public class SwitchOrder extends InvestmentFundOrder {
 		{
 			derivation_lazy = () -> Arrays.asList(FundOrderData2.mmTotalSubscriptionAmount, SwitchOrder2.mmTotalSubscriptionAmount, SwitchOrder3.mmTotalSubscriptionAmount, SwitchExecution3.mmTotalSubscriptionAmount,
 					SwitchExecution4.mmTotalSubscriptionAmount, SwitchOrder4.mmTotalSubscriptionAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalSubscriptionAmount";
 			definition = "Amount of money used to derive the quantity of investment fund units to be subscribed.";
@@ -453,8 +451,8 @@ public class SwitchOrder extends InvestmentFundOrder {
 	};
 	protected List<com.tools20022.repository.entity.SwitchRedemptionLeg> redemptionLeg;
 	/**
-	 * Part of an investment fund switch order that is a redemption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -508,8 +506,8 @@ public class SwitchOrder extends InvestmentFundOrder {
 	public static final MMBusinessAssociationEnd mmRedemptionLeg = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SwitchOrder2.mmRedemptionLegDetails, SwitchOrder3.mmRedemptionLegDetails, SwitchOrder4.mmRedemptionLegDetails, SwitchOrder5.mmRedemptionLeg, SwitchOrder7.mmRedemptionLegDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RedemptionLeg";
 			definition = "Part of an investment fund switch order that is a redemption.";
@@ -521,8 +519,8 @@ public class SwitchOrder extends InvestmentFundOrder {
 	};
 	protected List<com.tools20022.repository.entity.SwitchSubscriptionLeg> subscriptionLeg;
 	/**
-	 * Part of an investment fund switch order that is a subscription.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -577,8 +575,8 @@ public class SwitchOrder extends InvestmentFundOrder {
 	public static final MMBusinessAssociationEnd mmSubscriptionLeg = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SwitchOrder2.mmSubscriptionLegDetails, SwitchOrder3.mmSubscriptionLegDetails, SwitchOrder4.mmSubscriptionLegDetails, SwitchOrder5.mmSubscriptionLeg, SwitchOrder7.mmSubscriptionLegDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubscriptionLeg";
 			definition = "Part of an investment fund switch order that is a subscription.";
@@ -592,7 +590,7 @@ public class SwitchOrder extends InvestmentFundOrder {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrder";
 				definition = "Transfer from one investment fund/fund class to another investment fund or investment fund class by the investor. A switch is composed of one or several subscription legs, and one or several redemption legs.";
@@ -619,47 +617,53 @@ public class SwitchOrder extends InvestmentFundOrder {
 		return additionalCashIn;
 	}
 
-	public void setAdditionalCashIn(CurrencyAndAmount additionalCashIn) {
-		this.additionalCashIn = additionalCashIn;
+	public SwitchOrder setAdditionalCashIn(CurrencyAndAmount additionalCashIn) {
+		this.additionalCashIn = Objects.requireNonNull(additionalCashIn);
+		return this;
 	}
 
 	public CurrencyAndAmount getResultingCashOut() {
 		return resultingCashOut;
 	}
 
-	public void setResultingCashOut(CurrencyAndAmount resultingCashOut) {
-		this.resultingCashOut = resultingCashOut;
+	public SwitchOrder setResultingCashOut(CurrencyAndAmount resultingCashOut) {
+		this.resultingCashOut = Objects.requireNonNull(resultingCashOut);
+		return this;
 	}
 
 	public CurrencyAndAmount getTotalRedemptionAmount() {
 		return totalRedemptionAmount;
 	}
 
-	public void setTotalRedemptionAmount(CurrencyAndAmount totalRedemptionAmount) {
-		this.totalRedemptionAmount = totalRedemptionAmount;
+	public SwitchOrder setTotalRedemptionAmount(CurrencyAndAmount totalRedemptionAmount) {
+		this.totalRedemptionAmount = Objects.requireNonNull(totalRedemptionAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getTotalSubscriptionAmount() {
 		return totalSubscriptionAmount;
 	}
 
-	public void setTotalSubscriptionAmount(CurrencyAndAmount totalSubscriptionAmount) {
-		this.totalSubscriptionAmount = totalSubscriptionAmount;
+	public SwitchOrder setTotalSubscriptionAmount(CurrencyAndAmount totalSubscriptionAmount) {
+		this.totalSubscriptionAmount = Objects.requireNonNull(totalSubscriptionAmount);
+		return this;
 	}
 
 	public List<SwitchRedemptionLeg> getRedemptionLeg() {
-		return redemptionLeg;
+		return redemptionLeg == null ? redemptionLeg = new ArrayList<>() : redemptionLeg;
 	}
 
-	public void setRedemptionLeg(List<com.tools20022.repository.entity.SwitchRedemptionLeg> redemptionLeg) {
-		this.redemptionLeg = redemptionLeg;
+	public SwitchOrder setRedemptionLeg(List<com.tools20022.repository.entity.SwitchRedemptionLeg> redemptionLeg) {
+		this.redemptionLeg = Objects.requireNonNull(redemptionLeg);
+		return this;
 	}
 
 	public List<SwitchSubscriptionLeg> getSubscriptionLeg() {
-		return subscriptionLeg;
+		return subscriptionLeg == null ? subscriptionLeg = new ArrayList<>() : subscriptionLeg;
 	}
 
-	public void setSubscriptionLeg(List<com.tools20022.repository.entity.SwitchSubscriptionLeg> subscriptionLeg) {
-		this.subscriptionLeg = subscriptionLeg;
+	public SwitchOrder setSubscriptionLeg(List<com.tools20022.repository.entity.SwitchSubscriptionLeg> subscriptionLeg) {
+		this.subscriptionLeg = Objects.requireNonNull(subscriptionLeg);
+		return this;
 	}
 }

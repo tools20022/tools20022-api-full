@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.SettledStatusReasonCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for a partially settled status.
@@ -32,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#mmUnitsPartiallySettled
- * SettledStatusReasonCode.mmUnitsPartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#UnitsPartiallySettled
+ * SettledStatusReasonCode.UnitsPartiallySettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#mmCashPartiallySettled
- * SettledStatusReasonCode.mmCashPartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#CashPartiallySettled
+ * SettledStatusReasonCode.CashPartiallySettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#mmUnitsCashPartiallySettled
- * SettledStatusReasonCode.mmUnitsCashPartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#UnitsCashPartiallySettled
+ * SettledStatusReasonCode.UnitsCashPartiallySettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#mmGatedOneNAV
- * SettledStatusReasonCode.mmGatedOneNAV}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#GatedOneNAV
+ * SettledStatusReasonCode.GatedOneNAV}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#mmGatedMultipleNAV
- * SettledStatusReasonCode.mmGatedMultipleNAV}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettledStatusReasonCode#GatedMultipleNAV
+ * SettledStatusReasonCode.GatedMultipleNAV}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -60,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason for a partially settled status."</li>
  * </ul>
  */
-public class SettledStatusReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SettledStatusReasonCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -102,12 +108,12 @@ public class SettledStatusReasonCode {
 	 * definition} = "Units are partially settled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnitsPartiallySettled = new MMCode() {
+	public static final SettledStatusReasonCode UnitsPartiallySettled = new SettledStatusReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsPartiallySettled";
 			definition = "Units are partially settled";
-			owner_lazy = () -> SettledStatusReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettledStatusReasonCode.mmObject();
 			codeName = "UPST";
 		}
 	};
@@ -132,12 +138,12 @@ public class SettledStatusReasonCode {
 	 * definition} = "Cash is partially settled."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashPartiallySettled = new MMCode() {
+	public static final SettledStatusReasonCode CashPartiallySettled = new SettledStatusReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPartiallySettled";
 			definition = "Cash is partially settled.";
-			owner_lazy = () -> SettledStatusReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettledStatusReasonCode.mmObject();
 			codeName = "CPST";
 		}
 	};
@@ -162,12 +168,12 @@ public class SettledStatusReasonCode {
 	 * definition} = "Units and cash are both partially settled."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnitsCashPartiallySettled = new MMCode() {
+	public static final SettledStatusReasonCode UnitsCashPartiallySettled = new SettledStatusReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsCashPartiallySettled";
 			definition = "Units and cash are both partially settled.";
-			owner_lazy = () -> SettledStatusReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettledStatusReasonCode.mmObject();
 			codeName = "UCPS";
 		}
 	};
@@ -194,12 +200,12 @@ public class SettledStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmGatedOneNAV = new MMCode() {
+	public static final SettledStatusReasonCode GatedOneNAV = new SettledStatusReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GatedOneNAV";
 			definition = "Redemption has been gated, all settlement will be done at the same price. ";
-			owner_lazy = () -> SettledStatusReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettledStatusReasonCode.mmObject();
 			codeName = "GAT1";
 		}
 	};
@@ -227,29 +233,63 @@ public class SettledStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmGatedMultipleNAV = new MMCode() {
+	public static final SettledStatusReasonCode GatedMultipleNAV = new SettledStatusReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GatedMultipleNAV";
 			definition = "Redemption has been gated. Multiple redemptions and multiple prices will be required.";
-			owner_lazy = () -> SettledStatusReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettledStatusReasonCode.mmObject();
 			codeName = "GATM";
 		}
 	};
+	final static private LinkedHashMap<String, SettledStatusReasonCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SettledStatusReasonCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("UPST");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettledStatusReasonCode";
 				definition = "Specifies the reason for a partially settled status.";
-				code_lazy = () -> Arrays.asList(SettledStatusReasonCode.mmUnitsPartiallySettled, SettledStatusReasonCode.mmCashPartiallySettled, SettledStatusReasonCode.mmUnitsCashPartiallySettled, SettledStatusReasonCode.mmGatedOneNAV,
-						SettledStatusReasonCode.mmGatedMultipleNAV);
 				derivation_lazy = () -> Arrays.asList(SettledStatusReason1Code.mmObject(), SettledStatusReason2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettledStatusReasonCode.UnitsPartiallySettled, com.tools20022.repository.codeset.SettledStatusReasonCode.CashPartiallySettled,
+						com.tools20022.repository.codeset.SettledStatusReasonCode.UnitsCashPartiallySettled, com.tools20022.repository.codeset.SettledStatusReasonCode.GatedOneNAV,
+						com.tools20022.repository.codeset.SettledStatusReasonCode.GatedMultipleNAV);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(UnitsPartiallySettled.getCodeName().get(), UnitsPartiallySettled);
+		codesByName.put(CashPartiallySettled.getCodeName().get(), CashPartiallySettled);
+		codesByName.put(UnitsCashPartiallySettled.getCodeName().get(), UnitsCashPartiallySettled);
+		codesByName.put(GatedOneNAV.getCodeName().get(), GatedOneNAV);
+		codesByName.put(GatedMultipleNAV.getCodeName().get(), GatedMultipleNAV);
+	}
+
+	public static SettledStatusReasonCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SettledStatusReasonCode[] values() {
+		SettledStatusReasonCode[] values = new SettledStatusReasonCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SettledStatusReasonCode> {
+		@Override
+		public SettledStatusReasonCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SettledStatusReasonCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

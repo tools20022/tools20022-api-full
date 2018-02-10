@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GrossDividendRate2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of format to express a gross dividend."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GrossDividendRate1Choice", propOrder = {"notSpecifiedRate", "amount", "rateTypeAmount"})
 public class GrossDividendRate1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NotSpcfdRate", required = true)
 	protected RateValueType2FormatChoice notSpecifiedRate;
 	/**
-	 * The value of the rate is not specified, eg, the rate is unknown.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +107,7 @@ public class GrossDividendRate1Choice {
 	 */
 	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GrossDividendRate1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +118,11 @@ public class GrossDividendRate1Choice {
 			complexType_lazy = () -> com.tools20022.repository.choice.RateValueType2FormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * Value expressed as an amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,7 +156,7 @@ public class GrossDividendRate1Choice {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmFinalDividend;
-			componentContext_lazy = () -> GrossDividendRate1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,11 +167,11 @@ public class GrossDividendRate1Choice {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RateTpAmt", required = true)
 	protected GrossDividendRate2 rateTypeAmount;
 	/**
-	 * Value is expressed as an amount related to an underlying securities, eg,
-	 * underlying security for which an interest is paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,7 +206,7 @@ public class GrossDividendRate1Choice {
 	public static final MMMessageAttribute mmRateTypeAmount = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> Dividend.mmObject();
-			componentContext_lazy = () -> GrossDividendRate1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RateTpAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,9 +221,10 @@ public class GrossDividendRate1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GrossDividendRate1Choice.mmNotSpecifiedRate, GrossDividendRate1Choice.mmAmount, GrossDividendRate1Choice.mmRateTypeAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GrossDividendRate1Choice.mmNotSpecifiedRate, com.tools20022.repository.choice.GrossDividendRate1Choice.mmAmount,
+						com.tools20022.repository.choice.GrossDividendRate1Choice.mmRateTypeAmount);
 				trace_lazy = () -> Dividend.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GrossDividendRate1Choice";
 				definition = "Choice of format to express a gross dividend.";
@@ -229,30 +233,30 @@ public class GrossDividendRate1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NotSpcfdRate", required = true)
 	public RateValueType2FormatChoice getNotSpecifiedRate() {
 		return notSpecifiedRate;
 	}
 
-	public void setNotSpecifiedRate(com.tools20022.repository.choice.RateValueType2FormatChoice notSpecifiedRate) {
-		this.notSpecifiedRate = notSpecifiedRate;
+	public GrossDividendRate1Choice setNotSpecifiedRate(com.tools20022.repository.choice.RateValueType2FormatChoice notSpecifiedRate) {
+		this.notSpecifiedRate = Objects.requireNonNull(notSpecifiedRate);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
-		this.amount = amount;
+	public GrossDividendRate1Choice setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "RateTpAmt", required = true)
 	public GrossDividendRate2 getRateTypeAmount() {
 		return rateTypeAmount;
 	}
 
-	public void setRateTypeAmount(GrossDividendRate2 rateTypeAmount) {
-		this.rateTypeAmount = rateTypeAmount;
+	public GrossDividendRate1Choice setRateTypeAmount(GrossDividendRate2 rateTypeAmount) {
+		this.rateTypeAmount = Objects.requireNonNull(rateTypeAmount);
+		return this;
 	}
 }

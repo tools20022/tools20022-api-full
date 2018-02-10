@@ -28,6 +28,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PartyIdentification63;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,18 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of a depostory or settlement currency."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyOrCurrency1Choice", propOrder = {"depository", "settlementCurrency"})
 public class PartyOrCurrency1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dpstry", required = true)
 	protected PartyIdentification63 depository;
 	/**
-	 * First party in the settlement chain. In a plain vanilla settlement, it is
-	 * the Central Securities Depository where the counterparty requests to
-	 * receive the financial instrument or from where the counterparty delivers
-	 * the financial instruments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +120,7 @@ public class PartyOrCurrency1Choice {
 	 */
 	public static final MMMessageAttribute mmDepository = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyOrCurrency1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyOrCurrency1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dpstry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +131,11 @@ public class PartyOrCurrency1Choice {
 			complexType_lazy = () -> PartyIdentification63.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmCcy", required = true)
 	protected ActiveCurrencyCode settlementCurrency;
 	/**
-	 * Currency for the settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +163,7 @@ public class PartyOrCurrency1Choice {
 	 */
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyOrCurrency1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyOrCurrency1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +178,10 @@ public class PartyOrCurrency1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyOrCurrency1Choice.mmDepository, PartyOrCurrency1Choice.mmSettlementCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyOrCurrency1Choice.mmDepository, com.tools20022.repository.choice.PartyOrCurrency1Choice.mmSettlementCurrency);
 				messageBuildingBlock_lazy = () -> Arrays.asList(StandingSettlementInstructionCancellationV01.mmSettlementDetails, StandingSettlementInstructionStatusAdviceV01.mmSettlementDetails,
 						StandingSettlementInstructionDeletionV01.mmSettlementDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyOrCurrency1Choice";
 				definition = "Choice of a depostory or settlement currency.";
@@ -190,21 +190,21 @@ public class PartyOrCurrency1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dpstry", required = true)
 	public PartyIdentification63 getDepository() {
 		return depository;
 	}
 
-	public void setDepository(PartyIdentification63 depository) {
-		this.depository = depository;
+	public PartyOrCurrency1Choice setDepository(PartyIdentification63 depository) {
+		this.depository = Objects.requireNonNull(depository);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmCcy", required = true)
 	public ActiveCurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
 
-	public void setSettlementCurrency(ActiveCurrencyCode settlementCurrency) {
-		this.settlementCurrency = settlementCurrency;
+	public PartyOrCurrency1Choice setSettlementCurrency(ActiveCurrencyCode settlementCurrency) {
+		this.settlementCurrency = Objects.requireNonNull(settlementCurrency);
+		return this;
 	}
 }

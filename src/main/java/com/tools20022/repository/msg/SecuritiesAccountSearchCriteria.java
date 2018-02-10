@@ -30,6 +30,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -76,8 +77,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,16 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Set of search criteria for querying securties account reference data."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesAccountSearchCriteria", propOrder = {"accountIdentification", "accountServicer", "accountOwner", "partyType", "openingDate", "closingDate", "accountType", "endInvestorFlag", "pricingScheme"})
 public class SecuritiesAccountSearchCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId")
 	protected Max35Text accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -127,7 +128,7 @@ public class SecuritiesAccountSearchCriteria {
 	 */
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,10 +139,11 @@ public class SecuritiesAccountSearchCriteria {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcr")
 	protected BICFIIdentifier accountServicer;
 	/**
-	 * Party that services the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,7 +171,7 @@ public class SecuritiesAccountSearchCriteria {
 	 */
 	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,10 +182,11 @@ public class SecuritiesAccountSearchCriteria {
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected SystemPartyIdentification3 accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -210,7 +213,7 @@ public class SecuritiesAccountSearchCriteria {
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,11 +225,11 @@ public class SecuritiesAccountSearchCriteria {
 			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
 		}
 	};
+	@XmlElement(name = "PtyTp")
 	protected SystemPartyType1Code partyType;
 	/**
-	 * Specifies the type of the party for which securities account data have
-	 * been queried.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -256,7 +259,7 @@ public class SecuritiesAccountSearchCriteria {
 	 */
 	public static final MMMessageAttribute mmPartyType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "PtyTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,10 +270,11 @@ public class SecuritiesAccountSearchCriteria {
 			simpleType_lazy = () -> SystemPartyType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "OpngDt")
 	protected DateSearchChoice openingDate;
 	/**
-	 * Legal opening date for the securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -298,7 +302,7 @@ public class SecuritiesAccountSearchCriteria {
 	 */
 	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "OpngDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -309,10 +313,11 @@ public class SecuritiesAccountSearchCriteria {
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "ClsgDt")
 	protected DateSearchChoice closingDate;
 	/**
-	 * Legal closing date for the securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -340,7 +345,7 @@ public class SecuritiesAccountSearchCriteria {
 	 */
 	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -351,10 +356,11 @@ public class SecuritiesAccountSearchCriteria {
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctTp")
 	protected SystemSecuritiesAccountType1Code accountType;
 	/**
-	 * Specifies the type of securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -382,7 +388,7 @@ public class SecuritiesAccountSearchCriteria {
 	 */
 	public static final MMMessageAttribute mmAccountType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "AcctTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -393,11 +399,11 @@ public class SecuritiesAccountSearchCriteria {
 			simpleType_lazy = () -> SystemSecuritiesAccountType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "EndInvstrFlg")
 	protected Exact4AlphaNumericText endInvestorFlag;
 	/**
-	 * Specifies information to identify securities accounts where allocation
-	 * instructions are posted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -427,7 +433,7 @@ public class SecuritiesAccountSearchCriteria {
 	 */
 	public static final MMMessageAttribute mmEndInvestorFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "EndInvstrFlg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -438,10 +444,11 @@ public class SecuritiesAccountSearchCriteria {
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "PricgSchme")
 	protected Exact4AlphaNumericText pricingScheme;
 	/**
-	 * Defines how the price is applied to the securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -470,7 +477,7 @@ public class SecuritiesAccountSearchCriteria {
 	 */
 	public static final MMMessageAttribute mmPricingScheme = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "PricgSchme";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -485,10 +492,12 @@ public class SecuritiesAccountSearchCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountSearchCriteria.mmAccountIdentification, SecuritiesAccountSearchCriteria.mmAccountServicer, SecuritiesAccountSearchCriteria.mmAccountOwner,
-						SecuritiesAccountSearchCriteria.mmPartyType, SecuritiesAccountSearchCriteria.mmOpeningDate, SecuritiesAccountSearchCriteria.mmClosingDate, SecuritiesAccountSearchCriteria.mmAccountType,
-						SecuritiesAccountSearchCriteria.mmEndInvestorFlag, SecuritiesAccountSearchCriteria.mmPricingScheme);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmAccountIdentification, com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmAccountServicer,
+						com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmAccountOwner, com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmPartyType,
+						com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmOpeningDate, com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmClosingDate,
+						com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmAccountType, com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmEndInvestorFlag,
+						com.tools20022.repository.msg.SecuritiesAccountSearchCriteria.mmPricingScheme);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountSearchCriteria";
 				definition = "Set of search criteria for querying securties account reference data.";
@@ -497,84 +506,84 @@ public class SecuritiesAccountSearchCriteria {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId")
-	public Max35Text getAccountIdentification() {
-		return accountIdentification;
+	public Optional<Max35Text> getAccountIdentification() {
+		return accountIdentification == null ? Optional.empty() : Optional.of(accountIdentification);
 	}
 
-	public void setAccountIdentification(Max35Text accountIdentification) {
+	public SecuritiesAccountSearchCriteria setAccountIdentification(Max35Text accountIdentification) {
 		this.accountIdentification = accountIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcr")
-	public BICFIIdentifier getAccountServicer() {
-		return accountServicer;
+	public Optional<BICFIIdentifier> getAccountServicer() {
+		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public void setAccountServicer(BICFIIdentifier accountServicer) {
+	public SecuritiesAccountSearchCriteria setAccountServicer(BICFIIdentifier accountServicer) {
 		this.accountServicer = accountServicer;
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public SystemPartyIdentification3 getAccountOwner() {
-		return accountOwner;
+	public Optional<SystemPartyIdentification3> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification3 accountOwner) {
+	public SecuritiesAccountSearchCriteria setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification3 accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "PtyTp")
-	public SystemPartyType1Code getPartyType() {
-		return partyType;
+	public Optional<SystemPartyType1Code> getPartyType() {
+		return partyType == null ? Optional.empty() : Optional.of(partyType);
 	}
 
-	public void setPartyType(SystemPartyType1Code partyType) {
+	public SecuritiesAccountSearchCriteria setPartyType(SystemPartyType1Code partyType) {
 		this.partyType = partyType;
+		return this;
 	}
 
-	@XmlElement(name = "OpngDt")
-	public DateSearchChoice getOpeningDate() {
-		return openingDate;
+	public Optional<DateSearchChoice> getOpeningDate() {
+		return openingDate == null ? Optional.empty() : Optional.of(openingDate);
 	}
 
-	public void setOpeningDate(DateSearchChoice openingDate) {
+	public SecuritiesAccountSearchCriteria setOpeningDate(DateSearchChoice openingDate) {
 		this.openingDate = openingDate;
+		return this;
 	}
 
-	@XmlElement(name = "ClsgDt")
-	public DateSearchChoice getClosingDate() {
-		return closingDate;
+	public Optional<DateSearchChoice> getClosingDate() {
+		return closingDate == null ? Optional.empty() : Optional.of(closingDate);
 	}
 
-	public void setClosingDate(DateSearchChoice closingDate) {
+	public SecuritiesAccountSearchCriteria setClosingDate(DateSearchChoice closingDate) {
 		this.closingDate = closingDate;
+		return this;
 	}
 
-	@XmlElement(name = "AcctTp")
-	public SystemSecuritiesAccountType1Code getAccountType() {
-		return accountType;
+	public Optional<SystemSecuritiesAccountType1Code> getAccountType() {
+		return accountType == null ? Optional.empty() : Optional.of(accountType);
 	}
 
-	public void setAccountType(SystemSecuritiesAccountType1Code accountType) {
+	public SecuritiesAccountSearchCriteria setAccountType(SystemSecuritiesAccountType1Code accountType) {
 		this.accountType = accountType;
+		return this;
 	}
 
-	@XmlElement(name = "EndInvstrFlg")
-	public Exact4AlphaNumericText getEndInvestorFlag() {
-		return endInvestorFlag;
+	public Optional<Exact4AlphaNumericText> getEndInvestorFlag() {
+		return endInvestorFlag == null ? Optional.empty() : Optional.of(endInvestorFlag);
 	}
 
-	public void setEndInvestorFlag(Exact4AlphaNumericText endInvestorFlag) {
+	public SecuritiesAccountSearchCriteria setEndInvestorFlag(Exact4AlphaNumericText endInvestorFlag) {
 		this.endInvestorFlag = endInvestorFlag;
+		return this;
 	}
 
-	@XmlElement(name = "PricgSchme")
-	public Exact4AlphaNumericText getPricingScheme() {
-		return pricingScheme;
+	public Optional<Exact4AlphaNumericText> getPricingScheme() {
+		return pricingScheme == null ? Optional.empty() : Optional.of(pricingScheme);
 	}
 
-	public void setPricingScheme(Exact4AlphaNumericText pricingScheme) {
+	public SecuritiesAccountSearchCriteria setPricingScheme(Exact4AlphaNumericText pricingScheme) {
 		this.pricingScheme = pricingScheme;
+		return this;
 	}
 }

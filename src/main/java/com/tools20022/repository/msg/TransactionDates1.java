@@ -27,9 +27,8 @@ import com.tools20022.repository.entity.CashSettlement;
 import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,20 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionDates1", propOrder = {"acceptanceDateTime", "tradeDate", "interbankSettlementDate", "startDate", "endDate", "transactionDateTime", "proprietary"})
 public class TransactionDates1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AccptncDtTm")
 	protected ISODateTime acceptanceDateTime;
 	/**
-	 * Point in time when the payment order from the initiating party meets the
-	 * processing conditions of the account servicing agent (debtor's agent in
-	 * case of a credit transfer, creditor's agent in case of a direct debit).
-	 * This means - amongst others - that the account servicing agent has
-	 * received the payment order and has applied checks as eg, authorisation,
-	 * availability of funds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,7 +127,7 @@ public class TransactionDates1 {
 	public static final MMMessageAttribute mmAcceptanceDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmAcceptanceDateTime;
-			componentContext_lazy = () -> TransactionDates1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDates1.mmObject();
 			isDerived = false;
 			xmlTag = "AccptncDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,10 +138,11 @@ public class TransactionDates1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDt")
 	protected ISODate tradeDate;
 	/**
-	 * Date on which the trade was executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,7 +175,7 @@ public class TransactionDates1 {
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> TransactionDates1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDates1.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,12 +186,11 @@ public class TransactionDates1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmDt")
 	protected ISODate interbankSettlementDate;
 	/**
-	 * Date on which the amount of money ceases to be available to the agent
-	 * that owes it and when the amount of money becomes available to the agent
-	 * to which it is due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -230,7 +225,7 @@ public class TransactionDates1 {
 	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
-			componentContext_lazy = () -> TransactionDates1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDates1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,11 +236,11 @@ public class TransactionDates1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "StartDt")
 	protected ISODate startDate;
 	/**
-	 * Start date of the underlying transaction, such as a treasury transaction,
-	 * an investment plan.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -280,7 +275,7 @@ public class TransactionDates1 {
 	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmStartDate;
-			componentContext_lazy = () -> TransactionDates1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDates1.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -291,11 +286,11 @@ public class TransactionDates1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "EndDt")
 	protected ISODate endDate;
 	/**
-	 * End date of the underlying transaction, such as a treasury transaction,
-	 * an investment plan.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -330,7 +325,7 @@ public class TransactionDates1 {
 	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmEndDate;
-			componentContext_lazy = () -> TransactionDates1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDates1.mmObject();
 			isDerived = false;
 			xmlTag = "EndDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -341,10 +336,11 @@ public class TransactionDates1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "TxDtTm")
 	protected ISODateTime transactionDateTime;
 	/**
-	 * Date and time of the underlying transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -377,7 +373,7 @@ public class TransactionDates1 {
 	public static final MMMessageAttribute mmTransactionDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> TransactionDates1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDates1.mmObject();
 			isDerived = false;
 			xmlTag = "TxDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -388,10 +384,11 @@ public class TransactionDates1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry")
 	protected List<com.tools20022.repository.msg.ProprietaryDate1> proprietary;
 	/**
-	 * Proprietary date related to the underlying transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -417,7 +414,7 @@ public class TransactionDates1 {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionDates1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDates1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -432,10 +429,11 @@ public class TransactionDates1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionDates1.mmAcceptanceDateTime, TransactionDates1.mmTradeDate, TransactionDates1.mmInterbankSettlementDate, TransactionDates1.mmStartDate, TransactionDates1.mmEndDate,
-						TransactionDates1.mmTransactionDateTime, TransactionDates1.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDates1.mmAcceptanceDateTime, com.tools20022.repository.msg.TransactionDates1.mmTradeDate,
+						com.tools20022.repository.msg.TransactionDates1.mmInterbankSettlementDate, com.tools20022.repository.msg.TransactionDates1.mmStartDate, com.tools20022.repository.msg.TransactionDates1.mmEndDate,
+						com.tools20022.repository.msg.TransactionDates1.mmTransactionDateTime, com.tools20022.repository.msg.TransactionDates1.mmProprietary);
 				trace_lazy = () -> PaymentExecution.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionDates1";
 				definition = "Set of elements identifying the dates related to the underlying transactions.";
@@ -444,66 +442,66 @@ public class TransactionDates1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AccptncDtTm")
-	public ISODateTime getAcceptanceDateTime() {
-		return acceptanceDateTime;
+	public Optional<ISODateTime> getAcceptanceDateTime() {
+		return acceptanceDateTime == null ? Optional.empty() : Optional.of(acceptanceDateTime);
 	}
 
-	public void setAcceptanceDateTime(ISODateTime acceptanceDateTime) {
+	public TransactionDates1 setAcceptanceDateTime(ISODateTime acceptanceDateTime) {
 		this.acceptanceDateTime = acceptanceDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "TradDt")
-	public ISODate getTradeDate() {
-		return tradeDate;
+	public Optional<ISODate> getTradeDate() {
+		return tradeDate == null ? Optional.empty() : Optional.of(tradeDate);
 	}
 
-	public void setTradeDate(ISODate tradeDate) {
+	public TransactionDates1 setTradeDate(ISODate tradeDate) {
 		this.tradeDate = tradeDate;
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmDt")
-	public ISODate getInterbankSettlementDate() {
-		return interbankSettlementDate;
+	public Optional<ISODate> getInterbankSettlementDate() {
+		return interbankSettlementDate == null ? Optional.empty() : Optional.of(interbankSettlementDate);
 	}
 
-	public void setInterbankSettlementDate(ISODate interbankSettlementDate) {
+	public TransactionDates1 setInterbankSettlementDate(ISODate interbankSettlementDate) {
 		this.interbankSettlementDate = interbankSettlementDate;
+		return this;
 	}
 
-	@XmlElement(name = "StartDt")
-	public ISODate getStartDate() {
-		return startDate;
+	public Optional<ISODate> getStartDate() {
+		return startDate == null ? Optional.empty() : Optional.of(startDate);
 	}
 
-	public void setStartDate(ISODate startDate) {
+	public TransactionDates1 setStartDate(ISODate startDate) {
 		this.startDate = startDate;
+		return this;
 	}
 
-	@XmlElement(name = "EndDt")
-	public ISODate getEndDate() {
-		return endDate;
+	public Optional<ISODate> getEndDate() {
+		return endDate == null ? Optional.empty() : Optional.of(endDate);
 	}
 
-	public void setEndDate(ISODate endDate) {
+	public TransactionDates1 setEndDate(ISODate endDate) {
 		this.endDate = endDate;
+		return this;
 	}
 
-	@XmlElement(name = "TxDtTm")
-	public ISODateTime getTransactionDateTime() {
-		return transactionDateTime;
+	public Optional<ISODateTime> getTransactionDateTime() {
+		return transactionDateTime == null ? Optional.empty() : Optional.of(transactionDateTime);
 	}
 
-	public void setTransactionDateTime(ISODateTime transactionDateTime) {
+	public TransactionDates1 setTransactionDateTime(ISODateTime transactionDateTime) {
 		this.transactionDateTime = transactionDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "Prtry")
 	public List<ProprietaryDate1> getProprietary() {
-		return proprietary;
+		return proprietary == null ? proprietary = new ArrayList<>() : proprietary;
 	}
 
-	public void setProprietary(List<com.tools20022.repository.msg.ProprietaryDate1> proprietary) {
-		this.proprietary = proprietary;
+	public TransactionDates1 setProprietary(List<com.tools20022.repository.msg.ProprietaryDate1> proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

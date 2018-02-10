@@ -20,33 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ReportingCode;
+import com.tools20022.repository.codeset.Reporting1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies to which institution the reporting must be done.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ReportingCode ReportingCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Reporting1Code#mmStockExchange
- * Reporting1Code.mmStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.Reporting1Code#StockExchange
+ * Reporting1Code.StockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Reporting1Code#mmRegulatoryOrganisation
- * Reporting1Code.mmRegulatoryOrganisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.Reporting1Code#RegulatoryOrganisation
+ * Reporting1Code.RegulatoryOrganisation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ReportingCode ReportingCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -63,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies to which institution the reporting must be done."</li>
  * </ul>
  */
-public class Reporting1Code extends ReportingCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Reporting1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,11 +87,12 @@ public class Reporting1Code extends ReportingCode {
 	 * name} = "StockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockExchange = new MMCode() {
+	public static final Reporting1Code StockExchange = new Reporting1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
-			owner_lazy = () -> Reporting1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Reporting1Code.mmObject();
+			codeName = ReportingCode.StockExchange.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -105,26 +111,57 @@ public class Reporting1Code extends ReportingCode {
 	 * name} = "RegulatoryOrganisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegulatoryOrganisation = new MMCode() {
+	public static final Reporting1Code RegulatoryOrganisation = new Reporting1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryOrganisation";
-			owner_lazy = () -> Reporting1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Reporting1Code.mmObject();
+			codeName = ReportingCode.RegulatoryOrganisation.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Reporting1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Reporting1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("STEX");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reporting1Code";
 				definition = "Identifies to which institution the reporting must be done.";
-				code_lazy = () -> Arrays.asList(Reporting1Code.mmStockExchange, Reporting1Code.mmRegulatoryOrganisation);
 				trace_lazy = () -> ReportingCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Reporting1Code.StockExchange, com.tools20022.repository.codeset.Reporting1Code.RegulatoryOrganisation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(StockExchange.getCodeName().get(), StockExchange);
+		codesByName.put(RegulatoryOrganisation.getCodeName().get(), RegulatoryOrganisation);
+	}
+
+	public static Reporting1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Reporting1Code[] values() {
+		Reporting1Code[] values = new Reporting1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Reporting1Code> {
+		@Override
+		public Reporting1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Reporting1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

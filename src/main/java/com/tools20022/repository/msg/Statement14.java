@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -35,6 +36,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -98,8 +101,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReportNumberRule#forStatement14
+ * ConstraintReportNumberRule.forStatement14}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forStatement14
+ * ConstraintCoexistenceIdentificationRule.forStatement14}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -117,15 +131,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Statement14", propOrder = {"reportNumber", "queryReference", "statementIdentification", "statementDateTime", "frequency", "updateType", "statementStructure", "activityIndicator"})
 public class Statement14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptNb")
 	protected Number3Choice reportNumber;
 	/**
-	 * Sequential number of the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,6 +154,9 @@ public class Statement14 {
 	 * {@linkplain com.tools20022.repository.msg.Statement14 Statement14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RptNb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13a::STAT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -159,9 +177,10 @@ public class Statement14 {
 	 */
 	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement14.mmObject();
 			isDerived = false;
 			xmlTag = "RptNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13a::STAT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the report.";
@@ -171,11 +190,11 @@ public class Statement14 {
 			complexType_lazy = () -> Number3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "QryRef")
 	protected Max35Text queryReference;
 	/**
-	 * Identification of the SecuritiesStatementQuery message sent to request
-	 * this statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,6 +207,9 @@ public class Statement14 {
 	 * {@linkplain com.tools20022.repository.msg.Statement14 Statement14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QryRef"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::RELA</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -211,9 +233,10 @@ public class Statement14 {
 	 */
 	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement14.mmObject();
 			isDerived = false;
 			xmlTag = "QryRef";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::RELA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReference";
 			definition = "Identification of the SecuritiesStatementQuery message sent to request this statement.";
@@ -223,10 +246,11 @@ public class Statement14 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtId")
 	protected Max35Text statementIdentification;
 	/**
-	 * Reference common to all pages of a statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -260,7 +284,7 @@ public class Statement14 {
 	 */
 	public static final MMMessageAttribute mmStatementIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement14.mmObject();
 			isDerived = false;
 			xmlTag = "StmtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,10 +296,11 @@ public class Statement14 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtDtTm", required = true)
 	protected DateAndDateTimeChoice statementDateTime;
 	/**
-	 * Date and time of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -289,6 +314,9 @@ public class Statement14 {
 	 * {@linkplain com.tools20022.repository.msg.Statement14 Statement14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StmtDtTm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::STAT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -310,9 +338,10 @@ public class Statement14 {
 	 */
 	public static final MMMessageAttribute mmStatementDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement14.mmObject();
 			isDerived = false;
 			xmlTag = "StmtDtTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::STAT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDateTime";
 			definition = "Date and time of the statement.";
@@ -322,10 +351,11 @@ public class Statement14 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Frqcy")
 	protected Frequency4Choice frequency;
 	/**
-	 * Frequency of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -339,6 +369,9 @@ public class Statement14 {
 	 * {@linkplain com.tools20022.repository.msg.Statement14 Statement14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Frqcy"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::SFRE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -359,9 +392,10 @@ public class Statement14 {
 	 */
 	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement14.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::SFRE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the statement.";
@@ -371,10 +405,11 @@ public class Statement14 {
 			complexType_lazy = () -> Frequency4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "UpdTp")
 	protected UpdateType2Choice updateType;
 	/**
-	 * Indicates whether the statement is complete or contains changes only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -386,6 +421,9 @@ public class Statement14 {
 	 * {@linkplain com.tools20022.repository.msg.Statement14 Statement14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UpdTp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::CODE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -407,9 +445,10 @@ public class Statement14 {
 	 */
 	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Statement14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement14.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CODE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the statement is complete or contains changes only.";
@@ -420,10 +459,11 @@ public class Statement14 {
 			type_lazy = () -> UpdateType2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtStr", required = true)
 	protected StatementStructure1Code statementStructure;
 	/**
-	 * Specifies whether the statement is sorted by status or transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -437,6 +477,9 @@ public class Statement14 {
 	 * {@linkplain com.tools20022.repository.msg.Statement14 Statement14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StmtStr"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22H::STST</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -459,9 +502,10 @@ public class Statement14 {
 	 */
 	public static final MMMessageAttribute mmStatementStructure = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement14.mmObject();
 			isDerived = false;
 			xmlTag = "StmtStr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22H::STST"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementStructure";
 			definition = "Specifies whether the statement is sorted by status or transaction.";
@@ -471,11 +515,11 @@ public class Statement14 {
 			simpleType_lazy = () -> StatementStructure1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ActvtyInd", required = true)
 	protected YesNoIndicator activityIndicator;
 	/**
-	 * Indicates whether there is activity or information update reported in the
-	 * statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -489,6 +533,9 @@ public class Statement14 {
 	 * {@linkplain com.tools20022.repository.msg.Statement14 Statement14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ActvtyInd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :17B::ACTI</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -512,9 +559,10 @@ public class Statement14 {
 	 */
 	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement14.mmObject();
 			isDerived = false;
 			xmlTag = "ActvtyInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":17B::ACTI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
@@ -528,12 +576,14 @@ public class Statement14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Statement14.mmReportNumber, Statement14.mmQueryReference, Statement14.mmStatementIdentification, Statement14.mmStatementDateTime, Statement14.mmFrequency, Statement14.mmUpdateType,
-						Statement14.mmStatementStructure, Statement14.mmActivityIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement14.mmReportNumber, com.tools20022.repository.msg.Statement14.mmQueryReference,
+						com.tools20022.repository.msg.Statement14.mmStatementIdentification, com.tools20022.repository.msg.Statement14.mmStatementDateTime, com.tools20022.repository.msg.Statement14.mmFrequency,
+						com.tools20022.repository.msg.Statement14.mmUpdateType, com.tools20022.repository.msg.Statement14.mmStatementStructure, com.tools20022.repository.msg.Statement14.mmActivityIndicator);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTransactionPendingReportV01.mmStatementGeneralDetails, SecuritiesTransactionPendingReportV02.mmStatementGeneralDetails,
 						SecuritiesTransactionPendingReportV03.mmStatementGeneralDetails, SecuritiesTransactionPendingReportV04.mmStatementGeneralDetails, SecuritiesTransactionPendingReportV05.mmStatementGeneralDetails,
 						SecuritiesTransactionPendingReportV06.mmStatementGeneralDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReportNumberRule.forStatement14, com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forStatement14);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -550,75 +600,75 @@ public class Statement14 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptNb")
-	public Number3Choice getReportNumber() {
-		return reportNumber;
+	public Optional<Number3Choice> getReportNumber() {
+		return reportNumber == null ? Optional.empty() : Optional.of(reportNumber);
 	}
 
-	public void setReportNumber(Number3Choice reportNumber) {
+	public Statement14 setReportNumber(Number3Choice reportNumber) {
 		this.reportNumber = reportNumber;
+		return this;
 	}
 
-	@XmlElement(name = "QryRef")
-	public Max35Text getQueryReference() {
-		return queryReference;
+	public Optional<Max35Text> getQueryReference() {
+		return queryReference == null ? Optional.empty() : Optional.of(queryReference);
 	}
 
-	public void setQueryReference(Max35Text queryReference) {
+	public Statement14 setQueryReference(Max35Text queryReference) {
 		this.queryReference = queryReference;
+		return this;
 	}
 
-	@XmlElement(name = "StmtId")
-	public Max35Text getStatementIdentification() {
-		return statementIdentification;
+	public Optional<Max35Text> getStatementIdentification() {
+		return statementIdentification == null ? Optional.empty() : Optional.of(statementIdentification);
 	}
 
-	public void setStatementIdentification(Max35Text statementIdentification) {
+	public Statement14 setStatementIdentification(Max35Text statementIdentification) {
 		this.statementIdentification = statementIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "StmtDtTm", required = true)
 	public DateAndDateTimeChoice getStatementDateTime() {
 		return statementDateTime;
 	}
 
-	public void setStatementDateTime(DateAndDateTimeChoice statementDateTime) {
-		this.statementDateTime = statementDateTime;
+	public Statement14 setStatementDateTime(DateAndDateTimeChoice statementDateTime) {
+		this.statementDateTime = Objects.requireNonNull(statementDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "Frqcy")
-	public Frequency4Choice getFrequency() {
-		return frequency;
+	public Optional<Frequency4Choice> getFrequency() {
+		return frequency == null ? Optional.empty() : Optional.of(frequency);
 	}
 
-	public void setFrequency(Frequency4Choice frequency) {
+	public Statement14 setFrequency(Frequency4Choice frequency) {
 		this.frequency = frequency;
+		return this;
 	}
 
-	@XmlElement(name = "UpdTp")
-	public UpdateType2Choice getUpdateType() {
-		return updateType;
+	public Optional<UpdateType2Choice> getUpdateType() {
+		return updateType == null ? Optional.empty() : Optional.of(updateType);
 	}
 
-	public void setUpdateType(UpdateType2Choice updateType) {
+	public Statement14 setUpdateType(UpdateType2Choice updateType) {
 		this.updateType = updateType;
+		return this;
 	}
 
-	@XmlElement(name = "StmtStr", required = true)
 	public StatementStructure1Code getStatementStructure() {
 		return statementStructure;
 	}
 
-	public void setStatementStructure(StatementStructure1Code statementStructure) {
-		this.statementStructure = statementStructure;
+	public Statement14 setStatementStructure(StatementStructure1Code statementStructure) {
+		this.statementStructure = Objects.requireNonNull(statementStructure);
+		return this;
 	}
 
-	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}
 
-	public void setActivityIndicator(YesNoIndicator activityIndicator) {
-		this.activityIndicator = activityIndicator;
+	public Statement14 setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = Objects.requireNonNull(activityIndicator);
+		return this;
 	}
 }

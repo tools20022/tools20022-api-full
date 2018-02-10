@@ -28,9 +28,11 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.AccountStatus;
 import com.tools20022.repository.entity.InvestmentFundOrder;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Reason for a blocked status."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BlockedStatusReason2", propOrder = {"transactionType", "blocked", "reason", "additionalInformation"})
 public class BlockedStatusReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxTp", required = true)
 	protected TransactionType5Choice transactionType;
 	/**
-	 * Type of transaction for which the account has a blocked status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -117,7 +120,7 @@ public class BlockedStatusReason2 {
 	public static final MMMessageAssociationEnd mmTransactionType = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundOrder.mmObject();
-			componentContext_lazy = () -> BlockedStatusReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BlockedStatusReason2.mmObject();
 			isDerived = false;
 			xmlTag = "TxTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,10 +132,11 @@ public class BlockedStatusReason2 {
 			type_lazy = () -> TransactionType5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Blckd", required = true)
 	protected YesNoIndicator blocked;
 	/**
-	 * Indicates whether the account is blocked.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,7 +170,7 @@ public class BlockedStatusReason2 {
 	public static final MMMessageAttribute mmBlocked = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmBlocked;
-			componentContext_lazy = () -> BlockedStatusReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BlockedStatusReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Blckd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,10 +181,11 @@ public class BlockedStatusReason2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn")
 	protected List<BlockedReason2Choice> reason;
 	/**
-	 * Reason for the blocked status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -213,7 +218,7 @@ public class BlockedStatusReason2 {
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmBlockedReason;
-			componentContext_lazy = () -> BlockedStatusReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BlockedStatusReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,10 +229,11 @@ public class BlockedStatusReason2 {
 			type_lazy = () -> BlockedReason2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf", required = true)
 	protected Max350Text additionalInformation;
 	/**
-	 * Additional information about the blocked account status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -254,7 +260,7 @@ public class BlockedStatusReason2 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BlockedStatusReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BlockedStatusReason2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,9 +275,10 @@ public class BlockedStatusReason2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BlockedStatusReason2.mmTransactionType, BlockedStatusReason2.mmBlocked, BlockedStatusReason2.mmReason, BlockedStatusReason2.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BlockedStatusReason2.mmTransactionType, com.tools20022.repository.msg.BlockedStatusReason2.mmBlocked,
+						com.tools20022.repository.msg.BlockedStatusReason2.mmReason, com.tools20022.repository.msg.BlockedStatusReason2.mmAdditionalInformation);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BlockedStatusReason2";
 				definition = "Reason for a blocked status.";
@@ -280,39 +287,39 @@ public class BlockedStatusReason2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxTp", required = true)
 	public TransactionType5Choice getTransactionType() {
 		return transactionType;
 	}
 
-	public void setTransactionType(TransactionType5Choice transactionType) {
-		this.transactionType = transactionType;
+	public BlockedStatusReason2 setTransactionType(TransactionType5Choice transactionType) {
+		this.transactionType = Objects.requireNonNull(transactionType);
+		return this;
 	}
 
-	@XmlElement(name = "Blckd", required = true)
 	public YesNoIndicator getBlocked() {
 		return blocked;
 	}
 
-	public void setBlocked(YesNoIndicator blocked) {
-		this.blocked = blocked;
+	public BlockedStatusReason2 setBlocked(YesNoIndicator blocked) {
+		this.blocked = Objects.requireNonNull(blocked);
+		return this;
 	}
 
-	@XmlElement(name = "Rsn")
 	public List<BlockedReason2Choice> getReason() {
-		return reason;
+		return reason == null ? reason = new ArrayList<>() : reason;
 	}
 
-	public void setReason(List<BlockedReason2Choice> reason) {
-		this.reason = reason;
+	public BlockedStatusReason2 setReason(List<BlockedReason2Choice> reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf", required = true)
 	public Max350Text getAdditionalInformation() {
 		return additionalInformation;
 	}
 
-	public void setAdditionalInformation(Max350Text additionalInformation) {
-		this.additionalInformation = additionalInformation;
+	public BlockedStatusReason2 setAdditionalInformation(Max350Text additionalInformation) {
+		this.additionalInformation = Objects.requireNonNull(additionalInformation);
+		return this;
 	}
 }

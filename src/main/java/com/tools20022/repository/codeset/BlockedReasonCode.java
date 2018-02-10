@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.BlockedReasonCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason an account is blocked.
@@ -32,38 +37,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmCommitment
- * BlockedReasonCode.mmCommitment}</li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#Commitment
+ * BlockedReasonCode.Commitment}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BlockedReasonCode#Pledged
+ * BlockedReasonCode.Pledged}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmPledged
- * BlockedReasonCode.mmPledged}</li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#Confiscation
+ * BlockedReasonCode.Confiscation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmConfiscation
- * BlockedReasonCode.mmConfiscation}</li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#Bankruptcy
+ * BlockedReasonCode.Bankruptcy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmBankruptcy
- * BlockedReasonCode.mmBankruptcy}</li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#MortisCausa
+ * BlockedReasonCode.MortisCausa}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BlockedReasonCode#Transfer
+ * BlockedReasonCode.Transfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmMortisCausa
- * BlockedReasonCode.mmMortisCausa}</li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#Reregistration
+ * BlockedReasonCode.Reregistration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmTransfer
- * BlockedReasonCode.mmTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#Sanctions
+ * BlockedReasonCode.Sanctions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmReregistration
- * BlockedReasonCode.mmReregistration}</li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#PendingComplianceVerification
+ * BlockedReasonCode.PendingComplianceVerification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmSanctions
- * BlockedReasonCode.mmSanctions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmPendingComplianceVerification
- * BlockedReasonCode.mmPendingComplianceVerification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmAccountClosingInProcess
- * BlockedReasonCode.mmAccountClosingInProcess}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#mmRejected
- * BlockedReasonCode.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.BlockedReasonCode#AccountClosingInProcess
+ * BlockedReasonCode.AccountClosingInProcess}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BlockedReasonCode#Rejected
+ * BlockedReasonCode.Rejected}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -80,8 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -98,7 +100,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason an account is blocked."</li>
  * </ul>
  */
-public class BlockedReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BlockedReasonCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -122,12 +125,12 @@ public class BlockedReasonCode {
 	 * definition} = "Commitment."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommitment = new MMCode() {
+	public static final BlockedReasonCode Commitment = new BlockedReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commitment";
 			definition = "Commitment.";
-			owner_lazy = () -> BlockedReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BlockedReasonCode.mmObject();
 			codeName = "CMMT";
 		}
 	};
@@ -152,12 +155,12 @@ public class BlockedReasonCode {
 	 * definition} = "Pledged."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPledged = new MMCode() {
+	public static final BlockedReasonCode Pledged = new BlockedReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pledged";
 			definition = "Pledged.";
-			owner_lazy = () -> BlockedReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BlockedReasonCode.mmObject();
 			codeName = "PLDG";
 		}
 	};
@@ -182,12 +185,12 @@ public class BlockedReasonCode {
 	 * definition} = "Confiscation."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConfiscation = new MMCode() {
+	public static final BlockedReasonCode Confiscation = new BlockedReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confiscation";
 			definition = "Confiscation.";
-			owner_lazy = () -> BlockedReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BlockedReasonCode.mmObject();
 			codeName = "CNFS";
 		}
 	};
@@ -212,12 +215,12 @@ public class BlockedReasonCode {
 	 * definition} = "Bankruptcy."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBankruptcy = new MMCode() {
+	public static final BlockedReasonCode Bankruptcy = new BlockedReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bankruptcy";
 			definition = "Bankruptcy.";
-			owner_lazy = () -> BlockedReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BlockedReasonCode.mmObject();
 			codeName = "BKRP";
 		}
 	};
@@ -242,12 +245,12 @@ public class BlockedReasonCode {
 	 * definition} = "Reserved in contemplation of death."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMortisCausa = new MMCode() {
+	public static final BlockedReasonCode MortisCausa = new BlockedReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MortisCausa";
 			definition = "Reserved in contemplation of death.";
-			owner_lazy = () -> BlockedReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BlockedReasonCode.mmObject();
 			codeName = "MORT";
 		}
 	};
@@ -272,12 +275,12 @@ public class BlockedReasonCode {
 	 * definition} = "Transfer."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransfer = new MMCode() {
+	public static final BlockedReasonCode Transfer = new BlockedReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transfer";
 			definition = "Transfer.";
-			owner_lazy = () -> BlockedReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BlockedReasonCode.mmObject();
 			codeName = "TRAN";
 		}
 	};
@@ -302,12 +305,12 @@ public class BlockedReasonCode {
 	 * definition} = "Reregistration."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReregistration = new MMCode() {
+	public static final BlockedReasonCode Reregistration = new BlockedReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reregistration";
 			definition = "Reregistration.";
-			owner_lazy = () -> BlockedReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BlockedReasonCode.mmObject();
 			codeName = "TRPE";
 		}
 	};
@@ -332,12 +335,12 @@ public class BlockedReasonCode {
 	 * definition} = "Sanctions are in place."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSanctions = new MMCode() {
+	public static final BlockedReasonCode Sanctions = new BlockedReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sanctions";
 			definition = "Sanctions are in place.";
-			owner_lazy = () -> BlockedReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BlockedReasonCode.mmObject();
 			codeName = "SANC";
 		}
 	};
@@ -362,12 +365,12 @@ public class BlockedReasonCode {
 	 * definition} = "Pending compliance verification."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingComplianceVerification = new MMCode() {
+	public static final BlockedReasonCode PendingComplianceVerification = new BlockedReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingComplianceVerification";
 			definition = "Pending compliance verification.";
-			owner_lazy = () -> BlockedReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BlockedReasonCode.mmObject();
 			codeName = "PCOM";
 		}
 	};
@@ -392,12 +395,12 @@ public class BlockedReasonCode {
 	 * definition} = "Account closing is in process."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountClosingInProcess = new MMCode() {
+	public static final BlockedReasonCode AccountClosingInProcess = new BlockedReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountClosingInProcess";
 			definition = "Account closing is in process.";
-			owner_lazy = () -> BlockedReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BlockedReasonCode.mmObject();
 			codeName = "CLOS";
 		}
 	};
@@ -422,29 +425,70 @@ public class BlockedReasonCode {
 	 * definition} = "Account was pending opening but is now rejected."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final BlockedReasonCode Rejected = new BlockedReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Account was pending opening but is now rejected.";
-			owner_lazy = () -> BlockedReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BlockedReasonCode.mmObject();
 			codeName = "REJT";
 		}
 	};
+	final static private LinkedHashMap<String, BlockedReasonCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BlockedReasonCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CMMT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BlockedReasonCode";
 				definition = "Specifies the reason an account is blocked.";
-				code_lazy = () -> Arrays.asList(BlockedReasonCode.mmCommitment, BlockedReasonCode.mmPledged, BlockedReasonCode.mmConfiscation, BlockedReasonCode.mmBankruptcy, BlockedReasonCode.mmMortisCausa, BlockedReasonCode.mmTransfer,
-						BlockedReasonCode.mmReregistration, BlockedReasonCode.mmSanctions, BlockedReasonCode.mmPendingComplianceVerification, BlockedReasonCode.mmAccountClosingInProcess, BlockedReasonCode.mmRejected);
 				derivation_lazy = () -> Arrays.asList(BlockedReason1Code.mmObject(), BlockedReason2Code.mmObject(), DisabledReason2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BlockedReasonCode.Commitment, com.tools20022.repository.codeset.BlockedReasonCode.Pledged, com.tools20022.repository.codeset.BlockedReasonCode.Confiscation,
+						com.tools20022.repository.codeset.BlockedReasonCode.Bankruptcy, com.tools20022.repository.codeset.BlockedReasonCode.MortisCausa, com.tools20022.repository.codeset.BlockedReasonCode.Transfer,
+						com.tools20022.repository.codeset.BlockedReasonCode.Reregistration, com.tools20022.repository.codeset.BlockedReasonCode.Sanctions, com.tools20022.repository.codeset.BlockedReasonCode.PendingComplianceVerification,
+						com.tools20022.repository.codeset.BlockedReasonCode.AccountClosingInProcess, com.tools20022.repository.codeset.BlockedReasonCode.Rejected);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Commitment.getCodeName().get(), Commitment);
+		codesByName.put(Pledged.getCodeName().get(), Pledged);
+		codesByName.put(Confiscation.getCodeName().get(), Confiscation);
+		codesByName.put(Bankruptcy.getCodeName().get(), Bankruptcy);
+		codesByName.put(MortisCausa.getCodeName().get(), MortisCausa);
+		codesByName.put(Transfer.getCodeName().get(), Transfer);
+		codesByName.put(Reregistration.getCodeName().get(), Reregistration);
+		codesByName.put(Sanctions.getCodeName().get(), Sanctions);
+		codesByName.put(PendingComplianceVerification.getCodeName().get(), PendingComplianceVerification);
+		codesByName.put(AccountClosingInProcess.getCodeName().get(), AccountClosingInProcess);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+	}
+
+	public static BlockedReasonCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BlockedReasonCode[] values() {
+		BlockedReasonCode[] values = new BlockedReasonCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BlockedReasonCode> {
+		@Override
+		public BlockedReasonCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BlockedReasonCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

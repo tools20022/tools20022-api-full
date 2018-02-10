@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode;
+import com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the transaction category to which the corporate action event type
@@ -31,69 +35,69 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode
- * CorporateActionTransactionCategoryCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#mmCashDividend
- * CorporateActionTransactionCategory1Code.mmCashDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#CashDividend
+ * CorporateActionTransactionCategory1Code.CashDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#mmUnitInvestmentTrustSecurity
- * CorporateActionTransactionCategory1Code.mmUnitInvestmentTrustSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#UnitInvestmentTrustSecurity
+ * CorporateActionTransactionCategory1Code.UnitInvestmentTrustSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#mmPassThrough
- * CorporateActionTransactionCategory1Code.mmPassThrough}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#PassThrough
+ * CorporateActionTransactionCategory1Code.PassThrough}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#mmCorporateBond
- * CorporateActionTransactionCategory1Code.mmCorporateBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#CorporateBond
+ * CorporateActionTransactionCategory1Code.CorporateBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#mmMunicipalBond
- * CorporateActionTransactionCategory1Code.mmMunicipalBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#MunicipalBond
+ * CorporateActionTransactionCategory1Code.MunicipalBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#mmStockDistribution
- * CorporateActionTransactionCategory1Code.mmStockDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#StockDistribution
+ * CorporateActionTransactionCategory1Code.StockDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#mmOptionalDividend
- * CorporateActionTransactionCategory1Code.mmOptionalDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#OptionalDividend
+ * CorporateActionTransactionCategory1Code.OptionalDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#mmForeignRecordDateNotice
- * CorporateActionTransactionCategory1Code.mmForeignRecordDateNotice}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#ForeignRecordDateNotice
+ * CorporateActionTransactionCategory1Code.ForeignRecordDateNotice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#mmDividendReinvestment
- * CorporateActionTransactionCategory1Code.mmDividendReinvestment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#DividendReinvestment
+ * CorporateActionTransactionCategory1Code.DividendReinvestment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#mmTaxExemptDividendService
- * CorporateActionTransactionCategory1Code.mmTaxExemptDividendService}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#TaxExemptDividendService
+ * CorporateActionTransactionCategory1Code.TaxExemptDividendService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#mmDirectRegistrationService
- * CorporateActionTransactionCategory1Code.mmDirectRegistrationService}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#DirectRegistrationService
+ * CorporateActionTransactionCategory1Code.DirectRegistrationService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#mmSpecialDistribution
- * CorporateActionTransactionCategory1Code.mmSpecialDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#SpecialDistribution
+ * CorporateActionTransactionCategory1Code.SpecialDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#mmReorganisation
- * CorporateActionTransactionCategory1Code.mmReorganisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#Reorganisation
+ * CorporateActionTransactionCategory1Code.Reorganisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#mmRecapitalizationRecordDateNotice
- * CorporateActionTransactionCategory1Code.mmRecapitalizationRecordDateNotice}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#RecapitalizationRecordDateNotice
+ * CorporateActionTransactionCategory1Code.RecapitalizationRecordDateNotice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#mmLiquidationRecordDateNotice
- * CorporateActionTransactionCategory1Code.mmLiquidationRecordDateNotice}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#LiquidationRecordDateNotice
+ * CorporateActionTransactionCategory1Code.LiquidationRecordDateNotice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#mmSalesOfAssetsRecordDateNotice
- * CorporateActionTransactionCategory1Code.mmSalesOfAssetsRecordDateNotice}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#SalesOfAssetsRecordDateNotice
+ * CorporateActionTransactionCategory1Code.SalesOfAssetsRecordDateNotice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#mmRedemptionsRecordDateNotice
- * CorporateActionTransactionCategory1Code.mmRedemptionsRecordDateNotice}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code#RedemptionsRecordDateNotice
+ * CorporateActionTransactionCategory1Code.RedemptionsRecordDateNotice}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTransactionCategoryCode
+ * CorporateActionTransactionCategoryCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -112,7 +116,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CorporateActionTransactionCategory1Code extends CorporateActionTransactionCategoryCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionTransactionCategory1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -131,11 +136,12 @@ public class CorporateActionTransactionCategory1Code extends CorporateActionTran
 	 * name} = "CashDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashDividend = new MMCode() {
+	public static final CorporateActionTransactionCategory1Code CashDividend = new CorporateActionTransactionCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividend";
-			owner_lazy = () -> CorporateActionTransactionCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.mmObject();
+			codeName = CorporateActionTransactionCategoryCode.CashDividend.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -154,11 +160,12 @@ public class CorporateActionTransactionCategory1Code extends CorporateActionTran
 	 * name} = "UnitInvestmentTrustSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnitInvestmentTrustSecurity = new MMCode() {
+	public static final CorporateActionTransactionCategory1Code UnitInvestmentTrustSecurity = new CorporateActionTransactionCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitInvestmentTrustSecurity";
-			owner_lazy = () -> CorporateActionTransactionCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.mmObject();
+			codeName = CorporateActionTransactionCategoryCode.UnitInvestmentTrustSecurity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -177,11 +184,12 @@ public class CorporateActionTransactionCategory1Code extends CorporateActionTran
 	 * name} = "PassThrough"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPassThrough = new MMCode() {
+	public static final CorporateActionTransactionCategory1Code PassThrough = new CorporateActionTransactionCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassThrough";
-			owner_lazy = () -> CorporateActionTransactionCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.mmObject();
+			codeName = CorporateActionTransactionCategoryCode.PassThrough.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -200,11 +208,12 @@ public class CorporateActionTransactionCategory1Code extends CorporateActionTran
 	 * name} = "CorporateBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateBond = new MMCode() {
+	public static final CorporateActionTransactionCategory1Code CorporateBond = new CorporateActionTransactionCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateBond";
-			owner_lazy = () -> CorporateActionTransactionCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.mmObject();
+			codeName = CorporateActionTransactionCategoryCode.CorporateBond.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -223,11 +232,12 @@ public class CorporateActionTransactionCategory1Code extends CorporateActionTran
 	 * name} = "MunicipalBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMunicipalBond = new MMCode() {
+	public static final CorporateActionTransactionCategory1Code MunicipalBond = new CorporateActionTransactionCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalBond";
-			owner_lazy = () -> CorporateActionTransactionCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.mmObject();
+			codeName = CorporateActionTransactionCategoryCode.MunicipalBond.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -246,11 +256,12 @@ public class CorporateActionTransactionCategory1Code extends CorporateActionTran
 	 * name} = "StockDistribution"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockDistribution = new MMCode() {
+	public static final CorporateActionTransactionCategory1Code StockDistribution = new CorporateActionTransactionCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockDistribution";
-			owner_lazy = () -> CorporateActionTransactionCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.mmObject();
+			codeName = CorporateActionTransactionCategoryCode.StockDistribution.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -269,11 +280,12 @@ public class CorporateActionTransactionCategory1Code extends CorporateActionTran
 	 * name} = "OptionalDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOptionalDividend = new MMCode() {
+	public static final CorporateActionTransactionCategory1Code OptionalDividend = new CorporateActionTransactionCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionalDividend";
-			owner_lazy = () -> CorporateActionTransactionCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.mmObject();
+			codeName = CorporateActionTransactionCategoryCode.OptionalDividend.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -292,11 +304,12 @@ public class CorporateActionTransactionCategory1Code extends CorporateActionTran
 	 * name} = "ForeignRecordDateNotice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignRecordDateNotice = new MMCode() {
+	public static final CorporateActionTransactionCategory1Code ForeignRecordDateNotice = new CorporateActionTransactionCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignRecordDateNotice";
-			owner_lazy = () -> CorporateActionTransactionCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.mmObject();
+			codeName = CorporateActionTransactionCategoryCode.ForeignRecordDateNotice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -315,11 +328,12 @@ public class CorporateActionTransactionCategory1Code extends CorporateActionTran
 	 * name} = "DividendReinvestment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividendReinvestment = new MMCode() {
+	public static final CorporateActionTransactionCategory1Code DividendReinvestment = new CorporateActionTransactionCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestment";
-			owner_lazy = () -> CorporateActionTransactionCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.mmObject();
+			codeName = CorporateActionTransactionCategoryCode.DividendReinvestment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -338,11 +352,12 @@ public class CorporateActionTransactionCategory1Code extends CorporateActionTran
 	 * name} = "TaxExemptDividendService"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxExemptDividendService = new MMCode() {
+	public static final CorporateActionTransactionCategory1Code TaxExemptDividendService = new CorporateActionTransactionCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxExemptDividendService";
-			owner_lazy = () -> CorporateActionTransactionCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.mmObject();
+			codeName = CorporateActionTransactionCategoryCode.TaxExemptDividendService.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -361,11 +376,12 @@ public class CorporateActionTransactionCategory1Code extends CorporateActionTran
 	 * name} = "DirectRegistrationService"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDirectRegistrationService = new MMCode() {
+	public static final CorporateActionTransactionCategory1Code DirectRegistrationService = new CorporateActionTransactionCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectRegistrationService";
-			owner_lazy = () -> CorporateActionTransactionCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.mmObject();
+			codeName = CorporateActionTransactionCategoryCode.DirectRegistrationService.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -384,11 +400,12 @@ public class CorporateActionTransactionCategory1Code extends CorporateActionTran
 	 * name} = "SpecialDistribution"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialDistribution = new MMCode() {
+	public static final CorporateActionTransactionCategory1Code SpecialDistribution = new CorporateActionTransactionCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialDistribution";
-			owner_lazy = () -> CorporateActionTransactionCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.mmObject();
+			codeName = CorporateActionTransactionCategoryCode.SpecialDistribution.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -407,11 +424,12 @@ public class CorporateActionTransactionCategory1Code extends CorporateActionTran
 	 * name} = "Reorganisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReorganisation = new MMCode() {
+	public static final CorporateActionTransactionCategory1Code Reorganisation = new CorporateActionTransactionCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reorganisation";
-			owner_lazy = () -> CorporateActionTransactionCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.mmObject();
+			codeName = CorporateActionTransactionCategoryCode.Reorganisation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -430,11 +448,12 @@ public class CorporateActionTransactionCategory1Code extends CorporateActionTran
 	 * name} = "RecapitalizationRecordDateNotice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRecapitalizationRecordDateNotice = new MMCode() {
+	public static final CorporateActionTransactionCategory1Code RecapitalizationRecordDateNotice = new CorporateActionTransactionCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecapitalizationRecordDateNotice";
-			owner_lazy = () -> CorporateActionTransactionCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.mmObject();
+			codeName = CorporateActionTransactionCategoryCode.RecapitalizationRecordDateNotice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -453,11 +472,12 @@ public class CorporateActionTransactionCategory1Code extends CorporateActionTran
 	 * name} = "LiquidationRecordDateNotice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLiquidationRecordDateNotice = new MMCode() {
+	public static final CorporateActionTransactionCategory1Code LiquidationRecordDateNotice = new CorporateActionTransactionCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidationRecordDateNotice";
-			owner_lazy = () -> CorporateActionTransactionCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.mmObject();
+			codeName = CorporateActionTransactionCategoryCode.LiquidationRecordDateNotice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -476,11 +496,12 @@ public class CorporateActionTransactionCategory1Code extends CorporateActionTran
 	 * name} = "SalesOfAssetsRecordDateNotice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSalesOfAssetsRecordDateNotice = new MMCode() {
+	public static final CorporateActionTransactionCategory1Code SalesOfAssetsRecordDateNotice = new CorporateActionTransactionCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SalesOfAssetsRecordDateNotice";
-			owner_lazy = () -> CorporateActionTransactionCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.mmObject();
+			codeName = CorporateActionTransactionCategoryCode.SalesOfAssetsRecordDateNotice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -499,31 +520,80 @@ public class CorporateActionTransactionCategory1Code extends CorporateActionTran
 	 * name} = "RedemptionsRecordDateNotice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRedemptionsRecordDateNotice = new MMCode() {
+	public static final CorporateActionTransactionCategory1Code RedemptionsRecordDateNotice = new CorporateActionTransactionCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionsRecordDateNotice";
-			owner_lazy = () -> CorporateActionTransactionCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.mmObject();
+			codeName = CorporateActionTransactionCategoryCode.RedemptionsRecordDateNotice.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionTransactionCategory1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionTransactionCategory1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("TC05");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionTransactionCategory1Code";
 				definition = "Specifies the transaction category to which the corporate action event type belongs to for reporting purposes.";
-				code_lazy = () -> Arrays.asList(CorporateActionTransactionCategory1Code.mmCashDividend, CorporateActionTransactionCategory1Code.mmUnitInvestmentTrustSecurity, CorporateActionTransactionCategory1Code.mmPassThrough,
-						CorporateActionTransactionCategory1Code.mmCorporateBond, CorporateActionTransactionCategory1Code.mmMunicipalBond, CorporateActionTransactionCategory1Code.mmStockDistribution,
-						CorporateActionTransactionCategory1Code.mmOptionalDividend, CorporateActionTransactionCategory1Code.mmForeignRecordDateNotice, CorporateActionTransactionCategory1Code.mmDividendReinvestment,
-						CorporateActionTransactionCategory1Code.mmTaxExemptDividendService, CorporateActionTransactionCategory1Code.mmDirectRegistrationService, CorporateActionTransactionCategory1Code.mmSpecialDistribution,
-						CorporateActionTransactionCategory1Code.mmReorganisation, CorporateActionTransactionCategory1Code.mmRecapitalizationRecordDateNotice, CorporateActionTransactionCategory1Code.mmLiquidationRecordDateNotice,
-						CorporateActionTransactionCategory1Code.mmSalesOfAssetsRecordDateNotice, CorporateActionTransactionCategory1Code.mmRedemptionsRecordDateNotice);
 				trace_lazy = () -> CorporateActionTransactionCategoryCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.CashDividend, com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.UnitInvestmentTrustSecurity,
+						com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.PassThrough, com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.CorporateBond,
+						com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.MunicipalBond, com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.StockDistribution,
+						com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.OptionalDividend, com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.ForeignRecordDateNotice,
+						com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.DividendReinvestment, com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.TaxExemptDividendService,
+						com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.DirectRegistrationService, com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.SpecialDistribution,
+						com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.Reorganisation, com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.RecapitalizationRecordDateNotice,
+						com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.LiquidationRecordDateNotice, com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.SalesOfAssetsRecordDateNotice,
+						com.tools20022.repository.codeset.CorporateActionTransactionCategory1Code.RedemptionsRecordDateNotice);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CashDividend.getCodeName().get(), CashDividend);
+		codesByName.put(UnitInvestmentTrustSecurity.getCodeName().get(), UnitInvestmentTrustSecurity);
+		codesByName.put(PassThrough.getCodeName().get(), PassThrough);
+		codesByName.put(CorporateBond.getCodeName().get(), CorporateBond);
+		codesByName.put(MunicipalBond.getCodeName().get(), MunicipalBond);
+		codesByName.put(StockDistribution.getCodeName().get(), StockDistribution);
+		codesByName.put(OptionalDividend.getCodeName().get(), OptionalDividend);
+		codesByName.put(ForeignRecordDateNotice.getCodeName().get(), ForeignRecordDateNotice);
+		codesByName.put(DividendReinvestment.getCodeName().get(), DividendReinvestment);
+		codesByName.put(TaxExemptDividendService.getCodeName().get(), TaxExemptDividendService);
+		codesByName.put(DirectRegistrationService.getCodeName().get(), DirectRegistrationService);
+		codesByName.put(SpecialDistribution.getCodeName().get(), SpecialDistribution);
+		codesByName.put(Reorganisation.getCodeName().get(), Reorganisation);
+		codesByName.put(RecapitalizationRecordDateNotice.getCodeName().get(), RecapitalizationRecordDateNotice);
+		codesByName.put(LiquidationRecordDateNotice.getCodeName().get(), LiquidationRecordDateNotice);
+		codesByName.put(SalesOfAssetsRecordDateNotice.getCodeName().get(), SalesOfAssetsRecordDateNotice);
+		codesByName.put(RedemptionsRecordDateNotice.getCodeName().get(), RedemptionsRecordDateNotice);
+	}
+
+	public static CorporateActionTransactionCategory1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionTransactionCategory1Code[] values() {
+		CorporateActionTransactionCategory1Code[] values = new CorporateActionTransactionCategory1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionTransactionCategory1Code> {
+		@Override
+		public CorporateActionTransactionCategory1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionTransactionCategory1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

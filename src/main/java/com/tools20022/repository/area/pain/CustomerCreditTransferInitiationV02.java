@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.GroupHeader1;
 import com.tools20022.repository.msg.PaymentInstructionInformation1;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -81,22 +83,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
- * PaymentsInitiationArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "pain.001.001.02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "pain.001.001.02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -109,9 +95,36 @@ import javax.xml.bind.annotation.*;
  * CustomerCreditTransferInitiationV02.mmPaymentInformation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "pain.001.001.02"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
+ * PaymentsInitiationArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "pain.001.001.02"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pain.001.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGrouping1Rule#forCustomerCreditTransferInitiationV02
+ * ConstraintGrouping1Rule.forCustomerCreditTransferInitiationV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGrouping2Rule#forCustomerCreditTransferInitiationV02
+ * ConstraintGrouping2Rule.forCustomerCreditTransferInitiationV02}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -132,16 +145,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "pain.001.001.02", propOrder = {"groupHeader", "paymentInformation"})
 public class CustomerCreditTransferInitiationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader1 groupHeader;
 	/**
-	 * Set of characteristics shared by all individual transactions included in
-	 * the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -182,11 +195,11 @@ public class CustomerCreditTransferInitiationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PmtInf", required = true)
 	protected List<PaymentInstructionInformation1> paymentInformation;
 	/**
-	 * Set of characteristics that applies to the debit side of the payment
-	 * transactions included in the credit transfer initiation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -231,6 +244,8 @@ public class CustomerCreditTransferInitiationV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGrouping1Rule.forCustomerCreditTransferInitiationV02,
+						com.tools20022.repository.constraints.ConstraintGrouping2Rule.forCustomerCreditTransferInitiationV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustomerCreditTransferInitiationV02";
 				definition = "Scope\r\nThe CustomerCreditTransferInitiation message is sent by the initiating party to the forwarding agent or debtor agent. It is used to request movement of funds from the debtor account to a creditor.\r\nUsage\r\nThe CustomerCreditTransferInitiation message can contain one or more customer credit transfer instructions.\r\nThe CustomerCreditTransferInitiation message is used to exchange:\r\n- One or more instances of a credit transfer initiation;\r\n- Payment transactions that result in book transfers at the debtor agent or payments to another financial institution;\r\n- Payment transactions that result in an electronic cash transfer to the creditor account or in the emission of a cheque.\r\nThe message can be used in a direct or a relay scenario:\r\n- In a direct scenario, the message is sent directly to the debtor agent. The debtor agent is the account servicer of the debtor.\r\n- In a relay scenario, the message is sent to a forwarding agent. The forwarding agent acts as a concentrating financial institution. It will forward the CustomerCreditTransferInitiation message to the debtor agent.\r\nThe message can also be used by an initiating party that has authority to send the message on behalf of the debtor. This caters for example for the scenario of a payments factory initiating all payments on behalf of a large corporate.\r\nThe CustomerCreditTransferInitiation message can be used in domestic and cross-border scenarios.\r\nThe CustomerCreditTransferInitiation message must not be used by the debtor agent to execute the credit transfer instruction(s). The FIToFICustomerCreditTransfer message must be used instead.\r\nIf it is agreed to include the payment information related to the debit side only once (i.e. Grouped mode), the PaymentInformation block will be present only once.\r\nIf it is agreed to repeat the payment information related to the debit side (i.e. Single mode), the PaymentInformation block must be present once per occurrence of the CreditTransferTransactionInformation block.\r\nThe CustomerCreditTransferInitiation message also allows for a Mixed mode where the PaymentInformation block can be repeated and each PaymentInformation block can contain one or several CreditTransferTransactionInformation block(s).\nSingle\nWhen grouping is set to Single, information for each individual instruction is included separately. This means the\nPaymentInformation block is repeated, and present for each occurrence of the CreditTransferTransactionInformation block.\nGrouped\nWhen grouping is set to Grouped, the PaymentInformation block will be present once and the CreditTransferTransactionInformation block will be repeated.\nMixed\nWhen grouping is set to Mixed, the PaymentInformation block may be present once or may be repeated. Each sequence\nof the PaymentInformation block may contain one or several CreditTransferTransactionInformation block(s).";
@@ -260,25 +275,25 @@ public class CustomerCreditTransferInitiationV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader1 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader1 groupHeader) {
-		this.groupHeader = groupHeader;
+	public CustomerCreditTransferInitiationV02 setGroupHeader(GroupHeader1 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "PmtInf", required = true)
 	public List<PaymentInstructionInformation1> getPaymentInformation() {
-		return paymentInformation;
+		return paymentInformation == null ? paymentInformation = new ArrayList<>() : paymentInformation;
 	}
 
-	public void setPaymentInformation(List<PaymentInstructionInformation1> paymentInformation) {
-		this.paymentInformation = paymentInformation;
+	public CustomerCreditTransferInitiationV02 setPaymentInformation(List<PaymentInstructionInformation1> paymentInformation) {
+		this.paymentInformation = Objects.requireNonNull(paymentInformation);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.001.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:pain.001.001.02")
 	static public class Document {
 		@XmlElement(name = "pain.001.001.02", required = true)
 		public CustomerCreditTransferInitiationV02 messageBody;

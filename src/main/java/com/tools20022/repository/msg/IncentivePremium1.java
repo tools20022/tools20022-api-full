@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.IncentivePremium;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -41,8 +43,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.IncentivePremium1#mmPerSecurityOrPerVoteOrPerAttendeeRule
- * IncentivePremium1.mmPerSecurityOrPerVoteOrPerAttendeeRule}</li>
+ * {@linkplain com.tools20022.repository.msg.IncentivePremium1#PerSecurityOrPerVoteOrPerAttendeeRule
+ * IncentivePremium1.PerSecurityOrPerVoteOrPerAttendeeRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -74,8 +76,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,15 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IncentivePremium1", propOrder = {"premiumDescription", "premiumAmount", "perSecurity", "perVote", "perAttendee", "paymentDate"})
 public class IncentivePremium1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrmDesc")
 	protected Max350Text premiumDescription;
 	/**
-	 * Description of the premium.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -129,7 +132,7 @@ public class IncentivePremium1 {
 	public static final MMMessageAttribute mmPremiumDescription = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> IncentivePremium.mmDescription;
-			componentContext_lazy = () -> IncentivePremium1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IncentivePremium1.mmObject();
 			isDerived = false;
 			xmlTag = "PrmDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,10 +143,11 @@ public class IncentivePremium1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrmAmt", required = true)
 	protected CurrencyAndAmount premiumAmount;
 	/**
-	 * Cash premium paid per security, per vote or per attendee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,7 +182,7 @@ public class IncentivePremium1 {
 	public static final MMMessageAttribute mmPremiumAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> IncentivePremium.mmPremiumAmount;
-			componentContext_lazy = () -> IncentivePremium1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IncentivePremium1.mmObject();
 			isDerived = false;
 			xmlTag = "PrmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,10 +193,11 @@ public class IncentivePremium1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "PerScty", required = true)
 	protected Number perSecurity;
 	/**
-	 * Number of securities giving right to a premium.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,7 +230,7 @@ public class IncentivePremium1 {
 	public static final MMMessageAttribute mmPerSecurity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> IncentivePremium.mmPerSecurity;
-			componentContext_lazy = () -> IncentivePremium1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IncentivePremium1.mmObject();
 			isDerived = false;
 			xmlTag = "PerScty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,10 +241,11 @@ public class IncentivePremium1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "PerVote", required = true)
 	protected Number perVote;
 	/**
-	 * Number of votes giving right to a premium.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -272,7 +278,7 @@ public class IncentivePremium1 {
 	public static final MMMessageAttribute mmPerVote = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> IncentivePremium.mmPerVote;
-			componentContext_lazy = () -> IncentivePremium1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IncentivePremium1.mmObject();
 			isDerived = false;
 			xmlTag = "PerVote";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,10 +289,11 @@ public class IncentivePremium1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "PerAttndee", required = true)
 	protected YesNoIndicator perAttendee;
 	/**
-	 * Indicates that the premium is given per attendee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -320,7 +327,7 @@ public class IncentivePremium1 {
 	public static final MMMessageAttribute mmPerAttendee = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> IncentivePremium.mmPerAttendee;
-			componentContext_lazy = () -> IncentivePremium1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IncentivePremium1.mmObject();
 			isDerived = false;
 			xmlTag = "PerAttndee";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -331,10 +338,11 @@ public class IncentivePremium1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtDt")
 	protected ISODate paymentDate;
 	/**
-	 * Date/time for the payment of the premium.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -367,7 +375,7 @@ public class IncentivePremium1 {
 	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> IncentivePremium.mmPaymentDate;
-			componentContext_lazy = () -> IncentivePremium1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IncentivePremium1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -413,83 +421,85 @@ public class IncentivePremium1 {
 	 * "Either PerSecurity or PerVote or PerAttendee must be present."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmPerSecurityOrPerVoteOrPerAttendeeRule = new MMXor() {
+	public static final MMXor PerSecurityOrPerVoteOrPerAttendeeRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerSecurityOrPerVoteOrPerAttendeeRule";
 			definition = "Either PerSecurity or PerVote or PerAttendee must be present.";
-			messageComponent_lazy = () -> IncentivePremium1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(IncentivePremium1.mmPerSecurity, IncentivePremium1.mmPerVote, IncentivePremium1.mmPerAttendee);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.IncentivePremium1.mmObject();
+			impactedElements_lazy = () -> Arrays
+					.asList(com.tools20022.repository.msg.IncentivePremium1.mmPerSecurity, com.tools20022.repository.msg.IncentivePremium1.mmPerVote, com.tools20022.repository.msg.IncentivePremium1.mmPerAttendee);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IncentivePremium1.mmPremiumDescription, IncentivePremium1.mmPremiumAmount, IncentivePremium1.mmPerSecurity, IncentivePremium1.mmPerVote, IncentivePremium1.mmPerAttendee,
-						IncentivePremium1.mmPaymentDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IncentivePremium1.mmPremiumDescription, com.tools20022.repository.msg.IncentivePremium1.mmPremiumAmount,
+						com.tools20022.repository.msg.IncentivePremium1.mmPerSecurity, com.tools20022.repository.msg.IncentivePremium1.mmPerVote, com.tools20022.repository.msg.IncentivePremium1.mmPerAttendee,
+						com.tools20022.repository.msg.IncentivePremium1.mmPaymentDate);
 				trace_lazy = () -> IncentivePremium.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IncentivePremium1";
 				definition = "Cash premium made available if the securities holder consents or participates to an event.";
-				xors_lazy = () -> Arrays.asList(IncentivePremium1.mmPerSecurityOrPerVoteOrPerAttendeeRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IncentivePremium1.PerSecurityOrPerVoteOrPerAttendeeRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrmDesc")
-	public Max350Text getPremiumDescription() {
-		return premiumDescription;
+	public Optional<Max350Text> getPremiumDescription() {
+		return premiumDescription == null ? Optional.empty() : Optional.of(premiumDescription);
 	}
 
-	public void setPremiumDescription(Max350Text premiumDescription) {
+	public IncentivePremium1 setPremiumDescription(Max350Text premiumDescription) {
 		this.premiumDescription = premiumDescription;
+		return this;
 	}
 
-	@XmlElement(name = "PrmAmt", required = true)
 	public CurrencyAndAmount getPremiumAmount() {
 		return premiumAmount;
 	}
 
-	public void setPremiumAmount(CurrencyAndAmount premiumAmount) {
-		this.premiumAmount = premiumAmount;
+	public IncentivePremium1 setPremiumAmount(CurrencyAndAmount premiumAmount) {
+		this.premiumAmount = Objects.requireNonNull(premiumAmount);
+		return this;
 	}
 
-	@XmlElement(name = "PerScty", required = true)
 	public Number getPerSecurity() {
 		return perSecurity;
 	}
 
-	public void setPerSecurity(Number perSecurity) {
-		this.perSecurity = perSecurity;
+	public IncentivePremium1 setPerSecurity(Number perSecurity) {
+		this.perSecurity = Objects.requireNonNull(perSecurity);
+		return this;
 	}
 
-	@XmlElement(name = "PerVote", required = true)
 	public Number getPerVote() {
 		return perVote;
 	}
 
-	public void setPerVote(Number perVote) {
-		this.perVote = perVote;
+	public IncentivePremium1 setPerVote(Number perVote) {
+		this.perVote = Objects.requireNonNull(perVote);
+		return this;
 	}
 
-	@XmlElement(name = "PerAttndee", required = true)
 	public YesNoIndicator getPerAttendee() {
 		return perAttendee;
 	}
 
-	public void setPerAttendee(YesNoIndicator perAttendee) {
-		this.perAttendee = perAttendee;
+	public IncentivePremium1 setPerAttendee(YesNoIndicator perAttendee) {
+		this.perAttendee = Objects.requireNonNull(perAttendee);
+		return this;
 	}
 
-	@XmlElement(name = "PmtDt")
-	public ISODate getPaymentDate() {
-		return paymentDate;
+	public Optional<ISODate> getPaymentDate() {
+		return paymentDate == null ? Optional.empty() : Optional.of(paymentDate);
 	}
 
-	public void setPaymentDate(ISODate paymentDate) {
+	public IncentivePremium1 setPaymentDate(ISODate paymentDate) {
 		this.paymentDate = paymentDate;
+		return this;
 	}
 }

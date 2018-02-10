@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +57,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule#forTransferOut10
+ * ConstraintRequestedSettlementDateRule.forTransferOut10}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule#forTransferOut10
+ * ConstraintEffectiveSettlementDateRule.forTransferOut10}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * TransferOut8}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransferOut10", propOrder = {"transferDetails", "accountDetails", "settlementDetails", "extension"})
 public class TransferOut10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TrfDtls", required = true)
 	protected List<com.tools20022.repository.msg.Transfer24> transferDetails;
 	/**
-	 * General information related to the transfer of a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -127,7 +138,7 @@ public class TransferOut10 {
 	public static final MMMessageAssociationEnd mmTransferDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTransfer.mmObject();
-			componentContext_lazy = () -> TransferOut10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut10.mmObject();
 			isDerived = false;
 			xmlTag = "TrfDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,11 +150,11 @@ public class TransferOut10 {
 			type_lazy = () -> com.tools20022.repository.msg.Transfer24.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctDtls", required = true)
 	protected InvestmentAccount22 accountDetails;
 	/**
-	 * Information related to the account from which the financial instrument
-	 * was withdrawn.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -184,7 +195,7 @@ public class TransferOut10 {
 	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
-			componentContext_lazy = () -> TransferOut10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut10.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,10 +208,11 @@ public class TransferOut10 {
 			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount22.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmDtls")
 	protected ReceiveInformation11 settlementDetails;
 	/**
-	 * Information related to the receiving side of the transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -240,7 +252,7 @@ public class TransferOut10 {
 	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmRelatedSettlement;
-			componentContext_lazy = () -> TransferOut10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut10.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -253,11 +265,11 @@ public class TransferOut10 {
 			type_lazy = () -> com.tools20022.repository.msg.ReceiveInformation11.mmObject();
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -290,7 +302,7 @@ public class TransferOut10 {
 	 */
 	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransferOut10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut10.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -306,9 +318,12 @@ public class TransferOut10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransferOut10.mmTransferDetails, TransferOut10.mmAccountDetails, TransferOut10.mmSettlementDetails, TransferOut10.mmExtension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut10.mmTransferDetails, com.tools20022.repository.msg.TransferOut10.mmAccountDetails,
+						com.tools20022.repository.msg.TransferOut10.mmSettlementDetails, com.tools20022.repository.msg.TransferOut10.mmExtension);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequestedSettlementDateRule.forTransferOut10,
+						com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOut10);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferOut10";
 				definition = "Information about the confirmation of a transfer out transaction.";
@@ -319,39 +334,39 @@ public class TransferOut10 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TrfDtls", required = true)
 	public List<Transfer24> getTransferDetails() {
-		return transferDetails;
+		return transferDetails == null ? transferDetails = new ArrayList<>() : transferDetails;
 	}
 
-	public void setTransferDetails(List<com.tools20022.repository.msg.Transfer24> transferDetails) {
-		this.transferDetails = transferDetails;
+	public TransferOut10 setTransferDetails(List<com.tools20022.repository.msg.Transfer24> transferDetails) {
+		this.transferDetails = Objects.requireNonNull(transferDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AcctDtls", required = true)
 	public InvestmentAccount22 getAccountDetails() {
 		return accountDetails;
 	}
 
-	public void setAccountDetails(com.tools20022.repository.msg.InvestmentAccount22 accountDetails) {
-		this.accountDetails = accountDetails;
+	public TransferOut10 setAccountDetails(com.tools20022.repository.msg.InvestmentAccount22 accountDetails) {
+		this.accountDetails = Objects.requireNonNull(accountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmDtls")
-	public ReceiveInformation11 getSettlementDetails() {
-		return settlementDetails;
+	public Optional<ReceiveInformation11> getSettlementDetails() {
+		return settlementDetails == null ? Optional.empty() : Optional.of(settlementDetails);
 	}
 
-	public void setSettlementDetails(com.tools20022.repository.msg.ReceiveInformation11 settlementDetails) {
+	public TransferOut10 setSettlementDetails(com.tools20022.repository.msg.ReceiveInformation11 settlementDetails) {
 		this.settlementDetails = settlementDetails;
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
-		this.extension = extension;
+	public TransferOut10 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 }

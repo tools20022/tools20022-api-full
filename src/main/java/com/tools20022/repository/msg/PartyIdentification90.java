@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyIdentification90", propOrder = {"identificationType", "identification"})
 public class PartyIdentification90 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IdTp", required = true)
 	protected PartyIdentificationType1Code identificationType;
 	/**
-	 * Specifies a type of party identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,7 +103,7 @@ public class PartyIdentification90 {
 	 */
 	public static final MMMessageAttribute mmIdentificationType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification90.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification90.mmObject();
 			isDerived = false;
 			xmlTag = "IdTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +114,11 @@ public class PartyIdentification90 {
 			simpleType_lazy = () -> PartyIdentificationType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Identification of a party related information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +145,7 @@ public class PartyIdentification90 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification90.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification90.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,8 +160,8 @@ public class PartyIdentification90 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification90.mmIdentificationType, PartyIdentification90.mmIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification90.mmIdentificationType, com.tools20022.repository.msg.PartyIdentification90.mmIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification90";
 				definition = "Information related to a party identification. For example, party identification or account identification.";
@@ -167,21 +170,21 @@ public class PartyIdentification90 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IdTp", required = true)
 	public PartyIdentificationType1Code getIdentificationType() {
 		return identificationType;
 	}
 
-	public void setIdentificationType(PartyIdentificationType1Code identificationType) {
-		this.identificationType = identificationType;
+	public PartyIdentification90 setIdentificationType(PartyIdentificationType1Code identificationType) {
+		this.identificationType = Objects.requireNonNull(identificationType);
+		return this;
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public PartyIdentification90 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 }

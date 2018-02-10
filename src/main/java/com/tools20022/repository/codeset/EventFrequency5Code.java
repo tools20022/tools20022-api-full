@@ -20,58 +20,58 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.EventFrequencyCode;
+import com.tools20022.repository.codeset.EventFrequency5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the regularity of an event.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency5Code#Annual
+ * EventFrequency5Code.Annual}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency5Code#SemiAnnual
+ * EventFrequency5Code.SemiAnnual}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency5Code#Quarterly
+ * EventFrequency5Code.Quarterly}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency5Code#Monthly
+ * EventFrequency5Code.Monthly}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency5Code#Weekly
+ * EventFrequency5Code.Weekly}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency5Code#Daily
+ * EventFrequency5Code.Daily}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency5Code#Closed
+ * EventFrequency5Code.Closed}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency5Code#EveryTwoMonths
+ * EventFrequency5Code.EveryTwoMonths}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency5Code#EveryTwoWeeks
+ * EventFrequency5Code.EveryTwoWeeks}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency5Code#TwiceAMonth
+ * EventFrequency5Code.TwiceAMonth}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.EventFrequencyCode
  * EventFrequencyCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency5Code#mmAnnual
- * EventFrequency5Code.mmAnnual}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency5Code#mmSemiAnnual
- * EventFrequency5Code.mmSemiAnnual}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency5Code#mmQuarterly
- * EventFrequency5Code.mmQuarterly}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency5Code#mmMonthly
- * EventFrequency5Code.mmMonthly}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency5Code#mmWeekly
- * EventFrequency5Code.mmWeekly}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency5Code#mmDaily
- * EventFrequency5Code.mmDaily}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency5Code#mmClosed
- * EventFrequency5Code.mmClosed}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency5Code#mmEveryTwoMonths
- * EventFrequency5Code.mmEveryTwoMonths}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency5Code#mmEveryTwoWeeks
- * EventFrequency5Code.mmEveryTwoWeeks}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency5Code#mmTwiceAMonth
- * EventFrequency5Code.mmTwiceAMonth}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the regularity of an event."</li>
  * </ul>
  */
-public class EventFrequency5Code extends EventFrequencyCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EventFrequency5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -107,11 +108,12 @@ public class EventFrequency5Code extends EventFrequencyCode {
 	 * name} = "Annual"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAnnual = new MMCode() {
+	public static final EventFrequency5Code Annual = new EventFrequency5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Annual";
-			owner_lazy = () -> EventFrequency5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency5Code.mmObject();
+			codeName = EventFrequencyCode.Annual.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -130,11 +132,12 @@ public class EventFrequency5Code extends EventFrequencyCode {
 	 * name} = "SemiAnnual"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSemiAnnual = new MMCode() {
+	public static final EventFrequency5Code SemiAnnual = new EventFrequency5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SemiAnnual";
-			owner_lazy = () -> EventFrequency5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency5Code.mmObject();
+			codeName = EventFrequencyCode.SemiAnnual.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -153,11 +156,12 @@ public class EventFrequency5Code extends EventFrequencyCode {
 	 * name} = "Quarterly"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQuarterly = new MMCode() {
+	public static final EventFrequency5Code Quarterly = new EventFrequency5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quarterly";
-			owner_lazy = () -> EventFrequency5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency5Code.mmObject();
+			codeName = EventFrequencyCode.Quarterly.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -176,11 +180,12 @@ public class EventFrequency5Code extends EventFrequencyCode {
 	 * name} = "Monthly"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMonthly = new MMCode() {
+	public static final EventFrequency5Code Monthly = new EventFrequency5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Monthly";
-			owner_lazy = () -> EventFrequency5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency5Code.mmObject();
+			codeName = EventFrequencyCode.Monthly.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -199,11 +204,12 @@ public class EventFrequency5Code extends EventFrequencyCode {
 	 * name} = "Weekly"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWeekly = new MMCode() {
+	public static final EventFrequency5Code Weekly = new EventFrequency5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weekly";
-			owner_lazy = () -> EventFrequency5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency5Code.mmObject();
+			codeName = EventFrequencyCode.Weekly.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -222,11 +228,12 @@ public class EventFrequency5Code extends EventFrequencyCode {
 	 * name} = "Daily"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDaily = new MMCode() {
+	public static final EventFrequency5Code Daily = new EventFrequency5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Daily";
-			owner_lazy = () -> EventFrequency5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency5Code.mmObject();
+			codeName = EventFrequencyCode.Daily.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -245,11 +252,12 @@ public class EventFrequency5Code extends EventFrequencyCode {
 	 * name} = "Closed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClosed = new MMCode() {
+	public static final EventFrequency5Code Closed = new EventFrequency5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closed";
-			owner_lazy = () -> EventFrequency5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency5Code.mmObject();
+			codeName = EventFrequencyCode.Closed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -268,11 +276,12 @@ public class EventFrequency5Code extends EventFrequencyCode {
 	 * name} = "EveryTwoMonths"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEveryTwoMonths = new MMCode() {
+	public static final EventFrequency5Code EveryTwoMonths = new EventFrequency5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EveryTwoMonths";
-			owner_lazy = () -> EventFrequency5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency5Code.mmObject();
+			codeName = EventFrequencyCode.EveryTwoMonths.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -291,11 +300,12 @@ public class EventFrequency5Code extends EventFrequencyCode {
 	 * name} = "EveryTwoWeeks"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEveryTwoWeeks = new MMCode() {
+	public static final EventFrequency5Code EveryTwoWeeks = new EventFrequency5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EveryTwoWeeks";
-			owner_lazy = () -> EventFrequency5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency5Code.mmObject();
+			codeName = EventFrequencyCode.EveryTwoWeeks.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -314,27 +324,68 @@ public class EventFrequency5Code extends EventFrequencyCode {
 	 * name} = "TwiceAMonth"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTwiceAMonth = new MMCode() {
+	public static final EventFrequency5Code TwiceAMonth = new EventFrequency5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwiceAMonth";
-			owner_lazy = () -> EventFrequency5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency5Code.mmObject();
+			codeName = EventFrequencyCode.TwiceAMonth.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, EventFrequency5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EventFrequency5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("YEAR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventFrequency5Code";
 				definition = "Specifies the regularity of an event.";
-				code_lazy = () -> Arrays.asList(EventFrequency5Code.mmAnnual, EventFrequency5Code.mmSemiAnnual, EventFrequency5Code.mmQuarterly, EventFrequency5Code.mmMonthly, EventFrequency5Code.mmWeekly, EventFrequency5Code.mmDaily,
-						EventFrequency5Code.mmClosed, EventFrequency5Code.mmEveryTwoMonths, EventFrequency5Code.mmEveryTwoWeeks, EventFrequency5Code.mmTwiceAMonth);
 				trace_lazy = () -> EventFrequencyCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency5Code.Annual, com.tools20022.repository.codeset.EventFrequency5Code.SemiAnnual,
+						com.tools20022.repository.codeset.EventFrequency5Code.Quarterly, com.tools20022.repository.codeset.EventFrequency5Code.Monthly, com.tools20022.repository.codeset.EventFrequency5Code.Weekly,
+						com.tools20022.repository.codeset.EventFrequency5Code.Daily, com.tools20022.repository.codeset.EventFrequency5Code.Closed, com.tools20022.repository.codeset.EventFrequency5Code.EveryTwoMonths,
+						com.tools20022.repository.codeset.EventFrequency5Code.EveryTwoWeeks, com.tools20022.repository.codeset.EventFrequency5Code.TwiceAMonth);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Annual.getCodeName().get(), Annual);
+		codesByName.put(SemiAnnual.getCodeName().get(), SemiAnnual);
+		codesByName.put(Quarterly.getCodeName().get(), Quarterly);
+		codesByName.put(Monthly.getCodeName().get(), Monthly);
+		codesByName.put(Weekly.getCodeName().get(), Weekly);
+		codesByName.put(Daily.getCodeName().get(), Daily);
+		codesByName.put(Closed.getCodeName().get(), Closed);
+		codesByName.put(EveryTwoMonths.getCodeName().get(), EveryTwoMonths);
+		codesByName.put(EveryTwoWeeks.getCodeName().get(), EveryTwoWeeks);
+		codesByName.put(TwiceAMonth.getCodeName().get(), TwiceAMonth);
+	}
+
+	public static EventFrequency5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EventFrequency5Code[] values() {
+		EventFrequency5Code[] values = new EventFrequency5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EventFrequency5Code> {
+		@Override
+		public EventFrequency5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EventFrequency5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

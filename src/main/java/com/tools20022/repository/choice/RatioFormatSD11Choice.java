@@ -24,6 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.QuantityToQuantityRatio1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of format to expressed a ratio."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RatioFormatSD11Choice", propOrder = {"quantityToQuantity", "notSpecifiedRate"})
 public class RatioFormatSD11Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QtyToQty", required = true)
 	protected QuantityToQuantityRatio1 quantityToQuantity;
 	/**
-	 * The ratio is expressed as a quantity per another quantity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +100,7 @@ public class RatioFormatSD11Choice {
 	 */
 	public static final MMMessageAttribute mmQuantityToQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RatioFormatSD11Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormatSD11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyToQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,10 +111,11 @@ public class RatioFormatSD11Choice {
 			complexType_lazy = () -> QuantityToQuantityRatio1.mmObject();
 		}
 	};
+	@XmlElement(name = "NotSpcfdRate", required = true)
 	protected RateType12FormatChoice notSpecifiedRate;
 	/**
-	 * The value of the ratio is not specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,7 +143,7 @@ public class RatioFormatSD11Choice {
 	 */
 	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RatioFormatSD11Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormatSD11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,8 +158,8 @@ public class RatioFormatSD11Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RatioFormatSD11Choice.mmQuantityToQuantity, RatioFormatSD11Choice.mmNotSpecifiedRate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RatioFormatSD11Choice.mmQuantityToQuantity, com.tools20022.repository.choice.RatioFormatSD11Choice.mmNotSpecifiedRate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RatioFormatSD11Choice";
 				definition = "Choice of format to expressed a ratio.";
@@ -165,21 +168,21 @@ public class RatioFormatSD11Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QtyToQty", required = true)
 	public QuantityToQuantityRatio1 getQuantityToQuantity() {
 		return quantityToQuantity;
 	}
 
-	public void setQuantityToQuantity(QuantityToQuantityRatio1 quantityToQuantity) {
-		this.quantityToQuantity = quantityToQuantity;
+	public RatioFormatSD11Choice setQuantityToQuantity(QuantityToQuantityRatio1 quantityToQuantity) {
+		this.quantityToQuantity = Objects.requireNonNull(quantityToQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "NotSpcfdRate", required = true)
 	public RateType12FormatChoice getNotSpecifiedRate() {
 		return notSpecifiedRate;
 	}
 
-	public void setNotSpecifiedRate(com.tools20022.repository.choice.RateType12FormatChoice notSpecifiedRate) {
-		this.notSpecifiedRate = notSpecifiedRate;
+	public RatioFormatSD11Choice setNotSpecifiedRate(com.tools20022.repository.choice.RateType12FormatChoice notSpecifiedRate) {
+		this.notSpecifiedRate = Objects.requireNonNull(notSpecifiedRate);
+		return this;
 	}
 }

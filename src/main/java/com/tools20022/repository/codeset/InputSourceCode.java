@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.InputSourceCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the input source for the generation of the file.
@@ -31,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.InputSourceCode#mmEncoded
- * InputSourceCode.mmEncoded}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InputSourceCode#Encoded
+ * InputSourceCode.Encoded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InputSourceCode#mmUploadedViaCIS
- * InputSourceCode.mmUploadedViaCIS}</li>
+ * {@linkplain com.tools20022.repository.codeset.InputSourceCode#UploadedViaCIS
+ * InputSourceCode.UploadedViaCIS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InputSourceCode#mmUploadedManually
- * InputSourceCode.mmUploadedManually}</li>
+ * {@linkplain com.tools20022.repository.codeset.InputSourceCode#UploadedManually
+ * InputSourceCode.UploadedManually}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the input source for the generation of the file."</li>
  * </ul>
  */
-public class InputSourceCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InputSourceCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,12 +93,12 @@ public class InputSourceCode {
 	 * definition} = "File has been encoded."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEncoded = new MMCode() {
+	public static final InputSourceCode Encoded = new InputSourceCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Encoded";
 			definition = "File has been encoded.";
-			owner_lazy = () -> InputSourceCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InputSourceCode.mmObject();
 			codeName = "NCOD";
 		}
 	};
@@ -120,12 +126,12 @@ public class InputSourceCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmUploadedViaCIS = new MMCode() {
+	public static final InputSourceCode UploadedViaCIS = new InputSourceCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UploadedViaCIS";
 			definition = "File has been uploaded through the CIS (Customer Identification System) system.";
-			owner_lazy = () -> InputSourceCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InputSourceCode.mmObject();
 			codeName = "UCIS";
 		}
 	};
@@ -150,27 +156,59 @@ public class InputSourceCode {
 	 * definition} = "File has been uploaded manually."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUploadedManually = new MMCode() {
+	public static final InputSourceCode UploadedManually = new InputSourceCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UploadedManually";
 			definition = "File has been uploaded manually.";
-			owner_lazy = () -> InputSourceCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InputSourceCode.mmObject();
 			codeName = "UMNL";
 		}
 	};
+	final static private LinkedHashMap<String, InputSourceCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InputSourceCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InputSourceCode";
 				definition = "Specifies the input source for the generation of the file.";
-				code_lazy = () -> Arrays.asList(InputSourceCode.mmEncoded, InputSourceCode.mmUploadedViaCIS, InputSourceCode.mmUploadedManually);
 				derivation_lazy = () -> Arrays.asList(InputSource1Code.mmObject());
+				code_lazy = () -> Arrays
+						.asList(com.tools20022.repository.codeset.InputSourceCode.Encoded, com.tools20022.repository.codeset.InputSourceCode.UploadedViaCIS, com.tools20022.repository.codeset.InputSourceCode.UploadedManually);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Encoded.getCodeName().get(), Encoded);
+		codesByName.put(UploadedViaCIS.getCodeName().get(), UploadedViaCIS);
+		codesByName.put(UploadedManually.getCodeName().get(), UploadedManually);
+	}
+
+	public static InputSourceCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InputSourceCode[] values() {
+		InputSourceCode[] values = new InputSourceCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InputSourceCode> {
+		@Override
+		public InputSourceCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InputSourceCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

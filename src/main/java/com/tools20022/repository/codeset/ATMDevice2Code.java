@@ -20,88 +20,89 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ATMDeviceCode;
+import com.tools20022.repository.codeset.ATMDevice2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * List of ATM devices.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ATMDeviceCode ATMDeviceCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmAlarmSensors
- * ATMDevice2Code.mmAlarmSensors}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#AlarmSensors
+ * ATMDevice2Code.AlarmSensors}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmBarCodeReader
- * ATMDevice2Code.mmBarCodeReader}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmCamera
- * ATMDevice2Code.mmCamera}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#BarCodeReader
+ * ATMDevice2Code.BarCodeReader}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMDevice2Code#Camera
+ * ATMDevice2Code.Camera}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmCardDispenser
- * ATMDevice2Code.mmCardDispenser}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmCardUnit
- * ATMDevice2Code.mmCardUnit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#CardDispenser
+ * ATMDevice2Code.CardDispenser}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMDevice2Code#CardUnit
+ * ATMDevice2Code.CardUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmCashDispenser
- * ATMDevice2Code.mmCashDispenser}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#CashDispenser
+ * ATMDevice2Code.CashDispenser}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmCashInModule
- * ATMDevice2Code.mmCashInModule}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#CashInModule
+ * ATMDevice2Code.CashInModule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmCashRecycler
- * ATMDevice2Code.mmCashRecycler}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#CashRecycler
+ * ATMDevice2Code.CashRecycler}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMDevice2Code#CheckReader
+ * ATMDevice2Code.CheckReader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmCheckReader
- * ATMDevice2Code.mmCheckReader}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#CustomerConsole
+ * ATMDevice2Code.CustomerConsole}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMDevice2Code#Deposit
+ * ATMDevice2Code.Deposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmCustomerConsole
- * ATMDevice2Code.mmCustomerConsole}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmDeposit
- * ATMDevice2Code.mmDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#DocumentPrinter
+ * ATMDevice2Code.DocumentPrinter}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMDevice2Code#DoorSensors
+ * ATMDevice2Code.DoorSensors}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmDocumentPrinter
- * ATMDevice2Code.mmDocumentPrinter}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#InputProcessingModule
+ * ATMDevice2Code.InputProcessingModule}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMDevice2Code#Journal
+ * ATMDevice2Code.Journal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmDoorSensors
- * ATMDevice2Code.mmDoorSensors}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#JournalPrinter
+ * ATMDevice2Code.JournalPrinter}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMDevice2Code#OtherSensor
+ * ATMDevice2Code.OtherSensor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmInputProcessingModule
- * ATMDevice2Code.mmInputProcessingModule}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmJournal
- * ATMDevice2Code.mmJournal}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#PassbookPrinter
+ * ATMDevice2Code.PassbookPrinter}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMDevice2Code#PINKeypad
+ * ATMDevice2Code.PINKeypad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmJournalPrinter
- * ATMDevice2Code.mmJournalPrinter}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#ReceiptPrinter
+ * ATMDevice2Code.ReceiptPrinter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmOtherSensor
- * ATMDevice2Code.mmOtherSensor}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#ScannerPrinter
+ * ATMDevice2Code.ScannerPrinter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmPassbookPrinter
- * ATMDevice2Code.mmPassbookPrinter}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmPINKeypad
- * ATMDevice2Code.mmPINKeypad}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmReceiptPrinter
- * ATMDevice2Code.mmReceiptPrinter}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmScannerPrinter
- * ATMDevice2Code.mmScannerPrinter}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#mmWithdrawalReceipt
- * ATMDevice2Code.mmWithdrawalReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMDevice2Code#WithdrawalReceipt
+ * ATMDevice2Code.WithdrawalReceipt}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ATMDeviceCode ATMDeviceCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,7 +113,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "List of ATM devices."</li>
  * </ul>
  */
-public class ATMDevice2Code extends ATMDeviceCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ATMDevice2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -131,11 +133,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "AlarmSensors"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAlarmSensors = new MMCode() {
+	public static final ATMDevice2Code AlarmSensors = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlarmSensors";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.AlarmSensors.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -154,11 +157,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "BarCodeReader"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBarCodeReader = new MMCode() {
+	public static final ATMDevice2Code BarCodeReader = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BarCodeReader";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.BarCodeReader.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -177,11 +181,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "Camera"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCamera = new MMCode() {
+	public static final ATMDevice2Code Camera = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Camera";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.Camera.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -200,11 +205,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "CardDispenser"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardDispenser = new MMCode() {
+	public static final ATMDevice2Code CardDispenser = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardDispenser";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.CardDispenser.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -223,11 +229,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "CardUnit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardUnit = new MMCode() {
+	public static final ATMDevice2Code CardUnit = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardUnit";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.CardUnit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -246,11 +253,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "CashDispenser"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashDispenser = new MMCode() {
+	public static final ATMDevice2Code CashDispenser = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDispenser";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.CashDispenser.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -269,11 +277,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "CashInModule"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashInModule = new MMCode() {
+	public static final ATMDevice2Code CashInModule = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInModule";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.CashInModule.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -292,11 +301,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "CashRecycler"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashRecycler = new MMCode() {
+	public static final ATMDevice2Code CashRecycler = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashRecycler";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.CashRecycler.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -315,11 +325,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "CheckReader"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCheckReader = new MMCode() {
+	public static final ATMDevice2Code CheckReader = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CheckReader";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.CheckReader.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -338,11 +349,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "CustomerConsole"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustomerConsole = new MMCode() {
+	public static final ATMDevice2Code CustomerConsole = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerConsole";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.CustomerConsole.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -361,11 +373,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "Deposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeposit = new MMCode() {
+	public static final ATMDevice2Code Deposit = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deposit";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.Deposit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -384,11 +397,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "DocumentPrinter"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDocumentPrinter = new MMCode() {
+	public static final ATMDevice2Code DocumentPrinter = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentPrinter";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.DocumentPrinter.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -407,11 +421,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "DoorSensors"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDoorSensors = new MMCode() {
+	public static final ATMDevice2Code DoorSensors = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DoorSensors";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.DoorSensors.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -430,11 +445,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "InputProcessingModule"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInputProcessingModule = new MMCode() {
+	public static final ATMDevice2Code InputProcessingModule = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InputProcessingModule";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.InputProcessingModule.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -453,11 +469,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "Journal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmJournal = new MMCode() {
+	public static final ATMDevice2Code Journal = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Journal";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.Journal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -476,11 +493,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "JournalPrinter"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmJournalPrinter = new MMCode() {
+	public static final ATMDevice2Code JournalPrinter = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JournalPrinter";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.JournalPrinter.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -499,11 +517,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "OtherSensor"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherSensor = new MMCode() {
+	public static final ATMDevice2Code OtherSensor = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherSensor";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.OtherSensor.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -522,11 +541,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "PassbookPrinter"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPassbookPrinter = new MMCode() {
+	public static final ATMDevice2Code PassbookPrinter = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassbookPrinter";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.PassbookPrinter.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -545,11 +565,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "PINKeypad"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPINKeypad = new MMCode() {
+	public static final ATMDevice2Code PINKeypad = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINKeypad";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.PINKeypad.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -568,11 +589,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "ReceiptPrinter"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceiptPrinter = new MMCode() {
+	public static final ATMDevice2Code ReceiptPrinter = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiptPrinter";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.ReceiptPrinter.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -591,11 +613,12 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "ScannerPrinter"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmScannerPrinter = new MMCode() {
+	public static final ATMDevice2Code ScannerPrinter = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScannerPrinter";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.ScannerPrinter.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -614,28 +637,83 @@ public class ATMDevice2Code extends ATMDeviceCode {
 	 * name} = "WithdrawalReceipt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithdrawalReceipt = new MMCode() {
+	public static final ATMDevice2Code WithdrawalReceipt = new ATMDevice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalReceipt";
-			owner_lazy = () -> ATMDevice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMDevice2Code.mmObject();
+			codeName = ATMDeviceCode.WithdrawalReceipt.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ATMDevice2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ATMDevice2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMDevice2Code";
 				definition = "List of ATM devices.";
-				code_lazy = () -> Arrays.asList(ATMDevice2Code.mmAlarmSensors, ATMDevice2Code.mmBarCodeReader, ATMDevice2Code.mmCamera, ATMDevice2Code.mmCardDispenser, ATMDevice2Code.mmCardUnit, ATMDevice2Code.mmCashDispenser,
-						ATMDevice2Code.mmCashInModule, ATMDevice2Code.mmCashRecycler, ATMDevice2Code.mmCheckReader, ATMDevice2Code.mmCustomerConsole, ATMDevice2Code.mmDeposit, ATMDevice2Code.mmDocumentPrinter, ATMDevice2Code.mmDoorSensors,
-						ATMDevice2Code.mmInputProcessingModule, ATMDevice2Code.mmJournal, ATMDevice2Code.mmJournalPrinter, ATMDevice2Code.mmOtherSensor, ATMDevice2Code.mmPassbookPrinter, ATMDevice2Code.mmPINKeypad,
-						ATMDevice2Code.mmReceiptPrinter, ATMDevice2Code.mmScannerPrinter, ATMDevice2Code.mmWithdrawalReceipt);
 				trace_lazy = () -> ATMDeviceCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMDevice2Code.AlarmSensors, com.tools20022.repository.codeset.ATMDevice2Code.BarCodeReader, com.tools20022.repository.codeset.ATMDevice2Code.Camera,
+						com.tools20022.repository.codeset.ATMDevice2Code.CardDispenser, com.tools20022.repository.codeset.ATMDevice2Code.CardUnit, com.tools20022.repository.codeset.ATMDevice2Code.CashDispenser,
+						com.tools20022.repository.codeset.ATMDevice2Code.CashInModule, com.tools20022.repository.codeset.ATMDevice2Code.CashRecycler, com.tools20022.repository.codeset.ATMDevice2Code.CheckReader,
+						com.tools20022.repository.codeset.ATMDevice2Code.CustomerConsole, com.tools20022.repository.codeset.ATMDevice2Code.Deposit, com.tools20022.repository.codeset.ATMDevice2Code.DocumentPrinter,
+						com.tools20022.repository.codeset.ATMDevice2Code.DoorSensors, com.tools20022.repository.codeset.ATMDevice2Code.InputProcessingModule, com.tools20022.repository.codeset.ATMDevice2Code.Journal,
+						com.tools20022.repository.codeset.ATMDevice2Code.JournalPrinter, com.tools20022.repository.codeset.ATMDevice2Code.OtherSensor, com.tools20022.repository.codeset.ATMDevice2Code.PassbookPrinter,
+						com.tools20022.repository.codeset.ATMDevice2Code.PINKeypad, com.tools20022.repository.codeset.ATMDevice2Code.ReceiptPrinter, com.tools20022.repository.codeset.ATMDevice2Code.ScannerPrinter,
+						com.tools20022.repository.codeset.ATMDevice2Code.WithdrawalReceipt);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AlarmSensors.getCodeName().get(), AlarmSensors);
+		codesByName.put(BarCodeReader.getCodeName().get(), BarCodeReader);
+		codesByName.put(Camera.getCodeName().get(), Camera);
+		codesByName.put(CardDispenser.getCodeName().get(), CardDispenser);
+		codesByName.put(CardUnit.getCodeName().get(), CardUnit);
+		codesByName.put(CashDispenser.getCodeName().get(), CashDispenser);
+		codesByName.put(CashInModule.getCodeName().get(), CashInModule);
+		codesByName.put(CashRecycler.getCodeName().get(), CashRecycler);
+		codesByName.put(CheckReader.getCodeName().get(), CheckReader);
+		codesByName.put(CustomerConsole.getCodeName().get(), CustomerConsole);
+		codesByName.put(Deposit.getCodeName().get(), Deposit);
+		codesByName.put(DocumentPrinter.getCodeName().get(), DocumentPrinter);
+		codesByName.put(DoorSensors.getCodeName().get(), DoorSensors);
+		codesByName.put(InputProcessingModule.getCodeName().get(), InputProcessingModule);
+		codesByName.put(Journal.getCodeName().get(), Journal);
+		codesByName.put(JournalPrinter.getCodeName().get(), JournalPrinter);
+		codesByName.put(OtherSensor.getCodeName().get(), OtherSensor);
+		codesByName.put(PassbookPrinter.getCodeName().get(), PassbookPrinter);
+		codesByName.put(PINKeypad.getCodeName().get(), PINKeypad);
+		codesByName.put(ReceiptPrinter.getCodeName().get(), ReceiptPrinter);
+		codesByName.put(ScannerPrinter.getCodeName().get(), ScannerPrinter);
+		codesByName.put(WithdrawalReceipt.getCodeName().get(), WithdrawalReceipt);
+	}
+
+	public static ATMDevice2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ATMDevice2Code[] values() {
+		ATMDevice2Code[] values = new ATMDevice2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ATMDevice2Code> {
+		@Override
+		public ATMDevice2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ATMDevice2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

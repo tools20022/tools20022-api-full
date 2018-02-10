@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,17 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * DetailedAmount4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DetailedAmount8", propOrder = {"amount", "exchangeRate", "quotationDate", "label"})
 public class DetailedAmount8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ImpliedCurrencyAndAmount amount;
 	/**
-	 * Amount after the currency exchange.<br>
-	 * It corresponds to ISO 8583 field number 6, completed by the field number
-	 * 51 for the versions 87 and 93.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +129,7 @@ public class DetailedAmount8 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
-			componentContext_lazy = () -> DetailedAmount8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount8.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,11 +141,11 @@ public class DetailedAmount8 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "XchgRate", required = true)
 	protected BaseOneRate exchangeRate;
 	/**
-	 * Exchange rate to the currency of the amount.<br>
-	 * It corresponds to ISO 8583 field number 10.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,7 +180,7 @@ public class DetailedAmount8 {
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
-			componentContext_lazy = () -> DetailedAmount8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount8.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,10 +191,11 @@ public class DetailedAmount8 {
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	@XmlElement(name = "QtnDt")
 	protected ISODateTime quotationDate;
 	/**
-	 * Date and time at which the exchange rate has been quoted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -227,7 +229,7 @@ public class DetailedAmount8 {
 	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotationDate;
-			componentContext_lazy = () -> DetailedAmount8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount8.mmObject();
 			isDerived = false;
 			xmlTag = "QtnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -238,11 +240,11 @@ public class DetailedAmount8 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "Labl")
 	protected Max140Text label;
 	/**
-	 * Text to display on the cardholder or to print on the cardholder bank
-	 * statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -276,7 +278,7 @@ public class DetailedAmount8 {
 	 */
 	public static final MMMessageAttribute mmLabel = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DetailedAmount8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount8.mmObject();
 			isDerived = false;
 			xmlTag = "Labl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -292,9 +294,10 @@ public class DetailedAmount8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DetailedAmount8.mmAmount, DetailedAmount8.mmExchangeRate, DetailedAmount8.mmQuotationDate, DetailedAmount8.mmLabel);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount8.mmAmount, com.tools20022.repository.msg.DetailedAmount8.mmExchangeRate, com.tools20022.repository.msg.DetailedAmount8.mmQuotationDate,
+						com.tools20022.repository.msg.DetailedAmount8.mmLabel);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DetailedAmount8";
 				definition = "Detailed amounts associated with the total amount of transaction.";
@@ -304,39 +307,39 @@ public class DetailedAmount8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ImpliedCurrencyAndAmount amount) {
-		this.amount = amount;
+	public DetailedAmount8 setAmount(ImpliedCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "XchgRate", required = true)
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
 
-	public void setExchangeRate(BaseOneRate exchangeRate) {
-		this.exchangeRate = exchangeRate;
+	public DetailedAmount8 setExchangeRate(BaseOneRate exchangeRate) {
+		this.exchangeRate = Objects.requireNonNull(exchangeRate);
+		return this;
 	}
 
-	@XmlElement(name = "QtnDt")
-	public ISODateTime getQuotationDate() {
-		return quotationDate;
+	public Optional<ISODateTime> getQuotationDate() {
+		return quotationDate == null ? Optional.empty() : Optional.of(quotationDate);
 	}
 
-	public void setQuotationDate(ISODateTime quotationDate) {
+	public DetailedAmount8 setQuotationDate(ISODateTime quotationDate) {
 		this.quotationDate = quotationDate;
+		return this;
 	}
 
-	@XmlElement(name = "Labl")
-	public Max140Text getLabel() {
-		return label;
+	public Optional<Max140Text> getLabel() {
+		return label == null ? Optional.empty() : Optional.of(label);
 	}
 
-	public void setLabel(Max140Text label) {
+	public DetailedAmount8 setLabel(Max140Text label) {
 		this.label = label;
+		return this;
 	}
 }

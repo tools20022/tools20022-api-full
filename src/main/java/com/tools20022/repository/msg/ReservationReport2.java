@@ -28,6 +28,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -41,8 +42,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReservationReport2#mmReservationOrBusinessErrorRule
- * ReservationReport2.mmReservationOrBusinessErrorRule}</li>
+ * {@linkplain com.tools20022.repository.msg.ReservationReport2#ReservationOrBusinessErrorRule
+ * ReservationReport2.ReservationOrBusinessErrorRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -66,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -79,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Reports either on the reservation or on a business error."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReservationReport2", propOrder = {"reservationIdentification", "reservation", "businessError"})
 public class ReservationReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RsvatnId", required = true)
 	protected ReservationIdentificationDetails1 reservationIdentification;
 	/**
-	 * Identification of the reservation on which information is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -120,7 +122,7 @@ public class ReservationReport2 {
 	public static final MMMessageAssociationEnd mmReservationIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
-			componentContext_lazy = () -> ReservationReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationReport2.mmObject();
 			isDerived = false;
 			xmlTag = "RsvatnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +134,11 @@ public class ReservationReport2 {
 			type_lazy = () -> com.tools20022.repository.msg.ReservationIdentificationDetails1.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsvatn", required = true)
 	protected ReservationDetails1 reservation;
 	/**
-	 * Requested information on the limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -166,7 +169,7 @@ public class ReservationReport2 {
 	public static final MMMessageAssociationEnd mmReservation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
-			componentContext_lazy = () -> ReservationReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationReport2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsvatn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +181,11 @@ public class ReservationReport2 {
 			type_lazy = () -> com.tools20022.repository.msg.ReservationDetails1.mmObject();
 		}
 	};
+	@XmlElement(name = "BizErr", required = true)
 	protected ErrorHandling3 businessError;
 	/**
-	 * Reason the requested business information is not given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -207,7 +211,7 @@ public class ReservationReport2 {
 	 */
 	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReservationReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationReport2.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,22 +255,23 @@ public class ReservationReport2 {
 	 * "Either Rervation or BusinessError must be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmReservationOrBusinessErrorRule = new MMXor() {
+	public static final MMXor ReservationOrBusinessErrorRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReservationOrBusinessErrorRule";
 			definition = "Either Rervation or BusinessError must be present, but not both.";
-			messageComponent_lazy = () -> ReservationReport2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(ReservationReport2.mmReservation, ReservationReport2.mmBusinessError);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.ReservationReport2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationReport2.mmReservation, com.tools20022.repository.msg.ReservationReport2.mmBusinessError);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReservationReport2.mmReservationIdentification, ReservationReport2.mmReservation, ReservationReport2.mmBusinessError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationReport2.mmReservationIdentification, com.tools20022.repository.msg.ReservationReport2.mmReservation,
+						com.tools20022.repository.msg.ReservationReport2.mmBusinessError);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -277,36 +282,36 @@ public class ReservationReport2 {
 				})).get();
 				name = "ReservationReport2";
 				definition = "Reports either on the reservation or on a business error.";
-				xors_lazy = () -> Arrays.asList(ReservationReport2.mmReservationOrBusinessErrorRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationReport2.ReservationOrBusinessErrorRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RsvatnId", required = true)
 	public ReservationIdentificationDetails1 getReservationIdentification() {
 		return reservationIdentification;
 	}
 
-	public void setReservationIdentification(com.tools20022.repository.msg.ReservationIdentificationDetails1 reservationIdentification) {
-		this.reservationIdentification = reservationIdentification;
+	public ReservationReport2 setReservationIdentification(com.tools20022.repository.msg.ReservationIdentificationDetails1 reservationIdentification) {
+		this.reservationIdentification = Objects.requireNonNull(reservationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Rsvatn", required = true)
 	public ReservationDetails1 getReservation() {
 		return reservation;
 	}
 
-	public void setReservation(com.tools20022.repository.msg.ReservationDetails1 reservation) {
-		this.reservation = reservation;
+	public ReservationReport2 setReservation(com.tools20022.repository.msg.ReservationDetails1 reservation) {
+		this.reservation = Objects.requireNonNull(reservation);
+		return this;
 	}
 
-	@XmlElement(name = "BizErr", required = true)
 	public ErrorHandling3 getBusinessError() {
 		return businessError;
 	}
 
-	public void setBusinessError(com.tools20022.repository.msg.ErrorHandling3 businessError) {
-		this.businessError = businessError;
+	public ReservationReport2 setBusinessError(com.tools20022.repository.msg.ErrorHandling3 businessError) {
+		this.businessError = Objects.requireNonNull(businessError);
+		return this;
 	}
 }

@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identifies the type of process related to an ATM message."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "ATMMessageFunction1", propOrder = {"function", "ATMServiceCode", "hostServiceCode"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "ATMMessageFunction1", propOrder = {"function", "aTMServiceCode", "hostServiceCode"})
 public class ATMMessageFunction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Fctn", required = true)
 	protected MessageFunction7Code function;
 	/**
-	 * Type of requested function.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +103,7 @@ public class ATMMessageFunction1 {
 	 */
 	public static final MMMessageAttribute mmFunction = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMMessageFunction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMMessageFunction1.mmObject();
 			isDerived = false;
 			xmlTag = "Fctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +114,11 @@ public class ATMMessageFunction1 {
 			simpleType_lazy = () -> MessageFunction7Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ATMSvcCd")
 	protected Max35Text aTMServiceCode;
 	/**
-	 * Codification of the type of service for the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,7 +145,7 @@ public class ATMMessageFunction1 {
 	 */
 	public static final MMMessageAttribute mmATMServiceCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMMessageFunction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMMessageFunction1.mmObject();
 			isDerived = false;
 			xmlTag = "ATMSvcCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,10 +156,11 @@ public class ATMMessageFunction1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "HstSvcCd")
 	protected Max35Text hostServiceCode;
 	/**
-	 * Codification of the type of service for the ATM manager host.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,7 +188,7 @@ public class ATMMessageFunction1 {
 	 */
 	public static final MMMessageAttribute mmHostServiceCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMMessageFunction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMMessageFunction1.mmObject();
 			isDerived = false;
 			xmlTag = "HstSvcCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,8 +203,9 @@ public class ATMMessageFunction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMMessageFunction1.mmFunction, ATMMessageFunction1.mmATMServiceCode, ATMMessageFunction1.mmHostServiceCode);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMMessageFunction1.mmFunction, com.tools20022.repository.msg.ATMMessageFunction1.mmATMServiceCode,
+						com.tools20022.repository.msg.ATMMessageFunction1.mmHostServiceCode);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMMessageFunction1";
 				definition = "Identifies the type of process related to an ATM message.";
@@ -208,30 +214,30 @@ public class ATMMessageFunction1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Fctn", required = true)
 	public MessageFunction7Code getFunction() {
 		return function;
 	}
 
-	public void setFunction(MessageFunction7Code function) {
-		this.function = function;
+	public ATMMessageFunction1 setFunction(MessageFunction7Code function) {
+		this.function = Objects.requireNonNull(function);
+		return this;
 	}
 
-	@XmlElement(name = "ATMSvcCd")
-	public Max35Text getATMServiceCode() {
-		return aTMServiceCode;
+	public Optional<Max35Text> getATMServiceCode() {
+		return aTMServiceCode == null ? Optional.empty() : Optional.of(aTMServiceCode);
 	}
 
-	public void setATMServiceCode(Max35Text aTMServiceCode) {
+	public ATMMessageFunction1 setATMServiceCode(Max35Text aTMServiceCode) {
 		this.aTMServiceCode = aTMServiceCode;
+		return this;
 	}
 
-	@XmlElement(name = "HstSvcCd")
-	public Max35Text getHostServiceCode() {
-		return hostServiceCode;
+	public Optional<Max35Text> getHostServiceCode() {
+		return hostServiceCode == null ? Optional.empty() : Optional.of(hostServiceCode);
 	}
 
-	public void setHostServiceCode(Max35Text hostServiceCode) {
+	public ATMMessageFunction1 setHostServiceCode(Max35Text hostServiceCode) {
 		this.hostServiceCode = hostServiceCode;
+		return this;
 	}
 }

@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of the amendment."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Amendment7", propOrder = {"amendmentIdentification", "amendmentStatus"})
 public class Amendment7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AmdmntId", required = true)
 	protected Amendment8 amendmentIdentification;
 	/**
-	 * Identification of the proposed amendment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -114,7 +116,7 @@ public class Amendment7 {
 	public static final MMMessageAssociationEnd mmAmendmentIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AmendmentOfUndertaking.mmAmendmentIdentification;
-			componentContext_lazy = () -> Amendment7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment7.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +128,11 @@ public class Amendment7 {
 			type_lazy = () -> com.tools20022.repository.msg.Amendment8.mmObject();
 		}
 	};
+	@XmlElement(name = "AmdmntSts", required = true)
 	protected UndertakingStatus2Code amendmentStatus;
 	/**
-	 * Proposed undertaking amendment status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +165,7 @@ public class Amendment7 {
 	public static final MMMessageAttribute mmAmendmentStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmUndertakingStatus;
-			componentContext_lazy = () -> Amendment7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment7.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,10 +180,10 @@ public class Amendment7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Amendment7.mmAmendmentIdentification, Amendment7.mmAmendmentStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment7.mmAmendmentIdentification, com.tools20022.repository.msg.Amendment7.mmAmendmentStatus);
 				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingAmendmentResponseV01.mmUndertakingAmendmentResponseDetails);
 				trace_lazy = () -> AmendmentOfUndertaking.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Amendment7";
 				definition = "Details of the amendment.";
@@ -189,21 +192,21 @@ public class Amendment7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AmdmntId", required = true)
 	public Amendment8 getAmendmentIdentification() {
 		return amendmentIdentification;
 	}
 
-	public void setAmendmentIdentification(com.tools20022.repository.msg.Amendment8 amendmentIdentification) {
-		this.amendmentIdentification = amendmentIdentification;
+	public Amendment7 setAmendmentIdentification(com.tools20022.repository.msg.Amendment8 amendmentIdentification) {
+		this.amendmentIdentification = Objects.requireNonNull(amendmentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AmdmntSts", required = true)
 	public UndertakingStatus2Code getAmendmentStatus() {
 		return amendmentStatus;
 	}
 
-	public void setAmendmentStatus(UndertakingStatus2Code amendmentStatus) {
-		this.amendmentStatus = amendmentStatus;
+	public Amendment7 setAmendmentStatus(UndertakingStatus2Code amendmentStatus) {
+		this.amendmentStatus = Objects.requireNonNull(amendmentStatus);
+		return this;
 	}
 }

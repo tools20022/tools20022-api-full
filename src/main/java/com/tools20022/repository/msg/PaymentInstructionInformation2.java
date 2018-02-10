@@ -28,9 +28,8 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -102,8 +101,28 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintChargeBearerRule#forPaymentInstructionInformation2
+ * ConstraintChargeBearerRule.forPaymentInstructionInformation2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule#forPaymentInstructionInformation2
+ * ConstraintChargesAccountAgentRule.forPaymentInstructionInformation2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUltimateCreditorGuideline#forPaymentInstructionInformation2
+ * ConstraintUltimateCreditorGuideline.forPaymentInstructionInformation2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintChargesAccountRule#forPaymentInstructionInformation2
+ * ConstraintChargesAccountRule.forPaymentInstructionInformation2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule#forPaymentInstructionInformation2
+ * ConstraintPaymentTypeInformationRule.forPaymentInstructionInformation2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -116,17 +135,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentInstructionInformation2", propOrder = {"paymentInformationIdentification", "paymentMethod", "paymentTypeInformation", "requestedCollectionDate", "creditor", "creditorAccount", "creditorAgent",
 		"creditorAgentAccount", "ultimateCreditor", "chargeBearer", "chargesAccount", "chargesAccountAgent", "directDebitTransactionInformation"})
 public class PaymentInstructionInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmtInfId")
 	protected Max35Text paymentInformationIdentification;
 	/**
-	 * Reference assigned by a sending party to unambiguously identify the
-	 * payment information block within the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +180,7 @@ public class PaymentInstructionInformation2 {
 	public static final MMMessageAttribute mmPaymentInformationIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
-			componentContext_lazy = () -> PaymentInstructionInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInfId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,11 +191,11 @@ public class PaymentInstructionInformation2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtMtd", required = true)
 	protected PaymentMethod2Code paymentMethod;
 	/**
-	 * Specifies the means of payment that will be used to move the amount of
-	 * money.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,7 +225,7 @@ public class PaymentInstructionInformation2 {
 	 */
 	public static final MMMessageAttribute mmPaymentMethod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentInstructionInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,10 +236,11 @@ public class PaymentInstructionInformation2 {
 			simpleType_lazy = () -> PaymentMethod2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtTpInf")
 	protected PaymentTypeInformation2 paymentTypeInformation;
 	/**
-	 * Set of elements used to further specify the type of transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -254,7 +274,7 @@ public class PaymentInstructionInformation2 {
 	public static final MMMessageAssociationEnd mmPaymentTypeInformation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmProcessingInstructions;
-			componentContext_lazy = () -> PaymentInstructionInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTpInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,11 +286,11 @@ public class PaymentInstructionInformation2 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation2.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdColltnDt", required = true)
 	protected ISODate requestedCollectionDate;
 	/**
-	 * Date at which the creditor requests the amount of money to be collected
-	 * from the debtor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -305,7 +325,7 @@ public class PaymentInstructionInformation2 {
 	public static final MMMessageAttribute mmRequestedCollectionDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRequestedExecutionDate;
-			componentContext_lazy = () -> PaymentInstructionInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdColltnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -316,10 +336,11 @@ public class PaymentInstructionInformation2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "Cdtr", required = true)
 	protected PartyIdentification8 creditor;
 	/**
-	 * Party to which an amount of money is due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -351,7 +372,7 @@ public class PaymentInstructionInformation2 {
 	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> PaymentInstructionInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "Cdtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -363,11 +384,11 @@ public class PaymentInstructionInformation2 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtrAcct", required = true)
 	protected CashAccount7 creditorAccount;
 	/**
-	 * Unambiguous identification of the account of the creditor to which a
-	 * credit entry will be posted as a result of the payment transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -401,7 +422,7 @@ public class PaymentInstructionInformation2 {
 	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
-			componentContext_lazy = () -> PaymentInstructionInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -413,10 +434,11 @@ public class PaymentInstructionInformation2 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtrAgt", required = true)
 	protected BranchAndFinancialInstitutionIdentification3 creditorAgent;
 	/**
-	 * Financial institution servicing an account for the creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -450,7 +472,7 @@ public class PaymentInstructionInformation2 {
 	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> PaymentInstructionInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -462,12 +484,11 @@ public class PaymentInstructionInformation2 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtrAgtAcct")
 	protected CashAccount7 creditorAgentAccount;
 	/**
-	 * Unambiguous identification of the account of the creditor agent at its
-	 * servicing agent to which a credit entry will be made as a result of the
-	 * payment transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -501,7 +522,7 @@ public class PaymentInstructionInformation2 {
 	public static final MMMessageAssociationEnd mmCreditorAgentAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
-			componentContext_lazy = () -> PaymentInstructionInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAgtAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -513,10 +534,11 @@ public class PaymentInstructionInformation2 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
 		}
 	};
+	@XmlElement(name = "UltmtCdtr")
 	protected PartyIdentification8 ultimateCreditor;
 	/**
-	 * Ultimate party to which an amount of money is due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -548,7 +570,7 @@ public class PaymentInstructionInformation2 {
 	public static final MMMessageAssociationEnd mmUltimateCreditor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> PaymentInstructionInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "UltmtCdtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -560,11 +582,11 @@ public class PaymentInstructionInformation2 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgBr")
 	protected ChargeBearerType1Code chargeBearer;
 	/**
-	 * Specifies which party/parties will bear the charges associated with the
-	 * processing of the payment transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -600,7 +622,7 @@ public class PaymentInstructionInformation2 {
 	public static final MMMessageAttribute mmChargeBearer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmBearerType;
-			componentContext_lazy = () -> PaymentInstructionInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgBr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -611,13 +633,11 @@ public class PaymentInstructionInformation2 {
 			simpleType_lazy = () -> ChargeBearerType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgsAcct")
 	protected CashAccount7 chargesAccount;
 	/**
-	 * Account used to process charges associated with a transaction.
 	 * 
-	 * Usage : charges account should be used when charges have to be booked to
-	 * an account different from the account identified in debtor's account.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -651,7 +671,7 @@ public class PaymentInstructionInformation2 {
 	public static final MMMessageAssociationEnd mmChargesAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargesDebitAccount;
-			componentContext_lazy = () -> PaymentInstructionInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -663,13 +683,11 @@ public class PaymentInstructionInformation2 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgsAcctAgt")
 	protected BranchAndFinancialInstitutionIdentification3 chargesAccountAgent;
 	/**
-	 * Agent that services a charges account.
 	 * 
-	 * Usage : charges account agent should only be used when the charges
-	 * account agent is different from the creditor agent.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -704,7 +722,7 @@ public class PaymentInstructionInformation2 {
 	public static final MMMessageAssociationEnd mmChargesAccountAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> PaymentInstructionInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsAcctAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -716,11 +734,11 @@ public class PaymentInstructionInformation2 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	@XmlElement(name = "DrctDbtTxInf", required = true)
 	protected List<com.tools20022.repository.msg.DirectDebitTransactionInformation1> directDebitTransactionInformation;
 	/**
-	 * Set of elements providing information specific to the individual
-	 * transaction(s) included in the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -754,7 +772,7 @@ public class PaymentInstructionInformation2 {
 	public static final MMMessageAssociationEnd mmDirectDebitTransactionInformation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> DirectDebit.mmObject();
-			componentContext_lazy = () -> PaymentInstructionInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "DrctDbtTxInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -769,13 +787,19 @@ public class PaymentInstructionInformation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentInstructionInformation2.mmPaymentInformationIdentification, PaymentInstructionInformation2.mmPaymentMethod, PaymentInstructionInformation2.mmPaymentTypeInformation,
-						PaymentInstructionInformation2.mmRequestedCollectionDate, PaymentInstructionInformation2.mmCreditor, PaymentInstructionInformation2.mmCreditorAccount, PaymentInstructionInformation2.mmCreditorAgent,
-						PaymentInstructionInformation2.mmCreditorAgentAccount, PaymentInstructionInformation2.mmUltimateCreditor, PaymentInstructionInformation2.mmChargeBearer, PaymentInstructionInformation2.mmChargesAccount,
-						PaymentInstructionInformation2.mmChargesAccountAgent, PaymentInstructionInformation2.mmDirectDebitTransactionInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionInformation2.mmPaymentInformationIdentification, com.tools20022.repository.msg.PaymentInstructionInformation2.mmPaymentMethod,
+						com.tools20022.repository.msg.PaymentInstructionInformation2.mmPaymentTypeInformation, com.tools20022.repository.msg.PaymentInstructionInformation2.mmRequestedCollectionDate,
+						com.tools20022.repository.msg.PaymentInstructionInformation2.mmCreditor, com.tools20022.repository.msg.PaymentInstructionInformation2.mmCreditorAccount,
+						com.tools20022.repository.msg.PaymentInstructionInformation2.mmCreditorAgent, com.tools20022.repository.msg.PaymentInstructionInformation2.mmCreditorAgentAccount,
+						com.tools20022.repository.msg.PaymentInstructionInformation2.mmUltimateCreditor, com.tools20022.repository.msg.PaymentInstructionInformation2.mmChargeBearer,
+						com.tools20022.repository.msg.PaymentInstructionInformation2.mmChargesAccount, com.tools20022.repository.msg.PaymentInstructionInformation2.mmChargesAccountAgent,
+						com.tools20022.repository.msg.PaymentInstructionInformation2.mmDirectDebitTransactionInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerDirectDebitInitiationV01.mmPaymentInformation);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargeBearerRule.forPaymentInstructionInformation2,
+						com.tools20022.repository.constraints.ConstraintChargesAccountAgentRule.forPaymentInstructionInformation2, com.tools20022.repository.constraints.ConstraintUltimateCreditorGuideline.forPaymentInstructionInformation2,
+						com.tools20022.repository.constraints.ConstraintChargesAccountRule.forPaymentInstructionInformation2, com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule.forPaymentInstructionInformation2);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstructionInformation2";
 				definition = "Set of characteristics that apply to the credit side of the payment transactions included in the direct debit transaction initiation.";
@@ -784,120 +808,120 @@ public class PaymentInstructionInformation2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmtInfId")
-	public Max35Text getPaymentInformationIdentification() {
-		return paymentInformationIdentification;
+	public Optional<Max35Text> getPaymentInformationIdentification() {
+		return paymentInformationIdentification == null ? Optional.empty() : Optional.of(paymentInformationIdentification);
 	}
 
-	public void setPaymentInformationIdentification(Max35Text paymentInformationIdentification) {
+	public PaymentInstructionInformation2 setPaymentInformationIdentification(Max35Text paymentInformationIdentification) {
 		this.paymentInformationIdentification = paymentInformationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PmtMtd", required = true)
 	public PaymentMethod2Code getPaymentMethod() {
 		return paymentMethod;
 	}
 
-	public void setPaymentMethod(PaymentMethod2Code paymentMethod) {
-		this.paymentMethod = paymentMethod;
+	public PaymentInstructionInformation2 setPaymentMethod(PaymentMethod2Code paymentMethod) {
+		this.paymentMethod = Objects.requireNonNull(paymentMethod);
+		return this;
 	}
 
-	@XmlElement(name = "PmtTpInf")
-	public PaymentTypeInformation2 getPaymentTypeInformation() {
-		return paymentTypeInformation;
+	public Optional<PaymentTypeInformation2> getPaymentTypeInformation() {
+		return paymentTypeInformation == null ? Optional.empty() : Optional.of(paymentTypeInformation);
 	}
 
-	public void setPaymentTypeInformation(com.tools20022.repository.msg.PaymentTypeInformation2 paymentTypeInformation) {
+	public PaymentInstructionInformation2 setPaymentTypeInformation(com.tools20022.repository.msg.PaymentTypeInformation2 paymentTypeInformation) {
 		this.paymentTypeInformation = paymentTypeInformation;
+		return this;
 	}
 
-	@XmlElement(name = "ReqdColltnDt", required = true)
 	public ISODate getRequestedCollectionDate() {
 		return requestedCollectionDate;
 	}
 
-	public void setRequestedCollectionDate(ISODate requestedCollectionDate) {
-		this.requestedCollectionDate = requestedCollectionDate;
+	public PaymentInstructionInformation2 setRequestedCollectionDate(ISODate requestedCollectionDate) {
+		this.requestedCollectionDate = Objects.requireNonNull(requestedCollectionDate);
+		return this;
 	}
 
-	@XmlElement(name = "Cdtr", required = true)
 	public PartyIdentification8 getCreditor() {
 		return creditor;
 	}
 
-	public void setCreditor(com.tools20022.repository.msg.PartyIdentification8 creditor) {
-		this.creditor = creditor;
+	public PaymentInstructionInformation2 setCreditor(com.tools20022.repository.msg.PartyIdentification8 creditor) {
+		this.creditor = Objects.requireNonNull(creditor);
+		return this;
 	}
 
-	@XmlElement(name = "CdtrAcct", required = true)
 	public CashAccount7 getCreditorAccount() {
 		return creditorAccount;
 	}
 
-	public void setCreditorAccount(com.tools20022.repository.msg.CashAccount7 creditorAccount) {
-		this.creditorAccount = creditorAccount;
+	public PaymentInstructionInformation2 setCreditorAccount(com.tools20022.repository.msg.CashAccount7 creditorAccount) {
+		this.creditorAccount = Objects.requireNonNull(creditorAccount);
+		return this;
 	}
 
-	@XmlElement(name = "CdtrAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification3 getCreditorAgent() {
 		return creditorAgent;
 	}
 
-	public void setCreditorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 creditorAgent) {
-		this.creditorAgent = creditorAgent;
+	public PaymentInstructionInformation2 setCreditorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 creditorAgent) {
+		this.creditorAgent = Objects.requireNonNull(creditorAgent);
+		return this;
 	}
 
-	@XmlElement(name = "CdtrAgtAcct")
-	public CashAccount7 getCreditorAgentAccount() {
-		return creditorAgentAccount;
+	public Optional<CashAccount7> getCreditorAgentAccount() {
+		return creditorAgentAccount == null ? Optional.empty() : Optional.of(creditorAgentAccount);
 	}
 
-	public void setCreditorAgentAccount(com.tools20022.repository.msg.CashAccount7 creditorAgentAccount) {
+	public PaymentInstructionInformation2 setCreditorAgentAccount(com.tools20022.repository.msg.CashAccount7 creditorAgentAccount) {
 		this.creditorAgentAccount = creditorAgentAccount;
+		return this;
 	}
 
-	@XmlElement(name = "UltmtCdtr")
-	public PartyIdentification8 getUltimateCreditor() {
-		return ultimateCreditor;
+	public Optional<PartyIdentification8> getUltimateCreditor() {
+		return ultimateCreditor == null ? Optional.empty() : Optional.of(ultimateCreditor);
 	}
 
-	public void setUltimateCreditor(com.tools20022.repository.msg.PartyIdentification8 ultimateCreditor) {
+	public PaymentInstructionInformation2 setUltimateCreditor(com.tools20022.repository.msg.PartyIdentification8 ultimateCreditor) {
 		this.ultimateCreditor = ultimateCreditor;
+		return this;
 	}
 
-	@XmlElement(name = "ChrgBr")
-	public ChargeBearerType1Code getChargeBearer() {
-		return chargeBearer;
+	public Optional<ChargeBearerType1Code> getChargeBearer() {
+		return chargeBearer == null ? Optional.empty() : Optional.of(chargeBearer);
 	}
 
-	public void setChargeBearer(ChargeBearerType1Code chargeBearer) {
+	public PaymentInstructionInformation2 setChargeBearer(ChargeBearerType1Code chargeBearer) {
 		this.chargeBearer = chargeBearer;
+		return this;
 	}
 
-	@XmlElement(name = "ChrgsAcct")
-	public CashAccount7 getChargesAccount() {
-		return chargesAccount;
+	public Optional<CashAccount7> getChargesAccount() {
+		return chargesAccount == null ? Optional.empty() : Optional.of(chargesAccount);
 	}
 
-	public void setChargesAccount(com.tools20022.repository.msg.CashAccount7 chargesAccount) {
+	public PaymentInstructionInformation2 setChargesAccount(com.tools20022.repository.msg.CashAccount7 chargesAccount) {
 		this.chargesAccount = chargesAccount;
+		return this;
 	}
 
-	@XmlElement(name = "ChrgsAcctAgt")
-	public BranchAndFinancialInstitutionIdentification3 getChargesAccountAgent() {
-		return chargesAccountAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification3> getChargesAccountAgent() {
+		return chargesAccountAgent == null ? Optional.empty() : Optional.of(chargesAccountAgent);
 	}
 
-	public void setChargesAccountAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 chargesAccountAgent) {
+	public PaymentInstructionInformation2 setChargesAccountAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 chargesAccountAgent) {
 		this.chargesAccountAgent = chargesAccountAgent;
+		return this;
 	}
 
-	@XmlElement(name = "DrctDbtTxInf", required = true)
 	public List<DirectDebitTransactionInformation1> getDirectDebitTransactionInformation() {
-		return directDebitTransactionInformation;
+		return directDebitTransactionInformation == null ? directDebitTransactionInformation = new ArrayList<>() : directDebitTransactionInformation;
 	}
 
-	public void setDirectDebitTransactionInformation(List<com.tools20022.repository.msg.DirectDebitTransactionInformation1> directDebitTransactionInformation) {
-		this.directDebitTransactionInformation = directDebitTransactionInformation;
+	public PaymentInstructionInformation2 setDirectDebitTransactionInformation(List<com.tools20022.repository.msg.DirectDebitTransactionInformation1> directDebitTransactionInformation) {
+		this.directDebitTransactionInformation = Objects.requireNonNull(directDebitTransactionInformation);
+		return this;
 	}
 }

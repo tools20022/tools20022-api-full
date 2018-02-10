@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.OrganisationTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies a type of organisation.
@@ -32,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrganisationTypeCode#mmPublic
- * OrganisationTypeCode.mmPublic}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrganisationTypeCode#Public
+ * OrganisationTypeCode.Public}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrganisationTypeCode#mmPrivateAssociation
- * OrganisationTypeCode.mmPrivateAssociation}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrganisationTypeCode#PrivateAssociation
+ * OrganisationTypeCode.PrivateAssociation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrganisationTypeCode#mmInvestmentFund
- * OrganisationTypeCode.mmInvestmentFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrganisationTypeCode#InvestmentFund
+ * OrganisationTypeCode.InvestmentFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrganisationTypeCode#mmPublicFund
- * OrganisationTypeCode.mmPublicFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrganisationTypeCode#PublicFund
+ * OrganisationTypeCode.PublicFund}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -55,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies a type of organisation."</li>
  * </ul>
  */
-public class OrganisationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OrganisationTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,12 +97,12 @@ public class OrganisationTypeCode {
 	 * definition} = "Organisation is a public company."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPublic = new MMCode() {
+	public static final OrganisationTypeCode Public = new OrganisationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Public";
 			definition = "Organisation is a public company.";
-			owner_lazy = () -> OrganisationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrganisationTypeCode.mmObject();
 			codeName = "PUBL";
 		}
 	};
@@ -121,12 +127,12 @@ public class OrganisationTypeCode {
 	 * definition} = "Organisation is a private association."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrivateAssociation = new MMCode() {
+	public static final OrganisationTypeCode PrivateAssociation = new OrganisationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrivateAssociation";
 			definition = "Organisation is a private association.";
-			owner_lazy = () -> OrganisationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrganisationTypeCode.mmObject();
 			codeName = "PRIV";
 		}
 	};
@@ -151,12 +157,12 @@ public class OrganisationTypeCode {
 	 * definition} = "Organisation is an investment fund."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestmentFund = new MMCode() {
+	public static final OrganisationTypeCode InvestmentFund = new OrganisationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFund";
 			definition = "Organisation is an investment fund.";
-			owner_lazy = () -> OrganisationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrganisationTypeCode.mmObject();
 			codeName = "IFUN";
 		}
 	};
@@ -181,27 +187,60 @@ public class OrganisationTypeCode {
 	 * definition} = "Organisation is a public fund."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPublicFund = new MMCode() {
+	public static final OrganisationTypeCode PublicFund = new OrganisationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicFund";
 			definition = "Organisation is a public fund.";
-			owner_lazy = () -> OrganisationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrganisationTypeCode.mmObject();
 			codeName = "PFUN";
 		}
 	};
+	final static private LinkedHashMap<String, OrganisationTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OrganisationTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrganisationTypeCode";
 				definition = "Specifies a type of organisation.";
-				code_lazy = () -> Arrays.asList(OrganisationTypeCode.mmPublic, OrganisationTypeCode.mmPrivateAssociation, OrganisationTypeCode.mmInvestmentFund, OrganisationTypeCode.mmPublicFund);
 				derivation_lazy = () -> Arrays.asList(OrganisationType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrganisationTypeCode.Public, com.tools20022.repository.codeset.OrganisationTypeCode.PrivateAssociation,
+						com.tools20022.repository.codeset.OrganisationTypeCode.InvestmentFund, com.tools20022.repository.codeset.OrganisationTypeCode.PublicFund);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Public.getCodeName().get(), Public);
+		codesByName.put(PrivateAssociation.getCodeName().get(), PrivateAssociation);
+		codesByName.put(InvestmentFund.getCodeName().get(), InvestmentFund);
+		codesByName.put(PublicFund.getCodeName().get(), PublicFund);
+	}
+
+	public static OrganisationTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OrganisationTypeCode[] values() {
+		OrganisationTypeCode[] values = new OrganisationTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OrganisationTypeCode> {
+		@Override
+		public OrganisationTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OrganisationTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

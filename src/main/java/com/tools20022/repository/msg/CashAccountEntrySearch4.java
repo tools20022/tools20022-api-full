@@ -32,9 +32,8 @@ import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -80,8 +79,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintEntryAmountCreditDebitIndicator1Rule#forCashAccountEntrySearch4
+ * ConstraintEntryAmountCreditDebitIndicator1Rule.forCashAccountEntrySearch4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintEntryAmountCreditDebitIndicator2Rule#forCashAccountEntrySearch4
+ * ConstraintEntryAmountCreditDebitIndicator2Rule.forCashAccountEntrySearch4}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,16 +106,16 @@ import javax.xml.bind.annotation.XmlType;
  * CashAccountEntrySearch3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashAccountEntrySearch4", propOrder = {"accountIdentification", "entryAmount", "entryAmountCurrency", "creditDebitIndicator", "entryStatus", "entryDate", "accountOwner", "accountServicer"})
 public class CashAccountEntrySearch4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId")
 	protected List<AccountIdentificationSearchCriteria2Choice> accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -145,7 +155,7 @@ public class CashAccountEntrySearch4 {
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
-			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch4.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,10 +167,11 @@ public class CashAccountEntrySearch4 {
 			type_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NtryAmt")
 	protected List<ActiveOrHistoricAmountRange1Choice> entryAmount;
 	/**
-	 * Specifies the entry amount(s) on which the query is performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,7 +211,7 @@ public class CashAccountEntrySearch4 {
 	public static final MMMessageAttribute mmEntryAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
-			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch4.mmObject();
 			isDerived = false;
 			xmlTag = "NtryAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,10 +222,11 @@ public class CashAccountEntrySearch4 {
 			complexType_lazy = () -> ActiveOrHistoricAmountRange1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NtryAmtCcy")
 	protected List<ActiveOrHistoricCurrencyCode> entryAmountCurrency;
 	/**
-	 * Currency of the entry amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -247,7 +259,7 @@ public class CashAccountEntrySearch4 {
 	 */
 	public static final MMMessageAttribute mmEntryAmountCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch4.mmObject();
 			isDerived = false;
 			xmlTag = "NtryAmtCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,10 +270,11 @@ public class CashAccountEntrySearch4 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd")
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Indicates whether an entry is a credit or a debit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -300,7 +313,7 @@ public class CashAccountEntrySearch4 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmCreditDebitIndicator;
-			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch4.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -312,10 +325,11 @@ public class CashAccountEntrySearch4 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "NtrySts")
 	protected List<EntryStatus1Code> entryStatus;
 	/**
-	 * Status of an entry on the books of the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -354,7 +368,7 @@ public class CashAccountEntrySearch4 {
 	public static final MMMessageAttribute mmEntryStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmEntryStatus;
-			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch4.mmObject();
 			isDerived = false;
 			xmlTag = "NtrySts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -365,11 +379,11 @@ public class CashAccountEntrySearch4 {
 			simpleType_lazy = () -> EntryStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "NtryDt")
 	protected List<DateAndDateTimeSearchChoice> entryDate;
 	/**
-	 * Date and time at which an entry is posted to an account on the account
-	 * servicer's books.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -410,7 +424,7 @@ public class CashAccountEntrySearch4 {
 	public static final MMMessageAttribute mmEntryDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
-			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch4.mmObject();
 			isDerived = false;
 			xmlTag = "NtryDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -421,10 +435,11 @@ public class CashAccountEntrySearch4 {
 			complexType_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification43 accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -461,7 +476,7 @@ public class CashAccountEntrySearch4 {
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch4.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -474,13 +489,11 @@ public class CashAccountEntrySearch4 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcr")
 	protected BranchAndFinancialInstitutionIdentification5 accountServicer;
 	/**
-	 * Party that manages the account on behalf of the account owner, that is
-	 * manages the registration and booking of entries on the account,
-	 * calculates balances on the account and provides information about the
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -520,7 +533,7 @@ public class CashAccountEntrySearch4 {
 	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> CashAccountEntrySearch4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch4.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -537,10 +550,14 @@ public class CashAccountEntrySearch4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashAccountEntrySearch4.mmAccountIdentification, CashAccountEntrySearch4.mmEntryAmount, CashAccountEntrySearch4.mmEntryAmountCurrency,
-						CashAccountEntrySearch4.mmCreditDebitIndicator, CashAccountEntrySearch4.mmEntryStatus, CashAccountEntrySearch4.mmEntryDate, CashAccountEntrySearch4.mmAccountOwner, CashAccountEntrySearch4.mmAccountServicer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountEntrySearch4.mmAccountIdentification, com.tools20022.repository.msg.CashAccountEntrySearch4.mmEntryAmount,
+						com.tools20022.repository.msg.CashAccountEntrySearch4.mmEntryAmountCurrency, com.tools20022.repository.msg.CashAccountEntrySearch4.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.CashAccountEntrySearch4.mmEntryStatus, com.tools20022.repository.msg.CashAccountEntrySearch4.mmEntryDate, com.tools20022.repository.msg.CashAccountEntrySearch4.mmAccountOwner,
+						com.tools20022.repository.msg.CashAccountEntrySearch4.mmAccountServicer);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEntryAmountCreditDebitIndicator1Rule.forCashAccountEntrySearch4,
+						com.tools20022.repository.constraints.ConstraintEntryAmountCreditDebitIndicator2Rule.forCashAccountEntrySearch4);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccountEntrySearch4";
 				definition = "Defines the criteria used to search for a cash entry.";
@@ -550,75 +567,75 @@ public class CashAccountEntrySearch4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId")
 	public List<AccountIdentificationSearchCriteria2Choice> getAccountIdentification() {
-		return accountIdentification;
+		return accountIdentification == null ? accountIdentification = new ArrayList<>() : accountIdentification;
 	}
 
-	public void setAccountIdentification(List<AccountIdentificationSearchCriteria2Choice> accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public CashAccountEntrySearch4 setAccountIdentification(List<AccountIdentificationSearchCriteria2Choice> accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "NtryAmt")
 	public List<ActiveOrHistoricAmountRange1Choice> getEntryAmount() {
-		return entryAmount;
+		return entryAmount == null ? entryAmount = new ArrayList<>() : entryAmount;
 	}
 
-	public void setEntryAmount(List<ActiveOrHistoricAmountRange1Choice> entryAmount) {
-		this.entryAmount = entryAmount;
+	public CashAccountEntrySearch4 setEntryAmount(List<ActiveOrHistoricAmountRange1Choice> entryAmount) {
+		this.entryAmount = Objects.requireNonNull(entryAmount);
+		return this;
 	}
 
-	@XmlElement(name = "NtryAmtCcy")
 	public List<ActiveOrHistoricCurrencyCode> getEntryAmountCurrency() {
-		return entryAmountCurrency;
+		return entryAmountCurrency == null ? entryAmountCurrency = new ArrayList<>() : entryAmountCurrency;
 	}
 
-	public void setEntryAmountCurrency(List<ActiveOrHistoricCurrencyCode> entryAmountCurrency) {
-		this.entryAmountCurrency = entryAmountCurrency;
+	public CashAccountEntrySearch4 setEntryAmountCurrency(List<ActiveOrHistoricCurrencyCode> entryAmountCurrency) {
+		this.entryAmountCurrency = Objects.requireNonNull(entryAmountCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd")
-	public CreditDebitCode getCreditDebitIndicator() {
-		return creditDebitIndicator;
+	public Optional<CreditDebitCode> getCreditDebitIndicator() {
+		return creditDebitIndicator == null ? Optional.empty() : Optional.of(creditDebitIndicator);
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+	public CashAccountEntrySearch4 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
 		this.creditDebitIndicator = creditDebitIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "NtrySts")
 	public List<EntryStatus1Code> getEntryStatus() {
-		return entryStatus;
+		return entryStatus == null ? entryStatus = new ArrayList<>() : entryStatus;
 	}
 
-	public void setEntryStatus(List<EntryStatus1Code> entryStatus) {
-		this.entryStatus = entryStatus;
+	public CashAccountEntrySearch4 setEntryStatus(List<EntryStatus1Code> entryStatus) {
+		this.entryStatus = Objects.requireNonNull(entryStatus);
+		return this;
 	}
 
-	@XmlElement(name = "NtryDt")
 	public List<DateAndDateTimeSearchChoice> getEntryDate() {
-		return entryDate;
+		return entryDate == null ? entryDate = new ArrayList<>() : entryDate;
 	}
 
-	public void setEntryDate(List<DateAndDateTimeSearchChoice> entryDate) {
-		this.entryDate = entryDate;
+	public CashAccountEntrySearch4 setEntryDate(List<DateAndDateTimeSearchChoice> entryDate) {
+		this.entryDate = Objects.requireNonNull(entryDate);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification43 getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification43> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(com.tools20022.repository.msg.PartyIdentification43 accountOwner) {
+	public CashAccountEntrySearch4 setAccountOwner(com.tools20022.repository.msg.PartyIdentification43 accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcr")
-	public BranchAndFinancialInstitutionIdentification5 getAccountServicer() {
-		return accountServicer;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getAccountServicer() {
+		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public void setAccountServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountServicer) {
+	public CashAccountEntrySearch4 setAccountServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountServicer) {
 		this.accountServicer = accountServicer;
+		return this;
 	}
 }

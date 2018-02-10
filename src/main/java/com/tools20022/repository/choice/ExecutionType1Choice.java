@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISOTime;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ExecutionType1Choice", propOrder = {"time", "event"})
 public class ExecutionType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tm", required = true)
 	protected ISOTime time;
 	/**
-	 * Execution type is executed based on an time trigger.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,7 +99,7 @@ public class ExecutionType1Choice {
 	 */
 	public static final MMMessageAttribute mmTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ExecutionType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ExecutionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Tm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,10 +110,11 @@ public class ExecutionType1Choice {
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
+	@XmlElement(name = "Evt", required = true)
 	protected EventType1Choice event;
 	/**
-	 * Execution type is executed based on an event driven trigger.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -138,7 +141,7 @@ public class ExecutionType1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmEvent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ExecutionType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ExecutionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Evt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,8 +157,8 @@ public class ExecutionType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ExecutionType1Choice.mmTime, ExecutionType1Choice.mmEvent);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExecutionType1Choice.mmTime, com.tools20022.repository.choice.ExecutionType1Choice.mmEvent);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExecutionType1Choice";
 				definition = "Defines the type of execution to be performed in the request.";
@@ -164,21 +167,21 @@ public class ExecutionType1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tm", required = true)
 	public ISOTime getTime() {
 		return time;
 	}
 
-	public void setTime(ISOTime time) {
-		this.time = time;
+	public ExecutionType1Choice setTime(ISOTime time) {
+		this.time = Objects.requireNonNull(time);
+		return this;
 	}
 
-	@XmlElement(name = "Evt", required = true)
 	public EventType1Choice getEvent() {
 		return event;
 	}
 
-	public void setEvent(com.tools20022.repository.choice.EventType1Choice event) {
-		this.event = event;
+	public ExecutionType1Choice setEvent(com.tools20022.repository.choice.EventType1Choice event) {
+		this.event = Objects.requireNonNull(event);
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.entity.RateAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * RateFormat5Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RateFormat7Choice", propOrder = {"rate", "notSpecifiedRate"})
 public class RateFormat7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rate", required = true)
 	protected PercentageRate rate;
 	/**
-	 * Value is expressed as a rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -93,6 +96,9 @@ public class RateFormat7Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Rate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92A:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -105,9 +111,10 @@ public class RateFormat7Choice {
 	 */
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RateFormat7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RateFormat7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92A:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Value is expressed as a rate.";
@@ -116,10 +123,11 @@ public class RateFormat7Choice {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "NotSpcfdRate", required = true)
 	protected RateType10Code notSpecifiedRate;
 	/**
-	 * Value of the rate not specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,6 +143,9 @@ public class RateFormat7Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NotSpcfdRate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92K:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -147,9 +158,10 @@ public class RateFormat7Choice {
 	 */
 	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RateFormat7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RateFormat7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92K:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "Value of the rate not specified.";
@@ -162,9 +174,9 @@ public class RateFormat7Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RateFormat7Choice.mmRate, RateFormat7Choice.mmNotSpecifiedRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateFormat7Choice.mmRate, com.tools20022.repository.choice.RateFormat7Choice.mmNotSpecifiedRate);
 				trace_lazy = () -> RateAndAmount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateFormat7Choice";
 				definition = "Choice between a rate or an unspecified rate.";
@@ -174,21 +186,21 @@ public class RateFormat7Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
 
-	public void setRate(PercentageRate rate) {
-		this.rate = rate;
+	public RateFormat7Choice setRate(PercentageRate rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 
-	@XmlElement(name = "NotSpcfdRate", required = true)
 	public RateType10Code getNotSpecifiedRate() {
 		return notSpecifiedRate;
 	}
 
-	public void setNotSpecifiedRate(RateType10Code notSpecifiedRate) {
-		this.notSpecifiedRate = notSpecifiedRate;
+	public RateFormat7Choice setNotSpecifiedRate(RateType10Code notSpecifiedRate) {
+		this.notSpecifiedRate = Objects.requireNonNull(notSpecifiedRate);
+		return this;
 	}
 }

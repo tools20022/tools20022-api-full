@@ -29,9 +29,8 @@ import com.tools20022.repository.entity.InvoiceFinancingAgreement;
 import com.tools20022.repository.entity.InvoiceFinancingStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,16 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "The final result of a single invoice financing request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancingResult1", propOrder = {"financingRequestStatus", "statusReason", "additionalStatusReasonInformation", "financedAmount"})
 public class FinancingResult1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FincgReqSts", required = true)
 	protected RequestStatus1Code financingRequestStatus;
 	/**
-	 * Specifies the status of the financing request (e.g. financed. not
-	 * financed).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +122,7 @@ public class FinancingResult1 {
 	public static final MMMessageAttribute mmFinancingRequestStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingStatus.mmFinancingTransactionStatus;
-			componentContext_lazy = () -> FinancingResult1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingResult1.mmObject();
 			isDerived = false;
 			xmlTag = "FincgReqSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,11 +133,11 @@ public class FinancingResult1 {
 			simpleType_lazy = () -> RequestStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StsRsn")
 	protected StatusReason4Choice statusReason;
 	/**
-	 * Indicates the reasons that have determined the result of the single
-	 * request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -172,7 +171,7 @@ public class FinancingResult1 {
 	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingStatus.mmFinancingStatusReason;
-			componentContext_lazy = () -> FinancingResult1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingResult1.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,10 +183,11 @@ public class FinancingResult1 {
 			type_lazy = () -> StatusReason4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlStsRsnInf")
 	protected List<Max105Text> additionalStatusReasonInformation;
 	/**
-	 * Further details on the status reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -220,7 +220,7 @@ public class FinancingResult1 {
 	public static final MMMessageAttribute mmAdditionalStatusReasonInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> FinancingResult1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingResult1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlStsRsnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,10 +230,11 @@ public class FinancingResult1 {
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FincdAmt")
 	protected FinancingRateOrAmountChoice financedAmount;
 	/**
-	 * Indicates amount financed related to the request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -267,7 +268,7 @@ public class FinancingResult1 {
 	public static final MMMessageAttribute mmFinancedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmRequestedAmount;
-			componentContext_lazy = () -> FinancingResult1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingResult1.mmObject();
 			isDerived = false;
 			xmlTag = "FincdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -282,9 +283,10 @@ public class FinancingResult1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancingResult1.mmFinancingRequestStatus, FinancingResult1.mmStatusReason, FinancingResult1.mmAdditionalStatusReasonInformation, FinancingResult1.mmFinancedAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingResult1.mmFinancingRequestStatus, com.tools20022.repository.msg.FinancingResult1.mmStatusReason,
+						com.tools20022.repository.msg.FinancingResult1.mmAdditionalStatusReasonInformation, com.tools20022.repository.msg.FinancingResult1.mmFinancedAmount);
 				trace_lazy = () -> InvoiceFinancingStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancingResult1";
 				definition = "The final result of a single invoice financing request.";
@@ -293,39 +295,39 @@ public class FinancingResult1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FincgReqSts", required = true)
 	public RequestStatus1Code getFinancingRequestStatus() {
 		return financingRequestStatus;
 	}
 
-	public void setFinancingRequestStatus(RequestStatus1Code financingRequestStatus) {
-		this.financingRequestStatus = financingRequestStatus;
+	public FinancingResult1 setFinancingRequestStatus(RequestStatus1Code financingRequestStatus) {
+		this.financingRequestStatus = Objects.requireNonNull(financingRequestStatus);
+		return this;
 	}
 
-	@XmlElement(name = "StsRsn")
-	public StatusReason4Choice getStatusReason() {
-		return statusReason;
+	public Optional<StatusReason4Choice> getStatusReason() {
+		return statusReason == null ? Optional.empty() : Optional.of(statusReason);
 	}
 
-	public void setStatusReason(StatusReason4Choice statusReason) {
+	public FinancingResult1 setStatusReason(StatusReason4Choice statusReason) {
 		this.statusReason = statusReason;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlStsRsnInf")
 	public List<Max105Text> getAdditionalStatusReasonInformation() {
-		return additionalStatusReasonInformation;
+		return additionalStatusReasonInformation == null ? additionalStatusReasonInformation = new ArrayList<>() : additionalStatusReasonInformation;
 	}
 
-	public void setAdditionalStatusReasonInformation(List<Max105Text> additionalStatusReasonInformation) {
-		this.additionalStatusReasonInformation = additionalStatusReasonInformation;
+	public FinancingResult1 setAdditionalStatusReasonInformation(List<Max105Text> additionalStatusReasonInformation) {
+		this.additionalStatusReasonInformation = Objects.requireNonNull(additionalStatusReasonInformation);
+		return this;
 	}
 
-	@XmlElement(name = "FincdAmt")
-	public FinancingRateOrAmountChoice getFinancedAmount() {
-		return financedAmount;
+	public Optional<FinancingRateOrAmountChoice> getFinancedAmount() {
+		return financedAmount == null ? Optional.empty() : Optional.of(financedAmount);
 	}
 
-	public void setFinancedAmount(FinancingRateOrAmountChoice financedAmount) {
+	public FinancingResult1 setFinancedAmount(FinancingRateOrAmountChoice financedAmount) {
 		this.financedAmount = financedAmount;
+		return this;
 	}
 }

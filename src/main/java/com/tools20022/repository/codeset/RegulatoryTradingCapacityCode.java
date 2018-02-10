@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.RegulatoryTradingCapacityCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the regulatory trading capacity.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegulatoryTradingCapacityCode#mmDealOnOwnAccount
- * RegulatoryTradingCapacityCode.mmDealOnOwnAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegulatoryTradingCapacityCode#DealOnOwnAccount
+ * RegulatoryTradingCapacityCode.DealOnOwnAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegulatoryTradingCapacityCode#mmMatchedPrincipal
- * RegulatoryTradingCapacityCode.mmMatchedPrincipal}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegulatoryTradingCapacityCode#MatchedPrincipal
+ * RegulatoryTradingCapacityCode.MatchedPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegulatoryTradingCapacityCode#mmAnyOtherCapacity
- * RegulatoryTradingCapacityCode.mmAnyOtherCapacity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegulatoryTradingCapacityCode#AnyOtherCapacity
+ * RegulatoryTradingCapacityCode.AnyOtherCapacity}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the regulatory trading capacity."</li>
  * </ul>
  */
-public class RegulatoryTradingCapacityCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RegulatoryTradingCapacityCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,12 +95,12 @@ public class RegulatoryTradingCapacityCode {
 	 * definition} = "Transaction was carried out as a deal under own account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDealOnOwnAccount = new MMCode() {
+	public static final RegulatoryTradingCapacityCode DealOnOwnAccount = new RegulatoryTradingCapacityCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealOnOwnAccount";
 			definition = "Transaction was carried out as a deal under own account.";
-			owner_lazy = () -> RegulatoryTradingCapacityCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RegulatoryTradingCapacityCode.mmObject();
 			codeName = "DEAL";
 		}
 	};
@@ -120,12 +126,12 @@ public class RegulatoryTradingCapacityCode {
 	 * "Transaction was carried out as a matched principal trading."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMatchedPrincipal = new MMCode() {
+	public static final RegulatoryTradingCapacityCode MatchedPrincipal = new RegulatoryTradingCapacityCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchedPrincipal";
 			definition = "Transaction was carried out as a matched principal trading.";
-			owner_lazy = () -> RegulatoryTradingCapacityCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RegulatoryTradingCapacityCode.mmObject();
 			codeName = "MTCH";
 		}
 	};
@@ -150,27 +156,59 @@ public class RegulatoryTradingCapacityCode {
 	 * definition} = "Transaction was carried out as an agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAnyOtherCapacity = new MMCode() {
+	public static final RegulatoryTradingCapacityCode AnyOtherCapacity = new RegulatoryTradingCapacityCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyOtherCapacity";
 			definition = "Transaction was carried out as an agent.";
-			owner_lazy = () -> RegulatoryTradingCapacityCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RegulatoryTradingCapacityCode.mmObject();
 			codeName = "AOTC";
 		}
 	};
+	final static private LinkedHashMap<String, RegulatoryTradingCapacityCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RegulatoryTradingCapacityCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegulatoryTradingCapacityCode";
 				definition = "Specifies the regulatory trading capacity.";
-				code_lazy = () -> Arrays.asList(RegulatoryTradingCapacityCode.mmDealOnOwnAccount, RegulatoryTradingCapacityCode.mmMatchedPrincipal, RegulatoryTradingCapacityCode.mmAnyOtherCapacity);
 				derivation_lazy = () -> Arrays.asList(RegulatoryTradingCapacity1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegulatoryTradingCapacityCode.DealOnOwnAccount, com.tools20022.repository.codeset.RegulatoryTradingCapacityCode.MatchedPrincipal,
+						com.tools20022.repository.codeset.RegulatoryTradingCapacityCode.AnyOtherCapacity);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(DealOnOwnAccount.getCodeName().get(), DealOnOwnAccount);
+		codesByName.put(MatchedPrincipal.getCodeName().get(), MatchedPrincipal);
+		codesByName.put(AnyOtherCapacity.getCodeName().get(), AnyOtherCapacity);
+	}
+
+	public static RegulatoryTradingCapacityCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RegulatoryTradingCapacityCode[] values() {
+		RegulatoryTradingCapacityCode[] values = new RegulatoryTradingCapacityCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RegulatoryTradingCapacityCode> {
+		@Override
+		public RegulatoryTradingCapacityCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RegulatoryTradingCapacityCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

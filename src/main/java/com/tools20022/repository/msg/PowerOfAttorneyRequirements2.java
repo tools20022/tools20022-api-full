@@ -27,9 +27,8 @@ import com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.PowerOfAttorneyRequirements;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherDocumentation1Guideline#forPowerOfAttorneyRequirements2
+ * ConstraintOtherDocumentation1Guideline.forPowerOfAttorneyRequirements2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,16 +102,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PowerOfAttorneyRequirements2", propOrder = {"legalRequirement", "otherDocumentation"})
 public class PowerOfAttorneyRequirements2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LglRqrmnt")
 	protected List<PowerOfAttorneyLegalisation1Code> legalRequirement;
 	/**
-	 * Specifies whether the power of attorney needs to be validated by some
-	 * authority.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,7 +155,7 @@ public class PowerOfAttorneyRequirements2 {
 	public static final MMMessageAttribute mmLegalRequirement = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PowerOfAttorneyRequirements.mmLegalRequirement;
-			componentContext_lazy = () -> PowerOfAttorneyRequirements2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PowerOfAttorneyRequirements2.mmObject();
 			isDerived = false;
 			xmlTag = "LglRqrmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,10 +167,11 @@ public class PowerOfAttorneyRequirements2 {
 			simpleType_lazy = () -> PowerOfAttorneyLegalisation1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrDcmnttn")
 	protected Max350Text otherDocumentation;
 	/**
-	 * Specifies the documents needed to obtain a valid power of attorney.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -205,7 +213,7 @@ public class PowerOfAttorneyRequirements2 {
 	public static final MMMessageAttribute mmOtherDocumentation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PowerOfAttorneyRequirements.mmOtherDocumentation;
-			componentContext_lazy = () -> PowerOfAttorneyRequirements2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PowerOfAttorneyRequirements2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrDcmnttn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,10 +229,11 @@ public class PowerOfAttorneyRequirements2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PowerOfAttorneyRequirements2.mmLegalRequirement, PowerOfAttorneyRequirements2.mmOtherDocumentation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PowerOfAttorneyRequirements2.mmLegalRequirement, com.tools20022.repository.msg.PowerOfAttorneyRequirements2.mmOtherDocumentation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV02.mmPowerOfAttorneyRequirements, MeetingNotificationV03.mmPowerOfAttorneyRequirements, MeetingNotificationV04.mmPowerOfAttorneyRequirements);
 				trace_lazy = () -> PowerOfAttorneyRequirements.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherDocumentation1Guideline.forPowerOfAttorneyRequirements2);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PowerOfAttorneyRequirements2";
 				definition = "Specifies the conditions to be filled in to obtain a valid power of attorney.";
@@ -234,21 +243,21 @@ public class PowerOfAttorneyRequirements2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LglRqrmnt")
 	public List<PowerOfAttorneyLegalisation1Code> getLegalRequirement() {
-		return legalRequirement;
+		return legalRequirement == null ? legalRequirement = new ArrayList<>() : legalRequirement;
 	}
 
-	public void setLegalRequirement(List<PowerOfAttorneyLegalisation1Code> legalRequirement) {
-		this.legalRequirement = legalRequirement;
+	public PowerOfAttorneyRequirements2 setLegalRequirement(List<PowerOfAttorneyLegalisation1Code> legalRequirement) {
+		this.legalRequirement = Objects.requireNonNull(legalRequirement);
+		return this;
 	}
 
-	@XmlElement(name = "OthrDcmnttn")
-	public Max350Text getOtherDocumentation() {
-		return otherDocumentation;
+	public Optional<Max350Text> getOtherDocumentation() {
+		return otherDocumentation == null ? Optional.empty() : Optional.of(otherDocumentation);
 	}
 
-	public void setOtherDocumentation(Max350Text otherDocumentation) {
+	public PowerOfAttorneyRequirements2 setOtherDocumentation(Max350Text otherDocumentation) {
 		this.otherDocumentation = otherDocumentation;
+		return this;
 	}
 }

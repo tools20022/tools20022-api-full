@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -31,6 +32,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSettlementTypeAndIdentification2
+ * ConstraintCoexistenceIdentificationRule.forSettlementTypeAndIdentification2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -86,15 +97,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementTypeAndIdentification2", propOrder = {"payment", "transactionIdentification", "settlementDate"})
 public class SettlementTypeAndIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pmt", required = true)
 	protected DeliveryReceiptType2Code payment;
 	/**
-	 * Specifies how the transaction is to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,6 +126,9 @@ public class SettlementTypeAndIdentification2 {
 	 * SettlementTypeAndIdentification2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Pmt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22H::PAYM</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -136,9 +151,10 @@ public class SettlementTypeAndIdentification2 {
 	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementType;
-			componentContext_lazy = () -> SettlementTypeAndIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Pmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22H::PAYM"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Specifies how the transaction is to be settled.";
@@ -148,10 +164,11 @@ public class SettlementTypeAndIdentification2 {
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TxId", required = true)
 	protected Max35Text transactionIdentification;
 	/**
-	 * Reference of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,7 +209,7 @@ public class SettlementTypeAndIdentification2 {
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
-			componentContext_lazy = () -> SettlementTypeAndIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,10 +221,11 @@ public class SettlementTypeAndIdentification2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmDt")
 	protected DateAndDateTimeChoice settlementDate;
 	/**
-	 * Identifies the intended settlement date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -227,6 +245,9 @@ public class SettlementTypeAndIdentification2 {
 	 * SettlementTypeAndIdentification2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::SETT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -249,9 +270,10 @@ public class SettlementTypeAndIdentification2 {
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
-			componentContext_lazy = () -> SettlementTypeAndIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::SETT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Identifies the intended settlement date.";
@@ -265,9 +287,11 @@ public class SettlementTypeAndIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementTypeAndIdentification2.mmPayment, SettlementTypeAndIdentification2.mmTransactionIdentification, SettlementTypeAndIdentification2.mmSettlementDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTypeAndIdentification2.mmPayment, com.tools20022.repository.msg.SettlementTypeAndIdentification2.mmTransactionIdentification,
+						com.tools20022.repository.msg.SettlementTypeAndIdentification2.mmSettlementDate);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSettlementTypeAndIdentification2);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -284,30 +308,30 @@ public class SettlementTypeAndIdentification2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pmt", required = true)
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}
 
-	public void setPayment(DeliveryReceiptType2Code payment) {
-		this.payment = payment;
+	public SettlementTypeAndIdentification2 setPayment(DeliveryReceiptType2Code payment) {
+		this.payment = Objects.requireNonNull(payment);
+		return this;
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public SettlementTypeAndIdentification2 setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmDt")
-	public DateAndDateTimeChoice getSettlementDate() {
-		return settlementDate;
+	public Optional<DateAndDateTimeChoice> getSettlementDate() {
+		return settlementDate == null ? Optional.empty() : Optional.of(settlementDate);
 	}
 
-	public void setSettlementDate(DateAndDateTimeChoice settlementDate) {
+	public SettlementTypeAndIdentification2 setSettlementDate(DateAndDateTimeChoice settlementDate) {
 		this.settlementDate = settlementDate;
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.FractionalSecurityRuleCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the fractional security handling rule that does not have an ISO
@@ -33,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionalSecurityRuleCode#mmBeneficialOwnerRoundUpXAndAbove
- * FractionalSecurityRuleCode.mmBeneficialOwnerRoundUpXAndAbove}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionalSecurityRuleCode#BeneficialOwnerRoundUpXAndAbove
+ * FractionalSecurityRuleCode.BeneficialOwnerRoundUpXAndAbove}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionalSecurityRuleCode#mmBeneficialOwnerCashInLieu
- * FractionalSecurityRuleCode.mmBeneficialOwnerCashInLieu}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionalSecurityRuleCode#BeneficialOwnerCashInLieu
+ * FractionalSecurityRuleCode.BeneficialOwnerCashInLieu}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionalSecurityRuleCode#mmBeneficialOwnerRoundDownXAndBelow
- * FractionalSecurityRuleCode.mmBeneficialOwnerRoundDownXAndBelow}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionalSecurityRuleCode#BeneficialOwnerRoundDownXAndBelow
+ * FractionalSecurityRuleCode.BeneficialOwnerRoundDownXAndBelow}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class FractionalSecurityRuleCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FractionalSecurityRuleCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -103,12 +109,12 @@ public class FractionalSecurityRuleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBeneficialOwnerRoundUpXAndAbove = new MMCode() {
+	public static final FractionalSecurityRuleCode BeneficialOwnerRoundUpXAndAbove = new FractionalSecurityRuleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerRoundUpXAndAbove";
 			definition = "Round Up x and above on the beneficial owner fractions, where x is the rounding factor. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and  less than 6 will be rounded down.";
-			owner_lazy = () -> FractionalSecurityRuleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FractionalSecurityRuleCode.mmObject();
 			codeName = "BORU";
 		}
 	};
@@ -133,12 +139,12 @@ public class FractionalSecurityRuleCode {
 	 * definition} = "Cash in Lieu on the beneficial owner fractions. "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBeneficialOwnerCashInLieu = new MMCode() {
+	public static final FractionalSecurityRuleCode BeneficialOwnerCashInLieu = new FractionalSecurityRuleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerCashInLieu";
 			definition = "Cash in Lieu on the beneficial owner fractions. ";
-			owner_lazy = () -> FractionalSecurityRuleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FractionalSecurityRuleCode.mmObject();
 			codeName = "BCIL";
 		}
 	};
@@ -168,28 +174,60 @@ public class FractionalSecurityRuleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBeneficialOwnerRoundDownXAndBelow = new MMCode() {
+	public static final FractionalSecurityRuleCode BeneficialOwnerRoundDownXAndBelow = new FractionalSecurityRuleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerRoundDownXAndBelow";
 			definition = "Round Down x and below beneficial owner fractions, where x is the rounding factor. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and  less than 6 will be rounded down.";
-			owner_lazy = () -> FractionalSecurityRuleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FractionalSecurityRuleCode.mmObject();
 			codeName = "BORD";
 		}
 	};
+	final static private LinkedHashMap<String, FractionalSecurityRuleCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FractionalSecurityRuleCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BORU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FractionalSecurityRuleCode";
 				definition = "Specifies the fractional security handling rule that does not have an ISO value.";
-				code_lazy = () -> Arrays.asList(FractionalSecurityRuleCode.mmBeneficialOwnerRoundUpXAndAbove, FractionalSecurityRuleCode.mmBeneficialOwnerCashInLieu, FractionalSecurityRuleCode.mmBeneficialOwnerRoundDownXAndBelow);
 				derivation_lazy = () -> Arrays.asList(FractionalSecurityRule1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FractionalSecurityRuleCode.BeneficialOwnerRoundUpXAndAbove, com.tools20022.repository.codeset.FractionalSecurityRuleCode.BeneficialOwnerCashInLieu,
+						com.tools20022.repository.codeset.FractionalSecurityRuleCode.BeneficialOwnerRoundDownXAndBelow);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BeneficialOwnerRoundUpXAndAbove.getCodeName().get(), BeneficialOwnerRoundUpXAndAbove);
+		codesByName.put(BeneficialOwnerCashInLieu.getCodeName().get(), BeneficialOwnerCashInLieu);
+		codesByName.put(BeneficialOwnerRoundDownXAndBelow.getCodeName().get(), BeneficialOwnerRoundDownXAndBelow);
+	}
+
+	public static FractionalSecurityRuleCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FractionalSecurityRuleCode[] values() {
+		FractionalSecurityRuleCode[] values = new FractionalSecurityRuleCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FractionalSecurityRuleCode> {
+		@Override
+		public FractionalSecurityRuleCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FractionalSecurityRuleCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

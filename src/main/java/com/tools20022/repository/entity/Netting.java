@@ -27,9 +27,8 @@ import com.tools20022.repository.msg.CutOffData1;
 import com.tools20022.repository.msg.NetObligation1;
 import com.tools20022.repository.msg.NettingCutOff1;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Offset of payables against receivables to reduce credit exposure to a
@@ -41,6 +40,10 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
+ * ObligationFulfilment}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -57,18 +60,6 @@ import java.util.List;
  * Netting.mmNetQuantity}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Netting#mmPositionAmount
  * Netting.mmPositionAmount}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
- * ObligationFulfilment}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.NettingCutOff1 NettingCutOff1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CutOffData1 CutOffData1}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,10 +86,18 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.NettingCutOff1 NettingCutOff1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CutOffData1 CutOffData1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -116,8 +115,8 @@ public class Netting extends ObligationFulfilment {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.Price> averageDealPrice;
 	/**
-	 * Average price of the netted trades.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,8 +146,8 @@ public class Netting extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmAverageDealPrice = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AverageDealPrice";
 			definition = "Average price of the netted trades.";
@@ -160,8 +159,8 @@ public class Netting extends ObligationFulfilment {
 	};
 	protected SecuritiesClearing relatedSecuritiesClearingProcess;
 	/**
-	 * Clearing process which includes the netting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,8 +192,8 @@ public class Netting extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSecuritiesClearingProcess = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesClearingProcess";
 			definition = "Clearing process which includes the netting.";
@@ -207,8 +206,8 @@ public class Netting extends ObligationFulfilment {
 	};
 	protected ActiveCurrencyAndAmount netPositionAmount;
 	/**
-	 * Calculated position.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -233,8 +232,8 @@ public class Netting extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAttribute mmNetPositionAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetPositionAmount";
 			definition = "Calculated position.";
@@ -253,8 +252,8 @@ public class Netting extends ObligationFulfilment {
 	};
 	protected DebitCreditCode amountDirection;
 	/**
-	 * Specifies whether the amount is a debit or a credit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -288,8 +287,8 @@ public class Netting extends ObligationFulfilment {
 	public static final MMBusinessAttribute mmAmountDirection = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetObligation1.mmObligationDirection);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AmountDirection";
 			definition = "Specifies whether the amount is a debit or a credit.";
@@ -308,8 +307,8 @@ public class Netting extends ObligationFulfilment {
 	};
 	protected SecuritiesQuantity netQuantity;
 	/**
-	 * Calculated net quantity of securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -341,8 +340,8 @@ public class Netting extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmNetQuantity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetQuantity";
 			definition = "Calculated net quantity of securities.";
@@ -355,8 +354,8 @@ public class Netting extends ObligationFulfilment {
 	};
 	protected CurrencyAndAmount positionAmount;
 	/**
-	 * Intra-position amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -381,8 +380,8 @@ public class Netting extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAttribute mmPositionAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PositionAmount";
 			definition = "Intra-position amount.";
@@ -403,7 +402,7 @@ public class Netting extends ObligationFulfilment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Netting";
 				definition = "Offset of payables against receivables to reduce credit exposure to a counterparty.";
@@ -425,50 +424,56 @@ public class Netting extends ObligationFulfilment {
 	}
 
 	public List<Price> getAverageDealPrice() {
-		return averageDealPrice;
+		return averageDealPrice == null ? averageDealPrice = new ArrayList<>() : averageDealPrice;
 	}
 
-	public void setAverageDealPrice(List<com.tools20022.repository.entity.Price> averageDealPrice) {
-		this.averageDealPrice = averageDealPrice;
+	public Netting setAverageDealPrice(List<com.tools20022.repository.entity.Price> averageDealPrice) {
+		this.averageDealPrice = Objects.requireNonNull(averageDealPrice);
+		return this;
 	}
 
-	public SecuritiesClearing getRelatedSecuritiesClearingProcess() {
-		return relatedSecuritiesClearingProcess;
+	public Optional<SecuritiesClearing> getRelatedSecuritiesClearingProcess() {
+		return relatedSecuritiesClearingProcess == null ? Optional.empty() : Optional.of(relatedSecuritiesClearingProcess);
 	}
 
-	public void setRelatedSecuritiesClearingProcess(com.tools20022.repository.entity.SecuritiesClearing relatedSecuritiesClearingProcess) {
+	public Netting setRelatedSecuritiesClearingProcess(com.tools20022.repository.entity.SecuritiesClearing relatedSecuritiesClearingProcess) {
 		this.relatedSecuritiesClearingProcess = relatedSecuritiesClearingProcess;
+		return this;
 	}
 
 	public ActiveCurrencyAndAmount getNetPositionAmount() {
 		return netPositionAmount;
 	}
 
-	public void setNetPositionAmount(ActiveCurrencyAndAmount netPositionAmount) {
-		this.netPositionAmount = netPositionAmount;
+	public Netting setNetPositionAmount(ActiveCurrencyAndAmount netPositionAmount) {
+		this.netPositionAmount = Objects.requireNonNull(netPositionAmount);
+		return this;
 	}
 
 	public DebitCreditCode getAmountDirection() {
 		return amountDirection;
 	}
 
-	public void setAmountDirection(DebitCreditCode amountDirection) {
-		this.amountDirection = amountDirection;
+	public Netting setAmountDirection(DebitCreditCode amountDirection) {
+		this.amountDirection = Objects.requireNonNull(amountDirection);
+		return this;
 	}
 
 	public SecuritiesQuantity getNetQuantity() {
 		return netQuantity;
 	}
 
-	public void setNetQuantity(com.tools20022.repository.entity.SecuritiesQuantity netQuantity) {
-		this.netQuantity = netQuantity;
+	public Netting setNetQuantity(com.tools20022.repository.entity.SecuritiesQuantity netQuantity) {
+		this.netQuantity = Objects.requireNonNull(netQuantity);
+		return this;
 	}
 
 	public CurrencyAndAmount getPositionAmount() {
 		return positionAmount;
 	}
 
-	public void setPositionAmount(CurrencyAndAmount positionAmount) {
-		this.positionAmount = positionAmount;
+	public Netting setPositionAmount(CurrencyAndAmount positionAmount) {
+		this.positionAmount = Objects.requireNonNull(positionAmount);
+		return this;
 	}
 }

@@ -20,34 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TaxLiabilityCode;
+import com.tools20022.repository.codeset.TaxLiability1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the tax role capacity of the instructing party.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TaxLiabilityCode
- * TaxLiabilityCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxLiability1Code#mmTaxPrincipal
- * TaxLiability1Code.mmTaxPrincipal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxLiability1Code#mmTaxAgent
- * TaxLiability1Code.mmTaxAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxLiability1Code#TaxPrincipal
+ * TaxLiability1Code.TaxPrincipal}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxLiability1Code#TaxAgent
+ * TaxLiability1Code.TaxAgent}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TaxLiabilityCode
+ * TaxLiabilityCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the tax role capacity of the instructing party."</li>
  * </ul>
  */
-public class TaxLiability1Code extends TaxLiabilityCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TaxLiability1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +87,12 @@ public class TaxLiability1Code extends TaxLiabilityCode {
 	 * name} = "TaxPrincipal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxPrincipal = new MMCode() {
+	public static final TaxLiability1Code TaxPrincipal = new TaxLiability1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxPrincipal";
-			owner_lazy = () -> TaxLiability1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxLiability1Code.mmObject();
+			codeName = TaxLiabilityCode.TaxPrincipal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +111,57 @@ public class TaxLiability1Code extends TaxLiabilityCode {
 	 * name} = "TaxAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxAgent = new MMCode() {
+	public static final TaxLiability1Code TaxAgent = new TaxLiability1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAgent";
-			owner_lazy = () -> TaxLiability1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxLiability1Code.mmObject();
+			codeName = TaxLiabilityCode.TaxAgent.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TaxLiability1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TaxLiability1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PRIN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxLiability1Code";
 				definition = "Specifies the tax role capacity of the instructing party.";
-				code_lazy = () -> Arrays.asList(TaxLiability1Code.mmTaxPrincipal, TaxLiability1Code.mmTaxAgent);
 				trace_lazy = () -> TaxLiabilityCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxLiability1Code.TaxPrincipal, com.tools20022.repository.codeset.TaxLiability1Code.TaxAgent);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(TaxPrincipal.getCodeName().get(), TaxPrincipal);
+		codesByName.put(TaxAgent.getCodeName().get(), TaxAgent);
+	}
+
+	public static TaxLiability1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TaxLiability1Code[] values() {
+		TaxLiability1Code[] values = new TaxLiability1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TaxLiability1Code> {
+		@Override
+		public TaxLiability1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TaxLiability1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

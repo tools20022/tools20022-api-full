@@ -25,6 +25,8 @@ import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -83,8 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalEligibleCollateralValueRule#forTotalValueInPageAndStatement1
+ * ConstraintTotalEligibleCollateralValueRule.forTotalValueInPageAndStatement1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,15 +106,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Totals for the value of the holdings reported in the statement or page."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TotalValueInPageAndStatement1", propOrder = {"totalHoldingsValueOfPage", "totalHoldingsValueOfStatement", "totalBookValueOfStatement", "totalEligibleCollateralValue"})
 public class TotalValueInPageAndStatement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlHldgsValOfPg")
 	protected AmountAndDirection6 totalHoldingsValueOfPage;
 	/**
-	 * Total value of positions reported in this message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,7 +143,7 @@ public class TotalValueInPageAndStatement1 {
 	 */
 	public static final MMMessageAttribute mmTotalHoldingsValueOfPage = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TotalValueInPageAndStatement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalValueInPageAndStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlHldgsValOfPg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,11 +154,11 @@ public class TotalValueInPageAndStatement1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlHldgsValOfStmt", required = true)
 	protected AmountAndDirection6 totalHoldingsValueOfStatement;
 	/**
-	 * Total value of positions reported in this statement (a statement may
-	 * comprise one or more messages).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,7 +188,7 @@ public class TotalValueInPageAndStatement1 {
 	 */
 	public static final MMMessageAttribute mmTotalHoldingsValueOfStatement = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TotalValueInPageAndStatement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalValueInPageAndStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlHldgsValOfStmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,11 +199,11 @@ public class TotalValueInPageAndStatement1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlBookValOfStmt")
 	protected AmountAndDirection6 totalBookValueOfStatement;
 	/**
-	 * Total book value of positions reported in this statement (a statement may
-	 * comprise one or more messages).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,7 +233,7 @@ public class TotalValueInPageAndStatement1 {
 	 */
 	public static final MMMessageAttribute mmTotalBookValueOfStatement = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TotalValueInPageAndStatement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalValueInPageAndStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlBookValOfStmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,11 +244,11 @@ public class TotalValueInPageAndStatement1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlElgblCollVal")
 	protected AmountAndDirection6 totalEligibleCollateralValue;
 	/**
-	 * Total value of the holdings eligible for collateral purposes reported in
-	 * this statement (a statement may comprise one or more messages).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -273,7 +284,7 @@ public class TotalValueInPageAndStatement1 {
 	public static final MMMessageAttribute mmTotalEligibleCollateralValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmEligibleCollateralValue;
-			componentContext_lazy = () -> TotalValueInPageAndStatement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalValueInPageAndStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlElgblCollVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,12 +299,13 @@ public class TotalValueInPageAndStatement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TotalValueInPageAndStatement1.mmTotalHoldingsValueOfPage, TotalValueInPageAndStatement1.mmTotalHoldingsValueOfStatement, TotalValueInPageAndStatement1.mmTotalBookValueOfStatement,
-						TotalValueInPageAndStatement1.mmTotalEligibleCollateralValue);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalValueInPageAndStatement1.mmTotalHoldingsValueOfPage, com.tools20022.repository.msg.TotalValueInPageAndStatement1.mmTotalHoldingsValueOfStatement,
+						com.tools20022.repository.msg.TotalValueInPageAndStatement1.mmTotalBookValueOfStatement, com.tools20022.repository.msg.TotalValueInPageAndStatement1.mmTotalEligibleCollateralValue);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesBalanceCustodyReportV03.mmAccountBaseCurrencyTotalAmounts, SecuritiesBalanceCustodyReportV04.mmAccountBaseCurrencyTotalAmounts,
 						SecuritiesBalanceCustodyReportV05.mmAccountBaseCurrencyTotalAmounts, SecuritiesBalanceCustodyReportV06.mmAccountBaseCurrencyTotalAmounts, SecuritiesBalanceCustodyReportV07.mmAccountBaseCurrencyTotalAmounts,
 						SecuritiesBalanceCustodyReportV08.mmAccountBaseCurrencyTotalAmounts, SecuritiesBalanceCustodyReportV09.mmAccountBaseCurrencyTotalAmounts);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalEligibleCollateralValueRule.forTotalValueInPageAndStatement1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalValueInPageAndStatement1";
 				definition = "Totals for the value of the holdings reported in the statement or page.";
@@ -302,39 +314,39 @@ public class TotalValueInPageAndStatement1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlHldgsValOfPg")
-	public AmountAndDirection6 getTotalHoldingsValueOfPage() {
-		return totalHoldingsValueOfPage;
+	public Optional<AmountAndDirection6> getTotalHoldingsValueOfPage() {
+		return totalHoldingsValueOfPage == null ? Optional.empty() : Optional.of(totalHoldingsValueOfPage);
 	}
 
-	public void setTotalHoldingsValueOfPage(com.tools20022.repository.msg.AmountAndDirection6 totalHoldingsValueOfPage) {
+	public TotalValueInPageAndStatement1 setTotalHoldingsValueOfPage(com.tools20022.repository.msg.AmountAndDirection6 totalHoldingsValueOfPage) {
 		this.totalHoldingsValueOfPage = totalHoldingsValueOfPage;
+		return this;
 	}
 
-	@XmlElement(name = "TtlHldgsValOfStmt", required = true)
 	public AmountAndDirection6 getTotalHoldingsValueOfStatement() {
 		return totalHoldingsValueOfStatement;
 	}
 
-	public void setTotalHoldingsValueOfStatement(com.tools20022.repository.msg.AmountAndDirection6 totalHoldingsValueOfStatement) {
-		this.totalHoldingsValueOfStatement = totalHoldingsValueOfStatement;
+	public TotalValueInPageAndStatement1 setTotalHoldingsValueOfStatement(com.tools20022.repository.msg.AmountAndDirection6 totalHoldingsValueOfStatement) {
+		this.totalHoldingsValueOfStatement = Objects.requireNonNull(totalHoldingsValueOfStatement);
+		return this;
 	}
 
-	@XmlElement(name = "TtlBookValOfStmt")
-	public AmountAndDirection6 getTotalBookValueOfStatement() {
-		return totalBookValueOfStatement;
+	public Optional<AmountAndDirection6> getTotalBookValueOfStatement() {
+		return totalBookValueOfStatement == null ? Optional.empty() : Optional.of(totalBookValueOfStatement);
 	}
 
-	public void setTotalBookValueOfStatement(com.tools20022.repository.msg.AmountAndDirection6 totalBookValueOfStatement) {
+	public TotalValueInPageAndStatement1 setTotalBookValueOfStatement(com.tools20022.repository.msg.AmountAndDirection6 totalBookValueOfStatement) {
 		this.totalBookValueOfStatement = totalBookValueOfStatement;
+		return this;
 	}
 
-	@XmlElement(name = "TtlElgblCollVal")
-	public AmountAndDirection6 getTotalEligibleCollateralValue() {
-		return totalEligibleCollateralValue;
+	public Optional<AmountAndDirection6> getTotalEligibleCollateralValue() {
+		return totalEligibleCollateralValue == null ? Optional.empty() : Optional.of(totalEligibleCollateralValue);
 	}
 
-	public void setTotalEligibleCollateralValue(com.tools20022.repository.msg.AmountAndDirection6 totalEligibleCollateralValue) {
+	public TotalValueInPageAndStatement1 setTotalEligibleCollateralValue(com.tools20022.repository.msg.AmountAndDirection6 totalEligibleCollateralValue) {
 		this.totalEligibleCollateralValue = totalEligibleCollateralValue;
+		return this;
 	}
 }

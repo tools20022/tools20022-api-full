@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -28,6 +29,8 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * RejectionReason16}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RejectionReason33", propOrder = {"reason", "additionalReasonInformation"})
 public class RejectionReason33 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rsn", required = true)
 	protected RejectedReason17Choice reason;
 	/**
-	 * Reason for the rejected status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -98,6 +102,9 @@ public class RejectionReason33 {
 	 * RejectionReason33}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Rsn"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :24B::REJT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -124,9 +131,10 @@ public class RejectionReason33 {
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
-			componentContext_lazy = () -> RejectionReason33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason33.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":24B::REJT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the rejected status.";
@@ -138,10 +146,11 @@ public class RejectionReason33 {
 			type_lazy = () -> RejectedReason17Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRsnInf")
 	protected Max350Text additionalReasonInformation;
 	/**
-	 * Additional information about the rejected status reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,6 +169,9 @@ public class RejectionReason33 {
 	 * RejectionReason33}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlRsnInf"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70D::REAS</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -187,9 +199,10 @@ public class RejectionReason33 {
 	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> RejectionReason33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason33.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70D::REAS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Additional information about the rejected status reason.";
@@ -204,9 +217,9 @@ public class RejectionReason33 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RejectionReason33.mmReason, RejectionReason33.mmAdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason33.mmReason, com.tools20022.repository.msg.RejectionReason33.mmAdditionalReasonInformation);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason33";
 				definition = "Information about a rejected status.";
@@ -216,21 +229,21 @@ public class RejectionReason33 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public RejectedReason17Choice getReason() {
 		return reason;
 	}
 
-	public void setReason(RejectedReason17Choice reason) {
-		this.reason = reason;
+	public RejectionReason33 setReason(RejectedReason17Choice reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRsnInf")
-	public Max350Text getAdditionalReasonInformation() {
-		return additionalReasonInformation;
+	public Optional<Max350Text> getAdditionalReasonInformation() {
+		return additionalReasonInformation == null ? Optional.empty() : Optional.of(additionalReasonInformation);
 	}
 
-	public void setAdditionalReasonInformation(Max350Text additionalReasonInformation) {
+	public RejectionReason33 setAdditionalReasonInformation(Max350Text additionalReasonInformation) {
 		this.additionalReasonInformation = additionalReasonInformation;
+		return this;
 	}
 }

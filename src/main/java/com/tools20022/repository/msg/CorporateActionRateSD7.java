@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +28,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CorporateActionRateSD7", propOrder = {"placeAndName", "CSDSecurityRate", "estimatedRateFlag", "DTCFeeRate"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CorporateActionRateSD7", propOrder = {"placeAndName", "cSDSecurityRate", "estimatedRateFlag", "dTCFeeRate"})
 public class CorporateActionRateSD7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +112,7 @@ public class CorporateActionRateSD7 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionRateSD7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD7.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,11 +123,11 @@ public class CorporateActionRateSD7 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CSDSctyRate")
 	protected CorporateActionRateSD6Choice cSDSecurityRate;
 	/**
-	 * Corresponding rate of the security disbursed by CSD (for an example in
-	 * US, DTC The Depository Trust Corporation).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,6 +143,9 @@ public class CorporateActionRateSD7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CSDSctyRate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Security Rate</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -153,9 +160,10 @@ public class CorporateActionRateSD7 {
 	 */
 	public static final MMMessageAttribute mmCSDSecurityRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionRateSD7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD7.mmObject();
 			isDerived = false;
 			xmlTag = "CSDSctyRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Security Rate"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDSecurityRate";
 			definition = "Corresponding rate of the security disbursed by CSD (for an example in US, DTC The Depository Trust Corporation).";
@@ -164,10 +172,11 @@ public class CorporateActionRateSD7 {
 			complexType_lazy = () -> CorporateActionRateSD6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "EstmtdRateFlg")
 	protected YesNoIndicator estimatedRateFlag;
 	/**
-	 * Denotes whether the rate is approximate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,6 +192,9 @@ public class CorporateActionRateSD7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EstmtdRateFlg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Estimated Rate Flag</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -195,9 +207,10 @@ public class CorporateActionRateSD7 {
 	 */
 	public static final MMMessageAttribute mmEstimatedRateFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionRateSD7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD7.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdRateFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Estimated Rate Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedRateFlag";
 			definition = "Denotes whether the rate is approximate.";
@@ -206,11 +219,11 @@ public class CorporateActionRateSD7 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCFeeRate")
 	protected PriceFormatSD1Choice dTCFeeRate;
 	/**
-	 * Rate at which a fee will be charged to a DTC (The Depository Trust
-	 * Corporation) participant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -226,6 +239,10 @@ public class CorporateActionRateSD7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCFeeRate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Fee Rate, DTCCSynonym: Currency (DTC
+	 * Fee Rate)</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -240,9 +257,10 @@ public class CorporateActionRateSD7 {
 	 */
 	public static final MMMessageAttribute mmDTCFeeRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionRateSD7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD7.mmObject();
 			isDerived = false;
 			xmlTag = "DTCFeeRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Fee Rate"), new DTCCSynonym(this, "Currency (DTC Fee Rate)"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCFeeRate";
 			definition = "Rate at which a fee will be charged to a DTC (The Depository Trust Corporation) participant.";
@@ -255,8 +273,9 @@ public class CorporateActionRateSD7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionRateSD7.mmPlaceAndName, CorporateActionRateSD7.mmCSDSecurityRate, CorporateActionRateSD7.mmEstimatedRateFlag, CorporateActionRateSD7.mmDTCFeeRate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRateSD7.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionRateSD7.mmCSDSecurityRate,
+						com.tools20022.repository.msg.CorporateActionRateSD7.mmEstimatedRateFlag, com.tools20022.repository.msg.CorporateActionRateSD7.mmDTCFeeRate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRateSD7";
 				definition = "Provides additional information regarding corporate action option securities movement rate details.";
@@ -265,39 +284,39 @@ public class CorporateActionRateSD7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionRateSD7 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "CSDSctyRate")
-	public CorporateActionRateSD6Choice getCSDSecurityRate() {
-		return cSDSecurityRate;
+	public Optional<CorporateActionRateSD6Choice> getCSDSecurityRate() {
+		return cSDSecurityRate == null ? Optional.empty() : Optional.of(cSDSecurityRate);
 	}
 
-	public void setCSDSecurityRate(CorporateActionRateSD6Choice cSDSecurityRate) {
+	public CorporateActionRateSD7 setCSDSecurityRate(CorporateActionRateSD6Choice cSDSecurityRate) {
 		this.cSDSecurityRate = cSDSecurityRate;
+		return this;
 	}
 
-	@XmlElement(name = "EstmtdRateFlg")
-	public YesNoIndicator getEstimatedRateFlag() {
-		return estimatedRateFlag;
+	public Optional<YesNoIndicator> getEstimatedRateFlag() {
+		return estimatedRateFlag == null ? Optional.empty() : Optional.of(estimatedRateFlag);
 	}
 
-	public void setEstimatedRateFlag(YesNoIndicator estimatedRateFlag) {
+	public CorporateActionRateSD7 setEstimatedRateFlag(YesNoIndicator estimatedRateFlag) {
 		this.estimatedRateFlag = estimatedRateFlag;
+		return this;
 	}
 
-	@XmlElement(name = "DTCFeeRate")
-	public PriceFormatSD1Choice getDTCFeeRate() {
-		return dTCFeeRate;
+	public Optional<PriceFormatSD1Choice> getDTCFeeRate() {
+		return dTCFeeRate == null ? Optional.empty() : Optional.of(dTCFeeRate);
 	}
 
-	public void setDTCFeeRate(PriceFormatSD1Choice dTCFeeRate) {
+	public CorporateActionRateSD7 setDTCFeeRate(PriceFormatSD1Choice dTCFeeRate) {
 		this.dTCFeeRate = dTCFeeRate;
+		return this;
 	}
 }

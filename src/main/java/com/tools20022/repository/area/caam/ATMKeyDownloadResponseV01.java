@@ -30,6 +30,8 @@ import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandA
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -39,22 +41,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.ATMManagementLatestVersion
- * ATMManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion
- * ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "ATMKeyDwnldRspn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -73,6 +59,22 @@ import javax.xml.bind.annotation.*;
  * ATMKeyDownloadResponseV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion
+ * ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "ATMKeyDwnldRspn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.ATMManagementLatestVersion
+ * ATMManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code caam.004.001.01}</li>
@@ -96,16 +98,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "ATMKeyDownloadResponseV01", propOrder = {"header", "protectedATMKeyDownloadResponse", "ATMKeyDownloadResponse", "securityTrailer"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "ATMKeyDownloadResponseV01", propOrder = {"header", "protectedATMKeyDownloadResponse", "aTMKeyDownloadResponse", "securityTrailer"})
 public class ATMKeyDownloadResponseV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header20 header;
 	/**
-	 * Information related to the protocol management on a segment of the path
-	 * from the ATM to the acquirer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,10 +148,11 @@ public class ATMKeyDownloadResponseV01 {
 			}
 		}
 	};
+	@XmlElement(name = "PrtctdATMKeyDwnldRspn")
 	protected ContentInformationType10 protectedATMKeyDownloadResponse;
 	/**
-	 * Encrypted body of the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,11 +192,11 @@ public class ATMKeyDownloadResponseV01 {
 			}
 		}
 	};
+	@XmlElement(name = "ATMKeyDwnldRspn")
 	protected ATMKeyDownloadResponse1 aTMKeyDownloadResponse;
 	/**
-	 * Information related to the response of an ATM key download from an ATM
-	 * manager.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -235,10 +238,11 @@ public class ATMKeyDownloadResponseV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SctyTrlr")
 	protected ContentInformationType13 securityTrailer;
 	/**
-	 * Trailer of the message containing a MAC or a digital signature.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -311,43 +315,43 @@ public class ATMKeyDownloadResponseV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header20 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header20 header) {
-		this.header = header;
+	public ATMKeyDownloadResponseV01 setHeader(Header20 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "PrtctdATMKeyDwnldRspn")
-	public ContentInformationType10 getProtectedATMKeyDownloadResponse() {
-		return protectedATMKeyDownloadResponse;
+	public Optional<ContentInformationType10> getProtectedATMKeyDownloadResponse() {
+		return protectedATMKeyDownloadResponse == null ? Optional.empty() : Optional.of(protectedATMKeyDownloadResponse);
 	}
 
-	public void setProtectedATMKeyDownloadResponse(ContentInformationType10 protectedATMKeyDownloadResponse) {
+	public ATMKeyDownloadResponseV01 setProtectedATMKeyDownloadResponse(ContentInformationType10 protectedATMKeyDownloadResponse) {
 		this.protectedATMKeyDownloadResponse = protectedATMKeyDownloadResponse;
+		return this;
 	}
 
-	@XmlElement(name = "ATMKeyDwnldRspn")
-	public ATMKeyDownloadResponse1 getATMKeyDownloadResponse() {
-		return aTMKeyDownloadResponse;
+	public Optional<ATMKeyDownloadResponse1> getATMKeyDownloadResponse() {
+		return aTMKeyDownloadResponse == null ? Optional.empty() : Optional.of(aTMKeyDownloadResponse);
 	}
 
-	public void setATMKeyDownloadResponse(ATMKeyDownloadResponse1 aTMKeyDownloadResponse) {
+	public ATMKeyDownloadResponseV01 setATMKeyDownloadResponse(ATMKeyDownloadResponse1 aTMKeyDownloadResponse) {
 		this.aTMKeyDownloadResponse = aTMKeyDownloadResponse;
+		return this;
 	}
 
-	@XmlElement(name = "SctyTrlr")
-	public ContentInformationType13 getSecurityTrailer() {
-		return securityTrailer;
+	public Optional<ContentInformationType13> getSecurityTrailer() {
+		return securityTrailer == null ? Optional.empty() : Optional.of(securityTrailer);
 	}
 
-	public void setSecurityTrailer(ContentInformationType13 securityTrailer) {
+	public ATMKeyDownloadResponseV01 setSecurityTrailer(ContentInformationType13 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caam.004.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:caam.004.001.01")
 	static public class Document {
 		@XmlElement(name = "ATMKeyDwnldRspn", required = true)
 		public ATMKeyDownloadResponseV01 messageBody;

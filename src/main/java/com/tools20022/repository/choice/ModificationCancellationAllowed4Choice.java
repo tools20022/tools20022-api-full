@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,16 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * ModificationCancellationAllowed1Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ModificationCancellationAllowed4Choice", propOrder = {"indicator", "proprietary"})
 public class ModificationCancellationAllowed4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ind", required = true)
 	protected YesNoIndicator indicator;
 	/**
-	 * Specifies whether a third party is allowed to modify or cancel the
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -91,6 +93,9 @@ public class ModificationCancellationAllowed4Choice {
 	 * ModificationCancellationAllowed4Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Ind"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::LEOG//4!c</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -111,9 +116,10 @@ public class ModificationCancellationAllowed4Choice {
 	 */
 	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ModificationCancellationAllowed4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ModificationCancellationAllowed4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ind";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::LEOG//4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicator";
 			definition = "Specifies whether a third party is allowed to modify or cancel the transaction.";
@@ -123,11 +129,11 @@ public class ModificationCancellationAllowed4Choice {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification30 proprietary;
 	/**
-	 * Modification, cancellation allowed information expressed as a proprietary
-	 * code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,6 +148,9 @@ public class ModificationCancellationAllowed4Choice {
 	 * ModificationCancellationAllowed4Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Prtry"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::PREF/4!c[4c]/4!c</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -162,9 +171,10 @@ public class ModificationCancellationAllowed4Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ModificationCancellationAllowed4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ModificationCancellationAllowed4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PREF/4!c[4c]/4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Modification, cancellation allowed information expressed as a proprietary code.";
@@ -178,8 +188,8 @@ public class ModificationCancellationAllowed4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ModificationCancellationAllowed4Choice.mmIndicator, ModificationCancellationAllowed4Choice.mmProprietary);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ModificationCancellationAllowed4Choice.mmIndicator, com.tools20022.repository.choice.ModificationCancellationAllowed4Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ModificationCancellationAllowed4Choice";
 				definition = "Choice of format for the modification cancellation information.";
@@ -189,21 +199,21 @@ public class ModificationCancellationAllowed4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ind", required = true)
 	public YesNoIndicator getIndicator() {
 		return indicator;
 	}
 
-	public void setIndicator(YesNoIndicator indicator) {
-		this.indicator = indicator;
+	public ModificationCancellationAllowed4Choice setIndicator(YesNoIndicator indicator) {
+		this.indicator = Objects.requireNonNull(indicator);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification30 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification30 proprietary) {
-		this.proprietary = proprietary;
+	public ModificationCancellationAllowed4Choice setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

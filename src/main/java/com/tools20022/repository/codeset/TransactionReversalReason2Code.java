@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TransactionReasonCode;
+import com.tools20022.repository.codeset.TransactionReversalReason2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for a transaction to be reversed by an instructed agent
@@ -31,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TransactionReasonCode
- * TransactionReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason2Code#mmDuplication
- * TransactionReversalReason2Code.mmDuplication}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason2Code#Duplication
+ * TransactionReversalReason2Code.Duplication}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TransactionReasonCode
+ * TransactionReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TransactionReversalReason2Code extends TransactionReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransactionReversalReason2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,26 +88,56 @@ public class TransactionReversalReason2Code extends TransactionReasonCode {
 	 * name} = "Duplication"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDuplication = new MMCode() {
+	public static final TransactionReversalReason2Code Duplication = new TransactionReversalReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Duplication";
-			owner_lazy = () -> TransactionReversalReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionReversalReason2Code.mmObject();
+			codeName = TransactionReasonCode.Duplication.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TransactionReversalReason2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransactionReversalReason2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AM05");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionReversalReason2Code";
 				definition = "Specifies the reason for a transaction to be reversed by an instructed agent or somebody acting on behalf of an instructed agent.";
-				code_lazy = () -> Arrays.asList(TransactionReversalReason2Code.mmDuplication);
 				trace_lazy = () -> TransactionReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionReversalReason2Code.Duplication);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Duplication.getCodeName().get(), Duplication);
+	}
+
+	public static TransactionReversalReason2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransactionReversalReason2Code[] values() {
+		TransactionReversalReason2Code[] values = new TransactionReversalReason2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransactionReversalReason2Code> {
+		@Override
+		public TransactionReversalReason2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransactionReversalReason2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

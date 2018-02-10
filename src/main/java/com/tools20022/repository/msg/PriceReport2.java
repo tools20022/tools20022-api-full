@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.reda.PriceReportCancellationV03;
 import com.tools20022.repository.entity.NetAssetValueCalculation;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PriceReport2", propOrder = {"priceValuationDetails", "extension"})
 public class PriceReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PricValtnDtls", required = true)
 	protected List<com.tools20022.repository.msg.PriceValuation3> priceValuationDetails;
 	/**
-	 * Information related to the price valuation of a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -117,7 +120,7 @@ public class PriceReport2 {
 	public static final MMMessageAssociationEnd mmPriceValuationDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> NetAssetValueCalculation.mmObject();
-			componentContext_lazy = () -> PriceReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceReport2.mmObject();
 			isDerived = false;
 			xmlTag = "PricValtnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,11 +131,11 @@ public class PriceReport2 {
 			type_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -158,7 +161,7 @@ public class PriceReport2 {
 	 */
 	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PriceReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceReport2.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,9 +176,9 @@ public class PriceReport2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PriceReport2.mmPriceValuationDetails, PriceReport2.mmExtension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceReport2.mmPriceValuationDetails, com.tools20022.repository.msg.PriceReport2.mmExtension);
 				messageBuildingBlock_lazy = () -> Arrays.asList(PriceReportCancellationV03.mmPriceReportToBeCancelled);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceReport2";
 				definition = "Information about a price report.";
@@ -185,21 +188,21 @@ public class PriceReport2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PricValtnDtls", required = true)
 	public List<PriceValuation3> getPriceValuationDetails() {
-		return priceValuationDetails;
+		return priceValuationDetails == null ? priceValuationDetails = new ArrayList<>() : priceValuationDetails;
 	}
 
-	public void setPriceValuationDetails(List<com.tools20022.repository.msg.PriceValuation3> priceValuationDetails) {
-		this.priceValuationDetails = priceValuationDetails;
+	public PriceReport2 setPriceValuationDetails(List<com.tools20022.repository.msg.PriceValuation3> priceValuationDetails) {
+		this.priceValuationDetails = Objects.requireNonNull(priceValuationDetails);
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
-		this.extension = extension;
+	public PriceReport2 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 }

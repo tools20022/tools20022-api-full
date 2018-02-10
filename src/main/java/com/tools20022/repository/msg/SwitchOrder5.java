@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.entity.SwitchOrder;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,16 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Extract of trade data for a switch order."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SwitchOrder5", propOrder = {"investmentAccountDetails", "redemptionLeg", "subscriptionLeg"})
 public class SwitchOrder5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InvstmtAcctDtls")
 	protected InvestmentAccount30 investmentAccountDetails;
 	/**
-	 * Account information of the order instruction for which the cancellation
-	 * is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +108,7 @@ public class SwitchOrder5 {
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
-			componentContext_lazy = () -> SwitchOrder5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder5.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,11 +120,11 @@ public class SwitchOrder5 {
 			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount30.mmObject();
 		}
 	};
+	@XmlElement(name = "RedLeg", required = true)
 	protected List<com.tools20022.repository.msg.SwitchRedemptionLegOrder4> redemptionLeg;
 	/**
-	 * Redemption leg information of the order instruction which the
-	 * cancellation is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -159,7 +158,7 @@ public class SwitchOrder5 {
 	public static final MMMessageAssociationEnd mmRedemptionLeg = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmRedemptionLeg;
-			componentContext_lazy = () -> SwitchOrder5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder5.mmObject();
 			isDerived = false;
 			xmlTag = "RedLeg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,11 +169,11 @@ public class SwitchOrder5 {
 			type_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder4.mmObject();
 		}
 	};
+	@XmlElement(name = "SbcptLeg", required = true)
 	protected List<com.tools20022.repository.msg.SwitchSubscriptionLegOrder4> subscriptionLeg;
 	/**
-	 * Subscription leg information of the order instruction which the
-	 * cancellation is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -208,7 +207,7 @@ public class SwitchOrder5 {
 	public static final MMMessageAssociationEnd mmSubscriptionLeg = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmSubscriptionLeg;
-			componentContext_lazy = () -> SwitchOrder5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder5.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptLeg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,9 +222,10 @@ public class SwitchOrder5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SwitchOrder5.mmInvestmentAccountDetails, SwitchOrder5.mmRedemptionLeg, SwitchOrder5.mmSubscriptionLeg);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrder5.mmInvestmentAccountDetails, com.tools20022.repository.msg.SwitchOrder5.mmRedemptionLeg,
+						com.tools20022.repository.msg.SwitchOrder5.mmSubscriptionLeg);
 				trace_lazy = () -> SwitchOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SwitchOrder5";
 				definition = "Extract of trade data for a switch order.";
@@ -234,30 +234,30 @@ public class SwitchOrder5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InvstmtAcctDtls")
-	public InvestmentAccount30 getInvestmentAccountDetails() {
-		return investmentAccountDetails;
+	public Optional<InvestmentAccount30> getInvestmentAccountDetails() {
+		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public void setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount30 investmentAccountDetails) {
+	public SwitchOrder5 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount30 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
+		return this;
 	}
 
-	@XmlElement(name = "RedLeg", required = true)
 	public List<SwitchRedemptionLegOrder4> getRedemptionLeg() {
-		return redemptionLeg;
+		return redemptionLeg == null ? redemptionLeg = new ArrayList<>() : redemptionLeg;
 	}
 
-	public void setRedemptionLeg(List<com.tools20022.repository.msg.SwitchRedemptionLegOrder4> redemptionLeg) {
-		this.redemptionLeg = redemptionLeg;
+	public SwitchOrder5 setRedemptionLeg(List<com.tools20022.repository.msg.SwitchRedemptionLegOrder4> redemptionLeg) {
+		this.redemptionLeg = Objects.requireNonNull(redemptionLeg);
+		return this;
 	}
 
-	@XmlElement(name = "SbcptLeg", required = true)
 	public List<SwitchSubscriptionLegOrder4> getSubscriptionLeg() {
-		return subscriptionLeg;
+		return subscriptionLeg == null ? subscriptionLeg = new ArrayList<>() : subscriptionLeg;
 	}
 
-	public void setSubscriptionLeg(List<com.tools20022.repository.msg.SwitchSubscriptionLegOrder4> subscriptionLeg) {
-		this.subscriptionLeg = subscriptionLeg;
+	public SwitchOrder5 setSubscriptionLeg(List<com.tools20022.repository.msg.SwitchSubscriptionLegOrder4> subscriptionLeg) {
+		this.subscriptionLeg = Objects.requireNonNull(subscriptionLeg);
+		return this;
 	}
 }

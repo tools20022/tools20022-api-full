@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24;
 import com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UpdateType22Choice", propOrder = {"addition", "deletion", "modification"})
 public class UpdateType22Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Addtn", required = true)
 	protected SecuritiesSettlementTransactionDetails23 addition;
 	/**
-	 * Addition of information to the securities transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -114,7 +116,7 @@ public class UpdateType22Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAddition = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UpdateType22Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType22Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Addtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +128,11 @@ public class UpdateType22Choice {
 			type_lazy = () -> SecuritiesSettlementTransactionDetails23.mmObject();
 		}
 	};
+	@XmlElement(name = "Deltn", required = true)
 	protected SecuritiesSettlementTransactionDetails24 deletion;
 	/**
-	 * Deletion of information in the securities transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -156,7 +159,7 @@ public class UpdateType22Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDeletion = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UpdateType22Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType22Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Deltn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,10 +171,11 @@ public class UpdateType22Choice {
 			type_lazy = () -> SecuritiesSettlementTransactionDetails24.mmObject();
 		}
 	};
+	@XmlElement(name = "Mod", required = true)
 	protected SecuritiesSettlementTransactionDetails25 modification;
 	/**
-	 * Modification of information in the securities transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -199,7 +203,7 @@ public class UpdateType22Choice {
 	 */
 	public static final MMMessageAssociationEnd mmModification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UpdateType22Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType22Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Mod";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,9 +219,10 @@ public class UpdateType22Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UpdateType22Choice.mmAddition, UpdateType22Choice.mmDeletion, UpdateType22Choice.mmModification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType22Choice.mmAddition, com.tools20022.repository.choice.UpdateType22Choice.mmDeletion,
+						com.tools20022.repository.choice.UpdateType22Choice.mmModification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionModificationRequest002V04.mmUpdateType);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UpdateType22Choice";
 				definition = "Specifies the type of update requested. That is addition, deletion or modification.";
@@ -226,30 +231,30 @@ public class UpdateType22Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Addtn", required = true)
 	public SecuritiesSettlementTransactionDetails23 getAddition() {
 		return addition;
 	}
 
-	public void setAddition(SecuritiesSettlementTransactionDetails23 addition) {
-		this.addition = addition;
+	public UpdateType22Choice setAddition(SecuritiesSettlementTransactionDetails23 addition) {
+		this.addition = Objects.requireNonNull(addition);
+		return this;
 	}
 
-	@XmlElement(name = "Deltn", required = true)
 	public SecuritiesSettlementTransactionDetails24 getDeletion() {
 		return deletion;
 	}
 
-	public void setDeletion(SecuritiesSettlementTransactionDetails24 deletion) {
-		this.deletion = deletion;
+	public UpdateType22Choice setDeletion(SecuritiesSettlementTransactionDetails24 deletion) {
+		this.deletion = Objects.requireNonNull(deletion);
+		return this;
 	}
 
-	@XmlElement(name = "Mod", required = true)
 	public SecuritiesSettlementTransactionDetails25 getModification() {
 		return modification;
 	}
 
-	public void setModification(SecuritiesSettlementTransactionDetails25 modification) {
-		this.modification = modification;
+	public UpdateType22Choice setModification(SecuritiesSettlementTransactionDetails25 modification) {
+		this.modification = Objects.requireNonNull(modification);
+		return this;
 	}
 }

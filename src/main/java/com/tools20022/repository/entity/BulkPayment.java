@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Payment which contains a series of other payments which have been grouped
@@ -39,23 +41,13 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Payment Payment}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.entity.BulkPayment#mmGroups
  * BulkPayment.mmGroups}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Payment Payment}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AggregationTransaction1
- * AggregationTransaction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AggregationTransaction2
- * AggregationTransaction2}</li>
  * </ul>
  * </li>
  * <li>
@@ -158,10 +150,20 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AggregationTransaction1
+ * AggregationTransaction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AggregationTransaction2
+ * AggregationTransaction2}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -179,9 +181,8 @@ public class BulkPayment extends Payment {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.IndividualPayment> groups;
 	/**
-	 * Indicates that a bulk payment groups several individual payments of the
-	 * same type (credit transfer or direct debit).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,8 +216,8 @@ public class BulkPayment extends Payment {
 	 */
 	public static final MMBusinessAssociationEnd mmGroups = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.BulkPayment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BulkPayment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Groups";
 			definition = "Indicates that a bulk payment groups several individual payments of the same type (credit transfer or direct debit).";
@@ -230,7 +231,7 @@ public class BulkPayment extends Payment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BulkPayment";
 				definition = "Payment which contains a series of other payments which have been grouped under specific criteria. A bulk payment can only contain individual payments of the same type (credit transfer or direct debit).";
@@ -258,10 +259,11 @@ public class BulkPayment extends Payment {
 	}
 
 	public List<IndividualPayment> getGroups() {
-		return groups;
+		return groups == null ? groups = new ArrayList<>() : groups;
 	}
 
-	public void setGroups(List<com.tools20022.repository.entity.IndividualPayment> groups) {
-		this.groups = groups;
+	public BulkPayment setGroups(List<com.tools20022.repository.entity.IndividualPayment> groups) {
+		this.groups = Objects.requireNonNull(groups);
+		return this;
 	}
 }

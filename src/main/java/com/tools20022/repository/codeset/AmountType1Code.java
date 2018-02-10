@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AmountTypeCode;
+import com.tools20022.repository.codeset.AmountType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the value of the amount.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AmountTypeCode AmountTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AmountType1Code#mmOpen
- * AmountType1Code.mmOpen}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AmountType1Code#mmUnknown
- * AmountType1Code.mmUnknown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AmountType1Code#Open
+ * AmountType1Code.Open}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AmountType1Code#Unknown
+ * AmountType1Code.Unknown}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AmountTypeCode AmountTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the value of the amount."</li>
  * </ul>
  */
-public class AmountType1Code extends AmountTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AmountType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,11 +85,12 @@ public class AmountType1Code extends AmountTypeCode {
 	 * name} = "Open"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOpen = new MMCode() {
+	public static final AmountType1Code Open = new AmountType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Open";
-			owner_lazy = () -> AmountType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AmountType1Code.mmObject();
+			codeName = AmountTypeCode.Open.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -103,26 +109,57 @@ public class AmountType1Code extends AmountTypeCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknown = new MMCode() {
+	public static final AmountType1Code Unknown = new AmountType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
-			owner_lazy = () -> AmountType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AmountType1Code.mmObject();
+			codeName = AmountTypeCode.Unknown.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AmountType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AmountType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("OPEN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountType1Code";
 				definition = "Specifies the value of the amount.";
-				code_lazy = () -> Arrays.asList(AmountType1Code.mmOpen, AmountType1Code.mmUnknown);
 				trace_lazy = () -> AmountTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountType1Code.Open, com.tools20022.repository.codeset.AmountType1Code.Unknown);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Open.getCodeName().get(), Open);
+		codesByName.put(Unknown.getCodeName().get(), Unknown);
+	}
+
+	public static AmountType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AmountType1Code[] values() {
+		AmountType1Code[] values = new AmountType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AmountType1Code> {
+		@Override
+		public AmountType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AmountType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

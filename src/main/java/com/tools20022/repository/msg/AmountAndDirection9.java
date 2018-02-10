@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -33,6 +34,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule#forAmountAndDirection9
+ * ConstraintCoexistenceAmountRule.forAmountAndDirection9}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -87,15 +98,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountAndDirection9", propOrder = {"amount", "creditDebitIndicator", "originalCurrencyAndOrderedAmount", "foreignExchangeDetails"})
 public class AmountAndDirection9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount amount;
 	/**
-	 * Amount of money in the cash entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,6 +127,9 @@ public class AmountAndDirection9 {
 	 * AmountAndDirection9}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Amt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19a:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -137,9 +152,10 @@ public class AmountAndDirection9 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
-			componentContext_lazy = () -> AmountAndDirection9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection9.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money in the cash entry.";
@@ -149,10 +165,11 @@ public class AmountAndDirection9 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd")
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Indicates whether an entry is a credit or a debit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,6 +189,9 @@ public class AmountAndDirection9 {
 	 * AmountAndDirection9}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CdtDbtInd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::4!c\\[N]</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -194,9 +214,10 @@ public class AmountAndDirection9 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreditDebitIndicator;
-			componentContext_lazy = () -> AmountAndDirection9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection9.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::4!c\\[N]"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether an entry is a credit or a debit.";
@@ -206,11 +227,11 @@ public class AmountAndDirection9 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlCcyAndOrdrdAmt")
 	protected ActiveOrHistoricCurrencyAndAmount originalCurrencyAndOrderedAmount;
 	/**
-	 * Posting/settlement amount in its original currency when conversion
-	 * from/into another currency has occurred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -230,6 +251,9 @@ public class AmountAndDirection9 {
 	 * AmountAndDirection9}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrgnlCcyAndOrdrdAmt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::OCMT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -254,9 +278,10 @@ public class AmountAndDirection9 {
 	public static final MMMessageAttribute mmOriginalCurrencyAndOrderedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
-			componentContext_lazy = () -> AmountAndDirection9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection9.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCcyAndOrdrdAmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::OCMT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCurrencyAndOrderedAmount";
 			definition = "Posting/settlement amount in its original currency when conversion from/into another currency has occurred.";
@@ -266,10 +291,11 @@ public class AmountAndDirection9 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "FXDtls")
 	protected ForeignExchangeTerms11 foreignExchangeDetails;
 	/**
-	 * Information needed to process a currency exchange or conversion.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -287,6 +313,9 @@ public class AmountAndDirection9 {
 	 * AmountAndDirection9}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FXDtls"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92B::EXCH</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -310,9 +339,10 @@ public class AmountAndDirection9 {
 	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
-			componentContext_lazy = () -> AmountAndDirection9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection9.mmObject();
 			isDerived = false;
 			xmlTag = "FXDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92B::EXCH"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Information needed to process a currency exchange or conversion.";
@@ -327,9 +357,11 @@ public class AmountAndDirection9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountAndDirection9.mmAmount, AmountAndDirection9.mmCreditDebitIndicator, AmountAndDirection9.mmOriginalCurrencyAndOrderedAmount, AmountAndDirection9.mmForeignExchangeDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection9.mmAmount, com.tools20022.repository.msg.AmountAndDirection9.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.AmountAndDirection9.mmOriginalCurrencyAndOrderedAmount, com.tools20022.repository.msg.AmountAndDirection9.mmForeignExchangeDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forAmountAndDirection9);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -346,39 +378,39 @@ public class AmountAndDirection9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
-		this.amount = amount;
+	public AmountAndDirection9 setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd")
-	public CreditDebitCode getCreditDebitIndicator() {
-		return creditDebitIndicator;
+	public Optional<CreditDebitCode> getCreditDebitIndicator() {
+		return creditDebitIndicator == null ? Optional.empty() : Optional.of(creditDebitIndicator);
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+	public AmountAndDirection9 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
 		this.creditDebitIndicator = creditDebitIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlCcyAndOrdrdAmt")
-	public ActiveOrHistoricCurrencyAndAmount getOriginalCurrencyAndOrderedAmount() {
-		return originalCurrencyAndOrderedAmount;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getOriginalCurrencyAndOrderedAmount() {
+		return originalCurrencyAndOrderedAmount == null ? Optional.empty() : Optional.of(originalCurrencyAndOrderedAmount);
 	}
 
-	public void setOriginalCurrencyAndOrderedAmount(ActiveOrHistoricCurrencyAndAmount originalCurrencyAndOrderedAmount) {
+	public AmountAndDirection9 setOriginalCurrencyAndOrderedAmount(ActiveOrHistoricCurrencyAndAmount originalCurrencyAndOrderedAmount) {
 		this.originalCurrencyAndOrderedAmount = originalCurrencyAndOrderedAmount;
+		return this;
 	}
 
-	@XmlElement(name = "FXDtls")
-	public ForeignExchangeTerms11 getForeignExchangeDetails() {
-		return foreignExchangeDetails;
+	public Optional<ForeignExchangeTerms11> getForeignExchangeDetails() {
+		return foreignExchangeDetails == null ? Optional.empty() : Optional.of(foreignExchangeDetails);
 	}
 
-	public void setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms11 foreignExchangeDetails) {
+	public AmountAndDirection9 setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms11 foreignExchangeDetails) {
 		this.foreignExchangeDetails = foreignExchangeDetails;
+		return this;
 	}
 }

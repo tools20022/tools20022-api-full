@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Signature;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Additional security provisions, such as a digital signature.
@@ -37,6 +39,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Signature
+ * Signature}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -46,19 +51,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.ElectronicSignature#mmRelatedSecurityCertificate
  * ElectronicSignature.mmRelatedSecurityCertificate}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Signature
- * Signature}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PartyAndSignature2
- * PartyAndSignature2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QualifiedPartyAndXMLSignature1
- * QualifiedPartyAndXMLSignature1}</li>
  * </ul>
  * </li>
  * <li>
@@ -117,10 +109,20 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyAndSignature2
+ * PartyAndSignature2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QualifiedPartyAndXMLSignature1
+ * QualifiedPartyAndXMLSignature1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -136,8 +138,8 @@ public class ElectronicSignature extends Signature {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Undertaking undertaking;
 	/**
-	 * Undertaking for which a signature is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,8 +172,8 @@ public class ElectronicSignature extends Signature {
 	 */
 	public static final MMBusinessAssociationEnd mmUndertaking = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicSignature.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicSignature.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Undertaking";
 			definition = "Undertaking for which a signature is provided.";
@@ -184,8 +186,8 @@ public class ElectronicSignature extends Signature {
 	};
 	protected List<com.tools20022.repository.entity.SecurityCertificate> relatedSecurityCertificate;
 	/**
-	 * Certificate linked to a digital signature.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -227,8 +229,8 @@ public class ElectronicSignature extends Signature {
 	public static final MMBusinessAssociationEnd mmRelatedSecurityCertificate = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyAndCertificate1.mmCertificate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicSignature.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicSignature.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecurityCertificate";
 			definition = "Certificate linked to a digital signature.";
@@ -242,7 +244,7 @@ public class ElectronicSignature extends Signature {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ElectronicSignature";
 				definition = "Additional security provisions, such as a digital signature.";
@@ -268,15 +270,17 @@ public class ElectronicSignature extends Signature {
 		return undertaking;
 	}
 
-	public void setUndertaking(com.tools20022.repository.entity.Undertaking undertaking) {
-		this.undertaking = undertaking;
+	public ElectronicSignature setUndertaking(com.tools20022.repository.entity.Undertaking undertaking) {
+		this.undertaking = Objects.requireNonNull(undertaking);
+		return this;
 	}
 
 	public List<SecurityCertificate> getRelatedSecurityCertificate() {
-		return relatedSecurityCertificate;
+		return relatedSecurityCertificate == null ? relatedSecurityCertificate = new ArrayList<>() : relatedSecurityCertificate;
 	}
 
-	public void setRelatedSecurityCertificate(List<com.tools20022.repository.entity.SecurityCertificate> relatedSecurityCertificate) {
-		this.relatedSecurityCertificate = relatedSecurityCertificate;
+	public ElectronicSignature setRelatedSecurityCertificate(List<com.tools20022.repository.entity.SecurityCertificate> relatedSecurityCertificate) {
+		this.relatedSecurityCertificate = Objects.requireNonNull(relatedSecurityCertificate);
+		return this;
 	}
 }

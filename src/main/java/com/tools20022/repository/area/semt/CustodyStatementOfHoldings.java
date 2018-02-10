@@ -25,9 +25,8 @@ import com.tools20022.repository.area.SecuritiesManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -70,22 +69,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
- * SecuritiesManagementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "semt.002.001.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "semt.002.001.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -119,9 +102,34 @@ import javax.xml.bind.annotation.*;
  * CustodyStatementOfHoldings.mmExtension}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "semt.002.001.01"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
+ * SecuritiesManagementArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "semt.002.001.01"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code semt.002.001.01}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule#forCustodyStatementOfHoldings
+ * ConstraintBalanceForAccountOrSubAccountDetailsRule.
+ * forCustodyStatementOfHoldings}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -142,15 +150,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "semt.002.001.01", propOrder = {"previousReference", "relatedReference", "messagePagination", "statementGeneralDetails", "accountDetails", "balanceForAccount", "subAccountDetails", "totalValues", "extension"})
 public class CustodyStatementOfHoldings {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrvsRef")
 	protected List<AdditionalReference2> previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,10 +198,11 @@ public class CustodyStatementOfHoldings {
 			}
 		}
 	};
+	@XmlElement(name = "RltdRef")
 	protected List<AdditionalReference2> relatedReference;
 	/**
-	 * Reference to a linked message that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -232,10 +242,11 @@ public class CustodyStatementOfHoldings {
 			}
 		}
 	};
+	@XmlElement(name = "MsgPgntn", required = true)
 	protected Pagination messagePagination;
 	/**
-	 * Pagination of the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -274,10 +285,11 @@ public class CustodyStatementOfHoldings {
 			}
 		}
 	};
+	@XmlElement(name = "StmtGnlDtls", required = true)
 	protected Statement3 statementGeneralDetails;
 	/**
-	 * General information related to the custody statement of holdings.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -317,10 +329,11 @@ public class CustodyStatementOfHoldings {
 			}
 		}
 	};
+	@XmlElement(name = "AcctDtls", required = true)
 	protected SafekeepingAccount1 accountDetails;
 	/**
-	 * The safekeeping or investment account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -360,11 +373,11 @@ public class CustodyStatementOfHoldings {
 			}
 		}
 	};
+	@XmlElement(name = "BalForAcct")
 	protected List<AggregateBalanceInformation1> balanceForAccount;
 	/**
-	 * Net position of a segregated holding, in a single security, within the
-	 * overall position held in a securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -405,10 +418,11 @@ public class CustodyStatementOfHoldings {
 			}
 		}
 	};
+	@XmlElement(name = "SubAcctDtls")
 	protected List<SubAccountIdentification1> subAccountDetails;
 	/**
-	 * The sub-account of the safekeeping or investment account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -448,10 +462,11 @@ public class CustodyStatementOfHoldings {
 			}
 		}
 	};
+	@XmlElement(name = "TtlVals")
 	protected TotalValueInPageAndStatement totalValues;
 	/**
-	 * Value of total holdings reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -491,11 +506,11 @@ public class CustodyStatementOfHoldings {
 			}
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -539,6 +554,7 @@ public class CustodyStatementOfHoldings {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule.forCustodyStatementOfHoldings);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustodyStatementOfHoldings";
 				definition = "Scope\r\nThe CustodyStatementOfHoldings message is sent by an account servicer to the account owner or the account owner's designated agent. The account servicer may be a local agent acting on behalf of its global custodian customer, a custodian acting on behalf of an investment management institution or a broker/dealer, a fund administrator or fund intermediary, trustee or registrar, etc.\r\nThis message reports, at a specified moment in time, the quantity and identification of financial instruments that an account servicer holds for the account owner.\r\nThis message is used to reconcile the books of the account owner and the account servicer for the specified account or sub-account.\r\nThis message can also report availability and/or the location of security holdings to facilitate trading and minimise settlement issues. The reporting is per financial instrument, ie, when a financial instrument is held at multiple places of safekeeping, the total holding for all locations can be provided.\r\nUsage\r\nThe CustodyStatementOfHoldings message can be sent:\r\n- At a frequency agreed bi-laterally between the Sender and the Receiver\r\n- As a response to a request for statement sent by the account owner.\r\nThis message can reflect all outstanding holding information or may only contain changes since the previously sent statement.\r\nThe CustodyStatementOfHoldings message can only be used to list the holdings of a single (master) account. However, it is possible to break down these holdings into one or several sub-accounts. Therefore, this message can be used to either specify holdings at\r\n- the main account level, or\r\n- the sub-account level.\r\nThis message can be also be used to report where the securities are safe-kept, physically or notionally. If a security is held in more than one safekeeping place, this can also be indicated.\r\nThis message must not be used to report audited positions. Audited positions are reported using the AccountingStatementOfHoldings message.\r\nSince a SWIFT message as sent is restricted to the maximum input message length, several messages may be needed to accommodate all the information.";
@@ -571,88 +587,88 @@ public class CustodyStatementOfHoldings {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrvsRef")
 	public List<AdditionalReference2> getPreviousReference() {
-		return previousReference;
+		return previousReference == null ? previousReference = new ArrayList<>() : previousReference;
 	}
 
-	public void setPreviousReference(List<AdditionalReference2> previousReference) {
-		this.previousReference = previousReference;
+	public CustodyStatementOfHoldings setPreviousReference(List<AdditionalReference2> previousReference) {
+		this.previousReference = Objects.requireNonNull(previousReference);
+		return this;
 	}
 
-	@XmlElement(name = "RltdRef")
 	public List<AdditionalReference2> getRelatedReference() {
-		return relatedReference;
+		return relatedReference == null ? relatedReference = new ArrayList<>() : relatedReference;
 	}
 
-	public void setRelatedReference(List<AdditionalReference2> relatedReference) {
-		this.relatedReference = relatedReference;
+	public CustodyStatementOfHoldings setRelatedReference(List<AdditionalReference2> relatedReference) {
+		this.relatedReference = Objects.requireNonNull(relatedReference);
+		return this;
 	}
 
-	@XmlElement(name = "MsgPgntn", required = true)
 	public Pagination getMessagePagination() {
 		return messagePagination;
 	}
 
-	public void setMessagePagination(Pagination messagePagination) {
-		this.messagePagination = messagePagination;
+	public CustodyStatementOfHoldings setMessagePagination(Pagination messagePagination) {
+		this.messagePagination = Objects.requireNonNull(messagePagination);
+		return this;
 	}
 
-	@XmlElement(name = "StmtGnlDtls", required = true)
 	public Statement3 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
 
-	public void setStatementGeneralDetails(Statement3 statementGeneralDetails) {
-		this.statementGeneralDetails = statementGeneralDetails;
+	public CustodyStatementOfHoldings setStatementGeneralDetails(Statement3 statementGeneralDetails) {
+		this.statementGeneralDetails = Objects.requireNonNull(statementGeneralDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AcctDtls", required = true)
 	public SafekeepingAccount1 getAccountDetails() {
 		return accountDetails;
 	}
 
-	public void setAccountDetails(SafekeepingAccount1 accountDetails) {
-		this.accountDetails = accountDetails;
+	public CustodyStatementOfHoldings setAccountDetails(SafekeepingAccount1 accountDetails) {
+		this.accountDetails = Objects.requireNonNull(accountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "BalForAcct")
 	public List<AggregateBalanceInformation1> getBalanceForAccount() {
-		return balanceForAccount;
+		return balanceForAccount == null ? balanceForAccount = new ArrayList<>() : balanceForAccount;
 	}
 
-	public void setBalanceForAccount(List<AggregateBalanceInformation1> balanceForAccount) {
-		this.balanceForAccount = balanceForAccount;
+	public CustodyStatementOfHoldings setBalanceForAccount(List<AggregateBalanceInformation1> balanceForAccount) {
+		this.balanceForAccount = Objects.requireNonNull(balanceForAccount);
+		return this;
 	}
 
-	@XmlElement(name = "SubAcctDtls")
 	public List<SubAccountIdentification1> getSubAccountDetails() {
-		return subAccountDetails;
+		return subAccountDetails == null ? subAccountDetails = new ArrayList<>() : subAccountDetails;
 	}
 
-	public void setSubAccountDetails(List<SubAccountIdentification1> subAccountDetails) {
-		this.subAccountDetails = subAccountDetails;
+	public CustodyStatementOfHoldings setSubAccountDetails(List<SubAccountIdentification1> subAccountDetails) {
+		this.subAccountDetails = Objects.requireNonNull(subAccountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "TtlVals")
-	public TotalValueInPageAndStatement getTotalValues() {
-		return totalValues;
+	public Optional<TotalValueInPageAndStatement> getTotalValues() {
+		return totalValues == null ? Optional.empty() : Optional.of(totalValues);
 	}
 
-	public void setTotalValues(TotalValueInPageAndStatement totalValues) {
+	public CustodyStatementOfHoldings setTotalValues(TotalValueInPageAndStatement totalValues) {
 		this.totalValues = totalValues;
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<Extension1> extension) {
-		this.extension = extension;
+	public CustodyStatementOfHoldings setExtension(List<Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.002.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:semt.002.001.01")
 	static public class Document {
 		@XmlElement(name = "semt.002.001.01", required = true)
 		public CustodyStatementOfHoldings messageBody;

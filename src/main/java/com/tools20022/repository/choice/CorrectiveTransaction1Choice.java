@@ -30,6 +30,7 @@ import com.tools20022.repository.msg.CorrectiveInterbankTransaction1;
 import com.tools20022.repository.msg.CorrectivePaymentInitiation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -75,8 +76,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,16 +98,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorrectiveTransaction1Choice", propOrder = {"initiation", "interbank"})
 public class CorrectiveTransaction1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Initn", required = true)
 	protected CorrectivePaymentInitiation1 initiation;
 	/**
-	 * Set of elements used to reference the details of the corrective payment
-	 * initiation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -149,7 +150,7 @@ public class CorrectiveTransaction1Choice {
 	public static final MMMessageAssociationEnd mmInitiation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentExecution;
-			componentContext_lazy = () -> CorrectiveTransaction1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CorrectiveTransaction1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Initn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,11 +163,11 @@ public class CorrectiveTransaction1Choice {
 			type_lazy = () -> CorrectivePaymentInitiation1.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBk", required = true)
 	protected CorrectiveInterbankTransaction1 interbank;
 	/**
-	 * Set of elements used to reference the details of the corrective interbank
-	 * payment transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -208,7 +209,7 @@ public class CorrectiveTransaction1Choice {
 	public static final MMMessageAssociationEnd mmInterbank = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
-			componentContext_lazy = () -> CorrectiveTransaction1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CorrectiveTransaction1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,11 +226,11 @@ public class CorrectiveTransaction1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorrectiveTransaction1Choice.mmInitiation, CorrectiveTransaction1Choice.mmInterbank);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorrectiveTransaction1Choice.mmInitiation, com.tools20022.repository.choice.CorrectiveTransaction1Choice.mmInterbank);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ResolutionOfInvestigationV03.mmCorrectionTransaction, ResolutionOfInvestigationV04.mmCorrectionTransaction, ResolutionOfInvestigationV05.mmCorrectionTransaction,
 						ResolutionOfInvestigationV06.mmCorrectionTransaction);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorrectiveTransaction1Choice";
 				definition = "Specifies the corrective transaction on which the investigation is processed.";
@@ -239,21 +240,21 @@ public class CorrectiveTransaction1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Initn", required = true)
 	public CorrectivePaymentInitiation1 getInitiation() {
 		return initiation;
 	}
 
-	public void setInitiation(CorrectivePaymentInitiation1 initiation) {
-		this.initiation = initiation;
+	public CorrectiveTransaction1Choice setInitiation(CorrectivePaymentInitiation1 initiation) {
+		this.initiation = Objects.requireNonNull(initiation);
+		return this;
 	}
 
-	@XmlElement(name = "IntrBk", required = true)
 	public CorrectiveInterbankTransaction1 getInterbank() {
 		return interbank;
 	}
 
-	public void setInterbank(CorrectiveInterbankTransaction1 interbank) {
-		this.interbank = interbank;
+	public CorrectiveTransaction1Choice setInterbank(CorrectiveInterbankTransaction1 interbank) {
+		this.interbank = Objects.requireNonNull(interbank);
+		return this;
 	}
 }

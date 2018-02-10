@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * DataSetIdentification4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DataSetIdentification6", propOrder = {"name", "type", "version", "creationDateTime"})
 public class DataSetIdentification6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nm")
 	protected Max256Text name;
 	/**
-	 * Name of the data set.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +114,7 @@ public class DataSetIdentification6 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DataSetIdentification6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +126,11 @@ public class DataSetIdentification6 {
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected DataSetCategory9Code type;
 	/**
-	 * Category of data set.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +163,7 @@ public class DataSetIdentification6 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DataSetIdentification6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +175,11 @@ public class DataSetIdentification6 {
 			simpleType_lazy = () -> DataSetCategory9Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Vrsn")
 	protected Max256Text version;
 	/**
-	 * Version of the data set.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,7 +211,7 @@ public class DataSetIdentification6 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DataSetIdentification6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,10 +223,11 @@ public class DataSetIdentification6 {
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm")
 	protected ISODateTime creationDateTime;
 	/**
-	 * Date and time of creation of the data set.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -253,7 +259,7 @@ public class DataSetIdentification6 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DataSetIdentification6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,8 +275,9 @@ public class DataSetIdentification6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DataSetIdentification6.mmName, DataSetIdentification6.mmType, DataSetIdentification6.mmVersion, DataSetIdentification6.mmCreationDateTime);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetIdentification6.mmName, com.tools20022.repository.msg.DataSetIdentification6.mmType,
+						com.tools20022.repository.msg.DataSetIdentification6.mmVersion, com.tools20022.repository.msg.DataSetIdentification6.mmCreationDateTime);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DataSetIdentification6";
 				definition = "Identification of a data set.";
@@ -280,39 +287,39 @@ public class DataSetIdentification6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nm")
-	public Max256Text getName() {
-		return name;
+	public Optional<Max256Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max256Text name) {
+	public DataSetIdentification6 setName(Max256Text name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public DataSetCategory9Code getType() {
 		return type;
 	}
 
-	public void setType(DataSetCategory9Code type) {
-		this.type = type;
+	public DataSetIdentification6 setType(DataSetCategory9Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Vrsn")
-	public Max256Text getVersion() {
-		return version;
+	public Optional<Max256Text> getVersion() {
+		return version == null ? Optional.empty() : Optional.of(version);
 	}
 
-	public void setVersion(Max256Text version) {
+	public DataSetIdentification6 setVersion(Max256Text version) {
 		this.version = version;
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm")
-	public ISODateTime getCreationDateTime() {
-		return creationDateTime;
+	public Optional<ISODateTime> getCreationDateTime() {
+		return creationDateTime == null ? Optional.empty() : Optional.of(creationDateTime);
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
+	public DataSetIdentification6 setCreationDateTime(ISODateTime creationDateTime) {
 		this.creationDateTime = creationDateTime;
+		return this;
 	}
 }

@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeMatchingISOPreviousversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -51,25 +53,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestVersion
- * SecuritiesManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeMatchingISOPreviousversion
- * PostTradeMatchingISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion
- * PostTradeMatchingISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SctiesEndOfPrcRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -91,6 +74,25 @@ import javax.xml.bind.annotation.*;
  * SecuritiesEndOfProcessReportV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeMatchingISOPreviousversion
+ * PostTradeMatchingISOPreviousversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion
+ * PostTradeMatchingISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SctiesEndOfPrcRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestVersion
+ * SecuritiesManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code semt.023.001.01}</li>
@@ -106,17 +108,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesEndOfProcessReportV01", propOrder = {"pagination", "reportGeneralDetails", "confirmationParties", "investor", "supplementaryData"})
 public class SecuritiesEndOfProcessReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pgntn")
 	protected List<Pagination> pagination;
 	/**
-	 * Number used to sequence pages when it is not possible for data to be
-	 * conveyed in a single message and the data has to be split across several
-	 * pages (messages).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,10 +157,11 @@ public class SecuritiesEndOfProcessReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "RptGnlDtls", required = true)
 	protected Report3 reportGeneralDetails;
 	/**
-	 * Notifies the type of report transmitted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,10 +200,11 @@ public class SecuritiesEndOfProcessReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "ConfPties")
 	protected List<ConfirmationParties2> confirmationParties;
 	/**
-	 * Parties involved in the confirmation of the details of a trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -241,10 +244,11 @@ public class SecuritiesEndOfProcessReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "Invstr")
 	protected List<PartyIdentificationAndAccount79> investor;
 	/**
-	 * Party that identifies the underlying investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -283,11 +287,11 @@ public class SecuritiesEndOfProcessReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -360,52 +364,52 @@ public class SecuritiesEndOfProcessReportV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pgntn")
 	public List<Pagination> getPagination() {
-		return pagination;
+		return pagination == null ? pagination = new ArrayList<>() : pagination;
 	}
 
-	public void setPagination(List<Pagination> pagination) {
-		this.pagination = pagination;
+	public SecuritiesEndOfProcessReportV01 setPagination(List<Pagination> pagination) {
+		this.pagination = Objects.requireNonNull(pagination);
+		return this;
 	}
 
-	@XmlElement(name = "RptGnlDtls", required = true)
 	public Report3 getReportGeneralDetails() {
 		return reportGeneralDetails;
 	}
 
-	public void setReportGeneralDetails(Report3 reportGeneralDetails) {
-		this.reportGeneralDetails = reportGeneralDetails;
+	public SecuritiesEndOfProcessReportV01 setReportGeneralDetails(Report3 reportGeneralDetails) {
+		this.reportGeneralDetails = Objects.requireNonNull(reportGeneralDetails);
+		return this;
 	}
 
-	@XmlElement(name = "ConfPties")
 	public List<ConfirmationParties2> getConfirmationParties() {
-		return confirmationParties;
+		return confirmationParties == null ? confirmationParties = new ArrayList<>() : confirmationParties;
 	}
 
-	public void setConfirmationParties(List<ConfirmationParties2> confirmationParties) {
-		this.confirmationParties = confirmationParties;
+	public SecuritiesEndOfProcessReportV01 setConfirmationParties(List<ConfirmationParties2> confirmationParties) {
+		this.confirmationParties = Objects.requireNonNull(confirmationParties);
+		return this;
 	}
 
-	@XmlElement(name = "Invstr")
 	public List<PartyIdentificationAndAccount79> getInvestor() {
-		return investor;
+		return investor == null ? investor = new ArrayList<>() : investor;
 	}
 
-	public void setInvestor(List<PartyIdentificationAndAccount79> investor) {
-		this.investor = investor;
+	public SecuritiesEndOfProcessReportV01 setInvestor(List<PartyIdentificationAndAccount79> investor) {
+		this.investor = Objects.requireNonNull(investor);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecuritiesEndOfProcessReportV01 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.023.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:semt.023.001.01")
 	static public class Document {
 		@XmlElement(name = "SctiesEndOfPrcRpt", required = true)
 		public SecuritiesEndOfProcessReportV01 messageBody;

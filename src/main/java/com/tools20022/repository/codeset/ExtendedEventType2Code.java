@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ExtendedEventTypeV2Code;
+import com.tools20022.repository.codeset.ExtendedEventType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies DTCC (The Depository Trust and Clearing Corporation) defined
@@ -31,39 +35,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventTypeV2Code
- * ExtendedEventTypeV2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType2Code#mmBonusRightsIssue
- * ExtendedEventType2Code.mmBonusRightsIssue}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType2Code#BonusRightsIssue
+ * ExtendedEventType2Code.BonusRightsIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType2Code#mmFullPrerefunding
- * ExtendedEventType2Code.mmFullPrerefunding}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType2Code#FullPrerefunding
+ * ExtendedEventType2Code.FullPrerefunding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType2Code#mmPartialDefeasance
- * ExtendedEventType2Code.mmPartialDefeasance}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType2Code#PartialDefeasance
+ * ExtendedEventType2Code.PartialDefeasance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType2Code#mmPartialMandatoryPut
- * ExtendedEventType2Code.mmPartialMandatoryPut}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType2Code#PartialMandatoryPut
+ * ExtendedEventType2Code.PartialMandatoryPut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType2Code#mmPartialPrerefunding
- * ExtendedEventType2Code.mmPartialPrerefunding}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType2Code#PartialPrerefunding
+ * ExtendedEventType2Code.PartialPrerefunding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType2Code#mmRightsPlanAdoption
- * ExtendedEventType2Code.mmRightsPlanAdoption}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType2Code#RightsPlanAdoption
+ * ExtendedEventType2Code.RightsPlanAdoption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType2Code#mmTermination
- * ExtendedEventType2Code.mmTermination}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType2Code#Termination
+ * ExtendedEventType2Code.Termination}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventTypeV2Code
+ * ExtendedEventTypeV2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ExtendedEventType2Code extends ExtendedEventTypeV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ExtendedEventType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,11 +100,12 @@ public class ExtendedEventType2Code extends ExtendedEventTypeV2Code {
 	 * name} = "BonusRightsIssue"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBonusRightsIssue = new MMCode() {
+	public static final ExtendedEventType2Code BonusRightsIssue = new ExtendedEventType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BonusRightsIssue";
-			owner_lazy = () -> ExtendedEventType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType2Code.mmObject();
+			codeName = ExtendedEventTypeV2Code.BonusRightsIssue.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -118,11 +124,12 @@ public class ExtendedEventType2Code extends ExtendedEventTypeV2Code {
 	 * name} = "FullPrerefunding"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullPrerefunding = new MMCode() {
+	public static final ExtendedEventType2Code FullPrerefunding = new ExtendedEventType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPrerefunding";
-			owner_lazy = () -> ExtendedEventType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType2Code.mmObject();
+			codeName = ExtendedEventTypeV2Code.FullPrerefunding.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -141,11 +148,12 @@ public class ExtendedEventType2Code extends ExtendedEventTypeV2Code {
 	 * name} = "PartialDefeasance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialDefeasance = new MMCode() {
+	public static final ExtendedEventType2Code PartialDefeasance = new ExtendedEventType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialDefeasance";
-			owner_lazy = () -> ExtendedEventType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType2Code.mmObject();
+			codeName = ExtendedEventTypeV2Code.PartialDefeasance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -164,11 +172,12 @@ public class ExtendedEventType2Code extends ExtendedEventTypeV2Code {
 	 * name} = "PartialMandatoryPut"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialMandatoryPut = new MMCode() {
+	public static final ExtendedEventType2Code PartialMandatoryPut = new ExtendedEventType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialMandatoryPut";
-			owner_lazy = () -> ExtendedEventType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType2Code.mmObject();
+			codeName = ExtendedEventTypeV2Code.PartialMandatoryPut.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -187,11 +196,12 @@ public class ExtendedEventType2Code extends ExtendedEventTypeV2Code {
 	 * name} = "PartialPrerefunding"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialPrerefunding = new MMCode() {
+	public static final ExtendedEventType2Code PartialPrerefunding = new ExtendedEventType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialPrerefunding";
-			owner_lazy = () -> ExtendedEventType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType2Code.mmObject();
+			codeName = ExtendedEventTypeV2Code.PartialPrerefunding.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -210,11 +220,12 @@ public class ExtendedEventType2Code extends ExtendedEventTypeV2Code {
 	 * name} = "RightsPlanAdoption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRightsPlanAdoption = new MMCode() {
+	public static final ExtendedEventType2Code RightsPlanAdoption = new ExtendedEventType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsPlanAdoption";
-			owner_lazy = () -> ExtendedEventType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType2Code.mmObject();
+			codeName = ExtendedEventTypeV2Code.RightsPlanAdoption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -233,26 +244,64 @@ public class ExtendedEventType2Code extends ExtendedEventTypeV2Code {
 	 * name} = "Termination"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTermination = new MMCode() {
+	public static final ExtendedEventType2Code Termination = new ExtendedEventType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Termination";
-			owner_lazy = () -> ExtendedEventType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType2Code.mmObject();
+			codeName = ExtendedEventTypeV2Code.Termination.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ExtendedEventType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ExtendedEventType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExtendedEventType2Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined corporate action event type.";
-				code_lazy = () -> Arrays.asList(ExtendedEventType2Code.mmBonusRightsIssue, ExtendedEventType2Code.mmFullPrerefunding, ExtendedEventType2Code.mmPartialDefeasance, ExtendedEventType2Code.mmPartialMandatoryPut,
-						ExtendedEventType2Code.mmPartialPrerefunding, ExtendedEventType2Code.mmRightsPlanAdoption, ExtendedEventType2Code.mmTermination);
 				trace_lazy = () -> ExtendedEventTypeV2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExtendedEventType2Code.BonusRightsIssue, com.tools20022.repository.codeset.ExtendedEventType2Code.FullPrerefunding,
+						com.tools20022.repository.codeset.ExtendedEventType2Code.PartialDefeasance, com.tools20022.repository.codeset.ExtendedEventType2Code.PartialMandatoryPut,
+						com.tools20022.repository.codeset.ExtendedEventType2Code.PartialPrerefunding, com.tools20022.repository.codeset.ExtendedEventType2Code.RightsPlanAdoption,
+						com.tools20022.repository.codeset.ExtendedEventType2Code.Termination);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BonusRightsIssue.getCodeName().get(), BonusRightsIssue);
+		codesByName.put(FullPrerefunding.getCodeName().get(), FullPrerefunding);
+		codesByName.put(PartialDefeasance.getCodeName().get(), PartialDefeasance);
+		codesByName.put(PartialMandatoryPut.getCodeName().get(), PartialMandatoryPut);
+		codesByName.put(PartialPrerefunding.getCodeName().get(), PartialPrerefunding);
+		codesByName.put(RightsPlanAdoption.getCodeName().get(), RightsPlanAdoption);
+		codesByName.put(Termination.getCodeName().get(), Termination);
+	}
+
+	public static ExtendedEventType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ExtendedEventType2Code[] values() {
+		ExtendedEventType2Code[] values = new ExtendedEventType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ExtendedEventType2Code> {
+		@Override
+		public ExtendedEventType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ExtendedEventType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

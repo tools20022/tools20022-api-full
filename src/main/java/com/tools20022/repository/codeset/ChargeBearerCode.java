@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ChargeBearerCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies which party(ies) will pay charges due for processing of the payment
@@ -33,19 +38,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeBearerCode#mmBorneByDebtor
- * ChargeBearerCode.mmBorneByDebtor}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeBearerCode#BorneByDebtor
+ * ChargeBearerCode.BorneByDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeBearerCode#mmBorneByCreditor
- * ChargeBearerCode.mmBorneByCreditor}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeBearerCode#mmShared
- * ChargeBearerCode.mmShared}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeBearerCode#BorneByCreditor
+ * ChargeBearerCode.BorneByCreditor}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeBearerCode#Shared
+ * ChargeBearerCode.Shared}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeBearerCode#Investor
+ * ChargeBearerCode.Investor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeBearerCode#mmInvestor
- * ChargeBearerCode.mmInvestor}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeBearerCode#mmIntermediary
- * ChargeBearerCode.mmIntermediary}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeBearerCode#Intermediary
+ * ChargeBearerCode.Intermediary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -58,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ChargeBearerCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ChargeBearerCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -102,12 +107,12 @@ public class ChargeBearerCode {
 	 * definition} = "All transaction charges are to be borne by the debtor."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBorneByDebtor = new MMCode() {
+	public static final ChargeBearerCode BorneByDebtor = new ChargeBearerCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BorneByDebtor";
 			definition = "All transaction charges are to be borne by the debtor.";
-			owner_lazy = () -> ChargeBearerCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeBearerCode.mmObject();
 			codeName = "OUR";
 		}
 	};
@@ -132,12 +137,12 @@ public class ChargeBearerCode {
 	 * definition} = "All transaction charges are to be borne by the creditor."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBorneByCreditor = new MMCode() {
+	public static final ChargeBearerCode BorneByCreditor = new ChargeBearerCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BorneByCreditor";
 			definition = "All transaction charges are to be borne by the creditor.";
-			owner_lazy = () -> ChargeBearerCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeBearerCode.mmObject();
 			codeName = "BEN";
 		}
 	};
@@ -166,12 +171,12 @@ public class ChargeBearerCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmShared = new MMCode() {
+	public static final ChargeBearerCode Shared = new ChargeBearerCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Shared";
 			definition = "Under the credit transfer scenario, transaction charges on the sender's side are to be borne by the debtor; transaction charges on the receiver's side are to be borne by the creditor.";
-			owner_lazy = () -> ChargeBearerCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeBearerCode.mmObject();
 			codeName = "SHA";
 		}
 	};
@@ -196,12 +201,12 @@ public class ChargeBearerCode {
 	 * definition} = "All charges are to be borne by the investor."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestor = new MMCode() {
+	public static final ChargeBearerCode Investor = new ChargeBearerCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Investor";
 			definition = "All charges are to be borne by the investor.";
-			owner_lazy = () -> ChargeBearerCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeBearerCode.mmObject();
 			codeName = "INVR";
 		}
 	};
@@ -226,28 +231,62 @@ public class ChargeBearerCode {
 	 * definition} = "All charges are to be borne by the intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntermediary = new MMCode() {
+	public static final ChargeBearerCode Intermediary = new ChargeBearerCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Intermediary";
 			definition = "All charges are to be borne by the intermediary.";
-			owner_lazy = () -> ChargeBearerCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeBearerCode.mmObject();
 			codeName = "INTR";
 		}
 	};
+	final static private LinkedHashMap<String, ChargeBearerCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ChargeBearerCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("OUR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeBearerCode";
 				definition = "Specifies which party(ies) will pay charges due for processing of the payment transaction.";
-				code_lazy = () -> Arrays.asList(ChargeBearerCode.mmBorneByDebtor, ChargeBearerCode.mmBorneByCreditor, ChargeBearerCode.mmShared, ChargeBearerCode.mmInvestor, ChargeBearerCode.mmIntermediary);
 				derivation_lazy = () -> Arrays.asList(ChargeBearer1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeBearerCode.BorneByDebtor, com.tools20022.repository.codeset.ChargeBearerCode.BorneByCreditor,
+						com.tools20022.repository.codeset.ChargeBearerCode.Shared, com.tools20022.repository.codeset.ChargeBearerCode.Investor, com.tools20022.repository.codeset.ChargeBearerCode.Intermediary);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BorneByDebtor.getCodeName().get(), BorneByDebtor);
+		codesByName.put(BorneByCreditor.getCodeName().get(), BorneByCreditor);
+		codesByName.put(Shared.getCodeName().get(), Shared);
+		codesByName.put(Investor.getCodeName().get(), Investor);
+		codesByName.put(Intermediary.getCodeName().get(), Intermediary);
+	}
+
+	public static ChargeBearerCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ChargeBearerCode[] values() {
+		ChargeBearerCode[] values = new ChargeBearerCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ChargeBearerCode> {
+		@Override
+		public ChargeBearerCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ChargeBearerCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AlgorithmCode;
+import com.tools20022.repository.codeset.Algorithm8Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Mask generator functions of the RSAES-OAEP encryption algorithm (RSA
@@ -31,19 +35,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AlgorithmCode AlgorithmCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm8Code#mmMGF1
- * Algorithm8Code.mmMGF1}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm8Code#MGF1
+ * Algorithm8Code.MGF1}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode AlgorithmCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -62,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class Algorithm8Code extends AlgorithmCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Algorithm8Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -81,26 +86,56 @@ public class Algorithm8Code extends AlgorithmCode {
 	 * name} = "MGF1"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMGF1 = new MMCode() {
+	public static final Algorithm8Code MGF1 = new Algorithm8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MGF1";
-			owner_lazy = () -> Algorithm8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm8Code.mmObject();
+			codeName = AlgorithmCode.MGF1.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Algorithm8Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Algorithm8Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MGF1");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Algorithm8Code";
 				definition = "Mask generator functions of the RSAES-OAEP encryption algorithm (RSA Encryption Scheme: Optimal Asymmetric Encryption Padding).";
-				code_lazy = () -> Arrays.asList(Algorithm8Code.mmMGF1);
 				trace_lazy = () -> AlgorithmCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm8Code.MGF1);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(MGF1.getCodeName().get(), MGF1);
+	}
+
+	public static Algorithm8Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Algorithm8Code[] values() {
+		Algorithm8Code[] values = new Algorithm8Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Algorithm8Code> {
+		@Override
+		public Algorithm8Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Algorithm8Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +28,7 @@ import com.tools20022.repository.msg.NoSpecifiedReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of format for the processing status."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ProcessingStatus11Choice", propOrder = {"acknowledgedAccepted", "rejected", "completed", "denied", "proprietary", "pending"})
 public class ProcessingStatus11Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AckdAccptd", required = true)
 	protected AcknowledgedAcceptedStatus6Choice acknowledgedAccepted;
 	/**
-	 * Request has been acknowledged by the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -108,6 +111,9 @@ public class ProcessingStatus11Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AckdAccptd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::TPRC//PACK</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -121,9 +127,10 @@ public class ProcessingStatus11Choice {
 	public static final MMMessageAssociationEnd mmAcknowledgedAccepted = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
-			componentContext_lazy = () -> ProcessingStatus11Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AckdAccptd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::TPRC//PACK"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
 			definition = "Request has been acknowledged by the account servicer.";
@@ -133,10 +140,11 @@ public class ProcessingStatus11Choice {
 			type_lazy = () -> com.tools20022.repository.choice.AcknowledgedAcceptedStatus6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Rjctd", required = true)
 	protected RejectionOrRepairStatus9Choice rejected;
 	/**
-	 * Modification Request has been rejected for further processing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -156,6 +164,9 @@ public class ProcessingStatus11Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Rjctd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::TPRC//REJT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -170,9 +181,10 @@ public class ProcessingStatus11Choice {
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
-			componentContext_lazy = () -> ProcessingStatus11Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::TPRC//REJT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Modification Request has been rejected for further processing.";
@@ -182,10 +194,11 @@ public class ProcessingStatus11Choice {
 			type_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus9Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Cmpltd", required = true)
 	protected NoSpecifiedReason1 completed;
 	/**
-	 * Modification request was completed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -217,7 +230,7 @@ public class ProcessingStatus11Choice {
 	public static final MMMessageAssociationEnd mmCompleted = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-			componentContext_lazy = () -> ProcessingStatus11Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cmpltd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,10 +242,11 @@ public class ProcessingStatus11Choice {
 			type_lazy = () -> NoSpecifiedReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "Dnd", required = true)
 	protected DeniedStatus4Choice denied;
 	/**
-	 * Modification request will not be executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -264,7 +278,7 @@ public class ProcessingStatus11Choice {
 	public static final MMMessageAssociationEnd mmDenied = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmDeniedReason;
-			componentContext_lazy = () -> ProcessingStatus11Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dnd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,11 +290,11 @@ public class ProcessingStatus11Choice {
 			type_lazy = () -> com.tools20022.repository.choice.DeniedStatus4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected ProprietaryStatusAndReason2 proprietary;
 	/**
-	 * Status that cannot be reported using one of the available standard
-	 * status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -300,6 +314,9 @@ public class ProcessingStatus11Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Prtry"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::TPRC/4!c[4c]/4!c</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -315,9 +332,10 @@ public class ProcessingStatus11Choice {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-			componentContext_lazy = () -> ProcessingStatus11Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::TPRC/4!c[4c]/4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Status that cannot be reported using one of the available standard status.";
@@ -327,11 +345,11 @@ public class ProcessingStatus11Choice {
 			type_lazy = () -> ProprietaryStatusAndReason2.mmObject();
 		}
 	};
+	@XmlElement(name = "Pdg", required = true)
 	protected PendingStatus7Choice pending;
 	/**
-	 * Modification is pending. It is not known at this time whether
-	 * modification can be affected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -351,6 +369,9 @@ public class ProcessingStatus11Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Pdg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::IPRC//PPRC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -366,9 +387,10 @@ public class ProcessingStatus11Choice {
 	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
-			componentContext_lazy = () -> ProcessingStatus11Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::IPRC//PPRC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Modification is pending. It is not known at this time whether modification can be affected.";
@@ -382,10 +404,11 @@ public class ProcessingStatus11Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProcessingStatus11Choice.mmAcknowledgedAccepted, ProcessingStatus11Choice.mmRejected, ProcessingStatus11Choice.mmCompleted, ProcessingStatus11Choice.mmDenied,
-						ProcessingStatus11Choice.mmProprietary, ProcessingStatus11Choice.mmPending);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingStatus11Choice.mmAcknowledgedAccepted, com.tools20022.repository.choice.ProcessingStatus11Choice.mmRejected,
+						com.tools20022.repository.choice.ProcessingStatus11Choice.mmCompleted, com.tools20022.repository.choice.ProcessingStatus11Choice.mmDenied, com.tools20022.repository.choice.ProcessingStatus11Choice.mmProprietary,
+						com.tools20022.repository.choice.ProcessingStatus11Choice.mmPending);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingStatus11Choice";
 				definition = "Choice of format for the processing status.";
@@ -394,57 +417,57 @@ public class ProcessingStatus11Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AckdAccptd", required = true)
 	public AcknowledgedAcceptedStatus6Choice getAcknowledgedAccepted() {
 		return acknowledgedAccepted;
 	}
 
-	public void setAcknowledgedAccepted(com.tools20022.repository.choice.AcknowledgedAcceptedStatus6Choice acknowledgedAccepted) {
-		this.acknowledgedAccepted = acknowledgedAccepted;
+	public ProcessingStatus11Choice setAcknowledgedAccepted(com.tools20022.repository.choice.AcknowledgedAcceptedStatus6Choice acknowledgedAccepted) {
+		this.acknowledgedAccepted = Objects.requireNonNull(acknowledgedAccepted);
+		return this;
 	}
 
-	@XmlElement(name = "Rjctd", required = true)
 	public RejectionOrRepairStatus9Choice getRejected() {
 		return rejected;
 	}
 
-	public void setRejected(com.tools20022.repository.choice.RejectionOrRepairStatus9Choice rejected) {
-		this.rejected = rejected;
+	public ProcessingStatus11Choice setRejected(com.tools20022.repository.choice.RejectionOrRepairStatus9Choice rejected) {
+		this.rejected = Objects.requireNonNull(rejected);
+		return this;
 	}
 
-	@XmlElement(name = "Cmpltd", required = true)
 	public NoSpecifiedReason1 getCompleted() {
 		return completed;
 	}
 
-	public void setCompleted(NoSpecifiedReason1 completed) {
-		this.completed = completed;
+	public ProcessingStatus11Choice setCompleted(NoSpecifiedReason1 completed) {
+		this.completed = Objects.requireNonNull(completed);
+		return this;
 	}
 
-	@XmlElement(name = "Dnd", required = true)
 	public DeniedStatus4Choice getDenied() {
 		return denied;
 	}
 
-	public void setDenied(com.tools20022.repository.choice.DeniedStatus4Choice denied) {
-		this.denied = denied;
+	public ProcessingStatus11Choice setDenied(com.tools20022.repository.choice.DeniedStatus4Choice denied) {
+		this.denied = Objects.requireNonNull(denied);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryStatusAndReason2 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(ProprietaryStatusAndReason2 proprietary) {
-		this.proprietary = proprietary;
+	public ProcessingStatus11Choice setProprietary(ProprietaryStatusAndReason2 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 
-	@XmlElement(name = "Pdg", required = true)
 	public PendingStatus7Choice getPending() {
 		return pending;
 	}
 
-	public void setPending(com.tools20022.repository.choice.PendingStatus7Choice pending) {
-		this.pending = pending;
+	public ProcessingStatus11Choice setPending(com.tools20022.repository.choice.PendingStatus7Choice pending) {
+		this.pending = Objects.requireNonNull(pending);
+		return this;
 	}
 }

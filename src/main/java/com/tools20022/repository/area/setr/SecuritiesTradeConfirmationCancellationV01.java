@@ -29,9 +29,8 @@ import com.tools20022.repository.msg.TransactiontIdentification4;
 import com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeMatchingISOPreviousversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -56,25 +55,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
- * SecuritiesTradeLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeMatchingISOPreviousversion
- * PostTradeMatchingISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion
- * PostTradeMatchingISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SctiesTradConfCxl"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -93,6 +73,25 @@ import javax.xml.bind.annotation.*;
  * SecuritiesTradeConfirmationCancellationV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeMatchingISOPreviousversion
+ * PostTradeMatchingISOPreviousversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion
+ * PostTradeMatchingISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SctiesTradConfCxl"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
+ * SecuritiesTradeLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code setr.029.001.01}</li>
@@ -108,17 +107,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesTradeConfirmationCancellationV01", propOrder = {"identification", "references", "otherBusinessParties", "supplementaryData"})
 public class SecuritiesTradeConfirmationCancellationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected TransactiontIdentification4 identification;
 	/**
-	 * Information that unambiguously identifies an
-	 * SecuritiesTradeConfirmationCancellation message as known by the account
-	 * owner (or the instructing party acting on its behalf).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,11 +158,11 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 			}
 		}
 	};
+	@XmlElement(name = "Refs")
 	protected List<Linkages15> references;
 	/**
-	 * Link to another transaction that must be processed after, before or at
-	 * the same time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,13 +202,11 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrBizPties")
 	protected OtherParties18 otherBusinessParties;
 	/**
-	 * Chain of parties involved in the settlement of a transaction, including
-	 * receipts and deliveries, book transfers, treasury deals, or other
-	 * activities, resulting in the movement of a security or amount of money
-	 * from one account to another.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,11 +247,11 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -328,43 +324,43 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public TransactiontIdentification4 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(TransactiontIdentification4 identification) {
-		this.identification = identification;
+	public SecuritiesTradeConfirmationCancellationV01 setIdentification(TransactiontIdentification4 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Refs")
 	public List<Linkages15> getReferences() {
-		return references;
+		return references == null ? references = new ArrayList<>() : references;
 	}
 
-	public void setReferences(List<Linkages15> references) {
-		this.references = references;
+	public SecuritiesTradeConfirmationCancellationV01 setReferences(List<Linkages15> references) {
+		this.references = Objects.requireNonNull(references);
+		return this;
 	}
 
-	@XmlElement(name = "OthrBizPties")
-	public OtherParties18 getOtherBusinessParties() {
-		return otherBusinessParties;
+	public Optional<OtherParties18> getOtherBusinessParties() {
+		return otherBusinessParties == null ? Optional.empty() : Optional.of(otherBusinessParties);
 	}
 
-	public void setOtherBusinessParties(OtherParties18 otherBusinessParties) {
+	public SecuritiesTradeConfirmationCancellationV01 setOtherBusinessParties(OtherParties18 otherBusinessParties) {
 		this.otherBusinessParties = otherBusinessParties;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecuritiesTradeConfirmationCancellationV01 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.029.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:setr.029.001.01")
 	static public class Document {
 		@XmlElement(name = "SctiesTradConfCxl", required = true)
 		public SecuritiesTradeConfirmationCancellationV01 messageBody;

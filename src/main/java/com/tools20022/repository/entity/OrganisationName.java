@@ -26,6 +26,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Name by which an organisation is known and which is usually used to identify
@@ -37,6 +39,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.PartyName
+ * PartyName}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -54,9 +59,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * OrganisationName.mmShortName}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.PartyName
- * PartyName}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmOrganisationName
+ * OrganisationIdentification.mmOrganisationName}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -68,19 +79,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.OrganisationIdentification#mmOrganisationName
- * OrganisationIdentification.mmOrganisationName}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,8 +100,8 @@ public class OrganisationName extends PartyName {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected OrganisationIdentification organisation;
 	/**
-	 * Organisation identification which contains a name.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,8 +135,8 @@ public class OrganisationName extends PartyName {
 	 */
 	public static final MMBusinessAssociationEnd mmOrganisation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Organisation";
 			definition = "Organisation identification which contains a name.";
@@ -147,8 +149,8 @@ public class OrganisationName extends PartyName {
 	};
 	protected Max35Text legalName;
 	/**
-	 * Official name under which an organisation is registered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,8 +203,8 @@ public class OrganisationName extends PartyName {
 		{
 			derivation_lazy = () -> Arrays.asList(Organisation6.mmFullLegalName, Organisation12.mmFullLegalName, Organisation14.mmFullLegalName, FullLegalNameModification1.mmFullLegalName, OrganisationModification1.mmFullLegalName,
 					Organisation7.mmFullLegalName, PartyIdentification58.mmLegalName);
-			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LegalName";
 			definition = "Official name under which an organisation is registered.";
@@ -221,10 +223,8 @@ public class OrganisationName extends PartyName {
 	};
 	protected Max350Text tradingName;
 	/**
-	 * Name used by a business for commercial purposes, although its registered
-	 * legal name, used for contracts and other formal situations, may be
-	 * another.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -272,8 +272,8 @@ public class OrganisationName extends PartyName {
 	public static final MMBusinessAttribute mmTradingName = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Organisation6.mmTradingName, Organisation12.mmTradingName, TradingNameModification1.mmTradingName, OrganisationModification1.mmTradingName, Organisation7.mmTradingName);
-			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingName";
 			definition = "Name used by a business for commercial purposes, although its registered legal name, used for contracts and other formal situations, may be another.";
@@ -292,8 +292,8 @@ public class OrganisationName extends PartyName {
 	};
 	protected Max35Text shortName;
 	/**
-	 * Specifies the short name of the organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -395,8 +395,8 @@ public class OrganisationName extends PartyName {
 					GenericIdentification75.mmShortName, GenericIdentification76.mmShortName, GenericIdentification77.mmShortName, Organisation18.mmCommonName, Organisation19.mmCommonName, Organisation22.mmShortName,
 					Organisation23.mmShortName, Organisation24.mmShortName, GenericIdentification94.mmShortName, GenericIdentification90.mmShortName, GenericIdentification93.mmShortName, GenericIdentification92.mmShortName,
 					Organisation30.mmShortName, Organisation29.mmShortName);
-			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ShortName";
 			definition = "Specifies the short name of the organisation.";
@@ -417,7 +417,7 @@ public class OrganisationName extends PartyName {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrganisationName";
 				definition = "Name by which an organisation is known and which is usually used to identify that organisation.";
@@ -436,35 +436,39 @@ public class OrganisationName extends PartyName {
 		return mmObject_lazy.get();
 	}
 
-	public OrganisationIdentification getOrganisation() {
-		return organisation;
+	public Optional<OrganisationIdentification> getOrganisation() {
+		return organisation == null ? Optional.empty() : Optional.of(organisation);
 	}
 
-	public void setOrganisation(com.tools20022.repository.entity.OrganisationIdentification organisation) {
+	public OrganisationName setOrganisation(com.tools20022.repository.entity.OrganisationIdentification organisation) {
 		this.organisation = organisation;
+		return this;
 	}
 
 	public Max35Text getLegalName() {
 		return legalName;
 	}
 
-	public void setLegalName(Max35Text legalName) {
-		this.legalName = legalName;
+	public OrganisationName setLegalName(Max35Text legalName) {
+		this.legalName = Objects.requireNonNull(legalName);
+		return this;
 	}
 
 	public Max350Text getTradingName() {
 		return tradingName;
 	}
 
-	public void setTradingName(Max350Text tradingName) {
-		this.tradingName = tradingName;
+	public OrganisationName setTradingName(Max350Text tradingName) {
+		this.tradingName = Objects.requireNonNull(tradingName);
+		return this;
 	}
 
 	public Max35Text getShortName() {
 		return shortName;
 	}
 
-	public void setShortName(Max35Text shortName) {
-		this.shortName = shortName;
+	public OrganisationName setShortName(Max35Text shortName) {
+		this.shortName = Objects.requireNonNull(shortName);
+		return this;
 	}
 }

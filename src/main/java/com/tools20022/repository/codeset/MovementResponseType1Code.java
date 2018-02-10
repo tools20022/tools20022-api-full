@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.MovementResponseTypeCode;
+import com.tools20022.repository.codeset.MovementResponseType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of movement response to be returned.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.MovementResponseTypeCode
- * MovementResponseTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MovementResponseType1Code#mmFull
- * MovementResponseType1Code.mmFull}</li>
+ * {@linkplain com.tools20022.repository.codeset.MovementResponseType1Code#Full
+ * MovementResponseType1Code.Full}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MovementResponseType1Code#mmStatus
- * MovementResponseType1Code.mmStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.MovementResponseType1Code#Status
+ * MovementResponseType1Code.Status}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.MovementResponseTypeCode
+ * MovementResponseTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of movement response to be returned."</li>
  * </ul>
  */
-public class MovementResponseType1Code extends MovementResponseTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MovementResponseType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class MovementResponseType1Code extends MovementResponseTypeCode {
 	 * name} = "Full"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFull = new MMCode() {
+	public static final MovementResponseType1Code Full = new MovementResponseType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Full";
-			owner_lazy = () -> MovementResponseType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MovementResponseType1Code.mmObject();
+			codeName = MovementResponseTypeCode.Full.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class MovementResponseType1Code extends MovementResponseTypeCode {
 	 * name} = "Status"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStatus = new MMCode() {
+	public static final MovementResponseType1Code Status = new MovementResponseType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
-			owner_lazy = () -> MovementResponseType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MovementResponseType1Code.mmObject();
+			codeName = MovementResponseTypeCode.Status.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, MovementResponseType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MovementResponseType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FULL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MovementResponseType1Code";
 				definition = "Specifies the type of movement response to be returned.";
-				code_lazy = () -> Arrays.asList(MovementResponseType1Code.mmFull, MovementResponseType1Code.mmStatus);
 				trace_lazy = () -> MovementResponseTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MovementResponseType1Code.Full, com.tools20022.repository.codeset.MovementResponseType1Code.Status);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Full.getCodeName().get(), Full);
+		codesByName.put(Status.getCodeName().get(), Status);
+	}
+
+	public static MovementResponseType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MovementResponseType1Code[] values() {
+		MovementResponseType1Code[] values = new MovementResponseType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MovementResponseType1Code> {
+		@Override
+		public MovementResponseType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MovementResponseType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

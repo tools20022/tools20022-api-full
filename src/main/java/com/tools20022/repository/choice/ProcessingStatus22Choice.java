@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +28,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,15 +93,16 @@ import javax.xml.bind.annotation.XmlType;
  * ProcessingStatus4Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ProcessingStatus22Choice", propOrder = {"acknowledgedAccepted", "rejected", "proprietary"})
 public class ProcessingStatus22Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AckdAccptd", required = true)
 	protected AcknowledgedAcceptedStatus12Choice acknowledgedAccepted;
 	/**
-	 * Instruction has been acknowledged by the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -118,6 +121,9 @@ public class ProcessingStatus22Choice {
 	 * ProcessingStatus22Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AckdAccptd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::SPRC//PACK</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -141,9 +147,10 @@ public class ProcessingStatus22Choice {
 	public static final MMMessageAssociationEnd mmAcknowledgedAccepted = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
-			componentContext_lazy = () -> ProcessingStatus22Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus22Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AckdAccptd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::SPRC//PACK"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
 			definition = "Instruction has been acknowledged by the account servicer.";
@@ -154,10 +161,11 @@ public class ProcessingStatus22Choice {
 			type_lazy = () -> com.tools20022.repository.choice.AcknowledgedAcceptedStatus12Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Rjctd", required = true)
 	protected RejectionOrRepairStatus18Choice rejected;
 	/**
-	 * Instruction/Request has been rejected for further processing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -176,6 +184,9 @@ public class ProcessingStatus22Choice {
 	 * ProcessingStatus22Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Rjctd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::SPRC//REJT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -199,9 +210,10 @@ public class ProcessingStatus22Choice {
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
-			componentContext_lazy = () -> ProcessingStatus22Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus22Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::SPRC//REJT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Instruction/Request has been rejected for further processing.";
@@ -212,11 +224,11 @@ public class ProcessingStatus22Choice {
 			type_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus18Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected ProprietaryStatusAndReason1 proprietary;
 	/**
-	 * Status that cannot be reported using one of the available standard
-	 * status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -235,6 +247,9 @@ public class ProcessingStatus22Choice {
 	 * ProcessingStatus22Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Prtry"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::SPRC/4!c[4c]/4!c</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -259,9 +274,10 @@ public class ProcessingStatus22Choice {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-			componentContext_lazy = () -> ProcessingStatus22Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus22Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::SPRC/4!c[4c]/4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Status that cannot be reported using one of the available standard status.";
@@ -276,10 +292,11 @@ public class ProcessingStatus22Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProcessingStatus22Choice.mmAcknowledgedAccepted, ProcessingStatus22Choice.mmRejected, ProcessingStatus22Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingStatus22Choice.mmAcknowledgedAccepted, com.tools20022.repository.choice.ProcessingStatus22Choice.mmRejected,
+						com.tools20022.repository.choice.ProcessingStatus22Choice.mmProprietary);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesStatusOrStatementQueryStatusAdviceV03.mmProcessingStatus);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingStatus22Choice";
 				definition = "Choice of format for the processing status.";
@@ -290,30 +307,30 @@ public class ProcessingStatus22Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AckdAccptd", required = true)
 	public AcknowledgedAcceptedStatus12Choice getAcknowledgedAccepted() {
 		return acknowledgedAccepted;
 	}
 
-	public void setAcknowledgedAccepted(com.tools20022.repository.choice.AcknowledgedAcceptedStatus12Choice acknowledgedAccepted) {
-		this.acknowledgedAccepted = acknowledgedAccepted;
+	public ProcessingStatus22Choice setAcknowledgedAccepted(com.tools20022.repository.choice.AcknowledgedAcceptedStatus12Choice acknowledgedAccepted) {
+		this.acknowledgedAccepted = Objects.requireNonNull(acknowledgedAccepted);
+		return this;
 	}
 
-	@XmlElement(name = "Rjctd", required = true)
 	public RejectionOrRepairStatus18Choice getRejected() {
 		return rejected;
 	}
 
-	public void setRejected(com.tools20022.repository.choice.RejectionOrRepairStatus18Choice rejected) {
-		this.rejected = rejected;
+	public ProcessingStatus22Choice setRejected(com.tools20022.repository.choice.RejectionOrRepairStatus18Choice rejected) {
+		this.rejected = Objects.requireNonNull(rejected);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryStatusAndReason1 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(ProprietaryStatusAndReason1 proprietary) {
-		this.proprietary = proprietary;
+	public ProcessingStatus22Choice setProprietary(ProprietaryStatusAndReason1 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

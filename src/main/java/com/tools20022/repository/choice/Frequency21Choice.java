@@ -25,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FrequencyPeriod1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * Frequency11Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Frequency21Choice", propOrder = {"type", "period"})
 public class Frequency21Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected Frequency6Code type;
 	/**
-	 * Frequency expressed as an ISO 20022 code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +123,7 @@ public class Frequency21Choice {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Frequency21Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Frequency21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +136,11 @@ public class Frequency21Choice {
 			simpleType_lazy = () -> Frequency6Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prd", required = true)
 	protected FrequencyPeriod1 period;
 	/**
-	 * Frequency expressed as a proprietary code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,7 +181,7 @@ public class Frequency21Choice {
 	 */
 	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Frequency21Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Frequency21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,8 +198,8 @@ public class Frequency21Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Frequency21Choice.mmType, Frequency21Choice.mmPeriod);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Frequency21Choice.mmType, com.tools20022.repository.choice.Frequency21Choice.mmPeriod);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Frequency21Choice";
 				definition = "Choice of format for a frequency, for example, the frequency of payment.";
@@ -207,21 +210,21 @@ public class Frequency21Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public Frequency6Code getType() {
 		return type;
 	}
 
-	public void setType(Frequency6Code type) {
-		this.type = type;
+	public Frequency21Choice setType(Frequency6Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Prd", required = true)
 	public FrequencyPeriod1 getPeriod() {
 		return period;
 	}
 
-	public void setPeriod(FrequencyPeriod1 period) {
-		this.period = period;
+	public Frequency21Choice setPeriod(FrequencyPeriod1 period) {
+		this.period = Objects.requireNonNull(period);
+		return this;
 	}
 }

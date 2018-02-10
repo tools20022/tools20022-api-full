@@ -20,42 +20,45 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TimeUnitCode;
+import com.tools20022.repository.codeset.TimeUnit1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Unit of time associated with the contract.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TimeUnitCode TimeUnitCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TimeUnit1Code#mmCalendarDay
- * TimeUnit1Code.mmCalendarDay}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#mmHour
- * TimeUnit1Code.mmHour}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#mmMinute
- * TimeUnit1Code.mmMinute}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#mmMonth
- * TimeUnit1Code.mmMonth}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#mmSecond
- * TimeUnit1Code.mmSecond}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#mmWeek
- * TimeUnit1Code.mmWeek}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#mmYear
- * TimeUnit1Code.mmYear}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#CalendarDay
+ * TimeUnit1Code.CalendarDay}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#Hour
+ * TimeUnit1Code.Hour}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#Minute
+ * TimeUnit1Code.Minute}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#Month
+ * TimeUnit1Code.Month}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#Second
+ * TimeUnit1Code.Second}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#Week
+ * TimeUnit1Code.Week}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code#Year
+ * TimeUnit1Code.Year}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TimeUnitCode TimeUnitCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -72,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Unit of time associated with the contract."</li>
  * </ul>
  */
-public class TimeUnit1Code extends TimeUnitCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TimeUnit1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,11 +95,12 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 * name} = "CalendarDay"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCalendarDay = new MMCode() {
+	public static final TimeUnit1Code CalendarDay = new TimeUnit1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalendarDay";
-			owner_lazy = () -> TimeUnit1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TimeUnit1Code.mmObject();
+			codeName = TimeUnitCode.CalendarDay.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -114,11 +119,12 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 * name} = "Hour"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHour = new MMCode() {
+	public static final TimeUnit1Code Hour = new TimeUnit1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hour";
-			owner_lazy = () -> TimeUnit1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TimeUnit1Code.mmObject();
+			codeName = TimeUnitCode.Hour.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -137,11 +143,12 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 * name} = "Minute"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMinute = new MMCode() {
+	public static final TimeUnit1Code Minute = new TimeUnit1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Minute";
-			owner_lazy = () -> TimeUnit1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TimeUnit1Code.mmObject();
+			codeName = TimeUnitCode.Minute.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -160,11 +167,12 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 * name} = "Month"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMonth = new MMCode() {
+	public static final TimeUnit1Code Month = new TimeUnit1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Month";
-			owner_lazy = () -> TimeUnit1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TimeUnit1Code.mmObject();
+			codeName = TimeUnitCode.Month.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -183,11 +191,12 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 * name} = "Second"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecond = new MMCode() {
+	public static final TimeUnit1Code Second = new TimeUnit1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Second";
-			owner_lazy = () -> TimeUnit1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TimeUnit1Code.mmObject();
+			codeName = TimeUnitCode.Second.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -206,11 +215,12 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 * name} = "Week"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWeek = new MMCode() {
+	public static final TimeUnit1Code Week = new TimeUnit1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Week";
-			owner_lazy = () -> TimeUnit1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TimeUnit1Code.mmObject();
+			codeName = TimeUnitCode.Week.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -229,26 +239,64 @@ public class TimeUnit1Code extends TimeUnitCode {
 	 * name} = "Year"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmYear = new MMCode() {
+	public static final TimeUnit1Code Year = new TimeUnit1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Year";
-			owner_lazy = () -> TimeUnit1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TimeUnit1Code.mmObject();
+			codeName = TimeUnitCode.Year.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TimeUnit1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TimeUnit1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DAYC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TimeUnit1Code";
 				definition = "Unit of time associated with the contract.";
-				code_lazy = () -> Arrays.asList(TimeUnit1Code.mmCalendarDay, TimeUnit1Code.mmHour, TimeUnit1Code.mmMinute, TimeUnit1Code.mmMonth, TimeUnit1Code.mmSecond, TimeUnit1Code.mmWeek, TimeUnit1Code.mmYear);
 				trace_lazy = () -> TimeUnitCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TimeUnit1Code.CalendarDay, com.tools20022.repository.codeset.TimeUnit1Code.Hour, com.tools20022.repository.codeset.TimeUnit1Code.Minute,
+						com.tools20022.repository.codeset.TimeUnit1Code.Month, com.tools20022.repository.codeset.TimeUnit1Code.Second, com.tools20022.repository.codeset.TimeUnit1Code.Week,
+						com.tools20022.repository.codeset.TimeUnit1Code.Year);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CalendarDay.getCodeName().get(), CalendarDay);
+		codesByName.put(Hour.getCodeName().get(), Hour);
+		codesByName.put(Minute.getCodeName().get(), Minute);
+		codesByName.put(Month.getCodeName().get(), Month);
+		codesByName.put(Second.getCodeName().get(), Second);
+		codesByName.put(Week.getCodeName().get(), Week);
+		codesByName.put(Year.getCodeName().get(), Year);
+	}
+
+	public static TimeUnit1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TimeUnit1Code[] values() {
+		TimeUnit1Code[] values = new TimeUnit1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TimeUnit1Code> {
+		@Override
+		public TimeUnit1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TimeUnit1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

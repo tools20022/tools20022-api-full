@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.AmountPrice1;
 import com.tools20022.repository.msg.PriceRate1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of formats to express a price."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PriceFormat4Choice", propOrder = {"amount", "rate", "notSpecified", "indexPoints"})
 public class PriceFormat4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected AmountPrice1 amount;
 	/**
-	 * Price expressed as a currency and amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +116,7 @@ public class PriceFormat4Choice {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Price.mmAmount;
-			componentContext_lazy = () -> PriceFormat4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +127,11 @@ public class PriceFormat4Choice {
 			complexType_lazy = () -> AmountPrice1.mmObject();
 		}
 	};
+	@XmlElement(name = "Rate", required = true)
 	protected PriceRate1 rate;
 	/**
-	 * Price expressed as a rate, ie, percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +164,7 @@ public class PriceFormat4Choice {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
-			componentContext_lazy = () -> PriceFormat4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,10 +175,11 @@ public class PriceFormat4Choice {
 			complexType_lazy = () -> PriceRate1.mmObject();
 		}
 	};
+	@XmlElement(name = "NotSpcfd", required = true)
 	protected PriceValueType5FormatChoice notSpecified;
 	/**
-	 * The value of the price is not specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,7 +207,7 @@ public class PriceFormat4Choice {
 	 */
 	public static final MMMessageAttribute mmNotSpecified = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PriceFormat4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,10 +218,11 @@ public class PriceFormat4Choice {
 			complexType_lazy = () -> com.tools20022.repository.choice.PriceValueType5FormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "IndxPts", required = true)
 	protected DecimalNumber indexPoints;
 	/**
-	 * Price expressed as index points.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,7 +256,7 @@ public class PriceFormat4Choice {
 	public static final MMMessageAttribute mmIndexPoints = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIndexPoints;
-			componentContext_lazy = () -> PriceFormat4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndxPts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,9 +271,10 @@ public class PriceFormat4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PriceFormat4Choice.mmAmount, PriceFormat4Choice.mmRate, PriceFormat4Choice.mmNotSpecified, PriceFormat4Choice.mmIndexPoints);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormat4Choice.mmAmount, com.tools20022.repository.choice.PriceFormat4Choice.mmRate,
+						com.tools20022.repository.choice.PriceFormat4Choice.mmNotSpecified, com.tools20022.repository.choice.PriceFormat4Choice.mmIndexPoints);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceFormat4Choice";
 				definition = "Choice of formats to express a price.";
@@ -277,39 +283,39 @@ public class PriceFormat4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public AmountPrice1 getAmount() {
 		return amount;
 	}
 
-	public void setAmount(AmountPrice1 amount) {
-		this.amount = amount;
+	public PriceFormat4Choice setAmount(AmountPrice1 amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "Rate", required = true)
 	public PriceRate1 getRate() {
 		return rate;
 	}
 
-	public void setRate(PriceRate1 rate) {
-		this.rate = rate;
+	public PriceFormat4Choice setRate(PriceRate1 rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 
-	@XmlElement(name = "NotSpcfd", required = true)
 	public PriceValueType5FormatChoice getNotSpecified() {
 		return notSpecified;
 	}
 
-	public void setNotSpecified(com.tools20022.repository.choice.PriceValueType5FormatChoice notSpecified) {
-		this.notSpecified = notSpecified;
+	public PriceFormat4Choice setNotSpecified(com.tools20022.repository.choice.PriceValueType5FormatChoice notSpecified) {
+		this.notSpecified = Objects.requireNonNull(notSpecified);
+		return this;
 	}
 
-	@XmlElement(name = "IndxPts", required = true)
 	public DecimalNumber getIndexPoints() {
 		return indexPoints;
 	}
 
-	public void setIndexPoints(DecimalNumber indexPoints) {
-		this.indexPoints = indexPoints;
+	public PriceFormat4Choice setIndexPoints(DecimalNumber indexPoints) {
+		this.indexPoints = Objects.requireNonNull(indexPoints);
+		return this;
 	}
 }

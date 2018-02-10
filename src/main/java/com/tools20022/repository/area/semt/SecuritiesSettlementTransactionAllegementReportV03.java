@@ -29,9 +29,8 @@ import com.tools20022.repository.msg.SecuritiesTradeDetails23;
 import com.tools20022.repository.msg.Statement17;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -61,20 +60,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
- * SecuritiesManagementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SctiesSttlmTxAllgmtRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -97,9 +82,44 @@ import javax.xml.bind.annotation.*;
  * SecuritiesSettlementTransactionAllegementReportV03.mmAllegementDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SctiesSttlmTxAllgmtRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
+ * SecuritiesManagementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code semt.019.001.03}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1#forSecuritiesSettlementTransactionAllegementReportV03
+ * ConstraintAllegementDetailsActivityRule1.
+ * forSecuritiesSettlementTransactionAllegementReportV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule2#forSecuritiesSettlementTransactionAllegementReportV03
+ * ConstraintAllegementDetailsActivityRule2.
+ * forSecuritiesSettlementTransactionAllegementReportV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesSettlementTransactionAllegementReportV03
+ * ConstraintCoexistenceCharacterSetXRule.
+ * forSecuritiesSettlementTransactionAllegementReportV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesSettlementTransactionAllegementReportV03
+ * ConstraintCoexistenceIdentificationRule.
+ * forSecuritiesSettlementTransactionAllegementReportV03}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -124,17 +144,16 @@ import javax.xml.bind.annotation.*;
  * SecuritiesSettlementTransactionAllegementReportV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesSettlementTransactionAllegementReportV03", propOrder = {"pagination", "statementGeneralDetails", "accountOwner", "safekeepingAccount", "allegementDetails"})
 public class SecuritiesSettlementTransactionAllegementReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pgntn", required = true)
 	protected Pagination pagination;
 	/**
-	 * Page number of the message (within a statement) and continuation
-	 * indicator to indicate that the statement is to continue or that the
-	 * message is the last page of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -184,10 +203,11 @@ public class SecuritiesSettlementTransactionAllegementReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "StmtGnlDtls", required = true)
 	protected Statement17 statementGeneralDetails;
 	/**
-	 * General information related to report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,10 +256,11 @@ public class SecuritiesSettlementTransactionAllegementReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification36Choice accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -288,10 +309,11 @@ public class SecuritiesSettlementTransactionAllegementReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SfkpgAcct", required = true)
 	protected SecuritiesAccount13 safekeepingAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -340,10 +362,11 @@ public class SecuritiesSettlementTransactionAllegementReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "AllgmtDtls")
 	protected List<SecuritiesTradeDetails23> allegementDetails;
 	/**
-	 * Details of the allegement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -395,6 +418,10 @@ public class SecuritiesSettlementTransactionAllegementReportV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1.forSecuritiesSettlementTransactionAllegementReportV03,
+						com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule2.forSecuritiesSettlementTransactionAllegementReportV03,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionAllegementReportV03,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionAllegementReportV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionAllegementReportV03";
 				definition = "Scope\nAn account servicer sends a SecuritiesSettlementTransactionAllegementReport to an account owner to provide, at a specified time, the status and details of pending settlement allegements, for all or selected securities in a specified safekeeping account.\nThe account servicer/owner relationship may be:\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\n\nUsage\nThe message may also be used to:\n- re-send a message previously sent,\n- provide a third party with a copy of a message for information,\n- re-send to a third party a copy of a message for information\nusing the relevant elements in the Business Application Header.\n\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
@@ -426,52 +453,52 @@ public class SecuritiesSettlementTransactionAllegementReportV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
 
-	public void setPagination(Pagination pagination) {
-		this.pagination = pagination;
+	public SecuritiesSettlementTransactionAllegementReportV03 setPagination(Pagination pagination) {
+		this.pagination = Objects.requireNonNull(pagination);
+		return this;
 	}
 
-	@XmlElement(name = "StmtGnlDtls", required = true)
 	public Statement17 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
 
-	public void setStatementGeneralDetails(Statement17 statementGeneralDetails) {
-		this.statementGeneralDetails = statementGeneralDetails;
+	public SecuritiesSettlementTransactionAllegementReportV03 setStatementGeneralDetails(Statement17 statementGeneralDetails) {
+		this.statementGeneralDetails = Objects.requireNonNull(statementGeneralDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification36Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification36Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification36Choice accountOwner) {
+	public SecuritiesSettlementTransactionAllegementReportV03 setAccountOwner(PartyIdentification36Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
 
-	public void setSafekeepingAccount(SecuritiesAccount13 safekeepingAccount) {
-		this.safekeepingAccount = safekeepingAccount;
+	public SecuritiesSettlementTransactionAllegementReportV03 setSafekeepingAccount(SecuritiesAccount13 safekeepingAccount) {
+		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "AllgmtDtls")
 	public List<SecuritiesTradeDetails23> getAllegementDetails() {
-		return allegementDetails;
+		return allegementDetails == null ? allegementDetails = new ArrayList<>() : allegementDetails;
 	}
 
-	public void setAllegementDetails(List<SecuritiesTradeDetails23> allegementDetails) {
-		this.allegementDetails = allegementDetails;
+	public SecuritiesSettlementTransactionAllegementReportV03 setAllegementDetails(List<SecuritiesTradeDetails23> allegementDetails) {
+		this.allegementDetails = Objects.requireNonNull(allegementDetails);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.019.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:semt.019.001.03")
 	static public class Document {
 		@XmlElement(name = "SctiesSttlmTxAllgmtRpt", required = true)
 		public SecuritiesSettlementTransactionAllegementReportV03 messageBody;

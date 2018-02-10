@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * CashBalance6}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ContractBalance1", propOrder = {"type", "amount", "creditDebitIndicator"})
 public class ContractBalance1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected ContractBalanceType1Choice type;
 	/**
-	 * Specifies the type of the contract balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -119,7 +121,7 @@ public class ContractBalance1 {
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
-			componentContext_lazy = () -> ContractBalance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ContractBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +134,11 @@ public class ContractBalance1 {
 			type_lazy = () -> ContractBalanceType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * Currency and amount of money of the contract balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,7 +177,7 @@ public class ContractBalance1 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmAmount;
-			componentContext_lazy = () -> ContractBalance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ContractBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,11 +189,11 @@ public class ContractBalance1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd", required = true)
 	protected CreditDebit3Code creditDebitIndicator;
 	/**
-	 * Indicates whether the balance is a credit or a debit balance. A zero
-	 * balance is considered to be a credit balance
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -231,7 +234,7 @@ public class ContractBalance1 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmCreditDebitIndicator;
-			componentContext_lazy = () -> ContractBalance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ContractBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -247,9 +250,10 @@ public class ContractBalance1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ContractBalance1.mmType, ContractBalance1.mmAmount, ContractBalance1.mmCreditDebitIndicator);
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.msg.ContractBalance1.mmType, com.tools20022.repository.msg.ContractBalance1.mmAmount, com.tools20022.repository.msg.ContractBalance1.mmCreditDebitIndicator);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContractBalance1";
 				definition = "Balance details of a registered contract.";
@@ -259,30 +263,30 @@ public class ContractBalance1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public ContractBalanceType1Choice getType() {
 		return type;
 	}
 
-	public void setType(ContractBalanceType1Choice type) {
-		this.type = type;
+	public ContractBalance1 setType(ContractBalanceType1Choice type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
-		this.amount = amount;
+	public ContractBalance1 setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebit3Code getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
 
-	public void setCreditDebitIndicator(CreditDebit3Code creditDebitIndicator) {
-		this.creditDebitIndicator = creditDebitIndicator;
+	public ContractBalance1 setCreditDebitIndicator(CreditDebit3Code creditDebitIndicator) {
+		this.creditDebitIndicator = Objects.requireNonNull(creditDebitIndicator);
+		return this;
 	}
 }

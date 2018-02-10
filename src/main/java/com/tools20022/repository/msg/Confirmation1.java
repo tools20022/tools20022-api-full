@@ -30,6 +30,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -90,8 +92,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,16 +104,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of confirmation in the CMU."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Confirmation1", propOrder = {"confirmationStatus", "confirmationTime", "tradePartyConfirmationTime", "initiatingPartyConfirmationTime", "confirmationType", "requestIdentification", "queryStartNumber",
 		"totalNumberOfReports", "pageNumber", "queryPageNumber", "messageNumberOfCurrentPage", "listOrderNumber", "lastPageIndicator", "lastReportRequested"})
 public class Confirmation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ConfSts", required = true)
 	protected TradeConfirmationStatus1Code confirmationStatus;
 	/**
-	 * Identifies the status of the confirmation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -138,7 +141,7 @@ public class Confirmation1 {
 	 */
 	public static final MMMessageAttribute mmConfirmationStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Confirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "ConfSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,10 +152,11 @@ public class Confirmation1 {
 			simpleType_lazy = () -> TradeConfirmationStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ConfTm")
 	protected ISODateTime confirmationTime;
 	/**
-	 * Time that both of parties confirm the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,7 +182,7 @@ public class Confirmation1 {
 	 */
 	public static final MMMessageAttribute mmConfirmationTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Confirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "ConfTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,10 +193,11 @@ public class Confirmation1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "TradPtyConfTm")
 	protected ISODateTime tradePartyConfirmationTime;
 	/**
-	 * Time that the trade party confirms the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,7 +223,7 @@ public class Confirmation1 {
 	 */
 	public static final MMMessageAttribute mmTradePartyConfirmationTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Confirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "TradPtyConfTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,10 +234,11 @@ public class Confirmation1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "InitgPtyConfTm")
 	protected ISODateTime initiatingPartyConfirmationTime;
 	/**
-	 * Time that the initiating party confirms the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -258,7 +264,7 @@ public class Confirmation1 {
 	 */
 	public static final MMMessageAttribute mmInitiatingPartyConfirmationTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Confirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "InitgPtyConfTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,10 +275,11 @@ public class Confirmation1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "ConfTp", required = true)
 	protected ConfirmationRequest1Code confirmationType;
 	/**
-	 * Identifies the type of confirmation message being sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -299,7 +306,7 @@ public class Confirmation1 {
 	 */
 	public static final MMMessageAttribute mmConfirmationType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Confirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "ConfTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -310,10 +317,11 @@ public class Confirmation1 {
 			simpleType_lazy = () -> ConfirmationRequest1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqId", required = true)
 	protected MessageIdentification1 requestIdentification;
 	/**
-	 * Identifies the confirm request messge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -338,7 +346,7 @@ public class Confirmation1 {
 	 */
 	public static final MMMessageAssociationEnd mmRequestIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Confirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -350,10 +358,11 @@ public class Confirmation1 {
 			type_lazy = () -> com.tools20022.repository.msg.MessageIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "QryStartNb", required = true)
 	protected Max35NumericText queryStartNumber;
 	/**
-	 * Start number in request result.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -380,7 +389,7 @@ public class Confirmation1 {
 	 */
 	public static final MMMessageAttribute mmQueryStartNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Confirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "QryStartNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -391,10 +400,11 @@ public class Confirmation1 {
 			simpleType_lazy = () -> Max35NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNbOfRpts", required = true)
 	protected Number totalNumberOfReports;
 	/**
-	 * Total number of reports returned in response to a request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -421,7 +431,7 @@ public class Confirmation1 {
 	 */
 	public static final MMMessageAttribute mmTotalNumberOfReports = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Confirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfRpts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -432,11 +442,11 @@ public class Confirmation1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "PgNb", required = true)
 	protected Max35NumericText pageNumber;
 	/**
-	 * Query results will be grouped with fixed number. The field indicates that
-	 * the total number of groups.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -465,7 +475,7 @@ public class Confirmation1 {
 	 */
 	public static final MMMessageAttribute mmPageNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Confirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "PgNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -476,10 +486,11 @@ public class Confirmation1 {
 			simpleType_lazy = () -> Max35NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "QryPgNb", required = true)
 	protected Max35NumericText queryPageNumber;
 	/**
-	 * Page number in request result.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -506,7 +517,7 @@ public class Confirmation1 {
 	 */
 	public static final MMMessageAttribute mmQueryPageNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Confirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "QryPgNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -517,10 +528,11 @@ public class Confirmation1 {
 			simpleType_lazy = () -> Max35NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgNbOfCurPg", required = true)
 	protected Number messageNumberOfCurrentPage;
 	/**
-	 * Number of messages in current page.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -546,7 +558,7 @@ public class Confirmation1 {
 	 */
 	public static final MMMessageAttribute mmMessageNumberOfCurrentPage = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Confirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNbOfCurPg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -557,10 +569,11 @@ public class Confirmation1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "ListOrdrNb", required = true)
 	protected Number listOrderNumber;
 	/**
-	 * Number of reports at current page.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -586,7 +599,7 @@ public class Confirmation1 {
 	 */
 	public static final MMMessageAttribute mmListOrderNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Confirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "ListOrdrNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -597,11 +610,11 @@ public class Confirmation1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "LastPgInd", required = true)
 	protected YesNoIndicator lastPageIndicator;
 	/**
-	 * Indicate whether the current message is the last one of the current page
-	 * or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -630,7 +643,7 @@ public class Confirmation1 {
 	 */
 	public static final MMMessageAttribute mmLastPageIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Confirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "LastPgInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -641,11 +654,11 @@ public class Confirmation1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "LastRptReqd", required = true)
 	protected YesNoIndicator lastReportRequested;
 	/**
-	 * Indicates whether this message is that last report message in response to
-	 * a request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -674,7 +687,7 @@ public class Confirmation1 {
 	 */
 	public static final MMMessageAttribute mmLastReportRequested = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Confirmation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
 			xmlTag = "LastRptReqd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -689,10 +702,13 @@ public class Confirmation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Confirmation1.mmConfirmationStatus, Confirmation1.mmConfirmationTime, Confirmation1.mmTradePartyConfirmationTime, Confirmation1.mmInitiatingPartyConfirmationTime,
-						Confirmation1.mmConfirmationType, Confirmation1.mmRequestIdentification, Confirmation1.mmQueryStartNumber, Confirmation1.mmTotalNumberOfReports, Confirmation1.mmPageNumber, Confirmation1.mmQueryPageNumber,
-						Confirmation1.mmMessageNumberOfCurrentPage, Confirmation1.mmListOrderNumber, Confirmation1.mmLastPageIndicator, Confirmation1.mmLastReportRequested);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Confirmation1.mmConfirmationStatus, com.tools20022.repository.msg.Confirmation1.mmConfirmationTime,
+						com.tools20022.repository.msg.Confirmation1.mmTradePartyConfirmationTime, com.tools20022.repository.msg.Confirmation1.mmInitiatingPartyConfirmationTime,
+						com.tools20022.repository.msg.Confirmation1.mmConfirmationType, com.tools20022.repository.msg.Confirmation1.mmRequestIdentification, com.tools20022.repository.msg.Confirmation1.mmQueryStartNumber,
+						com.tools20022.repository.msg.Confirmation1.mmTotalNumberOfReports, com.tools20022.repository.msg.Confirmation1.mmPageNumber, com.tools20022.repository.msg.Confirmation1.mmQueryPageNumber,
+						com.tools20022.repository.msg.Confirmation1.mmMessageNumberOfCurrentPage, com.tools20022.repository.msg.Confirmation1.mmListOrderNumber, com.tools20022.repository.msg.Confirmation1.mmLastPageIndicator,
+						com.tools20022.repository.msg.Confirmation1.mmLastReportRequested);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Confirmation1";
 				definition = "Details of confirmation in the CMU.";
@@ -701,129 +717,129 @@ public class Confirmation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ConfSts", required = true)
 	public TradeConfirmationStatus1Code getConfirmationStatus() {
 		return confirmationStatus;
 	}
 
-	public void setConfirmationStatus(TradeConfirmationStatus1Code confirmationStatus) {
-		this.confirmationStatus = confirmationStatus;
+	public Confirmation1 setConfirmationStatus(TradeConfirmationStatus1Code confirmationStatus) {
+		this.confirmationStatus = Objects.requireNonNull(confirmationStatus);
+		return this;
 	}
 
-	@XmlElement(name = "ConfTm")
-	public ISODateTime getConfirmationTime() {
-		return confirmationTime;
+	public Optional<ISODateTime> getConfirmationTime() {
+		return confirmationTime == null ? Optional.empty() : Optional.of(confirmationTime);
 	}
 
-	public void setConfirmationTime(ISODateTime confirmationTime) {
+	public Confirmation1 setConfirmationTime(ISODateTime confirmationTime) {
 		this.confirmationTime = confirmationTime;
+		return this;
 	}
 
-	@XmlElement(name = "TradPtyConfTm")
-	public ISODateTime getTradePartyConfirmationTime() {
-		return tradePartyConfirmationTime;
+	public Optional<ISODateTime> getTradePartyConfirmationTime() {
+		return tradePartyConfirmationTime == null ? Optional.empty() : Optional.of(tradePartyConfirmationTime);
 	}
 
-	public void setTradePartyConfirmationTime(ISODateTime tradePartyConfirmationTime) {
+	public Confirmation1 setTradePartyConfirmationTime(ISODateTime tradePartyConfirmationTime) {
 		this.tradePartyConfirmationTime = tradePartyConfirmationTime;
+		return this;
 	}
 
-	@XmlElement(name = "InitgPtyConfTm")
-	public ISODateTime getInitiatingPartyConfirmationTime() {
-		return initiatingPartyConfirmationTime;
+	public Optional<ISODateTime> getInitiatingPartyConfirmationTime() {
+		return initiatingPartyConfirmationTime == null ? Optional.empty() : Optional.of(initiatingPartyConfirmationTime);
 	}
 
-	public void setInitiatingPartyConfirmationTime(ISODateTime initiatingPartyConfirmationTime) {
+	public Confirmation1 setInitiatingPartyConfirmationTime(ISODateTime initiatingPartyConfirmationTime) {
 		this.initiatingPartyConfirmationTime = initiatingPartyConfirmationTime;
+		return this;
 	}
 
-	@XmlElement(name = "ConfTp", required = true)
 	public ConfirmationRequest1Code getConfirmationType() {
 		return confirmationType;
 	}
 
-	public void setConfirmationType(ConfirmationRequest1Code confirmationType) {
-		this.confirmationType = confirmationType;
+	public Confirmation1 setConfirmationType(ConfirmationRequest1Code confirmationType) {
+		this.confirmationType = Objects.requireNonNull(confirmationType);
+		return this;
 	}
 
-	@XmlElement(name = "ReqId", required = true)
 	public MessageIdentification1 getRequestIdentification() {
 		return requestIdentification;
 	}
 
-	public void setRequestIdentification(com.tools20022.repository.msg.MessageIdentification1 requestIdentification) {
-		this.requestIdentification = requestIdentification;
+	public Confirmation1 setRequestIdentification(com.tools20022.repository.msg.MessageIdentification1 requestIdentification) {
+		this.requestIdentification = Objects.requireNonNull(requestIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "QryStartNb", required = true)
 	public Max35NumericText getQueryStartNumber() {
 		return queryStartNumber;
 	}
 
-	public void setQueryStartNumber(Max35NumericText queryStartNumber) {
-		this.queryStartNumber = queryStartNumber;
+	public Confirmation1 setQueryStartNumber(Max35NumericText queryStartNumber) {
+		this.queryStartNumber = Objects.requireNonNull(queryStartNumber);
+		return this;
 	}
 
-	@XmlElement(name = "TtlNbOfRpts", required = true)
 	public Number getTotalNumberOfReports() {
 		return totalNumberOfReports;
 	}
 
-	public void setTotalNumberOfReports(Number totalNumberOfReports) {
-		this.totalNumberOfReports = totalNumberOfReports;
+	public Confirmation1 setTotalNumberOfReports(Number totalNumberOfReports) {
+		this.totalNumberOfReports = Objects.requireNonNull(totalNumberOfReports);
+		return this;
 	}
 
-	@XmlElement(name = "PgNb", required = true)
 	public Max35NumericText getPageNumber() {
 		return pageNumber;
 	}
 
-	public void setPageNumber(Max35NumericText pageNumber) {
-		this.pageNumber = pageNumber;
+	public Confirmation1 setPageNumber(Max35NumericText pageNumber) {
+		this.pageNumber = Objects.requireNonNull(pageNumber);
+		return this;
 	}
 
-	@XmlElement(name = "QryPgNb", required = true)
 	public Max35NumericText getQueryPageNumber() {
 		return queryPageNumber;
 	}
 
-	public void setQueryPageNumber(Max35NumericText queryPageNumber) {
-		this.queryPageNumber = queryPageNumber;
+	public Confirmation1 setQueryPageNumber(Max35NumericText queryPageNumber) {
+		this.queryPageNumber = Objects.requireNonNull(queryPageNumber);
+		return this;
 	}
 
-	@XmlElement(name = "MsgNbOfCurPg", required = true)
 	public Number getMessageNumberOfCurrentPage() {
 		return messageNumberOfCurrentPage;
 	}
 
-	public void setMessageNumberOfCurrentPage(Number messageNumberOfCurrentPage) {
-		this.messageNumberOfCurrentPage = messageNumberOfCurrentPage;
+	public Confirmation1 setMessageNumberOfCurrentPage(Number messageNumberOfCurrentPage) {
+		this.messageNumberOfCurrentPage = Objects.requireNonNull(messageNumberOfCurrentPage);
+		return this;
 	}
 
-	@XmlElement(name = "ListOrdrNb", required = true)
 	public Number getListOrderNumber() {
 		return listOrderNumber;
 	}
 
-	public void setListOrderNumber(Number listOrderNumber) {
-		this.listOrderNumber = listOrderNumber;
+	public Confirmation1 setListOrderNumber(Number listOrderNumber) {
+		this.listOrderNumber = Objects.requireNonNull(listOrderNumber);
+		return this;
 	}
 
-	@XmlElement(name = "LastPgInd", required = true)
 	public YesNoIndicator getLastPageIndicator() {
 		return lastPageIndicator;
 	}
 
-	public void setLastPageIndicator(YesNoIndicator lastPageIndicator) {
-		this.lastPageIndicator = lastPageIndicator;
+	public Confirmation1 setLastPageIndicator(YesNoIndicator lastPageIndicator) {
+		this.lastPageIndicator = Objects.requireNonNull(lastPageIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "LastRptReqd", required = true)
 	public YesNoIndicator getLastReportRequested() {
 		return lastReportRequested;
 	}
 
-	public void setLastReportRequested(YesNoIndicator lastReportRequested) {
-		this.lastReportRequested = lastReportRequested;
+	public Confirmation1 setLastReportRequested(YesNoIndicator lastReportRequested) {
+		this.lastReportRequested = Objects.requireNonNull(lastReportRequested);
+		return this;
 	}
 }

@@ -20,97 +20,100 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PaymentTypeCode;
+import com.tools20022.repository.codeset.PaymentType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type, or nature, of the payment.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode
- * PaymentTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmCrossBorderPayment
- * PaymentType3Code.mmCrossBorderPayment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmBackUp
- * PaymentType3Code.mmBackUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#CrossBorderPayment
+ * PaymentType3Code.CrossBorderPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentType3Code#BackUp
+ * PaymentType3Code.BackUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmBalanceRetail
- * PaymentType3Code.mmBalanceRetail}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#BalanceRetail
+ * PaymentType3Code.BalanceRetail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmCLSPayment
- * PaymentType3Code.mmCLSPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#CLSPayment
+ * PaymentType3Code.CLSPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmCentralBankOperation
- * PaymentType3Code.mmCentralBankOperation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#CentralBankOperation
+ * PaymentType3Code.CentralBankOperation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmCrossBorderHighValuePayment
- * PaymentType3Code.mmCrossBorderHighValuePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#CrossBorderHighValuePayment
+ * PaymentType3Code.CrossBorderHighValuePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmCrossBorderPriorityPayment
- * PaymentType3Code.mmCrossBorderPriorityPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#CrossBorderPriorityPayment
+ * PaymentType3Code.CrossBorderPriorityPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentType3Code#DVPGross
+ * PaymentType3Code.DVPGross}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentType3Code#DVPNet
+ * PaymentType3Code.DVPNet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmDVPGross
- * PaymentType3Code.mmDVPGross}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmDVPNet
- * PaymentType3Code.mmDVPNet}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#ExpressPayment
+ * PaymentType3Code.ExpressPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmExpressPayment
- * PaymentType3Code.mmExpressPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#ThirdCurrencyHighValuePayment
+ * PaymentType3Code.ThirdCurrencyHighValuePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmThirdCurrencyHighValuePayment
- * PaymentType3Code.mmThirdCurrencyHighValuePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#LimitPayment
+ * PaymentType3Code.LimitPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmLimitPayment
- * PaymentType3Code.mmLimitPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#LiquidityTransfer
+ * PaymentType3Code.LiquidityTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmLiquidityTransfer
- * PaymentType3Code.mmLiquidityTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#DomesticPriorityPayment
+ * PaymentType3Code.DomesticPriorityPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmDomesticPriorityPayment
- * PaymentType3Code.mmDomesticPriorityPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#DomesticHighValuePayment
+ * PaymentType3Code.DomesticHighValuePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmDomesticHighValuePayment
- * PaymentType3Code.mmDomesticHighValuePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#DomesticPayment
+ * PaymentType3Code.DomesticPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmDomesticPayment
- * PaymentType3Code.mmDomesticPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#StandingFacilities
+ * PaymentType3Code.StandingFacilities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmStandingFacilities
- * PaymentType3Code.mmStandingFacilities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#TreasuryStatePayment
+ * PaymentType3Code.TreasuryStatePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmTreasuryStatePayment
- * PaymentType3Code.mmTreasuryStatePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#ThirdCurrencyPayment
+ * PaymentType3Code.ThirdCurrencyPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentType3Code#Loan
+ * PaymentType3Code.Loan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmThirdCurrencyPayment
- * PaymentType3Code.mmThirdCurrencyPayment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmLoan
- * PaymentType3Code.mmLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#LoanRepayment
+ * PaymentType3Code.LoanRepayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmLoanRepayment
- * PaymentType3Code.mmLoanRepayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#ThirdCurrencyPriorityPayment
+ * PaymentType3Code.ThirdCurrencyPriorityPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmThirdCurrencyPriorityPayment
- * PaymentType3Code.mmThirdCurrencyPriorityPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#OvernightDeposit
+ * PaymentType3Code.OvernightDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmOvernightDeposit
- * PaymentType3Code.mmOvernightDeposit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#mmMarginalLending
- * PaymentType3Code.mmMarginalLending}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentType3Code#MarginalLending
+ * PaymentType3Code.MarginalLending}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PaymentTypeCode
+ * PaymentTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -127,7 +130,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type, or nature, of the payment."</li>
  * </ul>
  */
-public class PaymentType3Code extends PaymentTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PaymentType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -146,11 +150,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "CrossBorderPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCrossBorderPayment = new MMCode() {
+	public static final PaymentType3Code CrossBorderPayment = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossBorderPayment";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.CrossBorderPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -169,11 +174,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "BackUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBackUp = new MMCode() {
+	public static final PaymentType3Code BackUp = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackUp";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.BackUp.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -192,11 +198,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "BalanceRetail"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBalanceRetail = new MMCode() {
+	public static final PaymentType3Code BalanceRetail = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceRetail";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.BalanceRetail.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -215,11 +222,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "CLSPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCLSPayment = new MMCode() {
+	public static final PaymentType3Code CLSPayment = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CLSPayment";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.CLSPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -238,11 +246,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "CentralBankOperation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCentralBankOperation = new MMCode() {
+	public static final PaymentType3Code CentralBankOperation = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralBankOperation";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.CentralBankOperation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -261,11 +270,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "CrossBorderHighValuePayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCrossBorderHighValuePayment = new MMCode() {
+	public static final PaymentType3Code CrossBorderHighValuePayment = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossBorderHighValuePayment";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.CrossBorderHighValuePayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -284,11 +294,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "CrossBorderPriorityPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCrossBorderPriorityPayment = new MMCode() {
+	public static final PaymentType3Code CrossBorderPriorityPayment = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossBorderPriorityPayment";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.CrossBorderPriorityPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -307,11 +318,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "DVPGross"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDVPGross = new MMCode() {
+	public static final PaymentType3Code DVPGross = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DVPGross";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.DVPGross.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -330,11 +342,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "DVPNet"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDVPNet = new MMCode() {
+	public static final PaymentType3Code DVPNet = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DVPNet";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.DVPNet.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -353,11 +366,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "ExpressPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExpressPayment = new MMCode() {
+	public static final PaymentType3Code ExpressPayment = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpressPayment";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.ExpressPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -376,11 +390,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "ThirdCurrencyHighValuePayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmThirdCurrencyHighValuePayment = new MMCode() {
+	public static final PaymentType3Code ThirdCurrencyHighValuePayment = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdCurrencyHighValuePayment";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.ThirdCurrencyHighValuePayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -399,11 +414,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "LimitPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLimitPayment = new MMCode() {
+	public static final PaymentType3Code LimitPayment = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitPayment";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.LimitPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -422,11 +438,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "LiquidityTransfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLiquidityTransfer = new MMCode() {
+	public static final PaymentType3Code LiquidityTransfer = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityTransfer";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.LiquidityTransfer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -445,11 +462,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "DomesticPriorityPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDomesticPriorityPayment = new MMCode() {
+	public static final PaymentType3Code DomesticPriorityPayment = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomesticPriorityPayment";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.DomesticPriorityPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -468,11 +486,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "DomesticHighValuePayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDomesticHighValuePayment = new MMCode() {
+	public static final PaymentType3Code DomesticHighValuePayment = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomesticHighValuePayment";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.DomesticHighValuePayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -491,11 +510,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "DomesticPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDomesticPayment = new MMCode() {
+	public static final PaymentType3Code DomesticPayment = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomesticPayment";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.DomesticPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -514,11 +534,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "StandingFacilities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStandingFacilities = new MMCode() {
+	public static final PaymentType3Code StandingFacilities = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingFacilities";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.StandingFacilities.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -537,11 +558,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "TreasuryStatePayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTreasuryStatePayment = new MMCode() {
+	public static final PaymentType3Code TreasuryStatePayment = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TreasuryStatePayment";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.TreasuryStatePayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -560,11 +582,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "ThirdCurrencyPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmThirdCurrencyPayment = new MMCode() {
+	public static final PaymentType3Code ThirdCurrencyPayment = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdCurrencyPayment";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.ThirdCurrencyPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -583,11 +606,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "Loan"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLoan = new MMCode() {
+	public static final PaymentType3Code Loan = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loan";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.Loan.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -606,11 +630,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "LoanRepayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLoanRepayment = new MMCode() {
+	public static final PaymentType3Code LoanRepayment = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LoanRepayment";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.LoanRepayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -629,11 +654,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "ThirdCurrencyPriorityPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmThirdCurrencyPriorityPayment = new MMCode() {
+	public static final PaymentType3Code ThirdCurrencyPriorityPayment = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdCurrencyPriorityPayment";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.ThirdCurrencyPriorityPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -652,11 +678,12 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "OvernightDeposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOvernightDeposit = new MMCode() {
+	public static final PaymentType3Code OvernightDeposit = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OvernightDeposit";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.OvernightDeposit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -675,30 +702,88 @@ public class PaymentType3Code extends PaymentTypeCode {
 	 * name} = "MarginalLending"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarginalLending = new MMCode() {
+	public static final PaymentType3Code MarginalLending = new PaymentType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginalLending";
-			owner_lazy = () -> PaymentType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentType3Code.mmObject();
+			codeName = PaymentTypeCode.MarginalLending.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PaymentType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PaymentType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CBS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentType3Code";
 				definition = "Specifies the type, or nature, of the payment.";
-				code_lazy = () -> Arrays.asList(PaymentType3Code.mmCrossBorderPayment, PaymentType3Code.mmBackUp, PaymentType3Code.mmBalanceRetail, PaymentType3Code.mmCLSPayment, PaymentType3Code.mmCentralBankOperation,
-						PaymentType3Code.mmCrossBorderHighValuePayment, PaymentType3Code.mmCrossBorderPriorityPayment, PaymentType3Code.mmDVPGross, PaymentType3Code.mmDVPNet, PaymentType3Code.mmExpressPayment,
-						PaymentType3Code.mmThirdCurrencyHighValuePayment, PaymentType3Code.mmLimitPayment, PaymentType3Code.mmLiquidityTransfer, PaymentType3Code.mmDomesticPriorityPayment, PaymentType3Code.mmDomesticHighValuePayment,
-						PaymentType3Code.mmDomesticPayment, PaymentType3Code.mmStandingFacilities, PaymentType3Code.mmTreasuryStatePayment, PaymentType3Code.mmThirdCurrencyPayment, PaymentType3Code.mmLoan, PaymentType3Code.mmLoanRepayment,
-						PaymentType3Code.mmThirdCurrencyPriorityPayment, PaymentType3Code.mmOvernightDeposit, PaymentType3Code.mmMarginalLending);
 				trace_lazy = () -> PaymentTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentType3Code.CrossBorderPayment, com.tools20022.repository.codeset.PaymentType3Code.BackUp,
+						com.tools20022.repository.codeset.PaymentType3Code.BalanceRetail, com.tools20022.repository.codeset.PaymentType3Code.CLSPayment, com.tools20022.repository.codeset.PaymentType3Code.CentralBankOperation,
+						com.tools20022.repository.codeset.PaymentType3Code.CrossBorderHighValuePayment, com.tools20022.repository.codeset.PaymentType3Code.CrossBorderPriorityPayment,
+						com.tools20022.repository.codeset.PaymentType3Code.DVPGross, com.tools20022.repository.codeset.PaymentType3Code.DVPNet, com.tools20022.repository.codeset.PaymentType3Code.ExpressPayment,
+						com.tools20022.repository.codeset.PaymentType3Code.ThirdCurrencyHighValuePayment, com.tools20022.repository.codeset.PaymentType3Code.LimitPayment,
+						com.tools20022.repository.codeset.PaymentType3Code.LiquidityTransfer, com.tools20022.repository.codeset.PaymentType3Code.DomesticPriorityPayment,
+						com.tools20022.repository.codeset.PaymentType3Code.DomesticHighValuePayment, com.tools20022.repository.codeset.PaymentType3Code.DomesticPayment, com.tools20022.repository.codeset.PaymentType3Code.StandingFacilities,
+						com.tools20022.repository.codeset.PaymentType3Code.TreasuryStatePayment, com.tools20022.repository.codeset.PaymentType3Code.ThirdCurrencyPayment, com.tools20022.repository.codeset.PaymentType3Code.Loan,
+						com.tools20022.repository.codeset.PaymentType3Code.LoanRepayment, com.tools20022.repository.codeset.PaymentType3Code.ThirdCurrencyPriorityPayment, com.tools20022.repository.codeset.PaymentType3Code.OvernightDeposit,
+						com.tools20022.repository.codeset.PaymentType3Code.MarginalLending);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CrossBorderPayment.getCodeName().get(), CrossBorderPayment);
+		codesByName.put(BackUp.getCodeName().get(), BackUp);
+		codesByName.put(BalanceRetail.getCodeName().get(), BalanceRetail);
+		codesByName.put(CLSPayment.getCodeName().get(), CLSPayment);
+		codesByName.put(CentralBankOperation.getCodeName().get(), CentralBankOperation);
+		codesByName.put(CrossBorderHighValuePayment.getCodeName().get(), CrossBorderHighValuePayment);
+		codesByName.put(CrossBorderPriorityPayment.getCodeName().get(), CrossBorderPriorityPayment);
+		codesByName.put(DVPGross.getCodeName().get(), DVPGross);
+		codesByName.put(DVPNet.getCodeName().get(), DVPNet);
+		codesByName.put(ExpressPayment.getCodeName().get(), ExpressPayment);
+		codesByName.put(ThirdCurrencyHighValuePayment.getCodeName().get(), ThirdCurrencyHighValuePayment);
+		codesByName.put(LimitPayment.getCodeName().get(), LimitPayment);
+		codesByName.put(LiquidityTransfer.getCodeName().get(), LiquidityTransfer);
+		codesByName.put(DomesticPriorityPayment.getCodeName().get(), DomesticPriorityPayment);
+		codesByName.put(DomesticHighValuePayment.getCodeName().get(), DomesticHighValuePayment);
+		codesByName.put(DomesticPayment.getCodeName().get(), DomesticPayment);
+		codesByName.put(StandingFacilities.getCodeName().get(), StandingFacilities);
+		codesByName.put(TreasuryStatePayment.getCodeName().get(), TreasuryStatePayment);
+		codesByName.put(ThirdCurrencyPayment.getCodeName().get(), ThirdCurrencyPayment);
+		codesByName.put(Loan.getCodeName().get(), Loan);
+		codesByName.put(LoanRepayment.getCodeName().get(), LoanRepayment);
+		codesByName.put(ThirdCurrencyPriorityPayment.getCodeName().get(), ThirdCurrencyPriorityPayment);
+		codesByName.put(OvernightDeposit.getCodeName().get(), OvernightDeposit);
+		codesByName.put(MarginalLending.getCodeName().get(), MarginalLending);
+	}
+
+	public static PaymentType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PaymentType3Code[] values() {
+		PaymentType3Code[] values = new PaymentType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PaymentType3Code> {
+		@Override
+		public PaymentType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PaymentType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

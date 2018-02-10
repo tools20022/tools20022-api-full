@@ -29,9 +29,8 @@ import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.TransactionDetails3;
 import com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -48,22 +47,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
- * AuthoritiesLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive
- * TransactionRegulatoryReportingISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "RgltryTxRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -85,6 +68,22 @@ import javax.xml.bind.annotation.*;
  * RegulatoryTransactionReportV02.mmExtension}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive
+ * TransactionRegulatoryReportingISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "RgltryTxRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
+ * AuthoritiesLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code auth.008.001.02}</li>
@@ -100,15 +99,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RegulatoryTransactionReportV02", propOrder = {"identification", "transactionDetails", "reportingInstitution", "reportingAgent", "extension"})
 public class RegulatoryTransactionReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected DocumentIdentification8 identification;
 	/**
-	 * Identification of the RegulatoryTransactionReport.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,11 +148,11 @@ public class RegulatoryTransactionReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "TxDtls", required = true)
 	protected List<TransactionDetails3> transactionDetails;
 	/**
-	 * Provides details of the trade for which the transaction report is being
-	 * sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,11 +193,11 @@ public class RegulatoryTransactionReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "RptgInstn", required = true)
 	protected PartyIdentification23Choice reportingInstitution;
 	/**
-	 * Identification of the firm that is legally responsible for sending the
-	 * transaction report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -239,12 +239,11 @@ public class RegulatoryTransactionReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "RptgAgt")
 	protected PartyIdentification24Choice reportingAgent;
 	/**
-	 * Identifies the intermediary which is reporting on behalf on the
-	 * ReportingInstitution. If there is a reporting chain, then the last party
-	 * should override the previous one.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -286,11 +285,11 @@ public class RegulatoryTransactionReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -362,52 +361,52 @@ public class RegulatoryTransactionReportV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(DocumentIdentification8 identification) {
-		this.identification = identification;
+	public RegulatoryTransactionReportV02 setIdentification(DocumentIdentification8 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "TxDtls", required = true)
 	public List<TransactionDetails3> getTransactionDetails() {
-		return transactionDetails;
+		return transactionDetails == null ? transactionDetails = new ArrayList<>() : transactionDetails;
 	}
 
-	public void setTransactionDetails(List<TransactionDetails3> transactionDetails) {
-		this.transactionDetails = transactionDetails;
+	public RegulatoryTransactionReportV02 setTransactionDetails(List<TransactionDetails3> transactionDetails) {
+		this.transactionDetails = Objects.requireNonNull(transactionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "RptgInstn", required = true)
 	public PartyIdentification23Choice getReportingInstitution() {
 		return reportingInstitution;
 	}
 
-	public void setReportingInstitution(PartyIdentification23Choice reportingInstitution) {
-		this.reportingInstitution = reportingInstitution;
+	public RegulatoryTransactionReportV02 setReportingInstitution(PartyIdentification23Choice reportingInstitution) {
+		this.reportingInstitution = Objects.requireNonNull(reportingInstitution);
+		return this;
 	}
 
-	@XmlElement(name = "RptgAgt")
-	public PartyIdentification24Choice getReportingAgent() {
-		return reportingAgent;
+	public Optional<PartyIdentification24Choice> getReportingAgent() {
+		return reportingAgent == null ? Optional.empty() : Optional.of(reportingAgent);
 	}
 
-	public void setReportingAgent(PartyIdentification24Choice reportingAgent) {
+	public RegulatoryTransactionReportV02 setReportingAgent(PartyIdentification24Choice reportingAgent) {
 		this.reportingAgent = reportingAgent;
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<Extension1> extension) {
-		this.extension = extension;
+	public RegulatoryTransactionReportV02 setExtension(List<Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.008.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:auth.008.001.02")
 	static public class Document {
 		@XmlElement(name = "RgltryTxRpt", required = true)
 		public RegulatoryTransactionReportV02 messageBody;

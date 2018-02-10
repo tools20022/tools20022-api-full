@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -31,6 +32,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forTransactionDetails19
+ * ConstraintCoexistenceIdentificationRule.forTransactionDetails19}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -75,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identifies the details of the transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionDetails19", propOrder = {"reference", "accountOwner", "safekeepingAccount"})
 public class TransactionDetails19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ref", required = true)
 	protected References9Choice reference;
 	/**
-	 * Reference to the message advised to be cancelled by the account servicer
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -96,6 +108,9 @@ public class TransactionDetails19 {
 	 * TransactionDetails19}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Ref"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -111,9 +126,10 @@ public class TransactionDetails19 {
 	 */
 	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionDetails19.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails19.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the message advised to be cancelled by the account servicer";
@@ -123,10 +139,11 @@ public class TransactionDetails19 {
 			type_lazy = () -> References9Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification18Choice accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -146,6 +163,9 @@ public class TransactionDetails19 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctOwnr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a::ACOW</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -159,9 +179,10 @@ public class TransactionDetails19 {
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> TransactionDetails19.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails19.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::ACOW"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
@@ -171,10 +192,11 @@ public class TransactionDetails19 {
 			type_lazy = () -> PartyIdentification18Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgAcct", required = true)
 	protected SecuritiesAccount17 safekeepingAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -193,6 +215,9 @@ public class TransactionDetails19 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SfkpgAcct"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :97a::SAFE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -206,9 +231,10 @@ public class TransactionDetails19 {
 	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesAccount;
-			componentContext_lazy = () -> TransactionDetails19.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails19.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":97a::SAFE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
@@ -222,9 +248,11 @@ public class TransactionDetails19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionDetails19.mmReference, TransactionDetails19.mmAccountOwner, TransactionDetails19.mmSafekeepingAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails19.mmReference, com.tools20022.repository.msg.TransactionDetails19.mmAccountOwner,
+						com.tools20022.repository.msg.TransactionDetails19.mmSafekeepingAccount);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransactionDetails19);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -240,30 +268,30 @@ public class TransactionDetails19 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ref", required = true)
 	public References9Choice getReference() {
 		return reference;
 	}
 
-	public void setReference(References9Choice reference) {
-		this.reference = reference;
+	public TransactionDetails19 setReference(References9Choice reference) {
+		this.reference = Objects.requireNonNull(reference);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification18Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification18Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification18Choice accountOwner) {
+	public TransactionDetails19 setAccountOwner(PartyIdentification18Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount17 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
 
-	public void setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount17 safekeepingAccount) {
-		this.safekeepingAccount = safekeepingAccount;
+	public TransactionDetails19 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount17 safekeepingAccount) {
+		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
+		return this;
 	}
 }

@@ -20,39 +20,42 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SignatureTypeCode;
+import com.tools20022.repository.codeset.SignatureType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of signature form.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SignatureTypeCode
- * SignatureTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SignatureType1Code#mmOriginal
- * SignatureType1Code.mmOriginal}</li>
+ * {@linkplain com.tools20022.repository.codeset.SignatureType1Code#Original
+ * SignatureType1Code.Original}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SignatureType1Code#Digital
+ * SignatureType1Code.Digital}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SignatureType1Code#mmDigital
- * SignatureType1Code.mmDigital}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SignatureType1Code#mmElectronic
- * SignatureType1Code.mmElectronic}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SignatureType1Code#mmNone
- * SignatureType1Code.mmNone}</li>
+ * {@linkplain com.tools20022.repository.codeset.SignatureType1Code#Electronic
+ * SignatureType1Code.Electronic}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SignatureType1Code#None
+ * SignatureType1Code.None}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SignatureTypeCode
+ * SignatureTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of signature form."</li>
  * </ul>
  */
-public class SignatureType1Code extends SignatureTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SignatureType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,11 +92,12 @@ public class SignatureType1Code extends SignatureTypeCode {
 	 * name} = "Original"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOriginal = new MMCode() {
+	public static final SignatureType1Code Original = new SignatureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Original";
-			owner_lazy = () -> SignatureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SignatureType1Code.mmObject();
+			codeName = SignatureTypeCode.Original.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -111,11 +116,12 @@ public class SignatureType1Code extends SignatureTypeCode {
 	 * name} = "Digital"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDigital = new MMCode() {
+	public static final SignatureType1Code Digital = new SignatureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Digital";
-			owner_lazy = () -> SignatureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SignatureType1Code.mmObject();
+			codeName = SignatureTypeCode.Digital.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -134,11 +140,12 @@ public class SignatureType1Code extends SignatureTypeCode {
 	 * name} = "Electronic"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmElectronic = new MMCode() {
+	public static final SignatureType1Code Electronic = new SignatureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electronic";
-			owner_lazy = () -> SignatureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SignatureType1Code.mmObject();
+			codeName = SignatureTypeCode.Electronic.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -157,26 +164,60 @@ public class SignatureType1Code extends SignatureTypeCode {
 	 * name} = "None"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNone = new MMCode() {
+	public static final SignatureType1Code None = new SignatureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
-			owner_lazy = () -> SignatureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SignatureType1Code.mmObject();
+			codeName = SignatureTypeCode.None.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SignatureType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SignatureType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ORIG");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SignatureType1Code";
 				definition = "Type of signature form.";
-				code_lazy = () -> Arrays.asList(SignatureType1Code.mmOriginal, SignatureType1Code.mmDigital, SignatureType1Code.mmElectronic, SignatureType1Code.mmNone);
 				trace_lazy = () -> SignatureTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SignatureType1Code.Original, com.tools20022.repository.codeset.SignatureType1Code.Digital, com.tools20022.repository.codeset.SignatureType1Code.Electronic,
+						com.tools20022.repository.codeset.SignatureType1Code.None);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Original.getCodeName().get(), Original);
+		codesByName.put(Digital.getCodeName().get(), Digital);
+		codesByName.put(Electronic.getCodeName().get(), Electronic);
+		codesByName.put(None.getCodeName().get(), None);
+	}
+
+	public static SignatureType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SignatureType1Code[] values() {
+		SignatureType1Code[] values = new SignatureType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SignatureType1Code> {
+		@Override
+		public SignatureType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SignatureType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

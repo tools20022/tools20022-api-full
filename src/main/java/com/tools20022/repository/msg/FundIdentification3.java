@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FundIdentification3", propOrder = {"fundIdentification", "accountIdentificationWithCustodian", "custodianIdentification"})
 public class FundIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FndId", required = true)
 	protected Max35Text fundIdentification;
 	/**
-	 * Identification of the investment fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +127,7 @@ public class FundIdentification3 {
 	public static final MMMessageAttribute mmFundIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFund.mmIdentification;
-			componentContext_lazy = () -> FundIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "FndId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +138,11 @@ public class FundIdentification3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctIdWthCtdn")
 	protected Max35Text accountIdentificationWithCustodian;
 	/**
-	 * Identifies the account of the fund held with the custodian.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,7 +176,7 @@ public class FundIdentification3 {
 	public static final MMMessageAttribute mmAccountIdentificationWithCustodian = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> FundIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctIdWthCtdn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,10 +187,11 @@ public class FundIdentification3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CtdnId")
 	protected PartyIdentification19Choice custodianIdentification;
 	/**
-	 * Identification of the custodian which services the account of the fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -221,7 +226,7 @@ public class FundIdentification3 {
 	public static final MMMessageAssociationEnd mmCustodianIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> FundIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "CtdnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,9 +242,10 @@ public class FundIdentification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FundIdentification3.mmFundIdentification, FundIdentification3.mmAccountIdentificationWithCustodian, FundIdentification3.mmCustodianIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundIdentification3.mmFundIdentification, com.tools20022.repository.msg.FundIdentification3.mmAccountIdentificationWithCustodian,
+						com.tools20022.repository.msg.FundIdentification3.mmCustodianIdentification);
 				trace_lazy = () -> InvestmentFund.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundIdentification3";
 				definition = "Distinct pool of financial instruments managed by a single investment policy. May or not be part of an umbrella fund.The pool is issued in at least one investment fund class.";
@@ -249,30 +255,30 @@ public class FundIdentification3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FndId", required = true)
 	public Max35Text getFundIdentification() {
 		return fundIdentification;
 	}
 
-	public void setFundIdentification(Max35Text fundIdentification) {
-		this.fundIdentification = fundIdentification;
+	public FundIdentification3 setFundIdentification(Max35Text fundIdentification) {
+		this.fundIdentification = Objects.requireNonNull(fundIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctIdWthCtdn")
-	public Max35Text getAccountIdentificationWithCustodian() {
-		return accountIdentificationWithCustodian;
+	public Optional<Max35Text> getAccountIdentificationWithCustodian() {
+		return accountIdentificationWithCustodian == null ? Optional.empty() : Optional.of(accountIdentificationWithCustodian);
 	}
 
-	public void setAccountIdentificationWithCustodian(Max35Text accountIdentificationWithCustodian) {
+	public FundIdentification3 setAccountIdentificationWithCustodian(Max35Text accountIdentificationWithCustodian) {
 		this.accountIdentificationWithCustodian = accountIdentificationWithCustodian;
+		return this;
 	}
 
-	@XmlElement(name = "CtdnId")
-	public PartyIdentification19Choice getCustodianIdentification() {
-		return custodianIdentification;
+	public Optional<PartyIdentification19Choice> getCustodianIdentification() {
+		return custodianIdentification == null ? Optional.empty() : Optional.of(custodianIdentification);
 	}
 
-	public void setCustodianIdentification(PartyIdentification19Choice custodianIdentification) {
+	public FundIdentification3 setCustodianIdentification(PartyIdentification19Choice custodianIdentification) {
 		this.custodianIdentification = custodianIdentification;
+		return this;
 	}
 }

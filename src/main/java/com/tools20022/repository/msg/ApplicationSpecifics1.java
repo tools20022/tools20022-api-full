@@ -26,6 +26,8 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.other.SignatureEnvelope;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,21 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Application specific information defined by the service provider."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ApplicationSpecifics1", propOrder = {"systemUser", "signature", "totalNumberOfDocuments"})
 public class ApplicationSpecifics1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SysUsr")
 	protected Max140Text systemUser;
 	/**
-	 * A system user is a user account defined in the static data. It represents
-	 * an individual or an application that interacts with the system
-	 * administrator (e. g. T2S), triggering the available functions. The set of
-	 * functions available to each system user stems from the set of privileges
-	 * for which the system user is grantee. System administrator does not
-	 * provide any attribute for distinguishing between individuals and
-	 * applications. <br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +107,7 @@ public class ApplicationSpecifics1 {
 	 */
 	public static final MMMessageAttribute mmSystemUser = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ApplicationSpecifics1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationSpecifics1.mmObject();
 			isDerived = false;
 			xmlTag = "SysUsr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,11 +118,11 @@ public class ApplicationSpecifics1 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Sgntr")
 	protected SignatureEnvelope signature;
 	/**
-	 * Contains the digital signature of the Business Entity authorised to sign
-	 * this Business File.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +152,7 @@ public class ApplicationSpecifics1 {
 	 */
 	public static final MMMessageAttribute mmSignature = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ApplicationSpecifics1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationSpecifics1.mmObject();
 			isDerived = false;
 			xmlTag = "Sgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,10 +163,11 @@ public class ApplicationSpecifics1 {
 			complexType_lazy = () -> SignatureEnvelope.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNbOfDocs", required = true)
 	protected Number totalNumberOfDocuments;
 	/**
-	 * Gives the total number of instances (messages) within the file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,7 +195,7 @@ public class ApplicationSpecifics1 {
 	 */
 	public static final MMMessageAttribute mmTotalNumberOfDocuments = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ApplicationSpecifics1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationSpecifics1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfDocs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,8 +210,9 @@ public class ApplicationSpecifics1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ApplicationSpecifics1.mmSystemUser, ApplicationSpecifics1.mmSignature, ApplicationSpecifics1.mmTotalNumberOfDocuments);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationSpecifics1.mmSystemUser, com.tools20022.repository.msg.ApplicationSpecifics1.mmSignature,
+						com.tools20022.repository.msg.ApplicationSpecifics1.mmTotalNumberOfDocuments);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ApplicationSpecifics1";
 				definition = "Application specific information defined by the service provider.";
@@ -222,30 +221,30 @@ public class ApplicationSpecifics1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SysUsr")
-	public Max140Text getSystemUser() {
-		return systemUser;
+	public Optional<Max140Text> getSystemUser() {
+		return systemUser == null ? Optional.empty() : Optional.of(systemUser);
 	}
 
-	public void setSystemUser(Max140Text systemUser) {
+	public ApplicationSpecifics1 setSystemUser(Max140Text systemUser) {
 		this.systemUser = systemUser;
+		return this;
 	}
 
-	@XmlElement(name = "Sgntr")
-	public SignatureEnvelope getSignature() {
-		return signature;
+	public Optional<SignatureEnvelope> getSignature() {
+		return signature == null ? Optional.empty() : Optional.of(signature);
 	}
 
-	public void setSignature(SignatureEnvelope signature) {
+	public ApplicationSpecifics1 setSignature(SignatureEnvelope signature) {
 		this.signature = signature;
+		return this;
 	}
 
-	@XmlElement(name = "TtlNbOfDocs", required = true)
 	public Number getTotalNumberOfDocuments() {
 		return totalNumberOfDocuments;
 	}
 
-	public void setTotalNumberOfDocuments(Number totalNumberOfDocuments) {
-		this.totalNumberOfDocuments = totalNumberOfDocuments;
+	public ApplicationSpecifics1 setTotalNumberOfDocuments(Number totalNumberOfDocuments) {
+		this.totalNumberOfDocuments = Objects.requireNonNull(totalNumberOfDocuments);
+		return this;
 	}
 }

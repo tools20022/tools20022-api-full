@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -51,20 +52,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
- * PaymentsInitiationArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "MndtAccptncRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -77,6 +64,20 @@ import javax.xml.bind.annotation.*;
  * MandateAcceptanceReportV01.mmUnderlyingAcceptanceDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "MndtAccptncRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
+ * PaymentsInitiationArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pain.012.001.01}</li>
@@ -100,16 +101,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MandateAcceptanceReportV01", propOrder = {"groupHeader", "underlyingAcceptanceDetails"})
 public class MandateAcceptanceReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader31 groupHeader;
 	/**
-	 * Set of characteristics to identify the message and parties playing a role
-	 * in the mandate acceptance, but which are not part of the mandate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,11 +151,11 @@ public class MandateAcceptanceReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "UndrlygAccptncDtls", required = true)
 	protected MandateAcceptance1 underlyingAcceptanceDetails;
 	/**
-	 * Set of elements used to provide information on the acception or rejection
-	 * of the mandate request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -227,25 +228,25 @@ public class MandateAcceptanceReportV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader31 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader31 groupHeader) {
-		this.groupHeader = groupHeader;
+	public MandateAcceptanceReportV01 setGroupHeader(GroupHeader31 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygAccptncDtls", required = true)
 	public MandateAcceptance1 getUnderlyingAcceptanceDetails() {
 		return underlyingAcceptanceDetails;
 	}
 
-	public void setUnderlyingAcceptanceDetails(MandateAcceptance1 underlyingAcceptanceDetails) {
-		this.underlyingAcceptanceDetails = underlyingAcceptanceDetails;
+	public MandateAcceptanceReportV01 setUnderlyingAcceptanceDetails(MandateAcceptance1 underlyingAcceptanceDetails) {
+		this.underlyingAcceptanceDetails = Objects.requireNonNull(underlyingAcceptanceDetails);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.012.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:pain.012.001.01")
 	static public class Document {
 		@XmlElement(name = "MndtAccptncRpt", required = true)
 		public MandateAcceptanceReportV01 messageBody;

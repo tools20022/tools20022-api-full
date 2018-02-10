@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,18 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Extension to specify corporate action dates."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionGeneralInformation32SD1", propOrder = {"placeAndName", "webServiceNotificationDate", "previousWebServiceNotificationDate"})
 public class CorporateActionGeneralInformation32SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm")
 	protected Max350Text placeAndName;
 	/**
-	 * Unambiguous reference to the location where the supplementary data must
-	 * be inserted in the message instance. <br>
-	 * <br>
-	 * In the case of XML, this is expressed by a valid XPath.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +108,7 @@ public class CorporateActionGeneralInformation32SD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformation32SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,11 +119,11 @@ public class CorporateActionGeneralInformation32SD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "WebSvcNtfctnDt")
 	protected DateFormat22Choice webServiceNotificationDate;
 	/**
-	 * Date and time of notification via web service as reference information.<br>
-	 * 通知日時 Notification date and time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +159,7 @@ public class CorporateActionGeneralInformation32SD1 {
 	public static final MMMessageAttribute mmWebServiceNotificationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmAnnouncementDate;
-			componentContext_lazy = () -> CorporateActionGeneralInformation32SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1.mmObject();
 			isDerived = false;
 			xmlTag = "WebSvcNtfctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,12 +170,11 @@ public class CorporateActionGeneralInformation32SD1 {
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsWebSvcNtfctnDt")
 	protected DateFormat22Choice previousWebServiceNotificationDate;
 	/**
-	 * Date and time of previous notification via web service as a reference
-	 * information (in case of replacement). <br>
-	 * 訂正（削除）前通知日時
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -212,7 +210,7 @@ public class CorporateActionGeneralInformation32SD1 {
 	public static final MMMessageAttribute mmPreviousWebServiceNotificationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmAnnouncementDate;
-			componentContext_lazy = () -> CorporateActionGeneralInformation32SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsWebSvcNtfctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,10 +225,10 @@ public class CorporateActionGeneralInformation32SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionGeneralInformation32SD1.mmPlaceAndName, CorporateActionGeneralInformation32SD1.mmWebServiceNotificationDate,
-						CorporateActionGeneralInformation32SD1.mmPreviousWebServiceNotificationDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1.mmPlaceAndName,
+						com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1.mmWebServiceNotificationDate, com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1.mmPreviousWebServiceNotificationDate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionGeneralInformation32SD1";
 				definition = "Extension to specify corporate action dates.";
@@ -239,30 +237,30 @@ public class CorporateActionGeneralInformation32SD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm")
-	public Max350Text getPlaceAndName() {
-		return placeAndName;
+	public Optional<Max350Text> getPlaceAndName() {
+		return placeAndName == null ? Optional.empty() : Optional.of(placeAndName);
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
+	public CorporateActionGeneralInformation32SD1 setPlaceAndName(Max350Text placeAndName) {
 		this.placeAndName = placeAndName;
+		return this;
 	}
 
-	@XmlElement(name = "WebSvcNtfctnDt")
-	public DateFormat22Choice getWebServiceNotificationDate() {
-		return webServiceNotificationDate;
+	public Optional<DateFormat22Choice> getWebServiceNotificationDate() {
+		return webServiceNotificationDate == null ? Optional.empty() : Optional.of(webServiceNotificationDate);
 	}
 
-	public void setWebServiceNotificationDate(DateFormat22Choice webServiceNotificationDate) {
+	public CorporateActionGeneralInformation32SD1 setWebServiceNotificationDate(DateFormat22Choice webServiceNotificationDate) {
 		this.webServiceNotificationDate = webServiceNotificationDate;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsWebSvcNtfctnDt")
-	public DateFormat22Choice getPreviousWebServiceNotificationDate() {
-		return previousWebServiceNotificationDate;
+	public Optional<DateFormat22Choice> getPreviousWebServiceNotificationDate() {
+		return previousWebServiceNotificationDate == null ? Optional.empty() : Optional.of(previousWebServiceNotificationDate);
 	}
 
-	public void setPreviousWebServiceNotificationDate(DateFormat22Choice previousWebServiceNotificationDate) {
+	public CorporateActionGeneralInformation32SD1 setPreviousWebServiceNotificationDate(DateFormat22Choice previousWebServiceNotificationDate) {
 		this.previousWebServiceNotificationDate = previousWebServiceNotificationDate;
+		return this;
 	}
 }

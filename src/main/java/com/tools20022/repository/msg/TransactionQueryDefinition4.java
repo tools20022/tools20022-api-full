@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.QueryType2Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,16 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the query criteria."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionQueryDefinition4", propOrder = {"queryType", "transactionCriteria"})
 public class TransactionQueryDefinition4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QryTp")
 	protected QueryType2Code queryType;
 	/**
-	 * Specifies the type of matching items to be returned in the response to
-	 * the query.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +103,7 @@ public class TransactionQueryDefinition4 {
 	 */
 	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionQueryDefinition4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionQueryDefinition4.mmObject();
 			isDerived = false;
 			xmlTag = "QryTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +114,11 @@ public class TransactionQueryDefinition4 {
 			simpleType_lazy = () -> QueryType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TxCrit")
 	protected TransactionCriteriaDefinition3Choice transactionCriteria;
 	/**
-	 * Defines the transaction query criteria.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -143,7 +145,7 @@ public class TransactionQueryDefinition4 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionQueryDefinition4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionQueryDefinition4.mmObject();
 			isDerived = false;
 			xmlTag = "TxCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,8 +161,8 @@ public class TransactionQueryDefinition4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionQueryDefinition4.mmQueryType, TransactionQueryDefinition4.mmTransactionCriteria);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionQueryDefinition4.mmQueryType, com.tools20022.repository.msg.TransactionQueryDefinition4.mmTransactionCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionQueryDefinition4";
 				definition = "Defines the query criteria.";
@@ -169,21 +171,21 @@ public class TransactionQueryDefinition4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QryTp")
-	public QueryType2Code getQueryType() {
-		return queryType;
+	public Optional<QueryType2Code> getQueryType() {
+		return queryType == null ? Optional.empty() : Optional.of(queryType);
 	}
 
-	public void setQueryType(QueryType2Code queryType) {
+	public TransactionQueryDefinition4 setQueryType(QueryType2Code queryType) {
 		this.queryType = queryType;
+		return this;
 	}
 
-	@XmlElement(name = "TxCrit")
-	public TransactionCriteriaDefinition3Choice getTransactionCriteria() {
-		return transactionCriteria;
+	public Optional<TransactionCriteriaDefinition3Choice> getTransactionCriteria() {
+		return transactionCriteria == null ? Optional.empty() : Optional.of(transactionCriteria);
 	}
 
-	public void setTransactionCriteria(TransactionCriteriaDefinition3Choice transactionCriteria) {
+	public TransactionQueryDefinition4 setTransactionCriteria(TransactionCriteriaDefinition3Choice transactionCriteria) {
 		this.transactionCriteria = transactionCriteria;
+		return this;
 	}
 }

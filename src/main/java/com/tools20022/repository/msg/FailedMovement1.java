@@ -31,6 +31,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -44,8 +46,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FailedMovement1#mmCashAmountOrSecuritiesQuantityRule
- * FailedMovement1.mmCashAmountOrSecuritiesQuantityRule}</li>
+ * {@linkplain com.tools20022.repository.msg.FailedMovement1#CashAmountOrSecuritiesQuantityRule
+ * FailedMovement1.CashAmountOrSecuritiesQuantityRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -70,8 +72,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -84,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides information about  a movement that failed the settlement."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FailedMovement1", propOrder = {"cashAmount", "securitiesQuantity", "securityIdentification", "reason"})
 public class FailedMovement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CshAmt", required = true)
 	protected ActiveCurrencyAndAmount cashAmount;
 	/**
-	 * Amount of cash.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,7 +129,7 @@ public class FailedMovement1 {
 	public static final MMMessageAttribute mmCashAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
-			componentContext_lazy = () -> FailedMovement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FailedMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,10 +140,11 @@ public class FailedMovement1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesQty", required = true)
 	protected UnitOrFaceAmount1Choice securitiesQuantity;
 	/**
-	 * Quantity of the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,7 +178,7 @@ public class FailedMovement1 {
 	public static final MMMessageAttribute mmSecuritiesQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
-			componentContext_lazy = () -> FailedMovement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FailedMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,10 +189,11 @@ public class FailedMovement1 {
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyId")
 	protected SecurityIdentification7 securityIdentification;
 	/**
-	 * Identification of the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,7 +227,7 @@ public class FailedMovement1 {
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> FailedMovement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FailedMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,10 +238,11 @@ public class FailedMovement1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn", required = true)
 	protected FailedSettlementReason1FormatChoice reason;
 	/**
-	 * The reason for the settlement failure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -270,7 +276,7 @@ public class FailedMovement1 {
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatusReason.mmMovementFailureReason;
-			componentContext_lazy = () -> FailedMovement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FailedMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -312,22 +318,23 @@ public class FailedMovement1 {
 	 * definition} = "Either CashAmount or SecuritiesQuantity must be present."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmCashAmountOrSecuritiesQuantityRule = new MMXor() {
+	public static final MMXor CashAmountOrSecuritiesQuantityRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAmountOrSecuritiesQuantityRule";
 			definition = "Either CashAmount or SecuritiesQuantity must be present.";
-			messageComponent_lazy = () -> FailedMovement1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(FailedMovement1.mmCashAmount, FailedMovement1.mmSecuritiesQuantity);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.FailedMovement1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FailedMovement1.mmCashAmount, com.tools20022.repository.msg.FailedMovement1.mmSecuritiesQuantity);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FailedMovement1.mmCashAmount, FailedMovement1.mmSecuritiesQuantity, FailedMovement1.mmSecurityIdentification, FailedMovement1.mmReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FailedMovement1.mmCashAmount, com.tools20022.repository.msg.FailedMovement1.mmSecuritiesQuantity,
+						com.tools20022.repository.msg.FailedMovement1.mmSecurityIdentification, com.tools20022.repository.msg.FailedMovement1.mmReason);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -338,45 +345,45 @@ public class FailedMovement1 {
 				})).get();
 				name = "FailedMovement1";
 				definition = "Provides information about  a movement that failed the settlement.";
-				xors_lazy = () -> Arrays.asList(FailedMovement1.mmCashAmountOrSecuritiesQuantityRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FailedMovement1.CashAmountOrSecuritiesQuantityRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CshAmt", required = true)
 	public ActiveCurrencyAndAmount getCashAmount() {
 		return cashAmount;
 	}
 
-	public void setCashAmount(ActiveCurrencyAndAmount cashAmount) {
-		this.cashAmount = cashAmount;
+	public FailedMovement1 setCashAmount(ActiveCurrencyAndAmount cashAmount) {
+		this.cashAmount = Objects.requireNonNull(cashAmount);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesQty", required = true)
 	public UnitOrFaceAmount1Choice getSecuritiesQuantity() {
 		return securitiesQuantity;
 	}
 
-	public void setSecuritiesQuantity(UnitOrFaceAmount1Choice securitiesQuantity) {
-		this.securitiesQuantity = securitiesQuantity;
+	public FailedMovement1 setSecuritiesQuantity(UnitOrFaceAmount1Choice securitiesQuantity) {
+		this.securitiesQuantity = Objects.requireNonNull(securitiesQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "SctyId")
-	public SecurityIdentification7 getSecurityIdentification() {
-		return securityIdentification;
+	public Optional<SecurityIdentification7> getSecurityIdentification() {
+		return securityIdentification == null ? Optional.empty() : Optional.of(securityIdentification);
 	}
 
-	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
+	public FailedMovement1 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
 		this.securityIdentification = securityIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public FailedSettlementReason1FormatChoice getReason() {
 		return reason;
 	}
 
-	public void setReason(FailedSettlementReason1FormatChoice reason) {
-		this.reason = reason;
+	public FailedMovement1 setReason(FailedSettlementReason1FormatChoice reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 }

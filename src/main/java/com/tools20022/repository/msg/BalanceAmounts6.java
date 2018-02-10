@@ -24,6 +24,8 @@ import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Amounts linked to a securities balance, for example, holding value."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BalanceAmounts6", propOrder = {"holdingValue", "bookValue", "unrealisedGainLoss"})
 public class BalanceAmounts6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "HldgVal", required = true)
 	protected AmountAndDirection14 holdingValue;
 	/**
-	 * Value of an individual financial instrument holding within a safekeeping
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +111,7 @@ public class BalanceAmounts6 {
 	public static final MMMessageAssociationEnd mmHoldingValue = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmHoldingValue;
-			componentContext_lazy = () -> BalanceAmounts6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceAmounts6.mmObject();
 			isDerived = false;
 			xmlTag = "HldgVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,11 +123,11 @@ public class BalanceAmounts6 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection14.mmObject();
 		}
 	};
+	@XmlElement(name = "BookVal")
 	protected AmountAndDirection14 bookValue;
 	/**
-	 * Value of a financial instrument, as booked/acquired in an account. It may
-	 * be used to establish capital gain tax liability.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -159,7 +161,7 @@ public class BalanceAmounts6 {
 	public static final MMMessageAssociationEnd mmBookValue = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
-			componentContext_lazy = () -> BalanceAmounts6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceAmounts6.mmObject();
 			isDerived = false;
 			xmlTag = "BookVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +173,11 @@ public class BalanceAmounts6 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection14.mmObject();
 		}
 	};
+	@XmlElement(name = "UrlsdGnLoss")
 	protected AmountAndDirection14 unrealisedGainLoss;
 	/**
-	 * Difference between holding value and the book value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -206,7 +209,7 @@ public class BalanceAmounts6 {
 	public static final MMMessageAssociationEnd mmUnrealisedGainLoss = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmUnrealisedGainOrLoss;
-			componentContext_lazy = () -> BalanceAmounts6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceAmounts6.mmObject();
 			isDerived = false;
 			xmlTag = "UrlsdGnLoss";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,9 +225,10 @@ public class BalanceAmounts6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BalanceAmounts6.mmHoldingValue, BalanceAmounts6.mmBookValue, BalanceAmounts6.mmUnrealisedGainLoss);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceAmounts6.mmHoldingValue, com.tools20022.repository.msg.BalanceAmounts6.mmBookValue,
+						com.tools20022.repository.msg.BalanceAmounts6.mmUnrealisedGainLoss);
 				trace_lazy = () -> AssetHolding.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceAmounts6";
 				definition = "Amounts linked to a securities balance, for example, holding value.";
@@ -233,30 +237,30 @@ public class BalanceAmounts6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "HldgVal", required = true)
 	public AmountAndDirection14 getHoldingValue() {
 		return holdingValue;
 	}
 
-	public void setHoldingValue(com.tools20022.repository.msg.AmountAndDirection14 holdingValue) {
-		this.holdingValue = holdingValue;
+	public BalanceAmounts6 setHoldingValue(com.tools20022.repository.msg.AmountAndDirection14 holdingValue) {
+		this.holdingValue = Objects.requireNonNull(holdingValue);
+		return this;
 	}
 
-	@XmlElement(name = "BookVal")
-	public AmountAndDirection14 getBookValue() {
-		return bookValue;
+	public Optional<AmountAndDirection14> getBookValue() {
+		return bookValue == null ? Optional.empty() : Optional.of(bookValue);
 	}
 
-	public void setBookValue(com.tools20022.repository.msg.AmountAndDirection14 bookValue) {
+	public BalanceAmounts6 setBookValue(com.tools20022.repository.msg.AmountAndDirection14 bookValue) {
 		this.bookValue = bookValue;
+		return this;
 	}
 
-	@XmlElement(name = "UrlsdGnLoss")
-	public AmountAndDirection14 getUnrealisedGainLoss() {
-		return unrealisedGainLoss;
+	public Optional<AmountAndDirection14> getUnrealisedGainLoss() {
+		return unrealisedGainLoss == null ? Optional.empty() : Optional.of(unrealisedGainLoss);
 	}
 
-	public void setUnrealisedGainLoss(com.tools20022.repository.msg.AmountAndDirection14 unrealisedGainLoss) {
+	public BalanceAmounts6 setUnrealisedGainLoss(com.tools20022.repository.msg.AmountAndDirection14 unrealisedGainLoss) {
 		this.unrealisedGainLoss = unrealisedGainLoss;
+		return this;
 	}
 }

@@ -20,32 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TypeOfDateCode;
+import com.tools20022.repository.codeset.TypeOfDate1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether a date is actual or estimated.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TypeOfDateCode TypeOfDateCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfDate1Code#mmActual
- * TypeOfDate1Code.mmActual}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfDate1Code#mmEstimated
- * TypeOfDate1Code.mmEstimated}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfDate1Code#Actual
+ * TypeOfDate1Code.Actual}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfDate1Code#Estimated
+ * TypeOfDate1Code.Estimated}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TypeOfDateCode TypeOfDateCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,7 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies whether a date is actual or estimated."</li>
  * </ul>
  */
-public class TypeOfDate1Code extends TypeOfDateCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TypeOfDate1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -75,11 +79,12 @@ public class TypeOfDate1Code extends TypeOfDateCode {
 	 * name} = "Actual"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmActual = new MMCode() {
+	public static final TypeOfDate1Code Actual = new TypeOfDate1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Actual";
-			owner_lazy = () -> TypeOfDate1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfDate1Code.mmObject();
+			codeName = TypeOfDateCode.Actual.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -98,25 +103,56 @@ public class TypeOfDate1Code extends TypeOfDateCode {
 	 * name} = "Estimated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEstimated = new MMCode() {
+	public static final TypeOfDate1Code Estimated = new TypeOfDate1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Estimated";
-			owner_lazy = () -> TypeOfDate1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfDate1Code.mmObject();
+			codeName = TypeOfDateCode.Estimated.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TypeOfDate1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TypeOfDate1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfDate1Code";
 				definition = "Specifies whether a date is actual or estimated.";
-				code_lazy = () -> Arrays.asList(TypeOfDate1Code.mmActual, TypeOfDate1Code.mmEstimated);
 				trace_lazy = () -> TypeOfDateCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfDate1Code.Actual, com.tools20022.repository.codeset.TypeOfDate1Code.Estimated);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Actual.getCodeName().get(), Actual);
+		codesByName.put(Estimated.getCodeName().get(), Estimated);
+	}
+
+	public static TypeOfDate1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TypeOfDate1Code[] values() {
+		TypeOfDate1Code[] values = new TypeOfDate1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TypeOfDate1Code> {
+		@Override
+		public TypeOfDate1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TypeOfDate1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

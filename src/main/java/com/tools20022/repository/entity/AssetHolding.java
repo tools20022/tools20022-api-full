@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.BlockedReasonCode;
@@ -28,9 +29,11 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Specifies in terms of value and quantity the assets.
@@ -104,30 +107,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts1
- * BalanceAmounts1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts2
- * BalanceAmounts2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts5
- * BalanceAmounts5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts6
- * BalanceAmounts6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts3
- * BalanceAmounts3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts4
- * BalanceAmounts4}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1
- * FinancialInstrumentAggregateBalance1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAggregateBalance1Choice
- * FinancialInstrumentAggregateBalance1Choice}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -167,10 +146,34 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts1
+ * BalanceAmounts1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts2
+ * BalanceAmounts2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts5
+ * BalanceAmounts5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts6
+ * BalanceAmounts6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts3
+ * BalanceAmounts3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceAmounts4
+ * BalanceAmounts4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1
+ * FinancialInstrumentAggregateBalance1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAggregateBalance1Choice
+ * FinancialInstrumentAggregateBalance1Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -186,8 +189,8 @@ public class AssetHolding {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected ActiveOrHistoricCurrencyAndAmount holdingValue;
 	/**
-	 * Value of the balance of an individual securities holding.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -335,8 +338,8 @@ public class AssetHolding {
 					AggregateBalanceInformation4.mmPreviousHoldingValue, OtherTypeOfCollateral1.mmAmount, AggregateBalanceInformation5.mmHoldingValue, AggregateBalanceInformation5.mmPreviousHoldingValue,
 					FinancialInstrument37.mmAverageAcquisitionPrice, FinancialInstrument35.mmAverageAcquisitionPrice, FinancialInstrument40.mmAverageAcquisitionPrice, DebtInstrument2.mmNominalValuePerUnit,
 					FinancialInstrument48.mmAverageAcquisitionPrice, FinancialInstrument47.mmAverageAcquisitionPrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HoldingValue";
 			definition = "Value of the balance of an individual securities holding.";
@@ -355,9 +358,8 @@ public class AssetHolding {
 	};
 	protected CurrencyAndAmount bookValue;
 	/**
-	 * Value of a security, as booked/acquired in an account. Book value is
-	 * often different from the current market value of the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -565,6 +567,9 @@ public class AssetHolding {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::BOOK</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -592,8 +597,9 @@ public class AssetHolding {
 					FinancialInstrument39.mmAverageAcquisitionPrice, FinancialInstrument39.mmTotalBookValue, OtherAmounts30.mmBookValue, OtherAmounts31.mmBookValue, Transfer31.mmAveragePrice, Transfer31.mmNewAveragePrice,
 					Transfer30.mmAveragePrice, Transfer33.mmAveragePrice, Transfer33.mmNewAveragePrice, FinancialInstrument48.mmTotalBookValue, FinancialInstrument47.mmTotalBookValue, FinancialInstrument46.mmAverageAcquisitionPrice,
 					FinancialInstrument46.mmTotalBookValue, OtherAmounts34.mmBookValue, OtherAmounts38.mmBookValue);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::BOOK"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BookValue";
 			definition = "Value of a security, as booked/acquired in an account. Book value is often different from the current market value of the security.";
@@ -612,9 +618,8 @@ public class AssetHolding {
 	};
 	protected CurrencyAndAmount faceAmount;
 	/**
-	 * Quantity expressed as an amount representing the face amount, ie, the
-	 * principal, of a debt instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -735,6 +740,9 @@ public class AssetHolding {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: FAMT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -758,8 +766,9 @@ public class AssetHolding {
 					FinancialInstrumentQuantitySearch1Choice.mmFaceAmount, FinancialInstrumentQuantitySearch1.mmFaceAmount, Quantity16Choice.mmOriginalAndCurrentFaceAmount, OriginalAndCurrentQuantities5.mmFaceAmount,
 					Quantity18Choice.mmOriginalAndCurrentFaceAmount, OriginalAndCurrentQuantities6.mmFaceAmount, Quantity23Choice.mmOriginalAndCurrentFaceAmount, OriginalAndCurrentQuantities7.mmFaceAmount,
 					FinancialInstrumentQuantity25Choice.mmNominalValue);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "FAMT"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FaceAmount";
 			definition = "Quantity expressed as an amount representing the face amount, ie, the principal, of a debt instrument.";
@@ -778,10 +787,8 @@ public class AssetHolding {
 	};
 	protected CurrencyAndAmount amortisedFaceValue;
 	/**
-	 * Quantity expressed as an amount representing the current amortised face
-	 * amount of a bond, for example, a periodic reduction/increase of a bond's
-	 * principal amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -865,6 +872,9 @@ public class AssetHolding {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.AssetHolding AssetHolding}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: AMOR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -885,8 +895,9 @@ public class AssetHolding {
 					FinancialInstrumentQuantity20Choice.mmAmortisedValue, FinancialInstrumentQuantity21Choice.mmAmortisedValue, FinancialInstrumentQuantity22Choice.mmAmortisedValue, FinancialInstrumentQuantityChoice.mmAmortisedValue,
 					OtherAmounts16.mmRemainingFaceValue, FinancialInstrumentQuantitySearch1Choice.mmAmortisedValue, FinancialInstrumentQuantitySearch1.mmAmortisedValue, OriginalAndCurrentQuantities5.mmAmortisedValue,
 					OriginalAndCurrentQuantities6.mmAmortisedValue, OriginalAndCurrentQuantities7.mmAmortisedValue, FinancialInstrumentQuantity25Choice.mmMonetaryValue);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "AMOR"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AmortisedFaceValue";
 			definition = "Quantity expressed as an amount representing the current amortised face amount of a bond, for example, a periodic reduction/increase of a bond's principal amount.";
@@ -905,8 +916,8 @@ public class AssetHolding {
 	};
 	protected ActiveCurrencyAndAmount marketValue;
 	/**
-	 * Value of the asset holding based on current market prices.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1018,8 +1029,8 @@ public class AssetHolding {
 					Collateral3.mmMarketValue, Collateral6.mmMarketValue, SecuritiesCollateral2.mmMarketValue, OtherCollateral2.mmMarketValue, SecuritiesCollateral3.mmMarketValue, OtherCollateral3.mmMarketValue,
 					OtherCollateral4.mmMarketValue, SecuritiesCollateral4.mmMarketValue, FinancialInstrumentAttributes68.mmMarketPrice, OtherCollateral7.mmMarketValue, OtherCollateral6.mmMarketValue, SecuritiesCollateral6.mmMarketValue,
 					SecuritiesCollateral5.mmMarketValue, OtherCollateral5.mmMarketValue, SecuritiesCollateral7.mmMarketValue, FinancialInstrumentAttributes73.mmMarketPrice, SecuritiesCollateral8.mmMarketValue);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketValue";
 			definition = "Value of the asset holding based on current market prices.";
@@ -1038,8 +1049,8 @@ public class AssetHolding {
 	};
 	protected List<com.tools20022.repository.entity.Balance> balance;
 	/**
-	 * Specifies the balance of the asset holding.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1070,8 +1081,8 @@ public class AssetHolding {
 	 */
 	public static final MMBusinessAssociationEnd mmBalance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Balance";
 			definition = "Specifies the balance of the asset holding.";
@@ -1083,8 +1094,8 @@ public class AssetHolding {
 	};
 	protected CurrencyAndAmount unrealisedGainOrLoss;
 	/**
-	 * Difference between the holding value and the book value of the asset.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1132,8 +1143,8 @@ public class AssetHolding {
 		{
 			derivation_lazy = () -> Arrays.asList(BalanceAmounts1.mmUnrealisedGainLoss, BalanceAmounts2.mmUnrealisedGainLoss, BalanceAmounts5.mmUnrealisedGainLoss, BalanceAmounts6.mmUnrealisedGainLoss,
 					TotalPortfolioValuation1.mmUnrealisedGainOrLoss);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnrealisedGainOrLoss";
 			definition = "Difference between the holding value and the book value of the asset.";
@@ -1152,8 +1163,8 @@ public class AssetHolding {
 	};
 	protected Asset asset;
 	/**
-	 * Specifies the asset included in the holding.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1215,8 +1226,8 @@ public class AssetHolding {
 		{
 			derivation_lazy = () -> Arrays.asList(ProposalType1Choice.mmOtherCollateral, Collateral4.mmOtherCollateral, Collateral7.mmOtherCollateral, Collateral8.mmOtherCollateral, Collateral11.mmOtherCollateral,
 					Collateral12.mmOtherCollateral, Collateral16.mmOtherCollateral, Collateral17.mmOtherCollateral);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Asset";
 			definition = "Specifies the asset included in the holding.";
@@ -1229,9 +1240,8 @@ public class AssetHolding {
 	};
 	protected List<com.tools20022.repository.entity.HaircutValuation> haircut;
 	/**
-	 * Percentage by which an asset's market value is reduced for the purpose of
-	 * calculating capital requirement, margin and collateral levels.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1393,8 +1403,8 @@ public class AssetHolding {
 					SecuritiesFinancingTransactionDetails33.mmSecuritiesHaircut, SecuritiesFinancingTransactionDetails32.mmSecuritiesHaircut, SecuritiesFinancingTransactionDetails30.mmSecuritiesHaircut,
 					AggregateBalanceInformation33.mmValuationHaircutDetails, Collateral14.mmHaircut, SecuritiesFinancingTransactionDetails35.mmSecuritiesHaircut, SecuritiesFinancingTransactionDetails36.mmSecuritiesHaircut,
 					Collateral18.mmHaircut);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Haircut";
 			definition = "Percentage by which an asset's market value is reduced for the purpose of calculating capital requirement, margin and collateral levels.";
@@ -1406,9 +1416,8 @@ public class AssetHolding {
 	};
 	protected ActiveCurrencyAndAmount eligibleCollateralValue;
 	/**
-	 * Value of the position eligible for collateral purposes. This corresponds
-	 * to the sub balance with a type AvailableForCollateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1454,8 +1463,8 @@ public class AssetHolding {
 		{
 			derivation_lazy = () -> Arrays.asList(BalanceAmounts3.mmEligibleCollateralValue, TotalValueInPageAndStatement1.mmTotalEligibleCollateralValue, BalanceAmounts4.mmEligibleCollateralValue,
 					TotalValueInPageAndStatement3.mmTotalEligibleCollateralValue);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EligibleCollateralValue";
 			definition = "Value of the position eligible for collateral purposes. This corresponds to the sub balance with a type AvailableForCollateral.";
@@ -1474,9 +1483,8 @@ public class AssetHolding {
 	};
 	protected CurrencyExchange exchangeRate;
 	/**
-	 * Specifies the exchange rate between the currency of the asset and the
-	 * reporting currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1566,8 +1574,8 @@ public class AssetHolding {
 			derivation_lazy = () -> Arrays.asList(UnderlyingAttributes.mmExchangeRate, CashCollateral1.mmExchangeRate, OtherCollateral1.mmExchangeRate, UnderlyingAttributes2.mmExchangeRate, OtherCollateral2.mmExchangeRate,
 					CashCollateral3.mmExchangeRate, OtherCollateral3.mmExchangeRate, CashCollateral4.mmExchangeRate, CashCollateral2.mmExchangeRate, OtherCollateral4.mmExchangeRate, CashCollateral5.mmExchangeRate,
 					OtherCollateral7.mmExchangeRate, OtherCollateral6.mmExchangeRate, OtherCollateral5.mmExchangeRate, AssetClassAttributes1Choice.mmForeignExchange, AssetClassAttributes1.mmForeignExchange);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExchangeRate";
 			definition = "Specifies the exchange rate between the currency of the asset and the reporting currency.";
@@ -1580,8 +1588,8 @@ public class AssetHolding {
 	};
 	protected CurrencyAndAmount capValue;
 	/**
-	 * Maximum notional value for a financial instrument that is capped.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1619,8 +1627,8 @@ public class AssetHolding {
 	public static final MMBusinessAttribute mmCapValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingAttributes.mmCapValue, UnderlyingAttributes2.mmCapValue);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CapValue";
 			definition = "Maximum notional value for a financial instrument that is capped.";
@@ -1639,9 +1647,8 @@ public class AssetHolding {
 	};
 	protected ActiveCurrencyAndAmount riskAdjustedValue;
 	/**
-	 * Value of the asset holding after deduction of a percentage (the haircut)
-	 * that reflects the perceived risk associated with holding this asset.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1737,8 +1744,8 @@ public class AssetHolding {
 					CashCollateral3.mmCollateralValue, SecuritiesCollateral3.mmCollateralValue, OtherCollateral3.mmCollateralValue, CashCollateral4.mmCollateralValue, CashCollateral2.mmCollateralValue, OtherCollateral4.mmCollateralValue,
 					SecuritiesCollateral4.mmCollateralValue, CashCollateral5.mmCollateralValue, OtherCollateral7.mmCollateralValue, OtherCollateral6.mmCollateralValue, SecuritiesCollateral6.mmCollateralValue,
 					SecuritiesCollateral5.mmCollateralValue, OtherCollateral5.mmCollateralValue, SecuritiesCollateral7.mmCollateralValue, SecuritiesCollateral8.mmCollateralValue);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RiskAdjustedValue";
 			definition = "Value of the asset holding after deduction of a percentage (the haircut) that reflects the perceived risk associated with holding this asset.";
@@ -1757,9 +1764,8 @@ public class AssetHolding {
 	};
 	protected CurrencyAndAmount realisedGainOrLoss;
 	/**
-	 * Difference between the realised value caused by the actual
-	 * trade/re-evaluation and the book value of the asset.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1795,8 +1801,8 @@ public class AssetHolding {
 	public static final MMBusinessAttribute mmRealisedGainOrLoss = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TotalPortfolioValuation1.mmRealisedGainOrLoss);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RealisedGainOrLoss";
 			definition = "Difference between the realised value caused by the actual trade/re-evaluation and the book value of the asset.";
@@ -1815,8 +1821,8 @@ public class AssetHolding {
 	};
 	protected UnrealisedCode unrealisedType;
 	/**
-	 * Specifies whether the unrealised amount is a gain or a loss.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1854,8 +1860,8 @@ public class AssetHolding {
 	public static final MMBusinessAttribute mmUnrealisedType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BalanceDetails6.mmUnrealised, BalanceDetails5.mmUnrealised);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnrealisedType";
 			definition = "Specifies whether the unrealised amount is a gain or a loss.";
@@ -1874,9 +1880,8 @@ public class AssetHolding {
 	};
 	protected CurrencyAndAmount postHaircutValue;
 	/**
-	 * Value of the collateral after deduction of a percentage (the haircut)
-	 * that reflects the perceived risk associated with holding this collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1915,8 +1920,8 @@ public class AssetHolding {
 	public static final MMBusinessAttribute mmPostHaircutValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Collateral3.mmPostHaircutValue, Collateral6.mmPostHaircutValue);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PostHaircutValue";
 			definition = "Value of the collateral after deduction of a percentage (the haircut) that reflects the perceived risk associated with holding this collateral.";
@@ -1935,8 +1940,8 @@ public class AssetHolding {
 	};
 	protected List<com.tools20022.repository.entity.Interest> interest;
 	/**
-	 * interest relative to the asset and the parameters used to calculate it.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1984,8 +1989,8 @@ public class AssetHolding {
 	public static final MMBusinessAssociationEnd mmInterest = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(AssetClassAttributes1Choice.mmInterest, AssetClassAttributes1.mmInterest, InterestRateDerivative5.mmInflationIndex);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
 			definition = "interest relative to the asset and the parameters used to calculate it.";
@@ -1997,8 +2002,8 @@ public class AssetHolding {
 	};
 	protected List<com.tools20022.repository.entity.Collateral> collateral;
 	/**
-	 * Specifies the collateral information in relation with some assets.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2031,8 +2036,8 @@ public class AssetHolding {
 	 */
 	public static final MMBusinessAssociationEnd mmCollateral = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Collateral";
 			definition = "Specifies the collateral information in relation with some assets.";
@@ -2044,8 +2049,8 @@ public class AssetHolding {
 	};
 	protected FinancialAssetBalanceTypeCode financialAssetType;
 	/**
-	 * Specifies the asset type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2070,8 +2075,8 @@ public class AssetHolding {
 	 */
 	public static final MMBusinessAttribute mmFinancialAssetType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialAssetType";
 			definition = "Specifies the asset type.";
@@ -2090,9 +2095,8 @@ public class AssetHolding {
 	};
 	protected Collateral variationMarginCollateral;
 	/**
-	 * Specifies the collateral information in relation with the segregated
-	 * independent amount asset holding.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2126,8 +2130,8 @@ public class AssetHolding {
 	 */
 	public static final MMBusinessAssociationEnd mmVariationMarginCollateral = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VariationMarginCollateral";
 			definition = "Specifies the collateral information in relation with the segregated independent amount asset holding.";
@@ -2140,9 +2144,8 @@ public class AssetHolding {
 	};
 	protected Collateral independentAmountCollateral;
 	/**
-	 * Specifies the collateral information in relation with the segregated
-	 * independent amount asset holding.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2176,8 +2179,8 @@ public class AssetHolding {
 	 */
 	public static final MMBusinessAssociationEnd mmIndependentAmountCollateral = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndependentAmountCollateral";
 			definition = "Specifies the collateral information in relation with the segregated independent amount asset holding.";
@@ -2190,8 +2193,8 @@ public class AssetHolding {
 	};
 	protected BlockedReasonCode holdingType;
 	/**
-	 * Specifies the type of holding.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2216,8 +2219,8 @@ public class AssetHolding {
 	 */
 	public static final MMBusinessAttribute mmHoldingType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HoldingType";
 			definition = "Specifies the type of holding.";
@@ -2236,8 +2239,8 @@ public class AssetHolding {
 	};
 	protected CurrencyAndAmount guaranteeAmount;
 	/**
-	 * Amount of the bank guarantee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2262,8 +2265,8 @@ public class AssetHolding {
 	 */
 	public static final MMBusinessAttribute mmGuaranteeAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GuaranteeAmount";
 			definition = "Amount of the bank guarantee.";
@@ -2284,7 +2287,7 @@ public class AssetHolding {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetHolding";
 				definition = "Specifies in terms of value and quantity the assets.";
@@ -2316,183 +2319,206 @@ public class AssetHolding {
 		return holdingValue;
 	}
 
-	public void setHoldingValue(ActiveOrHistoricCurrencyAndAmount holdingValue) {
-		this.holdingValue = holdingValue;
+	public AssetHolding setHoldingValue(ActiveOrHistoricCurrencyAndAmount holdingValue) {
+		this.holdingValue = Objects.requireNonNull(holdingValue);
+		return this;
 	}
 
 	public CurrencyAndAmount getBookValue() {
 		return bookValue;
 	}
 
-	public void setBookValue(CurrencyAndAmount bookValue) {
-		this.bookValue = bookValue;
+	public AssetHolding setBookValue(CurrencyAndAmount bookValue) {
+		this.bookValue = Objects.requireNonNull(bookValue);
+		return this;
 	}
 
 	public CurrencyAndAmount getFaceAmount() {
 		return faceAmount;
 	}
 
-	public void setFaceAmount(CurrencyAndAmount faceAmount) {
-		this.faceAmount = faceAmount;
+	public AssetHolding setFaceAmount(CurrencyAndAmount faceAmount) {
+		this.faceAmount = Objects.requireNonNull(faceAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getAmortisedFaceValue() {
 		return amortisedFaceValue;
 	}
 
-	public void setAmortisedFaceValue(CurrencyAndAmount amortisedFaceValue) {
-		this.amortisedFaceValue = amortisedFaceValue;
+	public AssetHolding setAmortisedFaceValue(CurrencyAndAmount amortisedFaceValue) {
+		this.amortisedFaceValue = Objects.requireNonNull(amortisedFaceValue);
+		return this;
 	}
 
 	public ActiveCurrencyAndAmount getMarketValue() {
 		return marketValue;
 	}
 
-	public void setMarketValue(ActiveCurrencyAndAmount marketValue) {
-		this.marketValue = marketValue;
+	public AssetHolding setMarketValue(ActiveCurrencyAndAmount marketValue) {
+		this.marketValue = Objects.requireNonNull(marketValue);
+		return this;
 	}
 
 	public List<Balance> getBalance() {
-		return balance;
+		return balance == null ? balance = new ArrayList<>() : balance;
 	}
 
-	public void setBalance(List<com.tools20022.repository.entity.Balance> balance) {
-		this.balance = balance;
+	public AssetHolding setBalance(List<com.tools20022.repository.entity.Balance> balance) {
+		this.balance = Objects.requireNonNull(balance);
+		return this;
 	}
 
 	public CurrencyAndAmount getUnrealisedGainOrLoss() {
 		return unrealisedGainOrLoss;
 	}
 
-	public void setUnrealisedGainOrLoss(CurrencyAndAmount unrealisedGainOrLoss) {
-		this.unrealisedGainOrLoss = unrealisedGainOrLoss;
+	public AssetHolding setUnrealisedGainOrLoss(CurrencyAndAmount unrealisedGainOrLoss) {
+		this.unrealisedGainOrLoss = Objects.requireNonNull(unrealisedGainOrLoss);
+		return this;
 	}
 
 	public Asset getAsset() {
 		return asset;
 	}
 
-	public void setAsset(com.tools20022.repository.entity.Asset asset) {
-		this.asset = asset;
+	public AssetHolding setAsset(com.tools20022.repository.entity.Asset asset) {
+		this.asset = Objects.requireNonNull(asset);
+		return this;
 	}
 
 	public List<HaircutValuation> getHaircut() {
-		return haircut;
+		return haircut == null ? haircut = new ArrayList<>() : haircut;
 	}
 
-	public void setHaircut(List<com.tools20022.repository.entity.HaircutValuation> haircut) {
-		this.haircut = haircut;
+	public AssetHolding setHaircut(List<com.tools20022.repository.entity.HaircutValuation> haircut) {
+		this.haircut = Objects.requireNonNull(haircut);
+		return this;
 	}
 
 	public ActiveCurrencyAndAmount getEligibleCollateralValue() {
 		return eligibleCollateralValue;
 	}
 
-	public void setEligibleCollateralValue(ActiveCurrencyAndAmount eligibleCollateralValue) {
-		this.eligibleCollateralValue = eligibleCollateralValue;
+	public AssetHolding setEligibleCollateralValue(ActiveCurrencyAndAmount eligibleCollateralValue) {
+		this.eligibleCollateralValue = Objects.requireNonNull(eligibleCollateralValue);
+		return this;
 	}
 
 	public CurrencyExchange getExchangeRate() {
 		return exchangeRate;
 	}
 
-	public void setExchangeRate(com.tools20022.repository.entity.CurrencyExchange exchangeRate) {
-		this.exchangeRate = exchangeRate;
+	public AssetHolding setExchangeRate(com.tools20022.repository.entity.CurrencyExchange exchangeRate) {
+		this.exchangeRate = Objects.requireNonNull(exchangeRate);
+		return this;
 	}
 
 	public CurrencyAndAmount getCapValue() {
 		return capValue;
 	}
 
-	public void setCapValue(CurrencyAndAmount capValue) {
-		this.capValue = capValue;
+	public AssetHolding setCapValue(CurrencyAndAmount capValue) {
+		this.capValue = Objects.requireNonNull(capValue);
+		return this;
 	}
 
 	public ActiveCurrencyAndAmount getRiskAdjustedValue() {
 		return riskAdjustedValue;
 	}
 
-	public void setRiskAdjustedValue(ActiveCurrencyAndAmount riskAdjustedValue) {
-		this.riskAdjustedValue = riskAdjustedValue;
+	public AssetHolding setRiskAdjustedValue(ActiveCurrencyAndAmount riskAdjustedValue) {
+		this.riskAdjustedValue = Objects.requireNonNull(riskAdjustedValue);
+		return this;
 	}
 
 	public CurrencyAndAmount getRealisedGainOrLoss() {
 		return realisedGainOrLoss;
 	}
 
-	public void setRealisedGainOrLoss(CurrencyAndAmount realisedGainOrLoss) {
-		this.realisedGainOrLoss = realisedGainOrLoss;
+	public AssetHolding setRealisedGainOrLoss(CurrencyAndAmount realisedGainOrLoss) {
+		this.realisedGainOrLoss = Objects.requireNonNull(realisedGainOrLoss);
+		return this;
 	}
 
 	public UnrealisedCode getUnrealisedType() {
 		return unrealisedType;
 	}
 
-	public void setUnrealisedType(UnrealisedCode unrealisedType) {
-		this.unrealisedType = unrealisedType;
+	public AssetHolding setUnrealisedType(UnrealisedCode unrealisedType) {
+		this.unrealisedType = Objects.requireNonNull(unrealisedType);
+		return this;
 	}
 
 	public CurrencyAndAmount getPostHaircutValue() {
 		return postHaircutValue;
 	}
 
-	public void setPostHaircutValue(CurrencyAndAmount postHaircutValue) {
-		this.postHaircutValue = postHaircutValue;
+	public AssetHolding setPostHaircutValue(CurrencyAndAmount postHaircutValue) {
+		this.postHaircutValue = Objects.requireNonNull(postHaircutValue);
+		return this;
 	}
 
 	public List<Interest> getInterest() {
-		return interest;
+		return interest == null ? interest = new ArrayList<>() : interest;
 	}
 
-	public void setInterest(List<com.tools20022.repository.entity.Interest> interest) {
-		this.interest = interest;
+	public AssetHolding setInterest(List<com.tools20022.repository.entity.Interest> interest) {
+		this.interest = Objects.requireNonNull(interest);
+		return this;
 	}
 
 	public List<Collateral> getCollateral() {
-		return collateral;
+		return collateral == null ? collateral = new ArrayList<>() : collateral;
 	}
 
-	public void setCollateral(List<com.tools20022.repository.entity.Collateral> collateral) {
-		this.collateral = collateral;
+	public AssetHolding setCollateral(List<com.tools20022.repository.entity.Collateral> collateral) {
+		this.collateral = Objects.requireNonNull(collateral);
+		return this;
 	}
 
 	public FinancialAssetBalanceTypeCode getFinancialAssetType() {
 		return financialAssetType;
 	}
 
-	public void setFinancialAssetType(FinancialAssetBalanceTypeCode financialAssetType) {
-		this.financialAssetType = financialAssetType;
+	public AssetHolding setFinancialAssetType(FinancialAssetBalanceTypeCode financialAssetType) {
+		this.financialAssetType = Objects.requireNonNull(financialAssetType);
+		return this;
 	}
 
 	public Collateral getVariationMarginCollateral() {
 		return variationMarginCollateral;
 	}
 
-	public void setVariationMarginCollateral(com.tools20022.repository.entity.Collateral variationMarginCollateral) {
-		this.variationMarginCollateral = variationMarginCollateral;
+	public AssetHolding setVariationMarginCollateral(com.tools20022.repository.entity.Collateral variationMarginCollateral) {
+		this.variationMarginCollateral = Objects.requireNonNull(variationMarginCollateral);
+		return this;
 	}
 
 	public Collateral getIndependentAmountCollateral() {
 		return independentAmountCollateral;
 	}
 
-	public void setIndependentAmountCollateral(com.tools20022.repository.entity.Collateral independentAmountCollateral) {
-		this.independentAmountCollateral = independentAmountCollateral;
+	public AssetHolding setIndependentAmountCollateral(com.tools20022.repository.entity.Collateral independentAmountCollateral) {
+		this.independentAmountCollateral = Objects.requireNonNull(independentAmountCollateral);
+		return this;
 	}
 
 	public BlockedReasonCode getHoldingType() {
 		return holdingType;
 	}
 
-	public void setHoldingType(BlockedReasonCode holdingType) {
-		this.holdingType = holdingType;
+	public AssetHolding setHoldingType(BlockedReasonCode holdingType) {
+		this.holdingType = Objects.requireNonNull(holdingType);
+		return this;
 	}
 
 	public CurrencyAndAmount getGuaranteeAmount() {
 		return guaranteeAmount;
 	}
 
-	public void setGuaranteeAmount(CurrencyAndAmount guaranteeAmount) {
-		this.guaranteeAmount = guaranteeAmount;
+	public AssetHolding setGuaranteeAmount(CurrencyAndAmount guaranteeAmount) {
+		this.guaranteeAmount = Objects.requireNonNull(guaranteeAmount);
+		return this;
 	}
 }

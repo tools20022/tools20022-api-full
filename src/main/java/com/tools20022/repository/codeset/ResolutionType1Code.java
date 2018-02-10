@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ResolutionTypeCode;
+import com.tools20022.repository.codeset.ResolutionType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of resolution.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ResolutionTypeCode
- * ResolutionTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResolutionType1Code#mmExtraordinary
- * ResolutionType1Code.mmExtraordinary}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResolutionType1Code#Extraordinary
+ * ResolutionType1Code.Extraordinary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResolutionType1Code#mmOrdinary
- * ResolutionType1Code.mmOrdinary}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResolutionType1Code#Ordinary
+ * ResolutionType1Code.Ordinary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResolutionType1Code#mmSpecial
- * ResolutionType1Code.mmSpecial}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResolutionType1Code#Special
+ * ResolutionType1Code.Special}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ResolutionTypeCode
+ * ResolutionTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of resolution."</li>
  * </ul>
  */
-public class ResolutionType1Code extends ResolutionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ResolutionType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class ResolutionType1Code extends ResolutionTypeCode {
 	 * name} = "Extraordinary"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExtraordinary = new MMCode() {
+	public static final ResolutionType1Code Extraordinary = new ResolutionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extraordinary";
-			owner_lazy = () -> ResolutionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResolutionType1Code.mmObject();
+			codeName = ResolutionTypeCode.Extraordinary.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class ResolutionType1Code extends ResolutionTypeCode {
 	 * name} = "Ordinary"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOrdinary = new MMCode() {
+	public static final ResolutionType1Code Ordinary = new ResolutionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ordinary";
-			owner_lazy = () -> ResolutionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResolutionType1Code.mmObject();
+			codeName = ResolutionTypeCode.Ordinary.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class ResolutionType1Code extends ResolutionTypeCode {
 	 * name} = "Special"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecial = new MMCode() {
+	public static final ResolutionType1Code Special = new ResolutionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Special";
-			owner_lazy = () -> ResolutionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResolutionType1Code.mmObject();
+			codeName = ResolutionTypeCode.Special.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ResolutionType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ResolutionType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("EXTR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResolutionType1Code";
 				definition = "Specifies the type of resolution.";
-				code_lazy = () -> Arrays.asList(ResolutionType1Code.mmExtraordinary, ResolutionType1Code.mmOrdinary, ResolutionType1Code.mmSpecial);
 				trace_lazy = () -> ResolutionTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResolutionType1Code.Extraordinary, com.tools20022.repository.codeset.ResolutionType1Code.Ordinary,
+						com.tools20022.repository.codeset.ResolutionType1Code.Special);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Extraordinary.getCodeName().get(), Extraordinary);
+		codesByName.put(Ordinary.getCodeName().get(), Ordinary);
+		codesByName.put(Special.getCodeName().get(), Special);
+	}
+
+	public static ResolutionType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ResolutionType1Code[] values() {
+		ResolutionType1Code[] values = new ResolutionType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ResolutionType1Code> {
+		@Override
+		public ResolutionType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ResolutionType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

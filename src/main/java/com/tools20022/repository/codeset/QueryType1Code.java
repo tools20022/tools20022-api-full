@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.QueryType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifyies the nature of the query, i.e. whether the query requests that all
@@ -33,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryType1Code#mmAll
- * QueryType1Code.mmAll}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryType1Code#mmChanges
- * QueryType1Code.mmChanges}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryType1Code#All
+ * QueryType1Code.All}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryType1Code#Changes
+ * QueryType1Code.Changes}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -62,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class QueryType1Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class QueryType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,12 +93,12 @@ public class QueryType1Code {
 	 * "Specifies that the query requests that all matching items be returned."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAll = new MMCode() {
+	public static final QueryType1Code All = new QueryType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
 			definition = "Specifies that the query requests that all matching items be returned.";
-			owner_lazy = () -> QueryType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryType1Code.mmObject();
 			codeName = "ALLL";
 		}
 	};
@@ -120,27 +126,57 @@ public class QueryType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmChanges = new MMCode() {
+	public static final QueryType1Code Changes = new QueryType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Changes";
 			definition = "Specifies that the query requests that only new matching items since the last similar query be returned.";
-			owner_lazy = () -> QueryType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryType1Code.mmObject();
 			codeName = "CHNG";
 		}
 	};
+	final static private LinkedHashMap<String, QueryType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected QueryType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ALLL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueryType1Code";
 				definition = "Specifyies the nature of the query, i.e. whether the query requests that all matching items be returned or only new matching items since the last similar query be returned.";
-				code_lazy = () -> Arrays.asList(QueryType1Code.mmAll, QueryType1Code.mmChanges);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryType1Code.All, com.tools20022.repository.codeset.QueryType1Code.Changes);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(All.getCodeName().get(), All);
+		codesByName.put(Changes.getCodeName().get(), Changes);
+	}
+
+	public static QueryType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static QueryType1Code[] values() {
+		QueryType1Code[] values = new QueryType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, QueryType1Code> {
+		@Override
+		public QueryType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(QueryType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identification of an entity involved in an activity."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyIdentification78", propOrder = {"partySource", "tradePartyIdentification"})
 public class PartyIdentification78 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PtySrc")
 	protected IdentificationType1Code partySource;
 	/**
-	 * Indicate the source of the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +101,7 @@ public class PartyIdentification78 {
 	 */
 	public static final MMMessageAttribute mmPartySource = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification78.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification78.mmObject();
 			isDerived = false;
 			xmlTag = "PtySrc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,10 +112,11 @@ public class PartyIdentification78 {
 			simpleType_lazy = () -> IdentificationType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TradPtyId", required = true)
 	protected Max35Text tradePartyIdentification;
 	/**
-	 * Identification of the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +143,7 @@ public class PartyIdentification78 {
 	 */
 	public static final MMMessageAttribute mmTradePartyIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification78.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification78.mmObject();
 			isDerived = false;
 			xmlTag = "TradPtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,8 +158,8 @@ public class PartyIdentification78 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification78.mmPartySource, PartyIdentification78.mmTradePartyIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification78.mmPartySource, com.tools20022.repository.msg.PartyIdentification78.mmTradePartyIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification78";
 				definition = "Identification of an entity involved in an activity.";
@@ -164,21 +168,21 @@ public class PartyIdentification78 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PtySrc")
-	public IdentificationType1Code getPartySource() {
-		return partySource;
+	public Optional<IdentificationType1Code> getPartySource() {
+		return partySource == null ? Optional.empty() : Optional.of(partySource);
 	}
 
-	public void setPartySource(IdentificationType1Code partySource) {
+	public PartyIdentification78 setPartySource(IdentificationType1Code partySource) {
 		this.partySource = partySource;
+		return this;
 	}
 
-	@XmlElement(name = "TradPtyId", required = true)
 	public Max35Text getTradePartyIdentification() {
 		return tradePartyIdentification;
 	}
 
-	public void setTradePartyIdentification(Max35Text tradePartyIdentification) {
-		this.tradePartyIdentification = tradePartyIdentification;
+	public PartyIdentification78 setTradePartyIdentification(Max35Text tradePartyIdentification) {
+		this.tradePartyIdentification = Objects.requireNonNull(tradePartyIdentification);
+		return this;
 	}
 }

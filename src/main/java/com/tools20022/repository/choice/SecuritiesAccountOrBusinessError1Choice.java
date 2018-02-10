@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.SystemSecuritiesAccount3;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesAccountOrBusinessError1Choice", propOrder = {"securitiesAccount", "businessError"})
 public class SecuritiesAccountOrBusinessError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesAcct", required = true)
 	protected SystemSecuritiesAccount3 securitiesAccount;
 	/**
-	 * Choice between data concerning securities account retrieved or business
-	 * error.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -104,7 +106,7 @@ public class SecuritiesAccountOrBusinessError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountOrBusinessError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountOrBusinessError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +118,11 @@ public class SecuritiesAccountOrBusinessError1Choice {
 			type_lazy = () -> SystemSecuritiesAccount3.mmObject();
 		}
 	};
+	@XmlElement(name = "BizErr", required = true)
 	protected List<ErrorHandling3> businessError;
 	/**
-	 * Business error resulting from a rejection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -145,7 +148,7 @@ public class SecuritiesAccountOrBusinessError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountOrBusinessError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountOrBusinessError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,8 +163,9 @@ public class SecuritiesAccountOrBusinessError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountOrBusinessError1Choice.mmSecuritiesAccount, SecuritiesAccountOrBusinessError1Choice.mmBusinessError);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesAccountOrBusinessError1Choice.mmSecuritiesAccount,
+						com.tools20022.repository.choice.SecuritiesAccountOrBusinessError1Choice.mmBusinessError);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountOrBusinessError1Choice";
 				definition = "Set of elements used to report between the securities account reference data or a business error.";
@@ -170,21 +174,21 @@ public class SecuritiesAccountOrBusinessError1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesAcct", required = true)
 	public SystemSecuritiesAccount3 getSecuritiesAccount() {
 		return securitiesAccount;
 	}
 
-	public void setSecuritiesAccount(SystemSecuritiesAccount3 securitiesAccount) {
-		this.securitiesAccount = securitiesAccount;
+	public SecuritiesAccountOrBusinessError1Choice setSecuritiesAccount(SystemSecuritiesAccount3 securitiesAccount) {
+		this.securitiesAccount = Objects.requireNonNull(securitiesAccount);
+		return this;
 	}
 
-	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling3> getBusinessError() {
-		return businessError;
+		return businessError == null ? businessError = new ArrayList<>() : businessError;
 	}
 
-	public void setBusinessError(List<ErrorHandling3> businessError) {
-		this.businessError = businessError;
+	public SecuritiesAccountOrBusinessError1Choice setBusinessError(List<ErrorHandling3> businessError) {
+		this.businessError = Objects.requireNonNull(businessError);
+		return this;
 	}
 }

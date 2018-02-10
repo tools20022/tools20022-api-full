@@ -34,6 +34,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -82,8 +83,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -97,18 +98,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PartyIdentification23Choice", propOrder = {"BICOrBEI", "proprietaryIdentification"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PartyIdentification23Choice", propOrder = {"bICOrBEI", "proprietaryIdentification"})
 public class PartyIdentification23Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BICOrBEI", required = true)
 	protected AnyBICIdentifier bICOrBEI;
 	/**
-	 * Code allocated to a financial or non-financial institution by the ISO
-	 * 9362 Registration Authority, as described in ISO 9362
-	 * "Banking - Banking telecommunication messages - Business identifier code (BIC)"
-	 * .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,7 +143,7 @@ public class PartyIdentification23Choice {
 	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
-			componentContext_lazy = () -> PartyIdentification23Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BICOrBEI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,11 +154,11 @@ public class PartyIdentification23Choice {
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryId", required = true)
 	protected GenericIdentification1 proprietaryIdentification;
 	/**
-	 * Unique and unambiguous identifier, as assigned to a financial institution
-	 * using a proprietary identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,7 +194,7 @@ public class PartyIdentification23Choice {
 	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> PartyIdentification23Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,11 +209,11 @@ public class PartyIdentification23Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification23Choice.mmBICOrBEI, PartyIdentification23Choice.mmProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification23Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification23Choice.mmProprietaryIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(RegulatoryTransactionReportV02.mmReportingInstitution, RegulatoryTransactionReportCancellationRequestV02.mmReportingInstitution,
 						RegulatoryTransactionReportStatusV01.mmReportingInstitution, RegulatoryTransactionReportCancellationStatusV01.mmReportingInstitution);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -230,21 +229,21 @@ public class PartyIdentification23Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BICOrBEI", required = true)
 	public AnyBICIdentifier getBICOrBEI() {
 		return bICOrBEI;
 	}
 
-	public void setBICOrBEI(AnyBICIdentifier bICOrBEI) {
-		this.bICOrBEI = bICOrBEI;
+	public PartyIdentification23Choice setBICOrBEI(AnyBICIdentifier bICOrBEI) {
+		this.bICOrBEI = Objects.requireNonNull(bICOrBEI);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryId", required = true)
 	public GenericIdentification1 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}
 
-	public void setProprietaryIdentification(GenericIdentification1 proprietaryIdentification) {
-		this.proprietaryIdentification = proprietaryIdentification;
+	public PartyIdentification23Choice setProprietaryIdentification(GenericIdentification1 proprietaryIdentification) {
+		this.proprietaryIdentification = Objects.requireNonNull(proprietaryIdentification);
+		return this;
 	}
 }

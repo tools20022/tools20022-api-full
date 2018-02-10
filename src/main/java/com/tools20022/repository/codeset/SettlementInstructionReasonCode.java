@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.SettlementInstructionReasonCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of transaction.
@@ -32,47 +37,47 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#mmSubscription
- * SettlementInstructionReasonCode.mmSubscription}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#Subscription
+ * SettlementInstructionReasonCode.Subscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#mmInvestmentSavingsPlan
- * SettlementInstructionReasonCode.mmInvestmentSavingsPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#InvestmentSavingsPlan
+ * SettlementInstructionReasonCode.InvestmentSavingsPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#mmWithdrawalSavingsPlan
- * SettlementInstructionReasonCode.mmWithdrawalSavingsPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#WithdrawalSavingsPlan
+ * SettlementInstructionReasonCode.WithdrawalSavingsPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#mmSavingsPlan
- * SettlementInstructionReasonCode.mmSavingsPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#SavingsPlan
+ * SettlementInstructionReasonCode.SavingsPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#mmSecuritiesPurchase
- * SettlementInstructionReasonCode.mmSecuritiesPurchase}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#SecuritiesPurchase
+ * SettlementInstructionReasonCode.SecuritiesPurchase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#mmCharges
- * SettlementInstructionReasonCode.mmCharges}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#Charges
+ * SettlementInstructionReasonCode.Charges}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#mmAllDebits
- * SettlementInstructionReasonCode.mmAllDebits}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#AllDebits
+ * SettlementInstructionReasonCode.AllDebits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#mmRedemption
- * SettlementInstructionReasonCode.mmRedemption}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#Redemption
+ * SettlementInstructionReasonCode.Redemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#mmSecuritiesSale
- * SettlementInstructionReasonCode.mmSecuritiesSale}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#SecuritiesSale
+ * SettlementInstructionReasonCode.SecuritiesSale}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#mmInterest
- * SettlementInstructionReasonCode.mmInterest}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#Interest
+ * SettlementInstructionReasonCode.Interest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#mmDividend
- * SettlementInstructionReasonCode.mmDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#Dividend
+ * SettlementInstructionReasonCode.Dividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#mmAllCredits
- * SettlementInstructionReasonCode.mmAllCredits}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#AllCredits
+ * SettlementInstructionReasonCode.AllCredits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#mmAllCreditsAndDebits
- * SettlementInstructionReasonCode.mmAllCreditsAndDebits}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#AllCreditsAndDebits
+ * SettlementInstructionReasonCode.AllCreditsAndDebits}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#mmCorporateAction
- * SettlementInstructionReasonCode.mmCorporateAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementInstructionReasonCode#CorporateAction
+ * SettlementInstructionReasonCode.CorporateAction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -86,8 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,7 +103,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of transaction."</li>
  * </ul>
  */
-public class SettlementInstructionReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SettlementInstructionReasonCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -124,12 +130,12 @@ public class SettlementInstructionReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubscription = new MMCode() {
+	public static final SettlementInstructionReasonCode Subscription = new SettlementInstructionReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscription";
 			definition = "Settlement of subscriptions or subscription legs of a switch transaction.";
-			owner_lazy = () -> SettlementInstructionReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementInstructionReasonCode.mmObject();
 			codeName = "SUBS";
 		}
 	};
@@ -154,12 +160,12 @@ public class SettlementInstructionReasonCode {
 	 * definition} = "Settlement of investments to a savings plan."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestmentSavingsPlan = new MMCode() {
+	public static final SettlementInstructionReasonCode InvestmentSavingsPlan = new SettlementInstructionReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentSavingsPlan";
 			definition = "Settlement of investments to a savings plan.";
-			owner_lazy = () -> SettlementInstructionReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementInstructionReasonCode.mmObject();
 			codeName = "SAVP";
 		}
 	};
@@ -184,12 +190,12 @@ public class SettlementInstructionReasonCode {
 	 * definition} = "Settlement of withdrawals from a savings plan."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithdrawalSavingsPlan = new MMCode() {
+	public static final SettlementInstructionReasonCode WithdrawalSavingsPlan = new SettlementInstructionReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalSavingsPlan";
 			definition = "Settlement of withdrawals from a savings plan.";
-			owner_lazy = () -> SettlementInstructionReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementInstructionReasonCode.mmObject();
 			codeName = "WTHP";
 		}
 	};
@@ -217,12 +223,12 @@ public class SettlementInstructionReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSavingsPlan = new MMCode() {
+	public static final SettlementInstructionReasonCode SavingsPlan = new SettlementInstructionReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SavingsPlan";
 			definition = "Settlement of investments to a savings plan and withdrawals from a savings plan.";
-			owner_lazy = () -> SettlementInstructionReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementInstructionReasonCode.mmObject();
 			codeName = "SAVE";
 		}
 	};
@@ -247,12 +253,12 @@ public class SettlementInstructionReasonCode {
 	 * definition} = "Settlement of securities purchases."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesPurchase = new MMCode() {
+	public static final SettlementInstructionReasonCode SecuritiesPurchase = new SettlementInstructionReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesPurchase";
 			definition = "Settlement of securities purchases.";
-			owner_lazy = () -> SettlementInstructionReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementInstructionReasonCode.mmObject();
 			codeName = "BUYI";
 		}
 	};
@@ -277,12 +283,12 @@ public class SettlementInstructionReasonCode {
 	 * definition} = "Settlement of charges."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCharges = new MMCode() {
+	public static final SettlementInstructionReasonCode Charges = new SettlementInstructionReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charges";
 			definition = "Settlement of charges.";
-			owner_lazy = () -> SettlementInstructionReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementInstructionReasonCode.mmObject();
 			codeName = "CHAR";
 		}
 	};
@@ -307,12 +313,12 @@ public class SettlementInstructionReasonCode {
 	 * definition} = "Settlement of all debit amounts."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAllDebits = new MMCode() {
+	public static final SettlementInstructionReasonCode AllDebits = new SettlementInstructionReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllDebits";
 			definition = "Settlement of all debit amounts.";
-			owner_lazy = () -> SettlementInstructionReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementInstructionReasonCode.mmObject();
 			codeName = "CSHO";
 		}
 	};
@@ -338,12 +344,12 @@ public class SettlementInstructionReasonCode {
 	 * "Settlement of redemptions or redemption legs of a switch transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRedemption = new MMCode() {
+	public static final SettlementInstructionReasonCode Redemption = new SettlementInstructionReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
 			definition = "Settlement of redemptions or redemption legs of a switch transaction.";
-			owner_lazy = () -> SettlementInstructionReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementInstructionReasonCode.mmObject();
 			codeName = "REDM";
 		}
 	};
@@ -368,12 +374,12 @@ public class SettlementInstructionReasonCode {
 	 * definition} = "Settlement of securities sales."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesSale = new MMCode() {
+	public static final SettlementInstructionReasonCode SecuritiesSale = new SettlementInstructionReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSale";
 			definition = "Settlement of securities sales.";
-			owner_lazy = () -> SettlementInstructionReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementInstructionReasonCode.mmObject();
 			codeName = "SELL";
 		}
 	};
@@ -398,12 +404,12 @@ public class SettlementInstructionReasonCode {
 	 * definition} = "Settlement of interest."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterest = new MMCode() {
+	public static final SettlementInstructionReasonCode Interest = new SettlementInstructionReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
 			definition = "Settlement of interest.";
-			owner_lazy = () -> SettlementInstructionReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementInstructionReasonCode.mmObject();
 			codeName = "INTE";
 		}
 	};
@@ -428,12 +434,12 @@ public class SettlementInstructionReasonCode {
 	 * definition} = "Settlement of dividends."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividend = new MMCode() {
+	public static final SettlementInstructionReasonCode Dividend = new SettlementInstructionReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dividend";
 			definition = "Settlement of dividends.";
-			owner_lazy = () -> SettlementInstructionReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementInstructionReasonCode.mmObject();
 			codeName = "DIVI";
 		}
 	};
@@ -458,12 +464,12 @@ public class SettlementInstructionReasonCode {
 	 * definition} = "Settlement of all credit amounts."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAllCredits = new MMCode() {
+	public static final SettlementInstructionReasonCode AllCredits = new SettlementInstructionReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllCredits";
 			definition = "Settlement of all credit amounts.";
-			owner_lazy = () -> SettlementInstructionReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementInstructionReasonCode.mmObject();
 			codeName = "CSHI";
 		}
 	};
@@ -488,12 +494,12 @@ public class SettlementInstructionReasonCode {
 	 * definition} = "Settlement of all credit and debit amounts."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAllCreditsAndDebits = new MMCode() {
+	public static final SettlementInstructionReasonCode AllCreditsAndDebits = new SettlementInstructionReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllCreditsAndDebits";
 			definition = "Settlement of all credit and debit amounts.";
-			owner_lazy = () -> SettlementInstructionReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementInstructionReasonCode.mmObject();
 			codeName = "ALLL";
 		}
 	};
@@ -518,30 +524,75 @@ public class SettlementInstructionReasonCode {
 	 * definition} = "Settlement of corporate actions."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateAction = new MMCode() {
+	public static final SettlementInstructionReasonCode CorporateAction = new SettlementInstructionReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateAction";
 			definition = "Settlement of corporate actions.";
-			owner_lazy = () -> SettlementInstructionReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementInstructionReasonCode.mmObject();
 			codeName = "CORP";
 		}
 	};
+	final static private LinkedHashMap<String, SettlementInstructionReasonCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SettlementInstructionReasonCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementInstructionReasonCode";
 				definition = "Specifies the type of transaction.";
-				code_lazy = () -> Arrays.asList(SettlementInstructionReasonCode.mmSubscription, SettlementInstructionReasonCode.mmInvestmentSavingsPlan, SettlementInstructionReasonCode.mmWithdrawalSavingsPlan,
-						SettlementInstructionReasonCode.mmSavingsPlan, SettlementInstructionReasonCode.mmSecuritiesPurchase, SettlementInstructionReasonCode.mmCharges, SettlementInstructionReasonCode.mmAllDebits,
-						SettlementInstructionReasonCode.mmRedemption, SettlementInstructionReasonCode.mmSecuritiesSale, SettlementInstructionReasonCode.mmInterest, SettlementInstructionReasonCode.mmDividend,
-						SettlementInstructionReasonCode.mmAllCredits, SettlementInstructionReasonCode.mmAllCreditsAndDebits, SettlementInstructionReasonCode.mmCorporateAction);
 				derivation_lazy = () -> Arrays.asList(SettlementInstructionReason1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementInstructionReasonCode.Subscription, com.tools20022.repository.codeset.SettlementInstructionReasonCode.InvestmentSavingsPlan,
+						com.tools20022.repository.codeset.SettlementInstructionReasonCode.WithdrawalSavingsPlan, com.tools20022.repository.codeset.SettlementInstructionReasonCode.SavingsPlan,
+						com.tools20022.repository.codeset.SettlementInstructionReasonCode.SecuritiesPurchase, com.tools20022.repository.codeset.SettlementInstructionReasonCode.Charges,
+						com.tools20022.repository.codeset.SettlementInstructionReasonCode.AllDebits, com.tools20022.repository.codeset.SettlementInstructionReasonCode.Redemption,
+						com.tools20022.repository.codeset.SettlementInstructionReasonCode.SecuritiesSale, com.tools20022.repository.codeset.SettlementInstructionReasonCode.Interest,
+						com.tools20022.repository.codeset.SettlementInstructionReasonCode.Dividend, com.tools20022.repository.codeset.SettlementInstructionReasonCode.AllCredits,
+						com.tools20022.repository.codeset.SettlementInstructionReasonCode.AllCreditsAndDebits, com.tools20022.repository.codeset.SettlementInstructionReasonCode.CorporateAction);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Subscription.getCodeName().get(), Subscription);
+		codesByName.put(InvestmentSavingsPlan.getCodeName().get(), InvestmentSavingsPlan);
+		codesByName.put(WithdrawalSavingsPlan.getCodeName().get(), WithdrawalSavingsPlan);
+		codesByName.put(SavingsPlan.getCodeName().get(), SavingsPlan);
+		codesByName.put(SecuritiesPurchase.getCodeName().get(), SecuritiesPurchase);
+		codesByName.put(Charges.getCodeName().get(), Charges);
+		codesByName.put(AllDebits.getCodeName().get(), AllDebits);
+		codesByName.put(Redemption.getCodeName().get(), Redemption);
+		codesByName.put(SecuritiesSale.getCodeName().get(), SecuritiesSale);
+		codesByName.put(Interest.getCodeName().get(), Interest);
+		codesByName.put(Dividend.getCodeName().get(), Dividend);
+		codesByName.put(AllCredits.getCodeName().get(), AllCredits);
+		codesByName.put(AllCreditsAndDebits.getCodeName().get(), AllCreditsAndDebits);
+		codesByName.put(CorporateAction.getCodeName().get(), CorporateAction);
+	}
+
+	public static SettlementInstructionReasonCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SettlementInstructionReasonCode[] values() {
+		SettlementInstructionReasonCode[] values = new SettlementInstructionReasonCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SettlementInstructionReasonCode> {
+		@Override
+		public SettlementInstructionReasonCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SettlementInstructionReasonCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

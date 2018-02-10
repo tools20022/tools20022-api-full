@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -29,6 +30,8 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -95,8 +98,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -113,16 +116,16 @@ import javax.xml.bind.annotation.XmlType;
  * DocumentIdentification13}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DocumentIdentification32", propOrder = {"identification", "documentNumber", "linkageType"})
 public class DocumentIdentification32 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected DocumentIdentification3Choice identification;
 	/**
-	 * Unique identifier of the document (message) assigned either by the
-	 * account servicer or the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -141,6 +144,9 @@ public class DocumentIdentification32 {
 	 * DocumentIdentification32}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Id"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -162,9 +168,10 @@ public class DocumentIdentification32 {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> DocumentIdentification32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification32.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of the document (message) assigned either by the account servicer or the account owner.";
@@ -175,10 +182,11 @@ public class DocumentIdentification32 {
 			type_lazy = () -> DocumentIdentification3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DocNb")
 	protected DocumentNumber5Choice documentNumber;
 	/**
-	 * Identification of the type of document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -192,6 +200,9 @@ public class DocumentIdentification32 {
 	 * DocumentIdentification32}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DocNb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13a::LINK</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -210,9 +221,10 @@ public class DocumentIdentification32 {
 	 */
 	public static final MMMessageAssociationEnd mmDocumentNumber = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DocumentIdentification32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification32.mmObject();
 			isDerived = false;
 			xmlTag = "DocNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13a::LINK"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentNumber";
 			definition = "Identification of the type of document.";
@@ -223,11 +235,11 @@ public class DocumentIdentification32 {
 			type_lazy = () -> DocumentNumber5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LkgTp")
 	protected ProcessingPosition7Choice linkageType;
 	/**
-	 * Specifies when this document is to be processed relative to an other
-	 * referred document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -241,6 +253,9 @@ public class DocumentIdentification32 {
 	 * DocumentIdentification32}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LkgTp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::LINK</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -261,9 +276,10 @@ public class DocumentIdentification32 {
 	 */
 	public static final MMMessageAssociationEnd mmLinkageType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DocumentIdentification32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification32.mmObject();
 			isDerived = false;
 			xmlTag = "LkgTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::LINK"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageType";
 			definition = "Specifies when this document is to be processed relative to an other referred document.";
@@ -278,13 +294,14 @@ public class DocumentIdentification32 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DocumentIdentification32.mmIdentification, DocumentIdentification32.mmDocumentNumber, DocumentIdentification32.mmLinkageType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification32.mmIdentification, com.tools20022.repository.msg.DocumentIdentification32.mmDocumentNumber,
+						com.tools20022.repository.msg.DocumentIdentification32.mmLinkageType);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmOtherDocumentIdentification, CorporateActionMovementPreliminaryAdviceV07.mmOtherDocumentIdentification,
 						CorporateActionMovementConfirmationV07.mmOtherDocumentIdentification, CorporateActionNotificationV06.mmOtherDocumentIdentification, CorporateActionMovementReversalAdviceV07.mmOtherDocumentIdentification,
 						CorporateActionNotificationV07.mmOtherDocumentIdentification, CorporateActionMovementConfirmationV08.mmOtherDocumentIdentification, CorporateActionMovementPreliminaryAdviceV08.mmOtherDocumentIdentification,
 						CorporateActionMovementReversalAdviceV08.mmOtherDocumentIdentification, CorporateActionInstructionV07.mmOtherDocumentIdentification);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification32";
 				definition = "Identification of a document as well as the document number and type of link.";
@@ -294,30 +311,30 @@ public class DocumentIdentification32 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification3Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(DocumentIdentification3Choice identification) {
-		this.identification = identification;
+	public DocumentIdentification32 setIdentification(DocumentIdentification3Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "DocNb")
-	public DocumentNumber5Choice getDocumentNumber() {
-		return documentNumber;
+	public Optional<DocumentNumber5Choice> getDocumentNumber() {
+		return documentNumber == null ? Optional.empty() : Optional.of(documentNumber);
 	}
 
-	public void setDocumentNumber(DocumentNumber5Choice documentNumber) {
+	public DocumentIdentification32 setDocumentNumber(DocumentNumber5Choice documentNumber) {
 		this.documentNumber = documentNumber;
+		return this;
 	}
 
-	@XmlElement(name = "LkgTp")
-	public ProcessingPosition7Choice getLinkageType() {
-		return linkageType;
+	public Optional<ProcessingPosition7Choice> getLinkageType() {
+		return linkageType == null ? Optional.empty() : Optional.of(linkageType);
 	}
 
-	public void setLinkageType(ProcessingPosition7Choice linkageType) {
+	public DocumentIdentification32 setLinkageType(ProcessingPosition7Choice linkageType) {
 		this.linkageType = linkageType;
+		return this;
 	}
 }

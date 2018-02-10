@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DTCCLinkTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies types of linked events.
@@ -32,37 +37,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#mmCorrespondingEvent
- * DTCCLinkTypeCode.mmCorrespondingEvent}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#CorrespondingEvent
+ * DTCCLinkTypeCode.CorrespondingEvent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#Duplicate
+ * DTCCLinkTypeCode.Duplicate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#mmDuplicate
- * DTCCLinkTypeCode.mmDuplicate}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#EventChangeToMandatory
+ * DTCCLinkTypeCode.EventChangeToMandatory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#mmEventChangeToMandatory
- * DTCCLinkTypeCode.mmEventChangeToMandatory}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#EventChangeToVoluntary
+ * DTCCLinkTypeCode.EventChangeToVoluntary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#mmEventChangeToVoluntary
- * DTCCLinkTypeCode.mmEventChangeToVoluntary}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#FractionalSecurity
+ * DTCCLinkTypeCode.FractionalSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#mmFractionalSecurity
- * DTCCLinkTypeCode.mmFractionalSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#PartOfHybridSecurity
+ * DTCCLinkTypeCode.PartOfHybridSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#mmPartOfHybridSecurity
- * DTCCLinkTypeCode.mmPartOfHybridSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#EventOnIntermediarySecurity
+ * DTCCLinkTypeCode.EventOnIntermediarySecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#mmEventOnIntermediarySecurity
- * DTCCLinkTypeCode.mmEventOnIntermediarySecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#InsuredUninsuredSecurities
+ * DTCCLinkTypeCode.InsuredUninsuredSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#mmInsuredUninsuredSecurities
- * DTCCLinkTypeCode.mmInsuredUninsuredSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#EventConvertedToNewEvent
+ * DTCCLinkTypeCode.EventConvertedToNewEvent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#mmEventConvertedToNewEvent
- * DTCCLinkTypeCode.mmEventConvertedToNewEvent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#mmMultiMarket
- * DTCCLinkTypeCode.mmMultiMarket}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#mmOther
- * DTCCLinkTypeCode.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#MultiMarket
+ * DTCCLinkTypeCode.MultiMarket}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCLinkTypeCode#Other
+ * DTCCLinkTypeCode.Other}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -75,8 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +97,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies types of linked events."</li>
  * </ul>
  */
-public class DTCCLinkTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DTCCLinkTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -120,12 +125,12 @@ public class DTCCLinkTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorrespondingEvent = new MMCode() {
+	public static final DTCCLinkTypeCode CorrespondingEvent = new DTCCLinkTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondingEvent";
 			definition = "Events that are concurrent and affect the same underlying security (for example: Stock Split followed by a Reverse Split).";
-			owner_lazy = () -> DTCCLinkTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCLinkTypeCode.mmObject();
 			codeName = "COEV";
 		}
 	};
@@ -150,12 +155,12 @@ public class DTCCLinkTypeCode {
 	 * definition} = "Events (event records) are duplicate of each other."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDuplicate = new MMCode() {
+	public static final DTCCLinkTypeCode Duplicate = new DTCCLinkTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Duplicate";
 			definition = "Events (event records) are duplicate of each other.";
-			owner_lazy = () -> DTCCLinkTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCLinkTypeCode.mmObject();
 			codeName = "DUPE";
 		}
 	};
@@ -186,12 +191,12 @@ public class DTCCLinkTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEventChangeToMandatory = new MMCode() {
+	public static final DTCCLinkTypeCode EventChangeToMandatory = new DTCCLinkTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventChangeToMandatory";
 			definition = "Events that are consecutive and evolve from a Voluntary Event to a Mandatory Event but of the same basic GCA (Global Corporate Actions validation service) event type. For example Exchange - Voluntary to Exchange - Mandatory.  Note: The old and new events should not overlap and the older event will remain in an \"approved\" state.";
-			owner_lazy = () -> DTCCLinkTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCLinkTypeCode.mmObject();
 			codeName = "CHMA";
 		}
 	};
@@ -220,12 +225,12 @@ public class DTCCLinkTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEventChangeToVoluntary = new MMCode() {
+	public static final DTCCLinkTypeCode EventChangeToVoluntary = new DTCCLinkTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventChangeToVoluntary";
 			definition = "Event that are consecutive and evolve from a Mandatory Event to a voluntary event (for example Merger-Mandatory becomes a Merger-Voluntary).";
-			owner_lazy = () -> DTCCLinkTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCLinkTypeCode.mmObject();
 			codeName = "CHVO";
 		}
 	};
@@ -250,12 +255,12 @@ public class DTCCLinkTypeCode {
 	 * definition} = "Events are linked because of fractional security."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFractionalSecurity = new MMCode() {
+	public static final DTCCLinkTypeCode FractionalSecurity = new DTCCLinkTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionalSecurity";
 			definition = "Events are linked because of fractional security.";
-			owner_lazy = () -> DTCCLinkTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCLinkTypeCode.mmObject();
 			codeName = "FRSE";
 		}
 	};
@@ -291,12 +296,12 @@ public class DTCCLinkTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartOfHybridSecurity = new MMCode() {
+	public static final DTCCLinkTypeCode PartOfHybridSecurity = new DTCCLinkTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartOfHybridSecurity";
 			definition = "Events are linked because of underlying security is part of hybrid security. Hybrid securities have underlying securities. As an example Telecom hybrid security is made of various Telecom securities, example ATT, Verizon etc. When there is a dividend on the underlying security the hybrid pays as well. Announcements are linked under the hybrid security payment announcement to the underlying security that is paying that event. This is the way the holders of the hybrid are informed where this income is being derived from, since on many occasions there can be multiple announcements under the hybrid at the same time since the underlying securities are paying a distribution.";
-			owner_lazy = () -> DTCCLinkTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCLinkTypeCode.mmObject();
 			codeName = "HYBS";
 		}
 	};
@@ -325,12 +330,12 @@ public class DTCCLinkTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEventOnIntermediarySecurity = new MMCode() {
+	public static final DTCCLinkTypeCode EventOnIntermediarySecurity = new DTCCLinkTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventOnIntermediarySecurity";
 			definition = "Events are linked because of an intermediary security (for example Rights Distribution to a Rights Subscription; Rights Subscription to an Assimilation).";
-			owner_lazy = () -> DTCCLinkTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCLinkTypeCode.mmObject();
 			codeName = "ISEV";
 		}
 	};
@@ -361,12 +366,12 @@ public class DTCCLinkTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInsuredUninsuredSecurities = new MMCode() {
+	public static final DTCCLinkTypeCode InsuredUninsuredSecurities = new DTCCLinkTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsuredUninsuredSecurities";
 			definition = "Events are linked because of insured or uninsured securities. In the market there are many securities where a municipality or issuer will insure a portion of their outstanding principal. It technically is the same security, however, there are two different CUSIPs one for the insured piece and the other for the un insured part.";
-			owner_lazy = () -> DTCCLinkTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCLinkTypeCode.mmObject();
 			codeName = "IUNS";
 		}
 	};
@@ -397,12 +402,12 @@ public class DTCCLinkTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEventConvertedToNewEvent = new MMCode() {
+	public static final DTCCLinkTypeCode EventConvertedToNewEvent = new DTCCLinkTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventConvertedToNewEvent";
 			definition = "Event that are consecutive but of a different GCA (Global Corporate actions validation service) event type. For example Tender converts to Merger Voluntary when 429 Notice issued.  Note: the old and new events should not overlap and the older event will remain in an \"approved\" state.";
-			owner_lazy = () -> DTCCLinkTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCLinkTypeCode.mmObject();
 			codeName = "TONU";
 		}
 	};
@@ -430,12 +435,12 @@ public class DTCCLinkTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMultiMarket = new MMCode() {
+	public static final DTCCLinkTypeCode MultiMarket = new DTCCLinkTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiMarket";
 			definition = "Events are linked because event security is listed in another market under another market security.";
-			owner_lazy = () -> DTCCLinkTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCLinkTypeCode.mmObject();
 			codeName = "MMKT";
 		}
 	};
@@ -460,30 +465,71 @@ public class DTCCLinkTypeCode {
 	 * definition} = "Cannot be classified by any of the link types."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final DTCCLinkTypeCode Other = new DTCCLinkTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Cannot be classified by any of the link types.";
-			owner_lazy = () -> DTCCLinkTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCLinkTypeCode.mmObject();
 			codeName = "OTHR";
 		}
 	};
+	final static private LinkedHashMap<String, DTCCLinkTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DTCCLinkTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("COEV");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCCLinkTypeCode";
 				definition = "Specifies types of linked events.";
-				code_lazy = () -> Arrays.asList(DTCCLinkTypeCode.mmCorrespondingEvent, DTCCLinkTypeCode.mmDuplicate, DTCCLinkTypeCode.mmEventChangeToMandatory, DTCCLinkTypeCode.mmEventChangeToVoluntary,
-						DTCCLinkTypeCode.mmFractionalSecurity, DTCCLinkTypeCode.mmPartOfHybridSecurity, DTCCLinkTypeCode.mmEventOnIntermediarySecurity, DTCCLinkTypeCode.mmInsuredUninsuredSecurities,
-						DTCCLinkTypeCode.mmEventConvertedToNewEvent, DTCCLinkTypeCode.mmMultiMarket, DTCCLinkTypeCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(DTCCLinkType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCLinkTypeCode.CorrespondingEvent, com.tools20022.repository.codeset.DTCCLinkTypeCode.Duplicate,
+						com.tools20022.repository.codeset.DTCCLinkTypeCode.EventChangeToMandatory, com.tools20022.repository.codeset.DTCCLinkTypeCode.EventChangeToVoluntary,
+						com.tools20022.repository.codeset.DTCCLinkTypeCode.FractionalSecurity, com.tools20022.repository.codeset.DTCCLinkTypeCode.PartOfHybridSecurity,
+						com.tools20022.repository.codeset.DTCCLinkTypeCode.EventOnIntermediarySecurity, com.tools20022.repository.codeset.DTCCLinkTypeCode.InsuredUninsuredSecurities,
+						com.tools20022.repository.codeset.DTCCLinkTypeCode.EventConvertedToNewEvent, com.tools20022.repository.codeset.DTCCLinkTypeCode.MultiMarket, com.tools20022.repository.codeset.DTCCLinkTypeCode.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CorrespondingEvent.getCodeName().get(), CorrespondingEvent);
+		codesByName.put(Duplicate.getCodeName().get(), Duplicate);
+		codesByName.put(EventChangeToMandatory.getCodeName().get(), EventChangeToMandatory);
+		codesByName.put(EventChangeToVoluntary.getCodeName().get(), EventChangeToVoluntary);
+		codesByName.put(FractionalSecurity.getCodeName().get(), FractionalSecurity);
+		codesByName.put(PartOfHybridSecurity.getCodeName().get(), PartOfHybridSecurity);
+		codesByName.put(EventOnIntermediarySecurity.getCodeName().get(), EventOnIntermediarySecurity);
+		codesByName.put(InsuredUninsuredSecurities.getCodeName().get(), InsuredUninsuredSecurities);
+		codesByName.put(EventConvertedToNewEvent.getCodeName().get(), EventConvertedToNewEvent);
+		codesByName.put(MultiMarket.getCodeName().get(), MultiMarket);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static DTCCLinkTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DTCCLinkTypeCode[] values() {
+		DTCCLinkTypeCode[] values = new DTCCLinkTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DTCCLinkTypeCode> {
+		@Override
+		public DTCCLinkTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DTCCLinkTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

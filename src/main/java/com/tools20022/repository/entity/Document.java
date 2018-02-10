@@ -28,9 +28,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * General information that unambiguously identifies a document, such as
@@ -97,6 +96,251 @@ import java.util.List;
  * Document.mmPresentation}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Document#mmRelatedContract
  * Document.mmRelatedContract}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentifiedDocument
+ * GenericIdentification.mmIdentifiedDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ContactPoint#mmStoredDocument
+ * ContactPoint.mmStoredDocument}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Location#mmIssuedDocument
+ * Location.mmIssuedDocument}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Agreement#mmDocument
+ * Agreement.mmDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DocumentPartyRole#mmDocument
+ * DocumentPartyRole.mmDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmAssociatedDocument
+ * PaymentObligation.mmAssociatedDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Presentation#mmPresentedDocument
+ * Presentation.mmPresentedDocument}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CommercialTrade#mmDocuments
+ * CommercialTrade.mmDocuments}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Transport#mmTransportDocuments
+ * Transport.mmTransportDocuments}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LetterOfCredit#mmDocument
+ * LetterOfCredit.mmDocument}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Guarantee#mmDocument
+ * Guarantee.mmDocument}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Reconciliation#mmDocument
+ * Reconciliation.mmDocument}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Evidence#mmRelatedDocument
+ * Evidence.mmRelatedDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RegisteredContract#mmAttachment
+ * RegisteredContract.mmAttachment}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation6#mmReferredDocumentInformation
+ * StructuredRemittanceInformation6.mmReferredDocumentInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation6#mmAdditionalRemittanceInformation
+ * StructuredRemittanceInformation6.mmAdditionalRemittanceInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation1#mmUnstructured
+ * RemittanceInformation1.mmUnstructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation1#mmStructured
+ * RemittanceInformation1.mmStructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReferredDocumentType2#mmCodeOrProprietary
+ * ReferredDocumentType2.mmCodeOrProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CreditorReferenceType2#mmCodeOrProprietary
+ * CreditorReferenceType2.mmCodeOrProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation7#mmReferredDocumentInformation
+ * StructuredRemittanceInformation7.mmReferredDocumentInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation7#mmAdditionalRemittanceInformation
+ * StructuredRemittanceInformation7.mmAdditionalRemittanceInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation5#mmUnstructured
+ * RemittanceInformation5.mmUnstructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation5#mmStructured
+ * RemittanceInformation5.mmStructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation9#mmReferredDocumentInformation
+ * StructuredRemittanceInformation9.mmReferredDocumentInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation9#mmAdditionalRemittanceInformation
+ * StructuredRemittanceInformation9.mmAdditionalRemittanceInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation7#mmUnstructured
+ * RemittanceInformation7.mmUnstructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation7#mmStructured
+ * RemittanceInformation7.mmStructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation2#mmUnstructured
+ * RemittanceInformation2.mmUnstructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation8#mmReferredDocumentInformation
+ * StructuredRemittanceInformation8.mmReferredDocumentInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation8#mmAdditionalRemittanceInformation
+ * StructuredRemittanceInformation8.mmAdditionalRemittanceInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation6#mmUnstructured
+ * RemittanceInformation6.mmUnstructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation6#mmStructured
+ * RemittanceInformation6.mmStructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RemittanceInformation3Choice#mmUnstructured
+ * RemittanceInformation3Choice.mmUnstructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RemittanceInformation3Choice#mmStructured
+ * RemittanceInformation3Choice.mmStructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification#mmRemittanceInformation
+ * RequestedModification.mmRemittanceInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification2#mmRemittanceInformation
+ * RequestedModification2.mmRemittanceInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeAgreement6#mmAdditionalReferenceDocument
+ * TradeAgreement6.mmAdditionalReferenceDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification3#mmRemittanceInformation
+ * RequestedModification3.mmRemittanceInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation3#mmUnstructured
+ * RemittanceInformation3.mmUnstructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation3#mmStructured
+ * RemittanceInformation3.mmStructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation4#mmUnstructured
+ * RemittanceInformation4.mmUnstructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation4#mmStructured
+ * RemittanceInformation4.mmStructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DocumentLineType1#mmCodeOrProprietary
+ * DocumentLineType1.mmCodeOrProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation10#mmReferredDocumentInformation
+ * StructuredRemittanceInformation10.mmReferredDocumentInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation10#mmAdditionalRemittanceInformation
+ * StructuredRemittanceInformation10.mmAdditionalRemittanceInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation8#mmStructured
+ * RemittanceInformation8.mmStructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation4#mmLineDetails
+ * ReferredDocumentInformation4.mmLineDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DocumentLineInformation1#mmDescription
+ * DocumentLineInformation1.mmDescription}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GarnishmentType1#mmCodeOrProprietary
+ * GarnishmentType1.mmCodeOrProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation10#mmUnstructured
+ * RemittanceInformation10.mmUnstructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation10#mmStructured
+ * RemittanceInformation10.mmStructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification4#mmRemittanceInformation
+ * RequestedModification4.mmRemittanceInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation12#mmReferredDocumentInformation
+ * StructuredRemittanceInformation12.mmReferredDocumentInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation12#mmAdditionalRemittanceInformation
+ * StructuredRemittanceInformation12.mmAdditionalRemittanceInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReferredDocumentType4#mmCodeOrProprietary
+ * ReferredDocumentType4.mmCodeOrProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmRelatedLetter
+ * BusinessLetter1.mmRelatedLetter}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmRelatedMessage
+ * BusinessLetter1.mmRelatedMessage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmAssociatedDocument
+ * BusinessLetter1.mmAssociatedDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.EncapsulatedBusinessMessage1#mmHeader
+ * EncapsulatedBusinessMessage1.mmHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.EncapsulatedBusinessMessage1#mmMessage
+ * EncapsulatedBusinessMessage1.mmMessage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancingAgreementList1#mmRelatedDocument
+ * FinancingAgreementList1.mmRelatedDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancingItemList1#mmRelatedDocument
+ * FinancingItemList1.mmRelatedDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmRelatedDocument
+ * ReconciliationList1.mmRelatedDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmAssociatedDocument
+ * ReconciliationList1.mmAssociatedDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.EventDescription1#mmRelatedDocument
+ * EventDescription1.mmRelatedDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.EventDescription1#mmRelatedLetter
+ * EventDescription1.mmRelatedLetter}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.EventDescription1#mmRelatedMessage
+ * EventDescription1.mmRelatedMessage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.EventDescription1#mmAssociatedDocument
+ * EventDescription1.mmAssociatedDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GuaranteeDetails1#mmAssociatedDocument
+ * GuaranteeDetails1.mmAssociatedDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification5#mmRemittanceInformation
+ * RequestedModification5.mmRemittanceInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation12#mmStructured
+ * RemittanceInformation12.mmStructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation11#mmUnstructured
+ * RemittanceInformation11.mmUnstructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation11#mmStructured
+ * RemittanceInformation11.mmStructured}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation13#mmReferredDocumentInformation
+ * StructuredRemittanceInformation13.mmReferredDocumentInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation13#mmAdditionalRemittanceInformation
+ * StructuredRemittanceInformation13.mmAdditionalRemittanceInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation7#mmLineDetails
+ * ReferredDocumentInformation7.mmLineDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeAgreement13#mmAdditionalReferenceDocument
+ * TradeAgreement13.mmAdditionalReferenceDocument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification6#mmRemittanceInformation
+ * RequestedModification6.mmRemittanceInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation13#mmStructured
+ * RemittanceInformation13.mmStructured}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -369,255 +613,10 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmIdentifiedDocument
- * GenericIdentification.mmIdentifiedDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ContactPoint#mmStoredDocument
- * ContactPoint.mmStoredDocument}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Location#mmIssuedDocument
- * Location.mmIssuedDocument}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Agreement#mmDocument
- * Agreement.mmDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DocumentPartyRole#mmDocument
- * DocumentPartyRole.mmDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmAssociatedDocument
- * PaymentObligation.mmAssociatedDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Presentation#mmPresentedDocument
- * Presentation.mmPresentedDocument}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CommercialTrade#mmDocuments
- * CommercialTrade.mmDocuments}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Transport#mmTransportDocuments
- * Transport.mmTransportDocuments}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LetterOfCredit#mmDocument
- * LetterOfCredit.mmDocument}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Guarantee#mmDocument
- * Guarantee.mmDocument}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Reconciliation#mmDocument
- * Reconciliation.mmDocument}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Evidence#mmRelatedDocument
- * Evidence.mmRelatedDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RegisteredContract#mmAttachment
- * RegisteredContract.mmAttachment}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation6#mmReferredDocumentInformation
- * StructuredRemittanceInformation6.mmReferredDocumentInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation6#mmAdditionalRemittanceInformation
- * StructuredRemittanceInformation6.mmAdditionalRemittanceInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation1#mmUnstructured
- * RemittanceInformation1.mmUnstructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation1#mmStructured
- * RemittanceInformation1.mmStructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReferredDocumentType2#mmCodeOrProprietary
- * ReferredDocumentType2.mmCodeOrProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CreditorReferenceType2#mmCodeOrProprietary
- * CreditorReferenceType2.mmCodeOrProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation7#mmReferredDocumentInformation
- * StructuredRemittanceInformation7.mmReferredDocumentInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation7#mmAdditionalRemittanceInformation
- * StructuredRemittanceInformation7.mmAdditionalRemittanceInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation5#mmUnstructured
- * RemittanceInformation5.mmUnstructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation5#mmStructured
- * RemittanceInformation5.mmStructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation9#mmReferredDocumentInformation
- * StructuredRemittanceInformation9.mmReferredDocumentInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation9#mmAdditionalRemittanceInformation
- * StructuredRemittanceInformation9.mmAdditionalRemittanceInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation7#mmUnstructured
- * RemittanceInformation7.mmUnstructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation7#mmStructured
- * RemittanceInformation7.mmStructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation2#mmUnstructured
- * RemittanceInformation2.mmUnstructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation8#mmReferredDocumentInformation
- * StructuredRemittanceInformation8.mmReferredDocumentInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation8#mmAdditionalRemittanceInformation
- * StructuredRemittanceInformation8.mmAdditionalRemittanceInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation6#mmUnstructured
- * RemittanceInformation6.mmUnstructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation6#mmStructured
- * RemittanceInformation6.mmStructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.RemittanceInformation3Choice#mmUnstructured
- * RemittanceInformation3Choice.mmUnstructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.RemittanceInformation3Choice#mmStructured
- * RemittanceInformation3Choice.mmStructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification#mmRemittanceInformation
- * RequestedModification.mmRemittanceInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification2#mmRemittanceInformation
- * RequestedModification2.mmRemittanceInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TradeAgreement6#mmAdditionalReferenceDocument
- * TradeAgreement6.mmAdditionalReferenceDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification3#mmRemittanceInformation
- * RequestedModification3.mmRemittanceInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation3#mmUnstructured
- * RemittanceInformation3.mmUnstructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation3#mmStructured
- * RemittanceInformation3.mmStructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation4#mmUnstructured
- * RemittanceInformation4.mmUnstructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation4#mmStructured
- * RemittanceInformation4.mmStructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentLineType1#mmCodeOrProprietary
- * DocumentLineType1.mmCodeOrProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation10#mmReferredDocumentInformation
- * StructuredRemittanceInformation10.mmReferredDocumentInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation10#mmAdditionalRemittanceInformation
- * StructuredRemittanceInformation10.mmAdditionalRemittanceInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation8#mmStructured
- * RemittanceInformation8.mmStructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation4#mmLineDetails
- * ReferredDocumentInformation4.mmLineDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentLineInformation1#mmDescription
- * DocumentLineInformation1.mmDescription}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.GarnishmentType1#mmCodeOrProprietary
- * GarnishmentType1.mmCodeOrProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation10#mmUnstructured
- * RemittanceInformation10.mmUnstructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation10#mmStructured
- * RemittanceInformation10.mmStructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification4#mmRemittanceInformation
- * RequestedModification4.mmRemittanceInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation12#mmReferredDocumentInformation
- * StructuredRemittanceInformation12.mmReferredDocumentInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation12#mmAdditionalRemittanceInformation
- * StructuredRemittanceInformation12.mmAdditionalRemittanceInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReferredDocumentType4#mmCodeOrProprietary
- * ReferredDocumentType4.mmCodeOrProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmRelatedLetter
- * BusinessLetter1.mmRelatedLetter}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmRelatedMessage
- * BusinessLetter1.mmRelatedMessage}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.BusinessLetter1#mmAssociatedDocument
- * BusinessLetter1.mmAssociatedDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.EncapsulatedBusinessMessage1#mmHeader
- * EncapsulatedBusinessMessage1.mmHeader}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.EncapsulatedBusinessMessage1#mmMessage
- * EncapsulatedBusinessMessage1.mmMessage}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingAgreementList1#mmRelatedDocument
- * FinancingAgreementList1.mmRelatedDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancingItemList1#mmRelatedDocument
- * FinancingItemList1.mmRelatedDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmRelatedDocument
- * ReconciliationList1.mmRelatedDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReconciliationList1#mmAssociatedDocument
- * ReconciliationList1.mmAssociatedDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.EventDescription1#mmRelatedDocument
- * EventDescription1.mmRelatedDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.EventDescription1#mmRelatedLetter
- * EventDescription1.mmRelatedLetter}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.EventDescription1#mmRelatedMessage
- * EventDescription1.mmRelatedMessage}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.EventDescription1#mmAssociatedDocument
- * EventDescription1.mmAssociatedDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.GuaranteeDetails1#mmAssociatedDocument
- * GuaranteeDetails1.mmAssociatedDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification5#mmRemittanceInformation
- * RequestedModification5.mmRemittanceInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation12#mmStructured
- * RemittanceInformation12.mmStructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation11#mmUnstructured
- * RemittanceInformation11.mmUnstructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation11#mmStructured
- * RemittanceInformation11.mmStructured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation13#mmReferredDocumentInformation
- * StructuredRemittanceInformation13.mmReferredDocumentInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation13#mmAdditionalRemittanceInformation
- * StructuredRemittanceInformation13.mmAdditionalRemittanceInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReferredDocumentInformation7#mmLineDetails
- * ReferredDocumentInformation7.mmLineDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TradeAgreement13#mmAdditionalReferenceDocument
- * TradeAgreement13.mmAdditionalReferenceDocument}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RequestedModification6#mmRemittanceInformation
- * RequestedModification6.mmRemittanceInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation13#mmStructured
- * RemittanceInformation13.mmStructured}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -635,8 +634,8 @@ public class Document {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected ISODateTime issueDate;
 	/**
-	 * Issue date of the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -815,8 +814,8 @@ public class Document {
 					FinancingItemList1.mmIssueDate, ReconciliationList1.mmDate, EventDescription1.mmDate, QualifiedDocumentInformation1.mmDate, FinancialItemParameters1.mmIssueDate, SupportingDocumentRequestOrLetter1.mmDate,
 					SupportingDocumentRequestOrLetter1.mmDueDate, DocumentIdentification29.mmDateOfIssue, DocumentGeneralInformation3.mmIssueDate, DocumentIdentification28.mmDateOfIssue, ReferredDocumentInformation7.mmRelatedDate,
 					BillingStatement2.mmCreationDateTime, InvoiceHeader2.mmIssueDateTime, ReferredMandateDocument1.mmRelatedDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssueDate";
 			definition = "Issue date of the document.";
@@ -835,9 +834,8 @@ public class Document {
 	};
 	protected CopyDuplicateCode copyDuplicate;
 	/**
-	 * Specifies if this document is a copy, a duplicate, or a duplicate of a
-	 * copy.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -886,8 +884,8 @@ public class Document {
 		{
 			derivation_lazy = () -> Arrays.asList(DocumentIdentification11.mmCopyDuplicate, DocumentIdentification16.mmCopyDuplicate, DocumentIdentification12.mmCopyDuplicate, DocumentIdentification18.mmCopyDuplicate,
 					DocumentIdentification27.mmCopyDuplicate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CopyDuplicate";
 			definition = "Specifies if this document is a copy, a duplicate, or a duplicate of a copy.";
@@ -906,8 +904,8 @@ public class Document {
 	};
 	protected List<com.tools20022.repository.entity.ContactPoint> placeOfStorage;
 	/**
-	 * Specifies where the document is stored.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1044,8 +1042,8 @@ public class Document {
 					EntryTransaction7.mmRelatedRemittanceInformation, DirectDebitTransactionInformation20.mmRelatedRemittanceInformation, OriginalItemReference4.mmRelatedRemittanceInformation,
 					DirectDebitTransactionInformation19.mmRelatedRemittanceInformation, EntryTransaction8.mmRelatedRemittanceInformation, NotificationItem6.mmRelatedRemittanceInformation,
 					DirectDebitTransactionInformation21.mmRelatedRemittanceInformation, DirectDebitTransactionInformation22.mmRelatedRemittanceInformation);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlaceOfStorage";
 			definition = "Specifies where the document is stored.";
@@ -1057,8 +1055,8 @@ public class Document {
 	};
 	protected PaymentObligation paymentObligation;
 	/**
-	 * Document which is referred to in a payment obligation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1099,8 +1097,8 @@ public class Document {
 	public static final MMBusinessAssociationEnd mmPaymentObligation = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(ReconciliationList1.mmPaymentTerms);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentObligation";
 			definition = "Document which is referred to in a payment obligation.";
@@ -1113,8 +1111,8 @@ public class Document {
 	};
 	protected DocumentTypeCode type;
 	/**
-	 * Specifies the type of the document, for example commercial invoice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1246,8 +1244,8 @@ public class Document {
 					GarnishmentType1Choice.mmProprietary, ReferredDocumentType3Choice.mmCode, ReferredDocumentType3Choice.mmProprietary, ReferredDocumentInformation6.mmType, QualifiedDocumentInformation1.mmDocumentType,
 					SupportingDocumentRequestOrLetter1.mmType, SupportingDocumentEntry1.mmDocumentType, DocumentGeneralInformation3.mmDocumentType, ReferredDocumentInformation7.mmType, InvoiceHeader2.mmTypeCode,
 					ReferredMandateDocument1.mmType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of the document, for example commercial invoice.";
@@ -1266,11 +1264,8 @@ public class Document {
 	};
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * Amount of money and currency of a document. <br>
-	 * The amount can be either the original amount due and payable for instance
-	 * the ordered amount, or the amount actually remitted for the referred
-	 * document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1361,8 +1356,8 @@ public class Document {
 					ServiceItemTotals1.mmTotalInvoiceAmount, InvoiceTotals2.mmTotalInvoiceAmount, ServiceCategoryTotals1.mmTotalInvoiceAmount, DocumentLineInformation1.mmAmount, StructuredRemittanceInformation12.mmReferredDocumentAmount,
 					SupportingDocumentEntry1.mmTotalAmount, SupportingDocumentEntry1.mmTotalAmountAfterShipment, SupportingDocumentEntry1.mmTotalAmountInContractCurrency,
 					SupportingDocumentEntry1.mmTotalAmountAfterShipmentInContractCurrency, TransactionCertificateContract1.mmTransactionAmountInContractCurrency, StructuredRemittanceInformation13.mmReferredDocumentAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Amount of money and currency of a document. \r\nThe amount can be either the original amount due and payable for instance the ordered amount, or the amount actually remitted for the referred document.";
@@ -1381,8 +1376,8 @@ public class Document {
 	};
 	protected List<com.tools20022.repository.entity.Agreement> agreement;
 	/**
-	 * Agreement which is materialised by a document
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1429,8 +1424,8 @@ public class Document {
 	public static final MMBusinessAssociationEnd mmAgreement = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(BusinessLetter1.mmGoverningContract, EventDescription1.mmGoverningContract, FinancialItemParameters1.mmGoverningContract);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Agreement";
 			definition = "Agreement which is materialised by a document";
@@ -1442,8 +1437,8 @@ public class Document {
 	};
 	protected Location placeOfIssue;
 	/**
-	 * Place where the document was issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1489,8 +1484,8 @@ public class Document {
 	public static final MMBusinessAssociationEnd mmPlaceOfIssue = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking3.mmPlaceOfIssue, CertificateDataSet1.mmPlaceOfIssue, CertificateDataSet2.mmPlaceOfIssue);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlaceOfIssue";
 			definition = "Place where the document was issued.";
@@ -1503,8 +1498,8 @@ public class Document {
 	};
 	protected Number documentVersion;
 	/**
-	 * Unambiguous identification of the version of a document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1553,8 +1548,8 @@ public class Document {
 		{
 			derivation_lazy = () -> Arrays.asList(DocumentIdentification3.mmVersion, DocumentIdentification1.mmVersion, DocumentIdentification4.mmVersion, DocumentIdentification6.mmVersion, DocumentIdentification2.mmVersion,
 					DocumentIdentification10.mmVersion);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DocumentVersion";
 			definition = "Unambiguous identification of the version of a document.";
@@ -1573,8 +1568,8 @@ public class Document {
 	};
 	protected Max140Text status;
 	/**
-	 * Status of the document (eg delivered, paid, etc.)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1611,8 +1606,8 @@ public class Document {
 	public static final MMBusinessAttribute mmStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingStatement1.mmStatus, ContractRegistrationStatement1.mmRegulatoryRuleValidation, BillingStatement2.mmStatus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
 			definition = "Status of the document (eg delivered, paid, etc.)";
@@ -1631,8 +1626,8 @@ public class Document {
 	};
 	protected List<com.tools20022.repository.entity.Reconciliation> reconciliation;
 	/**
-	 * Reconciliation process for which a document is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1665,8 +1660,8 @@ public class Document {
 	 */
 	public static final MMBusinessAssociationEnd mmReconciliation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reconciliation";
 			definition = "Reconciliation process for which a document is specified.";
@@ -1678,8 +1673,8 @@ public class Document {
 	};
 	protected LetterOfCredit letterOfCredit;
 	/**
-	 * Written undertaking by a bank to honour a demand for payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1712,8 +1707,8 @@ public class Document {
 	 */
 	public static final MMBusinessAssociationEnd mmLetterOfCredit = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LetterOfCredit";
 			definition = "Written undertaking by a bank to honour a demand for payment.";
@@ -1726,9 +1721,8 @@ public class Document {
 	};
 	protected List<com.tools20022.repository.entity.DocumentPartyRole> partyRole;
 	/**
-	 * Role played by a party in the context of a document or in the context of
-	 * the business linked to the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1774,8 +1768,8 @@ public class Document {
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancingAgreementList1.mmNotificationInformation, FinancingItemList1.mmNotificationInformation);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
 			definition = "Role played by a party in the context of a document or in the context of the business linked to the document.";
@@ -1787,8 +1781,8 @@ public class Document {
 	};
 	protected DataSetTypeCode dataSetType;
 	/**
-	 * Specifies the type of data set in which the document is included.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1823,8 +1817,8 @@ public class Document {
 	public static final MMBusinessAttribute mmDataSetType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DocumentIdentification2.mmType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DataSetType";
 			definition = "Specifies the type of data set in which the document is included.";
@@ -1843,8 +1837,8 @@ public class Document {
 	};
 	protected Transport transport;
 	/**
-	 * Transport process for which related documents are specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1892,8 +1886,8 @@ public class Document {
 	public static final MMBusinessAssociationEnd mmTransport = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(RequiredSubmission3.mmMatchTransport, InsuranceDataSet1.mmTransport, CertificateDataSet2.mmTransport);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Transport";
 			definition = "Transport process for which related documents are specified.";
@@ -1906,8 +1900,8 @@ public class Document {
 	};
 	protected YesNoIndicator signedIndicator;
 	/**
-	 * Indication whether the document must be signed or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1932,8 +1926,8 @@ public class Document {
 	 */
 	public static final MMBusinessAttribute mmSignedIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SignedIndicator";
 			definition = "Indication whether the document must be signed or not.";
@@ -1952,8 +1946,8 @@ public class Document {
 	};
 	protected CurrencyAndAmount remittedAmount;
 	/**
-	 * Amount of money remitted for the referred document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2000,8 +1994,8 @@ public class Document {
 		{
 			derivation_lazy = () -> Arrays.asList(ReferredDocumentAmount1Choice.mmRemittedAmount, RemittanceAmount1.mmRemittedAmount, RemittanceAmount2.mmRemittedAmount, StructuredRemittanceInformation10.mmReferredDocumentAmount,
 					Garnishment1.mmRemittedAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RemittedAmount";
 			definition = "Amount of money remitted for the referred document.";
@@ -2020,8 +2014,8 @@ public class Document {
 	};
 	protected List<com.tools20022.repository.entity.Guarantee> guarantee;
 	/**
-	 * Guarantee that is described in a document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2053,8 +2047,8 @@ public class Document {
 	 */
 	public static final MMBusinessAssociationEnd mmGuarantee = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Guarantee";
 			definition = "Guarantee that is described in a document.";
@@ -2066,8 +2060,8 @@ public class Document {
 	};
 	protected LanguageCode language;
 	/**
-	 * Language used for textual information in the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2109,8 +2103,8 @@ public class Document {
 	public static final MMBusinessAttribute mmLanguage = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvoiceHeader1.mmLanguageCode, EventDescription1.mmLanguageCode, FinancialItemParameters1.mmLanguageCode, InvoiceHeader2.mmLanguageCode);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Language";
 			definition = "Language used for textual information in the document.";
@@ -2129,8 +2123,8 @@ public class Document {
 	};
 	protected Max35Text purpose;
 	/**
-	 * Specifies the function of the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2172,8 +2166,8 @@ public class Document {
 	public static final MMBusinessAttribute mmPurpose = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvoiceHeader1.mmDocumentPurpose, FinancialItemParameters1.mmDocumentPurpose, SupportingDocumentRequestOrLetter1.mmSubject, InvoiceHeader2.mmDocumentPurpose);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Purpose";
 			definition = "Specifies the function of the document.";
@@ -2192,9 +2186,8 @@ public class Document {
 	};
 	protected GenericIdentification documentIdentification;
 	/**
-	 * Identification of a document for instance unique identification of the
-	 * purchase order, assigned by the buyer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2294,8 +2287,8 @@ public class Document {
 					TransactionCertificateContract1.mmContractReference, ContractRegistrationReference1Choice.mmContract, CurrencyControlRecordStatus1.mmDocumentIdentification, OtherCollateral7.mmLetterOfCreditIdentification,
 					OtherCollateral5.mmLetterOfCreditIdentification, InvoiceHeader2.mmName, Mandate10.mmMandateReference, Mandate9.mmMandateReference, Mandate11.mmMandateReference, ReferredMandateDocument1.mmCreditorReference,
 					Mandate8.mmMandateReference);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DocumentIdentification";
 			definition = "Identification of a document for instance unique identification of the purchase order, assigned by the buyer.";
@@ -2308,8 +2301,8 @@ public class Document {
 	};
 	protected List<com.tools20022.repository.entity.Evidence> evidence;
 	/**
-	 * Proof of evidence which uses a document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2340,8 +2333,8 @@ public class Document {
 	 */
 	public static final MMBusinessAssociationEnd mmEvidence = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Evidence";
 			definition = "Proof of evidence which uses a document.";
@@ -2353,8 +2346,8 @@ public class Document {
 	};
 	protected List<com.tools20022.repository.entity.CommercialTrade> commercialTrade;
 	/**
-	 * Trade for which a certificare is issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2386,8 +2379,8 @@ public class Document {
 	 */
 	public static final MMBusinessAssociationEnd mmCommercialTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommercialTrade";
 			definition = "Trade for which a certificare is issued.";
@@ -2399,8 +2392,8 @@ public class Document {
 	};
 	protected Presentation presentation;
 	/**
-	 * Presentation of documents and statements.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2444,8 +2437,8 @@ public class Document {
 	public static final MMBusinessAssociationEnd mmPresentation = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Document11.mmElectronicDetails, Document8.mmElectronicDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Presentation";
 			definition = "Presentation of documents and statements.";
@@ -2458,8 +2451,8 @@ public class Document {
 	};
 	protected RegisteredContract relatedContract;
 	/**
-	 * Related document which materialises the agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2491,8 +2484,8 @@ public class Document {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedContract = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedContract";
 			definition = "Related document which materialises the agreement.";
@@ -2507,7 +2500,7 @@ public class Document {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Document";
 				definition = "General information that unambiguously identifies a document, such as identification number and issue date time.";
@@ -2579,199 +2572,224 @@ public class Document {
 		return issueDate;
 	}
 
-	public void setIssueDate(ISODateTime issueDate) {
-		this.issueDate = issueDate;
+	public Document setIssueDate(ISODateTime issueDate) {
+		this.issueDate = Objects.requireNonNull(issueDate);
+		return this;
 	}
 
 	public CopyDuplicateCode getCopyDuplicate() {
 		return copyDuplicate;
 	}
 
-	public void setCopyDuplicate(CopyDuplicateCode copyDuplicate) {
-		this.copyDuplicate = copyDuplicate;
+	public Document setCopyDuplicate(CopyDuplicateCode copyDuplicate) {
+		this.copyDuplicate = Objects.requireNonNull(copyDuplicate);
+		return this;
 	}
 
 	public List<ContactPoint> getPlaceOfStorage() {
-		return placeOfStorage;
+		return placeOfStorage == null ? placeOfStorage = new ArrayList<>() : placeOfStorage;
 	}
 
-	public void setPlaceOfStorage(List<com.tools20022.repository.entity.ContactPoint> placeOfStorage) {
-		this.placeOfStorage = placeOfStorage;
+	public Document setPlaceOfStorage(List<com.tools20022.repository.entity.ContactPoint> placeOfStorage) {
+		this.placeOfStorage = Objects.requireNonNull(placeOfStorage);
+		return this;
 	}
 
-	public PaymentObligation getPaymentObligation() {
-		return paymentObligation;
+	public Optional<PaymentObligation> getPaymentObligation() {
+		return paymentObligation == null ? Optional.empty() : Optional.of(paymentObligation);
 	}
 
-	public void setPaymentObligation(com.tools20022.repository.entity.PaymentObligation paymentObligation) {
+	public Document setPaymentObligation(com.tools20022.repository.entity.PaymentObligation paymentObligation) {
 		this.paymentObligation = paymentObligation;
+		return this;
 	}
 
 	public DocumentTypeCode getType() {
 		return type;
 	}
 
-	public void setType(DocumentTypeCode type) {
-		this.type = type;
+	public Document setType(DocumentTypeCode type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
-		this.amount = amount;
+	public Document setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
 	public List<Agreement> getAgreement() {
-		return agreement;
+		return agreement == null ? agreement = new ArrayList<>() : agreement;
 	}
 
-	public void setAgreement(List<com.tools20022.repository.entity.Agreement> agreement) {
-		this.agreement = agreement;
+	public Document setAgreement(List<com.tools20022.repository.entity.Agreement> agreement) {
+		this.agreement = Objects.requireNonNull(agreement);
+		return this;
 	}
 
-	public Location getPlaceOfIssue() {
-		return placeOfIssue;
+	public Optional<Location> getPlaceOfIssue() {
+		return placeOfIssue == null ? Optional.empty() : Optional.of(placeOfIssue);
 	}
 
-	public void setPlaceOfIssue(com.tools20022.repository.entity.Location placeOfIssue) {
+	public Document setPlaceOfIssue(com.tools20022.repository.entity.Location placeOfIssue) {
 		this.placeOfIssue = placeOfIssue;
+		return this;
 	}
 
 	public Number getDocumentVersion() {
 		return documentVersion;
 	}
 
-	public void setDocumentVersion(Number documentVersion) {
-		this.documentVersion = documentVersion;
+	public Document setDocumentVersion(Number documentVersion) {
+		this.documentVersion = Objects.requireNonNull(documentVersion);
+		return this;
 	}
 
 	public Max140Text getStatus() {
 		return status;
 	}
 
-	public void setStatus(Max140Text status) {
-		this.status = status;
+	public Document setStatus(Max140Text status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
 	public List<Reconciliation> getReconciliation() {
-		return reconciliation;
+		return reconciliation == null ? reconciliation = new ArrayList<>() : reconciliation;
 	}
 
-	public void setReconciliation(List<com.tools20022.repository.entity.Reconciliation> reconciliation) {
-		this.reconciliation = reconciliation;
+	public Document setReconciliation(List<com.tools20022.repository.entity.Reconciliation> reconciliation) {
+		this.reconciliation = Objects.requireNonNull(reconciliation);
+		return this;
 	}
 
 	public LetterOfCredit getLetterOfCredit() {
 		return letterOfCredit;
 	}
 
-	public void setLetterOfCredit(com.tools20022.repository.entity.LetterOfCredit letterOfCredit) {
-		this.letterOfCredit = letterOfCredit;
+	public Document setLetterOfCredit(com.tools20022.repository.entity.LetterOfCredit letterOfCredit) {
+		this.letterOfCredit = Objects.requireNonNull(letterOfCredit);
+		return this;
 	}
 
 	public List<DocumentPartyRole> getPartyRole() {
-		return partyRole;
+		return partyRole == null ? partyRole = new ArrayList<>() : partyRole;
 	}
 
-	public void setPartyRole(List<com.tools20022.repository.entity.DocumentPartyRole> partyRole) {
-		this.partyRole = partyRole;
+	public Document setPartyRole(List<com.tools20022.repository.entity.DocumentPartyRole> partyRole) {
+		this.partyRole = Objects.requireNonNull(partyRole);
+		return this;
 	}
 
 	public DataSetTypeCode getDataSetType() {
 		return dataSetType;
 	}
 
-	public void setDataSetType(DataSetTypeCode dataSetType) {
-		this.dataSetType = dataSetType;
+	public Document setDataSetType(DataSetTypeCode dataSetType) {
+		this.dataSetType = Objects.requireNonNull(dataSetType);
+		return this;
 	}
 
 	public Transport getTransport() {
 		return transport;
 	}
 
-	public void setTransport(com.tools20022.repository.entity.Transport transport) {
-		this.transport = transport;
+	public Document setTransport(com.tools20022.repository.entity.Transport transport) {
+		this.transport = Objects.requireNonNull(transport);
+		return this;
 	}
 
 	public YesNoIndicator getSignedIndicator() {
 		return signedIndicator;
 	}
 
-	public void setSignedIndicator(YesNoIndicator signedIndicator) {
-		this.signedIndicator = signedIndicator;
+	public Document setSignedIndicator(YesNoIndicator signedIndicator) {
+		this.signedIndicator = Objects.requireNonNull(signedIndicator);
+		return this;
 	}
 
 	public CurrencyAndAmount getRemittedAmount() {
 		return remittedAmount;
 	}
 
-	public void setRemittedAmount(CurrencyAndAmount remittedAmount) {
-		this.remittedAmount = remittedAmount;
+	public Document setRemittedAmount(CurrencyAndAmount remittedAmount) {
+		this.remittedAmount = Objects.requireNonNull(remittedAmount);
+		return this;
 	}
 
 	public List<Guarantee> getGuarantee() {
-		return guarantee;
+		return guarantee == null ? guarantee = new ArrayList<>() : guarantee;
 	}
 
-	public void setGuarantee(List<com.tools20022.repository.entity.Guarantee> guarantee) {
-		this.guarantee = guarantee;
+	public Document setGuarantee(List<com.tools20022.repository.entity.Guarantee> guarantee) {
+		this.guarantee = Objects.requireNonNull(guarantee);
+		return this;
 	}
 
 	public LanguageCode getLanguage() {
 		return language;
 	}
 
-	public void setLanguage(LanguageCode language) {
-		this.language = language;
+	public Document setLanguage(LanguageCode language) {
+		this.language = Objects.requireNonNull(language);
+		return this;
 	}
 
 	public Max35Text getPurpose() {
 		return purpose;
 	}
 
-	public void setPurpose(Max35Text purpose) {
-		this.purpose = purpose;
+	public Document setPurpose(Max35Text purpose) {
+		this.purpose = Objects.requireNonNull(purpose);
+		return this;
 	}
 
 	public GenericIdentification getDocumentIdentification() {
 		return documentIdentification;
 	}
 
-	public void setDocumentIdentification(com.tools20022.repository.entity.GenericIdentification documentIdentification) {
-		this.documentIdentification = documentIdentification;
+	public Document setDocumentIdentification(com.tools20022.repository.entity.GenericIdentification documentIdentification) {
+		this.documentIdentification = Objects.requireNonNull(documentIdentification);
+		return this;
 	}
 
 	public List<Evidence> getEvidence() {
-		return evidence;
+		return evidence == null ? evidence = new ArrayList<>() : evidence;
 	}
 
-	public void setEvidence(List<com.tools20022.repository.entity.Evidence> evidence) {
-		this.evidence = evidence;
+	public Document setEvidence(List<com.tools20022.repository.entity.Evidence> evidence) {
+		this.evidence = Objects.requireNonNull(evidence);
+		return this;
 	}
 
 	public List<CommercialTrade> getCommercialTrade() {
-		return commercialTrade;
+		return commercialTrade == null ? commercialTrade = new ArrayList<>() : commercialTrade;
 	}
 
-	public void setCommercialTrade(List<com.tools20022.repository.entity.CommercialTrade> commercialTrade) {
-		this.commercialTrade = commercialTrade;
+	public Document setCommercialTrade(List<com.tools20022.repository.entity.CommercialTrade> commercialTrade) {
+		this.commercialTrade = Objects.requireNonNull(commercialTrade);
+		return this;
 	}
 
-	public Presentation getPresentation() {
-		return presentation;
+	public Optional<Presentation> getPresentation() {
+		return presentation == null ? Optional.empty() : Optional.of(presentation);
 	}
 
-	public void setPresentation(com.tools20022.repository.entity.Presentation presentation) {
+	public Document setPresentation(com.tools20022.repository.entity.Presentation presentation) {
 		this.presentation = presentation;
+		return this;
 	}
 
 	public RegisteredContract getRelatedContract() {
 		return relatedContract;
 	}
 
-	public void setRelatedContract(com.tools20022.repository.entity.RegisteredContract relatedContract) {
-		this.relatedContract = relatedContract;
+	public Document setRelatedContract(com.tools20022.repository.entity.RegisteredContract relatedContract) {
+		this.relatedContract = Objects.requireNonNull(relatedContract);
+		return this;
 	}
 }

@@ -31,6 +31,7 @@ import com.tools20022.repository.msg.TransferCancellationPendingStatus1;
 import com.tools20022.repository.msg.TransferCancellationStatus2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.choice.Status20Choice Status20Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Status21Choice", propOrder = {"status", "rejected", "complete", "pending"})
 public class Status21Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts", required = true)
 	protected TransferCancellationStatus2 status;
 	/**
-	 * Status of the transfer cancellation is accepted or sent to next party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -118,7 +120,7 @@ public class Status21Choice {
 	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
-			componentContext_lazy = () -> Status21Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +132,11 @@ public class Status21Choice {
 			type_lazy = () -> TransferCancellationStatus2.mmObject();
 		}
 	};
+	@XmlElement(name = "Rjctd", required = true)
 	protected RejectionReason33 rejected;
 	/**
-	 * Status of the transfer cancellation is rejected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -164,7 +167,7 @@ public class Status21Choice {
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
-			componentContext_lazy = () -> Status21Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,12 +179,11 @@ public class Status21Choice {
 			type_lazy = () -> RejectionReason33.mmObject();
 		}
 	};
+	@XmlElement(name = "Cmplt", required = true)
 	protected CancelledCompleteReason1 complete;
 	/**
-	 * Status of the transfer cancellation is complete. The cancellation
-	 * instruction has been accepted and processed, the cancellation is
-	 * complete.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -215,7 +217,7 @@ public class Status21Choice {
 	public static final MMMessageAssociationEnd mmComplete = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
-			componentContext_lazy = () -> Status21Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cmplt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,10 +229,11 @@ public class Status21Choice {
 			type_lazy = () -> CancelledCompleteReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "Pdg", required = true)
 	protected TransferCancellationPendingStatus1 pending;
 	/**
-	 * Status of the transfer cancellation is pending.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -263,7 +266,7 @@ public class Status21Choice {
 	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
-			componentContext_lazy = () -> Status21Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,9 +282,10 @@ public class Status21Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Status21Choice.mmStatus, Status21Choice.mmRejected, Status21Choice.mmComplete, Status21Choice.mmPending);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status21Choice.mmStatus, com.tools20022.repository.choice.Status21Choice.mmRejected, com.tools20022.repository.choice.Status21Choice.mmComplete,
+						com.tools20022.repository.choice.Status21Choice.mmPending);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status21Choice";
 				definition = "Choice of formats for the specification of the status.";
@@ -291,39 +295,39 @@ public class Status21Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public TransferCancellationStatus2 getStatus() {
 		return status;
 	}
 
-	public void setStatus(TransferCancellationStatus2 status) {
-		this.status = status;
+	public Status21Choice setStatus(TransferCancellationStatus2 status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "Rjctd", required = true)
 	public RejectionReason33 getRejected() {
 		return rejected;
 	}
 
-	public void setRejected(RejectionReason33 rejected) {
-		this.rejected = rejected;
+	public Status21Choice setRejected(RejectionReason33 rejected) {
+		this.rejected = Objects.requireNonNull(rejected);
+		return this;
 	}
 
-	@XmlElement(name = "Cmplt", required = true)
 	public CancelledCompleteReason1 getComplete() {
 		return complete;
 	}
 
-	public void setComplete(CancelledCompleteReason1 complete) {
-		this.complete = complete;
+	public Status21Choice setComplete(CancelledCompleteReason1 complete) {
+		this.complete = Objects.requireNonNull(complete);
+		return this;
 	}
 
-	@XmlElement(name = "Pdg", required = true)
 	public TransferCancellationPendingStatus1 getPending() {
 		return pending;
 	}
 
-	public void setPending(TransferCancellationPendingStatus1 pending) {
-		this.pending = pending;
+	public Status21Choice setPending(TransferCancellationPendingStatus1 pending) {
+		this.pending = Objects.requireNonNull(pending);
+		return this;
 	}
 }

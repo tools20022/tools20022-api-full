@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateActionReferenceDateCode;
+import com.tools20022.repository.codeset.CorporateActionDeadline1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the deadline reference of a corporate action.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode
- * CorporateActionReferenceDateCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionDeadline1Code#mmMarketDeadline
- * CorporateActionDeadline1Code.mmMarketDeadline}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionDeadline1Code#MarketDeadline
+ * CorporateActionDeadline1Code.MarketDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionDeadline1Code#mmResponseDeadline
- * CorporateActionDeadline1Code.mmResponseDeadline}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionDeadline1Code#ResponseDeadline
+ * CorporateActionDeadline1Code.ResponseDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionDeadline1Code#mmEarlyResponseDeadline
- * CorporateActionDeadline1Code.mmEarlyResponseDeadline}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionDeadline1Code#EarlyResponseDeadline
+ * CorporateActionDeadline1Code.EarlyResponseDeadline}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode
+ * CorporateActionReferenceDateCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the deadline reference of a corporate action."</li>
  * </ul>
  */
-public class CorporateActionDeadline1Code extends CorporateActionReferenceDateCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionDeadline1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class CorporateActionDeadline1Code extends CorporateActionReferenceDateCo
 	 * name} = "MarketDeadline"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarketDeadline = new MMCode() {
+	public static final CorporateActionDeadline1Code MarketDeadline = new CorporateActionDeadline1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadline";
-			owner_lazy = () -> CorporateActionDeadline1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionDeadline1Code.mmObject();
+			codeName = CorporateActionReferenceDateCode.MarketDeadline.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class CorporateActionDeadline1Code extends CorporateActionReferenceDateCo
 	 * name} = "ResponseDeadline"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmResponseDeadline = new MMCode() {
+	public static final CorporateActionDeadline1Code ResponseDeadline = new CorporateActionDeadline1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseDeadline";
-			owner_lazy = () -> CorporateActionDeadline1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionDeadline1Code.mmObject();
+			codeName = CorporateActionReferenceDateCode.ResponseDeadline.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class CorporateActionDeadline1Code extends CorporateActionReferenceDateCo
 	 * name} = "EarlyResponseDeadline"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEarlyResponseDeadline = new MMCode() {
+	public static final CorporateActionDeadline1Code EarlyResponseDeadline = new CorporateActionDeadline1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlyResponseDeadline";
-			owner_lazy = () -> CorporateActionDeadline1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionDeadline1Code.mmObject();
+			codeName = CorporateActionReferenceDateCode.EarlyResponseDeadline.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionDeadline1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionDeadline1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MKDT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDeadline1Code";
 				definition = "Specifies the deadline reference of a corporate action.";
-				code_lazy = () -> Arrays.asList(CorporateActionDeadline1Code.mmMarketDeadline, CorporateActionDeadline1Code.mmResponseDeadline, CorporateActionDeadline1Code.mmEarlyResponseDeadline);
 				trace_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionDeadline1Code.MarketDeadline, com.tools20022.repository.codeset.CorporateActionDeadline1Code.ResponseDeadline,
+						com.tools20022.repository.codeset.CorporateActionDeadline1Code.EarlyResponseDeadline);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(MarketDeadline.getCodeName().get(), MarketDeadline);
+		codesByName.put(ResponseDeadline.getCodeName().get(), ResponseDeadline);
+		codesByName.put(EarlyResponseDeadline.getCodeName().get(), EarlyResponseDeadline);
+	}
+
+	public static CorporateActionDeadline1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionDeadline1Code[] values() {
+		CorporateActionDeadline1Code[] values = new CorporateActionDeadline1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionDeadline1Code> {
+		@Override
+		public CorporateActionDeadline1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionDeadline1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

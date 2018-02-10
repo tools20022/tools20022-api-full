@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TriggerTypeCode;
+import com.tools20022.repository.codeset.TriggerType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines when the trigger will hit, i.e. the action specified by the trigger
@@ -31,30 +35,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TriggerTypeCode
- * TriggerTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TriggerType1Code#mmPartialExecution
- * TriggerType1Code.mmPartialExecution}</li>
+ * {@linkplain com.tools20022.repository.codeset.TriggerType1Code#PartialExecution
+ * TriggerType1Code.PartialExecution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TriggerType1Code#mmSpecifiedTradingSession
- * TriggerType1Code.mmSpecifiedTradingSession}</li>
+ * {@linkplain com.tools20022.repository.codeset.TriggerType1Code#SpecifiedTradingSession
+ * TriggerType1Code.SpecifiedTradingSession}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TriggerType1Code#mmNextAuction
- * TriggerType1Code.mmNextAuction}</li>
+ * {@linkplain com.tools20022.repository.codeset.TriggerType1Code#NextAuction
+ * TriggerType1Code.NextAuction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TriggerType1Code#mmPriceMovement
- * TriggerType1Code.mmPriceMovement}</li>
+ * {@linkplain com.tools20022.repository.codeset.TriggerType1Code#PriceMovement
+ * TriggerType1Code.PriceMovement}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TriggerTypeCode
+ * TriggerTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TriggerType1Code extends TriggerTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TriggerType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class TriggerType1Code extends TriggerTypeCode {
 	 * name} = "PartialExecution"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialExecution = new MMCode() {
+	public static final TriggerType1Code PartialExecution = new TriggerType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialExecution";
-			owner_lazy = () -> TriggerType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TriggerType1Code.mmObject();
+			codeName = TriggerTypeCode.PartialExecution.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class TriggerType1Code extends TriggerTypeCode {
 	 * name} = "SpecifiedTradingSession"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecifiedTradingSession = new MMCode() {
+	public static final TriggerType1Code SpecifiedTradingSession = new TriggerType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecifiedTradingSession";
-			owner_lazy = () -> TriggerType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TriggerType1Code.mmObject();
+			codeName = TriggerTypeCode.SpecifiedTradingSession.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class TriggerType1Code extends TriggerTypeCode {
 	 * name} = "NextAuction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNextAuction = new MMCode() {
+	public static final TriggerType1Code NextAuction = new TriggerType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextAuction";
-			owner_lazy = () -> TriggerType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TriggerType1Code.mmObject();
+			codeName = TriggerTypeCode.NextAuction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,26 +169,60 @@ public class TriggerType1Code extends TriggerTypeCode {
 	 * name} = "PriceMovement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPriceMovement = new MMCode() {
+	public static final TriggerType1Code PriceMovement = new TriggerType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceMovement";
-			owner_lazy = () -> TriggerType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TriggerType1Code.mmObject();
+			codeName = TriggerTypeCode.PriceMovement.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TriggerType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TriggerType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PAEX");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TriggerType1Code";
 				definition = "Defines when the trigger will hit, i.e. the action specified by the trigger instructions will come into effect.";
-				code_lazy = () -> Arrays.asList(TriggerType1Code.mmPartialExecution, TriggerType1Code.mmSpecifiedTradingSession, TriggerType1Code.mmNextAuction, TriggerType1Code.mmPriceMovement);
 				trace_lazy = () -> TriggerTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TriggerType1Code.PartialExecution, com.tools20022.repository.codeset.TriggerType1Code.SpecifiedTradingSession,
+						com.tools20022.repository.codeset.TriggerType1Code.NextAuction, com.tools20022.repository.codeset.TriggerType1Code.PriceMovement);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PartialExecution.getCodeName().get(), PartialExecution);
+		codesByName.put(SpecifiedTradingSession.getCodeName().get(), SpecifiedTradingSession);
+		codesByName.put(NextAuction.getCodeName().get(), NextAuction);
+		codesByName.put(PriceMovement.getCodeName().get(), PriceMovement);
+	}
+
+	public static TriggerType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TriggerType1Code[] values() {
+		TriggerType1Code[] values = new TriggerType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TriggerType1Code> {
+		@Override
+		public TriggerType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TriggerType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

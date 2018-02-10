@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.MatchingProcessCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the action to be performed on the matching process.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MatchingProcessCode#mmUnmatch
- * MatchingProcessCode.mmUnmatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.MatchingProcessCode#Unmatch
+ * MatchingProcessCode.Unmatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MatchingProcessCode#mmResumeMatching
- * MatchingProcessCode.mmResumeMatching}</li>
+ * {@linkplain com.tools20022.repository.codeset.MatchingProcessCode#ResumeMatching
+ * MatchingProcessCode.ResumeMatching}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class MatchingProcessCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MatchingProcessCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,12 +99,12 @@ public class MatchingProcessCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnmatch = new MMCode() {
+	public static final MatchingProcessCode Unmatch = new MatchingProcessCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatch";
 			definition = "The referrenced transaction is requested to be unmatched.";
-			owner_lazy = () -> MatchingProcessCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MatchingProcessCode.mmObject();
 			codeName = "UNMT";
 		}
 	};
@@ -124,28 +130,58 @@ public class MatchingProcessCode {
 	 * "Matching process is to be resumed for the referrenced transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmResumeMatching = new MMCode() {
+	public static final MatchingProcessCode ResumeMatching = new MatchingProcessCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResumeMatching";
 			definition = "Matching process is to be resumed for the referrenced transaction.";
-			owner_lazy = () -> MatchingProcessCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MatchingProcessCode.mmObject();
 			codeName = "MTRE";
 		}
 	};
+	final static private LinkedHashMap<String, MatchingProcessCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MatchingProcessCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("UNMT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MatchingProcessCode";
 				definition = "Specifies the action to be performed on the matching process.";
-				code_lazy = () -> Arrays.asList(MatchingProcessCode.mmUnmatch, MatchingProcessCode.mmResumeMatching);
 				derivation_lazy = () -> Arrays.asList(MatchingProcess1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MatchingProcessCode.Unmatch, com.tools20022.repository.codeset.MatchingProcessCode.ResumeMatching);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Unmatch.getCodeName().get(), Unmatch);
+		codesByName.put(ResumeMatching.getCodeName().get(), ResumeMatching);
+	}
+
+	public static MatchingProcessCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MatchingProcessCode[] values() {
+		MatchingProcessCode[] values = new MatchingProcessCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MatchingProcessCode> {
+		@Override
+		public MatchingProcessCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MatchingProcessCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

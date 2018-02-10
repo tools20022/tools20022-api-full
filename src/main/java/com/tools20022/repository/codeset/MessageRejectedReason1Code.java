@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RejectedStatusReasonCode;
+import com.tools20022.repository.codeset.MessageRejectedReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for a message rejected status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReasonCode
- * RejectedStatusReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageRejectedReason1Code#mmInvalidOrUnrecognisedReference
- * MessageRejectedReason1Code.mmInvalidOrUnrecognisedReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageRejectedReason1Code#InvalidOrUnrecognisedReference
+ * MessageRejectedReason1Code.InvalidOrUnrecognisedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageRejectedReason1Code#mmNotAllowedRequest
- * MessageRejectedReason1Code.mmNotAllowedRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageRejectedReason1Code#NotAllowedRequest
+ * MessageRejectedReason1Code.NotAllowedRequest}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReasonCode
+ * RejectedStatusReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason for a message rejected status."</li>
  * </ul>
  */
-public class MessageRejectedReason1Code extends RejectedStatusReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MessageRejectedReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class MessageRejectedReason1Code extends RejectedStatusReasonCode {
 	 * name} = "InvalidOrUnrecognisedReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalidOrUnrecognisedReference = new MMCode() {
+	public static final MessageRejectedReason1Code InvalidOrUnrecognisedReference = new MessageRejectedReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidOrUnrecognisedReference";
-			owner_lazy = () -> MessageRejectedReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageRejectedReason1Code.mmObject();
+			codeName = RejectedStatusReasonCode.InvalidOrUnrecognisedReference.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class MessageRejectedReason1Code extends RejectedStatusReasonCode {
 	 * name} = "NotAllowedRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotAllowedRequest = new MMCode() {
+	public static final MessageRejectedReason1Code NotAllowedRequest = new MessageRejectedReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAllowedRequest";
-			owner_lazy = () -> MessageRejectedReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageRejectedReason1Code.mmObject();
+			codeName = RejectedStatusReasonCode.NotAllowedRequest.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, MessageRejectedReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MessageRejectedReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("REFE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageRejectedReason1Code";
 				definition = "Specifies the reason for a message rejected status.";
-				code_lazy = () -> Arrays.asList(MessageRejectedReason1Code.mmInvalidOrUnrecognisedReference, MessageRejectedReason1Code.mmNotAllowedRequest);
 				trace_lazy = () -> RejectedStatusReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageRejectedReason1Code.InvalidOrUnrecognisedReference, com.tools20022.repository.codeset.MessageRejectedReason1Code.NotAllowedRequest);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(InvalidOrUnrecognisedReference.getCodeName().get(), InvalidOrUnrecognisedReference);
+		codesByName.put(NotAllowedRequest.getCodeName().get(), NotAllowedRequest);
+	}
+
+	public static MessageRejectedReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MessageRejectedReason1Code[] values() {
+		MessageRejectedReason1Code[] values = new MessageRejectedReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MessageRejectedReason1Code> {
+		@Override
+		public MessageRejectedReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MessageRejectedReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,17 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUSeOfSecuritiesPurchasedRule#forCorporateActionEventStageFormat4SD1
+ * ConstraintUSeOfSecuritiesPurchasedRule.forCorporateActionEventStageFormat4SD1
+ * }</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,18 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Extension to specify the stage in the corporate action event life cycle."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionEventStageFormat4SD1", propOrder = {"placeAndName", "securitiesPurchased"})
 public class CorporateActionEventStageFormat4SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm")
 	protected Max350Text placeAndName;
 	/**
-	 * Unambiguous reference to the location where the supplementary data must
-	 * be inserted in the message instance. <br>
-	 * <br>
-	 * In the case of XML, this is expressed by a valid XPath.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -103,7 +112,7 @@ public class CorporateActionEventStageFormat4SD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionEventStageFormat4SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventStageFormat4SD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,14 +123,11 @@ public class CorporateActionEventStageFormat4SD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesPurchsd", required = true)
 	protected FinancialInstrumentQuantity15Choice securitiesPurchased;
 	/**
-	 * The number of securities purchased.<br>
-	 * The value should be the actual number, or 0 (if, as a result, TEND or
-	 * BIDS will not take place).<br>
-	 * 買付株式数／未定／非設定<br>
-	 * ※買付前の通知において、「非設定」のデータが1件あり。未定との違いは不明。"
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,7 +157,7 @@ public class CorporateActionEventStageFormat4SD1 {
 	 */
 	public static final MMMessageAttribute mmSecuritiesPurchased = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionEventStageFormat4SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventStageFormat4SD1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesPurchsd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,8 +172,9 @@ public class CorporateActionEventStageFormat4SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionEventStageFormat4SD1.mmPlaceAndName, CorporateActionEventStageFormat4SD1.mmSecuritiesPurchased);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionEventStageFormat4SD1.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionEventStageFormat4SD1.mmSecuritiesPurchased);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintUSeOfSecuritiesPurchasedRule.forCorporateActionEventStageFormat4SD1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventStageFormat4SD1";
 				definition = "Extension to specify the stage in the corporate action event life cycle.";
@@ -176,21 +183,21 @@ public class CorporateActionEventStageFormat4SD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm")
-	public Max350Text getPlaceAndName() {
-		return placeAndName;
+	public Optional<Max350Text> getPlaceAndName() {
+		return placeAndName == null ? Optional.empty() : Optional.of(placeAndName);
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
+	public CorporateActionEventStageFormat4SD1 setPlaceAndName(Max350Text placeAndName) {
 		this.placeAndName = placeAndName;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesPurchsd", required = true)
 	public FinancialInstrumentQuantity15Choice getSecuritiesPurchased() {
 		return securitiesPurchased;
 	}
 
-	public void setSecuritiesPurchased(FinancialInstrumentQuantity15Choice securitiesPurchased) {
-		this.securitiesPurchased = securitiesPurchased;
+	public CorporateActionEventStageFormat4SD1 setSecuritiesPurchased(FinancialInstrumentQuantity15Choice securitiesPurchased) {
+		this.securitiesPurchased = Objects.requireNonNull(securitiesPurchased);
+		return this;
 	}
 }

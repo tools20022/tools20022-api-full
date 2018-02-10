@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -29,6 +31,8 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,16 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesAccount14", propOrder = {"identification", "type", "name"})
 public class SecuritiesAccount14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Unambiguous identification for the account between the account owner and
-	 * the account servicer.”
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,6 +109,10 @@ public class SecuritiesAccount14 {
 	 * SecuritiesAccount14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Id"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1, FIXSynonym: 660, ISO15022Synonym:
+	 * :97a::SAFE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -129,9 +137,10 @@ public class SecuritiesAccount14 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> SecuritiesAccount14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount14.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1"), new FIXSynonym(this, "660"), new ISO15022Synonym(this, ":97a::SAFE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unambiguous identification for the account between the account owner and the account servicer.”";
@@ -141,10 +150,11 @@ public class SecuritiesAccount14 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected PurposeCode2Choice type;
 	/**
-	 * Specifies the type of securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,6 +174,10 @@ public class SecuritiesAccount14 {
 	 * SecuritiesAccount14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Tp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 581, ISO15022Synonym: :97B:,
+	 * ISO15022Synonym: :97B:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -185,9 +199,10 @@ public class SecuritiesAccount14 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesAccountType;
-			componentContext_lazy = () -> SecuritiesAccount14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount14.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "581"), new ISO15022Synonym(this, ":97B:"), new ISO15022Synonym(this, ":97B:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of securities account.";
@@ -197,10 +212,11 @@ public class SecuritiesAccount14 {
 			complexType_lazy = () -> PurposeCode2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm")
 	protected Max70Text name;
 	/**
-	 * Description of the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -219,6 +235,9 @@ public class SecuritiesAccount14 {
 	 * SecuritiesAccount14}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Nm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -240,9 +259,10 @@ public class SecuritiesAccount14 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
-			componentContext_lazy = () -> SecuritiesAccount14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount14.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Description of the account.";
@@ -256,9 +276,10 @@ public class SecuritiesAccount14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesAccount14.mmIdentification, SecuritiesAccount14.mmType, SecuritiesAccount14.mmName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount14.mmIdentification, com.tools20022.repository.msg.SecuritiesAccount14.mmType,
+						com.tools20022.repository.msg.SecuritiesAccount14.mmName);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAccount14";
 				definition = "Account to or from which a securities entry is made.";
@@ -268,30 +289,30 @@ public class SecuritiesAccount14 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public SecuritiesAccount14 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public PurposeCode2Choice getType() {
-		return type;
+	public Optional<PurposeCode2Choice> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(PurposeCode2Choice type) {
+	public SecuritiesAccount14 setType(PurposeCode2Choice type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "Nm")
-	public Max70Text getName() {
-		return name;
+	public Optional<Max70Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max70Text name) {
+	public SecuritiesAccount14 setName(Max70Text name) {
 		this.name = name;
+		return this;
 	}
 }

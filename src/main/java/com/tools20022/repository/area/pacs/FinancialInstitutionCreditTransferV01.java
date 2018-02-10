@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.CreditTransferTransactionInformation3;
 import com.tools20022.repository.msg.GroupHeader4;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -50,22 +52,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementArchive
- * PaymentsClearingandSettlementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "pacs.009.001.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "pacs.009.001.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -79,9 +65,52 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "pacs.009.001.01"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementArchive
+ * PaymentsClearingandSettlementArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "pacs.009.001.01"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pacs.009.001.01}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#forFinancialInstitutionCreditTransferV01
+ * ConstraintInstructedAgentRule.forFinancialInstitutionCreditTransferV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#forFinancialInstitutionCreditTransferV01
+ * ConstraintInstructingAgentRule.forFinancialInstitutionCreditTransferV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount1Rule#forFinancialInstitutionCreditTransferV01
+ * ConstraintTotalInterbankSettlementAmount1Rule.
+ * forFinancialInstitutionCreditTransferV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount2Rule#forFinancialInstitutionCreditTransferV01
+ * ConstraintTotalInterbankSettlementAmount2Rule.
+ * forFinancialInstitutionCreditTransferV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInterbankSettlementDateRule#forFinancialInstitutionCreditTransferV01
+ * ConstraintInterbankSettlementDateRule.
+ * forFinancialInstitutionCreditTransferV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule#forFinancialInstitutionCreditTransferV01
+ * ConstraintPaymentTypeInformationRule.forFinancialInstitutionCreditTransferV01
+ * }</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,16 +131,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "pacs.009.001.01", propOrder = {"groupHeader", "creditTransferTransactionInformation"})
 public class FinancialInstitutionCreditTransferV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader4 groupHeader;
 	/**
-	 * Set of characteristics shared by all individual transactions included in
-	 * the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,11 +181,11 @@ public class FinancialInstitutionCreditTransferV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CdtTrfTxInf", required = true)
 	protected List<CreditTransferTransactionInformation3> creditTransferTransactionInformation;
 	/**
-	 * Set of elements providing information specific to the individual credit
-	 * transfer(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,6 +230,12 @@ public class FinancialInstitutionCreditTransferV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructedAgentRule.forFinancialInstitutionCreditTransferV01,
+						com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFinancialInstitutionCreditTransferV01,
+						com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount1Rule.forFinancialInstitutionCreditTransferV01,
+						com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmount2Rule.forFinancialInstitutionCreditTransferV01,
+						com.tools20022.repository.constraints.ConstraintInterbankSettlementDateRule.forFinancialInstitutionCreditTransferV01,
+						com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule.forFinancialInstitutionCreditTransferV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstitutionCreditTransferV01";
 				definition = "Scope\r\nThe FinancialInstitutionCreditTransfer message is sent by a debtor financial institution to a creditor financial institution, directly or through other agents and/or a payment clearing and settlement system.\r\nIt is used to move funds from a debtor account to a creditor, where both debtor and creditor are financial institutions.\r\nUsage\r\nThe FinancialInstitutionCreditTransfer message is exchanged between agents and can contain one or more credit transfer instructions where debtor and creditor are both financial institutions.\r\nThe FinancialInstitutionCreditTransfer message does not allow for grouping: a CreditTransferTransactionInformation block must be present for each credit transfer transaction.\r\nThe FinancialInstitutionCreditTransfer message can be used in domestic and cross-border scenarios.\r\n";
@@ -230,25 +265,25 @@ public class FinancialInstitutionCreditTransferV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader4 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader4 groupHeader) {
-		this.groupHeader = groupHeader;
+	public FinancialInstitutionCreditTransferV01 setGroupHeader(GroupHeader4 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "CdtTrfTxInf", required = true)
 	public List<CreditTransferTransactionInformation3> getCreditTransferTransactionInformation() {
-		return creditTransferTransactionInformation;
+		return creditTransferTransactionInformation == null ? creditTransferTransactionInformation = new ArrayList<>() : creditTransferTransactionInformation;
 	}
 
-	public void setCreditTransferTransactionInformation(List<CreditTransferTransactionInformation3> creditTransferTransactionInformation) {
-		this.creditTransferTransactionInformation = creditTransferTransactionInformation;
+	public FinancialInstitutionCreditTransferV01 setCreditTransferTransactionInformation(List<CreditTransferTransactionInformation3> creditTransferTransactionInformation) {
+		this.creditTransferTransactionInformation = Objects.requireNonNull(creditTransferTransactionInformation);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.009.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.009.001.01")
 	static public class Document {
 		@XmlElement(name = "pacs.009.001.01", required = true)
 		public FinancialInstitutionCreditTransferV01 messageBody;

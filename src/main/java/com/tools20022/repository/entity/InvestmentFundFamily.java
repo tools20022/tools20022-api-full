@@ -22,9 +22,11 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Group of investment funds under the same fund management company.
@@ -57,8 +59,8 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,8 +77,8 @@ public class InvestmentFundFamily {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Max350Text fundFamilyName;
 	/**
-	 * Name of the investment fund family.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,8 +188,8 @@ public class InvestmentFundFamily {
 					InvestmentAccount34.mmFundFamilyName, InvestmentAccount38.mmFundFamilyName, InvestmentAccount37.mmFundFamilyName, InvestmentAccount39.mmFundFamilyName, InvestmentAccount44.mmFundFamilyName,
 					InvestmentAccount46.mmFundFamilyName, InvestmentAccount47.mmFundFamilyName, InvestmentAccount49.mmFundFamilyName, InvestmentAccount51.mmFundFamilyName, InvestmentAccount50.mmFundFamilyName,
 					InvestmentAccount52.mmFundFamilyName, InvestmentAccount61.mmFundFamilyName, InvestmentAccount63.mmFundFamilyName, InvestmentAccount62.mmFundFamilyName, InvestmentAccount64.mmFundFamilyName);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundFamily.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundFamily.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundFamilyName";
 			definition = "Name of the investment fund family.";
@@ -206,10 +208,8 @@ public class InvestmentFundFamily {
 	};
 	protected List<com.tools20022.repository.entity.InvestmentFund> investmentFund;
 	/**
-	 * Pool of financial instruments managed by a professional asset manager and
-	 * belonging to one or several investment fund families that are part of the
-	 * same investment fund network.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,8 +244,8 @@ public class InvestmentFundFamily {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentFund = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundFamily.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundFamily.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFund";
 			definition = "Pool of financial instruments managed by a professional asset manager and belonging to one or several investment fund families that are part of the same investment fund network.";
@@ -259,7 +259,7 @@ public class InvestmentFundFamily {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundFamily";
 				definition = "Group of investment funds under the same fund management company.";
@@ -279,15 +279,17 @@ public class InvestmentFundFamily {
 		return fundFamilyName;
 	}
 
-	public void setFundFamilyName(Max350Text fundFamilyName) {
-		this.fundFamilyName = fundFamilyName;
+	public InvestmentFundFamily setFundFamilyName(Max350Text fundFamilyName) {
+		this.fundFamilyName = Objects.requireNonNull(fundFamilyName);
+		return this;
 	}
 
 	public List<InvestmentFund> getInvestmentFund() {
-		return investmentFund;
+		return investmentFund == null ? investmentFund = new ArrayList<>() : investmentFund;
 	}
 
-	public void setInvestmentFund(List<com.tools20022.repository.entity.InvestmentFund> investmentFund) {
-		this.investmentFund = investmentFund;
+	public InvestmentFundFamily setInvestmentFund(List<com.tools20022.repository.entity.InvestmentFund> investmentFund) {
+		this.investmentFund = Objects.requireNonNull(investmentFund);
+		return this;
 	}
 }

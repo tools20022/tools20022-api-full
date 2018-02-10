@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.VoteInstructionRequest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Vote3", propOrder = {"issuerLabel", "voteOption"})
 public class Vote3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IssrLabl", required = true)
 	protected Max35Text issuerLabel;
 	/**
-	 * Numbering of the resolution as specified by the issuer or its agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +121,7 @@ public class Vote3 {
 	public static final MMMessageAttribute mmIssuerLabel = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmIssuerLabel;
-			componentContext_lazy = () -> Vote3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Vote3.mmObject();
 			isDerived = false;
 			xmlTag = "IssrLabl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +133,11 @@ public class Vote3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "VoteOptn", required = true)
 	protected VoteInstruction2Code voteOption;
 	/**
-	 * Specifies the different instructions which can be used to vote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -175,7 +178,7 @@ public class Vote3 {
 	public static final MMMessageAttribute mmVoteOption = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteForMeetingResolution;
-			componentContext_lazy = () -> Vote3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Vote3.mmObject();
 			isDerived = false;
 			xmlTag = "VoteOptn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,9 +194,9 @@ public class Vote3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Vote3.mmIssuerLabel, Vote3.mmVoteOption);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote3.mmIssuerLabel, com.tools20022.repository.msg.Vote3.mmVoteOption);
 				trace_lazy = () -> VoteInstructionRequest.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Vote3";
 				definition = "Decision of the voting party for one resolution.";
@@ -203,21 +206,21 @@ public class Vote3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IssrLabl", required = true)
 	public Max35Text getIssuerLabel() {
 		return issuerLabel;
 	}
 
-	public void setIssuerLabel(Max35Text issuerLabel) {
-		this.issuerLabel = issuerLabel;
+	public Vote3 setIssuerLabel(Max35Text issuerLabel) {
+		this.issuerLabel = Objects.requireNonNull(issuerLabel);
+		return this;
 	}
 
-	@XmlElement(name = "VoteOptn", required = true)
 	public VoteInstruction2Code getVoteOption() {
 		return voteOption;
 	}
 
-	public void setVoteOption(VoteInstruction2Code voteOption) {
-		this.voteOption = voteOption;
+	public Vote3 setVoteOption(VoteInstruction2Code voteOption) {
+		this.voteOption = Objects.requireNonNull(voteOption);
+		return this;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,16 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Identification of the account expressed with a data source scheme."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountIdentification3", propOrder = {"identification", "issuer", "information"})
 public class AccountIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected AccountIdentification1 identification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +117,7 @@ public class AccountIdentification3 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
-			componentContext_lazy = () -> AccountIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +128,11 @@ public class AccountIdentification3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "Issr", required = true)
 	protected Max8Text issuer;
 	/**
-	 * Entity that assigns the information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +165,7 @@ public class AccountIdentification3 {
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> AccountIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,11 +176,11 @@ public class AccountIdentification3 {
 			simpleType_lazy = () -> Max8Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Inf", required = true)
 	protected Exact4AlphaNumericText information;
 	/**
-	 * Proprietary information, often a code, issued by the data source scheme
-	 * issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,7 +210,7 @@ public class AccountIdentification3 {
 	 */
 	public static final MMMessageAttribute mmInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "Inf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,9 +225,10 @@ public class AccountIdentification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountIdentification3.mmIdentification, AccountIdentification3.mmIssuer, AccountIdentification3.mmInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentification3.mmIdentification, com.tools20022.repository.msg.AccountIdentification3.mmIssuer,
+						com.tools20022.repository.msg.AccountIdentification3.mmInformation);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification3";
 				definition = "Identification of the account expressed with a data source scheme.";
@@ -234,30 +237,30 @@ public class AccountIdentification3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public AccountIdentification1 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.AccountIdentification1 identification) {
-		this.identification = identification;
+	public AccountIdentification3 setIdentification(com.tools20022.repository.msg.AccountIdentification1 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Issr", required = true)
 	public Max8Text getIssuer() {
 		return issuer;
 	}
 
-	public void setIssuer(Max8Text issuer) {
-		this.issuer = issuer;
+	public AccountIdentification3 setIssuer(Max8Text issuer) {
+		this.issuer = Objects.requireNonNull(issuer);
+		return this;
 	}
 
-	@XmlElement(name = "Inf", required = true)
 	public Exact4AlphaNumericText getInformation() {
 		return information;
 	}
 
-	public void setInformation(Exact4AlphaNumericText information) {
-		this.information = information;
+	public AccountIdentification3 setInformation(Exact4AlphaNumericText information) {
+		this.information = Objects.requireNonNull(information);
+		return this;
 	}
 }

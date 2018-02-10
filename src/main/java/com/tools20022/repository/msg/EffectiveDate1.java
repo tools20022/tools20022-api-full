@@ -29,6 +29,8 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -71,8 +73,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,16 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Date and date parameters."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "EffectiveDate1", propOrder = {"effectiveDate", "effectiveDateParameter"})
 public class EffectiveDate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FctvDt", required = true)
 	protected ISODate effectiveDate;
 	/**
-	 * Date on which the SSI is effective. If the SSI is effective on a future
-	 * date, then the date must be provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +122,7 @@ public class EffectiveDate1 {
 	 */
 	public static final MMMessageAttribute mmEffectiveDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EffectiveDate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EffectiveDate1.mmObject();
 			isDerived = false;
 			xmlTag = "FctvDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +133,11 @@ public class EffectiveDate1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "FctvDtParam")
 	protected ExternalEffectiveDateParameter1Code effectiveDateParameter;
 	/**
-	 * Specifies how the SSI update effective date is to be applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +165,7 @@ public class EffectiveDate1 {
 	 */
 	public static final MMMessageAttribute mmEffectiveDateParameter = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EffectiveDate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EffectiveDate1.mmObject();
 			isDerived = false;
 			xmlTag = "FctvDtParam";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,10 +180,10 @@ public class EffectiveDate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EffectiveDate1.mmEffectiveDate, EffectiveDate1.mmEffectiveDateParameter);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EffectiveDate1.mmEffectiveDate, com.tools20022.repository.msg.EffectiveDate1.mmEffectiveDateParameter);
 				messageBuildingBlock_lazy = () -> Arrays.asList(StandingSettlementInstructionV01.mmEffectiveDateDetails, StandingSettlementInstructionCancellationV01.mmEffectiveDateDetails,
 						StandingSettlementInstructionStatusAdviceV01.mmEffectiveDateDetails, StandingSettlementInstructionDeletionV01.mmEffectiveDateDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EffectiveDate1";
 				definition = "Date and date parameters.";
@@ -189,21 +192,21 @@ public class EffectiveDate1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FctvDt", required = true)
 	public ISODate getEffectiveDate() {
 		return effectiveDate;
 	}
 
-	public void setEffectiveDate(ISODate effectiveDate) {
-		this.effectiveDate = effectiveDate;
+	public EffectiveDate1 setEffectiveDate(ISODate effectiveDate) {
+		this.effectiveDate = Objects.requireNonNull(effectiveDate);
+		return this;
 	}
 
-	@XmlElement(name = "FctvDtParam")
-	public ExternalEffectiveDateParameter1Code getEffectiveDateParameter() {
-		return effectiveDateParameter;
+	public Optional<ExternalEffectiveDateParameter1Code> getEffectiveDateParameter() {
+		return effectiveDateParameter == null ? Optional.empty() : Optional.of(effectiveDateParameter);
 	}
 
-	public void setEffectiveDateParameter(ExternalEffectiveDateParameter1Code effectiveDateParameter) {
+	public EffectiveDate1 setEffectiveDateParameter(ExternalEffectiveDateParameter1Code effectiveDateParameter) {
 		this.effectiveDateParameter = effectiveDateParameter;
+		return this;
 	}
 }

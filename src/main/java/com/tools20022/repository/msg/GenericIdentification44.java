@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.PersonIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,16 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * GenericIdentification9}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GenericIdentification44", propOrder = {"identification", "type", "issuer", "issueDate", "expiryDate"})
 public class GenericIdentification44 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Name or number assigned by an entity to enable recognition of that
-	 * entity, eg, account identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,7 +143,7 @@ public class GenericIdentification44 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> GenericIdentification44.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification44.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,10 +155,11 @@ public class GenericIdentification44 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected OtherIdentification1Choice type;
 	/**
-	 * Specifies the nature of the identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,7 +201,7 @@ public class GenericIdentification44 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
-			componentContext_lazy = () -> GenericIdentification44.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification44.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,10 +213,11 @@ public class GenericIdentification44 {
 			complexType_lazy = () -> OtherIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Issr")
 	protected Max35Text issuer;
 	/**
-	 * Entity that assigns the identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -254,7 +258,7 @@ public class GenericIdentification44 {
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
-			componentContext_lazy = () -> GenericIdentification44.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification44.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,10 +270,11 @@ public class GenericIdentification44 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IsseDt")
 	protected ISODate issueDate;
 	/**
-	 * Date at which the identification was issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -310,7 +315,7 @@ public class GenericIdentification44 {
 	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIssueDate;
-			componentContext_lazy = () -> GenericIdentification44.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification44.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -322,10 +327,11 @@ public class GenericIdentification44 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "XpryDt")
 	protected ISODate expiryDate;
 	/**
-	 * Date at which the identification expires.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -366,7 +372,7 @@ public class GenericIdentification44 {
 	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmExpiryDate;
-			componentContext_lazy = () -> GenericIdentification44.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification44.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -382,10 +388,10 @@ public class GenericIdentification44 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(GenericIdentification44.mmIdentification, GenericIdentification44.mmType, GenericIdentification44.mmIssuer, GenericIdentification44.mmIssueDate, GenericIdentification44.mmExpiryDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification44.mmIdentification, com.tools20022.repository.msg.GenericIdentification44.mmType,
+						com.tools20022.repository.msg.GenericIdentification44.mmIssuer, com.tools20022.repository.msg.GenericIdentification44.mmIssueDate, com.tools20022.repository.msg.GenericIdentification44.mmExpiryDate);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GenericIdentification44";
 				definition = "Information related to the identification of an individual person.";
@@ -396,48 +402,48 @@ public class GenericIdentification44 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public GenericIdentification44 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public OtherIdentification1Choice getType() {
 		return type;
 	}
 
-	public void setType(OtherIdentification1Choice type) {
-		this.type = type;
+	public GenericIdentification44 setType(OtherIdentification1Choice type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Issr")
-	public Max35Text getIssuer() {
-		return issuer;
+	public Optional<Max35Text> getIssuer() {
+		return issuer == null ? Optional.empty() : Optional.of(issuer);
 	}
 
-	public void setIssuer(Max35Text issuer) {
+	public GenericIdentification44 setIssuer(Max35Text issuer) {
 		this.issuer = issuer;
+		return this;
 	}
 
-	@XmlElement(name = "IsseDt")
-	public ISODate getIssueDate() {
-		return issueDate;
+	public Optional<ISODate> getIssueDate() {
+		return issueDate == null ? Optional.empty() : Optional.of(issueDate);
 	}
 
-	public void setIssueDate(ISODate issueDate) {
+	public GenericIdentification44 setIssueDate(ISODate issueDate) {
 		this.issueDate = issueDate;
+		return this;
 	}
 
-	@XmlElement(name = "XpryDt")
-	public ISODate getExpiryDate() {
-		return expiryDate;
+	public Optional<ISODate> getExpiryDate() {
+		return expiryDate == null ? Optional.empty() : Optional.of(expiryDate);
 	}
 
-	public void setExpiryDate(ISODate expiryDate) {
+	public GenericIdentification44 setExpiryDate(ISODate expiryDate) {
 		this.expiryDate = expiryDate;
+		return this;
 	}
 }

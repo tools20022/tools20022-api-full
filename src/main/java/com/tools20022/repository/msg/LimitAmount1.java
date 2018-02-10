@@ -24,6 +24,7 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Amount of money characterics used to specify a limit."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LimitAmount1", propOrder = {"amount", "utilisationAmount", "availableAmount"})
 public class LimitAmount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected CreditDebitAmount1 amount;
 	/**
-	 * Amount of money of the limit, expressed in an eligible currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +108,7 @@ public class LimitAmount1 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
-			componentContext_lazy = () -> LimitAmount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +119,11 @@ public class LimitAmount1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.CreditDebitAmount1.mmObject();
 		}
 	};
+	@XmlElement(name = "UtlstnAmt", required = true)
 	protected CreditDebitAmount1 utilisationAmount;
 	/**
-	 * Utilised amount of money of the limit expressed in an eligible currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +158,7 @@ public class LimitAmount1 {
 	public static final MMMessageAttribute mmUtilisationAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmUsedAmount;
-			componentContext_lazy = () -> LimitAmount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "UtlstnAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,10 +169,11 @@ public class LimitAmount1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.CreditDebitAmount1.mmObject();
 		}
 	};
+	@XmlElement(name = "AvlblAmt", required = true)
 	protected CreditDebitAmount1 availableAmount;
 	/**
-	 * Remaining amount of money of the limit expressed in an eligible currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,7 +208,7 @@ public class LimitAmount1 {
 	public static final MMMessageAttribute mmAvailableAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAvailableAmount;
-			componentContext_lazy = () -> LimitAmount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "AvlblAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,9 +223,9 @@ public class LimitAmount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LimitAmount1.mmAmount, LimitAmount1.mmUtilisationAmount, LimitAmount1.mmAvailableAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitAmount1.mmAmount, com.tools20022.repository.msg.LimitAmount1.mmUtilisationAmount, com.tools20022.repository.msg.LimitAmount1.mmAvailableAmount);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitAmount1";
 				definition = "Amount of money characterics used to specify a limit.";
@@ -230,30 +234,30 @@ public class LimitAmount1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public CreditDebitAmount1 getAmount() {
 		return amount;
 	}
 
-	public void setAmount(com.tools20022.repository.msg.CreditDebitAmount1 amount) {
-		this.amount = amount;
+	public LimitAmount1 setAmount(com.tools20022.repository.msg.CreditDebitAmount1 amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "UtlstnAmt", required = true)
 	public CreditDebitAmount1 getUtilisationAmount() {
 		return utilisationAmount;
 	}
 
-	public void setUtilisationAmount(com.tools20022.repository.msg.CreditDebitAmount1 utilisationAmount) {
-		this.utilisationAmount = utilisationAmount;
+	public LimitAmount1 setUtilisationAmount(com.tools20022.repository.msg.CreditDebitAmount1 utilisationAmount) {
+		this.utilisationAmount = Objects.requireNonNull(utilisationAmount);
+		return this;
 	}
 
-	@XmlElement(name = "AvlblAmt", required = true)
 	public CreditDebitAmount1 getAvailableAmount() {
 		return availableAmount;
 	}
 
-	public void setAvailableAmount(com.tools20022.repository.msg.CreditDebitAmount1 availableAmount) {
-		this.availableAmount = availableAmount;
+	public LimitAmount1 setAvailableAmount(com.tools20022.repository.msg.CreditDebitAmount1 availableAmount) {
+		this.availableAmount = Objects.requireNonNull(availableAmount);
+		return this;
 	}
 }

@@ -25,9 +25,11 @@ import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BalanceDetails5;
 import com.tools20022.repository.msg.BalanceDetails6;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Balance breakdown information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PortfolioBalance1", propOrder = {"summaryBalance", "detailedBalance"})
 public class PortfolioBalance1 {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SummryBal", required = true)
 	protected List<BalanceDetails5> summaryBalance;
 	/**
-	 * Summary balance information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -115,7 +118,7 @@ public class PortfolioBalance1 {
 	public static final MMMessageAssociationEnd mmSummaryBalance = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Balance.mmObject();
-			componentContext_lazy = () -> PortfolioBalance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PortfolioBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "SummryBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +129,11 @@ public class PortfolioBalance1 {
 			type_lazy = () -> BalanceDetails5.mmObject();
 		}
 	};
+	@XmlElement(name = "DtldBal", required = true)
 	protected List<BalanceDetails6> detailedBalance;
 	/**
-	 * Detailed balance information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -160,7 +164,7 @@ public class PortfolioBalance1 {
 	public static final MMMessageAssociationEnd mmDetailedBalance = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Balance.mmObject();
-			componentContext_lazy = () -> PortfolioBalance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PortfolioBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "DtldBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,10 +179,10 @@ public class PortfolioBalance1 {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PortfolioBalance1.mmSummaryBalance, PortfolioBalance1.mmDetailedBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PortfolioBalance1.mmSummaryBalance, com.tools20022.repository.choice.PortfolioBalance1.mmDetailedBalance);
 				messageBuildingBlock_lazy = () -> Arrays.asList(TotalPortfolioValuationReportV01.mmBalance);
 				trace_lazy = () -> Balance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PortfolioBalance1";
 				definition = "Balance breakdown information.";
@@ -187,21 +191,21 @@ public class PortfolioBalance1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SummryBal", required = true)
 	public List<BalanceDetails5> getSummaryBalance() {
-		return summaryBalance;
+		return summaryBalance == null ? summaryBalance = new ArrayList<>() : summaryBalance;
 	}
 
-	public void setSummaryBalance(List<BalanceDetails5> summaryBalance) {
-		this.summaryBalance = summaryBalance;
+	public PortfolioBalance1 setSummaryBalance(List<BalanceDetails5> summaryBalance) {
+		this.summaryBalance = Objects.requireNonNull(summaryBalance);
+		return this;
 	}
 
-	@XmlElement(name = "DtldBal", required = true)
 	public List<BalanceDetails6> getDetailedBalance() {
-		return detailedBalance;
+		return detailedBalance == null ? detailedBalance = new ArrayList<>() : detailedBalance;
 	}
 
-	public void setDetailedBalance(List<BalanceDetails6> detailedBalance) {
-		this.detailedBalance = detailedBalance;
+	public PortfolioBalance1 setDetailedBalance(List<BalanceDetails6> detailedBalance) {
+		this.detailedBalance = Objects.requireNonNull(detailedBalance);
+		return this;
 	}
 }

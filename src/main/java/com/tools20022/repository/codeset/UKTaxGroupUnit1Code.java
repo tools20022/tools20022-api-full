@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.UKTaxGroupUnitCode;
+import com.tools20022.repository.codeset.UKTaxGroupUnit1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the UK tax group to which units belong. For UK tax, the first
@@ -33,24 +37,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.UKTaxGroupUnit1Code#Group1
+ * UKTaxGroupUnit1Code.Group1}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UKTaxGroupUnit1Code#Group2
+ * UKTaxGroupUnit1Code.Group2}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.UKTaxGroupUnitCode
  * UKTaxGroupUnitCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.UKTaxGroupUnit1Code#mmGroup1
- * UKTaxGroupUnit1Code.mmGroup1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.UKTaxGroupUnit1Code#mmGroup2
- * UKTaxGroupUnit1Code.mmGroup2}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class UKTaxGroupUnit1Code extends UKTaxGroupUnitCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class UKTaxGroupUnit1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,11 +85,12 @@ public class UKTaxGroupUnit1Code extends UKTaxGroupUnitCode {
 	 * name} = "Group1"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGroup1 = new MMCode() {
+	public static final UKTaxGroupUnit1Code Group1 = new UKTaxGroupUnit1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group1";
-			owner_lazy = () -> UKTaxGroupUnit1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UKTaxGroupUnit1Code.mmObject();
+			codeName = UKTaxGroupUnitCode.Group1.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -105,25 +109,56 @@ public class UKTaxGroupUnit1Code extends UKTaxGroupUnitCode {
 	 * name} = "Group2"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGroup2 = new MMCode() {
+	public static final UKTaxGroupUnit1Code Group2 = new UKTaxGroupUnit1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group2";
-			owner_lazy = () -> UKTaxGroupUnit1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UKTaxGroupUnit1Code.mmObject();
+			codeName = UKTaxGroupUnitCode.Group2.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, UKTaxGroupUnit1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected UKTaxGroupUnit1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UKTaxGroupUnit1Code";
 				definition = "Specifies the UK tax group to which units belong. For UK tax, the first dividend that an investor receives from a funds investment is deemed to be part income and part return of capital. The capital element is 'equalisation', and is exempt from income tax.";
-				code_lazy = () -> Arrays.asList(UKTaxGroupUnit1Code.mmGroup1, UKTaxGroupUnit1Code.mmGroup2);
 				trace_lazy = () -> UKTaxGroupUnitCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UKTaxGroupUnit1Code.Group1, com.tools20022.repository.codeset.UKTaxGroupUnit1Code.Group2);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Group1.getCodeName().get(), Group1);
+		codesByName.put(Group2.getCodeName().get(), Group2);
+	}
+
+	public static UKTaxGroupUnit1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static UKTaxGroupUnit1Code[] values() {
+		UKTaxGroupUnit1Code[] values = new UKTaxGroupUnit1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, UKTaxGroupUnit1Code> {
+		@Override
+		public UKTaxGroupUnit1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(UKTaxGroupUnit1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

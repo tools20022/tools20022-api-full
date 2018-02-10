@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,18 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CreditLine1", propOrder = {"included", "amount"})
 public class CreditLine1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Incl", required = true)
 	protected TrueFalseIndicator included;
 	/**
-	 * Indicates whether the credit line is included or not.
 	 * 
-	 * Usage : if not present, credit line is not included in the balance
-	 * amount.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +106,7 @@ public class CreditLine1 {
 	 */
 	public static final MMMessageAttribute mmIncluded = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CreditLine1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CreditLine1.mmObject();
 			isDerived = false;
 			xmlTag = "Incl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +117,11 @@ public class CreditLine1 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt")
 	protected CurrencyAndAmount amount;
 	/**
-	 * Amount of money of the credit line.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,7 +154,7 @@ public class CreditLine1 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
-			componentContext_lazy = () -> CreditLine1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CreditLine1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,9 +169,9 @@ public class CreditLine1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CreditLine1.mmIncluded, CreditLine1.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditLine1.mmIncluded, com.tools20022.repository.msg.CreditLine1.mmAmount);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditLine1";
 				definition = "Transaction has an origin and a destination in the same country and is made in the currency of that country.";
@@ -179,21 +180,21 @@ public class CreditLine1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Incl", required = true)
 	public TrueFalseIndicator getIncluded() {
 		return included;
 	}
 
-	public void setIncluded(TrueFalseIndicator included) {
-		this.included = included;
+	public CreditLine1 setIncluded(TrueFalseIndicator included) {
+		this.included = Objects.requireNonNull(included);
+		return this;
 	}
 
-	@XmlElement(name = "Amt")
-	public CurrencyAndAmount getAmount() {
-		return amount;
+	public Optional<CurrencyAndAmount> getAmount() {
+		return amount == null ? Optional.empty() : Optional.of(amount);
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
+	public CreditLine1 setAmount(CurrencyAndAmount amount) {
 		this.amount = amount;
+		return this;
 	}
 }

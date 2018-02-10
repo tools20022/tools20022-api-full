@@ -28,6 +28,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -70,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Defines the criteria used to search for currency exchange information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CurrencyExchangeSearchCriteria", propOrder = {"sourceCurrency", "targetCurrency"})
 public class CurrencyExchangeSearchCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SrcCcy", required = true)
 	protected CurrencyCode sourceCurrency;
 	/**
-	 * Currency of the amount to be converted in a currency conversion.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +114,7 @@ public class CurrencyExchangeSearchCriteria {
 	public static final MMMessageAttribute mmSourceCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmSourceCurrency;
-			componentContext_lazy = () -> CurrencyExchangeSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "SrcCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,11 +125,11 @@ public class CurrencyExchangeSearchCriteria {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "TrgtCcy", required = true)
 	protected CurrencyCode targetCurrency;
 	/**
-	 * Currency into which an amount is to be converted in a currency
-	 * conversion.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +164,7 @@ public class CurrencyExchangeSearchCriteria {
 	public static final MMMessageAttribute mmTargetCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmTargetCurrency;
-			componentContext_lazy = () -> CurrencyExchangeSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "TrgtCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,9 +179,9 @@ public class CurrencyExchangeSearchCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CurrencyExchangeSearchCriteria.mmSourceCurrency, CurrencyExchangeSearchCriteria.mmTargetCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyExchangeSearchCriteria.mmSourceCurrency, com.tools20022.repository.msg.CurrencyExchangeSearchCriteria.mmTargetCurrency);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -195,21 +197,21 @@ public class CurrencyExchangeSearchCriteria {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SrcCcy", required = true)
 	public CurrencyCode getSourceCurrency() {
 		return sourceCurrency;
 	}
 
-	public void setSourceCurrency(CurrencyCode sourceCurrency) {
-		this.sourceCurrency = sourceCurrency;
+	public CurrencyExchangeSearchCriteria setSourceCurrency(CurrencyCode sourceCurrency) {
+		this.sourceCurrency = Objects.requireNonNull(sourceCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "TrgtCcy", required = true)
 	public CurrencyCode getTargetCurrency() {
 		return targetCurrency;
 	}
 
-	public void setTargetCurrency(CurrencyCode targetCurrency) {
-		this.targetCurrency = targetCurrency;
+	public CurrencyExchangeSearchCriteria setTargetCurrency(CurrencyCode targetCurrency) {
+		this.targetCurrency = Objects.requireNonNull(targetCurrency);
+		return this;
 	}
 }

@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Status of an instruction, advice or request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnmatchedReason13", propOrder = {"code", "additionalReasonInformation"})
 public class UnmatchedReason13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected UnmatchedReason17Choice code;
 	/**
-	 * Specifies the reason why the instruction has an unmatched status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -110,7 +113,7 @@ public class UnmatchedReason13 {
 	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmUnmatchedReason;
-			componentContext_lazy = () -> UnmatchedReason13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnmatchedReason13.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,11 +125,11 @@ public class UnmatchedReason13 {
 			type_lazy = () -> UnmatchedReason17Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRsnInf")
 	protected RestrictedFINXMax210Text additionalReasonInformation;
 	/**
-	 * Provides additional reason information that cannot be provided in a
-	 * structured field.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +165,7 @@ public class UnmatchedReason13 {
 	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> UnmatchedReason13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnmatchedReason13.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,9 +180,9 @@ public class UnmatchedReason13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnmatchedReason13.mmCode, UnmatchedReason13.mmAdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnmatchedReason13.mmCode, com.tools20022.repository.msg.UnmatchedReason13.mmAdditionalReasonInformation);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnmatchedReason13";
 				definition = "Status of an instruction, advice or request.";
@@ -188,21 +191,21 @@ public class UnmatchedReason13 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public UnmatchedReason17Choice getCode() {
 		return code;
 	}
 
-	public void setCode(UnmatchedReason17Choice code) {
-		this.code = code;
+	public UnmatchedReason13 setCode(UnmatchedReason17Choice code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRsnInf")
-	public RestrictedFINXMax210Text getAdditionalReasonInformation() {
-		return additionalReasonInformation;
+	public Optional<RestrictedFINXMax210Text> getAdditionalReasonInformation() {
+		return additionalReasonInformation == null ? Optional.empty() : Optional.of(additionalReasonInformation);
 	}
 
-	public void setAdditionalReasonInformation(RestrictedFINXMax210Text additionalReasonInformation) {
+	public UnmatchedReason13 setAdditionalReasonInformation(RestrictedFINXMax210Text additionalReasonInformation) {
 		this.additionalReasonInformation = additionalReasonInformation;
+		return this;
 	}
 }

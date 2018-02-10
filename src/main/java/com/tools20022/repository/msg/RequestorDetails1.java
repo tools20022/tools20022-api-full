@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.SystemEventInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of the financial institution sending the request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RequestorDetails1", propOrder = {"dateTimeStamp", "requestor"})
 public class RequestorDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DtTmStmp", required = true)
 	protected ISODateTime dateTimeStamp;
 	/**
-	 * Date and time at which the request was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -103,7 +105,7 @@ public class RequestorDetails1 {
 	public static final MMMessageAttribute mmDateTimeStamp = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemEventInformation.mmTime;
-			componentContext_lazy = () -> RequestorDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestorDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "DtTmStmp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,10 +116,11 @@ public class RequestorDetails1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "Rqstr", required = true)
 	protected AnyBICIdentifier requestor;
 	/**
-	 * Identification of the requester.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,7 +148,7 @@ public class RequestorDetails1 {
 	 */
 	public static final MMMessageAttribute mmRequestor = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequestorDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestorDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Rqstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,8 +163,8 @@ public class RequestorDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RequestorDetails1.mmDateTimeStamp, RequestorDetails1.mmRequestor);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestorDetails1.mmDateTimeStamp, com.tools20022.repository.msg.RequestorDetails1.mmRequestor);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestorDetails1";
 				definition = "Details of the financial institution sending the request.";
@@ -170,21 +173,21 @@ public class RequestorDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DtTmStmp", required = true)
 	public ISODateTime getDateTimeStamp() {
 		return dateTimeStamp;
 	}
 
-	public void setDateTimeStamp(ISODateTime dateTimeStamp) {
-		this.dateTimeStamp = dateTimeStamp;
+	public RequestorDetails1 setDateTimeStamp(ISODateTime dateTimeStamp) {
+		this.dateTimeStamp = Objects.requireNonNull(dateTimeStamp);
+		return this;
 	}
 
-	@XmlElement(name = "Rqstr", required = true)
 	public AnyBICIdentifier getRequestor() {
 		return requestor;
 	}
 
-	public void setRequestor(AnyBICIdentifier requestor) {
-		this.requestor = requestor;
+	public RequestorDetails1 setRequestor(AnyBICIdentifier requestor) {
+		this.requestor = Objects.requireNonNull(requestor);
+		return this;
 	}
 }

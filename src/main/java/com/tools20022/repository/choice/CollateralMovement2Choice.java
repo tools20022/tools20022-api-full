@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.Collateral4;
 import com.tools20022.repository.msg.CollateralMovement3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CollateralMovement2Choice", propOrder = {"collateralMovementDetails", "return"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CollateralMovement2Choice", propOrder = {"collateralMovementDetails", "return_"})
 public class CollateralMovement2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CollMvmntDtls", required = true)
 	protected CollateralMovement3 collateralMovementDetails;
 	/**
-	 * Provides the collateral movement direction that is a delivery and
-	 * optionaly a return.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -127,7 +128,7 @@ public class CollateralMovement2Choice {
 	public static final MMMessageAssociationEnd mmCollateralMovementDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
-			componentContext_lazy = () -> CollateralMovement2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralMovement2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollMvmntDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,10 +141,11 @@ public class CollateralMovement2Choice {
 			type_lazy = () -> CollateralMovement3.mmObject();
 		}
 	};
+	@XmlElement(name = "Rtr", required = true)
 	protected Collateral4 return_;
 	/**
-	 * Provides the collateral movement direction that is a return only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -184,7 +186,7 @@ public class CollateralMovement2Choice {
 	public static final MMMessageAssociationEnd mmReturn = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
-			componentContext_lazy = () -> CollateralMovement2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralMovement2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,9 +203,9 @@ public class CollateralMovement2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CollateralMovement2Choice.mmCollateralMovementDetails, CollateralMovement2Choice.mmReturn);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralMovement2Choice.mmCollateralMovementDetails, com.tools20022.repository.choice.CollateralMovement2Choice.mmReturn);
 				trace_lazy = () -> CollateralProposal.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralMovement2Choice";
 				definition = "Provides the collateral movement direction that is a delivery and optionaly a return, or a return only.";
@@ -213,21 +215,21 @@ public class CollateralMovement2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CollMvmntDtls", required = true)
 	public CollateralMovement3 getCollateralMovementDetails() {
 		return collateralMovementDetails;
 	}
 
-	public void setCollateralMovementDetails(CollateralMovement3 collateralMovementDetails) {
-		this.collateralMovementDetails = collateralMovementDetails;
+	public CollateralMovement2Choice setCollateralMovementDetails(CollateralMovement3 collateralMovementDetails) {
+		this.collateralMovementDetails = Objects.requireNonNull(collateralMovementDetails);
+		return this;
 	}
 
-	@XmlElement(name = "Rtr", required = true)
 	public Collateral4 getReturn() {
 		return return_;
 	}
 
-	public void setReturn(Collateral4 return_) {
-		this.return_ = return_;
+	public CollateralMovement2Choice setReturn(Collateral4 return_) {
+		this.return_ = Objects.requireNonNull(return_);
+		return this;
 	}
 }

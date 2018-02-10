@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,16 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Contains the requested modifications."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionModification1", propOrder = {"instructionReference", "newPaymentValueSet"})
 public class TransactionModification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InstrRef", required = true)
 	protected PaymentIdentification3Choice instructionReference;
 	/**
-	 * Reference to the instruction related to the payment for which a
-	 * modification is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +110,7 @@ public class TransactionModification1 {
 	public static final MMMessageAssociationEnd mmInstructionReference = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
-			componentContext_lazy = () -> TransactionModification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionModification1.mmObject();
 			isDerived = false;
 			xmlTag = "InstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +122,11 @@ public class TransactionModification1 {
 			type_lazy = () -> PaymentIdentification3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NewPmtValSet", required = true)
 	protected PaymentDetails4 newPaymentValueSet;
 	/**
-	 * New payment values.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -156,7 +158,7 @@ public class TransactionModification1 {
 	public static final MMMessageAssociationEnd mmNewPaymentValueSet = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
-			componentContext_lazy = () -> TransactionModification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionModification1.mmObject();
 			isDerived = false;
 			xmlTag = "NewPmtValSet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +174,9 @@ public class TransactionModification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionModification1.mmInstructionReference, TransactionModification1.mmNewPaymentValueSet);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionModification1.mmInstructionReference, com.tools20022.repository.msg.TransactionModification1.mmNewPaymentValueSet);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionModification1";
 				definition = "Contains the requested modifications.";
@@ -183,21 +185,21 @@ public class TransactionModification1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InstrRef", required = true)
 	public PaymentIdentification3Choice getInstructionReference() {
 		return instructionReference;
 	}
 
-	public void setInstructionReference(PaymentIdentification3Choice instructionReference) {
-		this.instructionReference = instructionReference;
+	public TransactionModification1 setInstructionReference(PaymentIdentification3Choice instructionReference) {
+		this.instructionReference = Objects.requireNonNull(instructionReference);
+		return this;
 	}
 
-	@XmlElement(name = "NewPmtValSet", required = true)
 	public PaymentDetails4 getNewPaymentValueSet() {
 		return newPaymentValueSet;
 	}
 
-	public void setNewPaymentValueSet(com.tools20022.repository.msg.PaymentDetails4 newPaymentValueSet) {
-		this.newPaymentValueSet = newPaymentValueSet;
+	public TransactionModification1 setNewPaymentValueSet(com.tools20022.repository.msg.PaymentDetails4 newPaymentValueSet) {
+		this.newPaymentValueSet = Objects.requireNonNull(newPaymentValueSet);
+		return this;
 	}
 }

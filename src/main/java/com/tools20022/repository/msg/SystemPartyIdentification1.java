@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.SystemPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SystemPartyIdentification1", propOrder = {"validFrom", "identification"})
 public class SystemPartyIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "VldFr", required = true)
 	protected ISODate validFrom;
 	/**
-	 * Starting date from which the identification is valid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class SystemPartyIdentification1 {
 	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
-			componentContext_lazy = () -> SystemPartyIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "VldFr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class SystemPartyIdentification1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected BICFIIdentifier identification;
 	/**
-	 * Unique and unambiguous way to identify a system party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +162,7 @@ public class SystemPartyIdentification1 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> SystemPartyIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,9 +177,9 @@ public class SystemPartyIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SystemPartyIdentification1.mmValidFrom, SystemPartyIdentification1.mmIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemPartyIdentification1.mmValidFrom, com.tools20022.repository.msg.SystemPartyIdentification1.mmIdentification);
 				trace_lazy = () -> SystemPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemPartyIdentification1";
 				definition = "Unique identification to unambiguously identify the party within the system.";
@@ -185,21 +188,21 @@ public class SystemPartyIdentification1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "VldFr", required = true)
 	public ISODate getValidFrom() {
 		return validFrom;
 	}
 
-	public void setValidFrom(ISODate validFrom) {
-		this.validFrom = validFrom;
+	public SystemPartyIdentification1 setValidFrom(ISODate validFrom) {
+		this.validFrom = Objects.requireNonNull(validFrom);
+		return this;
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public BICFIIdentifier getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(BICFIIdentifier identification) {
-		this.identification = identification;
+	public SystemPartyIdentification1 setIdentification(BICFIIdentifier identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 }

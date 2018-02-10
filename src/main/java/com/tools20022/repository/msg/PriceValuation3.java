@@ -34,9 +34,8 @@ import com.tools20022.repository.entity.InvestmentFund;
 import com.tools20022.repository.entity.NetAssetValueCalculation;
 import com.tools20022.repository.entity.Price;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -114,8 +113,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPriceDetailsRule#forPriceValuation3
+ * ConstraintPriceDetailsRule.forPriceValuation3}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -134,17 +141,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PriceValuation3", propOrder = {"identification", "valuationDateTime", "NAVDateTime", "financialInstrumentDetails", "fundManagementCompany", "totalNAV", "totalUnitsNumber", "nextValuationDateTime",
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PriceValuation3", propOrder = {"identification", "valuationDateTime", "nAVDateTime", "financialInstrumentDetails", "fundManagementCompany", "totalNAV", "totalUnitsNumber", "nextValuationDateTime",
 		"previousValuationDateTime", "valuationType", "valuationFrequency", "officialValuationIndicator", "suspendedIndicator", "priceDetails", "valuationStatistics", "performanceDetails"})
 public class PriceValuation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Unique technical identifier for an instance of a price valuation within a
-	 * price report, as assigned by the issuer of the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +180,7 @@ public class PriceValuation3 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PriceValuation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,10 +191,11 @@ public class PriceValuation3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ValtnDtTm")
 	protected DateAndDateTimeChoice valuationDateTime;
 	/**
-	 * Date and time of the price valuation for the investment fund/fund class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -223,7 +231,7 @@ public class PriceValuation3 {
 	public static final MMMessageAttribute mmValuationDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationDateTime;
-			componentContext_lazy = () -> PriceValuation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,12 +242,11 @@ public class PriceValuation3 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "NAVDtTm", required = true)
 	protected DateAndDateTimeChoice nAVDateTime;
 	/**
-	 * Date and time at which a price is applied, according to the terms stated
-	 * in the prospectus. The NAV date is also known as the trade date. The NAV
-	 * date becomes the trade date in an order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -275,7 +282,7 @@ public class PriceValuation3 {
 	public static final MMMessageAttribute mmNAVDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationDateTime;
-			componentContext_lazy = () -> PriceValuation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "NAVDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,10 +293,11 @@ public class PriceValuation3 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	protected FinancialInstrument8 financialInstrumentDetails;
 	/**
-	 * Investment fund class for which the net asset value is calculated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -322,7 +330,7 @@ public class PriceValuation3 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFund.mmObject();
-			componentContext_lazy = () -> PriceValuation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -334,10 +342,11 @@ public class PriceValuation3 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument8.mmObject();
 		}
 	};
+	@XmlElement(name = "FndMgmtCpny")
 	protected PartyIdentification2Choice fundManagementCompany;
 	/**
-	 * Issuer of the fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -370,7 +379,7 @@ public class PriceValuation3 {
 	public static final MMMessageAssociationEnd mmFundManagementCompany = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> FundManagerRole.mmObject();
-			componentContext_lazy = () -> PriceValuation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "FndMgmtCpny";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -382,11 +391,11 @@ public class PriceValuation3 {
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNAV")
 	protected List<ActiveOrHistoricCurrencyAndAmount> totalNAV;
 	/**
-	 * Value of all the holdings, less the fund's liabilities, attributable to a
-	 * specific investment fund class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -422,7 +431,7 @@ public class PriceValuation3 {
 	public static final MMMessageAttribute mmTotalNAV = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmNetAssetValue;
-			componentContext_lazy = () -> PriceValuation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNAV";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -432,10 +441,11 @@ public class PriceValuation3 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlUnitsNb")
 	protected FinancialInstrumentQuantity1 totalUnitsNumber;
 	/**
-	 * Total number of investment fund class units that have been issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -470,7 +480,7 @@ public class PriceValuation3 {
 	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmRelatedFund;
-			componentContext_lazy = () -> PriceValuation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlUnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -481,11 +491,11 @@ public class PriceValuation3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	@XmlElement(name = "NxtValtnDtTm")
 	protected DateAndDateTimeChoice nextValuationDateTime;
 	/**
-	 * Date and time of the next price valuation for the investment fund/fund
-	 * class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -521,7 +531,7 @@ public class PriceValuation3 {
 	public static final MMMessageAttribute mmNextValuationDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationDateTime;
-			componentContext_lazy = () -> PriceValuation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "NxtValtnDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -532,11 +542,11 @@ public class PriceValuation3 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsValtnDtTm")
 	protected DateAndDateTimeChoice previousValuationDateTime;
 	/**
-	 * Date and time of the previous price valuation for the investment
-	 * fund/fund class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -572,7 +582,7 @@ public class PriceValuation3 {
 	public static final MMMessageAttribute mmPreviousValuationDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationDateTime;
-			componentContext_lazy = () -> PriceValuation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsValtnDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -583,11 +593,11 @@ public class PriceValuation3 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "ValtnTp", required = true)
 	protected ValuationTiming1Code valuationType;
 	/**
-	 * Specifies how the valuation is done, based on the schedule stated in the
-	 * prospectus.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -623,7 +633,7 @@ public class PriceValuation3 {
 	public static final MMMessageAttribute mmValuationType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationType;
-			componentContext_lazy = () -> PriceValuation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -634,10 +644,11 @@ public class PriceValuation3 {
 			simpleType_lazy = () -> ValuationTiming1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ValtnFrqcy")
 	protected EventFrequency1Code valuationFrequency;
 	/**
-	 * Frequency of the valuation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -671,7 +682,7 @@ public class PriceValuation3 {
 	public static final MMMessageAttribute mmValuationFrequency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationFrequency;
-			componentContext_lazy = () -> PriceValuation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -682,10 +693,11 @@ public class PriceValuation3 {
 			simpleType_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "OffclValtnInd", required = true)
 	protected YesNoIndicator officialValuationIndicator;
 	/**
-	 * Indicates whether the valuation is an official valuation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -720,7 +732,7 @@ public class PriceValuation3 {
 	public static final MMMessageAttribute mmOfficialValuationIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmOfficialValuationIndicator;
-			componentContext_lazy = () -> PriceValuation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "OffclValtnInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -731,11 +743,11 @@ public class PriceValuation3 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "SspdInd", required = true)
 	protected YesNoIndicator suspendedIndicator;
 	/**
-	 * Indicates whether the valuation of the investment fund class is
-	 * suspended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -771,7 +783,7 @@ public class PriceValuation3 {
 	public static final MMMessageAttribute mmSuspendedIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmSuspendedIndicator;
-			componentContext_lazy = () -> PriceValuation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "SspdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -782,10 +794,11 @@ public class PriceValuation3 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PricDtls")
 	protected List<com.tools20022.repository.msg.UnitPrice15> priceDetails;
 	/**
-	 * Amount of money for which goods or services are offered, sold, or bought.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -818,7 +831,7 @@ public class PriceValuation3 {
 	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Price.mmObject();
-			componentContext_lazy = () -> PriceValuation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "PricDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -829,10 +842,11 @@ public class PriceValuation3 {
 			type_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 		}
 	};
+	@XmlElement(name = "ValtnSttstcs")
 	protected List<com.tools20022.repository.msg.ValuationStatistics3> valuationStatistics;
 	/**
-	 * Information related to the price variations of an investment fund class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -866,7 +880,7 @@ public class PriceValuation3 {
 	public static final MMMessageAssociationEnd mmValuationStatistics = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationStatistics;
-			componentContext_lazy = () -> PriceValuation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnSttstcs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -877,10 +891,11 @@ public class PriceValuation3 {
 			type_lazy = () -> com.tools20022.repository.msg.ValuationStatistics3.mmObject();
 		}
 	};
+	@XmlElement(name = "PrfrmncDtls")
 	protected PerformanceFactors1 performanceDetails;
 	/**
-	 * Factors that give indications about the performance of a fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -913,7 +928,7 @@ public class PriceValuation3 {
 	public static final MMMessageAssociationEnd mmPerformanceDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmInvestmentFundPerformanceFactors;
-			componentContext_lazy = () -> PriceValuation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
 			isDerived = false;
 			xmlTag = "PrfrmncDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -929,13 +944,16 @@ public class PriceValuation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PriceValuation3.mmIdentification, PriceValuation3.mmValuationDateTime, PriceValuation3.mmNAVDateTime, PriceValuation3.mmFinancialInstrumentDetails,
-						PriceValuation3.mmFundManagementCompany, PriceValuation3.mmTotalNAV, PriceValuation3.mmTotalUnitsNumber, PriceValuation3.mmNextValuationDateTime, PriceValuation3.mmPreviousValuationDateTime,
-						PriceValuation3.mmValuationType, PriceValuation3.mmValuationFrequency, PriceValuation3.mmOfficialValuationIndicator, PriceValuation3.mmSuspendedIndicator, PriceValuation3.mmPriceDetails,
-						PriceValuation3.mmValuationStatistics, PriceValuation3.mmPerformanceDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceValuation3.mmIdentification, com.tools20022.repository.msg.PriceValuation3.mmValuationDateTime,
+						com.tools20022.repository.msg.PriceValuation3.mmNAVDateTime, com.tools20022.repository.msg.PriceValuation3.mmFinancialInstrumentDetails, com.tools20022.repository.msg.PriceValuation3.mmFundManagementCompany,
+						com.tools20022.repository.msg.PriceValuation3.mmTotalNAV, com.tools20022.repository.msg.PriceValuation3.mmTotalUnitsNumber, com.tools20022.repository.msg.PriceValuation3.mmNextValuationDateTime,
+						com.tools20022.repository.msg.PriceValuation3.mmPreviousValuationDateTime, com.tools20022.repository.msg.PriceValuation3.mmValuationType, com.tools20022.repository.msg.PriceValuation3.mmValuationFrequency,
+						com.tools20022.repository.msg.PriceValuation3.mmOfficialValuationIndicator, com.tools20022.repository.msg.PriceValuation3.mmSuspendedIndicator, com.tools20022.repository.msg.PriceValuation3.mmPriceDetails,
+						com.tools20022.repository.msg.PriceValuation3.mmValuationStatistics, com.tools20022.repository.msg.PriceValuation3.mmPerformanceDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(PriceReportV03.mmPriceValuationDetails);
 				trace_lazy = () -> NetAssetValueCalculation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPriceDetailsRule.forPriceValuation3);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceValuation3";
 				definition = "Calculation of the net asset value for an investment fund/fund class.";
@@ -945,147 +963,147 @@ public class PriceValuation3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public PriceValuation3 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "ValtnDtTm")
-	public DateAndDateTimeChoice getValuationDateTime() {
-		return valuationDateTime;
+	public Optional<DateAndDateTimeChoice> getValuationDateTime() {
+		return valuationDateTime == null ? Optional.empty() : Optional.of(valuationDateTime);
 	}
 
-	public void setValuationDateTime(DateAndDateTimeChoice valuationDateTime) {
+	public PriceValuation3 setValuationDateTime(DateAndDateTimeChoice valuationDateTime) {
 		this.valuationDateTime = valuationDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "NAVDtTm", required = true)
 	public DateAndDateTimeChoice getNAVDateTime() {
 		return nAVDateTime;
 	}
 
-	public void setNAVDateTime(DateAndDateTimeChoice nAVDateTime) {
-		this.nAVDateTime = nAVDateTime;
+	public PriceValuation3 setNAVDateTime(DateAndDateTimeChoice nAVDateTime) {
+		this.nAVDateTime = Objects.requireNonNull(nAVDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument8 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
 
-	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument8 financialInstrumentDetails) {
-		this.financialInstrumentDetails = financialInstrumentDetails;
+	public PriceValuation3 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument8 financialInstrumentDetails) {
+		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
+		return this;
 	}
 
-	@XmlElement(name = "FndMgmtCpny")
-	public PartyIdentification2Choice getFundManagementCompany() {
-		return fundManagementCompany;
+	public Optional<PartyIdentification2Choice> getFundManagementCompany() {
+		return fundManagementCompany == null ? Optional.empty() : Optional.of(fundManagementCompany);
 	}
 
-	public void setFundManagementCompany(PartyIdentification2Choice fundManagementCompany) {
+	public PriceValuation3 setFundManagementCompany(PartyIdentification2Choice fundManagementCompany) {
 		this.fundManagementCompany = fundManagementCompany;
+		return this;
 	}
 
-	@XmlElement(name = "TtlNAV")
 	public List<ActiveOrHistoricCurrencyAndAmount> getTotalNAV() {
-		return totalNAV;
+		return totalNAV == null ? totalNAV = new ArrayList<>() : totalNAV;
 	}
 
-	public void setTotalNAV(List<ActiveOrHistoricCurrencyAndAmount> totalNAV) {
-		this.totalNAV = totalNAV;
+	public PriceValuation3 setTotalNAV(List<ActiveOrHistoricCurrencyAndAmount> totalNAV) {
+		this.totalNAV = Objects.requireNonNull(totalNAV);
+		return this;
 	}
 
-	@XmlElement(name = "TtlUnitsNb")
-	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
-		return totalUnitsNumber;
+	public Optional<FinancialInstrumentQuantity1> getTotalUnitsNumber() {
+		return totalUnitsNumber == null ? Optional.empty() : Optional.of(totalUnitsNumber);
 	}
 
-	public void setTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsNumber) {
+	public PriceValuation3 setTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsNumber) {
 		this.totalUnitsNumber = totalUnitsNumber;
+		return this;
 	}
 
-	@XmlElement(name = "NxtValtnDtTm")
-	public DateAndDateTimeChoice getNextValuationDateTime() {
-		return nextValuationDateTime;
+	public Optional<DateAndDateTimeChoice> getNextValuationDateTime() {
+		return nextValuationDateTime == null ? Optional.empty() : Optional.of(nextValuationDateTime);
 	}
 
-	public void setNextValuationDateTime(DateAndDateTimeChoice nextValuationDateTime) {
+	public PriceValuation3 setNextValuationDateTime(DateAndDateTimeChoice nextValuationDateTime) {
 		this.nextValuationDateTime = nextValuationDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsValtnDtTm")
-	public DateAndDateTimeChoice getPreviousValuationDateTime() {
-		return previousValuationDateTime;
+	public Optional<DateAndDateTimeChoice> getPreviousValuationDateTime() {
+		return previousValuationDateTime == null ? Optional.empty() : Optional.of(previousValuationDateTime);
 	}
 
-	public void setPreviousValuationDateTime(DateAndDateTimeChoice previousValuationDateTime) {
+	public PriceValuation3 setPreviousValuationDateTime(DateAndDateTimeChoice previousValuationDateTime) {
 		this.previousValuationDateTime = previousValuationDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "ValtnTp", required = true)
 	public ValuationTiming1Code getValuationType() {
 		return valuationType;
 	}
 
-	public void setValuationType(ValuationTiming1Code valuationType) {
-		this.valuationType = valuationType;
+	public PriceValuation3 setValuationType(ValuationTiming1Code valuationType) {
+		this.valuationType = Objects.requireNonNull(valuationType);
+		return this;
 	}
 
-	@XmlElement(name = "ValtnFrqcy")
-	public EventFrequency1Code getValuationFrequency() {
-		return valuationFrequency;
+	public Optional<EventFrequency1Code> getValuationFrequency() {
+		return valuationFrequency == null ? Optional.empty() : Optional.of(valuationFrequency);
 	}
 
-	public void setValuationFrequency(EventFrequency1Code valuationFrequency) {
+	public PriceValuation3 setValuationFrequency(EventFrequency1Code valuationFrequency) {
 		this.valuationFrequency = valuationFrequency;
+		return this;
 	}
 
-	@XmlElement(name = "OffclValtnInd", required = true)
 	public YesNoIndicator getOfficialValuationIndicator() {
 		return officialValuationIndicator;
 	}
 
-	public void setOfficialValuationIndicator(YesNoIndicator officialValuationIndicator) {
-		this.officialValuationIndicator = officialValuationIndicator;
+	public PriceValuation3 setOfficialValuationIndicator(YesNoIndicator officialValuationIndicator) {
+		this.officialValuationIndicator = Objects.requireNonNull(officialValuationIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "SspdInd", required = true)
 	public YesNoIndicator getSuspendedIndicator() {
 		return suspendedIndicator;
 	}
 
-	public void setSuspendedIndicator(YesNoIndicator suspendedIndicator) {
-		this.suspendedIndicator = suspendedIndicator;
+	public PriceValuation3 setSuspendedIndicator(YesNoIndicator suspendedIndicator) {
+		this.suspendedIndicator = Objects.requireNonNull(suspendedIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "PricDtls")
 	public List<UnitPrice15> getPriceDetails() {
-		return priceDetails;
+		return priceDetails == null ? priceDetails = new ArrayList<>() : priceDetails;
 	}
 
-	public void setPriceDetails(List<com.tools20022.repository.msg.UnitPrice15> priceDetails) {
-		this.priceDetails = priceDetails;
+	public PriceValuation3 setPriceDetails(List<com.tools20022.repository.msg.UnitPrice15> priceDetails) {
+		this.priceDetails = Objects.requireNonNull(priceDetails);
+		return this;
 	}
 
-	@XmlElement(name = "ValtnSttstcs")
 	public List<ValuationStatistics3> getValuationStatistics() {
-		return valuationStatistics;
+		return valuationStatistics == null ? valuationStatistics = new ArrayList<>() : valuationStatistics;
 	}
 
-	public void setValuationStatistics(List<com.tools20022.repository.msg.ValuationStatistics3> valuationStatistics) {
-		this.valuationStatistics = valuationStatistics;
+	public PriceValuation3 setValuationStatistics(List<com.tools20022.repository.msg.ValuationStatistics3> valuationStatistics) {
+		this.valuationStatistics = Objects.requireNonNull(valuationStatistics);
+		return this;
 	}
 
-	@XmlElement(name = "PrfrmncDtls")
-	public PerformanceFactors1 getPerformanceDetails() {
-		return performanceDetails;
+	public Optional<PerformanceFactors1> getPerformanceDetails() {
+		return performanceDetails == null ? Optional.empty() : Optional.of(performanceDetails);
 	}
 
-	public void setPerformanceDetails(com.tools20022.repository.msg.PerformanceFactors1 performanceDetails) {
+	public PriceValuation3 setPerformanceDetails(com.tools20022.repository.msg.PerformanceFactors1 performanceDetails) {
 		this.performanceDetails = performanceDetails;
+		return this;
 	}
 }

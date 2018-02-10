@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Time span defined by a start date and time, and an end date and time."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DateTimePeriodDetails1", propOrder = {"fromDateTime", "toDateTime"})
 public class DateTimePeriodDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FrDtTm", required = true)
 	protected ISODateTime fromDateTime;
 	/**
-	 * Date and time at which the range starts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +120,7 @@ public class DateTimePeriodDetails1 {
 	public static final MMMessageAttribute mmFromDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
-			componentContext_lazy = () -> DateTimePeriodDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "FrDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +131,11 @@ public class DateTimePeriodDetails1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "ToDtTm")
 	protected ISODateTime toDateTime;
 	/**
-	 * Date and time at which the range ends.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +168,7 @@ public class DateTimePeriodDetails1 {
 	public static final MMMessageAttribute mmToDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
-			componentContext_lazy = () -> DateTimePeriodDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ToDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,10 +183,10 @@ public class DateTimePeriodDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DateTimePeriodDetails1.mmFromDateTime, DateTimePeriodDetails1.mmToDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DateTimePeriodDetails1.mmFromDateTime, com.tools20022.repository.msg.DateTimePeriodDetails1.mmToDateTime);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ActivityReportRequestV03.mmReportPeriod);
 				trace_lazy = () -> DateTimePeriod.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateTimePeriodDetails1";
 				definition = "Time span defined by a start date and time, and an end date and time.";
@@ -191,21 +195,21 @@ public class DateTimePeriodDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FrDtTm", required = true)
 	public ISODateTime getFromDateTime() {
 		return fromDateTime;
 	}
 
-	public void setFromDateTime(ISODateTime fromDateTime) {
-		this.fromDateTime = fromDateTime;
+	public DateTimePeriodDetails1 setFromDateTime(ISODateTime fromDateTime) {
+		this.fromDateTime = Objects.requireNonNull(fromDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "ToDtTm")
-	public ISODateTime getToDateTime() {
-		return toDateTime;
+	public Optional<ISODateTime> getToDateTime() {
+		return toDateTime == null ? Optional.empty() : Optional.of(toDateTime);
 	}
 
-	public void setToDateTime(ISODateTime toDateTime) {
+	public DateTimePeriodDetails1 setToDateTime(ISODateTime toDateTime) {
 		this.toDateTime = toDateTime;
+		return this;
 	}
 }

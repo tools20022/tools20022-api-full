@@ -25,9 +25,8 @@ import com.tools20022.repository.area.AccountManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -49,20 +48,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AccountManagementArchive
- * AccountManagementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AcctOpngInstr"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -111,9 +96,53 @@ import javax.xml.bind.annotation.*;
  * AccountOpeningInstructionV03.mmExtension}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AcctOpngInstr"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AccountManagementArchive
+ * AccountManagementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code acmt.001.001.03}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInvestmentAccountIdentificationRule#forAccountOpeningInstructionV03
+ * ConstraintInvestmentAccountIdentificationRule.forAccountOpeningInstructionV03
+ * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUnitRule#forAccountOpeningInstructionV03
+ * ConstraintUnitRule.forAccountOpeningInstructionV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentageRule1#forAccountOpeningInstructionV03
+ * ConstraintDividendPercentageRule1.forAccountOpeningInstructionV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentageRule2#forAccountOpeningInstructionV03
+ * ConstraintDividendPercentageRule2.forAccountOpeningInstructionV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentageRule3#forAccountOpeningInstructionV03
+ * ConstraintDividendPercentageRule3.forAccountOpeningInstructionV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentageRule4#forAccountOpeningInstructionV03
+ * ConstraintDividendPercentageRule4.forAccountOpeningInstructionV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentageRule5#forAccountOpeningInstructionV03
+ * ConstraintDividendPercentageRule5.forAccountOpeningInstructionV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDividendPercentageRule6#forAccountOpeningInstructionV03
+ * ConstraintDividendPercentageRule6.forAccountOpeningInstructionV03}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -138,16 +167,17 @@ import javax.xml.bind.annotation.*;
  * AccountOpeningInstructionV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountOpeningInstructionV03", propOrder = {"messageIdentification", "orderReference", "previousReference", "instructionDetails", "investmentAccount", "accountParties", "intermediaries", "placement", "newIssueAllocation",
 		"savingsInvestmentPlan", "withdrawalInvestmentPlan", "cashSettlement", "serviceLevelAgreement", "extension"})
 public class AccountOpeningInstructionV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Identifies the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,10 +226,11 @@ public class AccountOpeningInstructionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "OrdrRef")
 	protected InvestmentFundOrder4 orderReference;
 	/**
-	 * Identifies a related order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -248,10 +279,11 @@ public class AccountOpeningInstructionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsRef")
 	protected AdditionalReference3 previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -300,10 +332,11 @@ public class AccountOpeningInstructionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "InstrDtls", required = true)
 	protected InvestmentAccountOpeningDetails instructionDetails;
 	/**
-	 * Provide detailed information about the opening instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -353,10 +386,11 @@ public class AccountOpeningInstructionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "InvstmtAcct", required = true)
 	protected InvestmentAccount34 investmentAccount;
 	/**
-	 * Detailed information about the investment account to be opened
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -406,11 +440,11 @@ public class AccountOpeningInstructionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctPties", required = true)
 	protected AccountParties6 accountParties;
 	/**
-	 * Information related to parties who are related to an investment account;
-	 * eg. primary account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -460,10 +494,11 @@ public class AccountOpeningInstructionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Intrmies")
 	protected List<Intermediary12> intermediaries;
 	/**
-	 * Information related to an intermediary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -511,10 +546,11 @@ public class AccountOpeningInstructionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Plcmnt")
 	protected ReferredAgent1 placement;
 	/**
-	 * Placement agent for the hedge fund industry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -562,11 +598,11 @@ public class AccountOpeningInstructionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "NewIsseAllcn")
 	protected NewIssueAllocation1 newIssueAllocation;
 	/**
-	 * Eligibility conditions applicable when there is an allocation of new
-	 * issues for hedge fund account opening.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -617,11 +653,11 @@ public class AccountOpeningInstructionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SvgsInvstmtPlan")
 	protected List<InvestmentPlan6> savingsInvestmentPlan;
 	/**
-	 * Plan that allows individuals to set aside a fixed amount of money at
-	 * specified intervals, usually for a special purpose, eg, retirement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -671,11 +707,11 @@ public class AccountOpeningInstructionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "WdrwlInvstmtPlan")
 	protected List<InvestmentPlan6> withdrawalInvestmentPlan;
 	/**
-	 * Plan through which an investment fund investor's holdings are depleted
-	 * through regular withdrawals at specified intervals.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -725,11 +761,11 @@ public class AccountOpeningInstructionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "CshSttlm")
 	protected List<InvestmentFundCashSettlementInformation5> cashSettlement;
 	/**
-	 * Cash settlement standing instruction associated to the investment fund
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -780,10 +816,11 @@ public class AccountOpeningInstructionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SvcLvlAgrmt")
 	protected List<DocumentToSend1> serviceLevelAgreement;
 	/**
-	 * Identifies documents to be provided for the account opening.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -832,11 +869,11 @@ public class AccountOpeningInstructionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -889,6 +926,11 @@ public class AccountOpeningInstructionV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountIdentificationRule.forAccountOpeningInstructionV03,
+						com.tools20022.repository.constraints.ConstraintUnitRule.forAccountOpeningInstructionV03, com.tools20022.repository.constraints.ConstraintDividendPercentageRule1.forAccountOpeningInstructionV03,
+						com.tools20022.repository.constraints.ConstraintDividendPercentageRule2.forAccountOpeningInstructionV03, com.tools20022.repository.constraints.ConstraintDividendPercentageRule3.forAccountOpeningInstructionV03,
+						com.tools20022.repository.constraints.ConstraintDividendPercentageRule4.forAccountOpeningInstructionV03, com.tools20022.repository.constraints.ConstraintDividendPercentageRule5.forAccountOpeningInstructionV03,
+						com.tools20022.repository.constraints.ConstraintDividendPercentageRule6.forAccountOpeningInstructionV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountOpeningInstructionV03";
 				definition = "Scope\r\nAn account owner, for example, an investor or its designated agent sends the AccountOpeningInstruction message to the account servicer, for example, a registrar, transfer agent or custodian to instruct the opening of an account or the opening of an account and establishing an investment plan.\r\nUsage\r\nThe AccountOpeningInstruction is used to open an account directly or indirectly with the account servicer or an intermediary.\r\nIn some markets, for example, Australia, and for some products in the United Kingdom, a first order (also known as a deposit instruction) is placed at the same time as the account opening. To cater for this scenario, an order message can be linked (via references in the message) to the AccountOpeningInstruction message when needed.\r\nExecution of the AccountOpeningInstruction is confirmed via an AccountDetailsConfirmation message.";
@@ -923,133 +965,133 @@ public class AccountOpeningInstructionV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public AccountOpeningInstructionV03 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OrdrRef")
-	public InvestmentFundOrder4 getOrderReference() {
-		return orderReference;
+	public Optional<InvestmentFundOrder4> getOrderReference() {
+		return orderReference == null ? Optional.empty() : Optional.of(orderReference);
 	}
 
-	public void setOrderReference(InvestmentFundOrder4 orderReference) {
+	public AccountOpeningInstructionV03 setOrderReference(InvestmentFundOrder4 orderReference) {
 		this.orderReference = orderReference;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef")
-	public AdditionalReference3 getPreviousReference() {
-		return previousReference;
+	public Optional<AdditionalReference3> getPreviousReference() {
+		return previousReference == null ? Optional.empty() : Optional.of(previousReference);
 	}
 
-	public void setPreviousReference(AdditionalReference3 previousReference) {
+	public AccountOpeningInstructionV03 setPreviousReference(AdditionalReference3 previousReference) {
 		this.previousReference = previousReference;
+		return this;
 	}
 
-	@XmlElement(name = "InstrDtls", required = true)
 	public InvestmentAccountOpeningDetails getInstructionDetails() {
 		return instructionDetails;
 	}
 
-	public void setInstructionDetails(InvestmentAccountOpeningDetails instructionDetails) {
-		this.instructionDetails = instructionDetails;
+	public AccountOpeningInstructionV03 setInstructionDetails(InvestmentAccountOpeningDetails instructionDetails) {
+		this.instructionDetails = Objects.requireNonNull(instructionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtAcct", required = true)
 	public InvestmentAccount34 getInvestmentAccount() {
 		return investmentAccount;
 	}
 
-	public void setInvestmentAccount(InvestmentAccount34 investmentAccount) {
-		this.investmentAccount = investmentAccount;
+	public AccountOpeningInstructionV03 setInvestmentAccount(InvestmentAccount34 investmentAccount) {
+		this.investmentAccount = Objects.requireNonNull(investmentAccount);
+		return this;
 	}
 
-	@XmlElement(name = "AcctPties", required = true)
 	public AccountParties6 getAccountParties() {
 		return accountParties;
 	}
 
-	public void setAccountParties(AccountParties6 accountParties) {
-		this.accountParties = accountParties;
+	public AccountOpeningInstructionV03 setAccountParties(AccountParties6 accountParties) {
+		this.accountParties = Objects.requireNonNull(accountParties);
+		return this;
 	}
 
-	@XmlElement(name = "Intrmies")
 	public List<Intermediary12> getIntermediaries() {
-		return intermediaries;
+		return intermediaries == null ? intermediaries = new ArrayList<>() : intermediaries;
 	}
 
-	public void setIntermediaries(List<Intermediary12> intermediaries) {
-		this.intermediaries = intermediaries;
+	public AccountOpeningInstructionV03 setIntermediaries(List<Intermediary12> intermediaries) {
+		this.intermediaries = Objects.requireNonNull(intermediaries);
+		return this;
 	}
 
-	@XmlElement(name = "Plcmnt")
-	public ReferredAgent1 getPlacement() {
-		return placement;
+	public Optional<ReferredAgent1> getPlacement() {
+		return placement == null ? Optional.empty() : Optional.of(placement);
 	}
 
-	public void setPlacement(ReferredAgent1 placement) {
+	public AccountOpeningInstructionV03 setPlacement(ReferredAgent1 placement) {
 		this.placement = placement;
+		return this;
 	}
 
-	@XmlElement(name = "NewIsseAllcn")
-	public NewIssueAllocation1 getNewIssueAllocation() {
-		return newIssueAllocation;
+	public Optional<NewIssueAllocation1> getNewIssueAllocation() {
+		return newIssueAllocation == null ? Optional.empty() : Optional.of(newIssueAllocation);
 	}
 
-	public void setNewIssueAllocation(NewIssueAllocation1 newIssueAllocation) {
+	public AccountOpeningInstructionV03 setNewIssueAllocation(NewIssueAllocation1 newIssueAllocation) {
 		this.newIssueAllocation = newIssueAllocation;
+		return this;
 	}
 
-	@XmlElement(name = "SvgsInvstmtPlan")
 	public List<InvestmentPlan6> getSavingsInvestmentPlan() {
-		return savingsInvestmentPlan;
+		return savingsInvestmentPlan == null ? savingsInvestmentPlan = new ArrayList<>() : savingsInvestmentPlan;
 	}
 
-	public void setSavingsInvestmentPlan(List<InvestmentPlan6> savingsInvestmentPlan) {
-		this.savingsInvestmentPlan = savingsInvestmentPlan;
+	public AccountOpeningInstructionV03 setSavingsInvestmentPlan(List<InvestmentPlan6> savingsInvestmentPlan) {
+		this.savingsInvestmentPlan = Objects.requireNonNull(savingsInvestmentPlan);
+		return this;
 	}
 
-	@XmlElement(name = "WdrwlInvstmtPlan")
 	public List<InvestmentPlan6> getWithdrawalInvestmentPlan() {
-		return withdrawalInvestmentPlan;
+		return withdrawalInvestmentPlan == null ? withdrawalInvestmentPlan = new ArrayList<>() : withdrawalInvestmentPlan;
 	}
 
-	public void setWithdrawalInvestmentPlan(List<InvestmentPlan6> withdrawalInvestmentPlan) {
-		this.withdrawalInvestmentPlan = withdrawalInvestmentPlan;
+	public AccountOpeningInstructionV03 setWithdrawalInvestmentPlan(List<InvestmentPlan6> withdrawalInvestmentPlan) {
+		this.withdrawalInvestmentPlan = Objects.requireNonNull(withdrawalInvestmentPlan);
+		return this;
 	}
 
-	@XmlElement(name = "CshSttlm")
 	public List<InvestmentFundCashSettlementInformation5> getCashSettlement() {
-		return cashSettlement;
+		return cashSettlement == null ? cashSettlement = new ArrayList<>() : cashSettlement;
 	}
 
-	public void setCashSettlement(List<InvestmentFundCashSettlementInformation5> cashSettlement) {
-		this.cashSettlement = cashSettlement;
+	public AccountOpeningInstructionV03 setCashSettlement(List<InvestmentFundCashSettlementInformation5> cashSettlement) {
+		this.cashSettlement = Objects.requireNonNull(cashSettlement);
+		return this;
 	}
 
-	@XmlElement(name = "SvcLvlAgrmt")
 	public List<DocumentToSend1> getServiceLevelAgreement() {
-		return serviceLevelAgreement;
+		return serviceLevelAgreement == null ? serviceLevelAgreement = new ArrayList<>() : serviceLevelAgreement;
 	}
 
-	public void setServiceLevelAgreement(List<DocumentToSend1> serviceLevelAgreement) {
-		this.serviceLevelAgreement = serviceLevelAgreement;
+	public AccountOpeningInstructionV03 setServiceLevelAgreement(List<DocumentToSend1> serviceLevelAgreement) {
+		this.serviceLevelAgreement = Objects.requireNonNull(serviceLevelAgreement);
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<Extension1> extension) {
-		this.extension = extension;
+	public AccountOpeningInstructionV03 setExtension(List<Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.001.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.001.001.03")
 	static public class Document {
 		@XmlElement(name = "AcctOpngInstr", required = true)
 		public AccountOpeningInstructionV03 messageBody;

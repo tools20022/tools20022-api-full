@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CancelledStatusReasonV2Code;
+import com.tools20022.repository.codeset.CancelledStatusReason14Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the underlying reason for the cancellation of the associated
@@ -31,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonV2Code
- * CancelledStatusReasonV2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason14Code#mmNarrativeReason
- * CancelledStatusReason14Code.mmNarrativeReason}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason14Code#NarrativeReason
+ * CancelledStatusReason14Code.NarrativeReason}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonV2Code
+ * CancelledStatusReasonV2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CancelledStatusReason14Code extends CancelledStatusReasonV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CancelledStatusReason14Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,26 +90,56 @@ public class CancelledStatusReason14Code extends CancelledStatusReasonV2Code {
 	 * name} = "NarrativeReason"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNarrativeReason = new MMCode() {
+	public static final CancelledStatusReason14Code NarrativeReason = new CancelledStatusReason14Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeReason";
-			owner_lazy = () -> CancelledStatusReason14Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancelledStatusReason14Code.mmObject();
+			codeName = CancelledStatusReasonV2Code.NarrativeReason.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CancelledStatusReason14Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CancelledStatusReason14Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancelledStatusReason14Code";
 				definition = "Specifies the underlying reason for the cancellation of the associated transaction.";
 				nextVersions_lazy = () -> Arrays.asList(CancelledStatusReason15Code.mmObject());
-				code_lazy = () -> Arrays.asList(CancelledStatusReason14Code.mmNarrativeReason);
 				trace_lazy = () -> CancelledStatusReasonV2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancelledStatusReason14Code.NarrativeReason);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NarrativeReason.getCodeName().get(), NarrativeReason);
+	}
+
+	public static CancelledStatusReason14Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CancelledStatusReason14Code[] values() {
+		CancelledStatusReason14Code[] values = new CancelledStatusReason14Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CancelledStatusReason14Code> {
+		@Override
+		public CancelledStatusReason14Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CancelledStatusReason14Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

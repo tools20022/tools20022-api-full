@@ -93,8 +93,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
  * businessProcessCatalogue} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmcatalogue
- * GeneratedRepository.mmcatalogue}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
+ * GeneratedRepository.catalogue}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,7 +114,7 @@ public class SecuritiesManagementPreviousVersion {
 	final static public MMBusinessArea mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessArea() {
 			{
-				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Securities Management - Previous version - master";
 				definition = "Messages that support post-settlement processes for securities (including reporting on securities movements, trades and balances), the processes required to protect beneficial owner's rights throughout settlement, plus any exceptions and investigations related to securities transactions.";

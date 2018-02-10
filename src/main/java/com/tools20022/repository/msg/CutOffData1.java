@@ -25,9 +25,11 @@ import com.tools20022.repository.choice.PartyIdentification73Choice;
 import com.tools20022.repository.entity.ClearingMemberRole;
 import com.tools20022.repository.entity.Netting;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CutOffData1", propOrder = {"participantIdentification", "nettingCutOffDetails"})
 public class CutOffData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PtcptId", required = true)
 	protected PartyIdentification73Choice participantIdentification;
 	/**
-	 * Describes the participant receiving the net report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -119,7 +122,7 @@ public class CutOffData1 {
 	public static final MMMessageAssociationEnd mmParticipantIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ClearingMemberRole.mmObject();
-			componentContext_lazy = () -> CutOffData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CutOffData1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +134,11 @@ public class CutOffData1 {
 			type_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NetgCutOffDtls", required = true)
 	protected List<com.tools20022.repository.msg.NettingCutOff1> nettingCutOffDetails;
 	/**
-	 * Specifies the information regarding the updated netting cut off.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -165,7 +169,7 @@ public class CutOffData1 {
 	public static final MMMessageAssociationEnd mmNettingCutOffDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Netting.mmObject();
-			componentContext_lazy = () -> CutOffData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CutOffData1.mmObject();
 			isDerived = false;
 			xmlTag = "NetgCutOffDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,10 +184,10 @@ public class CutOffData1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CutOffData1.mmParticipantIdentification, CutOffData1.mmNettingCutOffDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CutOffData1.mmParticipantIdentification, com.tools20022.repository.msg.CutOffData1.mmNettingCutOffDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(NettingCutOffReferenceDataReportV01.mmParticipantNettingCutOffData);
 				trace_lazy = () -> Netting.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CutOffData1";
 				definition = "Contains the new, current and previous cut offs for a netting cut off held at the central system.";
@@ -192,21 +196,21 @@ public class CutOffData1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PtcptId", required = true)
 	public PartyIdentification73Choice getParticipantIdentification() {
 		return participantIdentification;
 	}
 
-	public void setParticipantIdentification(PartyIdentification73Choice participantIdentification) {
-		this.participantIdentification = participantIdentification;
+	public CutOffData1 setParticipantIdentification(PartyIdentification73Choice participantIdentification) {
+		this.participantIdentification = Objects.requireNonNull(participantIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "NetgCutOffDtls", required = true)
 	public List<NettingCutOff1> getNettingCutOffDetails() {
-		return nettingCutOffDetails;
+		return nettingCutOffDetails == null ? nettingCutOffDetails = new ArrayList<>() : nettingCutOffDetails;
 	}
 
-	public void setNettingCutOffDetails(List<com.tools20022.repository.msg.NettingCutOff1> nettingCutOffDetails) {
-		this.nettingCutOffDetails = nettingCutOffDetails;
+	public CutOffData1 setNettingCutOffDetails(List<com.tools20022.repository.msg.NettingCutOff1> nettingCutOffDetails) {
+		this.nettingCutOffDetails = Objects.requireNonNull(nettingCutOffDetails);
+		return this;
 	}
 }

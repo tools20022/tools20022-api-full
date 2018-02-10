@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Status6Code;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStatusReasonRule#forCSDLinkStatus1
+ * ConstraintStatusReasonRule.forCSDLinkStatus1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Business status of the party for processing in the system. "</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CSDLinkStatus1", propOrder = {"status", "statusReason"})
 public class CSDLinkStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts", required = true)
 	protected Status6Code status;
 	/**
-	 * Status of the party maintenance instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -95,7 +106,7 @@ public class CSDLinkStatus1 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CSDLinkStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CSDLinkStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -106,10 +117,11 @@ public class CSDLinkStatus1 {
 			simpleType_lazy = () -> Status6Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StsRsn")
 	protected List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason;
 	/**
-	 * Underlying reason related to the creation of a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -136,7 +148,7 @@ public class CSDLinkStatus1 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CSDLinkStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CSDLinkStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,8 +163,9 @@ public class CSDLinkStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CSDLinkStatus1.mmStatus, CSDLinkStatus1.mmStatusReason);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CSDLinkStatus1.mmStatus, com.tools20022.repository.msg.CSDLinkStatus1.mmStatusReason);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusReasonRule.forCSDLinkStatus1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CSDLinkStatus1";
 				definition = "Business status of the party for processing in the system. ";
@@ -161,21 +174,21 @@ public class CSDLinkStatus1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public Status6Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(Status6Code status) {
-		this.status = status;
+	public CSDLinkStatus1 setStatus(Status6Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "StsRsn")
 	public List<StatusReasonInformation10> getStatusReason() {
-		return statusReason;
+		return statusReason == null ? statusReason = new ArrayList<>() : statusReason;
 	}
 
-	public void setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason) {
-		this.statusReason = statusReason;
+	public CSDLinkStatus1 setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason) {
+		this.statusReason = Objects.requireNonNull(statusReason);
+		return this;
 	}
 }

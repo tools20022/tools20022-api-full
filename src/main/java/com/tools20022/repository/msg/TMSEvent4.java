@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,16 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * TMSEvent3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TMSEvent4", propOrder = {"timeStamp", "result", "actionIdentification", "additionalErrorInformation"})
 public class TMSEvent4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TmStmp", required = true)
 	protected ISODateTime timeStamp;
 	/**
-	 * Date time of the terminal management action performed by the point of
-	 * interaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,7 +136,7 @@ public class TMSEvent4 {
 	 */
 	public static final MMMessageAttribute mmTimeStamp = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TMSEvent4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSEvent4.mmObject();
 			isDerived = false;
 			xmlTag = "TmStmp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,10 +149,11 @@ public class TMSEvent4 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "Rslt", required = true)
 	protected TerminalManagementActionResult1Code result;
 	/**
-	 * Final result of the processed terminal management action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,7 +199,7 @@ public class TMSEvent4 {
 	public static final MMMessageAttribute mmResult = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmActionResult;
-			componentContext_lazy = () -> TMSEvent4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSEvent4.mmObject();
 			isDerived = false;
 			xmlTag = "Rslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,11 +212,11 @@ public class TMSEvent4 {
 			simpleType_lazy = () -> TerminalManagementActionResult1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ActnId", required = true)
 	protected TMSActionIdentification4 actionIdentification;
 	/**
-	 * Identification of the terminal management action performed by the point
-	 * of interaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -254,7 +257,7 @@ public class TMSEvent4 {
 	 */
 	public static final MMMessageAssociationEnd mmActionIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TMSEvent4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSEvent4.mmObject();
 			isDerived = false;
 			xmlTag = "ActnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -268,10 +271,11 @@ public class TMSEvent4 {
 			type_lazy = () -> com.tools20022.repository.msg.TMSActionIdentification4.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlErrInf")
 	protected Max70Text additionalErrorInformation;
 	/**
-	 * Additional information related to a failure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -310,7 +314,7 @@ public class TMSEvent4 {
 	 */
 	public static final MMMessageAttribute mmAdditionalErrorInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TMSEvent4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSEvent4.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlErrInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -327,9 +331,10 @@ public class TMSEvent4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TMSEvent4.mmTimeStamp, TMSEvent4.mmResult, TMSEvent4.mmActionIdentification, TMSEvent4.mmAdditionalErrorInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSEvent4.mmTimeStamp, com.tools20022.repository.msg.TMSEvent4.mmResult, com.tools20022.repository.msg.TMSEvent4.mmActionIdentification,
+						com.tools20022.repository.msg.TMSEvent4.mmAdditionalErrorInformation);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TMSEvent4";
 				definition = "Result of an individual terminal management action performed by the point of interaction.";
@@ -340,39 +345,39 @@ public class TMSEvent4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TmStmp", required = true)
 	public ISODateTime getTimeStamp() {
 		return timeStamp;
 	}
 
-	public void setTimeStamp(ISODateTime timeStamp) {
-		this.timeStamp = timeStamp;
+	public TMSEvent4 setTimeStamp(ISODateTime timeStamp) {
+		this.timeStamp = Objects.requireNonNull(timeStamp);
+		return this;
 	}
 
-	@XmlElement(name = "Rslt", required = true)
 	public TerminalManagementActionResult1Code getResult() {
 		return result;
 	}
 
-	public void setResult(TerminalManagementActionResult1Code result) {
-		this.result = result;
+	public TMSEvent4 setResult(TerminalManagementActionResult1Code result) {
+		this.result = Objects.requireNonNull(result);
+		return this;
 	}
 
-	@XmlElement(name = "ActnId", required = true)
 	public TMSActionIdentification4 getActionIdentification() {
 		return actionIdentification;
 	}
 
-	public void setActionIdentification(com.tools20022.repository.msg.TMSActionIdentification4 actionIdentification) {
-		this.actionIdentification = actionIdentification;
+	public TMSEvent4 setActionIdentification(com.tools20022.repository.msg.TMSActionIdentification4 actionIdentification) {
+		this.actionIdentification = Objects.requireNonNull(actionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlErrInf")
-	public Max70Text getAdditionalErrorInformation() {
-		return additionalErrorInformation;
+	public Optional<Max70Text> getAdditionalErrorInformation() {
+		return additionalErrorInformation == null ? Optional.empty() : Optional.of(additionalErrorInformation);
 	}
 
-	public void setAdditionalErrorInformation(Max70Text additionalErrorInformation) {
+	public TMSEvent4 setAdditionalErrorInformation(Max70Text additionalErrorInformation) {
 		this.additionalErrorInformation = additionalErrorInformation;
+		return this;
 	}
 }

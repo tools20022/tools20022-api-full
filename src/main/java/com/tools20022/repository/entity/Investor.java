@@ -30,6 +30,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Party which makes investment decisions in relation with its investment
@@ -41,6 +42,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
+ * InvestmentAccountPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -57,10 +62,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * Investor.mmRestrictedPersonReason}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole
- * InvestmentAccountPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.NewIssueAllocation1#mmDeMinimusNotApplicable
+ * NewIssueAllocation1.mmDeMinimusNotApplicable}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmInvestmentDecisionPerson
+ * SecuritiesTransactionReport4.mmInvestmentDecisionPerson}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -78,22 +91,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.NewIssueAllocation1#mmDeMinimusNotApplicable
- * NewIssueAllocation1.mmDeMinimusNotApplicable}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmInvestmentDecisionPerson
- * SecuritiesTransactionReport4.mmInvestmentDecisionPerson}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,9 +112,8 @@ public class Investor extends InvestmentAccountPartyRole {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected YesNoIndicator newIssuePermission;
 	/**
-	 * Indicates whether the investor permits its beneficial owners to
-	 * participate in profits and losses attributed to new issue securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,8 +149,8 @@ public class Investor extends InvestmentAccountPartyRole {
 	public static final MMBusinessAttribute mmNewIssuePermission = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DeMinimusApplicable1.mmNewIssuePermission);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Investor.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Investor.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewIssuePermission";
 			definition = "Indicates whether the investor permits its beneficial owners to participate in profits and losses attributed to new issue securities.";
@@ -169,8 +169,8 @@ public class Investor extends InvestmentAccountPartyRole {
 	};
 	protected Max35Text deMinimusApplicable;
 	/**
-	 * Determine if the investor is covered by the "de minimis" exemption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,8 +210,8 @@ public class Investor extends InvestmentAccountPartyRole {
 	public static final MMBusinessAttribute mmDeMinimusApplicable = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NewIssueAllocation1.mmDeMinimusApplicable, DeMinimus1Choice.mmDeMinimusApplicable, DeMinimus1Choice.mmDeMinimusNotApplicable);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Investor.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Investor.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeMinimusApplicable";
 			definition = "Determine if the investor is covered by the \"de minimis\" exemption.";
@@ -230,9 +230,8 @@ public class Investor extends InvestmentAccountPartyRole {
 	};
 	protected YesNoIndicator restricted;
 	/**
-	 * Indicates whether the investor is eligible to participate in the profits
-	 * and losses from a new issue.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -271,8 +270,8 @@ public class Investor extends InvestmentAccountPartyRole {
 	public static final MMBusinessAttribute mmRestricted = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NewIssueAllocation1.mmRestricted, NewIssueAllocation2.mmRestricted);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Investor.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Investor.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Restricted";
 			definition = "Indicates whether the investor is eligible to participate in the profits and losses from a new issue.";
@@ -291,8 +290,8 @@ public class Investor extends InvestmentAccountPartyRole {
 	};
 	protected Max350Text restrictedPersonReason;
 	/**
-	 * Reason for the restricted person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -325,8 +324,8 @@ public class Investor extends InvestmentAccountPartyRole {
 	public static final MMBusinessAttribute mmRestrictedPersonReason = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DeMinimusNotApplicable1.mmRestrictedPersonReason);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Investor.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Investor.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RestrictedPersonReason";
 			definition = "Reason for the restricted person.";
@@ -347,7 +346,7 @@ public class Investor extends InvestmentAccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Investor";
 				definition = "Party which makes investment decisions in relation with its investment account.";
@@ -370,31 +369,35 @@ public class Investor extends InvestmentAccountPartyRole {
 		return newIssuePermission;
 	}
 
-	public void setNewIssuePermission(YesNoIndicator newIssuePermission) {
-		this.newIssuePermission = newIssuePermission;
+	public Investor setNewIssuePermission(YesNoIndicator newIssuePermission) {
+		this.newIssuePermission = Objects.requireNonNull(newIssuePermission);
+		return this;
 	}
 
 	public Max35Text getDeMinimusApplicable() {
 		return deMinimusApplicable;
 	}
 
-	public void setDeMinimusApplicable(Max35Text deMinimusApplicable) {
-		this.deMinimusApplicable = deMinimusApplicable;
+	public Investor setDeMinimusApplicable(Max35Text deMinimusApplicable) {
+		this.deMinimusApplicable = Objects.requireNonNull(deMinimusApplicable);
+		return this;
 	}
 
 	public YesNoIndicator getRestricted() {
 		return restricted;
 	}
 
-	public void setRestricted(YesNoIndicator restricted) {
-		this.restricted = restricted;
+	public Investor setRestricted(YesNoIndicator restricted) {
+		this.restricted = Objects.requireNonNull(restricted);
+		return this;
 	}
 
 	public Max350Text getRestrictedPersonReason() {
 		return restrictedPersonReason;
 	}
 
-	public void setRestrictedPersonReason(Max350Text restrictedPersonReason) {
-		this.restrictedPersonReason = restrictedPersonReason;
+	public Investor setRestrictedPersonReason(Max350Text restrictedPersonReason) {
+		this.restrictedPersonReason = Objects.requireNonNull(restrictedPersonReason);
+		return this;
 	}
 }

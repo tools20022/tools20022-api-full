@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,17 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CreditTransfer4", propOrder = {"reference", "creditorDetails", "debtorDetails"})
 public class CreditTransfer4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ref")
 	protected Max35Text reference;
 	/**
-	 * Information supplied to enable the matching of an entry with the items
-	 * that the transfer is intended to settle, such as commercial invoices in
-	 * an accounts' receivable system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +119,7 @@ public class CreditTransfer4 {
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmCreditorReference;
-			componentContext_lazy = () -> CreditTransfer4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransfer4.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,11 +130,11 @@ public class CreditTransfer4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtrDtls")
 	protected Creditor2 creditorDetails;
 	/**
-	 * Party that receives an amount of money from the debtor. The creditor is
-	 * also the credit account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -166,7 +167,7 @@ public class CreditTransfer4 {
 	public static final MMMessageAssociationEnd mmCreditorDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CreditTransfer4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransfer4.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,11 +179,11 @@ public class CreditTransfer4 {
 			type_lazy = () -> com.tools20022.repository.msg.Creditor2.mmObject();
 		}
 	};
+	@XmlElement(name = "DbtrDtls", required = true)
 	protected Debtor2 debtorDetails;
 	/**
-	 * Party that owes the cash to the creditor/final party. The debtor is also
-	 * the debit account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -215,7 +216,7 @@ public class CreditTransfer4 {
 	public static final MMMessageAssociationEnd mmDebtorDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CreditTransfer4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransfer4.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,9 +232,10 @@ public class CreditTransfer4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CreditTransfer4.mmReference, CreditTransfer4.mmCreditorDetails, CreditTransfer4.mmDebtorDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditTransfer4.mmReference, com.tools20022.repository.msg.CreditTransfer4.mmCreditorDetails,
+						com.tools20022.repository.msg.CreditTransfer4.mmDebtorDetails);
 				trace_lazy = () -> CreditTransfer.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditTransfer4";
 				definition = "Payment instrument between a debtor and a creditor, which flows through one or more financial institutions or systems.";
@@ -242,30 +244,30 @@ public class CreditTransfer4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ref")
-	public Max35Text getReference() {
-		return reference;
+	public Optional<Max35Text> getReference() {
+		return reference == null ? Optional.empty() : Optional.of(reference);
 	}
 
-	public void setReference(Max35Text reference) {
+	public CreditTransfer4 setReference(Max35Text reference) {
 		this.reference = reference;
+		return this;
 	}
 
-	@XmlElement(name = "CdtrDtls")
-	public Creditor2 getCreditorDetails() {
-		return creditorDetails;
+	public Optional<Creditor2> getCreditorDetails() {
+		return creditorDetails == null ? Optional.empty() : Optional.of(creditorDetails);
 	}
 
-	public void setCreditorDetails(com.tools20022.repository.msg.Creditor2 creditorDetails) {
+	public CreditTransfer4 setCreditorDetails(com.tools20022.repository.msg.Creditor2 creditorDetails) {
 		this.creditorDetails = creditorDetails;
+		return this;
 	}
 
-	@XmlElement(name = "DbtrDtls", required = true)
 	public Debtor2 getDebtorDetails() {
 		return debtorDetails;
 	}
 
-	public void setDebtorDetails(com.tools20022.repository.msg.Debtor2 debtorDetails) {
-		this.debtorDetails = debtorDetails;
+	public CreditTransfer4 setDebtorDetails(com.tools20022.repository.msg.Debtor2 debtorDetails) {
+		this.debtorDetails = Objects.requireNonNull(debtorDetails);
+		return this;
 	}
 }

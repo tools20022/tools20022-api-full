@@ -20,58 +20,62 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.InvestorProfileStatusCode;
+import com.tools20022.repository.codeset.InvestorProfileStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of the investor profile.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode
- * InvestorProfileStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#mmDisabled
- * InvestorProfileStatus1Code.mmDisabled}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#Disabled
+ * InvestorProfileStatus1Code.Disabled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#mmDisabling
- * InvestorProfileStatus1Code.mmDisabling}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#Disabling
+ * InvestorProfileStatus1Code.Disabling}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#mmEnabled
- * InvestorProfileStatus1Code.mmEnabled}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#Enabled
+ * InvestorProfileStatus1Code.Enabled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#mmEnabling
- * InvestorProfileStatus1Code.mmEnabling}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#Enabling
+ * InvestorProfileStatus1Code.Enabling}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#mmInAdmission
- * InvestorProfileStatus1Code.mmInAdmission}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#InAdmission
+ * InvestorProfileStatus1Code.InAdmission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#mmInAnalysis
- * InvestorProfileStatus1Code.mmInAnalysis}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#InAnalysis
+ * InvestorProfileStatus1Code.InAnalysis}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#mmNotApproved
- * InvestorProfileStatus1Code.mmNotApproved}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#NotApproved
+ * InvestorProfileStatus1Code.NotApproved}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#mmPartiallySuspended
- * InvestorProfileStatus1Code.mmPartiallySuspended}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#PartiallySuspended
+ * InvestorProfileStatus1Code.PartiallySuspended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#mmPendingApproval
- * InvestorProfileStatus1Code.mmPendingApproval}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#PendingApproval
+ * InvestorProfileStatus1Code.PendingApproval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#mmSuspended
- * InvestorProfileStatus1Code.mmSuspended}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatus1Code#Suspended
+ * InvestorProfileStatus1Code.Suspended}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.InvestorProfileStatusCode
+ * InvestorProfileStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,7 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of the investor profile."</li>
  * </ul>
  */
-public class InvestorProfileStatus1Code extends InvestorProfileStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InvestorProfileStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -101,11 +106,12 @@ public class InvestorProfileStatus1Code extends InvestorProfileStatusCode {
 	 * name} = "Disabled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisabled = new MMCode() {
+	public static final InvestorProfileStatus1Code Disabled = new InvestorProfileStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disabled";
-			owner_lazy = () -> InvestorProfileStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestorProfileStatus1Code.mmObject();
+			codeName = InvestorProfileStatusCode.Disabled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -124,11 +130,12 @@ public class InvestorProfileStatus1Code extends InvestorProfileStatusCode {
 	 * name} = "Disabling"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisabling = new MMCode() {
+	public static final InvestorProfileStatus1Code Disabling = new InvestorProfileStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disabling";
-			owner_lazy = () -> InvestorProfileStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestorProfileStatus1Code.mmObject();
+			codeName = InvestorProfileStatusCode.Disabling.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -147,11 +154,12 @@ public class InvestorProfileStatus1Code extends InvestorProfileStatusCode {
 	 * name} = "Enabled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEnabled = new MMCode() {
+	public static final InvestorProfileStatus1Code Enabled = new InvestorProfileStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabled";
-			owner_lazy = () -> InvestorProfileStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestorProfileStatus1Code.mmObject();
+			codeName = InvestorProfileStatusCode.Enabled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -170,11 +178,12 @@ public class InvestorProfileStatus1Code extends InvestorProfileStatusCode {
 	 * name} = "Enabling"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEnabling = new MMCode() {
+	public static final InvestorProfileStatus1Code Enabling = new InvestorProfileStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabling";
-			owner_lazy = () -> InvestorProfileStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestorProfileStatus1Code.mmObject();
+			codeName = InvestorProfileStatusCode.Enabling.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -193,11 +202,12 @@ public class InvestorProfileStatus1Code extends InvestorProfileStatusCode {
 	 * name} = "InAdmission"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInAdmission = new MMCode() {
+	public static final InvestorProfileStatus1Code InAdmission = new InvestorProfileStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InAdmission";
-			owner_lazy = () -> InvestorProfileStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestorProfileStatus1Code.mmObject();
+			codeName = InvestorProfileStatusCode.InAdmission.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -216,11 +226,12 @@ public class InvestorProfileStatus1Code extends InvestorProfileStatusCode {
 	 * name} = "InAnalysis"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInAnalysis = new MMCode() {
+	public static final InvestorProfileStatus1Code InAnalysis = new InvestorProfileStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InAnalysis";
-			owner_lazy = () -> InvestorProfileStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestorProfileStatus1Code.mmObject();
+			codeName = InvestorProfileStatusCode.InAnalysis.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -239,11 +250,12 @@ public class InvestorProfileStatus1Code extends InvestorProfileStatusCode {
 	 * name} = "NotApproved"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotApproved = new MMCode() {
+	public static final InvestorProfileStatus1Code NotApproved = new InvestorProfileStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotApproved";
-			owner_lazy = () -> InvestorProfileStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestorProfileStatus1Code.mmObject();
+			codeName = InvestorProfileStatusCode.NotApproved.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -262,11 +274,12 @@ public class InvestorProfileStatus1Code extends InvestorProfileStatusCode {
 	 * name} = "PartiallySuspended"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartiallySuspended = new MMCode() {
+	public static final InvestorProfileStatus1Code PartiallySuspended = new InvestorProfileStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallySuspended";
-			owner_lazy = () -> InvestorProfileStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestorProfileStatus1Code.mmObject();
+			codeName = InvestorProfileStatusCode.PartiallySuspended.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -285,11 +298,12 @@ public class InvestorProfileStatus1Code extends InvestorProfileStatusCode {
 	 * name} = "PendingApproval"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingApproval = new MMCode() {
+	public static final InvestorProfileStatus1Code PendingApproval = new InvestorProfileStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingApproval";
-			owner_lazy = () -> InvestorProfileStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestorProfileStatus1Code.mmObject();
+			codeName = InvestorProfileStatusCode.PendingApproval.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -308,27 +322,68 @@ public class InvestorProfileStatus1Code extends InvestorProfileStatusCode {
 	 * name} = "Suspended"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuspended = new MMCode() {
+	public static final InvestorProfileStatus1Code Suspended = new InvestorProfileStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
-			owner_lazy = () -> InvestorProfileStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestorProfileStatus1Code.mmObject();
+			codeName = InvestorProfileStatusCode.Suspended.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, InvestorProfileStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InvestorProfileStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestorProfileStatus1Code";
 				definition = "Specifies the status of the investor profile.";
-				code_lazy = () -> Arrays.asList(InvestorProfileStatus1Code.mmDisabled, InvestorProfileStatus1Code.mmDisabling, InvestorProfileStatus1Code.mmEnabled, InvestorProfileStatus1Code.mmEnabling,
-						InvestorProfileStatus1Code.mmInAdmission, InvestorProfileStatus1Code.mmInAnalysis, InvestorProfileStatus1Code.mmNotApproved, InvestorProfileStatus1Code.mmPartiallySuspended,
-						InvestorProfileStatus1Code.mmPendingApproval, InvestorProfileStatus1Code.mmSuspended);
 				trace_lazy = () -> InvestorProfileStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestorProfileStatus1Code.Disabled, com.tools20022.repository.codeset.InvestorProfileStatus1Code.Disabling,
+						com.tools20022.repository.codeset.InvestorProfileStatus1Code.Enabled, com.tools20022.repository.codeset.InvestorProfileStatus1Code.Enabling, com.tools20022.repository.codeset.InvestorProfileStatus1Code.InAdmission,
+						com.tools20022.repository.codeset.InvestorProfileStatus1Code.InAnalysis, com.tools20022.repository.codeset.InvestorProfileStatus1Code.NotApproved,
+						com.tools20022.repository.codeset.InvestorProfileStatus1Code.PartiallySuspended, com.tools20022.repository.codeset.InvestorProfileStatus1Code.PendingApproval,
+						com.tools20022.repository.codeset.InvestorProfileStatus1Code.Suspended);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Disabled.getCodeName().get(), Disabled);
+		codesByName.put(Disabling.getCodeName().get(), Disabling);
+		codesByName.put(Enabled.getCodeName().get(), Enabled);
+		codesByName.put(Enabling.getCodeName().get(), Enabling);
+		codesByName.put(InAdmission.getCodeName().get(), InAdmission);
+		codesByName.put(InAnalysis.getCodeName().get(), InAnalysis);
+		codesByName.put(NotApproved.getCodeName().get(), NotApproved);
+		codesByName.put(PartiallySuspended.getCodeName().get(), PartiallySuspended);
+		codesByName.put(PendingApproval.getCodeName().get(), PendingApproval);
+		codesByName.put(Suspended.getCodeName().get(), Suspended);
+	}
+
+	public static InvestorProfileStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InvestorProfileStatus1Code[] values() {
+		InvestorProfileStatus1Code[] values = new InvestorProfileStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InvestorProfileStatus1Code> {
+		@Override
+		public InvestorProfileStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InvestorProfileStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

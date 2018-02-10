@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ProcessingStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the processing status.
@@ -32,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingStatusCode#mmComplete
- * ProcessingStatusCode.mmComplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingStatusCode#Complete
+ * ProcessingStatusCode.Complete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingStatusCode#mmPreliminaryConfirmed
- * ProcessingStatusCode.mmPreliminaryConfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingStatusCode#PreliminaryConfirmed
+ * ProcessingStatusCode.PreliminaryConfirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingStatusCode#mmPreliminaryUnconfirmed
- * ProcessingStatusCode.mmPreliminaryUnconfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingStatusCode#PreliminaryUnconfirmed
+ * ProcessingStatusCode.PreliminaryUnconfirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingStatusCode#mmForInformationOnly
- * ProcessingStatusCode.mmForInformationOnly}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingStatusCode#ForInformationOnly
+ * ProcessingStatusCode.ForInformationOnly}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -55,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the processing status."</li>
  * </ul>
  */
-public class ProcessingStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProcessingStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -102,12 +108,12 @@ public class ProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmComplete = new MMCode() {
+	public static final ProcessingStatusCode Complete = new ProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Complete";
 			definition = "Message contains complete details of the corporate action event at the time the event is communicated and the occurrence of the event has been confirmed by the account servicer's chosen official source. Further updates to the event are still possible.";
-			owner_lazy = () -> ProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingStatusCode.mmObject();
 			codeName = "COMP";
 		}
 	};
@@ -135,12 +141,12 @@ public class ProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreliminaryConfirmed = new MMCode() {
+	public static final ProcessingStatusCode PreliminaryConfirmed = new ProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreliminaryConfirmed";
 			definition = "Message may not contain complete details of the corporate action event,\nhowever, the occurrence of the event is confirmed.";
-			owner_lazy = () -> ProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingStatusCode.mmObject();
 			codeName = "PREC";
 		}
 	};
@@ -168,12 +174,12 @@ public class ProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreliminaryUnconfirmed = new MMCode() {
+	public static final ProcessingStatusCode PreliminaryUnconfirmed = new ProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreliminaryUnconfirmed";
 			definition = "Message may not contain complete details of the corporate action event and\nthe occurrence of the event is not yet confirmed.";
-			owner_lazy = () -> ProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingStatusCode.mmObject();
 			codeName = "PREU";
 		}
 	};
@@ -198,28 +204,61 @@ public class ProcessingStatusCode {
 	 * definition} = "The message is for information only."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForInformationOnly = new MMCode() {
+	public static final ProcessingStatusCode ForInformationOnly = new ProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForInformationOnly";
 			definition = "The message is for information only.";
-			owner_lazy = () -> ProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingStatusCode.mmObject();
 			codeName = "INFO";
 		}
 	};
+	final static private LinkedHashMap<String, ProcessingStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProcessingStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingStatusCode";
 				definition = "Specifies the processing status.";
-				code_lazy = () -> Arrays.asList(ProcessingStatusCode.mmComplete, ProcessingStatusCode.mmPreliminaryConfirmed, ProcessingStatusCode.mmPreliminaryUnconfirmed, ProcessingStatusCode.mmForInformationOnly);
 				derivation_lazy = () -> Arrays.asList(ProcessingStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessingStatusCode.Complete, com.tools20022.repository.codeset.ProcessingStatusCode.PreliminaryConfirmed,
+						com.tools20022.repository.codeset.ProcessingStatusCode.PreliminaryUnconfirmed, com.tools20022.repository.codeset.ProcessingStatusCode.ForInformationOnly);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Complete.getCodeName().get(), Complete);
+		codesByName.put(PreliminaryConfirmed.getCodeName().get(), PreliminaryConfirmed);
+		codesByName.put(PreliminaryUnconfirmed.getCodeName().get(), PreliminaryUnconfirmed);
+		codesByName.put(ForInformationOnly.getCodeName().get(), ForInformationOnly);
+	}
+
+	public static ProcessingStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProcessingStatusCode[] values() {
+		ProcessingStatusCode[] values = new ProcessingStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProcessingStatusCode> {
+		@Override
+		public ProcessingStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProcessingStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

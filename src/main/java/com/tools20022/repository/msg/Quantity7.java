@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -29,11 +30,9 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule#forQuantity7
+ * ConstraintCoexistenceQuantityRule.forQuantity7}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -89,15 +96,16 @@ import javax.xml.bind.annotation.XmlType;
  * Quantity5}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Quantity7", propOrder = {"settlementQuantity", "denominationChoice", "certificateNumber", "quantityBreakdown"})
 public class Quantity7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SttlmQty", required = true)
 	protected FinancialInstrumentQuantity1Choice settlementQuantity;
 	/**
-	 * Total quantity of securities to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -115,6 +123,9 @@ public class Quantity7 {
 	 * Quantity7}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmQty"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::SETT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -137,9 +148,10 @@ public class Quantity7 {
 	public static final MMMessageAssociationEnd mmSettlementQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementQuantity;
-			componentContext_lazy = () -> Quantity7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity7.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::SETT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementQuantity";
 			definition = "Total quantity of securities to be settled.";
@@ -150,10 +162,11 @@ public class Quantity7 {
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DnmtnChc")
 	protected Max210Text denominationChoice;
 	/**
-	 * Denomination of the security to be received or delivered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,6 +184,9 @@ public class Quantity7 {
 	 * Quantity7}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DnmtnChc"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70D::DENC</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -194,9 +210,10 @@ public class Quantity7 {
 	public static final MMMessageAttribute mmDenominationChoice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmDenominationChoice;
-			componentContext_lazy = () -> Quantity7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity7.mmObject();
 			isDerived = false;
 			xmlTag = "DnmtnChc";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70D::DENC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationChoice";
 			definition = "Denomination of the security to be received or delivered.";
@@ -206,11 +223,11 @@ public class Quantity7 {
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CertNb")
 	protected List<com.tools20022.repository.msg.SecuritiesCertificate1> certificateNumber;
 	/**
-	 * Unique and unambiguous identifier of a certificate assigned by the
-	 * issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -227,6 +244,9 @@ public class Quantity7 {
 	 * Quantity7}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CertNb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13B::CERT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -251,9 +271,10 @@ public class Quantity7 {
 	public static final MMMessageAssociationEnd mmCertificateNumber = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesCertificate.mmNumber;
-			componentContext_lazy = () -> Quantity7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity7.mmObject();
 			isDerived = false;
 			xmlTag = "CertNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13B::CERT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateNumber";
 			definition = "Unique and unambiguous identifier of a certificate assigned by the issuer.";
@@ -263,11 +284,11 @@ public class Quantity7 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCertificate1.mmObject();
 		}
 	};
+	@XmlElement(name = "QtyBrkdwn")
 	protected List<com.tools20022.repository.msg.QuantityBreakdown13> quantityBreakdown;
 	/**
-	 * Breakdown of a quantity into lots such as tax lots, instrument series,
-	 * etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -283,6 +304,9 @@ public class Quantity7 {
 	 * Quantity7}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtyBrkdwn"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :16R:BREAK</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -307,9 +331,10 @@ public class Quantity7 {
 	public static final MMMessageAssociationEnd mmQuantityBreakdown = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> LotBreakdown.mmObject();
-			componentContext_lazy = () -> Quantity7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity7.mmObject();
 			isDerived = false;
 			xmlTag = "QtyBrkdwn";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":16R:BREAK"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityBreakdown";
 			definition = "Breakdown of a quantity into lots such as tax lots, instrument series, etc.";
@@ -323,9 +348,11 @@ public class Quantity7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Quantity7.mmSettlementQuantity, Quantity7.mmDenominationChoice, Quantity7.mmCertificateNumber, Quantity7.mmQuantityBreakdown);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quantity7.mmSettlementQuantity, com.tools20022.repository.msg.Quantity7.mmDenominationChoice,
+						com.tools20022.repository.msg.Quantity7.mmCertificateNumber, com.tools20022.repository.msg.Quantity7.mmQuantityBreakdown);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule.forQuantity7);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -343,39 +370,39 @@ public class Quantity7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SttlmQty", required = true)
 	public FinancialInstrumentQuantity1Choice getSettlementQuantity() {
 		return settlementQuantity;
 	}
 
-	public void setSettlementQuantity(FinancialInstrumentQuantity1Choice settlementQuantity) {
-		this.settlementQuantity = settlementQuantity;
+	public Quantity7 setSettlementQuantity(FinancialInstrumentQuantity1Choice settlementQuantity) {
+		this.settlementQuantity = Objects.requireNonNull(settlementQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "DnmtnChc")
-	public Max210Text getDenominationChoice() {
-		return denominationChoice;
+	public Optional<Max210Text> getDenominationChoice() {
+		return denominationChoice == null ? Optional.empty() : Optional.of(denominationChoice);
 	}
 
-	public void setDenominationChoice(Max210Text denominationChoice) {
+	public Quantity7 setDenominationChoice(Max210Text denominationChoice) {
 		this.denominationChoice = denominationChoice;
+		return this;
 	}
 
-	@XmlElement(name = "CertNb")
 	public List<SecuritiesCertificate1> getCertificateNumber() {
-		return certificateNumber;
+		return certificateNumber == null ? certificateNumber = new ArrayList<>() : certificateNumber;
 	}
 
-	public void setCertificateNumber(List<com.tools20022.repository.msg.SecuritiesCertificate1> certificateNumber) {
-		this.certificateNumber = certificateNumber;
+	public Quantity7 setCertificateNumber(List<com.tools20022.repository.msg.SecuritiesCertificate1> certificateNumber) {
+		this.certificateNumber = Objects.requireNonNull(certificateNumber);
+		return this;
 	}
 
-	@XmlElement(name = "QtyBrkdwn")
 	public List<QuantityBreakdown13> getQuantityBreakdown() {
-		return quantityBreakdown;
+		return quantityBreakdown == null ? quantityBreakdown = new ArrayList<>() : quantityBreakdown;
 	}
 
-	public void setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakdown13> quantityBreakdown) {
-		this.quantityBreakdown = quantityBreakdown;
+	public Quantity7 setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakdown13> quantityBreakdown) {
+		this.quantityBreakdown = Objects.requireNonNull(quantityBreakdown);
+		return this;
 	}
 }

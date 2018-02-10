@@ -29,9 +29,8 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TransactionIdentifications10;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -61,20 +60,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
- * SecuritiesManagementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "IntraPosMvmntStsAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -96,9 +81,36 @@ import javax.xml.bind.annotation.*;
  * IntraPositionMovementStatusAdviceV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "IntraPosMvmntStsAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
+ * SecuritiesManagementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code semt.014.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forIntraPositionMovementStatusAdviceV02
+ * ConstraintCoexistenceCharacterSetXRule.
+ * forIntraPositionMovementStatusAdviceV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forIntraPositionMovementStatusAdviceV02
+ * ConstraintCoexistenceIdentificationRule.
+ * forIntraPositionMovementStatusAdviceV02}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -123,16 +135,16 @@ import javax.xml.bind.annotation.*;
  * IntraPositionMovementStatusAdviceV01}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IntraPositionMovementStatusAdviceV02", propOrder = {"transactionIdentification", "processingStatus", "settlementStatus", "transactionDetails", "supplementaryData"})
 public class IntraPositionMovementStatusAdviceV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId", required = true)
 	protected TransactionIdentifications10 transactionIdentification;
 	/**
-	 * Unambiguous identification of a transaction as per the account owner (or
-	 * the instructing party managing the account).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,10 +186,11 @@ public class IntraPositionMovementStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PrcgSts")
 	protected IntraPositionProcessingStatus1Choice processingStatus;
 	/**
-	 * Provides details on the processing status of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,10 +231,11 @@ public class IntraPositionMovementStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SttlmSts")
 	protected SettlementStatus2Choice settlementStatus;
 	/**
-	 * Provides the status of settlement of a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -261,10 +275,11 @@ public class IntraPositionMovementStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "TxDtls")
 	protected IntraPositionDetails9 transactionDetails;
 	/**
-	 * Identifies the details of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -304,11 +319,11 @@ public class IntraPositionMovementStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -353,6 +368,8 @@ public class IntraPositionMovementStatusAdviceV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forIntraPositionMovementStatusAdviceV02,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forIntraPositionMovementStatusAdviceV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IntraPositionMovementStatusAdviceV02";
 				definition = "Scope\r\nAn account servicer sends a IntraPositionMovementStatusAdvice to an account owner to advise the status of a intra-position movement instruction previously sent by the account owner.\r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\r\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or\r\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\r\nUsage\nThe message may also be used to:\n- re-send a message previously sent,\n- provide a third party with a copy of a message for information,\n- re-send to a third party a copy of a message for information.\nusing the relevant elements in the Business Application Header.\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
@@ -383,52 +400,52 @@ public class IntraPositionMovementStatusAdviceV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifications10 getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(TransactionIdentifications10 transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public IntraPositionMovementStatusAdviceV02 setTransactionIdentification(TransactionIdentifications10 transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PrcgSts")
-	public IntraPositionProcessingStatus1Choice getProcessingStatus() {
-		return processingStatus;
+	public Optional<IntraPositionProcessingStatus1Choice> getProcessingStatus() {
+		return processingStatus == null ? Optional.empty() : Optional.of(processingStatus);
 	}
 
-	public void setProcessingStatus(IntraPositionProcessingStatus1Choice processingStatus) {
+	public IntraPositionMovementStatusAdviceV02 setProcessingStatus(IntraPositionProcessingStatus1Choice processingStatus) {
 		this.processingStatus = processingStatus;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmSts")
-	public SettlementStatus2Choice getSettlementStatus() {
-		return settlementStatus;
+	public Optional<SettlementStatus2Choice> getSettlementStatus() {
+		return settlementStatus == null ? Optional.empty() : Optional.of(settlementStatus);
 	}
 
-	public void setSettlementStatus(SettlementStatus2Choice settlementStatus) {
+	public IntraPositionMovementStatusAdviceV02 setSettlementStatus(SettlementStatus2Choice settlementStatus) {
 		this.settlementStatus = settlementStatus;
+		return this;
 	}
 
-	@XmlElement(name = "TxDtls")
-	public IntraPositionDetails9 getTransactionDetails() {
-		return transactionDetails;
+	public Optional<IntraPositionDetails9> getTransactionDetails() {
+		return transactionDetails == null ? Optional.empty() : Optional.of(transactionDetails);
 	}
 
-	public void setTransactionDetails(IntraPositionDetails9 transactionDetails) {
+	public IntraPositionMovementStatusAdviceV02 setTransactionDetails(IntraPositionDetails9 transactionDetails) {
 		this.transactionDetails = transactionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public IntraPositionMovementStatusAdviceV02 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.014.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:semt.014.001.02")
 	static public class Document {
 		@XmlElement(name = "IntraPosMvmntStsAdvc", required = true)
 		public IntraPositionMovementStatusAdviceV02 messageBody;

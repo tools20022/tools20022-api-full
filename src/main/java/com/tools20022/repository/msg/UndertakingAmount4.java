@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.UndertakingAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defined variation amount and balance."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UndertakingAmount4", propOrder = {"variationAmount", "balanceAmount"})
 public class UndertakingAmount4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "VartnAmt", required = true)
 	protected ActiveCurrencyAndAmount variationAmount;
 	/**
-	 * Variation amount and currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +111,7 @@ public class UndertakingAmount4 {
 	public static final MMMessageAttribute mmVariationAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AutomaticVariation.mmVariationAmount;
-			componentContext_lazy = () -> UndertakingAmount4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAmount4.mmObject();
 			isDerived = false;
 			xmlTag = "VartnAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,11 +122,11 @@ public class UndertakingAmount4 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "BalAmt")
 	protected ActiveCurrencyAndAmount balanceAmount;
 	/**
-	 * Calculated undertaking available balance amount resulting from the
-	 * application of the variation amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +162,7 @@ public class UndertakingAmount4 {
 	public static final MMMessageAttribute mmBalanceAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> UndertakingAmount.mmBalanceAmount;
-			componentContext_lazy = () -> UndertakingAmount4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAmount4.mmObject();
 			isDerived = false;
 			xmlTag = "BalAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,9 +177,9 @@ public class UndertakingAmount4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UndertakingAmount4.mmVariationAmount, UndertakingAmount4.mmBalanceAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAmount4.mmVariationAmount, com.tools20022.repository.msg.UndertakingAmount4.mmBalanceAmount);
 				trace_lazy = () -> UndertakingAmount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingAmount4";
 				definition = "Defined variation amount and balance.";
@@ -185,21 +188,21 @@ public class UndertakingAmount4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "VartnAmt", required = true)
 	public ActiveCurrencyAndAmount getVariationAmount() {
 		return variationAmount;
 	}
 
-	public void setVariationAmount(ActiveCurrencyAndAmount variationAmount) {
-		this.variationAmount = variationAmount;
+	public UndertakingAmount4 setVariationAmount(ActiveCurrencyAndAmount variationAmount) {
+		this.variationAmount = Objects.requireNonNull(variationAmount);
+		return this;
 	}
 
-	@XmlElement(name = "BalAmt")
-	public ActiveCurrencyAndAmount getBalanceAmount() {
-		return balanceAmount;
+	public Optional<ActiveCurrencyAndAmount> getBalanceAmount() {
+		return balanceAmount == null ? Optional.empty() : Optional.of(balanceAmount);
 	}
 
-	public void setBalanceAmount(ActiveCurrencyAndAmount balanceAmount) {
+	public UndertakingAmount4 setBalanceAmount(ActiveCurrencyAndAmount balanceAmount) {
 		this.balanceAmount = balanceAmount;
+		return this;
 	}
 }

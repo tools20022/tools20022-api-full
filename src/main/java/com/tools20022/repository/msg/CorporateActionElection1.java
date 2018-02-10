@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +74,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information about an amended election instruction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionElection1", propOrder = {"optionType", "optionNumber", "originalInstructedQuantity", "remainingQuantity"})
 public class CorporateActionElection1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OptnTp", required = true)
 	protected CorporateActionOption1FormatChoice optionType;
 	/**
-	 * Specifies the corporate action options available to the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +130,7 @@ public class CorporateActionElection1 {
 	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
-			componentContext_lazy = () -> CorporateActionElection1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionElection1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,10 +141,11 @@ public class CorporateActionElection1 {
 			complexType_lazy = () -> CorporateActionOption1FormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnNb", required = true)
 	protected Exact3NumericText optionNumber;
 	/**
-	 * Number identifying the available corporate action options.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,7 +180,7 @@ public class CorporateActionElection1 {
 	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
-			componentContext_lazy = () -> CorporateActionElection1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionElection1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,11 +191,11 @@ public class CorporateActionElection1 {
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlInstdQty", required = true)
 	protected UnitOrFaceAmount1Choice originalInstructedQuantity;
 	/**
-	 * Quantity of the securities that was instructed in the original election
-	 * advice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,7 +231,7 @@ public class CorporateActionElection1 {
 	public static final MMMessageAttribute mmOriginalInstructedQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionElection.mmQuantity;
-			componentContext_lazy = () -> CorporateActionElection1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionElection1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlInstdQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,11 +242,11 @@ public class CorporateActionElection1 {
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RmngQty", required = true)
 	protected UnitOrFaceAmount1Choice remainingQuantity;
 	/**
-	 * Remaining instructed securities quantity after the amendment of the
-	 * election.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -279,7 +282,7 @@ public class CorporateActionElection1 {
 	public static final MMMessageAttribute mmRemainingQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionElection.mmQuantity;
-			componentContext_lazy = () -> CorporateActionElection1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionElection1.mmObject();
 			isDerived = false;
 			xmlTag = "RmngQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -294,10 +297,11 @@ public class CorporateActionElection1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionElection1.mmOptionType, CorporateActionElection1.mmOptionNumber, CorporateActionElection1.mmOriginalInstructedQuantity, CorporateActionElection1.mmRemainingQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionElection1.mmOptionType, com.tools20022.repository.msg.CorporateActionElection1.mmOptionNumber,
+						com.tools20022.repository.msg.CorporateActionElection1.mmOriginalInstructedQuantity, com.tools20022.repository.msg.CorporateActionElection1.mmRemainingQuantity);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAElectionAmendmentRequestV01.mmOriginalElectionDetails);
 				trace_lazy = () -> CorporateActionElection.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionElection1";
 				definition = "Provides information about an amended election instruction.";
@@ -306,39 +310,39 @@ public class CorporateActionElection1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OptnTp", required = true)
 	public CorporateActionOption1FormatChoice getOptionType() {
 		return optionType;
 	}
 
-	public void setOptionType(CorporateActionOption1FormatChoice optionType) {
-		this.optionType = optionType;
+	public CorporateActionElection1 setOptionType(CorporateActionOption1FormatChoice optionType) {
+		this.optionType = Objects.requireNonNull(optionType);
+		return this;
 	}
 
-	@XmlElement(name = "OptnNb", required = true)
 	public Exact3NumericText getOptionNumber() {
 		return optionNumber;
 	}
 
-	public void setOptionNumber(Exact3NumericText optionNumber) {
-		this.optionNumber = optionNumber;
+	public CorporateActionElection1 setOptionNumber(Exact3NumericText optionNumber) {
+		this.optionNumber = Objects.requireNonNull(optionNumber);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlInstdQty", required = true)
 	public UnitOrFaceAmount1Choice getOriginalInstructedQuantity() {
 		return originalInstructedQuantity;
 	}
 
-	public void setOriginalInstructedQuantity(UnitOrFaceAmount1Choice originalInstructedQuantity) {
-		this.originalInstructedQuantity = originalInstructedQuantity;
+	public CorporateActionElection1 setOriginalInstructedQuantity(UnitOrFaceAmount1Choice originalInstructedQuantity) {
+		this.originalInstructedQuantity = Objects.requireNonNull(originalInstructedQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "RmngQty", required = true)
 	public UnitOrFaceAmount1Choice getRemainingQuantity() {
 		return remainingQuantity;
 	}
 
-	public void setRemainingQuantity(UnitOrFaceAmount1Choice remainingQuantity) {
-		this.remainingQuantity = remainingQuantity;
+	public CorporateActionElection1 setRemainingQuantity(UnitOrFaceAmount1Choice remainingQuantity) {
+		this.remainingQuantity = Objects.requireNonNull(remainingQuantity);
+		return this;
 	}
 }

@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Local time offset to UTC (Coordinated Universal Time)."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "LocalDateTime1", propOrder = {"fromDateTime", "toDateTime", "UTCOffset"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "LocalDateTime1", propOrder = {"fromDateTime", "toDateTime", "uTCOffset"})
 public class LocalDateTime1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FrDtTm")
 	protected ISODateTime fromDateTime;
 	/**
-	 * Date time of the beginning of the period (inclusive).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -96,7 +99,7 @@ public class LocalDateTime1 {
 	 */
 	public static final MMMessageAttribute mmFromDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LocalDateTime1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LocalDateTime1.mmObject();
 			isDerived = false;
 			xmlTag = "FrDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -107,10 +110,11 @@ public class LocalDateTime1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "ToDtTm")
 	protected ISODateTime toDateTime;
 	/**
-	 * Date time of the end of the period (exclusive).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -136,7 +140,7 @@ public class LocalDateTime1 {
 	 */
 	public static final MMMessageAttribute mmToDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LocalDateTime1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LocalDateTime1.mmObject();
 			isDerived = false;
 			xmlTag = "ToDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,12 +151,11 @@ public class LocalDateTime1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "UTCOffset", required = true)
 	protected Number uTCOffset;
 	/**
-	 * UTC offset in minutes, of the local time during the period. For instance,
-	 * 120 for Central European Time, -720 for Central Standard Time (North
-	 * America).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,7 +183,7 @@ public class LocalDateTime1 {
 	 */
 	public static final MMMessageAttribute mmUTCOffset = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LocalDateTime1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LocalDateTime1.mmObject();
 			isDerived = false;
 			xmlTag = "UTCOffset";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,8 +198,8 @@ public class LocalDateTime1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LocalDateTime1.mmFromDateTime, LocalDateTime1.mmToDateTime, LocalDateTime1.mmUTCOffset);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LocalDateTime1.mmFromDateTime, com.tools20022.repository.msg.LocalDateTime1.mmToDateTime, com.tools20022.repository.msg.LocalDateTime1.mmUTCOffset);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LocalDateTime1";
 				definition = "Local time offset to UTC (Coordinated Universal Time).";
@@ -205,30 +208,30 @@ public class LocalDateTime1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FrDtTm")
-	public ISODateTime getFromDateTime() {
-		return fromDateTime;
+	public Optional<ISODateTime> getFromDateTime() {
+		return fromDateTime == null ? Optional.empty() : Optional.of(fromDateTime);
 	}
 
-	public void setFromDateTime(ISODateTime fromDateTime) {
+	public LocalDateTime1 setFromDateTime(ISODateTime fromDateTime) {
 		this.fromDateTime = fromDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "ToDtTm")
-	public ISODateTime getToDateTime() {
-		return toDateTime;
+	public Optional<ISODateTime> getToDateTime() {
+		return toDateTime == null ? Optional.empty() : Optional.of(toDateTime);
 	}
 
-	public void setToDateTime(ISODateTime toDateTime) {
+	public LocalDateTime1 setToDateTime(ISODateTime toDateTime) {
 		this.toDateTime = toDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "UTCOffset", required = true)
 	public Number getUTCOffset() {
 		return uTCOffset;
 	}
 
-	public void setUTCOffset(Number uTCOffset) {
-		this.uTCOffset = uTCOffset;
+	public LocalDateTime1 setUTCOffset(Number uTCOffset) {
+		this.uTCOffset = Objects.requireNonNull(uTCOffset);
+		return this;
 	}
 }

@@ -28,9 +28,8 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * ATMTransaction1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMTransaction8", propOrder = {"amount", "currency", "receiptFlag", "balancePrintFlag", "mixType", "mix"})
 public class ATMTransaction8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt")
 	protected ImpliedCurrencyAndAmount amount;
 	/**
-	 * Amount to dispense.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +123,7 @@ public class ATMTransaction8 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
-			componentContext_lazy = () -> ATMTransaction8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +134,11 @@ public class ATMTransaction8 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected ActiveCurrencyCode currency;
 	/**
-	 * Currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +172,7 @@ public class ATMTransaction8 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
-			componentContext_lazy = () -> ATMTransaction8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,10 +183,11 @@ public class ATMTransaction8 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "RctFlg")
 	protected TrueFalseIndicator receiptFlag;
 	/**
-	 * True if a receipt has to be printed by the ATM for the customer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -219,7 +221,7 @@ public class ATMTransaction8 {
 	 */
 	public static final MMMessageAttribute mmReceiptFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMTransaction8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "RctFlg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,10 +233,11 @@ public class ATMTransaction8 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "BalPrtFlg")
 	protected TrueFalseIndicator balancePrintFlag;
 	/**
-	 * True if a balance has to be printed by the ATM on the customer receipt.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -264,7 +267,7 @@ public class ATMTransaction8 {
 	 */
 	public static final MMMessageAttribute mmBalancePrintFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMTransaction8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "BalPrtFlg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -275,11 +278,11 @@ public class ATMTransaction8 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "MixTp")
 	protected Max35Text mixType;
 	/**
-	 * Media mix algorithm, the identification of the algorithm is an agreement
-	 * between the ATM and the ATM manager.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -313,7 +316,7 @@ public class ATMTransaction8 {
 	 */
 	public static final MMMessageAttribute mmMixType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMTransaction8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "MixTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,10 +328,11 @@ public class ATMTransaction8 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Mix")
 	protected List<com.tools20022.repository.msg.ATMMediaMix2> mix;
 	/**
-	 * Media mix to select.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -359,7 +363,7 @@ public class ATMTransaction8 {
 	 */
 	public static final MMMessageAssociationEnd mmMix = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMTransaction8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "Mix";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -375,9 +379,10 @@ public class ATMTransaction8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMTransaction8.mmAmount, ATMTransaction8.mmCurrency, ATMTransaction8.mmReceiptFlag, ATMTransaction8.mmBalancePrintFlag, ATMTransaction8.mmMixType, ATMTransaction8.mmMix);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction8.mmAmount, com.tools20022.repository.msg.ATMTransaction8.mmCurrency, com.tools20022.repository.msg.ATMTransaction8.mmReceiptFlag,
+						com.tools20022.repository.msg.ATMTransaction8.mmBalancePrintFlag, com.tools20022.repository.msg.ATMTransaction8.mmMixType, com.tools20022.repository.msg.ATMTransaction8.mmMix);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTransaction8";
 				definition = "Preferred withdrawal transaction chosen by the the customer.";
@@ -387,57 +392,57 @@ public class ATMTransaction8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt")
-	public ImpliedCurrencyAndAmount getAmount() {
-		return amount;
+	public Optional<ImpliedCurrencyAndAmount> getAmount() {
+		return amount == null ? Optional.empty() : Optional.of(amount);
 	}
 
-	public void setAmount(ImpliedCurrencyAndAmount amount) {
+	public ATMTransaction8 setAmount(ImpliedCurrencyAndAmount amount) {
 		this.amount = amount;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public ActiveCurrencyCode getCurrency() {
-		return currency;
+	public Optional<ActiveCurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(ActiveCurrencyCode currency) {
+	public ATMTransaction8 setCurrency(ActiveCurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "RctFlg")
-	public TrueFalseIndicator getReceiptFlag() {
-		return receiptFlag;
+	public Optional<TrueFalseIndicator> getReceiptFlag() {
+		return receiptFlag == null ? Optional.empty() : Optional.of(receiptFlag);
 	}
 
-	public void setReceiptFlag(TrueFalseIndicator receiptFlag) {
+	public ATMTransaction8 setReceiptFlag(TrueFalseIndicator receiptFlag) {
 		this.receiptFlag = receiptFlag;
+		return this;
 	}
 
-	@XmlElement(name = "BalPrtFlg")
-	public TrueFalseIndicator getBalancePrintFlag() {
-		return balancePrintFlag;
+	public Optional<TrueFalseIndicator> getBalancePrintFlag() {
+		return balancePrintFlag == null ? Optional.empty() : Optional.of(balancePrintFlag);
 	}
 
-	public void setBalancePrintFlag(TrueFalseIndicator balancePrintFlag) {
+	public ATMTransaction8 setBalancePrintFlag(TrueFalseIndicator balancePrintFlag) {
 		this.balancePrintFlag = balancePrintFlag;
+		return this;
 	}
 
-	@XmlElement(name = "MixTp")
-	public Max35Text getMixType() {
-		return mixType;
+	public Optional<Max35Text> getMixType() {
+		return mixType == null ? Optional.empty() : Optional.of(mixType);
 	}
 
-	public void setMixType(Max35Text mixType) {
+	public ATMTransaction8 setMixType(Max35Text mixType) {
 		this.mixType = mixType;
+		return this;
 	}
 
-	@XmlElement(name = "Mix")
 	public List<ATMMediaMix2> getMix() {
-		return mix;
+		return mix == null ? mix = new ArrayList<>() : mix;
 	}
 
-	public void setMix(List<com.tools20022.repository.msg.ATMMediaMix2> mix) {
-		this.mix = mix;
+	public ATMTransaction8 setMix(List<com.tools20022.repository.msg.ATMMediaMix2> mix) {
+		this.mix = Objects.requireNonNull(mix);
+		return this;
 	}
 }

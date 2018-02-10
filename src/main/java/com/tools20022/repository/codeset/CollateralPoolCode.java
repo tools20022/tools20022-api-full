@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CollateralPoolCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the collateral is a pool collateral, delivery by value
@@ -32,14 +37,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CollateralPoolCode#mmPool
- * CollateralPoolCode.mmPool}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CollateralPoolCode#Pool
+ * CollateralPoolCode.Pool}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CollateralPoolCode#NoPool
+ * CollateralPoolCode.NoPool}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralPoolCode#mmNoPool
- * CollateralPoolCode.mmNoPool}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralPoolCode#mmDeliveryByValuePool
- * CollateralPoolCode.mmDeliveryByValuePool}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralPoolCode#DeliveryByValuePool
+ * CollateralPoolCode.DeliveryByValuePool}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CollateralPoolCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CollateralPoolCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,12 +95,12 @@ public class CollateralPoolCode {
 	 * definition} = "Collateral is of pool type."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPool = new MMCode() {
+	public static final CollateralPoolCode Pool = new CollateralPoolCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pool";
 			definition = "Collateral is of pool type.";
-			owner_lazy = () -> CollateralPoolCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralPoolCode.mmObject();
 			codeName = "POOL";
 		}
 	};
@@ -120,12 +125,12 @@ public class CollateralPoolCode {
 	 * definition} = "Collateral is not of pool type."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoPool = new MMCode() {
+	public static final CollateralPoolCode NoPool = new CollateralPoolCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoPool";
 			definition = "Collateral is not of pool type.";
-			owner_lazy = () -> CollateralPoolCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralPoolCode.mmObject();
 			codeName = "NOPL";
 		}
 	};
@@ -151,27 +156,59 @@ public class CollateralPoolCode {
 	 * "Transaction was settled using a delivery by value mechanism."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeliveryByValuePool = new MMCode() {
+	public static final CollateralPoolCode DeliveryByValuePool = new CollateralPoolCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryByValuePool";
 			definition = "Transaction was settled using a delivery by value mechanism.";
-			owner_lazy = () -> CollateralPoolCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralPoolCode.mmObject();
 			codeName = "DBVP";
 		}
 	};
+	final static private LinkedHashMap<String, CollateralPoolCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CollateralPoolCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralPoolCode";
 				definition = "Specifies whether the collateral is a pool collateral, delivery by value specific pool or not a pool.";
-				code_lazy = () -> Arrays.asList(CollateralPoolCode.mmPool, CollateralPoolCode.mmNoPool, CollateralPoolCode.mmDeliveryByValuePool);
 				derivation_lazy = () -> Arrays.asList(CollateralPool1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralPoolCode.Pool, com.tools20022.repository.codeset.CollateralPoolCode.NoPool,
+						com.tools20022.repository.codeset.CollateralPoolCode.DeliveryByValuePool);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Pool.getCodeName().get(), Pool);
+		codesByName.put(NoPool.getCodeName().get(), NoPool);
+		codesByName.put(DeliveryByValuePool.getCodeName().get(), DeliveryByValuePool);
+	}
+
+	public static CollateralPoolCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CollateralPoolCode[] values() {
+		CollateralPoolCode[] values = new CollateralPoolCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CollateralPoolCode> {
+		@Override
+		public CollateralPoolCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CollateralPoolCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

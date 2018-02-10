@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.IndividualPerson34;
 import com.tools20022.repository.msg.Organisation30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,17 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.choice.Party31Choice Party31Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Party32Choice", propOrder = {"organisation", "individualPerson"})
 public class Party32Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Org", required = true)
 	protected Organisation30 organisation;
 	/**
-	 * Organised structure that is set up for a particular purpose, for example,
-	 * a business, government body, department, charity, or financial
-	 * institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -118,7 +118,7 @@ public class Party32Choice {
 	public static final MMMessageAssociationEnd mmOrganisation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
-			componentContext_lazy = () -> Party32Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Party32Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Org";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,11 +131,11 @@ public class Party32Choice {
 			type_lazy = () -> Organisation30.mmObject();
 		}
 	};
+	@XmlElement(name = "IndvPrsn", required = true)
 	protected IndividualPerson34 individualPerson;
 	/**
-	 * Human entity, as distinguished from a corporate entity (which is
-	 * sometimes referred to as an 'artificial person').
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -173,7 +173,7 @@ public class Party32Choice {
 	public static final MMMessageAssociationEnd mmIndividualPerson = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
-			componentContext_lazy = () -> Party32Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Party32Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndvPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,9 +190,9 @@ public class Party32Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Party32Choice.mmOrganisation, Party32Choice.mmIndividualPerson);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party32Choice.mmOrganisation, com.tools20022.repository.choice.Party32Choice.mmIndividualPerson);
 				trace_lazy = () -> Party.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Party32Choice";
 				definition = "Choice of formats for the specification of the party.";
@@ -202,21 +202,21 @@ public class Party32Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Org", required = true)
 	public Organisation30 getOrganisation() {
 		return organisation;
 	}
 
-	public void setOrganisation(Organisation30 organisation) {
-		this.organisation = organisation;
+	public Party32Choice setOrganisation(Organisation30 organisation) {
+		this.organisation = Objects.requireNonNull(organisation);
+		return this;
 	}
 
-	@XmlElement(name = "IndvPrsn", required = true)
 	public IndividualPerson34 getIndividualPerson() {
 		return individualPerson;
 	}
 
-	public void setIndividualPerson(IndividualPerson34 individualPerson) {
-		this.individualPerson = individualPerson;
+	public Party32Choice setIndividualPerson(IndividualPerson34 individualPerson) {
+		this.individualPerson = Objects.requireNonNull(individualPerson);
+		return this;
 	}
 }

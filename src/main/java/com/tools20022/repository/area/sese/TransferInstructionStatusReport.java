@@ -25,6 +25,7 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -49,29 +50,13 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
- * SecuritiesSettlementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "sese.011.001.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "sese.011.001.01"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReport#mmRelatedReferenceOrOtherReferenceRule
- * TransferInstructionStatusReport.mmRelatedReferenceOrOtherReferenceRule}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReport#RelatedReferenceOrOtherReferenceRule
+ * TransferInstructionStatusReport.RelatedReferenceOrOtherReferenceRule}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -87,6 +72,22 @@ import javax.xml.bind.annotation.*;
  * TransferInstructionStatusReport.mmStatusReport}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "sese.011.001.01"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
+ * SecuritiesSettlementArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "sese.011.001.01"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.011.001.01}</li>
@@ -110,7 +111,7 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "sese.011.001.01", propOrder = {"relatedReference", "otherReference", "statusReport"})
 public class TransferInstructionStatusReport {
 
@@ -150,7 +151,7 @@ public class TransferInstructionStatusReport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmRelatedReferenceOrOtherReferenceRule = new MMXor() {
+	public static final MMXor RelatedReferenceOrOtherReferenceRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceOrOtherReferenceRule";
@@ -160,10 +161,11 @@ public class TransferInstructionStatusReport {
 					com.tools20022.repository.area.sese.TransferInstructionStatusReport.mmOtherReference);
 		}
 	};
+	@XmlElement(name = "RltdRef", required = true)
 	protected AdditionalReference2 relatedReference;
 	/**
-	 * Reference to a linked message that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,11 +206,11 @@ public class TransferInstructionStatusReport {
 			}
 		}
 	};
+	@XmlElement(name = "OthrRef", required = true)
 	protected AdditionalReference2 otherReference;
 	/**
-	 * Reference to a linked message sent in a proprietary way or the reference
-	 * of a system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -250,10 +252,11 @@ public class TransferInstructionStatusReport {
 			}
 		}
 	};
+	@XmlElement(name = "StsRpt", required = true)
 	protected TransferStatusAndReason statusReport;
 	/**
-	 * Status of the transfer instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -302,7 +305,7 @@ public class TransferInstructionStatusReport {
 				definition = "Scope\r\nThe TransferInstructionStatusReport message is sent by an instructing party to the executing party. The instructing party may be an investor, a transfer agent, or an intermediary, etc. The executing party may be a transfer agent, or an intermediary, etc.\r\nThis message gives the status of a transfer instruction, and can be used from the time the executing party receives the transfer instruction until its execution.\r\nUsage\r\nThe TransferInstructionStatusReport message is sent by an executing party to the instructing party. The message can be used to report one of the following\r\n- the status of the transfer instruction (using a code)or\r\n- the repair status or\r\n- the unmatched status or\r\n- the rejection status or\r\n- the pending settlement status.\r\nFurther information about repair, unmatched, rejected or pending settlement statuses must be specified using either codes or unstructured information.";
 				nextVersions_lazy = () -> Arrays.asList(TransferInstructionStatusReportV02.mmObject());
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInstructionStatusReport.mmRelatedReferenceOrOtherReferenceRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInstructionStatusReport.RelatedReferenceOrOtherReferenceRule);
 				rootElement = "Document";
 				xmlTag = "sese.011.001.01";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
@@ -327,34 +330,34 @@ public class TransferInstructionStatusReport {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RltdRef", required = true)
 	public AdditionalReference2 getRelatedReference() {
 		return relatedReference;
 	}
 
-	public void setRelatedReference(AdditionalReference2 relatedReference) {
-		this.relatedReference = relatedReference;
+	public TransferInstructionStatusReport setRelatedReference(AdditionalReference2 relatedReference) {
+		this.relatedReference = Objects.requireNonNull(relatedReference);
+		return this;
 	}
 
-	@XmlElement(name = "OthrRef", required = true)
 	public AdditionalReference2 getOtherReference() {
 		return otherReference;
 	}
 
-	public void setOtherReference(AdditionalReference2 otherReference) {
-		this.otherReference = otherReference;
+	public TransferInstructionStatusReport setOtherReference(AdditionalReference2 otherReference) {
+		this.otherReference = Objects.requireNonNull(otherReference);
+		return this;
 	}
 
-	@XmlElement(name = "StsRpt", required = true)
 	public TransferStatusAndReason getStatusReport() {
 		return statusReport;
 	}
 
-	public void setStatusReport(TransferStatusAndReason statusReport) {
-		this.statusReport = statusReport;
+	public TransferInstructionStatusReport setStatusReport(TransferStatusAndReason statusReport) {
+		this.statusReport = Objects.requireNonNull(statusReport);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.011.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.011.001.01")
 	static public class Document {
 		@XmlElement(name = "sese.011.001.01", required = true)
 		public TransferInstructionStatusReport messageBody;

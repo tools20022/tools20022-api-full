@@ -26,9 +26,11 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecuritiesTransactionReport2;
 import com.tools20022.repository.msg.SecuritiesTransactionReport4;
 import com.tools20022.repository.msg.SupplementaryData1;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between a new or a cancellation transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "ReportingTransactionType1Choice", propOrder = {"new", "cancellation", "supplementaryData"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "ReportingTransactionType1Choice", propOrder = {"new_", "cancellation", "supplementaryData"})
 public class ReportingTransactionType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "New", required = true)
 	protected SecuritiesTransactionReport4 new_;
 	/**
-	 * Transaction is a newly reported transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -119,7 +122,7 @@ public class ReportingTransactionType1Choice {
 	public static final MMMessageAssociationEnd mmNew = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTransaction.mmObject();
-			componentContext_lazy = () -> ReportingTransactionType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReportingTransactionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "New";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +134,11 @@ public class ReportingTransactionType1Choice {
 			type_lazy = () -> SecuritiesTransactionReport4.mmObject();
 		}
 	};
+	@XmlElement(name = "Cxl", required = true)
 	protected SecuritiesTransactionReport2 cancellation;
 	/**
-	 * Transaction is a cancellation transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -167,7 +171,7 @@ public class ReportingTransactionType1Choice {
 	public static final MMMessageAssociationEnd mmCancellation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTransaction.mmObject();
-			componentContext_lazy = () -> ReportingTransactionType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReportingTransactionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cxl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,11 +183,11 @@ public class ReportingTransactionType1Choice {
 			type_lazy = () -> SecuritiesTransactionReport2.mmObject();
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -211,7 +215,7 @@ public class ReportingTransactionType1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReportingTransactionType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReportingTransactionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,9 +230,10 @@ public class ReportingTransactionType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReportingTransactionType1Choice.mmNew, ReportingTransactionType1Choice.mmCancellation, ReportingTransactionType1Choice.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReportingTransactionType1Choice.mmNew, com.tools20022.repository.choice.ReportingTransactionType1Choice.mmCancellation,
+						com.tools20022.repository.choice.ReportingTransactionType1Choice.mmSupplementaryData);
 				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingTransactionReportV01.mmTransaction);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportingTransactionType1Choice";
 				definition = "Choice between a new or a cancellation transaction.";
@@ -237,30 +242,30 @@ public class ReportingTransactionType1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "New", required = true)
 	public SecuritiesTransactionReport4 getNew() {
 		return new_;
 	}
 
-	public void setNew(SecuritiesTransactionReport4 new_) {
-		this.new_ = new_;
+	public ReportingTransactionType1Choice setNew(SecuritiesTransactionReport4 new_) {
+		this.new_ = Objects.requireNonNull(new_);
+		return this;
 	}
 
-	@XmlElement(name = "Cxl", required = true)
 	public SecuritiesTransactionReport2 getCancellation() {
 		return cancellation;
 	}
 
-	public void setCancellation(SecuritiesTransactionReport2 cancellation) {
-		this.cancellation = cancellation;
+	public ReportingTransactionType1Choice setCancellation(SecuritiesTransactionReport2 cancellation) {
+		this.cancellation = Objects.requireNonNull(cancellation);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public ReportingTransactionType1Choice setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 }

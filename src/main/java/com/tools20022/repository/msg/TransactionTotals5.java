@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * TransactionTotals4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionTotals5", propOrder = {"amount", "number", "chargeBackAmount", "chargeBackNumber", "reversalAmount", "reversalNumber", "feeAmounts"})
 public class TransactionTotals5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ImpliedCurrencyAndAmount amount;
 	/**
-	 * Cumulative amount of all financial transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +118,7 @@ public class TransactionTotals5 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionTotals5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +129,11 @@ public class TransactionTotals5 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Nb", required = true)
 	protected Number number;
 	/**
-	 * Number of all financial transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +160,7 @@ public class TransactionTotals5 {
 	 */
 	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionTotals5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,10 +171,11 @@ public class TransactionTotals5 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgBckAmt", required = true)
 	protected ImpliedCurrencyAndAmount chargeBackAmount;
 	/**
-	 * Cumulative amount of all chargeback transactions exclusive of any fees.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,7 +205,7 @@ public class TransactionTotals5 {
 	 */
 	public static final MMMessageAttribute mmChargeBackAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionTotals5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgBckAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,10 +216,11 @@ public class TransactionTotals5 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgBckNb", required = true)
 	protected Number chargeBackNumber;
 	/**
-	 * Total number of chargeback transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -241,7 +247,7 @@ public class TransactionTotals5 {
 	 */
 	public static final MMMessageAttribute mmChargeBackNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionTotals5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgBckNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -252,10 +258,11 @@ public class TransactionTotals5 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "RvslAmt", required = true)
 	protected ImpliedCurrencyAndAmount reversalAmount;
 	/**
-	 * Cumulative amount of all reversal transactions exclusive of any fees.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -284,7 +291,7 @@ public class TransactionTotals5 {
 	 */
 	public static final MMMessageAttribute mmReversalAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionTotals5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
 			isDerived = false;
 			xmlTag = "RvslAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -295,10 +302,11 @@ public class TransactionTotals5 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RvslNb", required = true)
 	protected Number reversalNumber;
 	/**
-	 * Total number of reversal transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -325,7 +333,7 @@ public class TransactionTotals5 {
 	 */
 	public static final MMMessageAttribute mmReversalNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionTotals5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
 			isDerived = false;
 			xmlTag = "RvslNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -336,10 +344,11 @@ public class TransactionTotals5 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "FeeAmts")
 	protected ImpliedCurrencyAndAmount feeAmounts;
 	/**
-	 * Sum amount of all fees.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -367,7 +376,7 @@ public class TransactionTotals5 {
 	 */
 	public static final MMMessageAttribute mmFeeAmounts = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionTotals5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
 			isDerived = false;
 			xmlTag = "FeeAmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -382,9 +391,10 @@ public class TransactionTotals5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionTotals5.mmAmount, TransactionTotals5.mmNumber, TransactionTotals5.mmChargeBackAmount, TransactionTotals5.mmChargeBackNumber, TransactionTotals5.mmReversalAmount,
-						TransactionTotals5.mmReversalNumber, TransactionTotals5.mmFeeAmounts);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals5.mmAmount, com.tools20022.repository.msg.TransactionTotals5.mmNumber,
+						com.tools20022.repository.msg.TransactionTotals5.mmChargeBackAmount, com.tools20022.repository.msg.TransactionTotals5.mmChargeBackNumber, com.tools20022.repository.msg.TransactionTotals5.mmReversalAmount,
+						com.tools20022.repository.msg.TransactionTotals5.mmReversalNumber, com.tools20022.repository.msg.TransactionTotals5.mmFeeAmounts);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionTotals5";
 				definition = "Total of credit or debit transactions";
@@ -394,66 +404,66 @@ public class TransactionTotals5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ImpliedCurrencyAndAmount amount) {
-		this.amount = amount;
+	public TransactionTotals5 setAmount(ImpliedCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "Nb", required = true)
 	public Number getNumber() {
 		return number;
 	}
 
-	public void setNumber(Number number) {
-		this.number = number;
+	public TransactionTotals5 setNumber(Number number) {
+		this.number = Objects.requireNonNull(number);
+		return this;
 	}
 
-	@XmlElement(name = "ChrgBckAmt", required = true)
 	public ImpliedCurrencyAndAmount getChargeBackAmount() {
 		return chargeBackAmount;
 	}
 
-	public void setChargeBackAmount(ImpliedCurrencyAndAmount chargeBackAmount) {
-		this.chargeBackAmount = chargeBackAmount;
+	public TransactionTotals5 setChargeBackAmount(ImpliedCurrencyAndAmount chargeBackAmount) {
+		this.chargeBackAmount = Objects.requireNonNull(chargeBackAmount);
+		return this;
 	}
 
-	@XmlElement(name = "ChrgBckNb", required = true)
 	public Number getChargeBackNumber() {
 		return chargeBackNumber;
 	}
 
-	public void setChargeBackNumber(Number chargeBackNumber) {
-		this.chargeBackNumber = chargeBackNumber;
+	public TransactionTotals5 setChargeBackNumber(Number chargeBackNumber) {
+		this.chargeBackNumber = Objects.requireNonNull(chargeBackNumber);
+		return this;
 	}
 
-	@XmlElement(name = "RvslAmt", required = true)
 	public ImpliedCurrencyAndAmount getReversalAmount() {
 		return reversalAmount;
 	}
 
-	public void setReversalAmount(ImpliedCurrencyAndAmount reversalAmount) {
-		this.reversalAmount = reversalAmount;
+	public TransactionTotals5 setReversalAmount(ImpliedCurrencyAndAmount reversalAmount) {
+		this.reversalAmount = Objects.requireNonNull(reversalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "RvslNb", required = true)
 	public Number getReversalNumber() {
 		return reversalNumber;
 	}
 
-	public void setReversalNumber(Number reversalNumber) {
-		this.reversalNumber = reversalNumber;
+	public TransactionTotals5 setReversalNumber(Number reversalNumber) {
+		this.reversalNumber = Objects.requireNonNull(reversalNumber);
+		return this;
 	}
 
-	@XmlElement(name = "FeeAmts")
-	public ImpliedCurrencyAndAmount getFeeAmounts() {
-		return feeAmounts;
+	public Optional<ImpliedCurrencyAndAmount> getFeeAmounts() {
+		return feeAmounts == null ? Optional.empty() : Optional.of(feeAmounts);
 	}
 
-	public void setFeeAmounts(ImpliedCurrencyAndAmount feeAmounts) {
+	public TransactionTotals5 setFeeAmounts(ImpliedCurrencyAndAmount feeAmounts) {
 		this.feeAmounts = feeAmounts;
+		return this;
 	}
 }

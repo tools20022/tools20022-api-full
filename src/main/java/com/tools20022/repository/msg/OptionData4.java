@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Set of data which contains the link to a previously notified option trade."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OptionData4", propOrder = {"tradeDate", "notificationIdentification", "commonReference", "relatedReference", "amendOrCancelReason", "option"})
 public class OptionData4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradDt", required = true)
 	protected ISODate tradeDate;
 	/**
-	 * Date at which the trading parties have agreed on an option trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +122,7 @@ public class OptionData4 {
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> OptionData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionData4.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,11 +133,11 @@ public class OptionData4 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "NtfctnId", required = true)
 	protected Max35Text notificationIdentification;
 	/**
-	 * Refers to the identification of a trade assigned by the trading side of a
-	 * foreign exchange option trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +165,7 @@ public class OptionData4 {
 	 */
 	public static final MMMessageAttribute mmNotificationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OptionData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionData4.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +176,11 @@ public class OptionData4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CmonRef")
 	protected Max35Text commonReference;
 	/**
-	 * Reference common to the parties of a trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,7 +212,7 @@ public class OptionData4 {
 	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
-			componentContext_lazy = () -> OptionData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionData4.mmObject();
 			isDerived = false;
 			xmlTag = "CmonRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,11 +223,11 @@ public class OptionData4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdRef")
 	protected Max35Text relatedReference;
 	/**
-	 * Refers to the identification of a previous event in the life of a foreign
-	 * exchange option trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,7 +255,7 @@ public class OptionData4 {
 	 */
 	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OptionData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionData4.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -262,10 +266,11 @@ public class OptionData4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AmdOrCclRsn")
 	protected Max35Text amendOrCancelReason;
 	/**
-	 * Describes the reason for the cancellation or the amendment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -292,7 +297,7 @@ public class OptionData4 {
 	 */
 	public static final MMMessageAttribute mmAmendOrCancelReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OptionData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionData4.mmObject();
 			isDerived = false;
 			xmlTag = "AmdOrCclRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -303,10 +308,11 @@ public class OptionData4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Optn", required = true)
 	protected Option6 option;
 	/**
-	 * Set of data defining a foreign exchange option sold.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -336,7 +342,7 @@ public class OptionData4 {
 	public static final MMMessageAssociationEnd mmOption = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CurrencyOption.mmObject();
-			componentContext_lazy = () -> OptionData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionData4.mmObject();
 			isDerived = false;
 			xmlTag = "Optn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -352,10 +358,11 @@ public class OptionData4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OptionData4.mmTradeDate, OptionData4.mmNotificationIdentification, OptionData4.mmCommonReference, OptionData4.mmRelatedReference, OptionData4.mmAmendOrCancelReason,
-						OptionData4.mmOption);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OptionData4.mmTradeDate, com.tools20022.repository.msg.OptionData4.mmNotificationIdentification,
+						com.tools20022.repository.msg.OptionData4.mmCommonReference, com.tools20022.repository.msg.OptionData4.mmRelatedReference, com.tools20022.repository.msg.OptionData4.mmAmendOrCancelReason,
+						com.tools20022.repository.msg.OptionData4.mmOption);
 				trace_lazy = () -> CurrencyOption.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OptionData4";
 				definition = "Set of data which contains the link to a previously notified option trade.";
@@ -364,57 +371,57 @@ public class OptionData4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradDt", required = true)
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
 
-	public void setTradeDate(ISODate tradeDate) {
-		this.tradeDate = tradeDate;
+	public OptionData4 setTradeDate(ISODate tradeDate) {
+		this.tradeDate = Objects.requireNonNull(tradeDate);
+		return this;
 	}
 
-	@XmlElement(name = "NtfctnId", required = true)
 	public Max35Text getNotificationIdentification() {
 		return notificationIdentification;
 	}
 
-	public void setNotificationIdentification(Max35Text notificationIdentification) {
-		this.notificationIdentification = notificationIdentification;
+	public OptionData4 setNotificationIdentification(Max35Text notificationIdentification) {
+		this.notificationIdentification = Objects.requireNonNull(notificationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CmonRef")
-	public Max35Text getCommonReference() {
-		return commonReference;
+	public Optional<Max35Text> getCommonReference() {
+		return commonReference == null ? Optional.empty() : Optional.of(commonReference);
 	}
 
-	public void setCommonReference(Max35Text commonReference) {
+	public OptionData4 setCommonReference(Max35Text commonReference) {
 		this.commonReference = commonReference;
+		return this;
 	}
 
-	@XmlElement(name = "RltdRef")
-	public Max35Text getRelatedReference() {
-		return relatedReference;
+	public Optional<Max35Text> getRelatedReference() {
+		return relatedReference == null ? Optional.empty() : Optional.of(relatedReference);
 	}
 
-	public void setRelatedReference(Max35Text relatedReference) {
+	public OptionData4 setRelatedReference(Max35Text relatedReference) {
 		this.relatedReference = relatedReference;
+		return this;
 	}
 
-	@XmlElement(name = "AmdOrCclRsn")
-	public Max35Text getAmendOrCancelReason() {
-		return amendOrCancelReason;
+	public Optional<Max35Text> getAmendOrCancelReason() {
+		return amendOrCancelReason == null ? Optional.empty() : Optional.of(amendOrCancelReason);
 	}
 
-	public void setAmendOrCancelReason(Max35Text amendOrCancelReason) {
+	public OptionData4 setAmendOrCancelReason(Max35Text amendOrCancelReason) {
 		this.amendOrCancelReason = amendOrCancelReason;
+		return this;
 	}
 
-	@XmlElement(name = "Optn", required = true)
 	public Option6 getOption() {
 		return option;
 	}
 
-	public void setOption(com.tools20022.repository.msg.Option6 option) {
-		this.option = option;
+	public OptionData4 setOption(com.tools20022.repository.msg.Option6 option) {
+		this.option = Objects.requireNonNull(option);
+		return this;
 	}
 }

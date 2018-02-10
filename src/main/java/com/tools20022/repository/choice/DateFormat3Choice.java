@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between the formats to express a date."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DateFormat3Choice", propOrder = {"date", "dateCode"})
 public class DateFormat3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dt", required = true)
 	protected ISODate date;
 	/**
-	 * Date expressed as a calendar date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -96,7 +98,7 @@ public class DateFormat3Choice {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateFormat3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -107,10 +109,11 @@ public class DateFormat3Choice {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DtCd", required = true)
 	protected DateType1Code dateCode;
 	/**
-	 * Indicates that date is unknown.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -138,7 +141,7 @@ public class DateFormat3Choice {
 	 */
 	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateFormat3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DtCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,8 +156,8 @@ public class DateFormat3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DateFormat3Choice.mmDate, DateFormat3Choice.mmDateCode);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat3Choice.mmDate, com.tools20022.repository.choice.DateFormat3Choice.mmDateCode);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateFormat3Choice";
 				definition = "Choice between the formats to express a date.";
@@ -163,21 +166,21 @@ public class DateFormat3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
 
-	public void setDate(ISODate date) {
-		this.date = date;
+	public DateFormat3Choice setDate(ISODate date) {
+		this.date = Objects.requireNonNull(date);
+		return this;
 	}
 
-	@XmlElement(name = "DtCd", required = true)
 	public DateType1Code getDateCode() {
 		return dateCode;
 	}
 
-	public void setDateCode(DateType1Code dateCode) {
-		this.dateCode = dateCode;
+	public DateFormat3Choice setDateCode(DateType1Code dateCode) {
+		this.dateCode = Objects.requireNonNull(dateCode);
+		return this;
 	}
 }

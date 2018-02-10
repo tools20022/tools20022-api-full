@@ -29,6 +29,8 @@ import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the header information for an administrative file."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IsabelAdminHeader2", propOrder = {"actualSenderIdentification", "payloadCreationDate", "messageRequestType", "messageIdentification", "destinationMailBoxIdentification", "referredMessage", "referredSendTimeStamp"})
 public class IsabelAdminHeader2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ActlSndrId", required = true)
 	protected Max13AlphaNumericText actualSenderIdentification;
 	/**
-	 * Unique identification of the actual sender of the file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +120,7 @@ public class IsabelAdminHeader2 {
 	 */
 	public static final MMMessageAttribute mmActualSenderIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelAdminHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "ActlSndrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +131,11 @@ public class IsabelAdminHeader2 {
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "PyldCreDt", required = true)
 	protected DateAndDateTimeChoice payloadCreationDate;
 	/**
-	 * Date and time at which the file in the payload was actually created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -159,7 +163,7 @@ public class IsabelAdminHeader2 {
 	 */
 	public static final MMMessageAssociationEnd mmPayloadCreationDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelAdminHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "PyldCreDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +175,11 @@ public class IsabelAdminHeader2 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgReqTp", required = true)
 	protected Max6Text messageRequestType;
 	/**
-	 * Unique identification of the request type of the message in the payload.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,7 +208,7 @@ public class IsabelAdminHeader2 {
 	 */
 	public static final MMMessageAttribute mmMessageRequestType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelAdminHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "MsgReqTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,11 +219,11 @@ public class IsabelAdminHeader2 {
 			simpleType_lazy = () -> Max6Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgId", required = true)
 	protected Max14Text messageIdentification;
 	/**
-	 * Unique identification as assigned by the bank to identify the
-	 * administrative instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -247,7 +252,7 @@ public class IsabelAdminHeader2 {
 	 */
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelAdminHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,10 +263,11 @@ public class IsabelAdminHeader2 {
 			simpleType_lazy = () -> Max14Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DstnMailBxId")
 	protected Max13AlphaNumericText destinationMailBoxIdentification;
 	/**
-	 * Unique identification of the destination mailbox.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -289,7 +295,7 @@ public class IsabelAdminHeader2 {
 	 */
 	public static final MMMessageAttribute mmDestinationMailBoxIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelAdminHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "DstnMailBxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -300,11 +306,11 @@ public class IsabelAdminHeader2 {
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "RfrdMsg")
 	protected Max14Text referredMessage;
 	/**
-	 * Unique identification of the message to which the administration
-	 * instruction refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -333,7 +339,7 @@ public class IsabelAdminHeader2 {
 	 */
 	public static final MMMessageAttribute mmReferredMessage = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelAdminHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdMsg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -344,11 +350,11 @@ public class IsabelAdminHeader2 {
 			simpleType_lazy = () -> Max14Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RfrdSndTmStmp")
 	protected ISODateTime referredSendTimeStamp;
 	/**
-	 * Send time stamp of the message to which the administrative instruction
-	 * refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -377,7 +383,7 @@ public class IsabelAdminHeader2 {
 	 */
 	public static final MMMessageAttribute mmReferredSendTimeStamp = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelAdminHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelAdminHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdSndTmStmp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -392,9 +398,11 @@ public class IsabelAdminHeader2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IsabelAdminHeader2.mmActualSenderIdentification, IsabelAdminHeader2.mmPayloadCreationDate, IsabelAdminHeader2.mmMessageRequestType, IsabelAdminHeader2.mmMessageIdentification,
-						IsabelAdminHeader2.mmDestinationMailBoxIdentification, IsabelAdminHeader2.mmReferredMessage, IsabelAdminHeader2.mmReferredSendTimeStamp);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelAdminHeader2.mmActualSenderIdentification, com.tools20022.repository.msg.IsabelAdminHeader2.mmPayloadCreationDate,
+						com.tools20022.repository.msg.IsabelAdminHeader2.mmMessageRequestType, com.tools20022.repository.msg.IsabelAdminHeader2.mmMessageIdentification,
+						com.tools20022.repository.msg.IsabelAdminHeader2.mmDestinationMailBoxIdentification, com.tools20022.repository.msg.IsabelAdminHeader2.mmReferredMessage,
+						com.tools20022.repository.msg.IsabelAdminHeader2.mmReferredSendTimeStamp);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelAdminHeader2";
 				definition = "Specifies the header information for an administrative file.";
@@ -403,66 +411,66 @@ public class IsabelAdminHeader2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ActlSndrId", required = true)
 	public Max13AlphaNumericText getActualSenderIdentification() {
 		return actualSenderIdentification;
 	}
 
-	public void setActualSenderIdentification(Max13AlphaNumericText actualSenderIdentification) {
-		this.actualSenderIdentification = actualSenderIdentification;
+	public IsabelAdminHeader2 setActualSenderIdentification(Max13AlphaNumericText actualSenderIdentification) {
+		this.actualSenderIdentification = Objects.requireNonNull(actualSenderIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PyldCreDt", required = true)
 	public DateAndDateTimeChoice getPayloadCreationDate() {
 		return payloadCreationDate;
 	}
 
-	public void setPayloadCreationDate(DateAndDateTimeChoice payloadCreationDate) {
-		this.payloadCreationDate = payloadCreationDate;
+	public IsabelAdminHeader2 setPayloadCreationDate(DateAndDateTimeChoice payloadCreationDate) {
+		this.payloadCreationDate = Objects.requireNonNull(payloadCreationDate);
+		return this;
 	}
 
-	@XmlElement(name = "MsgReqTp", required = true)
 	public Max6Text getMessageRequestType() {
 		return messageRequestType;
 	}
 
-	public void setMessageRequestType(Max6Text messageRequestType) {
-		this.messageRequestType = messageRequestType;
+	public IsabelAdminHeader2 setMessageRequestType(Max6Text messageRequestType) {
+		this.messageRequestType = Objects.requireNonNull(messageRequestType);
+		return this;
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public Max14Text getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(Max14Text messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public IsabelAdminHeader2 setMessageIdentification(Max14Text messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "DstnMailBxId")
-	public Max13AlphaNumericText getDestinationMailBoxIdentification() {
-		return destinationMailBoxIdentification;
+	public Optional<Max13AlphaNumericText> getDestinationMailBoxIdentification() {
+		return destinationMailBoxIdentification == null ? Optional.empty() : Optional.of(destinationMailBoxIdentification);
 	}
 
-	public void setDestinationMailBoxIdentification(Max13AlphaNumericText destinationMailBoxIdentification) {
+	public IsabelAdminHeader2 setDestinationMailBoxIdentification(Max13AlphaNumericText destinationMailBoxIdentification) {
 		this.destinationMailBoxIdentification = destinationMailBoxIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "RfrdMsg")
-	public Max14Text getReferredMessage() {
-		return referredMessage;
+	public Optional<Max14Text> getReferredMessage() {
+		return referredMessage == null ? Optional.empty() : Optional.of(referredMessage);
 	}
 
-	public void setReferredMessage(Max14Text referredMessage) {
+	public IsabelAdminHeader2 setReferredMessage(Max14Text referredMessage) {
 		this.referredMessage = referredMessage;
+		return this;
 	}
 
-	@XmlElement(name = "RfrdSndTmStmp")
-	public ISODateTime getReferredSendTimeStamp() {
-		return referredSendTimeStamp;
+	public Optional<ISODateTime> getReferredSendTimeStamp() {
+		return referredSendTimeStamp == null ? Optional.empty() : Optional.of(referredSendTimeStamp);
 	}
 
-	public void setReferredSendTimeStamp(ISODateTime referredSendTimeStamp) {
+	public IsabelAdminHeader2 setReferredSendTimeStamp(ISODateTime referredSendTimeStamp) {
 		this.referredSendTimeStamp = referredSendTimeStamp;
+		return this;
 	}
 }

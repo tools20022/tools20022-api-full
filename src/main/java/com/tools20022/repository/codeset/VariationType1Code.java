@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.VariationTypeCode;
+import com.tools20022.repository.codeset.VariationType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of variation.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.VariationTypeCode
- * VariationTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VariationType1Code#mmDecrease
- * VariationType1Code.mmDecrease}</li>
+ * {@linkplain com.tools20022.repository.codeset.VariationType1Code#Decrease
+ * VariationType1Code.Decrease}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VariationType1Code#mmIncrease
- * VariationType1Code.mmIncrease}</li>
+ * {@linkplain com.tools20022.repository.codeset.VariationType1Code#Increase
+ * VariationType1Code.Increase}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.VariationTypeCode
+ * VariationTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of variation."</li>
  * </ul>
  */
-public class VariationType1Code extends VariationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class VariationType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class VariationType1Code extends VariationTypeCode {
 	 * name} = "Decrease"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDecrease = new MMCode() {
+	public static final VariationType1Code Decrease = new VariationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Decrease";
-			owner_lazy = () -> VariationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.VariationType1Code.mmObject();
+			codeName = VariationTypeCode.Decrease.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class VariationType1Code extends VariationTypeCode {
 	 * name} = "Increase"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncrease = new MMCode() {
+	public static final VariationType1Code Increase = new VariationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Increase";
-			owner_lazy = () -> VariationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.VariationType1Code.mmObject();
+			codeName = VariationTypeCode.Increase.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, VariationType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected VariationType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DECR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VariationType1Code";
 				definition = "Specifies the type of variation.";
-				code_lazy = () -> Arrays.asList(VariationType1Code.mmDecrease, VariationType1Code.mmIncrease);
 				trace_lazy = () -> VariationTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.VariationType1Code.Decrease, com.tools20022.repository.codeset.VariationType1Code.Increase);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Decrease.getCodeName().get(), Decrease);
+		codesByName.put(Increase.getCodeName().get(), Increase);
+	}
+
+	public static VariationType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static VariationType1Code[] values() {
+		VariationType1Code[] values = new VariationType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, VariationType1Code> {
+		@Override
+		public VariationType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(VariationType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

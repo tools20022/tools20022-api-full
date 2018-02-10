@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,16 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Choice between the different options to search for an account."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountIdentificationSearchCriteriaChoice", propOrder = {"equal", "containText", "notContainText"})
 public class AccountIdentificationSearchCriteriaChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "EQ", required = true)
 	protected AccountIdentification1Choice equal;
 	/**
-	 * Search for one or more accounts based on exact identification of the
-	 * account(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +105,7 @@ public class AccountIdentificationSearchCriteriaChoice {
 	 */
 	public static final MMMessageAttribute mmEqual = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountIdentificationSearchCriteriaChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentificationSearchCriteriaChoice.mmObject();
 			isDerived = false;
 			xmlTag = "EQ";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,11 +116,11 @@ public class AccountIdentificationSearchCriteriaChoice {
 			complexType_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CTTxt", required = true)
 	protected Max35Text containText;
 	/**
-	 * Search for one or more accounts based on partial identification of the
-	 * account(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,7 +149,7 @@ public class AccountIdentificationSearchCriteriaChoice {
 	 */
 	public static final MMMessageAttribute mmContainText = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountIdentificationSearchCriteriaChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentificationSearchCriteriaChoice.mmObject();
 			isDerived = false;
 			xmlTag = "CTTxt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,11 +160,11 @@ public class AccountIdentificationSearchCriteriaChoice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NCTTxt", required = true)
 	protected Max35Text notContainText;
 	/**
-	 * Search for one or more accounts based on a pattern that cannot be
-	 * contained in the account identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,7 +193,7 @@ public class AccountIdentificationSearchCriteriaChoice {
 	 */
 	public static final MMMessageAttribute mmNotContainText = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountIdentificationSearchCriteriaChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentificationSearchCriteriaChoice.mmObject();
 			isDerived = false;
 			xmlTag = "NCTTxt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,8 +208,9 @@ public class AccountIdentificationSearchCriteriaChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountIdentificationSearchCriteriaChoice.mmEqual, AccountIdentificationSearchCriteriaChoice.mmContainText, AccountIdentificationSearchCriteriaChoice.mmNotContainText);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentificationSearchCriteriaChoice.mmEqual, com.tools20022.repository.choice.AccountIdentificationSearchCriteriaChoice.mmContainText,
+						com.tools20022.repository.choice.AccountIdentificationSearchCriteriaChoice.mmNotContainText);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountIdentificationSearchCriteriaChoice";
 				definition = "Choice between the different options to search for an account.";
@@ -217,30 +219,30 @@ public class AccountIdentificationSearchCriteriaChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "EQ", required = true)
 	public AccountIdentification1Choice getEqual() {
 		return equal;
 	}
 
-	public void setEqual(com.tools20022.repository.choice.AccountIdentification1Choice equal) {
-		this.equal = equal;
+	public AccountIdentificationSearchCriteriaChoice setEqual(com.tools20022.repository.choice.AccountIdentification1Choice equal) {
+		this.equal = Objects.requireNonNull(equal);
+		return this;
 	}
 
-	@XmlElement(name = "CTTxt", required = true)
 	public Max35Text getContainText() {
 		return containText;
 	}
 
-	public void setContainText(Max35Text containText) {
-		this.containText = containText;
+	public AccountIdentificationSearchCriteriaChoice setContainText(Max35Text containText) {
+		this.containText = Objects.requireNonNull(containText);
+		return this;
 	}
 
-	@XmlElement(name = "NCTTxt", required = true)
 	public Max35Text getNotContainText() {
 		return notContainText;
 	}
 
-	public void setNotContainText(Max35Text notContainText) {
-		this.notContainText = notContainText;
+	public AccountIdentificationSearchCriteriaChoice setNotContainText(Max35Text notContainText) {
+		this.notContainText = Objects.requireNonNull(notContainText);
+		return this;
 	}
 }

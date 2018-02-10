@@ -31,6 +31,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -43,8 +44,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Charge11#mmAmountOrRateRule
- * Charge11.mmAmountOrRateRule}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge11#AmountOrRateRule
+ * Charge11.AmountOrRateRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -64,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -77,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Amount of money associated with a service."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Charge11", propOrder = {"amount", "rate", "type"})
 public class Charge11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
-	 * Amount of money asked or paid for the charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +120,7 @@ public class Charge11 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> Charge11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge11.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,10 +131,11 @@ public class Charge11 {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Rate", required = true)
 	protected PercentageRate rate;
 	/**
-	 * Rate used to calculate the amount of the charge or fee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +168,7 @@ public class Charge11 {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
-			componentContext_lazy = () -> Charge11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge11.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,10 +179,11 @@ public class Charge11 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected ChargeType1 type;
 	/**
-	 * Type of service for which a charge is asked or paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,7 +215,7 @@ public class Charge11 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
-			componentContext_lazy = () -> Charge11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge11.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -250,22 +254,22 @@ public class Charge11 {
 	 * definition} = "Either Amount or Rate must be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmAmountOrRateRule = new MMXor() {
+	public static final MMXor AmountOrRateRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountOrRateRule";
 			definition = "Either Amount or Rate must be present, but not both.";
-			messageComponent_lazy = () -> Charge11.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(Charge11.mmAmount, Charge11.mmRate);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.Charge11.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge11.mmAmount, com.tools20022.repository.msg.Charge11.mmRate);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Charge11.mmAmount, Charge11.mmRate, Charge11.mmType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge11.mmAmount, com.tools20022.repository.msg.Charge11.mmRate, com.tools20022.repository.msg.Charge11.mmType);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -276,36 +280,36 @@ public class Charge11 {
 				})).get();
 				name = "Charge11";
 				definition = "Amount of money associated with a service.";
-				xors_lazy = () -> Arrays.asList(Charge11.mmAmountOrRateRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge11.AmountOrRateRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
-		this.amount = amount;
+	public Charge11 setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
 
-	public void setRate(PercentageRate rate) {
-		this.rate = rate;
+	public Charge11 setRate(PercentageRate rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public ChargeType1 getType() {
 		return type;
 	}
 
-	public void setType(com.tools20022.repository.msg.ChargeType1 type) {
-		this.type = type;
+	public Charge11 setType(com.tools20022.repository.msg.ChargeType1 type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 }

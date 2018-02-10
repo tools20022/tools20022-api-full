@@ -24,9 +24,11 @@ import com.tools20022.repository.entity.SystemBusinessInformation;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling4;
 import com.tools20022.repository.msg.GeneralBusinessInformation;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * GeneralBusinessOrError2Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GeneralBusinessOrError4Choice", propOrder = {"businessError", "generalBusiness"})
 public class GeneralBusinessOrError4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BizErr", required = true)
 	protected List<ErrorHandling4> businessError;
 	/**
-	 * Reason the requested business information is not given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -112,7 +115,7 @@ public class GeneralBusinessOrError4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> GeneralBusinessOrError4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.GeneralBusinessOrError4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +127,11 @@ public class GeneralBusinessOrError4Choice {
 			type_lazy = () -> ErrorHandling4.mmObject();
 		}
 	};
+	@XmlElement(name = "GnlBiz", required = true)
 	protected GeneralBusinessInformation generalBusiness;
 	/**
-	 * Requested business information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -159,7 +163,7 @@ public class GeneralBusinessOrError4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmGeneralBusiness = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> GeneralBusinessOrError4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.GeneralBusinessOrError4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "GnlBiz";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,9 +180,9 @@ public class GeneralBusinessOrError4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GeneralBusinessOrError4Choice.mmBusinessError, GeneralBusinessOrError4Choice.mmGeneralBusiness);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneralBusinessOrError4Choice.mmBusinessError, com.tools20022.repository.choice.GeneralBusinessOrError4Choice.mmGeneralBusiness);
 				trace_lazy = () -> SystemBusinessInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GeneralBusinessOrError4Choice";
 				definition = "Reports either on the business information or on a business error.";
@@ -188,21 +192,21 @@ public class GeneralBusinessOrError4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling4> getBusinessError() {
-		return businessError;
+		return businessError == null ? businessError = new ArrayList<>() : businessError;
 	}
 
-	public void setBusinessError(List<ErrorHandling4> businessError) {
-		this.businessError = businessError;
+	public GeneralBusinessOrError4Choice setBusinessError(List<ErrorHandling4> businessError) {
+		this.businessError = Objects.requireNonNull(businessError);
+		return this;
 	}
 
-	@XmlElement(name = "GnlBiz", required = true)
 	public GeneralBusinessInformation getGeneralBusiness() {
 		return generalBusiness;
 	}
 
-	public void setGeneralBusiness(GeneralBusinessInformation generalBusiness) {
-		this.generalBusiness = generalBusiness;
+	public GeneralBusinessOrError4Choice setGeneralBusiness(GeneralBusinessInformation generalBusiness) {
+		this.generalBusiness = Objects.requireNonNull(generalBusiness);
+		return this;
 	}
 }

@@ -29,6 +29,8 @@ import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCredi
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -41,22 +43,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TradeServicesLatestVersion
- * TradeServicesLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion
- * DemandGuaranteesandStandbyLettersofCreditISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "UdrtkgAmdmntRspnNtfctn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -73,6 +59,22 @@ import javax.xml.bind.annotation.*;
  * UndertakingAmendmentResponseNotificationV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion
+ * DemandGuaranteesandStandbyLettersofCreditISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "UdrtkgAmdmntRspnNtfctn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TradeServicesLatestVersion
+ * TradeServicesLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code tsrv.009.001.01}</li>
@@ -88,15 +90,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UndertakingAmendmentResponseNotificationV01", propOrder = {"undertakingAmendmentResponseNotificationDetails", "additionalInformation", "digitalSignature"})
 public class UndertakingAmendmentResponseNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UdrtkgAmdmntRspnNtfctnDtls", required = true)
 	protected Amendment9 undertakingAmendmentResponseNotificationDetails;
 	/**
-	 * Details related to the proposed amendment response notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -136,10 +139,11 @@ public class UndertakingAmendmentResponseNotificationV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected Max2000Text additionalInformation;
 	/**
-	 * Additional information reported by the beneficiary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,10 +182,11 @@ public class UndertakingAmendmentResponseNotificationV01 {
 			}
 		}
 	};
+	@XmlElement(name = "DgtlSgntr")
 	protected PartyAndSignature2 digitalSignature;
 	/**
-	 * Digital signature of the response notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -252,34 +257,34 @@ public class UndertakingAmendmentResponseNotificationV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UdrtkgAmdmntRspnNtfctnDtls", required = true)
 	public Amendment9 getUndertakingAmendmentResponseNotificationDetails() {
 		return undertakingAmendmentResponseNotificationDetails;
 	}
 
-	public void setUndertakingAmendmentResponseNotificationDetails(Amendment9 undertakingAmendmentResponseNotificationDetails) {
-		this.undertakingAmendmentResponseNotificationDetails = undertakingAmendmentResponseNotificationDetails;
+	public UndertakingAmendmentResponseNotificationV01 setUndertakingAmendmentResponseNotificationDetails(Amendment9 undertakingAmendmentResponseNotificationDetails) {
+		this.undertakingAmendmentResponseNotificationDetails = Objects.requireNonNull(undertakingAmendmentResponseNotificationDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public Max2000Text getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<Max2000Text> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(Max2000Text additionalInformation) {
+	public UndertakingAmendmentResponseNotificationV01 setAdditionalInformation(Max2000Text additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 
-	@XmlElement(name = "DgtlSgntr")
-	public PartyAndSignature2 getDigitalSignature() {
-		return digitalSignature;
+	public Optional<PartyAndSignature2> getDigitalSignature() {
+		return digitalSignature == null ? Optional.empty() : Optional.of(digitalSignature);
 	}
 
-	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
+	public UndertakingAmendmentResponseNotificationV01 setDigitalSignature(PartyAndSignature2 digitalSignature) {
 		this.digitalSignature = digitalSignature;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsrv.009.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:tsrv.009.001.01")
 	static public class Document {
 		@XmlElement(name = "UdrtkgAmdmntRspnNtfctn", required = true)
 		public UndertakingAmendmentResponseNotificationV01 messageBody;

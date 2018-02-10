@@ -28,9 +28,8 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information about the securities movement."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecurityMovement1", propOrder = {"movementIdentification", "securityIdentification", "securitiesQuantity", "accountDetails"})
 public class SecurityMovement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MvmntId")
 	protected Max35Text movementIdentification;
 	/**
-	 * Identification of the movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +113,7 @@ public class SecurityMovement1 {
 	 */
 	public static final MMMessageAttribute mmMovementIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityMovement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "MvmntId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +124,11 @@ public class SecurityMovement1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyId", required = true)
 	protected SecurityIdentification7 securityIdentification;
 	/**
-	 * Identification of the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +162,7 @@ public class SecurityMovement1 {
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> SecurityMovement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,10 +173,11 @@ public class SecurityMovement1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesQty", required = true)
 	protected UnitOrFaceAmount1Choice securitiesQuantity;
 	/**
-	 * Quantitty of financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -209,7 +211,7 @@ public class SecurityMovement1 {
 	public static final MMMessageAttribute mmSecuritiesQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
-			componentContext_lazy = () -> SecurityMovement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,10 +222,11 @@ public class SecurityMovement1 {
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctDtls", required = true)
 	protected List<com.tools20022.repository.msg.SecuritiesAccount12> accountDetails;
 	/**
-	 * Provides information about the account which is debited/credited.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -256,7 +259,7 @@ public class SecurityMovement1 {
 	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
-			componentContext_lazy = () -> SecurityMovement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,9 +275,10 @@ public class SecurityMovement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityMovement1.mmMovementIdentification, SecurityMovement1.mmSecurityIdentification, SecurityMovement1.mmSecuritiesQuantity, SecurityMovement1.mmAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityMovement1.mmMovementIdentification, com.tools20022.repository.msg.SecurityMovement1.mmSecurityIdentification,
+						com.tools20022.repository.msg.SecurityMovement1.mmSecuritiesQuantity, com.tools20022.repository.msg.SecurityMovement1.mmAccountDetails);
 				trace_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityMovement1";
 				definition = "Provides information about the securities movement.";
@@ -283,39 +287,39 @@ public class SecurityMovement1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MvmntId")
-	public Max35Text getMovementIdentification() {
-		return movementIdentification;
+	public Optional<Max35Text> getMovementIdentification() {
+		return movementIdentification == null ? Optional.empty() : Optional.of(movementIdentification);
 	}
 
-	public void setMovementIdentification(Max35Text movementIdentification) {
+	public SecurityMovement1 setMovementIdentification(Max35Text movementIdentification) {
 		this.movementIdentification = movementIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification7 getSecurityIdentification() {
 		return securityIdentification;
 	}
 
-	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
-		this.securityIdentification = securityIdentification;
+	public SecurityMovement1 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
+		this.securityIdentification = Objects.requireNonNull(securityIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesQty", required = true)
 	public UnitOrFaceAmount1Choice getSecuritiesQuantity() {
 		return securitiesQuantity;
 	}
 
-	public void setSecuritiesQuantity(UnitOrFaceAmount1Choice securitiesQuantity) {
-		this.securitiesQuantity = securitiesQuantity;
+	public SecurityMovement1 setSecuritiesQuantity(UnitOrFaceAmount1Choice securitiesQuantity) {
+		this.securitiesQuantity = Objects.requireNonNull(securitiesQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "AcctDtls", required = true)
 	public List<SecuritiesAccount12> getAccountDetails() {
-		return accountDetails;
+		return accountDetails == null ? accountDetails = new ArrayList<>() : accountDetails;
 	}
 
-	public void setAccountDetails(List<com.tools20022.repository.msg.SecuritiesAccount12> accountDetails) {
-		this.accountDetails = accountDetails;
+	public SecurityMovement1 setAccountDetails(List<com.tools20022.repository.msg.SecuritiesAccount12> accountDetails) {
+		this.accountDetails = Objects.requireNonNull(accountDetails);
+		return this;
 	}
 }

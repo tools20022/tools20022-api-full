@@ -26,9 +26,8 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -63,23 +62,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TradeServicesManagementPreviousVersion
- * TradeServicesManagementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion
- * TradeServicesManagementISOPreviousversion}</li>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "DataSetSubmissn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -119,6 +101,23 @@ import javax.xml.bind.annotation.*;
  * DataSetSubmissionV04.mmOtherCertificateDataSet}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion
+ * TradeServicesManagementISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "DataSetSubmissn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TradeServicesManagementPreviousVersion
+ * TradeServicesManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code tsmt.014.001.04}</li>
@@ -145,16 +144,17 @@ import javax.xml.bind.annotation.*;
  * DataSetSubmissionV03}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DataSetSubmissionV04", propOrder = {"submissionIdentification", "relatedTransactionReferences", "commonSubmissionReference", "instruction", "buyerBank", "sellerBank", "commercialDataSet", "transportDataSet",
 		"insuranceDataSet", "certificateDataSet", "otherCertificateDataSet"})
 public class DataSetSubmissionV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SubmissnId", required = true)
 	protected MessageIdentification1 submissionIdentification;
 	/**
-	 * Identifies the submitted information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -209,11 +209,11 @@ public class DataSetSubmissionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdTxRefs", required = true)
 	protected List<DataSetSubmissionReferences3> relatedTransactionReferences;
 	/**
-	 * Identifies the transactions that this submission relates to and provides
-	 * associated information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -269,11 +269,11 @@ public class DataSetSubmissionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "CmonSubmissnRef", required = true)
 	protected SimpleIdentificationInformation commonSubmissionReference;
 	/**
-	 * This reference must be used for all data sets belonging to the same
-	 * submission group.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -330,10 +330,11 @@ public class DataSetSubmissionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "Instr", required = true)
 	protected InstructionType3 instruction;
 	/**
-	 * Specifies the instruction given by the submitter.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -388,10 +389,11 @@ public class DataSetSubmissionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "BuyrBk", required = true)
 	protected BICIdentification1 buyerBank;
 	/**
-	 * The financial institution of the buyer, uniquely identified by its BIC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -448,10 +450,11 @@ public class DataSetSubmissionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "SellrBk", required = true)
 	protected BICIdentification1 sellerBank;
 	/**
-	 * The financial institution of the seller, uniquely identified by its BIC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -508,11 +511,11 @@ public class DataSetSubmissionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "ComrclDataSet")
 	protected CommercialDataSet4 commercialDataSet;
 	/**
-	 * Commercial information that is submitted to the matching application for
-	 * processing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -569,11 +572,11 @@ public class DataSetSubmissionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "TrnsprtDataSet")
 	protected TransportDataSet4 transportDataSet;
 	/**
-	 * Transport information that is submitted to the matching application for
-	 * processing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -630,11 +633,11 @@ public class DataSetSubmissionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "InsrncDataSet")
 	protected InsuranceDataSet1 insuranceDataSet;
 	/**
-	 * Insurance information that is submitted to the matching application for
-	 * processing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -691,11 +694,11 @@ public class DataSetSubmissionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "CertDataSet")
 	protected List<CertificateDataSet2> certificateDataSet;
 	/**
-	 * Certificate information that is submitted to the matching application for
-	 * processing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -751,11 +754,11 @@ public class DataSetSubmissionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrCertDataSet")
 	protected List<OtherCertificateDataSet1> otherCertificateDataSet;
 	/**
-	 * Other certificate information that is submitted to the matching
-	 * application for processing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -848,106 +851,106 @@ public class DataSetSubmissionV04 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SubmissnId", required = true)
 	public MessageIdentification1 getSubmissionIdentification() {
 		return submissionIdentification;
 	}
 
-	public void setSubmissionIdentification(MessageIdentification1 submissionIdentification) {
-		this.submissionIdentification = submissionIdentification;
+	public DataSetSubmissionV04 setSubmissionIdentification(MessageIdentification1 submissionIdentification) {
+		this.submissionIdentification = Objects.requireNonNull(submissionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RltdTxRefs", required = true)
 	public List<DataSetSubmissionReferences3> getRelatedTransactionReferences() {
-		return relatedTransactionReferences;
+		return relatedTransactionReferences == null ? relatedTransactionReferences = new ArrayList<>() : relatedTransactionReferences;
 	}
 
-	public void setRelatedTransactionReferences(List<DataSetSubmissionReferences3> relatedTransactionReferences) {
-		this.relatedTransactionReferences = relatedTransactionReferences;
+	public DataSetSubmissionV04 setRelatedTransactionReferences(List<DataSetSubmissionReferences3> relatedTransactionReferences) {
+		this.relatedTransactionReferences = Objects.requireNonNull(relatedTransactionReferences);
+		return this;
 	}
 
-	@XmlElement(name = "CmonSubmissnRef", required = true)
 	public SimpleIdentificationInformation getCommonSubmissionReference() {
 		return commonSubmissionReference;
 	}
 
-	public void setCommonSubmissionReference(SimpleIdentificationInformation commonSubmissionReference) {
-		this.commonSubmissionReference = commonSubmissionReference;
+	public DataSetSubmissionV04 setCommonSubmissionReference(SimpleIdentificationInformation commonSubmissionReference) {
+		this.commonSubmissionReference = Objects.requireNonNull(commonSubmissionReference);
+		return this;
 	}
 
-	@XmlElement(name = "Instr", required = true)
 	public InstructionType3 getInstruction() {
 		return instruction;
 	}
 
-	public void setInstruction(InstructionType3 instruction) {
-		this.instruction = instruction;
+	public DataSetSubmissionV04 setInstruction(InstructionType3 instruction) {
+		this.instruction = Objects.requireNonNull(instruction);
+		return this;
 	}
 
-	@XmlElement(name = "BuyrBk", required = true)
 	public BICIdentification1 getBuyerBank() {
 		return buyerBank;
 	}
 
-	public void setBuyerBank(BICIdentification1 buyerBank) {
-		this.buyerBank = buyerBank;
+	public DataSetSubmissionV04 setBuyerBank(BICIdentification1 buyerBank) {
+		this.buyerBank = Objects.requireNonNull(buyerBank);
+		return this;
 	}
 
-	@XmlElement(name = "SellrBk", required = true)
 	public BICIdentification1 getSellerBank() {
 		return sellerBank;
 	}
 
-	public void setSellerBank(BICIdentification1 sellerBank) {
-		this.sellerBank = sellerBank;
+	public DataSetSubmissionV04 setSellerBank(BICIdentification1 sellerBank) {
+		this.sellerBank = Objects.requireNonNull(sellerBank);
+		return this;
 	}
 
-	@XmlElement(name = "ComrclDataSet")
-	public CommercialDataSet4 getCommercialDataSet() {
-		return commercialDataSet;
+	public Optional<CommercialDataSet4> getCommercialDataSet() {
+		return commercialDataSet == null ? Optional.empty() : Optional.of(commercialDataSet);
 	}
 
-	public void setCommercialDataSet(CommercialDataSet4 commercialDataSet) {
+	public DataSetSubmissionV04 setCommercialDataSet(CommercialDataSet4 commercialDataSet) {
 		this.commercialDataSet = commercialDataSet;
+		return this;
 	}
 
-	@XmlElement(name = "TrnsprtDataSet")
-	public TransportDataSet4 getTransportDataSet() {
-		return transportDataSet;
+	public Optional<TransportDataSet4> getTransportDataSet() {
+		return transportDataSet == null ? Optional.empty() : Optional.of(transportDataSet);
 	}
 
-	public void setTransportDataSet(TransportDataSet4 transportDataSet) {
+	public DataSetSubmissionV04 setTransportDataSet(TransportDataSet4 transportDataSet) {
 		this.transportDataSet = transportDataSet;
+		return this;
 	}
 
-	@XmlElement(name = "InsrncDataSet")
-	public InsuranceDataSet1 getInsuranceDataSet() {
-		return insuranceDataSet;
+	public Optional<InsuranceDataSet1> getInsuranceDataSet() {
+		return insuranceDataSet == null ? Optional.empty() : Optional.of(insuranceDataSet);
 	}
 
-	public void setInsuranceDataSet(InsuranceDataSet1 insuranceDataSet) {
+	public DataSetSubmissionV04 setInsuranceDataSet(InsuranceDataSet1 insuranceDataSet) {
 		this.insuranceDataSet = insuranceDataSet;
+		return this;
 	}
 
-	@XmlElement(name = "CertDataSet")
 	public List<CertificateDataSet2> getCertificateDataSet() {
-		return certificateDataSet;
+		return certificateDataSet == null ? certificateDataSet = new ArrayList<>() : certificateDataSet;
 	}
 
-	public void setCertificateDataSet(List<CertificateDataSet2> certificateDataSet) {
-		this.certificateDataSet = certificateDataSet;
+	public DataSetSubmissionV04 setCertificateDataSet(List<CertificateDataSet2> certificateDataSet) {
+		this.certificateDataSet = Objects.requireNonNull(certificateDataSet);
+		return this;
 	}
 
-	@XmlElement(name = "OthrCertDataSet")
 	public List<OtherCertificateDataSet1> getOtherCertificateDataSet() {
-		return otherCertificateDataSet;
+		return otherCertificateDataSet == null ? otherCertificateDataSet = new ArrayList<>() : otherCertificateDataSet;
 	}
 
-	public void setOtherCertificateDataSet(List<OtherCertificateDataSet1> otherCertificateDataSet) {
-		this.otherCertificateDataSet = otherCertificateDataSet;
+	public DataSetSubmissionV04 setOtherCertificateDataSet(List<OtherCertificateDataSet1> otherCertificateDataSet) {
+		this.otherCertificateDataSet = Objects.requireNonNull(otherCertificateDataSet);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.014.04.04")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.014.001.04")
 	static public class Document {
 		@XmlElement(name = "DataSetSubmissn", required = true)
 		public DataSetSubmissionV04 messageBody;

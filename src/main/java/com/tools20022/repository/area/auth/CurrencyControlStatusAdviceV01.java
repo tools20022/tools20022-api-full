@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.CurrencyControlPackageStatus1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CrossBorderTransactionsCurrencyControlReportingISOLatestversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -46,22 +48,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
- * AuthoritiesLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CrossBorderTransactionsCurrencyControlReportingISOLatestversion
- * CrossBorderTransactionsCurrencyControlReportingISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CcyCtrlStsAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -80,6 +66,22 @@ import javax.xml.bind.annotation.*;
  * CurrencyControlStatusAdviceV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CrossBorderTransactionsCurrencyControlReportingISOLatestversion
+ * CrossBorderTransactionsCurrencyControlReportingISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CcyCtrlStsAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
+ * AuthoritiesLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code auth.027.001.01}</li>
@@ -95,15 +97,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CurrencyControlStatusAdviceV01", propOrder = {"groupHeader", "groupStatus", "packageStatus", "supplementaryData"})
 public class CurrencyControlStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected CurrencyControlHeader2 groupHeader;
 	/**
-	 * Characteristics shared by all individual items included in the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,10 +148,11 @@ public class CurrencyControlStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "GrpSts", required = true)
 	protected List<CurrencyControlGroupStatus1> groupStatus;
 	/**
-	 * Provides the group status for the global message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,11 +191,11 @@ public class CurrencyControlStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "PackgSts")
 	protected List<CurrencyControlPackageStatus1> packageStatus;
 	/**
-	 * Provides the status of the package in the message, which may contain the
-	 * individual records.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -232,11 +236,11 @@ public class CurrencyControlStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -308,43 +312,43 @@ public class CurrencyControlStatusAdviceV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public CurrencyControlHeader2 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(CurrencyControlHeader2 groupHeader) {
-		this.groupHeader = groupHeader;
+	public CurrencyControlStatusAdviceV01 setGroupHeader(CurrencyControlHeader2 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "GrpSts", required = true)
 	public List<CurrencyControlGroupStatus1> getGroupStatus() {
-		return groupStatus;
+		return groupStatus == null ? groupStatus = new ArrayList<>() : groupStatus;
 	}
 
-	public void setGroupStatus(List<CurrencyControlGroupStatus1> groupStatus) {
-		this.groupStatus = groupStatus;
+	public CurrencyControlStatusAdviceV01 setGroupStatus(List<CurrencyControlGroupStatus1> groupStatus) {
+		this.groupStatus = Objects.requireNonNull(groupStatus);
+		return this;
 	}
 
-	@XmlElement(name = "PackgSts")
 	public List<CurrencyControlPackageStatus1> getPackageStatus() {
-		return packageStatus;
+		return packageStatus == null ? packageStatus = new ArrayList<>() : packageStatus;
 	}
 
-	public void setPackageStatus(List<CurrencyControlPackageStatus1> packageStatus) {
-		this.packageStatus = packageStatus;
+	public CurrencyControlStatusAdviceV01 setPackageStatus(List<CurrencyControlPackageStatus1> packageStatus) {
+		this.packageStatus = Objects.requireNonNull(packageStatus);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public CurrencyControlStatusAdviceV01 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.027.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:auth.027.001.01")
 	static public class Document {
 		@XmlElement(name = "CcyCtrlStsAdvc", required = true)
 		public CurrencyControlStatusAdviceV01 messageBody;

@@ -25,6 +25,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Cash movements from or to a fund as a result of investment funds
@@ -63,111 +65,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.FundsCashFlow#mmCashFlowQuantity
  * FundsCashFlow.mmCashFlowQuantity}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashInForecast2
- * CashInForecast2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOutForecast2
- * CashOutForecast2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetCashForecast1
- * NetCashForecast1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundCashForecast1
- * FundCashForecast1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FundConfirmedCashForecastReport1
- * FundConfirmedCashForecastReport1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashInForecast4
- * CashInForecast4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOutForecast4
- * CashOutForecast4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetCashForecast2
- * NetCashForecast2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundCashForecast3
- * FundCashForecast3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetCashForecast3
- * NetCashForecast3}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FundConfirmedCashForecastReport2
- * FundConfirmedCashForecastReport2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundCashInBreakdown1
- * FundCashInBreakdown1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashInForecast1
- * CashInForecast1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundCashOutBreakdown1
- * FundCashOutBreakdown1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOutForecast1
- * CashOutForecast1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ForecastParameter2
- * ForecastParameter2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundCashForecast2
- * FundCashForecast2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundCashInBreakdown2
- * FundCashInBreakdown2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashInForecast3
- * CashInForecast3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundCashOutBreakdown2
- * FundCashOutBreakdown2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOutForecast3
- * CashOutForecast3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundCashForecast4
- * FundCashForecast4}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport2
- * FundDetailedConfirmedCashForecastReport2}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport1
- * FundDetailedConfirmedCashForecastReport1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ForecastParameter1
- * ForecastParameter1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EstimatedFundCashForecast2
- * EstimatedFundCashForecast2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EstimatedFundCashForecast4
- * EstimatedFundCashForecast4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EstimatedFundCashForecast1
- * EstimatedFundCashForecast1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EstimatedFundCashForecast3
- * EstimatedFundCashForecast3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundCashForecast7
- * FundCashForecast7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fund2 Fund2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EstimatedFundCashForecast6
- * EstimatedFundCashForecast6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fund1 Fund1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FundConfirmedCashForecastReport3
- * FundConfirmedCashForecastReport3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundCashForecast6
- * FundCashForecast6}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport3
- * FundDetailedConfirmedCashForecastReport3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EstimatedFundCashForecast5
- * EstimatedFundCashForecast5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOutForecast5
- * CashOutForecast5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundBalance1 FundBalance1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundCashOutBreakdown3
- * FundCashOutBreakdown3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetCashForecast4
- * NetCashForecast4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashInForecast5
- * CashInForecast5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FundCashInBreakdown3
- * FundCashInBreakdown3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOutForecast6
- * CashOutForecast6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashInForecast6
- * CashInForecast6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fund3 Fund3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fund4 Fund4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NetCashForecast5
- * NetCashForecast5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashInOutForecast7
- * CashInOutForecast7}</li>
  * </ul>
  * </li>
  * <li>
@@ -342,10 +239,115 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CashInForecast2
+ * CashInForecast2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOutForecast2
+ * CashOutForecast2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetCashForecast1
+ * NetCashForecast1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundCashForecast1
+ * FundCashForecast1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FundConfirmedCashForecastReport1
+ * FundConfirmedCashForecastReport1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashInForecast4
+ * CashInForecast4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOutForecast4
+ * CashOutForecast4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetCashForecast2
+ * NetCashForecast2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundCashForecast3
+ * FundCashForecast3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetCashForecast3
+ * NetCashForecast3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FundConfirmedCashForecastReport2
+ * FundConfirmedCashForecastReport2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundCashInBreakdown1
+ * FundCashInBreakdown1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashInForecast1
+ * CashInForecast1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundCashOutBreakdown1
+ * FundCashOutBreakdown1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOutForecast1
+ * CashOutForecast1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ForecastParameter2
+ * ForecastParameter2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundCashForecast2
+ * FundCashForecast2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundCashInBreakdown2
+ * FundCashInBreakdown2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashInForecast3
+ * CashInForecast3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundCashOutBreakdown2
+ * FundCashOutBreakdown2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOutForecast3
+ * CashOutForecast3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundCashForecast4
+ * FundCashForecast4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport2
+ * FundDetailedConfirmedCashForecastReport2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport1
+ * FundDetailedConfirmedCashForecastReport1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ForecastParameter1
+ * ForecastParameter1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EstimatedFundCashForecast2
+ * EstimatedFundCashForecast2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EstimatedFundCashForecast4
+ * EstimatedFundCashForecast4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EstimatedFundCashForecast1
+ * EstimatedFundCashForecast1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EstimatedFundCashForecast3
+ * EstimatedFundCashForecast3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundCashForecast7
+ * FundCashForecast7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fund2 Fund2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EstimatedFundCashForecast6
+ * EstimatedFundCashForecast6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fund1 Fund1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FundConfirmedCashForecastReport3
+ * FundConfirmedCashForecastReport3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundCashForecast6
+ * FundCashForecast6}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport3
+ * FundDetailedConfirmedCashForecastReport3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EstimatedFundCashForecast5
+ * EstimatedFundCashForecast5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOutForecast5
+ * CashOutForecast5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundBalance1 FundBalance1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundCashOutBreakdown3
+ * FundCashOutBreakdown3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetCashForecast4
+ * NetCashForecast4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashInForecast5
+ * CashInForecast5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FundCashInBreakdown3
+ * FundCashInBreakdown3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOutForecast6
+ * CashOutForecast6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashInForecast6
+ * CashInForecast6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fund3 Fund3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fund4 Fund4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NetCashForecast5
+ * NetCashForecast5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashInOutForecast7
+ * CashInOutForecast7}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -363,9 +365,8 @@ public class FundsCashFlow {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected YesNoIndicator exceptionalCashFlowIndicator;
 	/**
-	 * Indicates whether the cash flow is exceptional , eg, extraordinary cash
-	 * amounts in or out.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -477,8 +478,8 @@ public class FundsCashFlow {
 					EstimatedFundCashForecast1.mmExceptionalNetCashFlowIndicator, EstimatedFundCashForecast3.mmExceptionalNetCashFlowIndicator, FundCashForecast7.mmExceptionalNetCashFlowIndicator,
 					EstimatedFundCashForecast6.mmExceptionalNetCashFlowIndicator, FundCashForecast6.mmExceptionalNetCashFlowIndicator, EstimatedFundCashForecast5.mmExceptionalNetCashFlowIndicator,
 					CashOutForecast5.mmExceptionalCashFlowIndicator, CashInForecast5.mmExceptionalCashFlowIndicator, CashOutForecast6.mmExceptionalCashFlowIndicator, CashInForecast6.mmExceptionalCashFlowIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExceptionalCashFlowIndicator";
 			definition = "Indicates whether the cash flow is exceptional , eg, extraordinary cash amounts in or out.";
@@ -497,9 +498,8 @@ public class FundsCashFlow {
 	};
 	protected FlowDirectionTypeCode flowDirection;
 	/**
-	 * Specifies the direction of the cash flow from the perspective of the
-	 * fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -548,8 +548,8 @@ public class FundsCashFlow {
 	public static final MMBusinessAttribute mmFlowDirection = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetCashForecast1.mmFlowDirection, NetCashForecast2.mmFlowDirection, NetCashForecast3.mmFlowDirection, NetCashForecast4.mmFlowDirection, NetCashForecast5.mmFlowDirection);
-			elementContext_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FlowDirection";
 			definition = "Specifies the direction of the cash flow from the perspective of the fund.";
@@ -568,8 +568,8 @@ public class FundsCashFlow {
 	};
 	protected BookEntry fundSubscriptionAccountEntry;
 	/**
-	 * Account entry which is linked to a fund subscription process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -603,8 +603,8 @@ public class FundsCashFlow {
 	 */
 	public static final MMBusinessAssociationEnd mmFundSubscriptionAccountEntry = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundSubscriptionAccountEntry";
 			definition = "Account entry which is linked to a fund subscription process.";
@@ -617,8 +617,8 @@ public class FundsCashFlow {
 	};
 	protected BookEntry fundRedemptionAccountEntry;
 	/**
-	 * Account entry which is linked to a fund redemption process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -652,8 +652,8 @@ public class FundsCashFlow {
 	 */
 	public static final MMBusinessAssociationEnd mmFundRedemptionAccountEntry = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundRedemptionAccountEntry";
 			definition = "Account entry which is linked to a fund redemption process.";
@@ -666,8 +666,8 @@ public class FundsCashFlow {
 	};
 	protected InvestmentFundOrderExecution relatedOrder;
 	/**
-	 * Trade which is the source for the calculation of the cash flow movements.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -703,8 +703,8 @@ public class FundsCashFlow {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOrder";
 			definition = "Trade which is the source for the calculation of the cash flow movements.";
@@ -717,8 +717,8 @@ public class FundsCashFlow {
 	};
 	protected YesNoIndicator netIndicator;
 	/**
-	 * Indicates whether the cash flow is the result of netting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -745,8 +745,8 @@ public class FundsCashFlow {
 	 */
 	public static final MMBusinessAttribute mmNetIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetIndicator";
 			definition = "Indicates whether the cash flow is the result of netting.";
@@ -765,8 +765,8 @@ public class FundsCashFlow {
 	};
 	protected NetAssetValueCalculation netAssetValueCalculation;
 	/**
-	 * Net asset value incorporating the net cash flow for a valuation date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -801,8 +801,8 @@ public class FundsCashFlow {
 	 */
 	public static final MMBusinessAssociationEnd mmNetAssetValueCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAssetValueCalculation";
 			definition = "Net asset value incorporating the net cash flow for a valuation date.";
@@ -815,8 +815,8 @@ public class FundsCashFlow {
 	};
 	protected SecuritiesQuantity cashFlowQuantity;
 	/**
-	 * Value and quantity of the cash flow.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -849,8 +849,8 @@ public class FundsCashFlow {
 	 */
 	public static final MMBusinessAssociationEnd mmCashFlowQuantity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashFlowQuantity";
 			definition = "Value and quantity of the cash flow.";
@@ -865,7 +865,7 @@ public class FundsCashFlow {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundsCashFlow";
 				definition = "Cash movements from or to a fund as a result of investment funds transactions, for example, subscriptions or redemptions.";
@@ -914,63 +914,71 @@ public class FundsCashFlow {
 		return exceptionalCashFlowIndicator;
 	}
 
-	public void setExceptionalCashFlowIndicator(YesNoIndicator exceptionalCashFlowIndicator) {
-		this.exceptionalCashFlowIndicator = exceptionalCashFlowIndicator;
+	public FundsCashFlow setExceptionalCashFlowIndicator(YesNoIndicator exceptionalCashFlowIndicator) {
+		this.exceptionalCashFlowIndicator = Objects.requireNonNull(exceptionalCashFlowIndicator);
+		return this;
 	}
 
 	public FlowDirectionTypeCode getFlowDirection() {
 		return flowDirection;
 	}
 
-	public void setFlowDirection(FlowDirectionTypeCode flowDirection) {
-		this.flowDirection = flowDirection;
+	public FundsCashFlow setFlowDirection(FlowDirectionTypeCode flowDirection) {
+		this.flowDirection = Objects.requireNonNull(flowDirection);
+		return this;
 	}
 
-	public BookEntry getFundSubscriptionAccountEntry() {
-		return fundSubscriptionAccountEntry;
+	public Optional<BookEntry> getFundSubscriptionAccountEntry() {
+		return fundSubscriptionAccountEntry == null ? Optional.empty() : Optional.of(fundSubscriptionAccountEntry);
 	}
 
-	public void setFundSubscriptionAccountEntry(com.tools20022.repository.entity.BookEntry fundSubscriptionAccountEntry) {
+	public FundsCashFlow setFundSubscriptionAccountEntry(com.tools20022.repository.entity.BookEntry fundSubscriptionAccountEntry) {
 		this.fundSubscriptionAccountEntry = fundSubscriptionAccountEntry;
+		return this;
 	}
 
-	public BookEntry getFundRedemptionAccountEntry() {
-		return fundRedemptionAccountEntry;
+	public Optional<BookEntry> getFundRedemptionAccountEntry() {
+		return fundRedemptionAccountEntry == null ? Optional.empty() : Optional.of(fundRedemptionAccountEntry);
 	}
 
-	public void setFundRedemptionAccountEntry(com.tools20022.repository.entity.BookEntry fundRedemptionAccountEntry) {
+	public FundsCashFlow setFundRedemptionAccountEntry(com.tools20022.repository.entity.BookEntry fundRedemptionAccountEntry) {
 		this.fundRedemptionAccountEntry = fundRedemptionAccountEntry;
+		return this;
 	}
 
 	public InvestmentFundOrderExecution getRelatedOrder() {
 		return relatedOrder;
 	}
 
-	public void setRelatedOrder(com.tools20022.repository.entity.InvestmentFundOrderExecution relatedOrder) {
-		this.relatedOrder = relatedOrder;
+	public FundsCashFlow setRelatedOrder(com.tools20022.repository.entity.InvestmentFundOrderExecution relatedOrder) {
+		this.relatedOrder = Objects.requireNonNull(relatedOrder);
+		return this;
 	}
 
 	public YesNoIndicator getNetIndicator() {
 		return netIndicator;
 	}
 
-	public void setNetIndicator(YesNoIndicator netIndicator) {
-		this.netIndicator = netIndicator;
+	public FundsCashFlow setNetIndicator(YesNoIndicator netIndicator) {
+		this.netIndicator = Objects.requireNonNull(netIndicator);
+		return this;
 	}
 
 	public NetAssetValueCalculation getNetAssetValueCalculation() {
 		return netAssetValueCalculation;
 	}
 
-	public void setNetAssetValueCalculation(com.tools20022.repository.entity.NetAssetValueCalculation netAssetValueCalculation) {
-		this.netAssetValueCalculation = netAssetValueCalculation;
+	public FundsCashFlow setNetAssetValueCalculation(com.tools20022.repository.entity.NetAssetValueCalculation netAssetValueCalculation) {
+		this.netAssetValueCalculation = Objects.requireNonNull(netAssetValueCalculation);
+		return this;
 	}
 
 	public SecuritiesQuantity getCashFlowQuantity() {
 		return cashFlowQuantity;
 	}
 
-	public void setCashFlowQuantity(com.tools20022.repository.entity.SecuritiesQuantity cashFlowQuantity) {
-		this.cashFlowQuantity = cashFlowQuantity;
+	public FundsCashFlow setCashFlowQuantity(com.tools20022.repository.entity.SecuritiesQuantity cashFlowQuantity) {
+		this.cashFlowQuantity = Objects.requireNonNull(cashFlowQuantity);
+		return this;
 	}
 }

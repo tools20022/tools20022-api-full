@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.Percentage;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Media item that are deposited."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMDepositedMedia2", propOrder = {"count", "unitValue", "currency", "codeLineFormat", "codeLine", "scannedValue", "confidenceLevel"})
 public class ATMDepositedMedia2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cnt")
 	protected Number count;
 	/**
-	 * Number of deposit media.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +114,7 @@ public class ATMDepositedMedia2 {
 	 */
 	public static final MMMessageAttribute mmCount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia2.mmObject();
 			isDerived = false;
 			xmlTag = "Cnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,11 +125,11 @@ public class ATMDepositedMedia2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "UnitVal")
 	protected ImpliedCurrencyAndAmount unitValue;
 	/**
-	 * Amount or denomination of one media item, if the media type is valued or
-	 * entered by the customer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +159,7 @@ public class ATMDepositedMedia2 {
 	 */
 	public static final MMMessageAttribute mmUnitValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia2.mmObject();
 			isDerived = false;
 			xmlTag = "UnitVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,10 +170,11 @@ public class ATMDepositedMedia2 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected ActiveCurrencyCode currency;
 	/**
-	 * Currency of media items, if valued and different from base currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,7 +203,7 @@ public class ATMDepositedMedia2 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia2.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,10 +214,11 @@ public class ATMDepositedMedia2 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CdLineFrmt")
 	protected CheckCodeLine1Code codeLineFormat;
 	/**
-	 * Format of the check code line.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -242,7 +246,7 @@ public class ATMDepositedMedia2 {
 	 */
 	public static final MMMessageAttribute mmCodeLineFormat = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia2.mmObject();
 			isDerived = false;
 			xmlTag = "CdLineFrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -253,10 +257,11 @@ public class ATMDepositedMedia2 {
 			simpleType_lazy = () -> CheckCodeLine1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "CdLine")
 	protected Max70Text codeLine;
 	/**
-	 * Check code line.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -283,7 +288,7 @@ public class ATMDepositedMedia2 {
 	 */
 	public static final MMMessageAttribute mmCodeLine = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia2.mmObject();
 			isDerived = false;
 			xmlTag = "CdLine";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -294,10 +299,11 @@ public class ATMDepositedMedia2 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ScnndVal")
 	protected ImpliedCurrencyAndAmount scannedValue;
 	/**
-	 * Check amount scanned by the check reader.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -325,7 +331,7 @@ public class ATMDepositedMedia2 {
 	 */
 	public static final MMMessageAttribute mmScannedValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia2.mmObject();
 			isDerived = false;
 			xmlTag = "ScnndVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -336,10 +342,11 @@ public class ATMDepositedMedia2 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CnfdncLvl")
 	protected Percentage confidenceLevel;
 	/**
-	 * Percentage of the confidence in the check amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -366,7 +373,7 @@ public class ATMDepositedMedia2 {
 	 */
 	public static final MMMessageAttribute mmConfidenceLevel = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia2.mmObject();
 			isDerived = false;
 			xmlTag = "CnfdncLvl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -381,9 +388,10 @@ public class ATMDepositedMedia2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMDepositedMedia2.mmCount, ATMDepositedMedia2.mmUnitValue, ATMDepositedMedia2.mmCurrency, ATMDepositedMedia2.mmCodeLineFormat, ATMDepositedMedia2.mmCodeLine,
-						ATMDepositedMedia2.mmScannedValue, ATMDepositedMedia2.mmConfidenceLevel);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDepositedMedia2.mmCount, com.tools20022.repository.msg.ATMDepositedMedia2.mmUnitValue, com.tools20022.repository.msg.ATMDepositedMedia2.mmCurrency,
+						com.tools20022.repository.msg.ATMDepositedMedia2.mmCodeLineFormat, com.tools20022.repository.msg.ATMDepositedMedia2.mmCodeLine, com.tools20022.repository.msg.ATMDepositedMedia2.mmScannedValue,
+						com.tools20022.repository.msg.ATMDepositedMedia2.mmConfidenceLevel);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMDepositedMedia2";
 				definition = "Media item that are deposited.";
@@ -392,66 +400,66 @@ public class ATMDepositedMedia2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cnt")
-	public Number getCount() {
-		return count;
+	public Optional<Number> getCount() {
+		return count == null ? Optional.empty() : Optional.of(count);
 	}
 
-	public void setCount(Number count) {
+	public ATMDepositedMedia2 setCount(Number count) {
 		this.count = count;
+		return this;
 	}
 
-	@XmlElement(name = "UnitVal")
-	public ImpliedCurrencyAndAmount getUnitValue() {
-		return unitValue;
+	public Optional<ImpliedCurrencyAndAmount> getUnitValue() {
+		return unitValue == null ? Optional.empty() : Optional.of(unitValue);
 	}
 
-	public void setUnitValue(ImpliedCurrencyAndAmount unitValue) {
+	public ATMDepositedMedia2 setUnitValue(ImpliedCurrencyAndAmount unitValue) {
 		this.unitValue = unitValue;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public ActiveCurrencyCode getCurrency() {
-		return currency;
+	public Optional<ActiveCurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(ActiveCurrencyCode currency) {
+	public ATMDepositedMedia2 setCurrency(ActiveCurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "CdLineFrmt")
-	public CheckCodeLine1Code getCodeLineFormat() {
-		return codeLineFormat;
+	public Optional<CheckCodeLine1Code> getCodeLineFormat() {
+		return codeLineFormat == null ? Optional.empty() : Optional.of(codeLineFormat);
 	}
 
-	public void setCodeLineFormat(CheckCodeLine1Code codeLineFormat) {
+	public ATMDepositedMedia2 setCodeLineFormat(CheckCodeLine1Code codeLineFormat) {
 		this.codeLineFormat = codeLineFormat;
+		return this;
 	}
 
-	@XmlElement(name = "CdLine")
-	public Max70Text getCodeLine() {
-		return codeLine;
+	public Optional<Max70Text> getCodeLine() {
+		return codeLine == null ? Optional.empty() : Optional.of(codeLine);
 	}
 
-	public void setCodeLine(Max70Text codeLine) {
+	public ATMDepositedMedia2 setCodeLine(Max70Text codeLine) {
 		this.codeLine = codeLine;
+		return this;
 	}
 
-	@XmlElement(name = "ScnndVal")
-	public ImpliedCurrencyAndAmount getScannedValue() {
-		return scannedValue;
+	public Optional<ImpliedCurrencyAndAmount> getScannedValue() {
+		return scannedValue == null ? Optional.empty() : Optional.of(scannedValue);
 	}
 
-	public void setScannedValue(ImpliedCurrencyAndAmount scannedValue) {
+	public ATMDepositedMedia2 setScannedValue(ImpliedCurrencyAndAmount scannedValue) {
 		this.scannedValue = scannedValue;
+		return this;
 	}
 
-	@XmlElement(name = "CnfdncLvl")
-	public Percentage getConfidenceLevel() {
-		return confidenceLevel;
+	public Optional<Percentage> getConfidenceLevel() {
+		return confidenceLevel == null ? Optional.empty() : Optional.of(confidenceLevel);
 	}
 
-	public void setConfidenceLevel(Percentage confidenceLevel) {
+	public ATMDepositedMedia2 setConfidenceLevel(Percentage confidenceLevel) {
 		this.confidenceLevel = confidenceLevel;
+		return this;
 	}
 }

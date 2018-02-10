@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.TradingMarket;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +70,22 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintValidateAdmissionIssuerRule#forTradingVenueAttributes1
+ * ConstraintValidateAdmissionIssuerRule.forTradingVenueAttributes1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintValidMICRule#forTradingVenueAttributes1
+ * ConstraintValidMICRule.forTradingVenueAttributes1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintValidTerminationDateRule#forTradingVenueAttributes1
+ * ConstraintValidTerminationDateRule.forTradingVenueAttributes1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,16 +96,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Traded venue related fields."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TradingVenueAttributes1", propOrder = {"identification", "issuerRequest", "admissionApprovalDateByIssuer", "requestForAdmissionDate", "firstTradeDate", "terminationDate"})
 public class TradingVenueAttributes1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected MICIdentifier identification;
 	/**
-	 * Segment MIC for the trading venue or systematic internaliser, where
-	 * applicable, otherwise the operating MIC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,7 +141,7 @@ public class TradingVenueAttributes1 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
-			componentContext_lazy = () -> TradingVenueAttributes1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingVenueAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,12 +152,11 @@ public class TradingVenueAttributes1 {
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "IssrReq", required = true)
 	protected TrueFalseIndicator issuerRequest;
 	/**
-	 * Indicates whether the issuer of the financial instrument has requested or
-	 * approved the trading or admission to trading of their financial
-	 * instruments on a trading venue.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +186,7 @@ public class TradingVenueAttributes1 {
 	 */
 	public static final MMMessageAttribute mmIssuerRequest = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradingVenueAttributes1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingVenueAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "IssrReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,11 +197,11 @@ public class TradingVenueAttributes1 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AdmssnApprvlDtByIssr")
 	protected ISODateTime admissionApprovalDateByIssuer;
 	/**
-	 * Date and time the issuer has approved the admission to trading or trading
-	 * of its financial instruments on the trading venue.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,7 +230,7 @@ public class TradingVenueAttributes1 {
 	 */
 	public static final MMMessageAttribute mmAdmissionApprovalDateByIssuer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradingVenueAttributes1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingVenueAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "AdmssnApprvlDtByIssr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,11 +241,11 @@ public class TradingVenueAttributes1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqForAdmssnDt")
 	protected ISODateTime requestForAdmissionDate;
 	/**
-	 * Date and time when the request for admission on the trading venue was
-	 * made for the instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,7 +274,7 @@ public class TradingVenueAttributes1 {
 	 */
 	public static final MMMessageAttribute mmRequestForAdmissionDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradingVenueAttributes1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingVenueAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqForAdmssnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,12 +285,11 @@ public class TradingVenueAttributes1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "FrstTradDt")
 	protected ISODateTime firstTradeDate;
 	/**
-	 * Date and time of the admission to trading on the trading venue or the
-	 * date and time when the instrument was first traded or an order or quote
-	 * was first received by the trading venue.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -304,7 +318,7 @@ public class TradingVenueAttributes1 {
 	 */
 	public static final MMMessageAttribute mmFirstTradeDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradingVenueAttributes1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingVenueAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "FrstTradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -315,12 +329,11 @@ public class TradingVenueAttributes1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "TermntnDt")
 	protected ISODateTime terminationDate;
 	/**
-	 * Date and time when the financial instrument ceases to be traded or to be
-	 * admitted to trading on the trading venue. Where this date and time is
-	 * unavailable, the field shall not be populated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -349,7 +362,7 @@ public class TradingVenueAttributes1 {
 	 */
 	public static final MMMessageAttribute mmTerminationDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradingVenueAttributes1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingVenueAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "TermntnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -364,10 +377,13 @@ public class TradingVenueAttributes1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TradingVenueAttributes1.mmIdentification, TradingVenueAttributes1.mmIssuerRequest, TradingVenueAttributes1.mmAdmissionApprovalDateByIssuer,
-						TradingVenueAttributes1.mmRequestForAdmissionDate, TradingVenueAttributes1.mmFirstTradeDate, TradingVenueAttributes1.mmTerminationDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradingVenueAttributes1.mmIdentification, com.tools20022.repository.msg.TradingVenueAttributes1.mmIssuerRequest,
+						com.tools20022.repository.msg.TradingVenueAttributes1.mmAdmissionApprovalDateByIssuer, com.tools20022.repository.msg.TradingVenueAttributes1.mmRequestForAdmissionDate,
+						com.tools20022.repository.msg.TradingVenueAttributes1.mmFirstTradeDate, com.tools20022.repository.msg.TradingVenueAttributes1.mmTerminationDate);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintValidateAdmissionIssuerRule.forTradingVenueAttributes1,
+						com.tools20022.repository.constraints.ConstraintValidMICRule.forTradingVenueAttributes1, com.tools20022.repository.constraints.ConstraintValidTerminationDateRule.forTradingVenueAttributes1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingVenueAttributes1";
 				definition = "Traded venue related fields.";
@@ -376,57 +392,57 @@ public class TradingVenueAttributes1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public MICIdentifier getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(MICIdentifier identification) {
-		this.identification = identification;
+	public TradingVenueAttributes1 setIdentification(MICIdentifier identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "IssrReq", required = true)
 	public TrueFalseIndicator getIssuerRequest() {
 		return issuerRequest;
 	}
 
-	public void setIssuerRequest(TrueFalseIndicator issuerRequest) {
-		this.issuerRequest = issuerRequest;
+	public TradingVenueAttributes1 setIssuerRequest(TrueFalseIndicator issuerRequest) {
+		this.issuerRequest = Objects.requireNonNull(issuerRequest);
+		return this;
 	}
 
-	@XmlElement(name = "AdmssnApprvlDtByIssr")
-	public ISODateTime getAdmissionApprovalDateByIssuer() {
-		return admissionApprovalDateByIssuer;
+	public Optional<ISODateTime> getAdmissionApprovalDateByIssuer() {
+		return admissionApprovalDateByIssuer == null ? Optional.empty() : Optional.of(admissionApprovalDateByIssuer);
 	}
 
-	public void setAdmissionApprovalDateByIssuer(ISODateTime admissionApprovalDateByIssuer) {
+	public TradingVenueAttributes1 setAdmissionApprovalDateByIssuer(ISODateTime admissionApprovalDateByIssuer) {
 		this.admissionApprovalDateByIssuer = admissionApprovalDateByIssuer;
+		return this;
 	}
 
-	@XmlElement(name = "ReqForAdmssnDt")
-	public ISODateTime getRequestForAdmissionDate() {
-		return requestForAdmissionDate;
+	public Optional<ISODateTime> getRequestForAdmissionDate() {
+		return requestForAdmissionDate == null ? Optional.empty() : Optional.of(requestForAdmissionDate);
 	}
 
-	public void setRequestForAdmissionDate(ISODateTime requestForAdmissionDate) {
+	public TradingVenueAttributes1 setRequestForAdmissionDate(ISODateTime requestForAdmissionDate) {
 		this.requestForAdmissionDate = requestForAdmissionDate;
+		return this;
 	}
 
-	@XmlElement(name = "FrstTradDt")
-	public ISODateTime getFirstTradeDate() {
-		return firstTradeDate;
+	public Optional<ISODateTime> getFirstTradeDate() {
+		return firstTradeDate == null ? Optional.empty() : Optional.of(firstTradeDate);
 	}
 
-	public void setFirstTradeDate(ISODateTime firstTradeDate) {
+	public TradingVenueAttributes1 setFirstTradeDate(ISODateTime firstTradeDate) {
 		this.firstTradeDate = firstTradeDate;
+		return this;
 	}
 
-	@XmlElement(name = "TermntnDt")
-	public ISODateTime getTerminationDate() {
-		return terminationDate;
+	public Optional<ISODateTime> getTerminationDate() {
+		return terminationDate == null ? Optional.empty() : Optional.of(terminationDate);
 	}
 
-	public void setTerminationDate(ISODateTime terminationDate) {
+	public TradingVenueAttributes1 setTerminationDate(ISODateTime terminationDate) {
 		this.terminationDate = terminationDate;
+		return this;
 	}
 }

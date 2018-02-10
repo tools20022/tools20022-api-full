@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DistributionTypeCode;
+import com.tools20022.repository.codeset.DistributionType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the proceeds of the event will be distributed on a rolling
@@ -31,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DistributionTypeCode
- * DistributionTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionType2Code#mmRollingBasis
- * DistributionType2Code.mmRollingBasis}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionType2Code#RollingBasis
+ * DistributionType2Code.RollingBasis}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionType2Code#mmInterim
- * DistributionType2Code.mmInterim}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionType2Code#Interim
+ * DistributionType2Code.Interim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionType2Code#mmFinal
- * DistributionType2Code.mmFinal}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionType2Code#Final
+ * DistributionType2Code.Final}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DistributionTypeCode
+ * DistributionTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * DistributionType1Code}</li>
  * </ul>
  */
-public class DistributionType2Code extends DistributionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DistributionType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,11 +98,12 @@ public class DistributionType2Code extends DistributionTypeCode {
 	 * name} = "RollingBasis"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRollingBasis = new MMCode() {
+	public static final DistributionType2Code RollingBasis = new DistributionType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RollingBasis";
-			owner_lazy = () -> DistributionType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DistributionType2Code.mmObject();
+			codeName = DistributionTypeCode.RollingBasis.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -116,11 +122,12 @@ public class DistributionType2Code extends DistributionTypeCode {
 	 * name} = "Interim"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterim = new MMCode() {
+	public static final DistributionType2Code Interim = new DistributionType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
-			owner_lazy = () -> DistributionType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DistributionType2Code.mmObject();
+			codeName = DistributionTypeCode.Interim.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -139,27 +146,60 @@ public class DistributionType2Code extends DistributionTypeCode {
 	 * name} = "Final"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinal = new MMCode() {
+	public static final DistributionType2Code Final = new DistributionType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
-			owner_lazy = () -> DistributionType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DistributionType2Code.mmObject();
+			codeName = DistributionTypeCode.Final.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DistributionType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DistributionType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ROLL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DistributionType2Code";
 				definition = "Specifies whether the proceeds of the event will be distributed on a rolling basis rather than on a specific date.";
 				previousVersion_lazy = () -> DistributionType1Code.mmObject();
-				code_lazy = () -> Arrays.asList(DistributionType2Code.mmRollingBasis, DistributionType2Code.mmInterim, DistributionType2Code.mmFinal);
 				trace_lazy = () -> DistributionTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionType2Code.RollingBasis, com.tools20022.repository.codeset.DistributionType2Code.Interim,
+						com.tools20022.repository.codeset.DistributionType2Code.Final);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(RollingBasis.getCodeName().get(), RollingBasis);
+		codesByName.put(Interim.getCodeName().get(), Interim);
+		codesByName.put(Final.getCodeName().get(), Final);
+	}
+
+	public static DistributionType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DistributionType2Code[] values() {
+		DistributionType2Code[] values = new DistributionType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DistributionType2Code> {
+		@Override
+		public DistributionType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DistributionType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

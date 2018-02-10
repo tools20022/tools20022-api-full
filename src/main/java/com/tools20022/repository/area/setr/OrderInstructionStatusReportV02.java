@@ -24,9 +24,8 @@ import com.tools20022.repository.msg.IndividualOrderStatusAndReason1;
 import com.tools20022.repository.msg.OrderStatusAndReason3;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -64,32 +63,16 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesTradeArchive
- * SecuritiesTradeArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "setr.016.001.02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "setr.016.001.02"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#mmOrderDetailsOrIndividualOrderDetailsRule
- * OrderInstructionStatusReportV02.mmOrderDetailsOrIndividualOrderDetailsRule}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#OrderDetailsOrIndividualOrderDetailsRule
+ * OrderInstructionStatusReportV02.OrderDetailsOrIndividualOrderDetailsRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#mmRelatedReferenceOrOtherReferenceRule
- * OrderInstructionStatusReportV02.mmRelatedReferenceOrOtherReferenceRule}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderInstructionStatusReportV02#RelatedReferenceOrOtherReferenceRule
+ * OrderInstructionStatusReportV02.RelatedReferenceOrOtherReferenceRule}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -111,9 +94,42 @@ import javax.xml.bind.annotation.*;
  * OrderInstructionStatusReportV02.mmIndividualOrderDetailsReport}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "setr.016.001.02"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesTradeArchive
+ * SecuritiesTradeArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "setr.016.001.02"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code setr.016.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageNameRule#forOrderInstructionStatusReportV02
+ * ConstraintMessageNameRule.forOrderInstructionStatusReportV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedReferenceGuideline#forOrderInstructionStatusReportV02
+ * ConstraintRelatedReferenceGuideline.forOrderInstructionStatusReportV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#forOrderInstructionStatusReportV02
+ * ConstraintOtherReferenceGuideline.forOrderInstructionStatusReportV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStatusCancelledGuideline#forOrderInstructionStatusReportV02
+ * ConstraintStatusCancelledGuideline.forOrderInstructionStatusReportV02}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -134,7 +150,7 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "setr.016.001.02", propOrder = {"otherReference", "relatedReference", "masterReference", "orderDetailsReport", "individualOrderDetailsReport"})
 public class OrderInstructionStatusReportV02 {
 
@@ -176,7 +192,7 @@ public class OrderInstructionStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmOrderDetailsOrIndividualOrderDetailsRule = new MMXor() {
+	public static final MMXor OrderDetailsOrIndividualOrderDetailsRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDetailsOrIndividualOrderDetailsRule";
@@ -221,7 +237,7 @@ public class OrderInstructionStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmRelatedReferenceOrOtherReferenceRule = new MMXor() {
+	public static final MMXor RelatedReferenceOrOtherReferenceRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceOrOtherReferenceRule";
@@ -231,11 +247,11 @@ public class OrderInstructionStatusReportV02 {
 					com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmRelatedReference);
 		}
 	};
+	@XmlElement(name = "OthrRef", required = true)
 	protected List<AdditionalReference3> otherReference;
 	/**
-	 * Reference to a linked message sent in a proprietary way or reference of a
-	 * system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -277,10 +293,11 @@ public class OrderInstructionStatusReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdRef", required = true)
 	protected List<AdditionalReference3> relatedReference;
 	/**
-	 * Reference to a linked message that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -321,11 +338,11 @@ public class OrderInstructionStatusReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "MstrRef")
 	protected AdditionalReference3 masterReference;
 	/**
-	 * Reference to a multiple order or bulk order that represents the common
-	 * reference of several individual orders.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -367,11 +384,11 @@ public class OrderInstructionStatusReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "OrdrDtlsRpt", required = true)
 	protected OrderStatusAndReason3 orderDetailsReport;
 	/**
-	 * Status report details of a bulk or multiple or switch order that was
-	 * previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -413,11 +430,11 @@ public class OrderInstructionStatusReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "IndvOrdrDtlsRpt", required = true)
 	protected List<IndividualOrderStatusAndReason1> individualOrderDetailsReport;
 	/**
-	 * Status report details of the individual orders of a bulk or multiple
-	 * order that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -462,13 +479,18 @@ public class OrderInstructionStatusReportV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays
+						.asList(com.tools20022.repository.constraints.ConstraintMessageNameRule.forOrderInstructionStatusReportV02,
+								com.tools20022.repository.constraints.ConstraintRelatedReferenceGuideline.forOrderInstructionStatusReportV02,
+								com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forOrderInstructionStatusReportV02,
+								com.tools20022.repository.constraints.ConstraintStatusCancelledGuideline.forOrderInstructionStatusReportV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderInstructionStatusReportV02";
 				definition = "Scope\r\nThe OrderInstructionStatusReport is sent by an executing party, eg, a transfer agent, to an instructing party, eg, an investment manager or its authorised representative. There may be one or more intermediary parties between the executing party and the instructing party. The intermediary party is, for example, an intermediary or a concentrator.\r\nThis message reports the status of an order from the time the executing party receives the order until the order is executed.\r\nUsage\r\nThe OrderInstructionStatusReport message is sent by an executing party to the instructing party to report on the status of a subscription, redemption or a switch order.\r\nThe message can be used to report one of the following:\r\n- a received status, or\r\n- an accepted status, or\r\n- a sent to next party status, or\r\n- an already executed status, or\r\n- a cancelled status, or\r\n- a conditionally accepted status, or\r\n- a rejected status, or\r\n- a suspended status, or\r\n- an in-repair status (at the individual order level only), or\r\n- repaired conditions (at the individual order level only).\r\nFor subscription and redemption orders, the OrderInstructionStatusReport message covers both bulk and multiple categories of orders, and this message may provide the status either at the bulk or at the individual level.\r\nFor a switch order, this message provides the status of the whole order, ie, it is not possible to accept one leg and to reject the other leg, the entire switch order has to be rejected. In order to identify which leg within the switch is causing a problem, the redemption or subscription leg identification is used.";
 				nextVersions_lazy = () -> Arrays.asList(OrderInstructionStatusReportV03.mmObject());
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmOrderDetailsOrIndividualOrderDetailsRule,
-						com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.mmRelatedReferenceOrOtherReferenceRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.OrderDetailsOrIndividualOrderDetailsRule,
+						com.tools20022.repository.area.setr.OrderInstructionStatusReportV02.RelatedReferenceOrOtherReferenceRule);
 				rootElement = "Document";
 				xmlTag = "setr.016.001.02";
 				businessArea_lazy = () -> SecuritiesTradeArchive.mmObject();
@@ -494,52 +516,52 @@ public class OrderInstructionStatusReportV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OthrRef", required = true)
 	public List<AdditionalReference3> getOtherReference() {
-		return otherReference;
+		return otherReference == null ? otherReference = new ArrayList<>() : otherReference;
 	}
 
-	public void setOtherReference(List<AdditionalReference3> otherReference) {
-		this.otherReference = otherReference;
+	public OrderInstructionStatusReportV02 setOtherReference(List<AdditionalReference3> otherReference) {
+		this.otherReference = Objects.requireNonNull(otherReference);
+		return this;
 	}
 
-	@XmlElement(name = "RltdRef", required = true)
 	public List<AdditionalReference3> getRelatedReference() {
-		return relatedReference;
+		return relatedReference == null ? relatedReference = new ArrayList<>() : relatedReference;
 	}
 
-	public void setRelatedReference(List<AdditionalReference3> relatedReference) {
-		this.relatedReference = relatedReference;
+	public OrderInstructionStatusReportV02 setRelatedReference(List<AdditionalReference3> relatedReference) {
+		this.relatedReference = Objects.requireNonNull(relatedReference);
+		return this;
 	}
 
-	@XmlElement(name = "MstrRef")
-	public AdditionalReference3 getMasterReference() {
-		return masterReference;
+	public Optional<AdditionalReference3> getMasterReference() {
+		return masterReference == null ? Optional.empty() : Optional.of(masterReference);
 	}
 
-	public void setMasterReference(AdditionalReference3 masterReference) {
+	public OrderInstructionStatusReportV02 setMasterReference(AdditionalReference3 masterReference) {
 		this.masterReference = masterReference;
+		return this;
 	}
 
-	@XmlElement(name = "OrdrDtlsRpt", required = true)
 	public OrderStatusAndReason3 getOrderDetailsReport() {
 		return orderDetailsReport;
 	}
 
-	public void setOrderDetailsReport(OrderStatusAndReason3 orderDetailsReport) {
-		this.orderDetailsReport = orderDetailsReport;
+	public OrderInstructionStatusReportV02 setOrderDetailsReport(OrderStatusAndReason3 orderDetailsReport) {
+		this.orderDetailsReport = Objects.requireNonNull(orderDetailsReport);
+		return this;
 	}
 
-	@XmlElement(name = "IndvOrdrDtlsRpt", required = true)
 	public List<IndividualOrderStatusAndReason1> getIndividualOrderDetailsReport() {
-		return individualOrderDetailsReport;
+		return individualOrderDetailsReport == null ? individualOrderDetailsReport = new ArrayList<>() : individualOrderDetailsReport;
 	}
 
-	public void setIndividualOrderDetailsReport(List<IndividualOrderStatusAndReason1> individualOrderDetailsReport) {
-		this.individualOrderDetailsReport = individualOrderDetailsReport;
+	public OrderInstructionStatusReportV02 setIndividualOrderDetailsReport(List<IndividualOrderStatusAndReason1> individualOrderDetailsReport) {
+		this.individualOrderDetailsReport = Objects.requireNonNull(individualOrderDetailsReport);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.016.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:setr.016.001.02")
 	static public class Document {
 		@XmlElement(name = "setr.016.001.02", required = true)
 		public OrderInstructionStatusReportV02 messageBody;

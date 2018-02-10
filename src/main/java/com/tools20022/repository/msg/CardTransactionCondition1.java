@@ -24,6 +24,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardTransactionCondition1", propOrder = {"program", "value"})
 public class CardTransactionCondition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Prgm", required = true)
 	protected Max35Text program;
 	/**
-	 * Identification of the specific condition.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,7 +102,7 @@ public class CardTransactionCondition1 {
 	 */
 	public static final MMMessageAttribute mmProgram = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardTransactionCondition1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionCondition1.mmObject();
 			isDerived = false;
 			xmlTag = "Prgm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,10 +113,11 @@ public class CardTransactionCondition1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Val")
 	protected Max35Text value;
 	/**
-	 * Level of the condition.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,7 +144,7 @@ public class CardTransactionCondition1 {
 	 */
 	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardTransactionCondition1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionCondition1.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,8 +159,8 @@ public class CardTransactionCondition1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardTransactionCondition1.mmProgram, CardTransactionCondition1.mmValue);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionCondition1.mmProgram, com.tools20022.repository.msg.CardTransactionCondition1.mmValue);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransactionCondition1";
 				definition = "Data used to assign specific condition such as liability shift or preferential interchange fees.";
@@ -165,21 +169,21 @@ public class CardTransactionCondition1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Prgm", required = true)
 	public Max35Text getProgram() {
 		return program;
 	}
 
-	public void setProgram(Max35Text program) {
-		this.program = program;
+	public CardTransactionCondition1 setProgram(Max35Text program) {
+		this.program = Objects.requireNonNull(program);
+		return this;
 	}
 
-	@XmlElement(name = "Val")
-	public Max35Text getValue() {
-		return value;
+	public Optional<Max35Text> getValue() {
+		return value == null ? Optional.empty() : Optional.of(value);
 	}
 
-	public void setValue(Max35Text value) {
+	public CardTransactionCondition1 setValue(Max35Text value) {
 		this.value = value;
+		return this;
 	}
 }

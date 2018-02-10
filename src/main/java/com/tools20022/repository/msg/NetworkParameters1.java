@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.NetworkAccess;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,15 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NetworkParameters1", propOrder = {"primaryAddress", "primaryPortNumber", "secondaryAddress", "secondaryPortNumber", "userName", "accessCode", "clientCertificate"})
 public class NetworkParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmryAdr", required = true)
 	protected Max35Text primaryAddress;
 	/**
-	 * IP address or host name of the primary host.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,7 +134,7 @@ public class NetworkParameters1 {
 	public static final MMMessageAttribute mmPrimaryAddress = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmHostIPAddress;
-			componentContext_lazy = () -> NetworkParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "PmryAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,10 +145,11 @@ public class NetworkParameters1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PmryPortNb", required = true)
 	protected Number primaryPortNumber;
 	/**
-	 * Port number of the primary host.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,7 +182,7 @@ public class NetworkParameters1 {
 	public static final MMMessageAttribute mmPrimaryPortNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmHostPortNumber;
-			componentContext_lazy = () -> NetworkParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "PmryPortNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,10 +193,11 @@ public class NetworkParameters1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "ScndryAdr")
 	protected Max35Text secondaryAddress;
 	/**
-	 * IP address or host name of the secondary host.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,7 +230,7 @@ public class NetworkParameters1 {
 	public static final MMMessageAttribute mmSecondaryAddress = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmHostIPAddress;
-			componentContext_lazy = () -> NetworkParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,10 +241,11 @@ public class NetworkParameters1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ScndryPortNb")
 	protected Number secondaryPortNumber;
 	/**
-	 * Port number of the secondary host.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -272,7 +278,7 @@ public class NetworkParameters1 {
 	public static final MMMessageAttribute mmSecondaryPortNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmHostPortNumber;
-			componentContext_lazy = () -> NetworkParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryPortNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,10 +289,11 @@ public class NetworkParameters1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "UsrNm")
 	protected Max35Text userName;
 	/**
-	 * User name identifying the client.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -327,7 +334,7 @@ public class NetworkParameters1 {
 	public static final MMMessageAttribute mmUserName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmUserName;
-			componentContext_lazy = () -> NetworkParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "UsrNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -339,10 +346,11 @@ public class NetworkParameters1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AccsCd")
 	protected Max35Text accessCode;
 	/**
-	 * Password authenticating the client.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -383,7 +391,7 @@ public class NetworkParameters1 {
 	public static final MMMessageAttribute mmAccessCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmAccessCode;
-			componentContext_lazy = () -> NetworkParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "AccsCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -395,10 +403,11 @@ public class NetworkParameters1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntCert")
 	protected Max3000Binary clientCertificate;
 	/**
-	 * Client certificate chain.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -432,7 +441,7 @@ public class NetworkParameters1 {
 	public static final MMMessageAttribute mmClientCertificate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmClientCertificate;
-			componentContext_lazy = () -> NetworkParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "ClntCert";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -447,10 +456,11 @@ public class NetworkParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NetworkParameters1.mmPrimaryAddress, NetworkParameters1.mmPrimaryPortNumber, NetworkParameters1.mmSecondaryAddress, NetworkParameters1.mmSecondaryPortNumber,
-						NetworkParameters1.mmUserName, NetworkParameters1.mmAccessCode, NetworkParameters1.mmClientCertificate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters1.mmPrimaryAddress, com.tools20022.repository.msg.NetworkParameters1.mmPrimaryPortNumber,
+						com.tools20022.repository.msg.NetworkParameters1.mmSecondaryAddress, com.tools20022.repository.msg.NetworkParameters1.mmSecondaryPortNumber, com.tools20022.repository.msg.NetworkParameters1.mmUserName,
+						com.tools20022.repository.msg.NetworkParameters1.mmAccessCode, com.tools20022.repository.msg.NetworkParameters1.mmClientCertificate);
 				trace_lazy = () -> NetworkAccess.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetworkParameters1";
 				definition = "Configuration parameters to communicate with a host.";
@@ -460,66 +470,66 @@ public class NetworkParameters1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmryAdr", required = true)
 	public Max35Text getPrimaryAddress() {
 		return primaryAddress;
 	}
 
-	public void setPrimaryAddress(Max35Text primaryAddress) {
-		this.primaryAddress = primaryAddress;
+	public NetworkParameters1 setPrimaryAddress(Max35Text primaryAddress) {
+		this.primaryAddress = Objects.requireNonNull(primaryAddress);
+		return this;
 	}
 
-	@XmlElement(name = "PmryPortNb", required = true)
 	public Number getPrimaryPortNumber() {
 		return primaryPortNumber;
 	}
 
-	public void setPrimaryPortNumber(Number primaryPortNumber) {
-		this.primaryPortNumber = primaryPortNumber;
+	public NetworkParameters1 setPrimaryPortNumber(Number primaryPortNumber) {
+		this.primaryPortNumber = Objects.requireNonNull(primaryPortNumber);
+		return this;
 	}
 
-	@XmlElement(name = "ScndryAdr")
-	public Max35Text getSecondaryAddress() {
-		return secondaryAddress;
+	public Optional<Max35Text> getSecondaryAddress() {
+		return secondaryAddress == null ? Optional.empty() : Optional.of(secondaryAddress);
 	}
 
-	public void setSecondaryAddress(Max35Text secondaryAddress) {
+	public NetworkParameters1 setSecondaryAddress(Max35Text secondaryAddress) {
 		this.secondaryAddress = secondaryAddress;
+		return this;
 	}
 
-	@XmlElement(name = "ScndryPortNb")
-	public Number getSecondaryPortNumber() {
-		return secondaryPortNumber;
+	public Optional<Number> getSecondaryPortNumber() {
+		return secondaryPortNumber == null ? Optional.empty() : Optional.of(secondaryPortNumber);
 	}
 
-	public void setSecondaryPortNumber(Number secondaryPortNumber) {
+	public NetworkParameters1 setSecondaryPortNumber(Number secondaryPortNumber) {
 		this.secondaryPortNumber = secondaryPortNumber;
+		return this;
 	}
 
-	@XmlElement(name = "UsrNm")
-	public Max35Text getUserName() {
-		return userName;
+	public Optional<Max35Text> getUserName() {
+		return userName == null ? Optional.empty() : Optional.of(userName);
 	}
 
-	public void setUserName(Max35Text userName) {
+	public NetworkParameters1 setUserName(Max35Text userName) {
 		this.userName = userName;
+		return this;
 	}
 
-	@XmlElement(name = "AccsCd")
-	public Max35Text getAccessCode() {
-		return accessCode;
+	public Optional<Max35Text> getAccessCode() {
+		return accessCode == null ? Optional.empty() : Optional.of(accessCode);
 	}
 
-	public void setAccessCode(Max35Text accessCode) {
+	public NetworkParameters1 setAccessCode(Max35Text accessCode) {
 		this.accessCode = accessCode;
+		return this;
 	}
 
-	@XmlElement(name = "ClntCert")
-	public Max3000Binary getClientCertificate() {
-		return clientCertificate;
+	public Optional<Max3000Binary> getClientCertificate() {
+		return clientCertificate == null ? Optional.empty() : Optional.of(clientCertificate);
 	}
 
-	public void setClientCertificate(Max3000Binary clientCertificate) {
+	public NetworkParameters1 setClientCertificate(Max3000Binary clientCertificate) {
 		this.clientCertificate = clientCertificate;
+		return this;
 	}
 }

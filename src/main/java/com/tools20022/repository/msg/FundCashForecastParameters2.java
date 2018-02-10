@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReportParameterRule#forFundCashForecastParameters2
+ * ConstraintReportParameterRule.forFundCashForecastParameters2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDetailedReportParameterRule#forFundCashForecastParameters2
+ * ConstraintDetailedReportParameterRule.forFundCashForecastParameters2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Report parameters."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FundCashForecastParameters2", propOrder = {"financialInstrumentDetails", "tradeDateTime", "detailedReportParameter"})
 public class FundCashForecastParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FinInstrmDtls")
 	protected FinancialInstrument17 financialInstrumentDetails;
 	/**
-	 * Financial instrument for which the fund cash forecast report is
-	 * requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -103,7 +115,7 @@ public class FundCashForecastParameters2 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FundCashForecastParameters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecastParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +127,11 @@ public class FundCashForecastParameters2 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument17.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDtTm")
 	protected DateAndDateTimeChoice tradeDateTime;
 	/**
-	 * Date and, if required, the time, at which the price has been applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,7 +166,7 @@ public class FundCashForecastParameters2 {
 	public static final MMMessageAttribute mmTradeDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> FundCashForecastParameters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecastParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "TradDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,10 +177,11 @@ public class FundCashForecastParameters2 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "DtldRptParam")
 	protected ReportParameters detailedReportParameter;
 	/**
-	 * Parameters to be used in the detailed cash forecast report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -194,7 +208,7 @@ public class FundCashForecastParameters2 {
 	 */
 	public static final MMMessageAssociationEnd mmDetailedReportParameter = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FundCashForecastParameters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecastParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "DtldRptParam";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,8 +224,11 @@ public class FundCashForecastParameters2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FundCashForecastParameters2.mmFinancialInstrumentDetails, FundCashForecastParameters2.mmTradeDateTime, FundCashForecastParameters2.mmDetailedReportParameter);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundCashForecastParameters2.mmFinancialInstrumentDetails, com.tools20022.repository.msg.FundCashForecastParameters2.mmTradeDateTime,
+						com.tools20022.repository.msg.FundCashForecastParameters2.mmDetailedReportParameter);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReportParameterRule.forFundCashForecastParameters2,
+						com.tools20022.repository.constraints.ConstraintDetailedReportParameterRule.forFundCashForecastParameters2);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FundCashForecastParameters2";
 				definition = "Report parameters.";
@@ -220,30 +237,30 @@ public class FundCashForecastParameters2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FinInstrmDtls")
-	public FinancialInstrument17 getFinancialInstrumentDetails() {
-		return financialInstrumentDetails;
+	public Optional<FinancialInstrument17> getFinancialInstrumentDetails() {
+		return financialInstrumentDetails == null ? Optional.empty() : Optional.of(financialInstrumentDetails);
 	}
 
-	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument17 financialInstrumentDetails) {
+	public FundCashForecastParameters2 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument17 financialInstrumentDetails) {
 		this.financialInstrumentDetails = financialInstrumentDetails;
+		return this;
 	}
 
-	@XmlElement(name = "TradDtTm")
-	public DateAndDateTimeChoice getTradeDateTime() {
-		return tradeDateTime;
+	public Optional<DateAndDateTimeChoice> getTradeDateTime() {
+		return tradeDateTime == null ? Optional.empty() : Optional.of(tradeDateTime);
 	}
 
-	public void setTradeDateTime(DateAndDateTimeChoice tradeDateTime) {
+	public FundCashForecastParameters2 setTradeDateTime(DateAndDateTimeChoice tradeDateTime) {
 		this.tradeDateTime = tradeDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "DtldRptParam")
-	public ReportParameters getDetailedReportParameter() {
-		return detailedReportParameter;
+	public Optional<ReportParameters> getDetailedReportParameter() {
+		return detailedReportParameter == null ? Optional.empty() : Optional.of(detailedReportParameter);
 	}
 
-	public void setDetailedReportParameter(com.tools20022.repository.msg.ReportParameters detailedReportParameter) {
+	public FundCashForecastParameters2 setDetailedReportParameter(com.tools20022.repository.msg.ReportParameters detailedReportParameter) {
 		this.detailedReportParameter = detailedReportParameter;
+		return this;
 	}
 }

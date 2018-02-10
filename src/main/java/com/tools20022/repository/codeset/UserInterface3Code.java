@@ -20,36 +20,39 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.UserInterfaceCode;
+import com.tools20022.repository.codeset.UserInterface3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Destination of the message.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.UserInterfaceCode
- * UserInterfaceCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UserInterface3Code#mmAcquirer
- * UserInterface3Code.mmAcquirer}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UserInterface3Code#mmAgent
- * UserInterface3Code.mmAgent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.UserInterface3Code#mmIssuer
- * UserInterface3Code.mmIssuer}</li>
+ * {@linkplain com.tools20022.repository.codeset.UserInterface3Code#Acquirer
+ * UserInterface3Code.Acquirer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UserInterface3Code#Agent
+ * UserInterface3Code.Agent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UserInterface3Code#Issuer
+ * UserInterface3Code.Issuer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.UserInterfaceCode
+ * UserInterfaceCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,7 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Destination of the message."</li>
  * </ul>
  */
-public class UserInterface3Code extends UserInterfaceCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class UserInterface3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -79,11 +83,12 @@ public class UserInterface3Code extends UserInterfaceCode {
 	 * name} = "Acquirer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcquirer = new MMCode() {
+	public static final UserInterface3Code Acquirer = new UserInterface3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
-			owner_lazy = () -> UserInterface3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UserInterface3Code.mmObject();
+			codeName = UserInterfaceCode.Acquirer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -102,11 +107,12 @@ public class UserInterface3Code extends UserInterfaceCode {
 	 * name} = "Agent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgent = new MMCode() {
+	public static final UserInterface3Code Agent = new UserInterface3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
-			owner_lazy = () -> UserInterface3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UserInterface3Code.mmObject();
+			codeName = UserInterfaceCode.Agent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -125,25 +131,57 @@ public class UserInterface3Code extends UserInterfaceCode {
 	 * name} = "Issuer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuer = new MMCode() {
+	public static final UserInterface3Code Issuer = new UserInterface3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
-			owner_lazy = () -> UserInterface3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UserInterface3Code.mmObject();
+			codeName = UserInterfaceCode.Issuer.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, UserInterface3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected UserInterface3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UserInterface3Code";
 				definition = "Destination of the message.";
-				code_lazy = () -> Arrays.asList(UserInterface3Code.mmAcquirer, UserInterface3Code.mmAgent, UserInterface3Code.mmIssuer);
 				trace_lazy = () -> UserInterfaceCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UserInterface3Code.Acquirer, com.tools20022.repository.codeset.UserInterface3Code.Agent, com.tools20022.repository.codeset.UserInterface3Code.Issuer);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Acquirer.getCodeName().get(), Acquirer);
+		codesByName.put(Agent.getCodeName().get(), Agent);
+		codesByName.put(Issuer.getCodeName().get(), Issuer);
+	}
+
+	public static UserInterface3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static UserInterface3Code[] values() {
+		UserInterface3Code[] values = new UserInterface3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, UserInterface3Code> {
+		@Override
+		public UserInterface3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(UserInterface3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.EUDividendStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the dividend is in the scope of the European directive on
@@ -33,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EUDividendStatusCode#mmDividendInScope
- * EUDividendStatusCode.mmDividendInScope}</li>
+ * {@linkplain com.tools20022.repository.codeset.EUDividendStatusCode#DividendInScope
+ * EUDividendStatusCode.DividendInScope}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EUDividendStatusCode#mmDividendOutScope
- * EUDividendStatusCode.mmDividendOutScope}</li>
+ * {@linkplain com.tools20022.repository.codeset.EUDividendStatusCode#DividendOutScope
+ * EUDividendStatusCode.DividendOutScope}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EUDividendStatusCode#mmDividendUnknown
- * EUDividendStatusCode.mmDividendUnknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.EUDividendStatusCode#DividendUnknown
+ * EUDividendStatusCode.DividendUnknown}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class EUDividendStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EUDividendStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,12 +103,12 @@ public class EUDividendStatusCode {
 	 * definition} = "Dividend is in the scope of the directive."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividendInScope = new MMCode() {
+	public static final EUDividendStatusCode DividendInScope = new EUDividendStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendInScope";
 			definition = "Dividend is in the scope of the directive.";
-			owner_lazy = () -> EUDividendStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EUDividendStatusCode.mmObject();
 			codeName = "DIVI";
 		}
 	};
@@ -127,12 +133,12 @@ public class EUDividendStatusCode {
 	 * definition} = "Dividend is out of the scope of the directive."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividendOutScope = new MMCode() {
+	public static final EUDividendStatusCode DividendOutScope = new EUDividendStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendOutScope";
 			definition = "Dividend is out of the scope of the directive.";
-			owner_lazy = () -> EUDividendStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EUDividendStatusCode.mmObject();
 			codeName = "DIVO";
 		}
 	};
@@ -159,28 +165,60 @@ public class EUDividendStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividendUnknown = new MMCode() {
+	public static final EUDividendStatusCode DividendUnknown = new EUDividendStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendUnknown";
 			definition = "Unknown whether the dividend is in or out of the scope of the directive.";
-			owner_lazy = () -> EUDividendStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EUDividendStatusCode.mmObject();
 			codeName = "UKWN";
 		}
 	};
+	final static private LinkedHashMap<String, EUDividendStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EUDividendStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DIVI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EUDividendStatusCode";
 				definition = "Specifies whether the dividend is in the scope of the European directive on taxation of savings income in the form of interest payments.";
-				code_lazy = () -> Arrays.asList(EUDividendStatusCode.mmDividendInScope, EUDividendStatusCode.mmDividendOutScope, EUDividendStatusCode.mmDividendUnknown);
 				derivation_lazy = () -> Arrays.asList(EUDividendStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EUDividendStatusCode.DividendInScope, com.tools20022.repository.codeset.EUDividendStatusCode.DividendOutScope,
+						com.tools20022.repository.codeset.EUDividendStatusCode.DividendUnknown);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(DividendInScope.getCodeName().get(), DividendInScope);
+		codesByName.put(DividendOutScope.getCodeName().get(), DividendOutScope);
+		codesByName.put(DividendUnknown.getCodeName().get(), DividendUnknown);
+	}
+
+	public static EUDividendStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EUDividendStatusCode[] values() {
+		EUDividendStatusCode[] values = new EUDividendStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EUDividendStatusCode> {
+		@Override
+		public EUDividendStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EUDividendStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -80,8 +82,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,16 +100,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashAccount11", propOrder = {"identification", "accountServicer"})
 public class CashAccount11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected CashAccountIdentification1Choice identification;
 	/**
-	 * Unique and unambiguous identification of the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,7 +152,7 @@ public class CashAccount11 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> CashAccount11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount11.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,13 +164,11 @@ public class CashAccount11 {
 			complexType_lazy = () -> CashAccountIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcr")
 	protected FinancialInstitutionIdentification3Choice accountServicer;
 	/**
-	 * Party that manages the account on behalf of the account owner, that is
-	 * manages the registration and booking of entries on the account,
-	 * calculates balances on the account and provides information about the
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,7 +211,7 @@ public class CashAccount11 {
 	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> CashAccount11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount11.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,11 +227,11 @@ public class CashAccount11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashAccount11.mmIdentification, CashAccount11.mmAccountServicer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount11.mmIdentification, com.tools20022.repository.msg.CashAccount11.mmAccountServicer);
 				messageBuildingBlock_lazy = () -> Arrays.asList(PEPOrISAOrPortfolioTransferConfirmationV02.mmCashAccount, PortfolioTransferConfirmationV03.mmCashAccount, PortfolioTransferConfirmationV04.mmCashAccount,
 						PEPOrISAOrPortfolioTransferInstructionV02.mmCashAccount, PortfolioTransferInstructionV03.mmCashAccount, PortfolioTransferInstructionV04.mmCashAccount);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccount11";
 				definition = "Information used for identifying an account.";
@@ -241,21 +241,21 @@ public class CashAccount11 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public CashAccountIdentification1Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(CashAccountIdentification1Choice identification) {
-		this.identification = identification;
+	public CashAccount11 setIdentification(CashAccountIdentification1Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcr")
-	public FinancialInstitutionIdentification3Choice getAccountServicer() {
-		return accountServicer;
+	public Optional<FinancialInstitutionIdentification3Choice> getAccountServicer() {
+		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public void setAccountServicer(FinancialInstitutionIdentification3Choice accountServicer) {
+	public CashAccount11 setAccountServicer(FinancialInstitutionIdentification3Choice accountServicer) {
 		this.accountServicer = accountServicer;
+		return this;
 	}
 }

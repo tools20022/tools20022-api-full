@@ -30,6 +30,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -44,9 +46,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation13#mmOriginalMessageIdentificationOrNetworkFileNameRule
- * OriginalGroupInformation13.
- * mmOriginalMessageIdentificationOrNetworkFileNameRule}</li>
+ * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation13#OriginalMessageIdentificationOrNetworkFileNameRule
+ * OriginalGroupInformation13.OriginalMessageIdentificationOrNetworkFileNameRule
+ * }</li>
  * </ul>
  * </li>
  * <li>
@@ -75,8 +77,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -90,16 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OriginalGroupInformation13", propOrder = {"originalMessageIdentification", "networkFileName", "originalMessageNameIdentification", "groupStatus", "statusReasonInformation"})
 public class OriginalGroupInformation13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgnlMsgId", required = true)
 	protected Max35Text originalMessageIdentification;
 	/**
-	 * Point to point reference assigned by the original instructing party to
-	 * unambiguously identify the original group of individual transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,7 +136,7 @@ public class OriginalGroupInformation13 {
 	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
-			componentContext_lazy = () -> OriginalGroupInformation13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation13.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,11 +147,11 @@ public class OriginalGroupInformation13 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NtwkFileNm", required = true)
 	protected Max35Text networkFileName;
 	/**
-	 * Name assigned by the sending party to unambiguously identify the file
-	 * transmitted on the network.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,7 +180,7 @@ public class OriginalGroupInformation13 {
 	 */
 	public static final MMMessageAttribute mmNetworkFileName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OriginalGroupInformation13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation13.mmObject();
 			isDerived = false;
 			xmlTag = "NtwkFileNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,11 +191,11 @@ public class OriginalGroupInformation13 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlMsgNmId", required = true)
 	protected Max35Text originalMessageNameIdentification;
 	/**
-	 * Specifies the original message name identifier to which the message
-	 * refers, eg, pacs.003.001.01 or MT103.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,7 +224,7 @@ public class OriginalGroupInformation13 {
 	 */
 	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OriginalGroupInformation13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation13.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgNmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,10 +235,11 @@ public class OriginalGroupInformation13 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "GrpSts")
 	protected TransactionGroupStatus2Code groupStatus;
 	/**
-	 * Specifies the status of a group of transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -270,7 +273,7 @@ public class OriginalGroupInformation13 {
 	public static final MMMessageAttribute mmGroupStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmStatus;
-			componentContext_lazy = () -> OriginalGroupInformation13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation13.mmObject();
 			isDerived = false;
 			xmlTag = "GrpSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,10 +284,11 @@ public class OriginalGroupInformation13 {
 			simpleType_lazy = () -> TransactionGroupStatus2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StsRsnInf")
 	protected StatusReasonInformation4 statusReasonInformation;
 	/**
-	 * Detailed information on the status reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -317,7 +321,7 @@ public class OriginalGroupInformation13 {
 	public static final MMMessageAssociationEnd mmStatusReasonInformation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
-			componentContext_lazy = () -> OriginalGroupInformation13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation13.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -364,23 +368,24 @@ public class OriginalGroupInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmOriginalMessageIdentificationOrNetworkFileNameRule = new MMXor() {
+	public static final MMXor OriginalMessageIdentificationOrNetworkFileNameRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentificationOrNetworkFileNameRule";
 			definition = "If OriginalMessageIdentification is present, then NetworkFileName is not allowed.\nIf NetworkFileName is present, then OriginalMessageIdentification is not allowed.";
-			messageComponent_lazy = () -> OriginalGroupInformation13.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(OriginalGroupInformation13.mmOriginalMessageIdentification, OriginalGroupInformation13.mmNetworkFileName);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation13.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalGroupInformation13.mmOriginalMessageIdentification, com.tools20022.repository.msg.OriginalGroupInformation13.mmNetworkFileName);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OriginalGroupInformation13.mmOriginalMessageIdentification, OriginalGroupInformation13.mmNetworkFileName, OriginalGroupInformation13.mmOriginalMessageNameIdentification,
-						OriginalGroupInformation13.mmGroupStatus, OriginalGroupInformation13.mmStatusReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalGroupInformation13.mmOriginalMessageIdentification, com.tools20022.repository.msg.OriginalGroupInformation13.mmNetworkFileName,
+						com.tools20022.repository.msg.OriginalGroupInformation13.mmOriginalMessageNameIdentification, com.tools20022.repository.msg.OriginalGroupInformation13.mmGroupStatus,
+						com.tools20022.repository.msg.OriginalGroupInformation13.mmStatusReasonInformation);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -391,54 +396,54 @@ public class OriginalGroupInformation13 {
 				})).get();
 				name = "OriginalGroupInformation13";
 				definition = "Unique and unambiguous identifier of the group of transactions as assigned by the original instructing party.";
-				xors_lazy = () -> Arrays.asList(OriginalGroupInformation13.mmOriginalMessageIdentificationOrNetworkFileNameRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalGroupInformation13.OriginalMessageIdentificationOrNetworkFileNameRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgnlMsgId", required = true)
 	public Max35Text getOriginalMessageIdentification() {
 		return originalMessageIdentification;
 	}
 
-	public void setOriginalMessageIdentification(Max35Text originalMessageIdentification) {
-		this.originalMessageIdentification = originalMessageIdentification;
+	public OriginalGroupInformation13 setOriginalMessageIdentification(Max35Text originalMessageIdentification) {
+		this.originalMessageIdentification = Objects.requireNonNull(originalMessageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "NtwkFileNm", required = true)
 	public Max35Text getNetworkFileName() {
 		return networkFileName;
 	}
 
-	public void setNetworkFileName(Max35Text networkFileName) {
-		this.networkFileName = networkFileName;
+	public OriginalGroupInformation13 setNetworkFileName(Max35Text networkFileName) {
+		this.networkFileName = Objects.requireNonNull(networkFileName);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlMsgNmId", required = true)
 	public Max35Text getOriginalMessageNameIdentification() {
 		return originalMessageNameIdentification;
 	}
 
-	public void setOriginalMessageNameIdentification(Max35Text originalMessageNameIdentification) {
-		this.originalMessageNameIdentification = originalMessageNameIdentification;
+	public OriginalGroupInformation13 setOriginalMessageNameIdentification(Max35Text originalMessageNameIdentification) {
+		this.originalMessageNameIdentification = Objects.requireNonNull(originalMessageNameIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "GrpSts")
-	public TransactionGroupStatus2Code getGroupStatus() {
-		return groupStatus;
+	public Optional<TransactionGroupStatus2Code> getGroupStatus() {
+		return groupStatus == null ? Optional.empty() : Optional.of(groupStatus);
 	}
 
-	public void setGroupStatus(TransactionGroupStatus2Code groupStatus) {
+	public OriginalGroupInformation13 setGroupStatus(TransactionGroupStatus2Code groupStatus) {
 		this.groupStatus = groupStatus;
+		return this;
 	}
 
-	@XmlElement(name = "StsRsnInf")
-	public StatusReasonInformation4 getStatusReasonInformation() {
-		return statusReasonInformation;
+	public Optional<StatusReasonInformation4> getStatusReasonInformation() {
+		return statusReasonInformation == null ? Optional.empty() : Optional.of(statusReasonInformation);
 	}
 
-	public void setStatusReasonInformation(com.tools20022.repository.msg.StatusReasonInformation4 statusReasonInformation) {
+	public OriginalGroupInformation13 setStatusReasonInformation(com.tools20022.repository.msg.StatusReasonInformation4 statusReasonInformation) {
 		this.statusReasonInformation = statusReasonInformation;
+		return this;
 	}
 }

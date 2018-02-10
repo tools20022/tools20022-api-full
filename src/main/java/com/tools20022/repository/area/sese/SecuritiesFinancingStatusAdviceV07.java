@@ -32,9 +32,8 @@ import com.tools20022.repository.msg.TransactionIdentifications32;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion;
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -61,25 +60,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestVersion
- * SecuritiesSettlementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion
- * SettlementAndReconciliationISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017
- * SettlementandReconciliationMaintenance20162017}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SctiesFincgStsAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -110,9 +90,37 @@ import javax.xml.bind.annotation.*;
  * SecuritiesFinancingStatusAdviceV07.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion
+ * SettlementAndReconciliationISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017
+ * SettlementandReconciliationMaintenance20162017}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SctiesFincgStsAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestVersion
+ * SecuritiesSettlementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.034.001.07}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forSecuritiesFinancingStatusAdviceV07
+ * ConstraintSettlementStatusAndMatchedRule.
+ * forSecuritiesFinancingStatusAdviceV07}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -129,16 +137,17 @@ import javax.xml.bind.annotation.*;
  * SecuritiesFinancingStatusAdviceV06}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesFinancingStatusAdviceV07", propOrder = {"transactionIdentification", "processingStatus", "matchingStatus", "inferredMatchingStatus", "settlementStatus", "repoCallRequestStatus", "transactionDetails",
 		"supplementaryData"})
 public class SecuritiesFinancingStatusAdviceV07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId", required = true)
 	protected TransactionIdentifications32 transactionIdentification;
 	/**
-	 * Provides unambiguous transaction identification information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -185,10 +194,11 @@ public class SecuritiesFinancingStatusAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "PrcgSts")
 	protected ProcessingStatus51Choice processingStatus;
 	/**
-	 * Processing status of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,10 +244,11 @@ public class SecuritiesFinancingStatusAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "MtchgSts")
 	protected MatchingStatus26Choice matchingStatus;
 	/**
-	 * Provides the matching status of the instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -283,12 +294,11 @@ public class SecuritiesFinancingStatusAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "IfrrdMtchgSts")
 	protected MatchingStatus26Choice inferredMatchingStatus;
 	/**
-	 * Provides the matching status of an instruction as per the account
-	 * servicer based on an allegement. At this time no matching took place on
-	 * the market (at the CSD/ICSD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -336,10 +346,11 @@ public class SecuritiesFinancingStatusAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "SttlmSts")
 	protected SettlementStatus18Choice settlementStatus;
 	/**
-	 * Provides the status of settlement of a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -385,10 +396,11 @@ public class SecuritiesFinancingStatusAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "RepoCallReqSts")
 	protected RepoCallRequestStatus7Choice repoCallRequestStatus;
 	/**
-	 * Provides the status of the repurchase agreement call request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -435,10 +447,11 @@ public class SecuritiesFinancingStatusAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "TxDtls")
 	protected SecuritiesFinancingTransactionDetails35 transactionDetails;
 	/**
-	 * Identifies the details of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -484,11 +497,11 @@ public class SecuritiesFinancingStatusAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -539,6 +552,7 @@ public class SecuritiesFinancingStatusAdviceV07 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forSecuritiesFinancingStatusAdviceV07);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesFinancingStatusAdviceV07";
 				definition = "Scope\r\nAn securities financing transaction account servicer sends a SecuritiesFinancingStatusAdvice to an account owner to advise the status of a securities financing transaction previously instructed by the account owner.\r\nThe status advice may be sent as a response to the request of the account owner or not.\r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure managing securities financing transactions on behalf of their participants\r\n- an agent (sub-custodian) managing securities financing transactions on behalf of their global custodian customer, or\r\n- a custodian managing securities financing transactions on behalf of an investment management institution or a broker/dealer.\r\n\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.";
@@ -570,79 +584,79 @@ public class SecuritiesFinancingStatusAdviceV07 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifications32 getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(TransactionIdentifications32 transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public SecuritiesFinancingStatusAdviceV07 setTransactionIdentification(TransactionIdentifications32 transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PrcgSts")
-	public ProcessingStatus51Choice getProcessingStatus() {
-		return processingStatus;
+	public Optional<ProcessingStatus51Choice> getProcessingStatus() {
+		return processingStatus == null ? Optional.empty() : Optional.of(processingStatus);
 	}
 
-	public void setProcessingStatus(ProcessingStatus51Choice processingStatus) {
+	public SecuritiesFinancingStatusAdviceV07 setProcessingStatus(ProcessingStatus51Choice processingStatus) {
 		this.processingStatus = processingStatus;
+		return this;
 	}
 
-	@XmlElement(name = "MtchgSts")
-	public MatchingStatus26Choice getMatchingStatus() {
-		return matchingStatus;
+	public Optional<MatchingStatus26Choice> getMatchingStatus() {
+		return matchingStatus == null ? Optional.empty() : Optional.of(matchingStatus);
 	}
 
-	public void setMatchingStatus(MatchingStatus26Choice matchingStatus) {
+	public SecuritiesFinancingStatusAdviceV07 setMatchingStatus(MatchingStatus26Choice matchingStatus) {
 		this.matchingStatus = matchingStatus;
+		return this;
 	}
 
-	@XmlElement(name = "IfrrdMtchgSts")
-	public MatchingStatus26Choice getInferredMatchingStatus() {
-		return inferredMatchingStatus;
+	public Optional<MatchingStatus26Choice> getInferredMatchingStatus() {
+		return inferredMatchingStatus == null ? Optional.empty() : Optional.of(inferredMatchingStatus);
 	}
 
-	public void setInferredMatchingStatus(MatchingStatus26Choice inferredMatchingStatus) {
+	public SecuritiesFinancingStatusAdviceV07 setInferredMatchingStatus(MatchingStatus26Choice inferredMatchingStatus) {
 		this.inferredMatchingStatus = inferredMatchingStatus;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmSts")
-	public SettlementStatus18Choice getSettlementStatus() {
-		return settlementStatus;
+	public Optional<SettlementStatus18Choice> getSettlementStatus() {
+		return settlementStatus == null ? Optional.empty() : Optional.of(settlementStatus);
 	}
 
-	public void setSettlementStatus(SettlementStatus18Choice settlementStatus) {
+	public SecuritiesFinancingStatusAdviceV07 setSettlementStatus(SettlementStatus18Choice settlementStatus) {
 		this.settlementStatus = settlementStatus;
+		return this;
 	}
 
-	@XmlElement(name = "RepoCallReqSts")
-	public RepoCallRequestStatus7Choice getRepoCallRequestStatus() {
-		return repoCallRequestStatus;
+	public Optional<RepoCallRequestStatus7Choice> getRepoCallRequestStatus() {
+		return repoCallRequestStatus == null ? Optional.empty() : Optional.of(repoCallRequestStatus);
 	}
 
-	public void setRepoCallRequestStatus(RepoCallRequestStatus7Choice repoCallRequestStatus) {
+	public SecuritiesFinancingStatusAdviceV07 setRepoCallRequestStatus(RepoCallRequestStatus7Choice repoCallRequestStatus) {
 		this.repoCallRequestStatus = repoCallRequestStatus;
+		return this;
 	}
 
-	@XmlElement(name = "TxDtls")
-	public SecuritiesFinancingTransactionDetails35 getTransactionDetails() {
-		return transactionDetails;
+	public Optional<SecuritiesFinancingTransactionDetails35> getTransactionDetails() {
+		return transactionDetails == null ? Optional.empty() : Optional.of(transactionDetails);
 	}
 
-	public void setTransactionDetails(SecuritiesFinancingTransactionDetails35 transactionDetails) {
+	public SecuritiesFinancingStatusAdviceV07 setTransactionDetails(SecuritiesFinancingTransactionDetails35 transactionDetails) {
 		this.transactionDetails = transactionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecuritiesFinancingStatusAdviceV07 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.034.07.07")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.034.001.07")
 	static public class Document {
 		@XmlElement(name = "SctiesFincgStsAdvc", required = true)
 		public SecuritiesFinancingStatusAdviceV07 messageBody;

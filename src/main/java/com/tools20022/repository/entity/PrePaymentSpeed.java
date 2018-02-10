@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +28,7 @@ import com.tools20022.repository.msg.PrePaymentSpeed1;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Specifies the type and rate of prepayment speed of the fixed income
@@ -58,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,9 +79,8 @@ public class PrePaymentSpeed {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected PrePaymentSpeedCode type;
 	/**
-	 * Specifies the type of prepayment speed of the fixed income instrument in
-	 * coded form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,6 +101,9 @@ public class PrePaymentSpeed {
 	 * {@linkplain com.tools20022.repository.entity.PrePaymentSpeed
 	 * PrePaymentSpeed}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 233 and 234</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -115,8 +119,9 @@ public class PrePaymentSpeed {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PrePaymentSpeed1.mmType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PrePaymentSpeed.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PrePaymentSpeed.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "233 and 234"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of prepayment speed of the fixed income instrument in coded form.";
@@ -135,8 +140,8 @@ public class PrePaymentSpeed {
 	};
 	protected PercentageRate rate;
 	/**
-	 * Rate of prepayment speed of the fixed income instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,8 +175,8 @@ public class PrePaymentSpeed {
 	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PrePaymentSpeed1.mmRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PrePaymentSpeed.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PrePaymentSpeed.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
 			definition = "Rate of prepayment speed of the fixed income instrument.";
@@ -192,7 +197,7 @@ public class PrePaymentSpeed {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PrePaymentSpeed";
 				definition = "Specifies the type and rate of prepayment speed of the fixed income instrument.";
@@ -212,15 +217,17 @@ public class PrePaymentSpeed {
 		return type;
 	}
 
-	public void setType(PrePaymentSpeedCode type) {
-		this.type = type;
+	public PrePaymentSpeed setType(PrePaymentSpeedCode type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
 	public PercentageRate getRate() {
 		return rate;
 	}
 
-	public void setRate(PercentageRate rate) {
-		this.rate = rate;
+	public PrePaymentSpeed setRate(PercentageRate rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 }

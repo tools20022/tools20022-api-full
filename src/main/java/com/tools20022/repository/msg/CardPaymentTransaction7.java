@@ -28,9 +28,8 @@ import com.tools20022.repository.datatype.Min3Max4Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -92,8 +91,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,17 +110,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardPaymentTransaction7", propOrder = {"transactionCapture", "merchantCategoryCode", "transactionIdentification", "originalTransaction", "transactionSuccess", "reversal", "failureReason",
 		"recipientTransactionIdentification", "reconciliationIdentification", "interchangeData", "transactionDetails", "authorisationResult", "additionalTransactionData"})
 public class CardPaymentTransaction7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxCaptr")
 	protected TrueFalseIndicator transactionCapture;
 	/**
-	 * Flag indicating whether the transaction data must be captured or not in
-	 * addition to the message process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,7 +150,7 @@ public class CardPaymentTransaction7 {
 	 */
 	public static final MMMessageAttribute mmTransactionCapture = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardPaymentTransaction7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "TxCaptr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,11 +161,11 @@ public class CardPaymentTransaction7 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "MrchntCtgyCd", required = true)
 	protected Min3Max4Text merchantCategoryCode;
 	/**
-	 * Category code conform to ISO 18245, related to the type of services or
-	 * goods the merchant provides for the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -202,7 +201,7 @@ public class CardPaymentTransaction7 {
 	public static final MMMessageAttribute mmMerchantCategoryCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MerchantRole.mmMerchantCategoryCode;
-			componentContext_lazy = () -> CardPaymentTransaction7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "MrchntCtgyCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,11 +212,11 @@ public class CardPaymentTransaction7 {
 			simpleType_lazy = () -> Min3Max4Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TxId", required = true)
 	protected TransactionIdentifier1 transactionIdentification;
 	/**
-	 * Unique identification of the transaction assigned by the POI (Point Of
-	 * Interaction).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -251,7 +250,7 @@ public class CardPaymentTransaction7 {
 	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionIdentification;
-			componentContext_lazy = () -> CardPaymentTransaction7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,10 +262,11 @@ public class CardPaymentTransaction7 {
 			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlTx")
 	protected CardPaymentTransaction8 originalTransaction;
 	/**
-	 * Identification of the original transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -298,7 +298,7 @@ public class CardPaymentTransaction7 {
 	public static final MMMessageAssociationEnd mmOriginalTransaction = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> CardPaymentTransaction7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlTx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -310,10 +310,11 @@ public class CardPaymentTransaction7 {
 			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction8.mmObject();
 		}
 	};
+	@XmlElement(name = "TxSucss", required = true)
 	protected TrueFalseIndicator transactionSuccess;
 	/**
-	 * Outcome of the transaction at the acceptor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -347,7 +348,7 @@ public class CardPaymentTransaction7 {
 	public static final MMMessageAttribute mmTransactionSuccess = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmTransactionSuccess;
-			componentContext_lazy = () -> CardPaymentTransaction7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "TxSucss";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -358,11 +359,11 @@ public class CardPaymentTransaction7 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Rvsl")
 	protected TrueFalseIndicator reversal;
 	/**
-	 * Notify that a previous transaction has to be reversed if this original
-	 * transaction has been approved by the acquirer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -398,7 +399,7 @@ public class CardPaymentTransaction7 {
 	public static final MMMessageAttribute mmReversal = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmReversal;
-			componentContext_lazy = () -> CardPaymentTransaction7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "Rvsl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -409,10 +410,11 @@ public class CardPaymentTransaction7 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "FailrRsn")
 	protected List<FailureReason1Code> failureReason;
 	/**
-	 * List of incidents during the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -446,7 +448,7 @@ public class CardPaymentTransaction7 {
 	public static final MMMessageAttribute mmFailureReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentStatus.mmFailureReason;
-			componentContext_lazy = () -> CardPaymentTransaction7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "FailrRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -456,11 +458,11 @@ public class CardPaymentTransaction7 {
 			simpleType_lazy = () -> FailureReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RcptTxId")
 	protected Max35Text recipientTransactionIdentification;
 	/**
-	 * Identification of the transaction assigned by the recipient party for the
-	 * initiating party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -489,7 +491,7 @@ public class CardPaymentTransaction7 {
 	 */
 	public static final MMMessageAttribute mmRecipientTransactionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardPaymentTransaction7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "RcptTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -500,13 +502,11 @@ public class CardPaymentTransaction7 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RcncltnId")
 	protected Max35Text reconciliationIdentification;
 	/**
-	 * Unique identification of the reconciliation period between the acceptor
-	 * and the acquirer. This identification might be linked to the
-	 * identification of the settlement for further verification by the
-	 * merchant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -541,7 +541,7 @@ public class CardPaymentTransaction7 {
 	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ReconciliationTransaction.mmReconciliationIdentification;
-			componentContext_lazy = () -> CardPaymentTransaction7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "RcncltnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -552,10 +552,11 @@ public class CardPaymentTransaction7 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrchngData")
 	protected Max35Text interchangeData;
 	/**
-	 * Interchange information related to the card scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -588,7 +589,7 @@ public class CardPaymentTransaction7 {
 	public static final MMMessageAttribute mmInterchangeData = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmInterchangeData;
-			componentContext_lazy = () -> CardPaymentTransaction7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "IntrchngData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -599,10 +600,11 @@ public class CardPaymentTransaction7 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TxDtls", required = true)
 	protected CardPaymentTransactionDetails7 transactionDetails;
 	/**
-	 * Details of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -634,7 +636,7 @@ public class CardPaymentTransaction7 {
 	public static final MMMessageAssociationEnd mmTransactionDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> CardPaymentTransaction7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "TxDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -646,10 +648,11 @@ public class CardPaymentTransaction7 {
 			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails7.mmObject();
 		}
 	};
+	@XmlElement(name = "AuthstnRslt")
 	protected AuthorisationResult2 authorisationResult;
 	/**
-	 * Outcome of the authorisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -681,7 +684,7 @@ public class CardPaymentTransaction7 {
 	public static final MMMessageAssociationEnd mmAuthorisationResult = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmValidation;
-			componentContext_lazy = () -> CardPaymentTransaction7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnRslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -693,10 +696,11 @@ public class CardPaymentTransaction7 {
 			type_lazy = () -> com.tools20022.repository.msg.AuthorisationResult2.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlTxData")
 	protected Max70Text additionalTransactionData;
 	/**
-	 * Additional information related to the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -723,7 +727,7 @@ public class CardPaymentTransaction7 {
 	 */
 	public static final MMMessageAttribute mmAdditionalTransactionData = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardPaymentTransaction7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction7.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlTxData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -738,12 +742,14 @@ public class CardPaymentTransaction7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardPaymentTransaction7.mmTransactionCapture, CardPaymentTransaction7.mmMerchantCategoryCode, CardPaymentTransaction7.mmTransactionIdentification,
-						CardPaymentTransaction7.mmOriginalTransaction, CardPaymentTransaction7.mmTransactionSuccess, CardPaymentTransaction7.mmReversal, CardPaymentTransaction7.mmFailureReason,
-						CardPaymentTransaction7.mmRecipientTransactionIdentification, CardPaymentTransaction7.mmReconciliationIdentification, CardPaymentTransaction7.mmInterchangeData, CardPaymentTransaction7.mmTransactionDetails,
-						CardPaymentTransaction7.mmAuthorisationResult, CardPaymentTransaction7.mmAdditionalTransactionData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction7.mmTransactionCapture, com.tools20022.repository.msg.CardPaymentTransaction7.mmMerchantCategoryCode,
+						com.tools20022.repository.msg.CardPaymentTransaction7.mmTransactionIdentification, com.tools20022.repository.msg.CardPaymentTransaction7.mmOriginalTransaction,
+						com.tools20022.repository.msg.CardPaymentTransaction7.mmTransactionSuccess, com.tools20022.repository.msg.CardPaymentTransaction7.mmReversal, com.tools20022.repository.msg.CardPaymentTransaction7.mmFailureReason,
+						com.tools20022.repository.msg.CardPaymentTransaction7.mmRecipientTransactionIdentification, com.tools20022.repository.msg.CardPaymentTransaction7.mmReconciliationIdentification,
+						com.tools20022.repository.msg.CardPaymentTransaction7.mmInterchangeData, com.tools20022.repository.msg.CardPaymentTransaction7.mmTransactionDetails,
+						com.tools20022.repository.msg.CardPaymentTransaction7.mmAuthorisationResult, com.tools20022.repository.msg.CardPaymentTransaction7.mmAdditionalTransactionData);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentTransaction7";
 				definition = "Transaction information in the cancellation advice.";
@@ -753,120 +759,120 @@ public class CardPaymentTransaction7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxCaptr")
-	public TrueFalseIndicator getTransactionCapture() {
-		return transactionCapture;
+	public Optional<TrueFalseIndicator> getTransactionCapture() {
+		return transactionCapture == null ? Optional.empty() : Optional.of(transactionCapture);
 	}
 
-	public void setTransactionCapture(TrueFalseIndicator transactionCapture) {
+	public CardPaymentTransaction7 setTransactionCapture(TrueFalseIndicator transactionCapture) {
 		this.transactionCapture = transactionCapture;
+		return this;
 	}
 
-	@XmlElement(name = "MrchntCtgyCd", required = true)
 	public Min3Max4Text getMerchantCategoryCode() {
 		return merchantCategoryCode;
 	}
 
-	public void setMerchantCategoryCode(Min3Max4Text merchantCategoryCode) {
-		this.merchantCategoryCode = merchantCategoryCode;
+	public CardPaymentTransaction7 setMerchantCategoryCode(Min3Max4Text merchantCategoryCode) {
+		this.merchantCategoryCode = Objects.requireNonNull(merchantCategoryCode);
+		return this;
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public CardPaymentTransaction7 setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlTx")
-	public CardPaymentTransaction8 getOriginalTransaction() {
-		return originalTransaction;
+	public Optional<CardPaymentTransaction8> getOriginalTransaction() {
+		return originalTransaction == null ? Optional.empty() : Optional.of(originalTransaction);
 	}
 
-	public void setOriginalTransaction(com.tools20022.repository.msg.CardPaymentTransaction8 originalTransaction) {
+	public CardPaymentTransaction7 setOriginalTransaction(com.tools20022.repository.msg.CardPaymentTransaction8 originalTransaction) {
 		this.originalTransaction = originalTransaction;
+		return this;
 	}
 
-	@XmlElement(name = "TxSucss", required = true)
 	public TrueFalseIndicator getTransactionSuccess() {
 		return transactionSuccess;
 	}
 
-	public void setTransactionSuccess(TrueFalseIndicator transactionSuccess) {
-		this.transactionSuccess = transactionSuccess;
+	public CardPaymentTransaction7 setTransactionSuccess(TrueFalseIndicator transactionSuccess) {
+		this.transactionSuccess = Objects.requireNonNull(transactionSuccess);
+		return this;
 	}
 
-	@XmlElement(name = "Rvsl")
-	public TrueFalseIndicator getReversal() {
-		return reversal;
+	public Optional<TrueFalseIndicator> getReversal() {
+		return reversal == null ? Optional.empty() : Optional.of(reversal);
 	}
 
-	public void setReversal(TrueFalseIndicator reversal) {
+	public CardPaymentTransaction7 setReversal(TrueFalseIndicator reversal) {
 		this.reversal = reversal;
+		return this;
 	}
 
-	@XmlElement(name = "FailrRsn")
 	public List<FailureReason1Code> getFailureReason() {
-		return failureReason;
+		return failureReason == null ? failureReason = new ArrayList<>() : failureReason;
 	}
 
-	public void setFailureReason(List<FailureReason1Code> failureReason) {
-		this.failureReason = failureReason;
+	public CardPaymentTransaction7 setFailureReason(List<FailureReason1Code> failureReason) {
+		this.failureReason = Objects.requireNonNull(failureReason);
+		return this;
 	}
 
-	@XmlElement(name = "RcptTxId")
-	public Max35Text getRecipientTransactionIdentification() {
-		return recipientTransactionIdentification;
+	public Optional<Max35Text> getRecipientTransactionIdentification() {
+		return recipientTransactionIdentification == null ? Optional.empty() : Optional.of(recipientTransactionIdentification);
 	}
 
-	public void setRecipientTransactionIdentification(Max35Text recipientTransactionIdentification) {
+	public CardPaymentTransaction7 setRecipientTransactionIdentification(Max35Text recipientTransactionIdentification) {
 		this.recipientTransactionIdentification = recipientTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "RcncltnId")
-	public Max35Text getReconciliationIdentification() {
-		return reconciliationIdentification;
+	public Optional<Max35Text> getReconciliationIdentification() {
+		return reconciliationIdentification == null ? Optional.empty() : Optional.of(reconciliationIdentification);
 	}
 
-	public void setReconciliationIdentification(Max35Text reconciliationIdentification) {
+	public CardPaymentTransaction7 setReconciliationIdentification(Max35Text reconciliationIdentification) {
 		this.reconciliationIdentification = reconciliationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "IntrchngData")
-	public Max35Text getInterchangeData() {
-		return interchangeData;
+	public Optional<Max35Text> getInterchangeData() {
+		return interchangeData == null ? Optional.empty() : Optional.of(interchangeData);
 	}
 
-	public void setInterchangeData(Max35Text interchangeData) {
+	public CardPaymentTransaction7 setInterchangeData(Max35Text interchangeData) {
 		this.interchangeData = interchangeData;
+		return this;
 	}
 
-	@XmlElement(name = "TxDtls", required = true)
 	public CardPaymentTransactionDetails7 getTransactionDetails() {
 		return transactionDetails;
 	}
 
-	public void setTransactionDetails(com.tools20022.repository.msg.CardPaymentTransactionDetails7 transactionDetails) {
-		this.transactionDetails = transactionDetails;
+	public CardPaymentTransaction7 setTransactionDetails(com.tools20022.repository.msg.CardPaymentTransactionDetails7 transactionDetails) {
+		this.transactionDetails = Objects.requireNonNull(transactionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AuthstnRslt")
-	public AuthorisationResult2 getAuthorisationResult() {
-		return authorisationResult;
+	public Optional<AuthorisationResult2> getAuthorisationResult() {
+		return authorisationResult == null ? Optional.empty() : Optional.of(authorisationResult);
 	}
 
-	public void setAuthorisationResult(com.tools20022.repository.msg.AuthorisationResult2 authorisationResult) {
+	public CardPaymentTransaction7 setAuthorisationResult(com.tools20022.repository.msg.AuthorisationResult2 authorisationResult) {
 		this.authorisationResult = authorisationResult;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlTxData")
-	public Max70Text getAdditionalTransactionData() {
-		return additionalTransactionData;
+	public Optional<Max70Text> getAdditionalTransactionData() {
+		return additionalTransactionData == null ? Optional.empty() : Optional.of(additionalTransactionData);
 	}
 
-	public void setAdditionalTransactionData(Max70Text additionalTransactionData) {
+	public CardPaymentTransaction7 setAdditionalTransactionData(Max70Text additionalTransactionData) {
 		this.additionalTransactionData = additionalTransactionData;
+		return this;
 	}
 }

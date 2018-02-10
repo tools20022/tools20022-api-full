@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.entity.CorporateActionPrice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies prices."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionPrice12", propOrder = {"cashInLieuOfSharePrice", "indicativeOrMarketPrice"})
 public class CorporateActionPrice12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CshInLieuOfShrPric")
 	protected PriceFormat17Choice cashInLieuOfSharePrice;
 	/**
-	 * Cash disbursement in lieu of equities; usually in lieu of fractional
-	 * quantity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -94,6 +96,9 @@ public class CorporateActionPrice12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CshInLieuOfShrPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::CINL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -109,9 +114,10 @@ public class CorporateActionPrice12 {
 	public static final MMMessageAssociationEnd mmCashInLieuOfSharePrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmCashInLieuOfSharePrice;
-			componentContext_lazy = () -> CorporateActionPrice12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice12.mmObject();
 			isDerived = false;
 			xmlTag = "CshInLieuOfShrPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::CINL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfSharePrice";
 			definition = "Cash disbursement in lieu of equities; usually in lieu of fractional quantity.";
@@ -121,10 +127,11 @@ public class CorporateActionPrice12 {
 			type_lazy = () -> PriceFormat17Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IndctvOrMktPric")
 	protected IndicativeOrMarketPrice4Choice indicativeOrMarketPrice;
 	/**
-	 * Indicates whether the price is an indicative price or a market price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -144,6 +151,9 @@ public class CorporateActionPrice12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IndctvOrMktPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::INDC or MRKT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -158,9 +168,10 @@ public class CorporateActionPrice12 {
 	public static final MMMessageAssociationEnd mmIndicativeOrMarketPrice = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionPrice.mmObject();
-			componentContext_lazy = () -> CorporateActionPrice12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice12.mmObject();
 			isDerived = false;
 			xmlTag = "IndctvOrMktPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::INDC or MRKT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndicativeOrMarketPrice";
 			definition = "Indicates whether the price is an indicative price or a market price.";
@@ -174,9 +185,9 @@ public class CorporateActionPrice12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionPrice12.mmCashInLieuOfSharePrice, CorporateActionPrice12.mmIndicativeOrMarketPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice12.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice12.mmIndicativeOrMarketPrice);
 				trace_lazy = () -> CorporateActionPrice.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice12";
 				definition = "Specifies prices.";
@@ -185,21 +196,21 @@ public class CorporateActionPrice12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CshInLieuOfShrPric")
-	public PriceFormat17Choice getCashInLieuOfSharePrice() {
-		return cashInLieuOfSharePrice;
+	public Optional<PriceFormat17Choice> getCashInLieuOfSharePrice() {
+		return cashInLieuOfSharePrice == null ? Optional.empty() : Optional.of(cashInLieuOfSharePrice);
 	}
 
-	public void setCashInLieuOfSharePrice(PriceFormat17Choice cashInLieuOfSharePrice) {
+	public CorporateActionPrice12 setCashInLieuOfSharePrice(PriceFormat17Choice cashInLieuOfSharePrice) {
 		this.cashInLieuOfSharePrice = cashInLieuOfSharePrice;
+		return this;
 	}
 
-	@XmlElement(name = "IndctvOrMktPric")
-	public IndicativeOrMarketPrice4Choice getIndicativeOrMarketPrice() {
-		return indicativeOrMarketPrice;
+	public Optional<IndicativeOrMarketPrice4Choice> getIndicativeOrMarketPrice() {
+		return indicativeOrMarketPrice == null ? Optional.empty() : Optional.of(indicativeOrMarketPrice);
 	}
 
-	public void setIndicativeOrMarketPrice(IndicativeOrMarketPrice4Choice indicativeOrMarketPrice) {
+	public CorporateActionPrice12 setIndicativeOrMarketPrice(IndicativeOrMarketPrice4Choice indicativeOrMarketPrice) {
 		this.indicativeOrMarketPrice = indicativeOrMarketPrice;
+		return this;
 	}
 }

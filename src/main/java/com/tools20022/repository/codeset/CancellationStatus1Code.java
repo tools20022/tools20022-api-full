@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CancellationStatusCode;
+import com.tools20022.repository.codeset.CancellationStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the cancellation status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CancellationStatusCode
- * CancellationStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationStatus1Code#mmSentToNextParty
- * CancellationStatus1Code.mmSentToNextParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationStatus1Code#SentToNextParty
+ * CancellationStatus1Code.SentToNextParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationStatus1Code#mmAccepted
- * CancellationStatus1Code.mmAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationStatus1Code#Accepted
+ * CancellationStatus1Code.Accepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationStatus1Code#mmPending
- * CancellationStatus1Code.mmPending}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationStatus1Code#Pending
+ * CancellationStatus1Code.Pending}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CancellationStatusCode
+ * CancellationStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the cancellation status."</li>
  * </ul>
  */
-public class CancellationStatus1Code extends CancellationStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CancellationStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class CancellationStatus1Code extends CancellationStatusCode {
 	 * name} = "SentToNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSentToNextParty = new MMCode() {
+	public static final CancellationStatus1Code SentToNextParty = new CancellationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
-			owner_lazy = () -> CancellationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationStatus1Code.mmObject();
+			codeName = CancellationStatusCode.SentToNextParty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class CancellationStatus1Code extends CancellationStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final CancellationStatus1Code Accepted = new CancellationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> CancellationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationStatus1Code.mmObject();
+			codeName = CancellationStatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class CancellationStatus1Code extends CancellationStatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPending = new MMCode() {
+	public static final CancellationStatus1Code Pending = new CancellationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
-			owner_lazy = () -> CancellationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationStatus1Code.mmObject();
+			codeName = CancellationStatusCode.Pending.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CancellationStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CancellationStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("STNP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationStatus1Code";
 				definition = "Specifies the cancellation status.";
-				code_lazy = () -> Arrays.asList(CancellationStatus1Code.mmSentToNextParty, CancellationStatus1Code.mmAccepted, CancellationStatus1Code.mmPending);
 				trace_lazy = () -> CancellationStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationStatus1Code.SentToNextParty, com.tools20022.repository.codeset.CancellationStatus1Code.Accepted,
+						com.tools20022.repository.codeset.CancellationStatus1Code.Pending);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SentToNextParty.getCodeName().get(), SentToNextParty);
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+		codesByName.put(Pending.getCodeName().get(), Pending);
+	}
+
+	public static CancellationStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CancellationStatus1Code[] values() {
+		CancellationStatus1Code[] values = new CancellationStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CancellationStatus1Code> {
+		@Override
+		public CancellationStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CancellationStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

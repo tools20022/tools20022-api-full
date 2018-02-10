@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountReport14;
 import com.tools20022.repository.msg.ErrorHandling3;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between account information or an error report."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountReportOrError1Choice", propOrder = {"error", "accountReport"})
 public class AccountReportOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Err", required = true)
 	protected List<ErrorHandling3> error;
 	/**
-	 * Error that occurred during processing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -97,7 +100,7 @@ public class AccountReportOrError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountReportOrError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Err";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,10 +111,11 @@ public class AccountReportOrError1Choice {
 			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctRpt")
 	protected List<AccountReport14> accountReport;
 	/**
-	 * Requested details of the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -137,7 +141,7 @@ public class AccountReportOrError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAccountReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountReportOrError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AcctRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,8 +156,8 @@ public class AccountReportOrError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountReportOrError1Choice.mmError, AccountReportOrError1Choice.mmAccountReport);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountReportOrError1Choice.mmError, com.tools20022.repository.choice.AccountReportOrError1Choice.mmAccountReport);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountReportOrError1Choice";
 				definition = "Choice between account information or an error report.";
@@ -162,21 +166,21 @@ public class AccountReportOrError1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Err", required = true)
 	public List<ErrorHandling3> getError() {
-		return error;
+		return error == null ? error = new ArrayList<>() : error;
 	}
 
-	public void setError(List<ErrorHandling3> error) {
-		this.error = error;
+	public AccountReportOrError1Choice setError(List<ErrorHandling3> error) {
+		this.error = Objects.requireNonNull(error);
+		return this;
 	}
 
-	@XmlElement(name = "AcctRpt")
 	public List<AccountReport14> getAccountReport() {
-		return accountReport;
+		return accountReport == null ? accountReport = new ArrayList<>() : accountReport;
 	}
 
-	public void setAccountReport(List<AccountReport14> accountReport) {
-		this.accountReport = accountReport;
+	public AccountReportOrError1Choice setAccountReport(List<AccountReport14> accountReport) {
+		this.accountReport = Objects.requireNonNull(accountReport);
+		return this;
 	}
 }

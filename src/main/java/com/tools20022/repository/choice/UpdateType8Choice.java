@@ -22,9 +22,11 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecurityAttributes2;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between action to request on a security."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UpdateType8Choice", propOrder = {"updateType", "replace"})
 public class UpdateType8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UpdTp", required = true)
 	protected List<com.tools20022.repository.choice.UpdateType7Choice> updateType;
 	/**
-	 * Request to add, modify or delete datas of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -95,7 +98,7 @@ public class UpdateType8Choice {
 	 */
 	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UpdateType8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -107,10 +110,11 @@ public class UpdateType8Choice {
 			type_lazy = () -> com.tools20022.repository.choice.UpdateType7Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Rplc", required = true)
 	protected SecurityAttributes2 replace;
 	/**
-	 * Request to replace all present data of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -136,7 +140,7 @@ public class UpdateType8Choice {
 	 */
 	public static final MMMessageAssociationEnd mmReplace = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UpdateType8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rplc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,8 +156,8 @@ public class UpdateType8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UpdateType8Choice.mmUpdateType, UpdateType8Choice.mmReplace);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType8Choice.mmUpdateType, com.tools20022.repository.choice.UpdateType8Choice.mmReplace);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UpdateType8Choice";
 				definition = "Choice between action to request on a security.";
@@ -162,21 +166,21 @@ public class UpdateType8Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UpdTp", required = true)
 	public List<UpdateType7Choice> getUpdateType() {
-		return updateType;
+		return updateType == null ? updateType = new ArrayList<>() : updateType;
 	}
 
-	public void setUpdateType(List<com.tools20022.repository.choice.UpdateType7Choice> updateType) {
-		this.updateType = updateType;
+	public UpdateType8Choice setUpdateType(List<com.tools20022.repository.choice.UpdateType7Choice> updateType) {
+		this.updateType = Objects.requireNonNull(updateType);
+		return this;
 	}
 
-	@XmlElement(name = "Rplc", required = true)
 	public SecurityAttributes2 getReplace() {
 		return replace;
 	}
 
-	public void setReplace(SecurityAttributes2 replace) {
-		this.replace = replace;
+	public UpdateType8Choice setReplace(SecurityAttributes2 replace) {
+		this.replace = Objects.requireNonNull(replace);
+		return this;
 	}
 }

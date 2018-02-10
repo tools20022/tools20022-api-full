@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Creditor2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Party to which an amount of money is due.
@@ -36,22 +37,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.PaymentPartyRole
+ * PaymentPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
  * <li>
  * {@linkplain com.tools20022.repository.entity.CreditorRole#mmSchemeIdentification
  * CreditorRole.mmSchemeIdentification}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.PaymentPartyRole
- * PaymentPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Creditor2 Creditor2}</li>
  * </ul>
  * </li>
  * <li>
@@ -63,10 +57,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Creditor2 Creditor2}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,8 +83,8 @@ public class CreditorRole extends PaymentPartyRole {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Scheme schemeIdentification;
 	/**
-	 * Credit party that signs a direct debit mandate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,8 +115,8 @@ public class CreditorRole extends PaymentPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmSchemeIdentification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CreditorRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CreditorRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SchemeIdentification";
 			definition = "Credit party that signs a direct debit mandate.";
@@ -130,7 +131,7 @@ public class CreditorRole extends PaymentPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditorRole";
 				definition = "Party to which an amount of money is due.";
@@ -152,7 +153,8 @@ public class CreditorRole extends PaymentPartyRole {
 		return schemeIdentification;
 	}
 
-	public void setSchemeIdentification(com.tools20022.repository.entity.Scheme schemeIdentification) {
-		this.schemeIdentification = schemeIdentification;
+	public CreditorRole setSchemeIdentification(com.tools20022.repository.entity.Scheme schemeIdentification) {
+		this.schemeIdentification = Objects.requireNonNull(schemeIdentification);
+		return this;
 	}
 }

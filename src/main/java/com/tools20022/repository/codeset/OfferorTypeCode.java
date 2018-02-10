@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.OfferorTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the offeror for the event is the issuing company or a third
@@ -32,11 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OfferorTypeCode#mmSelf
- * OfferorTypeCode.mmSelf}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OfferorTypeCode#mmThirdParty
- * OfferorTypeCode.mmThirdParty}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OfferorTypeCode#Self
+ * OfferorTypeCode.Self}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OfferorTypeCode#ThirdParty
+ * OfferorTypeCode.ThirdParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class OfferorTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OfferorTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,12 +98,12 @@ public class OfferorTypeCode {
 	 * definition} = "Offeror is the issuing company."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSelf = new MMCode() {
+	public static final OfferorTypeCode Self = new OfferorTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Self";
 			definition = "Offeror is the issuing company.";
-			owner_lazy = () -> OfferorTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OfferorTypeCode.mmObject();
 			codeName = "SELF";
 		}
 	};
@@ -123,28 +128,58 @@ public class OfferorTypeCode {
 	 * definition} = "Offer is made by the third party."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmThirdParty = new MMCode() {
+	public static final OfferorTypeCode ThirdParty = new OfferorTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdParty";
 			definition = "Offer is made by the third party.";
-			owner_lazy = () -> OfferorTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OfferorTypeCode.mmObject();
 			codeName = "THRD";
 		}
 	};
+	final static private LinkedHashMap<String, OfferorTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OfferorTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SELF");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OfferorTypeCode";
 				definition = "Specifies whether the offeror for the event is the issuing company or a third party.";
-				code_lazy = () -> Arrays.asList(OfferorTypeCode.mmSelf, OfferorTypeCode.mmThirdParty);
 				derivation_lazy = () -> Arrays.asList(OfferorType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OfferorTypeCode.Self, com.tools20022.repository.codeset.OfferorTypeCode.ThirdParty);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Self.getCodeName().get(), Self);
+		codesByName.put(ThirdParty.getCodeName().get(), ThirdParty);
+	}
+
+	public static OfferorTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OfferorTypeCode[] values() {
+		OfferorTypeCode[] values = new OfferorTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OfferorTypeCode> {
+		@Override
+		public OfferorTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OfferorTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

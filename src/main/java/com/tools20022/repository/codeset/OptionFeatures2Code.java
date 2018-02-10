@@ -20,58 +20,62 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OptionFeaturesCode;
+import com.tools20022.repository.codeset.OptionFeatures2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the features that may apply to a corporate action option.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.OptionFeaturesCode
- * OptionFeaturesCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#mmOptionApplicability
- * OptionFeatures2Code.mmOptionApplicability}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#OptionApplicability
+ * OptionFeatures2Code.OptionApplicability}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#mmConditional
- * OptionFeatures2Code.mmConditional}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#Conditional
+ * OptionFeatures2Code.Conditional}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#mmMaximumCash
- * OptionFeatures2Code.mmMaximumCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#MaximumCash
+ * OptionFeatures2Code.MaximumCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#mmMaximumSecurities
- * OptionFeatures2Code.mmMaximumSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#MaximumSecurities
+ * OptionFeatures2Code.MaximumSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#mmOddLotPreference
- * OptionFeatures2Code.mmOddLotPreference}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#OddLotPreference
+ * OptionFeatures2Code.OddLotPreference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#mmProration
- * OptionFeatures2Code.mmProration}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#Proration
+ * OptionFeatures2Code.Proration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#mmOverAndAbove
- * OptionFeatures2Code.mmOverAndAbove}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#OverAndAbove
+ * OptionFeatures2Code.OverAndAbove}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#mmQuantityToReceive
- * OptionFeatures2Code.mmQuantityToReceive}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#QuantityToReceive
+ * OptionFeatures2Code.QuantityToReceive}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#mmReducedWithholdingTax
- * OptionFeatures2Code.mmReducedWithholdingTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#ReducedWithholdingTax
+ * OptionFeatures2Code.ReducedWithholdingTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#mmNoServiceOffered
- * OptionFeatures2Code.mmNoServiceOffered}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures2Code#NoServiceOffered
+ * OptionFeatures2Code.NoServiceOffered}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.OptionFeaturesCode
+ * OptionFeaturesCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +93,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the features that may apply to a corporate action option."</li>
  * </ul>
  */
-public class OptionFeatures2Code extends OptionFeaturesCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OptionFeatures2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -108,11 +113,12 @@ public class OptionFeatures2Code extends OptionFeaturesCode {
 	 * name} = "OptionApplicability"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOptionApplicability = new MMCode() {
+	public static final OptionFeatures2Code OptionApplicability = new OptionFeatures2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionApplicability";
-			owner_lazy = () -> OptionFeatures2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures2Code.mmObject();
+			codeName = OptionFeaturesCode.OptionApplicability.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -131,11 +137,12 @@ public class OptionFeatures2Code extends OptionFeaturesCode {
 	 * name} = "Conditional"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConditional = new MMCode() {
+	public static final OptionFeatures2Code Conditional = new OptionFeatures2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Conditional";
-			owner_lazy = () -> OptionFeatures2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures2Code.mmObject();
+			codeName = OptionFeaturesCode.Conditional.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -154,11 +161,12 @@ public class OptionFeatures2Code extends OptionFeaturesCode {
 	 * name} = "MaximumCash"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMaximumCash = new MMCode() {
+	public static final OptionFeatures2Code MaximumCash = new OptionFeatures2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumCash";
-			owner_lazy = () -> OptionFeatures2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures2Code.mmObject();
+			codeName = OptionFeaturesCode.MaximumCash.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -177,11 +185,12 @@ public class OptionFeatures2Code extends OptionFeaturesCode {
 	 * name} = "MaximumSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMaximumSecurities = new MMCode() {
+	public static final OptionFeatures2Code MaximumSecurities = new OptionFeatures2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumSecurities";
-			owner_lazy = () -> OptionFeatures2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures2Code.mmObject();
+			codeName = OptionFeaturesCode.MaximumSecurities.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -200,11 +209,12 @@ public class OptionFeatures2Code extends OptionFeaturesCode {
 	 * name} = "OddLotPreference"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOddLotPreference = new MMCode() {
+	public static final OptionFeatures2Code OddLotPreference = new OptionFeatures2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OddLotPreference";
-			owner_lazy = () -> OptionFeatures2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures2Code.mmObject();
+			codeName = OptionFeaturesCode.OddLotPreference.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -223,11 +233,12 @@ public class OptionFeatures2Code extends OptionFeaturesCode {
 	 * name} = "Proration"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProration = new MMCode() {
+	public static final OptionFeatures2Code Proration = new OptionFeatures2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proration";
-			owner_lazy = () -> OptionFeatures2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures2Code.mmObject();
+			codeName = OptionFeaturesCode.Proration.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -246,11 +257,12 @@ public class OptionFeatures2Code extends OptionFeaturesCode {
 	 * name} = "OverAndAbove"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOverAndAbove = new MMCode() {
+	public static final OptionFeatures2Code OverAndAbove = new OptionFeatures2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverAndAbove";
-			owner_lazy = () -> OptionFeatures2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures2Code.mmObject();
+			codeName = OptionFeaturesCode.OverAndAbove.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -269,11 +281,12 @@ public class OptionFeatures2Code extends OptionFeaturesCode {
 	 * name} = "QuantityToReceive"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQuantityToReceive = new MMCode() {
+	public static final OptionFeatures2Code QuantityToReceive = new OptionFeatures2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToReceive";
-			owner_lazy = () -> OptionFeatures2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures2Code.mmObject();
+			codeName = OptionFeaturesCode.QuantityToReceive.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -292,11 +305,12 @@ public class OptionFeatures2Code extends OptionFeaturesCode {
 	 * name} = "ReducedWithholdingTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReducedWithholdingTax = new MMCode() {
+	public static final OptionFeatures2Code ReducedWithholdingTax = new OptionFeatures2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReducedWithholdingTax";
-			owner_lazy = () -> OptionFeatures2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures2Code.mmObject();
+			codeName = OptionFeaturesCode.ReducedWithholdingTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -315,28 +329,68 @@ public class OptionFeatures2Code extends OptionFeaturesCode {
 	 * name} = "NoServiceOffered"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoServiceOffered = new MMCode() {
+	public static final OptionFeatures2Code NoServiceOffered = new OptionFeatures2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoServiceOffered";
-			owner_lazy = () -> OptionFeatures2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures2Code.mmObject();
+			codeName = OptionFeaturesCode.NoServiceOffered.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OptionFeatures2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OptionFeatures2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CAOS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionFeatures2Code";
 				definition = "Specifies the features that may apply to a corporate action option.";
-				code_lazy = () -> Arrays.asList(OptionFeatures2Code.mmOptionApplicability, OptionFeatures2Code.mmConditional, OptionFeatures2Code.mmMaximumCash, OptionFeatures2Code.mmMaximumSecurities,
-						OptionFeatures2Code.mmOddLotPreference, OptionFeatures2Code.mmProration, OptionFeatures2Code.mmOverAndAbove, OptionFeatures2Code.mmQuantityToReceive, OptionFeatures2Code.mmReducedWithholdingTax,
-						OptionFeatures2Code.mmNoServiceOffered);
 				trace_lazy = () -> OptionFeaturesCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures2Code.OptionApplicability, com.tools20022.repository.codeset.OptionFeatures2Code.Conditional,
+						com.tools20022.repository.codeset.OptionFeatures2Code.MaximumCash, com.tools20022.repository.codeset.OptionFeatures2Code.MaximumSecurities, com.tools20022.repository.codeset.OptionFeatures2Code.OddLotPreference,
+						com.tools20022.repository.codeset.OptionFeatures2Code.Proration, com.tools20022.repository.codeset.OptionFeatures2Code.OverAndAbove, com.tools20022.repository.codeset.OptionFeatures2Code.QuantityToReceive,
+						com.tools20022.repository.codeset.OptionFeatures2Code.ReducedWithholdingTax, com.tools20022.repository.codeset.OptionFeatures2Code.NoServiceOffered);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(OptionApplicability.getCodeName().get(), OptionApplicability);
+		codesByName.put(Conditional.getCodeName().get(), Conditional);
+		codesByName.put(MaximumCash.getCodeName().get(), MaximumCash);
+		codesByName.put(MaximumSecurities.getCodeName().get(), MaximumSecurities);
+		codesByName.put(OddLotPreference.getCodeName().get(), OddLotPreference);
+		codesByName.put(Proration.getCodeName().get(), Proration);
+		codesByName.put(OverAndAbove.getCodeName().get(), OverAndAbove);
+		codesByName.put(QuantityToReceive.getCodeName().get(), QuantityToReceive);
+		codesByName.put(ReducedWithholdingTax.getCodeName().get(), ReducedWithholdingTax);
+		codesByName.put(NoServiceOffered.getCodeName().get(), NoServiceOffered);
+	}
+
+	public static OptionFeatures2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OptionFeatures2Code[] values() {
+		OptionFeatures2Code[] values = new OptionFeatures2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OptionFeatures2Code> {
+		@Override
+		public OptionFeatures2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OptionFeatures2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

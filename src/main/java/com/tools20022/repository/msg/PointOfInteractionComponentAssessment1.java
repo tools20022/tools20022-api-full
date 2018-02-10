@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Assessment;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Assessments for the component of the point of interaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PointOfInteractionComponentAssessment1", propOrder = {"type", "assigner", "deliveryDate", "expirationDate", "number"})
 public class PointOfInteractionComponentAssessment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected POIComponentAssessment1Code type;
 	/**
-	 * Type of assessment of the component.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +119,7 @@ public class PointOfInteractionComponentAssessment1 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Assessment.mmAssessmentType;
-			componentContext_lazy = () -> PointOfInteractionComponentAssessment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +130,11 @@ public class PointOfInteractionComponentAssessment1 {
 			simpleType_lazy = () -> POIComponentAssessment1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Assgnr", required = true)
 	protected List<Max35Text> assigner;
 	/**
-	 * Body which has delivered the assessment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,7 +167,7 @@ public class PointOfInteractionComponentAssessment1 {
 	public static final MMMessageAttribute mmAssigner = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> PointOfInteractionComponentAssessment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmObject();
 			isDerived = false;
 			xmlTag = "Assgnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,10 +177,11 @@ public class PointOfInteractionComponentAssessment1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvryDt")
 	protected ISODateTime deliveryDate;
 	/**
-	 * Date when the assessment has been delivered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -212,7 +214,7 @@ public class PointOfInteractionComponentAssessment1 {
 	public static final MMMessageAttribute mmDeliveryDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Assessment.mmDeliveryDate;
-			componentContext_lazy = () -> PointOfInteractionComponentAssessment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,10 +225,11 @@ public class PointOfInteractionComponentAssessment1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "XprtnDt")
 	protected ISODateTime expirationDate;
 	/**
-	 * Date when the assessment will expire.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,7 +262,7 @@ public class PointOfInteractionComponentAssessment1 {
 	public static final MMMessageAttribute mmExpirationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Assessment.mmExpiryDate;
-			componentContext_lazy = () -> PointOfInteractionComponentAssessment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmObject();
 			isDerived = false;
 			xmlTag = "XprtnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,10 +273,11 @@ public class PointOfInteractionComponentAssessment1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "Nb", required = true)
 	protected Max35Text number;
 	/**
-	 * Unique assessment number for the component.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -300,7 +304,7 @@ public class PointOfInteractionComponentAssessment1 {
 	 */
 	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PointOfInteractionComponentAssessment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -315,10 +319,11 @@ public class PointOfInteractionComponentAssessment1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PointOfInteractionComponentAssessment1.mmType, PointOfInteractionComponentAssessment1.mmAssigner, PointOfInteractionComponentAssessment1.mmDeliveryDate,
-						PointOfInteractionComponentAssessment1.mmExpirationDate, PointOfInteractionComponentAssessment1.mmNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmType, com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmAssigner,
+						com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmDeliveryDate, com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmExpirationDate,
+						com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmNumber);
 				trace_lazy = () -> Assessment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionComponentAssessment1";
 				definition = "Assessments for the component of the point of interaction.";
@@ -327,48 +332,48 @@ public class PointOfInteractionComponentAssessment1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public POIComponentAssessment1Code getType() {
 		return type;
 	}
 
-	public void setType(POIComponentAssessment1Code type) {
-		this.type = type;
+	public PointOfInteractionComponentAssessment1 setType(POIComponentAssessment1Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Assgnr", required = true)
 	public List<Max35Text> getAssigner() {
-		return assigner;
+		return assigner == null ? assigner = new ArrayList<>() : assigner;
 	}
 
-	public void setAssigner(List<Max35Text> assigner) {
-		this.assigner = assigner;
+	public PointOfInteractionComponentAssessment1 setAssigner(List<Max35Text> assigner) {
+		this.assigner = Objects.requireNonNull(assigner);
+		return this;
 	}
 
-	@XmlElement(name = "DlvryDt")
-	public ISODateTime getDeliveryDate() {
-		return deliveryDate;
+	public Optional<ISODateTime> getDeliveryDate() {
+		return deliveryDate == null ? Optional.empty() : Optional.of(deliveryDate);
 	}
 
-	public void setDeliveryDate(ISODateTime deliveryDate) {
+	public PointOfInteractionComponentAssessment1 setDeliveryDate(ISODateTime deliveryDate) {
 		this.deliveryDate = deliveryDate;
+		return this;
 	}
 
-	@XmlElement(name = "XprtnDt")
-	public ISODateTime getExpirationDate() {
-		return expirationDate;
+	public Optional<ISODateTime> getExpirationDate() {
+		return expirationDate == null ? Optional.empty() : Optional.of(expirationDate);
 	}
 
-	public void setExpirationDate(ISODateTime expirationDate) {
+	public PointOfInteractionComponentAssessment1 setExpirationDate(ISODateTime expirationDate) {
 		this.expirationDate = expirationDate;
+		return this;
 	}
 
-	@XmlElement(name = "Nb", required = true)
 	public Max35Text getNumber() {
 		return number;
 	}
 
-	public void setNumber(Max35Text number) {
-		this.number = number;
+	public PointOfInteractionComponentAssessment1 setNumber(Max35Text number) {
+		this.number = Objects.requireNonNull(number);
+		return this;
 	}
 }

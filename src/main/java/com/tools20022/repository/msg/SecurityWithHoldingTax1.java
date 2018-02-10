@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecurityWithHoldingTax1", propOrder = {"withholdingTaxValue", "country"})
 public class SecurityWithHoldingTax1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "WhldgTaxVal", required = true)
 	protected RateAndAmountFormat1Choice withholdingTaxValue;
 	/**
-	 * Value of the withholding tax as rate, amount or not specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +104,7 @@ public class SecurityWithHoldingTax1 {
 	 */
 	public static final MMMessageAttribute mmWithholdingTaxValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityWithHoldingTax1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityWithHoldingTax1.mmObject();
 			isDerived = false;
 			xmlTag = "WhldgTaxVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +115,11 @@ public class SecurityWithHoldingTax1 {
 			complexType_lazy = () -> RateAndAmountFormat1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Ctry", required = true)
 	protected CountryCode country;
 	/**
-	 * Represents the tax authority.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +146,7 @@ public class SecurityWithHoldingTax1 {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityWithHoldingTax1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityWithHoldingTax1.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,8 +161,8 @@ public class SecurityWithHoldingTax1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityWithHoldingTax1.mmWithholdingTaxValue, SecurityWithHoldingTax1.mmCountry);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityWithHoldingTax1.mmWithholdingTaxValue, com.tools20022.repository.msg.SecurityWithHoldingTax1.mmCountry);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityWithHoldingTax1";
 				definition = "Set of elements of a cash distribution that will be withheld by a tax authority.";
@@ -168,21 +171,21 @@ public class SecurityWithHoldingTax1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "WhldgTaxVal", required = true)
 	public RateAndAmountFormat1Choice getWithholdingTaxValue() {
 		return withholdingTaxValue;
 	}
 
-	public void setWithholdingTaxValue(RateAndAmountFormat1Choice withholdingTaxValue) {
-		this.withholdingTaxValue = withholdingTaxValue;
+	public SecurityWithHoldingTax1 setWithholdingTaxValue(RateAndAmountFormat1Choice withholdingTaxValue) {
+		this.withholdingTaxValue = Objects.requireNonNull(withholdingTaxValue);
+		return this;
 	}
 
-	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
 
-	public void setCountry(CountryCode country) {
-		this.country = country;
+	public SecurityWithHoldingTax1 setCountry(CountryCode country) {
+		this.country = Objects.requireNonNull(country);
+		return this;
 	}
 }

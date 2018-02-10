@@ -20,51 +20,54 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ExchangePolicyCode;
+import com.tools20022.repository.codeset.ExchangePolicy1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Exchange policy between parties.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ExchangePolicyCode
- * ExchangePolicyCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#mmOnDemand
- * ExchangePolicy1Code.mmOnDemand}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#OnDemand
+ * ExchangePolicy1Code.OnDemand}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#mmImmediately
- * ExchangePolicy1Code.mmImmediately}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#Immediately
+ * ExchangePolicy1Code.Immediately}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#mmAsSoonAsPossible
- * ExchangePolicy1Code.mmAsSoonAsPossible}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#AsSoonAsPossible
+ * ExchangePolicy1Code.AsSoonAsPossible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#mmAsGroup
- * ExchangePolicy1Code.mmAsGroup}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#AsGroup
+ * ExchangePolicy1Code.AsGroup}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#mmNumberLimit
- * ExchangePolicy1Code.mmNumberLimit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#NumberLimit
+ * ExchangePolicy1Code.NumberLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#mmTotalLimit
- * ExchangePolicy1Code.mmTotalLimit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#mmCyclic
- * ExchangePolicy1Code.mmCyclic}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#mmNone
- * ExchangePolicy1Code.mmNone}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#TotalLimit
+ * ExchangePolicy1Code.TotalLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#Cyclic
+ * ExchangePolicy1Code.Cyclic}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExchangePolicy1Code#None
+ * ExchangePolicy1Code.None}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ExchangePolicyCode
+ * ExchangePolicyCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Exchange policy between parties."</li>
  * </ul>
  */
-public class ExchangePolicy1Code extends ExchangePolicyCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ExchangePolicy1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -100,11 +104,12 @@ public class ExchangePolicy1Code extends ExchangePolicyCode {
 	 * name} = "OnDemand"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOnDemand = new MMCode() {
+	public static final ExchangePolicy1Code OnDemand = new ExchangePolicy1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnDemand";
-			owner_lazy = () -> ExchangePolicy1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExchangePolicy1Code.mmObject();
+			codeName = ExchangePolicyCode.OnDemand.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -123,11 +128,12 @@ public class ExchangePolicy1Code extends ExchangePolicyCode {
 	 * name} = "Immediately"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmImmediately = new MMCode() {
+	public static final ExchangePolicy1Code Immediately = new ExchangePolicy1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Immediately";
-			owner_lazy = () -> ExchangePolicy1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExchangePolicy1Code.mmObject();
+			codeName = ExchangePolicyCode.Immediately.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -146,11 +152,12 @@ public class ExchangePolicy1Code extends ExchangePolicyCode {
 	 * name} = "AsSoonAsPossible"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAsSoonAsPossible = new MMCode() {
+	public static final ExchangePolicy1Code AsSoonAsPossible = new ExchangePolicy1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsSoonAsPossible";
-			owner_lazy = () -> ExchangePolicy1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExchangePolicy1Code.mmObject();
+			codeName = ExchangePolicyCode.AsSoonAsPossible.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -169,11 +176,12 @@ public class ExchangePolicy1Code extends ExchangePolicyCode {
 	 * name} = "AsGroup"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAsGroup = new MMCode() {
+	public static final ExchangePolicy1Code AsGroup = new ExchangePolicy1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsGroup";
-			owner_lazy = () -> ExchangePolicy1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExchangePolicy1Code.mmObject();
+			codeName = ExchangePolicyCode.AsGroup.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -192,11 +200,12 @@ public class ExchangePolicy1Code extends ExchangePolicyCode {
 	 * name} = "NumberLimit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNumberLimit = new MMCode() {
+	public static final ExchangePolicy1Code NumberLimit = new ExchangePolicy1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberLimit";
-			owner_lazy = () -> ExchangePolicy1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExchangePolicy1Code.mmObject();
+			codeName = ExchangePolicyCode.NumberLimit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -215,11 +224,12 @@ public class ExchangePolicy1Code extends ExchangePolicyCode {
 	 * name} = "TotalLimit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTotalLimit = new MMCode() {
+	public static final ExchangePolicy1Code TotalLimit = new ExchangePolicy1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalLimit";
-			owner_lazy = () -> ExchangePolicy1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExchangePolicy1Code.mmObject();
+			codeName = ExchangePolicyCode.TotalLimit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -238,11 +248,12 @@ public class ExchangePolicy1Code extends ExchangePolicyCode {
 	 * name} = "Cyclic"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCyclic = new MMCode() {
+	public static final ExchangePolicy1Code Cyclic = new ExchangePolicy1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cyclic";
-			owner_lazy = () -> ExchangePolicy1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExchangePolicy1Code.mmObject();
+			codeName = ExchangePolicyCode.Cyclic.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -261,27 +272,65 @@ public class ExchangePolicy1Code extends ExchangePolicyCode {
 	 * name} = "None"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNone = new MMCode() {
+	public static final ExchangePolicy1Code None = new ExchangePolicy1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
-			owner_lazy = () -> ExchangePolicy1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExchangePolicy1Code.mmObject();
+			codeName = ExchangePolicyCode.None.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ExchangePolicy1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ExchangePolicy1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ONDM");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExchangePolicy1Code";
 				definition = "Exchange policy between parties.";
-				code_lazy = () -> Arrays.asList(ExchangePolicy1Code.mmOnDemand, ExchangePolicy1Code.mmImmediately, ExchangePolicy1Code.mmAsSoonAsPossible, ExchangePolicy1Code.mmAsGroup, ExchangePolicy1Code.mmNumberLimit,
-						ExchangePolicy1Code.mmTotalLimit, ExchangePolicy1Code.mmCyclic, ExchangePolicy1Code.mmNone);
 				trace_lazy = () -> ExchangePolicyCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExchangePolicy1Code.OnDemand, com.tools20022.repository.codeset.ExchangePolicy1Code.Immediately,
+						com.tools20022.repository.codeset.ExchangePolicy1Code.AsSoonAsPossible, com.tools20022.repository.codeset.ExchangePolicy1Code.AsGroup, com.tools20022.repository.codeset.ExchangePolicy1Code.NumberLimit,
+						com.tools20022.repository.codeset.ExchangePolicy1Code.TotalLimit, com.tools20022.repository.codeset.ExchangePolicy1Code.Cyclic, com.tools20022.repository.codeset.ExchangePolicy1Code.None);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(OnDemand.getCodeName().get(), OnDemand);
+		codesByName.put(Immediately.getCodeName().get(), Immediately);
+		codesByName.put(AsSoonAsPossible.getCodeName().get(), AsSoonAsPossible);
+		codesByName.put(AsGroup.getCodeName().get(), AsGroup);
+		codesByName.put(NumberLimit.getCodeName().get(), NumberLimit);
+		codesByName.put(TotalLimit.getCodeName().get(), TotalLimit);
+		codesByName.put(Cyclic.getCodeName().get(), Cyclic);
+		codesByName.put(None.getCodeName().get(), None);
+	}
+
+	public static ExchangePolicy1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ExchangePolicy1Code[] values() {
+		ExchangePolicy1Code[] values = new ExchangePolicy1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ExchangePolicy1Code> {
+		@Override
+		public ExchangePolicy1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ExchangePolicy1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

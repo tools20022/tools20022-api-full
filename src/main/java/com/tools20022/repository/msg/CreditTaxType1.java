@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,15 +61,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the value of credit tax."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CreditTaxType1", propOrder = {"taxType", "amount"})
 public class CreditTaxType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TaxTp", required = true)
 	protected RateType3FormatChoice taxType;
 	/**
-	 * Type of tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -95,7 +97,7 @@ public class CreditTaxType1 {
 	 */
 	public static final MMMessageAttribute mmTaxType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CreditTaxType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTaxType1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -106,10 +108,11 @@ public class CreditTaxType1 {
 			complexType_lazy = () -> RateType3FormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * The value of the related tax expressed as an amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -136,7 +139,7 @@ public class CreditTaxType1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CreditTaxType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTaxType1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,8 +154,8 @@ public class CreditTaxType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CreditTaxType1.mmTaxType, CreditTaxType1.mmAmount);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditTaxType1.mmTaxType, com.tools20022.repository.msg.CreditTaxType1.mmAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CreditTaxType1";
 				definition = "Specifies the value of credit tax.";
@@ -161,21 +164,21 @@ public class CreditTaxType1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TaxTp", required = true)
 	public RateType3FormatChoice getTaxType() {
 		return taxType;
 	}
 
-	public void setTaxType(RateType3FormatChoice taxType) {
-		this.taxType = taxType;
+	public CreditTaxType1 setTaxType(RateType3FormatChoice taxType) {
+		this.taxType = Objects.requireNonNull(taxType);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
-		this.amount = amount;
+	public CreditTaxType1 setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 }

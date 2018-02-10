@@ -25,9 +25,11 @@ import com.tools20022.repository.codeset.MemberStatus1Code;
 import com.tools20022.repository.codeset.MemberType1Code;
 import com.tools20022.repository.entity.SystemMemberRole;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the criteria used to search for a member."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MemberSearchCriteria", propOrder = {"identification", "type", "status"})
 public class MemberSearchCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id")
 	protected List<MemberIdentificationChoice> identification;
 	/**
-	 * Unique and unambiguous identification of a member within a system,
-	 * assigned using the member identification scheme of the system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +116,7 @@ public class MemberSearchCriteria {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SystemMemberRole.mmObject();
-			componentContext_lazy = () -> MemberSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MemberSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +126,11 @@ public class MemberSearchCriteria {
 			complexType_lazy = () -> MemberIdentificationChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected List<MemberType1Code> type;
 	/**
-	 * Nature of the relationship a member has with a system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +164,7 @@ public class MemberSearchCriteria {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemMemberRole.mmType;
-			componentContext_lazy = () -> MemberSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MemberSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +174,11 @@ public class MemberSearchCriteria {
 			simpleType_lazy = () -> MemberType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts")
 	protected List<MemberStatus1Code> status;
 	/**
-	 * Status of a member in a system, eg, enabled or deleted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,7 +212,7 @@ public class MemberSearchCriteria {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemMemberRole.mmMemberStatus;
-			componentContext_lazy = () -> MemberSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MemberSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,9 +226,10 @@ public class MemberSearchCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MemberSearchCriteria.mmIdentification, MemberSearchCriteria.mmType, MemberSearchCriteria.mmStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberSearchCriteria.mmIdentification, com.tools20022.repository.msg.MemberSearchCriteria.mmType,
+						com.tools20022.repository.msg.MemberSearchCriteria.mmStatus);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberSearchCriteria";
 				definition = "Defines the criteria used to search for a member.";
@@ -233,30 +238,30 @@ public class MemberSearchCriteria {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id")
 	public List<MemberIdentificationChoice> getIdentification() {
-		return identification;
+		return identification == null ? identification = new ArrayList<>() : identification;
 	}
 
-	public void setIdentification(List<MemberIdentificationChoice> identification) {
-		this.identification = identification;
+	public MemberSearchCriteria setIdentification(List<MemberIdentificationChoice> identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
 	public List<MemberType1Code> getType() {
-		return type;
+		return type == null ? type = new ArrayList<>() : type;
 	}
 
-	public void setType(List<MemberType1Code> type) {
-		this.type = type;
+	public MemberSearchCriteria setType(List<MemberType1Code> type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Sts")
 	public List<MemberStatus1Code> getStatus() {
-		return status;
+		return status == null ? status = new ArrayList<>() : status;
 	}
 
-	public void setStatus(List<MemberStatus1Code> status) {
-		this.status = status;
+	public MemberSearchCriteria setStatus(List<MemberStatus1Code> status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 }

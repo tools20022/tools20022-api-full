@@ -32,6 +32,7 @@ import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.NameAndAddress5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -82,8 +83,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,18 +102,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyIdentification70Choice", propOrder = {"anyBIC", "proprietaryIdentification", "nameAndAddress"})
 public class PartyIdentification70Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AnyBIC", required = true)
 	protected AnyBICIdentifier anyBIC;
 	/**
-	 * Code allocated to a financial or non-financial institution by the ISO
-	 * 9362 Registration Authority, as described in ISO 9362
-	 * "Banking - Banking telecommunication messages - Business identifier code (BIC)"
-	 * .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +155,7 @@ public class PartyIdentification70Choice {
 	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
-			componentContext_lazy = () -> PartyIdentification70Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification70Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AnyBIC";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,11 +167,11 @@ public class PartyIdentification70Choice {
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryId", required = true)
 	protected GenericIdentification1 proprietaryIdentification;
 	/**
-	 * Unique and unambiguous identifier, as assigned to a financial institution
-	 * using a proprietary identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -216,7 +215,7 @@ public class PartyIdentification70Choice {
 	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> PartyIdentification70Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification70Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,10 +227,11 @@ public class PartyIdentification70Choice {
 			complexType_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "NmAndAdr", required = true)
 	protected NameAndAddress5 nameAndAddress;
 	/**
-	 * Name and address of a party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -272,7 +272,7 @@ public class PartyIdentification70Choice {
 	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> PartyIdentification70Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification70Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,11 +288,12 @@ public class PartyIdentification70Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification70Choice.mmAnyBIC, PartyIdentification70Choice.mmProprietaryIdentification, PartyIdentification70Choice.mmNameAndAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification70Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification70Choice.mmProprietaryIdentification,
+						com.tools20022.repository.choice.PartyIdentification70Choice.mmNameAndAddress);
 				messageBuildingBlock_lazy = () -> Arrays.asList(PortfolioTransferInstructionV07.mmTransferee, AccountHoldingInformationV05.mmTransferee, PortfolioTransferConfirmationV07.mmTransferee,
 						AccountHoldingInformationRequestV04.mmTransferee);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification70Choice";
 				definition = "Choice of identification of a party.";
@@ -302,30 +303,30 @@ public class PartyIdentification70Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AnyBIC", required = true)
 	public AnyBICIdentifier getAnyBIC() {
 		return anyBIC;
 	}
 
-	public void setAnyBIC(AnyBICIdentifier anyBIC) {
-		this.anyBIC = anyBIC;
+	public PartyIdentification70Choice setAnyBIC(AnyBICIdentifier anyBIC) {
+		this.anyBIC = Objects.requireNonNull(anyBIC);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryId", required = true)
 	public GenericIdentification1 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}
 
-	public void setProprietaryIdentification(GenericIdentification1 proprietaryIdentification) {
-		this.proprietaryIdentification = proprietaryIdentification;
+	public PartyIdentification70Choice setProprietaryIdentification(GenericIdentification1 proprietaryIdentification) {
+		this.proprietaryIdentification = Objects.requireNonNull(proprietaryIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress5 getNameAndAddress() {
 		return nameAndAddress;
 	}
 
-	public void setNameAndAddress(NameAndAddress5 nameAndAddress) {
-		this.nameAndAddress = nameAndAddress;
+	public PartyIdentification70Choice setNameAndAddress(NameAndAddress5 nameAndAddress) {
+		this.nameAndAddress = Objects.requireNonNull(nameAndAddress);
+		return this;
 	}
 }

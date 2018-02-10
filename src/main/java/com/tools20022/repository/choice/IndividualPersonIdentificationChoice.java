@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.GenericIdentification10;
 import com.tools20022.repository.msg.IndividualPerson4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,16 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IndividualPersonIdentificationChoice", propOrder = {"identificationNumber", "personName"})
 public class IndividualPersonIdentificationChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IdNb", required = true)
 	protected GenericIdentification10 identificationNumber;
 	/**
-	 * Information related to an identification, eg, party identification or
-	 * account identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -133,7 +134,7 @@ public class IndividualPersonIdentificationChoice {
 	public static final MMMessageAssociationEnd mmIdentificationNumber = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> IndividualPersonIdentificationChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IndividualPersonIdentificationChoice.mmObject();
 			isDerived = false;
 			xmlTag = "IdNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,11 +147,11 @@ public class IndividualPersonIdentificationChoice {
 			type_lazy = () -> GenericIdentification10.mmObject();
 		}
 	};
+	@XmlElement(name = "PrsnNm", required = true)
 	protected IndividualPerson4 personName;
 	/**
-	 * Human entity, as distinguished from a corporate entity (which is
-	 * sometimes referred to as an 'artificial person').
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -195,7 +196,7 @@ public class IndividualPersonIdentificationChoice {
 	public static final MMMessageAssociationEnd mmPersonName = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmPersonName;
-			componentContext_lazy = () -> IndividualPersonIdentificationChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IndividualPersonIdentificationChoice.mmObject();
 			isDerived = false;
 			xmlTag = "PrsnNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,9 +213,9 @@ public class IndividualPersonIdentificationChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IndividualPersonIdentificationChoice.mmIdentificationNumber, IndividualPersonIdentificationChoice.mmPersonName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndividualPersonIdentificationChoice.mmIdentificationNumber, com.tools20022.repository.choice.IndividualPersonIdentificationChoice.mmPersonName);
 				trace_lazy = () -> PersonIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndividualPersonIdentificationChoice";
 				definition = "Choice of identification of an individual person.";
@@ -224,21 +225,21 @@ public class IndividualPersonIdentificationChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IdNb", required = true)
 	public GenericIdentification10 getIdentificationNumber() {
 		return identificationNumber;
 	}
 
-	public void setIdentificationNumber(GenericIdentification10 identificationNumber) {
-		this.identificationNumber = identificationNumber;
+	public IndividualPersonIdentificationChoice setIdentificationNumber(GenericIdentification10 identificationNumber) {
+		this.identificationNumber = Objects.requireNonNull(identificationNumber);
+		return this;
 	}
 
-	@XmlElement(name = "PrsnNm", required = true)
 	public IndividualPerson4 getPersonName() {
 		return personName;
 	}
 
-	public void setPersonName(IndividualPerson4 personName) {
-		this.personName = personName;
+	public IndividualPersonIdentificationChoice setPersonName(IndividualPerson4 personName) {
+		this.personName = Objects.requireNonNull(personName);
+		return this;
 	}
 }

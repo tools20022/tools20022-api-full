@@ -25,9 +25,8 @@ import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max5000Binary;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * SecurityParameters3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "SecurityParameters4", propOrder = {"key", "digitalSignature", "certificate", "ATMChallenge", "requestedKey"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "SecurityParameters4", propOrder = {"key", "digitalSignature", "certificate", "aTMChallenge", "requestedKey"})
 public class SecurityParameters4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Key")
 	protected CryptographicKey8 key;
 	/**
-	 * Cryptographic key used to protect the key download.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,7 +133,7 @@ public class SecurityParameters4 {
 	 */
 	public static final MMMessageAttribute mmKey = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityParameters4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "Key";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,11 +146,11 @@ public class SecurityParameters4 {
 			complexType_lazy = () -> com.tools20022.repository.msg.CryptographicKey8.mmObject();
 		}
 	};
+	@XmlElement(name = "DgtlSgntr")
 	protected ContentInformationType14 digitalSignature;
 	/**
-	 * Digital signature of implicit data depending on the security scheme
-	 * download procedure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -187,7 +187,7 @@ public class SecurityParameters4 {
 	 */
 	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecurityParameters4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "DgtlSgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,11 +200,11 @@ public class SecurityParameters4 {
 			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType14.mmObject();
 		}
 	};
+	@XmlElement(name = "Cert")
 	protected List<Max5000Binary> certificate;
 	/**
-	 * Ordered certificate chain of the asymmetric key encryption key, starting
-	 * with the ATM certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,7 +234,7 @@ public class SecurityParameters4 {
 	 */
 	public static final MMMessageAttribute mmCertificate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityParameters4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "Cert";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,10 +244,11 @@ public class SecurityParameters4 {
 			simpleType_lazy = () -> Max5000Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "ATMChllng")
 	protected Max140Binary aTMChallenge;
 	/**
-	 * Random value from the ATM to avoid message replay.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -288,7 +289,7 @@ public class SecurityParameters4 {
 	 */
 	public static final MMMessageAttribute mmATMChallenge = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityParameters4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "ATMChllng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -301,11 +302,11 @@ public class SecurityParameters4 {
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdKey")
 	protected Max35Text requestedKey;
 	/**
-	 * Requested key for downloading, depending on the key hierarchy used by the
-	 * host.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -334,7 +335,7 @@ public class SecurityParameters4 {
 	 */
 	public static final MMMessageAttribute mmRequestedKey = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityParameters4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdKey";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -349,8 +350,9 @@ public class SecurityParameters4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityParameters4.mmKey, SecurityParameters4.mmDigitalSignature, SecurityParameters4.mmCertificate, SecurityParameters4.mmATMChallenge, SecurityParameters4.mmRequestedKey);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityParameters4.mmKey, com.tools20022.repository.msg.SecurityParameters4.mmDigitalSignature,
+						com.tools20022.repository.msg.SecurityParameters4.mmCertificate, com.tools20022.repository.msg.SecurityParameters4.mmATMChallenge, com.tools20022.repository.msg.SecurityParameters4.mmRequestedKey);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityParameters4";
 				definition = "Security parameters of the ATM for the initiated key download.";
@@ -361,48 +363,48 @@ public class SecurityParameters4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Key")
-	public CryptographicKey8 getKey() {
-		return key;
+	public Optional<CryptographicKey8> getKey() {
+		return key == null ? Optional.empty() : Optional.of(key);
 	}
 
-	public void setKey(com.tools20022.repository.msg.CryptographicKey8 key) {
+	public SecurityParameters4 setKey(com.tools20022.repository.msg.CryptographicKey8 key) {
 		this.key = key;
+		return this;
 	}
 
-	@XmlElement(name = "DgtlSgntr")
-	public ContentInformationType14 getDigitalSignature() {
-		return digitalSignature;
+	public Optional<ContentInformationType14> getDigitalSignature() {
+		return digitalSignature == null ? Optional.empty() : Optional.of(digitalSignature);
 	}
 
-	public void setDigitalSignature(com.tools20022.repository.msg.ContentInformationType14 digitalSignature) {
+	public SecurityParameters4 setDigitalSignature(com.tools20022.repository.msg.ContentInformationType14 digitalSignature) {
 		this.digitalSignature = digitalSignature;
+		return this;
 	}
 
-	@XmlElement(name = "Cert")
 	public List<Max5000Binary> getCertificate() {
-		return certificate;
+		return certificate == null ? certificate = new ArrayList<>() : certificate;
 	}
 
-	public void setCertificate(List<Max5000Binary> certificate) {
-		this.certificate = certificate;
+	public SecurityParameters4 setCertificate(List<Max5000Binary> certificate) {
+		this.certificate = Objects.requireNonNull(certificate);
+		return this;
 	}
 
-	@XmlElement(name = "ATMChllng")
-	public Max140Binary getATMChallenge() {
-		return aTMChallenge;
+	public Optional<Max140Binary> getATMChallenge() {
+		return aTMChallenge == null ? Optional.empty() : Optional.of(aTMChallenge);
 	}
 
-	public void setATMChallenge(Max140Binary aTMChallenge) {
+	public SecurityParameters4 setATMChallenge(Max140Binary aTMChallenge) {
 		this.aTMChallenge = aTMChallenge;
+		return this;
 	}
 
-	@XmlElement(name = "ReqdKey")
-	public Max35Text getRequestedKey() {
-		return requestedKey;
+	public Optional<Max35Text> getRequestedKey() {
+		return requestedKey == null ? Optional.empty() : Optional.of(requestedKey);
 	}
 
-	public void setRequestedKey(Max35Text requestedKey) {
+	public SecurityParameters4 setRequestedKey(Max35Text requestedKey) {
 		this.requestedKey = requestedKey;
+		return this;
 	}
 }

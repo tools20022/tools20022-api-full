@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.MessageFunctionCode;
+import com.tools20022.repository.codeset.MessageFunction9Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies the message function within a card payment exchange.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode
- * MessageFunctionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction9Code#mmAcceptorRequestReject
- * MessageFunction9Code.mmAcceptorRequestReject}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction9Code#AcceptorRequestReject
+ * MessageFunction9Code.AcceptorRequestReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction9Code#mmAcceptorResponseReject
- * MessageFunction9Code.mmAcceptorResponseReject}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction9Code#AcceptorResponseReject
+ * MessageFunction9Code.AcceptorResponseReject}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode
+ * MessageFunctionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * MessageFunction4Code}</li>
  * </ul>
  */
-public class MessageFunction9Code extends MessageFunctionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MessageFunction9Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,11 +93,12 @@ public class MessageFunction9Code extends MessageFunctionCode {
 	 * name} = "AcceptorRequestReject"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptorRequestReject = new MMCode() {
+	public static final MessageFunction9Code AcceptorRequestReject = new MessageFunction9Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorRequestReject";
-			owner_lazy = () -> MessageFunction9Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction9Code.mmObject();
+			codeName = MessageFunctionCode.AcceptorRequestReject.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -111,27 +117,58 @@ public class MessageFunction9Code extends MessageFunctionCode {
 	 * name} = "AcceptorResponseReject"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptorResponseReject = new MMCode() {
+	public static final MessageFunction9Code AcceptorResponseReject = new MessageFunction9Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorResponseReject";
-			owner_lazy = () -> MessageFunction9Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction9Code.mmObject();
+			codeName = MessageFunctionCode.AcceptorResponseReject.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, MessageFunction9Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MessageFunction9Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RJCQ");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageFunction9Code";
 				definition = "Identifies the message function within a card payment exchange.";
 				previousVersion_lazy = () -> MessageFunction4Code.mmObject();
-				code_lazy = () -> Arrays.asList(MessageFunction9Code.mmAcceptorRequestReject, MessageFunction9Code.mmAcceptorResponseReject);
 				trace_lazy = () -> MessageFunctionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction9Code.AcceptorRequestReject, com.tools20022.repository.codeset.MessageFunction9Code.AcceptorResponseReject);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AcceptorRequestReject.getCodeName().get(), AcceptorRequestReject);
+		codesByName.put(AcceptorResponseReject.getCodeName().get(), AcceptorResponseReject);
+	}
+
+	public static MessageFunction9Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MessageFunction9Code[] values() {
+		MessageFunction9Code[] values = new MessageFunction9Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MessageFunction9Code> {
+		@Override
+		public MessageFunction9Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MessageFunction9Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

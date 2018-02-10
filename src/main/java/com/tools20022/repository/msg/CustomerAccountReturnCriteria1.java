@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -106,8 +108,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -118,16 +120,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Indicates which fields must be present in the response."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CustomerAccountReturnCriteria1", propOrder = {"identification", "name", "status", "type", "currency", "monthlyPaymentValue", "monthlyReceivedValue", "monthlyTransactionNumber", "averageBalance", "accountPurpose",
 		"floorNotificationAmount", "ceilingNotificationAmount", "statementCycle", "closingDate", "restriction", "openingDate", "accountOwner", "referenceAccount", "proprietary"})
 public class CustomerAccountReturnCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected YesNoIndicator identification;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +158,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,10 +169,11 @@ public class CustomerAccountReturnCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm", required = true)
 	protected YesNoIndicator name;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,7 +201,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,10 +212,11 @@ public class CustomerAccountReturnCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts", required = true)
 	protected YesNoIndicator status;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -239,7 +244,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -250,10 +255,11 @@ public class CustomerAccountReturnCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected YesNoIndicator type;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -281,7 +287,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -292,10 +298,11 @@ public class CustomerAccountReturnCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy", required = true)
 	protected YesNoIndicator currency;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -323,7 +330,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -334,10 +341,11 @@ public class CustomerAccountReturnCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "MnthlyPmtVal", required = true)
 	protected YesNoIndicator monthlyPaymentValue;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -365,7 +373,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmMonthlyPaymentValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "MnthlyPmtVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -376,10 +384,11 @@ public class CustomerAccountReturnCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "MnthlyRcvdVal", required = true)
 	protected YesNoIndicator monthlyReceivedValue;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -407,7 +416,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmMonthlyReceivedValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "MnthlyRcvdVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -418,10 +427,11 @@ public class CustomerAccountReturnCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "MnthlyTxNb", required = true)
 	protected YesNoIndicator monthlyTransactionNumber;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -449,7 +459,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmMonthlyTransactionNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "MnthlyTxNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -460,10 +470,11 @@ public class CustomerAccountReturnCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AvrgBal", required = true)
 	protected YesNoIndicator averageBalance;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -491,7 +502,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmAverageBalance = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -502,10 +513,11 @@ public class CustomerAccountReturnCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctPurp", required = true)
 	protected YesNoIndicator accountPurpose;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -533,7 +545,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmAccountPurpose = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctPurp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -544,10 +556,11 @@ public class CustomerAccountReturnCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "FlrNtfctnAmt", required = true)
 	protected YesNoIndicator floorNotificationAmount;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -575,7 +588,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmFloorNotificationAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "FlrNtfctnAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -586,10 +599,11 @@ public class CustomerAccountReturnCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ClngNtfctnAmt", required = true)
 	protected YesNoIndicator ceilingNotificationAmount;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -617,7 +631,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmCeilingNotificationAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ClngNtfctnAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -628,10 +642,11 @@ public class CustomerAccountReturnCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtCycl", required = true)
 	protected YesNoIndicator statementCycle;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -659,7 +674,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmStatementCycle = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "StmtCycl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -670,10 +685,11 @@ public class CustomerAccountReturnCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ClsgDt", required = true)
 	protected YesNoIndicator closingDate;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -701,7 +717,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -712,10 +728,11 @@ public class CustomerAccountReturnCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Rstrctn", required = true)
 	protected YesNoIndicator restriction;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -743,7 +760,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmRestriction = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Rstrctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -754,10 +771,11 @@ public class CustomerAccountReturnCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "OpngDt", required = true)
 	protected YesNoIndicator openingDate;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -785,7 +803,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "OpngDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -796,10 +814,11 @@ public class CustomerAccountReturnCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr", required = true)
 	protected YesNoIndicator accountOwner;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -827,7 +846,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -838,10 +857,11 @@ public class CustomerAccountReturnCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "RefAcct", required = true)
 	protected YesNoIndicator referenceAccount;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -869,7 +889,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmReferenceAccount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RefAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -880,10 +900,11 @@ public class CustomerAccountReturnCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry")
 	protected List<com.tools20022.repository.msg.GenericIdentification42> proprietary;
 	/**
-	 * Indicates if this field must be present in the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -910,7 +931,7 @@ public class CustomerAccountReturnCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CustomerAccountReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -925,13 +946,17 @@ public class CustomerAccountReturnCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CustomerAccountReturnCriteria1.mmIdentification, CustomerAccountReturnCriteria1.mmName, CustomerAccountReturnCriteria1.mmStatus, CustomerAccountReturnCriteria1.mmType,
-						CustomerAccountReturnCriteria1.mmCurrency, CustomerAccountReturnCriteria1.mmMonthlyPaymentValue, CustomerAccountReturnCriteria1.mmMonthlyReceivedValue, CustomerAccountReturnCriteria1.mmMonthlyTransactionNumber,
-						CustomerAccountReturnCriteria1.mmAverageBalance, CustomerAccountReturnCriteria1.mmAccountPurpose, CustomerAccountReturnCriteria1.mmFloorNotificationAmount, CustomerAccountReturnCriteria1.mmCeilingNotificationAmount,
-						CustomerAccountReturnCriteria1.mmStatementCycle, CustomerAccountReturnCriteria1.mmClosingDate, CustomerAccountReturnCriteria1.mmRestriction, CustomerAccountReturnCriteria1.mmOpeningDate,
-						CustomerAccountReturnCriteria1.mmAccountOwner, CustomerAccountReturnCriteria1.mmReferenceAccount, CustomerAccountReturnCriteria1.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmIdentification, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmName,
+						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmStatus, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmType, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmCurrency,
+						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmMonthlyPaymentValue, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmMonthlyReceivedValue,
+						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmMonthlyTransactionNumber, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmAverageBalance,
+						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmAccountPurpose, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmFloorNotificationAmount,
+						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmCeilingNotificationAmount, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmStatementCycle,
+						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmClosingDate, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmRestriction,
+						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmOpeningDate, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmAccountOwner,
+						com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmReferenceAccount, com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmProprietary);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CustomerAccountReturnCriteria1";
 				definition = "Indicates which fields must be present in the response.";
@@ -940,174 +965,174 @@ public class CustomerAccountReturnCriteria1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public YesNoIndicator getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(YesNoIndicator identification) {
-		this.identification = identification;
+	public CustomerAccountReturnCriteria1 setIdentification(YesNoIndicator identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Nm", required = true)
 	public YesNoIndicator getName() {
 		return name;
 	}
 
-	public void setName(YesNoIndicator name) {
-		this.name = name;
+	public CustomerAccountReturnCriteria1 setName(YesNoIndicator name) {
+		this.name = Objects.requireNonNull(name);
+		return this;
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public YesNoIndicator getStatus() {
 		return status;
 	}
 
-	public void setStatus(YesNoIndicator status) {
-		this.status = status;
+	public CustomerAccountReturnCriteria1 setStatus(YesNoIndicator status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public YesNoIndicator getType() {
 		return type;
 	}
 
-	public void setType(YesNoIndicator type) {
-		this.type = type;
+	public CustomerAccountReturnCriteria1 setType(YesNoIndicator type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Ccy", required = true)
 	public YesNoIndicator getCurrency() {
 		return currency;
 	}
 
-	public void setCurrency(YesNoIndicator currency) {
-		this.currency = currency;
+	public CustomerAccountReturnCriteria1 setCurrency(YesNoIndicator currency) {
+		this.currency = Objects.requireNonNull(currency);
+		return this;
 	}
 
-	@XmlElement(name = "MnthlyPmtVal", required = true)
 	public YesNoIndicator getMonthlyPaymentValue() {
 		return monthlyPaymentValue;
 	}
 
-	public void setMonthlyPaymentValue(YesNoIndicator monthlyPaymentValue) {
-		this.monthlyPaymentValue = monthlyPaymentValue;
+	public CustomerAccountReturnCriteria1 setMonthlyPaymentValue(YesNoIndicator monthlyPaymentValue) {
+		this.monthlyPaymentValue = Objects.requireNonNull(monthlyPaymentValue);
+		return this;
 	}
 
-	@XmlElement(name = "MnthlyRcvdVal", required = true)
 	public YesNoIndicator getMonthlyReceivedValue() {
 		return monthlyReceivedValue;
 	}
 
-	public void setMonthlyReceivedValue(YesNoIndicator monthlyReceivedValue) {
-		this.monthlyReceivedValue = monthlyReceivedValue;
+	public CustomerAccountReturnCriteria1 setMonthlyReceivedValue(YesNoIndicator monthlyReceivedValue) {
+		this.monthlyReceivedValue = Objects.requireNonNull(monthlyReceivedValue);
+		return this;
 	}
 
-	@XmlElement(name = "MnthlyTxNb", required = true)
 	public YesNoIndicator getMonthlyTransactionNumber() {
 		return monthlyTransactionNumber;
 	}
 
-	public void setMonthlyTransactionNumber(YesNoIndicator monthlyTransactionNumber) {
-		this.monthlyTransactionNumber = monthlyTransactionNumber;
+	public CustomerAccountReturnCriteria1 setMonthlyTransactionNumber(YesNoIndicator monthlyTransactionNumber) {
+		this.monthlyTransactionNumber = Objects.requireNonNull(monthlyTransactionNumber);
+		return this;
 	}
 
-	@XmlElement(name = "AvrgBal", required = true)
 	public YesNoIndicator getAverageBalance() {
 		return averageBalance;
 	}
 
-	public void setAverageBalance(YesNoIndicator averageBalance) {
-		this.averageBalance = averageBalance;
+	public CustomerAccountReturnCriteria1 setAverageBalance(YesNoIndicator averageBalance) {
+		this.averageBalance = Objects.requireNonNull(averageBalance);
+		return this;
 	}
 
-	@XmlElement(name = "AcctPurp", required = true)
 	public YesNoIndicator getAccountPurpose() {
 		return accountPurpose;
 	}
 
-	public void setAccountPurpose(YesNoIndicator accountPurpose) {
-		this.accountPurpose = accountPurpose;
+	public CustomerAccountReturnCriteria1 setAccountPurpose(YesNoIndicator accountPurpose) {
+		this.accountPurpose = Objects.requireNonNull(accountPurpose);
+		return this;
 	}
 
-	@XmlElement(name = "FlrNtfctnAmt", required = true)
 	public YesNoIndicator getFloorNotificationAmount() {
 		return floorNotificationAmount;
 	}
 
-	public void setFloorNotificationAmount(YesNoIndicator floorNotificationAmount) {
-		this.floorNotificationAmount = floorNotificationAmount;
+	public CustomerAccountReturnCriteria1 setFloorNotificationAmount(YesNoIndicator floorNotificationAmount) {
+		this.floorNotificationAmount = Objects.requireNonNull(floorNotificationAmount);
+		return this;
 	}
 
-	@XmlElement(name = "ClngNtfctnAmt", required = true)
 	public YesNoIndicator getCeilingNotificationAmount() {
 		return ceilingNotificationAmount;
 	}
 
-	public void setCeilingNotificationAmount(YesNoIndicator ceilingNotificationAmount) {
-		this.ceilingNotificationAmount = ceilingNotificationAmount;
+	public CustomerAccountReturnCriteria1 setCeilingNotificationAmount(YesNoIndicator ceilingNotificationAmount) {
+		this.ceilingNotificationAmount = Objects.requireNonNull(ceilingNotificationAmount);
+		return this;
 	}
 
-	@XmlElement(name = "StmtCycl", required = true)
 	public YesNoIndicator getStatementCycle() {
 		return statementCycle;
 	}
 
-	public void setStatementCycle(YesNoIndicator statementCycle) {
-		this.statementCycle = statementCycle;
+	public CustomerAccountReturnCriteria1 setStatementCycle(YesNoIndicator statementCycle) {
+		this.statementCycle = Objects.requireNonNull(statementCycle);
+		return this;
 	}
 
-	@XmlElement(name = "ClsgDt", required = true)
 	public YesNoIndicator getClosingDate() {
 		return closingDate;
 	}
 
-	public void setClosingDate(YesNoIndicator closingDate) {
-		this.closingDate = closingDate;
+	public CustomerAccountReturnCriteria1 setClosingDate(YesNoIndicator closingDate) {
+		this.closingDate = Objects.requireNonNull(closingDate);
+		return this;
 	}
 
-	@XmlElement(name = "Rstrctn", required = true)
 	public YesNoIndicator getRestriction() {
 		return restriction;
 	}
 
-	public void setRestriction(YesNoIndicator restriction) {
-		this.restriction = restriction;
+	public CustomerAccountReturnCriteria1 setRestriction(YesNoIndicator restriction) {
+		this.restriction = Objects.requireNonNull(restriction);
+		return this;
 	}
 
-	@XmlElement(name = "OpngDt", required = true)
 	public YesNoIndicator getOpeningDate() {
 		return openingDate;
 	}
 
-	public void setOpeningDate(YesNoIndicator openingDate) {
-		this.openingDate = openingDate;
+	public CustomerAccountReturnCriteria1 setOpeningDate(YesNoIndicator openingDate) {
+		this.openingDate = Objects.requireNonNull(openingDate);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr", required = true)
 	public YesNoIndicator getAccountOwner() {
 		return accountOwner;
 	}
 
-	public void setAccountOwner(YesNoIndicator accountOwner) {
-		this.accountOwner = accountOwner;
+	public CustomerAccountReturnCriteria1 setAccountOwner(YesNoIndicator accountOwner) {
+		this.accountOwner = Objects.requireNonNull(accountOwner);
+		return this;
 	}
 
-	@XmlElement(name = "RefAcct", required = true)
 	public YesNoIndicator getReferenceAccount() {
 		return referenceAccount;
 	}
 
-	public void setReferenceAccount(YesNoIndicator referenceAccount) {
-		this.referenceAccount = referenceAccount;
+	public CustomerAccountReturnCriteria1 setReferenceAccount(YesNoIndicator referenceAccount) {
+		this.referenceAccount = Objects.requireNonNull(referenceAccount);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry")
 	public List<GenericIdentification42> getProprietary() {
-		return proprietary;
+		return proprietary == null ? proprietary = new ArrayList<>() : proprietary;
 	}
 
-	public void setProprietary(List<com.tools20022.repository.msg.GenericIdentification42> proprietary) {
-		this.proprietary = proprietary;
+	public CustomerAccountReturnCriteria1 setProprietary(List<com.tools20022.repository.msg.GenericIdentification42> proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

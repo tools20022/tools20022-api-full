@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.SystemEventInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SystemEvent1", propOrder = {"type", "scheduledTime", "effectiveTime"})
 public class SystemEvent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected SystemEventType1Choice type;
 	/**
-	 * Nature of the event that has occurred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +114,7 @@ public class SystemEvent1 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemEventInformation.mmType;
-			componentContext_lazy = () -> SystemEvent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemEvent1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +125,11 @@ public class SystemEvent1 {
 			complexType_lazy = () -> SystemEventType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SchdldTm", required = true)
 	protected ISODateTime scheduledTime;
 	/**
-	 * Date and time at which the event is foreseen to occur.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +161,7 @@ public class SystemEvent1 {
 	public static final MMMessageAttribute mmScheduledTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemEventInformation.mmTime;
-			componentContext_lazy = () -> SystemEvent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemEvent1.mmObject();
 			isDerived = false;
 			xmlTag = "SchdldTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,10 +172,11 @@ public class SystemEvent1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "FctvTm")
 	protected ISODateTime effectiveTime;
 	/**
-	 * Date and time at which the event effectively takes place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,7 +209,7 @@ public class SystemEvent1 {
 	public static final MMMessageAttribute mmEffectiveTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemEventInformation.mmTime;
-			componentContext_lazy = () -> SystemEvent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemEvent1.mmObject();
 			isDerived = false;
 			xmlTag = "FctvTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,9 +224,9 @@ public class SystemEvent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SystemEvent1.mmType, SystemEvent1.mmScheduledTime, SystemEvent1.mmEffectiveTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemEvent1.mmType, com.tools20022.repository.msg.SystemEvent1.mmScheduledTime, com.tools20022.repository.msg.SystemEvent1.mmEffectiveTime);
 				trace_lazy = () -> SystemEventInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemEvent1";
 				definition = "Detailed information about an event occurring on a system, whether planned, eg, cut-off time for a specific type of eligible transfer, or unplanned, eg, an unsolicited failure, as stipulated in the specifications of the system.";
@@ -230,30 +235,30 @@ public class SystemEvent1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public SystemEventType1Choice getType() {
 		return type;
 	}
 
-	public void setType(SystemEventType1Choice type) {
-		this.type = type;
+	public SystemEvent1 setType(SystemEventType1Choice type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "SchdldTm", required = true)
 	public ISODateTime getScheduledTime() {
 		return scheduledTime;
 	}
 
-	public void setScheduledTime(ISODateTime scheduledTime) {
-		this.scheduledTime = scheduledTime;
+	public SystemEvent1 setScheduledTime(ISODateTime scheduledTime) {
+		this.scheduledTime = Objects.requireNonNull(scheduledTime);
+		return this;
 	}
 
-	@XmlElement(name = "FctvTm")
-	public ISODateTime getEffectiveTime() {
-		return effectiveTime;
+	public Optional<ISODateTime> getEffectiveTime() {
+		return effectiveTime == null ? Optional.empty() : Optional.of(effectiveTime);
 	}
 
-	public void setEffectiveTime(ISODateTime effectiveTime) {
+	public SystemEvent1 setEffectiveTime(ISODateTime effectiveTime) {
 		this.effectiveTime = effectiveTime;
+		return this;
 	}
 }

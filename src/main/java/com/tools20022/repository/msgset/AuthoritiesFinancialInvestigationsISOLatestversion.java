@@ -54,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
  * businessProcessCatalogue} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmcatalogue
- * GeneratedRepository.mmcatalogue}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
+ * GeneratedRepository.catalogue}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,7 +75,7 @@ public class AuthoritiesFinancialInvestigationsISOLatestversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Authorities Financial Investigations – ISO – Latest version";
 				definition = "Set of messages that Authorities (like police, customs, tax authorities, enforcement authorities) can use to request account and other banking and financial instrument information from financial institutions to carry out their duties.\r\nRequested information can relate to accounts, their signatories and beneficiaries and co-owners as well as movements plus positions on these accounts. Additionally, this information can pertain to loans and guarantees.";

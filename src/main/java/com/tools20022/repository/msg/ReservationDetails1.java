@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Reservation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Liquidity set aside by the account owner for specific purposes."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReservationDetails1", propOrder = {"amount", "status", "startDateTime"})
 public class ReservationDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected AmountChoice amount;
 	/**
-	 * Amount of money of the limit, expressed in an eligible currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +116,7 @@ public class ReservationDetails1 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
-			componentContext_lazy = () -> ReservationDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +127,11 @@ public class ReservationDetails1 {
 			complexType_lazy = () -> AmountChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts")
 	protected LimitStatus1Code status;
 	/**
-	 * Status of the limit, eg, enabled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +165,7 @@ public class ReservationDetails1 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmLimitStatus;
-			componentContext_lazy = () -> ReservationDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,10 +176,11 @@ public class ReservationDetails1 {
 			simpleType_lazy = () -> LimitStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StartDtTm")
 	protected DateAndDateTimeChoice startDateTime;
 	/**
-	 * Date and time at which the reservation becomes effective.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,7 +215,7 @@ public class ReservationDetails1 {
 	public static final MMMessageAttribute mmStartDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
-			componentContext_lazy = () -> ReservationDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "StartDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,9 +230,10 @@ public class ReservationDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReservationDetails1.mmAmount, ReservationDetails1.mmStatus, ReservationDetails1.mmStartDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationDetails1.mmAmount, com.tools20022.repository.msg.ReservationDetails1.mmStatus,
+						com.tools20022.repository.msg.ReservationDetails1.mmStartDateTime);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReservationDetails1";
 				definition = "Liquidity set aside by the account owner for specific purposes.";
@@ -236,30 +242,30 @@ public class ReservationDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public AmountChoice getAmount() {
 		return amount;
 	}
 
-	public void setAmount(AmountChoice amount) {
-		this.amount = amount;
+	public ReservationDetails1 setAmount(AmountChoice amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "Sts")
-	public LimitStatus1Code getStatus() {
-		return status;
+	public Optional<LimitStatus1Code> getStatus() {
+		return status == null ? Optional.empty() : Optional.of(status);
 	}
 
-	public void setStatus(LimitStatus1Code status) {
+	public ReservationDetails1 setStatus(LimitStatus1Code status) {
 		this.status = status;
+		return this;
 	}
 
-	@XmlElement(name = "StartDtTm")
-	public DateAndDateTimeChoice getStartDateTime() {
-		return startDateTime;
+	public Optional<DateAndDateTimeChoice> getStartDateTime() {
+		return startDateTime == null ? Optional.empty() : Optional.of(startDateTime);
 	}
 
-	public void setStartDateTime(DateAndDateTimeChoice startDateTime) {
+	public ReservationDetails1 setStartDateTime(DateAndDateTimeChoice startDateTime) {
 		this.startDateTime = startDateTime;
+		return this;
 	}
 }

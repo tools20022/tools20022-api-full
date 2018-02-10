@@ -30,9 +30,8 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -117,8 +116,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -131,16 +130,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FutureOrOptionDetails1", propOrder = {"futureAndOptionContractType", "lastDeliveryDate", "unitOfMeasure", "futureDate", "minimumSize", "announcementDate", "appearance", "strippableIndicator", "positionLimit",
 		"nearTermPositionLimit", "minimumTradingPricingIncrement", "purpose", "contractSettlementMonth", "firstDealingDate", "ratio", "rating", "issuePrice", "optionRights", "lastTransaction", "spreadTransaction"})
 public class FutureOrOptionDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FutrAndOptnCtrctTp")
 	protected FutureAndOptionContractType1Code futureAndOptionContractType;
 	/**
-	 * Specifies the type of the contract for futures and options.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,7 +169,7 @@ public class FutureOrOptionDetails1 {
 	 */
 	public static final MMMessageAttribute mmFutureAndOptionContractType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "FutrAndOptnCtrctTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,11 +180,11 @@ public class FutureOrOptionDetails1 {
 			simpleType_lazy = () -> FutureAndOptionContractType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "LastDlvryDt")
 	protected ISODateTime lastDeliveryDate;
 	/**
-	 * Last date/time by which the option for physical delivery may still be
-	 * exercised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -219,7 +219,7 @@ public class FutureOrOptionDetails1 {
 	public static final MMMessageAttribute mmLastDeliveryDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Future.mmLastDeliveryDate;
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "LastDlvryDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,12 +230,11 @@ public class FutureOrOptionDetails1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "UnitOfMeasr")
 	protected UnitOfMeasure1Code unitOfMeasure;
 	/**
-	 * Used to indicate the size of the underlying commodity on which the
-	 * contract is based (e.g., 2500 lbs of lean cattle, 1000 barrels of crude
-	 * oil, 1000 bushels of corn, etc.)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -271,7 +270,7 @@ public class FutureOrOptionDetails1 {
 	public static final MMMessageAttribute mmUnitOfMeasure = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Future.mmUnitOfMeasure;
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "UnitOfMeasr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -282,10 +281,11 @@ public class FutureOrOptionDetails1 {
 			simpleType_lazy = () -> UnitOfMeasure1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "FutrDt")
 	protected ISODateTime futureDate;
 	/**
-	 * Date on which future contracts settle.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -318,7 +318,7 @@ public class FutureOrOptionDetails1 {
 	public static final MMMessageAttribute mmFutureDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Future.mmFutureDate;
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "FutrDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -329,11 +329,11 @@ public class FutureOrOptionDetails1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "MinSz")
 	protected ActiveCurrencyAndAmount minimumSize;
 	/**
-	 * Specifies the minimum ratio or multiply factor used to convert from
-	 * contracts to shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -369,7 +369,7 @@ public class FutureOrOptionDetails1 {
 	public static final MMMessageAttribute mmMinimumSize = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Future.mmMinimumSize;
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "MinSz";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -380,11 +380,11 @@ public class FutureOrOptionDetails1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "AnncmntDt")
 	protected ISODateTime announcementDate;
 	/**
-	 * Date/time, as announced by the issuer, at which the securities will be
-	 * issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -419,7 +419,7 @@ public class FutureOrOptionDetails1 {
 	public static final MMMessageAttribute mmAnnouncementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssueDate;
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "AnncmntDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -430,10 +430,11 @@ public class FutureOrOptionDetails1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "Apprnc")
 	protected Appearance1Code appearance;
 	/**
-	 * Specifies the deliverability of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -467,7 +468,7 @@ public class FutureOrOptionDetails1 {
 	public static final MMMessageAttribute mmAppearance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmAppearance;
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Apprnc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -478,10 +479,11 @@ public class FutureOrOptionDetails1 {
 			simpleType_lazy = () -> Appearance1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StrpblInd")
 	protected YesNoIndicator strippableIndicator;
 	/**
-	 * Indicates whether the interest is separable from the principal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -516,7 +518,7 @@ public class FutureOrOptionDetails1 {
 	public static final MMMessageAttribute mmStrippableIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmStrippableIndicator;
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "StrpblInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -527,12 +529,11 @@ public class FutureOrOptionDetails1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PosLmt")
 	protected Number positionLimit;
 	/**
-	 * Indicates the maximum number of listed option contracts on a single
-	 * security which can be held by an investor or group of investors acting
-	 * jointly.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -567,7 +568,7 @@ public class FutureOrOptionDetails1 {
 	public static final MMMessageAttribute mmPositionLimit = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Option.mmPositionLimit;
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "PosLmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -578,11 +579,11 @@ public class FutureOrOptionDetails1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "NearTermPosLmt")
 	protected Number nearTermPositionLimit;
 	/**
-	 * Position limit in the near-term contract for a given exchange-traded
-	 * product.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -617,7 +618,7 @@ public class FutureOrOptionDetails1 {
 	public static final MMMessageAttribute mmNearTermPositionLimit = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmNearTermPositionLimit;
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "NearTermPosLmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -628,10 +629,11 @@ public class FutureOrOptionDetails1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "MinTradgPricgIncrmt")
 	protected Number minimumTradingPricingIncrement;
 	/**
-	 * Minimum price increase for a given exchange-traded Instrument
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -665,7 +667,7 @@ public class FutureOrOptionDetails1 {
 	public static final MMMessageAttribute mmMinimumTradingPricingIncrement = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmMinimumTradingPricingIncrement;
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "MinTradgPricgIncrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -676,10 +678,11 @@ public class FutureOrOptionDetails1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Purp")
 	protected Max256Text purpose;
 	/**
-	 * Reason for which money is raised through the issuance of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -713,7 +716,7 @@ public class FutureOrOptionDetails1 {
 	public static final MMMessageAttribute mmPurpose = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmPurpose;
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Purp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -724,10 +727,11 @@ public class FutureOrOptionDetails1 {
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrctSttlmMnth")
 	protected ISOYearMonth contractSettlementMonth;
 	/**
-	 * Specifies when the contract (i.e. MBS/TBA) will settle.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -761,7 +765,7 @@ public class FutureOrOptionDetails1 {
 	public static final MMMessageAttribute mmContractSettlementMonth = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmContractSettlementMonth;
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctSttlmMnth";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -772,10 +776,11 @@ public class FutureOrOptionDetails1 {
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
 		}
 	};
+	@XmlElement(name = "FrstDealgDt")
 	protected DateAndDateTime1Choice firstDealingDate;
 	/**
-	 * Date on which new securities begin trading.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -808,7 +813,7 @@ public class FutureOrOptionDetails1 {
 	public static final MMMessageAssociationEnd mmFirstDealingDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmFirstDealingDate;
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "FrstDealgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -820,10 +825,11 @@ public class FutureOrOptionDetails1 {
 			type_lazy = () -> DateAndDateTime1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Ratio")
 	protected List<com.tools20022.repository.msg.UnderlyingRatio1> ratio;
 	/**
-	 * Ratio applied to convert the related security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -855,7 +861,7 @@ public class FutureOrOptionDetails1 {
 	public static final MMMessageAssociationEnd mmRatio = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmRatio;
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Ratio";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -866,10 +872,11 @@ public class FutureOrOptionDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.UnderlyingRatio1.mmObject();
 		}
 	};
+	@XmlElement(name = "Ratg")
 	protected List<com.tools20022.repository.msg.Rating1> rating;
 	/**
-	 * Rating(s) of the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -900,7 +907,7 @@ public class FutureOrOptionDetails1 {
 	public static final MMMessageAssociationEnd mmRating = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRating;
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Ratg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -911,10 +918,11 @@ public class FutureOrOptionDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.Rating1.mmObject();
 		}
 	};
+	@XmlElement(name = "IssePric")
 	protected Price4 issuePrice;
 	/**
-	 * Initial issue price of a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -945,7 +953,7 @@ public class FutureOrOptionDetails1 {
 	public static final MMMessageAssociationEnd mmIssuePrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssuePrice;
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "IssePric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -957,12 +965,11 @@ public class FutureOrOptionDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnRghts")
 	protected OptionRight1Choice optionRights;
 	/**
-	 * Rights to exercise the privilege to purchase or to sell the assets
-	 * specified at a predetermined price or formula at or within a time in the
-	 * future.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -992,7 +999,7 @@ public class FutureOrOptionDetails1 {
 	 */
 	public static final MMMessageAttribute mmOptionRights = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnRghts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1003,10 +1010,11 @@ public class FutureOrOptionDetails1 {
 			complexType_lazy = () -> OptionRight1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LastTx")
 	protected YesNoIndicator lastTransaction;
 	/**
-	 * Indicates whether or not this is the last transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1034,7 +1042,7 @@ public class FutureOrOptionDetails1 {
 	 */
 	public static final MMMessageAttribute mmLastTransaction = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "LastTx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1045,12 +1053,11 @@ public class FutureOrOptionDetails1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "SprdTx")
 	protected YesNoIndicator spreadTransaction;
 	/**
-	 * Specifies that there will be one price and one transaction when two
-	 * contracts are carried out simultaneously, one to buy and the other one to
-	 * sell with two different expiration dates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1086,7 +1093,7 @@ public class FutureOrOptionDetails1 {
 	public static final MMMessageAttribute mmSpreadTransaction = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmSpreadTransaction;
-			componentContext_lazy = () -> FutureOrOptionDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FutureOrOptionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SprdTx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1101,13 +1108,16 @@ public class FutureOrOptionDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FutureOrOptionDetails1.mmFutureAndOptionContractType, FutureOrOptionDetails1.mmLastDeliveryDate, FutureOrOptionDetails1.mmUnitOfMeasure, FutureOrOptionDetails1.mmFutureDate,
-						FutureOrOptionDetails1.mmMinimumSize, FutureOrOptionDetails1.mmAnnouncementDate, FutureOrOptionDetails1.mmAppearance, FutureOrOptionDetails1.mmStrippableIndicator, FutureOrOptionDetails1.mmPositionLimit,
-						FutureOrOptionDetails1.mmNearTermPositionLimit, FutureOrOptionDetails1.mmMinimumTradingPricingIncrement, FutureOrOptionDetails1.mmPurpose, FutureOrOptionDetails1.mmContractSettlementMonth,
-						FutureOrOptionDetails1.mmFirstDealingDate, FutureOrOptionDetails1.mmRatio, FutureOrOptionDetails1.mmRating, FutureOrOptionDetails1.mmIssuePrice, FutureOrOptionDetails1.mmOptionRights,
-						FutureOrOptionDetails1.mmLastTransaction, FutureOrOptionDetails1.mmSpreadTransaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FutureOrOptionDetails1.mmFutureAndOptionContractType, com.tools20022.repository.msg.FutureOrOptionDetails1.mmLastDeliveryDate,
+						com.tools20022.repository.msg.FutureOrOptionDetails1.mmUnitOfMeasure, com.tools20022.repository.msg.FutureOrOptionDetails1.mmFutureDate, com.tools20022.repository.msg.FutureOrOptionDetails1.mmMinimumSize,
+						com.tools20022.repository.msg.FutureOrOptionDetails1.mmAnnouncementDate, com.tools20022.repository.msg.FutureOrOptionDetails1.mmAppearance, com.tools20022.repository.msg.FutureOrOptionDetails1.mmStrippableIndicator,
+						com.tools20022.repository.msg.FutureOrOptionDetails1.mmPositionLimit, com.tools20022.repository.msg.FutureOrOptionDetails1.mmNearTermPositionLimit,
+						com.tools20022.repository.msg.FutureOrOptionDetails1.mmMinimumTradingPricingIncrement, com.tools20022.repository.msg.FutureOrOptionDetails1.mmPurpose,
+						com.tools20022.repository.msg.FutureOrOptionDetails1.mmContractSettlementMonth, com.tools20022.repository.msg.FutureOrOptionDetails1.mmFirstDealingDate, com.tools20022.repository.msg.FutureOrOptionDetails1.mmRatio,
+						com.tools20022.repository.msg.FutureOrOptionDetails1.mmRating, com.tools20022.repository.msg.FutureOrOptionDetails1.mmIssuePrice, com.tools20022.repository.msg.FutureOrOptionDetails1.mmOptionRights,
+						com.tools20022.repository.msg.FutureOrOptionDetails1.mmLastTransaction, com.tools20022.repository.msg.FutureOrOptionDetails1.mmSpreadTransaction);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FutureOrOptionDetails1";
 				definition = "Parameters for contracts which obligate the buyer to receive and the seller to deliver in the future the assets specified at an agreed price or contracts which grant to the holder either the privilege to purchase or the privilege to sell the assets specified at a predetermined price or formula at or within a time in the future.";
@@ -1116,183 +1126,183 @@ public class FutureOrOptionDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FutrAndOptnCtrctTp")
-	public FutureAndOptionContractType1Code getFutureAndOptionContractType() {
-		return futureAndOptionContractType;
+	public Optional<FutureAndOptionContractType1Code> getFutureAndOptionContractType() {
+		return futureAndOptionContractType == null ? Optional.empty() : Optional.of(futureAndOptionContractType);
 	}
 
-	public void setFutureAndOptionContractType(FutureAndOptionContractType1Code futureAndOptionContractType) {
+	public FutureOrOptionDetails1 setFutureAndOptionContractType(FutureAndOptionContractType1Code futureAndOptionContractType) {
 		this.futureAndOptionContractType = futureAndOptionContractType;
+		return this;
 	}
 
-	@XmlElement(name = "LastDlvryDt")
-	public ISODateTime getLastDeliveryDate() {
-		return lastDeliveryDate;
+	public Optional<ISODateTime> getLastDeliveryDate() {
+		return lastDeliveryDate == null ? Optional.empty() : Optional.of(lastDeliveryDate);
 	}
 
-	public void setLastDeliveryDate(ISODateTime lastDeliveryDate) {
+	public FutureOrOptionDetails1 setLastDeliveryDate(ISODateTime lastDeliveryDate) {
 		this.lastDeliveryDate = lastDeliveryDate;
+		return this;
 	}
 
-	@XmlElement(name = "UnitOfMeasr")
-	public UnitOfMeasure1Code getUnitOfMeasure() {
-		return unitOfMeasure;
+	public Optional<UnitOfMeasure1Code> getUnitOfMeasure() {
+		return unitOfMeasure == null ? Optional.empty() : Optional.of(unitOfMeasure);
 	}
 
-	public void setUnitOfMeasure(UnitOfMeasure1Code unitOfMeasure) {
+	public FutureOrOptionDetails1 setUnitOfMeasure(UnitOfMeasure1Code unitOfMeasure) {
 		this.unitOfMeasure = unitOfMeasure;
+		return this;
 	}
 
-	@XmlElement(name = "FutrDt")
-	public ISODateTime getFutureDate() {
-		return futureDate;
+	public Optional<ISODateTime> getFutureDate() {
+		return futureDate == null ? Optional.empty() : Optional.of(futureDate);
 	}
 
-	public void setFutureDate(ISODateTime futureDate) {
+	public FutureOrOptionDetails1 setFutureDate(ISODateTime futureDate) {
 		this.futureDate = futureDate;
+		return this;
 	}
 
-	@XmlElement(name = "MinSz")
-	public ActiveCurrencyAndAmount getMinimumSize() {
-		return minimumSize;
+	public Optional<ActiveCurrencyAndAmount> getMinimumSize() {
+		return minimumSize == null ? Optional.empty() : Optional.of(minimumSize);
 	}
 
-	public void setMinimumSize(ActiveCurrencyAndAmount minimumSize) {
+	public FutureOrOptionDetails1 setMinimumSize(ActiveCurrencyAndAmount minimumSize) {
 		this.minimumSize = minimumSize;
+		return this;
 	}
 
-	@XmlElement(name = "AnncmntDt")
-	public ISODateTime getAnnouncementDate() {
-		return announcementDate;
+	public Optional<ISODateTime> getAnnouncementDate() {
+		return announcementDate == null ? Optional.empty() : Optional.of(announcementDate);
 	}
 
-	public void setAnnouncementDate(ISODateTime announcementDate) {
+	public FutureOrOptionDetails1 setAnnouncementDate(ISODateTime announcementDate) {
 		this.announcementDate = announcementDate;
+		return this;
 	}
 
-	@XmlElement(name = "Apprnc")
-	public Appearance1Code getAppearance() {
-		return appearance;
+	public Optional<Appearance1Code> getAppearance() {
+		return appearance == null ? Optional.empty() : Optional.of(appearance);
 	}
 
-	public void setAppearance(Appearance1Code appearance) {
+	public FutureOrOptionDetails1 setAppearance(Appearance1Code appearance) {
 		this.appearance = appearance;
+		return this;
 	}
 
-	@XmlElement(name = "StrpblInd")
-	public YesNoIndicator getStrippableIndicator() {
-		return strippableIndicator;
+	public Optional<YesNoIndicator> getStrippableIndicator() {
+		return strippableIndicator == null ? Optional.empty() : Optional.of(strippableIndicator);
 	}
 
-	public void setStrippableIndicator(YesNoIndicator strippableIndicator) {
+	public FutureOrOptionDetails1 setStrippableIndicator(YesNoIndicator strippableIndicator) {
 		this.strippableIndicator = strippableIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PosLmt")
-	public Number getPositionLimit() {
-		return positionLimit;
+	public Optional<Number> getPositionLimit() {
+		return positionLimit == null ? Optional.empty() : Optional.of(positionLimit);
 	}
 
-	public void setPositionLimit(Number positionLimit) {
+	public FutureOrOptionDetails1 setPositionLimit(Number positionLimit) {
 		this.positionLimit = positionLimit;
+		return this;
 	}
 
-	@XmlElement(name = "NearTermPosLmt")
-	public Number getNearTermPositionLimit() {
-		return nearTermPositionLimit;
+	public Optional<Number> getNearTermPositionLimit() {
+		return nearTermPositionLimit == null ? Optional.empty() : Optional.of(nearTermPositionLimit);
 	}
 
-	public void setNearTermPositionLimit(Number nearTermPositionLimit) {
+	public FutureOrOptionDetails1 setNearTermPositionLimit(Number nearTermPositionLimit) {
 		this.nearTermPositionLimit = nearTermPositionLimit;
+		return this;
 	}
 
-	@XmlElement(name = "MinTradgPricgIncrmt")
-	public Number getMinimumTradingPricingIncrement() {
-		return minimumTradingPricingIncrement;
+	public Optional<Number> getMinimumTradingPricingIncrement() {
+		return minimumTradingPricingIncrement == null ? Optional.empty() : Optional.of(minimumTradingPricingIncrement);
 	}
 
-	public void setMinimumTradingPricingIncrement(Number minimumTradingPricingIncrement) {
+	public FutureOrOptionDetails1 setMinimumTradingPricingIncrement(Number minimumTradingPricingIncrement) {
 		this.minimumTradingPricingIncrement = minimumTradingPricingIncrement;
+		return this;
 	}
 
-	@XmlElement(name = "Purp")
-	public Max256Text getPurpose() {
-		return purpose;
+	public Optional<Max256Text> getPurpose() {
+		return purpose == null ? Optional.empty() : Optional.of(purpose);
 	}
 
-	public void setPurpose(Max256Text purpose) {
+	public FutureOrOptionDetails1 setPurpose(Max256Text purpose) {
 		this.purpose = purpose;
+		return this;
 	}
 
-	@XmlElement(name = "CtrctSttlmMnth")
-	public ISOYearMonth getContractSettlementMonth() {
-		return contractSettlementMonth;
+	public Optional<ISOYearMonth> getContractSettlementMonth() {
+		return contractSettlementMonth == null ? Optional.empty() : Optional.of(contractSettlementMonth);
 	}
 
-	public void setContractSettlementMonth(ISOYearMonth contractSettlementMonth) {
+	public FutureOrOptionDetails1 setContractSettlementMonth(ISOYearMonth contractSettlementMonth) {
 		this.contractSettlementMonth = contractSettlementMonth;
+		return this;
 	}
 
-	@XmlElement(name = "FrstDealgDt")
-	public DateAndDateTime1Choice getFirstDealingDate() {
-		return firstDealingDate;
+	public Optional<DateAndDateTime1Choice> getFirstDealingDate() {
+		return firstDealingDate == null ? Optional.empty() : Optional.of(firstDealingDate);
 	}
 
-	public void setFirstDealingDate(DateAndDateTime1Choice firstDealingDate) {
+	public FutureOrOptionDetails1 setFirstDealingDate(DateAndDateTime1Choice firstDealingDate) {
 		this.firstDealingDate = firstDealingDate;
+		return this;
 	}
 
-	@XmlElement(name = "Ratio")
 	public List<UnderlyingRatio1> getRatio() {
-		return ratio;
+		return ratio == null ? ratio = new ArrayList<>() : ratio;
 	}
 
-	public void setRatio(List<com.tools20022.repository.msg.UnderlyingRatio1> ratio) {
-		this.ratio = ratio;
+	public FutureOrOptionDetails1 setRatio(List<com.tools20022.repository.msg.UnderlyingRatio1> ratio) {
+		this.ratio = Objects.requireNonNull(ratio);
+		return this;
 	}
 
-	@XmlElement(name = "Ratg")
 	public List<Rating1> getRating() {
-		return rating;
+		return rating == null ? rating = new ArrayList<>() : rating;
 	}
 
-	public void setRating(List<com.tools20022.repository.msg.Rating1> rating) {
-		this.rating = rating;
+	public FutureOrOptionDetails1 setRating(List<com.tools20022.repository.msg.Rating1> rating) {
+		this.rating = Objects.requireNonNull(rating);
+		return this;
 	}
 
-	@XmlElement(name = "IssePric")
-	public Price4 getIssuePrice() {
-		return issuePrice;
+	public Optional<Price4> getIssuePrice() {
+		return issuePrice == null ? Optional.empty() : Optional.of(issuePrice);
 	}
 
-	public void setIssuePrice(com.tools20022.repository.msg.Price4 issuePrice) {
+	public FutureOrOptionDetails1 setIssuePrice(com.tools20022.repository.msg.Price4 issuePrice) {
 		this.issuePrice = issuePrice;
+		return this;
 	}
 
-	@XmlElement(name = "OptnRghts")
-	public OptionRight1Choice getOptionRights() {
-		return optionRights;
+	public Optional<OptionRight1Choice> getOptionRights() {
+		return optionRights == null ? Optional.empty() : Optional.of(optionRights);
 	}
 
-	public void setOptionRights(OptionRight1Choice optionRights) {
+	public FutureOrOptionDetails1 setOptionRights(OptionRight1Choice optionRights) {
 		this.optionRights = optionRights;
+		return this;
 	}
 
-	@XmlElement(name = "LastTx")
-	public YesNoIndicator getLastTransaction() {
-		return lastTransaction;
+	public Optional<YesNoIndicator> getLastTransaction() {
+		return lastTransaction == null ? Optional.empty() : Optional.of(lastTransaction);
 	}
 
-	public void setLastTransaction(YesNoIndicator lastTransaction) {
+	public FutureOrOptionDetails1 setLastTransaction(YesNoIndicator lastTransaction) {
 		this.lastTransaction = lastTransaction;
+		return this;
 	}
 
-	@XmlElement(name = "SprdTx")
-	public YesNoIndicator getSpreadTransaction() {
-		return spreadTransaction;
+	public Optional<YesNoIndicator> getSpreadTransaction() {
+		return spreadTransaction == null ? Optional.empty() : Optional.of(spreadTransaction);
 	}
 
-	public void setSpreadTransaction(YesNoIndicator spreadTransaction) {
+	public FutureOrOptionDetails1 setSpreadTransaction(YesNoIndicator spreadTransaction) {
 		this.spreadTransaction = spreadTransaction;
+		return this;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information on a CA option."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionOption2", propOrder = {"optionType", "optionNumber"})
 public class CorporateActionOption2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OptnTp", required = true)
 	protected CorporateActionOption1FormatChoice optionType;
 	/**
-	 * Specifies the corporate action options available to the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +111,7 @@ public class CorporateActionOption2 {
 	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
-			componentContext_lazy = () -> CorporateActionOption2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption2.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +122,11 @@ public class CorporateActionOption2 {
 			complexType_lazy = () -> CorporateActionOption1FormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnNb", required = true)
 	protected Exact3NumericText optionNumber;
 	/**
-	 * Number identifying the available corporate action options.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +161,7 @@ public class CorporateActionOption2 {
 	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
-			componentContext_lazy = () -> CorporateActionOption2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption2.mmObject();
 			isDerived = false;
 			xmlTag = "OptnNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,9 +176,9 @@ public class CorporateActionOption2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionOption2.mmOptionType, CorporateActionOption2.mmOptionNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption2.mmOptionType, com.tools20022.repository.msg.CorporateActionOption2.mmOptionNumber);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOption2";
 				definition = "Provides information on a CA option.";
@@ -184,21 +187,21 @@ public class CorporateActionOption2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OptnTp", required = true)
 	public CorporateActionOption1FormatChoice getOptionType() {
 		return optionType;
 	}
 
-	public void setOptionType(CorporateActionOption1FormatChoice optionType) {
-		this.optionType = optionType;
+	public CorporateActionOption2 setOptionType(CorporateActionOption1FormatChoice optionType) {
+		this.optionType = Objects.requireNonNull(optionType);
+		return this;
 	}
 
-	@XmlElement(name = "OptnNb", required = true)
 	public Exact3NumericText getOptionNumber() {
 		return optionNumber;
 	}
 
-	public void setOptionNumber(Exact3NumericText optionNumber) {
-		this.optionNumber = optionNumber;
+	public CorporateActionOption2 setOptionNumber(Exact3NumericText optionNumber) {
+		this.optionNumber = Objects.requireNonNull(optionNumber);
+		return this;
 	}
 }

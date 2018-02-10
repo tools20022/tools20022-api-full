@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +74,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,16 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Set of data specified for the fixing of a non deliverable trade."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ClosingData1", propOrder = {"tradeDate", "notificationIdentification", "commonReference", "relatedReference", "amendOrCancelReason", "tradeAmounts", "valuationRate", "valuationInformation"})
 public class ClosingData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradDt", required = true)
 	protected ISODate tradeDate;
 	/**
-	 * Date at which the trading parties have agreed on a valuation rate for a
-	 * non deliverable trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +130,7 @@ public class ClosingData1 {
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> ClosingData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClosingData1.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,11 +141,11 @@ public class ClosingData1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "NtfctnId", required = true)
 	protected Max35Text notificationIdentification;
 	/**
-	 * Refers to the identification of a trade assigned by the trading side of a
-	 * non deliverable forward trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +173,7 @@ public class ClosingData1 {
 	 */
 	public static final MMMessageAttribute mmNotificationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ClosingData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClosingData1.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,10 +184,11 @@ public class ClosingData1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CmonRef")
 	protected Max35Text commonReference;
 	/**
-	 * Reference common to the parties of a trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,7 +220,7 @@ public class ClosingData1 {
 	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
-			componentContext_lazy = () -> ClosingData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClosingData1.mmObject();
 			isDerived = false;
 			xmlTag = "CmonRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,11 +231,11 @@ public class ClosingData1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdRef")
 	protected Max35Text relatedReference;
 	/**
-	 * Refers to the identification of a previous event in the life of a non
-	 * deliverable forward trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -260,7 +263,7 @@ public class ClosingData1 {
 	 */
 	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ClosingData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClosingData1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -271,10 +274,11 @@ public class ClosingData1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AmdOrCclRsn")
 	protected Max35Text amendOrCancelReason;
 	/**
-	 * Describes the reason for the cancellation or the amendment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -307,7 +311,7 @@ public class ClosingData1 {
 	public static final MMMessageAttribute mmAmendOrCancelReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> ClosingData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClosingData1.mmObject();
 			isDerived = false;
 			xmlTag = "AmdOrCclRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -318,10 +322,11 @@ public class ClosingData1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TradAmts", required = true)
 	protected AmountsAndValueDate1 tradeAmounts;
 	/**
-	 * Specifies the amounts traded at the valuation of a non-deliverable trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -354,7 +359,7 @@ public class ClosingData1 {
 	public static final MMMessageAssociationEnd mmTradeAmounts = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> FixingCondition.mmNonDeliverableTrade;
-			componentContext_lazy = () -> ClosingData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClosingData1.mmObject();
 			isDerived = false;
 			xmlTag = "TradAmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -366,12 +371,11 @@ public class ClosingData1 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate1.mmObject();
 		}
 	};
+	@XmlElement(name = "ValtnRate", required = true)
 	protected AgreedRate1 valuationRate;
 	/**
-	 * Rate obtained at valuation time by following the valuation conditions
-	 * (agreed upon by the trading parties at the opening of the non-deliverable
-	 * contract).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -404,7 +408,7 @@ public class ClosingData1 {
 	public static final MMMessageAssociationEnd mmValuationRate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> FixingCondition.mmFixingRate;
-			componentContext_lazy = () -> ClosingData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClosingData1.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -416,11 +420,11 @@ public class ClosingData1 {
 			type_lazy = () -> com.tools20022.repository.msg.AgreedRate1.mmObject();
 		}
 	};
+	@XmlElement(name = "ValtnInf", required = true)
 	protected ValuationData1 valuationInformation;
 	/**
-	 * Set of parameters used to calculate the valuation rate to be applied to a
-	 * non-deliverable agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -453,7 +457,7 @@ public class ClosingData1 {
 	public static final MMMessageAssociationEnd mmValuationInformation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> FixingCondition.mmObject();
-			componentContext_lazy = () -> ClosingData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClosingData1.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -469,10 +473,11 @@ public class ClosingData1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ClosingData1.mmTradeDate, ClosingData1.mmNotificationIdentification, ClosingData1.mmCommonReference, ClosingData1.mmRelatedReference, ClosingData1.mmAmendOrCancelReason,
-						ClosingData1.mmTradeAmounts, ClosingData1.mmValuationRate, ClosingData1.mmValuationInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClosingData1.mmTradeDate, com.tools20022.repository.msg.ClosingData1.mmNotificationIdentification,
+						com.tools20022.repository.msg.ClosingData1.mmCommonReference, com.tools20022.repository.msg.ClosingData1.mmRelatedReference, com.tools20022.repository.msg.ClosingData1.mmAmendOrCancelReason,
+						com.tools20022.repository.msg.ClosingData1.mmTradeAmounts, com.tools20022.repository.msg.ClosingData1.mmValuationRate, com.tools20022.repository.msg.ClosingData1.mmValuationInformation);
 				trace_lazy = () -> FixingCondition.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ClosingData1";
 				definition = "Set of data specified for the fixing of a non deliverable trade.";
@@ -481,75 +486,75 @@ public class ClosingData1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradDt", required = true)
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
 
-	public void setTradeDate(ISODate tradeDate) {
-		this.tradeDate = tradeDate;
+	public ClosingData1 setTradeDate(ISODate tradeDate) {
+		this.tradeDate = Objects.requireNonNull(tradeDate);
+		return this;
 	}
 
-	@XmlElement(name = "NtfctnId", required = true)
 	public Max35Text getNotificationIdentification() {
 		return notificationIdentification;
 	}
 
-	public void setNotificationIdentification(Max35Text notificationIdentification) {
-		this.notificationIdentification = notificationIdentification;
+	public ClosingData1 setNotificationIdentification(Max35Text notificationIdentification) {
+		this.notificationIdentification = Objects.requireNonNull(notificationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CmonRef")
-	public Max35Text getCommonReference() {
-		return commonReference;
+	public Optional<Max35Text> getCommonReference() {
+		return commonReference == null ? Optional.empty() : Optional.of(commonReference);
 	}
 
-	public void setCommonReference(Max35Text commonReference) {
+	public ClosingData1 setCommonReference(Max35Text commonReference) {
 		this.commonReference = commonReference;
+		return this;
 	}
 
-	@XmlElement(name = "RltdRef")
-	public Max35Text getRelatedReference() {
-		return relatedReference;
+	public Optional<Max35Text> getRelatedReference() {
+		return relatedReference == null ? Optional.empty() : Optional.of(relatedReference);
 	}
 
-	public void setRelatedReference(Max35Text relatedReference) {
+	public ClosingData1 setRelatedReference(Max35Text relatedReference) {
 		this.relatedReference = relatedReference;
+		return this;
 	}
 
-	@XmlElement(name = "AmdOrCclRsn")
-	public Max35Text getAmendOrCancelReason() {
-		return amendOrCancelReason;
+	public Optional<Max35Text> getAmendOrCancelReason() {
+		return amendOrCancelReason == null ? Optional.empty() : Optional.of(amendOrCancelReason);
 	}
 
-	public void setAmendOrCancelReason(Max35Text amendOrCancelReason) {
+	public ClosingData1 setAmendOrCancelReason(Max35Text amendOrCancelReason) {
 		this.amendOrCancelReason = amendOrCancelReason;
+		return this;
 	}
 
-	@XmlElement(name = "TradAmts", required = true)
 	public AmountsAndValueDate1 getTradeAmounts() {
 		return tradeAmounts;
 	}
 
-	public void setTradeAmounts(com.tools20022.repository.msg.AmountsAndValueDate1 tradeAmounts) {
-		this.tradeAmounts = tradeAmounts;
+	public ClosingData1 setTradeAmounts(com.tools20022.repository.msg.AmountsAndValueDate1 tradeAmounts) {
+		this.tradeAmounts = Objects.requireNonNull(tradeAmounts);
+		return this;
 	}
 
-	@XmlElement(name = "ValtnRate", required = true)
 	public AgreedRate1 getValuationRate() {
 		return valuationRate;
 	}
 
-	public void setValuationRate(com.tools20022.repository.msg.AgreedRate1 valuationRate) {
-		this.valuationRate = valuationRate;
+	public ClosingData1 setValuationRate(com.tools20022.repository.msg.AgreedRate1 valuationRate) {
+		this.valuationRate = Objects.requireNonNull(valuationRate);
+		return this;
 	}
 
-	@XmlElement(name = "ValtnInf", required = true)
 	public ValuationData1 getValuationInformation() {
 		return valuationInformation;
 	}
 
-	public void setValuationInformation(com.tools20022.repository.msg.ValuationData1 valuationInformation) {
-		this.valuationInformation = valuationInformation;
+	public ClosingData1 setValuationInformation(com.tools20022.repository.msg.ValuationData1 valuationInformation) {
+		this.valuationInformation = Objects.requireNonNull(valuationInformation);
+		return this;
 	}
 }

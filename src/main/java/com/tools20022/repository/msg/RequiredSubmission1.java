@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.FinancialInstitution;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRequiredTransportDataSetRule#forRequiredSubmission1
+ * ConstraintRequiredTransportDataSetRule.forRequiredSubmission1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RequiredSubmission1", propOrder = {"latestMatchDate", "requiredCommercialDataSet", "requiredTransportDataSet", "submitter"})
 public class RequiredSubmission1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LatstMtchDt")
 	protected ISODate latestMatchDate;
 	/**
-	 * Specifies the latest date on which a data set must be matched with a
-	 * baseline.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +124,7 @@ public class RequiredSubmission1 {
 	 */
 	public static final MMMessageAttribute mmLatestMatchDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequiredSubmission1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequiredSubmission1.mmObject();
 			isDerived = false;
 			xmlTag = "LatstMtchDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,11 +135,11 @@ public class RequiredSubmission1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqrdComrclDataSet", required = true)
 	protected YesNoIndicator requiredCommercialDataSet;
 	/**
-	 * Specifies whether the commercial documents must be submitted for the
-	 * current transaction or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +169,7 @@ public class RequiredSubmission1 {
 	 */
 	public static final MMMessageAttribute mmRequiredCommercialDataSet = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequiredSubmission1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequiredSubmission1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqrdComrclDataSet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,11 +180,11 @@ public class RequiredSubmission1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqrdTrnsprtDataSet", required = true)
 	protected YesNoIndicator requiredTransportDataSet;
 	/**
-	 * Specifies whether the transport documents must be submitted for the
-	 * current transaction or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,7 +214,7 @@ public class RequiredSubmission1 {
 	 */
 	public static final MMMessageAttribute mmRequiredTransportDataSet = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequiredSubmission1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequiredSubmission1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqrdTrnsprtDataSet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,10 +225,11 @@ public class RequiredSubmission1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Submitr", required = true)
 	protected BICIdentification1 submitter;
 	/**
-	 * Specifies the party that must submit the data sets.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -250,7 +261,7 @@ public class RequiredSubmission1 {
 	public static final MMMessageAssociationEnd mmSubmitter = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
-			componentContext_lazy = () -> RequiredSubmission1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequiredSubmission1.mmObject();
 			isDerived = false;
 			xmlTag = "Submitr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,9 +277,11 @@ public class RequiredSubmission1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RequiredSubmission1.mmLatestMatchDate, RequiredSubmission1.mmRequiredCommercialDataSet, RequiredSubmission1.mmRequiredTransportDataSet, RequiredSubmission1.mmSubmitter);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission1.mmLatestMatchDate, com.tools20022.repository.msg.RequiredSubmission1.mmRequiredCommercialDataSet,
+						com.tools20022.repository.msg.RequiredSubmission1.mmRequiredTransportDataSet, com.tools20022.repository.msg.RequiredSubmission1.mmSubmitter);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequiredTransportDataSetRule.forRequiredSubmission1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RequiredSubmission1";
 				definition = "Specifies per transaction which document must be submitted and under which conditions.";
@@ -277,39 +290,39 @@ public class RequiredSubmission1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LatstMtchDt")
-	public ISODate getLatestMatchDate() {
-		return latestMatchDate;
+	public Optional<ISODate> getLatestMatchDate() {
+		return latestMatchDate == null ? Optional.empty() : Optional.of(latestMatchDate);
 	}
 
-	public void setLatestMatchDate(ISODate latestMatchDate) {
+	public RequiredSubmission1 setLatestMatchDate(ISODate latestMatchDate) {
 		this.latestMatchDate = latestMatchDate;
+		return this;
 	}
 
-	@XmlElement(name = "ReqrdComrclDataSet", required = true)
 	public YesNoIndicator getRequiredCommercialDataSet() {
 		return requiredCommercialDataSet;
 	}
 
-	public void setRequiredCommercialDataSet(YesNoIndicator requiredCommercialDataSet) {
-		this.requiredCommercialDataSet = requiredCommercialDataSet;
+	public RequiredSubmission1 setRequiredCommercialDataSet(YesNoIndicator requiredCommercialDataSet) {
+		this.requiredCommercialDataSet = Objects.requireNonNull(requiredCommercialDataSet);
+		return this;
 	}
 
-	@XmlElement(name = "ReqrdTrnsprtDataSet", required = true)
 	public YesNoIndicator getRequiredTransportDataSet() {
 		return requiredTransportDataSet;
 	}
 
-	public void setRequiredTransportDataSet(YesNoIndicator requiredTransportDataSet) {
-		this.requiredTransportDataSet = requiredTransportDataSet;
+	public RequiredSubmission1 setRequiredTransportDataSet(YesNoIndicator requiredTransportDataSet) {
+		this.requiredTransportDataSet = Objects.requireNonNull(requiredTransportDataSet);
+		return this;
 	}
 
-	@XmlElement(name = "Submitr", required = true)
 	public BICIdentification1 getSubmitter() {
 		return submitter;
 	}
 
-	public void setSubmitter(com.tools20022.repository.msg.BICIdentification1 submitter) {
-		this.submitter = submitter;
+	public RequiredSubmission1 setSubmitter(com.tools20022.repository.msg.BICIdentification1 submitter) {
+		this.submitter = Objects.requireNonNull(submitter);
+		return this;
 	}
 }

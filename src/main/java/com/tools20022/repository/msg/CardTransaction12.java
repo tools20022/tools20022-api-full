@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * CardTransaction11}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardTransaction12", propOrder = {"networkManagementType", "initiatorDateTime", "numberOfMessages", "maximumNumberOfMessages", "transactionResponse"})
 public class CardTransaction12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NtwkMgmtTp", required = true)
 	protected CardServiceType2Code networkManagementType;
 	/**
-	 * Type of network management service (correspond to the ISO 8583 field 24)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -127,7 +130,7 @@ public class CardTransaction12 {
 	 */
 	public static final MMMessageAttribute mmNetworkManagementType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardTransaction12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction12.mmObject();
 			isDerived = false;
 			xmlTag = "NtwkMgmtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,10 +142,11 @@ public class CardTransaction12 {
 			simpleType_lazy = () -> CardServiceType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "InitrDtTm")
 	protected ISODateTime initiatorDateTime;
 	/**
-	 * Date and time of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,7 +173,7 @@ public class CardTransaction12 {
 	 */
 	public static final MMMessageAttribute mmInitiatorDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardTransaction12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction12.mmObject();
 			isDerived = false;
 			xmlTag = "InitrDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,10 +184,11 @@ public class CardTransaction12 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfMsgs")
 	protected Number numberOfMessages;
 	/**
-	 * Number of messages in the store and forward queue.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,7 +220,7 @@ public class CardTransaction12 {
 	 */
 	public static final MMMessageAttribute mmNumberOfMessages = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardTransaction12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction12.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfMsgs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,10 +232,11 @@ public class CardTransaction12 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxNbOfMsgs")
 	protected Number maximumNumberOfMessages;
 	/**
-	 * Maximum number of messages in the store and forward queue.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -263,7 +269,7 @@ public class CardTransaction12 {
 	 */
 	public static final MMMessageAttribute mmMaximumNumberOfMessages = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardTransaction12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction12.mmObject();
 			isDerived = false;
 			xmlTag = "MaxNbOfMsgs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -275,10 +281,11 @@ public class CardTransaction12 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "TxRspn", required = true)
 	protected ResponseType2 transactionResponse;
 	/**
-	 * Response to the network management request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -304,7 +311,7 @@ public class CardTransaction12 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardTransaction12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction12.mmObject();
 			isDerived = false;
 			xmlTag = "TxRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -320,9 +327,9 @@ public class CardTransaction12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardTransaction12.mmNetworkManagementType, CardTransaction12.mmInitiatorDateTime, CardTransaction12.mmNumberOfMessages, CardTransaction12.mmMaximumNumberOfMessages,
-						CardTransaction12.mmTransactionResponse);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransaction12.mmNetworkManagementType, com.tools20022.repository.msg.CardTransaction12.mmInitiatorDateTime,
+						com.tools20022.repository.msg.CardTransaction12.mmNumberOfMessages, com.tools20022.repository.msg.CardTransaction12.mmMaximumNumberOfMessages, com.tools20022.repository.msg.CardTransaction12.mmTransactionResponse);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransaction12";
 				definition = "Network management transaction.";
@@ -333,48 +340,48 @@ public class CardTransaction12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NtwkMgmtTp", required = true)
 	public CardServiceType2Code getNetworkManagementType() {
 		return networkManagementType;
 	}
 
-	public void setNetworkManagementType(CardServiceType2Code networkManagementType) {
-		this.networkManagementType = networkManagementType;
+	public CardTransaction12 setNetworkManagementType(CardServiceType2Code networkManagementType) {
+		this.networkManagementType = Objects.requireNonNull(networkManagementType);
+		return this;
 	}
 
-	@XmlElement(name = "InitrDtTm")
-	public ISODateTime getInitiatorDateTime() {
-		return initiatorDateTime;
+	public Optional<ISODateTime> getInitiatorDateTime() {
+		return initiatorDateTime == null ? Optional.empty() : Optional.of(initiatorDateTime);
 	}
 
-	public void setInitiatorDateTime(ISODateTime initiatorDateTime) {
+	public CardTransaction12 setInitiatorDateTime(ISODateTime initiatorDateTime) {
 		this.initiatorDateTime = initiatorDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "NbOfMsgs")
-	public Number getNumberOfMessages() {
-		return numberOfMessages;
+	public Optional<Number> getNumberOfMessages() {
+		return numberOfMessages == null ? Optional.empty() : Optional.of(numberOfMessages);
 	}
 
-	public void setNumberOfMessages(Number numberOfMessages) {
+	public CardTransaction12 setNumberOfMessages(Number numberOfMessages) {
 		this.numberOfMessages = numberOfMessages;
+		return this;
 	}
 
-	@XmlElement(name = "MaxNbOfMsgs")
-	public Number getMaximumNumberOfMessages() {
-		return maximumNumberOfMessages;
+	public Optional<Number> getMaximumNumberOfMessages() {
+		return maximumNumberOfMessages == null ? Optional.empty() : Optional.of(maximumNumberOfMessages);
 	}
 
-	public void setMaximumNumberOfMessages(Number maximumNumberOfMessages) {
+	public CardTransaction12 setMaximumNumberOfMessages(Number maximumNumberOfMessages) {
 		this.maximumNumberOfMessages = maximumNumberOfMessages;
+		return this;
 	}
 
-	@XmlElement(name = "TxRspn", required = true)
 	public ResponseType2 getTransactionResponse() {
 		return transactionResponse;
 	}
 
-	public void setTransactionResponse(com.tools20022.repository.msg.ResponseType2 transactionResponse) {
-		this.transactionResponse = transactionResponse;
+	public CardTransaction12 setTransactionResponse(com.tools20022.repository.msg.ResponseType2 transactionResponse) {
+		this.transactionResponse = Objects.requireNonNull(transactionResponse);
+		return this;
 	}
 }

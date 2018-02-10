@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.WorkflowStatusCode;
+import com.tools20022.repository.codeset.WorkflowStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the workflow status of the details of a specific level.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode
- * WorkflowStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WorkflowStatus1Code#mmComplete
- * WorkflowStatus1Code.mmComplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.WorkflowStatus1Code#Complete
+ * WorkflowStatus1Code.Complete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WorkflowStatus1Code#mmConflict
- * WorkflowStatus1Code.mmConflict}</li>
+ * {@linkplain com.tools20022.repository.codeset.WorkflowStatus1Code#Conflict
+ * WorkflowStatus1Code.Conflict}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WorkflowStatus1Code#mmConditionallyComplete
- * WorkflowStatus1Code.mmConditionallyComplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.WorkflowStatus1Code#ConditionallyComplete
+ * WorkflowStatus1Code.ConditionallyComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WorkflowStatus1Code#mmIncomplete
- * WorkflowStatus1Code.mmIncomplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.WorkflowStatus1Code#Incomplete
+ * WorkflowStatus1Code.Incomplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WorkflowStatus1Code#mmDeleted
- * WorkflowStatus1Code.mmDeleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.WorkflowStatus1Code#Deleted
+ * WorkflowStatus1Code.Deleted}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode
+ * WorkflowStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the workflow status of the details of a specific level. "</li>
  * </ul>
  */
-public class WorkflowStatus1Code extends WorkflowStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class WorkflowStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,11 +98,12 @@ public class WorkflowStatus1Code extends WorkflowStatusCode {
 	 * name} = "Complete"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmComplete = new MMCode() {
+	public static final WorkflowStatus1Code Complete = new WorkflowStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
-			owner_lazy = () -> WorkflowStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.WorkflowStatus1Code.mmObject();
+			codeName = WorkflowStatusCode.Complete.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -116,11 +122,12 @@ public class WorkflowStatus1Code extends WorkflowStatusCode {
 	 * name} = "Conflict"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConflict = new MMCode() {
+	public static final WorkflowStatus1Code Conflict = new WorkflowStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Conflict";
-			owner_lazy = () -> WorkflowStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.WorkflowStatus1Code.mmObject();
+			codeName = WorkflowStatusCode.Conflict.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -139,11 +146,12 @@ public class WorkflowStatus1Code extends WorkflowStatusCode {
 	 * name} = "ConditionallyComplete"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConditionallyComplete = new MMCode() {
+	public static final WorkflowStatus1Code ConditionallyComplete = new WorkflowStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionallyComplete";
-			owner_lazy = () -> WorkflowStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.WorkflowStatus1Code.mmObject();
+			codeName = WorkflowStatusCode.ConditionallyComplete.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -162,11 +170,12 @@ public class WorkflowStatus1Code extends WorkflowStatusCode {
 	 * name} = "Incomplete"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncomplete = new MMCode() {
+	public static final WorkflowStatus1Code Incomplete = new WorkflowStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incomplete";
-			owner_lazy = () -> WorkflowStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.WorkflowStatus1Code.mmObject();
+			codeName = WorkflowStatusCode.Incomplete.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -185,26 +194,61 @@ public class WorkflowStatus1Code extends WorkflowStatusCode {
 	 * name} = "Deleted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeleted = new MMCode() {
+	public static final WorkflowStatus1Code Deleted = new WorkflowStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
-			owner_lazy = () -> WorkflowStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.WorkflowStatus1Code.mmObject();
+			codeName = WorkflowStatusCode.Deleted.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, WorkflowStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected WorkflowStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "WorkflowStatus1Code";
 				definition = "Specifies the workflow status of the details of a specific level. ";
-				code_lazy = () -> Arrays.asList(WorkflowStatus1Code.mmComplete, WorkflowStatus1Code.mmConflict, WorkflowStatus1Code.mmConditionallyComplete, WorkflowStatus1Code.mmIncomplete, WorkflowStatus1Code.mmDeleted);
 				trace_lazy = () -> WorkflowStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WorkflowStatus1Code.Complete, com.tools20022.repository.codeset.WorkflowStatus1Code.Conflict,
+						com.tools20022.repository.codeset.WorkflowStatus1Code.ConditionallyComplete, com.tools20022.repository.codeset.WorkflowStatus1Code.Incomplete, com.tools20022.repository.codeset.WorkflowStatus1Code.Deleted);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Complete.getCodeName().get(), Complete);
+		codesByName.put(Conflict.getCodeName().get(), Conflict);
+		codesByName.put(ConditionallyComplete.getCodeName().get(), ConditionallyComplete);
+		codesByName.put(Incomplete.getCodeName().get(), Incomplete);
+		codesByName.put(Deleted.getCodeName().get(), Deleted);
+	}
+
+	public static WorkflowStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static WorkflowStatus1Code[] values() {
+		WorkflowStatus1Code[] values = new WorkflowStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, WorkflowStatus1Code> {
+		@Override
+		public WorkflowStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(WorkflowStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

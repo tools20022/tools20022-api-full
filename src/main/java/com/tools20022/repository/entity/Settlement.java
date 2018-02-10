@@ -23,9 +23,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Process which consists in transferring the proceeds related to a trade from
@@ -51,6 +50,20 @@ import java.util.List;
  * Settlement.mmSettlementPartyRole}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Settlement#mmTrade
  * Settlement.mmTrade}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmSettlement
+ * Trade.mmSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SettlementPartyRole#mmSettlement
+ * SettlementPartyRole.mmSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSettlement
+ * StandingSettlementInstruction.mmSettlement}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -86,24 +99,10 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmSettlement
- * Trade.mmSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SettlementPartyRole#mmSettlement
- * SettlementPartyRole.mmSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmSettlement
- * StandingSettlementInstruction.mmSettlement}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,9 +120,8 @@ public class Settlement {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected YesNoIndicator centralCounterpartyEligibilityIndicator;
 	/**
-	 * Specifies whether the settlement transaction is CCP (Central
-	 * Counterparty) eligible.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -185,8 +183,8 @@ public class Settlement {
 			derivation_lazy = () -> Arrays.asList(CentralCounterPartyEligibility1Choice.mmIndicator, CentralCounterPartyEligibility1Choice.mmProprietary, CentralCounterPartyEligibility2Choice.mmIndicator,
 					CentralCounterPartyEligibility2Choice.mmProprietary, CentralCounterPartyEligibility3Choice.mmIndicator, CentralCounterPartyEligibility4Choice.mmIndicator, CentralCounterPartyEligibility4Choice.mmProprietary,
 					CentralCounterPartyEligibility5Choice.mmIndicator, CentralCounterPartyEligibility5Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Settlement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Settlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CentralCounterpartyEligibilityIndicator";
 			definition = "Specifies whether the settlement transaction is CCP (Central Counterparty) eligible.";
@@ -205,8 +203,8 @@ public class Settlement {
 	};
 	protected StandingSettlementInstruction standingSettlementInstruction;
 	/**
-	 * Settlement Standing Instruction database to be used for settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -507,8 +505,8 @@ public class Settlement {
 					SecuritiesSettlementTransactionDetails28.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails26.mmStandingSettlementInstructionDetails, SettlementDetails122.mmFXStandingInstruction,
 					SettlementDetails137.mmFXStandingInstruction, SettlementDetails132.mmFXStandingInstruction, SecuritiesSettlementTransactionDetails30.mmStandingSettlementInstructionDetails, SettlementDetails138.mmFXStandingInstruction,
 					SecuritiesSettlementTransactionDetails29.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails31.mmStandingSettlementInstructionDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Settlement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Settlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StandingSettlementInstruction";
 			definition = "Settlement Standing Instruction database to be used for settlement.";
@@ -521,8 +519,8 @@ public class Settlement {
 	};
 	protected List<com.tools20022.repository.entity.SettlementPartyRole> settlementPartyRole;
 	/**
-	 * Specifies roles played by a party in the settlement process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -564,8 +562,8 @@ public class Settlement {
 	public static final MMBusinessAssociationEnd mmSettlementPartyRole = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetObligation1.mmCounterpartySettlementInstructions);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Settlement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Settlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementPartyRole";
 			definition = "Specifies roles played by a party in the settlement process.";
@@ -577,8 +575,8 @@ public class Settlement {
 	};
 	protected Trade trade;
 	/**
-	 * Trade for which settlement information is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -609,8 +607,8 @@ public class Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Settlement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Settlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trade";
 			definition = "Trade for which settlement information is provided.";
@@ -625,7 +623,7 @@ public class Settlement {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Settlement";
 				definition = "Process which consists in transferring the proceeds related to a trade from one party to the next one.";
@@ -650,31 +648,35 @@ public class Settlement {
 		return centralCounterpartyEligibilityIndicator;
 	}
 
-	public void setCentralCounterpartyEligibilityIndicator(YesNoIndicator centralCounterpartyEligibilityIndicator) {
-		this.centralCounterpartyEligibilityIndicator = centralCounterpartyEligibilityIndicator;
+	public Settlement setCentralCounterpartyEligibilityIndicator(YesNoIndicator centralCounterpartyEligibilityIndicator) {
+		this.centralCounterpartyEligibilityIndicator = Objects.requireNonNull(centralCounterpartyEligibilityIndicator);
+		return this;
 	}
 
-	public StandingSettlementInstruction getStandingSettlementInstruction() {
-		return standingSettlementInstruction;
+	public Optional<StandingSettlementInstruction> getStandingSettlementInstruction() {
+		return standingSettlementInstruction == null ? Optional.empty() : Optional.of(standingSettlementInstruction);
 	}
 
-	public void setStandingSettlementInstruction(com.tools20022.repository.entity.StandingSettlementInstruction standingSettlementInstruction) {
+	public Settlement setStandingSettlementInstruction(com.tools20022.repository.entity.StandingSettlementInstruction standingSettlementInstruction) {
 		this.standingSettlementInstruction = standingSettlementInstruction;
+		return this;
 	}
 
 	public List<SettlementPartyRole> getSettlementPartyRole() {
-		return settlementPartyRole;
+		return settlementPartyRole == null ? settlementPartyRole = new ArrayList<>() : settlementPartyRole;
 	}
 
-	public void setSettlementPartyRole(List<com.tools20022.repository.entity.SettlementPartyRole> settlementPartyRole) {
-		this.settlementPartyRole = settlementPartyRole;
+	public Settlement setSettlementPartyRole(List<com.tools20022.repository.entity.SettlementPartyRole> settlementPartyRole) {
+		this.settlementPartyRole = Objects.requireNonNull(settlementPartyRole);
+		return this;
 	}
 
 	public Trade getTrade() {
 		return trade;
 	}
 
-	public void setTrade(com.tools20022.repository.entity.Trade trade) {
-		this.trade = trade;
+	public Settlement setTrade(com.tools20022.repository.entity.Trade trade) {
+		this.trade = Objects.requireNonNull(trade);
+		return this;
 	}
 }

@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.Scheme;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,16 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GenericIdentification8", propOrder = {"identification", "identificationType", "issuer"})
 public class GenericIdentification8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Name or number assigned by an entity to enable recognition of that
-	 * entity, eg, account identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +119,7 @@ public class GenericIdentification8 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> GenericIdentification8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +130,11 @@ public class GenericIdentification8 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IdTp", required = true)
 	protected IdentificationType1 identificationType;
 	/**
-	 * Specifies the nature of the identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +168,7 @@ public class GenericIdentification8 {
 	public static final MMMessageAttribute mmIdentificationType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmCode;
-			componentContext_lazy = () -> GenericIdentification8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "IdTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,10 +179,11 @@ public class GenericIdentification8 {
 			complexType_lazy = () -> com.tools20022.repository.msg.IdentificationType1.mmObject();
 		}
 	};
+	@XmlElement(name = "Issr")
 	protected Max35Text issuer;
 	/**
-	 * Entity that assigns the identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -212,7 +216,7 @@ public class GenericIdentification8 {
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
-			componentContext_lazy = () -> GenericIdentification8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,9 +231,10 @@ public class GenericIdentification8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GenericIdentification8.mmIdentification, GenericIdentification8.mmIdentificationType, GenericIdentification8.mmIssuer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification8.mmIdentification, com.tools20022.repository.msg.GenericIdentification8.mmIdentificationType,
+						com.tools20022.repository.msg.GenericIdentification8.mmIssuer);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GenericIdentification8";
 				definition = "Information related to an identification, eg, party identification or account identification.";
@@ -238,30 +243,30 @@ public class GenericIdentification8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public GenericIdentification8 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "IdTp", required = true)
 	public IdentificationType1 getIdentificationType() {
 		return identificationType;
 	}
 
-	public void setIdentificationType(com.tools20022.repository.msg.IdentificationType1 identificationType) {
-		this.identificationType = identificationType;
+	public GenericIdentification8 setIdentificationType(com.tools20022.repository.msg.IdentificationType1 identificationType) {
+		this.identificationType = Objects.requireNonNull(identificationType);
+		return this;
 	}
 
-	@XmlElement(name = "Issr")
-	public Max35Text getIssuer() {
-		return issuer;
+	public Optional<Max35Text> getIssuer() {
+		return issuer == null ? Optional.empty() : Optional.of(issuer);
 	}
 
-	public void setIssuer(Max35Text issuer) {
+	public GenericIdentification8 setIssuer(Max35Text issuer) {
 		this.issuer = issuer;
+		return this;
 	}
 }

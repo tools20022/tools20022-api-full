@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateActionProcessedStatusCode;
+import com.tools20022.repository.codeset.ProcessedStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the processing status of the notification advice.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode
- * CorporateActionProcessedStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessedStatus1Code#mmReceived
- * ProcessedStatus1Code.mmReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessedStatus1Code#Received
+ * ProcessedStatus1Code.Received}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessedStatus1Code#mmSentToMarket
- * ProcessedStatus1Code.mmSentToMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessedStatus1Code#SentToMarket
+ * ProcessedStatus1Code.SentToMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessedStatus1Code#mmAcceptedWithWarning
- * ProcessedStatus1Code.mmAcceptedWithWarning}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessedStatus1Code#AcceptedWithWarning
+ * ProcessedStatus1Code.AcceptedWithWarning}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessedStatus1Code#mmAccepted
- * ProcessedStatus1Code.mmAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessedStatus1Code#Accepted
+ * ProcessedStatus1Code.Accepted}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode
+ * CorporateActionProcessedStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the processing status of the notification advice."</li>
  * </ul>
  */
-public class ProcessedStatus1Code extends CorporateActionProcessedStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProcessedStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class ProcessedStatus1Code extends CorporateActionProcessedStatusCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceived = new MMCode() {
+	public static final ProcessedStatus1Code Received = new ProcessedStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
-			owner_lazy = () -> ProcessedStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessedStatus1Code.mmObject();
+			codeName = CorporateActionProcessedStatusCode.Received.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class ProcessedStatus1Code extends CorporateActionProcessedStatusCode {
 	 * name} = "SentToMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSentToMarket = new MMCode() {
+	public static final ProcessedStatus1Code SentToMarket = new ProcessedStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToMarket";
-			owner_lazy = () -> ProcessedStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessedStatus1Code.mmObject();
+			codeName = CorporateActionProcessedStatusCode.SentToMarket.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class ProcessedStatus1Code extends CorporateActionProcessedStatusCode {
 	 * name} = "AcceptedWithWarning"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedWithWarning = new MMCode() {
+	public static final ProcessedStatus1Code AcceptedWithWarning = new ProcessedStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedWithWarning";
-			owner_lazy = () -> ProcessedStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessedStatus1Code.mmObject();
+			codeName = CorporateActionProcessedStatusCode.AcceptedWithWarning.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,26 +166,60 @@ public class ProcessedStatus1Code extends CorporateActionProcessedStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final ProcessedStatus1Code Accepted = new ProcessedStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> ProcessedStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessedStatus1Code.mmObject();
+			codeName = CorporateActionProcessedStatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ProcessedStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProcessedStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RECE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessedStatus1Code";
 				definition = "Specifies the processing status of the notification advice.";
-				code_lazy = () -> Arrays.asList(ProcessedStatus1Code.mmReceived, ProcessedStatus1Code.mmSentToMarket, ProcessedStatus1Code.mmAcceptedWithWarning, ProcessedStatus1Code.mmAccepted);
 				trace_lazy = () -> CorporateActionProcessedStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessedStatus1Code.Received, com.tools20022.repository.codeset.ProcessedStatus1Code.SentToMarket,
+						com.tools20022.repository.codeset.ProcessedStatus1Code.AcceptedWithWarning, com.tools20022.repository.codeset.ProcessedStatus1Code.Accepted);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Received.getCodeName().get(), Received);
+		codesByName.put(SentToMarket.getCodeName().get(), SentToMarket);
+		codesByName.put(AcceptedWithWarning.getCodeName().get(), AcceptedWithWarning);
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+	}
+
+	public static ProcessedStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProcessedStatus1Code[] values() {
+		ProcessedStatus1Code[] values = new ProcessedStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProcessedStatus1Code> {
+		@Override
+		public ProcessedStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProcessedStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

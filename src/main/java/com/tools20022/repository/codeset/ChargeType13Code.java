@@ -20,74 +20,77 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ChargeTypeCode;
+import com.tools20022.repository.codeset.ChargeType13Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies charges linked to the type of service.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode ChargeTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#mmBackEndLoad
- * ChargeType13Code.mmBackEndLoad}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#BackEndLoad
+ * ChargeType13Code.BackEndLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#mmFrontEndLoad
- * ChargeType13Code.mmFrontEndLoad}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType13Code#mmSwitch
- * ChargeType13Code.mmSwitch}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#FrontEndLoad
+ * ChargeType13Code.FrontEndLoad}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType13Code#Switch
+ * ChargeType13Code.Switch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#mmDilutionLevy
- * ChargeType13Code.mmDilutionLevy}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#DilutionLevy
+ * ChargeType13Code.DilutionLevy}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType13Code#Discount
+ * ChargeType13Code.Discount}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType13Code#Penalty
+ * ChargeType13Code.Penalty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#mmDiscount
- * ChargeType13Code.mmDiscount}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType13Code#mmPenalty
- * ChargeType13Code.mmPenalty}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#PostageCharge
+ * ChargeType13Code.PostageCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#mmPostageCharge
- * ChargeType13Code.mmPostageCharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#RegulatoryFee
+ * ChargeType13Code.RegulatoryFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#mmRegulatoryFee
- * ChargeType13Code.mmRegulatoryFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#ShippingCharge
+ * ChargeType13Code.ShippingCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#mmShippingCharge
- * ChargeType13Code.mmShippingCharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#ServiceProvisionFee
+ * ChargeType13Code.ServiceProvisionFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#mmServiceProvisionFee
- * ChargeType13Code.mmServiceProvisionFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#ContingencyDeferredSalesCharge
+ * ChargeType13Code.ContingencyDeferredSalesCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#mmContingencyDeferredSalesCharge
- * ChargeType13Code.mmContingencyDeferredSalesCharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#CorrespondentBankCharge
+ * ChargeType13Code.CorrespondentBankCharge}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType13Code#Premium
+ * ChargeType13Code.Premium}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType13Code#Initial
+ * ChargeType13Code.Initial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#mmCorrespondentBankCharge
- * ChargeType13Code.mmCorrespondentBankCharge}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType13Code#mmPremium
- * ChargeType13Code.mmPremium}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType13Code#mmInitial
- * ChargeType13Code.mmInitial}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#BrokerageFee
+ * ChargeType13Code.BrokerageFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#mmBrokerageFee
- * ChargeType13Code.mmBrokerageFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#UCITSCommission
+ * ChargeType13Code.UCITSCommission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#mmUCITSCommission
- * ChargeType13Code.mmUCITSCommission}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#mmSpeciallyAgreedFrontEndLoad
- * ChargeType13Code.mmSpeciallyAgreedFrontEndLoad}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType13Code#SpeciallyAgreedFrontEndLoad
+ * ChargeType13Code.SpeciallyAgreedFrontEndLoad}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode ChargeTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -104,7 +107,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies charges linked to the type of service."</li>
  * </ul>
  */
-public class ChargeType13Code extends ChargeTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ChargeType13Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -123,11 +127,12 @@ public class ChargeType13Code extends ChargeTypeCode {
 	 * name} = "BackEndLoad"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBackEndLoad = new MMCode() {
+	public static final ChargeType13Code BackEndLoad = new ChargeType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEndLoad";
-			owner_lazy = () -> ChargeType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType13Code.mmObject();
+			codeName = ChargeTypeCode.BackEndLoad.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -146,11 +151,12 @@ public class ChargeType13Code extends ChargeTypeCode {
 	 * name} = "FrontEndLoad"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFrontEndLoad = new MMCode() {
+	public static final ChargeType13Code FrontEndLoad = new ChargeType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEndLoad";
-			owner_lazy = () -> ChargeType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType13Code.mmObject();
+			codeName = ChargeTypeCode.FrontEndLoad.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -169,11 +175,12 @@ public class ChargeType13Code extends ChargeTypeCode {
 	 * name} = "Switch"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSwitch = new MMCode() {
+	public static final ChargeType13Code Switch = new ChargeType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Switch";
-			owner_lazy = () -> ChargeType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType13Code.mmObject();
+			codeName = ChargeTypeCode.Switch.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -192,11 +199,12 @@ public class ChargeType13Code extends ChargeTypeCode {
 	 * name} = "DilutionLevy"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDilutionLevy = new MMCode() {
+	public static final ChargeType13Code DilutionLevy = new ChargeType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DilutionLevy";
-			owner_lazy = () -> ChargeType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType13Code.mmObject();
+			codeName = ChargeTypeCode.DilutionLevy.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -215,11 +223,12 @@ public class ChargeType13Code extends ChargeTypeCode {
 	 * name} = "Discount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiscount = new MMCode() {
+	public static final ChargeType13Code Discount = new ChargeType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
-			owner_lazy = () -> ChargeType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType13Code.mmObject();
+			codeName = ChargeTypeCode.Discount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -238,11 +247,12 @@ public class ChargeType13Code extends ChargeTypeCode {
 	 * name} = "Penalty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPenalty = new MMCode() {
+	public static final ChargeType13Code Penalty = new ChargeType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Penalty";
-			owner_lazy = () -> ChargeType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType13Code.mmObject();
+			codeName = ChargeTypeCode.Penalty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -261,11 +271,12 @@ public class ChargeType13Code extends ChargeTypeCode {
 	 * name} = "PostageCharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPostageCharge = new MMCode() {
+	public static final ChargeType13Code PostageCharge = new ChargeType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostageCharge";
-			owner_lazy = () -> ChargeType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType13Code.mmObject();
+			codeName = ChargeTypeCode.PostageCharge.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -284,11 +295,12 @@ public class ChargeType13Code extends ChargeTypeCode {
 	 * name} = "RegulatoryFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegulatoryFee = new MMCode() {
+	public static final ChargeType13Code RegulatoryFee = new ChargeType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryFee";
-			owner_lazy = () -> ChargeType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType13Code.mmObject();
+			codeName = ChargeTypeCode.RegulatoryFee.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -307,11 +319,12 @@ public class ChargeType13Code extends ChargeTypeCode {
 	 * name} = "ShippingCharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmShippingCharge = new MMCode() {
+	public static final ChargeType13Code ShippingCharge = new ChargeType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShippingCharge";
-			owner_lazy = () -> ChargeType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType13Code.mmObject();
+			codeName = ChargeTypeCode.ShippingCharge.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -330,11 +343,12 @@ public class ChargeType13Code extends ChargeTypeCode {
 	 * name} = "ServiceProvisionFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmServiceProvisionFee = new MMCode() {
+	public static final ChargeType13Code ServiceProvisionFee = new ChargeType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceProvisionFee";
-			owner_lazy = () -> ChargeType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType13Code.mmObject();
+			codeName = ChargeTypeCode.ServiceProvisionFee.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -353,11 +367,12 @@ public class ChargeType13Code extends ChargeTypeCode {
 	 * name} = "ContingencyDeferredSalesCharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmContingencyDeferredSalesCharge = new MMCode() {
+	public static final ChargeType13Code ContingencyDeferredSalesCharge = new ChargeType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContingencyDeferredSalesCharge";
-			owner_lazy = () -> ChargeType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType13Code.mmObject();
+			codeName = ChargeTypeCode.ContingencyDeferredSalesCharge.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -376,11 +391,12 @@ public class ChargeType13Code extends ChargeTypeCode {
 	 * name} = "CorrespondentBankCharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorrespondentBankCharge = new MMCode() {
+	public static final ChargeType13Code CorrespondentBankCharge = new ChargeType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankCharge";
-			owner_lazy = () -> ChargeType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType13Code.mmObject();
+			codeName = ChargeTypeCode.CorrespondentBankCharge.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -399,11 +415,12 @@ public class ChargeType13Code extends ChargeTypeCode {
 	 * name} = "Premium"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPremium = new MMCode() {
+	public static final ChargeType13Code Premium = new ChargeType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
-			owner_lazy = () -> ChargeType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType13Code.mmObject();
+			codeName = ChargeTypeCode.Premium.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -422,11 +439,12 @@ public class ChargeType13Code extends ChargeTypeCode {
 	 * name} = "Initial"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInitial = new MMCode() {
+	public static final ChargeType13Code Initial = new ChargeType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initial";
-			owner_lazy = () -> ChargeType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType13Code.mmObject();
+			codeName = ChargeTypeCode.Initial.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -445,11 +463,12 @@ public class ChargeType13Code extends ChargeTypeCode {
 	 * name} = "BrokerageFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBrokerageFee = new MMCode() {
+	public static final ChargeType13Code BrokerageFee = new ChargeType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerageFee";
-			owner_lazy = () -> ChargeType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType13Code.mmObject();
+			codeName = ChargeTypeCode.BrokerageFee.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -468,11 +487,12 @@ public class ChargeType13Code extends ChargeTypeCode {
 	 * name} = "UCITSCommission"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUCITSCommission = new MMCode() {
+	public static final ChargeType13Code UCITSCommission = new ChargeType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UCITSCommission";
-			owner_lazy = () -> ChargeType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType13Code.mmObject();
+			codeName = ChargeTypeCode.UCITSCommission.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -491,30 +511,77 @@ public class ChargeType13Code extends ChargeTypeCode {
 	 * name} = "SpeciallyAgreedFrontEndLoad"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpeciallyAgreedFrontEndLoad = new MMCode() {
+	public static final ChargeType13Code SpeciallyAgreedFrontEndLoad = new ChargeType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpeciallyAgreedFrontEndLoad";
-			owner_lazy = () -> ChargeType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType13Code.mmObject();
+			codeName = ChargeTypeCode.SpeciallyAgreedFrontEndLoad.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ChargeType13Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ChargeType13Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BEND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeType13Code";
 				definition = "Identifies charges linked to the type of service.";
-				code_lazy = () -> Arrays
-						.asList(ChargeType13Code.mmBackEndLoad, ChargeType13Code.mmFrontEndLoad, ChargeType13Code.mmSwitch, ChargeType13Code.mmDilutionLevy, ChargeType13Code.mmDiscount, ChargeType13Code.mmPenalty,
-								ChargeType13Code.mmPostageCharge, ChargeType13Code.mmRegulatoryFee, ChargeType13Code.mmShippingCharge, ChargeType13Code.mmServiceProvisionFee, ChargeType13Code.mmContingencyDeferredSalesCharge,
-								ChargeType13Code.mmCorrespondentBankCharge, ChargeType13Code.mmPremium, ChargeType13Code.mmInitial, ChargeType13Code.mmBrokerageFee, ChargeType13Code.mmUCITSCommission,
-								ChargeType13Code.mmSpeciallyAgreedFrontEndLoad);
 				trace_lazy = () -> ChargeTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType13Code.BackEndLoad, com.tools20022.repository.codeset.ChargeType13Code.FrontEndLoad, com.tools20022.repository.codeset.ChargeType13Code.Switch,
+						com.tools20022.repository.codeset.ChargeType13Code.DilutionLevy, com.tools20022.repository.codeset.ChargeType13Code.Discount, com.tools20022.repository.codeset.ChargeType13Code.Penalty,
+						com.tools20022.repository.codeset.ChargeType13Code.PostageCharge, com.tools20022.repository.codeset.ChargeType13Code.RegulatoryFee, com.tools20022.repository.codeset.ChargeType13Code.ShippingCharge,
+						com.tools20022.repository.codeset.ChargeType13Code.ServiceProvisionFee, com.tools20022.repository.codeset.ChargeType13Code.ContingencyDeferredSalesCharge,
+						com.tools20022.repository.codeset.ChargeType13Code.CorrespondentBankCharge, com.tools20022.repository.codeset.ChargeType13Code.Premium, com.tools20022.repository.codeset.ChargeType13Code.Initial,
+						com.tools20022.repository.codeset.ChargeType13Code.BrokerageFee, com.tools20022.repository.codeset.ChargeType13Code.UCITSCommission, com.tools20022.repository.codeset.ChargeType13Code.SpeciallyAgreedFrontEndLoad);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BackEndLoad.getCodeName().get(), BackEndLoad);
+		codesByName.put(FrontEndLoad.getCodeName().get(), FrontEndLoad);
+		codesByName.put(Switch.getCodeName().get(), Switch);
+		codesByName.put(DilutionLevy.getCodeName().get(), DilutionLevy);
+		codesByName.put(Discount.getCodeName().get(), Discount);
+		codesByName.put(Penalty.getCodeName().get(), Penalty);
+		codesByName.put(PostageCharge.getCodeName().get(), PostageCharge);
+		codesByName.put(RegulatoryFee.getCodeName().get(), RegulatoryFee);
+		codesByName.put(ShippingCharge.getCodeName().get(), ShippingCharge);
+		codesByName.put(ServiceProvisionFee.getCodeName().get(), ServiceProvisionFee);
+		codesByName.put(ContingencyDeferredSalesCharge.getCodeName().get(), ContingencyDeferredSalesCharge);
+		codesByName.put(CorrespondentBankCharge.getCodeName().get(), CorrespondentBankCharge);
+		codesByName.put(Premium.getCodeName().get(), Premium);
+		codesByName.put(Initial.getCodeName().get(), Initial);
+		codesByName.put(BrokerageFee.getCodeName().get(), BrokerageFee);
+		codesByName.put(UCITSCommission.getCodeName().get(), UCITSCommission);
+		codesByName.put(SpeciallyAgreedFrontEndLoad.getCodeName().get(), SpeciallyAgreedFrontEndLoad);
+	}
+
+	public static ChargeType13Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ChargeType13Code[] values() {
+		ChargeType13Code[] values = new ChargeType13Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ChargeType13Code> {
+		@Override
+		public ChargeType13Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ChargeType13Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

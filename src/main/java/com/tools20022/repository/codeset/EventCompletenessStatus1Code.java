@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.EventCompletenessStatusCode;
+import com.tools20022.repository.codeset.EventCompletenessStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates whether the details provided about an event are complete or
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.EventCompletenessStatusCode
- * EventCompletenessStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventCompletenessStatus1Code#mmComplete
- * EventCompletenessStatus1Code.mmComplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventCompletenessStatus1Code#Complete
+ * EventCompletenessStatus1Code.Complete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventCompletenessStatus1Code#mmIncomplete
- * EventCompletenessStatus1Code.mmIncomplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventCompletenessStatus1Code#Incomplete
+ * EventCompletenessStatus1Code.Incomplete}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.EventCompletenessStatusCode
+ * EventCompletenessStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class EventCompletenessStatus1Code extends EventCompletenessStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EventCompletenessStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class EventCompletenessStatus1Code extends EventCompletenessStatusCode {
 	 * name} = "Complete"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmComplete = new MMCode() {
+	public static final EventCompletenessStatus1Code Complete = new EventCompletenessStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
-			owner_lazy = () -> EventCompletenessStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventCompletenessStatus1Code.mmObject();
+			codeName = EventCompletenessStatusCode.Complete.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,57 @@ public class EventCompletenessStatus1Code extends EventCompletenessStatusCode {
 	 * name} = "Incomplete"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncomplete = new MMCode() {
+	public static final EventCompletenessStatus1Code Incomplete = new EventCompletenessStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incomplete";
-			owner_lazy = () -> EventCompletenessStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventCompletenessStatus1Code.mmObject();
+			codeName = EventCompletenessStatusCode.Incomplete.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, EventCompletenessStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EventCompletenessStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventCompletenessStatus1Code";
 				definition = "Indicates whether the details provided about an event are complete or incomplete.";
-				code_lazy = () -> Arrays.asList(EventCompletenessStatus1Code.mmComplete, EventCompletenessStatus1Code.mmIncomplete);
 				trace_lazy = () -> EventCompletenessStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventCompletenessStatus1Code.Complete, com.tools20022.repository.codeset.EventCompletenessStatus1Code.Incomplete);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Complete.getCodeName().get(), Complete);
+		codesByName.put(Incomplete.getCodeName().get(), Incomplete);
+	}
+
+	public static EventCompletenessStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EventCompletenessStatus1Code[] values() {
+		EventCompletenessStatus1Code[] values = new EventCompletenessStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EventCompletenessStatus1Code> {
+		@Override
+		public EventCompletenessStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EventCompletenessStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

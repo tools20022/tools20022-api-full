@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -34,6 +35,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule#forCashOption5
+ * ConstraintCoexistenceAmountRule.forCashOption5}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -89,15 +100,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashOption5", propOrder = {"creditDebitIndicator", "account", "postingDate", "originalPostingDate", "valueDate", "postingAmount"})
 public class CashOption5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CdtDbtInd", required = true)
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Indicates whether the value is a debit or credit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,6 +129,9 @@ public class CashOption5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CdtDbtInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22H::CRDB</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -130,9 +145,10 @@ public class CashOption5 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmCreditDebitIndicator;
-			componentContext_lazy = () -> CashOption5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption5.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22H::CRDB"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the value is a debit or credit.";
@@ -141,10 +157,11 @@ public class CashOption5 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Acct")
 	protected Account8Choice account;
 	/**
-	 * Choice between a cash account, a charges account or a tax account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,6 +181,9 @@ public class CashOption5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Acct"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :97a:CASH</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -178,9 +198,10 @@ public class CashOption5 {
 	public static final MMMessageAttribute mmAccount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionElection.mmCashAccount;
-			componentContext_lazy = () -> CashOption5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption5.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":97a:CASH"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Choice between a cash account, a charges account or a tax account.";
@@ -189,10 +210,11 @@ public class CashOption5 {
 			complexType_lazy = () -> Account8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PstngDt", required = true)
 	protected DateAndDateTimeChoice postingDate;
 	/**
-	 * Date/Time of the posting (credit or debit) to the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -212,6 +234,9 @@ public class CashOption5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PstngDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::POST</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -226,9 +251,10 @@ public class CashOption5 {
 	public static final MMMessageAttribute mmPostingDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingDateTime;
-			componentContext_lazy = () -> CashOption5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption5.mmObject();
 			isDerived = false;
 			xmlTag = "PstngDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::POST"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDate";
 			definition = "Date/Time of the posting (credit or debit) to the account.";
@@ -237,11 +263,11 @@ public class CashOption5 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlPstngDt")
 	protected DateAndDateTimeChoice originalPostingDate;
 	/**
-	 * Date/Time of the posting (credit or debit) to the account that was
-	 * initially communicated in the confirmation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -276,7 +302,7 @@ public class CashOption5 {
 	public static final MMMessageAttribute mmOriginalPostingDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingDateTime;
-			componentContext_lazy = () -> CashOption5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption5.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPstngDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -287,12 +313,11 @@ public class CashOption5 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "ValDt")
 	protected DateAndDateTimeChoice valueDate;
 	/**
-	 * Date/time at which assets become available to the account owner (in a
-	 * credit entry), or cease to be available to the account owner (in a debit
-	 * entry).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -312,6 +337,9 @@ public class CashOption5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ValDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::VALU</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -327,9 +355,10 @@ public class CashOption5 {
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmValueDate;
-			componentContext_lazy = () -> CashOption5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption5.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::VALU"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date/time at which assets become available to the account owner (in a credit entry), or cease to be available to the account owner (in a debit entry).";
@@ -338,10 +367,11 @@ public class CashOption5 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "PstngAmt", required = true)
 	protected ActiveCurrencyAndAmount postingAmount;
 	/**
-	 * Amount of money that is to be/was posted to the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -361,6 +391,9 @@ public class CashOption5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PstngAmt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19B::PSTA</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -374,9 +407,10 @@ public class CashOption5 {
 	public static final MMMessageAttribute mmPostingAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingAmount;
-			componentContext_lazy = () -> CashOption5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption5.mmObject();
 			isDerived = false;
 			xmlTag = "PstngAmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19B::PSTA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingAmount";
 			definition = "Amount of money that is to be/was posted to the account.";
@@ -389,9 +423,11 @@ public class CashOption5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashOption5.mmCreditDebitIndicator, CashOption5.mmAccount, CashOption5.mmPostingDate, CashOption5.mmOriginalPostingDate, CashOption5.mmValueDate, CashOption5.mmPostingAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption5.mmCreditDebitIndicator, com.tools20022.repository.msg.CashOption5.mmAccount, com.tools20022.repository.msg.CashOption5.mmPostingDate,
+						com.tools20022.repository.msg.CashOption5.mmOriginalPostingDate, com.tools20022.repository.msg.CashOption5.mmValueDate, com.tools20022.repository.msg.CashOption5.mmPostingAmount);
 				trace_lazy = () -> CashProceedsDefinition.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCashOption5);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -408,57 +444,57 @@ public class CashOption5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
-		this.creditDebitIndicator = creditDebitIndicator;
+	public CashOption5 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = Objects.requireNonNull(creditDebitIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "Acct")
-	public Account8Choice getAccount() {
-		return account;
+	public Optional<Account8Choice> getAccount() {
+		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public void setAccount(Account8Choice account) {
+	public CashOption5 setAccount(Account8Choice account) {
 		this.account = account;
+		return this;
 	}
 
-	@XmlElement(name = "PstngDt", required = true)
 	public DateAndDateTimeChoice getPostingDate() {
 		return postingDate;
 	}
 
-	public void setPostingDate(DateAndDateTimeChoice postingDate) {
-		this.postingDate = postingDate;
+	public CashOption5 setPostingDate(DateAndDateTimeChoice postingDate) {
+		this.postingDate = Objects.requireNonNull(postingDate);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlPstngDt")
-	public DateAndDateTimeChoice getOriginalPostingDate() {
-		return originalPostingDate;
+	public Optional<DateAndDateTimeChoice> getOriginalPostingDate() {
+		return originalPostingDate == null ? Optional.empty() : Optional.of(originalPostingDate);
 	}
 
-	public void setOriginalPostingDate(DateAndDateTimeChoice originalPostingDate) {
+	public CashOption5 setOriginalPostingDate(DateAndDateTimeChoice originalPostingDate) {
 		this.originalPostingDate = originalPostingDate;
+		return this;
 	}
 
-	@XmlElement(name = "ValDt")
-	public DateAndDateTimeChoice getValueDate() {
-		return valueDate;
+	public Optional<DateAndDateTimeChoice> getValueDate() {
+		return valueDate == null ? Optional.empty() : Optional.of(valueDate);
 	}
 
-	public void setValueDate(DateAndDateTimeChoice valueDate) {
+	public CashOption5 setValueDate(DateAndDateTimeChoice valueDate) {
 		this.valueDate = valueDate;
+		return this;
 	}
 
-	@XmlElement(name = "PstngAmt", required = true)
 	public ActiveCurrencyAndAmount getPostingAmount() {
 		return postingAmount;
 	}
 
-	public void setPostingAmount(ActiveCurrencyAndAmount postingAmount) {
-		this.postingAmount = postingAmount;
+	public CashOption5 setPostingAmount(ActiveCurrencyAndAmount postingAmount) {
+		this.postingAmount = Objects.requireNonNull(postingAmount);
+		return this;
 	}
 }

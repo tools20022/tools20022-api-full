@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SettlementTypeCode;
+import com.tools20022.repository.codeset.SettlementType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates how an option trade is settled.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SettlementTypeCode
- * SettlementTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementType1Code#mmPrincipal
- * SettlementType1Code.mmPrincipal}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementType1Code#Principal
+ * SettlementType1Code.Principal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementType1Code#mmNettedOff
- * SettlementType1Code.mmNettedOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementType1Code#NettedOff
+ * SettlementType1Code.NettedOff}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SettlementTypeCode
+ * SettlementTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates how an option trade is settled."</li>
  * </ul>
  */
-public class SettlementType1Code extends SettlementTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SettlementType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class SettlementType1Code extends SettlementTypeCode {
 	 * name} = "Principal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrincipal = new MMCode() {
+	public static final SettlementType1Code Principal = new SettlementType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Principal";
-			owner_lazy = () -> SettlementType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementType1Code.mmObject();
+			codeName = SettlementTypeCode.Principal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class SettlementType1Code extends SettlementTypeCode {
 	 * name} = "NettedOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNettedOff = new MMCode() {
+	public static final SettlementType1Code NettedOff = new SettlementType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettedOff";
-			owner_lazy = () -> SettlementType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementType1Code.mmObject();
+			codeName = SettlementTypeCode.NettedOff.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SettlementType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SettlementType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PRIN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementType1Code";
 				definition = "Indicates how an option trade is settled.";
-				code_lazy = () -> Arrays.asList(SettlementType1Code.mmPrincipal, SettlementType1Code.mmNettedOff);
 				trace_lazy = () -> SettlementTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementType1Code.Principal, com.tools20022.repository.codeset.SettlementType1Code.NettedOff);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Principal.getCodeName().get(), Principal);
+		codesByName.put(NettedOff.getCodeName().get(), NettedOff);
+	}
+
+	public static SettlementType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SettlementType1Code[] values() {
+		SettlementType1Code[] values = new SettlementType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SettlementType1Code> {
+		@Override
+		public SettlementType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SettlementType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,44 +20,45 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CSCResultCode;
+import com.tools20022.repository.codeset.CSCResult1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Result of the printed CSC (Card Security Code) validation.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CSCResultCode CSCResultCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CSCResult1Code#mmCSCMatch
- * CSCResult1Code.mmCSCMatch}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CSCResult1Code#CSCMatch
+ * CSCResult1Code.CSCMatch}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CSCResult1Code#CSCNoMatch
+ * CSCResult1Code.CSCNoMatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CSCResult1Code#mmCSCNoMatch
- * CSCResult1Code.mmCSCNoMatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.CSCResult1Code#CSCTechnical
+ * CSCResult1Code.CSCTechnical}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CSCResult1Code#mmCSCTechnical
- * CSCResult1Code.mmCSCTechnical}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CSCResult1Code#mmCSCNotTechnical
- * CSCResult1Code.mmCSCNotTechnical}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CSCResult1Code#mmCSCMissing
- * CSCResult1Code.mmCSCMissing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CSCResult1Code#mmCSCNotUsed
- * CSCResult1Code.mmCSCNotUsed}</li>
+ * {@linkplain com.tools20022.repository.codeset.CSCResult1Code#CSCNotTechnical
+ * CSCResult1Code.CSCNotTechnical}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CSCResult1Code#CSCMissing
+ * CSCResult1Code.CSCMissing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CSCResult1Code#CSCNotUsed
+ * CSCResult1Code.CSCNotUsed}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CSCResultCode CSCResultCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Result of the printed CSC (Card Security Code) validation."</li>
  * </ul>
  */
-public class CSCResult1Code extends CSCResultCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CSCResult1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,11 +95,12 @@ public class CSCResult1Code extends CSCResultCode {
 	 * name} = "CSCMatch"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCSCMatch = new MMCode() {
+	public static final CSCResult1Code CSCMatch = new CSCResult1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCMatch";
-			owner_lazy = () -> CSCResult1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CSCResult1Code.mmObject();
+			codeName = CSCResultCode.CSCMatch.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -116,11 +119,12 @@ public class CSCResult1Code extends CSCResultCode {
 	 * name} = "CSCNoMatch"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCSCNoMatch = new MMCode() {
+	public static final CSCResult1Code CSCNoMatch = new CSCResult1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCNoMatch";
-			owner_lazy = () -> CSCResult1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CSCResult1Code.mmObject();
+			codeName = CSCResultCode.CSCNoMatch.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -139,11 +143,12 @@ public class CSCResult1Code extends CSCResultCode {
 	 * name} = "CSCTechnical"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCSCTechnical = new MMCode() {
+	public static final CSCResult1Code CSCTechnical = new CSCResult1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCTechnical";
-			owner_lazy = () -> CSCResult1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CSCResult1Code.mmObject();
+			codeName = CSCResultCode.CSCTechnical.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -162,11 +167,12 @@ public class CSCResult1Code extends CSCResultCode {
 	 * name} = "CSCNotTechnical"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCSCNotTechnical = new MMCode() {
+	public static final CSCResult1Code CSCNotTechnical = new CSCResult1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCNotTechnical";
-			owner_lazy = () -> CSCResult1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CSCResult1Code.mmObject();
+			codeName = CSCResultCode.CSCNotTechnical.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -185,11 +191,12 @@ public class CSCResult1Code extends CSCResultCode {
 	 * name} = "CSCMissing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCSCMissing = new MMCode() {
+	public static final CSCResult1Code CSCMissing = new CSCResult1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCMissing";
-			owner_lazy = () -> CSCResult1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CSCResult1Code.mmObject();
+			codeName = CSCResultCode.CSCMissing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -208,26 +215,62 @@ public class CSCResult1Code extends CSCResultCode {
 	 * name} = "CSCNotUsed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCSCNotUsed = new MMCode() {
+	public static final CSCResult1Code CSCNotUsed = new CSCResult1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCNotUsed";
-			owner_lazy = () -> CSCResult1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CSCResult1Code.mmObject();
+			codeName = CSCResultCode.CSCNotUsed.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CSCResult1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CSCResult1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CMCH");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CSCResult1Code";
 				definition = "Result of the printed CSC (Card Security Code) validation.";
-				code_lazy = () -> Arrays.asList(CSCResult1Code.mmCSCMatch, CSCResult1Code.mmCSCNoMatch, CSCResult1Code.mmCSCTechnical, CSCResult1Code.mmCSCNotTechnical, CSCResult1Code.mmCSCMissing, CSCResult1Code.mmCSCNotUsed);
 				trace_lazy = () -> CSCResultCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CSCResult1Code.CSCMatch, com.tools20022.repository.codeset.CSCResult1Code.CSCNoMatch, com.tools20022.repository.codeset.CSCResult1Code.CSCTechnical,
+						com.tools20022.repository.codeset.CSCResult1Code.CSCNotTechnical, com.tools20022.repository.codeset.CSCResult1Code.CSCMissing, com.tools20022.repository.codeset.CSCResult1Code.CSCNotUsed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CSCMatch.getCodeName().get(), CSCMatch);
+		codesByName.put(CSCNoMatch.getCodeName().get(), CSCNoMatch);
+		codesByName.put(CSCTechnical.getCodeName().get(), CSCTechnical);
+		codesByName.put(CSCNotTechnical.getCodeName().get(), CSCNotTechnical);
+		codesByName.put(CSCMissing.getCodeName().get(), CSCMissing);
+		codesByName.put(CSCNotUsed.getCodeName().get(), CSCNotUsed);
+	}
+
+	public static CSCResult1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CSCResult1Code[] values() {
+		CSCResult1Code[] values = new CSCResult1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CSCResult1Code> {
+		@Override
+		public CSCResult1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CSCResult1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

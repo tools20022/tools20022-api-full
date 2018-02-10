@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,17 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Information needed to process a currency exchange or conversion."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CurrencyExchange4", propOrder = {"exchangeRate", "resultingAmount", "sourceAndTargetCurrency"})
 public class CurrencyExchange4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "XchgRate", required = true)
 	protected BaseOneRate exchangeRate;
 	/**
-	 * The value of one currency expressed in relation to another currency.
-	 * ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency
-	 * (ExchangeRate = UnitCurrency/QuotedCurrency).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +116,7 @@ public class CurrencyExchange4 {
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
-			componentContext_lazy = () -> CurrencyExchange4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchange4.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +127,11 @@ public class CurrencyExchange4 {
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	@XmlElement(name = "RsltgAmt", required = true)
 	protected ActiveCurrencyAndAmount resultingAmount;
 	/**
-	 * Amount of money resulting from a foreign exchange conversion.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +166,7 @@ public class CurrencyExchange4 {
 	public static final MMMessageAttribute mmResultingAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmResultingAmount;
-			componentContext_lazy = () -> CurrencyExchange4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchange4.mmObject();
 			isDerived = false;
 			xmlTag = "RsltgAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,10 +177,11 @@ public class CurrencyExchange4 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SrcAndTrgtCcy", required = true)
 	protected CurrencyReferenceDetails sourceAndTargetCurrency;
 	/**
-	 * Information needed to process a currency exchange or conversion.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -213,7 +215,7 @@ public class CurrencyExchange4 {
 	public static final MMMessageAssociationEnd mmSourceAndTargetCurrency = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmSourceCurrency;
-			componentContext_lazy = () -> CurrencyExchange4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchange4.mmObject();
 			isDerived = false;
 			xmlTag = "SrcAndTrgtCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,9 +231,10 @@ public class CurrencyExchange4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CurrencyExchange4.mmExchangeRate, CurrencyExchange4.mmResultingAmount, CurrencyExchange4.mmSourceAndTargetCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyExchange4.mmExchangeRate, com.tools20022.repository.msg.CurrencyExchange4.mmResultingAmount,
+						com.tools20022.repository.msg.CurrencyExchange4.mmSourceAndTargetCurrency);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CurrencyExchange4";
 				definition = "Information needed to process a currency exchange or conversion.";
@@ -240,30 +243,30 @@ public class CurrencyExchange4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "XchgRate", required = true)
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
 
-	public void setExchangeRate(BaseOneRate exchangeRate) {
-		this.exchangeRate = exchangeRate;
+	public CurrencyExchange4 setExchangeRate(BaseOneRate exchangeRate) {
+		this.exchangeRate = Objects.requireNonNull(exchangeRate);
+		return this;
 	}
 
-	@XmlElement(name = "RsltgAmt", required = true)
 	public ActiveCurrencyAndAmount getResultingAmount() {
 		return resultingAmount;
 	}
 
-	public void setResultingAmount(ActiveCurrencyAndAmount resultingAmount) {
-		this.resultingAmount = resultingAmount;
+	public CurrencyExchange4 setResultingAmount(ActiveCurrencyAndAmount resultingAmount) {
+		this.resultingAmount = Objects.requireNonNull(resultingAmount);
+		return this;
 	}
 
-	@XmlElement(name = "SrcAndTrgtCcy", required = true)
 	public CurrencyReferenceDetails getSourceAndTargetCurrency() {
 		return sourceAndTargetCurrency;
 	}
 
-	public void setSourceAndTargetCurrency(com.tools20022.repository.msg.CurrencyReferenceDetails sourceAndTargetCurrency) {
-		this.sourceAndTargetCurrency = sourceAndTargetCurrency;
+	public CurrencyExchange4 setSourceAndTargetCurrency(com.tools20022.repository.msg.CurrencyReferenceDetails sourceAndTargetCurrency) {
+		this.sourceAndTargetCurrency = Objects.requireNonNull(sourceAndTargetCurrency);
+		return this;
 	}
 }

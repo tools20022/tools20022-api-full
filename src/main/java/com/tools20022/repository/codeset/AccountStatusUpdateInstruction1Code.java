@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AccountStatusUpdateInstructionCode;
+import com.tools20022.repository.codeset.AccountStatusUpdateInstruction1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of account status update instructed.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateInstructionCode
- * AccountStatusUpdateInstructionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateInstruction1Code#mmClose
- * AccountStatusUpdateInstruction1Code.mmClose}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateInstruction1Code#Close
+ * AccountStatusUpdateInstruction1Code.Close}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateInstruction1Code#mmReactive
- * AccountStatusUpdateInstruction1Code.mmReactive}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateInstruction1Code#Reactive
+ * AccountStatusUpdateInstruction1Code.Reactive}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateInstructionCode
+ * AccountStatusUpdateInstructionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of account status update instructed."</li>
  * </ul>
  */
-public class AccountStatusUpdateInstruction1Code extends AccountStatusUpdateInstructionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AccountStatusUpdateInstruction1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class AccountStatusUpdateInstruction1Code extends AccountStatusUpdateInst
 	 * name} = "Close"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClose = new MMCode() {
+	public static final AccountStatusUpdateInstruction1Code Close = new AccountStatusUpdateInstruction1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Close";
-			owner_lazy = () -> AccountStatusUpdateInstruction1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountStatusUpdateInstruction1Code.mmObject();
+			codeName = AccountStatusUpdateInstructionCode.Close.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class AccountStatusUpdateInstruction1Code extends AccountStatusUpdateInst
 	 * name} = "Reactive"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReactive = new MMCode() {
+	public static final AccountStatusUpdateInstruction1Code Reactive = new AccountStatusUpdateInstruction1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reactive";
-			owner_lazy = () -> AccountStatusUpdateInstruction1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountStatusUpdateInstruction1Code.mmObject();
+			codeName = AccountStatusUpdateInstructionCode.Reactive.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AccountStatusUpdateInstruction1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AccountStatusUpdateInstruction1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountStatusUpdateInstruction1Code";
 				definition = "Specifies the type of account status update instructed.";
-				code_lazy = () -> Arrays.asList(AccountStatusUpdateInstruction1Code.mmClose, AccountStatusUpdateInstruction1Code.mmReactive);
 				trace_lazy = () -> AccountStatusUpdateInstructionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountStatusUpdateInstruction1Code.Close, com.tools20022.repository.codeset.AccountStatusUpdateInstruction1Code.Reactive);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Close.getCodeName().get(), Close);
+		codesByName.put(Reactive.getCodeName().get(), Reactive);
+	}
+
+	public static AccountStatusUpdateInstruction1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AccountStatusUpdateInstruction1Code[] values() {
+		AccountStatusUpdateInstruction1Code[] values = new AccountStatusUpdateInstruction1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AccountStatusUpdateInstruction1Code> {
+		@Override
+		public AccountStatusUpdateInstruction1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AccountStatusUpdateInstruction1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

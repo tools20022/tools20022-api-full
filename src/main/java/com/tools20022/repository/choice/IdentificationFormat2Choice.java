@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
@@ -27,6 +28,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification23;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IdentificationFormat2Choice", propOrder = {"shortIdentification", "longIdentification", "proprietaryIdentification"})
 public class IdentificationFormat2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ShrtId", required = true)
 	protected Exact3UpperCaseAlphaNumericText shortIdentification;
 	/**
-	 * Format expressed as a short identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -93,6 +96,9 @@ public class IdentificationFormat2Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ShrtId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13A:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -105,9 +111,10 @@ public class IdentificationFormat2Choice {
 	 */
 	public static final MMMessageAttribute mmShortIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IdentificationFormat2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13A:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortIdentification";
 			definition = "Format expressed as a short identification.";
@@ -116,10 +123,11 @@ public class IdentificationFormat2Choice {
 			simpleType_lazy = () -> Exact3UpperCaseAlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "LngId", required = true)
 	protected RestrictedFINXMax30Text longIdentification;
 	/**
-	 * Format expressed as a long identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,6 +143,9 @@ public class IdentificationFormat2Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LngId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13B::COUP//30x</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -147,9 +158,10 @@ public class IdentificationFormat2Choice {
 	 */
 	public static final MMMessageAttribute mmLongIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IdentificationFormat2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LngId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13B::COUP//30x"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongIdentification";
 			definition = "Format expressed as a long identification.";
@@ -158,10 +170,11 @@ public class IdentificationFormat2Choice {
 			simpleType_lazy = () -> RestrictedFINXMax30Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryId", required = true)
 	protected GenericIdentification23 proprietaryIdentification;
 	/**
-	 * Format expressed as a proprietary identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -188,7 +201,7 @@ public class IdentificationFormat2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IdentificationFormat2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,8 +217,9 @@ public class IdentificationFormat2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IdentificationFormat2Choice.mmShortIdentification, IdentificationFormat2Choice.mmLongIdentification, IdentificationFormat2Choice.mmProprietaryIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationFormat2Choice.mmShortIdentification, com.tools20022.repository.choice.IdentificationFormat2Choice.mmLongIdentification,
+						com.tools20022.repository.choice.IdentificationFormat2Choice.mmProprietaryIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IdentificationFormat2Choice";
 				definition = "Choice between either a short, long or a proprietary identification format.";
@@ -214,30 +228,30 @@ public class IdentificationFormat2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ShrtId", required = true)
 	public Exact3UpperCaseAlphaNumericText getShortIdentification() {
 		return shortIdentification;
 	}
 
-	public void setShortIdentification(Exact3UpperCaseAlphaNumericText shortIdentification) {
-		this.shortIdentification = shortIdentification;
+	public IdentificationFormat2Choice setShortIdentification(Exact3UpperCaseAlphaNumericText shortIdentification) {
+		this.shortIdentification = Objects.requireNonNull(shortIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "LngId", required = true)
 	public RestrictedFINXMax30Text getLongIdentification() {
 		return longIdentification;
 	}
 
-	public void setLongIdentification(RestrictedFINXMax30Text longIdentification) {
-		this.longIdentification = longIdentification;
+	public IdentificationFormat2Choice setLongIdentification(RestrictedFINXMax30Text longIdentification) {
+		this.longIdentification = Objects.requireNonNull(longIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryId", required = true)
 	public GenericIdentification23 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}
 
-	public void setProprietaryIdentification(GenericIdentification23 proprietaryIdentification) {
-		this.proprietaryIdentification = proprietaryIdentification;
+	public IdentificationFormat2Choice setProprietaryIdentification(GenericIdentification23 proprietaryIdentification) {
+		this.proprietaryIdentification = Objects.requireNonNull(proprietaryIdentification);
+		return this;
 	}
 }

@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,16 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identifies an instruction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InstructionIdentification2", propOrder = {"instructionIdentification", "creationDateTime"})
 public class InstructionIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InstrId", required = true)
 	protected Max35Text instructionIdentification;
 	/**
-	 * Point to point reference, as assigned by the sender, to unambiguously
-	 * identify an instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +102,7 @@ public class InstructionIdentification2 {
 	 */
 	public static final MMMessageAttribute mmInstructionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InstructionIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "InstrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +113,11 @@ public class InstructionIdentification2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm")
 	protected ISODateTime creationDateTime;
 	/**
-	 * Date and time at which the instruction was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,7 +144,7 @@ public class InstructionIdentification2 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InstructionIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,8 +159,8 @@ public class InstructionIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InstructionIdentification2.mmInstructionIdentification, InstructionIdentification2.mmCreationDateTime);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionIdentification2.mmInstructionIdentification, com.tools20022.repository.msg.InstructionIdentification2.mmCreationDateTime);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InstructionIdentification2";
 				definition = "Identifies an instruction.";
@@ -166,21 +169,21 @@ public class InstructionIdentification2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InstrId", required = true)
 	public Max35Text getInstructionIdentification() {
 		return instructionIdentification;
 	}
 
-	public void setInstructionIdentification(Max35Text instructionIdentification) {
-		this.instructionIdentification = instructionIdentification;
+	public InstructionIdentification2 setInstructionIdentification(Max35Text instructionIdentification) {
+		this.instructionIdentification = Objects.requireNonNull(instructionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm")
-	public ISODateTime getCreationDateTime() {
-		return creationDateTime;
+	public Optional<ISODateTime> getCreationDateTime() {
+		return creationDateTime == null ? Optional.empty() : Optional.of(creationDateTime);
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
+	public InstructionIdentification2 setCreationDateTime(ISODateTime creationDateTime) {
 		this.creationDateTime = creationDateTime;
+		return this;
 	}
 }

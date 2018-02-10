@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.PresentationPartyCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the party to receive the presentation.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PresentationPartyCode#mmExclusiveConfirmer
- * PresentationPartyCode.mmExclusiveConfirmer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PresentationPartyCode#ExclusiveConfirmer
+ * PresentationPartyCode.ExclusiveConfirmer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PresentationPartyCode#mmExclusiveIssuer
- * PresentationPartyCode.mmExclusiveIssuer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PresentationPartyCode#ExclusiveIssuer
+ * PresentationPartyCode.ExclusiveIssuer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PresentationPartyCode#mmIssuerOrOtherNominatatedParty
- * PresentationPartyCode.mmIssuerOrOtherNominatatedParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.PresentationPartyCode#IssuerOrOtherNominatatedParty
+ * PresentationPartyCode.IssuerOrOtherNominatatedParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the party to receive the presentation."</li>
  * </ul>
  */
-public class PresentationPartyCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PresentationPartyCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -94,12 +100,12 @@ public class PresentationPartyCode {
 	 * definition} = "Presentation made exclusively to the confirmer."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExclusiveConfirmer = new MMCode() {
+	public static final PresentationPartyCode ExclusiveConfirmer = new PresentationPartyCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExclusiveConfirmer";
 			definition = "Presentation made exclusively to the confirmer.";
-			owner_lazy = () -> PresentationPartyCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PresentationPartyCode.mmObject();
 			codeName = "EXCN";
 		}
 	};
@@ -124,12 +130,12 @@ public class PresentationPartyCode {
 	 * definition} = "Presentation made exclusively to the issuer."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExclusiveIssuer = new MMCode() {
+	public static final PresentationPartyCode ExclusiveIssuer = new PresentationPartyCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExclusiveIssuer";
 			definition = "Presentation made exclusively to the issuer.";
-			owner_lazy = () -> PresentationPartyCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PresentationPartyCode.mmObject();
 			codeName = "EXIS";
 		}
 	};
@@ -155,28 +161,60 @@ public class PresentationPartyCode {
 	 * "Presentation made either to the issuer or other nominated party. "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuerOrOtherNominatatedParty = new MMCode() {
+	public static final PresentationPartyCode IssuerOrOtherNominatatedParty = new PresentationPartyCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerOrOtherNominatatedParty";
 			definition = "Presentation made either to the issuer or other nominated party. ";
-			owner_lazy = () -> PresentationPartyCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PresentationPartyCode.mmObject();
 			codeName = "ETHR";
 		}
 	};
+	final static private LinkedHashMap<String, PresentationPartyCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PresentationPartyCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("EXCN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PresentationPartyCode";
 				definition = "Specifies the party to receive the presentation.";
-				code_lazy = () -> Arrays.asList(PresentationPartyCode.mmExclusiveConfirmer, PresentationPartyCode.mmExclusiveIssuer, PresentationPartyCode.mmIssuerOrOtherNominatatedParty);
 				derivation_lazy = () -> Arrays.asList(PresentationParty1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PresentationPartyCode.ExclusiveConfirmer, com.tools20022.repository.codeset.PresentationPartyCode.ExclusiveIssuer,
+						com.tools20022.repository.codeset.PresentationPartyCode.IssuerOrOtherNominatatedParty);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ExclusiveConfirmer.getCodeName().get(), ExclusiveConfirmer);
+		codesByName.put(ExclusiveIssuer.getCodeName().get(), ExclusiveIssuer);
+		codesByName.put(IssuerOrOtherNominatatedParty.getCodeName().get(), IssuerOrOtherNominatatedParty);
+	}
+
+	public static PresentationPartyCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PresentationPartyCode[] values() {
+		PresentationPartyCode[] values = new PresentationPartyCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PresentationPartyCode> {
+		@Override
+		public PresentationPartyCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PresentationPartyCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

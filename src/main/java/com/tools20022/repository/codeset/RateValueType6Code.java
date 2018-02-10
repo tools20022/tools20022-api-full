@@ -20,32 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RateTypeCode;
+import com.tools20022.repository.codeset.RateValueType6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the value of a rate.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RateTypeCode RateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RateValueType6Code#mmUnknown
- * RateValueType6Code.mmUnknown}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateValueType6Code#mmOpen
- * RateValueType6Code.mmOpen}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateValueType6Code#Unknown
+ * RateValueType6Code.Unknown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateValueType6Code#Open
+ * RateValueType6Code.Open}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RateTypeCode RateTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -62,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the value of a rate."</li>
  * </ul>
  */
-public class RateValueType6Code extends RateTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RateValueType6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -81,11 +85,12 @@ public class RateValueType6Code extends RateTypeCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknown = new MMCode() {
+	public static final RateValueType6Code Unknown = new RateValueType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
-			owner_lazy = () -> RateValueType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateValueType6Code.mmObject();
+			codeName = RateTypeCode.Unknown.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -104,26 +109,57 @@ public class RateValueType6Code extends RateTypeCode {
 	 * name} = "Open"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOpen = new MMCode() {
+	public static final RateValueType6Code Open = new RateValueType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Open";
-			owner_lazy = () -> RateValueType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateValueType6Code.mmObject();
+			codeName = RateTypeCode.Open.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RateValueType6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RateValueType6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("UKWN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateValueType6Code";
 				definition = "Specifies the value of a rate.";
-				code_lazy = () -> Arrays.asList(RateValueType6Code.mmUnknown, RateValueType6Code.mmOpen);
 				trace_lazy = () -> RateTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateValueType6Code.Unknown, com.tools20022.repository.codeset.RateValueType6Code.Open);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Unknown.getCodeName().get(), Unknown);
+		codesByName.put(Open.getCodeName().get(), Open);
+	}
+
+	public static RateValueType6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RateValueType6Code[] values() {
+		RateValueType6Code[] values = new RateValueType6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RateValueType6Code> {
+		@Override
+		public RateValueType6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RateValueType6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.StandingOrderCriteria1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StandingOrderCriteria1Choice", propOrder = {"queryName", "newCriteria"})
 public class StandingOrderCriteria1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QryNm", required = true)
 	protected Max35Text queryName;
 	/**
-	 * Recalls the criteria (search and return criteria) defined in a preceding
-	 * query.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +105,7 @@ public class StandingOrderCriteria1Choice {
 	 */
 	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderCriteria1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.StandingOrderCriteria1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QryNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +116,11 @@ public class StandingOrderCriteria1Choice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NewCrit", required = true)
 	protected StandingOrderCriteria1 newCriteria;
 	/**
-	 * Explicitly defines the query criteria.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -144,7 +146,7 @@ public class StandingOrderCriteria1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StandingOrderCriteria1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.StandingOrderCriteria1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NewCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,8 +162,8 @@ public class StandingOrderCriteria1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StandingOrderCriteria1Choice.mmQueryName, StandingOrderCriteria1Choice.mmNewCriteria);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderCriteria1Choice.mmQueryName, com.tools20022.repository.choice.StandingOrderCriteria1Choice.mmNewCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderCriteria1Choice";
 				definition = "Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria.";
@@ -170,21 +172,21 @@ public class StandingOrderCriteria1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QryNm", required = true)
 	public Max35Text getQueryName() {
 		return queryName;
 	}
 
-	public void setQueryName(Max35Text queryName) {
-		this.queryName = queryName;
+	public StandingOrderCriteria1Choice setQueryName(Max35Text queryName) {
+		this.queryName = Objects.requireNonNull(queryName);
+		return this;
 	}
 
-	@XmlElement(name = "NewCrit", required = true)
 	public StandingOrderCriteria1 getNewCriteria() {
 		return newCriteria;
 	}
 
-	public void setNewCriteria(StandingOrderCriteria1 newCriteria) {
-		this.newCriteria = newCriteria;
+	public StandingOrderCriteria1Choice setNewCriteria(StandingOrderCriteria1 newCriteria) {
+		this.newCriteria = Objects.requireNonNull(newCriteria);
+		return this;
 	}
 }

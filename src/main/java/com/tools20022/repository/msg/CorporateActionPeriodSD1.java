@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CorporateActionPeriodSD1", propOrder = {"placeAndName", "DTCReorganisationDepositPeriod", "DTCChillPeriodForDepositoryDelivery"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CorporateActionPeriodSD1", propOrder = {"placeAndName", "dTCReorganisationDepositPeriod", "dTCChillPeriodForDepositoryDelivery"})
 public class CorporateActionPeriodSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +106,7 @@ public class CorporateActionPeriodSD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionPeriodSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriodSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,15 +117,11 @@ public class CorporateActionPeriodSD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCReorgDpstPrd")
 	protected Period3 dTCReorganisationDepositPeriod;
 	/**
-	 * Period during which the securities can be submitted to Reorganisation
-	 * deposit service at DTC (The Depository Trust Corporation). DTC First Day
-	 * for Reorg Deposit (start date) is the day on which security is eligible
-	 * for reorganisation deposit service at DTC. DTC Last Day for Reorg Deposit
-	 * is the last day on which securities are eligible to be submitted for
-	 * reorganisation deposit service at DTC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,6 +135,10 @@ public class CorporateActionPeriodSD1 {
 	 * CorporateActionPeriodSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCReorgDpstPrd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC First Day for Reorg Deposits,
+	 * DTCCSynonym: DTC Last Day for Reorg Deposits</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -150,9 +154,10 @@ public class CorporateActionPeriodSD1 {
 	 */
 	public static final MMMessageAttribute mmDTCReorganisationDepositPeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionPeriodSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriodSD1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCReorgDpstPrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC First Day for Reorg Deposits"), new DTCCSynonym(this, "DTC Last Day for Reorg Deposits"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCReorganisationDepositPeriod";
 			definition = "Period during which the securities can be submitted to Reorganisation deposit service at DTC (The Depository Trust Corporation). DTC First Day for Reorg Deposit (start date) is the day on which security is eligible for reorganisation deposit service at DTC. DTC Last Day for Reorg Deposit is the last day on which securities are eligible to be submitted for reorganisation deposit service at DTC.";
@@ -161,14 +166,11 @@ public class CorporateActionPeriodSD1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCChillPrdForDpstryDlvry")
 	protected Period3 dTCChillPeriodForDepositoryDelivery;
 	/**
-	 * Period during which the co-depositories deliveries are suspended at DTC
-	 * (The Depository Trust Corporation). DTC Last Day for Depository Delivery
-	 * (start date) - the last day on which depository deliveries will be
-	 * accepted. DTC Chill Release Day for Depository Delivery (end date) - day
-	 * when chill is released and depositories can resume delivery activities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -182,6 +184,10 @@ public class CorporateActionPeriodSD1 {
 	 * CorporateActionPeriodSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCChillPrdForDpstryDlvry"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Chill Release Day for Depository
+	 * Delivery, DTCCSynonym: DTC Last Day for Depository Delivery</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -197,9 +203,10 @@ public class CorporateActionPeriodSD1 {
 	 */
 	public static final MMMessageAttribute mmDTCChillPeriodForDepositoryDelivery = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionPeriodSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriodSD1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCChillPrdForDpstryDlvry";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Chill Release Day for Depository Delivery"), new DTCCSynonym(this, "DTC Last Day for Depository Delivery"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCChillPeriodForDepositoryDelivery";
 			definition = "Period during which the co-depositories deliveries are suspended at DTC (The Depository Trust Corporation). DTC Last Day for Depository Delivery (start date) - the last day on which depository deliveries will be accepted. DTC Chill Release Day  for Depository Delivery (end date) - day when chill is released and depositories can resume delivery activities.";
@@ -212,8 +219,9 @@ public class CorporateActionPeriodSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionPeriodSD1.mmPlaceAndName, CorporateActionPeriodSD1.mmDTCReorganisationDepositPeriod, CorporateActionPeriodSD1.mmDTCChillPeriodForDepositoryDelivery);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriodSD1.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionPeriodSD1.mmDTCReorganisationDepositPeriod,
+						com.tools20022.repository.msg.CorporateActionPeriodSD1.mmDTCChillPeriodForDepositoryDelivery);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionPeriodSD1";
 				definition = "Provides additional information regarding corporate action details periods details.";
@@ -222,30 +230,30 @@ public class CorporateActionPeriodSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionPeriodSD1 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "DTCReorgDpstPrd")
-	public Period3 getDTCReorganisationDepositPeriod() {
-		return dTCReorganisationDepositPeriod;
+	public Optional<Period3> getDTCReorganisationDepositPeriod() {
+		return dTCReorganisationDepositPeriod == null ? Optional.empty() : Optional.of(dTCReorganisationDepositPeriod);
 	}
 
-	public void setDTCReorganisationDepositPeriod(com.tools20022.repository.msg.Period3 dTCReorganisationDepositPeriod) {
+	public CorporateActionPeriodSD1 setDTCReorganisationDepositPeriod(com.tools20022.repository.msg.Period3 dTCReorganisationDepositPeriod) {
 		this.dTCReorganisationDepositPeriod = dTCReorganisationDepositPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "DTCChillPrdForDpstryDlvry")
-	public Period3 getDTCChillPeriodForDepositoryDelivery() {
-		return dTCChillPeriodForDepositoryDelivery;
+	public Optional<Period3> getDTCChillPeriodForDepositoryDelivery() {
+		return dTCChillPeriodForDepositoryDelivery == null ? Optional.empty() : Optional.of(dTCChillPeriodForDepositoryDelivery);
 	}
 
-	public void setDTCChillPeriodForDepositoryDelivery(com.tools20022.repository.msg.Period3 dTCChillPeriodForDepositoryDelivery) {
+	public CorporateActionPeriodSD1 setDTCChillPeriodForDepositoryDelivery(com.tools20022.repository.msg.Period3 dTCChillPeriodForDepositoryDelivery) {
 		this.dTCChillPeriodForDepositoryDelivery = dTCChillPeriodForDepositoryDelivery;
+		return this;
 	}
 }

@@ -25,9 +25,8 @@ import com.tools20022.repository.codeset.ChargeBearerType2Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -101,8 +100,25 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReversedInstructedAmountAndExchangeRate1Rule#forPaymentTransactionInformation17
+ * ConstraintReversedInstructedAmountAndExchangeRate1Rule.
+ * forPaymentTransactionInformation17}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReversedInstructedAmountAndExchangeRate2Rule#forPaymentTransactionInformation17
+ * ConstraintReversedInstructedAmountAndExchangeRate2Rule.
+ * forPaymentTransactionInformation17}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintChargesInformationAndReversedInstructedAmountRule#forPaymentTransactionInformation17
+ * ConstraintChargesInformationAndReversedInstructedAmountRule.
+ * forPaymentTransactionInformation17}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -115,18 +131,18 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentTransactionInformation17", propOrder = {"reversalIdentification", "originalPaymentInformationIdentification", "originalInstructionIdentification", "originalEndToEndIdentification",
 		"originalTransactionIdentification", "originalInterbankSettlementAmount", "reversedInterbankSettlementAmount", "interbankSettlementDate", "reversedInstructedAmount", "exchangeRate", "compensationAmount", "chargeBearer",
 		"chargesInformation", "instructingAgent", "instructedAgent", "reversalReasonInformation", "originalTransactionReference"})
 public class PaymentTransactionInformation17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RvslId")
 	protected Max35Text reversalIdentification;
 	/**
-	 * Unique identification as assigned by an instructing party for an
-	 * instructed party to unambiguously identify the reversed transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +171,7 @@ public class PaymentTransactionInformation17 {
 	 */
 	public static final MMMessageAttribute mmReversalIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentTransactionInformation17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation17.mmObject();
 			isDerived = false;
 			xmlTag = "RvslId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,11 +182,11 @@ public class PaymentTransactionInformation17 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlPmtInfId")
 	protected Max35Text originalPaymentInformationIdentification;
 	/**
-	 * Unique and unambiguous identifier of the original payment information
-	 * block as assigned by the original sending party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -205,7 +221,7 @@ public class PaymentTransactionInformation17 {
 	public static final MMMessageAttribute mmOriginalPaymentInformationIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
-			componentContext_lazy = () -> PaymentTransactionInformation17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation17.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPmtInfId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,16 +232,11 @@ public class PaymentTransactionInformation17 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlInstrId")
 	protected Max35Text originalInstructionIdentification;
 	/**
-	 * Original unique instruction identification as assigned by an instructing
-	 * party for an instructed party to unambiguously identify the original
-	 * instruction.
 	 * 
-	 * Usage: the original instruction identification is the original point to
-	 * point reference used between the instructing party and the instructed
-	 * party to refer to the original instruction.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -260,7 +271,7 @@ public class PaymentTransactionInformation17 {
 	public static final MMMessageAttribute mmOriginalInstructionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmInstructionIdentification;
-			componentContext_lazy = () -> PaymentTransactionInformation17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation17.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlInstrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -271,12 +282,11 @@ public class PaymentTransactionInformation17 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlEndToEndId")
 	protected Max35Text originalEndToEndIdentification;
 	/**
-	 * Original unique identification assigned by the initiating party to
-	 * unambiguously identify the original transaction. This identification is
-	 * passed on, unchanged, throughout the entire end-to-end chain.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -311,7 +321,7 @@ public class PaymentTransactionInformation17 {
 	public static final MMMessageAttribute mmOriginalEndToEndIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
-			componentContext_lazy = () -> PaymentTransactionInformation17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation17.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlEndToEndId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -322,12 +332,11 @@ public class PaymentTransactionInformation17 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlTxId")
 	protected Max35Text originalTransactionIdentification;
 	/**
-	 * Original identification of a transaction, as assigned by the first
-	 * instructing agent and passed on, unchanged, throughout the entire
-	 * interbank chain.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -362,7 +371,7 @@ public class PaymentTransactionInformation17 {
 	public static final MMMessageAttribute mmOriginalTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmTransactionIdentification;
-			componentContext_lazy = () -> PaymentTransactionInformation17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation17.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -373,11 +382,11 @@ public class PaymentTransactionInformation17 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlIntrBkSttlmAmt")
 	protected EuroMax9Amount originalInterbankSettlementAmount;
 	/**
-	 * Amount of money transferred between the instructing agent and the
-	 * instructed agent in the original transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -413,7 +422,7 @@ public class PaymentTransactionInformation17 {
 	public static final MMMessageAttribute mmOriginalInterbankSettlementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
-			componentContext_lazy = () -> PaymentTransactionInformation17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation17.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlIntrBkSttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -424,11 +433,11 @@ public class PaymentTransactionInformation17 {
 			simpleType_lazy = () -> EuroMax9Amount.mmObject();
 		}
 	};
+	@XmlElement(name = "RvsdIntrBkSttlmAmt", required = true)
 	protected EuroMax9Amount reversedInterbankSettlementAmount;
 	/**
-	 * Amount of money moved between the instructing agent and the instructed
-	 * agent in the reversed transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -464,7 +473,7 @@ public class PaymentTransactionInformation17 {
 	public static final MMMessageAttribute mmReversedInterbankSettlementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
-			componentContext_lazy = () -> PaymentTransactionInformation17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation17.mmObject();
 			isDerived = false;
 			xmlTag = "RvsdIntrBkSttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -475,15 +484,11 @@ public class PaymentTransactionInformation17 {
 			simpleType_lazy = () -> EuroMax9Amount.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmDt")
 	protected ISODate interbankSettlementDate;
 	/**
-	 * Date on which the amount of money ceases to be available to the agent
-	 * that owes it and when the amount of money becomes available to the agent
-	 * to which it is due.
 	 * 
-	 * Usage: the InterbankSettlementDate is the interbank settlement date of
-	 * the reversal message, and not of the original instruction.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -518,7 +523,7 @@ public class PaymentTransactionInformation17 {
 	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
-			componentContext_lazy = () -> PaymentTransactionInformation17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation17.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -529,11 +534,11 @@ public class PaymentTransactionInformation17 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "RvsdInstdAmt")
 	protected CurrencyAndAmount reversedInstructedAmount;
 	/**
-	 * Amount of money to be moved between the debtor and the creditor, before
-	 * deduction of charges, in the reversed transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -569,7 +574,7 @@ public class PaymentTransactionInformation17 {
 	public static final MMMessageAttribute mmReversedInstructedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
-			componentContext_lazy = () -> PaymentTransactionInformation17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation17.mmObject();
 			isDerived = false;
 			xmlTag = "RvsdInstdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -580,12 +585,11 @@ public class PaymentTransactionInformation17 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "XchgRate")
 	protected BaseOneRate exchangeRate;
 	/**
-	 * The factor used for conversion of an amount from one currency into
-	 * another. This reflects the price at which one currency was bought with
-	 * another currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -620,7 +624,7 @@ public class PaymentTransactionInformation17 {
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
-			componentContext_lazy = () -> PaymentTransactionInformation17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation17.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -631,11 +635,11 @@ public class PaymentTransactionInformation17 {
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	@XmlElement(name = "CompstnAmt")
 	protected EuroMax9Amount compensationAmount;
 	/**
-	 * Amount of money asked or paid as compensation for the processing of the
-	 * instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -671,7 +675,7 @@ public class PaymentTransactionInformation17 {
 	public static final MMMessageAttribute mmCompensationAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmClearingChargeAmount;
-			componentContext_lazy = () -> PaymentTransactionInformation17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation17.mmObject();
 			isDerived = false;
 			xmlTag = "CompstnAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -682,14 +686,11 @@ public class PaymentTransactionInformation17 {
 			simpleType_lazy = () -> EuroMax9Amount.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgBr")
 	protected ChargeBearerType2Code chargeBearer;
 	/**
-	 * Specifies if the creditor and/or debtor will bear the charges associated
-	 * with the processing of the payment transaction.
 	 * 
-	 * Usage: The ChargeBearer applies to the reversal message, not to the
-	 * original instruction.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -725,7 +726,7 @@ public class PaymentTransactionInformation17 {
 	public static final MMMessageAttribute mmChargeBearer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmBearerType;
-			componentContext_lazy = () -> PaymentTransactionInformation17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation17.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgBr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -736,11 +737,11 @@ public class PaymentTransactionInformation17 {
 			simpleType_lazy = () -> ChargeBearerType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgsInf")
 	protected List<com.tools20022.repository.msg.ChargesInformation2> chargesInformation;
 	/**
-	 * Transaction charges to be paid by the charge bearer for the reversal
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -773,7 +774,7 @@ public class PaymentTransactionInformation17 {
 	public static final MMMessageAssociationEnd mmChargesInformation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Charges.mmObject();
-			componentContext_lazy = () -> PaymentTransactionInformation17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation17.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -784,11 +785,11 @@ public class PaymentTransactionInformation17 {
 			type_lazy = () -> com.tools20022.repository.msg.ChargesInformation2.mmObject();
 		}
 	};
+	@XmlElement(name = "InstgAgt")
 	protected FinancialInstitution2 instructingAgent;
 	/**
-	 * Agent that instructs the next party in the chain to carry out the (set
-	 * of) instruction(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -822,7 +823,7 @@ public class PaymentTransactionInformation17 {
 	public static final MMMessageAssociationEnd mmInstructingAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> PaymentTransactionInformation17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation17.mmObject();
 			isDerived = false;
 			xmlTag = "InstgAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -834,11 +835,11 @@ public class PaymentTransactionInformation17 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
 		}
 	};
+	@XmlElement(name = "InstdAgt")
 	protected FinancialInstitution2 instructedAgent;
 	/**
-	 * Agent that is instructed by the previous party in the chain to carry out
-	 * the (set of) instruction(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -872,7 +873,7 @@ public class PaymentTransactionInformation17 {
 	public static final MMMessageAssociationEnd mmInstructedAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> PaymentTransactionInformation17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation17.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -884,10 +885,11 @@ public class PaymentTransactionInformation17 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
 		}
 	};
+	@XmlElement(name = "RvslRsnInf")
 	protected List<com.tools20022.repository.msg.ReversalReasonInformation5> reversalReasonInformation;
 	/**
-	 * Detailed information on the reversal reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -920,7 +922,7 @@ public class PaymentTransactionInformation17 {
 	public static final MMMessageAssociationEnd mmReversalReasonInformation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentStatus;
-			componentContext_lazy = () -> PaymentTransactionInformation17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation17.mmObject();
 			isDerived = false;
 			xmlTag = "RvslRsnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -931,10 +933,11 @@ public class PaymentTransactionInformation17 {
 			type_lazy = () -> com.tools20022.repository.msg.ReversalReasonInformation5.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlTxRef", required = true)
 	protected OriginalTransactionReference9 originalTransactionReference;
 	/**
-	 * Set of key elements of the original transaction being referred to.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -967,7 +970,7 @@ public class PaymentTransactionInformation17 {
 	public static final MMMessageAssociationEnd mmOriginalTransactionReference = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
-			componentContext_lazy = () -> PaymentTransactionInformation17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation17.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -983,14 +986,20 @@ public class PaymentTransactionInformation17 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentTransactionInformation17.mmReversalIdentification, PaymentTransactionInformation17.mmOriginalPaymentInformationIdentification,
-						PaymentTransactionInformation17.mmOriginalInstructionIdentification, PaymentTransactionInformation17.mmOriginalEndToEndIdentification, PaymentTransactionInformation17.mmOriginalTransactionIdentification,
-						PaymentTransactionInformation17.mmOriginalInterbankSettlementAmount, PaymentTransactionInformation17.mmReversedInterbankSettlementAmount, PaymentTransactionInformation17.mmInterbankSettlementDate,
-						PaymentTransactionInformation17.mmReversedInstructedAmount, PaymentTransactionInformation17.mmExchangeRate, PaymentTransactionInformation17.mmCompensationAmount, PaymentTransactionInformation17.mmChargeBearer,
-						PaymentTransactionInformation17.mmChargesInformation, PaymentTransactionInformation17.mmInstructingAgent, PaymentTransactionInformation17.mmInstructedAgent,
-						PaymentTransactionInformation17.mmReversalReasonInformation, PaymentTransactionInformation17.mmOriginalTransactionReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransactionInformation17.mmReversalIdentification,
+						com.tools20022.repository.msg.PaymentTransactionInformation17.mmOriginalPaymentInformationIdentification, com.tools20022.repository.msg.PaymentTransactionInformation17.mmOriginalInstructionIdentification,
+						com.tools20022.repository.msg.PaymentTransactionInformation17.mmOriginalEndToEndIdentification, com.tools20022.repository.msg.PaymentTransactionInformation17.mmOriginalTransactionIdentification,
+						com.tools20022.repository.msg.PaymentTransactionInformation17.mmOriginalInterbankSettlementAmount, com.tools20022.repository.msg.PaymentTransactionInformation17.mmReversedInterbankSettlementAmount,
+						com.tools20022.repository.msg.PaymentTransactionInformation17.mmInterbankSettlementDate, com.tools20022.repository.msg.PaymentTransactionInformation17.mmReversedInstructedAmount,
+						com.tools20022.repository.msg.PaymentTransactionInformation17.mmExchangeRate, com.tools20022.repository.msg.PaymentTransactionInformation17.mmCompensationAmount,
+						com.tools20022.repository.msg.PaymentTransactionInformation17.mmChargeBearer, com.tools20022.repository.msg.PaymentTransactionInformation17.mmChargesInformation,
+						com.tools20022.repository.msg.PaymentTransactionInformation17.mmInstructingAgent, com.tools20022.repository.msg.PaymentTransactionInformation17.mmInstructedAgent,
+						com.tools20022.repository.msg.PaymentTransactionInformation17.mmReversalReasonInformation, com.tools20022.repository.msg.PaymentTransactionInformation17.mmOriginalTransactionReference);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReversedInstructedAmountAndExchangeRate1Rule.forPaymentTransactionInformation17,
+						com.tools20022.repository.constraints.ConstraintReversedInstructedAmountAndExchangeRate2Rule.forPaymentTransactionInformation17,
+						com.tools20022.repository.constraints.ConstraintChargesInformationAndReversedInstructedAmountRule.forPaymentTransactionInformation17);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentTransactionInformation17";
 				definition = "Reference and status information concerning the original transactions, included in the original instruction, to which the reversal message applies.";
@@ -999,156 +1008,156 @@ public class PaymentTransactionInformation17 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RvslId")
-	public Max35Text getReversalIdentification() {
-		return reversalIdentification;
+	public Optional<Max35Text> getReversalIdentification() {
+		return reversalIdentification == null ? Optional.empty() : Optional.of(reversalIdentification);
 	}
 
-	public void setReversalIdentification(Max35Text reversalIdentification) {
+	public PaymentTransactionInformation17 setReversalIdentification(Max35Text reversalIdentification) {
 		this.reversalIdentification = reversalIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlPmtInfId")
-	public Max35Text getOriginalPaymentInformationIdentification() {
-		return originalPaymentInformationIdentification;
+	public Optional<Max35Text> getOriginalPaymentInformationIdentification() {
+		return originalPaymentInformationIdentification == null ? Optional.empty() : Optional.of(originalPaymentInformationIdentification);
 	}
 
-	public void setOriginalPaymentInformationIdentification(Max35Text originalPaymentInformationIdentification) {
+	public PaymentTransactionInformation17 setOriginalPaymentInformationIdentification(Max35Text originalPaymentInformationIdentification) {
 		this.originalPaymentInformationIdentification = originalPaymentInformationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlInstrId")
-	public Max35Text getOriginalInstructionIdentification() {
-		return originalInstructionIdentification;
+	public Optional<Max35Text> getOriginalInstructionIdentification() {
+		return originalInstructionIdentification == null ? Optional.empty() : Optional.of(originalInstructionIdentification);
 	}
 
-	public void setOriginalInstructionIdentification(Max35Text originalInstructionIdentification) {
+	public PaymentTransactionInformation17 setOriginalInstructionIdentification(Max35Text originalInstructionIdentification) {
 		this.originalInstructionIdentification = originalInstructionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlEndToEndId")
-	public Max35Text getOriginalEndToEndIdentification() {
-		return originalEndToEndIdentification;
+	public Optional<Max35Text> getOriginalEndToEndIdentification() {
+		return originalEndToEndIdentification == null ? Optional.empty() : Optional.of(originalEndToEndIdentification);
 	}
 
-	public void setOriginalEndToEndIdentification(Max35Text originalEndToEndIdentification) {
+	public PaymentTransactionInformation17 setOriginalEndToEndIdentification(Max35Text originalEndToEndIdentification) {
 		this.originalEndToEndIdentification = originalEndToEndIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlTxId")
-	public Max35Text getOriginalTransactionIdentification() {
-		return originalTransactionIdentification;
+	public Optional<Max35Text> getOriginalTransactionIdentification() {
+		return originalTransactionIdentification == null ? Optional.empty() : Optional.of(originalTransactionIdentification);
 	}
 
-	public void setOriginalTransactionIdentification(Max35Text originalTransactionIdentification) {
+	public PaymentTransactionInformation17 setOriginalTransactionIdentification(Max35Text originalTransactionIdentification) {
 		this.originalTransactionIdentification = originalTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlIntrBkSttlmAmt")
-	public EuroMax9Amount getOriginalInterbankSettlementAmount() {
-		return originalInterbankSettlementAmount;
+	public Optional<EuroMax9Amount> getOriginalInterbankSettlementAmount() {
+		return originalInterbankSettlementAmount == null ? Optional.empty() : Optional.of(originalInterbankSettlementAmount);
 	}
 
-	public void setOriginalInterbankSettlementAmount(EuroMax9Amount originalInterbankSettlementAmount) {
+	public PaymentTransactionInformation17 setOriginalInterbankSettlementAmount(EuroMax9Amount originalInterbankSettlementAmount) {
 		this.originalInterbankSettlementAmount = originalInterbankSettlementAmount;
+		return this;
 	}
 
-	@XmlElement(name = "RvsdIntrBkSttlmAmt", required = true)
 	public EuroMax9Amount getReversedInterbankSettlementAmount() {
 		return reversedInterbankSettlementAmount;
 	}
 
-	public void setReversedInterbankSettlementAmount(EuroMax9Amount reversedInterbankSettlementAmount) {
-		this.reversedInterbankSettlementAmount = reversedInterbankSettlementAmount;
+	public PaymentTransactionInformation17 setReversedInterbankSettlementAmount(EuroMax9Amount reversedInterbankSettlementAmount) {
+		this.reversedInterbankSettlementAmount = Objects.requireNonNull(reversedInterbankSettlementAmount);
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmDt")
-	public ISODate getInterbankSettlementDate() {
-		return interbankSettlementDate;
+	public Optional<ISODate> getInterbankSettlementDate() {
+		return interbankSettlementDate == null ? Optional.empty() : Optional.of(interbankSettlementDate);
 	}
 
-	public void setInterbankSettlementDate(ISODate interbankSettlementDate) {
+	public PaymentTransactionInformation17 setInterbankSettlementDate(ISODate interbankSettlementDate) {
 		this.interbankSettlementDate = interbankSettlementDate;
+		return this;
 	}
 
-	@XmlElement(name = "RvsdInstdAmt")
-	public CurrencyAndAmount getReversedInstructedAmount() {
-		return reversedInstructedAmount;
+	public Optional<CurrencyAndAmount> getReversedInstructedAmount() {
+		return reversedInstructedAmount == null ? Optional.empty() : Optional.of(reversedInstructedAmount);
 	}
 
-	public void setReversedInstructedAmount(CurrencyAndAmount reversedInstructedAmount) {
+	public PaymentTransactionInformation17 setReversedInstructedAmount(CurrencyAndAmount reversedInstructedAmount) {
 		this.reversedInstructedAmount = reversedInstructedAmount;
+		return this;
 	}
 
-	@XmlElement(name = "XchgRate")
-	public BaseOneRate getExchangeRate() {
-		return exchangeRate;
+	public Optional<BaseOneRate> getExchangeRate() {
+		return exchangeRate == null ? Optional.empty() : Optional.of(exchangeRate);
 	}
 
-	public void setExchangeRate(BaseOneRate exchangeRate) {
+	public PaymentTransactionInformation17 setExchangeRate(BaseOneRate exchangeRate) {
 		this.exchangeRate = exchangeRate;
+		return this;
 	}
 
-	@XmlElement(name = "CompstnAmt")
-	public EuroMax9Amount getCompensationAmount() {
-		return compensationAmount;
+	public Optional<EuroMax9Amount> getCompensationAmount() {
+		return compensationAmount == null ? Optional.empty() : Optional.of(compensationAmount);
 	}
 
-	public void setCompensationAmount(EuroMax9Amount compensationAmount) {
+	public PaymentTransactionInformation17 setCompensationAmount(EuroMax9Amount compensationAmount) {
 		this.compensationAmount = compensationAmount;
+		return this;
 	}
 
-	@XmlElement(name = "ChrgBr")
-	public ChargeBearerType2Code getChargeBearer() {
-		return chargeBearer;
+	public Optional<ChargeBearerType2Code> getChargeBearer() {
+		return chargeBearer == null ? Optional.empty() : Optional.of(chargeBearer);
 	}
 
-	public void setChargeBearer(ChargeBearerType2Code chargeBearer) {
+	public PaymentTransactionInformation17 setChargeBearer(ChargeBearerType2Code chargeBearer) {
 		this.chargeBearer = chargeBearer;
+		return this;
 	}
 
-	@XmlElement(name = "ChrgsInf")
 	public List<ChargesInformation2> getChargesInformation() {
-		return chargesInformation;
+		return chargesInformation == null ? chargesInformation = new ArrayList<>() : chargesInformation;
 	}
 
-	public void setChargesInformation(List<com.tools20022.repository.msg.ChargesInformation2> chargesInformation) {
-		this.chargesInformation = chargesInformation;
+	public PaymentTransactionInformation17 setChargesInformation(List<com.tools20022.repository.msg.ChargesInformation2> chargesInformation) {
+		this.chargesInformation = Objects.requireNonNull(chargesInformation);
+		return this;
 	}
 
-	@XmlElement(name = "InstgAgt")
-	public FinancialInstitution2 getInstructingAgent() {
-		return instructingAgent;
+	public Optional<FinancialInstitution2> getInstructingAgent() {
+		return instructingAgent == null ? Optional.empty() : Optional.of(instructingAgent);
 	}
 
-	public void setInstructingAgent(com.tools20022.repository.msg.FinancialInstitution2 instructingAgent) {
+	public PaymentTransactionInformation17 setInstructingAgent(com.tools20022.repository.msg.FinancialInstitution2 instructingAgent) {
 		this.instructingAgent = instructingAgent;
+		return this;
 	}
 
-	@XmlElement(name = "InstdAgt")
-	public FinancialInstitution2 getInstructedAgent() {
-		return instructedAgent;
+	public Optional<FinancialInstitution2> getInstructedAgent() {
+		return instructedAgent == null ? Optional.empty() : Optional.of(instructedAgent);
 	}
 
-	public void setInstructedAgent(com.tools20022.repository.msg.FinancialInstitution2 instructedAgent) {
+	public PaymentTransactionInformation17 setInstructedAgent(com.tools20022.repository.msg.FinancialInstitution2 instructedAgent) {
 		this.instructedAgent = instructedAgent;
+		return this;
 	}
 
-	@XmlElement(name = "RvslRsnInf")
 	public List<ReversalReasonInformation5> getReversalReasonInformation() {
-		return reversalReasonInformation;
+		return reversalReasonInformation == null ? reversalReasonInformation = new ArrayList<>() : reversalReasonInformation;
 	}
 
-	public void setReversalReasonInformation(List<com.tools20022.repository.msg.ReversalReasonInformation5> reversalReasonInformation) {
-		this.reversalReasonInformation = reversalReasonInformation;
+	public PaymentTransactionInformation17 setReversalReasonInformation(List<com.tools20022.repository.msg.ReversalReasonInformation5> reversalReasonInformation) {
+		this.reversalReasonInformation = Objects.requireNonNull(reversalReasonInformation);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlTxRef", required = true)
 	public OriginalTransactionReference9 getOriginalTransactionReference() {
 		return originalTransactionReference;
 	}
 
-	public void setOriginalTransactionReference(com.tools20022.repository.msg.OriginalTransactionReference9 originalTransactionReference) {
-		this.originalTransactionReference = originalTransactionReference;
+	public PaymentTransactionInformation17 setOriginalTransactionReference(com.tools20022.repository.msg.OriginalTransactionReference9 originalTransactionReference) {
+		this.originalTransactionReference = Objects.requireNonNull(originalTransactionReference);
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -25,9 +26,11 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.ListTrading;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,16 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "List3", propOrder = {"listIdentification", "numberOfStrikes", "totalNumberOfStrikes", "strikePriceDetails"})
 public class List3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ListId", required = true)
 	protected Max35Text listIdentification;
 	/**
-	 * Unique identifier for a list, as assigned by the trading party. The
-	 * identifier must be unique within a single trading day.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,6 +112,9 @@ public class List3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ListId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 66</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -124,9 +130,10 @@ public class List3 {
 	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
-			componentContext_lazy = () -> List3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.List3.mmObject();
 			isDerived = false;
 			xmlTag = "ListId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "66"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListIdentification";
 			definition = "Unique identifier for a list, as assigned by the trading party. The identifier must be unique within a single trading day.";
@@ -135,10 +142,11 @@ public class List3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfStrks", required = true)
 	protected Number numberOfStrikes;
 	/**
-	 * Identifies the number of strike price entries in this message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,6 +159,9 @@ public class List3 {
 	 * List3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NbOfStrks"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 428</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -165,9 +176,10 @@ public class List3 {
 	 */
 	public static final MMMessageAttribute mmNumberOfStrikes = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> List3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.List3.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfStrks";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "428"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfStrikes";
 			definition = "Identifies the number of strike price entries in this message.";
@@ -176,11 +188,11 @@ public class List3 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNbOfStrks", required = true)
 	protected Number totalNumberOfStrikes;
 	/**
-	 * Identifies the total number of strike price entries across all messages
-	 * with the same ListIdentification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,6 +205,9 @@ public class List3 {
 	 * List3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlNbOfStrks"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 422</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -208,9 +223,10 @@ public class List3 {
 	 */
 	public static final MMMessageAttribute mmTotalNumberOfStrikes = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> List3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.List3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfStrks";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "422"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfStrikes";
 			definition = "Identifies the total number of strike price entries across all messages with the same ListIdentification.";
@@ -219,19 +235,11 @@ public class List3 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "StrkPricDtls", required = true)
 	protected List<com.tools20022.repository.msg.ListStrikePriceDetails1> strikePriceDetails;
 	/**
-	 * Provides the details for negotiating and trading a large number of
-	 * securities contained in or comprising a portfolio.
 	 * 
-	 * One example is index arbitrage, which consists in the purchase or sale of
-	 * a basket of stocks in conjunction with the sale or purchase of a
-	 * derivative product (for example index futures) to profit from price
-	 * differences between the basket and the derivative product.
-	 * 
-	 * Other examples include liquidation of EFP (Exchange for Physical) stock
-	 * positions, portfolio realignment and portfolio liquidation.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -264,7 +272,7 @@ public class List3 {
 	public static final MMMessageAssociationEnd mmStrikePriceDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ListTrading.mmObject();
-			componentContext_lazy = () -> List3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.List3.mmObject();
 			isDerived = false;
 			xmlTag = "StrkPricDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,9 +287,10 @@ public class List3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(List3.mmListIdentification, List3.mmNumberOfStrikes, List3.mmTotalNumberOfStrikes, List3.mmStrikePriceDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.List3.mmListIdentification, com.tools20022.repository.msg.List3.mmNumberOfStrikes, com.tools20022.repository.msg.List3.mmTotalNumberOfStrikes,
+						com.tools20022.repository.msg.List3.mmStrikePriceDetails);
 				trace_lazy = () -> ListTrading.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "List3";
 				definition = "Provides the details for negotiating and trading a large number of securities contained in or comprising a portfolio. \n\nOne example is index arbitrage, which consists in the purchase or sale of a basket of stocks in conjunction with the sale or purchase of\na derivative product (for example index futures) to profit from price differences between the basket and the derivative product. \n\nOther examples include liquidation of EFP (Exchange for Physical) stock positions, portfolio realignment and portfolio liquidation.";
@@ -290,39 +299,39 @@ public class List3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ListId", required = true)
 	public Max35Text getListIdentification() {
 		return listIdentification;
 	}
 
-	public void setListIdentification(Max35Text listIdentification) {
-		this.listIdentification = listIdentification;
+	public List3 setListIdentification(Max35Text listIdentification) {
+		this.listIdentification = Objects.requireNonNull(listIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "NbOfStrks", required = true)
 	public Number getNumberOfStrikes() {
 		return numberOfStrikes;
 	}
 
-	public void setNumberOfStrikes(Number numberOfStrikes) {
-		this.numberOfStrikes = numberOfStrikes;
+	public List3 setNumberOfStrikes(Number numberOfStrikes) {
+		this.numberOfStrikes = Objects.requireNonNull(numberOfStrikes);
+		return this;
 	}
 
-	@XmlElement(name = "TtlNbOfStrks", required = true)
 	public Number getTotalNumberOfStrikes() {
 		return totalNumberOfStrikes;
 	}
 
-	public void setTotalNumberOfStrikes(Number totalNumberOfStrikes) {
-		this.totalNumberOfStrikes = totalNumberOfStrikes;
+	public List3 setTotalNumberOfStrikes(Number totalNumberOfStrikes) {
+		this.totalNumberOfStrikes = Objects.requireNonNull(totalNumberOfStrikes);
+		return this;
 	}
 
-	@XmlElement(name = "StrkPricDtls", required = true)
 	public List<ListStrikePriceDetails1> getStrikePriceDetails() {
-		return strikePriceDetails;
+		return strikePriceDetails == null ? strikePriceDetails = new ArrayList<>() : strikePriceDetails;
 	}
 
-	public void setStrikePriceDetails(List<com.tools20022.repository.msg.ListStrikePriceDetails1> strikePriceDetails) {
-		this.strikePriceDetails = strikePriceDetails;
+	public List3 setStrikePriceDetails(List<com.tools20022.repository.msg.ListStrikePriceDetails1> strikePriceDetails) {
+		this.strikePriceDetails = Objects.requireNonNull(strikePriceDetails);
+		return this;
 	}
 }

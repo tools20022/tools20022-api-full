@@ -24,9 +24,8 @@ import com.tools20022.repository.codeset.Instruction3Code;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,17 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InstructionForFinalAgent", propOrder = {"code", "proprietary"})
 public class InstructionForFinalAgent {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd")
 	protected List<Instruction3Code> code;
 	/**
-	 * Further information related to the processing of the payment instruction,
-	 * provided by the initiating party, and intended for the final agent, in
-	 * coded form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +113,7 @@ public class InstructionForFinalAgent {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructionForCreditorAgent;
-			componentContext_lazy = () -> InstructionForFinalAgent.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionForFinalAgent.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,16 +124,11 @@ public class InstructionForFinalAgent {
 			simpleType_lazy = () -> Instruction3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry")
 	protected Max140Text proprietary;
 	/**
-	 * Instruction to the final agent that is specific to a user community and
-	 * is required for use within that user community.
 	 * 
-	 * Usage : The proprietary element should only be used when the coded
-	 * element does not provide sufficient codes or when the selected code in
-	 * the coded element needs to be supplemented by additional information such
-	 * as a passport number or telephone number.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,7 +163,7 @@ public class InstructionForFinalAgent {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructionForCreditorAgent;
-			componentContext_lazy = () -> InstructionForFinalAgent.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionForFinalAgent.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,9 +178,9 @@ public class InstructionForFinalAgent {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InstructionForFinalAgent.mmCode, InstructionForFinalAgent.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionForFinalAgent.mmCode, com.tools20022.repository.msg.InstructionForFinalAgent.mmProprietary);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionForFinalAgent";
 				definition = "Further information related to the processing of the payment instruction, provided by the initiating party, and intended for the final agent.";
@@ -196,21 +189,21 @@ public class InstructionForFinalAgent {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd")
 	public List<Instruction3Code> getCode() {
-		return code;
+		return code == null ? code = new ArrayList<>() : code;
 	}
 
-	public void setCode(List<Instruction3Code> code) {
-		this.code = code;
+	public InstructionForFinalAgent setCode(List<Instruction3Code> code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry")
-	public Max140Text getProprietary() {
-		return proprietary;
+	public Optional<Max140Text> getProprietary() {
+		return proprietary == null ? Optional.empty() : Optional.of(proprietary);
 	}
 
-	public void setProprietary(Max140Text proprietary) {
+	public InstructionForFinalAgent setProprietary(Max140Text proprietary) {
 		this.proprietary = proprietary;
+		return this;
 	}
 }

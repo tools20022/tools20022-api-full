@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
@@ -32,6 +33,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +66,20 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistencePartyProprietaryIdentificationRule#forPartyIdentification61Choice
+ * ConstraintCoexistencePartyProprietaryIdentificationRule.
+ * forPartyIdentification61Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceNameAndAdressRule#forPartyIdentification61Choice
+ * ConstraintCoexistenceNameAndAdressRule.forPartyIdentification61Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -77,18 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of identification of a party."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PartyIdentification61Choice", propOrder = {"BICFI", "nameAndAddress", "proprietaryIdentification"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PartyIdentification61Choice", propOrder = {"bICFI", "nameAndAddress", "proprietaryIdentification"})
 public class PartyIdentification61Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BICFI", required = true)
 	protected BICFIIdentifier bICFI;
 	/**
-	 * Code allocated to a financial institution by the ISO 9362 Registration
-	 * Authority, as described in ISO 9362
-	 * "Banking - Banking telecommunication messages - Business identifier code (BIC)"
-	 * .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +136,7 @@ public class PartyIdentification61Choice {
 	public static final MMMessageAttribute mmBICFI = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> PartyIdentification61Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification61Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BICFI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,11 +147,11 @@ public class PartyIdentification61Choice {
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "NmAndAdr", required = true)
 	protected NameAndAddress12 nameAndAddress;
 	/**
-	 * Name by which a party is known and which is usually used to identify that
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -158,6 +170,9 @@ public class PartyIdentification61Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NmAndAdr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95Q:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -173,9 +188,10 @@ public class PartyIdentification61Choice {
 	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> PartyIdentification61Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification61Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95Q:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
@@ -185,11 +201,11 @@ public class PartyIdentification61Choice {
 			type_lazy = () -> NameAndAddress12.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryId", required = true)
 	protected GenericIdentification24 proprietaryIdentification;
 	/**
-	 * Unique and unambiguous identifier, as assigned to a financial institution
-	 * using a proprietary identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -209,6 +225,9 @@ public class PartyIdentification61Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrtryId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95R:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -224,9 +243,10 @@ public class PartyIdentification61Choice {
 	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> PartyIdentification61Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification61Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95R:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
@@ -240,9 +260,12 @@ public class PartyIdentification61Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification61Choice.mmBICFI, PartyIdentification61Choice.mmNameAndAddress, PartyIdentification61Choice.mmProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification61Choice.mmBICFI, com.tools20022.repository.choice.PartyIdentification61Choice.mmNameAndAddress,
+						com.tools20022.repository.choice.PartyIdentification61Choice.mmProprietaryIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistencePartyProprietaryIdentificationRule.forPartyIdentification61Choice,
+						com.tools20022.repository.constraints.ConstraintCoexistenceNameAndAdressRule.forPartyIdentification61Choice);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -258,30 +281,30 @@ public class PartyIdentification61Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BICFI", required = true)
 	public BICFIIdentifier getBICFI() {
 		return bICFI;
 	}
 
-	public void setBICFI(BICFIIdentifier bICFI) {
-		this.bICFI = bICFI;
+	public PartyIdentification61Choice setBICFI(BICFIIdentifier bICFI) {
+		this.bICFI = Objects.requireNonNull(bICFI);
+		return this;
 	}
 
-	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress12 getNameAndAddress() {
 		return nameAndAddress;
 	}
 
-	public void setNameAndAddress(NameAndAddress12 nameAndAddress) {
-		this.nameAndAddress = nameAndAddress;
+	public PartyIdentification61Choice setNameAndAddress(NameAndAddress12 nameAndAddress) {
+		this.nameAndAddress = Objects.requireNonNull(nameAndAddress);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryId", required = true)
 	public GenericIdentification24 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}
 
-	public void setProprietaryIdentification(GenericIdentification24 proprietaryIdentification) {
-		this.proprietaryIdentification = proprietaryIdentification;
+	public PartyIdentification61Choice setProprietaryIdentification(GenericIdentification24 proprietaryIdentification) {
+		this.proprietaryIdentification = Objects.requireNonNull(proprietaryIdentification);
+		return this;
 	}
 }

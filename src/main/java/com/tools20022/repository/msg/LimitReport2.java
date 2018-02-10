@@ -28,6 +28,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -41,8 +42,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.LimitReport2#mmLimitOrBusinessErrorRule
- * LimitReport2.mmLimitOrBusinessErrorRule}</li>
+ * {@linkplain com.tools20022.repository.msg.LimitReport2#LimitOrBusinessErrorRule
+ * LimitReport2.LimitOrBusinessErrorRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -64,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -78,15 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Reports either on the risk management limit or on a business error."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LimitReport2", propOrder = {"limitIdentification", "limit", "businessError"})
 public class LimitReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LmtId", required = true)
 	protected LimitIdentificationDetails2 limitIdentification;
 	/**
-	 * Identification of the limit on which information is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -119,7 +121,7 @@ public class LimitReport2 {
 	public static final MMMessageAssociationEnd mmLimitIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
-			componentContext_lazy = () -> LimitReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitReport2.mmObject();
 			isDerived = false;
 			xmlTag = "LmtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +133,11 @@ public class LimitReport2 {
 			type_lazy = () -> com.tools20022.repository.msg.LimitIdentificationDetails2.mmObject();
 		}
 	};
+	@XmlElement(name = "Lmt", required = true)
 	protected LimitDetails3 limit;
 	/**
-	 * Requested information on the limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -165,7 +168,7 @@ public class LimitReport2 {
 	public static final MMMessageAssociationEnd mmLimit = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
-			componentContext_lazy = () -> LimitReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitReport2.mmObject();
 			isDerived = false;
 			xmlTag = "Lmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,10 +180,11 @@ public class LimitReport2 {
 			type_lazy = () -> com.tools20022.repository.msg.LimitDetails3.mmObject();
 		}
 	};
+	@XmlElement(name = "BizErr", required = true)
 	protected ErrorHandling2 businessError;
 	/**
-	 * Reason the requested business information is not given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -205,7 +209,7 @@ public class LimitReport2 {
 	 */
 	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitReport2.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -247,22 +251,22 @@ public class LimitReport2 {
 	 * "Either Limit or BusinessError must be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmLimitOrBusinessErrorRule = new MMXor() {
+	public static final MMXor LimitOrBusinessErrorRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitOrBusinessErrorRule";
 			definition = "Either Limit or BusinessError must be present, but not both.";
-			messageComponent_lazy = () -> LimitReport2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(LimitReport2.mmLimit, LimitReport2.mmBusinessError);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.LimitReport2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport2.mmLimit, com.tools20022.repository.msg.LimitReport2.mmBusinessError);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LimitReport2.mmLimitIdentification, LimitReport2.mmLimit, LimitReport2.mmBusinessError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport2.mmLimitIdentification, com.tools20022.repository.msg.LimitReport2.mmLimit, com.tools20022.repository.msg.LimitReport2.mmBusinessError);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -273,36 +277,36 @@ public class LimitReport2 {
 				})).get();
 				name = "LimitReport2";
 				definition = "Reports either on the risk management limit or on a business error.";
-				xors_lazy = () -> Arrays.asList(LimitReport2.mmLimitOrBusinessErrorRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReport2.LimitOrBusinessErrorRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LmtId", required = true)
 	public LimitIdentificationDetails2 getLimitIdentification() {
 		return limitIdentification;
 	}
 
-	public void setLimitIdentification(com.tools20022.repository.msg.LimitIdentificationDetails2 limitIdentification) {
-		this.limitIdentification = limitIdentification;
+	public LimitReport2 setLimitIdentification(com.tools20022.repository.msg.LimitIdentificationDetails2 limitIdentification) {
+		this.limitIdentification = Objects.requireNonNull(limitIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Lmt", required = true)
 	public LimitDetails3 getLimit() {
 		return limit;
 	}
 
-	public void setLimit(com.tools20022.repository.msg.LimitDetails3 limit) {
-		this.limit = limit;
+	public LimitReport2 setLimit(com.tools20022.repository.msg.LimitDetails3 limit) {
+		this.limit = Objects.requireNonNull(limit);
+		return this;
 	}
 
-	@XmlElement(name = "BizErr", required = true)
 	public ErrorHandling2 getBusinessError() {
 		return businessError;
 	}
 
-	public void setBusinessError(com.tools20022.repository.msg.ErrorHandling2 businessError) {
-		this.businessError = businessError;
+	public LimitReport2 setBusinessError(com.tools20022.repository.msg.ErrorHandling2 businessError) {
+		this.businessError = Objects.requireNonNull(businessError);
+		return this;
 	}
 }

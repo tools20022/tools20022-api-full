@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.Portfolio;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Describes the characteristics of a portfolio."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Portfolio1", propOrder = "portfolioInformation")
 public class Portfolio1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrtflInf")
 	protected List<Max350Text> portfolioInformation;
 	/**
-	 * Additional information related to the portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,7 +104,7 @@ public class Portfolio1 {
 	public static final MMMessageAttribute mmPortfolioInformation = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> Portfolio.mmObject();
-			componentContext_lazy = () -> Portfolio1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Portfolio1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtflInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,9 +119,9 @@ public class Portfolio1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Portfolio1.mmPortfolioInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Portfolio1.mmPortfolioInformation);
 				trace_lazy = () -> Portfolio.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Portfolio1";
 				definition = "Describes the characteristics of a portfolio.";
@@ -127,12 +130,12 @@ public class Portfolio1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrtflInf")
 	public List<Max350Text> getPortfolioInformation() {
-		return portfolioInformation;
+		return portfolioInformation == null ? portfolioInformation = new ArrayList<>() : portfolioInformation;
 	}
 
-	public void setPortfolioInformation(List<Max350Text> portfolioInformation) {
-		this.portfolioInformation = portfolioInformation;
+	public Portfolio1 setPortfolioInformation(List<Max350Text> portfolioInformation) {
+		this.portfolioInformation = Objects.requireNonNull(portfolioInformation);
+		return this;
 	}
 }

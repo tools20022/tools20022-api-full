@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.SystemPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Unique and unambiguous way to identify a system party."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SystemPartyIdentification5", propOrder = {"relatedPartyIdentification", "responsiblePartyIdentification"})
 public class SystemPartyIdentification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RltdPtyId", required = true)
 	protected PartyIdentification46 relatedPartyIdentification;
 	/**
-	 * Unique identification of the party referenced by a request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +112,7 @@ public class SystemPartyIdentification5 {
 	public static final MMMessageAssociationEnd mmRelatedPartyIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SystemPartyIdentification5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,11 +124,11 @@ public class SystemPartyIdentification5 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification46.mmObject();
 		}
 	};
+	@XmlElement(name = "RspnsblPtyId")
 	protected BICFIIdentifier responsiblePartyIdentification;
 	/**
-	 * Unique identification of the party responsible for the maintenance of the
-	 * party reference data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +164,7 @@ public class SystemPartyIdentification5 {
 	public static final MMMessageAttribute mmResponsiblePartyIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> SystemPartyIdentification5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "RspnsblPtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,9 +179,9 @@ public class SystemPartyIdentification5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SystemPartyIdentification5.mmRelatedPartyIdentification, SystemPartyIdentification5.mmResponsiblePartyIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemPartyIdentification5.mmRelatedPartyIdentification, com.tools20022.repository.msg.SystemPartyIdentification5.mmResponsiblePartyIdentification);
 				trace_lazy = () -> SystemPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemPartyIdentification5";
 				definition = "Unique and unambiguous way to identify a system party.";
@@ -187,21 +190,21 @@ public class SystemPartyIdentification5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RltdPtyId", required = true)
 	public PartyIdentification46 getRelatedPartyIdentification() {
 		return relatedPartyIdentification;
 	}
 
-	public void setRelatedPartyIdentification(com.tools20022.repository.msg.PartyIdentification46 relatedPartyIdentification) {
-		this.relatedPartyIdentification = relatedPartyIdentification;
+	public SystemPartyIdentification5 setRelatedPartyIdentification(com.tools20022.repository.msg.PartyIdentification46 relatedPartyIdentification) {
+		this.relatedPartyIdentification = Objects.requireNonNull(relatedPartyIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RspnsblPtyId")
-	public BICFIIdentifier getResponsiblePartyIdentification() {
-		return responsiblePartyIdentification;
+	public Optional<BICFIIdentifier> getResponsiblePartyIdentification() {
+		return responsiblePartyIdentification == null ? Optional.empty() : Optional.of(responsiblePartyIdentification);
 	}
 
-	public void setResponsiblePartyIdentification(BICFIIdentifier responsiblePartyIdentification) {
+	public SystemPartyIdentification5 setResponsiblePartyIdentification(BICFIIdentifier responsiblePartyIdentification) {
 		this.responsiblePartyIdentification = responsiblePartyIdentification;
+		return this;
 	}
 }

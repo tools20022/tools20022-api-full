@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Changes in the schedule."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ScheduleChangeDetails1", propOrder = {"scheduleChangeEffectiveDate", "scheduleEntry"})
 public class ScheduleChangeDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SchdlChngFctvDt", required = true)
 	protected ISODate scheduleChangeEffectiveDate;
 	/**
-	 * Date on which the schedule changes became effective.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +101,7 @@ public class ScheduleChangeDetails1 {
 	 */
 	public static final MMMessageAttribute mmScheduleChangeEffectiveDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ScheduleChangeDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SchdlChngFctvDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,10 +112,11 @@ public class ScheduleChangeDetails1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SchdlNtry", required = true)
 	protected List<com.tools20022.repository.msg.ScheduleChangeEntry1> scheduleEntry;
 	/**
-	 * Information about schedule.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -138,7 +142,7 @@ public class ScheduleChangeDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmScheduleEntry = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ScheduleChangeDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SchdlNtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,8 +157,8 @@ public class ScheduleChangeDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ScheduleChangeDetails1.mmScheduleChangeEffectiveDate, ScheduleChangeDetails1.mmScheduleEntry);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ScheduleChangeDetails1.mmScheduleChangeEffectiveDate, com.tools20022.repository.msg.ScheduleChangeDetails1.mmScheduleEntry);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ScheduleChangeDetails1";
 				definition = "Changes in the schedule.";
@@ -163,21 +167,21 @@ public class ScheduleChangeDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SchdlChngFctvDt", required = true)
 	public ISODate getScheduleChangeEffectiveDate() {
 		return scheduleChangeEffectiveDate;
 	}
 
-	public void setScheduleChangeEffectiveDate(ISODate scheduleChangeEffectiveDate) {
-		this.scheduleChangeEffectiveDate = scheduleChangeEffectiveDate;
+	public ScheduleChangeDetails1 setScheduleChangeEffectiveDate(ISODate scheduleChangeEffectiveDate) {
+		this.scheduleChangeEffectiveDate = Objects.requireNonNull(scheduleChangeEffectiveDate);
+		return this;
 	}
 
-	@XmlElement(name = "SchdlNtry", required = true)
 	public List<ScheduleChangeEntry1> getScheduleEntry() {
-		return scheduleEntry;
+		return scheduleEntry == null ? scheduleEntry = new ArrayList<>() : scheduleEntry;
 	}
 
-	public void setScheduleEntry(List<com.tools20022.repository.msg.ScheduleChangeEntry1> scheduleEntry) {
-		this.scheduleEntry = scheduleEntry;
+	public ScheduleChangeDetails1 setScheduleEntry(List<com.tools20022.repository.msg.ScheduleChangeEntry1> scheduleEntry) {
+		this.scheduleEntry = Objects.requireNonNull(scheduleEntry);
+		return this;
 	}
 }

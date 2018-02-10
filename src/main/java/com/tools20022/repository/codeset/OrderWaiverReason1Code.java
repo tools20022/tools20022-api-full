@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OrderWaiverReasonCode;
+import com.tools20022.repository.codeset.OrderWaiverReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Relates to non-standard orders, to handle them differently, probably in a
@@ -31,33 +35,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.OrderWaiverReasonCode
- * OrderWaiverReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderWaiverReason1Code#mmLateTradeDealing
- * OrderWaiverReason1Code.mmLateTradeDealing}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderWaiverReason1Code#LateTradeDealing
+ * OrderWaiverReason1Code.LateTradeDealing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderWaiverReason1Code#mmFrontEndLoadCharge
- * OrderWaiverReason1Code.mmFrontEndLoadCharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderWaiverReason1Code#FrontEndLoadCharge
+ * OrderWaiverReason1Code.FrontEndLoadCharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderWaiverReason1Code#mmBelowMinimumInvestmentAmount
- * OrderWaiverReason1Code.mmBelowMinimumInvestmentAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderWaiverReason1Code#BelowMinimumInvestmentAmount
+ * OrderWaiverReason1Code.BelowMinimumInvestmentAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderWaiverReason1Code#mmCutOffDate
- * OrderWaiverReason1Code.mmCutOffDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderWaiverReason1Code#CutOffDate
+ * OrderWaiverReason1Code.CutOffDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderWaiverReason1Code#mmCommissionWaiver
- * OrderWaiverReason1Code.mmCommissionWaiver}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderWaiverReason1Code#CommissionWaiver
+ * OrderWaiverReason1Code.CommissionWaiver}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.OrderWaiverReasonCode
+ * OrderWaiverReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -76,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class OrderWaiverReason1Code extends OrderWaiverReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OrderWaiverReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,11 +100,12 @@ public class OrderWaiverReason1Code extends OrderWaiverReasonCode {
 	 * name} = "LateTradeDealing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLateTradeDealing = new MMCode() {
+	public static final OrderWaiverReason1Code LateTradeDealing = new OrderWaiverReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateTradeDealing";
-			owner_lazy = () -> OrderWaiverReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderWaiverReason1Code.mmObject();
+			codeName = OrderWaiverReasonCode.LateTradeDealing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -118,11 +124,12 @@ public class OrderWaiverReason1Code extends OrderWaiverReasonCode {
 	 * name} = "FrontEndLoadCharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFrontEndLoadCharge = new MMCode() {
+	public static final OrderWaiverReason1Code FrontEndLoadCharge = new OrderWaiverReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEndLoadCharge";
-			owner_lazy = () -> OrderWaiverReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderWaiverReason1Code.mmObject();
+			codeName = OrderWaiverReasonCode.FrontEndLoadCharge.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -141,11 +148,12 @@ public class OrderWaiverReason1Code extends OrderWaiverReasonCode {
 	 * name} = "BelowMinimumInvestmentAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBelowMinimumInvestmentAmount = new MMCode() {
+	public static final OrderWaiverReason1Code BelowMinimumInvestmentAmount = new OrderWaiverReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BelowMinimumInvestmentAmount";
-			owner_lazy = () -> OrderWaiverReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderWaiverReason1Code.mmObject();
+			codeName = OrderWaiverReasonCode.BelowMinimumInvestmentAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -164,11 +172,12 @@ public class OrderWaiverReason1Code extends OrderWaiverReasonCode {
 	 * name} = "CutOffDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCutOffDate = new MMCode() {
+	public static final OrderWaiverReason1Code CutOffDate = new OrderWaiverReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CutOffDate";
-			owner_lazy = () -> OrderWaiverReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderWaiverReason1Code.mmObject();
+			codeName = OrderWaiverReasonCode.CutOffDate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -187,27 +196,62 @@ public class OrderWaiverReason1Code extends OrderWaiverReasonCode {
 	 * name} = "CommissionWaiver"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommissionWaiver = new MMCode() {
+	public static final OrderWaiverReason1Code CommissionWaiver = new OrderWaiverReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionWaiver";
-			owner_lazy = () -> OrderWaiverReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderWaiverReason1Code.mmObject();
+			codeName = OrderWaiverReasonCode.CommissionWaiver.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OrderWaiverReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OrderWaiverReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("LATE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderWaiverReason1Code";
 				definition = "Relates to non-standard orders, to handle them differently, probably in a manual fashion.";
-				code_lazy = () -> Arrays.asList(OrderWaiverReason1Code.mmLateTradeDealing, OrderWaiverReason1Code.mmFrontEndLoadCharge, OrderWaiverReason1Code.mmBelowMinimumInvestmentAmount, OrderWaiverReason1Code.mmCutOffDate,
-						OrderWaiverReason1Code.mmCommissionWaiver);
 				trace_lazy = () -> OrderWaiverReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderWaiverReason1Code.LateTradeDealing, com.tools20022.repository.codeset.OrderWaiverReason1Code.FrontEndLoadCharge,
+						com.tools20022.repository.codeset.OrderWaiverReason1Code.BelowMinimumInvestmentAmount, com.tools20022.repository.codeset.OrderWaiverReason1Code.CutOffDate,
+						com.tools20022.repository.codeset.OrderWaiverReason1Code.CommissionWaiver);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(LateTradeDealing.getCodeName().get(), LateTradeDealing);
+		codesByName.put(FrontEndLoadCharge.getCodeName().get(), FrontEndLoadCharge);
+		codesByName.put(BelowMinimumInvestmentAmount.getCodeName().get(), BelowMinimumInvestmentAmount);
+		codesByName.put(CutOffDate.getCodeName().get(), CutOffDate);
+		codesByName.put(CommissionWaiver.getCodeName().get(), CommissionWaiver);
+	}
+
+	public static OrderWaiverReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OrderWaiverReason1Code[] values() {
+		OrderWaiverReason1Code[] values = new OrderWaiverReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OrderWaiverReason1Code> {
+		@Override
+		public OrderWaiverReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OrderWaiverReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

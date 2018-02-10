@@ -20,49 +20,53 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CurrencyConversionResponseCode;
+import com.tools20022.repository.codeset.CurrencyConversionResponse2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Result of a requested currency conversion.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponseCode
- * CurrencyConversionResponseCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse2Code#mmAllowed
- * CurrencyConversionResponse2Code.mmAllowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse2Code#Allowed
+ * CurrencyConversionResponse2Code.Allowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse2Code#mmInvalidCard
- * CurrencyConversionResponse2Code.mmInvalidCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse2Code#InvalidCard
+ * CurrencyConversionResponse2Code.InvalidCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse2Code#mmInvalidProduct
- * CurrencyConversionResponse2Code.mmInvalidProduct}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse2Code#InvalidProduct
+ * CurrencyConversionResponse2Code.InvalidProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse2Code#mmNoRate
- * CurrencyConversionResponse2Code.mmNoRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse2Code#NoRate
+ * CurrencyConversionResponse2Code.NoRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse2Code#mmNotAvailable
- * CurrencyConversionResponse2Code.mmNotAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse2Code#NotAvailable
+ * CurrencyConversionResponse2Code.NotAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse2Code#mmInvalidATMManager
- * CurrencyConversionResponse2Code.mmInvalidATMManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse2Code#InvalidATMManager
+ * CurrencyConversionResponse2Code.InvalidATMManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse2Code#mmInvalidATM
- * CurrencyConversionResponse2Code.mmInvalidATM}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponse2Code#InvalidATM
+ * CurrencyConversionResponse2Code.InvalidATM}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CurrencyConversionResponseCode
+ * CurrencyConversionResponseCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Result of a requested currency conversion."</li>
  * </ul>
  */
-public class CurrencyConversionResponse2Code extends CurrencyConversionResponseCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CurrencyConversionResponse2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class CurrencyConversionResponse2Code extends CurrencyConversionResponseC
 	 * name} = "Allowed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAllowed = new MMCode() {
+	public static final CurrencyConversionResponse2Code Allowed = new CurrencyConversionResponse2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Allowed";
-			owner_lazy = () -> CurrencyConversionResponse2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse2Code.mmObject();
+			codeName = CurrencyConversionResponseCode.Allowed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class CurrencyConversionResponse2Code extends CurrencyConversionResponseC
 	 * name} = "InvalidCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalidCard = new MMCode() {
+	public static final CurrencyConversionResponse2Code InvalidCard = new CurrencyConversionResponse2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidCard";
-			owner_lazy = () -> CurrencyConversionResponse2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse2Code.mmObject();
+			codeName = CurrencyConversionResponseCode.InvalidCard.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class CurrencyConversionResponse2Code extends CurrencyConversionResponseC
 	 * name} = "InvalidProduct"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalidProduct = new MMCode() {
+	public static final CurrencyConversionResponse2Code InvalidProduct = new CurrencyConversionResponse2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidProduct";
-			owner_lazy = () -> CurrencyConversionResponse2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse2Code.mmObject();
+			codeName = CurrencyConversionResponseCode.InvalidProduct.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +169,12 @@ public class CurrencyConversionResponse2Code extends CurrencyConversionResponseC
 	 * name} = "NoRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoRate = new MMCode() {
+	public static final CurrencyConversionResponse2Code NoRate = new CurrencyConversionResponse2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoRate";
-			owner_lazy = () -> CurrencyConversionResponse2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse2Code.mmObject();
+			codeName = CurrencyConversionResponseCode.NoRate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,11 +193,12 @@ public class CurrencyConversionResponse2Code extends CurrencyConversionResponseC
 	 * name} = "NotAvailable"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotAvailable = new MMCode() {
+	public static final CurrencyConversionResponse2Code NotAvailable = new CurrencyConversionResponse2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAvailable";
-			owner_lazy = () -> CurrencyConversionResponse2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse2Code.mmObject();
+			codeName = CurrencyConversionResponseCode.NotAvailable.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -207,11 +217,12 @@ public class CurrencyConversionResponse2Code extends CurrencyConversionResponseC
 	 * name} = "InvalidATMManager"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalidATMManager = new MMCode() {
+	public static final CurrencyConversionResponse2Code InvalidATMManager = new CurrencyConversionResponse2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidATMManager";
-			owner_lazy = () -> CurrencyConversionResponse2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse2Code.mmObject();
+			codeName = CurrencyConversionResponseCode.InvalidATMManager.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -230,26 +241,64 @@ public class CurrencyConversionResponse2Code extends CurrencyConversionResponseC
 	 * name} = "InvalidATM"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalidATM = new MMCode() {
+	public static final CurrencyConversionResponse2Code InvalidATM = new CurrencyConversionResponse2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidATM";
-			owner_lazy = () -> CurrencyConversionResponse2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CurrencyConversionResponse2Code.mmObject();
+			codeName = CurrencyConversionResponseCode.InvalidATM.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CurrencyConversionResponse2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CurrencyConversionResponse2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyConversionResponse2Code";
 				definition = "Result of a requested currency conversion.";
-				code_lazy = () -> Arrays.asList(CurrencyConversionResponse2Code.mmAllowed, CurrencyConversionResponse2Code.mmInvalidCard, CurrencyConversionResponse2Code.mmInvalidProduct, CurrencyConversionResponse2Code.mmNoRate,
-						CurrencyConversionResponse2Code.mmNotAvailable, CurrencyConversionResponse2Code.mmInvalidATMManager, CurrencyConversionResponse2Code.mmInvalidATM);
 				trace_lazy = () -> CurrencyConversionResponseCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CurrencyConversionResponse2Code.Allowed, com.tools20022.repository.codeset.CurrencyConversionResponse2Code.InvalidCard,
+						com.tools20022.repository.codeset.CurrencyConversionResponse2Code.InvalidProduct, com.tools20022.repository.codeset.CurrencyConversionResponse2Code.NoRate,
+						com.tools20022.repository.codeset.CurrencyConversionResponse2Code.NotAvailable, com.tools20022.repository.codeset.CurrencyConversionResponse2Code.InvalidATMManager,
+						com.tools20022.repository.codeset.CurrencyConversionResponse2Code.InvalidATM);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Allowed.getCodeName().get(), Allowed);
+		codesByName.put(InvalidCard.getCodeName().get(), InvalidCard);
+		codesByName.put(InvalidProduct.getCodeName().get(), InvalidProduct);
+		codesByName.put(NoRate.getCodeName().get(), NoRate);
+		codesByName.put(NotAvailable.getCodeName().get(), NotAvailable);
+		codesByName.put(InvalidATMManager.getCodeName().get(), InvalidATMManager);
+		codesByName.put(InvalidATM.getCodeName().get(), InvalidATM);
+	}
+
+	public static CurrencyConversionResponse2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CurrencyConversionResponse2Code[] values() {
+		CurrencyConversionResponse2Code[] values = new CurrencyConversionResponse2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CurrencyConversionResponse2Code> {
+		@Override
+		public CurrencyConversionResponse2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CurrencyConversionResponse2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

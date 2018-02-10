@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DatePeriodDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Range of time defined by a start date and an end date."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DatePeriodDetails2Choice", propOrder = {"fromDate", "toDate", "fromToDate"})
 public class DatePeriodDetails2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FrDt", required = true)
 	protected ISODate fromDate;
 	/**
-	 * Start date of the range.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class DatePeriodDetails2Choice {
 	public static final MMMessageAttribute mmFromDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
-			componentContext_lazy = () -> DatePeriodDetails2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DatePeriodDetails2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class DatePeriodDetails2Choice {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ToDt", required = true)
 	protected ISODate toDate;
 	/**
-	 * End date of the range.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +161,7 @@ public class DatePeriodDetails2Choice {
 	public static final MMMessageAttribute mmToDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
-			componentContext_lazy = () -> DatePeriodDetails2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DatePeriodDetails2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ToDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,10 +172,11 @@ public class DatePeriodDetails2Choice {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "FrToDt", required = true)
 	protected DatePeriodDetails fromToDate;
 	/**
-	 * Range of time between a start date and an end date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -204,7 +208,7 @@ public class DatePeriodDetails2Choice {
 	public static final MMMessageAssociationEnd mmFromToDate = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> DateTimePeriod.mmObject();
-			componentContext_lazy = () -> DatePeriodDetails2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DatePeriodDetails2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrToDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,9 +224,10 @@ public class DatePeriodDetails2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DatePeriodDetails2Choice.mmFromDate, DatePeriodDetails2Choice.mmToDate, DatePeriodDetails2Choice.mmFromToDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DatePeriodDetails2Choice.mmFromDate, com.tools20022.repository.choice.DatePeriodDetails2Choice.mmToDate,
+						com.tools20022.repository.choice.DatePeriodDetails2Choice.mmFromToDate);
 				trace_lazy = () -> DateTimePeriod.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DatePeriodDetails2Choice";
 				definition = "Range of time defined by a start date and an end date.";
@@ -231,30 +236,30 @@ public class DatePeriodDetails2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FrDt", required = true)
 	public ISODate getFromDate() {
 		return fromDate;
 	}
 
-	public void setFromDate(ISODate fromDate) {
-		this.fromDate = fromDate;
+	public DatePeriodDetails2Choice setFromDate(ISODate fromDate) {
+		this.fromDate = Objects.requireNonNull(fromDate);
+		return this;
 	}
 
-	@XmlElement(name = "ToDt", required = true)
 	public ISODate getToDate() {
 		return toDate;
 	}
 
-	public void setToDate(ISODate toDate) {
-		this.toDate = toDate;
+	public DatePeriodDetails2Choice setToDate(ISODate toDate) {
+		this.toDate = Objects.requireNonNull(toDate);
+		return this;
 	}
 
-	@XmlElement(name = "FrToDt", required = true)
 	public DatePeriodDetails getFromToDate() {
 		return fromToDate;
 	}
 
-	public void setFromToDate(DatePeriodDetails fromToDate) {
-		this.fromToDate = fromToDate;
+	public DatePeriodDetails2Choice setFromToDate(DatePeriodDetails fromToDate) {
+		this.fromToDate = Objects.requireNonNull(fromToDate);
+		return this;
 	}
 }

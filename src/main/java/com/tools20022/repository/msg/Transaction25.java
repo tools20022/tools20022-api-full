@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -25,11 +26,9 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -93,8 +92,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forTransaction25
+ * ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction25}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forTransaction25
+ * ConstraintCoexistenceIdentificationRule.forTransaction25}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -106,17 +116,18 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identifies the details of the transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Transaction25", propOrder = {"accountOwner", "safekeepingAccount", "statusAndReason", "accountOwnerTransactionIdentification", "accountServicerTransactionIdentification", "marketInfrastructureTransactionIdentification",
 		"processorTransactionIdentification", "tradeIdentification", "poolIdentification", "commonIdentification", "corporateActionEventIdentification", "tripartyAgentCollateralTransactionIdentification",
 		"clientTripartyCollateralTransactionIdentification", "transactionDetails"})
 public class Transaction25 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctOwnr")
 	protected SystemPartyIdentification5 accountOwner;
 	/**
-	 * Party that owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -148,7 +159,7 @@ public class Transaction25 {
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Transaction25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction25.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,10 +171,11 @@ public class Transaction25 {
 			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgAcct")
 	protected SecuritiesAccount13 safekeepingAccount;
 	/**
-	 * Account where financial instruments are maintained.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -194,7 +206,7 @@ public class Transaction25 {
 	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccount;
-			componentContext_lazy = () -> Transaction25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction25.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,10 +218,11 @@ public class Transaction25 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	@XmlElement(name = "StsAndRsn")
 	protected StatusAndReason15 statusAndReason;
 	/**
-	 * Status and status reason of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -227,6 +240,9 @@ public class Transaction25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StsAndRsn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :16R:STAT [and 16R:REAS]</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -240,9 +256,10 @@ public class Transaction25 {
 	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeStatus;
-			componentContext_lazy = () -> Transaction25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction25.mmObject();
 			isDerived = false;
 			xmlTag = "StsAndRsn";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":16R:STAT [and 16R:REAS]"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReason";
 			definition = "Status and status reason of the transaction.";
@@ -252,11 +269,11 @@ public class Transaction25 {
 			type_lazy = () -> com.tools20022.repository.msg.StatusAndReason15.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnrTxId", required = true)
 	protected Max35Text accountOwnerTransactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as known by the account
-	 * owner (or the instructing party managing the account).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -275,6 +292,9 @@ public class Transaction25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctOwnrTxId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -290,9 +310,10 @@ public class Transaction25 {
 	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
-			componentContext_lazy = () -> Transaction25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction25.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrTxId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account).";
@@ -301,11 +322,11 @@ public class Transaction25 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcrTxId")
 	protected Max35Text accountServicerTransactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as known by the account
-	 * servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -324,6 +345,9 @@ public class Transaction25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctSvcrTxId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::ASRF</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -339,9 +363,10 @@ public class Transaction25 {
 	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
-			componentContext_lazy = () -> Transaction25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction25.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrTxId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::ASRF"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account servicer.";
@@ -350,11 +375,11 @@ public class Transaction25 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MktInfrstrctrTxId")
 	protected Max35Text marketInfrastructureTransactionIdentification;
 	/**
-	 * Identification of a transaction assigned by a market infrastructure other
-	 * than a central securities depository, for example, Target2-Securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -374,6 +399,9 @@ public class Transaction25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MktInfrstrctrTxId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::MITI</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -389,9 +417,10 @@ public class Transaction25 {
 	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification;
-			componentContext_lazy = () -> Transaction25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction25.mmObject();
 			isDerived = false;
 			xmlTag = "MktInfrstrctrTxId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::MITI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketInfrastructureTransactionIdentification";
 			definition = "Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.";
@@ -400,10 +429,11 @@ public class Transaction25 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcrTxId")
 	protected Max35Text processorTransactionIdentification;
 	/**
-	 * Identification of the transaction as assigned by the processor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -436,7 +466,7 @@ public class Transaction25 {
 	public static final MMMessageAttribute mmProcessorTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmProcessorTransactionIdentification;
-			componentContext_lazy = () -> Transaction25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction25.mmObject();
 			isDerived = false;
 			xmlTag = "PrcrTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -447,12 +477,11 @@ public class Transaction25 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TradId")
 	protected List<Max35Text> tradeIdentification;
 	/**
-	 * Reference assigned to the trade by the investor or the trading party.
-	 * This reference will be used throughout the trade life cycle to
-	 * access/update the trade details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -471,6 +500,9 @@ public class Transaction25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::TRRF</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -486,9 +518,10 @@ public class Transaction25 {
 	public static final MMMessageAttribute mmTradeIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
-			componentContext_lazy = () -> Transaction25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction25.mmObject();
 			isDerived = false;
 			xmlTag = "TradId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::TRRF"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeIdentification";
 			definition = "Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.";
@@ -496,10 +529,11 @@ public class Transaction25 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PoolId")
 	protected Max35Text poolIdentification;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -518,6 +552,9 @@ public class Transaction25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PoolId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::POOL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -531,9 +568,10 @@ public class Transaction25 {
 	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmPoolIdentification;
-			componentContext_lazy = () -> Transaction25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction25.mmObject();
 			isDerived = false;
 			xmlTag = "PoolId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::POOL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolIdentification";
 			definition = "Collective reference identifying a set of messages.";
@@ -542,11 +580,11 @@ public class Transaction25 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CmonId")
 	protected Max35Text commonIdentification;
 	/**
-	 * Unique reference agreed upon by the two trade counterparties to identify
-	 * the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -565,6 +603,9 @@ public class Transaction25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CmonId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::COMM</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -580,9 +621,10 @@ public class Transaction25 {
 	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
-			componentContext_lazy = () -> Transaction25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction25.mmObject();
 			isDerived = false;
 			xmlTag = "CmonId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::COMM"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonIdentification";
 			definition = "Unique reference agreed upon by the two trade counterparties to identify the trade.";
@@ -591,11 +633,11 @@ public class Transaction25 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CorpActnEvtId")
 	protected Max35Text corporateActionEventIdentification;
 	/**
-	 * Identification assigned by the account servicer to unambiguously identify
-	 * a corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -614,6 +656,9 @@ public class Transaction25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CorpActnEvtId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::CORP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -629,9 +674,10 @@ public class Transaction25 {
 	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
-			componentContext_lazy = () -> Transaction25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction25.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnEvtId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::CORP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Identification assigned by the account servicer to unambiguously identify a corporate action event.";
@@ -640,11 +686,11 @@ public class Transaction25 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrptyAgtCollTxId")
 	protected Max35Text tripartyAgentCollateralTransactionIdentification;
 	/**
-	 * Unique reference identifying the triparty collateral management
-	 * transaction from the triparty agent's point of view.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -664,6 +710,9 @@ public class Transaction25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TrptyAgtCollTxId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::TCTR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -679,9 +728,10 @@ public class Transaction25 {
 	public static final MMMessageAttribute mmTripartyAgentCollateralTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmTripartyAgentCollateralTransactionIdentification;
-			componentContext_lazy = () -> Transaction25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction25.mmObject();
 			isDerived = false;
 			xmlTag = "TrptyAgtCollTxId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::TCTR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgentCollateralTransactionIdentification";
 			definition = "Unique reference identifying the triparty collateral management transaction from the triparty agent's point of view.";
@@ -690,11 +740,11 @@ public class Transaction25 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntTrptyCollTxId")
 	protected Max35Text clientTripartyCollateralTransactionIdentification;
 	/**
-	 * Unique reference identifying the triparty collateral management
-	 * transaction from the client's point of view.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -714,6 +764,9 @@ public class Transaction25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClntTrptyCollTxId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::CLTR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -729,9 +782,10 @@ public class Transaction25 {
 	public static final MMMessageAttribute mmClientTripartyCollateralTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmClientTripartyCollateralTransactionIdentification;
-			componentContext_lazy = () -> Transaction25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction25.mmObject();
 			isDerived = false;
 			xmlTag = "ClntTrptyCollTxId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::CLTR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientTripartyCollateralTransactionIdentification";
 			definition = "Unique reference identifying the triparty collateral management transaction from the client's point of view.";
@@ -740,10 +794,11 @@ public class Transaction25 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TxDtls")
 	protected TransactionDetails51 transactionDetails;
 	/**
-	 * Identifies additional details of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -761,6 +816,9 @@ public class Transaction25 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TxDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :16R:TRANSDET</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -774,9 +832,10 @@ public class Transaction25 {
 	public static final MMMessageAssociationEnd mmTransactionDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTrade.mmObject();
-			componentContext_lazy = () -> Transaction25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction25.mmObject();
 			isDerived = false;
 			xmlTag = "TxDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":16R:TRANSDET"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Identifies additional details of the transaction.";
@@ -790,12 +849,17 @@ public class Transaction25 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Transaction25.mmAccountOwner, Transaction25.mmSafekeepingAccount, Transaction25.mmStatusAndReason, Transaction25.mmAccountOwnerTransactionIdentification,
-						Transaction25.mmAccountServicerTransactionIdentification, Transaction25.mmMarketInfrastructureTransactionIdentification, Transaction25.mmProcessorTransactionIdentification, Transaction25.mmTradeIdentification,
-						Transaction25.mmPoolIdentification, Transaction25.mmCommonIdentification, Transaction25.mmCorporateActionEventIdentification, Transaction25.mmTripartyAgentCollateralTransactionIdentification,
-						Transaction25.mmClientTripartyCollateralTransactionIdentification, Transaction25.mmTransactionDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction25.mmAccountOwner, com.tools20022.repository.msg.Transaction25.mmSafekeepingAccount,
+						com.tools20022.repository.msg.Transaction25.mmStatusAndReason, com.tools20022.repository.msg.Transaction25.mmAccountOwnerTransactionIdentification,
+						com.tools20022.repository.msg.Transaction25.mmAccountServicerTransactionIdentification, com.tools20022.repository.msg.Transaction25.mmMarketInfrastructureTransactionIdentification,
+						com.tools20022.repository.msg.Transaction25.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction25.mmTradeIdentification, com.tools20022.repository.msg.Transaction25.mmPoolIdentification,
+						com.tools20022.repository.msg.Transaction25.mmCommonIdentification, com.tools20022.repository.msg.Transaction25.mmCorporateActionEventIdentification,
+						com.tools20022.repository.msg.Transaction25.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction25.mmClientTripartyCollateralTransactionIdentification,
+						com.tools20022.repository.msg.Transaction25.mmTransactionDetails);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction25,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransaction25);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -811,129 +875,129 @@ public class Transaction25 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public SystemPartyIdentification5 getAccountOwner() {
-		return accountOwner;
+	public Optional<SystemPartyIdentification5> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification5 accountOwner) {
+	public Transaction25 setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification5 accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct")
-	public SecuritiesAccount13 getSafekeepingAccount() {
-		return safekeepingAccount;
+	public Optional<SecuritiesAccount13> getSafekeepingAccount() {
+		return safekeepingAccount == null ? Optional.empty() : Optional.of(safekeepingAccount);
 	}
 
-	public void setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
+	public Transaction25 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
 		this.safekeepingAccount = safekeepingAccount;
+		return this;
 	}
 
-	@XmlElement(name = "StsAndRsn")
-	public StatusAndReason15 getStatusAndReason() {
-		return statusAndReason;
+	public Optional<StatusAndReason15> getStatusAndReason() {
+		return statusAndReason == null ? Optional.empty() : Optional.of(statusAndReason);
 	}
 
-	public void setStatusAndReason(com.tools20022.repository.msg.StatusAndReason15 statusAndReason) {
+	public Transaction25 setStatusAndReason(com.tools20022.repository.msg.StatusAndReason15 statusAndReason) {
 		this.statusAndReason = statusAndReason;
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnrTxId", required = true)
 	public Max35Text getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
 
-	public void setAccountOwnerTransactionIdentification(Max35Text accountOwnerTransactionIdentification) {
-		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
+	public Transaction25 setAccountOwnerTransactionIdentification(Max35Text accountOwnerTransactionIdentification) {
+		this.accountOwnerTransactionIdentification = Objects.requireNonNull(accountOwnerTransactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcrTxId")
-	public Max35Text getAccountServicerTransactionIdentification() {
-		return accountServicerTransactionIdentification;
+	public Optional<Max35Text> getAccountServicerTransactionIdentification() {
+		return accountServicerTransactionIdentification == null ? Optional.empty() : Optional.of(accountServicerTransactionIdentification);
 	}
 
-	public void setAccountServicerTransactionIdentification(Max35Text accountServicerTransactionIdentification) {
+	public Transaction25 setAccountServicerTransactionIdentification(Max35Text accountServicerTransactionIdentification) {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "MktInfrstrctrTxId")
-	public Max35Text getMarketInfrastructureTransactionIdentification() {
-		return marketInfrastructureTransactionIdentification;
+	public Optional<Max35Text> getMarketInfrastructureTransactionIdentification() {
+		return marketInfrastructureTransactionIdentification == null ? Optional.empty() : Optional.of(marketInfrastructureTransactionIdentification);
 	}
 
-	public void setMarketInfrastructureTransactionIdentification(Max35Text marketInfrastructureTransactionIdentification) {
+	public Transaction25 setMarketInfrastructureTransactionIdentification(Max35Text marketInfrastructureTransactionIdentification) {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PrcrTxId")
-	public Max35Text getProcessorTransactionIdentification() {
-		return processorTransactionIdentification;
+	public Optional<Max35Text> getProcessorTransactionIdentification() {
+		return processorTransactionIdentification == null ? Optional.empty() : Optional.of(processorTransactionIdentification);
 	}
 
-	public void setProcessorTransactionIdentification(Max35Text processorTransactionIdentification) {
+	public Transaction25 setProcessorTransactionIdentification(Max35Text processorTransactionIdentification) {
 		this.processorTransactionIdentification = processorTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TradId")
 	public List<Max35Text> getTradeIdentification() {
-		return tradeIdentification;
+		return tradeIdentification == null ? tradeIdentification = new ArrayList<>() : tradeIdentification;
 	}
 
-	public void setTradeIdentification(List<Max35Text> tradeIdentification) {
-		this.tradeIdentification = tradeIdentification;
+	public Transaction25 setTradeIdentification(List<Max35Text> tradeIdentification) {
+		this.tradeIdentification = Objects.requireNonNull(tradeIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PoolId")
-	public Max35Text getPoolIdentification() {
-		return poolIdentification;
+	public Optional<Max35Text> getPoolIdentification() {
+		return poolIdentification == null ? Optional.empty() : Optional.of(poolIdentification);
 	}
 
-	public void setPoolIdentification(Max35Text poolIdentification) {
+	public Transaction25 setPoolIdentification(Max35Text poolIdentification) {
 		this.poolIdentification = poolIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CmonId")
-	public Max35Text getCommonIdentification() {
-		return commonIdentification;
+	public Optional<Max35Text> getCommonIdentification() {
+		return commonIdentification == null ? Optional.empty() : Optional.of(commonIdentification);
 	}
 
-	public void setCommonIdentification(Max35Text commonIdentification) {
+	public Transaction25 setCommonIdentification(Max35Text commonIdentification) {
 		this.commonIdentification = commonIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnEvtId")
-	public Max35Text getCorporateActionEventIdentification() {
-		return corporateActionEventIdentification;
+	public Optional<Max35Text> getCorporateActionEventIdentification() {
+		return corporateActionEventIdentification == null ? Optional.empty() : Optional.of(corporateActionEventIdentification);
 	}
 
-	public void setCorporateActionEventIdentification(Max35Text corporateActionEventIdentification) {
+	public Transaction25 setCorporateActionEventIdentification(Max35Text corporateActionEventIdentification) {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TrptyAgtCollTxId")
-	public Max35Text getTripartyAgentCollateralTransactionIdentification() {
-		return tripartyAgentCollateralTransactionIdentification;
+	public Optional<Max35Text> getTripartyAgentCollateralTransactionIdentification() {
+		return tripartyAgentCollateralTransactionIdentification == null ? Optional.empty() : Optional.of(tripartyAgentCollateralTransactionIdentification);
 	}
 
-	public void setTripartyAgentCollateralTransactionIdentification(Max35Text tripartyAgentCollateralTransactionIdentification) {
+	public Transaction25 setTripartyAgentCollateralTransactionIdentification(Max35Text tripartyAgentCollateralTransactionIdentification) {
 		this.tripartyAgentCollateralTransactionIdentification = tripartyAgentCollateralTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ClntTrptyCollTxId")
-	public Max35Text getClientTripartyCollateralTransactionIdentification() {
-		return clientTripartyCollateralTransactionIdentification;
+	public Optional<Max35Text> getClientTripartyCollateralTransactionIdentification() {
+		return clientTripartyCollateralTransactionIdentification == null ? Optional.empty() : Optional.of(clientTripartyCollateralTransactionIdentification);
 	}
 
-	public void setClientTripartyCollateralTransactionIdentification(Max35Text clientTripartyCollateralTransactionIdentification) {
+	public Transaction25 setClientTripartyCollateralTransactionIdentification(Max35Text clientTripartyCollateralTransactionIdentification) {
 		this.clientTripartyCollateralTransactionIdentification = clientTripartyCollateralTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TxDtls")
-	public TransactionDetails51 getTransactionDetails() {
-		return transactionDetails;
+	public Optional<TransactionDetails51> getTransactionDetails() {
+		return transactionDetails == null ? Optional.empty() : Optional.of(transactionDetails);
 	}
 
-	public void setTransactionDetails(com.tools20022.repository.msg.TransactionDetails51 transactionDetails) {
+	public Transaction25 setTransactionDetails(com.tools20022.repository.msg.TransactionDetails51 transactionDetails) {
 		this.transactionDetails = transactionDetails;
+		return this;
 	}
 }

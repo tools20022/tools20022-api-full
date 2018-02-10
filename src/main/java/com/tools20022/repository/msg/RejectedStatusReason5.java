@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherStatusRule#forRejectedStatusReason5
+ * ConstraintOtherStatusRule.forRejectedStatusReason5}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Reason for a rejected status."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RejectedStatusReason5", propOrder = {"structured", "additionalInformation"})
 public class RejectedStatusReason5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Strd", required = true)
 	protected TransferRejectedStatusReason1Code structured;
 	/**
-	 * Reason for a rejected status in structured form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +121,7 @@ public class RejectedStatusReason5 {
 	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
-			componentContext_lazy = () -> RejectedStatusReason5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatusReason5.mmObject();
 			isDerived = false;
 			xmlTag = "Strd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,11 +132,11 @@ public class RejectedStatusReason5 {
 			simpleType_lazy = () -> TransferRejectedStatusReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected Max350Text additionalInformation;
 	/**
-	 * Additional information about the reason for the rejected status in
-	 * textual form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +171,7 @@ public class RejectedStatusReason5 {
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> RejectedStatusReason5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatusReason5.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,9 +186,10 @@ public class RejectedStatusReason5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RejectedStatusReason5.mmStructured, RejectedStatusReason5.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedStatusReason5.mmStructured, com.tools20022.repository.msg.RejectedStatusReason5.mmAdditionalInformation);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherStatusRule.forRejectedStatusReason5);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectedStatusReason5";
 				definition = "Reason for a rejected status.";
@@ -186,21 +198,21 @@ public class RejectedStatusReason5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Strd", required = true)
 	public TransferRejectedStatusReason1Code getStructured() {
 		return structured;
 	}
 
-	public void setStructured(TransferRejectedStatusReason1Code structured) {
-		this.structured = structured;
+	public RejectedStatusReason5 setStructured(TransferRejectedStatusReason1Code structured) {
+		this.structured = Objects.requireNonNull(structured);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public Max350Text getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<Max350Text> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(Max350Text additionalInformation) {
+	public RejectedStatusReason5 setAdditionalInformation(Max350Text additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 }

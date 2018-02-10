@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PartyRoleCode;
+import com.tools20022.repository.codeset.PartyRole1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the role of the party in the transaction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode PartyRoleCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRole1Code#mmCustodian
- * PartyRole1Code.mmCustodian}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyRole1Code#mmInvestor
- * PartyRole1Code.mmInvestor}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyRole1Code#Custodian
+ * PartyRole1Code.Custodian}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyRole1Code#Investor
+ * PartyRole1Code.Investor}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode PartyRoleCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,7 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the role of the party in the transaction."</li>
  * </ul>
  */
-public class PartyRole1Code extends PartyRoleCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PartyRole1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -74,11 +79,12 @@ public class PartyRole1Code extends PartyRoleCode {
 	 * name} = "Custodian"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustodian = new MMCode() {
+	public static final PartyRole1Code Custodian = new PartyRole1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Custodian";
-			owner_lazy = () -> PartyRole1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyRole1Code.mmObject();
+			codeName = PartyRoleCode.Custodian.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -97,25 +103,56 @@ public class PartyRole1Code extends PartyRoleCode {
 	 * name} = "Investor"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestor = new MMCode() {
+	public static final PartyRole1Code Investor = new PartyRole1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
-			owner_lazy = () -> PartyRole1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyRole1Code.mmObject();
+			codeName = PartyRoleCode.Investor.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PartyRole1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PartyRole1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyRole1Code";
 				definition = "Specifies the role of the party in the transaction.";
-				code_lazy = () -> Arrays.asList(PartyRole1Code.mmCustodian, PartyRole1Code.mmInvestor);
 				trace_lazy = () -> PartyRoleCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyRole1Code.Custodian, com.tools20022.repository.codeset.PartyRole1Code.Investor);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Custodian.getCodeName().get(), Custodian);
+		codesByName.put(Investor.getCodeName().get(), Investor);
+	}
+
+	public static PartyRole1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PartyRole1Code[] values() {
+		PartyRole1Code[] values = new PartyRole1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PartyRole1Code> {
+		@Override
+		public PartyRole1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PartyRole1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

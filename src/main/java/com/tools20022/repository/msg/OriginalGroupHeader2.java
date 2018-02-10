@@ -28,9 +28,8 @@ import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -86,8 +85,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,16 +98,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides information on the original group, to which the message refers."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OriginalGroupHeader2", propOrder = {"originalMessageIdentification", "originalMessageNameIdentification", "originalCreationDateTime", "returnReasonInformation"})
 public class OriginalGroupHeader2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgnlMsgId", required = true)
 	protected Max35Text originalMessageIdentification;
 	/**
-	 * Point to point reference, as assigned by the original instructing party,
-	 * to unambiguously identify the original message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +142,7 @@ public class OriginalGroupHeader2 {
 	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
-			componentContext_lazy = () -> OriginalGroupHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,11 +153,11 @@ public class OriginalGroupHeader2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlMsgNmId", required = true)
 	protected Max35Text originalMessageNameIdentification;
 	/**
-	 * Specifies the original message name identifier to which the message
-	 * refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,7 +186,7 @@ public class OriginalGroupHeader2 {
 	 */
 	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OriginalGroupHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgNmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,10 +197,11 @@ public class OriginalGroupHeader2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlCreDtTm")
 	protected ISODateTime originalCreationDateTime;
 	/**
-	 * Date and time at which the original message was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,7 +234,7 @@ public class OriginalGroupHeader2 {
 	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
-			componentContext_lazy = () -> OriginalGroupHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,10 +245,11 @@ public class OriginalGroupHeader2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "RtrRsnInf")
 	protected List<com.tools20022.repository.msg.PaymentReturnReason1> returnReasonInformation;
 	/**
-	 * Provides detailed information on the return reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -280,7 +281,7 @@ public class OriginalGroupHeader2 {
 	public static final MMMessageAssociationEnd mmReturnReasonInformation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
-			componentContext_lazy = () -> OriginalGroupHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "RtrRsnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -295,12 +296,12 @@ public class OriginalGroupHeader2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OriginalGroupHeader2.mmOriginalMessageIdentification, OriginalGroupHeader2.mmOriginalMessageNameIdentification, OriginalGroupHeader2.mmOriginalCreationDateTime,
-						OriginalGroupHeader2.mmReturnReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalGroupHeader2.mmOriginalMessageIdentification, com.tools20022.repository.msg.OriginalGroupHeader2.mmOriginalMessageNameIdentification,
+						com.tools20022.repository.msg.OriginalGroupHeader2.mmOriginalCreationDateTime, com.tools20022.repository.msg.OriginalGroupHeader2.mmReturnReasonInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(PaymentReturnV03.mmOriginalGroupInformation, PaymentReturnV04.mmOriginalGroupInformation, PaymentReturnV05.mmOriginalGroupInformation,
 						PaymentReturnV06.mmOriginalGroupInformation, PaymentReturnV07.mmOriginalGroupInformation);
 				trace_lazy = () -> PaymentExecution.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalGroupHeader2";
 				definition = "Provides information on the original group, to which the message refers.";
@@ -309,39 +310,39 @@ public class OriginalGroupHeader2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgnlMsgId", required = true)
 	public Max35Text getOriginalMessageIdentification() {
 		return originalMessageIdentification;
 	}
 
-	public void setOriginalMessageIdentification(Max35Text originalMessageIdentification) {
-		this.originalMessageIdentification = originalMessageIdentification;
+	public OriginalGroupHeader2 setOriginalMessageIdentification(Max35Text originalMessageIdentification) {
+		this.originalMessageIdentification = Objects.requireNonNull(originalMessageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlMsgNmId", required = true)
 	public Max35Text getOriginalMessageNameIdentification() {
 		return originalMessageNameIdentification;
 	}
 
-	public void setOriginalMessageNameIdentification(Max35Text originalMessageNameIdentification) {
-		this.originalMessageNameIdentification = originalMessageNameIdentification;
+	public OriginalGroupHeader2 setOriginalMessageNameIdentification(Max35Text originalMessageNameIdentification) {
+		this.originalMessageNameIdentification = Objects.requireNonNull(originalMessageNameIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlCreDtTm")
-	public ISODateTime getOriginalCreationDateTime() {
-		return originalCreationDateTime;
+	public Optional<ISODateTime> getOriginalCreationDateTime() {
+		return originalCreationDateTime == null ? Optional.empty() : Optional.of(originalCreationDateTime);
 	}
 
-	public void setOriginalCreationDateTime(ISODateTime originalCreationDateTime) {
+	public OriginalGroupHeader2 setOriginalCreationDateTime(ISODateTime originalCreationDateTime) {
 		this.originalCreationDateTime = originalCreationDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "RtrRsnInf")
 	public List<PaymentReturnReason1> getReturnReasonInformation() {
-		return returnReasonInformation;
+		return returnReasonInformation == null ? returnReasonInformation = new ArrayList<>() : returnReasonInformation;
 	}
 
-	public void setReturnReasonInformation(List<com.tools20022.repository.msg.PaymentReturnReason1> returnReasonInformation) {
-		this.returnReasonInformation = returnReasonInformation;
+	public OriginalGroupHeader2 setReturnReasonInformation(List<com.tools20022.repository.msg.PaymentReturnReason1> returnReasonInformation) {
+		this.returnReasonInformation = Objects.requireNonNull(returnReasonInformation);
+		return this;
 	}
 }

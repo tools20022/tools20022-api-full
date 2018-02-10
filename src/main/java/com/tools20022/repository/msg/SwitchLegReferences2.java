@@ -25,9 +25,8 @@ import com.tools20022.repository.choice.LegIdentification1Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * SwitchLegReferences1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SwitchLegReferences2", propOrder = {"legIdentification", "legRejectionReason", "repairedFee", "investmentAccountDetails", "financialInstrumentDetails"})
 public class SwitchLegReferences2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LegId", required = true)
 	protected LegIdentification1Choice legIdentification;
 	/**
-	 * Identification of a switch leg.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -122,7 +122,7 @@ public class SwitchLegReferences2 {
 	public static final MMMessageAssociationEnd mmLegIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
-			componentContext_lazy = () -> SwitchLegReferences2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchLegReferences2.mmObject();
 			isDerived = false;
 			xmlTag = "LegId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +134,11 @@ public class SwitchLegReferences2 {
 			type_lazy = () -> LegIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LegRjctnRsn")
 	protected Max350Text legRejectionReason;
 	/**
-	 * Additional information about the reason for the rejection of the leg.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,7 +177,7 @@ public class SwitchLegReferences2 {
 	public static final MMMessageAttribute mmLegRejectionReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
-			componentContext_lazy = () -> SwitchLegReferences2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchLegReferences2.mmObject();
 			isDerived = false;
 			xmlTag = "LegRjctnRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,11 +189,11 @@ public class SwitchLegReferences2 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RprdFee")
 	protected List<com.tools20022.repository.msg.Fee3> repairedFee;
 	/**
-	 * Elements from the original individual order that have been repaired so
-	 * that the order can be accepted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -224,7 +225,7 @@ public class SwitchLegReferences2 {
 	public static final MMMessageAssociationEnd mmRepairedFee = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Charges.mmObject();
-			componentContext_lazy = () -> SwitchLegReferences2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchLegReferences2.mmObject();
 			isDerived = false;
 			xmlTag = "RprdFee";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,10 +237,11 @@ public class SwitchLegReferences2 {
 			type_lazy = () -> com.tools20022.repository.msg.Fee3.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstmtAcctDtls")
 	protected InvestmentAccount58 investmentAccountDetails;
 	/**
-	 * Account identification of the switch leg that is rejected or repaired.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -277,7 +279,7 @@ public class SwitchLegReferences2 {
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
-			componentContext_lazy = () -> SwitchLegReferences2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchLegReferences2.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -290,11 +292,11 @@ public class SwitchLegReferences2 {
 			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount58.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmDtls")
 	protected FinancialInstrument57 financialInstrumentDetails;
 	/**
-	 * Financial instrument identification of the switch leg that is rejected or
-	 * repaired.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -333,7 +335,7 @@ public class SwitchLegReferences2 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
-			componentContext_lazy = () -> SwitchLegReferences2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchLegReferences2.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -350,10 +352,11 @@ public class SwitchLegReferences2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SwitchLegReferences2.mmLegIdentification, SwitchLegReferences2.mmLegRejectionReason, SwitchLegReferences2.mmRepairedFee, SwitchLegReferences2.mmInvestmentAccountDetails,
-						SwitchLegReferences2.mmFinancialInstrumentDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchLegReferences2.mmLegIdentification, com.tools20022.repository.msg.SwitchLegReferences2.mmLegRejectionReason,
+						com.tools20022.repository.msg.SwitchLegReferences2.mmRepairedFee, com.tools20022.repository.msg.SwitchLegReferences2.mmInvestmentAccountDetails,
+						com.tools20022.repository.msg.SwitchLegReferences2.mmFinancialInstrumentDetails);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchLegReferences2";
 				definition = "Information about a switch leg that is rejected or repaired.";
@@ -363,48 +366,48 @@ public class SwitchLegReferences2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LegId", required = true)
 	public LegIdentification1Choice getLegIdentification() {
 		return legIdentification;
 	}
 
-	public void setLegIdentification(LegIdentification1Choice legIdentification) {
-		this.legIdentification = legIdentification;
+	public SwitchLegReferences2 setLegIdentification(LegIdentification1Choice legIdentification) {
+		this.legIdentification = Objects.requireNonNull(legIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "LegRjctnRsn")
-	public Max350Text getLegRejectionReason() {
-		return legRejectionReason;
+	public Optional<Max350Text> getLegRejectionReason() {
+		return legRejectionReason == null ? Optional.empty() : Optional.of(legRejectionReason);
 	}
 
-	public void setLegRejectionReason(Max350Text legRejectionReason) {
+	public SwitchLegReferences2 setLegRejectionReason(Max350Text legRejectionReason) {
 		this.legRejectionReason = legRejectionReason;
+		return this;
 	}
 
-	@XmlElement(name = "RprdFee")
 	public List<Fee3> getRepairedFee() {
-		return repairedFee;
+		return repairedFee == null ? repairedFee = new ArrayList<>() : repairedFee;
 	}
 
-	public void setRepairedFee(List<com.tools20022.repository.msg.Fee3> repairedFee) {
-		this.repairedFee = repairedFee;
+	public SwitchLegReferences2 setRepairedFee(List<com.tools20022.repository.msg.Fee3> repairedFee) {
+		this.repairedFee = Objects.requireNonNull(repairedFee);
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtAcctDtls")
-	public InvestmentAccount58 getInvestmentAccountDetails() {
-		return investmentAccountDetails;
+	public Optional<InvestmentAccount58> getInvestmentAccountDetails() {
+		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public void setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount58 investmentAccountDetails) {
+	public SwitchLegReferences2 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount58 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmDtls")
-	public FinancialInstrument57 getFinancialInstrumentDetails() {
-		return financialInstrumentDetails;
+	public Optional<FinancialInstrument57> getFinancialInstrumentDetails() {
+		return financialInstrumentDetails == null ? Optional.empty() : Optional.of(financialInstrumentDetails);
 	}
 
-	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument57 financialInstrumentDetails) {
+	public SwitchLegReferences2 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument57 financialInstrumentDetails) {
 		this.financialInstrumentDetails = financialInstrumentDetails;
+		return this;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintParameterRule#forBreakdownByUserDefinedParameter2
+ * ConstraintParameterRule.forBreakdownByUserDefinedParameter2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Specifies the cash-in and cash-out flows by a user defined parameter/s."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BreakdownByUserDefinedParameter2", propOrder = {"party", "country", "currency", "userDefined"})
 public class BreakdownByUserDefinedParameter2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pty")
 	protected PartyIdentification2Choice party;
 	/**
-	 * Party for which the cash flow is being reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +117,7 @@ public class BreakdownByUserDefinedParameter2 {
 	 */
 	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BreakdownByUserDefinedParameter2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter2.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +128,11 @@ public class BreakdownByUserDefinedParameter2 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Ctry")
 	protected CountryCode country;
 	/**
-	 * Country for which the cash flow is being reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,7 +159,7 @@ public class BreakdownByUserDefinedParameter2 {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BreakdownByUserDefinedParameter2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter2.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,10 +170,11 @@ public class BreakdownByUserDefinedParameter2 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected ActiveOrHistoricCurrencyCode currency;
 	/**
-	 * Currency for which the cash flow is being reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +202,7 @@ public class BreakdownByUserDefinedParameter2 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BreakdownByUserDefinedParameter2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter2.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,10 +213,11 @@ public class BreakdownByUserDefinedParameter2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "UsrDfnd")
 	protected DataFormat2Choice userDefined;
 	/**
-	 * Parameter for which the cash flow is being reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -232,7 +245,7 @@ public class BreakdownByUserDefinedParameter2 {
 	 */
 	public static final MMMessageAttribute mmUserDefined = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BreakdownByUserDefinedParameter2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter2.mmObject();
 			isDerived = false;
 			xmlTag = "UsrDfnd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -247,8 +260,10 @@ public class BreakdownByUserDefinedParameter2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BreakdownByUserDefinedParameter2.mmParty, BreakdownByUserDefinedParameter2.mmCountry, BreakdownByUserDefinedParameter2.mmCurrency, BreakdownByUserDefinedParameter2.mmUserDefined);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByUserDefinedParameter2.mmParty, com.tools20022.repository.msg.BreakdownByUserDefinedParameter2.mmCountry,
+						com.tools20022.repository.msg.BreakdownByUserDefinedParameter2.mmCurrency, com.tools20022.repository.msg.BreakdownByUserDefinedParameter2.mmUserDefined);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintParameterRule.forBreakdownByUserDefinedParameter2);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BreakdownByUserDefinedParameter2";
 				definition = "Specifies the cash-in and cash-out flows by a user defined parameter/s.";
@@ -257,39 +272,39 @@ public class BreakdownByUserDefinedParameter2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pty")
-	public PartyIdentification2Choice getParty() {
-		return party;
+	public Optional<PartyIdentification2Choice> getParty() {
+		return party == null ? Optional.empty() : Optional.of(party);
 	}
 
-	public void setParty(PartyIdentification2Choice party) {
+	public BreakdownByUserDefinedParameter2 setParty(PartyIdentification2Choice party) {
 		this.party = party;
+		return this;
 	}
 
-	@XmlElement(name = "Ctry")
-	public CountryCode getCountry() {
-		return country;
+	public Optional<CountryCode> getCountry() {
+		return country == null ? Optional.empty() : Optional.of(country);
 	}
 
-	public void setCountry(CountryCode country) {
+	public BreakdownByUserDefinedParameter2 setCountry(CountryCode country) {
 		this.country = country;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public ActiveOrHistoricCurrencyCode getCurrency() {
-		return currency;
+	public Optional<ActiveOrHistoricCurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(ActiveOrHistoricCurrencyCode currency) {
+	public BreakdownByUserDefinedParameter2 setCurrency(ActiveOrHistoricCurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "UsrDfnd")
-	public DataFormat2Choice getUserDefined() {
-		return userDefined;
+	public Optional<DataFormat2Choice> getUserDefined() {
+		return userDefined == null ? Optional.empty() : Optional.of(userDefined);
 	}
 
-	public void setUserDefined(DataFormat2Choice userDefined) {
+	public BreakdownByUserDefinedParameter2 setUserDefined(DataFormat2Choice userDefined) {
 		this.userDefined = userDefined;
+		return this;
 	}
 }

@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ATMCustomerProfileCode;
+import com.tools20022.repository.codeset.ATMCustomerProfile1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Describes the main way customer information was collected to build up the
@@ -31,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfileCode
- * ATMCustomerProfileCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfile1Code#mmCardInformation
- * ATMCustomerProfile1Code.mmCardInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfile1Code#CardInformation
+ * ATMCustomerProfile1Code.CardInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfile1Code#mmOtherRequest
- * ATMCustomerProfile1Code.mmOtherRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfile1Code#OtherRequest
+ * ATMCustomerProfile1Code.OtherRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfile1Code#mmProfileRequest
- * ATMCustomerProfile1Code.mmProfileRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfile1Code#ProfileRequest
+ * ATMCustomerProfile1Code.ProfileRequest}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ATMCustomerProfileCode
+ * ATMCustomerProfileCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ATMCustomerProfile1Code extends ATMCustomerProfileCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ATMCustomerProfile1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class ATMCustomerProfile1Code extends ATMCustomerProfileCode {
 	 * name} = "CardInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardInformation = new MMCode() {
+	public static final ATMCustomerProfile1Code CardInformation = new ATMCustomerProfile1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardInformation";
-			owner_lazy = () -> ATMCustomerProfile1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCustomerProfile1Code.mmObject();
+			codeName = ATMCustomerProfileCode.CardInformation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,11 +112,12 @@ public class ATMCustomerProfile1Code extends ATMCustomerProfileCode {
 	 * name} = "OtherRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherRequest = new MMCode() {
+	public static final ATMCustomerProfile1Code OtherRequest = new ATMCustomerProfile1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherRequest";
-			owner_lazy = () -> ATMCustomerProfile1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCustomerProfile1Code.mmObject();
+			codeName = ATMCustomerProfileCode.OtherRequest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -129,25 +136,58 @@ public class ATMCustomerProfile1Code extends ATMCustomerProfileCode {
 	 * name} = "ProfileRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProfileRequest = new MMCode() {
+	public static final ATMCustomerProfile1Code ProfileRequest = new ATMCustomerProfile1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileRequest";
-			owner_lazy = () -> ATMCustomerProfile1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCustomerProfile1Code.mmObject();
+			codeName = ATMCustomerProfileCode.ProfileRequest.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ATMCustomerProfile1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ATMCustomerProfile1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomerProfile1Code";
 				definition = "Describes the main way customer information was collected to build up the customer menu and the withdrawal request.";
-				code_lazy = () -> Arrays.asList(ATMCustomerProfile1Code.mmCardInformation, ATMCustomerProfile1Code.mmOtherRequest, ATMCustomerProfile1Code.mmProfileRequest);
 				trace_lazy = () -> ATMCustomerProfileCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCustomerProfile1Code.CardInformation, com.tools20022.repository.codeset.ATMCustomerProfile1Code.OtherRequest,
+						com.tools20022.repository.codeset.ATMCustomerProfile1Code.ProfileRequest);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CardInformation.getCodeName().get(), CardInformation);
+		codesByName.put(OtherRequest.getCodeName().get(), OtherRequest);
+		codesByName.put(ProfileRequest.getCodeName().get(), ProfileRequest);
+	}
+
+	public static ATMCustomerProfile1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ATMCustomerProfile1Code[] values() {
+		ATMCustomerProfile1Code[] values = new ATMCustomerProfile1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ATMCustomerProfile1Code> {
+		@Override
+		public ATMCustomerProfile1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ATMCustomerProfile1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

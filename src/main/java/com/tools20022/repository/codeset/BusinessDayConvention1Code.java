@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.BusinessDayConventionCode;
+import com.tools20022.repository.codeset.BusinessDayConvention1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates how a date is adjusted when it falls on a non-business day.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.BusinessDayConventionCode
- * BusinessDayConventionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessDayConvention1Code#mmFollowing
- * BusinessDayConvention1Code.mmFollowing}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessDayConvention1Code#Following
+ * BusinessDayConvention1Code.Following}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessDayConvention1Code#mmPreceding
- * BusinessDayConvention1Code.mmPreceding}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessDayConvention1Code#Preceding
+ * BusinessDayConvention1Code.Preceding}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.BusinessDayConventionCode
+ * BusinessDayConventionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Indicates how a date is adjusted when it falls on a non-business day."</li>
  * </ul>
  */
-public class BusinessDayConvention1Code extends BusinessDayConventionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BusinessDayConvention1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +89,12 @@ public class BusinessDayConvention1Code extends BusinessDayConventionCode {
 	 * name} = "Following"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFollowing = new MMCode() {
+	public static final BusinessDayConvention1Code Following = new BusinessDayConvention1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Following";
-			owner_lazy = () -> BusinessDayConvention1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BusinessDayConvention1Code.mmObject();
+			codeName = BusinessDayConventionCode.Following.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,26 +113,57 @@ public class BusinessDayConvention1Code extends BusinessDayConventionCode {
 	 * name} = "Preceding"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreceding = new MMCode() {
+	public static final BusinessDayConvention1Code Preceding = new BusinessDayConvention1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Preceding";
-			owner_lazy = () -> BusinessDayConvention1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BusinessDayConvention1Code.mmObject();
+			codeName = BusinessDayConventionCode.Preceding.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, BusinessDayConvention1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BusinessDayConvention1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FWNG");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BusinessDayConvention1Code";
 				definition = "Indicates how a date is adjusted when it falls on a non-business day.";
-				code_lazy = () -> Arrays.asList(BusinessDayConvention1Code.mmFollowing, BusinessDayConvention1Code.mmPreceding);
 				trace_lazy = () -> BusinessDayConventionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BusinessDayConvention1Code.Following, com.tools20022.repository.codeset.BusinessDayConvention1Code.Preceding);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Following.getCodeName().get(), Following);
+		codesByName.put(Preceding.getCodeName().get(), Preceding);
+	}
+
+	public static BusinessDayConvention1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BusinessDayConvention1Code[] values() {
+		BusinessDayConvention1Code[] values = new BusinessDayConvention1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BusinessDayConvention1Code> {
+		@Override
+		public BusinessDayConvention1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BusinessDayConvention1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

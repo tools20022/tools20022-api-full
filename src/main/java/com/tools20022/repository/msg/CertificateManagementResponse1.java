@@ -27,9 +27,8 @@ import com.tools20022.repository.datatype.Max10KBinary;
 import com.tools20022.repository.datatype.Max3000Binary;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -82,8 +81,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,16 +94,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Information related to the result of the certificate management request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CertificateManagementResponse1", propOrder = {"POIIdentification", "TMIdentification", "certificateService", "result", "securityProfile", "clientCertificate", "clientCertificatePath", "serverCertificatePath"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CertificateManagementResponse1", propOrder = {"pOIIdentification", "tMIdentification", "certificateService", "result", "securityProfile", "clientCertificate", "clientCertificatePath", "serverCertificatePath"})
 public class CertificateManagementResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "POIId", required = true)
 	protected GenericIdentification72 pOIIdentification;
 	/**
-	 * Identification of the terminal or system using the certificate management
-	 * service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -133,7 +132,7 @@ public class CertificateManagementResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CertificateManagementResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "POIId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,11 +144,11 @@ public class CertificateManagementResponse1 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification72.mmObject();
 		}
 	};
+	@XmlElement(name = "TMId")
 	protected GenericIdentification72 tMIdentification;
 	/**
-	 * Identification of the TM or the MTM providing the Certificate Authority
-	 * service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -178,7 +177,7 @@ public class CertificateManagementResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmTMIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CertificateManagementResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "TMId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,10 +189,11 @@ public class CertificateManagementResponse1 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification72.mmObject();
 		}
 	};
+	@XmlElement(name = "CertSvc", required = true)
 	protected CardPaymentServiceType10Code certificateService;
 	/**
-	 * Requested certificate management service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -221,7 +221,7 @@ public class CertificateManagementResponse1 {
 	 */
 	public static final MMMessageAttribute mmCertificateService = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CertificateManagementResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "CertSvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,10 +232,11 @@ public class CertificateManagementResponse1 {
 			simpleType_lazy = () -> CardPaymentServiceType10Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Rslt", required = true)
 	protected ResponseType6 result;
 	/**
-	 * Outcome of the certificate service processing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -261,7 +262,7 @@ public class CertificateManagementResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmResult = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CertificateManagementResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Rslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,11 +274,11 @@ public class CertificateManagementResponse1 {
 			type_lazy = () -> com.tools20022.repository.msg.ResponseType6.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyPrfl")
 	protected Max35Text securityProfile;
 	/**
-	 * Identification of the security profile, for creation, renewal or
-	 * revocation of certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -306,7 +307,7 @@ public class CertificateManagementResponse1 {
 	 */
 	public static final MMMessageAttribute mmSecurityProfile = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CertificateManagementResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyPrfl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -317,10 +318,11 @@ public class CertificateManagementResponse1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntCert")
 	protected Max3000Binary clientCertificate;
 	/**
-	 * Created or renewed certificate. The certificate is ASN.1/DER encoded.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -349,7 +351,7 @@ public class CertificateManagementResponse1 {
 	 */
 	public static final MMMessageAttribute mmClientCertificate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CertificateManagementResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "ClntCert";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -360,12 +362,11 @@ public class CertificateManagementResponse1 {
 			simpleType_lazy = () -> Max3000Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntCertPth")
 	protected List<Max10KBinary> clientCertificatePath;
 	/**
-	 * Certificate of the client certificate path, from the CA (Certificate
-	 * Authority) certificate, to the root certificate, for renewal or
-	 * revocation of certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -395,7 +396,7 @@ public class CertificateManagementResponse1 {
 	 */
 	public static final MMMessageAttribute mmClientCertificatePath = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CertificateManagementResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "ClntCertPth";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -405,12 +406,11 @@ public class CertificateManagementResponse1 {
 			simpleType_lazy = () -> Max10KBinary.mmObject();
 		}
 	};
+	@XmlElement(name = "SvrCertPth")
 	protected List<Max10KBinary> serverCertificatePath;
 	/**
-	 * Certificate of the server certificate path, from the CA (Certificate
-	 * Authority) certificate, to the root certificate, for renewal or
-	 * revocation of certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -440,7 +440,7 @@ public class CertificateManagementResponse1 {
 	 */
 	public static final MMMessageAttribute mmServerCertificatePath = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CertificateManagementResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "SvrCertPth";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -454,11 +454,12 @@ public class CertificateManagementResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CertificateManagementResponse1.mmPOIIdentification, CertificateManagementResponse1.mmTMIdentification, CertificateManagementResponse1.mmCertificateService,
-						CertificateManagementResponse1.mmResult, CertificateManagementResponse1.mmSecurityProfile, CertificateManagementResponse1.mmClientCertificate, CertificateManagementResponse1.mmClientCertificatePath,
-						CertificateManagementResponse1.mmServerCertificatePath);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificateManagementResponse1.mmPOIIdentification, com.tools20022.repository.msg.CertificateManagementResponse1.mmTMIdentification,
+						com.tools20022.repository.msg.CertificateManagementResponse1.mmCertificateService, com.tools20022.repository.msg.CertificateManagementResponse1.mmResult,
+						com.tools20022.repository.msg.CertificateManagementResponse1.mmSecurityProfile, com.tools20022.repository.msg.CertificateManagementResponse1.mmClientCertificate,
+						com.tools20022.repository.msg.CertificateManagementResponse1.mmClientCertificatePath, com.tools20022.repository.msg.CertificateManagementResponse1.mmServerCertificatePath);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CertificateManagementResponseV01.mmCertificateManagementResponse);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificateManagementResponse1";
 				definition = "Information related to the result of the certificate management request.";
@@ -467,75 +468,75 @@ public class CertificateManagementResponse1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "POIId", required = true)
 	public GenericIdentification72 getPOIIdentification() {
 		return pOIIdentification;
 	}
 
-	public void setPOIIdentification(com.tools20022.repository.msg.GenericIdentification72 pOIIdentification) {
-		this.pOIIdentification = pOIIdentification;
+	public CertificateManagementResponse1 setPOIIdentification(com.tools20022.repository.msg.GenericIdentification72 pOIIdentification) {
+		this.pOIIdentification = Objects.requireNonNull(pOIIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TMId")
-	public GenericIdentification72 getTMIdentification() {
-		return tMIdentification;
+	public Optional<GenericIdentification72> getTMIdentification() {
+		return tMIdentification == null ? Optional.empty() : Optional.of(tMIdentification);
 	}
 
-	public void setTMIdentification(com.tools20022.repository.msg.GenericIdentification72 tMIdentification) {
+	public CertificateManagementResponse1 setTMIdentification(com.tools20022.repository.msg.GenericIdentification72 tMIdentification) {
 		this.tMIdentification = tMIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CertSvc", required = true)
 	public CardPaymentServiceType10Code getCertificateService() {
 		return certificateService;
 	}
 
-	public void setCertificateService(CardPaymentServiceType10Code certificateService) {
-		this.certificateService = certificateService;
+	public CertificateManagementResponse1 setCertificateService(CardPaymentServiceType10Code certificateService) {
+		this.certificateService = Objects.requireNonNull(certificateService);
+		return this;
 	}
 
-	@XmlElement(name = "Rslt", required = true)
 	public ResponseType6 getResult() {
 		return result;
 	}
 
-	public void setResult(com.tools20022.repository.msg.ResponseType6 result) {
-		this.result = result;
+	public CertificateManagementResponse1 setResult(com.tools20022.repository.msg.ResponseType6 result) {
+		this.result = Objects.requireNonNull(result);
+		return this;
 	}
 
-	@XmlElement(name = "SctyPrfl")
-	public Max35Text getSecurityProfile() {
-		return securityProfile;
+	public Optional<Max35Text> getSecurityProfile() {
+		return securityProfile == null ? Optional.empty() : Optional.of(securityProfile);
 	}
 
-	public void setSecurityProfile(Max35Text securityProfile) {
+	public CertificateManagementResponse1 setSecurityProfile(Max35Text securityProfile) {
 		this.securityProfile = securityProfile;
+		return this;
 	}
 
-	@XmlElement(name = "ClntCert")
-	public Max3000Binary getClientCertificate() {
-		return clientCertificate;
+	public Optional<Max3000Binary> getClientCertificate() {
+		return clientCertificate == null ? Optional.empty() : Optional.of(clientCertificate);
 	}
 
-	public void setClientCertificate(Max3000Binary clientCertificate) {
+	public CertificateManagementResponse1 setClientCertificate(Max3000Binary clientCertificate) {
 		this.clientCertificate = clientCertificate;
+		return this;
 	}
 
-	@XmlElement(name = "ClntCertPth")
 	public List<Max10KBinary> getClientCertificatePath() {
-		return clientCertificatePath;
+		return clientCertificatePath == null ? clientCertificatePath = new ArrayList<>() : clientCertificatePath;
 	}
 
-	public void setClientCertificatePath(List<Max10KBinary> clientCertificatePath) {
-		this.clientCertificatePath = clientCertificatePath;
+	public CertificateManagementResponse1 setClientCertificatePath(List<Max10KBinary> clientCertificatePath) {
+		this.clientCertificatePath = Objects.requireNonNull(clientCertificatePath);
+		return this;
 	}
 
-	@XmlElement(name = "SvrCertPth")
 	public List<Max10KBinary> getServerCertificatePath() {
-		return serverCertificatePath;
+		return serverCertificatePath == null ? serverCertificatePath = new ArrayList<>() : serverCertificatePath;
 	}
 
-	public void setServerCertificatePath(List<Max10KBinary> serverCertificatePath) {
-		this.serverCertificatePath = serverCertificatePath;
+	public CertificateManagementResponse1 setServerCertificatePath(List<Max10KBinary> serverCertificatePath) {
+		this.serverCertificatePath = Objects.requireNonNull(serverCertificatePath);
+		return this;
 	}
 }

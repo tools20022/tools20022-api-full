@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CancelledStatusReasonCode;
+import com.tools20022.repository.codeset.CancelledStatusReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the underlying reason for cancellation of the associated
@@ -31,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode
- * CancelledStatusReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason1Code#mmCancelledByYourself
- * CancelledStatusReason1Code.mmCancelledByYourself}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason1Code#CancelledByYourself
+ * CancelledStatusReason1Code.CancelledByYourself}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason1Code#mmCancelledBySystem
- * CancelledStatusReason1Code.mmCancelledBySystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason1Code#CancelledBySystem
+ * CancelledStatusReason1Code.CancelledBySystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason1Code#mmCancelledByAgent
- * CancelledStatusReason1Code.mmCancelledByAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason1Code#CancelledByAgent
+ * CancelledStatusReason1Code.CancelledByAgent}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonCode
+ * CancelledStatusReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CancelledStatusReason1Code extends CancelledStatusReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CancelledStatusReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class CancelledStatusReason1Code extends CancelledStatusReasonCode {
 	 * name} = "CancelledByYourself"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelledByYourself = new MMCode() {
+	public static final CancelledStatusReason1Code CancelledByYourself = new CancelledStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByYourself";
-			owner_lazy = () -> CancelledStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancelledStatusReason1Code.mmObject();
+			codeName = CancelledStatusReasonCode.CancelledByYourself.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class CancelledStatusReason1Code extends CancelledStatusReasonCode {
 	 * name} = "CancelledBySystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelledBySystem = new MMCode() {
+	public static final CancelledStatusReason1Code CancelledBySystem = new CancelledStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledBySystem";
-			owner_lazy = () -> CancelledStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancelledStatusReason1Code.mmObject();
+			codeName = CancelledStatusReasonCode.CancelledBySystem.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,26 +142,59 @@ public class CancelledStatusReason1Code extends CancelledStatusReasonCode {
 	 * name} = "CancelledByAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelledByAgent = new MMCode() {
+	public static final CancelledStatusReason1Code CancelledByAgent = new CancelledStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByAgent";
-			owner_lazy = () -> CancelledStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancelledStatusReason1Code.mmObject();
+			codeName = CancelledStatusReasonCode.CancelledByAgent.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CancelledStatusReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CancelledStatusReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CANI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancelledStatusReason1Code";
 				definition = "Specifies the underlying reason for cancellation of the associated transaction.";
-				code_lazy = () -> Arrays.asList(CancelledStatusReason1Code.mmCancelledByYourself, CancelledStatusReason1Code.mmCancelledBySystem, CancelledStatusReason1Code.mmCancelledByAgent);
 				trace_lazy = () -> CancelledStatusReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancelledStatusReason1Code.CancelledByYourself, com.tools20022.repository.codeset.CancelledStatusReason1Code.CancelledBySystem,
+						com.tools20022.repository.codeset.CancelledStatusReason1Code.CancelledByAgent);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CancelledByYourself.getCodeName().get(), CancelledByYourself);
+		codesByName.put(CancelledBySystem.getCodeName().get(), CancelledBySystem);
+		codesByName.put(CancelledByAgent.getCodeName().get(), CancelledByAgent);
+	}
+
+	public static CancelledStatusReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CancelledStatusReason1Code[] values() {
+		CancelledStatusReason1Code[] values = new CancelledStatusReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CancelledStatusReason1Code> {
+		@Override
+		public CancelledStatusReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CancelledStatusReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -27,9 +27,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionCashMovements2", propOrder = {"postingIdentification", "postingDateTime", "postingAmount", "accountDetails"})
 public class CorporateActionCashMovements2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PstngId")
 	protected Max35Text postingIdentification;
 	/**
-	 * Posting identification of the cash movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +113,7 @@ public class CorporateActionCashMovements2 {
 	 */
 	public static final MMMessageAttribute mmPostingIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionCashMovements2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCashMovements2.mmObject();
 			isDerived = false;
 			xmlTag = "PstngId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +124,11 @@ public class CorporateActionCashMovements2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PstngDtTm")
 	protected DateAndDateTimeChoice postingDateTime;
 	/**
-	 * Posting date of the cash movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +162,7 @@ public class CorporateActionCashMovements2 {
 	public static final MMMessageAttribute mmPostingDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
-			componentContext_lazy = () -> CorporateActionCashMovements2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCashMovements2.mmObject();
 			isDerived = false;
 			xmlTag = "PstngDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,10 +173,11 @@ public class CorporateActionCashMovements2 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "PstngAmt", required = true)
 	protected ActiveCurrencyAndAmount postingAmount;
 	/**
-	 * Amount posted as a result of the cash movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -209,7 +211,7 @@ public class CorporateActionCashMovements2 {
 	public static final MMMessageAttribute mmPostingAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
-			componentContext_lazy = () -> CorporateActionCashMovements2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCashMovements2.mmObject();
 			isDerived = false;
 			xmlTag = "PstngAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,11 +222,11 @@ public class CorporateActionCashMovements2 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctDtls", required = true)
 	protected List<com.tools20022.repository.msg.CashAccount19> accountDetails;
 	/**
-	 * Provides information about the account which is debited/credited as a
-	 * result of the movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -258,7 +260,7 @@ public class CorporateActionCashMovements2 {
 	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
-			componentContext_lazy = () -> CorporateActionCashMovements2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCashMovements2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -274,10 +276,10 @@ public class CorporateActionCashMovements2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionCashMovements2.mmPostingIdentification, CorporateActionCashMovements2.mmPostingDateTime, CorporateActionCashMovements2.mmPostingAmount,
-						CorporateActionCashMovements2.mmAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionCashMovements2.mmPostingIdentification, com.tools20022.repository.msg.CorporateActionCashMovements2.mmPostingDateTime,
+						com.tools20022.repository.msg.CorporateActionCashMovements2.mmPostingAmount, com.tools20022.repository.msg.CorporateActionCashMovements2.mmAccountDetails);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionCashMovements2";
 				definition = "Provides information about the cash movement resulting from the election instruction.";
@@ -286,39 +288,39 @@ public class CorporateActionCashMovements2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PstngId")
-	public Max35Text getPostingIdentification() {
-		return postingIdentification;
+	public Optional<Max35Text> getPostingIdentification() {
+		return postingIdentification == null ? Optional.empty() : Optional.of(postingIdentification);
 	}
 
-	public void setPostingIdentification(Max35Text postingIdentification) {
+	public CorporateActionCashMovements2 setPostingIdentification(Max35Text postingIdentification) {
 		this.postingIdentification = postingIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PstngDtTm")
-	public DateAndDateTimeChoice getPostingDateTime() {
-		return postingDateTime;
+	public Optional<DateAndDateTimeChoice> getPostingDateTime() {
+		return postingDateTime == null ? Optional.empty() : Optional.of(postingDateTime);
 	}
 
-	public void setPostingDateTime(DateAndDateTimeChoice postingDateTime) {
+	public CorporateActionCashMovements2 setPostingDateTime(DateAndDateTimeChoice postingDateTime) {
 		this.postingDateTime = postingDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "PstngAmt", required = true)
 	public ActiveCurrencyAndAmount getPostingAmount() {
 		return postingAmount;
 	}
 
-	public void setPostingAmount(ActiveCurrencyAndAmount postingAmount) {
-		this.postingAmount = postingAmount;
+	public CorporateActionCashMovements2 setPostingAmount(ActiveCurrencyAndAmount postingAmount) {
+		this.postingAmount = Objects.requireNonNull(postingAmount);
+		return this;
 	}
 
-	@XmlElement(name = "AcctDtls", required = true)
 	public List<CashAccount19> getAccountDetails() {
-		return accountDetails;
+		return accountDetails == null ? accountDetails = new ArrayList<>() : accountDetails;
 	}
 
-	public void setAccountDetails(List<com.tools20022.repository.msg.CashAccount19> accountDetails) {
-		this.accountDetails = accountDetails;
+	public CorporateActionCashMovements2 setAccountDetails(List<com.tools20022.repository.msg.CashAccount19> accountDetails) {
+		this.accountDetails = Objects.requireNonNull(accountDetails);
+		return this;
 	}
 }

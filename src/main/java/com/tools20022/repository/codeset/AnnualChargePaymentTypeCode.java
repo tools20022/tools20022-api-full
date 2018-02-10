@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AnnualChargePaymentTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies how the charge is to be deducted.
@@ -32,18 +37,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AnnualChargePaymentTypeCode#mmCapital
- * AnnualChargePaymentTypeCode.mmCapital}</li>
+ * {@linkplain com.tools20022.repository.codeset.AnnualChargePaymentTypeCode#Capital
+ * AnnualChargePaymentTypeCode.Capital}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AnnualChargePaymentTypeCode#mmIncome
- * AnnualChargePaymentTypeCode.mmIncome}</li>
+ * {@linkplain com.tools20022.repository.codeset.AnnualChargePaymentTypeCode#Income
+ * AnnualChargePaymentTypeCode.Income}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -59,7 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies how the charge is to be deducted."</li>
  * </ul>
  */
-public class AnnualChargePaymentTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AnnualChargePaymentTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,12 +89,12 @@ public class AnnualChargePaymentTypeCode {
 	 * definition} = "Annual charge is deducted from the fund capital."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCapital = new MMCode() {
+	public static final AnnualChargePaymentTypeCode Capital = new AnnualChargePaymentTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Capital";
 			definition = "Annual charge is deducted from the fund capital.";
-			owner_lazy = () -> AnnualChargePaymentTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AnnualChargePaymentTypeCode.mmObject();
 			codeName = "CAPL";
 		}
 	};
@@ -113,27 +119,57 @@ public class AnnualChargePaymentTypeCode {
 	 * definition} = "Annual charge is deducted from the fund income."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncome = new MMCode() {
+	public static final AnnualChargePaymentTypeCode Income = new AnnualChargePaymentTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Income";
 			definition = "Annual charge is deducted from the fund income.";
-			owner_lazy = () -> AnnualChargePaymentTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AnnualChargePaymentTypeCode.mmObject();
 			codeName = "INCO";
 		}
 	};
+	final static private LinkedHashMap<String, AnnualChargePaymentTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AnnualChargePaymentTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CAPL");
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "AnnualChargePaymentTypeCode";
 				definition = "Specifies how the charge is to be deducted.";
-				code_lazy = () -> Arrays.asList(AnnualChargePaymentTypeCode.mmCapital, AnnualChargePaymentTypeCode.mmIncome);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AnnualChargePaymentTypeCode.Capital, com.tools20022.repository.codeset.AnnualChargePaymentTypeCode.Income);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Capital.getCodeName().get(), Capital);
+		codesByName.put(Income.getCodeName().get(), Income);
+	}
+
+	public static AnnualChargePaymentTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AnnualChargePaymentTypeCode[] values() {
+		AnnualChargePaymentTypeCode[] values = new AnnualChargePaymentTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AnnualChargePaymentTypeCode> {
+		@Override
+		public AnnualChargePaymentTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AnnualChargePaymentTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

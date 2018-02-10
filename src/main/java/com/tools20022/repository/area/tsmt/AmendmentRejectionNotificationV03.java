@@ -27,9 +27,8 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -47,25 +46,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
- * TradeServicesManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion
- * TradeServicesManagementISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion
- * TradeServicesManagementISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AmdmntRjctnNtfctn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -102,6 +82,25 @@ import javax.xml.bind.annotation.*;
  * AmendmentRejectionNotificationV03.mmRequestForAction}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion
+ * TradeServicesManagementISOPreviousversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion
+ * TradeServicesManagementISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AmdmntRjctnNtfctn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
+ * TradeServicesManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code tsmt.008.001.03}</li>
@@ -117,16 +116,17 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmendmentRejectionNotificationV03", propOrder = {"notificationIdentification", "transactionIdentification", "establishedBaselineIdentification", "transactionStatus", "userTransactionReference", "deltaReportReference",
 		"rejectedAmendmentNumber", "initiator", "rejectionReason", "requestForAction"})
 public class AmendmentRejectionNotificationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NtfctnId", required = true)
 	protected MessageIdentification1 notificationIdentification;
 	/**
-	 * Identifies the notification message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,12 +166,11 @@ public class AmendmentRejectionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "TxId", required = true)
 	protected SimpleIdentificationInformation transactionIdentification;
 	/**
-	 * Unique Identification assigned by the matching application to the
-	 * transaction. This identification is to be used in any communication
-	 * between the parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,11 +212,11 @@ public class AmendmentRejectionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "EstblishdBaselnId", required = true)
 	protected DocumentIdentification3 establishedBaselineIdentification;
 	/**
-	 * Unique identification assigned by the matching application to the
-	 * baseline when it is established.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,10 +258,11 @@ public class AmendmentRejectionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "TxSts", required = true)
 	protected TransactionStatus4 transactionStatus;
 	/**
-	 * Identifies the status of the transaction by means of a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -303,11 +303,11 @@ public class AmendmentRejectionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "UsrTxRef")
 	protected List<DocumentIdentification5> userTransactionReference;
 	/**
-	 * Reference to the transaction for each financial institution which is a
-	 * party to the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -349,11 +349,11 @@ public class AmendmentRejectionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "DltaRptRef", required = true)
 	protected MessageIdentification1 deltaReportReference;
 	/**
-	 * Reference to the identification of the delta report that contained the
-	 * amendment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -395,10 +395,11 @@ public class AmendmentRejectionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RjctdAmdmntNb", required = true)
 	protected Count1 rejectedAmendmentNumber;
 	/**
-	 * Sequence number of the rejected baseline amendment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -436,10 +437,11 @@ public class AmendmentRejectionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Initr", required = true)
 	protected BICIdentification1 initiator;
 	/**
-	 * Party that has rejected the amendment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -479,10 +481,11 @@ public class AmendmentRejectionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RjctnRsn", required = true)
 	protected RejectionReason1Choice rejectionReason;
 	/**
-	 * Specifies the reaons for rejecting the amendment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -524,10 +527,11 @@ public class AmendmentRejectionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "ReqForActn")
 	protected PendingActivity2 requestForAction;
 	/**
-	 * Information on the next processing step required.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -602,97 +606,97 @@ public class AmendmentRejectionNotificationV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NtfctnId", required = true)
 	public MessageIdentification1 getNotificationIdentification() {
 		return notificationIdentification;
 	}
 
-	public void setNotificationIdentification(MessageIdentification1 notificationIdentification) {
-		this.notificationIdentification = notificationIdentification;
+	public AmendmentRejectionNotificationV03 setNotificationIdentification(MessageIdentification1 notificationIdentification) {
+		this.notificationIdentification = Objects.requireNonNull(notificationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public SimpleIdentificationInformation getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public AmendmentRejectionNotificationV03 setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "EstblishdBaselnId", required = true)
 	public DocumentIdentification3 getEstablishedBaselineIdentification() {
 		return establishedBaselineIdentification;
 	}
 
-	public void setEstablishedBaselineIdentification(DocumentIdentification3 establishedBaselineIdentification) {
-		this.establishedBaselineIdentification = establishedBaselineIdentification;
+	public AmendmentRejectionNotificationV03 setEstablishedBaselineIdentification(DocumentIdentification3 establishedBaselineIdentification) {
+		this.establishedBaselineIdentification = Objects.requireNonNull(establishedBaselineIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TxSts", required = true)
 	public TransactionStatus4 getTransactionStatus() {
 		return transactionStatus;
 	}
 
-	public void setTransactionStatus(TransactionStatus4 transactionStatus) {
-		this.transactionStatus = transactionStatus;
+	public AmendmentRejectionNotificationV03 setTransactionStatus(TransactionStatus4 transactionStatus) {
+		this.transactionStatus = Objects.requireNonNull(transactionStatus);
+		return this;
 	}
 
-	@XmlElement(name = "UsrTxRef")
 	public List<DocumentIdentification5> getUserTransactionReference() {
-		return userTransactionReference;
+		return userTransactionReference == null ? userTransactionReference = new ArrayList<>() : userTransactionReference;
 	}
 
-	public void setUserTransactionReference(List<DocumentIdentification5> userTransactionReference) {
-		this.userTransactionReference = userTransactionReference;
+	public AmendmentRejectionNotificationV03 setUserTransactionReference(List<DocumentIdentification5> userTransactionReference) {
+		this.userTransactionReference = Objects.requireNonNull(userTransactionReference);
+		return this;
 	}
 
-	@XmlElement(name = "DltaRptRef", required = true)
 	public MessageIdentification1 getDeltaReportReference() {
 		return deltaReportReference;
 	}
 
-	public void setDeltaReportReference(MessageIdentification1 deltaReportReference) {
-		this.deltaReportReference = deltaReportReference;
+	public AmendmentRejectionNotificationV03 setDeltaReportReference(MessageIdentification1 deltaReportReference) {
+		this.deltaReportReference = Objects.requireNonNull(deltaReportReference);
+		return this;
 	}
 
-	@XmlElement(name = "RjctdAmdmntNb", required = true)
 	public Count1 getRejectedAmendmentNumber() {
 		return rejectedAmendmentNumber;
 	}
 
-	public void setRejectedAmendmentNumber(Count1 rejectedAmendmentNumber) {
-		this.rejectedAmendmentNumber = rejectedAmendmentNumber;
+	public AmendmentRejectionNotificationV03 setRejectedAmendmentNumber(Count1 rejectedAmendmentNumber) {
+		this.rejectedAmendmentNumber = Objects.requireNonNull(rejectedAmendmentNumber);
+		return this;
 	}
 
-	@XmlElement(name = "Initr", required = true)
 	public BICIdentification1 getInitiator() {
 		return initiator;
 	}
 
-	public void setInitiator(BICIdentification1 initiator) {
-		this.initiator = initiator;
+	public AmendmentRejectionNotificationV03 setInitiator(BICIdentification1 initiator) {
+		this.initiator = Objects.requireNonNull(initiator);
+		return this;
 	}
 
-	@XmlElement(name = "RjctnRsn", required = true)
 	public RejectionReason1Choice getRejectionReason() {
 		return rejectionReason;
 	}
 
-	public void setRejectionReason(RejectionReason1Choice rejectionReason) {
-		this.rejectionReason = rejectionReason;
+	public AmendmentRejectionNotificationV03 setRejectionReason(RejectionReason1Choice rejectionReason) {
+		this.rejectionReason = Objects.requireNonNull(rejectionReason);
+		return this;
 	}
 
-	@XmlElement(name = "ReqForActn")
-	public PendingActivity2 getRequestForAction() {
-		return requestForAction;
+	public Optional<PendingActivity2> getRequestForAction() {
+		return requestForAction == null ? Optional.empty() : Optional.of(requestForAction);
 	}
 
-	public void setRequestForAction(PendingActivity2 requestForAction) {
+	public AmendmentRejectionNotificationV03 setRequestForAction(PendingActivity2 requestForAction) {
 		this.requestForAction = requestForAction;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.008.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.008.001.03")
 	static public class Document {
 		@XmlElement(name = "AmdmntRjctnNtfctn", required = true)
 		public AmendmentRejectionNotificationV03 messageBody;

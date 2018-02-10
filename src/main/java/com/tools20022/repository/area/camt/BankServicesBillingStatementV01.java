@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.StatementGroup1;
 import com.tools20022.repository.msgset.BankServicesBillingISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -64,23 +66,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
- * CashManagementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.BankServicesBillingISOPreviousversion
- * BankServicesBillingISOPreviousversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "BkSvcsBllgStmt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -93,6 +78,23 @@ import javax.xml.bind.annotation.*;
  * BankServicesBillingStatementV01.mmBillingStatementGroup}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.BankServicesBillingISOPreviousversion
+ * BankServicesBillingISOPreviousversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "BkSvcsBllgStmt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
+ * CashManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.086.001.01}</li>
@@ -116,15 +118,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BankServicesBillingStatementV01", propOrder = {"reportHeader", "billingStatementGroup"})
 public class BankServicesBillingStatementV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptHdr", required = true)
 	protected ReportHeader3 reportHeader;
 	/**
-	 * Provides header details on the billing statement report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,11 +175,11 @@ public class BankServicesBillingStatementV01 {
 			}
 		}
 	};
+	@XmlElement(name = "BllgStmtGrp", required = true)
 	protected List<StatementGroup1> billingStatementGroup;
 	/**
-	 * Group of bank services billing statements with the same sender and
-	 * receiver characteristics.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -257,25 +260,25 @@ public class BankServicesBillingStatementV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptHdr", required = true)
 	public ReportHeader3 getReportHeader() {
 		return reportHeader;
 	}
 
-	public void setReportHeader(ReportHeader3 reportHeader) {
-		this.reportHeader = reportHeader;
+	public BankServicesBillingStatementV01 setReportHeader(ReportHeader3 reportHeader) {
+		this.reportHeader = Objects.requireNonNull(reportHeader);
+		return this;
 	}
 
-	@XmlElement(name = "BllgStmtGrp", required = true)
 	public List<StatementGroup1> getBillingStatementGroup() {
-		return billingStatementGroup;
+		return billingStatementGroup == null ? billingStatementGroup = new ArrayList<>() : billingStatementGroup;
 	}
 
-	public void setBillingStatementGroup(List<StatementGroup1> billingStatementGroup) {
-		this.billingStatementGroup = billingStatementGroup;
+	public BankServicesBillingStatementV01 setBillingStatementGroup(List<StatementGroup1> billingStatementGroup) {
+		this.billingStatementGroup = Objects.requireNonNull(billingStatementGroup);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.086.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.086.001.01")
 	static public class Document {
 		@XmlElement(name = "BkSvcsBllgStmt", required = true)
 		public BankServicesBillingStatementV01 messageBody;

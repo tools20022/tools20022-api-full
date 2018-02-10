@@ -29,9 +29,11 @@ import com.tools20022.repository.msg.ReturnIndicator1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.AuthoritiesFinancialInvestigationsISOLatestversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -48,22 +50,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
- * AuthoritiesLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.AuthoritiesFinancialInvestigationsISOLatestversion
- * AuthoritiesFinancialInvestigationsISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "InfReqRspn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -88,6 +74,22 @@ import javax.xml.bind.annotation.*;
  * InformationRequestResponseV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.AuthoritiesFinancialInvestigationsISOLatestversion
+ * AuthoritiesFinancialInvestigationsISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "InfReqRspn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
+ * AuthoritiesLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code auth.002.001.01}</li>
@@ -103,16 +105,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InformationRequestResponseV01", propOrder = {"responseIdentification", "investigationIdentification", "responseStatus", "searchCriteria", "returnIndicator", "supplementaryData"})
 public class InformationRequestResponseV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RspnId", required = true)
 	protected Max35Text responseIdentification;
 	/**
-	 * Unique identification for the specific investigation as know by the
-	 * responding party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,11 +155,11 @@ public class InformationRequestResponseV01 {
 			}
 		}
 	};
+	@XmlElement(name = "InvstgtnId", required = true)
 	protected Max35Text investigationIdentification;
 	/**
-	 * Unique identification for the specific investigation as known by the
-	 * requesting party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,10 +200,11 @@ public class InformationRequestResponseV01 {
 			}
 		}
 	};
+	@XmlElement(name = "RspnSts", required = true)
 	protected StatusResponse1Code responseStatus;
 	/**
-	 * Provides the status of the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -241,12 +244,11 @@ public class InformationRequestResponseV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SchCrit", required = true)
 	protected SearchCriteria1Choice searchCriteria;
 	/**
-	 * Specifies the the search criteria for the financial institution to
-	 * perform the search on. The search criteria can be an account, a customer
-	 * identification or a payment instrument type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -288,10 +290,11 @@ public class InformationRequestResponseV01 {
 			}
 		}
 	};
+	@XmlElement(name = "RtrInd", required = true)
 	protected List<ReturnIndicator1> returnIndicator;
 	/**
-	 * Provides the return indicators and the investigation result.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -331,11 +334,11 @@ public class InformationRequestResponseV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -409,61 +412,61 @@ public class InformationRequestResponseV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RspnId", required = true)
 	public Max35Text getResponseIdentification() {
 		return responseIdentification;
 	}
 
-	public void setResponseIdentification(Max35Text responseIdentification) {
-		this.responseIdentification = responseIdentification;
+	public InformationRequestResponseV01 setResponseIdentification(Max35Text responseIdentification) {
+		this.responseIdentification = Objects.requireNonNull(responseIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "InvstgtnId", required = true)
 	public Max35Text getInvestigationIdentification() {
 		return investigationIdentification;
 	}
 
-	public void setInvestigationIdentification(Max35Text investigationIdentification) {
-		this.investigationIdentification = investigationIdentification;
+	public InformationRequestResponseV01 setInvestigationIdentification(Max35Text investigationIdentification) {
+		this.investigationIdentification = Objects.requireNonNull(investigationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RspnSts", required = true)
 	public StatusResponse1Code getResponseStatus() {
 		return responseStatus;
 	}
 
-	public void setResponseStatus(StatusResponse1Code responseStatus) {
-		this.responseStatus = responseStatus;
+	public InformationRequestResponseV01 setResponseStatus(StatusResponse1Code responseStatus) {
+		this.responseStatus = Objects.requireNonNull(responseStatus);
+		return this;
 	}
 
-	@XmlElement(name = "SchCrit", required = true)
 	public SearchCriteria1Choice getSearchCriteria() {
 		return searchCriteria;
 	}
 
-	public void setSearchCriteria(SearchCriteria1Choice searchCriteria) {
-		this.searchCriteria = searchCriteria;
+	public InformationRequestResponseV01 setSearchCriteria(SearchCriteria1Choice searchCriteria) {
+		this.searchCriteria = Objects.requireNonNull(searchCriteria);
+		return this;
 	}
 
-	@XmlElement(name = "RtrInd", required = true)
 	public List<ReturnIndicator1> getReturnIndicator() {
-		return returnIndicator;
+		return returnIndicator == null ? returnIndicator = new ArrayList<>() : returnIndicator;
 	}
 
-	public void setReturnIndicator(List<ReturnIndicator1> returnIndicator) {
-		this.returnIndicator = returnIndicator;
+	public InformationRequestResponseV01 setReturnIndicator(List<ReturnIndicator1> returnIndicator) {
+		this.returnIndicator = Objects.requireNonNull(returnIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public InformationRequestResponseV01 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.002.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:auth.002.001.01")
 	static public class Document {
 		@XmlElement(name = "InfReqRspn", required = true)
 		public InformationRequestResponseV01 messageBody;

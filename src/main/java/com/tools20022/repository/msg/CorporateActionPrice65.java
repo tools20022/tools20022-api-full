@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,7 @@ import com.tools20022.repository.entity.CorporateActionPrice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies prices related to a corporate action option."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionPrice65", propOrder = {"cashInLieuOfSharePrice", "overSubscriptionDepositPrice"})
 public class CorporateActionPrice65 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CshInLieuOfShrPric")
 	protected PriceFormat57Choice cashInLieuOfSharePrice;
 	/**
-	 * Cash disbursement in lieu of equities; usually in lieu of fractional
-	 * quantity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -93,6 +95,9 @@ public class CorporateActionPrice65 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CshInLieuOfShrPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::CINL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -108,9 +113,10 @@ public class CorporateActionPrice65 {
 	public static final MMMessageAssociationEnd mmCashInLieuOfSharePrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmCashInLieuOfSharePrice;
-			componentContext_lazy = () -> CorporateActionPrice65.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice65.mmObject();
 			isDerived = false;
 			xmlTag = "CshInLieuOfShrPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::CINL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfSharePrice";
 			definition = "Cash disbursement in lieu of equities; usually in lieu of fractional quantity.";
@@ -120,11 +126,11 @@ public class CorporateActionPrice65 {
 			type_lazy = () -> PriceFormat57Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "OverSbcptDpstPric")
 	protected PriceFormat57Choice overSubscriptionDepositPrice;
 	/**
-	 * Amount of money required per over-subscribed equity as defined by the
-	 * issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -143,6 +149,9 @@ public class CorporateActionPrice65 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OverSbcptDpstPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::OSUB</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -158,9 +167,10 @@ public class CorporateActionPrice65 {
 	public static final MMMessageAssociationEnd mmOverSubscriptionDepositPrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmOverSubscriptionDepositPrice;
-			componentContext_lazy = () -> CorporateActionPrice65.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice65.mmObject();
 			isDerived = false;
 			xmlTag = "OverSbcptDpstPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::OSUB"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverSubscriptionDepositPrice";
 			definition = "Amount of money required per over-subscribed equity as defined by the issuer.";
@@ -174,9 +184,9 @@ public class CorporateActionPrice65 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionPrice65.mmCashInLieuOfSharePrice, CorporateActionPrice65.mmOverSubscriptionDepositPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice65.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice65.mmOverSubscriptionDepositPrice);
 				trace_lazy = () -> CorporateActionPrice.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice65";
 				definition = "Specifies prices related to a corporate action option.";
@@ -185,21 +195,21 @@ public class CorporateActionPrice65 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CshInLieuOfShrPric")
-	public PriceFormat57Choice getCashInLieuOfSharePrice() {
-		return cashInLieuOfSharePrice;
+	public Optional<PriceFormat57Choice> getCashInLieuOfSharePrice() {
+		return cashInLieuOfSharePrice == null ? Optional.empty() : Optional.of(cashInLieuOfSharePrice);
 	}
 
-	public void setCashInLieuOfSharePrice(PriceFormat57Choice cashInLieuOfSharePrice) {
+	public CorporateActionPrice65 setCashInLieuOfSharePrice(PriceFormat57Choice cashInLieuOfSharePrice) {
 		this.cashInLieuOfSharePrice = cashInLieuOfSharePrice;
+		return this;
 	}
 
-	@XmlElement(name = "OverSbcptDpstPric")
-	public PriceFormat57Choice getOverSubscriptionDepositPrice() {
-		return overSubscriptionDepositPrice;
+	public Optional<PriceFormat57Choice> getOverSubscriptionDepositPrice() {
+		return overSubscriptionDepositPrice == null ? Optional.empty() : Optional.of(overSubscriptionDepositPrice);
 	}
 
-	public void setOverSubscriptionDepositPrice(PriceFormat57Choice overSubscriptionDepositPrice) {
+	public CorporateActionPrice65 setOverSubscriptionDepositPrice(PriceFormat57Choice overSubscriptionDepositPrice) {
 		this.overSubscriptionDepositPrice = overSubscriptionDepositPrice;
+		return this;
 	}
 }

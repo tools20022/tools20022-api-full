@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DistributionPolicyCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies if income is to be paid out (distributed) or retained
@@ -33,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionPolicyCode#mmDistribution
- * DistributionPolicyCode.mmDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionPolicyCode#Distribution
+ * DistributionPolicyCode.Distribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionPolicyCode#mmAccumulation
- * DistributionPolicyCode.mmAccumulation}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionPolicyCode#Accumulation
+ * DistributionPolicyCode.Accumulation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class DistributionPolicyCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DistributionPolicyCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -94,12 +100,12 @@ public class DistributionPolicyCode {
 	 * definition} = "Income is distributed to the investors in the fund."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDistribution = new MMCode() {
+	public static final DistributionPolicyCode Distribution = new DistributionPolicyCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Distribution";
 			definition = "Income is distributed to the investors in the fund.";
-			owner_lazy = () -> DistributionPolicyCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DistributionPolicyCode.mmObject();
 			codeName = "DIST";
 		}
 	};
@@ -124,28 +130,58 @@ public class DistributionPolicyCode {
 	 * definition} = "Income is added to the capital of the fund."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccumulation = new MMCode() {
+	public static final DistributionPolicyCode Accumulation = new DistributionPolicyCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Accumulation";
 			definition = "Income is added to the capital of the fund.";
-			owner_lazy = () -> DistributionPolicyCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DistributionPolicyCode.mmObject();
 			codeName = "ACCU";
 		}
 	};
+	final static private LinkedHashMap<String, DistributionPolicyCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DistributionPolicyCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DIST");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DistributionPolicyCode";
 				definition = "Specifies if income is to be paid out (distributed) or retained (accumulated).";
-				code_lazy = () -> Arrays.asList(DistributionPolicyCode.mmDistribution, DistributionPolicyCode.mmAccumulation);
 				derivation_lazy = () -> Arrays.asList(DistributionPolicy1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionPolicyCode.Distribution, com.tools20022.repository.codeset.DistributionPolicyCode.Accumulation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Distribution.getCodeName().get(), Distribution);
+		codesByName.put(Accumulation.getCodeName().get(), Accumulation);
+	}
+
+	public static DistributionPolicyCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DistributionPolicyCode[] values() {
+		DistributionPolicyCode[] values = new DistributionPolicyCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DistributionPolicyCode> {
+		@Override
+		public DistributionPolicyCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DistributionPolicyCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

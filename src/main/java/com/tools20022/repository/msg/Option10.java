@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -86,8 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintEarliestExerciseDateRule#forOption10
+ * ConstraintEarliestExerciseDateRule.forOption10}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,17 +111,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Option10", propOrder = {"data", "exerciseStatus", "exerciseStyle", "optionType", "derivativeOptionIdentification", "optionPayoutType", "valuationRate", "strikePrice", "volatilityMargin", "riskAmount", "expiryDateAndTime",
 		"expiryLocation", "settlementType", "optionAmounts", "premium", "settlementAmountType", "additionalOptionInformation"})
 public class Option10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Data", required = true)
 	protected DataType1Code data;
 	/**
-	 * Type of data to indicate whether a trade is an option or resulted by an
-	 * option exercise.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,7 +150,7 @@ public class Option10 {
 	 */
 	public static final MMMessageAttribute mmData = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Option10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Option10.mmObject();
 			isDerived = false;
 			xmlTag = "Data";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,10 +161,11 @@ public class Option10 {
 			simpleType_lazy = () -> DataType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ExrcSts", required = true)
 	protected DerivativeExerciseStatus1Code exerciseStatus;
 	/**
-	 * Specifies the exercise status of the option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -182,7 +192,7 @@ public class Option10 {
 	 */
 	public static final MMMessageAttribute mmExerciseStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Option10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Option10.mmObject();
 			isDerived = false;
 			xmlTag = "ExrcSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -193,10 +203,11 @@ public class Option10 {
 			simpleType_lazy = () -> DerivativeExerciseStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ExrcStyle", required = true)
 	protected OptionStyle2Code exerciseStyle;
 	/**
-	 * Defines how an option can be exercised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,7 +239,7 @@ public class Option10 {
 	 */
 	public static final MMMessageAttribute mmExerciseStyle = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Option10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Option10.mmObject();
 			isDerived = false;
 			xmlTag = "ExrcStyle";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,10 +251,11 @@ public class Option10 {
 			simpleType_lazy = () -> OptionStyle2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnTp", required = true)
 	protected OptionType1Code optionType;
 	/**
-	 * Choice of format for option type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -276,7 +288,7 @@ public class Option10 {
 	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionType;
-			componentContext_lazy = () -> Option10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Option10.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -287,10 +299,11 @@ public class Option10 {
 			simpleType_lazy = () -> OptionType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DerivOptnId", required = true)
 	protected Max35Text derivativeOptionIdentification;
 	/**
-	 * Identifies the derivative option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -316,7 +329,7 @@ public class Option10 {
 	 */
 	public static final MMMessageAttribute mmDerivativeOptionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Option10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Option10.mmObject();
 			isDerived = false;
 			xmlTag = "DerivOptnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -327,11 +340,11 @@ public class Option10 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnPyoutTp", required = true)
 	protected OptionPayoutType1Code optionPayoutType;
 	/**
-	 * Indicates the type of payout that will result from an in-the-money
-	 * option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -360,7 +373,7 @@ public class Option10 {
 	 */
 	public static final MMMessageAttribute mmOptionPayoutType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Option10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Option10.mmObject();
 			isDerived = false;
 			xmlTag = "OptnPyoutTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -371,10 +384,11 @@ public class Option10 {
 			simpleType_lazy = () -> OptionPayoutType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ValtnRate", required = true)
 	protected AgreedRate3 valuationRate;
 	/**
-	 * Specifies the valuation rate used for the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -405,7 +419,7 @@ public class Option10 {
 	public static final MMMessageAssociationEnd mmValuationRate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmValueDate;
-			componentContext_lazy = () -> Option10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Option10.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -417,11 +431,11 @@ public class Option10 {
 			type_lazy = () -> com.tools20022.repository.msg.AgreedRate3.mmObject();
 		}
 	};
+	@XmlElement(name = "StrkPric", required = true)
 	protected AgreedRate3 strikePrice;
 	/**
-	 * Specifies the rate of exchange at which the foreign exchange option has
-	 * been struck.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -459,7 +473,7 @@ public class Option10 {
 	public static final MMMessageAssociationEnd mmStrikePrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
-			componentContext_lazy = () -> Option10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Option10.mmObject();
 			isDerived = false;
 			xmlTag = "StrkPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -472,10 +486,11 @@ public class Option10 {
 			type_lazy = () -> com.tools20022.repository.msg.AgreedRate3.mmObject();
 		}
 	};
+	@XmlElement(name = "VoltlyMrgn", required = true)
 	protected PercentageRate volatilityMargin;
 	/**
-	 * Annualized volatility for option model calculations.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -502,7 +517,7 @@ public class Option10 {
 	 */
 	public static final MMMessageAttribute mmVolatilityMargin = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Option10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Option10.mmObject();
 			isDerived = false;
 			xmlTag = "VoltlyMrgn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -513,11 +528,11 @@ public class Option10 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "RskAmt", required = true)
 	protected ActiveCurrencyAndAmount riskAmount;
 	/**
-	 * Measurement of the amount of the trade values converted in the US
-	 * dollars.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -546,7 +561,7 @@ public class Option10 {
 	 */
 	public static final MMMessageAttribute mmRiskAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Option10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Option10.mmObject();
 			isDerived = false;
 			xmlTag = "RskAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -557,13 +572,11 @@ public class Option10 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "XpryDtAndTm", required = true)
 	protected ISODateTime expiryDateAndTime;
 	/**
-	 * Date on which a privilege (for example, option, right, warrant,...)
-	 * expires. If it is an European option, the option holder can only exercise
-	 * the right or let it lapse on expiry date. If it is an American option,
-	 * the option holder can exercise the right up to the expiry date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -602,7 +615,7 @@ public class Option10 {
 	public static final MMMessageAttribute mmExpiryDateAndTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Option.mmExpiryDateAndTime;
-			componentContext_lazy = () -> Option10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Option10.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDtAndTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -614,10 +627,11 @@ public class Option10 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "XpryLctn", required = true)
 	protected Max4AlphaNumericText expiryLocation;
 	/**
-	 * Financial center where option expires.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -655,7 +669,7 @@ public class Option10 {
 	public static final MMMessageAttribute mmExpiryLocation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Option.mmExpiryLocation;
-			componentContext_lazy = () -> Option10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Option10.mmObject();
 			isDerived = false;
 			xmlTag = "XpryLctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -667,10 +681,11 @@ public class Option10 {
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmTp", required = true)
 	protected SettlementDateCode settlementType;
 	/**
-	 * Specifies the settlment period of the option trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -697,7 +712,7 @@ public class Option10 {
 	 */
 	public static final MMMessageAttribute mmSettlementType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Option10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Option10.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -708,11 +723,11 @@ public class Option10 {
 			simpleType_lazy = () -> SettlementDateCode.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnAmts", required = true)
 	protected AmountsAndValueDate4 optionAmounts;
 	/**
-	 * Specifies the call and the put amount of the underlying foreign exchange
-	 * trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -750,7 +765,7 @@ public class Option10 {
 	public static final MMMessageAssociationEnd mmOptionAmounts = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ForeignExchangeTrade.mmObject();
-			componentContext_lazy = () -> Option10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Option10.mmObject();
 			isDerived = false;
 			xmlTag = "OptnAmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -763,11 +778,11 @@ public class Option10 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate4.mmObject();
 		}
 	};
+	@XmlElement(name = "Prm", required = true)
 	protected PremiumAmount3 premium;
 	/**
-	 * Specifies the amount of the premium of a foreign exchange option trade
-	 * and its settlement place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -799,7 +814,7 @@ public class Option10 {
 	 */
 	public static final MMMessageAssociationEnd mmPremium = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Option10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Option10.mmObject();
 			isDerived = false;
 			xmlTag = "Prm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -812,11 +827,11 @@ public class Option10 {
 			type_lazy = () -> com.tools20022.repository.msg.PremiumAmount3.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmAmtTp", required = true)
 	protected SettlementType1Code settlementAmountType;
 	/**
-	 * Indicates whether the trade is to be settled as principal or netted off
-	 * against another trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -845,7 +860,7 @@ public class Option10 {
 	 */
 	public static final MMMessageAttribute mmSettlementAmountType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Option10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Option10.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -856,10 +871,11 @@ public class Option10 {
 			simpleType_lazy = () -> SettlementType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlOptnInf", required = true)
 	protected Max140Text additionalOptionInformation;
 	/**
-	 * Free format text that may contain information on the option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -891,7 +907,7 @@ public class Option10 {
 	 */
 	public static final MMMessageAttribute mmAdditionalOptionInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Option10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Option10.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlOptnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -907,11 +923,15 @@ public class Option10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Option10.mmData, Option10.mmExerciseStatus, Option10.mmExerciseStyle, Option10.mmOptionType, Option10.mmDerivativeOptionIdentification, Option10.mmOptionPayoutType,
-						Option10.mmValuationRate, Option10.mmStrikePrice, Option10.mmVolatilityMargin, Option10.mmRiskAmount, Option10.mmExpiryDateAndTime, Option10.mmExpiryLocation, Option10.mmSettlementType, Option10.mmOptionAmounts,
-						Option10.mmPremium, Option10.mmSettlementAmountType, Option10.mmAdditionalOptionInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option10.mmData, com.tools20022.repository.msg.Option10.mmExerciseStatus, com.tools20022.repository.msg.Option10.mmExerciseStyle,
+						com.tools20022.repository.msg.Option10.mmOptionType, com.tools20022.repository.msg.Option10.mmDerivativeOptionIdentification, com.tools20022.repository.msg.Option10.mmOptionPayoutType,
+						com.tools20022.repository.msg.Option10.mmValuationRate, com.tools20022.repository.msg.Option10.mmStrikePrice, com.tools20022.repository.msg.Option10.mmVolatilityMargin,
+						com.tools20022.repository.msg.Option10.mmRiskAmount, com.tools20022.repository.msg.Option10.mmExpiryDateAndTime, com.tools20022.repository.msg.Option10.mmExpiryLocation,
+						com.tools20022.repository.msg.Option10.mmSettlementType, com.tools20022.repository.msg.Option10.mmOptionAmounts, com.tools20022.repository.msg.Option10.mmPremium,
+						com.tools20022.repository.msg.Option10.mmSettlementAmountType, com.tools20022.repository.msg.Option10.mmAdditionalOptionInformation);
 				trace_lazy = () -> CurrencyOption.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEarliestExerciseDateRule.forOption10);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Option10";
 				definition = "List of elements which provide the parameters of an option trade.";
@@ -921,156 +941,156 @@ public class Option10 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Data", required = true)
 	public DataType1Code getData() {
 		return data;
 	}
 
-	public void setData(DataType1Code data) {
-		this.data = data;
+	public Option10 setData(DataType1Code data) {
+		this.data = Objects.requireNonNull(data);
+		return this;
 	}
 
-	@XmlElement(name = "ExrcSts", required = true)
 	public DerivativeExerciseStatus1Code getExerciseStatus() {
 		return exerciseStatus;
 	}
 
-	public void setExerciseStatus(DerivativeExerciseStatus1Code exerciseStatus) {
-		this.exerciseStatus = exerciseStatus;
+	public Option10 setExerciseStatus(DerivativeExerciseStatus1Code exerciseStatus) {
+		this.exerciseStatus = Objects.requireNonNull(exerciseStatus);
+		return this;
 	}
 
-	@XmlElement(name = "ExrcStyle", required = true)
 	public OptionStyle2Code getExerciseStyle() {
 		return exerciseStyle;
 	}
 
-	public void setExerciseStyle(OptionStyle2Code exerciseStyle) {
-		this.exerciseStyle = exerciseStyle;
+	public Option10 setExerciseStyle(OptionStyle2Code exerciseStyle) {
+		this.exerciseStyle = Objects.requireNonNull(exerciseStyle);
+		return this;
 	}
 
-	@XmlElement(name = "OptnTp", required = true)
 	public OptionType1Code getOptionType() {
 		return optionType;
 	}
 
-	public void setOptionType(OptionType1Code optionType) {
-		this.optionType = optionType;
+	public Option10 setOptionType(OptionType1Code optionType) {
+		this.optionType = Objects.requireNonNull(optionType);
+		return this;
 	}
 
-	@XmlElement(name = "DerivOptnId", required = true)
 	public Max35Text getDerivativeOptionIdentification() {
 		return derivativeOptionIdentification;
 	}
 
-	public void setDerivativeOptionIdentification(Max35Text derivativeOptionIdentification) {
-		this.derivativeOptionIdentification = derivativeOptionIdentification;
+	public Option10 setDerivativeOptionIdentification(Max35Text derivativeOptionIdentification) {
+		this.derivativeOptionIdentification = Objects.requireNonNull(derivativeOptionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OptnPyoutTp", required = true)
 	public OptionPayoutType1Code getOptionPayoutType() {
 		return optionPayoutType;
 	}
 
-	public void setOptionPayoutType(OptionPayoutType1Code optionPayoutType) {
-		this.optionPayoutType = optionPayoutType;
+	public Option10 setOptionPayoutType(OptionPayoutType1Code optionPayoutType) {
+		this.optionPayoutType = Objects.requireNonNull(optionPayoutType);
+		return this;
 	}
 
-	@XmlElement(name = "ValtnRate", required = true)
 	public AgreedRate3 getValuationRate() {
 		return valuationRate;
 	}
 
-	public void setValuationRate(com.tools20022.repository.msg.AgreedRate3 valuationRate) {
-		this.valuationRate = valuationRate;
+	public Option10 setValuationRate(com.tools20022.repository.msg.AgreedRate3 valuationRate) {
+		this.valuationRate = Objects.requireNonNull(valuationRate);
+		return this;
 	}
 
-	@XmlElement(name = "StrkPric", required = true)
 	public AgreedRate3 getStrikePrice() {
 		return strikePrice;
 	}
 
-	public void setStrikePrice(com.tools20022.repository.msg.AgreedRate3 strikePrice) {
-		this.strikePrice = strikePrice;
+	public Option10 setStrikePrice(com.tools20022.repository.msg.AgreedRate3 strikePrice) {
+		this.strikePrice = Objects.requireNonNull(strikePrice);
+		return this;
 	}
 
-	@XmlElement(name = "VoltlyMrgn", required = true)
 	public PercentageRate getVolatilityMargin() {
 		return volatilityMargin;
 	}
 
-	public void setVolatilityMargin(PercentageRate volatilityMargin) {
-		this.volatilityMargin = volatilityMargin;
+	public Option10 setVolatilityMargin(PercentageRate volatilityMargin) {
+		this.volatilityMargin = Objects.requireNonNull(volatilityMargin);
+		return this;
 	}
 
-	@XmlElement(name = "RskAmt", required = true)
 	public ActiveCurrencyAndAmount getRiskAmount() {
 		return riskAmount;
 	}
 
-	public void setRiskAmount(ActiveCurrencyAndAmount riskAmount) {
-		this.riskAmount = riskAmount;
+	public Option10 setRiskAmount(ActiveCurrencyAndAmount riskAmount) {
+		this.riskAmount = Objects.requireNonNull(riskAmount);
+		return this;
 	}
 
-	@XmlElement(name = "XpryDtAndTm", required = true)
 	public ISODateTime getExpiryDateAndTime() {
 		return expiryDateAndTime;
 	}
 
-	public void setExpiryDateAndTime(ISODateTime expiryDateAndTime) {
-		this.expiryDateAndTime = expiryDateAndTime;
+	public Option10 setExpiryDateAndTime(ISODateTime expiryDateAndTime) {
+		this.expiryDateAndTime = Objects.requireNonNull(expiryDateAndTime);
+		return this;
 	}
 
-	@XmlElement(name = "XpryLctn", required = true)
 	public Max4AlphaNumericText getExpiryLocation() {
 		return expiryLocation;
 	}
 
-	public void setExpiryLocation(Max4AlphaNumericText expiryLocation) {
-		this.expiryLocation = expiryLocation;
+	public Option10 setExpiryLocation(Max4AlphaNumericText expiryLocation) {
+		this.expiryLocation = Objects.requireNonNull(expiryLocation);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmTp", required = true)
 	public SettlementDateCode getSettlementType() {
 		return settlementType;
 	}
 
-	public void setSettlementType(SettlementDateCode settlementType) {
-		this.settlementType = settlementType;
+	public Option10 setSettlementType(SettlementDateCode settlementType) {
+		this.settlementType = Objects.requireNonNull(settlementType);
+		return this;
 	}
 
-	@XmlElement(name = "OptnAmts", required = true)
 	public AmountsAndValueDate4 getOptionAmounts() {
 		return optionAmounts;
 	}
 
-	public void setOptionAmounts(com.tools20022.repository.msg.AmountsAndValueDate4 optionAmounts) {
-		this.optionAmounts = optionAmounts;
+	public Option10 setOptionAmounts(com.tools20022.repository.msg.AmountsAndValueDate4 optionAmounts) {
+		this.optionAmounts = Objects.requireNonNull(optionAmounts);
+		return this;
 	}
 
-	@XmlElement(name = "Prm", required = true)
 	public PremiumAmount3 getPremium() {
 		return premium;
 	}
 
-	public void setPremium(com.tools20022.repository.msg.PremiumAmount3 premium) {
-		this.premium = premium;
+	public Option10 setPremium(com.tools20022.repository.msg.PremiumAmount3 premium) {
+		this.premium = Objects.requireNonNull(premium);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmAmtTp", required = true)
 	public SettlementType1Code getSettlementAmountType() {
 		return settlementAmountType;
 	}
 
-	public void setSettlementAmountType(SettlementType1Code settlementAmountType) {
-		this.settlementAmountType = settlementAmountType;
+	public Option10 setSettlementAmountType(SettlementType1Code settlementAmountType) {
+		this.settlementAmountType = Objects.requireNonNull(settlementAmountType);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlOptnInf", required = true)
 	public Max140Text getAdditionalOptionInformation() {
 		return additionalOptionInformation;
 	}
 
-	public void setAdditionalOptionInformation(Max140Text additionalOptionInformation) {
-		this.additionalOptionInformation = additionalOptionInformation;
+	public Option10 setAdditionalOptionInformation(Max140Text additionalOptionInformation) {
+		this.additionalOptionInformation = Objects.requireNonNull(additionalOptionInformation);
+		return this;
 	}
 }

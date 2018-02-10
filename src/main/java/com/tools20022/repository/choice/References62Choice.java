@@ -22,9 +22,11 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AdditionalReference8;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * References61Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "References62Choice", propOrder = {"previousReference", "otherReference"})
 public class References62Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrvsRef", required = true)
 	protected List<AdditionalReference8> previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -106,7 +109,7 @@ public class References62Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> References62Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.References62Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,11 +122,11 @@ public class References62Choice {
 			type_lazy = () -> AdditionalReference8.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrRef", required = true)
 	protected List<AdditionalReference8> otherReference;
 	/**
-	 * Reference to a linked proprietary message or reference of a system that
-	 * was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -156,7 +159,7 @@ public class References62Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOtherReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> References62Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.References62Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,8 +176,8 @@ public class References62Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(References62Choice.mmPreviousReference, References62Choice.mmOtherReference);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References62Choice.mmPreviousReference, com.tools20022.repository.choice.References62Choice.mmOtherReference);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "References62Choice";
 				definition = "Choice of references used to reference a previous transaction.";
@@ -184,21 +187,21 @@ public class References62Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrvsRef", required = true)
 	public List<AdditionalReference8> getPreviousReference() {
-		return previousReference;
+		return previousReference == null ? previousReference = new ArrayList<>() : previousReference;
 	}
 
-	public void setPreviousReference(List<AdditionalReference8> previousReference) {
-		this.previousReference = previousReference;
+	public References62Choice setPreviousReference(List<AdditionalReference8> previousReference) {
+		this.previousReference = Objects.requireNonNull(previousReference);
+		return this;
 	}
 
-	@XmlElement(name = "OthrRef", required = true)
 	public List<AdditionalReference8> getOtherReference() {
-		return otherReference;
+		return otherReference == null ? otherReference = new ArrayList<>() : otherReference;
 	}
 
-	public void setOtherReference(List<AdditionalReference8> otherReference) {
-		this.otherReference = otherReference;
+	public References62Choice setOtherReference(List<AdditionalReference8> otherReference) {
+		this.otherReference = Objects.requireNonNull(otherReference);
+		return this;
 	}
 }

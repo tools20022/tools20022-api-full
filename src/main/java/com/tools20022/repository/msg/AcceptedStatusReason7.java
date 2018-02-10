@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalReasonInformationRule#forAcceptedStatusReason7
+ * ConstraintAdditionalReasonInformationRule.forAcceptedStatusReason7}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Reason for an accepted status."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcceptedStatusReason7", propOrder = {"reason", "additionalReasonInformation"})
 public class AcceptedStatusReason7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rsn", required = true)
 	protected AcceptedReason8Choice reason;
 	/**
-	 * Reason for the accepted status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +120,7 @@ public class AcceptedStatusReason7 {
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
-			componentContext_lazy = () -> AcceptedStatusReason7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptedStatusReason7.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +132,11 @@ public class AcceptedStatusReason7 {
 			type_lazy = () -> AcceptedReason8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRsnInf")
 	protected Max210Text additionalReasonInformation;
 	/**
-	 * Additional information about the processed instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,7 +163,7 @@ public class AcceptedStatusReason7 {
 	 */
 	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AcceptedStatusReason7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptedStatusReason7.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,9 +178,10 @@ public class AcceptedStatusReason7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AcceptedStatusReason7.mmReason, AcceptedStatusReason7.mmAdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptedStatusReason7.mmReason, com.tools20022.repository.msg.AcceptedStatusReason7.mmAdditionalReasonInformation);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalReasonInformationRule.forAcceptedStatusReason7);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptedStatusReason7";
 				definition = "Reason for an accepted status.";
@@ -177,21 +190,21 @@ public class AcceptedStatusReason7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public AcceptedReason8Choice getReason() {
 		return reason;
 	}
 
-	public void setReason(AcceptedReason8Choice reason) {
-		this.reason = reason;
+	public AcceptedStatusReason7 setReason(AcceptedReason8Choice reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRsnInf")
-	public Max210Text getAdditionalReasonInformation() {
-		return additionalReasonInformation;
+	public Optional<Max210Text> getAdditionalReasonInformation() {
+		return additionalReasonInformation == null ? Optional.empty() : Optional.of(additionalReasonInformation);
 	}
 
-	public void setAdditionalReasonInformation(Max210Text additionalReasonInformation) {
+	public AcceptedStatusReason7 setAdditionalReasonInformation(Max210Text additionalReasonInformation) {
 		this.additionalReasonInformation = additionalReasonInformation;
+		return this;
 	}
 }

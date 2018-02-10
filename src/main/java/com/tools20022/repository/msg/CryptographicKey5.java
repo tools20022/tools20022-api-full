@@ -28,9 +28,8 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max35Binary;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,15 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * CryptographicKey4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CryptographicKey5", propOrder = {"identification", "additionalIdentification", "version", "type", "function", "activationDate", "deactivationDate", "keyValue"})
 public class CryptographicKey5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max140Text identification;
 	/**
-	 * Name of the cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,7 +141,7 @@ public class CryptographicKey5 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,13 +154,11 @@ public class CryptographicKey5 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlId")
 	protected Max35Binary additionalIdentification;
 	/**
-	 * Additional identification of the key.<br>
-	 * <b>Usage</b><br>
-	 * For derived unique key per transaction (DUKPT) keys, the key serial
-	 * number (KSN) with the 21 bits of the transaction counter set to zero.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -194,7 +192,7 @@ public class CryptographicKey5 {
 	 */
 	public static final MMMessageAttribute mmAdditionalIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,10 +204,11 @@ public class CryptographicKey5 {
 			simpleType_lazy = () -> Max35Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "Vrsn", required = true)
 	protected Max256Text version;
 	/**
-	 * Version of the cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,7 +248,7 @@ public class CryptographicKey5 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -262,10 +261,11 @@ public class CryptographicKey5 {
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected CryptographicKeyType3Code type;
 	/**
-	 * Type of algorithm used by the cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -305,7 +305,7 @@ public class CryptographicKey5 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -318,10 +318,11 @@ public class CryptographicKey5 {
 			simpleType_lazy = () -> CryptographicKeyType3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Fctn", required = true)
 	protected List<KeyUsage1Code> function;
 	/**
-	 * Allowed usage of the key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -362,7 +363,7 @@ public class CryptographicKey5 {
 	 */
 	public static final MMMessageAttribute mmFunction = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
 			isDerived = false;
 			xmlTag = "Fctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -374,10 +375,11 @@ public class CryptographicKey5 {
 			simpleType_lazy = () -> KeyUsage1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ActvtnDt")
 	protected ISODateTime activationDate;
 	/**
-	 * Date and time on which the key must be activated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -417,7 +419,7 @@ public class CryptographicKey5 {
 	 */
 	public static final MMMessageAttribute mmActivationDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
 			isDerived = false;
 			xmlTag = "ActvtnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -430,10 +432,11 @@ public class CryptographicKey5 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "DeactvtnDt")
 	protected ISODateTime deactivationDate;
 	/**
-	 * Date and time on which the key must be deactivated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -473,7 +476,7 @@ public class CryptographicKey5 {
 	 */
 	public static final MMMessageAttribute mmDeactivationDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
 			isDerived = false;
 			xmlTag = "DeactvtnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -486,10 +489,11 @@ public class CryptographicKey5 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "KeyVal", required = true)
 	protected ContentInformationType10 keyValue;
 	/**
-	 * Encrypted cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -521,7 +525,7 @@ public class CryptographicKey5 {
 	 */
 	public static final MMMessageAssociationEnd mmKeyValue = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CryptographicKey5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
 			isDerived = false;
 			xmlTag = "KeyVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -538,9 +542,10 @@ public class CryptographicKey5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CryptographicKey5.mmIdentification, CryptographicKey5.mmAdditionalIdentification, CryptographicKey5.mmVersion, CryptographicKey5.mmType, CryptographicKey5.mmFunction,
-						CryptographicKey5.mmActivationDate, CryptographicKey5.mmDeactivationDate, CryptographicKey5.mmKeyValue);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey5.mmIdentification, com.tools20022.repository.msg.CryptographicKey5.mmAdditionalIdentification,
+						com.tools20022.repository.msg.CryptographicKey5.mmVersion, com.tools20022.repository.msg.CryptographicKey5.mmType, com.tools20022.repository.msg.CryptographicKey5.mmFunction,
+						com.tools20022.repository.msg.CryptographicKey5.mmActivationDate, com.tools20022.repository.msg.CryptographicKey5.mmDeactivationDate, com.tools20022.repository.msg.CryptographicKey5.mmKeyValue);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CryptographicKey5";
 				definition = "Cryptographic Key.";
@@ -551,75 +556,75 @@ public class CryptographicKey5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max140Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max140Text identification) {
-		this.identification = identification;
+	public CryptographicKey5 setIdentification(Max140Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlId")
-	public Max35Binary getAdditionalIdentification() {
-		return additionalIdentification;
+	public Optional<Max35Binary> getAdditionalIdentification() {
+		return additionalIdentification == null ? Optional.empty() : Optional.of(additionalIdentification);
 	}
 
-	public void setAdditionalIdentification(Max35Binary additionalIdentification) {
+	public CryptographicKey5 setAdditionalIdentification(Max35Binary additionalIdentification) {
 		this.additionalIdentification = additionalIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Vrsn", required = true)
 	public Max256Text getVersion() {
 		return version;
 	}
 
-	public void setVersion(Max256Text version) {
-		this.version = version;
+	public CryptographicKey5 setVersion(Max256Text version) {
+		this.version = Objects.requireNonNull(version);
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public CryptographicKeyType3Code getType() {
 		return type;
 	}
 
-	public void setType(CryptographicKeyType3Code type) {
-		this.type = type;
+	public CryptographicKey5 setType(CryptographicKeyType3Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Fctn", required = true)
 	public List<KeyUsage1Code> getFunction() {
-		return function;
+		return function == null ? function = new ArrayList<>() : function;
 	}
 
-	public void setFunction(List<KeyUsage1Code> function) {
-		this.function = function;
+	public CryptographicKey5 setFunction(List<KeyUsage1Code> function) {
+		this.function = Objects.requireNonNull(function);
+		return this;
 	}
 
-	@XmlElement(name = "ActvtnDt")
-	public ISODateTime getActivationDate() {
-		return activationDate;
+	public Optional<ISODateTime> getActivationDate() {
+		return activationDate == null ? Optional.empty() : Optional.of(activationDate);
 	}
 
-	public void setActivationDate(ISODateTime activationDate) {
+	public CryptographicKey5 setActivationDate(ISODateTime activationDate) {
 		this.activationDate = activationDate;
+		return this;
 	}
 
-	@XmlElement(name = "DeactvtnDt")
-	public ISODateTime getDeactivationDate() {
-		return deactivationDate;
+	public Optional<ISODateTime> getDeactivationDate() {
+		return deactivationDate == null ? Optional.empty() : Optional.of(deactivationDate);
 	}
 
-	public void setDeactivationDate(ISODateTime deactivationDate) {
+	public CryptographicKey5 setDeactivationDate(ISODateTime deactivationDate) {
 		this.deactivationDate = deactivationDate;
+		return this;
 	}
 
-	@XmlElement(name = "KeyVal", required = true)
 	public ContentInformationType10 getKeyValue() {
 		return keyValue;
 	}
 
-	public void setKeyValue(com.tools20022.repository.msg.ContentInformationType10 keyValue) {
-		this.keyValue = keyValue;
+	public CryptographicKey5 setKeyValue(com.tools20022.repository.msg.ContentInformationType10 keyValue) {
+		this.keyValue = Objects.requireNonNull(keyValue);
+		return this;
 	}
 }

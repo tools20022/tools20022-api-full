@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "SecurityClassificationType1Choice", propOrder = {"CFI", "alternateClassification"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "SecurityClassificationType1Choice", propOrder = {"cFI", "alternateClassification"})
 public class SecurityClassificationType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CFI", required = true)
 	protected CFIIdentifier cFI;
 	/**
-	 * Classification type of the financial instrument, as per the ISO 10962
-	 * Classification of Financial Instrument (CFI) codification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +116,7 @@ public class SecurityClassificationType1Choice {
 	public static final MMMessageAttribute mmCFI = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
-			componentContext_lazy = () -> SecurityClassificationType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityClassificationType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CFI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +127,11 @@ public class SecurityClassificationType1Choice {
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "AltrnClssfctn", required = true)
 	protected GenericIdentification3 alternateClassification;
 	/**
-	 * Other type of classification of the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -162,7 +164,7 @@ public class SecurityClassificationType1Choice {
 	public static final MMMessageAssociationEnd mmAlternateClassification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
-			componentContext_lazy = () -> SecurityClassificationType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityClassificationType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnClssfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,9 +180,9 @@ public class SecurityClassificationType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityClassificationType1Choice.mmCFI, SecurityClassificationType1Choice.mmAlternateClassification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityClassificationType1Choice.mmCFI, com.tools20022.repository.choice.SecurityClassificationType1Choice.mmAlternateClassification);
 				trace_lazy = () -> AssetClassification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityClassificationType1Choice";
 				definition = "Choice between a CFI code or an other type of identification for the classification of the financial instrument.";
@@ -189,21 +191,21 @@ public class SecurityClassificationType1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CFI", required = true)
 	public CFIIdentifier getCFI() {
 		return cFI;
 	}
 
-	public void setCFI(CFIIdentifier cFI) {
-		this.cFI = cFI;
+	public SecurityClassificationType1Choice setCFI(CFIIdentifier cFI) {
+		this.cFI = Objects.requireNonNull(cFI);
+		return this;
 	}
 
-	@XmlElement(name = "AltrnClssfctn", required = true)
 	public GenericIdentification3 getAlternateClassification() {
 		return alternateClassification;
 	}
 
-	public void setAlternateClassification(GenericIdentification3 alternateClassification) {
-		this.alternateClassification = alternateClassification;
+	public SecurityClassificationType1Choice setAlternateClassification(GenericIdentification3 alternateClassification) {
+		this.alternateClassification = Objects.requireNonNull(alternateClassification);
+		return this;
 	}
 }

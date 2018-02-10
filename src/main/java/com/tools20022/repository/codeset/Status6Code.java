@@ -20,33 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.StatusCode;
+import com.tools20022.repository.codeset.Status6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of an instruction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.StatusCode StatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Status6Code#mmRejected
- * Status6Code.mmRejected}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status6Code#mmCompleted
- * Status6Code.mmCompleted}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status6Code#mmQueued
- * Status6Code.mmQueued}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status6Code#Rejected
+ * Status6Code.Rejected}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status6Code#Completed
+ * Status6Code.Completed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status6Code#Queued
+ * Status6Code.Queued}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.StatusCode StatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -63,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of an instruction."</li>
  * </ul>
  */
-public class Status6Code extends StatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Status6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -81,11 +86,12 @@ public class Status6Code extends StatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final Status6Code Rejected = new Status6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> Status6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status6Code.mmObject();
+			codeName = StatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -103,11 +109,12 @@ public class Status6Code extends StatusCode {
 	 * name} = "Completed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompleted = new MMCode() {
+	public static final Status6Code Completed = new Status6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
-			owner_lazy = () -> Status6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status6Code.mmObject();
+			codeName = StatusCode.Completed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -125,26 +132,58 @@ public class Status6Code extends StatusCode {
 	 * name} = "Queued"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQueued = new MMCode() {
+	public static final Status6Code Queued = new Status6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Queued";
-			owner_lazy = () -> Status6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status6Code.mmObject();
+			codeName = StatusCode.Queued.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Status6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Status6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("REJT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status6Code";
 				definition = "Specifies the status of an instruction.";
-				code_lazy = () -> Arrays.asList(Status6Code.mmRejected, Status6Code.mmCompleted, Status6Code.mmQueued);
 				trace_lazy = () -> StatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Status6Code.Rejected, com.tools20022.repository.codeset.Status6Code.Completed, com.tools20022.repository.codeset.Status6Code.Queued);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+		codesByName.put(Completed.getCodeName().get(), Completed);
+		codesByName.put(Queued.getCodeName().get(), Queued);
+	}
+
+	public static Status6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Status6Code[] values() {
+		Status6Code[] values = new Status6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Status6Code> {
+		@Override
+		public Status6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Status6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

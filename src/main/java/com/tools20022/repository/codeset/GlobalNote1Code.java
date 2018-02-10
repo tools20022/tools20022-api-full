@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.GlobalNoteCode;
+import com.tools20022.repository.codeset.GlobalNote1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies if the security will be issued in New Global Note (NGN) or
@@ -31,23 +35,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.GlobalNoteCode GlobalNoteCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GlobalNote1Code#mmNewGlobalNote
- * GlobalNote1Code.mmNewGlobalNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.GlobalNote1Code#NewGlobalNote
+ * GlobalNote1Code.NewGlobalNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GlobalNote1Code#mmClassicalGlobalNote
- * GlobalNote1Code.mmClassicalGlobalNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.GlobalNote1Code#ClassicalGlobalNote
+ * GlobalNote1Code.ClassicalGlobalNote}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.GlobalNoteCode GlobalNoteCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -66,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class GlobalNote1Code extends GlobalNoteCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class GlobalNote1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,11 +90,12 @@ public class GlobalNote1Code extends GlobalNoteCode {
 	 * name} = "NewGlobalNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNewGlobalNote = new MMCode() {
+	public static final GlobalNote1Code NewGlobalNote = new GlobalNote1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewGlobalNote";
-			owner_lazy = () -> GlobalNote1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.GlobalNote1Code.mmObject();
+			codeName = GlobalNoteCode.NewGlobalNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -108,26 +114,57 @@ public class GlobalNote1Code extends GlobalNoteCode {
 	 * name} = "ClassicalGlobalNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClassicalGlobalNote = new MMCode() {
+	public static final GlobalNote1Code ClassicalGlobalNote = new GlobalNote1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassicalGlobalNote";
-			owner_lazy = () -> GlobalNote1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.GlobalNote1Code.mmObject();
+			codeName = GlobalNoteCode.ClassicalGlobalNote.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, GlobalNote1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected GlobalNote1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NGNO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GlobalNote1Code";
 				definition = "Identifies if the security will be issued in New Global Note (NGN) or Classical Global Note (CGN).";
-				code_lazy = () -> Arrays.asList(GlobalNote1Code.mmNewGlobalNote, GlobalNote1Code.mmClassicalGlobalNote);
 				trace_lazy = () -> GlobalNoteCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GlobalNote1Code.NewGlobalNote, com.tools20022.repository.codeset.GlobalNote1Code.ClassicalGlobalNote);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NewGlobalNote.getCodeName().get(), NewGlobalNote);
+		codesByName.put(ClassicalGlobalNote.getCodeName().get(), ClassicalGlobalNote);
+	}
+
+	public static GlobalNote1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static GlobalNote1Code[] values() {
+		GlobalNote1Code[] values = new GlobalNote1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, GlobalNote1Code> {
+		@Override
+		public GlobalNote1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(GlobalNote1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

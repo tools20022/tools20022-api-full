@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -56,20 +55,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
- * SecuritiesEventsArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CorpActnInstr"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -110,9 +95,52 @@ import javax.xml.bind.annotation.*;
  * CorporateActionInstructionV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CorpActnInstr"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
+ * SecuritiesEventsArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.033.001.04}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule#forCorporateActionInstructionV04
+ * ConstraintInstructionCancellationRequestIdentificationRule.
+ * forCorporateActionInstructionV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateActionEventIdentificationRule#forCorporateActionInstructionV04
+ * ConstraintCorporateActionEventIdentificationRule.
+ * forCorporateActionInstructionV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline#forCorporateActionInstructionV04
+ * ConstraintChangeInstructionIndicatorGuideline.
+ * forCorporateActionInstructionV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionV04
+ * ConstraintAdditionalInformationRule.forCorporateActionInstructionV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forCorporateActionInstructionV04
+ * ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forCorporateActionInstructionV04
+ * ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOptionTypeRule#forCorporateActionInstructionV04
+ * ConstraintOptionTypeRule.forCorporateActionInstructionV04}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -137,20 +165,17 @@ import javax.xml.bind.annotation.*;
  * CorporateActionInstructionV03}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionInstructionV04", propOrder = {"changeInstructionIndicator", "cancelledInstructionIdentification", "instructionCancellationRequestIdentification", "otherDocumentIdentification", "eventsLinkage",
 		"corporateActionGeneralInformation", "accountDetails", "beneficialOwnerDetails", "corporateActionInstruction", "additionalInformation", "supplementaryData"})
 public class CorporateActionInstructionV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ChngInstrInd")
 	protected YesNoIndicator changeInstructionIndicator;
 	/**
-	 * When used in a corporate action instruction, indicates that the current
-	 * instruction is replacing a previous one that was cancelled earlier. When
-	 * used in a corporate action instruction cancellation request, indicates
-	 * that cancelled instruction will be replaced by a new corporate action
-	 * instruction to be sent later.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,10 +226,11 @@ public class CorporateActionInstructionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "CancInstrId")
 	protected DocumentIdentification15 cancelledInstructionIdentification;
 	/**
-	 * Identification of a previously sent cancelled instruction document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -254,11 +280,11 @@ public class CorporateActionInstructionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "InstrCxlReqId")
 	protected DocumentIdentification15 instructionCancellationRequestIdentification;
 	/**
-	 * Identification of a previously sent instruction cancellation request
-	 * document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -310,10 +336,11 @@ public class CorporateActionInstructionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrDocId")
 	protected List<DocumentIdentification13> otherDocumentIdentification;
 	/**
-	 * Identification of other documents as well as the document number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -362,11 +389,11 @@ public class CorporateActionInstructionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "EvtsLkg")
 	protected List<CorporateActionEventReference1> eventsLinkage;
 	/**
-	 * Identification of an other corporate action event that needs to be
-	 * closely linked to the processing of the event notified in this document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -416,10 +443,11 @@ public class CorporateActionInstructionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	protected CorporateActionGeneralInformation55 corporateActionGeneralInformation;
 	/**
-	 * General information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -468,11 +496,11 @@ public class CorporateActionInstructionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctDtls", required = true)
 	protected AccountAndBalance17 accountDetails;
 	/**
-	 * General information about the safekeeping account, owner and account
-	 * balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -523,10 +551,11 @@ public class CorporateActionInstructionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "BnfclOwnrDtls")
 	protected List<PartyIdentification56> beneficialOwnerDetails;
 	/**
-	 * Provides information about the beneficial owner of the securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -575,10 +604,11 @@ public class CorporateActionInstructionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnInstr", required = true)
 	protected CorporateActionOption57 corporateActionInstruction;
 	/**
-	 * Information about the corporate action instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -627,10 +657,11 @@ public class CorporateActionInstructionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected CorporateActionNarrative21 additionalInformation;
 	/**
-	 * Provides additional information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -679,11 +710,11 @@ public class CorporateActionInstructionV04 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -737,6 +768,12 @@ public class CorporateActionInstructionV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule.forCorporateActionInstructionV04,
+						com.tools20022.repository.constraints.ConstraintCorporateActionEventIdentificationRule.forCorporateActionInstructionV04,
+						com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionV04,
+						com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionV04,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionV04,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionV04, com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstructionV04";
 				definition = "Scope\nAn account owner sends the CorporateActionInstruction message to an account servicer to instruct election on a corporate action event.\r\nThis message is used to provide the custodian with instructions on how the account owner wishes to proceed with a corporate action event. Instructions include investment decisions regarding the exercise of rights issues, the election of stock or cash when the option is available, and decisions on the conversion or tendering of securities.\nUsage\nThe message may also be used to:\n- re-send a message previously sent (the sub-function of the message is Duplicate),\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\nusing the relevant elements in the business application header (BAH).\nISO 15022 - 20022 COEXISTENCE\r\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
@@ -771,106 +808,106 @@ public class CorporateActionInstructionV04 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ChngInstrInd")
-	public YesNoIndicator getChangeInstructionIndicator() {
-		return changeInstructionIndicator;
+	public Optional<YesNoIndicator> getChangeInstructionIndicator() {
+		return changeInstructionIndicator == null ? Optional.empty() : Optional.of(changeInstructionIndicator);
 	}
 
-	public void setChangeInstructionIndicator(YesNoIndicator changeInstructionIndicator) {
+	public CorporateActionInstructionV04 setChangeInstructionIndicator(YesNoIndicator changeInstructionIndicator) {
 		this.changeInstructionIndicator = changeInstructionIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "CancInstrId")
-	public DocumentIdentification15 getCancelledInstructionIdentification() {
-		return cancelledInstructionIdentification;
+	public Optional<DocumentIdentification15> getCancelledInstructionIdentification() {
+		return cancelledInstructionIdentification == null ? Optional.empty() : Optional.of(cancelledInstructionIdentification);
 	}
 
-	public void setCancelledInstructionIdentification(DocumentIdentification15 cancelledInstructionIdentification) {
+	public CorporateActionInstructionV04 setCancelledInstructionIdentification(DocumentIdentification15 cancelledInstructionIdentification) {
 		this.cancelledInstructionIdentification = cancelledInstructionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "InstrCxlReqId")
-	public DocumentIdentification15 getInstructionCancellationRequestIdentification() {
-		return instructionCancellationRequestIdentification;
+	public Optional<DocumentIdentification15> getInstructionCancellationRequestIdentification() {
+		return instructionCancellationRequestIdentification == null ? Optional.empty() : Optional.of(instructionCancellationRequestIdentification);
 	}
 
-	public void setInstructionCancellationRequestIdentification(DocumentIdentification15 instructionCancellationRequestIdentification) {
+	public CorporateActionInstructionV04 setInstructionCancellationRequestIdentification(DocumentIdentification15 instructionCancellationRequestIdentification) {
 		this.instructionCancellationRequestIdentification = instructionCancellationRequestIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "OthrDocId")
 	public List<DocumentIdentification13> getOtherDocumentIdentification() {
-		return otherDocumentIdentification;
+		return otherDocumentIdentification == null ? otherDocumentIdentification = new ArrayList<>() : otherDocumentIdentification;
 	}
 
-	public void setOtherDocumentIdentification(List<DocumentIdentification13> otherDocumentIdentification) {
-		this.otherDocumentIdentification = otherDocumentIdentification;
+	public CorporateActionInstructionV04 setOtherDocumentIdentification(List<DocumentIdentification13> otherDocumentIdentification) {
+		this.otherDocumentIdentification = Objects.requireNonNull(otherDocumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "EvtsLkg")
 	public List<CorporateActionEventReference1> getEventsLinkage() {
-		return eventsLinkage;
+		return eventsLinkage == null ? eventsLinkage = new ArrayList<>() : eventsLinkage;
 	}
 
-	public void setEventsLinkage(List<CorporateActionEventReference1> eventsLinkage) {
-		this.eventsLinkage = eventsLinkage;
+	public CorporateActionInstructionV04 setEventsLinkage(List<CorporateActionEventReference1> eventsLinkage) {
+		this.eventsLinkage = Objects.requireNonNull(eventsLinkage);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionGeneralInformation55 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
 
-	public void setCorporateActionGeneralInformation(CorporateActionGeneralInformation55 corporateActionGeneralInformation) {
-		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	public CorporateActionInstructionV04 setCorporateActionGeneralInformation(CorporateActionGeneralInformation55 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = Objects.requireNonNull(corporateActionGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "AcctDtls", required = true)
 	public AccountAndBalance17 getAccountDetails() {
 		return accountDetails;
 	}
 
-	public void setAccountDetails(AccountAndBalance17 accountDetails) {
-		this.accountDetails = accountDetails;
+	public CorporateActionInstructionV04 setAccountDetails(AccountAndBalance17 accountDetails) {
+		this.accountDetails = Objects.requireNonNull(accountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "BnfclOwnrDtls")
 	public List<PartyIdentification56> getBeneficialOwnerDetails() {
-		return beneficialOwnerDetails;
+		return beneficialOwnerDetails == null ? beneficialOwnerDetails = new ArrayList<>() : beneficialOwnerDetails;
 	}
 
-	public void setBeneficialOwnerDetails(List<PartyIdentification56> beneficialOwnerDetails) {
-		this.beneficialOwnerDetails = beneficialOwnerDetails;
+	public CorporateActionInstructionV04 setBeneficialOwnerDetails(List<PartyIdentification56> beneficialOwnerDetails) {
+		this.beneficialOwnerDetails = Objects.requireNonNull(beneficialOwnerDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnInstr", required = true)
 	public CorporateActionOption57 getCorporateActionInstruction() {
 		return corporateActionInstruction;
 	}
 
-	public void setCorporateActionInstruction(CorporateActionOption57 corporateActionInstruction) {
-		this.corporateActionInstruction = corporateActionInstruction;
+	public CorporateActionInstructionV04 setCorporateActionInstruction(CorporateActionOption57 corporateActionInstruction) {
+		this.corporateActionInstruction = Objects.requireNonNull(corporateActionInstruction);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public CorporateActionNarrative21 getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<CorporateActionNarrative21> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(CorporateActionNarrative21 additionalInformation) {
+	public CorporateActionInstructionV04 setAdditionalInformation(CorporateActionNarrative21 additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public CorporateActionInstructionV04 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.033.04.04")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.033.001.04")
 	static public class Document {
 		@XmlElement(name = "CorpActnInstr", required = true)
 		public CorporateActionInstructionV04 messageBody;

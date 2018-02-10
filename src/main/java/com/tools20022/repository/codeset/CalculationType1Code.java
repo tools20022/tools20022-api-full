@@ -20,127 +20,129 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CalculationTypeCode;
+import com.tools20022.repository.codeset.CalculationType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the yield computation method.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CalculationTypeCode
- * CalculationTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmAfterTax
- * CalculationType1Code.mmAfterTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#AfterTax
+ * CalculationType1Code.AfterTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmAnnual
- * CalculationType1Code.mmAnnual}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#Annual
+ * CalculationType1Code.Annual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmAtIssue
- * CalculationType1Code.mmAtIssue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#AtIssue
+ * CalculationType1Code.AtIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmToAverageMaturity
- * CalculationType1Code.mmToAverageMaturity}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#ToAverageMaturity
+ * CalculationType1Code.ToAverageMaturity}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CalculationType1Code#Book
+ * CalculationType1Code.Book}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmBook
- * CalculationType1Code.mmBook}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#YieldToNextCall
+ * CalculationType1Code.YieldToNextCall}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmYieldToNextCall
- * CalculationType1Code.mmYieldToNextCall}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#ChangeSinceClose
+ * CalculationType1Code.ChangeSinceClose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmChangeSinceClose
- * CalculationType1Code.mmChangeSinceClose}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#Closing
+ * CalculationType1Code.Closing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmClosing
- * CalculationType1Code.mmClosing}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#Compound
+ * CalculationType1Code.Compound}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmCompound
- * CalculationType1Code.mmCompound}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#CurrentYield
+ * CalculationType1Code.CurrentYield}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmCurrentYield
- * CalculationType1Code.mmCurrentYield}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#TrueGross
+ * CalculationType1Code.TrueGross}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmTrueGross
- * CalculationType1Code.mmTrueGross}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#GovernmentEquivalent
+ * CalculationType1Code.GovernmentEquivalent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmGovernmentEquivalent
- * CalculationType1Code.mmGovernmentEquivalent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#InflationAssumption
+ * CalculationType1Code.InflationAssumption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmInflationAssumption
- * CalculationType1Code.mmInflationAssumption}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#InverseFloater
+ * CalculationType1Code.InverseFloater}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmInverseFloater
- * CalculationType1Code.mmInverseFloater}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#LastClose
+ * CalculationType1Code.LastClose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmLastClose
- * CalculationType1Code.mmLastClose}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#LastMonth
+ * CalculationType1Code.LastMonth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmLastMonth
- * CalculationType1Code.mmLastMonth}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#LastQuarter
+ * CalculationType1Code.LastQuarter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmLastQuarter
- * CalculationType1Code.mmLastQuarter}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#LastYear
+ * CalculationType1Code.LastYear}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmLastYear
- * CalculationType1Code.mmLastYear}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#LongestAverageLife
+ * CalculationType1Code.LongestAverageLife}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmLongestAverageLife
- * CalculationType1Code.mmLongestAverageLife}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#MarkToMarket
+ * CalculationType1Code.MarkToMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmMarkToMarket
- * CalculationType1Code.mmMarkToMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#YieldToMaturity
+ * CalculationType1Code.YieldToMaturity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmYieldToMaturity
- * CalculationType1Code.mmYieldToMaturity}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#ToNextRefund
+ * CalculationType1Code.ToNextRefund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmToNextRefund
- * CalculationType1Code.mmToNextRefund}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#OpenAverage
+ * CalculationType1Code.OpenAverage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmOpenAverage
- * CalculationType1Code.mmOpenAverage}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#ToNextPut
+ * CalculationType1Code.ToNextPut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmToNextPut
- * CalculationType1Code.mmToNextPut}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#PreviousClose
+ * CalculationType1Code.PreviousClose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmPreviousClose
- * CalculationType1Code.mmPreviousClose}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#Proceeds
+ * CalculationType1Code.Proceeds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmProceeds
- * CalculationType1Code.mmProceeds}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#SemiAnnual
+ * CalculationType1Code.SemiAnnual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmSemiAnnual
- * CalculationType1Code.mmSemiAnnual}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#ShortestAverageLife
+ * CalculationType1Code.ShortestAverageLife}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmShortestAverageLife
- * CalculationType1Code.mmShortestAverageLife}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#Simple
+ * CalculationType1Code.Simple}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmSimple
- * CalculationType1Code.mmSimple}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#TaxEquivalent
+ * CalculationType1Code.TaxEquivalent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmTaxEquivalent
- * CalculationType1Code.mmTaxEquivalent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#ToTenderDate
+ * CalculationType1Code.ToTenderDate}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CalculationType1Code#True
+ * CalculationType1Code.True}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmToTenderDate
- * CalculationType1Code.mmToTenderDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmTrue
- * CalculationType1Code.mmTrue}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#mmToWorstConvention
- * CalculationType1Code.mmToWorstConvention}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationType1Code#ToWorstConvention
+ * CalculationType1Code.ToWorstConvention}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CalculationTypeCode
+ * CalculationTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -157,7 +159,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the yield computation method."</li>
  * </ul>
  */
-public class CalculationType1Code extends CalculationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CalculationType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -176,11 +179,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "AfterTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAfterTax = new MMCode() {
+	public static final CalculationType1Code AfterTax = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AfterTax";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.AfterTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -199,11 +203,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "Annual"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAnnual = new MMCode() {
+	public static final CalculationType1Code Annual = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Annual";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.Annual.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -222,11 +227,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "AtIssue"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAtIssue = new MMCode() {
+	public static final CalculationType1Code AtIssue = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtIssue";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.AtIssue.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -245,11 +251,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "ToAverageMaturity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmToAverageMaturity = new MMCode() {
+	public static final CalculationType1Code ToAverageMaturity = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToAverageMaturity";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.ToAverageMaturity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -268,11 +275,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "Book"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBook = new MMCode() {
+	public static final CalculationType1Code Book = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Book";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.Book.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -291,11 +299,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "YieldToNextCall"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmYieldToNextCall = new MMCode() {
+	public static final CalculationType1Code YieldToNextCall = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YieldToNextCall";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.YieldToNextCall.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -314,11 +323,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "ChangeSinceClose"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmChangeSinceClose = new MMCode() {
+	public static final CalculationType1Code ChangeSinceClose = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeSinceClose";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.ChangeSinceClose.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -337,11 +347,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "Closing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClosing = new MMCode() {
+	public static final CalculationType1Code Closing = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closing";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.Closing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -360,11 +371,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "Compound"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompound = new MMCode() {
+	public static final CalculationType1Code Compound = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compound";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.Compound.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -383,11 +395,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "CurrentYield"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrentYield = new MMCode() {
+	public static final CalculationType1Code CurrentYield = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYield";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.CurrentYield.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -406,11 +419,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "TrueGross"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTrueGross = new MMCode() {
+	public static final CalculationType1Code TrueGross = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrueGross";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.TrueGross.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -429,11 +443,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "GovernmentEquivalent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGovernmentEquivalent = new MMCode() {
+	public static final CalculationType1Code GovernmentEquivalent = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentEquivalent";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.GovernmentEquivalent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -452,11 +467,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "InflationAssumption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInflationAssumption = new MMCode() {
+	public static final CalculationType1Code InflationAssumption = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InflationAssumption";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.InflationAssumption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -475,11 +491,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "InverseFloater"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInverseFloater = new MMCode() {
+	public static final CalculationType1Code InverseFloater = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InverseFloater";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.InverseFloater.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -498,11 +515,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "LastClose"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLastClose = new MMCode() {
+	public static final CalculationType1Code LastClose = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastClose";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.LastClose.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -521,11 +539,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "LastMonth"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLastMonth = new MMCode() {
+	public static final CalculationType1Code LastMonth = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastMonth";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.LastMonth.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -544,11 +563,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "LastQuarter"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLastQuarter = new MMCode() {
+	public static final CalculationType1Code LastQuarter = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastQuarter";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.LastQuarter.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -567,11 +587,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "LastYear"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLastYear = new MMCode() {
+	public static final CalculationType1Code LastYear = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastYear";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.LastYear.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -590,11 +611,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "LongestAverageLife"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLongestAverageLife = new MMCode() {
+	public static final CalculationType1Code LongestAverageLife = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongestAverageLife";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.LongestAverageLife.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -613,11 +635,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "MarkToMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarkToMarket = new MMCode() {
+	public static final CalculationType1Code MarkToMarket = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkToMarket";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.MarkToMarket.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -636,11 +659,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "YieldToMaturity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmYieldToMaturity = new MMCode() {
+	public static final CalculationType1Code YieldToMaturity = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YieldToMaturity";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.YieldToMaturity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -659,11 +683,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "ToNextRefund"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmToNextRefund = new MMCode() {
+	public static final CalculationType1Code ToNextRefund = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToNextRefund";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.ToNextRefund.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -682,11 +707,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "OpenAverage"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOpenAverage = new MMCode() {
+	public static final CalculationType1Code OpenAverage = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenAverage";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.OpenAverage.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -705,11 +731,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "ToNextPut"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmToNextPut = new MMCode() {
+	public static final CalculationType1Code ToNextPut = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToNextPut";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.ToNextPut.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -728,11 +755,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "PreviousClose"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreviousClose = new MMCode() {
+	public static final CalculationType1Code PreviousClose = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousClose";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.PreviousClose.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -751,11 +779,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "Proceeds"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProceeds = new MMCode() {
+	public static final CalculationType1Code Proceeds = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proceeds";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.Proceeds.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -774,11 +803,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "SemiAnnual"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSemiAnnual = new MMCode() {
+	public static final CalculationType1Code SemiAnnual = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SemiAnnual";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.SemiAnnual.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -797,11 +827,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "ShortestAverageLife"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmShortestAverageLife = new MMCode() {
+	public static final CalculationType1Code ShortestAverageLife = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortestAverageLife";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.ShortestAverageLife.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -820,11 +851,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "Simple"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSimple = new MMCode() {
+	public static final CalculationType1Code Simple = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Simple";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.Simple.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -843,11 +875,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "TaxEquivalent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxEquivalent = new MMCode() {
+	public static final CalculationType1Code TaxEquivalent = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxEquivalent";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.TaxEquivalent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -866,11 +899,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "ToTenderDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmToTenderDate = new MMCode() {
+	public static final CalculationType1Code ToTenderDate = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToTenderDate";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.ToTenderDate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -889,11 +923,12 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "True"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTrue = new MMCode() {
+	public static final CalculationType1Code True = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "True";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.True.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -912,32 +947,98 @@ public class CalculationType1Code extends CalculationTypeCode {
 	 * name} = "ToWorstConvention"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmToWorstConvention = new MMCode() {
+	public static final CalculationType1Code ToWorstConvention = new CalculationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToWorstConvention";
-			owner_lazy = () -> CalculationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationType1Code.mmObject();
+			codeName = CalculationTypeCode.ToWorstConvention.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CalculationType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CalculationType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AFTX");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CalculationType1Code";
 				definition = "Specifies the yield computation method.";
-				code_lazy = () -> Arrays.asList(CalculationType1Code.mmAfterTax, CalculationType1Code.mmAnnual, CalculationType1Code.mmAtIssue, CalculationType1Code.mmToAverageMaturity, CalculationType1Code.mmBook,
-						CalculationType1Code.mmYieldToNextCall, CalculationType1Code.mmChangeSinceClose, CalculationType1Code.mmClosing, CalculationType1Code.mmCompound, CalculationType1Code.mmCurrentYield,
-						CalculationType1Code.mmTrueGross, CalculationType1Code.mmGovernmentEquivalent, CalculationType1Code.mmInflationAssumption, CalculationType1Code.mmInverseFloater, CalculationType1Code.mmLastClose,
-						CalculationType1Code.mmLastMonth, CalculationType1Code.mmLastQuarter, CalculationType1Code.mmLastYear, CalculationType1Code.mmLongestAverageLife, CalculationType1Code.mmMarkToMarket,
-						CalculationType1Code.mmYieldToMaturity, CalculationType1Code.mmToNextRefund, CalculationType1Code.mmOpenAverage, CalculationType1Code.mmToNextPut, CalculationType1Code.mmPreviousClose,
-						CalculationType1Code.mmProceeds, CalculationType1Code.mmSemiAnnual, CalculationType1Code.mmShortestAverageLife, CalculationType1Code.mmSimple, CalculationType1Code.mmTaxEquivalent,
-						CalculationType1Code.mmToTenderDate, CalculationType1Code.mmTrue, CalculationType1Code.mmToWorstConvention);
 				trace_lazy = () -> CalculationTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CalculationType1Code.AfterTax, com.tools20022.repository.codeset.CalculationType1Code.Annual, com.tools20022.repository.codeset.CalculationType1Code.AtIssue,
+						com.tools20022.repository.codeset.CalculationType1Code.ToAverageMaturity, com.tools20022.repository.codeset.CalculationType1Code.Book, com.tools20022.repository.codeset.CalculationType1Code.YieldToNextCall,
+						com.tools20022.repository.codeset.CalculationType1Code.ChangeSinceClose, com.tools20022.repository.codeset.CalculationType1Code.Closing, com.tools20022.repository.codeset.CalculationType1Code.Compound,
+						com.tools20022.repository.codeset.CalculationType1Code.CurrentYield, com.tools20022.repository.codeset.CalculationType1Code.TrueGross, com.tools20022.repository.codeset.CalculationType1Code.GovernmentEquivalent,
+						com.tools20022.repository.codeset.CalculationType1Code.InflationAssumption, com.tools20022.repository.codeset.CalculationType1Code.InverseFloater, com.tools20022.repository.codeset.CalculationType1Code.LastClose,
+						com.tools20022.repository.codeset.CalculationType1Code.LastMonth, com.tools20022.repository.codeset.CalculationType1Code.LastQuarter, com.tools20022.repository.codeset.CalculationType1Code.LastYear,
+						com.tools20022.repository.codeset.CalculationType1Code.LongestAverageLife, com.tools20022.repository.codeset.CalculationType1Code.MarkToMarket, com.tools20022.repository.codeset.CalculationType1Code.YieldToMaturity,
+						com.tools20022.repository.codeset.CalculationType1Code.ToNextRefund, com.tools20022.repository.codeset.CalculationType1Code.OpenAverage, com.tools20022.repository.codeset.CalculationType1Code.ToNextPut,
+						com.tools20022.repository.codeset.CalculationType1Code.PreviousClose, com.tools20022.repository.codeset.CalculationType1Code.Proceeds, com.tools20022.repository.codeset.CalculationType1Code.SemiAnnual,
+						com.tools20022.repository.codeset.CalculationType1Code.ShortestAverageLife, com.tools20022.repository.codeset.CalculationType1Code.Simple, com.tools20022.repository.codeset.CalculationType1Code.TaxEquivalent,
+						com.tools20022.repository.codeset.CalculationType1Code.ToTenderDate, com.tools20022.repository.codeset.CalculationType1Code.True, com.tools20022.repository.codeset.CalculationType1Code.ToWorstConvention);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AfterTax.getCodeName().get(), AfterTax);
+		codesByName.put(Annual.getCodeName().get(), Annual);
+		codesByName.put(AtIssue.getCodeName().get(), AtIssue);
+		codesByName.put(ToAverageMaturity.getCodeName().get(), ToAverageMaturity);
+		codesByName.put(Book.getCodeName().get(), Book);
+		codesByName.put(YieldToNextCall.getCodeName().get(), YieldToNextCall);
+		codesByName.put(ChangeSinceClose.getCodeName().get(), ChangeSinceClose);
+		codesByName.put(Closing.getCodeName().get(), Closing);
+		codesByName.put(Compound.getCodeName().get(), Compound);
+		codesByName.put(CurrentYield.getCodeName().get(), CurrentYield);
+		codesByName.put(TrueGross.getCodeName().get(), TrueGross);
+		codesByName.put(GovernmentEquivalent.getCodeName().get(), GovernmentEquivalent);
+		codesByName.put(InflationAssumption.getCodeName().get(), InflationAssumption);
+		codesByName.put(InverseFloater.getCodeName().get(), InverseFloater);
+		codesByName.put(LastClose.getCodeName().get(), LastClose);
+		codesByName.put(LastMonth.getCodeName().get(), LastMonth);
+		codesByName.put(LastQuarter.getCodeName().get(), LastQuarter);
+		codesByName.put(LastYear.getCodeName().get(), LastYear);
+		codesByName.put(LongestAverageLife.getCodeName().get(), LongestAverageLife);
+		codesByName.put(MarkToMarket.getCodeName().get(), MarkToMarket);
+		codesByName.put(YieldToMaturity.getCodeName().get(), YieldToMaturity);
+		codesByName.put(ToNextRefund.getCodeName().get(), ToNextRefund);
+		codesByName.put(OpenAverage.getCodeName().get(), OpenAverage);
+		codesByName.put(ToNextPut.getCodeName().get(), ToNextPut);
+		codesByName.put(PreviousClose.getCodeName().get(), PreviousClose);
+		codesByName.put(Proceeds.getCodeName().get(), Proceeds);
+		codesByName.put(SemiAnnual.getCodeName().get(), SemiAnnual);
+		codesByName.put(ShortestAverageLife.getCodeName().get(), ShortestAverageLife);
+		codesByName.put(Simple.getCodeName().get(), Simple);
+		codesByName.put(TaxEquivalent.getCodeName().get(), TaxEquivalent);
+		codesByName.put(ToTenderDate.getCodeName().get(), ToTenderDate);
+		codesByName.put(True.getCodeName().get(), True);
+		codesByName.put(ToWorstConvention.getCodeName().get(), ToWorstConvention);
+	}
+
+	public static CalculationType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CalculationType1Code[] values() {
+		CalculationType1Code[] values = new CalculationType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CalculationType1Code> {
+		@Override
+		public CalculationType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CalculationType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

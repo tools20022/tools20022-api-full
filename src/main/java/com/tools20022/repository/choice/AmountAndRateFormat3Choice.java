@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of rate formats."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountAndRateFormat3Choice", propOrder = {"amount", "notSpecifiedRate"})
 public class AmountAndRateFormat3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * Number of monetary units specified in a currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,7 +99,7 @@ public class AmountAndRateFormat3Choice {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AmountAndRateFormat3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AmountAndRateFormat3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,10 +110,11 @@ public class AmountAndRateFormat3Choice {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "NotSpcfdRate", required = true)
 	protected RateValueType6FormatChoice notSpecifiedRate;
 	/**
-	 * The rate is not specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +142,7 @@ public class AmountAndRateFormat3Choice {
 	 */
 	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AmountAndRateFormat3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AmountAndRateFormat3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,8 +157,8 @@ public class AmountAndRateFormat3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountAndRateFormat3Choice.mmAmount, AmountAndRateFormat3Choice.mmNotSpecifiedRate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountAndRateFormat3Choice.mmAmount, com.tools20022.repository.choice.AmountAndRateFormat3Choice.mmNotSpecifiedRate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndRateFormat3Choice";
 				definition = "Choice of rate formats.";
@@ -164,21 +167,21 @@ public class AmountAndRateFormat3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
-		this.amount = amount;
+	public AmountAndRateFormat3Choice setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "NotSpcfdRate", required = true)
 	public RateValueType6FormatChoice getNotSpecifiedRate() {
 		return notSpecifiedRate;
 	}
 
-	public void setNotSpecifiedRate(com.tools20022.repository.choice.RateValueType6FormatChoice notSpecifiedRate) {
-		this.notSpecifiedRate = notSpecifiedRate;
+	public AmountAndRateFormat3Choice setNotSpecifiedRate(com.tools20022.repository.choice.RateValueType6FormatChoice notSpecifiedRate) {
+		this.notSpecifiedRate = Objects.requireNonNull(notSpecifiedRate);
+		return this;
 	}
 }

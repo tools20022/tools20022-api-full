@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Number, physical or virtual address, used for communication.
@@ -90,55 +89,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.ContactPoint#mmInvestmentFundClassProcessing
  * ContactPoint.mmInvestmentFundClassProcessing}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.PhoneAddress PhoneAddress}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ElectronicAddress
- * ElectronicAddress}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OrderDeskContactDetails
- * OrderDeskContactDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ContactAttributes1
- * ContactAttributes1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommunicationAddress3
- * CommunicationAddress3}</li>
- * <li>{@linkplain com.tools20022.repository.choice.CommunicationMethod2Choice
- * CommunicationMethod2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RemittanceLocation1
- * RemittanceLocation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RemittanceLocation2
- * RemittanceLocation2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ContactInformation1
- * ContactInformation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommunicationAddress4
- * CommunicationAddress4}</li>
- * <li>{@linkplain com.tools20022.repository.choice.LocationFormat1Choice
- * LocationFormat1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommunicationAddressDetails
- * CommunicationAddressDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherContact1 OtherContact1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ResidenceLocation1Choice
- * ResidenceLocation1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RemittanceLocation3
- * RemittanceLocation3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RemittanceLocationDetails1
- * RemittanceLocationDetails1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RemittanceLocation4
- * RemittanceLocation4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommunicationAddress5
- * CommunicationAddress5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CommunicationAddress6
- * CommunicationAddress6}</li>
  * </ul>
  * </li>
  * <li>
@@ -205,11 +155,60 @@ import java.util.List;
  * RemittanceLocation4.mmRemittanceLocationDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PostalAddress PostalAddress}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.PhoneAddress PhoneAddress}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ElectronicAddress
+ * ElectronicAddress}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.OrderDeskContactDetails
+ * OrderDeskContactDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContactAttributes1
+ * ContactAttributes1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommunicationAddress3
+ * CommunicationAddress3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CommunicationMethod2Choice
+ * CommunicationMethod2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RemittanceLocation1
+ * RemittanceLocation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RemittanceLocation2
+ * RemittanceLocation2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContactInformation1
+ * ContactInformation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommunicationAddress4
+ * CommunicationAddress4}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.LocationFormat1Choice
+ * LocationFormat1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommunicationAddressDetails
+ * CommunicationAddressDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherContact1 OtherContact1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ResidenceLocation1Choice
+ * ResidenceLocation1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RemittanceLocation3
+ * RemittanceLocation3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RemittanceLocationDetails1
+ * RemittanceLocationDetails1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RemittanceLocation4
+ * RemittanceLocation4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommunicationAddress5
+ * CommunicationAddress5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommunicationAddress6
+ * CommunicationAddress6}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -225,8 +224,8 @@ public class ContactPoint {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected GenericIdentification identification;
 	/**
-	 * Identification of a contact point.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -268,8 +267,8 @@ public class ContactPoint {
 	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(OtherContact1.mmIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identification of a contact point.";
@@ -282,8 +281,8 @@ public class ContactPoint {
 	};
 	protected InvestmentFund relatedInvestmentFund;
 	/**
-	 * Investment fund class for which an order desk is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -316,8 +315,8 @@ public class ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedInvestmentFund = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedInvestmentFund";
 			definition = "Investment fund class for which an order desk is specified.";
@@ -330,8 +329,8 @@ public class ContactPoint {
 	};
 	protected AnyBICIdentifier bICAddress;
 	/**
-	 * BIC address which identifies the contact point.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -370,8 +369,8 @@ public class ContactPoint {
 	public static final MMBusinessAttribute mmBICAddress = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ContactAttributes1.mmIdentification, MemberDetails.mmMemberReturnAddress, Member1.mmReturnAddress);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BICAddress";
 			definition = "BIC address which identifies the contact point.";
@@ -390,8 +389,8 @@ public class ContactPoint {
 	};
 	protected Party relatedParty;
 	/**
-	 * Party for which a contact point is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -431,8 +430,8 @@ public class ContactPoint {
 	public static final MMBusinessAssociationEnd mmRelatedParty = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PostalAddress3.mmNameAndAddress);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedParty";
 			definition = "Party for which a contact point is specified.";
@@ -445,8 +444,8 @@ public class ContactPoint {
 	};
 	protected CorporateActionEvent relatedCorporateActionEvent;
 	/**
-	 * Corporate action event for which the documentation location is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -481,8 +480,8 @@ public class ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCorporateActionEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCorporateActionEvent";
 			definition = "Corporate action event for which the documentation location is specified.";
@@ -495,8 +494,8 @@ public class ContactPoint {
 	};
 	protected ReportingService relatedReportingService;
 	/**
-	 * Reporting service for which a contact point is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -529,8 +528,8 @@ public class ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedReportingService = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedReportingService";
 			definition = "Reporting service for which a contact point is specified.";
@@ -543,8 +542,8 @@ public class ContactPoint {
 	};
 	protected List<com.tools20022.repository.entity.Document> storedDocument;
 	/**
-	 * Document which is stored at a specific place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -575,8 +574,8 @@ public class ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmStoredDocument = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StoredDocument";
 			definition = "Document which is stored at a specific place.";
@@ -588,8 +587,8 @@ public class ContactPoint {
 	};
 	protected PaymentObligation remittanceRelatedPayment;
 	/**
-	 * Payment for which a remittance location is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -621,8 +620,8 @@ public class ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmRemittanceRelatedPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RemittanceRelatedPayment";
 			definition = "Payment for which a remittance location is specified.";
@@ -635,8 +634,8 @@ public class ContactPoint {
 	};
 	protected ProxyAppointmentCondition relatedProxyAppointment;
 	/**
-	 * Proxy appointment process for which a notification address is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -671,8 +670,8 @@ public class ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedProxyAppointment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedProxyAppointment";
 			definition = "Proxy appointment process for which a notification address is specified.";
@@ -685,8 +684,8 @@ public class ContactPoint {
 	};
 	protected List<com.tools20022.repository.entity.Meeting> contactPointForMeeting;
 	/**
-	 * Meeting which takes place at a specific place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -717,8 +716,8 @@ public class ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmContactPointForMeeting = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ContactPointForMeeting";
 			definition = "Meeting which takes place at a specific place.";
@@ -730,8 +729,8 @@ public class ContactPoint {
 	};
 	protected VotingCondition contactPointForVote;
 	/**
-	 * Vote parameters which apply to a vote location.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -763,8 +762,8 @@ public class ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmContactPointForVote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ContactPointForVote";
 			definition = "Vote parameters which apply to a vote location.";
@@ -777,8 +776,8 @@ public class ContactPoint {
 	};
 	protected ContactPoint mainContact;
 	/**
-	 * Contact address used for normal operations.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -810,8 +809,8 @@ public class ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmMainContact = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MainContact";
 			definition = "Contact address used for normal operations.";
@@ -824,10 +823,8 @@ public class ContactPoint {
 	};
 	protected ContactPoint returnAddress;
 	/**
-	 * Physical/logical address, segregated from the main address that is used
-	 * for normal operations. The return address is used to route messages that
-	 * require specific attention/exception handling, eg, returns or rejects.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -870,8 +867,8 @@ public class ContactPoint {
 	public static final MMBusinessAssociationEnd mmReturnAddress = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(MemberDetails1.mmMemberReturnAddress);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReturnAddress";
 			definition = "Physical/logical address, segregated from the main address that is used for normal operations. The return address is used to route messages that require specific attention/exception handling, eg, returns or rejects.";
@@ -884,8 +881,8 @@ public class ContactPoint {
 	};
 	protected PaymentProcessing relatedPayment;
 	/**
-	 * Payment for which a notification method is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -917,8 +914,8 @@ public class ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPayment";
 			definition = "Payment for which a notification method is specified.";
@@ -931,8 +928,8 @@ public class ContactPoint {
 	};
 	protected YesNoIndicator temporaryIndicator;
 	/**
-	 * Indicates whether the address is a temporary address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -957,8 +954,8 @@ public class ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmTemporaryIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TemporaryIndicator";
 			definition = "Indicates whether the address is a temporary address.";
@@ -977,8 +974,8 @@ public class ContactPoint {
 	};
 	protected AttendanceCard deliveredAttendanceCard;
 	/**
-	 * Attendance card which is delivered at a specific location.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1011,8 +1008,8 @@ public class ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmDeliveredAttendanceCard = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliveredAttendanceCard";
 			definition = "Attendance card which is delivered at a specific location.";
@@ -1025,9 +1022,8 @@ public class ContactPoint {
 	};
 	protected InvestmentFundClassProcessingCharacteristics investmentFundClassProcessing;
 	/**
-	 * Processing characteristics of an investment fund class for which a local
-	 * market annex is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1087,8 +1083,8 @@ public class ContactPoint {
 		{
 			derivation_lazy = () -> Arrays.asList(OrderDeskContactDetails.mmApplicationForms, OrderDeskContactDetails.mmSignatureRequiredInitialSubscription, OrderDeskContactDetails.mmSignatureRequiredSubsequentSubscription,
 					OrderDeskContactDetails.mmSignatureRequiredRedemption, OrderDeskContactDetails.mmSubscriptionProcessingCharacteristics, OrderDeskContactDetails.mmRedemptionProcessingCharacteristics);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFundClassProcessing";
 			definition = "Processing characteristics of an investment fund class for which a local market annex is specified.";
@@ -1103,7 +1099,7 @@ public class ContactPoint {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContactPoint";
 				definition = "Number, physical or virtual address, used for communication.";
@@ -1140,135 +1136,152 @@ public class ContactPoint {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.entity.GenericIdentification identification) {
-		this.identification = identification;
+	public ContactPoint setIdentification(com.tools20022.repository.entity.GenericIdentification identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
 	public InvestmentFund getRelatedInvestmentFund() {
 		return relatedInvestmentFund;
 	}
 
-	public void setRelatedInvestmentFund(com.tools20022.repository.entity.InvestmentFund relatedInvestmentFund) {
-		this.relatedInvestmentFund = relatedInvestmentFund;
+	public ContactPoint setRelatedInvestmentFund(com.tools20022.repository.entity.InvestmentFund relatedInvestmentFund) {
+		this.relatedInvestmentFund = Objects.requireNonNull(relatedInvestmentFund);
+		return this;
 	}
 
 	public AnyBICIdentifier getBICAddress() {
 		return bICAddress;
 	}
 
-	public void setBICAddress(AnyBICIdentifier bICAddress) {
-		this.bICAddress = bICAddress;
+	public ContactPoint setBICAddress(AnyBICIdentifier bICAddress) {
+		this.bICAddress = Objects.requireNonNull(bICAddress);
+		return this;
 	}
 
-	public Party getRelatedParty() {
-		return relatedParty;
+	public Optional<Party> getRelatedParty() {
+		return relatedParty == null ? Optional.empty() : Optional.of(relatedParty);
 	}
 
-	public void setRelatedParty(com.tools20022.repository.entity.Party relatedParty) {
+	public ContactPoint setRelatedParty(com.tools20022.repository.entity.Party relatedParty) {
 		this.relatedParty = relatedParty;
+		return this;
 	}
 
-	public CorporateActionEvent getRelatedCorporateActionEvent() {
-		return relatedCorporateActionEvent;
+	public Optional<CorporateActionEvent> getRelatedCorporateActionEvent() {
+		return relatedCorporateActionEvent == null ? Optional.empty() : Optional.of(relatedCorporateActionEvent);
 	}
 
-	public void setRelatedCorporateActionEvent(com.tools20022.repository.entity.CorporateActionEvent relatedCorporateActionEvent) {
+	public ContactPoint setRelatedCorporateActionEvent(com.tools20022.repository.entity.CorporateActionEvent relatedCorporateActionEvent) {
 		this.relatedCorporateActionEvent = relatedCorporateActionEvent;
+		return this;
 	}
 
-	public ReportingService getRelatedReportingService() {
-		return relatedReportingService;
+	public Optional<ReportingService> getRelatedReportingService() {
+		return relatedReportingService == null ? Optional.empty() : Optional.of(relatedReportingService);
 	}
 
-	public void setRelatedReportingService(com.tools20022.repository.entity.ReportingService relatedReportingService) {
+	public ContactPoint setRelatedReportingService(com.tools20022.repository.entity.ReportingService relatedReportingService) {
 		this.relatedReportingService = relatedReportingService;
+		return this;
 	}
 
 	public List<Document> getStoredDocument() {
-		return storedDocument;
+		return storedDocument == null ? storedDocument = new ArrayList<>() : storedDocument;
 	}
 
-	public void setStoredDocument(List<com.tools20022.repository.entity.Document> storedDocument) {
-		this.storedDocument = storedDocument;
+	public ContactPoint setStoredDocument(List<com.tools20022.repository.entity.Document> storedDocument) {
+		this.storedDocument = Objects.requireNonNull(storedDocument);
+		return this;
 	}
 
-	public PaymentObligation getRemittanceRelatedPayment() {
-		return remittanceRelatedPayment;
+	public Optional<PaymentObligation> getRemittanceRelatedPayment() {
+		return remittanceRelatedPayment == null ? Optional.empty() : Optional.of(remittanceRelatedPayment);
 	}
 
-	public void setRemittanceRelatedPayment(com.tools20022.repository.entity.PaymentObligation remittanceRelatedPayment) {
+	public ContactPoint setRemittanceRelatedPayment(com.tools20022.repository.entity.PaymentObligation remittanceRelatedPayment) {
 		this.remittanceRelatedPayment = remittanceRelatedPayment;
+		return this;
 	}
 
-	public ProxyAppointmentCondition getRelatedProxyAppointment() {
-		return relatedProxyAppointment;
+	public Optional<ProxyAppointmentCondition> getRelatedProxyAppointment() {
+		return relatedProxyAppointment == null ? Optional.empty() : Optional.of(relatedProxyAppointment);
 	}
 
-	public void setRelatedProxyAppointment(com.tools20022.repository.entity.ProxyAppointmentCondition relatedProxyAppointment) {
+	public ContactPoint setRelatedProxyAppointment(com.tools20022.repository.entity.ProxyAppointmentCondition relatedProxyAppointment) {
 		this.relatedProxyAppointment = relatedProxyAppointment;
+		return this;
 	}
 
 	public List<Meeting> getContactPointForMeeting() {
-		return contactPointForMeeting;
+		return contactPointForMeeting == null ? contactPointForMeeting = new ArrayList<>() : contactPointForMeeting;
 	}
 
-	public void setContactPointForMeeting(List<com.tools20022.repository.entity.Meeting> contactPointForMeeting) {
-		this.contactPointForMeeting = contactPointForMeeting;
+	public ContactPoint setContactPointForMeeting(List<com.tools20022.repository.entity.Meeting> contactPointForMeeting) {
+		this.contactPointForMeeting = Objects.requireNonNull(contactPointForMeeting);
+		return this;
 	}
 
-	public VotingCondition getContactPointForVote() {
-		return contactPointForVote;
+	public Optional<VotingCondition> getContactPointForVote() {
+		return contactPointForVote == null ? Optional.empty() : Optional.of(contactPointForVote);
 	}
 
-	public void setContactPointForVote(com.tools20022.repository.entity.VotingCondition contactPointForVote) {
+	public ContactPoint setContactPointForVote(com.tools20022.repository.entity.VotingCondition contactPointForVote) {
 		this.contactPointForVote = contactPointForVote;
+		return this;
 	}
 
 	public ContactPoint getMainContact() {
 		return mainContact;
 	}
 
-	public void setMainContact(com.tools20022.repository.entity.ContactPoint mainContact) {
-		this.mainContact = mainContact;
+	public ContactPoint setMainContact(com.tools20022.repository.entity.ContactPoint mainContact) {
+		this.mainContact = Objects.requireNonNull(mainContact);
+		return this;
 	}
 
 	public ContactPoint getReturnAddress() {
 		return returnAddress;
 	}
 
-	public void setReturnAddress(com.tools20022.repository.entity.ContactPoint returnAddress) {
-		this.returnAddress = returnAddress;
+	public ContactPoint setReturnAddress(com.tools20022.repository.entity.ContactPoint returnAddress) {
+		this.returnAddress = Objects.requireNonNull(returnAddress);
+		return this;
 	}
 
 	public PaymentProcessing getRelatedPayment() {
 		return relatedPayment;
 	}
 
-	public void setRelatedPayment(com.tools20022.repository.entity.PaymentProcessing relatedPayment) {
-		this.relatedPayment = relatedPayment;
+	public ContactPoint setRelatedPayment(com.tools20022.repository.entity.PaymentProcessing relatedPayment) {
+		this.relatedPayment = Objects.requireNonNull(relatedPayment);
+		return this;
 	}
 
 	public YesNoIndicator getTemporaryIndicator() {
 		return temporaryIndicator;
 	}
 
-	public void setTemporaryIndicator(YesNoIndicator temporaryIndicator) {
-		this.temporaryIndicator = temporaryIndicator;
+	public ContactPoint setTemporaryIndicator(YesNoIndicator temporaryIndicator) {
+		this.temporaryIndicator = Objects.requireNonNull(temporaryIndicator);
+		return this;
 	}
 
-	public AttendanceCard getDeliveredAttendanceCard() {
-		return deliveredAttendanceCard;
+	public Optional<AttendanceCard> getDeliveredAttendanceCard() {
+		return deliveredAttendanceCard == null ? Optional.empty() : Optional.of(deliveredAttendanceCard);
 	}
 
-	public void setDeliveredAttendanceCard(com.tools20022.repository.entity.AttendanceCard deliveredAttendanceCard) {
+	public ContactPoint setDeliveredAttendanceCard(com.tools20022.repository.entity.AttendanceCard deliveredAttendanceCard) {
 		this.deliveredAttendanceCard = deliveredAttendanceCard;
+		return this;
 	}
 
 	public InvestmentFundClassProcessingCharacteristics getInvestmentFundClassProcessing() {
 		return investmentFundClassProcessing;
 	}
 
-	public void setInvestmentFundClassProcessing(com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics investmentFundClassProcessing) {
-		this.investmentFundClassProcessing = investmentFundClassProcessing;
+	public ContactPoint setInvestmentFundClassProcessing(com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics investmentFundClassProcessing) {
+		this.investmentFundClassProcessing = Objects.requireNonNull(investmentFundClassProcessing);
+		return this;
 	}
 }

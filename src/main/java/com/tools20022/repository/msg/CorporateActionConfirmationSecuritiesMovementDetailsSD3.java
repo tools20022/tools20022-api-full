@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -28,6 +30,8 @@ import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -89,8 +93,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -115,16 +119,17 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateActionConfirmationSecuritiesMovementDetailsSD2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionConfirmationSecuritiesMovementDetailsSD3", propOrder = {"placeAndName", "creditDebitIndicator", "payoutType", "transactionQuantity", "reasonCode", "subReasonCode", "contraParticipantNumber", "maturityDate",
-		"postingDate", "taxAdjustmentRate", "newSecuritiesIssuanceIndicator", "RDPReferenceNumber"})
+		"postingDate", "taxAdjustmentRate", "newSecuritiesIssuanceIndicator", "rDPReferenceNumber"})
 public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +169,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,10 +182,11 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd", required = true)
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Indicates whether the value is a debit or a credit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,6 +201,9 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * CorporateActionConfirmationSecuritiesMovementDetailsSD3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CdtDbtInd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Credit / Debit Indicator</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -223,9 +232,10 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Credit / Debit Indicator"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the value is a debit or a credit.";
@@ -236,11 +246,11 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "PyoutTp", required = true)
 	protected DTCCPayoutType4Code payoutType;
 	/**
-	 * Specifies the type of payout associated with the event (for example:
-	 * principal, long term capital gain).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -278,7 +288,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 */
 	public static final MMMessageAttribute mmPayoutType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
 			xmlTag = "PyoutTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -290,10 +300,11 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			simpleType_lazy = () -> DTCCPayoutType4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TxQty")
 	protected FinancialInstrumentQuantity15Choice transactionQuantity;
 	/**
-	 * Resulting quantity of securities concerned in this transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -308,6 +319,9 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * CorporateActionConfirmationSecuritiesMovementDetailsSD3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TxQty"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Transaction Securities Quantity</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -337,9 +351,10 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 */
 	public static final MMMessageAttribute mmTransactionQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
 			xmlTag = "TxQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Transaction Securities Quantity"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionQuantity";
 			definition = "Resulting quantity of securities concerned in this transaction.";
@@ -350,10 +365,11 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RsnCd")
 	protected DTCAdjustmentPaymentType2Code reasonCode;
 	/**
-	 * Transaction reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -368,6 +384,9 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * CorporateActionConfirmationSecuritiesMovementDetailsSD3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RsnCd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Transaction Reason Code</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -394,9 +413,10 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 */
 	public static final MMMessageAttribute mmReasonCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
 			xmlTag = "RsnCd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Transaction Reason Code"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonCode";
 			definition = "Transaction reason.";
@@ -407,10 +427,11 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			simpleType_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SubRsnCd")
 	protected DTCAdjustmentPaymentSubReason1Code subReasonCode;
 	/**
-	 * Transaction sub reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -451,7 +472,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 */
 	public static final MMMessageAttribute mmSubReasonCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
 			xmlTag = "SubRsnCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -464,11 +485,11 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			simpleType_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ContraPtcptNb")
 	protected Max8Text contraParticipantNumber;
 	/**
-	 * Transaction contra participant identification when shares are distributed
-	 * / delivered to / from another participant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -482,6 +503,9 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * CorporateActionConfirmationSecuritiesMovementDetailsSD3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ContraPtcptNb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Contra Participant Number</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -512,9 +536,10 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 */
 	public static final MMMessageAttribute mmContraParticipantNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
 			xmlTag = "ContraPtcptNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Contra Participant Number"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraParticipantNumber";
 			definition = "Transaction contra participant identification when shares are distributed / delivered to / from another participant.";
@@ -525,11 +550,11 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			simpleType_lazy = () -> Max8Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MtrtyDt")
 	protected ISODate maturityDate;
 	/**
-	 * Date on which a financial instrument becomes due and assets are to be
-	 * repaid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -548,6 +573,9 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * CorporateActionConfirmationSecuritiesMovementDetailsSD3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MtrtyDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98A::MATU</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -577,9 +605,10 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
-			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98A::MATU"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Date on which a financial instrument becomes due and assets are to be repaid.";
@@ -590,10 +619,11 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "PstngDt")
 	protected DateFormat28Choice postingDate;
 	/**
-	 * Date/Time on which the posting /draft of the securities took place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -608,6 +638,9 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 * CorporateActionConfirmationSecuritiesMovementDetailsSD3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PstngDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Payable Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -635,9 +668,10 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 */
 	public static final MMMessageAttribute mmPostingDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
 			xmlTag = "PstngDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Payable Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDate";
 			definition = "Date/Time on which the posting /draft of the securities took place.";
@@ -648,12 +682,11 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			complexType_lazy = () -> DateFormat28Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxAdjstmntRate")
 	protected PercentageRate taxAdjustmentRate;
 	/**
-	 * Set of the DTC legacy sub reason codes representing tax rate. Used with
-	 * reason codes ‘TJXD’ ‘TJXF’ ‘TJXI’ ‘TJXL’ ‘TJXR’ ‘TJXT’ ‘TJXU’ to identify
-	 * the correct tax rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -698,7 +731,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 */
 	public static final MMMessageAttribute mmTaxAdjustmentRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
 			xmlTag = "TaxAdjstmntRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -711,10 +744,11 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "NewSctiesIssncInd")
 	protected NewSecuritiesIssuanceType4Code newSecuritiesIssuanceIndicator;
 	/**
-	 * Indicates whether the securities are newly issued or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -743,7 +777,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 */
 	public static final MMMessageAttribute mmNewSecuritiesIssuanceIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
 			xmlTag = "NewSctiesIssncInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -754,19 +788,11 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 			simpleType_lazy = () -> NewSecuritiesIssuanceType4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RDPRefNb")
 	protected Exact32AlphaNumericText rDPReferenceNumber;
 	/**
-	 * Unique DTCC legacy reference used for matching and reconciling legacy CCF
-	 * records. The element will be populated to all levels of the message
-	 * (Event Details, Options, Movements) where applicable to indicate how
-	 * values are sourced from CCF legacy files. For example: event has 2
-	 * related Activity Types 74, and 54. If event details and cash option are
-	 * sourced from the Activity Type 74, then Activity Type 74 will be in RDP
-	 * Reference Number in event details, and also on the cash option. The
-	 * activity type 54 will be "on" the security option. Also, usage rules will
-	 * specify the different layouts of the RDP Reference Number based on DTCC
-	 * event group (reorganization, distribution, or redemption).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -805,7 +831,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	 */
 	public static final MMMessageAttribute mmRDPReferenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmObject();
 			isDerived = false;
 			xmlTag = "RDPRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -821,13 +847,15 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmPlaceAndName, CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmCreditDebitIndicator,
-						CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmPayoutType, CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmTransactionQuantity,
-						CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmReasonCode, CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmSubReasonCode,
-						CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmContraParticipantNumber, CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmMaturityDate,
-						CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmPostingDate, CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmTaxAdjustmentRate,
-						CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmNewSecuritiesIssuanceIndicator, CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmRDPReferenceNumber);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmPlaceAndName,
+						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmCreditDebitIndicator, com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmPayoutType,
+						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmTransactionQuantity, com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmReasonCode,
+						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmSubReasonCode, com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmContraParticipantNumber,
+						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmMaturityDate, com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmPostingDate,
+						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmTaxAdjustmentRate,
+						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmNewSecuritiesIssuanceIndicator,
+						com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmRDPReferenceNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionConfirmationSecuritiesMovementDetailsSD3";
 				definition = "Provides additional information regarding corporate action confirmation securities movement details.";
@@ -838,111 +866,111 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionConfirmationSecuritiesMovementDetailsSD3 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
-		this.creditDebitIndicator = creditDebitIndicator;
+	public CorporateActionConfirmationSecuritiesMovementDetailsSD3 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = Objects.requireNonNull(creditDebitIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "PyoutTp", required = true)
 	public DTCCPayoutType4Code getPayoutType() {
 		return payoutType;
 	}
 
-	public void setPayoutType(DTCCPayoutType4Code payoutType) {
-		this.payoutType = payoutType;
+	public CorporateActionConfirmationSecuritiesMovementDetailsSD3 setPayoutType(DTCCPayoutType4Code payoutType) {
+		this.payoutType = Objects.requireNonNull(payoutType);
+		return this;
 	}
 
-	@XmlElement(name = "TxQty")
-	public FinancialInstrumentQuantity15Choice getTransactionQuantity() {
-		return transactionQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getTransactionQuantity() {
+		return transactionQuantity == null ? Optional.empty() : Optional.of(transactionQuantity);
 	}
 
-	public void setTransactionQuantity(FinancialInstrumentQuantity15Choice transactionQuantity) {
+	public CorporateActionConfirmationSecuritiesMovementDetailsSD3 setTransactionQuantity(FinancialInstrumentQuantity15Choice transactionQuantity) {
 		this.transactionQuantity = transactionQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "RsnCd")
-	public DTCAdjustmentPaymentType2Code getReasonCode() {
-		return reasonCode;
+	public Optional<DTCAdjustmentPaymentType2Code> getReasonCode() {
+		return reasonCode == null ? Optional.empty() : Optional.of(reasonCode);
 	}
 
-	public void setReasonCode(DTCAdjustmentPaymentType2Code reasonCode) {
+	public CorporateActionConfirmationSecuritiesMovementDetailsSD3 setReasonCode(DTCAdjustmentPaymentType2Code reasonCode) {
 		this.reasonCode = reasonCode;
+		return this;
 	}
 
-	@XmlElement(name = "SubRsnCd")
-	public DTCAdjustmentPaymentSubReason1Code getSubReasonCode() {
-		return subReasonCode;
+	public Optional<DTCAdjustmentPaymentSubReason1Code> getSubReasonCode() {
+		return subReasonCode == null ? Optional.empty() : Optional.of(subReasonCode);
 	}
 
-	public void setSubReasonCode(DTCAdjustmentPaymentSubReason1Code subReasonCode) {
+	public CorporateActionConfirmationSecuritiesMovementDetailsSD3 setSubReasonCode(DTCAdjustmentPaymentSubReason1Code subReasonCode) {
 		this.subReasonCode = subReasonCode;
+		return this;
 	}
 
-	@XmlElement(name = "ContraPtcptNb")
-	public Max8Text getContraParticipantNumber() {
-		return contraParticipantNumber;
+	public Optional<Max8Text> getContraParticipantNumber() {
+		return contraParticipantNumber == null ? Optional.empty() : Optional.of(contraParticipantNumber);
 	}
 
-	public void setContraParticipantNumber(Max8Text contraParticipantNumber) {
+	public CorporateActionConfirmationSecuritiesMovementDetailsSD3 setContraParticipantNumber(Max8Text contraParticipantNumber) {
 		this.contraParticipantNumber = contraParticipantNumber;
+		return this;
 	}
 
-	@XmlElement(name = "MtrtyDt")
-	public ISODate getMaturityDate() {
-		return maturityDate;
+	public Optional<ISODate> getMaturityDate() {
+		return maturityDate == null ? Optional.empty() : Optional.of(maturityDate);
 	}
 
-	public void setMaturityDate(ISODate maturityDate) {
+	public CorporateActionConfirmationSecuritiesMovementDetailsSD3 setMaturityDate(ISODate maturityDate) {
 		this.maturityDate = maturityDate;
+		return this;
 	}
 
-	@XmlElement(name = "PstngDt")
-	public DateFormat28Choice getPostingDate() {
-		return postingDate;
+	public Optional<DateFormat28Choice> getPostingDate() {
+		return postingDate == null ? Optional.empty() : Optional.of(postingDate);
 	}
 
-	public void setPostingDate(DateFormat28Choice postingDate) {
+	public CorporateActionConfirmationSecuritiesMovementDetailsSD3 setPostingDate(DateFormat28Choice postingDate) {
 		this.postingDate = postingDate;
+		return this;
 	}
 
-	@XmlElement(name = "TaxAdjstmntRate")
-	public PercentageRate getTaxAdjustmentRate() {
-		return taxAdjustmentRate;
+	public Optional<PercentageRate> getTaxAdjustmentRate() {
+		return taxAdjustmentRate == null ? Optional.empty() : Optional.of(taxAdjustmentRate);
 	}
 
-	public void setTaxAdjustmentRate(PercentageRate taxAdjustmentRate) {
+	public CorporateActionConfirmationSecuritiesMovementDetailsSD3 setTaxAdjustmentRate(PercentageRate taxAdjustmentRate) {
 		this.taxAdjustmentRate = taxAdjustmentRate;
+		return this;
 	}
 
-	@XmlElement(name = "NewSctiesIssncInd")
-	public NewSecuritiesIssuanceType4Code getNewSecuritiesIssuanceIndicator() {
-		return newSecuritiesIssuanceIndicator;
+	public Optional<NewSecuritiesIssuanceType4Code> getNewSecuritiesIssuanceIndicator() {
+		return newSecuritiesIssuanceIndicator == null ? Optional.empty() : Optional.of(newSecuritiesIssuanceIndicator);
 	}
 
-	public void setNewSecuritiesIssuanceIndicator(NewSecuritiesIssuanceType4Code newSecuritiesIssuanceIndicator) {
+	public CorporateActionConfirmationSecuritiesMovementDetailsSD3 setNewSecuritiesIssuanceIndicator(NewSecuritiesIssuanceType4Code newSecuritiesIssuanceIndicator) {
 		this.newSecuritiesIssuanceIndicator = newSecuritiesIssuanceIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "RDPRefNb")
-	public Exact32AlphaNumericText getRDPReferenceNumber() {
-		return rDPReferenceNumber;
+	public Optional<Exact32AlphaNumericText> getRDPReferenceNumber() {
+		return rDPReferenceNumber == null ? Optional.empty() : Optional.of(rDPReferenceNumber);
 	}
 
-	public void setRDPReferenceNumber(Exact32AlphaNumericText rDPReferenceNumber) {
+	public CorporateActionConfirmationSecuritiesMovementDetailsSD3 setRDPReferenceNumber(Exact32AlphaNumericText rDPReferenceNumber) {
 		this.rDPReferenceNumber = rDPReferenceNumber;
+		return this;
 	}
 }

@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ProcessingPositionCode;
+import com.tools20022.repository.codeset.ProcessingPosition3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the processing position.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ProcessingPositionCode
- * ProcessingPositionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPosition3Code#mmAfter
- * ProcessingPosition3Code.mmAfter}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPosition3Code#After
+ * ProcessingPosition3Code.After}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPosition3Code#mmWith
- * ProcessingPosition3Code.mmWith}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPosition3Code#With
+ * ProcessingPosition3Code.With}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPosition3Code#mmBefore
- * ProcessingPosition3Code.mmBefore}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPosition3Code#Before
+ * ProcessingPosition3Code.Before}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPosition3Code#mmInformation
- * ProcessingPosition3Code.mmInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPosition3Code#Information
+ * ProcessingPosition3Code.Information}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPositionCode
+ * ProcessingPositionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the processing position."</li>
  * </ul>
  */
-public class ProcessingPosition3Code extends ProcessingPositionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProcessingPosition3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class ProcessingPosition3Code extends ProcessingPositionCode {
 	 * name} = "After"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAfter = new MMCode() {
+	public static final ProcessingPosition3Code After = new ProcessingPosition3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "After";
-			owner_lazy = () -> ProcessingPosition3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingPosition3Code.mmObject();
+			codeName = ProcessingPositionCode.After.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class ProcessingPosition3Code extends ProcessingPositionCode {
 	 * name} = "With"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWith = new MMCode() {
+	public static final ProcessingPosition3Code With = new ProcessingPosition3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "With";
-			owner_lazy = () -> ProcessingPosition3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingPosition3Code.mmObject();
+			codeName = ProcessingPositionCode.With.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class ProcessingPosition3Code extends ProcessingPositionCode {
 	 * name} = "Before"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBefore = new MMCode() {
+	public static final ProcessingPosition3Code Before = new ProcessingPosition3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Before";
-			owner_lazy = () -> ProcessingPosition3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingPosition3Code.mmObject();
+			codeName = ProcessingPositionCode.Before.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,26 +166,60 @@ public class ProcessingPosition3Code extends ProcessingPositionCode {
 	 * name} = "Information"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInformation = new MMCode() {
+	public static final ProcessingPosition3Code Information = new ProcessingPosition3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Information";
-			owner_lazy = () -> ProcessingPosition3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingPosition3Code.mmObject();
+			codeName = ProcessingPositionCode.Information.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ProcessingPosition3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProcessingPosition3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AFTE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingPosition3Code";
 				definition = "Specifies the processing position.";
-				code_lazy = () -> Arrays.asList(ProcessingPosition3Code.mmAfter, ProcessingPosition3Code.mmWith, ProcessingPosition3Code.mmBefore, ProcessingPosition3Code.mmInformation);
 				trace_lazy = () -> ProcessingPositionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessingPosition3Code.After, com.tools20022.repository.codeset.ProcessingPosition3Code.With,
+						com.tools20022.repository.codeset.ProcessingPosition3Code.Before, com.tools20022.repository.codeset.ProcessingPosition3Code.Information);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(After.getCodeName().get(), After);
+		codesByName.put(With.getCodeName().get(), With);
+		codesByName.put(Before.getCodeName().get(), Before);
+		codesByName.put(Information.getCodeName().get(), Information);
+	}
+
+	public static ProcessingPosition3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProcessingPosition3Code[] values() {
+		ProcessingPosition3Code[] values = new ProcessingPosition3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProcessingPosition3Code> {
+		@Override
+		public ProcessingPosition3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProcessingPosition3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

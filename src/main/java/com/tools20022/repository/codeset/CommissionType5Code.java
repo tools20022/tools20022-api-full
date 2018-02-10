@@ -20,37 +20,40 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CommissionTypeCode;
+import com.tools20022.repository.codeset.CommissionType5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of investment fund commission.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode
- * CommissionTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType5Code#mmFrontEnd
- * CommissionType5Code.mmFrontEnd}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType5Code#FrontEnd
+ * CommissionType5Code.FrontEnd}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType5Code#mmBackEnd
- * CommissionType5Code.mmBackEnd}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType5Code#mmOther
- * CommissionType5Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType5Code#BackEnd
+ * CommissionType5Code.BackEnd}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionType5Code#Other
+ * CommissionType5Code.Other}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode
+ * CommissionTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of investment fund commission."</li>
  * </ul>
  */
-public class CommissionType5Code extends CommissionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CommissionType5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +90,12 @@ public class CommissionType5Code extends CommissionTypeCode {
 	 * name} = "FrontEnd"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFrontEnd = new MMCode() {
+	public static final CommissionType5Code FrontEnd = new CommissionType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEnd";
-			owner_lazy = () -> CommissionType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionType5Code.mmObject();
+			codeName = CommissionTypeCode.FrontEnd.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +114,12 @@ public class CommissionType5Code extends CommissionTypeCode {
 	 * name} = "BackEnd"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBackEnd = new MMCode() {
+	public static final CommissionType5Code BackEnd = new CommissionType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEnd";
-			owner_lazy = () -> CommissionType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionType5Code.mmObject();
+			codeName = CommissionTypeCode.BackEnd.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +138,58 @@ public class CommissionType5Code extends CommissionTypeCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final CommissionType5Code Other = new CommissionType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> CommissionType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionType5Code.mmObject();
+			codeName = CommissionTypeCode.Other.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CommissionType5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CommissionType5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FEND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommissionType5Code";
 				definition = "Specifies the type of investment fund commission.";
-				code_lazy = () -> Arrays.asList(CommissionType5Code.mmFrontEnd, CommissionType5Code.mmBackEnd, CommissionType5Code.mmOther);
 				trace_lazy = () -> CommissionTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommissionType5Code.FrontEnd, com.tools20022.repository.codeset.CommissionType5Code.BackEnd, com.tools20022.repository.codeset.CommissionType5Code.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(FrontEnd.getCodeName().get(), FrontEnd);
+		codesByName.put(BackEnd.getCodeName().get(), BackEnd);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static CommissionType5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CommissionType5Code[] values() {
+		CommissionType5Code[] values = new CommissionType5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CommissionType5Code> {
+		@Override
+		public CommissionType5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CommissionType5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

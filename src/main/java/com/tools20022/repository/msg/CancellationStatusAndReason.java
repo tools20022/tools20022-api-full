@@ -33,6 +33,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,8 +48,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason#mmStatusOrRejectedOrCompleteRule
- * CancellationStatusAndReason.mmStatusOrRejectedOrCompleteRule}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason#StatusOrRejectedOrCompleteRule
+ * CancellationStatusAndReason.StatusOrRejectedOrCompleteRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -83,8 +85,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -98,15 +100,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CancellationStatusAndReason", propOrder = {"status", "rejected", "complete", "statusInitiator"})
 public class CancellationStatusAndReason {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts", required = true)
 	protected TransferCancellationStatus status;
 	/**
-	 * Status of the transfer cancellation instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -139,7 +142,7 @@ public class CancellationStatusAndReason {
 	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
-			componentContext_lazy = () -> CancellationStatusAndReason.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,10 +154,11 @@ public class CancellationStatusAndReason {
 			type_lazy = () -> com.tools20022.repository.msg.TransferCancellationStatus.mmObject();
 		}
 	};
+	@XmlElement(name = "Rjctd", required = true)
 	protected TransferCancellationRejectedStatus1Choice rejected;
 	/**
-	 * Status of transfer cancellation is rejected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -187,7 +191,7 @@ public class CancellationStatusAndReason {
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
-			componentContext_lazy = () -> CancellationStatusAndReason.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,12 +203,11 @@ public class CancellationStatusAndReason {
 			type_lazy = () -> TransferCancellationRejectedStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Cmplt", required = true)
 	protected TransferCancellationCompleteStatusChoice complete;
 	/**
-	 * Status of the transfer cancellation is complete. The cancellation
-	 * instruction has been accepted and processed, the cancellation is
-	 * complete.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -239,7 +242,7 @@ public class CancellationStatusAndReason {
 	public static final MMMessageAssociationEnd mmComplete = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
-			componentContext_lazy = () -> CancellationStatusAndReason.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason.mmObject();
 			isDerived = false;
 			xmlTag = "Cmplt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,10 +254,11 @@ public class CancellationStatusAndReason {
 			type_lazy = () -> TransferCancellationCompleteStatusChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "StsInitr")
 	protected PartyIdentification1Choice statusInitiator;
 	/**
-	 * Party that initiates the status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -287,7 +291,7 @@ public class CancellationStatusAndReason {
 	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CancellationStatusAndReason.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason.mmObject();
 			isDerived = false;
 			xmlTag = "StsInitr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -336,23 +340,25 @@ public class CancellationStatusAndReason {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmStatusOrRejectedOrCompleteRule = new MMXor() {
+	public static final MMXor StatusOrRejectedOrCompleteRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusOrRejectedOrCompleteRule";
 			definition = "One and only one message element in the list (Status, Rejected, Complete) must be present.";
-			messageComponent_lazy = () -> CancellationStatusAndReason.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(CancellationStatusAndReason.mmStatus, CancellationStatusAndReason.mmRejected, CancellationStatusAndReason.mmComplete);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationStatusAndReason.mmStatus, com.tools20022.repository.msg.CancellationStatusAndReason.mmRejected,
+					com.tools20022.repository.msg.CancellationStatusAndReason.mmComplete);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CancellationStatusAndReason.mmStatus, CancellationStatusAndReason.mmRejected, CancellationStatusAndReason.mmComplete, CancellationStatusAndReason.mmStatusInitiator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationStatusAndReason.mmStatus, com.tools20022.repository.msg.CancellationStatusAndReason.mmRejected,
+						com.tools20022.repository.msg.CancellationStatusAndReason.mmComplete, com.tools20022.repository.msg.CancellationStatusAndReason.mmStatusInitiator);
 				messageBuildingBlock_lazy = () -> Arrays.asList(TransferCancellationStatusReport.mmStatusReport);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -363,45 +369,45 @@ public class CancellationStatusAndReason {
 				})).get();
 				name = "CancellationStatusAndReason";
 				definition = "Status of a transfer cancellation instruction and the reason for the status.";
-				xors_lazy = () -> Arrays.asList(CancellationStatusAndReason.mmStatusOrRejectedOrCompleteRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationStatusAndReason.StatusOrRejectedOrCompleteRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public TransferCancellationStatus getStatus() {
 		return status;
 	}
 
-	public void setStatus(com.tools20022.repository.msg.TransferCancellationStatus status) {
-		this.status = status;
+	public CancellationStatusAndReason setStatus(com.tools20022.repository.msg.TransferCancellationStatus status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "Rjctd", required = true)
 	public TransferCancellationRejectedStatus1Choice getRejected() {
 		return rejected;
 	}
 
-	public void setRejected(TransferCancellationRejectedStatus1Choice rejected) {
-		this.rejected = rejected;
+	public CancellationStatusAndReason setRejected(TransferCancellationRejectedStatus1Choice rejected) {
+		this.rejected = Objects.requireNonNull(rejected);
+		return this;
 	}
 
-	@XmlElement(name = "Cmplt", required = true)
 	public TransferCancellationCompleteStatusChoice getComplete() {
 		return complete;
 	}
 
-	public void setComplete(TransferCancellationCompleteStatusChoice complete) {
-		this.complete = complete;
+	public CancellationStatusAndReason setComplete(TransferCancellationCompleteStatusChoice complete) {
+		this.complete = Objects.requireNonNull(complete);
+		return this;
 	}
 
-	@XmlElement(name = "StsInitr")
-	public PartyIdentification1Choice getStatusInitiator() {
-		return statusInitiator;
+	public Optional<PartyIdentification1Choice> getStatusInitiator() {
+		return statusInitiator == null ? Optional.empty() : Optional.of(statusInitiator);
 	}
 
-	public void setStatusInitiator(PartyIdentification1Choice statusInitiator) {
+	public CancellationStatusAndReason setStatusInitiator(PartyIdentification1Choice statusInitiator) {
 		this.statusInitiator = statusInitiator;
+		return this;
 	}
 }

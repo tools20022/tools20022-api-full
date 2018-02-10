@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateActionEventProcessingTypeCode;
+import com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of event processing.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingTypeCode
- * CorporateActionEventProcessingTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code#mmGeneral
- * CorporateActionEventProcessingType1Code.mmGeneral}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code#General
+ * CorporateActionEventProcessingType1Code.General}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code#mmDistribution
- * CorporateActionEventProcessingType1Code.mmDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code#Distribution
+ * CorporateActionEventProcessingType1Code.Distribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code#mmReorganisation
- * CorporateActionEventProcessingType1Code.mmReorganisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code#Reorganisation
+ * CorporateActionEventProcessingType1Code.Reorganisation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingTypeCode
+ * CorporateActionEventProcessingTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of event processing."</li>
  * </ul>
  */
-public class CorporateActionEventProcessingType1Code extends CorporateActionEventProcessingTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionEventProcessingType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class CorporateActionEventProcessingType1Code extends CorporateActionEven
 	 * name} = "General"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGeneral = new MMCode() {
+	public static final CorporateActionEventProcessingType1Code General = new CorporateActionEventProcessingType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "General";
-			owner_lazy = () -> CorporateActionEventProcessingType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code.mmObject();
+			codeName = CorporateActionEventProcessingTypeCode.General.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class CorporateActionEventProcessingType1Code extends CorporateActionEven
 	 * name} = "Distribution"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDistribution = new MMCode() {
+	public static final CorporateActionEventProcessingType1Code Distribution = new CorporateActionEventProcessingType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Distribution";
-			owner_lazy = () -> CorporateActionEventProcessingType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code.mmObject();
+			codeName = CorporateActionEventProcessingTypeCode.Distribution.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class CorporateActionEventProcessingType1Code extends CorporateActionEven
 	 * name} = "Reorganisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReorganisation = new MMCode() {
+	public static final CorporateActionEventProcessingType1Code Reorganisation = new CorporateActionEventProcessingType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reorganisation";
-			owner_lazy = () -> CorporateActionEventProcessingType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code.mmObject();
+			codeName = CorporateActionEventProcessingTypeCode.Reorganisation.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionEventProcessingType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionEventProcessingType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("GENL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventProcessingType1Code";
 				definition = "Specifies the type of event processing.";
-				code_lazy = () -> Arrays.asList(CorporateActionEventProcessingType1Code.mmGeneral, CorporateActionEventProcessingType1Code.mmDistribution, CorporateActionEventProcessingType1Code.mmReorganisation);
 				trace_lazy = () -> CorporateActionEventProcessingTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code.General, com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code.Distribution,
+						com.tools20022.repository.codeset.CorporateActionEventProcessingType1Code.Reorganisation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(General.getCodeName().get(), General);
+		codesByName.put(Distribution.getCodeName().get(), Distribution);
+		codesByName.put(Reorganisation.getCodeName().get(), Reorganisation);
+	}
+
+	public static CorporateActionEventProcessingType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionEventProcessingType1Code[] values() {
+		CorporateActionEventProcessingType1Code[] values = new CorporateActionEventProcessingType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionEventProcessingType1Code> {
+		@Override
+		public CorporateActionEventProcessingType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionEventProcessingType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

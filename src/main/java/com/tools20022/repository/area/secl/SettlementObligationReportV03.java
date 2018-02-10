@@ -27,9 +27,8 @@ import com.tools20022.repository.choice.SettlementParties2Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -52,22 +51,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
- * SecuritiesClearingLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion
- * CentralCounterPartyCCPSecuritiesClearingISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SttlmOblgtnRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -98,6 +81,22 @@ import javax.xml.bind.annotation.*;
  * SettlementObligationReportV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion
+ * CentralCounterPartyCCPSecuritiesClearingISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SttlmOblgtnRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
+ * SecuritiesClearingLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code secl.010.001.03}</li>
@@ -113,16 +112,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementObligationReportV03", propOrder = {"reportParameters", "pagination", "clearingMember", "clearingSegment", "deliveryAccount", "reportDetails", "settlementParties", "supplementaryData"})
 public class SettlementObligationReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptParams", required = true)
 	protected ReportParameters4 reportParameters;
 	/**
-	 * Provides details about the report such as the report identification, the
-	 * creation date and time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,12 +163,11 @@ public class SettlementObligationReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Pgntn", required = true)
 	protected Pagination pagination;
 	/**
-	 * Page number of the message (within a report) and continuation indicator
-	 * to indicate that the report is to continue or that the message is the
-	 * last page of the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,11 +208,11 @@ public class SettlementObligationReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "ClrMmb")
 	protected PartyIdentification35Choice clearingMember;
 	/**
-	 * Provides the identification of the clearing member (individual clearing
-	 * member or general clearing member).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -256,14 +254,11 @@ public class SettlementObligationReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "ClrSgmt")
 	protected PartyIdentification35Choice clearingSegment;
 	/**
-	 * Clearing organisation that will clear the trade.<br>
-	 * Note: This field allows Clearing Member Firm to segregate flows coming
-	 * from clearing counterparty's clearing system. Indeed, Clearing Member
-	 * Firms receive messages from the same system (same sender) and this field
-	 * allows them to know if the message is related to equities or derivatives.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -305,14 +300,11 @@ public class SettlementObligationReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "DlvryAcct")
 	protected SecuritiesAccount19 deliveryAccount;
 	/**
-	 * Provides the identification of the account used for netting. This is an
-	 * account opened by the central counterparty in the name of the clearing
-	 * member or its settlement agent within the account structure, for
-	 * settlement purposes (gives information about the clearing member/its
-	 * settlement agent account at the central securities depository).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -354,10 +346,11 @@ public class SettlementObligationReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RptDtls", required = true)
 	protected List<Report5> reportDetails;
 	/**
-	 * Provides details on the settlement obligation report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -395,11 +388,11 @@ public class SettlementObligationReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SttlmPties")
 	protected SettlementParties2Choice settlementParties;
 	/**
-	 * Provides details about the receiving parties involved in the settlement
-	 * chain.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -441,11 +434,11 @@ public class SettlementObligationReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -519,79 +512,79 @@ public class SettlementObligationReportV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptParams", required = true)
 	public ReportParameters4 getReportParameters() {
 		return reportParameters;
 	}
 
-	public void setReportParameters(ReportParameters4 reportParameters) {
-		this.reportParameters = reportParameters;
+	public SettlementObligationReportV03 setReportParameters(ReportParameters4 reportParameters) {
+		this.reportParameters = Objects.requireNonNull(reportParameters);
+		return this;
 	}
 
-	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
 
-	public void setPagination(Pagination pagination) {
-		this.pagination = pagination;
+	public SettlementObligationReportV03 setPagination(Pagination pagination) {
+		this.pagination = Objects.requireNonNull(pagination);
+		return this;
 	}
 
-	@XmlElement(name = "ClrMmb")
-	public PartyIdentification35Choice getClearingMember() {
-		return clearingMember;
+	public Optional<PartyIdentification35Choice> getClearingMember() {
+		return clearingMember == null ? Optional.empty() : Optional.of(clearingMember);
 	}
 
-	public void setClearingMember(PartyIdentification35Choice clearingMember) {
+	public SettlementObligationReportV03 setClearingMember(PartyIdentification35Choice clearingMember) {
 		this.clearingMember = clearingMember;
+		return this;
 	}
 
-	@XmlElement(name = "ClrSgmt")
-	public PartyIdentification35Choice getClearingSegment() {
-		return clearingSegment;
+	public Optional<PartyIdentification35Choice> getClearingSegment() {
+		return clearingSegment == null ? Optional.empty() : Optional.of(clearingSegment);
 	}
 
-	public void setClearingSegment(PartyIdentification35Choice clearingSegment) {
+	public SettlementObligationReportV03 setClearingSegment(PartyIdentification35Choice clearingSegment) {
 		this.clearingSegment = clearingSegment;
+		return this;
 	}
 
-	@XmlElement(name = "DlvryAcct")
-	public SecuritiesAccount19 getDeliveryAccount() {
-		return deliveryAccount;
+	public Optional<SecuritiesAccount19> getDeliveryAccount() {
+		return deliveryAccount == null ? Optional.empty() : Optional.of(deliveryAccount);
 	}
 
-	public void setDeliveryAccount(SecuritiesAccount19 deliveryAccount) {
+	public SettlementObligationReportV03 setDeliveryAccount(SecuritiesAccount19 deliveryAccount) {
 		this.deliveryAccount = deliveryAccount;
+		return this;
 	}
 
-	@XmlElement(name = "RptDtls", required = true)
 	public List<Report5> getReportDetails() {
-		return reportDetails;
+		return reportDetails == null ? reportDetails = new ArrayList<>() : reportDetails;
 	}
 
-	public void setReportDetails(List<Report5> reportDetails) {
-		this.reportDetails = reportDetails;
+	public SettlementObligationReportV03 setReportDetails(List<Report5> reportDetails) {
+		this.reportDetails = Objects.requireNonNull(reportDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmPties")
-	public SettlementParties2Choice getSettlementParties() {
-		return settlementParties;
+	public Optional<SettlementParties2Choice> getSettlementParties() {
+		return settlementParties == null ? Optional.empty() : Optional.of(settlementParties);
 	}
 
-	public void setSettlementParties(SettlementParties2Choice settlementParties) {
+	public SettlementObligationReportV03 setSettlementParties(SettlementParties2Choice settlementParties) {
 		this.settlementParties = settlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SettlementObligationReportV03 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:secl.010.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:secl.010.001.03")
 	static public class Document {
 		@XmlElement(name = "SttlmOblgtnRpt", required = true)
 		public SettlementObligationReportV03 messageBody;

@@ -28,11 +28,9 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max8000Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -76,8 +74,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule#forUpdatedAdditionalInformation2
+ * ConstraintAdditionalInforrmationRule.forUpdatedAdditionalInformation2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetZRule#forUpdatedAdditionalInformation2
+ * ConstraintCoexistenceCharacterSetZRule.forUpdatedAdditionalInformation2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -96,15 +105,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UpdatedAdditionalInformation2", propOrder = {"updateDescription", "updateDate", "additionalInformation"})
 public class UpdatedAdditionalInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UpdDesc")
 	protected Max140Text updateDescription;
 	/**
-	 * Specifies the amendments made to the narrative since the last message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,7 +150,7 @@ public class UpdatedAdditionalInformation2 {
 	 */
 	public static final MMMessageAttribute mmUpdateDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "UpdDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,10 +162,11 @@ public class UpdatedAdditionalInformation2 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "UpdDt")
 	protected ISODate updateDate;
 	/**
-	 * Specifies the date at which the narrative has been updated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,7 +202,7 @@ public class UpdatedAdditionalInformation2 {
 	 */
 	public static final MMMessageAttribute mmUpdateDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "UpdDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,10 +214,11 @@ public class UpdatedAdditionalInformation2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf", required = true)
 	protected List<Max8000Text> additionalInformation;
 	/**
-	 * Provides additional textual information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -241,7 +253,7 @@ public class UpdatedAdditionalInformation2 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,9 +268,12 @@ public class UpdatedAdditionalInformation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UpdatedAdditionalInformation2.mmUpdateDescription, UpdatedAdditionalInformation2.mmUpdateDate, UpdatedAdditionalInformation2.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation2.mmUpdateDescription, com.tools20022.repository.msg.UpdatedAdditionalInformation2.mmUpdateDate,
+						com.tools20022.repository.msg.UpdatedAdditionalInformation2.mmAdditionalInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionNarrativeV01.mmAdditionalInformation, CorporateActionNarrativeV02.mmAdditionalInformation, CorporateActionNarrativeV03.mmAdditionalInformation);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forUpdatedAdditionalInformation2,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetZRule.forUpdatedAdditionalInformation2);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -275,30 +290,30 @@ public class UpdatedAdditionalInformation2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UpdDesc")
-	public Max140Text getUpdateDescription() {
-		return updateDescription;
+	public Optional<Max140Text> getUpdateDescription() {
+		return updateDescription == null ? Optional.empty() : Optional.of(updateDescription);
 	}
 
-	public void setUpdateDescription(Max140Text updateDescription) {
+	public UpdatedAdditionalInformation2 setUpdateDescription(Max140Text updateDescription) {
 		this.updateDescription = updateDescription;
+		return this;
 	}
 
-	@XmlElement(name = "UpdDt")
-	public ISODate getUpdateDate() {
-		return updateDate;
+	public Optional<ISODate> getUpdateDate() {
+		return updateDate == null ? Optional.empty() : Optional.of(updateDate);
 	}
 
-	public void setUpdateDate(ISODate updateDate) {
+	public UpdatedAdditionalInformation2 setUpdateDate(ISODate updateDate) {
 		this.updateDate = updateDate;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf", required = true)
 	public List<Max8000Text> getAdditionalInformation() {
-		return additionalInformation;
+		return additionalInformation == null ? additionalInformation = new ArrayList<>() : additionalInformation;
 	}
 
-	public void setAdditionalInformation(List<Max8000Text> additionalInformation) {
-		this.additionalInformation = additionalInformation;
+	public UpdatedAdditionalInformation2 setAdditionalInformation(List<Max8000Text> additionalInformation) {
+		this.additionalInformation = Objects.requireNonNull(additionalInformation);
+		return this;
 	}
 }

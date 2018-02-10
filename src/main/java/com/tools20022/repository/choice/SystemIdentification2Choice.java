@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Country;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information used to identify a cash clearing system."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SystemIdentification2Choice", propOrder = {"marketInfrastructureIdentification", "country"})
 public class SystemIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MktInfrstrctrId", required = true)
 	protected MarketInfrastructureIdentification1Choice marketInfrastructureIdentification;
 	/**
-	 * Clearing service selected for a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -108,7 +110,7 @@ public class SystemIdentification2Choice {
 	public static final MMMessageAssociationEnd mmMarketInfrastructureIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashClearingSystem.mmObject();
-			componentContext_lazy = () -> SystemIdentification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SystemIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MktInfrstrctrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +122,11 @@ public class SystemIdentification2Choice {
 			type_lazy = () -> com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Ctry", required = true)
 	protected CountryCode country;
 	/**
-	 * Country in which the system is located.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +159,7 @@ public class SystemIdentification2Choice {
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> SystemIdentification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SystemIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,9 +174,9 @@ public class SystemIdentification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SystemIdentification2Choice.mmMarketInfrastructureIdentification, SystemIdentification2Choice.mmCountry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemIdentification2Choice.mmMarketInfrastructureIdentification, com.tools20022.repository.choice.SystemIdentification2Choice.mmCountry);
 				trace_lazy = () -> CashClearingSystem.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemIdentification2Choice";
 				definition = "Information used to identify a cash clearing system.";
@@ -182,21 +185,21 @@ public class SystemIdentification2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MktInfrstrctrId", required = true)
 	public MarketInfrastructureIdentification1Choice getMarketInfrastructureIdentification() {
 		return marketInfrastructureIdentification;
 	}
 
-	public void setMarketInfrastructureIdentification(com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice marketInfrastructureIdentification) {
-		this.marketInfrastructureIdentification = marketInfrastructureIdentification;
+	public SystemIdentification2Choice setMarketInfrastructureIdentification(com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice marketInfrastructureIdentification) {
+		this.marketInfrastructureIdentification = Objects.requireNonNull(marketInfrastructureIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
 
-	public void setCountry(CountryCode country) {
-		this.country = country;
+	public SystemIdentification2Choice setCountry(CountryCode country) {
+		this.country = Objects.requireNonNull(country);
+		return this;
 	}
 }

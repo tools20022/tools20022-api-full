@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CashSettlementSystemCode;
+import com.tools20022.repository.codeset.CashSettlementSystem2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the cash settlement system used.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CashSettlementSystemCode
- * CashSettlementSystemCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashSettlementSystem2Code#mmGrossSettlementSystem
- * CashSettlementSystem2Code.mmGrossSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashSettlementSystem2Code#GrossSettlementSystem
+ * CashSettlementSystem2Code.GrossSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashSettlementSystem2Code#mmNetSettlementSystem
- * CashSettlementSystem2Code.mmNetSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashSettlementSystem2Code#NetSettlementSystem
+ * CashSettlementSystem2Code.NetSettlementSystem}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CashSettlementSystemCode
+ * CashSettlementSystemCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the cash settlement system used."</li>
  * </ul>
  */
-public class CashSettlementSystem2Code extends CashSettlementSystemCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CashSettlementSystem2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class CashSettlementSystem2Code extends CashSettlementSystemCode {
 	 * name} = "GrossSettlementSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGrossSettlementSystem = new MMCode() {
+	public static final CashSettlementSystem2Code GrossSettlementSystem = new CashSettlementSystem2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossSettlementSystem";
-			owner_lazy = () -> CashSettlementSystem2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashSettlementSystem2Code.mmObject();
+			codeName = CashSettlementSystemCode.GrossSettlementSystem.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class CashSettlementSystem2Code extends CashSettlementSystemCode {
 	 * name} = "NetSettlementSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNetSettlementSystem = new MMCode() {
+	public static final CashSettlementSystem2Code NetSettlementSystem = new CashSettlementSystem2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetSettlementSystem";
-			owner_lazy = () -> CashSettlementSystem2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashSettlementSystem2Code.mmObject();
+			codeName = CashSettlementSystemCode.NetSettlementSystem.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CashSettlementSystem2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CashSettlementSystem2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("GROS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashSettlementSystem2Code";
 				definition = "Specifies the cash settlement system used.";
-				code_lazy = () -> Arrays.asList(CashSettlementSystem2Code.mmGrossSettlementSystem, CashSettlementSystem2Code.mmNetSettlementSystem);
 				trace_lazy = () -> CashSettlementSystemCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashSettlementSystem2Code.GrossSettlementSystem, com.tools20022.repository.codeset.CashSettlementSystem2Code.NetSettlementSystem);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(GrossSettlementSystem.getCodeName().get(), GrossSettlementSystem);
+		codesByName.put(NetSettlementSystem.getCodeName().get(), NetSettlementSystem);
+	}
+
+	public static CashSettlementSystem2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CashSettlementSystem2Code[] values() {
+		CashSettlementSystem2Code[] values = new CashSettlementSystem2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CashSettlementSystem2Code> {
+		@Override
+		public CashSettlementSystem2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CashSettlementSystem2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

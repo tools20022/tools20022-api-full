@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -29,6 +30,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -97,8 +100,22 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#forCorporateActionOption9
+ * ConstraintOptionNumberRule.forCorporateActionOption9}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOptionTypeRule#forCorporateActionOption9
+ * ConstraintOptionTypeRule.forCorporateActionOption9}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule#forCorporateActionOption9
+ * ConstraintSafekeepingPlaceRule.forCorporateActionOption9}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -109,16 +126,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information about the corporate action option."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionOption9", propOrder = {"optionNumber", "optionType", "accountOwner", "safekeepingAccount", "cashAccount", "safekeepingPlace", "securityIdentification", "totalEligibleBalance", "instructedBalance",
 		"uninstructedBalance", "statusQuantityOrQuantityToReceive"})
 public class CorporateActionOption9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OptnNb", required = true)
 	protected OptionNumber1Choice optionNumber;
 	/**
-	 * Number identifying the available corporate action options.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,6 +157,9 @@ public class CorporateActionOption9 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OptnNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13A::CAON</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -153,9 +174,10 @@ public class CorporateActionOption9 {
 	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
-			componentContext_lazy = () -> CorporateActionOption9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption9.mmObject();
 			isDerived = false;
 			xmlTag = "OptnNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13A::CAON"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
@@ -164,10 +186,11 @@ public class CorporateActionOption9 {
 			complexType_lazy = () -> OptionNumber1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnTp", required = true)
 	protected CorporateActionOption5Choice optionType;
 	/**
-	 * Specifies the corporate action options available to the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,6 +211,9 @@ public class CorporateActionOption9 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OptnTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::CAOP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -202,9 +228,10 @@ public class CorporateActionOption9 {
 	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
-			componentContext_lazy = () -> CorporateActionOption9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption9.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CAOP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
@@ -213,10 +240,11 @@ public class CorporateActionOption9 {
 			complexType_lazy = () -> CorporateActionOption5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification13Choice accountOwner;
 	/**
-	 * Party that owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -237,6 +265,9 @@ public class CorporateActionOption9 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctOwnr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a::ACOW</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -250,9 +281,10 @@ public class CorporateActionOption9 {
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CorporateActionOption9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption9.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::ACOW"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that owns the account.";
@@ -261,10 +293,11 @@ public class CorporateActionOption9 {
 			complexType_lazy = () -> PartyIdentification13Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgAcct")
 	protected Max35Text safekeepingAccount;
 	/**
-	 * Account where financial instruments are maintained.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -284,6 +317,9 @@ public class CorporateActionOption9 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SfkpgAcct"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :97A::SAFE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -297,9 +333,10 @@ public class CorporateActionOption9 {
 	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionServicing.mmSecuritiesAccount;
-			componentContext_lazy = () -> CorporateActionOption9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption9.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":97A::SAFE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account where financial instruments are maintained.";
@@ -308,10 +345,11 @@ public class CorporateActionOption9 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAcct")
 	protected CashAccountIdentification5Choice cashAccount;
 	/**
-	 * Account on which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -331,6 +369,9 @@ public class CorporateActionOption9 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CshAcct"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :97a::CASH</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -344,9 +385,10 @@ public class CorporateActionOption9 {
 	public static final MMMessageAttribute mmCashAccount = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
-			componentContext_lazy = () -> CorporateActionOption9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption9.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":97a::CASH"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account on which a securities entry is made.";
@@ -355,10 +397,11 @@ public class CorporateActionOption9 {
 			complexType_lazy = () -> CashAccountIdentification5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgPlc")
 	protected SafekeepingPlaceFormat2Choice safekeepingPlace;
 	/**
-	 * Location where the financial instruments are/will be safekept.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -379,6 +422,9 @@ public class CorporateActionOption9 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SfkpgPlc"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94a::SAFE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -393,9 +439,10 @@ public class CorporateActionOption9 {
 	public static final MMMessageAttribute mmSafekeepingPlace = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
-			componentContext_lazy = () -> CorporateActionOption9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption9.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94a::SAFE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Location where the financial instruments are/will be safekept.";
@@ -404,10 +451,11 @@ public class CorporateActionOption9 {
 			complexType_lazy = () -> SafekeepingPlaceFormat2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyId")
 	protected SecurityIdentification11 securityIdentification;
 	/**
-	 * Identifies the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -428,6 +476,9 @@ public class CorporateActionOption9 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctyId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :35B:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -441,9 +492,10 @@ public class CorporateActionOption9 {
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> CorporateActionOption9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption9.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":35B:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identifies the financial instrument.";
@@ -452,11 +504,11 @@ public class CorporateActionOption9 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification11.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlElgblBal")
 	protected SignedQuantityFormat1 totalEligibleBalance;
 	/**
-	 * Total balance of securities eligible for this corporate action event. The
-	 * entitlement calculation is based on this balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -477,6 +529,9 @@ public class CorporateActionOption9 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlElgblBal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B::ELIG</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -492,9 +547,10 @@ public class CorporateActionOption9 {
 	public static final MMMessageAttribute mmTotalEligibleBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmEligibleBalance;
-			componentContext_lazy = () -> CorporateActionOption9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption9.mmObject();
 			isDerived = false;
 			xmlTag = "TtlElgblBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::ELIG"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleBalance";
 			definition = "Total balance of securities eligible for this corporate action event. The entitlement calculation is based on this balance.";
@@ -503,10 +559,11 @@ public class CorporateActionOption9 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat1.mmObject();
 		}
 	};
+	@XmlElement(name = "InstdBal")
 	protected SignedQuantityFormat1 instructedBalance;
 	/**
-	 * Balance of instructed position.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -527,6 +584,9 @@ public class CorporateActionOption9 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InstdBal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::INBA</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -540,9 +600,10 @@ public class CorporateActionOption9 {
 	public static final MMMessageAttribute mmInstructedBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
-			componentContext_lazy = () -> CorporateActionOption9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption9.mmObject();
 			isDerived = false;
 			xmlTag = "InstdBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::INBA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedBalance";
 			definition = "Balance of instructed position.";
@@ -551,10 +612,11 @@ public class CorporateActionOption9 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat1.mmObject();
 		}
 	};
+	@XmlElement(name = "UinstdBal")
 	protected SignedQuantityFormat1 uninstructedBalance;
 	/**
-	 * Balance of uninstructed position.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -575,6 +637,9 @@ public class CorporateActionOption9 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UinstdBal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::UNBA</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -588,9 +653,10 @@ public class CorporateActionOption9 {
 	public static final MMMessageAttribute mmUninstructedBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmUninstructedBalance;
-			componentContext_lazy = () -> CorporateActionOption9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption9.mmObject();
 			isDerived = false;
 			xmlTag = "UinstdBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::UNBA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UninstructedBalance";
 			definition = "Balance of uninstructed position.";
@@ -599,11 +665,11 @@ public class CorporateActionOption9 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat1.mmObject();
 		}
 	};
+	@XmlElement(name = "StsQtyOrQtyToRcv")
 	protected StatusOrQuantityToReceive1Choice statusQuantityOrQuantityToReceive;
 	/**
-	 * Specifies whether the quantity of financial instrument is a status
-	 * quantity or a quantity to receive.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -632,7 +698,7 @@ public class CorporateActionOption9 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusQuantityOrQuantityToReceive = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionOption9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption9.mmObject();
 			isDerived = false;
 			xmlTag = "StsQtyOrQtyToRcv";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -648,12 +714,16 @@ public class CorporateActionOption9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionOption9.mmOptionNumber, CorporateActionOption9.mmOptionType, CorporateActionOption9.mmAccountOwner, CorporateActionOption9.mmSafekeepingAccount,
-						CorporateActionOption9.mmCashAccount, CorporateActionOption9.mmSafekeepingPlace, CorporateActionOption9.mmSecurityIdentification, CorporateActionOption9.mmTotalEligibleBalance,
-						CorporateActionOption9.mmInstructedBalance, CorporateActionOption9.mmUninstructedBalance, CorporateActionOption9.mmStatusQuantityOrQuantityToReceive);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption9.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption9.mmOptionType,
+						com.tools20022.repository.msg.CorporateActionOption9.mmAccountOwner, com.tools20022.repository.msg.CorporateActionOption9.mmSafekeepingAccount, com.tools20022.repository.msg.CorporateActionOption9.mmCashAccount,
+						com.tools20022.repository.msg.CorporateActionOption9.mmSafekeepingPlace, com.tools20022.repository.msg.CorporateActionOption9.mmSecurityIdentification,
+						com.tools20022.repository.msg.CorporateActionOption9.mmTotalEligibleBalance, com.tools20022.repository.msg.CorporateActionOption9.mmInstructedBalance,
+						com.tools20022.repository.msg.CorporateActionOption9.mmUninstructedBalance, com.tools20022.repository.msg.CorporateActionOption9.mmStatusQuantityOrQuantityToReceive);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionCancellationRequestStatusAdviceV01.mmCorporateActionInstruction, CorporateActionInstructionStatusAdviceV01.mmCorporateActionInstruction);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionOption9, com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionOption9,
+						com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forCorporateActionOption9);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOption9";
 				definition = "Provides information about the corporate action option.";
@@ -662,102 +732,102 @@ public class CorporateActionOption9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OptnNb", required = true)
 	public OptionNumber1Choice getOptionNumber() {
 		return optionNumber;
 	}
 
-	public void setOptionNumber(OptionNumber1Choice optionNumber) {
-		this.optionNumber = optionNumber;
+	public CorporateActionOption9 setOptionNumber(OptionNumber1Choice optionNumber) {
+		this.optionNumber = Objects.requireNonNull(optionNumber);
+		return this;
 	}
 
-	@XmlElement(name = "OptnTp", required = true)
 	public CorporateActionOption5Choice getOptionType() {
 		return optionType;
 	}
 
-	public void setOptionType(CorporateActionOption5Choice optionType) {
-		this.optionType = optionType;
+	public CorporateActionOption9 setOptionType(CorporateActionOption5Choice optionType) {
+		this.optionType = Objects.requireNonNull(optionType);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification13Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification13Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification13Choice accountOwner) {
+	public CorporateActionOption9 setAccountOwner(PartyIdentification13Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct")
-	public Max35Text getSafekeepingAccount() {
-		return safekeepingAccount;
+	public Optional<Max35Text> getSafekeepingAccount() {
+		return safekeepingAccount == null ? Optional.empty() : Optional.of(safekeepingAccount);
 	}
 
-	public void setSafekeepingAccount(Max35Text safekeepingAccount) {
+	public CorporateActionOption9 setSafekeepingAccount(Max35Text safekeepingAccount) {
 		this.safekeepingAccount = safekeepingAccount;
+		return this;
 	}
 
-	@XmlElement(name = "CshAcct")
-	public CashAccountIdentification5Choice getCashAccount() {
-		return cashAccount;
+	public Optional<CashAccountIdentification5Choice> getCashAccount() {
+		return cashAccount == null ? Optional.empty() : Optional.of(cashAccount);
 	}
 
-	public void setCashAccount(CashAccountIdentification5Choice cashAccount) {
+	public CorporateActionOption9 setCashAccount(CashAccountIdentification5Choice cashAccount) {
 		this.cashAccount = cashAccount;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgPlc")
-	public SafekeepingPlaceFormat2Choice getSafekeepingPlace() {
-		return safekeepingPlace;
+	public Optional<SafekeepingPlaceFormat2Choice> getSafekeepingPlace() {
+		return safekeepingPlace == null ? Optional.empty() : Optional.of(safekeepingPlace);
 	}
 
-	public void setSafekeepingPlace(SafekeepingPlaceFormat2Choice safekeepingPlace) {
+	public CorporateActionOption9 setSafekeepingPlace(SafekeepingPlaceFormat2Choice safekeepingPlace) {
 		this.safekeepingPlace = safekeepingPlace;
+		return this;
 	}
 
-	@XmlElement(name = "SctyId")
-	public SecurityIdentification11 getSecurityIdentification() {
-		return securityIdentification;
+	public Optional<SecurityIdentification11> getSecurityIdentification() {
+		return securityIdentification == null ? Optional.empty() : Optional.of(securityIdentification);
 	}
 
-	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification11 securityIdentification) {
+	public CorporateActionOption9 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification11 securityIdentification) {
 		this.securityIdentification = securityIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TtlElgblBal")
-	public SignedQuantityFormat1 getTotalEligibleBalance() {
-		return totalEligibleBalance;
+	public Optional<SignedQuantityFormat1> getTotalEligibleBalance() {
+		return totalEligibleBalance == null ? Optional.empty() : Optional.of(totalEligibleBalance);
 	}
 
-	public void setTotalEligibleBalance(com.tools20022.repository.msg.SignedQuantityFormat1 totalEligibleBalance) {
+	public CorporateActionOption9 setTotalEligibleBalance(com.tools20022.repository.msg.SignedQuantityFormat1 totalEligibleBalance) {
 		this.totalEligibleBalance = totalEligibleBalance;
+		return this;
 	}
 
-	@XmlElement(name = "InstdBal")
-	public SignedQuantityFormat1 getInstructedBalance() {
-		return instructedBalance;
+	public Optional<SignedQuantityFormat1> getInstructedBalance() {
+		return instructedBalance == null ? Optional.empty() : Optional.of(instructedBalance);
 	}
 
-	public void setInstructedBalance(com.tools20022.repository.msg.SignedQuantityFormat1 instructedBalance) {
+	public CorporateActionOption9 setInstructedBalance(com.tools20022.repository.msg.SignedQuantityFormat1 instructedBalance) {
 		this.instructedBalance = instructedBalance;
+		return this;
 	}
 
-	@XmlElement(name = "UinstdBal")
-	public SignedQuantityFormat1 getUninstructedBalance() {
-		return uninstructedBalance;
+	public Optional<SignedQuantityFormat1> getUninstructedBalance() {
+		return uninstructedBalance == null ? Optional.empty() : Optional.of(uninstructedBalance);
 	}
 
-	public void setUninstructedBalance(com.tools20022.repository.msg.SignedQuantityFormat1 uninstructedBalance) {
+	public CorporateActionOption9 setUninstructedBalance(com.tools20022.repository.msg.SignedQuantityFormat1 uninstructedBalance) {
 		this.uninstructedBalance = uninstructedBalance;
+		return this;
 	}
 
-	@XmlElement(name = "StsQtyOrQtyToRcv")
-	public StatusOrQuantityToReceive1Choice getStatusQuantityOrQuantityToReceive() {
-		return statusQuantityOrQuantityToReceive;
+	public Optional<StatusOrQuantityToReceive1Choice> getStatusQuantityOrQuantityToReceive() {
+		return statusQuantityOrQuantityToReceive == null ? Optional.empty() : Optional.of(statusQuantityOrQuantityToReceive);
 	}
 
-	public void setStatusQuantityOrQuantityToReceive(StatusOrQuantityToReceive1Choice statusQuantityOrQuantityToReceive) {
+	public CorporateActionOption9 setStatusQuantityOrQuantityToReceive(StatusOrQuantityToReceive1Choice statusQuantityOrQuantityToReceive) {
 		this.statusQuantityOrQuantityToReceive = statusQuantityOrQuantityToReceive;
+		return this;
 	}
 }

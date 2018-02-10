@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.Operator1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Indicates one of the constraints of a range of business values."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Term1", propOrder = {"operator", "value"})
 public class Term1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Oprtr", required = true)
 	protected Operator1Code operator;
 	/**
-	 * Provides the relationship between a variable and a fixed value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,7 +99,7 @@ public class Term1 {
 	 */
 	public static final MMMessageAttribute mmOperator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Term1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Term1.mmObject();
 			isDerived = false;
 			xmlTag = "Oprtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,10 +110,11 @@ public class Term1 {
 			simpleType_lazy = () -> Operator1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Val", required = true)
 	protected RateOrAbsoluteValue1Choice value;
 	/**
-	 * Indicates the value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -137,7 +140,7 @@ public class Term1 {
 	 */
 	public static final MMMessageAssociationEnd mmValue = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Term1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Term1.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,8 +156,8 @@ public class Term1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Term1.mmOperator, Term1.mmValue);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Term1.mmOperator, com.tools20022.repository.msg.Term1.mmValue);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Term1";
 				definition = "Indicates one of the constraints of a range of business values.";
@@ -163,21 +166,21 @@ public class Term1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Oprtr", required = true)
 	public Operator1Code getOperator() {
 		return operator;
 	}
 
-	public void setOperator(Operator1Code operator) {
-		this.operator = operator;
+	public Term1 setOperator(Operator1Code operator) {
+		this.operator = Objects.requireNonNull(operator);
+		return this;
 	}
 
-	@XmlElement(name = "Val", required = true)
 	public RateOrAbsoluteValue1Choice getValue() {
 		return value;
 	}
 
-	public void setValue(RateOrAbsoluteValue1Choice value) {
-		this.value = value;
+	public Term1 setValue(RateOrAbsoluteValue1Choice value) {
+		this.value = Objects.requireNonNull(value);
+		return this;
 	}
 }

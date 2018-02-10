@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,18 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Set of elements used to identify a financial institution."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "FinancialInstitutionIdentification13", propOrder = "BICFI")
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "FinancialInstitutionIdentification13", propOrder = "bICFI")
 public class FinancialInstitutionIdentification13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BICFI", required = true)
 	protected BICFIIdentifier bICFI;
 	/**
-	 * Code allocated to a financial institution by the ISO 9362 Registration
-	 * Authority as described in ISO 9362
-	 * "Banking - Banking telecommunication messages - Business identifier code (BIC)"
-	 * .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +109,7 @@ public class FinancialInstitutionIdentification13 {
 	public static final MMMessageAttribute mmBICFI = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> FinancialInstitutionIdentification13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification13.mmObject();
 			isDerived = false;
 			xmlTag = "BICFI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,9 +124,9 @@ public class FinancialInstitutionIdentification13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstitutionIdentification13.mmBICFI);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstitutionIdentification13.mmBICFI);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstitutionIdentification13";
 				definition = "Set of elements used to identify a financial institution.";
@@ -136,12 +135,12 @@ public class FinancialInstitutionIdentification13 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BICFI", required = true)
 	public BICFIIdentifier getBICFI() {
 		return bICFI;
 	}
 
-	public void setBICFI(BICFIIdentifier bICFI) {
-		this.bICFI = bICFI;
+	public FinancialInstitutionIdentification13 setBICFI(BICFIIdentifier bICFI) {
+		this.bICFI = Objects.requireNonNull(bICFI);
+		return this;
 	}
 }

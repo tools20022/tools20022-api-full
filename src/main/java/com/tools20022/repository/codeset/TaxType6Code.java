@@ -20,44 +20,46 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TaxTypeCode;
+import com.tools20022.repository.codeset.TaxType6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of tax.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TaxTypeCode TaxTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType6Code#mmInterimProfitTax
- * TaxType6Code.mmInterimProfitTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType6Code#InterimProfitTax
+ * TaxType6Code.InterimProfitTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType6Code#mmEUTaxRetention
- * TaxType6Code.mmEUTaxRetention}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType6Code#EUTaxRetention
+ * TaxType6Code.EUTaxRetention}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType6Code#Aktiengewinn1
+ * TaxType6Code.Aktiengewinn1}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType6Code#Aktiengewinn2
+ * TaxType6Code.Aktiengewinn2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType6Code#mmAktiengewinn1
- * TaxType6Code.mmAktiengewinn1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType6Code#mmAktiengewinn2
- * TaxType6Code.mmAktiengewinn2}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType6Code#mmZwischengewinn
- * TaxType6Code.mmZwischengewinn}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType6Code#mmOther
- * TaxType6Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType6Code#Zwischengewinn
+ * TaxType6Code.Zwischengewinn}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType6Code#Other
+ * TaxType6Code.Other}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TaxTypeCode TaxTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of tax."</li>
  * </ul>
  */
-public class TaxType6Code extends TaxTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TaxType6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +95,12 @@ public class TaxType6Code extends TaxTypeCode {
 	 * name} = "InterimProfitTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterimProfitTax = new MMCode() {
+	public static final TaxType6Code InterimProfitTax = new TaxType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterimProfitTax";
-			owner_lazy = () -> TaxType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType6Code.mmObject();
+			codeName = TaxTypeCode.InterimProfitTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -114,11 +118,12 @@ public class TaxType6Code extends TaxTypeCode {
 	 * name} = "EUTaxRetention"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEUTaxRetention = new MMCode() {
+	public static final TaxType6Code EUTaxRetention = new TaxType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUTaxRetention";
-			owner_lazy = () -> TaxType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType6Code.mmObject();
+			codeName = TaxTypeCode.EUTaxRetention.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -136,11 +141,12 @@ public class TaxType6Code extends TaxTypeCode {
 	 * name} = "Aktiengewinn1"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAktiengewinn1 = new MMCode() {
+	public static final TaxType6Code Aktiengewinn1 = new TaxType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Aktiengewinn1";
-			owner_lazy = () -> TaxType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType6Code.mmObject();
+			codeName = TaxTypeCode.Aktiengewinn1.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,11 +164,12 @@ public class TaxType6Code extends TaxTypeCode {
 	 * name} = "Aktiengewinn2"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAktiengewinn2 = new MMCode() {
+	public static final TaxType6Code Aktiengewinn2 = new TaxType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Aktiengewinn2";
-			owner_lazy = () -> TaxType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType6Code.mmObject();
+			codeName = TaxTypeCode.Aktiengewinn2.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -180,11 +187,12 @@ public class TaxType6Code extends TaxTypeCode {
 	 * name} = "Zwischengewinn"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmZwischengewinn = new MMCode() {
+	public static final TaxType6Code Zwischengewinn = new TaxType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Zwischengewinn";
-			owner_lazy = () -> TaxType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType6Code.mmObject();
+			codeName = TaxTypeCode.Zwischengewinn.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -202,26 +210,62 @@ public class TaxType6Code extends TaxTypeCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final TaxType6Code Other = new TaxType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> TaxType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType6Code.mmObject();
+			codeName = TaxTypeCode.Other.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TaxType6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TaxType6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("INPO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxType6Code";
 				definition = "Specifies the type of tax.";
-				code_lazy = () -> Arrays.asList(TaxType6Code.mmInterimProfitTax, TaxType6Code.mmEUTaxRetention, TaxType6Code.mmAktiengewinn1, TaxType6Code.mmAktiengewinn2, TaxType6Code.mmZwischengewinn, TaxType6Code.mmOther);
 				trace_lazy = () -> TaxTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType6Code.InterimProfitTax, com.tools20022.repository.codeset.TaxType6Code.EUTaxRetention, com.tools20022.repository.codeset.TaxType6Code.Aktiengewinn1,
+						com.tools20022.repository.codeset.TaxType6Code.Aktiengewinn2, com.tools20022.repository.codeset.TaxType6Code.Zwischengewinn, com.tools20022.repository.codeset.TaxType6Code.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(InterimProfitTax.getCodeName().get(), InterimProfitTax);
+		codesByName.put(EUTaxRetention.getCodeName().get(), EUTaxRetention);
+		codesByName.put(Aktiengewinn1.getCodeName().get(), Aktiengewinn1);
+		codesByName.put(Aktiengewinn2.getCodeName().get(), Aktiengewinn2);
+		codesByName.put(Zwischengewinn.getCodeName().get(), Zwischengewinn);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static TaxType6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TaxType6Code[] values() {
+		TaxType6Code[] values = new TaxType6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TaxType6Code> {
+		@Override
+		public TaxType6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TaxType6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.Demand;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of the demand withdrawal notification."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UndertakingDemandWithdrawal1", propOrder = {"undertakingIdentification", "advisingPartyReferenceNumber", "demandDetails", "confirmerReferenceNumber"})
 public class UndertakingDemandWithdrawal1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UdrtkgId", required = true)
 	protected Undertaking6 undertakingIdentification;
 	/**
-	 * Details related to the identification of the undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -122,7 +125,7 @@ public class UndertakingDemandWithdrawal1 {
 	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Demand.mmUndertaking;
-			componentContext_lazy = () -> UndertakingDemandWithdrawal1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,11 +137,11 @@ public class UndertakingDemandWithdrawal1 {
 			type_lazy = () -> com.tools20022.repository.msg.Undertaking6.mmObject();
 		}
 	};
+	@XmlElement(name = "AdvsgPtyRefNb")
 	protected Max35Text advisingPartyReferenceNumber;
 	/**
-	 * Unique and unambiguous identifier assigned by the advising party to the
-	 * undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +170,7 @@ public class UndertakingDemandWithdrawal1 {
 	 */
 	public static final MMMessageAttribute mmAdvisingPartyReferenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UndertakingDemandWithdrawal1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmObject();
 			isDerived = false;
 			xmlTag = "AdvsgPtyRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +181,11 @@ public class UndertakingDemandWithdrawal1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DmndDtls", required = true)
 	protected Demand3 demandDetails;
 	/**
-	 * Details related to the demand.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -211,7 +215,7 @@ public class UndertakingDemandWithdrawal1 {
 	public static final MMMessageAssociationEnd mmDemandDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Demand.mmObject();
-			componentContext_lazy = () -> UndertakingDemandWithdrawal1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmObject();
 			isDerived = false;
 			xmlTag = "DmndDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,11 +227,11 @@ public class UndertakingDemandWithdrawal1 {
 			type_lazy = () -> com.tools20022.repository.msg.Demand3.mmObject();
 		}
 	};
+	@XmlElement(name = "CnfrmrRefNb")
 	protected Max35Text confirmerReferenceNumber;
 	/**
-	 * Unique and unambiguous identifier assigned by the confirmer to the
-	 * undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -256,7 +260,7 @@ public class UndertakingDemandWithdrawal1 {
 	 */
 	public static final MMMessageAttribute mmConfirmerReferenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UndertakingDemandWithdrawal1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmObject();
 			isDerived = false;
 			xmlTag = "CnfrmrRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -271,11 +275,11 @@ public class UndertakingDemandWithdrawal1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UndertakingDemandWithdrawal1.mmUndertakingIdentification, UndertakingDemandWithdrawal1.mmAdvisingPartyReferenceNumber, UndertakingDemandWithdrawal1.mmDemandDetails,
-						UndertakingDemandWithdrawal1.mmConfirmerReferenceNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmUndertakingIdentification, com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmAdvisingPartyReferenceNumber,
+						com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmDemandDetails, com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmConfirmerReferenceNumber);
 				messageBuildingBlock_lazy = () -> Arrays.asList(DemandWithdrawalNotificationV01.mmDemandWithdrawalNotificationDetails);
 				trace_lazy = () -> Demand.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingDemandWithdrawal1";
 				definition = "Details of the demand withdrawal notification.";
@@ -284,39 +288,39 @@ public class UndertakingDemandWithdrawal1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UdrtkgId", required = true)
 	public Undertaking6 getUndertakingIdentification() {
 		return undertakingIdentification;
 	}
 
-	public void setUndertakingIdentification(com.tools20022.repository.msg.Undertaking6 undertakingIdentification) {
-		this.undertakingIdentification = undertakingIdentification;
+	public UndertakingDemandWithdrawal1 setUndertakingIdentification(com.tools20022.repository.msg.Undertaking6 undertakingIdentification) {
+		this.undertakingIdentification = Objects.requireNonNull(undertakingIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AdvsgPtyRefNb")
-	public Max35Text getAdvisingPartyReferenceNumber() {
-		return advisingPartyReferenceNumber;
+	public Optional<Max35Text> getAdvisingPartyReferenceNumber() {
+		return advisingPartyReferenceNumber == null ? Optional.empty() : Optional.of(advisingPartyReferenceNumber);
 	}
 
-	public void setAdvisingPartyReferenceNumber(Max35Text advisingPartyReferenceNumber) {
+	public UndertakingDemandWithdrawal1 setAdvisingPartyReferenceNumber(Max35Text advisingPartyReferenceNumber) {
 		this.advisingPartyReferenceNumber = advisingPartyReferenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "DmndDtls", required = true)
 	public Demand3 getDemandDetails() {
 		return demandDetails;
 	}
 
-	public void setDemandDetails(com.tools20022.repository.msg.Demand3 demandDetails) {
-		this.demandDetails = demandDetails;
+	public UndertakingDemandWithdrawal1 setDemandDetails(com.tools20022.repository.msg.Demand3 demandDetails) {
+		this.demandDetails = Objects.requireNonNull(demandDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CnfrmrRefNb")
-	public Max35Text getConfirmerReferenceNumber() {
-		return confirmerReferenceNumber;
+	public Optional<Max35Text> getConfirmerReferenceNumber() {
+		return confirmerReferenceNumber == null ? Optional.empty() : Optional.of(confirmerReferenceNumber);
 	}
 
-	public void setConfirmerReferenceNumber(Max35Text confirmerReferenceNumber) {
+	public UndertakingDemandWithdrawal1 setConfirmerReferenceNumber(Max35Text confirmerReferenceNumber) {
 		this.confirmerReferenceNumber = confirmerReferenceNumber;
+		return this;
 	}
 }

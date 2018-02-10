@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Role played by a party in the context of guarantees.
@@ -35,12 +36,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
  * <li>
  * {@linkplain com.tools20022.repository.entity.GuaranteePartyRole#mmGuarantee
  * GuaranteePartyRole.mmGuarantee}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Guarantee#mmGuaranteePartyRole
+ * Guarantee.mmGuaranteePartyRole}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -52,22 +64,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * GuaranteeBeneficiary}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Guarantee#mmGuaranteePartyRole
- * Guarantee.mmGuaranteePartyRole}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,8 +84,8 @@ public class GuaranteePartyRole extends Role {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Guarantee guarantee;
 	/**
-	 * Guarantee for which a party plays a role.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,8 +118,8 @@ public class GuaranteePartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmGuarantee = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.GuaranteePartyRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.GuaranteePartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Guarantee";
 			definition = "Guarantee for which a party plays a role.";
@@ -133,7 +134,7 @@ public class GuaranteePartyRole extends Role {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GuaranteePartyRole";
 				definition = "Role played by a party in the context of guarantees.";
@@ -155,7 +156,8 @@ public class GuaranteePartyRole extends Role {
 		return guarantee;
 	}
 
-	public void setGuarantee(com.tools20022.repository.entity.Guarantee guarantee) {
-		this.guarantee = guarantee;
+	public GuaranteePartyRole setGuarantee(com.tools20022.repository.entity.Guarantee guarantee) {
+		this.guarantee = Objects.requireNonNull(guarantee);
+		return this;
 	}
 }

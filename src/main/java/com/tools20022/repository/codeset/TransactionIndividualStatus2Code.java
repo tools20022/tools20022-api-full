@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PaymentStatusCode;
+import com.tools20022.repository.codeset.TransactionIndividualStatus2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of a single payment transaction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PaymentStatusCode
- * PaymentStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionIndividualStatus2Code#mmRejected
- * TransactionIndividualStatus2Code.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionIndividualStatus2Code#Rejected
+ * TransactionIndividualStatus2Code.Rejected}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PaymentStatusCode
+ * PaymentStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of a single payment transaction."</li>
  * </ul>
  */
-public class TransactionIndividualStatus2Code extends PaymentStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransactionIndividualStatus2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,26 +85,56 @@ public class TransactionIndividualStatus2Code extends PaymentStatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final TransactionIndividualStatus2Code Rejected = new TransactionIndividualStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> TransactionIndividualStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionIndividualStatus2Code.mmObject();
+			codeName = PaymentStatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TransactionIndividualStatus2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransactionIndividualStatus2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RJCT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionIndividualStatus2Code";
 				definition = "Specifies the status of a single payment transaction.";
-				code_lazy = () -> Arrays.asList(TransactionIndividualStatus2Code.mmRejected);
 				trace_lazy = () -> PaymentStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionIndividualStatus2Code.Rejected);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+	}
+
+	public static TransactionIndividualStatus2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransactionIndividualStatus2Code[] values() {
+		TransactionIndividualStatus2Code[] values = new TransactionIndividualStatus2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransactionIndividualStatus2Code> {
+		@Override
+		public TransactionIndividualStatus2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransactionIndividualStatus2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

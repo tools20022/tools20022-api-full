@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.BusinessFlowTypeCode;
+import com.tools20022.repository.codeset.BusinessFlowType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies the business process in which the actors are involved. This is
@@ -33,27 +37,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.BusinessFlowTypeCode
- * BusinessFlowTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessFlowType1Code#mmSingleLegDeliveringParty
- * BusinessFlowType1Code.mmSingleLegDeliveringParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessFlowType1Code#SingleLegDeliveringParty
+ * BusinessFlowType1Code.SingleLegDeliveringParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessFlowType1Code#mmSingleLegReceivingParty
- * BusinessFlowType1Code.mmSingleLegReceivingParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessFlowType1Code#SingleLegReceivingParty
+ * BusinessFlowType1Code.SingleLegReceivingParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessFlowType1Code#mmDoubleLegProcess
- * BusinessFlowType1Code.mmDoubleLegProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessFlowType1Code#DoubleLegProcess
+ * BusinessFlowType1Code.DoubleLegProcess}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.BusinessFlowTypeCode
+ * BusinessFlowTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -72,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class BusinessFlowType1Code extends BusinessFlowTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BusinessFlowType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,11 +96,12 @@ public class BusinessFlowType1Code extends BusinessFlowTypeCode {
 	 * name} = "SingleLegDeliveringParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSingleLegDeliveringParty = new MMCode() {
+	public static final BusinessFlowType1Code SingleLegDeliveringParty = new BusinessFlowType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleLegDeliveringParty";
-			owner_lazy = () -> BusinessFlowType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BusinessFlowType1Code.mmObject();
+			codeName = BusinessFlowTypeCode.SingleLegDeliveringParty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -114,11 +120,12 @@ public class BusinessFlowType1Code extends BusinessFlowTypeCode {
 	 * name} = "SingleLegReceivingParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSingleLegReceivingParty = new MMCode() {
+	public static final BusinessFlowType1Code SingleLegReceivingParty = new BusinessFlowType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleLegReceivingParty";
-			owner_lazy = () -> BusinessFlowType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BusinessFlowType1Code.mmObject();
+			codeName = BusinessFlowTypeCode.SingleLegReceivingParty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -137,26 +144,59 @@ public class BusinessFlowType1Code extends BusinessFlowTypeCode {
 	 * name} = "DoubleLegProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDoubleLegProcess = new MMCode() {
+	public static final BusinessFlowType1Code DoubleLegProcess = new BusinessFlowType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DoubleLegProcess";
-			owner_lazy = () -> BusinessFlowType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BusinessFlowType1Code.mmObject();
+			codeName = BusinessFlowTypeCode.DoubleLegProcess.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, BusinessFlowType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BusinessFlowType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SLDP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BusinessFlowType1Code";
 				definition = "Identifies the business process in which the actors are involved. This is important to trigger the right business process, according to the market business model, which may require matching instructions in a CSD environment (double leg process) or not (single leg process).";
-				code_lazy = () -> Arrays.asList(BusinessFlowType1Code.mmSingleLegDeliveringParty, BusinessFlowType1Code.mmSingleLegReceivingParty, BusinessFlowType1Code.mmDoubleLegProcess);
 				trace_lazy = () -> BusinessFlowTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BusinessFlowType1Code.SingleLegDeliveringParty, com.tools20022.repository.codeset.BusinessFlowType1Code.SingleLegReceivingParty,
+						com.tools20022.repository.codeset.BusinessFlowType1Code.DoubleLegProcess);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SingleLegDeliveringParty.getCodeName().get(), SingleLegDeliveringParty);
+		codesByName.put(SingleLegReceivingParty.getCodeName().get(), SingleLegReceivingParty);
+		codesByName.put(DoubleLegProcess.getCodeName().get(), DoubleLegProcess);
+	}
+
+	public static BusinessFlowType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BusinessFlowType1Code[] values() {
+		BusinessFlowType1Code[] values = new BusinessFlowType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BusinessFlowType1Code> {
+		@Override
+		public BusinessFlowType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BusinessFlowType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

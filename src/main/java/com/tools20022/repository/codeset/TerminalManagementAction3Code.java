@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TerminalManagementActionCode;
+import com.tools20022.repository.codeset.TerminalManagementAction3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of action to perform.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode
- * TerminalManagementActionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction3Code#mmCreate
- * TerminalManagementAction3Code.mmCreate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction3Code#Create
+ * TerminalManagementAction3Code.Create}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction3Code#mmDelete
- * TerminalManagementAction3Code.mmDelete}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction3Code#Delete
+ * TerminalManagementAction3Code.Delete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction3Code#mmUpdate
- * TerminalManagementAction3Code.mmUpdate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction3Code#Update
+ * TerminalManagementAction3Code.Update}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode
+ * TerminalManagementActionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of action to perform."</li>
  * </ul>
  */
-public class TerminalManagementAction3Code extends TerminalManagementActionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TerminalManagementAction3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,11 +85,12 @@ public class TerminalManagementAction3Code extends TerminalManagementActionCode 
 	 * name} = "Create"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreate = new MMCode() {
+	public static final TerminalManagementAction3Code Create = new TerminalManagementAction3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Create";
-			owner_lazy = () -> TerminalManagementAction3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementAction3Code.mmObject();
+			codeName = TerminalManagementActionCode.Create.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -103,11 +109,12 @@ public class TerminalManagementAction3Code extends TerminalManagementActionCode 
 	 * name} = "Delete"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDelete = new MMCode() {
+	public static final TerminalManagementAction3Code Delete = new TerminalManagementAction3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delete";
-			owner_lazy = () -> TerminalManagementAction3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementAction3Code.mmObject();
+			codeName = TerminalManagementActionCode.Delete.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -126,25 +133,58 @@ public class TerminalManagementAction3Code extends TerminalManagementActionCode 
 	 * name} = "Update"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUpdate = new MMCode() {
+	public static final TerminalManagementAction3Code Update = new TerminalManagementAction3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Update";
-			owner_lazy = () -> TerminalManagementAction3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementAction3Code.mmObject();
+			codeName = TerminalManagementActionCode.Update.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TerminalManagementAction3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TerminalManagementAction3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementAction3Code";
 				definition = "Type of action to perform.";
-				code_lazy = () -> Arrays.asList(TerminalManagementAction3Code.mmCreate, TerminalManagementAction3Code.mmDelete, TerminalManagementAction3Code.mmUpdate);
 				trace_lazy = () -> TerminalManagementActionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementAction3Code.Create, com.tools20022.repository.codeset.TerminalManagementAction3Code.Delete,
+						com.tools20022.repository.codeset.TerminalManagementAction3Code.Update);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Create.getCodeName().get(), Create);
+		codesByName.put(Delete.getCodeName().get(), Delete);
+		codesByName.put(Update.getCodeName().get(), Update);
+	}
+
+	public static TerminalManagementAction3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TerminalManagementAction3Code[] values() {
+		TerminalManagementAction3Code[] values = new TerminalManagementAction3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TerminalManagementAction3Code> {
+		@Override
+		public TerminalManagementAction3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TerminalManagementAction3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

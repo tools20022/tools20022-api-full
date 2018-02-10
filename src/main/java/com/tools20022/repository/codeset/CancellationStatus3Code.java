@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CancellationStatusCode;
+import com.tools20022.repository.codeset.CancellationStatus3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the cancellation status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CancellationStatusCode
- * CancellationStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationStatus3Code#mmAccepted
- * CancellationStatus3Code.mmAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationStatus3Code#Accepted
+ * CancellationStatus3Code.Accepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationStatus3Code#mmPending
- * CancellationStatus3Code.mmPending}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationStatus3Code#Pending
+ * CancellationStatus3Code.Pending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationStatus3Code#mmComplete
- * CancellationStatus3Code.mmComplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationStatus3Code#Complete
+ * CancellationStatus3Code.Complete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationStatus3Code#mmReceivedByIssuerOrRegistrar
- * CancellationStatus3Code.mmReceivedByIssuerOrRegistrar}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationStatus3Code#ReceivedByIssuerOrRegistrar
+ * CancellationStatus3Code.ReceivedByIssuerOrRegistrar}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CancellationStatusCode
+ * CancellationStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the cancellation status."</li>
  * </ul>
  */
-public class CancellationStatus3Code extends CancellationStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CancellationStatus3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class CancellationStatus3Code extends CancellationStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final CancellationStatus3Code Accepted = new CancellationStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> CancellationStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationStatus3Code.mmObject();
+			codeName = CancellationStatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class CancellationStatus3Code extends CancellationStatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPending = new MMCode() {
+	public static final CancellationStatus3Code Pending = new CancellationStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
-			owner_lazy = () -> CancellationStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationStatus3Code.mmObject();
+			codeName = CancellationStatusCode.Pending.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class CancellationStatus3Code extends CancellationStatusCode {
 	 * name} = "Complete"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmComplete = new MMCode() {
+	public static final CancellationStatus3Code Complete = new CancellationStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
-			owner_lazy = () -> CancellationStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationStatus3Code.mmObject();
+			codeName = CancellationStatusCode.Complete.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,26 +166,60 @@ public class CancellationStatus3Code extends CancellationStatusCode {
 	 * name} = "ReceivedByIssuerOrRegistrar"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceivedByIssuerOrRegistrar = new MMCode() {
+	public static final CancellationStatus3Code ReceivedByIssuerOrRegistrar = new CancellationStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedByIssuerOrRegistrar";
-			owner_lazy = () -> CancellationStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationStatus3Code.mmObject();
+			codeName = CancellationStatusCode.ReceivedByIssuerOrRegistrar.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CancellationStatus3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CancellationStatus3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PACK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationStatus3Code";
 				definition = "Specifies the cancellation status.";
-				code_lazy = () -> Arrays.asList(CancellationStatus3Code.mmAccepted, CancellationStatus3Code.mmPending, CancellationStatus3Code.mmComplete, CancellationStatus3Code.mmReceivedByIssuerOrRegistrar);
 				trace_lazy = () -> CancellationStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationStatus3Code.Accepted, com.tools20022.repository.codeset.CancellationStatus3Code.Pending,
+						com.tools20022.repository.codeset.CancellationStatus3Code.Complete, com.tools20022.repository.codeset.CancellationStatus3Code.ReceivedByIssuerOrRegistrar);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+		codesByName.put(Pending.getCodeName().get(), Pending);
+		codesByName.put(Complete.getCodeName().get(), Complete);
+		codesByName.put(ReceivedByIssuerOrRegistrar.getCodeName().get(), ReceivedByIssuerOrRegistrar);
+	}
+
+	public static CancellationStatus3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CancellationStatus3Code[] values() {
+		CancellationStatus3Code[] values = new CancellationStatus3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CancellationStatus3Code> {
+		@Override
+		public CancellationStatus3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CancellationStatus3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

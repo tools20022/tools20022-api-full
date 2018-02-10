@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -32,6 +33,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides pre-allocation details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PreAllocation1", propOrder = {"allocationIdentification", "individualAllocationIdentification", "allocatedQuantity", "allocatedSettlementCurrency", "allocationAccountDetails"})
 public class PreAllocation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AllcnId")
 	protected Max35Text allocationIdentification;
 	/**
-	 * Used to assign an identifier to the block of preallocations.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,6 +111,9 @@ public class PreAllocation1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AllcnId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 70</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -122,9 +128,10 @@ public class PreAllocation1 {
 	public static final MMMessageAttribute mmAllocationIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
-			componentContext_lazy = () -> PreAllocation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PreAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "AllcnId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "70"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationIdentification";
 			definition = "Used to assign an identifier to the block of preallocations.";
@@ -133,10 +140,11 @@ public class PreAllocation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IndvAllcnId")
 	protected Max35Text individualAllocationIdentification;
 	/**
-	 * A unique identification for each allocation instance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,6 +163,9 @@ public class PreAllocation1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IndvAllcnId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 467</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -168,9 +179,10 @@ public class PreAllocation1 {
 	public static final MMMessageAttribute mmIndividualAllocationIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
-			componentContext_lazy = () -> PreAllocation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PreAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "IndvAllcnId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "467"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualAllocationIdentification";
 			definition = "A unique identification for each allocation instance.";
@@ -179,11 +191,11 @@ public class PreAllocation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AllctdQty")
 	protected FinancialInstrumentQuantityChoice allocatedQuantity;
 	/**
-	 * Quantity of a specific security allocated from a block trade, based upon
-	 * the distribution of the trade to different accounts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,6 +215,9 @@ public class PreAllocation1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AllctdQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 80</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -218,9 +233,10 @@ public class PreAllocation1 {
 	public static final MMMessageAttribute mmAllocatedQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Allocation.mmAllocatedQuantity;
-			componentContext_lazy = () -> PreAllocation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PreAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "AllctdQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "80"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocatedQuantity";
 			definition = "Quantity of a specific security allocated from a block trade, based upon the distribution of the trade to different accounts.";
@@ -229,10 +245,11 @@ public class PreAllocation1 {
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "AllctdSttlmCcy")
 	protected CurrencyCode allocatedSettlementCurrency;
 	/**
-	 * Currency to be used for settlement of the settlement amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,6 +268,9 @@ public class PreAllocation1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AllctdSttlmCcy"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 736</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -265,9 +285,10 @@ public class PreAllocation1 {
 	public static final MMMessageAttribute mmAllocatedSettlementCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Allocation.mmSettlementCurrency;
-			componentContext_lazy = () -> PreAllocation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PreAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "AllctdSttlmCcy";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "736"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocatedSettlementCurrency";
 			definition = "Currency to be used for settlement of the settlement amount.";
@@ -276,10 +297,11 @@ public class PreAllocation1 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "AllcnAcctDtls")
 	protected SecuritiesAccount2 allocationAccountDetails;
 	/**
-	 * Account to or from which an allocation must be made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -297,6 +319,9 @@ public class PreAllocation1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AllcnAcctDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 79, FIXSynonym: 661</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -310,9 +335,10 @@ public class PreAllocation1 {
 	public static final MMMessageAssociationEnd mmAllocationAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Allocation.mmAllocationAccount;
-			componentContext_lazy = () -> PreAllocation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PreAllocation1.mmObject();
 			isDerived = false;
 			xmlTag = "AllcnAcctDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "79"), new FIXSynonym(this, "661"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationAccountDetails";
 			definition = "Account to or from which an allocation must be made.";
@@ -326,10 +352,10 @@ public class PreAllocation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PreAllocation1.mmAllocationIdentification, PreAllocation1.mmIndividualAllocationIdentification, PreAllocation1.mmAllocatedQuantity, PreAllocation1.mmAllocatedSettlementCurrency,
-						PreAllocation1.mmAllocationAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PreAllocation1.mmAllocationIdentification, com.tools20022.repository.msg.PreAllocation1.mmIndividualAllocationIdentification,
+						com.tools20022.repository.msg.PreAllocation1.mmAllocatedQuantity, com.tools20022.repository.msg.PreAllocation1.mmAllocatedSettlementCurrency, com.tools20022.repository.msg.PreAllocation1.mmAllocationAccountDetails);
 				trace_lazy = () -> Allocation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -345,48 +371,48 @@ public class PreAllocation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AllcnId")
-	public Max35Text getAllocationIdentification() {
-		return allocationIdentification;
+	public Optional<Max35Text> getAllocationIdentification() {
+		return allocationIdentification == null ? Optional.empty() : Optional.of(allocationIdentification);
 	}
 
-	public void setAllocationIdentification(Max35Text allocationIdentification) {
+	public PreAllocation1 setAllocationIdentification(Max35Text allocationIdentification) {
 		this.allocationIdentification = allocationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "IndvAllcnId")
-	public Max35Text getIndividualAllocationIdentification() {
-		return individualAllocationIdentification;
+	public Optional<Max35Text> getIndividualAllocationIdentification() {
+		return individualAllocationIdentification == null ? Optional.empty() : Optional.of(individualAllocationIdentification);
 	}
 
-	public void setIndividualAllocationIdentification(Max35Text individualAllocationIdentification) {
+	public PreAllocation1 setIndividualAllocationIdentification(Max35Text individualAllocationIdentification) {
 		this.individualAllocationIdentification = individualAllocationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AllctdQty")
-	public FinancialInstrumentQuantityChoice getAllocatedQuantity() {
-		return allocatedQuantity;
+	public Optional<FinancialInstrumentQuantityChoice> getAllocatedQuantity() {
+		return allocatedQuantity == null ? Optional.empty() : Optional.of(allocatedQuantity);
 	}
 
-	public void setAllocatedQuantity(FinancialInstrumentQuantityChoice allocatedQuantity) {
+	public PreAllocation1 setAllocatedQuantity(FinancialInstrumentQuantityChoice allocatedQuantity) {
 		this.allocatedQuantity = allocatedQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "AllctdSttlmCcy")
-	public CurrencyCode getAllocatedSettlementCurrency() {
-		return allocatedSettlementCurrency;
+	public Optional<CurrencyCode> getAllocatedSettlementCurrency() {
+		return allocatedSettlementCurrency == null ? Optional.empty() : Optional.of(allocatedSettlementCurrency);
 	}
 
-	public void setAllocatedSettlementCurrency(CurrencyCode allocatedSettlementCurrency) {
+	public PreAllocation1 setAllocatedSettlementCurrency(CurrencyCode allocatedSettlementCurrency) {
 		this.allocatedSettlementCurrency = allocatedSettlementCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "AllcnAcctDtls")
-	public SecuritiesAccount2 getAllocationAccountDetails() {
-		return allocationAccountDetails;
+	public Optional<SecuritiesAccount2> getAllocationAccountDetails() {
+		return allocationAccountDetails == null ? Optional.empty() : Optional.of(allocationAccountDetails);
 	}
 
-	public void setAllocationAccountDetails(com.tools20022.repository.msg.SecuritiesAccount2 allocationAccountDetails) {
+	public PreAllocation1 setAllocationAccountDetails(com.tools20022.repository.msg.SecuritiesAccount2 allocationAccountDetails) {
 		this.allocationAccountDetails = allocationAccountDetails;
+		return this;
 	}
 }

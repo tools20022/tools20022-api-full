@@ -31,6 +31,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Party that makes investment decisions. Identifies the beneficiary or its
@@ -42,6 +43,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
+ * TradePartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -60,9 +64,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvestorRole.mmType}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
- * TradePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -86,8 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -105,9 +106,8 @@ public class InvestorRole extends TradePartyRole {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected RankCode individualInvestor;
 	/**
-	 * Specifies whether the investor is a primary or the secondary individual
-	 * investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,8 +133,8 @@ public class InvestorRole extends TradePartyRole {
 	 */
 	public static final MMBusinessAttribute mmIndividualInvestor = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndividualInvestor";
 			definition = "Specifies whether the investor is a primary or the secondary individual investor.";
@@ -153,9 +153,8 @@ public class InvestorRole extends TradePartyRole {
 	};
 	protected RankCode corporateInvestor;
 	/**
-	 * Specifies whether the investor is a primary or a secondary corporate
-	 * investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,8 +192,8 @@ public class InvestorRole extends TradePartyRole {
 	public static final MMBusinessAttribute mmCorporateInvestor = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashAccount33.mmCashAccountDesignation, AccountDesignation1Choice.mmCode);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateInvestor";
 			definition = "Specifies whether the investor is a primary or a secondary corporate investor.";
@@ -213,9 +212,8 @@ public class InvestorRole extends TradePartyRole {
 	};
 	protected EligibilityCode capacity;
 	/**
-	 * Specifies whether the investor is the primary, or the secondary account
-	 * owner or another account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -422,8 +420,8 @@ public class InvestorRole extends TradePartyRole {
 					SecuritiesTradeDetails63.mmInvestorCapacity, SecuritiesTradeDetails62.mmInvestorCapacity, InvestorCapacity5Choice.mmCode, InvestorCapacity5Choice.mmProprietary, SecuritiesTradeDetails65.mmInvestorCapacity,
 					SecuritiesTradeDetails66.mmInvestorCapacity, Intermediary39.mmOrderOriginatorEligibility, Intermediary40.mmOrderOriginatorEligibility, SecuritiesTradeDetails67.mmInvestorCapacity,
 					SecuritiesTradeDetails70.mmInvestorCapacity);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Capacity";
 			definition = "Specifies whether the investor is the primary, or the secondary account owner or another account owner.";
@@ -442,9 +440,8 @@ public class InvestorRole extends TradePartyRole {
 	};
 	protected YesNoIndicator investorProtectionAssociationMembership;
 	/**
-	 * Indicates whether the confirmation party is a member of the investor
-	 * protection association required, eg, as per regulation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -483,8 +480,8 @@ public class InvestorRole extends TradePartyRole {
 	public static final MMBusinessAttribute mmInvestorProtectionAssociationMembership = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ConfirmationPartyDetails6.mmInvestorProtectionAssociationMembership, ConfirmationPartyDetails5.mmInvestorProtectionAssociationMembership);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestorProtectionAssociationMembership";
 			definition = "Indicates whether the confirmation party is a member of the investor protection association required, eg, as per regulation.";
@@ -503,8 +500,8 @@ public class InvestorRole extends TradePartyRole {
 	};
 	protected InvestorTypeCode type;
 	/**
-	 * Specifies whether the investor is a corporate or an individual
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -542,8 +539,8 @@ public class InvestorRole extends TradePartyRole {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestorType2Choice.mmCode, InvestorType2Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Specifies whether the investor is a corporate or an individual";
@@ -564,7 +561,7 @@ public class InvestorRole extends TradePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestorRole";
 				definition = "Party that makes investment decisions. Identifies the beneficiary or its broker.";
@@ -587,39 +584,44 @@ public class InvestorRole extends TradePartyRole {
 		return individualInvestor;
 	}
 
-	public void setIndividualInvestor(RankCode individualInvestor) {
-		this.individualInvestor = individualInvestor;
+	public InvestorRole setIndividualInvestor(RankCode individualInvestor) {
+		this.individualInvestor = Objects.requireNonNull(individualInvestor);
+		return this;
 	}
 
 	public RankCode getCorporateInvestor() {
 		return corporateInvestor;
 	}
 
-	public void setCorporateInvestor(RankCode corporateInvestor) {
-		this.corporateInvestor = corporateInvestor;
+	public InvestorRole setCorporateInvestor(RankCode corporateInvestor) {
+		this.corporateInvestor = Objects.requireNonNull(corporateInvestor);
+		return this;
 	}
 
 	public EligibilityCode getCapacity() {
 		return capacity;
 	}
 
-	public void setCapacity(EligibilityCode capacity) {
-		this.capacity = capacity;
+	public InvestorRole setCapacity(EligibilityCode capacity) {
+		this.capacity = Objects.requireNonNull(capacity);
+		return this;
 	}
 
 	public YesNoIndicator getInvestorProtectionAssociationMembership() {
 		return investorProtectionAssociationMembership;
 	}
 
-	public void setInvestorProtectionAssociationMembership(YesNoIndicator investorProtectionAssociationMembership) {
-		this.investorProtectionAssociationMembership = investorProtectionAssociationMembership;
+	public InvestorRole setInvestorProtectionAssociationMembership(YesNoIndicator investorProtectionAssociationMembership) {
+		this.investorProtectionAssociationMembership = Objects.requireNonNull(investorProtectionAssociationMembership);
+		return this;
 	}
 
 	public InvestorTypeCode getType() {
 		return type;
 	}
 
-	public void setType(InvestorTypeCode type) {
-		this.type = type;
+	public InvestorRole setType(InvestorTypeCode type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 }

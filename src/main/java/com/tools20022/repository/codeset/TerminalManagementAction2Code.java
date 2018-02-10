@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TerminalManagementActionCode;
+import com.tools20022.repository.codeset.TerminalManagementAction2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Types of terminal management action to be performed by a point of
@@ -31,42 +35,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode
- * TerminalManagementActionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction2Code#mmActivate
- * TerminalManagementAction2Code.mmActivate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction2Code#Activate
+ * TerminalManagementAction2Code.Activate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction2Code#mmDeactivate
- * TerminalManagementAction2Code.mmDeactivate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction2Code#Deactivate
+ * TerminalManagementAction2Code.Deactivate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction2Code#mmDelete
- * TerminalManagementAction2Code.mmDelete}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction2Code#Delete
+ * TerminalManagementAction2Code.Delete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction2Code#mmDownload
- * TerminalManagementAction2Code.mmDownload}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction2Code#Download
+ * TerminalManagementAction2Code.Download}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction2Code#mmInstall
- * TerminalManagementAction2Code.mmInstall}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction2Code#Install
+ * TerminalManagementAction2Code.Install}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction2Code#mmRestart
- * TerminalManagementAction2Code.mmRestart}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction2Code#Restart
+ * TerminalManagementAction2Code.Restart}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction2Code#mmUpload
- * TerminalManagementAction2Code.mmUpload}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction2Code#Upload
+ * TerminalManagementAction2Code.Upload}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction2Code#mmUpdate
- * TerminalManagementAction2Code.mmUpdate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction2Code#Update
+ * TerminalManagementAction2Code.Update}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode
+ * TerminalManagementActionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -89,7 +93,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TerminalManagementAction1Code}</li>
  * </ul>
  */
-public class TerminalManagementAction2Code extends TerminalManagementActionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TerminalManagementAction2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -109,16 +114,17 @@ public class TerminalManagementAction2Code extends TerminalManagementActionCode 
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction1Code#mmActivate
-	 * TerminalManagementAction1Code.mmActivate}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction1Code#Activate
+	 * TerminalManagementAction1Code.Activate}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmActivate = new MMCode() {
+	public static final TerminalManagementAction2Code Activate = new TerminalManagementAction2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Activate";
-			previousVersion_lazy = () -> TerminalManagementAction1Code.mmActivate;
-			owner_lazy = () -> TerminalManagementAction2Code.mmObject();
+			previousVersion_lazy = () -> TerminalManagementAction1Code.Activate;
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementAction2Code.mmObject();
+			codeName = TerminalManagementActionCode.Activate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,16 +144,17 @@ public class TerminalManagementAction2Code extends TerminalManagementActionCode 
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction1Code#mmDeactivate
-	 * TerminalManagementAction1Code.mmDeactivate}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction1Code#Deactivate
+	 * TerminalManagementAction1Code.Deactivate}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeactivate = new MMCode() {
+	public static final TerminalManagementAction2Code Deactivate = new TerminalManagementAction2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deactivate";
-			previousVersion_lazy = () -> TerminalManagementAction1Code.mmDeactivate;
-			owner_lazy = () -> TerminalManagementAction2Code.mmObject();
+			previousVersion_lazy = () -> TerminalManagementAction1Code.Deactivate;
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementAction2Code.mmObject();
+			codeName = TerminalManagementActionCode.Deactivate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -167,16 +174,17 @@ public class TerminalManagementAction2Code extends TerminalManagementActionCode 
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction1Code#mmDelete
-	 * TerminalManagementAction1Code.mmDelete}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction1Code#Delete
+	 * TerminalManagementAction1Code.Delete}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDelete = new MMCode() {
+	public static final TerminalManagementAction2Code Delete = new TerminalManagementAction2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delete";
-			previousVersion_lazy = () -> TerminalManagementAction1Code.mmDelete;
-			owner_lazy = () -> TerminalManagementAction2Code.mmObject();
+			previousVersion_lazy = () -> TerminalManagementAction1Code.Delete;
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementAction2Code.mmObject();
+			codeName = TerminalManagementActionCode.Delete.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -196,16 +204,17 @@ public class TerminalManagementAction2Code extends TerminalManagementActionCode 
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction1Code#mmDownload
-	 * TerminalManagementAction1Code.mmDownload}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction1Code#Download
+	 * TerminalManagementAction1Code.Download}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDownload = new MMCode() {
+	public static final TerminalManagementAction2Code Download = new TerminalManagementAction2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Download";
-			previousVersion_lazy = () -> TerminalManagementAction1Code.mmDownload;
-			owner_lazy = () -> TerminalManagementAction2Code.mmObject();
+			previousVersion_lazy = () -> TerminalManagementAction1Code.Download;
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementAction2Code.mmObject();
+			codeName = TerminalManagementActionCode.Download.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -225,16 +234,17 @@ public class TerminalManagementAction2Code extends TerminalManagementActionCode 
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction1Code#mmInstall
-	 * TerminalManagementAction1Code.mmInstall}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction1Code#Install
+	 * TerminalManagementAction1Code.Install}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstall = new MMCode() {
+	public static final TerminalManagementAction2Code Install = new TerminalManagementAction2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Install";
-			previousVersion_lazy = () -> TerminalManagementAction1Code.mmInstall;
-			owner_lazy = () -> TerminalManagementAction2Code.mmObject();
+			previousVersion_lazy = () -> TerminalManagementAction1Code.Install;
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementAction2Code.mmObject();
+			codeName = TerminalManagementActionCode.Install.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -254,16 +264,17 @@ public class TerminalManagementAction2Code extends TerminalManagementActionCode 
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction1Code#mmRestart
-	 * TerminalManagementAction1Code.mmRestart}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction1Code#Restart
+	 * TerminalManagementAction1Code.Restart}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRestart = new MMCode() {
+	public static final TerminalManagementAction2Code Restart = new TerminalManagementAction2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restart";
-			previousVersion_lazy = () -> TerminalManagementAction1Code.mmRestart;
-			owner_lazy = () -> TerminalManagementAction2Code.mmObject();
+			previousVersion_lazy = () -> TerminalManagementAction1Code.Restart;
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementAction2Code.mmObject();
+			codeName = TerminalManagementActionCode.Restart.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -283,16 +294,17 @@ public class TerminalManagementAction2Code extends TerminalManagementActionCode 
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction1Code#mmUpload
-	 * TerminalManagementAction1Code.mmUpload}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction1Code#Upload
+	 * TerminalManagementAction1Code.Upload}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUpload = new MMCode() {
+	public static final TerminalManagementAction2Code Upload = new TerminalManagementAction2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Upload";
-			previousVersion_lazy = () -> TerminalManagementAction1Code.mmUpload;
-			owner_lazy = () -> TerminalManagementAction2Code.mmObject();
+			previousVersion_lazy = () -> TerminalManagementAction1Code.Upload;
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementAction2Code.mmObject();
+			codeName = TerminalManagementActionCode.Upload.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -311,28 +323,67 @@ public class TerminalManagementAction2Code extends TerminalManagementActionCode 
 	 * name} = "Update"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUpdate = new MMCode() {
+	public static final TerminalManagementAction2Code Update = new TerminalManagementAction2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Update";
-			owner_lazy = () -> TerminalManagementAction2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementAction2Code.mmObject();
+			codeName = TerminalManagementActionCode.Update.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TerminalManagementAction2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TerminalManagementAction2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACTV");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementAction2Code";
 				definition = "Types of terminal management action to be performed by a point of interaction.";
 				previousVersion_lazy = () -> TerminalManagementAction1Code.mmObject();
-				code_lazy = () -> Arrays.asList(TerminalManagementAction2Code.mmActivate, TerminalManagementAction2Code.mmDeactivate, TerminalManagementAction2Code.mmDelete, TerminalManagementAction2Code.mmDownload,
-						TerminalManagementAction2Code.mmInstall, TerminalManagementAction2Code.mmRestart, TerminalManagementAction2Code.mmUpload, TerminalManagementAction2Code.mmUpdate);
 				trace_lazy = () -> TerminalManagementActionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementAction2Code.Activate, com.tools20022.repository.codeset.TerminalManagementAction2Code.Deactivate,
+						com.tools20022.repository.codeset.TerminalManagementAction2Code.Delete, com.tools20022.repository.codeset.TerminalManagementAction2Code.Download,
+						com.tools20022.repository.codeset.TerminalManagementAction2Code.Install, com.tools20022.repository.codeset.TerminalManagementAction2Code.Restart,
+						com.tools20022.repository.codeset.TerminalManagementAction2Code.Upload, com.tools20022.repository.codeset.TerminalManagementAction2Code.Update);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Activate.getCodeName().get(), Activate);
+		codesByName.put(Deactivate.getCodeName().get(), Deactivate);
+		codesByName.put(Delete.getCodeName().get(), Delete);
+		codesByName.put(Download.getCodeName().get(), Download);
+		codesByName.put(Install.getCodeName().get(), Install);
+		codesByName.put(Restart.getCodeName().get(), Restart);
+		codesByName.put(Upload.getCodeName().get(), Upload);
+		codesByName.put(Update.getCodeName().get(), Update);
+	}
+
+	public static TerminalManagementAction2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TerminalManagementAction2Code[] values() {
+		TerminalManagementAction2Code[] values = new TerminalManagementAction2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TerminalManagementAction2Code> {
+		@Override
+		public TerminalManagementAction2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TerminalManagementAction2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

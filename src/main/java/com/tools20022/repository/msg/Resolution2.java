@@ -34,9 +34,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.MeetingStatus;
 import com.tools20022.repository.entity.Resolution;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -100,8 +99,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -120,15 +119,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Resolution2", propOrder = {"issuerLabel", "description", "title", "type", "forInformationOnly", "status", "submittedBySecurityHolder", "voteInstructionType", "managementRecommendation", "notifyingPartyRecommendation"})
 public class Resolution2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IssrLabl", required = true)
 	protected Max35Text issuerLabel;
 	/**
-	 * Numbering of the resolution as specified by the issuer or its agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,7 +168,7 @@ public class Resolution2 {
 	public static final MMMessageAttribute mmIssuerLabel = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmIssuerLabel;
-			componentContext_lazy = () -> Resolution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution2.mmObject();
 			isDerived = false;
 			xmlTag = "IssrLabl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,10 +180,11 @@ public class Resolution2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Desc")
 	protected Max1025Text description;
 	/**
-	 * Free text description of the resolution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,7 +223,7 @@ public class Resolution2 {
 	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmDescription;
-			componentContext_lazy = () -> Resolution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution2.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,10 +235,11 @@ public class Resolution2 {
 			simpleType_lazy = () -> Max1025Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Titl")
 	protected Max350Text title;
 	/**
-	 * Abbreviated description of the resolution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -276,7 +278,7 @@ public class Resolution2 {
 	public static final MMMessageAttribute mmTitle = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmTitle;
-			componentContext_lazy = () -> Resolution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution2.mmObject();
 			isDerived = false;
 			xmlTag = "Titl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,10 +290,11 @@ public class Resolution2 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected ResolutionType1Code type;
 	/**
-	 * Indicates whether a resolution is ordinary, extraordinary or special.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -332,7 +335,7 @@ public class Resolution2 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmType;
-			componentContext_lazy = () -> Resolution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -344,10 +347,11 @@ public class Resolution2 {
 			simpleType_lazy = () -> ResolutionType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ForInfOnly", required = true)
 	protected YesNoIndicator forInformationOnly;
 	/**
-	 * Indicates whether the resolution is listed for information or for voting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -390,7 +394,7 @@ public class Resolution2 {
 	public static final MMMessageAttribute mmForInformationOnly = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmForInformationOnly;
-			componentContext_lazy = () -> Resolution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution2.mmObject();
 			isDerived = false;
 			xmlTag = "ForInfOnly";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -402,10 +406,11 @@ public class Resolution2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts", required = true)
 	protected ResolutionStatus1Code status;
 	/**
-	 * Indicates whether the resolution is active or withdrawn.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -445,7 +450,7 @@ public class Resolution2 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatus.mmMeetingResolutionStatus;
-			componentContext_lazy = () -> Resolution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution2.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -457,11 +462,11 @@ public class Resolution2 {
 			simpleType_lazy = () -> ResolutionStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SubmittdBySctyHldr", required = true)
 	protected YesNoIndicator submittedBySecurityHolder;
 	/**
-	 * Indicates whether the resolution has been submitted by the security
-	 * holder.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -504,7 +509,7 @@ public class Resolution2 {
 	public static final MMMessageAttribute mmSubmittedBySecurityHolder = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmSubmittedBySecurityHolder;
-			componentContext_lazy = () -> Resolution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution2.mmObject();
 			isDerived = false;
 			xmlTag = "SubmittdBySctyHldr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -516,11 +521,11 @@ public class Resolution2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "VoteInstrTp")
 	protected List<VoteInstruction2Code> voteInstructionType;
 	/**
-	 * Vote options allowed at the resolution level. When specified, it
-	 * supersedes the vote options given for the meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -557,7 +562,7 @@ public class Resolution2 {
 	 */
 	public static final MMMessageAttribute mmVoteInstructionType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Resolution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution2.mmObject();
 			isDerived = false;
 			xmlTag = "VoteInstrTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -569,11 +574,11 @@ public class Resolution2 {
 			simpleType_lazy = () -> VoteInstruction2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MgmtRcmmndtn")
 	protected VoteInstruction1Code managementRecommendation;
 	/**
-	 * Indicates how the management of the issuing company wishes the security
-	 * holders to vote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -616,7 +621,7 @@ public class Resolution2 {
 	public static final MMMessageAttribute mmManagementRecommendation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmManagementRecommendation;
-			componentContext_lazy = () -> Resolution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution2.mmObject();
 			isDerived = false;
 			xmlTag = "MgmtRcmmndtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -628,11 +633,11 @@ public class Resolution2 {
 			simpleType_lazy = () -> VoteInstruction1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "NtifngPtyRcmmndtn")
 	protected VoteInstruction1Code notifyingPartyRecommendation;
 	/**
-	 * Indicates how the notifying party recommends that the security holders
-	 * vote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -675,7 +680,7 @@ public class Resolution2 {
 	public static final MMMessageAttribute mmNotifyingPartyRecommendation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmNotifyingPartyRecommendation;
-			componentContext_lazy = () -> Resolution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution2.mmObject();
 			isDerived = false;
 			xmlTag = "NtifngPtyRcmmndtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -691,11 +696,13 @@ public class Resolution2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Resolution2.mmIssuerLabel, Resolution2.mmDescription, Resolution2.mmTitle, Resolution2.mmType, Resolution2.mmForInformationOnly, Resolution2.mmStatus,
-						Resolution2.mmSubmittedBySecurityHolder, Resolution2.mmVoteInstructionType, Resolution2.mmManagementRecommendation, Resolution2.mmNotifyingPartyRecommendation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Resolution2.mmIssuerLabel, com.tools20022.repository.msg.Resolution2.mmDescription, com.tools20022.repository.msg.Resolution2.mmTitle,
+						com.tools20022.repository.msg.Resolution2.mmType, com.tools20022.repository.msg.Resolution2.mmForInformationOnly, com.tools20022.repository.msg.Resolution2.mmStatus,
+						com.tools20022.repository.msg.Resolution2.mmSubmittedBySecurityHolder, com.tools20022.repository.msg.Resolution2.mmVoteInstructionType, com.tools20022.repository.msg.Resolution2.mmManagementRecommendation,
+						com.tools20022.repository.msg.Resolution2.mmNotifyingPartyRecommendation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV02.mmResolution, MeetingNotificationV03.mmResolution, MeetingNotificationV04.mmResolution);
 				trace_lazy = () -> Resolution.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Resolution2";
 				definition = "Specifies an item in the agenda of the meeting. Some resolutions are submitted to the vote of the security holders, some are presented for information only.";
@@ -705,93 +712,93 @@ public class Resolution2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IssrLabl", required = true)
 	public Max35Text getIssuerLabel() {
 		return issuerLabel;
 	}
 
-	public void setIssuerLabel(Max35Text issuerLabel) {
-		this.issuerLabel = issuerLabel;
+	public Resolution2 setIssuerLabel(Max35Text issuerLabel) {
+		this.issuerLabel = Objects.requireNonNull(issuerLabel);
+		return this;
 	}
 
-	@XmlElement(name = "Desc")
-	public Max1025Text getDescription() {
-		return description;
+	public Optional<Max1025Text> getDescription() {
+		return description == null ? Optional.empty() : Optional.of(description);
 	}
 
-	public void setDescription(Max1025Text description) {
+	public Resolution2 setDescription(Max1025Text description) {
 		this.description = description;
+		return this;
 	}
 
-	@XmlElement(name = "Titl")
-	public Max350Text getTitle() {
-		return title;
+	public Optional<Max350Text> getTitle() {
+		return title == null ? Optional.empty() : Optional.of(title);
 	}
 
-	public void setTitle(Max350Text title) {
+	public Resolution2 setTitle(Max350Text title) {
 		this.title = title;
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public ResolutionType1Code getType() {
 		return type;
 	}
 
-	public void setType(ResolutionType1Code type) {
-		this.type = type;
+	public Resolution2 setType(ResolutionType1Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "ForInfOnly", required = true)
 	public YesNoIndicator getForInformationOnly() {
 		return forInformationOnly;
 	}
 
-	public void setForInformationOnly(YesNoIndicator forInformationOnly) {
-		this.forInformationOnly = forInformationOnly;
+	public Resolution2 setForInformationOnly(YesNoIndicator forInformationOnly) {
+		this.forInformationOnly = Objects.requireNonNull(forInformationOnly);
+		return this;
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public ResolutionStatus1Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(ResolutionStatus1Code status) {
-		this.status = status;
+	public Resolution2 setStatus(ResolutionStatus1Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "SubmittdBySctyHldr", required = true)
 	public YesNoIndicator getSubmittedBySecurityHolder() {
 		return submittedBySecurityHolder;
 	}
 
-	public void setSubmittedBySecurityHolder(YesNoIndicator submittedBySecurityHolder) {
-		this.submittedBySecurityHolder = submittedBySecurityHolder;
+	public Resolution2 setSubmittedBySecurityHolder(YesNoIndicator submittedBySecurityHolder) {
+		this.submittedBySecurityHolder = Objects.requireNonNull(submittedBySecurityHolder);
+		return this;
 	}
 
-	@XmlElement(name = "VoteInstrTp")
 	public List<VoteInstruction2Code> getVoteInstructionType() {
-		return voteInstructionType;
+		return voteInstructionType == null ? voteInstructionType = new ArrayList<>() : voteInstructionType;
 	}
 
-	public void setVoteInstructionType(List<VoteInstruction2Code> voteInstructionType) {
-		this.voteInstructionType = voteInstructionType;
+	public Resolution2 setVoteInstructionType(List<VoteInstruction2Code> voteInstructionType) {
+		this.voteInstructionType = Objects.requireNonNull(voteInstructionType);
+		return this;
 	}
 
-	@XmlElement(name = "MgmtRcmmndtn")
-	public VoteInstruction1Code getManagementRecommendation() {
-		return managementRecommendation;
+	public Optional<VoteInstruction1Code> getManagementRecommendation() {
+		return managementRecommendation == null ? Optional.empty() : Optional.of(managementRecommendation);
 	}
 
-	public void setManagementRecommendation(VoteInstruction1Code managementRecommendation) {
+	public Resolution2 setManagementRecommendation(VoteInstruction1Code managementRecommendation) {
 		this.managementRecommendation = managementRecommendation;
+		return this;
 	}
 
-	@XmlElement(name = "NtifngPtyRcmmndtn")
-	public VoteInstruction1Code getNotifyingPartyRecommendation() {
-		return notifyingPartyRecommendation;
+	public Optional<VoteInstruction1Code> getNotifyingPartyRecommendation() {
+		return notifyingPartyRecommendation == null ? Optional.empty() : Optional.of(notifyingPartyRecommendation);
 	}
 
-	public void setNotifyingPartyRecommendation(VoteInstruction1Code notifyingPartyRecommendation) {
+	public Resolution2 setNotifyingPartyRecommendation(VoteInstruction1Code notifyingPartyRecommendation) {
 		this.notifyingPartyRecommendation = notifyingPartyRecommendation;
+		return this;
 	}
 }

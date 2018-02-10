@@ -26,9 +26,11 @@ import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GeneratedReason3;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * GeneratedStatus3Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GeneratedStatus5Choice", propOrder = {"noSpecifiedReason", "reason"})
 public class GeneratedStatus5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	protected NoReasonCode noSpecifiedReason;
 	/**
-	 * Indicates that there is no reason available or to report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -136,7 +139,7 @@ public class GeneratedStatus5Choice {
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
-			componentContext_lazy = () -> GeneratedStatus5Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.GeneratedStatus5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,10 +152,11 @@ public class GeneratedStatus5Choice {
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn", required = true)
 	protected List<GeneratedReason3> reason;
 	/**
-	 * Specifies the reason of the generated status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -197,7 +201,7 @@ public class GeneratedStatus5Choice {
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-			componentContext_lazy = () -> GeneratedStatus5Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.GeneratedStatus5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,9 +218,9 @@ public class GeneratedStatus5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GeneratedStatus5Choice.mmNoSpecifiedReason, GeneratedStatus5Choice.mmReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneratedStatus5Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.GeneratedStatus5Choice.mmReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GeneratedStatus5Choice";
 				definition = "Choice of generated status.";
@@ -227,21 +231,21 @@ public class GeneratedStatus5Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}
 
-	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
-		this.noSpecifiedReason = noSpecifiedReason;
+	public GeneratedStatus5Choice setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = Objects.requireNonNull(noSpecifiedReason);
+		return this;
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public List<GeneratedReason3> getReason() {
-		return reason;
+		return reason == null ? reason = new ArrayList<>() : reason;
 	}
 
-	public void setReason(List<GeneratedReason3> reason) {
-		this.reason = reason;
+	public GeneratedStatus5Choice setReason(List<GeneratedReason3> reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 }

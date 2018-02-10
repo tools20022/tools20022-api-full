@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -29,6 +30,8 @@ import com.tools20022.repository.entity.ProceedsDefinition;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies corporate action dates."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionDate56", propOrder = {"paymentDate", "valueDate", "foreignExchangeRateFixingDate", "earliestPaymentDate"})
 public class CorporateActionDate56 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmtDt", required = true)
 	protected DateFormat34Choice paymentDate;
 	/**
-	 * Date on which the movement is due to take place (cash and/or securities).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -102,6 +106,9 @@ public class CorporateActionDate56 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PmtDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::PAYD</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -117,9 +124,10 @@ public class CorporateActionDate56 {
 	public static final MMMessageAssociationEnd mmPaymentDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmMovementDate;
-			componentContext_lazy = () -> CorporateActionDate56.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate56.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::PAYD"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date on which the movement is due to take place (cash and/or securities).";
@@ -129,10 +137,11 @@ public class CorporateActionDate56 {
 			type_lazy = () -> DateFormat34Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ValDt")
 	protected DateFormat39Choice valueDate;
 	/**
-	 * Date/time when calculating economic benefit for a cash amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -151,6 +160,9 @@ public class CorporateActionDate56 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ValDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::VALU</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -165,9 +177,10 @@ public class CorporateActionDate56 {
 	public static final MMMessageAssociationEnd mmValueDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmValueDate;
-			componentContext_lazy = () -> CorporateActionDate56.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate56.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::VALU"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date/time when calculating economic benefit for a cash amount.";
@@ -177,10 +190,11 @@ public class CorporateActionDate56 {
 			type_lazy = () -> DateFormat39Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FXRateFxgDt")
 	protected DateFormat34Choice foreignExchangeRateFixingDate;
 	/**
-	 * Date/time at which a foreign exchange rate will be determined.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -199,6 +213,9 @@ public class CorporateActionDate56 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FXRateFxgDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::FXDT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -213,9 +230,10 @@ public class CorporateActionDate56 {
 	public static final MMMessageAssociationEnd mmForeignExchangeRateFixingDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> FixingCondition.mmFixingDateTime;
-			componentContext_lazy = () -> CorporateActionDate56.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate56.mmObject();
 			isDerived = false;
 			xmlTag = "FXRateFxgDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::FXDT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeRateFixingDate";
 			definition = "Date/time at which a foreign exchange rate will be determined.";
@@ -225,11 +243,11 @@ public class CorporateActionDate56 {
 			type_lazy = () -> DateFormat34Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "EarlstPmtDt")
 	protected DateFormat34Choice earliestPaymentDate;
 	/**
-	 * Date on which a payment can be made, for example, if payment date is a
-	 * non-business day or to indicate the first payment date of an offer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -248,6 +266,9 @@ public class CorporateActionDate56 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EarlstPmtDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::EARL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -263,9 +284,10 @@ public class CorporateActionDate56 {
 	public static final MMMessageAssociationEnd mmEarliestPaymentDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmEarliestPaymentDate;
-			componentContext_lazy = () -> CorporateActionDate56.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate56.mmObject();
 			isDerived = false;
 			xmlTag = "EarlstPmtDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::EARL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPaymentDate";
 			definition = "Date on which a payment can be made, for example, if payment date is a non-business day or to indicate the first payment date of an offer.";
@@ -279,9 +301,10 @@ public class CorporateActionDate56 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionDate56.mmPaymentDate, CorporateActionDate56.mmValueDate, CorporateActionDate56.mmForeignExchangeRateFixingDate, CorporateActionDate56.mmEarliestPaymentDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate56.mmPaymentDate, com.tools20022.repository.msg.CorporateActionDate56.mmValueDate,
+						com.tools20022.repository.msg.CorporateActionDate56.mmForeignExchangeRateFixingDate, com.tools20022.repository.msg.CorporateActionDate56.mmEarliestPaymentDate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate56";
 				definition = "Specifies corporate action dates.";
@@ -290,39 +313,39 @@ public class CorporateActionDate56 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmtDt", required = true)
 	public DateFormat34Choice getPaymentDate() {
 		return paymentDate;
 	}
 
-	public void setPaymentDate(DateFormat34Choice paymentDate) {
-		this.paymentDate = paymentDate;
+	public CorporateActionDate56 setPaymentDate(DateFormat34Choice paymentDate) {
+		this.paymentDate = Objects.requireNonNull(paymentDate);
+		return this;
 	}
 
-	@XmlElement(name = "ValDt")
-	public DateFormat39Choice getValueDate() {
-		return valueDate;
+	public Optional<DateFormat39Choice> getValueDate() {
+		return valueDate == null ? Optional.empty() : Optional.of(valueDate);
 	}
 
-	public void setValueDate(DateFormat39Choice valueDate) {
+	public CorporateActionDate56 setValueDate(DateFormat39Choice valueDate) {
 		this.valueDate = valueDate;
+		return this;
 	}
 
-	@XmlElement(name = "FXRateFxgDt")
-	public DateFormat34Choice getForeignExchangeRateFixingDate() {
-		return foreignExchangeRateFixingDate;
+	public Optional<DateFormat34Choice> getForeignExchangeRateFixingDate() {
+		return foreignExchangeRateFixingDate == null ? Optional.empty() : Optional.of(foreignExchangeRateFixingDate);
 	}
 
-	public void setForeignExchangeRateFixingDate(DateFormat34Choice foreignExchangeRateFixingDate) {
+	public CorporateActionDate56 setForeignExchangeRateFixingDate(DateFormat34Choice foreignExchangeRateFixingDate) {
 		this.foreignExchangeRateFixingDate = foreignExchangeRateFixingDate;
+		return this;
 	}
 
-	@XmlElement(name = "EarlstPmtDt")
-	public DateFormat34Choice getEarliestPaymentDate() {
-		return earliestPaymentDate;
+	public Optional<DateFormat34Choice> getEarliestPaymentDate() {
+		return earliestPaymentDate == null ? Optional.empty() : Optional.of(earliestPaymentDate);
 	}
 
-	public void setEarliestPaymentDate(DateFormat34Choice earliestPaymentDate) {
+	public CorporateActionDate56 setEarliestPaymentDate(DateFormat34Choice earliestPaymentDate) {
 		this.earliestPaymentDate = earliestPaymentDate;
+		return this;
 	}
 }

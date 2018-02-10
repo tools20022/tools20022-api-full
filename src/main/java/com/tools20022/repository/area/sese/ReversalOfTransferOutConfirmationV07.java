@@ -29,9 +29,8 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.References20;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -59,22 +58,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestVersion
- * SecuritiesSettlementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOLatestversion
- * InvestmentFundsISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "RvslOfTrfOutConf"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -96,6 +79,22 @@ import javax.xml.bind.annotation.*;
  * ReversalOfTransferOutConfirmationV07.mmCopyDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOLatestversion
+ * InvestmentFundsISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "RvslOfTrfOutConf"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestVersion
+ * SecuritiesSettlementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.004.001.07}</li>
@@ -115,16 +114,16 @@ import javax.xml.bind.annotation.*;
  * ReversalOfTransferOutConfirmationV06}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReversalOfTransferOutConfirmationV07", propOrder = {"messageIdentification", "references", "reversal", "marketPracticeVersion", "copyDetails"})
 public class ReversalOfTransferOutConfirmationV07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Reference that uniquely identifies a message from a business application
-	 * standpoint.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,12 +171,11 @@ public class ReversalOfTransferOutConfirmationV07 {
 			}
 		}
 	};
+	@XmlElement(name = "Refs")
 	protected List<References20> references;
 	/**
-	 * Reference to the transaction identifier issued by the counterparty.
-	 * Building block may also be used to reference a previous transaction, or
-	 * tie a set of messages together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -223,10 +221,11 @@ public class ReversalOfTransferOutConfirmationV07 {
 			}
 		}
 	};
+	@XmlElement(name = "Rvsl", required = true)
 	protected Reversal8Choice reversal;
 	/**
-	 * Choice between reversal by reference or by reversal details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -273,10 +272,11 @@ public class ReversalOfTransferOutConfirmationV07 {
 			}
 		}
 	};
+	@XmlElement(name = "MktPrctcVrsn")
 	protected MarketPracticeVersion1 marketPracticeVersion;
 	/**
-	 * Identifies the market practice to which the message conforms.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -323,10 +323,11 @@ public class ReversalOfTransferOutConfirmationV07 {
 			}
 		}
 	};
+	@XmlElement(name = "CpyDtls")
 	protected CopyInformation4 copyDetails;
 	/**
-	 * Information provided when the message is a copy of a previous message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -406,52 +407,52 @@ public class ReversalOfTransferOutConfirmationV07 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public ReversalOfTransferOutConfirmationV07 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Refs")
 	public List<References20> getReferences() {
-		return references;
+		return references == null ? references = new ArrayList<>() : references;
 	}
 
-	public void setReferences(List<References20> references) {
-		this.references = references;
+	public ReversalOfTransferOutConfirmationV07 setReferences(List<References20> references) {
+		this.references = Objects.requireNonNull(references);
+		return this;
 	}
 
-	@XmlElement(name = "Rvsl", required = true)
 	public Reversal8Choice getReversal() {
 		return reversal;
 	}
 
-	public void setReversal(Reversal8Choice reversal) {
-		this.reversal = reversal;
+	public ReversalOfTransferOutConfirmationV07 setReversal(Reversal8Choice reversal) {
+		this.reversal = Objects.requireNonNull(reversal);
+		return this;
 	}
 
-	@XmlElement(name = "MktPrctcVrsn")
-	public MarketPracticeVersion1 getMarketPracticeVersion() {
-		return marketPracticeVersion;
+	public Optional<MarketPracticeVersion1> getMarketPracticeVersion() {
+		return marketPracticeVersion == null ? Optional.empty() : Optional.of(marketPracticeVersion);
 	}
 
-	public void setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
+	public ReversalOfTransferOutConfirmationV07 setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
 		this.marketPracticeVersion = marketPracticeVersion;
+		return this;
 	}
 
-	@XmlElement(name = "CpyDtls")
-	public CopyInformation4 getCopyDetails() {
-		return copyDetails;
+	public Optional<CopyInformation4> getCopyDetails() {
+		return copyDetails == null ? Optional.empty() : Optional.of(copyDetails);
 	}
 
-	public void setCopyDetails(CopyInformation4 copyDetails) {
+	public ReversalOfTransferOutConfirmationV07 setCopyDetails(CopyInformation4 copyDetails) {
 		this.copyDetails = copyDetails;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.004.07.07")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.004.001.07")
 	static public class Document {
 		@XmlElement(name = "RvslOfTrfOutConf", required = true)
 		public ReversalOfTransferOutConfirmationV07 messageBody;

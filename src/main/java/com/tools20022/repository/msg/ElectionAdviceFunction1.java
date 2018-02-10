@@ -25,6 +25,8 @@ import com.tools20022.repository.codeset.ElectionType1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintElectionTypeRule#forElectionAdviceFunction1
+ * ConstraintElectionTypeRule.forElectionAdviceFunction1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +89,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ElectionAdviceFunction1", propOrder = {"electionType", "previousAgentCAElectionAdviceIdentification", "agentCAElectionStatusAdviceIdentification", "agentCAElectionAmendmentRequestIdentification"})
 public class ElectionAdviceFunction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ElctnTp", required = true)
 	protected ElectionType1Code electionType;
 	/**
-	 * Type of election advice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +126,7 @@ public class ElectionAdviceFunction1 {
 	 */
 	public static final MMMessageAttribute mmElectionType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ElectionAdviceFunction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ElectionAdviceFunction1.mmObject();
 			isDerived = false;
 			xmlTag = "ElctnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,11 +137,11 @@ public class ElectionAdviceFunction1 {
 			simpleType_lazy = () -> ElectionType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsAgtCAElctnAdvcId")
 	protected DocumentIdentification8 previousAgentCAElectionAdviceIdentification;
 	/**
-	 * Identification of the previous Agent Corporate Action Election Advice
-	 * that is being amended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +171,7 @@ public class ElectionAdviceFunction1 {
 	 */
 	public static final MMMessageAttribute mmPreviousAgentCAElectionAdviceIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ElectionAdviceFunction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ElectionAdviceFunction1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsAgtCAElctnAdvcId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,11 +182,11 @@ public class ElectionAdviceFunction1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification8.mmObject();
 		}
 	};
+	@XmlElement(name = "AgtCAElctnStsAdvcId")
 	protected DocumentIdentification8 agentCAElectionStatusAdviceIdentification;
 	/**
-	 * Identification of the Agent Corporate Action Election Status Advice by
-	 * which the issuer (agent) accepts the election amendment request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -205,7 +216,7 @@ public class ElectionAdviceFunction1 {
 	 */
 	public static final MMMessageAttribute mmAgentCAElectionStatusAdviceIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ElectionAdviceFunction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ElectionAdviceFunction1.mmObject();
 			isDerived = false;
 			xmlTag = "AgtCAElctnStsAdvcId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,11 +227,11 @@ public class ElectionAdviceFunction1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification8.mmObject();
 		}
 	};
+	@XmlElement(name = "AgtCAElctnAmdmntReqId")
 	protected DocumentIdentification8 agentCAElectionAmendmentRequestIdentification;
 	/**
-	 * Identification of the Agent Corporate Action Election Amendment Request
-	 * by which the CSD request the authorisation to amend an election.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -250,7 +261,7 @@ public class ElectionAdviceFunction1 {
 	 */
 	public static final MMMessageAttribute mmAgentCAElectionAmendmentRequestIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ElectionAdviceFunction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ElectionAdviceFunction1.mmObject();
 			isDerived = false;
 			xmlTag = "AgtCAElctnAmdmntReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -265,10 +276,11 @@ public class ElectionAdviceFunction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ElectionAdviceFunction1.mmElectionType, ElectionAdviceFunction1.mmPreviousAgentCAElectionAdviceIdentification, ElectionAdviceFunction1.mmAgentCAElectionStatusAdviceIdentification,
-						ElectionAdviceFunction1.mmAgentCAElectionAmendmentRequestIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ElectionAdviceFunction1.mmElectionType, com.tools20022.repository.msg.ElectionAdviceFunction1.mmPreviousAgentCAElectionAdviceIdentification,
+						com.tools20022.repository.msg.ElectionAdviceFunction1.mmAgentCAElectionStatusAdviceIdentification, com.tools20022.repository.msg.ElectionAdviceFunction1.mmAgentCAElectionAmendmentRequestIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAElectionAdviceV01.mmElectionAdviceTypeAndLinkage);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintElectionTypeRule.forElectionAdviceFunction1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ElectionAdviceFunction1";
 				definition = "Provides information about the type of election advice and linked messages.";
@@ -277,39 +289,39 @@ public class ElectionAdviceFunction1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ElctnTp", required = true)
 	public ElectionType1Code getElectionType() {
 		return electionType;
 	}
 
-	public void setElectionType(ElectionType1Code electionType) {
-		this.electionType = electionType;
+	public ElectionAdviceFunction1 setElectionType(ElectionType1Code electionType) {
+		this.electionType = Objects.requireNonNull(electionType);
+		return this;
 	}
 
-	@XmlElement(name = "PrvsAgtCAElctnAdvcId")
-	public DocumentIdentification8 getPreviousAgentCAElectionAdviceIdentification() {
-		return previousAgentCAElectionAdviceIdentification;
+	public Optional<DocumentIdentification8> getPreviousAgentCAElectionAdviceIdentification() {
+		return previousAgentCAElectionAdviceIdentification == null ? Optional.empty() : Optional.of(previousAgentCAElectionAdviceIdentification);
 	}
 
-	public void setPreviousAgentCAElectionAdviceIdentification(com.tools20022.repository.msg.DocumentIdentification8 previousAgentCAElectionAdviceIdentification) {
+	public ElectionAdviceFunction1 setPreviousAgentCAElectionAdviceIdentification(com.tools20022.repository.msg.DocumentIdentification8 previousAgentCAElectionAdviceIdentification) {
 		this.previousAgentCAElectionAdviceIdentification = previousAgentCAElectionAdviceIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AgtCAElctnStsAdvcId")
-	public DocumentIdentification8 getAgentCAElectionStatusAdviceIdentification() {
-		return agentCAElectionStatusAdviceIdentification;
+	public Optional<DocumentIdentification8> getAgentCAElectionStatusAdviceIdentification() {
+		return agentCAElectionStatusAdviceIdentification == null ? Optional.empty() : Optional.of(agentCAElectionStatusAdviceIdentification);
 	}
 
-	public void setAgentCAElectionStatusAdviceIdentification(com.tools20022.repository.msg.DocumentIdentification8 agentCAElectionStatusAdviceIdentification) {
+	public ElectionAdviceFunction1 setAgentCAElectionStatusAdviceIdentification(com.tools20022.repository.msg.DocumentIdentification8 agentCAElectionStatusAdviceIdentification) {
 		this.agentCAElectionStatusAdviceIdentification = agentCAElectionStatusAdviceIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AgtCAElctnAmdmntReqId")
-	public DocumentIdentification8 getAgentCAElectionAmendmentRequestIdentification() {
-		return agentCAElectionAmendmentRequestIdentification;
+	public Optional<DocumentIdentification8> getAgentCAElectionAmendmentRequestIdentification() {
+		return agentCAElectionAmendmentRequestIdentification == null ? Optional.empty() : Optional.of(agentCAElectionAmendmentRequestIdentification);
 	}
 
-	public void setAgentCAElectionAmendmentRequestIdentification(com.tools20022.repository.msg.DocumentIdentification8 agentCAElectionAmendmentRequestIdentification) {
+	public ElectionAdviceFunction1 setAgentCAElectionAmendmentRequestIdentification(com.tools20022.repository.msg.DocumentIdentification8 agentCAElectionAmendmentRequestIdentification) {
 		this.agentCAElectionAmendmentRequestIdentification = agentCAElectionAmendmentRequestIdentification;
+		return this;
 	}
 }

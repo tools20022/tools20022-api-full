@@ -24,9 +24,11 @@ import com.tools20022.repository.entity.SystemBusinessInformation;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling4;
 import com.tools20022.repository.msg.GeneralBusinessReport4;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,16 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * GeneralBusinessOrError1Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GeneralBusinessOrError3Choice", propOrder = {"operationalError", "businessReport"})
 public class GeneralBusinessOrError3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OprlErr", required = true)
 	protected List<ErrorHandling4> operationalError;
 	/**
-	 * Indicates that an operational error has been issued during the processing
-	 * of the related request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -117,7 +119,7 @@ public class GeneralBusinessOrError3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> GeneralBusinessOrError3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.GeneralBusinessOrError3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,10 +131,11 @@ public class GeneralBusinessOrError3Choice {
 			type_lazy = () -> ErrorHandling4.mmObject();
 		}
 	};
+	@XmlElement(name = "BizRpt", required = true)
 	protected List<GeneralBusinessReport4> businessReport;
 	/**
-	 * Reports either on the business information or on a business error.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -164,7 +167,7 @@ public class GeneralBusinessOrError3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmBusinessReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> GeneralBusinessOrError3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.GeneralBusinessOrError3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,9 +183,9 @@ public class GeneralBusinessOrError3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GeneralBusinessOrError3Choice.mmOperationalError, GeneralBusinessOrError3Choice.mmBusinessReport);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneralBusinessOrError3Choice.mmOperationalError, com.tools20022.repository.choice.GeneralBusinessOrError3Choice.mmBusinessReport);
 				trace_lazy = () -> SystemBusinessInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GeneralBusinessOrError3Choice";
 				definition = "It is used to provide some or all of the members with information related to the processing of the system.";
@@ -192,21 +195,21 @@ public class GeneralBusinessOrError3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling4> getOperationalError() {
-		return operationalError;
+		return operationalError == null ? operationalError = new ArrayList<>() : operationalError;
 	}
 
-	public void setOperationalError(List<ErrorHandling4> operationalError) {
-		this.operationalError = operationalError;
+	public GeneralBusinessOrError3Choice setOperationalError(List<ErrorHandling4> operationalError) {
+		this.operationalError = Objects.requireNonNull(operationalError);
+		return this;
 	}
 
-	@XmlElement(name = "BizRpt", required = true)
 	public List<GeneralBusinessReport4> getBusinessReport() {
-		return businessReport;
+		return businessReport == null ? businessReport = new ArrayList<>() : businessReport;
 	}
 
-	public void setBusinessReport(List<GeneralBusinessReport4> businessReport) {
-		this.businessReport = businessReport;
+	public GeneralBusinessOrError3Choice setBusinessReport(List<GeneralBusinessReport4> businessReport) {
+		this.businessReport = Objects.requireNonNull(businessReport);
+		return this;
 	}
 }

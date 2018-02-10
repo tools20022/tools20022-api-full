@@ -24,9 +24,11 @@ import com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV
 import com.tools20022.repository.entity.SubscriptionOrder;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +69,17 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule#forSubscriptionMultipleOrderInstruction2
+ * ConstraintRelatedPartiesDetailsRule.forSubscriptionMultipleOrderInstruction2}
+ * </li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about a subscription multiple order."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SubscriptionMultipleOrderInstruction2", propOrder = {"multipleOrderDetails", "relatedPartyDetails", "extension"})
 public class SubscriptionMultipleOrderInstruction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MltplOrdrDtls", required = true)
 	protected SubscriptionMultipleOrder3 multipleOrderDetails;
 	/**
-	 * Common information related to all the orders to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -121,7 +133,7 @@ public class SubscriptionMultipleOrderInstruction2 {
 	public static final MMMessageAssociationEnd mmMultipleOrderDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SubscriptionOrder.mmObject();
-			componentContext_lazy = () -> SubscriptionMultipleOrderInstruction2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "MltplOrdrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,10 +145,11 @@ public class SubscriptionMultipleOrderInstruction2 {
 			type_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleOrder3.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdPtyDtls")
 	protected List<com.tools20022.repository.msg.Intermediary8> relatedPartyDetails;
 	/**
-	 * Information about parties related to the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -168,7 +181,7 @@ public class SubscriptionMultipleOrderInstruction2 {
 	public static final MMMessageAssociationEnd mmRelatedPartyDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
-			componentContext_lazy = () -> SubscriptionMultipleOrderInstruction2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPtyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,11 +193,11 @@ public class SubscriptionMultipleOrderInstruction2 {
 			type_lazy = () -> com.tools20022.repository.msg.Intermediary8.mmObject();
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -211,7 +224,7 @@ public class SubscriptionMultipleOrderInstruction2 {
 	 */
 	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SubscriptionMultipleOrderInstruction2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,10 +239,12 @@ public class SubscriptionMultipleOrderInstruction2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SubscriptionMultipleOrderInstruction2.mmMultipleOrderDetails, SubscriptionMultipleOrderInstruction2.mmRelatedPartyDetails, SubscriptionMultipleOrderInstruction2.mmExtension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2.mmMultipleOrderDetails,
+						com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2.mmRelatedPartyDetails, com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2.mmExtension);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SubscriptionOrderCancellationRequestV03.mmCancellationByOrderDetails);
 				trace_lazy = () -> SubscriptionOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule.forSubscriptionMultipleOrderInstruction2);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionMultipleOrderInstruction2";
 				definition = "Information about a subscription multiple order.";
@@ -238,30 +253,30 @@ public class SubscriptionMultipleOrderInstruction2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MltplOrdrDtls", required = true)
 	public SubscriptionMultipleOrder3 getMultipleOrderDetails() {
 		return multipleOrderDetails;
 	}
 
-	public void setMultipleOrderDetails(com.tools20022.repository.msg.SubscriptionMultipleOrder3 multipleOrderDetails) {
-		this.multipleOrderDetails = multipleOrderDetails;
+	public SubscriptionMultipleOrderInstruction2 setMultipleOrderDetails(com.tools20022.repository.msg.SubscriptionMultipleOrder3 multipleOrderDetails) {
+		this.multipleOrderDetails = Objects.requireNonNull(multipleOrderDetails);
+		return this;
 	}
 
-	@XmlElement(name = "RltdPtyDtls")
 	public List<Intermediary8> getRelatedPartyDetails() {
-		return relatedPartyDetails;
+		return relatedPartyDetails == null ? relatedPartyDetails = new ArrayList<>() : relatedPartyDetails;
 	}
 
-	public void setRelatedPartyDetails(List<com.tools20022.repository.msg.Intermediary8> relatedPartyDetails) {
-		this.relatedPartyDetails = relatedPartyDetails;
+	public SubscriptionMultipleOrderInstruction2 setRelatedPartyDetails(List<com.tools20022.repository.msg.Intermediary8> relatedPartyDetails) {
+		this.relatedPartyDetails = Objects.requireNonNull(relatedPartyDetails);
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
-		this.extension = extension;
+	public SubscriptionMultipleOrderInstruction2 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 }

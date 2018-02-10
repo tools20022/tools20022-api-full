@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.area.seev;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
@@ -27,9 +28,8 @@ import com.tools20022.repository.choice.PartyIdentification10Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -60,20 +60,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
- * SecuritiesEventsArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CorpActnInstrCxlReqStsAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -119,9 +105,44 @@ import javax.xml.bind.annotation.*;
  * CorporateActionInstructionCancellationRequestStatusAdviceV01.mmExtension}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CorpActnInstrCxlReqStsAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
+ * SecuritiesEventsArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.041.001.01}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionCancellationRequestStatusAdviceV01
+ * ConstraintAdditionalInformationRule.
+ * forCorporateActionInstructionCancellationRequestStatusAdviceV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forCorporateActionInstructionCancellationRequestStatusAdviceV01
+ * ConstraintCoexistenceCharacterSetXRule.
+ * forCorporateActionInstructionCancellationRequestStatusAdviceV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forCorporateActionInstructionCancellationRequestStatusAdviceV01
+ * ConstraintCoexistenceIdentificationRule.
+ * forCorporateActionInstructionCancellationRequestStatusAdviceV01}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = ISO15022Synonym: MT 567, Seq A :23G:CAST and Seq A2
+ * :25D::CPRC</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -142,18 +163,17 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionInstructionCancellationRequestStatusAdviceV01", propOrder = {"identification", "instructionCancellationRequestIdentification", "otherDocumentIdentification", "corporateActionGeneralInformation",
 		"instructionCancellationRequestStatus", "corporateActionInstruction", "additionalInformation", "messageOriginator", "messageRecipient", "extension"})
 public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected DocumentIdentification11 identification;
 	/**
-	 * Information that unambiguously identifies a
-	 * CorporateActionInstructionCancellationRequestStatusAdvice message as know
-	 * by the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,6 +183,9 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	 * DocumentIdentification11}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Id"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::SEME</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -179,6 +202,7 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::SEME"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Information that unambiguously identifies a CorporateActionInstructionCancellationRequestStatusAdvice message as know by the account servicer.";
@@ -195,10 +219,11 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "InstrCxlReqId")
 	protected DocumentIdentification9 instructionCancellationRequestIdentification;
 	/**
-	 * Identification of a related instruction cancellation request document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -239,10 +264,11 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrDocId")
 	protected List<DocumentIdentification14> otherDocumentIdentification;
 	/**
-	 * Identification of other documents as well as the document number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -282,10 +308,11 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	protected CorporateActionGeneralInformation9 corporateActionGeneralInformation;
 	/**
-	 * General information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -325,11 +352,11 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "InstrCxlReqSts", required = true)
 	protected List<InstructionCancellationRequestStatus1Choice> instructionCancellationRequestStatus;
 	/**
-	 * Provides information about the processing status of the instruction
-	 * cancellation request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -370,10 +397,11 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnInstr")
 	protected CorporateActionOption9 corporateActionInstruction;
 	/**
-	 * Information about the corporate action option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -413,10 +441,11 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected CorporateActionNarrative10 additionalInformation;
 	/**
-	 * Provides additional information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -426,6 +455,9 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	 * CorporateActionNarrative10}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlInf"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E:ADTX</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -440,6 +472,7 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AddtlInf";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E:ADTX"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information.";
@@ -456,10 +489,11 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "MsgOrgtr")
 	protected PartyIdentification10Choice messageOriginator;
 	/**
-	 * Party that originated the message, if other than the sender.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -469,6 +503,9 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	 * PartyIdentification10Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MsgOrgtr"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a::MEOR</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -484,6 +521,7 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmMessageOriginator = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgOrgtr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::MEOR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
@@ -500,11 +538,11 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "MsgRcpt")
 	protected PartyIdentification10Choice messageRecipient;
 	/**
-	 * Party that is the final destination of the message, if other than the
-	 * receiver.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -514,6 +552,9 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	 * PartyIdentification10Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MsgRcpt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a::MERE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -530,6 +571,7 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	public static final MMMessageBuildingBlock mmMessageRecipient = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgRcpt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::MERE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageRecipient";
 			definition = "Party that is the final destination of the message, if other than the receiver.";
@@ -546,11 +588,11 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<Extension2> extension;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -594,6 +636,10 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionCancellationRequestStatusAdviceV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionCancellationRequestStatusAdviceV01,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionCancellationRequestStatusAdviceV01);
+				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "MT 567, Seq A :23G:CAST and Seq A2 :25D::CPRC"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstructionCancellationRequestStatusAdviceV01";
 				definition = "Scope\r\nAn account servicer sends the CorporateActionInstructionCancellationRequestStatusAdvice message to an account owner or its designated agent to report status of a previously received CorporateActionInstructionCancellationRequest message sent by the account owner.\r\nThis will include the acknowledgement/rejection of a request to cancel an outstanding instruction.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate).\nISO 15022 - 20022 COEXISTENCE\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
@@ -630,97 +676,97 @@ public class CorporateActionInstructionCancellationRequestStatusAdviceV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification11 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(DocumentIdentification11 identification) {
-		this.identification = identification;
+	public CorporateActionInstructionCancellationRequestStatusAdviceV01 setIdentification(DocumentIdentification11 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "InstrCxlReqId")
-	public DocumentIdentification9 getInstructionCancellationRequestIdentification() {
-		return instructionCancellationRequestIdentification;
+	public Optional<DocumentIdentification9> getInstructionCancellationRequestIdentification() {
+		return instructionCancellationRequestIdentification == null ? Optional.empty() : Optional.of(instructionCancellationRequestIdentification);
 	}
 
-	public void setInstructionCancellationRequestIdentification(DocumentIdentification9 instructionCancellationRequestIdentification) {
+	public CorporateActionInstructionCancellationRequestStatusAdviceV01 setInstructionCancellationRequestIdentification(DocumentIdentification9 instructionCancellationRequestIdentification) {
 		this.instructionCancellationRequestIdentification = instructionCancellationRequestIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "OthrDocId")
 	public List<DocumentIdentification14> getOtherDocumentIdentification() {
-		return otherDocumentIdentification;
+		return otherDocumentIdentification == null ? otherDocumentIdentification = new ArrayList<>() : otherDocumentIdentification;
 	}
 
-	public void setOtherDocumentIdentification(List<DocumentIdentification14> otherDocumentIdentification) {
-		this.otherDocumentIdentification = otherDocumentIdentification;
+	public CorporateActionInstructionCancellationRequestStatusAdviceV01 setOtherDocumentIdentification(List<DocumentIdentification14> otherDocumentIdentification) {
+		this.otherDocumentIdentification = Objects.requireNonNull(otherDocumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionGeneralInformation9 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
 
-	public void setCorporateActionGeneralInformation(CorporateActionGeneralInformation9 corporateActionGeneralInformation) {
-		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	public CorporateActionInstructionCancellationRequestStatusAdviceV01 setCorporateActionGeneralInformation(CorporateActionGeneralInformation9 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = Objects.requireNonNull(corporateActionGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "InstrCxlReqSts", required = true)
 	public List<InstructionCancellationRequestStatus1Choice> getInstructionCancellationRequestStatus() {
-		return instructionCancellationRequestStatus;
+		return instructionCancellationRequestStatus == null ? instructionCancellationRequestStatus = new ArrayList<>() : instructionCancellationRequestStatus;
 	}
 
-	public void setInstructionCancellationRequestStatus(List<InstructionCancellationRequestStatus1Choice> instructionCancellationRequestStatus) {
-		this.instructionCancellationRequestStatus = instructionCancellationRequestStatus;
+	public CorporateActionInstructionCancellationRequestStatusAdviceV01 setInstructionCancellationRequestStatus(List<InstructionCancellationRequestStatus1Choice> instructionCancellationRequestStatus) {
+		this.instructionCancellationRequestStatus = Objects.requireNonNull(instructionCancellationRequestStatus);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnInstr")
-	public CorporateActionOption9 getCorporateActionInstruction() {
-		return corporateActionInstruction;
+	public Optional<CorporateActionOption9> getCorporateActionInstruction() {
+		return corporateActionInstruction == null ? Optional.empty() : Optional.of(corporateActionInstruction);
 	}
 
-	public void setCorporateActionInstruction(CorporateActionOption9 corporateActionInstruction) {
+	public CorporateActionInstructionCancellationRequestStatusAdviceV01 setCorporateActionInstruction(CorporateActionOption9 corporateActionInstruction) {
 		this.corporateActionInstruction = corporateActionInstruction;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public CorporateActionNarrative10 getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<CorporateActionNarrative10> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(CorporateActionNarrative10 additionalInformation) {
+	public CorporateActionInstructionCancellationRequestStatusAdviceV01 setAdditionalInformation(CorporateActionNarrative10 additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 
-	@XmlElement(name = "MsgOrgtr")
-	public PartyIdentification10Choice getMessageOriginator() {
-		return messageOriginator;
+	public Optional<PartyIdentification10Choice> getMessageOriginator() {
+		return messageOriginator == null ? Optional.empty() : Optional.of(messageOriginator);
 	}
 
-	public void setMessageOriginator(PartyIdentification10Choice messageOriginator) {
+	public CorporateActionInstructionCancellationRequestStatusAdviceV01 setMessageOriginator(PartyIdentification10Choice messageOriginator) {
 		this.messageOriginator = messageOriginator;
+		return this;
 	}
 
-	@XmlElement(name = "MsgRcpt")
-	public PartyIdentification10Choice getMessageRecipient() {
-		return messageRecipient;
+	public Optional<PartyIdentification10Choice> getMessageRecipient() {
+		return messageRecipient == null ? Optional.empty() : Optional.of(messageRecipient);
 	}
 
-	public void setMessageRecipient(PartyIdentification10Choice messageRecipient) {
+	public CorporateActionInstructionCancellationRequestStatusAdviceV01 setMessageRecipient(PartyIdentification10Choice messageRecipient) {
 		this.messageRecipient = messageRecipient;
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension2> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<Extension2> extension) {
-		this.extension = extension;
+	public CorporateActionInstructionCancellationRequestStatusAdviceV01 setExtension(List<Extension2> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.041.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.041.001.01")
 	static public class Document {
 		@XmlElement(name = "CorpActnInstrCxlReqStsAdvc", required = true)
 		public CorporateActionInstructionCancellationRequestStatusAdviceV01 messageBody;

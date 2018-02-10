@@ -24,6 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SystemPartyModification1Choice", propOrder = {"systemParty", "partyIdentification", "partyName", "technicalAddress", "partyAddress", "systemRestriction", "marketSpecificAttribute"})
 public class SystemPartyModification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SysPty", required = true)
 	protected SystemParty2 systemParty;
 	/**
-	 * Specifies the party reference data, as assigned by the system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +117,7 @@ public class SystemPartyModification1Choice {
 	 */
 	public static final MMMessageAttribute mmSystemParty = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemPartyModification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SystemPartyModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SysPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,11 +128,11 @@ public class SystemPartyModification1Choice {
 			complexType_lazy = () -> SystemParty2.mmObject();
 		}
 	};
+	@XmlElement(name = "PtyId", required = true)
 	protected SystemPartyIdentification2 partyIdentification;
 	/**
-	 * Unique identification to unambiguously identify the party within the
-	 * system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +162,7 @@ public class SystemPartyModification1Choice {
 	 */
 	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemPartyModification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SystemPartyModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,11 +173,11 @@ public class SystemPartyModification1Choice {
 			complexType_lazy = () -> SystemPartyIdentification2.mmObject();
 		}
 	};
+	@XmlElement(name = "PtyNm", required = true)
 	protected PartyName2 partyName;
 	/**
-	 * Specifies the name by which a party is known and which is usually used to
-	 * identify that party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,7 +206,7 @@ public class SystemPartyModification1Choice {
 	 */
 	public static final MMMessageAttribute mmPartyName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemPartyModification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SystemPartyModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PtyNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,11 +217,11 @@ public class SystemPartyModification1Choice {
 			complexType_lazy = () -> PartyName2.mmObject();
 		}
 	};
+	@XmlElement(name = "TechAdr", required = true)
 	protected TechnicalIdentification1Choice technicalAddress;
 	/**
-	 * Unique technical address to unambiguously identify a party for receiving
-	 * messages from the executing system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,7 +251,7 @@ public class SystemPartyModification1Choice {
 	 */
 	public static final MMMessageAttribute mmTechnicalAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemPartyModification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SystemPartyModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TechAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -260,11 +262,11 @@ public class SystemPartyModification1Choice {
 			complexType_lazy = () -> com.tools20022.repository.choice.TechnicalIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PtyAdr", required = true)
 	protected PostalAddress9 partyAddress;
 	/**
-	 * Information that locates and identifies a specific address, as defined by
-	 * postal services.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -293,7 +295,7 @@ public class SystemPartyModification1Choice {
 	 */
 	public static final MMMessageAttribute mmPartyAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemPartyModification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SystemPartyModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PtyAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -304,12 +306,11 @@ public class SystemPartyModification1Choice {
 			complexType_lazy = () -> PostalAddress9.mmObject();
 		}
 	};
+	@XmlElement(name = "SysRstrctn", required = true)
 	protected SystemRestriction1 systemRestriction;
 	/**
-	 * Defines the specific processing characteristics for a party to ensure
-	 * configurability of specific requirements, as prescribed by national legal
-	 * and regulatory requirements and practices.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -339,7 +340,7 @@ public class SystemPartyModification1Choice {
 	 */
 	public static final MMMessageAttribute mmSystemRestriction = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemPartyModification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SystemPartyModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SysRstrctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -350,11 +351,11 @@ public class SystemPartyModification1Choice {
 			complexType_lazy = () -> SystemRestriction1.mmObject();
 		}
 	};
+	@XmlElement(name = "MktSpcfcAttr", required = true)
 	protected MarketSpecificAttribute1 marketSpecificAttribute;
 	/**
-	 * Additional attributes defined by a central security depositary for a
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -384,7 +385,7 @@ public class SystemPartyModification1Choice {
 	 */
 	public static final MMMessageAttribute mmMarketSpecificAttribute = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemPartyModification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SystemPartyModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MktSpcfcAttr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -399,9 +400,11 @@ public class SystemPartyModification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SystemPartyModification1Choice.mmSystemParty, SystemPartyModification1Choice.mmPartyIdentification, SystemPartyModification1Choice.mmPartyName,
-						SystemPartyModification1Choice.mmTechnicalAddress, SystemPartyModification1Choice.mmPartyAddress, SystemPartyModification1Choice.mmSystemRestriction, SystemPartyModification1Choice.mmMarketSpecificAttribute);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemPartyModification1Choice.mmSystemParty, com.tools20022.repository.choice.SystemPartyModification1Choice.mmPartyIdentification,
+						com.tools20022.repository.choice.SystemPartyModification1Choice.mmPartyName, com.tools20022.repository.choice.SystemPartyModification1Choice.mmTechnicalAddress,
+						com.tools20022.repository.choice.SystemPartyModification1Choice.mmPartyAddress, com.tools20022.repository.choice.SystemPartyModification1Choice.mmSystemRestriction,
+						com.tools20022.repository.choice.SystemPartyModification1Choice.mmMarketSpecificAttribute);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemPartyModification1Choice";
 				definition = "Identifies which information are involved by a modification request for party reference data.";
@@ -410,66 +413,66 @@ public class SystemPartyModification1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SysPty", required = true)
 	public SystemParty2 getSystemParty() {
 		return systemParty;
 	}
 
-	public void setSystemParty(SystemParty2 systemParty) {
-		this.systemParty = systemParty;
+	public SystemPartyModification1Choice setSystemParty(SystemParty2 systemParty) {
+		this.systemParty = Objects.requireNonNull(systemParty);
+		return this;
 	}
 
-	@XmlElement(name = "PtyId", required = true)
 	public SystemPartyIdentification2 getPartyIdentification() {
 		return partyIdentification;
 	}
 
-	public void setPartyIdentification(SystemPartyIdentification2 partyIdentification) {
-		this.partyIdentification = partyIdentification;
+	public SystemPartyModification1Choice setPartyIdentification(SystemPartyIdentification2 partyIdentification) {
+		this.partyIdentification = Objects.requireNonNull(partyIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PtyNm", required = true)
 	public PartyName2 getPartyName() {
 		return partyName;
 	}
 
-	public void setPartyName(PartyName2 partyName) {
-		this.partyName = partyName;
+	public SystemPartyModification1Choice setPartyName(PartyName2 partyName) {
+		this.partyName = Objects.requireNonNull(partyName);
+		return this;
 	}
 
-	@XmlElement(name = "TechAdr", required = true)
 	public TechnicalIdentification1Choice getTechnicalAddress() {
 		return technicalAddress;
 	}
 
-	public void setTechnicalAddress(com.tools20022.repository.choice.TechnicalIdentification1Choice technicalAddress) {
-		this.technicalAddress = technicalAddress;
+	public SystemPartyModification1Choice setTechnicalAddress(com.tools20022.repository.choice.TechnicalIdentification1Choice technicalAddress) {
+		this.technicalAddress = Objects.requireNonNull(technicalAddress);
+		return this;
 	}
 
-	@XmlElement(name = "PtyAdr", required = true)
 	public PostalAddress9 getPartyAddress() {
 		return partyAddress;
 	}
 
-	public void setPartyAddress(PostalAddress9 partyAddress) {
-		this.partyAddress = partyAddress;
+	public SystemPartyModification1Choice setPartyAddress(PostalAddress9 partyAddress) {
+		this.partyAddress = Objects.requireNonNull(partyAddress);
+		return this;
 	}
 
-	@XmlElement(name = "SysRstrctn", required = true)
 	public SystemRestriction1 getSystemRestriction() {
 		return systemRestriction;
 	}
 
-	public void setSystemRestriction(SystemRestriction1 systemRestriction) {
-		this.systemRestriction = systemRestriction;
+	public SystemPartyModification1Choice setSystemRestriction(SystemRestriction1 systemRestriction) {
+		this.systemRestriction = Objects.requireNonNull(systemRestriction);
+		return this;
 	}
 
-	@XmlElement(name = "MktSpcfcAttr", required = true)
 	public MarketSpecificAttribute1 getMarketSpecificAttribute() {
 		return marketSpecificAttribute;
 	}
 
-	public void setMarketSpecificAttribute(MarketSpecificAttribute1 marketSpecificAttribute) {
-		this.marketSpecificAttribute = marketSpecificAttribute;
+	public SystemPartyModification1Choice setMarketSpecificAttribute(MarketSpecificAttribute1 marketSpecificAttribute) {
+		this.marketSpecificAttribute = Objects.requireNonNull(marketSpecificAttribute);
+		return this;
 	}
 }

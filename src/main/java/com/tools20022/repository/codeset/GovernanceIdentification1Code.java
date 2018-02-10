@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.GovernanceIdentificationCode;
+import com.tools20022.repository.codeset.GovernanceIdentification1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the identification of the rules and laws governing the undertaking.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.GovernanceIdentificationCode
- * GovernanceIdentificationCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GovernanceIdentification1Code#mmInternationalStandbyPractices
- * GovernanceIdentification1Code.mmInternationalStandbyPractices}</li>
+ * {@linkplain com.tools20022.repository.codeset.GovernanceIdentification1Code#InternationalStandbyPractices
+ * GovernanceIdentification1Code.InternationalStandbyPractices}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GovernanceIdentification1Code#mmNone
- * GovernanceIdentification1Code.mmNone}</li>
+ * {@linkplain com.tools20022.repository.codeset.GovernanceIdentification1Code#None
+ * GovernanceIdentification1Code.None}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GovernanceIdentification1Code#mmUniformCustomsAndPractice
- * GovernanceIdentification1Code.mmUniformCustomsAndPractice}</li>
+ * {@linkplain com.tools20022.repository.codeset.GovernanceIdentification1Code#UniformCustomsAndPractice
+ * GovernanceIdentification1Code.UniformCustomsAndPractice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.GovernanceIdentification1Code#mmUniformRulesForDemandGuarantees
- * GovernanceIdentification1Code.mmUniformRulesForDemandGuarantees}</li>
+ * {@linkplain com.tools20022.repository.codeset.GovernanceIdentification1Code#UniformRulesForDemandGuarantees
+ * GovernanceIdentification1Code.UniformRulesForDemandGuarantees}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.GovernanceIdentificationCode
+ * GovernanceIdentificationCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -72,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class GovernanceIdentification1Code extends GovernanceIdentificationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class GovernanceIdentification1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,11 +96,12 @@ public class GovernanceIdentification1Code extends GovernanceIdentificationCode 
 	 * name} = "InternationalStandbyPractices"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInternationalStandbyPractices = new MMCode() {
+	public static final GovernanceIdentification1Code InternationalStandbyPractices = new GovernanceIdentification1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternationalStandbyPractices";
-			owner_lazy = () -> GovernanceIdentification1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.GovernanceIdentification1Code.mmObject();
+			codeName = GovernanceIdentificationCode.InternationalStandbyPractices.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -114,11 +120,12 @@ public class GovernanceIdentification1Code extends GovernanceIdentificationCode 
 	 * name} = "None"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNone = new MMCode() {
+	public static final GovernanceIdentification1Code None = new GovernanceIdentification1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
-			owner_lazy = () -> GovernanceIdentification1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.GovernanceIdentification1Code.mmObject();
+			codeName = GovernanceIdentificationCode.None.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -137,11 +144,12 @@ public class GovernanceIdentification1Code extends GovernanceIdentificationCode 
 	 * name} = "UniformCustomsAndPractice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUniformCustomsAndPractice = new MMCode() {
+	public static final GovernanceIdentification1Code UniformCustomsAndPractice = new GovernanceIdentification1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniformCustomsAndPractice";
-			owner_lazy = () -> GovernanceIdentification1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.GovernanceIdentification1Code.mmObject();
+			codeName = GovernanceIdentificationCode.UniformCustomsAndPractice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -160,27 +168,60 @@ public class GovernanceIdentification1Code extends GovernanceIdentificationCode 
 	 * name} = "UniformRulesForDemandGuarantees"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUniformRulesForDemandGuarantees = new MMCode() {
+	public static final GovernanceIdentification1Code UniformRulesForDemandGuarantees = new GovernanceIdentification1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniformRulesForDemandGuarantees";
-			owner_lazy = () -> GovernanceIdentification1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.GovernanceIdentification1Code.mmObject();
+			codeName = GovernanceIdentificationCode.UniformRulesForDemandGuarantees.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, GovernanceIdentification1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected GovernanceIdentification1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ISPR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GovernanceIdentification1Code";
 				definition = "Specifies the identification of the rules and laws governing the undertaking.";
-				code_lazy = () -> Arrays.asList(GovernanceIdentification1Code.mmInternationalStandbyPractices, GovernanceIdentification1Code.mmNone, GovernanceIdentification1Code.mmUniformCustomsAndPractice,
-						GovernanceIdentification1Code.mmUniformRulesForDemandGuarantees);
 				trace_lazy = () -> GovernanceIdentificationCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GovernanceIdentification1Code.InternationalStandbyPractices, com.tools20022.repository.codeset.GovernanceIdentification1Code.None,
+						com.tools20022.repository.codeset.GovernanceIdentification1Code.UniformCustomsAndPractice, com.tools20022.repository.codeset.GovernanceIdentification1Code.UniformRulesForDemandGuarantees);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(InternationalStandbyPractices.getCodeName().get(), InternationalStandbyPractices);
+		codesByName.put(None.getCodeName().get(), None);
+		codesByName.put(UniformCustomsAndPractice.getCodeName().get(), UniformCustomsAndPractice);
+		codesByName.put(UniformRulesForDemandGuarantees.getCodeName().get(), UniformRulesForDemandGuarantees);
+	}
+
+	public static GovernanceIdentification1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static GovernanceIdentification1Code[] values() {
+		GovernanceIdentification1Code[] values = new GovernanceIdentification1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, GovernanceIdentification1Code> {
+		@Override
+		public GovernanceIdentification1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(GovernanceIdentification1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

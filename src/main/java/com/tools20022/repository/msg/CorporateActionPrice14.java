@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,9 +27,8 @@ import com.tools20022.repository.choice.PriceFormat18Choice;
 import com.tools20022.repository.entity.CorporateActionPrice;
 import com.tools20022.repository.entity.SecuritiesTax;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGenericCashPricePerProductGuideline#forCorporateActionPrice14
+ * ConstraintGenericCashPricePerProductGuideline.forCorporateActionPrice14}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,16 +89,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies prices related to a corporate action option."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionPrice14", propOrder = {"cashInLieuOfSharePrice", "exercisePrice", "genericCashPriceReceivedPerProduct", "overSubscriptionDepositPrice", "genericCashPricePaidPerProduct", "taxableIncomePerDividendShare"})
 public class CorporateActionPrice14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CshInLieuOfShrPric")
 	protected PriceFormat15Choice cashInLieuOfSharePrice;
 	/**
-	 * Cash disbursement in lieu of equities; usually in lieu of fractional
-	 * quantity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,6 +117,9 @@ public class CorporateActionPrice14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CshInLieuOfShrPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::CINL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -124,9 +135,10 @@ public class CorporateActionPrice14 {
 	public static final MMMessageAssociationEnd mmCashInLieuOfSharePrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmCashInLieuOfSharePrice;
-			componentContext_lazy = () -> CorporateActionPrice14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice14.mmObject();
 			isDerived = false;
 			xmlTag = "CshInLieuOfShrPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::CINL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfSharePrice";
 			definition = "Cash disbursement in lieu of equities; usually in lieu of fractional quantity.";
@@ -136,14 +148,11 @@ public class CorporateActionPrice14 {
 			type_lazy = () -> PriceFormat15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ExrcPric")
 	protected PriceFormat16Choice exercisePrice;
 	/**
-	 * 1. Price at which security will be purchased/sold if warrant is
-	 * exercised, either as an actual amount or a percentage. 2. Price at which
-	 * a bond is converted to underlying security either as an actual amount or
-	 * a percentage. 3. Strike price of an option, represented either as an
-	 * actual amount, a percentage or a number of points above an index.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -162,6 +171,9 @@ public class CorporateActionPrice14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ExrcPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::EXER</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -177,9 +189,10 @@ public class CorporateActionPrice14 {
 	public static final MMMessageAssociationEnd mmExercisePrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmCorporateActionExercisePrice;
-			componentContext_lazy = () -> CorporateActionPrice14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice14.mmObject();
 			isDerived = false;
 			xmlTag = "ExrcPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::EXER"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExercisePrice";
 			definition = "1. Price at which security will be purchased/sold if warrant is exercised, either as an actual amount or a percentage.\n2. Price at which a bond is converted to underlying security either as an actual amount or a percentage.\n3. Strike price of an option, represented either as an actual amount, a percentage or a number of points above an index.";
@@ -189,11 +202,11 @@ public class CorporateActionPrice14 {
 			type_lazy = () -> PriceFormat16Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "GncCshPricRcvdPerPdct")
 	protected List<PriceFormat18Choice> genericCashPriceReceivedPerProduct;
 	/**
-	 * Generic cash price received per product by the underlying security holder
-	 * either as a percentage or an amount, for example, redemption price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -212,6 +225,9 @@ public class CorporateActionPrice14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "GncCshPricRcvdPerPdct"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::OFFR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -227,9 +243,10 @@ public class CorporateActionPrice14 {
 	public static final MMMessageAssociationEnd mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
-			componentContext_lazy = () -> CorporateActionPrice14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice14.mmObject();
 			isDerived = false;
 			xmlTag = "GncCshPricRcvdPerPdct";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::OFFR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPriceReceivedPerProduct";
 			definition = "Generic cash price received per product by the underlying security holder either as a percentage or an amount, for example, redemption price.";
@@ -238,11 +255,11 @@ public class CorporateActionPrice14 {
 			type_lazy = () -> PriceFormat18Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "OverSbcptDpstPric")
 	protected PriceFormat15Choice overSubscriptionDepositPrice;
 	/**
-	 * Amount of money required per over-subscribed equity as defined by the
-	 * issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -261,6 +278,9 @@ public class CorporateActionPrice14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OverSbcptDpstPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::OSUB</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -276,9 +296,10 @@ public class CorporateActionPrice14 {
 	public static final MMMessageAssociationEnd mmOverSubscriptionDepositPrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmOverSubscriptionDepositPrice;
-			componentContext_lazy = () -> CorporateActionPrice14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice14.mmObject();
 			isDerived = false;
 			xmlTag = "OverSbcptDpstPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::OSUB"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverSubscriptionDepositPrice";
 			definition = "Amount of money required per over-subscribed equity as defined by the issuer.";
@@ -288,11 +309,11 @@ public class CorporateActionPrice14 {
 			type_lazy = () -> PriceFormat15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "GncCshPricPdPerPdct")
 	protected PriceFormat15Choice genericCashPricePaidPerProduct;
 	/**
-	 * Generic cash price paid per product by the underlying security holder
-	 * either as a percentage or an amount, for example, reinvestment price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -311,6 +332,9 @@ public class CorporateActionPrice14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "GncCshPricPdPerPdct"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::PRPP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -326,9 +350,10 @@ public class CorporateActionPrice14 {
 	public static final MMMessageAssociationEnd mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPricePaidPerProduct;
-			componentContext_lazy = () -> CorporateActionPrice14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice14.mmObject();
 			isDerived = false;
 			xmlTag = "GncCshPricPdPerPdct";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::PRPP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPricePaidPerProduct";
 			definition = "Generic cash price paid per product by the underlying security holder either as a percentage or an amount, for example, reinvestment price.";
@@ -338,12 +363,11 @@ public class CorporateActionPrice14 {
 			type_lazy = () -> PriceFormat15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxblIncmPerDvddShr")
 	protected AmountPrice5 taxableIncomePerDividendShare;
 	/**
-	 * Amount included in the dividend/NAV that is identified as gains directly
-	 * or indirectly derived from interest payments within the scope of the EU
-	 * Savings directive.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -362,6 +386,9 @@ public class CorporateActionPrice14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TaxblIncmPerDvddShr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::TDMT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -377,9 +404,10 @@ public class CorporateActionPrice14 {
 	public static final MMMessageAssociationEnd mmTaxableIncomePerDividendShare = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerDividendShare;
-			componentContext_lazy = () -> CorporateActionPrice14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice14.mmObject();
 			isDerived = false;
 			xmlTag = "TaxblIncmPerDvddShr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::TDMT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableIncomePerDividendShare";
 			definition = "Amount included in the dividend/NAV that is identified as gains directly or indirectly derived from interest payments within the scope of the EU Savings directive.";
@@ -393,10 +421,12 @@ public class CorporateActionPrice14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionPrice14.mmCashInLieuOfSharePrice, CorporateActionPrice14.mmExercisePrice, CorporateActionPrice14.mmGenericCashPriceReceivedPerProduct,
-						CorporateActionPrice14.mmOverSubscriptionDepositPrice, CorporateActionPrice14.mmGenericCashPricePaidPerProduct, CorporateActionPrice14.mmTaxableIncomePerDividendShare);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice14.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice14.mmExercisePrice,
+						com.tools20022.repository.msg.CorporateActionPrice14.mmGenericCashPriceReceivedPerProduct, com.tools20022.repository.msg.CorporateActionPrice14.mmOverSubscriptionDepositPrice,
+						com.tools20022.repository.msg.CorporateActionPrice14.mmGenericCashPricePaidPerProduct, com.tools20022.repository.msg.CorporateActionPrice14.mmTaxableIncomePerDividendShare);
 				trace_lazy = () -> CorporateActionPrice.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGenericCashPricePerProductGuideline.forCorporateActionPrice14);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice14";
 				definition = "Specifies prices related to a corporate action option.";
@@ -405,57 +435,57 @@ public class CorporateActionPrice14 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CshInLieuOfShrPric")
-	public PriceFormat15Choice getCashInLieuOfSharePrice() {
-		return cashInLieuOfSharePrice;
+	public Optional<PriceFormat15Choice> getCashInLieuOfSharePrice() {
+		return cashInLieuOfSharePrice == null ? Optional.empty() : Optional.of(cashInLieuOfSharePrice);
 	}
 
-	public void setCashInLieuOfSharePrice(PriceFormat15Choice cashInLieuOfSharePrice) {
+	public CorporateActionPrice14 setCashInLieuOfSharePrice(PriceFormat15Choice cashInLieuOfSharePrice) {
 		this.cashInLieuOfSharePrice = cashInLieuOfSharePrice;
+		return this;
 	}
 
-	@XmlElement(name = "ExrcPric")
-	public PriceFormat16Choice getExercisePrice() {
-		return exercisePrice;
+	public Optional<PriceFormat16Choice> getExercisePrice() {
+		return exercisePrice == null ? Optional.empty() : Optional.of(exercisePrice);
 	}
 
-	public void setExercisePrice(PriceFormat16Choice exercisePrice) {
+	public CorporateActionPrice14 setExercisePrice(PriceFormat16Choice exercisePrice) {
 		this.exercisePrice = exercisePrice;
+		return this;
 	}
 
-	@XmlElement(name = "GncCshPricRcvdPerPdct")
 	public List<PriceFormat18Choice> getGenericCashPriceReceivedPerProduct() {
-		return genericCashPriceReceivedPerProduct;
+		return genericCashPriceReceivedPerProduct == null ? genericCashPriceReceivedPerProduct = new ArrayList<>() : genericCashPriceReceivedPerProduct;
 	}
 
-	public void setGenericCashPriceReceivedPerProduct(List<PriceFormat18Choice> genericCashPriceReceivedPerProduct) {
-		this.genericCashPriceReceivedPerProduct = genericCashPriceReceivedPerProduct;
+	public CorporateActionPrice14 setGenericCashPriceReceivedPerProduct(List<PriceFormat18Choice> genericCashPriceReceivedPerProduct) {
+		this.genericCashPriceReceivedPerProduct = Objects.requireNonNull(genericCashPriceReceivedPerProduct);
+		return this;
 	}
 
-	@XmlElement(name = "OverSbcptDpstPric")
-	public PriceFormat15Choice getOverSubscriptionDepositPrice() {
-		return overSubscriptionDepositPrice;
+	public Optional<PriceFormat15Choice> getOverSubscriptionDepositPrice() {
+		return overSubscriptionDepositPrice == null ? Optional.empty() : Optional.of(overSubscriptionDepositPrice);
 	}
 
-	public void setOverSubscriptionDepositPrice(PriceFormat15Choice overSubscriptionDepositPrice) {
+	public CorporateActionPrice14 setOverSubscriptionDepositPrice(PriceFormat15Choice overSubscriptionDepositPrice) {
 		this.overSubscriptionDepositPrice = overSubscriptionDepositPrice;
+		return this;
 	}
 
-	@XmlElement(name = "GncCshPricPdPerPdct")
-	public PriceFormat15Choice getGenericCashPricePaidPerProduct() {
-		return genericCashPricePaidPerProduct;
+	public Optional<PriceFormat15Choice> getGenericCashPricePaidPerProduct() {
+		return genericCashPricePaidPerProduct == null ? Optional.empty() : Optional.of(genericCashPricePaidPerProduct);
 	}
 
-	public void setGenericCashPricePaidPerProduct(PriceFormat15Choice genericCashPricePaidPerProduct) {
+	public CorporateActionPrice14 setGenericCashPricePaidPerProduct(PriceFormat15Choice genericCashPricePaidPerProduct) {
 		this.genericCashPricePaidPerProduct = genericCashPricePaidPerProduct;
+		return this;
 	}
 
-	@XmlElement(name = "TaxblIncmPerDvddShr")
-	public AmountPrice5 getTaxableIncomePerDividendShare() {
-		return taxableIncomePerDividendShare;
+	public Optional<AmountPrice5> getTaxableIncomePerDividendShare() {
+		return taxableIncomePerDividendShare == null ? Optional.empty() : Optional.of(taxableIncomePerDividendShare);
 	}
 
-	public void setTaxableIncomePerDividendShare(com.tools20022.repository.msg.AmountPrice5 taxableIncomePerDividendShare) {
+	public CorporateActionPrice14 setTaxableIncomePerDividendShare(com.tools20022.repository.msg.AmountPrice5 taxableIncomePerDividendShare) {
 		this.taxableIncomePerDividendShare = taxableIncomePerDividendShare;
+		return this;
 	}
 }

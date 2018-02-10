@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
@@ -29,6 +30,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule#forPriceFormatSD2Choice
+ * ConstraintCoexistenceQuantityRule.forPriceFormatSD2Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule#forPriceFormatSD2Choice
+ * ConstraintCoexistenceAmountRule.forPriceFormatSD2Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -75,15 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * PriceFormatSD1Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PriceFormatSD2Choice", propOrder = {"notSpecifiedPrice", "amountPricePerFinancialInstrumentQuantity"})
 public class PriceFormatSD2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NotSpcfdPric", required = true)
 	protected PriceValueType10Code notSpecifiedPrice;
 	/**
-	 * Value of the price not specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,6 +112,9 @@ public class PriceFormatSD2Choice {
 	 * PriceFormatSD2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NotSpcfdPric"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90E:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -116,9 +133,10 @@ public class PriceFormatSD2Choice {
 	 */
 	public static final MMMessageAttribute mmNotSpecifiedPrice = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PriceFormatSD2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormatSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90E:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedPrice";
 			definition = "Value of the price not specified.";
@@ -128,11 +146,11 @@ public class PriceFormatSD2Choice {
 			simpleType_lazy = () -> PriceValueType10Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtPricPerFinInstrmQty", required = true)
 	protected AmountPricePerFinancialInstrumentQuantity4 amountPricePerFinancialInstrumentQuantity;
 	/**
-	 * Price expressed as a ratio: amount price per financial instrument
-	 * quantity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -146,6 +164,9 @@ public class PriceFormatSD2Choice {
 	 * PriceFormatSD2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AmtPricPerFinInstrmQty"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90F:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -166,9 +187,10 @@ public class PriceFormatSD2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PriceFormatSD2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormatSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtPricPerFinInstrmQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90F:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPricePerFinancialInstrumentQuantity";
 			definition = "Price expressed as a ratio: amount price per financial instrument quantity.";
@@ -183,8 +205,10 @@ public class PriceFormatSD2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PriceFormatSD2Choice.mmNotSpecifiedPrice, PriceFormatSD2Choice.mmAmountPricePerFinancialInstrumentQuantity);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormatSD2Choice.mmNotSpecifiedPrice, com.tools20022.repository.choice.PriceFormatSD2Choice.mmAmountPricePerFinancialInstrumentQuantity);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule.forPriceFormatSD2Choice,
+						com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forPriceFormatSD2Choice);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -201,21 +225,21 @@ public class PriceFormatSD2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NotSpcfdPric", required = true)
 	public PriceValueType10Code getNotSpecifiedPrice() {
 		return notSpecifiedPrice;
 	}
 
-	public void setNotSpecifiedPrice(PriceValueType10Code notSpecifiedPrice) {
-		this.notSpecifiedPrice = notSpecifiedPrice;
+	public PriceFormatSD2Choice setNotSpecifiedPrice(PriceValueType10Code notSpecifiedPrice) {
+		this.notSpecifiedPrice = Objects.requireNonNull(notSpecifiedPrice);
+		return this;
 	}
 
-	@XmlElement(name = "AmtPricPerFinInstrmQty", required = true)
 	public AmountPricePerFinancialInstrumentQuantity4 getAmountPricePerFinancialInstrumentQuantity() {
 		return amountPricePerFinancialInstrumentQuantity;
 	}
 
-	public void setAmountPricePerFinancialInstrumentQuantity(AmountPricePerFinancialInstrumentQuantity4 amountPricePerFinancialInstrumentQuantity) {
-		this.amountPricePerFinancialInstrumentQuantity = amountPricePerFinancialInstrumentQuantity;
+	public PriceFormatSD2Choice setAmountPricePerFinancialInstrumentQuantity(AmountPricePerFinancialInstrumentQuantity4 amountPricePerFinancialInstrumentQuantity) {
+		this.amountPricePerFinancialInstrumentQuantity = Objects.requireNonNull(amountPricePerFinancialInstrumentQuantity);
+		return this;
 	}
 }

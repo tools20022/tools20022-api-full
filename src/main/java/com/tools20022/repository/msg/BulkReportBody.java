@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -47,8 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BulkReportBody", propOrder = {"reportHeader", "reportData"})
 public class BulkReportBody {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptHdr")
 	protected ReportHeader1 reportHeader;
 	/**
-	 * General properties of the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -94,7 +97,7 @@ public class BulkReportBody {
 	 */
 	public static final MMMessageAssociationEnd mmReportHeader = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BulkReportBody.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BulkReportBody.mmObject();
 			isDerived = false;
 			xmlTag = "RptHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -106,11 +109,11 @@ public class BulkReportBody {
 			type_lazy = () -> com.tools20022.repository.msg.ReportHeader1.mmObject();
 		}
 	};
+	@XmlElement(name = "RptData", required = true)
 	protected ProprietaryReportData reportData;
 	/**
-	 * Full report data or reporting data of a single tranche of the full
-	 * report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -137,7 +140,7 @@ public class BulkReportBody {
 	 */
 	public static final MMMessageAssociationEnd mmReportData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BulkReportBody.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BulkReportBody.mmObject();
 			isDerived = false;
 			xmlTag = "RptData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,8 +156,8 @@ public class BulkReportBody {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BulkReportBody.mmReportHeader, BulkReportBody.mmReportData);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BulkReportBody.mmReportHeader, com.tools20022.repository.msg.BulkReportBody.mmReportData);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BulkReportBody";
 				definition = "Contains general properties of the report and the reporting data (either one tranche or the full report).";
@@ -163,21 +166,21 @@ public class BulkReportBody {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptHdr")
-	public ReportHeader1 getReportHeader() {
-		return reportHeader;
+	public Optional<ReportHeader1> getReportHeader() {
+		return reportHeader == null ? Optional.empty() : Optional.of(reportHeader);
 	}
 
-	public void setReportHeader(com.tools20022.repository.msg.ReportHeader1 reportHeader) {
+	public BulkReportBody setReportHeader(com.tools20022.repository.msg.ReportHeader1 reportHeader) {
 		this.reportHeader = reportHeader;
+		return this;
 	}
 
-	@XmlElement(name = "RptData", required = true)
 	public ProprietaryReportData getReportData() {
 		return reportData;
 	}
 
-	public void setReportData(com.tools20022.repository.msg.ProprietaryReportData reportData) {
-		this.reportData = reportData;
+	public BulkReportBody setReportData(com.tools20022.repository.msg.ProprietaryReportData reportData) {
+		this.reportData = Objects.requireNonNull(reportData);
+		return this;
 	}
 }

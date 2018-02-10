@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.NetworkTypeCode;
+import com.tools20022.repository.codeset.NetworkType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of proxy.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.NetworkType2Code#Sock5
+ * NetworkType2Code.Sock5}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NetworkType2Code#Sock4
+ * NetworkType2Code.Sock4}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NetworkType2Code#HTTP
+ * NetworkType2Code.HTTP}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.NetworkTypeCode
  * NetworkTypeCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.NetworkType2Code#mmSock5
- * NetworkType2Code.mmSock5}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.NetworkType2Code#mmSock4
- * NetworkType2Code.mmSock4}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.NetworkType2Code#mmHTTP
- * NetworkType2Code.mmHTTP}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of proxy."</li>
  * </ul>
  */
-public class NetworkType2Code extends NetworkTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class NetworkType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class NetworkType2Code extends NetworkTypeCode {
 	 * name} = "Sock5"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSock5 = new MMCode() {
+	public static final NetworkType2Code Sock5 = new NetworkType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sock5";
-			owner_lazy = () -> NetworkType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NetworkType2Code.mmObject();
+			codeName = NetworkTypeCode.Sock5.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,11 +106,12 @@ public class NetworkType2Code extends NetworkTypeCode {
 	 * name} = "Sock4"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSock4 = new MMCode() {
+	public static final NetworkType2Code Sock4 = new NetworkType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sock4";
-			owner_lazy = () -> NetworkType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NetworkType2Code.mmObject();
+			codeName = NetworkTypeCode.Sock4.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -123,25 +130,57 @@ public class NetworkType2Code extends NetworkTypeCode {
 	 * name} = "HTTP"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHTTP = new MMCode() {
+	public static final NetworkType2Code HTTP = new NetworkType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HTTP";
-			owner_lazy = () -> NetworkType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NetworkType2Code.mmObject();
+			codeName = NetworkTypeCode.HTTP.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, NetworkType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected NetworkType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetworkType2Code";
 				definition = "Type of proxy.";
-				code_lazy = () -> Arrays.asList(NetworkType2Code.mmSock5, NetworkType2Code.mmSock4, NetworkType2Code.mmHTTP);
 				trace_lazy = () -> NetworkTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NetworkType2Code.Sock5, com.tools20022.repository.codeset.NetworkType2Code.Sock4, com.tools20022.repository.codeset.NetworkType2Code.HTTP);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Sock5.getCodeName().get(), Sock5);
+		codesByName.put(Sock4.getCodeName().get(), Sock4);
+		codesByName.put(HTTP.getCodeName().get(), HTTP);
+	}
+
+	public static NetworkType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static NetworkType2Code[] values() {
+		NetworkType2Code[] values = new NetworkType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, NetworkType2Code> {
+		@Override
+		public NetworkType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(NetworkType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -29,6 +29,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +70,24 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forTransactionIdentifications20
+ * ConstraintNoAccountOwnerTransactionIdentificationRule.
+ * forTransactionIdentifications20}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forTransactionIdentifications20
+ * ConstraintCoexistenceIdentificationRule.forTransactionIdentifications20}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountOwnerTransactionIdentificationComplexRule#forTransactionIdentifications20
+ * ConstraintAccountOwnerTransactionIdentificationComplexRule.
+ * forTransactionIdentifications20}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -85,17 +103,17 @@ import javax.xml.bind.annotation.XmlType;
  * TransactionIdentifications18}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionIdentifications20", propOrder = {"accountOwnerTransactionIdentification", "accountServicerTransactionIdentification", "marketInfrastructureTransactionIdentification", "processorTransactionIdentification",
 		"otherIdentification"})
 public class TransactionIdentifications20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctOwnrTxId", required = true)
 	protected RestrictedFINXMax16Text accountOwnerTransactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as known by the account
-	 * owner (or the instructing party managing the account).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,7 +149,7 @@ public class TransactionIdentifications20 {
 	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
-			componentContext_lazy = () -> TransactionIdentifications20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionIdentifications20.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,11 +160,11 @@ public class TransactionIdentifications20 {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcrTxId")
 	protected RestrictedFINXMax16Text accountServicerTransactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as known by the account
-	 * servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -182,7 +200,7 @@ public class TransactionIdentifications20 {
 	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
-			componentContext_lazy = () -> TransactionIdentifications20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionIdentifications20.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -193,11 +211,11 @@ public class TransactionIdentifications20 {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MktInfrstrctrTxId")
 	protected RestrictedFINXMax16Text marketInfrastructureTransactionIdentification;
 	/**
-	 * Identification of a transaction assigned by a market infrastructure other
-	 * than a central securities depository, for example, Target2-Securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,7 +252,7 @@ public class TransactionIdentifications20 {
 	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification;
-			componentContext_lazy = () -> TransactionIdentifications20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionIdentifications20.mmObject();
 			isDerived = false;
 			xmlTag = "MktInfrstrctrTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,12 +263,11 @@ public class TransactionIdentifications20 {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcrTxId")
 	protected RestrictedFINXMax16Text processorTransactionIdentification;
 	/**
-	 * Identification of the transaction assigned by the processor of the
-	 * instruction other than the account owner the account servicer and the
-	 * market infrastructure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -286,7 +303,7 @@ public class TransactionIdentifications20 {
 	public static final MMMessageAttribute mmProcessorTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmProcessorTransactionIdentification;
-			componentContext_lazy = () -> TransactionIdentifications20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionIdentifications20.mmObject();
 			isDerived = false;
 			xmlTag = "PrcrTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -297,11 +314,11 @@ public class TransactionIdentifications20 {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrId")
 	protected RestrictedFINXMax16Text otherIdentification;
 	/**
-	 * Reference to a transaction that cannot be identified using a standard
-	 * reference element present in the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -331,7 +348,7 @@ public class TransactionIdentifications20 {
 	 */
 	public static final MMMessageAttribute mmOtherIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionIdentifications20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionIdentifications20.mmObject();
 			isDerived = false;
 			xmlTag = "OthrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -346,10 +363,14 @@ public class TransactionIdentifications20 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionIdentifications20.mmAccountOwnerTransactionIdentification, TransactionIdentifications20.mmAccountServicerTransactionIdentification,
-						TransactionIdentifications20.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications20.mmProcessorTransactionIdentification, TransactionIdentifications20.mmOtherIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionIdentifications20.mmAccountOwnerTransactionIdentification,
+						com.tools20022.repository.msg.TransactionIdentifications20.mmAccountServicerTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications20.mmMarketInfrastructureTransactionIdentification,
+						com.tools20022.repository.msg.TransactionIdentifications20.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications20.mmOtherIdentification);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionIdentifications20,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransactionIdentifications20,
+						com.tools20022.repository.constraints.ConstraintAccountOwnerTransactionIdentificationComplexRule.forTransactionIdentifications20);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -366,48 +387,48 @@ public class TransactionIdentifications20 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctOwnrTxId", required = true)
 	public RestrictedFINXMax16Text getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
 
-	public void setAccountOwnerTransactionIdentification(RestrictedFINXMax16Text accountOwnerTransactionIdentification) {
-		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
+	public TransactionIdentifications20 setAccountOwnerTransactionIdentification(RestrictedFINXMax16Text accountOwnerTransactionIdentification) {
+		this.accountOwnerTransactionIdentification = Objects.requireNonNull(accountOwnerTransactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcrTxId")
-	public RestrictedFINXMax16Text getAccountServicerTransactionIdentification() {
-		return accountServicerTransactionIdentification;
+	public Optional<RestrictedFINXMax16Text> getAccountServicerTransactionIdentification() {
+		return accountServicerTransactionIdentification == null ? Optional.empty() : Optional.of(accountServicerTransactionIdentification);
 	}
 
-	public void setAccountServicerTransactionIdentification(RestrictedFINXMax16Text accountServicerTransactionIdentification) {
+	public TransactionIdentifications20 setAccountServicerTransactionIdentification(RestrictedFINXMax16Text accountServicerTransactionIdentification) {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "MktInfrstrctrTxId")
-	public RestrictedFINXMax16Text getMarketInfrastructureTransactionIdentification() {
-		return marketInfrastructureTransactionIdentification;
+	public Optional<RestrictedFINXMax16Text> getMarketInfrastructureTransactionIdentification() {
+		return marketInfrastructureTransactionIdentification == null ? Optional.empty() : Optional.of(marketInfrastructureTransactionIdentification);
 	}
 
-	public void setMarketInfrastructureTransactionIdentification(RestrictedFINXMax16Text marketInfrastructureTransactionIdentification) {
+	public TransactionIdentifications20 setMarketInfrastructureTransactionIdentification(RestrictedFINXMax16Text marketInfrastructureTransactionIdentification) {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PrcrTxId")
-	public RestrictedFINXMax16Text getProcessorTransactionIdentification() {
-		return processorTransactionIdentification;
+	public Optional<RestrictedFINXMax16Text> getProcessorTransactionIdentification() {
+		return processorTransactionIdentification == null ? Optional.empty() : Optional.of(processorTransactionIdentification);
 	}
 
-	public void setProcessorTransactionIdentification(RestrictedFINXMax16Text processorTransactionIdentification) {
+	public TransactionIdentifications20 setProcessorTransactionIdentification(RestrictedFINXMax16Text processorTransactionIdentification) {
 		this.processorTransactionIdentification = processorTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "OthrId")
-	public RestrictedFINXMax16Text getOtherIdentification() {
-		return otherIdentification;
+	public Optional<RestrictedFINXMax16Text> getOtherIdentification() {
+		return otherIdentification == null ? Optional.empty() : Optional.of(otherIdentification);
 	}
 
-	public void setOtherIdentification(RestrictedFINXMax16Text otherIdentification) {
+	public TransactionIdentifications20 setOtherIdentification(RestrictedFINXMax16Text otherIdentification) {
 		this.otherIdentification = otherIdentification;
+		return this;
 	}
 }

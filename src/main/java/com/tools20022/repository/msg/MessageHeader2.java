@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,17 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MessageHeader2", propOrder = {"messageIdentification", "creationDateTime", "requestType"})
 public class MessageHeader2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected Max35Text messageIdentification;
 	/**
-	 * Point to point reference, as assigned by the sender,, to unambiguously
-	 * identify the message. Usage: The sender has to make sure that
-	 * MessageIdentification is unique for a pre-agreed period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +107,7 @@ public class MessageHeader2 {
 	 */
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MessageHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +118,11 @@ public class MessageHeader2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm")
 	protected ISODateTime creationDateTime;
 	/**
-	 * Date and time at which the message was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +148,7 @@ public class MessageHeader2 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MessageHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,10 +159,11 @@ public class MessageHeader2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqTp")
 	protected RequestType2Choice requestType;
 	/**
-	 * Specific actions to be executed through the request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,7 +190,7 @@ public class MessageHeader2 {
 	 */
 	public static final MMMessageAttribute mmRequestType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MessageHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "ReqTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,8 +205,9 @@ public class MessageHeader2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MessageHeader2.mmMessageIdentification, MessageHeader2.mmCreationDateTime, MessageHeader2.mmRequestType);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageHeader2.mmMessageIdentification, com.tools20022.repository.msg.MessageHeader2.mmCreationDateTime,
+						com.tools20022.repository.msg.MessageHeader2.mmRequestType);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageHeader2";
 				definition = "Set of characteristics, such as the identification or the creation date and time, specific to the message.";
@@ -212,30 +216,30 @@ public class MessageHeader2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(Max35Text messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public MessageHeader2 setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm")
-	public ISODateTime getCreationDateTime() {
-		return creationDateTime;
+	public Optional<ISODateTime> getCreationDateTime() {
+		return creationDateTime == null ? Optional.empty() : Optional.of(creationDateTime);
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
+	public MessageHeader2 setCreationDateTime(ISODateTime creationDateTime) {
 		this.creationDateTime = creationDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "ReqTp")
-	public RequestType2Choice getRequestType() {
-		return requestType;
+	public Optional<RequestType2Choice> getRequestType() {
+		return requestType == null ? Optional.empty() : Optional.of(requestType);
 	}
 
-	public void setRequestType(RequestType2Choice requestType) {
+	public MessageHeader2 setRequestType(RequestType2Choice requestType) {
 		this.requestType = requestType;
+		return this;
 	}
 }

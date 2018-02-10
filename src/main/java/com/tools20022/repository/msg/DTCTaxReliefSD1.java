@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information about tax relief categories."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DTCTaxReliefSD1", propOrder = {"categoryIdentification", "categoryDescription"})
 public class DTCTaxReliefSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CtgyId", required = true)
 	protected Exact3NumericText categoryIdentification;
 	/**
-	 * DTC System assigned identification for tax relief category.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -86,6 +89,9 @@ public class DTCTaxReliefSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtgyId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Tax Relief Category Identification</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -99,9 +105,10 @@ public class DTCTaxReliefSD1 {
 	 */
 	public static final MMMessageAttribute mmCategoryIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DTCTaxReliefSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DTCTaxReliefSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CtgyId";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Tax Relief Category Identification"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CategoryIdentification";
 			definition = "DTC System assigned identification for tax relief category.";
@@ -110,10 +117,11 @@ public class DTCTaxReliefSD1 {
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "CtgyDesc", required = true)
 	protected Max35Text categoryDescription;
 	/**
-	 * Describes tax relief category.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,6 +136,9 @@ public class DTCTaxReliefSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtgyDesc"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Tax Relief Category Description</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -140,9 +151,10 @@ public class DTCTaxReliefSD1 {
 	 */
 	public static final MMMessageAttribute mmCategoryDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DTCTaxReliefSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DTCTaxReliefSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CtgyDesc";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Tax Relief Category Description"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CategoryDescription";
 			definition = "Describes tax relief category.";
@@ -155,8 +167,8 @@ public class DTCTaxReliefSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DTCTaxReliefSD1.mmCategoryIdentification, DTCTaxReliefSD1.mmCategoryDescription);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DTCTaxReliefSD1.mmCategoryIdentification, com.tools20022.repository.msg.DTCTaxReliefSD1.mmCategoryDescription);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DTCTaxReliefSD1";
 				definition = "Provides information about tax relief categories.";
@@ -165,21 +177,21 @@ public class DTCTaxReliefSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CtgyId", required = true)
 	public Exact3NumericText getCategoryIdentification() {
 		return categoryIdentification;
 	}
 
-	public void setCategoryIdentification(Exact3NumericText categoryIdentification) {
-		this.categoryIdentification = categoryIdentification;
+	public DTCTaxReliefSD1 setCategoryIdentification(Exact3NumericText categoryIdentification) {
+		this.categoryIdentification = Objects.requireNonNull(categoryIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CtgyDesc", required = true)
 	public Max35Text getCategoryDescription() {
 		return categoryDescription;
 	}
 
-	public void setCategoryDescription(Max35Text categoryDescription) {
-		this.categoryDescription = categoryDescription;
+	public DTCTaxReliefSD1 setCategoryDescription(Max35Text categoryDescription) {
+		this.categoryDescription = Objects.requireNonNull(categoryDescription);
+		return this;
 	}
 }

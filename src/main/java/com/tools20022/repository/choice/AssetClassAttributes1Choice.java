@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.DerivativeForeignExchange2;
 import com.tools20022.repository.msg.DerivativeInterest2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Asset class specific details of a derivative."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AssetClassAttributes1Choice", propOrder = {"interest", "foreignExchange", "both"})
 public class AssetClassAttributes1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Intrst", required = true)
 	protected DerivativeInterest2 interest;
 	/**
-	 * Asset class is a non-financial instrument of type interest rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,7 +113,7 @@ public class AssetClassAttributes1Choice {
 	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmInterest;
-			componentContext_lazy = () -> AssetClassAttributes1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassAttributes1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Intrst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +125,11 @@ public class AssetClassAttributes1Choice {
 			type_lazy = () -> DerivativeInterest2.mmObject();
 		}
 	};
+	@XmlElement(name = "FX", required = true)
 	protected DerivativeForeignExchange2 foreignExchange;
 	/**
-	 * Asset class is a non-financial instrument of type foreign exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -160,7 +163,7 @@ public class AssetClassAttributes1Choice {
 	public static final MMMessageAssociationEnd mmForeignExchange = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmExchangeRate;
-			componentContext_lazy = () -> AssetClassAttributes1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassAttributes1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FX";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,11 +175,11 @@ public class AssetClassAttributes1Choice {
 			type_lazy = () -> DerivativeForeignExchange2.mmObject();
 		}
 	};
+	@XmlElement(name = "Both", required = true)
 	protected AssetClassAttributes1 both;
 	/**
-	 * Asset class is composed of both an interest derivate and a foreign
-	 * exchange derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -209,7 +212,7 @@ public class AssetClassAttributes1Choice {
 	public static final MMMessageAssociationEnd mmBoth = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Derivative.mmObject();
-			componentContext_lazy = () -> AssetClassAttributes1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassAttributes1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Both";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,9 +228,10 @@ public class AssetClassAttributes1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AssetClassAttributes1Choice.mmInterest, AssetClassAttributes1Choice.mmForeignExchange, AssetClassAttributes1Choice.mmBoth);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassAttributes1Choice.mmInterest, com.tools20022.repository.choice.AssetClassAttributes1Choice.mmForeignExchange,
+						com.tools20022.repository.choice.AssetClassAttributes1Choice.mmBoth);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassAttributes1Choice";
 				definition = "Asset class specific details of a derivative.";
@@ -236,30 +240,30 @@ public class AssetClassAttributes1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Intrst", required = true)
 	public DerivativeInterest2 getInterest() {
 		return interest;
 	}
 
-	public void setInterest(DerivativeInterest2 interest) {
-		this.interest = interest;
+	public AssetClassAttributes1Choice setInterest(DerivativeInterest2 interest) {
+		this.interest = Objects.requireNonNull(interest);
+		return this;
 	}
 
-	@XmlElement(name = "FX", required = true)
 	public DerivativeForeignExchange2 getForeignExchange() {
 		return foreignExchange;
 	}
 
-	public void setForeignExchange(DerivativeForeignExchange2 foreignExchange) {
-		this.foreignExchange = foreignExchange;
+	public AssetClassAttributes1Choice setForeignExchange(DerivativeForeignExchange2 foreignExchange) {
+		this.foreignExchange = Objects.requireNonNull(foreignExchange);
+		return this;
 	}
 
-	@XmlElement(name = "Both", required = true)
 	public AssetClassAttributes1 getBoth() {
 		return both;
 	}
 
-	public void setBoth(AssetClassAttributes1 both) {
-		this.both = both;
+	public AssetClassAttributes1Choice setBoth(AssetClassAttributes1 both) {
+		this.both = Objects.requireNonNull(both);
+		return this;
 	}
 }

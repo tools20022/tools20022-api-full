@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.AccountNotification2;
 import com.tools20022.repository.msg.GroupHeader42;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -56,20 +58,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementArchive
- * CashManagementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "BkToCstmrDbtCdtNtfctn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -82,6 +70,20 @@ import javax.xml.bind.annotation.*;
  * BankToCustomerDebitCreditNotificationV02.mmNotification}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "BkToCstmrDbtCdtNtfctn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementArchive
+ * CashManagementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.054.001.02}</li>
@@ -109,15 +111,16 @@ import javax.xml.bind.annotation.*;
  * BankToCustomerDebitCreditNotificationV01}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BankToCustomerDebitCreditNotificationV02", propOrder = {"groupHeader", "notification"})
 public class BankToCustomerDebitCreditNotificationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader42 groupHeader;
 	/**
-	 * Common information for the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,10 +159,11 @@ public class BankToCustomerDebitCreditNotificationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Ntfctn", required = true)
 	protected List<AccountNotification2> notification;
 	/**
-	 * Notifies debit and credit entries for the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -231,25 +235,25 @@ public class BankToCustomerDebitCreditNotificationV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader42 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader42 groupHeader) {
-		this.groupHeader = groupHeader;
+	public BankToCustomerDebitCreditNotificationV02 setGroupHeader(GroupHeader42 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "Ntfctn", required = true)
 	public List<AccountNotification2> getNotification() {
-		return notification;
+		return notification == null ? notification = new ArrayList<>() : notification;
 	}
 
-	public void setNotification(List<AccountNotification2> notification) {
-		this.notification = notification;
+	public BankToCustomerDebitCreditNotificationV02 setNotification(List<AccountNotification2> notification) {
+		this.notification = Objects.requireNonNull(notification);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.054.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.054.001.02")
 	static public class Document {
 		@XmlElement(name = "BkToCstmrDbtCdtNtfctn", required = true)
 		public BankToCustomerDebitCreditNotificationV02 messageBody;

@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TransactionStatusCode;
+import com.tools20022.repository.codeset.TransactionStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the processing status of an investment fund transaction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TransactionStatusCode
- * TransactionStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionStatus1Code#mmReversal
- * TransactionStatus1Code.mmReversal}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionStatus1Code#Reversal
+ * TransactionStatus1Code.Reversal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionStatus1Code#mmRebooked
- * TransactionStatus1Code.mmRebooked}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionStatus1Code#Rebooked
+ * TransactionStatus1Code.Rebooked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionStatus1Code#mmCancelled
- * TransactionStatus1Code.mmCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionStatus1Code#Cancelled
+ * TransactionStatus1Code.Cancelled}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TransactionStatusCode
+ * TransactionStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the processing status of an investment fund transaction."</li>
  * </ul>
  */
-public class TransactionStatus1Code extends TransactionStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransactionStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,11 +92,12 @@ public class TransactionStatus1Code extends TransactionStatusCode {
 	 * name} = "Reversal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReversal = new MMCode() {
+	public static final TransactionStatus1Code Reversal = new TransactionStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reversal";
-			owner_lazy = () -> TransactionStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionStatus1Code.mmObject();
+			codeName = TransactionStatusCode.Reversal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +116,12 @@ public class TransactionStatus1Code extends TransactionStatusCode {
 	 * name} = "Rebooked"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRebooked = new MMCode() {
+	public static final TransactionStatus1Code Rebooked = new TransactionStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rebooked";
-			owner_lazy = () -> TransactionStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionStatus1Code.mmObject();
+			codeName = TransactionStatusCode.Rebooked.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,26 +140,59 @@ public class TransactionStatus1Code extends TransactionStatusCode {
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelled = new MMCode() {
+	public static final TransactionStatus1Code Cancelled = new TransactionStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
-			owner_lazy = () -> TransactionStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionStatus1Code.mmObject();
+			codeName = TransactionStatusCode.Cancelled.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TransactionStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransactionStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RVSL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionStatus1Code";
 				definition = "Specifies the processing status of an investment fund transaction.";
-				code_lazy = () -> Arrays.asList(TransactionStatus1Code.mmReversal, TransactionStatus1Code.mmRebooked, TransactionStatus1Code.mmCancelled);
 				trace_lazy = () -> TransactionStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionStatus1Code.Reversal, com.tools20022.repository.codeset.TransactionStatus1Code.Rebooked,
+						com.tools20022.repository.codeset.TransactionStatus1Code.Cancelled);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Reversal.getCodeName().get(), Reversal);
+		codesByName.put(Rebooked.getCodeName().get(), Rebooked);
+		codesByName.put(Cancelled.getCodeName().get(), Cancelled);
+	}
+
+	public static TransactionStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransactionStatus1Code[] values() {
+		TransactionStatus1Code[] values = new TransactionStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransactionStatus1Code> {
+		@Override
+		public TransactionStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransactionStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

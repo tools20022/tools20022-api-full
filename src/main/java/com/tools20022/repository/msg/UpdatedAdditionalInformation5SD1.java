@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Dividend;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +67,17 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUseOfShareholderListRegistrarContactDetailsRule#forUpdatedAdditionalInformation5SD1
+ * ConstraintUseOfShareholderListRegistrarContactDetailsRule.
+ * forUpdatedAdditionalInformation5SD1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,18 +96,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UpdatedAdditionalInformation5SD1", propOrder = {"placeAndName", "distributionAmountPerShare", "netAssetDecreaseRatio", "accumulatedProfitPerShare", "deemedDividendPerShare", "residualDistributionAmountPerShare"})
 public class UpdatedAdditionalInformation5SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm")
 	protected Max350Text placeAndName;
 	/**
-	 * Unambiguous reference to the location where the supplementary data must
-	 * be inserted in the message instance. <br>
-	 * <br>
-	 * In the case of XML, this is expressed by a valid XPath.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,7 +142,7 @@ public class UpdatedAdditionalInformation5SD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation5SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,11 +154,11 @@ public class UpdatedAdditionalInformation5SD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DstrbtnAmtPerShr")
 	protected RateAndAmountFormat2Choice distributionAmountPerShare;
 	/**
-	 * Total distribution fund rate per share.<br>
-	 * 一株あたりの交付金先等の額
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,7 +194,7 @@ public class UpdatedAdditionalInformation5SD1 {
 	 */
 	public static final MMMessageAttribute mmDistributionAmountPerShare = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation5SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmObject();
 			isDerived = false;
 			xmlTag = "DstrbtnAmtPerShr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,11 +206,11 @@ public class UpdatedAdditionalInformation5SD1 {
 			complexType_lazy = () -> RateAndAmountFormat2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NetAsstDcrRatio")
 	protected PercentageRate netAssetDecreaseRatio;
 	/**
-	 * Rate information of how much net asset decrease happens as a result of
-	 * the fund distribution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -240,7 +248,7 @@ public class UpdatedAdditionalInformation5SD1 {
 	 */
 	public static final MMMessageAttribute mmNetAssetDecreaseRatio = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation5SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmObject();
 			isDerived = false;
 			xmlTag = "NetAsstDcrRatio";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -252,11 +260,11 @@ public class UpdatedAdditionalInformation5SD1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "AcmltdPrftPerShr")
 	protected RateAndAmountFormat2Choice accumulatedProfitPerShare;
 	/**
-	 * Distribution amount of accumulated profit per share.<br>
-	 * 一株あたり利益剰余金の額
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -293,7 +301,7 @@ public class UpdatedAdditionalInformation5SD1 {
 	 */
 	public static final MMMessageAttribute mmAccumulatedProfitPerShare = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation5SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmObject();
 			isDerived = false;
 			xmlTag = "AcmltdPrftPerShr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -305,11 +313,11 @@ public class UpdatedAdditionalInformation5SD1 {
 			complexType_lazy = () -> RateAndAmountFormat2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DmdDvddPerShr")
 	protected RateAndAmountFormat2Choice deemedDividendPerShare;
 	/**
-	 * Taxable distribution amount of dividend.<br>
-	 * 一株あたりみなし配当の額
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -345,7 +353,7 @@ public class UpdatedAdditionalInformation5SD1 {
 	 */
 	public static final MMMessageAttribute mmDeemedDividendPerShare = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation5SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmObject();
 			isDerived = false;
 			xmlTag = "DmdDvddPerShr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -357,11 +365,11 @@ public class UpdatedAdditionalInformation5SD1 {
 			complexType_lazy = () -> RateAndAmountFormat2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RsdlDstrbtnAmtPerShr")
 	protected RateAndAmountFormat2Choice residualDistributionAmountPerShare;
 	/**
-	 * Tax exempted distribution amount of dividend. <br>
-	 * 一株あたりみなし譲渡収入の額
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -398,7 +406,7 @@ public class UpdatedAdditionalInformation5SD1 {
 	 */
 	public static final MMMessageAttribute mmResidualDistributionAmountPerShare = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation5SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmObject();
 			isDerived = false;
 			xmlTag = "RsdlDstrbtnAmtPerShr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -414,10 +422,12 @@ public class UpdatedAdditionalInformation5SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UpdatedAdditionalInformation5SD1.mmPlaceAndName, UpdatedAdditionalInformation5SD1.mmDistributionAmountPerShare, UpdatedAdditionalInformation5SD1.mmNetAssetDecreaseRatio,
-						UpdatedAdditionalInformation5SD1.mmAccumulatedProfitPerShare, UpdatedAdditionalInformation5SD1.mmDeemedDividendPerShare, UpdatedAdditionalInformation5SD1.mmResidualDistributionAmountPerShare);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmPlaceAndName, com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmDistributionAmountPerShare,
+						com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmNetAssetDecreaseRatio, com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmAccumulatedProfitPerShare,
+						com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmDeemedDividendPerShare, com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmResidualDistributionAmountPerShare);
 				trace_lazy = () -> Dividend.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintUseOfShareholderListRegistrarContactDetailsRule.forUpdatedAdditionalInformation5SD1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UpdatedAdditionalInformation5SD1";
 				definition = "Extension for updated additional information";
@@ -427,57 +437,57 @@ public class UpdatedAdditionalInformation5SD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm")
-	public Max350Text getPlaceAndName() {
-		return placeAndName;
+	public Optional<Max350Text> getPlaceAndName() {
+		return placeAndName == null ? Optional.empty() : Optional.of(placeAndName);
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
+	public UpdatedAdditionalInformation5SD1 setPlaceAndName(Max350Text placeAndName) {
 		this.placeAndName = placeAndName;
+		return this;
 	}
 
-	@XmlElement(name = "DstrbtnAmtPerShr")
-	public RateAndAmountFormat2Choice getDistributionAmountPerShare() {
-		return distributionAmountPerShare;
+	public Optional<RateAndAmountFormat2Choice> getDistributionAmountPerShare() {
+		return distributionAmountPerShare == null ? Optional.empty() : Optional.of(distributionAmountPerShare);
 	}
 
-	public void setDistributionAmountPerShare(RateAndAmountFormat2Choice distributionAmountPerShare) {
+	public UpdatedAdditionalInformation5SD1 setDistributionAmountPerShare(RateAndAmountFormat2Choice distributionAmountPerShare) {
 		this.distributionAmountPerShare = distributionAmountPerShare;
+		return this;
 	}
 
-	@XmlElement(name = "NetAsstDcrRatio")
-	public PercentageRate getNetAssetDecreaseRatio() {
-		return netAssetDecreaseRatio;
+	public Optional<PercentageRate> getNetAssetDecreaseRatio() {
+		return netAssetDecreaseRatio == null ? Optional.empty() : Optional.of(netAssetDecreaseRatio);
 	}
 
-	public void setNetAssetDecreaseRatio(PercentageRate netAssetDecreaseRatio) {
+	public UpdatedAdditionalInformation5SD1 setNetAssetDecreaseRatio(PercentageRate netAssetDecreaseRatio) {
 		this.netAssetDecreaseRatio = netAssetDecreaseRatio;
+		return this;
 	}
 
-	@XmlElement(name = "AcmltdPrftPerShr")
-	public RateAndAmountFormat2Choice getAccumulatedProfitPerShare() {
-		return accumulatedProfitPerShare;
+	public Optional<RateAndAmountFormat2Choice> getAccumulatedProfitPerShare() {
+		return accumulatedProfitPerShare == null ? Optional.empty() : Optional.of(accumulatedProfitPerShare);
 	}
 
-	public void setAccumulatedProfitPerShare(RateAndAmountFormat2Choice accumulatedProfitPerShare) {
+	public UpdatedAdditionalInformation5SD1 setAccumulatedProfitPerShare(RateAndAmountFormat2Choice accumulatedProfitPerShare) {
 		this.accumulatedProfitPerShare = accumulatedProfitPerShare;
+		return this;
 	}
 
-	@XmlElement(name = "DmdDvddPerShr")
-	public RateAndAmountFormat2Choice getDeemedDividendPerShare() {
-		return deemedDividendPerShare;
+	public Optional<RateAndAmountFormat2Choice> getDeemedDividendPerShare() {
+		return deemedDividendPerShare == null ? Optional.empty() : Optional.of(deemedDividendPerShare);
 	}
 
-	public void setDeemedDividendPerShare(RateAndAmountFormat2Choice deemedDividendPerShare) {
+	public UpdatedAdditionalInformation5SD1 setDeemedDividendPerShare(RateAndAmountFormat2Choice deemedDividendPerShare) {
 		this.deemedDividendPerShare = deemedDividendPerShare;
+		return this;
 	}
 
-	@XmlElement(name = "RsdlDstrbtnAmtPerShr")
-	public RateAndAmountFormat2Choice getResidualDistributionAmountPerShare() {
-		return residualDistributionAmountPerShare;
+	public Optional<RateAndAmountFormat2Choice> getResidualDistributionAmountPerShare() {
+		return residualDistributionAmountPerShare == null ? Optional.empty() : Optional.of(residualDistributionAmountPerShare);
 	}
 
-	public void setResidualDistributionAmountPerShare(RateAndAmountFormat2Choice residualDistributionAmountPerShare) {
+	public UpdatedAdditionalInformation5SD1 setResidualDistributionAmountPerShare(RateAndAmountFormat2Choice residualDistributionAmountPerShare) {
 		this.residualDistributionAmountPerShare = residualDistributionAmountPerShare;
+		return this;
 	}
 }

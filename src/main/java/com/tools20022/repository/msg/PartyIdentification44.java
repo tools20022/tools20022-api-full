@@ -25,9 +25,11 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,18 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Unique and unambiguous way to identify an organisation."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyIdentification44", propOrder = {"anyBIC", "alternativeIdentifier"})
 public class PartyIdentification44 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AnyBIC", required = true)
 	protected AnyBICIdentifier anyBIC;
 	/**
-	 * Code allocated to a financial or non-financial institution by the ISO
-	 * 9362 Registration Authority, as described in ISO 9362
-	 * "Banking - Banking telecommunication messages - Business identifier code (BIC)"
-	 * .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +115,7 @@ public class PartyIdentification44 {
 	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
-			componentContext_lazy = () -> PartyIdentification44.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification44.mmObject();
 			isDerived = false;
 			xmlTag = "AnyBIC";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,11 +126,11 @@ public class PartyIdentification44 {
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "AltrntvIdr")
 	protected List<Max35Text> alternativeIdentifier;
 	/**
-	 * Unique and unambiguous identifier, as assigned to a financial institution
-	 * using a proprietary identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +165,7 @@ public class PartyIdentification44 {
 	public static final MMMessageAttribute mmAlternativeIdentifier = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> PartyIdentification44.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification44.mmObject();
 			isDerived = false;
 			xmlTag = "AltrntvIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,9 +180,9 @@ public class PartyIdentification44 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification44.mmAnyBIC, PartyIdentification44.mmAlternativeIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification44.mmAnyBIC, com.tools20022.repository.msg.PartyIdentification44.mmAlternativeIdentifier);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification44";
 				definition = "Unique and unambiguous way to identify an organisation.";
@@ -191,21 +191,21 @@ public class PartyIdentification44 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AnyBIC", required = true)
 	public AnyBICIdentifier getAnyBIC() {
 		return anyBIC;
 	}
 
-	public void setAnyBIC(AnyBICIdentifier anyBIC) {
-		this.anyBIC = anyBIC;
+	public PartyIdentification44 setAnyBIC(AnyBICIdentifier anyBIC) {
+		this.anyBIC = Objects.requireNonNull(anyBIC);
+		return this;
 	}
 
-	@XmlElement(name = "AltrntvIdr")
 	public List<Max35Text> getAlternativeIdentifier() {
-		return alternativeIdentifier;
+		return alternativeIdentifier == null ? alternativeIdentifier = new ArrayList<>() : alternativeIdentifier;
 	}
 
-	public void setAlternativeIdentifier(List<Max35Text> alternativeIdentifier) {
-		this.alternativeIdentifier = alternativeIdentifier;
+	public PartyIdentification44 setAlternativeIdentifier(List<Max35Text> alternativeIdentifier) {
+		this.alternativeIdentifier = Objects.requireNonNull(alternativeIdentifier);
+		return this;
 	}
 }

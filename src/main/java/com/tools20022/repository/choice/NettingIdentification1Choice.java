@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NettingIdentification1Choice", propOrder = {"tradeParty", "nettingGroupIdentification"})
 public class NettingIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradPty", required = true)
 	protected PartyIdentification73Choice tradeParty;
 	/**
-	 * Describes the individual trading party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -99,7 +101,7 @@ public class NettingIdentification1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmTradeParty = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> NettingIdentification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.NettingIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TradPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +113,11 @@ public class NettingIdentification1Choice {
 			type_lazy = () -> com.tools20022.repository.choice.PartyIdentification73Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NetgGrpId", required = true)
 	protected Max35Text nettingGroupIdentification;
 	/**
-	 * Describes the netting group.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,7 +144,7 @@ public class NettingIdentification1Choice {
 	 */
 	public static final MMMessageAttribute mmNettingGroupIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NettingIdentification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.NettingIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NetgGrpId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,8 +159,8 @@ public class NettingIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NettingIdentification1Choice.mmTradeParty, NettingIdentification1Choice.mmNettingGroupIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NettingIdentification1Choice.mmTradeParty, com.tools20022.repository.choice.NettingIdentification1Choice.mmNettingGroupIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NettingIdentification1Choice";
 				definition = "Choice between netting group identification of an individual trading party.";
@@ -166,21 +169,21 @@ public class NettingIdentification1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradPty", required = true)
 	public PartyIdentification73Choice getTradeParty() {
 		return tradeParty;
 	}
 
-	public void setTradeParty(com.tools20022.repository.choice.PartyIdentification73Choice tradeParty) {
-		this.tradeParty = tradeParty;
+	public NettingIdentification1Choice setTradeParty(com.tools20022.repository.choice.PartyIdentification73Choice tradeParty) {
+		this.tradeParty = Objects.requireNonNull(tradeParty);
+		return this;
 	}
 
-	@XmlElement(name = "NetgGrpId", required = true)
 	public Max35Text getNettingGroupIdentification() {
 		return nettingGroupIdentification;
 	}
 
-	public void setNettingGroupIdentification(Max35Text nettingGroupIdentification) {
-		this.nettingGroupIdentification = nettingGroupIdentification;
+	public NettingIdentification1Choice setNettingGroupIdentification(Max35Text nettingGroupIdentification) {
+		this.nettingGroupIdentification = Objects.requireNonNull(nettingGroupIdentification);
+		return this;
 	}
 }

@@ -30,6 +30,8 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the header information for a report file."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "IsabelReportHeader3", propOrder = {"actualSenderIdentification", "payloadCreationDate", "file", "sendTimeStamp", "bankReference", "DIVFileDescription", "EBanking"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "IsabelReportHeader3", propOrder = {"actualSenderIdentification", "payloadCreationDate", "file", "sendTimeStamp", "bankReference", "dIVFileDescription", "eBanking"})
 public class IsabelReportHeader3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ActlSndrId", required = true)
 	protected Max13AlphaNumericText actualSenderIdentification;
 	/**
-	 * Unique identification of the actual sender of the file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +119,7 @@ public class IsabelReportHeader3 {
 	 */
 	public static final MMMessageAttribute mmActualSenderIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelReportHeader3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "ActlSndrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +130,11 @@ public class IsabelReportHeader3 {
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "PyldCreDt", required = true)
 	protected DateAndDateTimeChoice payloadCreationDate;
 	/**
-	 * Date and time at which the file in the payload was actually created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -158,7 +162,7 @@ public class IsabelReportHeader3 {
 	 */
 	public static final MMMessageAssociationEnd mmPayloadCreationDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelReportHeader3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "PyldCreDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,10 +174,11 @@ public class IsabelReportHeader3 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "File", required = true)
 	protected IsabelFile4 file;
 	/**
-	 * Characteristics of the file contained in the payload.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -199,7 +204,7 @@ public class IsabelReportHeader3 {
 	 */
 	public static final MMMessageAssociationEnd mmFile = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelReportHeader3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "File";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,10 +216,11 @@ public class IsabelReportHeader3 {
 			type_lazy = () -> com.tools20022.repository.msg.IsabelFile4.mmObject();
 		}
 	};
+	@XmlElement(name = "SndTmStmp", required = true)
 	protected ISODateTime sendTimeStamp;
 	/**
-	 * Time stamp on when the file is sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -241,7 +247,7 @@ public class IsabelReportHeader3 {
 	 */
 	public static final MMMessageAttribute mmSendTimeStamp = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelReportHeader3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "SndTmStmp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -252,10 +258,11 @@ public class IsabelReportHeader3 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "BkRef", required = true)
 	protected Max64Text bankReference;
 	/**
-	 * Unique reference as assigned by the bank to the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -282,7 +289,7 @@ public class IsabelReportHeader3 {
 	 */
 	public static final MMMessageAttribute mmBankReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelReportHeader3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "BkRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -293,11 +300,11 @@ public class IsabelReportHeader3 {
 			simpleType_lazy = () -> Max64Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DIVFileDesc")
 	protected Max70Text dIVFileDescription;
 	/**
-	 * Description of the file when provided in DIV format (Belgian proprietary
-	 * file format).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -326,7 +333,7 @@ public class IsabelReportHeader3 {
 	 */
 	public static final MMMessageAttribute mmDIVFileDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelReportHeader3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "DIVFileDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -337,10 +344,11 @@ public class IsabelReportHeader3 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "EBkg")
 	protected IsabelEbanking1Choice eBanking;
 	/**
-	 * Unique identification used for the e-banking module.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -367,7 +375,7 @@ public class IsabelReportHeader3 {
 	 */
 	public static final MMMessageAssociationEnd mmEBanking = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelReportHeader3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "EBkg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -383,9 +391,10 @@ public class IsabelReportHeader3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IsabelReportHeader3.mmActualSenderIdentification, IsabelReportHeader3.mmPayloadCreationDate, IsabelReportHeader3.mmFile, IsabelReportHeader3.mmSendTimeStamp,
-						IsabelReportHeader3.mmBankReference, IsabelReportHeader3.mmDIVFileDescription, IsabelReportHeader3.mmEBanking);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelReportHeader3.mmActualSenderIdentification, com.tools20022.repository.msg.IsabelReportHeader3.mmPayloadCreationDate,
+						com.tools20022.repository.msg.IsabelReportHeader3.mmFile, com.tools20022.repository.msg.IsabelReportHeader3.mmSendTimeStamp, com.tools20022.repository.msg.IsabelReportHeader3.mmBankReference,
+						com.tools20022.repository.msg.IsabelReportHeader3.mmDIVFileDescription, com.tools20022.repository.msg.IsabelReportHeader3.mmEBanking);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelReportHeader3";
 				definition = "Specifies the header information for a report file.";
@@ -394,66 +403,66 @@ public class IsabelReportHeader3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ActlSndrId", required = true)
 	public Max13AlphaNumericText getActualSenderIdentification() {
 		return actualSenderIdentification;
 	}
 
-	public void setActualSenderIdentification(Max13AlphaNumericText actualSenderIdentification) {
-		this.actualSenderIdentification = actualSenderIdentification;
+	public IsabelReportHeader3 setActualSenderIdentification(Max13AlphaNumericText actualSenderIdentification) {
+		this.actualSenderIdentification = Objects.requireNonNull(actualSenderIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PyldCreDt", required = true)
 	public DateAndDateTimeChoice getPayloadCreationDate() {
 		return payloadCreationDate;
 	}
 
-	public void setPayloadCreationDate(DateAndDateTimeChoice payloadCreationDate) {
-		this.payloadCreationDate = payloadCreationDate;
+	public IsabelReportHeader3 setPayloadCreationDate(DateAndDateTimeChoice payloadCreationDate) {
+		this.payloadCreationDate = Objects.requireNonNull(payloadCreationDate);
+		return this;
 	}
 
-	@XmlElement(name = "File", required = true)
 	public IsabelFile4 getFile() {
 		return file;
 	}
 
-	public void setFile(com.tools20022.repository.msg.IsabelFile4 file) {
-		this.file = file;
+	public IsabelReportHeader3 setFile(com.tools20022.repository.msg.IsabelFile4 file) {
+		this.file = Objects.requireNonNull(file);
+		return this;
 	}
 
-	@XmlElement(name = "SndTmStmp", required = true)
 	public ISODateTime getSendTimeStamp() {
 		return sendTimeStamp;
 	}
 
-	public void setSendTimeStamp(ISODateTime sendTimeStamp) {
-		this.sendTimeStamp = sendTimeStamp;
+	public IsabelReportHeader3 setSendTimeStamp(ISODateTime sendTimeStamp) {
+		this.sendTimeStamp = Objects.requireNonNull(sendTimeStamp);
+		return this;
 	}
 
-	@XmlElement(name = "BkRef", required = true)
 	public Max64Text getBankReference() {
 		return bankReference;
 	}
 
-	public void setBankReference(Max64Text bankReference) {
-		this.bankReference = bankReference;
+	public IsabelReportHeader3 setBankReference(Max64Text bankReference) {
+		this.bankReference = Objects.requireNonNull(bankReference);
+		return this;
 	}
 
-	@XmlElement(name = "DIVFileDesc")
-	public Max70Text getDIVFileDescription() {
-		return dIVFileDescription;
+	public Optional<Max70Text> getDIVFileDescription() {
+		return dIVFileDescription == null ? Optional.empty() : Optional.of(dIVFileDescription);
 	}
 
-	public void setDIVFileDescription(Max70Text dIVFileDescription) {
+	public IsabelReportHeader3 setDIVFileDescription(Max70Text dIVFileDescription) {
 		this.dIVFileDescription = dIVFileDescription;
+		return this;
 	}
 
-	@XmlElement(name = "EBkg")
-	public IsabelEbanking1Choice getEBanking() {
-		return eBanking;
+	public Optional<IsabelEbanking1Choice> getEBanking() {
+		return eBanking == null ? Optional.empty() : Optional.of(eBanking);
 	}
 
-	public void setEBanking(IsabelEbanking1Choice eBanking) {
+	public IsabelReportHeader3 setEBanking(IsabelEbanking1Choice eBanking) {
 		this.eBanking = eBanking;
+		return this;
 	}
 }

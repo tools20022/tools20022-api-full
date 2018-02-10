@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.POICommunicationTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Low level communication of the hardware or software component toward another
@@ -33,44 +38,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#mmUSBHost
- * POICommunicationTypeCode.mmUSBHost}</li>
+ * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#USBHost
+ * POICommunicationTypeCode.USBHost}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#mmUSBDevice
- * POICommunicationTypeCode.mmUSBDevice}</li>
+ * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#USBDevice
+ * POICommunicationTypeCode.USBDevice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#mmEthernet
- * POICommunicationTypeCode.mmEthernet}</li>
+ * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#Ethernet
+ * POICommunicationTypeCode.Ethernet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#mmWifi
- * POICommunicationTypeCode.mmWifi}</li>
+ * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#Wifi
+ * POICommunicationTypeCode.Wifi}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#mmPSTN
- * POICommunicationTypeCode.mmPSTN}</li>
+ * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#PSTN
+ * POICommunicationTypeCode.PSTN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#mmBluetooth
- * POICommunicationTypeCode.mmBluetooth}</li>
+ * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#Bluetooth
+ * POICommunicationTypeCode.Bluetooth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#mmGSM
- * POICommunicationTypeCode.mmGSM}</li>
+ * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#GSM
+ * POICommunicationTypeCode.GSM}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#mmGPRS
- * POICommunicationTypeCode.mmGPRS}</li>
+ * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#GPRS
+ * POICommunicationTypeCode.GPRS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#mmRS232
- * POICommunicationTypeCode.mmRS232}</li>
+ * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#RS232
+ * POICommunicationTypeCode.RS232}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#mmWirelessTechnology2G
- * POICommunicationTypeCode.mmWirelessTechnology2G}</li>
+ * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#WirelessTechnology2G
+ * POICommunicationTypeCode.WirelessTechnology2G}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#mmWirelessTechnology3G
- * POICommunicationTypeCode.mmWirelessTechnology3G}</li>
+ * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#WirelessTechnology3G
+ * POICommunicationTypeCode.WirelessTechnology3G}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#mmWirelessTechnology4G
- * POICommunicationTypeCode.mmWirelessTechnology4G}</li>
+ * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#WirelessTechnology4G
+ * POICommunicationTypeCode.WirelessTechnology4G}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#mmWirelessTechnology5G
- * POICommunicationTypeCode.mmWirelessTechnology5G}</li>
+ * {@linkplain com.tools20022.repository.codeset.POICommunicationTypeCode#WirelessTechnology5G
+ * POICommunicationTypeCode.WirelessTechnology5G}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -85,8 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +110,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class POICommunicationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class POICommunicationTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -129,12 +135,12 @@ public class POICommunicationTypeCode {
 	 * definition} = "Communication with a host from an USB port."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSBHost = new MMCode() {
+	public static final POICommunicationTypeCode USBHost = new POICommunicationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "USBHost";
 			definition = "Communication with a host from an USB port.";
-			owner_lazy = () -> POICommunicationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.POICommunicationTypeCode.mmObject();
 			codeName = "USBH";
 		}
 	};
@@ -159,12 +165,12 @@ public class POICommunicationTypeCode {
 	 * definition} = "Communication with a USB stick or any USB device."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSBDevice = new MMCode() {
+	public static final POICommunicationTypeCode USBDevice = new POICommunicationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "USBDevice";
 			definition = "Communication with a USB stick or any USB device.";
-			owner_lazy = () -> POICommunicationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.POICommunicationTypeCode.mmObject();
 			codeName = "USBD";
 		}
 	};
@@ -189,12 +195,12 @@ public class POICommunicationTypeCode {
 	 * definition} = "Ethernet port to communicate."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEthernet = new MMCode() {
+	public static final POICommunicationTypeCode Ethernet = new POICommunicationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Ethernet";
 			definition = "Ethernet port to communicate.";
-			owner_lazy = () -> POICommunicationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.POICommunicationTypeCode.mmObject();
 			codeName = "ETHR";
 		}
 	};
@@ -219,12 +225,12 @@ public class POICommunicationTypeCode {
 	 * definition} = "Wifi communication with another component."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWifi = new MMCode() {
+	public static final POICommunicationTypeCode Wifi = new POICommunicationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Wifi";
 			definition = "Wifi communication with another component.";
-			owner_lazy = () -> POICommunicationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.POICommunicationTypeCode.mmObject();
 			codeName = "WIFI";
 		}
 	};
@@ -250,12 +256,12 @@ public class POICommunicationTypeCode {
 	 * "Communication with a host using Public Switching Telephone Network."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPSTN = new MMCode() {
+	public static final POICommunicationTypeCode PSTN = new POICommunicationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PSTN";
 			definition = "Communication with a host using Public Switching Telephone Network.";
-			owner_lazy = () -> POICommunicationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.POICommunicationTypeCode.mmObject();
 			codeName = "PSTN";
 		}
 	};
@@ -280,12 +286,12 @@ public class POICommunicationTypeCode {
 	 * definition} = "Communication with a host using Bluetooth."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBluetooth = new MMCode() {
+	public static final POICommunicationTypeCode Bluetooth = new POICommunicationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Bluetooth";
 			definition = "Communication with a host using Bluetooth.";
-			owner_lazy = () -> POICommunicationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.POICommunicationTypeCode.mmObject();
 			codeName = "BLTH";
 		}
 	};
@@ -310,12 +316,12 @@ public class POICommunicationTypeCode {
 	 * definition} = "Communication with a host using GSM."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGSM = new MMCode() {
+	public static final POICommunicationTypeCode GSM = new POICommunicationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GSM";
 			definition = "Communication with a host using GSM.";
-			owner_lazy = () -> POICommunicationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.POICommunicationTypeCode.mmObject();
 			codeName = "GSMF";
 		}
 	};
@@ -340,12 +346,12 @@ public class POICommunicationTypeCode {
 	 * definition} = "Communication with a host using GPRS."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGPRS = new MMCode() {
+	public static final POICommunicationTypeCode GPRS = new POICommunicationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GPRS";
 			definition = "Communication with a host using GPRS.";
-			owner_lazy = () -> POICommunicationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.POICommunicationTypeCode.mmObject();
 			codeName = "GPRS";
 		}
 	};
@@ -370,12 +376,12 @@ public class POICommunicationTypeCode {
 	 * definition} = "Serial port to communicate."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRS232 = new MMCode() {
+	public static final POICommunicationTypeCode RS232 = new POICommunicationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RS232";
 			definition = "Serial port to communicate.";
-			owner_lazy = () -> POICommunicationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.POICommunicationTypeCode.mmObject();
 			codeName = "RS23";
 		}
 	};
@@ -403,12 +409,12 @@ public class POICommunicationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmWirelessTechnology2G = new MMCode() {
+	public static final POICommunicationTypeCode WirelessTechnology2G = new POICommunicationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WirelessTechnology2G";
 			definition = "Includes all communication technologies which can be qualified as being part of the 2G technology (e.g EDGE or PDC).";
-			owner_lazy = () -> POICommunicationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.POICommunicationTypeCode.mmObject();
 			codeName = "WT2G";
 		}
 	};
@@ -436,12 +442,12 @@ public class POICommunicationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmWirelessTechnology3G = new MMCode() {
+	public static final POICommunicationTypeCode WirelessTechnology3G = new POICommunicationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WirelessTechnology3G";
 			definition = "Includes all communication technologies which can be qualified as being part of the 3G technology.";
-			owner_lazy = () -> POICommunicationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.POICommunicationTypeCode.mmObject();
 			codeName = "WT3G";
 		}
 	};
@@ -469,12 +475,12 @@ public class POICommunicationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmWirelessTechnology4G = new MMCode() {
+	public static final POICommunicationTypeCode WirelessTechnology4G = new POICommunicationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WirelessTechnology4G";
 			definition = "Includes all communication technologies which can be qualified as being part of the 4G technology.";
-			owner_lazy = () -> POICommunicationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.POICommunicationTypeCode.mmObject();
 			codeName = "WT4G";
 		}
 	};
@@ -502,30 +508,74 @@ public class POICommunicationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmWirelessTechnology5G = new MMCode() {
+	public static final POICommunicationTypeCode WirelessTechnology5G = new POICommunicationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WirelessTechnology5G";
 			definition = "Includes all communication technologies which can be qualified as being part of the 5G technology.";
-			owner_lazy = () -> POICommunicationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.POICommunicationTypeCode.mmObject();
 			codeName = "WT5G";
 		}
 	};
+	final static private LinkedHashMap<String, POICommunicationTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected POICommunicationTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("USBH");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "POICommunicationTypeCode";
 				definition = "Low level communication of the hardware or software component toward another component or an external entity.";
-				code_lazy = () -> Arrays.asList(POICommunicationTypeCode.mmUSBHost, POICommunicationTypeCode.mmUSBDevice, POICommunicationTypeCode.mmEthernet, POICommunicationTypeCode.mmWifi, POICommunicationTypeCode.mmPSTN,
-						POICommunicationTypeCode.mmBluetooth, POICommunicationTypeCode.mmGSM, POICommunicationTypeCode.mmGPRS, POICommunicationTypeCode.mmRS232, POICommunicationTypeCode.mmWirelessTechnology2G,
-						POICommunicationTypeCode.mmWirelessTechnology3G, POICommunicationTypeCode.mmWirelessTechnology4G, POICommunicationTypeCode.mmWirelessTechnology5G);
 				derivation_lazy = () -> Arrays.asList(POICommunicationType1Code.mmObject(), POICommunicationType2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POICommunicationTypeCode.USBHost, com.tools20022.repository.codeset.POICommunicationTypeCode.USBDevice,
+						com.tools20022.repository.codeset.POICommunicationTypeCode.Ethernet, com.tools20022.repository.codeset.POICommunicationTypeCode.Wifi, com.tools20022.repository.codeset.POICommunicationTypeCode.PSTN,
+						com.tools20022.repository.codeset.POICommunicationTypeCode.Bluetooth, com.tools20022.repository.codeset.POICommunicationTypeCode.GSM, com.tools20022.repository.codeset.POICommunicationTypeCode.GPRS,
+						com.tools20022.repository.codeset.POICommunicationTypeCode.RS232, com.tools20022.repository.codeset.POICommunicationTypeCode.WirelessTechnology2G,
+						com.tools20022.repository.codeset.POICommunicationTypeCode.WirelessTechnology3G, com.tools20022.repository.codeset.POICommunicationTypeCode.WirelessTechnology4G,
+						com.tools20022.repository.codeset.POICommunicationTypeCode.WirelessTechnology5G);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(USBHost.getCodeName().get(), USBHost);
+		codesByName.put(USBDevice.getCodeName().get(), USBDevice);
+		codesByName.put(Ethernet.getCodeName().get(), Ethernet);
+		codesByName.put(Wifi.getCodeName().get(), Wifi);
+		codesByName.put(PSTN.getCodeName().get(), PSTN);
+		codesByName.put(Bluetooth.getCodeName().get(), Bluetooth);
+		codesByName.put(GSM.getCodeName().get(), GSM);
+		codesByName.put(GPRS.getCodeName().get(), GPRS);
+		codesByName.put(RS232.getCodeName().get(), RS232);
+		codesByName.put(WirelessTechnology2G.getCodeName().get(), WirelessTechnology2G);
+		codesByName.put(WirelessTechnology3G.getCodeName().get(), WirelessTechnology3G);
+		codesByName.put(WirelessTechnology4G.getCodeName().get(), WirelessTechnology4G);
+		codesByName.put(WirelessTechnology5G.getCodeName().get(), WirelessTechnology5G);
+	}
+
+	public static POICommunicationTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static POICommunicationTypeCode[] values() {
+		POICommunicationTypeCode[] values = new POICommunicationTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, POICommunicationTypeCode> {
+		@Override
+		public POICommunicationTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(POICommunicationTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

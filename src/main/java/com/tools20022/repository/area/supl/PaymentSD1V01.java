@@ -27,6 +27,7 @@ import com.tools20022.repository.msgset.SupplementaryDataISOLatestversion;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -34,22 +35,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SupplementaryDataLatestVersion
- * SupplementaryDataLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.SupplementaryDataISOLatestversion
- * SupplementaryDataISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "PmtSD1"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -59,6 +44,22 @@ import javax.xml.bind.annotation.*;
  * PaymentSD1V01.mmCardRemittanceInformation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SupplementaryDataISOLatestversion
+ * SupplementaryDataISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "PmtSD1"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SupplementaryDataLatestVersion
+ * SupplementaryDataLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code supl.017.001.01}</li>
@@ -72,15 +73,16 @@ import javax.xml.bind.annotation.*;
  * definition} = "Supplementary data for payment message definitions."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentSD1V01", propOrder = "cardRemittanceInformation")
 public class PaymentSD1V01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CardRmtInf", required = true)
 	protected TransactionData1 cardRemittanceInformation;
 	/**
-	 * Structured card remittance information supplied in a payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,16 +153,16 @@ public class PaymentSD1V01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CardRmtInf", required = true)
 	public TransactionData1 getCardRemittanceInformation() {
 		return cardRemittanceInformation;
 	}
 
-	public void setCardRemittanceInformation(TransactionData1 cardRemittanceInformation) {
-		this.cardRemittanceInformation = cardRemittanceInformation;
+	public PaymentSD1V01 setCardRemittanceInformation(TransactionData1 cardRemittanceInformation) {
+		this.cardRemittanceInformation = Objects.requireNonNull(cardRemittanceInformation);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:supl.017.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:supl.017.001.01")
 	static public class Document {
 		@XmlElement(name = "PmtSD1", required = true)
 		public PaymentSD1V01 messageBody;

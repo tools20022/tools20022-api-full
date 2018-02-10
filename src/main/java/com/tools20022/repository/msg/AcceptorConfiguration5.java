@@ -24,9 +24,11 @@ import com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV05;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,16 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * AcceptorConfiguration4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcceptorConfiguration5", propOrder = {"terminalManagerIdentification", "dataSet"})
 public class AcceptorConfiguration5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TermnlMgrId", required = true)
 	protected GenericIdentification71 terminalManagerIdentification;
 	/**
-	 * Identification of the terminal management system (TMS) sending the
-	 * acceptor parameters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -146,7 +148,7 @@ public class AcceptorConfiguration5 {
 	public static final MMMessageAssociationEnd mmTerminalManagerIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
-			componentContext_lazy = () -> AcceptorConfiguration5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfiguration5.mmObject();
 			isDerived = false;
 			xmlTag = "TermnlMgrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,11 +162,11 @@ public class AcceptorConfiguration5 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
 		}
 	};
+	@XmlElement(name = "DataSet", required = true)
 	protected List<com.tools20022.repository.msg.TerminalManagementDataSet19> dataSet;
 	/**
-	 * Data set containing the acceptor parameters of a point of interaction
-	 * (POI).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -206,7 +208,7 @@ public class AcceptorConfiguration5 {
 	 */
 	public static final MMMessageAssociationEnd mmDataSet = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcceptorConfiguration5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfiguration5.mmObject();
 			isDerived = false;
 			xmlTag = "DataSet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,10 +225,10 @@ public class AcceptorConfiguration5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AcceptorConfiguration5.mmTerminalManagerIdentification, AcceptorConfiguration5.mmDataSet);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfiguration5.mmTerminalManagerIdentification, com.tools20022.repository.msg.AcceptorConfiguration5.mmDataSet);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV05.mmAcceptorConfiguration);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorConfiguration5";
 				definition = "Acceptor configuration to be downloaded from the terminal management system.";
@@ -237,21 +239,21 @@ public class AcceptorConfiguration5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TermnlMgrId", required = true)
 	public GenericIdentification71 getTerminalManagerIdentification() {
 		return terminalManagerIdentification;
 	}
 
-	public void setTerminalManagerIdentification(com.tools20022.repository.msg.GenericIdentification71 terminalManagerIdentification) {
-		this.terminalManagerIdentification = terminalManagerIdentification;
+	public AcceptorConfiguration5 setTerminalManagerIdentification(com.tools20022.repository.msg.GenericIdentification71 terminalManagerIdentification) {
+		this.terminalManagerIdentification = Objects.requireNonNull(terminalManagerIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "DataSet", required = true)
 	public List<TerminalManagementDataSet19> getDataSet() {
-		return dataSet;
+		return dataSet == null ? dataSet = new ArrayList<>() : dataSet;
 	}
 
-	public void setDataSet(List<com.tools20022.repository.msg.TerminalManagementDataSet19> dataSet) {
-		this.dataSet = dataSet;
+	public AcceptorConfiguration5 setDataSet(List<com.tools20022.repository.msg.TerminalManagementDataSet19> dataSet) {
+		this.dataSet = Objects.requireNonNull(dataSet);
+		return this;
 	}
 }

@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,16 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MarginCallResult1", propOrder = {"defaultFundAmount", "marginCallResult"})
 public class MarginCallResult1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DfltFndAmt")
 	protected ActiveCurrencyAndAmount defaultFundAmount;
 	/**
-	 * Total amount required by the clearing member to participate to the
-	 * default fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +117,7 @@ public class MarginCallResult1 {
 	public static final MMMessageAttribute mmDefaultFundAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DefaultFundContribution.mmExcessOrDeficitAmount;
-			componentContext_lazy = () -> MarginCallResult1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCallResult1.mmObject();
 			isDerived = false;
 			xmlTag = "DfltFndAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,12 +128,11 @@ public class MarginCallResult1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "MrgnCallRslt", required = true)
 	protected MarginCallResult1Choice marginCallResult;
 	/**
-	 * Provides the summation of the call amounts for the variation margin and
-	 * the segregated independent amount, or the segregated independent amount
-	 * only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -165,7 +166,7 @@ public class MarginCallResult1 {
 	public static final MMMessageAssociationEnd mmMarginCallResult = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> MarginCall.mmObject();
-			componentContext_lazy = () -> MarginCallResult1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCallResult1.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnCallRslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,9 +182,9 @@ public class MarginCallResult1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MarginCallResult1.mmDefaultFundAmount, MarginCallResult1.mmMarginCallResult);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginCallResult1.mmDefaultFundAmount, com.tools20022.repository.msg.MarginCallResult1.mmMarginCallResult);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MarginCallResult1";
 				definition = "Provides the summation of the call amounts per margin type and optionaly the default fund amount (only for CCP).";
@@ -192,21 +193,21 @@ public class MarginCallResult1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DfltFndAmt")
-	public ActiveCurrencyAndAmount getDefaultFundAmount() {
-		return defaultFundAmount;
+	public Optional<ActiveCurrencyAndAmount> getDefaultFundAmount() {
+		return defaultFundAmount == null ? Optional.empty() : Optional.of(defaultFundAmount);
 	}
 
-	public void setDefaultFundAmount(ActiveCurrencyAndAmount defaultFundAmount) {
+	public MarginCallResult1 setDefaultFundAmount(ActiveCurrencyAndAmount defaultFundAmount) {
 		this.defaultFundAmount = defaultFundAmount;
+		return this;
 	}
 
-	@XmlElement(name = "MrgnCallRslt", required = true)
 	public MarginCallResult1Choice getMarginCallResult() {
 		return marginCallResult;
 	}
 
-	public void setMarginCallResult(MarginCallResult1Choice marginCallResult) {
-		this.marginCallResult = marginCallResult;
+	public MarginCallResult1 setMarginCallResult(MarginCallResult1Choice marginCallResult) {
+		this.marginCallResult = Objects.requireNonNull(marginCallResult);
+		return this;
 	}
 }

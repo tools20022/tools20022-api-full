@@ -26,9 +26,11 @@ import com.tools20022.repository.choice.UpdateType9Choice;
 import com.tools20022.repository.msg.TransactionDetails41;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -65,20 +67,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
- * SecuritiesSettlementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SctiesSttlmTxModReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -92,9 +80,40 @@ import javax.xml.bind.annotation.*;
  * SecuritiesSettlementTransactionModificationRequestV02.mmUpdateType}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SctiesSttlmTxModReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
+ * SecuritiesSettlementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.038.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule#forSecuritiesSettlementTransactionModificationRequestV02
+ * ConstraintPhysicalInstructionDetailsUsageRule.
+ * forSecuritiesSettlementTransactionModificationRequestV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesFinancingSettlementUsageRule#forSecuritiesSettlementTransactionModificationRequestV02
+ * ConstraintSecuritiesFinancingSettlementUsageRule.
+ * forSecuritiesSettlementTransactionModificationRequestV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintLinkagesUsageRule#forSecuritiesSettlementTransactionModificationRequestV02
+ * ConstraintLinkagesUsageRule.
+ * forSecuritiesSettlementTransactionModificationRequestV02}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -119,15 +138,16 @@ import javax.xml.bind.annotation.*;
  * SecuritiesSettlementTransactionModificationRequestV01}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesSettlementTransactionModificationRequestV02", propOrder = {"modifiedTransactionDetails", "updateType"})
 public class SecuritiesSettlementTransactionModificationRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ModfdTxDtls", required = true)
 	protected TransactionDetails41 modifiedTransactionDetails;
 	/**
-	 * Identifies the details of the transaction that is being modified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,10 +198,11 @@ public class SecuritiesSettlementTransactionModificationRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "UpdTp", required = true)
 	protected List<UpdateType9Choice> updateType;
 	/**
-	 * Specifies the type of update requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,6 +255,9 @@ public class SecuritiesSettlementTransactionModificationRequestV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule.forSecuritiesSettlementTransactionModificationRequestV02,
+						com.tools20022.repository.constraints.ConstraintSecuritiesFinancingSettlementUsageRule.forSecuritiesSettlementTransactionModificationRequestV02,
+						com.tools20022.repository.constraints.ConstraintLinkagesUsageRule.forSecuritiesSettlementTransactionModificationRequestV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionModificationRequestV02";
 				definition = "Scope\nThis message is sent by an account owner to an account servicer. \n\nThe account owner will generally be:\n\n- a central securities depository participant which has an account with a central securities depository or a market infrastructure\n\n- an investment manager which has an account with a custodian acting as accounting and/or settlement agent.\n\nIt is used to request the modification of non core business data (matching or non-matching) information in a pending or settled instruction. It can also be used for the enrichment of an incomplete transaction.\n\n\nUsage\nThe modification must only contain the data to be modified.\nThe message may also be used to:\n- re-send a message sent by the account owner to the account servicer,\n- provide a third party with a copy of a message being sent by the account owner for information,\n- re-send to a third party a copy of a message being sent by the account owner for information\nusing the relevant elements in the Business Application Header.\n\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
@@ -263,25 +287,25 @@ public class SecuritiesSettlementTransactionModificationRequestV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ModfdTxDtls", required = true)
 	public TransactionDetails41 getModifiedTransactionDetails() {
 		return modifiedTransactionDetails;
 	}
 
-	public void setModifiedTransactionDetails(TransactionDetails41 modifiedTransactionDetails) {
-		this.modifiedTransactionDetails = modifiedTransactionDetails;
+	public SecuritiesSettlementTransactionModificationRequestV02 setModifiedTransactionDetails(TransactionDetails41 modifiedTransactionDetails) {
+		this.modifiedTransactionDetails = Objects.requireNonNull(modifiedTransactionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "UpdTp", required = true)
 	public List<UpdateType9Choice> getUpdateType() {
-		return updateType;
+		return updateType == null ? updateType = new ArrayList<>() : updateType;
 	}
 
-	public void setUpdateType(List<UpdateType9Choice> updateType) {
-		this.updateType = updateType;
+	public SecuritiesSettlementTransactionModificationRequestV02 setUpdateType(List<UpdateType9Choice> updateType) {
+		this.updateType = Objects.requireNonNull(updateType);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.038.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.038.001.02")
 	static public class Document {
 		@XmlElement(name = "SctiesSttlmTxModReq", required = true)
 		public SecuritiesSettlementTransactionModificationRequestV02 messageBody;

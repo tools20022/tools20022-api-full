@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.MandatoryCorporateAction;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Mandatory with choice corporate action event that involves a choice on behalf
@@ -40,6 +42,10 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.MandatoryCorporateAction
+ * MandatoryCorporateAction}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -48,10 +54,6 @@ import java.util.List;
  * ChoiceCorporateAction.mmCorporateActionOptionDefinition}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.MandatoryCorporateAction
- * MandatoryCorporateAction}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -64,8 +66,8 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,8 +85,8 @@ public class ChoiceCorporateAction extends MandatoryCorporateAction {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.CorporateActionOption> corporateActionOptionDefinition;
 	/**
-	 * Definition of the option of a corporate event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,8 +148,8 @@ public class ChoiceCorporateAction extends MandatoryCorporateAction {
 		{
 			derivation_lazy = () -> Arrays.asList(InstructedBalanceDetails1.mmOptionDetails, InstructedBalanceDetails2.mmOptionDetails, InstructedBalanceDetails3.mmOptionDetails, InstructedBalanceDetails4.mmOptionDetails,
 					CorporateActionDeactivationInstruction1.mmOptionDetails, InstructedBalanceDetails5.mmOptionDetails, InstructedBalanceDetails6.mmOptionDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ChoiceCorporateAction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ChoiceCorporateAction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionOptionDefinition";
 			definition = "Definition of the option of a corporate event.";
@@ -161,7 +163,7 @@ public class ChoiceCorporateAction extends MandatoryCorporateAction {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChoiceCorporateAction";
 				definition = "Mandatory with choice corporate action event that involves a choice on behalf of the owner of the securities. The shareholders are given a chance to choose among several options.";
@@ -179,10 +181,11 @@ public class ChoiceCorporateAction extends MandatoryCorporateAction {
 	}
 
 	public List<CorporateActionOption> getCorporateActionOptionDefinition() {
-		return corporateActionOptionDefinition;
+		return corporateActionOptionDefinition == null ? corporateActionOptionDefinition = new ArrayList<>() : corporateActionOptionDefinition;
 	}
 
-	public void setCorporateActionOptionDefinition(List<com.tools20022.repository.entity.CorporateActionOption> corporateActionOptionDefinition) {
-		this.corporateActionOptionDefinition = corporateActionOptionDefinition;
+	public ChoiceCorporateAction setCorporateActionOptionDefinition(List<com.tools20022.repository.entity.CorporateActionOption> corporateActionOptionDefinition) {
+		this.corporateActionOptionDefinition = Objects.requireNonNull(corporateActionOptionDefinition);
+		return this;
 	}
 }

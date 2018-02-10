@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,8 +47,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,16 +59,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Represents different types of derivative."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Derivative1", propOrder = {"future", "option"})
 public class Derivative1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Futr")
 	protected Future2 future;
 	/**
-	 * Parameters for contracts which obligate the buyer to receive and the
-	 * seller to deliver in the future the assets specified at an agreed price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -93,7 +94,7 @@ public class Derivative1 {
 	 */
 	public static final MMMessageAssociationEnd mmFuture = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Derivative1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Derivative1.mmObject();
 			isDerived = false;
 			xmlTag = "Futr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -105,12 +106,11 @@ public class Derivative1 {
 			type_lazy = () -> com.tools20022.repository.msg.Future2.mmObject();
 		}
 	};
+	@XmlElement(name = "Optn")
 	protected Option7 option;
 	/**
-	 * Contracts which grant to the holder either the privilege to purchase or
-	 * the privilege to sell the assets specified at a predetermined price or
-	 * formula at or within a time in the future.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -136,7 +136,7 @@ public class Derivative1 {
 	 */
 	public static final MMMessageAssociationEnd mmOption = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Derivative1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Derivative1.mmObject();
 			isDerived = false;
 			xmlTag = "Optn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,8 +152,8 @@ public class Derivative1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Derivative1.mmFuture, Derivative1.mmOption);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Derivative1.mmFuture, com.tools20022.repository.msg.Derivative1.mmOption);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Derivative1";
 				definition = "Represents different types of derivative.";
@@ -162,21 +162,21 @@ public class Derivative1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Futr")
-	public Future2 getFuture() {
-		return future;
+	public Optional<Future2> getFuture() {
+		return future == null ? Optional.empty() : Optional.of(future);
 	}
 
-	public void setFuture(com.tools20022.repository.msg.Future2 future) {
+	public Derivative1 setFuture(com.tools20022.repository.msg.Future2 future) {
 		this.future = future;
+		return this;
 	}
 
-	@XmlElement(name = "Optn")
-	public Option7 getOption() {
-		return option;
+	public Optional<Option7> getOption() {
+		return option == null ? Optional.empty() : Optional.of(option);
 	}
 
-	public void setOption(com.tools20022.repository.msg.Option7 option) {
+	public Derivative1 setOption(com.tools20022.repository.msg.Option7 option) {
 		this.option = option;
+		return this;
 	}
 }

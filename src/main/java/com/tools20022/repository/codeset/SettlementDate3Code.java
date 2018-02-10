@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SettlementDateCode;
+import com.tools20022.repository.codeset.SettlementDate3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the date of settlement, in coded form.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SettlementDateCode
- * SettlementDateCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#mmSellersOption
- * SettlementDate3Code.mmSellersOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#SellersOption
+ * SettlementDate3Code.SellersOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#mmToBeAnnouncedTrade
- * SettlementDate3Code.mmToBeAnnouncedTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#ToBeAnnouncedTrade
+ * SettlementDate3Code.ToBeAnnouncedTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#mmWhenDistributed
- * SettlementDate3Code.mmWhenDistributed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#WhenDistributed
+ * SettlementDate3Code.WhenDistributed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#mmWhenIssuedOrDistributed
- * SettlementDate3Code.mmWhenIssuedOrDistributed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#WhenIssuedOrDistributed
+ * SettlementDate3Code.WhenIssuedOrDistributed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#mmWhenIssued
- * SettlementDate3Code.mmWhenIssued}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate3Code#WhenIssued
+ * SettlementDate3Code.WhenIssued}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SettlementDateCode
+ * SettlementDateCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the date of settlement, in coded form."</li>
  * </ul>
  */
-public class SettlementDate3Code extends SettlementDateCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SettlementDate3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class SettlementDate3Code extends SettlementDateCode {
 	 * name} = "SellersOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSellersOption = new MMCode() {
+	public static final SettlementDate3Code SellersOption = new SettlementDate3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellersOption";
-			owner_lazy = () -> SettlementDate3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate3Code.mmObject();
+			codeName = SettlementDateCode.SellersOption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class SettlementDate3Code extends SettlementDateCode {
 	 * name} = "ToBeAnnouncedTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmToBeAnnouncedTrade = new MMCode() {
+	public static final SettlementDate3Code ToBeAnnouncedTrade = new SettlementDate3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToBeAnnouncedTrade";
-			owner_lazy = () -> SettlementDate3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate3Code.mmObject();
+			codeName = SettlementDateCode.ToBeAnnouncedTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class SettlementDate3Code extends SettlementDateCode {
 	 * name} = "WhenDistributed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWhenDistributed = new MMCode() {
+	public static final SettlementDate3Code WhenDistributed = new SettlementDate3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhenDistributed";
-			owner_lazy = () -> SettlementDate3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate3Code.mmObject();
+			codeName = SettlementDateCode.WhenDistributed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +169,12 @@ public class SettlementDate3Code extends SettlementDateCode {
 	 * name} = "WhenIssuedOrDistributed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWhenIssuedOrDistributed = new MMCode() {
+	public static final SettlementDate3Code WhenIssuedOrDistributed = new SettlementDate3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhenIssuedOrDistributed";
-			owner_lazy = () -> SettlementDate3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate3Code.mmObject();
+			codeName = SettlementDateCode.WhenIssuedOrDistributed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,27 +193,61 @@ public class SettlementDate3Code extends SettlementDateCode {
 	 * name} = "WhenIssued"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWhenIssued = new MMCode() {
+	public static final SettlementDate3Code WhenIssued = new SettlementDate3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhenIssued";
-			owner_lazy = () -> SettlementDate3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate3Code.mmObject();
+			codeName = SettlementDateCode.WhenIssued.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SettlementDate3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SettlementDate3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SELL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementDate3Code";
 				definition = "Specifies the date of settlement, in coded form.";
-				code_lazy = () -> Arrays.asList(SettlementDate3Code.mmSellersOption, SettlementDate3Code.mmToBeAnnouncedTrade, SettlementDate3Code.mmWhenDistributed, SettlementDate3Code.mmWhenIssuedOrDistributed,
-						SettlementDate3Code.mmWhenIssued);
 				trace_lazy = () -> SettlementDateCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementDate3Code.SellersOption, com.tools20022.repository.codeset.SettlementDate3Code.ToBeAnnouncedTrade,
+						com.tools20022.repository.codeset.SettlementDate3Code.WhenDistributed, com.tools20022.repository.codeset.SettlementDate3Code.WhenIssuedOrDistributed, com.tools20022.repository.codeset.SettlementDate3Code.WhenIssued);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SellersOption.getCodeName().get(), SellersOption);
+		codesByName.put(ToBeAnnouncedTrade.getCodeName().get(), ToBeAnnouncedTrade);
+		codesByName.put(WhenDistributed.getCodeName().get(), WhenDistributed);
+		codesByName.put(WhenIssuedOrDistributed.getCodeName().get(), WhenIssuedOrDistributed);
+		codesByName.put(WhenIssued.getCodeName().get(), WhenIssued);
+	}
+
+	public static SettlementDate3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SettlementDate3Code[] values() {
+		SettlementDate3Code[] values = new SettlementDate3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SettlementDate3Code> {
+		@Override
+		public SettlementDate3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SettlementDate3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

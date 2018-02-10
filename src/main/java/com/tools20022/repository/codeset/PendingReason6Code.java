@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PendingFailingReasonCode;
+import com.tools20022.repository.codeset.PendingReason6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason why a cancellation request sent for the related
@@ -31,35 +35,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PendingFailingReasonCode
- * PendingFailingReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason6Code#mmAccountServicerDeadlineMissed
- * PendingReason6Code.mmAccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason6Code#AccountServicerDeadlineMissed
+ * PendingReason6Code.AccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason6Code#mmAwaitingConfirmation
- * PendingReason6Code.mmAwaitingConfirmation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PendingReason6Code#mmOther
- * PendingReason6Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason6Code#AwaitingConfirmation
+ * PendingReason6Code.AwaitingConfirmation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason6Code#Other
+ * PendingReason6Code.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason6Code#mmConditionalRegistrar
- * PendingReason6Code.mmConditionalRegistrar}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason6Code#ConditionalRegistrar
+ * PendingReason6Code.ConditionalRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason6Code#mmConditionalCurrency
- * PendingReason6Code.mmConditionalCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason6Code#ConditionalCurrency
+ * PendingReason6Code.ConditionalCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason6Code#mmConditionalRealignement
- * PendingReason6Code.mmConditionalRealignement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason6Code#ConditionalRealignement
+ * PendingReason6Code.ConditionalRealignement}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingReasonCode
+ * PendingFailingReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PendingReason6Code extends PendingFailingReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PendingReason6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -104,11 +109,12 @@ public class PendingReason6Code extends PendingFailingReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
+	public static final PendingReason6Code AccountServicerDeadlineMissed = new PendingReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
-			owner_lazy = () -> PendingReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason6Code.mmObject();
+			codeName = PendingFailingReasonCode.AccountServicerDeadlineMissed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -127,11 +133,12 @@ public class PendingReason6Code extends PendingFailingReasonCode {
 	 * name} = "AwaitingConfirmation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingConfirmation = new MMCode() {
+	public static final PendingReason6Code AwaitingConfirmation = new PendingReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingConfirmation";
-			owner_lazy = () -> PendingReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason6Code.mmObject();
+			codeName = PendingFailingReasonCode.AwaitingConfirmation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -150,11 +157,12 @@ public class PendingReason6Code extends PendingFailingReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final PendingReason6Code Other = new PendingReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> PendingReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason6Code.mmObject();
+			codeName = PendingFailingReasonCode.Other.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -173,11 +181,12 @@ public class PendingReason6Code extends PendingFailingReasonCode {
 	 * name} = "ConditionalRegistrar"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConditionalRegistrar = new MMCode() {
+	public static final PendingReason6Code ConditionalRegistrar = new PendingReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalRegistrar";
-			owner_lazy = () -> PendingReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason6Code.mmObject();
+			codeName = PendingFailingReasonCode.ConditionalRegistrar.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -196,11 +205,12 @@ public class PendingReason6Code extends PendingFailingReasonCode {
 	 * name} = "ConditionalCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConditionalCurrency = new MMCode() {
+	public static final PendingReason6Code ConditionalCurrency = new PendingReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalCurrency";
-			owner_lazy = () -> PendingReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason6Code.mmObject();
+			codeName = PendingFailingReasonCode.ConditionalCurrency.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -219,28 +229,64 @@ public class PendingReason6Code extends PendingFailingReasonCode {
 	 * name} = "ConditionalRealignement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConditionalRealignement = new MMCode() {
+	public static final PendingReason6Code ConditionalRealignement = new PendingReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalRealignement";
-			owner_lazy = () -> PendingReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason6Code.mmObject();
+			codeName = PendingFailingReasonCode.ConditionalRealignement.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PendingReason6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PendingReason6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingReason6Code";
 				definition = "Specifies the reason why a cancellation request sent for the related instruction is pending.";
 				nextVersions_lazy = () -> Arrays.asList(PendingReason9Code.mmObject());
-				code_lazy = () -> Arrays.asList(PendingReason6Code.mmAccountServicerDeadlineMissed, PendingReason6Code.mmAwaitingConfirmation, PendingReason6Code.mmOther, PendingReason6Code.mmConditionalRegistrar,
-						PendingReason6Code.mmConditionalCurrency, PendingReason6Code.mmConditionalRealignement);
 				trace_lazy = () -> PendingFailingReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason6Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingReason6Code.AwaitingConfirmation,
+						com.tools20022.repository.codeset.PendingReason6Code.Other, com.tools20022.repository.codeset.PendingReason6Code.ConditionalRegistrar, com.tools20022.repository.codeset.PendingReason6Code.ConditionalCurrency,
+						com.tools20022.repository.codeset.PendingReason6Code.ConditionalRealignement);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccountServicerDeadlineMissed.getCodeName().get(), AccountServicerDeadlineMissed);
+		codesByName.put(AwaitingConfirmation.getCodeName().get(), AwaitingConfirmation);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(ConditionalRegistrar.getCodeName().get(), ConditionalRegistrar);
+		codesByName.put(ConditionalCurrency.getCodeName().get(), ConditionalCurrency);
+		codesByName.put(ConditionalRealignement.getCodeName().get(), ConditionalRealignement);
+	}
+
+	public static PendingReason6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PendingReason6Code[] values() {
+		PendingReason6Code[] values = new PendingReason6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PendingReason6Code> {
+		@Override
+		public PendingReason6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PendingReason6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

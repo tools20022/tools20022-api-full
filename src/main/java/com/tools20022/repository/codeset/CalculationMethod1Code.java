@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CalculationMethodCode;
+import com.tools20022.repository.codeset.CalculationMethod1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates if the method for interest calculation is simple or compounding.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CalculationMethodCode
- * CalculationMethodCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationMethod1Code#mmSimple
- * CalculationMethod1Code.mmSimple}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationMethod1Code#Simple
+ * CalculationMethod1Code.Simple}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationMethod1Code#mmCompounding
- * CalculationMethod1Code.mmCompounding}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationMethod1Code#Compounding
+ * CalculationMethod1Code.Compounding}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CalculationMethodCode
+ * CalculationMethodCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Indicates if the method for interest calculation is simple or compounding."</li>
  * </ul>
  */
-public class CalculationMethod1Code extends CalculationMethodCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CalculationMethod1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +89,12 @@ public class CalculationMethod1Code extends CalculationMethodCode {
 	 * name} = "Simple"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSimple = new MMCode() {
+	public static final CalculationMethod1Code Simple = new CalculationMethod1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Simple";
-			owner_lazy = () -> CalculationMethod1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationMethod1Code.mmObject();
+			codeName = CalculationMethodCode.Simple.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,26 +113,57 @@ public class CalculationMethod1Code extends CalculationMethodCode {
 	 * name} = "Compounding"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompounding = new MMCode() {
+	public static final CalculationMethod1Code Compounding = new CalculationMethod1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compounding";
-			owner_lazy = () -> CalculationMethod1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationMethod1Code.mmObject();
+			codeName = CalculationMethodCode.Compounding.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CalculationMethod1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CalculationMethod1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SIMP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CalculationMethod1Code";
 				definition = "Indicates if the method for interest calculation is simple or compounding.";
-				code_lazy = () -> Arrays.asList(CalculationMethod1Code.mmSimple, CalculationMethod1Code.mmCompounding);
 				trace_lazy = () -> CalculationMethodCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CalculationMethod1Code.Simple, com.tools20022.repository.codeset.CalculationMethod1Code.Compounding);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Simple.getCodeName().get(), Simple);
+		codesByName.put(Compounding.getCodeName().get(), Compounding);
+	}
+
+	public static CalculationMethod1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CalculationMethod1Code[] values() {
+		CalculationMethod1Code[] values = new CalculationMethod1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CalculationMethod1Code> {
+		@Override
+		public CalculationMethod1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CalculationMethod1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

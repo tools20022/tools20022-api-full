@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.ModelForm;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identification of a model form."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ModelFormIdentification1", propOrder = {"identification", "version"})
 public class ModelFormIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected ModelFormIdentification1Choice identification;
 	/**
-	 * Identification of the model form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +110,7 @@ public class ModelFormIdentification1 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ModelForm.mmIdentification;
-			componentContext_lazy = () -> ModelFormIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ModelFormIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +121,11 @@ public class ModelFormIdentification1 {
 			complexType_lazy = () -> ModelFormIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Vrsn")
 	protected Max35Text version;
 	/**
-	 * Version of the model form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -154,7 +158,7 @@ public class ModelFormIdentification1 {
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ModelForm.mmVersion;
-			componentContext_lazy = () -> ModelFormIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ModelFormIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,9 +173,9 @@ public class ModelFormIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ModelFormIdentification1.mmIdentification, ModelFormIdentification1.mmVersion);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModelFormIdentification1.mmIdentification, com.tools20022.repository.msg.ModelFormIdentification1.mmVersion);
 				trace_lazy = () -> ModelForm.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ModelFormIdentification1";
 				definition = "Identification of a model form.";
@@ -180,21 +184,21 @@ public class ModelFormIdentification1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public ModelFormIdentification1Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(ModelFormIdentification1Choice identification) {
-		this.identification = identification;
+	public ModelFormIdentification1 setIdentification(ModelFormIdentification1Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Vrsn")
-	public Max35Text getVersion() {
-		return version;
+	public Optional<Max35Text> getVersion() {
+		return version == null ? Optional.empty() : Optional.of(version);
 	}
 
-	public void setVersion(Max35Text version) {
+	public ModelFormIdentification1 setVersion(Max35Text version) {
 		this.version = version;
+		return this;
 	}
 }

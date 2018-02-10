@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AcknowledgementReasonCode;
+import com.tools20022.repository.codeset.AcknowledgementReason7Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies additional information about the processed instruction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode
- * AcknowledgementReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason7Code#mmNotStraightThroughProcessing
- * AcknowledgementReason7Code.mmNotStraightThroughProcessing}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason7Code#NotStraightThroughProcessing
+ * AcknowledgementReason7Code.NotStraightThroughProcessing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason7Code#mmOther
- * AcknowledgementReason7Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason7Code#Other
+ * AcknowledgementReason7Code.Other}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode
+ * AcknowledgementReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,7 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies additional information about the processed instruction."</li>
  * </ul>
  */
-public class AcknowledgementReason7Code extends AcknowledgementReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AcknowledgementReason7Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -78,11 +83,12 @@ public class AcknowledgementReason7Code extends AcknowledgementReasonCode {
 	 * name} = "NotStraightThroughProcessing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotStraightThroughProcessing = new MMCode() {
+	public static final AcknowledgementReason7Code NotStraightThroughProcessing = new AcknowledgementReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotStraightThroughProcessing";
-			owner_lazy = () -> AcknowledgementReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AcknowledgementReason7Code.mmObject();
+			codeName = AcknowledgementReasonCode.NotStraightThroughProcessing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -101,25 +107,56 @@ public class AcknowledgementReason7Code extends AcknowledgementReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final AcknowledgementReason7Code Other = new AcknowledgementReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> AcknowledgementReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AcknowledgementReason7Code.mmObject();
+			codeName = AcknowledgementReasonCode.Other.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AcknowledgementReason7Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AcknowledgementReason7Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcknowledgementReason7Code";
 				definition = "Specifies additional information about the processed instruction.";
-				code_lazy = () -> Arrays.asList(AcknowledgementReason7Code.mmNotStraightThroughProcessing, AcknowledgementReason7Code.mmOther);
 				trace_lazy = () -> AcknowledgementReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcknowledgementReason7Code.NotStraightThroughProcessing, com.tools20022.repository.codeset.AcknowledgementReason7Code.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NotStraightThroughProcessing.getCodeName().get(), NotStraightThroughProcessing);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static AcknowledgementReason7Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AcknowledgementReason7Code[] values() {
+		AcknowledgementReason7Code[] values = new AcknowledgementReason7Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AcknowledgementReason7Code> {
+		@Override
+		public AcknowledgementReason7Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AcknowledgementReason7Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

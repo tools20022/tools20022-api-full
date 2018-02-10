@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CollateralValueCriteria1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,16 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Definition of the collateral value query criteria."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CollateralValueCriteriaDefinition1Choice", propOrder = {"queryName", "newCriteria"})
 public class CollateralValueCriteriaDefinition1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QryNm", required = true)
 	protected Max35Text queryName;
 	/**
-	 * Recalls the criteria (search and return criteria) defined in a preceding
-	 * query.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,7 +102,7 @@ public class CollateralValueCriteriaDefinition1Choice {
 	 */
 	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CollateralValueCriteriaDefinition1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralValueCriteriaDefinition1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QryNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +113,11 @@ public class CollateralValueCriteriaDefinition1Choice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NewCrit", required = true)
 	protected CollateralValueCriteria1 newCriteria;
 	/**
-	 * Explicitly defines the query criteria.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -142,7 +144,7 @@ public class CollateralValueCriteriaDefinition1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CollateralValueCriteriaDefinition1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralValueCriteriaDefinition1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NewCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,8 +160,8 @@ public class CollateralValueCriteriaDefinition1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CollateralValueCriteriaDefinition1Choice.mmQueryName, CollateralValueCriteriaDefinition1Choice.mmNewCriteria);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralValueCriteriaDefinition1Choice.mmQueryName, com.tools20022.repository.choice.CollateralValueCriteriaDefinition1Choice.mmNewCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueCriteriaDefinition1Choice";
 				definition = "Definition of the collateral value query criteria.";
@@ -168,21 +170,21 @@ public class CollateralValueCriteriaDefinition1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QryNm", required = true)
 	public Max35Text getQueryName() {
 		return queryName;
 	}
 
-	public void setQueryName(Max35Text queryName) {
-		this.queryName = queryName;
+	public CollateralValueCriteriaDefinition1Choice setQueryName(Max35Text queryName) {
+		this.queryName = Objects.requireNonNull(queryName);
+		return this;
 	}
 
-	@XmlElement(name = "NewCrit", required = true)
 	public CollateralValueCriteria1 getNewCriteria() {
 		return newCriteria;
 	}
 
-	public void setNewCriteria(CollateralValueCriteria1 newCriteria) {
-		this.newCriteria = newCriteria;
+	public CollateralValueCriteriaDefinition1Choice setNewCriteria(CollateralValueCriteria1 newCriteria) {
+		this.newCriteria = Objects.requireNonNull(newCriteria);
+		return this;
 	}
 }

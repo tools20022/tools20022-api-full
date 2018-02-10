@@ -29,9 +29,8 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.TerminalManagementSystem;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +73,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,15 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * ATMCommand1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMCommand4", propOrder = {"type", "urgency", "dateTime", "commandIdentification", "reason", "traceReason", "additionalReasonInformation", "commandParameters"})
 public class ATMCommand4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected ATMCommand2Code type;
 	/**
-	 * Type of command to be performed by the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -129,7 +129,7 @@ public class ATMCommand4 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCommand4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand4.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,10 +141,11 @@ public class ATMCommand4 {
 			simpleType_lazy = () -> ATMCommand2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Urgcy", required = true)
 	protected TMSContactLevel2Code urgency;
 	/**
-	 * Urgency of the command.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -182,7 +183,7 @@ public class ATMCommand4 {
 	public static final MMMessageAttribute mmUrgency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementSystem.mmContactLevel;
-			componentContext_lazy = () -> ATMCommand4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand4.mmObject();
 			isDerived = false;
 			xmlTag = "Urgcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,10 +195,11 @@ public class ATMCommand4 {
 			simpleType_lazy = () -> TMSContactLevel2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DtTm")
 	protected ISODateTime dateTime;
 	/**
-	 * Date time on which the command must be performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,7 +230,7 @@ public class ATMCommand4 {
 	 */
 	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCommand4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand4.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,10 +242,11 @@ public class ATMCommand4 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "CmdId")
 	protected ATMCommandIdentification1 commandIdentification;
 	/**
-	 * Identification of the entity issuing the command.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -274,7 +277,7 @@ public class ATMCommand4 {
 	 */
 	public static final MMMessageAssociationEnd mmCommandIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMCommand4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand4.mmObject();
 			isDerived = false;
 			xmlTag = "CmdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -287,10 +290,11 @@ public class ATMCommand4 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMCommandIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn")
 	protected ATMCommandReason1Code reason;
 	/**
-	 * Reason for sending the command.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -317,7 +321,7 @@ public class ATMCommand4 {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCommand4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand4.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -328,11 +332,11 @@ public class ATMCommand4 {
 			simpleType_lazy = () -> ATMCommandReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TracRsn")
 	protected List<ATMCommandReason1Code> traceReason;
 	/**
-	 * Trace of reasons by the entities in the path from the origin of the
-	 * command to the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -361,7 +365,7 @@ public class ATMCommand4 {
 	 */
 	public static final MMMessageAttribute mmTraceReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCommand4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand4.mmObject();
 			isDerived = false;
 			xmlTag = "TracRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -371,10 +375,11 @@ public class ATMCommand4 {
 			simpleType_lazy = () -> ATMCommandReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRsnInf")
 	protected Max70Text additionalReasonInformation;
 	/**
-	 * Additional information about the reason to request this command.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -401,7 +406,7 @@ public class ATMCommand4 {
 	 */
 	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCommand4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand4.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -412,10 +417,11 @@ public class ATMCommand4 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CmdParams")
 	protected ATMCommandParameters2Choice commandParameters;
 	/**
-	 * Specific parameters attached to the command.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -446,7 +452,7 @@ public class ATMCommand4 {
 	 */
 	public static final MMMessageAssociationEnd mmCommandParameters = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMCommand4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand4.mmObject();
 			isDerived = false;
 			xmlTag = "CmdParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -463,10 +469,11 @@ public class ATMCommand4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMCommand4.mmType, ATMCommand4.mmUrgency, ATMCommand4.mmDateTime, ATMCommand4.mmCommandIdentification, ATMCommand4.mmReason, ATMCommand4.mmTraceReason,
-						ATMCommand4.mmAdditionalReasonInformation, ATMCommand4.mmCommandParameters);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand4.mmType, com.tools20022.repository.msg.ATMCommand4.mmUrgency, com.tools20022.repository.msg.ATMCommand4.mmDateTime,
+						com.tools20022.repository.msg.ATMCommand4.mmCommandIdentification, com.tools20022.repository.msg.ATMCommand4.mmReason, com.tools20022.repository.msg.ATMCommand4.mmTraceReason,
+						com.tools20022.repository.msg.ATMCommand4.mmAdditionalReasonInformation, com.tools20022.repository.msg.ATMCommand4.mmCommandParameters);
 				trace_lazy = () -> TerminalManagementSystem.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand4";
 				definition = "Maintenance command the ATM must perform.";
@@ -476,75 +483,75 @@ public class ATMCommand4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public ATMCommand2Code getType() {
 		return type;
 	}
 
-	public void setType(ATMCommand2Code type) {
-		this.type = type;
+	public ATMCommand4 setType(ATMCommand2Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Urgcy", required = true)
 	public TMSContactLevel2Code getUrgency() {
 		return urgency;
 	}
 
-	public void setUrgency(TMSContactLevel2Code urgency) {
-		this.urgency = urgency;
+	public ATMCommand4 setUrgency(TMSContactLevel2Code urgency) {
+		this.urgency = Objects.requireNonNull(urgency);
+		return this;
 	}
 
-	@XmlElement(name = "DtTm")
-	public ISODateTime getDateTime() {
-		return dateTime;
+	public Optional<ISODateTime> getDateTime() {
+		return dateTime == null ? Optional.empty() : Optional.of(dateTime);
 	}
 
-	public void setDateTime(ISODateTime dateTime) {
+	public ATMCommand4 setDateTime(ISODateTime dateTime) {
 		this.dateTime = dateTime;
+		return this;
 	}
 
-	@XmlElement(name = "CmdId")
-	public ATMCommandIdentification1 getCommandIdentification() {
-		return commandIdentification;
+	public Optional<ATMCommandIdentification1> getCommandIdentification() {
+		return commandIdentification == null ? Optional.empty() : Optional.of(commandIdentification);
 	}
 
-	public void setCommandIdentification(com.tools20022.repository.msg.ATMCommandIdentification1 commandIdentification) {
+	public ATMCommand4 setCommandIdentification(com.tools20022.repository.msg.ATMCommandIdentification1 commandIdentification) {
 		this.commandIdentification = commandIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Rsn")
-	public ATMCommandReason1Code getReason() {
-		return reason;
+	public Optional<ATMCommandReason1Code> getReason() {
+		return reason == null ? Optional.empty() : Optional.of(reason);
 	}
 
-	public void setReason(ATMCommandReason1Code reason) {
+	public ATMCommand4 setReason(ATMCommandReason1Code reason) {
 		this.reason = reason;
+		return this;
 	}
 
-	@XmlElement(name = "TracRsn")
 	public List<ATMCommandReason1Code> getTraceReason() {
-		return traceReason;
+		return traceReason == null ? traceReason = new ArrayList<>() : traceReason;
 	}
 
-	public void setTraceReason(List<ATMCommandReason1Code> traceReason) {
-		this.traceReason = traceReason;
+	public ATMCommand4 setTraceReason(List<ATMCommandReason1Code> traceReason) {
+		this.traceReason = Objects.requireNonNull(traceReason);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRsnInf")
-	public Max70Text getAdditionalReasonInformation() {
-		return additionalReasonInformation;
+	public Optional<Max70Text> getAdditionalReasonInformation() {
+		return additionalReasonInformation == null ? Optional.empty() : Optional.of(additionalReasonInformation);
 	}
 
-	public void setAdditionalReasonInformation(Max70Text additionalReasonInformation) {
+	public ATMCommand4 setAdditionalReasonInformation(Max70Text additionalReasonInformation) {
 		this.additionalReasonInformation = additionalReasonInformation;
+		return this;
 	}
 
-	@XmlElement(name = "CmdParams")
-	public ATMCommandParameters2Choice getCommandParameters() {
-		return commandParameters;
+	public Optional<ATMCommandParameters2Choice> getCommandParameters() {
+		return commandParameters == null ? Optional.empty() : Optional.of(commandParameters);
 	}
 
-	public void setCommandParameters(ATMCommandParameters2Choice commandParameters) {
+	public ATMCommand4 setCommandParameters(ATMCommandParameters2Choice commandParameters) {
 		this.commandParameters = commandParameters;
+		return this;
 	}
 }

@@ -28,6 +28,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecurityInstrumentDescription13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the attributes of the financial instrument."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrumentAttributes3Choice", propOrder = {"identification", "other"})
 public class FinancialInstrumentAttributes3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected ISINOct2015Identifier identification;
 	/**
-	 * Identification of a financial instrument admitted to trading.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +112,7 @@ public class FinancialInstrumentAttributes3Choice {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
-			componentContext_lazy = () -> FinancialInstrumentAttributes3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,11 +123,11 @@ public class FinancialInstrumentAttributes3Choice {
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Othr", required = true)
 	protected SecurityInstrumentDescription13 other;
 	/**
-	 * Description of the financial instrument, such as a a derivative, when the
-	 * instrument is not admitted to trading on a trading venue.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -160,7 +162,7 @@ public class FinancialInstrumentAttributes3Choice {
 	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmGenericIdentification;
-			componentContext_lazy = () -> FinancialInstrumentAttributes3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,9 +178,9 @@ public class FinancialInstrumentAttributes3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentAttributes3Choice.mmIdentification, FinancialInstrumentAttributes3Choice.mmOther);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice.mmIdentification, com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice.mmOther);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAttributes3Choice";
 				definition = "Specifies the attributes of the financial instrument.";
@@ -187,21 +189,21 @@ public class FinancialInstrumentAttributes3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public ISINOct2015Identifier getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(ISINOct2015Identifier identification) {
-		this.identification = identification;
+	public FinancialInstrumentAttributes3Choice setIdentification(ISINOct2015Identifier identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Othr", required = true)
 	public SecurityInstrumentDescription13 getOther() {
 		return other;
 	}
 
-	public void setOther(SecurityInstrumentDescription13 other) {
-		this.other = other;
+	public FinancialInstrumentAttributes3Choice setOther(SecurityInstrumentDescription13 other) {
+		this.other = Objects.requireNonNull(other);
+		return this;
 	}
 }

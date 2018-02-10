@@ -25,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecuritiesTransactionPrice1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,16 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Choice element capturing strike price related descriptive information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesTransactionPrice4Choice", propOrder = {"price", "noPrice"})
 public class SecuritiesTransactionPrice4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pric", required = true)
 	protected SecuritiesTransactionPrice2Choice price;
 	/**
-	 * Predetermined price at which the holder will have to buy or sell the
-	 * underlying instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +110,7 @@ public class SecuritiesTransactionPrice4Choice {
 	public static final MMMessageAssociationEnd mmPrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Price.mmSecuritiesPricing;
-			componentContext_lazy = () -> SecuritiesTransactionPrice4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +122,11 @@ public class SecuritiesTransactionPrice4Choice {
 			type_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NoPric", required = true)
 	protected SecuritiesTransactionPrice1 noPrice;
 	/**
-	 * Captures where no price is yet known.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -151,7 +153,7 @@ public class SecuritiesTransactionPrice4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmNoPrice = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesTransactionPrice4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,9 +169,9 @@ public class SecuritiesTransactionPrice4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesTransactionPrice4Choice.mmPrice, SecuritiesTransactionPrice4Choice.mmNoPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice.mmPrice, com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice.mmNoPrice);
 				trace_lazy = () -> Price.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionPrice4Choice";
 				definition = "Choice element capturing strike price related descriptive information.";
@@ -178,21 +180,21 @@ public class SecuritiesTransactionPrice4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pric", required = true)
 	public SecuritiesTransactionPrice2Choice getPrice() {
 		return price;
 	}
 
-	public void setPrice(com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice price) {
-		this.price = price;
+	public SecuritiesTransactionPrice4Choice setPrice(com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice price) {
+		this.price = Objects.requireNonNull(price);
+		return this;
 	}
 
-	@XmlElement(name = "NoPric", required = true)
 	public SecuritiesTransactionPrice1 getNoPrice() {
 		return noPrice;
 	}
 
-	public void setNoPrice(SecuritiesTransactionPrice1 noPrice) {
-		this.noPrice = noPrice;
+	public SecuritiesTransactionPrice4Choice setNoPrice(SecuritiesTransactionPrice1 noPrice) {
+		this.noPrice = Objects.requireNonNull(noPrice);
+		return this;
 	}
 }

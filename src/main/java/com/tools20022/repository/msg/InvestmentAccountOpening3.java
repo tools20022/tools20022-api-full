@@ -27,9 +27,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +73,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,16 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * InvestmentAccountOpening2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvestmentAccountOpening3", propOrder = {"openingType", "accountApplicationIdentification", "clientReference", "counterpartyReference", "existingAccountIdentification"})
 public class InvestmentAccountOpening3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OpngTp", required = true)
 	protected AccountOpeningType1Choice openingType;
 	/**
-	 * Specifies if the account opening instruction is about a newly created
-	 * account or a supplementary account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -136,7 +135,7 @@ public class InvestmentAccountOpening3 {
 	 */
 	public static final MMMessageAttribute mmOpeningType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentAccountOpening3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOpening3.mmObject();
 			isDerived = false;
 			xmlTag = "OpngTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,11 +147,11 @@ public class InvestmentAccountOpening3 {
 			complexType_lazy = () -> AccountOpeningType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctApplId")
 	protected Max35Text accountApplicationIdentification;
 	/**
-	 * Unique and unambiguous identifier of the account opening request at
-	 * application level.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,7 +185,7 @@ public class InvestmentAccountOpening3 {
 	 */
 	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentAccountOpening3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOpening3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctApplId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,11 +197,11 @@ public class InvestmentAccountOpening3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntRef")
 	protected Max35Text clientReference;
 	/**
-	 * Unique and unambiguous identification of a transaction, for example, a
-	 * transfer, as assigned by the investor or account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -242,7 +241,7 @@ public class InvestmentAccountOpening3 {
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
-			componentContext_lazy = () -> InvestmentAccountOpening3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOpening3.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -254,11 +253,11 @@ public class InvestmentAccountOpening3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrPtyRef")
 	protected AdditionalReference6 counterpartyReference;
 	/**
-	 * Unambiguous identification of the transaction, for example, a transfer,
-	 * as allocated by the counterparty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -299,7 +298,7 @@ public class InvestmentAccountOpening3 {
 	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
-			componentContext_lazy = () -> InvestmentAccountOpening3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOpening3.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -311,10 +310,11 @@ public class InvestmentAccountOpening3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmObject();
 		}
 	};
+	@XmlElement(name = "ExstgAcctId")
 	protected List<com.tools20022.repository.msg.Account23> existingAccountIdentification;
 	/**
-	 * Account to which the account opening is related.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -344,7 +344,7 @@ public class InvestmentAccountOpening3 {
 	 */
 	public static final MMMessageAssociationEnd mmExistingAccountIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InvestmentAccountOpening3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOpening3.mmObject();
 			isDerived = false;
 			xmlTag = "ExstgAcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -360,10 +360,11 @@ public class InvestmentAccountOpening3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InvestmentAccountOpening3.mmOpeningType, InvestmentAccountOpening3.mmAccountApplicationIdentification, InvestmentAccountOpening3.mmClientReference,
-						InvestmentAccountOpening3.mmCounterpartyReference, InvestmentAccountOpening3.mmExistingAccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOpening3.mmOpeningType, com.tools20022.repository.msg.InvestmentAccountOpening3.mmAccountApplicationIdentification,
+						com.tools20022.repository.msg.InvestmentAccountOpening3.mmClientReference, com.tools20022.repository.msg.InvestmentAccountOpening3.mmCounterpartyReference,
+						com.tools20022.repository.msg.InvestmentAccountOpening3.mmExistingAccountIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AccountOpeningInstructionV07.mmInstructionDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentAccountOpening3";
 				definition = "Information about the type of opening instruction and identification of the application request.";
@@ -373,48 +374,48 @@ public class InvestmentAccountOpening3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OpngTp", required = true)
 	public AccountOpeningType1Choice getOpeningType() {
 		return openingType;
 	}
 
-	public void setOpeningType(AccountOpeningType1Choice openingType) {
-		this.openingType = openingType;
+	public InvestmentAccountOpening3 setOpeningType(AccountOpeningType1Choice openingType) {
+		this.openingType = Objects.requireNonNull(openingType);
+		return this;
 	}
 
-	@XmlElement(name = "AcctApplId")
-	public Max35Text getAccountApplicationIdentification() {
-		return accountApplicationIdentification;
+	public Optional<Max35Text> getAccountApplicationIdentification() {
+		return accountApplicationIdentification == null ? Optional.empty() : Optional.of(accountApplicationIdentification);
 	}
 
-	public void setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
+	public InvestmentAccountOpening3 setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
 		this.accountApplicationIdentification = accountApplicationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ClntRef")
-	public Max35Text getClientReference() {
-		return clientReference;
+	public Optional<Max35Text> getClientReference() {
+		return clientReference == null ? Optional.empty() : Optional.of(clientReference);
 	}
 
-	public void setClientReference(Max35Text clientReference) {
+	public InvestmentAccountOpening3 setClientReference(Max35Text clientReference) {
 		this.clientReference = clientReference;
+		return this;
 	}
 
-	@XmlElement(name = "CtrPtyRef")
-	public AdditionalReference6 getCounterpartyReference() {
-		return counterpartyReference;
+	public Optional<AdditionalReference6> getCounterpartyReference() {
+		return counterpartyReference == null ? Optional.empty() : Optional.of(counterpartyReference);
 	}
 
-	public void setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference6 counterpartyReference) {
+	public InvestmentAccountOpening3 setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference6 counterpartyReference) {
 		this.counterpartyReference = counterpartyReference;
+		return this;
 	}
 
-	@XmlElement(name = "ExstgAcctId")
 	public List<Account23> getExistingAccountIdentification() {
-		return existingAccountIdentification;
+		return existingAccountIdentification == null ? existingAccountIdentification = new ArrayList<>() : existingAccountIdentification;
 	}
 
-	public void setExistingAccountIdentification(List<com.tools20022.repository.msg.Account23> existingAccountIdentification) {
-		this.existingAccountIdentification = existingAccountIdentification;
+	public InvestmentAccountOpening3 setExistingAccountIdentification(List<com.tools20022.repository.msg.Account23> existingAccountIdentification) {
+		this.existingAccountIdentification = Objects.requireNonNull(existingAccountIdentification);
+		return this;
 	}
 }

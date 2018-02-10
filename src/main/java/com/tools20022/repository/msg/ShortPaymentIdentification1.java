@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,22 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ShortPaymentIdentification1", propOrder = {"transactionIdentification", "interBankSettlementDate", "instructingAgent"})
 public class ShortPaymentIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId", required = true)
 	protected Max35Text transactionIdentification;
 	/**
-	 * Unique identification, as assigned by the first instructing agent, to
-	 * unambiguously identify the transaction that is passed on, unchanged,
-	 * throughout the entire interbank chain. Usage: The transaction
-	 * identification can be used for reconciliation, tracking or to link tasks
-	 * relating to the transaction on the interbank level. The instructing agent
-	 * has to make sure that the transaction identification is unique for a
-	 * pre-agreed period. Usage: this is the former PaymentInstructionReference
-	 * element.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,7 +121,7 @@ public class ShortPaymentIdentification1 {
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
-			componentContext_lazy = () -> ShortPaymentIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ShortPaymentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,12 +132,11 @@ public class ShortPaymentIdentification1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmDt", required = true)
 	protected ISODate interBankSettlementDate;
 	/**
-	 * Date on which the amount of money ceases to be available to the agent
-	 * that owes it and when the amount of money becomes available to the agent
-	 * to which it is due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,7 +171,7 @@ public class ShortPaymentIdentification1 {
 	public static final MMMessageAttribute mmInterBankSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
-			componentContext_lazy = () -> ShortPaymentIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ShortPaymentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,11 +182,11 @@ public class ShortPaymentIdentification1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "InstgAgt", required = true)
 	protected BranchAndFinancialInstitutionIdentification5 instructingAgent;
 	/**
-	 * Agent that instructs the next party in the chain to carry out the (set
-	 * of) instruction(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -227,7 +221,7 @@ public class ShortPaymentIdentification1 {
 	public static final MMMessageAssociationEnd mmInstructingAgent = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InstructingAgentRole.mmObject();
-			componentContext_lazy = () -> ShortPaymentIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ShortPaymentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "InstgAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,9 +237,10 @@ public class ShortPaymentIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ShortPaymentIdentification1.mmTransactionIdentification, ShortPaymentIdentification1.mmInterBankSettlementDate, ShortPaymentIdentification1.mmInstructingAgent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ShortPaymentIdentification1.mmTransactionIdentification, com.tools20022.repository.msg.ShortPaymentIdentification1.mmInterBankSettlementDate,
+						com.tools20022.repository.msg.ShortPaymentIdentification1.mmInstructingAgent);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ShortPaymentIdentification1";
 				definition = "Identifies a payment instruction by a simple set of characteristics which provides an unambiguous identification of the instruction.";
@@ -254,30 +249,30 @@ public class ShortPaymentIdentification1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public ShortPaymentIdentification1 setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmDt", required = true)
 	public ISODate getInterBankSettlementDate() {
 		return interBankSettlementDate;
 	}
 
-	public void setInterBankSettlementDate(ISODate interBankSettlementDate) {
-		this.interBankSettlementDate = interBankSettlementDate;
+	public ShortPaymentIdentification1 setInterBankSettlementDate(ISODate interBankSettlementDate) {
+		this.interBankSettlementDate = Objects.requireNonNull(interBankSettlementDate);
+		return this;
 	}
 
-	@XmlElement(name = "InstgAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getInstructingAgent() {
 		return instructingAgent;
 	}
 
-	public void setInstructingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructingAgent) {
-		this.instructingAgent = instructingAgent;
+	public ShortPaymentIdentification1 setInstructingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructingAgent) {
+		this.instructingAgent = Objects.requireNonNull(instructingAgent);
+		return this;
 	}
 }

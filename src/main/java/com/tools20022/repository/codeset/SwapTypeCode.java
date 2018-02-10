@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.SwapTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of an interest rate derivative when the contract type is a
@@ -33,35 +38,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#mmFloatToFloatMultiCurrencySwap
- * SwapTypeCode.mmFloatToFloatMultiCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#FloatToFloatMultiCurrencySwap
+ * SwapTypeCode.FloatToFloatMultiCurrencySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#mmInflationMultiCurrencySwap
- * SwapTypeCode.mmInflationMultiCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#InflationMultiCurrencySwap
+ * SwapTypeCode.InflationMultiCurrencySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#mmFloatToFloatSingleCurrencySwap
- * SwapTypeCode.mmFloatToFloatSingleCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#FloatToFloatSingleCurrencySwap
+ * SwapTypeCode.FloatToFloatSingleCurrencySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#mmFixedToFixedSingleCurrencySwap
- * SwapTypeCode.mmFixedToFixedSingleCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#FixedToFixedSingleCurrencySwap
+ * SwapTypeCode.FixedToFixedSingleCurrencySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#mmOvernightIndexMultiCurrencySwap
- * SwapTypeCode.mmOvernightIndexMultiCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#OvernightIndexMultiCurrencySwap
+ * SwapTypeCode.OvernightIndexMultiCurrencySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#mmOvernightIndexSingleCurrencySwap
- * SwapTypeCode.mmOvernightIndexSingleCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#OvernightIndexSingleCurrencySwap
+ * SwapTypeCode.OvernightIndexSingleCurrencySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#mmFixedToFloatMultiCurrencySwap
- * SwapTypeCode.mmFixedToFloatMultiCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#FixedToFloatMultiCurrencySwap
+ * SwapTypeCode.FixedToFloatMultiCurrencySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#mmFixedToFloatSingleCurrencySwap
- * SwapTypeCode.mmFixedToFloatSingleCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#FixedToFloatSingleCurrencySwap
+ * SwapTypeCode.FixedToFloatSingleCurrencySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#mmFixedToFixedMultiCurrencySwap
- * SwapTypeCode.mmFixedToFixedMultiCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#FixedToFixedMultiCurrencySwap
+ * SwapTypeCode.FixedToFixedMultiCurrencySwap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#mmInflationSingleCurrencySwap
- * SwapTypeCode.mmInflationSingleCurrencySwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.SwapTypeCode#InflationSingleCurrencySwap
+ * SwapTypeCode.InflationSingleCurrencySwap}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -74,8 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,7 +93,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class SwapTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SwapTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -111,12 +117,12 @@ public class SwapTypeCode {
 	 * definition} = "Float to Float Multi Currency Swap."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFloatToFloatMultiCurrencySwap = new MMCode() {
+	public static final SwapTypeCode FloatToFloatMultiCurrencySwap = new SwapTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatToFloatMultiCurrencySwap";
 			definition = "Float to Float Multi Currency Swap.";
-			owner_lazy = () -> SwapTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SwapTypeCode.mmObject();
 			codeName = "FFMC";
 		}
 	};
@@ -140,12 +146,12 @@ public class SwapTypeCode {
 	 * definition} = "Inflation Multi Currency Swap."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInflationMultiCurrencySwap = new MMCode() {
+	public static final SwapTypeCode InflationMultiCurrencySwap = new SwapTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InflationMultiCurrencySwap";
 			definition = "Inflation Multi Currency Swap.";
-			owner_lazy = () -> SwapTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SwapTypeCode.mmObject();
 			codeName = "IFMC";
 		}
 	};
@@ -169,12 +175,12 @@ public class SwapTypeCode {
 	 * definition} = "Float to Float Single Currency Swap."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFloatToFloatSingleCurrencySwap = new MMCode() {
+	public static final SwapTypeCode FloatToFloatSingleCurrencySwap = new SwapTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatToFloatSingleCurrencySwap";
 			definition = "Float to Float Single Currency Swap.";
-			owner_lazy = () -> SwapTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SwapTypeCode.mmObject();
 			codeName = "FFSC";
 		}
 	};
@@ -198,12 +204,12 @@ public class SwapTypeCode {
 	 * definition} = "Fixed to Fixed Single Currency Swap."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFixedToFixedSingleCurrencySwap = new MMCode() {
+	public static final SwapTypeCode FixedToFixedSingleCurrencySwap = new SwapTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedToFixedSingleCurrencySwap";
 			definition = "Fixed to Fixed Single Currency Swap.";
-			owner_lazy = () -> SwapTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SwapTypeCode.mmObject();
 			codeName = "XXSC";
 		}
 	};
@@ -227,12 +233,12 @@ public class SwapTypeCode {
 	 * definition} = "Overnight Index Multi Currency Swap."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOvernightIndexMultiCurrencySwap = new MMCode() {
+	public static final SwapTypeCode OvernightIndexMultiCurrencySwap = new SwapTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OvernightIndexMultiCurrencySwap";
 			definition = "Overnight Index Multi Currency Swap.";
-			owner_lazy = () -> SwapTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SwapTypeCode.mmObject();
 			codeName = "OSMC";
 		}
 	};
@@ -256,12 +262,12 @@ public class SwapTypeCode {
 	 * definition} = "Overnight Index Single Currency Swap."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOvernightIndexSingleCurrencySwap = new MMCode() {
+	public static final SwapTypeCode OvernightIndexSingleCurrencySwap = new SwapTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OvernightIndexSingleCurrencySwap";
 			definition = "Overnight Index Single Currency Swap.";
-			owner_lazy = () -> SwapTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SwapTypeCode.mmObject();
 			codeName = "OSSC";
 		}
 	};
@@ -285,12 +291,12 @@ public class SwapTypeCode {
 	 * definition} = "Fixed to Float Multi Currency Swap."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFixedToFloatMultiCurrencySwap = new MMCode() {
+	public static final SwapTypeCode FixedToFloatMultiCurrencySwap = new SwapTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedToFloatMultiCurrencySwap";
 			definition = "Fixed to Float Multi Currency Swap.";
-			owner_lazy = () -> SwapTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SwapTypeCode.mmObject();
 			codeName = "XFMC";
 		}
 	};
@@ -314,12 +320,12 @@ public class SwapTypeCode {
 	 * definition} = "Fixed to Float Single Currency Swap."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFixedToFloatSingleCurrencySwap = new MMCode() {
+	public static final SwapTypeCode FixedToFloatSingleCurrencySwap = new SwapTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedToFloatSingleCurrencySwap";
 			definition = "Fixed to Float Single Currency Swap.";
-			owner_lazy = () -> SwapTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SwapTypeCode.mmObject();
 			codeName = "XFSC";
 		}
 	};
@@ -343,12 +349,12 @@ public class SwapTypeCode {
 	 * definition} = "Fixed to Fixed Multi Currency Swap."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFixedToFixedMultiCurrencySwap = new MMCode() {
+	public static final SwapTypeCode FixedToFixedMultiCurrencySwap = new SwapTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedToFixedMultiCurrencySwap";
 			definition = "Fixed to Fixed Multi Currency Swap.";
-			owner_lazy = () -> SwapTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SwapTypeCode.mmObject();
 			codeName = "XXMC";
 		}
 	};
@@ -372,29 +378,69 @@ public class SwapTypeCode {
 	 * definition} = "Inflation Single Currency Swap."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInflationSingleCurrencySwap = new MMCode() {
+	public static final SwapTypeCode InflationSingleCurrencySwap = new SwapTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InflationSingleCurrencySwap";
 			definition = "Inflation Single Currency Swap.";
-			owner_lazy = () -> SwapTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SwapTypeCode.mmObject();
 			codeName = "IFSC";
 		}
 	};
+	final static private LinkedHashMap<String, SwapTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SwapTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwapTypeCode";
 				definition = "Specifies the type of an interest rate derivative when the contract type is a swap, a swaption, a future on a swap and / or a forward on a swap.";
-				code_lazy = () -> Arrays.asList(SwapTypeCode.mmFloatToFloatMultiCurrencySwap, SwapTypeCode.mmInflationMultiCurrencySwap, SwapTypeCode.mmFloatToFloatSingleCurrencySwap, SwapTypeCode.mmFixedToFixedSingleCurrencySwap,
-						SwapTypeCode.mmOvernightIndexMultiCurrencySwap, SwapTypeCode.mmOvernightIndexSingleCurrencySwap, SwapTypeCode.mmFixedToFloatMultiCurrencySwap, SwapTypeCode.mmFixedToFloatSingleCurrencySwap,
-						SwapTypeCode.mmFixedToFixedMultiCurrencySwap, SwapTypeCode.mmInflationSingleCurrencySwap);
 				derivation_lazy = () -> Arrays.asList(SwapType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SwapTypeCode.FloatToFloatMultiCurrencySwap, com.tools20022.repository.codeset.SwapTypeCode.InflationMultiCurrencySwap,
+						com.tools20022.repository.codeset.SwapTypeCode.FloatToFloatSingleCurrencySwap, com.tools20022.repository.codeset.SwapTypeCode.FixedToFixedSingleCurrencySwap,
+						com.tools20022.repository.codeset.SwapTypeCode.OvernightIndexMultiCurrencySwap, com.tools20022.repository.codeset.SwapTypeCode.OvernightIndexSingleCurrencySwap,
+						com.tools20022.repository.codeset.SwapTypeCode.FixedToFloatMultiCurrencySwap, com.tools20022.repository.codeset.SwapTypeCode.FixedToFloatSingleCurrencySwap,
+						com.tools20022.repository.codeset.SwapTypeCode.FixedToFixedMultiCurrencySwap, com.tools20022.repository.codeset.SwapTypeCode.InflationSingleCurrencySwap);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(FloatToFloatMultiCurrencySwap.getCodeName().get(), FloatToFloatMultiCurrencySwap);
+		codesByName.put(InflationMultiCurrencySwap.getCodeName().get(), InflationMultiCurrencySwap);
+		codesByName.put(FloatToFloatSingleCurrencySwap.getCodeName().get(), FloatToFloatSingleCurrencySwap);
+		codesByName.put(FixedToFixedSingleCurrencySwap.getCodeName().get(), FixedToFixedSingleCurrencySwap);
+		codesByName.put(OvernightIndexMultiCurrencySwap.getCodeName().get(), OvernightIndexMultiCurrencySwap);
+		codesByName.put(OvernightIndexSingleCurrencySwap.getCodeName().get(), OvernightIndexSingleCurrencySwap);
+		codesByName.put(FixedToFloatMultiCurrencySwap.getCodeName().get(), FixedToFloatMultiCurrencySwap);
+		codesByName.put(FixedToFloatSingleCurrencySwap.getCodeName().get(), FixedToFloatSingleCurrencySwap);
+		codesByName.put(FixedToFixedMultiCurrencySwap.getCodeName().get(), FixedToFixedMultiCurrencySwap);
+		codesByName.put(InflationSingleCurrencySwap.getCodeName().get(), InflationSingleCurrencySwap);
+	}
+
+	public static SwapTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SwapTypeCode[] values() {
+		SwapTypeCode[] values = new SwapTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SwapTypeCode> {
+		@Override
+		public SwapTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SwapTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

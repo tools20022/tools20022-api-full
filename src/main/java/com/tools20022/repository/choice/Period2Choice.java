@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.msg.DateTimePeriodDetails;
 import com.tools20022.repository.msg.Period2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Choice between date and date-time for the specification of a period."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Period2Choice", propOrder = {"fromDateTimeToDateTime", "fromDateToDate"})
 public class Period2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FrDtTmToDtTm", required = true)
 	protected DateTimePeriodDetails fromDateTimeToDateTime;
 	/**
-	 * Time span defined by a start date and time, and an end date and time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -94,6 +97,9 @@ public class Period2Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FrDtTmToDtTm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69B:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -108,9 +114,10 @@ public class Period2Choice {
 	public static final MMMessageAssociationEnd mmFromDateTimeToDateTime = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> DateTimePeriod.mmObject();
-			componentContext_lazy = () -> Period2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Period2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrDtTmToDtTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69B:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDateTimeToDateTime";
 			definition = "Time span defined by a start date and time, and an end date and time.";
@@ -120,10 +127,11 @@ public class Period2Choice {
 			type_lazy = () -> DateTimePeriodDetails.mmObject();
 		}
 	};
+	@XmlElement(name = "FrDtToDt", required = true)
 	protected Period2 fromDateToDate;
 	/**
-	 * Time span defined by a start date and time, and an end date and time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -141,6 +149,9 @@ public class Period2Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FrDtToDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69A:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -155,9 +166,10 @@ public class Period2Choice {
 	public static final MMMessageAssociationEnd mmFromDateToDate = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> DateTimePeriod.mmObject();
-			componentContext_lazy = () -> Period2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Period2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrDtToDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69A:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDateToDate";
 			definition = "Time span defined by a start date and time, and an end date and time.";
@@ -171,9 +183,9 @@ public class Period2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Period2Choice.mmFromDateTimeToDateTime, Period2Choice.mmFromDateToDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Period2Choice.mmFromDateTimeToDateTime, com.tools20022.repository.choice.Period2Choice.mmFromDateToDate);
 				trace_lazy = () -> DateTimePeriod.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Period2Choice";
 				definition = "Choice between date and date-time for the specification of a period.";
@@ -182,21 +194,21 @@ public class Period2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FrDtTmToDtTm", required = true)
 	public DateTimePeriodDetails getFromDateTimeToDateTime() {
 		return fromDateTimeToDateTime;
 	}
 
-	public void setFromDateTimeToDateTime(DateTimePeriodDetails fromDateTimeToDateTime) {
-		this.fromDateTimeToDateTime = fromDateTimeToDateTime;
+	public Period2Choice setFromDateTimeToDateTime(DateTimePeriodDetails fromDateTimeToDateTime) {
+		this.fromDateTimeToDateTime = Objects.requireNonNull(fromDateTimeToDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "FrDtToDt", required = true)
 	public Period2 getFromDateToDate() {
 		return fromDateToDate;
 	}
 
-	public void setFromDateToDate(Period2 fromDateToDate) {
-		this.fromDateToDate = fromDateToDate;
+	public Period2Choice setFromDateToDate(Period2 fromDateToDate) {
+		this.fromDateToDate = Objects.requireNonNull(fromDateToDate);
+		return this;
 	}
 }

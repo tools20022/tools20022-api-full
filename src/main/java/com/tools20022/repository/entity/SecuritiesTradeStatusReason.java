@@ -27,6 +27,8 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Specifies the underlying reason for a status of a securities trade.
@@ -38,6 +40,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.StatusReason
+ * StatusReason}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -76,12 +81,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesTradeStatusReason.mmModifiedStatusReason}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.StatusReason
- * StatusReason}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} = List of 807 elements</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -840,10 +839,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} = List of 807 elements</li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -860,8 +862,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected UnmatchedReasonCode unmatchedReason;
 	/**
-	 * Reason for the unmatched status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1152,8 +1154,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 					Reason16Choice.mmUnmatchedReason, UnmatchedReason21Choice.mmCode, UnmatchedReason21Choice.mmProprietary, Reason17Choice.mmUnmatchedReason, UnmatchedReason29Choice.mmCode, UnmatchedReason29Choice.mmProprietary,
 					UnmatchedReason19.mmCode, UnmatchedReason26Choice.mmCode, UnmatchedReason26Choice.mmProprietary, UnmatchedReason20.mmCode, UnmatchedReason27Choice.mmCode, UnmatchedReason27Choice.mmProprietary, UnmatchedReason18.mmCode,
 					UnmatchedReason25Choice.mmCode, UnmatchedReason25Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnmatchedReason";
 			definition = "Reason for the unmatched status.";
@@ -1172,8 +1174,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	};
 	protected DeniedReasonCode deniedReason;
 	/**
-	 * Specifies the reason why the request was denied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1585,8 +1587,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 					DeniedReason21Choice.mmCode, DeniedReason21Choice.mmProprietary, DeniedReason18Choice.mmCode, DeniedReason18Choice.mmProprietary, ModificationProcessingStatus8Choice.mmDenied, ProcessingStatus61Choice.mmDenied,
 					DeniedStatus21Choice.mmReason, DeniedStatus18Choice.mmReason, DeniedReason13.mmCode, DeniedReason16.mmCode, DeniedStatus19Choice.mmReason, DeniedReason17.mmCode, DeniedReason24Choice.mmCode,
 					DeniedReason24Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeniedReason";
 			definition = "Specifies the reason why the request was denied.";
@@ -1605,9 +1607,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	};
 	protected SecuritiesTradeStatus securitiesTradeStatus;
 	/**
-	 * Status for which a reason is provided. It is derived from the association
-	 * between StatusReason and Status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1643,8 +1644,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesTradeStatus = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesTradeStatus";
 			definition = "Status for which a reason is provided. It is derived from the association between StatusReason and Status.";
@@ -1657,8 +1658,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	};
 	protected GeneratedReasonCode generatedReason;
 	/**
-	 * Specifies the reason why the transaction was generated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1811,8 +1812,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 					InstructionProcessingStatus17Choice.mmGenerated, Reason13Choice.mmGeneratedReason, Reason14Choice.mmGeneratedReason, Reason15Choice.mmGeneratedReason, GeneratedReason5.mmCode, GeneratedReasons5Choice.mmCode,
 					GeneratedReasons5Choice.mmProprietary, InstructionProcessingStatus22Choice.mmGenerated, Reason16Choice.mmGeneratedReason, GeneratedReason6.mmCode, Reason17Choice.mmGeneratedReason, GeneratedReasons6Choice.mmCode,
 					GeneratedReasons6Choice.mmProprietary, InstructionProcessingStatus27Choice.mmGenerated);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GeneratedReason";
 			definition = "Specifies the reason why the transaction was generated.";
@@ -1831,8 +1832,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	};
 	protected AllegementReasonCode allegementReason;
 	/**
-	 * Reason why the instruction has an allegement status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1879,8 +1880,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	public static final MMBusinessAttribute mmAllegementReason = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AllegmentReason1Choice.mmCode, AllegmentReason1Choice.mmProprietary, MatchingReason3Choice.mmReason, AllegementReason1Choice.mmCode, AllegementReason1Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllegementReason";
 			definition = "Reason why the instruction has an allegement status.";
@@ -1899,8 +1900,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	};
 	protected PendingSettlementStatusReasonCode pendingSettlementReason;
 	/**
-	 * Reason for the settlement pending status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1951,8 +1952,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 		{
 			derivation_lazy = () -> Arrays.asList(PendingSettlementStatusReason1.mmStructured, PendingSettlementStatusChoice.mmReason, PendingSettlementStatus2.mmReason, TransferStatus1Choice.mmPendingSettlement,
 					TransferStatus2Choice.mmPendingSettlement, PendingSettlementStatus3Choice.mmReason);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PendingSettlementReason";
 			definition = "Reason for the settlement pending status.";
@@ -1971,8 +1972,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	};
 	protected RepoCallAcknowledgementReasonCode repoCallAcknowledgementReason;
 	/**
-	 * Specifies additional information about the processed instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2108,8 +2109,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 					Reason14Choice.mmRepoCallAcknowledgementReason, Reason15Choice.mmRepoCallAcknowledgementReason, RepoCallRequestStatus7Choice.mmAcknowledgedAccepted, AcknowledgementReason10.mmCode, AcknowledgementReason13Choice.mmCode,
 					AcknowledgementReason13Choice.mmProprietary, Reason16Choice.mmRepoCallAcknowledgementReason, RepoCallRequestStatus9Choice.mmAcknowledgedAccepted, AcknowledgementReason18Choice.mmCode,
 					AcknowledgementReason18Choice.mmProprietary, Reason17Choice.mmRepoCallAcknowledgementReason, AcknowledgementReason15.mmCode);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RepoCallAcknowledgementReason";
 			definition = "Specifies additional information about the processed instruction.";
@@ -2128,8 +2129,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	};
 	protected RepairReasonV2Code repairReason;
 	/**
-	 * Specifies the reason why the instruction/request has a repair status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2554,8 +2555,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 					ProcessingStatus62Choice.mmRepair, RepairReason12.mmCode, RepairReason14Choice.mmCode, RepairReason14Choice.mmProprietary, InstructionProcessingStatus27Choice.mmRepair, RepairReason13.mmCode,
 					ModificationProcessingStatus8Choice.mmRepaired, RepairStatus17Choice.mmReason, ProcessingStatus61Choice.mmRepair, RepairStatus16Choice.mmReason, RepairReason13Choice.mmCode, RepairReason13Choice.mmProprietary,
 					ProcessingStatus60Choice.mmRepair);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RepairReason";
 			definition = "Specifies the reason why the instruction/request has a repair status.";
@@ -2574,8 +2575,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	};
 	protected DeliveryReturnCode deliveryReturnReason;
 	/**
-	 * Reason why the trade was returned.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2601,8 +2602,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 */
 	public static final MMBusinessAttribute mmDeliveryReturnReason = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliveryReturnReason";
 			definition = "Reason why the trade was returned.";
@@ -2621,9 +2622,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	};
 	protected CounterpartyResponseStatusReasonCode counterpartyStatusReason;
 	/**
-	 * Specifies the counterparty action which is the reason of the trade
-	 * status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2691,8 +2691,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 			derivation_lazy = () -> Arrays.asList(ConsentOrRejectionReason2Choice.mmCode, ConsentOrRejectionReason2Choice.mmProprietary, RejectionReason12.mmCode, ConsentOrRejectionReason3Choice.mmCode,
 					ConsentOrRejectionReason3Choice.mmProprietary, RejectionReason13.mmCode, RejectionReason29.mmCode, ConsentOrRejectionReason4Choice.mmCode, ConsentOrRejectionReason4Choice.mmProprietary, RejectionReason40.mmCode,
 					ConsentOrRejectionReason5Choice.mmCode, ConsentOrRejectionReason5Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CounterpartyStatusReason";
 			definition = "Specifies the counterparty action which is the reason of the trade status.";
@@ -2711,8 +2711,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	};
 	protected ModifiedStatusReasonCode modifiedStatusReason;
 	/**
-	 * Specifies the reason why the related instruction is modified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2801,8 +2801,8 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 					ModificationReason3Choice.mmProprietary, ModificationReason3.mmCode, ModificationProcessingStatus3Choice.mmModified, ModificationProcessingStatus4Choice.mmModified, ModificationProcessingStatus6Choice.mmModified,
 					ModificationProcessingStatus5Choice.mmModified, ModificationProcessingStatus7Choice.mmModified, ModificationReason4.mmCode, ModificationReason4Choice.mmCode, ModificationReason4Choice.mmProprietary,
 					ModificationReason5Choice.mmCode, ModificationReason5Choice.mmProprietary, ModificationReason5.mmCode, ModificationProcessingStatus8Choice.mmModified);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ModifiedStatusReason";
 			definition = "Specifies the reason why the related instruction is modified.";
@@ -2823,7 +2823,7 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTradeStatusReason";
 				definition = "Specifies the underlying reason for a status of a securities trade.";
@@ -2903,87 +2903,98 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 		return unmatchedReason;
 	}
 
-	public void setUnmatchedReason(UnmatchedReasonCode unmatchedReason) {
-		this.unmatchedReason = unmatchedReason;
+	public SecuritiesTradeStatusReason setUnmatchedReason(UnmatchedReasonCode unmatchedReason) {
+		this.unmatchedReason = Objects.requireNonNull(unmatchedReason);
+		return this;
 	}
 
 	public DeniedReasonCode getDeniedReason() {
 		return deniedReason;
 	}
 
-	public void setDeniedReason(DeniedReasonCode deniedReason) {
-		this.deniedReason = deniedReason;
+	public SecuritiesTradeStatusReason setDeniedReason(DeniedReasonCode deniedReason) {
+		this.deniedReason = Objects.requireNonNull(deniedReason);
+		return this;
 	}
 
-	public SecuritiesTradeStatus getSecuritiesTradeStatus() {
-		return securitiesTradeStatus;
+	public Optional<SecuritiesTradeStatus> getSecuritiesTradeStatus() {
+		return securitiesTradeStatus == null ? Optional.empty() : Optional.of(securitiesTradeStatus);
 	}
 
-	public void setSecuritiesTradeStatus(com.tools20022.repository.entity.SecuritiesTradeStatus securitiesTradeStatus) {
+	public SecuritiesTradeStatusReason setSecuritiesTradeStatus(com.tools20022.repository.entity.SecuritiesTradeStatus securitiesTradeStatus) {
 		this.securitiesTradeStatus = securitiesTradeStatus;
+		return this;
 	}
 
 	public GeneratedReasonCode getGeneratedReason() {
 		return generatedReason;
 	}
 
-	public void setGeneratedReason(GeneratedReasonCode generatedReason) {
-		this.generatedReason = generatedReason;
+	public SecuritiesTradeStatusReason setGeneratedReason(GeneratedReasonCode generatedReason) {
+		this.generatedReason = Objects.requireNonNull(generatedReason);
+		return this;
 	}
 
 	public AllegementReasonCode getAllegementReason() {
 		return allegementReason;
 	}
 
-	public void setAllegementReason(AllegementReasonCode allegementReason) {
-		this.allegementReason = allegementReason;
+	public SecuritiesTradeStatusReason setAllegementReason(AllegementReasonCode allegementReason) {
+		this.allegementReason = Objects.requireNonNull(allegementReason);
+		return this;
 	}
 
 	public PendingSettlementStatusReasonCode getPendingSettlementReason() {
 		return pendingSettlementReason;
 	}
 
-	public void setPendingSettlementReason(PendingSettlementStatusReasonCode pendingSettlementReason) {
-		this.pendingSettlementReason = pendingSettlementReason;
+	public SecuritiesTradeStatusReason setPendingSettlementReason(PendingSettlementStatusReasonCode pendingSettlementReason) {
+		this.pendingSettlementReason = Objects.requireNonNull(pendingSettlementReason);
+		return this;
 	}
 
 	public RepoCallAcknowledgementReasonCode getRepoCallAcknowledgementReason() {
 		return repoCallAcknowledgementReason;
 	}
 
-	public void setRepoCallAcknowledgementReason(RepoCallAcknowledgementReasonCode repoCallAcknowledgementReason) {
-		this.repoCallAcknowledgementReason = repoCallAcknowledgementReason;
+	public SecuritiesTradeStatusReason setRepoCallAcknowledgementReason(RepoCallAcknowledgementReasonCode repoCallAcknowledgementReason) {
+		this.repoCallAcknowledgementReason = Objects.requireNonNull(repoCallAcknowledgementReason);
+		return this;
 	}
 
 	public RepairReasonV2Code getRepairReason() {
 		return repairReason;
 	}
 
-	public void setRepairReason(RepairReasonV2Code repairReason) {
-		this.repairReason = repairReason;
+	public SecuritiesTradeStatusReason setRepairReason(RepairReasonV2Code repairReason) {
+		this.repairReason = Objects.requireNonNull(repairReason);
+		return this;
 	}
 
 	public DeliveryReturnCode getDeliveryReturnReason() {
 		return deliveryReturnReason;
 	}
 
-	public void setDeliveryReturnReason(DeliveryReturnCode deliveryReturnReason) {
-		this.deliveryReturnReason = deliveryReturnReason;
+	public SecuritiesTradeStatusReason setDeliveryReturnReason(DeliveryReturnCode deliveryReturnReason) {
+		this.deliveryReturnReason = Objects.requireNonNull(deliveryReturnReason);
+		return this;
 	}
 
 	public CounterpartyResponseStatusReasonCode getCounterpartyStatusReason() {
 		return counterpartyStatusReason;
 	}
 
-	public void setCounterpartyStatusReason(CounterpartyResponseStatusReasonCode counterpartyStatusReason) {
-		this.counterpartyStatusReason = counterpartyStatusReason;
+	public SecuritiesTradeStatusReason setCounterpartyStatusReason(CounterpartyResponseStatusReasonCode counterpartyStatusReason) {
+		this.counterpartyStatusReason = Objects.requireNonNull(counterpartyStatusReason);
+		return this;
 	}
 
 	public ModifiedStatusReasonCode getModifiedStatusReason() {
 		return modifiedStatusReason;
 	}
 
-	public void setModifiedStatusReason(ModifiedStatusReasonCode modifiedStatusReason) {
-		this.modifiedStatusReason = modifiedStatusReason;
+	public SecuritiesTradeStatusReason setModifiedStatusReason(ModifiedStatusReasonCode modifiedStatusReason) {
+		this.modifiedStatusReason = Objects.requireNonNull(modifiedStatusReason);
+		return this;
 	}
 }

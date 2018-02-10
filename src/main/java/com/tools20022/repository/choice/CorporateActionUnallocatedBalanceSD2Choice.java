@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SignedQuantityFormat4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateActionUnallocatedBalanceSD1Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionUnallocatedBalanceSD2Choice", propOrder = {"totalEligibleBalance", "borrowedBalance", "collateralInBalance", "collateralOutBalance", "onLoanBalance", "pendingDeliveryBalance", "pendingReceiptBalance"})
 public class CorporateActionUnallocatedBalanceSD2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlElgblBal", required = true)
 	protected SignedQuantityFormat4 totalEligibleBalance;
 	/**
-	 * Total quantity of financial instruments of the balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,6 +108,10 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 * CorporateActionUnallocatedBalanceSD2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlElgblBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B::ELIG, DTCCSynonym: Total
+	 * Eligible Balance</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -122,9 +130,10 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 */
 	public static final MMMessageAttribute mmTotalEligibleBalance = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TtlElgblBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::ELIG"), new DTCCSynonym(this, "Total Eligible Balance"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleBalance";
 			definition = "Total quantity of financial instruments of the balance.";
@@ -134,10 +143,11 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
 		}
 	};
+	@XmlElement(name = "BrrwdBal", required = true)
 	protected SignedQuantityFormat4 borrowedBalance;
 	/**
-	 * Quantity of securities in the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,6 +162,10 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 * CorporateActionUnallocatedBalanceSD2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BrrwdBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::BORR, DTCCSynonym: Stock Loan
+	 * Balance (Short)</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -170,9 +184,10 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 */
 	public static final MMMessageAttribute mmBorrowedBalance = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BrrwdBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::BORR"), new DTCCSynonym(this, "Stock Loan Balance (Short)"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorrowedBalance";
 			definition = "Quantity of securities in the sub-balance.";
@@ -182,10 +197,11 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
 		}
 	};
+	@XmlElement(name = "CollInBal", required = true)
 	protected SignedQuantityFormat4 collateralInBalance;
 	/**
-	 * Quantity of securities in the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,6 +216,9 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 * CorporateActionUnallocatedBalanceSD2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CollInBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::COLI, DTCCSynonym: REPO (Long)</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -218,9 +237,10 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 */
 	public static final MMMessageAttribute mmCollateralInBalance = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollInBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::COLI"), new DTCCSynonym(this, "REPO (Long)"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralInBalance";
 			definition = "Quantity of securities in the sub-balance.";
@@ -230,10 +250,11 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
 		}
 	};
+	@XmlElement(name = "CollOutBal", required = true)
 	protected SignedQuantityFormat4 collateralOutBalance;
 	/**
-	 * Quantity of securities in the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -248,6 +269,9 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 * CorporateActionUnallocatedBalanceSD2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CollOutBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::COLO, DTCCSynonym: REPO (Short)</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -266,9 +290,10 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 */
 	public static final MMMessageAttribute mmCollateralOutBalance = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollOutBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::COLO"), new DTCCSynonym(this, "REPO (Short)"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralOutBalance";
 			definition = "Quantity of securities in the sub-balance.";
@@ -278,10 +303,11 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
 		}
 	};
+	@XmlElement(name = "OnLnBal", required = true)
 	protected SignedQuantityFormat4 onLoanBalance;
 	/**
-	 * Quantity of securities in the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -296,6 +322,10 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 * CorporateActionUnallocatedBalanceSD2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OnLnBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::LOAN, DTCCSynonym: Stock Loan
+	 * Balance (Long)</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -314,9 +344,10 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 */
 	public static final MMMessageAttribute mmOnLoanBalance = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OnLnBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::LOAN"), new DTCCSynonym(this, "Stock Loan Balance (Long)"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLoanBalance";
 			definition = "Quantity of securities in the sub-balance.";
@@ -326,10 +357,11 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
 		}
 	};
+	@XmlElement(name = "PdgDlvryBal", required = true)
 	protected SignedQuantityFormat4 pendingDeliveryBalance;
 	/**
-	 * Quantity of securities in the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -344,6 +376,9 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 * CorporateActionUnallocatedBalanceSD2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PdgDlvryBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::PEND, DTCCSynonym: Fail (Long)</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -362,9 +397,10 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 */
 	public static final MMMessageAttribute mmPendingDeliveryBalance = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PdgDlvryBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::PEND"), new DTCCSynonym(this, "Fail (Long)"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDeliveryBalance";
 			definition = "Quantity of securities in the sub-balance.";
@@ -374,10 +410,11 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
 		}
 	};
+	@XmlElement(name = "PdgRctBal", required = true)
 	protected SignedQuantityFormat4 pendingReceiptBalance;
 	/**
-	 * Quantity of securities in the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -392,6 +429,9 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 * CorporateActionUnallocatedBalanceSD2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PdgRctBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::PENR, DTCCSynonym: Fail (Short)</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -410,9 +450,10 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 */
 	public static final MMMessageAttribute mmPendingReceiptBalance = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PdgRctBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::PENR"), new DTCCSynonym(this, "Fail (Short)"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceiptBalance";
 			definition = "Quantity of securities in the sub-balance.";
@@ -426,10 +467,11 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD2Choice.mmTotalEligibleBalance, CorporateActionUnallocatedBalanceSD2Choice.mmBorrowedBalance,
-						CorporateActionUnallocatedBalanceSD2Choice.mmCollateralInBalance, CorporateActionUnallocatedBalanceSD2Choice.mmCollateralOutBalance, CorporateActionUnallocatedBalanceSD2Choice.mmOnLoanBalance,
-						CorporateActionUnallocatedBalanceSD2Choice.mmPendingDeliveryBalance, CorporateActionUnallocatedBalanceSD2Choice.mmPendingReceiptBalance);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmTotalEligibleBalance,
+						com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmBorrowedBalance, com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmCollateralInBalance,
+						com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmCollateralOutBalance, com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmOnLoanBalance,
+						com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmPendingDeliveryBalance, com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmPendingReceiptBalance);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionUnallocatedBalanceSD2Choice";
 				definition = "Choice amongst various balance types related to unallocated payment.";
@@ -439,66 +481,66 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlElgblBal", required = true)
 	public SignedQuantityFormat4 getTotalEligibleBalance() {
 		return totalEligibleBalance;
 	}
 
-	public void setTotalEligibleBalance(SignedQuantityFormat4 totalEligibleBalance) {
-		this.totalEligibleBalance = totalEligibleBalance;
+	public CorporateActionUnallocatedBalanceSD2Choice setTotalEligibleBalance(SignedQuantityFormat4 totalEligibleBalance) {
+		this.totalEligibleBalance = Objects.requireNonNull(totalEligibleBalance);
+		return this;
 	}
 
-	@XmlElement(name = "BrrwdBal", required = true)
 	public SignedQuantityFormat4 getBorrowedBalance() {
 		return borrowedBalance;
 	}
 
-	public void setBorrowedBalance(SignedQuantityFormat4 borrowedBalance) {
-		this.borrowedBalance = borrowedBalance;
+	public CorporateActionUnallocatedBalanceSD2Choice setBorrowedBalance(SignedQuantityFormat4 borrowedBalance) {
+		this.borrowedBalance = Objects.requireNonNull(borrowedBalance);
+		return this;
 	}
 
-	@XmlElement(name = "CollInBal", required = true)
 	public SignedQuantityFormat4 getCollateralInBalance() {
 		return collateralInBalance;
 	}
 
-	public void setCollateralInBalance(SignedQuantityFormat4 collateralInBalance) {
-		this.collateralInBalance = collateralInBalance;
+	public CorporateActionUnallocatedBalanceSD2Choice setCollateralInBalance(SignedQuantityFormat4 collateralInBalance) {
+		this.collateralInBalance = Objects.requireNonNull(collateralInBalance);
+		return this;
 	}
 
-	@XmlElement(name = "CollOutBal", required = true)
 	public SignedQuantityFormat4 getCollateralOutBalance() {
 		return collateralOutBalance;
 	}
 
-	public void setCollateralOutBalance(SignedQuantityFormat4 collateralOutBalance) {
-		this.collateralOutBalance = collateralOutBalance;
+	public CorporateActionUnallocatedBalanceSD2Choice setCollateralOutBalance(SignedQuantityFormat4 collateralOutBalance) {
+		this.collateralOutBalance = Objects.requireNonNull(collateralOutBalance);
+		return this;
 	}
 
-	@XmlElement(name = "OnLnBal", required = true)
 	public SignedQuantityFormat4 getOnLoanBalance() {
 		return onLoanBalance;
 	}
 
-	public void setOnLoanBalance(SignedQuantityFormat4 onLoanBalance) {
-		this.onLoanBalance = onLoanBalance;
+	public CorporateActionUnallocatedBalanceSD2Choice setOnLoanBalance(SignedQuantityFormat4 onLoanBalance) {
+		this.onLoanBalance = Objects.requireNonNull(onLoanBalance);
+		return this;
 	}
 
-	@XmlElement(name = "PdgDlvryBal", required = true)
 	public SignedQuantityFormat4 getPendingDeliveryBalance() {
 		return pendingDeliveryBalance;
 	}
 
-	public void setPendingDeliveryBalance(SignedQuantityFormat4 pendingDeliveryBalance) {
-		this.pendingDeliveryBalance = pendingDeliveryBalance;
+	public CorporateActionUnallocatedBalanceSD2Choice setPendingDeliveryBalance(SignedQuantityFormat4 pendingDeliveryBalance) {
+		this.pendingDeliveryBalance = Objects.requireNonNull(pendingDeliveryBalance);
+		return this;
 	}
 
-	@XmlElement(name = "PdgRctBal", required = true)
 	public SignedQuantityFormat4 getPendingReceiptBalance() {
 		return pendingReceiptBalance;
 	}
 
-	public void setPendingReceiptBalance(SignedQuantityFormat4 pendingReceiptBalance) {
-		this.pendingReceiptBalance = pendingReceiptBalance;
+	public CorporateActionUnallocatedBalanceSD2Choice setPendingReceiptBalance(SignedQuantityFormat4 pendingReceiptBalance) {
+		this.pendingReceiptBalance = Objects.requireNonNull(pendingReceiptBalance);
+		return this;
 	}
 }

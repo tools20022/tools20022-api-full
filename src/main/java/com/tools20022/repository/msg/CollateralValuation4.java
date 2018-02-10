@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CollateralValuation4", propOrder = {"poolStatus", "type", "sector", "nominalAmount"})
 public class CollateralValuation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PoolSts", required = true)
 	protected CollateralPool1Code poolStatus;
 	/**
-	 * Specifies whether the collateral is a pool collateral or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +133,7 @@ public class CollateralValuation4 {
 	 */
 	public static final MMMessageAttribute mmPoolStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CollateralValuation4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValuation4.mmObject();
 			isDerived = false;
 			xmlTag = "PoolSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,11 +145,11 @@ public class CollateralValuation4 {
 			simpleType_lazy = () -> CollateralPool1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected CFIIdentifier type;
 	/**
-	 * Identifies the asset class pledged as collateral, expressed as an ISO
-	 * 10962 Classification of Financial Instrument (CFI).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +193,7 @@ public class CollateralValuation4 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
-			componentContext_lazy = () -> CollateralValuation4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValuation4.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,11 +205,11 @@ public class CollateralValuation4 {
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Sctr", required = true)
 	protected SNA2008SectorIdentifier sector;
 	/**
-	 * Provides the institutional sector, such as central government, central
-	 * bank, etc. of the issuer of collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -250,7 +253,7 @@ public class CollateralValuation4 {
 	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmSector;
-			componentContext_lazy = () -> CollateralValuation4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValuation4.mmObject();
 			isDerived = false;
 			xmlTag = "Sctr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -262,11 +265,11 @@ public class CollateralValuation4 {
 			simpleType_lazy = () -> SNA2008SectorIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "NmnlAmt")
 	protected ActiveCurrencyAndAmount nominalAmount;
 	/**
-	 * Nominal amount of money of the security pledged as collateral, when the
-	 * collateral cannot be identified through an individual or basket ISIN.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -310,7 +313,7 @@ public class CollateralValuation4 {
 	public static final MMMessageAttribute mmNominalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralAmount;
-			componentContext_lazy = () -> CollateralValuation4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValuation4.mmObject();
 			isDerived = false;
 			xmlTag = "NmnlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -326,9 +329,10 @@ public class CollateralValuation4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CollateralValuation4.mmPoolStatus, CollateralValuation4.mmType, CollateralValuation4.mmSector, CollateralValuation4.mmNominalAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation4.mmPoolStatus, com.tools20022.repository.msg.CollateralValuation4.mmType,
+						com.tools20022.repository.msg.CollateralValuation4.mmSector, com.tools20022.repository.msg.CollateralValuation4.mmNominalAmount);
 				trace_lazy = () -> CollateralValuation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralValuation4";
 				definition = "Provides the specification of the valuation of a collateral, based on the sector and the asset classification.";
@@ -338,39 +342,39 @@ public class CollateralValuation4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PoolSts", required = true)
 	public CollateralPool1Code getPoolStatus() {
 		return poolStatus;
 	}
 
-	public void setPoolStatus(CollateralPool1Code poolStatus) {
-		this.poolStatus = poolStatus;
+	public CollateralValuation4 setPoolStatus(CollateralPool1Code poolStatus) {
+		this.poolStatus = Objects.requireNonNull(poolStatus);
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public CFIIdentifier getType() {
 		return type;
 	}
 
-	public void setType(CFIIdentifier type) {
-		this.type = type;
+	public CollateralValuation4 setType(CFIIdentifier type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Sctr", required = true)
 	public SNA2008SectorIdentifier getSector() {
 		return sector;
 	}
 
-	public void setSector(SNA2008SectorIdentifier sector) {
-		this.sector = sector;
+	public CollateralValuation4 setSector(SNA2008SectorIdentifier sector) {
+		this.sector = Objects.requireNonNull(sector);
+		return this;
 	}
 
-	@XmlElement(name = "NmnlAmt")
-	public ActiveCurrencyAndAmount getNominalAmount() {
-		return nominalAmount;
+	public Optional<ActiveCurrencyAndAmount> getNominalAmount() {
+		return nominalAmount == null ? Optional.empty() : Optional.of(nominalAmount);
 	}
 
-	public void setNominalAmount(ActiveCurrencyAndAmount nominalAmount) {
+	public CollateralValuation4 setNominalAmount(ActiveCurrencyAndAmount nominalAmount) {
 		this.nominalAmount = nominalAmount;
+		return this;
 	}
 }

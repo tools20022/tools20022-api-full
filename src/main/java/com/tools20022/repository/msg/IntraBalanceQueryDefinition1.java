@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.IntraPositionTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Defines the information that is searched through specific criteria."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IntraBalanceQueryDefinition1", propOrder = {"queryType", "searchCriteria"})
 public class IntraBalanceQueryDefinition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QryTp", required = true)
 	protected MovementResponseType1Code queryType;
 	/**
-	 * Defines the type of query.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +104,7 @@ public class IntraBalanceQueryDefinition1 {
 	 */
 	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceQueryDefinition1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryDefinition1.mmObject();
 			isDerived = false;
 			xmlTag = "QryTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,11 +115,11 @@ public class IntraBalanceQueryDefinition1 {
 			simpleType_lazy = () -> MovementResponseType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SchCrit", required = true)
 	protected IntraBalanceQueryCriteria1 searchCriteria;
 	/**
-	 * Defines the criteria to extract the intra-balance movement instruction
-	 * information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,7 +155,7 @@ public class IntraBalanceQueryDefinition1 {
 	public static final MMMessageAttribute mmSearchCriteria = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> IntraPositionTransfer.mmObject();
-			componentContext_lazy = () -> IntraBalanceQueryDefinition1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryDefinition1.mmObject();
 			isDerived = false;
 			xmlTag = "SchCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,9 +170,9 @@ public class IntraBalanceQueryDefinition1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IntraBalanceQueryDefinition1.mmQueryType, IntraBalanceQueryDefinition1.mmSearchCriteria);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceQueryDefinition1.mmQueryType, com.tools20022.repository.msg.IntraBalanceQueryDefinition1.mmSearchCriteria);
 				trace_lazy = () -> IntraPositionTransfer.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceQueryDefinition1";
 				definition = "Defines the information that is searched through specific criteria.";
@@ -179,21 +181,21 @@ public class IntraBalanceQueryDefinition1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QryTp", required = true)
 	public MovementResponseType1Code getQueryType() {
 		return queryType;
 	}
 
-	public void setQueryType(MovementResponseType1Code queryType) {
-		this.queryType = queryType;
+	public IntraBalanceQueryDefinition1 setQueryType(MovementResponseType1Code queryType) {
+		this.queryType = Objects.requireNonNull(queryType);
+		return this;
 	}
 
-	@XmlElement(name = "SchCrit", required = true)
 	public IntraBalanceQueryCriteria1 getSearchCriteria() {
 		return searchCriteria;
 	}
 
-	public void setSearchCriteria(com.tools20022.repository.msg.IntraBalanceQueryCriteria1 searchCriteria) {
-		this.searchCriteria = searchCriteria;
+	public IntraBalanceQueryDefinition1 setSearchCriteria(com.tools20022.repository.msg.IntraBalanceQueryCriteria1 searchCriteria) {
+		this.searchCriteria = Objects.requireNonNull(searchCriteria);
+		return this;
 	}
 }

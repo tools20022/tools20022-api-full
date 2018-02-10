@@ -28,6 +28,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule#forQuantity3Choice
+ * ConstraintCoexistenceQuantityRule.forQuantity3Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -76,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Quantity3Choice", propOrder = {"quantityChoice", "proprietaryQuantity"})
 public class Quantity3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QtyChc", required = true)
 	protected Quantity4Choice quantityChoice;
 	/**
-	 * Choice between different quantity of security formats.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -118,7 +128,7 @@ public class Quantity3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmQuantityChoice = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Quantity3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyChc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +141,11 @@ public class Quantity3Choice {
 			type_lazy = () -> com.tools20022.repository.choice.Quantity4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryQty", required = true)
 	protected ProprietaryQuantity3 proprietaryQuantity;
 	/**
-	 * Proprietary quantity of security format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -168,7 +179,7 @@ public class Quantity3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietaryQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Quantity3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,9 +196,10 @@ public class Quantity3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Quantity3Choice.mmQuantityChoice, Quantity3Choice.mmProprietaryQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity3Choice.mmQuantityChoice, com.tools20022.repository.choice.Quantity3Choice.mmProprietaryQuantity);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule.forQuantity3Choice);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -204,21 +216,21 @@ public class Quantity3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QtyChc", required = true)
 	public Quantity4Choice getQuantityChoice() {
 		return quantityChoice;
 	}
 
-	public void setQuantityChoice(com.tools20022.repository.choice.Quantity4Choice quantityChoice) {
-		this.quantityChoice = quantityChoice;
+	public Quantity3Choice setQuantityChoice(com.tools20022.repository.choice.Quantity4Choice quantityChoice) {
+		this.quantityChoice = Objects.requireNonNull(quantityChoice);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryQty", required = true)
 	public ProprietaryQuantity3 getProprietaryQuantity() {
 		return proprietaryQuantity;
 	}
 
-	public void setProprietaryQuantity(ProprietaryQuantity3 proprietaryQuantity) {
-		this.proprietaryQuantity = proprietaryQuantity;
+	public Quantity3Choice setProprietaryQuantity(ProprietaryQuantity3 proprietaryQuantity) {
+		this.proprietaryQuantity = Objects.requireNonNull(proprietaryQuantity);
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.WorkflowStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the workflow status of the details of a specific level.
@@ -32,20 +37,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#mmComplete
- * WorkflowStatusCode.mmComplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#Complete
+ * WorkflowStatusCode.Complete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#mmConflict
- * WorkflowStatusCode.mmConflict}</li>
+ * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#Conflict
+ * WorkflowStatusCode.Conflict}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#mmConditionallyComplete
- * WorkflowStatusCode.mmConditionallyComplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#ConditionallyComplete
+ * WorkflowStatusCode.ConditionallyComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#mmIncomplete
- * WorkflowStatusCode.mmIncomplete}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#mmDeleted
- * WorkflowStatusCode.mmDeleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#Incomplete
+ * WorkflowStatusCode.Incomplete}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.WorkflowStatusCode#Deleted
+ * WorkflowStatusCode.Deleted}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -58,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the workflow status of the details of a specific level. "</li>
  * </ul>
  */
-public class WorkflowStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class WorkflowStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -103,12 +108,12 @@ public class WorkflowStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmComplete = new MMCode() {
+	public static final WorkflowStatusCode Complete = new WorkflowStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			definition = "Level details are complete. All required data is populated and verified.";
-			owner_lazy = () -> WorkflowStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.WorkflowStatusCode.mmObject();
 			codeName = "COMP";
 		}
 	};
@@ -136,12 +141,12 @@ public class WorkflowStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmConflict = new MMCode() {
+	public static final WorkflowStatusCode Conflict = new WorkflowStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Conflict";
 			definition = "Level details are incomplete due to conflicting details from 2 or more sources.";
-			owner_lazy = () -> WorkflowStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.WorkflowStatusCode.mmObject();
 			codeName = "CNFL";
 		}
 	};
@@ -166,12 +171,12 @@ public class WorkflowStatusCode {
 	 * definition} = "Level details are complete pending a condition."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConditionallyComplete = new MMCode() {
+	public static final WorkflowStatusCode ConditionallyComplete = new WorkflowStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionallyComplete";
 			definition = "Level details are complete pending a condition.";
-			owner_lazy = () -> WorkflowStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.WorkflowStatusCode.mmObject();
 			codeName = "COND";
 		}
 	};
@@ -196,12 +201,12 @@ public class WorkflowStatusCode {
 	 * definition} = "Level details are incomplete."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncomplete = new MMCode() {
+	public static final WorkflowStatusCode Incomplete = new WorkflowStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incomplete";
 			definition = "Level details are incomplete.";
-			owner_lazy = () -> WorkflowStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.WorkflowStatusCode.mmObject();
 			codeName = "INCO";
 		}
 	};
@@ -229,28 +234,62 @@ public class WorkflowStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeleted = new MMCode() {
+	public static final WorkflowStatusCode Deleted = new WorkflowStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
 			definition = "Level has been deleted, cancelled/deactivated/invalidated by the source or due to error processing error. ";
-			owner_lazy = () -> WorkflowStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.WorkflowStatusCode.mmObject();
 			codeName = "DLTD";
 		}
 	};
+	final static private LinkedHashMap<String, WorkflowStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected WorkflowStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "WorkflowStatusCode";
 				definition = "Specifies the workflow status of the details of a specific level. ";
-				code_lazy = () -> Arrays.asList(WorkflowStatusCode.mmComplete, WorkflowStatusCode.mmConflict, WorkflowStatusCode.mmConditionallyComplete, WorkflowStatusCode.mmIncomplete, WorkflowStatusCode.mmDeleted);
 				derivation_lazy = () -> Arrays.asList(WorkflowStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WorkflowStatusCode.Complete, com.tools20022.repository.codeset.WorkflowStatusCode.Conflict,
+						com.tools20022.repository.codeset.WorkflowStatusCode.ConditionallyComplete, com.tools20022.repository.codeset.WorkflowStatusCode.Incomplete, com.tools20022.repository.codeset.WorkflowStatusCode.Deleted);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Complete.getCodeName().get(), Complete);
+		codesByName.put(Conflict.getCodeName().get(), Conflict);
+		codesByName.put(ConditionallyComplete.getCodeName().get(), ConditionallyComplete);
+		codesByName.put(Incomplete.getCodeName().get(), Incomplete);
+		codesByName.put(Deleted.getCodeName().get(), Deleted);
+	}
+
+	public static WorkflowStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static WorkflowStatusCode[] values() {
+		WorkflowStatusCode[] values = new WorkflowStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, WorkflowStatusCode> {
+		@Override
+		public WorkflowStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(WorkflowStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

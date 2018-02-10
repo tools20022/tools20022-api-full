@@ -24,9 +24,8 @@ import com.tools20022.repository.area.semt.StatementOfInvestmentFundTransactions
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +73,17 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionOnAccountOrSubAccountDetailsRule#forStatementOfInvestmentFundTransactions2
+ * ConstraintTransactionOnAccountOrSubAccountDetailsRule.
+ * forStatementOfInvestmentFundTransactions2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,16 +103,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatementOfInvestmentFundTransactions2", propOrder = {"statementGeneralDetails", "investmentAccountDetails", "transactionOnAccount", "subAccountDetails", "extension"})
 public class StatementOfInvestmentFundTransactions2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StmtGnlDtls")
 	protected Statement8 statementGeneralDetails;
 	/**
-	 * General information related to the investment fund statement of
-	 * transactions that is being cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -139,7 +147,7 @@ public class StatementOfInvestmentFundTransactions2 {
 	 */
 	public static final MMMessageAssociationEnd mmStatementGeneralDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatementOfInvestmentFundTransactions2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatementOfInvestmentFundTransactions2.mmObject();
 			isDerived = false;
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,11 +160,11 @@ public class StatementOfInvestmentFundTransactions2 {
 			type_lazy = () -> com.tools20022.repository.msg.Statement8.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstmtAcctDtls")
 	protected InvestmentAccount25 investmentAccountDetails;
 	/**
-	 * Information related to an investment account of the statement that is
-	 * being cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -198,7 +206,7 @@ public class StatementOfInvestmentFundTransactions2 {
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
-			componentContext_lazy = () -> StatementOfInvestmentFundTransactions2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatementOfInvestmentFundTransactions2.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,11 +219,11 @@ public class StatementOfInvestmentFundTransactions2 {
 			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount25.mmObject();
 		}
 	};
+	@XmlElement(name = "TxOnAcct")
 	protected List<com.tools20022.repository.msg.InvestmentFundTransactionsByFund2> transactionOnAccount;
 	/**
-	 * Creation/cancellation of investment units on the books of the fund or its
-	 * designated agent, as a result of executing an investment fund order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -258,7 +266,7 @@ public class StatementOfInvestmentFundTransactions2 {
 	public static final MMMessageAssociationEnd mmTransactionOnAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentFundTransaction;
-			componentContext_lazy = () -> StatementOfInvestmentFundTransactions2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatementOfInvestmentFundTransactions2.mmObject();
 			isDerived = false;
 			xmlTag = "TxOnAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,10 +278,11 @@ public class StatementOfInvestmentFundTransactions2 {
 			type_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund2.mmObject();
 		}
 	};
+	@XmlElement(name = "SubAcctDtls", required = true)
 	protected SubAccountIdentification6 subAccountDetails;
 	/**
-	 * Sub-account of the safekeeping or investment account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -314,7 +323,7 @@ public class StatementOfInvestmentFundTransactions2 {
 	public static final MMMessageAssociationEnd mmSubAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> StatementOfInvestmentFundTransactions2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatementOfInvestmentFundTransactions2.mmObject();
 			isDerived = false;
 			xmlTag = "SubAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -327,11 +336,11 @@ public class StatementOfInvestmentFundTransactions2 {
 			type_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification6.mmObject();
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -366,7 +375,7 @@ public class StatementOfInvestmentFundTransactions2 {
 	 */
 	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatementOfInvestmentFundTransactions2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatementOfInvestmentFundTransactions2.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -382,11 +391,13 @@ public class StatementOfInvestmentFundTransactions2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatementOfInvestmentFundTransactions2.mmStatementGeneralDetails, StatementOfInvestmentFundTransactions2.mmInvestmentAccountDetails,
-						StatementOfInvestmentFundTransactions2.mmTransactionOnAccount, StatementOfInvestmentFundTransactions2.mmSubAccountDetails, StatementOfInvestmentFundTransactions2.mmExtension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementOfInvestmentFundTransactions2.mmStatementGeneralDetails,
+						com.tools20022.repository.msg.StatementOfInvestmentFundTransactions2.mmInvestmentAccountDetails, com.tools20022.repository.msg.StatementOfInvestmentFundTransactions2.mmTransactionOnAccount,
+						com.tools20022.repository.msg.StatementOfInvestmentFundTransactions2.mmSubAccountDetails, com.tools20022.repository.msg.StatementOfInvestmentFundTransactions2.mmExtension);
 				messageBuildingBlock_lazy = () -> Arrays.asList(StatementOfInvestmentFundTransactionsCancellationV02.mmStatementToBeCancelled);
 				trace_lazy = () -> InvestmentAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionOnAccountOrSubAccountDetailsRule.forStatementOfInvestmentFundTransactions2);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementOfInvestmentFundTransactions2";
 				definition = "Information about a statement of investment fund transactions.";
@@ -396,48 +407,48 @@ public class StatementOfInvestmentFundTransactions2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StmtGnlDtls")
-	public Statement8 getStatementGeneralDetails() {
-		return statementGeneralDetails;
+	public Optional<Statement8> getStatementGeneralDetails() {
+		return statementGeneralDetails == null ? Optional.empty() : Optional.of(statementGeneralDetails);
 	}
 
-	public void setStatementGeneralDetails(com.tools20022.repository.msg.Statement8 statementGeneralDetails) {
+	public StatementOfInvestmentFundTransactions2 setStatementGeneralDetails(com.tools20022.repository.msg.Statement8 statementGeneralDetails) {
 		this.statementGeneralDetails = statementGeneralDetails;
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtAcctDtls")
-	public InvestmentAccount25 getInvestmentAccountDetails() {
-		return investmentAccountDetails;
+	public Optional<InvestmentAccount25> getInvestmentAccountDetails() {
+		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public void setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount25 investmentAccountDetails) {
+	public StatementOfInvestmentFundTransactions2 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount25 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
+		return this;
 	}
 
-	@XmlElement(name = "TxOnAcct")
 	public List<InvestmentFundTransactionsByFund2> getTransactionOnAccount() {
-		return transactionOnAccount;
+		return transactionOnAccount == null ? transactionOnAccount = new ArrayList<>() : transactionOnAccount;
 	}
 
-	public void setTransactionOnAccount(List<com.tools20022.repository.msg.InvestmentFundTransactionsByFund2> transactionOnAccount) {
-		this.transactionOnAccount = transactionOnAccount;
+	public StatementOfInvestmentFundTransactions2 setTransactionOnAccount(List<com.tools20022.repository.msg.InvestmentFundTransactionsByFund2> transactionOnAccount) {
+		this.transactionOnAccount = Objects.requireNonNull(transactionOnAccount);
+		return this;
 	}
 
-	@XmlElement(name = "SubAcctDtls", required = true)
 	public SubAccountIdentification6 getSubAccountDetails() {
 		return subAccountDetails;
 	}
 
-	public void setSubAccountDetails(com.tools20022.repository.msg.SubAccountIdentification6 subAccountDetails) {
-		this.subAccountDetails = subAccountDetails;
+	public StatementOfInvestmentFundTransactions2 setSubAccountDetails(com.tools20022.repository.msg.SubAccountIdentification6 subAccountDetails) {
+		this.subAccountDetails = Objects.requireNonNull(subAccountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
-		this.extension = extension;
+	public StatementOfInvestmentFundTransactions2 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 }

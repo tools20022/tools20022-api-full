@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TerminalManagementErrorActionCode;
+import com.tools20022.repository.codeset.TerminalManagementErrorAction1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Action to perform in case of error during the action in progress.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorActionCode
- * TerminalManagementErrorActionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorAction1Code#mmIgnoreError
- * TerminalManagementErrorAction1Code.mmIgnoreError}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorAction1Code#IgnoreError
+ * TerminalManagementErrorAction1Code.IgnoreError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorAction1Code#mmSendStatusReport
- * TerminalManagementErrorAction1Code.mmSendStatusReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorAction1Code#SendStatusReport
+ * TerminalManagementErrorAction1Code.SendStatusReport}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorActionCode
+ * TerminalManagementErrorActionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Action to perform in case of error during the action in progress."</li>
  * </ul>
  */
-public class TerminalManagementErrorAction1Code extends TerminalManagementErrorActionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TerminalManagementErrorAction1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +89,12 @@ public class TerminalManagementErrorAction1Code extends TerminalManagementErrorA
 	 * name} = "IgnoreError"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIgnoreError = new MMCode() {
+	public static final TerminalManagementErrorAction1Code IgnoreError = new TerminalManagementErrorAction1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IgnoreError";
-			owner_lazy = () -> TerminalManagementErrorAction1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementErrorAction1Code.mmObject();
+			codeName = TerminalManagementErrorActionCode.IgnoreError.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,26 +113,57 @@ public class TerminalManagementErrorAction1Code extends TerminalManagementErrorA
 	 * name} = "SendStatusReport"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSendStatusReport = new MMCode() {
+	public static final TerminalManagementErrorAction1Code SendStatusReport = new TerminalManagementErrorAction1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendStatusReport";
-			owner_lazy = () -> TerminalManagementErrorAction1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementErrorAction1Code.mmObject();
+			codeName = TerminalManagementErrorActionCode.SendStatusReport.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TerminalManagementErrorAction1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TerminalManagementErrorAction1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("IGNR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementErrorAction1Code";
 				definition = "Action to perform in case of error during the action in progress.";
-				code_lazy = () -> Arrays.asList(TerminalManagementErrorAction1Code.mmIgnoreError, TerminalManagementErrorAction1Code.mmSendStatusReport);
 				trace_lazy = () -> TerminalManagementErrorActionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementErrorAction1Code.IgnoreError, com.tools20022.repository.codeset.TerminalManagementErrorAction1Code.SendStatusReport);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(IgnoreError.getCodeName().get(), IgnoreError);
+		codesByName.put(SendStatusReport.getCodeName().get(), SendStatusReport);
+	}
+
+	public static TerminalManagementErrorAction1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TerminalManagementErrorAction1Code[] values() {
+		TerminalManagementErrorAction1Code[] values = new TerminalManagementErrorAction1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TerminalManagementErrorAction1Code> {
+		@Override
+		public TerminalManagementErrorAction1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TerminalManagementErrorAction1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,16 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * Repartition4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Repartition5", propOrder = {"quantity", "financialInstrument", "currencyOfPlan"})
 public class Repartition5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Qty", required = true)
 	protected UnitsOrAmountOrPercentage1Choice quantity;
 	/**
-	 * Amount, units or percentage of financial instrument invested or
-	 * withdrawn.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +118,7 @@ public class Repartition5 {
 	 */
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Repartition5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Repartition5.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +130,11 @@ public class Repartition5 {
 			complexType_lazy = () -> UnitsOrAmountOrPercentage1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrm", required = true)
 	protected FinancialInstrument56 financialInstrument;
 	/**
-	 * Detailed information about the security or investment fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -168,7 +171,7 @@ public class Repartition5 {
 	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
-			componentContext_lazy = () -> Repartition5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Repartition5.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,11 +184,11 @@ public class Repartition5 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument56.mmObject();
 		}
 	};
+	@XmlElement(name = "CcyOfPlan")
 	protected ActiveOrHistoricCurrencyCode currencyOfPlan;
 	/**
-	 * When a fund has multiple currencies within same ISIN, this indicates the
-	 * currency of the savings or withdrawal plan.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -219,7 +222,7 @@ public class Repartition5 {
 	 */
 	public static final MMMessageAttribute mmCurrencyOfPlan = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Repartition5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Repartition5.mmObject();
 			isDerived = false;
 			xmlTag = "CcyOfPlan";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -235,9 +238,9 @@ public class Repartition5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Repartition5.mmQuantity, Repartition5.mmFinancialInstrument, Repartition5.mmCurrencyOfPlan);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Repartition5.mmQuantity, com.tools20022.repository.msg.Repartition5.mmFinancialInstrument, com.tools20022.repository.msg.Repartition5.mmCurrencyOfPlan);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Repartition5";
 				definition = "Indicates how the amount of the investment plan is split amongst the funds.";
@@ -247,30 +250,30 @@ public class Repartition5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public UnitsOrAmountOrPercentage1Choice getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(UnitsOrAmountOrPercentage1Choice quantity) {
-		this.quantity = quantity;
+	public Repartition5 setQuantity(UnitsOrAmountOrPercentage1Choice quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrm", required = true)
 	public FinancialInstrument56 getFinancialInstrument() {
 		return financialInstrument;
 	}
 
-	public void setFinancialInstrument(com.tools20022.repository.msg.FinancialInstrument56 financialInstrument) {
-		this.financialInstrument = financialInstrument;
+	public Repartition5 setFinancialInstrument(com.tools20022.repository.msg.FinancialInstrument56 financialInstrument) {
+		this.financialInstrument = Objects.requireNonNull(financialInstrument);
+		return this;
 	}
 
-	@XmlElement(name = "CcyOfPlan")
-	public ActiveOrHistoricCurrencyCode getCurrencyOfPlan() {
-		return currencyOfPlan;
+	public Optional<ActiveOrHistoricCurrencyCode> getCurrencyOfPlan() {
+		return currencyOfPlan == null ? Optional.empty() : Optional.of(currencyOfPlan);
 	}
 
-	public void setCurrencyOfPlan(ActiveOrHistoricCurrencyCode currencyOfPlan) {
+	public Repartition5 setCurrencyOfPlan(ActiveOrHistoricCurrencyCode currencyOfPlan) {
 		this.currencyOfPlan = currencyOfPlan;
+		return this;
 	}
 }

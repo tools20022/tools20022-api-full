@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecurityIdentification8", propOrder = {"securityIdentification", "description"})
 public class SecurityIdentification8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctyId", required = true)
 	protected SecurityIdentification10Choice securityIdentification;
 	/**
-	 * Security identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -112,7 +114,7 @@ public class SecurityIdentification8 {
 	public static final MMMessageAssociationEnd mmSecurityIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
-			componentContext_lazy = () -> SecurityIdentification8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +126,11 @@ public class SecurityIdentification8 {
 			type_lazy = () -> SecurityIdentification10Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Desc", required = true)
 	protected Max140Text description;
 	/**
-	 * Textual description of a security instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +163,7 @@ public class SecurityIdentification8 {
 	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
-			componentContext_lazy = () -> SecurityIdentification8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,9 +178,9 @@ public class SecurityIdentification8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityIdentification8.mmSecurityIdentification, SecurityIdentification8.mmDescription);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification8.mmSecurityIdentification, com.tools20022.repository.msg.SecurityIdentification8.mmDescription);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityIdentification8";
 				definition = "Unique and unambiguous identifier of a security, assigned under a formal or proprietary identification scheme.";
@@ -186,21 +189,21 @@ public class SecurityIdentification8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification10Choice getSecurityIdentification() {
 		return securityIdentification;
 	}
 
-	public void setSecurityIdentification(SecurityIdentification10Choice securityIdentification) {
-		this.securityIdentification = securityIdentification;
+	public SecurityIdentification8 setSecurityIdentification(SecurityIdentification10Choice securityIdentification) {
+		this.securityIdentification = Objects.requireNonNull(securityIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Desc", required = true)
 	public Max140Text getDescription() {
 		return description;
 	}
 
-	public void setDescription(Max140Text description) {
-		this.description = description;
+	public SecurityIdentification8 setDescription(Max140Text description) {
+		this.description = Objects.requireNonNull(description);
+		return this;
 	}
 }

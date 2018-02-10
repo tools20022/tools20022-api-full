@@ -17,15 +17,15 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -88,8 +88,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,17 +103,17 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.msg.Identification11 Identification11}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Identification15", propOrder = {"accountOwnerTransactionIdentification", "accountServicerTransactionIdentification", "marketInfrastructureTransactionIdentification", "processorTransactionIdentification",
 		"commonIdentification", "tradeIdentification", "masterIdentification", "basketIdentification", "indexIdentification", "listIdentification", "programIdentification", "poolIdentification", "corporateActionEventIdentification"})
 public class Identification15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctOwnrTxId", required = true)
 	protected Max35Text accountOwnerTransactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as known by the account
-	 * owner (or the instructing party managing the account).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,6 +132,9 @@ public class Identification15 {
 	 * Identification15}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctOwnrTxId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -153,9 +156,10 @@ public class Identification15 {
 	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
-			componentContext_lazy = () -> Identification15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Identification15.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrTxId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account).";
@@ -165,11 +169,11 @@ public class Identification15 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcrTxId")
 	protected Max35Text accountServicerTransactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as known by the account
-	 * servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,6 +192,9 @@ public class Identification15 {
 	 * Identification15}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctSvcrTxId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -209,9 +216,10 @@ public class Identification15 {
 	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
-			componentContext_lazy = () -> Identification15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Identification15.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrTxId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account servicer.";
@@ -221,11 +229,11 @@ public class Identification15 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MktInfrstrctrTxId")
 	protected Max35Text marketInfrastructureTransactionIdentification;
 	/**
-	 * Identification of a transaction assigned by a market infrastructure other
-	 * than a central securities depository, for example, Target2-Securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,6 +253,9 @@ public class Identification15 {
 	 * Identification15}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MktInfrstrctrTxId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::MITI</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -266,9 +277,10 @@ public class Identification15 {
 	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification;
-			componentContext_lazy = () -> Identification15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Identification15.mmObject();
 			isDerived = false;
 			xmlTag = "MktInfrstrctrTxId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::MITI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketInfrastructureTransactionIdentification";
 			definition = "Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.";
@@ -278,12 +290,11 @@ public class Identification15 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcrTxId")
 	protected Max35Text processorTransactionIdentification;
 	/**
-	 * Identification of the transaction assigned by the processor of the
-	 * instruction other than the account owner the account servicer and the
-	 * market infrastructure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -323,7 +334,7 @@ public class Identification15 {
 	public static final MMMessageAttribute mmProcessorTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmProcessorTransactionIdentification;
-			componentContext_lazy = () -> Identification15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Identification15.mmObject();
 			isDerived = false;
 			xmlTag = "PrcrTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -335,11 +346,11 @@ public class Identification15 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CmonId")
 	protected Max35Text commonIdentification;
 	/**
-	 * Unique reference agreed upon by the two trade counterparties to identify
-	 * the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -358,6 +369,9 @@ public class Identification15 {
 	 * Identification15}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CmonId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::COMM</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -379,9 +393,10 @@ public class Identification15 {
 	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
-			componentContext_lazy = () -> Identification15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Identification15.mmObject();
 			isDerived = false;
 			xmlTag = "CmonId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::COMM"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonIdentification";
 			definition = "Unique reference agreed upon by the two trade counterparties to identify the trade.";
@@ -391,12 +406,11 @@ public class Identification15 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TradId")
 	protected List<Max35Text> tradeIdentification;
 	/**
-	 * Reference assigned to the trade by the investor or the trading party.
-	 * This reference will be used throughout the trade life cycle to
-	 * access/update the trade details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -415,6 +429,9 @@ public class Identification15 {
 	 * Identification15}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::TRRF</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -436,9 +453,10 @@ public class Identification15 {
 	public static final MMMessageAttribute mmTradeIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
-			componentContext_lazy = () -> Identification15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Identification15.mmObject();
 			isDerived = false;
 			xmlTag = "TradId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::TRRF"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeIdentification";
 			definition = "Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.";
@@ -447,12 +465,11 @@ public class Identification15 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MstrId")
 	protected Max35Text masterIdentification;
 	/**
-	 * Unique and unambiguous identifier for a group of individual transfers as
-	 * assigned by the instructing party. This identifier links the individual
-	 * transfers together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -471,6 +488,9 @@ public class Identification15 {
 	 * Identification15}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MstrId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::MAST</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -492,9 +512,10 @@ public class Identification15 {
 	public static final MMMessageAttribute mmMasterIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
-			componentContext_lazy = () -> Identification15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Identification15.mmObject();
 			isDerived = false;
 			xmlTag = "MstrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::MAST"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterIdentification";
 			definition = "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.";
@@ -504,10 +525,11 @@ public class Identification15 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BsktId")
 	protected Max35Text basketIdentification;
 	/**
-	 * Identification of a basket trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -527,6 +549,9 @@ public class Identification15 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BsktId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::BASK</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -545,9 +570,10 @@ public class Identification15 {
 	public static final MMMessageAttribute mmBasketIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmBasketIdentification;
-			componentContext_lazy = () -> Identification15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Identification15.mmObject();
 			isDerived = false;
 			xmlTag = "BsktId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::BASK"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasketIdentification";
 			definition = "Identification of a basket trade.";
@@ -557,10 +583,11 @@ public class Identification15 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IndxId")
 	protected Max35Text indexIdentification;
 	/**
-	 * Reference identifying a index trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -580,6 +607,9 @@ public class Identification15 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IndxId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::INDX</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -598,9 +628,10 @@ public class Identification15 {
 	public static final MMMessageAttribute mmIndexIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIdentification;
-			componentContext_lazy = () -> Identification15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Identification15.mmObject();
 			isDerived = false;
 			xmlTag = "IndxId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::INDX"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexIdentification";
 			definition = "Reference identifying a index trade.";
@@ -610,11 +641,11 @@ public class Identification15 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ListId")
 	protected Max35Text listIdentification;
 	/**
-	 * Unique identifier for a list, as assigned by the trading party. The
-	 * identifier must be unique within a single trading day.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -633,6 +664,9 @@ public class Identification15 {
 	 * Identification15}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ListId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::LIST</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -654,9 +688,10 @@ public class Identification15 {
 	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
-			componentContext_lazy = () -> Identification15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Identification15.mmObject();
 			isDerived = false;
 			xmlTag = "ListId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::LIST"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListIdentification";
 			definition = "Unique identifier for a list, as assigned by the trading party. The identifier must be unique within a single trading day.";
@@ -666,10 +701,11 @@ public class Identification15 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrgmId")
 	protected Max35Text programIdentification;
 	/**
-	 * Program reference which identifies a program trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -689,6 +725,9 @@ public class Identification15 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrgmId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::PROG</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -707,9 +746,10 @@ public class Identification15 {
 	public static final MMMessageAttribute mmProgramIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmProgramIdentification;
-			componentContext_lazy = () -> Identification15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Identification15.mmObject();
 			isDerived = false;
 			xmlTag = "PrgmId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::PROG"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProgramIdentification";
 			definition = "Program reference which identifies a program trade.";
@@ -719,10 +759,11 @@ public class Identification15 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PoolId")
 	protected Max35Text poolIdentification;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -742,6 +783,9 @@ public class Identification15 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PoolId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::POOL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -760,9 +804,10 @@ public class Identification15 {
 	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmPoolIdentification;
-			componentContext_lazy = () -> Identification15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Identification15.mmObject();
 			isDerived = false;
 			xmlTag = "PoolId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::POOL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolIdentification";
 			definition = "Collective reference identifying a set of messages.";
@@ -772,11 +817,11 @@ public class Identification15 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CorpActnEvtId")
 	protected Max35Text corporateActionEventIdentification;
 	/**
-	 * Identification assigned by the account servicer to unambiguously identify
-	 * a corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -795,6 +840,9 @@ public class Identification15 {
 	 * Identification15}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CorpActnEvtId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::CORP</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -816,9 +864,10 @@ public class Identification15 {
 	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
-			componentContext_lazy = () -> Identification15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Identification15.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnEvtId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::CORP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Identification assigned by the account servicer to unambiguously identify a corporate action event.";
@@ -832,12 +881,14 @@ public class Identification15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Identification15.mmAccountOwnerTransactionIdentification, Identification15.mmAccountServicerTransactionIdentification,
-						Identification15.mmMarketInfrastructureTransactionIdentification, Identification15.mmProcessorTransactionIdentification, Identification15.mmCommonIdentification, Identification15.mmTradeIdentification,
-						Identification15.mmMasterIdentification, Identification15.mmBasketIdentification, Identification15.mmIndexIdentification, Identification15.mmListIdentification, Identification15.mmProgramIdentification,
-						Identification15.mmPoolIdentification, Identification15.mmCorporateActionEventIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Identification15.mmAccountOwnerTransactionIdentification, com.tools20022.repository.msg.Identification15.mmAccountServicerTransactionIdentification,
+						com.tools20022.repository.msg.Identification15.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Identification15.mmProcessorTransactionIdentification,
+						com.tools20022.repository.msg.Identification15.mmCommonIdentification, com.tools20022.repository.msg.Identification15.mmTradeIdentification, com.tools20022.repository.msg.Identification15.mmMasterIdentification,
+						com.tools20022.repository.msg.Identification15.mmBasketIdentification, com.tools20022.repository.msg.Identification15.mmIndexIdentification, com.tools20022.repository.msg.Identification15.mmListIdentification,
+						com.tools20022.repository.msg.Identification15.mmProgramIdentification, com.tools20022.repository.msg.Identification15.mmPoolIdentification,
+						com.tools20022.repository.msg.Identification15.mmCorporateActionEventIdentification);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Identification15";
 				definition = "Unique identifier of a document, message or transaction.";
@@ -847,120 +898,120 @@ public class Identification15 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctOwnrTxId", required = true)
 	public Max35Text getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
 
-	public void setAccountOwnerTransactionIdentification(Max35Text accountOwnerTransactionIdentification) {
-		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
+	public Identification15 setAccountOwnerTransactionIdentification(Max35Text accountOwnerTransactionIdentification) {
+		this.accountOwnerTransactionIdentification = Objects.requireNonNull(accountOwnerTransactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcrTxId")
-	public Max35Text getAccountServicerTransactionIdentification() {
-		return accountServicerTransactionIdentification;
+	public Optional<Max35Text> getAccountServicerTransactionIdentification() {
+		return accountServicerTransactionIdentification == null ? Optional.empty() : Optional.of(accountServicerTransactionIdentification);
 	}
 
-	public void setAccountServicerTransactionIdentification(Max35Text accountServicerTransactionIdentification) {
+	public Identification15 setAccountServicerTransactionIdentification(Max35Text accountServicerTransactionIdentification) {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "MktInfrstrctrTxId")
-	public Max35Text getMarketInfrastructureTransactionIdentification() {
-		return marketInfrastructureTransactionIdentification;
+	public Optional<Max35Text> getMarketInfrastructureTransactionIdentification() {
+		return marketInfrastructureTransactionIdentification == null ? Optional.empty() : Optional.of(marketInfrastructureTransactionIdentification);
 	}
 
-	public void setMarketInfrastructureTransactionIdentification(Max35Text marketInfrastructureTransactionIdentification) {
+	public Identification15 setMarketInfrastructureTransactionIdentification(Max35Text marketInfrastructureTransactionIdentification) {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PrcrTxId")
-	public Max35Text getProcessorTransactionIdentification() {
-		return processorTransactionIdentification;
+	public Optional<Max35Text> getProcessorTransactionIdentification() {
+		return processorTransactionIdentification == null ? Optional.empty() : Optional.of(processorTransactionIdentification);
 	}
 
-	public void setProcessorTransactionIdentification(Max35Text processorTransactionIdentification) {
+	public Identification15 setProcessorTransactionIdentification(Max35Text processorTransactionIdentification) {
 		this.processorTransactionIdentification = processorTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CmonId")
-	public Max35Text getCommonIdentification() {
-		return commonIdentification;
+	public Optional<Max35Text> getCommonIdentification() {
+		return commonIdentification == null ? Optional.empty() : Optional.of(commonIdentification);
 	}
 
-	public void setCommonIdentification(Max35Text commonIdentification) {
+	public Identification15 setCommonIdentification(Max35Text commonIdentification) {
 		this.commonIdentification = commonIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TradId")
 	public List<Max35Text> getTradeIdentification() {
-		return tradeIdentification;
+		return tradeIdentification == null ? tradeIdentification = new ArrayList<>() : tradeIdentification;
 	}
 
-	public void setTradeIdentification(List<Max35Text> tradeIdentification) {
-		this.tradeIdentification = tradeIdentification;
+	public Identification15 setTradeIdentification(List<Max35Text> tradeIdentification) {
+		this.tradeIdentification = Objects.requireNonNull(tradeIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "MstrId")
-	public Max35Text getMasterIdentification() {
-		return masterIdentification;
+	public Optional<Max35Text> getMasterIdentification() {
+		return masterIdentification == null ? Optional.empty() : Optional.of(masterIdentification);
 	}
 
-	public void setMasterIdentification(Max35Text masterIdentification) {
+	public Identification15 setMasterIdentification(Max35Text masterIdentification) {
 		this.masterIdentification = masterIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "BsktId")
-	public Max35Text getBasketIdentification() {
-		return basketIdentification;
+	public Optional<Max35Text> getBasketIdentification() {
+		return basketIdentification == null ? Optional.empty() : Optional.of(basketIdentification);
 	}
 
-	public void setBasketIdentification(Max35Text basketIdentification) {
+	public Identification15 setBasketIdentification(Max35Text basketIdentification) {
 		this.basketIdentification = basketIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "IndxId")
-	public Max35Text getIndexIdentification() {
-		return indexIdentification;
+	public Optional<Max35Text> getIndexIdentification() {
+		return indexIdentification == null ? Optional.empty() : Optional.of(indexIdentification);
 	}
 
-	public void setIndexIdentification(Max35Text indexIdentification) {
+	public Identification15 setIndexIdentification(Max35Text indexIdentification) {
 		this.indexIdentification = indexIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ListId")
-	public Max35Text getListIdentification() {
-		return listIdentification;
+	public Optional<Max35Text> getListIdentification() {
+		return listIdentification == null ? Optional.empty() : Optional.of(listIdentification);
 	}
 
-	public void setListIdentification(Max35Text listIdentification) {
+	public Identification15 setListIdentification(Max35Text listIdentification) {
 		this.listIdentification = listIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PrgmId")
-	public Max35Text getProgramIdentification() {
-		return programIdentification;
+	public Optional<Max35Text> getProgramIdentification() {
+		return programIdentification == null ? Optional.empty() : Optional.of(programIdentification);
 	}
 
-	public void setProgramIdentification(Max35Text programIdentification) {
+	public Identification15 setProgramIdentification(Max35Text programIdentification) {
 		this.programIdentification = programIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PoolId")
-	public Max35Text getPoolIdentification() {
-		return poolIdentification;
+	public Optional<Max35Text> getPoolIdentification() {
+		return poolIdentification == null ? Optional.empty() : Optional.of(poolIdentification);
 	}
 
-	public void setPoolIdentification(Max35Text poolIdentification) {
+	public Identification15 setPoolIdentification(Max35Text poolIdentification) {
 		this.poolIdentification = poolIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnEvtId")
-	public Max35Text getCorporateActionEventIdentification() {
-		return corporateActionEventIdentification;
+	public Optional<Max35Text> getCorporateActionEventIdentification() {
+		return corporateActionEventIdentification == null ? Optional.empty() : Optional.of(corporateActionEventIdentification);
 	}
 
-	public void setCorporateActionEventIdentification(Max35Text corporateActionEventIdentification) {
+	public Identification15 setCorporateActionEventIdentification(Max35Text corporateActionEventIdentification) {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
+		return this;
 	}
 }

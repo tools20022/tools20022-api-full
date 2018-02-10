@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -61,25 +63,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.ReferenceDataLatestVersion
- * ReferenceDataLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
- * InvestmentFundsISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOLatestversion
- * InvestmentFundsISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "FndPrcgPsptRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -92,6 +75,25 @@ import javax.xml.bind.annotation.*;
  * FundProcessingPassportReportV02.mmFundProcessingPassport}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
+ * InvestmentFundsISOPreviousversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOLatestversion
+ * InvestmentFundsISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "FndPrcgPsptRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.ReferenceDataLatestVersion
+ * ReferenceDataLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code reda.004.001.02}</li>
@@ -107,16 +109,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FundProcessingPassportReportV02", propOrder = {"messageIdentification", "fundProcessingPassport"})
 public class FundProcessingPassportReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Reference that uniquely identifies a message from a business application
-	 * standpoint.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,13 +160,11 @@ public class FundProcessingPassportReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "FPP", required = true)
 	protected List<FundProcessingPassport1> fundProcessingPassport;
 	/**
-	 * Fund Processing Passsport (FPP) is a fully harmonised document with all
-	 * key operational information that fund promoters<br>
-	 * should provide on their investment funds in order to facilitate their
-	 * trading.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,25 +236,25 @@ public class FundProcessingPassportReportV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public FundProcessingPassportReportV02 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "FPP", required = true)
 	public List<FundProcessingPassport1> getFundProcessingPassport() {
-		return fundProcessingPassport;
+		return fundProcessingPassport == null ? fundProcessingPassport = new ArrayList<>() : fundProcessingPassport;
 	}
 
-	public void setFundProcessingPassport(List<FundProcessingPassport1> fundProcessingPassport) {
-		this.fundProcessingPassport = fundProcessingPassport;
+	public FundProcessingPassportReportV02 setFundProcessingPassport(List<FundProcessingPassport1> fundProcessingPassport) {
+		this.fundProcessingPassport = Objects.requireNonNull(fundProcessingPassport);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:reda.004.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:reda.004.001.02")
 	static public class Document {
 		@XmlElement(name = "FndPrcgPsptRpt", required = true)
 		public FundProcessingPassportReportV02 messageBody;

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.InterimFinalPaymentCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies payment type.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterimFinalPaymentCode#mmInterim
- * InterimFinalPaymentCode.mmInterim}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterimFinalPaymentCode#Interim
+ * InterimFinalPaymentCode.Interim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterimFinalPaymentCode#mmFinal
- * InterimFinalPaymentCode.mmFinal}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterimFinalPaymentCode#Final
+ * InterimFinalPaymentCode.Final}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies payment type."</li>
  * </ul>
  */
-public class InterimFinalPaymentCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InterimFinalPaymentCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,12 +97,12 @@ public class InterimFinalPaymentCode {
 	 * definition} = "Interim payment. Pending possible future payments."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterim = new MMCode() {
+	public static final InterimFinalPaymentCode Interim = new InterimFinalPaymentCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
 			definition = "Interim payment. Pending possible future payments.";
-			owner_lazy = () -> InterimFinalPaymentCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InterimFinalPaymentCode.mmObject();
 			codeName = "INTE";
 		}
 	};
@@ -121,28 +127,58 @@ public class InterimFinalPaymentCode {
 	 * definition} = "Final payment positions will be debited."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinal = new MMCode() {
+	public static final InterimFinalPaymentCode Final = new InterimFinalPaymentCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
 			definition = "Final payment positions will be debited.";
-			owner_lazy = () -> InterimFinalPaymentCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InterimFinalPaymentCode.mmObject();
 			codeName = "FINL";
 		}
 	};
+	final static private LinkedHashMap<String, InterimFinalPaymentCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InterimFinalPaymentCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("INTE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterimFinalPaymentCode";
 				definition = "Specifies payment type.";
-				code_lazy = () -> Arrays.asList(InterimFinalPaymentCode.mmInterim, InterimFinalPaymentCode.mmFinal);
 				derivation_lazy = () -> Arrays.asList(InterimFinalPayment1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterimFinalPaymentCode.Interim, com.tools20022.repository.codeset.InterimFinalPaymentCode.Final);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Interim.getCodeName().get(), Interim);
+		codesByName.put(Final.getCodeName().get(), Final);
+	}
+
+	public static InterimFinalPaymentCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InterimFinalPaymentCode[] values() {
+		InterimFinalPaymentCode[] values = new InterimFinalPaymentCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InterimFinalPaymentCode> {
+		@Override
+		public InterimFinalPaymentCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InterimFinalPaymentCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

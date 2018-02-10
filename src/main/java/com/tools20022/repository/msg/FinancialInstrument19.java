@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -30,6 +31,8 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +67,17 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintFinancialInstrumentIdentificationGuideline#forFinancialInstrument19
+ * ConstraintFinancialInstrumentIdentificationGuideline.forFinancialInstrument19
+ * }</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrument19", propOrder = {"identification", "name", "classType", "securitiesForm"})
 public class FinancialInstrument19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected SecurityIdentification7Choice identification;
 	/**
-	 * Identification of a security by an ISIN.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +133,7 @@ public class FinancialInstrument19 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> FinancialInstrument19.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument19.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +144,11 @@ public class FinancialInstrument19 {
 			complexType_lazy = () -> SecurityIdentification7Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm")
 	protected Max105Text name;
 	/**
-	 * Name of the financial instrument in free format text.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -154,6 +168,9 @@ public class FinancialInstrument19 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Nm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70a::FIAN</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -167,9 +184,10 @@ public class FinancialInstrument19 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
-			componentContext_lazy = () -> FinancialInstrument19.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument19.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70a::FIAN"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the financial instrument in free format text.";
@@ -178,14 +196,11 @@ public class FinancialInstrument19 {
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClssTp")
 	protected RestrictedFINMax30Text classType;
 	/**
-	 * Features of units offered by a fund. For example, a unit may have a
-	 * specific load structure, eg, front end or back end, an income policy, eg,
-	 * pay out or accumulate, or a trailer policy, eg, with or without. Fund
-	 * classes are typically denoted by a single character, eg, 'Class A',
-	 * 'Class 2'.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -221,7 +236,7 @@ public class FinancialInstrument19 {
 	public static final MMMessageAttribute mmClassType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmClassType;
-			componentContext_lazy = () -> FinancialInstrument19.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument19.mmObject();
 			isDerived = false;
 			xmlTag = "ClssTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,10 +247,11 @@ public class FinancialInstrument19 {
 			simpleType_lazy = () -> RestrictedFINMax30Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesForm")
 	protected FormOfSecurity1Code securitiesForm;
 	/**
-	 * Form, ie, ownership, of the security, eg, registered or bearer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -256,6 +272,9 @@ public class FinancialInstrument19 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesForm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::FORM</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -270,9 +289,10 @@ public class FinancialInstrument19 {
 	public static final MMMessageAttribute mmSecuritiesForm = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
-			componentContext_lazy = () -> FinancialInstrument19.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument19.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesForm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::FORM"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesForm";
 			definition = "Form, ie, ownership, of the security, eg, registered or bearer.";
@@ -285,9 +305,11 @@ public class FinancialInstrument19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrument19.mmIdentification, FinancialInstrument19.mmName, FinancialInstrument19.mmClassType, FinancialInstrument19.mmSecuritiesForm);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument19.mmIdentification, com.tools20022.repository.msg.FinancialInstrument19.mmName,
+						com.tools20022.repository.msg.FinancialInstrument19.mmClassType, com.tools20022.repository.msg.FinancialInstrument19.mmSecuritiesForm);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFinancialInstrumentIdentificationGuideline.forFinancialInstrument19);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument19";
 				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.";
@@ -296,39 +318,39 @@ public class FinancialInstrument19 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification7Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(SecurityIdentification7Choice identification) {
-		this.identification = identification;
+	public FinancialInstrument19 setIdentification(SecurityIdentification7Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Nm")
-	public Max105Text getName() {
-		return name;
+	public Optional<Max105Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max105Text name) {
+	public FinancialInstrument19 setName(Max105Text name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "ClssTp")
-	public RestrictedFINMax30Text getClassType() {
-		return classType;
+	public Optional<RestrictedFINMax30Text> getClassType() {
+		return classType == null ? Optional.empty() : Optional.of(classType);
 	}
 
-	public void setClassType(RestrictedFINMax30Text classType) {
+	public FinancialInstrument19 setClassType(RestrictedFINMax30Text classType) {
 		this.classType = classType;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesForm")
-	public FormOfSecurity1Code getSecuritiesForm() {
-		return securitiesForm;
+	public Optional<FormOfSecurity1Code> getSecuritiesForm() {
+		return securitiesForm == null ? Optional.empty() : Optional.of(securitiesForm);
 	}
 
-	public void setSecuritiesForm(FormOfSecurity1Code securitiesForm) {
+	public FinancialInstrument19 setSecuritiesForm(FormOfSecurity1Code securitiesForm) {
 		this.securitiesForm = securitiesForm;
+		return this;
 	}
 }

@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -50,25 +52,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
- * TradeServicesManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion
- * TradeServicesManagementISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion
- * TradeServicesManagementISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "ActvtyReqRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -84,6 +67,25 @@ import javax.xml.bind.annotation.*;
  * ActivityReportRequestV03.mmReportPeriod}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion
+ * TradeServicesManagementISOPreviousversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion
+ * TradeServicesManagementISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "ActvtyReqRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
+ * TradeServicesManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code tsmt.003.001.03}</li>
@@ -99,15 +101,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ActivityReportRequestV03", propOrder = {"requestIdentification", "entitiesToBeReported", "reportPeriod"})
 public class ActivityReportRequestV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ReqId", required = true)
 	protected MessageIdentification1 requestIdentification;
 	/**
-	 * Identifies the request message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,11 +150,11 @@ public class ActivityReportRequestV03 {
 			}
 		}
 	};
+	@XmlElement(name = "NttiesToBeRptd")
 	protected List<BICIdentification1> entitiesToBeReported;
 	/**
-	 * Specifies the entities of the submitter for which the activities have to
-	 * be reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,10 +195,11 @@ public class ActivityReportRequestV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RptPrd", required = true)
 	protected DateTimePeriodDetails1 reportPeriod;
 	/**
-	 * Specifies the period for which activities have to be reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -267,34 +271,34 @@ public class ActivityReportRequestV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ReqId", required = true)
 	public MessageIdentification1 getRequestIdentification() {
 		return requestIdentification;
 	}
 
-	public void setRequestIdentification(MessageIdentification1 requestIdentification) {
-		this.requestIdentification = requestIdentification;
+	public ActivityReportRequestV03 setRequestIdentification(MessageIdentification1 requestIdentification) {
+		this.requestIdentification = Objects.requireNonNull(requestIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "NttiesToBeRptd")
 	public List<BICIdentification1> getEntitiesToBeReported() {
-		return entitiesToBeReported;
+		return entitiesToBeReported == null ? entitiesToBeReported = new ArrayList<>() : entitiesToBeReported;
 	}
 
-	public void setEntitiesToBeReported(List<BICIdentification1> entitiesToBeReported) {
-		this.entitiesToBeReported = entitiesToBeReported;
+	public ActivityReportRequestV03 setEntitiesToBeReported(List<BICIdentification1> entitiesToBeReported) {
+		this.entitiesToBeReported = Objects.requireNonNull(entitiesToBeReported);
+		return this;
 	}
 
-	@XmlElement(name = "RptPrd", required = true)
 	public DateTimePeriodDetails1 getReportPeriod() {
 		return reportPeriod;
 	}
 
-	public void setReportPeriod(DateTimePeriodDetails1 reportPeriod) {
-		this.reportPeriod = reportPeriod;
+	public ActivityReportRequestV03 setReportPeriod(DateTimePeriodDetails1 reportPeriod) {
+		this.reportPeriod = Objects.requireNonNull(reportPeriod);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.003.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.003.001.03")
 	static public class Document {
 		@XmlElement(name = "ActvtyReqRpt", required = true)
 		public ActivityReportRequestV03 messageBody;

@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,16 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * NumberOfTransactionsPerStatus3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NumberOfItemsPerStatus1", propOrder = {"status", "numberOfItems"})
 public class NumberOfItemsPerStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts", required = true)
 	protected ReportItemStatus1Code status;
 	/**
-	 * Common status of the report items for which the number of report items is
-	 * specified in NumberOfItems.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +124,7 @@ public class NumberOfItemsPerStatus1 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NumberOfItemsPerStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NumberOfItemsPerStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +136,11 @@ public class NumberOfItemsPerStatus1 {
 			simpleType_lazy = () -> ReportItemStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfItms", required = true)
 	protected Max15NumericText numberOfItems;
 	/**
-	 * Number of items for the status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +173,7 @@ public class NumberOfItemsPerStatus1 {
 	 */
 	public static final MMMessageAttribute mmNumberOfItems = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NumberOfItemsPerStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NumberOfItemsPerStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfItms";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,9 +189,9 @@ public class NumberOfItemsPerStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NumberOfItemsPerStatus1.mmStatus, NumberOfItemsPerStatus1.mmNumberOfItems);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberOfItemsPerStatus1.mmStatus, com.tools20022.repository.msg.NumberOfItemsPerStatus1.mmNumberOfItems);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesBalanceTransparencyReportStatusAdviceV01.mmNumberOfItemsPerStatus);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NumberOfItemsPerStatus1";
 				definition = "Provides detailed information on the number of reported items with their respective acceptance status.";
@@ -199,21 +201,21 @@ public class NumberOfItemsPerStatus1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public ReportItemStatus1Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(ReportItemStatus1Code status) {
-		this.status = status;
+	public NumberOfItemsPerStatus1 setStatus(ReportItemStatus1Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "NbOfItms", required = true)
 	public Max15NumericText getNumberOfItems() {
 		return numberOfItems;
 	}
 
-	public void setNumberOfItems(Max15NumericText numberOfItems) {
-		this.numberOfItems = numberOfItems;
+	public NumberOfItemsPerStatus1 setNumberOfItems(Max15NumericText numberOfItems) {
+		this.numberOfItems = Objects.requireNonNull(numberOfItems);
+		return this;
 	}
 }

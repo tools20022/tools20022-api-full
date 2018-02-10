@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,16 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * ProcessRetry1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ProcessRetry2", propOrder = {"delay", "maximumNumber"})
 public class ProcessRetry2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dely", required = true)
 	protected Max9NumericText delay;
 	/**
-	 * Time period to wait for a retry in months, days, hours and minutes,
-	 * leading zeros could be omitted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +104,7 @@ public class ProcessRetry2 {
 	 */
 	public static final MMMessageAttribute mmDelay = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProcessRetry2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessRetry2.mmObject();
 			isDerived = false;
 			xmlTag = "Dely";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +115,11 @@ public class ProcessRetry2 {
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxNb")
 	protected Number maximumNumber;
 	/**
-	 * Maximum number of retries.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +145,7 @@ public class ProcessRetry2 {
 	 */
 	public static final MMMessageAttribute mmMaximumNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProcessRetry2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessRetry2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,8 +160,8 @@ public class ProcessRetry2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProcessRetry2.mmDelay, ProcessRetry2.mmMaximumNumber);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProcessRetry2.mmDelay, com.tools20022.repository.msg.ProcessRetry2.mmMaximumNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessRetry2";
 				definition = "Definition of retry process if activation of an action fails.";
@@ -168,21 +171,21 @@ public class ProcessRetry2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dely", required = true)
 	public Max9NumericText getDelay() {
 		return delay;
 	}
 
-	public void setDelay(Max9NumericText delay) {
-		this.delay = delay;
+	public ProcessRetry2 setDelay(Max9NumericText delay) {
+		this.delay = Objects.requireNonNull(delay);
+		return this;
 	}
 
-	@XmlElement(name = "MaxNb")
-	public Number getMaximumNumber() {
-		return maximumNumber;
+	public Optional<Number> getMaximumNumber() {
+		return maximumNumber == null ? Optional.empty() : Optional.of(maximumNumber);
 	}
 
-	public void setMaximumNumber(Number maximumNumber) {
+	public ProcessRetry2 setMaximumNumber(Number maximumNumber) {
 		this.maximumNumber = maximumNumber;
+		return this;
 	}
 }

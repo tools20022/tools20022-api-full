@@ -20,52 +20,56 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.InstructionProcessingStatusCode;
+import com.tools20022.repository.codeset.TransactionProcessingStatus4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of an instruction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode
- * InstructionProcessingStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus4Code#mmAcknowledgedAccepted
- * TransactionProcessingStatus4Code.mmAcknowledgedAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus4Code#AcknowledgedAccepted
+ * TransactionProcessingStatus4Code.AcknowledgedAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus4Code#mmPendingProcessing
- * TransactionProcessingStatus4Code.mmPendingProcessing}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus4Code#PendingProcessing
+ * TransactionProcessingStatus4Code.PendingProcessing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus4Code#mmRejected
- * TransactionProcessingStatus4Code.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus4Code#Rejected
+ * TransactionProcessingStatus4Code.Rejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus4Code#mmInRepair
- * TransactionProcessingStatus4Code.mmInRepair}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus4Code#InRepair
+ * TransactionProcessingStatus4Code.InRepair}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus4Code#mmCancelled
- * TransactionProcessingStatus4Code.mmCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus4Code#Cancelled
+ * TransactionProcessingStatus4Code.Cancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus4Code#mmPendingCancellation
- * TransactionProcessingStatus4Code.mmPendingCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus4Code#PendingCancellation
+ * TransactionProcessingStatus4Code.PendingCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus4Code#mmCancellationRequested
- * TransactionProcessingStatus4Code.mmCancellationRequested}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus4Code#CancellationRequested
+ * TransactionProcessingStatus4Code.CancellationRequested}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus4Code#mmModificationRequested
- * TransactionProcessingStatus4Code.mmModificationRequested}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus4Code#ModificationRequested
+ * TransactionProcessingStatus4Code.ModificationRequested}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode
+ * InstructionProcessingStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of an instruction."</li>
  * </ul>
  */
-public class TransactionProcessingStatus4Code extends InstructionProcessingStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransactionProcessingStatus4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -101,11 +106,12 @@ public class TransactionProcessingStatus4Code extends InstructionProcessingStatu
 	 * name} = "AcknowledgedAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
+	public static final TransactionProcessingStatus4Code AcknowledgedAccepted = new TransactionProcessingStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
-			owner_lazy = () -> TransactionProcessingStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionProcessingStatus4Code.mmObject();
+			codeName = InstructionProcessingStatusCode.AcknowledgedAccepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -124,11 +130,12 @@ public class TransactionProcessingStatus4Code extends InstructionProcessingStatu
 	 * name} = "PendingProcessing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingProcessing = new MMCode() {
+	public static final TransactionProcessingStatus4Code PendingProcessing = new TransactionProcessingStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingProcessing";
-			owner_lazy = () -> TransactionProcessingStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionProcessingStatus4Code.mmObject();
+			codeName = InstructionProcessingStatusCode.PendingProcessing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -147,11 +154,12 @@ public class TransactionProcessingStatus4Code extends InstructionProcessingStatu
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final TransactionProcessingStatus4Code Rejected = new TransactionProcessingStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> TransactionProcessingStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionProcessingStatus4Code.mmObject();
+			codeName = InstructionProcessingStatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -170,11 +178,12 @@ public class TransactionProcessingStatus4Code extends InstructionProcessingStatu
 	 * name} = "InRepair"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInRepair = new MMCode() {
+	public static final TransactionProcessingStatus4Code InRepair = new TransactionProcessingStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InRepair";
-			owner_lazy = () -> TransactionProcessingStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionProcessingStatus4Code.mmObject();
+			codeName = InstructionProcessingStatusCode.InRepair.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -193,11 +202,12 @@ public class TransactionProcessingStatus4Code extends InstructionProcessingStatu
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelled = new MMCode() {
+	public static final TransactionProcessingStatus4Code Cancelled = new TransactionProcessingStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
-			owner_lazy = () -> TransactionProcessingStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionProcessingStatus4Code.mmObject();
+			codeName = InstructionProcessingStatusCode.Cancelled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -216,11 +226,12 @@ public class TransactionProcessingStatus4Code extends InstructionProcessingStatu
 	 * name} = "PendingCancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingCancellation = new MMCode() {
+	public static final TransactionProcessingStatus4Code PendingCancellation = new TransactionProcessingStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellation";
-			owner_lazy = () -> TransactionProcessingStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionProcessingStatus4Code.mmObject();
+			codeName = InstructionProcessingStatusCode.PendingCancellation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -239,11 +250,12 @@ public class TransactionProcessingStatus4Code extends InstructionProcessingStatu
 	 * name} = "CancellationRequested"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellationRequested = new MMCode() {
+	public static final TransactionProcessingStatus4Code CancellationRequested = new TransactionProcessingStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRequested";
-			owner_lazy = () -> TransactionProcessingStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionProcessingStatus4Code.mmObject();
+			codeName = InstructionProcessingStatusCode.CancellationRequested.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -262,28 +274,66 @@ public class TransactionProcessingStatus4Code extends InstructionProcessingStatu
 	 * name} = "ModificationRequested"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmModificationRequested = new MMCode() {
+	public static final TransactionProcessingStatus4Code ModificationRequested = new TransactionProcessingStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationRequested";
-			owner_lazy = () -> TransactionProcessingStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionProcessingStatus4Code.mmObject();
+			codeName = InstructionProcessingStatusCode.ModificationRequested.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TransactionProcessingStatus4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransactionProcessingStatus4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PACK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionProcessingStatus4Code";
 				definition = "Specifies the status of an instruction.";
-				code_lazy = () -> Arrays.asList(TransactionProcessingStatus4Code.mmAcknowledgedAccepted, TransactionProcessingStatus4Code.mmPendingProcessing, TransactionProcessingStatus4Code.mmRejected,
-						TransactionProcessingStatus4Code.mmInRepair, TransactionProcessingStatus4Code.mmCancelled, TransactionProcessingStatus4Code.mmPendingCancellation, TransactionProcessingStatus4Code.mmCancellationRequested,
-						TransactionProcessingStatus4Code.mmModificationRequested);
 				trace_lazy = () -> InstructionProcessingStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionProcessingStatus4Code.AcknowledgedAccepted, com.tools20022.repository.codeset.TransactionProcessingStatus4Code.PendingProcessing,
+						com.tools20022.repository.codeset.TransactionProcessingStatus4Code.Rejected, com.tools20022.repository.codeset.TransactionProcessingStatus4Code.InRepair,
+						com.tools20022.repository.codeset.TransactionProcessingStatus4Code.Cancelled, com.tools20022.repository.codeset.TransactionProcessingStatus4Code.PendingCancellation,
+						com.tools20022.repository.codeset.TransactionProcessingStatus4Code.CancellationRequested, com.tools20022.repository.codeset.TransactionProcessingStatus4Code.ModificationRequested);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AcknowledgedAccepted.getCodeName().get(), AcknowledgedAccepted);
+		codesByName.put(PendingProcessing.getCodeName().get(), PendingProcessing);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+		codesByName.put(InRepair.getCodeName().get(), InRepair);
+		codesByName.put(Cancelled.getCodeName().get(), Cancelled);
+		codesByName.put(PendingCancellation.getCodeName().get(), PendingCancellation);
+		codesByName.put(CancellationRequested.getCodeName().get(), CancellationRequested);
+		codesByName.put(ModificationRequested.getCodeName().get(), ModificationRequested);
+	}
+
+	public static TransactionProcessingStatus4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransactionProcessingStatus4Code[] values() {
+		TransactionProcessingStatus4Code[] values = new TransactionProcessingStatus4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransactionProcessingStatus4Code> {
+		@Override
+		public TransactionProcessingStatus4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransactionProcessingStatus4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

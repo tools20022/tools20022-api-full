@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.VotingCondition;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,16 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "List of the different methods that can be used to vote."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "VoteMethods", propOrder = {"voteThroughNetwork", "voteByMail", "electronicVote", "voteByTelephone"})
 public class VoteMethods {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "VoteThrghNtwk")
 	protected AnyBICIdentifier voteThroughNetwork;
 	/**
-	 * Network address through which a voting party can cast its vote via a
-	 * structured message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +118,7 @@ public class VoteMethods {
 	public static final MMMessageAttribute mmVoteThroughNetwork = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> VotingCondition.mmVoteLocation;
-			componentContext_lazy = () -> VoteMethods.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteMethods.mmObject();
 			isDerived = false;
 			xmlTag = "VoteThrghNtwk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +129,11 @@ public class VoteMethods {
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "VoteByMail")
 	protected PostalAddress1 voteByMail;
 	/**
-	 * Specifies the address where voting ballot can be sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -162,7 +164,7 @@ public class VoteMethods {
 	public static final MMMessageAssociationEnd mmVoteByMail = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
-			componentContext_lazy = () -> VoteMethods.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteMethods.mmObject();
 			isDerived = false;
 			xmlTag = "VoteByMail";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +176,11 @@ public class VoteMethods {
 			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
 		}
 	};
+	@XmlElement(name = "ElctrncVote")
 	protected CommunicationAddress4 electronicVote;
 	/**
-	 * Electronic address, e-mail or website, where a security holder can vote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -210,7 +213,7 @@ public class VoteMethods {
 	public static final MMMessageAssociationEnd mmElectronicVote = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ElectronicAddress.mmObject();
-			componentContext_lazy = () -> VoteMethods.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteMethods.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncVote";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,10 +225,11 @@ public class VoteMethods {
 			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddress4.mmObject();
 		}
 	};
+	@XmlElement(name = "VoteByTel")
 	protected Max35Text voteByTelephone;
 	/**
-	 * Telephone number providing access to an automated voting system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -257,7 +261,7 @@ public class VoteMethods {
 	public static final MMMessageAttribute mmVoteByTelephone = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PhoneAddress.mmObject();
-			componentContext_lazy = () -> VoteMethods.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteMethods.mmObject();
 			isDerived = false;
 			xmlTag = "VoteByTel";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,9 +276,10 @@ public class VoteMethods {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(VoteMethods.mmVoteThroughNetwork, VoteMethods.mmVoteByMail, VoteMethods.mmElectronicVote, VoteMethods.mmVoteByTelephone);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteMethods.mmVoteThroughNetwork, com.tools20022.repository.msg.VoteMethods.mmVoteByMail, com.tools20022.repository.msg.VoteMethods.mmElectronicVote,
+						com.tools20022.repository.msg.VoteMethods.mmVoteByTelephone);
 				trace_lazy = () -> VotingCondition.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VoteMethods";
 				definition = "List of the different methods that can be used to vote.";
@@ -283,39 +288,39 @@ public class VoteMethods {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "VoteThrghNtwk")
-	public AnyBICIdentifier getVoteThroughNetwork() {
-		return voteThroughNetwork;
+	public Optional<AnyBICIdentifier> getVoteThroughNetwork() {
+		return voteThroughNetwork == null ? Optional.empty() : Optional.of(voteThroughNetwork);
 	}
 
-	public void setVoteThroughNetwork(AnyBICIdentifier voteThroughNetwork) {
+	public VoteMethods setVoteThroughNetwork(AnyBICIdentifier voteThroughNetwork) {
 		this.voteThroughNetwork = voteThroughNetwork;
+		return this;
 	}
 
-	@XmlElement(name = "VoteByMail")
-	public PostalAddress1 getVoteByMail() {
-		return voteByMail;
+	public Optional<PostalAddress1> getVoteByMail() {
+		return voteByMail == null ? Optional.empty() : Optional.of(voteByMail);
 	}
 
-	public void setVoteByMail(com.tools20022.repository.msg.PostalAddress1 voteByMail) {
+	public VoteMethods setVoteByMail(com.tools20022.repository.msg.PostalAddress1 voteByMail) {
 		this.voteByMail = voteByMail;
+		return this;
 	}
 
-	@XmlElement(name = "ElctrncVote")
-	public CommunicationAddress4 getElectronicVote() {
-		return electronicVote;
+	public Optional<CommunicationAddress4> getElectronicVote() {
+		return electronicVote == null ? Optional.empty() : Optional.of(electronicVote);
 	}
 
-	public void setElectronicVote(com.tools20022.repository.msg.CommunicationAddress4 electronicVote) {
+	public VoteMethods setElectronicVote(com.tools20022.repository.msg.CommunicationAddress4 electronicVote) {
 		this.electronicVote = electronicVote;
+		return this;
 	}
 
-	@XmlElement(name = "VoteByTel")
-	public Max35Text getVoteByTelephone() {
-		return voteByTelephone;
+	public Optional<Max35Text> getVoteByTelephone() {
+		return voteByTelephone == null ? Optional.empty() : Optional.of(voteByTelephone);
 	}
 
-	public void setVoteByTelephone(Max35Text voteByTelephone) {
+	public VoteMethods setVoteByTelephone(Max35Text voteByTelephone) {
 		this.voteByTelephone = voteByTelephone;
+		return this;
 	}
 }

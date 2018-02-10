@@ -19,8 +19,12 @@ package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMText;
+import com.tools20022.repository.datatype.DateOffsetText.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies a date offset in the form of an integer value of business days.
@@ -33,8 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -47,14 +51,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
 public class DateOffsetText {
 
 	final static private AtomicReference<MMText> mmObject_lazy = new AtomicReference<>();
+	protected String value;
 
 	final static public MMText mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMText() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateOffsetText";
 				definition = "Specifies a date offset in the form of an integer value of business days. Restricted to the values 0, -1 and -2.";
@@ -62,5 +68,26 @@ public class DateOffsetText {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public DateOffsetText(String value) {
+		this.value = value;
+	}
+
+	@Override
+	public String toString() {
+		return value;
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DateOffsetText> {
+		@Override
+		public DateOffsetText unmarshal(String value) {
+			return new DateOffsetText(value);
+		}
+
+		@Override
+		public String marshal(DateOffsetText typedData) {
+			return typedData.value;
+		}
 	}
 }

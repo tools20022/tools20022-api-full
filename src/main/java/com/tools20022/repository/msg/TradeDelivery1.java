@@ -25,9 +25,8 @@ import com.tools20022.repository.area.tsin.FinancialInvoiceV01;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -77,8 +76,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,15 +96,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TradeDelivery1", propOrder = {"deliveryPeriod", "deliveryDateTime", "shipFrom", "shipTo", "ultimateShipTo", "deliveryNote", "consignment"})
 public class TradeDelivery1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DlvryPrd")
 	protected Period1 deliveryPeriod;
 	/**
-	 * Actual delivery period of the products and/or services.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,7 +145,7 @@ public class TradeDelivery1 {
 	public static final MMMessageAttribute mmDeliveryPeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProductDelivery.mmDeliveryPeriod;
-			componentContext_lazy = () -> TradeDelivery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,10 +157,11 @@ public class TradeDelivery1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvryDtTm")
 	protected ISODateTime deliveryDateTime;
 	/**
-	 * Actual delivery date/time of the products and/or services.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,7 +202,7 @@ public class TradeDelivery1 {
 	public static final MMMessageAttribute mmDeliveryDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
-			componentContext_lazy = () -> TradeDelivery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,10 +214,11 @@ public class TradeDelivery1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "ShipFr")
 	protected TradeParty1 shipFrom;
 	/**
-	 * Party from whom the goods are dispatched.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -253,7 +255,7 @@ public class TradeDelivery1 {
 	public static final MMMessageAssociationEnd mmShipFrom = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ShipFrom.mmObject();
-			componentContext_lazy = () -> TradeDelivery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmObject();
 			isDerived = false;
 			xmlTag = "ShipFr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,10 +268,11 @@ public class TradeDelivery1 {
 			type_lazy = () -> com.tools20022.repository.msg.TradeParty1.mmObject();
 		}
 	};
+	@XmlElement(name = "ShipTo")
 	protected TradeParty1 shipTo;
 	/**
-	 * Party to whom the goods are dispatched.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -306,7 +309,7 @@ public class TradeDelivery1 {
 	public static final MMMessageAssociationEnd mmShipTo = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ShipTo.mmObject();
-			componentContext_lazy = () -> TradeDelivery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmObject();
 			isDerived = false;
 			xmlTag = "ShipTo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -319,10 +322,11 @@ public class TradeDelivery1 {
 			type_lazy = () -> com.tools20022.repository.msg.TradeParty1.mmObject();
 		}
 	};
+	@XmlElement(name = "UltmtShipTo")
 	protected TradeParty1 ultimateShipTo;
 	/**
-	 * Final party to whom the goods are dispatched.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -360,7 +364,7 @@ public class TradeDelivery1 {
 	public static final MMMessageAssociationEnd mmUltimateShipTo = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ShipTo.mmObject();
-			componentContext_lazy = () -> TradeDelivery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmObject();
 			isDerived = false;
 			xmlTag = "UltmtShipTo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -373,10 +377,11 @@ public class TradeDelivery1 {
 			type_lazy = () -> com.tools20022.repository.msg.TradeParty1.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvryNote")
 	protected DocumentIdentification22 deliveryNote;
 	/**
-	 * Delivery note related to the delivery of the products and/or services.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -417,7 +422,7 @@ public class TradeDelivery1 {
 	public static final MMMessageAttribute mmDeliveryNote = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> DeliveryNote.mmObject();
-			componentContext_lazy = () -> TradeDelivery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryNote";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -429,10 +434,11 @@ public class TradeDelivery1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification22.mmObject();
 		}
 	};
+	@XmlElement(name = "Consgnmt")
 	protected List<com.tools20022.repository.msg.Consignment2> consignment;
 	/**
-	 * Physical consolidation of goods for transport.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -471,7 +477,7 @@ public class TradeDelivery1 {
 	public static final MMMessageAssociationEnd mmConsignment = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ProductDelivery.mmRouting;
-			componentContext_lazy = () -> TradeDelivery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmObject();
 			isDerived = false;
 			xmlTag = "Consgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -487,11 +493,12 @@ public class TradeDelivery1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TradeDelivery1.mmDeliveryPeriod, TradeDelivery1.mmDeliveryDateTime, TradeDelivery1.mmShipFrom, TradeDelivery1.mmShipTo, TradeDelivery1.mmUltimateShipTo,
-						TradeDelivery1.mmDeliveryNote, TradeDelivery1.mmConsignment);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeDelivery1.mmDeliveryPeriod, com.tools20022.repository.msg.TradeDelivery1.mmDeliveryDateTime,
+						com.tools20022.repository.msg.TradeDelivery1.mmShipFrom, com.tools20022.repository.msg.TradeDelivery1.mmShipTo, com.tools20022.repository.msg.TradeDelivery1.mmUltimateShipTo,
+						com.tools20022.repository.msg.TradeDelivery1.mmDeliveryNote, com.tools20022.repository.msg.TradeDelivery1.mmConsignment);
 				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInvoiceV01.mmTradeDelivery);
 				trace_lazy = () -> ProductDelivery.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeDelivery1";
 				definition = "Specifies how the supply chain shipping arrangements and the delivery of products and/or services as well as related documentation.";
@@ -501,66 +508,66 @@ public class TradeDelivery1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DlvryPrd")
-	public Period1 getDeliveryPeriod() {
-		return deliveryPeriod;
+	public Optional<Period1> getDeliveryPeriod() {
+		return deliveryPeriod == null ? Optional.empty() : Optional.of(deliveryPeriod);
 	}
 
-	public void setDeliveryPeriod(com.tools20022.repository.msg.Period1 deliveryPeriod) {
+	public TradeDelivery1 setDeliveryPeriod(com.tools20022.repository.msg.Period1 deliveryPeriod) {
 		this.deliveryPeriod = deliveryPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "DlvryDtTm")
-	public ISODateTime getDeliveryDateTime() {
-		return deliveryDateTime;
+	public Optional<ISODateTime> getDeliveryDateTime() {
+		return deliveryDateTime == null ? Optional.empty() : Optional.of(deliveryDateTime);
 	}
 
-	public void setDeliveryDateTime(ISODateTime deliveryDateTime) {
+	public TradeDelivery1 setDeliveryDateTime(ISODateTime deliveryDateTime) {
 		this.deliveryDateTime = deliveryDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "ShipFr")
-	public TradeParty1 getShipFrom() {
-		return shipFrom;
+	public Optional<TradeParty1> getShipFrom() {
+		return shipFrom == null ? Optional.empty() : Optional.of(shipFrom);
 	}
 
-	public void setShipFrom(com.tools20022.repository.msg.TradeParty1 shipFrom) {
+	public TradeDelivery1 setShipFrom(com.tools20022.repository.msg.TradeParty1 shipFrom) {
 		this.shipFrom = shipFrom;
+		return this;
 	}
 
-	@XmlElement(name = "ShipTo")
-	public TradeParty1 getShipTo() {
-		return shipTo;
+	public Optional<TradeParty1> getShipTo() {
+		return shipTo == null ? Optional.empty() : Optional.of(shipTo);
 	}
 
-	public void setShipTo(com.tools20022.repository.msg.TradeParty1 shipTo) {
+	public TradeDelivery1 setShipTo(com.tools20022.repository.msg.TradeParty1 shipTo) {
 		this.shipTo = shipTo;
+		return this;
 	}
 
-	@XmlElement(name = "UltmtShipTo")
-	public TradeParty1 getUltimateShipTo() {
-		return ultimateShipTo;
+	public Optional<TradeParty1> getUltimateShipTo() {
+		return ultimateShipTo == null ? Optional.empty() : Optional.of(ultimateShipTo);
 	}
 
-	public void setUltimateShipTo(com.tools20022.repository.msg.TradeParty1 ultimateShipTo) {
+	public TradeDelivery1 setUltimateShipTo(com.tools20022.repository.msg.TradeParty1 ultimateShipTo) {
 		this.ultimateShipTo = ultimateShipTo;
+		return this;
 	}
 
-	@XmlElement(name = "DlvryNote")
-	public DocumentIdentification22 getDeliveryNote() {
-		return deliveryNote;
+	public Optional<DocumentIdentification22> getDeliveryNote() {
+		return deliveryNote == null ? Optional.empty() : Optional.of(deliveryNote);
 	}
 
-	public void setDeliveryNote(com.tools20022.repository.msg.DocumentIdentification22 deliveryNote) {
+	public TradeDelivery1 setDeliveryNote(com.tools20022.repository.msg.DocumentIdentification22 deliveryNote) {
 		this.deliveryNote = deliveryNote;
+		return this;
 	}
 
-	@XmlElement(name = "Consgnmt")
 	public List<Consignment2> getConsignment() {
-		return consignment;
+		return consignment == null ? consignment = new ArrayList<>() : consignment;
 	}
 
-	public void setConsignment(List<com.tools20022.repository.msg.Consignment2> consignment) {
-		this.consignment = consignment;
+	public TradeDelivery1 setConsignment(List<com.tools20022.repository.msg.Consignment2> consignment) {
+		this.consignment = Objects.requireNonNull(consignment);
+		return this;
 	}
 }

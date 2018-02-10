@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,15 +61,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specification of the request for report."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RequestedParameters2", propOrder = {"statementByAccount", "statementByAccountAndFinancialInstrument"})
 public class RequestedParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StmtByAcct", required = true)
 	protected StatementAttributes1 statementByAccount;
 	/**
-	 * Account and statement parameters for which the statement is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -95,7 +97,7 @@ public class RequestedParameters2 {
 	 */
 	public static final MMMessageAssociationEnd mmStatementByAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestedParameters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestedParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "StmtByAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -107,11 +109,11 @@ public class RequestedParameters2 {
 			type_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtByAcctAndFinInstrm", required = true)
 	protected GenericReportParameters statementByAccountAndFinancialInstrument;
 	/**
-	 * Account, financial instrument and statement parameters for which the
-	 * statement is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -140,7 +142,7 @@ public class RequestedParameters2 {
 	 */
 	public static final MMMessageAssociationEnd mmStatementByAccountAndFinancialInstrument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestedParameters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestedParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "StmtByAcctAndFinInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,8 +158,8 @@ public class RequestedParameters2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RequestedParameters2.mmStatementByAccount, RequestedParameters2.mmStatementByAccountAndFinancialInstrument);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestedParameters2.mmStatementByAccount, com.tools20022.repository.msg.RequestedParameters2.mmStatementByAccountAndFinancialInstrument);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RequestedParameters2";
 				definition = "Specification of the request for report.";
@@ -166,21 +168,21 @@ public class RequestedParameters2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StmtByAcct", required = true)
 	public StatementAttributes1 getStatementByAccount() {
 		return statementByAccount;
 	}
 
-	public void setStatementByAccount(com.tools20022.repository.msg.StatementAttributes1 statementByAccount) {
-		this.statementByAccount = statementByAccount;
+	public RequestedParameters2 setStatementByAccount(com.tools20022.repository.msg.StatementAttributes1 statementByAccount) {
+		this.statementByAccount = Objects.requireNonNull(statementByAccount);
+		return this;
 	}
 
-	@XmlElement(name = "StmtByAcctAndFinInstrm", required = true)
 	public GenericReportParameters getStatementByAccountAndFinancialInstrument() {
 		return statementByAccountAndFinancialInstrument;
 	}
 
-	public void setStatementByAccountAndFinancialInstrument(com.tools20022.repository.msg.GenericReportParameters statementByAccountAndFinancialInstrument) {
-		this.statementByAccountAndFinancialInstrument = statementByAccountAndFinancialInstrument;
+	public RequestedParameters2 setStatementByAccountAndFinancialInstrument(com.tools20022.repository.msg.GenericReportParameters statementByAccountAndFinancialInstrument) {
+		this.statementByAccountAndFinancialInstrument = Objects.requireNonNull(statementByAccountAndFinancialInstrument);
+		return this;
 	}
 }

@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.OriginalPaymentInstruction2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -51,20 +53,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
- * PaymentsInitiationArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CstmrPmtRvsl"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -83,9 +71,43 @@ import javax.xml.bind.annotation.*;
  * CustomerPaymentReversalV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CstmrPmtRvsl"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
+ * PaymentsInitiationArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pain.007.001.03}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndPaymentInformationNotPresentRule#forCustomerPaymentReversalV03
+ * ConstraintGroupReversalAndPaymentInformationNotPresentRule.
+ * forCustomerPaymentReversalV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndReasonRule#forCustomerPaymentReversalV03
+ * ConstraintGroupReversalAndReasonRule.forCustomerPaymentReversalV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsRule#forCustomerPaymentReversalV03
+ * ConstraintGroupReversalAndNumberOfTransactionsRule.
+ * forCustomerPaymentReversalV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndPaymentInformationPresentRule#forCustomerPaymentReversalV03
+ * ConstraintGroupReversalAndPaymentInformationPresentRule.
+ * forCustomerPaymentReversalV03}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,16 +132,16 @@ import javax.xml.bind.annotation.*;
  * CustomerPaymentReversalV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CustomerPaymentReversalV03", propOrder = {"groupHeader", "originalGroupInformation", "originalPaymentInformationAndReversal", "supplementaryData"})
 public class CustomerPaymentReversalV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader56 groupHeader;
 	/**
-	 * Set of characteristics shared by all individual transactions included in
-	 * the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,11 +182,11 @@ public class CustomerPaymentReversalV03 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgnlGrpInf", required = true)
 	protected OriginalGroupHeader3 originalGroupInformation;
 	/**
-	 * Information concerning the original group of transactions, to which the
-	 * message refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,11 +228,11 @@ public class CustomerPaymentReversalV03 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgnlPmtInfAndRvsl")
 	protected List<OriginalPaymentInstruction2> originalPaymentInformationAndReversal;
 	/**
-	 * Information concerning the original payment information, to which the
-	 * reversal message refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,11 +273,11 @@ public class CustomerPaymentReversalV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -300,6 +322,10 @@ public class CustomerPaymentReversalV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReversalAndPaymentInformationNotPresentRule.forCustomerPaymentReversalV03,
+						com.tools20022.repository.constraints.ConstraintGroupReversalAndReasonRule.forCustomerPaymentReversalV03,
+						com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsRule.forCustomerPaymentReversalV03,
+						com.tools20022.repository.constraints.ConstraintGroupReversalAndPaymentInformationPresentRule.forCustomerPaymentReversalV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustomerPaymentReversalV03";
 				definition = "Scope\r\nThe CustomerPaymentReversal message is sent by the initiating party to the next party in the payment chain. It is used to reverse a payment previously executed.\r\nUsage\r\nThe CustomerPaymentReversal message is exchanged between a non-financial institution customer and an agent to reverse a CustomerDirectDebitInitiation message that has been settled. The result will be a credit on the debtor account.\r\nThe CustomerPaymentReversal message refers to the original CustomerDirectDebitInitiation message by means of references only or by means of references and a set of elements from the original instruction.\r\nThe CustomerPaymentReversal message can be used in domestic and cross-border scenarios.";
@@ -329,43 +355,43 @@ public class CustomerPaymentReversalV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader56 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader56 groupHeader) {
-		this.groupHeader = groupHeader;
+	public CustomerPaymentReversalV03 setGroupHeader(GroupHeader56 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlGrpInf", required = true)
 	public OriginalGroupHeader3 getOriginalGroupInformation() {
 		return originalGroupInformation;
 	}
 
-	public void setOriginalGroupInformation(OriginalGroupHeader3 originalGroupInformation) {
-		this.originalGroupInformation = originalGroupInformation;
+	public CustomerPaymentReversalV03 setOriginalGroupInformation(OriginalGroupHeader3 originalGroupInformation) {
+		this.originalGroupInformation = Objects.requireNonNull(originalGroupInformation);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlPmtInfAndRvsl")
 	public List<OriginalPaymentInstruction2> getOriginalPaymentInformationAndReversal() {
-		return originalPaymentInformationAndReversal;
+		return originalPaymentInformationAndReversal == null ? originalPaymentInformationAndReversal = new ArrayList<>() : originalPaymentInformationAndReversal;
 	}
 
-	public void setOriginalPaymentInformationAndReversal(List<OriginalPaymentInstruction2> originalPaymentInformationAndReversal) {
-		this.originalPaymentInformationAndReversal = originalPaymentInformationAndReversal;
+	public CustomerPaymentReversalV03 setOriginalPaymentInformationAndReversal(List<OriginalPaymentInstruction2> originalPaymentInformationAndReversal) {
+		this.originalPaymentInformationAndReversal = Objects.requireNonNull(originalPaymentInformationAndReversal);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public CustomerPaymentReversalV03 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.007.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:pain.007.001.03")
 	static public class Document {
 		@XmlElement(name = "CstmrPmtRvsl", required = true)
 		public CustomerPaymentReversalV03 messageBody;

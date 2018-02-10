@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.BanktoCustomerCashManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -51,23 +53,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
- * CashManagementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.BanktoCustomerCashManagementISOPreviousversion
- * BanktoCustomerCashManagementISOPreviousversion}</li>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "BkToCstmrDbtCdtNtfctn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -83,9 +68,38 @@ import javax.xml.bind.annotation.*;
  * BankToCustomerDebitCreditNotificationV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.BanktoCustomerCashManagementISOPreviousversion
+ * BanktoCustomerCashManagementISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "BkToCstmrDbtCdtNtfctn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
+ * CashManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.054.001.05}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrNotificationPaginationRule#forBankToCustomerDebitCreditNotificationV05
+ * ConstraintMessageOrNotificationPaginationRule.
+ * forBankToCustomerDebitCreditNotificationV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#forBankToCustomerDebitCreditNotificationV05
+ * ConstraintSupplementaryDataRule.forBankToCustomerDebitCreditNotificationV05}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,15 +124,16 @@ import javax.xml.bind.annotation.*;
  * BankToCustomerDebitCreditNotificationV04}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BankToCustomerDebitCreditNotificationV05", propOrder = {"groupHeader", "notification", "supplementaryData"})
 public class BankToCustomerDebitCreditNotificationV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader58 groupHeader;
 	/**
-	 * Common information for the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,10 +187,11 @@ public class BankToCustomerDebitCreditNotificationV05 {
 			}
 		}
 	};
+	@XmlElement(name = "Ntfctn", required = true)
 	protected List<AccountNotification11> notification;
 	/**
-	 * Notifies debit and credit entries for the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -229,11 +245,11 @@ public class BankToCustomerDebitCreditNotificationV05 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -293,6 +309,8 @@ public class BankToCustomerDebitCreditNotificationV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrNotificationPaginationRule.forBankToCustomerDebitCreditNotificationV05,
+						com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerDebitCreditNotificationV05);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BankToCustomerDebitCreditNotificationV05";
 				definition = "Scope\nThe BankToCustomerDebitCreditNotification message is sent by the account servicer to an account owner or to a party authorised by the account owner to receive the message. It can be used to inform the account owner, or authorised party, of single or multiple debit and/or credit entries reported to the account.\nUsage\nThe BankToCustomerDebitCreditNotification message can contain reports for more than one account. It provides information for cash management and/or reconciliation.\nThe BankToCustomerDebitCreditNotification message can be used to :\n- report pending and booked items;\n- notify one or more debit entries;\n- notify one or more credit entries;\n- notify a combination of debit and credit entries.\nIt can include underlying details of transactions that have been included in the entry.\nIt is possible that the receiver of the message is not the account owner, but a party entitled by the account owner to receive the account information (also known as recipient).\nIt does not contain balance information.";
@@ -322,34 +340,34 @@ public class BankToCustomerDebitCreditNotificationV05 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader58 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader58 groupHeader) {
-		this.groupHeader = groupHeader;
+	public BankToCustomerDebitCreditNotificationV05 setGroupHeader(GroupHeader58 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "Ntfctn", required = true)
 	public List<AccountNotification11> getNotification() {
-		return notification;
+		return notification == null ? notification = new ArrayList<>() : notification;
 	}
 
-	public void setNotification(List<AccountNotification11> notification) {
-		this.notification = notification;
+	public BankToCustomerDebitCreditNotificationV05 setNotification(List<AccountNotification11> notification) {
+		this.notification = Objects.requireNonNull(notification);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public BankToCustomerDebitCreditNotificationV05 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.054.05.05")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.054.001.05")
 	static public class Document {
 		@XmlElement(name = "BkToCstmrDbtCdtNtfctn", required = true)
 		public BankToCustomerDebitCreditNotificationV05 messageBody;

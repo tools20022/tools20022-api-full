@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Reservation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * ReservationReport3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReservationReport4", propOrder = {"reservationIdentification", "reservationOrError"})
 public class ReservationReport4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RsvatnId", required = true)
 	protected ReservationIdentification1 reservationIdentification;
 	/**
-	 * Identification of the reservation on which information is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -115,7 +117,7 @@ public class ReservationReport4 {
 	public static final MMMessageAssociationEnd mmReservationIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
-			componentContext_lazy = () -> ReservationReport4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationReport4.mmObject();
 			isDerived = false;
 			xmlTag = "RsvatnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +130,11 @@ public class ReservationReport4 {
 			type_lazy = () -> com.tools20022.repository.msg.ReservationIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "RsvatnOrErr", required = true)
 	protected ReservationOrError5Choice reservationOrError;
 	/**
-	 * Requested information on the limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -163,7 +166,7 @@ public class ReservationReport4 {
 	 */
 	public static final MMMessageAssociationEnd mmReservationOrError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReservationReport4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationReport4.mmObject();
 			isDerived = false;
 			xmlTag = "RsvatnOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,9 +183,9 @@ public class ReservationReport4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReservationReport4.mmReservationIdentification, ReservationReport4.mmReservationOrError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationReport4.mmReservationIdentification, com.tools20022.repository.msg.ReservationReport4.mmReservationOrError);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReservationReport4";
 				definition = "Reports either on the reservation or on a business error.";
@@ -192,21 +195,21 @@ public class ReservationReport4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RsvatnId", required = true)
 	public ReservationIdentification1 getReservationIdentification() {
 		return reservationIdentification;
 	}
 
-	public void setReservationIdentification(com.tools20022.repository.msg.ReservationIdentification1 reservationIdentification) {
-		this.reservationIdentification = reservationIdentification;
+	public ReservationReport4 setReservationIdentification(com.tools20022.repository.msg.ReservationIdentification1 reservationIdentification) {
+		this.reservationIdentification = Objects.requireNonNull(reservationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RsvatnOrErr", required = true)
 	public ReservationOrError5Choice getReservationOrError() {
 		return reservationOrError;
 	}
 
-	public void setReservationOrError(ReservationOrError5Choice reservationOrError) {
-		this.reservationOrError = reservationOrError;
+	public ReservationReport4 setReservationOrError(ReservationOrError5Choice reservationOrError) {
+		this.reservationOrError = Objects.requireNonNull(reservationOrError);
+		return this;
 	}
 }

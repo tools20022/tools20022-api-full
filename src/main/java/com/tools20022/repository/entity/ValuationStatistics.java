@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Statistical data related to the price change of a security.
@@ -68,6 +69,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#mmValuationStatistics
+ * NetAssetValueCalculation.mmValuationStatistics}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceChangeRelatedStatistics
+ * SecuritiesPricing.mmPriceChangeRelatedStatistics}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmHighestPriceValueRelatedStatistics
+ * SecuritiesPricing.mmHighestPriceValueRelatedStatistics}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmLowestPriceValueRelatedStatistics
+ * SecuritiesPricing.mmLowestPriceValueRelatedStatistics}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmValuationStatistics
+ * DateTimePeriod.mmValuationStatistics}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
  * <ul>
@@ -90,31 +112,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#mmValuationStatistics
- * NetAssetValueCalculation.mmValuationStatistics}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmPriceChangeRelatedStatistics
- * SecuritiesPricing.mmPriceChangeRelatedStatistics}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmHighestPriceValueRelatedStatistics
- * SecuritiesPricing.mmHighestPriceValueRelatedStatistics}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmLowestPriceValueRelatedStatistics
- * SecuritiesPricing.mmLowestPriceValueRelatedStatistics}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmValuationStatistics
- * DateTimePeriod.mmValuationStatistics}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -130,8 +131,8 @@ public class ValuationStatistics {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyCode currency;
 	/**
-	 * Currency of the net asset value calculation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,8 +169,8 @@ public class ValuationStatistics {
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ValuationStatistics2.mmCurrency, ValuationStatistics3.mmCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
 			definition = "Currency of the net asset value calculation.";
@@ -188,9 +189,8 @@ public class ValuationStatistics {
 	};
 	protected TypeOfPriceCode priceTypeChangeBasis;
 	/**
-	 * Type of price from which the change is calculated, eg, bid, offer, or
-	 * single.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -230,8 +230,8 @@ public class ValuationStatistics {
 	public static final MMBusinessAttribute mmPriceTypeChangeBasis = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ValuationStatistics2.mmPriceTypeChangeBasis, ValuationStatistics3.mmPriceTypeChangeBasis);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceTypeChangeBasis";
 			definition = "Type of price from which the change is calculated, eg, bid, offer, or single.";
@@ -250,8 +250,8 @@ public class ValuationStatistics {
 	};
 	protected SecuritiesPricing priceChange;
 	/**
-	 * Change in price since the last valuation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -322,8 +322,8 @@ public class ValuationStatistics {
 			derivation_lazy = () -> Arrays.asList(StatisticsByPredefinedTimePeriods1.mmOneYearPriceChange, StatisticsByPredefinedTimePeriods1.mmThreeYearPriceChange, StatisticsByPredefinedTimePeriods1.mmFiveYearPriceChange,
 					StatisticsByUserDefinedTimePeriod1.mmPriceChange, ValuationStatistics2.mmPriceChange, StatisticsByPredefinedTimePeriods2.mmOneYearPriceChange, StatisticsByPredefinedTimePeriods2.mmThreeYearPriceChange,
 					StatisticsByPredefinedTimePeriods2.mmFiveYearPriceChange, StatisticsByUserDefinedTimePeriod2.mmPriceChange, ValuationStatistics3.mmPriceChange);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceChange";
 			definition = "Change in price since the last valuation.";
@@ -336,10 +336,8 @@ public class ValuationStatistics {
 	};
 	protected PercentageRate yield;
 	/**
-	 * Rate of income from the financial instrument, usually calculated as total
-	 * dividends or coupon interest available to investors in the last
-	 * year,divided by the current price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -385,8 +383,8 @@ public class ValuationStatistics {
 	public static final MMBusinessAttribute mmYield = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(StatisticsByUserDefinedTimePeriod1.mmYield, ValuationStatistics2.mmYield, StatisticsByUserDefinedTimePeriod2.mmYield, ValuationStatistics3.mmYield);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Yield";
 			definition = "Rate of income from the financial instrument, usually calculated as total dividends or coupon interest available to investors in the last year,divided by the current price.";
@@ -405,8 +403,8 @@ public class ValuationStatistics {
 	};
 	protected SecuritiesPricing highestPriceValue;
 	/**
-	 * Highest price for the referenced period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -458,8 +456,8 @@ public class ValuationStatistics {
 		{
 			derivation_lazy = () -> Arrays.asList(StatisticsByPredefinedTimePeriods1.mmHighestPriceValue12Months, StatisticsByUserDefinedTimePeriod1.mmHighestPriceValue, StatisticsByPredefinedTimePeriods2.mmHighestPriceValue12Months,
 					StatisticsByUserDefinedTimePeriod2.mmHighestPriceValue);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HighestPriceValue";
 			definition = "Highest price for the referenced period.";
@@ -472,8 +470,8 @@ public class ValuationStatistics {
 	};
 	protected SecuritiesPricing lowestPriceValue;
 	/**
-	 * Lowest price for the referenced period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -525,8 +523,8 @@ public class ValuationStatistics {
 		{
 			derivation_lazy = () -> Arrays.asList(StatisticsByPredefinedTimePeriods1.mmLowestPriceValue12Months, StatisticsByUserDefinedTimePeriod1.mmLowestPriceValue, StatisticsByPredefinedTimePeriods2.mmLowestPriceValue12Months,
 					StatisticsByUserDefinedTimePeriod2.mmLowestPriceValue);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LowestPriceValue";
 			definition = "Lowest price for the referenced period.";
@@ -539,8 +537,8 @@ public class ValuationStatistics {
 	};
 	protected DateTimePeriod period;
 	/**
-	 * Reference period for the valuation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -585,8 +583,8 @@ public class ValuationStatistics {
 	public static final MMBusinessAssociationEnd mmPeriod = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(StatisticsByUserDefinedTimePeriod1.mmPeriod, StatisticsByUserDefinedTimePeriod2.mmPeriod);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Period";
 			definition = "Reference period for the valuation.";
@@ -599,8 +597,8 @@ public class ValuationStatistics {
 	};
 	protected NetAssetValueCalculation netAssetValueCalculation;
 	/**
-	 * Information related to the price valuation of an investment fund class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -636,8 +634,8 @@ public class ValuationStatistics {
 	 */
 	public static final MMBusinessAssociationEnd mmNetAssetValueCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAssetValueCalculation";
 			definition = "Information related to the price valuation of an investment fund class.";
@@ -650,8 +648,8 @@ public class ValuationStatistics {
 	};
 	protected PercentageRate netAssetValueChangeRate;
 	/**
-	 * Rate of change of the net asset value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -722,8 +720,8 @@ public class ValuationStatistics {
 					EstimatedFundCashForecast2.mmEstimatedTotalNAVChangeRate, EstimatedFundCashForecast4.mmEstimatedTotalNAVChangeRate, EstimatedFundCashForecast1.mmEstimatedTotalNAVChangeRate,
 					EstimatedFundCashForecast3.mmEstimatedTotalNAVChangeRate, FundCashForecast7.mmTotalNAVChangeRate, EstimatedFundCashForecast6.mmEstimatedTotalNAVChangeRate, FundCashForecast6.mmTotalNAVChangeRate,
 					EstimatedFundCashForecast5.mmEstimatedTotalNAVChangeRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ValuationStatistics.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAssetValueChangeRate";
 			definition = "Rate of change of the net asset value.";
@@ -744,7 +742,7 @@ public class ValuationStatistics {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ValuationStatistics";
 				definition = "Statistical data related to the price change of a security.";
@@ -771,71 +769,80 @@ public class ValuationStatistics {
 		return currency;
 	}
 
-	public void setCurrency(CurrencyCode currency) {
-		this.currency = currency;
+	public ValuationStatistics setCurrency(CurrencyCode currency) {
+		this.currency = Objects.requireNonNull(currency);
+		return this;
 	}
 
 	public TypeOfPriceCode getPriceTypeChangeBasis() {
 		return priceTypeChangeBasis;
 	}
 
-	public void setPriceTypeChangeBasis(TypeOfPriceCode priceTypeChangeBasis) {
-		this.priceTypeChangeBasis = priceTypeChangeBasis;
+	public ValuationStatistics setPriceTypeChangeBasis(TypeOfPriceCode priceTypeChangeBasis) {
+		this.priceTypeChangeBasis = Objects.requireNonNull(priceTypeChangeBasis);
+		return this;
 	}
 
 	public SecuritiesPricing getPriceChange() {
 		return priceChange;
 	}
 
-	public void setPriceChange(com.tools20022.repository.entity.SecuritiesPricing priceChange) {
-		this.priceChange = priceChange;
+	public ValuationStatistics setPriceChange(com.tools20022.repository.entity.SecuritiesPricing priceChange) {
+		this.priceChange = Objects.requireNonNull(priceChange);
+		return this;
 	}
 
 	public PercentageRate getYield() {
 		return yield;
 	}
 
-	public void setYield(PercentageRate yield) {
-		this.yield = yield;
+	public ValuationStatistics setYield(PercentageRate yield) {
+		this.yield = Objects.requireNonNull(yield);
+		return this;
 	}
 
 	public SecuritiesPricing getHighestPriceValue() {
 		return highestPriceValue;
 	}
 
-	public void setHighestPriceValue(com.tools20022.repository.entity.SecuritiesPricing highestPriceValue) {
-		this.highestPriceValue = highestPriceValue;
+	public ValuationStatistics setHighestPriceValue(com.tools20022.repository.entity.SecuritiesPricing highestPriceValue) {
+		this.highestPriceValue = Objects.requireNonNull(highestPriceValue);
+		return this;
 	}
 
 	public SecuritiesPricing getLowestPriceValue() {
 		return lowestPriceValue;
 	}
 
-	public void setLowestPriceValue(com.tools20022.repository.entity.SecuritiesPricing lowestPriceValue) {
-		this.lowestPriceValue = lowestPriceValue;
+	public ValuationStatistics setLowestPriceValue(com.tools20022.repository.entity.SecuritiesPricing lowestPriceValue) {
+		this.lowestPriceValue = Objects.requireNonNull(lowestPriceValue);
+		return this;
 	}
 
 	public DateTimePeriod getPeriod() {
 		return period;
 	}
 
-	public void setPeriod(com.tools20022.repository.entity.DateTimePeriod period) {
-		this.period = period;
+	public ValuationStatistics setPeriod(com.tools20022.repository.entity.DateTimePeriod period) {
+		this.period = Objects.requireNonNull(period);
+		return this;
 	}
 
 	public NetAssetValueCalculation getNetAssetValueCalculation() {
 		return netAssetValueCalculation;
 	}
 
-	public void setNetAssetValueCalculation(com.tools20022.repository.entity.NetAssetValueCalculation netAssetValueCalculation) {
-		this.netAssetValueCalculation = netAssetValueCalculation;
+	public ValuationStatistics setNetAssetValueCalculation(com.tools20022.repository.entity.NetAssetValueCalculation netAssetValueCalculation) {
+		this.netAssetValueCalculation = Objects.requireNonNull(netAssetValueCalculation);
+		return this;
 	}
 
 	public PercentageRate getNetAssetValueChangeRate() {
 		return netAssetValueChangeRate;
 	}
 
-	public void setNetAssetValueChangeRate(PercentageRate netAssetValueChangeRate) {
-		this.netAssetValueChangeRate = netAssetValueChangeRate;
+	public ValuationStatistics setNetAssetValueChangeRate(PercentageRate netAssetValueChangeRate) {
+		this.netAssetValueChangeRate = Objects.requireNonNull(netAssetValueChangeRate);
+		return this;
 	}
 }

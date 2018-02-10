@@ -22,9 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -99,8 +98,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,17 +111,18 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides the details of the update(s) for the settlement transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesSettlementTransactionDetails31", propOrder = {"settlementTypeAndAdditionalParameters", "linkages", "tradeDetails", "financialInstrumentIdentification", "financialInstrumentAttributes",
 		"quantityAndAccountDetails", "settlementParameters", "standingSettlementInstructionDetails", "deliveringSettlementParties", "receivingSettlementParties", "cashParties", "settlementAmount", "otherAmounts", "otherBusinessParties",
 		"additionalPhysicalOrRegistrationDetails", "supplementaryData"})
 public class SecuritiesSettlementTransactionDetails31 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SttlmTpAndAddtlParams")
 	protected SettlementTypeAndAdditionalParameters18 settlementTypeAndAdditionalParameters;
 	/**
-	 * Provides settlement type and identification information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +155,7 @@ public class SecuritiesSettlementTransactionDetails31 {
 	public static final MMMessageAssociationEnd mmSettlementTypeAndAdditionalParameters = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlement.mmObject();
-			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails31.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTpAndAddtlParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,11 +167,11 @@ public class SecuritiesSettlementTransactionDetails31 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters18.mmObject();
 		}
 	};
+	@XmlElement(name = "Lnkgs")
 	protected List<com.tools20022.repository.msg.Linkages48> linkages;
 	/**
-	 * Link to another transaction that must be processed after, before or at
-	 * the same time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -198,7 +198,7 @@ public class SecuritiesSettlementTransactionDetails31 {
 	 */
 	public static final MMMessageAssociationEnd mmLinkages = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails31.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmObject();
 			isDerived = false;
 			xmlTag = "Lnkgs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,10 +209,11 @@ public class SecuritiesSettlementTransactionDetails31 {
 			type_lazy = () -> com.tools20022.repository.msg.Linkages48.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDtls")
 	protected SecuritiesTradeDetails66 tradeDetails;
 	/**
-	 * Details of the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -245,7 +246,7 @@ public class SecuritiesSettlementTransactionDetails31 {
 	public static final MMMessageAssociationEnd mmTradeDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmRelatedTrade;
-			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails31.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmObject();
 			isDerived = false;
 			xmlTag = "TradDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,11 +258,11 @@ public class SecuritiesSettlementTransactionDetails31 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesTradeDetails66.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmId")
 	protected SecurityIdentification20 financialInstrumentIdentification;
 	/**
-	 * Financial instrument representing a sum of rights of the investor
-	 * vis-a-vis the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -296,7 +297,7 @@ public class SecuritiesSettlementTransactionDetails31 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails31.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -308,10 +309,11 @@ public class SecuritiesSettlementTransactionDetails31 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification20.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmAttrbts")
 	protected FinancialInstrumentAttributes78 financialInstrumentAttributes;
 	/**
-	 * Attributes defining a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -344,7 +346,7 @@ public class SecuritiesSettlementTransactionDetails31 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecurity;
-			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails31.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -356,10 +358,11 @@ public class SecuritiesSettlementTransactionDetails31 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmObject();
 		}
 	};
+	@XmlElement(name = "QtyAndAcctDtls")
 	protected QuantityAndAccount60 quantityAndAccountDetails;
 	/**
-	 * Details related to the account and quantity involved in the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -393,7 +396,7 @@ public class SecuritiesSettlementTransactionDetails31 {
 	public static final MMMessageAssociationEnd mmQuantityAndAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlement.mmObject();
-			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails31.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmObject();
 			isDerived = false;
 			xmlTag = "QtyAndAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -405,13 +408,11 @@ public class SecuritiesSettlementTransactionDetails31 {
 			type_lazy = () -> com.tools20022.repository.msg.QuantityAndAccount60.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmParams")
 	protected SettlementDetails138 settlementParameters;
 	/**
-	 * Parameters which explicitly state the conditions that must be fulfilled
-	 * before a particular transaction of a financial instrument can be settled.
-	 * These parameters are defined by the instructing party in compliance with
-	 * settlement rules in the market the transaction will settle in.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -445,7 +446,7 @@ public class SecuritiesSettlementTransactionDetails31 {
 	public static final MMMessageAssociationEnd mmSettlementParameters = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlement.mmObject();
-			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails31.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -457,11 +458,11 @@ public class SecuritiesSettlementTransactionDetails31 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementDetails138.mmObject();
 		}
 	};
+	@XmlElement(name = "StgSttlmInstrDtls")
 	protected StandingSettlementInstruction12 standingSettlementInstructionDetails;
 	/**
-	 * Specifies what settlement standing instruction database is to be used to
-	 * derive the settlement parties involved in the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -496,7 +497,7 @@ public class SecuritiesSettlementTransactionDetails31 {
 	public static final MMMessageAssociationEnd mmStandingSettlementInstructionDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Settlement.mmStandingSettlementInstruction;
-			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails31.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmObject();
 			isDerived = false;
 			xmlTag = "StgSttlmInstrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -508,10 +509,11 @@ public class SecuritiesSettlementTransactionDetails31 {
 			type_lazy = () -> com.tools20022.repository.msg.StandingSettlementInstruction12.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvrgSttlmPties")
 	protected SettlementParties44 deliveringSettlementParties;
 	/**
-	 * Identifies the chain of delivering settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -543,7 +545,7 @@ public class SecuritiesSettlementTransactionDetails31 {
 	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
-			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails31.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -555,10 +557,11 @@ public class SecuritiesSettlementTransactionDetails31 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementParties44.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvgSttlmPties")
 	protected SettlementParties44 receivingSettlementParties;
 	/**
-	 * Identifies the chain of receiving settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -590,7 +593,7 @@ public class SecuritiesSettlementTransactionDetails31 {
 	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
-			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails31.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -602,11 +605,11 @@ public class SecuritiesSettlementTransactionDetails31 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementParties44.mmObject();
 		}
 	};
+	@XmlElement(name = "CshPties")
 	protected CashParties30 cashParties;
 	/**
-	 * Cash parties involved in the transaction if different for the securities
-	 * settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -640,7 +643,7 @@ public class SecuritiesSettlementTransactionDetails31 {
 	public static final MMMessageAssociationEnd mmCashParties = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPartyRole;
-			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails31.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmObject();
 			isDerived = false;
 			xmlTag = "CshPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -652,11 +655,11 @@ public class SecuritiesSettlementTransactionDetails31 {
 			type_lazy = () -> com.tools20022.repository.msg.CashParties30.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmAmt")
 	protected AmountAndDirection85 settlementAmount;
 	/**
-	 * Total amount of money to be paid or received in exchange for the
-	 * securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -690,7 +693,7 @@ public class SecuritiesSettlementTransactionDetails31 {
 	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
-			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails31.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -702,10 +705,11 @@ public class SecuritiesSettlementTransactionDetails31 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection85.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrAmts")
 	protected OtherAmounts35 otherAmounts;
 	/**
-	 * Other amounts than the settlement amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -731,7 +735,7 @@ public class SecuritiesSettlementTransactionDetails31 {
 	 */
 	public static final MMMessageAssociationEnd mmOtherAmounts = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails31.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmObject();
 			isDerived = false;
 			xmlTag = "OthrAmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -743,10 +747,11 @@ public class SecuritiesSettlementTransactionDetails31 {
 			type_lazy = () -> com.tools20022.repository.msg.OtherAmounts35.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrBizPties")
 	protected OtherParties29 otherBusinessParties;
 	/**
-	 * Other business parties relevant to the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -772,7 +777,7 @@ public class SecuritiesSettlementTransactionDetails31 {
 	 */
 	public static final MMMessageAssociationEnd mmOtherBusinessParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails31.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmObject();
 			isDerived = false;
 			xmlTag = "OthrBizPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -784,11 +789,11 @@ public class SecuritiesSettlementTransactionDetails31 {
 			type_lazy = () -> com.tools20022.repository.msg.OtherParties29.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlPhysOrRegnDtls")
 	protected RegistrationParameters5 additionalPhysicalOrRegistrationDetails;
 	/**
-	 * Provides information required for the registration or physical
-	 * settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -823,7 +828,7 @@ public class SecuritiesSettlementTransactionDetails31 {
 	public static final MMMessageAssociationEnd mmAdditionalPhysicalOrRegistrationDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistration;
-			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails31.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlPhysOrRegnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -835,11 +840,11 @@ public class SecuritiesSettlementTransactionDetails31 {
 			type_lazy = () -> com.tools20022.repository.msg.RegistrationParameters5.mmObject();
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -867,7 +872,7 @@ public class SecuritiesSettlementTransactionDetails31 {
 	 */
 	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesSettlementTransactionDetails31.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -882,14 +887,17 @@ public class SecuritiesSettlementTransactionDetails31 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails31.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails31.mmLinkages,
-						SecuritiesSettlementTransactionDetails31.mmTradeDetails, SecuritiesSettlementTransactionDetails31.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionDetails31.mmFinancialInstrumentAttributes,
-						SecuritiesSettlementTransactionDetails31.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails31.mmSettlementParameters, SecuritiesSettlementTransactionDetails31.mmStandingSettlementInstructionDetails,
-						SecuritiesSettlementTransactionDetails31.mmDeliveringSettlementParties, SecuritiesSettlementTransactionDetails31.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails31.mmCashParties,
-						SecuritiesSettlementTransactionDetails31.mmSettlementAmount, SecuritiesSettlementTransactionDetails31.mmOtherAmounts, SecuritiesSettlementTransactionDetails31.mmOtherBusinessParties,
-						SecuritiesSettlementTransactionDetails31.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionDetails31.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmSettlementTypeAndAdditionalParameters,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmLinkages, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmTradeDetails,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmFinancialInstrumentAttributes,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmQuantityAndAccountDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmSettlementParameters,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmStandingSettlementInstructionDetails, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmCashParties,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmSettlementAmount, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmOtherAmounts,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmOtherBusinessParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmAdditionalPhysicalOrRegistrationDetails,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmSupplementaryData);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionDetails31";
 				definition = "Provides the details of the update(s) for the settlement transaction.";
@@ -898,147 +906,147 @@ public class SecuritiesSettlementTransactionDetails31 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SttlmTpAndAddtlParams")
-	public SettlementTypeAndAdditionalParameters18 getSettlementTypeAndAdditionalParameters() {
-		return settlementTypeAndAdditionalParameters;
+	public Optional<SettlementTypeAndAdditionalParameters18> getSettlementTypeAndAdditionalParameters() {
+		return settlementTypeAndAdditionalParameters == null ? Optional.empty() : Optional.of(settlementTypeAndAdditionalParameters);
 	}
 
-	public void setSettlementTypeAndAdditionalParameters(com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters18 settlementTypeAndAdditionalParameters) {
+	public SecuritiesSettlementTransactionDetails31 setSettlementTypeAndAdditionalParameters(com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters18 settlementTypeAndAdditionalParameters) {
 		this.settlementTypeAndAdditionalParameters = settlementTypeAndAdditionalParameters;
+		return this;
 	}
 
-	@XmlElement(name = "Lnkgs")
 	public List<Linkages48> getLinkages() {
-		return linkages;
+		return linkages == null ? linkages = new ArrayList<>() : linkages;
 	}
 
-	public void setLinkages(List<com.tools20022.repository.msg.Linkages48> linkages) {
-		this.linkages = linkages;
+	public SecuritiesSettlementTransactionDetails31 setLinkages(List<com.tools20022.repository.msg.Linkages48> linkages) {
+		this.linkages = Objects.requireNonNull(linkages);
+		return this;
 	}
 
-	@XmlElement(name = "TradDtls")
-	public SecuritiesTradeDetails66 getTradeDetails() {
-		return tradeDetails;
+	public Optional<SecuritiesTradeDetails66> getTradeDetails() {
+		return tradeDetails == null ? Optional.empty() : Optional.of(tradeDetails);
 	}
 
-	public void setTradeDetails(com.tools20022.repository.msg.SecuritiesTradeDetails66 tradeDetails) {
+	public SecuritiesSettlementTransactionDetails31 setTradeDetails(com.tools20022.repository.msg.SecuritiesTradeDetails66 tradeDetails) {
 		this.tradeDetails = tradeDetails;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmId")
-	public SecurityIdentification20 getFinancialInstrumentIdentification() {
-		return financialInstrumentIdentification;
+	public Optional<SecurityIdentification20> getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification == null ? Optional.empty() : Optional.of(financialInstrumentIdentification);
 	}
 
-	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification20 financialInstrumentIdentification) {
+	public SecuritiesSettlementTransactionDetails31 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification20 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmAttrbts")
-	public FinancialInstrumentAttributes78 getFinancialInstrumentAttributes() {
-		return financialInstrumentAttributes;
+	public Optional<FinancialInstrumentAttributes78> getFinancialInstrumentAttributes() {
+		return financialInstrumentAttributes == null ? Optional.empty() : Optional.of(financialInstrumentAttributes);
 	}
 
-	public void setFinancialInstrumentAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes78 financialInstrumentAttributes) {
+	public SecuritiesSettlementTransactionDetails31 setFinancialInstrumentAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes78 financialInstrumentAttributes) {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
+		return this;
 	}
 
-	@XmlElement(name = "QtyAndAcctDtls")
-	public QuantityAndAccount60 getQuantityAndAccountDetails() {
-		return quantityAndAccountDetails;
+	public Optional<QuantityAndAccount60> getQuantityAndAccountDetails() {
+		return quantityAndAccountDetails == null ? Optional.empty() : Optional.of(quantityAndAccountDetails);
 	}
 
-	public void setQuantityAndAccountDetails(com.tools20022.repository.msg.QuantityAndAccount60 quantityAndAccountDetails) {
+	public SecuritiesSettlementTransactionDetails31 setQuantityAndAccountDetails(com.tools20022.repository.msg.QuantityAndAccount60 quantityAndAccountDetails) {
 		this.quantityAndAccountDetails = quantityAndAccountDetails;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmParams")
-	public SettlementDetails138 getSettlementParameters() {
-		return settlementParameters;
+	public Optional<SettlementDetails138> getSettlementParameters() {
+		return settlementParameters == null ? Optional.empty() : Optional.of(settlementParameters);
 	}
 
-	public void setSettlementParameters(com.tools20022.repository.msg.SettlementDetails138 settlementParameters) {
+	public SecuritiesSettlementTransactionDetails31 setSettlementParameters(com.tools20022.repository.msg.SettlementDetails138 settlementParameters) {
 		this.settlementParameters = settlementParameters;
+		return this;
 	}
 
-	@XmlElement(name = "StgSttlmInstrDtls")
-	public StandingSettlementInstruction12 getStandingSettlementInstructionDetails() {
-		return standingSettlementInstructionDetails;
+	public Optional<StandingSettlementInstruction12> getStandingSettlementInstructionDetails() {
+		return standingSettlementInstructionDetails == null ? Optional.empty() : Optional.of(standingSettlementInstructionDetails);
 	}
 
-	public void setStandingSettlementInstructionDetails(com.tools20022.repository.msg.StandingSettlementInstruction12 standingSettlementInstructionDetails) {
+	public SecuritiesSettlementTransactionDetails31 setStandingSettlementInstructionDetails(com.tools20022.repository.msg.StandingSettlementInstruction12 standingSettlementInstructionDetails) {
 		this.standingSettlementInstructionDetails = standingSettlementInstructionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "DlvrgSttlmPties")
-	public SettlementParties44 getDeliveringSettlementParties() {
-		return deliveringSettlementParties;
+	public Optional<SettlementParties44> getDeliveringSettlementParties() {
+		return deliveringSettlementParties == null ? Optional.empty() : Optional.of(deliveringSettlementParties);
 	}
 
-	public void setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties44 deliveringSettlementParties) {
+	public SecuritiesSettlementTransactionDetails31 setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties44 deliveringSettlementParties) {
 		this.deliveringSettlementParties = deliveringSettlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "RcvgSttlmPties")
-	public SettlementParties44 getReceivingSettlementParties() {
-		return receivingSettlementParties;
+	public Optional<SettlementParties44> getReceivingSettlementParties() {
+		return receivingSettlementParties == null ? Optional.empty() : Optional.of(receivingSettlementParties);
 	}
 
-	public void setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties44 receivingSettlementParties) {
+	public SecuritiesSettlementTransactionDetails31 setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties44 receivingSettlementParties) {
 		this.receivingSettlementParties = receivingSettlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "CshPties")
-	public CashParties30 getCashParties() {
-		return cashParties;
+	public Optional<CashParties30> getCashParties() {
+		return cashParties == null ? Optional.empty() : Optional.of(cashParties);
 	}
 
-	public void setCashParties(com.tools20022.repository.msg.CashParties30 cashParties) {
+	public SecuritiesSettlementTransactionDetails31 setCashParties(com.tools20022.repository.msg.CashParties30 cashParties) {
 		this.cashParties = cashParties;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmAmt")
-	public AmountAndDirection85 getSettlementAmount() {
-		return settlementAmount;
+	public Optional<AmountAndDirection85> getSettlementAmount() {
+		return settlementAmount == null ? Optional.empty() : Optional.of(settlementAmount);
 	}
 
-	public void setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection85 settlementAmount) {
+	public SecuritiesSettlementTransactionDetails31 setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection85 settlementAmount) {
 		this.settlementAmount = settlementAmount;
+		return this;
 	}
 
-	@XmlElement(name = "OthrAmts")
-	public OtherAmounts35 getOtherAmounts() {
-		return otherAmounts;
+	public Optional<OtherAmounts35> getOtherAmounts() {
+		return otherAmounts == null ? Optional.empty() : Optional.of(otherAmounts);
 	}
 
-	public void setOtherAmounts(com.tools20022.repository.msg.OtherAmounts35 otherAmounts) {
+	public SecuritiesSettlementTransactionDetails31 setOtherAmounts(com.tools20022.repository.msg.OtherAmounts35 otherAmounts) {
 		this.otherAmounts = otherAmounts;
+		return this;
 	}
 
-	@XmlElement(name = "OthrBizPties")
-	public OtherParties29 getOtherBusinessParties() {
-		return otherBusinessParties;
+	public Optional<OtherParties29> getOtherBusinessParties() {
+		return otherBusinessParties == null ? Optional.empty() : Optional.of(otherBusinessParties);
 	}
 
-	public void setOtherBusinessParties(com.tools20022.repository.msg.OtherParties29 otherBusinessParties) {
+	public SecuritiesSettlementTransactionDetails31 setOtherBusinessParties(com.tools20022.repository.msg.OtherParties29 otherBusinessParties) {
 		this.otherBusinessParties = otherBusinessParties;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlPhysOrRegnDtls")
-	public RegistrationParameters5 getAdditionalPhysicalOrRegistrationDetails() {
-		return additionalPhysicalOrRegistrationDetails;
+	public Optional<RegistrationParameters5> getAdditionalPhysicalOrRegistrationDetails() {
+		return additionalPhysicalOrRegistrationDetails == null ? Optional.empty() : Optional.of(additionalPhysicalOrRegistrationDetails);
 	}
 
-	public void setAdditionalPhysicalOrRegistrationDetails(com.tools20022.repository.msg.RegistrationParameters5 additionalPhysicalOrRegistrationDetails) {
+	public SecuritiesSettlementTransactionDetails31 setAdditionalPhysicalOrRegistrationDetails(com.tools20022.repository.msg.RegistrationParameters5 additionalPhysicalOrRegistrationDetails) {
 		this.additionalPhysicalOrRegistrationDetails = additionalPhysicalOrRegistrationDetails;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecuritiesSettlementTransactionDetails31 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 }

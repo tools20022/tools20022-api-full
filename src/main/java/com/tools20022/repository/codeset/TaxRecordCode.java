@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.TaxRecordCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of tax details.
@@ -32,25 +37,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxRecordCode#mmWithholdingTax
- * TaxRecordCode.mmWithholdingTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxRecordCode#WithholdingTax
+ * TaxRecordCode.WithholdingTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxRecordCode#mmValueAddedTax
- * TaxRecordCode.mmValueAddedTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxRecordCode#ValueAddedTax
+ * TaxRecordCode.ValueAddedTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxRecordCode#mmIncomePaymentDetails
- * TaxRecordCode.mmIncomePaymentDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxRecordCode#IncomePaymentDetails
+ * TaxRecordCode.IncomePaymentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxRecordCode#mmTotalAmountForIncomePayments
- * TaxRecordCode.mmTotalAmountForIncomePayments}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxRecordCode#TotalAmountForIncomePayments
+ * TaxRecordCode.TotalAmountForIncomePayments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxRecordCode#mmMoneyPaymentDetails
- * TaxRecordCode.mmMoneyPaymentDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxRecordCode#MoneyPaymentDetails
+ * TaxRecordCode.MoneyPaymentDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxRecordCode#mmTotalAmountForMoneyPayments
- * TaxRecordCode.mmTotalAmountForMoneyPayments}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxRecordCode#mmOther
- * TaxRecordCode.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxRecordCode#TotalAmountForMoneyPayments
+ * TaxRecordCode.TotalAmountForMoneyPayments}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxRecordCode#Other
+ * TaxRecordCode.Other}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -63,8 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of tax details."</li>
  * </ul>
  */
-public class TaxRecordCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TaxRecordCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -105,12 +111,12 @@ public class TaxRecordCode {
 	 * definition} = "Tax record is related to the withholding tax."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithholdingTax = new MMCode() {
+	public static final TaxRecordCode WithholdingTax = new TaxRecordCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
 			definition = "Tax record is related to the withholding tax.";
-			owner_lazy = () -> TaxRecordCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxRecordCode.mmObject();
 			codeName = "WHTX";
 		}
 	};
@@ -135,12 +141,12 @@ public class TaxRecordCode {
 	 * definition} = "Tax record is related to the value added tax."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmValueAddedTax = new MMCode() {
+	public static final TaxRecordCode ValueAddedTax = new TaxRecordCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
 			definition = "Tax record is related to the value added tax.";
-			owner_lazy = () -> TaxRecordCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxRecordCode.mmObject();
 			codeName = "VATX";
 		}
 	};
@@ -165,12 +171,12 @@ public class TaxRecordCode {
 	 * definition} = "Tax record is related to the income payment details"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncomePaymentDetails = new MMCode() {
+	public static final TaxRecordCode IncomePaymentDetails = new TaxRecordCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomePaymentDetails";
 			definition = "Tax record is related to the income payment details";
-			owner_lazy = () -> TaxRecordCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxRecordCode.mmObject();
 			codeName = "INCP";
 		}
 	};
@@ -196,12 +202,12 @@ public class TaxRecordCode {
 	 * "Tax record is related to the total amount for income payments"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTotalAmountForIncomePayments = new MMCode() {
+	public static final TaxRecordCode TotalAmountForIncomePayments = new TaxRecordCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountForIncomePayments";
 			definition = "Tax record is related to the total amount for income payments";
-			owner_lazy = () -> TaxRecordCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxRecordCode.mmObject();
 			codeName = "TLAI";
 		}
 	};
@@ -226,12 +232,12 @@ public class TaxRecordCode {
 	 * definition} = "Tax record is related to the  money payments details"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMoneyPaymentDetails = new MMCode() {
+	public static final TaxRecordCode MoneyPaymentDetails = new TaxRecordCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyPaymentDetails";
 			definition = "Tax record is related to the  money payments details";
-			owner_lazy = () -> TaxRecordCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxRecordCode.mmObject();
 			codeName = "MONP";
 		}
 	};
@@ -257,12 +263,12 @@ public class TaxRecordCode {
 	 * "Tax record is related to the total amount for money payments"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTotalAmountForMoneyPayments = new MMCode() {
+	public static final TaxRecordCode TotalAmountForMoneyPayments = new TaxRecordCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountForMoneyPayments";
 			definition = "Tax record is related to the total amount for money payments";
-			owner_lazy = () -> TaxRecordCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxRecordCode.mmObject();
 			codeName = "TLAM";
 		}
 	};
@@ -287,29 +293,65 @@ public class TaxRecordCode {
 	 * definition} = "Other tax record type."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final TaxRecordCode Other = new TaxRecordCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other tax record type.";
-			owner_lazy = () -> TaxRecordCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxRecordCode.mmObject();
 			codeName = "OTHR";
 		}
 	};
+	final static private LinkedHashMap<String, TaxRecordCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TaxRecordCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("WHTX");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxRecordCode";
 				definition = "Specifies the type of tax details.";
-				code_lazy = () -> Arrays.asList(TaxRecordCode.mmWithholdingTax, TaxRecordCode.mmValueAddedTax, TaxRecordCode.mmIncomePaymentDetails, TaxRecordCode.mmTotalAmountForIncomePayments, TaxRecordCode.mmMoneyPaymentDetails,
-						TaxRecordCode.mmTotalAmountForMoneyPayments, TaxRecordCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(TaxRecord1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxRecordCode.WithholdingTax, com.tools20022.repository.codeset.TaxRecordCode.ValueAddedTax,
+						com.tools20022.repository.codeset.TaxRecordCode.IncomePaymentDetails, com.tools20022.repository.codeset.TaxRecordCode.TotalAmountForIncomePayments,
+						com.tools20022.repository.codeset.TaxRecordCode.MoneyPaymentDetails, com.tools20022.repository.codeset.TaxRecordCode.TotalAmountForMoneyPayments, com.tools20022.repository.codeset.TaxRecordCode.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(WithholdingTax.getCodeName().get(), WithholdingTax);
+		codesByName.put(ValueAddedTax.getCodeName().get(), ValueAddedTax);
+		codesByName.put(IncomePaymentDetails.getCodeName().get(), IncomePaymentDetails);
+		codesByName.put(TotalAmountForIncomePayments.getCodeName().get(), TotalAmountForIncomePayments);
+		codesByName.put(MoneyPaymentDetails.getCodeName().get(), MoneyPaymentDetails);
+		codesByName.put(TotalAmountForMoneyPayments.getCodeName().get(), TotalAmountForMoneyPayments);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static TaxRecordCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TaxRecordCode[] values() {
+		TaxRecordCode[] values = new TaxRecordCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TaxRecordCode> {
+		@Override
+		public TaxRecordCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TaxRecordCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.Min6Max8Text;
 import com.tools20022.repository.entity.CardPaymentValidation;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,16 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * AuthorisationResult8}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AuthorisationResult9", propOrder = {"authorisationEntity", "authorisationResponse", "responseTrace", "authorisationCode", "action"})
 public class AuthorisationResult9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AuthstnNtty")
 	protected PartyType13Code authorisationEntity;
 	/**
-	 * Type of party that has delivered or declined the card payment
-	 * authorisation (the party is not identified).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,7 +130,7 @@ public class AuthorisationResult9 {
 	public static final MMMessageAttribute mmAuthorisationEntity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> AuthorisationResult9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult9.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnNtty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,10 +142,11 @@ public class AuthorisationResult9 {
 			simpleType_lazy = () -> PartyType13Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AuthstnRspn", required = true)
 	protected ResponseType3 authorisationResponse;
 	/**
-	 * Result of the authorisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -178,7 +178,7 @@ public class AuthorisationResult9 {
 	public static final MMMessageAssociationEnd mmAuthorisationResponse = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmResponse;
-			componentContext_lazy = () -> AuthorisationResult9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult9.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,10 +190,11 @@ public class AuthorisationResult9 {
 			type_lazy = () -> com.tools20022.repository.msg.ResponseType3.mmObject();
 		}
 	};
+	@XmlElement(name = "RspnTrac")
 	protected List<com.tools20022.repository.msg.ResponseType4> responseTrace;
 	/**
-	 * Trace of response by the entities in the path from the issuer to the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -227,7 +228,7 @@ public class AuthorisationResult9 {
 	public static final MMMessageAssociationEnd mmResponseTrace = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmResponse;
-			componentContext_lazy = () -> AuthorisationResult9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult9.mmObject();
 			isDerived = false;
 			xmlTag = "RspnTrac";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -238,10 +239,11 @@ public class AuthorisationResult9 {
 			type_lazy = () -> com.tools20022.repository.msg.ResponseType4.mmObject();
 		}
 	};
+	@XmlElement(name = "AuthstnCd")
 	protected Min6Max8Text authorisationCode;
 	/**
-	 * Value assigned by the authorising party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -280,7 +282,7 @@ public class AuthorisationResult9 {
 	public static final MMMessageAttribute mmAuthorisationCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmAuthorisationCode;
-			componentContext_lazy = () -> AuthorisationResult9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult9.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -292,11 +294,11 @@ public class AuthorisationResult9 {
 			simpleType_lazy = () -> Min6Max8Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Actn")
 	protected List<com.tools20022.repository.msg.Action5> action;
 	/**
-	 * Sequence of actions to be performed by the ATM to complete the
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -334,7 +336,7 @@ public class AuthorisationResult9 {
 	public static final MMMessageAssociationEnd mmAction = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmCardPayment;
-			componentContext_lazy = () -> AuthorisationResult9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult9.mmObject();
 			isDerived = false;
 			xmlTag = "Actn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -350,10 +352,10 @@ public class AuthorisationResult9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AuthorisationResult9.mmAuthorisationEntity, AuthorisationResult9.mmAuthorisationResponse, AuthorisationResult9.mmResponseTrace, AuthorisationResult9.mmAuthorisationCode,
-						AuthorisationResult9.mmAction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthorisationResult9.mmAuthorisationEntity, com.tools20022.repository.msg.AuthorisationResult9.mmAuthorisationResponse,
+						com.tools20022.repository.msg.AuthorisationResult9.mmResponseTrace, com.tools20022.repository.msg.AuthorisationResult9.mmAuthorisationCode, com.tools20022.repository.msg.AuthorisationResult9.mmAction);
 				trace_lazy = () -> CardPaymentValidation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AuthorisationResult9";
 				definition = "Outcome of the withdrawal authorisation.";
@@ -363,48 +365,48 @@ public class AuthorisationResult9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AuthstnNtty")
-	public PartyType13Code getAuthorisationEntity() {
-		return authorisationEntity;
+	public Optional<PartyType13Code> getAuthorisationEntity() {
+		return authorisationEntity == null ? Optional.empty() : Optional.of(authorisationEntity);
 	}
 
-	public void setAuthorisationEntity(PartyType13Code authorisationEntity) {
+	public AuthorisationResult9 setAuthorisationEntity(PartyType13Code authorisationEntity) {
 		this.authorisationEntity = authorisationEntity;
+		return this;
 	}
 
-	@XmlElement(name = "AuthstnRspn", required = true)
 	public ResponseType3 getAuthorisationResponse() {
 		return authorisationResponse;
 	}
 
-	public void setAuthorisationResponse(com.tools20022.repository.msg.ResponseType3 authorisationResponse) {
-		this.authorisationResponse = authorisationResponse;
+	public AuthorisationResult9 setAuthorisationResponse(com.tools20022.repository.msg.ResponseType3 authorisationResponse) {
+		this.authorisationResponse = Objects.requireNonNull(authorisationResponse);
+		return this;
 	}
 
-	@XmlElement(name = "RspnTrac")
 	public List<ResponseType4> getResponseTrace() {
-		return responseTrace;
+		return responseTrace == null ? responseTrace = new ArrayList<>() : responseTrace;
 	}
 
-	public void setResponseTrace(List<com.tools20022.repository.msg.ResponseType4> responseTrace) {
-		this.responseTrace = responseTrace;
+	public AuthorisationResult9 setResponseTrace(List<com.tools20022.repository.msg.ResponseType4> responseTrace) {
+		this.responseTrace = Objects.requireNonNull(responseTrace);
+		return this;
 	}
 
-	@XmlElement(name = "AuthstnCd")
-	public Min6Max8Text getAuthorisationCode() {
-		return authorisationCode;
+	public Optional<Min6Max8Text> getAuthorisationCode() {
+		return authorisationCode == null ? Optional.empty() : Optional.of(authorisationCode);
 	}
 
-	public void setAuthorisationCode(Min6Max8Text authorisationCode) {
+	public AuthorisationResult9 setAuthorisationCode(Min6Max8Text authorisationCode) {
 		this.authorisationCode = authorisationCode;
+		return this;
 	}
 
-	@XmlElement(name = "Actn")
 	public List<Action5> getAction() {
-		return action;
+		return action == null ? action = new ArrayList<>() : action;
 	}
 
-	public void setAction(List<com.tools20022.repository.msg.Action5> action) {
-		this.action = action;
+	public AuthorisationResult9 setAction(List<com.tools20022.repository.msg.Action5> action) {
+		this.action = Objects.requireNonNull(action);
+		return this;
 	}
 }

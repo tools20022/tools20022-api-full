@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.CardPaymentDataSetTransaction12;
 import com.tools20022.repository.msg.CardPaymentDataSetTransaction13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * CardPaymentDataSetTransaction2Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardPaymentDataSetTransaction3Choice", propOrder = {"completion", "cancellation", "authorisationRequest", "authorisationResponse"})
 public class CardPaymentDataSetTransaction3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cmpltn", required = true)
 	protected CardPaymentDataSetTransaction10 completion;
 	/**
-	 * Completed card payment transaction to be captured.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,7 +136,7 @@ public class CardPaymentDataSetTransaction3Choice {
 	 */
 	public static final MMMessageAttribute mmCompletion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardPaymentDataSetTransaction3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cmpltn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,10 +149,11 @@ public class CardPaymentDataSetTransaction3Choice {
 			complexType_lazy = () -> CardPaymentDataSetTransaction10.mmObject();
 		}
 	};
+	@XmlElement(name = "Cxl", required = true)
 	protected CardPaymentDataSetTransaction11 cancellation;
 	/**
-	 * Cancelled card payment transaction to be captured.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,7 +194,7 @@ public class CardPaymentDataSetTransaction3Choice {
 	 */
 	public static final MMMessageAttribute mmCancellation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardPaymentDataSetTransaction3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cxl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,10 +207,11 @@ public class CardPaymentDataSetTransaction3Choice {
 			complexType_lazy = () -> CardPaymentDataSetTransaction11.mmObject();
 		}
 	};
+	@XmlElement(name = "AuthstnReq", required = true)
 	protected CardPaymentDataSetTransaction12 authorisationRequest;
 	/**
-	 * Card payment transaction including an authorisation request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,7 +253,7 @@ public class CardPaymentDataSetTransaction3Choice {
 	 */
 	public static final MMMessageAttribute mmAuthorisationRequest = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardPaymentDataSetTransaction3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -262,10 +266,11 @@ public class CardPaymentDataSetTransaction3Choice {
 			complexType_lazy = () -> CardPaymentDataSetTransaction12.mmObject();
 		}
 	};
+	@XmlElement(name = "AuthstnRspn", required = true)
 	protected CardPaymentDataSetTransaction13 authorisationResponse;
 	/**
-	 * Card payment transaction including an authorisation response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -307,7 +312,7 @@ public class CardPaymentDataSetTransaction3Choice {
 	 */
 	public static final MMMessageAttribute mmAuthorisationResponse = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardPaymentDataSetTransaction3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -324,9 +329,9 @@ public class CardPaymentDataSetTransaction3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardPaymentDataSetTransaction3Choice.mmCompletion, CardPaymentDataSetTransaction3Choice.mmCancellation, CardPaymentDataSetTransaction3Choice.mmAuthorisationRequest,
-						CardPaymentDataSetTransaction3Choice.mmAuthorisationResponse);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CardPaymentDataSetTransaction3Choice.mmCompletion, com.tools20022.repository.choice.CardPaymentDataSetTransaction3Choice.mmCancellation,
+						com.tools20022.repository.choice.CardPaymentDataSetTransaction3Choice.mmAuthorisationRequest, com.tools20022.repository.choice.CardPaymentDataSetTransaction3Choice.mmAuthorisationResponse);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentDataSetTransaction3Choice";
 				definition = "Card payment transaction choice between cancellation, authorisation request and authorisation response.";
@@ -337,39 +342,39 @@ public class CardPaymentDataSetTransaction3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cmpltn", required = true)
 	public CardPaymentDataSetTransaction10 getCompletion() {
 		return completion;
 	}
 
-	public void setCompletion(CardPaymentDataSetTransaction10 completion) {
-		this.completion = completion;
+	public CardPaymentDataSetTransaction3Choice setCompletion(CardPaymentDataSetTransaction10 completion) {
+		this.completion = Objects.requireNonNull(completion);
+		return this;
 	}
 
-	@XmlElement(name = "Cxl", required = true)
 	public CardPaymentDataSetTransaction11 getCancellation() {
 		return cancellation;
 	}
 
-	public void setCancellation(CardPaymentDataSetTransaction11 cancellation) {
-		this.cancellation = cancellation;
+	public CardPaymentDataSetTransaction3Choice setCancellation(CardPaymentDataSetTransaction11 cancellation) {
+		this.cancellation = Objects.requireNonNull(cancellation);
+		return this;
 	}
 
-	@XmlElement(name = "AuthstnReq", required = true)
 	public CardPaymentDataSetTransaction12 getAuthorisationRequest() {
 		return authorisationRequest;
 	}
 
-	public void setAuthorisationRequest(CardPaymentDataSetTransaction12 authorisationRequest) {
-		this.authorisationRequest = authorisationRequest;
+	public CardPaymentDataSetTransaction3Choice setAuthorisationRequest(CardPaymentDataSetTransaction12 authorisationRequest) {
+		this.authorisationRequest = Objects.requireNonNull(authorisationRequest);
+		return this;
 	}
 
-	@XmlElement(name = "AuthstnRspn", required = true)
 	public CardPaymentDataSetTransaction13 getAuthorisationResponse() {
 		return authorisationResponse;
 	}
 
-	public void setAuthorisationResponse(CardPaymentDataSetTransaction13 authorisationResponse) {
-		this.authorisationResponse = authorisationResponse;
+	public CardPaymentDataSetTransaction3Choice setAuthorisationResponse(CardPaymentDataSetTransaction13 authorisationResponse) {
+		this.authorisationResponse = Objects.requireNonNull(authorisationResponse);
+		return this;
 	}
 }

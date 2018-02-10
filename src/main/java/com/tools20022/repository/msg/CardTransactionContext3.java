@@ -24,6 +24,7 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * CardTransactionContext1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardTransactionContext3", propOrder = "transactionContext")
 public class CardTransactionContext3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxCntxt", required = true)
 	protected CardTransactionContext4 transactionContext;
 	/**
-	 * Context of the card transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,7 +113,7 @@ public class CardTransactionContext3 {
 	public static final MMMessageAssociationEnd mmTransactionContext = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPaymentAcquiring.mmObject();
-			componentContext_lazy = () -> CardTransactionContext3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionContext3.mmObject();
 			isDerived = false;
 			xmlTag = "TxCntxt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,9 +130,9 @@ public class CardTransactionContext3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardTransactionContext3.mmTransactionContext);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionContext3.mmTransactionContext);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransactionContext3";
 				definition = "Context in which the card transaction is performed.";
@@ -140,12 +142,12 @@ public class CardTransactionContext3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxCntxt", required = true)
 	public CardTransactionContext4 getTransactionContext() {
 		return transactionContext;
 	}
 
-	public void setTransactionContext(com.tools20022.repository.msg.CardTransactionContext4 transactionContext) {
-		this.transactionContext = transactionContext;
+	public CardTransactionContext3 setTransactionContext(com.tools20022.repository.msg.CardTransactionContext4 transactionContext) {
+		this.transactionContext = Objects.requireNonNull(transactionContext);
+		return this;
 	}
 }

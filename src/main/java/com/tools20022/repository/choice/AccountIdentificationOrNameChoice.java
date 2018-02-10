@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountIdentificationAndName2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,17 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountIdentificationOrNameChoice", propOrder = {"name", "identification", "nameAndIdentification"})
 public class AccountIdentificationOrNameChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nm", required = true)
 	protected Max35Text name;
 	/**
-	 * Name of the account. It provides an additional means of identification,
-	 * and is designated by the account servicer in agreement with the account
-	 * owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +118,7 @@ public class AccountIdentificationOrNameChoice {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
-			componentContext_lazy = () -> AccountIdentificationOrNameChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentificationOrNameChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,11 +129,11 @@ public class AccountIdentificationOrNameChoice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected AccountIdentification1Choice identification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,7 +169,7 @@ public class AccountIdentificationOrNameChoice {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
-			componentContext_lazy = () -> AccountIdentificationOrNameChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentificationOrNameChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,11 +180,11 @@ public class AccountIdentificationOrNameChoice {
 			complexType_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NmAndId", required = true)
 	protected AccountIdentificationAndName2 nameAndIdentification;
 	/**
-	 * Business relationship between two entities; one entity is the account
-	 * owner, the other entity is the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -219,7 +219,7 @@ public class AccountIdentificationOrNameChoice {
 	public static final MMMessageAssociationEnd mmNameAndIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
-			componentContext_lazy = () -> AccountIdentificationOrNameChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentificationOrNameChoice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -235,9 +235,10 @@ public class AccountIdentificationOrNameChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountIdentificationOrNameChoice.mmName, AccountIdentificationOrNameChoice.mmIdentification, AccountIdentificationOrNameChoice.mmNameAndIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentificationOrNameChoice.mmName, com.tools20022.repository.choice.AccountIdentificationOrNameChoice.mmIdentification,
+						com.tools20022.repository.choice.AccountIdentificationOrNameChoice.mmNameAndIdentification);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountIdentificationOrNameChoice";
 				definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
@@ -246,30 +247,30 @@ public class AccountIdentificationOrNameChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nm", required = true)
 	public Max35Text getName() {
 		return name;
 	}
 
-	public void setName(Max35Text name) {
-		this.name = name;
+	public AccountIdentificationOrNameChoice setName(Max35Text name) {
+		this.name = Objects.requireNonNull(name);
+		return this;
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public AccountIdentification1Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.choice.AccountIdentification1Choice identification) {
-		this.identification = identification;
+	public AccountIdentificationOrNameChoice setIdentification(com.tools20022.repository.choice.AccountIdentification1Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "NmAndId", required = true)
 	public AccountIdentificationAndName2 getNameAndIdentification() {
 		return nameAndIdentification;
 	}
 
-	public void setNameAndIdentification(AccountIdentificationAndName2 nameAndIdentification) {
-		this.nameAndIdentification = nameAndIdentification;
+	public AccountIdentificationOrNameChoice setNameAndIdentification(AccountIdentificationAndName2 nameAndIdentification) {
+		this.nameAndIdentification = Objects.requireNonNull(nameAndIdentification);
+		return this;
 	}
 }

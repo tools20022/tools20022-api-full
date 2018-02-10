@@ -28,9 +28,8 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -86,8 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSubstitutionRequestSequenceRule#forCollateralSubstitution2
+ * ConstraintSubstitutionRequestSequenceRule.forCollateralSubstitution2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,16 +119,17 @@ import javax.xml.bind.annotation.XmlType;
  * CollateralSubstitution1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CollateralSubstitution2", propOrder = {"collateralSubstitutionSequence", "substitutionRequirement", "collateralSubstitutionType", "standardSettlementInstructions", "securitiesCollateral", "cashCollateral",
 		"otherCollateral", "linkedReferences"})
 public class CollateralSubstitution2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CollSbstitnSeq", required = true)
 	protected CollateralSubstitutionSequence1Code collateralSubstitutionSequence;
 	/**
-	 * Indicates whether the collateral substitution request is new or updated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +175,7 @@ public class CollateralSubstitution2 {
 	 */
 	public static final MMMessageAttribute mmCollateralSubstitutionSequence = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CollateralSubstitution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralSubstitution2.mmObject();
 			isDerived = false;
 			xmlTag = "CollSbstitnSeq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,11 +188,11 @@ public class CollateralSubstitution2 {
 			simpleType_lazy = () -> CollateralSubstitutionSequence1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SbstitnRqrmnt", required = true)
 	protected ActiveCurrencyAndAmount substitutionRequirement;
 	/**
-	 * Cash value of the requested collateral substitution transfer in the base
-	 * currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,7 +244,7 @@ public class CollateralSubstitution2 {
 	public static final MMMessageAttribute mmSubstitutionRequirement = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmBaseCurrencyAmount;
-			componentContext_lazy = () -> CollateralSubstitution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralSubstitution2.mmObject();
 			isDerived = false;
 			xmlTag = "SbstitnRqrmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -249,11 +257,11 @@ public class CollateralSubstitution2 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CollSbstitnTp", required = true)
 	protected CollateralSubstitutionType1Code collateralSubstitutionType;
 	/**
-	 * Specifies if the collateral that is substituted was posted against the
-	 * variation margin or the independent amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -305,7 +313,7 @@ public class CollateralSubstitution2 {
 	public static final MMMessageAttribute mmCollateralSubstitutionType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CollateralSubstitution.mmType;
-			componentContext_lazy = () -> CollateralSubstitution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralSubstitution2.mmObject();
 			isDerived = false;
 			xmlTag = "CollSbstitnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -318,10 +326,11 @@ public class CollateralSubstitution2 {
 			simpleType_lazy = () -> CollateralSubstitutionType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StdSttlmInstrs")
 	protected Max140Text standardSettlementInstructions;
 	/**
-	 * Identifies the standard settlement instructions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -370,7 +379,7 @@ public class CollateralSubstitution2 {
 	public static final MMMessageAttribute mmStandardSettlementInstructions = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CollateralAgreement.mmStandingSettlementInstructions;
-			componentContext_lazy = () -> CollateralSubstitution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralSubstitution2.mmObject();
 			isDerived = false;
 			xmlTag = "StdSttlmInstrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -383,10 +392,11 @@ public class CollateralSubstitution2 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesColl")
 	protected List<com.tools20022.repository.msg.SecuritiesCollateral4> securitiesCollateral;
 	/**
-	 * Collateral type is securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -433,7 +443,7 @@ public class CollateralSubstitution2 {
 	public static final MMMessageAssociationEnd mmSecuritiesCollateral = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
-			componentContext_lazy = () -> CollateralSubstitution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralSubstitution2.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesColl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -446,10 +456,11 @@ public class CollateralSubstitution2 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral4.mmObject();
 		}
 	};
+	@XmlElement(name = "CshColl")
 	protected List<com.tools20022.repository.msg.CashCollateral5> cashCollateral;
 	/**
-	 * Collateral type is cash.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -496,7 +507,7 @@ public class CollateralSubstitution2 {
 	public static final MMMessageAssociationEnd mmCashCollateral = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Money.mmObject();
-			componentContext_lazy = () -> CollateralSubstitution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralSubstitution2.mmObject();
 			isDerived = false;
 			xmlTag = "CshColl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -509,11 +520,11 @@ public class CollateralSubstitution2 {
 			type_lazy = () -> com.tools20022.repository.msg.CashCollateral5.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrColl")
 	protected List<com.tools20022.repository.msg.OtherCollateral4> otherCollateral;
 	/**
-	 * Collateral type is other than securities or cash for example letter of
-	 * credit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -562,7 +573,7 @@ public class CollateralSubstitution2 {
 	public static final MMMessageAssociationEnd mmOtherCollateral = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Asset.mmObject();
-			componentContext_lazy = () -> CollateralSubstitution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralSubstitution2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrColl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -575,11 +586,11 @@ public class CollateralSubstitution2 {
 			type_lazy = () -> com.tools20022.repository.msg.OtherCollateral4.mmObject();
 		}
 	};
+	@XmlElement(name = "LkdRefs")
 	protected Reference17 linkedReferences;
 	/**
-	 * Provides details on the identification of previously sent and/or received
-	 * message(s), in case of updated substitution request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -623,7 +634,7 @@ public class CollateralSubstitution2 {
 	 */
 	public static final MMMessageAssociationEnd mmLinkedReferences = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CollateralSubstitution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralSubstitution2.mmObject();
 			isDerived = false;
 			xmlTag = "LkdRefs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -641,12 +652,14 @@ public class CollateralSubstitution2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CollateralSubstitution2.mmCollateralSubstitutionSequence, CollateralSubstitution2.mmSubstitutionRequirement, CollateralSubstitution2.mmCollateralSubstitutionType,
-						CollateralSubstitution2.mmStandardSettlementInstructions, CollateralSubstitution2.mmSecuritiesCollateral, CollateralSubstitution2.mmCashCollateral, CollateralSubstitution2.mmOtherCollateral,
-						CollateralSubstitution2.mmLinkedReferences);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralSubstitution2.mmCollateralSubstitutionSequence, com.tools20022.repository.msg.CollateralSubstitution2.mmSubstitutionRequirement,
+						com.tools20022.repository.msg.CollateralSubstitution2.mmCollateralSubstitutionType, com.tools20022.repository.msg.CollateralSubstitution2.mmStandardSettlementInstructions,
+						com.tools20022.repository.msg.CollateralSubstitution2.mmSecuritiesCollateral, com.tools20022.repository.msg.CollateralSubstitution2.mmCashCollateral,
+						com.tools20022.repository.msg.CollateralSubstitution2.mmOtherCollateral, com.tools20022.repository.msg.CollateralSubstitution2.mmLinkedReferences);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralSubstitutionRequestV03.mmCollateralSubstitutionReturn);
 				trace_lazy = () -> CollateralSubstitution.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSubstitutionRequestSequenceRule.forCollateralSubstitution2);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralSubstitution2";
 				definition = "Provides details about the collateral that will be substituted.";
@@ -657,75 +670,75 @@ public class CollateralSubstitution2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CollSbstitnSeq", required = true)
 	public CollateralSubstitutionSequence1Code getCollateralSubstitutionSequence() {
 		return collateralSubstitutionSequence;
 	}
 
-	public void setCollateralSubstitutionSequence(CollateralSubstitutionSequence1Code collateralSubstitutionSequence) {
-		this.collateralSubstitutionSequence = collateralSubstitutionSequence;
+	public CollateralSubstitution2 setCollateralSubstitutionSequence(CollateralSubstitutionSequence1Code collateralSubstitutionSequence) {
+		this.collateralSubstitutionSequence = Objects.requireNonNull(collateralSubstitutionSequence);
+		return this;
 	}
 
-	@XmlElement(name = "SbstitnRqrmnt", required = true)
 	public ActiveCurrencyAndAmount getSubstitutionRequirement() {
 		return substitutionRequirement;
 	}
 
-	public void setSubstitutionRequirement(ActiveCurrencyAndAmount substitutionRequirement) {
-		this.substitutionRequirement = substitutionRequirement;
+	public CollateralSubstitution2 setSubstitutionRequirement(ActiveCurrencyAndAmount substitutionRequirement) {
+		this.substitutionRequirement = Objects.requireNonNull(substitutionRequirement);
+		return this;
 	}
 
-	@XmlElement(name = "CollSbstitnTp", required = true)
 	public CollateralSubstitutionType1Code getCollateralSubstitutionType() {
 		return collateralSubstitutionType;
 	}
 
-	public void setCollateralSubstitutionType(CollateralSubstitutionType1Code collateralSubstitutionType) {
-		this.collateralSubstitutionType = collateralSubstitutionType;
+	public CollateralSubstitution2 setCollateralSubstitutionType(CollateralSubstitutionType1Code collateralSubstitutionType) {
+		this.collateralSubstitutionType = Objects.requireNonNull(collateralSubstitutionType);
+		return this;
 	}
 
-	@XmlElement(name = "StdSttlmInstrs")
-	public Max140Text getStandardSettlementInstructions() {
-		return standardSettlementInstructions;
+	public Optional<Max140Text> getStandardSettlementInstructions() {
+		return standardSettlementInstructions == null ? Optional.empty() : Optional.of(standardSettlementInstructions);
 	}
 
-	public void setStandardSettlementInstructions(Max140Text standardSettlementInstructions) {
+	public CollateralSubstitution2 setStandardSettlementInstructions(Max140Text standardSettlementInstructions) {
 		this.standardSettlementInstructions = standardSettlementInstructions;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesColl")
 	public List<SecuritiesCollateral4> getSecuritiesCollateral() {
-		return securitiesCollateral;
+		return securitiesCollateral == null ? securitiesCollateral = new ArrayList<>() : securitiesCollateral;
 	}
 
-	public void setSecuritiesCollateral(List<com.tools20022.repository.msg.SecuritiesCollateral4> securitiesCollateral) {
-		this.securitiesCollateral = securitiesCollateral;
+	public CollateralSubstitution2 setSecuritiesCollateral(List<com.tools20022.repository.msg.SecuritiesCollateral4> securitiesCollateral) {
+		this.securitiesCollateral = Objects.requireNonNull(securitiesCollateral);
+		return this;
 	}
 
-	@XmlElement(name = "CshColl")
 	public List<CashCollateral5> getCashCollateral() {
-		return cashCollateral;
+		return cashCollateral == null ? cashCollateral = new ArrayList<>() : cashCollateral;
 	}
 
-	public void setCashCollateral(List<com.tools20022.repository.msg.CashCollateral5> cashCollateral) {
-		this.cashCollateral = cashCollateral;
+	public CollateralSubstitution2 setCashCollateral(List<com.tools20022.repository.msg.CashCollateral5> cashCollateral) {
+		this.cashCollateral = Objects.requireNonNull(cashCollateral);
+		return this;
 	}
 
-	@XmlElement(name = "OthrColl")
 	public List<OtherCollateral4> getOtherCollateral() {
-		return otherCollateral;
+		return otherCollateral == null ? otherCollateral = new ArrayList<>() : otherCollateral;
 	}
 
-	public void setOtherCollateral(List<com.tools20022.repository.msg.OtherCollateral4> otherCollateral) {
-		this.otherCollateral = otherCollateral;
+	public CollateralSubstitution2 setOtherCollateral(List<com.tools20022.repository.msg.OtherCollateral4> otherCollateral) {
+		this.otherCollateral = Objects.requireNonNull(otherCollateral);
+		return this;
 	}
 
-	@XmlElement(name = "LkdRefs")
-	public Reference17 getLinkedReferences() {
-		return linkedReferences;
+	public Optional<Reference17> getLinkedReferences() {
+		return linkedReferences == null ? Optional.empty() : Optional.of(linkedReferences);
 	}
 
-	public void setLinkedReferences(com.tools20022.repository.msg.Reference17 linkedReferences) {
+	public CollateralSubstitution2 setLinkedReferences(com.tools20022.repository.msg.Reference17 linkedReferences) {
 		this.linkedReferences = linkedReferences;
+		return this;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * CardPaymentDataSet8}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardPaymentDataSet11", propOrder = {"transactionSequenceCounter", "transactionResponse", "environment", "transaction"})
 public class CardPaymentDataSet11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxSeqCntr", required = true)
 	protected Max9NumericText transactionSequenceCounter;
 	/**
-	 * Sequential counter of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +130,7 @@ public class CardPaymentDataSet11 {
 	 */
 	public static final MMMessageAttribute mmTransactionSequenceCounter = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardPaymentDataSet11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet11.mmObject();
 			isDerived = false;
 			xmlTag = "TxSeqCntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,10 +143,11 @@ public class CardPaymentDataSet11 {
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "TxRspn", required = true)
 	protected ResponseType1 transactionResponse;
 	/**
-	 * Response to the capture of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -183,7 +186,7 @@ public class CardPaymentDataSet11 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardPaymentDataSet11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet11.mmObject();
 			isDerived = false;
 			xmlTag = "TxRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,10 +200,11 @@ public class CardPaymentDataSet11 {
 			type_lazy = () -> com.tools20022.repository.msg.ResponseType1.mmObject();
 		}
 	};
+	@XmlElement(name = "Envt", required = true)
 	protected CardPaymentEnvironment33 environment;
 	/**
-	 * Data related to the environment of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -240,7 +244,7 @@ public class CardPaymentDataSet11 {
 	 */
 	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardPaymentDataSet11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet11.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -254,10 +258,11 @@ public class CardPaymentDataSet11 {
 			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment33.mmObject();
 		}
 	};
+	@XmlElement(name = "Tx", required = true)
 	protected CardPaymentTransactionAdviceResponse5 transaction;
 	/**
-	 * Transaction that has been rejected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -297,7 +302,7 @@ public class CardPaymentDataSet11 {
 	 */
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardPaymentDataSet11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet11.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -315,8 +320,9 @@ public class CardPaymentDataSet11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardPaymentDataSet11.mmTransactionSequenceCounter, CardPaymentDataSet11.mmTransactionResponse, CardPaymentDataSet11.mmEnvironment, CardPaymentDataSet11.mmTransaction);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentDataSet11.mmTransactionSequenceCounter, com.tools20022.repository.msg.CardPaymentDataSet11.mmTransactionResponse,
+						com.tools20022.repository.msg.CardPaymentDataSet11.mmEnvironment, com.tools20022.repository.msg.CardPaymentDataSet11.mmTransaction);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentDataSet11";
 				definition = "Transaction for whose batch capture has been rejected.";
@@ -327,39 +333,39 @@ public class CardPaymentDataSet11 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxSeqCntr", required = true)
 	public Max9NumericText getTransactionSequenceCounter() {
 		return transactionSequenceCounter;
 	}
 
-	public void setTransactionSequenceCounter(Max9NumericText transactionSequenceCounter) {
-		this.transactionSequenceCounter = transactionSequenceCounter;
+	public CardPaymentDataSet11 setTransactionSequenceCounter(Max9NumericText transactionSequenceCounter) {
+		this.transactionSequenceCounter = Objects.requireNonNull(transactionSequenceCounter);
+		return this;
 	}
 
-	@XmlElement(name = "TxRspn", required = true)
 	public ResponseType1 getTransactionResponse() {
 		return transactionResponse;
 	}
 
-	public void setTransactionResponse(com.tools20022.repository.msg.ResponseType1 transactionResponse) {
-		this.transactionResponse = transactionResponse;
+	public CardPaymentDataSet11 setTransactionResponse(com.tools20022.repository.msg.ResponseType1 transactionResponse) {
+		this.transactionResponse = Objects.requireNonNull(transactionResponse);
+		return this;
 	}
 
-	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment33 getEnvironment() {
 		return environment;
 	}
 
-	public void setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment33 environment) {
-		this.environment = environment;
+	public CardPaymentDataSet11 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment33 environment) {
+		this.environment = Objects.requireNonNull(environment);
+		return this;
 	}
 
-	@XmlElement(name = "Tx", required = true)
 	public CardPaymentTransactionAdviceResponse5 getTransaction() {
 		return transaction;
 	}
 
-	public void setTransaction(com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse5 transaction) {
-		this.transaction = transaction;
+	public CardPaymentDataSet11 setTransaction(com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse5 transaction) {
+		this.transaction = Objects.requireNonNull(transaction);
+		return this;
 	}
 }

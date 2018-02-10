@@ -24,9 +24,8 @@ import com.tools20022.repository.codeset.ProposalTypeCode;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Specifies collateral proposed to the counterparty.
@@ -51,6 +50,34 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CollateralProposal#mmRelatedManagementProcess
  * CollateralProposal.mmRelatedManagementProcess}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmRelatedCollateralProposal
+ * CollateralMovement.mmRelatedCollateralProposal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralManagement#mmCollateralProposal
+ * CollateralManagement.mmCollateralProposal}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Proposal1#mmProposalDetails
+ * Proposal1.mmProposalDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Proposal2#mmProposalDetails
+ * Proposal2.mmProposalDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Proposal3#mmCollateralProposal
+ * Proposal3.mmCollateralProposal}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Proposal4#mmCollateralProposal
+ * Proposal4.mmCollateralProposal}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Proposal5#mmCollateralProposal
+ * Proposal5.mmCollateralProposal}</li>
  * </ul>
  * </li>
  * <li>
@@ -142,38 +169,10 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmRelatedCollateralProposal
- * CollateralMovement.mmRelatedCollateralProposal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralManagement#mmCollateralProposal
- * CollateralManagement.mmCollateralProposal}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Proposal1#mmProposalDetails
- * Proposal1.mmProposalDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Proposal2#mmProposalDetails
- * Proposal2.mmProposalDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Proposal3#mmCollateralProposal
- * Proposal3.mmCollateralProposal}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Proposal4#mmCollateralProposal
- * Proposal4.mmCollateralProposal}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Proposal5#mmCollateralProposal
- * Proposal5.mmCollateralProposal}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -189,9 +188,8 @@ public class CollateralProposal {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.CollateralMovement> proposedCollateralMovement;
 	/**
-	 * Details the movement of collateral that is proposed to be delivered or
-	 * returned by one of the collateral parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -344,8 +342,8 @@ public class CollateralProposal {
 					CollateralMovement7.mmMovementDirection, CollateralMovement4Choice.mmCollateralMovementDirection, CollateralMovement4Choice.mmReturn, CollateralMovement8.mmDeliver, CollateralMovement8.mmReturn,
 					CollateralProposalResponse3Choice.mmCollateralProposal, CollateralProposalResponseType3.mmResponse, CollateralProposal5Choice.mmCollateralProposalDetails, CollateralMovement10.mmMovementDirection,
 					CollateralMovement5Choice.mmCollateralMovementDirection, CollateralMovement5Choice.mmReturn, CollateralMovement11.mmDeliver, CollateralMovement11.mmReturn);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposedCollateralMovement";
 			definition = "Details the movement of collateral that is proposed to be delivered or returned by one of the collateral parties.";
@@ -357,9 +355,8 @@ public class CollateralProposal {
 	};
 	protected CollateralProposalResponseCode responseType;
 	/**
-	 * Indicates whether the collateral proposal is an initial or a counter
-	 * proposal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -402,8 +399,8 @@ public class CollateralProposal {
 	public static final MMBusinessAttribute mmResponseType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CollateralProposalResponseType1.mmType, CollateralProposalResponseType2.mmType, CollateralProposalResponseType3.mmType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseType";
 			definition = "Indicates whether the collateral proposal is an initial or a counter proposal.";
@@ -422,8 +419,8 @@ public class CollateralProposal {
 	};
 	protected ProposalTypeCode type;
 	/**
-	 * Indicates whether this is an initial or counter proposal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -469,8 +466,8 @@ public class CollateralProposal {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Proposal1.mmProposalType, Proposal2.mmProposalType, Proposal3.mmCollateralProposalType, Proposal4.mmCollateralProposalType, Proposal5.mmCollateralProposalType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates whether this is an initial or counter proposal.";
@@ -489,8 +486,8 @@ public class CollateralProposal {
 	};
 	protected CollateralManagement relatedManagementProcess;
 	/**
-	 * Process which groups the activities related to collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -525,8 +522,8 @@ public class CollateralProposal {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedManagementProcess = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedManagementProcess";
 			definition = "Process which groups the activities related to collateral.";
@@ -541,7 +538,7 @@ public class CollateralProposal {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralProposal";
 				definition = "Specifies collateral proposed to the counterparty.";
@@ -568,34 +565,38 @@ public class CollateralProposal {
 	}
 
 	public List<CollateralMovement> getProposedCollateralMovement() {
-		return proposedCollateralMovement;
+		return proposedCollateralMovement == null ? proposedCollateralMovement = new ArrayList<>() : proposedCollateralMovement;
 	}
 
-	public void setProposedCollateralMovement(List<com.tools20022.repository.entity.CollateralMovement> proposedCollateralMovement) {
-		this.proposedCollateralMovement = proposedCollateralMovement;
+	public CollateralProposal setProposedCollateralMovement(List<com.tools20022.repository.entity.CollateralMovement> proposedCollateralMovement) {
+		this.proposedCollateralMovement = Objects.requireNonNull(proposedCollateralMovement);
+		return this;
 	}
 
 	public CollateralProposalResponseCode getResponseType() {
 		return responseType;
 	}
 
-	public void setResponseType(CollateralProposalResponseCode responseType) {
-		this.responseType = responseType;
+	public CollateralProposal setResponseType(CollateralProposalResponseCode responseType) {
+		this.responseType = Objects.requireNonNull(responseType);
+		return this;
 	}
 
 	public ProposalTypeCode getType() {
 		return type;
 	}
 
-	public void setType(ProposalTypeCode type) {
-		this.type = type;
+	public CollateralProposal setType(ProposalTypeCode type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	public CollateralManagement getRelatedManagementProcess() {
-		return relatedManagementProcess;
+	public Optional<CollateralManagement> getRelatedManagementProcess() {
+		return relatedManagementProcess == null ? Optional.empty() : Optional.of(relatedManagementProcess);
 	}
 
-	public void setRelatedManagementProcess(com.tools20022.repository.entity.CollateralManagement relatedManagementProcess) {
+	public CollateralProposal setRelatedManagementProcess(com.tools20022.repository.entity.CollateralManagement relatedManagementProcess) {
 		this.relatedManagementProcess = relatedManagementProcess;
+		return this;
 	}
 }

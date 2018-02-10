@@ -26,9 +26,8 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.BankAccountManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -51,23 +50,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AccountManagementPreviousVersion
- * AccountManagementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.BankAccountManagementISOPreviousversion
- * BankAccountManagementISOPreviousversion}</li>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AcctMndtMntncAmdmntReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -99,6 +81,23 @@ import javax.xml.bind.annotation.*;
  * AccountMandateMaintenanceAmendmentRequestV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.BankAccountManagementISOPreviousversion
+ * BankAccountManagementISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AcctMndtMntncAmdmntReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AccountManagementPreviousVersion
+ * AccountManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code acmt.018.001.01}</li>
@@ -122,17 +121,17 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountMandateMaintenanceAmendmentRequestV01", propOrder = {"references", "contractDates", "underlyingMasterAgreement", "accountIdentification", "accountServicerIdentification", "organisationIdentification", "mandate",
 		"digitalSignature"})
 public class AccountMandateMaintenanceAmendmentRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Refs", required = true)
 	protected References4 references;
 	/**
-	 * Set of elements for the identification of the message and related
-	 * references.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,10 +172,11 @@ public class AccountMandateMaintenanceAmendmentRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CtrctDts")
 	protected AccountContract2 contractDates;
 	/**
-	 * Specifies target dates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -216,12 +216,11 @@ public class AccountMandateMaintenanceAmendmentRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "UndrlygMstrAgrmt")
 	protected ContractDocument1 underlyingMasterAgreement;
 	/**
-	 * Account contract established between the organisation or the group to
-	 * which the organisation belongs, and the account servicer. This contract
-	 * has to be applied for the new account to be opened and maintained.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -263,11 +262,11 @@ public class AccountMandateMaintenanceAmendmentRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctId", required = true)
 	protected List<AccountForAction1> accountIdentification;
 	/**
-	 * Unique and unambiguous identification of the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -308,11 +307,11 @@ public class AccountMandateMaintenanceAmendmentRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctSvcrId", required = true)
 	protected BranchAndFinancialInstitutionIdentification4 accountServicerIdentification;
 	/**
-	 * Unique and unambiguous identifier of a financial institution, as assigned
-	 * under an internationally recognised or proprietary identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -354,10 +353,11 @@ public class AccountMandateMaintenanceAmendmentRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgId", required = true)
 	protected List<OrganisationIdentification6> organisationIdentification;
 	/**
-	 * Identification of the organisation requesting the change.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -397,10 +397,11 @@ public class AccountMandateMaintenanceAmendmentRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "Mndt")
 	protected List<OperationMandate1> mandate;
 	/**
-	 * Information specifying the account mandate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -439,11 +440,11 @@ public class AccountMandateMaintenanceAmendmentRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "DgtlSgntr")
 	protected List<PartyAndSignature1> digitalSignature;
 	/**
-	 * Contains the signature with its components, namely signed info, signature
-	 * value, key info and the object.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -520,79 +521,79 @@ public class AccountMandateMaintenanceAmendmentRequestV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Refs", required = true)
 	public References4 getReferences() {
 		return references;
 	}
 
-	public void setReferences(References4 references) {
-		this.references = references;
+	public AccountMandateMaintenanceAmendmentRequestV01 setReferences(References4 references) {
+		this.references = Objects.requireNonNull(references);
+		return this;
 	}
 
-	@XmlElement(name = "CtrctDts")
-	public AccountContract2 getContractDates() {
-		return contractDates;
+	public Optional<AccountContract2> getContractDates() {
+		return contractDates == null ? Optional.empty() : Optional.of(contractDates);
 	}
 
-	public void setContractDates(AccountContract2 contractDates) {
+	public AccountMandateMaintenanceAmendmentRequestV01 setContractDates(AccountContract2 contractDates) {
 		this.contractDates = contractDates;
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygMstrAgrmt")
-	public ContractDocument1 getUnderlyingMasterAgreement() {
-		return underlyingMasterAgreement;
+	public Optional<ContractDocument1> getUnderlyingMasterAgreement() {
+		return underlyingMasterAgreement == null ? Optional.empty() : Optional.of(underlyingMasterAgreement);
 	}
 
-	public void setUnderlyingMasterAgreement(ContractDocument1 underlyingMasterAgreement) {
+	public AccountMandateMaintenanceAmendmentRequestV01 setUnderlyingMasterAgreement(ContractDocument1 underlyingMasterAgreement) {
 		this.underlyingMasterAgreement = underlyingMasterAgreement;
+		return this;
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public List<AccountForAction1> getAccountIdentification() {
-		return accountIdentification;
+		return accountIdentification == null ? accountIdentification = new ArrayList<>() : accountIdentification;
 	}
 
-	public void setAccountIdentification(List<AccountForAction1> accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public AccountMandateMaintenanceAmendmentRequestV01 setAccountIdentification(List<AccountForAction1> accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcrId", required = true)
 	public BranchAndFinancialInstitutionIdentification4 getAccountServicerIdentification() {
 		return accountServicerIdentification;
 	}
 
-	public void setAccountServicerIdentification(BranchAndFinancialInstitutionIdentification4 accountServicerIdentification) {
-		this.accountServicerIdentification = accountServicerIdentification;
+	public AccountMandateMaintenanceAmendmentRequestV01 setAccountServicerIdentification(BranchAndFinancialInstitutionIdentification4 accountServicerIdentification) {
+		this.accountServicerIdentification = Objects.requireNonNull(accountServicerIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OrgId", required = true)
 	public List<OrganisationIdentification6> getOrganisationIdentification() {
-		return organisationIdentification;
+		return organisationIdentification == null ? organisationIdentification = new ArrayList<>() : organisationIdentification;
 	}
 
-	public void setOrganisationIdentification(List<OrganisationIdentification6> organisationIdentification) {
-		this.organisationIdentification = organisationIdentification;
+	public AccountMandateMaintenanceAmendmentRequestV01 setOrganisationIdentification(List<OrganisationIdentification6> organisationIdentification) {
+		this.organisationIdentification = Objects.requireNonNull(organisationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Mndt")
 	public List<OperationMandate1> getMandate() {
-		return mandate;
+		return mandate == null ? mandate = new ArrayList<>() : mandate;
 	}
 
-	public void setMandate(List<OperationMandate1> mandate) {
-		this.mandate = mandate;
+	public AccountMandateMaintenanceAmendmentRequestV01 setMandate(List<OperationMandate1> mandate) {
+		this.mandate = Objects.requireNonNull(mandate);
+		return this;
 	}
 
-	@XmlElement(name = "DgtlSgntr")
 	public List<PartyAndSignature1> getDigitalSignature() {
-		return digitalSignature;
+		return digitalSignature == null ? digitalSignature = new ArrayList<>() : digitalSignature;
 	}
 
-	public void setDigitalSignature(List<PartyAndSignature1> digitalSignature) {
-		this.digitalSignature = digitalSignature;
+	public AccountMandateMaintenanceAmendmentRequestV01 setDigitalSignature(List<PartyAndSignature1> digitalSignature) {
+		this.digitalSignature = Objects.requireNonNull(digitalSignature);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.018.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.018.001.01")
 	static public class Document {
 		@XmlElement(name = "AcctMndtMntncAmdmntReq", required = true)
 		public AccountMandateMaintenanceAmendmentRequestV01 messageBody;

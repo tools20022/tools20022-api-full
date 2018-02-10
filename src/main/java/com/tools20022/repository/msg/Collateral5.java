@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Collateral;
 import com.tools20022.repository.entity.CollateralManagement;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Collateral5", propOrder = {"accountIdentification", "reportSummary", "collateralValuationDetails"})
 public class Collateral5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId", required = true)
 	protected CollateralAccount1 accountIdentification;
 	/**
-	 * Provides information about the collateral account, that is the
-	 * identification, the type and optionally the name.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -126,7 +128,7 @@ public class Collateral5 {
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralAccount;
-			componentContext_lazy = () -> Collateral5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral5.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,10 +141,11 @@ public class Collateral5 {
 			type_lazy = () -> com.tools20022.repository.msg.CollateralAccount1.mmObject();
 		}
 	};
+	@XmlElement(name = "RptSummry", required = true)
 	protected Summary1 reportSummary;
 	/**
-	 * Provides the summary of the collateral valuation report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -174,7 +177,7 @@ public class Collateral5 {
 	 */
 	public static final MMMessageAssociationEnd mmReportSummary = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Collateral5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral5.mmObject();
 			isDerived = false;
 			xmlTag = "RptSummry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,11 +190,11 @@ public class Collateral5 {
 			type_lazy = () -> com.tools20022.repository.msg.Summary1.mmObject();
 		}
 	};
+	@XmlElement(name = "CollValtnDtls")
 	protected List<com.tools20022.repository.msg.CollateralValuation1> collateralValuationDetails;
 	/**
-	 * Provides additionnal information about the collateral valuation that has
-	 * been posted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -232,7 +235,7 @@ public class Collateral5 {
 	public static final MMMessageAssociationEnd mmCollateralValuationDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CollateralManagement.mmCollateralValuation;
-			componentContext_lazy = () -> Collateral5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral5.mmObject();
 			isDerived = false;
 			xmlTag = "CollValtnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,9 +251,10 @@ public class Collateral5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Collateral5.mmAccountIdentification, Collateral5.mmReportSummary, Collateral5.mmCollateralValuationDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral5.mmAccountIdentification, com.tools20022.repository.msg.Collateral5.mmReportSummary,
+						com.tools20022.repository.msg.Collateral5.mmCollateralValuationDetails);
 				trace_lazy = () -> Collateral.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Collateral5";
 				definition = "Provides for each collateral account the report summary and the valuation of each piece of collateral.";
@@ -260,30 +264,30 @@ public class Collateral5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public CollateralAccount1 getAccountIdentification() {
 		return accountIdentification;
 	}
 
-	public void setAccountIdentification(com.tools20022.repository.msg.CollateralAccount1 accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public Collateral5 setAccountIdentification(com.tools20022.repository.msg.CollateralAccount1 accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RptSummry", required = true)
 	public Summary1 getReportSummary() {
 		return reportSummary;
 	}
 
-	public void setReportSummary(com.tools20022.repository.msg.Summary1 reportSummary) {
-		this.reportSummary = reportSummary;
+	public Collateral5 setReportSummary(com.tools20022.repository.msg.Summary1 reportSummary) {
+		this.reportSummary = Objects.requireNonNull(reportSummary);
+		return this;
 	}
 
-	@XmlElement(name = "CollValtnDtls")
 	public List<CollateralValuation1> getCollateralValuationDetails() {
-		return collateralValuationDetails;
+		return collateralValuationDetails == null ? collateralValuationDetails = new ArrayList<>() : collateralValuationDetails;
 	}
 
-	public void setCollateralValuationDetails(List<com.tools20022.repository.msg.CollateralValuation1> collateralValuationDetails) {
-		this.collateralValuationDetails = collateralValuationDetails;
+	public Collateral5 setCollateralValuationDetails(List<com.tools20022.repository.msg.CollateralValuation1> collateralValuationDetails) {
+		this.collateralValuationDetails = Objects.requireNonNull(collateralValuationDetails);
+		return this;
 	}
 }

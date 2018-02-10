@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AcknowledgementReasonCode;
+import com.tools20022.repository.codeset.AcknowledgementReason6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies additional information about the processed instruction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode
- * AcknowledgementReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason6Code#mmAccountServicerDeadlineMissed
- * AcknowledgementReason6Code.mmAccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason6Code#AccountServicerDeadlineMissed
+ * AcknowledgementReason6Code.AccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason6Code#mmMarketPracticeRuleDiscrepency
- * AcknowledgementReason6Code.mmMarketPracticeRuleDiscrepency}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason6Code#MarketPracticeRuleDiscrepency
+ * AcknowledgementReason6Code.MarketPracticeRuleDiscrepency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason6Code#mmOther
- * AcknowledgementReason6Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason6Code#Other
+ * AcknowledgementReason6Code.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason6Code#mmNotStraightThroughProcessing
- * AcknowledgementReason6Code.mmNotStraightThroughProcessing}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason6Code#NotStraightThroughProcessing
+ * AcknowledgementReason6Code.NotStraightThroughProcessing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason6Code#mmMarketDeadlineMissed
- * AcknowledgementReason6Code.mmMarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason6Code#MarketDeadlineMissed
+ * AcknowledgementReason6Code.MarketDeadlineMissed}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode
+ * AcknowledgementReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies additional information about the processed instruction."</li>
  * </ul>
  */
-public class AcknowledgementReason6Code extends AcknowledgementReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AcknowledgementReason6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,11 +98,12 @@ public class AcknowledgementReason6Code extends AcknowledgementReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
+	public static final AcknowledgementReason6Code AccountServicerDeadlineMissed = new AcknowledgementReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
-			owner_lazy = () -> AcknowledgementReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AcknowledgementReason6Code.mmObject();
+			codeName = AcknowledgementReasonCode.AccountServicerDeadlineMissed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -116,11 +122,12 @@ public class AcknowledgementReason6Code extends AcknowledgementReasonCode {
 	 * name} = "MarketPracticeRuleDiscrepency"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarketPracticeRuleDiscrepency = new MMCode() {
+	public static final AcknowledgementReason6Code MarketPracticeRuleDiscrepency = new AcknowledgementReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeRuleDiscrepency";
-			owner_lazy = () -> AcknowledgementReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AcknowledgementReason6Code.mmObject();
+			codeName = AcknowledgementReasonCode.MarketPracticeRuleDiscrepency.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -139,11 +146,12 @@ public class AcknowledgementReason6Code extends AcknowledgementReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final AcknowledgementReason6Code Other = new AcknowledgementReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> AcknowledgementReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AcknowledgementReason6Code.mmObject();
+			codeName = AcknowledgementReasonCode.Other.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -162,11 +170,12 @@ public class AcknowledgementReason6Code extends AcknowledgementReasonCode {
 	 * name} = "NotStraightThroughProcessing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotStraightThroughProcessing = new MMCode() {
+	public static final AcknowledgementReason6Code NotStraightThroughProcessing = new AcknowledgementReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotStraightThroughProcessing";
-			owner_lazy = () -> AcknowledgementReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AcknowledgementReason6Code.mmObject();
+			codeName = AcknowledgementReasonCode.NotStraightThroughProcessing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -185,27 +194,62 @@ public class AcknowledgementReason6Code extends AcknowledgementReasonCode {
 	 * name} = "MarketDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
+	public static final AcknowledgementReason6Code MarketDeadlineMissed = new AcknowledgementReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
-			owner_lazy = () -> AcknowledgementReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AcknowledgementReason6Code.mmObject();
+			codeName = AcknowledgementReasonCode.MarketDeadlineMissed.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AcknowledgementReason6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AcknowledgementReason6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcknowledgementReason6Code";
 				definition = "Specifies additional information about the processed instruction.";
-				code_lazy = () -> Arrays.asList(AcknowledgementReason6Code.mmAccountServicerDeadlineMissed, AcknowledgementReason6Code.mmMarketPracticeRuleDiscrepency, AcknowledgementReason6Code.mmOther,
-						AcknowledgementReason6Code.mmNotStraightThroughProcessing, AcknowledgementReason6Code.mmMarketDeadlineMissed);
 				trace_lazy = () -> AcknowledgementReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcknowledgementReason6Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.AcknowledgementReason6Code.MarketPracticeRuleDiscrepency,
+						com.tools20022.repository.codeset.AcknowledgementReason6Code.Other, com.tools20022.repository.codeset.AcknowledgementReason6Code.NotStraightThroughProcessing,
+						com.tools20022.repository.codeset.AcknowledgementReason6Code.MarketDeadlineMissed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccountServicerDeadlineMissed.getCodeName().get(), AccountServicerDeadlineMissed);
+		codesByName.put(MarketPracticeRuleDiscrepency.getCodeName().get(), MarketPracticeRuleDiscrepency);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(NotStraightThroughProcessing.getCodeName().get(), NotStraightThroughProcessing);
+		codesByName.put(MarketDeadlineMissed.getCodeName().get(), MarketDeadlineMissed);
+	}
+
+	public static AcknowledgementReason6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AcknowledgementReason6Code[] values() {
+		AcknowledgementReason6Code[] values = new AcknowledgementReason6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AcknowledgementReason6Code> {
+		@Override
+		public AcknowledgementReason6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AcknowledgementReason6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

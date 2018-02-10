@@ -29,6 +29,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Statement9", propOrder = {"reference", "statementDateTime", "creationDateTime", "reportNumber", "statementType", "amendmentIndicator", "investmentAccountDetails"})
 public class Statement9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ref", required = true)
 	protected Max35Text reference;
 	/**
-	 * Reference of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +116,7 @@ public class Statement9 {
 	 */
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement9.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +127,11 @@ public class Statement9 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtDtTm", required = true)
 	protected DateAndDateTimeChoice statementDateTime;
 	/**
-	 * Date of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -154,7 +158,7 @@ public class Statement9 {
 	 */
 	public static final MMMessageAttribute mmStatementDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement9.mmObject();
 			isDerived = false;
 			xmlTag = "StmtDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,10 +169,11 @@ public class Statement9 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm")
 	protected DateAndDateTimeChoice creationDateTime;
 	/**
-	 * Preparation date of the statement
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,7 +200,7 @@ public class Statement9 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement9.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,10 +211,11 @@ public class Statement9 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "RptNb")
 	protected Max5NumericText reportNumber;
 	/**
-	 * Sequential number of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,7 +242,7 @@ public class Statement9 {
 	 */
 	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement9.mmObject();
 			isDerived = false;
 			xmlTag = "RptNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -247,10 +253,11 @@ public class Statement9 {
 			simpleType_lazy = () -> Max5NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtTp", required = true)
 	protected StatementType1Code statementType;
 	/**
-	 * Specifies the statement message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -277,7 +284,7 @@ public class Statement9 {
 	 */
 	public static final MMMessageAttribute mmStatementType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement9.mmObject();
 			isDerived = false;
 			xmlTag = "StmtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,11 +295,11 @@ public class Statement9 {
 			simpleType_lazy = () -> StatementType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AmdmntInd")
 	protected YesNoIndicator amendmentIndicator;
 	/**
-	 * Indicates whether a new message, as a replacement for the statement being
-	 * cancelled, will follow the cancellation or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -321,7 +328,7 @@ public class Statement9 {
 	 */
 	public static final MMMessageAttribute mmAmendmentIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement9.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -332,10 +339,11 @@ public class Statement9 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstmtAcctDtls")
 	protected InvestmentAccount30 investmentAccountDetails;
 	/**
-	 * Account information of the statement for which the cancellation is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -362,7 +370,7 @@ public class Statement9 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Statement9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement9.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -378,9 +386,10 @@ public class Statement9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Statement9.mmReference, Statement9.mmStatementDateTime, Statement9.mmCreationDateTime, Statement9.mmReportNumber, Statement9.mmStatementType, Statement9.mmAmendmentIndicator,
-						Statement9.mmInvestmentAccountDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement9.mmReference, com.tools20022.repository.msg.Statement9.mmStatementDateTime, com.tools20022.repository.msg.Statement9.mmCreationDateTime,
+						com.tools20022.repository.msg.Statement9.mmReportNumber, com.tools20022.repository.msg.Statement9.mmStatementType, com.tools20022.repository.msg.Statement9.mmAmendmentIndicator,
+						com.tools20022.repository.msg.Statement9.mmInvestmentAccountDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Statement9";
 				definition = "General characteristics related to a statement which reports information for a defined period.";
@@ -389,66 +398,66 @@ public class Statement9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ref", required = true)
 	public Max35Text getReference() {
 		return reference;
 	}
 
-	public void setReference(Max35Text reference) {
-		this.reference = reference;
+	public Statement9 setReference(Max35Text reference) {
+		this.reference = Objects.requireNonNull(reference);
+		return this;
 	}
 
-	@XmlElement(name = "StmtDtTm", required = true)
 	public DateAndDateTimeChoice getStatementDateTime() {
 		return statementDateTime;
 	}
 
-	public void setStatementDateTime(DateAndDateTimeChoice statementDateTime) {
-		this.statementDateTime = statementDateTime;
+	public Statement9 setStatementDateTime(DateAndDateTimeChoice statementDateTime) {
+		this.statementDateTime = Objects.requireNonNull(statementDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm")
-	public DateAndDateTimeChoice getCreationDateTime() {
-		return creationDateTime;
+	public Optional<DateAndDateTimeChoice> getCreationDateTime() {
+		return creationDateTime == null ? Optional.empty() : Optional.of(creationDateTime);
 	}
 
-	public void setCreationDateTime(DateAndDateTimeChoice creationDateTime) {
+	public Statement9 setCreationDateTime(DateAndDateTimeChoice creationDateTime) {
 		this.creationDateTime = creationDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "RptNb")
-	public Max5NumericText getReportNumber() {
-		return reportNumber;
+	public Optional<Max5NumericText> getReportNumber() {
+		return reportNumber == null ? Optional.empty() : Optional.of(reportNumber);
 	}
 
-	public void setReportNumber(Max5NumericText reportNumber) {
+	public Statement9 setReportNumber(Max5NumericText reportNumber) {
 		this.reportNumber = reportNumber;
+		return this;
 	}
 
-	@XmlElement(name = "StmtTp", required = true)
 	public StatementType1Code getStatementType() {
 		return statementType;
 	}
 
-	public void setStatementType(StatementType1Code statementType) {
-		this.statementType = statementType;
+	public Statement9 setStatementType(StatementType1Code statementType) {
+		this.statementType = Objects.requireNonNull(statementType);
+		return this;
 	}
 
-	@XmlElement(name = "AmdmntInd")
-	public YesNoIndicator getAmendmentIndicator() {
-		return amendmentIndicator;
+	public Optional<YesNoIndicator> getAmendmentIndicator() {
+		return amendmentIndicator == null ? Optional.empty() : Optional.of(amendmentIndicator);
 	}
 
-	public void setAmendmentIndicator(YesNoIndicator amendmentIndicator) {
+	public Statement9 setAmendmentIndicator(YesNoIndicator amendmentIndicator) {
 		this.amendmentIndicator = amendmentIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtAcctDtls")
-	public InvestmentAccount30 getInvestmentAccountDetails() {
-		return investmentAccountDetails;
+	public Optional<InvestmentAccount30> getInvestmentAccountDetails() {
+		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public void setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount30 investmentAccountDetails) {
+	public Statement9 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount30 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
+		return this;
 	}
 }

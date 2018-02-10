@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.MessageFunctionCode;
+import com.tools20022.repository.codeset.MessageFunction6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies the type of process related to the message. It partially
@@ -31,96 +35,96 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode
- * MessageFunctionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmAcquirerReconciliationAdvice
- * MessageFunction6Code.mmAcquirerReconciliationAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#AcquirerReconciliationAdvice
+ * MessageFunction6Code.AcquirerReconciliationAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmAcquirerReconciliationNotification
- * MessageFunction6Code.mmAcquirerReconciliationNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#AcquirerReconciliationNotification
+ * MessageFunction6Code.AcquirerReconciliationNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmAcquirerReconciliationRequest
- * MessageFunction6Code.mmAcquirerReconciliationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#AcquirerReconciliationRequest
+ * MessageFunction6Code.AcquirerReconciliationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmAcquirerReject
- * MessageFunction6Code.mmAcquirerReject}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#AcquirerReject
+ * MessageFunction6Code.AcquirerReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmAcquirerReversalAdvice
- * MessageFunction6Code.mmAcquirerReversalAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#AcquirerReversalAdvice
+ * MessageFunction6Code.AcquirerReversalAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmAcquirerReversalNotification
- * MessageFunction6Code.mmAcquirerReversalNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#AcquirerReversalNotification
+ * MessageFunction6Code.AcquirerReversalNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmAcquirerReversalRequest
- * MessageFunction6Code.mmAcquirerReversalRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#AcquirerReversalRequest
+ * MessageFunction6Code.AcquirerReversalRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmAgentReconciliationAdvice
- * MessageFunction6Code.mmAgentReconciliationAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#AgentReconciliationAdvice
+ * MessageFunction6Code.AgentReconciliationAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmAgentReconciliationNotification
- * MessageFunction6Code.mmAgentReconciliationNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#AgentReconciliationNotification
+ * MessageFunction6Code.AgentReconciliationNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmAgentReconciliationRequest
- * MessageFunction6Code.mmAgentReconciliationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#AgentReconciliationRequest
+ * MessageFunction6Code.AgentReconciliationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmAgentReject
- * MessageFunction6Code.mmAgentReject}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#AgentReject
+ * MessageFunction6Code.AgentReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmAuthorisationAdvice
- * MessageFunction6Code.mmAuthorisationAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#AuthorisationAdvice
+ * MessageFunction6Code.AuthorisationAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmAuthorisationNotification
- * MessageFunction6Code.mmAuthorisationNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#AuthorisationNotification
+ * MessageFunction6Code.AuthorisationNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmAuthorisationRequest
- * MessageFunction6Code.mmAuthorisationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#AuthorisationRequest
+ * MessageFunction6Code.AuthorisationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmAuthorisationResponse
- * MessageFunction6Code.mmAuthorisationResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#AuthorisationResponse
+ * MessageFunction6Code.AuthorisationResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmFinancialAdvice
- * MessageFunction6Code.mmFinancialAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#FinancialAdvice
+ * MessageFunction6Code.FinancialAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmFinancialNotification
- * MessageFunction6Code.mmFinancialNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#FinancialNotification
+ * MessageFunction6Code.FinancialNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmFinancialRequest
- * MessageFunction6Code.mmFinancialRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#FinancialRequest
+ * MessageFunction6Code.FinancialRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmIssuerReconciliationAdvice
- * MessageFunction6Code.mmIssuerReconciliationAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#IssuerReconciliationAdvice
+ * MessageFunction6Code.IssuerReconciliationAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmIssuerReconciliationNotification
- * MessageFunction6Code.mmIssuerReconciliationNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#IssuerReconciliationNotification
+ * MessageFunction6Code.IssuerReconciliationNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmIssuerReconciliationRequest
- * MessageFunction6Code.mmIssuerReconciliationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#IssuerReconciliationRequest
+ * MessageFunction6Code.IssuerReconciliationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmIssuerReject
- * MessageFunction6Code.mmIssuerReject}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#IssuerReject
+ * MessageFunction6Code.IssuerReject}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmKeyExchangeAdvice
- * MessageFunction6Code.mmKeyExchangeAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#KeyExchangeAdvice
+ * MessageFunction6Code.KeyExchangeAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmKeyExchangeRequest
- * MessageFunction6Code.mmKeyExchangeRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#KeyExchangeRequest
+ * MessageFunction6Code.KeyExchangeRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmNetworkManagementAdvice
- * MessageFunction6Code.mmNetworkManagementAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#NetworkManagementAdvice
+ * MessageFunction6Code.NetworkManagementAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#mmNetworkManagementRequest
- * MessageFunction6Code.mmNetworkManagementRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction6Code#NetworkManagementRequest
+ * MessageFunction6Code.NetworkManagementRequest}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode
+ * MessageFunctionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -133,7 +137,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class MessageFunction6Code extends MessageFunctionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MessageFunction6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -152,11 +157,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "AcquirerReconciliationAdvice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcquirerReconciliationAdvice = new MMCode() {
+	public static final MessageFunction6Code AcquirerReconciliationAdvice = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReconciliationAdvice";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.AcquirerReconciliationAdvice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -175,11 +181,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "AcquirerReconciliationNotification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcquirerReconciliationNotification = new MMCode() {
+	public static final MessageFunction6Code AcquirerReconciliationNotification = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReconciliationNotification";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.AcquirerReconciliationNotification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -198,11 +205,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "AcquirerReconciliationRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcquirerReconciliationRequest = new MMCode() {
+	public static final MessageFunction6Code AcquirerReconciliationRequest = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReconciliationRequest";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.AcquirerReconciliationRequest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -221,11 +229,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "AcquirerReject"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcquirerReject = new MMCode() {
+	public static final MessageFunction6Code AcquirerReject = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReject";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.AcquirerReject.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -244,11 +253,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "AcquirerReversalAdvice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcquirerReversalAdvice = new MMCode() {
+	public static final MessageFunction6Code AcquirerReversalAdvice = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReversalAdvice";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.AcquirerReversalAdvice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -267,11 +277,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "AcquirerReversalNotification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcquirerReversalNotification = new MMCode() {
+	public static final MessageFunction6Code AcquirerReversalNotification = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReversalNotification";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.AcquirerReversalNotification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -290,11 +301,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "AcquirerReversalRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcquirerReversalRequest = new MMCode() {
+	public static final MessageFunction6Code AcquirerReversalRequest = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerReversalRequest";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.AcquirerReversalRequest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -313,11 +325,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "AgentReconciliationAdvice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgentReconciliationAdvice = new MMCode() {
+	public static final MessageFunction6Code AgentReconciliationAdvice = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentReconciliationAdvice";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.AgentReconciliationAdvice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -336,11 +349,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "AgentReconciliationNotification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgentReconciliationNotification = new MMCode() {
+	public static final MessageFunction6Code AgentReconciliationNotification = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentReconciliationNotification";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.AgentReconciliationNotification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -359,11 +373,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "AgentReconciliationRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgentReconciliationRequest = new MMCode() {
+	public static final MessageFunction6Code AgentReconciliationRequest = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentReconciliationRequest";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.AgentReconciliationRequest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -382,11 +397,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "AgentReject"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgentReject = new MMCode() {
+	public static final MessageFunction6Code AgentReject = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentReject";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.AgentReject.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -405,11 +421,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "AuthorisationAdvice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAuthorisationAdvice = new MMCode() {
+	public static final MessageFunction6Code AuthorisationAdvice = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationAdvice";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.AuthorisationAdvice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -428,11 +445,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "AuthorisationNotification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAuthorisationNotification = new MMCode() {
+	public static final MessageFunction6Code AuthorisationNotification = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationNotification";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.AuthorisationNotification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -451,11 +469,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "AuthorisationRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAuthorisationRequest = new MMCode() {
+	public static final MessageFunction6Code AuthorisationRequest = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationRequest";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.AuthorisationRequest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -474,11 +493,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "AuthorisationResponse"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAuthorisationResponse = new MMCode() {
+	public static final MessageFunction6Code AuthorisationResponse = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationResponse";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.AuthorisationResponse.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -497,11 +517,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "FinancialAdvice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinancialAdvice = new MMCode() {
+	public static final MessageFunction6Code FinancialAdvice = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAdvice";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.FinancialAdvice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -520,11 +541,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "FinancialNotification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinancialNotification = new MMCode() {
+	public static final MessageFunction6Code FinancialNotification = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialNotification";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.FinancialNotification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -543,11 +565,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "FinancialRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinancialRequest = new MMCode() {
+	public static final MessageFunction6Code FinancialRequest = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialRequest";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.FinancialRequest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -566,11 +589,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "IssuerReconciliationAdvice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuerReconciliationAdvice = new MMCode() {
+	public static final MessageFunction6Code IssuerReconciliationAdvice = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerReconciliationAdvice";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.IssuerReconciliationAdvice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -589,11 +613,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "IssuerReconciliationNotification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuerReconciliationNotification = new MMCode() {
+	public static final MessageFunction6Code IssuerReconciliationNotification = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerReconciliationNotification";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.IssuerReconciliationNotification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -612,11 +637,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "IssuerReconciliationRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuerReconciliationRequest = new MMCode() {
+	public static final MessageFunction6Code IssuerReconciliationRequest = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerReconciliationRequest";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.IssuerReconciliationRequest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -635,11 +661,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "IssuerReject"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuerReject = new MMCode() {
+	public static final MessageFunction6Code IssuerReject = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerReject";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.IssuerReject.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -658,11 +685,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "KeyExchangeAdvice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmKeyExchangeAdvice = new MMCode() {
+	public static final MessageFunction6Code KeyExchangeAdvice = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyExchangeAdvice";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.KeyExchangeAdvice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -681,11 +709,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "KeyExchangeRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmKeyExchangeRequest = new MMCode() {
+	public static final MessageFunction6Code KeyExchangeRequest = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyExchangeRequest";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.KeyExchangeRequest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -704,11 +733,12 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "NetworkManagementAdvice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNetworkManagementAdvice = new MMCode() {
+	public static final MessageFunction6Code NetworkManagementAdvice = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetworkManagementAdvice";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.NetworkManagementAdvice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -727,31 +757,92 @@ public class MessageFunction6Code extends MessageFunctionCode {
 	 * name} = "NetworkManagementRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNetworkManagementRequest = new MMCode() {
+	public static final MessageFunction6Code NetworkManagementRequest = new MessageFunction6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetworkManagementRequest";
-			owner_lazy = () -> MessageFunction6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction6Code.mmObject();
+			codeName = MessageFunctionCode.NetworkManagementRequest.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, MessageFunction6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MessageFunction6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageFunction6Code";
 				definition = "Identifies the type of process related to the message. It partially correspond to the message type identifier (MTI) of ISO 8583.";
-				code_lazy = () -> Arrays.asList(MessageFunction6Code.mmAcquirerReconciliationAdvice, MessageFunction6Code.mmAcquirerReconciliationNotification, MessageFunction6Code.mmAcquirerReconciliationRequest,
-						MessageFunction6Code.mmAcquirerReject, MessageFunction6Code.mmAcquirerReversalAdvice, MessageFunction6Code.mmAcquirerReversalNotification, MessageFunction6Code.mmAcquirerReversalRequest,
-						MessageFunction6Code.mmAgentReconciliationAdvice, MessageFunction6Code.mmAgentReconciliationNotification, MessageFunction6Code.mmAgentReconciliationRequest, MessageFunction6Code.mmAgentReject,
-						MessageFunction6Code.mmAuthorisationAdvice, MessageFunction6Code.mmAuthorisationNotification, MessageFunction6Code.mmAuthorisationRequest, MessageFunction6Code.mmAuthorisationResponse,
-						MessageFunction6Code.mmFinancialAdvice, MessageFunction6Code.mmFinancialNotification, MessageFunction6Code.mmFinancialRequest, MessageFunction6Code.mmIssuerReconciliationAdvice,
-						MessageFunction6Code.mmIssuerReconciliationNotification, MessageFunction6Code.mmIssuerReconciliationRequest, MessageFunction6Code.mmIssuerReject, MessageFunction6Code.mmKeyExchangeAdvice,
-						MessageFunction6Code.mmKeyExchangeRequest, MessageFunction6Code.mmNetworkManagementAdvice, MessageFunction6Code.mmNetworkManagementRequest);
 				trace_lazy = () -> MessageFunctionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction6Code.AcquirerReconciliationAdvice, com.tools20022.repository.codeset.MessageFunction6Code.AcquirerReconciliationNotification,
+						com.tools20022.repository.codeset.MessageFunction6Code.AcquirerReconciliationRequest, com.tools20022.repository.codeset.MessageFunction6Code.AcquirerReject,
+						com.tools20022.repository.codeset.MessageFunction6Code.AcquirerReversalAdvice, com.tools20022.repository.codeset.MessageFunction6Code.AcquirerReversalNotification,
+						com.tools20022.repository.codeset.MessageFunction6Code.AcquirerReversalRequest, com.tools20022.repository.codeset.MessageFunction6Code.AgentReconciliationAdvice,
+						com.tools20022.repository.codeset.MessageFunction6Code.AgentReconciliationNotification, com.tools20022.repository.codeset.MessageFunction6Code.AgentReconciliationRequest,
+						com.tools20022.repository.codeset.MessageFunction6Code.AgentReject, com.tools20022.repository.codeset.MessageFunction6Code.AuthorisationAdvice,
+						com.tools20022.repository.codeset.MessageFunction6Code.AuthorisationNotification, com.tools20022.repository.codeset.MessageFunction6Code.AuthorisationRequest,
+						com.tools20022.repository.codeset.MessageFunction6Code.AuthorisationResponse, com.tools20022.repository.codeset.MessageFunction6Code.FinancialAdvice,
+						com.tools20022.repository.codeset.MessageFunction6Code.FinancialNotification, com.tools20022.repository.codeset.MessageFunction6Code.FinancialRequest,
+						com.tools20022.repository.codeset.MessageFunction6Code.IssuerReconciliationAdvice, com.tools20022.repository.codeset.MessageFunction6Code.IssuerReconciliationNotification,
+						com.tools20022.repository.codeset.MessageFunction6Code.IssuerReconciliationRequest, com.tools20022.repository.codeset.MessageFunction6Code.IssuerReject,
+						com.tools20022.repository.codeset.MessageFunction6Code.KeyExchangeAdvice, com.tools20022.repository.codeset.MessageFunction6Code.KeyExchangeRequest,
+						com.tools20022.repository.codeset.MessageFunction6Code.NetworkManagementAdvice, com.tools20022.repository.codeset.MessageFunction6Code.NetworkManagementRequest);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AcquirerReconciliationAdvice.getCodeName().get(), AcquirerReconciliationAdvice);
+		codesByName.put(AcquirerReconciliationNotification.getCodeName().get(), AcquirerReconciliationNotification);
+		codesByName.put(AcquirerReconciliationRequest.getCodeName().get(), AcquirerReconciliationRequest);
+		codesByName.put(AcquirerReject.getCodeName().get(), AcquirerReject);
+		codesByName.put(AcquirerReversalAdvice.getCodeName().get(), AcquirerReversalAdvice);
+		codesByName.put(AcquirerReversalNotification.getCodeName().get(), AcquirerReversalNotification);
+		codesByName.put(AcquirerReversalRequest.getCodeName().get(), AcquirerReversalRequest);
+		codesByName.put(AgentReconciliationAdvice.getCodeName().get(), AgentReconciliationAdvice);
+		codesByName.put(AgentReconciliationNotification.getCodeName().get(), AgentReconciliationNotification);
+		codesByName.put(AgentReconciliationRequest.getCodeName().get(), AgentReconciliationRequest);
+		codesByName.put(AgentReject.getCodeName().get(), AgentReject);
+		codesByName.put(AuthorisationAdvice.getCodeName().get(), AuthorisationAdvice);
+		codesByName.put(AuthorisationNotification.getCodeName().get(), AuthorisationNotification);
+		codesByName.put(AuthorisationRequest.getCodeName().get(), AuthorisationRequest);
+		codesByName.put(AuthorisationResponse.getCodeName().get(), AuthorisationResponse);
+		codesByName.put(FinancialAdvice.getCodeName().get(), FinancialAdvice);
+		codesByName.put(FinancialNotification.getCodeName().get(), FinancialNotification);
+		codesByName.put(FinancialRequest.getCodeName().get(), FinancialRequest);
+		codesByName.put(IssuerReconciliationAdvice.getCodeName().get(), IssuerReconciliationAdvice);
+		codesByName.put(IssuerReconciliationNotification.getCodeName().get(), IssuerReconciliationNotification);
+		codesByName.put(IssuerReconciliationRequest.getCodeName().get(), IssuerReconciliationRequest);
+		codesByName.put(IssuerReject.getCodeName().get(), IssuerReject);
+		codesByName.put(KeyExchangeAdvice.getCodeName().get(), KeyExchangeAdvice);
+		codesByName.put(KeyExchangeRequest.getCodeName().get(), KeyExchangeRequest);
+		codesByName.put(NetworkManagementAdvice.getCodeName().get(), NetworkManagementAdvice);
+		codesByName.put(NetworkManagementRequest.getCodeName().get(), NetworkManagementRequest);
+	}
+
+	public static MessageFunction6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MessageFunction6Code[] values() {
+		MessageFunction6Code[] values = new MessageFunction6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MessageFunction6Code> {
+		@Override
+		public MessageFunction6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MessageFunction6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

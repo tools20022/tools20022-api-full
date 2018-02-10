@@ -30,6 +30,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -79,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardPaymentTransactionDetails6", propOrder = {"currency", "totalAmount"})
 public class CardPaymentTransactionDetails6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ccy", required = true)
 	protected CurrencyCode currency;
 	/**
-	 * Currency associated with the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +130,7 @@ public class CardPaymentTransactionDetails6 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
-			componentContext_lazy = () -> CardPaymentTransactionDetails6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails6.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,10 +142,11 @@ public class CardPaymentTransactionDetails6 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlAmt", required = true)
 	protected ImpliedCurrencyAndAmount totalAmount;
 	/**
-	 * Total amount of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -185,7 +188,7 @@ public class CardPaymentTransactionDetails6 {
 	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
-			componentContext_lazy = () -> CardPaymentTransactionDetails6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails6.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,9 +204,9 @@ public class CardPaymentTransactionDetails6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardPaymentTransactionDetails6.mmCurrency, CardPaymentTransactionDetails6.mmTotalAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails6.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails6.mmTotalAmount);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -220,21 +223,21 @@ public class CardPaymentTransactionDetails6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ccy", required = true)
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
 
-	public void setCurrency(CurrencyCode currency) {
-		this.currency = currency;
+	public CardPaymentTransactionDetails6 setCurrency(CurrencyCode currency) {
+		this.currency = Objects.requireNonNull(currency);
+		return this;
 	}
 
-	@XmlElement(name = "TtlAmt", required = true)
 	public ImpliedCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
 
-	public void setTotalAmount(ImpliedCurrencyAndAmount totalAmount) {
-		this.totalAmount = totalAmount;
+	public CardPaymentTransactionDetails6 setTotalAmount(ImpliedCurrencyAndAmount totalAmount) {
+		this.totalAmount = Objects.requireNonNull(totalAmount);
+		return this;
 	}
 }

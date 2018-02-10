@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DataTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of data.
@@ -31,11 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DataTypeCode#mmTradingData
- * DataTypeCode.mmTradingData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DataTypeCode#mmExerciseData
- * DataTypeCode.mmExerciseData}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DataTypeCode#TradingData
+ * DataTypeCode.TradingData}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DataTypeCode#ExerciseData
+ * DataTypeCode.ExerciseData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,7 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of data."</li>
  * </ul>
  */
-public class DataTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DataTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,12 +88,12 @@ public class DataTypeCode {
 	 * definition} = "Specified type of  data is trading data."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradingData = new MMCode() {
+	public static final DataTypeCode TradingData = new DataTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingData";
 			definition = "Specified type of  data is trading data.";
-			owner_lazy = () -> DataTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataTypeCode.mmObject();
 			codeName = "TRDA";
 		}
 	};
@@ -112,27 +117,57 @@ public class DataTypeCode {
 	 * definition} = "Specified type of  data is exercise data."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExerciseData = new MMCode() {
+	public static final DataTypeCode ExerciseData = new DataTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExerciseData";
 			definition = "Specified type of  data is exercise data.";
-			owner_lazy = () -> DataTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataTypeCode.mmObject();
 			codeName = "EXDA";
 		}
 	};
+	final static private LinkedHashMap<String, DataTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DataTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DataTypeCode";
 				definition = "Specifies the type of data.";
-				code_lazy = () -> Arrays.asList(DataTypeCode.mmTradingData, DataTypeCode.mmExerciseData);
 				derivation_lazy = () -> Arrays.asList(DataType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataTypeCode.TradingData, com.tools20022.repository.codeset.DataTypeCode.ExerciseData);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(TradingData.getCodeName().get(), TradingData);
+		codesByName.put(ExerciseData.getCodeName().get(), ExerciseData);
+	}
+
+	public static DataTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DataTypeCode[] values() {
+		DataTypeCode[] values = new DataTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DataTypeCode> {
+		@Override
+		public DataTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DataTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -32,9 +32,8 @@ import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -106,8 +105,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -129,17 +128,17 @@ import javax.xml.bind.annotation.XmlType;
  * AccountStatement3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountStatement4", propOrder = {"identification", "statementPagination", "electronicSequenceNumber", "legalSequenceNumber", "creationDateTime", "fromToDate", "copyDuplicateIndicator", "reportingSource", "account",
 		"relatedAccount", "interest", "balance", "transactionsSummary", "entry", "additionalStatementInformation"})
 public class AccountStatement4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Unique identification, as assigned by the account servicer, to
-	 * unambiguously identify the account statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,7 +175,7 @@ public class AccountStatement4 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountStatement4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,13 +187,11 @@ public class AccountStatement4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtPgntn")
 	protected Pagination statementPagination;
 	/**
-	 * Provides details on the page number of the statement.<br>
-	 * <br>
-	 * Usage: The pagination of the statement is only allowed when agreed
-	 * between the parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -231,7 +228,7 @@ public class AccountStatement4 {
 	 */
 	public static final MMMessageAttribute mmStatementPagination = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountStatement4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "StmtPgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,12 +240,11 @@ public class AccountStatement4 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
 		}
 	};
+	@XmlElement(name = "ElctrncSeqNb")
 	protected Number electronicSequenceNumber;
 	/**
-	 * Sequential number of the statement, as assigned by the account servicer.
-	 * Usage: The sequential number is increased incrementally for each
-	 * statement sent electronically.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -285,7 +281,7 @@ public class AccountStatement4 {
 	 */
 	public static final MMMessageAttribute mmElectronicSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountStatement4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncSeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -297,18 +293,11 @@ public class AccountStatement4 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "LglSeqNb")
 	protected Number legalSequenceNumber;
 	/**
-	 * Legal sequential number of the statement, as assigned by the account
-	 * servicer. It is increased incrementally for each statement sent.
 	 * 
-	 * Usage: Where a paper statement is a legal requirement, it may have a
-	 * number different from the electronic sequential number. Paper statements
-	 * could for instance only be sent if movement on the account has taken
-	 * place, whereas electronic statements could be sent at the end of each
-	 * reporting period, regardless of whether movements have taken place or
-	 * not.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -345,7 +334,7 @@ public class AccountStatement4 {
 	 */
 	public static final MMMessageAttribute mmLegalSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountStatement4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "LglSeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -357,10 +346,11 @@ public class AccountStatement4 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm", required = true)
 	protected ISODateTime creationDateTime;
 	/**
-	 * Date and time at which the message was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -395,7 +385,7 @@ public class AccountStatement4 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountStatement4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -407,11 +397,11 @@ public class AccountStatement4 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "FrToDt")
 	protected DateTimePeriodDetails fromToDate;
 	/**
-	 * Range of time between a start date and an end date for which the account
-	 * statement is issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -447,7 +437,7 @@ public class AccountStatement4 {
 	 */
 	public static final MMMessageAssociationEnd mmFromToDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountStatement4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "FrToDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -460,11 +450,11 @@ public class AccountStatement4 {
 			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails.mmObject();
 		}
 	};
+	@XmlElement(name = "CpyDplctInd")
 	protected CopyDuplicate1Code copyDuplicateIndicator;
 	/**
-	 * Indicates whether the document is a copy, a duplicate, or a duplicate of
-	 * a copy.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -502,7 +492,7 @@ public class AccountStatement4 {
 	 */
 	public static final MMMessageAttribute mmCopyDuplicateIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountStatement4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "CpyDplctInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -514,10 +504,11 @@ public class AccountStatement4 {
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RptgSrc")
 	protected ReportingSource1Choice reportingSource;
 	/**
-	 * Specifies the application used to generate the reporting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -553,7 +544,7 @@ public class AccountStatement4 {
 	 */
 	public static final MMMessageAssociationEnd mmReportingSource = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountStatement4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "RptgSrc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -566,11 +557,11 @@ public class AccountStatement4 {
 			type_lazy = () -> ReportingSource1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Acct", required = true)
 	protected CashAccount25 account;
 	/**
-	 * Unambiguous identification of the account to which credit and debit
-	 * entries are made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -612,7 +603,7 @@ public class AccountStatement4 {
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCashAccount;
-			componentContext_lazy = () -> AccountStatement4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -625,11 +616,11 @@ public class AccountStatement4 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount25.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdAcct")
 	protected CashAccount24 relatedAccount;
 	/**
-	 * Identifies the parent account of the account for which the statement has
-	 * been issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -670,7 +661,7 @@ public class AccountStatement4 {
 	public static final MMMessageAssociationEnd mmRelatedAccount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
-			componentContext_lazy = () -> AccountStatement4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "RltdAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -683,11 +674,11 @@ public class AccountStatement4 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "Intrst")
 	protected List<com.tools20022.repository.msg.AccountInterest2> interest;
 	/**
-	 * Provides general interest information that applies to the account at a
-	 * particular moment in time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -729,7 +720,7 @@ public class AccountStatement4 {
 	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
-			componentContext_lazy = () -> AccountStatement4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "Intrst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -741,12 +732,11 @@ public class AccountStatement4 {
 			type_lazy = () -> com.tools20022.repository.msg.AccountInterest2.mmObject();
 		}
 	};
+	@XmlElement(name = "Bal", required = true)
 	protected List<com.tools20022.repository.msg.CashBalance3> balance;
 	/**
-	 * Set of elements used to define the balance as a numerical representation
-	 * of the net increases and decreases in an account at a specific point in
-	 * time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -787,7 +777,7 @@ public class AccountStatement4 {
 	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashBalance.mmObject();
-			componentContext_lazy = () -> AccountStatement4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -799,10 +789,11 @@ public class AccountStatement4 {
 			type_lazy = () -> com.tools20022.repository.msg.CashBalance3.mmObject();
 		}
 	};
+	@XmlElement(name = "TxsSummry")
 	protected TotalTransactions4 transactionsSummary;
 	/**
-	 * Provides summary information on entries.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -836,7 +827,7 @@ public class AccountStatement4 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionsSummary = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountStatement4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "TxsSummry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -849,12 +840,11 @@ public class AccountStatement4 {
 			type_lazy = () -> com.tools20022.repository.msg.TotalTransactions4.mmObject();
 		}
 	};
+	@XmlElement(name = "Ntry")
 	protected List<com.tools20022.repository.msg.ReportEntry4> entry;
 	/**
-	 * Set of elements used to specify an entry in the statement. Usage: At
-	 * least one reference must be provided to identify the entry and its
-	 * underlying transaction(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -895,7 +885,7 @@ public class AccountStatement4 {
 	public static final MMMessageAssociationEnd mmEntry = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCashBalanceEntry;
-			componentContext_lazy = () -> AccountStatement4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "Ntry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -907,10 +897,11 @@ public class AccountStatement4 {
 			type_lazy = () -> com.tools20022.repository.msg.ReportEntry4.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlStmtInf")
 	protected Max500Text additionalStatementInformation;
 	/**
-	 * Further details of the account statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -945,7 +936,7 @@ public class AccountStatement4 {
 	 */
 	public static final MMMessageAttribute mmAdditionalStatementInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountStatement4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatement4.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlStmtInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -961,12 +952,15 @@ public class AccountStatement4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountStatement4.mmIdentification, AccountStatement4.mmStatementPagination, AccountStatement4.mmElectronicSequenceNumber, AccountStatement4.mmLegalSequenceNumber,
-						AccountStatement4.mmCreationDateTime, AccountStatement4.mmFromToDate, AccountStatement4.mmCopyDuplicateIndicator, AccountStatement4.mmReportingSource, AccountStatement4.mmAccount, AccountStatement4.mmRelatedAccount,
-						AccountStatement4.mmInterest, AccountStatement4.mmBalance, AccountStatement4.mmTransactionsSummary, AccountStatement4.mmEntry, AccountStatement4.mmAdditionalStatementInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatement4.mmIdentification, com.tools20022.repository.msg.AccountStatement4.mmStatementPagination,
+						com.tools20022.repository.msg.AccountStatement4.mmElectronicSequenceNumber, com.tools20022.repository.msg.AccountStatement4.mmLegalSequenceNumber, com.tools20022.repository.msg.AccountStatement4.mmCreationDateTime,
+						com.tools20022.repository.msg.AccountStatement4.mmFromToDate, com.tools20022.repository.msg.AccountStatement4.mmCopyDuplicateIndicator, com.tools20022.repository.msg.AccountStatement4.mmReportingSource,
+						com.tools20022.repository.msg.AccountStatement4.mmAccount, com.tools20022.repository.msg.AccountStatement4.mmRelatedAccount, com.tools20022.repository.msg.AccountStatement4.mmInterest,
+						com.tools20022.repository.msg.AccountStatement4.mmBalance, com.tools20022.repository.msg.AccountStatement4.mmTransactionsSummary, com.tools20022.repository.msg.AccountStatement4.mmEntry,
+						com.tools20022.repository.msg.AccountStatement4.mmAdditionalStatementInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(BankToCustomerStatementV04.mmStatement);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountStatement4";
 				definition = "Provides further details of the account statement.";
@@ -977,138 +971,138 @@ public class AccountStatement4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public AccountStatement4 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "StmtPgntn")
-	public Pagination getStatementPagination() {
-		return statementPagination;
+	public Optional<Pagination> getStatementPagination() {
+		return statementPagination == null ? Optional.empty() : Optional.of(statementPagination);
 	}
 
-	public void setStatementPagination(com.tools20022.repository.msg.Pagination statementPagination) {
+	public AccountStatement4 setStatementPagination(com.tools20022.repository.msg.Pagination statementPagination) {
 		this.statementPagination = statementPagination;
+		return this;
 	}
 
-	@XmlElement(name = "ElctrncSeqNb")
-	public Number getElectronicSequenceNumber() {
-		return electronicSequenceNumber;
+	public Optional<Number> getElectronicSequenceNumber() {
+		return electronicSequenceNumber == null ? Optional.empty() : Optional.of(electronicSequenceNumber);
 	}
 
-	public void setElectronicSequenceNumber(Number electronicSequenceNumber) {
+	public AccountStatement4 setElectronicSequenceNumber(Number electronicSequenceNumber) {
 		this.electronicSequenceNumber = electronicSequenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "LglSeqNb")
-	public Number getLegalSequenceNumber() {
-		return legalSequenceNumber;
+	public Optional<Number> getLegalSequenceNumber() {
+		return legalSequenceNumber == null ? Optional.empty() : Optional.of(legalSequenceNumber);
 	}
 
-	public void setLegalSequenceNumber(Number legalSequenceNumber) {
+	public AccountStatement4 setLegalSequenceNumber(Number legalSequenceNumber) {
 		this.legalSequenceNumber = legalSequenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
-		this.creationDateTime = creationDateTime;
+	public AccountStatement4 setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = Objects.requireNonNull(creationDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "FrToDt")
-	public DateTimePeriodDetails getFromToDate() {
-		return fromToDate;
+	public Optional<DateTimePeriodDetails> getFromToDate() {
+		return fromToDate == null ? Optional.empty() : Optional.of(fromToDate);
 	}
 
-	public void setFromToDate(com.tools20022.repository.msg.DateTimePeriodDetails fromToDate) {
+	public AccountStatement4 setFromToDate(com.tools20022.repository.msg.DateTimePeriodDetails fromToDate) {
 		this.fromToDate = fromToDate;
+		return this;
 	}
 
-	@XmlElement(name = "CpyDplctInd")
-	public CopyDuplicate1Code getCopyDuplicateIndicator() {
-		return copyDuplicateIndicator;
+	public Optional<CopyDuplicate1Code> getCopyDuplicateIndicator() {
+		return copyDuplicateIndicator == null ? Optional.empty() : Optional.of(copyDuplicateIndicator);
 	}
 
-	public void setCopyDuplicateIndicator(CopyDuplicate1Code copyDuplicateIndicator) {
+	public AccountStatement4 setCopyDuplicateIndicator(CopyDuplicate1Code copyDuplicateIndicator) {
 		this.copyDuplicateIndicator = copyDuplicateIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "RptgSrc")
-	public ReportingSource1Choice getReportingSource() {
-		return reportingSource;
+	public Optional<ReportingSource1Choice> getReportingSource() {
+		return reportingSource == null ? Optional.empty() : Optional.of(reportingSource);
 	}
 
-	public void setReportingSource(ReportingSource1Choice reportingSource) {
+	public AccountStatement4 setReportingSource(ReportingSource1Choice reportingSource) {
 		this.reportingSource = reportingSource;
+		return this;
 	}
 
-	@XmlElement(name = "Acct", required = true)
 	public CashAccount25 getAccount() {
 		return account;
 	}
 
-	public void setAccount(com.tools20022.repository.msg.CashAccount25 account) {
-		this.account = account;
+	public AccountStatement4 setAccount(com.tools20022.repository.msg.CashAccount25 account) {
+		this.account = Objects.requireNonNull(account);
+		return this;
 	}
 
-	@XmlElement(name = "RltdAcct")
-	public CashAccount24 getRelatedAccount() {
-		return relatedAccount;
+	public Optional<CashAccount24> getRelatedAccount() {
+		return relatedAccount == null ? Optional.empty() : Optional.of(relatedAccount);
 	}
 
-	public void setRelatedAccount(com.tools20022.repository.msg.CashAccount24 relatedAccount) {
+	public AccountStatement4 setRelatedAccount(com.tools20022.repository.msg.CashAccount24 relatedAccount) {
 		this.relatedAccount = relatedAccount;
+		return this;
 	}
 
-	@XmlElement(name = "Intrst")
 	public List<AccountInterest2> getInterest() {
-		return interest;
+		return interest == null ? interest = new ArrayList<>() : interest;
 	}
 
-	public void setInterest(List<com.tools20022.repository.msg.AccountInterest2> interest) {
-		this.interest = interest;
+	public AccountStatement4 setInterest(List<com.tools20022.repository.msg.AccountInterest2> interest) {
+		this.interest = Objects.requireNonNull(interest);
+		return this;
 	}
 
-	@XmlElement(name = "Bal", required = true)
 	public List<CashBalance3> getBalance() {
-		return balance;
+		return balance == null ? balance = new ArrayList<>() : balance;
 	}
 
-	public void setBalance(List<com.tools20022.repository.msg.CashBalance3> balance) {
-		this.balance = balance;
+	public AccountStatement4 setBalance(List<com.tools20022.repository.msg.CashBalance3> balance) {
+		this.balance = Objects.requireNonNull(balance);
+		return this;
 	}
 
-	@XmlElement(name = "TxsSummry")
-	public TotalTransactions4 getTransactionsSummary() {
-		return transactionsSummary;
+	public Optional<TotalTransactions4> getTransactionsSummary() {
+		return transactionsSummary == null ? Optional.empty() : Optional.of(transactionsSummary);
 	}
 
-	public void setTransactionsSummary(com.tools20022.repository.msg.TotalTransactions4 transactionsSummary) {
+	public AccountStatement4 setTransactionsSummary(com.tools20022.repository.msg.TotalTransactions4 transactionsSummary) {
 		this.transactionsSummary = transactionsSummary;
+		return this;
 	}
 
-	@XmlElement(name = "Ntry")
 	public List<ReportEntry4> getEntry() {
-		return entry;
+		return entry == null ? entry = new ArrayList<>() : entry;
 	}
 
-	public void setEntry(List<com.tools20022.repository.msg.ReportEntry4> entry) {
-		this.entry = entry;
+	public AccountStatement4 setEntry(List<com.tools20022.repository.msg.ReportEntry4> entry) {
+		this.entry = Objects.requireNonNull(entry);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlStmtInf")
-	public Max500Text getAdditionalStatementInformation() {
-		return additionalStatementInformation;
+	public Optional<Max500Text> getAdditionalStatementInformation() {
+		return additionalStatementInformation == null ? Optional.empty() : Optional.of(additionalStatementInformation);
 	}
 
-	public void setAdditionalStatementInformation(Max500Text additionalStatementInformation) {
+	public AccountStatement4 setAdditionalStatementInformation(Max500Text additionalStatementInformation) {
 		this.additionalStatementInformation = additionalStatementInformation;
+		return this;
 	}
 }

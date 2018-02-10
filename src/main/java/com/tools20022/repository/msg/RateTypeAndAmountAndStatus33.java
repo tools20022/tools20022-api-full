@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the value expressed as a rate and an amount."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RateTypeAndAmountAndStatus33", propOrder = {"rateType", "amount", "rateStatus"})
 public class RateTypeAndAmountAndStatus33 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RateTp", required = true)
 	protected RateType47Choice rateType;
 	/**
-	 * Value expressed as a rate type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,7 +114,7 @@ public class RateTypeAndAmountAndStatus33 {
 	public static final MMMessageAssociationEnd mmRateType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
-			componentContext_lazy = () -> RateTypeAndAmountAndStatus33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateTypeAndAmountAndStatus33.mmObject();
 			isDerived = false;
 			xmlTag = "RateTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +126,11 @@ public class RateTypeAndAmountAndStatus33 {
 			type_lazy = () -> RateType47Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected RestrictedFINActiveCurrencyAnd13DecimalAmount amount;
 	/**
-	 * Value expressed as an amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +164,7 @@ public class RateTypeAndAmountAndStatus33 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
-			componentContext_lazy = () -> RateTypeAndAmountAndStatus33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateTypeAndAmountAndStatus33.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +175,11 @@ public class RateTypeAndAmountAndStatus33 {
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RateSts")
 	protected RateStatus4Choice rateStatus;
 	/**
-	 * Value expressed as a rate status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -206,7 +211,7 @@ public class RateTypeAndAmountAndStatus33 {
 	public static final MMMessageAssociationEnd mmRateStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmRateStatus;
-			componentContext_lazy = () -> RateTypeAndAmountAndStatus33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateTypeAndAmountAndStatus33.mmObject();
 			isDerived = false;
 			xmlTag = "RateSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,9 +227,10 @@ public class RateTypeAndAmountAndStatus33 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RateTypeAndAmountAndStatus33.mmRateType, RateTypeAndAmountAndStatus33.mmAmount, RateTypeAndAmountAndStatus33.mmRateStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateTypeAndAmountAndStatus33.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus33.mmAmount,
+						com.tools20022.repository.msg.RateTypeAndAmountAndStatus33.mmRateStatus);
 				trace_lazy = () -> Interest.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateTypeAndAmountAndStatus33";
 				definition = "Specifies the value expressed as a rate and an amount.";
@@ -233,30 +239,30 @@ public class RateTypeAndAmountAndStatus33 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RateTp", required = true)
 	public RateType47Choice getRateType() {
 		return rateType;
 	}
 
-	public void setRateType(RateType47Choice rateType) {
-		this.rateType = rateType;
+	public RateTypeAndAmountAndStatus33 setRateType(RateType47Choice rateType) {
+		this.rateType = Objects.requireNonNull(rateType);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public RestrictedFINActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(RestrictedFINActiveCurrencyAnd13DecimalAmount amount) {
-		this.amount = amount;
+	public RateTypeAndAmountAndStatus33 setAmount(RestrictedFINActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "RateSts")
-	public RateStatus4Choice getRateStatus() {
-		return rateStatus;
+	public Optional<RateStatus4Choice> getRateStatus() {
+		return rateStatus == null ? Optional.empty() : Optional.of(rateStatus);
 	}
 
-	public void setRateStatus(RateStatus4Choice rateStatus) {
+	public RateTypeAndAmountAndStatus33 setRateStatus(RateStatus4Choice rateStatus) {
 		this.rateStatus = rateStatus;
+		return this;
 	}
 }

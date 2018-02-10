@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.FinancialInstrument6;
 import com.tools20022.repository.msg.InvestmentAccount13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,18 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Choice between the investment account and the financial instrument."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvestmentAccountOrFinancialInstrument1Choice", propOrder = {"investmentAccount", "financialInstrument"})
 public class InvestmentAccountOrFinancialInstrument1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InvstmtAcct", required = true)
 	protected InvestmentAccount13 investmentAccount;
 	/**
-	 * Account between an investor(s) and a fund manager or a fund. The account
-	 * can contain holdings in any investment fund or investment fund class
-	 * managed (or distributed) by the fund manager, within the same fund
-	 * family.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -113,7 +112,7 @@ public class InvestmentAccountOrFinancialInstrument1Choice {
 	public static final MMMessageAssociationEnd mmInvestmentAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
-			componentContext_lazy = () -> InvestmentAccountOrFinancialInstrument1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InvestmentAccountOrFinancialInstrument1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,12 +124,11 @@ public class InvestmentAccountOrFinancialInstrument1Choice {
 			type_lazy = () -> InvestmentAccount13.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrm", required = true)
 	protected FinancialInstrument6 financialInstrument;
 	/**
-	 * Instrument that has intrinsic monetary value, and may transfer value, the
-	 * price of which may be obtained from a financial market, eg, a bond or a
-	 * cheque.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -164,7 +162,7 @@ public class InvestmentAccountOrFinancialInstrument1Choice {
 	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
-			componentContext_lazy = () -> InvestmentAccountOrFinancialInstrument1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InvestmentAccountOrFinancialInstrument1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,9 +178,10 @@ public class InvestmentAccountOrFinancialInstrument1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InvestmentAccountOrFinancialInstrument1Choice.mmInvestmentAccount, InvestmentAccountOrFinancialInstrument1Choice.mmFinancialInstrument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestmentAccountOrFinancialInstrument1Choice.mmInvestmentAccount,
+						com.tools20022.repository.choice.InvestmentAccountOrFinancialInstrument1Choice.mmFinancialInstrument);
 				trace_lazy = () -> InvestmentFundTransaction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentAccountOrFinancialInstrument1Choice";
 				definition = "Choice between the investment account and the financial instrument.";
@@ -191,21 +190,21 @@ public class InvestmentAccountOrFinancialInstrument1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InvstmtAcct", required = true)
 	public InvestmentAccount13 getInvestmentAccount() {
 		return investmentAccount;
 	}
 
-	public void setInvestmentAccount(InvestmentAccount13 investmentAccount) {
-		this.investmentAccount = investmentAccount;
+	public InvestmentAccountOrFinancialInstrument1Choice setInvestmentAccount(InvestmentAccount13 investmentAccount) {
+		this.investmentAccount = Objects.requireNonNull(investmentAccount);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrm", required = true)
 	public FinancialInstrument6 getFinancialInstrument() {
 		return financialInstrument;
 	}
 
-	public void setFinancialInstrument(FinancialInstrument6 financialInstrument) {
-		this.financialInstrument = financialInstrument;
+	public InvestmentAccountOrFinancialInstrument1Choice setFinancialInstrument(FinancialInstrument6 financialInstrument) {
+		this.financialInstrument = Objects.requireNonNull(financialInstrument);
+		return this;
 	}
 }

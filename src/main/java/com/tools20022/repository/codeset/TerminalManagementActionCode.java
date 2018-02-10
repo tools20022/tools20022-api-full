@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.TerminalManagementActionCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Types of terminal management action to be performed by a point of
@@ -33,32 +38,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#mmActivate
- * TerminalManagementActionCode.mmActivate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#Activate
+ * TerminalManagementActionCode.Activate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#mmDeactivate
- * TerminalManagementActionCode.mmDeactivate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#Deactivate
+ * TerminalManagementActionCode.Deactivate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#mmDelete
- * TerminalManagementActionCode.mmDelete}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#Delete
+ * TerminalManagementActionCode.Delete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#mmDownload
- * TerminalManagementActionCode.mmDownload}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#Download
+ * TerminalManagementActionCode.Download}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#mmInstall
- * TerminalManagementActionCode.mmInstall}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#Install
+ * TerminalManagementActionCode.Install}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#mmRestart
- * TerminalManagementActionCode.mmRestart}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#Restart
+ * TerminalManagementActionCode.Restart}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#mmUpload
- * TerminalManagementActionCode.mmUpload}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#Upload
+ * TerminalManagementActionCode.Upload}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#mmUpdate
- * TerminalManagementActionCode.mmUpdate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#Update
+ * TerminalManagementActionCode.Update}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#mmCreate
- * TerminalManagementActionCode.mmCreate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#Create
+ * TerminalManagementActionCode.Create}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -78,8 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -98,7 +103,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TerminalManagementActionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TerminalManagementActionCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -122,12 +128,12 @@ public class TerminalManagementActionCode {
 	 * definition} = "Data set must be activated."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmActivate = new MMCode() {
+	public static final TerminalManagementActionCode Activate = new TerminalManagementActionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Activate";
 			definition = "Data set must be activated.";
-			owner_lazy = () -> TerminalManagementActionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionCode.mmObject();
 			codeName = "ACTV";
 		}
 	};
@@ -152,12 +158,12 @@ public class TerminalManagementActionCode {
 	 * definition} = "Data set must be deactivated."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeactivate = new MMCode() {
+	public static final TerminalManagementActionCode Deactivate = new TerminalManagementActionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Deactivate";
 			definition = "Data set must be deactivated.";
-			owner_lazy = () -> TerminalManagementActionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionCode.mmObject();
 			codeName = "DCTV";
 		}
 	};
@@ -182,12 +188,12 @@ public class TerminalManagementActionCode {
 	 * definition} = "Data set must be deleted."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDelete = new MMCode() {
+	public static final TerminalManagementActionCode Delete = new TerminalManagementActionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Delete";
 			definition = "Data set must be deleted.";
-			owner_lazy = () -> TerminalManagementActionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionCode.mmObject();
 			codeName = "DELT";
 		}
 	};
@@ -212,12 +218,12 @@ public class TerminalManagementActionCode {
 	 * definition} = "Data set must be downloaded."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDownload = new MMCode() {
+	public static final TerminalManagementActionCode Download = new TerminalManagementActionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Download";
 			definition = "Data set must be downloaded.";
-			owner_lazy = () -> TerminalManagementActionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionCode.mmObject();
 			codeName = "DWNL";
 		}
 	};
@@ -242,12 +248,12 @@ public class TerminalManagementActionCode {
 	 * definition} = "Data set must be installed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstall = new MMCode() {
+	public static final TerminalManagementActionCode Install = new TerminalManagementActionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Install";
 			definition = "Data set must be installed.";
-			owner_lazy = () -> TerminalManagementActionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionCode.mmObject();
 			codeName = "INST";
 		}
 	};
@@ -272,12 +278,12 @@ public class TerminalManagementActionCode {
 	 * definition} = "Point of interaction must be restarted."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRestart = new MMCode() {
+	public static final TerminalManagementActionCode Restart = new TerminalManagementActionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Restart";
 			definition = "Point of interaction must be restarted.";
-			owner_lazy = () -> TerminalManagementActionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionCode.mmObject();
 			codeName = "RSTR";
 		}
 	};
@@ -302,12 +308,12 @@ public class TerminalManagementActionCode {
 	 * definition} = "Data set must be uploaded."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUpload = new MMCode() {
+	public static final TerminalManagementActionCode Upload = new TerminalManagementActionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Upload";
 			definition = "Data set must be uploaded.";
-			owner_lazy = () -> TerminalManagementActionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionCode.mmObject();
 			codeName = "UPLD";
 		}
 	};
@@ -332,12 +338,12 @@ public class TerminalManagementActionCode {
 	 * definition} = "Update, or replacement of the data set."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUpdate = new MMCode() {
+	public static final TerminalManagementActionCode Update = new TerminalManagementActionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Update";
 			definition = "Update, or replacement of the data set.";
-			owner_lazy = () -> TerminalManagementActionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionCode.mmObject();
 			codeName = "UPDT";
 		}
 	};
@@ -362,29 +368,68 @@ public class TerminalManagementActionCode {
 	 * definition} = "Creation or addition of a new data set."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreate = new MMCode() {
+	public static final TerminalManagementActionCode Create = new TerminalManagementActionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Create";
 			definition = "Creation or addition of a new data set.";
-			owner_lazy = () -> TerminalManagementActionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionCode.mmObject();
 			codeName = "CREA";
 		}
 	};
+	final static private LinkedHashMap<String, TerminalManagementActionCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TerminalManagementActionCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACTV");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementActionCode";
 				definition = "Types of terminal management action to be performed by a point of interaction.";
-				code_lazy = () -> Arrays.asList(TerminalManagementActionCode.mmActivate, TerminalManagementActionCode.mmDeactivate, TerminalManagementActionCode.mmDelete, TerminalManagementActionCode.mmDownload,
-						TerminalManagementActionCode.mmInstall, TerminalManagementActionCode.mmRestart, TerminalManagementActionCode.mmUpload, TerminalManagementActionCode.mmUpdate, TerminalManagementActionCode.mmCreate);
 				derivation_lazy = () -> Arrays.asList(TerminalManagementAction1Code.mmObject(), TerminalManagementAction3Code.mmObject(), TerminalManagementAction2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementActionCode.Activate, com.tools20022.repository.codeset.TerminalManagementActionCode.Deactivate,
+						com.tools20022.repository.codeset.TerminalManagementActionCode.Delete, com.tools20022.repository.codeset.TerminalManagementActionCode.Download, com.tools20022.repository.codeset.TerminalManagementActionCode.Install,
+						com.tools20022.repository.codeset.TerminalManagementActionCode.Restart, com.tools20022.repository.codeset.TerminalManagementActionCode.Upload, com.tools20022.repository.codeset.TerminalManagementActionCode.Update,
+						com.tools20022.repository.codeset.TerminalManagementActionCode.Create);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Activate.getCodeName().get(), Activate);
+		codesByName.put(Deactivate.getCodeName().get(), Deactivate);
+		codesByName.put(Delete.getCodeName().get(), Delete);
+		codesByName.put(Download.getCodeName().get(), Download);
+		codesByName.put(Install.getCodeName().get(), Install);
+		codesByName.put(Restart.getCodeName().get(), Restart);
+		codesByName.put(Upload.getCodeName().get(), Upload);
+		codesByName.put(Update.getCodeName().get(), Update);
+		codesByName.put(Create.getCodeName().get(), Create);
+	}
+
+	public static TerminalManagementActionCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TerminalManagementActionCode[] values() {
+		TerminalManagementActionCode[] values = new TerminalManagementActionCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TerminalManagementActionCode> {
+		@Override
+		public TerminalManagementActionCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TerminalManagementActionCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

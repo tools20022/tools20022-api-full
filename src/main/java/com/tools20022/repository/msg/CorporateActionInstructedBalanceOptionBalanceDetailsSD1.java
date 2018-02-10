@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionInstructedBalanceOptionBalanceDetailsSD1", propOrder = {"placeAndName", "optionUncoveredProtectBalance", "optionDailyInstructedBalance", "optionOversubscriptionQuantity", "optionUnacceptedBalance"})
 public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +116,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +127,11 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnUcvrdPrtctBal")
 	protected SignedQuantityFormat9 optionUncoveredProtectBalance;
 	/**
-	 * Balance of uncovered protect transactions at an option level.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -154,7 +158,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmOptionUncoveredProtectBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnUcvrdPrtctBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,11 +170,11 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnDalyInstdBal")
 	protected SignedQuantityFormat9 optionDailyInstructedBalance;
 	/**
-	 * Daily total of instructions for a given option. Balance will include only
-	 * made instructions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -198,7 +202,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmOptionDailyInstructedBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnDalyInstdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,12 +214,11 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnOvrsbcptQty")
 	protected SignedQuantityFormat9 optionOversubscriptionQuantity;
 	/**
-	 * For rights subscription events, total number of oversubscribed units.
-	 * When there is an oversubscription priviledge, this quantity will be
-	 * included within the Instructed quantityin the core message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -243,7 +246,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmOptionOversubscriptionQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnOvrsbcptQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -255,11 +258,11 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnUaccptdBal")
 	protected SignedQuantityFormat9 optionUnacceptedBalance;
 	/**
-	 * For election merger events, the balance that is being moved into another
-	 * option number for payment due to the proration of the original option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -287,7 +290,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmOptionUnacceptedBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnUaccptdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -303,10 +306,12 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmPlaceAndName, CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmOptionUncoveredProtectBalance,
-						CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmOptionDailyInstructedBalance, CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmOptionOversubscriptionQuantity,
-						CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmOptionUnacceptedBalance);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmPlaceAndName,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmOptionUncoveredProtectBalance,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmOptionDailyInstructedBalance,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmOptionOversubscriptionQuantity,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmOptionUnacceptedBalance);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionInstructedBalanceOptionBalanceDetailsSD1";
 				definition = "Provides additional information regarding corporate action instructed balance details at option level.";
@@ -315,48 +320,48 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionInstructedBalanceOptionBalanceDetailsSD1 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "OptnUcvrdPrtctBal")
-	public SignedQuantityFormat9 getOptionUncoveredProtectBalance() {
-		return optionUncoveredProtectBalance;
+	public Optional<SignedQuantityFormat9> getOptionUncoveredProtectBalance() {
+		return optionUncoveredProtectBalance == null ? Optional.empty() : Optional.of(optionUncoveredProtectBalance);
 	}
 
-	public void setOptionUncoveredProtectBalance(com.tools20022.repository.msg.SignedQuantityFormat9 optionUncoveredProtectBalance) {
+	public CorporateActionInstructedBalanceOptionBalanceDetailsSD1 setOptionUncoveredProtectBalance(com.tools20022.repository.msg.SignedQuantityFormat9 optionUncoveredProtectBalance) {
 		this.optionUncoveredProtectBalance = optionUncoveredProtectBalance;
+		return this;
 	}
 
-	@XmlElement(name = "OptnDalyInstdBal")
-	public SignedQuantityFormat9 getOptionDailyInstructedBalance() {
-		return optionDailyInstructedBalance;
+	public Optional<SignedQuantityFormat9> getOptionDailyInstructedBalance() {
+		return optionDailyInstructedBalance == null ? Optional.empty() : Optional.of(optionDailyInstructedBalance);
 	}
 
-	public void setOptionDailyInstructedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 optionDailyInstructedBalance) {
+	public CorporateActionInstructedBalanceOptionBalanceDetailsSD1 setOptionDailyInstructedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 optionDailyInstructedBalance) {
 		this.optionDailyInstructedBalance = optionDailyInstructedBalance;
+		return this;
 	}
 
-	@XmlElement(name = "OptnOvrsbcptQty")
-	public SignedQuantityFormat9 getOptionOversubscriptionQuantity() {
-		return optionOversubscriptionQuantity;
+	public Optional<SignedQuantityFormat9> getOptionOversubscriptionQuantity() {
+		return optionOversubscriptionQuantity == null ? Optional.empty() : Optional.of(optionOversubscriptionQuantity);
 	}
 
-	public void setOptionOversubscriptionQuantity(com.tools20022.repository.msg.SignedQuantityFormat9 optionOversubscriptionQuantity) {
+	public CorporateActionInstructedBalanceOptionBalanceDetailsSD1 setOptionOversubscriptionQuantity(com.tools20022.repository.msg.SignedQuantityFormat9 optionOversubscriptionQuantity) {
 		this.optionOversubscriptionQuantity = optionOversubscriptionQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "OptnUaccptdBal")
-	public SignedQuantityFormat9 getOptionUnacceptedBalance() {
-		return optionUnacceptedBalance;
+	public Optional<SignedQuantityFormat9> getOptionUnacceptedBalance() {
+		return optionUnacceptedBalance == null ? Optional.empty() : Optional.of(optionUnacceptedBalance);
 	}
 
-	public void setOptionUnacceptedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 optionUnacceptedBalance) {
+	public CorporateActionInstructedBalanceOptionBalanceDetailsSD1 setOptionUnacceptedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 optionUnacceptedBalance) {
 		this.optionUnacceptedBalance = optionUnacceptedBalance;
+		return this;
 	}
 }

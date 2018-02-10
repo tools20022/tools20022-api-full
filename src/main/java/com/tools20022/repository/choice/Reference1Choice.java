@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,16 +79,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Reference1Choice", propOrder = {"marginCallRequestIdentification", "marginCallResponseIdentification", "collateralProposalIdentification", "collateralProposalResponseIdentification", "disputeNotificationIdentification",
 		"collateralSubstitutionRequestIdentification"})
 public class Reference1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MrgnCallReqId", required = true)
 	protected Max35Text marginCallRequestIdentification;
 	/**
-	 * Unique identifier of the margin call request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +116,7 @@ public class Reference1Choice {
 	 */
 	public static final MMMessageAttribute mmMarginCallRequestIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Reference1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnCallReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +127,11 @@ public class Reference1Choice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MrgnCallRspnId", required = true)
 	protected Max35Text marginCallResponseIdentification;
 	/**
-	 * Unique identifier of the margin call response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +158,7 @@ public class Reference1Choice {
 	 */
 	public static final MMMessageAttribute mmMarginCallResponseIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Reference1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnCallRspnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,10 +169,11 @@ public class Reference1Choice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CollPrpslId", required = true)
 	protected Max35Text collateralProposalIdentification;
 	/**
-	 * Unique identifier of the collateral proposal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,7 +200,7 @@ public class Reference1Choice {
 	 */
 	public static final MMMessageAttribute mmCollateralProposalIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Reference1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollPrpslId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,10 +211,11 @@ public class Reference1Choice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CollPrpslRspnId", required = true)
 	protected Max35Text collateralProposalResponseIdentification;
 	/**
-	 * Unique identifier of the collateral proposal response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -237,7 +242,7 @@ public class Reference1Choice {
 	 */
 	public static final MMMessageAttribute mmCollateralProposalResponseIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Reference1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollPrpslRspnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,10 +253,11 @@ public class Reference1Choice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DsptNtfctnId", required = true)
 	protected Max35Text disputeNotificationIdentification;
 	/**
-	 * Unique identifier of the dispute notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -278,7 +284,7 @@ public class Reference1Choice {
 	 */
 	public static final MMMessageAttribute mmDisputeNotificationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Reference1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DsptNtfctnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -289,10 +295,11 @@ public class Reference1Choice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CollSbstitnReqId", required = true)
 	protected Max35Text collateralSubstitutionRequestIdentification;
 	/**
-	 * Unique identifier of the collateral substitution request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -320,7 +327,7 @@ public class Reference1Choice {
 	 */
 	public static final MMMessageAttribute mmCollateralSubstitutionRequestIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Reference1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollSbstitnReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -335,9 +342,10 @@ public class Reference1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Reference1Choice.mmMarginCallRequestIdentification, Reference1Choice.mmMarginCallResponseIdentification, Reference1Choice.mmCollateralProposalIdentification,
-						Reference1Choice.mmCollateralProposalResponseIdentification, Reference1Choice.mmDisputeNotificationIdentification, Reference1Choice.mmCollateralSubstitutionRequestIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reference1Choice.mmMarginCallRequestIdentification, com.tools20022.repository.choice.Reference1Choice.mmMarginCallResponseIdentification,
+						com.tools20022.repository.choice.Reference1Choice.mmCollateralProposalIdentification, com.tools20022.repository.choice.Reference1Choice.mmCollateralProposalResponseIdentification,
+						com.tools20022.repository.choice.Reference1Choice.mmDisputeNotificationIdentification, com.tools20022.repository.choice.Reference1Choice.mmCollateralSubstitutionRequestIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference1Choice";
 				definition = "Choice between the identification of the MarginCallRequest message, the MarginCallResponse message, the CollateralProposal message, the CollateralProposalResponse message, the CollateralSubstitutionRequest message or the MarginCallDisputeNotification message.";
@@ -346,57 +354,57 @@ public class Reference1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MrgnCallReqId", required = true)
 	public Max35Text getMarginCallRequestIdentification() {
 		return marginCallRequestIdentification;
 	}
 
-	public void setMarginCallRequestIdentification(Max35Text marginCallRequestIdentification) {
-		this.marginCallRequestIdentification = marginCallRequestIdentification;
+	public Reference1Choice setMarginCallRequestIdentification(Max35Text marginCallRequestIdentification) {
+		this.marginCallRequestIdentification = Objects.requireNonNull(marginCallRequestIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "MrgnCallRspnId", required = true)
 	public Max35Text getMarginCallResponseIdentification() {
 		return marginCallResponseIdentification;
 	}
 
-	public void setMarginCallResponseIdentification(Max35Text marginCallResponseIdentification) {
-		this.marginCallResponseIdentification = marginCallResponseIdentification;
+	public Reference1Choice setMarginCallResponseIdentification(Max35Text marginCallResponseIdentification) {
+		this.marginCallResponseIdentification = Objects.requireNonNull(marginCallResponseIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CollPrpslId", required = true)
 	public Max35Text getCollateralProposalIdentification() {
 		return collateralProposalIdentification;
 	}
 
-	public void setCollateralProposalIdentification(Max35Text collateralProposalIdentification) {
-		this.collateralProposalIdentification = collateralProposalIdentification;
+	public Reference1Choice setCollateralProposalIdentification(Max35Text collateralProposalIdentification) {
+		this.collateralProposalIdentification = Objects.requireNonNull(collateralProposalIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CollPrpslRspnId", required = true)
 	public Max35Text getCollateralProposalResponseIdentification() {
 		return collateralProposalResponseIdentification;
 	}
 
-	public void setCollateralProposalResponseIdentification(Max35Text collateralProposalResponseIdentification) {
-		this.collateralProposalResponseIdentification = collateralProposalResponseIdentification;
+	public Reference1Choice setCollateralProposalResponseIdentification(Max35Text collateralProposalResponseIdentification) {
+		this.collateralProposalResponseIdentification = Objects.requireNonNull(collateralProposalResponseIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "DsptNtfctnId", required = true)
 	public Max35Text getDisputeNotificationIdentification() {
 		return disputeNotificationIdentification;
 	}
 
-	public void setDisputeNotificationIdentification(Max35Text disputeNotificationIdentification) {
-		this.disputeNotificationIdentification = disputeNotificationIdentification;
+	public Reference1Choice setDisputeNotificationIdentification(Max35Text disputeNotificationIdentification) {
+		this.disputeNotificationIdentification = Objects.requireNonNull(disputeNotificationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CollSbstitnReqId", required = true)
 	public Max35Text getCollateralSubstitutionRequestIdentification() {
 		return collateralSubstitutionRequestIdentification;
 	}
 
-	public void setCollateralSubstitutionRequestIdentification(Max35Text collateralSubstitutionRequestIdentification) {
-		this.collateralSubstitutionRequestIdentification = collateralSubstitutionRequestIdentification;
+	public Reference1Choice setCollateralSubstitutionRequestIdentification(Max35Text collateralSubstitutionRequestIdentification) {
+		this.collateralSubstitutionRequestIdentification = Objects.requireNonNull(collateralSubstitutionRequestIdentification);
+		return this;
 	}
 }

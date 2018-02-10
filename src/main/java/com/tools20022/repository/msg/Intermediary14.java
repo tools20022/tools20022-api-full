@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -30,6 +31,8 @@ import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,16 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Intermediary14", propOrder = {"identification", "role", "safekeepingDetails", "cashDetails"})
 public class Intermediary14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected PartyIdentification23 identification;
 	/**
-	 * Unique and unambiguous identifier for an organisation that is allocated
-	 * by an institution, eg, Dun &amp; Bradstreet Identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,6 +109,9 @@ public class Intermediary14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Id"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 448, FIXSynonym: 447</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -121,9 +127,10 @@ public class Intermediary14 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Intermediary14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "448"), new FIXSynonym(this, "447"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier for an organisation that is allocated by an institution, eg, Dun & Bradstreet Identification.";
@@ -132,11 +139,11 @@ public class Intermediary14 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification23.mmObject();
 		}
 	};
+	@XmlElement(name = "Role", required = true)
 	protected PartyRole1Choice role;
 	/**
-	 * Identifies the role or function performed by an intermediary in a given
-	 * situation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,6 +163,9 @@ public class Intermediary14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Role"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 452</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -171,9 +181,10 @@ public class Intermediary14 {
 	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Intermediary14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "452"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Identifies the role or function performed by an intermediary in a given situation.";
@@ -182,10 +193,11 @@ public class Intermediary14 {
 			complexType_lazy = () -> PartyRole1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgDtls")
 	protected SecuritiesAccount2 safekeepingDetails;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -216,7 +228,7 @@ public class Intermediary14 {
 	public static final MMMessageAssociationEnd mmSafekeepingDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
-			componentContext_lazy = () -> Intermediary14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,11 +240,11 @@ public class Intermediary14 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount2.mmObject();
 		}
 	};
+	@XmlElement(name = "CshDtls")
 	protected AccountIdentification3Choice cashDetails;
 	/**
-	 * Business relationship between two entities; one entity is the account
-	 * owner, the other entity is the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -265,7 +277,7 @@ public class Intermediary14 {
 	public static final MMMessageAssociationEnd mmCashDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
-			componentContext_lazy = () -> Intermediary14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
 			isDerived = false;
 			xmlTag = "CshDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,9 +293,10 @@ public class Intermediary14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Intermediary14.mmIdentification, Intermediary14.mmRole, Intermediary14.mmSafekeepingDetails, Intermediary14.mmCashDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary14.mmIdentification, com.tools20022.repository.msg.Intermediary14.mmRole,
+						com.tools20022.repository.msg.Intermediary14.mmSafekeepingDetails, com.tools20022.repository.msg.Intermediary14.mmCashDetails);
 				trace_lazy = () -> TradePartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Intermediary14";
 				definition = "Parties used for acting parties that apply either to the whole message or to individual sides.";
@@ -292,39 +305,39 @@ public class Intermediary14 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public PartyIdentification23 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.PartyIdentification23 identification) {
-		this.identification = identification;
+	public Intermediary14 setIdentification(com.tools20022.repository.msg.PartyIdentification23 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Role", required = true)
 	public PartyRole1Choice getRole() {
 		return role;
 	}
 
-	public void setRole(PartyRole1Choice role) {
-		this.role = role;
+	public Intermediary14 setRole(PartyRole1Choice role) {
+		this.role = Objects.requireNonNull(role);
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgDtls")
-	public SecuritiesAccount2 getSafekeepingDetails() {
-		return safekeepingDetails;
+	public Optional<SecuritiesAccount2> getSafekeepingDetails() {
+		return safekeepingDetails == null ? Optional.empty() : Optional.of(safekeepingDetails);
 	}
 
-	public void setSafekeepingDetails(com.tools20022.repository.msg.SecuritiesAccount2 safekeepingDetails) {
+	public Intermediary14 setSafekeepingDetails(com.tools20022.repository.msg.SecuritiesAccount2 safekeepingDetails) {
 		this.safekeepingDetails = safekeepingDetails;
+		return this;
 	}
 
-	@XmlElement(name = "CshDtls")
-	public AccountIdentification3Choice getCashDetails() {
-		return cashDetails;
+	public Optional<AccountIdentification3Choice> getCashDetails() {
+		return cashDetails == null ? Optional.empty() : Optional.of(cashDetails);
 	}
 
-	public void setCashDetails(AccountIdentification3Choice cashDetails) {
+	public Intermediary14 setCashDetails(AccountIdentification3Choice cashDetails) {
 		this.cashDetails = cashDetails;
+		return this;
 	}
 }

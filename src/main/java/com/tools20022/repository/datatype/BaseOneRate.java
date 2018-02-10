@@ -19,9 +19,13 @@ package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMRate;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.datatype.BaseOneRate.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Rate expressed as a decimal, eg, 0.7 is 7/10 and 70%.
@@ -31,8 +35,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -49,14 +53,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Rate expressed as a decimal, eg, 0.7 is 7/10 and 70%."</li>
  * </ul>
  */
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
 public class BaseOneRate {
 
 	final static private AtomicReference<MMRate> mmObject_lazy = new AtomicReference<>();
+	protected BigDecimal value;
 
 	final static public MMRate mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMRate() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("0.60");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BaseOneRate";
@@ -67,5 +73,25 @@ public class BaseOneRate {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BaseOneRate(BigDecimal value) {
+		this.value = value;
+	}
+
+	public BigDecimal toBigDecimal() {
+		return value;
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<BigDecimal, BaseOneRate> {
+		@Override
+		public BaseOneRate unmarshal(BigDecimal value) {
+			return new BaseOneRate(value);
+		}
+
+		@Override
+		public BigDecimal marshal(BaseOneRate typedData) {
+			return typedData.value;
+		}
 	}
 }

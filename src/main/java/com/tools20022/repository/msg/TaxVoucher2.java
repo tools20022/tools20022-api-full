@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,8 @@ import com.tools20022.repository.entity.TaxVoucher;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,17 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Specifies tax vouchers in the framework of a corporate action event."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TaxVoucher2", propOrder = {"identification", "bargainDate", "bargainSettlementDate"})
 public class TaxVoucher2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Unique reference for the tax voucher required by the relevant tax
-	 * authorities to ensure that any claim relating to this particular tax
-	 * voucher cannot be duplicated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -96,6 +98,9 @@ public class TaxVoucher2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Id"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::TAVO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -111,9 +116,10 @@ public class TaxVoucher2 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmIdentification;
-			componentContext_lazy = () -> TaxVoucher2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::TAVO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique reference for the tax voucher required by the relevant tax authorities to ensure that any claim relating to this particular tax voucher cannot be duplicated.";
@@ -122,11 +128,11 @@ public class TaxVoucher2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BrgnDt")
 	protected DateAndDateTimeChoice bargainDate;
 	/**
-	 * Date on which a dividend reinvestment purchase was completed. If there is
-	 * only one bargain involved, the time it was struck needs to be included.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,6 +152,9 @@ public class TaxVoucher2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BrgnDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::BAGA</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -161,9 +170,10 @@ public class TaxVoucher2 {
 	public static final MMMessageAttribute mmBargainDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmBargainDate;
-			componentContext_lazy = () -> TaxVoucher2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher2.mmObject();
 			isDerived = false;
 			xmlTag = "BrgnDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::BAGA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BargainDate";
 			definition = "Date on which a dividend reinvestment purchase was completed. If there is only one bargain involved, the time it was struck needs to be included.";
@@ -172,10 +182,11 @@ public class TaxVoucher2 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "BrgnSttlmDt")
 	protected DateAndDateTimeChoice bargainSettlementDate;
 	/**
-	 * Settlement date of the dividend reinvestment purchase transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,6 +206,9 @@ public class TaxVoucher2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BrgnSttlmDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::BAST</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -209,9 +223,10 @@ public class TaxVoucher2 {
 	public static final MMMessageAttribute mmBargainSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmBargainSettlementDate;
-			componentContext_lazy = () -> TaxVoucher2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher2.mmObject();
 			isDerived = false;
 			xmlTag = "BrgnSttlmDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::BAST"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BargainSettlementDate";
 			definition = "Settlement date of the dividend reinvestment purchase transaction.";
@@ -224,9 +239,10 @@ public class TaxVoucher2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TaxVoucher2.mmIdentification, TaxVoucher2.mmBargainDate, TaxVoucher2.mmBargainSettlementDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher2.mmIdentification, com.tools20022.repository.msg.TaxVoucher2.mmBargainDate,
+						com.tools20022.repository.msg.TaxVoucher2.mmBargainSettlementDate);
 				trace_lazy = () -> TaxVoucher.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxVoucher2";
 				definition = "Specifies tax vouchers in the framework of a corporate action event.";
@@ -235,30 +251,30 @@ public class TaxVoucher2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public TaxVoucher2 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "BrgnDt")
-	public DateAndDateTimeChoice getBargainDate() {
-		return bargainDate;
+	public Optional<DateAndDateTimeChoice> getBargainDate() {
+		return bargainDate == null ? Optional.empty() : Optional.of(bargainDate);
 	}
 
-	public void setBargainDate(DateAndDateTimeChoice bargainDate) {
+	public TaxVoucher2 setBargainDate(DateAndDateTimeChoice bargainDate) {
 		this.bargainDate = bargainDate;
+		return this;
 	}
 
-	@XmlElement(name = "BrgnSttlmDt")
-	public DateAndDateTimeChoice getBargainSettlementDate() {
-		return bargainSettlementDate;
+	public Optional<DateAndDateTimeChoice> getBargainSettlementDate() {
+		return bargainSettlementDate == null ? Optional.empty() : Optional.of(bargainSettlementDate);
 	}
 
-	public void setBargainSettlementDate(DateAndDateTimeChoice bargainSettlementDate) {
+	public TaxVoucher2 setBargainSettlementDate(DateAndDateTimeChoice bargainSettlementDate) {
 		this.bargainSettlementDate = bargainSettlementDate;
+		return this;
 	}
 }

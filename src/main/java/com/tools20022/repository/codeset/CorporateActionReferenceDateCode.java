@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CorporateActionReferenceDateCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reference date of corporate action, in coded form.
@@ -32,149 +37,149 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmAnnouncementDate
- * CorporateActionReferenceDateCode.mmAnnouncementDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#AnnouncementDate
+ * CorporateActionReferenceDateCode.AnnouncementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmAvailableDate
- * CorporateActionReferenceDateCode.mmAvailableDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#AvailableDate
+ * CorporateActionReferenceDateCode.AvailableDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmCertificationDeadline
- * CorporateActionReferenceDateCode.mmCertificationDeadline}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#CertificationDeadline
+ * CorporateActionReferenceDateCode.CertificationDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmConsentExpirationDate
- * CorporateActionReferenceDateCode.mmConsentExpirationDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#ConsentExpirationDate
+ * CorporateActionReferenceDateCode.ConsentExpirationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmCourtApprovalDate
- * CorporateActionReferenceDateCode.mmCourtApprovalDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#CourtApprovalDate
+ * CorporateActionReferenceDateCode.CourtApprovalDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmConsentRecordDate
- * CorporateActionReferenceDateCode.mmConsentRecordDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#ConsentRecordDate
+ * CorporateActionReferenceDateCode.ConsentRecordDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmCoverExpirationDate
- * CorporateActionReferenceDateCode.mmCoverExpirationDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#CoverExpirationDate
+ * CorporateActionReferenceDateCode.CoverExpirationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmDividendRankingDate
- * CorporateActionReferenceDateCode.mmDividendRankingDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#DividendRankingDate
+ * CorporateActionReferenceDateCode.DividendRankingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmEarliestPaymentDate
- * CorporateActionReferenceDateCode.mmEarliestPaymentDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#EarliestPaymentDate
+ * CorporateActionReferenceDateCode.EarliestPaymentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmElectionToCounterpartyDeadline
- * CorporateActionReferenceDateCode.mmElectionToCounterpartyDeadline}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#ElectionToCounterpartyDeadline
+ * CorporateActionReferenceDateCode.ElectionToCounterpartyDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmEffectiveDate
- * CorporateActionReferenceDateCode.mmEffectiveDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#EffectiveDate
+ * CorporateActionReferenceDateCode.EffectiveDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmEqualisationDate
- * CorporateActionReferenceDateCode.mmEqualisationDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#EqualisationDate
+ * CorporateActionReferenceDateCode.EqualisationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmExpiryDate
- * CorporateActionReferenceDateCode.mmExpiryDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#ExpiryDate
+ * CorporateActionReferenceDateCode.ExpiryDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmFirstBusinessDayOfMonth
- * CorporateActionReferenceDateCode.mmFirstBusinessDayOfMonth}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#FirstBusinessDayOfMonth
+ * CorporateActionReferenceDateCode.FirstBusinessDayOfMonth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmFirstCalendarDayOfMonth
- * CorporateActionReferenceDateCode.mmFirstCalendarDayOfMonth}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#FirstCalendarDayOfMonth
+ * CorporateActionReferenceDateCode.FirstCalendarDayOfMonth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmFurtherDetailedAnnouncementDate
- * CorporateActionReferenceDateCode.mmFurtherDetailedAnnouncementDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#FurtherDetailedAnnouncementDate
+ * CorporateActionReferenceDateCode.FurtherDetailedAnnouncementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmCurrencyExchangeDate
- * CorporateActionReferenceDateCode.mmCurrencyExchangeDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#CurrencyExchangeDate
+ * CorporateActionReferenceDateCode.CurrencyExchangeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmGuaranteedParticipationDate
- * CorporateActionReferenceDateCode.mmGuaranteedParticipationDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#GuaranteedParticipationDate
+ * CorporateActionReferenceDateCode.GuaranteedParticipationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmIndexFixingDate
- * CorporateActionReferenceDateCode.mmIndexFixingDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#IndexFixingDate
+ * CorporateActionReferenceDateCode.IndexFixingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmInstructedDate
- * CorporateActionReferenceDateCode.mmInstructedDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#InstructedDate
+ * CorporateActionReferenceDateCode.InstructedDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmLastBusinessDayOfMonth
- * CorporateActionReferenceDateCode.mmLastBusinessDayOfMonth}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#LastBusinessDayOfMonth
+ * CorporateActionReferenceDateCode.LastBusinessDayOfMonth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmLastCalendarDayOfMonth
- * CorporateActionReferenceDateCode.mmLastCalendarDayOfMonth}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#LastCalendarDayOfMonth
+ * CorporateActionReferenceDateCode.LastCalendarDayOfMonth}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmLotteryDate
- * CorporateActionReferenceDateCode.mmLotteryDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#LotteryDate
+ * CorporateActionReferenceDateCode.LotteryDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmMaturityDate
- * CorporateActionReferenceDateCode.mmMaturityDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#MaturityDate
+ * CorporateActionReferenceDateCode.MaturityDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmMeetingDate
- * CorporateActionReferenceDateCode.mmMeetingDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#MeetingDate
+ * CorporateActionReferenceDateCode.MeetingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmSecondMeetingDate
- * CorporateActionReferenceDateCode.mmSecondMeetingDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#SecondMeetingDate
+ * CorporateActionReferenceDateCode.SecondMeetingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmThirdMeetingDate
- * CorporateActionReferenceDateCode.mmThirdMeetingDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#ThirdMeetingDate
+ * CorporateActionReferenceDateCode.ThirdMeetingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmMarginFixingDate
- * CorporateActionReferenceDateCode.mmMarginFixingDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#MarginFixingDate
+ * CorporateActionReferenceDateCode.MarginFixingDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmMarketDeadline
- * CorporateActionReferenceDateCode.mmMarketDeadline}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#MarketDeadline
+ * CorporateActionReferenceDateCode.MarketDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmPaymentDate
- * CorporateActionReferenceDateCode.mmPaymentDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#PaymentDate
+ * CorporateActionReferenceDateCode.PaymentDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmProtectDate
- * CorporateActionReferenceDateCode.mmProtectDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#ProtectDate
+ * CorporateActionReferenceDateCode.ProtectDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmPariPassuDate
- * CorporateActionReferenceDateCode.mmPariPassuDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#PariPassuDate
+ * CorporateActionReferenceDateCode.PariPassuDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmProrationDate
- * CorporateActionReferenceDateCode.mmProrationDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#ProrationDate
+ * CorporateActionReferenceDateCode.ProrationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmResponseDeadline
- * CorporateActionReferenceDateCode.mmResponseDeadline}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#ResponseDeadline
+ * CorporateActionReferenceDateCode.ResponseDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmRecordDate
- * CorporateActionReferenceDateCode.mmRecordDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#RecordDate
+ * CorporateActionReferenceDateCode.RecordDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmRegistrationDeadline
- * CorporateActionReferenceDateCode.mmRegistrationDeadline}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#RegistrationDeadline
+ * CorporateActionReferenceDateCode.RegistrationDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmResultsPublicationDate
- * CorporateActionReferenceDateCode.mmResultsPublicationDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#ResultsPublicationDate
+ * CorporateActionReferenceDateCode.ResultsPublicationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmSplitDeadline
- * CorporateActionReferenceDateCode.mmSplitDeadline}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#SplitDeadline
+ * CorporateActionReferenceDateCode.SplitDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmSubscriptionCostDebitDate
- * CorporateActionReferenceDateCode.mmSubscriptionCostDebitDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#SubscriptionCostDebitDate
+ * CorporateActionReferenceDateCode.SubscriptionCostDebitDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmSpecialExDate
- * CorporateActionReferenceDateCode.mmSpecialExDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#SpecialExDate
+ * CorporateActionReferenceDateCode.SpecialExDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmDeadlineForTaxBreakdownInstructions
- * CorporateActionReferenceDateCode.mmDeadlineForTaxBreakdownInstructions}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#DeadlineForTaxBreakdownInstructions
+ * CorporateActionReferenceDateCode.DeadlineForTaxBreakdownInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmTradeDateTime
- * CorporateActionReferenceDateCode.mmTradeDateTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#TradeDateTime
+ * CorporateActionReferenceDateCode.TradeDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmTradingSuspendedDate
- * CorporateActionReferenceDateCode.mmTradingSuspendedDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#TradingSuspendedDate
+ * CorporateActionReferenceDateCode.TradingSuspendedDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmUnconditionalDate
- * CorporateActionReferenceDateCode.mmUnconditionalDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#UnconditionalDate
+ * CorporateActionReferenceDateCode.UnconditionalDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmValueDate
- * CorporateActionReferenceDateCode.mmValueDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#ValueDate
+ * CorporateActionReferenceDateCode.ValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmWhollyUnconditionalDate
- * CorporateActionReferenceDateCode.mmWhollyUnconditionalDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#WhollyUnconditionalDate
+ * CorporateActionReferenceDateCode.WhollyUnconditionalDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmExDividendDate
- * CorporateActionReferenceDateCode.mmExDividendDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#ExDividendDate
+ * CorporateActionReferenceDateCode.ExDividendDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#mmEarlyResponseDeadline
- * CorporateActionReferenceDateCode.mmEarlyResponseDeadline}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionReferenceDateCode#EarlyResponseDeadline
+ * CorporateActionReferenceDateCode.EarlyResponseDeadline}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -188,8 +193,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -207,7 +212,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the reference date of corporate action, in coded form."</li>
  * </ul>
  */
-public class CorporateActionReferenceDateCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionReferenceDateCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -234,12 +240,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAnnouncementDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode AnnouncementDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AnnouncementDate";
 			definition = "Date on which the issuer announced that a corporate action event will occur.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "ANOU";
 		}
 	};
@@ -267,12 +273,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAvailableDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode AvailableDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AvailableDate";
 			definition = "Date on which securities become available for trading, for example first dealing date.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "AVAL";
 		}
 	};
@@ -300,12 +306,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertificationDeadline = new MMCode() {
+	public static final CorporateActionReferenceDateCode CertificationDeadline = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertificationDeadline";
 			definition = "Deadline by which the beneficial ownership of securities must be declared.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "CERT";
 		}
 	};
@@ -333,12 +339,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmConsentExpirationDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode ConsentExpirationDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConsentExpirationDate";
 			definition = "Last date on which a holder can consent to the changes sought by the corporation.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "CEXD";
 		}
 	};
@@ -363,12 +369,12 @@ public class CorporateActionReferenceDateCode {
 	 * definition} = "Date upon which the court provided approval."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCourtApprovalDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode CourtApprovalDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CourtApprovalDate";
 			definition = "Date upon which the court provided approval.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "COAP";
 		}
 	};
@@ -399,12 +405,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmConsentRecordDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode ConsentRecordDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConsentRecordDate";
 			definition = "Date used by the offeror to determine the beneficiary eligible to participate in a consent based on the registered owner of the securities, for example, beneficial owner of consent record. Consent record date qualifier is used to indicate that a record date only applies to a certain part of the offer, not the entire offer.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "CORD";
 		}
 	};
@@ -432,12 +438,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCoverExpirationDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode CoverExpirationDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CoverExpirationDate";
 			definition = "Last day a holder can deliver the securities that it had elected on and/or previously protected.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "CVPR";
 		}
 	};
@@ -462,12 +468,12 @@ public class CorporateActionReferenceDateCode {
 	 * definition} = "Date on which a security will be entitled to a dividend."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividendRankingDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode DividendRankingDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendRankingDate";
 			definition = "Date on which a security will be entitled to a dividend.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "DIVR";
 		}
 	};
@@ -495,12 +501,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEarliestPaymentDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode EarliestPaymentDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarliestPaymentDate";
 			definition = "Date on which a payment can be made, for example, if payment date is a non-business day or to indicate the first payment date of an offer.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "EARL";
 		}
 	};
@@ -528,12 +534,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmElectionToCounterpartyDeadline = new MMCode() {
+	public static final CorporateActionReferenceDateCode ElectionToCounterpartyDeadline = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ElectionToCounterpartyDeadline";
 			definition = "Deadline by which an entitled holder needs to advise their counterparty to a transaction of their election for a corporate action event.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "ECPD";
 		}
 	};
@@ -559,12 +565,12 @@ public class CorporateActionReferenceDateCode {
 	 * "Date on which a process is to be completed or becomes effective."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEffectiveDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode EffectiveDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EffectiveDate";
 			definition = "Date on which a process is to be completed or becomes effective.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "EFFD";
 		}
 	};
@@ -593,12 +599,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEqualisationDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode EqualisationDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EqualisationDate";
 			definition = "Date on which all or part of any holding bought in a unit trust is subject to being treated as capital rather than income. This is normally one day after the previous distribution's ex date.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "EQUL";
 		}
 	};
@@ -626,12 +632,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmExpiryDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode ExpiryDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date on which an order expires or on which a privilege or offer terminates.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "EXPI";
 		}
 	};
@@ -656,12 +662,12 @@ public class CorporateActionReferenceDateCode {
 	 * definition} = "First day of the month that is a working day."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFirstBusinessDayOfMonth = new MMCode() {
+	public static final CorporateActionReferenceDateCode FirstBusinessDayOfMonth = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirstBusinessDayOfMonth";
 			definition = "First day of the month that is a working day.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "FBDM";
 		}
 	};
@@ -686,12 +692,12 @@ public class CorporateActionReferenceDateCode {
 	 * definition} = "First calendar day of the month."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFirstCalendarDayOfMonth = new MMCode() {
+	public static final CorporateActionReferenceDateCode FirstCalendarDayOfMonth = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirstCalendarDayOfMonth";
 			definition = "First calendar day of the month.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "FCDM";
 		}
 	};
@@ -719,12 +725,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFurtherDetailedAnnouncementDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode FurtherDetailedAnnouncementDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FurtherDetailedAnnouncementDate";
 			definition = "Date on which additional information on the event will be announced, for example, exchange ratio announcement date.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "FDAT";
 		}
 	};
@@ -750,12 +756,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrencyExchangeDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode CurrencyExchangeDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchangeDate";
 			definition = "Date on which a foreign exchange rate will be determined.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "FXDT";
 		}
 	};
@@ -783,12 +789,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmGuaranteedParticipationDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode GuaranteedParticipationDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GuaranteedParticipationDate";
 			definition = "Last date/time by which a buying counterparty to a trade can be sure that it will have the right to participate in an event.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "GUPA";
 		}
 	};
@@ -813,12 +819,12 @@ public class CorporateActionReferenceDateCode {
 	 * definition} = "Date/time at which an index rate will be determined."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIndexFixingDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode IndexFixingDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndexFixingDate";
 			definition = "Date/time at which an index rate will be determined.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "IFIX";
 		}
 	};
@@ -843,12 +849,12 @@ public class CorporateActionReferenceDateCode {
 	 * definition} = "Date on which instruction was sent."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstructedDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode InstructedDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InstructedDate";
 			definition = "Date on which instruction was sent.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "INST";
 		}
 	};
@@ -873,12 +879,12 @@ public class CorporateActionReferenceDateCode {
 	 * definition} = "Last day of the month that is a working day."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLastBusinessDayOfMonth = new MMCode() {
+	public static final CorporateActionReferenceDateCode LastBusinessDayOfMonth = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LastBusinessDayOfMonth";
 			definition = "Last day of the month that is a working day.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "LBDM";
 		}
 	};
@@ -903,12 +909,12 @@ public class CorporateActionReferenceDateCode {
 	 * definition} = "Last calendar day of the month."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLastCalendarDayOfMonth = new MMCode() {
+	public static final CorporateActionReferenceDateCode LastCalendarDayOfMonth = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LastCalendarDayOfMonth";
 			definition = "Last calendar day of the month.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "LCDM";
 		}
 	};
@@ -936,12 +942,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmLotteryDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode LotteryDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LotteryDate";
 			definition = "Date on which the lottery is run and applied to the holder's positions. This is also applicable to partial calls.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "LOTO";
 		}
 	};
@@ -969,12 +975,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMaturityDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode MaturityDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaturityDate";
 			definition = "Date upon which interest bearing security becomes due and principal is paid.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "MATU";
 		}
 	};
@@ -1001,12 +1007,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMeetingDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode MeetingDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MeetingDate";
 			definition = "Date on which the bondholders' or shareholders' meeting will take place.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "MEET";
 		}
 	};
@@ -1034,12 +1040,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecondMeetingDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode SecondMeetingDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecondMeetingDate";
 			definition = "Date on which the company's general meeting is scheduled, second session if applicable, for example, Italy.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "MET2";
 		}
 	};
@@ -1067,12 +1073,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmThirdMeetingDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode ThirdMeetingDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ThirdMeetingDate";
 			definition = "Date on which the company's general meeting is scheduled, third session if applicable, for example, Italy.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "MET3";
 		}
 	};
@@ -1097,12 +1103,12 @@ public class CorporateActionReferenceDateCode {
 	 * definition} = "Date/time at which the margin rate will be determined."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarginFixingDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode MarginFixingDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarginFixingDate";
 			definition = "Date/time at which the margin rate will be determined.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "MFIX";
 		}
 	};
@@ -1130,12 +1136,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarketDeadline = new MMCode() {
+	public static final CorporateActionReferenceDateCode MarketDeadline = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketDeadline";
 			definition = "Issuer or issuer's agent deadline to respond, with an election instruction, to an outstanding offer or privilege.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "MKDT";
 		}
 	};
@@ -1162,12 +1168,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPaymentDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode PaymentDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentDate";
 			definition = "Date on which the movement is due to take place (cash and/or securities).";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "PAYD";
 		}
 	};
@@ -1195,12 +1201,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmProtectDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode ProtectDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProtectDate";
 			definition = "Last date a holder can request to defer delivery of securities pursuant to a notice of guaranteed delivery or other required documentation.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "PODT";
 		}
 	};
@@ -1228,12 +1234,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPariPassuDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode PariPassuDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PariPassuDate";
 			definition = "Date on which security will assimilate, become fungible, or have the same rights to dividends as the parent issue.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "PPDT";
 		}
 	};
@@ -1261,12 +1267,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmProrationDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode ProrationDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProrationDate";
 			definition = "Date at which an issuer will determine the proration amount/quantity of an offer.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "PROD";
 		}
 	};
@@ -1296,12 +1302,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmResponseDeadline = new MMCode() {
+	public static final CorporateActionReferenceDateCode ResponseDeadline = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResponseDeadline";
 			definition = "Date on which the account servicer has set as the deadline to respond, with instructions, to an outstanding event. This time is dependent on the reference time zone of the account servicer as specified in a Service Level Agreement (SLA).";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "RDDT";
 		}
 	};
@@ -1330,12 +1336,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRecordDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode RecordDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RecordDate";
 			definition = "Date on which positions are struck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "RDTE";
 		}
 	};
@@ -1363,12 +1369,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegistrationDeadline = new MMCode() {
+	public static final CorporateActionReferenceDateCode RegistrationDeadline = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationDeadline";
 			definition = "Date on which instructions to register or registration details will be accepted.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "REGI";
 		}
 	};
@@ -1394,12 +1400,12 @@ public class CorporateActionReferenceDateCode {
 	 * "Date on which results are published, for example, results of an offer."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmResultsPublicationDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode ResultsPublicationDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResultsPublicationDate";
 			definition = "Date on which results are published, for example, results of an offer.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "RESU";
 		}
 	};
@@ -1427,12 +1433,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSplitDeadline = new MMCode() {
+	public static final CorporateActionReferenceDateCode SplitDeadline = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SplitDeadline";
 			definition = "Deadline by which instructions must be received to split securities, for example, of physical certificates.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "SPLT";
 		}
 	};
@@ -1459,12 +1465,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubscriptionCostDebitDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode SubscriptionCostDebitDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubscriptionCostDebitDate";
 			definition = "Date by which cash must be in place in order to take part in the event.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "SUBS";
 		}
 	};
@@ -1496,12 +1502,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialExDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode SpecialExDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpecialExDate";
 			definition = "Date/time as from which 'special processing' can start to be used by participants for that event. Special processing is a means of marking a transaction, that would normally be traded ex or cum, as being traded cum or ex respectively, for example, a transaction dealt 'special' after the ex date would result in the buyer's being eligible for the entitlement. This is typically used in the UK and Irish markets.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "SXDT";
 		}
 	};
@@ -1527,12 +1533,12 @@ public class CorporateActionReferenceDateCode {
 	 * "Date on until which tax breakdown instructions will be accepted."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeadlineForTaxBreakdownInstructions = new MMCode() {
+	public static final CorporateActionReferenceDateCode DeadlineForTaxBreakdownInstructions = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeadlineForTaxBreakdownInstructions";
 			definition = "Date on until which tax breakdown instructions will be accepted.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "TAXB";
 		}
 	};
@@ -1557,12 +1563,12 @@ public class CorporateActionReferenceDateCode {
 	 * definition} = "Date on which the trade was executed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradeDateTime = new MMCode() {
+	public static final CorporateActionReferenceDateCode TradeDateTime = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeDateTime";
 			definition = "Date on which the trade was executed.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "TRAD";
 		}
 	};
@@ -1590,12 +1596,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradingSuspendedDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode TradingSuspendedDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingSuspendedDate";
 			definition = "Date on which trading of a security is suspended as the result of an event.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "TSDT";
 		}
 	};
@@ -1621,12 +1627,12 @@ public class CorporateActionReferenceDateCode {
 	 * "Date upon which the terms of the take-over become unconditional."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnconditionalDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode UnconditionalDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnconditionalDate";
 			definition = "Date upon which the terms of the take-over become unconditional.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "UNCO";
 		}
 	};
@@ -1654,12 +1660,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmValueDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode ValueDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValueDate";
 			definition = "Date on which assets become available to the account owner (in a credit entry), or cease to be available to the account owner (in a debit entry).";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "VALU";
 		}
 	};
@@ -1687,12 +1693,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmWhollyUnconditionalDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode WhollyUnconditionalDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WhollyUnconditionalDate";
 			definition = "Date on which all conditions, including regulatory, legal etc. pertaining to the take-over, have been met.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "WUCO";
 		}
 	};
@@ -1720,12 +1726,12 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmExDividendDate = new MMCode() {
+	public static final CorporateActionReferenceDateCode ExDividendDate = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExDividendDate";
 			definition = "Date as from which trading (including exchange and Over The Counter (OTC) trading) occurs on the underlying security without the benefit.";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "XDTE";
 		}
 	};
@@ -1756,42 +1762,127 @@ public class CorporateActionReferenceDateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEarlyResponseDeadline = new MMCode() {
+	public static final CorporateActionReferenceDateCode EarlyResponseDeadline = new CorporateActionReferenceDateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarlyResponseDeadline";
 			definition = "Date/time at which the account servicer has set as the deadline to respond, with instructions, to an outstanding event, giving the holder eligibility to incentives. This time is dependent on the reference time zone of the account servicer as specified in a Service Level Agreement (SLA).";
-			owner_lazy = () -> CorporateActionReferenceDateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionReferenceDateCode.mmObject();
 			codeName = "EARD";
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionReferenceDateCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionReferenceDateCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ANOU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionReferenceDateCode";
 				definition = "Specifies the reference date of corporate action, in coded form.";
-				code_lazy = () -> Arrays.asList(CorporateActionReferenceDateCode.mmAnnouncementDate, CorporateActionReferenceDateCode.mmAvailableDate, CorporateActionReferenceDateCode.mmCertificationDeadline,
-						CorporateActionReferenceDateCode.mmConsentExpirationDate, CorporateActionReferenceDateCode.mmCourtApprovalDate, CorporateActionReferenceDateCode.mmConsentRecordDate,
-						CorporateActionReferenceDateCode.mmCoverExpirationDate, CorporateActionReferenceDateCode.mmDividendRankingDate, CorporateActionReferenceDateCode.mmEarliestPaymentDate,
-						CorporateActionReferenceDateCode.mmElectionToCounterpartyDeadline, CorporateActionReferenceDateCode.mmEffectiveDate, CorporateActionReferenceDateCode.mmEqualisationDate,
-						CorporateActionReferenceDateCode.mmExpiryDate, CorporateActionReferenceDateCode.mmFirstBusinessDayOfMonth, CorporateActionReferenceDateCode.mmFirstCalendarDayOfMonth,
-						CorporateActionReferenceDateCode.mmFurtherDetailedAnnouncementDate, CorporateActionReferenceDateCode.mmCurrencyExchangeDate, CorporateActionReferenceDateCode.mmGuaranteedParticipationDate,
-						CorporateActionReferenceDateCode.mmIndexFixingDate, CorporateActionReferenceDateCode.mmInstructedDate, CorporateActionReferenceDateCode.mmLastBusinessDayOfMonth,
-						CorporateActionReferenceDateCode.mmLastCalendarDayOfMonth, CorporateActionReferenceDateCode.mmLotteryDate, CorporateActionReferenceDateCode.mmMaturityDate, CorporateActionReferenceDateCode.mmMeetingDate,
-						CorporateActionReferenceDateCode.mmSecondMeetingDate, CorporateActionReferenceDateCode.mmThirdMeetingDate, CorporateActionReferenceDateCode.mmMarginFixingDate, CorporateActionReferenceDateCode.mmMarketDeadline,
-						CorporateActionReferenceDateCode.mmPaymentDate, CorporateActionReferenceDateCode.mmProtectDate, CorporateActionReferenceDateCode.mmPariPassuDate, CorporateActionReferenceDateCode.mmProrationDate,
-						CorporateActionReferenceDateCode.mmResponseDeadline, CorporateActionReferenceDateCode.mmRecordDate, CorporateActionReferenceDateCode.mmRegistrationDeadline, CorporateActionReferenceDateCode.mmResultsPublicationDate,
-						CorporateActionReferenceDateCode.mmSplitDeadline, CorporateActionReferenceDateCode.mmSubscriptionCostDebitDate, CorporateActionReferenceDateCode.mmSpecialExDate,
-						CorporateActionReferenceDateCode.mmDeadlineForTaxBreakdownInstructions, CorporateActionReferenceDateCode.mmTradeDateTime, CorporateActionReferenceDateCode.mmTradingSuspendedDate,
-						CorporateActionReferenceDateCode.mmUnconditionalDate, CorporateActionReferenceDateCode.mmValueDate, CorporateActionReferenceDateCode.mmWhollyUnconditionalDate, CorporateActionReferenceDateCode.mmExDividendDate,
-						CorporateActionReferenceDateCode.mmEarlyResponseDeadline);
 				derivation_lazy = () -> Arrays.asList(CorporateActionDeadline1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionReferenceDateCode.AnnouncementDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.AvailableDate,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.CertificationDeadline, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.ConsentExpirationDate,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.CourtApprovalDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.ConsentRecordDate,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.CoverExpirationDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.DividendRankingDate,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.EarliestPaymentDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.ElectionToCounterpartyDeadline,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.EffectiveDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.EqualisationDate,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.ExpiryDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.FirstBusinessDayOfMonth,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.FirstCalendarDayOfMonth, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.FurtherDetailedAnnouncementDate,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.CurrencyExchangeDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.GuaranteedParticipationDate,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.IndexFixingDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.InstructedDate,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.LastBusinessDayOfMonth, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.LastCalendarDayOfMonth,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.LotteryDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.MaturityDate,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.MeetingDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.SecondMeetingDate,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.ThirdMeetingDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.MarginFixingDate,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.MarketDeadline, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.PaymentDate,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.ProtectDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.PariPassuDate,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.ProrationDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.ResponseDeadline,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.RecordDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.RegistrationDeadline,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.ResultsPublicationDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.SplitDeadline,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.SubscriptionCostDebitDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.SpecialExDate,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.DeadlineForTaxBreakdownInstructions, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.TradeDateTime,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.TradingSuspendedDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.UnconditionalDate,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.ValueDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.WhollyUnconditionalDate,
+						com.tools20022.repository.codeset.CorporateActionReferenceDateCode.ExDividendDate, com.tools20022.repository.codeset.CorporateActionReferenceDateCode.EarlyResponseDeadline);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AnnouncementDate.getCodeName().get(), AnnouncementDate);
+		codesByName.put(AvailableDate.getCodeName().get(), AvailableDate);
+		codesByName.put(CertificationDeadline.getCodeName().get(), CertificationDeadline);
+		codesByName.put(ConsentExpirationDate.getCodeName().get(), ConsentExpirationDate);
+		codesByName.put(CourtApprovalDate.getCodeName().get(), CourtApprovalDate);
+		codesByName.put(ConsentRecordDate.getCodeName().get(), ConsentRecordDate);
+		codesByName.put(CoverExpirationDate.getCodeName().get(), CoverExpirationDate);
+		codesByName.put(DividendRankingDate.getCodeName().get(), DividendRankingDate);
+		codesByName.put(EarliestPaymentDate.getCodeName().get(), EarliestPaymentDate);
+		codesByName.put(ElectionToCounterpartyDeadline.getCodeName().get(), ElectionToCounterpartyDeadline);
+		codesByName.put(EffectiveDate.getCodeName().get(), EffectiveDate);
+		codesByName.put(EqualisationDate.getCodeName().get(), EqualisationDate);
+		codesByName.put(ExpiryDate.getCodeName().get(), ExpiryDate);
+		codesByName.put(FirstBusinessDayOfMonth.getCodeName().get(), FirstBusinessDayOfMonth);
+		codesByName.put(FirstCalendarDayOfMonth.getCodeName().get(), FirstCalendarDayOfMonth);
+		codesByName.put(FurtherDetailedAnnouncementDate.getCodeName().get(), FurtherDetailedAnnouncementDate);
+		codesByName.put(CurrencyExchangeDate.getCodeName().get(), CurrencyExchangeDate);
+		codesByName.put(GuaranteedParticipationDate.getCodeName().get(), GuaranteedParticipationDate);
+		codesByName.put(IndexFixingDate.getCodeName().get(), IndexFixingDate);
+		codesByName.put(InstructedDate.getCodeName().get(), InstructedDate);
+		codesByName.put(LastBusinessDayOfMonth.getCodeName().get(), LastBusinessDayOfMonth);
+		codesByName.put(LastCalendarDayOfMonth.getCodeName().get(), LastCalendarDayOfMonth);
+		codesByName.put(LotteryDate.getCodeName().get(), LotteryDate);
+		codesByName.put(MaturityDate.getCodeName().get(), MaturityDate);
+		codesByName.put(MeetingDate.getCodeName().get(), MeetingDate);
+		codesByName.put(SecondMeetingDate.getCodeName().get(), SecondMeetingDate);
+		codesByName.put(ThirdMeetingDate.getCodeName().get(), ThirdMeetingDate);
+		codesByName.put(MarginFixingDate.getCodeName().get(), MarginFixingDate);
+		codesByName.put(MarketDeadline.getCodeName().get(), MarketDeadline);
+		codesByName.put(PaymentDate.getCodeName().get(), PaymentDate);
+		codesByName.put(ProtectDate.getCodeName().get(), ProtectDate);
+		codesByName.put(PariPassuDate.getCodeName().get(), PariPassuDate);
+		codesByName.put(ProrationDate.getCodeName().get(), ProrationDate);
+		codesByName.put(ResponseDeadline.getCodeName().get(), ResponseDeadline);
+		codesByName.put(RecordDate.getCodeName().get(), RecordDate);
+		codesByName.put(RegistrationDeadline.getCodeName().get(), RegistrationDeadline);
+		codesByName.put(ResultsPublicationDate.getCodeName().get(), ResultsPublicationDate);
+		codesByName.put(SplitDeadline.getCodeName().get(), SplitDeadline);
+		codesByName.put(SubscriptionCostDebitDate.getCodeName().get(), SubscriptionCostDebitDate);
+		codesByName.put(SpecialExDate.getCodeName().get(), SpecialExDate);
+		codesByName.put(DeadlineForTaxBreakdownInstructions.getCodeName().get(), DeadlineForTaxBreakdownInstructions);
+		codesByName.put(TradeDateTime.getCodeName().get(), TradeDateTime);
+		codesByName.put(TradingSuspendedDate.getCodeName().get(), TradingSuspendedDate);
+		codesByName.put(UnconditionalDate.getCodeName().get(), UnconditionalDate);
+		codesByName.put(ValueDate.getCodeName().get(), ValueDate);
+		codesByName.put(WhollyUnconditionalDate.getCodeName().get(), WhollyUnconditionalDate);
+		codesByName.put(ExDividendDate.getCodeName().get(), ExDividendDate);
+		codesByName.put(EarlyResponseDeadline.getCodeName().get(), EarlyResponseDeadline);
+	}
+
+	public static CorporateActionReferenceDateCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionReferenceDateCode[] values() {
+		CorporateActionReferenceDateCode[] values = new CorporateActionReferenceDateCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionReferenceDateCode> {
+		@Override
+		public CorporateActionReferenceDateCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionReferenceDateCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

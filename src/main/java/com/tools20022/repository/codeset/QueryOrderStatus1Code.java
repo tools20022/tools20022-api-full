@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.QueryOrderStatusCode;
+import com.tools20022.repository.codeset.QueryOrderStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the inquiry status of order.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.QueryOrderStatusCode
- * QueryOrderStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryOrderStatus1Code#mmQueryUnconfirmedOrder
- * QueryOrderStatus1Code.mmQueryUnconfirmedOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryOrderStatus1Code#QueryUnconfirmedOrder
+ * QueryOrderStatus1Code.QueryUnconfirmedOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryOrderStatus1Code#mmQueryOrdersForTheParty
- * QueryOrderStatus1Code.mmQueryOrdersForTheParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryOrderStatus1Code#QueryOrdersForTheParty
+ * QueryOrderStatus1Code.QueryOrdersForTheParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryOrderStatus1Code#mmQueryFullyExecutedOrder
- * QueryOrderStatus1Code.mmQueryFullyExecutedOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryOrderStatus1Code#QueryFullyExecutedOrder
+ * QueryOrderStatus1Code.QueryFullyExecutedOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryOrderStatus1Code#mmQueryPartiallyExecutedOrder
- * QueryOrderStatus1Code.mmQueryPartiallyExecutedOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryOrderStatus1Code#QueryPartiallyExecutedOrder
+ * QueryOrderStatus1Code.QueryPartiallyExecutedOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryOrderStatus1Code#mmQueryAllOrders
- * QueryOrderStatus1Code.mmQueryAllOrders}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryOrderStatus1Code#QueryAllOrders
+ * QueryOrderStatus1Code.QueryAllOrders}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.QueryOrderStatusCode
+ * QueryOrderStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the inquiry status of order."</li>
  * </ul>
  */
-public class QueryOrderStatus1Code extends QueryOrderStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class QueryOrderStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class QueryOrderStatus1Code extends QueryOrderStatusCode {
 	 * name} = "QueryUnconfirmedOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQueryUnconfirmedOrder = new MMCode() {
+	public static final QueryOrderStatus1Code QueryUnconfirmedOrder = new QueryOrderStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryUnconfirmedOrder";
-			owner_lazy = () -> QueryOrderStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryOrderStatus1Code.mmObject();
+			codeName = QueryOrderStatusCode.QueryUnconfirmedOrder.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class QueryOrderStatus1Code extends QueryOrderStatusCode {
 	 * name} = "QueryOrdersForTheParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQueryOrdersForTheParty = new MMCode() {
+	public static final QueryOrderStatus1Code QueryOrdersForTheParty = new QueryOrderStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryOrdersForTheParty";
-			owner_lazy = () -> QueryOrderStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryOrderStatus1Code.mmObject();
+			codeName = QueryOrderStatusCode.QueryOrdersForTheParty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,11 +139,12 @@ public class QueryOrderStatus1Code extends QueryOrderStatusCode {
 	 * name} = "QueryFullyExecutedOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQueryFullyExecutedOrder = new MMCode() {
+	public static final QueryOrderStatus1Code QueryFullyExecutedOrder = new QueryOrderStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryFullyExecutedOrder";
-			owner_lazy = () -> QueryOrderStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryOrderStatus1Code.mmObject();
+			codeName = QueryOrderStatusCode.QueryFullyExecutedOrder.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -155,11 +163,12 @@ public class QueryOrderStatus1Code extends QueryOrderStatusCode {
 	 * name} = "QueryPartiallyExecutedOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQueryPartiallyExecutedOrder = new MMCode() {
+	public static final QueryOrderStatus1Code QueryPartiallyExecutedOrder = new QueryOrderStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryPartiallyExecutedOrder";
-			owner_lazy = () -> QueryOrderStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryOrderStatus1Code.mmObject();
+			codeName = QueryOrderStatusCode.QueryPartiallyExecutedOrder.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -178,26 +187,61 @@ public class QueryOrderStatus1Code extends QueryOrderStatusCode {
 	 * name} = "QueryAllOrders"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQueryAllOrders = new MMCode() {
+	public static final QueryOrderStatus1Code QueryAllOrders = new QueryOrderStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryAllOrders";
-			owner_lazy = () -> QueryOrderStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryOrderStatus1Code.mmObject();
+			codeName = QueryOrderStatusCode.QueryAllOrders.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, QueryOrderStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected QueryOrderStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueryOrderStatus1Code";
 				definition = "Specifies the inquiry status of order.";
-				code_lazy = () -> Arrays.asList(QueryOrderStatus1Code.mmQueryUnconfirmedOrder, QueryOrderStatus1Code.mmQueryOrdersForTheParty, QueryOrderStatus1Code.mmQueryFullyExecutedOrder,
-						QueryOrderStatus1Code.mmQueryPartiallyExecutedOrder, QueryOrderStatus1Code.mmQueryAllOrders);
 				trace_lazy = () -> QueryOrderStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryOrderStatus1Code.QueryUnconfirmedOrder, com.tools20022.repository.codeset.QueryOrderStatus1Code.QueryOrdersForTheParty,
+						com.tools20022.repository.codeset.QueryOrderStatus1Code.QueryFullyExecutedOrder, com.tools20022.repository.codeset.QueryOrderStatus1Code.QueryPartiallyExecutedOrder,
+						com.tools20022.repository.codeset.QueryOrderStatus1Code.QueryAllOrders);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(QueryUnconfirmedOrder.getCodeName().get(), QueryUnconfirmedOrder);
+		codesByName.put(QueryOrdersForTheParty.getCodeName().get(), QueryOrdersForTheParty);
+		codesByName.put(QueryFullyExecutedOrder.getCodeName().get(), QueryFullyExecutedOrder);
+		codesByName.put(QueryPartiallyExecutedOrder.getCodeName().get(), QueryPartiallyExecutedOrder);
+		codesByName.put(QueryAllOrders.getCodeName().get(), QueryAllOrders);
+	}
+
+	public static QueryOrderStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static QueryOrderStatus1Code[] values() {
+		QueryOrderStatus1Code[] values = new QueryOrderStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, QueryOrderStatus1Code> {
+		@Override
+		public QueryOrderStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(QueryOrderStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

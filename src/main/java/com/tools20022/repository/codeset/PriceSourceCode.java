@@ -17,12 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.PriceSourceCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the source of a price quotation.
@@ -31,16 +37,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceSourceCode#mmFund
- * PriceSourceCode.mmFund}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceSourceCode#Fund
+ * PriceSourceCode.Fund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceSourceCode#mmTheoretical
- * PriceSourceCode.mmTheoretical}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceSourceCode#mmVendor
- * PriceSourceCode.mmVendor}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceSourceCode#Theoretical
+ * PriceSourceCode.Theoretical}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceSourceCode#Vendor
+ * PriceSourceCode.Vendor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceSourceCode#mmStockExchange
- * PriceSourceCode.mmStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceSourceCode#StockExchange
+ * PriceSourceCode.StockExchange}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -55,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the source of a price quotation."</li>
  * </ul>
  */
-public class PriceSourceCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PriceSourceCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,6 +94,9 @@ public class PriceSourceCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FUND"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94B::PRIC//FUND</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -98,12 +108,13 @@ public class PriceSourceCode {
 	 * "Source of price quotation is a fund, eg, transfer agent, fund itself."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFund = new MMCode() {
+	public static final PriceSourceCode Fund = new PriceSourceCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94B::PRIC//FUND"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Fund";
 			definition = "Source of price quotation is a fund, eg, transfer agent, fund itself.";
-			owner_lazy = () -> PriceSourceCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceSourceCode.mmObject();
 			codeName = "FUND";
 		}
 	};
@@ -119,6 +130,9 @@ public class PriceSourceCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "THEO"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94B::PRIC//THEO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -131,12 +145,13 @@ public class PriceSourceCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTheoretical = new MMCode() {
+	public static final PriceSourceCode Theoretical = new PriceSourceCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94B::PRIC//THEO"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Theoretical";
 			definition = "Source of price quotation is a theoretical value based on the market yield.";
-			owner_lazy = () -> PriceSourceCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceSourceCode.mmObject();
 			codeName = "THEO";
 		}
 	};
@@ -151,6 +166,9 @@ public class PriceSourceCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "VEND"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94B::PRIC//VEND</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -161,12 +179,13 @@ public class PriceSourceCode {
 	 * definition} = "Source of price quotation is an external vendor."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVendor = new MMCode() {
+	public static final PriceSourceCode Vendor = new PriceSourceCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94B::PRIC//VEND"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Vendor";
 			definition = "Source of price quotation is an external vendor.";
-			owner_lazy = () -> PriceSourceCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceSourceCode.mmObject();
 			codeName = "VEND";
 		}
 	};
@@ -191,28 +210,61 @@ public class PriceSourceCode {
 	 * definition} = "Source of price quotation is a stock exchange."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockExchange = new MMCode() {
+	public static final PriceSourceCode StockExchange = new PriceSourceCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
 			definition = "Source of price quotation is a stock exchange.";
-			owner_lazy = () -> PriceSourceCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceSourceCode.mmObject();
 			codeName = "EXCH";
 		}
 	};
+	final static private LinkedHashMap<String, PriceSourceCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PriceSourceCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FUND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceSourceCode";
 				definition = "Specifies the source of a price quotation.";
-				code_lazy = () -> Arrays.asList(PriceSourceCode.mmFund, PriceSourceCode.mmTheoretical, PriceSourceCode.mmVendor, PriceSourceCode.mmStockExchange);
 				derivation_lazy = () -> Arrays.asList(PriceSource1Code.mmObject(), PriceSource2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceSourceCode.Fund, com.tools20022.repository.codeset.PriceSourceCode.Theoretical, com.tools20022.repository.codeset.PriceSourceCode.Vendor,
+						com.tools20022.repository.codeset.PriceSourceCode.StockExchange);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Fund.getCodeName().get(), Fund);
+		codesByName.put(Theoretical.getCodeName().get(), Theoretical);
+		codesByName.put(Vendor.getCodeName().get(), Vendor);
+		codesByName.put(StockExchange.getCodeName().get(), StockExchange);
+	}
+
+	public static PriceSourceCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PriceSourceCode[] values() {
+		PriceSourceCode[] values = new PriceSourceCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PriceSourceCode> {
+		@Override
+		public PriceSourceCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PriceSourceCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

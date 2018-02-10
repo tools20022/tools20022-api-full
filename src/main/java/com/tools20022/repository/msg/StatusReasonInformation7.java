@@ -27,9 +27,11 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStatusReasonRule#forStatusReasonInformation7
+ * ConstraintStatusReasonRule.forStatusReasonInformation7}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Further information on the status reason of the transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatusReasonInformation7", propOrder = {"statusOriginator", "statusReason", "additionalStatusReasonInformation"})
 public class StatusReasonInformation7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StsOrgtr", required = true)
 	protected PartyIdentification14 statusOriginator;
 	/**
-	 * Party issuing the status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -113,7 +124,7 @@ public class StatusReasonInformation7 {
 	public static final MMMessageAssociationEnd mmStatusOriginator = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> StatusReasonInformation7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "StsOrgtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +136,11 @@ public class StatusReasonInformation7 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification14.mmObject();
 		}
 	};
+	@XmlElement(name = "StsRsn", required = true)
 	protected StatusReason1Choice statusReason;
 	/**
-	 * Specifies the reason for the status report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -160,7 +172,7 @@ public class StatusReasonInformation7 {
 	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
-			componentContext_lazy = () -> StatusReasonInformation7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,13 +184,11 @@ public class StatusReasonInformation7 {
 			type_lazy = () -> StatusReason1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlStsRsnInf")
 	protected List<Max105Text> additionalStatusReasonInformation;
 	/**
-	 * Further details on the status reason.
 	 * 
-	 * Usage: Additional information can be used for several purposes, e.g. to
-	 * report repaired information, or to further detail the status reason.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,7 +223,7 @@ public class StatusReasonInformation7 {
 	public static final MMMessageAttribute mmAdditionalStatusReasonInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> StatusReasonInformation7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlStsRsnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,9 +237,11 @@ public class StatusReasonInformation7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatusReasonInformation7.mmStatusOriginator, StatusReasonInformation7.mmStatusReason, StatusReasonInformation7.mmAdditionalStatusReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReasonInformation7.mmStatusOriginator, com.tools20022.repository.msg.StatusReasonInformation7.mmStatusReason,
+						com.tools20022.repository.msg.StatusReasonInformation7.mmAdditionalStatusReasonInformation);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusReasonRule.forStatusReasonInformation7);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StatusReasonInformation7";
 				definition = "Further information on the status reason of the transaction.";
@@ -238,30 +250,30 @@ public class StatusReasonInformation7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StsOrgtr", required = true)
 	public PartyIdentification14 getStatusOriginator() {
 		return statusOriginator;
 	}
 
-	public void setStatusOriginator(com.tools20022.repository.msg.PartyIdentification14 statusOriginator) {
-		this.statusOriginator = statusOriginator;
+	public StatusReasonInformation7 setStatusOriginator(com.tools20022.repository.msg.PartyIdentification14 statusOriginator) {
+		this.statusOriginator = Objects.requireNonNull(statusOriginator);
+		return this;
 	}
 
-	@XmlElement(name = "StsRsn", required = true)
 	public StatusReason1Choice getStatusReason() {
 		return statusReason;
 	}
 
-	public void setStatusReason(StatusReason1Choice statusReason) {
-		this.statusReason = statusReason;
+	public StatusReasonInformation7 setStatusReason(StatusReason1Choice statusReason) {
+		this.statusReason = Objects.requireNonNull(statusReason);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlStsRsnInf")
 	public List<Max105Text> getAdditionalStatusReasonInformation() {
-		return additionalStatusReasonInformation;
+		return additionalStatusReasonInformation == null ? additionalStatusReasonInformation = new ArrayList<>() : additionalStatusReasonInformation;
 	}
 
-	public void setAdditionalStatusReasonInformation(List<Max105Text> additionalStatusReasonInformation) {
-		this.additionalStatusReasonInformation = additionalStatusReasonInformation;
+	public StatusReasonInformation7 setAdditionalStatusReasonInformation(List<Max105Text> additionalStatusReasonInformation) {
+		this.additionalStatusReasonInformation = Objects.requireNonNull(additionalStatusReasonInformation);
+		return this;
 	}
 }

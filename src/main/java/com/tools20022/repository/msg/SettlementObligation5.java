@@ -35,6 +35,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -93,8 +95,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -106,17 +108,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides details about the settlement obligation."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementObligation5", propOrder = {"relatedSettlementObligationIdentification", "obligationType", "description", "tradeDate", "quantity", "netPositionPrice", "tradingCurrency", "settlementAmount", "settlementDate",
 		"securitiesMovementType", "payment", "references"})
 public class SettlementObligation5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RltdSttlmOblgtnId")
 	protected Max35Text relatedSettlementObligationIdentification;
 	/**
-	 * Provides the identification of an existing obligation that is linked to
-	 * the new obligation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,7 +147,7 @@ public class SettlementObligation5 {
 	 */
 	public static final MMMessageAttribute mmRelatedSettlementObligationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementObligation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "RltdSttlmOblgtnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +158,11 @@ public class SettlementObligation5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OblgtnTp")
 	protected ObligationType1Choice obligationType;
 	/**
-	 * Indicates the type of the obligation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,7 +196,7 @@ public class SettlementObligation5 {
 	public static final MMMessageAttribute mmObligationType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementReason;
-			componentContext_lazy = () -> SettlementObligation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "OblgtnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,10 +207,11 @@ public class SettlementObligation5 {
 			complexType_lazy = () -> ObligationType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Desc")
 	protected Max35Text description;
 	/**
-	 * Provides additional information related to the linked obligation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -235,7 +239,7 @@ public class SettlementObligation5 {
 	 */
 	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementObligation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -246,10 +250,11 @@ public class SettlementObligation5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDt")
 	protected ISODate tradeDate;
 	/**
-	 * Provides the original trade date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -282,7 +287,7 @@ public class SettlementObligation5 {
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> SettlementObligation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -293,10 +298,11 @@ public class SettlementObligation5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "Qty", required = true)
 	protected FinancialInstrumentQuantity1Choice quantity;
 	/**
-	 * Specifies the quantity related to the settlement obligation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -330,7 +336,7 @@ public class SettlementObligation5 {
 	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
-			componentContext_lazy = () -> SettlementObligation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -342,10 +348,11 @@ public class SettlementObligation5 {
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NetPosPric")
 	protected Price4 netPositionPrice;
 	/**
-	 * Provides the price applied to that net position.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -376,7 +383,7 @@ public class SettlementObligation5 {
 	public static final MMMessageAssociationEnd mmNetPositionPrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Position.mmPrice;
-			componentContext_lazy = () -> SettlementObligation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "NetPosPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -388,10 +395,11 @@ public class SettlementObligation5 {
 			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgCcy")
 	protected CurrencyCode tradingCurrency;
 	/**
-	 * Specifies the ISO code of the trade currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -424,7 +432,7 @@ public class SettlementObligation5 {
 	public static final MMMessageAttribute mmTradingCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmTradingCurrency;
-			componentContext_lazy = () -> SettlementObligation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "TradgCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -435,10 +443,11 @@ public class SettlementObligation5 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmAmt", required = true)
 	protected AmountAndDirection27 settlementAmount;
 	/**
-	 * Provides the total amount to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -470,7 +479,7 @@ public class SettlementObligation5 {
 	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
-			componentContext_lazy = () -> SettlementObligation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -482,10 +491,11 @@ public class SettlementObligation5 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection27.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmDt", required = true)
 	protected ISODate settlementDate;
 	/**
-	 * Provides the contractual settlement date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -518,7 +528,7 @@ public class SettlementObligation5 {
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
-			componentContext_lazy = () -> SettlementObligation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -529,11 +539,11 @@ public class SettlementObligation5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesMvmntTp", required = true)
 	protected ReceiveDelivery1Code securitiesMovementType;
 	/**
-	 * Indicates if the obligation will result in a receive or a delivery of
-	 * securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -569,7 +579,7 @@ public class SettlementObligation5 {
 	public static final MMMessageAttribute mmSecuritiesMovementType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesMovementType;
-			componentContext_lazy = () -> SettlementObligation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesMvmntTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -580,10 +590,11 @@ public class SettlementObligation5 {
 			simpleType_lazy = () -> ReceiveDelivery1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Pmt", required = true)
 	protected DeliveryReceiptType2Code payment;
 	/**
-	 * Specifies how the transaction is to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -617,7 +628,7 @@ public class SettlementObligation5 {
 	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementType;
-			componentContext_lazy = () -> SettlementObligation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "Pmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -628,11 +639,11 @@ public class SettlementObligation5 {
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Refs")
 	protected Reference19 references;
 	/**
-	 * Provides the references of the underlying trade leg(s) and/or the
-	 * reference to the related net position message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -660,7 +671,7 @@ public class SettlementObligation5 {
 	 */
 	public static final MMMessageAssociationEnd mmReferences = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementObligation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation5.mmObject();
 			isDerived = false;
 			xmlTag = "Refs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -676,11 +687,13 @@ public class SettlementObligation5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementObligation5.mmRelatedSettlementObligationIdentification, SettlementObligation5.mmObligationType, SettlementObligation5.mmDescription, SettlementObligation5.mmTradeDate,
-						SettlementObligation5.mmQuantity, SettlementObligation5.mmNetPositionPrice, SettlementObligation5.mmTradingCurrency, SettlementObligation5.mmSettlementAmount, SettlementObligation5.mmSettlementDate,
-						SettlementObligation5.mmSecuritiesMovementType, SettlementObligation5.mmPayment, SettlementObligation5.mmReferences);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementObligation5.mmRelatedSettlementObligationIdentification, com.tools20022.repository.msg.SettlementObligation5.mmObligationType,
+						com.tools20022.repository.msg.SettlementObligation5.mmDescription, com.tools20022.repository.msg.SettlementObligation5.mmTradeDate, com.tools20022.repository.msg.SettlementObligation5.mmQuantity,
+						com.tools20022.repository.msg.SettlementObligation5.mmNetPositionPrice, com.tools20022.repository.msg.SettlementObligation5.mmTradingCurrency, com.tools20022.repository.msg.SettlementObligation5.mmSettlementAmount,
+						com.tools20022.repository.msg.SettlementObligation5.mmSettlementDate, com.tools20022.repository.msg.SettlementObligation5.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementObligation5.mmPayment,
+						com.tools20022.repository.msg.SettlementObligation5.mmReferences);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -696,111 +709,111 @@ public class SettlementObligation5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RltdSttlmOblgtnId")
-	public Max35Text getRelatedSettlementObligationIdentification() {
-		return relatedSettlementObligationIdentification;
+	public Optional<Max35Text> getRelatedSettlementObligationIdentification() {
+		return relatedSettlementObligationIdentification == null ? Optional.empty() : Optional.of(relatedSettlementObligationIdentification);
 	}
 
-	public void setRelatedSettlementObligationIdentification(Max35Text relatedSettlementObligationIdentification) {
+	public SettlementObligation5 setRelatedSettlementObligationIdentification(Max35Text relatedSettlementObligationIdentification) {
 		this.relatedSettlementObligationIdentification = relatedSettlementObligationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "OblgtnTp")
-	public ObligationType1Choice getObligationType() {
-		return obligationType;
+	public Optional<ObligationType1Choice> getObligationType() {
+		return obligationType == null ? Optional.empty() : Optional.of(obligationType);
 	}
 
-	public void setObligationType(ObligationType1Choice obligationType) {
+	public SettlementObligation5 setObligationType(ObligationType1Choice obligationType) {
 		this.obligationType = obligationType;
+		return this;
 	}
 
-	@XmlElement(name = "Desc")
-	public Max35Text getDescription() {
-		return description;
+	public Optional<Max35Text> getDescription() {
+		return description == null ? Optional.empty() : Optional.of(description);
 	}
 
-	public void setDescription(Max35Text description) {
+	public SettlementObligation5 setDescription(Max35Text description) {
 		this.description = description;
+		return this;
 	}
 
-	@XmlElement(name = "TradDt")
-	public ISODate getTradeDate() {
-		return tradeDate;
+	public Optional<ISODate> getTradeDate() {
+		return tradeDate == null ? Optional.empty() : Optional.of(tradeDate);
 	}
 
-	public void setTradeDate(ISODate tradeDate) {
+	public SettlementObligation5 setTradeDate(ISODate tradeDate) {
 		this.tradeDate = tradeDate;
+		return this;
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity1Choice getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(FinancialInstrumentQuantity1Choice quantity) {
-		this.quantity = quantity;
+	public SettlementObligation5 setQuantity(FinancialInstrumentQuantity1Choice quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	@XmlElement(name = "NetPosPric")
-	public Price4 getNetPositionPrice() {
-		return netPositionPrice;
+	public Optional<Price4> getNetPositionPrice() {
+		return netPositionPrice == null ? Optional.empty() : Optional.of(netPositionPrice);
 	}
 
-	public void setNetPositionPrice(com.tools20022.repository.msg.Price4 netPositionPrice) {
+	public SettlementObligation5 setNetPositionPrice(com.tools20022.repository.msg.Price4 netPositionPrice) {
 		this.netPositionPrice = netPositionPrice;
+		return this;
 	}
 
-	@XmlElement(name = "TradgCcy")
-	public CurrencyCode getTradingCurrency() {
-		return tradingCurrency;
+	public Optional<CurrencyCode> getTradingCurrency() {
+		return tradingCurrency == null ? Optional.empty() : Optional.of(tradingCurrency);
 	}
 
-	public void setTradingCurrency(CurrencyCode tradingCurrency) {
+	public SettlementObligation5 setTradingCurrency(CurrencyCode tradingCurrency) {
 		this.tradingCurrency = tradingCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmAmt", required = true)
 	public AmountAndDirection27 getSettlementAmount() {
 		return settlementAmount;
 	}
 
-	public void setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection27 settlementAmount) {
-		this.settlementAmount = settlementAmount;
+	public SettlementObligation5 setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection27 settlementAmount) {
+		this.settlementAmount = Objects.requireNonNull(settlementAmount);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmDt", required = true)
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
 
-	public void setSettlementDate(ISODate settlementDate) {
-		this.settlementDate = settlementDate;
+	public SettlementObligation5 setSettlementDate(ISODate settlementDate) {
+		this.settlementDate = Objects.requireNonNull(settlementDate);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesMvmntTp", required = true)
 	public ReceiveDelivery1Code getSecuritiesMovementType() {
 		return securitiesMovementType;
 	}
 
-	public void setSecuritiesMovementType(ReceiveDelivery1Code securitiesMovementType) {
-		this.securitiesMovementType = securitiesMovementType;
+	public SettlementObligation5 setSecuritiesMovementType(ReceiveDelivery1Code securitiesMovementType) {
+		this.securitiesMovementType = Objects.requireNonNull(securitiesMovementType);
+		return this;
 	}
 
-	@XmlElement(name = "Pmt", required = true)
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}
 
-	public void setPayment(DeliveryReceiptType2Code payment) {
-		this.payment = payment;
+	public SettlementObligation5 setPayment(DeliveryReceiptType2Code payment) {
+		this.payment = Objects.requireNonNull(payment);
+		return this;
 	}
 
-	@XmlElement(name = "Refs")
-	public Reference19 getReferences() {
-		return references;
+	public Optional<Reference19> getReferences() {
+		return references == null ? Optional.empty() : Optional.of(references);
 	}
 
-	public void setReferences(com.tools20022.repository.msg.Reference19 references) {
+	public SettlementObligation5 setReferences(com.tools20022.repository.msg.Reference19 references) {
 		this.references = references;
+		return this;
 	}
 }

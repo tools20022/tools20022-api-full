@@ -35,6 +35,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -96,8 +98,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -115,17 +117,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TradeLeg7", propOrder = {"tradeLegIdentification", "tradeIdentification", "tradeExecutionIdentification", "tradeDate", "settlementDate", "tradingCurrency", "buySellIndicator", "tradeQuantity", "dealPrice", "placeOfTrade",
 		"placeOfListing", "tradeType", "derivativeRelatedTrade", "tradingParty", "tradingPartyAccount", "tradingCapacity", "tradePostingCode"})
 public class TradeLeg7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradLegId", required = true)
 	protected Max35Text tradeLegIdentification;
 	/**
-	 * Unambiguous identification of the transaction (that is the trade leg) as
-	 * know by the instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +169,7 @@ public class TradeLeg7 {
 	public static final MMMessageAttribute mmTradeLegIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
-			componentContext_lazy = () -> TradeLeg7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
 			xmlTag = "TradLegId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,10 +181,11 @@ public class TradeLeg7 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TradId")
 	protected Max35Text tradeIdentification;
 	/**
-	 * Reference allocated by the broker dealer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -216,7 +219,7 @@ public class TradeLeg7 {
 	 */
 	public static final MMMessageAttribute mmTradeIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradeLeg7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
 			xmlTag = "TradId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,11 +231,11 @@ public class TradeLeg7 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TradExctnId", required = true)
 	protected Max35Text tradeExecutionIdentification;
 	/**
-	 * Unique reference assigned by the trading venue when the trade is
-	 * executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -268,7 +271,7 @@ public class TradeLeg7 {
 	 */
 	public static final MMMessageAttribute mmTradeExecutionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradeLeg7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
 			xmlTag = "TradExctnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,10 +283,11 @@ public class TradeLeg7 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDt", required = true)
 	protected ISODate tradeDate;
 	/**
-	 * Provides the date and time of trade transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -322,7 +326,7 @@ public class TradeLeg7 {
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> TradeLeg7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -334,10 +338,11 @@ public class TradeLeg7 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmDt", required = true)
 	protected DateFormat15Choice settlementDate;
 	/**
-	 * Provides the contractual settlement date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -378,7 +383,7 @@ public class TradeLeg7 {
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
-			componentContext_lazy = () -> TradeLeg7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -390,10 +395,11 @@ public class TradeLeg7 {
 			complexType_lazy = () -> DateFormat15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgCcy")
 	protected CurrencyCode tradingCurrency;
 	/**
-	 * Specifies the ISO code of the trade currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -433,7 +439,7 @@ public class TradeLeg7 {
 	public static final MMMessageAttribute mmTradingCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmTradingCurrency;
-			componentContext_lazy = () -> TradeLeg7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
 			xmlTag = "TradgCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -445,11 +451,11 @@ public class TradeLeg7 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "BuySellInd", required = true)
 	protected Side1Code buySellIndicator;
 	/**
-	 * Identifies the trade leg indicator which gives the trade side (buy or
-	 * sell).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -491,7 +497,7 @@ public class TradeLeg7 {
 	public static final MMMessageAttribute mmBuySellIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
-			componentContext_lazy = () -> TradeLeg7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
 			xmlTag = "BuySellInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -503,10 +509,11 @@ public class TradeLeg7 {
 			simpleType_lazy = () -> Side1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TradQty", required = true)
 	protected FinancialInstrumentQuantity1Choice tradeQuantity;
 	/**
-	 * Identifies the quantity of the trade leg.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -545,7 +552,7 @@ public class TradeLeg7 {
 	public static final MMMessageAssociationEnd mmTradeQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeQuantity;
-			componentContext_lazy = () -> TradeLeg7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
 			xmlTag = "TradQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -558,10 +565,11 @@ public class TradeLeg7 {
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DealPric", required = true)
 	protected Price4 dealPrice;
 	/**
-	 * Specifies the price of the traded financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -598,7 +606,7 @@ public class TradeLeg7 {
 	public static final MMMessageAssociationEnd mmDealPrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmDealPrice;
-			componentContext_lazy = () -> TradeLeg7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
 			xmlTag = "DealPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -611,10 +619,11 @@ public class TradeLeg7 {
 			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfTrad", required = true)
 	protected MarketIdentification20 placeOfTrade;
 	/**
-	 * Place at which the security is traded.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -652,7 +661,7 @@ public class TradeLeg7 {
 	public static final MMMessageAssociationEnd mmPlaceOfTrade = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
-			componentContext_lazy = () -> TradeLeg7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -665,10 +674,11 @@ public class TradeLeg7 {
 			type_lazy = () -> com.tools20022.repository.msg.MarketIdentification20.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfListg")
 	protected MarketIdentification21 placeOfListing;
 	/**
-	 * Place where the referenced financial instrument is listed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -708,7 +718,7 @@ public class TradeLeg7 {
 	public static final MMMessageAssociationEnd mmPlaceOfListing = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
-			componentContext_lazy = () -> TradeLeg7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfListg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -721,10 +731,11 @@ public class TradeLeg7 {
 			type_lazy = () -> com.tools20022.repository.msg.MarketIdentification21.mmObject();
 		}
 	};
+	@XmlElement(name = "TradTp", required = true)
 	protected TradeType1Code tradeType;
 	/**
-	 * Identifies the type of trade transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -764,7 +775,7 @@ public class TradeLeg7 {
 	public static final MMMessageAttribute mmTradeType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTransactionType;
-			componentContext_lazy = () -> TradeLeg7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
 			xmlTag = "TradTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -776,11 +787,11 @@ public class TradeLeg7 {
 			simpleType_lazy = () -> TradeType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DerivRltdTrad")
 	protected YesNoIndicator derivativeRelatedTrade;
 	/**
-	 * Indicates that the trade is for settlement of an exercised derivatives
-	 * contract.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -817,7 +828,7 @@ public class TradeLeg7 {
 	 */
 	public static final MMMessageAttribute mmDerivativeRelatedTrade = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradeLeg7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
 			xmlTag = "DerivRltdTrad";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -829,10 +840,11 @@ public class TradeLeg7 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgPty", required = true)
 	protected PartyIdentification35Choice tradingParty;
 	/**
-	 * Provides the identification of the trading party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -872,7 +884,7 @@ public class TradeLeg7 {
 	public static final MMMessageAttribute mmTradingParty = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> TradeLeg7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
 			xmlTag = "TradgPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -884,11 +896,11 @@ public class TradeLeg7 {
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgPtyAcct")
 	protected SecuritiesAccount19 tradingPartyAccount;
 	/**
-	 * Identifier of the trading participant's account at the trading venue
-	 * using the venue's coding system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -929,7 +941,7 @@ public class TradeLeg7 {
 	public static final MMMessageAssociationEnd mmTradingPartyAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> TradePartyRole.mmAccount;
-			componentContext_lazy = () -> TradeLeg7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
 			xmlTag = "TradgPtyAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -942,10 +954,11 @@ public class TradeLeg7 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgCpcty", required = true)
 	protected TradingCapacity5Code tradingCapacity;
 	/**
-	 * Specifies the role of the trading party in the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -987,7 +1000,7 @@ public class TradeLeg7 {
 	public static final MMMessageAttribute mmTradingCapacity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradePartyRole.mmTradingPartyCapacity;
-			componentContext_lazy = () -> TradeLeg7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
 			xmlTag = "TradgCpcty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -999,10 +1012,11 @@ public class TradeLeg7 {
 			simpleType_lazy = () -> TradingCapacity5Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TradPstngCd")
 	protected TradePosting1Code tradePostingCode;
 	/**
-	 * Indicates how a trade is maintained in the clearing account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1044,7 +1058,7 @@ public class TradeLeg7 {
 	public static final MMMessageAttribute mmTradePostingCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Clearing.mmTradePostingType;
-			componentContext_lazy = () -> TradeLeg7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
 			xmlTag = "TradPstngCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1060,11 +1074,14 @@ public class TradeLeg7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TradeLeg7.mmTradeLegIdentification, TradeLeg7.mmTradeIdentification, TradeLeg7.mmTradeExecutionIdentification, TradeLeg7.mmTradeDate, TradeLeg7.mmSettlementDate,
-						TradeLeg7.mmTradingCurrency, TradeLeg7.mmBuySellIndicator, TradeLeg7.mmTradeQuantity, TradeLeg7.mmDealPrice, TradeLeg7.mmPlaceOfTrade, TradeLeg7.mmPlaceOfListing, TradeLeg7.mmTradeType,
-						TradeLeg7.mmDerivativeRelatedTrade, TradeLeg7.mmTradingParty, TradeLeg7.mmTradingPartyAccount, TradeLeg7.mmTradingCapacity, TradeLeg7.mmTradePostingCode);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeLeg7.mmTradeLegIdentification, com.tools20022.repository.msg.TradeLeg7.mmTradeIdentification,
+						com.tools20022.repository.msg.TradeLeg7.mmTradeExecutionIdentification, com.tools20022.repository.msg.TradeLeg7.mmTradeDate, com.tools20022.repository.msg.TradeLeg7.mmSettlementDate,
+						com.tools20022.repository.msg.TradeLeg7.mmTradingCurrency, com.tools20022.repository.msg.TradeLeg7.mmBuySellIndicator, com.tools20022.repository.msg.TradeLeg7.mmTradeQuantity,
+						com.tools20022.repository.msg.TradeLeg7.mmDealPrice, com.tools20022.repository.msg.TradeLeg7.mmPlaceOfTrade, com.tools20022.repository.msg.TradeLeg7.mmPlaceOfListing,
+						com.tools20022.repository.msg.TradeLeg7.mmTradeType, com.tools20022.repository.msg.TradeLeg7.mmDerivativeRelatedTrade, com.tools20022.repository.msg.TradeLeg7.mmTradingParty,
+						com.tools20022.repository.msg.TradeLeg7.mmTradingPartyAccount, com.tools20022.repository.msg.TradeLeg7.mmTradingCapacity, com.tools20022.repository.msg.TradeLeg7.mmTradePostingCode);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -1081,156 +1098,156 @@ public class TradeLeg7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradLegId", required = true)
 	public Max35Text getTradeLegIdentification() {
 		return tradeLegIdentification;
 	}
 
-	public void setTradeLegIdentification(Max35Text tradeLegIdentification) {
-		this.tradeLegIdentification = tradeLegIdentification;
+	public TradeLeg7 setTradeLegIdentification(Max35Text tradeLegIdentification) {
+		this.tradeLegIdentification = Objects.requireNonNull(tradeLegIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TradId")
-	public Max35Text getTradeIdentification() {
-		return tradeIdentification;
+	public Optional<Max35Text> getTradeIdentification() {
+		return tradeIdentification == null ? Optional.empty() : Optional.of(tradeIdentification);
 	}
 
-	public void setTradeIdentification(Max35Text tradeIdentification) {
+	public TradeLeg7 setTradeIdentification(Max35Text tradeIdentification) {
 		this.tradeIdentification = tradeIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TradExctnId", required = true)
 	public Max35Text getTradeExecutionIdentification() {
 		return tradeExecutionIdentification;
 	}
 
-	public void setTradeExecutionIdentification(Max35Text tradeExecutionIdentification) {
-		this.tradeExecutionIdentification = tradeExecutionIdentification;
+	public TradeLeg7 setTradeExecutionIdentification(Max35Text tradeExecutionIdentification) {
+		this.tradeExecutionIdentification = Objects.requireNonNull(tradeExecutionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TradDt", required = true)
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
 
-	public void setTradeDate(ISODate tradeDate) {
-		this.tradeDate = tradeDate;
+	public TradeLeg7 setTradeDate(ISODate tradeDate) {
+		this.tradeDate = Objects.requireNonNull(tradeDate);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmDt", required = true)
 	public DateFormat15Choice getSettlementDate() {
 		return settlementDate;
 	}
 
-	public void setSettlementDate(DateFormat15Choice settlementDate) {
-		this.settlementDate = settlementDate;
+	public TradeLeg7 setSettlementDate(DateFormat15Choice settlementDate) {
+		this.settlementDate = Objects.requireNonNull(settlementDate);
+		return this;
 	}
 
-	@XmlElement(name = "TradgCcy")
-	public CurrencyCode getTradingCurrency() {
-		return tradingCurrency;
+	public Optional<CurrencyCode> getTradingCurrency() {
+		return tradingCurrency == null ? Optional.empty() : Optional.of(tradingCurrency);
 	}
 
-	public void setTradingCurrency(CurrencyCode tradingCurrency) {
+	public TradeLeg7 setTradingCurrency(CurrencyCode tradingCurrency) {
 		this.tradingCurrency = tradingCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "BuySellInd", required = true)
 	public Side1Code getBuySellIndicator() {
 		return buySellIndicator;
 	}
 
-	public void setBuySellIndicator(Side1Code buySellIndicator) {
-		this.buySellIndicator = buySellIndicator;
+	public TradeLeg7 setBuySellIndicator(Side1Code buySellIndicator) {
+		this.buySellIndicator = Objects.requireNonNull(buySellIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "TradQty", required = true)
 	public FinancialInstrumentQuantity1Choice getTradeQuantity() {
 		return tradeQuantity;
 	}
 
-	public void setTradeQuantity(FinancialInstrumentQuantity1Choice tradeQuantity) {
-		this.tradeQuantity = tradeQuantity;
+	public TradeLeg7 setTradeQuantity(FinancialInstrumentQuantity1Choice tradeQuantity) {
+		this.tradeQuantity = Objects.requireNonNull(tradeQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "DealPric", required = true)
 	public Price4 getDealPrice() {
 		return dealPrice;
 	}
 
-	public void setDealPrice(com.tools20022.repository.msg.Price4 dealPrice) {
-		this.dealPrice = dealPrice;
+	public TradeLeg7 setDealPrice(com.tools20022.repository.msg.Price4 dealPrice) {
+		this.dealPrice = Objects.requireNonNull(dealPrice);
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfTrad", required = true)
 	public MarketIdentification20 getPlaceOfTrade() {
 		return placeOfTrade;
 	}
 
-	public void setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification20 placeOfTrade) {
-		this.placeOfTrade = placeOfTrade;
+	public TradeLeg7 setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification20 placeOfTrade) {
+		this.placeOfTrade = Objects.requireNonNull(placeOfTrade);
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfListg")
-	public MarketIdentification21 getPlaceOfListing() {
-		return placeOfListing;
+	public Optional<MarketIdentification21> getPlaceOfListing() {
+		return placeOfListing == null ? Optional.empty() : Optional.of(placeOfListing);
 	}
 
-	public void setPlaceOfListing(com.tools20022.repository.msg.MarketIdentification21 placeOfListing) {
+	public TradeLeg7 setPlaceOfListing(com.tools20022.repository.msg.MarketIdentification21 placeOfListing) {
 		this.placeOfListing = placeOfListing;
+		return this;
 	}
 
-	@XmlElement(name = "TradTp", required = true)
 	public TradeType1Code getTradeType() {
 		return tradeType;
 	}
 
-	public void setTradeType(TradeType1Code tradeType) {
-		this.tradeType = tradeType;
+	public TradeLeg7 setTradeType(TradeType1Code tradeType) {
+		this.tradeType = Objects.requireNonNull(tradeType);
+		return this;
 	}
 
-	@XmlElement(name = "DerivRltdTrad")
-	public YesNoIndicator getDerivativeRelatedTrade() {
-		return derivativeRelatedTrade;
+	public Optional<YesNoIndicator> getDerivativeRelatedTrade() {
+		return derivativeRelatedTrade == null ? Optional.empty() : Optional.of(derivativeRelatedTrade);
 	}
 
-	public void setDerivativeRelatedTrade(YesNoIndicator derivativeRelatedTrade) {
+	public TradeLeg7 setDerivativeRelatedTrade(YesNoIndicator derivativeRelatedTrade) {
 		this.derivativeRelatedTrade = derivativeRelatedTrade;
+		return this;
 	}
 
-	@XmlElement(name = "TradgPty", required = true)
 	public PartyIdentification35Choice getTradingParty() {
 		return tradingParty;
 	}
 
-	public void setTradingParty(PartyIdentification35Choice tradingParty) {
-		this.tradingParty = tradingParty;
+	public TradeLeg7 setTradingParty(PartyIdentification35Choice tradingParty) {
+		this.tradingParty = Objects.requireNonNull(tradingParty);
+		return this;
 	}
 
-	@XmlElement(name = "TradgPtyAcct")
-	public SecuritiesAccount19 getTradingPartyAccount() {
-		return tradingPartyAccount;
+	public Optional<SecuritiesAccount19> getTradingPartyAccount() {
+		return tradingPartyAccount == null ? Optional.empty() : Optional.of(tradingPartyAccount);
 	}
 
-	public void setTradingPartyAccount(com.tools20022.repository.msg.SecuritiesAccount19 tradingPartyAccount) {
+	public TradeLeg7 setTradingPartyAccount(com.tools20022.repository.msg.SecuritiesAccount19 tradingPartyAccount) {
 		this.tradingPartyAccount = tradingPartyAccount;
+		return this;
 	}
 
-	@XmlElement(name = "TradgCpcty", required = true)
 	public TradingCapacity5Code getTradingCapacity() {
 		return tradingCapacity;
 	}
 
-	public void setTradingCapacity(TradingCapacity5Code tradingCapacity) {
-		this.tradingCapacity = tradingCapacity;
+	public TradeLeg7 setTradingCapacity(TradingCapacity5Code tradingCapacity) {
+		this.tradingCapacity = Objects.requireNonNull(tradingCapacity);
+		return this;
 	}
 
-	@XmlElement(name = "TradPstngCd")
-	public TradePosting1Code getTradePostingCode() {
-		return tradePostingCode;
+	public Optional<TradePosting1Code> getTradePostingCode() {
+		return tradePostingCode == null ? Optional.empty() : Optional.of(tradePostingCode);
 	}
 
-	public void setTradePostingCode(TradePosting1Code tradePostingCode) {
+	public TradeLeg7 setTradePostingCode(TradePosting1Code tradePostingCode) {
 		this.tradePostingCode = tradePostingCode;
+		return this;
 	}
 }

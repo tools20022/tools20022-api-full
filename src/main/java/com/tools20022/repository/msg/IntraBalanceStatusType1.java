@@ -25,9 +25,8 @@ import com.tools20022.repository.choice.ProcessingStatus33Choice;
 import com.tools20022.repository.choice.SettlementStatus1Choice;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of the intra-balance movement status type."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IntraBalanceStatusType1", propOrder = {"processingStatus", "settlementStatus", "settled"})
 public class IntraBalanceStatusType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrcgSts")
 	protected List<ProcessingStatus33Choice> processingStatus;
 	/**
-	 * Provides details on the processing status of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +113,7 @@ public class IntraBalanceStatusType1 {
 	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
-			componentContext_lazy = () -> IntraBalanceStatusType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceStatusType1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +123,11 @@ public class IntraBalanceStatusType1 {
 			complexType_lazy = () -> ProcessingStatus33Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmSts")
 	protected List<SettlementStatus1Choice> settlementStatus;
 	/**
-	 * Provides the settlement status of a transaction
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +161,7 @@ public class IntraBalanceStatusType1 {
 	public static final MMMessageAttribute mmSettlementStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
-			componentContext_lazy = () -> IntraBalanceStatusType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceStatusType1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,10 +171,11 @@ public class IntraBalanceStatusType1 {
 			complexType_lazy = () -> SettlementStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Sttld")
 	protected ProprietaryReason1 settled;
 	/**
-	 * Specifies the state or the condition.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -205,7 +207,7 @@ public class IntraBalanceStatusType1 {
 	public static final MMMessageAssociationEnd mmSettled = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
-			componentContext_lazy = () -> IntraBalanceStatusType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceStatusType1.mmObject();
 			isDerived = false;
 			xmlTag = "Sttld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,9 +223,10 @@ public class IntraBalanceStatusType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IntraBalanceStatusType1.mmProcessingStatus, IntraBalanceStatusType1.mmSettlementStatus, IntraBalanceStatusType1.mmSettled);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceStatusType1.mmProcessingStatus, com.tools20022.repository.msg.IntraBalanceStatusType1.mmSettlementStatus,
+						com.tools20022.repository.msg.IntraBalanceStatusType1.mmSettled);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceStatusType1";
 				definition = "Choice of the intra-balance movement status type.";
@@ -232,30 +235,30 @@ public class IntraBalanceStatusType1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrcgSts")
 	public List<ProcessingStatus33Choice> getProcessingStatus() {
-		return processingStatus;
+		return processingStatus == null ? processingStatus = new ArrayList<>() : processingStatus;
 	}
 
-	public void setProcessingStatus(List<ProcessingStatus33Choice> processingStatus) {
-		this.processingStatus = processingStatus;
+	public IntraBalanceStatusType1 setProcessingStatus(List<ProcessingStatus33Choice> processingStatus) {
+		this.processingStatus = Objects.requireNonNull(processingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmSts")
 	public List<SettlementStatus1Choice> getSettlementStatus() {
-		return settlementStatus;
+		return settlementStatus == null ? settlementStatus = new ArrayList<>() : settlementStatus;
 	}
 
-	public void setSettlementStatus(List<SettlementStatus1Choice> settlementStatus) {
-		this.settlementStatus = settlementStatus;
+	public IntraBalanceStatusType1 setSettlementStatus(List<SettlementStatus1Choice> settlementStatus) {
+		this.settlementStatus = Objects.requireNonNull(settlementStatus);
+		return this;
 	}
 
-	@XmlElement(name = "Sttld")
-	public ProprietaryReason1 getSettled() {
-		return settled;
+	public Optional<ProprietaryReason1> getSettled() {
+		return settled == null ? Optional.empty() : Optional.of(settled);
 	}
 
-	public void setSettled(com.tools20022.repository.msg.ProprietaryReason1 settled) {
+	public IntraBalanceStatusType1 setSettled(com.tools20022.repository.msg.ProprietaryReason1 settled) {
 		this.settled = settled;
+		return this;
 	}
 }

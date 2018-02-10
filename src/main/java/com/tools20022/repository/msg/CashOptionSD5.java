@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -28,6 +29,8 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashOptionSD5", propOrder = {"placeAndName", "payoutNumber", "payoutType", "payoutStatus", "maximumWithholdingTaxPercentage"})
 public class CashOptionSD5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +111,7 @@ public class CashOptionSD5 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashOptionSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +122,11 @@ public class CashOptionSD5 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PyoutNb", required = true)
 	protected Exact3NumericText payoutNumber;
 	/**
-	 * Unique number associated with a payout within an option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -136,6 +141,9 @@ public class CashOptionSD5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PyoutNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Payout Number</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -148,9 +156,10 @@ public class CashOptionSD5 {
 	 */
 	public static final MMMessageAttribute mmPayoutNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashOptionSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "PyoutNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Payout Number"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutNumber";
 			definition = "Unique number associated with a payout within an option.";
@@ -159,10 +168,11 @@ public class CashOptionSD5 {
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "PyoutTp", required = true)
 	protected DTCCPayoutType1Code payoutType;
 	/**
-	 * Describes the type of payout associated with the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,6 +187,9 @@ public class CashOptionSD5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PyoutTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Payout Type</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -189,9 +202,10 @@ public class CashOptionSD5 {
 	 */
 	public static final MMMessageAttribute mmPayoutType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashOptionSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "PyoutTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Payout Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutType";
 			definition = "Describes the type of payout associated with the event.";
@@ -200,10 +214,11 @@ public class CashOptionSD5 {
 			simpleType_lazy = () -> DTCCPayoutType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PyoutSts", required = true)
 	protected WorkflowStatus1Code payoutStatus;
 	/**
-	 * Workflow status of the payout.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,6 +233,9 @@ public class CashOptionSD5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PyoutSts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Payout Status</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -230,9 +248,10 @@ public class CashOptionSD5 {
 	 */
 	public static final MMMessageAttribute mmPayoutStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashOptionSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "PyoutSts";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Payout Status"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutStatus";
 			definition = "Workflow status of the payout.";
@@ -241,10 +260,11 @@ public class CashOptionSD5 {
 			simpleType_lazy = () -> WorkflowStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxWhldgTaxPctg")
 	protected PercentageRate maximumWithholdingTaxPercentage;
 	/**
-	 * Maximum withholding rate based on the country of the sourced income.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,6 +279,9 @@ public class CashOptionSD5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MaxWhldgTaxPctg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Maximum Withholding Tax Percentage</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -272,9 +295,10 @@ public class CashOptionSD5 {
 	 */
 	public static final MMMessageAttribute mmMaximumWithholdingTaxPercentage = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashOptionSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD5.mmObject();
 			isDerived = false;
 			xmlTag = "MaxWhldgTaxPctg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Maximum Withholding Tax Percentage"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumWithholdingTaxPercentage";
 			definition = "Maximum withholding rate based on the country of the sourced income.  ";
@@ -287,8 +311,9 @@ public class CashOptionSD5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashOptionSD5.mmPlaceAndName, CashOptionSD5.mmPayoutNumber, CashOptionSD5.mmPayoutType, CashOptionSD5.mmPayoutStatus, CashOptionSD5.mmMaximumWithholdingTaxPercentage);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOptionSD5.mmPlaceAndName, com.tools20022.repository.msg.CashOptionSD5.mmPayoutNumber, com.tools20022.repository.msg.CashOptionSD5.mmPayoutType,
+						com.tools20022.repository.msg.CashOptionSD5.mmPayoutStatus, com.tools20022.repository.msg.CashOptionSD5.mmMaximumWithholdingTaxPercentage);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashOptionSD5";
 				definition = "Provides additional information regarding corporate action option cash movement details.";
@@ -297,48 +322,48 @@ public class CashOptionSD5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CashOptionSD5 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "PyoutNb", required = true)
 	public Exact3NumericText getPayoutNumber() {
 		return payoutNumber;
 	}
 
-	public void setPayoutNumber(Exact3NumericText payoutNumber) {
-		this.payoutNumber = payoutNumber;
+	public CashOptionSD5 setPayoutNumber(Exact3NumericText payoutNumber) {
+		this.payoutNumber = Objects.requireNonNull(payoutNumber);
+		return this;
 	}
 
-	@XmlElement(name = "PyoutTp", required = true)
 	public DTCCPayoutType1Code getPayoutType() {
 		return payoutType;
 	}
 
-	public void setPayoutType(DTCCPayoutType1Code payoutType) {
-		this.payoutType = payoutType;
+	public CashOptionSD5 setPayoutType(DTCCPayoutType1Code payoutType) {
+		this.payoutType = Objects.requireNonNull(payoutType);
+		return this;
 	}
 
-	@XmlElement(name = "PyoutSts", required = true)
 	public WorkflowStatus1Code getPayoutStatus() {
 		return payoutStatus;
 	}
 
-	public void setPayoutStatus(WorkflowStatus1Code payoutStatus) {
-		this.payoutStatus = payoutStatus;
+	public CashOptionSD5 setPayoutStatus(WorkflowStatus1Code payoutStatus) {
+		this.payoutStatus = Objects.requireNonNull(payoutStatus);
+		return this;
 	}
 
-	@XmlElement(name = "MaxWhldgTaxPctg")
-	public PercentageRate getMaximumWithholdingTaxPercentage() {
-		return maximumWithholdingTaxPercentage;
+	public Optional<PercentageRate> getMaximumWithholdingTaxPercentage() {
+		return maximumWithholdingTaxPercentage == null ? Optional.empty() : Optional.of(maximumWithholdingTaxPercentage);
 	}
 
-	public void setMaximumWithholdingTaxPercentage(PercentageRate maximumWithholdingTaxPercentage) {
+	public CashOptionSD5 setMaximumWithholdingTaxPercentage(PercentageRate maximumWithholdingTaxPercentage) {
 		this.maximumWithholdingTaxPercentage = maximumWithholdingTaxPercentage;
+		return this;
 	}
 }

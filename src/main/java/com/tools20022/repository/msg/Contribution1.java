@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,16 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Contribution1", propOrder = {"account", "requiredAmount", "increaseCoverageAmount", "nonClearingMember"})
 public class Contribution1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Acct")
 	protected AccountIdentification4Choice account;
 	/**
-	 * Segregation done by the central counterparty based on trading
-	 * venues/products or other attributes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +124,7 @@ public class Contribution1 {
 	public static final MMMessageAttribute mmAccount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> Contribution1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Contribution1.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,11 +135,11 @@ public class Contribution1 {
 			complexType_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqrdAmt", required = true)
 	protected ActiveCurrencyAndAmount requiredAmount;
 	/**
-	 * Total contribution required by the clearing member to participate to the
-	 * default fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,7 +174,7 @@ public class Contribution1 {
 	public static final MMMessageAttribute mmRequiredAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DefaultFund.mmTotalAmount;
-			componentContext_lazy = () -> Contribution1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Contribution1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqrdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,12 +185,11 @@ public class Contribution1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "IncrCvrgAmt")
 	protected ActiveCurrencyAndAmount increaseCoverageAmount;
 	/**
-	 * Additional amount that the clearing member will have to provide to cover
-	 * a risk increase. This results from a risk management decision depending
-	 * on central counterparty specific criteria.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -223,7 +224,7 @@ public class Contribution1 {
 	public static final MMMessageAttribute mmIncreaseCoverageAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DefaultFundContribution.mmExcessOrDeficitAmount;
-			componentContext_lazy = () -> Contribution1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Contribution1.mmObject();
 			isDerived = false;
 			xmlTag = "IncrCvrgAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,10 +235,11 @@ public class Contribution1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "NonClrMmb")
 	protected PartyIdentificationAndAccount31 nonClearingMember;
 	/**
-	 * Provides the identification for the non-clearing member.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -269,7 +271,7 @@ public class Contribution1 {
 	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Contribution1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Contribution1.mmObject();
 			isDerived = false;
 			xmlTag = "NonClrMmb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -285,9 +287,10 @@ public class Contribution1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Contribution1.mmAccount, Contribution1.mmRequiredAmount, Contribution1.mmIncreaseCoverageAmount, Contribution1.mmNonClearingMember);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Contribution1.mmAccount, com.tools20022.repository.msg.Contribution1.mmRequiredAmount,
+						com.tools20022.repository.msg.Contribution1.mmIncreaseCoverageAmount, com.tools20022.repository.msg.Contribution1.mmNonClearingMember);
 				trace_lazy = () -> DefaultFundContribution.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Contribution1";
 				definition = "Provides additional information such as the contribution account identification or the requirement amount.";
@@ -296,39 +299,39 @@ public class Contribution1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Acct")
-	public AccountIdentification4Choice getAccount() {
-		return account;
+	public Optional<AccountIdentification4Choice> getAccount() {
+		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public void setAccount(AccountIdentification4Choice account) {
+	public Contribution1 setAccount(AccountIdentification4Choice account) {
 		this.account = account;
+		return this;
 	}
 
-	@XmlElement(name = "ReqrdAmt", required = true)
 	public ActiveCurrencyAndAmount getRequiredAmount() {
 		return requiredAmount;
 	}
 
-	public void setRequiredAmount(ActiveCurrencyAndAmount requiredAmount) {
-		this.requiredAmount = requiredAmount;
+	public Contribution1 setRequiredAmount(ActiveCurrencyAndAmount requiredAmount) {
+		this.requiredAmount = Objects.requireNonNull(requiredAmount);
+		return this;
 	}
 
-	@XmlElement(name = "IncrCvrgAmt")
-	public ActiveCurrencyAndAmount getIncreaseCoverageAmount() {
-		return increaseCoverageAmount;
+	public Optional<ActiveCurrencyAndAmount> getIncreaseCoverageAmount() {
+		return increaseCoverageAmount == null ? Optional.empty() : Optional.of(increaseCoverageAmount);
 	}
 
-	public void setIncreaseCoverageAmount(ActiveCurrencyAndAmount increaseCoverageAmount) {
+	public Contribution1 setIncreaseCoverageAmount(ActiveCurrencyAndAmount increaseCoverageAmount) {
 		this.increaseCoverageAmount = increaseCoverageAmount;
+		return this;
 	}
 
-	@XmlElement(name = "NonClrMmb")
-	public PartyIdentificationAndAccount31 getNonClearingMember() {
-		return nonClearingMember;
+	public Optional<PartyIdentificationAndAccount31> getNonClearingMember() {
+		return nonClearingMember == null ? Optional.empty() : Optional.of(nonClearingMember);
 	}
 
-	public void setNonClearingMember(com.tools20022.repository.msg.PartyIdentificationAndAccount31 nonClearingMember) {
+	public Contribution1 setNonClearingMember(com.tools20022.repository.msg.PartyIdentificationAndAccount31 nonClearingMember) {
 		this.nonClearingMember = nonClearingMember;
+		return this;
 	}
 }

@@ -22,9 +22,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Reservation;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Reports on reservations."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Reservations2", propOrder = {"currentReservation", "defaultReservation"})
 public class Reservations2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CurRsvatn")
 	protected List<com.tools20022.repository.msg.ReservationReport2> currentReservation;
 	/**
-	 * Report is given for a current reservation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -103,7 +106,7 @@ public class Reservations2 {
 	public static final MMMessageAssociationEnd mmCurrentReservation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
-			componentContext_lazy = () -> Reservations2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reservations2.mmObject();
 			isDerived = false;
 			xmlTag = "CurRsvatn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,10 +117,11 @@ public class Reservations2 {
 			type_lazy = () -> com.tools20022.repository.msg.ReservationReport2.mmObject();
 		}
 	};
+	@XmlElement(name = "DfltRsvatn")
 	protected List<com.tools20022.repository.msg.ReservationReport2> defaultReservation;
 	/**
-	 * Report is given for a default reservation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -147,7 +151,7 @@ public class Reservations2 {
 	public static final MMMessageAssociationEnd mmDefaultReservation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
-			componentContext_lazy = () -> Reservations2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reservations2.mmObject();
 			isDerived = false;
 			xmlTag = "DfltRsvatn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,9 +166,9 @@ public class Reservations2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Reservations2.mmCurrentReservation, Reservations2.mmDefaultReservation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reservations2.mmCurrentReservation, com.tools20022.repository.msg.Reservations2.mmDefaultReservation);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reservations2";
 				definition = "Reports on reservations.";
@@ -173,21 +177,21 @@ public class Reservations2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CurRsvatn")
 	public List<ReservationReport2> getCurrentReservation() {
-		return currentReservation;
+		return currentReservation == null ? currentReservation = new ArrayList<>() : currentReservation;
 	}
 
-	public void setCurrentReservation(List<com.tools20022.repository.msg.ReservationReport2> currentReservation) {
-		this.currentReservation = currentReservation;
+	public Reservations2 setCurrentReservation(List<com.tools20022.repository.msg.ReservationReport2> currentReservation) {
+		this.currentReservation = Objects.requireNonNull(currentReservation);
+		return this;
 	}
 
-	@XmlElement(name = "DfltRsvatn")
 	public List<ReservationReport2> getDefaultReservation() {
-		return defaultReservation;
+		return defaultReservation == null ? defaultReservation = new ArrayList<>() : defaultReservation;
 	}
 
-	public void setDefaultReservation(List<com.tools20022.repository.msg.ReservationReport2> defaultReservation) {
-		this.defaultReservation = defaultReservation;
+	public Reservations2 setDefaultReservation(List<com.tools20022.repository.msg.ReservationReport2> defaultReservation) {
+		this.defaultReservation = Objects.requireNonNull(defaultReservation);
+		return this;
 	}
 }

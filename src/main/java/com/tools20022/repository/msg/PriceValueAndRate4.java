@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Price and rate."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PriceValueAndRate4", propOrder = {"value", "rate"})
 public class PriceValueAndRate4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Val")
 	protected PriceAndDirection1 value;
 	/**
-	 * Price expressed as a currency and amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +107,7 @@ public class PriceValueAndRate4 {
 	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
-			componentContext_lazy = () -> PriceValueAndRate4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValueAndRate4.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +118,11 @@ public class PriceValueAndRate4 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PriceAndDirection1.mmObject();
 		}
 	};
+	@XmlElement(name = "Rate")
 	protected PercentageRate rate;
 	/**
-	 * Price expressed as a percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,7 +156,7 @@ public class PriceValueAndRate4 {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
-			componentContext_lazy = () -> PriceValueAndRate4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValueAndRate4.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,9 +171,9 @@ public class PriceValueAndRate4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PriceValueAndRate4.mmValue, PriceValueAndRate4.mmRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceValueAndRate4.mmValue, com.tools20022.repository.msg.PriceValueAndRate4.mmRate);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceValueAndRate4";
 				definition = "Price and rate.";
@@ -179,21 +182,21 @@ public class PriceValueAndRate4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Val")
-	public PriceAndDirection1 getValue() {
-		return value;
+	public Optional<PriceAndDirection1> getValue() {
+		return value == null ? Optional.empty() : Optional.of(value);
 	}
 
-	public void setValue(com.tools20022.repository.msg.PriceAndDirection1 value) {
+	public PriceValueAndRate4 setValue(com.tools20022.repository.msg.PriceAndDirection1 value) {
 		this.value = value;
+		return this;
 	}
 
-	@XmlElement(name = "Rate")
-	public PercentageRate getRate() {
-		return rate;
+	public Optional<PercentageRate> getRate() {
+		return rate == null ? Optional.empty() : Optional.of(rate);
 	}
 
-	public void setRate(PercentageRate rate) {
+	public PriceValueAndRate4 setRate(PercentageRate rate) {
 		this.rate = rate;
+		return this;
 	}
 }

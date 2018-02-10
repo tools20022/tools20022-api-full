@@ -24,9 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReportingMessageStatus1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides the report level status advice."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatusAdviceReport3", propOrder = {"status", "validationRule", "messageDate", "statistics"})
 public class StatusAdviceReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts", required = true)
 	protected ReportingMessageStatus1Code status;
 	/**
-	 * Provides the status for the full message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +105,7 @@ public class StatusAdviceReport3 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatusAdviceReport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAdviceReport3.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +116,11 @@ public class StatusAdviceReport3 {
 			simpleType_lazy = () -> ReportingMessageStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "VldtnRule")
 	protected List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule;
 	/**
-	 * Provides the details of the rule which could not be validated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -147,7 +148,7 @@ public class StatusAdviceReport3 {
 	 */
 	public static final MMMessageAssociationEnd mmValidationRule = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusAdviceReport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAdviceReport3.mmObject();
 			isDerived = false;
 			xmlTag = "VldtnRule";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,10 +159,11 @@ public class StatusAdviceReport3 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgDt")
 	protected ISODate messageDate;
 	/**
-	 * Indicates the report date whith the status advice message is related to.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +192,7 @@ public class StatusAdviceReport3 {
 	 */
 	public static final MMMessageAttribute mmMessageDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatusAdviceReport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAdviceReport3.mmObject();
 			isDerived = false;
 			xmlTag = "MsgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,10 +203,11 @@ public class StatusAdviceReport3 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "Sttstcs")
 	protected OriginalReportStatistics3 statistics;
 	/**
-	 * Statistical information on the results of the records processing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -232,7 +235,7 @@ public class StatusAdviceReport3 {
 	 */
 	public static final MMMessageAssociationEnd mmStatistics = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusAdviceReport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAdviceReport3.mmObject();
 			isDerived = false;
 			xmlTag = "Sttstcs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,8 +251,9 @@ public class StatusAdviceReport3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatusAdviceReport3.mmStatus, StatusAdviceReport3.mmValidationRule, StatusAdviceReport3.mmMessageDate, StatusAdviceReport3.mmStatistics);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAdviceReport3.mmStatus, com.tools20022.repository.msg.StatusAdviceReport3.mmValidationRule,
+						com.tools20022.repository.msg.StatusAdviceReport3.mmMessageDate, com.tools20022.repository.msg.StatusAdviceReport3.mmStatistics);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusAdviceReport3";
 				definition = "Provides the report level status advice.";
@@ -258,39 +262,39 @@ public class StatusAdviceReport3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public ReportingMessageStatus1Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(ReportingMessageStatus1Code status) {
-		this.status = status;
+	public StatusAdviceReport3 setStatus(ReportingMessageStatus1Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "VldtnRule")
 	public List<GenericValidationRuleIdentification1> getValidationRule() {
-		return validationRule;
+		return validationRule == null ? validationRule = new ArrayList<>() : validationRule;
 	}
 
-	public void setValidationRule(List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule) {
-		this.validationRule = validationRule;
+	public StatusAdviceReport3 setValidationRule(List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule) {
+		this.validationRule = Objects.requireNonNull(validationRule);
+		return this;
 	}
 
-	@XmlElement(name = "MsgDt")
-	public ISODate getMessageDate() {
-		return messageDate;
+	public Optional<ISODate> getMessageDate() {
+		return messageDate == null ? Optional.empty() : Optional.of(messageDate);
 	}
 
-	public void setMessageDate(ISODate messageDate) {
+	public StatusAdviceReport3 setMessageDate(ISODate messageDate) {
 		this.messageDate = messageDate;
+		return this;
 	}
 
-	@XmlElement(name = "Sttstcs")
-	public OriginalReportStatistics3 getStatistics() {
-		return statistics;
+	public Optional<OriginalReportStatistics3> getStatistics() {
+		return statistics == null ? Optional.empty() : Optional.of(statistics);
 	}
 
-	public void setStatistics(com.tools20022.repository.msg.OriginalReportStatistics3 statistics) {
+	public StatusAdviceReport3 setStatistics(com.tools20022.repository.msg.OriginalReportStatistics3 statistics) {
 		this.statistics = statistics;
+		return this;
 	}
 }

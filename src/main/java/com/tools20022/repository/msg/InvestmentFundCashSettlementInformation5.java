@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -76,8 +77,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,16 +103,16 @@ import javax.xml.bind.annotation.XmlType;
  * InvestmentFundCashSettlementInformation3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvestmentFundCashSettlementInformation5", propOrder = {"subscriptionPaymentInstrument", "redemptionPaymentInstrument", "dividendPaymentInstrument", "savingsPlanPaymentInstrument", "interestPaymentInstrument"})
 public class InvestmentFundCashSettlementInformation5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SbcptPmtInstrm")
 	protected PaymentInstrument11 subscriptionPaymentInstrument;
 	/**
-	 * Instrument that has or represents monetary value and is used to process a
-	 * payment instruction for a subscription payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -153,7 +154,7 @@ public class InvestmentFundCashSettlementInformation5 {
 	public static final MMMessageAssociationEnd mmSubscriptionPaymentInstrument = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
-			componentContext_lazy = () -> InvestmentFundCashSettlementInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptPmtInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,11 +167,11 @@ public class InvestmentFundCashSettlementInformation5 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentInstrument11.mmObject();
 		}
 	};
+	@XmlElement(name = "RedPmtInstrm")
 	protected PaymentInstrument10 redemptionPaymentInstrument;
 	/**
-	 * Instrument that has or represents monetary value and is used to process a
-	 * payment instruction for a redemption payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -211,7 +212,7 @@ public class InvestmentFundCashSettlementInformation5 {
 	public static final MMMessageAssociationEnd mmRedemptionPaymentInstrument = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
-			componentContext_lazy = () -> InvestmentFundCashSettlementInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "RedPmtInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,11 +225,11 @@ public class InvestmentFundCashSettlementInformation5 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentInstrument10.mmObject();
 		}
 	};
+	@XmlElement(name = "DvddPmtInstrm")
 	protected PaymentInstrument10 dividendPaymentInstrument;
 	/**
-	 * Instrument that has or represents monetary value and is used to process a
-	 * payment instruction for a dividend payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -269,7 +270,7 @@ public class InvestmentFundCashSettlementInformation5 {
 	public static final MMMessageAssociationEnd mmDividendPaymentInstrument = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
-			componentContext_lazy = () -> InvestmentFundCashSettlementInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "DvddPmtInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -282,11 +283,11 @@ public class InvestmentFundCashSettlementInformation5 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentInstrument10.mmObject();
 		}
 	};
+	@XmlElement(name = "SvgsPlanPmtInstrm")
 	protected PaymentInstrument11 savingsPlanPaymentInstrument;
 	/**
-	 * Instrument that has or represents monetary value and is used to process a
-	 * payment instruction for a savings plan payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -327,7 +328,7 @@ public class InvestmentFundCashSettlementInformation5 {
 	public static final MMMessageAssociationEnd mmSavingsPlanPaymentInstrument = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
-			componentContext_lazy = () -> InvestmentFundCashSettlementInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "SvgsPlanPmtInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -340,11 +341,11 @@ public class InvestmentFundCashSettlementInformation5 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentInstrument11.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstPmtInstrm")
 	protected PaymentInstrument10 interestPaymentInstrument;
 	/**
-	 * Instrument that has or represents monetary value and is used to process a
-	 * payment instruction for an interest payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -387,7 +388,7 @@ public class InvestmentFundCashSettlementInformation5 {
 	public static final MMMessageAttribute mmInterestPaymentInstrument = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
-			componentContext_lazy = () -> InvestmentFundCashSettlementInformation5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstPmtInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -403,11 +404,12 @@ public class InvestmentFundCashSettlementInformation5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InvestmentFundCashSettlementInformation5.mmSubscriptionPaymentInstrument, InvestmentFundCashSettlementInformation5.mmRedemptionPaymentInstrument,
-						InvestmentFundCashSettlementInformation5.mmDividendPaymentInstrument, InvestmentFundCashSettlementInformation5.mmSavingsPlanPaymentInstrument, InvestmentFundCashSettlementInformation5.mmInterestPaymentInstrument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmSubscriptionPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmRedemptionPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmDividendPaymentInstrument,
+						com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmSavingsPlanPaymentInstrument, com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmInterestPaymentInstrument);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV03.mmCashSettlement, AccountOpeningInstructionV03.mmCashSettlement);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundCashSettlementInformation5";
 				definition = "Settlement instructions to be used to transfer cash from the Debtor to the Creditor.";
@@ -418,48 +420,48 @@ public class InvestmentFundCashSettlementInformation5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SbcptPmtInstrm")
-	public PaymentInstrument11 getSubscriptionPaymentInstrument() {
-		return subscriptionPaymentInstrument;
+	public Optional<PaymentInstrument11> getSubscriptionPaymentInstrument() {
+		return subscriptionPaymentInstrument == null ? Optional.empty() : Optional.of(subscriptionPaymentInstrument);
 	}
 
-	public void setSubscriptionPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument11 subscriptionPaymentInstrument) {
+	public InvestmentFundCashSettlementInformation5 setSubscriptionPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument11 subscriptionPaymentInstrument) {
 		this.subscriptionPaymentInstrument = subscriptionPaymentInstrument;
+		return this;
 	}
 
-	@XmlElement(name = "RedPmtInstrm")
-	public PaymentInstrument10 getRedemptionPaymentInstrument() {
-		return redemptionPaymentInstrument;
+	public Optional<PaymentInstrument10> getRedemptionPaymentInstrument() {
+		return redemptionPaymentInstrument == null ? Optional.empty() : Optional.of(redemptionPaymentInstrument);
 	}
 
-	public void setRedemptionPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument10 redemptionPaymentInstrument) {
+	public InvestmentFundCashSettlementInformation5 setRedemptionPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument10 redemptionPaymentInstrument) {
 		this.redemptionPaymentInstrument = redemptionPaymentInstrument;
+		return this;
 	}
 
-	@XmlElement(name = "DvddPmtInstrm")
-	public PaymentInstrument10 getDividendPaymentInstrument() {
-		return dividendPaymentInstrument;
+	public Optional<PaymentInstrument10> getDividendPaymentInstrument() {
+		return dividendPaymentInstrument == null ? Optional.empty() : Optional.of(dividendPaymentInstrument);
 	}
 
-	public void setDividendPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument10 dividendPaymentInstrument) {
+	public InvestmentFundCashSettlementInformation5 setDividendPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument10 dividendPaymentInstrument) {
 		this.dividendPaymentInstrument = dividendPaymentInstrument;
+		return this;
 	}
 
-	@XmlElement(name = "SvgsPlanPmtInstrm")
-	public PaymentInstrument11 getSavingsPlanPaymentInstrument() {
-		return savingsPlanPaymentInstrument;
+	public Optional<PaymentInstrument11> getSavingsPlanPaymentInstrument() {
+		return savingsPlanPaymentInstrument == null ? Optional.empty() : Optional.of(savingsPlanPaymentInstrument);
 	}
 
-	public void setSavingsPlanPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument11 savingsPlanPaymentInstrument) {
+	public InvestmentFundCashSettlementInformation5 setSavingsPlanPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument11 savingsPlanPaymentInstrument) {
 		this.savingsPlanPaymentInstrument = savingsPlanPaymentInstrument;
+		return this;
 	}
 
-	@XmlElement(name = "IntrstPmtInstrm")
-	public PaymentInstrument10 getInterestPaymentInstrument() {
-		return interestPaymentInstrument;
+	public Optional<PaymentInstrument10> getInterestPaymentInstrument() {
+		return interestPaymentInstrument == null ? Optional.empty() : Optional.of(interestPaymentInstrument);
 	}
 
-	public void setInterestPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument10 interestPaymentInstrument) {
+	public InvestmentFundCashSettlementInformation5 setInterestPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument10 interestPaymentInstrument) {
 		this.interestPaymentInstrument = interestPaymentInstrument;
+		return this;
 	}
 }

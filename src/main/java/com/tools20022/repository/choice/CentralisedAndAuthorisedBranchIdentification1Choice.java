@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.FinancialInstitutionIdentification9;
 import com.tools20022.repository.msg.FinancialInstitutionIdentificationList1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identifiers for the central and authorised branches."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CentralisedAndAuthorisedBranchIdentification1Choice", propOrder = {"authorisedBranchIdentifier", "centralisedBranchIdentifiers"})
 public class CentralisedAndAuthorisedBranchIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AuthrsdBrnchIdr", required = true)
 	protected FinancialInstitutionIdentification9 authorisedBranchIdentifier;
 	/**
-	 * Identifier of the authorised branch.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -99,7 +101,7 @@ public class CentralisedAndAuthorisedBranchIdentification1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAuthorisedBranchIdentifier = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CentralisedAndAuthorisedBranchIdentification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AuthrsdBrnchIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +113,11 @@ public class CentralisedAndAuthorisedBranchIdentification1Choice {
 			type_lazy = () -> FinancialInstitutionIdentification9.mmObject();
 		}
 	};
+	@XmlElement(name = "CntrldBrnchIdrs", required = true)
 	protected FinancialInstitutionIdentificationList1 centralisedBranchIdentifiers;
 	/**
-	 * Identifier of the centralised branch.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -141,7 +144,7 @@ public class CentralisedAndAuthorisedBranchIdentification1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCentralisedBranchIdentifiers = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CentralisedAndAuthorisedBranchIdentification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CntrldBrnchIdrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,8 +160,9 @@ public class CentralisedAndAuthorisedBranchIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CentralisedAndAuthorisedBranchIdentification1Choice.mmAuthorisedBranchIdentifier, CentralisedAndAuthorisedBranchIdentification1Choice.mmCentralisedBranchIdentifiers);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentification1Choice.mmAuthorisedBranchIdentifier,
+						com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentification1Choice.mmCentralisedBranchIdentifiers);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CentralisedAndAuthorisedBranchIdentification1Choice";
 				definition = "Identifiers for the central and authorised branches.";
@@ -167,21 +171,21 @@ public class CentralisedAndAuthorisedBranchIdentification1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AuthrsdBrnchIdr", required = true)
 	public FinancialInstitutionIdentification9 getAuthorisedBranchIdentifier() {
 		return authorisedBranchIdentifier;
 	}
 
-	public void setAuthorisedBranchIdentifier(FinancialInstitutionIdentification9 authorisedBranchIdentifier) {
-		this.authorisedBranchIdentifier = authorisedBranchIdentifier;
+	public CentralisedAndAuthorisedBranchIdentification1Choice setAuthorisedBranchIdentifier(FinancialInstitutionIdentification9 authorisedBranchIdentifier) {
+		this.authorisedBranchIdentifier = Objects.requireNonNull(authorisedBranchIdentifier);
+		return this;
 	}
 
-	@XmlElement(name = "CntrldBrnchIdrs", required = true)
 	public FinancialInstitutionIdentificationList1 getCentralisedBranchIdentifiers() {
 		return centralisedBranchIdentifiers;
 	}
 
-	public void setCentralisedBranchIdentifiers(FinancialInstitutionIdentificationList1 centralisedBranchIdentifiers) {
-		this.centralisedBranchIdentifiers = centralisedBranchIdentifiers;
+	public CentralisedAndAuthorisedBranchIdentification1Choice setCentralisedBranchIdentifiers(FinancialInstitutionIdentificationList1 centralisedBranchIdentifiers) {
+		this.centralisedBranchIdentifiers = Objects.requireNonNull(centralisedBranchIdentifiers);
+		return this;
 	}
 }

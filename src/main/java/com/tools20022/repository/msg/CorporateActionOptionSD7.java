@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateActionOptionSD1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CorporateActionOptionSD7", propOrder = {"placeAndName", "extendedOptionFeatures", "DTCDefaultOptionFlag", "optionalDividendSupplementaryDataRequiredFlag"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CorporateActionOptionSD7", propOrder = {"placeAndName", "extendedOptionFeatures", "dTCDefaultOptionFlag", "optionalDividendSupplementaryDataRequiredFlag"})
 public class CorporateActionOptionSD7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +113,7 @@ public class CorporateActionOptionSD7 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSD7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD7.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,11 +124,11 @@ public class CorporateActionOptionSD7 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedOptnFeatrs")
 	protected ExtendedOptionFeature1Code extendedOptionFeatures;
 	/**
-	 * Used for options that have particular proprietary feature that cannot be
-	 * represented in standard ISO message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,6 +144,9 @@ public class CorporateActionOptionSD7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XtndedOptnFeatrs"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Option Type</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -154,9 +161,10 @@ public class CorporateActionOptionSD7 {
 	 */
 	public static final MMMessageAttribute mmExtendedOptionFeatures = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSD7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD7.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedOptnFeatrs";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Option Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedOptionFeatures";
 			definition = "Used for options that have particular proprietary feature that cannot be represented in standard ISO message.";
@@ -165,11 +173,11 @@ public class CorporateActionOptionSD7 {
 			simpleType_lazy = () -> ExtendedOptionFeature1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCDfltOptnFlg")
 	protected YesNoIndicator dTCDefaultOptionFlag;
 	/**
-	 * Identifies whether the option will be processed as default by DTC (The
-	 * Depository Trust Corporation) when no election is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -185,6 +193,9 @@ public class CorporateActionOptionSD7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCDfltOptnFlg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Default Option Flag</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -199,9 +210,10 @@ public class CorporateActionOptionSD7 {
 	 */
 	public static final MMMessageAttribute mmDTCDefaultOptionFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSD7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD7.mmObject();
 			isDerived = false;
 			xmlTag = "DTCDfltOptnFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Default Option Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCDefaultOptionFlag";
 			definition = "Identifies whether the option will be processed as default by DTC (The Depository Trust Corporation) when no election is made.";
@@ -210,11 +222,11 @@ public class CorporateActionOptionSD7 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnlDvddSplmtryDataReqrdFlg")
 	protected YesNoIndicator optionalDividendSupplementaryDataRequiredFlag;
 	/**
-	 * Indicates whether optional dividend supplementary data are required in
-	 * the ISO 20022 CAIN instructions for this event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,7 +256,7 @@ public class CorporateActionOptionSD7 {
 	 */
 	public static final MMMessageAttribute mmOptionalDividendSupplementaryDataRequiredFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSD7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD7.mmObject();
 			isDerived = false;
 			xmlTag = "OptnlDvddSplmtryDataReqrdFlg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -259,9 +271,9 @@ public class CorporateActionOptionSD7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionOptionSD7.mmPlaceAndName, CorporateActionOptionSD7.mmExtendedOptionFeatures, CorporateActionOptionSD7.mmDTCDefaultOptionFlag,
-						CorporateActionOptionSD7.mmOptionalDividendSupplementaryDataRequiredFlag);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD7.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionOptionSD7.mmExtendedOptionFeatures,
+						com.tools20022.repository.msg.CorporateActionOptionSD7.mmDTCDefaultOptionFlag, com.tools20022.repository.msg.CorporateActionOptionSD7.mmOptionalDividendSupplementaryDataRequiredFlag);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionOptionSD7";
 				definition = "Provides additional information regarding corporate action option details.";
@@ -271,39 +283,39 @@ public class CorporateActionOptionSD7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionOptionSD7 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedOptnFeatrs")
-	public ExtendedOptionFeature1Code getExtendedOptionFeatures() {
-		return extendedOptionFeatures;
+	public Optional<ExtendedOptionFeature1Code> getExtendedOptionFeatures() {
+		return extendedOptionFeatures == null ? Optional.empty() : Optional.of(extendedOptionFeatures);
 	}
 
-	public void setExtendedOptionFeatures(ExtendedOptionFeature1Code extendedOptionFeatures) {
+	public CorporateActionOptionSD7 setExtendedOptionFeatures(ExtendedOptionFeature1Code extendedOptionFeatures) {
 		this.extendedOptionFeatures = extendedOptionFeatures;
+		return this;
 	}
 
-	@XmlElement(name = "DTCDfltOptnFlg")
-	public YesNoIndicator getDTCDefaultOptionFlag() {
-		return dTCDefaultOptionFlag;
+	public Optional<YesNoIndicator> getDTCDefaultOptionFlag() {
+		return dTCDefaultOptionFlag == null ? Optional.empty() : Optional.of(dTCDefaultOptionFlag);
 	}
 
-	public void setDTCDefaultOptionFlag(YesNoIndicator dTCDefaultOptionFlag) {
+	public CorporateActionOptionSD7 setDTCDefaultOptionFlag(YesNoIndicator dTCDefaultOptionFlag) {
 		this.dTCDefaultOptionFlag = dTCDefaultOptionFlag;
+		return this;
 	}
 
-	@XmlElement(name = "OptnlDvddSplmtryDataReqrdFlg")
-	public YesNoIndicator getOptionalDividendSupplementaryDataRequiredFlag() {
-		return optionalDividendSupplementaryDataRequiredFlag;
+	public Optional<YesNoIndicator> getOptionalDividendSupplementaryDataRequiredFlag() {
+		return optionalDividendSupplementaryDataRequiredFlag == null ? Optional.empty() : Optional.of(optionalDividendSupplementaryDataRequiredFlag);
 	}
 
-	public void setOptionalDividendSupplementaryDataRequiredFlag(YesNoIndicator optionalDividendSupplementaryDataRequiredFlag) {
+	public CorporateActionOptionSD7 setOptionalDividendSupplementaryDataRequiredFlag(YesNoIndicator optionalDividendSupplementaryDataRequiredFlag) {
 		this.optionalDividendSupplementaryDataRequiredFlag = optionalDividendSupplementaryDataRequiredFlag;
+		return this;
 	}
 }

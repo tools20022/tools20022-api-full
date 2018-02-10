@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ResolutionStatusCode;
+import com.tools20022.repository.codeset.ResolutionStatus2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of a resolution in a meeting agenda.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ResolutionStatusCode
- * ResolutionStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResolutionStatus2Code#mmAccepted
- * ResolutionStatus2Code.mmAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResolutionStatus2Code#Accepted
+ * ResolutionStatus2Code.Accepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResolutionStatus2Code#mmRejected
- * ResolutionStatus2Code.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResolutionStatus2Code#Rejected
+ * ResolutionStatus2Code.Rejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResolutionStatus2Code#mmWithdrawn
- * ResolutionStatus2Code.mmWithdrawn}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResolutionStatus2Code#Withdrawn
+ * ResolutionStatus2Code.Withdrawn}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ResolutionStatusCode
+ * ResolutionStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of a resolution in a meeting agenda."</li>
  * </ul>
  */
-public class ResolutionStatus2Code extends ResolutionStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ResolutionStatus2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,11 +85,12 @@ public class ResolutionStatus2Code extends ResolutionStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final ResolutionStatus2Code Accepted = new ResolutionStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> ResolutionStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResolutionStatus2Code.mmObject();
+			codeName = ResolutionStatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -103,11 +109,12 @@ public class ResolutionStatus2Code extends ResolutionStatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final ResolutionStatus2Code Rejected = new ResolutionStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> ResolutionStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResolutionStatus2Code.mmObject();
+			codeName = ResolutionStatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -126,25 +133,58 @@ public class ResolutionStatus2Code extends ResolutionStatusCode {
 	 * name} = "Withdrawn"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithdrawn = new MMCode() {
+	public static final ResolutionStatus2Code Withdrawn = new ResolutionStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withdrawn";
-			owner_lazy = () -> ResolutionStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResolutionStatus2Code.mmObject();
+			codeName = ResolutionStatusCode.Withdrawn.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ResolutionStatus2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ResolutionStatus2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResolutionStatus2Code";
 				definition = "Specifies the status of a resolution in a meeting agenda.";
-				code_lazy = () -> Arrays.asList(ResolutionStatus2Code.mmAccepted, ResolutionStatus2Code.mmRejected, ResolutionStatus2Code.mmWithdrawn);
 				trace_lazy = () -> ResolutionStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResolutionStatus2Code.Accepted, com.tools20022.repository.codeset.ResolutionStatus2Code.Rejected,
+						com.tools20022.repository.codeset.ResolutionStatus2Code.Withdrawn);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+		codesByName.put(Withdrawn.getCodeName().get(), Withdrawn);
+	}
+
+	public static ResolutionStatus2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ResolutionStatus2Code[] values() {
+		ResolutionStatus2Code[] values = new ResolutionStatus2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ResolutionStatus2Code> {
+		@Override
+		public ResolutionStatus2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ResolutionStatus2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

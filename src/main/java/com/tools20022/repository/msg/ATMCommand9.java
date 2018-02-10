@@ -25,6 +25,8 @@ import com.tools20022.repository.codeset.ATMCommand5Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Party which has requested the reconciliation."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMCommand9", propOrder = {"type", "commandIdentification"})
 public class ATMCommand9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected ATMCommand5Code type;
 	/**
-	 * Type of command to be performed by the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -96,7 +99,7 @@ public class ATMCommand9 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCommand9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand9.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -107,10 +110,11 @@ public class ATMCommand9 {
 			simpleType_lazy = () -> ATMCommand5Code.mmObject();
 		}
 	};
+	@XmlElement(name = "CmdId")
 	protected ATMCommandIdentification1 commandIdentification;
 	/**
-	 * Identification of the entity issuing the command.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -136,7 +140,7 @@ public class ATMCommand9 {
 	 */
 	public static final MMMessageAssociationEnd mmCommandIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMCommand9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand9.mmObject();
 			isDerived = false;
 			xmlTag = "CmdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,8 +156,8 @@ public class ATMCommand9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMCommand9.mmType, ATMCommand9.mmCommandIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCommand9.mmType, com.tools20022.repository.msg.ATMCommand9.mmCommandIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand9";
 				definition = "Party which has requested the reconciliation.";
@@ -162,21 +166,21 @@ public class ATMCommand9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public ATMCommand5Code getType() {
 		return type;
 	}
 
-	public void setType(ATMCommand5Code type) {
-		this.type = type;
+	public ATMCommand9 setType(ATMCommand5Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "CmdId")
-	public ATMCommandIdentification1 getCommandIdentification() {
-		return commandIdentification;
+	public Optional<ATMCommandIdentification1> getCommandIdentification() {
+		return commandIdentification == null ? Optional.empty() : Optional.of(commandIdentification);
 	}
 
-	public void setCommandIdentification(com.tools20022.repository.msg.ATMCommandIdentification1 commandIdentification) {
+	public ATMCommand9 setCommandIdentification(com.tools20022.repository.msg.ATMCommandIdentification1 commandIdentification) {
 		this.commandIdentification = commandIdentification;
+		return this;
 	}
 }

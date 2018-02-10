@@ -24,9 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.auth.FinancialInstrumentReportingStatusAdviceV01;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,22 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MessageReportHeader4", propOrder = {"messageReportIdentifier", "messageStatus", "recordStatus", "supplementaryData"})
 public class MessageReportHeader4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgRptIdr")
 	protected Max140Text messageReportIdentifier;
 	/**
-	 * Provide detail on previously received message reports that are being
-	 * reported as part of this status advice.<br>
-	 * <br>
-	 * Usage:<br>
-	 * When required, this field will be populated with the BAH Business Message
-	 * Identifier field. Where only a single message report header is used, this
-	 * field is not used and relies solely on the BAH Business Message
-	 * Identifier field.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,7 +119,7 @@ public class MessageReportHeader4 {
 	 */
 	public static final MMMessageAttribute mmMessageReportIdentifier = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MessageReportHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "MsgRptIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,10 +130,11 @@ public class MessageReportHeader4 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgSts")
 	protected StatusAdviceReport3 messageStatus;
 	/**
-	 * Details the status of the whole message that has been received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -167,7 +161,7 @@ public class MessageReportHeader4 {
 	 */
 	public static final MMMessageAssociationEnd mmMessageStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MessageReportHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "MsgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,10 +173,11 @@ public class MessageReportHeader4 {
 			type_lazy = () -> com.tools20022.repository.msg.StatusAdviceReport3.mmObject();
 		}
 	};
+	@XmlElement(name = "RcrdSts")
 	protected List<com.tools20022.repository.msg.StatusReportRecord3> recordStatus;
 	/**
-	 * Provides per record status on the report that has been received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -209,7 +204,7 @@ public class MessageReportHeader4 {
 	 */
 	public static final MMMessageAssociationEnd mmRecordStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MessageReportHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "RcrdSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,11 +215,11 @@ public class MessageReportHeader4 {
 			type_lazy = () -> com.tools20022.repository.msg.StatusReportRecord3.mmObject();
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -252,7 +247,7 @@ public class MessageReportHeader4 {
 	 */
 	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MessageReportHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,9 +262,10 @@ public class MessageReportHeader4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MessageReportHeader4.mmMessageReportIdentifier, MessageReportHeader4.mmMessageStatus, MessageReportHeader4.mmRecordStatus, MessageReportHeader4.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageReportHeader4.mmMessageReportIdentifier, com.tools20022.repository.msg.MessageReportHeader4.mmMessageStatus,
+						com.tools20022.repository.msg.MessageReportHeader4.mmRecordStatus, com.tools20022.repository.msg.MessageReportHeader4.mmSupplementaryData);
 				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingStatusAdviceV01.mmStatusAdvice);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageReportHeader4";
 				definition = "Provides details of many status advice reports where many received reports are reported at once.";
@@ -278,39 +274,39 @@ public class MessageReportHeader4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgRptIdr")
-	public Max140Text getMessageReportIdentifier() {
-		return messageReportIdentifier;
+	public Optional<Max140Text> getMessageReportIdentifier() {
+		return messageReportIdentifier == null ? Optional.empty() : Optional.of(messageReportIdentifier);
 	}
 
-	public void setMessageReportIdentifier(Max140Text messageReportIdentifier) {
+	public MessageReportHeader4 setMessageReportIdentifier(Max140Text messageReportIdentifier) {
 		this.messageReportIdentifier = messageReportIdentifier;
+		return this;
 	}
 
-	@XmlElement(name = "MsgSts")
-	public StatusAdviceReport3 getMessageStatus() {
-		return messageStatus;
+	public Optional<StatusAdviceReport3> getMessageStatus() {
+		return messageStatus == null ? Optional.empty() : Optional.of(messageStatus);
 	}
 
-	public void setMessageStatus(com.tools20022.repository.msg.StatusAdviceReport3 messageStatus) {
+	public MessageReportHeader4 setMessageStatus(com.tools20022.repository.msg.StatusAdviceReport3 messageStatus) {
 		this.messageStatus = messageStatus;
+		return this;
 	}
 
-	@XmlElement(name = "RcrdSts")
 	public List<StatusReportRecord3> getRecordStatus() {
-		return recordStatus;
+		return recordStatus == null ? recordStatus = new ArrayList<>() : recordStatus;
 	}
 
-	public void setRecordStatus(List<com.tools20022.repository.msg.StatusReportRecord3> recordStatus) {
-		this.recordStatus = recordStatus;
+	public MessageReportHeader4 setRecordStatus(List<com.tools20022.repository.msg.StatusReportRecord3> recordStatus) {
+		this.recordStatus = Objects.requireNonNull(recordStatus);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public MessageReportHeader4 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 }

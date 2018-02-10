@@ -29,9 +29,8 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -108,8 +107,22 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule#forDeliverInformation16
+ * ConstraintPhysicalTransferDetailsRule.forDeliverInformation16}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule#forDeliverInformation16
+ * ConstraintDeliverersCustodianDetailsRule.forDeliverInformation16}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule#forDeliverInformation16
+ * ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation16}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -124,17 +137,17 @@ import javax.xml.bind.annotation.XmlType;
  * DeliverInformation15}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DeliverInformation16", propOrder = {"transferor", "transferorRegisteredAccount", "intermediaryInformation", "requestedSettlementDate", "settlementAmount", "stampDuty", "netAmount", "settlementPartiesDetails",
 		"chargeDetails", "commissionDetails", "taxDetails", "foreignExchangeDetails", "physicalTransfer", "physicalTransferDetails", "clientReference"})
 public class DeliverInformation16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Trfr")
 	protected PartyIdentification70Choice transferor;
 	/**
-	 * Party that delivers (transferor) securities to the receiving agent
-	 * (transferee).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -163,7 +176,7 @@ public class DeliverInformation16 {
 	 */
 	public static final MMMessageAssociationEnd mmTransferor = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DeliverInformation16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "Trfr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,10 +188,11 @@ public class DeliverInformation16 {
 			type_lazy = () -> PartyIdentification70Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfrRegdAcct")
 	protected Account19 transferorRegisteredAccount;
 	/**
-	 * Account from which the securities are to be delivered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -203,7 +217,7 @@ public class DeliverInformation16 {
 	 */
 	public static final MMMessageAssociationEnd mmTransferorRegisteredAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DeliverInformation16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "TrfrRegdAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,10 +229,11 @@ public class DeliverInformation16 {
 			type_lazy = () -> com.tools20022.repository.msg.Account19.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrmyInf")
 	protected List<com.tools20022.repository.msg.Intermediary34> intermediaryInformation;
 	/**
-	 * Identification of a related party or intermediary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -250,7 +265,7 @@ public class DeliverInformation16 {
 	public static final MMMessageAssociationEnd mmIntermediaryInformation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> IntermediaryRole.mmObject();
-			componentContext_lazy = () -> DeliverInformation16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -261,12 +276,11 @@ public class DeliverInformation16 {
 			type_lazy = () -> com.tools20022.repository.msg.Intermediary34.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdSttlmDt")
 	protected ISODate requestedSettlementDate;
 	/**
-	 * Date and time at which the securities are to be exchanged at the
-	 * International Central Securities Depository (ICSD) or Central Securities
-	 * Depository (CSD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -306,7 +320,7 @@ public class DeliverInformation16 {
 	public static final MMMessageAttribute mmRequestedSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
-			componentContext_lazy = () -> DeliverInformation16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -318,11 +332,11 @@ public class DeliverInformation16 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmAmt")
 	protected ActiveCurrencyAndAmount settlementAmount;
 	/**
-	 * Total amount of money paid /to be paid or received in exchange for the
-	 * financial instrument in the individual order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -363,7 +377,7 @@ public class DeliverInformation16 {
 	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
-			componentContext_lazy = () -> DeliverInformation16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -375,10 +389,11 @@ public class DeliverInformation16 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "StmpDty")
 	protected StampDutyType2Code stampDuty;
 	/**
-	 * Indicates whether the settlement amount includes the stamp duty amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -419,7 +434,7 @@ public class DeliverInformation16 {
 	public static final MMMessageAttribute mmStampDuty = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmStampDutyType;
-			componentContext_lazy = () -> DeliverInformation16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "StmpDty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -431,10 +446,11 @@ public class DeliverInformation16 {
 			simpleType_lazy = () -> StampDutyType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "NetAmt")
 	protected ActiveCurrencyAndAmount netAmount;
 	/**
-	 * Deal amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -473,7 +489,7 @@ public class DeliverInformation16 {
 	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeAmount;
-			componentContext_lazy = () -> DeliverInformation16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "NetAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -485,10 +501,11 @@ public class DeliverInformation16 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmPtiesDtls")
 	protected DeliveringPartiesAndAccount13 settlementPartiesDetails;
 	/**
-	 * Chain of parties involved in the settlement of a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -527,7 +544,7 @@ public class DeliverInformation16 {
 	public static final MMMessageAssociationEnd mmSettlementPartiesDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
-			componentContext_lazy = () -> DeliverInformation16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPtiesDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -540,10 +557,11 @@ public class DeliverInformation16 {
 			type_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount13.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgDtls")
 	protected List<com.tools20022.repository.msg.Charge29> chargeDetails;
 	/**
-	 * Charge related to the transfer of a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -580,7 +598,7 @@ public class DeliverInformation16 {
 	public static final MMMessageAssociationEnd mmChargeDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmFees;
-			componentContext_lazy = () -> DeliverInformation16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -592,10 +610,11 @@ public class DeliverInformation16 {
 			type_lazy = () -> com.tools20022.repository.msg.Charge29.mmObject();
 		}
 	};
+	@XmlElement(name = "ComssnDtls")
 	protected List<com.tools20022.repository.msg.Commission23> commissionDetails;
 	/**
-	 * Commission related to the transfer of a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -633,7 +652,7 @@ public class DeliverInformation16 {
 	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeCommission;
-			componentContext_lazy = () -> DeliverInformation16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -645,10 +664,11 @@ public class DeliverInformation16 {
 			type_lazy = () -> com.tools20022.repository.msg.Commission23.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxDtls")
 	protected List<com.tools20022.repository.msg.Tax28> taxDetails;
 	/**
-	 * Tax related to the transfer of a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -684,7 +704,7 @@ public class DeliverInformation16 {
 	public static final MMMessageAssociationEnd mmTaxDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
-			componentContext_lazy = () -> DeliverInformation16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -696,11 +716,11 @@ public class DeliverInformation16 {
 			type_lazy = () -> com.tools20022.repository.msg.Tax28.mmObject();
 		}
 	};
+	@XmlElement(name = "FXDtls")
 	protected List<com.tools20022.repository.msg.ForeignExchangeTerms26> foreignExchangeDetails;
 	/**
-	 * Specifies foreign exchange details applied to the payment of charges,
-	 * taxes and commissions as a result of the transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -739,7 +759,7 @@ public class DeliverInformation16 {
 	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
-			componentContext_lazy = () -> DeliverInformation16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "FXDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -751,10 +771,11 @@ public class DeliverInformation16 {
 			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms26.mmObject();
 		}
 	};
+	@XmlElement(name = "PhysTrf")
 	protected PhysicalTransferType1Code physicalTransfer;
 	/**
-	 * Indicates whether the financial instrument is to be physically delivered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -795,7 +816,7 @@ public class DeliverInformation16 {
 	public static final MMMessageAttribute mmPhysicalTransfer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PhysicalDelivery.mmType;
-			componentContext_lazy = () -> DeliverInformation16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "PhysTrf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -807,10 +828,11 @@ public class DeliverInformation16 {
 			simpleType_lazy = () -> PhysicalTransferType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PhysTrfDtls")
 	protected DeliveryParameters4 physicalTransferDetails;
 	/**
-	 * Parameters of a physical delivery.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -847,7 +869,7 @@ public class DeliverInformation16 {
 	public static final MMMessageAssociationEnd mmPhysicalTransferDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
-			componentContext_lazy = () -> DeliverInformation16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "PhysTrfDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -860,12 +882,11 @@ public class DeliverInformation16 {
 			type_lazy = () -> com.tools20022.repository.msg.DeliveryParameters4.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntRef")
 	protected AdditionalReference7 clientReference;
 	/**
-	 * Unique and unambiguous investor's identification of a transfer. This
-	 * reference can typically be used in a hub scenario to give the reference
-	 * of the transfer as assigned by the underlying client.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -904,7 +925,7 @@ public class DeliverInformation16 {
 	public static final MMMessageAssociationEnd mmClientReference = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
-			componentContext_lazy = () -> DeliverInformation16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation16.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -921,13 +942,18 @@ public class DeliverInformation16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DeliverInformation16.mmTransferor, DeliverInformation16.mmTransferorRegisteredAccount, DeliverInformation16.mmIntermediaryInformation,
-						DeliverInformation16.mmRequestedSettlementDate, DeliverInformation16.mmSettlementAmount, DeliverInformation16.mmStampDuty, DeliverInformation16.mmNetAmount, DeliverInformation16.mmSettlementPartiesDetails,
-						DeliverInformation16.mmChargeDetails, DeliverInformation16.mmCommissionDetails, DeliverInformation16.mmTaxDetails, DeliverInformation16.mmForeignExchangeDetails, DeliverInformation16.mmPhysicalTransfer,
-						DeliverInformation16.mmPhysicalTransferDetails, DeliverInformation16.mmClientReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliverInformation16.mmTransferor, com.tools20022.repository.msg.DeliverInformation16.mmTransferorRegisteredAccount,
+						com.tools20022.repository.msg.DeliverInformation16.mmIntermediaryInformation, com.tools20022.repository.msg.DeliverInformation16.mmRequestedSettlementDate,
+						com.tools20022.repository.msg.DeliverInformation16.mmSettlementAmount, com.tools20022.repository.msg.DeliverInformation16.mmStampDuty, com.tools20022.repository.msg.DeliverInformation16.mmNetAmount,
+						com.tools20022.repository.msg.DeliverInformation16.mmSettlementPartiesDetails, com.tools20022.repository.msg.DeliverInformation16.mmChargeDetails,
+						com.tools20022.repository.msg.DeliverInformation16.mmCommissionDetails, com.tools20022.repository.msg.DeliverInformation16.mmTaxDetails, com.tools20022.repository.msg.DeliverInformation16.mmForeignExchangeDetails,
+						com.tools20022.repository.msg.DeliverInformation16.mmPhysicalTransfer, com.tools20022.repository.msg.DeliverInformation16.mmPhysicalTransferDetails,
+						com.tools20022.repository.msg.DeliverInformation16.mmClientReference);
 				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInInstructionV07.mmSettlementDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule.forDeliverInformation16,
+						com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation16, com.tools20022.repository.constraints.ConstraintDeliverersIntermediaryDetailsRule.forDeliverInformation16);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliverInformation16";
 				definition = "Parameters applied to the settlement of a security transfer.";
@@ -937,138 +963,138 @@ public class DeliverInformation16 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Trfr")
-	public PartyIdentification70Choice getTransferor() {
-		return transferor;
+	public Optional<PartyIdentification70Choice> getTransferor() {
+		return transferor == null ? Optional.empty() : Optional.of(transferor);
 	}
 
-	public void setTransferor(PartyIdentification70Choice transferor) {
+	public DeliverInformation16 setTransferor(PartyIdentification70Choice transferor) {
 		this.transferor = transferor;
+		return this;
 	}
 
-	@XmlElement(name = "TrfrRegdAcct")
-	public Account19 getTransferorRegisteredAccount() {
-		return transferorRegisteredAccount;
+	public Optional<Account19> getTransferorRegisteredAccount() {
+		return transferorRegisteredAccount == null ? Optional.empty() : Optional.of(transferorRegisteredAccount);
 	}
 
-	public void setTransferorRegisteredAccount(com.tools20022.repository.msg.Account19 transferorRegisteredAccount) {
+	public DeliverInformation16 setTransferorRegisteredAccount(com.tools20022.repository.msg.Account19 transferorRegisteredAccount) {
 		this.transferorRegisteredAccount = transferorRegisteredAccount;
+		return this;
 	}
 
-	@XmlElement(name = "IntrmyInf")
 	public List<Intermediary34> getIntermediaryInformation() {
-		return intermediaryInformation;
+		return intermediaryInformation == null ? intermediaryInformation = new ArrayList<>() : intermediaryInformation;
 	}
 
-	public void setIntermediaryInformation(List<com.tools20022.repository.msg.Intermediary34> intermediaryInformation) {
-		this.intermediaryInformation = intermediaryInformation;
+	public DeliverInformation16 setIntermediaryInformation(List<com.tools20022.repository.msg.Intermediary34> intermediaryInformation) {
+		this.intermediaryInformation = Objects.requireNonNull(intermediaryInformation);
+		return this;
 	}
 
-	@XmlElement(name = "ReqdSttlmDt")
-	public ISODate getRequestedSettlementDate() {
-		return requestedSettlementDate;
+	public Optional<ISODate> getRequestedSettlementDate() {
+		return requestedSettlementDate == null ? Optional.empty() : Optional.of(requestedSettlementDate);
 	}
 
-	public void setRequestedSettlementDate(ISODate requestedSettlementDate) {
+	public DeliverInformation16 setRequestedSettlementDate(ISODate requestedSettlementDate) {
 		this.requestedSettlementDate = requestedSettlementDate;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmAmt")
-	public ActiveCurrencyAndAmount getSettlementAmount() {
-		return settlementAmount;
+	public Optional<ActiveCurrencyAndAmount> getSettlementAmount() {
+		return settlementAmount == null ? Optional.empty() : Optional.of(settlementAmount);
 	}
 
-	public void setSettlementAmount(ActiveCurrencyAndAmount settlementAmount) {
+	public DeliverInformation16 setSettlementAmount(ActiveCurrencyAndAmount settlementAmount) {
 		this.settlementAmount = settlementAmount;
+		return this;
 	}
 
-	@XmlElement(name = "StmpDty")
-	public StampDutyType2Code getStampDuty() {
-		return stampDuty;
+	public Optional<StampDutyType2Code> getStampDuty() {
+		return stampDuty == null ? Optional.empty() : Optional.of(stampDuty);
 	}
 
-	public void setStampDuty(StampDutyType2Code stampDuty) {
+	public DeliverInformation16 setStampDuty(StampDutyType2Code stampDuty) {
 		this.stampDuty = stampDuty;
+		return this;
 	}
 
-	@XmlElement(name = "NetAmt")
-	public ActiveCurrencyAndAmount getNetAmount() {
-		return netAmount;
+	public Optional<ActiveCurrencyAndAmount> getNetAmount() {
+		return netAmount == null ? Optional.empty() : Optional.of(netAmount);
 	}
 
-	public void setNetAmount(ActiveCurrencyAndAmount netAmount) {
+	public DeliverInformation16 setNetAmount(ActiveCurrencyAndAmount netAmount) {
 		this.netAmount = netAmount;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmPtiesDtls")
-	public DeliveringPartiesAndAccount13 getSettlementPartiesDetails() {
-		return settlementPartiesDetails;
+	public Optional<DeliveringPartiesAndAccount13> getSettlementPartiesDetails() {
+		return settlementPartiesDetails == null ? Optional.empty() : Optional.of(settlementPartiesDetails);
 	}
 
-	public void setSettlementPartiesDetails(com.tools20022.repository.msg.DeliveringPartiesAndAccount13 settlementPartiesDetails) {
+	public DeliverInformation16 setSettlementPartiesDetails(com.tools20022.repository.msg.DeliveringPartiesAndAccount13 settlementPartiesDetails) {
 		this.settlementPartiesDetails = settlementPartiesDetails;
+		return this;
 	}
 
-	@XmlElement(name = "ChrgDtls")
 	public List<Charge29> getChargeDetails() {
-		return chargeDetails;
+		return chargeDetails == null ? chargeDetails = new ArrayList<>() : chargeDetails;
 	}
 
-	public void setChargeDetails(List<com.tools20022.repository.msg.Charge29> chargeDetails) {
-		this.chargeDetails = chargeDetails;
+	public DeliverInformation16 setChargeDetails(List<com.tools20022.repository.msg.Charge29> chargeDetails) {
+		this.chargeDetails = Objects.requireNonNull(chargeDetails);
+		return this;
 	}
 
-	@XmlElement(name = "ComssnDtls")
 	public List<Commission23> getCommissionDetails() {
-		return commissionDetails;
+		return commissionDetails == null ? commissionDetails = new ArrayList<>() : commissionDetails;
 	}
 
-	public void setCommissionDetails(List<com.tools20022.repository.msg.Commission23> commissionDetails) {
-		this.commissionDetails = commissionDetails;
+	public DeliverInformation16 setCommissionDetails(List<com.tools20022.repository.msg.Commission23> commissionDetails) {
+		this.commissionDetails = Objects.requireNonNull(commissionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "TaxDtls")
 	public List<Tax28> getTaxDetails() {
-		return taxDetails;
+		return taxDetails == null ? taxDetails = new ArrayList<>() : taxDetails;
 	}
 
-	public void setTaxDetails(List<com.tools20022.repository.msg.Tax28> taxDetails) {
-		this.taxDetails = taxDetails;
+	public DeliverInformation16 setTaxDetails(List<com.tools20022.repository.msg.Tax28> taxDetails) {
+		this.taxDetails = Objects.requireNonNull(taxDetails);
+		return this;
 	}
 
-	@XmlElement(name = "FXDtls")
 	public List<ForeignExchangeTerms26> getForeignExchangeDetails() {
-		return foreignExchangeDetails;
+		return foreignExchangeDetails == null ? foreignExchangeDetails = new ArrayList<>() : foreignExchangeDetails;
 	}
 
-	public void setForeignExchangeDetails(List<com.tools20022.repository.msg.ForeignExchangeTerms26> foreignExchangeDetails) {
-		this.foreignExchangeDetails = foreignExchangeDetails;
+	public DeliverInformation16 setForeignExchangeDetails(List<com.tools20022.repository.msg.ForeignExchangeTerms26> foreignExchangeDetails) {
+		this.foreignExchangeDetails = Objects.requireNonNull(foreignExchangeDetails);
+		return this;
 	}
 
-	@XmlElement(name = "PhysTrf")
-	public PhysicalTransferType1Code getPhysicalTransfer() {
-		return physicalTransfer;
+	public Optional<PhysicalTransferType1Code> getPhysicalTransfer() {
+		return physicalTransfer == null ? Optional.empty() : Optional.of(physicalTransfer);
 	}
 
-	public void setPhysicalTransfer(PhysicalTransferType1Code physicalTransfer) {
+	public DeliverInformation16 setPhysicalTransfer(PhysicalTransferType1Code physicalTransfer) {
 		this.physicalTransfer = physicalTransfer;
+		return this;
 	}
 
-	@XmlElement(name = "PhysTrfDtls")
-	public DeliveryParameters4 getPhysicalTransferDetails() {
-		return physicalTransferDetails;
+	public Optional<DeliveryParameters4> getPhysicalTransferDetails() {
+		return physicalTransferDetails == null ? Optional.empty() : Optional.of(physicalTransferDetails);
 	}
 
-	public void setPhysicalTransferDetails(com.tools20022.repository.msg.DeliveryParameters4 physicalTransferDetails) {
+	public DeliverInformation16 setPhysicalTransferDetails(com.tools20022.repository.msg.DeliveryParameters4 physicalTransferDetails) {
 		this.physicalTransferDetails = physicalTransferDetails;
+		return this;
 	}
 
-	@XmlElement(name = "ClntRef")
-	public AdditionalReference7 getClientReference() {
-		return clientReference;
+	public Optional<AdditionalReference7> getClientReference() {
+		return clientReference == null ? Optional.empty() : Optional.of(clientReference);
 	}
 
-	public void setClientReference(com.tools20022.repository.msg.AdditionalReference7 clientReference) {
+	public DeliverInformation16 setClientReference(com.tools20022.repository.msg.AdditionalReference7 clientReference) {
 		this.clientReference = clientReference;
+		return this;
 	}
 }

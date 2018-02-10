@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateActionEventStatusCode;
+import com.tools20022.repository.codeset.CorporateActionEventStatus3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of the CA event.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatusCode
- * CorporateActionEventStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus3Code#mmCancelled
- * CorporateActionEventStatus3Code.mmCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus3Code#Cancelled
+ * CorporateActionEventStatus3Code.Cancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus3Code#mmInactive
- * CorporateActionEventStatus3Code.mmInactive}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus3Code#Inactive
+ * CorporateActionEventStatus3Code.Inactive}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatusCode
+ * CorporateActionEventStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of the CA event."</li>
  * </ul>
  */
-public class CorporateActionEventStatus3Code extends CorporateActionEventStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionEventStatus3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class CorporateActionEventStatus3Code extends CorporateActionEventStatusC
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelled = new MMCode() {
+	public static final CorporateActionEventStatus3Code Cancelled = new CorporateActionEventStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
-			owner_lazy = () -> CorporateActionEventStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventStatus3Code.mmObject();
+			codeName = CorporateActionEventStatusCode.Cancelled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class CorporateActionEventStatus3Code extends CorporateActionEventStatusC
 	 * name} = "Inactive"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInactive = new MMCode() {
+	public static final CorporateActionEventStatus3Code Inactive = new CorporateActionEventStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactive";
-			owner_lazy = () -> CorporateActionEventStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventStatus3Code.mmObject();
+			codeName = CorporateActionEventStatusCode.Inactive.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionEventStatus3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionEventStatus3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CANC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventStatus3Code";
 				definition = "Specifies the status of the CA event.";
-				code_lazy = () -> Arrays.asList(CorporateActionEventStatus3Code.mmCancelled, CorporateActionEventStatus3Code.mmInactive);
 				trace_lazy = () -> CorporateActionEventStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventStatus3Code.Cancelled, com.tools20022.repository.codeset.CorporateActionEventStatus3Code.Inactive);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Cancelled.getCodeName().get(), Cancelled);
+		codesByName.put(Inactive.getCodeName().get(), Inactive);
+	}
+
+	public static CorporateActionEventStatus3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionEventStatus3Code[] values() {
+		CorporateActionEventStatus3Code[] values = new CorporateActionEventStatus3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionEventStatus3Code> {
+		@Override
+		public CorporateActionEventStatus3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionEventStatus3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

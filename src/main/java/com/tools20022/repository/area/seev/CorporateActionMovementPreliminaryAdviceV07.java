@@ -27,9 +27,8 @@ import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CorporateActionsISOPreviousversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -49,22 +48,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousVersion
- * SecuritiesEventsPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CorporateActionsISOPreviousversion
- * CorporateActionsISOPreviousversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CorpActnMvmntPrlimryAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -148,9 +131,52 @@ import javax.xml.bind.annotation.*;
  * CorporateActionMovementPreliminaryAdviceV07.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CorporateActionsISOPreviousversion
+ * CorporateActionsISOPreviousversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CorpActnMvmntPrlimryAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousVersion
+ * SecuritiesEventsPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.035.001.07}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRateAndCorporateActionEventRule#forCorporateActionMovementPreliminaryAdviceV07
+ * ConstraintRateAndCorporateActionEventRule.
+ * forCorporateActionMovementPreliminaryAdviceV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingAccount1Rule#forCorporateActionMovementPreliminaryAdviceV07
+ * ConstraintSafekeepingAccount1Rule.
+ * forCorporateActionMovementPreliminaryAdviceV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingAccount2Rule#forCorporateActionMovementPreliminaryAdviceV07
+ * ConstraintSafekeepingAccount2Rule.
+ * forCorporateActionMovementPreliminaryAdviceV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherEventRule#forCorporateActionMovementPreliminaryAdviceV07
+ * ConstraintOtherEventRule.forCorporateActionMovementPreliminaryAdviceV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule#forCorporateActionMovementPreliminaryAdviceV07
+ * ConstraintIntermediateSecuritiesDistributionRule.
+ * forCorporateActionMovementPreliminaryAdviceV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAppliedOptionRule#forCorporateActionMovementPreliminaryAdviceV07
+ * ConstraintAppliedOptionRule.forCorporateActionMovementPreliminaryAdviceV07}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -175,7 +201,7 @@ import javax.xml.bind.annotation.*;
  * CorporateActionMovementPreliminaryAdviceV06}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionMovementPreliminaryAdviceV07", propOrder = {"pagination", "movementPreliminaryAdviceGeneralInformation", "previousMovementPreliminaryAdviceIdentification", "notificationIdentification",
 		"movementConfirmationIdentification", "instructionIdentification", "otherDocumentIdentification", "eventsLinkage", "reversalReason", "corporateActionGeneralInformation", "accountDetails", "corporateActionDetails",
 		"corporateActionMovementDetails", "additionalInformation", "issuerAgent", "payingAgent", "subPayingAgent", "registrar", "resellingAgent", "physicalSecuritiesAgent", "dropAgent", "solicitationAgent", "informationAgent",
@@ -183,12 +209,11 @@ import javax.xml.bind.annotation.*;
 public class CorporateActionMovementPreliminaryAdviceV07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pgntn")
 	protected Pagination pagination;
 	/**
-	 * Page number of the message and continuation indicator to indicate that
-	 * the multi-parts preliminary advice is to continue or that the message is
-	 * the last page of the multi-parts preliminary advice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,10 +269,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "MvmntPrlimryAdvcGnlInf", required = true)
 	protected CorporateActionPreliminaryAdviceType2 movementPreliminaryAdviceGeneralInformation;
 	/**
-	 * General information about the movement preliminary advice document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -305,10 +331,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsMvmntPrlimryAdvcId")
 	protected DocumentIdentification31 previousMovementPreliminaryAdviceIdentification;
 	/**
-	 * Identification of a previously sent movement preliminary advice document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -367,10 +394,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "NtfctnId")
 	protected DocumentIdentification31 notificationIdentification;
 	/**
-	 * Identification of a previously sent notification document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -428,10 +456,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "MvmntConfId")
 	protected DocumentIdentification31 movementConfirmationIdentification;
 	/**
-	 * Identification of a previously sent movement confirmation document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -489,10 +518,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "InstrId")
 	protected DocumentIdentification9 instructionIdentification;
 	/**
-	 * Identification of a related instruction document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -547,10 +577,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrDocId")
 	protected List<DocumentIdentification32> otherDocumentIdentification;
 	/**
-	 * Identification of other documents as well as the document number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -607,11 +638,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "EvtsLkg")
 	protected List<CorporateActionEventReference3> eventsLinkage;
 	/**
-	 * Identification of an other corporate action event that needs to be
-	 * closely linked to the processing of the event notified in this document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -667,10 +698,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "RvslRsn")
 	protected CorporateActionReversalReason3 reversalReason;
 	/**
-	 * Reason for the reversal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -725,10 +757,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	protected CorporateActionGeneralInformation84 corporateActionGeneralInformation;
 	/**
-	 * General information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -785,11 +818,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctDtls", required = true)
 	protected AccountIdentification32Choice accountDetails;
 	/**
-	 * General information about the safekeeping account, owner and account
-	 * balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -846,10 +879,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnDtls")
 	protected CorporateAction32 corporateActionDetails;
 	/**
-	 * Information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -904,10 +938,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnMvmntDtls")
 	protected List<CorporateActionOption115> corporateActionMovementDetails;
 	/**
-	 * Information about the corporate action option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -963,10 +998,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected CorporateActionNarrative28 additionalInformation;
 	/**
-	 * Provides additional information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1021,12 +1057,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "IssrAgt")
 	protected List<PartyIdentification71Choice> issuerAgent;
 	/**
-	 * Party appointed to administer the event on behalf of the issuer
-	 * company/offeror. The party may be contacted for more information about
-	 * the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1082,11 +1117,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "PngAgt")
 	protected List<PartyIdentification71Choice> payingAgent;
 	/**
-	 * Agent (principal or fiscal paying agent) appointed to execute the payment
-	 * for the corporate action event on behalf of the issuer company/offeror.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1142,11 +1177,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "SubPngAgt")
 	protected List<PartyIdentification71Choice> subPayingAgent;
 	/**
-	 * Sub-agent appointed to execute the payment for the corporate action event
-	 * on behalf of the issuer company/offeror.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1202,10 +1237,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "Regar")
 	protected PartyIdentification71Choice registrar;
 	/**
-	 * Party/agent responsible for maintaining the register of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1261,11 +1297,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "RsellngAgt")
 	protected List<PartyIdentification71Choice> resellingAgent;
 	/**
-	 * A broker-dealer responsible for reselling to new investors securities
-	 * (usually bonds) that have been tendered for purchase by their owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1321,12 +1357,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "PhysSctiesAgt")
 	protected PartyIdentification71Choice physicalSecuritiesAgent;
 	/**
-	 * A trust company, bank or similar financial institution assigned by an
-	 * issuer to accept presentations of instruments, usually bonds, for
-	 * transfer and or exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1383,12 +1418,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "DrpAgt")
 	protected PartyIdentification71Choice dropAgent;
 	/**
-	 * A trust company, bank or similar financial institution who acts on behalf
-	 * of an out of town agent or event agent where securities can be delivered
-	 * in person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1445,12 +1479,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "SlctnAgt")
 	protected List<PartyIdentification71Choice> solicitationAgent;
 	/**
-	 * A trust company, bank or similar financial institution assigned by an
-	 * issuer to maintain records of investors and account balances and
-	 * transactions for the consent of a material change.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1506,11 +1539,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "InfAgt")
 	protected PartyIdentification71Choice informationAgent;
 	/**
-	 * A trust company, bank or similar financial institution assigned by an
-	 * Issuer to provide information and copies of the offering documentation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1567,11 +1600,11 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1631,6 +1664,12 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRateAndCorporateActionEventRule.forCorporateActionMovementPreliminaryAdviceV07,
+						com.tools20022.repository.constraints.ConstraintSafekeepingAccount1Rule.forCorporateActionMovementPreliminaryAdviceV07,
+						com.tools20022.repository.constraints.ConstraintSafekeepingAccount2Rule.forCorporateActionMovementPreliminaryAdviceV07,
+						com.tools20022.repository.constraints.ConstraintOtherEventRule.forCorporateActionMovementPreliminaryAdviceV07,
+						com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule.forCorporateActionMovementPreliminaryAdviceV07,
+						com.tools20022.repository.constraints.ConstraintAppliedOptionRule.forCorporateActionMovementPreliminaryAdviceV07);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMovementPreliminaryAdviceV07";
 				definition = "Scope\r\nAn account servicer sends the CorporateActionMovementPreliminaryAdvice message to an account owner or its designated agent to pre-advise upcoming posting or reversal of securities and/or cash postings.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).";
@@ -1674,223 +1713,223 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pgntn")
-	public Pagination getPagination() {
-		return pagination;
+	public Optional<Pagination> getPagination() {
+		return pagination == null ? Optional.empty() : Optional.of(pagination);
 	}
 
-	public void setPagination(Pagination pagination) {
+	public CorporateActionMovementPreliminaryAdviceV07 setPagination(Pagination pagination) {
 		this.pagination = pagination;
+		return this;
 	}
 
-	@XmlElement(name = "MvmntPrlimryAdvcGnlInf", required = true)
 	public CorporateActionPreliminaryAdviceType2 getMovementPreliminaryAdviceGeneralInformation() {
 		return movementPreliminaryAdviceGeneralInformation;
 	}
 
-	public void setMovementPreliminaryAdviceGeneralInformation(CorporateActionPreliminaryAdviceType2 movementPreliminaryAdviceGeneralInformation) {
-		this.movementPreliminaryAdviceGeneralInformation = movementPreliminaryAdviceGeneralInformation;
+	public CorporateActionMovementPreliminaryAdviceV07 setMovementPreliminaryAdviceGeneralInformation(CorporateActionPreliminaryAdviceType2 movementPreliminaryAdviceGeneralInformation) {
+		this.movementPreliminaryAdviceGeneralInformation = Objects.requireNonNull(movementPreliminaryAdviceGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "PrvsMvmntPrlimryAdvcId")
-	public DocumentIdentification31 getPreviousMovementPreliminaryAdviceIdentification() {
-		return previousMovementPreliminaryAdviceIdentification;
+	public Optional<DocumentIdentification31> getPreviousMovementPreliminaryAdviceIdentification() {
+		return previousMovementPreliminaryAdviceIdentification == null ? Optional.empty() : Optional.of(previousMovementPreliminaryAdviceIdentification);
 	}
 
-	public void setPreviousMovementPreliminaryAdviceIdentification(DocumentIdentification31 previousMovementPreliminaryAdviceIdentification) {
+	public CorporateActionMovementPreliminaryAdviceV07 setPreviousMovementPreliminaryAdviceIdentification(DocumentIdentification31 previousMovementPreliminaryAdviceIdentification) {
 		this.previousMovementPreliminaryAdviceIdentification = previousMovementPreliminaryAdviceIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "NtfctnId")
-	public DocumentIdentification31 getNotificationIdentification() {
-		return notificationIdentification;
+	public Optional<DocumentIdentification31> getNotificationIdentification() {
+		return notificationIdentification == null ? Optional.empty() : Optional.of(notificationIdentification);
 	}
 
-	public void setNotificationIdentification(DocumentIdentification31 notificationIdentification) {
+	public CorporateActionMovementPreliminaryAdviceV07 setNotificationIdentification(DocumentIdentification31 notificationIdentification) {
 		this.notificationIdentification = notificationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "MvmntConfId")
-	public DocumentIdentification31 getMovementConfirmationIdentification() {
-		return movementConfirmationIdentification;
+	public Optional<DocumentIdentification31> getMovementConfirmationIdentification() {
+		return movementConfirmationIdentification == null ? Optional.empty() : Optional.of(movementConfirmationIdentification);
 	}
 
-	public void setMovementConfirmationIdentification(DocumentIdentification31 movementConfirmationIdentification) {
+	public CorporateActionMovementPreliminaryAdviceV07 setMovementConfirmationIdentification(DocumentIdentification31 movementConfirmationIdentification) {
 		this.movementConfirmationIdentification = movementConfirmationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "InstrId")
-	public DocumentIdentification9 getInstructionIdentification() {
-		return instructionIdentification;
+	public Optional<DocumentIdentification9> getInstructionIdentification() {
+		return instructionIdentification == null ? Optional.empty() : Optional.of(instructionIdentification);
 	}
 
-	public void setInstructionIdentification(DocumentIdentification9 instructionIdentification) {
+	public CorporateActionMovementPreliminaryAdviceV07 setInstructionIdentification(DocumentIdentification9 instructionIdentification) {
 		this.instructionIdentification = instructionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "OthrDocId")
 	public List<DocumentIdentification32> getOtherDocumentIdentification() {
-		return otherDocumentIdentification;
+		return otherDocumentIdentification == null ? otherDocumentIdentification = new ArrayList<>() : otherDocumentIdentification;
 	}
 
-	public void setOtherDocumentIdentification(List<DocumentIdentification32> otherDocumentIdentification) {
-		this.otherDocumentIdentification = otherDocumentIdentification;
+	public CorporateActionMovementPreliminaryAdviceV07 setOtherDocumentIdentification(List<DocumentIdentification32> otherDocumentIdentification) {
+		this.otherDocumentIdentification = Objects.requireNonNull(otherDocumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "EvtsLkg")
 	public List<CorporateActionEventReference3> getEventsLinkage() {
-		return eventsLinkage;
+		return eventsLinkage == null ? eventsLinkage = new ArrayList<>() : eventsLinkage;
 	}
 
-	public void setEventsLinkage(List<CorporateActionEventReference3> eventsLinkage) {
-		this.eventsLinkage = eventsLinkage;
+	public CorporateActionMovementPreliminaryAdviceV07 setEventsLinkage(List<CorporateActionEventReference3> eventsLinkage) {
+		this.eventsLinkage = Objects.requireNonNull(eventsLinkage);
+		return this;
 	}
 
-	@XmlElement(name = "RvslRsn")
-	public CorporateActionReversalReason3 getReversalReason() {
-		return reversalReason;
+	public Optional<CorporateActionReversalReason3> getReversalReason() {
+		return reversalReason == null ? Optional.empty() : Optional.of(reversalReason);
 	}
 
-	public void setReversalReason(CorporateActionReversalReason3 reversalReason) {
+	public CorporateActionMovementPreliminaryAdviceV07 setReversalReason(CorporateActionReversalReason3 reversalReason) {
 		this.reversalReason = reversalReason;
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionGeneralInformation84 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
 
-	public void setCorporateActionGeneralInformation(CorporateActionGeneralInformation84 corporateActionGeneralInformation) {
-		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	public CorporateActionMovementPreliminaryAdviceV07 setCorporateActionGeneralInformation(CorporateActionGeneralInformation84 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = Objects.requireNonNull(corporateActionGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "AcctDtls", required = true)
 	public AccountIdentification32Choice getAccountDetails() {
 		return accountDetails;
 	}
 
-	public void setAccountDetails(AccountIdentification32Choice accountDetails) {
-		this.accountDetails = accountDetails;
+	public CorporateActionMovementPreliminaryAdviceV07 setAccountDetails(AccountIdentification32Choice accountDetails) {
+		this.accountDetails = Objects.requireNonNull(accountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnDtls")
-	public CorporateAction32 getCorporateActionDetails() {
-		return corporateActionDetails;
+	public Optional<CorporateAction32> getCorporateActionDetails() {
+		return corporateActionDetails == null ? Optional.empty() : Optional.of(corporateActionDetails);
 	}
 
-	public void setCorporateActionDetails(CorporateAction32 corporateActionDetails) {
+	public CorporateActionMovementPreliminaryAdviceV07 setCorporateActionDetails(CorporateAction32 corporateActionDetails) {
 		this.corporateActionDetails = corporateActionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnMvmntDtls")
 	public List<CorporateActionOption115> getCorporateActionMovementDetails() {
-		return corporateActionMovementDetails;
+		return corporateActionMovementDetails == null ? corporateActionMovementDetails = new ArrayList<>() : corporateActionMovementDetails;
 	}
 
-	public void setCorporateActionMovementDetails(List<CorporateActionOption115> corporateActionMovementDetails) {
-		this.corporateActionMovementDetails = corporateActionMovementDetails;
+	public CorporateActionMovementPreliminaryAdviceV07 setCorporateActionMovementDetails(List<CorporateActionOption115> corporateActionMovementDetails) {
+		this.corporateActionMovementDetails = Objects.requireNonNull(corporateActionMovementDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public CorporateActionNarrative28 getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<CorporateActionNarrative28> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(CorporateActionNarrative28 additionalInformation) {
+	public CorporateActionMovementPreliminaryAdviceV07 setAdditionalInformation(CorporateActionNarrative28 additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 
-	@XmlElement(name = "IssrAgt")
 	public List<PartyIdentification71Choice> getIssuerAgent() {
-		return issuerAgent;
+		return issuerAgent == null ? issuerAgent = new ArrayList<>() : issuerAgent;
 	}
 
-	public void setIssuerAgent(List<PartyIdentification71Choice> issuerAgent) {
-		this.issuerAgent = issuerAgent;
+	public CorporateActionMovementPreliminaryAdviceV07 setIssuerAgent(List<PartyIdentification71Choice> issuerAgent) {
+		this.issuerAgent = Objects.requireNonNull(issuerAgent);
+		return this;
 	}
 
-	@XmlElement(name = "PngAgt")
 	public List<PartyIdentification71Choice> getPayingAgent() {
-		return payingAgent;
+		return payingAgent == null ? payingAgent = new ArrayList<>() : payingAgent;
 	}
 
-	public void setPayingAgent(List<PartyIdentification71Choice> payingAgent) {
-		this.payingAgent = payingAgent;
+	public CorporateActionMovementPreliminaryAdviceV07 setPayingAgent(List<PartyIdentification71Choice> payingAgent) {
+		this.payingAgent = Objects.requireNonNull(payingAgent);
+		return this;
 	}
 
-	@XmlElement(name = "SubPngAgt")
 	public List<PartyIdentification71Choice> getSubPayingAgent() {
-		return subPayingAgent;
+		return subPayingAgent == null ? subPayingAgent = new ArrayList<>() : subPayingAgent;
 	}
 
-	public void setSubPayingAgent(List<PartyIdentification71Choice> subPayingAgent) {
-		this.subPayingAgent = subPayingAgent;
+	public CorporateActionMovementPreliminaryAdviceV07 setSubPayingAgent(List<PartyIdentification71Choice> subPayingAgent) {
+		this.subPayingAgent = Objects.requireNonNull(subPayingAgent);
+		return this;
 	}
 
-	@XmlElement(name = "Regar")
-	public PartyIdentification71Choice getRegistrar() {
-		return registrar;
+	public Optional<PartyIdentification71Choice> getRegistrar() {
+		return registrar == null ? Optional.empty() : Optional.of(registrar);
 	}
 
-	public void setRegistrar(PartyIdentification71Choice registrar) {
+	public CorporateActionMovementPreliminaryAdviceV07 setRegistrar(PartyIdentification71Choice registrar) {
 		this.registrar = registrar;
+		return this;
 	}
 
-	@XmlElement(name = "RsellngAgt")
 	public List<PartyIdentification71Choice> getResellingAgent() {
-		return resellingAgent;
+		return resellingAgent == null ? resellingAgent = new ArrayList<>() : resellingAgent;
 	}
 
-	public void setResellingAgent(List<PartyIdentification71Choice> resellingAgent) {
-		this.resellingAgent = resellingAgent;
+	public CorporateActionMovementPreliminaryAdviceV07 setResellingAgent(List<PartyIdentification71Choice> resellingAgent) {
+		this.resellingAgent = Objects.requireNonNull(resellingAgent);
+		return this;
 	}
 
-	@XmlElement(name = "PhysSctiesAgt")
-	public PartyIdentification71Choice getPhysicalSecuritiesAgent() {
-		return physicalSecuritiesAgent;
+	public Optional<PartyIdentification71Choice> getPhysicalSecuritiesAgent() {
+		return physicalSecuritiesAgent == null ? Optional.empty() : Optional.of(physicalSecuritiesAgent);
 	}
 
-	public void setPhysicalSecuritiesAgent(PartyIdentification71Choice physicalSecuritiesAgent) {
+	public CorporateActionMovementPreliminaryAdviceV07 setPhysicalSecuritiesAgent(PartyIdentification71Choice physicalSecuritiesAgent) {
 		this.physicalSecuritiesAgent = physicalSecuritiesAgent;
+		return this;
 	}
 
-	@XmlElement(name = "DrpAgt")
-	public PartyIdentification71Choice getDropAgent() {
-		return dropAgent;
+	public Optional<PartyIdentification71Choice> getDropAgent() {
+		return dropAgent == null ? Optional.empty() : Optional.of(dropAgent);
 	}
 
-	public void setDropAgent(PartyIdentification71Choice dropAgent) {
+	public CorporateActionMovementPreliminaryAdviceV07 setDropAgent(PartyIdentification71Choice dropAgent) {
 		this.dropAgent = dropAgent;
+		return this;
 	}
 
-	@XmlElement(name = "SlctnAgt")
 	public List<PartyIdentification71Choice> getSolicitationAgent() {
-		return solicitationAgent;
+		return solicitationAgent == null ? solicitationAgent = new ArrayList<>() : solicitationAgent;
 	}
 
-	public void setSolicitationAgent(List<PartyIdentification71Choice> solicitationAgent) {
-		this.solicitationAgent = solicitationAgent;
+	public CorporateActionMovementPreliminaryAdviceV07 setSolicitationAgent(List<PartyIdentification71Choice> solicitationAgent) {
+		this.solicitationAgent = Objects.requireNonNull(solicitationAgent);
+		return this;
 	}
 
-	@XmlElement(name = "InfAgt")
-	public PartyIdentification71Choice getInformationAgent() {
-		return informationAgent;
+	public Optional<PartyIdentification71Choice> getInformationAgent() {
+		return informationAgent == null ? Optional.empty() : Optional.of(informationAgent);
 	}
 
-	public void setInformationAgent(PartyIdentification71Choice informationAgent) {
+	public CorporateActionMovementPreliminaryAdviceV07 setInformationAgent(PartyIdentification71Choice informationAgent) {
 		this.informationAgent = informationAgent;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public CorporateActionMovementPreliminaryAdviceV07 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.035.07.07")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.035.001.07")
 	static public class Document {
 		@XmlElement(name = "CorpActnMvmntPrlimryAdvc", required = true)
 		public CorporateActionMovementPreliminaryAdviceV07 messageBody;

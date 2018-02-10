@@ -22,9 +22,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * CardTransactionContext2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardTransactionContext4", propOrder = "specialConditions")
 public class CardTransactionContext4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SpclConds")
 	protected List<com.tools20022.repository.msg.CardTransactionCondition1> specialConditions;
 	/**
-	 * Data used to assign specific condition such as liability shift or
-	 * preferential interchange fees.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +111,7 @@ public class CardTransactionContext4 {
 	 */
 	public static final MMMessageAssociationEnd mmSpecialConditions = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardTransactionContext4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionContext4.mmObject();
 			isDerived = false;
 			xmlTag = "SpclConds";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,9 +127,9 @@ public class CardTransactionContext4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardTransactionContext4.mmSpecialConditions);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionContext4.mmSpecialConditions);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransactionContext4";
 				definition = "Context of the card transaction.";
@@ -137,12 +139,12 @@ public class CardTransactionContext4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SpclConds")
 	public List<CardTransactionCondition1> getSpecialConditions() {
-		return specialConditions;
+		return specialConditions == null ? specialConditions = new ArrayList<>() : specialConditions;
 	}
 
-	public void setSpecialConditions(List<com.tools20022.repository.msg.CardTransactionCondition1> specialConditions) {
-		this.specialConditions = specialConditions;
+	public CardTransactionContext4 setSpecialConditions(List<com.tools20022.repository.msg.CardTransactionCondition1> specialConditions) {
+		this.specialConditions = Objects.requireNonNull(specialConditions);
+		return this;
 	}
 }

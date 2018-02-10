@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.NotificationStatusCode;
+import com.tools20022.repository.codeset.NotificationStatus2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Status to define if the occurrence of the event contained in the notification
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.NotificationStatusCode
- * NotificationStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NotificationStatus2Code#mmEventConfirmed
- * NotificationStatus2Code.mmEventConfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.NotificationStatus2Code#EventConfirmed
+ * NotificationStatus2Code.EventConfirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NotificationStatus2Code#mmEventUnconfirmed
- * NotificationStatus2Code.mmEventUnconfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.NotificationStatus2Code#EventUnconfirmed
+ * NotificationStatus2Code.EventUnconfirmed}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.NotificationStatusCode
+ * NotificationStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class NotificationStatus2Code extends NotificationStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class NotificationStatus2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class NotificationStatus2Code extends NotificationStatusCode {
 	 * name} = "EventConfirmed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEventConfirmed = new MMCode() {
+	public static final NotificationStatus2Code EventConfirmed = new NotificationStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventConfirmed";
-			owner_lazy = () -> NotificationStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NotificationStatus2Code.mmObject();
+			codeName = NotificationStatusCode.EventConfirmed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,57 @@ public class NotificationStatus2Code extends NotificationStatusCode {
 	 * name} = "EventUnconfirmed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEventUnconfirmed = new MMCode() {
+	public static final NotificationStatus2Code EventUnconfirmed = new NotificationStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventUnconfirmed";
-			owner_lazy = () -> NotificationStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NotificationStatus2Code.mmObject();
+			codeName = NotificationStatusCode.EventUnconfirmed.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, NotificationStatus2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected NotificationStatus2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ECON");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NotificationStatus2Code";
 				definition = "Status to define if the occurrence of the event contained in the notification is confirmed or unconfirmed.";
-				code_lazy = () -> Arrays.asList(NotificationStatus2Code.mmEventConfirmed, NotificationStatus2Code.mmEventUnconfirmed);
 				trace_lazy = () -> NotificationStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NotificationStatus2Code.EventConfirmed, com.tools20022.repository.codeset.NotificationStatus2Code.EventUnconfirmed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(EventConfirmed.getCodeName().get(), EventConfirmed);
+		codesByName.put(EventUnconfirmed.getCodeName().get(), EventUnconfirmed);
+	}
+
+	public static NotificationStatus2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static NotificationStatus2Code[] values() {
+		NotificationStatus2Code[] values = new NotificationStatus2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, NotificationStatus2Code> {
+		@Override
+		public NotificationStatus2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(NotificationStatus2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

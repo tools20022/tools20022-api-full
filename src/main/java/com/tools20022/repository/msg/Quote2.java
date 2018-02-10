@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -32,6 +33,8 @@ import com.tools20022.repository.entity.SecuritiesQuoteVariable;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,16 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Proposition of price for a financial instrument."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Quote2", propOrder = {"type", "quoteOriginator", "quoteOriginatorRole", "requestorEligibility", "responseLevel", "quoteChoice"})
 public class Quote2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp")
 	protected QuoteType1Code type;
 	/**
-	 * Indicates the scenario in which the quote is (requested to be) used (ie,
-	 * indicative, firm, restricted tradeable or counter).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,6 +110,9 @@ public class Quote2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Tp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 537</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -122,9 +128,10 @@ public class Quote2 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmType;
-			componentContext_lazy = () -> Quote2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quote2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "537"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates the scenario in which the quote is (requested to be) used (ie, indicative, firm, restricted tradeable or counter).";
@@ -133,10 +140,11 @@ public class Quote2 {
 			simpleType_lazy = () -> QuoteType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "QtOrgtr")
 	protected PartyIdentification24Choice quoteOriginator;
 	/**
-	 * Originator of the quote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,6 +159,9 @@ public class Quote2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtOrgtr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 452/61</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -163,9 +174,10 @@ public class Quote2 {
 	 */
 	public static final MMMessageAttribute mmQuoteOriginator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Quote2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quote2.mmObject();
 			isDerived = false;
 			xmlTag = "QtOrgtr";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "452/61"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteOriginator";
 			definition = "Originator of the quote.";
@@ -174,10 +186,11 @@ public class Quote2 {
 			complexType_lazy = () -> PartyIdentification24Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "QtOrgtrRole")
 	protected OriginatorRole1Code quoteOriginatorRole;
 	/**
-	 * Originator of the quote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,6 +205,9 @@ public class Quote2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtOrgtrRole"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 452/63,64,65,66,67</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -204,9 +220,10 @@ public class Quote2 {
 	 */
 	public static final MMMessageAttribute mmQuoteOriginatorRole = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Quote2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quote2.mmObject();
 			isDerived = false;
 			xmlTag = "QtOrgtrRole";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "452/63,64,65,66,67"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteOriginatorRole";
 			definition = "Originator of the quote.";
@@ -215,10 +232,11 @@ public class Quote2 {
 			simpleType_lazy = () -> OriginatorRole1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RqstrElgblty")
 	protected Eligibility1Code requestorEligibility;
 	/**
-	 * Identifies if the requestor of the quote is an elligible counterparty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -252,7 +270,7 @@ public class Quote2 {
 	public static final MMMessageAttribute mmRequestorEligibility = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> QuoteRequestor.mmRequestorEligibility;
-			componentContext_lazy = () -> Quote2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quote2.mmObject();
 			isDerived = false;
 			xmlTag = "RqstrElgblty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,11 +281,11 @@ public class Quote2 {
 			simpleType_lazy = () -> Eligibility1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RspnLvl")
 	protected ResponseLevel1Code responseLevel;
 	/**
-	 * Indicates the level of response requested from the Receiver of the
-	 * message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -281,6 +299,9 @@ public class Quote2 {
 	 * Quote2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RspnLvl"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 301</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -296,9 +317,10 @@ public class Quote2 {
 	 */
 	public static final MMMessageAttribute mmResponseLevel = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Quote2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quote2.mmObject();
 			isDerived = false;
 			xmlTag = "RspnLvl";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "301"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseLevel";
 			definition = "Indicates the level of response requested from the Receiver of the message.";
@@ -307,11 +329,11 @@ public class Quote2 {
 			simpleType_lazy = () -> ResponseLevel1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "QtChc", required = true)
 	protected SingleOrMassQuote1Choice quoteChoice;
 	/**
-	 * Identifies which type of quote (single or mass) the message is to be used
-	 * for.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -339,7 +361,7 @@ public class Quote2 {
 	 */
 	public static final MMMessageAssociationEnd mmQuoteChoice = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Quote2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quote2.mmObject();
 			isDerived = false;
 			xmlTag = "QtChc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -355,9 +377,10 @@ public class Quote2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Quote2.mmType, Quote2.mmQuoteOriginator, Quote2.mmQuoteOriginatorRole, Quote2.mmRequestorEligibility, Quote2.mmResponseLevel, Quote2.mmQuoteChoice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quote2.mmType, com.tools20022.repository.msg.Quote2.mmQuoteOriginator, com.tools20022.repository.msg.Quote2.mmQuoteOriginatorRole,
+						com.tools20022.repository.msg.Quote2.mmRequestorEligibility, com.tools20022.repository.msg.Quote2.mmResponseLevel, com.tools20022.repository.msg.Quote2.mmQuoteChoice);
 				trace_lazy = () -> SecuritiesQuoteVariable.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Quote2";
 				definition = "Proposition of price for a financial instrument.";
@@ -366,57 +389,57 @@ public class Quote2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp")
-	public QuoteType1Code getType() {
-		return type;
+	public Optional<QuoteType1Code> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(QuoteType1Code type) {
+	public Quote2 setType(QuoteType1Code type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "QtOrgtr")
-	public PartyIdentification24Choice getQuoteOriginator() {
-		return quoteOriginator;
+	public Optional<PartyIdentification24Choice> getQuoteOriginator() {
+		return quoteOriginator == null ? Optional.empty() : Optional.of(quoteOriginator);
 	}
 
-	public void setQuoteOriginator(PartyIdentification24Choice quoteOriginator) {
+	public Quote2 setQuoteOriginator(PartyIdentification24Choice quoteOriginator) {
 		this.quoteOriginator = quoteOriginator;
+		return this;
 	}
 
-	@XmlElement(name = "QtOrgtrRole")
-	public OriginatorRole1Code getQuoteOriginatorRole() {
-		return quoteOriginatorRole;
+	public Optional<OriginatorRole1Code> getQuoteOriginatorRole() {
+		return quoteOriginatorRole == null ? Optional.empty() : Optional.of(quoteOriginatorRole);
 	}
 
-	public void setQuoteOriginatorRole(OriginatorRole1Code quoteOriginatorRole) {
+	public Quote2 setQuoteOriginatorRole(OriginatorRole1Code quoteOriginatorRole) {
 		this.quoteOriginatorRole = quoteOriginatorRole;
+		return this;
 	}
 
-	@XmlElement(name = "RqstrElgblty")
-	public Eligibility1Code getRequestorEligibility() {
-		return requestorEligibility;
+	public Optional<Eligibility1Code> getRequestorEligibility() {
+		return requestorEligibility == null ? Optional.empty() : Optional.of(requestorEligibility);
 	}
 
-	public void setRequestorEligibility(Eligibility1Code requestorEligibility) {
+	public Quote2 setRequestorEligibility(Eligibility1Code requestorEligibility) {
 		this.requestorEligibility = requestorEligibility;
+		return this;
 	}
 
-	@XmlElement(name = "RspnLvl")
-	public ResponseLevel1Code getResponseLevel() {
-		return responseLevel;
+	public Optional<ResponseLevel1Code> getResponseLevel() {
+		return responseLevel == null ? Optional.empty() : Optional.of(responseLevel);
 	}
 
-	public void setResponseLevel(ResponseLevel1Code responseLevel) {
+	public Quote2 setResponseLevel(ResponseLevel1Code responseLevel) {
 		this.responseLevel = responseLevel;
+		return this;
 	}
 
-	@XmlElement(name = "QtChc", required = true)
 	public SingleOrMassQuote1Choice getQuoteChoice() {
 		return quoteChoice;
 	}
 
-	public void setQuoteChoice(SingleOrMassQuote1Choice quoteChoice) {
-		this.quoteChoice = quoteChoice;
+	public Quote2 setQuoteChoice(SingleOrMassQuote1Choice quoteChoice) {
+		this.quoteChoice = Objects.requireNonNull(quoteChoice);
+		return this;
 	}
 }

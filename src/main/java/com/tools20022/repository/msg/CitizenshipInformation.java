@@ -29,6 +29,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -79,16 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CitizenshipInformation", propOrder = {"nationality", "minorIndicator"})
 public class CitizenshipInformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ntlty", required = true)
 	protected NationalityCode nationality;
 	/**
-	 * Specifies the country where a person was born or is legally accepted as
-	 * belonging to the country.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,7 +133,7 @@ public class CitizenshipInformation {
 	public static final MMMessageAttribute mmNationality = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Person.mmNationality;
-			componentContext_lazy = () -> CitizenshipInformation.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CitizenshipInformation.mmObject();
 			isDerived = false;
 			xmlTag = "Ntlty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -144,12 +145,11 @@ public class CitizenshipInformation {
 			simpleType_lazy = () -> NationalityCode.mmObject();
 		}
 	};
+	@XmlElement(name = "MnrInd", required = true)
 	protected YesNoIndicator minorIndicator;
 	/**
-	 * Indicates whether the person is a legal minor. It may depend on the
-	 * nationality, the domicile country or the transaction in which the person
-	 * is involved.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,7 +193,7 @@ public class CitizenshipInformation {
 	public static final MMMessageAttribute mmMinorIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Person.mmMinorIndicator;
-			componentContext_lazy = () -> CitizenshipInformation.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CitizenshipInformation.mmObject();
 			isDerived = false;
 			xmlTag = "MnrInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,9 +209,9 @@ public class CitizenshipInformation {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CitizenshipInformation.mmNationality, CitizenshipInformation.mmMinorIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CitizenshipInformation.mmNationality, com.tools20022.repository.msg.CitizenshipInformation.mmMinorIndicator);
 				trace_lazy = () -> Person.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -228,21 +228,21 @@ public class CitizenshipInformation {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ntlty", required = true)
 	public NationalityCode getNationality() {
 		return nationality;
 	}
 
-	public void setNationality(NationalityCode nationality) {
-		this.nationality = nationality;
+	public CitizenshipInformation setNationality(NationalityCode nationality) {
+		this.nationality = Objects.requireNonNull(nationality);
+		return this;
 	}
 
-	@XmlElement(name = "MnrInd", required = true)
 	public YesNoIndicator getMinorIndicator() {
 		return minorIndicator;
 	}
 
-	public void setMinorIndicator(YesNoIndicator minorIndicator) {
-		this.minorIndicator = minorIndicator;
+	public CitizenshipInformation setMinorIndicator(YesNoIndicator minorIndicator) {
+		this.minorIndicator = Objects.requireNonNull(minorIndicator);
+		return this;
 	}
 }

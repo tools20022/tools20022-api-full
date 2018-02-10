@@ -33,6 +33,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +75,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -95,16 +97,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "TransactionTotals1", propOrder = {"POIGroupIdentification", "cardProductProfile", "currency", "type", "totalNumber", "cumulativeAmount"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "TransactionTotals1", propOrder = {"pOIGroupIdentification", "cardProductProfile", "currency", "type", "totalNumber", "cumulativeAmount"})
 public class TransactionTotals1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "POIGrpId")
 	protected Max35Text pOIGroupIdentification;
 	/**
-	 * Identifier assigned by the merchant identifying a set of POI terminals
-	 * performing some categories of transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,7 +135,7 @@ public class TransactionTotals1 {
 	 */
 	public static final MMMessageAttribute mmPOIGroupIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionTotals1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "POIGrpId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -144,11 +146,11 @@ public class TransactionTotals1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CardPdctPrfl")
 	protected Exact4NumericText cardProductProfile;
 	/**
-	 * Category of cards related the acceptance processing rules defined by the
-	 * acquirer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,7 +180,7 @@ public class TransactionTotals1 {
 	 */
 	public static final MMMessageAttribute mmCardProductProfile = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionTotals1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "CardPdctPrfl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,10 +191,11 @@ public class TransactionTotals1 {
 			simpleType_lazy = () -> Exact4NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected CurrencyCode currency;
 	/**
-	 * Currency associated with the transaction totals.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,7 +228,7 @@ public class TransactionTotals1 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ReconciliationTransaction.mmCurrency;
-			componentContext_lazy = () -> TransactionTotals1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,10 +239,11 @@ public class TransactionTotals1 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected TypeTransactionTotals1Code type;
 	/**
-	 * Identification of the type of transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -273,7 +277,7 @@ public class TransactionTotals1 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ReconciliationTransaction.mmTransactionType;
-			componentContext_lazy = () -> TransactionTotals1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,10 +288,11 @@ public class TransactionTotals1 {
 			simpleType_lazy = () -> TypeTransactionTotals1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNb", required = true)
 	protected Max35NumericText totalNumber;
 	/**
-	 * Total number of transactions during a reconciliation period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -322,7 +327,7 @@ public class TransactionTotals1 {
 	public static final MMMessageAttribute mmTotalNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ReconciliationTransaction.mmTotalNumber;
-			componentContext_lazy = () -> TransactionTotals1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -333,10 +338,11 @@ public class TransactionTotals1 {
 			simpleType_lazy = () -> Max35NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "CmltvAmt", required = true)
 	protected ImpliedCurrencyAndAmount cumulativeAmount;
 	/**
-	 * Total amount of a collection of transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -370,7 +376,7 @@ public class TransactionTotals1 {
 	public static final MMMessageAttribute mmCumulativeAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ReconciliationTransaction.mmCumulativeAmount;
-			componentContext_lazy = () -> TransactionTotals1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "CmltvAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -385,10 +391,11 @@ public class TransactionTotals1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionTotals1.mmPOIGroupIdentification, TransactionTotals1.mmCardProductProfile, TransactionTotals1.mmCurrency, TransactionTotals1.mmType, TransactionTotals1.mmTotalNumber,
-						TransactionTotals1.mmCumulativeAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals1.mmPOIGroupIdentification, com.tools20022.repository.msg.TransactionTotals1.mmCardProductProfile,
+						com.tools20022.repository.msg.TransactionTotals1.mmCurrency, com.tools20022.repository.msg.TransactionTotals1.mmType, com.tools20022.repository.msg.TransactionTotals1.mmTotalNumber,
+						com.tools20022.repository.msg.TransactionTotals1.mmCumulativeAmount);
 				trace_lazy = () -> ReconciliationTransaction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -405,57 +412,57 @@ public class TransactionTotals1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "POIGrpId")
-	public Max35Text getPOIGroupIdentification() {
-		return pOIGroupIdentification;
+	public Optional<Max35Text> getPOIGroupIdentification() {
+		return pOIGroupIdentification == null ? Optional.empty() : Optional.of(pOIGroupIdentification);
 	}
 
-	public void setPOIGroupIdentification(Max35Text pOIGroupIdentification) {
+	public TransactionTotals1 setPOIGroupIdentification(Max35Text pOIGroupIdentification) {
 		this.pOIGroupIdentification = pOIGroupIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CardPdctPrfl")
-	public Exact4NumericText getCardProductProfile() {
-		return cardProductProfile;
+	public Optional<Exact4NumericText> getCardProductProfile() {
+		return cardProductProfile == null ? Optional.empty() : Optional.of(cardProductProfile);
 	}
 
-	public void setCardProductProfile(Exact4NumericText cardProductProfile) {
+	public TransactionTotals1 setCardProductProfile(Exact4NumericText cardProductProfile) {
 		this.cardProductProfile = cardProductProfile;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public CurrencyCode getCurrency() {
-		return currency;
+	public Optional<CurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(CurrencyCode currency) {
+	public TransactionTotals1 setCurrency(CurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public TypeTransactionTotals1Code getType() {
 		return type;
 	}
 
-	public void setType(TypeTransactionTotals1Code type) {
-		this.type = type;
+	public TransactionTotals1 setType(TypeTransactionTotals1Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "TtlNb", required = true)
 	public Max35NumericText getTotalNumber() {
 		return totalNumber;
 	}
 
-	public void setTotalNumber(Max35NumericText totalNumber) {
-		this.totalNumber = totalNumber;
+	public TransactionTotals1 setTotalNumber(Max35NumericText totalNumber) {
+		this.totalNumber = Objects.requireNonNull(totalNumber);
+		return this;
 	}
 
-	@XmlElement(name = "CmltvAmt", required = true)
 	public ImpliedCurrencyAndAmount getCumulativeAmount() {
 		return cumulativeAmount;
 	}
 
-	public void setCumulativeAmount(ImpliedCurrencyAndAmount cumulativeAmount) {
-		this.cumulativeAmount = cumulativeAmount;
+	public TransactionTotals1 setCumulativeAmount(ImpliedCurrencyAndAmount cumulativeAmount) {
+		this.cumulativeAmount = Objects.requireNonNull(cumulativeAmount);
+		return this;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.GenericIdentification6;
 import com.tools20022.repository.msg.QuantityAndAvailability;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between formats for the balance information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SubBalanceQuantity1Choice", propOrder = {"quantity", "quantityAsDSS", "quantityAndAvailability"})
 public class SubBalanceQuantity1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Qty", required = true)
 	protected FinancialInstrumentQuantityChoice quantity;
 	/**
-	 * Quantity of securities in the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class SubBalanceQuantity1Choice {
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSubBalanceQuantity;
-			componentContext_lazy = () -> SubBalanceQuantity1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SubBalanceQuantity1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class SubBalanceQuantity1Choice {
 			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "QtyAsDSS", required = true)
 	protected GenericIdentification6 quantityAsDSS;
 	/**
-	 * Quantity of securities in the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +162,7 @@ public class SubBalanceQuantity1Choice {
 	public static final MMMessageAttribute mmQuantityAsDSS = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSubBalanceQuantity;
-			componentContext_lazy = () -> SubBalanceQuantity1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SubBalanceQuantity1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyAsDSS";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,11 +173,11 @@ public class SubBalanceQuantity1Choice {
 			complexType_lazy = () -> GenericIdentification6.mmObject();
 		}
 	};
+	@XmlElement(name = "QtyAndAvlbty", required = true)
 	protected QuantityAndAvailability quantityAndAvailability;
 	/**
-	 * Quantity of securities in the sub-balance and whether the balance is
-	 * available.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,7 +213,7 @@ public class SubBalanceQuantity1Choice {
 	public static final MMMessageAttribute mmQuantityAndAvailability = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
-			componentContext_lazy = () -> SubBalanceQuantity1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SubBalanceQuantity1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyAndAvlbty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,9 +228,10 @@ public class SubBalanceQuantity1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SubBalanceQuantity1Choice.mmQuantity, SubBalanceQuantity1Choice.mmQuantityAsDSS, SubBalanceQuantity1Choice.mmQuantityAndAvailability);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SubBalanceQuantity1Choice.mmQuantity, com.tools20022.repository.choice.SubBalanceQuantity1Choice.mmQuantityAsDSS,
+						com.tools20022.repository.choice.SubBalanceQuantity1Choice.mmQuantityAndAvailability);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubBalanceQuantity1Choice";
 				definition = "Choice between formats for the balance information.";
@@ -236,30 +240,30 @@ public class SubBalanceQuantity1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantityChoice getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantityChoice quantity) {
-		this.quantity = quantity;
+	public SubBalanceQuantity1Choice setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantityChoice quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	@XmlElement(name = "QtyAsDSS", required = true)
 	public GenericIdentification6 getQuantityAsDSS() {
 		return quantityAsDSS;
 	}
 
-	public void setQuantityAsDSS(GenericIdentification6 quantityAsDSS) {
-		this.quantityAsDSS = quantityAsDSS;
+	public SubBalanceQuantity1Choice setQuantityAsDSS(GenericIdentification6 quantityAsDSS) {
+		this.quantityAsDSS = Objects.requireNonNull(quantityAsDSS);
+		return this;
 	}
 
-	@XmlElement(name = "QtyAndAvlbty", required = true)
 	public QuantityAndAvailability getQuantityAndAvailability() {
 		return quantityAndAvailability;
 	}
 
-	public void setQuantityAndAvailability(QuantityAndAvailability quantityAndAvailability) {
-		this.quantityAndAvailability = quantityAndAvailability;
+	public SubBalanceQuantity1Choice setQuantityAndAvailability(QuantityAndAvailability quantityAndAvailability) {
+		this.quantityAndAvailability = Objects.requireNonNull(quantityAndAvailability);
+		return this;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DatePeriodDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Date or period that the statement is requested for."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatementTerm1Choice", propOrder = {"statementDate", "statementPeriod"})
 public class StatementTerm1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StmtDt", required = true)
 	protected ISODate statementDate;
 	/**
-	 * Date of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +102,7 @@ public class StatementTerm1Choice {
 	 */
 	public static final MMMessageAttribute mmStatementDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatementTerm1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.StatementTerm1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StmtDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +113,11 @@ public class StatementTerm1Choice {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtPrd", required = true)
 	protected DatePeriodDetails statementPeriod;
 	/**
-	 * Period on which the statement is reporting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,7 +151,7 @@ public class StatementTerm1Choice {
 	public static final MMMessageAttribute mmStatementPeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmReportedPeriod;
-			componentContext_lazy = () -> StatementTerm1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.StatementTerm1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StmtPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,9 +166,9 @@ public class StatementTerm1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatementTerm1Choice.mmStatementDate, StatementTerm1Choice.mmStatementPeriod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementTerm1Choice.mmStatementDate, com.tools20022.repository.choice.StatementTerm1Choice.mmStatementPeriod);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StatementTerm1Choice";
 				definition = "Date or period that the statement is requested for.";
@@ -174,21 +177,21 @@ public class StatementTerm1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StmtDt", required = true)
 	public ISODate getStatementDate() {
 		return statementDate;
 	}
 
-	public void setStatementDate(ISODate statementDate) {
-		this.statementDate = statementDate;
+	public StatementTerm1Choice setStatementDate(ISODate statementDate) {
+		this.statementDate = Objects.requireNonNull(statementDate);
+		return this;
 	}
 
-	@XmlElement(name = "StmtPrd", required = true)
 	public DatePeriodDetails getStatementPeriod() {
 		return statementPeriod;
 	}
 
-	public void setStatementPeriod(DatePeriodDetails statementPeriod) {
-		this.statementPeriod = statementPeriod;
+	public StatementTerm1Choice setStatementPeriod(DatePeriodDetails statementPeriod) {
+		this.statementPeriod = Objects.requireNonNull(statementPeriod);
+		return this;
 	}
 }

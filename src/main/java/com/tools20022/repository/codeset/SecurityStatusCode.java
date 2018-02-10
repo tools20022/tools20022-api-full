@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.SecurityStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of the security.
@@ -31,30 +36,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SecurityStatusCode#Active
+ * SecurityStatusCode.Active}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecurityStatusCode#mmActive
- * SecurityStatusCode.mmActive}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecurityStatusCode#Inactive
+ * SecurityStatusCode.Inactive}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecurityStatusCode#mmInactive
- * SecurityStatusCode.mmInactive}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecurityStatusCode#WhenIssued
+ * SecurityStatusCode.WhenIssued}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecurityStatusCode#mmWhenIssued
- * SecurityStatusCode.mmWhenIssued}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecurityStatusCode#WhenDistributed
+ * SecurityStatusCode.WhenDistributed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SecurityStatusCode#Issued
+ * SecurityStatusCode.Issued}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecurityStatusCode#mmWhenDistributed
- * SecurityStatusCode.mmWhenDistributed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecurityStatusCode#Suspended
+ * SecurityStatusCode.Suspended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecurityStatusCode#mmIssued
- * SecurityStatusCode.mmIssued}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecurityStatusCode#InDefault
+ * SecurityStatusCode.InDefault}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecurityStatusCode#mmSuspended
- * SecurityStatusCode.mmSuspended}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecurityStatusCode#mmInDefault
- * SecurityStatusCode.mmInDefault}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecurityStatusCode#mmWorthless
- * SecurityStatusCode.mmWorthless}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecurityStatusCode#Worthless
+ * SecurityStatusCode.Worthless}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -69,8 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of the security."</li>
  * </ul>
  */
-public class SecurityStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SecurityStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -111,12 +115,12 @@ public class SecurityStatusCode {
 	 * definition} = "The status is active."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmActive = new MMCode() {
+	public static final SecurityStatusCode Active = new SecurityStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Active";
 			definition = "The status is active.";
-			owner_lazy = () -> SecurityStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecurityStatusCode.mmObject();
 			codeName = "ACTV";
 		}
 	};
@@ -141,12 +145,12 @@ public class SecurityStatusCode {
 	 * definition} = "The status is inactive."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInactive = new MMCode() {
+	public static final SecurityStatusCode Inactive = new SecurityStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Inactive";
 			definition = "The status is inactive.";
-			owner_lazy = () -> SecurityStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecurityStatusCode.mmObject();
 			codeName = "INAC";
 		}
 	};
@@ -171,12 +175,12 @@ public class SecurityStatusCode {
 	 * definition} = "The status is when issued."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWhenIssued = new MMCode() {
+	public static final SecurityStatusCode WhenIssued = new SecurityStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WhenIssued";
 			definition = "The status is when issued.";
-			owner_lazy = () -> SecurityStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecurityStatusCode.mmObject();
 			codeName = "WISS";
 		}
 	};
@@ -201,12 +205,12 @@ public class SecurityStatusCode {
 	 * definition} = "The status is when distributed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWhenDistributed = new MMCode() {
+	public static final SecurityStatusCode WhenDistributed = new SecurityStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WhenDistributed";
 			definition = "The status is when distributed.";
-			owner_lazy = () -> SecurityStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecurityStatusCode.mmObject();
 			codeName = "WDIS";
 		}
 	};
@@ -231,12 +235,12 @@ public class SecurityStatusCode {
 	 * definition} = "The status is issued."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssued = new MMCode() {
+	public static final SecurityStatusCode Issued = new SecurityStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Issued";
 			definition = "The status is issued.";
-			owner_lazy = () -> SecurityStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecurityStatusCode.mmObject();
 			codeName = "ISUD";
 		}
 	};
@@ -261,12 +265,12 @@ public class SecurityStatusCode {
 	 * definition} = "The status is suspended."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuspended = new MMCode() {
+	public static final SecurityStatusCode Suspended = new SecurityStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Suspended";
 			definition = "The status is suspended.";
-			owner_lazy = () -> SecurityStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecurityStatusCode.mmObject();
 			codeName = "SUSP";
 		}
 	};
@@ -291,12 +295,12 @@ public class SecurityStatusCode {
 	 * definition} = "The status is in default."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInDefault = new MMCode() {
+	public static final SecurityStatusCode InDefault = new SecurityStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InDefault";
 			definition = "The status is in default.";
-			owner_lazy = () -> SecurityStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecurityStatusCode.mmObject();
 			codeName = "IDEF";
 		}
 	};
@@ -322,29 +326,66 @@ public class SecurityStatusCode {
 	 * "Annoucement by the regulator that the security has become worthless."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWorthless = new MMCode() {
+	public static final SecurityStatusCode Worthless = new SecurityStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Worthless";
 			definition = "Annoucement by the regulator that the security has become worthless.";
-			owner_lazy = () -> SecurityStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecurityStatusCode.mmObject();
 			codeName = "WRTH";
 		}
 	};
+	final static private LinkedHashMap<String, SecurityStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SecurityStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACTV");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityStatusCode";
 				definition = "Specifies the status of the security.";
-				code_lazy = () -> Arrays.asList(SecurityStatusCode.mmActive, SecurityStatusCode.mmInactive, SecurityStatusCode.mmWhenIssued, SecurityStatusCode.mmWhenDistributed, SecurityStatusCode.mmIssued, SecurityStatusCode.mmSuspended,
-						SecurityStatusCode.mmInDefault, SecurityStatusCode.mmWorthless);
 				derivation_lazy = () -> Arrays.asList(SecurityStatus1Code.mmObject(), SecurityStatus2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecurityStatusCode.Active, com.tools20022.repository.codeset.SecurityStatusCode.Inactive, com.tools20022.repository.codeset.SecurityStatusCode.WhenIssued,
+						com.tools20022.repository.codeset.SecurityStatusCode.WhenDistributed, com.tools20022.repository.codeset.SecurityStatusCode.Issued, com.tools20022.repository.codeset.SecurityStatusCode.Suspended,
+						com.tools20022.repository.codeset.SecurityStatusCode.InDefault, com.tools20022.repository.codeset.SecurityStatusCode.Worthless);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Active.getCodeName().get(), Active);
+		codesByName.put(Inactive.getCodeName().get(), Inactive);
+		codesByName.put(WhenIssued.getCodeName().get(), WhenIssued);
+		codesByName.put(WhenDistributed.getCodeName().get(), WhenDistributed);
+		codesByName.put(Issued.getCodeName().get(), Issued);
+		codesByName.put(Suspended.getCodeName().get(), Suspended);
+		codesByName.put(InDefault.getCodeName().get(), InDefault);
+		codesByName.put(Worthless.getCodeName().get(), Worthless);
+	}
+
+	public static SecurityStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SecurityStatusCode[] values() {
+		SecurityStatusCode[] values = new SecurityStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SecurityStatusCode> {
+		@Override
+		public SecurityStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SecurityStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

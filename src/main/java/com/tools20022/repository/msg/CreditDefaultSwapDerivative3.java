@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.Index;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,16 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CreditDefaultSwapDerivative3", propOrder = {"underlyingIndexIdentification", "indexName", "index"})
 public class CreditDefaultSwapDerivative3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UndrlygIndxId")
 	protected ISINOct2015Identifier underlyingIndexIdentification;
 	/**
-	 * Derivative on a credit default swap with the ISIN code of the underlying
-	 * index.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +119,7 @@ public class CreditDefaultSwapDerivative3 {
 	public static final MMMessageAttribute mmUnderlyingIndexIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIdentification;
-			componentContext_lazy = () -> CreditDefaultSwapDerivative3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDefaultSwapDerivative3.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygIndxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,11 +130,11 @@ public class CreditDefaultSwapDerivative3 {
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	@XmlElement(name = "IndxNm", required = true)
 	protected Max25Text indexName;
 	/**
-	 * To be populated for derivatives on a CDS index with the standardized name
-	 * of the index.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +169,7 @@ public class CreditDefaultSwapDerivative3 {
 	public static final MMMessageAttribute mmIndexName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Index.mmReferenceSource;
-			componentContext_lazy = () -> CreditDefaultSwapDerivative3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDefaultSwapDerivative3.mmObject();
 			isDerived = false;
 			xmlTag = "IndxNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +180,11 @@ public class CreditDefaultSwapDerivative3 {
 			simpleType_lazy = () -> Max25Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Indx", required = true)
 	protected CreditDefaultSwapIndex2 index;
 	/**
-	 * Describes the Index specific details the derivative is being made on.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -214,7 +217,7 @@ public class CreditDefaultSwapDerivative3 {
 	public static final MMMessageAssociationEnd mmIndex = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Index.mmObject();
-			componentContext_lazy = () -> CreditDefaultSwapDerivative3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDefaultSwapDerivative3.mmObject();
 			isDerived = false;
 			xmlTag = "Indx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,9 +233,10 @@ public class CreditDefaultSwapDerivative3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CreditDefaultSwapDerivative3.mmUnderlyingIndexIdentification, CreditDefaultSwapDerivative3.mmIndexName, CreditDefaultSwapDerivative3.mmIndex);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditDefaultSwapDerivative3.mmUnderlyingIndexIdentification, com.tools20022.repository.msg.CreditDefaultSwapDerivative3.mmIndexName,
+						com.tools20022.repository.msg.CreditDefaultSwapDerivative3.mmIndex);
 				trace_lazy = () -> Index.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditDefaultSwapDerivative3";
 				definition = "Credit default swap derivative specific for reporting derivatives on a credit default swap index.";
@@ -241,30 +245,30 @@ public class CreditDefaultSwapDerivative3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UndrlygIndxId")
-	public ISINOct2015Identifier getUnderlyingIndexIdentification() {
-		return underlyingIndexIdentification;
+	public Optional<ISINOct2015Identifier> getUnderlyingIndexIdentification() {
+		return underlyingIndexIdentification == null ? Optional.empty() : Optional.of(underlyingIndexIdentification);
 	}
 
-	public void setUnderlyingIndexIdentification(ISINOct2015Identifier underlyingIndexIdentification) {
+	public CreditDefaultSwapDerivative3 setUnderlyingIndexIdentification(ISINOct2015Identifier underlyingIndexIdentification) {
 		this.underlyingIndexIdentification = underlyingIndexIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "IndxNm", required = true)
 	public Max25Text getIndexName() {
 		return indexName;
 	}
 
-	public void setIndexName(Max25Text indexName) {
-		this.indexName = indexName;
+	public CreditDefaultSwapDerivative3 setIndexName(Max25Text indexName) {
+		this.indexName = Objects.requireNonNull(indexName);
+		return this;
 	}
 
-	@XmlElement(name = "Indx", required = true)
 	public CreditDefaultSwapIndex2 getIndex() {
 		return index;
 	}
 
-	public void setIndex(com.tools20022.repository.msg.CreditDefaultSwapIndex2 index) {
-		this.index = index;
+	public CreditDefaultSwapDerivative3 setIndex(com.tools20022.repository.msg.CreditDefaultSwapIndex2 index) {
+		this.index = Objects.requireNonNull(index);
+		return this;
 	}
 }

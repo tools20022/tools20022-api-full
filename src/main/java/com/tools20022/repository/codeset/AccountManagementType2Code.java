@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AccountManagementTypeCode;
+import com.tools20022.repository.codeset.AccountManagementType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Refer to an account management instruction ie, either an account opening
@@ -32,27 +36,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AccountManagementTypeCode
- * AccountManagementTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementType2Code#mmAccountOpening
- * AccountManagementType2Code.mmAccountOpening}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementType2Code#AccountOpening
+ * AccountManagementType2Code.AccountOpening}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementType2Code#mmAccountModification
- * AccountManagementType2Code.mmAccountModification}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementType2Code#AccountModification
+ * AccountManagementType2Code.AccountModification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountManagementType2Code#mmGetAccountDetails
- * AccountManagementType2Code.mmGetAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementType2Code#GetAccountDetails
+ * AccountManagementType2Code.GetAccountDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AccountManagementTypeCode
+ * AccountManagementTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class AccountManagementType2Code extends AccountManagementTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AccountManagementType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,11 +95,12 @@ public class AccountManagementType2Code extends AccountManagementTypeCode {
 	 * name} = "AccountOpening"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountOpening = new MMCode() {
+	public static final AccountManagementType2Code AccountOpening = new AccountManagementType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOpening";
-			owner_lazy = () -> AccountManagementType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountManagementType2Code.mmObject();
+			codeName = AccountManagementTypeCode.AccountOpening.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -113,11 +119,12 @@ public class AccountManagementType2Code extends AccountManagementTypeCode {
 	 * name} = "AccountModification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountModification = new MMCode() {
+	public static final AccountManagementType2Code AccountModification = new AccountManagementType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountModification";
-			owner_lazy = () -> AccountManagementType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountManagementType2Code.mmObject();
+			codeName = AccountManagementTypeCode.AccountModification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -136,26 +143,59 @@ public class AccountManagementType2Code extends AccountManagementTypeCode {
 	 * name} = "GetAccountDetails"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGetAccountDetails = new MMCode() {
+	public static final AccountManagementType2Code GetAccountDetails = new AccountManagementType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GetAccountDetails";
-			owner_lazy = () -> AccountManagementType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountManagementType2Code.mmObject();
+			codeName = AccountManagementTypeCode.GetAccountDetails.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AccountManagementType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AccountManagementType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACCO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementType2Code";
 				definition = "Refer to an account management instruction ie, either an account opening instruction or an account modification instruction or a get account details message.";
-				code_lazy = () -> Arrays.asList(AccountManagementType2Code.mmAccountOpening, AccountManagementType2Code.mmAccountModification, AccountManagementType2Code.mmGetAccountDetails);
 				trace_lazy = () -> AccountManagementTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountManagementType2Code.AccountOpening, com.tools20022.repository.codeset.AccountManagementType2Code.AccountModification,
+						com.tools20022.repository.codeset.AccountManagementType2Code.GetAccountDetails);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccountOpening.getCodeName().get(), AccountOpening);
+		codesByName.put(AccountModification.getCodeName().get(), AccountModification);
+		codesByName.put(GetAccountDetails.getCodeName().get(), GetAccountDetails);
+	}
+
+	public static AccountManagementType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AccountManagementType2Code[] values() {
+		AccountManagementType2Code[] values = new AccountManagementType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AccountManagementType2Code> {
+		@Override
+		public AccountManagementType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AccountManagementType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

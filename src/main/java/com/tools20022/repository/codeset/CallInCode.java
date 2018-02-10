@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CallInCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of pay-in call report.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CallInCode#mmCallForAccountValue
- * CallInCode.mmCallForAccountValue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CallInCode#CallForAccountValue
+ * CallInCode.CallForAccountValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CallInCode#mmCallForSettlement
- * CallInCode.mmCallForSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CallInCode#CallForSettlement
+ * CallInCode.CallForSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CallInCode#mmCallForCurrencyClose
- * CallInCode.mmCallForCurrencyClose}</li>
+ * {@linkplain com.tools20022.repository.codeset.CallInCode#CallForCurrencyClose
+ * CallInCode.CallForCurrencyClose}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of pay-in call report."</li>
  * </ul>
  */
-public class CallInCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CallInCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,12 +98,12 @@ public class CallInCode {
 	 * definition} = "Pay-in call is for account value."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCallForAccountValue = new MMCode() {
+	public static final CallInCode CallForAccountValue = new CallInCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallForAccountValue";
 			definition = "Pay-in call is for account value.";
-			owner_lazy = () -> CallInCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CallInCode.mmObject();
 			codeName = "CFAV";
 		}
 	};
@@ -121,12 +127,12 @@ public class CallInCode {
 	 * definition} = "Pay-in call is for settlement."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCallForSettlement = new MMCode() {
+	public static final CallInCode CallForSettlement = new CallInCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallForSettlement";
 			definition = "Pay-in call is for settlement.";
-			owner_lazy = () -> CallInCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CallInCode.mmObject();
 			codeName = "CFST";
 		}
 	};
@@ -150,28 +156,60 @@ public class CallInCode {
 	 * definition} = "Pay-in call is for currency close."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCallForCurrencyClose = new MMCode() {
+	public static final CallInCode CallForCurrencyClose = new CallInCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallForCurrencyClose";
 			definition = "Pay-in call is for currency close.";
-			owner_lazy = () -> CallInCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CallInCode.mmObject();
 			codeName = "CFCC";
 		}
 	};
+	final static private LinkedHashMap<String, CallInCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CallInCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CFAV");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CallInCode";
 				definition = "Specifies the type of pay-in call report.";
-				code_lazy = () -> Arrays.asList(CallInCode.mmCallForAccountValue, CallInCode.mmCallForSettlement, CallInCode.mmCallForCurrencyClose);
 				derivation_lazy = () -> Arrays.asList(CallIn1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CallInCode.CallForAccountValue, com.tools20022.repository.codeset.CallInCode.CallForSettlement,
+						com.tools20022.repository.codeset.CallInCode.CallForCurrencyClose);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CallForAccountValue.getCodeName().get(), CallForAccountValue);
+		codesByName.put(CallForSettlement.getCodeName().get(), CallForSettlement);
+		codesByName.put(CallForCurrencyClose.getCodeName().get(), CallForCurrencyClose);
+	}
+
+	public static CallInCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CallInCode[] values() {
+		CallInCode[] values = new CallInCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CallInCode> {
+		@Override
+		public CallInCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CallInCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

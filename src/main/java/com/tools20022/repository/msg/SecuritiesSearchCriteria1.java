@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -30,6 +31,7 @@ import com.tools20022.repository.datatype.CFIIdentifier;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -85,8 +87,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,16 +99,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Criteria for a query about securities reference data."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesSearchCriteria1", propOrder = {"financialInstrumentIdentification", "classificationFinancialInstrument", "maturityDate", "issueDate", "issueCurrency", "countryOfIssue", "securityStatus", "maintainingCSD",
-		"investorCSD", "issuerCSD", "technicalIssuerCSD", "CSD"})
+		"investorCSD", "issuerCSD", "technicalIssuerCSD", "cSD"})
 public class SecuritiesSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FinInstrmId")
 	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
-	 * Way(s) of identifying the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -133,7 +136,7 @@ public class SecuritiesSearchCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,12 +148,11 @@ public class SecuritiesSearchCriteria1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	@XmlElement(name = "ClssfctnFinInstrm")
 	protected CFIIdentifier classificationFinancialInstrument;
 	/**
-	 * Classification type of the financial instrument, as per the ISO
-	 * Classification of Financial Instrument (CFI) codification, for example,
-	 * common share with voting rights, fully paid, or registered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,7 +182,7 @@ public class SecuritiesSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ClssfctnFinInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,10 +193,11 @@ public class SecuritiesSearchCriteria1 {
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "MtrtyDt")
 	protected DateSearchChoice maturityDate;
 	/**
-	 * Planned final repayment date at the time of issuance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,6 +213,9 @@ public class SecuritiesSearchCriteria1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MtrtyDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 200, FIXSynonym: 541, FIXSynonym: 1079</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -222,9 +228,10 @@ public class SecuritiesSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "200"), new FIXSynonym(this, "541"), new FIXSynonym(this, "1079"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Planned final repayment date at the time of issuance.";
@@ -233,10 +240,11 @@ public class SecuritiesSearchCriteria1 {
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "IsseDt")
 	protected DateSearchChoice issueDate;
 	/**
-	 * Date/time at which the security was made available.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -264,7 +272,7 @@ public class SecuritiesSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -275,10 +283,11 @@ public class SecuritiesSearchCriteria1 {
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "IsseCcy")
 	protected ActiveOrHistoricCurrencyCode issueCurrency;
 	/**
-	 * Currency in which a security is issued or redenominated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -294,6 +303,9 @@ public class SecuritiesSearchCriteria1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IsseCcy"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 15</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -306,9 +318,10 @@ public class SecuritiesSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmIssueCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseCcy";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "15"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueCurrency";
 			definition = "Currency in which a security is issued or redenominated.";
@@ -317,11 +330,11 @@ public class SecuritiesSearchCriteria1 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CtryOfIsse")
 	protected CountryCode countryOfIssue;
 	/**
-	 * Primary market or country where a security is issued by the issuer or its
-	 * agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -335,6 +348,9 @@ public class SecuritiesSearchCriteria1 {
 	 * SecuritiesSearchCriteria1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtryOfIsse"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 470</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -350,9 +366,10 @@ public class SecuritiesSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmCountryOfIssue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfIsse";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "470"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIssue";
 			definition = "Primary market or country where a security is issued by the issuer or its agent.";
@@ -361,10 +378,11 @@ public class SecuritiesSearchCriteria1 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "SctySts")
 	protected SecurityStatus2Choice securityStatus;
 	/**
-	 * Specifies the status of the security within its lifecycle.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -380,6 +398,9 @@ public class SecuritiesSearchCriteria1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctySts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 965</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -393,9 +414,10 @@ public class SecuritiesSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmSecurityStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SctySts";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "965"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityStatus";
 			definition = "Specifies the status of the security within its lifecycle.";
@@ -404,10 +426,11 @@ public class SecuritiesSearchCriteria1 {
 			complexType_lazy = () -> SecurityStatus2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MntngCSD")
 	protected SystemPartyIdentification1Choice maintainingCSD;
 	/**
-	 * Entity involved in an activity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -434,7 +457,7 @@ public class SecuritiesSearchCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmMaintainingCSD = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "MntngCSD";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -446,10 +469,11 @@ public class SecuritiesSearchCriteria1 {
 			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstrCSD")
 	protected SystemPartyIdentification1Choice investorCSD;
 	/**
-	 * Entity involved in an activity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -476,7 +500,7 @@ public class SecuritiesSearchCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestorCSD = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstrCSD";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -488,10 +512,11 @@ public class SecuritiesSearchCriteria1 {
 			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IssrCSD")
 	protected SystemPartyIdentification1Choice issuerCSD;
 	/**
-	 * Entity involved in an activity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -518,7 +543,7 @@ public class SecuritiesSearchCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmIssuerCSD = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "IssrCSD";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -530,10 +555,11 @@ public class SecuritiesSearchCriteria1 {
 			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TechIssrCSD")
 	protected SystemPartyIdentification1Choice technicalIssuerCSD;
 	/**
-	 * Technical issuer of a security
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -560,7 +586,7 @@ public class SecuritiesSearchCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmTechnicalIssuerCSD = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "TechIssrCSD";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -572,10 +598,11 @@ public class SecuritiesSearchCriteria1 {
 			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CSD")
 	protected SystemPartyIdentification1Choice cSD;
 	/**
-	 * CSD of a security
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -602,7 +629,7 @@ public class SecuritiesSearchCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmCSD = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CSD";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -618,10 +645,13 @@ public class SecuritiesSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesSearchCriteria1.mmFinancialInstrumentIdentification, SecuritiesSearchCriteria1.mmClassificationFinancialInstrument, SecuritiesSearchCriteria1.mmMaturityDate,
-						SecuritiesSearchCriteria1.mmIssueDate, SecuritiesSearchCriteria1.mmIssueCurrency, SecuritiesSearchCriteria1.mmCountryOfIssue, SecuritiesSearchCriteria1.mmSecurityStatus, SecuritiesSearchCriteria1.mmMaintainingCSD,
-						SecuritiesSearchCriteria1.mmInvestorCSD, SecuritiesSearchCriteria1.mmIssuerCSD, SecuritiesSearchCriteria1.mmTechnicalIssuerCSD, SecuritiesSearchCriteria1.mmCSD);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmClassificationFinancialInstrument, com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmMaturityDate,
+						com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmIssueDate, com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmIssueCurrency, com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmCountryOfIssue,
+						com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmSecurityStatus, com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmMaintainingCSD,
+						com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmInvestorCSD, com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmIssuerCSD,
+						com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmTechnicalIssuerCSD, com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmCSD);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesSearchCriteria1";
 				definition = "Criteria for a query about securities reference data.";
@@ -630,111 +660,111 @@ public class SecuritiesSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FinInstrmId")
-	public SecurityIdentification14 getFinancialInstrumentIdentification() {
-		return financialInstrumentIdentification;
+	public Optional<SecurityIdentification14> getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification == null ? Optional.empty() : Optional.of(financialInstrumentIdentification);
 	}
 
-	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+	public SecuritiesSearchCriteria1 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ClssfctnFinInstrm")
-	public CFIIdentifier getClassificationFinancialInstrument() {
-		return classificationFinancialInstrument;
+	public Optional<CFIIdentifier> getClassificationFinancialInstrument() {
+		return classificationFinancialInstrument == null ? Optional.empty() : Optional.of(classificationFinancialInstrument);
 	}
 
-	public void setClassificationFinancialInstrument(CFIIdentifier classificationFinancialInstrument) {
+	public SecuritiesSearchCriteria1 setClassificationFinancialInstrument(CFIIdentifier classificationFinancialInstrument) {
 		this.classificationFinancialInstrument = classificationFinancialInstrument;
+		return this;
 	}
 
-	@XmlElement(name = "MtrtyDt")
-	public DateSearchChoice getMaturityDate() {
-		return maturityDate;
+	public Optional<DateSearchChoice> getMaturityDate() {
+		return maturityDate == null ? Optional.empty() : Optional.of(maturityDate);
 	}
 
-	public void setMaturityDate(DateSearchChoice maturityDate) {
+	public SecuritiesSearchCriteria1 setMaturityDate(DateSearchChoice maturityDate) {
 		this.maturityDate = maturityDate;
+		return this;
 	}
 
-	@XmlElement(name = "IsseDt")
-	public DateSearchChoice getIssueDate() {
-		return issueDate;
+	public Optional<DateSearchChoice> getIssueDate() {
+		return issueDate == null ? Optional.empty() : Optional.of(issueDate);
 	}
 
-	public void setIssueDate(DateSearchChoice issueDate) {
+	public SecuritiesSearchCriteria1 setIssueDate(DateSearchChoice issueDate) {
 		this.issueDate = issueDate;
+		return this;
 	}
 
-	@XmlElement(name = "IsseCcy")
-	public ActiveOrHistoricCurrencyCode getIssueCurrency() {
-		return issueCurrency;
+	public Optional<ActiveOrHistoricCurrencyCode> getIssueCurrency() {
+		return issueCurrency == null ? Optional.empty() : Optional.of(issueCurrency);
 	}
 
-	public void setIssueCurrency(ActiveOrHistoricCurrencyCode issueCurrency) {
+	public SecuritiesSearchCriteria1 setIssueCurrency(ActiveOrHistoricCurrencyCode issueCurrency) {
 		this.issueCurrency = issueCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "CtryOfIsse")
-	public CountryCode getCountryOfIssue() {
-		return countryOfIssue;
+	public Optional<CountryCode> getCountryOfIssue() {
+		return countryOfIssue == null ? Optional.empty() : Optional.of(countryOfIssue);
 	}
 
-	public void setCountryOfIssue(CountryCode countryOfIssue) {
+	public SecuritiesSearchCriteria1 setCountryOfIssue(CountryCode countryOfIssue) {
 		this.countryOfIssue = countryOfIssue;
+		return this;
 	}
 
-	@XmlElement(name = "SctySts")
-	public SecurityStatus2Choice getSecurityStatus() {
-		return securityStatus;
+	public Optional<SecurityStatus2Choice> getSecurityStatus() {
+		return securityStatus == null ? Optional.empty() : Optional.of(securityStatus);
 	}
 
-	public void setSecurityStatus(SecurityStatus2Choice securityStatus) {
+	public SecuritiesSearchCriteria1 setSecurityStatus(SecurityStatus2Choice securityStatus) {
 		this.securityStatus = securityStatus;
+		return this;
 	}
 
-	@XmlElement(name = "MntngCSD")
-	public SystemPartyIdentification1Choice getMaintainingCSD() {
-		return maintainingCSD;
+	public Optional<SystemPartyIdentification1Choice> getMaintainingCSD() {
+		return maintainingCSD == null ? Optional.empty() : Optional.of(maintainingCSD);
 	}
 
-	public void setMaintainingCSD(SystemPartyIdentification1Choice maintainingCSD) {
+	public SecuritiesSearchCriteria1 setMaintainingCSD(SystemPartyIdentification1Choice maintainingCSD) {
 		this.maintainingCSD = maintainingCSD;
+		return this;
 	}
 
-	@XmlElement(name = "InvstrCSD")
-	public SystemPartyIdentification1Choice getInvestorCSD() {
-		return investorCSD;
+	public Optional<SystemPartyIdentification1Choice> getInvestorCSD() {
+		return investorCSD == null ? Optional.empty() : Optional.of(investorCSD);
 	}
 
-	public void setInvestorCSD(SystemPartyIdentification1Choice investorCSD) {
+	public SecuritiesSearchCriteria1 setInvestorCSD(SystemPartyIdentification1Choice investorCSD) {
 		this.investorCSD = investorCSD;
+		return this;
 	}
 
-	@XmlElement(name = "IssrCSD")
-	public SystemPartyIdentification1Choice getIssuerCSD() {
-		return issuerCSD;
+	public Optional<SystemPartyIdentification1Choice> getIssuerCSD() {
+		return issuerCSD == null ? Optional.empty() : Optional.of(issuerCSD);
 	}
 
-	public void setIssuerCSD(SystemPartyIdentification1Choice issuerCSD) {
+	public SecuritiesSearchCriteria1 setIssuerCSD(SystemPartyIdentification1Choice issuerCSD) {
 		this.issuerCSD = issuerCSD;
+		return this;
 	}
 
-	@XmlElement(name = "TechIssrCSD")
-	public SystemPartyIdentification1Choice getTechnicalIssuerCSD() {
-		return technicalIssuerCSD;
+	public Optional<SystemPartyIdentification1Choice> getTechnicalIssuerCSD() {
+		return technicalIssuerCSD == null ? Optional.empty() : Optional.of(technicalIssuerCSD);
 	}
 
-	public void setTechnicalIssuerCSD(SystemPartyIdentification1Choice technicalIssuerCSD) {
+	public SecuritiesSearchCriteria1 setTechnicalIssuerCSD(SystemPartyIdentification1Choice technicalIssuerCSD) {
 		this.technicalIssuerCSD = technicalIssuerCSD;
+		return this;
 	}
 
-	@XmlElement(name = "CSD")
-	public SystemPartyIdentification1Choice getCSD() {
-		return cSD;
+	public Optional<SystemPartyIdentification1Choice> getCSD() {
+		return cSD == null ? Optional.empty() : Optional.of(cSD);
 	}
 
-	public void setCSD(SystemPartyIdentification1Choice cSD) {
+	public SecuritiesSearchCriteria1 setCSD(SystemPartyIdentification1Choice cSD) {
 		this.cSD = cSD;
+		return this;
 	}
 }

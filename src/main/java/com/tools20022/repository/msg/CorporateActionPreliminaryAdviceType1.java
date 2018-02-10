@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -33,6 +34,8 @@ import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -87,8 +90,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,15 +110,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionPreliminaryAdviceType1", propOrder = {"type", "processingStatus", "eligibilityIndicator"})
 public class CorporateActionPreliminaryAdviceType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected CorporateActionPreliminaryAdviceType1Code type;
 	/**
-	 * Type of movement preliminary advice ie. new or replacement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,6 +139,9 @@ public class CorporateActionPreliminaryAdviceType1 {
 	 * CorporateActionPreliminaryAdviceType1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Tp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :23G:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -158,9 +165,10 @@ public class CorporateActionPreliminaryAdviceType1 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionNotification.mmNotificationType;
-			componentContext_lazy = () -> CorporateActionPreliminaryAdviceType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":23G:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of movement preliminary advice ie. new or replacement.";
@@ -170,10 +178,11 @@ public class CorporateActionPreliminaryAdviceType1 {
 			simpleType_lazy = () -> CorporateActionPreliminaryAdviceType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcgSts", required = true)
 	protected CorporateActionProcessingStatus1Choice processingStatus;
 	/**
-	 * Specifies the status of the details of the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -193,6 +202,9 @@ public class CorporateActionPreliminaryAdviceType1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrcgSts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::PROC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -206,9 +218,10 @@ public class CorporateActionPreliminaryAdviceType1 {
 	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmProcessingStatus;
-			componentContext_lazy = () -> CorporateActionPreliminaryAdviceType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::PROC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Specifies the status of the details of the event.";
@@ -218,13 +231,11 @@ public class CorporateActionPreliminaryAdviceType1 {
 			type_lazy = () -> CorporateActionProcessingStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ElgbltyInd")
 	protected YesNoIndicator eligibilityIndicator;
 	/**
-	 * Indicates whether the movement preliminary advice is sent after
-	 * entitlement date.<br>
-	 * Value is Yes (true) if sent after entitlement date and No (false) if sent
-	 * before entitlement date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -262,7 +273,7 @@ public class CorporateActionPreliminaryAdviceType1 {
 	 */
 	public static final MMMessageAttribute mmEligibilityIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionPreliminaryAdviceType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1.mmObject();
 			isDerived = false;
 			xmlTag = "ElgbltyInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -278,12 +289,13 @@ public class CorporateActionPreliminaryAdviceType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionPreliminaryAdviceType1.mmType, CorporateActionPreliminaryAdviceType1.mmProcessingStatus, CorporateActionPreliminaryAdviceType1.mmEligibilityIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1.mmType, com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1.mmProcessingStatus,
+						com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1.mmEligibilityIndicator);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceV01.mmMovementPreliminaryAdviceGeneralInformation,
 						CorporateActionMovementPreliminaryAdviceV02.mmMovementPreliminaryAdviceGeneralInformation, CorporateActionMovementPreliminaryAdviceV03.mmMovementPreliminaryAdviceGeneralInformation,
 						CorporateActionMovementPreliminaryAdviceV04.mmMovementPreliminaryAdviceGeneralInformation);
 				trace_lazy = () -> CorporateActionNotification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPreliminaryAdviceType1";
 				definition = "Type of movement preliminary advice document.";
@@ -293,30 +305,30 @@ public class CorporateActionPreliminaryAdviceType1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public CorporateActionPreliminaryAdviceType1Code getType() {
 		return type;
 	}
 
-	public void setType(CorporateActionPreliminaryAdviceType1Code type) {
-		this.type = type;
+	public CorporateActionPreliminaryAdviceType1 setType(CorporateActionPreliminaryAdviceType1Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "PrcgSts", required = true)
 	public CorporateActionProcessingStatus1Choice getProcessingStatus() {
 		return processingStatus;
 	}
 
-	public void setProcessingStatus(CorporateActionProcessingStatus1Choice processingStatus) {
-		this.processingStatus = processingStatus;
+	public CorporateActionPreliminaryAdviceType1 setProcessingStatus(CorporateActionProcessingStatus1Choice processingStatus) {
+		this.processingStatus = Objects.requireNonNull(processingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "ElgbltyInd")
-	public YesNoIndicator getEligibilityIndicator() {
-		return eligibilityIndicator;
+	public Optional<YesNoIndicator> getEligibilityIndicator() {
+		return eligibilityIndicator == null ? Optional.empty() : Optional.of(eligibilityIndicator);
 	}
 
-	public void setEligibilityIndicator(YesNoIndicator eligibilityIndicator) {
+	public CorporateActionPreliminaryAdviceType1 setEligibilityIndicator(YesNoIndicator eligibilityIndicator) {
 		this.eligibilityIndicator = eligibilityIndicator;
+		return this;
 	}
 }

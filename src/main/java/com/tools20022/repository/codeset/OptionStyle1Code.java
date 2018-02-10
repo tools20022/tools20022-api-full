@@ -17,44 +17,49 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OptionStyleCode;
+import com.tools20022.repository.codeset.OptionStyle1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines how an option can be exercised
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle1Code#American
+ * OptionStyle1Code.American}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle1Code#European
+ * OptionStyle1Code.European}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle1Code#Bermudan
+ * OptionStyle1Code.Bermudan}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle1Code#Asian
+ * OptionStyle1Code.Asian}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle1Code#Canary
+ * OptionStyle1Code.Canary}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.OptionStyleCode
  * OptionStyleCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionStyle1Code#mmAmerican
- * OptionStyle1Code.mmAmerican}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionStyle1Code#mmEuropean
- * OptionStyle1Code.mmEuropean}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionStyle1Code#mmBermudan
- * OptionStyle1Code.mmBermudan}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle1Code#mmAsian
- * OptionStyle1Code.mmAsian}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle1Code#mmCanary
- * OptionStyle1Code.mmCanary}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = ISO15022Synonym: :12a::OPST</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines how an option can be exercised"</li>
  * </ul>
  */
-public class OptionStyle1Code extends OptionStyleCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OptionStyle1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,11 +96,12 @@ public class OptionStyle1Code extends OptionStyleCode {
 	 * name} = "American"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAmerican = new MMCode() {
+	public static final OptionStyle1Code American = new OptionStyle1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "American";
-			owner_lazy = () -> OptionStyle1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionStyle1Code.mmObject();
+			codeName = OptionStyleCode.American.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -113,11 +120,12 @@ public class OptionStyle1Code extends OptionStyleCode {
 	 * name} = "European"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEuropean = new MMCode() {
+	public static final OptionStyle1Code European = new OptionStyle1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "European";
-			owner_lazy = () -> OptionStyle1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionStyle1Code.mmObject();
+			codeName = OptionStyleCode.European.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -136,11 +144,12 @@ public class OptionStyle1Code extends OptionStyleCode {
 	 * name} = "Bermudan"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBermudan = new MMCode() {
+	public static final OptionStyle1Code Bermudan = new OptionStyle1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bermudan";
-			owner_lazy = () -> OptionStyle1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionStyle1Code.mmObject();
+			codeName = OptionStyleCode.Bermudan.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -159,11 +168,12 @@ public class OptionStyle1Code extends OptionStyleCode {
 	 * name} = "Asian"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAsian = new MMCode() {
+	public static final OptionStyle1Code Asian = new OptionStyle1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Asian";
-			owner_lazy = () -> OptionStyle1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionStyle1Code.mmObject();
+			codeName = OptionStyleCode.Asian.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -182,26 +192,62 @@ public class OptionStyle1Code extends OptionStyleCode {
 	 * name} = "Canary"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCanary = new MMCode() {
+	public static final OptionStyle1Code Canary = new OptionStyle1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Canary";
-			owner_lazy = () -> OptionStyle1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionStyle1Code.mmObject();
+			codeName = OptionStyleCode.Canary.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OptionStyle1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OptionStyle1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":12a::OPST"));
 				example = Arrays.asList("AMER");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionStyle1Code";
 				definition = "Defines how an option can be exercised";
-				code_lazy = () -> Arrays.asList(OptionStyle1Code.mmAmerican, OptionStyle1Code.mmEuropean, OptionStyle1Code.mmBermudan, OptionStyle1Code.mmAsian, OptionStyle1Code.mmCanary);
 				trace_lazy = () -> OptionStyleCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionStyle1Code.American, com.tools20022.repository.codeset.OptionStyle1Code.European, com.tools20022.repository.codeset.OptionStyle1Code.Bermudan,
+						com.tools20022.repository.codeset.OptionStyle1Code.Asian, com.tools20022.repository.codeset.OptionStyle1Code.Canary);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(American.getCodeName().get(), American);
+		codesByName.put(European.getCodeName().get(), European);
+		codesByName.put(Bermudan.getCodeName().get(), Bermudan);
+		codesByName.put(Asian.getCodeName().get(), Asian);
+		codesByName.put(Canary.getCodeName().get(), Canary);
+	}
+
+	public static OptionStyle1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OptionStyle1Code[] values() {
+		OptionStyle1Code[] values = new OptionStyle1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OptionStyle1Code> {
+		@Override
+		public OptionStyle1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OptionStyle1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Unit4 Unit4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Unit5", propOrder = {"unitsNumber", "group1Or2Units"})
 public class Unit5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UnitsNb", required = true)
 	protected FinancialInstrumentQuantity1 unitsNumber;
 	/**
-	 * Quantity expressed as a number, for example, a number of shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +109,7 @@ public class Unit5 {
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
-			componentContext_lazy = () -> Unit5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Unit5.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,12 +120,11 @@ public class Unit5 {
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	@XmlElement(name = "Grp1Or2Units", required = true)
 	protected UKTaxGroupUnitCode group1Or2Units;
 	/**
-	 * Tax group to which the purchased investment fund units belong. The
-	 * investor indicates to the intermediary operating pooled nominees, which
-	 * type of unit is to be sold.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +159,7 @@ public class Unit5 {
 	public static final MMMessageAttribute mmGroup1Or2Units = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmGroup1Or2Units;
-			componentContext_lazy = () -> Unit5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Unit5.mmObject();
 			isDerived = false;
 			xmlTag = "Grp1Or2Units";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,9 +174,9 @@ public class Unit5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Unit5.mmUnitsNumber, Unit5.mmGroup1Or2Units);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit5.mmUnitsNumber, com.tools20022.repository.msg.Unit5.mmGroup1Or2Units);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Unit5";
 				definition = "Quantity expressed as a number and its details.";
@@ -185,21 +186,21 @@ public class Unit5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
 
-	public void setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
-		this.unitsNumber = unitsNumber;
+	public Unit5 setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
+		this.unitsNumber = Objects.requireNonNull(unitsNumber);
+		return this;
 	}
 
-	@XmlElement(name = "Grp1Or2Units", required = true)
 	public UKTaxGroupUnitCode getGroup1Or2Units() {
 		return group1Or2Units;
 	}
 
-	public void setGroup1Or2Units(UKTaxGroupUnitCode group1Or2Units) {
-		this.group1Or2Units = group1Or2Units;
+	public Unit5 setGroup1Or2Units(UKTaxGroupUnitCode group1Or2Units) {
+		this.group1Or2Units = Objects.requireNonNull(group1Or2Units);
+		return this;
 	}
 }

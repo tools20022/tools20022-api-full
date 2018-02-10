@@ -25,9 +25,8 @@ import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TotalCharges3", propOrder = {"totalAmountOfCharges", "chargeDetails"})
 public class TotalCharges3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlAmtOfChrgs")
 	protected ActiveCurrencyAnd13DecimalAmount totalAmountOfCharges;
 	/**
-	 * Total value of the charges for a specific order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +114,7 @@ public class TotalCharges3 {
 	public static final MMMessageAttribute mmTotalAmountOfCharges = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> TotalCharges3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalCharges3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmtOfChrgs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +125,11 @@ public class TotalCharges3 {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgDtls", required = true)
 	protected List<com.tools20022.repository.msg.Charge18> chargeDetails;
 	/**
-	 * Information related to a specific charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -157,7 +158,7 @@ public class TotalCharges3 {
 	public static final MMMessageAssociationEnd mmChargeDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Charges.mmObject();
-			componentContext_lazy = () -> TotalCharges3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalCharges3.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +173,9 @@ public class TotalCharges3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TotalCharges3.mmTotalAmountOfCharges, TotalCharges3.mmChargeDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalCharges3.mmTotalAmountOfCharges, com.tools20022.repository.msg.TotalCharges3.mmChargeDetails);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalCharges3";
 				definition = "Total amount of charges.";
@@ -184,21 +185,21 @@ public class TotalCharges3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlAmtOfChrgs")
-	public ActiveCurrencyAnd13DecimalAmount getTotalAmountOfCharges() {
-		return totalAmountOfCharges;
+	public Optional<ActiveCurrencyAnd13DecimalAmount> getTotalAmountOfCharges() {
+		return totalAmountOfCharges == null ? Optional.empty() : Optional.of(totalAmountOfCharges);
 	}
 
-	public void setTotalAmountOfCharges(ActiveCurrencyAnd13DecimalAmount totalAmountOfCharges) {
+	public TotalCharges3 setTotalAmountOfCharges(ActiveCurrencyAnd13DecimalAmount totalAmountOfCharges) {
 		this.totalAmountOfCharges = totalAmountOfCharges;
+		return this;
 	}
 
-	@XmlElement(name = "ChrgDtls", required = true)
 	public List<Charge18> getChargeDetails() {
-		return chargeDetails;
+		return chargeDetails == null ? chargeDetails = new ArrayList<>() : chargeDetails;
 	}
 
-	public void setChargeDetails(List<com.tools20022.repository.msg.Charge18> chargeDetails) {
-		this.chargeDetails = chargeDetails;
+	public TotalCharges3 setChargeDetails(List<com.tools20022.repository.msg.Charge18> chargeDetails) {
+		this.chargeDetails = Objects.requireNonNull(chargeDetails);
+		return this;
 	}
 }

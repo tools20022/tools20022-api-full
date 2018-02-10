@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SettlementTransactionConditionCode;
+import com.tools20022.repository.codeset.SettlementTransactionCondition11Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the conditions under which a order/trade is to be settled.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionConditionCode
- * SettlementTransactionConditionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition11Code#mmNoAutomaticMarketClaim
- * SettlementTransactionCondition11Code.mmNoAutomaticMarketClaim}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition11Code#NoAutomaticMarketClaim
+ * SettlementTransactionCondition11Code.NoAutomaticMarketClaim}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionConditionCode
+ * SettlementTransactionConditionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,7 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the conditions under which a order/trade is to be settled."</li>
  * </ul>
  */
-public class SettlementTransactionCondition11Code extends SettlementTransactionConditionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SettlementTransactionCondition11Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -75,25 +80,55 @@ public class SettlementTransactionCondition11Code extends SettlementTransactionC
 	 * name} = "NoAutomaticMarketClaim"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoAutomaticMarketClaim = new MMCode() {
+	public static final SettlementTransactionCondition11Code NoAutomaticMarketClaim = new SettlementTransactionCondition11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAutomaticMarketClaim";
-			owner_lazy = () -> SettlementTransactionCondition11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionCondition11Code.mmObject();
+			codeName = SettlementTransactionConditionCode.NoAutomaticMarketClaim.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SettlementTransactionCondition11Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SettlementTransactionCondition11Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementTransactionCondition11Code";
 				definition = "Specifies the conditions under which a order/trade is to be settled.";
-				code_lazy = () -> Arrays.asList(SettlementTransactionCondition11Code.mmNoAutomaticMarketClaim);
 				trace_lazy = () -> SettlementTransactionConditionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementTransactionCondition11Code.NoAutomaticMarketClaim);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NoAutomaticMarketClaim.getCodeName().get(), NoAutomaticMarketClaim);
+	}
+
+	public static SettlementTransactionCondition11Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SettlementTransactionCondition11Code[] values() {
+		SettlementTransactionCondition11Code[] values = new SettlementTransactionCondition11Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SettlementTransactionCondition11Code> {
+		@Override
+		public SettlementTransactionCondition11Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SettlementTransactionCondition11Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

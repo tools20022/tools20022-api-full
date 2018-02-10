@@ -27,9 +27,8 @@ import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022Varia
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion;
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -68,28 +67,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestversionsubsetvariant
- * SecuritiesManagementLatestversionsubsetvariant}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOLatestversion
- * SettlementAndReconciliationISO15022VariantsISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants
- * SettlementandReconciliationMaintenance20162017ISO15022Variants}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion
- * SettlementAndReconciliationISO15022VariantsISOPreviousversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SctiesBalAcctgRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -127,9 +104,52 @@ import javax.xml.bind.annotation.*;
  * mmAlternateReportingCurrencyTotalAmounts}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOLatestversion
+ * SettlementAndReconciliationISO15022VariantsISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants
+ * SettlementandReconciliationMaintenance20162017ISO15022Variants}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion
+ * SettlementAndReconciliationISO15022VariantsISOPreviousversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SctiesBalAcctgRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestversionsubsetvariant
+ * SecuritiesManagementLatestversionsubsetvariant}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code semt.003.002.09}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule#forSecuritiesBalanceAccountingReport002V09
+ * ConstraintBalanceForAccountOrSubAccountDetailsRule.
+ * forSecuritiesBalanceAccountingReport002V09}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceForAccountReportingRule#forSecuritiesBalanceAccountingReport002V09
+ * ConstraintBalanceForAccountReportingRule.
+ * forSecuritiesBalanceAccountingReport002V09}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesBalanceAccountingReport002V09
+ * ConstraintSecuritiesMarketPracticeGroupGuideline.
+ * forSecuritiesBalanceAccountingReport002V09}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSubAccountDetailsBalanceForAccountPresenceRule#forSecuritiesBalanceAccountingReport002V09
+ * ConstraintSubAccountDetailsBalanceForAccountPresenceRule.
+ * forSecuritiesBalanceAccountingReport002V09}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -142,18 +162,17 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesBalanceAccountingReport002V09", propOrder = {"pagination", "statementGeneralDetails", "accountOwner", "accountServicer", "safekeepingAccount", "intermediaryInformation", "balanceForAccount", "subAccountDetails",
 		"accountBaseCurrencyTotalAmounts", "alternateReportingCurrencyTotalAmounts"})
 public class SecuritiesBalanceAccountingReport002V09 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pgntn", required = true)
 	protected Pagination pagination;
 	/**
-	 * Page number of the message (within a statement) and continuation
-	 * indicator to indicate that the statement is to continue or that the
-	 * message is the last page of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -194,10 +213,11 @@ public class SecuritiesBalanceAccountingReport002V09 {
 			}
 		}
 	};
+	@XmlElement(name = "StmtGnlDtls", required = true)
 	protected Statement51 statementGeneralDetails;
 	/**
-	 * Provides general information on the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,10 +256,11 @@ public class SecuritiesBalanceAccountingReport002V09 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification109 accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -279,13 +300,11 @@ public class SecuritiesBalanceAccountingReport002V09 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctSvcr")
 	protected PartyIdentification111 accountServicer;
 	/**
-	 * Party that manages the account on behalf of the account owner, that is
-	 * manages the registration and booking of entries on the account,
-	 * calculates balances on the account and provides information about the
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -327,10 +346,11 @@ public class SecuritiesBalanceAccountingReport002V09 {
 			}
 		}
 	};
+	@XmlElement(name = "SfkpgAcct", required = true)
 	protected SecuritiesAccount33 safekeepingAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -370,12 +390,11 @@ public class SecuritiesBalanceAccountingReport002V09 {
 			}
 		}
 	};
+	@XmlElement(name = "IntrmyInf")
 	protected List<Intermediary37> intermediaryInformation;
 	/**
-	 * Information about the party that provides services relating to financial
-	 * products to investors, for example, advice on products and placement of
-	 * orders for the investment fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -416,11 +435,11 @@ public class SecuritiesBalanceAccountingReport002V09 {
 			}
 		}
 	};
+	@XmlElement(name = "BalForAcct")
 	protected List<AggregateBalanceInformation32> balanceForAccount;
 	/**
-	 * Net position of a segregated holding, in a single security, within the
-	 * overall position held in a securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -461,10 +480,11 @@ public class SecuritiesBalanceAccountingReport002V09 {
 			}
 		}
 	};
+	@XmlElement(name = "SubAcctDtls")
 	protected List<SubAccountIdentification45> subAccountDetails;
 	/**
-	 * Sub-account of the safekeeping or investment account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -503,10 +523,11 @@ public class SecuritiesBalanceAccountingReport002V09 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctBaseCcyTtlAmts")
 	protected TotalValueInPageAndStatement4 accountBaseCurrencyTotalAmounts;
 	/**
-	 * Total valuation amounts provided in the base currency of the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -547,11 +568,11 @@ public class SecuritiesBalanceAccountingReport002V09 {
 			}
 		}
 	};
+	@XmlElement(name = "AltrnRptgCcyTtlAmts")
 	protected TotalValueInPageAndStatement4 alternateReportingCurrencyTotalAmounts;
 	/**
-	 * Total valuation amounts provided in another currency than the base
-	 * currency of the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -597,6 +618,10 @@ public class SecuritiesBalanceAccountingReport002V09 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule.forSecuritiesBalanceAccountingReport002V09,
+						com.tools20022.repository.constraints.ConstraintBalanceForAccountReportingRule.forSecuritiesBalanceAccountingReport002V09,
+						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesBalanceAccountingReport002V09,
+						com.tools20022.repository.constraints.ConstraintSubAccountDetailsBalanceForAccountPresenceRule.forSecuritiesBalanceAccountingReport002V09);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBalanceAccountingReport002V09";
 				definition = "Scope \r\nAn account servicer sends a SecuritiesBalanceAccountingReport to an account owner to provide, at a moment in time, valuations of the portfolio together with details of each financial instrument holding.\r\nThe account servicer/owner relationship may be:\r\n- an accounting agent acting on behalf of an account owner, or\r\n- a transfer agent acting on behalf of a fund manager or an account owner's designated agent.\r\n\r\nUsage\r\nThe message should be sent at a frequency agreed bi-laterally between the account servicer and the account owner.\r\nThe message can be sent either audited or un-audited and may be provided on a trade date, contractual or settlement date basis. \r\nThis message can only be used to list the holdings of a single (master) account. However, it is possible to break down these holdings into one or several sub-accounts. Therefore, the message can be used to either specify holdings at\r\n- the main account level, or, \r\n- the sub-account level.\r\nThis message can be used to report where the financial instruments are safe-kept, physically or notionally. If a security is held in more than one safekeeping place, this can also be indicated. \r\nThe SecuritiesBalanceAccountingReport message should not be used for trading purposes.\r\nThere may be one or more intermediary parties, for example, an intermediary or a concentrator between the account owner and account servicer.\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.";
@@ -629,97 +654,97 @@ public class SecuritiesBalanceAccountingReport002V09 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
 
-	public void setPagination(Pagination pagination) {
-		this.pagination = pagination;
+	public SecuritiesBalanceAccountingReport002V09 setPagination(Pagination pagination) {
+		this.pagination = Objects.requireNonNull(pagination);
+		return this;
 	}
 
-	@XmlElement(name = "StmtGnlDtls", required = true)
 	public Statement51 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
 
-	public void setStatementGeneralDetails(Statement51 statementGeneralDetails) {
-		this.statementGeneralDetails = statementGeneralDetails;
+	public SecuritiesBalanceAccountingReport002V09 setStatementGeneralDetails(Statement51 statementGeneralDetails) {
+		this.statementGeneralDetails = Objects.requireNonNull(statementGeneralDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification109 getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification109> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification109 accountOwner) {
+	public SecuritiesBalanceAccountingReport002V09 setAccountOwner(PartyIdentification109 accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcr")
-	public PartyIdentification111 getAccountServicer() {
-		return accountServicer;
+	public Optional<PartyIdentification111> getAccountServicer() {
+		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public void setAccountServicer(PartyIdentification111 accountServicer) {
+	public SecuritiesBalanceAccountingReport002V09 setAccountServicer(PartyIdentification111 accountServicer) {
 		this.accountServicer = accountServicer;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount33 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
 
-	public void setSafekeepingAccount(SecuritiesAccount33 safekeepingAccount) {
-		this.safekeepingAccount = safekeepingAccount;
+	public SecuritiesBalanceAccountingReport002V09 setSafekeepingAccount(SecuritiesAccount33 safekeepingAccount) {
+		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "IntrmyInf")
 	public List<Intermediary37> getIntermediaryInformation() {
-		return intermediaryInformation;
+		return intermediaryInformation == null ? intermediaryInformation = new ArrayList<>() : intermediaryInformation;
 	}
 
-	public void setIntermediaryInformation(List<Intermediary37> intermediaryInformation) {
-		this.intermediaryInformation = intermediaryInformation;
+	public SecuritiesBalanceAccountingReport002V09 setIntermediaryInformation(List<Intermediary37> intermediaryInformation) {
+		this.intermediaryInformation = Objects.requireNonNull(intermediaryInformation);
+		return this;
 	}
 
-	@XmlElement(name = "BalForAcct")
 	public List<AggregateBalanceInformation32> getBalanceForAccount() {
-		return balanceForAccount;
+		return balanceForAccount == null ? balanceForAccount = new ArrayList<>() : balanceForAccount;
 	}
 
-	public void setBalanceForAccount(List<AggregateBalanceInformation32> balanceForAccount) {
-		this.balanceForAccount = balanceForAccount;
+	public SecuritiesBalanceAccountingReport002V09 setBalanceForAccount(List<AggregateBalanceInformation32> balanceForAccount) {
+		this.balanceForAccount = Objects.requireNonNull(balanceForAccount);
+		return this;
 	}
 
-	@XmlElement(name = "SubAcctDtls")
 	public List<SubAccountIdentification45> getSubAccountDetails() {
-		return subAccountDetails;
+		return subAccountDetails == null ? subAccountDetails = new ArrayList<>() : subAccountDetails;
 	}
 
-	public void setSubAccountDetails(List<SubAccountIdentification45> subAccountDetails) {
-		this.subAccountDetails = subAccountDetails;
+	public SecuritiesBalanceAccountingReport002V09 setSubAccountDetails(List<SubAccountIdentification45> subAccountDetails) {
+		this.subAccountDetails = Objects.requireNonNull(subAccountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AcctBaseCcyTtlAmts")
-	public TotalValueInPageAndStatement4 getAccountBaseCurrencyTotalAmounts() {
-		return accountBaseCurrencyTotalAmounts;
+	public Optional<TotalValueInPageAndStatement4> getAccountBaseCurrencyTotalAmounts() {
+		return accountBaseCurrencyTotalAmounts == null ? Optional.empty() : Optional.of(accountBaseCurrencyTotalAmounts);
 	}
 
-	public void setAccountBaseCurrencyTotalAmounts(TotalValueInPageAndStatement4 accountBaseCurrencyTotalAmounts) {
+	public SecuritiesBalanceAccountingReport002V09 setAccountBaseCurrencyTotalAmounts(TotalValueInPageAndStatement4 accountBaseCurrencyTotalAmounts) {
 		this.accountBaseCurrencyTotalAmounts = accountBaseCurrencyTotalAmounts;
+		return this;
 	}
 
-	@XmlElement(name = "AltrnRptgCcyTtlAmts")
-	public TotalValueInPageAndStatement4 getAlternateReportingCurrencyTotalAmounts() {
-		return alternateReportingCurrencyTotalAmounts;
+	public Optional<TotalValueInPageAndStatement4> getAlternateReportingCurrencyTotalAmounts() {
+		return alternateReportingCurrencyTotalAmounts == null ? Optional.empty() : Optional.of(alternateReportingCurrencyTotalAmounts);
 	}
 
-	public void setAlternateReportingCurrencyTotalAmounts(TotalValueInPageAndStatement4 alternateReportingCurrencyTotalAmounts) {
+	public SecuritiesBalanceAccountingReport002V09 setAlternateReportingCurrencyTotalAmounts(TotalValueInPageAndStatement4 alternateReportingCurrencyTotalAmounts) {
 		this.alternateReportingCurrencyTotalAmounts = alternateReportingCurrencyTotalAmounts;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.003.09.09")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:semt.003.002.09")
 	static public class Document {
 		@XmlElement(name = "SctiesBalAcctgRpt", required = true)
 		public SecuritiesBalanceAccountingReport002V09 messageBody;

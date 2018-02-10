@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +53,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintLimitCriteriaGuideline#forLimitCriteria2
+ * ConstraintLimitCriteriaGuideline.forLimitCriteria2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule#forLimitCriteria2
+ * ConstraintReturnCriteriaAndOrSearchCriteriaRule.forLimitCriteria2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LimitCriteria2", propOrder = {"newQueryName", "searchCriteria", "returnCriteria"})
 public class LimitCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NewQryNm")
 	protected Max35Text newQueryName;
 	/**
-	 * Name of the query defined by the search criteria and return criteria.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -103,7 +114,7 @@ public class LimitCriteria2 {
 	 */
 	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LimitCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "NewQryNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,10 +125,11 @@ public class LimitCriteria2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SchCrit")
 	protected List<com.tools20022.repository.msg.LimitSearchCriteria2> searchCriteria;
 	/**
-	 * Defines the criteria to extract the limit information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -142,7 +154,7 @@ public class LimitCriteria2 {
 	 */
 	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "SchCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,10 +165,11 @@ public class LimitCriteria2 {
 			type_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria2.mmObject();
 		}
 	};
+	@XmlElement(name = "RtrCrit")
 	protected LimitReturnCriteria returnCriteria;
 	/**
-	 * Defines the expected limit report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -181,7 +194,7 @@ public class LimitCriteria2 {
 	 */
 	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "RtrCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,8 +210,11 @@ public class LimitCriteria2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LimitCriteria2.mmNewQueryName, LimitCriteria2.mmSearchCriteria, LimitCriteria2.mmReturnCriteria);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitCriteria2.mmNewQueryName, com.tools20022.repository.msg.LimitCriteria2.mmSearchCriteria,
+						com.tools20022.repository.msg.LimitCriteria2.mmReturnCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLimitCriteriaGuideline.forLimitCriteria2,
+						com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule.forLimitCriteria2);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitCriteria2";
 				definition = "Defines the criteria to extract the limit information and the expected limit report. A name may be given to the new query.";
@@ -207,30 +223,30 @@ public class LimitCriteria2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NewQryNm")
-	public Max35Text getNewQueryName() {
-		return newQueryName;
+	public Optional<Max35Text> getNewQueryName() {
+		return newQueryName == null ? Optional.empty() : Optional.of(newQueryName);
 	}
 
-	public void setNewQueryName(Max35Text newQueryName) {
+	public LimitCriteria2 setNewQueryName(Max35Text newQueryName) {
 		this.newQueryName = newQueryName;
+		return this;
 	}
 
-	@XmlElement(name = "SchCrit")
 	public List<LimitSearchCriteria2> getSearchCriteria() {
-		return searchCriteria;
+		return searchCriteria == null ? searchCriteria = new ArrayList<>() : searchCriteria;
 	}
 
-	public void setSearchCriteria(List<com.tools20022.repository.msg.LimitSearchCriteria2> searchCriteria) {
-		this.searchCriteria = searchCriteria;
+	public LimitCriteria2 setSearchCriteria(List<com.tools20022.repository.msg.LimitSearchCriteria2> searchCriteria) {
+		this.searchCriteria = Objects.requireNonNull(searchCriteria);
+		return this;
 	}
 
-	@XmlElement(name = "RtrCrit")
-	public LimitReturnCriteria getReturnCriteria() {
-		return returnCriteria;
+	public Optional<LimitReturnCriteria> getReturnCriteria() {
+		return returnCriteria == null ? Optional.empty() : Optional.of(returnCriteria);
 	}
 
-	public void setReturnCriteria(com.tools20022.repository.msg.LimitReturnCriteria returnCriteria) {
+	public LimitCriteria2 setReturnCriteria(com.tools20022.repository.msg.LimitReturnCriteria returnCriteria) {
 		this.returnCriteria = returnCriteria;
+		return this;
 	}
 }

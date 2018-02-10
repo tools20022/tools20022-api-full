@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CommunicationMethodCode;
+import com.tools20022.repository.codeset.CommunicationMethod1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Communication method used for the transmission of documents.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CommunicationMethodCode
- * CommunicationMethodCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#mmSWIFTMT
- * CommunicationMethod1Code.mmSWIFTMT}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#SWIFTMT
+ * CommunicationMethod1Code.SWIFTMT}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#mmSWIFTMX
- * CommunicationMethod1Code.mmSWIFTMX}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#SWIFTMX
+ * CommunicationMethod1Code.SWIFTMX}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#mmFax
- * CommunicationMethod1Code.mmFax}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#Fax
+ * CommunicationMethod1Code.Fax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#mmEmail
- * CommunicationMethod1Code.mmEmail}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#Email
+ * CommunicationMethod1Code.Email}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#mmProprietary
- * CommunicationMethod1Code.mmProprietary}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommunicationMethod1Code#Proprietary
+ * CommunicationMethod1Code.Proprietary}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CommunicationMethodCode
+ * CommunicationMethodCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Communication method used for the transmission of documents."</li>
  * </ul>
  */
-public class CommunicationMethod1Code extends CommunicationMethodCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CommunicationMethod1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class CommunicationMethod1Code extends CommunicationMethodCode {
 	 * name} = "SWIFTMT"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSWIFTMT = new MMCode() {
+	public static final CommunicationMethod1Code SWIFTMT = new CommunicationMethod1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SWIFTMT";
-			owner_lazy = () -> CommunicationMethod1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommunicationMethod1Code.mmObject();
+			codeName = CommunicationMethodCode.SWIFTMT.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class CommunicationMethod1Code extends CommunicationMethodCode {
 	 * name} = "SWIFTMX"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSWIFTMX = new MMCode() {
+	public static final CommunicationMethod1Code SWIFTMX = new CommunicationMethod1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SWIFTMX";
-			owner_lazy = () -> CommunicationMethod1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommunicationMethod1Code.mmObject();
+			codeName = CommunicationMethodCode.SWIFTMX.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class CommunicationMethod1Code extends CommunicationMethodCode {
 	 * name} = "Fax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFax = new MMCode() {
+	public static final CommunicationMethod1Code Fax = new CommunicationMethod1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fax";
-			owner_lazy = () -> CommunicationMethod1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommunicationMethod1Code.mmObject();
+			codeName = CommunicationMethodCode.Fax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +169,12 @@ public class CommunicationMethod1Code extends CommunicationMethodCode {
 	 * name} = "Email"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEmail = new MMCode() {
+	public static final CommunicationMethod1Code Email = new CommunicationMethod1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Email";
-			owner_lazy = () -> CommunicationMethod1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommunicationMethod1Code.mmObject();
+			codeName = CommunicationMethodCode.Email.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,26 +193,61 @@ public class CommunicationMethod1Code extends CommunicationMethodCode {
 	 * name} = "Proprietary"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProprietary = new MMCode() {
+	public static final CommunicationMethod1Code Proprietary = new CommunicationMethod1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			owner_lazy = () -> CommunicationMethod1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommunicationMethod1Code.mmObject();
+			codeName = CommunicationMethodCode.Proprietary.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CommunicationMethod1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CommunicationMethod1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SWMT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommunicationMethod1Code";
 				definition = "Communication method used for the transmission of documents.";
-				code_lazy = () -> Arrays.asList(CommunicationMethod1Code.mmSWIFTMT, CommunicationMethod1Code.mmSWIFTMX, CommunicationMethod1Code.mmFax, CommunicationMethod1Code.mmEmail, CommunicationMethod1Code.mmProprietary);
 				trace_lazy = () -> CommunicationMethodCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommunicationMethod1Code.SWIFTMT, com.tools20022.repository.codeset.CommunicationMethod1Code.SWIFTMX,
+						com.tools20022.repository.codeset.CommunicationMethod1Code.Fax, com.tools20022.repository.codeset.CommunicationMethod1Code.Email, com.tools20022.repository.codeset.CommunicationMethod1Code.Proprietary);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SWIFTMT.getCodeName().get(), SWIFTMT);
+		codesByName.put(SWIFTMX.getCodeName().get(), SWIFTMX);
+		codesByName.put(Fax.getCodeName().get(), Fax);
+		codesByName.put(Email.getCodeName().get(), Email);
+		codesByName.put(Proprietary.getCodeName().get(), Proprietary);
+	}
+
+	public static CommunicationMethod1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CommunicationMethod1Code[] values() {
+		CommunicationMethod1Code[] values = new CommunicationMethod1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CommunicationMethod1Code> {
+		@Override
+		public CommunicationMethod1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CommunicationMethod1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.LegSwapTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the type of leg structuring a swap.
@@ -31,16 +36,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.LegSwapTypeCode#ParForPar
+ * LegSwapTypeCode.ParForPar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LegSwapTypeCode#mmParForPar
- * LegSwapTypeCode.mmParForPar}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.LegSwapTypeCode#mmModifiedDuration
- * LegSwapTypeCode.mmModifiedDuration}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LegSwapTypeCode#mmRisk
- * LegSwapTypeCode.mmRisk}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LegSwapTypeCode#mmProceeds
- * LegSwapTypeCode.mmProceeds}</li>
+ * {@linkplain com.tools20022.repository.codeset.LegSwapTypeCode#ModifiedDuration
+ * LegSwapTypeCode.ModifiedDuration}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LegSwapTypeCode#Risk
+ * LegSwapTypeCode.Risk}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LegSwapTypeCode#Proceeds
+ * LegSwapTypeCode.Proceeds}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates the type of leg structuring a swap."</li>
  * </ul>
  */
-public class LegSwapTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class LegSwapTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -96,12 +101,12 @@ public class LegSwapTypeCode {
 	 * "Type of leg involved in a swap whose purpose is to exchange principal."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmParForPar = new MMCode() {
+	public static final LegSwapTypeCode ParForPar = new LegSwapTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParForPar";
 			definition = "Type of leg involved in a swap whose purpose is to exchange principal.";
-			owner_lazy = () -> LegSwapTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LegSwapTypeCode.mmObject();
 			codeName = "PFPR";
 		}
 	};
@@ -129,12 +134,12 @@ public class LegSwapTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmModifiedDuration = new MMCode() {
+	public static final LegSwapTypeCode ModifiedDuration = new LegSwapTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedDuration";
 			definition = "Type of leg involved in a swap whose purpose is to exchange price volatility.";
-			owner_lazy = () -> LegSwapTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LegSwapTypeCode.mmObject();
 			codeName = "MODU";
 		}
 	};
@@ -162,12 +167,12 @@ public class LegSwapTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRisk = new MMCode() {
+	public static final LegSwapTypeCode Risk = new LegSwapTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Risk";
 			definition = "Type of leg involved in a swap whose purpose is to increase the credit quality and reduce the default risk. Also known as quality swap.";
-			owner_lazy = () -> LegSwapTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LegSwapTypeCode.mmObject();
 			codeName = "RISK";
 		}
 	};
@@ -196,28 +201,61 @@ public class LegSwapTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmProceeds = new MMCode() {
+	public static final LegSwapTypeCode Proceeds = new LegSwapTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proceeds";
 			definition = "Type of leg involved in a swap structured in the sale of a financial instrument and the simultaneous purchase of another instrument with the proceeds from the sale.";
-			owner_lazy = () -> LegSwapTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LegSwapTypeCode.mmObject();
 			codeName = "PRCD";
 		}
 	};
+	final static private LinkedHashMap<String, LegSwapTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected LegSwapTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PFPR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LegSwapTypeCode";
 				definition = "Indicates the type of leg structuring a swap.";
-				code_lazy = () -> Arrays.asList(LegSwapTypeCode.mmParForPar, LegSwapTypeCode.mmModifiedDuration, LegSwapTypeCode.mmRisk, LegSwapTypeCode.mmProceeds);
 				derivation_lazy = () -> Arrays.asList(LegSwapType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LegSwapTypeCode.ParForPar, com.tools20022.repository.codeset.LegSwapTypeCode.ModifiedDuration, com.tools20022.repository.codeset.LegSwapTypeCode.Risk,
+						com.tools20022.repository.codeset.LegSwapTypeCode.Proceeds);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ParForPar.getCodeName().get(), ParForPar);
+		codesByName.put(ModifiedDuration.getCodeName().get(), ModifiedDuration);
+		codesByName.put(Risk.getCodeName().get(), Risk);
+		codesByName.put(Proceeds.getCodeName().get(), Proceeds);
+	}
+
+	public static LegSwapTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static LegSwapTypeCode[] values() {
+		LegSwapTypeCode[] values = new LegSwapTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, LegSwapTypeCode> {
+		@Override
+		public LegSwapTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(LegSwapTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

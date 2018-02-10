@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Record details from National BIC directory."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DirectoryEntry1", propOrder = {"accountOwner", "changeType", "changeIdentification", "directoryCommonDetails", "participantProfile"})
 public class DirectoryEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctOwnr", required = true)
 	protected FinancialInstitutionIdentification9 accountOwner;
 	/**
-	 * Owner of the account identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -105,7 +108,7 @@ public class DirectoryEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DirectoryEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +120,11 @@ public class DirectoryEntry1 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmObject();
 		}
 	};
+	@XmlElement(name = "ChngTp")
 	protected Max35Text changeType;
 	/**
-	 * Type of the change.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,7 +151,7 @@ public class DirectoryEntry1 {
 	 */
 	public static final MMMessageAttribute mmChangeType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DirectoryEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "ChngTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,10 +162,11 @@ public class DirectoryEntry1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ChngId")
 	protected Number changeIdentification;
 	/**
-	 * Identification number of the entry change.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,7 +193,7 @@ public class DirectoryEntry1 {
 	 */
 	public static final MMMessageAttribute mmChangeIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DirectoryEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "ChngId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,10 +204,11 @@ public class DirectoryEntry1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "DrctryCmonDtls", required = true)
 	protected DirectoryInformation1 directoryCommonDetails;
 	/**
-	 * Information details from National BIC directory.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -228,7 +234,7 @@ public class DirectoryEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmDirectoryCommonDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DirectoryEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "DrctryCmonDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,10 +246,11 @@ public class DirectoryEntry1 {
 			type_lazy = () -> com.tools20022.repository.msg.DirectoryInformation1.mmObject();
 		}
 	};
+	@XmlElement(name = "PtcptPrfl")
 	protected ParticipantProfile1 participantProfile;
 	/**
-	 * Participant information from National BIC Directory.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -269,7 +276,7 @@ public class DirectoryEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmParticipantProfile = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DirectoryEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptPrfl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -285,8 +292,9 @@ public class DirectoryEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DirectoryEntry1.mmAccountOwner, DirectoryEntry1.mmChangeType, DirectoryEntry1.mmChangeIdentification, DirectoryEntry1.mmDirectoryCommonDetails, DirectoryEntry1.mmParticipantProfile);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectoryEntry1.mmAccountOwner, com.tools20022.repository.msg.DirectoryEntry1.mmChangeType,
+						com.tools20022.repository.msg.DirectoryEntry1.mmChangeIdentification, com.tools20022.repository.msg.DirectoryEntry1.mmDirectoryCommonDetails, com.tools20022.repository.msg.DirectoryEntry1.mmParticipantProfile);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DirectoryEntry1";
 				definition = "Record details from National BIC directory.";
@@ -295,48 +303,48 @@ public class DirectoryEntry1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctOwnr", required = true)
 	public FinancialInstitutionIdentification9 getAccountOwner() {
 		return accountOwner;
 	}
 
-	public void setAccountOwner(com.tools20022.repository.msg.FinancialInstitutionIdentification9 accountOwner) {
-		this.accountOwner = accountOwner;
+	public DirectoryEntry1 setAccountOwner(com.tools20022.repository.msg.FinancialInstitutionIdentification9 accountOwner) {
+		this.accountOwner = Objects.requireNonNull(accountOwner);
+		return this;
 	}
 
-	@XmlElement(name = "ChngTp")
-	public Max35Text getChangeType() {
-		return changeType;
+	public Optional<Max35Text> getChangeType() {
+		return changeType == null ? Optional.empty() : Optional.of(changeType);
 	}
 
-	public void setChangeType(Max35Text changeType) {
+	public DirectoryEntry1 setChangeType(Max35Text changeType) {
 		this.changeType = changeType;
+		return this;
 	}
 
-	@XmlElement(name = "ChngId")
-	public Number getChangeIdentification() {
-		return changeIdentification;
+	public Optional<Number> getChangeIdentification() {
+		return changeIdentification == null ? Optional.empty() : Optional.of(changeIdentification);
 	}
 
-	public void setChangeIdentification(Number changeIdentification) {
+	public DirectoryEntry1 setChangeIdentification(Number changeIdentification) {
 		this.changeIdentification = changeIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "DrctryCmonDtls", required = true)
 	public DirectoryInformation1 getDirectoryCommonDetails() {
 		return directoryCommonDetails;
 	}
 
-	public void setDirectoryCommonDetails(com.tools20022.repository.msg.DirectoryInformation1 directoryCommonDetails) {
-		this.directoryCommonDetails = directoryCommonDetails;
+	public DirectoryEntry1 setDirectoryCommonDetails(com.tools20022.repository.msg.DirectoryInformation1 directoryCommonDetails) {
+		this.directoryCommonDetails = Objects.requireNonNull(directoryCommonDetails);
+		return this;
 	}
 
-	@XmlElement(name = "PtcptPrfl")
-	public ParticipantProfile1 getParticipantProfile() {
-		return participantProfile;
+	public Optional<ParticipantProfile1> getParticipantProfile() {
+		return participantProfile == null ? Optional.empty() : Optional.of(participantProfile);
 	}
 
-	public void setParticipantProfile(com.tools20022.repository.msg.ParticipantProfile1 participantProfile) {
+	public DirectoryEntry1 setParticipantProfile(com.tools20022.repository.msg.ParticipantProfile1 participantProfile) {
 		this.participantProfile = participantProfile;
+		return this;
 	}
 }

@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -28,6 +30,8 @@ import com.tools20022.repository.entity.Lottery;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides additional information regarding corporate action details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionSD9", propOrder = {"placeAndName", "recordDate", "paymentDate", "lotteryDate", "lotteryType"})
 public class CorporateActionSD9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +115,7 @@ public class CorporateActionSD9 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionSD9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD9.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,13 +126,11 @@ public class CorporateActionSD9 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RcrdDt")
 	protected ISODate recordDate;
 	/**
-	 * Date at which positions are stuck at the end of the day to note which
-	 * parties will receive the relevant amount of entitlement, due to be
-	 * distributed on payment date. DTC (The Depository Trust Corporation) and
-	 * its Participants may use this as a reference
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,6 +144,9 @@ public class CorporateActionSD9 {
 	 * CorporateActionSD9}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RcrdDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Record Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -156,9 +162,10 @@ public class CorporateActionSD9 {
 	 */
 	public static final MMMessageAttribute mmRecordDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionSD9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD9.mmObject();
 			isDerived = false;
 			xmlTag = "RcrdDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Record Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date at which positions are stuck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date. DTC  (The Depository Trust Corporation) and its Participants may use this as a reference ";
@@ -167,11 +174,11 @@ public class CorporateActionSD9 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtDt")
 	protected DateFormat28Choice paymentDate;
 	/**
-	 * Date/time at which the movement was due to take place (cash and/or
-	 * securities).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,6 +194,9 @@ public class CorporateActionSD9 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PmtDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Payable Date</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -201,9 +211,10 @@ public class CorporateActionSD9 {
 	 */
 	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionSD9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD9.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Payable Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date/time at which the movement was due to take place (cash and/or securities).";
@@ -212,11 +223,11 @@ public class CorporateActionSD9 {
 			complexType_lazy = () -> DateFormat28Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LtryDt")
 	protected ISODate lotteryDate;
 	/**
-	 * Date/time on which the lottery is run and applied to the holder's
-	 * positions. This is also applicable to partial calls.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,6 +247,9 @@ public class CorporateActionSD9 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LtryDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::LOTO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -251,9 +265,10 @@ public class CorporateActionSD9 {
 	public static final MMMessageAttribute mmLotteryDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmLotteryDate;
-			componentContext_lazy = () -> CorporateActionSD9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD9.mmObject();
 			isDerived = false;
 			xmlTag = "LtryDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::LOTO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryDate";
 			definition = "Date/time on which the lottery is run and applied to the holder's positions. This is also applicable to partial calls.";
@@ -262,10 +277,11 @@ public class CorporateActionSD9 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "LtryTp")
 	protected LotteryType1Code lotteryType;
 	/**
-	 * Specifies the type of lottery announced.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -281,6 +297,9 @@ public class CorporateActionSD9 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LtryTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::LOTO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -293,9 +312,10 @@ public class CorporateActionSD9 {
 	 */
 	public static final MMMessageAttribute mmLotteryType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionSD9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD9.mmObject();
 			isDerived = false;
 			xmlTag = "LtryTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::LOTO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryType";
 			definition = "Specifies the type of lottery announced.";
@@ -308,8 +328,9 @@ public class CorporateActionSD9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionSD9.mmPlaceAndName, CorporateActionSD9.mmRecordDate, CorporateActionSD9.mmPaymentDate, CorporateActionSD9.mmLotteryDate, CorporateActionSD9.mmLotteryType);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD9.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionSD9.mmRecordDate,
+						com.tools20022.repository.msg.CorporateActionSD9.mmPaymentDate, com.tools20022.repository.msg.CorporateActionSD9.mmLotteryDate, com.tools20022.repository.msg.CorporateActionSD9.mmLotteryType);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionSD9";
 				definition = "Provides additional information regarding corporate action details.";
@@ -318,48 +339,48 @@ public class CorporateActionSD9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionSD9 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "RcrdDt")
-	public ISODate getRecordDate() {
-		return recordDate;
+	public Optional<ISODate> getRecordDate() {
+		return recordDate == null ? Optional.empty() : Optional.of(recordDate);
 	}
 
-	public void setRecordDate(ISODate recordDate) {
+	public CorporateActionSD9 setRecordDate(ISODate recordDate) {
 		this.recordDate = recordDate;
+		return this;
 	}
 
-	@XmlElement(name = "PmtDt")
-	public DateFormat28Choice getPaymentDate() {
-		return paymentDate;
+	public Optional<DateFormat28Choice> getPaymentDate() {
+		return paymentDate == null ? Optional.empty() : Optional.of(paymentDate);
 	}
 
-	public void setPaymentDate(DateFormat28Choice paymentDate) {
+	public CorporateActionSD9 setPaymentDate(DateFormat28Choice paymentDate) {
 		this.paymentDate = paymentDate;
+		return this;
 	}
 
-	@XmlElement(name = "LtryDt")
-	public ISODate getLotteryDate() {
-		return lotteryDate;
+	public Optional<ISODate> getLotteryDate() {
+		return lotteryDate == null ? Optional.empty() : Optional.of(lotteryDate);
 	}
 
-	public void setLotteryDate(ISODate lotteryDate) {
+	public CorporateActionSD9 setLotteryDate(ISODate lotteryDate) {
 		this.lotteryDate = lotteryDate;
+		return this;
 	}
 
-	@XmlElement(name = "LtryTp")
-	public LotteryType1Code getLotteryType() {
-		return lotteryType;
+	public Optional<LotteryType1Code> getLotteryType() {
+		return lotteryType == null ? Optional.empty() : Optional.of(lotteryType);
 	}
 
-	public void setLotteryType(LotteryType1Code lotteryType) {
+	public CorporateActionSD9 setLotteryType(LotteryType1Code lotteryType) {
 		this.lotteryType = lotteryType;
+		return this;
 	}
 }

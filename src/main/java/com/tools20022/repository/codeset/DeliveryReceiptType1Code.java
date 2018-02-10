@@ -17,12 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DeliveryReceiptType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies how the transaction is to be settled.
@@ -32,21 +38,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType1Code#mmFree
- * DeliveryReceiptType1Code.mmFree}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType1Code#Free
+ * DeliveryReceiptType1Code.Free}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType1Code#mmAgainstPayment
- * DeliveryReceiptType1Code.mmAgainstPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType1Code#AgainstPayment
+ * DeliveryReceiptType1Code.AgainstPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType1Code#mmSplitFromPayment
- * DeliveryReceiptType1Code.mmSplitFromPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType1Code#SplitFromPayment
+ * DeliveryReceiptType1Code.SplitFromPayment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -63,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies how the transaction is to be settled."</li>
  * </ul>
  */
-public class DeliveryReceiptType1Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DeliveryReceiptType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -78,6 +85,9 @@ public class DeliveryReceiptType1Code {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FREE"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22::PAYM//FREE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -90,12 +100,13 @@ public class DeliveryReceiptType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFree = new MMCode() {
+	public static final DeliveryReceiptType1Code Free = new DeliveryReceiptType1Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22::PAYM//FREE"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Free";
 			definition = "Settled free of payment. The securities movement is a result of an in-kind transaction or a custodial bank move.";
-			owner_lazy = () -> DeliveryReceiptType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DeliveryReceiptType1Code.mmObject();
 			codeName = "FREE";
 		}
 	};
@@ -111,6 +122,9 @@ public class DeliveryReceiptType1Code {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "APMT"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22::PAYM//APMT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -123,12 +137,13 @@ public class DeliveryReceiptType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgainstPayment = new MMCode() {
+	public static final DeliveryReceiptType1Code AgainstPayment = new DeliveryReceiptType1Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22::PAYM//APMT"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AgainstPayment";
 			definition = "Settled against payment. Delivery or receipt is against payment, ie, DVP or RVP.";
-			owner_lazy = () -> DeliveryReceiptType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DeliveryReceiptType1Code.mmObject();
 			codeName = "APMT";
 		}
 	};
@@ -157,27 +172,59 @@ public class DeliveryReceiptType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSplitFromPayment = new MMCode() {
+	public static final DeliveryReceiptType1Code SplitFromPayment = new DeliveryReceiptType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SplitFromPayment";
 			definition = "Settled separate from payment. Delivery or receipt is free, with a separate payment arrangement, eg, a separate cash instruction from the buy side.";
-			owner_lazy = () -> DeliveryReceiptType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DeliveryReceiptType1Code.mmObject();
 			codeName = "DSPA";
 		}
 	};
+	final static private LinkedHashMap<String, DeliveryReceiptType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DeliveryReceiptType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FREE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliveryReceiptType1Code";
 				definition = "Specifies how the transaction is to be settled.";
-				code_lazy = () -> Arrays.asList(DeliveryReceiptType1Code.mmFree, DeliveryReceiptType1Code.mmAgainstPayment, DeliveryReceiptType1Code.mmSplitFromPayment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryReceiptType1Code.Free, com.tools20022.repository.codeset.DeliveryReceiptType1Code.AgainstPayment,
+						com.tools20022.repository.codeset.DeliveryReceiptType1Code.SplitFromPayment);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Free.getCodeName().get(), Free);
+		codesByName.put(AgainstPayment.getCodeName().get(), AgainstPayment);
+		codesByName.put(SplitFromPayment.getCodeName().get(), SplitFromPayment);
+	}
+
+	public static DeliveryReceiptType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DeliveryReceiptType1Code[] values() {
+		DeliveryReceiptType1Code[] values = new DeliveryReceiptType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DeliveryReceiptType1Code> {
+		@Override
+		public DeliveryReceiptType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DeliveryReceiptType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Transaction executed by the client of a financial institution from/to the
@@ -73,8 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,8 +93,8 @@ public class BankingTransaction {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected PaymentObligation paymentObligation;
 	/**
-	 * Payment obligation resulting from a banking transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,8 +127,8 @@ public class BankingTransaction {
 	 */
 	public static final MMBusinessAssociationEnd mmPaymentObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.BankingTransaction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BankingTransaction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentObligation";
 			definition = "Payment obligation resulting from a banking transaction.";
@@ -140,8 +141,8 @@ public class BankingTransaction {
 	};
 	protected FinancialTransaction financialTransaction;
 	/**
-	 * Financial transaction to which the banking transaction is associated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,8 +177,8 @@ public class BankingTransaction {
 	 */
 	public static final MMBusinessAssociationEnd mmFinancialTransaction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.BankingTransaction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BankingTransaction.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialTransaction";
 			definition = "Financial transaction to which the banking transaction is associated.";
@@ -190,8 +191,8 @@ public class BankingTransaction {
 	};
 	protected CashDelivery cashDelivery;
 	/**
-	 * Specifies the cash which is delivered by a financial institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,8 +226,8 @@ public class BankingTransaction {
 	 */
 	public static final MMBusinessAssociationEnd mmCashDelivery = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.BankingTransaction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BankingTransaction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashDelivery";
 			definition = "Specifies the cash which is delivered by a financial institution.";
@@ -239,8 +240,8 @@ public class BankingTransaction {
 	};
 	protected CashDeposit cashDeposit;
 	/**
-	 * Specifies the cash which is received by a financial institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -274,8 +275,8 @@ public class BankingTransaction {
 	 */
 	public static final MMBusinessAssociationEnd mmCashDeposit = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.BankingTransaction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BankingTransaction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashDeposit";
 			definition = "Specifies the cash which is received by a financial institution.";
@@ -290,7 +291,7 @@ public class BankingTransaction {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BankingTransaction";
 				definition = "Transaction executed by the client of a financial institution from/to the account serviced by the financial institution, such as mortgage payment.";
@@ -312,31 +313,35 @@ public class BankingTransaction {
 		return paymentObligation;
 	}
 
-	public void setPaymentObligation(com.tools20022.repository.entity.PaymentObligation paymentObligation) {
-		this.paymentObligation = paymentObligation;
+	public BankingTransaction setPaymentObligation(com.tools20022.repository.entity.PaymentObligation paymentObligation) {
+		this.paymentObligation = Objects.requireNonNull(paymentObligation);
+		return this;
 	}
 
 	public FinancialTransaction getFinancialTransaction() {
 		return financialTransaction;
 	}
 
-	public void setFinancialTransaction(com.tools20022.repository.entity.FinancialTransaction financialTransaction) {
-		this.financialTransaction = financialTransaction;
+	public BankingTransaction setFinancialTransaction(com.tools20022.repository.entity.FinancialTransaction financialTransaction) {
+		this.financialTransaction = Objects.requireNonNull(financialTransaction);
+		return this;
 	}
 
 	public CashDelivery getCashDelivery() {
 		return cashDelivery;
 	}
 
-	public void setCashDelivery(com.tools20022.repository.entity.CashDelivery cashDelivery) {
-		this.cashDelivery = cashDelivery;
+	public BankingTransaction setCashDelivery(com.tools20022.repository.entity.CashDelivery cashDelivery) {
+		this.cashDelivery = Objects.requireNonNull(cashDelivery);
+		return this;
 	}
 
 	public CashDeposit getCashDeposit() {
 		return cashDeposit;
 	}
 
-	public void setCashDeposit(com.tools20022.repository.entity.CashDeposit cashDeposit) {
-		this.cashDeposit = cashDeposit;
+	public BankingTransaction setCashDeposit(com.tools20022.repository.entity.CashDeposit cashDeposit) {
+		this.cashDeposit = Objects.requireNonNull(cashDeposit);
+		return this;
 	}
 }

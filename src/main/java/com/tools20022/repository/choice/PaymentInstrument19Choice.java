@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Cheque4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * PaymentInstrument16Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentInstrument19Choice", propOrder = {"chequeDetails", "bankersDraftDetails"})
 public class PaymentInstrument19Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ChqDtls", required = true)
 	protected Cheque4 chequeDetails;
 	/**
-	 * Settlement instructions for a payment by cheque.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -112,7 +114,7 @@ public class PaymentInstrument19Choice {
 	public static final MMMessageAssociationEnd mmChequeDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
-			componentContext_lazy = () -> PaymentInstrument19Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument19Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ChqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +127,11 @@ public class PaymentInstrument19Choice {
 			type_lazy = () -> Cheque4.mmObject();
 		}
 	};
+	@XmlElement(name = "BkrsDrftDtls", required = true)
 	protected Cheque4 bankersDraftDetails;
 	/**
-	 * Settlement instructions for a payment by draft.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -163,7 +166,7 @@ public class PaymentInstrument19Choice {
 	public static final MMMessageAssociationEnd mmBankersDraftDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
-			componentContext_lazy = () -> PaymentInstrument19Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument19Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BkrsDrftDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,9 +183,9 @@ public class PaymentInstrument19Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentInstrument19Choice.mmChequeDetails, PaymentInstrument19Choice.mmBankersDraftDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument19Choice.mmChequeDetails, com.tools20022.repository.choice.PaymentInstrument19Choice.mmBankersDraftDetails);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrument19Choice";
 				definition = "Choice of payment instruments.";
@@ -192,21 +195,21 @@ public class PaymentInstrument19Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ChqDtls", required = true)
 	public Cheque4 getChequeDetails() {
 		return chequeDetails;
 	}
 
-	public void setChequeDetails(Cheque4 chequeDetails) {
-		this.chequeDetails = chequeDetails;
+	public PaymentInstrument19Choice setChequeDetails(Cheque4 chequeDetails) {
+		this.chequeDetails = Objects.requireNonNull(chequeDetails);
+		return this;
 	}
 
-	@XmlElement(name = "BkrsDrftDtls", required = true)
 	public Cheque4 getBankersDraftDetails() {
 		return bankersDraftDetails;
 	}
 
-	public void setBankersDraftDetails(Cheque4 bankersDraftDetails) {
-		this.bankersDraftDetails = bankersDraftDetails;
+	public PaymentInstrument19Choice setBankersDraftDetails(Cheque4 bankersDraftDetails) {
+		this.bankersDraftDetails = Objects.requireNonNull(bankersDraftDetails);
+		return this;
 	}
 }

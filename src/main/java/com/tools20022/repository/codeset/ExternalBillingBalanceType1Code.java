@@ -17,11 +17,17 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ExternalBillingBalanceType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines the balance of the billing service, as published in an external
@@ -33,8 +39,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -53,20 +59,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ExternalBillingBalanceType1Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ExternalBillingBalanceType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
+	final static private LinkedHashMap<String, ExternalBillingBalanceType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ExternalBillingBalanceType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("COLL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExternalBillingBalanceType1Code";
 				definition = "Defines the balance of the billing service, as published in an external billing balance code list.\r\nExternal code sets can be downloaded from www.iso20022.org.";
+				minLength = 1;
+				maxLength = 4;
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+	}
+
+	public static ExternalBillingBalanceType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ExternalBillingBalanceType1Code[] values() {
+		ExternalBillingBalanceType1Code[] values = new ExternalBillingBalanceType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ExternalBillingBalanceType1Code> {
+		@Override
+		public ExternalBillingBalanceType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ExternalBillingBalanceType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

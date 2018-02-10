@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CalculationBasisCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the calculation basis.
@@ -32,20 +37,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationBasisCode#mmAverage
- * CalculationBasisCode.mmAverage}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationBasisCode#Average
+ * CalculationBasisCode.Average}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CalculationBasisCode#Daily
+ * CalculationBasisCode.Daily}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CalculationBasisCode#Other
+ * CalculationBasisCode.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationBasisCode#mmDaily
- * CalculationBasisCode.mmDaily}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationBasisCode#Monthly
+ * CalculationBasisCode.Monthly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationBasisCode#mmOther
- * CalculationBasisCode.mmOther}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationBasisCode#mmMonthly
- * CalculationBasisCode.mmMonthly}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CalculationBasisCode#mmAnnual
- * CalculationBasisCode.mmAnnual}</li>
+ * {@linkplain com.tools20022.repository.codeset.CalculationBasisCode#Annual
+ * CalculationBasisCode.Annual}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -60,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the calculation basis."</li>
  * </ul>
  */
-public class CalculationBasisCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CalculationBasisCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -102,12 +106,12 @@ public class CalculationBasisCode {
 	 * definition} = "Average basis."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAverage = new MMCode() {
+	public static final CalculationBasisCode Average = new CalculationBasisCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Average";
 			definition = "Average basis.";
-			owner_lazy = () -> CalculationBasisCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationBasisCode.mmObject();
 			codeName = "AVER";
 		}
 	};
@@ -132,12 +136,12 @@ public class CalculationBasisCode {
 	 * definition} = "Daily basis."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDaily = new MMCode() {
+	public static final CalculationBasisCode Daily = new CalculationBasisCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Daily";
 			definition = "Daily basis.";
-			owner_lazy = () -> CalculationBasisCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationBasisCode.mmObject();
 			codeName = "DAIL";
 		}
 	};
@@ -162,12 +166,12 @@ public class CalculationBasisCode {
 	 * definition} = "Another type of calculation basis."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final CalculationBasisCode Other = new CalculationBasisCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Other";
 			definition = "Another type of calculation basis.";
-			owner_lazy = () -> CalculationBasisCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationBasisCode.mmObject();
 			codeName = "OTHR";
 		}
 	};
@@ -192,12 +196,12 @@ public class CalculationBasisCode {
 	 * definition} = "Monthly basis."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMonthly = new MMCode() {
+	public static final CalculationBasisCode Monthly = new CalculationBasisCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Monthly";
 			definition = "Monthly basis.";
-			owner_lazy = () -> CalculationBasisCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationBasisCode.mmObject();
 			codeName = "MNTH";
 		}
 	};
@@ -222,28 +226,62 @@ public class CalculationBasisCode {
 	 * definition} = "Yearly basis."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAnnual = new MMCode() {
+	public static final CalculationBasisCode Annual = new CalculationBasisCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Annual";
 			definition = "Yearly basis.";
-			owner_lazy = () -> CalculationBasisCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CalculationBasisCode.mmObject();
 			codeName = "YEAR";
 		}
 	};
+	final static private LinkedHashMap<String, CalculationBasisCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CalculationBasisCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AVER");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CalculationBasisCode";
 				definition = "Specifies the calculation basis.";
-				code_lazy = () -> Arrays.asList(CalculationBasisCode.mmAverage, CalculationBasisCode.mmDaily, CalculationBasisCode.mmOther, CalculationBasisCode.mmMonthly, CalculationBasisCode.mmAnnual);
 				derivation_lazy = () -> Arrays.asList(CalculationBasis1Code.mmObject(), CalculationBasis2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CalculationBasisCode.Average, com.tools20022.repository.codeset.CalculationBasisCode.Daily, com.tools20022.repository.codeset.CalculationBasisCode.Other,
+						com.tools20022.repository.codeset.CalculationBasisCode.Monthly, com.tools20022.repository.codeset.CalculationBasisCode.Annual);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Average.getCodeName().get(), Average);
+		codesByName.put(Daily.getCodeName().get(), Daily);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(Monthly.getCodeName().get(), Monthly);
+		codesByName.put(Annual.getCodeName().get(), Annual);
+	}
+
+	public static CalculationBasisCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CalculationBasisCode[] values() {
+		CalculationBasisCode[] values = new CalculationBasisCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CalculationBasisCode> {
+		@Override
+		public CalculationBasisCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CalculationBasisCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.StandingOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * StandingOrder3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StandingOrder4", propOrder = {"standingOrderIdentification", "standingOrderOrError"})
 public class StandingOrder4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StgOrdrId", required = true)
 	protected StandingOrderIdentification2 standingOrderIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +120,7 @@ public class StandingOrder4 {
 	public static final MMMessageAttribute mmStandingOrderIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmIdentification;
-			componentContext_lazy = () -> StandingOrder4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrder4.mmObject();
 			isDerived = false;
 			xmlTag = "StgOrdrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,11 +132,11 @@ public class StandingOrder4 {
 			complexType_lazy = () -> com.tools20022.repository.msg.StandingOrderIdentification2.mmObject();
 		}
 	};
+	@XmlElement(name = "StgOrdrOrErr", required = true)
 	protected StandingOrderOrError4Choice standingOrderOrError;
 	/**
-	 * Requested information on the standing order or business error when
-	 * information has not been found.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -168,7 +169,7 @@ public class StandingOrder4 {
 	 */
 	public static final MMMessageAssociationEnd mmStandingOrderOrError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StandingOrder4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrder4.mmObject();
 			isDerived = false;
 			xmlTag = "StgOrdrOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,9 +186,9 @@ public class StandingOrder4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StandingOrder4.mmStandingOrderIdentification, StandingOrder4.mmStandingOrderOrError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrder4.mmStandingOrderIdentification, com.tools20022.repository.msg.StandingOrder4.mmStandingOrderOrError);
 				trace_lazy = () -> CashStandingOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingOrder4";
 				definition = "Defines the detailed attributes of a standing order.";
@@ -197,21 +198,21 @@ public class StandingOrder4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StgOrdrId", required = true)
 	public StandingOrderIdentification2 getStandingOrderIdentification() {
 		return standingOrderIdentification;
 	}
 
-	public void setStandingOrderIdentification(com.tools20022.repository.msg.StandingOrderIdentification2 standingOrderIdentification) {
-		this.standingOrderIdentification = standingOrderIdentification;
+	public StandingOrder4 setStandingOrderIdentification(com.tools20022.repository.msg.StandingOrderIdentification2 standingOrderIdentification) {
+		this.standingOrderIdentification = Objects.requireNonNull(standingOrderIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "StgOrdrOrErr", required = true)
 	public StandingOrderOrError4Choice getStandingOrderOrError() {
 		return standingOrderOrError;
 	}
 
-	public void setStandingOrderOrError(StandingOrderOrError4Choice standingOrderOrError) {
-		this.standingOrderOrError = standingOrderOrError;
+	public StandingOrder4 setStandingOrderOrError(StandingOrderOrError4Choice standingOrderOrError) {
+		this.standingOrderOrError = Objects.requireNonNull(standingOrderOrError);
+		return this;
 	}
 }

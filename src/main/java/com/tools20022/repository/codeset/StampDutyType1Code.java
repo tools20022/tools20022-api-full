@@ -20,39 +20,43 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.StampDutyTypeCode;
+import com.tools20022.repository.codeset.StampDutyType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies if the stamp duty is applicable
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.StampDutyTypeCode
- * StampDutyTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StampDutyType1Code#mmOutsideCSD
- * StampDutyType1Code.mmOutsideCSD}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.StampDutyType1Code#mmPaid
- * StampDutyType1Code.mmPaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.StampDutyType1Code#OutsideCSD
+ * StampDutyType1Code.OutsideCSD}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.StampDutyType1Code#Paid
+ * StampDutyType1Code.Paid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StampDutyType1Code#mmNotApplicable
- * StampDutyType1Code.mmNotApplicable}</li>
+ * {@linkplain com.tools20022.repository.codeset.StampDutyType1Code#NotApplicable
+ * StampDutyType1Code.NotApplicable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StampDutyType1Code#mmExemption
- * StampDutyType1Code.mmExemption}</li>
+ * {@linkplain com.tools20022.repository.codeset.StampDutyType1Code#Exemption
+ * StampDutyType1Code.Exemption}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.StampDutyTypeCode
+ * StampDutyTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies if the stamp duty is applicable"</li>
  * </ul>
  */
-public class StampDutyType1Code extends StampDutyTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class StampDutyType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,11 +93,12 @@ public class StampDutyType1Code extends StampDutyTypeCode {
 	 * name} = "OutsideCSD"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOutsideCSD = new MMCode() {
+	public static final StampDutyType1Code OutsideCSD = new StampDutyType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutsideCSD";
-			owner_lazy = () -> StampDutyType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StampDutyType1Code.mmObject();
+			codeName = StampDutyTypeCode.OutsideCSD.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -111,11 +117,12 @@ public class StampDutyType1Code extends StampDutyTypeCode {
 	 * name} = "Paid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPaid = new MMCode() {
+	public static final StampDutyType1Code Paid = new StampDutyType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Paid";
-			owner_lazy = () -> StampDutyType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StampDutyType1Code.mmObject();
+			codeName = StampDutyTypeCode.Paid.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -134,11 +141,12 @@ public class StampDutyType1Code extends StampDutyTypeCode {
 	 * name} = "NotApplicable"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotApplicable = new MMCode() {
+	public static final StampDutyType1Code NotApplicable = new StampDutyType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotApplicable";
-			owner_lazy = () -> StampDutyType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StampDutyType1Code.mmObject();
+			codeName = StampDutyTypeCode.NotApplicable.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -157,26 +165,60 @@ public class StampDutyType1Code extends StampDutyTypeCode {
 	 * name} = "Exemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExemption = new MMCode() {
+	public static final StampDutyType1Code Exemption = new StampDutyType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exemption";
-			owner_lazy = () -> StampDutyType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StampDutyType1Code.mmObject();
+			codeName = StampDutyTypeCode.Exemption.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, StampDutyType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected StampDutyType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SDRU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StampDutyType1Code";
 				definition = "Specifies if the stamp duty is applicable";
-				code_lazy = () -> Arrays.asList(StampDutyType1Code.mmOutsideCSD, StampDutyType1Code.mmPaid, StampDutyType1Code.mmNotApplicable, StampDutyType1Code.mmExemption);
 				trace_lazy = () -> StampDutyTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StampDutyType1Code.OutsideCSD, com.tools20022.repository.codeset.StampDutyType1Code.Paid, com.tools20022.repository.codeset.StampDutyType1Code.NotApplicable,
+						com.tools20022.repository.codeset.StampDutyType1Code.Exemption);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(OutsideCSD.getCodeName().get(), OutsideCSD);
+		codesByName.put(Paid.getCodeName().get(), Paid);
+		codesByName.put(NotApplicable.getCodeName().get(), NotApplicable);
+		codesByName.put(Exemption.getCodeName().get(), Exemption);
+	}
+
+	public static StampDutyType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static StampDutyType1Code[] values() {
+		StampDutyType1Code[] values = new StampDutyType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, StampDutyType1Code> {
+		@Override
+		public StampDutyType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(StampDutyType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

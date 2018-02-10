@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,16 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Account2", propOrder = {"identification", "accountServicer"})
 public class Account2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id")
 	protected AccountIdentification1 identification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +125,7 @@ public class Account2 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> Account2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Account2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,11 +137,11 @@ public class Account2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcr", required = true)
 	protected PartyIdentification2Choice accountServicer;
 	/**
-	 * Institution servicing an account and assigning the account identifier to
-	 * the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -182,7 +184,7 @@ public class Account2 {
 	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Account2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Account2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,9 +200,9 @@ public class Account2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Account2.mmIdentification, Account2.mmAccountServicer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Account2.mmIdentification, com.tools20022.repository.msg.Account2.mmAccountServicer);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Account2";
 				definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
@@ -210,21 +212,21 @@ public class Account2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id")
-	public AccountIdentification1 getIdentification() {
-		return identification;
+	public Optional<AccountIdentification1> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.AccountIdentification1 identification) {
+	public Account2 setIdentification(com.tools20022.repository.msg.AccountIdentification1 identification) {
 		this.identification = identification;
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcr", required = true)
 	public PartyIdentification2Choice getAccountServicer() {
 		return accountServicer;
 	}
 
-	public void setAccountServicer(PartyIdentification2Choice accountServicer) {
-		this.accountServicer = accountServicer;
+	public Account2 setAccountServicer(PartyIdentification2Choice accountServicer) {
+		this.accountServicer = Objects.requireNonNull(accountServicer);
+		return this;
 	}
 }

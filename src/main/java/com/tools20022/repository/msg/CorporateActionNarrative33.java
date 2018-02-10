@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,9 +26,11 @@ import com.tools20022.repository.entity.BiddingConditions;
 import com.tools20022.repository.entity.CorporateActionDistribution;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,18 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides additional information such as the information to comply with."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionNarrative33", propOrder = {"informationToComplyWith", "deliveryDetails", "foreignExchangeInstructionsAdditionalInformation", "instructionAdditionalInformation"})
 public class CorporateActionNarrative33 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InfToCmplyWth")
 	protected List<RestrictedFINXMax350Text> informationToComplyWith;
 	/**
-	 * Provides information conditions to the account owner that are to be
-	 * complied with, for example, not open to US/Canadian residents, Qualified
-	 * Institutional Buyers (QIB) or Sophisticated Investor Letter (SIL) to be
-	 * provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,6 +109,9 @@ public class CorporateActionNarrative33 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InfToCmplyWth"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E::COMP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -123,9 +127,10 @@ public class CorporateActionNarrative33 {
 	public static final MMMessageAttribute mmInformationToComplyWith = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmInformationToComplyWith;
-			componentContext_lazy = () -> CorporateActionNarrative33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative33.mmObject();
 			isDerived = false;
 			xmlTag = "InfToCmplyWth";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E::COMP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationToComplyWith";
 			definition = "Provides information conditions to the account owner that are to be complied with, for example, not open to US/Canadian residents, Qualified Institutional Buyers (QIB) or Sophisticated Investor Letter (SIL) to be provided.";
@@ -133,13 +138,11 @@ public class CorporateActionNarrative33 {
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvryDtls")
 	protected List<RestrictedFINXMax350Text> deliveryDetails;
 	/**
-	 * Provides additional information on the delivery details of the outturned
-	 * (derived) securities. This narrative is only to be used in case the
-	 * securities are not eligible at the agent/custodian, and may not be used
-	 * for settlement instructions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,6 +164,9 @@ public class CorporateActionNarrative33 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DlvryDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E::DLVR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -176,9 +182,10 @@ public class CorporateActionNarrative33 {
 	public static final MMMessageAttribute mmDeliveryDetails = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmCorporateActionProceedsDeliveryInstruction;
-			componentContext_lazy = () -> CorporateActionNarrative33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative33.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E::DLVR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryDetails";
 			definition = "Provides additional information on the delivery details of the outturned (derived) securities. This narrative is only to be used in case the securities are not eligible at the agent/custodian, and may not be used for settlement instructions.";
@@ -186,10 +193,11 @@ public class CorporateActionNarrative33 {
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FXInstrsAddtlInf")
 	protected List<RestrictedFINXMax350Text> foreignExchangeInstructionsAdditionalInformation;
 	/**
-	 * Provides additional details pertaining to foreign exchange instructions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,6 +218,9 @@ public class CorporateActionNarrative33 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FXInstrsAddtlInf"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E::FXIN</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -225,9 +236,10 @@ public class CorporateActionNarrative33 {
 	public static final MMMessageAttribute mmForeignExchangeInstructionsAdditionalInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmExchangeRate;
-			componentContext_lazy = () -> CorporateActionNarrative33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative33.mmObject();
 			isDerived = false;
 			xmlTag = "FXInstrsAddtlInf";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E::FXIN"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeInstructionsAdditionalInformation";
 			definition = "Provides additional details pertaining to foreign exchange instructions.";
@@ -235,11 +247,11 @@ public class CorporateActionNarrative33 {
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrAddtlInf")
 	protected List<RestrictedFINXMax350Text> instructionAdditionalInformation;
 	/**
-	 * Provides additional details pertaining to the corporate action
-	 * instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -269,7 +281,7 @@ public class CorporateActionNarrative33 {
 	 */
 	public static final MMMessageAttribute mmInstructionAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNarrative33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative33.mmObject();
 			isDerived = false;
 			xmlTag = "InstrAddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,10 +295,10 @@ public class CorporateActionNarrative33 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionNarrative33.mmInformationToComplyWith, CorporateActionNarrative33.mmDeliveryDetails, CorporateActionNarrative33.mmForeignExchangeInstructionsAdditionalInformation,
-						CorporateActionNarrative33.mmInstructionAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative33.mmInformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative33.mmDeliveryDetails,
+						com.tools20022.repository.msg.CorporateActionNarrative33.mmForeignExchangeInstructionsAdditionalInformation, com.tools20022.repository.msg.CorporateActionNarrative33.mmInstructionAdditionalInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrative33";
 				definition = "Provides additional information such as the information to comply with.";
@@ -295,39 +307,39 @@ public class CorporateActionNarrative33 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InfToCmplyWth")
 	public List<RestrictedFINXMax350Text> getInformationToComplyWith() {
-		return informationToComplyWith;
+		return informationToComplyWith == null ? informationToComplyWith = new ArrayList<>() : informationToComplyWith;
 	}
 
-	public void setInformationToComplyWith(List<RestrictedFINXMax350Text> informationToComplyWith) {
-		this.informationToComplyWith = informationToComplyWith;
+	public CorporateActionNarrative33 setInformationToComplyWith(List<RestrictedFINXMax350Text> informationToComplyWith) {
+		this.informationToComplyWith = Objects.requireNonNull(informationToComplyWith);
+		return this;
 	}
 
-	@XmlElement(name = "DlvryDtls")
 	public List<RestrictedFINXMax350Text> getDeliveryDetails() {
-		return deliveryDetails;
+		return deliveryDetails == null ? deliveryDetails = new ArrayList<>() : deliveryDetails;
 	}
 
-	public void setDeliveryDetails(List<RestrictedFINXMax350Text> deliveryDetails) {
-		this.deliveryDetails = deliveryDetails;
+	public CorporateActionNarrative33 setDeliveryDetails(List<RestrictedFINXMax350Text> deliveryDetails) {
+		this.deliveryDetails = Objects.requireNonNull(deliveryDetails);
+		return this;
 	}
 
-	@XmlElement(name = "FXInstrsAddtlInf")
 	public List<RestrictedFINXMax350Text> getForeignExchangeInstructionsAdditionalInformation() {
-		return foreignExchangeInstructionsAdditionalInformation;
+		return foreignExchangeInstructionsAdditionalInformation == null ? foreignExchangeInstructionsAdditionalInformation = new ArrayList<>() : foreignExchangeInstructionsAdditionalInformation;
 	}
 
-	public void setForeignExchangeInstructionsAdditionalInformation(List<RestrictedFINXMax350Text> foreignExchangeInstructionsAdditionalInformation) {
-		this.foreignExchangeInstructionsAdditionalInformation = foreignExchangeInstructionsAdditionalInformation;
+	public CorporateActionNarrative33 setForeignExchangeInstructionsAdditionalInformation(List<RestrictedFINXMax350Text> foreignExchangeInstructionsAdditionalInformation) {
+		this.foreignExchangeInstructionsAdditionalInformation = Objects.requireNonNull(foreignExchangeInstructionsAdditionalInformation);
+		return this;
 	}
 
-	@XmlElement(name = "InstrAddtlInf")
 	public List<RestrictedFINXMax350Text> getInstructionAdditionalInformation() {
-		return instructionAdditionalInformation;
+		return instructionAdditionalInformation == null ? instructionAdditionalInformation = new ArrayList<>() : instructionAdditionalInformation;
 	}
 
-	public void setInstructionAdditionalInformation(List<RestrictedFINXMax350Text> instructionAdditionalInformation) {
-		this.instructionAdditionalInformation = instructionAdditionalInformation;
+	public CorporateActionNarrative33 setInstructionAdditionalInformation(List<RestrictedFINXMax350Text> instructionAdditionalInformation) {
+		this.instructionAdditionalInformation = Objects.requireNonNull(instructionAdditionalInformation);
+		return this;
 	}
 }

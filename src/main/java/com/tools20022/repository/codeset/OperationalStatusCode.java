@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.OperationalStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifes the operational status.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OperationalStatusCode#mmEnabled
- * OperationalStatusCode.mmEnabled}</li>
+ * {@linkplain com.tools20022.repository.codeset.OperationalStatusCode#Enabled
+ * OperationalStatusCode.Enabled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OperationalStatusCode#mmSpecialCircumstances
- * OperationalStatusCode.mmSpecialCircumstances}</li>
+ * {@linkplain com.tools20022.repository.codeset.OperationalStatusCode#SpecialCircumstances
+ * OperationalStatusCode.SpecialCircumstances}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifes the operational status."</li>
  * </ul>
  */
-public class OperationalStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OperationalStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,12 +91,12 @@ public class OperationalStatusCode {
 	 * definition} = "Enabled."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEnabled = new MMCode() {
+	public static final OperationalStatusCode Enabled = new OperationalStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabled";
 			definition = "Enabled.";
-			owner_lazy = () -> OperationalStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OperationalStatusCode.mmObject();
 			codeName = "ENAB";
 		}
 	};
@@ -115,27 +121,57 @@ public class OperationalStatusCode {
 	 * definition} = "Special circumstances."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialCircumstances = new MMCode() {
+	public static final OperationalStatusCode SpecialCircumstances = new OperationalStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCircumstances";
 			definition = "Special circumstances.";
-			owner_lazy = () -> OperationalStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OperationalStatusCode.mmObject();
 			codeName = "SPEC";
 		}
 	};
+	final static private LinkedHashMap<String, OperationalStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OperationalStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OperationalStatusCode";
 				definition = "Specifes the operational status.";
-				code_lazy = () -> Arrays.asList(OperationalStatusCode.mmEnabled, OperationalStatusCode.mmSpecialCircumstances);
 				derivation_lazy = () -> Arrays.asList(OperationalStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OperationalStatusCode.Enabled, com.tools20022.repository.codeset.OperationalStatusCode.SpecialCircumstances);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Enabled.getCodeName().get(), Enabled);
+		codesByName.put(SpecialCircumstances.getCodeName().get(), SpecialCircumstances);
+	}
+
+	public static OperationalStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OperationalStatusCode[] values() {
+		OperationalStatusCode[] values = new OperationalStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OperationalStatusCode> {
+		@Override
+		public OperationalStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OperationalStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

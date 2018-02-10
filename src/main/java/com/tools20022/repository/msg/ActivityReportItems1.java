@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,17 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Describes the events that occurred for one transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ActivityReportItems1", propOrder = {"transactionIdentification", "userTransactionReference", "reportedEntity", "reportedItem", "pendingRequestForAction"})
 public class ActivityReportItems1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId")
 	protected Max35Text transactionIdentification;
 	/**
-	 * Unique identification assigned by the TSU to the transaction. This
-	 * identification is to be used in any communication between the parties and
-	 * with the TSU.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +109,7 @@ public class ActivityReportItems1 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ActivityReportItems1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ActivityReportItems1.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,11 +120,11 @@ public class ActivityReportItems1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "UsrTxRef", required = true)
 	protected List<com.tools20022.repository.msg.DocumentIdentification5> userTransactionReference;
 	/**
-	 * Reference to the transaction for each financial institution which is a
-	 * party to the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +153,7 @@ public class ActivityReportItems1 {
 	 */
 	public static final MMMessageAssociationEnd mmUserTransactionReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ActivityReportItems1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ActivityReportItems1.mmObject();
 			isDerived = false;
 			xmlTag = "UsrTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,10 +165,11 @@ public class ActivityReportItems1 {
 			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "RptdNtty", required = true)
 	protected BICIdentification1 reportedEntity;
 	/**
-	 * Entity for which the activity is reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -196,7 +195,7 @@ public class ActivityReportItems1 {
 	 */
 	public static final MMMessageAssociationEnd mmReportedEntity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ActivityReportItems1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ActivityReportItems1.mmObject();
 			isDerived = false;
 			xmlTag = "RptdNtty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,10 +207,11 @@ public class ActivityReportItems1 {
 			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "RptdItm", required = true)
 	protected List<com.tools20022.repository.msg.ActivityDetails1> reportedItem;
 	/**
-	 * Describes an activity that took place during a period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -237,7 +237,7 @@ public class ActivityReportItems1 {
 	 */
 	public static final MMMessageAssociationEnd mmReportedItem = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ActivityReportItems1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ActivityReportItems1.mmObject();
 			isDerived = false;
 			xmlTag = "RptdItm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,10 +248,11 @@ public class ActivityReportItems1 {
 			type_lazy = () -> com.tools20022.repository.msg.ActivityDetails1.mmObject();
 		}
 	};
+	@XmlElement(name = "PdgReqForActn")
 	protected List<com.tools20022.repository.msg.PendingActivity1> pendingRequestForAction;
 	/**
-	 * Next processing step required.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -277,7 +278,7 @@ public class ActivityReportItems1 {
 	 */
 	public static final MMMessageAssociationEnd mmPendingRequestForAction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ActivityReportItems1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ActivityReportItems1.mmObject();
 			isDerived = false;
 			xmlTag = "PdgReqForActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -292,9 +293,9 @@ public class ActivityReportItems1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ActivityReportItems1.mmTransactionIdentification, ActivityReportItems1.mmUserTransactionReference, ActivityReportItems1.mmReportedEntity, ActivityReportItems1.mmReportedItem,
-						ActivityReportItems1.mmPendingRequestForAction);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ActivityReportItems1.mmTransactionIdentification, com.tools20022.repository.msg.ActivityReportItems1.mmUserTransactionReference,
+						com.tools20022.repository.msg.ActivityReportItems1.mmReportedEntity, com.tools20022.repository.msg.ActivityReportItems1.mmReportedItem, com.tools20022.repository.msg.ActivityReportItems1.mmPendingRequestForAction);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ActivityReportItems1";
 				definition = "Describes the events that occurred for one transaction.";
@@ -303,48 +304,48 @@ public class ActivityReportItems1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId")
-	public Max35Text getTransactionIdentification() {
-		return transactionIdentification;
+	public Optional<Max35Text> getTransactionIdentification() {
+		return transactionIdentification == null ? Optional.empty() : Optional.of(transactionIdentification);
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
+	public ActivityReportItems1 setTransactionIdentification(Max35Text transactionIdentification) {
 		this.transactionIdentification = transactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "UsrTxRef", required = true)
 	public List<DocumentIdentification5> getUserTransactionReference() {
-		return userTransactionReference;
+		return userTransactionReference == null ? userTransactionReference = new ArrayList<>() : userTransactionReference;
 	}
 
-	public void setUserTransactionReference(List<com.tools20022.repository.msg.DocumentIdentification5> userTransactionReference) {
-		this.userTransactionReference = userTransactionReference;
+	public ActivityReportItems1 setUserTransactionReference(List<com.tools20022.repository.msg.DocumentIdentification5> userTransactionReference) {
+		this.userTransactionReference = Objects.requireNonNull(userTransactionReference);
+		return this;
 	}
 
-	@XmlElement(name = "RptdNtty", required = true)
 	public BICIdentification1 getReportedEntity() {
 		return reportedEntity;
 	}
 
-	public void setReportedEntity(com.tools20022.repository.msg.BICIdentification1 reportedEntity) {
-		this.reportedEntity = reportedEntity;
+	public ActivityReportItems1 setReportedEntity(com.tools20022.repository.msg.BICIdentification1 reportedEntity) {
+		this.reportedEntity = Objects.requireNonNull(reportedEntity);
+		return this;
 	}
 
-	@XmlElement(name = "RptdItm", required = true)
 	public List<ActivityDetails1> getReportedItem() {
-		return reportedItem;
+		return reportedItem == null ? reportedItem = new ArrayList<>() : reportedItem;
 	}
 
-	public void setReportedItem(List<com.tools20022.repository.msg.ActivityDetails1> reportedItem) {
-		this.reportedItem = reportedItem;
+	public ActivityReportItems1 setReportedItem(List<com.tools20022.repository.msg.ActivityDetails1> reportedItem) {
+		this.reportedItem = Objects.requireNonNull(reportedItem);
+		return this;
 	}
 
-	@XmlElement(name = "PdgReqForActn")
 	public List<PendingActivity1> getPendingRequestForAction() {
-		return pendingRequestForAction;
+		return pendingRequestForAction == null ? pendingRequestForAction = new ArrayList<>() : pendingRequestForAction;
 	}
 
-	public void setPendingRequestForAction(List<com.tools20022.repository.msg.PendingActivity1> pendingRequestForAction) {
-		this.pendingRequestForAction = pendingRequestForAction;
+	public ActivityReportItems1 setPendingRequestForAction(List<com.tools20022.repository.msg.PendingActivity1> pendingRequestForAction) {
+		this.pendingRequestForAction = Objects.requireNonNull(pendingRequestForAction);
+		return this;
 	}
 }

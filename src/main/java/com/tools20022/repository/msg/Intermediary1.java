@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,16 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Intermediary1", propOrder = {"identification", "account", "role"})
 public class Intermediary1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected PartyIdentification1Choice identification;
 	/**
-	 * Unique and unambiguous identifier for an organisation that is allocated
-	 * by an institution, eg, Dun &amp; Bradstreet Identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +117,7 @@ public class Intermediary1 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Intermediary1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,11 +128,11 @@ public class Intermediary1 {
 			complexType_lazy = () -> PartyIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Acct")
 	protected Account1 account;
 	/**
-	 * Business relationship between two entities; one entity is the account
-	 * owner, the other entity is the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +166,7 @@ public class Intermediary1 {
 	public static final MMMessageAttribute mmAccount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountPartyRole.mmAccount;
-			componentContext_lazy = () -> Intermediary1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary1.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,10 +177,11 @@ public class Intermediary1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Account1.mmObject();
 		}
 	};
+	@XmlElement(name = "Role")
 	protected Max35Text role;
 	/**
-	 * Set of functions performed by an intermediary in a given situation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,7 +214,7 @@ public class Intermediary1 {
 	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> IntermediaryRole.mmObject();
-			componentContext_lazy = () -> Intermediary1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary1.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,9 +229,9 @@ public class Intermediary1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Intermediary1.mmIdentification, Intermediary1.mmAccount, Intermediary1.mmRole);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Intermediary1.mmIdentification, com.tools20022.repository.msg.Intermediary1.mmAccount, com.tools20022.repository.msg.Intermediary1.mmRole);
 				trace_lazy = () -> IntermediaryRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Intermediary1";
 				definition = "Organised structure that is set up for a particular purpose, eg, a business, government body, department, charity, or financial institution.";
@@ -237,30 +240,30 @@ public class Intermediary1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public PartyIdentification1Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(PartyIdentification1Choice identification) {
-		this.identification = identification;
+	public Intermediary1 setIdentification(PartyIdentification1Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Acct")
-	public Account1 getAccount() {
-		return account;
+	public Optional<Account1> getAccount() {
+		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public void setAccount(com.tools20022.repository.msg.Account1 account) {
+	public Intermediary1 setAccount(com.tools20022.repository.msg.Account1 account) {
 		this.account = account;
+		return this;
 	}
 
-	@XmlElement(name = "Role")
-	public Max35Text getRole() {
-		return role;
+	public Optional<Max35Text> getRole() {
+		return role == null ? Optional.empty() : Optional.of(role);
 	}
 
-	public void setRole(Max35Text role) {
+	public Intermediary1 setRole(Max35Text role) {
 		this.role = role;
+		return this;
 	}
 }

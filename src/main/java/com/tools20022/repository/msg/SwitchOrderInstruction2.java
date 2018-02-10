@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03;
 import com.tools20022.repository.entity.SwitchOrder;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility4Rule#forSwitchOrderInstruction2
+ * ConstraintOrderOriginatorEligibility4Rule.forSwitchOrderInstruction2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleSwitchOrderRule#forSwitchOrderInstruction2
+ * ConstraintMultipleSwitchOrderRule.forSwitchOrderInstruction2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about a switch order."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SwitchOrderInstruction2", propOrder = {"switchOrderDetails", "extension"})
 public class SwitchOrderInstruction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SwtchOrdrDtls", required = true)
 	protected List<com.tools20022.repository.msg.SwitchOrder3> switchOrderDetails;
 	/**
-	 * Information related to the switch order
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -114,7 +128,7 @@ public class SwitchOrderInstruction2 {
 	public static final MMMessageAssociationEnd mmSwitchOrderDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SwitchOrder.mmObject();
-			componentContext_lazy = () -> SwitchOrderInstruction2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "SwtchOrdrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,11 +139,11 @@ public class SwitchOrderInstruction2 {
 			type_lazy = () -> com.tools20022.repository.msg.SwitchOrder3.mmObject();
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -156,7 +170,7 @@ public class SwitchOrderInstruction2 {
 	 */
 	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SwitchOrderInstruction2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +185,12 @@ public class SwitchOrderInstruction2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SwitchOrderInstruction2.mmSwitchOrderDetails, SwitchOrderInstruction2.mmExtension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderInstruction2.mmSwitchOrderDetails, com.tools20022.repository.msg.SwitchOrderInstruction2.mmExtension);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SwitchOrderCancellationRequestV03.mmCancellationByOrderDetails);
 				trace_lazy = () -> SwitchOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility4Rule.forSwitchOrderInstruction2,
+						com.tools20022.repository.constraints.ConstraintMultipleSwitchOrderRule.forSwitchOrderInstruction2);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrderInstruction2";
 				definition = "Information about a switch order.";
@@ -183,21 +199,21 @@ public class SwitchOrderInstruction2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SwtchOrdrDtls", required = true)
 	public List<SwitchOrder3> getSwitchOrderDetails() {
-		return switchOrderDetails;
+		return switchOrderDetails == null ? switchOrderDetails = new ArrayList<>() : switchOrderDetails;
 	}
 
-	public void setSwitchOrderDetails(List<com.tools20022.repository.msg.SwitchOrder3> switchOrderDetails) {
-		this.switchOrderDetails = switchOrderDetails;
+	public SwitchOrderInstruction2 setSwitchOrderDetails(List<com.tools20022.repository.msg.SwitchOrder3> switchOrderDetails) {
+		this.switchOrderDetails = Objects.requireNonNull(switchOrderDetails);
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
-		this.extension = extension;
+	public SwitchOrderInstruction2 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 }

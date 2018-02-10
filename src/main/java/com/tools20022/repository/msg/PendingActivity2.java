@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -146,8 +148,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -160,16 +162,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PendingActivity2", propOrder = {"type", "description"})
 public class PendingActivity2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected Action2Code type;
 	/**
-	 * Code which specifies the next course of action that the receiver of the
-	 * message must take.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,7 +200,7 @@ public class PendingActivity2 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PendingActivity2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PendingActivity2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,11 +211,11 @@ public class PendingActivity2 {
 			simpleType_lazy = () -> Action2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Desc")
 	protected Max140Text description;
 	/**
-	 * Further information on the course of action that the receiver of the
-	 * message must take.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -242,7 +244,7 @@ public class PendingActivity2 {
 	 */
 	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PendingActivity2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PendingActivity2.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,7 +259,7 @@ public class PendingActivity2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PendingActivity2.mmType, PendingActivity2.mmDescription);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingActivity2.mmType, com.tools20022.repository.msg.PendingActivity2.mmDescription);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcknowledgementV03.mmRequestForAction, AmendmentAcceptanceNotificationV03.mmRequestForAction, AmendmentRejectionNotificationV03.mmRequestForAction,
 						BaselineMatchReportV03.mmRequestForAction, BaselineReportV03.mmRequestForAction, DataSetMatchReportV03.mmRequestForAction, DeltaReportV03.mmRequestForAction, ErrorReportV03.mmRequestForAction,
 						ForwardDataSetSubmissionReportV03.mmRequestForAction, FullPushThroughReportV03.mmRequestForAction, MisMatchAcceptanceNotificationV03.mmRequestForAction, MisMatchRejectionNotificationV03.mmRequestForAction,
@@ -266,7 +268,7 @@ public class PendingActivity2 {
 						ForwardIntentToPayNotificationV01.mmRequestForAction, SpecialNotificationV01.mmRequestForAction, RoleAndBaselineAcceptanceNotificationV01.mmRequestForAction,
 						RoleAndBaselineRejectionNotificationV01.mmRequestForAction, FullPushThroughReportV04.mmRequestForAction, ForwardDataSetSubmissionReportV04.mmRequestForAction, ForwardIntentToPayNotificationV02.mmRequestForAction,
 						BaselineReportV04.mmRequestForAction, FullPushThroughReportV05.mmRequestForAction, ForwardDataSetSubmissionReportV05.mmRequestForAction);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingActivity2";
 				definition = "Specifies the event that require an action from one of the parties to the trade transaction.";
@@ -275,21 +277,21 @@ public class PendingActivity2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public Action2Code getType() {
 		return type;
 	}
 
-	public void setType(Action2Code type) {
-		this.type = type;
+	public PendingActivity2 setType(Action2Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Desc")
-	public Max140Text getDescription() {
-		return description;
+	public Optional<Max140Text> getDescription() {
+		return description == null ? Optional.empty() : Optional.of(description);
 	}
 
-	public void setDescription(Max140Text description) {
+	public PendingActivity2 setDescription(Max140Text description) {
 		this.description = description;
+		return this;
 	}
 }

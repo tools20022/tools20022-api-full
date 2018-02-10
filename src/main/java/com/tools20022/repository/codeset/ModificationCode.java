@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ModificationCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies if an item is added, modified, deleted or unchanged.
@@ -31,18 +36,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ModificationCode#Addition
+ * ModificationCode.Addition}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ModificationCode#Deletion
+ * ModificationCode.Deletion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ModificationCode#mmAddition
- * ModificationCode.mmAddition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ModificationCode#mmDeletion
- * ModificationCode.mmDeletion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ModificationCode#mmModification
- * ModificationCode.mmModification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ModificationCode#mmNoChange
- * ModificationCode.mmNoChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.ModificationCode#Modification
+ * ModificationCode.Modification}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ModificationCode#NoChange
+ * ModificationCode.NoChange}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -55,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies if an item is added, modified, deleted or unchanged."</li>
  * </ul>
  */
-public class ModificationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ModificationCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,12 +101,12 @@ public class ModificationCode {
 	 * definition} = "Specifies that the item is added."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAddition = new MMCode() {
+	public static final ModificationCode Addition = new ModificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Addition";
 			definition = "Specifies that the item is added.";
-			owner_lazy = () -> ModificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ModificationCode.mmObject();
 			codeName = "ADDD";
 		}
 	};
@@ -128,12 +131,12 @@ public class ModificationCode {
 	 * definition} = "Specifies that the item is deleted."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeletion = new MMCode() {
+	public static final ModificationCode Deletion = new ModificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deletion";
 			definition = "Specifies that the item is deleted.";
-			owner_lazy = () -> ModificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ModificationCode.mmObject();
 			codeName = "DELE";
 		}
 	};
@@ -158,12 +161,12 @@ public class ModificationCode {
 	 * definition} = "Specifies that the item is modified."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmModification = new MMCode() {
+	public static final ModificationCode Modification = new ModificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
 			definition = "Specifies that the item is modified.";
-			owner_lazy = () -> ModificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ModificationCode.mmObject();
 			codeName = "MODI";
 		}
 	};
@@ -188,28 +191,61 @@ public class ModificationCode {
 	 * definition} = "Specifies that the item is not changed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoChange = new MMCode() {
+	public static final ModificationCode NoChange = new ModificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoChange";
 			definition = "Specifies that the item is not changed.";
-			owner_lazy = () -> ModificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ModificationCode.mmObject();
 			codeName = "NOCH";
 		}
 	};
+	final static private LinkedHashMap<String, ModificationCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ModificationCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ADDD");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ModificationCode";
 				definition = "Specifies if an item is added, modified, deleted or unchanged.";
-				code_lazy = () -> Arrays.asList(ModificationCode.mmAddition, ModificationCode.mmDeletion, ModificationCode.mmModification, ModificationCode.mmNoChange);
 				derivation_lazy = () -> Arrays.asList(Modification1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ModificationCode.Addition, com.tools20022.repository.codeset.ModificationCode.Deletion, com.tools20022.repository.codeset.ModificationCode.Modification,
+						com.tools20022.repository.codeset.ModificationCode.NoChange);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Addition.getCodeName().get(), Addition);
+		codesByName.put(Deletion.getCodeName().get(), Deletion);
+		codesByName.put(Modification.getCodeName().get(), Modification);
+		codesByName.put(NoChange.getCodeName().get(), NoChange);
+	}
+
+	public static ModificationCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ModificationCode[] values() {
+		ModificationCode[] values = new ModificationCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ModificationCode> {
+		@Override
+		public ModificationCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ModificationCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

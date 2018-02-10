@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.QuoteStatus2;
 import com.tools20022.repository.msg.SingleQuote1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between a single or a mass quote."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SingleOrMassQuote2Choice", propOrder = {"singleQuoteDetails", "massQuoteDetails"})
 public class SingleOrMassQuote2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SnglQtDtls", required = true)
 	protected SingleQuote1 singleQuoteDetails;
 	/**
-	 * Details related to a single quote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -103,7 +105,7 @@ public class SingleOrMassQuote2Choice {
 	public static final MMMessageAssociationEnd mmSingleQuoteDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesQuoteVariable.mmObject();
-			componentContext_lazy = () -> SingleOrMassQuote2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SingleOrMassQuote2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SnglQtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +117,11 @@ public class SingleOrMassQuote2Choice {
 			type_lazy = () -> SingleQuote1.mmObject();
 		}
 	};
+	@XmlElement(name = "MassQtDtls", required = true)
 	protected QuoteStatus2 massQuoteDetails;
 	/**
-	 * Details related to a mass quote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -144,7 +147,7 @@ public class SingleOrMassQuote2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmMassQuoteDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SingleOrMassQuote2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SingleOrMassQuote2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MassQtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,8 +163,8 @@ public class SingleOrMassQuote2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SingleOrMassQuote2Choice.mmSingleQuoteDetails, SingleOrMassQuote2Choice.mmMassQuoteDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SingleOrMassQuote2Choice.mmSingleQuoteDetails, com.tools20022.repository.choice.SingleOrMassQuote2Choice.mmMassQuoteDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SingleOrMassQuote2Choice";
 				definition = "Choice between a single or a mass quote.";
@@ -170,21 +173,21 @@ public class SingleOrMassQuote2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SnglQtDtls", required = true)
 	public SingleQuote1 getSingleQuoteDetails() {
 		return singleQuoteDetails;
 	}
 
-	public void setSingleQuoteDetails(SingleQuote1 singleQuoteDetails) {
-		this.singleQuoteDetails = singleQuoteDetails;
+	public SingleOrMassQuote2Choice setSingleQuoteDetails(SingleQuote1 singleQuoteDetails) {
+		this.singleQuoteDetails = Objects.requireNonNull(singleQuoteDetails);
+		return this;
 	}
 
-	@XmlElement(name = "MassQtDtls", required = true)
 	public QuoteStatus2 getMassQuoteDetails() {
 		return massQuoteDetails;
 	}
 
-	public void setMassQuoteDetails(QuoteStatus2 massQuoteDetails) {
-		this.massQuoteDetails = massQuoteDetails;
+	public SingleOrMassQuote2Choice setMassQuoteDetails(QuoteStatus2 massQuoteDetails) {
+		this.massQuoteDetails = Objects.requireNonNull(massQuoteDetails);
+		return this;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.TransferOut10;
 import com.tools20022.repository.msg.TransferReference2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Reversal1Choice", propOrder = {"reference", "transferOutConfirmationDetails"})
 public class Reversal1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ref", required = true)
 	protected TransferReference2 reference;
 	/**
-	 * Reference of the transfer confirmation to be reversed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +130,7 @@ public class Reversal1Choice {
 	 */
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reversal1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Reversal1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,10 +142,11 @@ public class Reversal1Choice {
 			complexType_lazy = () -> TransferReference2.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfOutConfDtls", required = true)
 	protected TransferOut10 transferOutConfirmationDetails;
 	/**
-	 * Details of the transfer out confirmation to be reversed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -184,7 +187,7 @@ public class Reversal1Choice {
 	public static final MMMessageAttribute mmTransferOutConfirmationDetails = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmRelatedSettlement;
-			componentContext_lazy = () -> Reversal1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Reversal1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TrfOutConfDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,10 +203,10 @@ public class Reversal1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Reversal1Choice.mmReference, Reversal1Choice.mmTransferOutConfirmationDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reversal1Choice.mmReference, com.tools20022.repository.choice.Reversal1Choice.mmTransferOutConfirmationDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ReversalOfTransferOutConfirmationV04.mmReversal);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reversal1Choice";
 				definition = "Choice between reversal by reference or by reversal details.";
@@ -213,21 +216,21 @@ public class Reversal1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ref", required = true)
 	public TransferReference2 getReference() {
 		return reference;
 	}
 
-	public void setReference(TransferReference2 reference) {
-		this.reference = reference;
+	public Reversal1Choice setReference(TransferReference2 reference) {
+		this.reference = Objects.requireNonNull(reference);
+		return this;
 	}
 
-	@XmlElement(name = "TrfOutConfDtls", required = true)
 	public TransferOut10 getTransferOutConfirmationDetails() {
 		return transferOutConfirmationDetails;
 	}
 
-	public void setTransferOutConfirmationDetails(TransferOut10 transferOutConfirmationDetails) {
-		this.transferOutConfirmationDetails = transferOutConfirmationDetails;
+	public Reversal1Choice setTransferOutConfirmationDetails(TransferOut10 transferOutConfirmationDetails) {
+		this.transferOutConfirmationDetails = Objects.requireNonNull(transferOutConfirmationDetails);
+		return this;
 	}
 }

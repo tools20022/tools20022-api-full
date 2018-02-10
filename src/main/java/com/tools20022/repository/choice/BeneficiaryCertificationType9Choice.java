@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * BeneficiaryCertificationType7Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BeneficiaryCertificationType9Choice", propOrder = {"code", "proprietary"})
 public class BeneficiaryCertificationType9Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected BeneficiaryCertificationType4Code code;
 	/**
-	 * Beneficial owner certification type expressed in a coded form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +124,7 @@ public class BeneficiaryCertificationType9Choice {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationType;
-			componentContext_lazy = () -> BeneficiaryCertificationType9Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.BeneficiaryCertificationType9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +136,11 @@ public class BeneficiaryCertificationType9Choice {
 			simpleType_lazy = () -> BeneficiaryCertificationType4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification30 proprietary;
 	/**
-	 * Beneficial owner certification type expressed in a proprietary form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -176,7 +179,7 @@ public class BeneficiaryCertificationType9Choice {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationType;
-			componentContext_lazy = () -> BeneficiaryCertificationType9Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.BeneficiaryCertificationType9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -193,9 +196,9 @@ public class BeneficiaryCertificationType9Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BeneficiaryCertificationType9Choice.mmCode, BeneficiaryCertificationType9Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BeneficiaryCertificationType9Choice.mmCode, com.tools20022.repository.choice.BeneficiaryCertificationType9Choice.mmProprietary);
 				trace_lazy = () -> BeneficialOwner.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BeneficiaryCertificationType9Choice";
 				definition = "Choice between a standard code or proprietary code to specify the type of beneficiary certification required.";
@@ -205,21 +208,21 @@ public class BeneficiaryCertificationType9Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public BeneficiaryCertificationType4Code getCode() {
 		return code;
 	}
 
-	public void setCode(BeneficiaryCertificationType4Code code) {
-		this.code = code;
+	public BeneficiaryCertificationType9Choice setCode(BeneficiaryCertificationType4Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification30 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification30 proprietary) {
-		this.proprietary = proprietary;
+	public BeneficiaryCertificationType9Choice setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

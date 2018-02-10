@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Lottery;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information about the corporate action event."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateAction28", propOrder = {"dateDetails", "eventStage", "lotteryType"})
 public class CorporateAction28 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DtDtls")
 	protected CorporateActionDate43 dateDetails;
 	/**
-	 * Provides information about the dates related to a corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,7 +113,7 @@ public class CorporateAction28 {
 	public static final MMMessageAssociationEnd mmDateDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionEvent.mmObject();
-			componentContext_lazy = () -> CorporateAction28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction28.mmObject();
 			isDerived = false;
 			xmlTag = "DtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +125,11 @@ public class CorporateAction28 {
 			type_lazy = () -> com.tools20022.repository.msg.CorporateActionDate43.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtStag")
 	protected CorporateActionEventStageFormat10Choice eventStage;
 	/**
-	 * Stage in the corporate action event life cycle.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -159,7 +162,7 @@ public class CorporateAction28 {
 	public static final MMMessageAssociationEnd mmEventStage = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventStage;
-			componentContext_lazy = () -> CorporateAction28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction28.mmObject();
 			isDerived = false;
 			xmlTag = "EvtStag";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +174,11 @@ public class CorporateAction28 {
 			type_lazy = () -> CorporateActionEventStageFormat10Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LtryTp")
 	protected LotteryTypeFormat3Choice lotteryType;
 	/**
-	 * Specifies the type of lottery announced.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -207,7 +211,7 @@ public class CorporateAction28 {
 	public static final MMMessageAssociationEnd mmLotteryType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmLotteryType;
-			componentContext_lazy = () -> CorporateAction28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction28.mmObject();
 			isDerived = false;
 			xmlTag = "LtryTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,9 +227,10 @@ public class CorporateAction28 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateAction28.mmDateDetails, CorporateAction28.mmEventStage, CorporateAction28.mmLotteryType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction28.mmDateDetails, com.tools20022.repository.msg.CorporateAction28.mmEventStage,
+						com.tools20022.repository.msg.CorporateAction28.mmLotteryType);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateAction28";
 				definition = "Provides information about the corporate action event.";
@@ -234,30 +239,30 @@ public class CorporateAction28 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DtDtls")
-	public CorporateActionDate43 getDateDetails() {
-		return dateDetails;
+	public Optional<CorporateActionDate43> getDateDetails() {
+		return dateDetails == null ? Optional.empty() : Optional.of(dateDetails);
 	}
 
-	public void setDateDetails(com.tools20022.repository.msg.CorporateActionDate43 dateDetails) {
+	public CorporateAction28 setDateDetails(com.tools20022.repository.msg.CorporateActionDate43 dateDetails) {
 		this.dateDetails = dateDetails;
+		return this;
 	}
 
-	@XmlElement(name = "EvtStag")
-	public CorporateActionEventStageFormat10Choice getEventStage() {
-		return eventStage;
+	public Optional<CorporateActionEventStageFormat10Choice> getEventStage() {
+		return eventStage == null ? Optional.empty() : Optional.of(eventStage);
 	}
 
-	public void setEventStage(CorporateActionEventStageFormat10Choice eventStage) {
+	public CorporateAction28 setEventStage(CorporateActionEventStageFormat10Choice eventStage) {
 		this.eventStage = eventStage;
+		return this;
 	}
 
-	@XmlElement(name = "LtryTp")
-	public LotteryTypeFormat3Choice getLotteryType() {
-		return lotteryType;
+	public Optional<LotteryTypeFormat3Choice> getLotteryType() {
+		return lotteryType == null ? Optional.empty() : Optional.of(lotteryType);
 	}
 
-	public void setLotteryType(LotteryTypeFormat3Choice lotteryType) {
+	public CorporateAction28 setLotteryType(LotteryTypeFormat3Choice lotteryType) {
 		this.lotteryType = lotteryType;
+		return this;
 	}
 }

@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.StatusCode;
+import com.tools20022.repository.codeset.Status2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of an instruction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.StatusCode StatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Status2Code#mmCompleted
- * Status2Code.mmCompleted}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status2Code#mmPending
- * Status2Code.mmPending}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status2Code#Completed
+ * Status2Code.Completed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status2Code#Pending
+ * Status2Code.Pending}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.StatusCode StatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of an instruction."</li>
  * </ul>
  */
-public class Status2Code extends StatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Status2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -79,11 +84,12 @@ public class Status2Code extends StatusCode {
 	 * name} = "Completed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompleted = new MMCode() {
+	public static final Status2Code Completed = new Status2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
-			owner_lazy = () -> Status2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status2Code.mmObject();
+			codeName = StatusCode.Completed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -101,26 +107,57 @@ public class Status2Code extends StatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPending = new MMCode() {
+	public static final Status2Code Pending = new Status2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
-			owner_lazy = () -> Status2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status2Code.mmObject();
+			codeName = StatusCode.Pending.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Status2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Status2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status2Code";
 				definition = "Specifies the status of an instruction.";
-				code_lazy = () -> Arrays.asList(Status2Code.mmCompleted, Status2Code.mmPending);
 				trace_lazy = () -> StatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Status2Code.Completed, com.tools20022.repository.codeset.Status2Code.Pending);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Completed.getCodeName().get(), Completed);
+		codesByName.put(Pending.getCodeName().get(), Pending);
+	}
+
+	public static Status2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Status2Code[] values() {
+		Status2Code[] values = new Status2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Status2Code> {
+		@Override
+		public Status2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Status2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

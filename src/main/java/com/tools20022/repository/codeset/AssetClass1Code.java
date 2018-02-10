@@ -20,36 +20,40 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AssetClassCode;
+import com.tools20022.repository.codeset.AssetClass1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies DTC (The Depository Trust Company) defined asset class.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AssetClassCode AssetClassCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClass1Code#mmCorporateDebt
- * AssetClass1Code.mmCorporateDebt}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClass1Code#CorporateDebt
+ * AssetClass1Code.CorporateDebt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClass1Code#mmCorporateEquity
- * AssetClass1Code.mmCorporateEquity}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClass1Code#CorporateEquity
+ * AssetClass1Code.CorporateEquity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClass1Code#mmMunicipalDebt
- * AssetClass1Code.mmMunicipalDebt}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClass1Code#MunicipalDebt
+ * AssetClass1Code.MunicipalDebt}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AssetClassCode AssetClassCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies DTC (The Depository Trust Company) defined asset class."</li>
  * </ul>
  */
-public class AssetClass1Code extends AssetClassCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AssetClass1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class AssetClass1Code extends AssetClassCode {
 	 * name} = "CorporateDebt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateDebt = new MMCode() {
+	public static final AssetClass1Code CorporateDebt = new AssetClass1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateDebt";
-			owner_lazy = () -> AssetClass1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClass1Code.mmObject();
+			codeName = AssetClassCode.CorporateDebt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class AssetClass1Code extends AssetClassCode {
 	 * name} = "CorporateEquity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateEquity = new MMCode() {
+	public static final AssetClass1Code CorporateEquity = new AssetClass1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateEquity";
-			owner_lazy = () -> AssetClass1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClass1Code.mmObject();
+			codeName = AssetClassCode.CorporateEquity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class AssetClass1Code extends AssetClassCode {
 	 * name} = "MunicipalDebt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMunicipalDebt = new MMCode() {
+	public static final AssetClass1Code MunicipalDebt = new AssetClass1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalDebt";
-			owner_lazy = () -> AssetClass1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClass1Code.mmObject();
+			codeName = AssetClassCode.MunicipalDebt.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AssetClass1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AssetClass1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CRPB");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClass1Code";
 				definition = "Specifies DTC (The Depository Trust Company) defined asset class.";
-				code_lazy = () -> Arrays.asList(AssetClass1Code.mmCorporateDebt, AssetClass1Code.mmCorporateEquity, AssetClass1Code.mmMunicipalDebt);
 				trace_lazy = () -> AssetClassCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClass1Code.CorporateDebt, com.tools20022.repository.codeset.AssetClass1Code.CorporateEquity,
+						com.tools20022.repository.codeset.AssetClass1Code.MunicipalDebt);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CorporateDebt.getCodeName().get(), CorporateDebt);
+		codesByName.put(CorporateEquity.getCodeName().get(), CorporateEquity);
+		codesByName.put(MunicipalDebt.getCodeName().get(), MunicipalDebt);
+	}
+
+	public static AssetClass1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AssetClass1Code[] values() {
+		AssetClass1Code[] values = new AssetClass1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AssetClass1Code> {
+		@Override
+		public AssetClass1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AssetClass1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

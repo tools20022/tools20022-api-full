@@ -25,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between formats for the update type."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatementUpdateTypeCodeAndDSSCodeChoice", propOrder = {"statementUpdateTypeAsCode", "statementUpdateTypeAsDSS"})
 public class StatementUpdateTypeCodeAndDSSCodeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StmtUpdTpAsCd", required = true)
 	protected StatementUpdateTypeCode statementUpdateTypeAsCode;
 	/**
-	 * Update type expressed as a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +100,7 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 	 */
 	public static final MMMessageAttribute mmStatementUpdateTypeAsCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatementUpdateTypeCodeAndDSSCodeChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.StatementUpdateTypeCodeAndDSSCodeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "StmtUpdTpAsCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,11 +111,11 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 			simpleType_lazy = () -> StatementUpdateTypeCode.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtUpdTpAsDSS", required = true)
 	protected GenericIdentification7 statementUpdateTypeAsDSS;
 	/**
-	 * Update type expressed as a data source scheme and a code used within the
-	 * data source scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +145,7 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 	 */
 	public static final MMMessageAttribute mmStatementUpdateTypeAsDSS = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatementUpdateTypeCodeAndDSSCodeChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.StatementUpdateTypeCodeAndDSSCodeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "StmtUpdTpAsDSS";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,8 +160,9 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatementUpdateTypeCodeAndDSSCodeChoice.mmStatementUpdateTypeAsCode, StatementUpdateTypeCodeAndDSSCodeChoice.mmStatementUpdateTypeAsDSS);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementUpdateTypeCodeAndDSSCodeChoice.mmStatementUpdateTypeAsCode,
+						com.tools20022.repository.choice.StatementUpdateTypeCodeAndDSSCodeChoice.mmStatementUpdateTypeAsDSS);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementUpdateTypeCodeAndDSSCodeChoice";
 				definition = "Choice between formats for the update type.";
@@ -168,21 +171,21 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StmtUpdTpAsCd", required = true)
 	public StatementUpdateTypeCode getStatementUpdateTypeAsCode() {
 		return statementUpdateTypeAsCode;
 	}
 
-	public void setStatementUpdateTypeAsCode(StatementUpdateTypeCode statementUpdateTypeAsCode) {
-		this.statementUpdateTypeAsCode = statementUpdateTypeAsCode;
+	public StatementUpdateTypeCodeAndDSSCodeChoice setStatementUpdateTypeAsCode(StatementUpdateTypeCode statementUpdateTypeAsCode) {
+		this.statementUpdateTypeAsCode = Objects.requireNonNull(statementUpdateTypeAsCode);
+		return this;
 	}
 
-	@XmlElement(name = "StmtUpdTpAsDSS", required = true)
 	public GenericIdentification7 getStatementUpdateTypeAsDSS() {
 		return statementUpdateTypeAsDSS;
 	}
 
-	public void setStatementUpdateTypeAsDSS(GenericIdentification7 statementUpdateTypeAsDSS) {
-		this.statementUpdateTypeAsDSS = statementUpdateTypeAsDSS;
+	public StatementUpdateTypeCodeAndDSSCodeChoice setStatementUpdateTypeAsDSS(GenericIdentification7 statementUpdateTypeAsDSS) {
+		this.statementUpdateTypeAsDSS = Objects.requireNonNull(statementUpdateTypeAsDSS);
+		return this;
 	}
 }

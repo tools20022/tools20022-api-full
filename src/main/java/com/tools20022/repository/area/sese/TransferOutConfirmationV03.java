@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -53,20 +52,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
- * SecuritiesSettlementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "TrfOutConf"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -103,6 +88,20 @@ import javax.xml.bind.annotation.*;
  * TransferOutConfirmationV03.mmExtension}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "TrfOutConf"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
+ * SecuritiesSettlementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.003.001.03}</li>
@@ -130,17 +129,17 @@ import javax.xml.bind.annotation.*;
  * TransferOutConfirmationV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransferOutConfirmationV03", propOrder = {"messageIdentification", "poolReference", "previousReference", "relatedReference", "masterReference", "transferDetails", "accountDetails", "settlementDetails", "copyDetails",
 		"extension"})
 public class TransferOutConfirmationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Reference that uniquely identifies a message from a business application
-	 * standpoint.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -182,10 +181,11 @@ public class TransferOutConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PoolRef")
 	protected AdditionalReference2 poolReference;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,10 +225,11 @@ public class TransferOutConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsRef")
 	protected AdditionalReference2 previousReference;
 	/**
-	 * Reference of the linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -269,10 +270,11 @@ public class TransferOutConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdRef")
 	protected AdditionalReference2 relatedReference;
 	/**
-	 * Reference to a linked message that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -313,12 +315,11 @@ public class TransferOutConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "MstrRef")
 	protected Max35Text masterReference;
 	/**
-	 * Unique and unambiguous identifier for a group of individual transfers as
-	 * assigned by the instructing party. This identifier links the individual
-	 * transfers together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -359,10 +360,11 @@ public class TransferOutConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "TrfDtls", required = true)
 	protected List<Transfer13> transferDetails;
 	/**
-	 * General information related to the transfer of a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -402,11 +404,11 @@ public class TransferOutConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctDtls", required = true)
 	protected InvestmentAccount22 accountDetails;
 	/**
-	 * Information related to the account from which the financial instrument
-	 * was withdrawn.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -448,10 +450,11 @@ public class TransferOutConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SttlmDtls", required = true)
 	protected ReceiveInformation6 settlementDetails;
 	/**
-	 * Information related to the receiving side of the transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -492,10 +495,11 @@ public class TransferOutConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "CpyDtls")
 	protected CopyInformation2 copyDetails;
 	/**
-	 * Information provided when the message is a copy of a previous message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -536,11 +540,11 @@ public class TransferOutConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -616,97 +620,97 @@ public class TransferOutConfirmationV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public TransferOutConfirmationV03 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PoolRef")
-	public AdditionalReference2 getPoolReference() {
-		return poolReference;
+	public Optional<AdditionalReference2> getPoolReference() {
+		return poolReference == null ? Optional.empty() : Optional.of(poolReference);
 	}
 
-	public void setPoolReference(AdditionalReference2 poolReference) {
+	public TransferOutConfirmationV03 setPoolReference(AdditionalReference2 poolReference) {
 		this.poolReference = poolReference;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef")
-	public AdditionalReference2 getPreviousReference() {
-		return previousReference;
+	public Optional<AdditionalReference2> getPreviousReference() {
+		return previousReference == null ? Optional.empty() : Optional.of(previousReference);
 	}
 
-	public void setPreviousReference(AdditionalReference2 previousReference) {
+	public TransferOutConfirmationV03 setPreviousReference(AdditionalReference2 previousReference) {
 		this.previousReference = previousReference;
+		return this;
 	}
 
-	@XmlElement(name = "RltdRef")
-	public AdditionalReference2 getRelatedReference() {
-		return relatedReference;
+	public Optional<AdditionalReference2> getRelatedReference() {
+		return relatedReference == null ? Optional.empty() : Optional.of(relatedReference);
 	}
 
-	public void setRelatedReference(AdditionalReference2 relatedReference) {
+	public TransferOutConfirmationV03 setRelatedReference(AdditionalReference2 relatedReference) {
 		this.relatedReference = relatedReference;
+		return this;
 	}
 
-	@XmlElement(name = "MstrRef")
-	public Max35Text getMasterReference() {
-		return masterReference;
+	public Optional<Max35Text> getMasterReference() {
+		return masterReference == null ? Optional.empty() : Optional.of(masterReference);
 	}
 
-	public void setMasterReference(Max35Text masterReference) {
+	public TransferOutConfirmationV03 setMasterReference(Max35Text masterReference) {
 		this.masterReference = masterReference;
+		return this;
 	}
 
-	@XmlElement(name = "TrfDtls", required = true)
 	public List<Transfer13> getTransferDetails() {
-		return transferDetails;
+		return transferDetails == null ? transferDetails = new ArrayList<>() : transferDetails;
 	}
 
-	public void setTransferDetails(List<Transfer13> transferDetails) {
-		this.transferDetails = transferDetails;
+	public TransferOutConfirmationV03 setTransferDetails(List<Transfer13> transferDetails) {
+		this.transferDetails = Objects.requireNonNull(transferDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AcctDtls", required = true)
 	public InvestmentAccount22 getAccountDetails() {
 		return accountDetails;
 	}
 
-	public void setAccountDetails(InvestmentAccount22 accountDetails) {
-		this.accountDetails = accountDetails;
+	public TransferOutConfirmationV03 setAccountDetails(InvestmentAccount22 accountDetails) {
+		this.accountDetails = Objects.requireNonNull(accountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmDtls", required = true)
 	public ReceiveInformation6 getSettlementDetails() {
 		return settlementDetails;
 	}
 
-	public void setSettlementDetails(ReceiveInformation6 settlementDetails) {
-		this.settlementDetails = settlementDetails;
+	public TransferOutConfirmationV03 setSettlementDetails(ReceiveInformation6 settlementDetails) {
+		this.settlementDetails = Objects.requireNonNull(settlementDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CpyDtls")
-	public CopyInformation2 getCopyDetails() {
-		return copyDetails;
+	public Optional<CopyInformation2> getCopyDetails() {
+		return copyDetails == null ? Optional.empty() : Optional.of(copyDetails);
 	}
 
-	public void setCopyDetails(CopyInformation2 copyDetails) {
+	public TransferOutConfirmationV03 setCopyDetails(CopyInformation2 copyDetails) {
 		this.copyDetails = copyDetails;
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<Extension1> extension) {
-		this.extension = extension;
+	public TransferOutConfirmationV03 setExtension(List<Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.003.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.003.001.03")
 	static public class Document {
 		@XmlElement(name = "TrfOutConf", required = true)
 		public TransferOutConfirmationV03 messageBody;

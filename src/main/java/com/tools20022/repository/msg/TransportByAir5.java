@@ -29,9 +29,8 @@ import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.entity.TransportByAir;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * TransportByAir4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransportByAir5", propOrder = {"departureAirport", "destinationAirport", "airCarrierName", "airCarrierCountry", "carrierAgentName", "carrierAgentCountry"})
 public class TransportByAir5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DprtureAirprt")
 	protected List<AirportName1Choice> departureAirport;
 	/**
-	 * Place from where the goods must leave.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -132,7 +132,7 @@ public class TransportByAir5 {
 	public static final MMMessageAssociationEnd mmDepartureAirport = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
-			componentContext_lazy = () -> TransportByAir5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByAir5.mmObject();
 			isDerived = false;
 			xmlTag = "DprtureAirprt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -144,10 +144,11 @@ public class TransportByAir5 {
 			type_lazy = () -> AirportName1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DstnAirprt", required = true)
 	protected List<AirportName1Choice> destinationAirport;
 	/**
-	 * Place where the goods must arrive.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -184,7 +185,7 @@ public class TransportByAir5 {
 	public static final MMMessageAssociationEnd mmDestinationAirport = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
-			componentContext_lazy = () -> TransportByAir5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByAir5.mmObject();
 			isDerived = false;
 			xmlTag = "DstnAirprt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -196,11 +197,11 @@ public class TransportByAir5 {
 			type_lazy = () -> AirportName1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AirCrrierNm")
 	protected Max70Text airCarrierName;
 	/**
-	 * Identifies the party that is responsible for the conveyance of the goods
-	 * from one place to another.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -240,7 +241,7 @@ public class TransportByAir5 {
 	public static final MMMessageAttribute mmAirCarrierName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
-			componentContext_lazy = () -> TransportByAir5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByAir5.mmObject();
 			isDerived = false;
 			xmlTag = "AirCrrierNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -252,11 +253,11 @@ public class TransportByAir5 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AirCrrierCtry")
 	protected CountryCode airCarrierCountry;
 	/**
-	 * Country in which the carrier of the goods, for example, shipping company,
-	 * is located or registered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -296,7 +297,7 @@ public class TransportByAir5 {
 	public static final MMMessageAttribute mmAirCarrierCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> TransportByAir5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByAir5.mmObject();
 			isDerived = false;
 			xmlTag = "AirCrrierCtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -308,12 +309,11 @@ public class TransportByAir5 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CrrierAgtNm")
 	protected Max70Text carrierAgentName;
 	/**
-	 * Name of the carrier's (for example, shipping company's) agent that acts
-	 * on behalf of the carrier and may be the issuer of transport documents
-	 * relating to the underlying shipment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -353,7 +353,7 @@ public class TransportByAir5 {
 	public static final MMMessageAttribute mmCarrierAgentName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
-			componentContext_lazy = () -> TransportByAir5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByAir5.mmObject();
 			isDerived = false;
 			xmlTag = "CrrierAgtNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -365,12 +365,11 @@ public class TransportByAir5 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CrrierAgtCtry")
 	protected CountryCode carrierAgentCountry;
 	/**
-	 * Country of registration of the carrier's (for example, shipping
-	 * company's) agent that acts on behalf of the carrier and may be the issuer
-	 * of transport documents relating to the underlying shipment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -410,7 +409,7 @@ public class TransportByAir5 {
 	public static final MMMessageAttribute mmCarrierAgentCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> TransportByAir5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByAir5.mmObject();
 			isDerived = false;
 			xmlTag = "CrrierAgtCtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -426,10 +425,11 @@ public class TransportByAir5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransportByAir5.mmDepartureAirport, TransportByAir5.mmDestinationAirport, TransportByAir5.mmAirCarrierName, TransportByAir5.mmAirCarrierCountry, TransportByAir5.mmCarrierAgentName,
-						TransportByAir5.mmCarrierAgentCountry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByAir5.mmDepartureAirport, com.tools20022.repository.msg.TransportByAir5.mmDestinationAirport,
+						com.tools20022.repository.msg.TransportByAir5.mmAirCarrierName, com.tools20022.repository.msg.TransportByAir5.mmAirCarrierCountry, com.tools20022.repository.msg.TransportByAir5.mmCarrierAgentName,
+						com.tools20022.repository.msg.TransportByAir5.mmCarrierAgentCountry);
 				trace_lazy = () -> TransportByAir.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransportByAir5";
 				definition = "Information related to the transportation of goods by air.";
@@ -439,57 +439,57 @@ public class TransportByAir5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DprtureAirprt")
 	public List<AirportName1Choice> getDepartureAirport() {
-		return departureAirport;
+		return departureAirport == null ? departureAirport = new ArrayList<>() : departureAirport;
 	}
 
-	public void setDepartureAirport(List<AirportName1Choice> departureAirport) {
-		this.departureAirport = departureAirport;
+	public TransportByAir5 setDepartureAirport(List<AirportName1Choice> departureAirport) {
+		this.departureAirport = Objects.requireNonNull(departureAirport);
+		return this;
 	}
 
-	@XmlElement(name = "DstnAirprt", required = true)
 	public List<AirportName1Choice> getDestinationAirport() {
-		return destinationAirport;
+		return destinationAirport == null ? destinationAirport = new ArrayList<>() : destinationAirport;
 	}
 
-	public void setDestinationAirport(List<AirportName1Choice> destinationAirport) {
-		this.destinationAirport = destinationAirport;
+	public TransportByAir5 setDestinationAirport(List<AirportName1Choice> destinationAirport) {
+		this.destinationAirport = Objects.requireNonNull(destinationAirport);
+		return this;
 	}
 
-	@XmlElement(name = "AirCrrierNm")
-	public Max70Text getAirCarrierName() {
-		return airCarrierName;
+	public Optional<Max70Text> getAirCarrierName() {
+		return airCarrierName == null ? Optional.empty() : Optional.of(airCarrierName);
 	}
 
-	public void setAirCarrierName(Max70Text airCarrierName) {
+	public TransportByAir5 setAirCarrierName(Max70Text airCarrierName) {
 		this.airCarrierName = airCarrierName;
+		return this;
 	}
 
-	@XmlElement(name = "AirCrrierCtry")
-	public CountryCode getAirCarrierCountry() {
-		return airCarrierCountry;
+	public Optional<CountryCode> getAirCarrierCountry() {
+		return airCarrierCountry == null ? Optional.empty() : Optional.of(airCarrierCountry);
 	}
 
-	public void setAirCarrierCountry(CountryCode airCarrierCountry) {
+	public TransportByAir5 setAirCarrierCountry(CountryCode airCarrierCountry) {
 		this.airCarrierCountry = airCarrierCountry;
+		return this;
 	}
 
-	@XmlElement(name = "CrrierAgtNm")
-	public Max70Text getCarrierAgentName() {
-		return carrierAgentName;
+	public Optional<Max70Text> getCarrierAgentName() {
+		return carrierAgentName == null ? Optional.empty() : Optional.of(carrierAgentName);
 	}
 
-	public void setCarrierAgentName(Max70Text carrierAgentName) {
+	public TransportByAir5 setCarrierAgentName(Max70Text carrierAgentName) {
 		this.carrierAgentName = carrierAgentName;
+		return this;
 	}
 
-	@XmlElement(name = "CrrierAgtCtry")
-	public CountryCode getCarrierAgentCountry() {
-		return carrierAgentCountry;
+	public Optional<CountryCode> getCarrierAgentCountry() {
+		return carrierAgentCountry == null ? Optional.empty() : Optional.of(carrierAgentCountry);
 	}
 
-	public void setCarrierAgentCountry(CountryCode carrierAgentCountry) {
+	public TransportByAir5 setCarrierAgentCountry(CountryCode carrierAgentCountry) {
 		this.carrierAgentCountry = carrierAgentCountry;
+		return this;
 	}
 }

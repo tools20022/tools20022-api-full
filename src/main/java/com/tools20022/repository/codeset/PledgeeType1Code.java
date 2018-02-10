@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PledgeeTypeCode;
+import com.tools20022.repository.codeset.PledgeeType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of pledgee.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PledgeeTypeCode
- * PledgeeTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PledgeeType1Code#mmCounterparty
- * PledgeeType1Code.mmCounterparty}</li>
+ * {@linkplain com.tools20022.repository.codeset.PledgeeType1Code#Counterparty
+ * PledgeeType1Code.Counterparty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PledgeeType1Code#mmRegulatoryBody
- * PledgeeType1Code.mmRegulatoryBody}</li>
+ * {@linkplain com.tools20022.repository.codeset.PledgeeType1Code#RegulatoryBody
+ * PledgeeType1Code.RegulatoryBody}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PledgeeTypeCode
+ * PledgeeTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of pledgee."</li>
  * </ul>
  */
-public class PledgeeType1Code extends PledgeeTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PledgeeType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class PledgeeType1Code extends PledgeeTypeCode {
 	 * name} = "Counterparty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCounterparty = new MMCode() {
+	public static final PledgeeType1Code Counterparty = new PledgeeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counterparty";
-			owner_lazy = () -> PledgeeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PledgeeType1Code.mmObject();
+			codeName = PledgeeTypeCode.Counterparty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class PledgeeType1Code extends PledgeeTypeCode {
 	 * name} = "RegulatoryBody"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegulatoryBody = new MMCode() {
+	public static final PledgeeType1Code RegulatoryBody = new PledgeeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryBody";
-			owner_lazy = () -> PledgeeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PledgeeType1Code.mmObject();
+			codeName = PledgeeTypeCode.RegulatoryBody.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PledgeeType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PledgeeType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PledgeeType1Code";
 				definition = "Specifies the type of pledgee.";
-				code_lazy = () -> Arrays.asList(PledgeeType1Code.mmCounterparty, PledgeeType1Code.mmRegulatoryBody);
 				trace_lazy = () -> PledgeeTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PledgeeType1Code.Counterparty, com.tools20022.repository.codeset.PledgeeType1Code.RegulatoryBody);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Counterparty.getCodeName().get(), Counterparty);
+		codesByName.put(RegulatoryBody.getCodeName().get(), RegulatoryBody);
+	}
+
+	public static PledgeeType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PledgeeType1Code[] values() {
+		PledgeeType1Code[] values = new PledgeeType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PledgeeType1Code> {
+		@Override
+		public PledgeeType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PledgeeType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Set of characters to be matched to be considered as valid."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CharacterSearchChoice", propOrder = {"equal", "notEqual", "contain", "notContain"})
 public class CharacterSearchChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "EQ", required = true)
 	protected Max35Text equal;
 	/**
-	 * Exact set of characters to be matched to be considered valid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -103,7 +105,7 @@ public class CharacterSearchChoice {
 	 */
 	public static final MMMessageAttribute mmEqual = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CharacterSearchChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CharacterSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "EQ";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,10 +116,11 @@ public class CharacterSearchChoice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NEQ", required = true)
 	protected Max35Text notEqual;
 	/**
-	 * Exact set of characters that cannot match to be considered valid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,7 +148,7 @@ public class CharacterSearchChoice {
 	 */
 	public static final MMMessageAttribute mmNotEqual = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CharacterSearchChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CharacterSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "NEQ";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +159,11 @@ public class CharacterSearchChoice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CT", required = true)
 	protected Max35Text contain;
 	/**
-	 * Set of characters to be matched to be considered valid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,7 +190,7 @@ public class CharacterSearchChoice {
 	 */
 	public static final MMMessageAttribute mmContain = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CharacterSearchChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CharacterSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "CT";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,10 +201,11 @@ public class CharacterSearchChoice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NCT", required = true)
 	protected Max35Text notContain;
 	/**
-	 * Set of characters that cannot match to be considered valid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,7 +233,7 @@ public class CharacterSearchChoice {
 	 */
 	public static final MMMessageAttribute mmNotContain = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CharacterSearchChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CharacterSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "NCT";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,8 +248,9 @@ public class CharacterSearchChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CharacterSearchChoice.mmEqual, CharacterSearchChoice.mmNotEqual, CharacterSearchChoice.mmContain, CharacterSearchChoice.mmNotContain);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CharacterSearchChoice.mmEqual, com.tools20022.repository.choice.CharacterSearchChoice.mmNotEqual,
+						com.tools20022.repository.choice.CharacterSearchChoice.mmContain, com.tools20022.repository.choice.CharacterSearchChoice.mmNotContain);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CharacterSearchChoice";
 				definition = "Set of characters to be matched to be considered as valid.";
@@ -253,39 +259,39 @@ public class CharacterSearchChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "EQ", required = true)
 	public Max35Text getEqual() {
 		return equal;
 	}
 
-	public void setEqual(Max35Text equal) {
-		this.equal = equal;
+	public CharacterSearchChoice setEqual(Max35Text equal) {
+		this.equal = Objects.requireNonNull(equal);
+		return this;
 	}
 
-	@XmlElement(name = "NEQ", required = true)
 	public Max35Text getNotEqual() {
 		return notEqual;
 	}
 
-	public void setNotEqual(Max35Text notEqual) {
-		this.notEqual = notEqual;
+	public CharacterSearchChoice setNotEqual(Max35Text notEqual) {
+		this.notEqual = Objects.requireNonNull(notEqual);
+		return this;
 	}
 
-	@XmlElement(name = "CT", required = true)
 	public Max35Text getContain() {
 		return contain;
 	}
 
-	public void setContain(Max35Text contain) {
-		this.contain = contain;
+	public CharacterSearchChoice setContain(Max35Text contain) {
+		this.contain = Objects.requireNonNull(contain);
+		return this;
 	}
 
-	@XmlElement(name = "NCT", required = true)
 	public Max35Text getNotContain() {
 		return notContain;
 	}
 
-	public void setNotContain(Max35Text notContain) {
-		this.notContain = notContain;
+	public CharacterSearchChoice setNotContain(Max35Text notContain) {
+		this.notContain = Objects.requireNonNull(notContain);
+		return this;
 	}
 }

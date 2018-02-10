@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.BrokeredDealCode;
+import com.tools20022.repository.codeset.BrokeredDeal1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the transaction is arranged via a third party broker or
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.BrokeredDealCode
- * BrokeredDealCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BrokeredDeal1Code#mmBilateralTransaction
- * BrokeredDeal1Code.mmBilateralTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.BrokeredDeal1Code#BilateralTransaction
+ * BrokeredDeal1Code.BilateralTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BrokeredDeal1Code#mmBrokeredTransaction
- * BrokeredDeal1Code.mmBrokeredTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.BrokeredDeal1Code#BrokeredTransaction
+ * BrokeredDeal1Code.BrokeredTransaction}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.BrokeredDealCode
+ * BrokeredDealCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class BrokeredDeal1Code extends BrokeredDealCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BrokeredDeal1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,11 +85,12 @@ public class BrokeredDeal1Code extends BrokeredDealCode {
 	 * name} = "BilateralTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBilateralTransaction = new MMCode() {
+	public static final BrokeredDeal1Code BilateralTransaction = new BrokeredDeal1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralTransaction";
-			owner_lazy = () -> BrokeredDeal1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BrokeredDeal1Code.mmObject();
+			codeName = BrokeredDealCode.BilateralTransaction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -103,25 +109,56 @@ public class BrokeredDeal1Code extends BrokeredDealCode {
 	 * name} = "BrokeredTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBrokeredTransaction = new MMCode() {
+	public static final BrokeredDeal1Code BrokeredTransaction = new BrokeredDeal1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokeredTransaction";
-			owner_lazy = () -> BrokeredDeal1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BrokeredDeal1Code.mmObject();
+			codeName = BrokeredDealCode.BrokeredTransaction.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, BrokeredDeal1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BrokeredDeal1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BrokeredDeal1Code";
 				definition = "Specifies whether the transaction is arranged via a third party broker or not.";
-				code_lazy = () -> Arrays.asList(BrokeredDeal1Code.mmBilateralTransaction, BrokeredDeal1Code.mmBrokeredTransaction);
 				trace_lazy = () -> BrokeredDealCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BrokeredDeal1Code.BilateralTransaction, com.tools20022.repository.codeset.BrokeredDeal1Code.BrokeredTransaction);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BilateralTransaction.getCodeName().get(), BilateralTransaction);
+		codesByName.put(BrokeredTransaction.getCodeName().get(), BrokeredTransaction);
+	}
+
+	public static BrokeredDeal1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BrokeredDeal1Code[] values() {
+		BrokeredDeal1Code[] values = new BrokeredDeal1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BrokeredDeal1Code> {
+		@Override
+		public BrokeredDeal1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BrokeredDeal1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -29,9 +29,8 @@ import com.tools20022.repository.msg.SettlementObligation7;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -49,22 +48,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
- * SecuritiesClearingLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion
- * CentralCounterPartyCCPSecuritiesClearingISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "BuyInConf"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -86,6 +69,22 @@ import javax.xml.bind.annotation.*;
  * BuyInConfirmationV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion
+ * CentralCounterPartyCCPSecuritiesClearingISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "BuyInConf"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
+ * SecuritiesClearingLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code secl.009.001.03}</li>
@@ -101,16 +100,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BuyInConfirmationV03", propOrder = {"transactionIdentification", "clearingMember", "buyInDetails", "originalSettlementObligation", "supplementaryData"})
 public class BuyInConfirmationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId")
 	protected Max35Text transactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as known by the instructing
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,11 +150,11 @@ public class BuyInConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "ClrMmb", required = true)
 	protected PartyIdentification35Choice clearingMember;
 	/**
-	 * Provides the identification of the clearing member (individual clearing
-	 * member or general clearing member).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,10 +196,11 @@ public class BuyInConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "BuyInDtls", required = true)
 	protected BuyIn2 buyInDetails;
 	/**
-	 * Provides the buy-in details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -238,11 +238,11 @@ public class BuyInConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgnlSttlmOblgtn")
 	protected SettlementObligation7 originalSettlementObligation;
 	/**
-	 * Provides details about the original settlement obligation that did not
-	 * settle and for which the buy in process will be launched.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -284,11 +284,11 @@ public class BuyInConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -361,52 +361,52 @@ public class BuyInConfirmationV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId")
-	public Max35Text getTransactionIdentification() {
-		return transactionIdentification;
+	public Optional<Max35Text> getTransactionIdentification() {
+		return transactionIdentification == null ? Optional.empty() : Optional.of(transactionIdentification);
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
+	public BuyInConfirmationV03 setTransactionIdentification(Max35Text transactionIdentification) {
 		this.transactionIdentification = transactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ClrMmb", required = true)
 	public PartyIdentification35Choice getClearingMember() {
 		return clearingMember;
 	}
 
-	public void setClearingMember(PartyIdentification35Choice clearingMember) {
-		this.clearingMember = clearingMember;
+	public BuyInConfirmationV03 setClearingMember(PartyIdentification35Choice clearingMember) {
+		this.clearingMember = Objects.requireNonNull(clearingMember);
+		return this;
 	}
 
-	@XmlElement(name = "BuyInDtls", required = true)
 	public BuyIn2 getBuyInDetails() {
 		return buyInDetails;
 	}
 
-	public void setBuyInDetails(BuyIn2 buyInDetails) {
-		this.buyInDetails = buyInDetails;
+	public BuyInConfirmationV03 setBuyInDetails(BuyIn2 buyInDetails) {
+		this.buyInDetails = Objects.requireNonNull(buyInDetails);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlSttlmOblgtn")
-	public SettlementObligation7 getOriginalSettlementObligation() {
-		return originalSettlementObligation;
+	public Optional<SettlementObligation7> getOriginalSettlementObligation() {
+		return originalSettlementObligation == null ? Optional.empty() : Optional.of(originalSettlementObligation);
 	}
 
-	public void setOriginalSettlementObligation(SettlementObligation7 originalSettlementObligation) {
+	public BuyInConfirmationV03 setOriginalSettlementObligation(SettlementObligation7 originalSettlementObligation) {
 		this.originalSettlementObligation = originalSettlementObligation;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public BuyInConfirmationV03 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:secl.009.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:secl.009.001.03")
 	static public class Document {
 		@XmlElement(name = "BuyInConf", required = true)
 		public BuyInConfirmationV03 messageBody;

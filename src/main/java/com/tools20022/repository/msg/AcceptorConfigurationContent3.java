@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max10000Binary;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,15 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * AcceptorConfigurationContent2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcceptorConfigurationContent3", propOrder = {"acquirerProtocolParameters", "merchantParameters", "terminalParameters", "applicationParameters", "hostCommunicationParameters", "securityParameters"})
 public class AcceptorConfigurationContent3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcqrrPrtcolParams")
 	protected List<com.tools20022.repository.msg.AcquirerProtocolParameters6> acquirerProtocolParameters;
 	/**
-	 * Acceptor parameters dedicated to an acquirer protocol.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -144,7 +147,7 @@ public class AcceptorConfigurationContent3 {
 	public static final MMMessageAssociationEnd mmAcquirerProtocolParameters = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> AcceptorConfiguration.mmObject();
-			componentContext_lazy = () -> AcceptorConfigurationContent3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent3.mmObject();
 			isDerived = false;
 			xmlTag = "AcqrrPrtcolParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,10 +160,11 @@ public class AcceptorConfigurationContent3 {
 			type_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters6.mmObject();
 		}
 	};
+	@XmlElement(name = "MrchntParams")
 	protected List<Max10000Binary> merchantParameters;
 	/**
-	 * Acceptor parameters dedicated to the merchant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -207,7 +211,7 @@ public class AcceptorConfigurationContent3 {
 	public static final MMMessageAttribute mmMerchantParameters = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmRetailerParameters;
-			componentContext_lazy = () -> AcceptorConfigurationContent3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent3.mmObject();
 			isDerived = false;
 			xmlTag = "MrchntParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,10 +223,11 @@ public class AcceptorConfigurationContent3 {
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "TermnlParams")
 	protected List<com.tools20022.repository.msg.PaymentTerminalParameters1> terminalParameters;
 	/**
-	 * Manufacturer configuration parameters of the point of interaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -264,7 +269,7 @@ public class AcceptorConfigurationContent3 {
 	 */
 	public static final MMMessageAttribute mmTerminalParameters = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AcceptorConfigurationContent3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent3.mmObject();
 			isDerived = false;
 			xmlTag = "TermnlParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,11 +281,11 @@ public class AcceptorConfigurationContent3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PaymentTerminalParameters1.mmObject();
 		}
 	};
+	@XmlElement(name = "ApplParams")
 	protected List<com.tools20022.repository.msg.ApplicationParameters3> applicationParameters;
 	/**
-	 * Acceptor parameters dedicated to a payment application of the point of
-	 * interaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -327,7 +332,7 @@ public class AcceptorConfigurationContent3 {
 	public static final MMMessageAssociationEnd mmApplicationParameters = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmApplicationParameters;
-			componentContext_lazy = () -> AcceptorConfigurationContent3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent3.mmObject();
 			isDerived = false;
 			xmlTag = "ApplParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -340,10 +345,11 @@ public class AcceptorConfigurationContent3 {
 			type_lazy = () -> com.tools20022.repository.msg.ApplicationParameters3.mmObject();
 		}
 	};
+	@XmlElement(name = "HstComParams")
 	protected List<com.tools20022.repository.msg.HostCommunicationParameter2> hostCommunicationParameters;
 	/**
-	 * Acceptor parameters dedicated to the communication with an acquirer host.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -391,7 +397,7 @@ public class AcceptorConfigurationContent3 {
 	public static final MMMessageAssociationEnd mmHostCommunicationParameters = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmTerminalManagementSystem;
-			componentContext_lazy = () -> AcceptorConfigurationContent3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent3.mmObject();
 			isDerived = false;
 			xmlTag = "HstComParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -404,11 +410,11 @@ public class AcceptorConfigurationContent3 {
 			type_lazy = () -> com.tools20022.repository.msg.HostCommunicationParameter2.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyParams")
 	protected List<com.tools20022.repository.msg.SecurityParameters2> securityParameters;
 	/**
-	 * Point of interaction parameters related to the security of software
-	 * application and application protocol.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -451,7 +457,7 @@ public class AcceptorConfigurationContent3 {
 	 */
 	public static final MMMessageAttribute mmSecurityParameters = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AcceptorConfigurationContent3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent3.mmObject();
 			isDerived = false;
 			xmlTag = "SctyParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -467,10 +473,11 @@ public class AcceptorConfigurationContent3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AcceptorConfigurationContent3.mmAcquirerProtocolParameters, AcceptorConfigurationContent3.mmMerchantParameters, AcceptorConfigurationContent3.mmTerminalParameters,
-						AcceptorConfigurationContent3.mmApplicationParameters, AcceptorConfigurationContent3.mmHostCommunicationParameters, AcceptorConfigurationContent3.mmSecurityParameters);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorConfigurationContent3.mmAcquirerProtocolParameters, com.tools20022.repository.msg.AcceptorConfigurationContent3.mmMerchantParameters,
+						com.tools20022.repository.msg.AcceptorConfigurationContent3.mmTerminalParameters, com.tools20022.repository.msg.AcceptorConfigurationContent3.mmApplicationParameters,
+						com.tools20022.repository.msg.AcceptorConfigurationContent3.mmHostCommunicationParameters, com.tools20022.repository.msg.AcceptorConfigurationContent3.mmSecurityParameters);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorConfigurationContent3";
 				definition = "Content of the acceptor configuration.";
@@ -481,57 +488,57 @@ public class AcceptorConfigurationContent3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcqrrPrtcolParams")
 	public List<AcquirerProtocolParameters6> getAcquirerProtocolParameters() {
-		return acquirerProtocolParameters;
+		return acquirerProtocolParameters == null ? acquirerProtocolParameters = new ArrayList<>() : acquirerProtocolParameters;
 	}
 
-	public void setAcquirerProtocolParameters(List<com.tools20022.repository.msg.AcquirerProtocolParameters6> acquirerProtocolParameters) {
-		this.acquirerProtocolParameters = acquirerProtocolParameters;
+	public AcceptorConfigurationContent3 setAcquirerProtocolParameters(List<com.tools20022.repository.msg.AcquirerProtocolParameters6> acquirerProtocolParameters) {
+		this.acquirerProtocolParameters = Objects.requireNonNull(acquirerProtocolParameters);
+		return this;
 	}
 
-	@XmlElement(name = "MrchntParams")
 	public List<Max10000Binary> getMerchantParameters() {
-		return merchantParameters;
+		return merchantParameters == null ? merchantParameters = new ArrayList<>() : merchantParameters;
 	}
 
-	public void setMerchantParameters(List<Max10000Binary> merchantParameters) {
-		this.merchantParameters = merchantParameters;
+	public AcceptorConfigurationContent3 setMerchantParameters(List<Max10000Binary> merchantParameters) {
+		this.merchantParameters = Objects.requireNonNull(merchantParameters);
+		return this;
 	}
 
-	@XmlElement(name = "TermnlParams")
 	public List<PaymentTerminalParameters1> getTerminalParameters() {
-		return terminalParameters;
+		return terminalParameters == null ? terminalParameters = new ArrayList<>() : terminalParameters;
 	}
 
-	public void setTerminalParameters(List<com.tools20022.repository.msg.PaymentTerminalParameters1> terminalParameters) {
-		this.terminalParameters = terminalParameters;
+	public AcceptorConfigurationContent3 setTerminalParameters(List<com.tools20022.repository.msg.PaymentTerminalParameters1> terminalParameters) {
+		this.terminalParameters = Objects.requireNonNull(terminalParameters);
+		return this;
 	}
 
-	@XmlElement(name = "ApplParams")
 	public List<ApplicationParameters3> getApplicationParameters() {
-		return applicationParameters;
+		return applicationParameters == null ? applicationParameters = new ArrayList<>() : applicationParameters;
 	}
 
-	public void setApplicationParameters(List<com.tools20022.repository.msg.ApplicationParameters3> applicationParameters) {
-		this.applicationParameters = applicationParameters;
+	public AcceptorConfigurationContent3 setApplicationParameters(List<com.tools20022.repository.msg.ApplicationParameters3> applicationParameters) {
+		this.applicationParameters = Objects.requireNonNull(applicationParameters);
+		return this;
 	}
 
-	@XmlElement(name = "HstComParams")
 	public List<HostCommunicationParameter2> getHostCommunicationParameters() {
-		return hostCommunicationParameters;
+		return hostCommunicationParameters == null ? hostCommunicationParameters = new ArrayList<>() : hostCommunicationParameters;
 	}
 
-	public void setHostCommunicationParameters(List<com.tools20022.repository.msg.HostCommunicationParameter2> hostCommunicationParameters) {
-		this.hostCommunicationParameters = hostCommunicationParameters;
+	public AcceptorConfigurationContent3 setHostCommunicationParameters(List<com.tools20022.repository.msg.HostCommunicationParameter2> hostCommunicationParameters) {
+		this.hostCommunicationParameters = Objects.requireNonNull(hostCommunicationParameters);
+		return this;
 	}
 
-	@XmlElement(name = "SctyParams")
 	public List<SecurityParameters2> getSecurityParameters() {
-		return securityParameters;
+		return securityParameters == null ? securityParameters = new ArrayList<>() : securityParameters;
 	}
 
-	public void setSecurityParameters(List<com.tools20022.repository.msg.SecurityParameters2> securityParameters) {
-		this.securityParameters = securityParameters;
+	public AcceptorConfigurationContent3 setSecurityParameters(List<com.tools20022.repository.msg.SecurityParameters2> securityParameters) {
+		this.securityParameters = Objects.requireNonNull(securityParameters);
+		return this;
 	}
 }

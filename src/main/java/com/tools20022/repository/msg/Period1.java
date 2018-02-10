@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Time span defined by a start date and time, and an end date and time."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Period1", propOrder = {"startDate", "endDate"})
 public class Period1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StartDt", required = true)
 	protected DateFormat4Choice startDate;
 	/**
-	 * Date and time at which the range starts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +107,7 @@ public class Period1 {
 	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
-			componentContext_lazy = () -> Period1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +118,11 @@ public class Period1 {
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "EndDt", required = true)
 	protected DateFormat4Choice endDate;
 	/**
-	 * Date and time at which the range ends.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,7 +155,7 @@ public class Period1 {
 	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
-			componentContext_lazy = () -> Period1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
 			isDerived = false;
 			xmlTag = "EndDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,9 +170,9 @@ public class Period1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Period1.mmStartDate, Period1.mmEndDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Period1.mmStartDate, com.tools20022.repository.msg.Period1.mmEndDate);
 				trace_lazy = () -> DateTimePeriod.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Period1";
 				definition = "Time span defined by a start date and time, and an end date and time.";
@@ -178,21 +181,21 @@ public class Period1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StartDt", required = true)
 	public DateFormat4Choice getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(DateFormat4Choice startDate) {
-		this.startDate = startDate;
+	public Period1 setStartDate(DateFormat4Choice startDate) {
+		this.startDate = Objects.requireNonNull(startDate);
+		return this;
 	}
 
-	@XmlElement(name = "EndDt", required = true)
 	public DateFormat4Choice getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(DateFormat4Choice endDate) {
-		this.endDate = endDate;
+	public Period1 setEndDate(DateFormat4Choice endDate) {
+		this.endDate = Objects.requireNonNull(endDate);
+		return this;
 	}
 }

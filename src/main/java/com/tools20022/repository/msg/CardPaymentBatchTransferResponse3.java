@@ -22,9 +22,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV04;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,15 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * CardPaymentBatchTransferResponse2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardPaymentBatchTransferResponse3", propOrder = {"transactionTotals", "dataSet"})
 public class CardPaymentBatchTransferResponse3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxTtls")
 	protected List<com.tools20022.repository.msg.TransactionTotals3> transactionTotals;
 	/**
-	 * Totals of transactions of all the data sets.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,7 +138,7 @@ public class CardPaymentBatchTransferResponse3 {
 	 */
 	public static final MMMessageAttribute mmTransactionTotals = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardPaymentBatchTransferResponse3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentBatchTransferResponse3.mmObject();
 			isDerived = false;
 			xmlTag = "TxTtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,10 +150,11 @@ public class CardPaymentBatchTransferResponse3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.TransactionTotals3.mmObject();
 		}
 	};
+	@XmlElement(name = "DataSet")
 	protected List<com.tools20022.repository.msg.CardPaymentDataSet12> dataSet;
 	/**
-	 * Information related to the previously sent set of transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,7 +196,7 @@ public class CardPaymentBatchTransferResponse3 {
 	 */
 	public static final MMMessageAttribute mmDataSet = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardPaymentBatchTransferResponse3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentBatchTransferResponse3.mmObject();
 			isDerived = false;
 			xmlTag = "DataSet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,9 +212,9 @@ public class CardPaymentBatchTransferResponse3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardPaymentBatchTransferResponse3.mmTransactionTotals, CardPaymentBatchTransferResponse3.mmDataSet);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentBatchTransferResponse3.mmTransactionTotals, com.tools20022.repository.msg.CardPaymentBatchTransferResponse3.mmDataSet);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorBatchTransferResponseV04.mmBatchTransferResponse);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentBatchTransferResponse3";
 				definition = "Status of the transactions sent in a previous batch of card payment transactions.";
@@ -221,21 +225,21 @@ public class CardPaymentBatchTransferResponse3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxTtls")
 	public List<TransactionTotals3> getTransactionTotals() {
-		return transactionTotals;
+		return transactionTotals == null ? transactionTotals = new ArrayList<>() : transactionTotals;
 	}
 
-	public void setTransactionTotals(List<com.tools20022.repository.msg.TransactionTotals3> transactionTotals) {
-		this.transactionTotals = transactionTotals;
+	public CardPaymentBatchTransferResponse3 setTransactionTotals(List<com.tools20022.repository.msg.TransactionTotals3> transactionTotals) {
+		this.transactionTotals = Objects.requireNonNull(transactionTotals);
+		return this;
 	}
 
-	@XmlElement(name = "DataSet")
 	public List<CardPaymentDataSet12> getDataSet() {
-		return dataSet;
+		return dataSet == null ? dataSet = new ArrayList<>() : dataSet;
 	}
 
-	public void setDataSet(List<com.tools20022.repository.msg.CardPaymentDataSet12> dataSet) {
-		this.dataSet = dataSet;
+	public CardPaymentBatchTransferResponse3 setDataSet(List<com.tools20022.repository.msg.CardPaymentDataSet12> dataSet) {
+		this.dataSet = Objects.requireNonNull(dataSet);
+		return this;
 	}
 }

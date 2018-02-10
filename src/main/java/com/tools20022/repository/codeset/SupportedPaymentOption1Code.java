@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SupportedPaymentOptionCode;
+import com.tools20022.repository.codeset.SupportedPaymentOption1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the options supported for a payment transaction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SupportedPaymentOptionCode
- * SupportedPaymentOptionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SupportedPaymentOption1Code#mmPartialApproval
- * SupportedPaymentOption1Code.mmPartialApproval}</li>
+ * {@linkplain com.tools20022.repository.codeset.SupportedPaymentOption1Code#PartialApproval
+ * SupportedPaymentOption1Code.PartialApproval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SupportedPaymentOption1Code#mmPaymentApprovalOnly
- * SupportedPaymentOption1Code.mmPaymentApprovalOnly}</li>
+ * {@linkplain com.tools20022.repository.codeset.SupportedPaymentOption1Code#PaymentApprovalOnly
+ * SupportedPaymentOption1Code.PaymentApprovalOnly}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SupportedPaymentOptionCode
+ * SupportedPaymentOptionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the options supported for a payment transaction."</li>
  * </ul>
  */
-public class SupportedPaymentOption1Code extends SupportedPaymentOptionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SupportedPaymentOption1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class SupportedPaymentOption1Code extends SupportedPaymentOptionCode {
 	 * name} = "PartialApproval"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialApproval = new MMCode() {
+	public static final SupportedPaymentOption1Code PartialApproval = new SupportedPaymentOption1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialApproval";
-			owner_lazy = () -> SupportedPaymentOption1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SupportedPaymentOption1Code.mmObject();
+			codeName = SupportedPaymentOptionCode.PartialApproval.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class SupportedPaymentOption1Code extends SupportedPaymentOptionCode {
 	 * name} = "PaymentApprovalOnly"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPaymentApprovalOnly = new MMCode() {
+	public static final SupportedPaymentOption1Code PaymentApprovalOnly = new SupportedPaymentOption1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentApprovalOnly";
-			owner_lazy = () -> SupportedPaymentOption1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SupportedPaymentOption1Code.mmObject();
+			codeName = SupportedPaymentOptionCode.PaymentApprovalOnly.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SupportedPaymentOption1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SupportedPaymentOption1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SupportedPaymentOption1Code";
 				definition = "Specifies the options supported for a payment transaction.";
-				code_lazy = () -> Arrays.asList(SupportedPaymentOption1Code.mmPartialApproval, SupportedPaymentOption1Code.mmPaymentApprovalOnly);
 				trace_lazy = () -> SupportedPaymentOptionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SupportedPaymentOption1Code.PartialApproval, com.tools20022.repository.codeset.SupportedPaymentOption1Code.PaymentApprovalOnly);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PartialApproval.getCodeName().get(), PartialApproval);
+		codesByName.put(PaymentApprovalOnly.getCodeName().get(), PaymentApprovalOnly);
+	}
+
+	public static SupportedPaymentOption1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SupportedPaymentOption1Code[] values() {
+		SupportedPaymentOption1Code[] values = new SupportedPaymentOption1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SupportedPaymentOption1Code> {
+		@Override
+		public SupportedPaymentOption1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SupportedPaymentOption1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,16 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Additional references linked to the quote request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Reference1", propOrder = {"requestForQuoteRequestIdentification", "clientOrderIdentification"})
 public class Reference1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ReqForQtReqId")
 	protected Max35Text requestForQuoteRequestIdentification;
 	/**
-	 * Reference assigned by a sending party to unambiguously identify the
-	 * request for quote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -83,6 +85,9 @@ public class Reference1 {
 	 * Reference1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ReqForQtReqId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 644</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -98,9 +103,10 @@ public class Reference1 {
 	 */
 	public static final MMMessageAttribute mmRequestForQuoteRequestIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqForQtReqId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "644"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestForQuoteRequestIdentification";
 			definition = "Reference assigned by a sending party to unambiguously identify the request for quote.";
@@ -109,11 +115,11 @@ public class Reference1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntOrdrId")
 	protected Max35Text clientOrderIdentification;
 	/**
-	 * Unique identifier of the order as assigned by institution or by the
-	 * intermediary with closest association with the investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,7 +147,7 @@ public class Reference1 {
 	 */
 	public static final MMMessageAttribute mmClientOrderIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference1.mmObject();
 			isDerived = false;
 			xmlTag = "ClntOrdrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,8 +162,8 @@ public class Reference1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Reference1.mmRequestForQuoteRequestIdentification, Reference1.mmClientOrderIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference1.mmRequestForQuoteRequestIdentification, com.tools20022.repository.msg.Reference1.mmClientOrderIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference1";
 				definition = "Additional references linked to the quote request.";
@@ -166,21 +172,21 @@ public class Reference1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ReqForQtReqId")
-	public Max35Text getRequestForQuoteRequestIdentification() {
-		return requestForQuoteRequestIdentification;
+	public Optional<Max35Text> getRequestForQuoteRequestIdentification() {
+		return requestForQuoteRequestIdentification == null ? Optional.empty() : Optional.of(requestForQuoteRequestIdentification);
 	}
 
-	public void setRequestForQuoteRequestIdentification(Max35Text requestForQuoteRequestIdentification) {
+	public Reference1 setRequestForQuoteRequestIdentification(Max35Text requestForQuoteRequestIdentification) {
 		this.requestForQuoteRequestIdentification = requestForQuoteRequestIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ClntOrdrId")
-	public Max35Text getClientOrderIdentification() {
-		return clientOrderIdentification;
+	public Optional<Max35Text> getClientOrderIdentification() {
+		return clientOrderIdentification == null ? Optional.empty() : Optional.of(clientOrderIdentification);
 	}
 
-	public void setClientOrderIdentification(Max35Text clientOrderIdentification) {
+	public Reference1 setClientOrderIdentification(Max35Text clientOrderIdentification) {
 		this.clientOrderIdentification = clientOrderIdentification;
+		return this;
 	}
 }

@@ -24,9 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max3000Binary;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SignedData1", propOrder = {"version", "digestAlgorithm", "encapsulatedContent", "certificate", "signer"})
 public class SignedData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Vrsn")
 	protected Number version;
 	/**
-	 * Version of the data structure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +109,7 @@ public class SignedData1 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SignedData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SignedData1.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +120,11 @@ public class SignedData1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "DgstAlgo", required = true)
 	protected List<com.tools20022.repository.msg.AlgorithmIdentification1> digestAlgorithm;
 	/**
-	 * Identification of a digest algorithm to apply before signature.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -150,7 +151,7 @@ public class SignedData1 {
 	 */
 	public static final MMMessageAssociationEnd mmDigestAlgorithm = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SignedData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SignedData1.mmObject();
 			isDerived = false;
 			xmlTag = "DgstAlgo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,10 +162,11 @@ public class SignedData1 {
 			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "NcpsltdCntt", required = true)
 	protected EncapsulatedContent1 encapsulatedContent;
 	/**
-	 * Data to sign.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -189,7 +191,7 @@ public class SignedData1 {
 	 */
 	public static final MMMessageAssociationEnd mmEncapsulatedContent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SignedData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SignedData1.mmObject();
 			isDerived = false;
 			xmlTag = "NcpsltdCntt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,10 +203,11 @@ public class SignedData1 {
 			type_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent1.mmObject();
 		}
 	};
+	@XmlElement(name = "Cert")
 	protected List<Max3000Binary> certificate;
 	/**
-	 * Chain of X.509 certificates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -231,7 +234,7 @@ public class SignedData1 {
 	 */
 	public static final MMMessageAttribute mmCertificate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SignedData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SignedData1.mmObject();
 			isDerived = false;
 			xmlTag = "Cert";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,10 +244,11 @@ public class SignedData1 {
 			simpleType_lazy = () -> Max3000Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "Sgnr", required = true)
 	protected List<com.tools20022.repository.msg.Signer1> signer;
 	/**
-	 * Entity who has signed the data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -268,7 +272,7 @@ public class SignedData1 {
 	 */
 	public static final MMMessageAssociationEnd mmSigner = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SignedData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SignedData1.mmObject();
 			isDerived = false;
 			xmlTag = "Sgnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,8 +287,9 @@ public class SignedData1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SignedData1.mmVersion, SignedData1.mmDigestAlgorithm, SignedData1.mmEncapsulatedContent, SignedData1.mmCertificate, SignedData1.mmSigner);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SignedData1.mmVersion, com.tools20022.repository.msg.SignedData1.mmDigestAlgorithm, com.tools20022.repository.msg.SignedData1.mmEncapsulatedContent,
+						com.tools20022.repository.msg.SignedData1.mmCertificate, com.tools20022.repository.msg.SignedData1.mmSigner);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SignedData1";
 				definition = "Digital signature of data, with an asymmetric key.";
@@ -294,48 +299,48 @@ public class SignedData1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Vrsn")
-	public Number getVersion() {
-		return version;
+	public Optional<Number> getVersion() {
+		return version == null ? Optional.empty() : Optional.of(version);
 	}
 
-	public void setVersion(Number version) {
+	public SignedData1 setVersion(Number version) {
 		this.version = version;
+		return this;
 	}
 
-	@XmlElement(name = "DgstAlgo", required = true)
 	public List<AlgorithmIdentification1> getDigestAlgorithm() {
-		return digestAlgorithm;
+		return digestAlgorithm == null ? digestAlgorithm = new ArrayList<>() : digestAlgorithm;
 	}
 
-	public void setDigestAlgorithm(List<com.tools20022.repository.msg.AlgorithmIdentification1> digestAlgorithm) {
-		this.digestAlgorithm = digestAlgorithm;
+	public SignedData1 setDigestAlgorithm(List<com.tools20022.repository.msg.AlgorithmIdentification1> digestAlgorithm) {
+		this.digestAlgorithm = Objects.requireNonNull(digestAlgorithm);
+		return this;
 	}
 
-	@XmlElement(name = "NcpsltdCntt", required = true)
 	public EncapsulatedContent1 getEncapsulatedContent() {
 		return encapsulatedContent;
 	}
 
-	public void setEncapsulatedContent(com.tools20022.repository.msg.EncapsulatedContent1 encapsulatedContent) {
-		this.encapsulatedContent = encapsulatedContent;
+	public SignedData1 setEncapsulatedContent(com.tools20022.repository.msg.EncapsulatedContent1 encapsulatedContent) {
+		this.encapsulatedContent = Objects.requireNonNull(encapsulatedContent);
+		return this;
 	}
 
-	@XmlElement(name = "Cert")
 	public List<Max3000Binary> getCertificate() {
-		return certificate;
+		return certificate == null ? certificate = new ArrayList<>() : certificate;
 	}
 
-	public void setCertificate(List<Max3000Binary> certificate) {
-		this.certificate = certificate;
+	public SignedData1 setCertificate(List<Max3000Binary> certificate) {
+		this.certificate = Objects.requireNonNull(certificate);
+		return this;
 	}
 
-	@XmlElement(name = "Sgnr", required = true)
 	public List<Signer1> getSigner() {
-		return signer;
+		return signer == null ? signer = new ArrayList<>() : signer;
 	}
 
-	public void setSigner(List<com.tools20022.repository.msg.Signer1> signer) {
-		this.signer = signer;
+	public SignedData1 setSigner(List<com.tools20022.repository.msg.Signer1> signer) {
+		this.signer = Objects.requireNonNull(signer);
+		return this;
 	}
 }

@@ -24,9 +24,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.entity.TransportBySea;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information related for the transportation of goods by sea."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransportBySea3", propOrder = {"portOfLoading", "portOfDischarge", "seaCarrierName"})
 public class TransportBySea3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PortOfLoadng")
 	protected List<Max35Text> portOfLoading;
 	/**
-	 * Identifies the port where the goods are loaded on board the ship.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +112,7 @@ public class TransportBySea3 {
 	public static final MMMessageAttribute mmPortOfLoading = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
-			componentContext_lazy = () -> TransportBySea3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea3.mmObject();
 			isDerived = false;
 			xmlTag = "PortOfLoadng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +122,11 @@ public class TransportBySea3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PortOfDschrge", required = true)
 	protected List<Max35Text> portOfDischarge;
 	/**
-	 * Identifies the port where the goods are discharged.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +159,7 @@ public class TransportBySea3 {
 	public static final MMMessageAttribute mmPortOfDischarge = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
-			componentContext_lazy = () -> TransportBySea3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea3.mmObject();
 			isDerived = false;
 			xmlTag = "PortOfDschrge";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,11 +169,11 @@ public class TransportBySea3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SeaCrrierNm")
 	protected Max35Text seaCarrierName;
 	/**
-	 * Identifies the party that is responsible for the conveyance of the goods
-	 * from one place to another.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,7 +202,7 @@ public class TransportBySea3 {
 	 */
 	public static final MMMessageAttribute mmSeaCarrierName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransportBySea3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea3.mmObject();
 			isDerived = false;
 			xmlTag = "SeaCrrierNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,9 +217,10 @@ public class TransportBySea3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransportBySea3.mmPortOfLoading, TransportBySea3.mmPortOfDischarge, TransportBySea3.mmSeaCarrierName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea3.mmPortOfLoading, com.tools20022.repository.msg.TransportBySea3.mmPortOfDischarge,
+						com.tools20022.repository.msg.TransportBySea3.mmSeaCarrierName);
 				trace_lazy = () -> TransportBySea.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransportBySea3";
 				definition = "Information related for the transportation of goods by sea.";
@@ -227,30 +229,30 @@ public class TransportBySea3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PortOfLoadng")
 	public List<Max35Text> getPortOfLoading() {
-		return portOfLoading;
+		return portOfLoading == null ? portOfLoading = new ArrayList<>() : portOfLoading;
 	}
 
-	public void setPortOfLoading(List<Max35Text> portOfLoading) {
-		this.portOfLoading = portOfLoading;
+	public TransportBySea3 setPortOfLoading(List<Max35Text> portOfLoading) {
+		this.portOfLoading = Objects.requireNonNull(portOfLoading);
+		return this;
 	}
 
-	@XmlElement(name = "PortOfDschrge", required = true)
 	public List<Max35Text> getPortOfDischarge() {
-		return portOfDischarge;
+		return portOfDischarge == null ? portOfDischarge = new ArrayList<>() : portOfDischarge;
 	}
 
-	public void setPortOfDischarge(List<Max35Text> portOfDischarge) {
-		this.portOfDischarge = portOfDischarge;
+	public TransportBySea3 setPortOfDischarge(List<Max35Text> portOfDischarge) {
+		this.portOfDischarge = Objects.requireNonNull(portOfDischarge);
+		return this;
 	}
 
-	@XmlElement(name = "SeaCrrierNm")
-	public Max35Text getSeaCarrierName() {
-		return seaCarrierName;
+	public Optional<Max35Text> getSeaCarrierName() {
+		return seaCarrierName == null ? Optional.empty() : Optional.of(seaCarrierName);
 	}
 
-	public void setSeaCarrierName(Max35Text seaCarrierName) {
+	public TransportBySea3 setSeaCarrierName(Max35Text seaCarrierName) {
 		this.seaCarrierName = seaCarrierName;
+		return this;
 	}
 }

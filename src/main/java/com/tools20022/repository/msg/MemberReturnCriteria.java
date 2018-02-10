@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the criteria used to report on a member."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MemberReturnCriteria", propOrder = {"nameIndicator", "memberReturnAddressIndicator", "accountIndicator", "typeIndicator", "statusIndicator", "contactReferenceIndicator", "communicationAddressIndicator"})
 public class MemberReturnCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NmInd")
 	protected RequestedIndicator nameIndicator;
 	/**
-	 * Indicates whether the member name is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +114,7 @@ public class MemberReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmNameIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "NmInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +125,11 @@ public class MemberReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "MmbRtrAdrInd")
 	protected RequestedIndicator memberReturnAddressIndicator;
 	/**
-	 * Indicates whether the member return address is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +158,7 @@ public class MemberReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmMemberReturnAddressIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "MmbRtrAdrInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,10 +169,11 @@ public class MemberReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctInd")
 	protected RequestedIndicator accountIndicator;
 	/**
-	 * Indicates whether the member account is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,7 +201,7 @@ public class MemberReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmAccountIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "AcctInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,10 +212,11 @@ public class MemberReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "TpInd")
 	protected RequestedIndicator typeIndicator;
 	/**
-	 * Indicates whether the member type is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -239,7 +244,7 @@ public class MemberReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmTypeIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "TpInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -250,10 +255,11 @@ public class MemberReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "StsInd")
 	protected RequestedIndicator statusIndicator;
 	/**
-	 * Indicates whether the member status is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -281,7 +287,7 @@ public class MemberReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmStatusIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "StsInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -292,10 +298,11 @@ public class MemberReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CtctRefInd")
 	protected RequestedIndicator contactReferenceIndicator;
 	/**
-	 * Indicates whether the contact references are requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -323,7 +330,7 @@ public class MemberReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmContactReferenceIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "CtctRefInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -334,10 +341,11 @@ public class MemberReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ComAdrInd")
 	protected RequestedIndicator communicationAddressIndicator;
 	/**
-	 * Indicates whether the communication addresses are requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -366,7 +374,7 @@ public class MemberReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmCommunicationAddressIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MemberReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "ComAdrInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -381,9 +389,10 @@ public class MemberReturnCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MemberReturnCriteria.mmNameIndicator, MemberReturnCriteria.mmMemberReturnAddressIndicator, MemberReturnCriteria.mmAccountIndicator, MemberReturnCriteria.mmTypeIndicator,
-						MemberReturnCriteria.mmStatusIndicator, MemberReturnCriteria.mmContactReferenceIndicator, MemberReturnCriteria.mmCommunicationAddressIndicator);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberReturnCriteria.mmNameIndicator, com.tools20022.repository.msg.MemberReturnCriteria.mmMemberReturnAddressIndicator,
+						com.tools20022.repository.msg.MemberReturnCriteria.mmAccountIndicator, com.tools20022.repository.msg.MemberReturnCriteria.mmTypeIndicator, com.tools20022.repository.msg.MemberReturnCriteria.mmStatusIndicator,
+						com.tools20022.repository.msg.MemberReturnCriteria.mmContactReferenceIndicator, com.tools20022.repository.msg.MemberReturnCriteria.mmCommunicationAddressIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberReturnCriteria";
 				definition = "Defines the criteria used to report on a member.";
@@ -392,66 +401,66 @@ public class MemberReturnCriteria {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NmInd")
-	public RequestedIndicator getNameIndicator() {
-		return nameIndicator;
+	public Optional<RequestedIndicator> getNameIndicator() {
+		return nameIndicator == null ? Optional.empty() : Optional.of(nameIndicator);
 	}
 
-	public void setNameIndicator(RequestedIndicator nameIndicator) {
+	public MemberReturnCriteria setNameIndicator(RequestedIndicator nameIndicator) {
 		this.nameIndicator = nameIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "MmbRtrAdrInd")
-	public RequestedIndicator getMemberReturnAddressIndicator() {
-		return memberReturnAddressIndicator;
+	public Optional<RequestedIndicator> getMemberReturnAddressIndicator() {
+		return memberReturnAddressIndicator == null ? Optional.empty() : Optional.of(memberReturnAddressIndicator);
 	}
 
-	public void setMemberReturnAddressIndicator(RequestedIndicator memberReturnAddressIndicator) {
+	public MemberReturnCriteria setMemberReturnAddressIndicator(RequestedIndicator memberReturnAddressIndicator) {
 		this.memberReturnAddressIndicator = memberReturnAddressIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "AcctInd")
-	public RequestedIndicator getAccountIndicator() {
-		return accountIndicator;
+	public Optional<RequestedIndicator> getAccountIndicator() {
+		return accountIndicator == null ? Optional.empty() : Optional.of(accountIndicator);
 	}
 
-	public void setAccountIndicator(RequestedIndicator accountIndicator) {
+	public MemberReturnCriteria setAccountIndicator(RequestedIndicator accountIndicator) {
 		this.accountIndicator = accountIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "TpInd")
-	public RequestedIndicator getTypeIndicator() {
-		return typeIndicator;
+	public Optional<RequestedIndicator> getTypeIndicator() {
+		return typeIndicator == null ? Optional.empty() : Optional.of(typeIndicator);
 	}
 
-	public void setTypeIndicator(RequestedIndicator typeIndicator) {
+	public MemberReturnCriteria setTypeIndicator(RequestedIndicator typeIndicator) {
 		this.typeIndicator = typeIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "StsInd")
-	public RequestedIndicator getStatusIndicator() {
-		return statusIndicator;
+	public Optional<RequestedIndicator> getStatusIndicator() {
+		return statusIndicator == null ? Optional.empty() : Optional.of(statusIndicator);
 	}
 
-	public void setStatusIndicator(RequestedIndicator statusIndicator) {
+	public MemberReturnCriteria setStatusIndicator(RequestedIndicator statusIndicator) {
 		this.statusIndicator = statusIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "CtctRefInd")
-	public RequestedIndicator getContactReferenceIndicator() {
-		return contactReferenceIndicator;
+	public Optional<RequestedIndicator> getContactReferenceIndicator() {
+		return contactReferenceIndicator == null ? Optional.empty() : Optional.of(contactReferenceIndicator);
 	}
 
-	public void setContactReferenceIndicator(RequestedIndicator contactReferenceIndicator) {
+	public MemberReturnCriteria setContactReferenceIndicator(RequestedIndicator contactReferenceIndicator) {
 		this.contactReferenceIndicator = contactReferenceIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "ComAdrInd")
-	public RequestedIndicator getCommunicationAddressIndicator() {
-		return communicationAddressIndicator;
+	public Optional<RequestedIndicator> getCommunicationAddressIndicator() {
+		return communicationAddressIndicator == null ? Optional.empty() : Optional.of(communicationAddressIndicator);
 	}
 
-	public void setCommunicationAddressIndicator(RequestedIndicator communicationAddressIndicator) {
+	public MemberReturnCriteria setCommunicationAddressIndicator(RequestedIndicator communicationAddressIndicator) {
 		this.communicationAddressIndicator = communicationAddressIndicator;
+		return this;
 	}
 }

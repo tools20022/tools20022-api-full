@@ -27,9 +27,8 @@ import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -43,28 +42,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.ForeignExchangeTradeLatestVersion
- * ForeignExchangeTradeLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
- * PostTradeForeignExchangeISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017
- * PostTradeForeignExchangeMaintenance20162017}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement
- * PostTradeForeignExchangeMaintenance20162017andSupplement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "FXTradStsAndDtlsNtfctn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -115,9 +92,44 @@ import javax.xml.bind.annotation.*;
  * ForeignExchangeTradeStatusAndDetailsNotificationV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
+ * PostTradeForeignExchangeISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017
+ * PostTradeForeignExchangeMaintenance20162017}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement
+ * PostTradeForeignExchangeMaintenance20162017andSupplement}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "FXTradStsAndDtlsNtfctn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.ForeignExchangeTradeLatestVersion
+ * ForeignExchangeTradeLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code fxtr.017.001.04}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSplitTradeFalsePresenceRule#forForeignExchangeTradeStatusAndDetailsNotificationV04
+ * ConstraintSplitTradeFalsePresenceRule.
+ * forForeignExchangeTradeStatusAndDetailsNotificationV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSplitTradeTruePresenceRule#forForeignExchangeTradeStatusAndDetailsNotificationV04
+ * ConstraintSplitTradeTruePresenceRule.
+ * forForeignExchangeTradeStatusAndDetailsNotificationV04}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -130,17 +142,17 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ForeignExchangeTradeStatusAndDetailsNotificationV04", propOrder = {"statusDetails", "tradeInformation", "tradingSideIdentification", "counterpartySideIdentification", "tradeAmounts", "agreedRate",
 		"nonDeliverableForwardConditions", "tradingSideSettlementInstructions", "counterpartySideSettlementInstructions", "generalInformation", "splitTradeInformation", "regulatoryReporting", "supplementaryData"})
 public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StsDtls", required = true)
 	protected TradeData14 statusDetails;
 	/**
-	 * Provides information on the status of a foreign exchange trade in the
-	 * central system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -181,10 +193,11 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "TradInf", required = true)
 	protected TradeAgreement12 tradeInformation;
 	/**
-	 * General information related to the foreign exchange trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,10 +238,11 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "TradgSdId", required = true)
 	protected TradePartyIdentification6 tradingSideIdentification;
 	/**
-	 * Party(ies) on the trading side of the foreign exchange trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -269,10 +283,11 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "CtrPtySdId", required = true)
 	protected TradePartyIdentification6 counterpartySideIdentification;
 	/**
-	 * Party(ies) on the counterparty side of the foreign exchange trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -313,10 +328,11 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "TradAmts", required = true)
 	protected AmountsAndValueDate1 tradeAmounts;
 	/**
-	 * Amounts of the foreign exchange trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -356,10 +372,11 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "AgrdRate", required = true)
 	protected AgreedRate3 agreedRate;
 	/**
-	 * Exchange rate as agreed by the traders.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -398,10 +415,11 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "NDFConds")
 	protected NonDeliverableForwardConditions2 nonDeliverableForwardConditions;
 	/**
-	 * Provides the opening and fixing information for an NDF trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -442,10 +460,11 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "TradgSdSttlmInstrs")
 	protected SettlementParties29 tradingSideSettlementInstructions;
 	/**
-	 * Settlement instructions for the amounts received by the trading side.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -486,10 +505,11 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "CtrPtySdSttlmInstrs")
 	protected SettlementParties29 counterpartySideSettlementInstructions;
 	/**
-	 * Settlement instructions for the amounts received by the counterparty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -530,10 +550,11 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "GnlInf")
 	protected GeneralInformation5 generalInformation;
 	/**
-	 * Additional Information about the foreign exchange trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -573,10 +594,11 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "SpltTradInf")
 	protected List<SplitTradeDetails3> splitTradeInformation;
 	/**
-	 * Details of the split trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -615,12 +637,11 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "RgltryRptg")
 	protected RegulatoryReporting6 regulatoryReporting;
 	/**
-	 * Information that is to be provided to trade repositories in the context
-	 * of the regulatory standards around over-the-counter (OTC) derivatives,
-	 * central counterparties and trade repositories.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -662,11 +683,11 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -711,6 +732,8 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSplitTradeFalsePresenceRule.forForeignExchangeTradeStatusAndDetailsNotificationV04,
+						com.tools20022.repository.constraints.ConstraintSplitTradeTruePresenceRule.forForeignExchangeTradeStatusAndDetailsNotificationV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeTradeStatusAndDetailsNotificationV04";
 				definition = "Scope\r\r\nThe ForeignExchangeTradeStatusAndDetails message is sent by a central system to the participant to provide notification of the status and details of a foreign exchange trade.\r\r\nUsage\r\r\nThe notification is sent by a central settlement system to the two trading parties after it has received foreign exchange trade instructions from both.";
@@ -748,124 +771,124 @@ public class ForeignExchangeTradeStatusAndDetailsNotificationV04 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StsDtls", required = true)
 	public TradeData14 getStatusDetails() {
 		return statusDetails;
 	}
 
-	public void setStatusDetails(TradeData14 statusDetails) {
-		this.statusDetails = statusDetails;
+	public ForeignExchangeTradeStatusAndDetailsNotificationV04 setStatusDetails(TradeData14 statusDetails) {
+		this.statusDetails = Objects.requireNonNull(statusDetails);
+		return this;
 	}
 
-	@XmlElement(name = "TradInf", required = true)
 	public TradeAgreement12 getTradeInformation() {
 		return tradeInformation;
 	}
 
-	public void setTradeInformation(TradeAgreement12 tradeInformation) {
-		this.tradeInformation = tradeInformation;
+	public ForeignExchangeTradeStatusAndDetailsNotificationV04 setTradeInformation(TradeAgreement12 tradeInformation) {
+		this.tradeInformation = Objects.requireNonNull(tradeInformation);
+		return this;
 	}
 
-	@XmlElement(name = "TradgSdId", required = true)
 	public TradePartyIdentification6 getTradingSideIdentification() {
 		return tradingSideIdentification;
 	}
 
-	public void setTradingSideIdentification(TradePartyIdentification6 tradingSideIdentification) {
-		this.tradingSideIdentification = tradingSideIdentification;
+	public ForeignExchangeTradeStatusAndDetailsNotificationV04 setTradingSideIdentification(TradePartyIdentification6 tradingSideIdentification) {
+		this.tradingSideIdentification = Objects.requireNonNull(tradingSideIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CtrPtySdId", required = true)
 	public TradePartyIdentification6 getCounterpartySideIdentification() {
 		return counterpartySideIdentification;
 	}
 
-	public void setCounterpartySideIdentification(TradePartyIdentification6 counterpartySideIdentification) {
-		this.counterpartySideIdentification = counterpartySideIdentification;
+	public ForeignExchangeTradeStatusAndDetailsNotificationV04 setCounterpartySideIdentification(TradePartyIdentification6 counterpartySideIdentification) {
+		this.counterpartySideIdentification = Objects.requireNonNull(counterpartySideIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TradAmts", required = true)
 	public AmountsAndValueDate1 getTradeAmounts() {
 		return tradeAmounts;
 	}
 
-	public void setTradeAmounts(AmountsAndValueDate1 tradeAmounts) {
-		this.tradeAmounts = tradeAmounts;
+	public ForeignExchangeTradeStatusAndDetailsNotificationV04 setTradeAmounts(AmountsAndValueDate1 tradeAmounts) {
+		this.tradeAmounts = Objects.requireNonNull(tradeAmounts);
+		return this;
 	}
 
-	@XmlElement(name = "AgrdRate", required = true)
 	public AgreedRate3 getAgreedRate() {
 		return agreedRate;
 	}
 
-	public void setAgreedRate(AgreedRate3 agreedRate) {
-		this.agreedRate = agreedRate;
+	public ForeignExchangeTradeStatusAndDetailsNotificationV04 setAgreedRate(AgreedRate3 agreedRate) {
+		this.agreedRate = Objects.requireNonNull(agreedRate);
+		return this;
 	}
 
-	@XmlElement(name = "NDFConds")
-	public NonDeliverableForwardConditions2 getNonDeliverableForwardConditions() {
-		return nonDeliverableForwardConditions;
+	public Optional<NonDeliverableForwardConditions2> getNonDeliverableForwardConditions() {
+		return nonDeliverableForwardConditions == null ? Optional.empty() : Optional.of(nonDeliverableForwardConditions);
 	}
 
-	public void setNonDeliverableForwardConditions(NonDeliverableForwardConditions2 nonDeliverableForwardConditions) {
+	public ForeignExchangeTradeStatusAndDetailsNotificationV04 setNonDeliverableForwardConditions(NonDeliverableForwardConditions2 nonDeliverableForwardConditions) {
 		this.nonDeliverableForwardConditions = nonDeliverableForwardConditions;
+		return this;
 	}
 
-	@XmlElement(name = "TradgSdSttlmInstrs")
-	public SettlementParties29 getTradingSideSettlementInstructions() {
-		return tradingSideSettlementInstructions;
+	public Optional<SettlementParties29> getTradingSideSettlementInstructions() {
+		return tradingSideSettlementInstructions == null ? Optional.empty() : Optional.of(tradingSideSettlementInstructions);
 	}
 
-	public void setTradingSideSettlementInstructions(SettlementParties29 tradingSideSettlementInstructions) {
+	public ForeignExchangeTradeStatusAndDetailsNotificationV04 setTradingSideSettlementInstructions(SettlementParties29 tradingSideSettlementInstructions) {
 		this.tradingSideSettlementInstructions = tradingSideSettlementInstructions;
+		return this;
 	}
 
-	@XmlElement(name = "CtrPtySdSttlmInstrs")
-	public SettlementParties29 getCounterpartySideSettlementInstructions() {
-		return counterpartySideSettlementInstructions;
+	public Optional<SettlementParties29> getCounterpartySideSettlementInstructions() {
+		return counterpartySideSettlementInstructions == null ? Optional.empty() : Optional.of(counterpartySideSettlementInstructions);
 	}
 
-	public void setCounterpartySideSettlementInstructions(SettlementParties29 counterpartySideSettlementInstructions) {
+	public ForeignExchangeTradeStatusAndDetailsNotificationV04 setCounterpartySideSettlementInstructions(SettlementParties29 counterpartySideSettlementInstructions) {
 		this.counterpartySideSettlementInstructions = counterpartySideSettlementInstructions;
+		return this;
 	}
 
-	@XmlElement(name = "GnlInf")
-	public GeneralInformation5 getGeneralInformation() {
-		return generalInformation;
+	public Optional<GeneralInformation5> getGeneralInformation() {
+		return generalInformation == null ? Optional.empty() : Optional.of(generalInformation);
 	}
 
-	public void setGeneralInformation(GeneralInformation5 generalInformation) {
+	public ForeignExchangeTradeStatusAndDetailsNotificationV04 setGeneralInformation(GeneralInformation5 generalInformation) {
 		this.generalInformation = generalInformation;
+		return this;
 	}
 
-	@XmlElement(name = "SpltTradInf")
 	public List<SplitTradeDetails3> getSplitTradeInformation() {
-		return splitTradeInformation;
+		return splitTradeInformation == null ? splitTradeInformation = new ArrayList<>() : splitTradeInformation;
 	}
 
-	public void setSplitTradeInformation(List<SplitTradeDetails3> splitTradeInformation) {
-		this.splitTradeInformation = splitTradeInformation;
+	public ForeignExchangeTradeStatusAndDetailsNotificationV04 setSplitTradeInformation(List<SplitTradeDetails3> splitTradeInformation) {
+		this.splitTradeInformation = Objects.requireNonNull(splitTradeInformation);
+		return this;
 	}
 
-	@XmlElement(name = "RgltryRptg")
-	public RegulatoryReporting6 getRegulatoryReporting() {
-		return regulatoryReporting;
+	public Optional<RegulatoryReporting6> getRegulatoryReporting() {
+		return regulatoryReporting == null ? Optional.empty() : Optional.of(regulatoryReporting);
 	}
 
-	public void setRegulatoryReporting(RegulatoryReporting6 regulatoryReporting) {
+	public ForeignExchangeTradeStatusAndDetailsNotificationV04 setRegulatoryReporting(RegulatoryReporting6 regulatoryReporting) {
 		this.regulatoryReporting = regulatoryReporting;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public ForeignExchangeTradeStatusAndDetailsNotificationV04 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:fxtr.017.04.04")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.04")
 	static public class Document {
 		@XmlElement(name = "FXTradStsAndDtlsNtfctn", required = true)
 		public ForeignExchangeTradeStatusAndDetailsNotificationV04 messageBody;

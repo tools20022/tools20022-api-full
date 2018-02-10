@@ -24,9 +24,11 @@ import com.tools20022.repository.entity.BookEntry;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.IntraBalanceCancellation1;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between the report data or an operational error."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IntraBalanceOrOperationalError2Choice", propOrder = {"cancellations", "operationalError"})
 public class IntraBalanceOrOperationalError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cxls", required = true)
 	protected List<IntraBalanceCancellation1> cancellations;
 	/**
-	 * Identifies the transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -106,7 +109,7 @@ public class IntraBalanceOrOperationalError2Choice {
 	public static final MMMessageAssociationEnd mmCancellations = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> BookEntry.mmObject();
-			componentContext_lazy = () -> IntraBalanceOrOperationalError2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IntraBalanceOrOperationalError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cxls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +120,11 @@ public class IntraBalanceOrOperationalError2Choice {
 			type_lazy = () -> IntraBalanceCancellation1.mmObject();
 		}
 	};
+	@XmlElement(name = "OprlErr", required = true)
 	protected List<ErrorHandling3> operationalError;
 	/**
-	 * Operational error resulting from a rejection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -146,7 +150,7 @@ public class IntraBalanceOrOperationalError2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraBalanceOrOperationalError2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IntraBalanceOrOperationalError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,9 +165,9 @@ public class IntraBalanceOrOperationalError2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IntraBalanceOrOperationalError2Choice.mmCancellations, IntraBalanceOrOperationalError2Choice.mmOperationalError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IntraBalanceOrOperationalError2Choice.mmCancellations, com.tools20022.repository.choice.IntraBalanceOrOperationalError2Choice.mmOperationalError);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceOrOperationalError2Choice";
 				definition = "Choice between the report data or an operational error.";
@@ -172,21 +176,21 @@ public class IntraBalanceOrOperationalError2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cxls", required = true)
 	public List<IntraBalanceCancellation1> getCancellations() {
-		return cancellations;
+		return cancellations == null ? cancellations = new ArrayList<>() : cancellations;
 	}
 
-	public void setCancellations(List<IntraBalanceCancellation1> cancellations) {
-		this.cancellations = cancellations;
+	public IntraBalanceOrOperationalError2Choice setCancellations(List<IntraBalanceCancellation1> cancellations) {
+		this.cancellations = Objects.requireNonNull(cancellations);
+		return this;
 	}
 
-	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling3> getOperationalError() {
-		return operationalError;
+		return operationalError == null ? operationalError = new ArrayList<>() : operationalError;
 	}
 
-	public void setOperationalError(List<ErrorHandling3> operationalError) {
-		this.operationalError = operationalError;
+	public IntraBalanceOrOperationalError2Choice setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = Objects.requireNonNull(operationalError);
+		return this;
 	}
 }

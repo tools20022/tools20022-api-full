@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PartiallySettledStatusReasonCode;
+import com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for a partially settled status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReasonCode
- * PartiallySettledStatusReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code#mmUnitsPartiallySettled
- * PartiallySettledStatusReason1Code.mmUnitsPartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code#UnitsPartiallySettled
+ * PartiallySettledStatusReason1Code.UnitsPartiallySettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code#mmCashPartiallySettled
- * PartiallySettledStatusReason1Code.mmCashPartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code#CashPartiallySettled
+ * PartiallySettledStatusReason1Code.CashPartiallySettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code#mmUnitsCashPartiallySettled
- * PartiallySettledStatusReason1Code.mmUnitsCashPartiallySettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code#UnitsCashPartiallySettled
+ * PartiallySettledStatusReason1Code.UnitsCashPartiallySettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code#mmHoldBackPendingAudit
- * PartiallySettledStatusReason1Code.mmHoldBackPendingAudit}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code#HoldBackPendingAudit
+ * PartiallySettledStatusReason1Code.HoldBackPendingAudit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code#mmHoldBackLiquidation
- * PartiallySettledStatusReason1Code.mmHoldBackLiquidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReason1Code#HoldBackLiquidation
+ * PartiallySettledStatusReason1Code.HoldBackLiquidation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PartiallySettledStatusReasonCode
+ * PartiallySettledStatusReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason for a partially settled status."</li>
  * </ul>
  */
-public class PartiallySettledStatusReason1Code extends PartiallySettledStatusReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PartiallySettledStatusReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class PartiallySettledStatusReason1Code extends PartiallySettledStatusRea
 	 * name} = "UnitsPartiallySettled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnitsPartiallySettled = new MMCode() {
+	public static final PartiallySettledStatusReason1Code UnitsPartiallySettled = new PartiallySettledStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsPartiallySettled";
-			owner_lazy = () -> PartiallySettledStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.mmObject();
+			codeName = PartiallySettledStatusReasonCode.UnitsPartiallySettled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class PartiallySettledStatusReason1Code extends PartiallySettledStatusRea
 	 * name} = "CashPartiallySettled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashPartiallySettled = new MMCode() {
+	public static final PartiallySettledStatusReason1Code CashPartiallySettled = new PartiallySettledStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPartiallySettled";
-			owner_lazy = () -> PartiallySettledStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.mmObject();
+			codeName = PartiallySettledStatusReasonCode.CashPartiallySettled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class PartiallySettledStatusReason1Code extends PartiallySettledStatusRea
 	 * name} = "UnitsCashPartiallySettled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnitsCashPartiallySettled = new MMCode() {
+	public static final PartiallySettledStatusReason1Code UnitsCashPartiallySettled = new PartiallySettledStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsCashPartiallySettled";
-			owner_lazy = () -> PartiallySettledStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.mmObject();
+			codeName = PartiallySettledStatusReasonCode.UnitsCashPartiallySettled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +169,12 @@ public class PartiallySettledStatusReason1Code extends PartiallySettledStatusRea
 	 * name} = "HoldBackPendingAudit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHoldBackPendingAudit = new MMCode() {
+	public static final PartiallySettledStatusReason1Code HoldBackPendingAudit = new PartiallySettledStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldBackPendingAudit";
-			owner_lazy = () -> PartiallySettledStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.mmObject();
+			codeName = PartiallySettledStatusReasonCode.HoldBackPendingAudit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,27 +193,62 @@ public class PartiallySettledStatusReason1Code extends PartiallySettledStatusRea
 	 * name} = "HoldBackLiquidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHoldBackLiquidation = new MMCode() {
+	public static final PartiallySettledStatusReason1Code HoldBackLiquidation = new PartiallySettledStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldBackLiquidation";
-			owner_lazy = () -> PartiallySettledStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.mmObject();
+			codeName = PartiallySettledStatusReasonCode.HoldBackLiquidation.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PartiallySettledStatusReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PartiallySettledStatusReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("UPST");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartiallySettledStatusReason1Code";
 				definition = "Specifies the reason for a partially settled status.";
-				code_lazy = () -> Arrays.asList(PartiallySettledStatusReason1Code.mmUnitsPartiallySettled, PartiallySettledStatusReason1Code.mmCashPartiallySettled, PartiallySettledStatusReason1Code.mmUnitsCashPartiallySettled,
-						PartiallySettledStatusReason1Code.mmHoldBackPendingAudit, PartiallySettledStatusReason1Code.mmHoldBackLiquidation);
 				trace_lazy = () -> PartiallySettledStatusReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.UnitsPartiallySettled, com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.CashPartiallySettled,
+						com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.UnitsCashPartiallySettled, com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.HoldBackPendingAudit,
+						com.tools20022.repository.codeset.PartiallySettledStatusReason1Code.HoldBackLiquidation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(UnitsPartiallySettled.getCodeName().get(), UnitsPartiallySettled);
+		codesByName.put(CashPartiallySettled.getCodeName().get(), CashPartiallySettled);
+		codesByName.put(UnitsCashPartiallySettled.getCodeName().get(), UnitsCashPartiallySettled);
+		codesByName.put(HoldBackPendingAudit.getCodeName().get(), HoldBackPendingAudit);
+		codesByName.put(HoldBackLiquidation.getCodeName().get(), HoldBackLiquidation);
+	}
+
+	public static PartiallySettledStatusReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PartiallySettledStatusReason1Code[] values() {
+		PartiallySettledStatusReason1Code[] values = new PartiallySettledStatusReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PartiallySettledStatusReason1Code> {
+		@Override
+		public PartiallySettledStatusReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PartiallySettledStatusReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

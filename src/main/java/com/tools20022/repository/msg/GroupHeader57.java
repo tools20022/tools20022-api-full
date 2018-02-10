@@ -28,9 +28,8 @@ import com.tools20022.repository.choice.Authorisation1Choice;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -100,8 +99,22 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintControlSumAndGroupReversalRule#forGroupHeader57
+ * ConstraintControlSumAndGroupReversalRule.forGroupHeader57}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline#forGroupHeader57
+ * ConstraintGroupReversalAndNumberOfTransactionsGuideline.forGroupHeader57}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountAndDateRule#forGroupHeader57
+ * ConstraintTotalInterbankSettlementAmountAndDateRule.forGroupHeader57}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -120,19 +133,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GroupHeader57", propOrder = {"messageIdentification", "creationDateTime", "authorisation", "batchBooking", "numberOfTransactions", "controlSum", "groupReversal", "totalReversedInterbankSettlementAmount",
 		"interbankSettlementDate", "settlementInformation", "instructingAgent", "instructedAgent"})
 public class GroupHeader57 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected Max35Text messageIdentification;
 	/**
-	 * Point to point reference, as assigned by the instructing party, and sent
-	 * to the next party in the chain to unambiguously identify the message.
-	 * Usage: The instructing party has to make sure that MessageIdentification
-	 * is unique per instructed party for a pre-agreed period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,7 +185,7 @@ public class GroupHeader57 {
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
-			componentContext_lazy = () -> GroupHeader57.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader57.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,10 +197,11 @@ public class GroupHeader57 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm", required = true)
 	protected ISODateTime creationDateTime;
 	/**
-	 * Date and time at which the message was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -229,7 +241,7 @@ public class GroupHeader57 {
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
-			componentContext_lazy = () -> GroupHeader57.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader57.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,18 +253,11 @@ public class GroupHeader57 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "Authstn")
 	protected List<Authorisation1Choice> authorisation;
 	/**
-	 * User identification or any user key to be used to check whether the
-	 * initiating party is allowed to initiate transactions from the account
-	 * specified in the message.
 	 * 
-	 * Usage: The content is not of a technical nature, but reflects the
-	 * organisational structure at the initiating side. The authorisation
-	 * element can typically be used in relay scenarios, payment initiations,
-	 * payment returns or payment reversals that are initiated on behalf of a
-	 * party different from the initiating party.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -289,7 +294,7 @@ public class GroupHeader57 {
 	 */
 	public static final MMMessageAttribute mmAuthorisation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader57.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader57.mmObject();
 			isDerived = false;
 			xmlTag = "Authstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -301,13 +306,11 @@ public class GroupHeader57 {
 			complexType_lazy = () -> Authorisation1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "BtchBookg")
 	protected BatchBookingIndicator batchBooking;
 	/**
-	 * Identifies whether a single entry per individual transaction or a batch
-	 * entry for the sum of the amounts of all transactions within the group of
-	 * a message is requested. Usage: Batch booking is used to request and not
-	 * order a possible batch booking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -344,7 +347,7 @@ public class GroupHeader57 {
 	 */
 	public static final MMMessageAttribute mmBatchBooking = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader57.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader57.mmObject();
 			isDerived = false;
 			xmlTag = "BtchBookg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -356,10 +359,11 @@ public class GroupHeader57 {
 			simpleType_lazy = () -> BatchBookingIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfTxs", required = true)
 	protected Max15NumericText numberOfTransactions;
 	/**
-	 * Number of individual transactions contained in the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -395,7 +399,7 @@ public class GroupHeader57 {
 	 */
 	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader57.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader57.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfTxs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -407,11 +411,11 @@ public class GroupHeader57 {
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrlSum")
 	protected DecimalNumber controlSum;
 	/**
-	 * Total of all individual amounts included in the message, irrespective of
-	 * currencies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -447,7 +451,7 @@ public class GroupHeader57 {
 	 */
 	public static final MMMessageAttribute mmControlSum = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader57.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader57.mmObject();
 			isDerived = false;
 			xmlTag = "CtrlSum";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -459,11 +463,11 @@ public class GroupHeader57 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "GrpRvsl")
 	protected TrueFalseIndicator groupReversal;
 	/**
-	 * Indicates whether the reversal applies to the whole group of transactions
-	 * or to individual transactions within the original group.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -500,7 +504,7 @@ public class GroupHeader57 {
 	 */
 	public static final MMMessageAttribute mmGroupReversal = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader57.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader57.mmObject();
 			isDerived = false;
 			xmlTag = "GrpRvsl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -512,11 +516,11 @@ public class GroupHeader57 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlRvsdIntrBkSttlmAmt")
 	protected ActiveCurrencyAndAmount totalReversedInterbankSettlementAmount;
 	/**
-	 * Total amount of money moved between the instructing agent and the
-	 * instructed agent in the reversal message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -559,7 +563,7 @@ public class GroupHeader57 {
 	public static final MMMessageAttribute mmTotalReversedInterbankSettlementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
-			componentContext_lazy = () -> GroupHeader57.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader57.mmObject();
 			isDerived = false;
 			xmlTag = "TtlRvsdIntrBkSttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -571,12 +575,11 @@ public class GroupHeader57 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmDt")
 	protected ISODate interbankSettlementDate;
 	/**
-	 * Date on which the amount of money ceases to be available to the agent
-	 * that owes it and when the amount of money becomes available to the agent
-	 * to which it is due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -618,7 +621,7 @@ public class GroupHeader57 {
 	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
-			componentContext_lazy = () -> GroupHeader57.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader57.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -630,11 +633,11 @@ public class GroupHeader57 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmInf", required = true)
 	protected SettlementInstruction1 settlementInformation;
 	/**
-	 * Specifies the details on how the settlement of the transaction(s) between
-	 * the instructing agent and the instructed agent is completed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -675,7 +678,7 @@ public class GroupHeader57 {
 	public static final MMMessageAssociationEnd mmSettlementInformation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
-			componentContext_lazy = () -> GroupHeader57.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader57.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -688,15 +691,11 @@ public class GroupHeader57 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementInstruction1.mmObject();
 		}
 	};
+	@XmlElement(name = "InstgAgt")
 	protected BranchAndFinancialInstitutionIdentification5 instructingAgent;
 	/**
-	 * Agent that instructs the next party in the chain to carry out the (set
-	 * of) instruction(s).
 	 * 
-	 * Usage: The instructing agent is the party sending the reversal message
-	 * and not the party that sent the original instruction that is being
-	 * reversed.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -738,7 +737,7 @@ public class GroupHeader57 {
 	public static final MMMessageAssociationEnd mmInstructingAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> GroupHeader57.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader57.mmObject();
 			isDerived = false;
 			xmlTag = "InstgAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -751,15 +750,11 @@ public class GroupHeader57 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "InstdAgt")
 	protected BranchAndFinancialInstitutionIdentification5 instructedAgent;
 	/**
-	 * Agent that is instructed by the previous party in the chain to carry out
-	 * the (set of) instruction(s).
 	 * 
-	 * Usage: The instructed agent is the party receiving the reversal message
-	 * and not the party that received the original instruction that is being
-	 * reversed.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -801,7 +796,7 @@ public class GroupHeader57 {
 	public static final MMMessageAssociationEnd mmInstructedAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> GroupHeader57.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader57.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -818,12 +813,17 @@ public class GroupHeader57 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GroupHeader57.mmMessageIdentification, GroupHeader57.mmCreationDateTime, GroupHeader57.mmAuthorisation, GroupHeader57.mmBatchBooking, GroupHeader57.mmNumberOfTransactions,
-						GroupHeader57.mmControlSum, GroupHeader57.mmGroupReversal, GroupHeader57.mmTotalReversedInterbankSettlementAmount, GroupHeader57.mmInterbankSettlementDate, GroupHeader57.mmSettlementInformation,
-						GroupHeader57.mmInstructingAgent, GroupHeader57.mmInstructedAgent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader57.mmMessageIdentification, com.tools20022.repository.msg.GroupHeader57.mmCreationDateTime,
+						com.tools20022.repository.msg.GroupHeader57.mmAuthorisation, com.tools20022.repository.msg.GroupHeader57.mmBatchBooking, com.tools20022.repository.msg.GroupHeader57.mmNumberOfTransactions,
+						com.tools20022.repository.msg.GroupHeader57.mmControlSum, com.tools20022.repository.msg.GroupHeader57.mmGroupReversal, com.tools20022.repository.msg.GroupHeader57.mmTotalReversedInterbankSettlementAmount,
+						com.tools20022.repository.msg.GroupHeader57.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader57.mmSettlementInformation, com.tools20022.repository.msg.GroupHeader57.mmInstructingAgent,
+						com.tools20022.repository.msg.GroupHeader57.mmInstructedAgent);
 				messageBuildingBlock_lazy = () -> Arrays.asList(FIToFIPaymentReversalV03.mmGroupHeader, FIToFIPaymentReversalV04.mmGroupHeader, FIToFIPaymentReversalV05.mmGroupHeader);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintControlSumAndGroupReversalRule.forGroupHeader57,
+						com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forGroupHeader57,
+						com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountAndDateRule.forGroupHeader57);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GroupHeader57";
 				definition = "Set of characteristics shared by all individual transactions included in the message.";
@@ -833,111 +833,111 @@ public class GroupHeader57 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(Max35Text messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public GroupHeader57 setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
-		this.creationDateTime = creationDateTime;
+	public GroupHeader57 setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = Objects.requireNonNull(creationDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "Authstn")
 	public List<Authorisation1Choice> getAuthorisation() {
-		return authorisation;
+		return authorisation == null ? authorisation = new ArrayList<>() : authorisation;
 	}
 
-	public void setAuthorisation(List<Authorisation1Choice> authorisation) {
-		this.authorisation = authorisation;
+	public GroupHeader57 setAuthorisation(List<Authorisation1Choice> authorisation) {
+		this.authorisation = Objects.requireNonNull(authorisation);
+		return this;
 	}
 
-	@XmlElement(name = "BtchBookg")
-	public BatchBookingIndicator getBatchBooking() {
-		return batchBooking;
+	public Optional<BatchBookingIndicator> getBatchBooking() {
+		return batchBooking == null ? Optional.empty() : Optional.of(batchBooking);
 	}
 
-	public void setBatchBooking(BatchBookingIndicator batchBooking) {
+	public GroupHeader57 setBatchBooking(BatchBookingIndicator batchBooking) {
 		this.batchBooking = batchBooking;
+		return this;
 	}
 
-	@XmlElement(name = "NbOfTxs", required = true)
 	public Max15NumericText getNumberOfTransactions() {
 		return numberOfTransactions;
 	}
 
-	public void setNumberOfTransactions(Max15NumericText numberOfTransactions) {
-		this.numberOfTransactions = numberOfTransactions;
+	public GroupHeader57 setNumberOfTransactions(Max15NumericText numberOfTransactions) {
+		this.numberOfTransactions = Objects.requireNonNull(numberOfTransactions);
+		return this;
 	}
 
-	@XmlElement(name = "CtrlSum")
-	public DecimalNumber getControlSum() {
-		return controlSum;
+	public Optional<DecimalNumber> getControlSum() {
+		return controlSum == null ? Optional.empty() : Optional.of(controlSum);
 	}
 
-	public void setControlSum(DecimalNumber controlSum) {
+	public GroupHeader57 setControlSum(DecimalNumber controlSum) {
 		this.controlSum = controlSum;
+		return this;
 	}
 
-	@XmlElement(name = "GrpRvsl")
-	public TrueFalseIndicator getGroupReversal() {
-		return groupReversal;
+	public Optional<TrueFalseIndicator> getGroupReversal() {
+		return groupReversal == null ? Optional.empty() : Optional.of(groupReversal);
 	}
 
-	public void setGroupReversal(TrueFalseIndicator groupReversal) {
+	public GroupHeader57 setGroupReversal(TrueFalseIndicator groupReversal) {
 		this.groupReversal = groupReversal;
+		return this;
 	}
 
-	@XmlElement(name = "TtlRvsdIntrBkSttlmAmt")
-	public ActiveCurrencyAndAmount getTotalReversedInterbankSettlementAmount() {
-		return totalReversedInterbankSettlementAmount;
+	public Optional<ActiveCurrencyAndAmount> getTotalReversedInterbankSettlementAmount() {
+		return totalReversedInterbankSettlementAmount == null ? Optional.empty() : Optional.of(totalReversedInterbankSettlementAmount);
 	}
 
-	public void setTotalReversedInterbankSettlementAmount(ActiveCurrencyAndAmount totalReversedInterbankSettlementAmount) {
+	public GroupHeader57 setTotalReversedInterbankSettlementAmount(ActiveCurrencyAndAmount totalReversedInterbankSettlementAmount) {
 		this.totalReversedInterbankSettlementAmount = totalReversedInterbankSettlementAmount;
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmDt")
-	public ISODate getInterbankSettlementDate() {
-		return interbankSettlementDate;
+	public Optional<ISODate> getInterbankSettlementDate() {
+		return interbankSettlementDate == null ? Optional.empty() : Optional.of(interbankSettlementDate);
 	}
 
-	public void setInterbankSettlementDate(ISODate interbankSettlementDate) {
+	public GroupHeader57 setInterbankSettlementDate(ISODate interbankSettlementDate) {
 		this.interbankSettlementDate = interbankSettlementDate;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmInf", required = true)
 	public SettlementInstruction1 getSettlementInformation() {
 		return settlementInformation;
 	}
 
-	public void setSettlementInformation(com.tools20022.repository.msg.SettlementInstruction1 settlementInformation) {
-		this.settlementInformation = settlementInformation;
+	public GroupHeader57 setSettlementInformation(com.tools20022.repository.msg.SettlementInstruction1 settlementInformation) {
+		this.settlementInformation = Objects.requireNonNull(settlementInformation);
+		return this;
 	}
 
-	@XmlElement(name = "InstgAgt")
-	public BranchAndFinancialInstitutionIdentification5 getInstructingAgent() {
-		return instructingAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getInstructingAgent() {
+		return instructingAgent == null ? Optional.empty() : Optional.of(instructingAgent);
 	}
 
-	public void setInstructingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructingAgent) {
+	public GroupHeader57 setInstructingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructingAgent) {
 		this.instructingAgent = instructingAgent;
+		return this;
 	}
 
-	@XmlElement(name = "InstdAgt")
-	public BranchAndFinancialInstitutionIdentification5 getInstructedAgent() {
-		return instructedAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getInstructedAgent() {
+		return instructedAgent == null ? Optional.empty() : Optional.of(instructedAgent);
 	}
 
-	public void setInstructedAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructedAgent) {
+	public GroupHeader57 setInstructedAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructedAgent) {
 		this.instructedAgent = instructedAgent;
+		return this;
 	}
 }

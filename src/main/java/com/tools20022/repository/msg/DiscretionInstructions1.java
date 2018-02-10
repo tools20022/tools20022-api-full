@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -31,6 +32,7 @@ import com.tools20022.repository.entity.Discretion;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -77,8 +79,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,17 +93,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DiscretionInstructions1", propOrder = {"offset", "offsetSign", "relatedPriceType", "moveType", "limitType", "roundDirection", "scope", "offsetType"})
 public class DiscretionInstructions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Offset", required = true)
 	protected ActiveCurrencyAndAmount offset;
 	/**
-	 * Information for the executing party about the price to be obtained for an
-	 * order. It is expressed as an offset from a reference price such as the
-	 * market price or last trade price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,6 +123,9 @@ public class DiscretionInstructions1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Offset"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 389</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -137,9 +141,10 @@ public class DiscretionInstructions1 {
 	public static final MMMessageAttribute mmOffset = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Discretion.mmOffset;
-			componentContext_lazy = () -> DiscretionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DiscretionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "Offset";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "389"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offset";
 			definition = "Information for the executing party about the price to be obtained for an order. It is expressed as an offset from a reference price such as the market price or last trade price.";
@@ -148,11 +153,11 @@ public class DiscretionInstructions1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "OffsetSgn", required = true)
 	protected PlusOrMinusIndicator offsetSign;
 	/**
-	 * Indicates whether the offset should be added or subtracted from the
-	 * related price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,6 +178,9 @@ public class DiscretionInstructions1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OffsetSgn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 390</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -188,9 +196,10 @@ public class DiscretionInstructions1 {
 	public static final MMMessageAttribute mmOffsetSign = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Discretion.mmOffsetSign;
-			componentContext_lazy = () -> DiscretionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DiscretionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "OffsetSgn";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "390"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffsetSign";
 			definition = "Indicates whether the offset should be added or subtracted from the related price.";
@@ -199,11 +208,11 @@ public class DiscretionInstructions1 {
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdPricTp", required = true)
 	protected TypeOfDiscretionPrice1Code relatedPriceType;
 	/**
-	 * Identify the type of price an offset is related to. The offset can either
-	 * be added or subtracted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -224,6 +233,9 @@ public class DiscretionInstructions1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RltdPricTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 388</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -239,9 +251,10 @@ public class DiscretionInstructions1 {
 	public static final MMMessageAttribute mmRelatedPriceType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Discretion.mmRelatedPriceType;
-			componentContext_lazy = () -> DiscretionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DiscretionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPricTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "388"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPriceType";
 			definition = "Identify the type of price an offset is related to. The offset can either be added or subtracted.";
@@ -250,10 +263,11 @@ public class DiscretionInstructions1 {
 			simpleType_lazy = () -> TypeOfDiscretionPrice1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MvTp", required = true)
 	protected MoveType1Code moveType;
 	/**
-	 * Describes whether discretion price is static/fixed or floats.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -274,6 +288,9 @@ public class DiscretionInstructions1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MvTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 841</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -288,9 +305,10 @@ public class DiscretionInstructions1 {
 	public static final MMMessageAttribute mmMoveType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Discretion.mmMoveType;
-			componentContext_lazy = () -> DiscretionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DiscretionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "MvTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "841"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoveType";
 			definition = "Describes whether discretion price is static/fixed or floats.";
@@ -299,11 +317,11 @@ public class DiscretionInstructions1 {
 			simpleType_lazy = () -> MoveType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "LmtTp", required = true)
 	protected Max35Text limitType;
 	/**
-	 * Specifies the nature of the resulting discretion price (e.g. or better
-	 * limit, strict limit etc).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -323,6 +341,9 @@ public class DiscretionInstructions1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LmtTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 843</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -338,9 +359,10 @@ public class DiscretionInstructions1 {
 	public static final MMMessageAttribute mmLimitType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Discretion.mmLimitType;
-			componentContext_lazy = () -> DiscretionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DiscretionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "LmtTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "843"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitType";
 			definition = "Specifies the nature of the resulting discretion price (e.g. or better limit, strict limit etc).";
@@ -349,11 +371,11 @@ public class DiscretionInstructions1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RndDrctn", required = true)
 	protected Max35Text roundDirection;
 	/**
-	 * If the calculated discretion price is not a valid tick price, specifies
-	 * how to round the price (e.g. to be more or less aggressive)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -373,6 +395,9 @@ public class DiscretionInstructions1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RndDrctn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 844</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -388,9 +413,10 @@ public class DiscretionInstructions1 {
 	public static final MMMessageAttribute mmRoundDirection = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Discretion.mmRoundDirection;
-			componentContext_lazy = () -> DiscretionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DiscretionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "RndDrctn";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "844"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDirection";
 			definition = "If the calculated discretion price is not a valid tick price, specifies how to round the price (e.g. to be more or less aggressive)";
@@ -399,11 +425,11 @@ public class DiscretionInstructions1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Scp", required = true)
 	protected PriceProtectionScope2Code scope;
 	/**
-	 * The scope of "related to" price of the discretion (e.g. local, global
-	 * etc)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -424,6 +450,9 @@ public class DiscretionInstructions1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Scp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 846</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -439,9 +468,10 @@ public class DiscretionInstructions1 {
 	public static final MMMessageAttribute mmScope = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Discretion.mmScope;
-			componentContext_lazy = () -> DiscretionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DiscretionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "Scp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "846"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Scope";
 			definition = "The scope of \"related to\" price of the discretion (e.g. local, global etc)";
@@ -450,10 +480,11 @@ public class DiscretionInstructions1 {
 			simpleType_lazy = () -> PriceProtectionScope2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "OffsetTp", required = true)
 	protected OffsetType1Code offsetType;
 	/**
-	 * Describes the type of Discretion Offset .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -474,6 +505,9 @@ public class DiscretionInstructions1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OffsetTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 842</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -487,9 +521,10 @@ public class DiscretionInstructions1 {
 	public static final MMMessageAttribute mmOffsetType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Discretion.mmOffsetType;
-			componentContext_lazy = () -> DiscretionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DiscretionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "OffsetTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "842"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffsetType";
 			definition = "Describes the type of Discretion Offset .";
@@ -502,10 +537,11 @@ public class DiscretionInstructions1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DiscretionInstructions1.mmOffset, DiscretionInstructions1.mmOffsetSign, DiscretionInstructions1.mmRelatedPriceType, DiscretionInstructions1.mmMoveType,
-						DiscretionInstructions1.mmLimitType, DiscretionInstructions1.mmRoundDirection, DiscretionInstructions1.mmScope, DiscretionInstructions1.mmOffsetType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DiscretionInstructions1.mmOffset, com.tools20022.repository.msg.DiscretionInstructions1.mmOffsetSign,
+						com.tools20022.repository.msg.DiscretionInstructions1.mmRelatedPriceType, com.tools20022.repository.msg.DiscretionInstructions1.mmMoveType, com.tools20022.repository.msg.DiscretionInstructions1.mmLimitType,
+						com.tools20022.repository.msg.DiscretionInstructions1.mmRoundDirection, com.tools20022.repository.msg.DiscretionInstructions1.mmScope, com.tools20022.repository.msg.DiscretionInstructions1.mmOffsetType);
 				trace_lazy = () -> Discretion.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DiscretionInstructions1";
 				definition = "Indicates on an order that the trader wishes to display one price in the market but will accept trades at another price.";
@@ -514,75 +550,75 @@ public class DiscretionInstructions1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Offset", required = true)
 	public ActiveCurrencyAndAmount getOffset() {
 		return offset;
 	}
 
-	public void setOffset(ActiveCurrencyAndAmount offset) {
-		this.offset = offset;
+	public DiscretionInstructions1 setOffset(ActiveCurrencyAndAmount offset) {
+		this.offset = Objects.requireNonNull(offset);
+		return this;
 	}
 
-	@XmlElement(name = "OffsetSgn", required = true)
 	public PlusOrMinusIndicator getOffsetSign() {
 		return offsetSign;
 	}
 
-	public void setOffsetSign(PlusOrMinusIndicator offsetSign) {
-		this.offsetSign = offsetSign;
+	public DiscretionInstructions1 setOffsetSign(PlusOrMinusIndicator offsetSign) {
+		this.offsetSign = Objects.requireNonNull(offsetSign);
+		return this;
 	}
 
-	@XmlElement(name = "RltdPricTp", required = true)
 	public TypeOfDiscretionPrice1Code getRelatedPriceType() {
 		return relatedPriceType;
 	}
 
-	public void setRelatedPriceType(TypeOfDiscretionPrice1Code relatedPriceType) {
-		this.relatedPriceType = relatedPriceType;
+	public DiscretionInstructions1 setRelatedPriceType(TypeOfDiscretionPrice1Code relatedPriceType) {
+		this.relatedPriceType = Objects.requireNonNull(relatedPriceType);
+		return this;
 	}
 
-	@XmlElement(name = "MvTp", required = true)
 	public MoveType1Code getMoveType() {
 		return moveType;
 	}
 
-	public void setMoveType(MoveType1Code moveType) {
-		this.moveType = moveType;
+	public DiscretionInstructions1 setMoveType(MoveType1Code moveType) {
+		this.moveType = Objects.requireNonNull(moveType);
+		return this;
 	}
 
-	@XmlElement(name = "LmtTp", required = true)
 	public Max35Text getLimitType() {
 		return limitType;
 	}
 
-	public void setLimitType(Max35Text limitType) {
-		this.limitType = limitType;
+	public DiscretionInstructions1 setLimitType(Max35Text limitType) {
+		this.limitType = Objects.requireNonNull(limitType);
+		return this;
 	}
 
-	@XmlElement(name = "RndDrctn", required = true)
 	public Max35Text getRoundDirection() {
 		return roundDirection;
 	}
 
-	public void setRoundDirection(Max35Text roundDirection) {
-		this.roundDirection = roundDirection;
+	public DiscretionInstructions1 setRoundDirection(Max35Text roundDirection) {
+		this.roundDirection = Objects.requireNonNull(roundDirection);
+		return this;
 	}
 
-	@XmlElement(name = "Scp", required = true)
 	public PriceProtectionScope2Code getScope() {
 		return scope;
 	}
 
-	public void setScope(PriceProtectionScope2Code scope) {
-		this.scope = scope;
+	public DiscretionInstructions1 setScope(PriceProtectionScope2Code scope) {
+		this.scope = Objects.requireNonNull(scope);
+		return this;
 	}
 
-	@XmlElement(name = "OffsetTp", required = true)
 	public OffsetType1Code getOffsetType() {
 		return offsetType;
 	}
 
-	public void setOffsetType(OffsetType1Code offsetType) {
-		this.offsetType = offsetType;
+	public DiscretionInstructions1 setOffsetType(OffsetType1Code offsetType) {
+		this.offsetType = Objects.requireNonNull(offsetType);
+		return this;
 	}
 }

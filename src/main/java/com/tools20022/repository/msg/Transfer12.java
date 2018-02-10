@@ -29,9 +29,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule#forTransfer12
+ * ConstraintTotalUnitsNumberRule.forTransfer12}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,16 +101,16 @@ import javax.xml.bind.annotation.XmlType;
  * Transfer9}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Transfer12", propOrder = {"holdingsPlanType", "financialInstrumentDetails", "quantity", "unitsDetails", "rounding", "averagePrice", "ownAccountTransferIndicator", "nonStandardSettlementInformation"})
 public class Transfer12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "HldgsPlanTp")
 	protected List<HoldingsPlanType1Code> holdingsPlanType;
 	/**
-	 * Identifies whether or not saving plan or withdrawal or switch plan are
-	 * included in the holdings.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -138,7 +145,7 @@ public class Transfer12 {
 	public static final MMMessageAttribute mmHoldingsPlanType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmHoldingsPlanType;
-			componentContext_lazy = () -> Transfer12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer12.mmObject();
 			isDerived = false;
 			xmlTag = "HldgsPlanTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,10 +156,11 @@ public class Transfer12 {
 			simpleType_lazy = () -> HoldingsPlanType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	protected FinancialInstrument13 financialInstrumentDetails;
 	/**
-	 * Information related to the financial instrument to be withdrawn.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,7 +194,7 @@ public class Transfer12 {
 	public static final MMMessageAttribute mmFinancialInstrumentDetails = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
-			componentContext_lazy = () -> Transfer12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer12.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,11 +205,11 @@ public class Transfer12 {
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrument13.mmObject();
 		}
 	};
+	@XmlElement(name = "Qty", required = true)
 	protected Quantity13Choice quantity;
 	/**
-	 * Total quantity of securities to be transferred, expressed in a number of
-	 * units or a percentage rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,7 +244,7 @@ public class Transfer12 {
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
-			componentContext_lazy = () -> Transfer12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer12.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -247,10 +255,11 @@ public class Transfer12 {
 			complexType_lazy = () -> Quantity13Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "UnitsDtls")
 	protected List<com.tools20022.repository.msg.Unit3> unitsDetails;
 	/**
-	 * Information about the units to be transferred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -280,7 +289,7 @@ public class Transfer12 {
 	public static final MMMessageAssociationEnd mmUnitsDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
-			componentContext_lazy = () -> Transfer12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer12.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -291,10 +300,11 @@ public class Transfer12 {
 			type_lazy = () -> com.tools20022.repository.msg.Unit3.mmObject();
 		}
 	};
+	@XmlElement(name = "Rndg")
 	protected RoundingDirection2Code rounding;
 	/**
-	 * Indicates the rounding direction applied to nearest unit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -328,7 +338,7 @@ public class Transfer12 {
 	public static final MMMessageAttribute mmRounding = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RoundingParameters.mmRoundingDirection;
-			componentContext_lazy = () -> Transfer12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer12.mmObject();
 			isDerived = false;
 			xmlTag = "Rndg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -339,11 +349,11 @@ public class Transfer12 {
 			simpleType_lazy = () -> RoundingDirection2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AvrgPric")
 	protected ActiveOrHistoricCurrencyAnd13DecimalAmount averagePrice;
 	/**
-	 * Value of a security, as booked in an account. Book value is often
-	 * different from the current market value of the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -378,7 +388,7 @@ public class Transfer12 {
 	public static final MMMessageAttribute mmAveragePrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
-			componentContext_lazy = () -> Transfer12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer12.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -389,10 +399,11 @@ public class Transfer12 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "OwnAcctTrfInd")
 	protected YesNoIndicator ownAccountTransferIndicator;
 	/**
-	 * Indicates whether the transfer results in a change of beneficial owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -427,7 +438,7 @@ public class Transfer12 {
 	public static final MMMessageAttribute mmOwnAccountTransferIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmOwnAccountTransferIndicator;
-			componentContext_lazy = () -> Transfer12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer12.mmObject();
 			isDerived = false;
 			xmlTag = "OwnAcctTrfInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -438,11 +449,11 @@ public class Transfer12 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "NonStdSttlmInf")
 	protected Max350Text nonStandardSettlementInformation;
 	/**
-	 * Additional specific settlement information for non-regulated traded
-	 * funds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -476,7 +487,7 @@ public class Transfer12 {
 	public static final MMMessageAttribute mmNonStandardSettlementInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmNonStandardSettlementInformation;
-			componentContext_lazy = () -> Transfer12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer12.mmObject();
 			isDerived = false;
 			xmlTag = "NonStdSttlmInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -491,10 +502,12 @@ public class Transfer12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Transfer12.mmHoldingsPlanType, Transfer12.mmFinancialInstrumentDetails, Transfer12.mmQuantity, Transfer12.mmUnitsDetails, Transfer12.mmRounding, Transfer12.mmAveragePrice,
-						Transfer12.mmOwnAccountTransferIndicator, Transfer12.mmNonStandardSettlementInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer12.mmHoldingsPlanType, com.tools20022.repository.msg.Transfer12.mmFinancialInstrumentDetails,
+						com.tools20022.repository.msg.Transfer12.mmQuantity, com.tools20022.repository.msg.Transfer12.mmUnitsDetails, com.tools20022.repository.msg.Transfer12.mmRounding,
+						com.tools20022.repository.msg.Transfer12.mmAveragePrice, com.tools20022.repository.msg.Transfer12.mmOwnAccountTransferIndicator, com.tools20022.repository.msg.Transfer12.mmNonStandardSettlementInformation);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer12);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Transfer12";
 				definition = "Parameters applied to the settlement of a security transfer.";
@@ -505,75 +518,75 @@ public class Transfer12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "HldgsPlanTp")
 	public List<HoldingsPlanType1Code> getHoldingsPlanType() {
-		return holdingsPlanType;
+		return holdingsPlanType == null ? holdingsPlanType = new ArrayList<>() : holdingsPlanType;
 	}
 
-	public void setHoldingsPlanType(List<HoldingsPlanType1Code> holdingsPlanType) {
-		this.holdingsPlanType = holdingsPlanType;
+	public Transfer12 setHoldingsPlanType(List<HoldingsPlanType1Code> holdingsPlanType) {
+		this.holdingsPlanType = Objects.requireNonNull(holdingsPlanType);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument13 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
 
-	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument13 financialInstrumentDetails) {
-		this.financialInstrumentDetails = financialInstrumentDetails;
+	public Transfer12 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument13 financialInstrumentDetails) {
+		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
+		return this;
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public Quantity13Choice getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(Quantity13Choice quantity) {
-		this.quantity = quantity;
+	public Transfer12 setQuantity(Quantity13Choice quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	@XmlElement(name = "UnitsDtls")
 	public List<Unit3> getUnitsDetails() {
-		return unitsDetails;
+		return unitsDetails == null ? unitsDetails = new ArrayList<>() : unitsDetails;
 	}
 
-	public void setUnitsDetails(List<com.tools20022.repository.msg.Unit3> unitsDetails) {
-		this.unitsDetails = unitsDetails;
+	public Transfer12 setUnitsDetails(List<com.tools20022.repository.msg.Unit3> unitsDetails) {
+		this.unitsDetails = Objects.requireNonNull(unitsDetails);
+		return this;
 	}
 
-	@XmlElement(name = "Rndg")
-	public RoundingDirection2Code getRounding() {
-		return rounding;
+	public Optional<RoundingDirection2Code> getRounding() {
+		return rounding == null ? Optional.empty() : Optional.of(rounding);
 	}
 
-	public void setRounding(RoundingDirection2Code rounding) {
+	public Transfer12 setRounding(RoundingDirection2Code rounding) {
 		this.rounding = rounding;
+		return this;
 	}
 
-	@XmlElement(name = "AvrgPric")
-	public ActiveOrHistoricCurrencyAnd13DecimalAmount getAveragePrice() {
-		return averagePrice;
+	public Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount> getAveragePrice() {
+		return averagePrice == null ? Optional.empty() : Optional.of(averagePrice);
 	}
 
-	public void setAveragePrice(ActiveOrHistoricCurrencyAnd13DecimalAmount averagePrice) {
+	public Transfer12 setAveragePrice(ActiveOrHistoricCurrencyAnd13DecimalAmount averagePrice) {
 		this.averagePrice = averagePrice;
+		return this;
 	}
 
-	@XmlElement(name = "OwnAcctTrfInd")
-	public YesNoIndicator getOwnAccountTransferIndicator() {
-		return ownAccountTransferIndicator;
+	public Optional<YesNoIndicator> getOwnAccountTransferIndicator() {
+		return ownAccountTransferIndicator == null ? Optional.empty() : Optional.of(ownAccountTransferIndicator);
 	}
 
-	public void setOwnAccountTransferIndicator(YesNoIndicator ownAccountTransferIndicator) {
+	public Transfer12 setOwnAccountTransferIndicator(YesNoIndicator ownAccountTransferIndicator) {
 		this.ownAccountTransferIndicator = ownAccountTransferIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "NonStdSttlmInf")
-	public Max350Text getNonStandardSettlementInformation() {
-		return nonStandardSettlementInformation;
+	public Optional<Max350Text> getNonStandardSettlementInformation() {
+		return nonStandardSettlementInformation == null ? Optional.empty() : Optional.of(nonStandardSettlementInformation);
 	}
 
-	public void setNonStandardSettlementInformation(Max350Text nonStandardSettlementInformation) {
+	public Transfer12 setNonStandardSettlementInformation(Max350Text nonStandardSettlementInformation) {
 		this.nonStandardSettlementInformation = nonStandardSettlementInformation;
+		return this;
 	}
 }

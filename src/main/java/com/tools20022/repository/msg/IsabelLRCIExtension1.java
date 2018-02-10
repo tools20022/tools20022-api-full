@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.PositiveNumber;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the LRCI protocol extension details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IsabelLRCIExtension1", propOrder = {"imageHashAlgorithm", "tokenResponse", "tokenResponsePaymentInformationIndex"})
 public class IsabelLRCIExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ImgHashAlgo", required = true)
 	protected Max105Text imageHashAlgorithm;
 	/**
-	 * Effective method for calculating the (cryptographic) hash value of each
-	 * visual representation of a payment file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +105,7 @@ public class IsabelLRCIExtension1 {
 	 */
 	public static final MMMessageAttribute mmImageHashAlgorithm = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelLRCIExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelLRCIExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "ImgHashAlgo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +116,11 @@ public class IsabelLRCIExtension1 {
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TknRspn", required = true)
 	protected IsabelEpaymentTokenResponse1 tokenResponse;
 	/**
-	 * Block of data on which the signature is calculated by the LRCI client.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -146,7 +148,7 @@ public class IsabelLRCIExtension1 {
 	 */
 	public static final MMMessageAssociationEnd mmTokenResponse = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelLRCIExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelLRCIExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "TknRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,12 +160,11 @@ public class IsabelLRCIExtension1 {
 			type_lazy = () -> com.tools20022.repository.msg.IsabelEpaymentTokenResponse1.mmObject();
 		}
 	};
+	@XmlElement(name = "TknRspnPmtInfIndx", required = true)
 	protected PositiveNumber tokenResponsePaymentInformationIndex;
 	/**
-	 * Index of the payment information element containing the hash of the
-	 * visual representation and the hash of the payment file relevant for this
-	 * signature.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,7 +194,7 @@ public class IsabelLRCIExtension1 {
 	 */
 	public static final MMMessageAttribute mmTokenResponsePaymentInformationIndex = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelLRCIExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelLRCIExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "TknRspnPmtInfIndx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,8 +209,9 @@ public class IsabelLRCIExtension1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IsabelLRCIExtension1.mmImageHashAlgorithm, IsabelLRCIExtension1.mmTokenResponse, IsabelLRCIExtension1.mmTokenResponsePaymentInformationIndex);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelLRCIExtension1.mmImageHashAlgorithm, com.tools20022.repository.msg.IsabelLRCIExtension1.mmTokenResponse,
+						com.tools20022.repository.msg.IsabelLRCIExtension1.mmTokenResponsePaymentInformationIndex);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelLRCIExtension1";
 				definition = "Specifies the LRCI protocol extension details.";
@@ -218,30 +220,30 @@ public class IsabelLRCIExtension1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ImgHashAlgo", required = true)
 	public Max105Text getImageHashAlgorithm() {
 		return imageHashAlgorithm;
 	}
 
-	public void setImageHashAlgorithm(Max105Text imageHashAlgorithm) {
-		this.imageHashAlgorithm = imageHashAlgorithm;
+	public IsabelLRCIExtension1 setImageHashAlgorithm(Max105Text imageHashAlgorithm) {
+		this.imageHashAlgorithm = Objects.requireNonNull(imageHashAlgorithm);
+		return this;
 	}
 
-	@XmlElement(name = "TknRspn", required = true)
 	public IsabelEpaymentTokenResponse1 getTokenResponse() {
 		return tokenResponse;
 	}
 
-	public void setTokenResponse(com.tools20022.repository.msg.IsabelEpaymentTokenResponse1 tokenResponse) {
-		this.tokenResponse = tokenResponse;
+	public IsabelLRCIExtension1 setTokenResponse(com.tools20022.repository.msg.IsabelEpaymentTokenResponse1 tokenResponse) {
+		this.tokenResponse = Objects.requireNonNull(tokenResponse);
+		return this;
 	}
 
-	@XmlElement(name = "TknRspnPmtInfIndx", required = true)
 	public PositiveNumber getTokenResponsePaymentInformationIndex() {
 		return tokenResponsePaymentInformationIndex;
 	}
 
-	public void setTokenResponsePaymentInformationIndex(PositiveNumber tokenResponsePaymentInformationIndex) {
-		this.tokenResponsePaymentInformationIndex = tokenResponsePaymentInformationIndex;
+	public IsabelLRCIExtension1 setTokenResponsePaymentInformationIndex(PositiveNumber tokenResponsePaymentInformationIndex) {
+		this.tokenResponsePaymentInformationIndex = Objects.requireNonNull(tokenResponsePaymentInformationIndex);
+		return this;
 	}
 }

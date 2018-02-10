@@ -27,9 +27,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,15 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * ExchangeConfiguration5}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ExchangeConfiguration7", propOrder = {"exchangePolicy", "maximumNumber", "maximumAmount", "reTry", "timeCondition", "exchangeFailed", "exchangeDeclined"})
 public class ExchangeConfiguration7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "XchgPlcy", required = true)
 	protected List<ExchangePolicy1Code> exchangePolicy;
 	/**
-	 * Exchange policy between parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,7 +135,7 @@ public class ExchangeConfiguration7 {
 	public static final MMMessageAttribute mmExchangePolicy = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmExchangePolicy;
-			componentContext_lazy = () -> ExchangeConfiguration7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration7.mmObject();
 			isDerived = false;
 			xmlTag = "XchgPlcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,10 +146,11 @@ public class ExchangeConfiguration7 {
 			simpleType_lazy = () -> ExchangePolicy1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxNb")
 	protected Number maximumNumber;
 	/**
-	 * Maximum number of transactions without exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,7 +188,7 @@ public class ExchangeConfiguration7 {
 	public static final MMMessageAttribute mmMaximumNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmMaximumNumber;
-			componentContext_lazy = () -> ExchangeConfiguration7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration7.mmObject();
 			isDerived = false;
 			xmlTag = "MaxNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,10 +200,11 @@ public class ExchangeConfiguration7 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxAmt")
 	protected ImpliedCurrencyAndAmount maximumAmount;
 	/**
-	 * Maximum cumulative amount of the transactions without exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -242,7 +244,7 @@ public class ExchangeConfiguration7 {
 	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmMaximumAmount;
-			componentContext_lazy = () -> ExchangeConfiguration7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration7.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -254,10 +256,11 @@ public class ExchangeConfiguration7 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ReTry")
 	protected ProcessRetry2 reTry;
 	/**
-	 * Definition of retry process if activation of an action fails.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -289,7 +292,7 @@ public class ExchangeConfiguration7 {
 	 */
 	public static final MMMessageAssociationEnd mmReTry = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ExchangeConfiguration7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration7.mmObject();
 			isDerived = false;
 			xmlTag = "ReTry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -302,10 +305,11 @@ public class ExchangeConfiguration7 {
 			type_lazy = () -> com.tools20022.repository.msg.ProcessRetry2.mmObject();
 		}
 	};
+	@XmlElement(name = "TmCond")
 	protected ProcessTiming4 timeCondition;
 	/**
-	 * Timing condition for periodic exchanges.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -336,7 +340,7 @@ public class ExchangeConfiguration7 {
 	 */
 	public static final MMMessageAssociationEnd mmTimeCondition = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ExchangeConfiguration7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration7.mmObject();
 			isDerived = false;
 			xmlTag = "TmCond";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -349,10 +353,11 @@ public class ExchangeConfiguration7 {
 			type_lazy = () -> com.tools20022.repository.msg.ProcessTiming4.mmObject();
 		}
 	};
+	@XmlElement(name = "XchgFaild")
 	protected TrueFalseIndicator exchangeFailed;
 	/**
-	 * Failed transaction must be exchanged.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -385,7 +390,7 @@ public class ExchangeConfiguration7 {
 	 */
 	public static final MMMessageAttribute mmExchangeFailed = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ExchangeConfiguration7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration7.mmObject();
 			isDerived = false;
 			xmlTag = "XchgFaild";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -397,10 +402,11 @@ public class ExchangeConfiguration7 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "XchgDclnd")
 	protected TrueFalseIndicator exchangeDeclined;
 	/**
-	 * Indicates that declined transaction must be exchanged.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -433,7 +439,7 @@ public class ExchangeConfiguration7 {
 	 */
 	public static final MMMessageAttribute mmExchangeDeclined = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ExchangeConfiguration7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration7.mmObject();
 			isDerived = false;
 			xmlTag = "XchgDclnd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -449,10 +455,11 @@ public class ExchangeConfiguration7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ExchangeConfiguration7.mmExchangePolicy, ExchangeConfiguration7.mmMaximumNumber, ExchangeConfiguration7.mmMaximumAmount, ExchangeConfiguration7.mmReTry,
-						ExchangeConfiguration7.mmTimeCondition, ExchangeConfiguration7.mmExchangeFailed, ExchangeConfiguration7.mmExchangeDeclined);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeConfiguration7.mmExchangePolicy, com.tools20022.repository.msg.ExchangeConfiguration7.mmMaximumNumber,
+						com.tools20022.repository.msg.ExchangeConfiguration7.mmMaximumAmount, com.tools20022.repository.msg.ExchangeConfiguration7.mmReTry, com.tools20022.repository.msg.ExchangeConfiguration7.mmTimeCondition,
+						com.tools20022.repository.msg.ExchangeConfiguration7.mmExchangeFailed, com.tools20022.repository.msg.ExchangeConfiguration7.mmExchangeDeclined);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExchangeConfiguration7";
 				definition = "Configuration parameters of data exchanges.";
@@ -462,66 +469,66 @@ public class ExchangeConfiguration7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "XchgPlcy", required = true)
 	public List<ExchangePolicy1Code> getExchangePolicy() {
-		return exchangePolicy;
+		return exchangePolicy == null ? exchangePolicy = new ArrayList<>() : exchangePolicy;
 	}
 
-	public void setExchangePolicy(List<ExchangePolicy1Code> exchangePolicy) {
-		this.exchangePolicy = exchangePolicy;
+	public ExchangeConfiguration7 setExchangePolicy(List<ExchangePolicy1Code> exchangePolicy) {
+		this.exchangePolicy = Objects.requireNonNull(exchangePolicy);
+		return this;
 	}
 
-	@XmlElement(name = "MaxNb")
-	public Number getMaximumNumber() {
-		return maximumNumber;
+	public Optional<Number> getMaximumNumber() {
+		return maximumNumber == null ? Optional.empty() : Optional.of(maximumNumber);
 	}
 
-	public void setMaximumNumber(Number maximumNumber) {
+	public ExchangeConfiguration7 setMaximumNumber(Number maximumNumber) {
 		this.maximumNumber = maximumNumber;
+		return this;
 	}
 
-	@XmlElement(name = "MaxAmt")
-	public ImpliedCurrencyAndAmount getMaximumAmount() {
-		return maximumAmount;
+	public Optional<ImpliedCurrencyAndAmount> getMaximumAmount() {
+		return maximumAmount == null ? Optional.empty() : Optional.of(maximumAmount);
 	}
 
-	public void setMaximumAmount(ImpliedCurrencyAndAmount maximumAmount) {
+	public ExchangeConfiguration7 setMaximumAmount(ImpliedCurrencyAndAmount maximumAmount) {
 		this.maximumAmount = maximumAmount;
+		return this;
 	}
 
-	@XmlElement(name = "ReTry")
-	public ProcessRetry2 getReTry() {
-		return reTry;
+	public Optional<ProcessRetry2> getReTry() {
+		return reTry == null ? Optional.empty() : Optional.of(reTry);
 	}
 
-	public void setReTry(com.tools20022.repository.msg.ProcessRetry2 reTry) {
+	public ExchangeConfiguration7 setReTry(com.tools20022.repository.msg.ProcessRetry2 reTry) {
 		this.reTry = reTry;
+		return this;
 	}
 
-	@XmlElement(name = "TmCond")
-	public ProcessTiming4 getTimeCondition() {
-		return timeCondition;
+	public Optional<ProcessTiming4> getTimeCondition() {
+		return timeCondition == null ? Optional.empty() : Optional.of(timeCondition);
 	}
 
-	public void setTimeCondition(com.tools20022.repository.msg.ProcessTiming4 timeCondition) {
+	public ExchangeConfiguration7 setTimeCondition(com.tools20022.repository.msg.ProcessTiming4 timeCondition) {
 		this.timeCondition = timeCondition;
+		return this;
 	}
 
-	@XmlElement(name = "XchgFaild")
-	public TrueFalseIndicator getExchangeFailed() {
-		return exchangeFailed;
+	public Optional<TrueFalseIndicator> getExchangeFailed() {
+		return exchangeFailed == null ? Optional.empty() : Optional.of(exchangeFailed);
 	}
 
-	public void setExchangeFailed(TrueFalseIndicator exchangeFailed) {
+	public ExchangeConfiguration7 setExchangeFailed(TrueFalseIndicator exchangeFailed) {
 		this.exchangeFailed = exchangeFailed;
+		return this;
 	}
 
-	@XmlElement(name = "XchgDclnd")
-	public TrueFalseIndicator getExchangeDeclined() {
-		return exchangeDeclined;
+	public Optional<TrueFalseIndicator> getExchangeDeclined() {
+		return exchangeDeclined == null ? Optional.empty() : Optional.of(exchangeDeclined);
 	}
 
-	public void setExchangeDeclined(TrueFalseIndicator exchangeDeclined) {
+	public ExchangeConfiguration7 setExchangeDeclined(TrueFalseIndicator exchangeDeclined) {
 		this.exchangeDeclined = exchangeDeclined;
+		return this;
 	}
 }

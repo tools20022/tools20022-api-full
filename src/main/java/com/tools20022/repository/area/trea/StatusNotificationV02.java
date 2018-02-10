@@ -27,6 +27,7 @@ import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -38,23 +39,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
- * TreasuryArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ForexNotificationsISOArchive
- * ForexNotificationsISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "trea.008.001.02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "trea.008.001.02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -64,6 +48,23 @@ import javax.xml.bind.annotation.*;
  * StatusNotificationV02.mmTradeData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ForexNotificationsISOArchive
+ * ForexNotificationsISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "trea.008.001.02"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
+ * TreasuryArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "trea.008.001.02"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code trea.008.001.02}</li>
@@ -79,15 +80,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "trea.008.001.02", propOrder = "tradeData")
 public class StatusNotificationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradData", required = true)
 	protected TradeData1 tradeData;
 	/**
-	 * Provides information on the status of a trade in a system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,16 +160,16 @@ public class StatusNotificationV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradData", required = true)
 	public TradeData1 getTradeData() {
 		return tradeData;
 	}
 
-	public void setTradeData(TradeData1 tradeData) {
-		this.tradeData = tradeData;
+	public StatusNotificationV02 setTradeData(TradeData1 tradeData) {
+		this.tradeData = Objects.requireNonNull(tradeData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:trea.008.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:trea.008.001.02")
 	static public class Document {
 		@XmlElement(name = "trea.008.001.02", required = true)
 		public StatusNotificationV02 messageBody;

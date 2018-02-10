@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.LendingTransactionMethodCode;
+import com.tools20022.repository.codeset.LendingTransactionMethod1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Lending method applied to the securities financing contract.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.LendingTransactionMethodCode
- * LendingTransactionMethodCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LendingTransactionMethod1Code#mmOnDemandTrade
- * LendingTransactionMethod1Code.mmOnDemandTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.LendingTransactionMethod1Code#OnDemandTrade
+ * LendingTransactionMethod1Code.OnDemandTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LendingTransactionMethod1Code#mmExclusiveTrade
- * LendingTransactionMethod1Code.mmExclusiveTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.LendingTransactionMethod1Code#ExclusiveTrade
+ * LendingTransactionMethod1Code.ExclusiveTrade}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.LendingTransactionMethodCode
+ * LendingTransactionMethodCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Lending method applied to the securities financing contract."</li>
  * </ul>
  */
-public class LendingTransactionMethod1Code extends LendingTransactionMethodCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class LendingTransactionMethod1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class LendingTransactionMethod1Code extends LendingTransactionMethodCode 
 	 * name} = "OnDemandTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOnDemandTrade = new MMCode() {
+	public static final LendingTransactionMethod1Code OnDemandTrade = new LendingTransactionMethod1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnDemandTrade";
-			owner_lazy = () -> LendingTransactionMethod1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LendingTransactionMethod1Code.mmObject();
+			codeName = LendingTransactionMethodCode.OnDemandTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class LendingTransactionMethod1Code extends LendingTransactionMethodCode 
 	 * name} = "ExclusiveTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExclusiveTrade = new MMCode() {
+	public static final LendingTransactionMethod1Code ExclusiveTrade = new LendingTransactionMethod1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExclusiveTrade";
-			owner_lazy = () -> LendingTransactionMethod1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LendingTransactionMethod1Code.mmObject();
+			codeName = LendingTransactionMethodCode.ExclusiveTrade.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, LendingTransactionMethod1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected LendingTransactionMethod1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ODTR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LendingTransactionMethod1Code";
 				definition = "Lending method applied to the securities financing contract.";
-				code_lazy = () -> Arrays.asList(LendingTransactionMethod1Code.mmOnDemandTrade, LendingTransactionMethod1Code.mmExclusiveTrade);
 				trace_lazy = () -> LendingTransactionMethodCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LendingTransactionMethod1Code.OnDemandTrade, com.tools20022.repository.codeset.LendingTransactionMethod1Code.ExclusiveTrade);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(OnDemandTrade.getCodeName().get(), OnDemandTrade);
+		codesByName.put(ExclusiveTrade.getCodeName().get(), ExclusiveTrade);
+	}
+
+	public static LendingTransactionMethod1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static LendingTransactionMethod1Code[] values() {
+		LendingTransactionMethod1Code[] values = new LendingTransactionMethod1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, LendingTransactionMethod1Code> {
+		@Override
+		public LendingTransactionMethod1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(LendingTransactionMethod1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

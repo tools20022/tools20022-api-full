@@ -29,6 +29,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Specifies the parameters associated with the production of a certificate to
@@ -40,6 +42,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Document Document}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -60,26 +64,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * PrivateCertificate.mmNextRevisionDate}</li>
  * <li>{@linkplain com.tools20022.repository.entity.PrivateCertificate#mmPerson
  * PrivateCertificate.mmPerson}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Document Document}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PartyProfileInformation1
- * PartyProfileInformation1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.CertificationType1Choice
- * CertificationType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyProfileInformation2
- * PartyProfileInformation2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyProfileInformation3
- * PartyProfileInformation3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyProfileInformation4
- * PartyProfileInformation4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartyProfileInformation5
- * PartyProfileInformation5}</li>
  * </ul>
  * </li>
  * <li>
@@ -110,10 +94,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyProfileInformation1
+ * PartyProfileInformation1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CertificationType1Choice
+ * CertificationType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyProfileInformation2
+ * PartyProfileInformation2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyProfileInformation3
+ * PartyProfileInformation3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyProfileInformation4
+ * PartyProfileInformation4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyProfileInformation5
+ * PartyProfileInformation5}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -131,8 +133,8 @@ public class PrivateCertificate extends Document {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CertificateTypeCode certificateType;
 	/**
-	 * Identifies the type of certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,8 +178,8 @@ public class PrivateCertificate extends Document {
 	public static final MMBusinessAttribute mmCertificateType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyProfileInformation1.mmCertificateType, PartyProfileInformation1.mmExtendedCertificateType, CertificationType1Choice.mmCode, CertificationType1Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PrivateCertificate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PrivateCertificate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertificateType";
 			definition = "Identifies the type of certificate.";
@@ -196,8 +198,8 @@ public class PrivateCertificate extends Document {
 	};
 	protected YesNoIndicator certificationIndicator;
 	/**
-	 * Indicates whether the certificate type has been obtained and verified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -246,8 +248,8 @@ public class PrivateCertificate extends Document {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyProfileInformation1.mmCertificationIndicator, PartyProfileInformation2.mmCertificationIndicator, PartyProfileInformation3.mmCertificationIndicator,
 					PartyProfileInformation4.mmCertificationIndicator, PartyProfileInformation5.mmCertificationIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PrivateCertificate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PrivateCertificate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertificationIndicator";
 			definition = "Indicates whether the certificate type has been obtained and verified.";
@@ -266,8 +268,8 @@ public class PrivateCertificate extends Document {
 	};
 	protected ISODate checkingDate;
 	/**
-	 * Date at which the certification check has been performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -315,8 +317,8 @@ public class PrivateCertificate extends Document {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyProfileInformation1.mmCheckingDate, PartyProfileInformation2.mmCheckingDate, PartyProfileInformation3.mmCheckingDate, PartyProfileInformation4.mmCheckingDate,
 					PartyProfileInformation5.mmCheckingDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PrivateCertificate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PrivateCertificate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CheckingDate";
 			definition = "Date at which the certification check has been performed.";
@@ -335,8 +337,8 @@ public class PrivateCertificate extends Document {
 	};
 	protected EventFrequencyCode checkingFrequency;
 	/**
-	 * Specifies how frequently the check is performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -384,8 +386,8 @@ public class PrivateCertificate extends Document {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyProfileInformation1.mmCheckingFrequency, PartyProfileInformation2.mmCheckingFrequency, PartyProfileInformation3.mmCheckingFrequency, PartyProfileInformation4.mmCheckingFrequency,
 					PartyProfileInformation5.mmCheckingFrequency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PrivateCertificate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PrivateCertificate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CheckingFrequency";
 			definition = "Specifies how frequently the check is performed.";
@@ -404,9 +406,8 @@ public class PrivateCertificate extends Document {
 	};
 	protected ISODate nextRevisionDate;
 	/**
-	 * Specifies the date at which the next certification check will be
-	 * performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -455,8 +456,8 @@ public class PrivateCertificate extends Document {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyProfileInformation1.mmNextRevisionDate, PartyProfileInformation2.mmNextRevisionDate, PartyProfileInformation3.mmNextRevisionDate, PartyProfileInformation4.mmNextRevisionDate,
 					PartyProfileInformation5.mmNextRevisionDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PrivateCertificate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PrivateCertificate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NextRevisionDate";
 			definition = "Specifies the date at which the next certification check will be performed.";
@@ -475,8 +476,8 @@ public class PrivateCertificate extends Document {
 	};
 	protected PersonProfile person;
 	/**
-	 * Profile of a person for which a private certificate is described.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -510,8 +511,8 @@ public class PrivateCertificate extends Document {
 	 */
 	public static final MMBusinessAssociationEnd mmPerson = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.PrivateCertificate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PrivateCertificate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Person";
 			definition = "Profile of a person for which a private certificate is described.";
@@ -526,7 +527,7 @@ public class PrivateCertificate extends Document {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PrivateCertificate";
 				definition = "Specifies the parameters associated with the production of a certificate to identify the profile of a customer.";
@@ -552,47 +553,53 @@ public class PrivateCertificate extends Document {
 		return certificateType;
 	}
 
-	public void setCertificateType(CertificateTypeCode certificateType) {
-		this.certificateType = certificateType;
+	public PrivateCertificate setCertificateType(CertificateTypeCode certificateType) {
+		this.certificateType = Objects.requireNonNull(certificateType);
+		return this;
 	}
 
 	public YesNoIndicator getCertificationIndicator() {
 		return certificationIndicator;
 	}
 
-	public void setCertificationIndicator(YesNoIndicator certificationIndicator) {
-		this.certificationIndicator = certificationIndicator;
+	public PrivateCertificate setCertificationIndicator(YesNoIndicator certificationIndicator) {
+		this.certificationIndicator = Objects.requireNonNull(certificationIndicator);
+		return this;
 	}
 
 	public ISODate getCheckingDate() {
 		return checkingDate;
 	}
 
-	public void setCheckingDate(ISODate checkingDate) {
-		this.checkingDate = checkingDate;
+	public PrivateCertificate setCheckingDate(ISODate checkingDate) {
+		this.checkingDate = Objects.requireNonNull(checkingDate);
+		return this;
 	}
 
 	public EventFrequencyCode getCheckingFrequency() {
 		return checkingFrequency;
 	}
 
-	public void setCheckingFrequency(EventFrequencyCode checkingFrequency) {
-		this.checkingFrequency = checkingFrequency;
+	public PrivateCertificate setCheckingFrequency(EventFrequencyCode checkingFrequency) {
+		this.checkingFrequency = Objects.requireNonNull(checkingFrequency);
+		return this;
 	}
 
 	public ISODate getNextRevisionDate() {
 		return nextRevisionDate;
 	}
 
-	public void setNextRevisionDate(ISODate nextRevisionDate) {
-		this.nextRevisionDate = nextRevisionDate;
+	public PrivateCertificate setNextRevisionDate(ISODate nextRevisionDate) {
+		this.nextRevisionDate = Objects.requireNonNull(nextRevisionDate);
+		return this;
 	}
 
-	public PersonProfile getPerson() {
-		return person;
+	public Optional<PersonProfile> getPerson() {
+		return person == null ? Optional.empty() : Optional.of(person);
 	}
 
-	public void setPerson(com.tools20022.repository.entity.PersonProfile person) {
+	public PrivateCertificate setPerson(com.tools20022.repository.entity.PersonProfile person) {
 		this.person = person;
+		return this;
 	}
 }

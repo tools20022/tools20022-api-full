@@ -27,9 +27,8 @@ import com.tools20022.repository.entity.Goods;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -84,8 +83,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,15 +100,16 @@ import javax.xml.bind.annotation.XmlType;
  * CommercialDataSet4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CommercialDataSet5", propOrder = {"dataSetIdentification", "commercialDocumentReference", "buyer", "seller", "billTo", "goods", "paymentTerms", "settlementTerms"})
 public class CommercialDataSet5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DataSetId", required = true)
 	protected DocumentIdentification1 dataSetIdentification;
 	/**
-	 * Identifies the commercial data set
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -141,7 +141,7 @@ public class CommercialDataSet5 {
 	 */
 	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CommercialDataSet5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommercialDataSet5.mmObject();
 			isDerived = false;
 			xmlTag = "DataSetId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,10 +154,11 @@ public class CommercialDataSet5 {
 			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "ComrclDocRef", required = true)
 	protected InvoiceIdentification1 commercialDocumentReference;
 	/**
-	 * Reference to the identification of the underlying commercial document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -190,7 +191,7 @@ public class CommercialDataSet5 {
 	 */
 	public static final MMMessageAssociationEnd mmCommercialDocumentReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CommercialDataSet5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommercialDataSet5.mmObject();
 			isDerived = false;
 			xmlTag = "ComrclDocRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,10 +204,11 @@ public class CommercialDataSet5 {
 			type_lazy = () -> com.tools20022.repository.msg.InvoiceIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "Buyr", required = true)
 	protected PartyIdentification26 buyer;
 	/**
-	 * Party that buys goods or services, or a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -244,7 +246,7 @@ public class CommercialDataSet5 {
 	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CommercialDataSet5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommercialDataSet5.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,10 +259,11 @@ public class CommercialDataSet5 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
 		}
 	};
+	@XmlElement(name = "Sellr", required = true)
 	protected PartyIdentification26 seller;
 	/**
-	 * Party that sells goods or services, or a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -298,7 +301,7 @@ public class CommercialDataSet5 {
 	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CommercialDataSet5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommercialDataSet5.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -311,10 +314,11 @@ public class CommercialDataSet5 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
 		}
 	};
+	@XmlElement(name = "BllTo")
 	protected PartyIdentification26 billTo;
 	/**
-	 * Party to be invoiced for the purchase.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -351,7 +355,7 @@ public class CommercialDataSet5 {
 	public static final MMMessageAssociationEnd mmBillTo = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CommercialDataSet5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommercialDataSet5.mmObject();
 			isDerived = false;
 			xmlTag = "BllTo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -364,11 +368,11 @@ public class CommercialDataSet5 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
 		}
 	};
+	@XmlElement(name = "Goods", required = true)
 	protected List<com.tools20022.repository.msg.LineItem15> goods;
 	/**
-	 * Information about the goods and/or services of the underlying
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -405,7 +409,7 @@ public class CommercialDataSet5 {
 	public static final MMMessageAssociationEnd mmGoods = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Goods.mmObject();
-			componentContext_lazy = () -> CommercialDataSet5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommercialDataSet5.mmObject();
 			isDerived = false;
 			xmlTag = "Goods";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -417,10 +421,11 @@ public class CommercialDataSet5 {
 			type_lazy = () -> com.tools20022.repository.msg.LineItem15.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtTerms", required = true)
 	protected List<com.tools20022.repository.msg.PaymentTerms4> paymentTerms;
 	/**
-	 * Specifies the payment terms by means of a code and a limit in time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -458,7 +463,7 @@ public class CommercialDataSet5 {
 	public static final MMMessageAssociationEnd mmPaymentTerms = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CommercialTrade.mmPaymentObligation;
-			componentContext_lazy = () -> CommercialDataSet5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommercialDataSet5.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTerms";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -470,10 +475,11 @@ public class CommercialDataSet5 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentTerms4.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmTerms", required = true)
 	protected SettlementTerms3 settlementTerms;
 	/**
-	 * Specifies how the transaction should be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -510,7 +516,7 @@ public class CommercialDataSet5 {
 	public static final MMMessageAssociationEnd mmSettlementTerms = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
-			componentContext_lazy = () -> CommercialDataSet5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommercialDataSet5.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTerms";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -527,11 +533,12 @@ public class CommercialDataSet5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CommercialDataSet5.mmDataSetIdentification, CommercialDataSet5.mmCommercialDocumentReference, CommercialDataSet5.mmBuyer, CommercialDataSet5.mmSeller, CommercialDataSet5.mmBillTo,
-						CommercialDataSet5.mmGoods, CommercialDataSet5.mmPaymentTerms, CommercialDataSet5.mmSettlementTerms);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommercialDataSet5.mmDataSetIdentification, com.tools20022.repository.msg.CommercialDataSet5.mmCommercialDocumentReference,
+						com.tools20022.repository.msg.CommercialDataSet5.mmBuyer, com.tools20022.repository.msg.CommercialDataSet5.mmSeller, com.tools20022.repository.msg.CommercialDataSet5.mmBillTo,
+						com.tools20022.repository.msg.CommercialDataSet5.mmGoods, com.tools20022.repository.msg.CommercialDataSet5.mmPaymentTerms, com.tools20022.repository.msg.CommercialDataSet5.mmSettlementTerms);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ForwardDataSetSubmissionReportV05.mmCommercialDataSet, DataSetSubmissionV05.mmCommercialDataSet);
 				trace_lazy = () -> CommercialTrade.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommercialDataSet5";
 				definition = "Goods or services that are part of a commercial trade agreement.";
@@ -541,75 +548,75 @@ public class CommercialDataSet5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DataSetId", required = true)
 	public DocumentIdentification1 getDataSetIdentification() {
 		return dataSetIdentification;
 	}
 
-	public void setDataSetIdentification(com.tools20022.repository.msg.DocumentIdentification1 dataSetIdentification) {
-		this.dataSetIdentification = dataSetIdentification;
+	public CommercialDataSet5 setDataSetIdentification(com.tools20022.repository.msg.DocumentIdentification1 dataSetIdentification) {
+		this.dataSetIdentification = Objects.requireNonNull(dataSetIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ComrclDocRef", required = true)
 	public InvoiceIdentification1 getCommercialDocumentReference() {
 		return commercialDocumentReference;
 	}
 
-	public void setCommercialDocumentReference(com.tools20022.repository.msg.InvoiceIdentification1 commercialDocumentReference) {
-		this.commercialDocumentReference = commercialDocumentReference;
+	public CommercialDataSet5 setCommercialDocumentReference(com.tools20022.repository.msg.InvoiceIdentification1 commercialDocumentReference) {
+		this.commercialDocumentReference = Objects.requireNonNull(commercialDocumentReference);
+		return this;
 	}
 
-	@XmlElement(name = "Buyr", required = true)
 	public PartyIdentification26 getBuyer() {
 		return buyer;
 	}
 
-	public void setBuyer(com.tools20022.repository.msg.PartyIdentification26 buyer) {
-		this.buyer = buyer;
+	public CommercialDataSet5 setBuyer(com.tools20022.repository.msg.PartyIdentification26 buyer) {
+		this.buyer = Objects.requireNonNull(buyer);
+		return this;
 	}
 
-	@XmlElement(name = "Sellr", required = true)
 	public PartyIdentification26 getSeller() {
 		return seller;
 	}
 
-	public void setSeller(com.tools20022.repository.msg.PartyIdentification26 seller) {
-		this.seller = seller;
+	public CommercialDataSet5 setSeller(com.tools20022.repository.msg.PartyIdentification26 seller) {
+		this.seller = Objects.requireNonNull(seller);
+		return this;
 	}
 
-	@XmlElement(name = "BllTo")
-	public PartyIdentification26 getBillTo() {
-		return billTo;
+	public Optional<PartyIdentification26> getBillTo() {
+		return billTo == null ? Optional.empty() : Optional.of(billTo);
 	}
 
-	public void setBillTo(com.tools20022.repository.msg.PartyIdentification26 billTo) {
+	public CommercialDataSet5 setBillTo(com.tools20022.repository.msg.PartyIdentification26 billTo) {
 		this.billTo = billTo;
+		return this;
 	}
 
-	@XmlElement(name = "Goods", required = true)
 	public List<LineItem15> getGoods() {
-		return goods;
+		return goods == null ? goods = new ArrayList<>() : goods;
 	}
 
-	public void setGoods(List<com.tools20022.repository.msg.LineItem15> goods) {
-		this.goods = goods;
+	public CommercialDataSet5 setGoods(List<com.tools20022.repository.msg.LineItem15> goods) {
+		this.goods = Objects.requireNonNull(goods);
+		return this;
 	}
 
-	@XmlElement(name = "PmtTerms", required = true)
 	public List<PaymentTerms4> getPaymentTerms() {
-		return paymentTerms;
+		return paymentTerms == null ? paymentTerms = new ArrayList<>() : paymentTerms;
 	}
 
-	public void setPaymentTerms(List<com.tools20022.repository.msg.PaymentTerms4> paymentTerms) {
-		this.paymentTerms = paymentTerms;
+	public CommercialDataSet5 setPaymentTerms(List<com.tools20022.repository.msg.PaymentTerms4> paymentTerms) {
+		this.paymentTerms = Objects.requireNonNull(paymentTerms);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmTerms", required = true)
 	public SettlementTerms3 getSettlementTerms() {
 		return settlementTerms;
 	}
 
-	public void setSettlementTerms(com.tools20022.repository.msg.SettlementTerms3 settlementTerms) {
-		this.settlementTerms = settlementTerms;
+	public CommercialDataSet5 setSettlementTerms(com.tools20022.repository.msg.SettlementTerms3 settlementTerms) {
+		this.settlementTerms = Objects.requireNonNull(settlementTerms);
+		return this;
 	}
 }

@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
+import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +29,8 @@ import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,16 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides information about the terms of the foreign exchange transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ForeignExchangeTerms9", propOrder = {"unitCurrency", "quotedCurrency", "exchangeRate", "resultingAmount", "originalAmount"})
 public class ForeignExchangeTerms9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UnitCcy", required = true)
 	protected ActiveCurrencyCode unitCurrency;
 	/**
-	 * Currency in which the rate of exchange is expressed in a currency
-	 * exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +126,7 @@ public class ForeignExchangeTerms9 {
 	public static final MMMessageAttribute mmUnitCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmUnitCurrency;
-			componentContext_lazy = () -> ForeignExchangeTerms9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms9.mmObject();
 			isDerived = false;
 			xmlTag = "UnitCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,11 +137,11 @@ public class ForeignExchangeTerms9 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "QtdCcy", required = true)
 	protected ActiveCurrencyCode quotedCurrency;
 	/**
-	 * Currency into which the base currency is converted, in a currency
-	 * exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,6 +162,11 @@ public class ForeignExchangeTerms9 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtdCcy"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=Synonym, context=Statement Business Modeling,
+	 * value=IndirectCurrency, type=Synonym, context=Statement Business
+	 * Modeling, value=CounterCurrency</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -173,9 +182,11 @@ public class ForeignExchangeTerms9 {
 	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotedCurrency;
-			componentContext_lazy = () -> ForeignExchangeTerms9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms9.mmObject();
 			isDerived = false;
 			xmlTag = "QtdCcy";
+			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "Statement Business Modeling"}, new String[]{"value", "IndirectCurrency"}), new OtherSemanticMarkup(this, "Synonym",
+					new String[]{"context", "Statement Business Modeling"}, new String[]{"value", "CounterCurrency"}));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotedCurrency";
 			definition = "Currency into which the base currency is converted, in a currency exchange.";
@@ -184,15 +195,11 @@ public class ForeignExchangeTerms9 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "XchgRate", required = true)
 	protected BaseOneRate exchangeRate;
 	/**
-	 * Factor used for the conversion of an amount from one currency into
-	 * another. This reflects the price at which one currency was bought with
-	 * another currency.
 	 * 
-	 * Usage: ExchangeRate expresses the ratio between UnitCurrency and
-	 * QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -212,6 +219,9 @@ public class ForeignExchangeTerms9 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XchgRate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92A::EXCH</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -227,9 +237,10 @@ public class ForeignExchangeTerms9 {
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
-			componentContext_lazy = () -> ForeignExchangeTerms9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms9.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92A::EXCH"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "Factor used for the conversion of an amount from one currency into another. This reflects the price at which one currency was bought with another currency.\n\nUsage: ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).";
@@ -238,10 +249,11 @@ public class ForeignExchangeTerms9 {
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	@XmlElement(name = "RsltgAmt", required = true)
 	protected ActiveCurrencyAndAmount resultingAmount;
 	/**
-	 * Amount of money resulting from a foreign exchange transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -276,7 +288,7 @@ public class ForeignExchangeTerms9 {
 	public static final MMMessageAttribute mmResultingAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmResultingAmount;
-			componentContext_lazy = () -> ForeignExchangeTerms9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms9.mmObject();
 			isDerived = false;
 			xmlTag = "RsltgAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -287,11 +299,11 @@ public class ForeignExchangeTerms9 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlAmt")
 	protected ActiveCurrencyAndAmount originalAmount;
 	/**
-	 * Amount in its original currency when conversion from/into another
-	 * currency has occurred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -327,7 +339,7 @@ public class ForeignExchangeTerms9 {
 	public static final MMMessageAttribute mmOriginalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
-			componentContext_lazy = () -> ForeignExchangeTerms9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms9.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -342,10 +354,10 @@ public class ForeignExchangeTerms9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ForeignExchangeTerms9.mmUnitCurrency, ForeignExchangeTerms9.mmQuotedCurrency, ForeignExchangeTerms9.mmExchangeRate, ForeignExchangeTerms9.mmResultingAmount,
-						ForeignExchangeTerms9.mmOriginalAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeTerms9.mmUnitCurrency, com.tools20022.repository.msg.ForeignExchangeTerms9.mmQuotedCurrency,
+						com.tools20022.repository.msg.ForeignExchangeTerms9.mmExchangeRate, com.tools20022.repository.msg.ForeignExchangeTerms9.mmResultingAmount, com.tools20022.repository.msg.ForeignExchangeTerms9.mmOriginalAmount);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeTerms9";
 				definition = "Provides information about the terms of the foreign exchange transaction.";
@@ -354,48 +366,48 @@ public class ForeignExchangeTerms9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UnitCcy", required = true)
 	public ActiveCurrencyCode getUnitCurrency() {
 		return unitCurrency;
 	}
 
-	public void setUnitCurrency(ActiveCurrencyCode unitCurrency) {
-		this.unitCurrency = unitCurrency;
+	public ForeignExchangeTerms9 setUnitCurrency(ActiveCurrencyCode unitCurrency) {
+		this.unitCurrency = Objects.requireNonNull(unitCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "QtdCcy", required = true)
 	public ActiveCurrencyCode getQuotedCurrency() {
 		return quotedCurrency;
 	}
 
-	public void setQuotedCurrency(ActiveCurrencyCode quotedCurrency) {
-		this.quotedCurrency = quotedCurrency;
+	public ForeignExchangeTerms9 setQuotedCurrency(ActiveCurrencyCode quotedCurrency) {
+		this.quotedCurrency = Objects.requireNonNull(quotedCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "XchgRate", required = true)
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
 
-	public void setExchangeRate(BaseOneRate exchangeRate) {
-		this.exchangeRate = exchangeRate;
+	public ForeignExchangeTerms9 setExchangeRate(BaseOneRate exchangeRate) {
+		this.exchangeRate = Objects.requireNonNull(exchangeRate);
+		return this;
 	}
 
-	@XmlElement(name = "RsltgAmt", required = true)
 	public ActiveCurrencyAndAmount getResultingAmount() {
 		return resultingAmount;
 	}
 
-	public void setResultingAmount(ActiveCurrencyAndAmount resultingAmount) {
-		this.resultingAmount = resultingAmount;
+	public ForeignExchangeTerms9 setResultingAmount(ActiveCurrencyAndAmount resultingAmount) {
+		this.resultingAmount = Objects.requireNonNull(resultingAmount);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlAmt")
-	public ActiveCurrencyAndAmount getOriginalAmount() {
-		return originalAmount;
+	public Optional<ActiveCurrencyAndAmount> getOriginalAmount() {
+		return originalAmount == null ? Optional.empty() : Optional.of(originalAmount);
 	}
 
-	public void setOriginalAmount(ActiveCurrencyAndAmount originalAmount) {
+	public ForeignExchangeTerms9 setOriginalAmount(ActiveCurrencyAndAmount originalAmount) {
 		this.originalAmount = originalAmount;
+		return this;
 	}
 }

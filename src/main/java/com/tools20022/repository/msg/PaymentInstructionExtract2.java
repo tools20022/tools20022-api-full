@@ -31,6 +31,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -45,12 +47,11 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract2#mmInstructedAmountOrInterbankSettlementAmount
- * PaymentInstructionExtract2.mmInstructedAmountOrInterbankSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract2#InstructedAmountOrInterbankSettlementAmount
+ * PaymentInstructionExtract2.InstructedAmountOrInterbankSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract2#mmRequestedExecutionDateOrInterbankSettlementDate
- * PaymentInstructionExtract2.mmRequestedExecutionDateOrInterbankSettlementDate}
- * </li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstructionExtract2#RequestedExecutionDateOrInterbankSettlementDate
+ * PaymentInstructionExtract2.RequestedExecutionDateOrInterbankSettlementDate}</li>
  * </ul>
  * </li>
  * <li>
@@ -83,8 +84,21 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAmountAndRequestedExecutionDateRule#forPaymentInstructionExtract2
+ * ConstraintInstructedAmountAndRequestedExecutionDateRule.
+ * forPaymentInstructionExtract2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInterbankSettlementAmountAndDateRule#forPaymentInstructionExtract2
+ * ConstraintInterbankSettlementAmountAndDateRule.forPaymentInstructionExtract2}
+ * </li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -98,16 +112,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentInstructionExtract2", propOrder = {"originalMessageNameIdentification", "originalInstructionIdentification", "instructedAmount", "interbankSettlementAmount", "requestedExecutionDate", "interbankSettlementDate"})
 public class PaymentInstructionExtract2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgnlMsgNmId")
 	protected Max35Text originalMessageNameIdentification;
 	/**
-	 * Specifies the original message name identifier to which the message
-	 * refers, eg, pacs.003.001.01 or MT103.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -136,7 +150,7 @@ public class PaymentInstructionExtract2 {
 	 */
 	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentInstructionExtract2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgNmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,16 +161,11 @@ public class PaymentInstructionExtract2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlInstrId", required = true)
 	protected Max35Text originalInstructionIdentification;
 	/**
-	 * Original unique instruction identification as assigned by an instructing
-	 * party for an instructed party to unambiguously identify the original
-	 * instruction.
 	 * 
-	 * Usage: the original instruction identification is the original point to
-	 * point reference used between the instructing party and the instructed
-	 * party to refer to the original instruction.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,7 +200,7 @@ public class PaymentInstructionExtract2 {
 	public static final MMMessageAttribute mmOriginalInstructionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
-			componentContext_lazy = () -> PaymentInstructionExtract2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlInstrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,12 +211,11 @@ public class PaymentInstructionExtract2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "InstdAmt", required = true)
 	protected CurrencyAndAmount instructedAmount;
 	/**
-	 * Amount of money to be moved between the debtor and creditor, before
-	 * deduction of charges, expressed in the currency as ordered by the
-	 * initiating party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -243,7 +251,7 @@ public class PaymentInstructionExtract2 {
 	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
-			componentContext_lazy = () -> PaymentInstructionExtract2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract2.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -254,11 +262,11 @@ public class PaymentInstructionExtract2 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmAmt", required = true)
 	protected CurrencyAndAmount interbankSettlementAmount;
 	/**
-	 * Amount of money moved between the instructing agent and the instructed
-	 * agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -294,7 +302,7 @@ public class PaymentInstructionExtract2 {
 	public static final MMMessageAttribute mmInterbankSettlementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
-			componentContext_lazy = () -> PaymentInstructionExtract2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -305,11 +313,11 @@ public class PaymentInstructionExtract2 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdExctnDt", required = true)
 	protected ISODate requestedExecutionDate;
 	/**
-	 * Date the debtor requests the clearing agent to process the payment
-	 * instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -344,7 +352,7 @@ public class PaymentInstructionExtract2 {
 	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRequestedExecutionDate;
-			componentContext_lazy = () -> PaymentInstructionExtract2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract2.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -355,12 +363,11 @@ public class PaymentInstructionExtract2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmDt", required = true)
 	protected ISODate interbankSettlementDate;
 	/**
-	 * Date on which the amount of money ceases to be available to the agent
-	 * that owes it and when the amount of money becomes available to the agent
-	 * to which it is due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -395,7 +402,7 @@ public class PaymentInstructionExtract2 {
 	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
-			componentContext_lazy = () -> PaymentInstructionExtract2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -441,13 +448,13 @@ public class PaymentInstructionExtract2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmInstructedAmountOrInterbankSettlementAmount = new MMXor() {
+	public static final MMXor InstructedAmountOrInterbankSettlementAmount = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountOrInterbankSettlementAmount";
 			definition = "If InstructedAmount is present, then InterbankSettlementAmount is not allowed.\nIf InterbankSettlementAmount is present, then InstructedAmount is not allowed.";
-			messageComponent_lazy = () -> PaymentInstructionExtract2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(PaymentInstructionExtract2.mmInstructedAmount, PaymentInstructionExtract2.mmInterbankSettlementAmount);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionExtract2.mmInstructedAmount, com.tools20022.repository.msg.PaymentInstructionExtract2.mmInterbankSettlementAmount);
 		}
 	};
 	/**
@@ -485,23 +492,27 @@ public class PaymentInstructionExtract2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmRequestedExecutionDateOrInterbankSettlementDate = new MMXor() {
+	public static final MMXor RequestedExecutionDateOrInterbankSettlementDate = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDateOrInterbankSettlementDate";
 			definition = "If RequestedExecutionDate is present, then InterbankSettlementDate is not allowed.\nIf InterbankSettlementDate is present, then RequestedExecutionDate is not allowed.";
-			messageComponent_lazy = () -> PaymentInstructionExtract2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(PaymentInstructionExtract2.mmRequestedExecutionDate, PaymentInstructionExtract2.mmInterbankSettlementDate);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionExtract2.mmRequestedExecutionDate, com.tools20022.repository.msg.PaymentInstructionExtract2.mmInterbankSettlementDate);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentInstructionExtract2.mmOriginalMessageNameIdentification, PaymentInstructionExtract2.mmOriginalInstructionIdentification, PaymentInstructionExtract2.mmInstructedAmount,
-						PaymentInstructionExtract2.mmInterbankSettlementAmount, PaymentInstructionExtract2.mmRequestedExecutionDate, PaymentInstructionExtract2.mmInterbankSettlementDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionExtract2.mmOriginalMessageNameIdentification,
+						com.tools20022.repository.msg.PaymentInstructionExtract2.mmOriginalInstructionIdentification, com.tools20022.repository.msg.PaymentInstructionExtract2.mmInstructedAmount,
+						com.tools20022.repository.msg.PaymentInstructionExtract2.mmInterbankSettlementAmount, com.tools20022.repository.msg.PaymentInstructionExtract2.mmRequestedExecutionDate,
+						com.tools20022.repository.msg.PaymentInstructionExtract2.mmInterbankSettlementDate);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructedAmountAndRequestedExecutionDateRule.forPaymentInstructionExtract2,
+						com.tools20022.repository.constraints.ConstraintInterbankSettlementAmountAndDateRule.forPaymentInstructionExtract2);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -512,63 +523,64 @@ public class PaymentInstructionExtract2 {
 				})).get();
 				name = "PaymentInstructionExtract2";
 				definition = "Details of a payment instruction. The information contained in this component is sufficient to retrieve a payment instruction.";
-				xors_lazy = () -> Arrays.asList(PaymentInstructionExtract2.mmInstructedAmountOrInterbankSettlementAmount, PaymentInstructionExtract2.mmRequestedExecutionDateOrInterbankSettlementDate);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionExtract2.InstructedAmountOrInterbankSettlementAmount,
+						com.tools20022.repository.msg.PaymentInstructionExtract2.RequestedExecutionDateOrInterbankSettlementDate);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgnlMsgNmId")
-	public Max35Text getOriginalMessageNameIdentification() {
-		return originalMessageNameIdentification;
+	public Optional<Max35Text> getOriginalMessageNameIdentification() {
+		return originalMessageNameIdentification == null ? Optional.empty() : Optional.of(originalMessageNameIdentification);
 	}
 
-	public void setOriginalMessageNameIdentification(Max35Text originalMessageNameIdentification) {
+	public PaymentInstructionExtract2 setOriginalMessageNameIdentification(Max35Text originalMessageNameIdentification) {
 		this.originalMessageNameIdentification = originalMessageNameIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlInstrId", required = true)
 	public Max35Text getOriginalInstructionIdentification() {
 		return originalInstructionIdentification;
 	}
 
-	public void setOriginalInstructionIdentification(Max35Text originalInstructionIdentification) {
-		this.originalInstructionIdentification = originalInstructionIdentification;
+	public PaymentInstructionExtract2 setOriginalInstructionIdentification(Max35Text originalInstructionIdentification) {
+		this.originalInstructionIdentification = Objects.requireNonNull(originalInstructionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "InstdAmt", required = true)
 	public CurrencyAndAmount getInstructedAmount() {
 		return instructedAmount;
 	}
 
-	public void setInstructedAmount(CurrencyAndAmount instructedAmount) {
-		this.instructedAmount = instructedAmount;
+	public PaymentInstructionExtract2 setInstructedAmount(CurrencyAndAmount instructedAmount) {
+		this.instructedAmount = Objects.requireNonNull(instructedAmount);
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmAmt", required = true)
 	public CurrencyAndAmount getInterbankSettlementAmount() {
 		return interbankSettlementAmount;
 	}
 
-	public void setInterbankSettlementAmount(CurrencyAndAmount interbankSettlementAmount) {
-		this.interbankSettlementAmount = interbankSettlementAmount;
+	public PaymentInstructionExtract2 setInterbankSettlementAmount(CurrencyAndAmount interbankSettlementAmount) {
+		this.interbankSettlementAmount = Objects.requireNonNull(interbankSettlementAmount);
+		return this;
 	}
 
-	@XmlElement(name = "ReqdExctnDt", required = true)
 	public ISODate getRequestedExecutionDate() {
 		return requestedExecutionDate;
 	}
 
-	public void setRequestedExecutionDate(ISODate requestedExecutionDate) {
-		this.requestedExecutionDate = requestedExecutionDate;
+	public PaymentInstructionExtract2 setRequestedExecutionDate(ISODate requestedExecutionDate) {
+		this.requestedExecutionDate = Objects.requireNonNull(requestedExecutionDate);
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmDt", required = true)
 	public ISODate getInterbankSettlementDate() {
 		return interbankSettlementDate;
 	}
 
-	public void setInterbankSettlementDate(ISODate interbankSettlementDate) {
-		this.interbankSettlementDate = interbankSettlementDate;
+	public PaymentInstructionExtract2 setInterbankSettlementDate(ISODate interbankSettlementDate) {
+		this.interbankSettlementDate = Objects.requireNonNull(interbankSettlementDate);
+		return this;
 	}
 }

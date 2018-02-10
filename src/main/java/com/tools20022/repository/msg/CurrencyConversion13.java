@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,16 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * CurrencyConversion8}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CurrencyConversion13", propOrder = {"acceptedByCardholder", "conversion"})
 public class CurrencyConversion13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AccptdByCrdhldr")
 	protected TrueFalseIndicator acceptedByCardholder;
 	/**
-	 * True if the cardholder has accepted the currency conversion that the
-	 * acquirer has proposed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +118,7 @@ public class CurrencyConversion13 {
 	 */
 	public static final MMMessageAttribute mmAcceptedByCardholder = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyConversion13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion13.mmObject();
 			isDerived = false;
 			xmlTag = "AccptdByCrdhldr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,11 +130,11 @@ public class CurrencyConversion13 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Convs")
 	protected CurrencyConversion12 conversion;
 	/**
-	 * Conversion between the currency of a card acceptor and the currency of a
-	 * cardholder, provided by a dedicated service provider.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -166,7 +167,7 @@ public class CurrencyConversion13 {
 	 */
 	public static final MMMessageAssociationEnd mmConversion = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CurrencyConversion13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion13.mmObject();
 			isDerived = false;
 			xmlTag = "Convs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,9 +184,9 @@ public class CurrencyConversion13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CurrencyConversion13.mmAcceptedByCardholder, CurrencyConversion13.mmConversion);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion13.mmAcceptedByCardholder, com.tools20022.repository.msg.CurrencyConversion13.mmConversion);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyConversion13";
 				definition = "Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider.";
@@ -195,21 +196,21 @@ public class CurrencyConversion13 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AccptdByCrdhldr")
-	public TrueFalseIndicator getAcceptedByCardholder() {
-		return acceptedByCardholder;
+	public Optional<TrueFalseIndicator> getAcceptedByCardholder() {
+		return acceptedByCardholder == null ? Optional.empty() : Optional.of(acceptedByCardholder);
 	}
 
-	public void setAcceptedByCardholder(TrueFalseIndicator acceptedByCardholder) {
+	public CurrencyConversion13 setAcceptedByCardholder(TrueFalseIndicator acceptedByCardholder) {
 		this.acceptedByCardholder = acceptedByCardholder;
+		return this;
 	}
 
-	@XmlElement(name = "Convs")
-	public CurrencyConversion12 getConversion() {
-		return conversion;
+	public Optional<CurrencyConversion12> getConversion() {
+		return conversion == null ? Optional.empty() : Optional.of(conversion);
 	}
 
-	public void setConversion(com.tools20022.repository.msg.CurrencyConversion12 conversion) {
+	public CurrencyConversion13 setConversion(com.tools20022.repository.msg.CurrencyConversion12 conversion) {
 		this.conversion = conversion;
+		return this;
 	}
 }

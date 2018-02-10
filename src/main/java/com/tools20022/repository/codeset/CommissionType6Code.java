@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CommissionTypeV2Code;
+import com.tools20022.repository.codeset.CommissionType6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of investment fund commission.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code
- * CommissionTypeV2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType6Code#mmFrontEndLoad
- * CommissionType6Code.mmFrontEndLoad}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType6Code#FrontEndLoad
+ * CommissionType6Code.FrontEndLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType6Code#mmBackEndLoad
- * CommissionType6Code.mmBackEndLoad}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType6Code#BackEndLoad
+ * CommissionType6Code.BackEndLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionType6Code#mmCommissionDePlacement
- * CommissionType6Code.mmCommissionDePlacement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionType6Code#CommissionDePlacement
+ * CommissionType6Code.CommissionDePlacement}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeV2Code
+ * CommissionTypeV2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of investment fund commission."</li>
  * </ul>
  */
-public class CommissionType6Code extends CommissionTypeV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CommissionType6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class CommissionType6Code extends CommissionTypeV2Code {
 	 * name} = "FrontEndLoad"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFrontEndLoad = new MMCode() {
+	public static final CommissionType6Code FrontEndLoad = new CommissionType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEndLoad";
-			owner_lazy = () -> CommissionType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionType6Code.mmObject();
+			codeName = CommissionTypeV2Code.FrontEndLoad.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class CommissionType6Code extends CommissionTypeV2Code {
 	 * name} = "BackEndLoad"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBackEndLoad = new MMCode() {
+	public static final CommissionType6Code BackEndLoad = new CommissionType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEndLoad";
-			owner_lazy = () -> CommissionType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionType6Code.mmObject();
+			codeName = CommissionTypeV2Code.BackEndLoad.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class CommissionType6Code extends CommissionTypeV2Code {
 	 * name} = "CommissionDePlacement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommissionDePlacement = new MMCode() {
+	public static final CommissionType6Code CommissionDePlacement = new CommissionType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionDePlacement";
-			owner_lazy = () -> CommissionType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionType6Code.mmObject();
+			codeName = CommissionTypeV2Code.CommissionDePlacement.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CommissionType6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CommissionType6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FEND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommissionType6Code";
 				definition = "Specifies the type of investment fund commission.";
-				code_lazy = () -> Arrays.asList(CommissionType6Code.mmFrontEndLoad, CommissionType6Code.mmBackEndLoad, CommissionType6Code.mmCommissionDePlacement);
 				trace_lazy = () -> CommissionTypeV2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommissionType6Code.FrontEndLoad, com.tools20022.repository.codeset.CommissionType6Code.BackEndLoad,
+						com.tools20022.repository.codeset.CommissionType6Code.CommissionDePlacement);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(FrontEndLoad.getCodeName().get(), FrontEndLoad);
+		codesByName.put(BackEndLoad.getCodeName().get(), BackEndLoad);
+		codesByName.put(CommissionDePlacement.getCodeName().get(), CommissionDePlacement);
+	}
+
+	public static CommissionType6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CommissionType6Code[] values() {
+		CommissionType6Code[] values = new CommissionType6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CommissionType6Code> {
+		@Override
+		public CommissionType6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CommissionType6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

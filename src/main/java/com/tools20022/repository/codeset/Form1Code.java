@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.FormCode;
+import com.tools20022.repository.codeset.Form1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether a physical form is required.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.FormCode FormCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Form1Code#mmRequired
- * Form1Code.mmRequired}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Form1Code#mmNotRequired
- * Form1Code.mmNotRequired}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Form1Code#Required
+ * Form1Code.Required}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Form1Code#NotRequired
+ * Form1Code.NotRequired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Form1Code#mmSignatureRequired
- * Form1Code.mmSignatureRequired}</li>
+ * {@linkplain com.tools20022.repository.codeset.Form1Code#SignatureRequired
+ * Form1Code.SignatureRequired}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.FormCode FormCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies whether a physical form is required."</li>
  * </ul>
  */
-public class Form1Code extends FormCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Form1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,11 +87,12 @@ public class Form1Code extends FormCode {
 	 * name} = "Required"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRequired = new MMCode() {
+	public static final Form1Code Required = new Form1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Required";
-			owner_lazy = () -> Form1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Form1Code.mmObject();
+			codeName = FormCode.Required.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -104,11 +110,12 @@ public class Form1Code extends FormCode {
 	 * name} = "NotRequired"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotRequired = new MMCode() {
+	public static final Form1Code NotRequired = new Form1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotRequired";
-			owner_lazy = () -> Form1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Form1Code.mmObject();
+			codeName = FormCode.NotRequired.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -126,26 +133,58 @@ public class Form1Code extends FormCode {
 	 * name} = "SignatureRequired"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSignatureRequired = new MMCode() {
+	public static final Form1Code SignatureRequired = new Form1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureRequired";
-			owner_lazy = () -> Form1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Form1Code.mmObject();
+			codeName = FormCode.SignatureRequired.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Form1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Form1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("REQU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Form1Code";
 				definition = "Specifies whether a physical form is required.";
-				code_lazy = () -> Arrays.asList(Form1Code.mmRequired, Form1Code.mmNotRequired, Form1Code.mmSignatureRequired);
 				trace_lazy = () -> FormCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Form1Code.Required, com.tools20022.repository.codeset.Form1Code.NotRequired, com.tools20022.repository.codeset.Form1Code.SignatureRequired);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Required.getCodeName().get(), Required);
+		codesByName.put(NotRequired.getCodeName().get(), NotRequired);
+		codesByName.put(SignatureRequired.getCodeName().get(), SignatureRequired);
+	}
+
+	public static Form1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Form1Code[] values() {
+		Form1Code[] values = new Form1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Form1Code> {
+		@Override
+		public Form1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Form1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

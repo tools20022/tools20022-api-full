@@ -24,6 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SwapLegIdentification2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of the underlying of a security transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnderlyingIdentification2Choice", propOrder = {"swap", "other"})
 public class UnderlyingIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Swp", required = true)
 	protected SwapLegIdentification2 swap;
 	/**
-	 * Underlying of a swap transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -95,7 +97,7 @@ public class UnderlyingIdentification2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSwap = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UnderlyingIdentification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UnderlyingIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Swp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -107,10 +109,11 @@ public class UnderlyingIdentification2Choice {
 			type_lazy = () -> SwapLegIdentification2.mmObject();
 		}
 	};
+	@XmlElement(name = "Othr", required = true)
 	protected FinancialInstrumentIdentification7Choice other;
 	/**
-	 * Underlying of any other type of transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -137,7 +140,7 @@ public class UnderlyingIdentification2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UnderlyingIdentification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UnderlyingIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,8 +156,8 @@ public class UnderlyingIdentification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnderlyingIdentification2Choice.mmSwap, UnderlyingIdentification2Choice.mmOther);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnderlyingIdentification2Choice.mmSwap, com.tools20022.repository.choice.UnderlyingIdentification2Choice.mmOther);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingIdentification2Choice";
 				definition = "Details of the underlying of a security transaction.";
@@ -163,21 +166,21 @@ public class UnderlyingIdentification2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Swp", required = true)
 	public SwapLegIdentification2 getSwap() {
 		return swap;
 	}
 
-	public void setSwap(SwapLegIdentification2 swap) {
-		this.swap = swap;
+	public UnderlyingIdentification2Choice setSwap(SwapLegIdentification2 swap) {
+		this.swap = Objects.requireNonNull(swap);
+		return this;
 	}
 
-	@XmlElement(name = "Othr", required = true)
 	public FinancialInstrumentIdentification7Choice getOther() {
 		return other;
 	}
 
-	public void setOther(com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice other) {
-		this.other = other;
+	public UnderlyingIdentification2Choice setOther(com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice other) {
+		this.other = Objects.requireNonNull(other);
+		return this;
 	}
 }

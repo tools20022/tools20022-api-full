@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ModificationScope8", propOrder = {"modificationScopeIndication", "investmentPlan"})
 public class ModificationScope8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ModScpIndctn", required = true)
 	protected DataModification1Code modificationScopeIndication;
 	/**
-	 * Specifies the type of modification to be applied on a set of information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +124,7 @@ public class ModificationScope8 {
 	 */
 	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ModificationScope8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope8.mmObject();
 			isDerived = false;
 			xmlTag = "ModScpIndctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,11 +135,11 @@ public class ModificationScope8 {
 			simpleType_lazy = () -> DataModification1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstmtPlan", required = true)
 	protected InvestmentPlan5 investmentPlan;
 	/**
-	 * Plan that allows investors to schedule periodical investments or
-	 * divestments, according to pre-defined criteria.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -165,7 +167,7 @@ public class ModificationScope8 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentPlan = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ModificationScope8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope8.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtPlan";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,9 +183,9 @@ public class ModificationScope8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ModificationScope8.mmModificationScopeIndication, ModificationScope8.mmInvestmentPlan);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope8.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope8.mmInvestmentPlan);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AccountModificationInstructionV02.mmModifiedSavingsInvestmentPlan, AccountModificationInstructionV02.mmModifiedWithdrawalInvestmentPlan);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope8";
 				definition = "Scope of the modification to be applied on an identified set of information.";
@@ -193,21 +195,21 @@ public class ModificationScope8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ModScpIndctn", required = true)
 	public DataModification1Code getModificationScopeIndication() {
 		return modificationScopeIndication;
 	}
 
-	public void setModificationScopeIndication(DataModification1Code modificationScopeIndication) {
-		this.modificationScopeIndication = modificationScopeIndication;
+	public ModificationScope8 setModificationScopeIndication(DataModification1Code modificationScopeIndication) {
+		this.modificationScopeIndication = Objects.requireNonNull(modificationScopeIndication);
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtPlan", required = true)
 	public InvestmentPlan5 getInvestmentPlan() {
 		return investmentPlan;
 	}
 
-	public void setInvestmentPlan(com.tools20022.repository.msg.InvestmentPlan5 investmentPlan) {
-		this.investmentPlan = investmentPlan;
+	public ModificationScope8 setInvestmentPlan(com.tools20022.repository.msg.InvestmentPlan5 investmentPlan) {
+		this.investmentPlan = Objects.requireNonNull(investmentPlan);
+		return this;
 	}
 }

@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode;
+import com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Further sub product code list for commodity derivative Natural Gas.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode
- * AssetClassDetailedSubProductTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code#mmGasPool
- * AssetClassDetailedSubProductType6Code.mmGasPool}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code#GasPool
+ * AssetClassDetailedSubProductType6Code.GasPool}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code#mmLNG
- * AssetClassDetailedSubProductType6Code.mmLNG}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code#LNG
+ * AssetClassDetailedSubProductType6Code.LNG}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code#mmNCG
- * AssetClassDetailedSubProductType6Code.mmNCG}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code#NCG
+ * AssetClassDetailedSubProductType6Code.NCG}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code#mmTTF
- * AssetClassDetailedSubProductType6Code.mmTTF}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code#TTF
+ * AssetClassDetailedSubProductType6Code.TTF}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code#mmNBP
- * AssetClassDetailedSubProductType6Code.mmNBP}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code#NBP
+ * AssetClassDetailedSubProductType6Code.NBP}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode
+ * AssetClassDetailedSubProductTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Further sub product code list for commodity derivative Natural Gas."</li>
  * </ul>
  */
-public class AssetClassDetailedSubProductType6Code extends AssetClassDetailedSubProductTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AssetClassDetailedSubProductType6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,11 +92,12 @@ public class AssetClassDetailedSubProductType6Code extends AssetClassDetailedSub
 	 * name} = "GasPool"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGasPool = new MMCode() {
+	public static final AssetClassDetailedSubProductType6Code GasPool = new AssetClassDetailedSubProductType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GasPool";
-			owner_lazy = () -> AssetClassDetailedSubProductType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.GasPool.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +116,12 @@ public class AssetClassDetailedSubProductType6Code extends AssetClassDetailedSub
 	 * name} = "LNG"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLNG = new MMCode() {
+	public static final AssetClassDetailedSubProductType6Code LNG = new AssetClassDetailedSubProductType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LNG";
-			owner_lazy = () -> AssetClassDetailedSubProductType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.LNG.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,11 +140,12 @@ public class AssetClassDetailedSubProductType6Code extends AssetClassDetailedSub
 	 * name} = "NCG"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNCG = new MMCode() {
+	public static final AssetClassDetailedSubProductType6Code NCG = new AssetClassDetailedSubProductType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NCG";
-			owner_lazy = () -> AssetClassDetailedSubProductType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.NCG.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -156,11 +164,12 @@ public class AssetClassDetailedSubProductType6Code extends AssetClassDetailedSub
 	 * name} = "TTF"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTTF = new MMCode() {
+	public static final AssetClassDetailedSubProductType6Code TTF = new AssetClassDetailedSubProductType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TTF";
-			owner_lazy = () -> AssetClassDetailedSubProductType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.TTF.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -179,26 +188,61 @@ public class AssetClassDetailedSubProductType6Code extends AssetClassDetailedSub
 	 * name} = "NBP"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNBP = new MMCode() {
+	public static final AssetClassDetailedSubProductType6Code NBP = new AssetClassDetailedSubProductType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NBP";
-			owner_lazy = () -> AssetClassDetailedSubProductType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.NBP.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AssetClassDetailedSubProductType6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AssetClassDetailedSubProductType6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassDetailedSubProductType6Code";
 				definition = "Further sub product code list for commodity derivative Natural Gas.";
-				code_lazy = () -> Arrays.asList(AssetClassDetailedSubProductType6Code.mmGasPool, AssetClassDetailedSubProductType6Code.mmLNG, AssetClassDetailedSubProductType6Code.mmNCG, AssetClassDetailedSubProductType6Code.mmTTF,
-						AssetClassDetailedSubProductType6Code.mmNBP);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code.GasPool, com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code.LNG,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code.NCG, com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code.TTF,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code.NBP);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(GasPool.getCodeName().get(), GasPool);
+		codesByName.put(LNG.getCodeName().get(), LNG);
+		codesByName.put(NCG.getCodeName().get(), NCG);
+		codesByName.put(TTF.getCodeName().get(), TTF);
+		codesByName.put(NBP.getCodeName().get(), NBP);
+	}
+
+	public static AssetClassDetailedSubProductType6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AssetClassDetailedSubProductType6Code[] values() {
+		AssetClassDetailedSubProductType6Code[] values = new AssetClassDetailedSubProductType6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AssetClassDetailedSubProductType6Code> {
+		@Override
+		public AssetClassDetailedSubProductType6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AssetClassDetailedSubProductType6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

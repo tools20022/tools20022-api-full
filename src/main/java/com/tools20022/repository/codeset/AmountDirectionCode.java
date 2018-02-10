@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AmountDirectionCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies if an operation is an increase or a decrease or the result of a
@@ -32,18 +37,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AmountDirectionCode#Debit
+ * AmountDirectionCode.Debit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AmountDirectionCode#Credit
+ * AmountDirectionCode.Credit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountDirectionCode#mmDebit
- * AmountDirectionCode.mmDebit}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountDirectionCode#ReversalDebit
+ * AmountDirectionCode.ReversalDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountDirectionCode#mmCredit
- * AmountDirectionCode.mmCredit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountDirectionCode#mmReversalDebit
- * AmountDirectionCode.mmReversalDebit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountDirectionCode#mmReversalCredit
- * AmountDirectionCode.mmReversalCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountDirectionCode#ReversalCredit
+ * AmountDirectionCode.ReversalCredit}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -59,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class AmountDirectionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AmountDirectionCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -103,12 +107,12 @@ public class AmountDirectionCode {
 	 * definition} = "Operation is a decrease."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDebit = new MMCode() {
+	public static final AmountDirectionCode Debit = new AmountDirectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Debit";
 			definition = "Operation is a decrease.";
-			owner_lazy = () -> AmountDirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AmountDirectionCode.mmObject();
 			codeName = "DBIT";
 		}
 	};
@@ -133,12 +137,12 @@ public class AmountDirectionCode {
 	 * definition} = "Operation is an increase."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCredit = new MMCode() {
+	public static final AmountDirectionCode Credit = new AmountDirectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Credit";
 			definition = "Operation is an increase.";
-			owner_lazy = () -> AmountDirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AmountDirectionCode.mmObject();
 			codeName = "CRDT";
 		}
 	};
@@ -164,12 +168,12 @@ public class AmountDirectionCode {
 	 * "Credit entry used to reverse a previously booked debit entry."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReversalDebit = new MMCode() {
+	public static final AmountDirectionCode ReversalDebit = new AmountDirectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReversalDebit";
 			definition = "Credit entry used to reverse a previously booked debit entry.";
-			owner_lazy = () -> AmountDirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AmountDirectionCode.mmObject();
 			codeName = "RVDB";
 		}
 	};
@@ -195,28 +199,61 @@ public class AmountDirectionCode {
 	 * "Debit entry used to reverse a previously booked credit entry."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReversalCredit = new MMCode() {
+	public static final AmountDirectionCode ReversalCredit = new AmountDirectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReversalCredit";
 			definition = "Debit entry used to reverse a previously booked credit entry.";
-			owner_lazy = () -> AmountDirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AmountDirectionCode.mmObject();
 			codeName = "RVCD";
 		}
 	};
+	final static private LinkedHashMap<String, AmountDirectionCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AmountDirectionCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DBIT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountDirectionCode";
 				definition = "Specifies if an operation is an increase or a decrease or the result of a reversal operation.";
-				code_lazy = () -> Arrays.asList(AmountDirectionCode.mmDebit, AmountDirectionCode.mmCredit, AmountDirectionCode.mmReversalDebit, AmountDirectionCode.mmReversalCredit);
 				derivation_lazy = () -> Arrays.asList(CreditDebitCode.mmObject(), ReversalCode.mmObject(), CreditDebit3Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountDirectionCode.Debit, com.tools20022.repository.codeset.AmountDirectionCode.Credit, com.tools20022.repository.codeset.AmountDirectionCode.ReversalDebit,
+						com.tools20022.repository.codeset.AmountDirectionCode.ReversalCredit);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Debit.getCodeName().get(), Debit);
+		codesByName.put(Credit.getCodeName().get(), Credit);
+		codesByName.put(ReversalDebit.getCodeName().get(), ReversalDebit);
+		codesByName.put(ReversalCredit.getCodeName().get(), ReversalCredit);
+	}
+
+	public static AmountDirectionCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AmountDirectionCode[] values() {
+		AmountDirectionCode[] values = new AmountDirectionCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AmountDirectionCode> {
+		@Override
+		public AmountDirectionCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AmountDirectionCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

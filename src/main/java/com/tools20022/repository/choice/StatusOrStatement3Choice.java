@@ -29,6 +29,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -85,16 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatusOrStatement3Choice", propOrder = {"statusAdvice", "statement"})
 public class StatusOrStatement3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StsAdvc", required = true)
 	protected DocumentNumber6 statusAdvice;
 	/**
-	 * Identify the status advice and the transaction for which the status
-	 * advice was requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -122,7 +123,7 @@ public class StatusOrStatement3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmStatusAdvice = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusOrStatement3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.StatusOrStatement3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StsAdvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +135,11 @@ public class StatusOrStatement3Choice {
 			type_lazy = () -> DocumentNumber6.mmObject();
 		}
 	};
+	@XmlElement(name = "Stmt", required = true)
 	protected DocumentNumber1 statement;
 	/**
-	 * Identify the statement/report that was requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -163,7 +165,7 @@ public class StatusOrStatement3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmStatement = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusOrStatement3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.StatusOrStatement3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Stmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,9 +181,9 @@ public class StatusOrStatement3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatusOrStatement3Choice.mmStatusAdvice, StatusOrStatement3Choice.mmStatement);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatusOrStatement3Choice.mmStatusAdvice, com.tools20022.repository.choice.StatusOrStatement3Choice.mmStatement);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesStatusOrStatementQueryStatusAdviceV02.mmStatusOrStatementRequested);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -198,21 +200,21 @@ public class StatusOrStatement3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StsAdvc", required = true)
 	public DocumentNumber6 getStatusAdvice() {
 		return statusAdvice;
 	}
 
-	public void setStatusAdvice(DocumentNumber6 statusAdvice) {
-		this.statusAdvice = statusAdvice;
+	public StatusOrStatement3Choice setStatusAdvice(DocumentNumber6 statusAdvice) {
+		this.statusAdvice = Objects.requireNonNull(statusAdvice);
+		return this;
 	}
 
-	@XmlElement(name = "Stmt", required = true)
 	public DocumentNumber1 getStatement() {
 		return statement;
 	}
 
-	public void setStatement(DocumentNumber1 statement) {
-		this.statement = statement;
+	public StatusOrStatement3Choice setStatement(DocumentNumber1 statement) {
+		this.statement = Objects.requireNonNull(statement);
+		return this;
 	}
 }

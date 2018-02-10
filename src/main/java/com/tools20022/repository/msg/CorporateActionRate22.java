@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -27,9 +28,8 @@ import com.tools20022.repository.choice.RateAndAmountFormat6Choice;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -79,8 +79,25 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGrossDividendRate1Rule#forCorporateActionRate22
+ * ConstraintGrossDividendRate1Rule.forCorporateActionRate22}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGrossDividendRate2Rule#forCorporateActionRate22
+ * ConstraintGrossDividendRate2Rule.forCorporateActionRate22}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule#forCorporateActionRate22
+ * ConstraintTaxRelatedRateRule.forCorporateActionRate22}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGrossDividendRate3Rule#forCorporateActionRate22
+ * ConstraintGrossDividendRate3Rule.forCorporateActionRate22}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,17 +108,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies rates."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionRate22", propOrder = {"grossDividendRate", "indexFactor", "interestRateUsedForPayment", "maximumAllowedOversubscriptionRate", "prorationRate", "taxRelatedRate", "withholdingTaxRate", "additionalTax",
 		"taxableIncomePerDividendShare"})
 public class CorporateActionRate22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrssDvddRate")
 	protected List<GrossDividendRateFormat3Choice> grossDividendRate;
 	/**
-	 * Cash dividend amount per equity before deductions or allowances have been
-	 * made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -121,6 +138,9 @@ public class CorporateActionRate22 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "GrssDvddRate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::GRSS</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -136,9 +156,10 @@ public class CorporateActionRate22 {
 	public static final MMMessageAssociationEnd mmGrossDividendRate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmGrossDividend;
-			componentContext_lazy = () -> CorporateActionRate22.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate22.mmObject();
 			isDerived = false;
 			xmlTag = "GrssDvddRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::GRSS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossDividendRate";
 			definition = "Cash dividend amount per equity before deductions or allowances have been made.";
@@ -147,10 +168,11 @@ public class CorporateActionRate22 {
 			type_lazy = () -> GrossDividendRateFormat3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IndxFctr")
 	protected RateAndAmountFormat6Choice indexFactor;
 	/**
-	 * Public index rate applied to the amount paid to adjust it to inflation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -170,6 +192,9 @@ public class CorporateActionRate22 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IndxFctr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::INDX</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -185,9 +210,10 @@ public class CorporateActionRate22 {
 	public static final MMMessageAssociationEnd mmIndexFactor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIndexFactor;
-			componentContext_lazy = () -> CorporateActionRate22.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate22.mmObject();
 			isDerived = false;
 			xmlTag = "IndxFctr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::INDX"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexFactor";
 			definition = "Public index rate applied to the amount paid to adjust it to inflation.";
@@ -197,11 +223,11 @@ public class CorporateActionRate22 {
 			type_lazy = () -> RateAndAmountFormat6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstRateUsdForPmt")
 	protected List<InterestRateUsedForPaymentFormat3Choice> interestRateUsedForPayment;
 	/**
-	 * Actual interest rate used for the payment of the interest for the
-	 * specified interest period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -221,6 +247,9 @@ public class CorporateActionRate22 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IntrstRateUsdForPmt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::INTP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -236,9 +265,10 @@ public class CorporateActionRate22 {
 	public static final MMMessageAssociationEnd mmInterestRateUsedForPayment = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
-			componentContext_lazy = () -> CorporateActionRate22.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate22.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstRateUsdForPmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::INTP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRateUsedForPayment";
 			definition = "Actual interest rate used for the payment of the interest for the specified interest period.";
@@ -247,14 +277,11 @@ public class CorporateActionRate22 {
 			type_lazy = () -> InterestRateUsedForPaymentFormat3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxAllwdOvrsbcptRate")
 	protected PercentageRate maximumAllowedOversubscriptionRate;
 	/**
-	 * A maximum percentage of shares available through the over subscription
-	 * privilege, usually a percentage of the basic subscription shares, for
-	 * example, an account owner subscribing to 100 shares may over subscribe to
-	 * a maximum of 50 additional shares when the over subscription maximum is
-	 * 50 percent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -275,6 +302,9 @@ public class CorporateActionRate22 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MaxAllwdOvrsbcptRate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::OVEP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -290,9 +320,10 @@ public class CorporateActionRate22 {
 	public static final MMMessageAttribute mmMaximumAllowedOversubscriptionRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmMaximumAllowedOverSubscription;
-			componentContext_lazy = () -> CorporateActionRate22.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate22.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAllwdOvrsbcptRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::OVEP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAllowedOversubscriptionRate";
 			definition = "A maximum percentage of shares available through the over subscription privilege, usually a percentage of the basic subscription shares, for example, an account owner subscribing to 100 shares may over subscribe to a maximum of 50 additional shares when the over subscription maximum is 50 percent.";
@@ -301,10 +332,11 @@ public class CorporateActionRate22 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "PrratnRate")
 	protected PercentageRate prorationRate;
 	/**
-	 * Proportionate allocation used for the offer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -325,6 +357,9 @@ public class CorporateActionRate22 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrratnRate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::PROR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -338,9 +373,10 @@ public class CorporateActionRate22 {
 	public static final MMMessageAttribute mmProrationRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmProrationRate;
-			componentContext_lazy = () -> CorporateActionRate22.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate22.mmObject();
 			isDerived = false;
 			xmlTag = "PrratnRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::PROR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProrationRate";
 			definition = "Proportionate allocation used for the offer.";
@@ -349,10 +385,11 @@ public class CorporateActionRate22 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxRltdRate")
 	protected List<com.tools20022.repository.msg.RateTypeAndAmountAndStatus10> taxRelatedRate;
 	/**
-	 * Percentage of the gross dividend rate on which tax must be paid .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -371,6 +408,9 @@ public class CorporateActionRate22 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TaxRltdRate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::TAXE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -385,9 +425,10 @@ public class CorporateActionRate22 {
 	public static final MMMessageAssociationEnd mmTaxRelatedRate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
-			componentContext_lazy = () -> CorporateActionRate22.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate22.mmObject();
 			isDerived = false;
 			xmlTag = "TaxRltdRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::TAXE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRate";
 			definition = "Percentage of the gross dividend rate on which tax must be paid .";
@@ -396,11 +437,11 @@ public class CorporateActionRate22 {
 			type_lazy = () -> com.tools20022.repository.msg.RateTypeAndAmountAndStatus10.mmObject();
 		}
 	};
+	@XmlElement(name = "WhldgTaxRate")
 	protected PercentageRate withholdingTaxRate;
 	/**
-	 * Percentage of a cash distribution that will be withheld by a tax
-	 * authority.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -420,6 +461,9 @@ public class CorporateActionRate22 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "WhldgTaxRate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::TAXR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -435,9 +479,10 @@ public class CorporateActionRate22 {
 	public static final MMMessageAttribute mmWithholdingTaxRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
-			componentContext_lazy = () -> CorporateActionRate22.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate22.mmObject();
 			isDerived = false;
 			xmlTag = "WhldgTaxRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::TAXR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxRate";
 			definition = "Percentage of a cash distribution that will be withheld by a tax authority.";
@@ -446,10 +491,11 @@ public class CorporateActionRate22 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlTax")
 	protected RateAndAmountFormat6Choice additionalTax;
 	/**
-	 * Rate used for additional tax that cannot be categorised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -468,6 +514,9 @@ public class CorporateActionRate22 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlTax"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::ATAX</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -481,9 +530,10 @@ public class CorporateActionRate22 {
 	public static final MMMessageAssociationEnd mmAdditionalTax = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Tax.mmObject();
-			componentContext_lazy = () -> CorporateActionRate22.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate22.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlTax";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::ATAX"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalTax";
 			definition = "Rate used for additional tax that cannot be categorised.";
@@ -493,12 +543,11 @@ public class CorporateActionRate22 {
 			type_lazy = () -> RateAndAmountFormat6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxblIncmPerDvddShr")
 	protected List<com.tools20022.repository.msg.RateTypeAndAmountAndStatus12> taxableIncomePerDividendShare;
 	/**
-	 * Amount included in the dividend/NAV that is identified as gains directly
-	 * or indirectly derived from interest payments within the scope of the EU
-	 * Savings directive.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -533,7 +582,7 @@ public class CorporateActionRate22 {
 	public static final MMMessageAssociationEnd mmTaxableIncomePerDividendShare = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerDividendShare;
-			componentContext_lazy = () -> CorporateActionRate22.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate22.mmObject();
 			isDerived = false;
 			xmlTag = "TaxblIncmPerDvddShr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -548,11 +597,15 @@ public class CorporateActionRate22 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionRate22.mmGrossDividendRate, CorporateActionRate22.mmIndexFactor, CorporateActionRate22.mmInterestRateUsedForPayment,
-						CorporateActionRate22.mmMaximumAllowedOversubscriptionRate, CorporateActionRate22.mmProrationRate, CorporateActionRate22.mmTaxRelatedRate, CorporateActionRate22.mmWithholdingTaxRate,
-						CorporateActionRate22.mmAdditionalTax, CorporateActionRate22.mmTaxableIncomePerDividendShare);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate22.mmGrossDividendRate, com.tools20022.repository.msg.CorporateActionRate22.mmIndexFactor,
+						com.tools20022.repository.msg.CorporateActionRate22.mmInterestRateUsedForPayment, com.tools20022.repository.msg.CorporateActionRate22.mmMaximumAllowedOversubscriptionRate,
+						com.tools20022.repository.msg.CorporateActionRate22.mmProrationRate, com.tools20022.repository.msg.CorporateActionRate22.mmTaxRelatedRate, com.tools20022.repository.msg.CorporateActionRate22.mmWithholdingTaxRate,
+						com.tools20022.repository.msg.CorporateActionRate22.mmAdditionalTax, com.tools20022.repository.msg.CorporateActionRate22.mmTaxableIncomePerDividendShare);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGrossDividendRate1Rule.forCorporateActionRate22,
+						com.tools20022.repository.constraints.ConstraintGrossDividendRate2Rule.forCorporateActionRate22, com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forCorporateActionRate22,
+						com.tools20022.repository.constraints.ConstraintGrossDividendRate3Rule.forCorporateActionRate22);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRate22";
 				definition = "Specifies rates.";
@@ -561,84 +614,84 @@ public class CorporateActionRate22 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrssDvddRate")
 	public List<GrossDividendRateFormat3Choice> getGrossDividendRate() {
-		return grossDividendRate;
+		return grossDividendRate == null ? grossDividendRate = new ArrayList<>() : grossDividendRate;
 	}
 
-	public void setGrossDividendRate(List<GrossDividendRateFormat3Choice> grossDividendRate) {
-		this.grossDividendRate = grossDividendRate;
+	public CorporateActionRate22 setGrossDividendRate(List<GrossDividendRateFormat3Choice> grossDividendRate) {
+		this.grossDividendRate = Objects.requireNonNull(grossDividendRate);
+		return this;
 	}
 
-	@XmlElement(name = "IndxFctr")
-	public RateAndAmountFormat6Choice getIndexFactor() {
-		return indexFactor;
+	public Optional<RateAndAmountFormat6Choice> getIndexFactor() {
+		return indexFactor == null ? Optional.empty() : Optional.of(indexFactor);
 	}
 
-	public void setIndexFactor(RateAndAmountFormat6Choice indexFactor) {
+	public CorporateActionRate22 setIndexFactor(RateAndAmountFormat6Choice indexFactor) {
 		this.indexFactor = indexFactor;
+		return this;
 	}
 
-	@XmlElement(name = "IntrstRateUsdForPmt")
 	public List<InterestRateUsedForPaymentFormat3Choice> getInterestRateUsedForPayment() {
-		return interestRateUsedForPayment;
+		return interestRateUsedForPayment == null ? interestRateUsedForPayment = new ArrayList<>() : interestRateUsedForPayment;
 	}
 
-	public void setInterestRateUsedForPayment(List<InterestRateUsedForPaymentFormat3Choice> interestRateUsedForPayment) {
-		this.interestRateUsedForPayment = interestRateUsedForPayment;
+	public CorporateActionRate22 setInterestRateUsedForPayment(List<InterestRateUsedForPaymentFormat3Choice> interestRateUsedForPayment) {
+		this.interestRateUsedForPayment = Objects.requireNonNull(interestRateUsedForPayment);
+		return this;
 	}
 
-	@XmlElement(name = "MaxAllwdOvrsbcptRate")
-	public PercentageRate getMaximumAllowedOversubscriptionRate() {
-		return maximumAllowedOversubscriptionRate;
+	public Optional<PercentageRate> getMaximumAllowedOversubscriptionRate() {
+		return maximumAllowedOversubscriptionRate == null ? Optional.empty() : Optional.of(maximumAllowedOversubscriptionRate);
 	}
 
-	public void setMaximumAllowedOversubscriptionRate(PercentageRate maximumAllowedOversubscriptionRate) {
+	public CorporateActionRate22 setMaximumAllowedOversubscriptionRate(PercentageRate maximumAllowedOversubscriptionRate) {
 		this.maximumAllowedOversubscriptionRate = maximumAllowedOversubscriptionRate;
+		return this;
 	}
 
-	@XmlElement(name = "PrratnRate")
-	public PercentageRate getProrationRate() {
-		return prorationRate;
+	public Optional<PercentageRate> getProrationRate() {
+		return prorationRate == null ? Optional.empty() : Optional.of(prorationRate);
 	}
 
-	public void setProrationRate(PercentageRate prorationRate) {
+	public CorporateActionRate22 setProrationRate(PercentageRate prorationRate) {
 		this.prorationRate = prorationRate;
+		return this;
 	}
 
-	@XmlElement(name = "TaxRltdRate")
 	public List<RateTypeAndAmountAndStatus10> getTaxRelatedRate() {
-		return taxRelatedRate;
+		return taxRelatedRate == null ? taxRelatedRate = new ArrayList<>() : taxRelatedRate;
 	}
 
-	public void setTaxRelatedRate(List<com.tools20022.repository.msg.RateTypeAndAmountAndStatus10> taxRelatedRate) {
-		this.taxRelatedRate = taxRelatedRate;
+	public CorporateActionRate22 setTaxRelatedRate(List<com.tools20022.repository.msg.RateTypeAndAmountAndStatus10> taxRelatedRate) {
+		this.taxRelatedRate = Objects.requireNonNull(taxRelatedRate);
+		return this;
 	}
 
-	@XmlElement(name = "WhldgTaxRate")
-	public PercentageRate getWithholdingTaxRate() {
-		return withholdingTaxRate;
+	public Optional<PercentageRate> getWithholdingTaxRate() {
+		return withholdingTaxRate == null ? Optional.empty() : Optional.of(withholdingTaxRate);
 	}
 
-	public void setWithholdingTaxRate(PercentageRate withholdingTaxRate) {
+	public CorporateActionRate22 setWithholdingTaxRate(PercentageRate withholdingTaxRate) {
 		this.withholdingTaxRate = withholdingTaxRate;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlTax")
-	public RateAndAmountFormat6Choice getAdditionalTax() {
-		return additionalTax;
+	public Optional<RateAndAmountFormat6Choice> getAdditionalTax() {
+		return additionalTax == null ? Optional.empty() : Optional.of(additionalTax);
 	}
 
-	public void setAdditionalTax(RateAndAmountFormat6Choice additionalTax) {
+	public CorporateActionRate22 setAdditionalTax(RateAndAmountFormat6Choice additionalTax) {
 		this.additionalTax = additionalTax;
+		return this;
 	}
 
-	@XmlElement(name = "TaxblIncmPerDvddShr")
 	public List<RateTypeAndAmountAndStatus12> getTaxableIncomePerDividendShare() {
-		return taxableIncomePerDividendShare;
+		return taxableIncomePerDividendShare == null ? taxableIncomePerDividendShare = new ArrayList<>() : taxableIncomePerDividendShare;
 	}
 
-	public void setTaxableIncomePerDividendShare(List<com.tools20022.repository.msg.RateTypeAndAmountAndStatus12> taxableIncomePerDividendShare) {
-		this.taxableIncomePerDividendShare = taxableIncomePerDividendShare;
+	public CorporateActionRate22 setTaxableIncomePerDividendShare(List<com.tools20022.repository.msg.RateTypeAndAmountAndStatus12> taxableIncomePerDividendShare) {
+		this.taxableIncomePerDividendShare = Objects.requireNonNull(taxableIncomePerDividendShare);
+		return this;
 	}
 }

@@ -34,6 +34,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -47,11 +48,11 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Commission10#mmTypeOrExtendedTypeRule
- * Commission10.mmTypeOrExtendedTypeRule}</li>
+ * {@linkplain com.tools20022.repository.msg.Commission10#TypeOrExtendedTypeRule
+ * Commission10.TypeOrExtendedTypeRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Commission10#mmBasisOrExtendedBasisRule
- * Commission10.mmBasisOrExtendedBasisRule}</li>
+ * {@linkplain com.tools20022.repository.msg.Commission10#BasisOrExtendedBasisRule
+ * Commission10.BasisOrExtendedBasisRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -85,8 +86,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -106,15 +107,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Commission10", propOrder = {"type", "extendedType", "basis", "extendedBasis", "amount", "rate", "recipientIdentification", "commercialAgreementReference", "waivingDetails"})
 public class Commission10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp")
 	protected CommissionType6Code type;
 	/**
-	 * Service for which the commission is asked or paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,7 +149,7 @@ public class Commission10 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
-			componentContext_lazy = () -> Commission10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission10.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,10 +160,11 @@ public class Commission10 {
 			simpleType_lazy = () -> CommissionType6Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedTp")
 	protected Extended350Code extendedType;
 	/**
-	 * Service for which the commission is asked or paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -194,7 +197,7 @@ public class Commission10 {
 	public static final MMMessageAttribute mmExtendedType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
-			componentContext_lazy = () -> Commission10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission10.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,10 +208,11 @@ public class Commission10 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Bsis")
 	protected TaxationBasis4Code basis;
 	/**
-	 * Basis upon which a commission is charged, eg, flat fee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -241,7 +245,7 @@ public class Commission10 {
 	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmBasis;
-			componentContext_lazy = () -> Commission10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission10.mmObject();
 			isDerived = false;
 			xmlTag = "Bsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -252,10 +256,11 @@ public class Commission10 {
 			simpleType_lazy = () -> TaxationBasis4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedBsis")
 	protected Extended350Code extendedBasis;
 	/**
-	 * Basis upon which a commission is charged, eg, flat fee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -288,7 +293,7 @@ public class Commission10 {
 	public static final MMMessageAttribute mmExtendedBasis = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmBasis;
-			componentContext_lazy = () -> Commission10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission10.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedBsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -299,10 +304,11 @@ public class Commission10 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt")
 	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
-	 * Commission expressed as an amount of money.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -342,7 +348,7 @@ public class Commission10 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> Commission10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission10.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -354,10 +360,11 @@ public class Commission10 {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Rate")
 	protected PercentageRate rate;
 	/**
-	 * Commission expressed as a percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -397,7 +404,7 @@ public class Commission10 {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmRate;
-			componentContext_lazy = () -> Commission10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission10.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -409,10 +416,11 @@ public class Commission10 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "RcptId")
 	protected PartyIdentification2Choice recipientIdentification;
 	/**
-	 * Party entitled to the amount of money resulting from a commission.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -446,7 +454,7 @@ public class Commission10 {
 	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Commission10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission10.mmObject();
 			isDerived = false;
 			xmlTag = "RcptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -457,12 +465,11 @@ public class Commission10 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ComrclAgrmtRef")
 	protected Max35Text commercialAgreementReference;
 	/**
-	 * Reference to the agreement established between the fund and another
-	 * party. This element, amongst others, defines the conditions of the
-	 * commissions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -496,7 +503,7 @@ public class Commission10 {
 	public static final MMMessageAttribute mmCommercialAgreementReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommercialAgreementReference;
-			componentContext_lazy = () -> Commission10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission10.mmObject();
 			isDerived = false;
 			xmlTag = "ComrclAgrmtRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -507,10 +514,11 @@ public class Commission10 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "WvgDtls")
 	protected CommissionWaiver3 waivingDetails;
 	/**
-	 * Voluntary non-enforcement of the right to all or part of a commission.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -542,7 +550,7 @@ public class Commission10 {
 	public static final MMMessageAssociationEnd mmWaivingDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionWaiving;
-			componentContext_lazy = () -> Commission10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission10.mmObject();
 			isDerived = false;
 			xmlTag = "WvgDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -584,13 +592,13 @@ public class Commission10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmTypeOrExtendedTypeRule = new MMXor() {
+	public static final MMXor TypeOrExtendedTypeRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOrExtendedTypeRule";
 			definition = "Either Type or ExtendedType may be present, but not both.";
-			messageComponent_lazy = () -> Commission10.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(Commission10.mmType, Commission10.mmExtendedType);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.Commission10.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission10.mmType, com.tools20022.repository.msg.Commission10.mmExtendedType);
 		}
 	};
 	/**
@@ -623,23 +631,24 @@ public class Commission10 {
 	 * "Either Basis oe ExtendedBasis may be present but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmBasisOrExtendedBasisRule = new MMXor() {
+	public static final MMXor BasisOrExtendedBasisRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisOrExtendedBasisRule";
 			definition = "Either Basis oe ExtendedBasis may be present but not both.";
-			messageComponent_lazy = () -> Commission10.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(Commission10.mmBasis, Commission10.mmExtendedBasis);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.Commission10.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission10.mmBasis, com.tools20022.repository.msg.Commission10.mmExtendedBasis);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Commission10.mmType, Commission10.mmExtendedType, Commission10.mmBasis, Commission10.mmExtendedBasis, Commission10.mmAmount, Commission10.mmRate,
-						Commission10.mmRecipientIdentification, Commission10.mmCommercialAgreementReference, Commission10.mmWaivingDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission10.mmType, com.tools20022.repository.msg.Commission10.mmExtendedType, com.tools20022.repository.msg.Commission10.mmBasis,
+						com.tools20022.repository.msg.Commission10.mmExtendedBasis, com.tools20022.repository.msg.Commission10.mmAmount, com.tools20022.repository.msg.Commission10.mmRate,
+						com.tools20022.repository.msg.Commission10.mmRecipientIdentification, com.tools20022.repository.msg.Commission10.mmCommercialAgreementReference, com.tools20022.repository.msg.Commission10.mmWaivingDetails);
 				trace_lazy = () -> Commission.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -651,90 +660,90 @@ public class Commission10 {
 				name = "Commission10";
 				definition = "Amount of money due to a party as compensation for a service.";
 				nextVersions_lazy = () -> Arrays.asList(Commission18.mmObject(), Commission19.mmObject());
-				xors_lazy = () -> Arrays.asList(Commission10.mmTypeOrExtendedTypeRule, Commission10.mmBasisOrExtendedBasisRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission10.TypeOrExtendedTypeRule, com.tools20022.repository.msg.Commission10.BasisOrExtendedBasisRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp")
-	public CommissionType6Code getType() {
-		return type;
+	public Optional<CommissionType6Code> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(CommissionType6Code type) {
+	public Commission10 setType(CommissionType6Code type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "XtndedTp")
-	public Extended350Code getExtendedType() {
-		return extendedType;
+	public Optional<Extended350Code> getExtendedType() {
+		return extendedType == null ? Optional.empty() : Optional.of(extendedType);
 	}
 
-	public void setExtendedType(Extended350Code extendedType) {
+	public Commission10 setExtendedType(Extended350Code extendedType) {
 		this.extendedType = extendedType;
+		return this;
 	}
 
-	@XmlElement(name = "Bsis")
-	public TaxationBasis4Code getBasis() {
-		return basis;
+	public Optional<TaxationBasis4Code> getBasis() {
+		return basis == null ? Optional.empty() : Optional.of(basis);
 	}
 
-	public void setBasis(TaxationBasis4Code basis) {
+	public Commission10 setBasis(TaxationBasis4Code basis) {
 		this.basis = basis;
+		return this;
 	}
 
-	@XmlElement(name = "XtndedBsis")
-	public Extended350Code getExtendedBasis() {
-		return extendedBasis;
+	public Optional<Extended350Code> getExtendedBasis() {
+		return extendedBasis == null ? Optional.empty() : Optional.of(extendedBasis);
 	}
 
-	public void setExtendedBasis(Extended350Code extendedBasis) {
+	public Commission10 setExtendedBasis(Extended350Code extendedBasis) {
 		this.extendedBasis = extendedBasis;
+		return this;
 	}
 
-	@XmlElement(name = "Amt")
-	public ActiveCurrencyAnd13DecimalAmount getAmount() {
-		return amount;
+	public Optional<ActiveCurrencyAnd13DecimalAmount> getAmount() {
+		return amount == null ? Optional.empty() : Optional.of(amount);
 	}
 
-	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+	public Commission10 setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
 		this.amount = amount;
+		return this;
 	}
 
-	@XmlElement(name = "Rate")
-	public PercentageRate getRate() {
-		return rate;
+	public Optional<PercentageRate> getRate() {
+		return rate == null ? Optional.empty() : Optional.of(rate);
 	}
 
-	public void setRate(PercentageRate rate) {
+	public Commission10 setRate(PercentageRate rate) {
 		this.rate = rate;
+		return this;
 	}
 
-	@XmlElement(name = "RcptId")
-	public PartyIdentification2Choice getRecipientIdentification() {
-		return recipientIdentification;
+	public Optional<PartyIdentification2Choice> getRecipientIdentification() {
+		return recipientIdentification == null ? Optional.empty() : Optional.of(recipientIdentification);
 	}
 
-	public void setRecipientIdentification(PartyIdentification2Choice recipientIdentification) {
+	public Commission10 setRecipientIdentification(PartyIdentification2Choice recipientIdentification) {
 		this.recipientIdentification = recipientIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ComrclAgrmtRef")
-	public Max35Text getCommercialAgreementReference() {
-		return commercialAgreementReference;
+	public Optional<Max35Text> getCommercialAgreementReference() {
+		return commercialAgreementReference == null ? Optional.empty() : Optional.of(commercialAgreementReference);
 	}
 
-	public void setCommercialAgreementReference(Max35Text commercialAgreementReference) {
+	public Commission10 setCommercialAgreementReference(Max35Text commercialAgreementReference) {
 		this.commercialAgreementReference = commercialAgreementReference;
+		return this;
 	}
 
-	@XmlElement(name = "WvgDtls")
-	public CommissionWaiver3 getWaivingDetails() {
-		return waivingDetails;
+	public Optional<CommissionWaiver3> getWaivingDetails() {
+		return waivingDetails == null ? Optional.empty() : Optional.of(waivingDetails);
 	}
 
-	public void setWaivingDetails(com.tools20022.repository.msg.CommissionWaiver3 waivingDetails) {
+	public Commission10 setWaivingDetails(com.tools20022.repository.msg.CommissionWaiver3 waivingDetails) {
 		this.waivingDetails = waivingDetails;
+		return this;
 	}
 }

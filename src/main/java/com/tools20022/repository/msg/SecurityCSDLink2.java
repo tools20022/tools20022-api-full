@@ -26,9 +26,8 @@ import com.tools20022.repository.choice.IssuerOrInvestor1choice;
 import com.tools20022.repository.choice.SystemPartyIdentification1Choice;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines how the CSD is linked to the security."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecurityCSDLink2", propOrder = {"financialInstrumentIdentification", "issuerInvestorCSD", "technicalIssuerCSD", "securityMaintenance", "issuanceAccount", "validFrom", "validTo"})
 public class SecurityCSDLink2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FinInstrmId", required = true)
 	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
-	 * Identification of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +115,7 @@ public class SecurityCSDLink2 {
 	 */
 	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityCSDLink2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink2.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +126,11 @@ public class SecurityCSDLink2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	@XmlElement(name = "IssrInvstrCSD", required = true)
 	protected IssuerOrInvestor1choice issuerInvestorCSD;
 	/**
-	 * CSD Issuer of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +158,7 @@ public class SecurityCSDLink2 {
 	 */
 	public static final MMMessageAttribute mmIssuerInvestorCSD = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityCSDLink2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink2.mmObject();
 			isDerived = false;
 			xmlTag = "IssrInvstrCSD";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,10 +169,11 @@ public class SecurityCSDLink2 {
 			complexType_lazy = () -> IssuerOrInvestor1choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TechIssrCSD")
 	protected SystemPartyIdentification1Choice technicalIssuerCSD;
 	/**
-	 * Technical issuer of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -198,7 +200,7 @@ public class SecurityCSDLink2 {
 	 */
 	public static final MMMessageAssociationEnd mmTechnicalIssuerCSD = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecurityCSDLink2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink2.mmObject();
 			isDerived = false;
 			xmlTag = "TechIssrCSD";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,11 +212,11 @@ public class SecurityCSDLink2 {
 			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyMntnc", required = true)
 	protected YesNoIndicator securityMaintenance;
 	/**
-	 * Specifies if the involved CSD (issuer/technical issuer/investor) is also
-	 * the maintainer of related reference data.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,7 +246,7 @@ public class SecurityCSDLink2 {
 	 */
 	public static final MMMessageAttribute mmSecurityMaintenance = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityCSDLink2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink2.mmObject();
 			isDerived = false;
 			xmlTag = "SctyMntnc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -255,10 +257,11 @@ public class SecurityCSDLink2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "IssncAcct")
 	protected List<com.tools20022.repository.msg.IssuanceAccount1> issuanceAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -284,7 +287,7 @@ public class SecurityCSDLink2 {
 	 */
 	public static final MMMessageAssociationEnd mmIssuanceAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecurityCSDLink2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink2.mmObject();
 			isDerived = false;
 			xmlTag = "IssncAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -295,10 +298,11 @@ public class SecurityCSDLink2 {
 			type_lazy = () -> com.tools20022.repository.msg.IssuanceAccount1.mmObject();
 		}
 	};
+	@XmlElement(name = "VldFr", required = true)
 	protected DateAndDateTimeChoice validFrom;
 	/**
-	 * Defines the date since when the CSD is linked to the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -327,7 +331,7 @@ public class SecurityCSDLink2 {
 	 */
 	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityCSDLink2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink2.mmObject();
 			isDerived = false;
 			xmlTag = "VldFr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -338,10 +342,11 @@ public class SecurityCSDLink2 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "VldTo")
 	protected DateAndDateTimeChoice validTo;
 	/**
-	 * Defines the date until when the CSD is linked to the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -370,7 +375,7 @@ public class SecurityCSDLink2 {
 	 */
 	public static final MMMessageAttribute mmValidTo = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityCSDLink2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink2.mmObject();
 			isDerived = false;
 			xmlTag = "VldTo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -385,9 +390,10 @@ public class SecurityCSDLink2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityCSDLink2.mmFinancialInstrumentIdentification, SecurityCSDLink2.mmIssuerInvestorCSD, SecurityCSDLink2.mmTechnicalIssuerCSD, SecurityCSDLink2.mmSecurityMaintenance,
-						SecurityCSDLink2.mmIssuanceAccount, SecurityCSDLink2.mmValidFrom, SecurityCSDLink2.mmValidTo);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityCSDLink2.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.SecurityCSDLink2.mmIssuerInvestorCSD,
+						com.tools20022.repository.msg.SecurityCSDLink2.mmTechnicalIssuerCSD, com.tools20022.repository.msg.SecurityCSDLink2.mmSecurityMaintenance, com.tools20022.repository.msg.SecurityCSDLink2.mmIssuanceAccount,
+						com.tools20022.repository.msg.SecurityCSDLink2.mmValidFrom, com.tools20022.repository.msg.SecurityCSDLink2.mmValidTo);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityCSDLink2";
 				definition = "Defines how the CSD is linked to the security.";
@@ -396,66 +402,66 @@ public class SecurityCSDLink2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
 
-	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
-		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	public SecurityCSDLink2 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "IssrInvstrCSD", required = true)
 	public IssuerOrInvestor1choice getIssuerInvestorCSD() {
 		return issuerInvestorCSD;
 	}
 
-	public void setIssuerInvestorCSD(IssuerOrInvestor1choice issuerInvestorCSD) {
-		this.issuerInvestorCSD = issuerInvestorCSD;
+	public SecurityCSDLink2 setIssuerInvestorCSD(IssuerOrInvestor1choice issuerInvestorCSD) {
+		this.issuerInvestorCSD = Objects.requireNonNull(issuerInvestorCSD);
+		return this;
 	}
 
-	@XmlElement(name = "TechIssrCSD")
-	public SystemPartyIdentification1Choice getTechnicalIssuerCSD() {
-		return technicalIssuerCSD;
+	public Optional<SystemPartyIdentification1Choice> getTechnicalIssuerCSD() {
+		return technicalIssuerCSD == null ? Optional.empty() : Optional.of(technicalIssuerCSD);
 	}
 
-	public void setTechnicalIssuerCSD(SystemPartyIdentification1Choice technicalIssuerCSD) {
+	public SecurityCSDLink2 setTechnicalIssuerCSD(SystemPartyIdentification1Choice technicalIssuerCSD) {
 		this.technicalIssuerCSD = technicalIssuerCSD;
+		return this;
 	}
 
-	@XmlElement(name = "SctyMntnc", required = true)
 	public YesNoIndicator getSecurityMaintenance() {
 		return securityMaintenance;
 	}
 
-	public void setSecurityMaintenance(YesNoIndicator securityMaintenance) {
-		this.securityMaintenance = securityMaintenance;
+	public SecurityCSDLink2 setSecurityMaintenance(YesNoIndicator securityMaintenance) {
+		this.securityMaintenance = Objects.requireNonNull(securityMaintenance);
+		return this;
 	}
 
-	@XmlElement(name = "IssncAcct")
 	public List<IssuanceAccount1> getIssuanceAccount() {
-		return issuanceAccount;
+		return issuanceAccount == null ? issuanceAccount = new ArrayList<>() : issuanceAccount;
 	}
 
-	public void setIssuanceAccount(List<com.tools20022.repository.msg.IssuanceAccount1> issuanceAccount) {
-		this.issuanceAccount = issuanceAccount;
+	public SecurityCSDLink2 setIssuanceAccount(List<com.tools20022.repository.msg.IssuanceAccount1> issuanceAccount) {
+		this.issuanceAccount = Objects.requireNonNull(issuanceAccount);
+		return this;
 	}
 
-	@XmlElement(name = "VldFr", required = true)
 	public DateAndDateTimeChoice getValidFrom() {
 		return validFrom;
 	}
 
-	public void setValidFrom(DateAndDateTimeChoice validFrom) {
-		this.validFrom = validFrom;
+	public SecurityCSDLink2 setValidFrom(DateAndDateTimeChoice validFrom) {
+		this.validFrom = Objects.requireNonNull(validFrom);
+		return this;
 	}
 
-	@XmlElement(name = "VldTo")
-	public DateAndDateTimeChoice getValidTo() {
-		return validTo;
+	public Optional<DateAndDateTimeChoice> getValidTo() {
+		return validTo == null ? Optional.empty() : Optional.of(validTo);
 	}
 
-	public void setValidTo(DateAndDateTimeChoice validTo) {
+	public SecurityCSDLink2 setValidTo(DateAndDateTimeChoice validTo) {
 		this.validTo = validTo;
+		return this;
 	}
 }

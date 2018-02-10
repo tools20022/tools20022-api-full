@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.QueryType2Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,16 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the query criteria."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReservationQueryDefinition2", propOrder = {"queryType", "reservationCriteria"})
 public class ReservationQueryDefinition2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QryTp")
 	protected QueryType2Code queryType;
 	/**
-	 * Specifies the type of matching items to be returned in the response to
-	 * the query.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +103,7 @@ public class ReservationQueryDefinition2 {
 	 */
 	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReservationQueryDefinition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationQueryDefinition2.mmObject();
 			isDerived = false;
 			xmlTag = "QryTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +114,11 @@ public class ReservationQueryDefinition2 {
 			simpleType_lazy = () -> QueryType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RsvatnCrit")
 	protected ReservationCriteriaDefinition1Choice reservationCriteria;
 	/**
-	 * Defines the reservation query criteria.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -143,7 +145,7 @@ public class ReservationQueryDefinition2 {
 	 */
 	public static final MMMessageAssociationEnd mmReservationCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReservationQueryDefinition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationQueryDefinition2.mmObject();
 			isDerived = false;
 			xmlTag = "RsvatnCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,8 +161,8 @@ public class ReservationQueryDefinition2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReservationQueryDefinition2.mmQueryType, ReservationQueryDefinition2.mmReservationCriteria);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationQueryDefinition2.mmQueryType, com.tools20022.repository.msg.ReservationQueryDefinition2.mmReservationCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReservationQueryDefinition2";
 				definition = "Defines the query criteria.";
@@ -169,21 +171,21 @@ public class ReservationQueryDefinition2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QryTp")
-	public QueryType2Code getQueryType() {
-		return queryType;
+	public Optional<QueryType2Code> getQueryType() {
+		return queryType == null ? Optional.empty() : Optional.of(queryType);
 	}
 
-	public void setQueryType(QueryType2Code queryType) {
+	public ReservationQueryDefinition2 setQueryType(QueryType2Code queryType) {
 		this.queryType = queryType;
+		return this;
 	}
 
-	@XmlElement(name = "RsvatnCrit")
-	public ReservationCriteriaDefinition1Choice getReservationCriteria() {
-		return reservationCriteria;
+	public Optional<ReservationCriteriaDefinition1Choice> getReservationCriteria() {
+		return reservationCriteria == null ? Optional.empty() : Optional.of(reservationCriteria);
 	}
 
-	public void setReservationCriteria(ReservationCriteriaDefinition1Choice reservationCriteria) {
+	public ReservationQueryDefinition2 setReservationCriteria(ReservationCriteriaDefinition1Choice reservationCriteria) {
 		this.reservationCriteria = reservationCriteria;
+		return this;
 	}
 }

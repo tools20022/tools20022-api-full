@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -28,6 +29,8 @@ import com.tools20022.repository.entity.YieldCalculation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Return provided by a financial instrument."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "YieldCalculation2", propOrder = {"value", "calculationType", "redemptionPrice", "valueDate", "valuePeriod", "calculationDate"})
 public class YieldCalculation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Val", required = true)
 	protected PercentageRate value;
 	/**
-	 * Result of the yield calculation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,6 +111,9 @@ public class YieldCalculation2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Val"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 236</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -120,9 +127,10 @@ public class YieldCalculation2 {
 	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmValue;
-			componentContext_lazy = () -> YieldCalculation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.YieldCalculation2.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "236"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Result of the yield calculation.";
@@ -131,10 +139,11 @@ public class YieldCalculation2 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "ClctnTp", required = true)
 	protected CalculationType1Code calculationType;
 	/**
-	 * Specifies the type of calculation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,6 +164,9 @@ public class YieldCalculation2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClctnTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 235</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -168,9 +180,10 @@ public class YieldCalculation2 {
 	public static final MMMessageAttribute mmCalculationType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmCalculationType;
-			componentContext_lazy = () -> YieldCalculation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.YieldCalculation2.mmObject();
 			isDerived = false;
 			xmlTag = "ClctnTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "235"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationType";
 			definition = "Specifies the type of calculation.";
@@ -179,10 +192,11 @@ public class YieldCalculation2 {
 			simpleType_lazy = () -> CalculationType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RedPric")
 	protected Price4 redemptionPrice;
 	/**
-	 * Price to which the yield has been calculated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,6 +215,9 @@ public class YieldCalculation2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RedPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 697, FIXSynonym: 698</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -214,9 +231,10 @@ public class YieldCalculation2 {
 	public static final MMMessageAttribute mmRedemptionPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmRedemptionPrice;
-			componentContext_lazy = () -> YieldCalculation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.YieldCalculation2.mmObject();
 			isDerived = false;
 			xmlTag = "RedPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "697"), new FIXSynonym(this, "698"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionPrice";
 			definition = "Price to which the yield has been calculated.";
@@ -225,11 +243,11 @@ public class YieldCalculation2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	@XmlElement(name = "ValDt")
 	protected ISODate valueDate;
 	/**
-	 * Date/time on which the calculation is based, for example, valuation on
-	 * October 1 (price date) based on price of September 19 ( value date).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,6 +267,9 @@ public class YieldCalculation2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ValDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 696</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -264,9 +285,10 @@ public class YieldCalculation2 {
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmValueDate;
-			componentContext_lazy = () -> YieldCalculation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.YieldCalculation2.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "696"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date/time on which the calculation is based, for example, valuation on October 1 (price date) based on price of September 19 ( value date).";
@@ -275,10 +297,11 @@ public class YieldCalculation2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ValPrd")
 	protected DateTimePeriodChoice valuePeriod;
 	/**
-	 * Period on which the calculation is based.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -299,6 +322,9 @@ public class YieldCalculation2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ValPrd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 696</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -312,9 +338,10 @@ public class YieldCalculation2 {
 	public static final MMMessageAttribute mmValuePeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmValuePeriod;
-			componentContext_lazy = () -> YieldCalculation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.YieldCalculation2.mmObject();
 			isDerived = false;
 			xmlTag = "ValPrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "696"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuePeriod";
 			definition = "Period on which the calculation is based.";
@@ -323,11 +350,11 @@ public class YieldCalculation2 {
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "ClctnDt")
 	protected ISODate calculationDate;
 	/**
-	 * Included as needed to clarify yield irregularities associated with date,
-	 * e.g. when it falls on a non-business day.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -347,6 +374,9 @@ public class YieldCalculation2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClctnDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 701</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -362,9 +392,10 @@ public class YieldCalculation2 {
 	public static final MMMessageAttribute mmCalculationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmYieldCalculationDate;
-			componentContext_lazy = () -> YieldCalculation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.YieldCalculation2.mmObject();
 			isDerived = false;
 			xmlTag = "ClctnDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "701"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationDate";
 			definition = "Included as needed to clarify yield irregularities associated with date, e.g. when it falls on a non-business day.";
@@ -377,10 +408,11 @@ public class YieldCalculation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(YieldCalculation2.mmValue, YieldCalculation2.mmCalculationType, YieldCalculation2.mmRedemptionPrice, YieldCalculation2.mmValueDate, YieldCalculation2.mmValuePeriod,
-						YieldCalculation2.mmCalculationDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.YieldCalculation2.mmValue, com.tools20022.repository.msg.YieldCalculation2.mmCalculationType,
+						com.tools20022.repository.msg.YieldCalculation2.mmRedemptionPrice, com.tools20022.repository.msg.YieldCalculation2.mmValueDate, com.tools20022.repository.msg.YieldCalculation2.mmValuePeriod,
+						com.tools20022.repository.msg.YieldCalculation2.mmCalculationDate);
 				trace_lazy = () -> YieldCalculation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "YieldCalculation2";
 				definition = "Return provided by a financial instrument.";
@@ -389,57 +421,57 @@ public class YieldCalculation2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Val", required = true)
 	public PercentageRate getValue() {
 		return value;
 	}
 
-	public void setValue(PercentageRate value) {
-		this.value = value;
+	public YieldCalculation2 setValue(PercentageRate value) {
+		this.value = Objects.requireNonNull(value);
+		return this;
 	}
 
-	@XmlElement(name = "ClctnTp", required = true)
 	public CalculationType1Code getCalculationType() {
 		return calculationType;
 	}
 
-	public void setCalculationType(CalculationType1Code calculationType) {
-		this.calculationType = calculationType;
+	public YieldCalculation2 setCalculationType(CalculationType1Code calculationType) {
+		this.calculationType = Objects.requireNonNull(calculationType);
+		return this;
 	}
 
-	@XmlElement(name = "RedPric")
-	public Price4 getRedemptionPrice() {
-		return redemptionPrice;
+	public Optional<Price4> getRedemptionPrice() {
+		return redemptionPrice == null ? Optional.empty() : Optional.of(redemptionPrice);
 	}
 
-	public void setRedemptionPrice(com.tools20022.repository.msg.Price4 redemptionPrice) {
+	public YieldCalculation2 setRedemptionPrice(com.tools20022.repository.msg.Price4 redemptionPrice) {
 		this.redemptionPrice = redemptionPrice;
+		return this;
 	}
 
-	@XmlElement(name = "ValDt")
-	public ISODate getValueDate() {
-		return valueDate;
+	public Optional<ISODate> getValueDate() {
+		return valueDate == null ? Optional.empty() : Optional.of(valueDate);
 	}
 
-	public void setValueDate(ISODate valueDate) {
+	public YieldCalculation2 setValueDate(ISODate valueDate) {
 		this.valueDate = valueDate;
+		return this;
 	}
 
-	@XmlElement(name = "ValPrd")
-	public DateTimePeriodChoice getValuePeriod() {
-		return valuePeriod;
+	public Optional<DateTimePeriodChoice> getValuePeriod() {
+		return valuePeriod == null ? Optional.empty() : Optional.of(valuePeriod);
 	}
 
-	public void setValuePeriod(DateTimePeriodChoice valuePeriod) {
+	public YieldCalculation2 setValuePeriod(DateTimePeriodChoice valuePeriod) {
 		this.valuePeriod = valuePeriod;
+		return this;
 	}
 
-	@XmlElement(name = "ClctnDt")
-	public ISODate getCalculationDate() {
-		return calculationDate;
+	public Optional<ISODate> getCalculationDate() {
+		return calculationDate == null ? Optional.empty() : Optional.of(calculationDate);
 	}
 
-	public void setCalculationDate(ISODate calculationDate) {
+	public YieldCalculation2 setCalculationDate(ISODate calculationDate) {
 		this.calculationDate = calculationDate;
+		return this;
 	}
 }

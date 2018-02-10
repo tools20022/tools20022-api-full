@@ -21,9 +21,11 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Party and account information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyIdentificationAndAccount119", propOrder = {"partyIdentification", "accountIdentification"})
 public class PartyIdentificationAndAccount119 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PtyId", required = true)
 	protected List<com.tools20022.repository.msg.PartyIdentification90> partyIdentification;
 	/**
-	 * Identification of the party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -96,7 +99,7 @@ public class PartyIdentificationAndAccount119 {
 	 */
 	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentificationAndAccount119.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount119.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -107,10 +110,11 @@ public class PartyIdentificationAndAccount119 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification90.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctId", required = true)
 	protected List<com.tools20022.repository.msg.AccountIdentification30> accountIdentification;
 	/**
-	 * Identification of the account owned by the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -137,7 +141,7 @@ public class PartyIdentificationAndAccount119 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentificationAndAccount119.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount119.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,8 +156,8 @@ public class PartyIdentificationAndAccount119 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentificationAndAccount119.mmPartyIdentification, PartyIdentificationAndAccount119.mmAccountIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount119.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount119.mmAccountIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationAndAccount119";
 				definition = "Party and account information.";
@@ -162,21 +166,21 @@ public class PartyIdentificationAndAccount119 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PtyId", required = true)
 	public List<PartyIdentification90> getPartyIdentification() {
-		return partyIdentification;
+		return partyIdentification == null ? partyIdentification = new ArrayList<>() : partyIdentification;
 	}
 
-	public void setPartyIdentification(List<com.tools20022.repository.msg.PartyIdentification90> partyIdentification) {
-		this.partyIdentification = partyIdentification;
+	public PartyIdentificationAndAccount119 setPartyIdentification(List<com.tools20022.repository.msg.PartyIdentification90> partyIdentification) {
+		this.partyIdentification = Objects.requireNonNull(partyIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public List<AccountIdentification30> getAccountIdentification() {
-		return accountIdentification;
+		return accountIdentification == null ? accountIdentification = new ArrayList<>() : accountIdentification;
 	}
 
-	public void setAccountIdentification(List<com.tools20022.repository.msg.AccountIdentification30> accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public PartyIdentificationAndAccount119 setAccountIdentification(List<com.tools20022.repository.msg.AccountIdentification30> accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 }

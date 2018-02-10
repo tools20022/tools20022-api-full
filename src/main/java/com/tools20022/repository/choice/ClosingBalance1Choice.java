@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,16 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "ClosingBalance1Choice", propOrder = {"final", "intermediary"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "ClosingBalance1Choice", propOrder = {"final_", "intermediary"})
 public class ClosingBalance1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Fnl", required = true)
 	protected BalanceQuantity5Choice final_;
 	/**
-	 * Sum of the opening balance and all entries booked to the account at the
-	 * close of the statement period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,6 +102,9 @@ public class ClosingBalance1Choice {
 	 * ClosingBalance1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Fnl"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B::FICL</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -124,9 +129,10 @@ public class ClosingBalance1Choice {
 	public static final MMMessageAttribute mmFinal = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
-			componentContext_lazy = () -> ClosingBalance1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ClosingBalance1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Fnl";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::FICL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
 			definition = "Sum of the opening balance and all entries booked to the account at the close of the statement period.";
@@ -136,11 +142,11 @@ public class ClosingBalance1Choice {
 			complexType_lazy = () -> com.tools20022.repository.choice.BalanceQuantity5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Intrmy", required = true)
 	protected BalanceQuantity5Choice intermediary;
 	/**
-	 * Closing balance of this page only. This balance must be the intermediary
-	 * opening balance of the next page of the same statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,6 +166,9 @@ public class ClosingBalance1Choice {
 	 * ClosingBalance1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Intrmy"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B::INCL</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -184,9 +193,10 @@ public class ClosingBalance1Choice {
 	public static final MMMessageAttribute mmIntermediary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
-			componentContext_lazy = () -> ClosingBalance1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ClosingBalance1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Intrmy";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::INCL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
 			definition = "Closing balance of this page only. This balance must be the intermediary opening balance of the next page of the same statement.";
@@ -200,9 +210,9 @@ public class ClosingBalance1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ClosingBalance1Choice.mmFinal, ClosingBalance1Choice.mmIntermediary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClosingBalance1Choice.mmFinal, com.tools20022.repository.choice.ClosingBalance1Choice.mmIntermediary);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClosingBalance1Choice";
 				definition = "Choice of closing balance.";
@@ -212,21 +222,21 @@ public class ClosingBalance1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Fnl", required = true)
 	public BalanceQuantity5Choice getFinal() {
 		return final_;
 	}
 
-	public void setFinal(com.tools20022.repository.choice.BalanceQuantity5Choice final_) {
-		this.final_ = final_;
+	public ClosingBalance1Choice setFinal(com.tools20022.repository.choice.BalanceQuantity5Choice final_) {
+		this.final_ = Objects.requireNonNull(final_);
+		return this;
 	}
 
-	@XmlElement(name = "Intrmy", required = true)
 	public BalanceQuantity5Choice getIntermediary() {
 		return intermediary;
 	}
 
-	public void setIntermediary(com.tools20022.repository.choice.BalanceQuantity5Choice intermediary) {
-		this.intermediary = intermediary;
+	public ClosingBalance1Choice setIntermediary(com.tools20022.repository.choice.BalanceQuantity5Choice intermediary) {
+		this.intermediary = Objects.requireNonNull(intermediary);
+		return this;
 	}
 }

@@ -20,33 +20,36 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RateStatusCode;
+import com.tools20022.repository.codeset.RateStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of rate.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RateStatusCode RateStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateStatus1Code#ActualRate
+ * RateStatus1Code.ActualRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RateStatus1Code#mmActualRate
- * RateStatus1Code.mmActualRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RateStatus1Code#mmIndicativeRate
- * RateStatus1Code.mmIndicativeRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RateStatus1Code#IndicativeRate
+ * RateStatus1Code.IndicativeRate}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RateStatusCode RateStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -63,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of rate."</li>
  * </ul>
  */
-public class RateStatus1Code extends RateStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RateStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,11 +86,12 @@ public class RateStatus1Code extends RateStatusCode {
 	 * name} = "ActualRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmActualRate = new MMCode() {
+	public static final RateStatus1Code ActualRate = new RateStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualRate";
-			owner_lazy = () -> RateStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateStatus1Code.mmObject();
+			codeName = RateStatusCode.ActualRate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -105,26 +110,57 @@ public class RateStatus1Code extends RateStatusCode {
 	 * name} = "IndicativeRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIndicativeRate = new MMCode() {
+	public static final RateStatus1Code IndicativeRate = new RateStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndicativeRate";
-			owner_lazy = () -> RateStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateStatus1Code.mmObject();
+			codeName = RateStatusCode.IndicativeRate.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RateStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RateStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACTU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateStatus1Code";
 				definition = "Specifies the type of rate.";
-				code_lazy = () -> Arrays.asList(RateStatus1Code.mmActualRate, RateStatus1Code.mmIndicativeRate);
 				trace_lazy = () -> RateStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateStatus1Code.ActualRate, com.tools20022.repository.codeset.RateStatus1Code.IndicativeRate);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ActualRate.getCodeName().get(), ActualRate);
+		codesByName.put(IndicativeRate.getCodeName().get(), IndicativeRate);
+	}
+
+	public static RateStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RateStatus1Code[] values() {
+		RateStatus1Code[] values = new RateStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RateStatus1Code> {
+		@Override
+		public RateStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RateStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

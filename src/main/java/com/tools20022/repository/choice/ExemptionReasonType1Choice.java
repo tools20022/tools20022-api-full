@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of an exemption reason type."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ExemptionReasonType1Choice", propOrder = {"exemptionReason", "proprietary"})
 public class ExemptionReasonType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "XmptnRsn", required = true)
 	protected TaxExemptReason1Code exemptionReason;
 	/**
-	 * Reason for a tax exemption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +107,7 @@ public class ExemptionReasonType1Choice {
 	public static final MMMessageAttribute mmExemptionReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmExemptionReason;
-			componentContext_lazy = () -> ExemptionReasonType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ExemptionReasonType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "XmptnRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +118,11 @@ public class ExemptionReasonType1Choice {
 			simpleType_lazy = () -> TaxExemptReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification13 proprietary;
 	/**
-	 * Reason for a tax exemption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,7 +156,7 @@ public class ExemptionReasonType1Choice {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmExemptionReason;
-			componentContext_lazy = () -> ExemptionReasonType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ExemptionReasonType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,8 +171,8 @@ public class ExemptionReasonType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ExemptionReasonType1Choice.mmExemptionReason, ExemptionReasonType1Choice.mmProprietary);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExemptionReasonType1Choice.mmExemptionReason, com.tools20022.repository.choice.ExemptionReasonType1Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExemptionReasonType1Choice";
 				definition = "Choice of an exemption reason type.";
@@ -178,21 +181,21 @@ public class ExemptionReasonType1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "XmptnRsn", required = true)
 	public TaxExemptReason1Code getExemptionReason() {
 		return exemptionReason;
 	}
 
-	public void setExemptionReason(TaxExemptReason1Code exemptionReason) {
-		this.exemptionReason = exemptionReason;
+	public ExemptionReasonType1Choice setExemptionReason(TaxExemptReason1Code exemptionReason) {
+		this.exemptionReason = Objects.requireNonNull(exemptionReason);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification13 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification13 proprietary) {
-		this.proprietary = proprietary;
+	public ExemptionReasonType1Choice setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

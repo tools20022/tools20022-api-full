@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Specifies the delivery instructions for the securities and cash proceeds at
@@ -60,18 +62,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProceedsDelivery1
- * ProceedsDelivery1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityMovement1
- * SecurityMovement1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesProceeds1
- * SecuritiesProceeds1}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -93,10 +83,22 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ProceedsDelivery1
+ * ProceedsDelivery1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityMovement1
+ * SecurityMovement1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesProceeds1
+ * SecuritiesProceeds1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,8 +116,8 @@ public class CorporateActionProceedsDeliveryInstruction {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CorporateActionDistribution relatedDistribution;
 	/**
-	 * Parameters of the distribution of the proceeds of a CA event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,8 +153,8 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedDistribution";
 			definition = "Parameters of the distribution of the proceeds of a CA event.";
@@ -165,9 +167,8 @@ public class CorporateActionProceedsDeliveryInstruction {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesDeliveryObligation> securitiesProceedsMovement;
 	/**
-	 * Instructions for the movement of securities related to a corporate
-	 * action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -384,8 +385,8 @@ public class CorporateActionProceedsDeliveryInstruction {
 					CorporateActionOption114.mmSecuritiesMovementDetails, CorporateActionOption126.mmSecuritiesMovementDetails, CorporateActionOption124.mmSecuritiesMovementDetails, CorporateActionOption125.mmSecuritiesMovementDetails,
 					CorporateActionOption127.mmSecuritiesMovementDetails, CorporateActionOption132.mmSecuritiesMovementDetails, CorporateActionOption130.mmSecuritiesMovementDetails, CorporateActionOption129.mmSecuritiesMovementDetails,
 					CorporateActionOption136.mmSecuritiesMovementDetails, CorporateActionOption135.mmSecuritiesMovementDetails, CorporateActionOption133.mmSecuritiesMovementDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesProceedsMovement";
 			definition = "Instructions for the movement of securities related to a corporate action.";
@@ -397,8 +398,8 @@ public class CorporateActionProceedsDeliveryInstruction {
 	};
 	protected List<com.tools20022.repository.entity.PaymentObligation> cashProceedsMovement;
 	/**
-	 * Instructions for the movement of cash related to a corporate action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -441,8 +442,8 @@ public class CorporateActionProceedsDeliveryInstruction {
 	public static final MMBusinessAssociationEnd mmCashProceedsMovement = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(GlobalDistributionRequest1.mmCashMovement);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashProceedsMovement";
 			definition = "Instructions for the movement of cash related to a corporate action.";
@@ -454,9 +455,8 @@ public class CorporateActionProceedsDeliveryInstruction {
 	};
 	protected List<com.tools20022.repository.entity.Account> settlementAccount;
 	/**
-	 * Information relative to the account(s) to be used for the delivery of the
-	 * proceeds (cash or securities)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -490,8 +490,8 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 */
 	public static final MMBusinessAssociationEnd mmSettlementAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementAccount";
 			definition = "Information relative to the account(s) to be used for the delivery of the proceeds (cash or securities)";
@@ -503,8 +503,8 @@ public class CorporateActionProceedsDeliveryInstruction {
 	};
 	protected AgentCorporateActionStandingInstruction corporateActionStandingInstruction;
 	/**
-	 * Standing instruction related to a corporate action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -538,8 +538,8 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionStandingInstruction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionStandingInstruction";
 			definition = "Standing instruction related to a corporate action.";
@@ -554,7 +554,7 @@ public class CorporateActionProceedsDeliveryInstruction {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionProceedsDeliveryInstruction";
 				definition = "Specifies the delivery instructions for the securities and cash proceeds at any stage of the Corporate Action process.";
@@ -579,39 +579,44 @@ public class CorporateActionProceedsDeliveryInstruction {
 		return relatedDistribution;
 	}
 
-	public void setRelatedDistribution(com.tools20022.repository.entity.CorporateActionDistribution relatedDistribution) {
-		this.relatedDistribution = relatedDistribution;
+	public CorporateActionProceedsDeliveryInstruction setRelatedDistribution(com.tools20022.repository.entity.CorporateActionDistribution relatedDistribution) {
+		this.relatedDistribution = Objects.requireNonNull(relatedDistribution);
+		return this;
 	}
 
 	public List<SecuritiesDeliveryObligation> getSecuritiesProceedsMovement() {
-		return securitiesProceedsMovement;
+		return securitiesProceedsMovement == null ? securitiesProceedsMovement = new ArrayList<>() : securitiesProceedsMovement;
 	}
 
-	public void setSecuritiesProceedsMovement(List<com.tools20022.repository.entity.SecuritiesDeliveryObligation> securitiesProceedsMovement) {
-		this.securitiesProceedsMovement = securitiesProceedsMovement;
+	public CorporateActionProceedsDeliveryInstruction setSecuritiesProceedsMovement(List<com.tools20022.repository.entity.SecuritiesDeliveryObligation> securitiesProceedsMovement) {
+		this.securitiesProceedsMovement = Objects.requireNonNull(securitiesProceedsMovement);
+		return this;
 	}
 
 	public List<PaymentObligation> getCashProceedsMovement() {
-		return cashProceedsMovement;
+		return cashProceedsMovement == null ? cashProceedsMovement = new ArrayList<>() : cashProceedsMovement;
 	}
 
-	public void setCashProceedsMovement(List<com.tools20022.repository.entity.PaymentObligation> cashProceedsMovement) {
-		this.cashProceedsMovement = cashProceedsMovement;
+	public CorporateActionProceedsDeliveryInstruction setCashProceedsMovement(List<com.tools20022.repository.entity.PaymentObligation> cashProceedsMovement) {
+		this.cashProceedsMovement = Objects.requireNonNull(cashProceedsMovement);
+		return this;
 	}
 
 	public List<Account> getSettlementAccount() {
-		return settlementAccount;
+		return settlementAccount == null ? settlementAccount = new ArrayList<>() : settlementAccount;
 	}
 
-	public void setSettlementAccount(List<com.tools20022.repository.entity.Account> settlementAccount) {
-		this.settlementAccount = settlementAccount;
+	public CorporateActionProceedsDeliveryInstruction setSettlementAccount(List<com.tools20022.repository.entity.Account> settlementAccount) {
+		this.settlementAccount = Objects.requireNonNull(settlementAccount);
+		return this;
 	}
 
 	public AgentCorporateActionStandingInstruction getCorporateActionStandingInstruction() {
 		return corporateActionStandingInstruction;
 	}
 
-	public void setCorporateActionStandingInstruction(com.tools20022.repository.entity.AgentCorporateActionStandingInstruction corporateActionStandingInstruction) {
-		this.corporateActionStandingInstruction = corporateActionStandingInstruction;
+	public CorporateActionProceedsDeliveryInstruction setCorporateActionStandingInstruction(com.tools20022.repository.entity.AgentCorporateActionStandingInstruction corporateActionStandingInstruction) {
+		this.corporateActionStandingInstruction = Objects.requireNonNull(corporateActionStandingInstruction);
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -29,6 +30,8 @@ import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -71,8 +74,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides the details of the modification requests."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IntraBalanceModification2", propOrder = {"accountOwner", "cashAccount", "processingStatus", "requestReference", "statusDate", "requestDetails", "underlyingIntraBalance"})
 public class IntraBalanceModification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctOwnr")
 	protected SystemPartyIdentification5 accountOwner;
 	/**
-	 * Party that owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -124,7 +128,7 @@ public class IntraBalanceModification2 {
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> System.mmPartyRole;
-			componentContext_lazy = () -> IntraBalanceModification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceModification2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +140,11 @@ public class IntraBalanceModification2 {
 			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAcct")
 	protected CashAccount24 cashAccount;
 	/**
-	 * Account to or from which a cash entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -171,7 +176,7 @@ public class IntraBalanceModification2 {
 	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
-			componentContext_lazy = () -> IntraBalanceModification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceModification2.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,10 +188,11 @@ public class IntraBalanceModification2 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcgSts")
 	protected ProcessingStatus31Choice processingStatus;
 	/**
-	 * Status and status reason of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -206,6 +212,9 @@ public class IntraBalanceModification2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrcgSts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :16R:STAT [and 16R:REAS]</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -219,9 +228,10 @@ public class IntraBalanceModification2 {
 	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeStatus;
-			componentContext_lazy = () -> IntraBalanceModification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceModification2.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":16R:STAT [and 16R:REAS]"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Status and status reason of the transaction.";
@@ -231,10 +241,11 @@ public class IntraBalanceModification2 {
 			type_lazy = () -> ProcessingStatus31Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqRef", required = true)
 	protected Max35Text requestReference;
 	/**
-	 * Unambiguous identification of the modification request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -261,7 +272,7 @@ public class IntraBalanceModification2 {
 	 */
 	public static final MMMessageAttribute mmRequestReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceModification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceModification2.mmObject();
 			isDerived = false;
 			xmlTag = "ReqRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,10 +283,11 @@ public class IntraBalanceModification2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "StsDt")
 	protected ISODateTime statusDate;
 	/**
-	 * Date and time at which the status was assigned.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -295,6 +307,9 @@ public class IntraBalanceModification2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StsDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::SETT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -308,9 +323,10 @@ public class IntraBalanceModification2 {
 	public static final MMMessageAttribute mmStatusDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
-			componentContext_lazy = () -> IntraBalanceModification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceModification2.mmObject();
 			isDerived = false;
 			xmlTag = "StsDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::SETT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusDate";
 			definition = "Date and time at which the status was assigned.";
@@ -319,11 +335,11 @@ public class IntraBalanceModification2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqDtls")
 	protected RequestDetails10 requestDetails;
 	/**
-	 * Details of the request providing the changes and references of the
-	 * instruction for which the modification is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -359,7 +375,7 @@ public class IntraBalanceModification2 {
 	public static final MMMessageAttribute mmRequestDetails = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
-			componentContext_lazy = () -> IntraBalanceModification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceModification2.mmObject();
 			isDerived = false;
 			xmlTag = "ReqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -370,10 +386,11 @@ public class IntraBalanceModification2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.RequestDetails10.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygIntraBal")
 	protected IntraBalance1 underlyingIntraBalance;
 	/**
-	 * Identifies additional details of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -391,6 +408,9 @@ public class IntraBalanceModification2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UndrlygIntraBal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :16R:TRANSDET</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -404,9 +424,10 @@ public class IntraBalanceModification2 {
 	public static final MMMessageAssociationEnd mmUnderlyingIntraBalance = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> BookEntry.mmObject();
-			componentContext_lazy = () -> IntraBalanceModification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceModification2.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygIntraBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":16R:TRANSDET"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingIntraBalance";
 			definition = "Identifies additional details of the transaction.";
@@ -420,10 +441,12 @@ public class IntraBalanceModification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IntraBalanceModification2.mmAccountOwner, IntraBalanceModification2.mmCashAccount, IntraBalanceModification2.mmProcessingStatus, IntraBalanceModification2.mmRequestReference,
-						IntraBalanceModification2.mmStatusDate, IntraBalanceModification2.mmRequestDetails, IntraBalanceModification2.mmUnderlyingIntraBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceModification2.mmAccountOwner, com.tools20022.repository.msg.IntraBalanceModification2.mmCashAccount,
+						com.tools20022.repository.msg.IntraBalanceModification2.mmProcessingStatus, com.tools20022.repository.msg.IntraBalanceModification2.mmRequestReference,
+						com.tools20022.repository.msg.IntraBalanceModification2.mmStatusDate, com.tools20022.repository.msg.IntraBalanceModification2.mmRequestDetails,
+						com.tools20022.repository.msg.IntraBalanceModification2.mmUnderlyingIntraBalance);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceModification2";
 				definition = "Provides the details of the modification requests.";
@@ -432,66 +455,66 @@ public class IntraBalanceModification2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public SystemPartyIdentification5 getAccountOwner() {
-		return accountOwner;
+	public Optional<SystemPartyIdentification5> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification5 accountOwner) {
+	public IntraBalanceModification2 setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification5 accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "CshAcct")
-	public CashAccount24 getCashAccount() {
-		return cashAccount;
+	public Optional<CashAccount24> getCashAccount() {
+		return cashAccount == null ? Optional.empty() : Optional.of(cashAccount);
 	}
 
-	public void setCashAccount(com.tools20022.repository.msg.CashAccount24 cashAccount) {
+	public IntraBalanceModification2 setCashAccount(com.tools20022.repository.msg.CashAccount24 cashAccount) {
 		this.cashAccount = cashAccount;
+		return this;
 	}
 
-	@XmlElement(name = "PrcgSts")
-	public ProcessingStatus31Choice getProcessingStatus() {
-		return processingStatus;
+	public Optional<ProcessingStatus31Choice> getProcessingStatus() {
+		return processingStatus == null ? Optional.empty() : Optional.of(processingStatus);
 	}
 
-	public void setProcessingStatus(ProcessingStatus31Choice processingStatus) {
+	public IntraBalanceModification2 setProcessingStatus(ProcessingStatus31Choice processingStatus) {
 		this.processingStatus = processingStatus;
+		return this;
 	}
 
-	@XmlElement(name = "ReqRef", required = true)
 	public Max35Text getRequestReference() {
 		return requestReference;
 	}
 
-	public void setRequestReference(Max35Text requestReference) {
-		this.requestReference = requestReference;
+	public IntraBalanceModification2 setRequestReference(Max35Text requestReference) {
+		this.requestReference = Objects.requireNonNull(requestReference);
+		return this;
 	}
 
-	@XmlElement(name = "StsDt")
-	public ISODateTime getStatusDate() {
-		return statusDate;
+	public Optional<ISODateTime> getStatusDate() {
+		return statusDate == null ? Optional.empty() : Optional.of(statusDate);
 	}
 
-	public void setStatusDate(ISODateTime statusDate) {
+	public IntraBalanceModification2 setStatusDate(ISODateTime statusDate) {
 		this.statusDate = statusDate;
+		return this;
 	}
 
-	@XmlElement(name = "ReqDtls")
-	public RequestDetails10 getRequestDetails() {
-		return requestDetails;
+	public Optional<RequestDetails10> getRequestDetails() {
+		return requestDetails == null ? Optional.empty() : Optional.of(requestDetails);
 	}
 
-	public void setRequestDetails(com.tools20022.repository.msg.RequestDetails10 requestDetails) {
+	public IntraBalanceModification2 setRequestDetails(com.tools20022.repository.msg.RequestDetails10 requestDetails) {
 		this.requestDetails = requestDetails;
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygIntraBal")
-	public IntraBalance1 getUnderlyingIntraBalance() {
-		return underlyingIntraBalance;
+	public Optional<IntraBalance1> getUnderlyingIntraBalance() {
+		return underlyingIntraBalance == null ? Optional.empty() : Optional.of(underlyingIntraBalance);
 	}
 
-	public void setUnderlyingIntraBalance(com.tools20022.repository.msg.IntraBalance1 underlyingIntraBalance) {
+	public IntraBalanceModification2 setUnderlyingIntraBalance(com.tools20022.repository.msg.IntraBalance1 underlyingIntraBalance) {
 		this.underlyingIntraBalance = underlyingIntraBalance;
+		return this;
 	}
 }

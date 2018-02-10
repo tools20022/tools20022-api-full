@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.TransferIn9;
 import com.tools20022.repository.msg.TransferReference6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,15 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Reversal4Choice", propOrder = {"reference", "transferInConfirmationDetails"})
 public class Reversal4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ref", required = true)
 	protected TransferReference6 reference;
 	/**
-	 * Reference of the transfer confirmation to be reversed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,7 +137,7 @@ public class Reversal4Choice {
 	 */
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reversal4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Reversal4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,10 +150,11 @@ public class Reversal4Choice {
 			complexType_lazy = () -> TransferReference6.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfInConfDtls", required = true)
 	protected TransferIn9 transferInConfirmationDetails;
 	/**
-	 * Details of the transfer in confirmation to be reversed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,7 +200,7 @@ public class Reversal4Choice {
 	public static final MMMessageAttribute mmTransferInConfirmationDetails = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmRelatedSettlement;
-			componentContext_lazy = () -> Reversal4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Reversal4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TrfInConfDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,10 +217,10 @@ public class Reversal4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Reversal4Choice.mmReference, Reversal4Choice.mmTransferInConfirmationDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reversal4Choice.mmReference, com.tools20022.repository.choice.Reversal4Choice.mmTransferInConfirmationDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ReversalOfTransferInConfirmationV05.mmReversal);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reversal4Choice";
 				definition = "Choice between reversal by reference or by reversal details.";
@@ -228,21 +231,21 @@ public class Reversal4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ref", required = true)
 	public TransferReference6 getReference() {
 		return reference;
 	}
 
-	public void setReference(TransferReference6 reference) {
-		this.reference = reference;
+	public Reversal4Choice setReference(TransferReference6 reference) {
+		this.reference = Objects.requireNonNull(reference);
+		return this;
 	}
 
-	@XmlElement(name = "TrfInConfDtls", required = true)
 	public TransferIn9 getTransferInConfirmationDetails() {
 		return transferInConfirmationDetails;
 	}
 
-	public void setTransferInConfirmationDetails(TransferIn9 transferInConfirmationDetails) {
-		this.transferInConfirmationDetails = transferInConfirmationDetails;
+	public Reversal4Choice setTransferInConfirmationDetails(TransferIn9 transferInConfirmationDetails) {
+		this.transferInConfirmationDetails = Objects.requireNonNull(transferInConfirmationDetails);
+		return this;
 	}
 }

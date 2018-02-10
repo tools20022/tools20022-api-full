@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.UnmatchedStatusReasonCode;
+import com.tools20022.repository.codeset.TransferUnmatchedReason2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for a transfer or settlement instruction unmatched
@@ -31,45 +35,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReasonCode
- * UnmatchedStatusReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code#mmNoMatch
- * TransferUnmatchedReason2Code.mmNoMatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code#NoMatch
+ * TransferUnmatchedReason2Code.NoMatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code#mmCounterpartyCancelled
- * TransferUnmatchedReason2Code.mmCounterpartyCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code#CounterpartyCancelled
+ * TransferUnmatchedReason2Code.CounterpartyCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code#mmTransactionDirection
- * TransferUnmatchedReason2Code.mmTransactionDirection}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code#TransactionDirection
+ * TransferUnmatchedReason2Code.TransactionDirection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code#mmFinancialInstrument
- * TransferUnmatchedReason2Code.mmFinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code#FinancialInstrument
+ * TransferUnmatchedReason2Code.FinancialInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code#mmPhysicalSettlement
- * TransferUnmatchedReason2Code.mmPhysicalSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code#PhysicalSettlement
+ * TransferUnmatchedReason2Code.PhysicalSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code#mmDuplicate
- * TransferUnmatchedReason2Code.mmDuplicate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code#Duplicate
+ * TransferUnmatchedReason2Code.Duplicate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code#mmSettlementPlace
- * TransferUnmatchedReason2Code.mmSettlementPlace}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code#SettlementPlace
+ * TransferUnmatchedReason2Code.SettlementPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code#mmSettlementDate
- * TransferUnmatchedReason2Code.mmSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code#SettlementDate
+ * TransferUnmatchedReason2Code.SettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code#mmFinancialInstrumentQuantity
- * TransferUnmatchedReason2Code.mmFinancialInstrumentQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code#FinancialInstrumentQuantity
+ * TransferUnmatchedReason2Code.FinancialInstrumentQuantity}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReasonCode
+ * UnmatchedStatusReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransferUnmatchedReason2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -107,11 +112,12 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	 * name} = "NoMatch"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoMatch = new MMCode() {
+	public static final TransferUnmatchedReason2Code NoMatch = new TransferUnmatchedReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatch";
-			owner_lazy = () -> TransferUnmatchedReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferUnmatchedReason2Code.mmObject();
+			codeName = UnmatchedStatusReasonCode.NoMatch.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -130,11 +136,12 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	 * name} = "CounterpartyCancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCounterpartyCancelled = new MMCode() {
+	public static final TransferUnmatchedReason2Code CounterpartyCancelled = new TransferUnmatchedReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyCancelled";
-			owner_lazy = () -> TransferUnmatchedReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferUnmatchedReason2Code.mmObject();
+			codeName = UnmatchedStatusReasonCode.CounterpartyCancelled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -153,11 +160,12 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	 * name} = "TransactionDirection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransactionDirection = new MMCode() {
+	public static final TransferUnmatchedReason2Code TransactionDirection = new TransferUnmatchedReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDirection";
-			owner_lazy = () -> TransferUnmatchedReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferUnmatchedReason2Code.mmObject();
+			codeName = UnmatchedStatusReasonCode.TransactionDirection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -176,11 +184,12 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	 * name} = "FinancialInstrument"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinancialInstrument = new MMCode() {
+	public static final TransferUnmatchedReason2Code FinancialInstrument = new TransferUnmatchedReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
-			owner_lazy = () -> TransferUnmatchedReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferUnmatchedReason2Code.mmObject();
+			codeName = UnmatchedStatusReasonCode.FinancialInstrument.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -199,11 +208,12 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	 * name} = "PhysicalSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPhysicalSettlement = new MMCode() {
+	public static final TransferUnmatchedReason2Code PhysicalSettlement = new TransferUnmatchedReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSettlement";
-			owner_lazy = () -> TransferUnmatchedReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferUnmatchedReason2Code.mmObject();
+			codeName = UnmatchedStatusReasonCode.PhysicalSettlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -222,11 +232,12 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	 * name} = "Duplicate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDuplicate = new MMCode() {
+	public static final TransferUnmatchedReason2Code Duplicate = new TransferUnmatchedReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Duplicate";
-			owner_lazy = () -> TransferUnmatchedReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferUnmatchedReason2Code.mmObject();
+			codeName = UnmatchedStatusReasonCode.Duplicate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -245,11 +256,12 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	 * name} = "SettlementPlace"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementPlace = new MMCode() {
+	public static final TransferUnmatchedReason2Code SettlementPlace = new TransferUnmatchedReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPlace";
-			owner_lazy = () -> TransferUnmatchedReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferUnmatchedReason2Code.mmObject();
+			codeName = UnmatchedStatusReasonCode.SettlementPlace.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -268,11 +280,12 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	 * name} = "SettlementDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementDate = new MMCode() {
+	public static final TransferUnmatchedReason2Code SettlementDate = new TransferUnmatchedReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
-			owner_lazy = () -> TransferUnmatchedReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferUnmatchedReason2Code.mmObject();
+			codeName = UnmatchedStatusReasonCode.SettlementDate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -291,28 +304,68 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	 * name} = "FinancialInstrumentQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinancialInstrumentQuantity = new MMCode() {
+	public static final TransferUnmatchedReason2Code FinancialInstrumentQuantity = new TransferUnmatchedReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity";
-			owner_lazy = () -> TransferUnmatchedReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferUnmatchedReason2Code.mmObject();
+			codeName = UnmatchedStatusReasonCode.FinancialInstrumentQuantity.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TransferUnmatchedReason2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransferUnmatchedReason2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CMIS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferUnmatchedReason2Code";
 				definition = "Specifies the reason for a transfer or settlement instruction unmatched status.";
-				code_lazy = () -> Arrays.asList(TransferUnmatchedReason2Code.mmNoMatch, TransferUnmatchedReason2Code.mmCounterpartyCancelled, TransferUnmatchedReason2Code.mmTransactionDirection,
-						TransferUnmatchedReason2Code.mmFinancialInstrument, TransferUnmatchedReason2Code.mmPhysicalSettlement, TransferUnmatchedReason2Code.mmDuplicate, TransferUnmatchedReason2Code.mmSettlementPlace,
-						TransferUnmatchedReason2Code.mmSettlementDate, TransferUnmatchedReason2Code.mmFinancialInstrumentQuantity);
 				trace_lazy = () -> UnmatchedStatusReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferUnmatchedReason2Code.NoMatch, com.tools20022.repository.codeset.TransferUnmatchedReason2Code.CounterpartyCancelled,
+						com.tools20022.repository.codeset.TransferUnmatchedReason2Code.TransactionDirection, com.tools20022.repository.codeset.TransferUnmatchedReason2Code.FinancialInstrument,
+						com.tools20022.repository.codeset.TransferUnmatchedReason2Code.PhysicalSettlement, com.tools20022.repository.codeset.TransferUnmatchedReason2Code.Duplicate,
+						com.tools20022.repository.codeset.TransferUnmatchedReason2Code.SettlementPlace, com.tools20022.repository.codeset.TransferUnmatchedReason2Code.SettlementDate,
+						com.tools20022.repository.codeset.TransferUnmatchedReason2Code.FinancialInstrumentQuantity);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NoMatch.getCodeName().get(), NoMatch);
+		codesByName.put(CounterpartyCancelled.getCodeName().get(), CounterpartyCancelled);
+		codesByName.put(TransactionDirection.getCodeName().get(), TransactionDirection);
+		codesByName.put(FinancialInstrument.getCodeName().get(), FinancialInstrument);
+		codesByName.put(PhysicalSettlement.getCodeName().get(), PhysicalSettlement);
+		codesByName.put(Duplicate.getCodeName().get(), Duplicate);
+		codesByName.put(SettlementPlace.getCodeName().get(), SettlementPlace);
+		codesByName.put(SettlementDate.getCodeName().get(), SettlementDate);
+		codesByName.put(FinancialInstrumentQuantity.getCodeName().get(), FinancialInstrumentQuantity);
+	}
+
+	public static TransferUnmatchedReason2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransferUnmatchedReason2Code[] values() {
+		TransferUnmatchedReason2Code[] values = new TransferUnmatchedReason2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransferUnmatchedReason2Code> {
+		@Override
+		public TransferUnmatchedReason2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransferUnmatchedReason2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

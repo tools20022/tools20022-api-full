@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -78,8 +80,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,15 +97,16 @@ import javax.xml.bind.annotation.XmlType;
  * ReportData3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReportData4", propOrder = {"messageIdentification", "valueDate", "dateAndTimeStamp", "type", "scheduleType", "settlementSessionIdentifier"})
 public class ReportData4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected Max35Text messageIdentification;
 	/**
-	 * Identification of the report as assigned by the sender.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -129,7 +132,7 @@ public class ReportData4 {
 	 */
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData4.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,10 +143,11 @@ public class ReportData4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ValDt", required = true)
 	protected ISODate valueDate;
 	/**
-	 * Value date for which the pay-in schedule is generated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -175,7 +179,7 @@ public class ReportData4 {
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmValueDate;
-			componentContext_lazy = () -> ReportData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData4.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,11 +190,11 @@ public class ReportData4 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DtAndTmStmp", required = true)
 	protected ISODateTime dateAndTimeStamp;
 	/**
-	 * Date and time on which the report is generated. The offset with UTC may
-	 * also be specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -224,7 +228,7 @@ public class ReportData4 {
 	public static final MMMessageAttribute mmDateAndTimeStamp = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmCalculationDate;
-			componentContext_lazy = () -> ReportData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData4.mmObject();
 			isDerived = false;
 			xmlTag = "DtAndTmStmp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -235,10 +239,11 @@ public class ReportData4 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected Entry2Code type;
 	/**
-	 * Type of pay-in schedule.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -270,7 +275,7 @@ public class ReportData4 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
-			componentContext_lazy = () -> ReportData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData4.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,11 +286,11 @@ public class ReportData4 {
 			simpleType_lazy = () -> Entry2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SchdlTp", required = true)
 	protected Exact4AlphaNumericText scheduleType;
 	/**
-	 * Defines the schedule timing that is, whether it is an initial or a
-	 * revised schedule.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -314,7 +319,7 @@ public class ReportData4 {
 	 */
 	public static final MMMessageAttribute mmScheduleType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData4.mmObject();
 			isDerived = false;
 			xmlTag = "SchdlTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,11 +330,11 @@ public class ReportData4 {
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmSsnIdr")
 	protected Exact4AlphaNumericText settlementSessionIdentifier;
 	/**
-	 * To indicate the requested CLS Settlement Session that the related trade
-	 * is part of.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -358,7 +363,7 @@ public class ReportData4 {
 	 */
 	public static final MMMessageAttribute mmSettlementSessionIdentifier = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData4.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSsnIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -373,11 +378,12 @@ public class ReportData4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReportData4.mmMessageIdentification, ReportData4.mmValueDate, ReportData4.mmDateAndTimeStamp, ReportData4.mmType, ReportData4.mmScheduleType,
-						ReportData4.mmSettlementSessionIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportData4.mmMessageIdentification, com.tools20022.repository.msg.ReportData4.mmValueDate,
+						com.tools20022.repository.msg.ReportData4.mmDateAndTimeStamp, com.tools20022.repository.msg.ReportData4.mmType, com.tools20022.repository.msg.ReportData4.mmScheduleType,
+						com.tools20022.repository.msg.ReportData4.mmSettlementSessionIdentifier);
 				messageBuildingBlock_lazy = () -> Arrays.asList(PayInScheduleV03.mmReportData);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportData4";
 				definition = "Numerical representation of the nett increases and decreases in an account at a specific point in time. A cash balance is calculated from a sum of cash credits minus a sum of cash debits.";
@@ -387,57 +393,57 @@ public class ReportData4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(Max35Text messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public ReportData4 setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ValDt", required = true)
 	public ISODate getValueDate() {
 		return valueDate;
 	}
 
-	public void setValueDate(ISODate valueDate) {
-		this.valueDate = valueDate;
+	public ReportData4 setValueDate(ISODate valueDate) {
+		this.valueDate = Objects.requireNonNull(valueDate);
+		return this;
 	}
 
-	@XmlElement(name = "DtAndTmStmp", required = true)
 	public ISODateTime getDateAndTimeStamp() {
 		return dateAndTimeStamp;
 	}
 
-	public void setDateAndTimeStamp(ISODateTime dateAndTimeStamp) {
-		this.dateAndTimeStamp = dateAndTimeStamp;
+	public ReportData4 setDateAndTimeStamp(ISODateTime dateAndTimeStamp) {
+		this.dateAndTimeStamp = Objects.requireNonNull(dateAndTimeStamp);
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public Entry2Code getType() {
 		return type;
 	}
 
-	public void setType(Entry2Code type) {
-		this.type = type;
+	public ReportData4 setType(Entry2Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "SchdlTp", required = true)
 	public Exact4AlphaNumericText getScheduleType() {
 		return scheduleType;
 	}
 
-	public void setScheduleType(Exact4AlphaNumericText scheduleType) {
-		this.scheduleType = scheduleType;
+	public ReportData4 setScheduleType(Exact4AlphaNumericText scheduleType) {
+		this.scheduleType = Objects.requireNonNull(scheduleType);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmSsnIdr")
-	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
-		return settlementSessionIdentifier;
+	public Optional<Exact4AlphaNumericText> getSettlementSessionIdentifier() {
+		return settlementSessionIdentifier == null ? Optional.empty() : Optional.of(settlementSessionIdentifier);
 	}
 
-	public void setSettlementSessionIdentifier(Exact4AlphaNumericText settlementSessionIdentifier) {
+	public ReportData4 setSettlementSessionIdentifier(Exact4AlphaNumericText settlementSessionIdentifier) {
 		this.settlementSessionIdentifier = settlementSessionIdentifier;
+		return this;
 	}
 }

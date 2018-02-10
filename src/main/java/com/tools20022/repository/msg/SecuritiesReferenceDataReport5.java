@@ -29,9 +29,8 @@ import com.tools20022.repository.entity.Debt;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -84,8 +83,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintValidDebtMaturityDateRule#forSecuritiesReferenceDataReport5
+ * ConstraintValidDebtMaturityDateRule.forSecuritiesReferenceDataReport5}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintValidDerivativeExpiryDateRule#forSecuritiesReferenceDataReport5
+ * ConstraintValidDerivativeExpiryDateRule.forSecuritiesReferenceDataReport5}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,20 +108,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesReferenceDataReport5", propOrder = {"technicalRecordIdentification", "financialInstrumentGeneralAttributes", "issuer", "tradingVenueRelatedAttributes", "debtInstrumentAttributes",
 		"derivativeInstrumentAttributes", "technicalAttributes"})
 public class SecuritiesReferenceDataReport5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TechRcrdId")
 	protected Max35Text technicalRecordIdentification;
 	/**
-	 * Unique identifier of a record in a message used as part of error
-	 * management and status advice message.<br>
-	 * <br>
-	 * Usage:<br>
-	 * This identification will be used in the status advice report sent back.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,7 +147,7 @@ public class SecuritiesReferenceDataReport5 {
 	 */
 	public static final MMMessageAttribute mmTechnicalRecordIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmObject();
 			isDerived = false;
 			xmlTag = "TechRcrdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,10 +158,11 @@ public class SecuritiesReferenceDataReport5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmGnlAttrbts", required = true)
 	protected SecurityInstrumentDescription9 financialInstrumentGeneralAttributes;
 	/**
-	 * Attributes and characteristics of the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -187,7 +195,7 @@ public class SecuritiesReferenceDataReport5 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentGeneralAttributes = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
-			componentContext_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmGnlAttrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,10 +207,11 @@ public class SecuritiesReferenceDataReport5 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmObject();
 		}
 	};
+	@XmlElement(name = "Issr", required = true)
 	protected LEIIdentifier issuer;
 	/**
-	 * LEI of Issuer or trading venue operator.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,7 +245,7 @@ public class SecuritiesReferenceDataReport5 {
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
-			componentContext_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -247,10 +256,11 @@ public class SecuritiesReferenceDataReport5 {
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgVnRltdAttrbts", required = true)
 	protected List<com.tools20022.repository.msg.TradingVenueAttributes1> tradingVenueRelatedAttributes;
 	/**
-	 * Traded venue related attributes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -283,7 +293,7 @@ public class SecuritiesReferenceDataReport5 {
 	public static final MMMessageAssociationEnd mmTradingVenueRelatedAttributes = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
-			componentContext_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmObject();
 			isDerived = false;
 			xmlTag = "TradgVnRltdAttrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -294,10 +304,11 @@ public class SecuritiesReferenceDataReport5 {
 			type_lazy = () -> com.tools20022.repository.msg.TradingVenueAttributes1.mmObject();
 		}
 	};
+	@XmlElement(name = "DebtInstrmAttrbts")
 	protected DebtInstrument2 debtInstrumentAttributes;
 	/**
-	 * Attributes specific to debt instruments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -328,7 +339,7 @@ public class SecuritiesReferenceDataReport5 {
 	public static final MMMessageAssociationEnd mmDebtInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Debt.mmObject();
-			componentContext_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmObject();
 			isDerived = false;
 			xmlTag = "DebtInstrmAttrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -340,10 +351,11 @@ public class SecuritiesReferenceDataReport5 {
 			type_lazy = () -> com.tools20022.repository.msg.DebtInstrument2.mmObject();
 		}
 	};
+	@XmlElement(name = "DerivInstrmAttrbts")
 	protected DerivativeInstrument5 derivativeInstrumentAttributes;
 	/**
-	 * Attributes specific to derivative instruments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -375,7 +387,7 @@ public class SecuritiesReferenceDataReport5 {
 	public static final MMMessageAssociationEnd mmDerivativeInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmDerivative;
-			componentContext_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmObject();
 			isDerived = false;
 			xmlTag = "DerivInstrmAttrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -387,10 +399,11 @@ public class SecuritiesReferenceDataReport5 {
 			type_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument5.mmObject();
 		}
 	};
+	@XmlElement(name = "TechAttrbts")
 	protected RecordTechnicalData3 technicalAttributes;
 	/**
-	 * Technical attributes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -416,7 +429,7 @@ public class SecuritiesReferenceDataReport5 {
 	 */
 	public static final MMMessageAssociationEnd mmTechnicalAttributes = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmObject();
 			isDerived = false;
 			xmlTag = "TechAttrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -432,12 +445,15 @@ public class SecuritiesReferenceDataReport5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesReferenceDataReport5.mmTechnicalRecordIdentification, SecuritiesReferenceDataReport5.mmFinancialInstrumentGeneralAttributes, SecuritiesReferenceDataReport5.mmIssuer,
-						SecuritiesReferenceDataReport5.mmTradingVenueRelatedAttributes, SecuritiesReferenceDataReport5.mmDebtInstrumentAttributes, SecuritiesReferenceDataReport5.mmDerivativeInstrumentAttributes,
-						SecuritiesReferenceDataReport5.mmTechnicalAttributes);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmTechnicalRecordIdentification,
+						com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmFinancialInstrumentGeneralAttributes, com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmIssuer,
+						com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmTradingVenueRelatedAttributes, com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmDebtInstrumentAttributes,
+						com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmDerivativeInstrumentAttributes, com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmTechnicalAttributes);
 				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingReferenceDataReportV01.mmReferenceData);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintValidDebtMaturityDateRule.forSecuritiesReferenceDataReport5,
+						com.tools20022.repository.constraints.ConstraintValidDerivativeExpiryDateRule.forSecuritiesReferenceDataReport5);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesReferenceDataReport5";
 				definition = "Provides details on the securities reference data for the required financial instruments.";
@@ -446,66 +462,66 @@ public class SecuritiesReferenceDataReport5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TechRcrdId")
-	public Max35Text getTechnicalRecordIdentification() {
-		return technicalRecordIdentification;
+	public Optional<Max35Text> getTechnicalRecordIdentification() {
+		return technicalRecordIdentification == null ? Optional.empty() : Optional.of(technicalRecordIdentification);
 	}
 
-	public void setTechnicalRecordIdentification(Max35Text technicalRecordIdentification) {
+	public SecuritiesReferenceDataReport5 setTechnicalRecordIdentification(Max35Text technicalRecordIdentification) {
 		this.technicalRecordIdentification = technicalRecordIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmGnlAttrbts", required = true)
 	public SecurityInstrumentDescription9 getFinancialInstrumentGeneralAttributes() {
 		return financialInstrumentGeneralAttributes;
 	}
 
-	public void setFinancialInstrumentGeneralAttributes(com.tools20022.repository.msg.SecurityInstrumentDescription9 financialInstrumentGeneralAttributes) {
-		this.financialInstrumentGeneralAttributes = financialInstrumentGeneralAttributes;
+	public SecuritiesReferenceDataReport5 setFinancialInstrumentGeneralAttributes(com.tools20022.repository.msg.SecurityInstrumentDescription9 financialInstrumentGeneralAttributes) {
+		this.financialInstrumentGeneralAttributes = Objects.requireNonNull(financialInstrumentGeneralAttributes);
+		return this;
 	}
 
-	@XmlElement(name = "Issr", required = true)
 	public LEIIdentifier getIssuer() {
 		return issuer;
 	}
 
-	public void setIssuer(LEIIdentifier issuer) {
-		this.issuer = issuer;
+	public SecuritiesReferenceDataReport5 setIssuer(LEIIdentifier issuer) {
+		this.issuer = Objects.requireNonNull(issuer);
+		return this;
 	}
 
-	@XmlElement(name = "TradgVnRltdAttrbts", required = true)
 	public List<TradingVenueAttributes1> getTradingVenueRelatedAttributes() {
-		return tradingVenueRelatedAttributes;
+		return tradingVenueRelatedAttributes == null ? tradingVenueRelatedAttributes = new ArrayList<>() : tradingVenueRelatedAttributes;
 	}
 
-	public void setTradingVenueRelatedAttributes(List<com.tools20022.repository.msg.TradingVenueAttributes1> tradingVenueRelatedAttributes) {
-		this.tradingVenueRelatedAttributes = tradingVenueRelatedAttributes;
+	public SecuritiesReferenceDataReport5 setTradingVenueRelatedAttributes(List<com.tools20022.repository.msg.TradingVenueAttributes1> tradingVenueRelatedAttributes) {
+		this.tradingVenueRelatedAttributes = Objects.requireNonNull(tradingVenueRelatedAttributes);
+		return this;
 	}
 
-	@XmlElement(name = "DebtInstrmAttrbts")
-	public DebtInstrument2 getDebtInstrumentAttributes() {
-		return debtInstrumentAttributes;
+	public Optional<DebtInstrument2> getDebtInstrumentAttributes() {
+		return debtInstrumentAttributes == null ? Optional.empty() : Optional.of(debtInstrumentAttributes);
 	}
 
-	public void setDebtInstrumentAttributes(com.tools20022.repository.msg.DebtInstrument2 debtInstrumentAttributes) {
+	public SecuritiesReferenceDataReport5 setDebtInstrumentAttributes(com.tools20022.repository.msg.DebtInstrument2 debtInstrumentAttributes) {
 		this.debtInstrumentAttributes = debtInstrumentAttributes;
+		return this;
 	}
 
-	@XmlElement(name = "DerivInstrmAttrbts")
-	public DerivativeInstrument5 getDerivativeInstrumentAttributes() {
-		return derivativeInstrumentAttributes;
+	public Optional<DerivativeInstrument5> getDerivativeInstrumentAttributes() {
+		return derivativeInstrumentAttributes == null ? Optional.empty() : Optional.of(derivativeInstrumentAttributes);
 	}
 
-	public void setDerivativeInstrumentAttributes(com.tools20022.repository.msg.DerivativeInstrument5 derivativeInstrumentAttributes) {
+	public SecuritiesReferenceDataReport5 setDerivativeInstrumentAttributes(com.tools20022.repository.msg.DerivativeInstrument5 derivativeInstrumentAttributes) {
 		this.derivativeInstrumentAttributes = derivativeInstrumentAttributes;
+		return this;
 	}
 
-	@XmlElement(name = "TechAttrbts")
-	public RecordTechnicalData3 getTechnicalAttributes() {
-		return technicalAttributes;
+	public Optional<RecordTechnicalData3> getTechnicalAttributes() {
+		return technicalAttributes == null ? Optional.empty() : Optional.of(technicalAttributes);
 	}
 
-	public void setTechnicalAttributes(com.tools20022.repository.msg.RecordTechnicalData3 technicalAttributes) {
+	public SecuritiesReferenceDataReport5 setTechnicalAttributes(com.tools20022.repository.msg.RecordTechnicalData3 technicalAttributes) {
 		this.technicalAttributes = technicalAttributes;
+		return this;
 	}
 }

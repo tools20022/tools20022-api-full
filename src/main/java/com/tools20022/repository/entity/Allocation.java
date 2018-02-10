@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.RoundingDirectionCode;
@@ -32,6 +34,8 @@ import com.tools20022.repository.msg.UnderlyingAttributes2;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Distribution of the (block) trade (transactions) by the investor or
@@ -81,13 +85,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PreAllocation1 PreAllocation1}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -112,10 +109,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PreAllocation1 PreAllocation1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -133,8 +137,8 @@ public class Allocation {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected PercentageRate percentage;
 	/**
-	 * Percent of the securities quantity that this allocation represents.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,8 +176,8 @@ public class Allocation {
 	public static final MMBusinessAttribute mmPercentage = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingAttributes.mmAllocationPercent, UnderlyingAttributes2.mmAllocationPercentage);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Percentage";
 			definition = "Percent of the securities quantity that this allocation represents.";
@@ -192,9 +196,8 @@ public class Allocation {
 	};
 	protected SecuritiesQuantity allocatedQuantity;
 	/**
-	 * Quantity of a specific security allocated from a block trade, based upon
-	 * the distribution of the trade to different accounts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -224,6 +227,9 @@ public class Allocation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Allocation Allocation}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::ALLO, FIXSynonym: 80</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -239,8 +245,9 @@ public class Allocation {
 	public static final MMBusinessAssociationEnd mmAllocatedQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PreAllocation1.mmAllocatedQuantity, SyndicatedLoan1.mmShare);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::ALLO"), new FIXSynonym(this, "80"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllocatedQuantity";
 			definition = "Quantity of a specific security allocated from a block trade, based upon the distribution of the trade to different accounts.";
@@ -253,8 +260,8 @@ public class Allocation {
 	};
 	protected CurrencyCode settlementCurrency;
 	/**
-	 * Currency to be used for settlement of the allocation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -274,6 +281,9 @@ public class Allocation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Allocation Allocation}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 120</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -287,8 +297,9 @@ public class Allocation {
 	public static final MMBusinessAttribute mmSettlementCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PreAllocation1.mmAllocatedSettlementCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "120"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Currency to be used for settlement of the allocation.";
@@ -307,8 +318,8 @@ public class Allocation {
 	};
 	protected SecuritiesAccount allocationAccount;
 	/**
-	 * Account to or from which an allocation must be made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -349,8 +360,8 @@ public class Allocation {
 	public static final MMBusinessAssociationEnd mmAllocationAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PreAllocation1.mmAllocationAccountDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllocationAccount";
 			definition = "Account to or from which an allocation must be made.";
@@ -363,8 +374,8 @@ public class Allocation {
 	};
 	protected SecuritiesPricing allocatedPrice;
 	/**
-	 * Executed price used in an allocation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -384,6 +395,9 @@ public class Allocation {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Allocation Allocation}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 366</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -396,8 +410,9 @@ public class Allocation {
 	 */
 	public static final MMBusinessAssociationEnd mmAllocatedPrice = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "366"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllocatedPrice";
 			definition = "Executed price used in an allocation.";
@@ -410,8 +425,8 @@ public class Allocation {
 	};
 	protected CurrencyAndAmount allocationAmount;
 	/**
-	 * Allocated quantity of security multiplied by the allocated price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -423,6 +438,9 @@ public class Allocation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Allocation Allocation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::DEAL</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -437,8 +455,9 @@ public class Allocation {
 	 */
 	public static final MMBusinessAttribute mmAllocationAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::DEAL"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllocationAmount";
 			definition = "Allocated quantity of security multiplied by the allocated price.";
@@ -457,9 +476,8 @@ public class Allocation {
 	};
 	protected RoundingDirectionCode method;
 	/**
-	 * Indicates the method of pre-allocation, that is the factors that are/were
-	 * applied in the pre-allocation process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -471,6 +489,9 @@ public class Allocation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Allocation Allocation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 591</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -486,8 +507,9 @@ public class Allocation {
 	 */
 	public static final MMBusinessAttribute mmMethod = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "591"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Method";
 			definition = "Indicates the method of pre-allocation, that is the factors that are/were applied in the pre-allocation process.";
@@ -506,8 +528,8 @@ public class Allocation {
 	};
 	protected DecimalNumber averagePricePrecision;
 	/**
-	 * Number of decimal places used for average pricing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -519,6 +541,9 @@ public class Allocation {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Allocation Allocation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 74</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -532,8 +557,9 @@ public class Allocation {
 	 */
 	public static final MMBusinessAttribute mmAveragePricePrecision = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "74"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AveragePricePrecision";
 			definition = "Number of decimal places used for average pricing.";
@@ -552,8 +578,8 @@ public class Allocation {
 	};
 	protected SecuritiesSettlement settlementExecutionParameters;
 	/**
-	 * Parameters used to execute the settlement of a securities allocation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -587,8 +613,8 @@ public class Allocation {
 	 */
 	public static final MMBusinessAssociationEnd mmSettlementExecutionParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementExecutionParameters";
 			definition = "Parameters used to execute the settlement of a securities allocation.";
@@ -601,8 +627,8 @@ public class Allocation {
 	};
 	protected SecuritiesOrder securitiesOrder;
 	/**
-	 * Securites order which is allocated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -634,8 +660,8 @@ public class Allocation {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesOrder";
 			definition = "Securites order which is allocated.";
@@ -648,8 +674,8 @@ public class Allocation {
 	};
 	protected SecuritiesTrade securitiesTrade;
 	/**
-	 * Trade which is allocated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -681,8 +707,8 @@ public class Allocation {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesTrade";
 			definition = "Trade which is allocated.";
@@ -695,8 +721,8 @@ public class Allocation {
 	};
 	protected Max35Text identification;
 	/**
-	 * Identifies the allocation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -720,8 +746,8 @@ public class Allocation {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identifies the allocation.";
@@ -742,7 +768,7 @@ public class Allocation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Allocation";
 				definition = "Distribution of the (block) trade (transactions) by the investor or investment manager to different underlying clients, ie, investment funds.";
@@ -768,95 +794,107 @@ public class Allocation {
 		return percentage;
 	}
 
-	public void setPercentage(PercentageRate percentage) {
-		this.percentage = percentage;
+	public Allocation setPercentage(PercentageRate percentage) {
+		this.percentage = Objects.requireNonNull(percentage);
+		return this;
 	}
 
 	public SecuritiesQuantity getAllocatedQuantity() {
 		return allocatedQuantity;
 	}
 
-	public void setAllocatedQuantity(com.tools20022.repository.entity.SecuritiesQuantity allocatedQuantity) {
-		this.allocatedQuantity = allocatedQuantity;
+	public Allocation setAllocatedQuantity(com.tools20022.repository.entity.SecuritiesQuantity allocatedQuantity) {
+		this.allocatedQuantity = Objects.requireNonNull(allocatedQuantity);
+		return this;
 	}
 
 	public CurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
 
-	public void setSettlementCurrency(CurrencyCode settlementCurrency) {
-		this.settlementCurrency = settlementCurrency;
+	public Allocation setSettlementCurrency(CurrencyCode settlementCurrency) {
+		this.settlementCurrency = Objects.requireNonNull(settlementCurrency);
+		return this;
 	}
 
 	public SecuritiesAccount getAllocationAccount() {
 		return allocationAccount;
 	}
 
-	public void setAllocationAccount(com.tools20022.repository.entity.SecuritiesAccount allocationAccount) {
-		this.allocationAccount = allocationAccount;
+	public Allocation setAllocationAccount(com.tools20022.repository.entity.SecuritiesAccount allocationAccount) {
+		this.allocationAccount = Objects.requireNonNull(allocationAccount);
+		return this;
 	}
 
 	public SecuritiesPricing getAllocatedPrice() {
 		return allocatedPrice;
 	}
 
-	public void setAllocatedPrice(com.tools20022.repository.entity.SecuritiesPricing allocatedPrice) {
-		this.allocatedPrice = allocatedPrice;
+	public Allocation setAllocatedPrice(com.tools20022.repository.entity.SecuritiesPricing allocatedPrice) {
+		this.allocatedPrice = Objects.requireNonNull(allocatedPrice);
+		return this;
 	}
 
 	public CurrencyAndAmount getAllocationAmount() {
 		return allocationAmount;
 	}
 
-	public void setAllocationAmount(CurrencyAndAmount allocationAmount) {
-		this.allocationAmount = allocationAmount;
+	public Allocation setAllocationAmount(CurrencyAndAmount allocationAmount) {
+		this.allocationAmount = Objects.requireNonNull(allocationAmount);
+		return this;
 	}
 
 	public RoundingDirectionCode getMethod() {
 		return method;
 	}
 
-	public void setMethod(RoundingDirectionCode method) {
-		this.method = method;
+	public Allocation setMethod(RoundingDirectionCode method) {
+		this.method = Objects.requireNonNull(method);
+		return this;
 	}
 
 	public DecimalNumber getAveragePricePrecision() {
 		return averagePricePrecision;
 	}
 
-	public void setAveragePricePrecision(DecimalNumber averagePricePrecision) {
-		this.averagePricePrecision = averagePricePrecision;
+	public Allocation setAveragePricePrecision(DecimalNumber averagePricePrecision) {
+		this.averagePricePrecision = Objects.requireNonNull(averagePricePrecision);
+		return this;
 	}
 
-	public SecuritiesSettlement getSettlementExecutionParameters() {
-		return settlementExecutionParameters;
+	public Optional<SecuritiesSettlement> getSettlementExecutionParameters() {
+		return settlementExecutionParameters == null ? Optional.empty() : Optional.of(settlementExecutionParameters);
 	}
 
-	public void setSettlementExecutionParameters(com.tools20022.repository.entity.SecuritiesSettlement settlementExecutionParameters) {
+	public Allocation setSettlementExecutionParameters(com.tools20022.repository.entity.SecuritiesSettlement settlementExecutionParameters) {
 		this.settlementExecutionParameters = settlementExecutionParameters;
+		return this;
 	}
 
-	public SecuritiesOrder getSecuritiesOrder() {
-		return securitiesOrder;
+	public Optional<SecuritiesOrder> getSecuritiesOrder() {
+		return securitiesOrder == null ? Optional.empty() : Optional.of(securitiesOrder);
 	}
 
-	public void setSecuritiesOrder(com.tools20022.repository.entity.SecuritiesOrder securitiesOrder) {
+	public Allocation setSecuritiesOrder(com.tools20022.repository.entity.SecuritiesOrder securitiesOrder) {
 		this.securitiesOrder = securitiesOrder;
+		return this;
 	}
 
-	public SecuritiesTrade getSecuritiesTrade() {
-		return securitiesTrade;
+	public Optional<SecuritiesTrade> getSecuritiesTrade() {
+		return securitiesTrade == null ? Optional.empty() : Optional.of(securitiesTrade);
 	}
 
-	public void setSecuritiesTrade(com.tools20022.repository.entity.SecuritiesTrade securitiesTrade) {
+	public Allocation setSecuritiesTrade(com.tools20022.repository.entity.SecuritiesTrade securitiesTrade) {
 		this.securitiesTrade = securitiesTrade;
+		return this;
 	}
 
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public Allocation setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 }

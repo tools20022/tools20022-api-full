@@ -17,12 +17,14 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TerminationDate2Choice", propOrder = {"date", "code"})
 public class TerminationDate2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dt", required = true)
 	protected DateAndDateTimeChoice date;
 	/**
-	 * Date in ISO format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -90,6 +93,10 @@ public class TerminationDate2Choice {
 	 * TerminationDate2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Dt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98A::TERM, ISO15022Synonym:
+	 * :98C::TERM</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -111,9 +118,10 @@ public class TerminationDate2Choice {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TerminationDate2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TerminationDate2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98A::TERM"), new ISO15022Synonym(this, ":98C::TERM"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date in ISO format.";
@@ -123,11 +131,11 @@ public class TerminationDate2Choice {
 			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Cd", required = true)
 	protected DateCode1Choice code;
 	/**
-	 * Closing date/time or maturity date/time of the transaction expressed as
-	 * an ISO 20022 code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,6 +150,9 @@ public class TerminationDate2Choice {
 	 * TerminationDate2Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Cd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98B::TERM</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -165,9 +176,10 @@ public class TerminationDate2Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TerminationDate2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TerminationDate2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98B::TERM"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Closing date/time or maturity date/time of the transaction expressed as an ISO 20022 code.";
@@ -181,8 +193,8 @@ public class TerminationDate2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TerminationDate2Choice.mmDate, TerminationDate2Choice.mmCode);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TerminationDate2Choice.mmDate, com.tools20022.repository.choice.TerminationDate2Choice.mmCode);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminationDate2Choice";
 				definition = "Choice of format for the termination date.";
@@ -192,21 +204,21 @@ public class TerminationDate2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dt", required = true)
 	public DateAndDateTimeChoice getDate() {
 		return date;
 	}
 
-	public void setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
-		this.date = date;
+	public TerminationDate2Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+		this.date = Objects.requireNonNull(date);
+		return this;
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public DateCode1Choice getCode() {
 		return code;
 	}
 
-	public void setCode(com.tools20022.repository.choice.DateCode1Choice code) {
-		this.code = code;
+	public TerminationDate2Choice setCode(com.tools20022.repository.choice.DateCode1Choice code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 }

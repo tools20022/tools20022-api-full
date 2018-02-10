@@ -28,9 +28,8 @@ import com.tools20022.repository.msg.EncapsulatedBusinessMessage1;
 import com.tools20022.repository.msg.EventDescription1;
 import com.tools20022.repository.msgset.FactoringServicesISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -48,22 +47,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
- * TradeServicesManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.FactoringServicesISOLatestversion
- * FactoringServicesISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "PtyEvtAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -82,6 +65,22 @@ import javax.xml.bind.annotation.*;
  * PartyEventAdviceV01.mmAttachedMessage}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.FactoringServicesISOLatestversion
+ * FactoringServicesISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "PtyEvtAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
+ * TradeServicesManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code tsmt.055.001.01}</li>
@@ -97,16 +96,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyEventAdviceV01", propOrder = {"header", "eventNotice", "eventCount", "attachedMessage"})
 public class PartyEventAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected BusinessLetter1 header;
 	/**
-	 * Set of characteristics that unambiguously identify the event, common
-	 * parameters, documents and identifications.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,10 +146,11 @@ public class PartyEventAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "EvtNtce", required = true)
 	protected List<EventDescription1> eventNotice;
 	/**
-	 * Description of the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,10 +189,11 @@ public class PartyEventAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "EvtCnt")
 	protected Max15NumericText eventCount;
 	/**
-	 * Number of events as control value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -232,10 +233,11 @@ public class PartyEventAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AttchdMsg")
 	protected List<EncapsulatedBusinessMessage1> attachedMessage;
 	/**
-	 * Referenced or related business message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -305,43 +307,43 @@ public class PartyEventAdviceV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public BusinessLetter1 getHeader() {
 		return header;
 	}
 
-	public void setHeader(BusinessLetter1 header) {
-		this.header = header;
+	public PartyEventAdviceV01 setHeader(BusinessLetter1 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "EvtNtce", required = true)
 	public List<EventDescription1> getEventNotice() {
-		return eventNotice;
+		return eventNotice == null ? eventNotice = new ArrayList<>() : eventNotice;
 	}
 
-	public void setEventNotice(List<EventDescription1> eventNotice) {
-		this.eventNotice = eventNotice;
+	public PartyEventAdviceV01 setEventNotice(List<EventDescription1> eventNotice) {
+		this.eventNotice = Objects.requireNonNull(eventNotice);
+		return this;
 	}
 
-	@XmlElement(name = "EvtCnt")
-	public Max15NumericText getEventCount() {
-		return eventCount;
+	public Optional<Max15NumericText> getEventCount() {
+		return eventCount == null ? Optional.empty() : Optional.of(eventCount);
 	}
 
-	public void setEventCount(Max15NumericText eventCount) {
+	public PartyEventAdviceV01 setEventCount(Max15NumericText eventCount) {
 		this.eventCount = eventCount;
+		return this;
 	}
 
-	@XmlElement(name = "AttchdMsg")
 	public List<EncapsulatedBusinessMessage1> getAttachedMessage() {
-		return attachedMessage;
+		return attachedMessage == null ? attachedMessage = new ArrayList<>() : attachedMessage;
 	}
 
-	public void setAttachedMessage(List<EncapsulatedBusinessMessage1> attachedMessage) {
-		this.attachedMessage = attachedMessage;
+	public PartyEventAdviceV01 setAttachedMessage(List<EncapsulatedBusinessMessage1> attachedMessage) {
+		this.attachedMessage = Objects.requireNonNull(attachedMessage);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.055.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.055.001.01")
 	static public class Document {
 		@XmlElement(name = "PtyEvtAdvc", required = true)
 		public PartyEventAdviceV01 messageBody;

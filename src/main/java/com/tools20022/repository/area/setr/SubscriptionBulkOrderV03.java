@@ -25,9 +25,8 @@ import com.tools20022.repository.area.SecuritiesTradePreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -50,22 +49,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesTradePreviousVersion
- * SecuritiesTradePreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
- * InvestmentFundsISOPreviousversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SbcptBlkOrdrV03"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -93,9 +76,36 @@ import javax.xml.bind.annotation.*;
  * SubscriptionBulkOrderV03.mmExtension}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
+ * InvestmentFundsISOPreviousversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SbcptBlkOrdrV03"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesTradePreviousVersion
+ * SecuritiesTradePreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code setr.007.001.03}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forSubscriptionBulkOrderV03
+ * ConstraintAccountIdentificationRule.forSubscriptionBulkOrderV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule#forSubscriptionBulkOrderV03
+ * ConstraintRelatedPartiesDetailsRule.forSubscriptionBulkOrderV03}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -119,16 +129,16 @@ import javax.xml.bind.annotation.*;
  * SubscriptionBulkOrderV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SubscriptionBulkOrderV03", propOrder = {"messageIdentification", "poolReference", "previousReference", "bulkOrderDetails", "relatedPartyDetails", "copyDetails", "extension"})
 public class SubscriptionBulkOrderV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Reference that uniquely identifies a message from a business application
-	 * standpoint.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,10 +189,11 @@ public class SubscriptionBulkOrderV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PoolRef")
 	protected AdditionalReference3 poolReference;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -231,10 +242,11 @@ public class SubscriptionBulkOrderV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsRef")
 	protected List<AdditionalReference3> previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -282,10 +294,11 @@ public class SubscriptionBulkOrderV03 {
 			}
 		}
 	};
+	@XmlElement(name = "BlkOrdrDtls", required = true)
 	protected SubscriptionBulkOrder4 bulkOrderDetails;
 	/**
-	 * General information related to the order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -334,10 +347,11 @@ public class SubscriptionBulkOrderV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdPtyDtls")
 	protected List<Intermediary8> relatedPartyDetails;
 	/**
-	 * Information about parties related to the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -376,10 +390,11 @@ public class SubscriptionBulkOrderV03 {
 			}
 		}
 	};
+	@XmlElement(name = "CpyDtls")
 	protected CopyInformation2 copyDetails;
 	/**
-	 * Information provided when the message is a copy of a previous message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -429,11 +444,11 @@ public class SubscriptionBulkOrderV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -486,6 +501,8 @@ public class SubscriptionBulkOrderV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSubscriptionBulkOrderV03,
+						com.tools20022.repository.constraints.ConstraintRelatedPartiesDetailsRule.forSubscriptionBulkOrderV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionBulkOrderV03";
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative sends the SubscriptionBulkOrder message to the executing party, for example, a transfer agent, to instruct a subscription to a financial instrument for two or more accounts.\r\nUsage\r\nThe SubscriptionBulkOrder message is used to bulk several individual orders into one bulk order. The individual orders come from different instructing parties, that is, account owners, but are related to the same financial instrument. This message will typically be used by a party collecting orders and bulking these individual orders into one bulk order before sending it to another party.\r\nFor a single subscription order, the SubscriptionOrder message, not the SubscriptionBulkOrder message, must be used.\r\nIf there are subscription orders for different financial instruments but for the same account, then the SubscriptionOrder must be used.";
@@ -517,70 +534,70 @@ public class SubscriptionBulkOrderV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public SubscriptionBulkOrderV03 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PoolRef")
-	public AdditionalReference3 getPoolReference() {
-		return poolReference;
+	public Optional<AdditionalReference3> getPoolReference() {
+		return poolReference == null ? Optional.empty() : Optional.of(poolReference);
 	}
 
-	public void setPoolReference(AdditionalReference3 poolReference) {
+	public SubscriptionBulkOrderV03 setPoolReference(AdditionalReference3 poolReference) {
 		this.poolReference = poolReference;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef")
 	public List<AdditionalReference3> getPreviousReference() {
-		return previousReference;
+		return previousReference == null ? previousReference = new ArrayList<>() : previousReference;
 	}
 
-	public void setPreviousReference(List<AdditionalReference3> previousReference) {
-		this.previousReference = previousReference;
+	public SubscriptionBulkOrderV03 setPreviousReference(List<AdditionalReference3> previousReference) {
+		this.previousReference = Objects.requireNonNull(previousReference);
+		return this;
 	}
 
-	@XmlElement(name = "BlkOrdrDtls", required = true)
 	public SubscriptionBulkOrder4 getBulkOrderDetails() {
 		return bulkOrderDetails;
 	}
 
-	public void setBulkOrderDetails(SubscriptionBulkOrder4 bulkOrderDetails) {
-		this.bulkOrderDetails = bulkOrderDetails;
+	public SubscriptionBulkOrderV03 setBulkOrderDetails(SubscriptionBulkOrder4 bulkOrderDetails) {
+		this.bulkOrderDetails = Objects.requireNonNull(bulkOrderDetails);
+		return this;
 	}
 
-	@XmlElement(name = "RltdPtyDtls")
 	public List<Intermediary8> getRelatedPartyDetails() {
-		return relatedPartyDetails;
+		return relatedPartyDetails == null ? relatedPartyDetails = new ArrayList<>() : relatedPartyDetails;
 	}
 
-	public void setRelatedPartyDetails(List<Intermediary8> relatedPartyDetails) {
-		this.relatedPartyDetails = relatedPartyDetails;
+	public SubscriptionBulkOrderV03 setRelatedPartyDetails(List<Intermediary8> relatedPartyDetails) {
+		this.relatedPartyDetails = Objects.requireNonNull(relatedPartyDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CpyDtls")
-	public CopyInformation2 getCopyDetails() {
-		return copyDetails;
+	public Optional<CopyInformation2> getCopyDetails() {
+		return copyDetails == null ? Optional.empty() : Optional.of(copyDetails);
 	}
 
-	public void setCopyDetails(CopyInformation2 copyDetails) {
+	public SubscriptionBulkOrderV03 setCopyDetails(CopyInformation2 copyDetails) {
 		this.copyDetails = copyDetails;
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<Extension1> extension) {
-		this.extension = extension;
+	public SubscriptionBulkOrderV03 setExtension(List<Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.007.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:setr.007.001.03")
 	static public class Document {
 		@XmlElement(name = "SbcptBlkOrdrV03", required = true)
 		public SubscriptionBulkOrderV03 messageBody;

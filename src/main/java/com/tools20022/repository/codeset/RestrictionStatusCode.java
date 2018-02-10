@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.RestrictionStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of a restriction.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RestrictionStatusCode#mmInactive
- * RestrictionStatusCode.mmInactive}</li>
+ * {@linkplain com.tools20022.repository.codeset.RestrictionStatusCode#Inactive
+ * RestrictionStatusCode.Inactive}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RestrictionStatusCode#mmActive
- * RestrictionStatusCode.mmActive}</li>
+ * {@linkplain com.tools20022.repository.codeset.RestrictionStatusCode#Active
+ * RestrictionStatusCode.Active}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of a restriction."</li>
  * </ul>
  */
-public class RestrictionStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RestrictionStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,12 +91,12 @@ public class RestrictionStatusCode {
 	 * definition} = "Status of the restriction is inactive."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInactive = new MMCode() {
+	public static final RestrictionStatusCode Inactive = new RestrictionStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactive";
 			definition = "Status of the restriction is inactive.";
-			owner_lazy = () -> RestrictionStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RestrictionStatusCode.mmObject();
 			codeName = "INAC";
 		}
 	};
@@ -115,27 +121,57 @@ public class RestrictionStatusCode {
 	 * definition} = "Status of the restriction is active."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmActive = new MMCode() {
+	public static final RestrictionStatusCode Active = new RestrictionStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
 			definition = "Status of the restriction is active.";
-			owner_lazy = () -> RestrictionStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RestrictionStatusCode.mmObject();
 			codeName = "ACTV";
 		}
 	};
+	final static private LinkedHashMap<String, RestrictionStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RestrictionStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RestrictionStatusCode";
 				definition = "Specifies the status of a restriction.";
-				code_lazy = () -> Arrays.asList(RestrictionStatusCode.mmInactive, RestrictionStatusCode.mmActive);
 				derivation_lazy = () -> Arrays.asList(RestrictionStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RestrictionStatusCode.Inactive, com.tools20022.repository.codeset.RestrictionStatusCode.Active);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Inactive.getCodeName().get(), Inactive);
+		codesByName.put(Active.getCodeName().get(), Active);
+	}
+
+	public static RestrictionStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RestrictionStatusCode[] values() {
+		RestrictionStatusCode[] values = new RestrictionStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RestrictionStatusCode> {
+		@Override
+		public RestrictionStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RestrictionStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

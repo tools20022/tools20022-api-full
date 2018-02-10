@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ReservationStatusCode;
+import com.tools20022.repository.codeset.ReservationStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the current status of a limit.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ReservationStatusCode
- * ReservationStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#mmEnabled
- * ReservationStatus1Code.mmEnabled}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#Enabled
+ * ReservationStatus1Code.Enabled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#mmDisabled
- * ReservationStatus1Code.mmDisabled}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#Disabled
+ * ReservationStatus1Code.Disabled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#mmDeleted
- * ReservationStatus1Code.mmDeleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#Deleted
+ * ReservationStatus1Code.Deleted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#mmRequested
- * ReservationStatus1Code.mmRequested}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#Requested
+ * ReservationStatus1Code.Requested}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#mmBlocked
- * ReservationStatus1Code.mmBlocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationStatus1Code#Blocked
+ * ReservationStatus1Code.Blocked}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ReservationStatusCode
+ * ReservationStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the current status of a limit."</li>
  * </ul>
  */
-public class ReservationStatus1Code extends ReservationStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ReservationStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class ReservationStatus1Code extends ReservationStatusCode {
 	 * name} = "Enabled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEnabled = new MMCode() {
+	public static final ReservationStatus1Code Enabled = new ReservationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabled";
-			owner_lazy = () -> ReservationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReservationStatus1Code.mmObject();
+			codeName = ReservationStatusCode.Enabled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class ReservationStatus1Code extends ReservationStatusCode {
 	 * name} = "Disabled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisabled = new MMCode() {
+	public static final ReservationStatus1Code Disabled = new ReservationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disabled";
-			owner_lazy = () -> ReservationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReservationStatus1Code.mmObject();
+			codeName = ReservationStatusCode.Disabled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class ReservationStatus1Code extends ReservationStatusCode {
 	 * name} = "Deleted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeleted = new MMCode() {
+	public static final ReservationStatus1Code Deleted = new ReservationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
-			owner_lazy = () -> ReservationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReservationStatus1Code.mmObject();
+			codeName = ReservationStatusCode.Deleted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +169,12 @@ public class ReservationStatus1Code extends ReservationStatusCode {
 	 * name} = "Requested"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRequested = new MMCode() {
+	public static final ReservationStatus1Code Requested = new ReservationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Requested";
-			owner_lazy = () -> ReservationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReservationStatus1Code.mmObject();
+			codeName = ReservationStatusCode.Requested.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,26 +193,61 @@ public class ReservationStatus1Code extends ReservationStatusCode {
 	 * name} = "Blocked"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBlocked = new MMCode() {
+	public static final ReservationStatus1Code Blocked = new ReservationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
-			owner_lazy = () -> ReservationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReservationStatus1Code.mmObject();
+			codeName = ReservationStatusCode.Blocked.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ReservationStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ReservationStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ENAB");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReservationStatus1Code";
 				definition = "Specifies the current status of a limit.";
-				code_lazy = () -> Arrays.asList(ReservationStatus1Code.mmEnabled, ReservationStatus1Code.mmDisabled, ReservationStatus1Code.mmDeleted, ReservationStatus1Code.mmRequested, ReservationStatus1Code.mmBlocked);
 				trace_lazy = () -> ReservationStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReservationStatus1Code.Enabled, com.tools20022.repository.codeset.ReservationStatus1Code.Disabled,
+						com.tools20022.repository.codeset.ReservationStatus1Code.Deleted, com.tools20022.repository.codeset.ReservationStatus1Code.Requested, com.tools20022.repository.codeset.ReservationStatus1Code.Blocked);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Enabled.getCodeName().get(), Enabled);
+		codesByName.put(Disabled.getCodeName().get(), Disabled);
+		codesByName.put(Deleted.getCodeName().get(), Deleted);
+		codesByName.put(Requested.getCodeName().get(), Requested);
+		codesByName.put(Blocked.getCodeName().get(), Blocked);
+	}
+
+	public static ReservationStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ReservationStatus1Code[] values() {
+		ReservationStatus1Code[] values = new ReservationStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ReservationStatus1Code> {
+		@Override
+		public ReservationStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ReservationStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

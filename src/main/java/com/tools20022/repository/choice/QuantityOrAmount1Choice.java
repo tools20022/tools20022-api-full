@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "QuantityOrAmount1Choice", propOrder = {"quantity", "amount"})
 public class QuantityOrAmount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Qty", required = true)
 	protected FinancialInstrumentQuantityChoice quantity;
 	/**
-	 * Quantity is expressed in units, face amount or amortised amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class QuantityOrAmount1Choice {
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
-			componentContext_lazy = () -> QuantityOrAmount1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.QuantityOrAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class QuantityOrAmount1Choice {
 			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * Quantity is expressed as an amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +162,7 @@ public class QuantityOrAmount1Choice {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAmount;
-			componentContext_lazy = () -> QuantityOrAmount1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.QuantityOrAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,9 +177,9 @@ public class QuantityOrAmount1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(QuantityOrAmount1Choice.mmQuantity, QuantityOrAmount1Choice.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.QuantityOrAmount1Choice.mmQuantity, com.tools20022.repository.choice.QuantityOrAmount1Choice.mmAmount);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuantityOrAmount1Choice";
 				definition = "Choice between a quantity expressed in units, face amount or amortised amount and a quantity expressed as an amount.";
@@ -185,21 +188,21 @@ public class QuantityOrAmount1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantityChoice getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantityChoice quantity) {
-		this.quantity = quantity;
+	public QuantityOrAmount1Choice setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantityChoice quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
-		this.amount = amount;
+	public QuantityOrAmount1Choice setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 }

@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,22 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUseOfProvisionalDividendFlagRule#forDividendTypeFormat4SD1
+ * ConstraintUseOfProvisionalDividendFlagRule.forDividendTypeFormat4SD1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUseOfCommemorativeDividendFlagRule#forDividendTypeFormat4SD1
+ * ConstraintUseOfCommemorativeDividendFlagRule.forDividendTypeFormat4SD1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUseOfSpecialDividendFlagRule#forDividendTypeFormat4SD1
+ * ConstraintUseOfSpecialDividendFlagRule.forDividendTypeFormat4SD1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,18 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DividendTypeFormat4SD1", propOrder = {"placeAndName", "provisionalDividendFlag", "commemorativeDividendFlag", "specialDividendFlag"})
 public class DividendTypeFormat4SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm")
 	protected Max350Text placeAndName;
 	/**
-	 * Unambiguous reference to the location where the supplementary data must
-	 * be inserted in the message instance. <br>
-	 * <br>
-	 * In the case of XML, this is expressed by a valid XPath.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +124,7 @@ public class DividendTypeFormat4SD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DividendTypeFormat4SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DividendTypeFormat4SD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,13 +135,11 @@ public class DividendTypeFormat4SD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsnlDvddFlg", required = true)
 	protected YesNoIndicator provisionalDividendFlag;
 	/**
-	 * Specifies whether the dividend is provisional 予想区分.<br>
-	 * If the value is No, then the dividend is actual.<br>
-	 * ProvisionalDividendFlag can only be used with corporate action event type
-	 * code DVCA.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +169,7 @@ public class DividendTypeFormat4SD1 {
 	 */
 	public static final MMMessageAttribute mmProvisionalDividendFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DividendTypeFormat4SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DividendTypeFormat4SD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsnlDvddFlg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,12 +180,11 @@ public class DividendTypeFormat4SD1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CommrtvDvddFlg", required = true)
 	protected YesNoIndicator commemorativeDividendFlag;
 	/**
-	 * Specifies whether the dividend includes commemorative dividend. 記念配当区分<br>
-	 * CommemorativeDividendFlag can only be used with corporate action event
-	 * type code DVCA.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,7 +214,7 @@ public class DividendTypeFormat4SD1 {
 	 */
 	public static final MMMessageAttribute mmCommemorativeDividendFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DividendTypeFormat4SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DividendTypeFormat4SD1.mmObject();
 			isDerived = false;
 			xmlTag = "CommrtvDvddFlg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,13 +225,11 @@ public class DividendTypeFormat4SD1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "SpclDvddFlg", required = true)
 	protected YesNoIndicator specialDividendFlag;
 	/**
-	 * Specifies whether the dividend includes special dividend.<br>
-	 * 特別配当区分<br>
-	 * SpecialDividendFlag can only be used with corporate action event type
-	 * code DVCA.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -250,7 +259,7 @@ public class DividendTypeFormat4SD1 {
 	 */
 	public static final MMMessageAttribute mmSpecialDividendFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DividendTypeFormat4SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DividendTypeFormat4SD1.mmObject();
 			isDerived = false;
 			xmlTag = "SpclDvddFlg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -265,9 +274,11 @@ public class DividendTypeFormat4SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DividendTypeFormat4SD1.mmPlaceAndName, DividendTypeFormat4SD1.mmProvisionalDividendFlag, DividendTypeFormat4SD1.mmCommemorativeDividendFlag,
-						DividendTypeFormat4SD1.mmSpecialDividendFlag);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DividendTypeFormat4SD1.mmPlaceAndName, com.tools20022.repository.msg.DividendTypeFormat4SD1.mmProvisionalDividendFlag,
+						com.tools20022.repository.msg.DividendTypeFormat4SD1.mmCommemorativeDividendFlag, com.tools20022.repository.msg.DividendTypeFormat4SD1.mmSpecialDividendFlag);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintUseOfProvisionalDividendFlagRule.forDividendTypeFormat4SD1,
+						com.tools20022.repository.constraints.ConstraintUseOfCommemorativeDividendFlagRule.forDividendTypeFormat4SD1, com.tools20022.repository.constraints.ConstraintUseOfSpecialDividendFlagRule.forDividendTypeFormat4SD1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DividendTypeFormat4SD1";
 				definition = "Extension to specify additional information related to the type of dividend.";
@@ -276,39 +287,39 @@ public class DividendTypeFormat4SD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm")
-	public Max350Text getPlaceAndName() {
-		return placeAndName;
+	public Optional<Max350Text> getPlaceAndName() {
+		return placeAndName == null ? Optional.empty() : Optional.of(placeAndName);
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
+	public DividendTypeFormat4SD1 setPlaceAndName(Max350Text placeAndName) {
 		this.placeAndName = placeAndName;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsnlDvddFlg", required = true)
 	public YesNoIndicator getProvisionalDividendFlag() {
 		return provisionalDividendFlag;
 	}
 
-	public void setProvisionalDividendFlag(YesNoIndicator provisionalDividendFlag) {
-		this.provisionalDividendFlag = provisionalDividendFlag;
+	public DividendTypeFormat4SD1 setProvisionalDividendFlag(YesNoIndicator provisionalDividendFlag) {
+		this.provisionalDividendFlag = Objects.requireNonNull(provisionalDividendFlag);
+		return this;
 	}
 
-	@XmlElement(name = "CommrtvDvddFlg", required = true)
 	public YesNoIndicator getCommemorativeDividendFlag() {
 		return commemorativeDividendFlag;
 	}
 
-	public void setCommemorativeDividendFlag(YesNoIndicator commemorativeDividendFlag) {
-		this.commemorativeDividendFlag = commemorativeDividendFlag;
+	public DividendTypeFormat4SD1 setCommemorativeDividendFlag(YesNoIndicator commemorativeDividendFlag) {
+		this.commemorativeDividendFlag = Objects.requireNonNull(commemorativeDividendFlag);
+		return this;
 	}
 
-	@XmlElement(name = "SpclDvddFlg", required = true)
 	public YesNoIndicator getSpecialDividendFlag() {
 		return specialDividendFlag;
 	}
 
-	public void setSpecialDividendFlag(YesNoIndicator specialDividendFlag) {
-		this.specialDividendFlag = specialDividendFlag;
+	public DividendTypeFormat4SD1 setSpecialDividendFlag(YesNoIndicator specialDividendFlag) {
+		this.specialDividendFlag = Objects.requireNonNull(specialDividendFlag);
+		return this;
 	}
 }

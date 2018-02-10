@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.msg.ProprietaryReason5;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of format for the matching status."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MatchingStatus30Choice", propOrder = {"matched", "unmatched", "proprietary"})
 public class MatchingStatus30Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Mtchd", required = true)
 	protected ProprietaryReason5 matched;
 	/**
-	 * Status is matched.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -96,6 +99,9 @@ public class MatchingStatus30Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Mtchd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::MTCH//MACH</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -109,9 +115,10 @@ public class MatchingStatus30Choice {
 	public static final MMMessageAssociationEnd mmMatched = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
-			componentContext_lazy = () -> MatchingStatus30Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Mtchd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::MTCH//MACH"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
 			definition = "Status is matched.";
@@ -121,10 +128,11 @@ public class MatchingStatus30Choice {
 			type_lazy = () -> ProprietaryReason5.mmObject();
 		}
 	};
+	@XmlElement(name = "Umtchd", required = true)
 	protected UnmatchedStatus20Choice unmatched;
 	/**
-	 * Status is unmatched.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -144,6 +152,9 @@ public class MatchingStatus30Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Umtchd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::MTCH//NMAT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -157,9 +168,10 @@ public class MatchingStatus30Choice {
 	public static final MMMessageAssociationEnd mmUnmatched = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
-			componentContext_lazy = () -> MatchingStatus30Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Umtchd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::MTCH//NMAT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
 			definition = "Status is unmatched.";
@@ -169,10 +181,11 @@ public class MatchingStatus30Choice {
 			type_lazy = () -> com.tools20022.repository.choice.UnmatchedStatus20Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected ProprietaryStatusAndReason7 proprietary;
 	/**
-	 * Proprietary status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -192,6 +205,9 @@ public class MatchingStatus30Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Prtry"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::MTCH/4!c[4c]/4!c</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -205,9 +221,10 @@ public class MatchingStatus30Choice {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
-			componentContext_lazy = () -> MatchingStatus30Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::MTCH/4!c[4c]/4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary status.";
@@ -221,9 +238,10 @@ public class MatchingStatus30Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MatchingStatus30Choice.mmMatched, MatchingStatus30Choice.mmUnmatched, MatchingStatus30Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus30Choice.mmMatched, com.tools20022.repository.choice.MatchingStatus30Choice.mmUnmatched,
+						com.tools20022.repository.choice.MatchingStatus30Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MatchingStatus30Choice";
 				definition = "Choice of format for the matching status.";
@@ -232,30 +250,30 @@ public class MatchingStatus30Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Mtchd", required = true)
 	public ProprietaryReason5 getMatched() {
 		return matched;
 	}
 
-	public void setMatched(ProprietaryReason5 matched) {
-		this.matched = matched;
+	public MatchingStatus30Choice setMatched(ProprietaryReason5 matched) {
+		this.matched = Objects.requireNonNull(matched);
+		return this;
 	}
 
-	@XmlElement(name = "Umtchd", required = true)
 	public UnmatchedStatus20Choice getUnmatched() {
 		return unmatched;
 	}
 
-	public void setUnmatched(com.tools20022.repository.choice.UnmatchedStatus20Choice unmatched) {
-		this.unmatched = unmatched;
+	public MatchingStatus30Choice setUnmatched(com.tools20022.repository.choice.UnmatchedStatus20Choice unmatched) {
+		this.unmatched = Objects.requireNonNull(unmatched);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryStatusAndReason7 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(ProprietaryStatusAndReason7 proprietary) {
-		this.proprietary = proprietary;
+	public MatchingStatus30Choice setProprietary(ProprietaryStatusAndReason7 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

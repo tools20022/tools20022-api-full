@@ -17,15 +17,15 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateActionEventAndBalance9}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionEventAndBalance11", propOrder = {"generalInformation", "underlyingSecurity", "balance", "supplementaryData"})
 public class CorporateActionEventAndBalance11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GnlInf", required = true)
 	protected EventInformation9 generalInformation;
 	/**
-	 * Provides general information related to a corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -123,7 +124,7 @@ public class CorporateActionEventAndBalance11 {
 	public static final MMMessageAssociationEnd mmGeneralInformation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionEvent.mmObject();
-			componentContext_lazy = () -> CorporateActionEventAndBalance11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventAndBalance11.mmObject();
 			isDerived = false;
 			xmlTag = "GnlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +137,11 @@ public class CorporateActionEventAndBalance11 {
 			type_lazy = () -> com.tools20022.repository.msg.EventInformation9.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygScty", required = true)
 	protected SecurityIdentification19 underlyingSecurity;
 	/**
-	 * Security concerned by the corporate action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -159,6 +161,9 @@ public class CorporateActionEventAndBalance11 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UndrlygScty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :35B:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -177,9 +182,10 @@ public class CorporateActionEventAndBalance11 {
 	public static final MMMessageAssociationEnd mmUnderlyingSecurity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmUnderlyingSecurity;
-			componentContext_lazy = () -> CorporateActionEventAndBalance11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventAndBalance11.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygScty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":35B:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingSecurity";
 			definition = "Security concerned by the corporate action.";
@@ -190,10 +196,11 @@ public class CorporateActionEventAndBalance11 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification19.mmObject();
 		}
 	};
+	@XmlElement(name = "Bal")
 	protected CorporateActionBalanceDetails30 balance;
 	/**
-	 * Provides information about the balance related to a corporate action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -212,6 +219,9 @@ public class CorporateActionEventAndBalance11 {
 	 * CorporateActionEventAndBalance11}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Bal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -232,9 +242,10 @@ public class CorporateActionEventAndBalance11 {
 	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAggregateQuantityBalance;
-			componentContext_lazy = () -> CorporateActionEventAndBalance11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventAndBalance11.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Provides information about the balance related to a corporate action.";
@@ -245,11 +256,11 @@ public class CorporateActionEventAndBalance11 {
 			type_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObject();
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
-	 * Provides additional information related to the event and the balance of
-	 * the corporate action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -282,7 +293,7 @@ public class CorporateActionEventAndBalance11 {
 	 */
 	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionEventAndBalance11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventAndBalance11.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -298,10 +309,10 @@ public class CorporateActionEventAndBalance11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionEventAndBalance11.mmGeneralInformation, CorporateActionEventAndBalance11.mmUnderlyingSecurity, CorporateActionEventAndBalance11.mmBalance,
-						CorporateActionEventAndBalance11.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionEventAndBalance11.mmGeneralInformation, com.tools20022.repository.msg.CorporateActionEventAndBalance11.mmUnderlyingSecurity,
+						com.tools20022.repository.msg.CorporateActionEventAndBalance11.mmBalance, com.tools20022.repository.msg.CorporateActionEventAndBalance11.mmSupplementaryData);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventAndBalance11";
 				definition = "Detailed account holdings information report for a corporate action event.";
@@ -311,39 +322,39 @@ public class CorporateActionEventAndBalance11 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GnlInf", required = true)
 	public EventInformation9 getGeneralInformation() {
 		return generalInformation;
 	}
 
-	public void setGeneralInformation(com.tools20022.repository.msg.EventInformation9 generalInformation) {
-		this.generalInformation = generalInformation;
+	public CorporateActionEventAndBalance11 setGeneralInformation(com.tools20022.repository.msg.EventInformation9 generalInformation) {
+		this.generalInformation = Objects.requireNonNull(generalInformation);
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygScty", required = true)
 	public SecurityIdentification19 getUnderlyingSecurity() {
 		return underlyingSecurity;
 	}
 
-	public void setUnderlyingSecurity(com.tools20022.repository.msg.SecurityIdentification19 underlyingSecurity) {
-		this.underlyingSecurity = underlyingSecurity;
+	public CorporateActionEventAndBalance11 setUnderlyingSecurity(com.tools20022.repository.msg.SecurityIdentification19 underlyingSecurity) {
+		this.underlyingSecurity = Objects.requireNonNull(underlyingSecurity);
+		return this;
 	}
 
-	@XmlElement(name = "Bal")
-	public CorporateActionBalanceDetails30 getBalance() {
-		return balance;
+	public Optional<CorporateActionBalanceDetails30> getBalance() {
+		return balance == null ? Optional.empty() : Optional.of(balance);
 	}
 
-	public void setBalance(com.tools20022.repository.msg.CorporateActionBalanceDetails30 balance) {
+	public CorporateActionEventAndBalance11 setBalance(com.tools20022.repository.msg.CorporateActionBalanceDetails30 balance) {
 		this.balance = balance;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public CorporateActionEventAndBalance11 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 }

@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -87,8 +89,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,20 +103,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GroupHeader46", propOrder = {"messageIdentification", "creationDateTime", "initiatingParty", "debtorAgent", "creditorAgent"})
 public class GroupHeader46 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected Max35Text messageIdentification;
 	/**
-	 * Point to point reference assigned by the instructing party and sent to
-	 * the next party in the chain to unambiguously identify the message.
 	 * 
-	 * Usage: The instructing party has to make sure that
-	 * 'MessageIdentification' is unique per instructed party for a pre-agreed
-	 * period.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,7 +146,7 @@ public class GroupHeader46 {
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
-			componentContext_lazy = () -> GroupHeader46.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader46.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,11 +157,11 @@ public class GroupHeader46 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm", required = true)
 	protected ISODateTime creationDateTime;
 	/**
-	 * Date and time at which the status report was created by the instructing
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,7 +195,7 @@ public class GroupHeader46 {
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
-			componentContext_lazy = () -> GroupHeader46.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader46.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,12 +206,11 @@ public class GroupHeader46 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "InitgPty", required = true)
 	protected PartyIdentification43 initiatingParty;
 	/**
-	 * Party initiating the creditor payment activation request. This can either
-	 * be the creditor himself or the party that initiates the request on behalf
-	 * of the creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -246,7 +243,7 @@ public class GroupHeader46 {
 	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> GroupHeader46.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader46.mmObject();
 			isDerived = false;
 			xmlTag = "InitgPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,10 +255,11 @@ public class GroupHeader46 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	@XmlElement(name = "DbtrAgt")
 	protected BranchAndFinancialInstitutionIdentification5 debtorAgent;
 	/**
-	 * Financial institution servicing an account for the debtor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -294,7 +292,7 @@ public class GroupHeader46 {
 	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> GroupHeader46.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader46.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -306,10 +304,11 @@ public class GroupHeader46 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtrAgt")
 	protected BranchAndFinancialInstitutionIdentification5 creditorAgent;
 	/**
-	 * Financial institution servicing an account for the creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -342,7 +341,7 @@ public class GroupHeader46 {
 	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> GroupHeader46.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader46.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -358,12 +357,13 @@ public class GroupHeader46 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GroupHeader46.mmMessageIdentification, GroupHeader46.mmCreationDateTime, GroupHeader46.mmInitiatingParty, GroupHeader46.mmDebtorAgent, GroupHeader46.mmCreditorAgent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader46.mmMessageIdentification, com.tools20022.repository.msg.GroupHeader46.mmCreationDateTime,
+						com.tools20022.repository.msg.GroupHeader46.mmInitiatingParty, com.tools20022.repository.msg.GroupHeader46.mmDebtorAgent, com.tools20022.repository.msg.GroupHeader46.mmCreditorAgent);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestStatusReportV01.mmGroupHeader, CreditorPaymentActivationRequestStatusReportV02.mmGroupHeader,
 						CreditorPaymentActivationRequestStatusReportV03.mmGroupHeader, CreditorPaymentActivationRequestStatusReportV04.mmGroupHeader, CreditorPaymentActivationRequestStatusReportV05.mmGroupHeader,
 						CreditorPaymentActivationRequestStatusReportV06.mmGroupHeader);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GroupHeader46";
 				definition = "Set of characteristics shared by all individual transactions included in the message.";
@@ -372,48 +372,48 @@ public class GroupHeader46 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(Max35Text messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public GroupHeader46 setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
-		this.creationDateTime = creationDateTime;
+	public GroupHeader46 setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = Objects.requireNonNull(creationDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "InitgPty", required = true)
 	public PartyIdentification43 getInitiatingParty() {
 		return initiatingParty;
 	}
 
-	public void setInitiatingParty(com.tools20022.repository.msg.PartyIdentification43 initiatingParty) {
-		this.initiatingParty = initiatingParty;
+	public GroupHeader46 setInitiatingParty(com.tools20022.repository.msg.PartyIdentification43 initiatingParty) {
+		this.initiatingParty = Objects.requireNonNull(initiatingParty);
+		return this;
 	}
 
-	@XmlElement(name = "DbtrAgt")
-	public BranchAndFinancialInstitutionIdentification5 getDebtorAgent() {
-		return debtorAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getDebtorAgent() {
+		return debtorAgent == null ? Optional.empty() : Optional.of(debtorAgent);
 	}
 
-	public void setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtorAgent) {
+	public GroupHeader46 setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtorAgent) {
 		this.debtorAgent = debtorAgent;
+		return this;
 	}
 
-	@XmlElement(name = "CdtrAgt")
-	public BranchAndFinancialInstitutionIdentification5 getCreditorAgent() {
-		return creditorAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getCreditorAgent() {
+		return creditorAgent == null ? Optional.empty() : Optional.of(creditorAgent);
 	}
 
-	public void setCreditorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 creditorAgent) {
+	public GroupHeader46 setCreditorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 creditorAgent) {
 		this.creditorAgent = creditorAgent;
+		return this;
 	}
 }

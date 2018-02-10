@@ -28,9 +28,8 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.MailingInstructions;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -95,8 +94,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMailingIndicatorRule#forPostalAddress21
+ * ConstraintMailingIndicatorRule.forPostalAddress21}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,16 +119,17 @@ import javax.xml.bind.annotation.XmlType;
  * PostalAddress3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PostalAddress21", propOrder = {"addressType", "mailingIndicator", "registrationAddressIndicator", "careOf", "addressLine", "streetName", "buildingNumber", "buildingName", "postBox", "sideInBuilding", "floor",
 		"suiteIdentification", "postCode", "districtName", "village", "townName", "state", "country"})
 public class PostalAddress21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AdrTp")
 	protected AddressType2Choice addressType;
 	/**
-	 * Type of address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +168,7 @@ public class PostalAddress21 {
 	public static final MMMessageAttribute mmAddressType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmAddressType;
-			componentContext_lazy = () -> PostalAddress21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
 			xmlTag = "AdrTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,10 +180,11 @@ public class PostalAddress21 {
 			complexType_lazy = () -> AddressType2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MlngInd")
 	protected YesNoIndicator mailingIndicator;
 	/**
-	 * Indicates whether mail should be sent to the address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -214,7 +223,7 @@ public class PostalAddress21 {
 	public static final MMMessageAttribute mmMailingIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MailingInstructions.mmMailingIndicator;
-			componentContext_lazy = () -> PostalAddress21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
 			xmlTag = "MlngInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,10 +235,11 @@ public class PostalAddress21 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "RegnAdrInd")
 	protected YesNoIndicator registrationAddressIndicator;
 	/**
-	 * Indicates whether the address is the official address of the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -269,7 +279,7 @@ public class PostalAddress21 {
 	public static final MMMessageAttribute mmRegistrationAddressIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MailingInstructions.mmRegistrationAddressIndicator;
-			componentContext_lazy = () -> PostalAddress21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
 			xmlTag = "RegnAdrInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,11 +291,11 @@ public class PostalAddress21 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CareOf")
 	protected Max70Text careOf;
 	/**
-	 * When the individual resides at another person’s address, the name of the
-	 * other person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -320,7 +330,7 @@ public class PostalAddress21 {
 	public static final MMMessageAttribute mmCareOf = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
-			componentContext_lazy = () -> PostalAddress21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
 			xmlTag = "CareOf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -331,11 +341,11 @@ public class PostalAddress21 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AdrLine")
 	protected List<Max70Text> addressLine;
 	/**
-	 * Information that locates and identifies a specific address, as defined by
-	 * postal services, that is presented in free format text.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -364,7 +374,7 @@ public class PostalAddress21 {
 	 */
 	public static final MMMessageAttribute mmAddressLine = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PostalAddress21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
 			xmlTag = "AdrLine";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -375,10 +385,11 @@ public class PostalAddress21 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "StrtNm")
 	protected Max70Text streetName;
 	/**
-	 * Name of the street or thoroughfare.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -411,7 +422,7 @@ public class PostalAddress21 {
 	public static final MMMessageAttribute mmStreetName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmStreetName;
-			componentContext_lazy = () -> PostalAddress21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
 			xmlTag = "StrtNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -422,10 +433,11 @@ public class PostalAddress21 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BldgNb")
 	protected Max16Text buildingNumber;
 	/**
-	 * Number that identifies the position of the building on a street.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -459,7 +471,7 @@ public class PostalAddress21 {
 	public static final MMMessageAttribute mmBuildingNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmStreetBuildingIdentification;
-			componentContext_lazy = () -> PostalAddress21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
 			xmlTag = "BldgNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -470,10 +482,11 @@ public class PostalAddress21 {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BldgNm")
 	protected Max35Text buildingName;
 	/**
-	 * Name of the building or house.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -506,7 +519,7 @@ public class PostalAddress21 {
 	public static final MMMessageAttribute mmBuildingName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmBuildingName;
-			componentContext_lazy = () -> PostalAddress21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
 			xmlTag = "BldgNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -517,11 +530,11 @@ public class PostalAddress21 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PstBx")
 	protected Max10Text postBox;
 	/**
-	 * Post box number of the addressee within the residential or company
-	 * building.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -556,7 +569,7 @@ public class PostalAddress21 {
 	public static final MMMessageAttribute mmPostBox = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmPostOfficeBox;
-			componentContext_lazy = () -> PostalAddress21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
 			xmlTag = "PstBx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -567,10 +580,11 @@ public class PostalAddress21 {
 			simpleType_lazy = () -> Max10Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SdInBldg")
 	protected Max35Text sideInBuilding;
 	/**
-	 * Side or wing of the building, for example, ‘wing A’.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -603,7 +617,7 @@ public class PostalAddress21 {
 	public static final MMMessageAttribute mmSideInBuilding = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmBuildingIdentification;
-			componentContext_lazy = () -> PostalAddress21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
 			xmlTag = "SdInBldg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -614,10 +628,11 @@ public class PostalAddress21 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Flr")
 	protected Max70Text floor;
 	/**
-	 * Floor or storey within the building.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -650,7 +665,7 @@ public class PostalAddress21 {
 	public static final MMMessageAttribute mmFloor = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmFloor;
-			componentContext_lazy = () -> PostalAddress21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
 			xmlTag = "Flr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -661,10 +676,11 @@ public class PostalAddress21 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SuiteId")
 	protected Max10Text suiteIdentification;
 	/**
-	 * Identification of the suite or apartment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -697,7 +713,7 @@ public class PostalAddress21 {
 	public static final MMMessageAttribute mmSuiteIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmSuiteIdentification;
-			componentContext_lazy = () -> PostalAddress21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
 			xmlTag = "SuiteId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -708,11 +724,11 @@ public class PostalAddress21 {
 			simpleType_lazy = () -> Max10Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PstCd")
 	protected Max16Text postCode;
 	/**
-	 * Identifier consisting of a group of letters and/or numbers that is added
-	 * to a postal address to assist the sorting of mail.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -747,7 +763,7 @@ public class PostalAddress21 {
 	public static final MMMessageAttribute mmPostCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmPostCodeIdentification;
-			componentContext_lazy = () -> PostalAddress21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
 			xmlTag = "PstCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -758,10 +774,11 @@ public class PostalAddress21 {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DstrctNm")
 	protected Max35Text districtName;
 	/**
-	 * Name of a district, that is, a part of the town or region.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -795,7 +812,7 @@ public class PostalAddress21 {
 	public static final MMMessageAttribute mmDistrictName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmDistrictName;
-			componentContext_lazy = () -> PostalAddress21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
 			xmlTag = "DstrctNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -806,10 +823,11 @@ public class PostalAddress21 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Vllg")
 	protected Max70Text village;
 	/**
-	 * Name of the village.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -842,7 +860,7 @@ public class PostalAddress21 {
 	public static final MMMessageAttribute mmVillage = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmTownName;
-			componentContext_lazy = () -> PostalAddress21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
 			xmlTag = "Vllg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -853,10 +871,11 @@ public class PostalAddress21 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TwnNm")
 	protected Max35Text townName;
 	/**
-	 * Name of the town or city.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -889,7 +908,7 @@ public class PostalAddress21 {
 	public static final MMMessageAttribute mmTownName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmTownName;
-			componentContext_lazy = () -> PostalAddress21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
 			xmlTag = "TwnNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -900,10 +919,11 @@ public class PostalAddress21 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Stat")
 	protected Max70Text state;
 	/**
-	 * Name of the state, county or country sub-division.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -936,7 +956,7 @@ public class PostalAddress21 {
 	public static final MMMessageAttribute mmState = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmState;
-			componentContext_lazy = () -> PostalAddress21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
 			xmlTag = "Stat";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -947,10 +967,11 @@ public class PostalAddress21 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Ctry", required = true)
 	protected CountryCode country;
 	/**
-	 * Country of the address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -983,7 +1004,7 @@ public class PostalAddress21 {
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> PostalAddress21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -998,11 +1019,16 @@ public class PostalAddress21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PostalAddress21.mmAddressType, PostalAddress21.mmMailingIndicator, PostalAddress21.mmRegistrationAddressIndicator, PostalAddress21.mmCareOf, PostalAddress21.mmAddressLine,
-						PostalAddress21.mmStreetName, PostalAddress21.mmBuildingNumber, PostalAddress21.mmBuildingName, PostalAddress21.mmPostBox, PostalAddress21.mmSideInBuilding, PostalAddress21.mmFloor,
-						PostalAddress21.mmSuiteIdentification, PostalAddress21.mmPostCode, PostalAddress21.mmDistrictName, PostalAddress21.mmVillage, PostalAddress21.mmTownName, PostalAddress21.mmState, PostalAddress21.mmCountry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress21.mmAddressType, com.tools20022.repository.msg.PostalAddress21.mmMailingIndicator,
+						com.tools20022.repository.msg.PostalAddress21.mmRegistrationAddressIndicator, com.tools20022.repository.msg.PostalAddress21.mmCareOf, com.tools20022.repository.msg.PostalAddress21.mmAddressLine,
+						com.tools20022.repository.msg.PostalAddress21.mmStreetName, com.tools20022.repository.msg.PostalAddress21.mmBuildingNumber, com.tools20022.repository.msg.PostalAddress21.mmBuildingName,
+						com.tools20022.repository.msg.PostalAddress21.mmPostBox, com.tools20022.repository.msg.PostalAddress21.mmSideInBuilding, com.tools20022.repository.msg.PostalAddress21.mmFloor,
+						com.tools20022.repository.msg.PostalAddress21.mmSuiteIdentification, com.tools20022.repository.msg.PostalAddress21.mmPostCode, com.tools20022.repository.msg.PostalAddress21.mmDistrictName,
+						com.tools20022.repository.msg.PostalAddress21.mmVillage, com.tools20022.repository.msg.PostalAddress21.mmTownName, com.tools20022.repository.msg.PostalAddress21.mmState,
+						com.tools20022.repository.msg.PostalAddress21.mmCountry);
 				trace_lazy = () -> PostalAddress.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMailingIndicatorRule.forPostalAddress21);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PostalAddress21";
 				definition = "Information that locates and identifies a specific address, as defined by postal services.";
@@ -1012,165 +1038,165 @@ public class PostalAddress21 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AdrTp")
-	public AddressType2Choice getAddressType() {
-		return addressType;
+	public Optional<AddressType2Choice> getAddressType() {
+		return addressType == null ? Optional.empty() : Optional.of(addressType);
 	}
 
-	public void setAddressType(AddressType2Choice addressType) {
+	public PostalAddress21 setAddressType(AddressType2Choice addressType) {
 		this.addressType = addressType;
+		return this;
 	}
 
-	@XmlElement(name = "MlngInd")
-	public YesNoIndicator getMailingIndicator() {
-		return mailingIndicator;
+	public Optional<YesNoIndicator> getMailingIndicator() {
+		return mailingIndicator == null ? Optional.empty() : Optional.of(mailingIndicator);
 	}
 
-	public void setMailingIndicator(YesNoIndicator mailingIndicator) {
+	public PostalAddress21 setMailingIndicator(YesNoIndicator mailingIndicator) {
 		this.mailingIndicator = mailingIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "RegnAdrInd")
-	public YesNoIndicator getRegistrationAddressIndicator() {
-		return registrationAddressIndicator;
+	public Optional<YesNoIndicator> getRegistrationAddressIndicator() {
+		return registrationAddressIndicator == null ? Optional.empty() : Optional.of(registrationAddressIndicator);
 	}
 
-	public void setRegistrationAddressIndicator(YesNoIndicator registrationAddressIndicator) {
+	public PostalAddress21 setRegistrationAddressIndicator(YesNoIndicator registrationAddressIndicator) {
 		this.registrationAddressIndicator = registrationAddressIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "CareOf")
-	public Max70Text getCareOf() {
-		return careOf;
+	public Optional<Max70Text> getCareOf() {
+		return careOf == null ? Optional.empty() : Optional.of(careOf);
 	}
 
-	public void setCareOf(Max70Text careOf) {
+	public PostalAddress21 setCareOf(Max70Text careOf) {
 		this.careOf = careOf;
+		return this;
 	}
 
-	@XmlElement(name = "AdrLine")
 	public List<Max70Text> getAddressLine() {
-		return addressLine;
+		return addressLine == null ? addressLine = new ArrayList<>() : addressLine;
 	}
 
-	public void setAddressLine(List<Max70Text> addressLine) {
-		this.addressLine = addressLine;
+	public PostalAddress21 setAddressLine(List<Max70Text> addressLine) {
+		this.addressLine = Objects.requireNonNull(addressLine);
+		return this;
 	}
 
-	@XmlElement(name = "StrtNm")
-	public Max70Text getStreetName() {
-		return streetName;
+	public Optional<Max70Text> getStreetName() {
+		return streetName == null ? Optional.empty() : Optional.of(streetName);
 	}
 
-	public void setStreetName(Max70Text streetName) {
+	public PostalAddress21 setStreetName(Max70Text streetName) {
 		this.streetName = streetName;
+		return this;
 	}
 
-	@XmlElement(name = "BldgNb")
-	public Max16Text getBuildingNumber() {
-		return buildingNumber;
+	public Optional<Max16Text> getBuildingNumber() {
+		return buildingNumber == null ? Optional.empty() : Optional.of(buildingNumber);
 	}
 
-	public void setBuildingNumber(Max16Text buildingNumber) {
+	public PostalAddress21 setBuildingNumber(Max16Text buildingNumber) {
 		this.buildingNumber = buildingNumber;
+		return this;
 	}
 
-	@XmlElement(name = "BldgNm")
-	public Max35Text getBuildingName() {
-		return buildingName;
+	public Optional<Max35Text> getBuildingName() {
+		return buildingName == null ? Optional.empty() : Optional.of(buildingName);
 	}
 
-	public void setBuildingName(Max35Text buildingName) {
+	public PostalAddress21 setBuildingName(Max35Text buildingName) {
 		this.buildingName = buildingName;
+		return this;
 	}
 
-	@XmlElement(name = "PstBx")
-	public Max10Text getPostBox() {
-		return postBox;
+	public Optional<Max10Text> getPostBox() {
+		return postBox == null ? Optional.empty() : Optional.of(postBox);
 	}
 
-	public void setPostBox(Max10Text postBox) {
+	public PostalAddress21 setPostBox(Max10Text postBox) {
 		this.postBox = postBox;
+		return this;
 	}
 
-	@XmlElement(name = "SdInBldg")
-	public Max35Text getSideInBuilding() {
-		return sideInBuilding;
+	public Optional<Max35Text> getSideInBuilding() {
+		return sideInBuilding == null ? Optional.empty() : Optional.of(sideInBuilding);
 	}
 
-	public void setSideInBuilding(Max35Text sideInBuilding) {
+	public PostalAddress21 setSideInBuilding(Max35Text sideInBuilding) {
 		this.sideInBuilding = sideInBuilding;
+		return this;
 	}
 
-	@XmlElement(name = "Flr")
-	public Max70Text getFloor() {
-		return floor;
+	public Optional<Max70Text> getFloor() {
+		return floor == null ? Optional.empty() : Optional.of(floor);
 	}
 
-	public void setFloor(Max70Text floor) {
+	public PostalAddress21 setFloor(Max70Text floor) {
 		this.floor = floor;
+		return this;
 	}
 
-	@XmlElement(name = "SuiteId")
-	public Max10Text getSuiteIdentification() {
-		return suiteIdentification;
+	public Optional<Max10Text> getSuiteIdentification() {
+		return suiteIdentification == null ? Optional.empty() : Optional.of(suiteIdentification);
 	}
 
-	public void setSuiteIdentification(Max10Text suiteIdentification) {
+	public PostalAddress21 setSuiteIdentification(Max10Text suiteIdentification) {
 		this.suiteIdentification = suiteIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PstCd")
-	public Max16Text getPostCode() {
-		return postCode;
+	public Optional<Max16Text> getPostCode() {
+		return postCode == null ? Optional.empty() : Optional.of(postCode);
 	}
 
-	public void setPostCode(Max16Text postCode) {
+	public PostalAddress21 setPostCode(Max16Text postCode) {
 		this.postCode = postCode;
+		return this;
 	}
 
-	@XmlElement(name = "DstrctNm")
-	public Max35Text getDistrictName() {
-		return districtName;
+	public Optional<Max35Text> getDistrictName() {
+		return districtName == null ? Optional.empty() : Optional.of(districtName);
 	}
 
-	public void setDistrictName(Max35Text districtName) {
+	public PostalAddress21 setDistrictName(Max35Text districtName) {
 		this.districtName = districtName;
+		return this;
 	}
 
-	@XmlElement(name = "Vllg")
-	public Max70Text getVillage() {
-		return village;
+	public Optional<Max70Text> getVillage() {
+		return village == null ? Optional.empty() : Optional.of(village);
 	}
 
-	public void setVillage(Max70Text village) {
+	public PostalAddress21 setVillage(Max70Text village) {
 		this.village = village;
+		return this;
 	}
 
-	@XmlElement(name = "TwnNm")
-	public Max35Text getTownName() {
-		return townName;
+	public Optional<Max35Text> getTownName() {
+		return townName == null ? Optional.empty() : Optional.of(townName);
 	}
 
-	public void setTownName(Max35Text townName) {
+	public PostalAddress21 setTownName(Max35Text townName) {
 		this.townName = townName;
+		return this;
 	}
 
-	@XmlElement(name = "Stat")
-	public Max70Text getState() {
-		return state;
+	public Optional<Max70Text> getState() {
+		return state == null ? Optional.empty() : Optional.of(state);
 	}
 
-	public void setState(Max70Text state) {
+	public PostalAddress21 setState(Max70Text state) {
 		this.state = state;
+		return this;
 	}
 
-	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
 
-	public void setCountry(CountryCode country) {
-		this.country = country;
+	public PostalAddress21 setCountry(CountryCode country) {
+		this.country = Objects.requireNonNull(country);
+		return this;
 	}
 }

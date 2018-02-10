@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,16 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Acquirer1", propOrder = {"identification", "parametersVersion"})
 public class Acquirer1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id")
 	protected GenericIdentification32 identification;
 	/**
-	 * Identification of the acquirer (for example the bank identification
-	 * number BIN).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -114,7 +116,7 @@ public class Acquirer1 {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> Acquirer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Acquirer1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +128,11 @@ public class Acquirer1 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	@XmlElement(name = "ParamsVrsn", required = true)
 	protected ISODateTime parametersVersion;
 	/**
-	 * Version of the payment acquirer parameters of the POI.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +158,7 @@ public class Acquirer1 {
 	 */
 	public static final MMMessageAttribute mmParametersVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Acquirer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Acquirer1.mmObject();
 			isDerived = false;
 			xmlTag = "ParamsVrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,9 +173,9 @@ public class Acquirer1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Acquirer1.mmIdentification, Acquirer1.mmParametersVersion);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Acquirer1.mmIdentification, com.tools20022.repository.msg.Acquirer1.mmParametersVersion);
 				trace_lazy = () -> AcquirerRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Acquirer1";
 				definition = "Acquirer involved in the card payment.";
@@ -182,21 +185,21 @@ public class Acquirer1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id")
-	public GenericIdentification32 getIdentification() {
-		return identification;
+	public Optional<GenericIdentification32> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+	public Acquirer1 setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
 		this.identification = identification;
+		return this;
 	}
 
-	@XmlElement(name = "ParamsVrsn", required = true)
 	public ISODateTime getParametersVersion() {
 		return parametersVersion;
 	}
 
-	public void setParametersVersion(ISODateTime parametersVersion) {
-		this.parametersVersion = parametersVersion;
+	public Acquirer1 setParametersVersion(ISODateTime parametersVersion) {
+		this.parametersVersion = Objects.requireNonNull(parametersVersion);
+		return this;
 	}
 }

@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,16 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NotificationEntry2", propOrder = {"identification", "endToEndIdentification", "amount", "expectedValueDate", "debtor", "debtorAgent", "intermediaryAgent"})
 public class NotificationEntry2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Unique identification, as assigned by the account owner, to unambiguously
-	 * identify the expected credit entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -127,7 +129,7 @@ public class NotificationEntry2 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
-			componentContext_lazy = () -> NotificationEntry2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationEntry2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,13 +140,11 @@ public class NotificationEntry2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "EndToEndId")
 	protected Max35Text endToEndIdentification;
 	/**
-	 * Unique identification, as assigned by the debtor, to unambiguously
-	 * identify the underlying transaction to the creditor. Usage: The
-	 * end-to-end identification can be used for reconciliation or to link tasks
-	 * relating to the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,7 +179,7 @@ public class NotificationEntry2 {
 	public static final MMMessageAttribute mmEndToEndIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
-			componentContext_lazy = () -> NotificationEntry2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationEntry2.mmObject();
 			isDerived = false;
 			xmlTag = "EndToEndId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,10 +190,11 @@ public class NotificationEntry2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount amount;
 	/**
-	 * Amount of money expected to be credited to the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -227,7 +228,7 @@ public class NotificationEntry2 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
-			componentContext_lazy = () -> NotificationEntry2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationEntry2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -238,10 +239,11 @@ public class NotificationEntry2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "XpctdValDt", required = true)
 	protected ISODate expectedValueDate;
 	/**
-	 * Value date on which the account is expected to be credited.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -275,7 +277,7 @@ public class NotificationEntry2 {
 	public static final MMMessageAttribute mmExpectedValueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
-			componentContext_lazy = () -> NotificationEntry2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationEntry2.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdValDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,10 +288,11 @@ public class NotificationEntry2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "Dbtr", required = true)
 	protected PartyIdentification32 debtor;
 	/**
-	 * Party that owes an amount of money to the (ultimate) creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -322,7 +325,7 @@ public class NotificationEntry2 {
 	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> NotificationEntry2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationEntry2.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -334,10 +337,11 @@ public class NotificationEntry2 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification32.mmObject();
 		}
 	};
+	@XmlElement(name = "DbtrAgt")
 	protected BranchAndFinancialInstitutionIdentification4 debtorAgent;
 	/**
-	 * Financial institution servicing an account for the debtor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -371,7 +375,7 @@ public class NotificationEntry2 {
 	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> NotificationEntry2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationEntry2.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -383,15 +387,11 @@ public class NotificationEntry2 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrmyAgt")
 	protected BranchAndFinancialInstitutionIdentification4 intermediaryAgent;
 	/**
-	 * Agent between the debtor agent and the account servicing institution.
-	 * Usage: This is the agent from which the account servicing institution
-	 * will get the amount of money. If there is more than one intermediary
-	 * agent, then IntermediaryAgent identifies the agent closest to the account
-	 * servicing institution. IntermediaryAgent must only be included when
-	 * different from the debtor agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -426,7 +426,7 @@ public class NotificationEntry2 {
 	public static final MMMessageAssociationEnd mmIntermediaryAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> NotificationEntry2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationEntry2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -442,10 +442,11 @@ public class NotificationEntry2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NotificationEntry2.mmIdentification, NotificationEntry2.mmEndToEndIdentification, NotificationEntry2.mmAmount, NotificationEntry2.mmExpectedValueDate, NotificationEntry2.mmDebtor,
-						NotificationEntry2.mmDebtorAgent, NotificationEntry2.mmIntermediaryAgent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationEntry2.mmIdentification, com.tools20022.repository.msg.NotificationEntry2.mmEndToEndIdentification,
+						com.tools20022.repository.msg.NotificationEntry2.mmAmount, com.tools20022.repository.msg.NotificationEntry2.mmExpectedValueDate, com.tools20022.repository.msg.NotificationEntry2.mmDebtor,
+						com.tools20022.repository.msg.NotificationEntry2.mmDebtorAgent, com.tools20022.repository.msg.NotificationEntry2.mmIntermediaryAgent);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NotificationEntry2";
 				definition = "Set of elements used to provide further means of referencing a payment transaction.";
@@ -454,66 +455,66 @@ public class NotificationEntry2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public NotificationEntry2 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "EndToEndId")
-	public Max35Text getEndToEndIdentification() {
-		return endToEndIdentification;
+	public Optional<Max35Text> getEndToEndIdentification() {
+		return endToEndIdentification == null ? Optional.empty() : Optional.of(endToEndIdentification);
 	}
 
-	public void setEndToEndIdentification(Max35Text endToEndIdentification) {
+	public NotificationEntry2 setEndToEndIdentification(Max35Text endToEndIdentification) {
 		this.endToEndIdentification = endToEndIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
-		this.amount = amount;
+	public NotificationEntry2 setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "XpctdValDt", required = true)
 	public ISODate getExpectedValueDate() {
 		return expectedValueDate;
 	}
 
-	public void setExpectedValueDate(ISODate expectedValueDate) {
-		this.expectedValueDate = expectedValueDate;
+	public NotificationEntry2 setExpectedValueDate(ISODate expectedValueDate) {
+		this.expectedValueDate = Objects.requireNonNull(expectedValueDate);
+		return this;
 	}
 
-	@XmlElement(name = "Dbtr", required = true)
 	public PartyIdentification32 getDebtor() {
 		return debtor;
 	}
 
-	public void setDebtor(com.tools20022.repository.msg.PartyIdentification32 debtor) {
-		this.debtor = debtor;
+	public NotificationEntry2 setDebtor(com.tools20022.repository.msg.PartyIdentification32 debtor) {
+		this.debtor = Objects.requireNonNull(debtor);
+		return this;
 	}
 
-	@XmlElement(name = "DbtrAgt")
-	public BranchAndFinancialInstitutionIdentification4 getDebtorAgent() {
-		return debtorAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification4> getDebtorAgent() {
+		return debtorAgent == null ? Optional.empty() : Optional.of(debtorAgent);
 	}
 
-	public void setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4 debtorAgent) {
+	public NotificationEntry2 setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4 debtorAgent) {
 		this.debtorAgent = debtorAgent;
+		return this;
 	}
 
-	@XmlElement(name = "IntrmyAgt")
-	public BranchAndFinancialInstitutionIdentification4 getIntermediaryAgent() {
-		return intermediaryAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification4> getIntermediaryAgent() {
+		return intermediaryAgent == null ? Optional.empty() : Optional.of(intermediaryAgent);
 	}
 
-	public void setIntermediaryAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4 intermediaryAgent) {
+	public NotificationEntry2 setIntermediaryAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4 intermediaryAgent) {
 		this.intermediaryAgent = intermediaryAgent;
+		return this;
 	}
 }

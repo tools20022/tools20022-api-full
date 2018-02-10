@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.TransportBySea;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -84,8 +86,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,16 +108,17 @@ import javax.xml.bind.annotation.XmlType;
  * TransportBySea4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "TransportBySea5", propOrder = {"portOfLoading", "portOfDischarge", "vesselName", "seaCarrierName", "seaCarrierCountry", "carrierAgentName", "carrierAgentCountry", "masterName", "chartererName", "ownerName", "IMONumber",
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "TransportBySea5", propOrder = {"portOfLoading", "portOfDischarge", "vesselName", "seaCarrierName", "seaCarrierCountry", "carrierAgentName", "carrierAgentCountry", "masterName", "chartererName", "ownerName", "iMONumber",
 		"voyageNumber"})
 public class TransportBySea5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PortOfLoadng", required = true)
 	protected Max35Text portOfLoading;
 	/**
-	 * Identifies the port where the goods are loaded on board the ship.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +165,7 @@ public class TransportBySea5 {
 	public static final MMMessageAttribute mmPortOfLoading = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
-			componentContext_lazy = () -> TransportBySea5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmObject();
 			isDerived = false;
 			xmlTag = "PortOfLoadng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,10 +178,11 @@ public class TransportBySea5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PortOfDschrge", required = true)
 	protected Max35Text portOfDischarge;
 	/**
-	 * Identifies the port where the goods are discharged.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -224,7 +228,7 @@ public class TransportBySea5 {
 	public static final MMMessageAttribute mmPortOfDischarge = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
-			componentContext_lazy = () -> TransportBySea5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmObject();
 			isDerived = false;
 			xmlTag = "PortOfDschrge";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,10 +241,11 @@ public class TransportBySea5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "VsslNm")
 	protected Max70Text vesselName;
 	/**
-	 * Name of a vessel.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -278,7 +283,7 @@ public class TransportBySea5 {
 	public static final MMMessageAttribute mmVesselName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TransportBySea.mmVesselName;
-			componentContext_lazy = () -> TransportBySea5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmObject();
 			isDerived = false;
 			xmlTag = "VsslNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -290,11 +295,11 @@ public class TransportBySea5 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SeaCrrierNm")
 	protected Max70Text seaCarrierName;
 	/**
-	 * Identifies the party that is responsible for the conveyance of the goods
-	 * from one place to another.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -336,7 +341,7 @@ public class TransportBySea5 {
 	 */
 	public static final MMMessageAttribute mmSeaCarrierName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransportBySea5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmObject();
 			isDerived = false;
 			xmlTag = "SeaCrrierNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -349,11 +354,11 @@ public class TransportBySea5 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SeaCrrierCtry")
 	protected CountryCode seaCarrierCountry;
 	/**
-	 * Country in which the carrier of the goods, for example, shipping company,
-	 * is located or registered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -396,7 +401,7 @@ public class TransportBySea5 {
 	public static final MMMessageAttribute mmSeaCarrierCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> TransportBySea5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmObject();
 			isDerived = false;
 			xmlTag = "SeaCrrierCtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -408,12 +413,11 @@ public class TransportBySea5 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CrrierAgtNm")
 	protected Max70Text carrierAgentName;
 	/**
-	 * Name of the carrier's (for example, shipping company's) agent that acts
-	 * on behalf of the carrier and may be the issuer of transport documents
-	 * relating to the underlying shipment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -456,7 +460,7 @@ public class TransportBySea5 {
 	public static final MMMessageAttribute mmCarrierAgentName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
-			componentContext_lazy = () -> TransportBySea5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmObject();
 			isDerived = false;
 			xmlTag = "CrrierAgtNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -468,12 +472,11 @@ public class TransportBySea5 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CrrierAgtCtry")
 	protected CountryCode carrierAgentCountry;
 	/**
-	 * Country of registration of the carrier's (for example, shipping
-	 * company's) agent that acts on behalf of the carrier and may be the issuer
-	 * of transport documents relating to the underlying shipment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -516,7 +519,7 @@ public class TransportBySea5 {
 	public static final MMMessageAttribute mmCarrierAgentCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> TransportBySea5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmObject();
 			isDerived = false;
 			xmlTag = "CrrierAgtCtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -528,13 +531,11 @@ public class TransportBySea5 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "MstrNm")
 	protected Max70Text masterName;
 	/**
-	 * Name of the master or captain of a vessel that signs the document for
-	 * example, bill of lading, charter party bill of lading, non-negotiable sea
-	 * waybill or multimodal transport document that evidences shipment of the
-	 * goods from a port of loading to a port of discharge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -569,7 +570,7 @@ public class TransportBySea5 {
 	public static final MMMessageAttribute mmMasterName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TransportBySea.mmMasterName;
-			componentContext_lazy = () -> TransportBySea5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmObject();
 			isDerived = false;
 			xmlTag = "MstrNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -580,12 +581,11 @@ public class TransportBySea5 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrtrrNm")
 	protected Max70Text chartererName;
 	/**
-	 * Name of the company or individual that signs a charter party bill of
-	 * lading that evidences shipment of the goods from a port of loading to a
-	 * port of discharge and acts in the capacity of charterer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -620,7 +620,7 @@ public class TransportBySea5 {
 	public static final MMMessageAttribute mmChartererName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TransportBySea.mmChartererName;
-			componentContext_lazy = () -> TransportBySea5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmObject();
 			isDerived = false;
 			xmlTag = "ChrtrrNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -631,12 +631,11 @@ public class TransportBySea5 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OwnrNm")
 	protected Max70Text ownerName;
 	/**
-	 * Name of the company or individual that signs a charter party bill of
-	 * lading that evidences shipment of the goods from a port of loading to a
-	 * port of discharge and acts in the capacity of owner;
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -671,7 +670,7 @@ public class TransportBySea5 {
 	public static final MMMessageAttribute mmOwnerName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TransportBySea.mmOwnerName;
-			componentContext_lazy = () -> TransportBySea5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmObject();
 			isDerived = false;
 			xmlTag = "OwnrNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -682,21 +681,11 @@ public class TransportBySea5 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IMONb")
 	protected Exact7NumericText iMONumber;
 	/**
-	 * International Maritime Organisation identification of a ship. The IMO
-	 * identification number scheme was introduced in 1987 as a measure aimed at
-	 * enhancing maritime safety and pollution prevention and to facilitate the
-	 * prevention of maritime fraud. It assigns a permanent number to each
-	 * vessel for identification purposes. This number remains unchanged upon
-	 * transfer of the vessel to other flag(s) and is inserted in all vessel
-	 * certificates. The IMO identification number is made up of the three
-	 * letters "IMO" followed by a seven-digit number assigned to all vessels by
-	 * IHS FairPlay (formerly known as Lloyd's Register-Fairplay). This is a
-	 * unique seven digit number that is assigned to vessels and aids banks in
-	 * determining whether a vessel is subject to an order that would not permit
-	 * a bank to handle a certain transaction under local or international laws.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -732,7 +721,7 @@ public class TransportBySea5 {
 	public static final MMMessageAttribute mmIMONumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TransportBySea.mmIMONumber;
-			componentContext_lazy = () -> TransportBySea5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmObject();
 			isDerived = false;
 			xmlTag = "IMONb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -743,10 +732,11 @@ public class TransportBySea5 {
 			simpleType_lazy = () -> Exact7NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "VygNb")
 	protected Max35Text voyageNumber;
 	/**
-	 * Identifies the voyage by sea.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -779,7 +769,7 @@ public class TransportBySea5 {
 	public static final MMMessageAttribute mmVoyageNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TransportBySea.mmVoyageNumber;
-			componentContext_lazy = () -> TransportBySea5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmObject();
 			isDerived = false;
 			xmlTag = "VygNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -794,11 +784,13 @@ public class TransportBySea5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransportBySea5.mmPortOfLoading, TransportBySea5.mmPortOfDischarge, TransportBySea5.mmVesselName, TransportBySea5.mmSeaCarrierName, TransportBySea5.mmSeaCarrierCountry,
-						TransportBySea5.mmCarrierAgentName, TransportBySea5.mmCarrierAgentCountry, TransportBySea5.mmMasterName, TransportBySea5.mmChartererName, TransportBySea5.mmOwnerName, TransportBySea5.mmIMONumber,
-						TransportBySea5.mmVoyageNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea5.mmPortOfLoading, com.tools20022.repository.msg.TransportBySea5.mmPortOfDischarge,
+						com.tools20022.repository.msg.TransportBySea5.mmVesselName, com.tools20022.repository.msg.TransportBySea5.mmSeaCarrierName, com.tools20022.repository.msg.TransportBySea5.mmSeaCarrierCountry,
+						com.tools20022.repository.msg.TransportBySea5.mmCarrierAgentName, com.tools20022.repository.msg.TransportBySea5.mmCarrierAgentCountry, com.tools20022.repository.msg.TransportBySea5.mmMasterName,
+						com.tools20022.repository.msg.TransportBySea5.mmChartererName, com.tools20022.repository.msg.TransportBySea5.mmOwnerName, com.tools20022.repository.msg.TransportBySea5.mmIMONumber,
+						com.tools20022.repository.msg.TransportBySea5.mmVoyageNumber);
 				trace_lazy = () -> TransportBySea.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransportBySea5";
 				definition = "Information related for the transportation of goods by sea.";
@@ -809,111 +801,111 @@ public class TransportBySea5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PortOfLoadng", required = true)
 	public Max35Text getPortOfLoading() {
 		return portOfLoading;
 	}
 
-	public void setPortOfLoading(Max35Text portOfLoading) {
-		this.portOfLoading = portOfLoading;
+	public TransportBySea5 setPortOfLoading(Max35Text portOfLoading) {
+		this.portOfLoading = Objects.requireNonNull(portOfLoading);
+		return this;
 	}
 
-	@XmlElement(name = "PortOfDschrge", required = true)
 	public Max35Text getPortOfDischarge() {
 		return portOfDischarge;
 	}
 
-	public void setPortOfDischarge(Max35Text portOfDischarge) {
-		this.portOfDischarge = portOfDischarge;
+	public TransportBySea5 setPortOfDischarge(Max35Text portOfDischarge) {
+		this.portOfDischarge = Objects.requireNonNull(portOfDischarge);
+		return this;
 	}
 
-	@XmlElement(name = "VsslNm")
-	public Max70Text getVesselName() {
-		return vesselName;
+	public Optional<Max70Text> getVesselName() {
+		return vesselName == null ? Optional.empty() : Optional.of(vesselName);
 	}
 
-	public void setVesselName(Max70Text vesselName) {
+	public TransportBySea5 setVesselName(Max70Text vesselName) {
 		this.vesselName = vesselName;
+		return this;
 	}
 
-	@XmlElement(name = "SeaCrrierNm")
-	public Max70Text getSeaCarrierName() {
-		return seaCarrierName;
+	public Optional<Max70Text> getSeaCarrierName() {
+		return seaCarrierName == null ? Optional.empty() : Optional.of(seaCarrierName);
 	}
 
-	public void setSeaCarrierName(Max70Text seaCarrierName) {
+	public TransportBySea5 setSeaCarrierName(Max70Text seaCarrierName) {
 		this.seaCarrierName = seaCarrierName;
+		return this;
 	}
 
-	@XmlElement(name = "SeaCrrierCtry")
-	public CountryCode getSeaCarrierCountry() {
-		return seaCarrierCountry;
+	public Optional<CountryCode> getSeaCarrierCountry() {
+		return seaCarrierCountry == null ? Optional.empty() : Optional.of(seaCarrierCountry);
 	}
 
-	public void setSeaCarrierCountry(CountryCode seaCarrierCountry) {
+	public TransportBySea5 setSeaCarrierCountry(CountryCode seaCarrierCountry) {
 		this.seaCarrierCountry = seaCarrierCountry;
+		return this;
 	}
 
-	@XmlElement(name = "CrrierAgtNm")
-	public Max70Text getCarrierAgentName() {
-		return carrierAgentName;
+	public Optional<Max70Text> getCarrierAgentName() {
+		return carrierAgentName == null ? Optional.empty() : Optional.of(carrierAgentName);
 	}
 
-	public void setCarrierAgentName(Max70Text carrierAgentName) {
+	public TransportBySea5 setCarrierAgentName(Max70Text carrierAgentName) {
 		this.carrierAgentName = carrierAgentName;
+		return this;
 	}
 
-	@XmlElement(name = "CrrierAgtCtry")
-	public CountryCode getCarrierAgentCountry() {
-		return carrierAgentCountry;
+	public Optional<CountryCode> getCarrierAgentCountry() {
+		return carrierAgentCountry == null ? Optional.empty() : Optional.of(carrierAgentCountry);
 	}
 
-	public void setCarrierAgentCountry(CountryCode carrierAgentCountry) {
+	public TransportBySea5 setCarrierAgentCountry(CountryCode carrierAgentCountry) {
 		this.carrierAgentCountry = carrierAgentCountry;
+		return this;
 	}
 
-	@XmlElement(name = "MstrNm")
-	public Max70Text getMasterName() {
-		return masterName;
+	public Optional<Max70Text> getMasterName() {
+		return masterName == null ? Optional.empty() : Optional.of(masterName);
 	}
 
-	public void setMasterName(Max70Text masterName) {
+	public TransportBySea5 setMasterName(Max70Text masterName) {
 		this.masterName = masterName;
+		return this;
 	}
 
-	@XmlElement(name = "ChrtrrNm")
-	public Max70Text getChartererName() {
-		return chartererName;
+	public Optional<Max70Text> getChartererName() {
+		return chartererName == null ? Optional.empty() : Optional.of(chartererName);
 	}
 
-	public void setChartererName(Max70Text chartererName) {
+	public TransportBySea5 setChartererName(Max70Text chartererName) {
 		this.chartererName = chartererName;
+		return this;
 	}
 
-	@XmlElement(name = "OwnrNm")
-	public Max70Text getOwnerName() {
-		return ownerName;
+	public Optional<Max70Text> getOwnerName() {
+		return ownerName == null ? Optional.empty() : Optional.of(ownerName);
 	}
 
-	public void setOwnerName(Max70Text ownerName) {
+	public TransportBySea5 setOwnerName(Max70Text ownerName) {
 		this.ownerName = ownerName;
+		return this;
 	}
 
-	@XmlElement(name = "IMONb")
-	public Exact7NumericText getIMONumber() {
-		return iMONumber;
+	public Optional<Exact7NumericText> getIMONumber() {
+		return iMONumber == null ? Optional.empty() : Optional.of(iMONumber);
 	}
 
-	public void setIMONumber(Exact7NumericText iMONumber) {
+	public TransportBySea5 setIMONumber(Exact7NumericText iMONumber) {
 		this.iMONumber = iMONumber;
+		return this;
 	}
 
-	@XmlElement(name = "VygNb")
-	public Max35Text getVoyageNumber() {
-		return voyageNumber;
+	public Optional<Max35Text> getVoyageNumber() {
+		return voyageNumber == null ? Optional.empty() : Optional.of(voyageNumber);
 	}
 
-	public void setVoyageNumber(Max35Text voyageNumber) {
+	public TransportBySea5 setVoyageNumber(Max35Text voyageNumber) {
 		this.voyageNumber = voyageNumber;
+		return this;
 	}
 }

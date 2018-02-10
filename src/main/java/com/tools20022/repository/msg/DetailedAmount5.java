@@ -24,9 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DetailedAmount5", propOrder = {"cashBack", "gratuity", "fees", "rebate", "valueAddedTax"})
 public class DetailedAmount5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CshBck")
 	protected ImpliedCurrencyAndAmount cashBack;
 	/**
-	 * Cash-back amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +128,7 @@ public class DetailedAmount5 {
 	public static final MMMessageAttribute mmCashBack = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> DetailedAmount5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount5.mmObject();
 			isDerived = false;
 			xmlTag = "CshBck";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,10 +140,11 @@ public class DetailedAmount5 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Grtty")
 	protected ImpliedCurrencyAndAmount gratuity;
 	/**
-	 * Gratuity amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,7 +184,7 @@ public class DetailedAmount5 {
 	public static final MMMessageAttribute mmGratuity = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> DetailedAmount5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount5.mmObject();
 			isDerived = false;
 			xmlTag = "Grtty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,10 +196,11 @@ public class DetailedAmount5 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Fees")
 	protected List<com.tools20022.repository.msg.DetailedAmount4> fees;
 	/**
-	 * Fees amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -236,7 +238,7 @@ public class DetailedAmount5 {
 	public static final MMMessageAssociationEnd mmFees = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> DetailedAmount5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount5.mmObject();
 			isDerived = false;
 			xmlTag = "Fees";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,11 +250,11 @@ public class DetailedAmount5 {
 			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
 		}
 	};
+	@XmlElement(name = "Rbt")
 	protected List<com.tools20022.repository.msg.DetailedAmount4> rebate;
 	/**
-	 * Global rebate of the transaction. This amount is counted as a negative
-	 * amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -292,7 +294,7 @@ public class DetailedAmount5 {
 	public static final MMMessageAssociationEnd mmRebate = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> DetailedAmount5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount5.mmObject();
 			isDerived = false;
 			xmlTag = "Rbt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -304,10 +306,11 @@ public class DetailedAmount5 {
 			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
 		}
 	};
+	@XmlElement(name = "ValAddedTax")
 	protected List<com.tools20022.repository.msg.DetailedAmount4> valueAddedTax;
 	/**
-	 * Value added tax amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -346,7 +349,7 @@ public class DetailedAmount5 {
 	public static final MMMessageAssociationEnd mmValueAddedTax = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> DetailedAmount5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount5.mmObject();
 			isDerived = false;
 			xmlTag = "ValAddedTax";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -362,9 +365,10 @@ public class DetailedAmount5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DetailedAmount5.mmCashBack, DetailedAmount5.mmGratuity, DetailedAmount5.mmFees, DetailedAmount5.mmRebate, DetailedAmount5.mmValueAddedTax);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount5.mmCashBack, com.tools20022.repository.msg.DetailedAmount5.mmGratuity, com.tools20022.repository.msg.DetailedAmount5.mmFees,
+						com.tools20022.repository.msg.DetailedAmount5.mmRebate, com.tools20022.repository.msg.DetailedAmount5.mmValueAddedTax);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DetailedAmount5";
 				definition = "Detailed amounts associated with the total amount of transaction.";
@@ -374,48 +378,48 @@ public class DetailedAmount5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CshBck")
-	public ImpliedCurrencyAndAmount getCashBack() {
-		return cashBack;
+	public Optional<ImpliedCurrencyAndAmount> getCashBack() {
+		return cashBack == null ? Optional.empty() : Optional.of(cashBack);
 	}
 
-	public void setCashBack(ImpliedCurrencyAndAmount cashBack) {
+	public DetailedAmount5 setCashBack(ImpliedCurrencyAndAmount cashBack) {
 		this.cashBack = cashBack;
+		return this;
 	}
 
-	@XmlElement(name = "Grtty")
-	public ImpliedCurrencyAndAmount getGratuity() {
-		return gratuity;
+	public Optional<ImpliedCurrencyAndAmount> getGratuity() {
+		return gratuity == null ? Optional.empty() : Optional.of(gratuity);
 	}
 
-	public void setGratuity(ImpliedCurrencyAndAmount gratuity) {
+	public DetailedAmount5 setGratuity(ImpliedCurrencyAndAmount gratuity) {
 		this.gratuity = gratuity;
+		return this;
 	}
 
-	@XmlElement(name = "Fees")
 	public List<DetailedAmount4> getFees() {
-		return fees;
+		return fees == null ? fees = new ArrayList<>() : fees;
 	}
 
-	public void setFees(List<com.tools20022.repository.msg.DetailedAmount4> fees) {
-		this.fees = fees;
+	public DetailedAmount5 setFees(List<com.tools20022.repository.msg.DetailedAmount4> fees) {
+		this.fees = Objects.requireNonNull(fees);
+		return this;
 	}
 
-	@XmlElement(name = "Rbt")
 	public List<DetailedAmount4> getRebate() {
-		return rebate;
+		return rebate == null ? rebate = new ArrayList<>() : rebate;
 	}
 
-	public void setRebate(List<com.tools20022.repository.msg.DetailedAmount4> rebate) {
-		this.rebate = rebate;
+	public DetailedAmount5 setRebate(List<com.tools20022.repository.msg.DetailedAmount4> rebate) {
+		this.rebate = Objects.requireNonNull(rebate);
+		return this;
 	}
 
-	@XmlElement(name = "ValAddedTax")
 	public List<DetailedAmount4> getValueAddedTax() {
-		return valueAddedTax;
+		return valueAddedTax == null ? valueAddedTax = new ArrayList<>() : valueAddedTax;
 	}
 
-	public void setValueAddedTax(List<com.tools20022.repository.msg.DetailedAmount4> valueAddedTax) {
-		this.valueAddedTax = valueAddedTax;
+	public DetailedAmount5 setValueAddedTax(List<com.tools20022.repository.msg.DetailedAmount4> valueAddedTax) {
+		this.valueAddedTax = Objects.requireNonNull(valueAddedTax);
+		return this;
 	}
 }

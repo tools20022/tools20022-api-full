@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification38;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Revaluation2Choice", propOrder = {"indicator", "proprietary"})
 public class Revaluation2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ind", required = true)
 	protected YesNoIndicator indicator;
 	/**
-	 * Specifies whether the collateral position should be subject to automatic
-	 * revaluation by the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +116,7 @@ public class Revaluation2Choice {
 	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRevaluationIndicator;
-			componentContext_lazy = () -> Revaluation2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Revaluation2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ind";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +127,11 @@ public class Revaluation2Choice {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification38 proprietary;
 	/**
-	 * Reevaluation is determined using a data source scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -162,7 +164,7 @@ public class Revaluation2Choice {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRevaluationIndicator;
-			componentContext_lazy = () -> Revaluation2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Revaluation2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,9 +180,9 @@ public class Revaluation2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Revaluation2Choice.mmIndicator, Revaluation2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Revaluation2Choice.mmIndicator, com.tools20022.repository.choice.Revaluation2Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesFinancing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Revaluation2Choice";
 				definition = "Choice between an indicator or a data source scheme to determine the revaluation.";
@@ -189,21 +191,21 @@ public class Revaluation2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ind", required = true)
 	public YesNoIndicator getIndicator() {
 		return indicator;
 	}
 
-	public void setIndicator(YesNoIndicator indicator) {
-		this.indicator = indicator;
+	public Revaluation2Choice setIndicator(YesNoIndicator indicator) {
+		this.indicator = Objects.requireNonNull(indicator);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification38 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification38 proprietary) {
-		this.proprietary = proprietary;
+	public Revaluation2Choice setProprietary(GenericIdentification38 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

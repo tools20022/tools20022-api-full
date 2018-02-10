@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,16 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Environment of the withdrawal transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "ATMEnvironment12", propOrder = {"acquirer", "ATMManager", "hostingEntity", "ATM", "customer", "protectedCardData", "plainCardData"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "ATMEnvironment12", propOrder = {"acquirer", "aTMManager", "hostingEntity", "aTM", "customer", "protectedCardData", "plainCardData"})
 public class ATMEnvironment12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Acqrr")
 	protected Acquirer7 acquirer;
 	/**
-	 * Acquirer of the transactions, in charge of the funds settlement with the
-	 * issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -107,7 +109,7 @@ public class ATMEnvironment12 {
 	 */
 	public static final MMMessageAssociationEnd mmAcquirer = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMEnvironment12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEnvironment12.mmObject();
 			isDerived = false;
 			xmlTag = "Acqrr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +121,11 @@ public class ATMEnvironment12 {
 			type_lazy = () -> com.tools20022.repository.msg.Acquirer7.mmObject();
 		}
 	};
+	@XmlElement(name = "ATMMgr")
 	protected Acquirer8 aTMManager;
 	/**
-	 * Institution in charge of managing the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -147,7 +150,7 @@ public class ATMEnvironment12 {
 	 */
 	public static final MMMessageAssociationEnd mmATMManager = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMEnvironment12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEnvironment12.mmObject();
 			isDerived = false;
 			xmlTag = "ATMMgr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,10 +162,11 @@ public class ATMEnvironment12 {
 			type_lazy = () -> com.tools20022.repository.msg.Acquirer8.mmObject();
 		}
 	};
+	@XmlElement(name = "HstgNtty")
 	protected TerminalHosting1 hostingEntity;
 	/**
-	 * Entity hosting the ATM terminal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -188,7 +192,7 @@ public class ATMEnvironment12 {
 	 */
 	public static final MMMessageAssociationEnd mmHostingEntity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMEnvironment12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEnvironment12.mmObject();
 			isDerived = false;
 			xmlTag = "HstgNtty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,10 +204,11 @@ public class ATMEnvironment12 {
 			type_lazy = () -> com.tools20022.repository.msg.TerminalHosting1.mmObject();
 		}
 	};
+	@XmlElement(name = "ATM", required = true)
 	protected AutomatedTellerMachine2 aTM;
 	/**
-	 * ATM information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -230,7 +235,7 @@ public class ATMEnvironment12 {
 	 */
 	public static final MMMessageAssociationEnd mmATM = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMEnvironment12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEnvironment12.mmObject();
 			isDerived = false;
 			xmlTag = "ATM";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -242,10 +247,11 @@ public class ATMEnvironment12 {
 			type_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine2.mmObject();
 		}
 	};
+	@XmlElement(name = "Cstmr", required = true)
 	protected ATMCustomer5 customer;
 	/**
-	 * Customer involved in the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -271,7 +277,7 @@ public class ATMEnvironment12 {
 	 */
 	public static final MMMessageAssociationEnd mmCustomer = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMEnvironment12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEnvironment12.mmObject();
 			isDerived = false;
 			xmlTag = "Cstmr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,10 +289,11 @@ public class ATMEnvironment12 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMCustomer5.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctdCardData")
 	protected ContentInformationType10 protectedCardData;
 	/**
-	 * Encryption of the sensitive card data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -313,7 +320,7 @@ public class ATMEnvironment12 {
 	 */
 	public static final MMMessageAssociationEnd mmProtectedCardData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMEnvironment12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEnvironment12.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctdCardData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,10 +332,11 @@ public class ATMEnvironment12 {
 			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType10.mmObject();
 		}
 	};
+	@XmlElement(name = "PlainCardData")
 	protected PlainCardData19 plainCardData;
 	/**
-	 * Sensitive data associated with the card performing the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -355,7 +363,7 @@ public class ATMEnvironment12 {
 	 */
 	public static final MMMessageAssociationEnd mmPlainCardData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMEnvironment12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEnvironment12.mmObject();
 			isDerived = false;
 			xmlTag = "PlainCardData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -371,9 +379,10 @@ public class ATMEnvironment12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMEnvironment12.mmAcquirer, ATMEnvironment12.mmATMManager, ATMEnvironment12.mmHostingEntity, ATMEnvironment12.mmATM, ATMEnvironment12.mmCustomer,
-						ATMEnvironment12.mmProtectedCardData, ATMEnvironment12.mmPlainCardData);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEnvironment12.mmAcquirer, com.tools20022.repository.msg.ATMEnvironment12.mmATMManager,
+						com.tools20022.repository.msg.ATMEnvironment12.mmHostingEntity, com.tools20022.repository.msg.ATMEnvironment12.mmATM, com.tools20022.repository.msg.ATMEnvironment12.mmCustomer,
+						com.tools20022.repository.msg.ATMEnvironment12.mmProtectedCardData, com.tools20022.repository.msg.ATMEnvironment12.mmPlainCardData);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMEnvironment12";
 				definition = "Environment of the withdrawal transaction.";
@@ -382,66 +391,66 @@ public class ATMEnvironment12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Acqrr")
-	public Acquirer7 getAcquirer() {
-		return acquirer;
+	public Optional<Acquirer7> getAcquirer() {
+		return acquirer == null ? Optional.empty() : Optional.of(acquirer);
 	}
 
-	public void setAcquirer(com.tools20022.repository.msg.Acquirer7 acquirer) {
+	public ATMEnvironment12 setAcquirer(com.tools20022.repository.msg.Acquirer7 acquirer) {
 		this.acquirer = acquirer;
+		return this;
 	}
 
-	@XmlElement(name = "ATMMgr")
-	public Acquirer8 getATMManager() {
-		return aTMManager;
+	public Optional<Acquirer8> getATMManager() {
+		return aTMManager == null ? Optional.empty() : Optional.of(aTMManager);
 	}
 
-	public void setATMManager(com.tools20022.repository.msg.Acquirer8 aTMManager) {
+	public ATMEnvironment12 setATMManager(com.tools20022.repository.msg.Acquirer8 aTMManager) {
 		this.aTMManager = aTMManager;
+		return this;
 	}
 
-	@XmlElement(name = "HstgNtty")
-	public TerminalHosting1 getHostingEntity() {
-		return hostingEntity;
+	public Optional<TerminalHosting1> getHostingEntity() {
+		return hostingEntity == null ? Optional.empty() : Optional.of(hostingEntity);
 	}
 
-	public void setHostingEntity(com.tools20022.repository.msg.TerminalHosting1 hostingEntity) {
+	public ATMEnvironment12 setHostingEntity(com.tools20022.repository.msg.TerminalHosting1 hostingEntity) {
 		this.hostingEntity = hostingEntity;
+		return this;
 	}
 
-	@XmlElement(name = "ATM", required = true)
 	public AutomatedTellerMachine2 getATM() {
 		return aTM;
 	}
 
-	public void setATM(com.tools20022.repository.msg.AutomatedTellerMachine2 aTM) {
-		this.aTM = aTM;
+	public ATMEnvironment12 setATM(com.tools20022.repository.msg.AutomatedTellerMachine2 aTM) {
+		this.aTM = Objects.requireNonNull(aTM);
+		return this;
 	}
 
-	@XmlElement(name = "Cstmr", required = true)
 	public ATMCustomer5 getCustomer() {
 		return customer;
 	}
 
-	public void setCustomer(com.tools20022.repository.msg.ATMCustomer5 customer) {
-		this.customer = customer;
+	public ATMEnvironment12 setCustomer(com.tools20022.repository.msg.ATMCustomer5 customer) {
+		this.customer = Objects.requireNonNull(customer);
+		return this;
 	}
 
-	@XmlElement(name = "PrtctdCardData")
-	public ContentInformationType10 getProtectedCardData() {
-		return protectedCardData;
+	public Optional<ContentInformationType10> getProtectedCardData() {
+		return protectedCardData == null ? Optional.empty() : Optional.of(protectedCardData);
 	}
 
-	public void setProtectedCardData(com.tools20022.repository.msg.ContentInformationType10 protectedCardData) {
+	public ATMEnvironment12 setProtectedCardData(com.tools20022.repository.msg.ContentInformationType10 protectedCardData) {
 		this.protectedCardData = protectedCardData;
+		return this;
 	}
 
-	@XmlElement(name = "PlainCardData")
-	public PlainCardData19 getPlainCardData() {
-		return plainCardData;
+	public Optional<PlainCardData19> getPlainCardData() {
+		return plainCardData == null ? Optional.empty() : Optional.of(plainCardData);
 	}
 
-	public void setPlainCardData(com.tools20022.repository.msg.PlainCardData19 plainCardData) {
+	public ATMEnvironment12 setPlainCardData(com.tools20022.repository.msg.PlainCardData19 plainCardData) {
 		this.plainCardData = plainCardData;
+		return this;
 	}
 }

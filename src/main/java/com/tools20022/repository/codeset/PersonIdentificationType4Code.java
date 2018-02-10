@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PersonIdentificationTypeCode;
+import com.tools20022.repository.codeset.PersonIdentificationType4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of identification used for the Cardholder.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationTypeCode
- * PersonIdentificationTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType4Code#mmPassportNumber
- * PersonIdentificationType4Code.mmPassportNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType4Code#PassportNumber
+ * PersonIdentificationType4Code.PassportNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType4Code#mmDriversLicenseNumber
- * PersonIdentificationType4Code.mmDriversLicenseNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType4Code#DriversLicenseNumber
+ * PersonIdentificationType4Code.DriversLicenseNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType4Code#mmEmployeeNumber
- * PersonIdentificationType4Code.mmEmployeeNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType4Code#EmployeeNumber
+ * PersonIdentificationType4Code.EmployeeNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType4Code#mmDriverNumber
- * PersonIdentificationType4Code.mmDriverNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType4Code#DriverNumber
+ * PersonIdentificationType4Code.DriverNumber}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationTypeCode
+ * PersonIdentificationTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of identification used for the Cardholder."</li>
  * </ul>
  */
-public class PersonIdentificationType4Code extends PersonIdentificationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PersonIdentificationType4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class PersonIdentificationType4Code extends PersonIdentificationTypeCode 
 	 * name} = "PassportNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPassportNumber = new MMCode() {
+	public static final PersonIdentificationType4Code PassportNumber = new PersonIdentificationType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassportNumber";
-			owner_lazy = () -> PersonIdentificationType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PersonIdentificationType4Code.mmObject();
+			codeName = PersonIdentificationTypeCode.PassportNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class PersonIdentificationType4Code extends PersonIdentificationTypeCode 
 	 * name} = "DriversLicenseNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDriversLicenseNumber = new MMCode() {
+	public static final PersonIdentificationType4Code DriversLicenseNumber = new PersonIdentificationType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DriversLicenseNumber";
-			owner_lazy = () -> PersonIdentificationType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PersonIdentificationType4Code.mmObject();
+			codeName = PersonIdentificationTypeCode.DriversLicenseNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class PersonIdentificationType4Code extends PersonIdentificationTypeCode 
 	 * name} = "EmployeeNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEmployeeNumber = new MMCode() {
+	public static final PersonIdentificationType4Code EmployeeNumber = new PersonIdentificationType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployeeNumber";
-			owner_lazy = () -> PersonIdentificationType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PersonIdentificationType4Code.mmObject();
+			codeName = PersonIdentificationTypeCode.EmployeeNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,27 +166,60 @@ public class PersonIdentificationType4Code extends PersonIdentificationTypeCode 
 	 * name} = "DriverNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDriverNumber = new MMCode() {
+	public static final PersonIdentificationType4Code DriverNumber = new PersonIdentificationType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DriverNumber";
-			owner_lazy = () -> PersonIdentificationType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PersonIdentificationType4Code.mmObject();
+			codeName = PersonIdentificationTypeCode.DriverNumber.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PersonIdentificationType4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PersonIdentificationType4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PASS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PersonIdentificationType4Code";
 				definition = "Type of identification used for the Cardholder.";
-				code_lazy = () -> Arrays.asList(PersonIdentificationType4Code.mmPassportNumber, PersonIdentificationType4Code.mmDriversLicenseNumber, PersonIdentificationType4Code.mmEmployeeNumber,
-						PersonIdentificationType4Code.mmDriverNumber);
 				trace_lazy = () -> PersonIdentificationTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PersonIdentificationType4Code.PassportNumber, com.tools20022.repository.codeset.PersonIdentificationType4Code.DriversLicenseNumber,
+						com.tools20022.repository.codeset.PersonIdentificationType4Code.EmployeeNumber, com.tools20022.repository.codeset.PersonIdentificationType4Code.DriverNumber);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PassportNumber.getCodeName().get(), PassportNumber);
+		codesByName.put(DriversLicenseNumber.getCodeName().get(), DriversLicenseNumber);
+		codesByName.put(EmployeeNumber.getCodeName().get(), EmployeeNumber);
+		codesByName.put(DriverNumber.getCodeName().get(), DriverNumber);
+	}
+
+	public static PersonIdentificationType4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PersonIdentificationType4Code[] values() {
+		PersonIdentificationType4Code[] values = new PersonIdentificationType4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PersonIdentificationType4Code> {
+		@Override
+		public PersonIdentificationType4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PersonIdentificationType4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

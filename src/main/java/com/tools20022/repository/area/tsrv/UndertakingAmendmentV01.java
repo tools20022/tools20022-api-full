@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.Amendment1;
 import com.tools20022.repository.msg.PartyAndSignature2;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -46,22 +48,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TradeServicesLatestVersion
- * TradeServicesLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion
- * DemandGuaranteesandStandbyLettersofCreditISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "UdrtkgAmdmnt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -77,6 +63,22 @@ import javax.xml.bind.annotation.*;
  * UndertakingAmendmentV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion
+ * DemandGuaranteesandStandbyLettersofCreditISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "UdrtkgAmdmnt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TradeServicesLatestVersion
+ * TradeServicesLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code tsrv.005.001.01}</li>
@@ -92,15 +94,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UndertakingAmendmentV01", propOrder = {"undertakingAmendmentDetails", "bankToBankInformation", "digitalSignature"})
 public class UndertakingAmendmentV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UdrtkgAmdmntDtls", required = true)
 	protected Amendment1 undertakingAmendmentDetails;
 	/**
-	 * Details related to the proposed undertaking amendment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,10 +142,11 @@ public class UndertakingAmendmentV01 {
 			}
 		}
 	};
+	@XmlElement(name = "BkToBkInf")
 	protected List<Max2000Text> bankToBankInformation;
 	/**
-	 * Additional information specific to the bank-to-bank communication.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -182,10 +186,11 @@ public class UndertakingAmendmentV01 {
 			}
 		}
 	};
+	@XmlElement(name = "DgtlSgntr")
 	protected List<PartyAndSignature2> digitalSignature;
 	/**
-	 * Digital signature of the proposed undertaking amendment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -255,34 +260,34 @@ public class UndertakingAmendmentV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UdrtkgAmdmntDtls", required = true)
 	public Amendment1 getUndertakingAmendmentDetails() {
 		return undertakingAmendmentDetails;
 	}
 
-	public void setUndertakingAmendmentDetails(Amendment1 undertakingAmendmentDetails) {
-		this.undertakingAmendmentDetails = undertakingAmendmentDetails;
+	public UndertakingAmendmentV01 setUndertakingAmendmentDetails(Amendment1 undertakingAmendmentDetails) {
+		this.undertakingAmendmentDetails = Objects.requireNonNull(undertakingAmendmentDetails);
+		return this;
 	}
 
-	@XmlElement(name = "BkToBkInf")
 	public List<Max2000Text> getBankToBankInformation() {
-		return bankToBankInformation;
+		return bankToBankInformation == null ? bankToBankInformation = new ArrayList<>() : bankToBankInformation;
 	}
 
-	public void setBankToBankInformation(List<Max2000Text> bankToBankInformation) {
-		this.bankToBankInformation = bankToBankInformation;
+	public UndertakingAmendmentV01 setBankToBankInformation(List<Max2000Text> bankToBankInformation) {
+		this.bankToBankInformation = Objects.requireNonNull(bankToBankInformation);
+		return this;
 	}
 
-	@XmlElement(name = "DgtlSgntr")
 	public List<PartyAndSignature2> getDigitalSignature() {
-		return digitalSignature;
+		return digitalSignature == null ? digitalSignature = new ArrayList<>() : digitalSignature;
 	}
 
-	public void setDigitalSignature(List<PartyAndSignature2> digitalSignature) {
-		this.digitalSignature = digitalSignature;
+	public UndertakingAmendmentV01 setDigitalSignature(List<PartyAndSignature2> digitalSignature) {
+		this.digitalSignature = Objects.requireNonNull(digitalSignature);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsrv.005.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:tsrv.005.001.01")
 	static public class Document {
 		@XmlElement(name = "UdrtkgAmdmnt", required = true)
 		public UndertakingAmendmentV01 messageBody;

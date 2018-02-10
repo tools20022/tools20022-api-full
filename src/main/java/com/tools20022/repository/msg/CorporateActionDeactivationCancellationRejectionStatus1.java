@@ -26,9 +26,8 @@ import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides reason of the rejection of a deactivation cancellation request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionDeactivationCancellationRejectionStatus1", propOrder = {"reason", "additionalInformation"})
 public class CorporateActionDeactivationCancellationRejectionStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rsn", required = true)
 	protected List<RejectionReason7FormatChoice> reason;
 	/**
-	 * The rejection reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +113,7 @@ public class CorporateActionDeactivationCancellationRejectionStatus1 {
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
-			componentContext_lazy = () -> CorporateActionDeactivationCancellationRejectionStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDeactivationCancellationRejectionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +123,11 @@ public class CorporateActionDeactivationCancellationRejectionStatus1 {
 			complexType_lazy = () -> RejectionReason7FormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected Max350Text additionalInformation;
 	/**
-	 * Additional information about the status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +160,7 @@ public class CorporateActionDeactivationCancellationRejectionStatus1 {
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDescription;
-			componentContext_lazy = () -> CorporateActionDeactivationCancellationRejectionStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDeactivationCancellationRejectionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,9 +175,10 @@ public class CorporateActionDeactivationCancellationRejectionStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionDeactivationCancellationRejectionStatus1.mmReason, CorporateActionDeactivationCancellationRejectionStatus1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDeactivationCancellationRejectionStatus1.mmReason,
+						com.tools20022.repository.msg.CorporateActionDeactivationCancellationRejectionStatus1.mmAdditionalInformation);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDeactivationCancellationRejectionStatus1";
 				definition = "Provides reason of the rejection of a deactivation cancellation request.";
@@ -185,21 +187,21 @@ public class CorporateActionDeactivationCancellationRejectionStatus1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public List<RejectionReason7FormatChoice> getReason() {
-		return reason;
+		return reason == null ? reason = new ArrayList<>() : reason;
 	}
 
-	public void setReason(List<RejectionReason7FormatChoice> reason) {
-		this.reason = reason;
+	public CorporateActionDeactivationCancellationRejectionStatus1 setReason(List<RejectionReason7FormatChoice> reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public Max350Text getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<Max350Text> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(Max350Text additionalInformation) {
+	public CorporateActionDeactivationCancellationRejectionStatus1 setAdditionalInformation(Max350Text additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.PercentageRate;
@@ -28,6 +29,7 @@ import com.tools20022.repository.msg.NonDisclosedBid2;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Technique whereby a position in the underlying is traded for a futures
@@ -61,15 +63,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1
- * ExchangeForPhysicalTradeParameters1}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -79,10 +72,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1
+ * ExchangeForPhysicalTradeParameters1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,10 +102,8 @@ public class ExchangeForPhysicalTrade {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected PercentageRate outsideIndex;
 	/**
-	 * Unexpected divergence between the price behaviour of an underlying
-	 * position or portfolio and the price behaviour of a hedging position or
-	 * benchmark.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,6 +125,9 @@ public class ExchangeForPhysicalTrade {
 	 * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade
 	 * ExchangeForPhysicalTrade}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 405 and 407</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -140,8 +143,9 @@ public class ExchangeForPhysicalTrade {
 	public static final MMBusinessAttribute mmOutsideIndex = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ExchangeForPhysicalTradeParameters1.mmOutsideIndex);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "405 and 407"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OutsideIndex";
 			definition = "Unexpected divergence between the price behaviour of an underlying position or portfolio and the price behaviour of a hedging position or benchmark.";
@@ -160,10 +164,8 @@ public class ExchangeForPhysicalTrade {
 	};
 	protected CurrencyAndAmount fairValue;
 	/**
-	 * Difference between the value of a future and the value of the underlying
-	 * equities after allowing for the discounted cash flows associated with the
-	 * underlying stocks.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,6 +193,9 @@ public class ExchangeForPhysicalTrade {
 	 * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade
 	 * ExchangeForPhysicalTrade}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 406</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -206,8 +211,9 @@ public class ExchangeForPhysicalTrade {
 	public static final MMBusinessAttribute mmFairValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ExchangeForPhysicalTradeParameters1.mmFairValue, BidResponsePrice1.mmFairValue, NonDisclosedBid2.mmFairValue);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "406"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FairValue";
 			definition = "Difference between the value of a future and the value of the underlying equities after allowing for the discounted cash flows associated with the underlying stocks.";
@@ -226,8 +232,8 @@ public class ExchangeForPhysicalTrade {
 	};
 	protected CurrencyAndAmount valueForFutures;
 	/**
-	 * Value of a futures position involved in an Exchange For Physical trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,6 +255,9 @@ public class ExchangeForPhysicalTrade {
 	 * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade
 	 * ExchangeForPhysicalTrade}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 408</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -264,8 +273,9 @@ public class ExchangeForPhysicalTrade {
 	public static final MMBusinessAttribute mmValueForFutures = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ExchangeForPhysicalTradeParameters1.mmValueForFutures);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "408"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValueForFutures";
 			definition = "Value of a futures position involved in an Exchange For Physical trade.";
@@ -284,9 +294,8 @@ public class ExchangeForPhysicalTrade {
 	};
 	protected CurrencyAndAmount outMainCountryIndex;
 	/**
-	 * Accepted value of stocks composing an index located outside its country
-	 * of origin.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -308,6 +317,9 @@ public class ExchangeForPhysicalTrade {
 	 * {@linkplain com.tools20022.repository.entity.ExchangeForPhysicalTrade
 	 * ExchangeForPhysicalTrade}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 412</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -323,8 +335,9 @@ public class ExchangeForPhysicalTrade {
 	public static final MMBusinessAttribute mmOutMainCountryIndex = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(LiquidityAndStatistics1.mmOutMainCountryIndex);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "412"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OutMainCountryIndex";
 			definition = "Accepted value of stocks composing an index located outside its country of origin.";
@@ -343,9 +356,8 @@ public class ExchangeForPhysicalTrade {
 	};
 	protected SecuritiesOrder securitiesOrder;
 	/**
-	 * Order for which parameters for exchange for physical trading are
-	 * specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -380,8 +392,8 @@ public class ExchangeForPhysicalTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesOrder";
 			definition = "Order for which parameters for exchange for physical trading are specified.";
@@ -396,7 +408,7 @@ public class ExchangeForPhysicalTrade {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExchangeForPhysicalTrade";
 				definition = "Technique whereby a position in the underlying is traded for a futures position in the physical commodity markets.";
@@ -419,39 +431,44 @@ public class ExchangeForPhysicalTrade {
 		return outsideIndex;
 	}
 
-	public void setOutsideIndex(PercentageRate outsideIndex) {
-		this.outsideIndex = outsideIndex;
+	public ExchangeForPhysicalTrade setOutsideIndex(PercentageRate outsideIndex) {
+		this.outsideIndex = Objects.requireNonNull(outsideIndex);
+		return this;
 	}
 
 	public CurrencyAndAmount getFairValue() {
 		return fairValue;
 	}
 
-	public void setFairValue(CurrencyAndAmount fairValue) {
-		this.fairValue = fairValue;
+	public ExchangeForPhysicalTrade setFairValue(CurrencyAndAmount fairValue) {
+		this.fairValue = Objects.requireNonNull(fairValue);
+		return this;
 	}
 
 	public CurrencyAndAmount getValueForFutures() {
 		return valueForFutures;
 	}
 
-	public void setValueForFutures(CurrencyAndAmount valueForFutures) {
-		this.valueForFutures = valueForFutures;
+	public ExchangeForPhysicalTrade setValueForFutures(CurrencyAndAmount valueForFutures) {
+		this.valueForFutures = Objects.requireNonNull(valueForFutures);
+		return this;
 	}
 
 	public CurrencyAndAmount getOutMainCountryIndex() {
 		return outMainCountryIndex;
 	}
 
-	public void setOutMainCountryIndex(CurrencyAndAmount outMainCountryIndex) {
-		this.outMainCountryIndex = outMainCountryIndex;
+	public ExchangeForPhysicalTrade setOutMainCountryIndex(CurrencyAndAmount outMainCountryIndex) {
+		this.outMainCountryIndex = Objects.requireNonNull(outMainCountryIndex);
+		return this;
 	}
 
 	public SecuritiesOrder getSecuritiesOrder() {
 		return securitiesOrder;
 	}
 
-	public void setSecuritiesOrder(com.tools20022.repository.entity.SecuritiesOrder securitiesOrder) {
-		this.securitiesOrder = securitiesOrder;
+	public ExchangeForPhysicalTrade setSecuritiesOrder(com.tools20022.repository.entity.SecuritiesOrder securitiesOrder) {
+		this.securitiesOrder = Objects.requireNonNull(securitiesOrder);
+		return this;
 	}
 }

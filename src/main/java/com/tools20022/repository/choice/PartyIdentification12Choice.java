@@ -32,6 +32,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -84,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PartyIdentification12Choice", propOrder = {"BICOrBEI", "nameAndAddress", "country"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PartyIdentification12Choice", propOrder = {"bICOrBEI", "nameAndAddress", "country"})
 public class PartyIdentification12Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BICOrBEI", required = true)
 	protected AnyBICIdentifier bICOrBEI;
 	/**
-	 * Unique and unambiguous way to identify an organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,7 +136,7 @@ public class PartyIdentification12Choice {
 	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
-			componentContext_lazy = () -> PartyIdentification12Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BICOrBEI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,10 +148,11 @@ public class PartyIdentification12Choice {
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "NmAndAdr", required = true)
 	protected NameAndAddress5 nameAndAddress;
 	/**
-	 * Unique and unambiguous way to identify an organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +193,7 @@ public class PartyIdentification12Choice {
 	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> PartyIdentification12Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,10 +205,11 @@ public class PartyIdentification12Choice {
 			complexType_lazy = () -> NameAndAddress5.mmObject();
 		}
 	};
+	@XmlElement(name = "Ctry", required = true)
 	protected CountryCode country;
 	/**
-	 * Unique and unambiguous way to identify an organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -246,7 +250,7 @@ public class PartyIdentification12Choice {
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> PartyIdentification12Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -262,9 +266,10 @@ public class PartyIdentification12Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification12Choice.mmBICOrBEI, PartyIdentification12Choice.mmNameAndAddress, PartyIdentification12Choice.mmCountry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification12Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification12Choice.mmNameAndAddress,
+						com.tools20022.repository.choice.PartyIdentification12Choice.mmCountry);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -281,30 +286,30 @@ public class PartyIdentification12Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BICOrBEI", required = true)
 	public AnyBICIdentifier getBICOrBEI() {
 		return bICOrBEI;
 	}
 
-	public void setBICOrBEI(AnyBICIdentifier bICOrBEI) {
-		this.bICOrBEI = bICOrBEI;
+	public PartyIdentification12Choice setBICOrBEI(AnyBICIdentifier bICOrBEI) {
+		this.bICOrBEI = Objects.requireNonNull(bICOrBEI);
+		return this;
 	}
 
-	@XmlElement(name = "NmAndAdr", required = true)
 	public NameAndAddress5 getNameAndAddress() {
 		return nameAndAddress;
 	}
 
-	public void setNameAndAddress(NameAndAddress5 nameAndAddress) {
-		this.nameAndAddress = nameAndAddress;
+	public PartyIdentification12Choice setNameAndAddress(NameAndAddress5 nameAndAddress) {
+		this.nameAndAddress = Objects.requireNonNull(nameAndAddress);
+		return this;
 	}
 
-	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
 
-	public void setCountry(CountryCode country) {
-		this.country = country;
+	public PartyIdentification12Choice setCountry(CountryCode country) {
+		this.country = Objects.requireNonNull(country);
+		return this;
 	}
 }

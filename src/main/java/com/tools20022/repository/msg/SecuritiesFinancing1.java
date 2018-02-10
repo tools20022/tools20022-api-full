@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -31,6 +33,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -125,8 +129,11 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = ISO15022Synonym: Sequence E</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -139,17 +146,18 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesFinancing1", propOrder = {"rateType", "interestComputationMethod", "revaluationIndicator", "secondLegIdentification", "identification", "variableRateSupport", "transactionCallDelay",
 		"totalNumberOfCollateralInstructions", "secondLegNarrative", "rateChangeDateTime", "terminationDateTime", "securitiesHaircut", "stockLoanMargin", "repurchase", "pricing", "spread", "forfeitAmount", "dealAmount",
 		"accruedInterestAmount", "terminationAmountPerPiecesOfCollateral", "premiumAmount", "financingAgreement", "legalFramework", "terminationTransactionAmount"})
 public class SecuritiesFinancing1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RateTp")
 	protected RateType3Choice rateType;
 	/**
-	 * Specifies whether the rate is fixed or variable.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,7 +191,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAttribute mmRateType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRateType;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "RateTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,11 +202,11 @@ public class SecuritiesFinancing1 {
 			complexType_lazy = () -> RateType3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstCmptnMtd")
 	protected InterestComputationMethod1Choice interestComputationMethod;
 	/**
-	 * Identifies the computation method of accrued interest of the related
-	 * financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,7 +242,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAttribute mmInterestComputationMethod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmDayCountBasis;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstCmptnMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,11 +253,11 @@ public class SecuritiesFinancing1 {
 			complexType_lazy = () -> InterestComputationMethod1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RvaltnInd")
 	protected Revaluation1Choice revaluationIndicator;
 	/**
-	 * Specifies whether the collateral position should be subject to automatic
-	 * revaluation by the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -285,7 +293,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAttribute mmRevaluationIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRevaluationIndicator;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "RvaltnInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -296,10 +304,11 @@ public class SecuritiesFinancing1 {
 			complexType_lazy = () -> Revaluation1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ScndLegId")
 	protected Max35Text secondLegIdentification;
 	/**
-	 * Unique identification of the second part of the repurchase agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -333,7 +342,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAttribute mmSecondLegIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "ScndLegId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -344,10 +353,11 @@ public class SecuritiesFinancing1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Id")
 	protected Max35Text identification;
 	/**
-	 * Unique identification of the repurchase agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -380,7 +390,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmIdentification;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -391,11 +401,11 @@ public class SecuritiesFinancing1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "VarblRateSpprt")
 	protected RateName1 variableRateSupport;
 	/**
-	 * Index or support rate used together with the spread to calculate the
-	 * repurchase rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -428,7 +438,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAssociationEnd mmVariableRateSupport = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmVariableRateSupport;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "VarblRateSpprt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -440,11 +450,11 @@ public class SecuritiesFinancing1 {
 			type_lazy = () -> com.tools20022.repository.msg.RateName1.mmObject();
 		}
 	};
+	@XmlElement(name = "TxCallDely")
 	protected Max3NumericText transactionCallDelay;
 	/**
-	 * Minimum number of days' notice a counterparty needs for terminating the
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -480,7 +490,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAttribute mmTransactionCallDelay = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmTransactionCallDelay;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "TxCallDely";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -491,11 +501,11 @@ public class SecuritiesFinancing1 {
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNbOfCollInstrs")
 	protected Max3NumericText totalNumberOfCollateralInstructions;
 	/**
-	 * Indicates the total Number of collateral instructions involved in the
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -531,7 +541,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAttribute mmTotalNumberOfCollateralInstructions = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmTotalNumberOfCollateralInstructions;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfCollInstrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -542,10 +552,11 @@ public class SecuritiesFinancing1 {
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "ScndLegNrrtv")
 	protected Max140Text secondLegNarrative;
 	/**
-	 * Provides additional information about the second leg in narrative form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -574,7 +585,7 @@ public class SecuritiesFinancing1 {
 	 */
 	public static final MMMessageAttribute mmSecondLegNarrative = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "ScndLegNrrtv";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -585,10 +596,11 @@ public class SecuritiesFinancing1 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RateChngDtTm", required = true)
 	protected ISODateTime rateChangeDateTime;
 	/**
-	 * Date/Time at which rate change has taken place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -621,7 +633,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAttribute mmRateChangeDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRateChangeDateTime;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "RateChngDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -632,10 +644,11 @@ public class SecuritiesFinancing1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "TermntnDtTm")
 	protected TerminationDate1Choice terminationDateTime;
 	/**
-	 * Termination date/time or maturity date/time of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -655,6 +668,9 @@ public class SecuritiesFinancing1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TermntnDtTm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 917</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -669,9 +685,10 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAssociationEnd mmTerminationDateTime = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmTerminationDateTime;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "TermntnDtTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "917"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminationDateTime";
 			definition = "Termination date/time or maturity date/time of the transaction.";
@@ -681,10 +698,11 @@ public class SecuritiesFinancing1 {
 			type_lazy = () -> TerminationDate1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesHrcut")
 	protected Rate2 securitiesHaircut;
 	/**
-	 * Haircut or valuation factor on the security expressed as a percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -716,7 +734,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAssociationEnd mmSecuritiesHaircut = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmHaircut;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesHrcut";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -728,11 +746,11 @@ public class SecuritiesFinancing1 {
 			type_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
 		}
 	};
+	@XmlElement(name = "StockLnMrgn")
 	protected Rate2 stockLoanMargin;
 	/**
-	 * Percentage mark-up on a loan consideration used to reflect the lender's
-	 * risk.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -765,7 +783,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAssociationEnd mmStockLoanMargin = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmStockLoanMargin;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "StockLnMrgn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -777,10 +795,11 @@ public class SecuritiesFinancing1 {
 			type_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
 		}
 	};
+	@XmlElement(name = "Rp")
 	protected Rate2 repurchase;
 	/**
-	 * Repurchase rate used to calculate the repurchase amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -811,7 +830,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAssociationEnd mmRepurchase = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRepurchaseRate;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "Rp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -823,11 +842,11 @@ public class SecuritiesFinancing1 {
 			type_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
 		}
 	};
+	@XmlElement(name = "Pricg")
 	protected RateOrName1Choice pricing;
 	/**
-	 * Interest rate to be paid on the transaction amount, as agreed between the
-	 * counterparties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -861,7 +880,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAssociationEnd mmPricing = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmInterest;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "Pricg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -873,11 +892,11 @@ public class SecuritiesFinancing1 {
 			type_lazy = () -> RateOrName1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Sprd")
 	protected SpreadRate1 spread;
 	/**
-	 * Margin over or under an index that determines the repurchase rate,
-	 * expressed as a rate or an amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -911,7 +930,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAssociationEnd mmSpread = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Spread.mmSpreadRate;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "Sprd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -923,11 +942,11 @@ public class SecuritiesFinancing1 {
 			type_lazy = () -> com.tools20022.repository.msg.SpreadRate1.mmObject();
 		}
 	};
+	@XmlElement(name = "FrftAmt")
 	protected AmountAndDirection5 forfeitAmount;
 	/**
-	 * Fixed amount of money that has to be paid (instead of interest) in the
-	 * case of a recall or at the closing date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -961,7 +980,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAssociationEnd mmForfeitAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmForfeitRepurchaseAmount;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "FrftAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -973,10 +992,11 @@ public class SecuritiesFinancing1 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection5.mmObject();
 		}
 	};
+	@XmlElement(name = "DealAmt")
 	protected AmountAndDirection5 dealAmount;
 	/**
-	 * Principal amount of a trade (for second leg).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1008,7 +1028,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAssociationEnd mmDealAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmDealAmount;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "DealAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1020,11 +1040,11 @@ public class SecuritiesFinancing1 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection5.mmObject();
 		}
 	};
+	@XmlElement(name = "AcrdIntrstAmt")
 	protected AmountAndDirection5 accruedInterestAmount;
 	/**
-	 * Amount of interest that has been accrued in between two periods (for
-	 * second leg).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1058,7 +1078,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAssociationEnd mmAccruedInterestAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "AcrdIntrstAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1070,11 +1090,11 @@ public class SecuritiesFinancing1 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection5.mmObject();
 		}
 	};
+	@XmlElement(name = "TermntnAmtPerPcsOfColl")
 	protected AmountAndDirection5 terminationAmountPerPiecesOfCollateral;
 	/**
-	 * Amount of money to be settled per piece of collateral to terminate the
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1108,7 +1128,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAssociationEnd mmTerminationAmountPerPiecesOfCollateral = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmTerminationAmountPerPieceOfCollateral;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "TermntnAmtPerPcsOfColl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1120,11 +1140,11 @@ public class SecuritiesFinancing1 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection5.mmObject();
 		}
 	};
+	@XmlElement(name = "PrmAmt")
 	protected AmountAndDirection5 premiumAmount;
 	/**
-	 * Difference between the amount of money of the first leg and the amount of
-	 * the second leg of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1158,7 +1178,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAssociationEnd mmPremiumAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmPremiumAmount;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "PrmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1170,10 +1190,11 @@ public class SecuritiesFinancing1 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection5.mmObject();
 		}
 	};
+	@XmlElement(name = "FincgAgrmt")
 	protected Agreement1 financingAgreement;
 	/**
-	 * Provides contractual details of the two leg transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1204,7 +1225,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAssociationEnd mmFinancingAgreement = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmFinancingAgreement;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "FincgAgrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1216,10 +1237,11 @@ public class SecuritiesFinancing1 {
 			type_lazy = () -> com.tools20022.repository.msg.Agreement1.mmObject();
 		}
 	};
+	@XmlElement(name = "LglFrmwk")
 	protected LegalFramework1Code legalFramework;
 	/**
-	 * Determines the legal framework of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1253,7 +1275,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAttribute mmLegalFramework = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmLegalFramework;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "LglFrmwk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1264,10 +1286,11 @@ public class SecuritiesFinancing1 {
 			simpleType_lazy = () -> LegalFramework1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TermntnTxAmt")
 	protected AmountAndDirection5 terminationTransactionAmount;
 	/**
-	 * Total amount of money to be settled to terminate the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1300,7 +1323,7 @@ public class SecuritiesFinancing1 {
 	public static final MMMessageAssociationEnd mmTerminationTransactionAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmTerminationTransactionAmount;
-			componentContext_lazy = () -> SecuritiesFinancing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 			isDerived = false;
 			xmlTag = "TermntnTxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1316,14 +1339,20 @@ public class SecuritiesFinancing1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesFinancing1.mmRateType, SecuritiesFinancing1.mmInterestComputationMethod, SecuritiesFinancing1.mmRevaluationIndicator, SecuritiesFinancing1.mmSecondLegIdentification,
-						SecuritiesFinancing1.mmIdentification, SecuritiesFinancing1.mmVariableRateSupport, SecuritiesFinancing1.mmTransactionCallDelay, SecuritiesFinancing1.mmTotalNumberOfCollateralInstructions,
-						SecuritiesFinancing1.mmSecondLegNarrative, SecuritiesFinancing1.mmRateChangeDateTime, SecuritiesFinancing1.mmTerminationDateTime, SecuritiesFinancing1.mmSecuritiesHaircut, SecuritiesFinancing1.mmStockLoanMargin,
-						SecuritiesFinancing1.mmRepurchase, SecuritiesFinancing1.mmPricing, SecuritiesFinancing1.mmSpread, SecuritiesFinancing1.mmForfeitAmount, SecuritiesFinancing1.mmDealAmount,
-						SecuritiesFinancing1.mmAccruedInterestAmount, SecuritiesFinancing1.mmTerminationAmountPerPiecesOfCollateral, SecuritiesFinancing1.mmPremiumAmount, SecuritiesFinancing1.mmFinancingAgreement,
-						SecuritiesFinancing1.mmLegalFramework, SecuritiesFinancing1.mmTerminationTransactionAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancing1.mmRateType, com.tools20022.repository.msg.SecuritiesFinancing1.mmInterestComputationMethod,
+						com.tools20022.repository.msg.SecuritiesFinancing1.mmRevaluationIndicator, com.tools20022.repository.msg.SecuritiesFinancing1.mmSecondLegIdentification,
+						com.tools20022.repository.msg.SecuritiesFinancing1.mmIdentification, com.tools20022.repository.msg.SecuritiesFinancing1.mmVariableRateSupport,
+						com.tools20022.repository.msg.SecuritiesFinancing1.mmTransactionCallDelay, com.tools20022.repository.msg.SecuritiesFinancing1.mmTotalNumberOfCollateralInstructions,
+						com.tools20022.repository.msg.SecuritiesFinancing1.mmSecondLegNarrative, com.tools20022.repository.msg.SecuritiesFinancing1.mmRateChangeDateTime,
+						com.tools20022.repository.msg.SecuritiesFinancing1.mmTerminationDateTime, com.tools20022.repository.msg.SecuritiesFinancing1.mmSecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancing1.mmStockLoanMargin,
+						com.tools20022.repository.msg.SecuritiesFinancing1.mmRepurchase, com.tools20022.repository.msg.SecuritiesFinancing1.mmPricing, com.tools20022.repository.msg.SecuritiesFinancing1.mmSpread,
+						com.tools20022.repository.msg.SecuritiesFinancing1.mmForfeitAmount, com.tools20022.repository.msg.SecuritiesFinancing1.mmDealAmount, com.tools20022.repository.msg.SecuritiesFinancing1.mmAccruedInterestAmount,
+						com.tools20022.repository.msg.SecuritiesFinancing1.mmTerminationAmountPerPiecesOfCollateral, com.tools20022.repository.msg.SecuritiesFinancing1.mmPremiumAmount,
+						com.tools20022.repository.msg.SecuritiesFinancing1.mmFinancingAgreement, com.tools20022.repository.msg.SecuritiesFinancing1.mmLegalFramework,
+						com.tools20022.repository.msg.SecuritiesFinancing1.mmTerminationTransactionAmount);
 				trace_lazy = () -> SecuritiesFinancing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "Sequence E"));
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesFinancing1";
 				definition = "An agreement between two parties, a seller and a buyer, by which the seller agrees at the time of the agreement to re-purchase the sold securities at an agreed price. The two parts of the agreement are called the two \"legs\".";
@@ -1332,219 +1361,219 @@ public class SecuritiesFinancing1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RateTp")
-	public RateType3Choice getRateType() {
-		return rateType;
+	public Optional<RateType3Choice> getRateType() {
+		return rateType == null ? Optional.empty() : Optional.of(rateType);
 	}
 
-	public void setRateType(RateType3Choice rateType) {
+	public SecuritiesFinancing1 setRateType(RateType3Choice rateType) {
 		this.rateType = rateType;
+		return this;
 	}
 
-	@XmlElement(name = "IntrstCmptnMtd")
-	public InterestComputationMethod1Choice getInterestComputationMethod() {
-		return interestComputationMethod;
+	public Optional<InterestComputationMethod1Choice> getInterestComputationMethod() {
+		return interestComputationMethod == null ? Optional.empty() : Optional.of(interestComputationMethod);
 	}
 
-	public void setInterestComputationMethod(InterestComputationMethod1Choice interestComputationMethod) {
+	public SecuritiesFinancing1 setInterestComputationMethod(InterestComputationMethod1Choice interestComputationMethod) {
 		this.interestComputationMethod = interestComputationMethod;
+		return this;
 	}
 
-	@XmlElement(name = "RvaltnInd")
-	public Revaluation1Choice getRevaluationIndicator() {
-		return revaluationIndicator;
+	public Optional<Revaluation1Choice> getRevaluationIndicator() {
+		return revaluationIndicator == null ? Optional.empty() : Optional.of(revaluationIndicator);
 	}
 
-	public void setRevaluationIndicator(Revaluation1Choice revaluationIndicator) {
+	public SecuritiesFinancing1 setRevaluationIndicator(Revaluation1Choice revaluationIndicator) {
 		this.revaluationIndicator = revaluationIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "ScndLegId")
-	public Max35Text getSecondLegIdentification() {
-		return secondLegIdentification;
+	public Optional<Max35Text> getSecondLegIdentification() {
+		return secondLegIdentification == null ? Optional.empty() : Optional.of(secondLegIdentification);
 	}
 
-	public void setSecondLegIdentification(Max35Text secondLegIdentification) {
+	public SecuritiesFinancing1 setSecondLegIdentification(Max35Text secondLegIdentification) {
 		this.secondLegIdentification = secondLegIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Id")
-	public Max35Text getIdentification() {
-		return identification;
+	public Optional<Max35Text> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(Max35Text identification) {
+	public SecuritiesFinancing1 setIdentification(Max35Text identification) {
 		this.identification = identification;
+		return this;
 	}
 
-	@XmlElement(name = "VarblRateSpprt")
-	public RateName1 getVariableRateSupport() {
-		return variableRateSupport;
+	public Optional<RateName1> getVariableRateSupport() {
+		return variableRateSupport == null ? Optional.empty() : Optional.of(variableRateSupport);
 	}
 
-	public void setVariableRateSupport(com.tools20022.repository.msg.RateName1 variableRateSupport) {
+	public SecuritiesFinancing1 setVariableRateSupport(com.tools20022.repository.msg.RateName1 variableRateSupport) {
 		this.variableRateSupport = variableRateSupport;
+		return this;
 	}
 
-	@XmlElement(name = "TxCallDely")
-	public Max3NumericText getTransactionCallDelay() {
-		return transactionCallDelay;
+	public Optional<Max3NumericText> getTransactionCallDelay() {
+		return transactionCallDelay == null ? Optional.empty() : Optional.of(transactionCallDelay);
 	}
 
-	public void setTransactionCallDelay(Max3NumericText transactionCallDelay) {
+	public SecuritiesFinancing1 setTransactionCallDelay(Max3NumericText transactionCallDelay) {
 		this.transactionCallDelay = transactionCallDelay;
+		return this;
 	}
 
-	@XmlElement(name = "TtlNbOfCollInstrs")
-	public Max3NumericText getTotalNumberOfCollateralInstructions() {
-		return totalNumberOfCollateralInstructions;
+	public Optional<Max3NumericText> getTotalNumberOfCollateralInstructions() {
+		return totalNumberOfCollateralInstructions == null ? Optional.empty() : Optional.of(totalNumberOfCollateralInstructions);
 	}
 
-	public void setTotalNumberOfCollateralInstructions(Max3NumericText totalNumberOfCollateralInstructions) {
+	public SecuritiesFinancing1 setTotalNumberOfCollateralInstructions(Max3NumericText totalNumberOfCollateralInstructions) {
 		this.totalNumberOfCollateralInstructions = totalNumberOfCollateralInstructions;
+		return this;
 	}
 
-	@XmlElement(name = "ScndLegNrrtv")
-	public Max140Text getSecondLegNarrative() {
-		return secondLegNarrative;
+	public Optional<Max140Text> getSecondLegNarrative() {
+		return secondLegNarrative == null ? Optional.empty() : Optional.of(secondLegNarrative);
 	}
 
-	public void setSecondLegNarrative(Max140Text secondLegNarrative) {
+	public SecuritiesFinancing1 setSecondLegNarrative(Max140Text secondLegNarrative) {
 		this.secondLegNarrative = secondLegNarrative;
+		return this;
 	}
 
-	@XmlElement(name = "RateChngDtTm", required = true)
 	public ISODateTime getRateChangeDateTime() {
 		return rateChangeDateTime;
 	}
 
-	public void setRateChangeDateTime(ISODateTime rateChangeDateTime) {
-		this.rateChangeDateTime = rateChangeDateTime;
+	public SecuritiesFinancing1 setRateChangeDateTime(ISODateTime rateChangeDateTime) {
+		this.rateChangeDateTime = Objects.requireNonNull(rateChangeDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "TermntnDtTm")
-	public TerminationDate1Choice getTerminationDateTime() {
-		return terminationDateTime;
+	public Optional<TerminationDate1Choice> getTerminationDateTime() {
+		return terminationDateTime == null ? Optional.empty() : Optional.of(terminationDateTime);
 	}
 
-	public void setTerminationDateTime(TerminationDate1Choice terminationDateTime) {
+	public SecuritiesFinancing1 setTerminationDateTime(TerminationDate1Choice terminationDateTime) {
 		this.terminationDateTime = terminationDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesHrcut")
-	public Rate2 getSecuritiesHaircut() {
-		return securitiesHaircut;
+	public Optional<Rate2> getSecuritiesHaircut() {
+		return securitiesHaircut == null ? Optional.empty() : Optional.of(securitiesHaircut);
 	}
 
-	public void setSecuritiesHaircut(com.tools20022.repository.msg.Rate2 securitiesHaircut) {
+	public SecuritiesFinancing1 setSecuritiesHaircut(com.tools20022.repository.msg.Rate2 securitiesHaircut) {
 		this.securitiesHaircut = securitiesHaircut;
+		return this;
 	}
 
-	@XmlElement(name = "StockLnMrgn")
-	public Rate2 getStockLoanMargin() {
-		return stockLoanMargin;
+	public Optional<Rate2> getStockLoanMargin() {
+		return stockLoanMargin == null ? Optional.empty() : Optional.of(stockLoanMargin);
 	}
 
-	public void setStockLoanMargin(com.tools20022.repository.msg.Rate2 stockLoanMargin) {
+	public SecuritiesFinancing1 setStockLoanMargin(com.tools20022.repository.msg.Rate2 stockLoanMargin) {
 		this.stockLoanMargin = stockLoanMargin;
+		return this;
 	}
 
-	@XmlElement(name = "Rp")
-	public Rate2 getRepurchase() {
-		return repurchase;
+	public Optional<Rate2> getRepurchase() {
+		return repurchase == null ? Optional.empty() : Optional.of(repurchase);
 	}
 
-	public void setRepurchase(com.tools20022.repository.msg.Rate2 repurchase) {
+	public SecuritiesFinancing1 setRepurchase(com.tools20022.repository.msg.Rate2 repurchase) {
 		this.repurchase = repurchase;
+		return this;
 	}
 
-	@XmlElement(name = "Pricg")
-	public RateOrName1Choice getPricing() {
-		return pricing;
+	public Optional<RateOrName1Choice> getPricing() {
+		return pricing == null ? Optional.empty() : Optional.of(pricing);
 	}
 
-	public void setPricing(RateOrName1Choice pricing) {
+	public SecuritiesFinancing1 setPricing(RateOrName1Choice pricing) {
 		this.pricing = pricing;
+		return this;
 	}
 
-	@XmlElement(name = "Sprd")
-	public SpreadRate1 getSpread() {
-		return spread;
+	public Optional<SpreadRate1> getSpread() {
+		return spread == null ? Optional.empty() : Optional.of(spread);
 	}
 
-	public void setSpread(com.tools20022.repository.msg.SpreadRate1 spread) {
+	public SecuritiesFinancing1 setSpread(com.tools20022.repository.msg.SpreadRate1 spread) {
 		this.spread = spread;
+		return this;
 	}
 
-	@XmlElement(name = "FrftAmt")
-	public AmountAndDirection5 getForfeitAmount() {
-		return forfeitAmount;
+	public Optional<AmountAndDirection5> getForfeitAmount() {
+		return forfeitAmount == null ? Optional.empty() : Optional.of(forfeitAmount);
 	}
 
-	public void setForfeitAmount(com.tools20022.repository.msg.AmountAndDirection5 forfeitAmount) {
+	public SecuritiesFinancing1 setForfeitAmount(com.tools20022.repository.msg.AmountAndDirection5 forfeitAmount) {
 		this.forfeitAmount = forfeitAmount;
+		return this;
 	}
 
-	@XmlElement(name = "DealAmt")
-	public AmountAndDirection5 getDealAmount() {
-		return dealAmount;
+	public Optional<AmountAndDirection5> getDealAmount() {
+		return dealAmount == null ? Optional.empty() : Optional.of(dealAmount);
 	}
 
-	public void setDealAmount(com.tools20022.repository.msg.AmountAndDirection5 dealAmount) {
+	public SecuritiesFinancing1 setDealAmount(com.tools20022.repository.msg.AmountAndDirection5 dealAmount) {
 		this.dealAmount = dealAmount;
+		return this;
 	}
 
-	@XmlElement(name = "AcrdIntrstAmt")
-	public AmountAndDirection5 getAccruedInterestAmount() {
-		return accruedInterestAmount;
+	public Optional<AmountAndDirection5> getAccruedInterestAmount() {
+		return accruedInterestAmount == null ? Optional.empty() : Optional.of(accruedInterestAmount);
 	}
 
-	public void setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection5 accruedInterestAmount) {
+	public SecuritiesFinancing1 setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection5 accruedInterestAmount) {
 		this.accruedInterestAmount = accruedInterestAmount;
+		return this;
 	}
 
-	@XmlElement(name = "TermntnAmtPerPcsOfColl")
-	public AmountAndDirection5 getTerminationAmountPerPiecesOfCollateral() {
-		return terminationAmountPerPiecesOfCollateral;
+	public Optional<AmountAndDirection5> getTerminationAmountPerPiecesOfCollateral() {
+		return terminationAmountPerPiecesOfCollateral == null ? Optional.empty() : Optional.of(terminationAmountPerPiecesOfCollateral);
 	}
 
-	public void setTerminationAmountPerPiecesOfCollateral(com.tools20022.repository.msg.AmountAndDirection5 terminationAmountPerPiecesOfCollateral) {
+	public SecuritiesFinancing1 setTerminationAmountPerPiecesOfCollateral(com.tools20022.repository.msg.AmountAndDirection5 terminationAmountPerPiecesOfCollateral) {
 		this.terminationAmountPerPiecesOfCollateral = terminationAmountPerPiecesOfCollateral;
+		return this;
 	}
 
-	@XmlElement(name = "PrmAmt")
-	public AmountAndDirection5 getPremiumAmount() {
-		return premiumAmount;
+	public Optional<AmountAndDirection5> getPremiumAmount() {
+		return premiumAmount == null ? Optional.empty() : Optional.of(premiumAmount);
 	}
 
-	public void setPremiumAmount(com.tools20022.repository.msg.AmountAndDirection5 premiumAmount) {
+	public SecuritiesFinancing1 setPremiumAmount(com.tools20022.repository.msg.AmountAndDirection5 premiumAmount) {
 		this.premiumAmount = premiumAmount;
+		return this;
 	}
 
-	@XmlElement(name = "FincgAgrmt")
-	public Agreement1 getFinancingAgreement() {
-		return financingAgreement;
+	public Optional<Agreement1> getFinancingAgreement() {
+		return financingAgreement == null ? Optional.empty() : Optional.of(financingAgreement);
 	}
 
-	public void setFinancingAgreement(com.tools20022.repository.msg.Agreement1 financingAgreement) {
+	public SecuritiesFinancing1 setFinancingAgreement(com.tools20022.repository.msg.Agreement1 financingAgreement) {
 		this.financingAgreement = financingAgreement;
+		return this;
 	}
 
-	@XmlElement(name = "LglFrmwk")
-	public LegalFramework1Code getLegalFramework() {
-		return legalFramework;
+	public Optional<LegalFramework1Code> getLegalFramework() {
+		return legalFramework == null ? Optional.empty() : Optional.of(legalFramework);
 	}
 
-	public void setLegalFramework(LegalFramework1Code legalFramework) {
+	public SecuritiesFinancing1 setLegalFramework(LegalFramework1Code legalFramework) {
 		this.legalFramework = legalFramework;
+		return this;
 	}
 
-	@XmlElement(name = "TermntnTxAmt")
-	public AmountAndDirection5 getTerminationTransactionAmount() {
-		return terminationTransactionAmount;
+	public Optional<AmountAndDirection5> getTerminationTransactionAmount() {
+		return terminationTransactionAmount == null ? Optional.empty() : Optional.of(terminationTransactionAmount);
 	}
 
-	public void setTerminationTransactionAmount(com.tools20022.repository.msg.AmountAndDirection5 terminationTransactionAmount) {
+	public SecuritiesFinancing1 setTerminationTransactionAmount(com.tools20022.repository.msg.AmountAndDirection5 terminationTransactionAmount) {
 		this.terminationTransactionAmount = terminationTransactionAmount;
+		return this;
 	}
 }

@@ -25,6 +25,8 @@ import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,16 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Payment terminal or ATM performing the transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardAcceptorTerminal1", propOrder = {"identification", "location", "capabilities"})
 public class CardAcceptorTerminal1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected GenericIdentification32 identification;
 	/**
-	 * Identification of the terminal. <br>
-	 * It correspond to the ISO 8583 field number 41.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -112,7 +114,7 @@ public class CardAcceptorTerminal1 {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
-			componentContext_lazy = () -> CardAcceptorTerminal1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardAcceptorTerminal1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +126,11 @@ public class CardAcceptorTerminal1 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	@XmlElement(name = "Lctn")
 	protected PostalAddress18 location;
 	/**
-	 * Location of the terminal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -159,7 +162,7 @@ public class CardAcceptorTerminal1 {
 	public static final MMMessageAssociationEnd mmLocation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> System.mmLocation;
-			componentContext_lazy = () -> CardAcceptorTerminal1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardAcceptorTerminal1.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +174,11 @@ public class CardAcceptorTerminal1 {
 			type_lazy = () -> com.tools20022.repository.msg.PostalAddress18.mmObject();
 		}
 	};
+	@XmlElement(name = "Cpblties", required = true)
 	protected PointOfInteractionCapabilities4 capabilities;
 	/**
-	 * Capabilities of the terminal performing the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -207,7 +211,7 @@ public class CardAcceptorTerminal1 {
 	public static final MMMessageAssociationEnd mmCapabilities = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PointOfInteraction.mmCardReadingCapabilities;
-			componentContext_lazy = () -> CardAcceptorTerminal1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardAcceptorTerminal1.mmObject();
 			isDerived = false;
 			xmlTag = "Cpblties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,9 +227,10 @@ public class CardAcceptorTerminal1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardAcceptorTerminal1.mmIdentification, CardAcceptorTerminal1.mmLocation, CardAcceptorTerminal1.mmCapabilities);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardAcceptorTerminal1.mmIdentification, com.tools20022.repository.msg.CardAcceptorTerminal1.mmLocation,
+						com.tools20022.repository.msg.CardAcceptorTerminal1.mmCapabilities);
 				trace_lazy = () -> PointOfInteraction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardAcceptorTerminal1";
 				definition = "Payment terminal or ATM performing the transaction.";
@@ -234,30 +239,30 @@ public class CardAcceptorTerminal1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public GenericIdentification32 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
-		this.identification = identification;
+	public CardAcceptorTerminal1 setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Lctn")
-	public PostalAddress18 getLocation() {
-		return location;
+	public Optional<PostalAddress18> getLocation() {
+		return location == null ? Optional.empty() : Optional.of(location);
 	}
 
-	public void setLocation(com.tools20022.repository.msg.PostalAddress18 location) {
+	public CardAcceptorTerminal1 setLocation(com.tools20022.repository.msg.PostalAddress18 location) {
 		this.location = location;
+		return this;
 	}
 
-	@XmlElement(name = "Cpblties", required = true)
 	public PointOfInteractionCapabilities4 getCapabilities() {
 		return capabilities;
 	}
 
-	public void setCapabilities(com.tools20022.repository.msg.PointOfInteractionCapabilities4 capabilities) {
-		this.capabilities = capabilities;
+	public CardAcceptorTerminal1 setCapabilities(com.tools20022.repository.msg.PointOfInteractionCapabilities4 capabilities) {
+		this.capabilities = Objects.requireNonNull(capabilities);
+		return this;
 	}
 }

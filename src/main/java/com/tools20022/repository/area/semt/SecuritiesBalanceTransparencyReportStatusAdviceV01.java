@@ -26,9 +26,8 @@ import com.tools20022.repository.choice.ReportItemStatus1Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TransparencyOfHoldingsMaintenance20162017;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -47,22 +46,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestVersion
- * SecuritiesManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.TransparencyOfHoldingsMaintenance20162017
- * TransparencyOfHoldingsMaintenance20162017}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SctiesBalTrnsprncyRptStsAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -90,6 +73,22 @@ import javax.xml.bind.annotation.*;
  * SecuritiesBalanceTransparencyReportStatusAdviceV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.TransparencyOfHoldingsMaintenance20162017
+ * TransparencyOfHoldingsMaintenance20162017}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SctiesBalTrnsprncyRptStsAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestVersion
+ * SecuritiesManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code semt.042.001.01}</li>
@@ -105,15 +104,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesBalanceTransparencyReportStatusAdviceV01", propOrder = {"messageIdentification", "senderIdentification", "receiverIdentification", "relatedStatement", "status", "numberOfItemsPerStatus", "supplementaryData"})
 public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Unique and unambiguous identification of the status advice message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -154,11 +154,11 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SndrId", required = true)
 	protected PartyIdentification100 senderIdentification;
 	/**
-	 * Identification of the party that is the sender of the status advice
-	 * message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,11 +200,11 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "RcvrId")
 	protected PartyIdentification100 receiverIdentification;
 	/**
-	 * Identification of the party that is the receiver of the status advice
-	 * message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -246,10 +246,11 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdStmt", required = true)
 	protected StatementReference1 relatedStatement;
 	/**
-	 * Reference of the statement for which the status advice has been issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -291,10 +292,11 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "Sts", required = true)
 	protected ReportItemStatus1Choice status;
 	/**
-	 * Status of the referenced statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -334,10 +336,11 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "NbOfItmsPerSts")
 	protected List<NumberOfItemsPerStatus1> numberOfItemsPerStatus;
 	/**
-	 * Number of items for each identical transaction status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -377,11 +380,11 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -457,70 +460,70 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public SecuritiesBalanceTransparencyReportStatusAdviceV01 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "SndrId", required = true)
 	public PartyIdentification100 getSenderIdentification() {
 		return senderIdentification;
 	}
 
-	public void setSenderIdentification(PartyIdentification100 senderIdentification) {
-		this.senderIdentification = senderIdentification;
+	public SecuritiesBalanceTransparencyReportStatusAdviceV01 setSenderIdentification(PartyIdentification100 senderIdentification) {
+		this.senderIdentification = Objects.requireNonNull(senderIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RcvrId")
-	public PartyIdentification100 getReceiverIdentification() {
-		return receiverIdentification;
+	public Optional<PartyIdentification100> getReceiverIdentification() {
+		return receiverIdentification == null ? Optional.empty() : Optional.of(receiverIdentification);
 	}
 
-	public void setReceiverIdentification(PartyIdentification100 receiverIdentification) {
+	public SecuritiesBalanceTransparencyReportStatusAdviceV01 setReceiverIdentification(PartyIdentification100 receiverIdentification) {
 		this.receiverIdentification = receiverIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "RltdStmt", required = true)
 	public StatementReference1 getRelatedStatement() {
 		return relatedStatement;
 	}
 
-	public void setRelatedStatement(StatementReference1 relatedStatement) {
-		this.relatedStatement = relatedStatement;
+	public SecuritiesBalanceTransparencyReportStatusAdviceV01 setRelatedStatement(StatementReference1 relatedStatement) {
+		this.relatedStatement = Objects.requireNonNull(relatedStatement);
+		return this;
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public ReportItemStatus1Choice getStatus() {
 		return status;
 	}
 
-	public void setStatus(ReportItemStatus1Choice status) {
-		this.status = status;
+	public SecuritiesBalanceTransparencyReportStatusAdviceV01 setStatus(ReportItemStatus1Choice status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "NbOfItmsPerSts")
 	public List<NumberOfItemsPerStatus1> getNumberOfItemsPerStatus() {
-		return numberOfItemsPerStatus;
+		return numberOfItemsPerStatus == null ? numberOfItemsPerStatus = new ArrayList<>() : numberOfItemsPerStatus;
 	}
 
-	public void setNumberOfItemsPerStatus(List<NumberOfItemsPerStatus1> numberOfItemsPerStatus) {
-		this.numberOfItemsPerStatus = numberOfItemsPerStatus;
+	public SecuritiesBalanceTransparencyReportStatusAdviceV01 setNumberOfItemsPerStatus(List<NumberOfItemsPerStatus1> numberOfItemsPerStatus) {
+		this.numberOfItemsPerStatus = Objects.requireNonNull(numberOfItemsPerStatus);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecuritiesBalanceTransparencyReportStatusAdviceV01 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.042.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:semt.042.001.01")
 	static public class Document {
 		@XmlElement(name = "SctiesBalTrnsprncyRptStsAdvc", required = true)
 		public SecuritiesBalanceTransparencyReportStatusAdviceV01 messageBody;

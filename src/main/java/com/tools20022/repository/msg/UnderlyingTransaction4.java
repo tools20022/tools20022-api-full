@@ -24,9 +24,8 @@ import com.tools20022.repository.area.camt.ResolutionOfInvestigationV04;
 import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +67,25 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupOrPaymentInformationResolvedCaseRule#forUnderlyingTransaction4
+ * ConstraintGroupOrPaymentInformationResolvedCaseRule.forUnderlyingTransaction4
+ * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupOrInitiationTransactionResolvedCaseRule#forUnderlyingTransaction4
+ * ConstraintGroupOrInitiationTransactionResolvedCaseRule.
+ * forUnderlyingTransaction4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupOrInterbankTransactionResolvedCaseRule#forUnderlyingTransaction4
+ * ConstraintGroupOrInterbankTransactionResolvedCaseRule.
+ * forUnderlyingTransaction4}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,16 +105,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnderlyingTransaction4", propOrder = {"originalGroupInformationAndStatus", "originalPaymentInformationAndStatus", "transactionInformationAndStatus"})
 public class UnderlyingTransaction4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgnlGrpInfAndSts")
 	protected OriginalGroupHeader5 originalGroupInformationAndStatus;
 	/**
-	 * Provides information on the original cancellation message, to which the
-	 * resolution refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -140,7 +156,7 @@ public class UnderlyingTransaction4 {
 	public static final MMMessageAssociationEnd mmOriginalGroupInformationAndStatus = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
-			componentContext_lazy = () -> UnderlyingTransaction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction4.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlGrpInfAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,11 +169,11 @@ public class UnderlyingTransaction4 {
 			type_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader5.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlPmtInfAndSts")
 	protected List<com.tools20022.repository.msg.OriginalPaymentInstruction3> originalPaymentInformationAndStatus;
 	/**
-	 * Provides information on the original (group of) transactions, to which
-	 * the cancellation status refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -200,7 +216,7 @@ public class UnderlyingTransaction4 {
 	public static final MMMessageAssociationEnd mmOriginalPaymentInformationAndStatus = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
-			componentContext_lazy = () -> UnderlyingTransaction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction4.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPmtInfAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,11 +228,11 @@ public class UnderlyingTransaction4 {
 			type_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction3.mmObject();
 		}
 	};
+	@XmlElement(name = "TxInfAndSts")
 	protected List<com.tools20022.repository.msg.PaymentTransaction40> transactionInformationAndStatus;
 	/**
-	 * Provides details on the original transactions to which the cancellation
-	 * request message refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -258,7 +274,7 @@ public class UnderlyingTransaction4 {
 	public static final MMMessageAssociationEnd mmTransactionInformationAndStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmPayment;
-			componentContext_lazy = () -> UnderlyingTransaction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction4.mmObject();
 			isDerived = false;
 			xmlTag = "TxInfAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -274,10 +290,14 @@ public class UnderlyingTransaction4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnderlyingTransaction4.mmOriginalGroupInformationAndStatus, UnderlyingTransaction4.mmOriginalPaymentInformationAndStatus, UnderlyingTransaction4.mmTransactionInformationAndStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTransaction4.mmOriginalGroupInformationAndStatus, com.tools20022.repository.msg.UnderlyingTransaction4.mmOriginalPaymentInformationAndStatus,
+						com.tools20022.repository.msg.UnderlyingTransaction4.mmTransactionInformationAndStatus);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ResolutionOfInvestigationV04.mmCancellationDetails);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupOrPaymentInformationResolvedCaseRule.forUnderlyingTransaction4,
+						com.tools20022.repository.constraints.ConstraintGroupOrInitiationTransactionResolvedCaseRule.forUnderlyingTransaction4,
+						com.tools20022.repository.constraints.ConstraintGroupOrInterbankTransactionResolvedCaseRule.forUnderlyingTransaction4);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingTransaction4";
 				definition = "Identifies the underlying (group of) transaction(s) to which the resolution of investigation applies.";
@@ -287,30 +307,30 @@ public class UnderlyingTransaction4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgnlGrpInfAndSts")
-	public OriginalGroupHeader5 getOriginalGroupInformationAndStatus() {
-		return originalGroupInformationAndStatus;
+	public Optional<OriginalGroupHeader5> getOriginalGroupInformationAndStatus() {
+		return originalGroupInformationAndStatus == null ? Optional.empty() : Optional.of(originalGroupInformationAndStatus);
 	}
 
-	public void setOriginalGroupInformationAndStatus(com.tools20022.repository.msg.OriginalGroupHeader5 originalGroupInformationAndStatus) {
+	public UnderlyingTransaction4 setOriginalGroupInformationAndStatus(com.tools20022.repository.msg.OriginalGroupHeader5 originalGroupInformationAndStatus) {
 		this.originalGroupInformationAndStatus = originalGroupInformationAndStatus;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlPmtInfAndSts")
 	public List<OriginalPaymentInstruction3> getOriginalPaymentInformationAndStatus() {
-		return originalPaymentInformationAndStatus;
+		return originalPaymentInformationAndStatus == null ? originalPaymentInformationAndStatus = new ArrayList<>() : originalPaymentInformationAndStatus;
 	}
 
-	public void setOriginalPaymentInformationAndStatus(List<com.tools20022.repository.msg.OriginalPaymentInstruction3> originalPaymentInformationAndStatus) {
-		this.originalPaymentInformationAndStatus = originalPaymentInformationAndStatus;
+	public UnderlyingTransaction4 setOriginalPaymentInformationAndStatus(List<com.tools20022.repository.msg.OriginalPaymentInstruction3> originalPaymentInformationAndStatus) {
+		this.originalPaymentInformationAndStatus = Objects.requireNonNull(originalPaymentInformationAndStatus);
+		return this;
 	}
 
-	@XmlElement(name = "TxInfAndSts")
 	public List<PaymentTransaction40> getTransactionInformationAndStatus() {
-		return transactionInformationAndStatus;
+		return transactionInformationAndStatus == null ? transactionInformationAndStatus = new ArrayList<>() : transactionInformationAndStatus;
 	}
 
-	public void setTransactionInformationAndStatus(List<com.tools20022.repository.msg.PaymentTransaction40> transactionInformationAndStatus) {
-		this.transactionInformationAndStatus = transactionInformationAndStatus;
+	public UnderlyingTransaction4 setTransactionInformationAndStatus(List<com.tools20022.repository.msg.PaymentTransaction40> transactionInformationAndStatus) {
+		this.transactionInformationAndStatus = Objects.requireNonNull(transactionInformationAndStatus);
+		return this;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines a cryptographic digest algorithm and value."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AlgorithmAndDigest1", propOrder = {"digestAlgorithm", "digest"})
 public class AlgorithmAndDigest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DgstAlgo", required = true)
 	protected Algorithm5Code digestAlgorithm;
 	/**
-	 * Digest algorithm used to create the digest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,7 +99,7 @@ public class AlgorithmAndDigest1 {
 	 */
 	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AlgorithmAndDigest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmAndDigest1.mmObject();
 			isDerived = false;
 			xmlTag = "DgstAlgo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,10 +110,11 @@ public class AlgorithmAndDigest1 {
 			simpleType_lazy = () -> Algorithm5Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Dgst", required = true)
 	protected Max140Text digest;
 	/**
-	 * Result of data-digesting process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -138,7 +141,7 @@ public class AlgorithmAndDigest1 {
 	 */
 	public static final MMMessageAttribute mmDigest = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AlgorithmAndDigest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmAndDigest1.mmObject();
 			isDerived = false;
 			xmlTag = "Dgst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,8 +156,8 @@ public class AlgorithmAndDigest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AlgorithmAndDigest1.mmDigestAlgorithm, AlgorithmAndDigest1.mmDigest);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmAndDigest1.mmDigestAlgorithm, com.tools20022.repository.msg.AlgorithmAndDigest1.mmDigest);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmAndDigest1";
 				definition = "Defines a cryptographic digest algorithm and value.";
@@ -163,21 +166,21 @@ public class AlgorithmAndDigest1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DgstAlgo", required = true)
 	public Algorithm5Code getDigestAlgorithm() {
 		return digestAlgorithm;
 	}
 
-	public void setDigestAlgorithm(Algorithm5Code digestAlgorithm) {
-		this.digestAlgorithm = digestAlgorithm;
+	public AlgorithmAndDigest1 setDigestAlgorithm(Algorithm5Code digestAlgorithm) {
+		this.digestAlgorithm = Objects.requireNonNull(digestAlgorithm);
+		return this;
 	}
 
-	@XmlElement(name = "Dgst", required = true)
 	public Max140Text getDigest() {
 		return digest;
 	}
 
-	public void setDigest(Max140Text digest) {
-		this.digest = digest;
+	public AlgorithmAndDigest1 setDigest(Max140Text digest) {
+		this.digest = Objects.requireNonNull(digest);
+		return this;
 	}
 }

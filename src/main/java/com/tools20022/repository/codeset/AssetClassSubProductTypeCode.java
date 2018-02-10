@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AssetClassSubProductTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines the sub-product types for specific asset classes.
@@ -32,137 +37,137 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmDairy
- * AssetClassSubProductTypeCode.mmDairy}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Dairy
+ * AssetClassSubProductTypeCode.Dairy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmForestry
- * AssetClassSubProductTypeCode.mmForestry}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Forestry
+ * AssetClassSubProductTypeCode.Forestry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmGrainOilSeeds
- * AssetClassSubProductTypeCode.mmGrainOilSeeds}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#GrainOilSeeds
+ * AssetClassSubProductTypeCode.GrainOilSeeds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmLivestock
- * AssetClassSubProductTypeCode.mmLivestock}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Livestock
+ * AssetClassSubProductTypeCode.Livestock}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmOliveOil
- * AssetClassSubProductTypeCode.mmOliveOil}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#OliveOil
+ * AssetClassSubProductTypeCode.OliveOil}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmSofts
- * AssetClassSubProductTypeCode.mmSofts}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Softs
+ * AssetClassSubProductTypeCode.Softs}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmCoal
- * AssetClassSubProductTypeCode.mmCoal}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Coal
+ * AssetClassSubProductTypeCode.Coal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmElectricity
- * AssetClassSubProductTypeCode.mmElectricity}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Electricity
+ * AssetClassSubProductTypeCode.Electricity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmInterEnergy
- * AssetClassSubProductTypeCode.mmInterEnergy}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#InterEnergy
+ * AssetClassSubProductTypeCode.InterEnergy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmNaturalGas
- * AssetClassSubProductTypeCode.mmNaturalGas}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#NaturalGas
+ * AssetClassSubProductTypeCode.NaturalGas}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmOil
- * AssetClassSubProductTypeCode.mmOil}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Oil
+ * AssetClassSubProductTypeCode.Oil}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmPrecious
- * AssetClassSubProductTypeCode.mmPrecious}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Precious
+ * AssetClassSubProductTypeCode.Precious}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmNonPrecious
- * AssetClassSubProductTypeCode.mmNonPrecious}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#NonPrecious
+ * AssetClassSubProductTypeCode.NonPrecious}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmEmission
- * AssetClassSubProductTypeCode.mmEmission}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Emission
+ * AssetClassSubProductTypeCode.Emission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmWeather
- * AssetClassSubProductTypeCode.mmWeather}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Weather
+ * AssetClassSubProductTypeCode.Weather}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmFreight
- * AssetClassSubProductTypeCode.mmFreight}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Freight
+ * AssetClassSubProductTypeCode.Freight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmMultiCommodityExotic
- * AssetClassSubProductTypeCode.mmMultiCommodityExotic}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#MultiCommodityExotic
+ * AssetClassSubProductTypeCode.MultiCommodityExotic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmRenewableEnergy
- * AssetClassSubProductTypeCode.mmRenewableEnergy}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#RenewableEnergy
+ * AssetClassSubProductTypeCode.RenewableEnergy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmLightEnds
- * AssetClassSubProductTypeCode.mmLightEnds}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#LightEnds
+ * AssetClassSubProductTypeCode.LightEnds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmDistillates
- * AssetClassSubProductTypeCode.mmDistillates}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Distillates
+ * AssetClassSubProductTypeCode.Distillates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmCarbon
- * AssetClassSubProductTypeCode.mmCarbon}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Carbon
+ * AssetClassSubProductTypeCode.Carbon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmAmmonia
- * AssetClassSubProductTypeCode.mmAmmonia}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Ammonia
+ * AssetClassSubProductTypeCode.Ammonia}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmDiammoniumPhosphate
- * AssetClassSubProductTypeCode.mmDiammoniumPhosphate}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#DiammoniumPhosphate
+ * AssetClassSubProductTypeCode.DiammoniumPhosphate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmPotash
- * AssetClassSubProductTypeCode.mmPotash}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Potash
+ * AssetClassSubProductTypeCode.Potash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmSulphur
- * AssetClassSubProductTypeCode.mmSulphur}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Sulphur
+ * AssetClassSubProductTypeCode.Sulphur}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmUrea
- * AssetClassSubProductTypeCode.mmUrea}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Urea
+ * AssetClassSubProductTypeCode.Urea}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmUreaAndAmmoniumNitrite
- * AssetClassSubProductTypeCode.mmUreaAndAmmoniumNitrite}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#UreaAndAmmoniumNitrite
+ * AssetClassSubProductTypeCode.UreaAndAmmoniumNitrite}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmConstruction
- * AssetClassSubProductTypeCode.mmConstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Construction
+ * AssetClassSubProductTypeCode.Construction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmManufacturing
- * AssetClassSubProductTypeCode.mmManufacturing}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Manufacturing
+ * AssetClassSubProductTypeCode.Manufacturing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmContainerboard
- * AssetClassSubProductTypeCode.mmContainerboard}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Containerboard
+ * AssetClassSubProductTypeCode.Containerboard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmNewsprint
- * AssetClassSubProductTypeCode.mmNewsprint}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Newsprint
+ * AssetClassSubProductTypeCode.Newsprint}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmPulp
- * AssetClassSubProductTypeCode.mmPulp}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Pulp
+ * AssetClassSubProductTypeCode.Pulp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmRecoveredPaper
- * AssetClassSubProductTypeCode.mmRecoveredPaper}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#RecoveredPaper
+ * AssetClassSubProductTypeCode.RecoveredPaper}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmPlastic
- * AssetClassSubProductTypeCode.mmPlastic}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Plastic
+ * AssetClassSubProductTypeCode.Plastic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmCarbonRelated
- * AssetClassSubProductTypeCode.mmCarbonRelated}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#CarbonRelated
+ * AssetClassSubProductTypeCode.CarbonRelated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmWet
- * AssetClassSubProductTypeCode.mmWet}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Wet
+ * AssetClassSubProductTypeCode.Wet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmDry
- * AssetClassSubProductTypeCode.mmDry}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Dry
+ * AssetClassSubProductTypeCode.Dry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmSeafood
- * AssetClassSubProductTypeCode.mmSeafood}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Seafood
+ * AssetClassSubProductTypeCode.Seafood}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmGrain
- * AssetClassSubProductTypeCode.mmGrain}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Grain
+ * AssetClassSubProductTypeCode.Grain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmDeliverable
- * AssetClassSubProductTypeCode.mmDeliverable}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Deliverable
+ * AssetClassSubProductTypeCode.Deliverable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmNonDeliverable
- * AssetClassSubProductTypeCode.mmNonDeliverable}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#NonDeliverable
+ * AssetClassSubProductTypeCode.NonDeliverable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmOther
- * AssetClassSubProductTypeCode.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Other
+ * AssetClassSubProductTypeCode.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmPotato
- * AssetClassSubProductTypeCode.mmPotato}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#Potato
+ * AssetClassSubProductTypeCode.Potato}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#mmContainerShip
- * AssetClassSubProductTypeCode.mmContainerShip}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode#ContainerShip
+ * AssetClassSubProductTypeCode.ContainerShip}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -296,8 +301,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -308,7 +313,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the sub-product types for specific asset classes."</li>
  * </ul>
  */
-public class AssetClassSubProductTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AssetClassSubProductTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -332,12 +338,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type dairy."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDairy = new MMCode() {
+	public static final AssetClassSubProductTypeCode Dairy = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dairy";
 			definition = "Commodity of type dairy.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "DIRY";
 		}
 	};
@@ -362,12 +368,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type forestry."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForestry = new MMCode() {
+	public static final AssetClassSubProductTypeCode Forestry = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Forestry";
 			definition = "Commodity of type forestry.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "FRST";
 		}
 	};
@@ -392,12 +398,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type grain oil seeds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGrainOilSeeds = new MMCode() {
+	public static final AssetClassSubProductTypeCode GrainOilSeeds = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrainOilSeeds";
 			definition = "Commodity of type grain oil seeds.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "GROS";
 		}
 	};
@@ -422,12 +428,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type livestock."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLivestock = new MMCode() {
+	public static final AssetClassSubProductTypeCode Livestock = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Livestock";
 			definition = "Commodity of type livestock.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "LSTK";
 		}
 	};
@@ -452,12 +458,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type olive oil."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOliveOil = new MMCode() {
+	public static final AssetClassSubProductTypeCode OliveOil = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OliveOil";
 			definition = "Commodity of type olive oil.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "OOLI";
 		}
 	};
@@ -482,12 +488,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type softs."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSofts = new MMCode() {
+	public static final AssetClassSubProductTypeCode Softs = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Softs";
 			definition = "Commodity of type softs.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "SOFT";
 		}
 	};
@@ -512,12 +518,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type coal."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCoal = new MMCode() {
+	public static final AssetClassSubProductTypeCode Coal = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coal";
 			definition = "Commodity of type coal.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "COAL";
 		}
 	};
@@ -542,12 +548,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type electricity."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmElectricity = new MMCode() {
+	public static final AssetClassSubProductTypeCode Electricity = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electricity";
 			definition = "Commodity of type electricity.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "ELEC";
 		}
 	};
@@ -572,12 +578,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type inter energy."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterEnergy = new MMCode() {
+	public static final AssetClassSubProductTypeCode InterEnergy = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterEnergy";
 			definition = "Commodity of type inter energy.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "INRG";
 		}
 	};
@@ -602,12 +608,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type natural gas."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNaturalGas = new MMCode() {
+	public static final AssetClassSubProductTypeCode NaturalGas = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NaturalGas";
 			definition = "Commodity of type natural gas.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "NGAS";
 		}
 	};
@@ -632,12 +638,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type oil."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOil = new MMCode() {
+	public static final AssetClassSubProductTypeCode Oil = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Oil";
 			definition = "Commodity of type oil.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "OILP";
 		}
 	};
@@ -662,12 +668,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type precious metals."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrecious = new MMCode() {
+	public static final AssetClassSubProductTypeCode Precious = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Precious";
 			definition = "Commodity of type precious metals.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "PRME";
 		}
 	};
@@ -692,12 +698,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type non precious metals."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonPrecious = new MMCode() {
+	public static final AssetClassSubProductTypeCode NonPrecious = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonPrecious";
 			definition = "Commodity of type non precious metals.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "NPRM";
 		}
 	};
@@ -722,12 +728,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type emission."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEmission = new MMCode() {
+	public static final AssetClassSubProductTypeCode Emission = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Emission";
 			definition = "Commodity of type emission.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "EMIS";
 		}
 	};
@@ -752,12 +758,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type weather."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWeather = new MMCode() {
+	public static final AssetClassSubProductTypeCode Weather = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weather";
 			definition = "Commodity of type weather.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "WTHR";
 		}
 	};
@@ -782,12 +788,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type freight."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFreight = new MMCode() {
+	public static final AssetClassSubProductTypeCode Freight = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Freight";
 			definition = "Commodity of type freight.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "FRGT";
 		}
 	};
@@ -812,12 +818,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type multi commodity exotic."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMultiCommodityExotic = new MMCode() {
+	public static final AssetClassSubProductTypeCode MultiCommodityExotic = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiCommodityExotic";
 			definition = "Commodity of type multi commodity exotic.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "MCEX";
 		}
 	};
@@ -842,12 +848,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type renewable energy."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRenewableEnergy = new MMCode() {
+	public static final AssetClassSubProductTypeCode RenewableEnergy = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RenewableEnergy";
 			definition = "Commodity of type renewable energy.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "RNNG";
 		}
 	};
@@ -872,12 +878,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type light ends."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLightEnds = new MMCode() {
+	public static final AssetClassSubProductTypeCode LightEnds = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LightEnds";
 			definition = "Commodity of type light ends.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "LGHT";
 		}
 	};
@@ -902,12 +908,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type distillates."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDistillates = new MMCode() {
+	public static final AssetClassSubProductTypeCode Distillates = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Distillates";
 			definition = "Commodity of type distillates.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "DIST";
 		}
 	};
@@ -932,12 +938,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type carbon."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCarbon = new MMCode() {
+	public static final AssetClassSubProductTypeCode Carbon = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Carbon";
 			definition = "Commodity of type carbon.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "CRBN";
 		}
 	};
@@ -962,12 +968,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type ammonia."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAmmonia = new MMCode() {
+	public static final AssetClassSubProductTypeCode Ammonia = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ammonia";
 			definition = "Commodity of type ammonia.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "AMMO";
 		}
 	};
@@ -992,12 +998,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type diammonium phosphate."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiammoniumPhosphate = new MMCode() {
+	public static final AssetClassSubProductTypeCode DiammoniumPhosphate = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiammoniumPhosphate";
 			definition = "Commodity of type diammonium phosphate.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "DAPH";
 		}
 	};
@@ -1022,12 +1028,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type potash."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPotash = new MMCode() {
+	public static final AssetClassSubProductTypeCode Potash = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Potash";
 			definition = "Commodity of type potash.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "PTSH";
 		}
 	};
@@ -1052,12 +1058,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type sulphur."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSulphur = new MMCode() {
+	public static final AssetClassSubProductTypeCode Sulphur = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sulphur";
 			definition = "Commodity of type sulphur.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "SLPH";
 		}
 	};
@@ -1082,12 +1088,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type urea."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUrea = new MMCode() {
+	public static final AssetClassSubProductTypeCode Urea = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Urea";
 			definition = "Commodity of type urea.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "UREA";
 		}
 	};
@@ -1112,12 +1118,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type urea and ammonium nitrite."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUreaAndAmmoniumNitrite = new MMCode() {
+	public static final AssetClassSubProductTypeCode UreaAndAmmoniumNitrite = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UreaAndAmmoniumNitrite";
 			definition = "Commodity of type urea and ammonium nitrite.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "UAAN";
 		}
 	};
@@ -1142,12 +1148,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type construction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConstruction = new MMCode() {
+	public static final AssetClassSubProductTypeCode Construction = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Construction";
 			definition = "Commodity of type construction.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "CSTR";
 		}
 	};
@@ -1172,12 +1178,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type manufacturing."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmManufacturing = new MMCode() {
+	public static final AssetClassSubProductTypeCode Manufacturing = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Manufacturing";
 			definition = "Commodity of type manufacturing.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "MFTG";
 		}
 	};
@@ -1202,12 +1208,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type containerboard."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmContainerboard = new MMCode() {
+	public static final AssetClassSubProductTypeCode Containerboard = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Containerboard";
 			definition = "Commodity of type containerboard.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "CBRD";
 		}
 	};
@@ -1232,12 +1238,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type newsprint."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNewsprint = new MMCode() {
+	public static final AssetClassSubProductTypeCode Newsprint = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Newsprint";
 			definition = "Commodity of type newsprint.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "NSPT";
 		}
 	};
@@ -1262,12 +1268,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type pulp."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPulp = new MMCode() {
+	public static final AssetClassSubProductTypeCode Pulp = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pulp";
 			definition = "Commodity of type pulp.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "PULP";
 		}
 	};
@@ -1292,12 +1298,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type recovered paper."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRecoveredPaper = new MMCode() {
+	public static final AssetClassSubProductTypeCode RecoveredPaper = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecoveredPaper";
 			definition = "Commodity of type recovered paper.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "RCVP";
 		}
 	};
@@ -1322,12 +1328,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type plastic."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPlastic = new MMCode() {
+	public static final AssetClassSubProductTypeCode Plastic = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Plastic";
 			definition = "Commodity of type plastic.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "PLST";
 		}
 	};
@@ -1352,12 +1358,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type carbon related."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCarbonRelated = new MMCode() {
+	public static final AssetClassSubProductTypeCode CarbonRelated = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarbonRelated";
 			definition = "Commodity of type carbon related.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "CRBR";
 		}
 	};
@@ -1382,12 +1388,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type wet freight."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWet = new MMCode() {
+	public static final AssetClassSubProductTypeCode Wet = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Wet";
 			definition = "Commodity of type wet freight.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "WETF";
 		}
 	};
@@ -1412,12 +1418,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type dry freight."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDry = new MMCode() {
+	public static final AssetClassSubProductTypeCode Dry = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dry";
 			definition = "Commodity of type dry freight.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "DRYF";
 		}
 	};
@@ -1442,12 +1448,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type seafood."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSeafood = new MMCode() {
+	public static final AssetClassSubProductTypeCode Seafood = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seafood";
 			definition = "Commodity of type seafood.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "SEAF";
 		}
 	};
@@ -1472,12 +1478,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type grain."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGrain = new MMCode() {
+	public static final AssetClassSubProductTypeCode Grain = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Grain";
 			definition = "Commodity of type grain.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "GRIN";
 		}
 	};
@@ -1502,12 +1508,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type deliverable."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeliverable = new MMCode() {
+	public static final AssetClassSubProductTypeCode Deliverable = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deliverable";
 			definition = "Commodity of type deliverable.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "DLVR";
 		}
 	};
@@ -1532,12 +1538,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type non deliverable."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonDeliverable = new MMCode() {
+	public static final AssetClassSubProductTypeCode NonDeliverable = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDeliverable";
 			definition = "Commodity of type non deliverable.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "NDLV";
 		}
 	};
@@ -1562,12 +1568,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of other type."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final AssetClassSubProductTypeCode Other = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Commodity of other type.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "OTHR";
 		}
 	};
@@ -1592,12 +1598,12 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type potato."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPotato = new MMCode() {
+	public static final AssetClassSubProductTypeCode Potato = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Potato";
 			definition = "Commodity of type potato.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "POTA";
 		}
 	};
@@ -1622,33 +1628,27 @@ public class AssetClassSubProductTypeCode {
 	 * definition} = "Commodity of type container ships."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmContainerShip = new MMCode() {
+	public static final AssetClassSubProductTypeCode ContainerShip = new AssetClassSubProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContainerShip";
 			definition = "Commodity of type container ships.";
-			owner_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductTypeCode.mmObject();
 			codeName = "CSHP";
 		}
 	};
+	final static private LinkedHashMap<String, AssetClassSubProductTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AssetClassSubProductTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductTypeCode";
 				definition = "Defines the sub-product types for specific asset classes.";
-				code_lazy = () -> Arrays.asList(AssetClassSubProductTypeCode.mmDairy, AssetClassSubProductTypeCode.mmForestry, AssetClassSubProductTypeCode.mmGrainOilSeeds, AssetClassSubProductTypeCode.mmLivestock,
-						AssetClassSubProductTypeCode.mmOliveOil, AssetClassSubProductTypeCode.mmSofts, AssetClassSubProductTypeCode.mmCoal, AssetClassSubProductTypeCode.mmElectricity, AssetClassSubProductTypeCode.mmInterEnergy,
-						AssetClassSubProductTypeCode.mmNaturalGas, AssetClassSubProductTypeCode.mmOil, AssetClassSubProductTypeCode.mmPrecious, AssetClassSubProductTypeCode.mmNonPrecious, AssetClassSubProductTypeCode.mmEmission,
-						AssetClassSubProductTypeCode.mmWeather, AssetClassSubProductTypeCode.mmFreight, AssetClassSubProductTypeCode.mmMultiCommodityExotic, AssetClassSubProductTypeCode.mmRenewableEnergy,
-						AssetClassSubProductTypeCode.mmLightEnds, AssetClassSubProductTypeCode.mmDistillates, AssetClassSubProductTypeCode.mmCarbon, AssetClassSubProductTypeCode.mmAmmonia,
-						AssetClassSubProductTypeCode.mmDiammoniumPhosphate, AssetClassSubProductTypeCode.mmPotash, AssetClassSubProductTypeCode.mmSulphur, AssetClassSubProductTypeCode.mmUrea,
-						AssetClassSubProductTypeCode.mmUreaAndAmmoniumNitrite, AssetClassSubProductTypeCode.mmConstruction, AssetClassSubProductTypeCode.mmManufacturing, AssetClassSubProductTypeCode.mmContainerboard,
-						AssetClassSubProductTypeCode.mmNewsprint, AssetClassSubProductTypeCode.mmPulp, AssetClassSubProductTypeCode.mmRecoveredPaper, AssetClassSubProductTypeCode.mmPlastic, AssetClassSubProductTypeCode.mmCarbonRelated,
-						AssetClassSubProductTypeCode.mmWet, AssetClassSubProductTypeCode.mmDry, AssetClassSubProductTypeCode.mmSeafood, AssetClassSubProductTypeCode.mmGrain, AssetClassSubProductTypeCode.mmDeliverable,
-						AssetClassSubProductTypeCode.mmNonDeliverable, AssetClassSubProductTypeCode.mmOther, AssetClassSubProductTypeCode.mmPotato, AssetClassSubProductTypeCode.mmContainerShip);
 				derivation_lazy = () -> Arrays.asList(AssetClassSubProductType1Code.mmObject(), AssetClassSubProductType2Code.mmObject(), AssetClassSubProductType3Code.mmObject(), AssetClassSubProductType5Code.mmObject(),
 						AssetClassSubProductType6Code.mmObject(), AssetClassSubProductType7Code.mmObject(), AssetClassSubProductType8Code.mmObject(), AssetClassSubProductType10Code.mmObject(), AssetClassSubProductType15Code.mmObject(),
 						AssetClassSubProductType16Code.mmObject(), AssetClassSubProductType18Code.mmObject(), AssetClassSubProductType19Code.mmObject(), AssetClassSubProductType28Code.mmObject(), AssetClassSubProductType33Code.mmObject(),
@@ -1658,8 +1658,97 @@ public class AssetClassSubProductTypeCode {
 						AssetClassSubProductType44Code.mmObject(), AssetClassSubProductType20Code.mmObject(), AssetClassSubProductType24Code.mmObject(), AssetClassSubProductType30Code.mmObject(), AssetClassSubProductType31Code.mmObject(),
 						AssetClassSubProductType34Code.mmObject(), AssetClassSubProductType36Code.mmObject(), AssetClassSubProductType37Code.mmObject(), AssetClassSubProductType38Code.mmObject(), AssetClassSubProductType43Code.mmObject(),
 						AssetClassSubProductType46Code.mmObject(), AssetClassSubProductType47Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Dairy, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Forestry,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.GrainOilSeeds, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Livestock,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.OliveOil, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Softs, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Coal,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Electricity, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.InterEnergy,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.NaturalGas, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Oil, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Precious,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.NonPrecious, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Emission,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Weather, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Freight,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.MultiCommodityExotic, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.RenewableEnergy,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.LightEnds, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Distillates,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Carbon, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Ammonia,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.DiammoniumPhosphate, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Potash,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Sulphur, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Urea,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.UreaAndAmmoniumNitrite, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Construction,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Manufacturing, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Containerboard,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Newsprint, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Pulp,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.RecoveredPaper, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Plastic,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.CarbonRelated, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Wet, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Dry,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Seafood, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Grain,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Deliverable, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.NonDeliverable,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Other, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Potato,
+						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.ContainerShip);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Dairy.getCodeName().get(), Dairy);
+		codesByName.put(Forestry.getCodeName().get(), Forestry);
+		codesByName.put(GrainOilSeeds.getCodeName().get(), GrainOilSeeds);
+		codesByName.put(Livestock.getCodeName().get(), Livestock);
+		codesByName.put(OliveOil.getCodeName().get(), OliveOil);
+		codesByName.put(Softs.getCodeName().get(), Softs);
+		codesByName.put(Coal.getCodeName().get(), Coal);
+		codesByName.put(Electricity.getCodeName().get(), Electricity);
+		codesByName.put(InterEnergy.getCodeName().get(), InterEnergy);
+		codesByName.put(NaturalGas.getCodeName().get(), NaturalGas);
+		codesByName.put(Oil.getCodeName().get(), Oil);
+		codesByName.put(Precious.getCodeName().get(), Precious);
+		codesByName.put(NonPrecious.getCodeName().get(), NonPrecious);
+		codesByName.put(Emission.getCodeName().get(), Emission);
+		codesByName.put(Weather.getCodeName().get(), Weather);
+		codesByName.put(Freight.getCodeName().get(), Freight);
+		codesByName.put(MultiCommodityExotic.getCodeName().get(), MultiCommodityExotic);
+		codesByName.put(RenewableEnergy.getCodeName().get(), RenewableEnergy);
+		codesByName.put(LightEnds.getCodeName().get(), LightEnds);
+		codesByName.put(Distillates.getCodeName().get(), Distillates);
+		codesByName.put(Carbon.getCodeName().get(), Carbon);
+		codesByName.put(Ammonia.getCodeName().get(), Ammonia);
+		codesByName.put(DiammoniumPhosphate.getCodeName().get(), DiammoniumPhosphate);
+		codesByName.put(Potash.getCodeName().get(), Potash);
+		codesByName.put(Sulphur.getCodeName().get(), Sulphur);
+		codesByName.put(Urea.getCodeName().get(), Urea);
+		codesByName.put(UreaAndAmmoniumNitrite.getCodeName().get(), UreaAndAmmoniumNitrite);
+		codesByName.put(Construction.getCodeName().get(), Construction);
+		codesByName.put(Manufacturing.getCodeName().get(), Manufacturing);
+		codesByName.put(Containerboard.getCodeName().get(), Containerboard);
+		codesByName.put(Newsprint.getCodeName().get(), Newsprint);
+		codesByName.put(Pulp.getCodeName().get(), Pulp);
+		codesByName.put(RecoveredPaper.getCodeName().get(), RecoveredPaper);
+		codesByName.put(Plastic.getCodeName().get(), Plastic);
+		codesByName.put(CarbonRelated.getCodeName().get(), CarbonRelated);
+		codesByName.put(Wet.getCodeName().get(), Wet);
+		codesByName.put(Dry.getCodeName().get(), Dry);
+		codesByName.put(Seafood.getCodeName().get(), Seafood);
+		codesByName.put(Grain.getCodeName().get(), Grain);
+		codesByName.put(Deliverable.getCodeName().get(), Deliverable);
+		codesByName.put(NonDeliverable.getCodeName().get(), NonDeliverable);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(Potato.getCodeName().get(), Potato);
+		codesByName.put(ContainerShip.getCodeName().get(), ContainerShip);
+	}
+
+	public static AssetClassSubProductTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AssetClassSubProductTypeCode[] values() {
+		AssetClassSubProductTypeCode[] values = new AssetClassSubProductTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AssetClassSubProductTypeCode> {
+		@Override
+		public AssetClassSubProductTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AssetClassSubProductTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

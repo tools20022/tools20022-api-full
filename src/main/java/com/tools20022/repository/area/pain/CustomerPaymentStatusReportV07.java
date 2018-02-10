@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.OriginalPaymentInstruction18;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PaymentsInitiationISOPreviousversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -57,22 +59,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsInitiationPreviousVersion
- * PaymentsInitiationPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PaymentsInitiationISOPreviousversion
- * PaymentsInitiationISOPreviousversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CstmrPmtStsRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -91,9 +77,45 @@ import javax.xml.bind.annotation.*;
  * CustomerPaymentStatusReportV07.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PaymentsInitiationISOPreviousversion
+ * PaymentsInitiationISOPreviousversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CstmrPmtStsRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.PaymentsInitiationPreviousVersion
+ * PaymentsInitiationPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pain.002.001.07}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusAcceptedRule#forCustomerPaymentStatusReportV07
+ * ConstraintGroupStatusAcceptedRule.forCustomerPaymentStatusReportV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusPendingRule#forCustomerPaymentStatusReportV07
+ * ConstraintGroupStatusPendingRule.forCustomerPaymentStatusReportV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusRejectedRule#forCustomerPaymentStatusReportV07
+ * ConstraintGroupStatusRejectedRule.forCustomerPaymentStatusReportV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupStatusReceivedRule#forCustomerPaymentStatusReportV07
+ * ConstraintGroupStatusReceivedRule.forCustomerPaymentStatusReportV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#forCustomerPaymentStatusReportV07
+ * ConstraintSupplementaryDataRule.forCustomerPaymentStatusReportV07}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -118,16 +140,16 @@ import javax.xml.bind.annotation.*;
  * CustomerPaymentStatusReportV06}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CustomerPaymentStatusReportV07", propOrder = {"groupHeader", "originalGroupInformationAndStatus", "originalPaymentInformationAndStatus", "supplementaryData"})
 public class CustomerPaymentStatusReportV07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader52 groupHeader;
 	/**
-	 * Set of characteristics shared by all individual transactions included in
-	 * the status report message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,11 +205,11 @@ public class CustomerPaymentStatusReportV07 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgnlGrpInfAndSts", required = true)
 	protected OriginalGroupHeader1 originalGroupInformationAndStatus;
 	/**
-	 * Original group information concerning the group of transactions, to which
-	 * the status report message refers to.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,11 +266,11 @@ public class CustomerPaymentStatusReportV07 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgnlPmtInfAndSts")
 	protected List<OriginalPaymentInstruction18> originalPaymentInformationAndStatus;
 	/**
-	 * Information concerning the original payment information, to which the
-	 * status report message refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -304,11 +326,11 @@ public class CustomerPaymentStatusReportV07 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -368,6 +390,9 @@ public class CustomerPaymentStatusReportV07 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupStatusAcceptedRule.forCustomerPaymentStatusReportV07,
+						com.tools20022.repository.constraints.ConstraintGroupStatusPendingRule.forCustomerPaymentStatusReportV07, com.tools20022.repository.constraints.ConstraintGroupStatusRejectedRule.forCustomerPaymentStatusReportV07,
+						com.tools20022.repository.constraints.ConstraintGroupStatusReceivedRule.forCustomerPaymentStatusReportV07, com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentStatusReportV07);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustomerPaymentStatusReportV07";
 				definition = "Scope\r\nThe CustomerPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.\r\nUsage\r\nThe CustomerPaymentStatusReport message is exchanged between an agent and a non-financial institution customer to provide status information on instructions previously sent. Its usage will always be governed by a bilateral agreement between the agent and the non-financial institution customer.\r\nThe CustomerPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of the initiation of a credit transfer, a direct debit, as well as on the initiation of other customer instructions.\r\nThe CustomerPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe CustomerPaymentStatusReport message can be used in domestic and cross-border scenarios.";
@@ -398,43 +423,43 @@ public class CustomerPaymentStatusReportV07 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader52 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader52 groupHeader) {
-		this.groupHeader = groupHeader;
+	public CustomerPaymentStatusReportV07 setGroupHeader(GroupHeader52 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlGrpInfAndSts", required = true)
 	public OriginalGroupHeader1 getOriginalGroupInformationAndStatus() {
 		return originalGroupInformationAndStatus;
 	}
 
-	public void setOriginalGroupInformationAndStatus(OriginalGroupHeader1 originalGroupInformationAndStatus) {
-		this.originalGroupInformationAndStatus = originalGroupInformationAndStatus;
+	public CustomerPaymentStatusReportV07 setOriginalGroupInformationAndStatus(OriginalGroupHeader1 originalGroupInformationAndStatus) {
+		this.originalGroupInformationAndStatus = Objects.requireNonNull(originalGroupInformationAndStatus);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlPmtInfAndSts")
 	public List<OriginalPaymentInstruction18> getOriginalPaymentInformationAndStatus() {
-		return originalPaymentInformationAndStatus;
+		return originalPaymentInformationAndStatus == null ? originalPaymentInformationAndStatus = new ArrayList<>() : originalPaymentInformationAndStatus;
 	}
 
-	public void setOriginalPaymentInformationAndStatus(List<OriginalPaymentInstruction18> originalPaymentInformationAndStatus) {
-		this.originalPaymentInformationAndStatus = originalPaymentInformationAndStatus;
+	public CustomerPaymentStatusReportV07 setOriginalPaymentInformationAndStatus(List<OriginalPaymentInstruction18> originalPaymentInformationAndStatus) {
+		this.originalPaymentInformationAndStatus = Objects.requireNonNull(originalPaymentInformationAndStatus);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public CustomerPaymentStatusReportV07 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.002.07.07")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:pain.002.001.07")
 	static public class Document {
 		@XmlElement(name = "CstmrPmtStsRpt", required = true)
 		public CustomerPaymentStatusReportV07 messageBody;

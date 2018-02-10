@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CardProductTypeCode;
+import com.tools20022.repository.codeset.CardProductType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of card product.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CardProductTypeCode
- * CardProductTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardProductType1Code#mmCommercialCard
- * CardProductType1Code.mmCommercialCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardProductType1Code#CommercialCard
+ * CardProductType1Code.CommercialCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardProductType1Code#mmConsumerCard
- * CardProductType1Code.mmConsumerCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardProductType1Code#ConsumerCard
+ * CardProductType1Code.ConsumerCard}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CardProductTypeCode
+ * CardProductTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of card product."</li>
  * </ul>
  */
-public class CardProductType1Code extends CardProductTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CardProductType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class CardProductType1Code extends CardProductTypeCode {
 	 * name} = "CommercialCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommercialCard = new MMCode() {
+	public static final CardProductType1Code CommercialCard = new CardProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialCard";
-			owner_lazy = () -> CardProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardProductType1Code.mmObject();
+			codeName = CardProductTypeCode.CommercialCard.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class CardProductType1Code extends CardProductTypeCode {
 	 * name} = "ConsumerCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConsumerCard = new MMCode() {
+	public static final CardProductType1Code ConsumerCard = new CardProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsumerCard";
-			owner_lazy = () -> CardProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardProductType1Code.mmObject();
+			codeName = CardProductTypeCode.ConsumerCard.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CardProductType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CardProductType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardProductType1Code";
 				definition = "Type of card product.";
-				code_lazy = () -> Arrays.asList(CardProductType1Code.mmCommercialCard, CardProductType1Code.mmConsumerCard);
 				trace_lazy = () -> CardProductTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardProductType1Code.CommercialCard, com.tools20022.repository.codeset.CardProductType1Code.ConsumerCard);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CommercialCard.getCodeName().get(), CommercialCard);
+		codesByName.put(ConsumerCard.getCodeName().get(), ConsumerCard);
+	}
+
+	public static CardProductType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CardProductType1Code[] values() {
+		CardProductType1Code[] values = new CardProductType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CardProductType1Code> {
+		@Override
+		public CardProductType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CardProductType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +29,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPartialFillsRule#forPartialFill1
+ * ConstraintPartialFillsRule.forPartialFill1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,15 +101,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartialFill1", propOrder = {"confirmationQuantity", "dealPrice", "tradeDate", "placeOfTrade", "originalOrderedQuantity", "previouslyExecutedQuantity", "remainingQuantity", "matchIncrementQuantity"})
 public class PartialFill1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ConfQty", required = true)
 	protected Quantity6Choice confirmationQuantity;
 	/**
-	 * Quantity of financial instrument to be ordered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,6 +129,9 @@ public class PartialFill1 {
 	 * {@linkplain com.tools20022.repository.msg.PartialFill1 PartialFill1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ConfQty"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 38</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -138,9 +154,10 @@ public class PartialFill1 {
 	public static final MMMessageAttribute mmConfirmationQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
-			componentContext_lazy = () -> PartialFill1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmObject();
 			isDerived = false;
 			xmlTag = "ConfQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "38"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationQuantity";
 			definition = "Quantity of financial instrument to be ordered.";
@@ -150,10 +167,11 @@ public class PartialFill1 {
 			complexType_lazy = () -> Quantity6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DealPric", required = true)
 	protected Price4 dealPrice;
 	/**
-	 * Amount of money for which goods or services are offered, sold, or bought.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,7 +211,7 @@ public class PartialFill1 {
 	public static final MMMessageAttribute mmDealPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderPrice;
-			componentContext_lazy = () -> PartialFill1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmObject();
 			isDerived = false;
 			xmlTag = "DealPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,10 +223,11 @@ public class PartialFill1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDt")
 	protected TradeDate4Choice tradeDate;
 	/**
-	 * Specifies the date/time on which the trade was executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -227,6 +246,9 @@ public class PartialFill1 {
 	 * {@linkplain com.tools20022.repository.msg.PartialFill1 PartialFill1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 75</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -248,9 +270,10 @@ public class PartialFill1 {
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> PartialFill1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "75"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
@@ -260,10 +283,11 @@ public class PartialFill1 {
 			complexType_lazy = () -> TradeDate4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfTrad")
 	protected MarketIdentification13 placeOfTrade;
 	/**
-	 * Market in which a trade transaction is to be or has been executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -282,6 +306,9 @@ public class PartialFill1 {
 	 * {@linkplain com.tools20022.repository.msg.PartialFill1 PartialFill1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PlcOfTrad"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94B::TRAD</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -305,9 +332,10 @@ public class PartialFill1 {
 	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
-			componentContext_lazy = () -> PartialFill1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94B::TRAD"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			definition = "Market in which a trade transaction is to be or has been executed.";
@@ -317,10 +345,11 @@ public class PartialFill1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.MarketIdentification13.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlOrdrdQty", required = true)
 	protected QuantityOrAmount1Choice originalOrderedQuantity;
 	/**
-	 * Quantity of financial instrument ordered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -339,6 +368,9 @@ public class PartialFill1 {
 	 * {@linkplain com.tools20022.repository.msg.PartialFill1 PartialFill1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrgnlOrdrdQty"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::ACCA</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -361,9 +393,10 @@ public class PartialFill1 {
 	public static final MMMessageAttribute mmOriginalOrderedQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
-			componentContext_lazy = () -> PartialFill1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlOrdrdQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::ACCA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalOrderedQuantity";
 			definition = "Quantity of financial instrument ordered.";
@@ -373,10 +406,11 @@ public class PartialFill1 {
 			complexType_lazy = () -> QuantityOrAmount1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrevslyExctdQty", required = true)
 	protected QuantityOrAmount1Choice previouslyExecutedQuantity;
 	/**
-	 * Quantity of financial instrument that has been previously executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -395,6 +429,9 @@ public class PartialFill1 {
 	 * {@linkplain com.tools20022.repository.msg.PartialFill1 PartialFill1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrevslyExctdQty"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::ACCA</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -418,9 +455,10 @@ public class PartialFill1 {
 	public static final MMMessageAttribute mmPreviouslyExecutedQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
-			componentContext_lazy = () -> PartialFill1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmObject();
 			isDerived = false;
 			xmlTag = "PrevslyExctdQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::ACCA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslyExecutedQuantity";
 			definition = "Quantity of financial instrument that has been previously executed.";
@@ -430,10 +468,11 @@ public class PartialFill1 {
 			complexType_lazy = () -> QuantityOrAmount1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RmngQty", required = true)
 	protected QuantityOrAmount1Choice remainingQuantity;
 	/**
-	 * Quantity of financial instrument that is remaining in order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -452,6 +491,9 @@ public class PartialFill1 {
 	 * {@linkplain com.tools20022.repository.msg.PartialFill1 PartialFill1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RmngQty"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::ACCA</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -475,9 +517,10 @@ public class PartialFill1 {
 	public static final MMMessageAttribute mmRemainingQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmRemainingQuantity;
-			componentContext_lazy = () -> PartialFill1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmObject();
 			isDerived = false;
 			xmlTag = "RmngQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::ACCA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingQuantity";
 			definition = "Quantity of financial instrument that is remaining in order.";
@@ -487,12 +530,11 @@ public class PartialFill1 {
 			complexType_lazy = () -> QuantityOrAmount1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MtchIncrmtQty")
 	protected QuantityOrAmount1Choice matchIncrementQuantity;
 	/**
-	 * Minimum quantity that applies to every execution. The order may still
-	 * fill against smaller orders, but the cumulative quantity of the execution
-	 * must be in multiples of the Match Increment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -511,6 +553,9 @@ public class PartialFill1 {
 	 * {@linkplain com.tools20022.repository.msg.PartialFill1 PartialFill1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MtchIncrmtQty"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::ACCA</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -535,9 +580,10 @@ public class PartialFill1 {
 	public static final MMMessageAttribute mmMatchIncrementQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmMatchIncrement;
-			componentContext_lazy = () -> PartialFill1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmObject();
 			isDerived = false;
 			xmlTag = "MtchIncrmtQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::ACCA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchIncrementQuantity";
 			definition = "Minimum quantity that applies to every execution. The order may still fill against smaller orders, but the cumulative quantity of the execution must be in multiples of the Match Increment.";
@@ -551,10 +597,12 @@ public class PartialFill1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartialFill1.mmConfirmationQuantity, PartialFill1.mmDealPrice, PartialFill1.mmTradeDate, PartialFill1.mmPlaceOfTrade, PartialFill1.mmOriginalOrderedQuantity,
-						PartialFill1.mmPreviouslyExecutedQuantity, PartialFill1.mmRemainingQuantity, PartialFill1.mmMatchIncrementQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartialFill1.mmConfirmationQuantity, com.tools20022.repository.msg.PartialFill1.mmDealPrice, com.tools20022.repository.msg.PartialFill1.mmTradeDate,
+						com.tools20022.repository.msg.PartialFill1.mmPlaceOfTrade, com.tools20022.repository.msg.PartialFill1.mmOriginalOrderedQuantity, com.tools20022.repository.msg.PartialFill1.mmPreviouslyExecutedQuantity,
+						com.tools20022.repository.msg.PartialFill1.mmRemainingQuantity, com.tools20022.repository.msg.PartialFill1.mmMatchIncrementQuantity);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialFillsRule.forPartialFill1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartialFill1";
 				definition = "Intention to transfer an ownership of a financial instrument.";
@@ -564,75 +612,75 @@ public class PartialFill1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ConfQty", required = true)
 	public Quantity6Choice getConfirmationQuantity() {
 		return confirmationQuantity;
 	}
 
-	public void setConfirmationQuantity(Quantity6Choice confirmationQuantity) {
-		this.confirmationQuantity = confirmationQuantity;
+	public PartialFill1 setConfirmationQuantity(Quantity6Choice confirmationQuantity) {
+		this.confirmationQuantity = Objects.requireNonNull(confirmationQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "DealPric", required = true)
 	public Price4 getDealPrice() {
 		return dealPrice;
 	}
 
-	public void setDealPrice(com.tools20022.repository.msg.Price4 dealPrice) {
-		this.dealPrice = dealPrice;
+	public PartialFill1 setDealPrice(com.tools20022.repository.msg.Price4 dealPrice) {
+		this.dealPrice = Objects.requireNonNull(dealPrice);
+		return this;
 	}
 
-	@XmlElement(name = "TradDt")
-	public TradeDate4Choice getTradeDate() {
-		return tradeDate;
+	public Optional<TradeDate4Choice> getTradeDate() {
+		return tradeDate == null ? Optional.empty() : Optional.of(tradeDate);
 	}
 
-	public void setTradeDate(TradeDate4Choice tradeDate) {
+	public PartialFill1 setTradeDate(TradeDate4Choice tradeDate) {
 		this.tradeDate = tradeDate;
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfTrad")
-	public MarketIdentification13 getPlaceOfTrade() {
-		return placeOfTrade;
+	public Optional<MarketIdentification13> getPlaceOfTrade() {
+		return placeOfTrade == null ? Optional.empty() : Optional.of(placeOfTrade);
 	}
 
-	public void setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification13 placeOfTrade) {
+	public PartialFill1 setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification13 placeOfTrade) {
 		this.placeOfTrade = placeOfTrade;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlOrdrdQty", required = true)
 	public QuantityOrAmount1Choice getOriginalOrderedQuantity() {
 		return originalOrderedQuantity;
 	}
 
-	public void setOriginalOrderedQuantity(QuantityOrAmount1Choice originalOrderedQuantity) {
-		this.originalOrderedQuantity = originalOrderedQuantity;
+	public PartialFill1 setOriginalOrderedQuantity(QuantityOrAmount1Choice originalOrderedQuantity) {
+		this.originalOrderedQuantity = Objects.requireNonNull(originalOrderedQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "PrevslyExctdQty", required = true)
 	public QuantityOrAmount1Choice getPreviouslyExecutedQuantity() {
 		return previouslyExecutedQuantity;
 	}
 
-	public void setPreviouslyExecutedQuantity(QuantityOrAmount1Choice previouslyExecutedQuantity) {
-		this.previouslyExecutedQuantity = previouslyExecutedQuantity;
+	public PartialFill1 setPreviouslyExecutedQuantity(QuantityOrAmount1Choice previouslyExecutedQuantity) {
+		this.previouslyExecutedQuantity = Objects.requireNonNull(previouslyExecutedQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "RmngQty", required = true)
 	public QuantityOrAmount1Choice getRemainingQuantity() {
 		return remainingQuantity;
 	}
 
-	public void setRemainingQuantity(QuantityOrAmount1Choice remainingQuantity) {
-		this.remainingQuantity = remainingQuantity;
+	public PartialFill1 setRemainingQuantity(QuantityOrAmount1Choice remainingQuantity) {
+		this.remainingQuantity = Objects.requireNonNull(remainingQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "MtchIncrmtQty")
-	public QuantityOrAmount1Choice getMatchIncrementQuantity() {
-		return matchIncrementQuantity;
+	public Optional<QuantityOrAmount1Choice> getMatchIncrementQuantity() {
+		return matchIncrementQuantity == null ? Optional.empty() : Optional.of(matchIncrementQuantity);
 	}
 
-	public void setMatchIncrementQuantity(QuantityOrAmount1Choice matchIncrementQuantity) {
+	public PartialFill1 setMatchIncrementQuantity(QuantityOrAmount1Choice matchIncrementQuantity) {
 		this.matchIncrementQuantity = matchIncrementQuantity;
+		return this;
 	}
 }

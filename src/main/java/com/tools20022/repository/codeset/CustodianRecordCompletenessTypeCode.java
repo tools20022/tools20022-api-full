@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the state of details of the composite record on the system.
@@ -33,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode#mmComplete
- * CustodianRecordCompletenessTypeCode.mmComplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode#Complete
+ * CustodianRecordCompletenessTypeCode.Complete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode#mmIncomplete
- * CustodianRecordCompletenessTypeCode.mmIncomplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode#Incomplete
+ * CustodianRecordCompletenessTypeCode.Incomplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode#mmConditionallyComplete
- * CustodianRecordCompletenessTypeCode.mmConditionallyComplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode#ConditionallyComplete
+ * CustodianRecordCompletenessTypeCode.ConditionallyComplete}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CustodianRecordCompletenessTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CustodianRecordCompletenessTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,12 +104,12 @@ public class CustodianRecordCompletenessTypeCode {
 	 * definition} = "Custodian record is complete."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmComplete = new MMCode() {
+	public static final CustodianRecordCompletenessTypeCode Complete = new CustodianRecordCompletenessTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			definition = "Custodian record is complete.";
-			owner_lazy = () -> CustodianRecordCompletenessTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode.mmObject();
 			codeName = "COMP";
 		}
 	};
@@ -128,12 +134,12 @@ public class CustodianRecordCompletenessTypeCode {
 	 * definition} = "Custodian record is incomplete."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncomplete = new MMCode() {
+	public static final CustodianRecordCompletenessTypeCode Incomplete = new CustodianRecordCompletenessTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incomplete";
 			definition = "Custodian record is incomplete.";
-			owner_lazy = () -> CustodianRecordCompletenessTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode.mmObject();
 			codeName = "INCO";
 		}
 	};
@@ -158,28 +164,60 @@ public class CustodianRecordCompletenessTypeCode {
 	 * definition} = "Custodian record is conditionally complete."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConditionallyComplete = new MMCode() {
+	public static final CustodianRecordCompletenessTypeCode ConditionallyComplete = new CustodianRecordCompletenessTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionallyComplete";
 			definition = "Custodian record is conditionally complete.";
-			owner_lazy = () -> CustodianRecordCompletenessTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode.mmObject();
 			codeName = "CCOM";
 		}
 	};
+	final static private LinkedHashMap<String, CustodianRecordCompletenessTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CustodianRecordCompletenessTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustodianRecordCompletenessTypeCode";
 				definition = "Specifies the state of details of the composite record on the system. Applicable to custodian service only.";
-				code_lazy = () -> Arrays.asList(CustodianRecordCompletenessTypeCode.mmComplete, CustodianRecordCompletenessTypeCode.mmIncomplete, CustodianRecordCompletenessTypeCode.mmConditionallyComplete);
 				derivation_lazy = () -> Arrays.asList(CustodianRecordCompletenessType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode.Complete, com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode.Incomplete,
+						com.tools20022.repository.codeset.CustodianRecordCompletenessTypeCode.ConditionallyComplete);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Complete.getCodeName().get(), Complete);
+		codesByName.put(Incomplete.getCodeName().get(), Incomplete);
+		codesByName.put(ConditionallyComplete.getCodeName().get(), ConditionallyComplete);
+	}
+
+	public static CustodianRecordCompletenessTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CustodianRecordCompletenessTypeCode[] values() {
+		CustodianRecordCompletenessTypeCode[] values = new CustodianRecordCompletenessTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CustodianRecordCompletenessTypeCode> {
+		@Override
+		public CustodianRecordCompletenessTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CustodianRecordCompletenessTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ErrorHandling3", propOrder = {"error", "description"})
 public class ErrorHandling3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Err", required = true)
 	protected ErrorHandling1Choice error;
 	/**
-	 * Specification of the error, in coded or proprietary form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -110,7 +113,7 @@ public class ErrorHandling3 {
 	 */
 	public static final MMMessageAssociationEnd mmError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ErrorHandling3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ErrorHandling3.mmObject();
 			isDerived = false;
 			xmlTag = "Err";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +126,11 @@ public class ErrorHandling3 {
 			type_lazy = () -> ErrorHandling1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Desc")
 	protected Max140Text description;
 	/**
-	 * Specification of the error, in free format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +164,7 @@ public class ErrorHandling3 {
 	 */
 	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ErrorHandling3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ErrorHandling3.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,8 +180,8 @@ public class ErrorHandling3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ErrorHandling3.mmError, ErrorHandling3.mmDescription);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorHandling3.mmError, com.tools20022.repository.msg.ErrorHandling3.mmDescription);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ErrorHandling3";
 				definition = "Specifies the error resulting from the processing of a request.";
@@ -187,21 +191,21 @@ public class ErrorHandling3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Err", required = true)
 	public ErrorHandling1Choice getError() {
 		return error;
 	}
 
-	public void setError(ErrorHandling1Choice error) {
-		this.error = error;
+	public ErrorHandling3 setError(ErrorHandling1Choice error) {
+		this.error = Objects.requireNonNull(error);
+		return this;
 	}
 
-	@XmlElement(name = "Desc")
-	public Max140Text getDescription() {
-		return description;
+	public Optional<Max140Text> getDescription() {
+		return description == null ? Optional.empty() : Optional.of(description);
 	}
 
-	public void setDescription(Max140Text description) {
+	public ErrorHandling3 setDescription(Max140Text description) {
 		this.description = description;
+		return this;
 	}
 }

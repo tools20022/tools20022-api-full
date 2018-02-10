@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,17 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of format for the payment direction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentDirection1Choice", propOrder = {"indicator", "proprietary"})
 public class PaymentDirection1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ind", required = true)
 	protected PaymentDirectionIndicator indicator;
 	/**
-	 * Indicates the direction of payment for asset or mortgage backed
-	 * securities, ie, whether the repaid capital is distributed (payment
-	 * direction is down) or capitalized (payment direction is up).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +112,7 @@ public class PaymentDirection1Choice {
 	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPaymentDirectionIndicator;
-			componentContext_lazy = () -> PaymentDirection1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentDirection1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ind";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,12 +123,11 @@ public class PaymentDirection1Choice {
 			simpleType_lazy = () -> PaymentDirectionIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification13 proprietary;
 	/**
-	 * Indicates the direction of payment for asset or mortgage backed
-	 * securities, ie, whether the repaid capital is distributed (payment
-	 * direction is down) or capitalized (payment direction is up).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +163,7 @@ public class PaymentDirection1Choice {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPaymentDirectionIndicator;
-			componentContext_lazy = () -> PaymentDirection1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentDirection1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,9 +178,9 @@ public class PaymentDirection1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentDirection1Choice.mmIndicator, PaymentDirection1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentDirection1Choice.mmIndicator, com.tools20022.repository.choice.PaymentDirection1Choice.mmProprietary);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentDirection1Choice";
 				definition = "Choice of format for the payment direction.";
@@ -190,21 +189,21 @@ public class PaymentDirection1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ind", required = true)
 	public PaymentDirectionIndicator getIndicator() {
 		return indicator;
 	}
 
-	public void setIndicator(PaymentDirectionIndicator indicator) {
-		this.indicator = indicator;
+	public PaymentDirection1Choice setIndicator(PaymentDirectionIndicator indicator) {
+		this.indicator = Objects.requireNonNull(indicator);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification13 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification13 proprietary) {
-		this.proprietary = proprietary;
+	public PaymentDirection1Choice setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CommissionTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of service for which the commission is asked or paid.
@@ -32,58 +37,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#mmClientDirected
- * CommissionTypeCode.mmClientDirected}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#ClientDirected
+ * CommissionTypeCode.ClientDirected}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionTypeCode#StepOut
+ * CommissionTypeCode.StepOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#mmStepOut
- * CommissionTypeCode.mmStepOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#FrontEnd
+ * CommissionTypeCode.FrontEnd}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionTypeCode#Initial
+ * CommissionTypeCode.Initial}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionTypeCode#BackEnd
+ * CommissionTypeCode.BackEnd}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionTypeCode#Trailer
+ * CommissionTypeCode.Trailer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionTypeCode#Regular
+ * CommissionTypeCode.Regular}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionTypeCode#StepIn
+ * CommissionTypeCode.StepIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#mmFrontEnd
- * CommissionTypeCode.mmFrontEnd}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#SoftDollar
+ * CommissionTypeCode.SoftDollar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#mmInitial
- * CommissionTypeCode.mmInitial}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#SoftDollarStepIn
+ * CommissionTypeCode.SoftDollarStepIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#mmBackEnd
- * CommissionTypeCode.mmBackEnd}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#SoftDollarStepOut
+ * CommissionTypeCode.SoftDollarStepOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#mmTrailer
- * CommissionTypeCode.mmTrailer}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#PlanSponsor
+ * CommissionTypeCode.PlanSponsor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#mmRegular
- * CommissionTypeCode.mmRegular}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#PercentageOfPrincipal
+ * CommissionTypeCode.PercentageOfPrincipal}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionTypeCode#Markup
+ * CommissionTypeCode.Markup}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#mmStepIn
- * CommissionTypeCode.mmStepIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#CommissionDePlacement
+ * CommissionTypeCode.CommissionDePlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#mmSoftDollar
- * CommissionTypeCode.mmSoftDollar}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#BrokerCredit
+ * CommissionTypeCode.BrokerCredit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CommissionTypeCode#Other
+ * CommissionTypeCode.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#mmSoftDollarStepIn
- * CommissionTypeCode.mmSoftDollarStepIn}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#mmSoftDollarStepOut
- * CommissionTypeCode.mmSoftDollarStepOut}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#mmPlanSponsor
- * CommissionTypeCode.mmPlanSponsor}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#mmPercentageOfPrincipal
- * CommissionTypeCode.mmPercentageOfPrincipal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#mmMarkup
- * CommissionTypeCode.mmMarkup}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#mmCommissionDePlacement
- * CommissionTypeCode.mmCommissionDePlacement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#mmBrokerCredit
- * CommissionTypeCode.mmBrokerCredit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CommissionTypeCode#mmOther
- * CommissionTypeCode.mmOther}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#mmFundBasedRenewal
- * CommissionTypeCode.mmFundBasedRenewal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionTypeCode#FundBasedRenewal
+ * CommissionTypeCode.FundBasedRenewal}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -96,8 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -114,7 +112,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of service for which the commission is asked or paid."</li>
  * </ul>
  */
-public class CommissionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CommissionTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -138,12 +137,12 @@ public class CommissionTypeCode {
 	 * definition} = "Commission is as per client agreement."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClientDirected = new MMCode() {
+	public static final CommissionTypeCode ClientDirected = new CommissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClientDirected";
 			definition = "Commission is as per client agreement.";
-			owner_lazy = () -> CommissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "CLDI";
 		}
 	};
@@ -169,12 +168,12 @@ public class CommissionTypeCode {
 	 * "Commission for a step-out trade, charged by the step-out broker."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStepOut = new MMCode() {
+	public static final CommissionTypeCode StepOut = new CommissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StepOut";
 			definition = "Commission for a step-out trade, charged by the step-out broker.";
-			owner_lazy = () -> CommissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "STEP";
 		}
 	};
@@ -200,12 +199,12 @@ public class CommissionTypeCode {
 	 * "Type of service for which the commission is asked or paid."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFrontEnd = new MMCode() {
+	public static final CommissionTypeCode FrontEnd = new CommissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FrontEnd";
 			definition = "Type of service for which the commission is asked or paid.";
-			owner_lazy = () -> CommissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "FEND";
 		}
 	};
@@ -230,12 +229,12 @@ public class CommissionTypeCode {
 	 * definition} = "Commission paid at the time of first subscription."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInitial = new MMCode() {
+	public static final CommissionTypeCode Initial = new CommissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Initial";
 			definition = "Commission paid at the time of first subscription.";
-			owner_lazy = () -> CommissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "INIT";
 		}
 	};
@@ -263,12 +262,12 @@ public class CommissionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBackEnd = new MMCode() {
+	public static final CommissionTypeCode BackEnd = new CommissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BackEnd";
 			definition = "Commission for redeeming  an investment, when an investor redeems an investment fund within a certain period of time.";
-			owner_lazy = () -> CommissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "BEND";
 		}
 	};
@@ -294,12 +293,12 @@ public class CommissionTypeCode {
 	 * "Commission that is calculated on the position of an account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTrailer = new MMCode() {
+	public static final CommissionTypeCode Trailer = new CommissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trailer";
 			definition = "Commission that is calculated on the position of an account.";
-			owner_lazy = () -> CommissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "TRAI";
 		}
 	};
@@ -324,12 +323,12 @@ public class CommissionTypeCode {
 	 * definition} = "Commission that is regular."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegular = new MMCode() {
+	public static final CommissionTypeCode Regular = new CommissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Regular";
 			definition = "Commission that is regular.";
-			owner_lazy = () -> CommissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "REGU";
 		}
 	};
@@ -354,12 +353,12 @@ public class CommissionTypeCode {
 	 * definition} = "Commission for a step-in trade."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStepIn = new MMCode() {
+	public static final CommissionTypeCode StepIn = new CommissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StepIn";
 			definition = "Commission for a step-in trade.";
-			owner_lazy = () -> CommissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "STEI";
 		}
 	};
@@ -384,12 +383,12 @@ public class CommissionTypeCode {
 	 * definition} = "Soft dollar commission."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSoftDollar = new MMCode() {
+	public static final CommissionTypeCode SoftDollar = new CommissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SoftDollar";
 			definition = "Soft dollar commission.";
-			owner_lazy = () -> CommissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "SOFT";
 		}
 	};
@@ -415,12 +414,12 @@ public class CommissionTypeCode {
 	 * "Commission for a step-in trade, charged by the step-in broker."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSoftDollarStepIn = new MMCode() {
+	public static final CommissionTypeCode SoftDollarStepIn = new CommissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SoftDollarStepIn";
 			definition = "Commission for a step-in trade, charged by the step-in broker.";
-			owner_lazy = () -> CommissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "SOIN";
 		}
 	};
@@ -448,12 +447,12 @@ public class CommissionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSoftDollarStepOut = new MMCode() {
+	public static final CommissionTypeCode SoftDollarStepOut = new CommissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SoftDollarStepOut";
 			definition = "Commission that combines soft dollar and step-out commission characteristics.";
-			owner_lazy = () -> CommissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "SOUT";
 		}
 	};
@@ -478,12 +477,12 @@ public class CommissionTypeCode {
 	 * definition} = "Commission for a plan sponsor's services."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPlanSponsor = new MMCode() {
+	public static final CommissionTypeCode PlanSponsor = new CommissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlanSponsor";
 			definition = "Commission for a plan sponsor's services.";
-			owner_lazy = () -> CommissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "PLAN";
 		}
 	};
@@ -508,12 +507,12 @@ public class CommissionTypeCode {
 	 * definition} = "Commission is a percentage of principal."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPercentageOfPrincipal = new MMCode() {
+	public static final CommissionTypeCode PercentageOfPrincipal = new CommissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PercentageOfPrincipal";
 			definition = "Commission is a percentage of principal.";
-			owner_lazy = () -> CommissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "PERN";
 		}
 	};
@@ -542,12 +541,12 @@ public class CommissionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarkup = new MMCode() {
+	public static final CommissionTypeCode Markup = new CommissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Markup";
 			definition = "Amount or percentage that is added to an offer price when an investor buys from a broker or market maker.  In this case, the price is adjusted to reflect changing market conditions.";
-			owner_lazy = () -> CommissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "MARK";
 		}
 	};
@@ -575,12 +574,12 @@ public class CommissionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommissionDePlacement = new MMCode() {
+	public static final CommissionTypeCode CommissionDePlacement = new CommissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommissionDePlacement";
 			definition = "Amount of cash due to an intermediary for selling a product, or services, to a third party.";
-			owner_lazy = () -> CommissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "CDPL";
 		}
 	};
@@ -605,12 +604,12 @@ public class CommissionTypeCode {
 	 * definition} = "Amount financed to cover the back-end load."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBrokerCredit = new MMCode() {
+	public static final CommissionTypeCode BrokerCredit = new CommissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BrokerCredit";
 			definition = "Amount financed to cover the back-end load.";
-			owner_lazy = () -> CommissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "BCRD";
 		}
 	};
@@ -635,12 +634,12 @@ public class CommissionTypeCode {
 	 * definition} = "Commission is another type of transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final CommissionTypeCode Other = new CommissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Other";
 			definition = "Commission is another type of transaction.";
-			owner_lazy = () -> CommissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "OTHR";
 		}
 	};
@@ -668,31 +667,80 @@ public class CommissionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFundBasedRenewal = new MMCode() {
+	public static final CommissionTypeCode FundBasedRenewal = new CommissionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundBasedRenewal";
 			definition = "Annual fund based renewal commission, expressed as a percentage of the deal.";
-			owner_lazy = () -> CommissionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "RNEW";
 		}
 	};
+	final static private LinkedHashMap<String, CommissionTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CommissionTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CLDI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommissionTypeCode";
 				definition = "Type of service for which the commission is asked or paid.";
-				code_lazy = () -> Arrays.asList(CommissionTypeCode.mmClientDirected, CommissionTypeCode.mmStepOut, CommissionTypeCode.mmFrontEnd, CommissionTypeCode.mmInitial, CommissionTypeCode.mmBackEnd, CommissionTypeCode.mmTrailer,
-						CommissionTypeCode.mmRegular, CommissionTypeCode.mmStepIn, CommissionTypeCode.mmSoftDollar, CommissionTypeCode.mmSoftDollarStepIn, CommissionTypeCode.mmSoftDollarStepOut, CommissionTypeCode.mmPlanSponsor,
-						CommissionTypeCode.mmPercentageOfPrincipal, CommissionTypeCode.mmMarkup, CommissionTypeCode.mmCommissionDePlacement, CommissionTypeCode.mmBrokerCredit, CommissionTypeCode.mmOther,
-						CommissionTypeCode.mmFundBasedRenewal);
 				derivation_lazy = () -> Arrays.asList(CommissionType5Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommissionTypeCode.ClientDirected, com.tools20022.repository.codeset.CommissionTypeCode.StepOut,
+						com.tools20022.repository.codeset.CommissionTypeCode.FrontEnd, com.tools20022.repository.codeset.CommissionTypeCode.Initial, com.tools20022.repository.codeset.CommissionTypeCode.BackEnd,
+						com.tools20022.repository.codeset.CommissionTypeCode.Trailer, com.tools20022.repository.codeset.CommissionTypeCode.Regular, com.tools20022.repository.codeset.CommissionTypeCode.StepIn,
+						com.tools20022.repository.codeset.CommissionTypeCode.SoftDollar, com.tools20022.repository.codeset.CommissionTypeCode.SoftDollarStepIn, com.tools20022.repository.codeset.CommissionTypeCode.SoftDollarStepOut,
+						com.tools20022.repository.codeset.CommissionTypeCode.PlanSponsor, com.tools20022.repository.codeset.CommissionTypeCode.PercentageOfPrincipal, com.tools20022.repository.codeset.CommissionTypeCode.Markup,
+						com.tools20022.repository.codeset.CommissionTypeCode.CommissionDePlacement, com.tools20022.repository.codeset.CommissionTypeCode.BrokerCredit, com.tools20022.repository.codeset.CommissionTypeCode.Other,
+						com.tools20022.repository.codeset.CommissionTypeCode.FundBasedRenewal);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ClientDirected.getCodeName().get(), ClientDirected);
+		codesByName.put(StepOut.getCodeName().get(), StepOut);
+		codesByName.put(FrontEnd.getCodeName().get(), FrontEnd);
+		codesByName.put(Initial.getCodeName().get(), Initial);
+		codesByName.put(BackEnd.getCodeName().get(), BackEnd);
+		codesByName.put(Trailer.getCodeName().get(), Trailer);
+		codesByName.put(Regular.getCodeName().get(), Regular);
+		codesByName.put(StepIn.getCodeName().get(), StepIn);
+		codesByName.put(SoftDollar.getCodeName().get(), SoftDollar);
+		codesByName.put(SoftDollarStepIn.getCodeName().get(), SoftDollarStepIn);
+		codesByName.put(SoftDollarStepOut.getCodeName().get(), SoftDollarStepOut);
+		codesByName.put(PlanSponsor.getCodeName().get(), PlanSponsor);
+		codesByName.put(PercentageOfPrincipal.getCodeName().get(), PercentageOfPrincipal);
+		codesByName.put(Markup.getCodeName().get(), Markup);
+		codesByName.put(CommissionDePlacement.getCodeName().get(), CommissionDePlacement);
+		codesByName.put(BrokerCredit.getCodeName().get(), BrokerCredit);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(FundBasedRenewal.getCodeName().get(), FundBasedRenewal);
+	}
+
+	public static CommissionTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CommissionTypeCode[] values() {
+		CommissionTypeCode[] values = new CommissionTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CommissionTypeCode> {
+		@Override
+		public CommissionTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CommissionTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TypeOfIdentificationCode;
+import com.tools20022.repository.codeset.TypeOfIdentification2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of alternate identification which can be used to give an
@@ -31,33 +35,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TypeOfIdentificationCode
- * TypeOfIdentificationCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#mmAlienRegistrationNumber
- * TypeOfIdentification2Code.mmAlienRegistrationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#AlienRegistrationNumber
+ * TypeOfIdentification2Code.AlienRegistrationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#mmTaxExemptIdentificationNumber
- * TypeOfIdentification2Code.mmTaxExemptIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#TaxExemptIdentificationNumber
+ * TypeOfIdentification2Code.TaxExemptIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#mmCorporateIdentification
- * TypeOfIdentification2Code.mmCorporateIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#CorporateIdentification
+ * TypeOfIdentification2Code.CorporateIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#mmForeignInvestmentIdentityNumber
- * TypeOfIdentification2Code.mmForeignInvestmentIdentityNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#ForeignInvestmentIdentityNumber
+ * TypeOfIdentification2Code.ForeignInvestmentIdentityNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#mmTaxIdentificationNumber
- * TypeOfIdentification2Code.mmTaxIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfIdentification2Code#TaxIdentificationNumber
+ * TypeOfIdentification2Code.TaxIdentificationNumber}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TypeOfIdentificationCode
+ * TypeOfIdentificationCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -76,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TypeOfIdentification2Code extends TypeOfIdentificationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TypeOfIdentification2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,11 +100,12 @@ public class TypeOfIdentification2Code extends TypeOfIdentificationCode {
 	 * name} = "AlienRegistrationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAlienRegistrationNumber = new MMCode() {
+	public static final TypeOfIdentification2Code AlienRegistrationNumber = new TypeOfIdentification2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlienRegistrationNumber";
-			owner_lazy = () -> TypeOfIdentification2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfIdentification2Code.mmObject();
+			codeName = TypeOfIdentificationCode.AlienRegistrationNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -118,11 +124,12 @@ public class TypeOfIdentification2Code extends TypeOfIdentificationCode {
 	 * name} = "TaxExemptIdentificationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxExemptIdentificationNumber = new MMCode() {
+	public static final TypeOfIdentification2Code TaxExemptIdentificationNumber = new TypeOfIdentification2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxExemptIdentificationNumber";
-			owner_lazy = () -> TypeOfIdentification2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfIdentification2Code.mmObject();
+			codeName = TypeOfIdentificationCode.TaxExemptIdentificationNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -141,11 +148,12 @@ public class TypeOfIdentification2Code extends TypeOfIdentificationCode {
 	 * name} = "CorporateIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateIdentification = new MMCode() {
+	public static final TypeOfIdentification2Code CorporateIdentification = new TypeOfIdentification2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateIdentification";
-			owner_lazy = () -> TypeOfIdentification2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfIdentification2Code.mmObject();
+			codeName = TypeOfIdentificationCode.CorporateIdentification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -164,11 +172,12 @@ public class TypeOfIdentification2Code extends TypeOfIdentificationCode {
 	 * name} = "ForeignInvestmentIdentityNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignInvestmentIdentityNumber = new MMCode() {
+	public static final TypeOfIdentification2Code ForeignInvestmentIdentityNumber = new TypeOfIdentification2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignInvestmentIdentityNumber";
-			owner_lazy = () -> TypeOfIdentification2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfIdentification2Code.mmObject();
+			codeName = TypeOfIdentificationCode.ForeignInvestmentIdentityNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -187,27 +196,62 @@ public class TypeOfIdentification2Code extends TypeOfIdentificationCode {
 	 * name} = "TaxIdentificationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxIdentificationNumber = new MMCode() {
+	public static final TypeOfIdentification2Code TaxIdentificationNumber = new TypeOfIdentification2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationNumber";
-			owner_lazy = () -> TypeOfIdentification2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfIdentification2Code.mmObject();
+			codeName = TypeOfIdentificationCode.TaxIdentificationNumber.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TypeOfIdentification2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TypeOfIdentification2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ARNU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfIdentification2Code";
 				definition = "Specifies the type of alternate identification which can be used to give an alternate identification of the party identified.";
-				code_lazy = () -> Arrays.asList(TypeOfIdentification2Code.mmAlienRegistrationNumber, TypeOfIdentification2Code.mmTaxExemptIdentificationNumber, TypeOfIdentification2Code.mmCorporateIdentification,
-						TypeOfIdentification2Code.mmForeignInvestmentIdentityNumber, TypeOfIdentification2Code.mmTaxIdentificationNumber);
 				trace_lazy = () -> TypeOfIdentificationCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfIdentification2Code.AlienRegistrationNumber, com.tools20022.repository.codeset.TypeOfIdentification2Code.TaxExemptIdentificationNumber,
+						com.tools20022.repository.codeset.TypeOfIdentification2Code.CorporateIdentification, com.tools20022.repository.codeset.TypeOfIdentification2Code.ForeignInvestmentIdentityNumber,
+						com.tools20022.repository.codeset.TypeOfIdentification2Code.TaxIdentificationNumber);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AlienRegistrationNumber.getCodeName().get(), AlienRegistrationNumber);
+		codesByName.put(TaxExemptIdentificationNumber.getCodeName().get(), TaxExemptIdentificationNumber);
+		codesByName.put(CorporateIdentification.getCodeName().get(), CorporateIdentification);
+		codesByName.put(ForeignInvestmentIdentityNumber.getCodeName().get(), ForeignInvestmentIdentityNumber);
+		codesByName.put(TaxIdentificationNumber.getCodeName().get(), TaxIdentificationNumber);
+	}
+
+	public static TypeOfIdentification2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TypeOfIdentification2Code[] values() {
+		TypeOfIdentification2Code[] values = new TypeOfIdentification2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TypeOfIdentification2Code> {
+		@Override
+		public TypeOfIdentification2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TypeOfIdentification2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

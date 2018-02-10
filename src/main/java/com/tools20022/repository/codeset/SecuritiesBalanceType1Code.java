@@ -20,91 +20,95 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SecuritiesBalanceTypeCode;
+import com.tools20022.repository.codeset.SecuritiesBalanceType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the nature of the securities or investment fund balance.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceTypeCode
- * SecuritiesBalanceTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmBlocked
- * SecuritiesBalanceType1Code.mmBlocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#Blocked
+ * SecuritiesBalanceType1Code.Blocked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmBorrowed
- * SecuritiesBalanceType1Code.mmBorrowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#Borrowed
+ * SecuritiesBalanceType1Code.Borrowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmCollateralIn
- * SecuritiesBalanceType1Code.mmCollateralIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#CollateralIn
+ * SecuritiesBalanceType1Code.CollateralIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmCollateralOut
- * SecuritiesBalanceType1Code.mmCollateralOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#CollateralOut
+ * SecuritiesBalanceType1Code.CollateralOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmOnLoan
- * SecuritiesBalanceType1Code.mmOnLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#OnLoan
+ * SecuritiesBalanceType1Code.OnLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmDerivativesMargin
- * SecuritiesBalanceType1Code.mmDerivativesMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#DerivativesMargin
+ * SecuritiesBalanceType1Code.DerivativesMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmPendingDeliveryMatchedBalance
- * SecuritiesBalanceType1Code.mmPendingDeliveryMatchedBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#PendingDeliveryMatchedBalance
+ * SecuritiesBalanceType1Code.PendingDeliveryMatchedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmPendingReceiptMatchedBalance
- * SecuritiesBalanceType1Code.mmPendingReceiptMatchedBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#PendingReceiptMatchedBalance
+ * SecuritiesBalanceType1Code.PendingReceiptMatchedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmPendingReceiptUnmatchedBalance
- * SecuritiesBalanceType1Code.mmPendingReceiptUnmatchedBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#PendingReceiptUnmatchedBalance
+ * SecuritiesBalanceType1Code.PendingReceiptUnmatchedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmPendingCorporateAction
- * SecuritiesBalanceType1Code.mmPendingCorporateAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#PendingCorporateAction
+ * SecuritiesBalanceType1Code.PendingCorporateAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmPendingDelivery
- * SecuritiesBalanceType1Code.mmPendingDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#PendingDelivery
+ * SecuritiesBalanceType1Code.PendingDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmPendingReceipt
- * SecuritiesBalanceType1Code.mmPendingReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#PendingReceipt
+ * SecuritiesBalanceType1Code.PendingReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmPledged
- * SecuritiesBalanceType1Code.mmPledged}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#Pledged
+ * SecuritiesBalanceType1Code.Pledged}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmPendingDeliveryUnmatchedBalance
- * SecuritiesBalanceType1Code.mmPendingDeliveryUnmatchedBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#PendingDeliveryUnmatchedBalance
+ * SecuritiesBalanceType1Code.PendingDeliveryUnmatchedBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmOutForRegistration
- * SecuritiesBalanceType1Code.mmOutForRegistration}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#OutForRegistration
+ * SecuritiesBalanceType1Code.OutForRegistration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmRestricted
- * SecuritiesBalanceType1Code.mmRestricted}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#Restricted
+ * SecuritiesBalanceType1Code.Restricted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmUnclassified
- * SecuritiesBalanceType1Code.mmUnclassified}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#Unclassified
+ * SecuritiesBalanceType1Code.Unclassified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmInTransshipment
- * SecuritiesBalanceType1Code.mmInTransshipment}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#InTransshipment
+ * SecuritiesBalanceType1Code.InTransshipment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmDrawn
- * SecuritiesBalanceType1Code.mmDrawn}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#Drawn
+ * SecuritiesBalanceType1Code.Drawn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmWaitingDocumentation
- * SecuritiesBalanceType1Code.mmWaitingDocumentation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#WaitingDocumentation
+ * SecuritiesBalanceType1Code.WaitingDocumentation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#mmBeingTransferred
- * SecuritiesBalanceType1Code.mmBeingTransferred}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType1Code#BeingTransferred
+ * SecuritiesBalanceType1Code.BeingTransferred}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceTypeCode
+ * SecuritiesBalanceTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -122,7 +126,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the nature of the securities or investment fund balance."</li>
  * </ul>
  */
-public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SecuritiesBalanceType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -141,11 +146,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Blocked"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBlocked = new MMCode() {
+	public static final SecuritiesBalanceType1Code Blocked = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.Blocked.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -164,11 +170,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Borrowed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBorrowed = new MMCode() {
+	public static final SecuritiesBalanceType1Code Borrowed = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Borrowed";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.Borrowed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -187,11 +194,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "CollateralIn"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateralIn = new MMCode() {
+	public static final SecuritiesBalanceType1Code CollateralIn = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralIn";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.CollateralIn.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -210,11 +218,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "CollateralOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateralOut = new MMCode() {
+	public static final SecuritiesBalanceType1Code CollateralOut = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralOut";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.CollateralOut.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -233,11 +242,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "OnLoan"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOnLoan = new MMCode() {
+	public static final SecuritiesBalanceType1Code OnLoan = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLoan";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.OnLoan.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -256,11 +266,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "DerivativesMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDerivativesMargin = new MMCode() {
+	public static final SecuritiesBalanceType1Code DerivativesMargin = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativesMargin";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.DerivativesMargin.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -279,11 +290,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "PendingDeliveryMatchedBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingDeliveryMatchedBalance = new MMCode() {
+	public static final SecuritiesBalanceType1Code PendingDeliveryMatchedBalance = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDeliveryMatchedBalance";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.PendingDeliveryMatchedBalance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -302,11 +314,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "PendingReceiptMatchedBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingReceiptMatchedBalance = new MMCode() {
+	public static final SecuritiesBalanceType1Code PendingReceiptMatchedBalance = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceiptMatchedBalance";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.PendingReceiptMatchedBalance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -325,11 +338,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "PendingReceiptUnmatchedBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingReceiptUnmatchedBalance = new MMCode() {
+	public static final SecuritiesBalanceType1Code PendingReceiptUnmatchedBalance = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceiptUnmatchedBalance";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.PendingReceiptUnmatchedBalance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -348,11 +362,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "PendingCorporateAction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingCorporateAction = new MMCode() {
+	public static final SecuritiesBalanceType1Code PendingCorporateAction = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCorporateAction";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.PendingCorporateAction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -371,11 +386,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "PendingDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingDelivery = new MMCode() {
+	public static final SecuritiesBalanceType1Code PendingDelivery = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDelivery";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.PendingDelivery.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -394,11 +410,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "PendingReceipt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingReceipt = new MMCode() {
+	public static final SecuritiesBalanceType1Code PendingReceipt = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceipt";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.PendingReceipt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -417,11 +434,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Pledged"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPledged = new MMCode() {
+	public static final SecuritiesBalanceType1Code Pledged = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pledged";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.Pledged.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -440,11 +458,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "PendingDeliveryUnmatchedBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingDeliveryUnmatchedBalance = new MMCode() {
+	public static final SecuritiesBalanceType1Code PendingDeliveryUnmatchedBalance = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDeliveryUnmatchedBalance";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.PendingDeliveryUnmatchedBalance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -463,11 +482,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "OutForRegistration"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOutForRegistration = new MMCode() {
+	public static final SecuritiesBalanceType1Code OutForRegistration = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutForRegistration";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.OutForRegistration.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -486,11 +506,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Restricted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRestricted = new MMCode() {
+	public static final SecuritiesBalanceType1Code Restricted = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.Restricted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -509,11 +530,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Unclassified"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnclassified = new MMCode() {
+	public static final SecuritiesBalanceType1Code Unclassified = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unclassified";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.Unclassified.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -532,11 +554,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "InTransshipment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInTransshipment = new MMCode() {
+	public static final SecuritiesBalanceType1Code InTransshipment = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InTransshipment";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.InTransshipment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -555,11 +578,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Drawn"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDrawn = new MMCode() {
+	public static final SecuritiesBalanceType1Code Drawn = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Drawn";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.Drawn.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -578,11 +602,12 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "WaitingDocumentation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWaitingDocumentation = new MMCode() {
+	public static final SecuritiesBalanceType1Code WaitingDocumentation = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaitingDocumentation";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.WaitingDocumentation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -601,31 +626,86 @@ public class SecuritiesBalanceType1Code extends SecuritiesBalanceTypeCode {
 	 * name} = "BeingTransferred"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBeingTransferred = new MMCode() {
+	public static final SecuritiesBalanceType1Code BeingTransferred = new SecuritiesBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeingTransferred";
-			owner_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType1Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.BeingTransferred.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SecuritiesBalanceType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SecuritiesBalanceType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BLOK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBalanceType1Code";
 				definition = "Specifies the nature of the securities or investment fund balance.";
-				code_lazy = () -> Arrays.asList(SecuritiesBalanceType1Code.mmBlocked, SecuritiesBalanceType1Code.mmBorrowed, SecuritiesBalanceType1Code.mmCollateralIn, SecuritiesBalanceType1Code.mmCollateralOut,
-						SecuritiesBalanceType1Code.mmOnLoan, SecuritiesBalanceType1Code.mmDerivativesMargin, SecuritiesBalanceType1Code.mmPendingDeliveryMatchedBalance, SecuritiesBalanceType1Code.mmPendingReceiptMatchedBalance,
-						SecuritiesBalanceType1Code.mmPendingReceiptUnmatchedBalance, SecuritiesBalanceType1Code.mmPendingCorporateAction, SecuritiesBalanceType1Code.mmPendingDelivery, SecuritiesBalanceType1Code.mmPendingReceipt,
-						SecuritiesBalanceType1Code.mmPledged, SecuritiesBalanceType1Code.mmPendingDeliveryUnmatchedBalance, SecuritiesBalanceType1Code.mmOutForRegistration, SecuritiesBalanceType1Code.mmRestricted,
-						SecuritiesBalanceType1Code.mmUnclassified, SecuritiesBalanceType1Code.mmInTransshipment, SecuritiesBalanceType1Code.mmDrawn, SecuritiesBalanceType1Code.mmWaitingDocumentation,
-						SecuritiesBalanceType1Code.mmBeingTransferred);
 				trace_lazy = () -> SecuritiesBalanceTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesBalanceType1Code.Blocked, com.tools20022.repository.codeset.SecuritiesBalanceType1Code.Borrowed,
+						com.tools20022.repository.codeset.SecuritiesBalanceType1Code.CollateralIn, com.tools20022.repository.codeset.SecuritiesBalanceType1Code.CollateralOut,
+						com.tools20022.repository.codeset.SecuritiesBalanceType1Code.OnLoan, com.tools20022.repository.codeset.SecuritiesBalanceType1Code.DerivativesMargin,
+						com.tools20022.repository.codeset.SecuritiesBalanceType1Code.PendingDeliveryMatchedBalance, com.tools20022.repository.codeset.SecuritiesBalanceType1Code.PendingReceiptMatchedBalance,
+						com.tools20022.repository.codeset.SecuritiesBalanceType1Code.PendingReceiptUnmatchedBalance, com.tools20022.repository.codeset.SecuritiesBalanceType1Code.PendingCorporateAction,
+						com.tools20022.repository.codeset.SecuritiesBalanceType1Code.PendingDelivery, com.tools20022.repository.codeset.SecuritiesBalanceType1Code.PendingReceipt,
+						com.tools20022.repository.codeset.SecuritiesBalanceType1Code.Pledged, com.tools20022.repository.codeset.SecuritiesBalanceType1Code.PendingDeliveryUnmatchedBalance,
+						com.tools20022.repository.codeset.SecuritiesBalanceType1Code.OutForRegistration, com.tools20022.repository.codeset.SecuritiesBalanceType1Code.Restricted,
+						com.tools20022.repository.codeset.SecuritiesBalanceType1Code.Unclassified, com.tools20022.repository.codeset.SecuritiesBalanceType1Code.InTransshipment,
+						com.tools20022.repository.codeset.SecuritiesBalanceType1Code.Drawn, com.tools20022.repository.codeset.SecuritiesBalanceType1Code.WaitingDocumentation,
+						com.tools20022.repository.codeset.SecuritiesBalanceType1Code.BeingTransferred);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Blocked.getCodeName().get(), Blocked);
+		codesByName.put(Borrowed.getCodeName().get(), Borrowed);
+		codesByName.put(CollateralIn.getCodeName().get(), CollateralIn);
+		codesByName.put(CollateralOut.getCodeName().get(), CollateralOut);
+		codesByName.put(OnLoan.getCodeName().get(), OnLoan);
+		codesByName.put(DerivativesMargin.getCodeName().get(), DerivativesMargin);
+		codesByName.put(PendingDeliveryMatchedBalance.getCodeName().get(), PendingDeliveryMatchedBalance);
+		codesByName.put(PendingReceiptMatchedBalance.getCodeName().get(), PendingReceiptMatchedBalance);
+		codesByName.put(PendingReceiptUnmatchedBalance.getCodeName().get(), PendingReceiptUnmatchedBalance);
+		codesByName.put(PendingCorporateAction.getCodeName().get(), PendingCorporateAction);
+		codesByName.put(PendingDelivery.getCodeName().get(), PendingDelivery);
+		codesByName.put(PendingReceipt.getCodeName().get(), PendingReceipt);
+		codesByName.put(Pledged.getCodeName().get(), Pledged);
+		codesByName.put(PendingDeliveryUnmatchedBalance.getCodeName().get(), PendingDeliveryUnmatchedBalance);
+		codesByName.put(OutForRegistration.getCodeName().get(), OutForRegistration);
+		codesByName.put(Restricted.getCodeName().get(), Restricted);
+		codesByName.put(Unclassified.getCodeName().get(), Unclassified);
+		codesByName.put(InTransshipment.getCodeName().get(), InTransshipment);
+		codesByName.put(Drawn.getCodeName().get(), Drawn);
+		codesByName.put(WaitingDocumentation.getCodeName().get(), WaitingDocumentation);
+		codesByName.put(BeingTransferred.getCodeName().get(), BeingTransferred);
+	}
+
+	public static SecuritiesBalanceType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SecuritiesBalanceType1Code[] values() {
+		SecuritiesBalanceType1Code[] values = new SecuritiesBalanceType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SecuritiesBalanceType1Code> {
+		@Override
+		public SecuritiesBalanceType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SecuritiesBalanceType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

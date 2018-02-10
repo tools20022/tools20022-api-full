@@ -29,9 +29,8 @@ import com.tools20022.repository.msg.SecuritiesAccount24;
 import com.tools20022.repository.msg.Statement43;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -60,22 +59,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesManagementPreviousVersion
- * SecuritiesManagementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion
- * SettlementAndReconciliationISOPreviousversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "IntraPosMvmntPstngRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -97,6 +80,22 @@ import javax.xml.bind.annotation.*;
  * IntraPositionMovementPostingReportV05.mmFinancialInstrument}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion
+ * SettlementAndReconciliationISOPreviousversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "IntraPosMvmntPstngRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesManagementPreviousVersion
+ * SecuritiesManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code semt.016.001.05}</li>
@@ -124,17 +123,16 @@ import javax.xml.bind.annotation.*;
  * IntraPositionMovementPostingReportV04}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IntraPositionMovementPostingReportV05", propOrder = {"pagination", "statementGeneralDetails", "accountOwner", "safekeepingAccount", "financialInstrument"})
 public class IntraPositionMovementPostingReportV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pgntn", required = true)
 	protected Pagination pagination;
 	/**
-	 * Page number of the message (within a statement) and continuation
-	 * indicator to indicate that the statement is to continue or that the
-	 * message is the last page of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,10 +188,11 @@ public class IntraPositionMovementPostingReportV05 {
 			}
 		}
 	};
+	@XmlElement(name = "StmtGnlDtls", required = true)
 	protected Statement43 statementGeneralDetails;
 	/**
-	 * General information related to report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -247,10 +246,11 @@ public class IntraPositionMovementPostingReportV05 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification92Choice accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -305,10 +305,11 @@ public class IntraPositionMovementPostingReportV05 {
 			}
 		}
 	};
+	@XmlElement(name = "SfkpgAcct", required = true)
 	protected SecuritiesAccount24 safekeepingAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -363,10 +364,11 @@ public class IntraPositionMovementPostingReportV05 {
 			}
 		}
 	};
+	@XmlElement(name = "FinInstrm")
 	protected List<FinancialInstrumentDetails21> financialInstrument;
 	/**
-	 * Reporting per financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -454,52 +456,52 @@ public class IntraPositionMovementPostingReportV05 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
 
-	public void setPagination(Pagination pagination) {
-		this.pagination = pagination;
+	public IntraPositionMovementPostingReportV05 setPagination(Pagination pagination) {
+		this.pagination = Objects.requireNonNull(pagination);
+		return this;
 	}
 
-	@XmlElement(name = "StmtGnlDtls", required = true)
 	public Statement43 getStatementGeneralDetails() {
 		return statementGeneralDetails;
 	}
 
-	public void setStatementGeneralDetails(Statement43 statementGeneralDetails) {
-		this.statementGeneralDetails = statementGeneralDetails;
+	public IntraPositionMovementPostingReportV05 setStatementGeneralDetails(Statement43 statementGeneralDetails) {
+		this.statementGeneralDetails = Objects.requireNonNull(statementGeneralDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification92Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification92Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification92Choice accountOwner) {
+	public IntraPositionMovementPostingReportV05 setAccountOwner(PartyIdentification92Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount24 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
 
-	public void setSafekeepingAccount(SecuritiesAccount24 safekeepingAccount) {
-		this.safekeepingAccount = safekeepingAccount;
+	public IntraPositionMovementPostingReportV05 setSafekeepingAccount(SecuritiesAccount24 safekeepingAccount) {
+		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrm")
 	public List<FinancialInstrumentDetails21> getFinancialInstrument() {
-		return financialInstrument;
+		return financialInstrument == null ? financialInstrument = new ArrayList<>() : financialInstrument;
 	}
 
-	public void setFinancialInstrument(List<FinancialInstrumentDetails21> financialInstrument) {
-		this.financialInstrument = financialInstrument;
+	public IntraPositionMovementPostingReportV05 setFinancialInstrument(List<FinancialInstrumentDetails21> financialInstrument) {
+		this.financialInstrument = Objects.requireNonNull(financialInstrument);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.016.05.05")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:semt.016.001.05")
 	static public class Document {
 		@XmlElement(name = "IntraPosMvmntPstngRpt", required = true)
 		public IntraPositionMovementPostingReportV05 messageBody;

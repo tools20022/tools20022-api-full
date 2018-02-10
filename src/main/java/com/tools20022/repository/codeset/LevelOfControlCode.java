@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.LevelOfControlCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the level of control.
@@ -31,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.LevelOfControlCode#mmView
- * LevelOfControlCode.mmView}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LevelOfControlCode#View
+ * LevelOfControlCode.View}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LevelOfControlCode#mmTransactions
- * LevelOfControlCode.mmTransactions}</li>
+ * {@linkplain com.tools20022.repository.codeset.LevelOfControlCode#Transactions
+ * LevelOfControlCode.Transactions}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the level of control."</li>
  * </ul>
  */
-public class LevelOfControlCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class LevelOfControlCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,12 +90,12 @@ public class LevelOfControlCode {
 	 * definition} = "Account may be viewed only."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmView = new MMCode() {
+	public static final LevelOfControlCode View = new LevelOfControlCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "View";
 			definition = "Account may be viewed only.";
-			owner_lazy = () -> LevelOfControlCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LevelOfControlCode.mmObject();
 			codeName = "VIEW";
 		}
 	};
@@ -114,27 +120,57 @@ public class LevelOfControlCode {
 	 * definition} = "Transactions are permitted on the account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransactions = new MMCode() {
+	public static final LevelOfControlCode Transactions = new LevelOfControlCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transactions";
 			definition = "Transactions are permitted on the account.";
-			owner_lazy = () -> LevelOfControlCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LevelOfControlCode.mmObject();
 			codeName = "TRAN";
 		}
 	};
+	final static private LinkedHashMap<String, LevelOfControlCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected LevelOfControlCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LevelOfControlCode";
 				definition = "Specifies the level of control.";
-				code_lazy = () -> Arrays.asList(LevelOfControlCode.mmView, LevelOfControlCode.mmTransactions);
 				derivation_lazy = () -> Arrays.asList(LevelOfControl1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LevelOfControlCode.View, com.tools20022.repository.codeset.LevelOfControlCode.Transactions);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(View.getCodeName().get(), View);
+		codesByName.put(Transactions.getCodeName().get(), Transactions);
+	}
+
+	public static LevelOfControlCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static LevelOfControlCode[] values() {
+		LevelOfControlCode[] values = new LevelOfControlCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, LevelOfControlCode> {
+		@Override
+		public LevelOfControlCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(LevelOfControlCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

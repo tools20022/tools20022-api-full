@@ -26,6 +26,8 @@ import com.tools20022.repository.codeset.FailureReason5Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,16 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Hardware security module of the ATM."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMSecurityDevice1", propOrder = {"deviceProperty", "currentConfiguration", "supportedConfiguration", "currentStatus", "incident"})
 public class ATMSecurityDevice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DvcPrprty")
 	protected ATMEquipment2 deviceProperty;
 	/**
-	 * Hardware security module information, so called EPP for Encrypted PIN
-	 * Pad.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -108,7 +110,7 @@ public class ATMSecurityDevice1 {
 	 */
 	public static final MMMessageAssociationEnd mmDeviceProperty = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMSecurityDevice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityDevice1.mmObject();
 			isDerived = false;
 			xmlTag = "DvcPrprty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +122,11 @@ public class ATMSecurityDevice1 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmObject();
 		}
 	};
+	@XmlElement(name = "CurCfgtn", required = true)
 	protected ATMSecurityConfiguration1 currentConfiguration;
 	/**
-	 * Configuration parameters in use by the security device.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -150,7 +153,7 @@ public class ATMSecurityDevice1 {
 	 */
 	public static final MMMessageAssociationEnd mmCurrentConfiguration = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMSecurityDevice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityDevice1.mmObject();
 			isDerived = false;
 			xmlTag = "CurCfgtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,10 +165,11 @@ public class ATMSecurityDevice1 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
 		}
 	};
+	@XmlElement(name = "SpprtdCfgtn")
 	protected ATMSecurityConfiguration1 supportedConfiguration;
 	/**
-	 * Configuration parameters supported by the security device.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -193,7 +197,7 @@ public class ATMSecurityDevice1 {
 	 */
 	public static final MMMessageAssociationEnd mmSupportedConfiguration = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMSecurityDevice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityDevice1.mmObject();
 			isDerived = false;
 			xmlTag = "SpprtdCfgtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,10 +209,11 @@ public class ATMSecurityDevice1 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
 		}
 	};
+	@XmlElement(name = "CurSts", required = true)
 	protected ATMStatus2Code currentStatus;
 	/**
-	 * Current status of the security device.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,7 +241,7 @@ public class ATMSecurityDevice1 {
 	 */
 	public static final MMMessageAttribute mmCurrentStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMSecurityDevice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityDevice1.mmObject();
 			isDerived = false;
 			xmlTag = "CurSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -247,10 +252,11 @@ public class ATMSecurityDevice1 {
 			simpleType_lazy = () -> ATMStatus2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Incdnt")
 	protected FailureReason5Code incident;
 	/**
-	 * Incident occurring on the device.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -278,7 +284,7 @@ public class ATMSecurityDevice1 {
 	 */
 	public static final MMMessageAttribute mmIncident = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMSecurityDevice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityDevice1.mmObject();
 			isDerived = false;
 			xmlTag = "Incdnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -293,9 +299,9 @@ public class ATMSecurityDevice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMSecurityDevice1.mmDeviceProperty, ATMSecurityDevice1.mmCurrentConfiguration, ATMSecurityDevice1.mmSupportedConfiguration, ATMSecurityDevice1.mmCurrentStatus,
-						ATMSecurityDevice1.mmIncident);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityDevice1.mmDeviceProperty, com.tools20022.repository.msg.ATMSecurityDevice1.mmCurrentConfiguration,
+						com.tools20022.repository.msg.ATMSecurityDevice1.mmSupportedConfiguration, com.tools20022.repository.msg.ATMSecurityDevice1.mmCurrentStatus, com.tools20022.repository.msg.ATMSecurityDevice1.mmIncident);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityDevice1";
 				definition = "Hardware security module of the ATM.";
@@ -304,48 +310,48 @@ public class ATMSecurityDevice1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DvcPrprty")
-	public ATMEquipment2 getDeviceProperty() {
-		return deviceProperty;
+	public Optional<ATMEquipment2> getDeviceProperty() {
+		return deviceProperty == null ? Optional.empty() : Optional.of(deviceProperty);
 	}
 
-	public void setDeviceProperty(com.tools20022.repository.msg.ATMEquipment2 deviceProperty) {
+	public ATMSecurityDevice1 setDeviceProperty(com.tools20022.repository.msg.ATMEquipment2 deviceProperty) {
 		this.deviceProperty = deviceProperty;
+		return this;
 	}
 
-	@XmlElement(name = "CurCfgtn", required = true)
 	public ATMSecurityConfiguration1 getCurrentConfiguration() {
 		return currentConfiguration;
 	}
 
-	public void setCurrentConfiguration(com.tools20022.repository.msg.ATMSecurityConfiguration1 currentConfiguration) {
-		this.currentConfiguration = currentConfiguration;
+	public ATMSecurityDevice1 setCurrentConfiguration(com.tools20022.repository.msg.ATMSecurityConfiguration1 currentConfiguration) {
+		this.currentConfiguration = Objects.requireNonNull(currentConfiguration);
+		return this;
 	}
 
-	@XmlElement(name = "SpprtdCfgtn")
-	public ATMSecurityConfiguration1 getSupportedConfiguration() {
-		return supportedConfiguration;
+	public Optional<ATMSecurityConfiguration1> getSupportedConfiguration() {
+		return supportedConfiguration == null ? Optional.empty() : Optional.of(supportedConfiguration);
 	}
 
-	public void setSupportedConfiguration(com.tools20022.repository.msg.ATMSecurityConfiguration1 supportedConfiguration) {
+	public ATMSecurityDevice1 setSupportedConfiguration(com.tools20022.repository.msg.ATMSecurityConfiguration1 supportedConfiguration) {
 		this.supportedConfiguration = supportedConfiguration;
+		return this;
 	}
 
-	@XmlElement(name = "CurSts", required = true)
 	public ATMStatus2Code getCurrentStatus() {
 		return currentStatus;
 	}
 
-	public void setCurrentStatus(ATMStatus2Code currentStatus) {
-		this.currentStatus = currentStatus;
+	public ATMSecurityDevice1 setCurrentStatus(ATMStatus2Code currentStatus) {
+		this.currentStatus = Objects.requireNonNull(currentStatus);
+		return this;
 	}
 
-	@XmlElement(name = "Incdnt")
-	public FailureReason5Code getIncident() {
-		return incident;
+	public Optional<FailureReason5Code> getIncident() {
+		return incident == null ? Optional.empty() : Optional.of(incident);
 	}
 
-	public void setIncident(FailureReason5Code incident) {
+	public ATMSecurityDevice1 setIncident(FailureReason5Code incident) {
 		this.incident = incident;
+		return this;
 	}
 }

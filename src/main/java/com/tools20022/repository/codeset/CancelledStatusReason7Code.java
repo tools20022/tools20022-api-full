@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CancelledStatusReasonV2Code;
+import com.tools20022.repository.codeset.CancelledStatusReason7Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the underlying reason for the cancellation of the associated
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonV2Code
- * CancelledStatusReasonV2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason7Code#mmCancelledByYourself
- * CancelledStatusReason7Code.mmCancelledByYourself}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason7Code#CancelledByYourself
+ * CancelledStatusReason7Code.CancelledByYourself}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason7Code#mmCancelledBySystem
- * CancelledStatusReason7Code.mmCancelledBySystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReason7Code#CancelledBySystem
+ * CancelledStatusReason7Code.CancelledBySystem}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CancelledStatusReasonV2Code
+ * CancelledStatusReasonV2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CancelledStatusReason7Code extends CancelledStatusReasonV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CancelledStatusReason7Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class CancelledStatusReason7Code extends CancelledStatusReasonV2Code {
 	 * name} = "CancelledByYourself"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelledByYourself = new MMCode() {
+	public static final CancelledStatusReason7Code CancelledByYourself = new CancelledStatusReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByYourself";
-			owner_lazy = () -> CancelledStatusReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancelledStatusReason7Code.mmObject();
+			codeName = CancelledStatusReasonV2Code.CancelledByYourself.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,57 @@ public class CancelledStatusReason7Code extends CancelledStatusReasonV2Code {
 	 * name} = "CancelledBySystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelledBySystem = new MMCode() {
+	public static final CancelledStatusReason7Code CancelledBySystem = new CancelledStatusReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledBySystem";
-			owner_lazy = () -> CancelledStatusReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancelledStatusReason7Code.mmObject();
+			codeName = CancelledStatusReasonV2Code.CancelledBySystem.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CancelledStatusReason7Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CancelledStatusReason7Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CANI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancelledStatusReason7Code";
 				definition = "Specifies the underlying reason for the cancellation of the associated transaction.";
-				code_lazy = () -> Arrays.asList(CancelledStatusReason7Code.mmCancelledByYourself, CancelledStatusReason7Code.mmCancelledBySystem);
 				trace_lazy = () -> CancelledStatusReasonV2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancelledStatusReason7Code.CancelledByYourself, com.tools20022.repository.codeset.CancelledStatusReason7Code.CancelledBySystem);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CancelledByYourself.getCodeName().get(), CancelledByYourself);
+		codesByName.put(CancelledBySystem.getCodeName().get(), CancelledBySystem);
+	}
+
+	public static CancelledStatusReason7Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CancelledStatusReason7Code[] values() {
+		CancelledStatusReason7Code[] values = new CancelledStatusReason7Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CancelledStatusReason7Code> {
+		@Override
+		public CancelledStatusReason7Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CancelledStatusReason7Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

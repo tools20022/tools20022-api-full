@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.FrankingClassCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Code defining the dvidend / distribution class where this franking
@@ -33,20 +38,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrankingClassCode#mmCashDividend
- * FrankingClassCode.mmCashDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrankingClassCode#CashDividend
+ * FrankingClassCode.CashDividend}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FrankingClassCode#Interest
+ * FrankingClassCode.Interest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrankingClassCode#mmInterest
- * FrankingClassCode.mmInterest}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrankingClassCode#NZDDeclared
+ * FrankingClassCode.NZDDeclared}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrankingClassCode#mmNZDDeclared
- * FrankingClassCode.mmNZDDeclared}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrankingClassCode#ScripDividend
+ * FrankingClassCode.ScripDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrankingClassCode#mmScripDividend
- * FrankingClassCode.mmScripDividend}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FrankingClassCode#mmSpecialDividend
- * FrankingClassCode.mmSpecialDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrankingClassCode#SpecialDividend
+ * FrankingClassCode.SpecialDividend}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -59,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class FrankingClassCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FrankingClassCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,12 +102,12 @@ public class FrankingClassCode {
 	 * definition} = "Franking information applies to ordinary cash dividend."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashDividend = new MMCode() {
+	public static final FrankingClassCode CashDividend = new FrankingClassCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividend";
 			definition = "Franking information applies to ordinary cash dividend.";
-			owner_lazy = () -> FrankingClassCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FrankingClassCode.mmObject();
 			codeName = "DVCA";
 		}
 	};
@@ -127,12 +132,12 @@ public class FrankingClassCode {
 	 * definition} = "Franking information applies to interest payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterest = new MMCode() {
+	public static final FrankingClassCode Interest = new FrankingClassCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
 			definition = "Franking information applies to interest payment.";
-			owner_lazy = () -> FrankingClassCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FrankingClassCode.mmObject();
 			codeName = "INTR";
 		}
 	};
@@ -160,12 +165,12 @@ public class FrankingClassCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNZDDeclared = new MMCode() {
+	public static final FrankingClassCode NZDDeclared = new FrankingClassCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NZDDeclared";
 			definition = "Franking information applies to NZD Declared dividend/distributions - supplementary dividend/distribution.";
-			owner_lazy = () -> FrankingClassCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FrankingClassCode.mmObject();
 			codeName = "NZDD";
 		}
 	};
@@ -190,12 +195,12 @@ public class FrankingClassCode {
 	 * definition} = "Franking information applies to scrip dividend."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmScripDividend = new MMCode() {
+	public static final FrankingClassCode ScripDividend = new FrankingClassCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScripDividend";
 			definition = "Franking information applies to scrip dividend.";
-			owner_lazy = () -> FrankingClassCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FrankingClassCode.mmObject();
 			codeName = "DVSC";
 		}
 	};
@@ -220,27 +225,61 @@ public class FrankingClassCode {
 	 * definition} = "Franking information applies to special dividend."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialDividend = new MMCode() {
+	public static final FrankingClassCode SpecialDividend = new FrankingClassCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialDividend";
 			definition = "Franking information applies to special dividend.";
-			owner_lazy = () -> FrankingClassCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FrankingClassCode.mmObject();
 			codeName = "SPEC";
 		}
 	};
+	final static private LinkedHashMap<String, FrankingClassCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FrankingClassCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FrankingClassCode";
 				definition = "Code defining the dvidend / distribution class where this franking information applies to.";
-				code_lazy = () -> Arrays.asList(FrankingClassCode.mmCashDividend, FrankingClassCode.mmInterest, FrankingClassCode.mmNZDDeclared, FrankingClassCode.mmScripDividend, FrankingClassCode.mmSpecialDividend);
 				derivation_lazy = () -> Arrays.asList(FrankingClass1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FrankingClassCode.CashDividend, com.tools20022.repository.codeset.FrankingClassCode.Interest,
+						com.tools20022.repository.codeset.FrankingClassCode.NZDDeclared, com.tools20022.repository.codeset.FrankingClassCode.ScripDividend, com.tools20022.repository.codeset.FrankingClassCode.SpecialDividend);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CashDividend.getCodeName().get(), CashDividend);
+		codesByName.put(Interest.getCodeName().get(), Interest);
+		codesByName.put(NZDDeclared.getCodeName().get(), NZDDeclared);
+		codesByName.put(ScripDividend.getCodeName().get(), ScripDividend);
+		codesByName.put(SpecialDividend.getCodeName().get(), SpecialDividend);
+	}
+
+	public static FrankingClassCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FrankingClassCode[] values() {
+		FrankingClassCode[] values = new FrankingClassCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FrankingClassCode> {
+		@Override
+		public FrankingClassCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FrankingClassCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

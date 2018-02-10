@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the type of statement."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatementType1Choice", propOrder = {"statementType", "proprietary"})
 public class StatementType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StmtTp", required = true)
 	protected StatementType1Code statementType;
 	/**
-	 * Specifes the statement message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +100,7 @@ public class StatementType1Choice {
 	 */
 	public static final MMMessageAttribute mmStatementType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatementType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.StatementType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StmtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,10 +111,11 @@ public class StatementType1Choice {
 			simpleType_lazy = () -> StatementType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected Extended350Code proprietary;
 	/**
-	 * Specifes the statement message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,7 +143,7 @@ public class StatementType1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatementType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.StatementType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,8 +158,8 @@ public class StatementType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatementType1Choice.mmStatementType, StatementType1Choice.mmProprietary);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatementType1Choice.mmStatementType, com.tools20022.repository.choice.StatementType1Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StatementType1Choice";
 				definition = "Specifies the type of statement.";
@@ -165,21 +168,21 @@ public class StatementType1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StmtTp", required = true)
 	public StatementType1Code getStatementType() {
 		return statementType;
 	}
 
-	public void setStatementType(StatementType1Code statementType) {
-		this.statementType = statementType;
+	public StatementType1Choice setStatementType(StatementType1Code statementType) {
+		this.statementType = Objects.requireNonNull(statementType);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public Extended350Code getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(Extended350Code proprietary) {
-		this.proprietary = proprietary;
+	public StatementType1Choice setProprietary(Extended350Code proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

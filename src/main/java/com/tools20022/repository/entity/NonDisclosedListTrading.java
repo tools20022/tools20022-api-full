@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -30,6 +31,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * List trading by which the buy-side provides details to the sell-side
@@ -44,6 +46,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.ListTrading
+ * ListTrading}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -64,9 +69,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * NonDisclosedListTrading.mmSideValue}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.ListTrading
- * ListTrading}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BidResponsePrice2#mmNonDisclosedBidDetails
+ * BidResponsePrice2.mmNonDisclosedBidDetails}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -78,19 +89,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.BidResponsePrice2#mmNonDisclosedBidDetails
- * BidResponsePrice2.mmNonDisclosedBidDetails}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,9 +110,8 @@ public class NonDisclosedListTrading extends ListTrading {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CountryCode bidByCurrency;
 	/**
-	 * Identifies a type of bid based on a common characteristic (the currency)
-	 * of all securities of a list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,6 +135,9 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
 	 * NonDisclosedListTrading}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 399 and 400</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -149,8 +153,9 @@ public class NonDisclosedListTrading extends ListTrading {
 	public static final MMBusinessAttribute mmBidByCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NonDisclosedBid2.mmBidByCurrency, NonDisclosedBid1.mmBidByCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "399 and 400"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BidByCurrency";
 			definition = "Identifies a type of bid based on a common characteristic (the currency) of all securities of a list.";
@@ -169,9 +174,8 @@ public class NonDisclosedListTrading extends ListTrading {
 	};
 	protected Max140Text bidBySector;
 	/**
-	 * Identifies a type of bid based on a common characteristic (the sector) of
-	 * all securities of a list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,6 +199,9 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
 	 * NonDisclosedListTrading}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 399 and 400</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -210,8 +217,9 @@ public class NonDisclosedListTrading extends ListTrading {
 	public static final MMBusinessAttribute mmBidBySector = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NonDisclosedBid2.mmBidBySector, NonDisclosedBid1.mmBidBySector);
-			elementContext_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "399 and 400"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BidBySector";
 			definition = "Identifies a type of bid based on a common characteristic (the sector) of all securities of a list.";
@@ -230,9 +238,8 @@ public class NonDisclosedListTrading extends ListTrading {
 	};
 	protected Max140Text bidByIndex;
 	/**
-	 * Identifies a type of bid based on a common characteristic (the index) of
-	 * all securities of a list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -256,6 +263,9 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
 	 * NonDisclosedListTrading}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 399 and 400</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -271,8 +281,9 @@ public class NonDisclosedListTrading extends ListTrading {
 	public static final MMBusinessAttribute mmBidByIndex = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NonDisclosedBid2.mmBidByIndex, NonDisclosedBid1.mmBidByIndex);
-			elementContext_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "399 and 400"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BidByIndex";
 			definition = "Identifies a type of bid based on a common characteristic (the index) of all securities of a list.";
@@ -291,8 +302,8 @@ public class NonDisclosedListTrading extends ListTrading {
 	};
 	protected Number numberOfBidders;
 	/**
-	 * Indicates the total number of bidders participating to a list trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -327,8 +338,8 @@ public class NonDisclosedListTrading extends ListTrading {
 	public static final MMBusinessAttribute mmNumberOfBidders = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Bid1.mmTotalNumberOfBidders);
-			elementContext_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberOfBidders";
 			definition = "Indicates the total number of bidders participating to a list trade.";
@@ -347,9 +358,8 @@ public class NonDisclosedListTrading extends ListTrading {
 	};
 	protected CurrencyAndAmount sideValue;
 	/**
-	 * Indicates the monetary value in either direction (buy or sell) without
-	 * revealing whether it is the intention to buy or sell.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -374,6 +384,9 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * {@linkplain com.tools20022.repository.entity.NonDisclosedListTrading
 	 * NonDisclosedListTrading}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 396, FIXSynonym: 397</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -389,8 +402,9 @@ public class NonDisclosedListTrading extends ListTrading {
 	public static final MMBusinessAttribute mmSideValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(LiquidityAndStatistics1.mmSideValue1, LiquidityAndStatistics1.mmSideValue2);
-			elementContext_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "396"), new FIXSynonym(this, "397"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SideValue";
 			definition = "Indicates the monetary value in either direction (buy or sell) without revealing whether it is the intention to buy or sell.";
@@ -411,7 +425,7 @@ public class NonDisclosedListTrading extends ListTrading {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NonDisclosedListTrading";
 				definition = "List trading by which the buy-side provides details to the sell-side information about the sector, country, index and potential market impact of the financial instrument to be bought or sold. Using this information, the sell-side firms bid for the trade.";
@@ -436,39 +450,44 @@ public class NonDisclosedListTrading extends ListTrading {
 		return bidByCurrency;
 	}
 
-	public void setBidByCurrency(CountryCode bidByCurrency) {
-		this.bidByCurrency = bidByCurrency;
+	public NonDisclosedListTrading setBidByCurrency(CountryCode bidByCurrency) {
+		this.bidByCurrency = Objects.requireNonNull(bidByCurrency);
+		return this;
 	}
 
 	public Max140Text getBidBySector() {
 		return bidBySector;
 	}
 
-	public void setBidBySector(Max140Text bidBySector) {
-		this.bidBySector = bidBySector;
+	public NonDisclosedListTrading setBidBySector(Max140Text bidBySector) {
+		this.bidBySector = Objects.requireNonNull(bidBySector);
+		return this;
 	}
 
 	public Max140Text getBidByIndex() {
 		return bidByIndex;
 	}
 
-	public void setBidByIndex(Max140Text bidByIndex) {
-		this.bidByIndex = bidByIndex;
+	public NonDisclosedListTrading setBidByIndex(Max140Text bidByIndex) {
+		this.bidByIndex = Objects.requireNonNull(bidByIndex);
+		return this;
 	}
 
 	public Number getNumberOfBidders() {
 		return numberOfBidders;
 	}
 
-	public void setNumberOfBidders(Number numberOfBidders) {
-		this.numberOfBidders = numberOfBidders;
+	public NonDisclosedListTrading setNumberOfBidders(Number numberOfBidders) {
+		this.numberOfBidders = Objects.requireNonNull(numberOfBidders);
+		return this;
 	}
 
 	public CurrencyAndAmount getSideValue() {
 		return sideValue;
 	}
 
-	public void setSideValue(CurrencyAndAmount sideValue) {
-		this.sideValue = sideValue;
+	public NonDisclosedListTrading setSideValue(CurrencyAndAmount sideValue) {
+		this.sideValue = Objects.requireNonNull(sideValue);
+		return this;
 	}
 }

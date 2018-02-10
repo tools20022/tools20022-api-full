@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.WithdrawalReasonCode;
+import com.tools20022.repository.codeset.WithdrawalReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason that an alleged trade is withdrawn.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.WithdrawalReasonCode
- * WithdrawalReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WithdrawalReason1Code#mmRejected
- * WithdrawalReason1Code.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.WithdrawalReason1Code#Rejected
+ * WithdrawalReason1Code.Rejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WithdrawalReason1Code#mmRescinded
- * WithdrawalReason1Code.mmRescinded}</li>
+ * {@linkplain com.tools20022.repository.codeset.WithdrawalReason1Code#Rescinded
+ * WithdrawalReason1Code.Rescinded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.WithdrawalReason1Code#mmWithdrawn
- * WithdrawalReason1Code.mmWithdrawn}</li>
+ * {@linkplain com.tools20022.repository.codeset.WithdrawalReason1Code#Withdrawn
+ * WithdrawalReason1Code.Withdrawn}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.WithdrawalReasonCode
+ * WithdrawalReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason that an alleged trade is withdrawn."</li>
  * </ul>
  */
-public class WithdrawalReason1Code extends WithdrawalReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class WithdrawalReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class WithdrawalReason1Code extends WithdrawalReasonCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final WithdrawalReason1Code Rejected = new WithdrawalReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> WithdrawalReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.WithdrawalReason1Code.mmObject();
+			codeName = WithdrawalReasonCode.Rejected.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class WithdrawalReason1Code extends WithdrawalReasonCode {
 	 * name} = "Rescinded"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRescinded = new MMCode() {
+	public static final WithdrawalReason1Code Rescinded = new WithdrawalReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rescinded";
-			owner_lazy = () -> WithdrawalReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.WithdrawalReason1Code.mmObject();
+			codeName = WithdrawalReasonCode.Rescinded.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class WithdrawalReason1Code extends WithdrawalReasonCode {
 	 * name} = "Withdrawn"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithdrawn = new MMCode() {
+	public static final WithdrawalReason1Code Withdrawn = new WithdrawalReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withdrawn";
-			owner_lazy = () -> WithdrawalReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.WithdrawalReason1Code.mmObject();
+			codeName = WithdrawalReasonCode.Withdrawn.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, WithdrawalReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected WithdrawalReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RJCT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "WithdrawalReason1Code";
 				definition = "Specifies the reason that an alleged trade is withdrawn.";
-				code_lazy = () -> Arrays.asList(WithdrawalReason1Code.mmRejected, WithdrawalReason1Code.mmRescinded, WithdrawalReason1Code.mmWithdrawn);
 				trace_lazy = () -> WithdrawalReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WithdrawalReason1Code.Rejected, com.tools20022.repository.codeset.WithdrawalReason1Code.Rescinded,
+						com.tools20022.repository.codeset.WithdrawalReason1Code.Withdrawn);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+		codesByName.put(Rescinded.getCodeName().get(), Rescinded);
+		codesByName.put(Withdrawn.getCodeName().get(), Withdrawn);
+	}
+
+	public static WithdrawalReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static WithdrawalReason1Code[] values() {
+		WithdrawalReason1Code[] values = new WithdrawalReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, WithdrawalReason1Code> {
+		@Override
+		public WithdrawalReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(WithdrawalReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -24,9 +24,8 @@ import com.tools20022.repository.entity.ObligationFulfilment;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Process in which the buyer/CCP repurchases shares of stock because the seller
@@ -40,6 +39,10 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
+ * ObligationFulfilment}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -56,22 +59,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.BuyIn#mmRelatedSecuritiesClearingProcess
  * BuyIn.mmRelatedSecuritiesClearingProcess}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
- * ObligationFulfilment}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn3 BuyIn3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashCompensation1
- * CashCompensation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn2 BuyIn2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn1 BuyIn1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn4 BuyIn4}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,10 +79,22 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn3 BuyIn3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashCompensation1
+ * CashCompensation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn2 BuyIn2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn1 BuyIn1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn4 BuyIn4}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -113,8 +112,8 @@ public class BuyIn extends ObligationFulfilment {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.SecuritiesQuantity> securitiesCompensation;
 	/**
-	 * Securities bought in a buy-in process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,8 +157,8 @@ public class BuyIn extends ObligationFulfilment {
 	public static final MMBusinessAssociationEnd mmSecuritiesCompensation = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(BuyIn3.mmInitialQuantity, BuyIn3.mmUncoveredQuantity, BuyIn2.mmSecuritiesBuyIn);
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesCompensation";
 			definition = "Securities bought in a buy-in process.";
@@ -171,8 +170,8 @@ public class BuyIn extends ObligationFulfilment {
 	};
 	protected ISODate buyinDate;
 	/**
-	 * Date at which the buy-in occurs.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,8 +207,8 @@ public class BuyIn extends ObligationFulfilment {
 	public static final MMBusinessAttribute mmBuyinDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BuyIn2.mmDate, BuyIn1.mmExpectedBuyInDate, BuyIn4.mmExpectedBuyInDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuyinDate";
 			definition = "Date at which the buy-in occurs.";
@@ -228,8 +227,8 @@ public class BuyIn extends ObligationFulfilment {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesPricing> buyInPrice;
 	/**
-	 * Provides the price of the buy-in.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -269,8 +268,8 @@ public class BuyIn extends ObligationFulfilment {
 	public static final MMBusinessAssociationEnd mmBuyInPrice = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(BuyIn2.mmPrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuyInPrice";
 			definition = "Provides the price of the buy-in.";
@@ -282,9 +281,8 @@ public class BuyIn extends ObligationFulfilment {
 	};
 	protected ActiveCurrencyAndAmount fees;
 	/**
-	 * Fees related to a cash compensation or to a securities compensation in a
-	 * buy-in process
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -322,8 +320,8 @@ public class BuyIn extends ObligationFulfilment {
 	public static final MMBusinessAttribute mmFees = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesCompensation1.mmFees, CashCompensation1.mmFees);
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Fees";
 			definition = "Fees related to a cash compensation or to a securities compensation in a buy-in process";
@@ -342,11 +340,8 @@ public class BuyIn extends ObligationFulfilment {
 	};
 	protected List<com.tools20022.repository.entity.PaymentObligation> cashCompensation;
 	/**
-	 * In case securities are not available to be bought-in by the buyer/CCP, a
-	 * cash compensation is required from the seller. It is derived from the
-	 * association ResultingObligation between ObligationFulfillment and
-	 * Obligation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -389,8 +384,8 @@ public class BuyIn extends ObligationFulfilment {
 	public static final MMBusinessAssociationEnd mmCashCompensation = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(BuyIn2.mmRequiredCashCompensation);
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashCompensation";
 			definition = "In case securities are not available to be bought-in by the buyer/CCP, a cash compensation is required from the seller. It is derived from the association ResultingObligation between ObligationFulfillment and Obligation.";
@@ -402,8 +397,8 @@ public class BuyIn extends ObligationFulfilment {
 	};
 	protected SecuritiesClearing relatedSecuritiesClearingProcess;
 	/**
-	 * Clearing process which includes the buy-in.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -435,8 +430,8 @@ public class BuyIn extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSecuritiesClearingProcess = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesClearingProcess";
 			definition = "Clearing process which includes the buy-in.";
@@ -451,7 +446,7 @@ public class BuyIn extends ObligationFulfilment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BuyIn";
 				definition = "Process in which the buyer/CCP repurchases shares of stock because the seller either failed to deliver the shares or did not deliver them in a timely fashion. The seller has to make up the price difference if the new shares are more expensive than originally agreed to.";
@@ -472,50 +467,56 @@ public class BuyIn extends ObligationFulfilment {
 	}
 
 	public List<SecuritiesQuantity> getSecuritiesCompensation() {
-		return securitiesCompensation;
+		return securitiesCompensation == null ? securitiesCompensation = new ArrayList<>() : securitiesCompensation;
 	}
 
-	public void setSecuritiesCompensation(List<com.tools20022.repository.entity.SecuritiesQuantity> securitiesCompensation) {
-		this.securitiesCompensation = securitiesCompensation;
+	public BuyIn setSecuritiesCompensation(List<com.tools20022.repository.entity.SecuritiesQuantity> securitiesCompensation) {
+		this.securitiesCompensation = Objects.requireNonNull(securitiesCompensation);
+		return this;
 	}
 
 	public ISODate getBuyinDate() {
 		return buyinDate;
 	}
 
-	public void setBuyinDate(ISODate buyinDate) {
-		this.buyinDate = buyinDate;
+	public BuyIn setBuyinDate(ISODate buyinDate) {
+		this.buyinDate = Objects.requireNonNull(buyinDate);
+		return this;
 	}
 
 	public List<SecuritiesPricing> getBuyInPrice() {
-		return buyInPrice;
+		return buyInPrice == null ? buyInPrice = new ArrayList<>() : buyInPrice;
 	}
 
-	public void setBuyInPrice(List<com.tools20022.repository.entity.SecuritiesPricing> buyInPrice) {
-		this.buyInPrice = buyInPrice;
+	public BuyIn setBuyInPrice(List<com.tools20022.repository.entity.SecuritiesPricing> buyInPrice) {
+		this.buyInPrice = Objects.requireNonNull(buyInPrice);
+		return this;
 	}
 
 	public ActiveCurrencyAndAmount getFees() {
 		return fees;
 	}
 
-	public void setFees(ActiveCurrencyAndAmount fees) {
-		this.fees = fees;
+	public BuyIn setFees(ActiveCurrencyAndAmount fees) {
+		this.fees = Objects.requireNonNull(fees);
+		return this;
 	}
 
 	public List<PaymentObligation> getCashCompensation() {
-		return cashCompensation;
+		return cashCompensation == null ? cashCompensation = new ArrayList<>() : cashCompensation;
 	}
 
-	public void setCashCompensation(List<com.tools20022.repository.entity.PaymentObligation> cashCompensation) {
-		this.cashCompensation = cashCompensation;
+	public BuyIn setCashCompensation(List<com.tools20022.repository.entity.PaymentObligation> cashCompensation) {
+		this.cashCompensation = Objects.requireNonNull(cashCompensation);
+		return this;
 	}
 
-	public SecuritiesClearing getRelatedSecuritiesClearingProcess() {
-		return relatedSecuritiesClearingProcess;
+	public Optional<SecuritiesClearing> getRelatedSecuritiesClearingProcess() {
+		return relatedSecuritiesClearingProcess == null ? Optional.empty() : Optional.of(relatedSecuritiesClearingProcess);
 	}
 
-	public void setRelatedSecuritiesClearingProcess(com.tools20022.repository.entity.SecuritiesClearing relatedSecuritiesClearingProcess) {
+	public BuyIn setRelatedSecuritiesClearingProcess(com.tools20022.repository.entity.SecuritiesClearing relatedSecuritiesClearingProcess) {
 		this.relatedSecuritiesClearingProcess = relatedSecuritiesClearingProcess;
+		return this;
 	}
 }

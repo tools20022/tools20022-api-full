@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.Option;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountsAndValueDate3", propOrder = {"callAmount", "putAmount", "finalSettlementDate"})
 public class AmountsAndValueDate3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CallAmt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount callAmount;
 	/**
-	 * Call amount and currency of a foreign exchange option trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +119,7 @@ public class AmountsAndValueDate3 {
 	public static final MMMessageAttribute mmCallAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyOption.mmCallAmount;
-			componentContext_lazy = () -> AmountsAndValueDate3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate3.mmObject();
 			isDerived = false;
 			xmlTag = "CallAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +130,11 @@ public class AmountsAndValueDate3 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "PutAmt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount putAmount;
 	/**
-	 * Put amount and currency of a foreign exchange option trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +169,7 @@ public class AmountsAndValueDate3 {
 	public static final MMMessageAttribute mmPutAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyOption.mmPutAmount;
-			componentContext_lazy = () -> AmountsAndValueDate3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate3.mmObject();
 			isDerived = false;
 			xmlTag = "PutAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,10 +180,11 @@ public class AmountsAndValueDate3 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "FnlSttlmDt")
 	protected ISODate finalSettlementDate;
 	/**
-	 * Date on which the trade is settled, ie, the amounts are due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,7 +218,7 @@ public class AmountsAndValueDate3 {
 	public static final MMMessageAttribute mmFinalSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Option.mmFinalSettlementDate;
-			componentContext_lazy = () -> AmountsAndValueDate3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate3.mmObject();
 			isDerived = false;
 			xmlTag = "FnlSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,9 +233,10 @@ public class AmountsAndValueDate3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountsAndValueDate3.mmCallAmount, AmountsAndValueDate3.mmPutAmount, AmountsAndValueDate3.mmFinalSettlementDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountsAndValueDate3.mmCallAmount, com.tools20022.repository.msg.AmountsAndValueDate3.mmPutAmount,
+						com.tools20022.repository.msg.AmountsAndValueDate3.mmFinalSettlementDate);
 				trace_lazy = () -> CurrencyOption.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AmountsAndValueDate3";
 				definition = "Specifies the value date and the amounts traded in a foreign exchange option trade.";
@@ -239,30 +245,30 @@ public class AmountsAndValueDate3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CallAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getCallAmount() {
 		return callAmount;
 	}
 
-	public void setCallAmount(ActiveOrHistoricCurrencyAndAmount callAmount) {
-		this.callAmount = callAmount;
+	public AmountsAndValueDate3 setCallAmount(ActiveOrHistoricCurrencyAndAmount callAmount) {
+		this.callAmount = Objects.requireNonNull(callAmount);
+		return this;
 	}
 
-	@XmlElement(name = "PutAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getPutAmount() {
 		return putAmount;
 	}
 
-	public void setPutAmount(ActiveOrHistoricCurrencyAndAmount putAmount) {
-		this.putAmount = putAmount;
+	public AmountsAndValueDate3 setPutAmount(ActiveOrHistoricCurrencyAndAmount putAmount) {
+		this.putAmount = Objects.requireNonNull(putAmount);
+		return this;
 	}
 
-	@XmlElement(name = "FnlSttlmDt")
-	public ISODate getFinalSettlementDate() {
-		return finalSettlementDate;
+	public Optional<ISODate> getFinalSettlementDate() {
+		return finalSettlementDate == null ? Optional.empty() : Optional.of(finalSettlementDate);
 	}
 
-	public void setFinalSettlementDate(ISODate finalSettlementDate) {
+	public AmountsAndValueDate3 setFinalSettlementDate(ISODate finalSettlementDate) {
 		this.finalSettlementDate = finalSettlementDate;
+		return this;
 	}
 }

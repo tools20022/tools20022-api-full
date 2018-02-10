@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.DisputeManagement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides the dispute details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Dispute1", propOrder = {"marginCallRequestIdentification", "disputedAmount", "disputeDate"})
 public class Dispute1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MrgnCallReqId", required = true)
 	protected Max35Text marginCallRequestIdentification;
 	/**
-	 * Unique identification for the margin call request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +104,7 @@ public class Dispute1 {
 	 */
 	public static final MMMessageAttribute mmMarginCallRequestIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Dispute1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Dispute1.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnCallReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +115,11 @@ public class Dispute1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DsptdAmt", required = true)
 	protected ActiveCurrencyAndAmount disputedAmount;
 	/**
-	 * Disputed amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,7 +152,7 @@ public class Dispute1 {
 	public static final MMMessageAttribute mmDisputedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DisputeManagement.mmDisputedAmount;
-			componentContext_lazy = () -> Dispute1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Dispute1.mmObject();
 			isDerived = false;
 			xmlTag = "DsptdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,10 +163,11 @@ public class Dispute1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "DsptDt", required = true)
 	protected ISODate disputeDate;
 	/**
-	 * Date of dispute.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,7 +199,7 @@ public class Dispute1 {
 	public static final MMMessageAttribute mmDisputeDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DisputeManagement.mmDisputeDate;
-			componentContext_lazy = () -> Dispute1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Dispute1.mmObject();
 			isDerived = false;
 			xmlTag = "DsptDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,9 +214,10 @@ public class Dispute1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Dispute1.mmMarginCallRequestIdentification, Dispute1.mmDisputedAmount, Dispute1.mmDisputeDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Dispute1.mmMarginCallRequestIdentification, com.tools20022.repository.msg.Dispute1.mmDisputedAmount,
+						com.tools20022.repository.msg.Dispute1.mmDisputeDate);
 				trace_lazy = () -> DisputeManagement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Dispute1";
 				definition = "Provides the dispute details.";
@@ -221,30 +226,30 @@ public class Dispute1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MrgnCallReqId", required = true)
 	public Max35Text getMarginCallRequestIdentification() {
 		return marginCallRequestIdentification;
 	}
 
-	public void setMarginCallRequestIdentification(Max35Text marginCallRequestIdentification) {
-		this.marginCallRequestIdentification = marginCallRequestIdentification;
+	public Dispute1 setMarginCallRequestIdentification(Max35Text marginCallRequestIdentification) {
+		this.marginCallRequestIdentification = Objects.requireNonNull(marginCallRequestIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "DsptdAmt", required = true)
 	public ActiveCurrencyAndAmount getDisputedAmount() {
 		return disputedAmount;
 	}
 
-	public void setDisputedAmount(ActiveCurrencyAndAmount disputedAmount) {
-		this.disputedAmount = disputedAmount;
+	public Dispute1 setDisputedAmount(ActiveCurrencyAndAmount disputedAmount) {
+		this.disputedAmount = Objects.requireNonNull(disputedAmount);
+		return this;
 	}
 
-	@XmlElement(name = "DsptDt", required = true)
 	public ISODate getDisputeDate() {
 		return disputeDate;
 	}
 
-	public void setDisputeDate(ISODate disputeDate) {
-		this.disputeDate = disputeDate;
+	public Dispute1 setDisputeDate(ISODate disputeDate) {
+		this.disputeDate = Objects.requireNonNull(disputeDate);
+		return this;
 	}
 }

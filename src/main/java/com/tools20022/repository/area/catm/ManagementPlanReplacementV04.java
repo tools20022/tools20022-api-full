@@ -30,6 +30,7 @@ import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementI
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -37,25 +38,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TerminalManagementLatestVersion
- * TerminalManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOPreviousversion
- * CardPaymentsExchangesTerminalManagementISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20142015
- * CAPETerminalManagementMaintenance20142015}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "MgmtPlanRplcmnt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -71,6 +53,25 @@ import javax.xml.bind.annotation.*;
  * ManagementPlanReplacementV04.mmSecurityTrailer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOPreviousversion
+ * CardPaymentsExchangesTerminalManagementISOPreviousversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20142015
+ * CAPETerminalManagementMaintenance20142015}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "MgmtPlanRplcmnt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TerminalManagementLatestVersion
+ * TerminalManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code catm.002.001.04}</li>
@@ -98,15 +99,16 @@ import javax.xml.bind.annotation.*;
  * ManagementPlanReplacementV03}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ManagementPlanReplacementV04", propOrder = {"header", "managementPlan", "securityTrailer"})
 public class ManagementPlanReplacementV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header14 header;
 	/**
-	 * Set of characteristics related to the transfer of the management plan.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,11 +163,11 @@ public class ManagementPlanReplacementV04 {
 			}
 		}
 	};
+	@XmlElement(name = "MgmtPlan", required = true)
 	protected ManagementPlan4 managementPlan;
 	/**
-	 * Sequence of terminal maintenance actions to be performed by a point of
-	 * interaction (POI).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -221,10 +223,11 @@ public class ManagementPlanReplacementV04 {
 			}
 		}
 	};
+	@XmlElement(name = "SctyTrlr", required = true)
 	protected ContentInformationType12 securityTrailer;
 	/**
-	 * Trailer of the message containing a MAC or a digital signature.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -313,34 +316,34 @@ public class ManagementPlanReplacementV04 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header14 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header14 header) {
-		this.header = header;
+	public ManagementPlanReplacementV04 setHeader(Header14 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "MgmtPlan", required = true)
 	public ManagementPlan4 getManagementPlan() {
 		return managementPlan;
 	}
 
-	public void setManagementPlan(ManagementPlan4 managementPlan) {
-		this.managementPlan = managementPlan;
+	public ManagementPlanReplacementV04 setManagementPlan(ManagementPlan4 managementPlan) {
+		this.managementPlan = Objects.requireNonNull(managementPlan);
+		return this;
 	}
 
-	@XmlElement(name = "SctyTrlr", required = true)
 	public ContentInformationType12 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
-	public void setSecurityTrailer(ContentInformationType12 securityTrailer) {
-		this.securityTrailer = securityTrailer;
+	public ManagementPlanReplacementV04 setSecurityTrailer(ContentInformationType12 securityTrailer) {
+		this.securityTrailer = Objects.requireNonNull(securityTrailer);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catm.002.04.04")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:catm.002.001.04")
 	static public class Document {
 		@XmlElement(name = "MgmtPlanRplcmnt", required = true)
 		public ManagementPlanReplacementV04 messageBody;

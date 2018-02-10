@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ReportPeriodActivityCode;
+import com.tools20022.repository.codeset.ReportPeriodActivity1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of report activity for a specific reporting period.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivityCode
- * ReportPeriodActivityCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivity1Code#mmNoTransaction
- * ReportPeriodActivity1Code.mmNoTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivity1Code#NoTransaction
+ * ReportPeriodActivity1Code.NoTransaction}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivityCode
+ * ReportPeriodActivityCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,7 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the type of report activity for a specific reporting period."</li>
  * </ul>
  */
-public class ReportPeriodActivity1Code extends ReportPeriodActivityCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ReportPeriodActivity1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -75,25 +80,55 @@ public class ReportPeriodActivity1Code extends ReportPeriodActivityCode {
 	 * name} = "NoTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoTransaction = new MMCode() {
+	public static final ReportPeriodActivity1Code NoTransaction = new ReportPeriodActivity1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoTransaction";
-			owner_lazy = () -> ReportPeriodActivity1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportPeriodActivity1Code.mmObject();
+			codeName = ReportPeriodActivityCode.NoTransaction.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ReportPeriodActivity1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ReportPeriodActivity1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportPeriodActivity1Code";
 				definition = "Specifies the type of report activity for a specific reporting period.";
-				code_lazy = () -> Arrays.asList(ReportPeriodActivity1Code.mmNoTransaction);
 				trace_lazy = () -> ReportPeriodActivityCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportPeriodActivity1Code.NoTransaction);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NoTransaction.getCodeName().get(), NoTransaction);
+	}
+
+	public static ReportPeriodActivity1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ReportPeriodActivity1Code[] values() {
+		ReportPeriodActivity1Code[] values = new ReportPeriodActivity1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ReportPeriodActivity1Code> {
+		@Override
+		public ReportPeriodActivity1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ReportPeriodActivity1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

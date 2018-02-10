@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -28,6 +29,8 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +60,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalReasonInforrmationRule#forAcceptedStatusReason1
+ * ConstraintAdditionalReasonInforrmationRule.forAcceptedStatusReason1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,16 +89,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcceptedStatusReason1", propOrder = {"reasonCode", "additionalReasonInformation"})
 public class AcceptedStatusReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RsnCd", required = true)
 	protected AcceptedReason1Choice reasonCode;
 	/**
-	 * Specifies the reason why the instruction or instruction cancellation has
-	 * been accepted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -106,6 +117,9 @@ public class AcceptedStatusReason1 {
 	 * AcceptedStatusReason1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RsnCd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :16R::REAS</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -133,9 +147,10 @@ public class AcceptedStatusReason1 {
 	public static final MMMessageAssociationEnd mmReasonCode = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatusReason.mmAcceptedReason;
-			componentContext_lazy = () -> AcceptedStatusReason1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptedStatusReason1.mmObject();
 			isDerived = false;
 			xmlTag = "RsnCd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":16R::REAS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonCode";
 			definition = "Specifies the reason why the instruction or instruction cancellation has been accepted.";
@@ -146,10 +161,11 @@ public class AcceptedStatusReason1 {
 			type_lazy = () -> AcceptedReason1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRsnInf")
 	protected Max210Text additionalReasonInformation;
 	/**
-	 * Provides additional information about the processed instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,6 +184,9 @@ public class AcceptedStatusReason1 {
 	 * AcceptedStatusReason1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlRsnInf"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70D::REAS</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -194,9 +213,10 @@ public class AcceptedStatusReason1 {
 	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> AcceptedStatusReason1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptedStatusReason1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70D::REAS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Provides additional information about the processed instruction.";
@@ -210,9 +230,10 @@ public class AcceptedStatusReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AcceptedStatusReason1.mmReasonCode, AcceptedStatusReason1.mmAdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptedStatusReason1.mmReasonCode, com.tools20022.repository.msg.AcceptedStatusReason1.mmAdditionalReasonInformation);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalReasonInforrmationRule.forAcceptedStatusReason1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptedStatusReason1";
 				definition = "Specifies reasons for the accepted status.";
@@ -222,21 +243,21 @@ public class AcceptedStatusReason1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RsnCd", required = true)
 	public AcceptedReason1Choice getReasonCode() {
 		return reasonCode;
 	}
 
-	public void setReasonCode(AcceptedReason1Choice reasonCode) {
-		this.reasonCode = reasonCode;
+	public AcceptedStatusReason1 setReasonCode(AcceptedReason1Choice reasonCode) {
+		this.reasonCode = Objects.requireNonNull(reasonCode);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRsnInf")
-	public Max210Text getAdditionalReasonInformation() {
-		return additionalReasonInformation;
+	public Optional<Max210Text> getAdditionalReasonInformation() {
+		return additionalReasonInformation == null ? Optional.empty() : Optional.of(additionalReasonInformation);
 	}
 
-	public void setAdditionalReasonInformation(Max210Text additionalReasonInformation) {
+	public AcceptedStatusReason1 setAdditionalReasonInformation(Max210Text additionalReasonInformation) {
 		this.additionalReasonInformation = additionalReasonInformation;
+		return this;
 	}
 }

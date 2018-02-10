@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * TerminalManagementDataSet8}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "TerminalManagementDataSet12", propOrder = {"identification", "POIChallenge", "TMChallenge", "sessionKey"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "TerminalManagementDataSet12", propOrder = {"identification", "pOIChallenge", "tMChallenge", "sessionKey"})
 public class TerminalManagementDataSet12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected DataSetIdentification4 identification;
 	/**
-	 * Identification of the required data set.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +131,7 @@ public class TerminalManagementDataSet12 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TerminalManagementDataSet12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet12.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,10 +144,11 @@ public class TerminalManagementDataSet12 {
 			complexType_lazy = () -> com.tools20022.repository.msg.DataSetIdentification4.mmObject();
 		}
 	};
+	@XmlElement(name = "POIChllng")
 	protected Max140Binary pOIChallenge;
 	/**
-	 * Point of interaction challenge for cryptographic key injection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,7 +190,7 @@ public class TerminalManagementDataSet12 {
 	 */
 	public static final MMMessageAttribute mmPOIChallenge = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TerminalManagementDataSet12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet12.mmObject();
 			isDerived = false;
 			xmlTag = "POIChllng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,10 +203,11 @@ public class TerminalManagementDataSet12 {
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "TMChllng")
 	protected Max140Binary tMChallenge;
 	/**
-	 * Terminal manager challenge for cryptographic key injection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,7 +249,7 @@ public class TerminalManagementDataSet12 {
 	 */
 	public static final MMMessageAttribute mmTMChallenge = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TerminalManagementDataSet12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet12.mmObject();
 			isDerived = false;
 			xmlTag = "TMChllng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,11 +262,11 @@ public class TerminalManagementDataSet12 {
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "SsnKey")
 	protected CryptographicKey5 sessionKey;
 	/**
-	 * Temporary encryption key that the host will use for protecting keys to
-	 * download.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -297,7 +302,7 @@ public class TerminalManagementDataSet12 {
 	 */
 	public static final MMMessageAssociationEnd mmSessionKey = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TerminalManagementDataSet12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet12.mmObject();
 			isDerived = false;
 			xmlTag = "SsnKey";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -314,8 +319,9 @@ public class TerminalManagementDataSet12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TerminalManagementDataSet12.mmIdentification, TerminalManagementDataSet12.mmPOIChallenge, TerminalManagementDataSet12.mmTMChallenge, TerminalManagementDataSet12.mmSessionKey);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet12.mmIdentification, com.tools20022.repository.msg.TerminalManagementDataSet12.mmPOIChallenge,
+						com.tools20022.repository.msg.TerminalManagementDataSet12.mmTMChallenge, com.tools20022.repository.msg.TerminalManagementDataSet12.mmSessionKey);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementDataSet12";
 				definition = "Identification of requested data set.";
@@ -326,39 +332,39 @@ public class TerminalManagementDataSet12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DataSetIdentification4 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.DataSetIdentification4 identification) {
-		this.identification = identification;
+	public TerminalManagementDataSet12 setIdentification(com.tools20022.repository.msg.DataSetIdentification4 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "POIChllng")
-	public Max140Binary getPOIChallenge() {
-		return pOIChallenge;
+	public Optional<Max140Binary> getPOIChallenge() {
+		return pOIChallenge == null ? Optional.empty() : Optional.of(pOIChallenge);
 	}
 
-	public void setPOIChallenge(Max140Binary pOIChallenge) {
+	public TerminalManagementDataSet12 setPOIChallenge(Max140Binary pOIChallenge) {
 		this.pOIChallenge = pOIChallenge;
+		return this;
 	}
 
-	@XmlElement(name = "TMChllng")
-	public Max140Binary getTMChallenge() {
-		return tMChallenge;
+	public Optional<Max140Binary> getTMChallenge() {
+		return tMChallenge == null ? Optional.empty() : Optional.of(tMChallenge);
 	}
 
-	public void setTMChallenge(Max140Binary tMChallenge) {
+	public TerminalManagementDataSet12 setTMChallenge(Max140Binary tMChallenge) {
 		this.tMChallenge = tMChallenge;
+		return this;
 	}
 
-	@XmlElement(name = "SsnKey")
-	public CryptographicKey5 getSessionKey() {
-		return sessionKey;
+	public Optional<CryptographicKey5> getSessionKey() {
+		return sessionKey == null ? Optional.empty() : Optional.of(sessionKey);
 	}
 
-	public void setSessionKey(com.tools20022.repository.msg.CryptographicKey5 sessionKey) {
+	public TerminalManagementDataSet12 setSessionKey(com.tools20022.repository.msg.CryptographicKey5 sessionKey) {
 		this.sessionKey = sessionKey;
+		return this;
 	}
 }

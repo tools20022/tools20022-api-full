@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RankCode;
+import com.tools20022.repository.codeset.Rank1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the rank of an element (party, market) in a specific environment.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RankCode RankCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Rank1Code#mmPrimary
- * Rank1Code.mmPrimary}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Rank1Code#mmSecondary
- * Rank1Code.mmSecondary}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Rank1Code#Primary
+ * Rank1Code.Primary}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Rank1Code#Secondary
+ * Rank1Code.Secondary}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RankCode RankCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,7 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class Rank1Code extends RankCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Rank1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -75,11 +80,12 @@ public class Rank1Code extends RankCode {
 	 * name} = "Primary"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrimary = new MMCode() {
+	public static final Rank1Code Primary = new Rank1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Primary";
-			owner_lazy = () -> Rank1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Rank1Code.mmObject();
+			codeName = RankCode.Primary.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -97,25 +103,56 @@ public class Rank1Code extends RankCode {
 	 * name} = "Secondary"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecondary = new MMCode() {
+	public static final Rank1Code Secondary = new Rank1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Secondary";
-			owner_lazy = () -> Rank1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Rank1Code.mmObject();
+			codeName = RankCode.Secondary.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Rank1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Rank1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Rank1Code";
 				definition = "Specifies the rank of an element (party, market) in a specific environment.";
-				code_lazy = () -> Arrays.asList(Rank1Code.mmPrimary, Rank1Code.mmSecondary);
 				trace_lazy = () -> RankCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Rank1Code.Primary, com.tools20022.repository.codeset.Rank1Code.Secondary);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Primary.getCodeName().get(), Primary);
+		codesByName.put(Secondary.getCodeName().get(), Secondary);
+	}
+
+	public static Rank1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Rank1Code[] values() {
+		Rank1Code[] values = new Rank1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Rank1Code> {
+		@Override
+		public Rank1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Rank1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

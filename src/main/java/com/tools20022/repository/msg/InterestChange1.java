@@ -32,6 +32,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -83,8 +84,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -96,17 +97,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Variable interest payment of a security."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InterestChange1", propOrder = {"fixingDate", "reportingDate", "resetDate", "spreadRate", "variableRateChangeFrequency", "rateResetSource", "arriers", "indexRateBasis", "indexRateCurrency", "indexRateFrequency",
 		"indexRateMultiplier"})
 public class InterestChange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FxgDt", required = true)
 	protected ISODateTime fixingDate;
 	/**
-	 * Date/time at which the rate determination is made, also called
-	 * determination date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,7 +142,7 @@ public class InterestChange1 {
 	public static final MMMessageAttribute mmFixingDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> VariableInterest.mmFixingDate;
-			componentContext_lazy = () -> InterestChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "FxgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,10 +153,11 @@ public class InterestChange1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "RptgDt", required = true)
 	protected ISODateTime reportingDate;
 	/**
-	 * Last date the new interest rate must be reported to the market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,7 +191,7 @@ public class InterestChange1 {
 	public static final MMMessageAttribute mmReportingDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> VariableInterest.mmReportingDate;
-			componentContext_lazy = () -> InterestChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,11 +202,11 @@ public class InterestChange1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "RstDt", required = true)
 	protected ISODateTime resetDate;
 	/**
-	 * Date/time at which the interest rate of an interest bearing security will
-	 * be calculated and reset, according to the terms of the issue.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -239,7 +241,7 @@ public class InterestChange1 {
 	public static final MMMessageAttribute mmResetDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> VariableInterest.mmResetDate;
-			componentContext_lazy = () -> InterestChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "RstDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -250,11 +252,11 @@ public class InterestChange1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "SprdRate", required = true)
 	protected PercentageRate spreadRate;
 	/**
-	 * Margin over or under an index which determines the interest rate of an
-	 * interest bearing security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -290,7 +292,7 @@ public class InterestChange1 {
 	public static final MMMessageAttribute mmSpreadRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Spread.mmSpreadRate;
-			componentContext_lazy = () -> InterestChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "SprdRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -301,11 +303,11 @@ public class InterestChange1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "VarblRateChngFrqcy", required = true)
 	protected Frequency1Code variableRateChangeFrequency;
 	/**
-	 * Specifies the frequency of change to the variable rate of an interest
-	 * bearing instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -341,7 +343,7 @@ public class InterestChange1 {
 	public static final MMMessageAttribute mmVariableRateChangeFrequency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> VariableInterest.mmVariableRateChangeFrequency;
-			componentContext_lazy = () -> InterestChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "VarblRateChngFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -352,11 +354,11 @@ public class InterestChange1 {
 			simpleType_lazy = () -> Frequency1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RateRstSrc", required = true)
 	protected Max35Text rateResetSource;
 	/**
-	 * Identifies the reference source for benchmark interest rates. The source
-	 * can be the fixing agent or a system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -391,7 +393,7 @@ public class InterestChange1 {
 	public static final MMMessageAttribute mmRateResetSource = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Index.mmReferenceSource;
-			componentContext_lazy = () -> InterestChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "RateRstSrc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -402,11 +404,11 @@ public class InterestChange1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Arrs", required = true)
 	protected Max16Text arriers;
 	/**
-	 * Indicates that the rate reset will occur at the end of the payment period
-	 * (True case)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -441,7 +443,7 @@ public class InterestChange1 {
 	public static final MMMessageAttribute mmArriers = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> VariableInterest.mmArrears;
-			componentContext_lazy = () -> InterestChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "Arrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -452,11 +454,11 @@ public class InterestChange1 {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IndxRateBsis", required = true)
 	protected PercentageRate indexRateBasis;
 	/**
-	 * Specifies the reference rate for fixed income instruments where the price
-	 * of the instrument is indexed to the price of an underlying benchmark.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -492,7 +494,7 @@ public class InterestChange1 {
 	public static final MMMessageAttribute mmIndexRateBasis = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIndexRateBasis;
-			componentContext_lazy = () -> InterestChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "IndxRateBsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -503,12 +505,11 @@ public class InterestChange1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "IndxRateCcy", required = true)
 	protected CurrencyCode indexRateCurrency;
 	/**
-	 * Specifies the currency of the reference rate for fixed income instruments
-	 * where the price of the instrument is indexed to the price of an
-	 * underlying benchmark.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -543,7 +544,7 @@ public class InterestChange1 {
 	public static final MMMessageAttribute mmIndexRateCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIndexRateCurrency;
-			componentContext_lazy = () -> InterestChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "IndxRateCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -554,10 +555,11 @@ public class InterestChange1 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "IndxRateFrqcy", required = true)
 	protected Frequency1Code indexRateFrequency;
 	/**
-	 * Frequency at which the variable rate changes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -591,7 +593,7 @@ public class InterestChange1 {
 	public static final MMMessageAttribute mmIndexRateFrequency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIndexRateFrequency;
-			componentContext_lazy = () -> InterestChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "IndxRateFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -602,10 +604,11 @@ public class InterestChange1 {
 			simpleType_lazy = () -> Frequency1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "IndxRateMltplr", required = true)
 	protected DecimalNumber indexRateMultiplier;
 	/**
-	 * Multiplier for the variable rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -639,7 +642,7 @@ public class InterestChange1 {
 	public static final MMMessageAttribute mmIndexRateMultiplier = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIndexRateMultiplier;
-			componentContext_lazy = () -> InterestChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
 			isDerived = false;
 			xmlTag = "IndxRateMltplr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -654,10 +657,12 @@ public class InterestChange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InterestChange1.mmFixingDate, InterestChange1.mmReportingDate, InterestChange1.mmResetDate, InterestChange1.mmSpreadRate, InterestChange1.mmVariableRateChangeFrequency,
-						InterestChange1.mmRateResetSource, InterestChange1.mmArriers, InterestChange1.mmIndexRateBasis, InterestChange1.mmIndexRateCurrency, InterestChange1.mmIndexRateFrequency, InterestChange1.mmIndexRateMultiplier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestChange1.mmFixingDate, com.tools20022.repository.msg.InterestChange1.mmReportingDate, com.tools20022.repository.msg.InterestChange1.mmResetDate,
+						com.tools20022.repository.msg.InterestChange1.mmSpreadRate, com.tools20022.repository.msg.InterestChange1.mmVariableRateChangeFrequency, com.tools20022.repository.msg.InterestChange1.mmRateResetSource,
+						com.tools20022.repository.msg.InterestChange1.mmArriers, com.tools20022.repository.msg.InterestChange1.mmIndexRateBasis, com.tools20022.repository.msg.InterestChange1.mmIndexRateCurrency,
+						com.tools20022.repository.msg.InterestChange1.mmIndexRateFrequency, com.tools20022.repository.msg.InterestChange1.mmIndexRateMultiplier);
 				trace_lazy = () -> VariableInterest.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -673,102 +678,102 @@ public class InterestChange1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FxgDt", required = true)
 	public ISODateTime getFixingDate() {
 		return fixingDate;
 	}
 
-	public void setFixingDate(ISODateTime fixingDate) {
-		this.fixingDate = fixingDate;
+	public InterestChange1 setFixingDate(ISODateTime fixingDate) {
+		this.fixingDate = Objects.requireNonNull(fixingDate);
+		return this;
 	}
 
-	@XmlElement(name = "RptgDt", required = true)
 	public ISODateTime getReportingDate() {
 		return reportingDate;
 	}
 
-	public void setReportingDate(ISODateTime reportingDate) {
-		this.reportingDate = reportingDate;
+	public InterestChange1 setReportingDate(ISODateTime reportingDate) {
+		this.reportingDate = Objects.requireNonNull(reportingDate);
+		return this;
 	}
 
-	@XmlElement(name = "RstDt", required = true)
 	public ISODateTime getResetDate() {
 		return resetDate;
 	}
 
-	public void setResetDate(ISODateTime resetDate) {
-		this.resetDate = resetDate;
+	public InterestChange1 setResetDate(ISODateTime resetDate) {
+		this.resetDate = Objects.requireNonNull(resetDate);
+		return this;
 	}
 
-	@XmlElement(name = "SprdRate", required = true)
 	public PercentageRate getSpreadRate() {
 		return spreadRate;
 	}
 
-	public void setSpreadRate(PercentageRate spreadRate) {
-		this.spreadRate = spreadRate;
+	public InterestChange1 setSpreadRate(PercentageRate spreadRate) {
+		this.spreadRate = Objects.requireNonNull(spreadRate);
+		return this;
 	}
 
-	@XmlElement(name = "VarblRateChngFrqcy", required = true)
 	public Frequency1Code getVariableRateChangeFrequency() {
 		return variableRateChangeFrequency;
 	}
 
-	public void setVariableRateChangeFrequency(Frequency1Code variableRateChangeFrequency) {
-		this.variableRateChangeFrequency = variableRateChangeFrequency;
+	public InterestChange1 setVariableRateChangeFrequency(Frequency1Code variableRateChangeFrequency) {
+		this.variableRateChangeFrequency = Objects.requireNonNull(variableRateChangeFrequency);
+		return this;
 	}
 
-	@XmlElement(name = "RateRstSrc", required = true)
 	public Max35Text getRateResetSource() {
 		return rateResetSource;
 	}
 
-	public void setRateResetSource(Max35Text rateResetSource) {
-		this.rateResetSource = rateResetSource;
+	public InterestChange1 setRateResetSource(Max35Text rateResetSource) {
+		this.rateResetSource = Objects.requireNonNull(rateResetSource);
+		return this;
 	}
 
-	@XmlElement(name = "Arrs", required = true)
 	public Max16Text getArriers() {
 		return arriers;
 	}
 
-	public void setArriers(Max16Text arriers) {
-		this.arriers = arriers;
+	public InterestChange1 setArriers(Max16Text arriers) {
+		this.arriers = Objects.requireNonNull(arriers);
+		return this;
 	}
 
-	@XmlElement(name = "IndxRateBsis", required = true)
 	public PercentageRate getIndexRateBasis() {
 		return indexRateBasis;
 	}
 
-	public void setIndexRateBasis(PercentageRate indexRateBasis) {
-		this.indexRateBasis = indexRateBasis;
+	public InterestChange1 setIndexRateBasis(PercentageRate indexRateBasis) {
+		this.indexRateBasis = Objects.requireNonNull(indexRateBasis);
+		return this;
 	}
 
-	@XmlElement(name = "IndxRateCcy", required = true)
 	public CurrencyCode getIndexRateCurrency() {
 		return indexRateCurrency;
 	}
 
-	public void setIndexRateCurrency(CurrencyCode indexRateCurrency) {
-		this.indexRateCurrency = indexRateCurrency;
+	public InterestChange1 setIndexRateCurrency(CurrencyCode indexRateCurrency) {
+		this.indexRateCurrency = Objects.requireNonNull(indexRateCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "IndxRateFrqcy", required = true)
 	public Frequency1Code getIndexRateFrequency() {
 		return indexRateFrequency;
 	}
 
-	public void setIndexRateFrequency(Frequency1Code indexRateFrequency) {
-		this.indexRateFrequency = indexRateFrequency;
+	public InterestChange1 setIndexRateFrequency(Frequency1Code indexRateFrequency) {
+		this.indexRateFrequency = Objects.requireNonNull(indexRateFrequency);
+		return this;
 	}
 
-	@XmlElement(name = "IndxRateMltplr", required = true)
 	public DecimalNumber getIndexRateMultiplier() {
 		return indexRateMultiplier;
 	}
 
-	public void setIndexRateMultiplier(DecimalNumber indexRateMultiplier) {
-		this.indexRateMultiplier = indexRateMultiplier;
+	public InterestChange1 setIndexRateMultiplier(DecimalNumber indexRateMultiplier) {
+		this.indexRateMultiplier = Objects.requireNonNull(indexRateMultiplier);
+		return this;
 	}
 }

@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.BookingUnitCode;
+import com.tools20022.repository.codeset.BookingUnit1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Description of the method used to book single or grouped executions.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.BookingUnitCode
- * BookingUnitCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BookingUnit1Code#mmEachPartial
- * BookingUnit1Code.mmEachPartial}</li>
+ * {@linkplain com.tools20022.repository.codeset.BookingUnit1Code#EachPartial
+ * BookingUnit1Code.EachPartial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BookingUnit1Code#mmAggregatePartial
- * BookingUnit1Code.mmAggregatePartial}</li>
+ * {@linkplain com.tools20022.repository.codeset.BookingUnit1Code#AggregatePartial
+ * BookingUnit1Code.AggregatePartial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BookingUnit1Code#mmAggregateExecutions
- * BookingUnit1Code.mmAggregateExecutions}</li>
+ * {@linkplain com.tools20022.repository.codeset.BookingUnit1Code#AggregateExecutions
+ * BookingUnit1Code.AggregateExecutions}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.BookingUnitCode
+ * BookingUnitCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Description of the method used to book single or grouped executions."</li>
  * </ul>
  */
-public class BookingUnit1Code extends BookingUnitCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BookingUnit1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,11 +92,12 @@ public class BookingUnit1Code extends BookingUnitCode {
 	 * name} = "EachPartial"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEachPartial = new MMCode() {
+	public static final BookingUnit1Code EachPartial = new BookingUnit1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EachPartial";
-			owner_lazy = () -> BookingUnit1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BookingUnit1Code.mmObject();
+			codeName = BookingUnitCode.EachPartial.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +116,12 @@ public class BookingUnit1Code extends BookingUnitCode {
 	 * name} = "AggregatePartial"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAggregatePartial = new MMCode() {
+	public static final BookingUnit1Code AggregatePartial = new BookingUnit1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregatePartial";
-			owner_lazy = () -> BookingUnit1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BookingUnit1Code.mmObject();
+			codeName = BookingUnitCode.AggregatePartial.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,26 +140,59 @@ public class BookingUnit1Code extends BookingUnitCode {
 	 * name} = "AggregateExecutions"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAggregateExecutions = new MMCode() {
+	public static final BookingUnit1Code AggregateExecutions = new BookingUnit1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregateExecutions";
-			owner_lazy = () -> BookingUnit1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BookingUnit1Code.mmObject();
+			codeName = BookingUnitCode.AggregateExecutions.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, BookingUnit1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BookingUnit1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("EACP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BookingUnit1Code";
 				definition = "Description of the method used to book single or grouped executions.";
-				code_lazy = () -> Arrays.asList(BookingUnit1Code.mmEachPartial, BookingUnit1Code.mmAggregatePartial, BookingUnit1Code.mmAggregateExecutions);
 				trace_lazy = () -> BookingUnitCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BookingUnit1Code.EachPartial, com.tools20022.repository.codeset.BookingUnit1Code.AggregatePartial,
+						com.tools20022.repository.codeset.BookingUnit1Code.AggregateExecutions);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(EachPartial.getCodeName().get(), EachPartial);
+		codesByName.put(AggregatePartial.getCodeName().get(), AggregatePartial);
+		codesByName.put(AggregateExecutions.getCodeName().get(), AggregateExecutions);
+	}
+
+	public static BookingUnit1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BookingUnit1Code[] values() {
+		BookingUnit1Code[] values = new BookingUnit1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BookingUnit1Code> {
+		@Override
+		public BookingUnit1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BookingUnit1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

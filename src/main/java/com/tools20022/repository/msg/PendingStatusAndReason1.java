@@ -25,9 +25,11 @@ import com.tools20022.repository.choice.SettlementStatus9Choice;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of the intra-balance movement status type."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PendingStatusAndReason1", propOrder = {"processingStatus", "settlementStatus"})
 public class PendingStatusAndReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrcgSts")
 	protected List<ProcessingStatus34Choice> processingStatus;
 	/**
-	 * Provides details on the processing status of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -110,7 +113,7 @@ public class PendingStatusAndReason1 {
 	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
-			componentContext_lazy = () -> PendingStatusAndReason1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PendingStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +124,11 @@ public class PendingStatusAndReason1 {
 			type_lazy = () -> ProcessingStatus34Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmSts")
 	protected List<SettlementStatus9Choice> settlementStatus;
 	/**
-	 * Provides the settlement status of a transaction
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -157,7 +161,7 @@ public class PendingStatusAndReason1 {
 	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
-			componentContext_lazy = () -> PendingStatusAndReason1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PendingStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +176,9 @@ public class PendingStatusAndReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PendingStatusAndReason1.mmProcessingStatus, PendingStatusAndReason1.mmSettlementStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingStatusAndReason1.mmProcessingStatus, com.tools20022.repository.msg.PendingStatusAndReason1.mmSettlementStatus);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PendingStatusAndReason1";
 				definition = "Choice of the intra-balance movement status type.";
@@ -183,21 +187,21 @@ public class PendingStatusAndReason1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrcgSts")
 	public List<ProcessingStatus34Choice> getProcessingStatus() {
-		return processingStatus;
+		return processingStatus == null ? processingStatus = new ArrayList<>() : processingStatus;
 	}
 
-	public void setProcessingStatus(List<ProcessingStatus34Choice> processingStatus) {
-		this.processingStatus = processingStatus;
+	public PendingStatusAndReason1 setProcessingStatus(List<ProcessingStatus34Choice> processingStatus) {
+		this.processingStatus = Objects.requireNonNull(processingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmSts")
 	public List<SettlementStatus9Choice> getSettlementStatus() {
-		return settlementStatus;
+		return settlementStatus == null ? settlementStatus = new ArrayList<>() : settlementStatus;
 	}
 
-	public void setSettlementStatus(List<SettlementStatus9Choice> settlementStatus) {
-		this.settlementStatus = settlementStatus;
+	public PendingStatusAndReason1 setSettlementStatus(List<SettlementStatus9Choice> settlementStatus) {
+		this.settlementStatus = Objects.requireNonNull(settlementStatus);
+		return this;
 	}
 }

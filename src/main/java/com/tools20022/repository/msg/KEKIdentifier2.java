@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * KEKIdentifier1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "KEKIdentifier2", propOrder = {"keyIdentification", "keyVersion", "sequenceNumber", "derivationIdentification"})
 public class KEKIdentifier2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "KeyId", required = true)
 	protected Max140Text keyIdentification;
 	/**
-	 * Identification of the cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,7 +134,7 @@ public class KEKIdentifier2 {
 	 */
 	public static final MMMessageAttribute mmKeyIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> KEKIdentifier2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier2.mmObject();
 			isDerived = false;
 			xmlTag = "KeyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -144,10 +147,11 @@ public class KEKIdentifier2 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "KeyVrsn", required = true)
 	protected Max140Text keyVersion;
 	/**
-	 * Version of the cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,7 +192,7 @@ public class KEKIdentifier2 {
 	 */
 	public static final MMMessageAttribute mmKeyVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> KEKIdentifier2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier2.mmObject();
 			isDerived = false;
 			xmlTag = "KeyVrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,10 +205,11 @@ public class KEKIdentifier2 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SeqNb")
 	protected Number sequenceNumber;
 	/**
-	 * Number of usages of the cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -238,7 +243,7 @@ public class KEKIdentifier2 {
 	 */
 	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> KEKIdentifier2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier2.mmObject();
 			isDerived = false;
 			xmlTag = "SeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -250,11 +255,11 @@ public class KEKIdentifier2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "DerivtnId")
 	protected Min5Max16Binary derivationIdentification;
 	/**
-	 * Identification used for derivation of a unique key from a master key
-	 * provided for the data protection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -296,7 +301,7 @@ public class KEKIdentifier2 {
 	 */
 	public static final MMMessageAttribute mmDerivationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> KEKIdentifier2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier2.mmObject();
 			isDerived = false;
 			xmlTag = "DerivtnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -313,8 +318,9 @@ public class KEKIdentifier2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(KEKIdentifier2.mmKeyIdentification, KEKIdentifier2.mmKeyVersion, KEKIdentifier2.mmSequenceNumber, KEKIdentifier2.mmDerivationIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KEKIdentifier2.mmKeyIdentification, com.tools20022.repository.msg.KEKIdentifier2.mmKeyVersion,
+						com.tools20022.repository.msg.KEKIdentifier2.mmSequenceNumber, com.tools20022.repository.msg.KEKIdentifier2.mmDerivationIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "KEKIdentifier2";
 				definition = "Identification of a key encryption key (KEK), using previously distributed symmetric key.";
@@ -325,39 +331,39 @@ public class KEKIdentifier2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "KeyId", required = true)
 	public Max140Text getKeyIdentification() {
 		return keyIdentification;
 	}
 
-	public void setKeyIdentification(Max140Text keyIdentification) {
-		this.keyIdentification = keyIdentification;
+	public KEKIdentifier2 setKeyIdentification(Max140Text keyIdentification) {
+		this.keyIdentification = Objects.requireNonNull(keyIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "KeyVrsn", required = true)
 	public Max140Text getKeyVersion() {
 		return keyVersion;
 	}
 
-	public void setKeyVersion(Max140Text keyVersion) {
-		this.keyVersion = keyVersion;
+	public KEKIdentifier2 setKeyVersion(Max140Text keyVersion) {
+		this.keyVersion = Objects.requireNonNull(keyVersion);
+		return this;
 	}
 
-	@XmlElement(name = "SeqNb")
-	public Number getSequenceNumber() {
-		return sequenceNumber;
+	public Optional<Number> getSequenceNumber() {
+		return sequenceNumber == null ? Optional.empty() : Optional.of(sequenceNumber);
 	}
 
-	public void setSequenceNumber(Number sequenceNumber) {
+	public KEKIdentifier2 setSequenceNumber(Number sequenceNumber) {
 		this.sequenceNumber = sequenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "DerivtnId")
-	public Min5Max16Binary getDerivationIdentification() {
-		return derivationIdentification;
+	public Optional<Min5Max16Binary> getDerivationIdentification() {
+		return derivationIdentification == null ? Optional.empty() : Optional.of(derivationIdentification);
 	}
 
-	public void setDerivationIdentification(Min5Max16Binary derivationIdentification) {
+	public KEKIdentifier2 setDerivationIdentification(Min5Max16Binary derivationIdentification) {
 		this.derivationIdentification = derivationIdentification;
+		return this;
 	}
 }

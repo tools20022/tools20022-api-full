@@ -28,6 +28,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistence35to30TextFieldRule#forGenericIdentification21
+ * ConstraintCoexistence35to30TextFieldRule.forGenericIdentification21}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -78,16 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GenericIdentification21", propOrder = {"type", "identification"})
 public class GenericIdentification21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected GenericIdentification20 type;
 	/**
-	 * Proprietary information, often a code, issued by the data source scheme
-	 * issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,7 +144,7 @@ public class GenericIdentification21 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
-			componentContext_lazy = () -> GenericIdentification21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification21.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,11 +156,11 @@ public class GenericIdentification21 {
 			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification20.mmObject();
 		}
 	};
+	@XmlElement(name = "Id")
 	protected Max35Text identification;
 	/**
-	 * Name or number assigned by an entity to enable recognition of that
-	 * entity, eg, account identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,7 +206,7 @@ public class GenericIdentification21 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> GenericIdentification21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification21.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,9 +222,10 @@ public class GenericIdentification21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GenericIdentification21.mmType, GenericIdentification21.mmIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification21.mmType, com.tools20022.repository.msg.GenericIdentification21.mmIdentification);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistence35to30TextFieldRule.forGenericIdentification21);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -231,21 +242,21 @@ public class GenericIdentification21 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public GenericIdentification20 getType() {
 		return type;
 	}
 
-	public void setType(com.tools20022.repository.msg.GenericIdentification20 type) {
-		this.type = type;
+	public GenericIdentification21 setType(com.tools20022.repository.msg.GenericIdentification20 type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Id")
-	public Max35Text getIdentification() {
-		return identification;
+	public Optional<Max35Text> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(Max35Text identification) {
+	public GenericIdentification21 setIdentification(Max35Text identification) {
 		this.identification = identification;
+		return this;
 	}
 }

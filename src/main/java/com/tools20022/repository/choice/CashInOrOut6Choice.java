@@ -27,6 +27,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Choice of a payment instrument for the cash-in flow or cash-out flow."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashInOrOut6Choice", propOrder = {"cashInPaymentInstrument", "cashOutPaymentInstrument"})
 public class CashInOrOut6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CshInPmtInstrm", required = true)
 	protected PaymentInstrument12Choice cashInPaymentInstrument;
 	/**
-	 * Payment instrument for the cash-in flow.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -108,7 +110,7 @@ public class CashInOrOut6Choice {
 	public static final MMMessageAssociationEnd mmCashInPaymentInstrument = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
-			componentContext_lazy = () -> CashInOrOut6Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CashInOrOut6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshInPmtInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +122,11 @@ public class CashInOrOut6Choice {
 			type_lazy = () -> com.tools20022.repository.choice.PaymentInstrument12Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CshOutPmtInstrm", required = true)
 	protected PaymentInstrument11Choice cashOutPaymentInstrument;
 	/**
-	 * Payment instrument for the cash-out flow.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +158,7 @@ public class CashInOrOut6Choice {
 	public static final MMMessageAssociationEnd mmCashOutPaymentInstrument = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
-			componentContext_lazy = () -> CashInOrOut6Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CashInOrOut6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshOutPmtInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,9 +174,9 @@ public class CashInOrOut6Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashInOrOut6Choice.mmCashInPaymentInstrument, CashInOrOut6Choice.mmCashOutPaymentInstrument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashInOrOut6Choice.mmCashInPaymentInstrument, com.tools20022.repository.choice.CashInOrOut6Choice.mmCashOutPaymentInstrument);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -189,21 +192,21 @@ public class CashInOrOut6Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CshInPmtInstrm", required = true)
 	public PaymentInstrument12Choice getCashInPaymentInstrument() {
 		return cashInPaymentInstrument;
 	}
 
-	public void setCashInPaymentInstrument(com.tools20022.repository.choice.PaymentInstrument12Choice cashInPaymentInstrument) {
-		this.cashInPaymentInstrument = cashInPaymentInstrument;
+	public CashInOrOut6Choice setCashInPaymentInstrument(com.tools20022.repository.choice.PaymentInstrument12Choice cashInPaymentInstrument) {
+		this.cashInPaymentInstrument = Objects.requireNonNull(cashInPaymentInstrument);
+		return this;
 	}
 
-	@XmlElement(name = "CshOutPmtInstrm", required = true)
 	public PaymentInstrument11Choice getCashOutPaymentInstrument() {
 		return cashOutPaymentInstrument;
 	}
 
-	public void setCashOutPaymentInstrument(com.tools20022.repository.choice.PaymentInstrument11Choice cashOutPaymentInstrument) {
-		this.cashOutPaymentInstrument = cashOutPaymentInstrument;
+	public CashInOrOut6Choice setCashOutPaymentInstrument(com.tools20022.repository.choice.PaymentInstrument11Choice cashOutPaymentInstrument) {
+		this.cashOutPaymentInstrument = Objects.requireNonNull(cashOutPaymentInstrument);
+		return this;
 	}
 }

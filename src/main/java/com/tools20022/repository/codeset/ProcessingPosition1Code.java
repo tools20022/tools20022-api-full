@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ProcessingPosition1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates when an instruction is to be executed relative to a linked
@@ -33,21 +38,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPosition1Code#mmAfter
- * ProcessingPosition1Code.mmAfter}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPosition1Code#After
+ * ProcessingPosition1Code.After}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPosition1Code#mmWith
- * ProcessingPosition1Code.mmWith}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPosition1Code#With
+ * ProcessingPosition1Code.With}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPosition1Code#mmBefore
- * ProcessingPosition1Code.mmBefore}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPosition1Code#Before
+ * ProcessingPosition1Code.Before}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -66,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ProcessingPosition1Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProcessingPosition1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,12 +99,12 @@ public class ProcessingPosition1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAfter = new MMCode() {
+	public static final ProcessingPosition1Code After = new ProcessingPosition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "After";
 			definition = "Indicates that the instruction is to be executed after the linked instruction.";
-			owner_lazy = () -> ProcessingPosition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingPosition1Code.mmObject();
 			codeName = "AFTR";
 		}
 	};
@@ -126,12 +132,12 @@ public class ProcessingPosition1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmWith = new MMCode() {
+	public static final ProcessingPosition1Code With = new ProcessingPosition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "With";
 			definition = "Indicates that the instruction is to be executed with the linked instruction.";
-			owner_lazy = () -> ProcessingPosition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingPosition1Code.mmObject();
 			codeName = "WITH";
 		}
 	};
@@ -159,27 +165,59 @@ public class ProcessingPosition1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBefore = new MMCode() {
+	public static final ProcessingPosition1Code Before = new ProcessingPosition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Before";
 			definition = "Indicates that the instruction is to be executed before the linked instruction.";
-			owner_lazy = () -> ProcessingPosition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingPosition1Code.mmObject();
 			codeName = "BEFR";
 		}
 	};
+	final static private LinkedHashMap<String, ProcessingPosition1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProcessingPosition1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AFTR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingPosition1Code";
 				definition = "Indicates when an instruction is to be executed relative to a linked instruction.";
-				code_lazy = () -> Arrays.asList(ProcessingPosition1Code.mmAfter, ProcessingPosition1Code.mmWith, ProcessingPosition1Code.mmBefore);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessingPosition1Code.After, com.tools20022.repository.codeset.ProcessingPosition1Code.With,
+						com.tools20022.repository.codeset.ProcessingPosition1Code.Before);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(After.getCodeName().get(), After);
+		codesByName.put(With.getCodeName().get(), With);
+		codesByName.put(Before.getCodeName().get(), Before);
+	}
+
+	public static ProcessingPosition1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProcessingPosition1Code[] values() {
+		ProcessingPosition1Code[] values = new ProcessingPosition1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProcessingPosition1Code> {
+		@Override
+		public ProcessingPosition1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProcessingPosition1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

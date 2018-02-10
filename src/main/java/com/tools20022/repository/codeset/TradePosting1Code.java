@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TradePostingCode;
+import com.tools20022.repository.codeset.TradePosting1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the trade is maintained as a separate individual position in the
@@ -31,22 +35,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradePosting1Code#Gross
+ * TradePosting1Code.Gross}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradePosting1Code#Net
+ * TradePosting1Code.Net}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.TradePostingCode
  * TradePostingCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradePosting1Code#mmGross
- * TradePosting1Code.mmGross}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradePosting1Code#mmNet
- * TradePosting1Code.mmNet}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TradePosting1Code extends TradePostingCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TradePosting1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +89,12 @@ public class TradePosting1Code extends TradePostingCode {
 	 * name} = "Gross"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGross = new MMCode() {
+	public static final TradePosting1Code Gross = new TradePosting1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gross";
-			owner_lazy = () -> TradePosting1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradePosting1Code.mmObject();
+			codeName = TradePostingCode.Gross.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,26 +113,57 @@ public class TradePosting1Code extends TradePostingCode {
 	 * name} = "Net"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNet = new MMCode() {
+	public static final TradePosting1Code Net = new TradePosting1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Net";
-			owner_lazy = () -> TradePosting1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradePosting1Code.mmObject();
+			codeName = TradePostingCode.Net.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TradePosting1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TradePosting1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("GROS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradePosting1Code";
 				definition = "Specifies the trade is maintained as a separate individual position in the clearing account, or not.";
-				code_lazy = () -> Arrays.asList(TradePosting1Code.mmGross, TradePosting1Code.mmNet);
 				trace_lazy = () -> TradePostingCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradePosting1Code.Gross, com.tools20022.repository.codeset.TradePosting1Code.Net);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Gross.getCodeName().get(), Gross);
+		codesByName.put(Net.getCodeName().get(), Net);
+	}
+
+	public static TradePosting1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TradePosting1Code[] values() {
+		TradePosting1Code[] values = new TradePosting1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TradePosting1Code> {
+		@Override
+		public TradePosting1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TradePosting1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RejectionReasonV2Code;
+import com.tools20022.repository.codeset.RejectionReason23Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason why the instruction/cancellation request has a rejected
@@ -31,36 +35,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RejectionReasonV2Code
- * RejectionReasonV2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#mmSafekeepingAccountRejection
- * RejectionReason23Code.mmSafekeepingAccountRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#SafekeepingAccountRejection
+ * RejectionReason23Code.SafekeepingAccountRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#mmAccountServicerDeadlineMissed
- * RejectionReason23Code.mmAccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#AccountServicerDeadlineMissed
+ * RejectionReason23Code.AccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#mmReferenceRejection
- * RejectionReason23Code.mmReferenceRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#ReferenceRejection
+ * RejectionReason23Code.ReferenceRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#mmMarketDeadlineMissed
- * RejectionReason23Code.mmMarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#MarketDeadlineMissed
+ * RejectionReason23Code.MarketDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#mmSettlementDateRejection
- * RejectionReason23Code.mmSettlementDateRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#SettlementDateRejection
+ * RejectionReason23Code.SettlementDateRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#mmOther
- * RejectionReason23Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason23Code#Other
+ * RejectionReason23Code.Other}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RejectionReasonV2Code
+ * RejectionReasonV2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class RejectionReason23Code extends RejectionReasonV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RejectionReason23Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,11 +103,12 @@ public class RejectionReason23Code extends RejectionReasonV2Code {
 	 * name} = "SafekeepingAccountRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSafekeepingAccountRejection = new MMCode() {
+	public static final RejectionReason23Code SafekeepingAccountRejection = new RejectionReason23Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRejection";
-			owner_lazy = () -> RejectionReason23Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason23Code.mmObject();
+			codeName = RejectionReasonV2Code.SafekeepingAccountRejection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -121,11 +127,12 @@ public class RejectionReason23Code extends RejectionReasonV2Code {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
+	public static final RejectionReason23Code AccountServicerDeadlineMissed = new RejectionReason23Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
-			owner_lazy = () -> RejectionReason23Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason23Code.mmObject();
+			codeName = RejectionReasonV2Code.AccountServicerDeadlineMissed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -144,11 +151,12 @@ public class RejectionReason23Code extends RejectionReasonV2Code {
 	 * name} = "ReferenceRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReferenceRejection = new MMCode() {
+	public static final RejectionReason23Code ReferenceRejection = new RejectionReason23Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRejection";
-			owner_lazy = () -> RejectionReason23Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason23Code.mmObject();
+			codeName = RejectionReasonV2Code.ReferenceRejection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -167,11 +175,12 @@ public class RejectionReason23Code extends RejectionReasonV2Code {
 	 * name} = "MarketDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
+	public static final RejectionReason23Code MarketDeadlineMissed = new RejectionReason23Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
-			owner_lazy = () -> RejectionReason23Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason23Code.mmObject();
+			codeName = RejectionReasonV2Code.MarketDeadlineMissed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -190,11 +199,12 @@ public class RejectionReason23Code extends RejectionReasonV2Code {
 	 * name} = "SettlementDateRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementDateRejection = new MMCode() {
+	public static final RejectionReason23Code SettlementDateRejection = new RejectionReason23Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDateRejection";
-			owner_lazy = () -> RejectionReason23Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason23Code.mmObject();
+			codeName = RejectionReasonV2Code.SettlementDateRejection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -213,27 +223,63 @@ public class RejectionReason23Code extends RejectionReasonV2Code {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final RejectionReason23Code Other = new RejectionReason23Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> RejectionReason23Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason23Code.mmObject();
+			codeName = RejectionReasonV2Code.Other.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RejectionReason23Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RejectionReason23Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SAFE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason23Code";
 				definition = "Specifies the reason why the instruction/cancellation request has a rejected status.";
-				code_lazy = () -> Arrays.asList(RejectionReason23Code.mmSafekeepingAccountRejection, RejectionReason23Code.mmAccountServicerDeadlineMissed, RejectionReason23Code.mmReferenceRejection,
-						RejectionReason23Code.mmMarketDeadlineMissed, RejectionReason23Code.mmSettlementDateRejection, RejectionReason23Code.mmOther);
 				trace_lazy = () -> RejectionReasonV2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason23Code.SafekeepingAccountRejection, com.tools20022.repository.codeset.RejectionReason23Code.AccountServicerDeadlineMissed,
+						com.tools20022.repository.codeset.RejectionReason23Code.ReferenceRejection, com.tools20022.repository.codeset.RejectionReason23Code.MarketDeadlineMissed,
+						com.tools20022.repository.codeset.RejectionReason23Code.SettlementDateRejection, com.tools20022.repository.codeset.RejectionReason23Code.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SafekeepingAccountRejection.getCodeName().get(), SafekeepingAccountRejection);
+		codesByName.put(AccountServicerDeadlineMissed.getCodeName().get(), AccountServicerDeadlineMissed);
+		codesByName.put(ReferenceRejection.getCodeName().get(), ReferenceRejection);
+		codesByName.put(MarketDeadlineMissed.getCodeName().get(), MarketDeadlineMissed);
+		codesByName.put(SettlementDateRejection.getCodeName().get(), SettlementDateRejection);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static RejectionReason23Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RejectionReason23Code[] values() {
+		RejectionReason23Code[] values = new RejectionReason23Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RejectionReason23Code> {
+		@Override
+		public RejectionReason23Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RejectionReason23Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

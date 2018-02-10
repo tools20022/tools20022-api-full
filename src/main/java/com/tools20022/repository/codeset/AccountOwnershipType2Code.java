@@ -20,67 +20,71 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AccountOwnershipTypeCode;
+import com.tools20022.repository.codeset.AccountOwnershipType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of account ownership.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipTypeCode
- * AccountOwnershipTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmJointAccountWithSurvivorshipRights
- * AccountOwnershipType2Code.mmJointAccountWithSurvivorshipRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#JointAccountWithSurvivorshipRights
+ * AccountOwnershipType2Code.JointAccountWithSurvivorshipRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmJointAccountInCommon
- * AccountOwnershipType2Code.mmJointAccountInCommon}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#JointAccountInCommon
+ * AccountOwnershipType2Code.JointAccountInCommon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmCustodialAccount
- * AccountOwnershipType2Code.mmCustodialAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#CustodialAccount
+ * AccountOwnershipType2Code.CustodialAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmSingleOwnerAccount
- * AccountOwnershipType2Code.mmSingleOwnerAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#SingleOwnerAccount
+ * AccountOwnershipType2Code.SingleOwnerAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmJointAccount
- * AccountOwnershipType2Code.mmJointAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#JointAccount
+ * AccountOwnershipType2Code.JointAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmCorporation
- * AccountOwnershipType2Code.mmCorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#Corporation
+ * AccountOwnershipType2Code.Corporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmFormalPartnership
- * AccountOwnershipType2Code.mmFormalPartnership}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#FormalPartnership
+ * AccountOwnershipType2Code.FormalPartnership}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmFormalTrust
- * AccountOwnershipType2Code.mmFormalTrust}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#FormalTrust
+ * AccountOwnershipType2Code.FormalTrust}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmNominee
- * AccountOwnershipType2Code.mmNominee}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#Nominee
+ * AccountOwnershipType2Code.Nominee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmNonProfitOrganisation
- * AccountOwnershipType2Code.mmNonProfitOrganisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#NonProfitOrganisation
+ * AccountOwnershipType2Code.NonProfitOrganisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmOtherNonIndividual
- * AccountOwnershipType2Code.mmOtherNonIndividual}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#OtherNonIndividual
+ * AccountOwnershipType2Code.OtherNonIndividual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmEUResidualEntity
- * AccountOwnershipType2Code.mmEUResidualEntity}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#EUResidualEntity
+ * AccountOwnershipType2Code.EUResidualEntity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#mmGovernmentOrganisation
- * AccountOwnershipType2Code.mmGovernmentOrganisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipType2Code#GovernmentOrganisation
+ * AccountOwnershipType2Code.GovernmentOrganisation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnershipTypeCode
+ * AccountOwnershipTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -97,7 +101,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of account ownership."</li>
  * </ul>
  */
-public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AccountOwnershipType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -116,11 +121,12 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "JointAccountWithSurvivorshipRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmJointAccountWithSurvivorshipRights = new MMCode() {
+	public static final AccountOwnershipType2Code JointAccountWithSurvivorshipRights = new AccountOwnershipType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JointAccountWithSurvivorshipRights";
-			owner_lazy = () -> AccountOwnershipType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnershipType2Code.mmObject();
+			codeName = AccountOwnershipTypeCode.JointAccountWithSurvivorshipRights.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -139,11 +145,12 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "JointAccountInCommon"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmJointAccountInCommon = new MMCode() {
+	public static final AccountOwnershipType2Code JointAccountInCommon = new AccountOwnershipType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JointAccountInCommon";
-			owner_lazy = () -> AccountOwnershipType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnershipType2Code.mmObject();
+			codeName = AccountOwnershipTypeCode.JointAccountInCommon.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -162,11 +169,12 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "CustodialAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustodialAccount = new MMCode() {
+	public static final AccountOwnershipType2Code CustodialAccount = new AccountOwnershipType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodialAccount";
-			owner_lazy = () -> AccountOwnershipType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnershipType2Code.mmObject();
+			codeName = AccountOwnershipTypeCode.CustodialAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -185,11 +193,12 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "SingleOwnerAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSingleOwnerAccount = new MMCode() {
+	public static final AccountOwnershipType2Code SingleOwnerAccount = new AccountOwnershipType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleOwnerAccount";
-			owner_lazy = () -> AccountOwnershipType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnershipType2Code.mmObject();
+			codeName = AccountOwnershipTypeCode.SingleOwnerAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -208,11 +217,12 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "JointAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmJointAccount = new MMCode() {
+	public static final AccountOwnershipType2Code JointAccount = new AccountOwnershipType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JointAccount";
-			owner_lazy = () -> AccountOwnershipType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnershipType2Code.mmObject();
+			codeName = AccountOwnershipTypeCode.JointAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -231,11 +241,12 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "Corporation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporation = new MMCode() {
+	public static final AccountOwnershipType2Code Corporation = new AccountOwnershipType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Corporation";
-			owner_lazy = () -> AccountOwnershipType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnershipType2Code.mmObject();
+			codeName = AccountOwnershipTypeCode.Corporation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -254,11 +265,12 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "FormalPartnership"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFormalPartnership = new MMCode() {
+	public static final AccountOwnershipType2Code FormalPartnership = new AccountOwnershipType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FormalPartnership";
-			owner_lazy = () -> AccountOwnershipType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnershipType2Code.mmObject();
+			codeName = AccountOwnershipTypeCode.FormalPartnership.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -277,11 +289,12 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "FormalTrust"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFormalTrust = new MMCode() {
+	public static final AccountOwnershipType2Code FormalTrust = new AccountOwnershipType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FormalTrust";
-			owner_lazy = () -> AccountOwnershipType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnershipType2Code.mmObject();
+			codeName = AccountOwnershipTypeCode.FormalTrust.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -300,11 +313,12 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "Nominee"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNominee = new MMCode() {
+	public static final AccountOwnershipType2Code Nominee = new AccountOwnershipType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Nominee";
-			owner_lazy = () -> AccountOwnershipType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnershipType2Code.mmObject();
+			codeName = AccountOwnershipTypeCode.Nominee.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -323,11 +337,12 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "NonProfitOrganisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonProfitOrganisation = new MMCode() {
+	public static final AccountOwnershipType2Code NonProfitOrganisation = new AccountOwnershipType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonProfitOrganisation";
-			owner_lazy = () -> AccountOwnershipType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnershipType2Code.mmObject();
+			codeName = AccountOwnershipTypeCode.NonProfitOrganisation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -346,11 +361,12 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "OtherNonIndividual"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherNonIndividual = new MMCode() {
+	public static final AccountOwnershipType2Code OtherNonIndividual = new AccountOwnershipType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherNonIndividual";
-			owner_lazy = () -> AccountOwnershipType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnershipType2Code.mmObject();
+			codeName = AccountOwnershipTypeCode.OtherNonIndividual.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -369,11 +385,12 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "EUResidualEntity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEUResidualEntity = new MMCode() {
+	public static final AccountOwnershipType2Code EUResidualEntity = new AccountOwnershipType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUResidualEntity";
-			owner_lazy = () -> AccountOwnershipType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnershipType2Code.mmObject();
+			codeName = AccountOwnershipTypeCode.EUResidualEntity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -392,29 +409,74 @@ public class AccountOwnershipType2Code extends AccountOwnershipTypeCode {
 	 * name} = "GovernmentOrganisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGovernmentOrganisation = new MMCode() {
+	public static final AccountOwnershipType2Code GovernmentOrganisation = new AccountOwnershipType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentOrganisation";
-			owner_lazy = () -> AccountOwnershipType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnershipType2Code.mmObject();
+			codeName = AccountOwnershipTypeCode.GovernmentOrganisation.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AccountOwnershipType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AccountOwnershipType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("JOIN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountOwnershipType2Code";
 				definition = "Specifies the type of account ownership.";
-				code_lazy = () -> Arrays.asList(AccountOwnershipType2Code.mmJointAccountWithSurvivorshipRights, AccountOwnershipType2Code.mmJointAccountInCommon, AccountOwnershipType2Code.mmCustodialAccount,
-						AccountOwnershipType2Code.mmSingleOwnerAccount, AccountOwnershipType2Code.mmJointAccount, AccountOwnershipType2Code.mmCorporation, AccountOwnershipType2Code.mmFormalPartnership,
-						AccountOwnershipType2Code.mmFormalTrust, AccountOwnershipType2Code.mmNominee, AccountOwnershipType2Code.mmNonProfitOrganisation, AccountOwnershipType2Code.mmOtherNonIndividual,
-						AccountOwnershipType2Code.mmEUResidualEntity, AccountOwnershipType2Code.mmGovernmentOrganisation);
 				trace_lazy = () -> AccountOwnershipTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountOwnershipType2Code.JointAccountWithSurvivorshipRights, com.tools20022.repository.codeset.AccountOwnershipType2Code.JointAccountInCommon,
+						com.tools20022.repository.codeset.AccountOwnershipType2Code.CustodialAccount, com.tools20022.repository.codeset.AccountOwnershipType2Code.SingleOwnerAccount,
+						com.tools20022.repository.codeset.AccountOwnershipType2Code.JointAccount, com.tools20022.repository.codeset.AccountOwnershipType2Code.Corporation,
+						com.tools20022.repository.codeset.AccountOwnershipType2Code.FormalPartnership, com.tools20022.repository.codeset.AccountOwnershipType2Code.FormalTrust,
+						com.tools20022.repository.codeset.AccountOwnershipType2Code.Nominee, com.tools20022.repository.codeset.AccountOwnershipType2Code.NonProfitOrganisation,
+						com.tools20022.repository.codeset.AccountOwnershipType2Code.OtherNonIndividual, com.tools20022.repository.codeset.AccountOwnershipType2Code.EUResidualEntity,
+						com.tools20022.repository.codeset.AccountOwnershipType2Code.GovernmentOrganisation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(JointAccountWithSurvivorshipRights.getCodeName().get(), JointAccountWithSurvivorshipRights);
+		codesByName.put(JointAccountInCommon.getCodeName().get(), JointAccountInCommon);
+		codesByName.put(CustodialAccount.getCodeName().get(), CustodialAccount);
+		codesByName.put(SingleOwnerAccount.getCodeName().get(), SingleOwnerAccount);
+		codesByName.put(JointAccount.getCodeName().get(), JointAccount);
+		codesByName.put(Corporation.getCodeName().get(), Corporation);
+		codesByName.put(FormalPartnership.getCodeName().get(), FormalPartnership);
+		codesByName.put(FormalTrust.getCodeName().get(), FormalTrust);
+		codesByName.put(Nominee.getCodeName().get(), Nominee);
+		codesByName.put(NonProfitOrganisation.getCodeName().get(), NonProfitOrganisation);
+		codesByName.put(OtherNonIndividual.getCodeName().get(), OtherNonIndividual);
+		codesByName.put(EUResidualEntity.getCodeName().get(), EUResidualEntity);
+		codesByName.put(GovernmentOrganisation.getCodeName().get(), GovernmentOrganisation);
+	}
+
+	public static AccountOwnershipType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AccountOwnershipType2Code[] values() {
+		AccountOwnershipType2Code[] values = new AccountOwnershipType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AccountOwnershipType2Code> {
+		@Override
+		public AccountOwnershipType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AccountOwnershipType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

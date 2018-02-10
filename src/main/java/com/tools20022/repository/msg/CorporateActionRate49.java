@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -28,9 +29,8 @@ import com.tools20022.repository.choice.TaxCreditRateFormat2Choice;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -77,8 +77,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTaxCreditRate1Rule#forCorporateActionRate49
+ * ConstraintTaxCreditRate1Rule.forCorporateActionRate49}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTaxCreditRate2Rule#forCorporateActionRate49
+ * ConstraintTaxCreditRate2Rule.forCorporateActionRate49}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,17 +111,17 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateActionRate29}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionRate49", propOrder = {"additionalQuantityForSubscribedResultantSecurities", "additionalQuantityForExistingSecurities", "newToOld", "chargesFees", "fiscalStamp", "applicableRate", "taxCreditRate",
 		"financialTransactionTaxRate"})
 public class CorporateActionRate49 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AddtlQtyForSbcbdRsltntScties")
 	protected RatioFormat3Choice additionalQuantityForSubscribedResultantSecurities;
 	/**
-	 * Quantity of additional intermediate securities/new equities awarded for a
-	 * given quantity of securities derived from subscription.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -129,6 +140,9 @@ public class CorporateActionRate49 {
 	 * CorporateActionRate49}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlQtyForSbcbdRsltntScties"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::ADSR</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -160,9 +174,10 @@ public class CorporateActionRate49 {
 	public static final MMMessageAssociationEnd mmAdditionalQuantityForSubscribedResultantSecurities = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmAdditionalQuantityForSubscribedResultantSecurities;
-			componentContext_lazy = () -> CorporateActionRate49.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate49.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlQtyForSbcbdRsltntScties";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::ADSR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalQuantityForSubscribedResultantSecurities";
 			definition = "Quantity of additional intermediate securities/new equities awarded for a given quantity of securities derived from subscription.";
@@ -174,13 +189,11 @@ public class CorporateActionRate49 {
 			type_lazy = () -> RatioFormat3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlQtyForExstgScties")
 	protected RatioFormat3Choice additionalQuantityForExistingSecurities;
 	/**
-	 * Quantity of additional securities for a given quantity of underlying
-	 * securities where underlying securities are not exchanged or debited, for
-	 * example, 1 for 1: 1 new equity credited for every 1 underlying equity = 2
-	 * resulting equities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -198,6 +211,9 @@ public class CorporateActionRate49 {
 	 * CorporateActionRate49}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlQtyForExstgScties"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::ADEX</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -227,9 +243,10 @@ public class CorporateActionRate49 {
 	public static final MMMessageAssociationEnd mmAdditionalQuantityForExistingSecurities = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmAdditionalQuantityForExistingSecurities;
-			componentContext_lazy = () -> CorporateActionRate49.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate49.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlQtyForExstgScties";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::ADEX"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalQuantityForExistingSecurities";
 			definition = "Quantity of additional securities for a given quantity of underlying securities where underlying securities are not exchanged or debited, for example, 1 for 1: 1 new equity credited for every 1 underlying equity = 2 resulting equities.";
@@ -241,13 +258,11 @@ public class CorporateActionRate49 {
 			type_lazy = () -> RatioFormat3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NewToOd")
 	protected RatioFormat15Choice newToOld;
 	/**
-	 * Quantity of new securities for a given quantity of underlying securities,
-	 * where the underlying securities will be exchanged or debited, for
-	 * example, 2 for 1: 2 new equities credited for every 1 underlying equity
-	 * debited = 2 resulting equities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -265,6 +280,9 @@ public class CorporateActionRate49 {
 	 * CorporateActionRate49}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NewToOd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::NEWO</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -294,9 +312,10 @@ public class CorporateActionRate49 {
 	public static final MMMessageAssociationEnd mmNewToOld = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmNewToOld;
-			componentContext_lazy = () -> CorporateActionRate49.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate49.mmObject();
 			isDerived = false;
 			xmlTag = "NewToOd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::NEWO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewToOld";
 			definition = "Quantity of new securities for a given quantity of underlying securities, where the underlying securities will be exchanged or debited, for example, 2 for 1: 2 new equities credited for every 1 underlying equity debited = 2 resulting equities.";
@@ -308,11 +327,11 @@ public class CorporateActionRate49 {
 			type_lazy = () -> RatioFormat15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgsFees")
 	protected RateAndAmountFormat5Choice chargesFees;
 	/**
-	 * Rate used to calculate the amount of the charges/fees that cannot be
-	 * categorised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -361,7 +380,7 @@ public class CorporateActionRate49 {
 	public static final MMMessageAttribute mmChargesFees = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmCorporateActionCharge;
-			componentContext_lazy = () -> CorporateActionRate49.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate49.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsFees";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -374,10 +393,11 @@ public class CorporateActionRate49 {
 			complexType_lazy = () -> RateAndAmountFormat5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FsclStmp")
 	protected PercentageRate fiscalStamp;
 	/**
-	 * Percentage of fiscal tax to apply.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -423,7 +443,7 @@ public class CorporateActionRate49 {
 	public static final MMMessageAttribute mmFiscalStamp = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
-			componentContext_lazy = () -> CorporateActionRate49.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate49.mmObject();
 			isDerived = false;
 			xmlTag = "FsclStmp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -436,11 +456,11 @@ public class CorporateActionRate49 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "AplblRate")
 	protected PercentageRate applicableRate;
 	/**
-	 * Rate applicable to the event announced, for example, redemption rate for
-	 * a redemption event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -489,7 +509,7 @@ public class CorporateActionRate49 {
 	public static final MMMessageAttribute mmApplicableRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmApplicableRate;
-			componentContext_lazy = () -> CorporateActionRate49.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate49.mmObject();
 			isDerived = false;
 			xmlTag = "AplblRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -502,10 +522,11 @@ public class CorporateActionRate49 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxCdtRate")
 	protected List<TaxCreditRateFormat2Choice> taxCreditRate;
 	/**
-	 * Amount of money per equity allocated as the result of a tax credit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -553,7 +574,7 @@ public class CorporateActionRate49 {
 	public static final MMMessageAttribute mmTaxCreditRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmCreditRate;
-			componentContext_lazy = () -> CorporateActionRate49.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate49.mmObject();
 			isDerived = false;
 			xmlTag = "TaxCdtRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -565,10 +586,11 @@ public class CorporateActionRate49 {
 			complexType_lazy = () -> TaxCreditRateFormat2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FinTxTaxRate")
 	protected PercentageRate financialTransactionTaxRate;
 	/**
-	 * Rate of financial transaction tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -610,7 +632,7 @@ public class CorporateActionRate49 {
 	public static final MMMessageAttribute mmFinancialTransactionTaxRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmTransactionTax;
-			componentContext_lazy = () -> CorporateActionRate49.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate49.mmObject();
 			isDerived = false;
 			xmlTag = "FinTxTaxRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -626,10 +648,13 @@ public class CorporateActionRate49 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionRate49.mmAdditionalQuantityForSubscribedResultantSecurities, CorporateActionRate49.mmAdditionalQuantityForExistingSecurities, CorporateActionRate49.mmNewToOld,
-						CorporateActionRate49.mmChargesFees, CorporateActionRate49.mmFiscalStamp, CorporateActionRate49.mmApplicableRate, CorporateActionRate49.mmTaxCreditRate, CorporateActionRate49.mmFinancialTransactionTaxRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate49.mmAdditionalQuantityForSubscribedResultantSecurities,
+						com.tools20022.repository.msg.CorporateActionRate49.mmAdditionalQuantityForExistingSecurities, com.tools20022.repository.msg.CorporateActionRate49.mmNewToOld,
+						com.tools20022.repository.msg.CorporateActionRate49.mmChargesFees, com.tools20022.repository.msg.CorporateActionRate49.mmFiscalStamp, com.tools20022.repository.msg.CorporateActionRate49.mmApplicableRate,
+						com.tools20022.repository.msg.CorporateActionRate49.mmTaxCreditRate, com.tools20022.repository.msg.CorporateActionRate49.mmFinancialTransactionTaxRate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTaxCreditRate1Rule.forCorporateActionRate49, com.tools20022.repository.constraints.ConstraintTaxCreditRate2Rule.forCorporateActionRate49);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRate49";
 				definition = "Specifies rate details.";
@@ -640,75 +665,75 @@ public class CorporateActionRate49 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AddtlQtyForSbcbdRsltntScties")
-	public RatioFormat3Choice getAdditionalQuantityForSubscribedResultantSecurities() {
-		return additionalQuantityForSubscribedResultantSecurities;
+	public Optional<RatioFormat3Choice> getAdditionalQuantityForSubscribedResultantSecurities() {
+		return additionalQuantityForSubscribedResultantSecurities == null ? Optional.empty() : Optional.of(additionalQuantityForSubscribedResultantSecurities);
 	}
 
-	public void setAdditionalQuantityForSubscribedResultantSecurities(RatioFormat3Choice additionalQuantityForSubscribedResultantSecurities) {
+	public CorporateActionRate49 setAdditionalQuantityForSubscribedResultantSecurities(RatioFormat3Choice additionalQuantityForSubscribedResultantSecurities) {
 		this.additionalQuantityForSubscribedResultantSecurities = additionalQuantityForSubscribedResultantSecurities;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlQtyForExstgScties")
-	public RatioFormat3Choice getAdditionalQuantityForExistingSecurities() {
-		return additionalQuantityForExistingSecurities;
+	public Optional<RatioFormat3Choice> getAdditionalQuantityForExistingSecurities() {
+		return additionalQuantityForExistingSecurities == null ? Optional.empty() : Optional.of(additionalQuantityForExistingSecurities);
 	}
 
-	public void setAdditionalQuantityForExistingSecurities(RatioFormat3Choice additionalQuantityForExistingSecurities) {
+	public CorporateActionRate49 setAdditionalQuantityForExistingSecurities(RatioFormat3Choice additionalQuantityForExistingSecurities) {
 		this.additionalQuantityForExistingSecurities = additionalQuantityForExistingSecurities;
+		return this;
 	}
 
-	@XmlElement(name = "NewToOd")
-	public RatioFormat15Choice getNewToOld() {
-		return newToOld;
+	public Optional<RatioFormat15Choice> getNewToOld() {
+		return newToOld == null ? Optional.empty() : Optional.of(newToOld);
 	}
 
-	public void setNewToOld(RatioFormat15Choice newToOld) {
+	public CorporateActionRate49 setNewToOld(RatioFormat15Choice newToOld) {
 		this.newToOld = newToOld;
+		return this;
 	}
 
-	@XmlElement(name = "ChrgsFees")
-	public RateAndAmountFormat5Choice getChargesFees() {
-		return chargesFees;
+	public Optional<RateAndAmountFormat5Choice> getChargesFees() {
+		return chargesFees == null ? Optional.empty() : Optional.of(chargesFees);
 	}
 
-	public void setChargesFees(RateAndAmountFormat5Choice chargesFees) {
+	public CorporateActionRate49 setChargesFees(RateAndAmountFormat5Choice chargesFees) {
 		this.chargesFees = chargesFees;
+		return this;
 	}
 
-	@XmlElement(name = "FsclStmp")
-	public PercentageRate getFiscalStamp() {
-		return fiscalStamp;
+	public Optional<PercentageRate> getFiscalStamp() {
+		return fiscalStamp == null ? Optional.empty() : Optional.of(fiscalStamp);
 	}
 
-	public void setFiscalStamp(PercentageRate fiscalStamp) {
+	public CorporateActionRate49 setFiscalStamp(PercentageRate fiscalStamp) {
 		this.fiscalStamp = fiscalStamp;
+		return this;
 	}
 
-	@XmlElement(name = "AplblRate")
-	public PercentageRate getApplicableRate() {
-		return applicableRate;
+	public Optional<PercentageRate> getApplicableRate() {
+		return applicableRate == null ? Optional.empty() : Optional.of(applicableRate);
 	}
 
-	public void setApplicableRate(PercentageRate applicableRate) {
+	public CorporateActionRate49 setApplicableRate(PercentageRate applicableRate) {
 		this.applicableRate = applicableRate;
+		return this;
 	}
 
-	@XmlElement(name = "TaxCdtRate")
 	public List<TaxCreditRateFormat2Choice> getTaxCreditRate() {
-		return taxCreditRate;
+		return taxCreditRate == null ? taxCreditRate = new ArrayList<>() : taxCreditRate;
 	}
 
-	public void setTaxCreditRate(List<TaxCreditRateFormat2Choice> taxCreditRate) {
-		this.taxCreditRate = taxCreditRate;
+	public CorporateActionRate49 setTaxCreditRate(List<TaxCreditRateFormat2Choice> taxCreditRate) {
+		this.taxCreditRate = Objects.requireNonNull(taxCreditRate);
+		return this;
 	}
 
-	@XmlElement(name = "FinTxTaxRate")
-	public PercentageRate getFinancialTransactionTaxRate() {
-		return financialTransactionTaxRate;
+	public Optional<PercentageRate> getFinancialTransactionTaxRate() {
+		return financialTransactionTaxRate == null ? Optional.empty() : Optional.of(financialTransactionTaxRate);
 	}
 
-	public void setFinancialTransactionTaxRate(PercentageRate financialTransactionTaxRate) {
+	public CorporateActionRate49 setFinancialTransactionTaxRate(PercentageRate financialTransactionTaxRate) {
 		this.financialTransactionTaxRate = financialTransactionTaxRate;
+		return this;
 	}
 }

@@ -20,46 +20,50 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.MoneyLaunderingCheckCode;
+import com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of money laundering identification procedures.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.MoneyLaunderingCheckCode
- * MoneyLaunderingCheckCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MoneyLaunderingCheck1Code#mmPassed
- * MoneyLaunderingCheck1Code.mmPassed}</li>
+ * {@linkplain com.tools20022.repository.codeset.MoneyLaunderingCheck1Code#Passed
+ * MoneyLaunderingCheck1Code.Passed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MoneyLaunderingCheck1Code#mmNotChecked
- * MoneyLaunderingCheck1Code.mmNotChecked}</li>
+ * {@linkplain com.tools20022.repository.codeset.MoneyLaunderingCheck1Code#NotChecked
+ * MoneyLaunderingCheck1Code.NotChecked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MoneyLaunderingCheck1Code#mmExemptBelowLimit
- * MoneyLaunderingCheck1Code.mmExemptBelowLimit}</li>
+ * {@linkplain com.tools20022.repository.codeset.MoneyLaunderingCheck1Code#ExemptBelowLimit
+ * MoneyLaunderingCheck1Code.ExemptBelowLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MoneyLaunderingCheck1Code#mmClientMoneyTypeExempt
- * MoneyLaunderingCheck1Code.mmClientMoneyTypeExempt}</li>
+ * {@linkplain com.tools20022.repository.codeset.MoneyLaunderingCheck1Code#ClientMoneyTypeExempt
+ * MoneyLaunderingCheck1Code.ClientMoneyTypeExempt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MoneyLaunderingCheck1Code#mmAuthorisedCredit
- * MoneyLaunderingCheck1Code.mmAuthorisedCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.MoneyLaunderingCheck1Code#AuthorisedCredit
+ * MoneyLaunderingCheck1Code.AuthorisedCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MoneyLaunderingCheck1Code#mmPostalOrElectronicPaymentExempt
- * MoneyLaunderingCheck1Code.mmPostalOrElectronicPaymentExempt}</li>
+ * {@linkplain com.tools20022.repository.codeset.MoneyLaunderingCheck1Code#PostalOrElectronicPaymentExempt
+ * MoneyLaunderingCheck1Code.PostalOrElectronicPaymentExempt}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.MoneyLaunderingCheckCode
+ * MoneyLaunderingCheckCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the status of money laundering identification procedures."</li>
  * </ul>
  */
-public class MoneyLaunderingCheck1Code extends MoneyLaunderingCheckCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MoneyLaunderingCheck1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -96,11 +101,12 @@ public class MoneyLaunderingCheck1Code extends MoneyLaunderingCheckCode {
 	 * name} = "Passed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPassed = new MMCode() {
+	public static final MoneyLaunderingCheck1Code Passed = new MoneyLaunderingCheck1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Passed";
-			owner_lazy = () -> MoneyLaunderingCheck1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.mmObject();
+			codeName = MoneyLaunderingCheckCode.Passed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -119,11 +125,12 @@ public class MoneyLaunderingCheck1Code extends MoneyLaunderingCheckCode {
 	 * name} = "NotChecked"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotChecked = new MMCode() {
+	public static final MoneyLaunderingCheck1Code NotChecked = new MoneyLaunderingCheck1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotChecked";
-			owner_lazy = () -> MoneyLaunderingCheck1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.mmObject();
+			codeName = MoneyLaunderingCheckCode.NotChecked.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -142,11 +149,12 @@ public class MoneyLaunderingCheck1Code extends MoneyLaunderingCheckCode {
 	 * name} = "ExemptBelowLimit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExemptBelowLimit = new MMCode() {
+	public static final MoneyLaunderingCheck1Code ExemptBelowLimit = new MoneyLaunderingCheck1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptBelowLimit";
-			owner_lazy = () -> MoneyLaunderingCheck1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.mmObject();
+			codeName = MoneyLaunderingCheckCode.ExemptBelowLimit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -165,11 +173,12 @@ public class MoneyLaunderingCheck1Code extends MoneyLaunderingCheckCode {
 	 * name} = "ClientMoneyTypeExempt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClientMoneyTypeExempt = new MMCode() {
+	public static final MoneyLaunderingCheck1Code ClientMoneyTypeExempt = new MoneyLaunderingCheck1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientMoneyTypeExempt";
-			owner_lazy = () -> MoneyLaunderingCheck1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.mmObject();
+			codeName = MoneyLaunderingCheckCode.ClientMoneyTypeExempt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -188,11 +197,12 @@ public class MoneyLaunderingCheck1Code extends MoneyLaunderingCheckCode {
 	 * name} = "AuthorisedCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAuthorisedCredit = new MMCode() {
+	public static final MoneyLaunderingCheck1Code AuthorisedCredit = new MoneyLaunderingCheck1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisedCredit";
-			owner_lazy = () -> MoneyLaunderingCheck1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.mmObject();
+			codeName = MoneyLaunderingCheckCode.AuthorisedCredit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -211,27 +221,63 @@ public class MoneyLaunderingCheck1Code extends MoneyLaunderingCheckCode {
 	 * name} = "PostalOrElectronicPaymentExempt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPostalOrElectronicPaymentExempt = new MMCode() {
+	public static final MoneyLaunderingCheck1Code PostalOrElectronicPaymentExempt = new MoneyLaunderingCheck1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalOrElectronicPaymentExempt";
-			owner_lazy = () -> MoneyLaunderingCheck1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.mmObject();
+			codeName = MoneyLaunderingCheckCode.PostalOrElectronicPaymentExempt.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, MoneyLaunderingCheck1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MoneyLaunderingCheck1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PASS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MoneyLaunderingCheck1Code";
 				definition = "Specifies the status of money laundering identification procedures.";
-				code_lazy = () -> Arrays.asList(MoneyLaunderingCheck1Code.mmPassed, MoneyLaunderingCheck1Code.mmNotChecked, MoneyLaunderingCheck1Code.mmExemptBelowLimit, MoneyLaunderingCheck1Code.mmClientMoneyTypeExempt,
-						MoneyLaunderingCheck1Code.mmAuthorisedCredit, MoneyLaunderingCheck1Code.mmPostalOrElectronicPaymentExempt);
 				trace_lazy = () -> MoneyLaunderingCheckCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.Passed, com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.NotChecked,
+						com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.ExemptBelowLimit, com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.ClientMoneyTypeExempt,
+						com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.AuthorisedCredit, com.tools20022.repository.codeset.MoneyLaunderingCheck1Code.PostalOrElectronicPaymentExempt);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Passed.getCodeName().get(), Passed);
+		codesByName.put(NotChecked.getCodeName().get(), NotChecked);
+		codesByName.put(ExemptBelowLimit.getCodeName().get(), ExemptBelowLimit);
+		codesByName.put(ClientMoneyTypeExempt.getCodeName().get(), ClientMoneyTypeExempt);
+		codesByName.put(AuthorisedCredit.getCodeName().get(), AuthorisedCredit);
+		codesByName.put(PostalOrElectronicPaymentExempt.getCodeName().get(), PostalOrElectronicPaymentExempt);
+	}
+
+	public static MoneyLaunderingCheck1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MoneyLaunderingCheck1Code[] values() {
+		MoneyLaunderingCheck1Code[] values = new MoneyLaunderingCheck1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MoneyLaunderingCheck1Code> {
+		@Override
+		public MoneyLaunderingCheck1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MoneyLaunderingCheck1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

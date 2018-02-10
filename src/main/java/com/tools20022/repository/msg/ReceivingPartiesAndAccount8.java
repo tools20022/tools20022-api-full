@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.SecuritiesSettlementSystem;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule#forReceivingPartiesAndAccount8
+ * ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount8}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,15 +108,16 @@ import javax.xml.bind.annotation.XmlType;
  * ReceivingPartiesAndAccount4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReceivingPartiesAndAccount8", propOrder = {"receiverDetails", "receiversCustodianDetails", "receiversIntermediaryDetails", "receivingAgentDetails", "securitiesSettlementSystem", "placeOfSettlementDetails"})
 public class ReceivingPartiesAndAccount8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RcvrDtls")
 	protected InvestmentAccount24 receiverDetails;
 	/**
-	 * Party that buys goods or services, or a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -147,7 +158,7 @@ public class ReceivingPartiesAndAccount8 {
 	public static final MMMessageAssociationEnd mmReceiverDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
-			componentContext_lazy = () -> ReceivingPartiesAndAccount8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "RcvrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,11 +171,11 @@ public class ReceivingPartiesAndAccount8 {
 			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvrsCtdnDtls")
 	protected PartyIdentificationAndAccount5 receiversCustodianDetails;
 	/**
-	 * Party that acts on behalf of the buyer of securities when the buyer does
-	 * not have a direct relationship with the receiving agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -207,7 +218,7 @@ public class ReceivingPartiesAndAccount8 {
 	public static final MMMessageAssociationEnd mmReceiversCustodianDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> ReceivingPartiesAndAccount8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "RcvrsCtdnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,12 +231,11 @@ public class ReceivingPartiesAndAccount8 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount5.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvrsIntrmyDtls")
 	protected PartyIdentificationAndAccount5 receiversIntermediaryDetails;
 	/**
-	 * Party that the Receiver's custodian uses to effect the receipt of a
-	 * security, when the Receiver's custodian does not have a direct
-	 * relationship with the Receiver agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -268,7 +278,7 @@ public class ReceivingPartiesAndAccount8 {
 	public static final MMMessageAssociationEnd mmReceiversIntermediaryDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> ReceivingPartiesAndAccount8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "RcvrsIntrmyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,11 +291,11 @@ public class ReceivingPartiesAndAccount8 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount5.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvgAgtDtls", required = true)
 	protected PartyIdentificationAndAccount4 receivingAgentDetails;
 	/**
-	 * Party that receives securities from the delivering agent via the place of
-	 * settlement, eg, securities central depository.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -328,7 +338,7 @@ public class ReceivingPartiesAndAccount8 {
 	public static final MMMessageAssociationEnd mmReceivingAgentDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> ReceivingPartiesAndAccount8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgAgtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -341,10 +351,11 @@ public class ReceivingPartiesAndAccount8 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount4.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesSttlmSys")
 	protected Max35Text securitiesSettlementSystem;
 	/**
-	 * Identifies the securities settlement system to be used.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -385,7 +396,7 @@ public class ReceivingPartiesAndAccount8 {
 	public static final MMMessageAttribute mmSecuritiesSettlementSystem = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlementSystem.mmObject();
-			componentContext_lazy = () -> ReceivingPartiesAndAccount8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSttlmSys";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -397,10 +408,11 @@ public class ReceivingPartiesAndAccount8 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfSttlmDtls")
 	protected PartyIdentification21 placeOfSettlementDetails;
 	/**
-	 * Place where settlement of the securities takes place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -440,7 +452,7 @@ public class ReceivingPartiesAndAccount8 {
 	public static final MMMessageAssociationEnd mmPlaceOfSettlementDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> ReceivingPartiesAndAccount8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfSttlmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -457,10 +469,12 @@ public class ReceivingPartiesAndAccount8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReceivingPartiesAndAccount8.mmReceiverDetails, ReceivingPartiesAndAccount8.mmReceiversCustodianDetails, ReceivingPartiesAndAccount8.mmReceiversIntermediaryDetails,
-						ReceivingPartiesAndAccount8.mmReceivingAgentDetails, ReceivingPartiesAndAccount8.mmSecuritiesSettlementSystem, ReceivingPartiesAndAccount8.mmPlaceOfSettlementDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceivingPartiesAndAccount8.mmReceiverDetails, com.tools20022.repository.msg.ReceivingPartiesAndAccount8.mmReceiversCustodianDetails,
+						com.tools20022.repository.msg.ReceivingPartiesAndAccount8.mmReceiversIntermediaryDetails, com.tools20022.repository.msg.ReceivingPartiesAndAccount8.mmReceivingAgentDetails,
+						com.tools20022.repository.msg.ReceivingPartiesAndAccount8.mmSecuritiesSettlementSystem, com.tools20022.repository.msg.ReceivingPartiesAndAccount8.mmPlaceOfSettlementDetails);
 				trace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversCustodianDetailsRule.forReceivingPartiesAndAccount8);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReceivingPartiesAndAccount8";
 				definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
@@ -471,57 +485,57 @@ public class ReceivingPartiesAndAccount8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RcvrDtls")
-	public InvestmentAccount24 getReceiverDetails() {
-		return receiverDetails;
+	public Optional<InvestmentAccount24> getReceiverDetails() {
+		return receiverDetails == null ? Optional.empty() : Optional.of(receiverDetails);
 	}
 
-	public void setReceiverDetails(com.tools20022.repository.msg.InvestmentAccount24 receiverDetails) {
+	public ReceivingPartiesAndAccount8 setReceiverDetails(com.tools20022.repository.msg.InvestmentAccount24 receiverDetails) {
 		this.receiverDetails = receiverDetails;
+		return this;
 	}
 
-	@XmlElement(name = "RcvrsCtdnDtls")
-	public PartyIdentificationAndAccount5 getReceiversCustodianDetails() {
-		return receiversCustodianDetails;
+	public Optional<PartyIdentificationAndAccount5> getReceiversCustodianDetails() {
+		return receiversCustodianDetails == null ? Optional.empty() : Optional.of(receiversCustodianDetails);
 	}
 
-	public void setReceiversCustodianDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount5 receiversCustodianDetails) {
+	public ReceivingPartiesAndAccount8 setReceiversCustodianDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount5 receiversCustodianDetails) {
 		this.receiversCustodianDetails = receiversCustodianDetails;
+		return this;
 	}
 
-	@XmlElement(name = "RcvrsIntrmyDtls")
-	public PartyIdentificationAndAccount5 getReceiversIntermediaryDetails() {
-		return receiversIntermediaryDetails;
+	public Optional<PartyIdentificationAndAccount5> getReceiversIntermediaryDetails() {
+		return receiversIntermediaryDetails == null ? Optional.empty() : Optional.of(receiversIntermediaryDetails);
 	}
 
-	public void setReceiversIntermediaryDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount5 receiversIntermediaryDetails) {
+	public ReceivingPartiesAndAccount8 setReceiversIntermediaryDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount5 receiversIntermediaryDetails) {
 		this.receiversIntermediaryDetails = receiversIntermediaryDetails;
+		return this;
 	}
 
-	@XmlElement(name = "RcvgAgtDtls", required = true)
 	public PartyIdentificationAndAccount4 getReceivingAgentDetails() {
 		return receivingAgentDetails;
 	}
 
-	public void setReceivingAgentDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount4 receivingAgentDetails) {
-		this.receivingAgentDetails = receivingAgentDetails;
+	public ReceivingPartiesAndAccount8 setReceivingAgentDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount4 receivingAgentDetails) {
+		this.receivingAgentDetails = Objects.requireNonNull(receivingAgentDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesSttlmSys")
-	public Max35Text getSecuritiesSettlementSystem() {
-		return securitiesSettlementSystem;
+	public Optional<Max35Text> getSecuritiesSettlementSystem() {
+		return securitiesSettlementSystem == null ? Optional.empty() : Optional.of(securitiesSettlementSystem);
 	}
 
-	public void setSecuritiesSettlementSystem(Max35Text securitiesSettlementSystem) {
+	public ReceivingPartiesAndAccount8 setSecuritiesSettlementSystem(Max35Text securitiesSettlementSystem) {
 		this.securitiesSettlementSystem = securitiesSettlementSystem;
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfSttlmDtls")
-	public PartyIdentification21 getPlaceOfSettlementDetails() {
-		return placeOfSettlementDetails;
+	public Optional<PartyIdentification21> getPlaceOfSettlementDetails() {
+		return placeOfSettlementDetails == null ? Optional.empty() : Optional.of(placeOfSettlementDetails);
 	}
 
-	public void setPlaceOfSettlementDetails(com.tools20022.repository.msg.PartyIdentification21 placeOfSettlementDetails) {
+	public ReceivingPartiesAndAccount8 setPlaceOfSettlementDetails(com.tools20022.repository.msg.PartyIdentification21 placeOfSettlementDetails) {
 		this.placeOfSettlementDetails = placeOfSettlementDetails;
+		return this;
 	}
 }

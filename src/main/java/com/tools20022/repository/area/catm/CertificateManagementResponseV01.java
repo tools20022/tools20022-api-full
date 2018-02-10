@@ -31,6 +31,8 @@ import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementI
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -40,28 +42,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TerminalManagementLatestVersion
- * TerminalManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion
- * CardPaymentsExchangesTerminalManagementISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20152016
- * CAPETerminalManagementMaintenance20152016}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20162017
- * CAPETerminalManagementMaintenance20162017}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CertMgmtRspn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -77,6 +57,28 @@ import javax.xml.bind.annotation.*;
  * CertificateManagementResponseV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion
+ * CardPaymentsExchangesTerminalManagementISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20152016
+ * CAPETerminalManagementMaintenance20152016}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20162017
+ * CAPETerminalManagementMaintenance20162017}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CertMgmtRspn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TerminalManagementLatestVersion
+ * TerminalManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code catm.008.001.01}</li>
@@ -92,15 +94,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CertificateManagementResponseV01", propOrder = {"header", "certificateManagementResponse", "securityTrailer"})
 public class CertificateManagementResponseV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header29 header;
 	/**
-	 * Information related to the protocol management.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,10 +142,11 @@ public class CertificateManagementResponseV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CertMgmtRspn", required = true)
 	protected CertificateManagementResponse1 certificateManagementResponse;
 	/**
-	 * Information related to the result of the certificate management request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -184,10 +188,11 @@ public class CertificateManagementResponseV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SctyTrlr")
 	protected ContentInformationType13 securityTrailer;
 	/**
-	 * Trailer of the message containing a MAC or a digital signature.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,34 +264,34 @@ public class CertificateManagementResponseV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header29 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header29 header) {
-		this.header = header;
+	public CertificateManagementResponseV01 setHeader(Header29 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "CertMgmtRspn", required = true)
 	public CertificateManagementResponse1 getCertificateManagementResponse() {
 		return certificateManagementResponse;
 	}
 
-	public void setCertificateManagementResponse(CertificateManagementResponse1 certificateManagementResponse) {
-		this.certificateManagementResponse = certificateManagementResponse;
+	public CertificateManagementResponseV01 setCertificateManagementResponse(CertificateManagementResponse1 certificateManagementResponse) {
+		this.certificateManagementResponse = Objects.requireNonNull(certificateManagementResponse);
+		return this;
 	}
 
-	@XmlElement(name = "SctyTrlr")
-	public ContentInformationType13 getSecurityTrailer() {
-		return securityTrailer;
+	public Optional<ContentInformationType13> getSecurityTrailer() {
+		return securityTrailer == null ? Optional.empty() : Optional.of(securityTrailer);
 	}
 
-	public void setSecurityTrailer(ContentInformationType13 securityTrailer) {
+	public CertificateManagementResponseV01 setSecurityTrailer(ContentInformationType13 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catm.008.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:catm.008.001.01")
 	static public class Document {
 		@XmlElement(name = "CertMgmtRspn", required = true)
 		public CertificateManagementResponseV01 messageBody;

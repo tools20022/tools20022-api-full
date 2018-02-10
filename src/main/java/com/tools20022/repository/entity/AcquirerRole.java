@@ -39,20 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole
  * CardPaymentPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer1 Acquirer1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer2 Acquirer2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer3 Acquirer3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer4 Acquirer4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer6 Acquirer6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer5 Acquirer5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer7 Acquirer7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Acquirer8 Acquirer8}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
  * <ul>
@@ -254,10 +240,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer1 Acquirer1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer2 Acquirer2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer3 Acquirer3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer4 Acquirer4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer6 Acquirer6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer5 Acquirer5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer7 Acquirer7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Acquirer8 Acquirer8}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -275,7 +275,7 @@ public class AcquirerRole extends CardPaymentPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcquirerRole";
 				definition = "Entity acquiring card payment transactions.";

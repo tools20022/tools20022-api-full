@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Choice of format for the forex standing instruction information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FXStandingInstruction5Choice", propOrder = {"indicator", "proprietary"})
 public class FXStandingInstruction5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ind", required = true)
 	protected YesNoIndicator indicator;
 	/**
-	 * Specifies whether the forex standing instruction in place should apply.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,6 +100,9 @@ public class FXStandingInstruction5Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Ind"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::FXCX//SINO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -112,9 +118,10 @@ public class FXStandingInstruction5Choice {
 	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StandingSettlementInstruction.mmFXStandingInstruction;
-			componentContext_lazy = () -> FXStandingInstruction5Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FXStandingInstruction5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ind";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::FXCX//SINO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicator";
 			definition = "Specifies whether the forex standing instruction in place should apply.";
@@ -123,10 +130,11 @@ public class FXStandingInstruction5Choice {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification47 proprietary;
 	/**
-	 * FX Standing instruction information expressed as a proprietary code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,6 +155,9 @@ public class FXStandingInstruction5Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Prtry"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::PAYS/4!c[4c]/4!c</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -161,9 +172,10 @@ public class FXStandingInstruction5Choice {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StandingSettlementInstruction.mmFXStandingInstruction;
-			componentContext_lazy = () -> FXStandingInstruction5Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FXStandingInstruction5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PAYS/4!c[4c]/4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "FX Standing instruction information expressed as a proprietary code.";
@@ -176,9 +188,9 @@ public class FXStandingInstruction5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FXStandingInstruction5Choice.mmIndicator, FXStandingInstruction5Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FXStandingInstruction5Choice.mmIndicator, com.tools20022.repository.choice.FXStandingInstruction5Choice.mmProprietary);
 				trace_lazy = () -> StandingSettlementInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FXStandingInstruction5Choice";
 				definition = "Choice of format for the forex standing instruction information.";
@@ -187,21 +199,21 @@ public class FXStandingInstruction5Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ind", required = true)
 	public YesNoIndicator getIndicator() {
 		return indicator;
 	}
 
-	public void setIndicator(YesNoIndicator indicator) {
-		this.indicator = indicator;
+	public FXStandingInstruction5Choice setIndicator(YesNoIndicator indicator) {
+		this.indicator = Objects.requireNonNull(indicator);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification47 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification47 proprietary) {
-		this.proprietary = proprietary;
+	public FXStandingInstruction5Choice setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

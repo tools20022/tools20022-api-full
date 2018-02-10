@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.NotificationtoReceiveISOPreviousversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -47,23 +49,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
- * CashManagementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.NotificationtoReceiveISOPreviousversion
- * NotificationtoReceiveISOPreviousversion}</li>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "NtfctnToRcvCxlAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -79,6 +64,23 @@ import javax.xml.bind.annotation.*;
  * NotificationToReceiveCancellationAdviceV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.NotificationtoReceiveISOPreviousversion
+ * NotificationtoReceiveISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "NtfctnToRcvCxlAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
+ * CashManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.058.001.04}</li>
@@ -106,15 +108,16 @@ import javax.xml.bind.annotation.*;
  * NotificationToReceiveCancellationAdviceV03}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NotificationToReceiveCancellationAdviceV04", propOrder = {"groupHeader", "originalNotification", "supplementaryData"})
 public class NotificationToReceiveCancellationAdviceV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader59 groupHeader;
 	/**
-	 * Set of elements used to provide further details on the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,11 +172,11 @@ public class NotificationToReceiveCancellationAdviceV04 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgnlNtfctn", required = true)
 	protected OriginalNotification8 originalNotification;
 	/**
-	 * Set of elements used to identify the original notification, to which the
-	 * cancellation advice refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -230,11 +233,11 @@ public class NotificationToReceiveCancellationAdviceV04 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -323,34 +326,34 @@ public class NotificationToReceiveCancellationAdviceV04 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader59 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader59 groupHeader) {
-		this.groupHeader = groupHeader;
+	public NotificationToReceiveCancellationAdviceV04 setGroupHeader(GroupHeader59 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlNtfctn", required = true)
 	public OriginalNotification8 getOriginalNotification() {
 		return originalNotification;
 	}
 
-	public void setOriginalNotification(OriginalNotification8 originalNotification) {
-		this.originalNotification = originalNotification;
+	public NotificationToReceiveCancellationAdviceV04 setOriginalNotification(OriginalNotification8 originalNotification) {
+		this.originalNotification = Objects.requireNonNull(originalNotification);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public NotificationToReceiveCancellationAdviceV04 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.058.04.04")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.058.001.04")
 	static public class Document {
 		@XmlElement(name = "NtfctnToRcvCxlAdvc", required = true)
 		public NotificationToReceiveCancellationAdviceV04 messageBody;

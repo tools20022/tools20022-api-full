@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 
 /**
  * Specifies the system used in a settlement process.
@@ -37,6 +38,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.System System}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -45,8 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesSettlementSystem.mmSettlementParty}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.System System}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -119,8 +120,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -136,8 +137,8 @@ public class SecuritiesSettlementSystem extends System {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected SecuritiesSettlementPartyRole settlementParty;
 	/**
-	 * Party which settles through a system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,8 +172,8 @@ public class SecuritiesSettlementSystem extends System {
 	 */
 	public static final MMBusinessAssociationEnd mmSettlementParty = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementSystem.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementSystem.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementParty";
 			definition = "Party which settles through a system.";
@@ -187,7 +188,7 @@ public class SecuritiesSettlementSystem extends System {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementSystem";
 				definition = "Specifies the system used in a settlement process.";
@@ -210,11 +211,12 @@ public class SecuritiesSettlementSystem extends System {
 		return mmObject_lazy.get();
 	}
 
-	public SecuritiesSettlementPartyRole getSettlementParty() {
-		return settlementParty;
+	public Optional<SecuritiesSettlementPartyRole> getSettlementParty() {
+		return settlementParty == null ? Optional.empty() : Optional.of(settlementParty);
 	}
 
-	public void setSettlementParty(com.tools20022.repository.entity.SecuritiesSettlementPartyRole settlementParty) {
+	public SecuritiesSettlementSystem setSettlementParty(com.tools20022.repository.entity.SecuritiesSettlementPartyRole settlementParty) {
 		this.settlementParty = settlementParty;
+		return this;
 	}
 }

@@ -20,44 +20,48 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.StatusCode;
+import com.tools20022.repository.codeset.Status7Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of an instruction/vote.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.StatusCode StatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Status7Code#mmCancelledBySubcustodian
- * Status7Code.mmCancelledBySubcustodian}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status7Code#mmAccepted
- * Status7Code.mmAccepted}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status7Code#mmCancelled
- * Status7Code.mmCancelled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status7Code#mmCompleted
- * Status7Code.mmCompleted}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status7Code#mmNotReceived
- * Status7Code.mmNotReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.Status7Code#CancelledBySubcustodian
+ * Status7Code.CancelledBySubcustodian}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status7Code#Accepted
+ * Status7Code.Accepted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status7Code#Cancelled
+ * Status7Code.Cancelled}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status7Code#Completed
+ * Status7Code.Completed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status7Code#NotReceived
+ * Status7Code.NotReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Status7Code#mmReceivedByIssuerOrRegistrar
- * Status7Code.mmReceivedByIssuerOrRegistrar}</li>
+ * {@linkplain com.tools20022.repository.codeset.Status7Code#ReceivedByIssuerOrRegistrar
+ * Status7Code.ReceivedByIssuerOrRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Status7Code#mmStandingInstruction
- * Status7Code.mmStandingInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.Status7Code#StandingInstruction
+ * Status7Code.StandingInstruction}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.StatusCode StatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of an instruction/vote."</li>
  * </ul>
  */
-public class Status7Code extends StatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Status7Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class Status7Code extends StatusCode {
 	 * name} = "CancelledBySubcustodian"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelledBySubcustodian = new MMCode() {
+	public static final Status7Code CancelledBySubcustodian = new Status7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledBySubcustodian";
-			owner_lazy = () -> Status7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status7Code.mmObject();
+			codeName = StatusCode.CancelledBySubcustodian.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -108,11 +114,12 @@ public class Status7Code extends StatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final Status7Code Accepted = new Status7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> Status7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status7Code.mmObject();
+			codeName = StatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -130,11 +137,12 @@ public class Status7Code extends StatusCode {
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelled = new MMCode() {
+	public static final Status7Code Cancelled = new Status7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
-			owner_lazy = () -> Status7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status7Code.mmObject();
+			codeName = StatusCode.Cancelled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -152,11 +160,12 @@ public class Status7Code extends StatusCode {
 	 * name} = "Completed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompleted = new MMCode() {
+	public static final Status7Code Completed = new Status7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
-			owner_lazy = () -> Status7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status7Code.mmObject();
+			codeName = StatusCode.Completed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -174,11 +183,12 @@ public class Status7Code extends StatusCode {
 	 * name} = "NotReceived"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotReceived = new MMCode() {
+	public static final Status7Code NotReceived = new Status7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotReceived";
-			owner_lazy = () -> Status7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status7Code.mmObject();
+			codeName = StatusCode.NotReceived.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -196,11 +206,12 @@ public class Status7Code extends StatusCode {
 	 * name} = "ReceivedByIssuerOrRegistrar"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceivedByIssuerOrRegistrar = new MMCode() {
+	public static final Status7Code ReceivedByIssuerOrRegistrar = new Status7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedByIssuerOrRegistrar";
-			owner_lazy = () -> Status7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status7Code.mmObject();
+			codeName = StatusCode.ReceivedByIssuerOrRegistrar.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -218,26 +229,63 @@ public class Status7Code extends StatusCode {
 	 * name} = "StandingInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStandingInstruction = new MMCode() {
+	public static final Status7Code StandingInstruction = new Status7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstruction";
-			owner_lazy = () -> Status7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status7Code.mmObject();
+			codeName = StatusCode.StandingInstruction.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Status7Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Status7Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status7Code";
 				definition = "Specifies the status of an instruction/vote.";
-				code_lazy = () -> Arrays.asList(Status7Code.mmCancelledBySubcustodian, Status7Code.mmAccepted, Status7Code.mmCancelled, Status7Code.mmCompleted, Status7Code.mmNotReceived, Status7Code.mmReceivedByIssuerOrRegistrar,
-						Status7Code.mmStandingInstruction);
 				trace_lazy = () -> StatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Status7Code.CancelledBySubcustodian, com.tools20022.repository.codeset.Status7Code.Accepted, com.tools20022.repository.codeset.Status7Code.Cancelled,
+						com.tools20022.repository.codeset.Status7Code.Completed, com.tools20022.repository.codeset.Status7Code.NotReceived, com.tools20022.repository.codeset.Status7Code.ReceivedByIssuerOrRegistrar,
+						com.tools20022.repository.codeset.Status7Code.StandingInstruction);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CancelledBySubcustodian.getCodeName().get(), CancelledBySubcustodian);
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+		codesByName.put(Cancelled.getCodeName().get(), Cancelled);
+		codesByName.put(Completed.getCodeName().get(), Completed);
+		codesByName.put(NotReceived.getCodeName().get(), NotReceived);
+		codesByName.put(ReceivedByIssuerOrRegistrar.getCodeName().get(), ReceivedByIssuerOrRegistrar);
+		codesByName.put(StandingInstruction.getCodeName().get(), StandingInstruction);
+	}
+
+	public static Status7Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Status7Code[] values() {
+		Status7Code[] values = new Status7Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Status7Code> {
+		@Override
+		public Status7Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Status7Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

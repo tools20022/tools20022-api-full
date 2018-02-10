@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Amount of money associated with a service."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Charge9", propOrder = {"type", "amount", "calculationBasis"})
 public class Charge9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected ChargeType2 type;
 	/**
-	 * Type of service for which a charge is asked or paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +107,7 @@ public class Charge9 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
-			componentContext_lazy = () -> Charge9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge9.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +118,11 @@ public class Charge9 {
 			complexType_lazy = () -> com.tools20022.repository.msg.ChargeType2.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
-	 * Amount of money asked or paid for the charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,7 +155,7 @@ public class Charge9 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> Charge9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge9.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,10 +166,11 @@ public class Charge9 {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ClctnBsis")
 	protected CalculationBasis1 calculationBasis;
 	/**
-	 * Calculation basis for the charge or fee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,7 +203,7 @@ public class Charge9 {
 	public static final MMMessageAttribute mmCalculationBasis = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmCalculationBasis;
-			componentContext_lazy = () -> Charge9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge9.mmObject();
 			isDerived = false;
 			xmlTag = "ClctnBsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,9 +218,9 @@ public class Charge9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Charge9.mmType, Charge9.mmAmount, Charge9.mmCalculationBasis);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge9.mmType, com.tools20022.repository.msg.Charge9.mmAmount, com.tools20022.repository.msg.Charge9.mmCalculationBasis);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Charge9";
 				definition = "Amount of money associated with a service.";
@@ -224,30 +229,30 @@ public class Charge9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public ChargeType2 getType() {
 		return type;
 	}
 
-	public void setType(com.tools20022.repository.msg.ChargeType2 type) {
-		this.type = type;
+	public Charge9 setType(com.tools20022.repository.msg.ChargeType2 type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
-		this.amount = amount;
+	public Charge9 setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "ClctnBsis")
-	public CalculationBasis1 getCalculationBasis() {
-		return calculationBasis;
+	public Optional<CalculationBasis1> getCalculationBasis() {
+		return calculationBasis == null ? Optional.empty() : Optional.of(calculationBasis);
 	}
 
-	public void setCalculationBasis(com.tools20022.repository.msg.CalculationBasis1 calculationBasis) {
+	public Charge9 setCalculationBasis(com.tools20022.repository.msg.CalculationBasis1 calculationBasis) {
 		this.calculationBasis = calculationBasis;
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
@@ -29,6 +30,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistence35to30TextFieldRule#forNumber4Choice
+ * ConstraintCoexistence35to30TextFieldRule.forNumber4Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -65,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice number format."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "Number4Choice", propOrder = {"short", "long"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "Number4Choice", propOrder = {"short_", "long_"})
 public class Number4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Shrt", required = true)
 	protected Exact3NumericText short_;
 	/**
-	 * Number of maximum 3 numeric text.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -89,6 +100,9 @@ public class Number4Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Shrt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13A:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -101,9 +115,10 @@ public class Number4Choice {
 	 */
 	public static final MMMessageAttribute mmShort = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Number4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Number4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Shrt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13A:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Short";
 			definition = "Number of maximum 3 numeric text.";
@@ -112,11 +127,11 @@ public class Number4Choice {
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Lng", required = true)
 	protected GenericIdentification18 long_;
 	/**
-	 * Number of maximum 35 text, with the possibility to provide an issuer for
-	 * the number identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -130,6 +145,9 @@ public class Number4Choice {
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Lng"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13B:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -145,9 +163,10 @@ public class Number4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmLong = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Number4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Number4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Lng";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13B:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Long";
 			definition = "Number of maximum 35 text, with the possibility to provide an issuer for the number identification.";
@@ -161,8 +180,9 @@ public class Number4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Number4Choice.mmShort, Number4Choice.mmLong);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number4Choice.mmShort, com.tools20022.repository.choice.Number4Choice.mmLong);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistence35to30TextFieldRule.forNumber4Choice);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -178,21 +198,21 @@ public class Number4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Shrt", required = true)
 	public Exact3NumericText getShort() {
 		return short_;
 	}
 
-	public void setShort(Exact3NumericText short_) {
-		this.short_ = short_;
+	public Number4Choice setShort(Exact3NumericText short_) {
+		this.short_ = Objects.requireNonNull(short_);
+		return this;
 	}
 
-	@XmlElement(name = "Lng", required = true)
 	public GenericIdentification18 getLong() {
 		return long_;
 	}
 
-	public void setLong(GenericIdentification18 long_) {
-		this.long_ = long_;
+	public Number4Choice setLong(GenericIdentification18 long_) {
+		this.long_ = Objects.requireNonNull(long_);
+		return this;
 	}
 }

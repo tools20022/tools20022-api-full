@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.SecuritiesSettlementSystem;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,16 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DeliveringPartiesAndAccount5", propOrder = {"deliveringAgent", "depository", "securitiesSettlementSystem"})
 public class DeliveringPartiesAndAccount5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DlvrgAgt", required = true)
 	protected PartyIdentificationAndAccount32 deliveringAgent;
 	/**
-	 * Party that delivers securities to the receiving agent at the place of
-	 * settlement, eg, central securities depository.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -122,7 +124,7 @@ public class DeliveringPartiesAndAccount5 {
 	public static final MMMessageAssociationEnd mmDeliveringAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> DeliveringPartiesAndAccount5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +136,11 @@ public class DeliveringPartiesAndAccount5 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount32.mmObject();
 		}
 	};
+	@XmlElement(name = "Dpstry", required = true)
 	protected PartyIdentification34Choice depository;
 	/**
-	 * Place where settlement of the securities takes place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -170,7 +173,7 @@ public class DeliveringPartiesAndAccount5 {
 	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> DeliveringPartiesAndAccount5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "Dpstry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,10 +185,11 @@ public class DeliveringPartiesAndAccount5 {
 			type_lazy = () -> PartyIdentification34Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesSttlmSys")
 	protected Max35Text securitiesSettlementSystem;
 	/**
-	 * Identifies the securities settlement system to be used.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,7 +222,7 @@ public class DeliveringPartiesAndAccount5 {
 	public static final MMMessageAttribute mmSecuritiesSettlementSystem = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlementSystem.mmObject();
-			componentContext_lazy = () -> DeliveringPartiesAndAccount5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSttlmSys";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,9 +237,10 @@ public class DeliveringPartiesAndAccount5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount5.mmDeliveringAgent, DeliveringPartiesAndAccount5.mmDepository, DeliveringPartiesAndAccount5.mmSecuritiesSettlementSystem);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveringPartiesAndAccount5.mmDeliveringAgent, com.tools20022.repository.msg.DeliveringPartiesAndAccount5.mmDepository,
+						com.tools20022.repository.msg.DeliveringPartiesAndAccount5.mmSecuritiesSettlementSystem);
 				trace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DeliveringPartiesAndAccount5";
 				definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
@@ -244,30 +249,30 @@ public class DeliveringPartiesAndAccount5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DlvrgAgt", required = true)
 	public PartyIdentificationAndAccount32 getDeliveringAgent() {
 		return deliveringAgent;
 	}
 
-	public void setDeliveringAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount32 deliveringAgent) {
-		this.deliveringAgent = deliveringAgent;
+	public DeliveringPartiesAndAccount5 setDeliveringAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount32 deliveringAgent) {
+		this.deliveringAgent = Objects.requireNonNull(deliveringAgent);
+		return this;
 	}
 
-	@XmlElement(name = "Dpstry", required = true)
 	public PartyIdentification34Choice getDepository() {
 		return depository;
 	}
 
-	public void setDepository(PartyIdentification34Choice depository) {
-		this.depository = depository;
+	public DeliveringPartiesAndAccount5 setDepository(PartyIdentification34Choice depository) {
+		this.depository = Objects.requireNonNull(depository);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesSttlmSys")
-	public Max35Text getSecuritiesSettlementSystem() {
-		return securitiesSettlementSystem;
+	public Optional<Max35Text> getSecuritiesSettlementSystem() {
+		return securitiesSettlementSystem == null ? Optional.empty() : Optional.of(securitiesSettlementSystem);
 	}
 
-	public void setSecuritiesSettlementSystem(Max35Text securitiesSettlementSystem) {
+	public DeliveringPartiesAndAccount5 setSecuritiesSettlementSystem(Max35Text securitiesSettlementSystem) {
 		this.securitiesSettlementSystem = securitiesSettlementSystem;
+		return this;
 	}
 }

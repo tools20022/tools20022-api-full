@@ -24,11 +24,9 @@ import com.tools20022.repository.entity.ChequeIssue;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -43,8 +41,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentInstrument9#mmCashAccountOrChequeOrBankersDraftRule
- * PaymentInstrument9.mmCashAccountOrChequeOrBankersDraftRule}</li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstrument9#CashAccountOrChequeOrBankersDraftRule
+ * PaymentInstrument9.CashAccountOrChequeOrBankersDraftRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -70,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -92,15 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentInstrument9", propOrder = {"settlementCurrency", "cashAccountDetails", "chequeDetails", "bankersDraftDetails"})
 public class PaymentInstrument9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SttlmCcy", required = true)
 	protected ActiveCurrencyCode settlementCurrency;
 	/**
-	 * Currency associated with the payment instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,7 +133,7 @@ public class PaymentInstrument9 {
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
-			componentContext_lazy = () -> PaymentInstrument9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument9.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,11 +144,11 @@ public class PaymentInstrument9 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAcctDtls", required = true)
 	protected List<com.tools20022.repository.msg.CashAccount4> cashAccountDetails;
 	/**
-	 * Cash account to credit for the payment of the dividends or of the
-	 * redeemed investments funds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -183,7 +182,7 @@ public class PaymentInstrument9 {
 	public static final MMMessageAssociationEnd mmCashAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
-			componentContext_lazy = () -> PaymentInstrument9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument9.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,10 +194,11 @@ public class PaymentInstrument9 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount4.mmObject();
 		}
 	};
+	@XmlElement(name = "ChqDtls", required = true)
 	protected Cheque4 chequeDetails;
 	/**
-	 * Settlement instructions for a payment by cheque.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -228,7 +228,7 @@ public class PaymentInstrument9 {
 	public static final MMMessageAssociationEnd mmChequeDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
-			componentContext_lazy = () -> PaymentInstrument9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument9.mmObject();
 			isDerived = false;
 			xmlTag = "ChqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,10 +240,11 @@ public class PaymentInstrument9 {
 			type_lazy = () -> com.tools20022.repository.msg.Cheque4.mmObject();
 		}
 	};
+	@XmlElement(name = "BkrsDrftDtls", required = true)
 	protected Cheque4 bankersDraftDetails;
 	/**
-	 * Settlement instructions for a payment by draft.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -273,7 +274,7 @@ public class PaymentInstrument9 {
 	public static final MMMessageAssociationEnd mmBankersDraftDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
-			componentContext_lazy = () -> PaymentInstrument9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument9.mmObject();
 			isDerived = false;
 			xmlTag = "BkrsDrftDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -322,22 +323,24 @@ public class PaymentInstrument9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmCashAccountOrChequeOrBankersDraftRule = new MMXor() {
+	public static final MMXor CashAccountOrChequeOrBankersDraftRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountOrChequeOrBankersDraftRule";
 			definition = "At least one occurrence of either CashAccountDetails or ChequeDetails or BankersDraftDetails must be present.";
-			messageComponent_lazy = () -> PaymentInstrument9.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(PaymentInstrument9.mmCashAccountDetails, PaymentInstrument9.mmChequeDetails, PaymentInstrument9.mmBankersDraftDetails);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.PaymentInstrument9.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument9.mmCashAccountDetails, com.tools20022.repository.msg.PaymentInstrument9.mmChequeDetails,
+					com.tools20022.repository.msg.PaymentInstrument9.mmBankersDraftDetails);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentInstrument9.mmSettlementCurrency, PaymentInstrument9.mmCashAccountDetails, PaymentInstrument9.mmChequeDetails, PaymentInstrument9.mmBankersDraftDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument9.mmSettlementCurrency, com.tools20022.repository.msg.PaymentInstrument9.mmCashAccountDetails,
+						com.tools20022.repository.msg.PaymentInstrument9.mmChequeDetails, com.tools20022.repository.msg.PaymentInstrument9.mmBankersDraftDetails);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -349,45 +352,45 @@ public class PaymentInstrument9 {
 				name = "PaymentInstrument9";
 				definition = "Instrument that has or represents monetary value and is used to process a payment instruction.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentInstrument10.mmObject());
-				xors_lazy = () -> Arrays.asList(PaymentInstrument9.mmCashAccountOrChequeOrBankersDraftRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument9.CashAccountOrChequeOrBankersDraftRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SttlmCcy", required = true)
 	public ActiveCurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
 
-	public void setSettlementCurrency(ActiveCurrencyCode settlementCurrency) {
-		this.settlementCurrency = settlementCurrency;
+	public PaymentInstrument9 setSettlementCurrency(ActiveCurrencyCode settlementCurrency) {
+		this.settlementCurrency = Objects.requireNonNull(settlementCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "CshAcctDtls", required = true)
 	public List<CashAccount4> getCashAccountDetails() {
-		return cashAccountDetails;
+		return cashAccountDetails == null ? cashAccountDetails = new ArrayList<>() : cashAccountDetails;
 	}
 
-	public void setCashAccountDetails(List<com.tools20022.repository.msg.CashAccount4> cashAccountDetails) {
-		this.cashAccountDetails = cashAccountDetails;
+	public PaymentInstrument9 setCashAccountDetails(List<com.tools20022.repository.msg.CashAccount4> cashAccountDetails) {
+		this.cashAccountDetails = Objects.requireNonNull(cashAccountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "ChqDtls", required = true)
 	public Cheque4 getChequeDetails() {
 		return chequeDetails;
 	}
 
-	public void setChequeDetails(com.tools20022.repository.msg.Cheque4 chequeDetails) {
-		this.chequeDetails = chequeDetails;
+	public PaymentInstrument9 setChequeDetails(com.tools20022.repository.msg.Cheque4 chequeDetails) {
+		this.chequeDetails = Objects.requireNonNull(chequeDetails);
+		return this;
 	}
 
-	@XmlElement(name = "BkrsDrftDtls", required = true)
 	public Cheque4 getBankersDraftDetails() {
 		return bankersDraftDetails;
 	}
 
-	public void setBankersDraftDetails(com.tools20022.repository.msg.Cheque4 bankersDraftDetails) {
-		this.bankersDraftDetails = bankersDraftDetails;
+	public PaymentInstrument9 setBankersDraftDetails(com.tools20022.repository.msg.Cheque4 bankersDraftDetails) {
+		this.bankersDraftDetails = Objects.requireNonNull(bankersDraftDetails);
+		return this;
 	}
 }

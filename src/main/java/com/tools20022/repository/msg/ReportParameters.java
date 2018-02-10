@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Parameters to be used in a report."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReportParameters", propOrder = {"country", "currency", "party", "userDefinedParameter"})
 public class ReportParameters {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ctry")
 	protected CountryCode country;
 	/**
-	 * Country for which the cash flow is to be reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,7 +103,7 @@ public class ReportParameters {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +114,11 @@ public class ReportParameters {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected ActiveOrHistoricCurrencyCode currency;
 	/**
-	 * Currency for which the cash flow is to be reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +146,7 @@ public class ReportParameters {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,11 +157,11 @@ public class ReportParameters {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Pty")
 	protected BreakdownByParty2 party;
 	/**
-	 * Party, eg, fund management company, for which the cash flow report is
-	 * requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -186,7 +189,7 @@ public class ReportParameters {
 	 */
 	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReportParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,10 +201,11 @@ public class ReportParameters {
 			type_lazy = () -> com.tools20022.repository.msg.BreakdownByParty2.mmObject();
 		}
 	};
+	@XmlElement(name = "UsrDfndParam")
 	protected BreakdownByUserDefinedParameter2 userDefinedParameter;
 	/**
-	 * User defined parameter/s to be used for the cash forecast report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -229,7 +233,7 @@ public class ReportParameters {
 	 */
 	public static final MMMessageAssociationEnd mmUserDefinedParameter = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReportParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters.mmObject();
 			isDerived = false;
 			xmlTag = "UsrDfndParam";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,8 +249,9 @@ public class ReportParameters {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReportParameters.mmCountry, ReportParameters.mmCurrency, ReportParameters.mmParty, ReportParameters.mmUserDefinedParameter);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportParameters.mmCountry, com.tools20022.repository.msg.ReportParameters.mmCurrency, com.tools20022.repository.msg.ReportParameters.mmParty,
+						com.tools20022.repository.msg.ReportParameters.mmUserDefinedParameter);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReportParameters";
 				definition = "Parameters to be used in a report.";
@@ -255,39 +260,39 @@ public class ReportParameters {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ctry")
-	public CountryCode getCountry() {
-		return country;
+	public Optional<CountryCode> getCountry() {
+		return country == null ? Optional.empty() : Optional.of(country);
 	}
 
-	public void setCountry(CountryCode country) {
+	public ReportParameters setCountry(CountryCode country) {
 		this.country = country;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public ActiveOrHistoricCurrencyCode getCurrency() {
-		return currency;
+	public Optional<ActiveOrHistoricCurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(ActiveOrHistoricCurrencyCode currency) {
+	public ReportParameters setCurrency(ActiveOrHistoricCurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "Pty")
-	public BreakdownByParty2 getParty() {
-		return party;
+	public Optional<BreakdownByParty2> getParty() {
+		return party == null ? Optional.empty() : Optional.of(party);
 	}
 
-	public void setParty(com.tools20022.repository.msg.BreakdownByParty2 party) {
+	public ReportParameters setParty(com.tools20022.repository.msg.BreakdownByParty2 party) {
 		this.party = party;
+		return this;
 	}
 
-	@XmlElement(name = "UsrDfndParam")
-	public BreakdownByUserDefinedParameter2 getUserDefinedParameter() {
-		return userDefinedParameter;
+	public Optional<BreakdownByUserDefinedParameter2> getUserDefinedParameter() {
+		return userDefinedParameter == null ? Optional.empty() : Optional.of(userDefinedParameter);
 	}
 
-	public void setUserDefinedParameter(com.tools20022.repository.msg.BreakdownByUserDefinedParameter2 userDefinedParameter) {
+	public ReportParameters setUserDefinedParameter(com.tools20022.repository.msg.BreakdownByUserDefinedParameter2 userDefinedParameter) {
 		this.userDefinedParameter = userDefinedParameter;
+		return this;
 	}
 }

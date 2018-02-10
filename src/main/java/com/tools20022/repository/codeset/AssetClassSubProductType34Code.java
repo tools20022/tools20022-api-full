@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AssetClassSubProductTypeCode;
+import com.tools20022.repository.codeset.AssetClassSubProductType34Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines the sub-product of type Manufacturing.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode
- * AssetClassSubProductTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType34Code#mmManufacturing
- * AssetClassSubProductType34Code.mmManufacturing}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType34Code#Manufacturing
+ * AssetClassSubProductType34Code.Manufacturing}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductTypeCode
+ * AssetClassSubProductTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,7 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the sub-product of type Manufacturing."</li>
  * </ul>
  */
-public class AssetClassSubProductType34Code extends AssetClassSubProductTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AssetClassSubProductType34Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -74,25 +79,55 @@ public class AssetClassSubProductType34Code extends AssetClassSubProductTypeCode
 	 * name} = "Manufacturing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmManufacturing = new MMCode() {
+	public static final AssetClassSubProductType34Code Manufacturing = new AssetClassSubProductType34Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Manufacturing";
-			owner_lazy = () -> AssetClassSubProductType34Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassSubProductType34Code.mmObject();
+			codeName = AssetClassSubProductTypeCode.Manufacturing.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AssetClassSubProductType34Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AssetClassSubProductType34Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductType34Code";
 				definition = "Defines the sub-product of type Manufacturing.";
-				code_lazy = () -> Arrays.asList(AssetClassSubProductType34Code.mmManufacturing);
 				trace_lazy = () -> AssetClassSubProductTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductType34Code.Manufacturing);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Manufacturing.getCodeName().get(), Manufacturing);
+	}
+
+	public static AssetClassSubProductType34Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AssetClassSubProductType34Code[] values() {
+		AssetClassSubProductType34Code[] values = new AssetClassSubProductType34Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AssetClassSubProductType34Code> {
+		@Override
+		public AssetClassSubProductType34Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AssetClassSubProductType34Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -24,9 +24,11 @@ import com.tools20022.repository.choice.CashBalanceType1Choice;
 import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,16 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Quantity breakdown information for a specific securities balance."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashSubBalanceTypeAndQuantityBreakdown1", propOrder = {"type", "quantityBreakdown"})
 public class CashSubBalanceTypeAndQuantityBreakdown1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected CashBalanceType1Choice type;
 	/**
-	 * Specifies the securities sub balance type indicator (example restriction
-	 * type for a market infrastructure).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +114,7 @@ public class CashSubBalanceTypeAndQuantityBreakdown1 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
-			componentContext_lazy = () -> CashSubBalanceTypeAndQuantityBreakdown1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +125,11 @@ public class CashSubBalanceTypeAndQuantityBreakdown1 {
 			complexType_lazy = () -> CashBalanceType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "QtyBrkdwn")
 	protected List<com.tools20022.repository.msg.QuantityBreakdown22> quantityBreakdown;
 	/**
-	 * Breakdown of a quantity into lots such as tax lots, instrument series.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +164,7 @@ public class CashSubBalanceTypeAndQuantityBreakdown1 {
 	public static final MMMessageAttribute mmQuantityBreakdown = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmLotBreakdown;
-			componentContext_lazy = () -> CashSubBalanceTypeAndQuantityBreakdown1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1.mmObject();
 			isDerived = false;
 			xmlTag = "QtyBrkdwn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,9 +178,9 @@ public class CashSubBalanceTypeAndQuantityBreakdown1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashSubBalanceTypeAndQuantityBreakdown1.mmType, CashSubBalanceTypeAndQuantityBreakdown1.mmQuantityBreakdown);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1.mmType, com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1.mmQuantityBreakdown);
 				trace_lazy = () -> Balance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashSubBalanceTypeAndQuantityBreakdown1";
 				definition = "Quantity breakdown information for a specific securities balance.";
@@ -186,21 +189,21 @@ public class CashSubBalanceTypeAndQuantityBreakdown1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public CashBalanceType1Choice getType() {
 		return type;
 	}
 
-	public void setType(CashBalanceType1Choice type) {
-		this.type = type;
+	public CashSubBalanceTypeAndQuantityBreakdown1 setType(CashBalanceType1Choice type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "QtyBrkdwn")
 	public List<QuantityBreakdown22> getQuantityBreakdown() {
-		return quantityBreakdown;
+		return quantityBreakdown == null ? quantityBreakdown = new ArrayList<>() : quantityBreakdown;
 	}
 
-	public void setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakdown22> quantityBreakdown) {
-		this.quantityBreakdown = quantityBreakdown;
+	public CashSubBalanceTypeAndQuantityBreakdown1 setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakdown22> quantityBreakdown) {
+		this.quantityBreakdown = Objects.requireNonNull(quantityBreakdown);
+		return this;
 	}
 }

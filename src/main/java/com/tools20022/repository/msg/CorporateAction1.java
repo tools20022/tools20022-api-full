@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateAction1", propOrder = {"code", "number", "proprietary"})
 public class CorporateAction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd")
 	protected Max35Text code;
 	/**
-	 * Specifies the code of corporate action event, in free-text format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +102,7 @@ public class CorporateAction1 {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateAction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,11 +113,11 @@ public class CorporateAction1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Nb")
 	protected Max35Text number;
 	/**
-	 * Reference assigned by the account servicer to unambiguously identify a
-	 * corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,7 +146,7 @@ public class CorporateAction1 {
 	 */
 	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateAction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction1.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,10 +157,11 @@ public class CorporateAction1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry")
 	protected Max35Text proprietary;
 	/**
-	 * Proprietary corporate action event information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -185,7 +188,7 @@ public class CorporateAction1 {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateAction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,8 +203,8 @@ public class CorporateAction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateAction1.mmCode, CorporateAction1.mmNumber, CorporateAction1.mmProprietary);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction1.mmCode, com.tools20022.repository.msg.CorporateAction1.mmNumber, com.tools20022.repository.msg.CorporateAction1.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateAction1";
 				definition = "An event determined by a corporation's board of directors, that changes the existing corporate capital structure or financial condition.";
@@ -210,30 +213,30 @@ public class CorporateAction1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd")
-	public Max35Text getCode() {
-		return code;
+	public Optional<Max35Text> getCode() {
+		return code == null ? Optional.empty() : Optional.of(code);
 	}
 
-	public void setCode(Max35Text code) {
+	public CorporateAction1 setCode(Max35Text code) {
 		this.code = code;
+		return this;
 	}
 
-	@XmlElement(name = "Nb")
-	public Max35Text getNumber() {
-		return number;
+	public Optional<Max35Text> getNumber() {
+		return number == null ? Optional.empty() : Optional.of(number);
 	}
 
-	public void setNumber(Max35Text number) {
+	public CorporateAction1 setNumber(Max35Text number) {
 		this.number = number;
+		return this;
 	}
 
-	@XmlElement(name = "Prtry")
-	public Max35Text getProprietary() {
-		return proprietary;
+	public Optional<Max35Text> getProprietary() {
+		return proprietary == null ? Optional.empty() : Optional.of(proprietary);
 	}
 
-	public void setProprietary(Max35Text proprietary) {
+	public CorporateAction1 setProprietary(Max35Text proprietary) {
 		this.proprietary = proprietary;
+		return this;
 	}
 }

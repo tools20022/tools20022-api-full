@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TransactionReasonCode;
+import com.tools20022.repository.codeset.TransactionRejectReason5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for a transaction to be rejected or returned by an
@@ -31,54 +35,54 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TransactionReasonCode
- * TransactionReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmIncorrectAccountNumber
- * TransactionRejectReason5Code.mmIncorrectAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#IncorrectAccountNumber
+ * TransactionRejectReason5Code.IncorrectAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmClosedAccountNumber
- * TransactionRejectReason5Code.mmClosedAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#ClosedAccountNumber
+ * TransactionRejectReason5Code.ClosedAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmBlockedAccount
- * TransactionRejectReason5Code.mmBlockedAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#BlockedAccount
+ * TransactionRejectReason5Code.BlockedAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmTransactionForbidden
- * TransactionRejectReason5Code.mmTransactionForbidden}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#TransactionForbidden
+ * TransactionRejectReason5Code.TransactionForbidden}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmInsufficientFunds
- * TransactionRejectReason5Code.mmInsufficientFunds}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#InsufficientFunds
+ * TransactionRejectReason5Code.InsufficientFunds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmDuplication
- * TransactionRejectReason5Code.mmDuplication}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#Duplication
+ * TransactionRejectReason5Code.Duplication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmMissingCreditorAddress
- * TransactionRejectReason5Code.mmMissingCreditorAddress}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#MissingCreditorAddress
+ * TransactionRejectReason5Code.MissingCreditorAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmNoMandate
- * TransactionRejectReason5Code.mmNoMandate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#NoMandate
+ * TransactionRejectReason5Code.NoMandate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmRefundRequestByEndCustomer
- * TransactionRejectReason5Code.mmRefundRequestByEndCustomer}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#RefundRequestByEndCustomer
+ * TransactionRejectReason5Code.RefundRequestByEndCustomer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmEndCustomerDeceased
- * TransactionRejectReason5Code.mmEndCustomerDeceased}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#EndCustomerDeceased
+ * TransactionRejectReason5Code.EndCustomerDeceased}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmNotSpecifiedReasonCustomerGenerated
- * TransactionRejectReason5Code.mmNotSpecifiedReasonCustomerGenerated}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#NotSpecifiedReasonCustomerGenerated
+ * TransactionRejectReason5Code.NotSpecifiedReasonCustomerGenerated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#mmNotSpecifiedReasonAgentGenerated
- * TransactionRejectReason5Code.mmNotSpecifiedReasonAgentGenerated}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason5Code#NotSpecifiedReasonAgentGenerated
+ * TransactionRejectReason5Code.NotSpecifiedReasonAgentGenerated}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TransactionReasonCode
+ * TransactionReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -97,7 +101,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TransactionRejectReason5Code extends TransactionReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransactionRejectReason5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -116,11 +121,12 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "IncorrectAccountNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectAccountNumber = new MMCode() {
+	public static final TransactionRejectReason5Code IncorrectAccountNumber = new TransactionRejectReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAccountNumber";
-			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason5Code.mmObject();
+			codeName = TransactionReasonCode.IncorrectAccountNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -139,11 +145,12 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "ClosedAccountNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClosedAccountNumber = new MMCode() {
+	public static final TransactionRejectReason5Code ClosedAccountNumber = new TransactionRejectReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosedAccountNumber";
-			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason5Code.mmObject();
+			codeName = TransactionReasonCode.ClosedAccountNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -162,11 +169,12 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "BlockedAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBlockedAccount = new MMCode() {
+	public static final TransactionRejectReason5Code BlockedAccount = new TransactionRejectReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedAccount";
-			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason5Code.mmObject();
+			codeName = TransactionReasonCode.BlockedAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -185,11 +193,12 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "TransactionForbidden"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransactionForbidden = new MMCode() {
+	public static final TransactionRejectReason5Code TransactionForbidden = new TransactionRejectReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionForbidden";
-			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason5Code.mmObject();
+			codeName = TransactionReasonCode.TransactionForbidden.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -208,11 +217,12 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "InsufficientFunds"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInsufficientFunds = new MMCode() {
+	public static final TransactionRejectReason5Code InsufficientFunds = new TransactionRejectReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientFunds";
-			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason5Code.mmObject();
+			codeName = TransactionReasonCode.InsufficientFunds.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -231,11 +241,12 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "Duplication"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDuplication = new MMCode() {
+	public static final TransactionRejectReason5Code Duplication = new TransactionRejectReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Duplication";
-			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason5Code.mmObject();
+			codeName = TransactionReasonCode.Duplication.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -254,11 +265,12 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "MissingCreditorAddress"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingCreditorAddress = new MMCode() {
+	public static final TransactionRejectReason5Code MissingCreditorAddress = new TransactionRejectReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCreditorAddress";
-			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason5Code.mmObject();
+			codeName = TransactionReasonCode.MissingCreditorAddress.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -277,11 +289,12 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "NoMandate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoMandate = new MMCode() {
+	public static final TransactionRejectReason5Code NoMandate = new TransactionRejectReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMandate";
-			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason5Code.mmObject();
+			codeName = TransactionReasonCode.NoMandate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -300,11 +313,12 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "RefundRequestByEndCustomer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRefundRequestByEndCustomer = new MMCode() {
+	public static final TransactionRejectReason5Code RefundRequestByEndCustomer = new TransactionRejectReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefundRequestByEndCustomer";
-			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason5Code.mmObject();
+			codeName = TransactionReasonCode.RefundRequestByEndCustomer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -323,11 +337,12 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "EndCustomerDeceased"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEndCustomerDeceased = new MMCode() {
+	public static final TransactionRejectReason5Code EndCustomerDeceased = new TransactionRejectReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndCustomerDeceased";
-			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason5Code.mmObject();
+			codeName = TransactionReasonCode.EndCustomerDeceased.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -346,11 +361,12 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "NotSpecifiedReasonCustomerGenerated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotSpecifiedReasonCustomerGenerated = new MMCode() {
+	public static final TransactionRejectReason5Code NotSpecifiedReasonCustomerGenerated = new TransactionRejectReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedReasonCustomerGenerated";
-			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason5Code.mmObject();
+			codeName = TransactionReasonCode.NotSpecifiedReasonCustomerGenerated.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -369,29 +385,72 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 * name} = "NotSpecifiedReasonAgentGenerated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotSpecifiedReasonAgentGenerated = new MMCode() {
+	public static final TransactionRejectReason5Code NotSpecifiedReasonAgentGenerated = new TransactionRejectReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedReasonAgentGenerated";
-			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason5Code.mmObject();
+			codeName = TransactionReasonCode.NotSpecifiedReasonAgentGenerated.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TransactionRejectReason5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransactionRejectReason5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AC01");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionRejectReason5Code";
 				definition = "Specifies the reason for a transaction to be rejected or returned by an instructed agent or somebody acting on behalf of an instructed agent.";
-				code_lazy = () -> Arrays.asList(TransactionRejectReason5Code.mmIncorrectAccountNumber, TransactionRejectReason5Code.mmClosedAccountNumber, TransactionRejectReason5Code.mmBlockedAccount,
-						TransactionRejectReason5Code.mmTransactionForbidden, TransactionRejectReason5Code.mmInsufficientFunds, TransactionRejectReason5Code.mmDuplication, TransactionRejectReason5Code.mmMissingCreditorAddress,
-						TransactionRejectReason5Code.mmNoMandate, TransactionRejectReason5Code.mmRefundRequestByEndCustomer, TransactionRejectReason5Code.mmEndCustomerDeceased,
-						TransactionRejectReason5Code.mmNotSpecifiedReasonCustomerGenerated, TransactionRejectReason5Code.mmNotSpecifiedReasonAgentGenerated);
 				trace_lazy = () -> TransactionReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionRejectReason5Code.IncorrectAccountNumber, com.tools20022.repository.codeset.TransactionRejectReason5Code.ClosedAccountNumber,
+						com.tools20022.repository.codeset.TransactionRejectReason5Code.BlockedAccount, com.tools20022.repository.codeset.TransactionRejectReason5Code.TransactionForbidden,
+						com.tools20022.repository.codeset.TransactionRejectReason5Code.InsufficientFunds, com.tools20022.repository.codeset.TransactionRejectReason5Code.Duplication,
+						com.tools20022.repository.codeset.TransactionRejectReason5Code.MissingCreditorAddress, com.tools20022.repository.codeset.TransactionRejectReason5Code.NoMandate,
+						com.tools20022.repository.codeset.TransactionRejectReason5Code.RefundRequestByEndCustomer, com.tools20022.repository.codeset.TransactionRejectReason5Code.EndCustomerDeceased,
+						com.tools20022.repository.codeset.TransactionRejectReason5Code.NotSpecifiedReasonCustomerGenerated, com.tools20022.repository.codeset.TransactionRejectReason5Code.NotSpecifiedReasonAgentGenerated);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(IncorrectAccountNumber.getCodeName().get(), IncorrectAccountNumber);
+		codesByName.put(ClosedAccountNumber.getCodeName().get(), ClosedAccountNumber);
+		codesByName.put(BlockedAccount.getCodeName().get(), BlockedAccount);
+		codesByName.put(TransactionForbidden.getCodeName().get(), TransactionForbidden);
+		codesByName.put(InsufficientFunds.getCodeName().get(), InsufficientFunds);
+		codesByName.put(Duplication.getCodeName().get(), Duplication);
+		codesByName.put(MissingCreditorAddress.getCodeName().get(), MissingCreditorAddress);
+		codesByName.put(NoMandate.getCodeName().get(), NoMandate);
+		codesByName.put(RefundRequestByEndCustomer.getCodeName().get(), RefundRequestByEndCustomer);
+		codesByName.put(EndCustomerDeceased.getCodeName().get(), EndCustomerDeceased);
+		codesByName.put(NotSpecifiedReasonCustomerGenerated.getCodeName().get(), NotSpecifiedReasonCustomerGenerated);
+		codesByName.put(NotSpecifiedReasonAgentGenerated.getCodeName().get(), NotSpecifiedReasonAgentGenerated);
+	}
+
+	public static TransactionRejectReason5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransactionRejectReason5Code[] values() {
+		TransactionRejectReason5Code[] values = new TransactionRejectReason5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransactionRejectReason5Code> {
+		@Override
+		public TransactionRejectReason5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransactionRejectReason5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

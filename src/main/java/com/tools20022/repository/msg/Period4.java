@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,7 @@ import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Time span defined by a start date and time, and an end date and time."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Period4", propOrder = {"startDate", "endDate"})
 public class Period4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StartDt", required = true)
 	protected DateFormat18Choice startDate;
 	/**
-	 * Date and time at which the range starts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -103,7 +106,7 @@ public class Period4 {
 	public static final MMMessageAssociationEnd mmStartDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
-			componentContext_lazy = () -> Period4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Period4.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +118,11 @@ public class Period4 {
 			type_lazy = () -> DateFormat18Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "EndDt", required = true)
 	protected DateFormat18Choice endDate;
 	/**
-	 * Date and time at which the range ends.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -136,6 +140,9 @@ public class Period4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EndDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -149,9 +156,10 @@ public class Period4 {
 	public static final MMMessageAssociationEnd mmEndDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
-			componentContext_lazy = () -> Period4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Period4.mmObject();
 			isDerived = false;
 			xmlTag = "EndDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndDate";
 			definition = "Date and time at which the range ends.";
@@ -165,9 +173,9 @@ public class Period4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Period4.mmStartDate, Period4.mmEndDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Period4.mmStartDate, com.tools20022.repository.msg.Period4.mmEndDate);
 				trace_lazy = () -> DateTimePeriod.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Period4";
 				definition = "Time span defined by a start date and time, and an end date and time.";
@@ -176,21 +184,21 @@ public class Period4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StartDt", required = true)
 	public DateFormat18Choice getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(DateFormat18Choice startDate) {
-		this.startDate = startDate;
+	public Period4 setStartDate(DateFormat18Choice startDate) {
+		this.startDate = Objects.requireNonNull(startDate);
+		return this;
 	}
 
-	@XmlElement(name = "EndDt", required = true)
 	public DateFormat18Choice getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(DateFormat18Choice endDate) {
-		this.endDate = endDate;
+	public Period4 setEndDate(DateFormat18Choice endDate) {
+		this.endDate = Objects.requireNonNull(endDate);
+		return this;
 	}
 }

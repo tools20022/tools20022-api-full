@@ -27,9 +27,11 @@ import com.tools20022.repository.entity.ProceedsDefinition;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Definition of the cash proceeds for a corporate action in generic terms; that
@@ -44,6 +46,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.ProceedsDefinition
+ * ProceedsDefinition}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -83,67 +88,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmPaymentCurrency
  * CashProceedsDefinition.mmPaymentCurrency}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.ProceedsDefinition
- * ProceedsDefinition}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption2 CashOption2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption9 CashOption9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption12 CashOption12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption13 CashOption13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption18 CashOption18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption22 CashOption22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption26 CashOption26}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption27 CashOption27}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption3 CashOption3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption6 CashOption6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption11 CashOption11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption14 CashOption14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption16 CashOption16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption20 CashOption20}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption25 CashOption25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption28 CashOption28}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption5 CashOption5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption7 CashOption7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption19 CashOption19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption23 CashOption23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption4 CashOption4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption8 CashOption8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption10 CashOption10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption15 CashOption15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption17 CashOption17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption21 CashOption21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption24 CashOption24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption29 CashOption29}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption1 CashOption1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashProceeds1 CashProceeds1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption30 CashOption30}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption31 CashOption31}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption32 CashOption32}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption36 CashOption36}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption35 CashOption35}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption38 CashOption38}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption39 CashOption39}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption41 CashOption41}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption44 CashOption44}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption45 CashOption45}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption42 CashOption42}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption43 CashOption43}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption46 CashOption46}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption49 CashOption49}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption47 CashOption47}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption48 CashOption48}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption52 CashOption52}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption51 CashOption51}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption50 CashOption50}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption53 CashOption53}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption54 CashOption54}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashOption55 CashOption55}</li>
  * </ul>
  * </li>
  * <li>
@@ -326,10 +270,68 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption2 CashOption2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption9 CashOption9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption12 CashOption12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption13 CashOption13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption18 CashOption18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption22 CashOption22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption26 CashOption26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption27 CashOption27}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption3 CashOption3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption6 CashOption6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption11 CashOption11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption14 CashOption14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption16 CashOption16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption20 CashOption20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption25 CashOption25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption28 CashOption28}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption5 CashOption5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption7 CashOption7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption19 CashOption19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption23 CashOption23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption4 CashOption4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption8 CashOption8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption10 CashOption10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption15 CashOption15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption17 CashOption17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption21 CashOption21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption24 CashOption24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption29 CashOption29}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption1 CashOption1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashProceeds1 CashProceeds1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption30 CashOption30}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption31 CashOption31}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption32 CashOption32}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption36 CashOption36}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption35 CashOption35}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption38 CashOption38}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption39 CashOption39}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption41 CashOption41}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption44 CashOption44}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption45 CashOption45}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption42 CashOption42}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption43 CashOption43}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption46 CashOption46}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption49 CashOption49}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption47 CashOption47}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption48 CashOption48}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption52 CashOption52}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption51 CashOption51}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption50 CashOption50}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption53 CashOption53}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption54 CashOption54}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption55 CashOption55}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -347,9 +349,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected PercentageRate cashIncentiveRate;
 	/**
-	 * Cash premium made available if the securities holder consents or
-	 * participates to an event, e.g. consent fees.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -466,8 +467,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 					RateDetails14.mmThirdPartyIncentiveRate, RateDetails18.mmThirdPartyIncentiveRate, RateDetails21.mmThirdPartyIncentiveRate, RateDetails23.mmThirdPartyIncentiveRate, RateDetails22.mmThirdPartyIncentiveRate,
 					RateDetails24.mmThirdPartyIncentiveRate, RateDetails25.mmThirdPartyIncentiveRate, RateDetails26.mmThirdPartyIncentiveRate, RateDetails27.mmThirdPartyIncentiveRate, RateDetails28.mmThirdPartyIncentiveRate,
 					RateDetails30.mmThirdPartyIncentiveRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashIncentiveRate";
 			definition = "Cash premium made available if the securities holder consents or participates to an event, e.g. consent fees.";
@@ -486,8 +487,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	};
 	protected PaymentCode contractualPaymentIndicator;
 	/**
-	 * Indicates exceptions to contractual payment service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -614,8 +615,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 					CashOption38.mmContractualPaymentIndicator, CashOption39.mmContractualPaymentIndicator, CashOption41.mmContractualPaymentIndicator, CashOption44.mmContractualPaymentIndicator, CashOption42.mmContractualPaymentIndicator,
 					CashOption46.mmContractualPaymentIndicator, CashOption47.mmContractualPaymentIndicator, CashOption52.mmContractualPaymentIndicator, CashOption51.mmContractualPaymentIndicator, CashOption54.mmContractualPaymentIndicator,
 					CashOption55.mmContractualPaymentIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ContractualPaymentIndicator";
 			definition = "Indicates exceptions to contractual payment service.";
@@ -634,10 +635,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	};
 	protected GenericIdentification incomeType;
 	/**
-	 * Specifies the type of income.<br>
-	 * The lists of income type codes to be used, are available on the SMPG
-	 * website at www.smpg.info.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -801,8 +800,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 					CashOption46.mmIncomeType, SecuritiesOption55.mmIncomeType, CashOption49.mmIncomeType, CashOption47.mmIncomeType, SecuritiesOption57.mmIncomeType, CashOption52.mmIncomeType, SecuritiesOption60.mmIncomeType,
 					CashOption51.mmIncomeType, SecuritiesOption59.mmIncomeType, CashOption50.mmIncomeType, CashOption53.mmIncomeType, SecuritiesOption61.mmIncomeType, SecuritiesOption63.mmIncomeType, CashOption54.mmIncomeType,
 					CashOption55.mmIncomeType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IncomeType";
 			definition = "Specifies the type of income.\r\nThe lists of income type codes to be used, are available on the SMPG website at www.smpg.info.";
@@ -815,9 +814,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	};
 	protected CurrencyAndAmount indemnityAmount;
 	/**
-	 * (Unique to France) Amount due to a buyer of securities dealt prior to ex
-	 * date which may be subject to different rate of taxation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -969,8 +967,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 					CorporateActionAmounts1.mmIndemnityAmount, CorporateActionAmounts29.mmIndemnityAmount, CorporateActionAmounts27.mmIndemnityAmount, CorporateActionAmounts28.mmIndemnityAmount, CorporateActionAmounts33.mmIndemnityAmount,
 					CorporateActionAmounts32.mmIndemnityAmount, CorporateActionAmounts35.mmIndemnityAmount, CorporateActionAmounts37.mmIndemnityAmount, CorporateActionAmounts36.mmIndemnityAmount, CorporateActionAmounts38.mmIndemnityAmount,
 					CorporateActionAmounts39.mmIndemnityAmount, CorporateActionAmounts41.mmIndemnityAmount, CorporateActionAmounts40.mmIndemnityAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndemnityAmount";
 			definition = "(Unique to France) Amount due to a buyer of securities dealt prior to ex date which may be subject to different rate of taxation.";
@@ -989,9 +987,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	};
 	protected ActiveCurrencyAndAmount cashIncentiveAmount;
 	/**
-	 * Rate of the cash premium made available if the securities holder consents
-	 * or participates to an event, e.g. consent fees.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1089,8 +1086,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 					CorporateActionAmounts13.mmCashIncentive, CorporateActionAmounts16.mmCashIncentive, CorporateActionAmounts19.mmCashIncentive, CorporateActionAmounts4.mmCashIncentive, CorporateActionAmounts7.mmCashIncentive,
 					CorporateActionAmounts10.mmCashIncentive, CorporateActionAmounts14.mmCashIncentive, CorporateActionAmounts15.mmCashIncentive, CorporateActionAmounts18.mmCashIncentive, CorporateActionRate2.mmCashIncentive,
 					CorporateActionAmounts1.mmCashIncentive);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashIncentiveAmount";
 			definition = "Rate of the cash premium made available if the securities holder consents or participates to an event, e.g. consent fees.";
@@ -1109,9 +1106,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	};
 	protected CurrencyAndAmount principalOrCorpus;
 	/**
-	 * Amount of money representing a distribution of a bond's principal, eg,
-	 * repayment of outstanding debt.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1226,8 +1222,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 					CorporateActionAmounts1.mmPrincipalOrCorpus, CorporateActionAmounts29.mmPrincipalOrCorpus, CorporateActionAmounts27.mmPrincipalOrCorpus, CorporateActionAmounts32.mmPrincipalOrCorpus,
 					CorporateActionAmounts35.mmPrincipalOrCorpus, CorporateActionAmounts37.mmPrincipalOrCorpus, CorporateActionAmounts36.mmPrincipalOrCorpus, CorporateActionAmounts39.mmPrincipalOrCorpus,
 					CorporateActionAmounts41.mmPrincipalOrCorpus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PrincipalOrCorpus";
 			definition = "Amount of money representing a distribution of a bond's principal, eg, repayment of outstanding debt.";
@@ -1246,9 +1242,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	};
 	protected CurrencyAndAmount redemptionPremiumAmount;
 	/**
-	 * Amount of money (not interest) in addition to the principal at the
-	 * redemption of a bond.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1363,8 +1358,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 					CorporateActionAmounts26.mmRedemptionPremiumAmount, CorporateActionAmounts1.mmRedemptionPremiumAmount, CorporateActionAmounts29.mmRedemptionPremiumAmount, CorporateActionAmounts27.mmRedemptionPremiumAmount,
 					CorporateActionAmounts32.mmRedemptionPremiumAmount, CorporateActionAmounts35.mmRedemptionPremiumAmount, CorporateActionAmounts37.mmRedemptionPremiumAmount, CorporateActionAmounts36.mmRedemptionPremiumAmount,
 					CorporateActionAmounts39.mmRedemptionPremiumAmount, CorporateActionAmounts41.mmRedemptionPremiumAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RedemptionPremiumAmount";
 			definition = "Amount of money (not interest) in addition to the principal at the redemption of a bond.";
@@ -1383,9 +1378,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	};
 	protected CurrencyAndAmount incomePortion;
 	/**
-	 * Amount relating to the underlying security for which income is
-	 * distributed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1534,8 +1528,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 					CorporateActionAmounts29.mmIncomePortion, CorporateActionAmounts27.mmIncomePortion, CorporateActionAmounts28.mmIncomePortion, CorporateActionAmounts33.mmIncomePortion, CorporateActionAmounts32.mmIncomePortion,
 					CorporateActionAmounts35.mmIncomePortion, CorporateActionAmounts37.mmIncomePortion, CorporateActionAmounts36.mmIncomePortion, CorporateActionAmounts38.mmIncomePortion, CorporateActionAmounts39.mmIncomePortion,
 					CorporateActionAmounts41.mmIncomePortion, CorporateActionAmounts40.mmIncomePortion);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IncomePortion";
 			definition = "Amount relating to the underlying security for which income is distributed.";
@@ -1554,8 +1548,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	};
 	protected List<com.tools20022.repository.entity.Interest> interest;
 	/**
-	 * Interest paid as the proceeds of a CA event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1634,8 +1628,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate3.mmInterest, CorporateActionRate14.mmInterest, CorporateActionRate16.mmInterest, CorporateActionRate24.mmInterest, CorporateActionRate27.mmInterest,
 					CorporateActionRate32.mmInterest, CorporateActionRate35.mmInterest, CorporateActionRate41.mmInterest, CorporateActionRate1.mmInterest, CorporateActionRate43.mmInterest, CorporateActionRate56.mmInterest,
 					CorporateActionRate66.mmInterest, CorporateActionRate78.mmInterest);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
 			definition = "Interest paid as the proceeds of a CA event.";
@@ -1647,8 +1641,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	};
 	protected CurrencyAndAmount amount;
 	/**
-	 * Cash amount which is posted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1674,8 +1668,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 */
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Cash amount which is posted.";
@@ -1694,10 +1688,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	};
 	protected List<com.tools20022.repository.entity.Dividend> dividend;
 	/**
-	 * Distribution of earnings to shareholders, paid for in cash, stock, scrip
-	 * issue or, rarely, in kind, eg, company products or property. The dividend
-	 * amount is decided by the board of directors.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1731,8 +1723,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 */
 	public static final MMBusinessAssociationEnd mmDividend = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Dividend";
 			definition = "Distribution of earnings to shareholders, paid for in cash, stock, scrip issue or, rarely, in kind, eg, company products or property. The dividend amount is decided by the board of directors.";
@@ -1744,8 +1736,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	};
 	protected CurrencyCode paymentCurrency;
 	/**
-	 * Currency for the payment of the cash proceeds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1770,8 +1762,8 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	 */
 	public static final MMBusinessAttribute mmPaymentCurrency = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentCurrency";
 			definition = "Currency for the payment of the cash proceeds.";
@@ -1792,7 +1784,7 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashProceedsDefinition";
 				definition = "Definition of the cash proceeds for a corporate action in generic terms; that is, before applying it to specific securities holding. An example would be the definition of a dividend payment where all the information will be given in general on a per share basis.";
@@ -1840,95 +1832,107 @@ public class CashProceedsDefinition extends ProceedsDefinition {
 		return cashIncentiveRate;
 	}
 
-	public void setCashIncentiveRate(PercentageRate cashIncentiveRate) {
-		this.cashIncentiveRate = cashIncentiveRate;
+	public CashProceedsDefinition setCashIncentiveRate(PercentageRate cashIncentiveRate) {
+		this.cashIncentiveRate = Objects.requireNonNull(cashIncentiveRate);
+		return this;
 	}
 
 	public PaymentCode getContractualPaymentIndicator() {
 		return contractualPaymentIndicator;
 	}
 
-	public void setContractualPaymentIndicator(PaymentCode contractualPaymentIndicator) {
-		this.contractualPaymentIndicator = contractualPaymentIndicator;
+	public CashProceedsDefinition setContractualPaymentIndicator(PaymentCode contractualPaymentIndicator) {
+		this.contractualPaymentIndicator = Objects.requireNonNull(contractualPaymentIndicator);
+		return this;
 	}
 
 	public GenericIdentification getIncomeType() {
 		return incomeType;
 	}
 
-	public void setIncomeType(com.tools20022.repository.entity.GenericIdentification incomeType) {
-		this.incomeType = incomeType;
+	public CashProceedsDefinition setIncomeType(com.tools20022.repository.entity.GenericIdentification incomeType) {
+		this.incomeType = Objects.requireNonNull(incomeType);
+		return this;
 	}
 
 	public CurrencyAndAmount getIndemnityAmount() {
 		return indemnityAmount;
 	}
 
-	public void setIndemnityAmount(CurrencyAndAmount indemnityAmount) {
-		this.indemnityAmount = indemnityAmount;
+	public CashProceedsDefinition setIndemnityAmount(CurrencyAndAmount indemnityAmount) {
+		this.indemnityAmount = Objects.requireNonNull(indemnityAmount);
+		return this;
 	}
 
 	public ActiveCurrencyAndAmount getCashIncentiveAmount() {
 		return cashIncentiveAmount;
 	}
 
-	public void setCashIncentiveAmount(ActiveCurrencyAndAmount cashIncentiveAmount) {
-		this.cashIncentiveAmount = cashIncentiveAmount;
+	public CashProceedsDefinition setCashIncentiveAmount(ActiveCurrencyAndAmount cashIncentiveAmount) {
+		this.cashIncentiveAmount = Objects.requireNonNull(cashIncentiveAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getPrincipalOrCorpus() {
 		return principalOrCorpus;
 	}
 
-	public void setPrincipalOrCorpus(CurrencyAndAmount principalOrCorpus) {
-		this.principalOrCorpus = principalOrCorpus;
+	public CashProceedsDefinition setPrincipalOrCorpus(CurrencyAndAmount principalOrCorpus) {
+		this.principalOrCorpus = Objects.requireNonNull(principalOrCorpus);
+		return this;
 	}
 
 	public CurrencyAndAmount getRedemptionPremiumAmount() {
 		return redemptionPremiumAmount;
 	}
 
-	public void setRedemptionPremiumAmount(CurrencyAndAmount redemptionPremiumAmount) {
-		this.redemptionPremiumAmount = redemptionPremiumAmount;
+	public CashProceedsDefinition setRedemptionPremiumAmount(CurrencyAndAmount redemptionPremiumAmount) {
+		this.redemptionPremiumAmount = Objects.requireNonNull(redemptionPremiumAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getIncomePortion() {
 		return incomePortion;
 	}
 
-	public void setIncomePortion(CurrencyAndAmount incomePortion) {
-		this.incomePortion = incomePortion;
+	public CashProceedsDefinition setIncomePortion(CurrencyAndAmount incomePortion) {
+		this.incomePortion = Objects.requireNonNull(incomePortion);
+		return this;
 	}
 
 	public List<Interest> getInterest() {
-		return interest;
+		return interest == null ? interest = new ArrayList<>() : interest;
 	}
 
-	public void setInterest(List<com.tools20022.repository.entity.Interest> interest) {
-		this.interest = interest;
+	public CashProceedsDefinition setInterest(List<com.tools20022.repository.entity.Interest> interest) {
+		this.interest = Objects.requireNonNull(interest);
+		return this;
 	}
 
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
-		this.amount = amount;
+	public CashProceedsDefinition setAmount(CurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
 	public List<Dividend> getDividend() {
-		return dividend;
+		return dividend == null ? dividend = new ArrayList<>() : dividend;
 	}
 
-	public void setDividend(List<com.tools20022.repository.entity.Dividend> dividend) {
-		this.dividend = dividend;
+	public CashProceedsDefinition setDividend(List<com.tools20022.repository.entity.Dividend> dividend) {
+		this.dividend = Objects.requireNonNull(dividend);
+		return this;
 	}
 
 	public CurrencyCode getPaymentCurrency() {
 		return paymentCurrency;
 	}
 
-	public void setPaymentCurrency(CurrencyCode paymentCurrency) {
-		this.paymentCurrency = paymentCurrency;
+	public CashProceedsDefinition setPaymentCurrency(CurrencyCode paymentCurrency) {
+		this.paymentCurrency = Objects.requireNonNull(paymentCurrency);
+		return this;
 	}
 }

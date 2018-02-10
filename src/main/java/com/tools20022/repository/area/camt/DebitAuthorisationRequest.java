@@ -30,6 +30,7 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -60,22 +61,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementArchive
- * CashManagementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "camt.037.001.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "camt.037.001.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -94,6 +79,22 @@ import javax.xml.bind.annotation.*;
  * DebitAuthorisationRequest.mmDetail}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "camt.037.001.01"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementArchive
+ * CashManagementArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "camt.037.001.01"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.037.001.01}</li>
@@ -109,15 +110,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "camt.037.001.01", propOrder = {"assignment", "case", "underlying", "detail"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "camt.037.001.01", propOrder = {"assignment", "case_", "underlying", "detail"})
 public class DebitAuthorisationRequest {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Assgnmt", required = true)
 	protected CaseAssignment assignment;
 	/**
-	 * Identifies the case assignment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,10 +158,11 @@ public class DebitAuthorisationRequest {
 			}
 		}
 	};
+	@XmlElement(name = "Case", required = true)
 	protected Case case_;
 	/**
-	 * Identifies the case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,10 +200,11 @@ public class DebitAuthorisationRequest {
 			}
 		}
 	};
+	@XmlElement(name = "Undrlyg", required = true)
 	protected PaymentInstructionExtract underlying;
 	/**
-	 * Identifies the underlying payment instructrion.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -240,10 +244,11 @@ public class DebitAuthorisationRequest {
 			}
 		}
 	};
+	@XmlElement(name = "Dtl", required = true)
 	protected DebitAuthorisationDetails detail;
 	/**
-	 * Detailed information about the request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -315,43 +320,43 @@ public class DebitAuthorisationRequest {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment getAssignment() {
 		return assignment;
 	}
 
-	public void setAssignment(CaseAssignment assignment) {
-		this.assignment = assignment;
+	public DebitAuthorisationRequest setAssignment(CaseAssignment assignment) {
+		this.assignment = Objects.requireNonNull(assignment);
+		return this;
 	}
 
-	@XmlElement(name = "Case", required = true)
 	public Case getCase() {
 		return case_;
 	}
 
-	public void setCase(Case case_) {
-		this.case_ = case_;
+	public DebitAuthorisationRequest setCase(Case case_) {
+		this.case_ = Objects.requireNonNull(case_);
+		return this;
 	}
 
-	@XmlElement(name = "Undrlyg", required = true)
 	public PaymentInstructionExtract getUnderlying() {
 		return underlying;
 	}
 
-	public void setUnderlying(PaymentInstructionExtract underlying) {
-		this.underlying = underlying;
+	public DebitAuthorisationRequest setUnderlying(PaymentInstructionExtract underlying) {
+		this.underlying = Objects.requireNonNull(underlying);
+		return this;
 	}
 
-	@XmlElement(name = "Dtl", required = true)
 	public DebitAuthorisationDetails getDetail() {
 		return detail;
 	}
 
-	public void setDetail(DebitAuthorisationDetails detail) {
-		this.detail = detail;
+	public DebitAuthorisationRequest setDetail(DebitAuthorisationDetails detail) {
+		this.detail = Objects.requireNonNull(detail);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.037.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.037.001.01")
 	static public class Document {
 		@XmlElement(name = "camt.037.001.01", required = true)
 		public DebitAuthorisationRequest messageBody;

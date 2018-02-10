@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AuditTrail1;
 import com.tools20022.repository.msg.ErrorHandling3;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,16 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Report between the static data audit trail or a business error."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AuditTrailOrBusinessError1Choice", propOrder = {"auditTrail", "businessError"})
 public class AuditTrailOrBusinessError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AudtTrl", required = true)
 	protected List<AuditTrail1> auditTrail;
 	/**
-	 * Choice between data concerning static data audit trail retrieved or
-	 * business error.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -101,7 +103,7 @@ public class AuditTrailOrBusinessError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAuditTrail = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AudtTrl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +114,11 @@ public class AuditTrailOrBusinessError1Choice {
 			type_lazy = () -> AuditTrail1.mmObject();
 		}
 	};
+	@XmlElement(name = "BizErr", required = true)
 	protected List<ErrorHandling3> businessError;
 	/**
-	 * Business error resulting from a rejection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -141,7 +144,7 @@ public class AuditTrailOrBusinessError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,8 +159,8 @@ public class AuditTrailOrBusinessError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AuditTrailOrBusinessError1Choice.mmAuditTrail, AuditTrailOrBusinessError1Choice.mmBusinessError);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice.mmAuditTrail, com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice.mmBusinessError);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AuditTrailOrBusinessError1Choice";
 				definition = "Report between the static data audit trail or a business error.";
@@ -166,21 +169,21 @@ public class AuditTrailOrBusinessError1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AudtTrl", required = true)
 	public List<AuditTrail1> getAuditTrail() {
-		return auditTrail;
+		return auditTrail == null ? auditTrail = new ArrayList<>() : auditTrail;
 	}
 
-	public void setAuditTrail(List<AuditTrail1> auditTrail) {
-		this.auditTrail = auditTrail;
+	public AuditTrailOrBusinessError1Choice setAuditTrail(List<AuditTrail1> auditTrail) {
+		this.auditTrail = Objects.requireNonNull(auditTrail);
+		return this;
 	}
 
-	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling3> getBusinessError() {
-		return businessError;
+		return businessError == null ? businessError = new ArrayList<>() : businessError;
 	}
 
-	public void setBusinessError(List<ErrorHandling3> businessError) {
-		this.businessError = businessError;
+	public AuditTrailOrBusinessError1Choice setBusinessError(List<ErrorHandling3> businessError) {
+		this.businessError = Objects.requireNonNull(businessError);
+		return this;
 	}
 }

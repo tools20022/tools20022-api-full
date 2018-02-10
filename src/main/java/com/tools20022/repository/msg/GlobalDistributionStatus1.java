@@ -28,6 +28,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -41,8 +42,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GlobalDistributionStatus1#mmProcessedStatusOrRejectedStatusRule
- * GlobalDistributionStatus1.mmProcessedStatusOrRejectedStatusRule}</li>
+ * {@linkplain com.tools20022.repository.msg.GlobalDistributionStatus1#ProcessedStatusOrRejectedStatusRule
+ * GlobalDistributionStatus1.ProcessedStatusOrRejectedStatusRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -69,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -83,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GlobalDistributionStatus1", propOrder = {"processedStatus", "rejectedStatus"})
 public class GlobalDistributionStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrcdSts", required = true)
 	protected DistributionProcessingStatus1 processedStatus;
 	/**
-	 * Provides information about the processing status of the global movement
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -120,7 +122,7 @@ public class GlobalDistributionStatus1 {
 	 */
 	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> GlobalDistributionStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GlobalDistributionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcdSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +134,11 @@ public class GlobalDistributionStatus1 {
 			type_lazy = () -> com.tools20022.repository.msg.DistributionProcessingStatus1.mmObject();
 		}
 	};
+	@XmlElement(name = "RjctdSts", required = true)
 	protected DistributionRejectionStatus1 rejectedStatus;
 	/**
-	 * Provides information about the rejection status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -162,7 +165,7 @@ public class GlobalDistributionStatus1 {
 	 */
 	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> GlobalDistributionStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GlobalDistributionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,22 +208,22 @@ public class GlobalDistributionStatus1 {
 	 * definition} = "Either ProcessedStatus or RejectedStatus."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmProcessedStatusOrRejectedStatusRule = new MMXor() {
+	public static final MMXor ProcessedStatusOrRejectedStatusRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedStatusOrRejectedStatusRule";
 			definition = "Either ProcessedStatus or RejectedStatus.";
-			messageComponent_lazy = () -> GlobalDistributionStatus1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(GlobalDistributionStatus1.mmProcessedStatus, GlobalDistributionStatus1.mmRejectedStatus);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.GlobalDistributionStatus1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GlobalDistributionStatus1.mmProcessedStatus, com.tools20022.repository.msg.GlobalDistributionStatus1.mmRejectedStatus);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GlobalDistributionStatus1.mmProcessedStatus, GlobalDistributionStatus1.mmRejectedStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GlobalDistributionStatus1.mmProcessedStatus, com.tools20022.repository.msg.GlobalDistributionStatus1.mmRejectedStatus);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAGlobalDistributionStatusAdviceV01.mmGlobalMovementStatus);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -231,27 +234,27 @@ public class GlobalDistributionStatus1 {
 				})).get();
 				name = "GlobalDistributionStatus1";
 				definition = "Provides information about the status of the global movement.";
-				xors_lazy = () -> Arrays.asList(GlobalDistributionStatus1.mmProcessedStatusOrRejectedStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GlobalDistributionStatus1.ProcessedStatusOrRejectedStatusRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrcdSts", required = true)
 	public DistributionProcessingStatus1 getProcessedStatus() {
 		return processedStatus;
 	}
 
-	public void setProcessedStatus(com.tools20022.repository.msg.DistributionProcessingStatus1 processedStatus) {
-		this.processedStatus = processedStatus;
+	public GlobalDistributionStatus1 setProcessedStatus(com.tools20022.repository.msg.DistributionProcessingStatus1 processedStatus) {
+		this.processedStatus = Objects.requireNonNull(processedStatus);
+		return this;
 	}
 
-	@XmlElement(name = "RjctdSts", required = true)
 	public DistributionRejectionStatus1 getRejectedStatus() {
 		return rejectedStatus;
 	}
 
-	public void setRejectedStatus(com.tools20022.repository.msg.DistributionRejectionStatus1 rejectedStatus) {
-		this.rejectedStatus = rejectedStatus;
+	public GlobalDistributionStatus1 setRejectedStatus(com.tools20022.repository.msg.DistributionRejectionStatus1 rejectedStatus) {
+		this.rejectedStatus = Objects.requireNonNull(rejectedStatus);
+		return this;
 	}
 }

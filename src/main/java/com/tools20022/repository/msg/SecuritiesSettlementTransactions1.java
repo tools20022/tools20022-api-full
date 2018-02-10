@@ -22,9 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +58,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingAccountRule#forSecuritiesSettlementTransactions1
+ * ConstraintSafekeepingAccountRule.forSecuritiesSettlementTransactions1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountOwnerRule#forSecuritiesSettlementTransactions1
+ * ConstraintAccountOwnerRule.forSecuritiesSettlementTransactions1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides the transactions in the report."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesSettlementTransactions1", propOrder = {"accountOwner", "safekeepingAccount", "statusAndReason", "transaction"})
 public class SecuritiesSettlementTransactions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctOwnr")
 	protected SystemPartyIdentification5 accountOwner;
 	/**
-	 * Party that owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -106,7 +117,7 @@ public class SecuritiesSettlementTransactions1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesSettlementTransactions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactions1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +129,11 @@ public class SecuritiesSettlementTransactions1 {
 			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgAcct")
 	protected SecuritiesAccount13 safekeepingAccount;
 	/**
-	 * Account where financial instruments are maintained.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -147,7 +159,7 @@ public class SecuritiesSettlementTransactions1 {
 	 */
 	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesSettlementTransactions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactions1.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,10 +171,11 @@ public class SecuritiesSettlementTransactions1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	@XmlElement(name = "StsAndRsn")
 	protected StatusAndReason15 statusAndReason;
 	/**
-	 * Status and status reason of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -188,7 +201,7 @@ public class SecuritiesSettlementTransactions1 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesSettlementTransactions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactions1.mmObject();
 			isDerived = false;
 			xmlTag = "StsAndRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,10 +213,11 @@ public class SecuritiesSettlementTransactions1 {
 			type_lazy = () -> com.tools20022.repository.msg.StatusAndReason15.mmObject();
 		}
 	};
+	@XmlElement(name = "Tx", required = true)
 	protected List<com.tools20022.repository.msg.Transaction25> transaction;
 	/**
-	 * Identifies the individual transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -229,7 +243,7 @@ public class SecuritiesSettlementTransactions1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesSettlementTransactions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlementTransactions1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,10 +258,12 @@ public class SecuritiesSettlementTransactions1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesSettlementTransactions1.mmAccountOwner, SecuritiesSettlementTransactions1.mmSafekeepingAccount, SecuritiesSettlementTransactions1.mmStatusAndReason,
-						SecuritiesSettlementTransactions1.mmTransaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesSettlementTransactions1.mmAccountOwner, com.tools20022.repository.msg.SecuritiesSettlementTransactions1.mmSafekeepingAccount,
+						com.tools20022.repository.msg.SecuritiesSettlementTransactions1.mmStatusAndReason, com.tools20022.repository.msg.SecuritiesSettlementTransactions1.mmTransaction);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingAccountRule.forSecuritiesSettlementTransactions1,
+						com.tools20022.repository.constraints.ConstraintAccountOwnerRule.forSecuritiesSettlementTransactions1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesSettlementTransactions1";
 				definition = "Provides the transactions in the report.";
@@ -256,39 +272,39 @@ public class SecuritiesSettlementTransactions1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public SystemPartyIdentification5 getAccountOwner() {
-		return accountOwner;
+	public Optional<SystemPartyIdentification5> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification5 accountOwner) {
+	public SecuritiesSettlementTransactions1 setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification5 accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct")
-	public SecuritiesAccount13 getSafekeepingAccount() {
-		return safekeepingAccount;
+	public Optional<SecuritiesAccount13> getSafekeepingAccount() {
+		return safekeepingAccount == null ? Optional.empty() : Optional.of(safekeepingAccount);
 	}
 
-	public void setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
+	public SecuritiesSettlementTransactions1 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
 		this.safekeepingAccount = safekeepingAccount;
+		return this;
 	}
 
-	@XmlElement(name = "StsAndRsn")
-	public StatusAndReason15 getStatusAndReason() {
-		return statusAndReason;
+	public Optional<StatusAndReason15> getStatusAndReason() {
+		return statusAndReason == null ? Optional.empty() : Optional.of(statusAndReason);
 	}
 
-	public void setStatusAndReason(com.tools20022.repository.msg.StatusAndReason15 statusAndReason) {
+	public SecuritiesSettlementTransactions1 setStatusAndReason(com.tools20022.repository.msg.StatusAndReason15 statusAndReason) {
 		this.statusAndReason = statusAndReason;
+		return this;
 	}
 
-	@XmlElement(name = "Tx", required = true)
 	public List<Transaction25> getTransaction() {
-		return transaction;
+		return transaction == null ? transaction = new ArrayList<>() : transaction;
 	}
 
-	public void setTransaction(List<com.tools20022.repository.msg.Transaction25> transaction) {
-		this.transaction = transaction;
+	public SecuritiesSettlementTransactions1 setTransaction(List<com.tools20022.repository.msg.Transaction25> transaction) {
+		this.transaction = Objects.requireNonNull(transaction);
+		return this;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,16 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information on the type of tax."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TaxType", propOrder = {"categoryDescription", "rate", "taxableBaseAmount", "amount"})
 public class TaxType {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CtgyDesc")
 	protected Max35Text categoryDescription;
 	/**
-	 * Description of the tax that is being paid, including specific
-	 * representation required by taxing authority.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +105,7 @@ public class TaxType {
 	 */
 	public static final MMMessageAttribute mmCategoryDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxType.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxType.mmObject();
 			isDerived = false;
 			xmlTag = "CtgyDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +116,11 @@ public class TaxType {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Rate")
 	protected PercentageRate rate;
 	/**
-	 * Rate used to calculate the tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,7 +152,7 @@ public class TaxType {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
-			componentContext_lazy = () -> TaxType.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxType.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,10 +163,11 @@ public class TaxType {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxblBaseAmt")
 	protected CurrencyAndAmount taxableBaseAmount;
 	/**
-	 * Amount of money on which the tax is based.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,7 +200,7 @@ public class TaxType {
 	public static final MMMessageAttribute mmTaxableBaseAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
-			componentContext_lazy = () -> TaxType.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxType.mmObject();
 			isDerived = false;
 			xmlTag = "TaxblBaseAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,10 +211,11 @@ public class TaxType {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt")
 	protected CurrencyAndAmount amount;
 	/**
-	 * Amount of money resulting from the calculation of the tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,7 +248,7 @@ public class TaxType {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> TaxType.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxType.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -259,9 +263,10 @@ public class TaxType {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TaxType.mmCategoryDescription, TaxType.mmRate, TaxType.mmTaxableBaseAmount, TaxType.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxType.mmCategoryDescription, com.tools20022.repository.msg.TaxType.mmRate, com.tools20022.repository.msg.TaxType.mmTaxableBaseAmount,
+						com.tools20022.repository.msg.TaxType.mmAmount);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxType";
 				definition = "Information on the type of tax.";
@@ -270,39 +275,39 @@ public class TaxType {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CtgyDesc")
-	public Max35Text getCategoryDescription() {
-		return categoryDescription;
+	public Optional<Max35Text> getCategoryDescription() {
+		return categoryDescription == null ? Optional.empty() : Optional.of(categoryDescription);
 	}
 
-	public void setCategoryDescription(Max35Text categoryDescription) {
+	public TaxType setCategoryDescription(Max35Text categoryDescription) {
 		this.categoryDescription = categoryDescription;
+		return this;
 	}
 
-	@XmlElement(name = "Rate")
-	public PercentageRate getRate() {
-		return rate;
+	public Optional<PercentageRate> getRate() {
+		return rate == null ? Optional.empty() : Optional.of(rate);
 	}
 
-	public void setRate(PercentageRate rate) {
+	public TaxType setRate(PercentageRate rate) {
 		this.rate = rate;
+		return this;
 	}
 
-	@XmlElement(name = "TaxblBaseAmt")
-	public CurrencyAndAmount getTaxableBaseAmount() {
-		return taxableBaseAmount;
+	public Optional<CurrencyAndAmount> getTaxableBaseAmount() {
+		return taxableBaseAmount == null ? Optional.empty() : Optional.of(taxableBaseAmount);
 	}
 
-	public void setTaxableBaseAmount(CurrencyAndAmount taxableBaseAmount) {
+	public TaxType setTaxableBaseAmount(CurrencyAndAmount taxableBaseAmount) {
 		this.taxableBaseAmount = taxableBaseAmount;
+		return this;
 	}
 
-	@XmlElement(name = "Amt")
-	public CurrencyAndAmount getAmount() {
-		return amount;
+	public Optional<CurrencyAndAmount> getAmount() {
+		return amount == null ? Optional.empty() : Optional.of(amount);
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
+	public TaxType setAmount(CurrencyAndAmount amount) {
 		this.amount = amount;
+		return this;
 	}
 }

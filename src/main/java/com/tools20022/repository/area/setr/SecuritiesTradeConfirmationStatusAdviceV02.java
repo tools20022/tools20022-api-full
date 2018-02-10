@@ -26,9 +26,8 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -51,22 +50,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
- * SecuritiesTradeLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion
- * PostTradeMatchingISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SctiesTradConfStsAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -112,9 +95,33 @@ import javax.xml.bind.annotation.*;
  * SecuritiesTradeConfirmationStatusAdviceV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion
+ * PostTradeMatchingISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SctiesTradConfStsAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
+ * SecuritiesTradeLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code setr.044.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStatusPresenceRule#forSecuritiesTradeConfirmationStatusAdviceV02
+ * ConstraintStatusPresenceRule.forSecuritiesTradeConfirmationStatusAdviceV02}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -131,18 +138,17 @@ import javax.xml.bind.annotation.*;
  * SecuritiesTradeConfirmationStatusAdviceV01}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesTradeConfirmationStatusAdviceV02", propOrder = {"identification", "references", "affirmationStatus", "processingStatus", "matchingStatus", "replacementProcessingStatus", "cancellationProcessingStatus",
 		"partyTradingDetails", "counterpartyTradingDetails", "confirmationParties", "deliveringSettlementParties", "receivingSettlementParties", "supplementaryData"})
 public class SecuritiesTradeConfirmationStatusAdviceV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected TransactiontIdentification4 identification;
 	/**
-	 * Information that unambiguously identifies an
-	 * SecuritiesTradeConfirmationStatusAdvice message as known by the account
-	 * owner (or the instructing party acting on its behalf).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,11 +196,11 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Refs", required = true)
 	protected List<Linkages18> references;
 	/**
-	 * Link to another transaction that must be processed after, before or at
-	 * the same time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -240,10 +246,11 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "AffirmSts")
 	protected AffirmationStatus6Choice affirmationStatus;
 	/**
-	 * Provides details on the affitrmation status of a trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -289,10 +296,11 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PrcgSts")
 	protected ProcessingStatus17Choice processingStatus;
 	/**
-	 * Provides the processing status of a trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -338,10 +346,11 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "MtchgSts")
 	protected MatchingStatus23Choice matchingStatus;
 	/**
-	 * Provides details on the matching status of a trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -387,10 +396,11 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "RplcmntPrcgSts")
 	protected ReplacementProcessingStatus7Choice replacementProcessingStatus;
 	/**
-	 * Provides the replacement processing status of a trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -437,10 +447,11 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CxlPrcgSts")
 	protected CancellationProcessingStatus6Choice cancellationProcessingStatus;
 	/**
-	 * Provides details on the cancellation status of a trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -487,10 +498,11 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PtyTradgDtls")
 	protected Order18 partyTradingDetails;
 	/**
-	 * Details of the trading party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -535,10 +547,11 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CtrPtyTradgDtls")
 	protected Order18 counterpartyTradingDetails;
 	/**
-	 * Details of the trading counterparty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -583,11 +596,11 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "ConfPties")
 	protected List<ConfirmationParties4> confirmationParties;
 	/**
-	 * Parties used for acting parties that applies either to the whole message
-	 * or to individual sides.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -634,10 +647,11 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "DlvrgSttlmPties")
 	protected SettlementParties23 deliveringSettlementParties;
 	/**
-	 * Identifies the chain of delivering settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -684,10 +698,11 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "RcvgSttlmPties")
 	protected SettlementParties23 receivingSettlementParties;
 	/**
-	 * Identifies the chain of receiving settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -733,11 +748,11 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -788,6 +803,7 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusPresenceRule.forSecuritiesTradeConfirmationStatusAdviceV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTradeConfirmationStatusAdviceV02";
 				definition = "Scope\r\nThis message is sent from Central Matching Utility (CMU) to an executing party or an instructing party to advise the status of the SecuritiesTradeConfirmation message previously sent by the party. The status may be a processing, pending processing, affirmed or disaffirmed, cancel or replacement by an instructing party, a custodian or an affirming party, internal matching, and/or matching status.\r\nThe instructing party is typically the investment manager or an intermediary system/vendor communicating on behalf of the investment manager or of other categories of investors. The executing party is typically the broker/dealer or an intermediary system/vendor communicating on behalf of the broker/dealer.\r\nThe ISO 20022 Business Application Header must be used\r\nUsage\r\nInitiator: In central matching the Initiator is the Central Matching Utility.\r\nRespondent: no response is needed by the recipient of the message.";
@@ -822,124 +838,124 @@ public class SecuritiesTradeConfirmationStatusAdviceV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public TransactiontIdentification4 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(TransactiontIdentification4 identification) {
-		this.identification = identification;
+	public SecuritiesTradeConfirmationStatusAdviceV02 setIdentification(TransactiontIdentification4 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Refs", required = true)
 	public List<Linkages18> getReferences() {
-		return references;
+		return references == null ? references = new ArrayList<>() : references;
 	}
 
-	public void setReferences(List<Linkages18> references) {
-		this.references = references;
+	public SecuritiesTradeConfirmationStatusAdviceV02 setReferences(List<Linkages18> references) {
+		this.references = Objects.requireNonNull(references);
+		return this;
 	}
 
-	@XmlElement(name = "AffirmSts")
-	public AffirmationStatus6Choice getAffirmationStatus() {
-		return affirmationStatus;
+	public Optional<AffirmationStatus6Choice> getAffirmationStatus() {
+		return affirmationStatus == null ? Optional.empty() : Optional.of(affirmationStatus);
 	}
 
-	public void setAffirmationStatus(AffirmationStatus6Choice affirmationStatus) {
+	public SecuritiesTradeConfirmationStatusAdviceV02 setAffirmationStatus(AffirmationStatus6Choice affirmationStatus) {
 		this.affirmationStatus = affirmationStatus;
+		return this;
 	}
 
-	@XmlElement(name = "PrcgSts")
-	public ProcessingStatus17Choice getProcessingStatus() {
-		return processingStatus;
+	public Optional<ProcessingStatus17Choice> getProcessingStatus() {
+		return processingStatus == null ? Optional.empty() : Optional.of(processingStatus);
 	}
 
-	public void setProcessingStatus(ProcessingStatus17Choice processingStatus) {
+	public SecuritiesTradeConfirmationStatusAdviceV02 setProcessingStatus(ProcessingStatus17Choice processingStatus) {
 		this.processingStatus = processingStatus;
+		return this;
 	}
 
-	@XmlElement(name = "MtchgSts")
-	public MatchingStatus23Choice getMatchingStatus() {
-		return matchingStatus;
+	public Optional<MatchingStatus23Choice> getMatchingStatus() {
+		return matchingStatus == null ? Optional.empty() : Optional.of(matchingStatus);
 	}
 
-	public void setMatchingStatus(MatchingStatus23Choice matchingStatus) {
+	public SecuritiesTradeConfirmationStatusAdviceV02 setMatchingStatus(MatchingStatus23Choice matchingStatus) {
 		this.matchingStatus = matchingStatus;
+		return this;
 	}
 
-	@XmlElement(name = "RplcmntPrcgSts")
-	public ReplacementProcessingStatus7Choice getReplacementProcessingStatus() {
-		return replacementProcessingStatus;
+	public Optional<ReplacementProcessingStatus7Choice> getReplacementProcessingStatus() {
+		return replacementProcessingStatus == null ? Optional.empty() : Optional.of(replacementProcessingStatus);
 	}
 
-	public void setReplacementProcessingStatus(ReplacementProcessingStatus7Choice replacementProcessingStatus) {
+	public SecuritiesTradeConfirmationStatusAdviceV02 setReplacementProcessingStatus(ReplacementProcessingStatus7Choice replacementProcessingStatus) {
 		this.replacementProcessingStatus = replacementProcessingStatus;
+		return this;
 	}
 
-	@XmlElement(name = "CxlPrcgSts")
-	public CancellationProcessingStatus6Choice getCancellationProcessingStatus() {
-		return cancellationProcessingStatus;
+	public Optional<CancellationProcessingStatus6Choice> getCancellationProcessingStatus() {
+		return cancellationProcessingStatus == null ? Optional.empty() : Optional.of(cancellationProcessingStatus);
 	}
 
-	public void setCancellationProcessingStatus(CancellationProcessingStatus6Choice cancellationProcessingStatus) {
+	public SecuritiesTradeConfirmationStatusAdviceV02 setCancellationProcessingStatus(CancellationProcessingStatus6Choice cancellationProcessingStatus) {
 		this.cancellationProcessingStatus = cancellationProcessingStatus;
+		return this;
 	}
 
-	@XmlElement(name = "PtyTradgDtls")
-	public Order18 getPartyTradingDetails() {
-		return partyTradingDetails;
+	public Optional<Order18> getPartyTradingDetails() {
+		return partyTradingDetails == null ? Optional.empty() : Optional.of(partyTradingDetails);
 	}
 
-	public void setPartyTradingDetails(Order18 partyTradingDetails) {
+	public SecuritiesTradeConfirmationStatusAdviceV02 setPartyTradingDetails(Order18 partyTradingDetails) {
 		this.partyTradingDetails = partyTradingDetails;
+		return this;
 	}
 
-	@XmlElement(name = "CtrPtyTradgDtls")
-	public Order18 getCounterpartyTradingDetails() {
-		return counterpartyTradingDetails;
+	public Optional<Order18> getCounterpartyTradingDetails() {
+		return counterpartyTradingDetails == null ? Optional.empty() : Optional.of(counterpartyTradingDetails);
 	}
 
-	public void setCounterpartyTradingDetails(Order18 counterpartyTradingDetails) {
+	public SecuritiesTradeConfirmationStatusAdviceV02 setCounterpartyTradingDetails(Order18 counterpartyTradingDetails) {
 		this.counterpartyTradingDetails = counterpartyTradingDetails;
+		return this;
 	}
 
-	@XmlElement(name = "ConfPties")
 	public List<ConfirmationParties4> getConfirmationParties() {
-		return confirmationParties;
+		return confirmationParties == null ? confirmationParties = new ArrayList<>() : confirmationParties;
 	}
 
-	public void setConfirmationParties(List<ConfirmationParties4> confirmationParties) {
-		this.confirmationParties = confirmationParties;
+	public SecuritiesTradeConfirmationStatusAdviceV02 setConfirmationParties(List<ConfirmationParties4> confirmationParties) {
+		this.confirmationParties = Objects.requireNonNull(confirmationParties);
+		return this;
 	}
 
-	@XmlElement(name = "DlvrgSttlmPties")
-	public SettlementParties23 getDeliveringSettlementParties() {
-		return deliveringSettlementParties;
+	public Optional<SettlementParties23> getDeliveringSettlementParties() {
+		return deliveringSettlementParties == null ? Optional.empty() : Optional.of(deliveringSettlementParties);
 	}
 
-	public void setDeliveringSettlementParties(SettlementParties23 deliveringSettlementParties) {
+	public SecuritiesTradeConfirmationStatusAdviceV02 setDeliveringSettlementParties(SettlementParties23 deliveringSettlementParties) {
 		this.deliveringSettlementParties = deliveringSettlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "RcvgSttlmPties")
-	public SettlementParties23 getReceivingSettlementParties() {
-		return receivingSettlementParties;
+	public Optional<SettlementParties23> getReceivingSettlementParties() {
+		return receivingSettlementParties == null ? Optional.empty() : Optional.of(receivingSettlementParties);
 	}
 
-	public void setReceivingSettlementParties(SettlementParties23 receivingSettlementParties) {
+	public SecuritiesTradeConfirmationStatusAdviceV02 setReceivingSettlementParties(SettlementParties23 receivingSettlementParties) {
 		this.receivingSettlementParties = receivingSettlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecuritiesTradeConfirmationStatusAdviceV02 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.044.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:setr.044.001.02")
 	static public class Document {
 		@XmlElement(name = "SctiesTradConfStsAdvc", required = true)
 		public SecuritiesTradeConfirmationStatusAdviceV02 messageBody;

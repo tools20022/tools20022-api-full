@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DepositaryReceiptProcessingStatusCode;
+import com.tools20022.repository.codeset.DepositaryReceiptProcessingStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of a depositary receipt processing.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DepositaryReceiptProcessingStatusCode
- * DepositaryReceiptProcessingStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DepositaryReceiptProcessingStatus1Code#mmNoRecordFound
- * DepositaryReceiptProcessingStatus1Code.mmNoRecordFound}</li>
+ * {@linkplain com.tools20022.repository.codeset.DepositaryReceiptProcessingStatus1Code#NoRecordFound
+ * DepositaryReceiptProcessingStatus1Code.NoRecordFound}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DepositaryReceiptProcessingStatus1Code#mmPending
- * DepositaryReceiptProcessingStatus1Code.mmPending}</li>
+ * {@linkplain com.tools20022.repository.codeset.DepositaryReceiptProcessingStatus1Code#Pending
+ * DepositaryReceiptProcessingStatus1Code.Pending}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DepositaryReceiptProcessingStatusCode
+ * DepositaryReceiptProcessingStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of a depositary receipt processing."</li>
  * </ul>
  */
-public class DepositaryReceiptProcessingStatus1Code extends DepositaryReceiptProcessingStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DepositaryReceiptProcessingStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class DepositaryReceiptProcessingStatus1Code extends DepositaryReceiptPro
 	 * name} = "NoRecordFound"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoRecordFound = new MMCode() {
+	public static final DepositaryReceiptProcessingStatus1Code NoRecordFound = new DepositaryReceiptProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoRecordFound";
-			owner_lazy = () -> DepositaryReceiptProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DepositaryReceiptProcessingStatus1Code.mmObject();
+			codeName = DepositaryReceiptProcessingStatusCode.NoRecordFound.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class DepositaryReceiptProcessingStatus1Code extends DepositaryReceiptPro
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPending = new MMCode() {
+	public static final DepositaryReceiptProcessingStatus1Code Pending = new DepositaryReceiptProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
-			owner_lazy = () -> DepositaryReceiptProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DepositaryReceiptProcessingStatus1Code.mmObject();
+			codeName = DepositaryReceiptProcessingStatusCode.Pending.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DepositaryReceiptProcessingStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DepositaryReceiptProcessingStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NORE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DepositaryReceiptProcessingStatus1Code";
 				definition = "Specifies the status of a depositary receipt processing.";
-				code_lazy = () -> Arrays.asList(DepositaryReceiptProcessingStatus1Code.mmNoRecordFound, DepositaryReceiptProcessingStatus1Code.mmPending);
 				trace_lazy = () -> DepositaryReceiptProcessingStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DepositaryReceiptProcessingStatus1Code.NoRecordFound, com.tools20022.repository.codeset.DepositaryReceiptProcessingStatus1Code.Pending);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NoRecordFound.getCodeName().get(), NoRecordFound);
+		codesByName.put(Pending.getCodeName().get(), Pending);
+	}
+
+	public static DepositaryReceiptProcessingStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DepositaryReceiptProcessingStatus1Code[] values() {
+		DepositaryReceiptProcessingStatus1Code[] values = new DepositaryReceiptProcessingStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DepositaryReceiptProcessingStatus1Code> {
+		@Override
+		public DepositaryReceiptProcessingStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DepositaryReceiptProcessingStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

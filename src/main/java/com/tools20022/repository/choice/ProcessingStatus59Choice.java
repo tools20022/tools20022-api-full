@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides the status of a transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ProcessingStatus59Choice", propOrder = {"rejected", "cancelled", "accepted"})
 public class ProcessingStatus59Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rjctd", required = true)
 	protected RejectedStatus22Choice rejected;
 	/**
-	 * Instruction is rejected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -110,7 +112,7 @@ public class ProcessingStatus59Choice {
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
-			componentContext_lazy = () -> ProcessingStatus59Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus59Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class ProcessingStatus59Choice {
 			type_lazy = () -> com.tools20022.repository.choice.RejectedStatus22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Canc", required = true)
 	protected CancelledStatus16Choice cancelled;
 	/**
-	 * Instruction is cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -158,7 +161,7 @@ public class ProcessingStatus59Choice {
 	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
-			componentContext_lazy = () -> ProcessingStatus59Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus59Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Canc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,10 +173,11 @@ public class ProcessingStatus59Choice {
 			type_lazy = () -> com.tools20022.repository.choice.CancelledStatus16Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Accptd", required = true)
 	protected AcceptedStatus10Choice accepted;
 	/**
-	 * Instruction is accepted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -206,7 +210,7 @@ public class ProcessingStatus59Choice {
 	public static final MMMessageAssociationEnd mmAccepted = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
-			componentContext_lazy = () -> ProcessingStatus59Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus59Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Accptd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,9 +226,10 @@ public class ProcessingStatus59Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProcessingStatus59Choice.mmRejected, ProcessingStatus59Choice.mmCancelled, ProcessingStatus59Choice.mmAccepted);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingStatus59Choice.mmRejected, com.tools20022.repository.choice.ProcessingStatus59Choice.mmCancelled,
+						com.tools20022.repository.choice.ProcessingStatus59Choice.mmAccepted);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingStatus59Choice";
 				definition = "Provides the status of a transaction.";
@@ -233,30 +238,30 @@ public class ProcessingStatus59Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rjctd", required = true)
 	public RejectedStatus22Choice getRejected() {
 		return rejected;
 	}
 
-	public void setRejected(com.tools20022.repository.choice.RejectedStatus22Choice rejected) {
-		this.rejected = rejected;
+	public ProcessingStatus59Choice setRejected(com.tools20022.repository.choice.RejectedStatus22Choice rejected) {
+		this.rejected = Objects.requireNonNull(rejected);
+		return this;
 	}
 
-	@XmlElement(name = "Canc", required = true)
 	public CancelledStatus16Choice getCancelled() {
 		return cancelled;
 	}
 
-	public void setCancelled(com.tools20022.repository.choice.CancelledStatus16Choice cancelled) {
-		this.cancelled = cancelled;
+	public ProcessingStatus59Choice setCancelled(com.tools20022.repository.choice.CancelledStatus16Choice cancelled) {
+		this.cancelled = Objects.requireNonNull(cancelled);
+		return this;
 	}
 
-	@XmlElement(name = "Accptd", required = true)
 	public AcceptedStatus10Choice getAccepted() {
 		return accepted;
 	}
 
-	public void setAccepted(com.tools20022.repository.choice.AcceptedStatus10Choice accepted) {
-		this.accepted = accepted;
+	public ProcessingStatus59Choice setAccepted(com.tools20022.repository.choice.AcceptedStatus10Choice accepted) {
+		this.accepted = Objects.requireNonNull(accepted);
+		return this;
 	}
 }

@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -76,8 +77,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,16 +95,16 @@ import javax.xml.bind.annotation.XmlType;
  * AmountAndDirection37}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountAndDirection45", propOrder = {"accruedInterestIndicator", "stampDutyIndicator", "brokerageAmountIndicator", "amount", "creditDebitIndicator", "originalCurrencyAndOrderedAmount", "foreignExchangeDetails", "valueDate"})
 public class AmountAndDirection45 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcrdIntrstInd")
 	protected YesNoIndicator accruedInterestIndicator;
 	/**
-	 * Indicates whether the net proceeds include interest accrued on the
-	 * financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,7 +145,7 @@ public class AmountAndDirection45 {
 	public static final MMMessageAttribute mmAccruedInterestIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAccruedInterestIndicator;
-			componentContext_lazy = () -> AmountAndDirection45.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection45.mmObject();
 			isDerived = false;
 			xmlTag = "AcrdIntrstInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +157,11 @@ public class AmountAndDirection45 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "StmpDtyInd")
 	protected YesNoIndicator stampDutyIndicator;
 	/**
-	 * Whether the net proceeds include stamp duty amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,7 +200,7 @@ public class AmountAndDirection45 {
 	public static final MMMessageAttribute mmStampDutyIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmStampDutyIndicator;
-			componentContext_lazy = () -> AmountAndDirection45.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection45.mmObject();
 			isDerived = false;
 			xmlTag = "StmpDtyInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,11 +212,11 @@ public class AmountAndDirection45 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "BrkrgAmtInd")
 	protected YesNoIndicator brokerageAmountIndicator;
 	/**
-	 * Indicates whether the net proceeds include brokerage fees for the
-	 * transaction. If absent, element is not required.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,7 +251,7 @@ public class AmountAndDirection45 {
 	 */
 	public static final MMMessageAttribute mmBrokerageAmountIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AmountAndDirection45.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection45.mmObject();
 			isDerived = false;
 			xmlTag = "BrkrgAmtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -261,10 +263,11 @@ public class AmountAndDirection45 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt")
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * Amount of money in the cash entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -303,7 +306,7 @@ public class AmountAndDirection45 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
-			componentContext_lazy = () -> AmountAndDirection45.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection45.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -315,10 +318,11 @@ public class AmountAndDirection45 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd")
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Indicates whether an entry is a credit or a debit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -357,7 +361,7 @@ public class AmountAndDirection45 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreditDebitIndicator;
-			componentContext_lazy = () -> AmountAndDirection45.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection45.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -369,11 +373,11 @@ public class AmountAndDirection45 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlCcyAndOrdrdAmt")
 	protected ActiveOrHistoricCurrencyAndAmount originalCurrencyAndOrderedAmount;
 	/**
-	 * Posting/settlement amount in its original currency when conversion
-	 * from/into another currency has occurred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -414,7 +418,7 @@ public class AmountAndDirection45 {
 	public static final MMMessageAttribute mmOriginalCurrencyAndOrderedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
-			componentContext_lazy = () -> AmountAndDirection45.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection45.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCcyAndOrdrdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -426,10 +430,11 @@ public class AmountAndDirection45 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "FXDtls")
 	protected ForeignExchangeTerms23 foreignExchangeDetails;
 	/**
-	 * Information needed to process a currency exchange or conversion.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -467,7 +472,7 @@ public class AmountAndDirection45 {
 	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
-			componentContext_lazy = () -> AmountAndDirection45.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection45.mmObject();
 			isDerived = false;
 			xmlTag = "FXDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -480,11 +485,11 @@ public class AmountAndDirection45 {
 			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms23.mmObject();
 		}
 	};
+	@XmlElement(name = "ValDt")
 	protected DateAndDateTimeChoice valueDate;
 	/**
-	 * Date and time at which the cash is at the disposal of the credit account
-	 * owner, or ceases to be at the disposal of the debit account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -525,7 +530,7 @@ public class AmountAndDirection45 {
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
-			componentContext_lazy = () -> AmountAndDirection45.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection45.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -541,10 +546,12 @@ public class AmountAndDirection45 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountAndDirection45.mmAccruedInterestIndicator, AmountAndDirection45.mmStampDutyIndicator, AmountAndDirection45.mmBrokerageAmountIndicator, AmountAndDirection45.mmAmount,
-						AmountAndDirection45.mmCreditDebitIndicator, AmountAndDirection45.mmOriginalCurrencyAndOrderedAmount, AmountAndDirection45.mmForeignExchangeDetails, AmountAndDirection45.mmValueDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection45.mmAccruedInterestIndicator, com.tools20022.repository.msg.AmountAndDirection45.mmStampDutyIndicator,
+						com.tools20022.repository.msg.AmountAndDirection45.mmBrokerageAmountIndicator, com.tools20022.repository.msg.AmountAndDirection45.mmAmount, com.tools20022.repository.msg.AmountAndDirection45.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.AmountAndDirection45.mmOriginalCurrencyAndOrderedAmount, com.tools20022.repository.msg.AmountAndDirection45.mmForeignExchangeDetails,
+						com.tools20022.repository.msg.AmountAndDirection45.mmValueDate);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndDirection45";
 				definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.";
@@ -554,75 +561,75 @@ public class AmountAndDirection45 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcrdIntrstInd")
-	public YesNoIndicator getAccruedInterestIndicator() {
-		return accruedInterestIndicator;
+	public Optional<YesNoIndicator> getAccruedInterestIndicator() {
+		return accruedInterestIndicator == null ? Optional.empty() : Optional.of(accruedInterestIndicator);
 	}
 
-	public void setAccruedInterestIndicator(YesNoIndicator accruedInterestIndicator) {
+	public AmountAndDirection45 setAccruedInterestIndicator(YesNoIndicator accruedInterestIndicator) {
 		this.accruedInterestIndicator = accruedInterestIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "StmpDtyInd")
-	public YesNoIndicator getStampDutyIndicator() {
-		return stampDutyIndicator;
+	public Optional<YesNoIndicator> getStampDutyIndicator() {
+		return stampDutyIndicator == null ? Optional.empty() : Optional.of(stampDutyIndicator);
 	}
 
-	public void setStampDutyIndicator(YesNoIndicator stampDutyIndicator) {
+	public AmountAndDirection45 setStampDutyIndicator(YesNoIndicator stampDutyIndicator) {
 		this.stampDutyIndicator = stampDutyIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "BrkrgAmtInd")
-	public YesNoIndicator getBrokerageAmountIndicator() {
-		return brokerageAmountIndicator;
+	public Optional<YesNoIndicator> getBrokerageAmountIndicator() {
+		return brokerageAmountIndicator == null ? Optional.empty() : Optional.of(brokerageAmountIndicator);
 	}
 
-	public void setBrokerageAmountIndicator(YesNoIndicator brokerageAmountIndicator) {
+	public AmountAndDirection45 setBrokerageAmountIndicator(YesNoIndicator brokerageAmountIndicator) {
 		this.brokerageAmountIndicator = brokerageAmountIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "Amt")
-	public ActiveCurrencyAndAmount getAmount() {
-		return amount;
+	public Optional<ActiveCurrencyAndAmount> getAmount() {
+		return amount == null ? Optional.empty() : Optional.of(amount);
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
+	public AmountAndDirection45 setAmount(ActiveCurrencyAndAmount amount) {
 		this.amount = amount;
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd")
-	public CreditDebitCode getCreditDebitIndicator() {
-		return creditDebitIndicator;
+	public Optional<CreditDebitCode> getCreditDebitIndicator() {
+		return creditDebitIndicator == null ? Optional.empty() : Optional.of(creditDebitIndicator);
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+	public AmountAndDirection45 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
 		this.creditDebitIndicator = creditDebitIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlCcyAndOrdrdAmt")
-	public ActiveOrHistoricCurrencyAndAmount getOriginalCurrencyAndOrderedAmount() {
-		return originalCurrencyAndOrderedAmount;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getOriginalCurrencyAndOrderedAmount() {
+		return originalCurrencyAndOrderedAmount == null ? Optional.empty() : Optional.of(originalCurrencyAndOrderedAmount);
 	}
 
-	public void setOriginalCurrencyAndOrderedAmount(ActiveOrHistoricCurrencyAndAmount originalCurrencyAndOrderedAmount) {
+	public AmountAndDirection45 setOriginalCurrencyAndOrderedAmount(ActiveOrHistoricCurrencyAndAmount originalCurrencyAndOrderedAmount) {
 		this.originalCurrencyAndOrderedAmount = originalCurrencyAndOrderedAmount;
+		return this;
 	}
 
-	@XmlElement(name = "FXDtls")
-	public ForeignExchangeTerms23 getForeignExchangeDetails() {
-		return foreignExchangeDetails;
+	public Optional<ForeignExchangeTerms23> getForeignExchangeDetails() {
+		return foreignExchangeDetails == null ? Optional.empty() : Optional.of(foreignExchangeDetails);
 	}
 
-	public void setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms23 foreignExchangeDetails) {
+	public AmountAndDirection45 setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms23 foreignExchangeDetails) {
 		this.foreignExchangeDetails = foreignExchangeDetails;
+		return this;
 	}
 
-	@XmlElement(name = "ValDt")
-	public DateAndDateTimeChoice getValueDate() {
-		return valueDate;
+	public Optional<DateAndDateTimeChoice> getValueDate() {
+		return valueDate == null ? Optional.empty() : Optional.of(valueDate);
 	}
 
-	public void setValueDate(DateAndDateTimeChoice valueDate) {
+	public AmountAndDirection45 setValueDate(DateAndDateTimeChoice valueDate) {
 		this.valueDate = valueDate;
+		return this;
 	}
 }

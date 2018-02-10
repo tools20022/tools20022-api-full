@@ -24,9 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LanguageCode;
 import com.tools20022.repository.entity.CardholderRole;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Customer involved in a withdrawal transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMCustomer6", propOrder = {"profile", "selectedLanguage", "authenticationResult"})
 public class ATMCustomer6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Prfl")
 	protected ATMCustomerProfile4 profile;
 	/**
-	 * Profile of the customer selected to perform the service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -102,7 +102,7 @@ public class ATMCustomer6 {
 	 */
 	public static final MMMessageAssociationEnd mmProfile = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMCustomer6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomer6.mmObject();
 			isDerived = false;
 			xmlTag = "Prfl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,11 +114,11 @@ public class ATMCustomer6 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile4.mmObject();
 		}
 	};
+	@XmlElement(name = "SelctdLang")
 	protected LanguageCode selectedLanguage;
 	/**
-	 * Language selected by the customer at the ATM for the customer session.
-	 * Reference ISO 639-1 (alpha-2) et ISO 639-2 (alpha-3).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +146,7 @@ public class ATMCustomer6 {
 	 */
 	public static final MMMessageAttribute mmSelectedLanguage = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCustomer6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomer6.mmObject();
 			isDerived = false;
 			xmlTag = "SelctdLang";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,10 +157,11 @@ public class ATMCustomer6 {
 			simpleType_lazy = () -> LanguageCode.mmObject();
 		}
 	};
+	@XmlElement(name = "AuthntcnRslt", required = true)
 	protected List<com.tools20022.repository.msg.TransactionVerificationResult5> authenticationResult;
 	/**
-	 * Result of the customer authentication for this transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -187,7 +188,7 @@ public class ATMCustomer6 {
 	 */
 	public static final MMMessageAssociationEnd mmAuthenticationResult = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMCustomer6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomer6.mmObject();
 			isDerived = false;
 			xmlTag = "AuthntcnRslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,9 +203,10 @@ public class ATMCustomer6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMCustomer6.mmProfile, ATMCustomer6.mmSelectedLanguage, ATMCustomer6.mmAuthenticationResult);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomer6.mmProfile, com.tools20022.repository.msg.ATMCustomer6.mmSelectedLanguage,
+						com.tools20022.repository.msg.ATMCustomer6.mmAuthenticationResult);
 				trace_lazy = () -> CardholderRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomer6";
 				definition = "Customer involved in a withdrawal transaction.";
@@ -213,30 +215,30 @@ public class ATMCustomer6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Prfl")
-	public ATMCustomerProfile4 getProfile() {
-		return profile;
+	public Optional<ATMCustomerProfile4> getProfile() {
+		return profile == null ? Optional.empty() : Optional.of(profile);
 	}
 
-	public void setProfile(com.tools20022.repository.msg.ATMCustomerProfile4 profile) {
+	public ATMCustomer6 setProfile(com.tools20022.repository.msg.ATMCustomerProfile4 profile) {
 		this.profile = profile;
+		return this;
 	}
 
-	@XmlElement(name = "SelctdLang")
-	public LanguageCode getSelectedLanguage() {
-		return selectedLanguage;
+	public Optional<LanguageCode> getSelectedLanguage() {
+		return selectedLanguage == null ? Optional.empty() : Optional.of(selectedLanguage);
 	}
 
-	public void setSelectedLanguage(LanguageCode selectedLanguage) {
+	public ATMCustomer6 setSelectedLanguage(LanguageCode selectedLanguage) {
 		this.selectedLanguage = selectedLanguage;
+		return this;
 	}
 
-	@XmlElement(name = "AuthntcnRslt", required = true)
 	public List<TransactionVerificationResult5> getAuthenticationResult() {
-		return authenticationResult;
+		return authenticationResult == null ? authenticationResult = new ArrayList<>() : authenticationResult;
 	}
 
-	public void setAuthenticationResult(List<com.tools20022.repository.msg.TransactionVerificationResult5> authenticationResult) {
-		this.authenticationResult = authenticationResult;
+	public ATMCustomer6 setAuthenticationResult(List<com.tools20022.repository.msg.TransactionVerificationResult5> authenticationResult) {
+		this.authenticationResult = Objects.requireNonNull(authenticationResult);
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ServiceLevelCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the pre-agreed level of service between the parties.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServiceLevelCode#mmSameDayValue
- * ServiceLevelCode.mmSameDayValue}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServiceLevelCode#SameDayValue
+ * ServiceLevelCode.SameDayValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServiceLevelCode#mmSingleEuroPaymentsArea
- * ServiceLevelCode.mmSingleEuroPaymentsArea}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServiceLevelCode#SingleEuroPaymentsArea
+ * ServiceLevelCode.SingleEuroPaymentsArea}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ServiceLevelCode#mmEBAPriorityService
- * ServiceLevelCode.mmEBAPriorityService}</li>
+ * {@linkplain com.tools20022.repository.codeset.ServiceLevelCode#EBAPriorityService
+ * ServiceLevelCode.EBAPriorityService}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -58,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the pre-agreed level of service between the parties."</li>
  * </ul>
  */
-public class ServiceLevelCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ServiceLevelCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -102,12 +108,12 @@ public class ServiceLevelCode {
 	 * "Payment must be executed with same day value to the creditor."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSameDayValue = new MMCode() {
+	public static final ServiceLevelCode SameDayValue = new ServiceLevelCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SameDayValue";
 			definition = "Payment must be executed with same day value to the creditor.";
-			owner_lazy = () -> ServiceLevelCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ServiceLevelCode.mmObject();
 			codeName = "SDVA";
 		}
 	};
@@ -134,12 +140,12 @@ public class ServiceLevelCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSingleEuroPaymentsArea = new MMCode() {
+	public static final ServiceLevelCode SingleEuroPaymentsArea = new ServiceLevelCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SingleEuroPaymentsArea";
 			definition = "Payment must be executed following the Single Euro Payments Area scheme.";
-			owner_lazy = () -> ServiceLevelCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ServiceLevelCode.mmObject();
 			codeName = "SEPA";
 		}
 	};
@@ -165,28 +171,60 @@ public class ServiceLevelCode {
 	 * "Transaction must be processed according to the EBA\nPriority Service."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEBAPriorityService = new MMCode() {
+	public static final ServiceLevelCode EBAPriorityService = new ServiceLevelCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EBAPriorityService";
 			definition = "Transaction must be processed according to the EBA\nPriority Service.";
-			owner_lazy = () -> ServiceLevelCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ServiceLevelCode.mmObject();
 			codeName = "PRPT";
 		}
 	};
+	final static private LinkedHashMap<String, ServiceLevelCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ServiceLevelCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SDVA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ServiceLevelCode";
 				definition = "Specifies the pre-agreed level of service between the parties.";
-				code_lazy = () -> Arrays.asList(ServiceLevelCode.mmSameDayValue, ServiceLevelCode.mmSingleEuroPaymentsArea, ServiceLevelCode.mmEBAPriorityService);
 				derivation_lazy = () -> Arrays.asList(ServiceLevel1Code.mmObject(), ServiceLevel2Code.mmObject(), ServiceLevel4Code.mmObject(), ServiceLevel3Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ServiceLevelCode.SameDayValue, com.tools20022.repository.codeset.ServiceLevelCode.SingleEuroPaymentsArea,
+						com.tools20022.repository.codeset.ServiceLevelCode.EBAPriorityService);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SameDayValue.getCodeName().get(), SameDayValue);
+		codesByName.put(SingleEuroPaymentsArea.getCodeName().get(), SingleEuroPaymentsArea);
+		codesByName.put(EBAPriorityService.getCodeName().get(), EBAPriorityService);
+	}
+
+	public static ServiceLevelCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ServiceLevelCode[] values() {
+		ServiceLevelCode[] values = new ServiceLevelCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ServiceLevelCode> {
+		@Override
+		public ServiceLevelCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ServiceLevelCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

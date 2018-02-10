@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Specifies a ratio: amount price per financial instrument quantity."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountPricePerFinancialInstrumentQuantity1", propOrder = {"amountPriceType", "priceValue", "financialInstrumentQuantity"})
 public class AmountPricePerFinancialInstrumentQuantity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AmtPricTp", required = true)
 	protected AmountPriceType1FormatChoice amountPriceType;
 	/**
-	 * Type of amount price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +116,7 @@ public class AmountPricePerFinancialInstrumentQuantity1 {
 	public static final MMMessageAttribute mmAmountPriceType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmTypeOfAmount;
-			componentContext_lazy = () -> AmountPricePerFinancialInstrumentQuantity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity1.mmObject();
 			isDerived = false;
 			xmlTag = "AmtPricTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +127,11 @@ public class AmountPricePerFinancialInstrumentQuantity1 {
 			complexType_lazy = () -> AmountPriceType1FormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "PricVal", required = true)
 	protected ActiveCurrencyAnd13DecimalAmount priceValue;
 	/**
-	 * Value of the price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +165,7 @@ public class AmountPricePerFinancialInstrumentQuantity1 {
 	public static final MMMessageAttribute mmPriceValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
-			componentContext_lazy = () -> AmountPricePerFinancialInstrumentQuantity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity1.mmObject();
 			isDerived = false;
 			xmlTag = "PricVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +176,11 @@ public class AmountPricePerFinancialInstrumentQuantity1 {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmQty", required = true)
 	protected UnitOrFaceAmount1Choice financialInstrumentQuantity;
 	/**
-	 * Quantity of financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,7 +214,7 @@ public class AmountPricePerFinancialInstrumentQuantity1 {
 	public static final MMMessageAttribute mmFinancialInstrumentQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
-			componentContext_lazy = () -> AmountPricePerFinancialInstrumentQuantity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,10 +229,10 @@ public class AmountPricePerFinancialInstrumentQuantity1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountPricePerFinancialInstrumentQuantity1.mmAmountPriceType, AmountPricePerFinancialInstrumentQuantity1.mmPriceValue,
-						AmountPricePerFinancialInstrumentQuantity1.mmFinancialInstrumentQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity1.mmAmountPriceType, com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity1.mmPriceValue,
+						com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity1.mmFinancialInstrumentQuantity);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountPricePerFinancialInstrumentQuantity1";
 				definition = "Specifies a ratio: amount price per financial instrument quantity.";
@@ -237,30 +241,30 @@ public class AmountPricePerFinancialInstrumentQuantity1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AmtPricTp", required = true)
 	public AmountPriceType1FormatChoice getAmountPriceType() {
 		return amountPriceType;
 	}
 
-	public void setAmountPriceType(AmountPriceType1FormatChoice amountPriceType) {
-		this.amountPriceType = amountPriceType;
+	public AmountPricePerFinancialInstrumentQuantity1 setAmountPriceType(AmountPriceType1FormatChoice amountPriceType) {
+		this.amountPriceType = Objects.requireNonNull(amountPriceType);
+		return this;
 	}
 
-	@XmlElement(name = "PricVal", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getPriceValue() {
 		return priceValue;
 	}
 
-	public void setPriceValue(ActiveCurrencyAnd13DecimalAmount priceValue) {
-		this.priceValue = priceValue;
+	public AmountPricePerFinancialInstrumentQuantity1 setPriceValue(ActiveCurrencyAnd13DecimalAmount priceValue) {
+		this.priceValue = Objects.requireNonNull(priceValue);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmQty", required = true)
 	public UnitOrFaceAmount1Choice getFinancialInstrumentQuantity() {
 		return financialInstrumentQuantity;
 	}
 
-	public void setFinancialInstrumentQuantity(UnitOrFaceAmount1Choice financialInstrumentQuantity) {
-		this.financialInstrumentQuantity = financialInstrumentQuantity;
+	public AmountPricePerFinancialInstrumentQuantity1 setFinancialInstrumentQuantity(UnitOrFaceAmount1Choice financialInstrumentQuantity) {
+		this.financialInstrumentQuantity = Objects.requireNonNull(financialInstrumentQuantity);
+		return this;
 	}
 }

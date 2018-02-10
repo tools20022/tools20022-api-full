@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PINFormat4Code;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,16 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * ATMSecurityConfiguration4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "ATMSecurityConfiguration5", propOrder = {"PINFormat", "PINLengthCapabilities"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "ATMSecurityConfiguration5", propOrder = {"pINFormat", "pINLengthCapabilities"})
 public class ATMSecurityConfiguration5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PINFrmt")
 	protected List<PINFormat4Code> pINFormat;
 	/**
-	 * PIN block format the security module is able to manage for online
-	 * verification of the PIN.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +105,7 @@ public class ATMSecurityConfiguration5 {
 	 */
 	public static final MMMessageAttribute mmPINFormat = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMSecurityConfiguration5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration5.mmObject();
 			isDerived = false;
 			xmlTag = "PINFrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,11 +115,11 @@ public class ATMSecurityConfiguration5 {
 			simpleType_lazy = () -> PINFormat4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PINLngthCpblties")
 	protected Number pINLengthCapabilities;
 	/**
-	 * Maximum number of digits the security module is able to accept when the
-	 * cardholder enters its PIN.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,7 +148,7 @@ public class ATMSecurityConfiguration5 {
 	 */
 	public static final MMMessageAttribute mmPINLengthCapabilities = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMSecurityConfiguration5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration5.mmObject();
 			isDerived = false;
 			xmlTag = "PINLngthCpblties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,8 +163,8 @@ public class ATMSecurityConfiguration5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMSecurityConfiguration5.mmPINFormat, ATMSecurityConfiguration5.mmPINLengthCapabilities);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityConfiguration5.mmPINFormat, com.tools20022.repository.msg.ATMSecurityConfiguration5.mmPINLengthCapabilities);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityConfiguration5";
 				definition = "Configuration of the PIN online verification.";
@@ -175,21 +174,21 @@ public class ATMSecurityConfiguration5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PINFrmt")
 	public List<PINFormat4Code> getPINFormat() {
-		return pINFormat;
+		return pINFormat == null ? pINFormat = new ArrayList<>() : pINFormat;
 	}
 
-	public void setPINFormat(List<PINFormat4Code> pINFormat) {
-		this.pINFormat = pINFormat;
+	public ATMSecurityConfiguration5 setPINFormat(List<PINFormat4Code> pINFormat) {
+		this.pINFormat = Objects.requireNonNull(pINFormat);
+		return this;
 	}
 
-	@XmlElement(name = "PINLngthCpblties")
-	public Number getPINLengthCapabilities() {
-		return pINLengthCapabilities;
+	public Optional<Number> getPINLengthCapabilities() {
+		return pINLengthCapabilities == null ? Optional.empty() : Optional.of(pINLengthCapabilities);
 	}
 
-	public void setPINLengthCapabilities(Number pINLengthCapabilities) {
+	public ATMSecurityConfiguration5 setPINLengthCapabilities(Number pINLengthCapabilities) {
 		this.pINLengthCapabilities = pINLengthCapabilities;
+		return this;
 	}
 }

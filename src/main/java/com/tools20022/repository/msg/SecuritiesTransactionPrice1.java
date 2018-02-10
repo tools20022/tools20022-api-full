@@ -25,6 +25,8 @@ import com.tools20022.repository.codeset.PriceStatus1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Descriptive fields capturing where no strike price is known."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesTransactionPrice1", propOrder = {"pending", "currency"})
 public class SecuritiesTransactionPrice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pdg", required = true)
 	protected PriceStatus1Code pending;
 	/**
-	 * Price is currently not available, but pending.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +101,7 @@ public class SecuritiesTransactionPrice1 {
 	 */
 	public static final MMMessageAttribute mmPending = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesTransactionPrice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionPrice1.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,10 +112,11 @@ public class SecuritiesTransactionPrice1 {
 			simpleType_lazy = () -> PriceStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected ActiveOrHistoricCurrencyCode currency;
 	/**
-	 * Currency that will be used but for which no price is yet known.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,7 +145,7 @@ public class SecuritiesTransactionPrice1 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesTransactionPrice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionPrice1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,8 +160,8 @@ public class SecuritiesTransactionPrice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesTransactionPrice1.mmPending, SecuritiesTransactionPrice1.mmCurrency);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransactionPrice1.mmPending, com.tools20022.repository.msg.SecuritiesTransactionPrice1.mmCurrency);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionPrice1";
 				definition = "Descriptive fields capturing where no strike price is known.";
@@ -166,21 +170,21 @@ public class SecuritiesTransactionPrice1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pdg", required = true)
 	public PriceStatus1Code getPending() {
 		return pending;
 	}
 
-	public void setPending(PriceStatus1Code pending) {
-		this.pending = pending;
+	public SecuritiesTransactionPrice1 setPending(PriceStatus1Code pending) {
+		this.pending = Objects.requireNonNull(pending);
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public ActiveOrHistoricCurrencyCode getCurrency() {
-		return currency;
+	public Optional<ActiveOrHistoricCurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(ActiveOrHistoricCurrencyCode currency) {
+	public SecuritiesTransactionPrice1 setCurrency(ActiveOrHistoricCurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 }

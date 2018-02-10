@@ -32,9 +32,8 @@ import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -106,8 +105,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule#forSecuredMarketTransaction1
+ * ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDealRatePresenceRule#forSecuredMarketTransaction1
+ * ConstraintDealRatePresenceRule.forSecuredMarketTransaction1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -126,20 +136,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuredMarketTransaction1", propOrder = {"reportedTransactionStatus", "uniqueTransactionIdentifier", "proprietaryTransactionIdentification", "counterpartyProprietaryTransactionIdentification", "counterpartyIdentification",
 		"tripartyAgentIdentification", "tradeDate", "settlementDate", "maturityDate", "transactionType", "transactionNominalAmount", "rateType", "dealRate", "floatingRateRepurchaseAgreement", "collateral", "supplementaryData"})
 public class SecuredMarketTransaction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptdTxSts", required = true)
 	protected TransactionOperationType1Code reportedTransactionStatus;
 	/**
-	 * Defines the status of the reported transaction, that is details on
-	 * whether the transaction is a new transaction, an amendment of a
-	 * previously reported transaction, a cancellation of a previously reported
-	 * transaction or a correction to a previously reported and rejected
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,7 +184,7 @@ public class SecuredMarketTransaction1 {
 	 */
 	public static final MMMessageAttribute mmReportedTransactionStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuredMarketTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "RptdTxSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,13 +196,11 @@ public class SecuredMarketTransaction1 {
 			simpleType_lazy = () -> TransactionOperationType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "UnqTxIdr")
 	protected Max105Text uniqueTransactionIdentifier;
 	/**
-	 * Unique transaction identifier will be created at the time a transaction
-	 * is first executed, shared with all registered entities and counterparties
-	 * involved in the transaction, and used to track that particular
-	 * transaction during its lifetime.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -238,7 +243,7 @@ public class SecuredMarketTransaction1 {
 	public static final MMMessageAttribute mmUniqueTransactionIdentifier = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
-			componentContext_lazy = () -> SecuredMarketTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "UnqTxIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -250,11 +255,11 @@ public class SecuredMarketTransaction1 {
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryTxId", required = true)
 	protected Max105Text proprietaryTransactionIdentification;
 	/**
-	 * Internal unique transaction identifier used by the reporting agent for
-	 * each transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -297,7 +302,7 @@ public class SecuredMarketTransaction1 {
 	public static final MMMessageAttribute mmProprietaryTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
-			componentContext_lazy = () -> SecuredMarketTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -309,11 +314,11 @@ public class SecuredMarketTransaction1 {
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrPtyPrtryTxId")
 	protected Max105Text counterpartyProprietaryTransactionIdentification;
 	/**
-	 * Internal unique proprietary transaction identifier as assigned by the
-	 * counterparty of the reporting agent for each transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -357,7 +362,7 @@ public class SecuredMarketTransaction1 {
 	public static final MMMessageAttribute mmCounterpartyProprietaryTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
-			componentContext_lazy = () -> SecuredMarketTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyPrtryTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -369,11 +374,11 @@ public class SecuredMarketTransaction1 {
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrPtyId", required = true)
 	protected CounterpartyIdentification1Choice counterpartyIdentification;
 	/**
-	 * Identification of the counterparty of the reporting agent for the
-	 * reported transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -410,7 +415,7 @@ public class SecuredMarketTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmCounterpartyIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuredMarketTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -423,11 +428,11 @@ public class SecuredMarketTransaction1 {
 			type_lazy = () -> CounterpartyIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TrptyAgtId")
 	protected LEIIdentifier tripartyAgentIdentification;
 	/**
-	 * Identification of the tri-party agent, when the transaction has been
-	 * performed via tri-party agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -471,7 +476,7 @@ public class SecuredMarketTransaction1 {
 	public static final MMMessageAttribute mmTripartyAgentIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
-			componentContext_lazy = () -> SecuredMarketTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TrptyAgtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -483,19 +488,11 @@ public class SecuredMarketTransaction1 {
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDt", required = true)
 	protected DateAndDateTimeChoice tradeDate;
 	/**
-	 * Date and time on which the parties entered into the reported transaction.<br>
-	 * <br>
-	 * Usage: when time is available, it must be reported.<br>
-	 * <br>
-	 * It is to be reported with only the date when the time of the transaction
-	 * is not available. <br>
-	 * <br>
-	 * The reported time is the execution time when available or otherwise the
-	 * time at which the transaction entered the trading system of the reporting
-	 * agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -538,7 +535,7 @@ public class SecuredMarketTransaction1 {
 	public static final MMMessageAssociationEnd mmTradeDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> SecuredMarketTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -551,19 +548,11 @@ public class SecuredMarketTransaction1 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmDt", required = true)
 	protected ISODate settlementDate;
 	/**
-	 * Date on which the amount of money is initially exchanged versus the asset
-	 * as contractually agreed.<br>
-	 * <br>
-	 * Usage:<br>
-	 * In the case of open basis repurchase transactions, this is the date on
-	 * which the rollover settles (even if no exchange of an amount of money
-	 * takes place).<br>
-	 * In the case of a settlement failure in which settlement takes place on a
-	 * date different than initially agreed, no transactional amendment needs to
-	 * be reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -606,7 +595,7 @@ public class SecuredMarketTransaction1 {
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
-			componentContext_lazy = () -> SecuredMarketTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -618,12 +607,11 @@ public class SecuredMarketTransaction1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "MtrtyDt", required = true)
 	protected ISODate maturityDate;
 	/**
-	 * Date on which the repurchase will be executed, that is the date on which
-	 * the amount of money is due to be returned or received versus the asset
-	 * pledged or received as collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -666,7 +654,7 @@ public class SecuredMarketTransaction1 {
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
-			componentContext_lazy = () -> SecuredMarketTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -678,11 +666,11 @@ public class SecuredMarketTransaction1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "TxTp", required = true)
 	protected MoneyMarketTransactionType1Code transactionType;
 	/**
-	 * Defines whether the transaction is a cash borrowing or cash lending
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -726,7 +714,7 @@ public class SecuredMarketTransaction1 {
 	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTransactionType;
-			componentContext_lazy = () -> SecuredMarketTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TxTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -738,11 +726,11 @@ public class SecuredMarketTransaction1 {
 			simpleType_lazy = () -> MoneyMarketTransactionType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TxNmnlAmt", required = true)
 	protected ActiveCurrencyAndAmount transactionNominalAmount;
 	/**
-	 * Amount of money initially borrowed or lent to be reported as an absolute
-	 * value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -786,7 +774,7 @@ public class SecuredMarketTransaction1 {
 	public static final MMMessageAttribute mmTransactionNominalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
-			componentContext_lazy = () -> SecuredMarketTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TxNmnlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -798,11 +786,11 @@ public class SecuredMarketTransaction1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RateTp", required = true)
 	protected InterestRateType1Code rateType;
 	/**
-	 * Specifies whether the transaction interest rate of the repurchase
-	 * agreements is either fixed or floating (variable rate).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -846,7 +834,7 @@ public class SecuredMarketTransaction1 {
 	public static final MMMessageAttribute mmRateType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmTypeOfInterest;
-			componentContext_lazy = () -> SecuredMarketTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "RateTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -858,28 +846,11 @@ public class SecuredMarketTransaction1 {
 			simpleType_lazy = () -> InterestRateType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DealRate")
 	protected Rate2 dealRate;
 	/**
-	 * Interest rate expressed in accordance with ACT/360 money market
-	 * convention at which the repurchase agreement has been concluded and at
-	 * which the cash lent is remunerated.<br>
-	 * <br>
-	 * Usage:<br>
-	 * When the remuneration for securities lending transactions is represented
-	 * by a fee amount, the fee amount will be translated into a deal rate per
-	 * annum based on the ratio between the fee amount and the transaction
-	 * nominal amount times 360 divided by the number of days between the
-	 * settlement date and the maturity of the transaction. <br>
-	 * <br>
-	 * Only actual values, as opposed to estimated or default values, will be
-	 * reported for this variable.<br>
-	 * <br>
-	 * This value can be either positive or negative irrespective of whether the
-	 * cash is borrowed or lent. It represents the contractually agreed
-	 * remuneration rate on the transaction nominal amount regardless of the
-	 * transaction sign (that whether the transaction type is reported as
-	 * borrowed or lent).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -920,7 +891,7 @@ public class SecuredMarketTransaction1 {
 	public static final MMMessageAssociationEnd mmDealRate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
-			componentContext_lazy = () -> SecuredMarketTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "DealRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -933,13 +904,11 @@ public class SecuredMarketTransaction1 {
 			type_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
 		}
 	};
+	@XmlElement(name = "FltgRateRpAgrmt")
 	protected FloatingRateNote1 floatingRateRepurchaseAgreement;
 	/**
-	 * Repurchase agreement in which the periodic interest payments are
-	 * calculated on the basis of the value (that is, fixing of an underlying
-	 * reference rate such as Euribor) on predefined dates (that is, fixing
-	 * dates) and which has a maturity of no more than one year.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -981,7 +950,7 @@ public class SecuredMarketTransaction1 {
 	public static final MMMessageAssociationEnd mmFloatingRateRepurchaseAgreement = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RepurchaseAgreement.mmObject();
-			componentContext_lazy = () -> SecuredMarketTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "FltgRateRpAgrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -994,10 +963,11 @@ public class SecuredMarketTransaction1 {
 			type_lazy = () -> com.tools20022.repository.msg.FloatingRateNote1.mmObject();
 		}
 	};
+	@XmlElement(name = "Coll", required = true)
 	protected Collateral10 collateral;
 	/**
-	 * Identifies the asset class pledged as collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1037,7 +1007,7 @@ public class SecuredMarketTransaction1 {
 	public static final MMMessageAssociationEnd mmCollateral = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CollateralManagement.mmCollateral;
-			componentContext_lazy = () -> SecuredMarketTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "Coll";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1050,11 +1020,11 @@ public class SecuredMarketTransaction1 {
 			type_lazy = () -> com.tools20022.repository.msg.Collateral10.mmObject();
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1090,7 +1060,7 @@ public class SecuredMarketTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuredMarketTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1106,13 +1076,18 @@ public class SecuredMarketTransaction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuredMarketTransaction1.mmReportedTransactionStatus, SecuredMarketTransaction1.mmUniqueTransactionIdentifier, SecuredMarketTransaction1.mmProprietaryTransactionIdentification,
-						SecuredMarketTransaction1.mmCounterpartyProprietaryTransactionIdentification, SecuredMarketTransaction1.mmCounterpartyIdentification, SecuredMarketTransaction1.mmTripartyAgentIdentification,
-						SecuredMarketTransaction1.mmTradeDate, SecuredMarketTransaction1.mmSettlementDate, SecuredMarketTransaction1.mmMaturityDate, SecuredMarketTransaction1.mmTransactionType,
-						SecuredMarketTransaction1.mmTransactionNominalAmount, SecuredMarketTransaction1.mmRateType, SecuredMarketTransaction1.mmDealRate, SecuredMarketTransaction1.mmFloatingRateRepurchaseAgreement,
-						SecuredMarketTransaction1.mmCollateral, SecuredMarketTransaction1.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuredMarketTransaction1.mmReportedTransactionStatus, com.tools20022.repository.msg.SecuredMarketTransaction1.mmUniqueTransactionIdentifier,
+						com.tools20022.repository.msg.SecuredMarketTransaction1.mmProprietaryTransactionIdentification, com.tools20022.repository.msg.SecuredMarketTransaction1.mmCounterpartyProprietaryTransactionIdentification,
+						com.tools20022.repository.msg.SecuredMarketTransaction1.mmCounterpartyIdentification, com.tools20022.repository.msg.SecuredMarketTransaction1.mmTripartyAgentIdentification,
+						com.tools20022.repository.msg.SecuredMarketTransaction1.mmTradeDate, com.tools20022.repository.msg.SecuredMarketTransaction1.mmSettlementDate, com.tools20022.repository.msg.SecuredMarketTransaction1.mmMaturityDate,
+						com.tools20022.repository.msg.SecuredMarketTransaction1.mmTransactionType, com.tools20022.repository.msg.SecuredMarketTransaction1.mmTransactionNominalAmount,
+						com.tools20022.repository.msg.SecuredMarketTransaction1.mmRateType, com.tools20022.repository.msg.SecuredMarketTransaction1.mmDealRate,
+						com.tools20022.repository.msg.SecuredMarketTransaction1.mmFloatingRateRepurchaseAgreement, com.tools20022.repository.msg.SecuredMarketTransaction1.mmCollateral,
+						com.tools20022.repository.msg.SecuredMarketTransaction1.mmSupplementaryData);
 				trace_lazy = () -> RepurchaseAgreement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction1,
+						com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forSecuredMarketTransaction1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuredMarketTransaction1";
 				definition = "Provides the details of each individual secured market transaction.";
@@ -1122,147 +1097,147 @@ public class SecuredMarketTransaction1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptdTxSts", required = true)
 	public TransactionOperationType1Code getReportedTransactionStatus() {
 		return reportedTransactionStatus;
 	}
 
-	public void setReportedTransactionStatus(TransactionOperationType1Code reportedTransactionStatus) {
-		this.reportedTransactionStatus = reportedTransactionStatus;
+	public SecuredMarketTransaction1 setReportedTransactionStatus(TransactionOperationType1Code reportedTransactionStatus) {
+		this.reportedTransactionStatus = Objects.requireNonNull(reportedTransactionStatus);
+		return this;
 	}
 
-	@XmlElement(name = "UnqTxIdr")
-	public Max105Text getUniqueTransactionIdentifier() {
-		return uniqueTransactionIdentifier;
+	public Optional<Max105Text> getUniqueTransactionIdentifier() {
+		return uniqueTransactionIdentifier == null ? Optional.empty() : Optional.of(uniqueTransactionIdentifier);
 	}
 
-	public void setUniqueTransactionIdentifier(Max105Text uniqueTransactionIdentifier) {
+	public SecuredMarketTransaction1 setUniqueTransactionIdentifier(Max105Text uniqueTransactionIdentifier) {
 		this.uniqueTransactionIdentifier = uniqueTransactionIdentifier;
+		return this;
 	}
 
-	@XmlElement(name = "PrtryTxId", required = true)
 	public Max105Text getProprietaryTransactionIdentification() {
 		return proprietaryTransactionIdentification;
 	}
 
-	public void setProprietaryTransactionIdentification(Max105Text proprietaryTransactionIdentification) {
-		this.proprietaryTransactionIdentification = proprietaryTransactionIdentification;
+	public SecuredMarketTransaction1 setProprietaryTransactionIdentification(Max105Text proprietaryTransactionIdentification) {
+		this.proprietaryTransactionIdentification = Objects.requireNonNull(proprietaryTransactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CtrPtyPrtryTxId")
-	public Max105Text getCounterpartyProprietaryTransactionIdentification() {
-		return counterpartyProprietaryTransactionIdentification;
+	public Optional<Max105Text> getCounterpartyProprietaryTransactionIdentification() {
+		return counterpartyProprietaryTransactionIdentification == null ? Optional.empty() : Optional.of(counterpartyProprietaryTransactionIdentification);
 	}
 
-	public void setCounterpartyProprietaryTransactionIdentification(Max105Text counterpartyProprietaryTransactionIdentification) {
+	public SecuredMarketTransaction1 setCounterpartyProprietaryTransactionIdentification(Max105Text counterpartyProprietaryTransactionIdentification) {
 		this.counterpartyProprietaryTransactionIdentification = counterpartyProprietaryTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CtrPtyId", required = true)
 	public CounterpartyIdentification1Choice getCounterpartyIdentification() {
 		return counterpartyIdentification;
 	}
 
-	public void setCounterpartyIdentification(CounterpartyIdentification1Choice counterpartyIdentification) {
-		this.counterpartyIdentification = counterpartyIdentification;
+	public SecuredMarketTransaction1 setCounterpartyIdentification(CounterpartyIdentification1Choice counterpartyIdentification) {
+		this.counterpartyIdentification = Objects.requireNonNull(counterpartyIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TrptyAgtId")
-	public LEIIdentifier getTripartyAgentIdentification() {
-		return tripartyAgentIdentification;
+	public Optional<LEIIdentifier> getTripartyAgentIdentification() {
+		return tripartyAgentIdentification == null ? Optional.empty() : Optional.of(tripartyAgentIdentification);
 	}
 
-	public void setTripartyAgentIdentification(LEIIdentifier tripartyAgentIdentification) {
+	public SecuredMarketTransaction1 setTripartyAgentIdentification(LEIIdentifier tripartyAgentIdentification) {
 		this.tripartyAgentIdentification = tripartyAgentIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TradDt", required = true)
 	public DateAndDateTimeChoice getTradeDate() {
 		return tradeDate;
 	}
 
-	public void setTradeDate(DateAndDateTimeChoice tradeDate) {
-		this.tradeDate = tradeDate;
+	public SecuredMarketTransaction1 setTradeDate(DateAndDateTimeChoice tradeDate) {
+		this.tradeDate = Objects.requireNonNull(tradeDate);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmDt", required = true)
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
 
-	public void setSettlementDate(ISODate settlementDate) {
-		this.settlementDate = settlementDate;
+	public SecuredMarketTransaction1 setSettlementDate(ISODate settlementDate) {
+		this.settlementDate = Objects.requireNonNull(settlementDate);
+		return this;
 	}
 
-	@XmlElement(name = "MtrtyDt", required = true)
 	public ISODate getMaturityDate() {
 		return maturityDate;
 	}
 
-	public void setMaturityDate(ISODate maturityDate) {
-		this.maturityDate = maturityDate;
+	public SecuredMarketTransaction1 setMaturityDate(ISODate maturityDate) {
+		this.maturityDate = Objects.requireNonNull(maturityDate);
+		return this;
 	}
 
-	@XmlElement(name = "TxTp", required = true)
 	public MoneyMarketTransactionType1Code getTransactionType() {
 		return transactionType;
 	}
 
-	public void setTransactionType(MoneyMarketTransactionType1Code transactionType) {
-		this.transactionType = transactionType;
+	public SecuredMarketTransaction1 setTransactionType(MoneyMarketTransactionType1Code transactionType) {
+		this.transactionType = Objects.requireNonNull(transactionType);
+		return this;
 	}
 
-	@XmlElement(name = "TxNmnlAmt", required = true)
 	public ActiveCurrencyAndAmount getTransactionNominalAmount() {
 		return transactionNominalAmount;
 	}
 
-	public void setTransactionNominalAmount(ActiveCurrencyAndAmount transactionNominalAmount) {
-		this.transactionNominalAmount = transactionNominalAmount;
+	public SecuredMarketTransaction1 setTransactionNominalAmount(ActiveCurrencyAndAmount transactionNominalAmount) {
+		this.transactionNominalAmount = Objects.requireNonNull(transactionNominalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "RateTp", required = true)
 	public InterestRateType1Code getRateType() {
 		return rateType;
 	}
 
-	public void setRateType(InterestRateType1Code rateType) {
-		this.rateType = rateType;
+	public SecuredMarketTransaction1 setRateType(InterestRateType1Code rateType) {
+		this.rateType = Objects.requireNonNull(rateType);
+		return this;
 	}
 
-	@XmlElement(name = "DealRate")
-	public Rate2 getDealRate() {
-		return dealRate;
+	public Optional<Rate2> getDealRate() {
+		return dealRate == null ? Optional.empty() : Optional.of(dealRate);
 	}
 
-	public void setDealRate(com.tools20022.repository.msg.Rate2 dealRate) {
+	public SecuredMarketTransaction1 setDealRate(com.tools20022.repository.msg.Rate2 dealRate) {
 		this.dealRate = dealRate;
+		return this;
 	}
 
-	@XmlElement(name = "FltgRateRpAgrmt")
-	public FloatingRateNote1 getFloatingRateRepurchaseAgreement() {
-		return floatingRateRepurchaseAgreement;
+	public Optional<FloatingRateNote1> getFloatingRateRepurchaseAgreement() {
+		return floatingRateRepurchaseAgreement == null ? Optional.empty() : Optional.of(floatingRateRepurchaseAgreement);
 	}
 
-	public void setFloatingRateRepurchaseAgreement(com.tools20022.repository.msg.FloatingRateNote1 floatingRateRepurchaseAgreement) {
+	public SecuredMarketTransaction1 setFloatingRateRepurchaseAgreement(com.tools20022.repository.msg.FloatingRateNote1 floatingRateRepurchaseAgreement) {
 		this.floatingRateRepurchaseAgreement = floatingRateRepurchaseAgreement;
+		return this;
 	}
 
-	@XmlElement(name = "Coll", required = true)
 	public Collateral10 getCollateral() {
 		return collateral;
 	}
 
-	public void setCollateral(com.tools20022.repository.msg.Collateral10 collateral) {
-		this.collateral = collateral;
+	public SecuredMarketTransaction1 setCollateral(com.tools20022.repository.msg.Collateral10 collateral) {
+		this.collateral = Objects.requireNonNull(collateral);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecuredMarketTransaction1 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 }

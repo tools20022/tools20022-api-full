@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CollateralSubstitutionSequenceCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates whether the collateral substitution request is new or updated.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionSequenceCode#mmInitial
- * CollateralSubstitutionSequenceCode.mmInitial}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionSequenceCode#Initial
+ * CollateralSubstitutionSequenceCode.Initial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionSequenceCode#mmUpdated
- * CollateralSubstitutionSequenceCode.mmUpdated}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionSequenceCode#Updated
+ * CollateralSubstitutionSequenceCode.Updated}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Indicates whether the collateral substitution request is new or updated."</li>
  * </ul>
  */
-public class CollateralSubstitutionSequenceCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CollateralSubstitutionSequenceCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,12 +99,12 @@ public class CollateralSubstitutionSequenceCode {
 	 * definition} = "Indicates this is a new collateral substitution request."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInitial = new MMCode() {
+	public static final CollateralSubstitutionSequenceCode Initial = new CollateralSubstitutionSequenceCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initial";
 			definition = "Indicates this is a new collateral substitution request.";
-			owner_lazy = () -> CollateralSubstitutionSequenceCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralSubstitutionSequenceCode.mmObject();
 			codeName = "INIT";
 		}
 	};
@@ -124,28 +130,58 @@ public class CollateralSubstitutionSequenceCode {
 	 * "Indicates this is an updated collateral substitution request."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUpdated = new MMCode() {
+	public static final CollateralSubstitutionSequenceCode Updated = new CollateralSubstitutionSequenceCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Updated";
 			definition = "Indicates this is an updated collateral substitution request.";
-			owner_lazy = () -> CollateralSubstitutionSequenceCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralSubstitutionSequenceCode.mmObject();
 			codeName = "UPDD";
 		}
 	};
+	final static private LinkedHashMap<String, CollateralSubstitutionSequenceCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CollateralSubstitutionSequenceCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("INIT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralSubstitutionSequenceCode";
 				definition = "Indicates whether the collateral substitution request is new or updated.";
-				code_lazy = () -> Arrays.asList(CollateralSubstitutionSequenceCode.mmInitial, CollateralSubstitutionSequenceCode.mmUpdated);
 				derivation_lazy = () -> Arrays.asList(CollateralSubstitutionSequence1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralSubstitutionSequenceCode.Initial, com.tools20022.repository.codeset.CollateralSubstitutionSequenceCode.Updated);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Initial.getCodeName().get(), Initial);
+		codesByName.put(Updated.getCodeName().get(), Updated);
+	}
+
+	public static CollateralSubstitutionSequenceCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CollateralSubstitutionSequenceCode[] values() {
+		CollateralSubstitutionSequenceCode[] values = new CollateralSubstitutionSequenceCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CollateralSubstitutionSequenceCode> {
+		@Override
+		public CollateralSubstitutionSequenceCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CollateralSubstitutionSequenceCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

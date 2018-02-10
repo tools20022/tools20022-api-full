@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.TransactionReportOrError2Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCurrencyGuideline#forReturnTransactionCopy1
+ * ConstraintCurrencyGuideline.forReturnTransactionCopy1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReturnTransactionCopy1", propOrder = {"messageHeader", "reportOrError"})
 public class ReturnTransactionCopy1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgHdr", required = true)
 	protected MessageHeader5 messageHeader;
 	/**
-	 * Common business identification for the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -104,7 +114,7 @@ public class ReturnTransactionCopy1 {
 	 */
 	public static final MMMessageAssociationEnd mmMessageHeader = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReturnTransactionCopy1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnTransactionCopy1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +126,11 @@ public class ReturnTransactionCopy1 {
 			type_lazy = () -> com.tools20022.repository.msg.MessageHeader5.mmObject();
 		}
 	};
+	@XmlElement(name = "RptOrErr", required = true)
 	protected TransactionReportOrError2Choice reportOrError;
 	/**
-	 * Reports on transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -146,7 +157,7 @@ public class ReturnTransactionCopy1 {
 	 */
 	public static final MMMessageAssociationEnd mmReportOrError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReturnTransactionCopy1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnTransactionCopy1.mmObject();
 			isDerived = false;
 			xmlTag = "RptOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,8 +173,9 @@ public class ReturnTransactionCopy1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReturnTransactionCopy1.mmMessageHeader, ReturnTransactionCopy1.mmReportOrError);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReturnTransactionCopy1.mmMessageHeader, com.tools20022.repository.msg.ReturnTransactionCopy1.mmReportOrError);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCurrencyGuideline.forReturnTransactionCopy1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReturnTransactionCopy1";
 				definition = "The ReturnTransaction message is sent by the transaction administrator to a member of the system.\r\nIt is used to provide information on transactions and booked entries held at the transaction administrator.\r\nThe Return Transaction message can be sent as a response to a related GetTransaction message (pull mode) or initiated by the transaction administrator (push mode). The push of information can take place either at prearranged times or as a warning or alarm when a problem has occurred.";
@@ -172,21 +184,21 @@ public class ReturnTransactionCopy1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgHdr", required = true)
 	public MessageHeader5 getMessageHeader() {
 		return messageHeader;
 	}
 
-	public void setMessageHeader(com.tools20022.repository.msg.MessageHeader5 messageHeader) {
-		this.messageHeader = messageHeader;
+	public ReturnTransactionCopy1 setMessageHeader(com.tools20022.repository.msg.MessageHeader5 messageHeader) {
+		this.messageHeader = Objects.requireNonNull(messageHeader);
+		return this;
 	}
 
-	@XmlElement(name = "RptOrErr", required = true)
 	public TransactionReportOrError2Choice getReportOrError() {
 		return reportOrError;
 	}
 
-	public void setReportOrError(TransactionReportOrError2Choice reportOrError) {
-		this.reportOrError = reportOrError;
+	public ReturnTransactionCopy1 setReportOrError(TransactionReportOrError2Choice reportOrError) {
+		this.reportOrError = Objects.requireNonNull(reportOrError);
+		return this;
 	}
 }

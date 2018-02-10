@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.AccountRestriction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,16 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Type providing further information on balance restrictions."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BalanceRestrictionType1", propOrder = {"type", "description", "processingType"})
 public class BalanceRestrictionType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected GenericIdentification1 type;
 	/**
-	 * Type of the restriction, for example, selling restriction, buying
-	 * restriction, placing restriction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +115,7 @@ public class BalanceRestrictionType1 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountRestriction.mmRestrictionType;
-			componentContext_lazy = () -> BalanceRestrictionType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceRestrictionType1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +126,11 @@ public class BalanceRestrictionType1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "Desc")
 	protected Max140Text description;
 	/**
-	 * Description of the restriction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -154,7 +157,7 @@ public class BalanceRestrictionType1 {
 	 */
 	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BalanceRestrictionType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceRestrictionType1.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,11 +168,11 @@ public class BalanceRestrictionType1 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcgTp")
 	protected ProcessingType1Choice processingType;
 	/**
-	 * Classification of the type of processing restriction that the system
-	 * should apply for the restriction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -205,7 +208,7 @@ public class BalanceRestrictionType1 {
 	public static final MMMessageAttribute mmProcessingType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountRestriction.mmRestrictionType;
-			componentContext_lazy = () -> BalanceRestrictionType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceRestrictionType1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,9 +223,10 @@ public class BalanceRestrictionType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BalanceRestrictionType1.mmType, BalanceRestrictionType1.mmDescription, BalanceRestrictionType1.mmProcessingType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceRestrictionType1.mmType, com.tools20022.repository.msg.BalanceRestrictionType1.mmDescription,
+						com.tools20022.repository.msg.BalanceRestrictionType1.mmProcessingType);
 				trace_lazy = () -> AccountRestriction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceRestrictionType1";
 				definition = "Type providing further information on balance restrictions.";
@@ -231,30 +235,30 @@ public class BalanceRestrictionType1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public GenericIdentification1 getType() {
 		return type;
 	}
 
-	public void setType(com.tools20022.repository.msg.GenericIdentification1 type) {
-		this.type = type;
+	public BalanceRestrictionType1 setType(com.tools20022.repository.msg.GenericIdentification1 type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Desc")
-	public Max140Text getDescription() {
-		return description;
+	public Optional<Max140Text> getDescription() {
+		return description == null ? Optional.empty() : Optional.of(description);
 	}
 
-	public void setDescription(Max140Text description) {
+	public BalanceRestrictionType1 setDescription(Max140Text description) {
 		this.description = description;
+		return this;
 	}
 
-	@XmlElement(name = "PrcgTp")
-	public ProcessingType1Choice getProcessingType() {
-		return processingType;
+	public Optional<ProcessingType1Choice> getProcessingType() {
+		return processingType == null ? Optional.empty() : Optional.of(processingType);
 	}
 
-	public void setProcessingType(ProcessingType1Choice processingType) {
+	public BalanceRestrictionType1 setProcessingType(ProcessingType1Choice processingType) {
 		this.processingType = processingType;
+		return this;
 	}
 }

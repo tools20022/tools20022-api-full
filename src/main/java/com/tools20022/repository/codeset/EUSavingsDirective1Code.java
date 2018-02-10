@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.EUSavingsDirectiveCode;
+import com.tools20022.repository.codeset.EUSavingsDirective1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * ndicate whether or not the fund is subject to reporting under the EU Savings
@@ -32,27 +36,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.EUSavingsDirectiveCode
- * EUSavingsDirectiveCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EUSavingsDirective1Code#mmEUSavingsInScope
- * EUSavingsDirective1Code.mmEUSavingsInScope}</li>
+ * {@linkplain com.tools20022.repository.codeset.EUSavingsDirective1Code#EUSavingsInScope
+ * EUSavingsDirective1Code.EUSavingsInScope}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EUSavingsDirective1Code#mmEUSavingsOutScope
- * EUSavingsDirective1Code.mmEUSavingsOutScope}</li>
+ * {@linkplain com.tools20022.repository.codeset.EUSavingsDirective1Code#EUSavingsOutScope
+ * EUSavingsDirective1Code.EUSavingsOutScope}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EUSavingsDirective1Code#mmEUSavingsVariable
- * EUSavingsDirective1Code.mmEUSavingsVariable}</li>
+ * {@linkplain com.tools20022.repository.codeset.EUSavingsDirective1Code#EUSavingsVariable
+ * EUSavingsDirective1Code.EUSavingsVariable}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.EUSavingsDirectiveCode
+ * EUSavingsDirectiveCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class EUSavingsDirective1Code extends EUSavingsDirectiveCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EUSavingsDirective1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,11 +95,12 @@ public class EUSavingsDirective1Code extends EUSavingsDirectiveCode {
 	 * name} = "EUSavingsInScope"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEUSavingsInScope = new MMCode() {
+	public static final EUSavingsDirective1Code EUSavingsInScope = new EUSavingsDirective1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUSavingsInScope";
-			owner_lazy = () -> EUSavingsDirective1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EUSavingsDirective1Code.mmObject();
+			codeName = EUSavingsDirectiveCode.EUSavingsInScope.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -113,11 +119,12 @@ public class EUSavingsDirective1Code extends EUSavingsDirectiveCode {
 	 * name} = "EUSavingsOutScope"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEUSavingsOutScope = new MMCode() {
+	public static final EUSavingsDirective1Code EUSavingsOutScope = new EUSavingsDirective1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUSavingsOutScope";
-			owner_lazy = () -> EUSavingsDirective1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EUSavingsDirective1Code.mmObject();
+			codeName = EUSavingsDirectiveCode.EUSavingsOutScope.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -136,26 +143,59 @@ public class EUSavingsDirective1Code extends EUSavingsDirectiveCode {
 	 * name} = "EUSavingsVariable"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEUSavingsVariable = new MMCode() {
+	public static final EUSavingsDirective1Code EUSavingsVariable = new EUSavingsDirective1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUSavingsVariable";
-			owner_lazy = () -> EUSavingsDirective1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EUSavingsDirective1Code.mmObject();
+			codeName = EUSavingsDirectiveCode.EUSavingsVariable.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, EUSavingsDirective1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EUSavingsDirective1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("EUSI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EUSavingsDirective1Code";
 				definition = "ndicate whether or not the fund is subject to reporting  under the EU Savings Directive.  Enter \"Variable\" if the status of the fund is likely to change from time to time.";
-				code_lazy = () -> Arrays.asList(EUSavingsDirective1Code.mmEUSavingsInScope, EUSavingsDirective1Code.mmEUSavingsOutScope, EUSavingsDirective1Code.mmEUSavingsVariable);
 				trace_lazy = () -> EUSavingsDirectiveCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EUSavingsDirective1Code.EUSavingsInScope, com.tools20022.repository.codeset.EUSavingsDirective1Code.EUSavingsOutScope,
+						com.tools20022.repository.codeset.EUSavingsDirective1Code.EUSavingsVariable);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(EUSavingsInScope.getCodeName().get(), EUSavingsInScope);
+		codesByName.put(EUSavingsOutScope.getCodeName().get(), EUSavingsOutScope);
+		codesByName.put(EUSavingsVariable.getCodeName().get(), EUSavingsVariable);
+	}
+
+	public static EUSavingsDirective1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EUSavingsDirective1Code[] values() {
+		EUSavingsDirective1Code[] values = new EUSavingsDirective1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EUSavingsDirective1Code> {
+		@Override
+		public EUSavingsDirective1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EUSavingsDirective1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

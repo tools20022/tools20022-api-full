@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Quorum;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of quorum quantity."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "QuorumQuantity1Choice", propOrder = {"quorumQuantity", "quorumQuantityPercentage"})
 public class QuorumQuantity1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QrmQty", required = true)
 	protected Max35Text quorumQuantity;
 	/**
-	 * Minimum quantity of securities required to hold a meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +109,7 @@ public class QuorumQuantity1Choice {
 	public static final MMMessageAttribute mmQuorumQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Quorum.mmQuantity;
-			componentContext_lazy = () -> QuorumQuantity1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.QuorumQuantity1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QrmQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,11 +120,11 @@ public class QuorumQuantity1Choice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "QrmQtyPctg", required = true)
 	protected PercentageRate quorumQuantityPercentage;
 	/**
-	 * Minimum quantity of securities, expressed as a percentage, required to
-	 * hold a meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +160,7 @@ public class QuorumQuantity1Choice {
 	public static final MMMessageAttribute mmQuorumQuantityPercentage = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Quorum.mmPercentage;
-			componentContext_lazy = () -> QuorumQuantity1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.QuorumQuantity1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QrmQtyPctg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,9 +175,9 @@ public class QuorumQuantity1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(QuorumQuantity1Choice.mmQuorumQuantity, QuorumQuantity1Choice.mmQuorumQuantityPercentage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.QuorumQuantity1Choice.mmQuorumQuantity, com.tools20022.repository.choice.QuorumQuantity1Choice.mmQuorumQuantityPercentage);
 				trace_lazy = () -> Quorum.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuorumQuantity1Choice";
 				definition = "Choice of quorum quantity.";
@@ -184,21 +186,21 @@ public class QuorumQuantity1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QrmQty", required = true)
 	public Max35Text getQuorumQuantity() {
 		return quorumQuantity;
 	}
 
-	public void setQuorumQuantity(Max35Text quorumQuantity) {
-		this.quorumQuantity = quorumQuantity;
+	public QuorumQuantity1Choice setQuorumQuantity(Max35Text quorumQuantity) {
+		this.quorumQuantity = Objects.requireNonNull(quorumQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "QrmQtyPctg", required = true)
 	public PercentageRate getQuorumQuantityPercentage() {
 		return quorumQuantityPercentage;
 	}
 
-	public void setQuorumQuantityPercentage(PercentageRate quorumQuantityPercentage) {
-		this.quorumQuantityPercentage = quorumQuantityPercentage;
+	public QuorumQuantity1Choice setQuorumQuantityPercentage(PercentageRate quorumQuantityPercentage) {
+		this.quorumQuantityPercentage = Objects.requireNonNull(quorumQuantityPercentage);
+		return this;
 	}
 }

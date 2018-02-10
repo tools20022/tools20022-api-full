@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.GateHoldBackCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of hold back on redemption proceeds.
@@ -31,11 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.GateHoldBackCode#mmHoldBack
- * GateHoldBackCode.mmHoldBack}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.GateHoldBackCode#mmGating
- * GateHoldBackCode.mmGating}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.GateHoldBackCode#HoldBack
+ * GateHoldBackCode.HoldBack}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.GateHoldBackCode#Gating
+ * GateHoldBackCode.Gating}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,7 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of hold back on redemption proceeds."</li>
  * </ul>
  */
-public class GateHoldBackCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class GateHoldBackCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,12 +89,12 @@ public class GateHoldBackCode {
 	 * definition} = "Hold back of redemption proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHoldBack = new MMCode() {
+	public static final GateHoldBackCode HoldBack = new GateHoldBackCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldBack";
 			definition = "Hold back of redemption proceeds.";
-			owner_lazy = () -> GateHoldBackCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.GateHoldBackCode.mmObject();
 			codeName = "HOLD";
 		}
 	};
@@ -114,27 +119,57 @@ public class GateHoldBackCode {
 	 * definition} = "Gating of redemption proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGating = new MMCode() {
+	public static final GateHoldBackCode Gating = new GateHoldBackCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gating";
 			definition = "Gating of redemption proceeds.";
-			owner_lazy = () -> GateHoldBackCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.GateHoldBackCode.mmObject();
 			codeName = "GATE";
 		}
 	};
+	final static private LinkedHashMap<String, GateHoldBackCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected GateHoldBackCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GateHoldBackCode";
 				definition = "Specifies the type of hold back on redemption proceeds.";
-				code_lazy = () -> Arrays.asList(GateHoldBackCode.mmHoldBack, GateHoldBackCode.mmGating);
 				derivation_lazy = () -> Arrays.asList(GateHoldBack1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GateHoldBackCode.HoldBack, com.tools20022.repository.codeset.GateHoldBackCode.Gating);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(HoldBack.getCodeName().get(), HoldBack);
+		codesByName.put(Gating.getCodeName().get(), Gating);
+	}
+
+	public static GateHoldBackCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static GateHoldBackCode[] values() {
+		GateHoldBackCode[] values = new GateHoldBackCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, GateHoldBackCode> {
+		@Override
+		public GateHoldBackCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(GateHoldBackCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

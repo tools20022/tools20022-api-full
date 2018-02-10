@@ -20,33 +20,36 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ATMStatusCode;
+import com.tools20022.repository.codeset.ATMStatus2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Current status of the security device.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ATMStatusCode ATMStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMStatus2Code#InOperation
+ * ATMStatus2Code.InOperation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMStatus2Code#mmInOperation
- * ATMStatus2Code.mmInOperation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMStatus2Code#mmOutOfService
- * ATMStatus2Code.mmOutOfService}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMStatus2Code#OutOfService
+ * ATMStatus2Code.OutOfService}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ATMStatusCode ATMStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,7 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Current status of the security device."</li>
  * </ul>
  */
-public class ATMStatus2Code extends ATMStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ATMStatus2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -76,11 +80,12 @@ public class ATMStatus2Code extends ATMStatusCode {
 	 * name} = "InOperation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInOperation = new MMCode() {
+	public static final ATMStatus2Code InOperation = new ATMStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InOperation";
-			owner_lazy = () -> ATMStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMStatus2Code.mmObject();
+			codeName = ATMStatusCode.InOperation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -99,25 +104,56 @@ public class ATMStatus2Code extends ATMStatusCode {
 	 * name} = "OutOfService"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOutOfService = new MMCode() {
+	public static final ATMStatus2Code OutOfService = new ATMStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfService";
-			owner_lazy = () -> ATMStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMStatus2Code.mmObject();
+			codeName = ATMStatusCode.OutOfService.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ATMStatus2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ATMStatus2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMStatus2Code";
 				definition = "Current status of the security device.";
-				code_lazy = () -> Arrays.asList(ATMStatus2Code.mmInOperation, ATMStatus2Code.mmOutOfService);
 				trace_lazy = () -> ATMStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMStatus2Code.InOperation, com.tools20022.repository.codeset.ATMStatus2Code.OutOfService);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(InOperation.getCodeName().get(), InOperation);
+		codesByName.put(OutOfService.getCodeName().get(), OutOfService);
+	}
+
+	public static ATMStatus2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ATMStatus2Code[] values() {
+		ATMStatus2Code[] values = new ATMStatus2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ATMStatus2Code> {
+		@Override
+		public ATMStatus2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ATMStatus2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

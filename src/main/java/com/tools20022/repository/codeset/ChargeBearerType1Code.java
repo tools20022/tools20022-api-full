@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ChargeBearerTypeCode;
+import com.tools20022.repository.codeset.ChargeBearerType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies which party(ies) will pay charges due for processing of the
@@ -31,30 +35,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ChargeBearerTypeCode
- * ChargeBearerTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeBearerType1Code#mmBorneByDebtor
- * ChargeBearerType1Code.mmBorneByDebtor}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeBearerType1Code#BorneByDebtor
+ * ChargeBearerType1Code.BorneByDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeBearerType1Code#mmBorneByCreditor
- * ChargeBearerType1Code.mmBorneByCreditor}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeBearerType1Code#BorneByCreditor
+ * ChargeBearerType1Code.BorneByCreditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeBearerType1Code#mmShared
- * ChargeBearerType1Code.mmShared}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeBearerType1Code#Shared
+ * ChargeBearerType1Code.Shared}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeBearerType1Code#mmFollowingServiceLevel
- * ChargeBearerType1Code.mmFollowingServiceLevel}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeBearerType1Code#FollowingServiceLevel
+ * ChargeBearerType1Code.FollowingServiceLevel}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ChargeBearerTypeCode
+ * ChargeBearerTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ChargeBearerType1Code extends ChargeBearerTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ChargeBearerType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class ChargeBearerType1Code extends ChargeBearerTypeCode {
 	 * name} = "BorneByDebtor"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBorneByDebtor = new MMCode() {
+	public static final ChargeBearerType1Code BorneByDebtor = new ChargeBearerType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorneByDebtor";
-			owner_lazy = () -> ChargeBearerType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeBearerType1Code.mmObject();
+			codeName = ChargeBearerTypeCode.BorneByDebtor.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class ChargeBearerType1Code extends ChargeBearerTypeCode {
 	 * name} = "BorneByCreditor"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBorneByCreditor = new MMCode() {
+	public static final ChargeBearerType1Code BorneByCreditor = new ChargeBearerType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorneByCreditor";
-			owner_lazy = () -> ChargeBearerType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeBearerType1Code.mmObject();
+			codeName = ChargeBearerTypeCode.BorneByCreditor.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class ChargeBearerType1Code extends ChargeBearerTypeCode {
 	 * name} = "Shared"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmShared = new MMCode() {
+	public static final ChargeBearerType1Code Shared = new ChargeBearerType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Shared";
-			owner_lazy = () -> ChargeBearerType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeBearerType1Code.mmObject();
+			codeName = ChargeBearerTypeCode.Shared.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,26 +169,60 @@ public class ChargeBearerType1Code extends ChargeBearerTypeCode {
 	 * name} = "FollowingServiceLevel"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFollowingServiceLevel = new MMCode() {
+	public static final ChargeBearerType1Code FollowingServiceLevel = new ChargeBearerType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FollowingServiceLevel";
-			owner_lazy = () -> ChargeBearerType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeBearerType1Code.mmObject();
+			codeName = ChargeBearerTypeCode.FollowingServiceLevel.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ChargeBearerType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ChargeBearerType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DEBT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeBearerType1Code";
 				definition = "Specifies which party(ies) will pay charges due for processing of the instruction.";
-				code_lazy = () -> Arrays.asList(ChargeBearerType1Code.mmBorneByDebtor, ChargeBearerType1Code.mmBorneByCreditor, ChargeBearerType1Code.mmShared, ChargeBearerType1Code.mmFollowingServiceLevel);
 				trace_lazy = () -> ChargeBearerTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeBearerType1Code.BorneByDebtor, com.tools20022.repository.codeset.ChargeBearerType1Code.BorneByCreditor,
+						com.tools20022.repository.codeset.ChargeBearerType1Code.Shared, com.tools20022.repository.codeset.ChargeBearerType1Code.FollowingServiceLevel);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BorneByDebtor.getCodeName().get(), BorneByDebtor);
+		codesByName.put(BorneByCreditor.getCodeName().get(), BorneByCreditor);
+		codesByName.put(Shared.getCodeName().get(), Shared);
+		codesByName.put(FollowingServiceLevel.getCodeName().get(), FollowingServiceLevel);
+	}
+
+	public static ChargeBearerType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ChargeBearerType1Code[] values() {
+		ChargeBearerType1Code[] values = new ChargeBearerType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ChargeBearerType1Code> {
+		@Override
+		public ChargeBearerType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ChargeBearerType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

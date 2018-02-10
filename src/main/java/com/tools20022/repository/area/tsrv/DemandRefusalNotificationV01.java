@@ -26,9 +26,8 @@ import com.tools20022.repository.msg.DemandRefusal1;
 import com.tools20022.repository.msg.PartyAndSignature2;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -39,22 +38,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TradeServicesLatestVersion
- * TradeServicesLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion
- * DemandGuaranteesandStandbyLettersofCreditISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "DmndRfslNtfctn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -67,6 +50,22 @@ import javax.xml.bind.annotation.*;
  * DemandRefusalNotificationV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion
+ * DemandGuaranteesandStandbyLettersofCreditISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "DmndRfslNtfctn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TradeServicesLatestVersion
+ * TradeServicesLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code tsrv.016.001.01}</li>
@@ -82,15 +81,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DemandRefusalNotificationV01", propOrder = {"demandRefusalNotificationDetails", "digitalSignature"})
 public class DemandRefusalNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DmndRfslNtfctnDtls")
 	protected List<DemandRefusal1> demandRefusalNotificationDetails;
 	/**
-	 * Details of the demand refusal notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,10 +128,11 @@ public class DemandRefusalNotificationV01 {
 			}
 		}
 	};
+	@XmlElement(name = "DgtlSgntr")
 	protected PartyAndSignature2 digitalSignature;
 	/**
-	 * Digital signature of the notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -202,25 +203,25 @@ public class DemandRefusalNotificationV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DmndRfslNtfctnDtls")
 	public List<DemandRefusal1> getDemandRefusalNotificationDetails() {
-		return demandRefusalNotificationDetails;
+		return demandRefusalNotificationDetails == null ? demandRefusalNotificationDetails = new ArrayList<>() : demandRefusalNotificationDetails;
 	}
 
-	public void setDemandRefusalNotificationDetails(List<DemandRefusal1> demandRefusalNotificationDetails) {
-		this.demandRefusalNotificationDetails = demandRefusalNotificationDetails;
+	public DemandRefusalNotificationV01 setDemandRefusalNotificationDetails(List<DemandRefusal1> demandRefusalNotificationDetails) {
+		this.demandRefusalNotificationDetails = Objects.requireNonNull(demandRefusalNotificationDetails);
+		return this;
 	}
 
-	@XmlElement(name = "DgtlSgntr")
-	public PartyAndSignature2 getDigitalSignature() {
-		return digitalSignature;
+	public Optional<PartyAndSignature2> getDigitalSignature() {
+		return digitalSignature == null ? Optional.empty() : Optional.of(digitalSignature);
 	}
 
-	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
+	public DemandRefusalNotificationV01 setDigitalSignature(PartyAndSignature2 digitalSignature) {
 		this.digitalSignature = digitalSignature;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsrv.016.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:tsrv.016.001.01")
 	static public class Document {
 		@XmlElement(name = "DmndRfslNtfctn", required = true)
 		public DemandRefusalNotificationV01 messageBody;

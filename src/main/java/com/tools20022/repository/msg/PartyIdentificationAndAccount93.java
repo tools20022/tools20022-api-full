@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyIdentificationAndAccount93", propOrder = {"partyIdentification", "accountIdentification", "placeOfSettlement"})
 public class PartyIdentificationAndAccount93 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PtyId")
 	protected PartyIdentification2Choice partyIdentification;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,7 +129,7 @@ public class PartyIdentificationAndAccount93 {
 	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> PartyIdentificationAndAccount93.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount93.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,10 +141,11 @@ public class PartyIdentificationAndAccount93 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctId")
 	protected AccountIdentification1 accountIdentification;
 	/**
-	 * Identification of the account owned by the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,7 +187,7 @@ public class PartyIdentificationAndAccount93 {
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> PartyIdentificationAndAccount93.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount93.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,10 +199,11 @@ public class PartyIdentificationAndAccount93 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfSttlm", required = true)
 	protected PartyIdentification2Choice placeOfSettlement;
 	/**
-	 * Place where settlement of the securities takes place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -240,7 +245,7 @@ public class PartyIdentificationAndAccount93 {
 	public static final MMMessageAttribute mmPlaceOfSettlement = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> PartyIdentificationAndAccount93.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount93.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfSttlm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,9 +261,10 @@ public class PartyIdentificationAndAccount93 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentificationAndAccount93.mmPartyIdentification, PartyIdentificationAndAccount93.mmAccountIdentification, PartyIdentificationAndAccount93.mmPlaceOfSettlement);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount93.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount93.mmAccountIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount93.mmPlaceOfSettlement);
 				trace_lazy = () -> Party.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationAndAccount93";
 				definition = "Party involved in the settlement chain.";
@@ -268,30 +274,30 @@ public class PartyIdentificationAndAccount93 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PtyId")
-	public PartyIdentification2Choice getPartyIdentification() {
-		return partyIdentification;
+	public Optional<PartyIdentification2Choice> getPartyIdentification() {
+		return partyIdentification == null ? Optional.empty() : Optional.of(partyIdentification);
 	}
 
-	public void setPartyIdentification(PartyIdentification2Choice partyIdentification) {
+	public PartyIdentificationAndAccount93 setPartyIdentification(PartyIdentification2Choice partyIdentification) {
 		this.partyIdentification = partyIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AcctId")
-	public AccountIdentification1 getAccountIdentification() {
-		return accountIdentification;
+	public Optional<AccountIdentification1> getAccountIdentification() {
+		return accountIdentification == null ? Optional.empty() : Optional.of(accountIdentification);
 	}
 
-	public void setAccountIdentification(com.tools20022.repository.msg.AccountIdentification1 accountIdentification) {
+	public PartyIdentificationAndAccount93 setAccountIdentification(com.tools20022.repository.msg.AccountIdentification1 accountIdentification) {
 		this.accountIdentification = accountIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfSttlm", required = true)
 	public PartyIdentification2Choice getPlaceOfSettlement() {
 		return placeOfSettlement;
 	}
 
-	public void setPlaceOfSettlement(PartyIdentification2Choice placeOfSettlement) {
-		this.placeOfSettlement = placeOfSettlement;
+	public PartyIdentificationAndAccount93 setPlaceOfSettlement(PartyIdentification2Choice placeOfSettlement) {
+		this.placeOfSettlement = Objects.requireNonNull(placeOfSettlement);
+		return this;
 	}
 }

@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.NetworkAccess;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * NetworkParameters1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NetworkParameters2", propOrder = {"address", "portNumber", "delay"})
 public class NetworkParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Adr", required = true)
 	protected Max35Text address;
 	/**
-	 * IP address or hostname.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +116,7 @@ public class NetworkParameters2 {
 	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmNetworkAddress;
-			componentContext_lazy = () -> NetworkParameters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +127,11 @@ public class NetworkParameters2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PortNb")
 	protected Number portNumber;
 	/**
-	 * Port number of the server, if the default port number is not used.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +159,7 @@ public class NetworkParameters2 {
 	 */
 	public static final MMMessageAttribute mmPortNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NetworkParameters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "PortNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,10 +170,11 @@ public class NetworkParameters2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Dely")
 	protected ISOTime delay;
 	/**
-	 * Delay between two contacts of the server..
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,7 +201,7 @@ public class NetworkParameters2 {
 	 */
 	public static final MMMessageAttribute mmDelay = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NetworkParameters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "Dely";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,9 +216,9 @@ public class NetworkParameters2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NetworkParameters2.mmAddress, NetworkParameters2.mmPortNumber, NetworkParameters2.mmDelay);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters2.mmAddress, com.tools20022.repository.msg.NetworkParameters2.mmPortNumber, com.tools20022.repository.msg.NetworkParameters2.mmDelay);
 				trace_lazy = () -> NetworkAccess.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetworkParameters2";
 				definition = "Configuration parameters to communicate with a host.";
@@ -223,30 +228,30 @@ public class NetworkParameters2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Adr", required = true)
 	public Max35Text getAddress() {
 		return address;
 	}
 
-	public void setAddress(Max35Text address) {
-		this.address = address;
+	public NetworkParameters2 setAddress(Max35Text address) {
+		this.address = Objects.requireNonNull(address);
+		return this;
 	}
 
-	@XmlElement(name = "PortNb")
-	public Number getPortNumber() {
-		return portNumber;
+	public Optional<Number> getPortNumber() {
+		return portNumber == null ? Optional.empty() : Optional.of(portNumber);
 	}
 
-	public void setPortNumber(Number portNumber) {
+	public NetworkParameters2 setPortNumber(Number portNumber) {
 		this.portNumber = portNumber;
+		return this;
 	}
 
-	@XmlElement(name = "Dely")
-	public ISOTime getDelay() {
-		return delay;
+	public Optional<ISOTime> getDelay() {
+		return delay == null ? Optional.empty() : Optional.of(delay);
 	}
 
-	public void setDelay(ISOTime delay) {
+	public NetworkParameters2 setDelay(ISOTime delay) {
 		this.delay = delay;
+		return this;
 	}
 }

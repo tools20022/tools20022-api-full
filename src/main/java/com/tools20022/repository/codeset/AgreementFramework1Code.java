@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AgreementFrameworkCode;
+import com.tools20022.repository.codeset.AgreementFramework1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the agreement type details for the margin call.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AgreementFrameworkCode
- * AgreementFrameworkCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgreementFramework1Code#mmFBAAgreement
- * AgreementFramework1Code.mmFBAAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgreementFramework1Code#FBAAgreement
+ * AgreementFramework1Code.FBAAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgreementFramework1Code#mmBBAAgreement
- * AgreementFramework1Code.mmBBAAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgreementFramework1Code#BBAAgreement
+ * AgreementFramework1Code.BBAAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgreementFramework1Code#mmGermanRahmenvertragAgreement
- * AgreementFramework1Code.mmGermanRahmenvertragAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgreementFramework1Code#GermanRahmenvertragAgreement
+ * AgreementFramework1Code.GermanRahmenvertragAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgreementFramework1Code#mmISDAAgreement
- * AgreementFramework1Code.mmISDAAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgreementFramework1Code#ISDAAgreement
+ * AgreementFramework1Code.ISDAAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgreementFramework1Code#mmNoReference
- * AgreementFramework1Code.mmNoReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgreementFramework1Code#NoReference
+ * AgreementFramework1Code.NoReference}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AgreementFrameworkCode
+ * AgreementFrameworkCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the agreement type details for the margin call."</li>
  * </ul>
  */
-public class AgreementFramework1Code extends AgreementFrameworkCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AgreementFramework1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class AgreementFramework1Code extends AgreementFrameworkCode {
 	 * name} = "FBAAgreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFBAAgreement = new MMCode() {
+	public static final AgreementFramework1Code FBAAgreement = new AgreementFramework1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FBAAgreement";
-			owner_lazy = () -> AgreementFramework1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AgreementFramework1Code.mmObject();
+			codeName = AgreementFrameworkCode.FBAAgreement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class AgreementFramework1Code extends AgreementFrameworkCode {
 	 * name} = "BBAAgreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBBAAgreement = new MMCode() {
+	public static final AgreementFramework1Code BBAAgreement = new AgreementFramework1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BBAAgreement";
-			owner_lazy = () -> AgreementFramework1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AgreementFramework1Code.mmObject();
+			codeName = AgreementFrameworkCode.BBAAgreement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class AgreementFramework1Code extends AgreementFrameworkCode {
 	 * name} = "GermanRahmenvertragAgreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGermanRahmenvertragAgreement = new MMCode() {
+	public static final AgreementFramework1Code GermanRahmenvertragAgreement = new AgreementFramework1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GermanRahmenvertragAgreement";
-			owner_lazy = () -> AgreementFramework1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AgreementFramework1Code.mmObject();
+			codeName = AgreementFrameworkCode.GermanRahmenvertragAgreement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +169,12 @@ public class AgreementFramework1Code extends AgreementFrameworkCode {
 	 * name} = "ISDAAgreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmISDAAgreement = new MMCode() {
+	public static final AgreementFramework1Code ISDAAgreement = new AgreementFramework1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISDAAgreement";
-			owner_lazy = () -> AgreementFramework1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AgreementFramework1Code.mmObject();
+			codeName = AgreementFrameworkCode.ISDAAgreement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,27 +193,62 @@ public class AgreementFramework1Code extends AgreementFrameworkCode {
 	 * name} = "NoReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoReference = new MMCode() {
+	public static final AgreementFramework1Code NoReference = new AgreementFramework1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoReference";
-			owner_lazy = () -> AgreementFramework1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AgreementFramework1Code.mmObject();
+			codeName = AgreementFrameworkCode.NoReference.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AgreementFramework1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AgreementFramework1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FBAA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgreementFramework1Code";
 				definition = "Specifies the agreement type details for the margin call.";
-				code_lazy = () -> Arrays.asList(AgreementFramework1Code.mmFBAAgreement, AgreementFramework1Code.mmBBAAgreement, AgreementFramework1Code.mmGermanRahmenvertragAgreement, AgreementFramework1Code.mmISDAAgreement,
-						AgreementFramework1Code.mmNoReference);
 				trace_lazy = () -> AgreementFrameworkCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AgreementFramework1Code.FBAAgreement, com.tools20022.repository.codeset.AgreementFramework1Code.BBAAgreement,
+						com.tools20022.repository.codeset.AgreementFramework1Code.GermanRahmenvertragAgreement, com.tools20022.repository.codeset.AgreementFramework1Code.ISDAAgreement,
+						com.tools20022.repository.codeset.AgreementFramework1Code.NoReference);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(FBAAgreement.getCodeName().get(), FBAAgreement);
+		codesByName.put(BBAAgreement.getCodeName().get(), BBAAgreement);
+		codesByName.put(GermanRahmenvertragAgreement.getCodeName().get(), GermanRahmenvertragAgreement);
+		codesByName.put(ISDAAgreement.getCodeName().get(), ISDAAgreement);
+		codesByName.put(NoReference.getCodeName().get(), NoReference);
+	}
+
+	public static AgreementFramework1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AgreementFramework1Code[] values() {
+		AgreementFramework1Code[] values = new AgreementFramework1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AgreementFramework1Code> {
+		@Override
+		public AgreementFramework1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AgreementFramework1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -26,9 +26,8 @@ import com.tools20022.repository.codeset.UndertakingStatus1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.UndertakingStatus;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -71,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,16 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of the trade status report."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TradeStatusReport1", propOrder = {"originalMessageDetails", "status", "statusReason", "additionalInformation"})
 public class TradeStatusReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgnlMsgDtls", required = true)
 	protected OriginalMessage1 originalMessageDetails;
 	/**
-	 * Information concerning the original message to which the
-	 * TradeStatusReport is sent in response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -120,7 +119,7 @@ public class TradeStatusReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalMessageDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TradeStatusReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeStatusReport1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +131,11 @@ public class TradeStatusReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.OriginalMessage1.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts", required = true)
 	protected UndertakingStatus1Code status;
 	/**
-	 * Specifies the processing status of the original message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,7 +169,7 @@ public class TradeStatusReport1 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> UndertakingStatus.mmStatus;
-			componentContext_lazy = () -> TradeStatusReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeStatusReport1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,11 +180,11 @@ public class TradeStatusReport1 {
 			simpleType_lazy = () -> UndertakingStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StsRsn")
 	protected List<com.tools20022.repository.msg.StatusReasonInformation8> statusReason;
 	/**
-	 * Set of elements used to provide detailed information on the status
-	 * reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -219,7 +219,7 @@ public class TradeStatusReport1 {
 	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> UndertakingStatus.mmUndertakingStatusReason;
-			componentContext_lazy = () -> TradeStatusReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeStatusReport1.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,10 +230,11 @@ public class TradeStatusReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation8.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected Max35Text additionalInformation;
 	/**
-	 * Additional information related to the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -260,7 +261,7 @@ public class TradeStatusReport1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradeStatusReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeStatusReport1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -275,10 +276,11 @@ public class TradeStatusReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TradeStatusReport1.mmOriginalMessageDetails, TradeStatusReport1.mmStatus, TradeStatusReport1.mmStatusReason, TradeStatusReport1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeStatusReport1.mmOriginalMessageDetails, com.tools20022.repository.msg.TradeStatusReport1.mmStatus,
+						com.tools20022.repository.msg.TradeStatusReport1.mmStatusReason, com.tools20022.repository.msg.TradeStatusReport1.mmAdditionalInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(TradeStatusReportV01.mmTradeStatusAdviceDetails);
 				trace_lazy = () -> UndertakingStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeStatusReport1";
 				definition = "Details of the trade status report.";
@@ -287,39 +289,39 @@ public class TradeStatusReport1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgnlMsgDtls", required = true)
 	public OriginalMessage1 getOriginalMessageDetails() {
 		return originalMessageDetails;
 	}
 
-	public void setOriginalMessageDetails(com.tools20022.repository.msg.OriginalMessage1 originalMessageDetails) {
-		this.originalMessageDetails = originalMessageDetails;
+	public TradeStatusReport1 setOriginalMessageDetails(com.tools20022.repository.msg.OriginalMessage1 originalMessageDetails) {
+		this.originalMessageDetails = Objects.requireNonNull(originalMessageDetails);
+		return this;
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public UndertakingStatus1Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(UndertakingStatus1Code status) {
-		this.status = status;
+	public TradeStatusReport1 setStatus(UndertakingStatus1Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "StsRsn")
 	public List<StatusReasonInformation8> getStatusReason() {
-		return statusReason;
+		return statusReason == null ? statusReason = new ArrayList<>() : statusReason;
 	}
 
-	public void setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation8> statusReason) {
-		this.statusReason = statusReason;
+	public TradeStatusReport1 setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation8> statusReason) {
+		this.statusReason = Objects.requireNonNull(statusReason);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public Max35Text getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<Max35Text> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(Max35Text additionalInformation) {
+	public TradeStatusReport1 setAdditionalInformation(Max35Text additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 }

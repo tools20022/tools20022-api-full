@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -78,8 +80,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,16 +92,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about clearing register."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ClearingRegisterHeaderDetails1", propOrder = {"processingPeriod", "totalInterbankSettlementCreditAmount", "totalInterbankSettlementDebitAmount", "clearingAgent", "clearingAgentAccount", "guaranteeFundAgent",
 		"guaranteeFundAgentAccount", "clearingCircuit", "settlementTimeRequest", "settlementTimeIndication", "paymentIdentification"})
 public class ClearingRegisterHeaderDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrcgPrd", required = true)
 	protected Period4 processingPeriod;
 	/**
-	 * Processing period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -124,7 +127,7 @@ public class ClearingRegisterHeaderDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmProcessingPeriod = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,11 +139,11 @@ public class ClearingRegisterHeaderDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.Period4.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlIntrBkSttlmCdtAmt", required = true)
 	protected ActiveCurrencyAndAmount totalInterbankSettlementCreditAmount;
 	/**
-	 * Amount of money moved between the instructing agent and the instructed
-	 * agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,7 +173,7 @@ public class ClearingRegisterHeaderDetails1 {
 	 */
 	public static final MMMessageAttribute mmTotalInterbankSettlementCreditAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlIntrBkSttlmCdtAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,11 +184,11 @@ public class ClearingRegisterHeaderDetails1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlIntrBkSttlmDbtAmt", required = true)
 	protected ActiveCurrencyAndAmount totalInterbankSettlementDebitAmount;
 	/**
-	 * Amount of money debited between the instructing agent and the instructed
-	 * agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,7 +218,7 @@ public class ClearingRegisterHeaderDetails1 {
 	 */
 	public static final MMMessageAttribute mmTotalInterbankSettlementDebitAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlIntrBkSttlmDbtAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,10 +229,11 @@ public class ClearingRegisterHeaderDetails1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ClrAgt")
 	protected BranchAndFinancialInstitutionIdentification5 clearingAgent;
 	/**
-	 * Agent of the clearing account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -256,7 +260,7 @@ public class ClearingRegisterHeaderDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmClearingAgent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -268,11 +272,11 @@ public class ClearingRegisterHeaderDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "ClrAgtAcct")
 	protected CashAccount24 clearingAgentAccount;
 	/**
-	 * Clearing Account which is used while execution of clearing positions
-	 * registry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -300,7 +304,7 @@ public class ClearingRegisterHeaderDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmClearingAgentAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrAgtAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -312,10 +316,11 @@ public class ClearingRegisterHeaderDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "GrntFndAgt")
 	protected BranchAndFinancialInstitutionIdentification5 guaranteeFundAgent;
 	/**
-	 * Account number of guarantee fund which is used during RCP execution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -343,7 +348,7 @@ public class ClearingRegisterHeaderDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmGuaranteeFundAgent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "GrntFndAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -355,10 +360,11 @@ public class ClearingRegisterHeaderDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "GrntFndAgtAcct")
 	protected CashAccount24 guaranteeFundAgentAccount;
 	/**
-	 * Agent of the guarantee fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -384,7 +390,7 @@ public class ClearingRegisterHeaderDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmGuaranteeFundAgentAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "GrntFndAgtAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -396,10 +402,11 @@ public class ClearingRegisterHeaderDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "ClrCrct")
 	protected ClearingScheme1Choice clearingCircuit;
 	/**
-	 * Clearing scheme related to Registry of the Clearing Positions (RCP).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -427,7 +434,7 @@ public class ClearingRegisterHeaderDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmClearingCircuit = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrCrct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -439,11 +446,11 @@ public class ClearingRegisterHeaderDetails1 {
 			type_lazy = () -> ClearingScheme1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmTmReq")
 	protected SettlementTimeRequest2 settlementTimeRequest;
 	/**
-	 * Provides information on the requested settlement time(s) of the payment
-	 * instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -471,7 +478,7 @@ public class ClearingRegisterHeaderDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementTimeRequest = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTmReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -483,11 +490,11 @@ public class ClearingRegisterHeaderDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementTimeRequest2.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmTmIndctn")
 	protected SettlementDateTimeIndication1 settlementTimeIndication;
 	/**
-	 * Provides information on the occurred settlement time(s) of the payment
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -516,7 +523,7 @@ public class ClearingRegisterHeaderDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementTimeIndication = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTmIndctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -528,10 +535,11 @@ public class ClearingRegisterHeaderDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementDateTimeIndication1.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtId", required = true)
 	protected PaymentIdentification3 paymentIdentification;
 	/**
-	 * Set of elements used to reference a payment register.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -557,7 +565,7 @@ public class ClearingRegisterHeaderDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ClearingRegisterHeaderDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -573,11 +581,13 @@ public class ClearingRegisterHeaderDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ClearingRegisterHeaderDetails1.mmProcessingPeriod, ClearingRegisterHeaderDetails1.mmTotalInterbankSettlementCreditAmount,
-						ClearingRegisterHeaderDetails1.mmTotalInterbankSettlementDebitAmount, ClearingRegisterHeaderDetails1.mmClearingAgent, ClearingRegisterHeaderDetails1.mmClearingAgentAccount,
-						ClearingRegisterHeaderDetails1.mmGuaranteeFundAgent, ClearingRegisterHeaderDetails1.mmGuaranteeFundAgentAccount, ClearingRegisterHeaderDetails1.mmClearingCircuit,
-						ClearingRegisterHeaderDetails1.mmSettlementTimeRequest, ClearingRegisterHeaderDetails1.mmSettlementTimeIndication, ClearingRegisterHeaderDetails1.mmPaymentIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmProcessingPeriod, com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmTotalInterbankSettlementCreditAmount,
+						com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmTotalInterbankSettlementDebitAmount, com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmClearingAgent,
+						com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmClearingAgentAccount, com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmGuaranteeFundAgent,
+						com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmGuaranteeFundAgentAccount, com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmClearingCircuit,
+						com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmSettlementTimeRequest, com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmSettlementTimeIndication,
+						com.tools20022.repository.msg.ClearingRegisterHeaderDetails1.mmPaymentIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ClearingRegisterHeaderDetails1";
 				definition = "Information about clearing register.";
@@ -586,102 +596,102 @@ public class ClearingRegisterHeaderDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrcgPrd", required = true)
 	public Period4 getProcessingPeriod() {
 		return processingPeriod;
 	}
 
-	public void setProcessingPeriod(com.tools20022.repository.msg.Period4 processingPeriod) {
-		this.processingPeriod = processingPeriod;
+	public ClearingRegisterHeaderDetails1 setProcessingPeriod(com.tools20022.repository.msg.Period4 processingPeriod) {
+		this.processingPeriod = Objects.requireNonNull(processingPeriod);
+		return this;
 	}
 
-	@XmlElement(name = "TtlIntrBkSttlmCdtAmt", required = true)
 	public ActiveCurrencyAndAmount getTotalInterbankSettlementCreditAmount() {
 		return totalInterbankSettlementCreditAmount;
 	}
 
-	public void setTotalInterbankSettlementCreditAmount(ActiveCurrencyAndAmount totalInterbankSettlementCreditAmount) {
-		this.totalInterbankSettlementCreditAmount = totalInterbankSettlementCreditAmount;
+	public ClearingRegisterHeaderDetails1 setTotalInterbankSettlementCreditAmount(ActiveCurrencyAndAmount totalInterbankSettlementCreditAmount) {
+		this.totalInterbankSettlementCreditAmount = Objects.requireNonNull(totalInterbankSettlementCreditAmount);
+		return this;
 	}
 
-	@XmlElement(name = "TtlIntrBkSttlmDbtAmt", required = true)
 	public ActiveCurrencyAndAmount getTotalInterbankSettlementDebitAmount() {
 		return totalInterbankSettlementDebitAmount;
 	}
 
-	public void setTotalInterbankSettlementDebitAmount(ActiveCurrencyAndAmount totalInterbankSettlementDebitAmount) {
-		this.totalInterbankSettlementDebitAmount = totalInterbankSettlementDebitAmount;
+	public ClearingRegisterHeaderDetails1 setTotalInterbankSettlementDebitAmount(ActiveCurrencyAndAmount totalInterbankSettlementDebitAmount) {
+		this.totalInterbankSettlementDebitAmount = Objects.requireNonNull(totalInterbankSettlementDebitAmount);
+		return this;
 	}
 
-	@XmlElement(name = "ClrAgt")
-	public BranchAndFinancialInstitutionIdentification5 getClearingAgent() {
-		return clearingAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getClearingAgent() {
+		return clearingAgent == null ? Optional.empty() : Optional.of(clearingAgent);
 	}
 
-	public void setClearingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 clearingAgent) {
+	public ClearingRegisterHeaderDetails1 setClearingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 clearingAgent) {
 		this.clearingAgent = clearingAgent;
+		return this;
 	}
 
-	@XmlElement(name = "ClrAgtAcct")
-	public CashAccount24 getClearingAgentAccount() {
-		return clearingAgentAccount;
+	public Optional<CashAccount24> getClearingAgentAccount() {
+		return clearingAgentAccount == null ? Optional.empty() : Optional.of(clearingAgentAccount);
 	}
 
-	public void setClearingAgentAccount(com.tools20022.repository.msg.CashAccount24 clearingAgentAccount) {
+	public ClearingRegisterHeaderDetails1 setClearingAgentAccount(com.tools20022.repository.msg.CashAccount24 clearingAgentAccount) {
 		this.clearingAgentAccount = clearingAgentAccount;
+		return this;
 	}
 
-	@XmlElement(name = "GrntFndAgt")
-	public BranchAndFinancialInstitutionIdentification5 getGuaranteeFundAgent() {
-		return guaranteeFundAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getGuaranteeFundAgent() {
+		return guaranteeFundAgent == null ? Optional.empty() : Optional.of(guaranteeFundAgent);
 	}
 
-	public void setGuaranteeFundAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 guaranteeFundAgent) {
+	public ClearingRegisterHeaderDetails1 setGuaranteeFundAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 guaranteeFundAgent) {
 		this.guaranteeFundAgent = guaranteeFundAgent;
+		return this;
 	}
 
-	@XmlElement(name = "GrntFndAgtAcct")
-	public CashAccount24 getGuaranteeFundAgentAccount() {
-		return guaranteeFundAgentAccount;
+	public Optional<CashAccount24> getGuaranteeFundAgentAccount() {
+		return guaranteeFundAgentAccount == null ? Optional.empty() : Optional.of(guaranteeFundAgentAccount);
 	}
 
-	public void setGuaranteeFundAgentAccount(com.tools20022.repository.msg.CashAccount24 guaranteeFundAgentAccount) {
+	public ClearingRegisterHeaderDetails1 setGuaranteeFundAgentAccount(com.tools20022.repository.msg.CashAccount24 guaranteeFundAgentAccount) {
 		this.guaranteeFundAgentAccount = guaranteeFundAgentAccount;
+		return this;
 	}
 
-	@XmlElement(name = "ClrCrct")
-	public ClearingScheme1Choice getClearingCircuit() {
-		return clearingCircuit;
+	public Optional<ClearingScheme1Choice> getClearingCircuit() {
+		return clearingCircuit == null ? Optional.empty() : Optional.of(clearingCircuit);
 	}
 
-	public void setClearingCircuit(ClearingScheme1Choice clearingCircuit) {
+	public ClearingRegisterHeaderDetails1 setClearingCircuit(ClearingScheme1Choice clearingCircuit) {
 		this.clearingCircuit = clearingCircuit;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmTmReq")
-	public SettlementTimeRequest2 getSettlementTimeRequest() {
-		return settlementTimeRequest;
+	public Optional<SettlementTimeRequest2> getSettlementTimeRequest() {
+		return settlementTimeRequest == null ? Optional.empty() : Optional.of(settlementTimeRequest);
 	}
 
-	public void setSettlementTimeRequest(com.tools20022.repository.msg.SettlementTimeRequest2 settlementTimeRequest) {
+	public ClearingRegisterHeaderDetails1 setSettlementTimeRequest(com.tools20022.repository.msg.SettlementTimeRequest2 settlementTimeRequest) {
 		this.settlementTimeRequest = settlementTimeRequest;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmTmIndctn")
-	public SettlementDateTimeIndication1 getSettlementTimeIndication() {
-		return settlementTimeIndication;
+	public Optional<SettlementDateTimeIndication1> getSettlementTimeIndication() {
+		return settlementTimeIndication == null ? Optional.empty() : Optional.of(settlementTimeIndication);
 	}
 
-	public void setSettlementTimeIndication(com.tools20022.repository.msg.SettlementDateTimeIndication1 settlementTimeIndication) {
+	public ClearingRegisterHeaderDetails1 setSettlementTimeIndication(com.tools20022.repository.msg.SettlementDateTimeIndication1 settlementTimeIndication) {
 		this.settlementTimeIndication = settlementTimeIndication;
+		return this;
 	}
 
-	@XmlElement(name = "PmtId", required = true)
 	public PaymentIdentification3 getPaymentIdentification() {
 		return paymentIdentification;
 	}
 
-	public void setPaymentIdentification(com.tools20022.repository.msg.PaymentIdentification3 paymentIdentification) {
-		this.paymentIdentification = paymentIdentification;
+	public ClearingRegisterHeaderDetails1 setPaymentIdentification(com.tools20022.repository.msg.PaymentIdentification3 paymentIdentification) {
+		this.paymentIdentification = Objects.requireNonNull(paymentIdentification);
+		return this;
 	}
 }

@@ -27,9 +27,8 @@ import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.Price;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMCassetteCounters1", propOrder = {"unitValue", "currency", "itemType", "counter", "currentNumber", "currentAmount"})
 public class ATMCassetteCounters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UnitVal")
 	protected ImpliedCurrencyAndAmount unitValue;
 	/**
-	 * Amount of one media unit, if the media type is valued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -129,7 +129,7 @@ public class ATMCassetteCounters1 {
 	public static final MMMessageAttribute mmUnitValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Price.mmAmount;
-			componentContext_lazy = () -> ATMCassetteCounters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters1.mmObject();
 			isDerived = false;
 			xmlTag = "UnitVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,11 +140,11 @@ public class ATMCassetteCounters1 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected ActiveCurrencyCode currency;
 	/**
-	 * Currency of the media, if the media type is valued and different from the
-	 * currency of the requested amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,7 +180,7 @@ public class ATMCassetteCounters1 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Price.mmCurrency;
-			componentContext_lazy = () -> ATMCassetteCounters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,10 +191,11 @@ public class ATMCassetteCounters1 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "ItmTp")
 	protected ATMNoteType2Code itemType;
 	/**
-	 * Type of notes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,7 +223,7 @@ public class ATMCassetteCounters1 {
 	 */
 	public static final MMMessageAttribute mmItemType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCassetteCounters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters1.mmObject();
 			isDerived = false;
 			xmlTag = "ItmTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,10 +234,11 @@ public class ATMCassetteCounters1 {
 			simpleType_lazy = () -> ATMNoteType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Cntr")
 	protected List<com.tools20022.repository.msg.ATMCassetteCounters2> counter;
 	/**
-	 * Counters of media inside the cassette.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -262,7 +264,7 @@ public class ATMCassetteCounters1 {
 	 */
 	public static final MMMessageAssociationEnd mmCounter = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMCassetteCounters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters1.mmObject();
 			isDerived = false;
 			xmlTag = "Cntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,10 +275,11 @@ public class ATMCassetteCounters1 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 		}
 	};
+	@XmlElement(name = "CurNb", required = true)
 	protected Number currentNumber;
 	/**
-	 * Current number of media present in the cassette.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -303,7 +306,7 @@ public class ATMCassetteCounters1 {
 	 */
 	public static final MMMessageAttribute mmCurrentNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCassetteCounters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters1.mmObject();
 			isDerived = false;
 			xmlTag = "CurNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -314,10 +317,11 @@ public class ATMCassetteCounters1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "CurAmt")
 	protected ImpliedCurrencyAndAmount currentAmount;
 	/**
-	 * Current amount in the cassette.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -351,7 +355,7 @@ public class ATMCassetteCounters1 {
 	public static final MMMessageAttribute mmCurrentAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Price.mmAmount;
-			componentContext_lazy = () -> ATMCassetteCounters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters1.mmObject();
 			isDerived = false;
 			xmlTag = "CurAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -366,10 +370,11 @@ public class ATMCassetteCounters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMCassetteCounters1.mmUnitValue, ATMCassetteCounters1.mmCurrency, ATMCassetteCounters1.mmItemType, ATMCassetteCounters1.mmCounter, ATMCassetteCounters1.mmCurrentNumber,
-						ATMCassetteCounters1.mmCurrentAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCassetteCounters1.mmUnitValue, com.tools20022.repository.msg.ATMCassetteCounters1.mmCurrency,
+						com.tools20022.repository.msg.ATMCassetteCounters1.mmItemType, com.tools20022.repository.msg.ATMCassetteCounters1.mmCounter, com.tools20022.repository.msg.ATMCassetteCounters1.mmCurrentNumber,
+						com.tools20022.repository.msg.ATMCassetteCounters1.mmCurrentAmount);
 				trace_lazy = () -> Price.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCassetteCounters1";
 				definition = "ATM cassette counter per unit value or globally.";
@@ -379,57 +384,57 @@ public class ATMCassetteCounters1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UnitVal")
-	public ImpliedCurrencyAndAmount getUnitValue() {
-		return unitValue;
+	public Optional<ImpliedCurrencyAndAmount> getUnitValue() {
+		return unitValue == null ? Optional.empty() : Optional.of(unitValue);
 	}
 
-	public void setUnitValue(ImpliedCurrencyAndAmount unitValue) {
+	public ATMCassetteCounters1 setUnitValue(ImpliedCurrencyAndAmount unitValue) {
 		this.unitValue = unitValue;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public ActiveCurrencyCode getCurrency() {
-		return currency;
+	public Optional<ActiveCurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(ActiveCurrencyCode currency) {
+	public ATMCassetteCounters1 setCurrency(ActiveCurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "ItmTp")
-	public ATMNoteType2Code getItemType() {
-		return itemType;
+	public Optional<ATMNoteType2Code> getItemType() {
+		return itemType == null ? Optional.empty() : Optional.of(itemType);
 	}
 
-	public void setItemType(ATMNoteType2Code itemType) {
+	public ATMCassetteCounters1 setItemType(ATMNoteType2Code itemType) {
 		this.itemType = itemType;
+		return this;
 	}
 
-	@XmlElement(name = "Cntr")
 	public List<ATMCassetteCounters2> getCounter() {
-		return counter;
+		return counter == null ? counter = new ArrayList<>() : counter;
 	}
 
-	public void setCounter(List<com.tools20022.repository.msg.ATMCassetteCounters2> counter) {
-		this.counter = counter;
+	public ATMCassetteCounters1 setCounter(List<com.tools20022.repository.msg.ATMCassetteCounters2> counter) {
+		this.counter = Objects.requireNonNull(counter);
+		return this;
 	}
 
-	@XmlElement(name = "CurNb", required = true)
 	public Number getCurrentNumber() {
 		return currentNumber;
 	}
 
-	public void setCurrentNumber(Number currentNumber) {
-		this.currentNumber = currentNumber;
+	public ATMCassetteCounters1 setCurrentNumber(Number currentNumber) {
+		this.currentNumber = Objects.requireNonNull(currentNumber);
+		return this;
 	}
 
-	@XmlElement(name = "CurAmt")
-	public ImpliedCurrencyAndAmount getCurrentAmount() {
-		return currentAmount;
+	public Optional<ImpliedCurrencyAndAmount> getCurrentAmount() {
+		return currentAmount == null ? Optional.empty() : Optional.of(currentAmount);
 	}
 
-	public void setCurrentAmount(ImpliedCurrencyAndAmount currentAmount) {
+	public ATMCassetteCounters1 setCurrentAmount(ImpliedCurrencyAndAmount currentAmount) {
 		this.currentAmount = currentAmount;
+		return this;
 	}
 }

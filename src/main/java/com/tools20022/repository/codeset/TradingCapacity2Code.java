@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.TradingCapacity2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the role of a trading party in a transaction.
@@ -32,18 +37,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacity2Code#mmTradingPrincipal
- * TradingCapacity2Code.mmTradingPrincipal}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacity2Code#TradingPrincipal
+ * TradingCapacity2Code.TradingPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacity2Code#mmTradingAgent
- * TradingCapacity2Code.mmTradingAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacity2Code#TradingAgent
+ * TradingCapacity2Code.TradingAgent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -60,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the role of a trading party in a transaction."</li>
  * </ul>
  */
-public class TradingCapacity2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TradingCapacity2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,12 +91,12 @@ public class TradingCapacity2Code {
 	 * "Broker is buying or selling securities for its own account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradingPrincipal = new MMCode() {
+	public static final TradingCapacity2Code TradingPrincipal = new TradingCapacity2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingPrincipal";
 			definition = "Broker is buying or selling securities for its own account.";
-			owner_lazy = () -> TradingCapacity2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingCapacity2Code.mmObject();
 			codeName = "PRIN";
 		}
 	};
@@ -115,27 +121,57 @@ public class TradingCapacity2Code {
 	 * definition} = "Broker is trading on behalf of another party."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradingAgent = new MMCode() {
+	public static final TradingCapacity2Code TradingAgent = new TradingCapacity2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingAgent";
 			definition = "Broker is trading on behalf of another party.";
-			owner_lazy = () -> TradingCapacity2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingCapacity2Code.mmObject();
 			codeName = "TAGN";
 		}
 	};
+	final static private LinkedHashMap<String, TradingCapacity2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TradingCapacity2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PRIN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingCapacity2Code";
 				definition = "Specifies the role of a trading party in a transaction.";
-				code_lazy = () -> Arrays.asList(TradingCapacity2Code.mmTradingPrincipal, TradingCapacity2Code.mmTradingAgent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingCapacity2Code.TradingPrincipal, com.tools20022.repository.codeset.TradingCapacity2Code.TradingAgent);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(TradingPrincipal.getCodeName().get(), TradingPrincipal);
+		codesByName.put(TradingAgent.getCodeName().get(), TradingAgent);
+	}
+
+	public static TradingCapacity2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TradingCapacity2Code[] values() {
+		TradingCapacity2Code[] values = new TradingCapacity2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TradingCapacity2Code> {
+		@Override
+		public TradingCapacity2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TradingCapacity2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

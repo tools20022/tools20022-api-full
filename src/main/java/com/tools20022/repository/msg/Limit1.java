@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Limit1", propOrder = {"current", "limit"})
 public class Limit1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cur", required = true)
 	protected Max3NumericText current;
 	/**
-	 * Number of occurrences of a particular event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +116,7 @@ public class Limit1 {
 	public static final MMMessageAttribute mmCurrent = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> Limit.mmObject();
-			componentContext_lazy = () -> Limit1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Limit1.mmObject();
 			isDerived = false;
 			xmlTag = "Cur";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +127,11 @@ public class Limit1 {
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Lmt", required = true)
 	protected Max3NumericText limit;
 	/**
-	 * Specifies the maximum number of times an event may occur.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +164,7 @@ public class Limit1 {
 	public static final MMMessageAttribute mmLimit = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> Limit.mmObject();
-			componentContext_lazy = () -> Limit1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Limit1.mmObject();
 			isDerived = false;
 			xmlTag = "Lmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,10 +179,10 @@ public class Limit1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Limit1.mmCurrent, Limit1.mmLimit);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Limit1.mmCurrent, com.tools20022.repository.msg.Limit1.mmLimit);
 				messageBuildingBlock_lazy = () -> Arrays.asList(BaselineMatchReportV03.mmBaselineEstablishmentTrials);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Limit1";
 				definition = "Specifies the number of occurrences of a particular event and the maximum number of times this event may occur.";
@@ -188,21 +191,21 @@ public class Limit1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cur", required = true)
 	public Max3NumericText getCurrent() {
 		return current;
 	}
 
-	public void setCurrent(Max3NumericText current) {
-		this.current = current;
+	public Limit1 setCurrent(Max3NumericText current) {
+		this.current = Objects.requireNonNull(current);
+		return this;
 	}
 
-	@XmlElement(name = "Lmt", required = true)
 	public Max3NumericText getLimit() {
 		return limit;
 	}
 
-	public void setLimit(Max3NumericText limit) {
-		this.limit = limit;
+	public Limit1 setLimit(Max3NumericText limit) {
+		this.limit = Objects.requireNonNull(limit);
+		return this;
 	}
 }

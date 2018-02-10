@@ -26,9 +26,8 @@ import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -81,8 +80,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBulkCashSettlementDetails2Rule#forSubscriptionMultipleExecution2
+ * ConstraintBulkCashSettlementDetails2Rule.forSubscriptionMultipleExecution2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementCurrency4Rule#forSubscriptionMultipleExecution2
+ * ConstraintSettlementCurrency4Rule.forSubscriptionMultipleExecution2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,15 +103,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Execution of a subscription order."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SubscriptionMultipleExecution2", propOrder = {"placeOfTrade", "orderDateTime", "cancellationRight", "investmentAccountDetails", "beneficiaryDetails", "individualExecutionDetails", "bulkCashSettlementDetails"})
 public class SubscriptionMultipleExecution2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcOfTrad")
 	protected CountryCode placeOfTrade;
 	/**
-	 * Market in which the advised trade transaction was executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,7 +146,7 @@ public class SubscriptionMultipleExecution2 {
 	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> SubscriptionMultipleExecution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,10 +157,11 @@ public class SubscriptionMultipleExecution2 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrDtTm")
 	protected ISODateTime orderDateTime;
 	/**
-	 * Date and time at which the order was placed by the investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,7 +195,7 @@ public class SubscriptionMultipleExecution2 {
 	public static final MMMessageAttribute mmOrderDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderDateTime;
-			componentContext_lazy = () -> SubscriptionMultipleExecution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,11 +206,11 @@ public class SubscriptionMultipleExecution2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "CxlRght")
 	protected CancellationRight1 cancellationRight;
 	/**
-	 * Cancellation right of an investor with respect to an investment fund
-	 * order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,7 +246,7 @@ public class SubscriptionMultipleExecution2 {
 	public static final MMMessageAttribute mmCancellationRight = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmCancellationRight;
-			componentContext_lazy = () -> SubscriptionMultipleExecution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRght";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,10 +257,11 @@ public class SubscriptionMultipleExecution2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.CancellationRight1.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	protected InvestmentAccount13 investmentAccountDetails;
 	/**
-	 * Account impacted by an investment fund order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -280,7 +293,7 @@ public class SubscriptionMultipleExecution2 {
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
-			componentContext_lazy = () -> SubscriptionMultipleExecution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -292,10 +305,11 @@ public class SubscriptionMultipleExecution2 {
 			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount13.mmObject();
 		}
 	};
+	@XmlElement(name = "BnfcryDtls")
 	protected IndividualPerson2 beneficiaryDetails;
 	/**
-	 * Additional information about the investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -326,7 +340,7 @@ public class SubscriptionMultipleExecution2 {
 	public static final MMMessageAssociationEnd mmBeneficiaryDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
-			componentContext_lazy = () -> SubscriptionMultipleExecution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -338,10 +352,11 @@ public class SubscriptionMultipleExecution2 {
 			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson2.mmObject();
 		}
 	};
+	@XmlElement(name = "IndvExctnDtls", required = true)
 	protected List<com.tools20022.repository.msg.SubscriptionExecution4> individualExecutionDetails;
 	/**
-	 * Execution of a subscription order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -373,7 +388,7 @@ public class SubscriptionMultipleExecution2 {
 	public static final MMMessageAssociationEnd mmIndividualExecutionDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SubscriptionExecution.mmObject();
-			componentContext_lazy = () -> SubscriptionMultipleExecution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "IndvExctnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -384,10 +399,11 @@ public class SubscriptionMultipleExecution2 {
 			type_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 		}
 	};
+	@XmlElement(name = "BlkCshSttlmDtls")
 	protected PaymentTransaction13 bulkCashSettlementDetails;
 	/**
-	 * Payment transaction resulting from the investment fund order execution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -420,7 +436,7 @@ public class SubscriptionMultipleExecution2 {
 	public static final MMMessageAssociationEnd mmBulkCashSettlementDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> BulkPayment.mmObject();
-			componentContext_lazy = () -> SubscriptionMultipleExecution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "BlkCshSttlmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -436,12 +452,15 @@ public class SubscriptionMultipleExecution2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SubscriptionMultipleExecution2.mmPlaceOfTrade, SubscriptionMultipleExecution2.mmOrderDateTime, SubscriptionMultipleExecution2.mmCancellationRight,
-						SubscriptionMultipleExecution2.mmInvestmentAccountDetails, SubscriptionMultipleExecution2.mmBeneficiaryDetails, SubscriptionMultipleExecution2.mmIndividualExecutionDetails,
-						SubscriptionMultipleExecution2.mmBulkCashSettlementDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmPlaceOfTrade, com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmOrderDateTime,
+						com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmCancellationRight, com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmInvestmentAccountDetails,
+						com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmBeneficiaryDetails, com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmIndividualExecutionDetails,
+						com.tools20022.repository.msg.SubscriptionMultipleExecution2.mmBulkCashSettlementDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SubscriptionMultipleOrderConfirmationV02.mmMultipleExecutionDetails);
 				trace_lazy = () -> SubscriptionExecution.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBulkCashSettlementDetails2Rule.forSubscriptionMultipleExecution2,
+						com.tools20022.repository.constraints.ConstraintSettlementCurrency4Rule.forSubscriptionMultipleExecution2);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionMultipleExecution2";
 				definition = "Execution of a subscription order.";
@@ -450,66 +469,66 @@ public class SubscriptionMultipleExecution2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcOfTrad")
-	public CountryCode getPlaceOfTrade() {
-		return placeOfTrade;
+	public Optional<CountryCode> getPlaceOfTrade() {
+		return placeOfTrade == null ? Optional.empty() : Optional.of(placeOfTrade);
 	}
 
-	public void setPlaceOfTrade(CountryCode placeOfTrade) {
+	public SubscriptionMultipleExecution2 setPlaceOfTrade(CountryCode placeOfTrade) {
 		this.placeOfTrade = placeOfTrade;
+		return this;
 	}
 
-	@XmlElement(name = "OrdrDtTm")
-	public ISODateTime getOrderDateTime() {
-		return orderDateTime;
+	public Optional<ISODateTime> getOrderDateTime() {
+		return orderDateTime == null ? Optional.empty() : Optional.of(orderDateTime);
 	}
 
-	public void setOrderDateTime(ISODateTime orderDateTime) {
+	public SubscriptionMultipleExecution2 setOrderDateTime(ISODateTime orderDateTime) {
 		this.orderDateTime = orderDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "CxlRght")
-	public CancellationRight1 getCancellationRight() {
-		return cancellationRight;
+	public Optional<CancellationRight1> getCancellationRight() {
+		return cancellationRight == null ? Optional.empty() : Optional.of(cancellationRight);
 	}
 
-	public void setCancellationRight(com.tools20022.repository.msg.CancellationRight1 cancellationRight) {
+	public SubscriptionMultipleExecution2 setCancellationRight(com.tools20022.repository.msg.CancellationRight1 cancellationRight) {
 		this.cancellationRight = cancellationRight;
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	public InvestmentAccount13 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
 
-	public void setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount13 investmentAccountDetails) {
-		this.investmentAccountDetails = investmentAccountDetails;
+	public SubscriptionMultipleExecution2 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount13 investmentAccountDetails) {
+		this.investmentAccountDetails = Objects.requireNonNull(investmentAccountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "BnfcryDtls")
-	public IndividualPerson2 getBeneficiaryDetails() {
-		return beneficiaryDetails;
+	public Optional<IndividualPerson2> getBeneficiaryDetails() {
+		return beneficiaryDetails == null ? Optional.empty() : Optional.of(beneficiaryDetails);
 	}
 
-	public void setBeneficiaryDetails(com.tools20022.repository.msg.IndividualPerson2 beneficiaryDetails) {
+	public SubscriptionMultipleExecution2 setBeneficiaryDetails(com.tools20022.repository.msg.IndividualPerson2 beneficiaryDetails) {
 		this.beneficiaryDetails = beneficiaryDetails;
+		return this;
 	}
 
-	@XmlElement(name = "IndvExctnDtls", required = true)
 	public List<SubscriptionExecution4> getIndividualExecutionDetails() {
-		return individualExecutionDetails;
+		return individualExecutionDetails == null ? individualExecutionDetails = new ArrayList<>() : individualExecutionDetails;
 	}
 
-	public void setIndividualExecutionDetails(List<com.tools20022.repository.msg.SubscriptionExecution4> individualExecutionDetails) {
-		this.individualExecutionDetails = individualExecutionDetails;
+	public SubscriptionMultipleExecution2 setIndividualExecutionDetails(List<com.tools20022.repository.msg.SubscriptionExecution4> individualExecutionDetails) {
+		this.individualExecutionDetails = Objects.requireNonNull(individualExecutionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "BlkCshSttlmDtls")
-	public PaymentTransaction13 getBulkCashSettlementDetails() {
-		return bulkCashSettlementDetails;
+	public Optional<PaymentTransaction13> getBulkCashSettlementDetails() {
+		return bulkCashSettlementDetails == null ? Optional.empty() : Optional.of(bulkCashSettlementDetails);
 	}
 
-	public void setBulkCashSettlementDetails(com.tools20022.repository.msg.PaymentTransaction13 bulkCashSettlementDetails) {
+	public SubscriptionMultipleExecution2 setBulkCashSettlementDetails(com.tools20022.repository.msg.PaymentTransaction13 bulkCashSettlementDetails) {
 		this.bulkCashSettlementDetails = bulkCashSettlementDetails;
+		return this;
 	}
 }

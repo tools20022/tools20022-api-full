@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Reason for the complete status."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransferCancellationCompleteReason1", propOrder = {"structured", "additionalInformation"})
 public class TransferCancellationCompleteReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Strd", required = true)
 	protected CancellationCompleteStatusReason1Code structured;
 	/**
-	 * Reason for a complete status in structured form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +113,7 @@ public class TransferCancellationCompleteReason1 {
 	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
-			componentContext_lazy = () -> TransferCancellationCompleteReason1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferCancellationCompleteReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Strd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,11 +124,11 @@ public class TransferCancellationCompleteReason1 {
 			simpleType_lazy = () -> CancellationCompleteStatusReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected Max350Text additionalInformation;
 	/**
-	 * Additional information about the reason for the complete status in
-	 * textual form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -154,7 +157,7 @@ public class TransferCancellationCompleteReason1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransferCancellationCompleteReason1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferCancellationCompleteReason1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,9 +172,9 @@ public class TransferCancellationCompleteReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransferCancellationCompleteReason1.mmStructured, TransferCancellationCompleteReason1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationCompleteReason1.mmStructured, com.tools20022.repository.msg.TransferCancellationCompleteReason1.mmAdditionalInformation);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferCancellationCompleteReason1";
 				definition = "Reason for the complete status.";
@@ -180,21 +183,21 @@ public class TransferCancellationCompleteReason1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Strd", required = true)
 	public CancellationCompleteStatusReason1Code getStructured() {
 		return structured;
 	}
 
-	public void setStructured(CancellationCompleteStatusReason1Code structured) {
-		this.structured = structured;
+	public TransferCancellationCompleteReason1 setStructured(CancellationCompleteStatusReason1Code structured) {
+		this.structured = Objects.requireNonNull(structured);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public Max350Text getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<Max350Text> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(Max350Text additionalInformation) {
+	public TransferCancellationCompleteReason1 setAdditionalInformation(Max350Text additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 }

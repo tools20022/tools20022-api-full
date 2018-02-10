@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyName1", propOrder = {"validFrom", "name", "shortName"})
 public class PartyName1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "VldFr", required = true)
 	protected ISODate validFrom;
 	/**
-	 * Specifies the date from which the party name is valid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +102,7 @@ public class PartyName1 {
 	 */
 	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyName1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyName1.mmObject();
 			isDerived = false;
 			xmlTag = "VldFr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,11 +113,11 @@ public class PartyName1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm", required = true)
 	protected Max350Text name;
 	/**
-	 * Name by which a party is known and which is usually used to identify that
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +145,7 @@ public class PartyName1 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyName1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyName1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,10 +156,11 @@ public class PartyName1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ShrtNm", required = true)
 	protected Max35Text shortName;
 	/**
-	 * Specifies the short name of the organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,7 +186,7 @@ public class PartyName1 {
 	 */
 	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyName1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyName1.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,8 +201,8 @@ public class PartyName1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyName1.mmValidFrom, PartyName1.mmName, PartyName1.mmShortName);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyName1.mmValidFrom, com.tools20022.repository.msg.PartyName1.mmName, com.tools20022.repository.msg.PartyName1.mmShortName);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyName1";
 				definition = "Specifies the party name entity through  the valid short and long names of the party within the system.";
@@ -208,30 +211,30 @@ public class PartyName1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "VldFr", required = true)
 	public ISODate getValidFrom() {
 		return validFrom;
 	}
 
-	public void setValidFrom(ISODate validFrom) {
-		this.validFrom = validFrom;
+	public PartyName1 setValidFrom(ISODate validFrom) {
+		this.validFrom = Objects.requireNonNull(validFrom);
+		return this;
 	}
 
-	@XmlElement(name = "Nm", required = true)
 	public Max350Text getName() {
 		return name;
 	}
 
-	public void setName(Max350Text name) {
-		this.name = name;
+	public PartyName1 setName(Max350Text name) {
+		this.name = Objects.requireNonNull(name);
+		return this;
 	}
 
-	@XmlElement(name = "ShrtNm", required = true)
 	public Max35Text getShortName() {
 		return shortName;
 	}
 
-	public void setShortName(Max35Text shortName) {
-		this.shortName = shortName;
+	public PartyName1 setShortName(Max35Text shortName) {
+		this.shortName = Objects.requireNonNull(shortName);
+		return this;
 	}
 }

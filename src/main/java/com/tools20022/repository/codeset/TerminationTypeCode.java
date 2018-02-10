@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.TerminationTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the timing or method for terminating the agreement - for repos.
@@ -32,15 +37,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminationTypeCode#mmOvernight
- * TerminationTypeCode.mmOvernight}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TerminationTypeCode#mmTerm
- * TerminationTypeCode.mmTerm}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminationTypeCode#Overnight
+ * TerminationTypeCode.Overnight}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TerminationTypeCode#Term
+ * TerminationTypeCode.Term}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminationTypeCode#mmFlexible
- * TerminationTypeCode.mmFlexible}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TerminationTypeCode#mmOpen
- * TerminationTypeCode.mmOpen}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminationTypeCode#Flexible
+ * TerminationTypeCode.Flexible}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TerminationTypeCode#Open
+ * TerminationTypeCode.Open}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -55,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the timing or method for terminating the agreement - for repos."</li>
  * </ul>
  */
-public class TerminationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TerminationTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,12 +104,12 @@ public class TerminationTypeCode {
 	 * definition} = "Repo with a term of one day."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOvernight = new MMCode() {
+	public static final TerminationTypeCode Overnight = new TerminationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Overnight";
 			definition = "Repo with a term of one day.";
-			owner_lazy = () -> TerminationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminationTypeCode.mmObject();
 			codeName = "OVER";
 		}
 	};
@@ -128,12 +134,12 @@ public class TerminationTypeCode {
 	 * definition} = "Repo with a term of more than one day."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTerm = new MMCode() {
+	public static final TerminationTypeCode Term = new TerminationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Term";
 			definition = "Repo with a term of more than one day.";
-			owner_lazy = () -> TerminationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminationTypeCode.mmObject();
 			codeName = "TERM";
 		}
 	};
@@ -162,12 +168,12 @@ public class TerminationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFlexible = new MMCode() {
+	public static final TerminationTypeCode Flexible = new TerminationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Flexible";
 			definition = "Identifies \"a classic term repo with the added feature that the cash is repaid to the buyer in installments\" (Definition from \"Mastering Repo Markets\" by Bob Steiner).";
-			owner_lazy = () -> TerminationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminationTypeCode.mmObject();
 			codeName = "FLEX";
 		}
 	};
@@ -195,28 +201,61 @@ public class TerminationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOpen = new MMCode() {
+	public static final TerminationTypeCode Open = new TerminationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Open";
 			definition = "Repo which can be terminated by either party at any time, and which has an unspecified repurchase date.";
-			owner_lazy = () -> TerminationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminationTypeCode.mmObject();
 			codeName = "OPEN";
 		}
 	};
+	final static private LinkedHashMap<String, TerminationTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TerminationTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("OVER");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminationTypeCode";
 				definition = "Specifies the timing or method for terminating the agreement - for repos.";
-				code_lazy = () -> Arrays.asList(TerminationTypeCode.mmOvernight, TerminationTypeCode.mmTerm, TerminationTypeCode.mmFlexible, TerminationTypeCode.mmOpen);
 				derivation_lazy = () -> Arrays.asList(ClosingType1Code.mmObject(), TerminationType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminationTypeCode.Overnight, com.tools20022.repository.codeset.TerminationTypeCode.Term, com.tools20022.repository.codeset.TerminationTypeCode.Flexible,
+						com.tools20022.repository.codeset.TerminationTypeCode.Open);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Overnight.getCodeName().get(), Overnight);
+		codesByName.put(Term.getCodeName().get(), Term);
+		codesByName.put(Flexible.getCodeName().get(), Flexible);
+		codesByName.put(Open.getCodeName().get(), Open);
+	}
+
+	public static TerminationTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TerminationTypeCode[] values() {
+		TerminationTypeCode[] values = new TerminationTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TerminationTypeCode> {
+		@Override
+		public TerminationTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TerminationTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

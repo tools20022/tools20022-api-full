@@ -29,6 +29,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -42,8 +43,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InRepairStatus2#mmNoSpecifiedReasonOrReasonDetailsRule
- * InRepairStatus2.mmNoSpecifiedReasonOrReasonDetailsRule}</li>
+ * {@linkplain com.tools20022.repository.msg.InRepairStatus2#NoSpecifiedReasonOrReasonDetailsRule
+ * InRepairStatus2.NoSpecifiedReasonOrReasonDetailsRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -64,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -84,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InRepairStatus2", propOrder = {"reasonDetails", "noSpecifiedReason"})
 public class InRepairStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RsnDtls", required = true)
 	protected InRepairStatusReason3 reasonDetails;
 	/**
-	 * Reason for the in-repair status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -124,7 +126,7 @@ public class InRepairStatus2 {
 	public static final MMMessageAssociationEnd mmReasonDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
-			componentContext_lazy = () -> InRepairStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InRepairStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "RsnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +138,11 @@ public class InRepairStatus2 {
 			type_lazy = () -> com.tools20022.repository.msg.InRepairStatusReason3.mmObject();
 		}
 	};
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	protected NoReasonCode noSpecifiedReason;
 	/**
-	 * Indicates that there is no reason available or to report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +176,7 @@ public class InRepairStatus2 {
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
-			componentContext_lazy = () -> InRepairStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InRepairStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,22 +220,22 @@ public class InRepairStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmNoSpecifiedReasonOrReasonDetailsRule = new MMXor() {
+	public static final MMXor NoSpecifiedReasonOrReasonDetailsRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReasonOrReasonDetailsRule";
 			definition = "Either NoSpecifiedReason or ReasonDetails must be present, but not both.";
-			messageComponent_lazy = () -> InRepairStatus2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(InRepairStatus2.mmReasonDetails, InRepairStatus2.mmNoSpecifiedReason);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.InRepairStatus2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InRepairStatus2.mmReasonDetails, com.tools20022.repository.msg.InRepairStatus2.mmNoSpecifiedReason);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InRepairStatus2.mmReasonDetails, InRepairStatus2.mmNoSpecifiedReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InRepairStatus2.mmReasonDetails, com.tools20022.repository.msg.InRepairStatus2.mmNoSpecifiedReason);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -244,27 +247,27 @@ public class InRepairStatus2 {
 				name = "InRepairStatus2";
 				definition = "Status is in repair.";
 				nextVersions_lazy = () -> Arrays.asList(InRepairStatusReason4Choice.mmObject());
-				xors_lazy = () -> Arrays.asList(InRepairStatus2.mmNoSpecifiedReasonOrReasonDetailsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InRepairStatus2.NoSpecifiedReasonOrReasonDetailsRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RsnDtls", required = true)
 	public InRepairStatusReason3 getReasonDetails() {
 		return reasonDetails;
 	}
 
-	public void setReasonDetails(com.tools20022.repository.msg.InRepairStatusReason3 reasonDetails) {
-		this.reasonDetails = reasonDetails;
+	public InRepairStatus2 setReasonDetails(com.tools20022.repository.msg.InRepairStatusReason3 reasonDetails) {
+		this.reasonDetails = Objects.requireNonNull(reasonDetails);
+		return this;
 	}
 
-	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}
 
-	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
-		this.noSpecifiedReason = noSpecifiedReason;
+	public InRepairStatus2 setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = Objects.requireNonNull(noSpecifiedReason);
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.BusinessFlowDirectionTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies the business flow, in order to determine the role of the parties
@@ -34,11 +39,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessFlowDirectionTypeCode#mmAssetstoBeDelivered
- * BusinessFlowDirectionTypeCode.mmAssetstoBeDelivered}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessFlowDirectionTypeCode#AssetstoBeDelivered
+ * BusinessFlowDirectionTypeCode.AssetstoBeDelivered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BusinessFlowDirectionTypeCode#mmAssetsToBeReceived
- * BusinessFlowDirectionTypeCode.mmAssetsToBeReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.BusinessFlowDirectionTypeCode#AssetsToBeReceived
+ * BusinessFlowDirectionTypeCode.AssetsToBeReceived}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -72,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class BusinessFlowDirectionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BusinessFlowDirectionTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -96,12 +102,12 @@ public class BusinessFlowDirectionTypeCode {
 	 * definition} = "Assets to be delivered."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAssetstoBeDelivered = new MMCode() {
+	public static final BusinessFlowDirectionTypeCode AssetstoBeDelivered = new BusinessFlowDirectionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetstoBeDelivered";
 			definition = "Assets to be delivered.";
-			owner_lazy = () -> BusinessFlowDirectionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BusinessFlowDirectionTypeCode.mmObject();
 			codeName = "ADLV";
 		}
 	};
@@ -126,28 +132,58 @@ public class BusinessFlowDirectionTypeCode {
 	 * definition} = "Assets to be received."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAssetsToBeReceived = new MMCode() {
+	public static final BusinessFlowDirectionTypeCode AssetsToBeReceived = new BusinessFlowDirectionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetsToBeReceived";
 			definition = "Assets to be received.";
-			owner_lazy = () -> BusinessFlowDirectionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BusinessFlowDirectionTypeCode.mmObject();
 			codeName = "ARCV";
 		}
 	};
+	final static private LinkedHashMap<String, BusinessFlowDirectionTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BusinessFlowDirectionTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ADLV");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BusinessFlowDirectionTypeCode";
 				definition = "Identifies the business flow, in order to determine the role of the parties in the business process. This indicator is very important when there are multiple intermediaries in the exchange of information process.";
-				code_lazy = () -> Arrays.asList(BusinessFlowDirectionTypeCode.mmAssetstoBeDelivered, BusinessFlowDirectionTypeCode.mmAssetsToBeReceived);
 				derivation_lazy = () -> Arrays.asList(BusinessFlowDirectionType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BusinessFlowDirectionTypeCode.AssetstoBeDelivered, com.tools20022.repository.codeset.BusinessFlowDirectionTypeCode.AssetsToBeReceived);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AssetstoBeDelivered.getCodeName().get(), AssetstoBeDelivered);
+		codesByName.put(AssetsToBeReceived.getCodeName().get(), AssetsToBeReceived);
+	}
+
+	public static BusinessFlowDirectionTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BusinessFlowDirectionTypeCode[] values() {
+		BusinessFlowDirectionTypeCode[] values = new BusinessFlowDirectionTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BusinessFlowDirectionTypeCode> {
+		@Override
+		public BusinessFlowDirectionTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BusinessFlowDirectionTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

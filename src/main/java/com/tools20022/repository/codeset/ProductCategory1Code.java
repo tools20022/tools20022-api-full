@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ProductCategoryCode;
+import com.tools20022.repository.codeset.ProductCategory1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the category of a product.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ProductCategoryCode
- * ProductCategoryCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCategory1Code#mmHarmonizedTariffCodeName
- * ProductCategory1Code.mmHarmonizedTariffCodeName}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCategory1Code#HarmonizedTariffCodeName
+ * ProductCategory1Code.HarmonizedTariffCodeName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCategory1Code#mmQuotaCategory
- * ProductCategory1Code.mmQuotaCategory}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCategory1Code#QuotaCategory
+ * ProductCategory1Code.QuotaCategory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCategory1Code#mmProductGroup
- * ProductCategory1Code.mmProductGroup}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCategory1Code#ProductGroup
+ * ProductCategory1Code.ProductGroup}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCategory1Code#mmLineOfBusiness
- * ProductCategory1Code.mmLineOfBusiness}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCategory1Code#LineOfBusiness
+ * ProductCategory1Code.LineOfBusiness}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductCategory1Code#mmGender
- * ProductCategory1Code.mmGender}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductCategory1Code#Gender
+ * ProductCategory1Code.Gender}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ProductCategoryCode
+ * ProductCategoryCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the category of a product."</li>
  * </ul>
  */
-public class ProductCategory1Code extends ProductCategoryCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProductCategory1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class ProductCategory1Code extends ProductCategoryCode {
 	 * name} = "HarmonizedTariffCodeName"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHarmonizedTariffCodeName = new MMCode() {
+	public static final ProductCategory1Code HarmonizedTariffCodeName = new ProductCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HarmonizedTariffCodeName";
-			owner_lazy = () -> ProductCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductCategory1Code.mmObject();
+			codeName = ProductCategoryCode.HarmonizedTariffCodeName.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class ProductCategory1Code extends ProductCategoryCode {
 	 * name} = "QuotaCategory"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQuotaCategory = new MMCode() {
+	public static final ProductCategory1Code QuotaCategory = new ProductCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotaCategory";
-			owner_lazy = () -> ProductCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductCategory1Code.mmObject();
+			codeName = ProductCategoryCode.QuotaCategory.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class ProductCategory1Code extends ProductCategoryCode {
 	 * name} = "ProductGroup"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProductGroup = new MMCode() {
+	public static final ProductCategory1Code ProductGroup = new ProductCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductGroup";
-			owner_lazy = () -> ProductCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductCategory1Code.mmObject();
+			codeName = ProductCategoryCode.ProductGroup.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +169,12 @@ public class ProductCategory1Code extends ProductCategoryCode {
 	 * name} = "LineOfBusiness"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLineOfBusiness = new MMCode() {
+	public static final ProductCategory1Code LineOfBusiness = new ProductCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineOfBusiness";
-			owner_lazy = () -> ProductCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductCategory1Code.mmObject();
+			codeName = ProductCategoryCode.LineOfBusiness.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,27 +193,61 @@ public class ProductCategory1Code extends ProductCategoryCode {
 	 * name} = "Gender"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGender = new MMCode() {
+	public static final ProductCategory1Code Gender = new ProductCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gender";
-			owner_lazy = () -> ProductCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductCategory1Code.mmObject();
+			codeName = ProductCategoryCode.Gender.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ProductCategory1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProductCategory1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("HRTR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductCategory1Code";
 				definition = "Specifies the category of a product.";
-				code_lazy = () -> Arrays.asList(ProductCategory1Code.mmHarmonizedTariffCodeName, ProductCategory1Code.mmQuotaCategory, ProductCategory1Code.mmProductGroup, ProductCategory1Code.mmLineOfBusiness,
-						ProductCategory1Code.mmGender);
 				trace_lazy = () -> ProductCategoryCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductCategory1Code.HarmonizedTariffCodeName, com.tools20022.repository.codeset.ProductCategory1Code.QuotaCategory,
+						com.tools20022.repository.codeset.ProductCategory1Code.ProductGroup, com.tools20022.repository.codeset.ProductCategory1Code.LineOfBusiness, com.tools20022.repository.codeset.ProductCategory1Code.Gender);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(HarmonizedTariffCodeName.getCodeName().get(), HarmonizedTariffCodeName);
+		codesByName.put(QuotaCategory.getCodeName().get(), QuotaCategory);
+		codesByName.put(ProductGroup.getCodeName().get(), ProductGroup);
+		codesByName.put(LineOfBusiness.getCodeName().get(), LineOfBusiness);
+		codesByName.put(Gender.getCodeName().get(), Gender);
+	}
+
+	public static ProductCategory1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProductCategory1Code[] values() {
+		ProductCategory1Code[] values = new ProductCategory1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProductCategory1Code> {
+		@Override
+		public ProductCategory1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProductCategory1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

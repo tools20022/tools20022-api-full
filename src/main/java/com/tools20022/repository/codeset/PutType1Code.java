@@ -20,33 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PutTypeCode;
+import com.tools20022.repository.codeset.PutType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines the type of execution of the put feature.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PutTypeCode PutTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PutType1Code#mmMandatory
- * PutType1Code.mmMandatory}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PutType1Code#mmOptional
- * PutType1Code.mmOptional}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PutType1Code#mmBoth
- * PutType1Code.mmBoth}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PutType1Code#Mandatory
+ * PutType1Code.Mandatory}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PutType1Code#Optional
+ * PutType1Code.Optional}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PutType1Code#Both
+ * PutType1Code.Both}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PutTypeCode PutTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -63,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the type of execution of the put feature."</li>
  * </ul>
  */
-public class PutType1Code extends PutTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PutType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -81,11 +86,12 @@ public class PutType1Code extends PutTypeCode {
 	 * name} = "Mandatory"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMandatory = new MMCode() {
+	public static final PutType1Code Mandatory = new PutType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandatory";
-			owner_lazy = () -> PutType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PutType1Code.mmObject();
+			codeName = PutTypeCode.Mandatory.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -103,11 +109,12 @@ public class PutType1Code extends PutTypeCode {
 	 * name} = "Optional"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOptional = new MMCode() {
+	public static final PutType1Code Optional = new PutType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Optional";
-			owner_lazy = () -> PutType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PutType1Code.mmObject();
+			codeName = PutTypeCode.Optional.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -125,26 +132,58 @@ public class PutType1Code extends PutTypeCode {
 	 * name} = "Both"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBoth = new MMCode() {
+	public static final PutType1Code Both = new PutType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Both";
-			owner_lazy = () -> PutType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PutType1Code.mmObject();
+			codeName = PutTypeCode.Both.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PutType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PutType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MAND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PutType1Code";
 				definition = "Defines the type of execution of the put feature.";
-				code_lazy = () -> Arrays.asList(PutType1Code.mmMandatory, PutType1Code.mmOptional, PutType1Code.mmBoth);
 				trace_lazy = () -> PutTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PutType1Code.Mandatory, com.tools20022.repository.codeset.PutType1Code.Optional, com.tools20022.repository.codeset.PutType1Code.Both);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Mandatory.getCodeName().get(), Mandatory);
+		codesByName.put(Optional.getCodeName().get(), Optional);
+		codesByName.put(Both.getCodeName().get(), Both);
+	}
+
+	public static PutType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PutType1Code[] values() {
+		PutType1Code[] values = new PutType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PutType1Code> {
+		@Override
+		public PutType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PutType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

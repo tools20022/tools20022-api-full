@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Defines the criteria used to report on a system or a member of the system."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SystemReturnCriteria2", propOrder = {"systemIdentificationIndicator", "memberIdentificationIndicator", "countryIdentificationIndicator", "accountIdentificationIndicator"})
 public class SystemReturnCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SysIdInd")
 	protected RequestedIndicator systemIdentificationIndicator;
 	/**
-	 * Indicates whether the system identification is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +107,7 @@ public class SystemReturnCriteria2 {
 	 */
 	public static final MMMessageAttribute mmSystemIdentificationIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemReturnCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "SysIdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +118,11 @@ public class SystemReturnCriteria2 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "MmbIdInd")
 	protected RequestedIndicator memberIdentificationIndicator;
 	/**
-	 * Indicates whether the member identification is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,7 +151,7 @@ public class SystemReturnCriteria2 {
 	 */
 	public static final MMMessageAttribute mmMemberIdentificationIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemReturnCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "MmbIdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,10 +162,11 @@ public class SystemReturnCriteria2 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CtryIdInd")
 	protected RequestedIndicator countryIdentificationIndicator;
 	/**
-	 * Indicates whether the country identification is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,7 +195,7 @@ public class SystemReturnCriteria2 {
 	 */
 	public static final MMMessageAttribute mmCountryIdentificationIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemReturnCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "CtryIdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,10 +206,11 @@ public class SystemReturnCriteria2 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctIdInd")
 	protected RequestedIndicator accountIdentificationIndicator;
 	/**
-	 * Indicates whether the account identification is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,7 +239,7 @@ public class SystemReturnCriteria2 {
 	 */
 	public static final MMMessageAttribute mmAccountIdentificationIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemReturnCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctIdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -249,9 +254,9 @@ public class SystemReturnCriteria2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SystemReturnCriteria2.mmSystemIdentificationIndicator, SystemReturnCriteria2.mmMemberIdentificationIndicator, SystemReturnCriteria2.mmCountryIdentificationIndicator,
-						SystemReturnCriteria2.mmAccountIdentificationIndicator);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemReturnCriteria2.mmSystemIdentificationIndicator, com.tools20022.repository.msg.SystemReturnCriteria2.mmMemberIdentificationIndicator,
+						com.tools20022.repository.msg.SystemReturnCriteria2.mmCountryIdentificationIndicator, com.tools20022.repository.msg.SystemReturnCriteria2.mmAccountIdentificationIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemReturnCriteria2";
 				definition = "Defines the criteria used to report on a system or a member of the system.";
@@ -260,39 +265,39 @@ public class SystemReturnCriteria2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SysIdInd")
-	public RequestedIndicator getSystemIdentificationIndicator() {
-		return systemIdentificationIndicator;
+	public Optional<RequestedIndicator> getSystemIdentificationIndicator() {
+		return systemIdentificationIndicator == null ? Optional.empty() : Optional.of(systemIdentificationIndicator);
 	}
 
-	public void setSystemIdentificationIndicator(RequestedIndicator systemIdentificationIndicator) {
+	public SystemReturnCriteria2 setSystemIdentificationIndicator(RequestedIndicator systemIdentificationIndicator) {
 		this.systemIdentificationIndicator = systemIdentificationIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "MmbIdInd")
-	public RequestedIndicator getMemberIdentificationIndicator() {
-		return memberIdentificationIndicator;
+	public Optional<RequestedIndicator> getMemberIdentificationIndicator() {
+		return memberIdentificationIndicator == null ? Optional.empty() : Optional.of(memberIdentificationIndicator);
 	}
 
-	public void setMemberIdentificationIndicator(RequestedIndicator memberIdentificationIndicator) {
+	public SystemReturnCriteria2 setMemberIdentificationIndicator(RequestedIndicator memberIdentificationIndicator) {
 		this.memberIdentificationIndicator = memberIdentificationIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "CtryIdInd")
-	public RequestedIndicator getCountryIdentificationIndicator() {
-		return countryIdentificationIndicator;
+	public Optional<RequestedIndicator> getCountryIdentificationIndicator() {
+		return countryIdentificationIndicator == null ? Optional.empty() : Optional.of(countryIdentificationIndicator);
 	}
 
-	public void setCountryIdentificationIndicator(RequestedIndicator countryIdentificationIndicator) {
+	public SystemReturnCriteria2 setCountryIdentificationIndicator(RequestedIndicator countryIdentificationIndicator) {
 		this.countryIdentificationIndicator = countryIdentificationIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "AcctIdInd")
-	public RequestedIndicator getAccountIdentificationIndicator() {
-		return accountIdentificationIndicator;
+	public Optional<RequestedIndicator> getAccountIdentificationIndicator() {
+		return accountIdentificationIndicator == null ? Optional.empty() : Optional.of(accountIdentificationIndicator);
 	}
 
-	public void setAccountIdentificationIndicator(RequestedIndicator accountIdentificationIndicator) {
+	public SystemReturnCriteria2 setAccountIdentificationIndicator(RequestedIndicator accountIdentificationIndicator) {
 		this.accountIdentificationIndicator = accountIdentificationIndicator;
+		return this;
 	}
 }

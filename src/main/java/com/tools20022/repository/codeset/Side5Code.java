@@ -17,39 +17,44 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SideCode;
+import com.tools20022.repository.codeset.Side5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Side taken by a party on an order.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SideCode SideCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Side5Code#mmSellShort
- * Side5Code.mmSellShort}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side5Code#mmSell
- * Side5Code.mmSell}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Side5Code#mmSellShortExempt
- * Side5Code.mmSellShortExempt}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side5Code#mmUndisclosed
- * Side5Code.mmUndisclosed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side5Code#SellShort
+ * Side5Code.SellShort}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side5Code#Sell
+ * Side5Code.Sell}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side5Code#SellShortExempt
+ * Side5Code.SellShortExempt}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side5Code#Undisclosed
+ * Side5Code.Undisclosed}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SideCode SideCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Side taken by a party on an order."</li>
  * </ul>
  */
-public class Side5Code extends SideCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Side5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -78,11 +84,12 @@ public class Side5Code extends SideCode {
 	 * name} = "SellShort"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSellShort = new MMCode() {
+	public static final Side5Code SellShort = new Side5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellShort";
-			owner_lazy = () -> Side5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Side5Code.mmObject();
+			codeName = SideCode.SellShort.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -93,6 +100,9 @@ public class Side5Code extends SideCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.Side5Code Side5Code}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::BUSE//SELL, FIXSynonym: 54</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -100,11 +110,13 @@ public class Side5Code extends SideCode {
 	 * name} = "Sell"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSell = new MMCode() {
+	public static final Side5Code Sell = new Side5Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::BUSE//SELL"), new FIXSynonym(this, "54"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sell";
-			owner_lazy = () -> Side5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Side5Code.mmObject();
+			codeName = SideCode.Sell.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -122,11 +134,12 @@ public class Side5Code extends SideCode {
 	 * name} = "SellShortExempt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSellShortExempt = new MMCode() {
+	public static final Side5Code SellShortExempt = new Side5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellShortExempt";
-			owner_lazy = () -> Side5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Side5Code.mmObject();
+			codeName = SideCode.SellShortExempt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -137,6 +150,9 @@ public class Side5Code extends SideCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.Side5Code Side5Code}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 54</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -144,25 +160,60 @@ public class Side5Code extends SideCode {
 	 * name} = "Undisclosed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUndisclosed = new MMCode() {
+	public static final Side5Code Undisclosed = new Side5Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "54"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Undisclosed";
-			owner_lazy = () -> Side5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Side5Code.mmObject();
+			codeName = SideCode.Undisclosed.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Side5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Side5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Side5Code";
 				definition = "Side taken by a party on an order.";
-				code_lazy = () -> Arrays.asList(Side5Code.mmSellShort, Side5Code.mmSell, Side5Code.mmSellShortExempt, Side5Code.mmUndisclosed);
 				trace_lazy = () -> SideCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Side5Code.SellShort, com.tools20022.repository.codeset.Side5Code.Sell, com.tools20022.repository.codeset.Side5Code.SellShortExempt,
+						com.tools20022.repository.codeset.Side5Code.Undisclosed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SellShort.getCodeName().get(), SellShort);
+		codesByName.put(Sell.getCodeName().get(), Sell);
+		codesByName.put(SellShortExempt.getCodeName().get(), SellShortExempt);
+		codesByName.put(Undisclosed.getCodeName().get(), Undisclosed);
+	}
+
+	public static Side5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Side5Code[] values() {
+		Side5Code[] values = new Side5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Side5Code> {
+		@Override
+		public Side5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Side5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

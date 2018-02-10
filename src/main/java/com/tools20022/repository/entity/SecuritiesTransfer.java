@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.PartialSettlementCode;
@@ -29,9 +30,8 @@ import com.tools20022.repository.entity.ObligationFulfilment;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Completion of a securities settlement instruction, wherein securities are
@@ -44,6 +44,10 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
+ * ObligationFulfilment}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -94,114 +98,6 @@ import java.util.List;
  * SecuritiesTransfer.mmSecurity}</li>
  * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTransfer#mmStatus
  * SecuritiesTransfer.mmStatus}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.IntraPositionTransfer
- * IntraPositionTransfer}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
- * ObligationFulfilment}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut3 TransferOut3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer4 Transfer4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn1 TransferIn1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer7 Transfer7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn4 TransferIn4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer17 Transfer17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn6 TransferIn6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer2 Transfer2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut1 TransferOut1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer10 Transfer10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut6 TransferOut6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer14 Transfer14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut8 TransferOut8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer24 Transfer24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut10 TransferOut10}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reversal1Choice
- * Reversal1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer25 Transfer25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn8 TransferIn8}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reversal2Choice
- * Reversal2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer3 Transfer3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn2 TransferIn2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer6 Transfer6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn3 TransferIn3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer16 Transfer16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn5 TransferIn5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer1 Transfer1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut2 TransferOut2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer9 Transfer9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut5 TransferOut5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer12 Transfer12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut7 TransferOut7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer20 Transfer20}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut9 TransferOut9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer22 Transfer22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn7 TransferIn7}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TransferReason1
- * TransferReason1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer18 Transfer18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer26 Transfer26}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer5 Transfer5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer15 Transfer15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer21 Transfer21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer13 Transfer13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer23 Transfer23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer8 Transfer8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer11 Transfer11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer19 Transfer19}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement2
- * CorporateActionSecuritiesMovement2}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement1
- * CorporateActionSecuritiesMovement1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut4 TransferOut4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer27 Transfer27}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reversal3Choice
- * Reversal3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer28 Transfer28}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reversal4Choice
- * Reversal4Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer29 Transfer29}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn10 TransferIn10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn9 TransferIn9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut11 TransferOut11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut12 TransferOut12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut13 TransferOut13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn11 TransferIn11}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reversal6Choice
- * Reversal6Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reversal5Choice
- * Reversal5Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn13 TransferIn13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut14 TransferOut14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn12 TransferIn12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut15 TransferOut15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer31 Transfer31}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer30 Transfer30}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer32 Transfer32}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reversal7Choice
- * Reversal7Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reversal8Choice
- * Reversal8Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Transfer33 Transfer33}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut17 TransferOut17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn14 TransferIn14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn15 TransferIn15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut16 TransferOut16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferIn16 TransferIn16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransferOut18 TransferOut18}</li>
  * </ul>
  * </li>
  * <li>
@@ -318,11 +214,115 @@ import java.util.List;
  * TransferOut18.mmTransferDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.IntraPositionTransfer
+ * IntraPositionTransfer}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut3 TransferOut3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer4 Transfer4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn1 TransferIn1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer7 Transfer7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn4 TransferIn4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer17 Transfer17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn6 TransferIn6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer2 Transfer2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut1 TransferOut1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer10 Transfer10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut6 TransferOut6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer14 Transfer14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut8 TransferOut8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer24 Transfer24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut10 TransferOut10}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reversal1Choice
+ * Reversal1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer25 Transfer25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn8 TransferIn8}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reversal2Choice
+ * Reversal2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer3 Transfer3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn2 TransferIn2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer6 Transfer6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn3 TransferIn3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer16 Transfer16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn5 TransferIn5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer1 Transfer1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut2 TransferOut2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer9 Transfer9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut5 TransferOut5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer12 Transfer12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut7 TransferOut7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer20 Transfer20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut9 TransferOut9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer22 Transfer22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn7 TransferIn7}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TransferReason1
+ * TransferReason1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer18 Transfer18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer26 Transfer26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer5 Transfer5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer15 Transfer15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer21 Transfer21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer13 Transfer13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer23 Transfer23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer8 Transfer8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer11 Transfer11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer19 Transfer19}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement2
+ * CorporateActionSecuritiesMovement2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionSecuritiesMovement1
+ * CorporateActionSecuritiesMovement1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut4 TransferOut4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer27 Transfer27}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reversal3Choice
+ * Reversal3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer28 Transfer28}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reversal4Choice
+ * Reversal4Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer29 Transfer29}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn10 TransferIn10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn9 TransferIn9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut11 TransferOut11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut12 TransferOut12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut13 TransferOut13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn11 TransferIn11}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reversal6Choice
+ * Reversal6Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reversal5Choice
+ * Reversal5Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn13 TransferIn13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut14 TransferOut14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn12 TransferIn12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut15 TransferOut15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer31 Transfer31}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer30 Transfer30}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer32 Transfer32}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reversal7Choice
+ * Reversal7Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reversal8Choice
+ * Reversal8Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer33 Transfer33}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut17 TransferOut17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn14 TransferIn14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn15 TransferIn15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut16 TransferOut16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferIn16 TransferIn16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferOut18 TransferOut18}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -340,9 +340,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Max35Text identification;
 	/**
-	 * Unique and unambiguous identification of a transfer, as assigned by the
-	 * instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -508,8 +507,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 					Transfer29.mmTransferReference, MessageAndBusinessReference7.mmTransferReference, TransferStatusAndReason3.mmTransferReference, TransferReference5.mmTransferReference, TransferReference6.mmTransferReference,
 					TransferReference8.mmTransferReference, Transfer31.mmTransferReference, Transfer30.mmTransferReference, Transfer32.mmTransferReference, CancellationStatusAndReason3.mmTransferReference,
 					MessageAndBusinessReference8.mmTransferReference, Transfer33.mmTransferReference, TransferStatusAndReason4.mmTransferReference, TransferReference9.mmTransferReference, TransferReference10.mmTransferReference);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification of a transfer, as assigned by the instructing party.";
@@ -528,8 +527,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	};
 	protected SecuritiesQuantity transferredQuantity;
 	/**
-	 * Total quantity of securities settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -986,6 +985,9 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::ESTT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1029,8 +1031,9 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 					IntraPositionDetails41.mmSettledQuantity, IntraPositionDetails41.mmPreviouslySettledQuantity, IntraPositionDetails39.mmSettlementQuantity, IntraPositionMovementDetails13.mmSettledQuantity,
 					IntraPositionMovementDetails13.mmPreviouslySettledQuantity, IntraPositionDetails43.mmSettledQuantity, IntraPositionDetails43.mmPreviouslySettledQuantity, IntraPositionDetails42.mmSettlementQuantity,
 					IntraPositionMovementDetails14.mmSettledQuantity, IntraPositionMovementDetails14.mmPreviouslySettledQuantity);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::ESTT"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferredQuantity";
 			definition = "Total quantity of securities settled.";
@@ -1043,8 +1046,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesAccount> account;
 	/**
-	 * Specifies the account from/to which the securities are transferred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1145,8 +1148,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 					IntraPositionDetails23.mmSafekeepingAccount, TransferOut4.mmClientAccount, IntraPositionMovements1.mmSafekeepingAccount, IntraPositionQueryCriteria1.mmSafekeepingAccount, IntraPositionModification2.mmSafekeepingAccount,
 					IntraPositionModification1.mmSafekeepingAccount, IntraPositionCancellation1.mmSafekeepingAccount, IntraPositionDetails31.mmSafekeepingAccount, IntraPositionDetails38.mmSafekeepingAccount,
 					IntraPositionDetails39.mmSafekeepingAccount, IntraPositionDetails42.mmSafekeepingAccount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
 			definition = "Specifies the account from/to which the securities are transferred.";
@@ -1158,9 +1161,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	};
 	protected TransferTypeCode transferType;
 	/**
-	 * Specifies whether the financial instrument is transferred as an asset or
-	 * as cash.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1235,8 +1237,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument11.mmTransferType, FinancialInstrument25.mmTransferType, FinancialInstrument32.mmTransferType, FinancialInstrument24.mmTransferType, FinancialInstrument33.mmTransferType,
 					FinancialInstrument23.mmTransferType, FinancialInstrument31.mmTransferType, FinancialInstrument35.mmTransferType, FinancialInstrument34.mmTransferType, FinancialInstrument40.mmTransferType,
 					FinancialInstrument39.mmTransferType, FinancialInstrument48.mmTransferType, FinancialInstrument46.mmTransferType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferType";
 			definition = "Specifies whether the financial instrument is transferred as an asset or as cash.";
@@ -1255,8 +1257,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	};
 	protected SecuritiesSettlement relatedSettlement;
 	/**
-	 * Settlement process which is the source of the transfer operation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1444,8 +1446,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 					Reversal5Choice.mmTransferOutConfirmationDetails, TransferIn13.mmSettlementDetails, TransferOut14.mmSettlementDetails, TransferIn12.mmSettlementDetails, TransferOut15.mmSettlementDetails,
 					Reversal7Choice.mmTransferInConfirmationDetails, Reversal8Choice.mmTransferOutConfirmationDetails, TransferOut17.mmSettlementDetails, TransferIn14.mmSettlementDetails, TransferIn15.mmSettlementDetails,
 					TransferOut16.mmSettlementDetails, SwitchSubscriptionLegOrder6.mmSettlementAndCustodyDetails, SwitchRedemptionLegOrder6.mmSettlementAndCustodyDetails, SwitchSubscriptionLegExecution4.mmSettlementAndCustodyDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSettlement";
 			definition = "Settlement process which is the source of the transfer operation.";
@@ -1458,8 +1460,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	};
 	protected YesNoIndicator ownAccountTransferIndicator;
 	/**
-	 * Indicates whether the transfer results in a change of beneficial owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1598,8 +1600,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 					Transfer15.mmOwnAccountTransferIndicator, Transfer21.mmOwnAccountTransferIndicator, Transfer13.mmOwnAccountTransferIndicator, Transfer23.mmOwnAccountTransferIndicator, Transfer8.mmOwnAccountTransferIndicator,
 					Transfer11.mmOwnAccountTransferIndicator, Transfer19.mmOwnAccountTransferIndicator, Transfer27.mmOwnAccountTransferIndicator, Transfer28.mmOwnAccountTransferIndicator, Transfer29.mmOwnAccountTransferIndicator,
 					Transfer31.mmOwnAccountTransferIndicator, Transfer30.mmOwnAccountTransferIndicator, Transfer32.mmOwnAccountTransferIndicator, Transfer33.mmOwnAccountTransferIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OwnAccountTransferIndicator";
 			definition = "Indicates whether the transfer results in a change of beneficial owner.";
@@ -1618,8 +1620,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	};
 	protected PhysicalDelivery physicalDelivery;
 	/**
-	 * Information related to physical delivery of the securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1890,8 +1892,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 					SubscriptionExecution12.mmPhysicalDeliveryDetails, SwitchRedemptionLegOrder6.mmPhysicalDeliveryDetails, RedemptionOrder15.mmPhysicalDeliveryDetails, RedemptionExecution16.mmPhysicalDeliveryDetails,
 					SwitchSubscriptionLegExecution4.mmPhysicalDeliveryDetails, RedemptionExecution15.mmPhysicalDeliveryDetails, SwitchRedemptionLegExecution4.mmPhysicalDeliveryDetails, DerivativeInstrument5.mmDeliveryType,
 					DerivativeInstrument6.mmDeliveryType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PhysicalDelivery";
 			definition = "Information related to physical delivery of the securities.";
@@ -1904,9 +1906,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	};
 	protected ISODateTime lateDeliveryDate;
 	/**
-	 * Date and time after the settlement date specified in the trade, used for
-	 * pool trades resulting from the original To Be Assigned (TBA) securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2146,6 +2147,9 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::ADEL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2178,8 +2182,9 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 					SecuritiesTradeDetails65.mmLateDeliveryDate, SecuritiesTradeDetails66.mmLateDeliveryDate, SecuritiesTradeDetails67.mmLateDeliveryDate, TransactionDetails97.mmLateDeliveryDate,
 					SecuritiesFinancingTransactionDetails35.mmLateDeliveryDate, TransactionDetails96.mmLateDeliveryDate, SecuritiesTradeDetails70.mmLateDeliveryDate, SecuritiesFinancingTransactionDetails36.mmLateDeliveryDate,
 					TransactionDetails100.mmLateDeliveryDate, TransactionDetails99.mmLateDeliveryDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::ADEL"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LateDeliveryDate";
 			definition = "Date and time after the settlement date specified in the trade, used for pool trades resulting from the original To Be Assigned (TBA) securities.";
@@ -2198,8 +2203,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	};
 	protected Tax transferTax;
 	/**
-	 * Tax related to the transfer of a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2328,8 +2333,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 					OtherAmounts13.mmTransferTax, OtherAmounts1.mmTransferTax, OtherAmounts16.mmTransferTax, ProceedsMovement1.mmTaxDetails, OtherAmounts2.mmTransferTax, OtherAmounts6.mmTransferTax, OtherAmounts15.mmTransferTax,
 					OtherAmounts22.mmTransferTax, OtherAmounts28.mmTransferTax, OtherAmounts30.mmTransferTax, OtherAmounts31.mmTransferTax, OtherAmounts29.mmTransferTax, OtherAmounts35.mmTransferTax, OtherAmounts34.mmTransferTax,
 					OtherAmounts38.mmTransferTax, OtherAmounts33.mmTransferTax);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferTax";
 			definition = "Tax related to the transfer of a financial instrument.";
@@ -2342,8 +2347,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	};
 	protected TransferReasonCode transferReason;
 	/**
-	 * Identifies the transfer reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2427,8 +2432,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 			derivation_lazy = () -> Arrays.asList(TransferReason1.mmCode, TransferReason1.mmProprietary, Transfer18.mmTransferReason, Transfer26.mmTransferReason, Transfer15.mmTransferReason, Transfer21.mmTransferReason,
 					Transfer13.mmTransferReason, Transfer23.mmTransferReason, Transfer11.mmTransferReason, Transfer19.mmTransferReason, Transfer27.mmTransferReason, Transfer28.mmTransferReason, Transfer29.mmTransferReason,
 					Transfer31.mmTransferReason, Transfer30.mmTransferReason, Transfer32.mmTransferReason, Transfer33.mmTransferReason);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransferReason";
 			definition = "Identifies the transfer reason.";
@@ -2447,8 +2452,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	};
 	protected PartialSettlementCode partialSettlementType;
 	/**
-	 * Information about partial settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2560,6 +2565,9 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesTransfer
 	 * SecuritiesTransfer}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::PARS</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2579,8 +2587,9 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 					AdditionalParameters23.mmPartialSettlement, AdditionalParameters24.mmPartialSettlement, AdditionalParameters22.mmPartialSettlement, AdditionalParameters21.mmPartialSettlement, AdditionalParameters26.mmPartialSettlement,
 					AdditionalParameters25.mmPartialSettlement, AdditionalParameters28.mmPartialSettlement, AdditionalParameters27.mmPartialSettlement, AdditionalParameters29.mmPartialSettlement, AdditionalParameters30.mmPartialSettlement,
 					AdditionalParameters31.mmPartialSettlement, AdditionalParameters32.mmPartialSettlement);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PARS"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartialSettlementType";
 			definition = "Information about partial settlement.";
@@ -2599,8 +2608,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesDeliveryObligation> securitiesDeliveryObligation;
 	/**
-	 * Obligation for one party to deliver securities to another party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2635,8 +2644,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesDeliveryObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesDeliveryObligation";
 			definition = "Obligation for one party to deliver securities to another party.";
@@ -2648,8 +2657,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesEntry> bookEntry;
 	/**
-	 * Record in a securities account resulting from the transfer of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2684,8 +2693,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmBookEntry = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BookEntry";
 			definition = "Record in a securities account resulting from the transfer of a security.";
@@ -2697,8 +2706,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	};
 	protected Max35Text transactionIdentification;
 	/**
-	 * Unambiguous identification of a securities transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2723,8 +2732,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAttribute mmTransactionIdentification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of a securities transfer.";
@@ -2743,8 +2752,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	};
 	protected List<com.tools20022.repository.entity.Security> security;
 	/**
-	 * Security which is transferred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2776,8 +2785,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Security which is transferred.";
@@ -2789,8 +2798,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	};
 	protected SecuritiesTradeStatus status;
 	/**
-	 * Status of a securities transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2836,8 +2845,8 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	public static final MMBusinessAssociationEnd mmStatus = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(IntraPositionQueryCriteria1.mmStatus, IntraPositionCancellation1.mmProcessingStatus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
 			definition = "Status of a securities transfer.";
@@ -2852,7 +2861,7 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransfer";
 				definition = "Completion of a securities settlement instruction, wherein securities are delivered/debited from a securities account and received/credited to the designated securities account.";
@@ -2899,127 +2908,143 @@ public class SecuritiesTransfer extends ObligationFulfilment {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public SecuritiesTransfer setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
 	public SecuritiesQuantity getTransferredQuantity() {
 		return transferredQuantity;
 	}
 
-	public void setTransferredQuantity(com.tools20022.repository.entity.SecuritiesQuantity transferredQuantity) {
-		this.transferredQuantity = transferredQuantity;
+	public SecuritiesTransfer setTransferredQuantity(com.tools20022.repository.entity.SecuritiesQuantity transferredQuantity) {
+		this.transferredQuantity = Objects.requireNonNull(transferredQuantity);
+		return this;
 	}
 
 	public List<SecuritiesAccount> getAccount() {
-		return account;
+		return account == null ? account = new ArrayList<>() : account;
 	}
 
-	public void setAccount(List<com.tools20022.repository.entity.SecuritiesAccount> account) {
-		this.account = account;
+	public SecuritiesTransfer setAccount(List<com.tools20022.repository.entity.SecuritiesAccount> account) {
+		this.account = Objects.requireNonNull(account);
+		return this;
 	}
 
 	public TransferTypeCode getTransferType() {
 		return transferType;
 	}
 
-	public void setTransferType(TransferTypeCode transferType) {
-		this.transferType = transferType;
+	public SecuritiesTransfer setTransferType(TransferTypeCode transferType) {
+		this.transferType = Objects.requireNonNull(transferType);
+		return this;
 	}
 
-	public SecuritiesSettlement getRelatedSettlement() {
-		return relatedSettlement;
+	public Optional<SecuritiesSettlement> getRelatedSettlement() {
+		return relatedSettlement == null ? Optional.empty() : Optional.of(relatedSettlement);
 	}
 
-	public void setRelatedSettlement(com.tools20022.repository.entity.SecuritiesSettlement relatedSettlement) {
+	public SecuritiesTransfer setRelatedSettlement(com.tools20022.repository.entity.SecuritiesSettlement relatedSettlement) {
 		this.relatedSettlement = relatedSettlement;
+		return this;
 	}
 
 	public YesNoIndicator getOwnAccountTransferIndicator() {
 		return ownAccountTransferIndicator;
 	}
 
-	public void setOwnAccountTransferIndicator(YesNoIndicator ownAccountTransferIndicator) {
-		this.ownAccountTransferIndicator = ownAccountTransferIndicator;
+	public SecuritiesTransfer setOwnAccountTransferIndicator(YesNoIndicator ownAccountTransferIndicator) {
+		this.ownAccountTransferIndicator = Objects.requireNonNull(ownAccountTransferIndicator);
+		return this;
 	}
 
 	public PhysicalDelivery getPhysicalDelivery() {
 		return physicalDelivery;
 	}
 
-	public void setPhysicalDelivery(com.tools20022.repository.entity.PhysicalDelivery physicalDelivery) {
-		this.physicalDelivery = physicalDelivery;
+	public SecuritiesTransfer setPhysicalDelivery(com.tools20022.repository.entity.PhysicalDelivery physicalDelivery) {
+		this.physicalDelivery = Objects.requireNonNull(physicalDelivery);
+		return this;
 	}
 
 	public ISODateTime getLateDeliveryDate() {
 		return lateDeliveryDate;
 	}
 
-	public void setLateDeliveryDate(ISODateTime lateDeliveryDate) {
-		this.lateDeliveryDate = lateDeliveryDate;
+	public SecuritiesTransfer setLateDeliveryDate(ISODateTime lateDeliveryDate) {
+		this.lateDeliveryDate = Objects.requireNonNull(lateDeliveryDate);
+		return this;
 	}
 
 	public Tax getTransferTax() {
 		return transferTax;
 	}
 
-	public void setTransferTax(com.tools20022.repository.entity.Tax transferTax) {
-		this.transferTax = transferTax;
+	public SecuritiesTransfer setTransferTax(com.tools20022.repository.entity.Tax transferTax) {
+		this.transferTax = Objects.requireNonNull(transferTax);
+		return this;
 	}
 
 	public TransferReasonCode getTransferReason() {
 		return transferReason;
 	}
 
-	public void setTransferReason(TransferReasonCode transferReason) {
-		this.transferReason = transferReason;
+	public SecuritiesTransfer setTransferReason(TransferReasonCode transferReason) {
+		this.transferReason = Objects.requireNonNull(transferReason);
+		return this;
 	}
 
 	public PartialSettlementCode getPartialSettlementType() {
 		return partialSettlementType;
 	}
 
-	public void setPartialSettlementType(PartialSettlementCode partialSettlementType) {
-		this.partialSettlementType = partialSettlementType;
+	public SecuritiesTransfer setPartialSettlementType(PartialSettlementCode partialSettlementType) {
+		this.partialSettlementType = Objects.requireNonNull(partialSettlementType);
+		return this;
 	}
 
 	public List<SecuritiesDeliveryObligation> getSecuritiesDeliveryObligation() {
-		return securitiesDeliveryObligation;
+		return securitiesDeliveryObligation == null ? securitiesDeliveryObligation = new ArrayList<>() : securitiesDeliveryObligation;
 	}
 
-	public void setSecuritiesDeliveryObligation(List<com.tools20022.repository.entity.SecuritiesDeliveryObligation> securitiesDeliveryObligation) {
-		this.securitiesDeliveryObligation = securitiesDeliveryObligation;
+	public SecuritiesTransfer setSecuritiesDeliveryObligation(List<com.tools20022.repository.entity.SecuritiesDeliveryObligation> securitiesDeliveryObligation) {
+		this.securitiesDeliveryObligation = Objects.requireNonNull(securitiesDeliveryObligation);
+		return this;
 	}
 
 	public List<SecuritiesEntry> getBookEntry() {
-		return bookEntry;
+		return bookEntry == null ? bookEntry = new ArrayList<>() : bookEntry;
 	}
 
-	public void setBookEntry(List<com.tools20022.repository.entity.SecuritiesEntry> bookEntry) {
-		this.bookEntry = bookEntry;
+	public SecuritiesTransfer setBookEntry(List<com.tools20022.repository.entity.SecuritiesEntry> bookEntry) {
+		this.bookEntry = Objects.requireNonNull(bookEntry);
+		return this;
 	}
 
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public SecuritiesTransfer setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
 	public List<Security> getSecurity() {
-		return security;
+		return security == null ? security = new ArrayList<>() : security;
 	}
 
-	public void setSecurity(List<com.tools20022.repository.entity.Security> security) {
-		this.security = security;
+	public SecuritiesTransfer setSecurity(List<com.tools20022.repository.entity.Security> security) {
+		this.security = Objects.requireNonNull(security);
+		return this;
 	}
 
 	public SecuritiesTradeStatus getStatus() {
 		return status;
 	}
 
-	public void setStatus(com.tools20022.repository.entity.SecuritiesTradeStatus status) {
-		this.status = status;
+	public SecuritiesTransfer setStatus(com.tools20022.repository.entity.SecuritiesTradeStatus status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 }

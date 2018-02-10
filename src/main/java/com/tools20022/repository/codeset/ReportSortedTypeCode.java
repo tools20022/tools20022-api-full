@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ReportSortedTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of criterion is a country.
@@ -32,14 +37,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportSortedTypeCode#mmCountry
- * ReportSortedTypeCode.mmCountry}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportSortedTypeCode#Country
+ * ReportSortedTypeCode.Country}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ReportSortedTypeCode#Party
+ * ReportSortedTypeCode.Party}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportSortedTypeCode#mmParty
- * ReportSortedTypeCode.mmParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportSortedTypeCode#mmCurrency
- * ReportSortedTypeCode.mmCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportSortedTypeCode#Currency
+ * ReportSortedTypeCode.Currency}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of criterion is a country."</li>
  * </ul>
  */
-public class ReportSortedTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ReportSortedTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -94,12 +99,12 @@ public class ReportSortedTypeCode {
 	 * definition} = "Type of criterion is a nation."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCountry = new MMCode() {
+	public static final ReportSortedTypeCode Country = new ReportSortedTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Country";
 			definition = "Type of criterion is a nation.";
-			owner_lazy = () -> ReportSortedTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportSortedTypeCode.mmObject();
 			codeName = "COUN";
 		}
 	};
@@ -125,12 +130,12 @@ public class ReportSortedTypeCode {
 	 * "Type of criterion is an entity, eg, a financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmParty = new MMCode() {
+	public static final ReportSortedTypeCode Party = new ReportSortedTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Party";
 			definition = "Type of criterion is an entity, eg, a financial institution.";
-			owner_lazy = () -> ReportSortedTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportSortedTypeCode.mmObject();
 			codeName = "PART";
 		}
 	};
@@ -155,28 +160,59 @@ public class ReportSortedTypeCode {
 	 * definition} = "Type of criterion is a currency, eg, the euro."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrency = new MMCode() {
+	public static final ReportSortedTypeCode Currency = new ReportSortedTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
 			definition = "Type of criterion is a currency, eg, the euro.";
-			owner_lazy = () -> ReportSortedTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportSortedTypeCode.mmObject();
 			codeName = "CURR";
 		}
 	};
+	final static private LinkedHashMap<String, ReportSortedTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ReportSortedTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("COUN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportSortedTypeCode";
 				definition = "Type of criterion is a country.";
-				code_lazy = () -> Arrays.asList(ReportSortedTypeCode.mmCountry, ReportSortedTypeCode.mmParty, ReportSortedTypeCode.mmCurrency);
 				derivation_lazy = () -> Arrays.asList(ReportSortedType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportSortedTypeCode.Country, com.tools20022.repository.codeset.ReportSortedTypeCode.Party, com.tools20022.repository.codeset.ReportSortedTypeCode.Currency);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Country.getCodeName().get(), Country);
+		codesByName.put(Party.getCodeName().get(), Party);
+		codesByName.put(Currency.getCodeName().get(), Currency);
+	}
+
+	public static ReportSortedTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ReportSortedTypeCode[] values() {
+		ReportSortedTypeCode[] values = new ReportSortedTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ReportSortedTypeCode> {
+		@Override
+		public ReportSortedTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ReportSortedTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

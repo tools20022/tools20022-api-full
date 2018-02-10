@@ -17,34 +17,42 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SideCode;
+import com.tools20022.repository.codeset.OrderDriverCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies if the order is sell or buy driven.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SideCode SideCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderDriverCode#mmBuy
- * OrderDriverCode.mmBuy}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderDriverCode#mmSell
- * OrderDriverCode.mmSell}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderDriverCode#Buy
+ * OrderDriverCode.Buy}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderDriverCode#Sell
+ * OrderDriverCode.Sell}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SideCode SideCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = ISO15022Synonym: :22F::BUSE</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -61,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies if the order is sell or buy driven."</li>
  * </ul>
  */
-public class OrderDriverCode extends SideCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OrderDriverCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,11 +89,12 @@ public class OrderDriverCode extends SideCode {
 	 * name} = "Buy"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBuy = new MMCode() {
+	public static final OrderDriverCode Buy = new OrderDriverCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buy";
-			owner_lazy = () -> OrderDriverCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderDriverCode.mmObject();
+			codeName = SideCode.Buy.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -103,26 +113,58 @@ public class OrderDriverCode extends SideCode {
 	 * name} = "Sell"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSell = new MMCode() {
+	public static final OrderDriverCode Sell = new OrderDriverCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sell";
-			owner_lazy = () -> OrderDriverCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderDriverCode.mmObject();
+			codeName = SideCode.Sell.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OrderDriverCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OrderDriverCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::BUSE"));
 				example = Arrays.asList("BUYI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderDriverCode";
 				definition = "Specifies if the order is sell or buy driven.";
-				code_lazy = () -> Arrays.asList(OrderDriverCode.mmBuy, OrderDriverCode.mmSell);
 				trace_lazy = () -> SideCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderDriverCode.Buy, com.tools20022.repository.codeset.OrderDriverCode.Sell);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Buy.getCodeName().get(), Buy);
+		codesByName.put(Sell.getCodeName().get(), Sell);
+	}
+
+	public static OrderDriverCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OrderDriverCode[] values() {
+		OrderDriverCode[] values = new OrderDriverCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OrderDriverCode> {
+		@Override
+		public OrderDriverCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OrderDriverCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

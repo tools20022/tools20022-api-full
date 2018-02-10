@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.QueryType1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,16 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the query criteria."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MemberQueryDefinition", propOrder = {"queryType", "memberCriteria"})
 public class MemberQueryDefinition {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QryTp")
 	protected QueryType1Code queryType;
 	/**
-	 * Specifies if all matching items or only the new matching items since the
-	 * latest query are returned.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +103,7 @@ public class MemberQueryDefinition {
 	 */
 	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MemberQueryDefinition.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MemberQueryDefinition.mmObject();
 			isDerived = false;
 			xmlTag = "QryTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +114,11 @@ public class MemberQueryDefinition {
 			simpleType_lazy = () -> QueryType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MmbCrit")
 	protected MemberCriteriaDefinitionChoice memberCriteria;
 	/**
-	 * Defines the member query criteria.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -143,7 +145,7 @@ public class MemberQueryDefinition {
 	 */
 	public static final MMMessageAssociationEnd mmMemberCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MemberQueryDefinition.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MemberQueryDefinition.mmObject();
 			isDerived = false;
 			xmlTag = "MmbCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,8 +161,8 @@ public class MemberQueryDefinition {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MemberQueryDefinition.mmQueryType, MemberQueryDefinition.mmMemberCriteria);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberQueryDefinition.mmQueryType, com.tools20022.repository.msg.MemberQueryDefinition.mmMemberCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberQueryDefinition";
 				definition = "Defines the query criteria.";
@@ -169,21 +171,21 @@ public class MemberQueryDefinition {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QryTp")
-	public QueryType1Code getQueryType() {
-		return queryType;
+	public Optional<QueryType1Code> getQueryType() {
+		return queryType == null ? Optional.empty() : Optional.of(queryType);
 	}
 
-	public void setQueryType(QueryType1Code queryType) {
+	public MemberQueryDefinition setQueryType(QueryType1Code queryType) {
 		this.queryType = queryType;
+		return this;
 	}
 
-	@XmlElement(name = "MmbCrit")
-	public MemberCriteriaDefinitionChoice getMemberCriteria() {
-		return memberCriteria;
+	public Optional<MemberCriteriaDefinitionChoice> getMemberCriteria() {
+		return memberCriteria == null ? Optional.empty() : Optional.of(memberCriteria);
 	}
 
-	public void setMemberCriteria(MemberCriteriaDefinitionChoice memberCriteria) {
+	public MemberQueryDefinition setMemberCriteria(MemberCriteriaDefinitionChoice memberCriteria) {
 		this.memberCriteria = memberCriteria;
+		return this;
 	}
 }

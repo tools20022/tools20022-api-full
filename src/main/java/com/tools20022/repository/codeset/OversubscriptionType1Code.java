@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OversubscriptionTypeCode;
+import com.tools20022.repository.codeset.OversubscriptionType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the oversubscription type.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.OversubscriptionTypeCode
- * OversubscriptionTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OversubscriptionType1Code#mmUnlimited
- * OversubscriptionType1Code.mmUnlimited}</li>
+ * {@linkplain com.tools20022.repository.codeset.OversubscriptionType1Code#Unlimited
+ * OversubscriptionType1Code.Unlimited}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OversubscriptionType1Code#mmLimitedByQuantityOrPercentage
- * OversubscriptionType1Code.mmLimitedByQuantityOrPercentage}</li>
+ * {@linkplain com.tools20022.repository.codeset.OversubscriptionType1Code#LimitedByQuantityOrPercentage
+ * OversubscriptionType1Code.LimitedByQuantityOrPercentage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OversubscriptionType1Code#mmNoOversubscription
- * OversubscriptionType1Code.mmNoOversubscription}</li>
+ * {@linkplain com.tools20022.repository.codeset.OversubscriptionType1Code#NoOversubscription
+ * OversubscriptionType1Code.NoOversubscription}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.OversubscriptionTypeCode
+ * OversubscriptionTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the oversubscription type."</li>
  * </ul>
  */
-public class OversubscriptionType1Code extends OversubscriptionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OversubscriptionType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class OversubscriptionType1Code extends OversubscriptionTypeCode {
 	 * name} = "Unlimited"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnlimited = new MMCode() {
+	public static final OversubscriptionType1Code Unlimited = new OversubscriptionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unlimited";
-			owner_lazy = () -> OversubscriptionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OversubscriptionType1Code.mmObject();
+			codeName = OversubscriptionTypeCode.Unlimited.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class OversubscriptionType1Code extends OversubscriptionTypeCode {
 	 * name} = "LimitedByQuantityOrPercentage"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLimitedByQuantityOrPercentage = new MMCode() {
+	public static final OversubscriptionType1Code LimitedByQuantityOrPercentage = new OversubscriptionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedByQuantityOrPercentage";
-			owner_lazy = () -> OversubscriptionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OversubscriptionType1Code.mmObject();
+			codeName = OversubscriptionTypeCode.LimitedByQuantityOrPercentage.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class OversubscriptionType1Code extends OversubscriptionTypeCode {
 	 * name} = "NoOversubscription"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoOversubscription = new MMCode() {
+	public static final OversubscriptionType1Code NoOversubscription = new OversubscriptionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoOversubscription";
-			owner_lazy = () -> OversubscriptionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OversubscriptionType1Code.mmObject();
+			codeName = OversubscriptionTypeCode.NoOversubscription.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OversubscriptionType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OversubscriptionType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("UNLD");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OversubscriptionType1Code";
 				definition = "Specifies the oversubscription type.";
-				code_lazy = () -> Arrays.asList(OversubscriptionType1Code.mmUnlimited, OversubscriptionType1Code.mmLimitedByQuantityOrPercentage, OversubscriptionType1Code.mmNoOversubscription);
 				trace_lazy = () -> OversubscriptionTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OversubscriptionType1Code.Unlimited, com.tools20022.repository.codeset.OversubscriptionType1Code.LimitedByQuantityOrPercentage,
+						com.tools20022.repository.codeset.OversubscriptionType1Code.NoOversubscription);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Unlimited.getCodeName().get(), Unlimited);
+		codesByName.put(LimitedByQuantityOrPercentage.getCodeName().get(), LimitedByQuantityOrPercentage);
+		codesByName.put(NoOversubscription.getCodeName().get(), NoOversubscription);
+	}
+
+	public static OversubscriptionType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OversubscriptionType1Code[] values() {
+		OversubscriptionType1Code[] values = new OversubscriptionType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OversubscriptionType1Code> {
+		@Override
+		public OversubscriptionType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OversubscriptionType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

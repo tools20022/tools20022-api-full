@@ -20,33 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.FrequencyCode;
+import com.tools20022.repository.codeset.Frequency4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Period unit between consecutive payments (for example day, month, year).
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.FrequencyCode FrequencyCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Frequency4Code#mmDaily
- * Frequency4Code.mmDaily}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Frequency4Code#mmMonthly
- * Frequency4Code.mmMonthly}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Frequency4Code#mmAnnual
- * Frequency4Code.mmAnnual}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Frequency4Code#Daily
+ * Frequency4Code.Daily}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Frequency4Code#Monthly
+ * Frequency4Code.Monthly}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Frequency4Code#Annual
+ * Frequency4Code.Annual}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.FrequencyCode FrequencyCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Period unit between consecutive payments (for example day, month, year)."</li>
  * </ul>
  */
-public class Frequency4Code extends FrequencyCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Frequency4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class Frequency4Code extends FrequencyCode {
 	 * name} = "Daily"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDaily = new MMCode() {
+	public static final Frequency4Code Daily = new Frequency4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Daily";
-			owner_lazy = () -> Frequency4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Frequency4Code.mmObject();
+			codeName = FrequencyCode.Daily.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,11 +112,12 @@ public class Frequency4Code extends FrequencyCode {
 	 * name} = "Monthly"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMonthly = new MMCode() {
+	public static final Frequency4Code Monthly = new Frequency4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Monthly";
-			owner_lazy = () -> Frequency4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Frequency4Code.mmObject();
+			codeName = FrequencyCode.Monthly.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -129,26 +136,58 @@ public class Frequency4Code extends FrequencyCode {
 	 * name} = "Annual"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAnnual = new MMCode() {
+	public static final Frequency4Code Annual = new Frequency4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Annual";
-			owner_lazy = () -> Frequency4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Frequency4Code.mmObject();
+			codeName = FrequencyCode.Annual.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Frequency4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Frequency4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DAIL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Frequency4Code";
 				definition = "Period unit between consecutive payments (for example day, month, year).";
-				code_lazy = () -> Arrays.asList(Frequency4Code.mmDaily, Frequency4Code.mmMonthly, Frequency4Code.mmAnnual);
 				trace_lazy = () -> FrequencyCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Frequency4Code.Daily, com.tools20022.repository.codeset.Frequency4Code.Monthly, com.tools20022.repository.codeset.Frequency4Code.Annual);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Daily.getCodeName().get(), Daily);
+		codesByName.put(Monthly.getCodeName().get(), Monthly);
+		codesByName.put(Annual.getCodeName().get(), Annual);
+	}
+
+	public static Frequency4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Frequency4Code[] values() {
+		Frequency4Code[] values = new Frequency4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Frequency4Code> {
+		@Override
+		public Frequency4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Frequency4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

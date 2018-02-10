@@ -22,9 +22,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,16 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesInvalidReferenceDataReport3", propOrder = {"financialInstrument", "supplementaryData"})
 public class SecuritiesInvalidReferenceDataReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FinInstrm", required = true)
 	protected SecuritiesReferenceDataReport5 financialInstrument;
 	/**
-	 * Instrument details at the time this specific details on the financial
-	 * instrument was invalidated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -113,7 +115,7 @@ public class SecuritiesInvalidReferenceDataReport3 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesInvalidReferenceDataReport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesInvalidReferenceDataReport3.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,11 +127,11 @@ public class SecuritiesInvalidReferenceDataReport3 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmObject();
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -157,7 +159,7 @@ public class SecuritiesInvalidReferenceDataReport3 {
 	 */
 	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesInvalidReferenceDataReport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesInvalidReferenceDataReport3.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +174,9 @@ public class SecuritiesInvalidReferenceDataReport3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesInvalidReferenceDataReport3.mmFinancialInstrument, SecuritiesInvalidReferenceDataReport3.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesInvalidReferenceDataReport3.mmFinancialInstrument, com.tools20022.repository.msg.SecuritiesInvalidReferenceDataReport3.mmSupplementaryData);
 				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingInvalidReferenceDataReportV01.mmFinancialInstruments);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesInvalidReferenceDataReport3";
 				definition = "Reference data instruments that are no longer valid either through an instrument update or that have passed their termination date.";
@@ -183,21 +185,21 @@ public class SecuritiesInvalidReferenceDataReport3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FinInstrm", required = true)
 	public SecuritiesReferenceDataReport5 getFinancialInstrument() {
 		return financialInstrument;
 	}
 
-	public void setFinancialInstrument(com.tools20022.repository.msg.SecuritiesReferenceDataReport5 financialInstrument) {
-		this.financialInstrument = financialInstrument;
+	public SecuritiesInvalidReferenceDataReport3 setFinancialInstrument(com.tools20022.repository.msg.SecuritiesReferenceDataReport5 financialInstrument) {
+		this.financialInstrument = Objects.requireNonNull(financialInstrument);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecuritiesInvalidReferenceDataReport3 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 }

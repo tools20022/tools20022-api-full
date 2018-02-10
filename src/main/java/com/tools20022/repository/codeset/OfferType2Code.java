@@ -20,49 +20,52 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OfferTypeV2Code;
+import com.tools20022.repository.codeset.OfferType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the conditions that apply to the offer.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.OfferTypeV2Code
- * OfferTypeV2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OfferType2Code#mmDissenterRights
- * OfferType2Code.mmDissenterRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.OfferType2Code#DissenterRights
+ * OfferType2Code.DissenterRights}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OfferType2Code#FinalOffer
+ * OfferType2Code.FinalOffer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OfferType2Code#mmFinalOffer
- * OfferType2Code.mmFinalOffer}</li>
+ * {@linkplain com.tools20022.repository.codeset.OfferType2Code#FirstComeFirstServed
+ * OfferType2Code.FirstComeFirstServed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OfferType2Code#mmFirstComeFirstServed
- * OfferType2Code.mmFirstComeFirstServed}</li>
+ * {@linkplain com.tools20022.repository.codeset.OfferType2Code#MiniOddLotOffer
+ * OfferType2Code.MiniOddLotOffer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OfferType2Code#mmMiniOddLotOffer
- * OfferType2Code.mmMiniOddLotOffer}</li>
+ * {@linkplain com.tools20022.repository.codeset.OfferType2Code#PartialOffer
+ * OfferType2Code.PartialOffer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OfferType2Code#mmPartialOffer
- * OfferType2Code.mmPartialOffer}</li>
+ * {@linkplain com.tools20022.repository.codeset.OfferType2Code#RestrictionExchange
+ * OfferType2Code.RestrictionExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OfferType2Code#mmRestrictionExchange
- * OfferType2Code.mmRestrictionExchange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OfferType2Code#mmSqueezeOutBid
- * OfferType2Code.mmSqueezeOutBid}</li>
+ * {@linkplain com.tools20022.repository.codeset.OfferType2Code#SqueezeOutBid
+ * OfferType2Code.SqueezeOutBid}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.OfferTypeV2Code
+ * OfferTypeV2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the conditions that apply to the offer."</li>
  * </ul>
  */
-public class OfferType2Code extends OfferTypeV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OfferType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,11 +102,12 @@ public class OfferType2Code extends OfferTypeV2Code {
 	 * name} = "DissenterRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDissenterRights = new MMCode() {
+	public static final OfferType2Code DissenterRights = new OfferType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DissenterRights";
-			owner_lazy = () -> OfferType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OfferType2Code.mmObject();
+			codeName = OfferTypeV2Code.DissenterRights.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -121,11 +126,12 @@ public class OfferType2Code extends OfferTypeV2Code {
 	 * name} = "FinalOffer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinalOffer = new MMCode() {
+	public static final OfferType2Code FinalOffer = new OfferType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalOffer";
-			owner_lazy = () -> OfferType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OfferType2Code.mmObject();
+			codeName = OfferTypeV2Code.FinalOffer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -144,11 +150,12 @@ public class OfferType2Code extends OfferTypeV2Code {
 	 * name} = "FirstComeFirstServed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFirstComeFirstServed = new MMCode() {
+	public static final OfferType2Code FirstComeFirstServed = new OfferType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstComeFirstServed";
-			owner_lazy = () -> OfferType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OfferType2Code.mmObject();
+			codeName = OfferTypeV2Code.FirstComeFirstServed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -167,11 +174,12 @@ public class OfferType2Code extends OfferTypeV2Code {
 	 * name} = "MiniOddLotOffer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMiniOddLotOffer = new MMCode() {
+	public static final OfferType2Code MiniOddLotOffer = new OfferType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiniOddLotOffer";
-			owner_lazy = () -> OfferType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OfferType2Code.mmObject();
+			codeName = OfferTypeV2Code.MiniOddLotOffer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -190,11 +198,12 @@ public class OfferType2Code extends OfferTypeV2Code {
 	 * name} = "PartialOffer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialOffer = new MMCode() {
+	public static final OfferType2Code PartialOffer = new OfferType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialOffer";
-			owner_lazy = () -> OfferType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OfferType2Code.mmObject();
+			codeName = OfferTypeV2Code.PartialOffer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -213,11 +222,12 @@ public class OfferType2Code extends OfferTypeV2Code {
 	 * name} = "RestrictionExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRestrictionExchange = new MMCode() {
+	public static final OfferType2Code RestrictionExchange = new OfferType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionExchange";
-			owner_lazy = () -> OfferType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OfferType2Code.mmObject();
+			codeName = OfferTypeV2Code.RestrictionExchange.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -236,27 +246,64 @@ public class OfferType2Code extends OfferTypeV2Code {
 	 * name} = "SqueezeOutBid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSqueezeOutBid = new MMCode() {
+	public static final OfferType2Code SqueezeOutBid = new OfferType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SqueezeOutBid";
-			owner_lazy = () -> OfferType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OfferType2Code.mmObject();
+			codeName = OfferTypeV2Code.SqueezeOutBid.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OfferType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OfferType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DISS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OfferType2Code";
 				definition = "Specifies the conditions that apply to the offer.";
-				code_lazy = () -> Arrays.asList(OfferType2Code.mmDissenterRights, OfferType2Code.mmFinalOffer, OfferType2Code.mmFirstComeFirstServed, OfferType2Code.mmMiniOddLotOffer, OfferType2Code.mmPartialOffer,
-						OfferType2Code.mmRestrictionExchange, OfferType2Code.mmSqueezeOutBid);
 				trace_lazy = () -> OfferTypeV2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OfferType2Code.DissenterRights, com.tools20022.repository.codeset.OfferType2Code.FinalOffer,
+						com.tools20022.repository.codeset.OfferType2Code.FirstComeFirstServed, com.tools20022.repository.codeset.OfferType2Code.MiniOddLotOffer, com.tools20022.repository.codeset.OfferType2Code.PartialOffer,
+						com.tools20022.repository.codeset.OfferType2Code.RestrictionExchange, com.tools20022.repository.codeset.OfferType2Code.SqueezeOutBid);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(DissenterRights.getCodeName().get(), DissenterRights);
+		codesByName.put(FinalOffer.getCodeName().get(), FinalOffer);
+		codesByName.put(FirstComeFirstServed.getCodeName().get(), FirstComeFirstServed);
+		codesByName.put(MiniOddLotOffer.getCodeName().get(), MiniOddLotOffer);
+		codesByName.put(PartialOffer.getCodeName().get(), PartialOffer);
+		codesByName.put(RestrictionExchange.getCodeName().get(), RestrictionExchange);
+		codesByName.put(SqueezeOutBid.getCodeName().get(), SqueezeOutBid);
+	}
+
+	public static OfferType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OfferType2Code[] values() {
+		OfferType2Code[] values = new OfferType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OfferType2Code> {
+		@Override
+		public OfferType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OfferType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

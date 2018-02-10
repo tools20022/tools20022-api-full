@@ -30,6 +30,8 @@ import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -44,21 +46,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
- * TreasuryArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ForexNotificationsISOArchive
- * ForexNotificationsISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "FXOptnNtfctnV02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -80,6 +67,21 @@ import javax.xml.bind.annotation.*;
  * ForeignExchangeOptionNotificationV02.mmSettlementData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ForexNotificationsISOArchive
+ * ForexNotificationsISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "FXOptnNtfctnV02"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
+ * TreasuryArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code trea.012.001.02}</li>
@@ -95,16 +97,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ForeignExchangeOptionNotificationV02", propOrder = {"tradingSideIdentification", "counterpartySideIdentification", "optionData", "tradeStatus", "settlementData"})
 public class ForeignExchangeOptionNotificationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradgSdId", required = true)
 	protected TradePartyIdentification4 tradingSideIdentification;
 	/**
-	 * Specifies the trading side of the currency option trade which is
-	 * reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,11 +148,11 @@ public class ForeignExchangeOptionNotificationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CtrPtySdId", required = true)
 	protected TradePartyIdentification4 counterpartySideIdentification;
 	/**
-	 * Specifies the counterparty of the non deliverable trade which is
-	 * reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,10 +194,11 @@ public class ForeignExchangeOptionNotificationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "OptnData", required = true)
 	protected OptionData2 optionData;
 	/**
-	 * Provides information on the conditions of the option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,10 +237,11 @@ public class ForeignExchangeOptionNotificationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "TradSts", required = true)
 	protected TradeStatus1 tradeStatus;
 	/**
-	 * Provides information on the status of a trade in a settlement system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -277,10 +281,11 @@ public class ForeignExchangeOptionNotificationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SttlmData")
 	protected SettlementData2 settlementData;
 	/**
-	 * Provides information on the settlement of a trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -351,52 +356,52 @@ public class ForeignExchangeOptionNotificationV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradgSdId", required = true)
 	public TradePartyIdentification4 getTradingSideIdentification() {
 		return tradingSideIdentification;
 	}
 
-	public void setTradingSideIdentification(TradePartyIdentification4 tradingSideIdentification) {
-		this.tradingSideIdentification = tradingSideIdentification;
+	public ForeignExchangeOptionNotificationV02 setTradingSideIdentification(TradePartyIdentification4 tradingSideIdentification) {
+		this.tradingSideIdentification = Objects.requireNonNull(tradingSideIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CtrPtySdId", required = true)
 	public TradePartyIdentification4 getCounterpartySideIdentification() {
 		return counterpartySideIdentification;
 	}
 
-	public void setCounterpartySideIdentification(TradePartyIdentification4 counterpartySideIdentification) {
-		this.counterpartySideIdentification = counterpartySideIdentification;
+	public ForeignExchangeOptionNotificationV02 setCounterpartySideIdentification(TradePartyIdentification4 counterpartySideIdentification) {
+		this.counterpartySideIdentification = Objects.requireNonNull(counterpartySideIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OptnData", required = true)
 	public OptionData2 getOptionData() {
 		return optionData;
 	}
 
-	public void setOptionData(OptionData2 optionData) {
-		this.optionData = optionData;
+	public ForeignExchangeOptionNotificationV02 setOptionData(OptionData2 optionData) {
+		this.optionData = Objects.requireNonNull(optionData);
+		return this;
 	}
 
-	@XmlElement(name = "TradSts", required = true)
 	public TradeStatus1 getTradeStatus() {
 		return tradeStatus;
 	}
 
-	public void setTradeStatus(TradeStatus1 tradeStatus) {
-		this.tradeStatus = tradeStatus;
+	public ForeignExchangeOptionNotificationV02 setTradeStatus(TradeStatus1 tradeStatus) {
+		this.tradeStatus = Objects.requireNonNull(tradeStatus);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmData")
-	public SettlementData2 getSettlementData() {
-		return settlementData;
+	public Optional<SettlementData2> getSettlementData() {
+		return settlementData == null ? Optional.empty() : Optional.of(settlementData);
 	}
 
-	public void setSettlementData(SettlementData2 settlementData) {
+	public ForeignExchangeOptionNotificationV02 setSettlementData(SettlementData2 settlementData) {
 		this.settlementData = settlementData;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:trea.012.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:trea.012.001.02")
 	static public class Document {
 		@XmlElement(name = "FXOptnNtfctnV02", required = true)
 		public ForeignExchangeOptionNotificationV02 messageBody;

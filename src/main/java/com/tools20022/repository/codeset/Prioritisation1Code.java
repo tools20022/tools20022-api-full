@@ -20,36 +20,40 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PrioritisationCode;
+import com.tools20022.repository.codeset.Prioritisation1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates if one side or the other of a cross order should be prioritized.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Prioritisation1Code#None
+ * Prioritisation1Code.None}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Prioritisation1Code#BuySide
+ * Prioritisation1Code.BuySide}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Prioritisation1Code#SellSide
+ * Prioritisation1Code.SellSide}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.PrioritisationCode
  * PrioritisationCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Prioritisation1Code#mmNone
- * Prioritisation1Code.mmNone}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Prioritisation1Code#mmBuySide
- * Prioritisation1Code.mmBuySide}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Prioritisation1Code#mmSellSide
- * Prioritisation1Code.mmSellSide}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Indicates if one side or the other of a cross order should be prioritized."</li>
  * </ul>
  */
-public class Prioritisation1Code extends PrioritisationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Prioritisation1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class Prioritisation1Code extends PrioritisationCode {
 	 * name} = "None"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNone = new MMCode() {
+	public static final Prioritisation1Code None = new Prioritisation1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
-			owner_lazy = () -> Prioritisation1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Prioritisation1Code.mmObject();
+			codeName = PrioritisationCode.None.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class Prioritisation1Code extends PrioritisationCode {
 	 * name} = "BuySide"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBuySide = new MMCode() {
+	public static final Prioritisation1Code BuySide = new Prioritisation1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuySide";
-			owner_lazy = () -> Prioritisation1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Prioritisation1Code.mmObject();
+			codeName = PrioritisationCode.BuySide.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,58 @@ public class Prioritisation1Code extends PrioritisationCode {
 	 * name} = "SellSide"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSellSide = new MMCode() {
+	public static final Prioritisation1Code SellSide = new Prioritisation1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellSide";
-			owner_lazy = () -> Prioritisation1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Prioritisation1Code.mmObject();
+			codeName = PrioritisationCode.SellSide.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Prioritisation1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Prioritisation1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NONE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Prioritisation1Code";
 				definition = "Indicates if one side or the other of a cross order should be prioritized.";
-				code_lazy = () -> Arrays.asList(Prioritisation1Code.mmNone, Prioritisation1Code.mmBuySide, Prioritisation1Code.mmSellSide);
 				trace_lazy = () -> PrioritisationCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Prioritisation1Code.None, com.tools20022.repository.codeset.Prioritisation1Code.BuySide, com.tools20022.repository.codeset.Prioritisation1Code.SellSide);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(None.getCodeName().get(), None);
+		codesByName.put(BuySide.getCodeName().get(), BuySide);
+		codesByName.put(SellSide.getCodeName().get(), SellSide);
+	}
+
+	public static Prioritisation1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Prioritisation1Code[] values() {
+		Prioritisation1Code[] values = new Prioritisation1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Prioritisation1Code> {
+		@Override
+		public Prioritisation1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Prioritisation1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

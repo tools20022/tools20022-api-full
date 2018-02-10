@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification25;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,16 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ElectionTypeFormat2Choice", propOrder = {"code", "proprietary"})
 public class ElectionTypeFormat2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected ElectionMovementType2Code code;
 	/**
-	 * Standard code to specify the effect on the holdings of electing a
-	 * corporate action option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +113,7 @@ public class ElectionTypeFormat2Choice {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionElection.mmElectionType;
-			componentContext_lazy = () -> ElectionTypeFormat2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ElectionTypeFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,11 +124,11 @@ public class ElectionTypeFormat2Choice {
 			simpleType_lazy = () -> ElectionMovementType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification25 proprietary;
 	/**
-	 * Proprietary identification of the type of election of a corporate action
-	 * option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -162,7 +163,7 @@ public class ElectionTypeFormat2Choice {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionElection.mmElectionType;
-			componentContext_lazy = () -> ElectionTypeFormat2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ElectionTypeFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,8 +179,8 @@ public class ElectionTypeFormat2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ElectionTypeFormat2Choice.mmCode, ElectionTypeFormat2Choice.mmProprietary);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ElectionTypeFormat2Choice.mmCode, com.tools20022.repository.choice.ElectionTypeFormat2Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ElectionTypeFormat2Choice";
 				definition = "Choice between a standard code or proprietary code to specify the type of election movement.";
@@ -188,21 +189,21 @@ public class ElectionTypeFormat2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public ElectionMovementType2Code getCode() {
 		return code;
 	}
 
-	public void setCode(ElectionMovementType2Code code) {
-		this.code = code;
+	public ElectionTypeFormat2Choice setCode(ElectionMovementType2Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification25 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification25 proprietary) {
-		this.proprietary = proprietary;
+	public ElectionTypeFormat2Choice setProprietary(GenericIdentification25 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

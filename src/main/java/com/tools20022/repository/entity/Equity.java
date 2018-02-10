@@ -34,6 +34,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Financial instrument that represents a title of ownership in a company. That
@@ -50,6 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -67,15 +70,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Equity.mmVotingRightsPerShare}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Equity1 Equity1}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -88,10 +82,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Equity1 Equity1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -109,11 +110,8 @@ public class Equity extends Security {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected PreferenceToIncomeCode preferenceToIncome;
 	/**
-	 * Indicates the level of priority to claim on income and assets of the
-	 * company in case of the payment of dividends and in the event of a
-	 * bankruptcy, for example, ordinary/common stocks, preferred stocks,
-	 * subordinated debt, etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,8 +213,8 @@ public class Equity extends Security {
 							FinancialInstrumentAttributes27.mmPreferenceToIncome, FinancialInstrumentAttributes14.mmPreferenceToIncome, FinancialInstrumentAttributes30.mmPreferenceToIncome,
 							FinancialInstrumentAttributes28.mmPreferenceToIncome, Equity1.mmPreferenceToIncome, FinancialInstrumentAttributes15.mmPreferenceToIncome, FinancialInstrumentAttributes29.mmPreferenceToIncome,
 							Equity2.mmPreferenceToIncome, FinancialInstrumentAttributes2.mmPreferenceToIncome);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Equity.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Equity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreferenceToIncome";
 			definition = "Indicates the  level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc.";
@@ -235,8 +233,8 @@ public class Equity extends Security {
 	};
 	protected YesNoIndicator convertibleIndicator;
 	/**
-	 * Indicates whether the investor or the issuer has a conversion option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -271,8 +269,8 @@ public class Equity extends Security {
 	public static final MMBusinessAttribute mmConvertibleIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Equity1.mmConvertibleIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Equity.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Equity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConvertibleIndicator";
 			definition = "Indicates whether the investor or the issuer has a conversion option.";
@@ -291,8 +289,8 @@ public class Equity extends Security {
 	};
 	protected CurrencyAndAmount nonPaidAmount;
 	/**
-	 * Nominal amount which is not paid yet.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -327,8 +325,8 @@ public class Equity extends Security {
 	public static final MMBusinessAttribute mmNonPaidAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Equity1.mmNonPaidAmount, Equity2.mmNonPaidAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Equity.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Equity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonPaidAmount";
 			definition = "Nominal amount which is not paid yet.";
@@ -347,8 +345,8 @@ public class Equity extends Security {
 	};
 	protected CurrencyAndAmount parValue;
 	/**
-	 * Nominal value of an equity security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -383,8 +381,8 @@ public class Equity extends Security {
 	public static final MMBusinessAttribute mmParValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Equity1.mmParValue, Equity2.mmParValue);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Equity.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Equity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ParValue";
 			definition = "Nominal value of an equity security.";
@@ -403,8 +401,8 @@ public class Equity extends Security {
 	};
 	protected Number votingRightsPerShare;
 	/**
-	 * Number of voting rights per share.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -440,8 +438,8 @@ public class Equity extends Security {
 	public static final MMBusinessAttribute mmVotingRightsPerShare = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Equity1.mmVotingRightsPerShare, Equity2.mmVotingRightsPerShare);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Equity.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Equity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VotingRightsPerShare";
 			definition = "Number of voting rights per share.";
@@ -462,7 +460,7 @@ public class Equity extends Security {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Equity";
 				definition = "Financial instrument that represents a title of ownership in a company. That is, the shareholder is entitled to a part of the company's profit - usually by payment of a dividend - and to voting rights, if any. Each company issues generally different classes of shares, for example, ordinary or common shares, which have no guaranteed amount of dividend but carry voting rights, or preferred shares, which receive dividends before ordinary shares but have no voting right.";
@@ -485,39 +483,44 @@ public class Equity extends Security {
 		return preferenceToIncome;
 	}
 
-	public void setPreferenceToIncome(PreferenceToIncomeCode preferenceToIncome) {
-		this.preferenceToIncome = preferenceToIncome;
+	public Equity setPreferenceToIncome(PreferenceToIncomeCode preferenceToIncome) {
+		this.preferenceToIncome = Objects.requireNonNull(preferenceToIncome);
+		return this;
 	}
 
 	public YesNoIndicator getConvertibleIndicator() {
 		return convertibleIndicator;
 	}
 
-	public void setConvertibleIndicator(YesNoIndicator convertibleIndicator) {
-		this.convertibleIndicator = convertibleIndicator;
+	public Equity setConvertibleIndicator(YesNoIndicator convertibleIndicator) {
+		this.convertibleIndicator = Objects.requireNonNull(convertibleIndicator);
+		return this;
 	}
 
 	public CurrencyAndAmount getNonPaidAmount() {
 		return nonPaidAmount;
 	}
 
-	public void setNonPaidAmount(CurrencyAndAmount nonPaidAmount) {
-		this.nonPaidAmount = nonPaidAmount;
+	public Equity setNonPaidAmount(CurrencyAndAmount nonPaidAmount) {
+		this.nonPaidAmount = Objects.requireNonNull(nonPaidAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getParValue() {
 		return parValue;
 	}
 
-	public void setParValue(CurrencyAndAmount parValue) {
-		this.parValue = parValue;
+	public Equity setParValue(CurrencyAndAmount parValue) {
+		this.parValue = Objects.requireNonNull(parValue);
+		return this;
 	}
 
 	public Number getVotingRightsPerShare() {
 		return votingRightsPerShare;
 	}
 
-	public void setVotingRightsPerShare(Number votingRightsPerShare) {
-		this.votingRightsPerShare = votingRightsPerShare;
+	public Equity setVotingRightsPerShare(Number votingRightsPerShare) {
+		this.votingRightsPerShare = Objects.requireNonNull(votingRightsPerShare);
+		return this;
 	}
 }

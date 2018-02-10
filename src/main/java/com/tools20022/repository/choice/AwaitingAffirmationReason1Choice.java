@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification38;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of format for the Awaiting Affirmation reason."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AwaitingAffirmationReason1Choice", propOrder = {"code", "proprietary"})
 public class AwaitingAffirmationReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected AwaitingAffirmationReason1Code code;
 	/**
-	 * Specifies the reason why the instruction has been alleged.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class AwaitingAffirmationReason1Choice {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> AwaitingAffirmationReason1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AwaitingAffirmationReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class AwaitingAffirmationReason1Choice {
 			simpleType_lazy = () -> AwaitingAffirmationReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification38 proprietary;
 	/**
-	 * Specifies the reason why the instruction has been alleged.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +163,7 @@ public class AwaitingAffirmationReason1Choice {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> AwaitingAffirmationReason1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AwaitingAffirmationReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,9 +178,9 @@ public class AwaitingAffirmationReason1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AwaitingAffirmationReason1Choice.mmCode, AwaitingAffirmationReason1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AwaitingAffirmationReason1Choice.mmCode, com.tools20022.repository.choice.AwaitingAffirmationReason1Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AwaitingAffirmationReason1Choice";
 				definition = "Choice of format for the Awaiting Affirmation reason.";
@@ -186,21 +189,21 @@ public class AwaitingAffirmationReason1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public AwaitingAffirmationReason1Code getCode() {
 		return code;
 	}
 
-	public void setCode(AwaitingAffirmationReason1Code code) {
-		this.code = code;
+	public AwaitingAffirmationReason1Choice setCode(AwaitingAffirmationReason1Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification38 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification38 proprietary) {
-		this.proprietary = proprietary;
+	public AwaitingAffirmationReason1Choice setProprietary(GenericIdentification38 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

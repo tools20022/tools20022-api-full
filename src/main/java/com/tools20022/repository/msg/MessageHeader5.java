@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,17 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MessageHeader5", propOrder = {"messageIdentification", "creationDateTime", "messagePagination", "originalBusinessQuery", "requestType", "queryName"})
 public class MessageHeader5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected Max35Text messageIdentification;
 	/**
-	 * Point to point reference, as assigned by the sender, to unambiguously
-	 * identify the message. Usage: The sender has to make sure that
-	 * MessageIdentification is unique for a pre-agreed period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +116,7 @@ public class MessageHeader5 {
 	 */
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MessageHeader5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageHeader5.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +127,11 @@ public class MessageHeader5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm")
 	protected ISODateTime creationDateTime;
 	/**
-	 * Date and time at which the message was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +157,7 @@ public class MessageHeader5 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MessageHeader5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageHeader5.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,11 +168,11 @@ public class MessageHeader5 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgPgntn")
 	protected Pagination messagePagination;
 	/**
-	 * Pagination of the message. Usage: the pagination of the message is only
-	 * allowed when agreed between the parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,7 +200,7 @@ public class MessageHeader5 {
 	 */
 	public static final MMMessageAttribute mmMessagePagination = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MessageHeader5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageHeader5.mmObject();
 			isDerived = false;
 			xmlTag = "MsgPgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,10 +211,11 @@ public class MessageHeader5 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlBizQry")
 	protected OriginalBusinessQuery1 originalBusinessQuery;
 	/**
-	 * Unique identification of the original query message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -237,7 +240,7 @@ public class MessageHeader5 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalBusinessQuery = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MessageHeader5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageHeader5.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlBizQry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -249,10 +252,11 @@ public class MessageHeader5 {
 			type_lazy = () -> com.tools20022.repository.msg.OriginalBusinessQuery1.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqTp")
 	protected RequestType2Choice requestType;
 	/**
-	 * Specific actions to be executed through the request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -279,7 +283,7 @@ public class MessageHeader5 {
 	 */
 	public static final MMMessageAttribute mmRequestType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MessageHeader5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageHeader5.mmObject();
 			isDerived = false;
 			xmlTag = "ReqTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -290,11 +294,11 @@ public class MessageHeader5 {
 			complexType_lazy = () -> RequestType2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "QryNm")
 	protected Max35Text queryName;
 	/**
-	 * Recalls the criteria (search and return criteria) defined in a preceding
-	 * query.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -322,7 +326,7 @@ public class MessageHeader5 {
 	 */
 	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MessageHeader5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageHeader5.mmObject();
 			isDerived = false;
 			xmlTag = "QryNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -337,9 +341,10 @@ public class MessageHeader5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MessageHeader5.mmMessageIdentification, MessageHeader5.mmCreationDateTime, MessageHeader5.mmMessagePagination, MessageHeader5.mmOriginalBusinessQuery, MessageHeader5.mmRequestType,
-						MessageHeader5.mmQueryName);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageHeader5.mmMessageIdentification, com.tools20022.repository.msg.MessageHeader5.mmCreationDateTime,
+						com.tools20022.repository.msg.MessageHeader5.mmMessagePagination, com.tools20022.repository.msg.MessageHeader5.mmOriginalBusinessQuery, com.tools20022.repository.msg.MessageHeader5.mmRequestType,
+						com.tools20022.repository.msg.MessageHeader5.mmQueryName);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageHeader5";
 				definition = "Set of characteristics, such as the identification or the creation date and time, specific to the message.";
@@ -348,57 +353,57 @@ public class MessageHeader5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(Max35Text messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public MessageHeader5 setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm")
-	public ISODateTime getCreationDateTime() {
-		return creationDateTime;
+	public Optional<ISODateTime> getCreationDateTime() {
+		return creationDateTime == null ? Optional.empty() : Optional.of(creationDateTime);
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
+	public MessageHeader5 setCreationDateTime(ISODateTime creationDateTime) {
 		this.creationDateTime = creationDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "MsgPgntn")
-	public Pagination getMessagePagination() {
-		return messagePagination;
+	public Optional<Pagination> getMessagePagination() {
+		return messagePagination == null ? Optional.empty() : Optional.of(messagePagination);
 	}
 
-	public void setMessagePagination(com.tools20022.repository.msg.Pagination messagePagination) {
+	public MessageHeader5 setMessagePagination(com.tools20022.repository.msg.Pagination messagePagination) {
 		this.messagePagination = messagePagination;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlBizQry")
-	public OriginalBusinessQuery1 getOriginalBusinessQuery() {
-		return originalBusinessQuery;
+	public Optional<OriginalBusinessQuery1> getOriginalBusinessQuery() {
+		return originalBusinessQuery == null ? Optional.empty() : Optional.of(originalBusinessQuery);
 	}
 
-	public void setOriginalBusinessQuery(com.tools20022.repository.msg.OriginalBusinessQuery1 originalBusinessQuery) {
+	public MessageHeader5 setOriginalBusinessQuery(com.tools20022.repository.msg.OriginalBusinessQuery1 originalBusinessQuery) {
 		this.originalBusinessQuery = originalBusinessQuery;
+		return this;
 	}
 
-	@XmlElement(name = "ReqTp")
-	public RequestType2Choice getRequestType() {
-		return requestType;
+	public Optional<RequestType2Choice> getRequestType() {
+		return requestType == null ? Optional.empty() : Optional.of(requestType);
 	}
 
-	public void setRequestType(RequestType2Choice requestType) {
+	public MessageHeader5 setRequestType(RequestType2Choice requestType) {
 		this.requestType = requestType;
+		return this;
 	}
 
-	@XmlElement(name = "QryNm")
-	public Max35Text getQueryName() {
-		return queryName;
+	public Optional<Max35Text> getQueryName() {
+		return queryName == null ? Optional.empty() : Optional.of(queryName);
 	}
 
-	public void setQueryName(Max35Text queryName) {
+	public MessageHeader5 setQueryName(Max35Text queryName) {
 		this.queryName = queryName;
+		return this;
 	}
 }

@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -41,10 +42,15 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AdministrationLatestVersion
- * AdministrationLatestVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.admi.SystemEventNotificationV02#mmEventInformation
+ * SystemEventNotificationV02.mmEventInformation}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
@@ -56,19 +62,14 @@ import javax.xml.bind.annotation.*;
  * PostTradeForeignExchangeMaintenance20162017andSupplement}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SysEvtNtfctn"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
  * rootElement} = "Document"</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
- * messageBuildingBlock} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.area.admi.SystemEventNotificationV02#mmEventInformation
- * SystemEventNotificationV02.mmEventInformation}</li>
- * </ul>
- * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SysEvtNtfctn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AdministrationLatestVersion
+ * AdministrationLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code admi.004.001.02}</li>
@@ -84,15 +85,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SystemEventNotificationV02", propOrder = "eventInformation")
 public class SystemEventNotificationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "EvtInf", required = true)
 	protected Event2 eventInformation;
 	/**
-	 * Detailed information about a system event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,16 +162,16 @@ public class SystemEventNotificationV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "EvtInf", required = true)
 	public Event2 getEventInformation() {
 		return eventInformation;
 	}
 
-	public void setEventInformation(Event2 eventInformation) {
-		this.eventInformation = eventInformation;
+	public SystemEventNotificationV02 setEventInformation(Event2 eventInformation) {
+		this.eventInformation = Objects.requireNonNull(eventInformation);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:admi.004.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:admi.004.001.02")
 	static public class Document {
 		@XmlElement(name = "SysEvtNtfctn", required = true)
 		public SystemEventNotificationV02 messageBody;

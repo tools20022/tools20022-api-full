@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.TransferIn7;
 import com.tools20022.repository.msg.TransferReference1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,15 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * Cancellation1Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Cancellation2Choice", propOrder = {"reference", "transferInDetails"})
 public class Cancellation2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ref", required = true)
 	protected TransferReference1 reference;
 	/**
-	 * Reference of the transfer to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +141,7 @@ public class Cancellation2Choice {
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
-			componentContext_lazy = () -> Cancellation2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Cancellation2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,10 +153,11 @@ public class Cancellation2Choice {
 			complexType_lazy = () -> TransferReference1.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfInDtls", required = true)
 	protected TransferIn7 transferInDetails;
 	/**
-	 * Details of the transfer in request to cancel.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,7 +198,7 @@ public class Cancellation2Choice {
 	public static final MMMessageAttribute mmTransferInDetails = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlement.mmObject();
-			componentContext_lazy = () -> Cancellation2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Cancellation2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TrfInDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,10 +214,10 @@ public class Cancellation2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Cancellation2Choice.mmReference, Cancellation2Choice.mmTransferInDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Cancellation2Choice.mmReference, com.tools20022.repository.choice.Cancellation2Choice.mmTransferInDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInCancellationRequestV04.mmCancellation);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Cancellation2Choice";
 				definition = "Choice between cancellation by reference or by transfer details.";
@@ -225,21 +228,21 @@ public class Cancellation2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ref", required = true)
 	public TransferReference1 getReference() {
 		return reference;
 	}
 
-	public void setReference(TransferReference1 reference) {
-		this.reference = reference;
+	public Cancellation2Choice setReference(TransferReference1 reference) {
+		this.reference = Objects.requireNonNull(reference);
+		return this;
 	}
 
-	@XmlElement(name = "TrfInDtls", required = true)
 	public TransferIn7 getTransferInDetails() {
 		return transferInDetails;
 	}
 
-	public void setTransferInDetails(TransferIn7 transferInDetails) {
-		this.transferInDetails = transferInDetails;
+	public Cancellation2Choice setTransferInDetails(TransferIn7 transferInDetails) {
+		this.transferInDetails = Objects.requireNonNull(transferInDetails);
+		return this;
 	}
 }

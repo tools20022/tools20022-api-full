@@ -17,12 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.QuoteTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies the type of quote. Can be either an indicative, a tradeable or a
@@ -32,15 +38,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.QuoteTypeCode#mmIndicative
- * QuoteTypeCode.mmIndicative}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QuoteTypeCode#mmTradeable
- * QuoteTypeCode.mmTradeable}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QuoteTypeCode#Indicative
+ * QuoteTypeCode.Indicative}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QuoteTypeCode#Tradeable
+ * QuoteTypeCode.Tradeable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteTypeCode#mmRestrictedTradeable
- * QuoteTypeCode.mmRestrictedTradeable}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QuoteTypeCode#mmCounter
- * QuoteTypeCode.mmCounter}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteTypeCode#RestrictedTradeable
+ * QuoteTypeCode.RestrictedTradeable}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QuoteTypeCode#Counter
+ * QuoteTypeCode.Counter}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +59,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = FIXSynonym: 537</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class QuoteTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class QuoteTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,6 +100,9 @@ public class QuoteTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "INDI"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 537 value 0</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -102,12 +115,13 @@ public class QuoteTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmIndicative = new MMCode() {
+	public static final QuoteTypeCode Indicative = new QuoteTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "537 value 0"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicative";
 			definition = "Indicates the type of quote is an indicative quote. \n\nAn indicative quote is used to inform a counterparty of a market. An indicative quote does not result directly in a trade.";
-			owner_lazy = () -> QuoteTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QuoteTypeCode.mmObject();
 			codeName = "INDI";
 		}
 	};
@@ -124,6 +138,9 @@ public class QuoteTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "TRAD"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 537 value '1'</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -136,12 +153,13 @@ public class QuoteTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradeable = new MMCode() {
+	public static final QuoteTypeCode Tradeable = new QuoteTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "537 value '1'"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tradeable";
 			definition = "Indicates the type of quote is a tradeable quote. \nA tradeable quote is submitted to a market and will result directly in a trade against other orders and quotes in a market.";
-			owner_lazy = () -> QuoteTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QuoteTypeCode.mmObject();
 			codeName = "TRAD";
 		}
 	};
@@ -160,6 +178,9 @@ public class QuoteTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "REST"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 537 value '2'</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -172,12 +193,13 @@ public class QuoteTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRestrictedTradeable = new MMCode() {
+	public static final QuoteTypeCode RestrictedTradeable = new QuoteTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "537 value '2'"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictedTradeable";
 			definition = "Indicates the type of quote is a restricted tradeable quote. \nA restricted tradeable quote is submitted to a market and within a certain restriction (possibly based upon price or quantity) will automatically trade against orders. Order that do not comply with restrictions are sent to the quote issuer who can choose to accept or decline the order.";
-			owner_lazy = () -> QuoteTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QuoteTypeCode.mmObject();
 			codeName = "REST";
 		}
 	};
@@ -192,6 +214,9 @@ public class QuoteTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "COUN"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 537 value '3'</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -202,28 +227,63 @@ public class QuoteTypeCode {
 	 * definition} = "Indicates the type of quote is a counter quote."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCounter = new MMCode() {
+	public static final QuoteTypeCode Counter = new QuoteTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "537 value '3'"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counter";
 			definition = "Indicates the type of quote is a counter quote.";
-			owner_lazy = () -> QuoteTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QuoteTypeCode.mmObject();
 			codeName = "COUN";
 		}
 	};
+	final static private LinkedHashMap<String, QuoteTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected QuoteTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "537"));
 				example = Arrays.asList("INDI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuoteTypeCode";
 				definition = "Identifies the type of quote. Can be either an indicative, a tradeable or a restricted tradeable quote.";
-				code_lazy = () -> Arrays.asList(QuoteTypeCode.mmIndicative, QuoteTypeCode.mmTradeable, QuoteTypeCode.mmRestrictedTradeable, QuoteTypeCode.mmCounter);
 				derivation_lazy = () -> Arrays.asList(QuoteType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QuoteTypeCode.Indicative, com.tools20022.repository.codeset.QuoteTypeCode.Tradeable, com.tools20022.repository.codeset.QuoteTypeCode.RestrictedTradeable,
+						com.tools20022.repository.codeset.QuoteTypeCode.Counter);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Indicative.getCodeName().get(), Indicative);
+		codesByName.put(Tradeable.getCodeName().get(), Tradeable);
+		codesByName.put(RestrictedTradeable.getCodeName().get(), RestrictedTradeable);
+		codesByName.put(Counter.getCodeName().get(), Counter);
+	}
+
+	public static QuoteTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static QuoteTypeCode[] values() {
+		QuoteTypeCode[] values = new QuoteTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, QuoteTypeCode> {
+		@Override
+		public QuoteTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(QuoteTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.FractionDispositionTypeCode;
+import com.tools20022.repository.codeset.FractionDispositionType6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies how fractions resulting from derived securities will be processed
@@ -32,30 +36,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeCode
- * FractionDispositionTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType6Code#mmBuyUp
- * FractionDispositionType6Code.mmBuyUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType6Code#BuyUp
+ * FractionDispositionType6Code.BuyUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType6Code#mmCashInLieuOfFraction
- * FractionDispositionType6Code.mmCashInLieuOfFraction}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType6Code#CashInLieuOfFraction
+ * FractionDispositionType6Code.CashInLieuOfFraction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType6Code#mmIssueFraction
- * FractionDispositionType6Code.mmIssueFraction}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType6Code#IssueFraction
+ * FractionDispositionType6Code.IssueFraction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FractionDispositionType6Code#mmExpire
- * FractionDispositionType6Code.mmExpire}</li>
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionType6Code#Expire
+ * FractionDispositionType6Code.Expire}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.FractionDispositionTypeCode
+ * FractionDispositionTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class FractionDispositionType6Code extends FractionDispositionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FractionDispositionType6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,11 +98,12 @@ public class FractionDispositionType6Code extends FractionDispositionTypeCode {
 	 * name} = "BuyUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBuyUp = new MMCode() {
+	public static final FractionDispositionType6Code BuyUp = new FractionDispositionType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyUp";
-			owner_lazy = () -> FractionDispositionType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FractionDispositionType6Code.mmObject();
+			codeName = FractionDispositionTypeCode.BuyUp.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -116,11 +122,12 @@ public class FractionDispositionType6Code extends FractionDispositionTypeCode {
 	 * name} = "CashInLieuOfFraction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashInLieuOfFraction = new MMCode() {
+	public static final FractionDispositionType6Code CashInLieuOfFraction = new FractionDispositionType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfFraction";
-			owner_lazy = () -> FractionDispositionType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FractionDispositionType6Code.mmObject();
+			codeName = FractionDispositionTypeCode.CashInLieuOfFraction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -139,11 +146,12 @@ public class FractionDispositionType6Code extends FractionDispositionTypeCode {
 	 * name} = "IssueFraction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssueFraction = new MMCode() {
+	public static final FractionDispositionType6Code IssueFraction = new FractionDispositionType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueFraction";
-			owner_lazy = () -> FractionDispositionType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FractionDispositionType6Code.mmObject();
+			codeName = FractionDispositionTypeCode.IssueFraction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -162,26 +170,60 @@ public class FractionDispositionType6Code extends FractionDispositionTypeCode {
 	 * name} = "Expire"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExpire = new MMCode() {
+	public static final FractionDispositionType6Code Expire = new FractionDispositionType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expire";
-			owner_lazy = () -> FractionDispositionType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FractionDispositionType6Code.mmObject();
+			codeName = FractionDispositionTypeCode.Expire.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, FractionDispositionType6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FractionDispositionType6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BUYU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FractionDispositionType6Code";
 				definition = "Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
-				code_lazy = () -> Arrays.asList(FractionDispositionType6Code.mmBuyUp, FractionDispositionType6Code.mmCashInLieuOfFraction, FractionDispositionType6Code.mmIssueFraction, FractionDispositionType6Code.mmExpire);
 				trace_lazy = () -> FractionDispositionTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FractionDispositionType6Code.BuyUp, com.tools20022.repository.codeset.FractionDispositionType6Code.CashInLieuOfFraction,
+						com.tools20022.repository.codeset.FractionDispositionType6Code.IssueFraction, com.tools20022.repository.codeset.FractionDispositionType6Code.Expire);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BuyUp.getCodeName().get(), BuyUp);
+		codesByName.put(CashInLieuOfFraction.getCodeName().get(), CashInLieuOfFraction);
+		codesByName.put(IssueFraction.getCodeName().get(), IssueFraction);
+		codesByName.put(Expire.getCodeName().get(), Expire);
+	}
+
+	public static FractionDispositionType6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FractionDispositionType6Code[] values() {
+		FractionDispositionType6Code[] values = new FractionDispositionType6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FractionDispositionType6Code> {
+		@Override
+		public FractionDispositionType6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FractionDispositionType6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

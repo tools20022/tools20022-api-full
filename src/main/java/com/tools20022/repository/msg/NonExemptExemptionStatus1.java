@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,8 +48,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,15 +60,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Non-exempt beneficial owner exemption information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NonExemptExemptionStatus1", propOrder = "acknowledgementOfNonExemptIndicator")
 public class NonExemptExemptionStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AckOfNonXmptInd", required = true)
 	protected YesNoIndicator acknowledgementOfNonExemptIndicator;
 	/**
-	 * Acknowledgement of the status on non exempt on interest penalties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -82,6 +85,9 @@ public class NonExemptExemptionStatus1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AckOfNonXmptInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Acknowledgement Of Non Exempt Indicator</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -95,9 +101,10 @@ public class NonExemptExemptionStatus1 {
 	 */
 	public static final MMMessageAttribute mmAcknowledgementOfNonExemptIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NonExemptExemptionStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NonExemptExemptionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "AckOfNonXmptInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Acknowledgement Of Non Exempt Indicator"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementOfNonExemptIndicator";
 			definition = "Acknowledgement of the status on non exempt on interest penalties.";
@@ -110,8 +117,8 @@ public class NonExemptExemptionStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NonExemptExemptionStatus1.mmAcknowledgementOfNonExemptIndicator);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonExemptExemptionStatus1.mmAcknowledgementOfNonExemptIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "NonExemptExemptionStatus1";
 				definition = "Non-exempt beneficial owner exemption information.";
@@ -120,12 +127,12 @@ public class NonExemptExemptionStatus1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AckOfNonXmptInd", required = true)
 	public YesNoIndicator getAcknowledgementOfNonExemptIndicator() {
 		return acknowledgementOfNonExemptIndicator;
 	}
 
-	public void setAcknowledgementOfNonExemptIndicator(YesNoIndicator acknowledgementOfNonExemptIndicator) {
-		this.acknowledgementOfNonExemptIndicator = acknowledgementOfNonExemptIndicator;
+	public NonExemptExemptionStatus1 setAcknowledgementOfNonExemptIndicator(YesNoIndicator acknowledgementOfNonExemptIndicator) {
+		this.acknowledgementOfNonExemptIndicator = Objects.requireNonNull(acknowledgementOfNonExemptIndicator);
+		return this;
 	}
 }

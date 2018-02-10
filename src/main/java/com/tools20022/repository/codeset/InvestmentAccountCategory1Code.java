@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.InvestmentAccountCategoryCode;
+import com.tools20022.repository.codeset.InvestmentAccountCategory1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the investment account category.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.InvestmentAccountCategoryCode
- * InvestmentAccountCategoryCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentAccountCategory1Code#mmMandateAccount
- * InvestmentAccountCategory1Code.mmMandateAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentAccountCategory1Code#MandateAccount
+ * InvestmentAccountCategory1Code.MandateAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentAccountCategory1Code#mmRetailAccount
- * InvestmentAccountCategory1Code.mmRetailAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentAccountCategory1Code#RetailAccount
+ * InvestmentAccountCategory1Code.RetailAccount}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.InvestmentAccountCategoryCode
+ * InvestmentAccountCategoryCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the investment account category."</li>
  * </ul>
  */
-public class InvestmentAccountCategory1Code extends InvestmentAccountCategoryCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InvestmentAccountCategory1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class InvestmentAccountCategory1Code extends InvestmentAccountCategoryCod
 	 * name} = "MandateAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMandateAccount = new MMCode() {
+	public static final InvestmentAccountCategory1Code MandateAccount = new InvestmentAccountCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateAccount";
-			owner_lazy = () -> InvestmentAccountCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestmentAccountCategory1Code.mmObject();
+			codeName = InvestmentAccountCategoryCode.MandateAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class InvestmentAccountCategory1Code extends InvestmentAccountCategoryCod
 	 * name} = "RetailAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRetailAccount = new MMCode() {
+	public static final InvestmentAccountCategory1Code RetailAccount = new InvestmentAccountCategory1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetailAccount";
-			owner_lazy = () -> InvestmentAccountCategory1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestmentAccountCategory1Code.mmObject();
+			codeName = InvestmentAccountCategoryCode.RetailAccount.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, InvestmentAccountCategory1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InvestmentAccountCategory1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentAccountCategory1Code";
 				definition = "Specifies the investment account category.";
-				code_lazy = () -> Arrays.asList(InvestmentAccountCategory1Code.mmMandateAccount, InvestmentAccountCategory1Code.mmRetailAccount);
 				trace_lazy = () -> InvestmentAccountCategoryCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentAccountCategory1Code.MandateAccount, com.tools20022.repository.codeset.InvestmentAccountCategory1Code.RetailAccount);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(MandateAccount.getCodeName().get(), MandateAccount);
+		codesByName.put(RetailAccount.getCodeName().get(), RetailAccount);
+	}
+
+	public static InvestmentAccountCategory1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InvestmentAccountCategory1Code[] values() {
+		InvestmentAccountCategory1Code[] values = new InvestmentAccountCategory1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InvestmentAccountCategory1Code> {
+		@Override
+		public InvestmentAccountCategory1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InvestmentAccountCategory1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

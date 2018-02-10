@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.FrankingClassCode;
+import com.tools20022.repository.codeset.FrankingClass1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Code defining the dvidend / distribution class where this franking
@@ -31,33 +35,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.FrankingClassCode
- * FrankingClassCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#mmCashDividend
- * FrankingClass1Code.mmCashDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#CashDividend
+ * FrankingClass1Code.CashDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#mmInterest
- * FrankingClass1Code.mmInterest}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#Interest
+ * FrankingClass1Code.Interest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#mmNZDDeclared
- * FrankingClass1Code.mmNZDDeclared}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#NZDDeclared
+ * FrankingClass1Code.NZDDeclared}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#mmScripDividend
- * FrankingClass1Code.mmScripDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#ScripDividend
+ * FrankingClass1Code.ScripDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#mmSpecialDividend
- * FrankingClass1Code.mmSpecialDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.FrankingClass1Code#SpecialDividend
+ * FrankingClass1Code.SpecialDividend}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.FrankingClassCode
+ * FrankingClassCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class FrankingClass1Code extends FrankingClassCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FrankingClass1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class FrankingClass1Code extends FrankingClassCode {
 	 * name} = "CashDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashDividend = new MMCode() {
+	public static final FrankingClass1Code CashDividend = new FrankingClass1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividend";
-			owner_lazy = () -> FrankingClass1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FrankingClass1Code.mmObject();
+			codeName = FrankingClassCode.CashDividend.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class FrankingClass1Code extends FrankingClassCode {
 	 * name} = "Interest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterest = new MMCode() {
+	public static final FrankingClass1Code Interest = new FrankingClass1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
-			owner_lazy = () -> FrankingClass1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FrankingClass1Code.mmObject();
+			codeName = FrankingClassCode.Interest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class FrankingClass1Code extends FrankingClassCode {
 	 * name} = "NZDDeclared"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNZDDeclared = new MMCode() {
+	public static final FrankingClass1Code NZDDeclared = new FrankingClass1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NZDDeclared";
-			owner_lazy = () -> FrankingClass1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FrankingClass1Code.mmObject();
+			codeName = FrankingClassCode.NZDDeclared.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,11 +166,12 @@ public class FrankingClass1Code extends FrankingClassCode {
 	 * name} = "ScripDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmScripDividend = new MMCode() {
+	public static final FrankingClass1Code ScripDividend = new FrankingClass1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScripDividend";
-			owner_lazy = () -> FrankingClass1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FrankingClass1Code.mmObject();
+			codeName = FrankingClassCode.ScripDividend.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -181,25 +190,60 @@ public class FrankingClass1Code extends FrankingClassCode {
 	 * name} = "SpecialDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialDividend = new MMCode() {
+	public static final FrankingClass1Code SpecialDividend = new FrankingClass1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialDividend";
-			owner_lazy = () -> FrankingClass1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FrankingClass1Code.mmObject();
+			codeName = FrankingClassCode.SpecialDividend.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, FrankingClass1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FrankingClass1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FrankingClass1Code";
 				definition = "Code defining the dvidend / distribution class where this franking information applies to.";
-				code_lazy = () -> Arrays.asList(FrankingClass1Code.mmCashDividend, FrankingClass1Code.mmInterest, FrankingClass1Code.mmNZDDeclared, FrankingClass1Code.mmScripDividend, FrankingClass1Code.mmSpecialDividend);
 				trace_lazy = () -> FrankingClassCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FrankingClass1Code.CashDividend, com.tools20022.repository.codeset.FrankingClass1Code.Interest,
+						com.tools20022.repository.codeset.FrankingClass1Code.NZDDeclared, com.tools20022.repository.codeset.FrankingClass1Code.ScripDividend, com.tools20022.repository.codeset.FrankingClass1Code.SpecialDividend);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CashDividend.getCodeName().get(), CashDividend);
+		codesByName.put(Interest.getCodeName().get(), Interest);
+		codesByName.put(NZDDeclared.getCodeName().get(), NZDDeclared);
+		codesByName.put(ScripDividend.getCodeName().get(), ScripDividend);
+		codesByName.put(SpecialDividend.getCodeName().get(), SpecialDividend);
+	}
+
+	public static FrankingClass1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FrankingClass1Code[] values() {
+		FrankingClass1Code[] values = new FrankingClass1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FrankingClass1Code> {
+		@Override
+		public FrankingClass1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FrankingClass1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

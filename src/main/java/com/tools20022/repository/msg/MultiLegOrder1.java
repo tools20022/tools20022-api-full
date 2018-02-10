@@ -25,9 +25,8 @@ import com.tools20022.repository.codeset.MultilegReportType1Code;
 import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,16 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides details about the multileg order."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MultiLegOrder1", propOrder = {"reportTypeRequest", "orderDetails", "legGroupDetails"})
 public class MultiLegOrder1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptTpReq")
 	protected MultilegReportType1Code reportTypeRequest;
 	/**
-	 * Indicates the method of execution reporting requested by issuer of the
-	 * order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +107,7 @@ public class MultiLegOrder1 {
 	 */
 	public static final MMMessageAttribute mmReportTypeRequest = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MultiLegOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MultiLegOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "RptTpReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +118,11 @@ public class MultiLegOrder1 {
 			simpleType_lazy = () -> MultilegReportType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrDtls", required = true)
 	protected Order3 orderDetails;
 	/**
-	 * Provides order details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -152,7 +152,7 @@ public class MultiLegOrder1 {
 	public static final MMMessageAssociationEnd mmOrderDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrder.mmObject();
-			componentContext_lazy = () -> MultiLegOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MultiLegOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,10 +164,11 @@ public class MultiLegOrder1 {
 			type_lazy = () -> com.tools20022.repository.msg.Order3.mmObject();
 		}
 	};
+	@XmlElement(name = "LegGrpDtls")
 	protected List<com.tools20022.repository.msg.InstrumentLeg3> legGroupDetails;
 	/**
-	 * Provides details about each intrument leg.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -198,7 +199,7 @@ public class MultiLegOrder1 {
 	public static final MMMessageAssociationEnd mmLegGroupDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmLegAdditionalInformation;
-			componentContext_lazy = () -> MultiLegOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MultiLegOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "LegGrpDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,9 +214,10 @@ public class MultiLegOrder1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MultiLegOrder1.mmReportTypeRequest, MultiLegOrder1.mmOrderDetails, MultiLegOrder1.mmLegGroupDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MultiLegOrder1.mmReportTypeRequest, com.tools20022.repository.msg.MultiLegOrder1.mmOrderDetails,
+						com.tools20022.repository.msg.MultiLegOrder1.mmLegGroupDetails);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MultiLegOrder1";
 				definition = "Provides details about the multileg order.";
@@ -224,30 +226,30 @@ public class MultiLegOrder1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptTpReq")
-	public MultilegReportType1Code getReportTypeRequest() {
-		return reportTypeRequest;
+	public Optional<MultilegReportType1Code> getReportTypeRequest() {
+		return reportTypeRequest == null ? Optional.empty() : Optional.of(reportTypeRequest);
 	}
 
-	public void setReportTypeRequest(MultilegReportType1Code reportTypeRequest) {
+	public MultiLegOrder1 setReportTypeRequest(MultilegReportType1Code reportTypeRequest) {
 		this.reportTypeRequest = reportTypeRequest;
+		return this;
 	}
 
-	@XmlElement(name = "OrdrDtls", required = true)
 	public Order3 getOrderDetails() {
 		return orderDetails;
 	}
 
-	public void setOrderDetails(com.tools20022.repository.msg.Order3 orderDetails) {
-		this.orderDetails = orderDetails;
+	public MultiLegOrder1 setOrderDetails(com.tools20022.repository.msg.Order3 orderDetails) {
+		this.orderDetails = Objects.requireNonNull(orderDetails);
+		return this;
 	}
 
-	@XmlElement(name = "LegGrpDtls")
 	public List<InstrumentLeg3> getLegGroupDetails() {
-		return legGroupDetails;
+		return legGroupDetails == null ? legGroupDetails = new ArrayList<>() : legGroupDetails;
 	}
 
-	public void setLegGroupDetails(List<com.tools20022.repository.msg.InstrumentLeg3> legGroupDetails) {
-		this.legGroupDetails = legGroupDetails;
+	public MultiLegOrder1 setLegGroupDetails(List<com.tools20022.repository.msg.InstrumentLeg3> legGroupDetails) {
+		this.legGroupDetails = Objects.requireNonNull(legGroupDetails);
+		return this;
 	}
 }

@@ -28,6 +28,8 @@ import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCredi
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -37,22 +39,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TradeServicesLatestVersion
- * TradeServicesLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion
- * DemandGuaranteesandStandbyLettersofCreditISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "UdrtkgTermntnNtfctn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -66,6 +52,22 @@ import javax.xml.bind.annotation.*;
  * UndertakingTerminationNotificationV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion
+ * DemandGuaranteesandStandbyLettersofCreditISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "UdrtkgTermntnNtfctn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TradeServicesLatestVersion
+ * TradeServicesLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code tsrv.012.001.01}</li>
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UndertakingTerminationNotificationV01", propOrder = {"undertakingTerminationNotificationDetails", "digitalSignature"})
 public class UndertakingTerminationNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UdrtkgTermntnNtfctnDtls", required = true)
 	protected UndertakingTerminationNotice1 undertakingTerminationNotificationDetails;
 	/**
-	 * Details of the termination notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -129,10 +132,11 @@ public class UndertakingTerminationNotificationV01 {
 			}
 		}
 	};
+	@XmlElement(name = "DgtlSgntr")
 	protected PartyAndSignature2 digitalSignature;
 	/**
-	 * Digital signature of the notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,25 +207,25 @@ public class UndertakingTerminationNotificationV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UdrtkgTermntnNtfctnDtls", required = true)
 	public UndertakingTerminationNotice1 getUndertakingTerminationNotificationDetails() {
 		return undertakingTerminationNotificationDetails;
 	}
 
-	public void setUndertakingTerminationNotificationDetails(UndertakingTerminationNotice1 undertakingTerminationNotificationDetails) {
-		this.undertakingTerminationNotificationDetails = undertakingTerminationNotificationDetails;
+	public UndertakingTerminationNotificationV01 setUndertakingTerminationNotificationDetails(UndertakingTerminationNotice1 undertakingTerminationNotificationDetails) {
+		this.undertakingTerminationNotificationDetails = Objects.requireNonNull(undertakingTerminationNotificationDetails);
+		return this;
 	}
 
-	@XmlElement(name = "DgtlSgntr")
-	public PartyAndSignature2 getDigitalSignature() {
-		return digitalSignature;
+	public Optional<PartyAndSignature2> getDigitalSignature() {
+		return digitalSignature == null ? Optional.empty() : Optional.of(digitalSignature);
 	}
 
-	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
+	public UndertakingTerminationNotificationV01 setDigitalSignature(PartyAndSignature2 digitalSignature) {
 		this.digitalSignature = digitalSignature;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsrv.012.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:tsrv.012.001.01")
 	static public class Document {
 		@XmlElement(name = "UdrtkgTermntnNtfctn", required = true)
 		public UndertakingTerminationNotificationV01 messageBody;

@@ -79,8 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
  * businessProcessCatalogue} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmcatalogue
- * GeneratedRepository.mmcatalogue}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
+ * GeneratedRepository.catalogue}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,7 +100,7 @@ public class TreasuryArchive {
 	final static public MMBusinessArea mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessArea() {
 			{
-				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Treasury - Archive - master";
 				definition = "Messages that support treasury operations (obsolete business area, to be progressively replaced by business areas of the Foreign Exchange and Bank Loan/Deposit business domains).\r\n";

@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,18 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of the issuer, as required by ASX."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IssuerAttributesSD1", propOrder = {"placeAndName", "name", "registeredNumberType", "otherRegisteredNumberType", "registrationNumber", "issuerIdentification"})
 public class IssuerAttributesSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm")
 	protected Max350Text placeAndName;
 	/**
-	 * Unambiguous reference to the location where the supplementary data must
-	 * be inserted in the message instance.
 	 * 
-	 * In the case of XML, this is expressed by a valid XPath.<br>
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +113,7 @@ public class IssuerAttributesSD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IssuerAttributesSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAttributesSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,11 +124,11 @@ public class IssuerAttributesSD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm", required = true)
 	protected RestrictedFINXMax140Text name;
 	/**
-	 * Name by which a party is known and which is usually used to identify that
-	 * party.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +158,7 @@ public class IssuerAttributesSD1 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IssuerAttributesSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAttributesSD1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,10 +169,11 @@ public class IssuerAttributesSD1 {
 			simpleType_lazy = () -> RestrictedFINXMax140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RegdNbTp")
 	protected RegisteredNumberType1Code registeredNumberType;
 	/**
-	 * Registered number type of the entity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,7 +201,7 @@ public class IssuerAttributesSD1 {
 	 */
 	public static final MMMessageAttribute mmRegisteredNumberType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IssuerAttributesSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAttributesSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RegdNbTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,10 +212,11 @@ public class IssuerAttributesSD1 {
 			simpleType_lazy = () -> RegisteredNumberType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrRegdNbTp")
 	protected Max35Text otherRegisteredNumberType;
 	/**
-	 * Other type of Registered Number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -241,7 +243,7 @@ public class IssuerAttributesSD1 {
 	 */
 	public static final MMMessageAttribute mmOtherRegisteredNumberType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IssuerAttributesSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAttributesSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrRegdNbTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -252,10 +254,11 @@ public class IssuerAttributesSD1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RegnNb", required = true)
 	protected Max16Text registrationNumber;
 	/**
-	 * Equivalent, unique number of the entity for the Registered Number Type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -284,7 +287,7 @@ public class IssuerAttributesSD1 {
 	 */
 	public static final MMMessageAttribute mmRegistrationNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IssuerAttributesSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAttributesSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RegnNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -295,10 +298,11 @@ public class IssuerAttributesSD1 {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IssrId", required = true)
 	protected Exact3UpperCaseAlphaNumericText issuerIdentification;
 	/**
-	 * ASX Issuer Code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -326,7 +330,7 @@ public class IssuerAttributesSD1 {
 	 */
 	public static final MMMessageAttribute mmIssuerIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IssuerAttributesSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAttributesSD1.mmObject();
 			isDerived = false;
 			xmlTag = "IssrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -341,9 +345,10 @@ public class IssuerAttributesSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IssuerAttributesSD1.mmPlaceAndName, IssuerAttributesSD1.mmName, IssuerAttributesSD1.mmRegisteredNumberType, IssuerAttributesSD1.mmOtherRegisteredNumberType,
-						IssuerAttributesSD1.mmRegistrationNumber, IssuerAttributesSD1.mmIssuerIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAttributesSD1.mmPlaceAndName, com.tools20022.repository.msg.IssuerAttributesSD1.mmName,
+						com.tools20022.repository.msg.IssuerAttributesSD1.mmRegisteredNumberType, com.tools20022.repository.msg.IssuerAttributesSD1.mmOtherRegisteredNumberType,
+						com.tools20022.repository.msg.IssuerAttributesSD1.mmRegistrationNumber, com.tools20022.repository.msg.IssuerAttributesSD1.mmIssuerIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IssuerAttributesSD1";
 				definition = "Details of the issuer, as required by ASX.";
@@ -352,57 +357,57 @@ public class IssuerAttributesSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm")
-	public Max350Text getPlaceAndName() {
-		return placeAndName;
+	public Optional<Max350Text> getPlaceAndName() {
+		return placeAndName == null ? Optional.empty() : Optional.of(placeAndName);
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
+	public IssuerAttributesSD1 setPlaceAndName(Max350Text placeAndName) {
 		this.placeAndName = placeAndName;
+		return this;
 	}
 
-	@XmlElement(name = "Nm", required = true)
 	public RestrictedFINXMax140Text getName() {
 		return name;
 	}
 
-	public void setName(RestrictedFINXMax140Text name) {
-		this.name = name;
+	public IssuerAttributesSD1 setName(RestrictedFINXMax140Text name) {
+		this.name = Objects.requireNonNull(name);
+		return this;
 	}
 
-	@XmlElement(name = "RegdNbTp")
-	public RegisteredNumberType1Code getRegisteredNumberType() {
-		return registeredNumberType;
+	public Optional<RegisteredNumberType1Code> getRegisteredNumberType() {
+		return registeredNumberType == null ? Optional.empty() : Optional.of(registeredNumberType);
 	}
 
-	public void setRegisteredNumberType(RegisteredNumberType1Code registeredNumberType) {
+	public IssuerAttributesSD1 setRegisteredNumberType(RegisteredNumberType1Code registeredNumberType) {
 		this.registeredNumberType = registeredNumberType;
+		return this;
 	}
 
-	@XmlElement(name = "OthrRegdNbTp")
-	public Max35Text getOtherRegisteredNumberType() {
-		return otherRegisteredNumberType;
+	public Optional<Max35Text> getOtherRegisteredNumberType() {
+		return otherRegisteredNumberType == null ? Optional.empty() : Optional.of(otherRegisteredNumberType);
 	}
 
-	public void setOtherRegisteredNumberType(Max35Text otherRegisteredNumberType) {
+	public IssuerAttributesSD1 setOtherRegisteredNumberType(Max35Text otherRegisteredNumberType) {
 		this.otherRegisteredNumberType = otherRegisteredNumberType;
+		return this;
 	}
 
-	@XmlElement(name = "RegnNb", required = true)
 	public Max16Text getRegistrationNumber() {
 		return registrationNumber;
 	}
 
-	public void setRegistrationNumber(Max16Text registrationNumber) {
-		this.registrationNumber = registrationNumber;
+	public IssuerAttributesSD1 setRegistrationNumber(Max16Text registrationNumber) {
+		this.registrationNumber = Objects.requireNonNull(registrationNumber);
+		return this;
 	}
 
-	@XmlElement(name = "IssrId", required = true)
 	public Exact3UpperCaseAlphaNumericText getIssuerIdentification() {
 		return issuerIdentification;
 	}
 
-	public void setIssuerIdentification(Exact3UpperCaseAlphaNumericText issuerIdentification) {
-		this.issuerIdentification = issuerIdentification;
+	public IssuerAttributesSD1 setIssuerIdentification(Exact3UpperCaseAlphaNumericText issuerIdentification) {
+		this.issuerIdentification = Objects.requireNonNull(issuerIdentification);
+		return this;
 	}
 }

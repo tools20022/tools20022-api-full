@@ -28,6 +28,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,16 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvestmentAccountOpeningDetails", propOrder = {"openingType", "accountApplicationIdentification"})
 public class InvestmentAccountOpeningDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OpngTp", required = true)
 	protected AccountOpeningType1Code openingType;
 	/**
-	 * Specifies if the account opening instruction is about a newly created
-	 * account or a supplementary account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,7 +139,7 @@ public class InvestmentAccountOpeningDetails {
 	 */
 	public static final MMMessageAttribute mmOpeningType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentAccountOpeningDetails.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOpeningDetails.mmObject();
 			isDerived = false;
 			xmlTag = "OpngTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,11 +151,11 @@ public class InvestmentAccountOpeningDetails {
 			simpleType_lazy = () -> AccountOpeningType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctApplId")
 	protected Max35Text accountApplicationIdentification;
 	/**
-	 * Unique and unambiguous identifier of the account opening request at
-	 * application level.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +192,7 @@ public class InvestmentAccountOpeningDetails {
 	 */
 	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentAccountOpeningDetails.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOpeningDetails.mmObject();
 			isDerived = false;
 			xmlTag = "AcctApplId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,9 +208,9 @@ public class InvestmentAccountOpeningDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InvestmentAccountOpeningDetails.mmOpeningType, InvestmentAccountOpeningDetails.mmAccountApplicationIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOpeningDetails.mmOpeningType, com.tools20022.repository.msg.InvestmentAccountOpeningDetails.mmAccountApplicationIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AccountOpeningInstructionV02.mmInstructionDetails, AccountOpeningInstructionV03.mmInstructionDetails, AccountOpeningInstructionV04.mmInstructionDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentAccountOpeningDetails";
 				definition = "Provide information about the type of opening instruction and identification of the application request.";
@@ -218,21 +220,21 @@ public class InvestmentAccountOpeningDetails {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OpngTp", required = true)
 	public AccountOpeningType1Code getOpeningType() {
 		return openingType;
 	}
 
-	public void setOpeningType(AccountOpeningType1Code openingType) {
-		this.openingType = openingType;
+	public InvestmentAccountOpeningDetails setOpeningType(AccountOpeningType1Code openingType) {
+		this.openingType = Objects.requireNonNull(openingType);
+		return this;
 	}
 
-	@XmlElement(name = "AcctApplId")
-	public Max35Text getAccountApplicationIdentification() {
-		return accountApplicationIdentification;
+	public Optional<Max35Text> getAccountApplicationIdentification() {
+		return accountApplicationIdentification == null ? Optional.empty() : Optional.of(accountApplicationIdentification);
 	}
 
-	public void setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
+	public InvestmentAccountOpeningDetails setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
 		this.accountApplicationIdentification = accountApplicationIdentification;
+		return this;
 	}
 }

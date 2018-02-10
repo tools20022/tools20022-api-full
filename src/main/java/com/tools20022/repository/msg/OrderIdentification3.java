@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,8 @@ import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,16 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides identifications related to the order processing."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OrderIdentification3", propOrder = {"orderIdentification", "clientOrderIdentification", "secondaryClientOrderIdentification", "side", "clientOrderLinkIdentification"})
 public class OrderIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrdrId")
 	protected Max35Text orderIdentification;
 	/**
-	 * Information related to an identification, eg, party identification or
-	 * account identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -103,6 +106,9 @@ public class OrderIdentification3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrdrId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 37</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -118,9 +124,10 @@ public class OrderIdentification3 {
 	public static final MMMessageAttribute mmOrderIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
-			componentContext_lazy = () -> OrderIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "37"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderIdentification";
 			definition = "Information related to an identification, eg, party identification or account identification.";
@@ -129,14 +136,11 @@ public class OrderIdentification3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntOrdrId", required = true)
 	protected Max35Text clientOrderIdentification;
 	/**
-	 * Unique identifier for the order as assigned by the buyside. Uniqueness
-	 * must be guaranteed within a single trading day. Firms, particularly those
-	 * that electronically submit multi-day orders, trade globally or throughout
-	 * market close periods, should ensure uniqueness across days, for example
-	 * by embedding a date within the ClientOrderIdentification element.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,6 +160,9 @@ public class OrderIdentification3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClntOrdrId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 11</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -171,9 +178,10 @@ public class OrderIdentification3 {
 	public static final MMMessageAttribute mmClientOrderIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
-			componentContext_lazy = () -> OrderIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "ClntOrdrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "11"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientOrderIdentification";
 			definition = "Unique identifier for the order as assigned by the buyside. Uniqueness must be guaranteed within a single trading day. Firms, particularly those  that  electronically submit multi-day orders, trade globally or throughout market close periods, should ensure  uniqueness across days, for example by embedding a date within the ClientOrderIdentification element.";
@@ -182,11 +190,11 @@ public class OrderIdentification3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ScndryClntOrdrId")
 	protected Max35Text secondaryClientOrderIdentification;
 	/**
-	 * Assigned by the party that originates the order. Can be used to provide
-	 * the ClientOrderIdentification used by an exchange or executing system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,6 +214,9 @@ public class OrderIdentification3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ScndryClntOrdrId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 526</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -221,9 +232,10 @@ public class OrderIdentification3 {
 	public static final MMMessageAttribute mmSecondaryClientOrderIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
-			componentContext_lazy = () -> OrderIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryClntOrdrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "526"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryClientOrderIdentification";
 			definition = "Assigned by the party that  originates the order. Can be used to provide the ClientOrderIdentification used by an exchange or executing system.";
@@ -232,10 +244,11 @@ public class OrderIdentification3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Sd")
 	protected Side1Code side;
 	/**
-	 * Coded list to specify the side of the order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -255,6 +268,9 @@ public class OrderIdentification3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Sd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 54</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -268,9 +284,10 @@ public class OrderIdentification3 {
 	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
-			componentContext_lazy = () -> OrderIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "Sd";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "54"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Coded list to specify the side of the order.";
@@ -279,13 +296,11 @@ public class OrderIdentification3 {
 			simpleType_lazy = () -> Side1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntOrdrLkId")
 	protected Max35Text clientOrderLinkIdentification;
 	/**
-	 * Permits order originators to tie together groups of orders in which
-	 * trades resulting from orders are associated for a specific purpose, for
-	 * example the calculation of average execution price for a customer or to
-	 * associate lists submitted to a broker as waves of a larger program trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -299,6 +314,9 @@ public class OrderIdentification3 {
 	 * OrderIdentification3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClntOrdrLkId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 583</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -314,9 +332,10 @@ public class OrderIdentification3 {
 	 */
 	public static final MMMessageAttribute mmClientOrderLinkIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OrderIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "ClntOrdrLkId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "583"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientOrderLinkIdentification";
 			definition = "Permits order originators to tie together groups of orders in which trades resulting from orders are associated for a specific purpose, for example the calculation of average execution price for a customer or to associate lists submitted to a broker as waves of a larger program trade.";
@@ -329,10 +348,11 @@ public class OrderIdentification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OrderIdentification3.mmOrderIdentification, OrderIdentification3.mmClientOrderIdentification, OrderIdentification3.mmSecondaryClientOrderIdentification, OrderIdentification3.mmSide,
-						OrderIdentification3.mmClientOrderLinkIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderIdentification3.mmOrderIdentification, com.tools20022.repository.msg.OrderIdentification3.mmClientOrderIdentification,
+						com.tools20022.repository.msg.OrderIdentification3.mmSecondaryClientOrderIdentification, com.tools20022.repository.msg.OrderIdentification3.mmSide,
+						com.tools20022.repository.msg.OrderIdentification3.mmClientOrderLinkIdentification);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OrderIdentification3";
 				definition = "Provides identifications related to the order processing.";
@@ -341,48 +361,48 @@ public class OrderIdentification3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrdrId")
-	public Max35Text getOrderIdentification() {
-		return orderIdentification;
+	public Optional<Max35Text> getOrderIdentification() {
+		return orderIdentification == null ? Optional.empty() : Optional.of(orderIdentification);
 	}
 
-	public void setOrderIdentification(Max35Text orderIdentification) {
+	public OrderIdentification3 setOrderIdentification(Max35Text orderIdentification) {
 		this.orderIdentification = orderIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ClntOrdrId", required = true)
 	public Max35Text getClientOrderIdentification() {
 		return clientOrderIdentification;
 	}
 
-	public void setClientOrderIdentification(Max35Text clientOrderIdentification) {
-		this.clientOrderIdentification = clientOrderIdentification;
+	public OrderIdentification3 setClientOrderIdentification(Max35Text clientOrderIdentification) {
+		this.clientOrderIdentification = Objects.requireNonNull(clientOrderIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ScndryClntOrdrId")
-	public Max35Text getSecondaryClientOrderIdentification() {
-		return secondaryClientOrderIdentification;
+	public Optional<Max35Text> getSecondaryClientOrderIdentification() {
+		return secondaryClientOrderIdentification == null ? Optional.empty() : Optional.of(secondaryClientOrderIdentification);
 	}
 
-	public void setSecondaryClientOrderIdentification(Max35Text secondaryClientOrderIdentification) {
+	public OrderIdentification3 setSecondaryClientOrderIdentification(Max35Text secondaryClientOrderIdentification) {
 		this.secondaryClientOrderIdentification = secondaryClientOrderIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Sd")
-	public Side1Code getSide() {
-		return side;
+	public Optional<Side1Code> getSide() {
+		return side == null ? Optional.empty() : Optional.of(side);
 	}
 
-	public void setSide(Side1Code side) {
+	public OrderIdentification3 setSide(Side1Code side) {
 		this.side = side;
+		return this;
 	}
 
-	@XmlElement(name = "ClntOrdrLkId")
-	public Max35Text getClientOrderLinkIdentification() {
-		return clientOrderLinkIdentification;
+	public Optional<Max35Text> getClientOrderLinkIdentification() {
+		return clientOrderLinkIdentification == null ? Optional.empty() : Optional.of(clientOrderLinkIdentification);
 	}
 
-	public void setClientOrderLinkIdentification(Max35Text clientOrderLinkIdentification) {
+	public OrderIdentification3 setClientOrderLinkIdentification(Max35Text clientOrderLinkIdentification) {
 		this.clientOrderLinkIdentification = clientOrderLinkIdentification;
+		return this;
 	}
 }

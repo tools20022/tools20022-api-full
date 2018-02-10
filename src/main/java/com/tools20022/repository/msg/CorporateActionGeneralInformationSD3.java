@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -25,9 +27,8 @@ import com.tools20022.repository.choice.DateFormat22Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionGeneralInformationSD3", propOrder = {"placeAndName", "securityIdentification", "recordDate", "paymentDate", "unallocatedDetails"})
 public class CorporateActionGeneralInformationSD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +130,7 @@ public class CorporateActionGeneralInformationSD3 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,10 +142,11 @@ public class CorporateActionGeneralInformationSD3 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyId", required = true)
 	protected SecurityIdentification15 securityIdentification;
 	/**
-	 * Identifies the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,6 +161,9 @@ public class CorporateActionGeneralInformationSD3 {
 	 * CorporateActionGeneralInformationSD3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctyId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :35B:, DTCCSynonym: Event Security Id</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -179,9 +185,10 @@ public class CorporateActionGeneralInformationSD3 {
 	 */
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":35B:"), new DTCCSynonym(this, "Event Security Id"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identifies the financial instrument.";
@@ -191,13 +198,11 @@ public class CorporateActionGeneralInformationSD3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
 		}
 	};
+	@XmlElement(name = "RcrdDt")
 	protected ISODate recordDate;
 	/**
-	 * Date at which positions are stuck at the end of the day to note which
-	 * parties will receive the relevant amount of entitlement, due to be
-	 * distributed on payment date. DTC (The Depository Trust Corporation) and
-	 * its Participants may use this as a reference
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,6 +216,9 @@ public class CorporateActionGeneralInformationSD3 {
 	 * CorporateActionGeneralInformationSD3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RcrdDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Record Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -226,9 +234,10 @@ public class CorporateActionGeneralInformationSD3 {
 	 */
 	public static final MMMessageAttribute mmRecordDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
 			xmlTag = "RcrdDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Record Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date at which positions are stuck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date. DTC  (The Depository Trust Corporation) and its Participants may use this as a reference ";
@@ -237,11 +246,11 @@ public class CorporateActionGeneralInformationSD3 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtDt")
 	protected DateFormat22Choice paymentDate;
 	/**
-	 * Date/time at which the movement was due to take place (cash and/or
-	 * securities).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -257,6 +266,9 @@ public class CorporateActionGeneralInformationSD3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PmtDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Payable Date</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -271,9 +283,10 @@ public class CorporateActionGeneralInformationSD3 {
 	 */
 	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Payable Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date/time at which the movement was due to take place (cash and/or securities).";
@@ -282,10 +295,11 @@ public class CorporateActionGeneralInformationSD3 {
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "UallctdDtls")
 	protected List<com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD1> unallocatedDetails;
 	/**
-	 * Additional information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -299,6 +313,9 @@ public class CorporateActionGeneralInformationSD3 {
 	 * CorporateActionGeneralInformationSD3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UallctdDtls"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Unallocated Details</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -320,9 +337,10 @@ public class CorporateActionGeneralInformationSD3 {
 	 */
 	public static final MMMessageAssociationEnd mmUnallocatedDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
 			xmlTag = "UallctdDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Unallocated Details"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedDetails";
 			definition = "Additional information about the corporate action event.";
@@ -336,9 +354,10 @@ public class CorporateActionGeneralInformationSD3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD3.mmPlaceAndName, CorporateActionGeneralInformationSD3.mmSecurityIdentification, CorporateActionGeneralInformationSD3.mmRecordDate,
-						CorporateActionGeneralInformationSD3.mmPaymentDate, CorporateActionGeneralInformationSD3.mmUnallocatedDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmSecurityIdentification,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmRecordDate, com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmPaymentDate,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmUnallocatedDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionGeneralInformationSD3";
 				definition = "Provides additional information regarding corporate action general information.";
@@ -348,48 +367,48 @@ public class CorporateActionGeneralInformationSD3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionGeneralInformationSD3 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification15 getSecurityIdentification() {
 		return securityIdentification;
 	}
 
-	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 securityIdentification) {
-		this.securityIdentification = securityIdentification;
+	public CorporateActionGeneralInformationSD3 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 securityIdentification) {
+		this.securityIdentification = Objects.requireNonNull(securityIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RcrdDt")
-	public ISODate getRecordDate() {
-		return recordDate;
+	public Optional<ISODate> getRecordDate() {
+		return recordDate == null ? Optional.empty() : Optional.of(recordDate);
 	}
 
-	public void setRecordDate(ISODate recordDate) {
+	public CorporateActionGeneralInformationSD3 setRecordDate(ISODate recordDate) {
 		this.recordDate = recordDate;
+		return this;
 	}
 
-	@XmlElement(name = "PmtDt")
-	public DateFormat22Choice getPaymentDate() {
-		return paymentDate;
+	public Optional<DateFormat22Choice> getPaymentDate() {
+		return paymentDate == null ? Optional.empty() : Optional.of(paymentDate);
 	}
 
-	public void setPaymentDate(DateFormat22Choice paymentDate) {
+	public CorporateActionGeneralInformationSD3 setPaymentDate(DateFormat22Choice paymentDate) {
 		this.paymentDate = paymentDate;
+		return this;
 	}
 
-	@XmlElement(name = "UallctdDtls")
 	public List<CorporateActionUnallocatedDetailsSD1> getUnallocatedDetails() {
-		return unallocatedDetails;
+		return unallocatedDetails == null ? unallocatedDetails = new ArrayList<>() : unallocatedDetails;
 	}
 
-	public void setUnallocatedDetails(List<com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD1> unallocatedDetails) {
-		this.unallocatedDetails = unallocatedDetails;
+	public CorporateActionGeneralInformationSD3 setUnallocatedDetails(List<com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD1> unallocatedDetails) {
+		this.unallocatedDetails = Objects.requireNonNull(unallocatedDetails);
+		return this;
 	}
 }

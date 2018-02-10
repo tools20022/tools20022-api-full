@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
@@ -31,6 +32,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CorporateActionEventStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -81,8 +83,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,15 +104,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionProcessingStatus1Choice", propOrder = {"eventStatus", "forInformationOnlyIndicator"})
 public class CorporateActionProcessingStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "EvtSts", required = true)
 	protected CorporateActionEventStatus1 eventStatus;
 	/**
-	 * Specifies the status of the details of the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -130,6 +133,9 @@ public class CorporateActionProcessingStatus1Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EvtSts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::PROC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -143,9 +149,10 @@ public class CorporateActionProcessingStatus1Choice {
 	public static final MMMessageAssociationEnd mmEventStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmProcessingStatus;
-			componentContext_lazy = () -> CorporateActionProcessingStatus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EvtSts";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::PROC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventStatus";
 			definition = "Specifies the status of the details of the event.";
@@ -155,11 +162,11 @@ public class CorporateActionProcessingStatus1Choice {
 			type_lazy = () -> CorporateActionEventStatus1.mmObject();
 		}
 	};
+	@XmlElement(name = "ForInfOnlyInd", required = true)
 	protected YesNoIndicator forInformationOnlyIndicator;
 	/**
-	 * Indicates that the message is for information only, that is processing of
-	 * client's instruction will not be supported by the Account Servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -175,6 +182,9 @@ public class CorporateActionProcessingStatus1Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ForInfOnlyInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::PROC//INFO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -189,9 +199,10 @@ public class CorporateActionProcessingStatus1Choice {
 	 */
 	public static final MMMessageAttribute mmForInformationOnlyIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionProcessingStatus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ForInfOnlyInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::PROC//INFO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForInformationOnlyIndicator";
 			definition = "Indicates that the message is for information only, that is processing of client's instruction will not be supported by the Account Servicer.";
@@ -204,12 +215,13 @@ public class CorporateActionProcessingStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionProcessingStatus1Choice.mmEventStatus, CorporateActionProcessingStatus1Choice.mmForInformationOnlyIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice.mmEventStatus,
+						com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice.mmForInformationOnlyIndicator);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmCancellationAdviceGeneralInformation,
 						CorporateActionMovementPreliminaryAdviceCancellationAdviceV02.mmCancellationAdviceGeneralInformation, CorporateActionMovementPreliminaryAdviceCancellationAdviceV03.mmCancellationAdviceGeneralInformation,
 						CorporateActionMovementPreliminaryAdviceCancellationAdviceV04.mmCancellationAdviceGeneralInformation);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionProcessingStatus1Choice";
 				definition = "Specifies the status of the details of the corporate action event.";
@@ -219,21 +231,21 @@ public class CorporateActionProcessingStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "EvtSts", required = true)
 	public CorporateActionEventStatus1 getEventStatus() {
 		return eventStatus;
 	}
 
-	public void setEventStatus(CorporateActionEventStatus1 eventStatus) {
-		this.eventStatus = eventStatus;
+	public CorporateActionProcessingStatus1Choice setEventStatus(CorporateActionEventStatus1 eventStatus) {
+		this.eventStatus = Objects.requireNonNull(eventStatus);
+		return this;
 	}
 
-	@XmlElement(name = "ForInfOnlyInd", required = true)
 	public YesNoIndicator getForInformationOnlyIndicator() {
 		return forInformationOnlyIndicator;
 	}
 
-	public void setForInformationOnlyIndicator(YesNoIndicator forInformationOnlyIndicator) {
-		this.forInformationOnlyIndicator = forInformationOnlyIndicator;
+	public CorporateActionProcessingStatus1Choice setForInformationOnlyIndicator(YesNoIndicator forInformationOnlyIndicator) {
+		this.forInformationOnlyIndicator = Objects.requireNonNull(forInformationOnlyIndicator);
+		return this;
 	}
 }

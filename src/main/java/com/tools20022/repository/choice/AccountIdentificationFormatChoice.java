@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.AccountIdentification3;
 import com.tools20022.repository.msg.AccountIdentificationAndPurpose;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between formats for account identification."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountIdentificationFormatChoice", propOrder = {"simpleIdentification", "identificationAndPurpose", "identificationAsDSS"})
 public class AccountIdentificationFormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SmplId", required = true)
 	protected AccountIdentification1 simpleIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +116,7 @@ public class AccountIdentificationFormatChoice {
 	public static final MMMessageAttribute mmSimpleIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
-			componentContext_lazy = () -> AccountIdentificationFormatChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentificationFormatChoice.mmObject();
 			isDerived = false;
 			xmlTag = "SmplId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,11 +127,11 @@ public class AccountIdentificationFormatChoice {
 			complexType_lazy = () -> AccountIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "IdAndPurp", required = true)
 	protected AccountIdentificationAndPurpose identificationAndPurpose;
 	/**
-	 * Identification of the account expressed with an account number and a
-	 * code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,7 +167,7 @@ public class AccountIdentificationFormatChoice {
 	public static final MMMessageAttribute mmIdentificationAndPurpose = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
-			componentContext_lazy = () -> AccountIdentificationFormatChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentificationFormatChoice.mmObject();
 			isDerived = false;
 			xmlTag = "IdAndPurp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,11 +178,11 @@ public class AccountIdentificationFormatChoice {
 			complexType_lazy = () -> AccountIdentificationAndPurpose.mmObject();
 		}
 	};
+	@XmlElement(name = "IdAsDSS", required = true)
 	protected AccountIdentification3 identificationAsDSS;
 	/**
-	 * Identification of the account expressed with a data source scheme, a code
-	 * used within the data source scheme and the account identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,7 +218,7 @@ public class AccountIdentificationFormatChoice {
 	public static final MMMessageAttribute mmIdentificationAsDSS = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
-			componentContext_lazy = () -> AccountIdentificationFormatChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentificationFormatChoice.mmObject();
 			isDerived = false;
 			xmlTag = "IdAsDSS";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,9 +233,10 @@ public class AccountIdentificationFormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountIdentificationFormatChoice.mmSimpleIdentification, AccountIdentificationFormatChoice.mmIdentificationAndPurpose, AccountIdentificationFormatChoice.mmIdentificationAsDSS);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentificationFormatChoice.mmSimpleIdentification,
+						com.tools20022.repository.choice.AccountIdentificationFormatChoice.mmIdentificationAndPurpose, com.tools20022.repository.choice.AccountIdentificationFormatChoice.mmIdentificationAsDSS);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentificationFormatChoice";
 				definition = "Choice between formats for account identification.";
@@ -243,30 +245,30 @@ public class AccountIdentificationFormatChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SmplId", required = true)
 	public AccountIdentification1 getSimpleIdentification() {
 		return simpleIdentification;
 	}
 
-	public void setSimpleIdentification(AccountIdentification1 simpleIdentification) {
-		this.simpleIdentification = simpleIdentification;
+	public AccountIdentificationFormatChoice setSimpleIdentification(AccountIdentification1 simpleIdentification) {
+		this.simpleIdentification = Objects.requireNonNull(simpleIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "IdAndPurp", required = true)
 	public AccountIdentificationAndPurpose getIdentificationAndPurpose() {
 		return identificationAndPurpose;
 	}
 
-	public void setIdentificationAndPurpose(AccountIdentificationAndPurpose identificationAndPurpose) {
-		this.identificationAndPurpose = identificationAndPurpose;
+	public AccountIdentificationFormatChoice setIdentificationAndPurpose(AccountIdentificationAndPurpose identificationAndPurpose) {
+		this.identificationAndPurpose = Objects.requireNonNull(identificationAndPurpose);
+		return this;
 	}
 
-	@XmlElement(name = "IdAsDSS", required = true)
 	public AccountIdentification3 getIdentificationAsDSS() {
 		return identificationAsDSS;
 	}
 
-	public void setIdentificationAsDSS(AccountIdentification3 identificationAsDSS) {
-		this.identificationAsDSS = identificationAsDSS;
+	public AccountIdentificationFormatChoice setIdentificationAsDSS(AccountIdentification3 identificationAsDSS) {
+		this.identificationAsDSS = Objects.requireNonNull(identificationAsDSS);
+		return this;
 	}
 }

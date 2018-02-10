@@ -24,9 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,16 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Summary details about CBRF electronic informational message in the report."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MessageDetails1", propOrder = {"reportIdentification", "reportPagination", "totalNumberOfEntries", "sentEntry", "receivedEntry"})
 public class MessageDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptId")
 	protected Max35Text reportIdentification;
 	/**
-	 * Unique identification assigned by the CBR payment system to unambiguously
-	 * identify the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +110,7 @@ public class MessageDetails1 {
 	 */
 	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MessageDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "RptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,12 +121,11 @@ public class MessageDetails1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RptPgntn")
 	protected Pagination reportPagination;
 	/**
-	 * Page number of the message and continuation indicator to indicate that
-	 * the multi-parts notification is to continue or that the message is the
-	 * last page of the multi-parts notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -154,7 +152,7 @@ public class MessageDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmReportPagination = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MessageDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "RptPgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,10 +164,11 @@ public class MessageDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNbOfNtries", required = true)
 	protected Max9NumericText totalNumberOfEntries;
 	/**
-	 * Number of entries in the pool.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,7 +196,7 @@ public class MessageDetails1 {
 	 */
 	public static final MMMessageAttribute mmTotalNumberOfEntries = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MessageDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfNtries";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,10 +207,11 @@ public class MessageDetails1 {
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "SntNtry")
 	protected List<com.tools20022.repository.msg.CBRFReportEntry1> sentEntry;
 	/**
-	 * Set of elements used to provide details of the report of sent messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -239,7 +239,7 @@ public class MessageDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmSentEntry = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MessageDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SntNtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -250,11 +250,11 @@ public class MessageDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.CBRFReportEntry1.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvdNtry")
 	protected List<com.tools20022.repository.msg.CBRFReportEntry1> receivedEntry;
 	/**
-	 * Set of elements used to provide details of the report of received
-	 * messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -282,7 +282,7 @@ public class MessageDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmReceivedEntry = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MessageDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvdNtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -297,8 +297,9 @@ public class MessageDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MessageDetails1.mmReportIdentification, MessageDetails1.mmReportPagination, MessageDetails1.mmTotalNumberOfEntries, MessageDetails1.mmSentEntry, MessageDetails1.mmReceivedEntry);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageDetails1.mmReportIdentification, com.tools20022.repository.msg.MessageDetails1.mmReportPagination,
+						com.tools20022.repository.msg.MessageDetails1.mmTotalNumberOfEntries, com.tools20022.repository.msg.MessageDetails1.mmSentEntry, com.tools20022.repository.msg.MessageDetails1.mmReceivedEntry);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MessageDetails1";
 				definition = "Summary details about CBRF electronic informational message in the report.";
@@ -307,48 +308,48 @@ public class MessageDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptId")
-	public Max35Text getReportIdentification() {
-		return reportIdentification;
+	public Optional<Max35Text> getReportIdentification() {
+		return reportIdentification == null ? Optional.empty() : Optional.of(reportIdentification);
 	}
 
-	public void setReportIdentification(Max35Text reportIdentification) {
+	public MessageDetails1 setReportIdentification(Max35Text reportIdentification) {
 		this.reportIdentification = reportIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "RptPgntn")
-	public Pagination getReportPagination() {
-		return reportPagination;
+	public Optional<Pagination> getReportPagination() {
+		return reportPagination == null ? Optional.empty() : Optional.of(reportPagination);
 	}
 
-	public void setReportPagination(com.tools20022.repository.msg.Pagination reportPagination) {
+	public MessageDetails1 setReportPagination(com.tools20022.repository.msg.Pagination reportPagination) {
 		this.reportPagination = reportPagination;
+		return this;
 	}
 
-	@XmlElement(name = "TtlNbOfNtries", required = true)
 	public Max9NumericText getTotalNumberOfEntries() {
 		return totalNumberOfEntries;
 	}
 
-	public void setTotalNumberOfEntries(Max9NumericText totalNumberOfEntries) {
-		this.totalNumberOfEntries = totalNumberOfEntries;
+	public MessageDetails1 setTotalNumberOfEntries(Max9NumericText totalNumberOfEntries) {
+		this.totalNumberOfEntries = Objects.requireNonNull(totalNumberOfEntries);
+		return this;
 	}
 
-	@XmlElement(name = "SntNtry")
 	public List<CBRFReportEntry1> getSentEntry() {
-		return sentEntry;
+		return sentEntry == null ? sentEntry = new ArrayList<>() : sentEntry;
 	}
 
-	public void setSentEntry(List<com.tools20022.repository.msg.CBRFReportEntry1> sentEntry) {
-		this.sentEntry = sentEntry;
+	public MessageDetails1 setSentEntry(List<com.tools20022.repository.msg.CBRFReportEntry1> sentEntry) {
+		this.sentEntry = Objects.requireNonNull(sentEntry);
+		return this;
 	}
 
-	@XmlElement(name = "RcvdNtry")
 	public List<CBRFReportEntry1> getReceivedEntry() {
-		return receivedEntry;
+		return receivedEntry == null ? receivedEntry = new ArrayList<>() : receivedEntry;
 	}
 
-	public void setReceivedEntry(List<com.tools20022.repository.msg.CBRFReportEntry1> receivedEntry) {
-		this.receivedEntry = receivedEntry;
+	public MessageDetails1 setReceivedEntry(List<com.tools20022.repository.msg.CBRFReportEntry1> receivedEntry) {
+		this.receivedEntry = Objects.requireNonNull(receivedEntry);
+		return this;
 	}
 }

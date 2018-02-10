@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.PortfolioStrategy;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Strategy is organisation based.
@@ -36,6 +38,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.PortfolioStrategy
+ * PortfolioStrategy}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -44,9 +49,6 @@ import java.util.List;
  * OrganisationStrategy.mmOrganisation}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.PortfolioStrategy
- * PortfolioStrategy}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -58,8 +60,8 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,8 +77,8 @@ public class OrganisationStrategy extends PortfolioStrategy {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.Organisation> organisation;
 	/**
-	 * Strategy is organisation based.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,8 +111,8 @@ public class OrganisationStrategy extends PortfolioStrategy {
 	 */
 	public static final MMBusinessAssociationEnd mmOrganisation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationStrategy.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationStrategy.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Organisation";
 			definition = "Strategy is organisation based.";
@@ -124,7 +126,7 @@ public class OrganisationStrategy extends PortfolioStrategy {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrganisationStrategy";
 				definition = "Strategy is organisation based.";
@@ -142,10 +144,11 @@ public class OrganisationStrategy extends PortfolioStrategy {
 	}
 
 	public List<Organisation> getOrganisation() {
-		return organisation;
+		return organisation == null ? organisation = new ArrayList<>() : organisation;
 	}
 
-	public void setOrganisation(List<com.tools20022.repository.entity.Organisation> organisation) {
-		this.organisation = organisation;
+	public OrganisationStrategy setOrganisation(List<com.tools20022.repository.entity.Organisation> organisation) {
+		this.organisation = Objects.requireNonNull(organisation);
+		return this;
 	}
 }

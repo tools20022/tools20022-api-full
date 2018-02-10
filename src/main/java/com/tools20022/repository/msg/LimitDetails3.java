@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LimitDetails3", propOrder = {"amount", "creditDebitIndicator", "status", "startDateTime"})
 public class LimitDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected AmountChoice amount;
 	/**
-	 * Amount of money of the limit, expressed in an eligible currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +118,7 @@ public class LimitDetails3 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
-			componentContext_lazy = () -> LimitDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +129,11 @@ public class LimitDetails3 {
 			complexType_lazy = () -> AmountChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd", required = true)
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Specifies if a limit is a debit limit or a credit limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +166,7 @@ public class LimitDetails3 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCreditDebitIndicator;
-			componentContext_lazy = () -> LimitDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +177,11 @@ public class LimitDetails3 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts")
 	protected LimitStatus1Code status;
 	/**
-	 * Status of the limit, eg, enabled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -209,7 +214,7 @@ public class LimitDetails3 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmLimitStatus;
-			componentContext_lazy = () -> LimitDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,10 +225,11 @@ public class LimitDetails3 {
 			simpleType_lazy = () -> LimitStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StartDtTm")
 	protected DateAndDateTimeChoice startDateTime;
 	/**
-	 * Date and time at which the limit becomes effective.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -256,7 +262,7 @@ public class LimitDetails3 {
 	public static final MMMessageAttribute mmStartDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
-			componentContext_lazy = () -> LimitDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "StartDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -271,9 +277,10 @@ public class LimitDetails3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LimitDetails3.mmAmount, LimitDetails3.mmCreditDebitIndicator, LimitDetails3.mmStatus, LimitDetails3.mmStartDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitDetails3.mmAmount, com.tools20022.repository.msg.LimitDetails3.mmCreditDebitIndicator, com.tools20022.repository.msg.LimitDetails3.mmStatus,
+						com.tools20022.repository.msg.LimitDetails3.mmStartDateTime);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitDetails3";
 				definition = "Maximum value used for risk containment in a system or towards counterparts. The limit may be a current limit or a default limit.";
@@ -282,39 +289,39 @@ public class LimitDetails3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public AmountChoice getAmount() {
 		return amount;
 	}
 
-	public void setAmount(AmountChoice amount) {
-		this.amount = amount;
+	public LimitDetails3 setAmount(AmountChoice amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
-		this.creditDebitIndicator = creditDebitIndicator;
+	public LimitDetails3 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = Objects.requireNonNull(creditDebitIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "Sts")
-	public LimitStatus1Code getStatus() {
-		return status;
+	public Optional<LimitStatus1Code> getStatus() {
+		return status == null ? Optional.empty() : Optional.of(status);
 	}
 
-	public void setStatus(LimitStatus1Code status) {
+	public LimitDetails3 setStatus(LimitStatus1Code status) {
 		this.status = status;
+		return this;
 	}
 
-	@XmlElement(name = "StartDtTm")
-	public DateAndDateTimeChoice getStartDateTime() {
-		return startDateTime;
+	public Optional<DateAndDateTimeChoice> getStartDateTime() {
+		return startDateTime == null ? Optional.empty() : Optional.of(startDateTime);
 	}
 
-	public void setStartDateTime(DateAndDateTimeChoice startDateTime) {
+	public LimitDetails3 setStartDateTime(DateAndDateTimeChoice startDateTime) {
 		this.startDateTime = startDateTime;
+		return this;
 	}
 }

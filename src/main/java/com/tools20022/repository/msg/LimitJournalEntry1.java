@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -29,6 +30,8 @@ import com.tools20022.repository.datatype.Max500Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +75,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,16 +89,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LimitJournalEntry1", propOrder = {"journalDate", "creditDebitIndicator", "amount", "entryReference", "transactionIdentification", "accountServicerReference", "processorTransactionIdentification",
 		"additionalEntryInformation"})
 public class LimitJournalEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "JrnlDt", required = true)
 	protected DateAndDateTimeChoice journalDate;
 	/**
-	 * Date and time for which the limit journal entry applies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -122,7 +126,7 @@ public class LimitJournalEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmJournalDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournalEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "JrnlDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +138,11 @@ public class LimitJournalEntry1 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd", required = true)
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Indicates whether the entry is a credit or a debit entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,7 +171,7 @@ public class LimitJournalEntry1 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournalEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,10 +182,11 @@ public class LimitJournalEntry1 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected Amount2Choice amount;
 	/**
-	 * Amount of money of individual entry impacting the limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,7 +214,7 @@ public class LimitJournalEntry1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournalEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,10 +225,11 @@ public class LimitJournalEntry1 {
 			complexType_lazy = () -> Amount2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NtryRef")
 	protected Max35Text entryReference;
 	/**
-	 * Unique reference for the entry, as assigned by the market infrastructure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,7 +258,7 @@ public class LimitJournalEntry1 {
 	 */
 	public static final MMMessageAttribute mmEntryReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournalEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "NtryRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -262,11 +269,11 @@ public class LimitJournalEntry1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TxId")
 	protected Max35Text transactionIdentification;
 	/**
-	 * Unique reference as assigned by the account owner institution to
-	 * unambiguously identify the entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -295,7 +302,7 @@ public class LimitJournalEntry1 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournalEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -306,11 +313,11 @@ public class LimitJournalEntry1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcrRef")
 	protected Max35Text accountServicerReference;
 	/**
-	 * Unique reference as assigned by the account servicing institution to
-	 * unambiguously identify the entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -339,7 +346,7 @@ public class LimitJournalEntry1 {
 	 */
 	public static final MMMessageAttribute mmAccountServicerReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournalEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -350,10 +357,11 @@ public class LimitJournalEntry1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcrTxId")
 	protected Max35Text processorTransactionIdentification;
 	/**
-	 * Identification of the transaction assigned by the processor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -368,6 +376,9 @@ public class LimitJournalEntry1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrcrTxId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::MITI</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -381,9 +392,10 @@ public class LimitJournalEntry1 {
 	 */
 	public static final MMMessageAttribute mmProcessorTransactionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournalEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcrTxId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::MITI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessorTransactionIdentification";
 			definition = "Identification of the transaction assigned by the processor.";
@@ -392,10 +404,11 @@ public class LimitJournalEntry1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlNtryInf")
 	protected Max500Text additionalEntryInformation;
 	/**
-	 * Further details of the entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -422,7 +435,7 @@ public class LimitJournalEntry1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalEntryInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LimitJournalEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournalEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlNtryInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -437,9 +450,11 @@ public class LimitJournalEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LimitJournalEntry1.mmJournalDate, LimitJournalEntry1.mmCreditDebitIndicator, LimitJournalEntry1.mmAmount, LimitJournalEntry1.mmEntryReference,
-						LimitJournalEntry1.mmTransactionIdentification, LimitJournalEntry1.mmAccountServicerReference, LimitJournalEntry1.mmProcessorTransactionIdentification, LimitJournalEntry1.mmAdditionalEntryInformation);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitJournalEntry1.mmJournalDate, com.tools20022.repository.msg.LimitJournalEntry1.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.LimitJournalEntry1.mmAmount, com.tools20022.repository.msg.LimitJournalEntry1.mmEntryReference, com.tools20022.repository.msg.LimitJournalEntry1.mmTransactionIdentification,
+						com.tools20022.repository.msg.LimitJournalEntry1.mmAccountServicerReference, com.tools20022.repository.msg.LimitJournalEntry1.mmProcessorTransactionIdentification,
+						com.tools20022.repository.msg.LimitJournalEntry1.mmAdditionalEntryInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitJournalEntry1";
 				definition = "Journal entries track changes to the utilisation of the limit. Entries exist for all activity impacting the limit.";
@@ -448,75 +463,75 @@ public class LimitJournalEntry1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "JrnlDt", required = true)
 	public DateAndDateTimeChoice getJournalDate() {
 		return journalDate;
 	}
 
-	public void setJournalDate(DateAndDateTimeChoice journalDate) {
-		this.journalDate = journalDate;
+	public LimitJournalEntry1 setJournalDate(DateAndDateTimeChoice journalDate) {
+		this.journalDate = Objects.requireNonNull(journalDate);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
-		this.creditDebitIndicator = creditDebitIndicator;
+	public LimitJournalEntry1 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = Objects.requireNonNull(creditDebitIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public Amount2Choice getAmount() {
 		return amount;
 	}
 
-	public void setAmount(Amount2Choice amount) {
-		this.amount = amount;
+	public LimitJournalEntry1 setAmount(Amount2Choice amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "NtryRef")
-	public Max35Text getEntryReference() {
-		return entryReference;
+	public Optional<Max35Text> getEntryReference() {
+		return entryReference == null ? Optional.empty() : Optional.of(entryReference);
 	}
 
-	public void setEntryReference(Max35Text entryReference) {
+	public LimitJournalEntry1 setEntryReference(Max35Text entryReference) {
 		this.entryReference = entryReference;
+		return this;
 	}
 
-	@XmlElement(name = "TxId")
-	public Max35Text getTransactionIdentification() {
-		return transactionIdentification;
+	public Optional<Max35Text> getTransactionIdentification() {
+		return transactionIdentification == null ? Optional.empty() : Optional.of(transactionIdentification);
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
+	public LimitJournalEntry1 setTransactionIdentification(Max35Text transactionIdentification) {
 		this.transactionIdentification = transactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcrRef")
-	public Max35Text getAccountServicerReference() {
-		return accountServicerReference;
+	public Optional<Max35Text> getAccountServicerReference() {
+		return accountServicerReference == null ? Optional.empty() : Optional.of(accountServicerReference);
 	}
 
-	public void setAccountServicerReference(Max35Text accountServicerReference) {
+	public LimitJournalEntry1 setAccountServicerReference(Max35Text accountServicerReference) {
 		this.accountServicerReference = accountServicerReference;
+		return this;
 	}
 
-	@XmlElement(name = "PrcrTxId")
-	public Max35Text getProcessorTransactionIdentification() {
-		return processorTransactionIdentification;
+	public Optional<Max35Text> getProcessorTransactionIdentification() {
+		return processorTransactionIdentification == null ? Optional.empty() : Optional.of(processorTransactionIdentification);
 	}
 
-	public void setProcessorTransactionIdentification(Max35Text processorTransactionIdentification) {
+	public LimitJournalEntry1 setProcessorTransactionIdentification(Max35Text processorTransactionIdentification) {
 		this.processorTransactionIdentification = processorTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlNtryInf")
-	public Max500Text getAdditionalEntryInformation() {
-		return additionalEntryInformation;
+	public Optional<Max500Text> getAdditionalEntryInformation() {
+		return additionalEntryInformation == null ? Optional.empty() : Optional.of(additionalEntryInformation);
 	}
 
-	public void setAdditionalEntryInformation(Max500Text additionalEntryInformation) {
+	public LimitJournalEntry1 setAdditionalEntryInformation(Max500Text additionalEntryInformation) {
 		this.additionalEntryInformation = additionalEntryInformation;
+		return this;
 	}
 }

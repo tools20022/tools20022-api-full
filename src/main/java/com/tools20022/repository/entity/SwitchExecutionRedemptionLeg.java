@@ -28,6 +28,8 @@ import com.tools20022.repository.msg.SwitchRedemptionLegExecution4;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Execution of the redemption part, in a switch between investment funds or
@@ -40,6 +42,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.RedemptionExecution
+ * RedemptionExecution}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -51,10 +57,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * SwitchExecutionRedemptionLeg.mmPercentageOfTotalSubscriptionAmount}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.RedemptionExecution
- * RedemptionExecution}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SwitchExecution#mmRedemptionLeg
+ * SwitchExecution.mmRedemptionLeg}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -70,19 +81,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SwitchExecution#mmRedemptionLeg
- * SwitchExecution.mmRedemptionLeg}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,8 +102,8 @@ public class SwitchExecutionRedemptionLeg extends RedemptionExecution {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected SwitchExecution relatedSwitchExecution;
 	/**
-	 * Switch execution process for which a redemption leg is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,8 +137,8 @@ public class SwitchExecutionRedemptionLeg extends RedemptionExecution {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSwitchExecution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchExecutionRedemptionLeg.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchExecutionRedemptionLeg.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSwitchExecution";
 			definition = "Switch execution process for which a redemption leg is specified.";
@@ -149,9 +151,8 @@ public class SwitchExecutionRedemptionLeg extends RedemptionExecution {
 	};
 	protected PercentageRate percentageOfTotalSubscriptionAmount;
 	/**
-	 * Percentage of the total amount subscribed, and that came from redemption
-	 * of investment funds or investment fund classes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,8 +180,8 @@ public class SwitchExecutionRedemptionLeg extends RedemptionExecution {
 	 */
 	public static final MMBusinessAttribute mmPercentageOfTotalSubscriptionAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchExecutionRedemptionLeg.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchExecutionRedemptionLeg.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PercentageOfTotalSubscriptionAmount";
 			definition = "Percentage of the total amount subscribed, and that came from redemption of investment funds or investment fund classes.";
@@ -201,7 +202,7 @@ public class SwitchExecutionRedemptionLeg extends RedemptionExecution {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchExecutionRedemptionLeg";
 				definition = "Execution of the redemption part, in a switch between investment funds or investment fund classes.";
@@ -219,19 +220,21 @@ public class SwitchExecutionRedemptionLeg extends RedemptionExecution {
 		return mmObject_lazy.get();
 	}
 
-	public SwitchExecution getRelatedSwitchExecution() {
-		return relatedSwitchExecution;
+	public Optional<SwitchExecution> getRelatedSwitchExecution() {
+		return relatedSwitchExecution == null ? Optional.empty() : Optional.of(relatedSwitchExecution);
 	}
 
-	public void setRelatedSwitchExecution(com.tools20022.repository.entity.SwitchExecution relatedSwitchExecution) {
+	public SwitchExecutionRedemptionLeg setRelatedSwitchExecution(com.tools20022.repository.entity.SwitchExecution relatedSwitchExecution) {
 		this.relatedSwitchExecution = relatedSwitchExecution;
+		return this;
 	}
 
 	public PercentageRate getPercentageOfTotalSubscriptionAmount() {
 		return percentageOfTotalSubscriptionAmount;
 	}
 
-	public void setPercentageOfTotalSubscriptionAmount(PercentageRate percentageOfTotalSubscriptionAmount) {
-		this.percentageOfTotalSubscriptionAmount = percentageOfTotalSubscriptionAmount;
+	public SwitchExecutionRedemptionLeg setPercentageOfTotalSubscriptionAmount(PercentageRate percentageOfTotalSubscriptionAmount) {
+		this.percentageOfTotalSubscriptionAmount = Objects.requireNonNull(percentageOfTotalSubscriptionAmount);
+		return this;
 	}
 }

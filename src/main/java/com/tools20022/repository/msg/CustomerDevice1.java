@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Device used by the customer to perform the payment."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CustomerDevice1", propOrder = {"identification", "type", "provider"})
 public class CustomerDevice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id")
 	protected Max35Text identification;
 	/**
-	 * Identifier of the component.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,7 +99,7 @@ public class CustomerDevice1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerDevice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerDevice1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,10 +110,11 @@ public class CustomerDevice1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected Max35Text type;
 	/**
-	 * Type of component.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -138,7 +141,7 @@ public class CustomerDevice1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerDevice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerDevice1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,10 +152,11 @@ public class CustomerDevice1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Prvdr")
 	protected Max35Text provider;
 	/**
-	 * Provider of the component.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,7 +183,7 @@ public class CustomerDevice1 {
 	 */
 	public static final MMMessageAttribute mmProvider = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustomerDevice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerDevice1.mmObject();
 			isDerived = false;
 			xmlTag = "Prvdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,8 +198,8 @@ public class CustomerDevice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CustomerDevice1.mmIdentification, CustomerDevice1.mmType, CustomerDevice1.mmProvider);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustomerDevice1.mmIdentification, com.tools20022.repository.msg.CustomerDevice1.mmType, com.tools20022.repository.msg.CustomerDevice1.mmProvider);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustomerDevice1";
 				definition = "Device used by the customer to perform the payment.";
@@ -204,30 +208,30 @@ public class CustomerDevice1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id")
-	public Max35Text getIdentification() {
-		return identification;
+	public Optional<Max35Text> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(Max35Text identification) {
+	public CustomerDevice1 setIdentification(Max35Text identification) {
 		this.identification = identification;
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public Max35Text getType() {
-		return type;
+	public Optional<Max35Text> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(Max35Text type) {
+	public CustomerDevice1 setType(Max35Text type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "Prvdr")
-	public Max35Text getProvider() {
-		return provider;
+	public Optional<Max35Text> getProvider() {
+		return provider == null ? Optional.empty() : Optional.of(provider);
 	}
 
-	public void setProvider(Max35Text provider) {
+	public CustomerDevice1 setProvider(Max35Text provider) {
 		this.provider = provider;
+		return this;
 	}
 }

@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ShortLongCode;
+import com.tools20022.repository.codeset.ShortLong1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the securities position is short or long, that is, whether
@@ -31,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ShortLongCode ShortLongCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ShortLong1Code#mmShort
- * ShortLong1Code.mmShort}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ShortLong1Code#mmLong
- * ShortLong1Code.mmLong}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ShortLong1Code#Short
+ * ShortLong1Code.Short}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ShortLong1Code#Long
+ * ShortLong1Code.Long}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ShortLongCode ShortLongCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ShortLong1Code extends ShortLongCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ShortLong1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class ShortLong1Code extends ShortLongCode {
 	 * name} = "Short"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmShort = new MMCode() {
+	public static final ShortLong1Code Short = new ShortLong1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Short";
-			owner_lazy = () -> ShortLong1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ShortLong1Code.mmObject();
+			codeName = ShortLongCode.Short.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class ShortLong1Code extends ShortLongCode {
 	 * name} = "Long"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLong = new MMCode() {
+	public static final ShortLong1Code Long = new ShortLong1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Long";
-			owner_lazy = () -> ShortLong1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ShortLong1Code.mmObject();
+			codeName = ShortLongCode.Long.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ShortLong1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ShortLong1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SHOR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ShortLong1Code";
 				definition = "Specifies whether the securities position is short or long, that is, whether the balance is a negative or positive balance.";
-				code_lazy = () -> Arrays.asList(ShortLong1Code.mmShort, ShortLong1Code.mmLong);
 				trace_lazy = () -> ShortLongCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ShortLong1Code.Short, com.tools20022.repository.codeset.ShortLong1Code.Long);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Short.getCodeName().get(), Short);
+		codesByName.put(Long.getCodeName().get(), Long);
+	}
+
+	public static ShortLong1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ShortLong1Code[] values() {
+		ShortLong1Code[] values = new ShortLong1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ShortLong1Code> {
+		@Override
+		public ShortLong1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ShortLong1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

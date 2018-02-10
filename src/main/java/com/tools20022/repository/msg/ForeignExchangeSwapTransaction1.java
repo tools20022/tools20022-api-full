@@ -30,9 +30,8 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -92,8 +91,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -113,20 +112,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ForeignExchangeSwapTransaction1", propOrder = {"reportedTransactionStatus", "uniqueTransactionIdentifier", "proprietaryTransactionIdentification", "counterpartyProprietaryTransactionIdentification",
 		"counterpartyIdentification", "tradeDate", "spotValueDate", "maturityDate", "transactionType", "transactionNominalAmount", "foreignExchange", "supplementaryData"})
 public class ForeignExchangeSwapTransaction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptdTxSts", required = true)
 	protected TransactionOperationType1Code reportedTransactionStatus;
 	/**
-	 * Defines the status of the reported transaction, that is details on
-	 * whether the transaction is a new transaction, an amendment of a
-	 * previously reported transaction, a cancellation of a previously reported
-	 * transaction or a correction to a previously reported and rejected
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,7 +166,7 @@ public class ForeignExchangeSwapTransaction1 {
 	public static final MMMessageAttribute mmReportedTransactionStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RegulatoryReport.mmType;
-			componentContext_lazy = () -> ForeignExchangeSwapTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "RptdTxSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,13 +178,11 @@ public class ForeignExchangeSwapTransaction1 {
 			simpleType_lazy = () -> TransactionOperationType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "UnqTxIdr")
 	protected Max105Text uniqueTransactionIdentifier;
 	/**
-	 * Unique transaction identifier will be created at the time a transaction
-	 * is first executed, shared with all registered entities and counterparties
-	 * involved in the transaction, and used to track that particular
-	 * transaction during its lifetime.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -231,7 +225,7 @@ public class ForeignExchangeSwapTransaction1 {
 	public static final MMMessageAttribute mmUniqueTransactionIdentifier = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
-			componentContext_lazy = () -> ForeignExchangeSwapTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "UnqTxIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,11 +237,11 @@ public class ForeignExchangeSwapTransaction1 {
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryTxId", required = true)
 	protected Max105Text proprietaryTransactionIdentification;
 	/**
-	 * Internal unique transaction identifier used by the reporting agent for
-	 * each transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -290,7 +284,7 @@ public class ForeignExchangeSwapTransaction1 {
 	public static final MMMessageAttribute mmProprietaryTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
-			componentContext_lazy = () -> ForeignExchangeSwapTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -302,11 +296,11 @@ public class ForeignExchangeSwapTransaction1 {
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrPtyPrtryTxId")
 	protected Max105Text counterpartyProprietaryTransactionIdentification;
 	/**
-	 * Internal unique proprietary transaction identifier as assigned by the
-	 * counterparty of the reporting agent for each transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -350,7 +344,7 @@ public class ForeignExchangeSwapTransaction1 {
 	public static final MMMessageAttribute mmCounterpartyProprietaryTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
-			componentContext_lazy = () -> ForeignExchangeSwapTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyPrtryTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -362,11 +356,11 @@ public class ForeignExchangeSwapTransaction1 {
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrPtyId", required = true)
 	protected CounterpartyIdentification1Choice counterpartyIdentification;
 	/**
-	 * Identification of the counterparty of the reporting agent for the
-	 * reported transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -409,7 +403,7 @@ public class ForeignExchangeSwapTransaction1 {
 	public static final MMMessageAssociationEnd mmCounterpartyIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> TradePartyRole.mmBuyerOrSeller;
-			componentContext_lazy = () -> ForeignExchangeSwapTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -422,19 +416,11 @@ public class ForeignExchangeSwapTransaction1 {
 			type_lazy = () -> CounterpartyIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDt", required = true)
 	protected DateAndDateTimeChoice tradeDate;
 	/**
-	 * Date and time on which the parties entered into the reported transaction.<br>
-	 * <br>
-	 * Usage: when time is available, it must be reported.<br>
-	 * <br>
-	 * It is to be reported with only the date when the time of the transaction
-	 * is not available. <br>
-	 * <br>
-	 * The reported time is the execution time when available or otherwise the
-	 * time at which the transaction entered the trading system of the reporting
-	 * agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -477,7 +463,7 @@ public class ForeignExchangeSwapTransaction1 {
 	public static final MMMessageAssociationEnd mmTradeDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> ForeignExchangeSwapTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -490,13 +476,11 @@ public class ForeignExchangeSwapTransaction1 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "SpotValDt", required = true)
 	protected ISODate spotValueDate;
 	/**
-	 * Date on which one party sells to the other a specified amount of a
-	 * specified currency against payment of an agreed amount of a specified
-	 * different currency based on an agreed foreign exchange rate known as
-	 * foreign exchange spot rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -539,7 +523,7 @@ public class ForeignExchangeSwapTransaction1 {
 	public static final MMMessageAttribute mmSpotValueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmValueDate;
-			componentContext_lazy = () -> ForeignExchangeSwapTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "SpotValDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -551,11 +535,11 @@ public class ForeignExchangeSwapTransaction1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "MtrtyDt", required = true)
 	protected ISODate maturityDate;
 	/**
-	 * Date on which the foreign exchange swap transaction expires and the
-	 * currency sold on the value date is repurchased.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -598,7 +582,7 @@ public class ForeignExchangeSwapTransaction1 {
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
-			componentContext_lazy = () -> ForeignExchangeSwapTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -610,11 +594,11 @@ public class ForeignExchangeSwapTransaction1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "TxTp", required = true)
 	protected SecuritiesTransactionType15Code transactionType;
 	/**
-	 * Defines whether the amount of money reported under the transaction
-	 * nominal amount is bought or sold on the spot value date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -658,7 +642,7 @@ public class ForeignExchangeSwapTransaction1 {
 	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
-			componentContext_lazy = () -> ForeignExchangeSwapTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TxTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -670,12 +654,11 @@ public class ForeignExchangeSwapTransaction1 {
 			simpleType_lazy = () -> SecuritiesTransactionType15Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TxNmnlAmt", required = true)
 	protected ActiveCurrencyAndAmount transactionNominalAmount;
 	/**
-	 * Specifies the nominal amount of the foreign exchange swap, that is the
-	 * amount bought/sold on the spot value date and reported as an absolute
-	 * value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -719,7 +702,7 @@ public class ForeignExchangeSwapTransaction1 {
 	public static final MMMessageAttribute mmTransactionNominalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
-			componentContext_lazy = () -> ForeignExchangeSwapTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TxNmnlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -731,10 +714,11 @@ public class ForeignExchangeSwapTransaction1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "FX", required = true)
 	protected ForeignExchange1 foreignExchange;
 	/**
-	 * Provides the details of the foreign exchange transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -775,7 +759,7 @@ public class ForeignExchangeSwapTransaction1 {
 	public static final MMMessageAssociationEnd mmForeignExchange = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
-			componentContext_lazy = () -> ForeignExchangeSwapTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "FX";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -788,11 +772,11 @@ public class ForeignExchangeSwapTransaction1 {
 			type_lazy = () -> com.tools20022.repository.msg.ForeignExchange1.mmObject();
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -828,7 +812,7 @@ public class ForeignExchangeSwapTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ForeignExchangeSwapTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -844,12 +828,15 @@ public class ForeignExchangeSwapTransaction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ForeignExchangeSwapTransaction1.mmReportedTransactionStatus, ForeignExchangeSwapTransaction1.mmUniqueTransactionIdentifier,
-						ForeignExchangeSwapTransaction1.mmProprietaryTransactionIdentification, ForeignExchangeSwapTransaction1.mmCounterpartyProprietaryTransactionIdentification,
-						ForeignExchangeSwapTransaction1.mmCounterpartyIdentification, ForeignExchangeSwapTransaction1.mmTradeDate, ForeignExchangeSwapTransaction1.mmSpotValueDate, ForeignExchangeSwapTransaction1.mmMaturityDate,
-						ForeignExchangeSwapTransaction1.mmTransactionType, ForeignExchangeSwapTransaction1.mmTransactionNominalAmount, ForeignExchangeSwapTransaction1.mmForeignExchange, ForeignExchangeSwapTransaction1.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmReportedTransactionStatus,
+						com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmUniqueTransactionIdentifier, com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmProprietaryTransactionIdentification,
+						com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmCounterpartyProprietaryTransactionIdentification, com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmCounterpartyIdentification,
+						com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmTradeDate, com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmSpotValueDate,
+						com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmMaturityDate, com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmTransactionType,
+						com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmTransactionNominalAmount, com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmForeignExchange,
+						com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmSupplementaryData);
 				trace_lazy = () -> ForeignExchangeSwap.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeSwapTransaction1";
 				definition = "Provides the details of each individual foreign exchange swap transaction.";
@@ -859,111 +846,111 @@ public class ForeignExchangeSwapTransaction1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptdTxSts", required = true)
 	public TransactionOperationType1Code getReportedTransactionStatus() {
 		return reportedTransactionStatus;
 	}
 
-	public void setReportedTransactionStatus(TransactionOperationType1Code reportedTransactionStatus) {
-		this.reportedTransactionStatus = reportedTransactionStatus;
+	public ForeignExchangeSwapTransaction1 setReportedTransactionStatus(TransactionOperationType1Code reportedTransactionStatus) {
+		this.reportedTransactionStatus = Objects.requireNonNull(reportedTransactionStatus);
+		return this;
 	}
 
-	@XmlElement(name = "UnqTxIdr")
-	public Max105Text getUniqueTransactionIdentifier() {
-		return uniqueTransactionIdentifier;
+	public Optional<Max105Text> getUniqueTransactionIdentifier() {
+		return uniqueTransactionIdentifier == null ? Optional.empty() : Optional.of(uniqueTransactionIdentifier);
 	}
 
-	public void setUniqueTransactionIdentifier(Max105Text uniqueTransactionIdentifier) {
+	public ForeignExchangeSwapTransaction1 setUniqueTransactionIdentifier(Max105Text uniqueTransactionIdentifier) {
 		this.uniqueTransactionIdentifier = uniqueTransactionIdentifier;
+		return this;
 	}
 
-	@XmlElement(name = "PrtryTxId", required = true)
 	public Max105Text getProprietaryTransactionIdentification() {
 		return proprietaryTransactionIdentification;
 	}
 
-	public void setProprietaryTransactionIdentification(Max105Text proprietaryTransactionIdentification) {
-		this.proprietaryTransactionIdentification = proprietaryTransactionIdentification;
+	public ForeignExchangeSwapTransaction1 setProprietaryTransactionIdentification(Max105Text proprietaryTransactionIdentification) {
+		this.proprietaryTransactionIdentification = Objects.requireNonNull(proprietaryTransactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CtrPtyPrtryTxId")
-	public Max105Text getCounterpartyProprietaryTransactionIdentification() {
-		return counterpartyProprietaryTransactionIdentification;
+	public Optional<Max105Text> getCounterpartyProprietaryTransactionIdentification() {
+		return counterpartyProprietaryTransactionIdentification == null ? Optional.empty() : Optional.of(counterpartyProprietaryTransactionIdentification);
 	}
 
-	public void setCounterpartyProprietaryTransactionIdentification(Max105Text counterpartyProprietaryTransactionIdentification) {
+	public ForeignExchangeSwapTransaction1 setCounterpartyProprietaryTransactionIdentification(Max105Text counterpartyProprietaryTransactionIdentification) {
 		this.counterpartyProprietaryTransactionIdentification = counterpartyProprietaryTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CtrPtyId", required = true)
 	public CounterpartyIdentification1Choice getCounterpartyIdentification() {
 		return counterpartyIdentification;
 	}
 
-	public void setCounterpartyIdentification(CounterpartyIdentification1Choice counterpartyIdentification) {
-		this.counterpartyIdentification = counterpartyIdentification;
+	public ForeignExchangeSwapTransaction1 setCounterpartyIdentification(CounterpartyIdentification1Choice counterpartyIdentification) {
+		this.counterpartyIdentification = Objects.requireNonNull(counterpartyIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TradDt", required = true)
 	public DateAndDateTimeChoice getTradeDate() {
 		return tradeDate;
 	}
 
-	public void setTradeDate(DateAndDateTimeChoice tradeDate) {
-		this.tradeDate = tradeDate;
+	public ForeignExchangeSwapTransaction1 setTradeDate(DateAndDateTimeChoice tradeDate) {
+		this.tradeDate = Objects.requireNonNull(tradeDate);
+		return this;
 	}
 
-	@XmlElement(name = "SpotValDt", required = true)
 	public ISODate getSpotValueDate() {
 		return spotValueDate;
 	}
 
-	public void setSpotValueDate(ISODate spotValueDate) {
-		this.spotValueDate = spotValueDate;
+	public ForeignExchangeSwapTransaction1 setSpotValueDate(ISODate spotValueDate) {
+		this.spotValueDate = Objects.requireNonNull(spotValueDate);
+		return this;
 	}
 
-	@XmlElement(name = "MtrtyDt", required = true)
 	public ISODate getMaturityDate() {
 		return maturityDate;
 	}
 
-	public void setMaturityDate(ISODate maturityDate) {
-		this.maturityDate = maturityDate;
+	public ForeignExchangeSwapTransaction1 setMaturityDate(ISODate maturityDate) {
+		this.maturityDate = Objects.requireNonNull(maturityDate);
+		return this;
 	}
 
-	@XmlElement(name = "TxTp", required = true)
 	public SecuritiesTransactionType15Code getTransactionType() {
 		return transactionType;
 	}
 
-	public void setTransactionType(SecuritiesTransactionType15Code transactionType) {
-		this.transactionType = transactionType;
+	public ForeignExchangeSwapTransaction1 setTransactionType(SecuritiesTransactionType15Code transactionType) {
+		this.transactionType = Objects.requireNonNull(transactionType);
+		return this;
 	}
 
-	@XmlElement(name = "TxNmnlAmt", required = true)
 	public ActiveCurrencyAndAmount getTransactionNominalAmount() {
 		return transactionNominalAmount;
 	}
 
-	public void setTransactionNominalAmount(ActiveCurrencyAndAmount transactionNominalAmount) {
-		this.transactionNominalAmount = transactionNominalAmount;
+	public ForeignExchangeSwapTransaction1 setTransactionNominalAmount(ActiveCurrencyAndAmount transactionNominalAmount) {
+		this.transactionNominalAmount = Objects.requireNonNull(transactionNominalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "FX", required = true)
 	public ForeignExchange1 getForeignExchange() {
 		return foreignExchange;
 	}
 
-	public void setForeignExchange(com.tools20022.repository.msg.ForeignExchange1 foreignExchange) {
-		this.foreignExchange = foreignExchange;
+	public ForeignExchangeSwapTransaction1 setForeignExchange(com.tools20022.repository.msg.ForeignExchange1 foreignExchange) {
+		this.foreignExchange = Objects.requireNonNull(foreignExchange);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public ForeignExchangeSwapTransaction1 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 }

@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateActionNotificationTypeCode;
+import com.tools20022.repository.codeset.CorporateActionNotificationType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of notification advice.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationTypeCode
- * CorporateActionNotificationTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType1Code#mmNew
- * CorporateActionNotificationType1Code.mmNew}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType1Code#New
+ * CorporateActionNotificationType1Code.New}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType1Code#mmReplacement
- * CorporateActionNotificationType1Code.mmReplacement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType1Code#Replacement
+ * CorporateActionNotificationType1Code.Replacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType1Code#mmReminder
- * CorporateActionNotificationType1Code.mmReminder}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType1Code#Reminder
+ * CorporateActionNotificationType1Code.Reminder}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationTypeCode
+ * CorporateActionNotificationTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of notification advice."</li>
  * </ul>
  */
-public class CorporateActionNotificationType1Code extends CorporateActionNotificationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionNotificationType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class CorporateActionNotificationType1Code extends CorporateActionNotific
 	 * name} = "New"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNew = new MMCode() {
+	public static final CorporateActionNotificationType1Code New = new CorporateActionNotificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "New";
-			owner_lazy = () -> CorporateActionNotificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionNotificationType1Code.mmObject();
+			codeName = CorporateActionNotificationTypeCode.New.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class CorporateActionNotificationType1Code extends CorporateActionNotific
 	 * name} = "Replacement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReplacement = new MMCode() {
+	public static final CorporateActionNotificationType1Code Replacement = new CorporateActionNotificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replacement";
-			owner_lazy = () -> CorporateActionNotificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionNotificationType1Code.mmObject();
+			codeName = CorporateActionNotificationTypeCode.Replacement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class CorporateActionNotificationType1Code extends CorporateActionNotific
 	 * name} = "Reminder"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReminder = new MMCode() {
+	public static final CorporateActionNotificationType1Code Reminder = new CorporateActionNotificationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reminder";
-			owner_lazy = () -> CorporateActionNotificationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionNotificationType1Code.mmObject();
+			codeName = CorporateActionNotificationTypeCode.Reminder.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionNotificationType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionNotificationType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NEWM");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNotificationType1Code";
 				definition = "Type of notification advice.";
-				code_lazy = () -> Arrays.asList(CorporateActionNotificationType1Code.mmNew, CorporateActionNotificationType1Code.mmReplacement, CorporateActionNotificationType1Code.mmReminder);
 				trace_lazy = () -> CorporateActionNotificationTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionNotificationType1Code.New, com.tools20022.repository.codeset.CorporateActionNotificationType1Code.Replacement,
+						com.tools20022.repository.codeset.CorporateActionNotificationType1Code.Reminder);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(New.getCodeName().get(), New);
+		codesByName.put(Replacement.getCodeName().get(), Replacement);
+		codesByName.put(Reminder.getCodeName().get(), Reminder);
+	}
+
+	public static CorporateActionNotificationType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionNotificationType1Code[] values() {
+		CorporateActionNotificationType1Code[] values = new CorporateActionNotificationType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionNotificationType1Code> {
+		@Override
+		public CorporateActionNotificationType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionNotificationType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

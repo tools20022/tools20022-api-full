@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,16 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ContactIdentificationAndAddress", propOrder = {"name", "role", "communicationAddress"})
 public class ContactIdentificationAndAddress {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nm")
 	protected Max35Text name;
 	/**
-	 * Name by which a party is known and which is usually used to identify that
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +121,7 @@ public class ContactIdentificationAndAddress {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
-			componentContext_lazy = () -> ContactIdentificationAndAddress.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ContactIdentificationAndAddress.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +132,11 @@ public class ContactIdentificationAndAddress {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Role", required = true)
 	protected PaymentRole1Code role;
 	/**
-	 * Role of the party in the activity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +170,7 @@ public class ContactIdentificationAndAddress {
 	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Role.mmPartyRole;
-			componentContext_lazy = () -> ContactIdentificationAndAddress.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ContactIdentificationAndAddress.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +181,11 @@ public class ContactIdentificationAndAddress {
 			simpleType_lazy = () -> PaymentRole1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ComAdr", required = true)
 	protected CommunicationAddressDetails communicationAddress;
 	/**
-	 * Number, or virtual address, used for communication.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -214,7 +218,7 @@ public class ContactIdentificationAndAddress {
 	public static final MMMessageAssociationEnd mmCommunicationAddress = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmContactPoint;
-			componentContext_lazy = () -> ContactIdentificationAndAddress.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ContactIdentificationAndAddress.mmObject();
 			isDerived = false;
 			xmlTag = "ComAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,9 +234,10 @@ public class ContactIdentificationAndAddress {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ContactIdentificationAndAddress.mmName, ContactIdentificationAndAddress.mmRole, ContactIdentificationAndAddress.mmCommunicationAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContactIdentificationAndAddress.mmName, com.tools20022.repository.msg.ContactIdentificationAndAddress.mmRole,
+						com.tools20022.repository.msg.ContactIdentificationAndAddress.mmCommunicationAddress);
 				trace_lazy = () -> Person.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ContactIdentificationAndAddress";
 				definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
@@ -241,30 +246,30 @@ public class ContactIdentificationAndAddress {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nm")
-	public Max35Text getName() {
-		return name;
+	public Optional<Max35Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max35Text name) {
+	public ContactIdentificationAndAddress setName(Max35Text name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "Role", required = true)
 	public PaymentRole1Code getRole() {
 		return role;
 	}
 
-	public void setRole(PaymentRole1Code role) {
-		this.role = role;
+	public ContactIdentificationAndAddress setRole(PaymentRole1Code role) {
+		this.role = Objects.requireNonNull(role);
+		return this;
 	}
 
-	@XmlElement(name = "ComAdr", required = true)
 	public CommunicationAddressDetails getCommunicationAddress() {
 		return communicationAddress;
 	}
 
-	public void setCommunicationAddress(com.tools20022.repository.msg.CommunicationAddressDetails communicationAddress) {
-		this.communicationAddress = communicationAddress;
+	public ContactIdentificationAndAddress setCommunicationAddress(com.tools20022.repository.msg.CommunicationAddressDetails communicationAddress) {
+		this.communicationAddress = Objects.requireNonNull(communicationAddress);
+		return this;
 	}
 }

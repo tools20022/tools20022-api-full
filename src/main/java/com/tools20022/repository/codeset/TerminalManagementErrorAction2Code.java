@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TerminalManagementErrorActionCode;
+import com.tools20022.repository.codeset.TerminalManagementErrorAction2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Action to perform in case of error during the maintenance action in progress.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorActionCode
- * TerminalManagementErrorActionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorAction2Code#mmSendStatusReport
- * TerminalManagementErrorAction2Code.mmSendStatusReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorAction2Code#SendStatusReport
+ * TerminalManagementErrorAction2Code.SendStatusReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorAction2Code#mmStopSequence
- * TerminalManagementErrorAction2Code.mmStopSequence}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorAction2Code#StopSequence
+ * TerminalManagementErrorAction2Code.StopSequence}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementErrorActionCode
+ * TerminalManagementErrorActionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -66,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TerminalManagementErrorAction2Code extends TerminalManagementErrorActionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TerminalManagementErrorAction2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,11 +90,12 @@ public class TerminalManagementErrorAction2Code extends TerminalManagementErrorA
 	 * name} = "SendStatusReport"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSendStatusReport = new MMCode() {
+	public static final TerminalManagementErrorAction2Code SendStatusReport = new TerminalManagementErrorAction2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendStatusReport";
-			owner_lazy = () -> TerminalManagementErrorAction2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementErrorAction2Code.mmObject();
+			codeName = TerminalManagementErrorActionCode.SendStatusReport.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -108,26 +114,57 @@ public class TerminalManagementErrorAction2Code extends TerminalManagementErrorA
 	 * name} = "StopSequence"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStopSequence = new MMCode() {
+	public static final TerminalManagementErrorAction2Code StopSequence = new TerminalManagementErrorAction2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StopSequence";
-			owner_lazy = () -> TerminalManagementErrorAction2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementErrorAction2Code.mmObject();
+			codeName = TerminalManagementErrorActionCode.StopSequence.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TerminalManagementErrorAction2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TerminalManagementErrorAction2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SDSR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementErrorAction2Code";
 				definition = "Action to perform in case of error during the maintenance action in progress.";
-				code_lazy = () -> Arrays.asList(TerminalManagementErrorAction2Code.mmSendStatusReport, TerminalManagementErrorAction2Code.mmStopSequence);
 				trace_lazy = () -> TerminalManagementErrorActionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementErrorAction2Code.SendStatusReport, com.tools20022.repository.codeset.TerminalManagementErrorAction2Code.StopSequence);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SendStatusReport.getCodeName().get(), SendStatusReport);
+		codesByName.put(StopSequence.getCodeName().get(), StopSequence);
+	}
+
+	public static TerminalManagementErrorAction2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TerminalManagementErrorAction2Code[] values() {
+		TerminalManagementErrorAction2Code[] values = new TerminalManagementErrorAction2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TerminalManagementErrorAction2Code> {
+		@Override
+		public TerminalManagementErrorAction2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TerminalManagementErrorAction2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

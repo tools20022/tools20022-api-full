@@ -20,94 +20,98 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.UnableToApplyIncorrectInfoCode;
+import com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Used when the unable to apply is due to incorrect information.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfoCode
- * UnableToApplyIncorrectInfoCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectRelatedReference
- * UnableToApplyIncorrectInfo1Code.mmIncorrectRelatedReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectRelatedReference
+ * UnableToApplyIncorrectInfo1Code.IncorrectRelatedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectBankOperationCode
- * UnableToApplyIncorrectInfo1Code.mmIncorrectBankOperationCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectBankOperationCode
+ * UnableToApplyIncorrectInfo1Code.IncorrectBankOperationCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectInstructionCode
- * UnableToApplyIncorrectInfo1Code.mmIncorrectInstructionCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectInstructionCode
+ * UnableToApplyIncorrectInfo1Code.IncorrectInstructionCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectRequestedExecutionDate
- * UnableToApplyIncorrectInfo1Code.mmIncorrectRequestedExecutionDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectRequestedExecutionDate
+ * UnableToApplyIncorrectInfo1Code.IncorrectRequestedExecutionDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectValueDate
- * UnableToApplyIncorrectInfo1Code.mmIncorrectValueDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectValueDate
+ * UnableToApplyIncorrectInfo1Code.IncorrectValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectInterbankSettledAmount
- * UnableToApplyIncorrectInfo1Code.mmIncorrectInterbankSettledAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectInterbankSettledAmount
+ * UnableToApplyIncorrectInfo1Code.IncorrectInterbankSettledAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectDebtor
- * UnableToApplyIncorrectInfo1Code.mmIncorrectDebtor}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectDebtor
+ * UnableToApplyIncorrectInfo1Code.IncorrectDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectDebtorAccount
- * UnableToApplyIncorrectInfo1Code.mmIncorrectDebtorAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectDebtorAccount
+ * UnableToApplyIncorrectInfo1Code.IncorrectDebtorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectReceiverCorrespondent
- * UnableToApplyIncorrectInfo1Code.mmIncorrectReceiverCorrespondent}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectReceiverCorrespondent
+ * UnableToApplyIncorrectInfo1Code.IncorrectReceiverCorrespondent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectThirdReimbursementInstitution
- * UnableToApplyIncorrectInfo1Code.mmIncorrectThirdReimbursementInstitution}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectThirdReimbursementInstitution
+ * UnableToApplyIncorrectInfo1Code.IncorrectThirdReimbursementInstitution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectPaymentScheme
- * UnableToApplyIncorrectInfo1Code.mmIncorrectPaymentScheme}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectPaymentScheme
+ * UnableToApplyIncorrectInfo1Code.IncorrectPaymentScheme}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectAccountOfBeneficiaryInstitution
- * UnableToApplyIncorrectInfo1Code.mmIncorrectAccountOfBeneficiaryInstitution}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectAccountOfBeneficiaryInstitution
+ * UnableToApplyIncorrectInfo1Code.IncorrectAccountOfBeneficiaryInstitution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectCreditor
- * UnableToApplyIncorrectInfo1Code.mmIncorrectCreditor}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectCreditor
+ * UnableToApplyIncorrectInfo1Code.IncorrectCreditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectCreditorAccount
- * UnableToApplyIncorrectInfo1Code.mmIncorrectCreditorAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectCreditorAccount
+ * UnableToApplyIncorrectInfo1Code.IncorrectCreditorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectRemittanceInformation
- * UnableToApplyIncorrectInfo1Code.mmIncorrectRemittanceInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectRemittanceInformation
+ * UnableToApplyIncorrectInfo1Code.IncorrectRemittanceInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectPaymentPurpose
- * UnableToApplyIncorrectInfo1Code.mmIncorrectPaymentPurpose}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectPaymentPurpose
+ * UnableToApplyIncorrectInfo1Code.IncorrectPaymentPurpose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectDetailsOfCharges
- * UnableToApplyIncorrectInfo1Code.mmIncorrectDetailsOfCharges}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectDetailsOfCharges
+ * UnableToApplyIncorrectInfo1Code.IncorrectDetailsOfCharges}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectSenderToReceiverInformation
- * UnableToApplyIncorrectInfo1Code.mmIncorrectSenderToReceiverInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectSenderToReceiverInformation
+ * UnableToApplyIncorrectInfo1Code.IncorrectSenderToReceiverInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmIncorrectInstructionForFinalAgent
- * UnableToApplyIncorrectInfo1Code.mmIncorrectInstructionForFinalAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#IncorrectInstructionForFinalAgent
+ * UnableToApplyIncorrectInfo1Code.IncorrectInstructionForFinalAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmMismatchCreditorNameAccount
- * UnableToApplyIncorrectInfo1Code.mmMismatchCreditorNameAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#MismatchCreditorNameAccount
+ * UnableToApplyIncorrectInfo1Code.MismatchCreditorNameAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmMismatchDebtorNameAccount
- * UnableToApplyIncorrectInfo1Code.mmMismatchDebtorNameAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#MismatchDebtorNameAccount
+ * UnableToApplyIncorrectInfo1Code.MismatchDebtorNameAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#mmMismatchFinalAgentNameAccount
- * UnableToApplyIncorrectInfo1Code.mmMismatchFinalAgentNameAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code#MismatchFinalAgentNameAccount
+ * UnableToApplyIncorrectInfo1Code.MismatchFinalAgentNameAccount}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyIncorrectInfoCode
+ * UnableToApplyIncorrectInfoCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -125,7 +129,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Used when the unable to apply is due to incorrect information."</li>
  * </ul>
  */
-public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class UnableToApplyIncorrectInfo1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -144,11 +149,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectRelatedReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectRelatedReference = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectRelatedReference = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectRelatedReference";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectRelatedReference.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -167,11 +173,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectBankOperationCode"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectBankOperationCode = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectBankOperationCode = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectBankOperationCode";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectBankOperationCode.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -190,11 +197,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectInstructionCode"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectInstructionCode = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectInstructionCode = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectInstructionCode";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectInstructionCode.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -213,11 +221,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectRequestedExecutionDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectRequestedExecutionDate = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectRequestedExecutionDate = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectRequestedExecutionDate";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectRequestedExecutionDate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -236,11 +245,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectValueDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectValueDate = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectValueDate = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectValueDate";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectValueDate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -259,11 +269,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectInterbankSettledAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectInterbankSettledAmount = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectInterbankSettledAmount = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectInterbankSettledAmount";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectInterbankSettledAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -282,11 +293,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectDebtor"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectDebtor = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectDebtor = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectDebtor";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectDebtor.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -305,11 +317,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectDebtorAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectDebtorAccount = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectDebtorAccount = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectDebtorAccount";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectDebtorAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -328,11 +341,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectReceiverCorrespondent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectReceiverCorrespondent = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectReceiverCorrespondent = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectReceiverCorrespondent";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectReceiverCorrespondent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -351,11 +365,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectThirdReimbursementInstitution"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectThirdReimbursementInstitution = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectThirdReimbursementInstitution = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectThirdReimbursementInstitution";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectThirdReimbursementInstitution.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -374,11 +389,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectPaymentScheme"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectPaymentScheme = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectPaymentScheme = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectPaymentScheme";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectPaymentScheme.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -397,11 +413,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectAccountOfBeneficiaryInstitution"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectAccountOfBeneficiaryInstitution = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectAccountOfBeneficiaryInstitution = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAccountOfBeneficiaryInstitution";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectAccountOfBeneficiaryInstitution.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -420,11 +437,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectCreditor"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectCreditor = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectCreditor = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCreditor";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectCreditor.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -443,11 +461,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectCreditorAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectCreditorAccount = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectCreditorAccount = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCreditorAccount";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectCreditorAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -466,11 +485,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectRemittanceInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectRemittanceInformation = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectRemittanceInformation = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectRemittanceInformation";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectRemittanceInformation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -489,11 +509,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectPaymentPurpose"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectPaymentPurpose = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectPaymentPurpose = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectPaymentPurpose";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectPaymentPurpose.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -512,11 +533,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectDetailsOfCharges"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectDetailsOfCharges = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectDetailsOfCharges = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectDetailsOfCharges";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectDetailsOfCharges.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -535,11 +557,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectSenderToReceiverInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectSenderToReceiverInformation = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectSenderToReceiverInformation = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectSenderToReceiverInformation";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectSenderToReceiverInformation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -558,11 +581,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "IncorrectInstructionForFinalAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectInstructionForFinalAgent = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code IncorrectInstructionForFinalAgent = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectInstructionForFinalAgent";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.IncorrectInstructionForFinalAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -581,11 +605,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "MismatchCreditorNameAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMismatchCreditorNameAccount = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code MismatchCreditorNameAccount = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MismatchCreditorNameAccount";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.MismatchCreditorNameAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -604,11 +629,12 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "MismatchDebtorNameAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMismatchDebtorNameAccount = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code MismatchDebtorNameAccount = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MismatchDebtorNameAccount";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.MismatchDebtorNameAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -627,33 +653,87 @@ public class UnableToApplyIncorrectInfo1Code extends UnableToApplyIncorrectInfoC
 	 * name} = "MismatchFinalAgentNameAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMismatchFinalAgentNameAccount = new MMCode() {
+	public static final UnableToApplyIncorrectInfo1Code MismatchFinalAgentNameAccount = new UnableToApplyIncorrectInfo1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MismatchFinalAgentNameAccount";
-			owner_lazy = () -> UnableToApplyIncorrectInfo1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.mmObject();
+			codeName = UnableToApplyIncorrectInfoCode.MismatchFinalAgentNameAccount.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, UnableToApplyIncorrectInfo1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected UnableToApplyIncorrectInfo1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("IN01");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnableToApplyIncorrectInfo1Code";
 				definition = "Used when the unable to apply is due to incorrect information.";
-				code_lazy = () -> Arrays.asList(UnableToApplyIncorrectInfo1Code.mmIncorrectRelatedReference, UnableToApplyIncorrectInfo1Code.mmIncorrectBankOperationCode, UnableToApplyIncorrectInfo1Code.mmIncorrectInstructionCode,
-						UnableToApplyIncorrectInfo1Code.mmIncorrectRequestedExecutionDate, UnableToApplyIncorrectInfo1Code.mmIncorrectValueDate, UnableToApplyIncorrectInfo1Code.mmIncorrectInterbankSettledAmount,
-						UnableToApplyIncorrectInfo1Code.mmIncorrectDebtor, UnableToApplyIncorrectInfo1Code.mmIncorrectDebtorAccount, UnableToApplyIncorrectInfo1Code.mmIncorrectReceiverCorrespondent,
-						UnableToApplyIncorrectInfo1Code.mmIncorrectThirdReimbursementInstitution, UnableToApplyIncorrectInfo1Code.mmIncorrectPaymentScheme, UnableToApplyIncorrectInfo1Code.mmIncorrectAccountOfBeneficiaryInstitution,
-						UnableToApplyIncorrectInfo1Code.mmIncorrectCreditor, UnableToApplyIncorrectInfo1Code.mmIncorrectCreditorAccount, UnableToApplyIncorrectInfo1Code.mmIncorrectRemittanceInformation,
-						UnableToApplyIncorrectInfo1Code.mmIncorrectPaymentPurpose, UnableToApplyIncorrectInfo1Code.mmIncorrectDetailsOfCharges, UnableToApplyIncorrectInfo1Code.mmIncorrectSenderToReceiverInformation,
-						UnableToApplyIncorrectInfo1Code.mmIncorrectInstructionForFinalAgent, UnableToApplyIncorrectInfo1Code.mmMismatchCreditorNameAccount, UnableToApplyIncorrectInfo1Code.mmMismatchDebtorNameAccount,
-						UnableToApplyIncorrectInfo1Code.mmMismatchFinalAgentNameAccount);
 				trace_lazy = () -> UnableToApplyIncorrectInfoCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectRelatedReference, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectBankOperationCode,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectInstructionCode, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectRequestedExecutionDate,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectValueDate, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectInterbankSettledAmount,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectDebtor, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectDebtorAccount,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectReceiverCorrespondent, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectThirdReimbursementInstitution,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectPaymentScheme, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectAccountOfBeneficiaryInstitution,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectCreditor, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectCreditorAccount,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectRemittanceInformation, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectPaymentPurpose,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectDetailsOfCharges, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectSenderToReceiverInformation,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.IncorrectInstructionForFinalAgent, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.MismatchCreditorNameAccount,
+						com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.MismatchDebtorNameAccount, com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code.MismatchFinalAgentNameAccount);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(IncorrectRelatedReference.getCodeName().get(), IncorrectRelatedReference);
+		codesByName.put(IncorrectBankOperationCode.getCodeName().get(), IncorrectBankOperationCode);
+		codesByName.put(IncorrectInstructionCode.getCodeName().get(), IncorrectInstructionCode);
+		codesByName.put(IncorrectRequestedExecutionDate.getCodeName().get(), IncorrectRequestedExecutionDate);
+		codesByName.put(IncorrectValueDate.getCodeName().get(), IncorrectValueDate);
+		codesByName.put(IncorrectInterbankSettledAmount.getCodeName().get(), IncorrectInterbankSettledAmount);
+		codesByName.put(IncorrectDebtor.getCodeName().get(), IncorrectDebtor);
+		codesByName.put(IncorrectDebtorAccount.getCodeName().get(), IncorrectDebtorAccount);
+		codesByName.put(IncorrectReceiverCorrespondent.getCodeName().get(), IncorrectReceiverCorrespondent);
+		codesByName.put(IncorrectThirdReimbursementInstitution.getCodeName().get(), IncorrectThirdReimbursementInstitution);
+		codesByName.put(IncorrectPaymentScheme.getCodeName().get(), IncorrectPaymentScheme);
+		codesByName.put(IncorrectAccountOfBeneficiaryInstitution.getCodeName().get(), IncorrectAccountOfBeneficiaryInstitution);
+		codesByName.put(IncorrectCreditor.getCodeName().get(), IncorrectCreditor);
+		codesByName.put(IncorrectCreditorAccount.getCodeName().get(), IncorrectCreditorAccount);
+		codesByName.put(IncorrectRemittanceInformation.getCodeName().get(), IncorrectRemittanceInformation);
+		codesByName.put(IncorrectPaymentPurpose.getCodeName().get(), IncorrectPaymentPurpose);
+		codesByName.put(IncorrectDetailsOfCharges.getCodeName().get(), IncorrectDetailsOfCharges);
+		codesByName.put(IncorrectSenderToReceiverInformation.getCodeName().get(), IncorrectSenderToReceiverInformation);
+		codesByName.put(IncorrectInstructionForFinalAgent.getCodeName().get(), IncorrectInstructionForFinalAgent);
+		codesByName.put(MismatchCreditorNameAccount.getCodeName().get(), MismatchCreditorNameAccount);
+		codesByName.put(MismatchDebtorNameAccount.getCodeName().get(), MismatchDebtorNameAccount);
+		codesByName.put(MismatchFinalAgentNameAccount.getCodeName().get(), MismatchFinalAgentNameAccount);
+	}
+
+	public static UnableToApplyIncorrectInfo1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static UnableToApplyIncorrectInfo1Code[] values() {
+		UnableToApplyIncorrectInfo1Code[] values = new UnableToApplyIncorrectInfo1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, UnableToApplyIncorrectInfo1Code> {
+		@Override
+		public UnableToApplyIncorrectInfo1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(UnableToApplyIncorrectInfo1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

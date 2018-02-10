@@ -26,6 +26,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Specifies the official date and identification of the event.
@@ -56,6 +58,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionEventRegistration
+ * CorporateActionEvent.mmCorporateActionEventRegistration}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
  * <ul>
@@ -82,19 +93,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionEventRegistration
- * CorporateActionEvent.mmCorporateActionEventRegistration}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,8 +112,8 @@ public class CorporateActionEventRegistration {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Max35Text corporateActionEventIdentification;
 	/**
-	 * Identification given to the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1158,8 +1160,8 @@ public class CorporateActionEventRegistration {
 					SecuritiesFinancingTransactionDetails36.mmCorporateActionEventIdentification, CorporateActionGeneralInformation113.mmCorporateActionEventIdentification,
 					SettlementTypeAndAdditionalParameters20.mmCorporateActionEventIdentification, EventInformation10.mmCorporateActionEventIdentification, Transaction56.mmCorporateActionEventIdentification,
 					TransactionDetails100.mmCorporateActionEventIdentification, Transaction55.mmCorporateActionEventIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Identification given to the event.";
@@ -1178,9 +1180,8 @@ public class CorporateActionEventRegistration {
 	};
 	protected Max35Text officialCorporateActionEventIdentification;
 	/**
-	 * Identification of a corporate action assigned by an official central
-	 * body/entity within a given market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1737,8 +1738,8 @@ public class CorporateActionEventRegistration {
 					CorporateActionGeneralInformation121.mmOfficialCorporateActionEventIdentification, CorporateActionGeneralInformation123.mmOfficialCorporateActionEventIdentification,
 					CorporateActionGeneralInformation117.mmOfficialCorporateActionEventIdentification, CorporateActionGeneralInformation113.mmOfficialCorporateActionEventIdentification,
 					EventInformation10.mmOfficialCorporateActionEventIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfficialCorporateActionEventIdentification";
 			definition = "Identification of a corporate action assigned by an official central body/entity within a given market.";
@@ -1757,9 +1758,8 @@ public class CorporateActionEventRegistration {
 	};
 	protected ISODateTime officialAnnouncementPublicationDate;
 	/**
-	 * Date/time at which the corporate action is legally announced by an
-	 * official body, for example, publication by a governmental administration.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1828,8 +1828,8 @@ public class CorporateActionEventRegistration {
 					CorporateActionDate21.mmOfficialAnnouncementPublicationDate, CorporateActionDate22.mmOfficialAnnouncementPublicationDate, CorporateActionDate25.mmOfficialAnnouncementPublicationDate,
 					CorporateActionDate27.mmOfficialAnnouncementPublicationDate, CorporateActionDate28.mmOfficialAnnouncementPublicationDate, CorporateActionNotification1.mmOfficialAnnouncementPublicationDate,
 					CorporateActionDate44.mmOfficialAnnouncementPublicationDate, CorporateActionDate58.mmOfficialAnnouncementPublicationDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfficialAnnouncementPublicationDate";
 			definition = "Date/time at which the corporate action is legally announced by an official body, for example, publication by a governmental administration.";
@@ -1848,8 +1848,8 @@ public class CorporateActionEventRegistration {
 	};
 	protected CorporateActionEvent corporateActionEvent;
 	/**
-	 * Corporate event for which a registration is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1883,8 +1883,8 @@ public class CorporateActionEventRegistration {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionEvent";
 			definition = "Corporate event for which a registration is specified.";
@@ -1899,7 +1899,7 @@ public class CorporateActionEventRegistration {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventRegistration";
 				definition = "Specifies the official date and identification of the event.";
@@ -1924,31 +1924,35 @@ public class CorporateActionEventRegistration {
 		return corporateActionEventIdentification;
 	}
 
-	public void setCorporateActionEventIdentification(Max35Text corporateActionEventIdentification) {
-		this.corporateActionEventIdentification = corporateActionEventIdentification;
+	public CorporateActionEventRegistration setCorporateActionEventIdentification(Max35Text corporateActionEventIdentification) {
+		this.corporateActionEventIdentification = Objects.requireNonNull(corporateActionEventIdentification);
+		return this;
 	}
 
 	public Max35Text getOfficialCorporateActionEventIdentification() {
 		return officialCorporateActionEventIdentification;
 	}
 
-	public void setOfficialCorporateActionEventIdentification(Max35Text officialCorporateActionEventIdentification) {
-		this.officialCorporateActionEventIdentification = officialCorporateActionEventIdentification;
+	public CorporateActionEventRegistration setOfficialCorporateActionEventIdentification(Max35Text officialCorporateActionEventIdentification) {
+		this.officialCorporateActionEventIdentification = Objects.requireNonNull(officialCorporateActionEventIdentification);
+		return this;
 	}
 
 	public ISODateTime getOfficialAnnouncementPublicationDate() {
 		return officialAnnouncementPublicationDate;
 	}
 
-	public void setOfficialAnnouncementPublicationDate(ISODateTime officialAnnouncementPublicationDate) {
-		this.officialAnnouncementPublicationDate = officialAnnouncementPublicationDate;
+	public CorporateActionEventRegistration setOfficialAnnouncementPublicationDate(ISODateTime officialAnnouncementPublicationDate) {
+		this.officialAnnouncementPublicationDate = Objects.requireNonNull(officialAnnouncementPublicationDate);
+		return this;
 	}
 
-	public CorporateActionEvent getCorporateActionEvent() {
-		return corporateActionEvent;
+	public Optional<CorporateActionEvent> getCorporateActionEvent() {
+		return corporateActionEvent == null ? Optional.empty() : Optional.of(corporateActionEvent);
 	}
 
-	public void setCorporateActionEvent(com.tools20022.repository.entity.CorporateActionEvent corporateActionEvent) {
+	public CorporateActionEventRegistration setCorporateActionEvent(com.tools20022.repository.entity.CorporateActionEvent corporateActionEvent) {
 		this.corporateActionEvent = corporateActionEvent;
+		return this;
 	}
 }

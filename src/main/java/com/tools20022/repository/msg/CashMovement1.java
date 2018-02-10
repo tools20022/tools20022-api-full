@@ -28,9 +28,8 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information about the cash movement."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashMovement1", propOrder = {"movementIdentification", "amount", "taxAmount", "charges", "accountDetails"})
 public class CashMovement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MvmntId")
 	protected Max35Text movementIdentification;
 	/**
-	 * Identification of the movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +109,7 @@ public class CashMovement1 {
 	 */
 	public static final MMMessageAttribute mmMovementIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashMovement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "MvmntId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +120,11 @@ public class CashMovement1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * Cash amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +157,7 @@ public class CashMovement1 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
-			componentContext_lazy = () -> CashMovement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,10 +168,11 @@ public class CashMovement1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxAmt")
 	protected ActiveCurrencyAndAmount taxAmount;
 	/**
-	 * Amount of taxes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -202,7 +204,7 @@ public class CashMovement1 {
 	public static final MMMessageAttribute mmTaxAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CashMovement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,10 +215,11 @@ public class CashMovement1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Chrgs")
 	protected List<com.tools20022.repository.msg.Charges1> charges;
 	/**
-	 * Specifies the charges.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -245,7 +248,7 @@ public class CashMovement1 {
 	public static final MMMessageAssociationEnd mmCharges = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Charges.mmObject();
-			componentContext_lazy = () -> CashMovement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "Chrgs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,10 +259,11 @@ public class CashMovement1 {
 			type_lazy = () -> com.tools20022.repository.msg.Charges1.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctDtls", required = true)
 	protected List<com.tools20022.repository.msg.CashAccount18> accountDetails;
 	/**
-	 * Provides information about the account which is debited/credited.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -291,7 +295,7 @@ public class CashMovement1 {
 	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
-			componentContext_lazy = () -> CashMovement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashMovement1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -307,9 +311,10 @@ public class CashMovement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashMovement1.mmMovementIdentification, CashMovement1.mmAmount, CashMovement1.mmTaxAmount, CashMovement1.mmCharges, CashMovement1.mmAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashMovement1.mmMovementIdentification, com.tools20022.repository.msg.CashMovement1.mmAmount, com.tools20022.repository.msg.CashMovement1.mmTaxAmount,
+						com.tools20022.repository.msg.CashMovement1.mmCharges, com.tools20022.repository.msg.CashMovement1.mmAccountDetails);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashMovement1";
 				definition = "Provides information about the cash movement.";
@@ -318,48 +323,48 @@ public class CashMovement1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MvmntId")
-	public Max35Text getMovementIdentification() {
-		return movementIdentification;
+	public Optional<Max35Text> getMovementIdentification() {
+		return movementIdentification == null ? Optional.empty() : Optional.of(movementIdentification);
 	}
 
-	public void setMovementIdentification(Max35Text movementIdentification) {
+	public CashMovement1 setMovementIdentification(Max35Text movementIdentification) {
 		this.movementIdentification = movementIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
-		this.amount = amount;
+	public CashMovement1 setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "TaxAmt")
-	public ActiveCurrencyAndAmount getTaxAmount() {
-		return taxAmount;
+	public Optional<ActiveCurrencyAndAmount> getTaxAmount() {
+		return taxAmount == null ? Optional.empty() : Optional.of(taxAmount);
 	}
 
-	public void setTaxAmount(ActiveCurrencyAndAmount taxAmount) {
+	public CashMovement1 setTaxAmount(ActiveCurrencyAndAmount taxAmount) {
 		this.taxAmount = taxAmount;
+		return this;
 	}
 
-	@XmlElement(name = "Chrgs")
 	public List<Charges1> getCharges() {
-		return charges;
+		return charges == null ? charges = new ArrayList<>() : charges;
 	}
 
-	public void setCharges(List<com.tools20022.repository.msg.Charges1> charges) {
-		this.charges = charges;
+	public CashMovement1 setCharges(List<com.tools20022.repository.msg.Charges1> charges) {
+		this.charges = Objects.requireNonNull(charges);
+		return this;
 	}
 
-	@XmlElement(name = "AcctDtls", required = true)
 	public List<CashAccount18> getAccountDetails() {
-		return accountDetails;
+		return accountDetails == null ? accountDetails = new ArrayList<>() : accountDetails;
 	}
 
-	public void setAccountDetails(List<com.tools20022.repository.msg.CashAccount18> accountDetails) {
-		this.accountDetails = accountDetails;
+	public CashMovement1 setAccountDetails(List<com.tools20022.repository.msg.CashAccount18> accountDetails) {
+		this.accountDetails = Objects.requireNonNull(accountDetails);
+		return this;
 	}
 }

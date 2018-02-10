@@ -29,9 +29,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Characteristics related to the price of the security.
@@ -233,6 +232,224 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedPosition
  * SecuritiesPricing.mmRelatedPosition}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmPricing
+ * Security.mmPricing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmPrice
+ * InformationPartyRole.mmPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#mmPrice
+ * NetAssetValueCalculation.mmPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RedemptionSchedule#mmPriceChange
+ * RedemptionSchedule.mmPriceChange}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.RedemptionSchedule#mmPrice
+ * RedemptionSchedule.mmPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmPriceCalculationRelatedPricing
+ * DateTimePeriod.mmPriceCalculationRelatedPricing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmPriceFactRelatedPricing
+ * DateTimePeriod.mmPriceFactRelatedPricing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTradePrice
+ * SecuritiesTrade.mmTradePrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmExecutedTradePrice
+ * InvestmentFundOrderExecution.mmExecutedTradePrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmInformativePrice
+ * InvestmentFundOrderExecution.mmInformativePrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LotBreakdown#mmLotPrice
+ * LotBreakdown.mmLotPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Price#mmSecuritiesPricing
+ * Price.mmSecuritiesPricing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmPriceChange
+ * ValuationStatistics.mmPriceChange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmHighestPriceValue
+ * ValuationStatistics.mmHighestPriceValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmLowestPriceValue
+ * ValuationStatistics.mmLowestPriceValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmDealPrice
+ * SecuritiesTradeExecution.mmDealPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Derivative#mmTick
+ * Derivative.mmTick}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Derivative#mmExercisePrice
+ * Derivative.mmExercisePrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Issuance#mmOriginalIssueDiscount
+ * Issuance.mmOriginalIssueDiscount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmSecuritiesPricing
+ * Index.mmSecuritiesPricing}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmSubscriptionPrice
+ * Warrant.mmSubscriptionPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#mmConversionPrice
+ * SecuritiesConversion.mmConversionPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmEndPrice
+ * SecuritiesFinancing.mmEndPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmMaximumPrice
+ * BiddingConditions.mmMaximumPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmMinimumPrice
+ * BiddingConditions.mmMinimumPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmScripDividendReinvestmentPricePerShare
+ * TaxVoucher.mmScripDividendReinvestmentPricePerShare}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCorporateActionExercisePrice
+ * CorporateActionPrice.mmCorporateActionExercisePrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmGenericCashPriceReceivedPerProduct
+ * CorporateActionPrice.mmGenericCashPriceReceivedPerProduct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmGenericCashPricePaidPerProduct
+ * CorporateActionPrice.mmGenericCashPricePaidPerProduct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCashInLieuOfSharePrice
+ * CorporateActionPrice.mmCashInLieuOfSharePrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmOverSubscriptionDepositPrice
+ * CorporateActionPrice.mmOverSubscriptionDepositPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCashValueForTax
+ * CorporateActionPrice.mmCashValueForTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmPricingCalculation
+ * CorporateActionPrice.mmPricingCalculation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AmountAndQuantity#mmSecuritiesPricing
+ * AmountAndQuantity.mmSecuritiesPricing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AmountRatio#mmSecuritiesPricing
+ * AmountRatio.mmSecuritiesPricing}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Spread#mmBenchmarkPrice
+ * Spread.mmBenchmarkPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderPrice
+ * SecuritiesOrder.mmOrderPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmStopPrice
+ * SecuritiesOrder.mmStopPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmRedemptionPrice
+ * YieldCalculation.mmRedemptionPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Allocation#mmAllocatedPrice
+ * Allocation.mmAllocatedPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Distribution#mmOfferPrice
+ * Distribution.mmOfferPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BuyIn#mmBuyInPrice
+ * BuyIn.mmBuyInPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters#mmPreviousClosingPrice
+ * SecuritiesOrderParameters.mmPreviousClosingPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Quote#mmPreviousClosingPrice
+ * Quote.mmPreviousClosingPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmRequestedPrice
+ * Quote.mmRequestedPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmPrice Quote.mmPrice}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmMarketPrice
+ * Quote.mmMarketPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesDistribution#mmCashFractionsPrice
+ * SecuritiesDistribution.mmCashFractionsPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesDistribution#mmSubscriptionPrice
+ * SecuritiesDistribution.mmSubscriptionPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesDistribution#mmReinvestmentPrice
+ * SecuritiesDistribution.mmReinvestmentPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.AnalyticsCalculation#mmSecuritiesPricing
+ * AnalyticsCalculation.mmSecuritiesPricing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DurationCalculation#mmRelatedSecuritiesPricing
+ * DurationCalculation.mmRelatedSecuritiesPricing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.LifeCalculation#mmSecuritiesPricing
+ * LifeCalculation.mmSecuritiesPricing}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Entitlement#mmStrikePrice
+ * Entitlement.mmStrikePrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Position#mmPrice
+ * Position.mmPrice}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Price2#mmValue Price2.mmValue}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PriceType1Choice#mmMarket
+ * PriceType1Choice.mmMarket}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PriceType1Choice#mmIndicative
+ * PriceType1Choice.mmIndicative}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Price3#mmValue Price3.mmValue}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PriceType2Choice#mmMarket
+ * PriceType2Choice.mmMarket}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PriceType2Choice#mmIndicative
+ * PriceType2Choice.mmIndicative}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation5#mmValue
+ * PriceInformation5.mmValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation7#mmValue
+ * PriceInformation7.mmValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation1#mmValue
+ * PriceInformation1.mmValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation2#mmValue
+ * PriceInformation2.mmValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation6#mmValue
+ * PriceInformation6.mmValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation8#mmValue
+ * PriceInformation8.mmValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation9#mmValue
+ * PriceInformation9.mmValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TransactionPrice1Choice#mmProprietary
+ * TransactionPrice1Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TransactionPrice2Choice#mmProprietary
+ * TransactionPrice2Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TransactionPrice3Choice#mmProprietary
+ * TransactionPrice3Choice.mmProprietary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceRate1#mmRateType
+ * PriceRate1.mmRateType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PriceInformation10#mmAmountOfChange
+ * PriceInformation10.mmAmountOfChange}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation3#mmValue
+ * PriceInformation3.mmValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation3#mmPriceType
+ * PriceInformation3.mmPriceType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation4#mmValue
+ * PriceInformation4.mmValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation11#mmValue
+ * PriceInformation11.mmValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1#mmPrice
+ * FinancialInstrumentAggregateBalance1.mmPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation12#mmValue
+ * PriceInformation12.mmValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation13#mmValue
+ * PriceInformation13.mmValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation16#mmValue
+ * PriceInformation16.mmValue}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation14#mmValue
+ * PriceInformation14.mmValue}</li>
  * </ul>
  * </li>
  * <li>
@@ -551,228 +768,10 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmPricing
- * Security.mmPricing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InformationPartyRole#mmPrice
- * InformationPartyRole.mmPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.NetAssetValueCalculation#mmPrice
- * NetAssetValueCalculation.mmPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RedemptionSchedule#mmPriceChange
- * RedemptionSchedule.mmPriceChange}</li>
- * <li>{@linkplain com.tools20022.repository.entity.RedemptionSchedule#mmPrice
- * RedemptionSchedule.mmPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmPriceCalculationRelatedPricing
- * DateTimePeriod.mmPriceCalculationRelatedPricing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmPriceFactRelatedPricing
- * DateTimePeriod.mmPriceFactRelatedPricing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmTradePrice
- * SecuritiesTrade.mmTradePrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmExecutedTradePrice
- * InvestmentFundOrderExecution.mmExecutedTradePrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution#mmInformativePrice
- * InvestmentFundOrderExecution.mmInformativePrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LotBreakdown#mmLotPrice
- * LotBreakdown.mmLotPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Price#mmSecuritiesPricing
- * Price.mmSecuritiesPricing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmPriceChange
- * ValuationStatistics.mmPriceChange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmHighestPriceValue
- * ValuationStatistics.mmHighestPriceValue}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ValuationStatistics#mmLowestPriceValue
- * ValuationStatistics.mmLowestPriceValue}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeExecution#mmDealPrice
- * SecuritiesTradeExecution.mmDealPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Derivative#mmTick
- * Derivative.mmTick}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Derivative#mmExercisePrice
- * Derivative.mmExercisePrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Issuance#mmOriginalIssueDiscount
- * Issuance.mmOriginalIssueDiscount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmSecuritiesPricing
- * Index.mmSecuritiesPricing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmSubscriptionPrice
- * Warrant.mmSubscriptionPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#mmConversionPrice
- * SecuritiesConversion.mmConversionPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmEndPrice
- * SecuritiesFinancing.mmEndPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmMaximumPrice
- * BiddingConditions.mmMaximumPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmMinimumPrice
- * BiddingConditions.mmMinimumPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TaxVoucher#mmScripDividendReinvestmentPricePerShare
- * TaxVoucher.mmScripDividendReinvestmentPricePerShare}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCorporateActionExercisePrice
- * CorporateActionPrice.mmCorporateActionExercisePrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmGenericCashPriceReceivedPerProduct
- * CorporateActionPrice.mmGenericCashPriceReceivedPerProduct}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmGenericCashPricePaidPerProduct
- * CorporateActionPrice.mmGenericCashPricePaidPerProduct}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCashInLieuOfSharePrice
- * CorporateActionPrice.mmCashInLieuOfSharePrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmOverSubscriptionDepositPrice
- * CorporateActionPrice.mmOverSubscriptionDepositPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmCashValueForTax
- * CorporateActionPrice.mmCashValueForTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionPrice#mmPricingCalculation
- * CorporateActionPrice.mmPricingCalculation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AmountAndQuantity#mmSecuritiesPricing
- * AmountAndQuantity.mmSecuritiesPricing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AmountRatio#mmSecuritiesPricing
- * AmountRatio.mmSecuritiesPricing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Spread#mmBenchmarkPrice
- * Spread.mmBenchmarkPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderPrice
- * SecuritiesOrder.mmOrderPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmStopPrice
- * SecuritiesOrder.mmStopPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmRedemptionPrice
- * YieldCalculation.mmRedemptionPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Allocation#mmAllocatedPrice
- * Allocation.mmAllocatedPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Distribution#mmOfferPrice
- * Distribution.mmOfferPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BuyIn#mmBuyInPrice
- * BuyIn.mmBuyInPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrderParameters#mmPreviousClosingPrice
- * SecuritiesOrderParameters.mmPreviousClosingPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Quote#mmPreviousClosingPrice
- * Quote.mmPreviousClosingPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmRequestedPrice
- * Quote.mmRequestedPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmPrice Quote.mmPrice}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmMarketPrice
- * Quote.mmMarketPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesDistribution#mmCashFractionsPrice
- * SecuritiesDistribution.mmCashFractionsPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesDistribution#mmSubscriptionPrice
- * SecuritiesDistribution.mmSubscriptionPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesDistribution#mmReinvestmentPrice
- * SecuritiesDistribution.mmReinvestmentPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.AnalyticsCalculation#mmSecuritiesPricing
- * AnalyticsCalculation.mmSecuritiesPricing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DurationCalculation#mmRelatedSecuritiesPricing
- * DurationCalculation.mmRelatedSecuritiesPricing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.LifeCalculation#mmSecuritiesPricing
- * LifeCalculation.mmSecuritiesPricing}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Entitlement#mmStrikePrice
- * Entitlement.mmStrikePrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Position#mmPrice
- * Position.mmPrice}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Price2#mmValue Price2.mmValue}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PriceType1Choice#mmMarket
- * PriceType1Choice.mmMarket}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PriceType1Choice#mmIndicative
- * PriceType1Choice.mmIndicative}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Price3#mmValue Price3.mmValue}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PriceType2Choice#mmMarket
- * PriceType2Choice.mmMarket}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PriceType2Choice#mmIndicative
- * PriceType2Choice.mmIndicative}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation5#mmValue
- * PriceInformation5.mmValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation7#mmValue
- * PriceInformation7.mmValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation1#mmValue
- * PriceInformation1.mmValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation2#mmValue
- * PriceInformation2.mmValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation6#mmValue
- * PriceInformation6.mmValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation8#mmValue
- * PriceInformation8.mmValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation9#mmValue
- * PriceInformation9.mmValue}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionPrice1Choice#mmProprietary
- * TransactionPrice1Choice.mmProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionPrice2Choice#mmProprietary
- * TransactionPrice2Choice.mmProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.TransactionPrice3Choice#mmProprietary
- * TransactionPrice3Choice.mmProprietary}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceRate1#mmRateType
- * PriceRate1.mmRateType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PriceInformation10#mmAmountOfChange
- * PriceInformation10.mmAmountOfChange}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation3#mmValue
- * PriceInformation3.mmValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation3#mmPriceType
- * PriceInformation3.mmPriceType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation4#mmValue
- * PriceInformation4.mmValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation11#mmValue
- * PriceInformation11.mmValue}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1#mmPrice
- * FinancialInstrumentAggregateBalance1.mmPrice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation12#mmValue
- * PriceInformation12.mmValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation13#mmValue
- * PriceInformation13.mmValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation16#mmValue
- * PriceInformation16.mmValue}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceInformation14#mmValue
- * PriceInformation14.mmValue}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -788,8 +787,8 @@ public class SecuritiesPricing {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected PriceMethodCode priceMethod;
 	/**
-	 * Type of pricing calculation method.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -851,8 +850,8 @@ public class SecuritiesPricing {
 			derivation_lazy = () -> Arrays.asList(ValuationDealingProcessingCharacteristics.mmPriceMethod, ValuationDealingProcessingCharacteristics2.mmPriceMethod, UnitPrice6.mmPriceMethod, UnitPrice15.mmPriceMethod,
 					UnitPrice3.mmPriceMethod, UnitPrice12.mmPriceMethod, UnitPrice1.mmPriceMethod, UnitPrice5.mmPriceMethod, UnitPrice10.mmPriceMethod, UnitPrice11.mmPriceMethod, UnitPrice20.mmPriceMethod, UnitPrice21.mmPriceMethod,
 					UnitPrice22.mmPriceMethod);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceMethod";
 			definition = "Type of pricing calculation method.";
@@ -871,8 +870,8 @@ public class SecuritiesPricing {
 	};
 	protected TypeOfPriceCode priceType;
 	/**
-	 * Type and information about a price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1351,8 +1350,8 @@ public class SecuritiesPricing {
 					QuantityBreakdown38.mmTypeOfPrice, TypeOfPrice32Choice.mmCode, TypeOfPrice32Choice.mmProprietary, QuantityBreakdown44.mmTypeOfPrice, PriceInformation14.mmType, SecuritiesTradeDetails65.mmTypeOfPrice,
 					SecuritiesTradeDetails66.mmTypeOfPrice, UnitPrice22.mmType, TypeOfPrice46Choice.mmCode, TypeOfPrice46Choice.mmProprietary, DerivativeCommodity2.mmFinalPriceType, SecuritiesTradeDetails67.mmTypeOfPrice,
 					SecuritiesTradeDetails68.mmTypeOfPrice, SecuritiesTradeDetails69.mmTypeOfPrice, SecuritiesTradeDetails70.mmTypeOfPrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceType";
 			definition = "Type and information about a price.";
@@ -1371,10 +1370,8 @@ public class SecuritiesPricing {
 	};
 	protected YesNoIndicator cumDividendIndicator;
 	/**
-	 * Indicates whether the dividend is included, ie, cum-dividend, in the
-	 * executed price. When the dividend is not included, the price will be
-	 * ex-dividend.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1489,8 +1486,8 @@ public class SecuritiesPricing {
 					RedemptionExecution12.mmCumDividendIndicator, SubscriptionExecution9.mmCumDividendIndicator, InvestmentFundTransaction4.mmCumDividendIndicator, SubscriptionExecution13.mmCumDividendIndicator,
 					SubscriptionExecution12.mmCumDividendIndicator, RedemptionExecution16.mmCumDividendIndicator, SwitchSubscriptionLegExecution4.mmCumDividendIndicator, RedemptionExecution15.mmCumDividendIndicator,
 					SwitchRedemptionLegExecution4.mmCumDividendIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CumDividendIndicator";
 			definition = "Indicates whether the dividend is included, ie, cum-dividend, in the executed price. When the dividend is not included, the price will be ex-dividend.";
@@ -1509,8 +1506,8 @@ public class SecuritiesPricing {
 	};
 	protected PercentageRate calculationBasis;
 	/**
-	 * Ratio applied on the non-adjusted price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1548,8 +1545,8 @@ public class SecuritiesPricing {
 	public static final MMBusinessAttribute mmCalculationBasis = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnitPrice6.mmCalculationBasis, UnitPrice15.mmCalculationBasis);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculationBasis";
 			definition = "Ratio applied on the non-adjusted price.";
@@ -1568,8 +1565,8 @@ public class SecuritiesPricing {
 	};
 	protected List<com.tools20022.repository.entity.ValuationStatistics> priceChangeRelatedStatistics;
 	/**
-	 * Valuation statistics for which a change of price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1603,8 +1600,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmPriceChangeRelatedStatistics = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceChangeRelatedStatistics";
 			definition = "Valuation statistics for which a change of price is specified.";
@@ -1616,8 +1613,8 @@ public class SecuritiesPricing {
 	};
 	protected PercentageRate rate;
 	/**
-	 * Price expressed as a rate, ie, percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1835,8 +1832,8 @@ public class SecuritiesPricing {
 					PriceFormat51Choice.mmPercentagePrice, PriceFormat49Choice.mmPercentagePrice, PriceFormat47Choice.mmPercentagePrice, PriceFormat44Choice.mmPercentagePrice, PriceFormat56Choice.mmPercentagePrice,
 					PriceFormat57Choice.mmPercentagePrice, PriceFormat52Choice.mmPercentagePrice, PriceFormat59Choice.mmPercentagePrice, PriceFormat55Choice.mmPercentagePrice, PriceFormat53Choice.mmPercentagePrice,
 					PriceFormat60Choice.mmPercentagePrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
 			definition = "Price expressed as a rate, ie, percentage.";
@@ -1855,8 +1852,8 @@ public class SecuritiesPricing {
 	};
 	protected ValuationStatistics highestPriceValueRelatedStatistics;
 	/**
-	 * Valuation statistics for which a highest price value is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1890,8 +1887,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmHighestPriceValueRelatedStatistics = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HighestPriceValueRelatedStatistics";
 			definition = "Valuation statistics for which a highest price value is specified.";
@@ -1904,8 +1901,8 @@ public class SecuritiesPricing {
 	};
 	protected ValuationStatistics lowestPriceValueRelatedStatistics;
 	/**
-	 * Valuation statistics for which a lowest price value is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1939,8 +1936,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmLowestPriceValueRelatedStatistics = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LowestPriceValueRelatedStatistics";
 			definition = "Valuation statistics for which a lowest price value is specified.";
@@ -1953,8 +1950,8 @@ public class SecuritiesPricing {
 	};
 	protected List<com.tools20022.repository.entity.Security> security;
 	/**
-	 * Identifies the security for which a price is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1986,8 +1983,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Identifies the security for which a price is given.";
@@ -1999,8 +1996,8 @@ public class SecuritiesPricing {
 	};
 	protected SecuritiesTradeExecution securitiesTradeExecution;
 	/**
-	 * Trade execution for which a deal price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2034,8 +2031,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesTradeExecution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesTradeExecution";
 			definition = "Trade execution for which a deal price is specified.";
@@ -2048,9 +2045,8 @@ public class SecuritiesPricing {
 	};
 	protected YesNoIndicator yielded;
 	/**
-	 * Indicates whether the price is expressed as a yield (yield is the annual
-	 * rate of return expressed as a percentage).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2099,8 +2095,8 @@ public class SecuritiesPricing {
 	public static final MMBusinessAttribute mmYielded = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(YieldedOrValueType1Choice.mmYielded, PriceInformation1.mmYielded, PriceInformation2.mmYielded, PriceInformation3.mmYieldedIndicator, PriceInformation4.mmYielded);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Yielded";
 			definition = "Indicates whether the price is expressed as a yield (yield is the annual rate of return expressed as a percentage).";
@@ -2119,8 +2115,8 @@ public class SecuritiesPricing {
 	};
 	protected PriceValueTypeCode typeOfRate;
 	/**
-	 * Type of value in which the price (as a rate) is expressed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2196,8 +2192,8 @@ public class SecuritiesPricing {
 			derivation_lazy = () -> Arrays.asList(YieldedOrValueType1Choice.mmValueType, PercentagePrice1.mmPercentagePriceType, PriceInformation5.mmValueType, PriceInformation7.mmValueType, PriceInformation1.mmValueType,
 					PriceInformation2.mmValueType, PriceInformation6.mmValueType, PriceInformation8.mmValueType, Price1.mmValueType, PriceInformation4.mmValueType, PriceInformation12.mmValueType, PriceInformation13.mmValueType,
 					PriceInformation16.mmValueType, PriceInformation14.mmValueType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TypeOfRate";
 			definition = "Type of value in which the price (as a rate)  is expressed.";
@@ -2216,8 +2212,8 @@ public class SecuritiesPricing {
 	};
 	protected List<com.tools20022.repository.entity.Derivative> derivative;
 	/**
-	 * Derivative for which an exercise price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2250,8 +2246,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmDerivative = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Derivative";
 			definition = "Derivative for which an exercise price is specified.";
@@ -2263,8 +2259,8 @@ public class SecuritiesPricing {
 	};
 	protected List<com.tools20022.repository.entity.Warrant> relatedWarrant;
 	/**
-	 * Warrant for which a subscription price is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2296,8 +2292,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedWarrant = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedWarrant";
 			definition = "Warrant for which a subscription price is provided.";
@@ -2309,8 +2305,8 @@ public class SecuritiesPricing {
 	};
 	protected SecuritiesConversion relatedSecuritiesConversion;
 	/**
-	 * Securities conversion process for which a conversion price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2346,8 +2342,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSecuritiesConversion = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesConversion";
 			definition = "Securities conversion process for which a conversion price is specified.";
@@ -2360,8 +2356,8 @@ public class SecuritiesPricing {
 	};
 	protected LotBreakdown lotBreakdown;
 	/**
-	 * Lot for which a price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2394,8 +2390,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmLotBreakdown = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LotBreakdown";
 			definition = "Lot for which a price is specified.";
@@ -2408,8 +2404,8 @@ public class SecuritiesPricing {
 	};
 	protected AmountPriceTypeCode typeOfAmount;
 	/**
-	 * Type of value in which the price (as a rate) is expressed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2493,8 +2489,8 @@ public class SecuritiesPricing {
 					AmountPricePerFinancialInstrumentQuantity4.mmAmountPriceType, AmountPricePerAmount3.mmAmountPriceType, AmountPrice2.mmAmountPriceType, AmountPrice4.mmAmountPriceType, AmountPriceType1FormatChoice.mmCode,
 					AmountPriceType1FormatChoice.mmProprietary, AmountPrice1.mmAmountPriceType, AmountPricePerFinancialInstrumentQuantity1.mmAmountPriceType, AmountPricePerAmount1.mmAmountPriceType,
 					AmountPricePerFinancialInstrumentQuantity5.mmAmountPriceType, AmountPricePerFinancialInstrumentQuantity6.mmAmountPriceType, AmountPricePerFinancialInstrumentQuantity7.mmAmountPriceType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TypeOfAmount";
 			definition = "Type of value in which the price (as a rate)  is expressed.";
@@ -2513,8 +2509,8 @@ public class SecuritiesPricing {
 	};
 	protected CorporateActionPrice exercisePriceRelatedEvent;
 	/**
-	 * Corporate action event for which an exercise price is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2549,8 +2545,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmExercisePriceRelatedEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExercisePriceRelatedEvent";
 			definition = "Corporate action event for which an exercise price is provided.";
@@ -2563,9 +2559,8 @@ public class SecuritiesPricing {
 	};
 	protected CorporateActionPrice genericCashPriceReceivedPerProductRelatedEvent;
 	/**
-	 * Corporate action event for which a generic cash price received per
-	 * product is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2601,8 +2596,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmGenericCashPriceReceivedPerProductRelatedEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GenericCashPriceReceivedPerProductRelatedEvent";
 			definition = "Corporate action event for which a generic cash price received per product is provided.";
@@ -2615,8 +2610,8 @@ public class SecuritiesPricing {
 	};
 	protected AmountAndQuantity amountPricePerFinancialInstrumentQuantity;
 	/**
-	 * Price expressed as an amount per a quantity of financial instruments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2739,8 +2734,8 @@ public class SecuritiesPricing {
 					PriceFormat40Choice.mmAmountPricePerFinancialInstrumentQuantity, PriceFormat39Choice.mmAmountPricePerFinancialInstrumentQuantity, PriceFormat48Choice.mmAmountPricePerFinancialInstrumentQuantity,
 					PriceFormat49Choice.mmAmountPricePerFinancialInstrumentQuantity, PriceFormat47Choice.mmAmountPricePerFinancialInstrumentQuantity, PriceFormat56Choice.mmAmountPricePerFinancialInstrumentQuantity,
 					PriceFormat53Choice.mmAmountPricePerFinancialInstrumentQuantity, PriceFormat60Choice.mmAmountPricePerFinancialInstrumentQuantity);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AmountPricePerFinancialInstrumentQuantity";
 			definition = "Price expressed as an amount per a quantity of financial instruments.";
@@ -2753,8 +2748,8 @@ public class SecuritiesPricing {
 	};
 	protected AmountRatio amountPricePerAmount;
 	/**
-	 * Price expressed as an amount per another amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2882,8 +2877,8 @@ public class SecuritiesPricing {
 					AmountPricePerAmount1.mmAmount, PriceFormat1Choice.mmAmountPricePerAmount, PriceFormat33Choice.mmAmountPricePerAmount, PriceFormat32Choice.mmAmountPricePerAmount, PriceFormat34Choice.mmAmountPricePerAmount,
 					PriceFormat43Choice.mmAmountPricePerAmount, PriceFormat40Choice.mmAmountPricePerAmount, PriceFormat39Choice.mmAmountPricePerAmount, PriceFormat48Choice.mmAmountPricePerAmount, PriceFormat49Choice.mmAmountPricePerAmount,
 					PriceFormat47Choice.mmAmountPricePerAmount, PriceFormat56Choice.mmAmountPricePerAmount, PriceFormat53Choice.mmAmountPricePerAmount, PriceFormat60Choice.mmAmountPricePerAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AmountPricePerAmount";
 			definition = "Price expressed as an amount per another amount.";
@@ -2896,9 +2891,8 @@ public class SecuritiesPricing {
 	};
 	protected CorporateActionPrice genericCashPricePaidPerProductRelatedEvent;
 	/**
-	 * Corporate action event for which a generic cash price paid per product is
-	 * provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2934,8 +2928,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmGenericCashPricePaidPerProductRelatedEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GenericCashPricePaidPerProductRelatedEvent";
 			definition = "Corporate action event for which a generic cash price paid per product is provided.";
@@ -2948,9 +2942,8 @@ public class SecuritiesPricing {
 	};
 	protected DateTimePeriod priceCalculationPeriod;
 	/**
-	 * Period during which the price of a security is determined (For outturn
-	 * securities).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3033,8 +3026,8 @@ public class SecuritiesPricing {
 					CorporateActionPeriod7.mmPriceCalculationPeriod, CorporateActionPeriod3.mmPriceCalculationPeriod, CorporateActionPeriod6.mmPriceCalculationPeriod, CorporateActionPeriod8.mmPriceCalculationPeriod,
 					PriceInformation9.mmPriceCalculationPeriod, CorporateActionPeriod1.mmPriceCalculationPeriod, CorporateActionPeriod2.mmPriceCalculationPeriod, CorporateActionPeriod10.mmPriceCalculationPeriod,
 					PriceInformation11.mmPriceCalculationPeriod, CorporateActionPeriod11.mmPriceCalculationPeriod);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceCalculationPeriod";
 			definition = "Period during which the price of a security is determined (For outturn securities).";
@@ -3047,9 +3040,8 @@ public class SecuritiesPricing {
 	};
 	protected CorporateActionPrice cashInLieuOfSharePriceRelatedEvent;
 	/**
-	 * Corporate action event for which a cash in lieu of share price is
-	 * provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3085,8 +3077,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmCashInLieuOfSharePriceRelatedEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashInLieuOfSharePriceRelatedEvent";
 			definition = "Corporate action event for which a cash in lieu of share price is provided.";
@@ -3099,9 +3091,8 @@ public class SecuritiesPricing {
 	};
 	protected CorporateActionPrice overSubscriptionDepositPriceRelatedEvent;
 	/**
-	 * Corporate action event for which an over subscription deposit price is
-	 * provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3137,8 +3128,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmOverSubscriptionDepositPriceRelatedEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OverSubscriptionDepositPriceRelatedEvent";
 			definition = "Corporate action event for which an over subscription deposit price is provided.";
@@ -3151,8 +3142,8 @@ public class SecuritiesPricing {
 	};
 	protected CorporateActionPrice cashValueForTaxRelatedEvent;
 	/**
-	 * Corporate action event for which a cash value has been provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3187,8 +3178,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmCashValueForTaxRelatedEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashValueForTaxRelatedEvent";
 			definition = "Corporate action event for which a cash value has been provided.";
@@ -3201,8 +3192,8 @@ public class SecuritiesPricing {
 	};
 	protected BiddingConditions maximumPriceBiddingConditions;
 	/**
-	 * Bidding conditions for which a maximum price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3236,8 +3227,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmMaximumPriceBiddingConditions = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumPriceBiddingConditions";
 			definition = "Bidding conditions for which a maximum price is specified.";
@@ -3250,8 +3241,8 @@ public class SecuritiesPricing {
 	};
 	protected BiddingConditions minimumPriceBiddingConditions;
 	/**
-	 * Bidding conditions for which a minimum price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3285,8 +3276,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmMinimumPriceBiddingConditions = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumPriceBiddingConditions";
 			definition = "Bidding conditions for which a minimum price is specified.";
@@ -3299,8 +3290,8 @@ public class SecuritiesPricing {
 	};
 	protected ISODateTime quotationDate;
 	/**
-	 * Date on which the price is obtained.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3378,8 +3369,8 @@ public class SecuritiesPricing {
 			derivation_lazy = () -> Arrays.asList(PriceInformation5.mmQuotationDate, PriceInformation7.mmQuotationDate, PriceInformation1.mmQuotationDate, PriceInformation2.mmQuotationDate, PriceInformation6.mmQuotationDate,
 					PriceInformation8.mmQuotationDate, PriceInformation9.mmQuotationDate, CorporateActionDate4.mmQuotationSettingDate, PriceInformation3.mmQuotationDate, PriceInformation4.mmQuotationDate,
 					PriceInformation11.mmQuotationDate, PriceInformation12.mmQuotationDate, PriceInformation13.mmQuotationDate, PriceInformation16.mmQuotationDate, PriceInformation14.mmQuotationDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuotationDate";
 			definition = "Date on which the price is obtained.";
@@ -3398,8 +3389,8 @@ public class SecuritiesPricing {
 	};
 	protected List<com.tools20022.repository.entity.YieldCalculation> yieldCalculation;
 	/**
-	 * Rate of return on an investment, based on the price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3455,8 +3446,8 @@ public class SecuritiesPricing {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmYieldDetails, FinancialInstrumentStipulations.mmYieldRange, FinancialInstrumentStipulations2.mmYieldRange, Debt2.mmYieldCalculation, SingleOrder1.mmYieldDetails,
 					IndicationOfInterest1.mmYieldDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "YieldCalculation";
 			definition = "Rate of return on an investment, based on the price.";
@@ -3468,8 +3459,8 @@ public class SecuritiesPricing {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesFinancing> relatedSecuritiesFinancing;
 	/**
-	 * Securities financing process for which an end price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3503,8 +3494,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSecuritiesFinancing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesFinancing";
 			definition = "Securities financing process for which an end price is specified.";
@@ -3516,8 +3507,8 @@ public class SecuritiesPricing {
 	};
 	protected InvestmentFundOrderExecution fundOrderRelatedToExecutedPrice;
 	/**
-	 * Fund order for which an executed price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3551,8 +3542,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmFundOrderRelatedToExecutedPrice = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundOrderRelatedToExecutedPrice";
 			definition = "Fund order for which an executed price is specified.";
@@ -3565,8 +3556,8 @@ public class SecuritiesPricing {
 	};
 	protected InvestmentFundOrderExecution fundOrderRelatedToInformativePrice;
 	/**
-	 * Fund order for which an informative price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3600,8 +3591,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmFundOrderRelatedToInformativePrice = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundOrderRelatedToInformativePrice";
 			definition = "Fund order for which an informative price is specified.";
@@ -3614,8 +3605,8 @@ public class SecuritiesPricing {
 	};
 	protected TaxVoucher taxVoucher;
 	/**
-	 * Tax voucher for which the cost per share is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3648,8 +3639,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmTaxVoucher = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxVoucher";
 			definition = "Tax voucher for which the cost per share is specified.";
@@ -3662,8 +3653,8 @@ public class SecuritiesPricing {
 	};
 	protected SecuritiesTrade securitiesTrade;
 	/**
-	 * Trade for which the trade price is calculated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3696,8 +3687,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesTrade";
 			definition = "Trade for which the trade price is calculated.";
@@ -3710,8 +3701,8 @@ public class SecuritiesPricing {
 	};
 	protected List<com.tools20022.repository.entity.NetAssetValueCalculation> netAssetValueCalculation;
 	/**
-	 * Value calculation for which a securities pricing is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3746,8 +3737,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmNetAssetValueCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAssetValueCalculation";
 			definition = "Value calculation for which a securities pricing is specified.";
@@ -3759,8 +3750,8 @@ public class SecuritiesPricing {
 	};
 	protected BuyIn relatedBuyIn;
 	/**
-	 * BuyIn process for which a price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3792,8 +3783,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedBuyIn = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedBuyIn";
 			definition = "BuyIn process for which a price is specified.";
@@ -3806,8 +3797,8 @@ public class SecuritiesPricing {
 	};
 	protected List<com.tools20022.repository.entity.Index> index;
 	/**
-	 * Specifies the index information when used for calculating the price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3848,8 +3839,8 @@ public class SecuritiesPricing {
 	public static final MMBusinessAssociationEnd mmIndex = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(BasketDescription3.mmIndex);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Index";
 			definition = "Specifies the index information when used for calculating the price.";
@@ -3861,8 +3852,8 @@ public class SecuritiesPricing {
 	};
 	protected InformationPartyRole informationPartyRole;
 	/**
-	 * Party which provided the pricing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3896,8 +3887,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmInformationPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InformationPartyRole";
 			definition = "Party which provided the pricing.";
@@ -3910,8 +3901,8 @@ public class SecuritiesPricing {
 	};
 	protected DateTimePeriod priceFactPeriod;
 	/**
-	 * Period during which the price fact type is valid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3944,8 +3935,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmPriceFactPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceFactPeriod";
 			definition = "Period during which the price fact type is valid.";
@@ -3958,8 +3949,8 @@ public class SecuritiesPricing {
 	};
 	protected List<com.tools20022.repository.entity.AnalyticsCalculation> analyticsCalculation;
 	/**
-	 * Calculated analytics based on the price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3993,8 +3984,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmAnalyticsCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AnalyticsCalculation";
 			definition = "Calculated analytics based on the price.";
@@ -4006,8 +3997,8 @@ public class SecuritiesPricing {
 	};
 	protected List<com.tools20022.repository.entity.DurationCalculation> durationCalculation;
 	/**
-	 * Calculated duration based on the price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4040,8 +4031,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmDurationCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DurationCalculation";
 			definition = "Calculated duration based on the price.";
@@ -4053,8 +4044,8 @@ public class SecuritiesPricing {
 	};
 	protected List<com.tools20022.repository.entity.LifeCalculation> lifeCalculation;
 	/**
-	 * Calculated life based on the price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4087,8 +4078,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmLifeCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LifeCalculation";
 			definition = "Calculated  life based on the price.";
@@ -4100,8 +4091,8 @@ public class SecuritiesPricing {
 	};
 	protected ISODateTime date;
 	/**
-	 * Date/time of the price. For CIV, this is the NAV date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4135,8 +4126,8 @@ public class SecuritiesPricing {
 	public static final MMBusinessAttribute mmDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountPricePerFinancialInstrumentQuantity5.mmPriceFixingDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Date";
 			definition = "Date/time of the price. For CIV, this is the NAV date.";
@@ -4155,8 +4146,8 @@ public class SecuritiesPricing {
 	};
 	protected Spread spread;
 	/**
-	 * Spread which uses the price as benchmark.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4188,8 +4179,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmSpread = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Spread";
 			definition = "Spread which uses the price as benchmark.";
@@ -4202,8 +4193,8 @@ public class SecuritiesPricing {
 	};
 	protected SecuritiesOrder order;
 	/**
-	 * Securities order for which a price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4236,8 +4227,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Order";
 			definition = "Securities order for which a price is specified.";
@@ -4250,8 +4241,8 @@ public class SecuritiesPricing {
 	};
 	protected SecuritiesOrder stopPriceOrder;
 	/**
-	 * Order for which a stop price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4284,8 +4275,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmStopPriceOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StopPriceOrder";
 			definition = "Order for which a stop price is specified.";
@@ -4298,8 +4289,8 @@ public class SecuritiesPricing {
 	};
 	protected Allocation allocation;
 	/**
-	 * Allocation process for which a price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4332,8 +4323,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmAllocation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Allocation";
 			definition = "Allocation process for which a price is specified.";
@@ -4346,8 +4337,8 @@ public class SecuritiesPricing {
 	};
 	protected SecuritiesOrderParameters relatedOrder;
 	/**
-	 * Order for which a previous closing price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4381,8 +4372,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOrder";
 			definition = "Order for which a previous closing price is specified.";
@@ -4395,8 +4386,8 @@ public class SecuritiesPricing {
 	};
 	protected Issuance issuance;
 	/**
-	 * Issuance for which a discount is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4428,8 +4419,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmIssuance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuance";
 			definition = "Issuance for which a discount is specified.";
@@ -4442,8 +4433,8 @@ public class SecuritiesPricing {
 	};
 	protected Entitlement entitlement;
 	/**
-	 * Entitlement for which a strike price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4476,8 +4467,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmEntitlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Entitlement";
 			definition = "Entitlement for which a strike price is specified.";
@@ -4490,8 +4481,8 @@ public class SecuritiesPricing {
 	};
 	protected SecuritiesDistribution cashFractionsPriceRelatedSecuritiesDistribution;
 	/**
-	 * Securities distribution for which a cash fractions price is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4526,8 +4517,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmCashFractionsPriceRelatedSecuritiesDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashFractionsPriceRelatedSecuritiesDistribution";
 			definition = "Securities distribution for which a cash fractions price is provided.";
@@ -4540,8 +4531,8 @@ public class SecuritiesPricing {
 	};
 	protected SecuritiesDistribution suscriptionPriceRelatedSecuritiesDistribution;
 	/**
-	 * Securities distribution for which a subscription price is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4576,8 +4567,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmSuscriptionPriceRelatedSecuritiesDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SuscriptionPriceRelatedSecuritiesDistribution";
 			definition = "Securities distribution for which a subscription price is provided.";
@@ -4590,8 +4581,8 @@ public class SecuritiesPricing {
 	};
 	protected SecuritiesDistribution reinvestmentPriceRelatedSecuritiesDistribution;
 	/**
-	 * Securities distribution for which a reinvestment price is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4626,8 +4617,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmReinvestmentPriceRelatedSecuritiesDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReinvestmentPriceRelatedSecuritiesDistribution";
 			definition = "Securities distribution for which a reinvestment price is provided.";
@@ -4640,8 +4631,8 @@ public class SecuritiesPricing {
 	};
 	protected Derivative relatedFuture;
 	/**
-	 * Contract for which a tick is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4674,8 +4665,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedFuture = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedFuture";
 			definition = "Contract for which a tick is specified.";
@@ -4688,8 +4679,8 @@ public class SecuritiesPricing {
 	};
 	protected Distribution distribution;
 	/**
-	 * Distribution for which an offer price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4722,8 +4713,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Distribution";
 			definition = "Distribution for which an offer price is specified.";
@@ -4736,8 +4727,8 @@ public class SecuritiesPricing {
 	};
 	protected RedemptionSchedule priceChangeRedemptionSchedule;
 	/**
-	 * Redemption schedule for which a change in price is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4771,8 +4762,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmPriceChangeRedemptionSchedule = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceChangeRedemptionSchedule";
 			definition = "Redemption schedule for which a change in price is provided.";
@@ -4785,8 +4776,8 @@ public class SecuritiesPricing {
 	};
 	protected RedemptionSchedule relatedRedemptionSchedule;
 	/**
-	 * Redemption schedule for which a price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4819,8 +4810,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedRedemptionSchedule = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedRedemptionSchedule";
 			definition = "Redemption schedule for which a price is specified.";
@@ -4833,8 +4824,8 @@ public class SecuritiesPricing {
 	};
 	protected Quote previousClosingPriceRelatedQuote;
 	/**
-	 * Quote which contains a previous closing price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4866,8 +4857,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmPreviousClosingPriceRelatedQuote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreviousClosingPriceRelatedQuote";
 			definition = "Quote which contains a previous closing price.";
@@ -4880,8 +4871,8 @@ public class SecuritiesPricing {
 	};
 	protected Quote requestedPriceRelatedQuote;
 	/**
-	 * Quote which contains a requested price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4913,8 +4904,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRequestedPriceRelatedQuote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedPriceRelatedQuote";
 			definition = "Quote which contains a requested price.";
@@ -4927,8 +4918,8 @@ public class SecuritiesPricing {
 	};
 	protected Quote priceRelatedQuote;
 	/**
-	 * Quote which contains a price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4959,8 +4950,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmPriceRelatedQuote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceRelatedQuote";
 			definition = "Quote which contains a price.";
@@ -4973,8 +4964,8 @@ public class SecuritiesPricing {
 	};
 	protected Quote marketPriceRelatedQuote;
 	/**
-	 * Quote which contains a market price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5006,8 +4997,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmMarketPriceRelatedQuote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketPriceRelatedQuote";
 			definition = "Quote which contains a market price.";
@@ -5020,8 +5011,8 @@ public class SecuritiesPricing {
 	};
 	protected Price price;
 	/**
-	 * Value of the price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5195,8 +5186,8 @@ public class SecuritiesPricing {
 					AmountPricePerFinancialInstrumentQuantity5.mmPriceValue, InstrumentLeg2.mmLegBidPrice, InstrumentLeg2.mmLegOfferPrice, InstrumentLeg3.mmLegPrice, Order17.mmDealPrice, Order18.mmDealPrice, UnitPrice20.mmValue,
 					UnitPrice19.mmValue, SecuritiesTransactionPrice2Choice.mmMonetaryValue, AmountPricePerFinancialInstrumentQuantity6.mmPriceValue, UnitPrice21.mmValue, AmountPricePerFinancialInstrumentQuantity7.mmPriceValue,
 					UnitPrice22.mmValue, TransparencyDataReport11.mmInstrumentPrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Price";
 			definition = "Value of the price.";
@@ -5209,8 +5200,8 @@ public class SecuritiesPricing {
 	};
 	protected CorporateActionPrice relatedCorporateActionPrice;
 	/**
-	 * Corporate action price for which pricing information is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5245,8 +5236,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCorporateActionPrice = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedCorporateActionPrice";
 			definition = "Corporate action price for which pricing information is provided.";
@@ -5259,8 +5250,8 @@ public class SecuritiesPricing {
 	};
 	protected Position relatedPosition;
 	/**
-	 * Position for which a price is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5292,8 +5283,8 @@ public class SecuritiesPricing {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPosition = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPosition";
 			definition = "Position for which a price is provided.";
@@ -5308,7 +5299,7 @@ public class SecuritiesPricing {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesPricing";
 				definition = "Characteristics related to the price of the security.";
@@ -5407,519 +5398,584 @@ public class SecuritiesPricing {
 		return priceMethod;
 	}
 
-	public void setPriceMethod(PriceMethodCode priceMethod) {
-		this.priceMethod = priceMethod;
+	public SecuritiesPricing setPriceMethod(PriceMethodCode priceMethod) {
+		this.priceMethod = Objects.requireNonNull(priceMethod);
+		return this;
 	}
 
 	public TypeOfPriceCode getPriceType() {
 		return priceType;
 	}
 
-	public void setPriceType(TypeOfPriceCode priceType) {
-		this.priceType = priceType;
+	public SecuritiesPricing setPriceType(TypeOfPriceCode priceType) {
+		this.priceType = Objects.requireNonNull(priceType);
+		return this;
 	}
 
 	public YesNoIndicator getCumDividendIndicator() {
 		return cumDividendIndicator;
 	}
 
-	public void setCumDividendIndicator(YesNoIndicator cumDividendIndicator) {
-		this.cumDividendIndicator = cumDividendIndicator;
+	public SecuritiesPricing setCumDividendIndicator(YesNoIndicator cumDividendIndicator) {
+		this.cumDividendIndicator = Objects.requireNonNull(cumDividendIndicator);
+		return this;
 	}
 
 	public PercentageRate getCalculationBasis() {
 		return calculationBasis;
 	}
 
-	public void setCalculationBasis(PercentageRate calculationBasis) {
-		this.calculationBasis = calculationBasis;
+	public SecuritiesPricing setCalculationBasis(PercentageRate calculationBasis) {
+		this.calculationBasis = Objects.requireNonNull(calculationBasis);
+		return this;
 	}
 
 	public List<ValuationStatistics> getPriceChangeRelatedStatistics() {
-		return priceChangeRelatedStatistics;
+		return priceChangeRelatedStatistics == null ? priceChangeRelatedStatistics = new ArrayList<>() : priceChangeRelatedStatistics;
 	}
 
-	public void setPriceChangeRelatedStatistics(List<com.tools20022.repository.entity.ValuationStatistics> priceChangeRelatedStatistics) {
-		this.priceChangeRelatedStatistics = priceChangeRelatedStatistics;
+	public SecuritiesPricing setPriceChangeRelatedStatistics(List<com.tools20022.repository.entity.ValuationStatistics> priceChangeRelatedStatistics) {
+		this.priceChangeRelatedStatistics = Objects.requireNonNull(priceChangeRelatedStatistics);
+		return this;
 	}
 
 	public PercentageRate getRate() {
 		return rate;
 	}
 
-	public void setRate(PercentageRate rate) {
-		this.rate = rate;
+	public SecuritiesPricing setRate(PercentageRate rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 
-	public ValuationStatistics getHighestPriceValueRelatedStatistics() {
-		return highestPriceValueRelatedStatistics;
+	public Optional<ValuationStatistics> getHighestPriceValueRelatedStatistics() {
+		return highestPriceValueRelatedStatistics == null ? Optional.empty() : Optional.of(highestPriceValueRelatedStatistics);
 	}
 
-	public void setHighestPriceValueRelatedStatistics(com.tools20022.repository.entity.ValuationStatistics highestPriceValueRelatedStatistics) {
+	public SecuritiesPricing setHighestPriceValueRelatedStatistics(com.tools20022.repository.entity.ValuationStatistics highestPriceValueRelatedStatistics) {
 		this.highestPriceValueRelatedStatistics = highestPriceValueRelatedStatistics;
+		return this;
 	}
 
-	public ValuationStatistics getLowestPriceValueRelatedStatistics() {
-		return lowestPriceValueRelatedStatistics;
+	public Optional<ValuationStatistics> getLowestPriceValueRelatedStatistics() {
+		return lowestPriceValueRelatedStatistics == null ? Optional.empty() : Optional.of(lowestPriceValueRelatedStatistics);
 	}
 
-	public void setLowestPriceValueRelatedStatistics(com.tools20022.repository.entity.ValuationStatistics lowestPriceValueRelatedStatistics) {
+	public SecuritiesPricing setLowestPriceValueRelatedStatistics(com.tools20022.repository.entity.ValuationStatistics lowestPriceValueRelatedStatistics) {
 		this.lowestPriceValueRelatedStatistics = lowestPriceValueRelatedStatistics;
+		return this;
 	}
 
 	public List<Security> getSecurity() {
-		return security;
+		return security == null ? security = new ArrayList<>() : security;
 	}
 
-	public void setSecurity(List<com.tools20022.repository.entity.Security> security) {
-		this.security = security;
+	public SecuritiesPricing setSecurity(List<com.tools20022.repository.entity.Security> security) {
+		this.security = Objects.requireNonNull(security);
+		return this;
 	}
 
-	public SecuritiesTradeExecution getSecuritiesTradeExecution() {
-		return securitiesTradeExecution;
+	public Optional<SecuritiesTradeExecution> getSecuritiesTradeExecution() {
+		return securitiesTradeExecution == null ? Optional.empty() : Optional.of(securitiesTradeExecution);
 	}
 
-	public void setSecuritiesTradeExecution(com.tools20022.repository.entity.SecuritiesTradeExecution securitiesTradeExecution) {
+	public SecuritiesPricing setSecuritiesTradeExecution(com.tools20022.repository.entity.SecuritiesTradeExecution securitiesTradeExecution) {
 		this.securitiesTradeExecution = securitiesTradeExecution;
+		return this;
 	}
 
 	public YesNoIndicator getYielded() {
 		return yielded;
 	}
 
-	public void setYielded(YesNoIndicator yielded) {
-		this.yielded = yielded;
+	public SecuritiesPricing setYielded(YesNoIndicator yielded) {
+		this.yielded = Objects.requireNonNull(yielded);
+		return this;
 	}
 
 	public PriceValueTypeCode getTypeOfRate() {
 		return typeOfRate;
 	}
 
-	public void setTypeOfRate(PriceValueTypeCode typeOfRate) {
-		this.typeOfRate = typeOfRate;
+	public SecuritiesPricing setTypeOfRate(PriceValueTypeCode typeOfRate) {
+		this.typeOfRate = Objects.requireNonNull(typeOfRate);
+		return this;
 	}
 
 	public List<Derivative> getDerivative() {
-		return derivative;
+		return derivative == null ? derivative = new ArrayList<>() : derivative;
 	}
 
-	public void setDerivative(List<com.tools20022.repository.entity.Derivative> derivative) {
-		this.derivative = derivative;
+	public SecuritiesPricing setDerivative(List<com.tools20022.repository.entity.Derivative> derivative) {
+		this.derivative = Objects.requireNonNull(derivative);
+		return this;
 	}
 
 	public List<Warrant> getRelatedWarrant() {
-		return relatedWarrant;
+		return relatedWarrant == null ? relatedWarrant = new ArrayList<>() : relatedWarrant;
 	}
 
-	public void setRelatedWarrant(List<com.tools20022.repository.entity.Warrant> relatedWarrant) {
-		this.relatedWarrant = relatedWarrant;
+	public SecuritiesPricing setRelatedWarrant(List<com.tools20022.repository.entity.Warrant> relatedWarrant) {
+		this.relatedWarrant = Objects.requireNonNull(relatedWarrant);
+		return this;
 	}
 
 	public SecuritiesConversion getRelatedSecuritiesConversion() {
 		return relatedSecuritiesConversion;
 	}
 
-	public void setRelatedSecuritiesConversion(com.tools20022.repository.entity.SecuritiesConversion relatedSecuritiesConversion) {
-		this.relatedSecuritiesConversion = relatedSecuritiesConversion;
+	public SecuritiesPricing setRelatedSecuritiesConversion(com.tools20022.repository.entity.SecuritiesConversion relatedSecuritiesConversion) {
+		this.relatedSecuritiesConversion = Objects.requireNonNull(relatedSecuritiesConversion);
+		return this;
 	}
 
-	public LotBreakdown getLotBreakdown() {
-		return lotBreakdown;
+	public Optional<LotBreakdown> getLotBreakdown() {
+		return lotBreakdown == null ? Optional.empty() : Optional.of(lotBreakdown);
 	}
 
-	public void setLotBreakdown(com.tools20022.repository.entity.LotBreakdown lotBreakdown) {
+	public SecuritiesPricing setLotBreakdown(com.tools20022.repository.entity.LotBreakdown lotBreakdown) {
 		this.lotBreakdown = lotBreakdown;
+		return this;
 	}
 
 	public AmountPriceTypeCode getTypeOfAmount() {
 		return typeOfAmount;
 	}
 
-	public void setTypeOfAmount(AmountPriceTypeCode typeOfAmount) {
-		this.typeOfAmount = typeOfAmount;
+	public SecuritiesPricing setTypeOfAmount(AmountPriceTypeCode typeOfAmount) {
+		this.typeOfAmount = Objects.requireNonNull(typeOfAmount);
+		return this;
 	}
 
 	public CorporateActionPrice getExercisePriceRelatedEvent() {
 		return exercisePriceRelatedEvent;
 	}
 
-	public void setExercisePriceRelatedEvent(com.tools20022.repository.entity.CorporateActionPrice exercisePriceRelatedEvent) {
-		this.exercisePriceRelatedEvent = exercisePriceRelatedEvent;
+	public SecuritiesPricing setExercisePriceRelatedEvent(com.tools20022.repository.entity.CorporateActionPrice exercisePriceRelatedEvent) {
+		this.exercisePriceRelatedEvent = Objects.requireNonNull(exercisePriceRelatedEvent);
+		return this;
 	}
 
-	public CorporateActionPrice getGenericCashPriceReceivedPerProductRelatedEvent() {
-		return genericCashPriceReceivedPerProductRelatedEvent;
+	public Optional<CorporateActionPrice> getGenericCashPriceReceivedPerProductRelatedEvent() {
+		return genericCashPriceReceivedPerProductRelatedEvent == null ? Optional.empty() : Optional.of(genericCashPriceReceivedPerProductRelatedEvent);
 	}
 
-	public void setGenericCashPriceReceivedPerProductRelatedEvent(com.tools20022.repository.entity.CorporateActionPrice genericCashPriceReceivedPerProductRelatedEvent) {
+	public SecuritiesPricing setGenericCashPriceReceivedPerProductRelatedEvent(com.tools20022.repository.entity.CorporateActionPrice genericCashPriceReceivedPerProductRelatedEvent) {
 		this.genericCashPriceReceivedPerProductRelatedEvent = genericCashPriceReceivedPerProductRelatedEvent;
+		return this;
 	}
 
 	public AmountAndQuantity getAmountPricePerFinancialInstrumentQuantity() {
 		return amountPricePerFinancialInstrumentQuantity;
 	}
 
-	public void setAmountPricePerFinancialInstrumentQuantity(com.tools20022.repository.entity.AmountAndQuantity amountPricePerFinancialInstrumentQuantity) {
-		this.amountPricePerFinancialInstrumentQuantity = amountPricePerFinancialInstrumentQuantity;
+	public SecuritiesPricing setAmountPricePerFinancialInstrumentQuantity(com.tools20022.repository.entity.AmountAndQuantity amountPricePerFinancialInstrumentQuantity) {
+		this.amountPricePerFinancialInstrumentQuantity = Objects.requireNonNull(amountPricePerFinancialInstrumentQuantity);
+		return this;
 	}
 
 	public AmountRatio getAmountPricePerAmount() {
 		return amountPricePerAmount;
 	}
 
-	public void setAmountPricePerAmount(com.tools20022.repository.entity.AmountRatio amountPricePerAmount) {
-		this.amountPricePerAmount = amountPricePerAmount;
+	public SecuritiesPricing setAmountPricePerAmount(com.tools20022.repository.entity.AmountRatio amountPricePerAmount) {
+		this.amountPricePerAmount = Objects.requireNonNull(amountPricePerAmount);
+		return this;
 	}
 
-	public CorporateActionPrice getGenericCashPricePaidPerProductRelatedEvent() {
-		return genericCashPricePaidPerProductRelatedEvent;
+	public Optional<CorporateActionPrice> getGenericCashPricePaidPerProductRelatedEvent() {
+		return genericCashPricePaidPerProductRelatedEvent == null ? Optional.empty() : Optional.of(genericCashPricePaidPerProductRelatedEvent);
 	}
 
-	public void setGenericCashPricePaidPerProductRelatedEvent(com.tools20022.repository.entity.CorporateActionPrice genericCashPricePaidPerProductRelatedEvent) {
+	public SecuritiesPricing setGenericCashPricePaidPerProductRelatedEvent(com.tools20022.repository.entity.CorporateActionPrice genericCashPricePaidPerProductRelatedEvent) {
 		this.genericCashPricePaidPerProductRelatedEvent = genericCashPricePaidPerProductRelatedEvent;
+		return this;
 	}
 
 	public DateTimePeriod getPriceCalculationPeriod() {
 		return priceCalculationPeriod;
 	}
 
-	public void setPriceCalculationPeriod(com.tools20022.repository.entity.DateTimePeriod priceCalculationPeriod) {
-		this.priceCalculationPeriod = priceCalculationPeriod;
+	public SecuritiesPricing setPriceCalculationPeriod(com.tools20022.repository.entity.DateTimePeriod priceCalculationPeriod) {
+		this.priceCalculationPeriod = Objects.requireNonNull(priceCalculationPeriod);
+		return this;
 	}
 
-	public CorporateActionPrice getCashInLieuOfSharePriceRelatedEvent() {
-		return cashInLieuOfSharePriceRelatedEvent;
+	public Optional<CorporateActionPrice> getCashInLieuOfSharePriceRelatedEvent() {
+		return cashInLieuOfSharePriceRelatedEvent == null ? Optional.empty() : Optional.of(cashInLieuOfSharePriceRelatedEvent);
 	}
 
-	public void setCashInLieuOfSharePriceRelatedEvent(com.tools20022.repository.entity.CorporateActionPrice cashInLieuOfSharePriceRelatedEvent) {
+	public SecuritiesPricing setCashInLieuOfSharePriceRelatedEvent(com.tools20022.repository.entity.CorporateActionPrice cashInLieuOfSharePriceRelatedEvent) {
 		this.cashInLieuOfSharePriceRelatedEvent = cashInLieuOfSharePriceRelatedEvent;
+		return this;
 	}
 
-	public CorporateActionPrice getOverSubscriptionDepositPriceRelatedEvent() {
-		return overSubscriptionDepositPriceRelatedEvent;
+	public Optional<CorporateActionPrice> getOverSubscriptionDepositPriceRelatedEvent() {
+		return overSubscriptionDepositPriceRelatedEvent == null ? Optional.empty() : Optional.of(overSubscriptionDepositPriceRelatedEvent);
 	}
 
-	public void setOverSubscriptionDepositPriceRelatedEvent(com.tools20022.repository.entity.CorporateActionPrice overSubscriptionDepositPriceRelatedEvent) {
+	public SecuritiesPricing setOverSubscriptionDepositPriceRelatedEvent(com.tools20022.repository.entity.CorporateActionPrice overSubscriptionDepositPriceRelatedEvent) {
 		this.overSubscriptionDepositPriceRelatedEvent = overSubscriptionDepositPriceRelatedEvent;
+		return this;
 	}
 
 	public CorporateActionPrice getCashValueForTaxRelatedEvent() {
 		return cashValueForTaxRelatedEvent;
 	}
 
-	public void setCashValueForTaxRelatedEvent(com.tools20022.repository.entity.CorporateActionPrice cashValueForTaxRelatedEvent) {
-		this.cashValueForTaxRelatedEvent = cashValueForTaxRelatedEvent;
+	public SecuritiesPricing setCashValueForTaxRelatedEvent(com.tools20022.repository.entity.CorporateActionPrice cashValueForTaxRelatedEvent) {
+		this.cashValueForTaxRelatedEvent = Objects.requireNonNull(cashValueForTaxRelatedEvent);
+		return this;
 	}
 
 	public BiddingConditions getMaximumPriceBiddingConditions() {
 		return maximumPriceBiddingConditions;
 	}
 
-	public void setMaximumPriceBiddingConditions(com.tools20022.repository.entity.BiddingConditions maximumPriceBiddingConditions) {
-		this.maximumPriceBiddingConditions = maximumPriceBiddingConditions;
+	public SecuritiesPricing setMaximumPriceBiddingConditions(com.tools20022.repository.entity.BiddingConditions maximumPriceBiddingConditions) {
+		this.maximumPriceBiddingConditions = Objects.requireNonNull(maximumPriceBiddingConditions);
+		return this;
 	}
 
 	public BiddingConditions getMinimumPriceBiddingConditions() {
 		return minimumPriceBiddingConditions;
 	}
 
-	public void setMinimumPriceBiddingConditions(com.tools20022.repository.entity.BiddingConditions minimumPriceBiddingConditions) {
-		this.minimumPriceBiddingConditions = minimumPriceBiddingConditions;
+	public SecuritiesPricing setMinimumPriceBiddingConditions(com.tools20022.repository.entity.BiddingConditions minimumPriceBiddingConditions) {
+		this.minimumPriceBiddingConditions = Objects.requireNonNull(minimumPriceBiddingConditions);
+		return this;
 	}
 
 	public ISODateTime getQuotationDate() {
 		return quotationDate;
 	}
 
-	public void setQuotationDate(ISODateTime quotationDate) {
-		this.quotationDate = quotationDate;
+	public SecuritiesPricing setQuotationDate(ISODateTime quotationDate) {
+		this.quotationDate = Objects.requireNonNull(quotationDate);
+		return this;
 	}
 
 	public List<YieldCalculation> getYieldCalculation() {
-		return yieldCalculation;
+		return yieldCalculation == null ? yieldCalculation = new ArrayList<>() : yieldCalculation;
 	}
 
-	public void setYieldCalculation(List<com.tools20022.repository.entity.YieldCalculation> yieldCalculation) {
-		this.yieldCalculation = yieldCalculation;
+	public SecuritiesPricing setYieldCalculation(List<com.tools20022.repository.entity.YieldCalculation> yieldCalculation) {
+		this.yieldCalculation = Objects.requireNonNull(yieldCalculation);
+		return this;
 	}
 
 	public List<SecuritiesFinancing> getRelatedSecuritiesFinancing() {
-		return relatedSecuritiesFinancing;
+		return relatedSecuritiesFinancing == null ? relatedSecuritiesFinancing = new ArrayList<>() : relatedSecuritiesFinancing;
 	}
 
-	public void setRelatedSecuritiesFinancing(List<com.tools20022.repository.entity.SecuritiesFinancing> relatedSecuritiesFinancing) {
-		this.relatedSecuritiesFinancing = relatedSecuritiesFinancing;
+	public SecuritiesPricing setRelatedSecuritiesFinancing(List<com.tools20022.repository.entity.SecuritiesFinancing> relatedSecuritiesFinancing) {
+		this.relatedSecuritiesFinancing = Objects.requireNonNull(relatedSecuritiesFinancing);
+		return this;
 	}
 
-	public InvestmentFundOrderExecution getFundOrderRelatedToExecutedPrice() {
-		return fundOrderRelatedToExecutedPrice;
+	public Optional<InvestmentFundOrderExecution> getFundOrderRelatedToExecutedPrice() {
+		return fundOrderRelatedToExecutedPrice == null ? Optional.empty() : Optional.of(fundOrderRelatedToExecutedPrice);
 	}
 
-	public void setFundOrderRelatedToExecutedPrice(com.tools20022.repository.entity.InvestmentFundOrderExecution fundOrderRelatedToExecutedPrice) {
+	public SecuritiesPricing setFundOrderRelatedToExecutedPrice(com.tools20022.repository.entity.InvestmentFundOrderExecution fundOrderRelatedToExecutedPrice) {
 		this.fundOrderRelatedToExecutedPrice = fundOrderRelatedToExecutedPrice;
+		return this;
 	}
 
-	public InvestmentFundOrderExecution getFundOrderRelatedToInformativePrice() {
-		return fundOrderRelatedToInformativePrice;
+	public Optional<InvestmentFundOrderExecution> getFundOrderRelatedToInformativePrice() {
+		return fundOrderRelatedToInformativePrice == null ? Optional.empty() : Optional.of(fundOrderRelatedToInformativePrice);
 	}
 
-	public void setFundOrderRelatedToInformativePrice(com.tools20022.repository.entity.InvestmentFundOrderExecution fundOrderRelatedToInformativePrice) {
+	public SecuritiesPricing setFundOrderRelatedToInformativePrice(com.tools20022.repository.entity.InvestmentFundOrderExecution fundOrderRelatedToInformativePrice) {
 		this.fundOrderRelatedToInformativePrice = fundOrderRelatedToInformativePrice;
+		return this;
 	}
 
 	public TaxVoucher getTaxVoucher() {
 		return taxVoucher;
 	}
 
-	public void setTaxVoucher(com.tools20022.repository.entity.TaxVoucher taxVoucher) {
-		this.taxVoucher = taxVoucher;
+	public SecuritiesPricing setTaxVoucher(com.tools20022.repository.entity.TaxVoucher taxVoucher) {
+		this.taxVoucher = Objects.requireNonNull(taxVoucher);
+		return this;
 	}
 
-	public SecuritiesTrade getSecuritiesTrade() {
-		return securitiesTrade;
+	public Optional<SecuritiesTrade> getSecuritiesTrade() {
+		return securitiesTrade == null ? Optional.empty() : Optional.of(securitiesTrade);
 	}
 
-	public void setSecuritiesTrade(com.tools20022.repository.entity.SecuritiesTrade securitiesTrade) {
+	public SecuritiesPricing setSecuritiesTrade(com.tools20022.repository.entity.SecuritiesTrade securitiesTrade) {
 		this.securitiesTrade = securitiesTrade;
+		return this;
 	}
 
 	public List<NetAssetValueCalculation> getNetAssetValueCalculation() {
-		return netAssetValueCalculation;
+		return netAssetValueCalculation == null ? netAssetValueCalculation = new ArrayList<>() : netAssetValueCalculation;
 	}
 
-	public void setNetAssetValueCalculation(List<com.tools20022.repository.entity.NetAssetValueCalculation> netAssetValueCalculation) {
-		this.netAssetValueCalculation = netAssetValueCalculation;
+	public SecuritiesPricing setNetAssetValueCalculation(List<com.tools20022.repository.entity.NetAssetValueCalculation> netAssetValueCalculation) {
+		this.netAssetValueCalculation = Objects.requireNonNull(netAssetValueCalculation);
+		return this;
 	}
 
 	public BuyIn getRelatedBuyIn() {
 		return relatedBuyIn;
 	}
 
-	public void setRelatedBuyIn(com.tools20022.repository.entity.BuyIn relatedBuyIn) {
-		this.relatedBuyIn = relatedBuyIn;
+	public SecuritiesPricing setRelatedBuyIn(com.tools20022.repository.entity.BuyIn relatedBuyIn) {
+		this.relatedBuyIn = Objects.requireNonNull(relatedBuyIn);
+		return this;
 	}
 
 	public List<Index> getIndex() {
-		return index;
+		return index == null ? index = new ArrayList<>() : index;
 	}
 
-	public void setIndex(List<com.tools20022.repository.entity.Index> index) {
-		this.index = index;
+	public SecuritiesPricing setIndex(List<com.tools20022.repository.entity.Index> index) {
+		this.index = Objects.requireNonNull(index);
+		return this;
 	}
 
 	public InformationPartyRole getInformationPartyRole() {
 		return informationPartyRole;
 	}
 
-	public void setInformationPartyRole(com.tools20022.repository.entity.InformationPartyRole informationPartyRole) {
-		this.informationPartyRole = informationPartyRole;
+	public SecuritiesPricing setInformationPartyRole(com.tools20022.repository.entity.InformationPartyRole informationPartyRole) {
+		this.informationPartyRole = Objects.requireNonNull(informationPartyRole);
+		return this;
 	}
 
 	public DateTimePeriod getPriceFactPeriod() {
 		return priceFactPeriod;
 	}
 
-	public void setPriceFactPeriod(com.tools20022.repository.entity.DateTimePeriod priceFactPeriod) {
-		this.priceFactPeriod = priceFactPeriod;
+	public SecuritiesPricing setPriceFactPeriod(com.tools20022.repository.entity.DateTimePeriod priceFactPeriod) {
+		this.priceFactPeriod = Objects.requireNonNull(priceFactPeriod);
+		return this;
 	}
 
 	public List<AnalyticsCalculation> getAnalyticsCalculation() {
-		return analyticsCalculation;
+		return analyticsCalculation == null ? analyticsCalculation = new ArrayList<>() : analyticsCalculation;
 	}
 
-	public void setAnalyticsCalculation(List<com.tools20022.repository.entity.AnalyticsCalculation> analyticsCalculation) {
-		this.analyticsCalculation = analyticsCalculation;
+	public SecuritiesPricing setAnalyticsCalculation(List<com.tools20022.repository.entity.AnalyticsCalculation> analyticsCalculation) {
+		this.analyticsCalculation = Objects.requireNonNull(analyticsCalculation);
+		return this;
 	}
 
 	public List<DurationCalculation> getDurationCalculation() {
-		return durationCalculation;
+		return durationCalculation == null ? durationCalculation = new ArrayList<>() : durationCalculation;
 	}
 
-	public void setDurationCalculation(List<com.tools20022.repository.entity.DurationCalculation> durationCalculation) {
-		this.durationCalculation = durationCalculation;
+	public SecuritiesPricing setDurationCalculation(List<com.tools20022.repository.entity.DurationCalculation> durationCalculation) {
+		this.durationCalculation = Objects.requireNonNull(durationCalculation);
+		return this;
 	}
 
 	public List<LifeCalculation> getLifeCalculation() {
-		return lifeCalculation;
+		return lifeCalculation == null ? lifeCalculation = new ArrayList<>() : lifeCalculation;
 	}
 
-	public void setLifeCalculation(List<com.tools20022.repository.entity.LifeCalculation> lifeCalculation) {
-		this.lifeCalculation = lifeCalculation;
+	public SecuritiesPricing setLifeCalculation(List<com.tools20022.repository.entity.LifeCalculation> lifeCalculation) {
+		this.lifeCalculation = Objects.requireNonNull(lifeCalculation);
+		return this;
 	}
 
 	public ISODateTime getDate() {
 		return date;
 	}
 
-	public void setDate(ISODateTime date) {
-		this.date = date;
+	public SecuritiesPricing setDate(ISODateTime date) {
+		this.date = Objects.requireNonNull(date);
+		return this;
 	}
 
-	public Spread getSpread() {
-		return spread;
+	public Optional<Spread> getSpread() {
+		return spread == null ? Optional.empty() : Optional.of(spread);
 	}
 
-	public void setSpread(com.tools20022.repository.entity.Spread spread) {
+	public SecuritiesPricing setSpread(com.tools20022.repository.entity.Spread spread) {
 		this.spread = spread;
+		return this;
 	}
 
-	public SecuritiesOrder getOrder() {
-		return order;
+	public Optional<SecuritiesOrder> getOrder() {
+		return order == null ? Optional.empty() : Optional.of(order);
 	}
 
-	public void setOrder(com.tools20022.repository.entity.SecuritiesOrder order) {
+	public SecuritiesPricing setOrder(com.tools20022.repository.entity.SecuritiesOrder order) {
 		this.order = order;
+		return this;
 	}
 
-	public SecuritiesOrder getStopPriceOrder() {
-		return stopPriceOrder;
+	public Optional<SecuritiesOrder> getStopPriceOrder() {
+		return stopPriceOrder == null ? Optional.empty() : Optional.of(stopPriceOrder);
 	}
 
-	public void setStopPriceOrder(com.tools20022.repository.entity.SecuritiesOrder stopPriceOrder) {
+	public SecuritiesPricing setStopPriceOrder(com.tools20022.repository.entity.SecuritiesOrder stopPriceOrder) {
 		this.stopPriceOrder = stopPriceOrder;
+		return this;
 	}
 
-	public Allocation getAllocation() {
-		return allocation;
+	public Optional<Allocation> getAllocation() {
+		return allocation == null ? Optional.empty() : Optional.of(allocation);
 	}
 
-	public void setAllocation(com.tools20022.repository.entity.Allocation allocation) {
+	public SecuritiesPricing setAllocation(com.tools20022.repository.entity.Allocation allocation) {
 		this.allocation = allocation;
+		return this;
 	}
 
-	public SecuritiesOrderParameters getRelatedOrder() {
-		return relatedOrder;
+	public Optional<SecuritiesOrderParameters> getRelatedOrder() {
+		return relatedOrder == null ? Optional.empty() : Optional.of(relatedOrder);
 	}
 
-	public void setRelatedOrder(com.tools20022.repository.entity.SecuritiesOrderParameters relatedOrder) {
+	public SecuritiesPricing setRelatedOrder(com.tools20022.repository.entity.SecuritiesOrderParameters relatedOrder) {
 		this.relatedOrder = relatedOrder;
+		return this;
 	}
 
 	public Issuance getIssuance() {
 		return issuance;
 	}
 
-	public void setIssuance(com.tools20022.repository.entity.Issuance issuance) {
-		this.issuance = issuance;
+	public SecuritiesPricing setIssuance(com.tools20022.repository.entity.Issuance issuance) {
+		this.issuance = Objects.requireNonNull(issuance);
+		return this;
 	}
 
 	public Entitlement getEntitlement() {
 		return entitlement;
 	}
 
-	public void setEntitlement(com.tools20022.repository.entity.Entitlement entitlement) {
-		this.entitlement = entitlement;
+	public SecuritiesPricing setEntitlement(com.tools20022.repository.entity.Entitlement entitlement) {
+		this.entitlement = Objects.requireNonNull(entitlement);
+		return this;
 	}
 
 	public SecuritiesDistribution getCashFractionsPriceRelatedSecuritiesDistribution() {
 		return cashFractionsPriceRelatedSecuritiesDistribution;
 	}
 
-	public void setCashFractionsPriceRelatedSecuritiesDistribution(com.tools20022.repository.entity.SecuritiesDistribution cashFractionsPriceRelatedSecuritiesDistribution) {
-		this.cashFractionsPriceRelatedSecuritiesDistribution = cashFractionsPriceRelatedSecuritiesDistribution;
+	public SecuritiesPricing setCashFractionsPriceRelatedSecuritiesDistribution(com.tools20022.repository.entity.SecuritiesDistribution cashFractionsPriceRelatedSecuritiesDistribution) {
+		this.cashFractionsPriceRelatedSecuritiesDistribution = Objects.requireNonNull(cashFractionsPriceRelatedSecuritiesDistribution);
+		return this;
 	}
 
 	public SecuritiesDistribution getSuscriptionPriceRelatedSecuritiesDistribution() {
 		return suscriptionPriceRelatedSecuritiesDistribution;
 	}
 
-	public void setSuscriptionPriceRelatedSecuritiesDistribution(com.tools20022.repository.entity.SecuritiesDistribution suscriptionPriceRelatedSecuritiesDistribution) {
-		this.suscriptionPriceRelatedSecuritiesDistribution = suscriptionPriceRelatedSecuritiesDistribution;
+	public SecuritiesPricing setSuscriptionPriceRelatedSecuritiesDistribution(com.tools20022.repository.entity.SecuritiesDistribution suscriptionPriceRelatedSecuritiesDistribution) {
+		this.suscriptionPriceRelatedSecuritiesDistribution = Objects.requireNonNull(suscriptionPriceRelatedSecuritiesDistribution);
+		return this;
 	}
 
 	public SecuritiesDistribution getReinvestmentPriceRelatedSecuritiesDistribution() {
 		return reinvestmentPriceRelatedSecuritiesDistribution;
 	}
 
-	public void setReinvestmentPriceRelatedSecuritiesDistribution(com.tools20022.repository.entity.SecuritiesDistribution reinvestmentPriceRelatedSecuritiesDistribution) {
-		this.reinvestmentPriceRelatedSecuritiesDistribution = reinvestmentPriceRelatedSecuritiesDistribution;
+	public SecuritiesPricing setReinvestmentPriceRelatedSecuritiesDistribution(com.tools20022.repository.entity.SecuritiesDistribution reinvestmentPriceRelatedSecuritiesDistribution) {
+		this.reinvestmentPriceRelatedSecuritiesDistribution = Objects.requireNonNull(reinvestmentPriceRelatedSecuritiesDistribution);
+		return this;
 	}
 
 	public Derivative getRelatedFuture() {
 		return relatedFuture;
 	}
 
-	public void setRelatedFuture(com.tools20022.repository.entity.Derivative relatedFuture) {
-		this.relatedFuture = relatedFuture;
+	public SecuritiesPricing setRelatedFuture(com.tools20022.repository.entity.Derivative relatedFuture) {
+		this.relatedFuture = Objects.requireNonNull(relatedFuture);
+		return this;
 	}
 
 	public Distribution getDistribution() {
 		return distribution;
 	}
 
-	public void setDistribution(com.tools20022.repository.entity.Distribution distribution) {
-		this.distribution = distribution;
+	public SecuritiesPricing setDistribution(com.tools20022.repository.entity.Distribution distribution) {
+		this.distribution = Objects.requireNonNull(distribution);
+		return this;
 	}
 
 	public RedemptionSchedule getPriceChangeRedemptionSchedule() {
 		return priceChangeRedemptionSchedule;
 	}
 
-	public void setPriceChangeRedemptionSchedule(com.tools20022.repository.entity.RedemptionSchedule priceChangeRedemptionSchedule) {
-		this.priceChangeRedemptionSchedule = priceChangeRedemptionSchedule;
+	public SecuritiesPricing setPriceChangeRedemptionSchedule(com.tools20022.repository.entity.RedemptionSchedule priceChangeRedemptionSchedule) {
+		this.priceChangeRedemptionSchedule = Objects.requireNonNull(priceChangeRedemptionSchedule);
+		return this;
 	}
 
 	public RedemptionSchedule getRelatedRedemptionSchedule() {
 		return relatedRedemptionSchedule;
 	}
 
-	public void setRelatedRedemptionSchedule(com.tools20022.repository.entity.RedemptionSchedule relatedRedemptionSchedule) {
-		this.relatedRedemptionSchedule = relatedRedemptionSchedule;
+	public SecuritiesPricing setRelatedRedemptionSchedule(com.tools20022.repository.entity.RedemptionSchedule relatedRedemptionSchedule) {
+		this.relatedRedemptionSchedule = Objects.requireNonNull(relatedRedemptionSchedule);
+		return this;
 	}
 
-	public Quote getPreviousClosingPriceRelatedQuote() {
-		return previousClosingPriceRelatedQuote;
+	public Optional<Quote> getPreviousClosingPriceRelatedQuote() {
+		return previousClosingPriceRelatedQuote == null ? Optional.empty() : Optional.of(previousClosingPriceRelatedQuote);
 	}
 
-	public void setPreviousClosingPriceRelatedQuote(com.tools20022.repository.entity.Quote previousClosingPriceRelatedQuote) {
+	public SecuritiesPricing setPreviousClosingPriceRelatedQuote(com.tools20022.repository.entity.Quote previousClosingPriceRelatedQuote) {
 		this.previousClosingPriceRelatedQuote = previousClosingPriceRelatedQuote;
+		return this;
 	}
 
-	public Quote getRequestedPriceRelatedQuote() {
-		return requestedPriceRelatedQuote;
+	public Optional<Quote> getRequestedPriceRelatedQuote() {
+		return requestedPriceRelatedQuote == null ? Optional.empty() : Optional.of(requestedPriceRelatedQuote);
 	}
 
-	public void setRequestedPriceRelatedQuote(com.tools20022.repository.entity.Quote requestedPriceRelatedQuote) {
+	public SecuritiesPricing setRequestedPriceRelatedQuote(com.tools20022.repository.entity.Quote requestedPriceRelatedQuote) {
 		this.requestedPriceRelatedQuote = requestedPriceRelatedQuote;
+		return this;
 	}
 
-	public Quote getPriceRelatedQuote() {
-		return priceRelatedQuote;
+	public Optional<Quote> getPriceRelatedQuote() {
+		return priceRelatedQuote == null ? Optional.empty() : Optional.of(priceRelatedQuote);
 	}
 
-	public void setPriceRelatedQuote(com.tools20022.repository.entity.Quote priceRelatedQuote) {
+	public SecuritiesPricing setPriceRelatedQuote(com.tools20022.repository.entity.Quote priceRelatedQuote) {
 		this.priceRelatedQuote = priceRelatedQuote;
+		return this;
 	}
 
-	public Quote getMarketPriceRelatedQuote() {
-		return marketPriceRelatedQuote;
+	public Optional<Quote> getMarketPriceRelatedQuote() {
+		return marketPriceRelatedQuote == null ? Optional.empty() : Optional.of(marketPriceRelatedQuote);
 	}
 
-	public void setMarketPriceRelatedQuote(com.tools20022.repository.entity.Quote marketPriceRelatedQuote) {
+	public SecuritiesPricing setMarketPriceRelatedQuote(com.tools20022.repository.entity.Quote marketPriceRelatedQuote) {
 		this.marketPriceRelatedQuote = marketPriceRelatedQuote;
+		return this;
 	}
 
 	public Price getPrice() {
 		return price;
 	}
 
-	public void setPrice(com.tools20022.repository.entity.Price price) {
-		this.price = price;
+	public SecuritiesPricing setPrice(com.tools20022.repository.entity.Price price) {
+		this.price = Objects.requireNonNull(price);
+		return this;
 	}
 
 	public CorporateActionPrice getRelatedCorporateActionPrice() {
 		return relatedCorporateActionPrice;
 	}
 
-	public void setRelatedCorporateActionPrice(com.tools20022.repository.entity.CorporateActionPrice relatedCorporateActionPrice) {
-		this.relatedCorporateActionPrice = relatedCorporateActionPrice;
+	public SecuritiesPricing setRelatedCorporateActionPrice(com.tools20022.repository.entity.CorporateActionPrice relatedCorporateActionPrice) {
+		this.relatedCorporateActionPrice = Objects.requireNonNull(relatedCorporateActionPrice);
+		return this;
 	}
 
 	public Position getRelatedPosition() {
 		return relatedPosition;
 	}
 
-	public void setRelatedPosition(com.tools20022.repository.entity.Position relatedPosition) {
-		this.relatedPosition = relatedPosition;
+	public SecuritiesPricing setRelatedPosition(com.tools20022.repository.entity.Position relatedPosition) {
+		this.relatedPosition = Objects.requireNonNull(relatedPosition);
+		return this;
 	}
 }

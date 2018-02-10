@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.IssuerRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,16 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Transparency calculation specific details on a bond derivative."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BondDerivative2", propOrder = {"issuer", "maturityDate", "issuanceDate"})
 public class BondDerivative2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Issr", required = true)
 	protected LEIIdentifier issuer;
 	/**
-	 * Legal Entity Identifer (LEI) code of the issuer of the direct or ultimate
-	 * underlying bond.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +114,7 @@ public class BondDerivative2 {
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> IssuerRole.mmObject();
-			componentContext_lazy = () -> BondDerivative2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BondDerivative2.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,11 +125,11 @@ public class BondDerivative2 {
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "MtrtyDt")
 	protected ISODate maturityDate;
 	/**
-	 * Date of maturity of the underlying bond. This field applies to debt
-	 * instruments with defined maturity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +164,7 @@ public class BondDerivative2 {
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
-			componentContext_lazy = () -> BondDerivative2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BondDerivative2.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +175,11 @@ public class BondDerivative2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "IssncDt")
 	protected ISODate issuanceDate;
 	/**
-	 * Populated with the issuance date of the underlying bond.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,7 +206,7 @@ public class BondDerivative2 {
 	 */
 	public static final MMMessageAttribute mmIssuanceDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BondDerivative2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BondDerivative2.mmObject();
 			isDerived = false;
 			xmlTag = "IssncDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,9 +221,9 @@ public class BondDerivative2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BondDerivative2.mmIssuer, BondDerivative2.mmMaturityDate, BondDerivative2.mmIssuanceDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BondDerivative2.mmIssuer, com.tools20022.repository.msg.BondDerivative2.mmMaturityDate, com.tools20022.repository.msg.BondDerivative2.mmIssuanceDate);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BondDerivative2";
 				definition = "Transparency calculation specific details on a bond derivative.";
@@ -229,30 +232,30 @@ public class BondDerivative2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Issr", required = true)
 	public LEIIdentifier getIssuer() {
 		return issuer;
 	}
 
-	public void setIssuer(LEIIdentifier issuer) {
-		this.issuer = issuer;
+	public BondDerivative2 setIssuer(LEIIdentifier issuer) {
+		this.issuer = Objects.requireNonNull(issuer);
+		return this;
 	}
 
-	@XmlElement(name = "MtrtyDt")
-	public ISODate getMaturityDate() {
-		return maturityDate;
+	public Optional<ISODate> getMaturityDate() {
+		return maturityDate == null ? Optional.empty() : Optional.of(maturityDate);
 	}
 
-	public void setMaturityDate(ISODate maturityDate) {
+	public BondDerivative2 setMaturityDate(ISODate maturityDate) {
 		this.maturityDate = maturityDate;
+		return this;
 	}
 
-	@XmlElement(name = "IssncDt")
-	public ISODate getIssuanceDate() {
-		return issuanceDate;
+	public Optional<ISODate> getIssuanceDate() {
+		return issuanceDate == null ? Optional.empty() : Optional.of(issuanceDate);
 	}
 
-	public void setIssuanceDate(ISODate issuanceDate) {
+	public BondDerivative2 setIssuanceDate(ISODate issuanceDate) {
 		this.issuanceDate = issuanceDate;
+		return this;
 	}
 }

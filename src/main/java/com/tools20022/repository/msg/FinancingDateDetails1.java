@@ -24,9 +24,8 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.BookEntry;
 import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancingDateDetails1", propOrder = {"bookDate", "creditDate", "debitDate"})
 public class FinancingDateDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BookDt")
 	protected List<ISODate> bookDate;
 	/**
-	 * Date on which the financing transaction has been booked in an account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +114,7 @@ public class FinancingDateDetails1 {
 	public static final MMMessageAttribute mmBookDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
-			componentContext_lazy = () -> FinancingDateDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingDateDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "BookDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +124,11 @@ public class FinancingDateDetails1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDt", required = true)
 	protected ISODate creditDate;
 	/**
-	 * Date on which a financed amount has been credited.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +161,7 @@ public class FinancingDateDetails1 {
 	public static final MMMessageAttribute mmCreditDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
-			componentContext_lazy = () -> FinancingDateDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingDateDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +172,11 @@ public class FinancingDateDetails1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DbtDt")
 	protected ISODate debitDate;
 	/**
-	 * Date on which a financed amount has been debited.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -207,7 +209,7 @@ public class FinancingDateDetails1 {
 	public static final MMMessageAttribute mmDebitDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
-			componentContext_lazy = () -> FinancingDateDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingDateDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "DbtDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,9 +224,10 @@ public class FinancingDateDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancingDateDetails1.mmBookDate, FinancingDateDetails1.mmCreditDate, FinancingDateDetails1.mmDebitDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingDateDetails1.mmBookDate, com.tools20022.repository.msg.FinancingDateDetails1.mmCreditDate,
+						com.tools20022.repository.msg.FinancingDateDetails1.mmDebitDate);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancingDateDetails1";
 				definition = "Includes a set of dates (e.g. credit date) related to settlement of the financing amount.";
@@ -233,30 +236,30 @@ public class FinancingDateDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BookDt")
 	public List<ISODate> getBookDate() {
-		return bookDate;
+		return bookDate == null ? bookDate = new ArrayList<>() : bookDate;
 	}
 
-	public void setBookDate(List<ISODate> bookDate) {
-		this.bookDate = bookDate;
+	public FinancingDateDetails1 setBookDate(List<ISODate> bookDate) {
+		this.bookDate = Objects.requireNonNull(bookDate);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDt", required = true)
 	public ISODate getCreditDate() {
 		return creditDate;
 	}
 
-	public void setCreditDate(ISODate creditDate) {
-		this.creditDate = creditDate;
+	public FinancingDateDetails1 setCreditDate(ISODate creditDate) {
+		this.creditDate = Objects.requireNonNull(creditDate);
+		return this;
 	}
 
-	@XmlElement(name = "DbtDt")
-	public ISODate getDebitDate() {
-		return debitDate;
+	public Optional<ISODate> getDebitDate() {
+		return debitDate == null ? Optional.empty() : Optional.of(debitDate);
 	}
 
-	public void setDebitDate(ISODate debitDate) {
+	public FinancingDateDetails1 setDebitDate(ISODate debitDate) {
 		this.debitDate = debitDate;
+		return this;
 	}
 }

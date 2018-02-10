@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.AdditionalStatus1;
 import com.tools20022.repository.msg.InstructionProcessingStatus3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * InstructionStatus4Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InstructionStatus6Choice", propOrder = {"processingStatus", "rejectionStatus"})
 public class InstructionStatus6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrcgSts", required = true)
 	protected InstructionProcessingStatus3 processingStatus;
 	/**
-	 * Status advising on the processing of the instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -118,7 +120,7 @@ public class InstructionStatus6Choice {
 	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
-			componentContext_lazy = () -> InstructionStatus6Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionStatus6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +133,11 @@ public class InstructionStatus6Choice {
 			type_lazy = () -> InstructionProcessingStatus3.mmObject();
 		}
 	};
+	@XmlElement(name = "RjctnSts", required = true)
 	protected AdditionalStatus1 rejectionStatus;
 	/**
-	 * Status advising on the rejection of the instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -171,7 +174,7 @@ public class InstructionStatus6Choice {
 	public static final MMMessageAssociationEnd mmRejectionStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatusReason.mmInstructionRejectionReason;
-			componentContext_lazy = () -> InstructionStatus6Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionStatus6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RjctnSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,9 +191,9 @@ public class InstructionStatus6Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InstructionStatus6Choice.mmProcessingStatus, InstructionStatus6Choice.mmRejectionStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstructionStatus6Choice.mmProcessingStatus, com.tools20022.repository.choice.InstructionStatus6Choice.mmRejectionStatus);
 				trace_lazy = () -> MeetingStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionStatus6Choice";
 				definition = "Status applying globally to the instruction received.";
@@ -200,21 +203,21 @@ public class InstructionStatus6Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrcgSts", required = true)
 	public InstructionProcessingStatus3 getProcessingStatus() {
 		return processingStatus;
 	}
 
-	public void setProcessingStatus(InstructionProcessingStatus3 processingStatus) {
-		this.processingStatus = processingStatus;
+	public InstructionStatus6Choice setProcessingStatus(InstructionProcessingStatus3 processingStatus) {
+		this.processingStatus = Objects.requireNonNull(processingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "RjctnSts", required = true)
 	public AdditionalStatus1 getRejectionStatus() {
 		return rejectionStatus;
 	}
 
-	public void setRejectionStatus(AdditionalStatus1 rejectionStatus) {
-		this.rejectionStatus = rejectionStatus;
+	public InstructionStatus6Choice setRejectionStatus(AdditionalStatus1 rejectionStatus) {
+		this.rejectionStatus = Objects.requireNonNull(rejectionStatus);
+		return this;
 	}
 }

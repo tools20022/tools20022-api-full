@@ -24,6 +24,7 @@ import com.tools20022.repository.area.catp.ATMDepositRequestV01;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Information related to the request of a deposit transaction from an ATM."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMDepositRequest1", propOrder = {"environment", "context", "transaction"})
 public class ATMDepositRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Envt", required = true)
 	protected ATMEnvironment11 environment;
 	/**
-	 * Environment in which the transaction is performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -107,7 +109,7 @@ public class ATMDepositRequest1 {
 	 */
 	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMDepositRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +121,11 @@ public class ATMDepositRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment11.mmObject();
 		}
 	};
+	@XmlElement(name = "Cntxt", required = true)
 	protected ATMContext10 context;
 	/**
-	 * Context in which the deposit transaction is performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -148,7 +151,7 @@ public class ATMDepositRequest1 {
 	 */
 	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMDepositRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "Cntxt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,10 +163,11 @@ public class ATMDepositRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMContext10.mmObject();
 		}
 	};
+	@XmlElement(name = "Tx", required = true)
 	protected ATMTransaction15 transaction;
 	/**
-	 * Deposit transaction for which the service is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -189,7 +193,7 @@ public class ATMDepositRequest1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMDepositRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,9 +209,10 @@ public class ATMDepositRequest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMDepositRequest1.mmEnvironment, ATMDepositRequest1.mmContext, ATMDepositRequest1.mmTransaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDepositRequest1.mmEnvironment, com.tools20022.repository.msg.ATMDepositRequest1.mmContext,
+						com.tools20022.repository.msg.ATMDepositRequest1.mmTransaction);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ATMDepositRequestV01.mmATMDepositRequest);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMDepositRequest1";
 				definition = "Information related to the request of a deposit transaction from an ATM.";
@@ -216,30 +221,30 @@ public class ATMDepositRequest1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Envt", required = true)
 	public ATMEnvironment11 getEnvironment() {
 		return environment;
 	}
 
-	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment11 environment) {
-		this.environment = environment;
+	public ATMDepositRequest1 setEnvironment(com.tools20022.repository.msg.ATMEnvironment11 environment) {
+		this.environment = Objects.requireNonNull(environment);
+		return this;
 	}
 
-	@XmlElement(name = "Cntxt", required = true)
 	public ATMContext10 getContext() {
 		return context;
 	}
 
-	public void setContext(com.tools20022.repository.msg.ATMContext10 context) {
-		this.context = context;
+	public ATMDepositRequest1 setContext(com.tools20022.repository.msg.ATMContext10 context) {
+		this.context = Objects.requireNonNull(context);
+		return this;
 	}
 
-	@XmlElement(name = "Tx", required = true)
 	public ATMTransaction15 getTransaction() {
 		return transaction;
 	}
 
-	public void setTransaction(com.tools20022.repository.msg.ATMTransaction15 transaction) {
-		this.transaction = transaction;
+	public ATMDepositRequest1 setTransaction(com.tools20022.repository.msg.ATMTransaction15 transaction) {
+		this.transaction = Objects.requireNonNull(transaction);
+		return this;
 	}
 }

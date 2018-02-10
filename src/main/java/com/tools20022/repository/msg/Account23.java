@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * Account21}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Account23", propOrder = {"accountIdentification", "relatedAccountDetails"})
 public class Account23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId", required = true)
 	protected Max35Text accountIdentification;
 	/**
-	 * Identification of the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +114,7 @@ public class Account23 {
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> Account23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Account23.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,11 +125,11 @@ public class Account23 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdAcctDtls")
 	protected GenericIdentification1 relatedAccountDetails;
 	/**
-	 * Information about the account to which the existing account is to be
-	 * linked.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -158,7 +161,7 @@ public class Account23 {
 	public static final MMMessageAssociationEnd mmRelatedAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Account.mmObject();
-			componentContext_lazy = () -> Account23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Account23.mmObject();
 			isDerived = false;
 			xmlTag = "RltdAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,9 +177,9 @@ public class Account23 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Account23.mmAccountIdentification, Account23.mmRelatedAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Account23.mmAccountIdentification, com.tools20022.repository.msg.Account23.mmRelatedAccountDetails);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Account23";
 				definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
@@ -186,21 +189,21 @@ public class Account23 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public Max35Text getAccountIdentification() {
 		return accountIdentification;
 	}
 
-	public void setAccountIdentification(Max35Text accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public Account23 setAccountIdentification(Max35Text accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RltdAcctDtls")
-	public GenericIdentification1 getRelatedAccountDetails() {
-		return relatedAccountDetails;
+	public Optional<GenericIdentification1> getRelatedAccountDetails() {
+		return relatedAccountDetails == null ? Optional.empty() : Optional.of(relatedAccountDetails);
 	}
 
-	public void setRelatedAccountDetails(com.tools20022.repository.msg.GenericIdentification1 relatedAccountDetails) {
+	public Account23 setRelatedAccountDetails(com.tools20022.repository.msg.GenericIdentification1 relatedAccountDetails) {
 		this.relatedAccountDetails = relatedAccountDetails;
+		return this;
 	}
 }

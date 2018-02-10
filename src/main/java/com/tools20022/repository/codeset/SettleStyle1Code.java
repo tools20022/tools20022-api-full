@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SettleStyleCode;
+import com.tools20022.repository.codeset.SettleStyle1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies when the option contract settles.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SettleStyleCode
- * SettleStyleCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettleStyle1Code#mmSettleOnClose
- * SettleStyle1Code.mmSettleOnClose}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettleStyle1Code#SettleOnClose
+ * SettleStyle1Code.SettleOnClose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettleStyle1Code#mmSettleOnOpen
- * SettleStyle1Code.mmSettleOnOpen}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettleStyle1Code#SettleOnOpen
+ * SettleStyle1Code.SettleOnOpen}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SettleStyleCode
+ * SettleStyleCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies when the option contract settles."</li>
  * </ul>
  */
-public class SettleStyle1Code extends SettleStyleCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SettleStyle1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class SettleStyle1Code extends SettleStyleCode {
 	 * name} = "SettleOnClose"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettleOnClose = new MMCode() {
+	public static final SettleStyle1Code SettleOnClose = new SettleStyle1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettleOnClose";
-			owner_lazy = () -> SettleStyle1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettleStyle1Code.mmObject();
+			codeName = SettleStyleCode.SettleOnClose.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class SettleStyle1Code extends SettleStyleCode {
 	 * name} = "SettleOnOpen"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettleOnOpen = new MMCode() {
+	public static final SettleStyle1Code SettleOnOpen = new SettleStyle1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettleOnOpen";
-			owner_lazy = () -> SettleStyle1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettleStyle1Code.mmObject();
+			codeName = SettleStyleCode.SettleOnOpen.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SettleStyle1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SettleStyle1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SETC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettleStyle1Code";
 				definition = "Specifies when the option contract settles.";
-				code_lazy = () -> Arrays.asList(SettleStyle1Code.mmSettleOnClose, SettleStyle1Code.mmSettleOnOpen);
 				trace_lazy = () -> SettleStyleCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettleStyle1Code.SettleOnClose, com.tools20022.repository.codeset.SettleStyle1Code.SettleOnOpen);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SettleOnClose.getCodeName().get(), SettleOnClose);
+		codesByName.put(SettleOnOpen.getCodeName().get(), SettleOnOpen);
+	}
+
+	public static SettleStyle1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SettleStyle1Code[] values() {
+		SettleStyle1Code[] values = new SettleStyle1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SettleStyle1Code> {
+		@Override
+		public SettleStyle1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SettleStyle1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

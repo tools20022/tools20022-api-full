@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ReinvestmentPlanCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the specific reinvestment plan type.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentPlanCode#mmForRetailInvestorsOnly
- * ReinvestmentPlanCode.mmForRetailInvestorsOnly}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentPlanCode#ForRetailInvestorsOnly
+ * ReinvestmentPlanCode.ForRetailInvestorsOnly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentPlanCode#mmFullReinvestmentPlanOffered
- * ReinvestmentPlanCode.mmFullReinvestmentPlanOffered}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentPlanCode#FullReinvestmentPlanOffered
+ * ReinvestmentPlanCode.FullReinvestmentPlanOffered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReinvestmentPlanCode#mmSubjectToShareholderApproval
- * ReinvestmentPlanCode.mmSubjectToShareholderApproval}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReinvestmentPlanCode#SubjectToShareholderApproval
+ * ReinvestmentPlanCode.SubjectToShareholderApproval}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates the specific reinvestment plan type."</li>
  * </ul>
  */
-public class ReinvestmentPlanCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ReinvestmentPlanCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,12 +94,12 @@ public class ReinvestmentPlanCode {
 	 * definition} = "Reinvestment plan is for retail investors only."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForRetailInvestorsOnly = new MMCode() {
+	public static final ReinvestmentPlanCode ForRetailInvestorsOnly = new ReinvestmentPlanCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForRetailInvestorsOnly";
 			definition = "Reinvestment plan is for retail investors only.";
-			owner_lazy = () -> ReinvestmentPlanCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReinvestmentPlanCode.mmObject();
 			codeName = "RETA";
 		}
 	};
@@ -118,12 +124,12 @@ public class ReinvestmentPlanCode {
 	 * definition} = "Full reinvestment plan offered."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullReinvestmentPlanOffered = new MMCode() {
+	public static final ReinvestmentPlanCode FullReinvestmentPlanOffered = new ReinvestmentPlanCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullReinvestmentPlanOffered";
 			definition = "Full reinvestment plan offered.";
-			owner_lazy = () -> ReinvestmentPlanCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReinvestmentPlanCode.mmObject();
 			codeName = "FULL";
 		}
 	};
@@ -148,27 +154,59 @@ public class ReinvestmentPlanCode {
 	 * definition} = "Reinvestment plan is subject to shareholder approval."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubjectToShareholderApproval = new MMCode() {
+	public static final ReinvestmentPlanCode SubjectToShareholderApproval = new ReinvestmentPlanCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectToShareholderApproval";
 			definition = "Reinvestment plan is subject to shareholder approval.";
-			owner_lazy = () -> ReinvestmentPlanCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReinvestmentPlanCode.mmObject();
 			codeName = "SUAP";
 		}
 	};
+	final static private LinkedHashMap<String, ReinvestmentPlanCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ReinvestmentPlanCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReinvestmentPlanCode";
 				definition = "Indicates the specific reinvestment plan type.";
-				code_lazy = () -> Arrays.asList(ReinvestmentPlanCode.mmForRetailInvestorsOnly, ReinvestmentPlanCode.mmFullReinvestmentPlanOffered, ReinvestmentPlanCode.mmSubjectToShareholderApproval);
 				derivation_lazy = () -> Arrays.asList(ReinvestmentPlan1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReinvestmentPlanCode.ForRetailInvestorsOnly, com.tools20022.repository.codeset.ReinvestmentPlanCode.FullReinvestmentPlanOffered,
+						com.tools20022.repository.codeset.ReinvestmentPlanCode.SubjectToShareholderApproval);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ForRetailInvestorsOnly.getCodeName().get(), ForRetailInvestorsOnly);
+		codesByName.put(FullReinvestmentPlanOffered.getCodeName().get(), FullReinvestmentPlanOffered);
+		codesByName.put(SubjectToShareholderApproval.getCodeName().get(), SubjectToShareholderApproval);
+	}
+
+	public static ReinvestmentPlanCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ReinvestmentPlanCode[] values() {
+		ReinvestmentPlanCode[] values = new ReinvestmentPlanCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ReinvestmentPlanCode> {
+		@Override
+		public ReinvestmentPlanCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ReinvestmentPlanCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

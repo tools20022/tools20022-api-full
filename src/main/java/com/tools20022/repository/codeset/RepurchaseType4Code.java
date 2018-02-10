@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RepurchaseTypeCode;
+import com.tools20022.repository.codeset.RepurchaseType4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of repurchase process.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RepurchaseTypeCode
- * RepurchaseTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType4Code#mmRepurchaseCall
- * RepurchaseType4Code.mmRepurchaseCall}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType4Code#RepurchaseCall
+ * RepurchaseType4Code.RepurchaseCall}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType4Code#mmRepoRate
- * RepurchaseType4Code.mmRepoRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType4Code#RepoRate
+ * RepurchaseType4Code.RepoRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType4Code#mmRollover
- * RepurchaseType4Code.mmRollover}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType4Code#Rollover
+ * RepurchaseType4Code.Rollover}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseTypeCode
+ * RepurchaseTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of repurchase process."</li>
  * </ul>
  */
-public class RepurchaseType4Code extends RepurchaseTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RepurchaseType4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class RepurchaseType4Code extends RepurchaseTypeCode {
 	 * name} = "RepurchaseCall"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRepurchaseCall = new MMCode() {
+	public static final RepurchaseType4Code RepurchaseCall = new RepurchaseType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseCall";
-			owner_lazy = () -> RepurchaseType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepurchaseType4Code.mmObject();
+			codeName = RepurchaseTypeCode.RepurchaseCall.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class RepurchaseType4Code extends RepurchaseTypeCode {
 	 * name} = "RepoRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRepoRate = new MMCode() {
+	public static final RepurchaseType4Code RepoRate = new RepurchaseType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepoRate";
-			owner_lazy = () -> RepurchaseType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepurchaseType4Code.mmObject();
+			codeName = RepurchaseTypeCode.RepoRate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class RepurchaseType4Code extends RepurchaseTypeCode {
 	 * name} = "Rollover"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRollover = new MMCode() {
+	public static final RepurchaseType4Code Rollover = new RepurchaseType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rollover";
-			owner_lazy = () -> RepurchaseType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepurchaseType4Code.mmObject();
+			codeName = RepurchaseTypeCode.Rollover.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RepurchaseType4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RepurchaseType4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CALL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RepurchaseType4Code";
 				definition = "Specifies the type of repurchase process.";
-				code_lazy = () -> Arrays.asList(RepurchaseType4Code.mmRepurchaseCall, RepurchaseType4Code.mmRepoRate, RepurchaseType4Code.mmRollover);
 				trace_lazy = () -> RepurchaseTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepurchaseType4Code.RepurchaseCall, com.tools20022.repository.codeset.RepurchaseType4Code.RepoRate,
+						com.tools20022.repository.codeset.RepurchaseType4Code.Rollover);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(RepurchaseCall.getCodeName().get(), RepurchaseCall);
+		codesByName.put(RepoRate.getCodeName().get(), RepoRate);
+		codesByName.put(Rollover.getCodeName().get(), Rollover);
+	}
+
+	public static RepurchaseType4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RepurchaseType4Code[] values() {
+		RepurchaseType4Code[] values = new RepurchaseType4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RepurchaseType4Code> {
+		@Override
+		public RepurchaseType4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RepurchaseType4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

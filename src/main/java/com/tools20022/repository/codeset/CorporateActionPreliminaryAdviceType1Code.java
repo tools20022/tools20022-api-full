@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceTypeCode;
+import com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of movement preliminary advice.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceTypeCode
- * CorporateActionPreliminaryAdviceTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code#mmNew
- * CorporateActionPreliminaryAdviceType1Code.mmNew}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code#New
+ * CorporateActionPreliminaryAdviceType1Code.New}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code#mmReplacement
- * CorporateActionPreliminaryAdviceType1Code.mmReplacement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code#Replacement
+ * CorporateActionPreliminaryAdviceType1Code.Replacement}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceTypeCode
+ * CorporateActionPreliminaryAdviceTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of movement preliminary advice."</li>
  * </ul>
  */
-public class CorporateActionPreliminaryAdviceType1Code extends CorporateActionPreliminaryAdviceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionPreliminaryAdviceType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class CorporateActionPreliminaryAdviceType1Code extends CorporateActionPr
 	 * name} = "New"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNew = new MMCode() {
+	public static final CorporateActionPreliminaryAdviceType1Code New = new CorporateActionPreliminaryAdviceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "New";
-			owner_lazy = () -> CorporateActionPreliminaryAdviceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code.mmObject();
+			codeName = CorporateActionPreliminaryAdviceTypeCode.New.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class CorporateActionPreliminaryAdviceType1Code extends CorporateActionPr
 	 * name} = "Replacement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReplacement = new MMCode() {
+	public static final CorporateActionPreliminaryAdviceType1Code Replacement = new CorporateActionPreliminaryAdviceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replacement";
-			owner_lazy = () -> CorporateActionPreliminaryAdviceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code.mmObject();
+			codeName = CorporateActionPreliminaryAdviceTypeCode.Replacement.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionPreliminaryAdviceType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionPreliminaryAdviceType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NEWM");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPreliminaryAdviceType1Code";
 				definition = "Type of movement preliminary advice.";
-				code_lazy = () -> Arrays.asList(CorporateActionPreliminaryAdviceType1Code.mmNew, CorporateActionPreliminaryAdviceType1Code.mmReplacement);
 				trace_lazy = () -> CorporateActionPreliminaryAdviceTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code.New, com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code.Replacement);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(New.getCodeName().get(), New);
+		codesByName.put(Replacement.getCodeName().get(), Replacement);
+	}
+
+	public static CorporateActionPreliminaryAdviceType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionPreliminaryAdviceType1Code[] values() {
+		CorporateActionPreliminaryAdviceType1Code[] values = new CorporateActionPreliminaryAdviceType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionPreliminaryAdviceType1Code> {
+		@Override
+		public CorporateActionPreliminaryAdviceType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionPreliminaryAdviceType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

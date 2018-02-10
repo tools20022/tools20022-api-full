@@ -20,29 +20,33 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DateTypeCode;
+import com.tools20022.repository.codeset.DateType7Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of date
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DateTypeCode DateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DateType7Code#mmOngoing
- * DateType7Code.mmOngoing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateType7Code#Ongoing
+ * DateType7Code.Ongoing}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DateTypeCode DateTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -59,7 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of date"</li>
  * </ul>
  */
-public class DateType7Code extends DateTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DateType7Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -78,26 +83,56 @@ public class DateType7Code extends DateTypeCode {
 	 * name} = "Ongoing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOngoing = new MMCode() {
+	public static final DateType7Code Ongoing = new DateType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ongoing";
-			owner_lazy = () -> DateType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DateType7Code.mmObject();
+			codeName = DateTypeCode.Ongoing.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DateType7Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DateType7Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ONGO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateType7Code";
 				definition = "Type of date";
-				code_lazy = () -> Arrays.asList(DateType7Code.mmOngoing);
 				trace_lazy = () -> DateTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DateType7Code.Ongoing);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Ongoing.getCodeName().get(), Ongoing);
+	}
+
+	public static DateType7Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DateType7Code[] values() {
+		DateType7Code[] values = new DateType7Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DateType7Code> {
+		@Override
+		public DateType7Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DateType7Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

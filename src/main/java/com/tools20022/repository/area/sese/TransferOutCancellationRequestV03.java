@@ -22,9 +22,8 @@ import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -47,27 +46,13 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
- * SecuritiesSettlementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "TrfOutCxlReq"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV03#mmOperation1
- * TransferOutCancellationRequestV03.mmOperation1}</li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV03#Operation1
+ * TransferOutCancellationRequestV03.Operation1}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -89,6 +74,20 @@ import javax.xml.bind.annotation.*;
  * TransferOutCancellationRequestV03.mmCopyDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "TrfOutCxlReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
+ * SecuritiesSettlementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.002.001.03}</li>
@@ -116,7 +115,7 @@ import javax.xml.bind.annotation.*;
  * TransferOutCancellationRequestV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransferOutCancellationRequestV03", propOrder = {"messageIdentification", "references", "cancellationByReference", "cancellationByTransferOutDetails", "copyDetails"})
 public class TransferOutCancellationRequestV03 {
 
@@ -150,7 +149,7 @@ public class TransferOutCancellationRequestV03 {
 	 * name} = "Operation1"</li>
 	 * </ul>
 	 */
-	public static final MMXor mmOperation1 = new MMXor() {
+	public static final MMXor Operation1 = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Operation1";
@@ -159,11 +158,11 @@ public class TransferOutCancellationRequestV03 {
 					com.tools20022.repository.area.sese.TransferOutCancellationRequestV03.mmCancellationByTransferOutDetails);
 		}
 	};
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Reference that uniquely identifies a message from a business application
-	 * standpoint.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -205,12 +204,11 @@ public class TransferOutCancellationRequestV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Refs", required = true)
 	protected List<References11> references;
 	/**
-	 * Reference to the transaction identifier issued by the counterparty.
-	 * Building block may also be used to reference a previous transaction, or
-	 * tie a set of messages together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -250,10 +248,11 @@ public class TransferOutCancellationRequestV03 {
 			}
 		}
 	};
+	@XmlElement(name = "CxlByRef")
 	protected TransferReference1 cancellationByReference;
 	/**
-	 * Reference of the transfer to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -293,10 +292,11 @@ public class TransferOutCancellationRequestV03 {
 			}
 		}
 	};
+	@XmlElement(name = "CxlByTrfOutDtls")
 	protected TransferOut7 cancellationByTransferOutDetails;
 	/**
-	 * The transfer out request message to cancel.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -335,10 +335,11 @@ public class TransferOutCancellationRequestV03 {
 			}
 		}
 	};
+	@XmlElement(name = "CpyDtls")
 	protected CopyInformation2 copyDetails;
 	/**
-	 * Information provided when the message is a copy of a previous message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -389,7 +390,7 @@ public class TransferOutCancellationRequestV03 {
 				nextVersions_lazy = () -> Arrays.asList(TransferOutCancellationRequestV04.mmObject());
 				previousVersion_lazy = () -> TransferOutCancellationRequestV02.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationRequestV03.mmOperation1);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutCancellationRequestV03.Operation1);
 				rootElement = "Document";
 				xmlTag = "TrfOutCxlReq";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
@@ -414,52 +415,52 @@ public class TransferOutCancellationRequestV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public TransferOutCancellationRequestV03 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Refs", required = true)
 	public List<References11> getReferences() {
-		return references;
+		return references == null ? references = new ArrayList<>() : references;
 	}
 
-	public void setReferences(List<References11> references) {
-		this.references = references;
+	public TransferOutCancellationRequestV03 setReferences(List<References11> references) {
+		this.references = Objects.requireNonNull(references);
+		return this;
 	}
 
-	@XmlElement(name = "CxlByRef")
-	public TransferReference1 getCancellationByReference() {
-		return cancellationByReference;
+	public Optional<TransferReference1> getCancellationByReference() {
+		return cancellationByReference == null ? Optional.empty() : Optional.of(cancellationByReference);
 	}
 
-	public void setCancellationByReference(TransferReference1 cancellationByReference) {
+	public TransferOutCancellationRequestV03 setCancellationByReference(TransferReference1 cancellationByReference) {
 		this.cancellationByReference = cancellationByReference;
+		return this;
 	}
 
-	@XmlElement(name = "CxlByTrfOutDtls")
-	public TransferOut7 getCancellationByTransferOutDetails() {
-		return cancellationByTransferOutDetails;
+	public Optional<TransferOut7> getCancellationByTransferOutDetails() {
+		return cancellationByTransferOutDetails == null ? Optional.empty() : Optional.of(cancellationByTransferOutDetails);
 	}
 
-	public void setCancellationByTransferOutDetails(TransferOut7 cancellationByTransferOutDetails) {
+	public TransferOutCancellationRequestV03 setCancellationByTransferOutDetails(TransferOut7 cancellationByTransferOutDetails) {
 		this.cancellationByTransferOutDetails = cancellationByTransferOutDetails;
+		return this;
 	}
 
-	@XmlElement(name = "CpyDtls")
-	public CopyInformation2 getCopyDetails() {
-		return copyDetails;
+	public Optional<CopyInformation2> getCopyDetails() {
+		return copyDetails == null ? Optional.empty() : Optional.of(copyDetails);
 	}
 
-	public void setCopyDetails(CopyInformation2 copyDetails) {
+	public TransferOutCancellationRequestV03 setCopyDetails(CopyInformation2 copyDetails) {
 		this.copyDetails = copyDetails;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.002.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.002.001.03")
 	static public class Document {
 		@XmlElement(name = "TrfOutCxlReq", required = true)
 		public TransferOutCancellationRequestV03 messageBody;

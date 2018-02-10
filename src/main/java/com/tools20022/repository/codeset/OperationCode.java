@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.OperationCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the relationship between two variables.
@@ -31,12 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OperationCode#mmTill
- * OperationCode.mmTill}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OperationCode#mmOr
- * OperationCode.mmOr}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OperationCode#mmAnd
- * OperationCode.mmAnd}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OperationCode#Till
+ * OperationCode.Till}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OperationCode#Or
+ * OperationCode.Or}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OperationCode#And
+ * OperationCode.And}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates the relationship between two variables."</li>
  * </ul>
  */
-public class OperationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OperationCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,12 +97,12 @@ public class OperationCode {
 	 * definition} = "Indicates a range delimited by two variables."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTill = new MMCode() {
+	public static final OperationCode Till = new OperationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Till";
 			definition = "Indicates a range delimited by two variables.";
-			owner_lazy = () -> OperationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OperationCode.mmObject();
 			codeName = "TILL";
 		}
 	};
@@ -122,12 +128,12 @@ public class OperationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOr = new MMCode() {
+	public static final OperationCode Or = new OperationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Or";
 			definition = "Indicates either of two variables is valid, but not both.";
-			owner_lazy = () -> OperationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OperationCode.mmObject();
 			codeName = "ORRR";
 		}
 	};
@@ -155,28 +161,59 @@ public class OperationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAnd = new MMCode() {
+	public static final OperationCode And = new OperationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "And";
 			definition = "Indicates that only when both variables are given, the operation is valid.";
-			owner_lazy = () -> OperationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OperationCode.mmObject();
 			codeName = "ANDD";
 		}
 	};
+	final static private LinkedHashMap<String, OperationCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OperationCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("TILL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OperationCode";
 				definition = "Indicates the relationship between two variables.";
-				code_lazy = () -> Arrays.asList(OperationCode.mmTill, OperationCode.mmOr, OperationCode.mmAnd);
 				derivation_lazy = () -> Arrays.asList(Operation1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OperationCode.Till, com.tools20022.repository.codeset.OperationCode.Or, com.tools20022.repository.codeset.OperationCode.And);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Till.getCodeName().get(), Till);
+		codesByName.put(Or.getCodeName().get(), Or);
+		codesByName.put(And.getCodeName().get(), And);
+	}
+
+	public static OperationCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OperationCode[] values() {
+		OperationCode[] values = new OperationCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OperationCode> {
+		@Override
+		public OperationCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OperationCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

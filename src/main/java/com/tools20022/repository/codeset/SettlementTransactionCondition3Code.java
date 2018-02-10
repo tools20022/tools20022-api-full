@@ -20,67 +20,71 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SettlementTransactionConditionCode;
+import com.tools20022.repository.codeset.SettlementTransactionCondition3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the conditions under which the order/trade is to be settled.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionConditionCode
- * SettlementTransactionConditionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#mmAssignement
- * SettlementTransactionCondition3Code.mmAssignement}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#Assignement
+ * SettlementTransactionCondition3Code.Assignement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#mmClean
- * SettlementTransactionCondition3Code.mmClean}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#Clean
+ * SettlementTransactionCondition3Code.Clean}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#mmDirty
- * SettlementTransactionCondition3Code.mmDirty}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#Dirty
+ * SettlementTransactionCondition3Code.Dirty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#mmDeliveryWithoutMatching
- * SettlementTransactionCondition3Code.mmDeliveryWithoutMatching}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#DeliveryWithoutMatching
+ * SettlementTransactionCondition3Code.DeliveryWithoutMatching}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#mmDrawn
- * SettlementTransactionCondition3Code.mmDrawn}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#Drawn
+ * SettlementTransactionCondition3Code.Drawn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#mmExercised
- * SettlementTransactionCondition3Code.mmExercised}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#Exercised
+ * SettlementTransactionCondition3Code.Exercised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#mmFreeCleanSettlement
- * SettlementTransactionCondition3Code.mmFreeCleanSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#FreeCleanSettlement
+ * SettlementTransactionCondition3Code.FreeCleanSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#mmKnockedOut
- * SettlementTransactionCondition3Code.mmKnockedOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#KnockedOut
+ * SettlementTransactionCondition3Code.KnockedOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#mmPhysical
- * SettlementTransactionCondition3Code.mmPhysical}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#Physical
+ * SettlementTransactionCondition3Code.Physical}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#mmResidual
- * SettlementTransactionCondition3Code.mmResidual}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#Residual
+ * SettlementTransactionCondition3Code.Residual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#mmSpecialDelivery
- * SettlementTransactionCondition3Code.mmSpecialDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#SpecialDelivery
+ * SettlementTransactionCondition3Code.SpecialDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#mmSplitSettlement
- * SettlementTransactionCondition3Code.mmSplitSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#SplitSettlement
+ * SettlementTransactionCondition3Code.SplitSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#mmUnexposed
- * SettlementTransactionCondition3Code.mmUnexposed}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionCondition3Code#Unexposed
+ * SettlementTransactionCondition3Code.Unexposed}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SettlementTransactionConditionCode
+ * SettlementTransactionConditionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -98,7 +102,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the conditions under which the order/trade is to be settled."</li>
  * </ul>
  */
-public class SettlementTransactionCondition3Code extends SettlementTransactionConditionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SettlementTransactionCondition3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -117,11 +122,12 @@ public class SettlementTransactionCondition3Code extends SettlementTransactionCo
 	 * name} = "Assignement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAssignement = new MMCode() {
+	public static final SettlementTransactionCondition3Code Assignement = new SettlementTransactionCondition3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignement";
-			owner_lazy = () -> SettlementTransactionCondition3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionCondition3Code.mmObject();
+			codeName = SettlementTransactionConditionCode.Assignement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -140,11 +146,12 @@ public class SettlementTransactionCondition3Code extends SettlementTransactionCo
 	 * name} = "Clean"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClean = new MMCode() {
+	public static final SettlementTransactionCondition3Code Clean = new SettlementTransactionCondition3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Clean";
-			owner_lazy = () -> SettlementTransactionCondition3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionCondition3Code.mmObject();
+			codeName = SettlementTransactionConditionCode.Clean.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -163,11 +170,12 @@ public class SettlementTransactionCondition3Code extends SettlementTransactionCo
 	 * name} = "Dirty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDirty = new MMCode() {
+	public static final SettlementTransactionCondition3Code Dirty = new SettlementTransactionCondition3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dirty";
-			owner_lazy = () -> SettlementTransactionCondition3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionCondition3Code.mmObject();
+			codeName = SettlementTransactionConditionCode.Dirty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -186,11 +194,12 @@ public class SettlementTransactionCondition3Code extends SettlementTransactionCo
 	 * name} = "DeliveryWithoutMatching"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeliveryWithoutMatching = new MMCode() {
+	public static final SettlementTransactionCondition3Code DeliveryWithoutMatching = new SettlementTransactionCondition3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryWithoutMatching";
-			owner_lazy = () -> SettlementTransactionCondition3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionCondition3Code.mmObject();
+			codeName = SettlementTransactionConditionCode.DeliveryWithoutMatching.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -209,11 +218,12 @@ public class SettlementTransactionCondition3Code extends SettlementTransactionCo
 	 * name} = "Drawn"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDrawn = new MMCode() {
+	public static final SettlementTransactionCondition3Code Drawn = new SettlementTransactionCondition3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Drawn";
-			owner_lazy = () -> SettlementTransactionCondition3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionCondition3Code.mmObject();
+			codeName = SettlementTransactionConditionCode.Drawn.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -232,11 +242,12 @@ public class SettlementTransactionCondition3Code extends SettlementTransactionCo
 	 * name} = "Exercised"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExercised = new MMCode() {
+	public static final SettlementTransactionCondition3Code Exercised = new SettlementTransactionCondition3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exercised";
-			owner_lazy = () -> SettlementTransactionCondition3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionCondition3Code.mmObject();
+			codeName = SettlementTransactionConditionCode.Exercised.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -255,11 +266,12 @@ public class SettlementTransactionCondition3Code extends SettlementTransactionCo
 	 * name} = "FreeCleanSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFreeCleanSettlement = new MMCode() {
+	public static final SettlementTransactionCondition3Code FreeCleanSettlement = new SettlementTransactionCondition3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FreeCleanSettlement";
-			owner_lazy = () -> SettlementTransactionCondition3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionCondition3Code.mmObject();
+			codeName = SettlementTransactionConditionCode.FreeCleanSettlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -278,11 +290,12 @@ public class SettlementTransactionCondition3Code extends SettlementTransactionCo
 	 * name} = "KnockedOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmKnockedOut = new MMCode() {
+	public static final SettlementTransactionCondition3Code KnockedOut = new SettlementTransactionCondition3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KnockedOut";
-			owner_lazy = () -> SettlementTransactionCondition3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionCondition3Code.mmObject();
+			codeName = SettlementTransactionConditionCode.KnockedOut.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -301,11 +314,12 @@ public class SettlementTransactionCondition3Code extends SettlementTransactionCo
 	 * name} = "Physical"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPhysical = new MMCode() {
+	public static final SettlementTransactionCondition3Code Physical = new SettlementTransactionCondition3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Physical";
-			owner_lazy = () -> SettlementTransactionCondition3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionCondition3Code.mmObject();
+			codeName = SettlementTransactionConditionCode.Physical.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -324,11 +338,12 @@ public class SettlementTransactionCondition3Code extends SettlementTransactionCo
 	 * name} = "Residual"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmResidual = new MMCode() {
+	public static final SettlementTransactionCondition3Code Residual = new SettlementTransactionCondition3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Residual";
-			owner_lazy = () -> SettlementTransactionCondition3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionCondition3Code.mmObject();
+			codeName = SettlementTransactionConditionCode.Residual.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -347,11 +362,12 @@ public class SettlementTransactionCondition3Code extends SettlementTransactionCo
 	 * name} = "SpecialDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialDelivery = new MMCode() {
+	public static final SettlementTransactionCondition3Code SpecialDelivery = new SettlementTransactionCondition3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialDelivery";
-			owner_lazy = () -> SettlementTransactionCondition3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionCondition3Code.mmObject();
+			codeName = SettlementTransactionConditionCode.SpecialDelivery.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -370,11 +386,12 @@ public class SettlementTransactionCondition3Code extends SettlementTransactionCo
 	 * name} = "SplitSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSplitSettlement = new MMCode() {
+	public static final SettlementTransactionCondition3Code SplitSettlement = new SettlementTransactionCondition3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitSettlement";
-			owner_lazy = () -> SettlementTransactionCondition3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionCondition3Code.mmObject();
+			codeName = SettlementTransactionConditionCode.SplitSettlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -393,29 +410,74 @@ public class SettlementTransactionCondition3Code extends SettlementTransactionCo
 	 * name} = "Unexposed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnexposed = new MMCode() {
+	public static final SettlementTransactionCondition3Code Unexposed = new SettlementTransactionCondition3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unexposed";
-			owner_lazy = () -> SettlementTransactionCondition3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionCondition3Code.mmObject();
+			codeName = SettlementTransactionConditionCode.Unexposed.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SettlementTransactionCondition3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SettlementTransactionCondition3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ASGN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementTransactionCondition3Code";
 				definition = "Specifies the conditions under which the order/trade is to be settled.";
-				code_lazy = () -> Arrays.asList(SettlementTransactionCondition3Code.mmAssignement, SettlementTransactionCondition3Code.mmClean, SettlementTransactionCondition3Code.mmDirty,
-						SettlementTransactionCondition3Code.mmDeliveryWithoutMatching, SettlementTransactionCondition3Code.mmDrawn, SettlementTransactionCondition3Code.mmExercised, SettlementTransactionCondition3Code.mmFreeCleanSettlement,
-						SettlementTransactionCondition3Code.mmKnockedOut, SettlementTransactionCondition3Code.mmPhysical, SettlementTransactionCondition3Code.mmResidual, SettlementTransactionCondition3Code.mmSpecialDelivery,
-						SettlementTransactionCondition3Code.mmSplitSettlement, SettlementTransactionCondition3Code.mmUnexposed);
 				trace_lazy = () -> SettlementTransactionConditionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementTransactionCondition3Code.Assignement, com.tools20022.repository.codeset.SettlementTransactionCondition3Code.Clean,
+						com.tools20022.repository.codeset.SettlementTransactionCondition3Code.Dirty, com.tools20022.repository.codeset.SettlementTransactionCondition3Code.DeliveryWithoutMatching,
+						com.tools20022.repository.codeset.SettlementTransactionCondition3Code.Drawn, com.tools20022.repository.codeset.SettlementTransactionCondition3Code.Exercised,
+						com.tools20022.repository.codeset.SettlementTransactionCondition3Code.FreeCleanSettlement, com.tools20022.repository.codeset.SettlementTransactionCondition3Code.KnockedOut,
+						com.tools20022.repository.codeset.SettlementTransactionCondition3Code.Physical, com.tools20022.repository.codeset.SettlementTransactionCondition3Code.Residual,
+						com.tools20022.repository.codeset.SettlementTransactionCondition3Code.SpecialDelivery, com.tools20022.repository.codeset.SettlementTransactionCondition3Code.SplitSettlement,
+						com.tools20022.repository.codeset.SettlementTransactionCondition3Code.Unexposed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Assignement.getCodeName().get(), Assignement);
+		codesByName.put(Clean.getCodeName().get(), Clean);
+		codesByName.put(Dirty.getCodeName().get(), Dirty);
+		codesByName.put(DeliveryWithoutMatching.getCodeName().get(), DeliveryWithoutMatching);
+		codesByName.put(Drawn.getCodeName().get(), Drawn);
+		codesByName.put(Exercised.getCodeName().get(), Exercised);
+		codesByName.put(FreeCleanSettlement.getCodeName().get(), FreeCleanSettlement);
+		codesByName.put(KnockedOut.getCodeName().get(), KnockedOut);
+		codesByName.put(Physical.getCodeName().get(), Physical);
+		codesByName.put(Residual.getCodeName().get(), Residual);
+		codesByName.put(SpecialDelivery.getCodeName().get(), SpecialDelivery);
+		codesByName.put(SplitSettlement.getCodeName().get(), SplitSettlement);
+		codesByName.put(Unexposed.getCodeName().get(), Unexposed);
+	}
+
+	public static SettlementTransactionCondition3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SettlementTransactionCondition3Code[] values() {
+		SettlementTransactionCondition3Code[] values = new SettlementTransactionCondition3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SettlementTransactionCondition3Code> {
+		@Override
+		public SettlementTransactionCondition3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SettlementTransactionCondition3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

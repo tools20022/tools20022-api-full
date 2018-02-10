@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
@@ -29,6 +30,7 @@ import com.tools20022.repository.msg.AmountAndRateStatus1;
 import com.tools20022.repository.msg.RateTypeAndAmountAndStatus25;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between an amount or an unspecified rate."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NetDividendRateFormat23Choice", propOrder = {"amount", "amountAndRateStatus", "rateTypeAndAmountAndRateStatus"})
 public class NetDividendRateFormat23Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
-	 * Number of monetary units specified in a currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +116,7 @@ public class NetDividendRateFormat23Choice {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmNetDividend;
-			componentContext_lazy = () -> NetDividendRateFormat23Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +127,11 @@ public class NetDividendRateFormat23Choice {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtAndRateSts", required = true)
 	protected AmountAndRateStatus1 amountAndRateStatus;
 	/**
-	 * Specifies an amount and a rate status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -159,7 +163,7 @@ public class NetDividendRateFormat23Choice {
 	public static final MMMessageAssociationEnd mmAmountAndRateStatus = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RateAndAmount.mmObject();
-			componentContext_lazy = () -> NetDividendRateFormat23Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtAndRateSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +175,11 @@ public class NetDividendRateFormat23Choice {
 			type_lazy = () -> AmountAndRateStatus1.mmObject();
 		}
 	};
+	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
 	protected RateTypeAndAmountAndStatus25 rateTypeAndAmountAndRateStatus;
 	/**
-	 * Specifies different formats for the net dividend rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -189,6 +194,9 @@ public class NetDividendRateFormat23Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RateTpAndAmtAndRateSts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92J:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -201,9 +209,10 @@ public class NetDividendRateFormat23Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> NetDividendRateFormat23Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RateTpAndAmtAndRateSts";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92J:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateTypeAndAmountAndRateStatus";
 			definition = "Specifies different formats for the net dividend rate.";
@@ -217,9 +226,10 @@ public class NetDividendRateFormat23Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NetDividendRateFormat23Choice.mmAmount, NetDividendRateFormat23Choice.mmAmountAndRateStatus, NetDividendRateFormat23Choice.mmRateTypeAndAmountAndRateStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NetDividendRateFormat23Choice.mmAmount, com.tools20022.repository.choice.NetDividendRateFormat23Choice.mmAmountAndRateStatus,
+						com.tools20022.repository.choice.NetDividendRateFormat23Choice.mmRateTypeAndAmountAndRateStatus);
 				trace_lazy = () -> Dividend.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetDividendRateFormat23Choice";
 				definition = "Choice between an amount or an unspecified rate.";
@@ -228,30 +238,30 @@ public class NetDividendRateFormat23Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
-		this.amount = amount;
+	public NetDividendRateFormat23Choice setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "AmtAndRateSts", required = true)
 	public AmountAndRateStatus1 getAmountAndRateStatus() {
 		return amountAndRateStatus;
 	}
 
-	public void setAmountAndRateStatus(AmountAndRateStatus1 amountAndRateStatus) {
-		this.amountAndRateStatus = amountAndRateStatus;
+	public NetDividendRateFormat23Choice setAmountAndRateStatus(AmountAndRateStatus1 amountAndRateStatus) {
+		this.amountAndRateStatus = Objects.requireNonNull(amountAndRateStatus);
+		return this;
 	}
 
-	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
 	public RateTypeAndAmountAndStatus25 getRateTypeAndAmountAndRateStatus() {
 		return rateTypeAndAmountAndRateStatus;
 	}
 
-	public void setRateTypeAndAmountAndRateStatus(RateTypeAndAmountAndStatus25 rateTypeAndAmountAndRateStatus) {
-		this.rateTypeAndAmountAndRateStatus = rateTypeAndAmountAndRateStatus;
+	public NetDividendRateFormat23Choice setRateTypeAndAmountAndRateStatus(RateTypeAndAmountAndStatus25 rateTypeAndAmountAndRateStatus) {
+		this.rateTypeAndAmountAndRateStatus = Objects.requireNonNull(rateTypeAndAmountAndRateStatus);
+		return this;
 	}
 }

@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateActionNotificationTypeCode;
+import com.tools20022.repository.codeset.CorporateActionNotificationType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of notification cancellation request.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationTypeCode
- * CorporateActionNotificationTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType2Code#mmWithrawal
- * CorporateActionNotificationType2Code.mmWithrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType2Code#Withrawal
+ * CorporateActionNotificationType2Code.Withrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType2Code#mmCancellation
- * CorporateActionNotificationType2Code.mmCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationType2Code#Cancellation
+ * CorporateActionNotificationType2Code.Cancellation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionNotificationTypeCode
+ * CorporateActionNotificationTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of notification cancellation request."</li>
  * </ul>
  */
-public class CorporateActionNotificationType2Code extends CorporateActionNotificationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionNotificationType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class CorporateActionNotificationType2Code extends CorporateActionNotific
 	 * name} = "Withrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithrawal = new MMCode() {
+	public static final CorporateActionNotificationType2Code Withrawal = new CorporateActionNotificationType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withrawal";
-			owner_lazy = () -> CorporateActionNotificationType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionNotificationType2Code.mmObject();
+			codeName = CorporateActionNotificationTypeCode.Withrawal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class CorporateActionNotificationType2Code extends CorporateActionNotific
 	 * name} = "Cancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellation = new MMCode() {
+	public static final CorporateActionNotificationType2Code Cancellation = new CorporateActionNotificationType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
-			owner_lazy = () -> CorporateActionNotificationType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionNotificationType2Code.mmObject();
+			codeName = CorporateActionNotificationTypeCode.Cancellation.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionNotificationType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionNotificationType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("WITH");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNotificationType2Code";
 				definition = "Type of notification cancellation request.";
-				code_lazy = () -> Arrays.asList(CorporateActionNotificationType2Code.mmWithrawal, CorporateActionNotificationType2Code.mmCancellation);
 				trace_lazy = () -> CorporateActionNotificationTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionNotificationType2Code.Withrawal, com.tools20022.repository.codeset.CorporateActionNotificationType2Code.Cancellation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Withrawal.getCodeName().get(), Withrawal);
+		codesByName.put(Cancellation.getCodeName().get(), Cancellation);
+	}
+
+	public static CorporateActionNotificationType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionNotificationType2Code[] values() {
+		CorporateActionNotificationType2Code[] values = new CorporateActionNotificationType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionNotificationType2Code> {
+		@Override
+		public CorporateActionNotificationType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionNotificationType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

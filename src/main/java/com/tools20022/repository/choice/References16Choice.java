@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -31,6 +32,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -75,8 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forReferences16Choice
+ * ConstraintCoexistenceIdentificationRule.forReferences16Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -88,17 +99,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of reference."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "References16Choice", propOrder = {"securitiesSettlementTransactionIdentification", "intraPositionMovementIdentification", "intraBalanceMovementIdentification", "accountServicerTransactionIdentification",
 		"marketInfrastructureTransactionIdentification", "poolIdentification", "otherTransactionIdentification"})
 public class References16Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesSttlmTxId", required = true)
 	protected RestrictedFINXMax16Text securitiesSettlementTransactionIdentification;
 	/**
-	 * Unambiguous identification of a securities settlement transaction as
-	 * known by the account owner (or instructing party acting on its behalf).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,6 +130,9 @@ public class References16Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesSttlmTxId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::PREV</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -134,9 +148,10 @@ public class References16Choice {
 	public static final MMMessageAttribute mmSecuritiesSettlementTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
-			componentContext_lazy = () -> References16Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.References16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSttlmTxId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::PREV"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionIdentification";
 			definition = "Unambiguous identification of a securities settlement transaction as known by the account owner (or instructing party acting on its behalf).";
@@ -145,11 +160,11 @@ public class References16Choice {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IntraPosMvmntId", required = true)
 	protected RestrictedFINXMax16Text intraPositionMovementIdentification;
 	/**
-	 * Unambiguous identification of the intra-position movement transaction as
-	 * known by the account owner (or instructing party acting on its behalf).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,6 +180,9 @@ public class References16Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IntraPosMvmntId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::PREV</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -179,9 +197,10 @@ public class References16Choice {
 	 */
 	public static final MMMessageAttribute mmIntraPositionMovementIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> References16Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.References16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntraPosMvmntId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::PREV"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionMovementIdentification";
 			definition = "Unambiguous identification of the intra-position movement transaction as known by the account owner (or instructing party acting on its behalf).";
@@ -190,11 +209,11 @@ public class References16Choice {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IntraBalMvmntId")
 	protected RestrictedFINXMax16Text intraBalanceMovementIdentification;
 	/**
-	 * Unambiguous identification of the intra balance movement transaction as
-	 * known by the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -224,7 +243,7 @@ public class References16Choice {
 	 */
 	public static final MMMessageAttribute mmIntraBalanceMovementIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> References16Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.References16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntraBalMvmntId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -235,11 +254,11 @@ public class References16Choice {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcrTxId", required = true)
 	protected RestrictedFINXMax16Text accountServicerTransactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as known by the account
-	 * servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -260,6 +279,9 @@ public class References16Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctSvcrTxId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::ASRF</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -275,9 +297,10 @@ public class References16Choice {
 	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
-			componentContext_lazy = () -> References16Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.References16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrTxId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::ASRF"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account servicer.";
@@ -286,11 +309,11 @@ public class References16Choice {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MktInfrstrctrTxId")
 	protected RestrictedFINXMax16Text marketInfrastructureTransactionIdentification;
 	/**
-	 * Identification of a transaction assigned by a market infrastructure other
-	 * than a central securities depository, for example, Target2-Securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -327,7 +350,7 @@ public class References16Choice {
 	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification;
-			componentContext_lazy = () -> References16Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.References16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MktInfrstrctrTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -338,10 +361,11 @@ public class References16Choice {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PoolId", required = true)
 	protected RestrictedFINXMax16Text poolIdentification;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -362,6 +386,9 @@ public class References16Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PoolId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::POOL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -375,9 +402,10 @@ public class References16Choice {
 	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmPoolIdentification;
-			componentContext_lazy = () -> References16Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.References16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PoolId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::POOL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolIdentification";
 			definition = "Collective reference identifying a set of messages.";
@@ -386,11 +414,11 @@ public class References16Choice {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrTxId", required = true)
 	protected RestrictedFINXMax16Text otherTransactionIdentification;
 	/**
-	 * Identification of a transaction that cannot be identified using a
-	 * standard reference element present in the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -411,6 +439,9 @@ public class References16Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OthrTxId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -426,9 +457,10 @@ public class References16Choice {
 	public static final MMMessageAttribute mmOtherTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
-			componentContext_lazy = () -> References16Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.References16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrTxId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherTransactionIdentification";
 			definition = "Identification of a transaction that cannot be identified using a standard reference element present in the message.";
@@ -441,11 +473,13 @@ public class References16Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(References16Choice.mmSecuritiesSettlementTransactionIdentification, References16Choice.mmIntraPositionMovementIdentification,
-						References16Choice.mmIntraBalanceMovementIdentification, References16Choice.mmAccountServicerTransactionIdentification, References16Choice.mmMarketInfrastructureTransactionIdentification,
-						References16Choice.mmPoolIdentification, References16Choice.mmOtherTransactionIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References16Choice.mmSecuritiesSettlementTransactionIdentification,
+						com.tools20022.repository.choice.References16Choice.mmIntraPositionMovementIdentification, com.tools20022.repository.choice.References16Choice.mmIntraBalanceMovementIdentification,
+						com.tools20022.repository.choice.References16Choice.mmAccountServicerTransactionIdentification, com.tools20022.repository.choice.References16Choice.mmMarketInfrastructureTransactionIdentification,
+						com.tools20022.repository.choice.References16Choice.mmPoolIdentification, com.tools20022.repository.choice.References16Choice.mmOtherTransactionIdentification);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forReferences16Choice);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -461,66 +495,66 @@ public class References16Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesSttlmTxId", required = true)
 	public RestrictedFINXMax16Text getSecuritiesSettlementTransactionIdentification() {
 		return securitiesSettlementTransactionIdentification;
 	}
 
-	public void setSecuritiesSettlementTransactionIdentification(RestrictedFINXMax16Text securitiesSettlementTransactionIdentification) {
-		this.securitiesSettlementTransactionIdentification = securitiesSettlementTransactionIdentification;
+	public References16Choice setSecuritiesSettlementTransactionIdentification(RestrictedFINXMax16Text securitiesSettlementTransactionIdentification) {
+		this.securitiesSettlementTransactionIdentification = Objects.requireNonNull(securitiesSettlementTransactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "IntraPosMvmntId", required = true)
 	public RestrictedFINXMax16Text getIntraPositionMovementIdentification() {
 		return intraPositionMovementIdentification;
 	}
 
-	public void setIntraPositionMovementIdentification(RestrictedFINXMax16Text intraPositionMovementIdentification) {
-		this.intraPositionMovementIdentification = intraPositionMovementIdentification;
+	public References16Choice setIntraPositionMovementIdentification(RestrictedFINXMax16Text intraPositionMovementIdentification) {
+		this.intraPositionMovementIdentification = Objects.requireNonNull(intraPositionMovementIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "IntraBalMvmntId")
-	public RestrictedFINXMax16Text getIntraBalanceMovementIdentification() {
-		return intraBalanceMovementIdentification;
+	public Optional<RestrictedFINXMax16Text> getIntraBalanceMovementIdentification() {
+		return intraBalanceMovementIdentification == null ? Optional.empty() : Optional.of(intraBalanceMovementIdentification);
 	}
 
-	public void setIntraBalanceMovementIdentification(RestrictedFINXMax16Text intraBalanceMovementIdentification) {
+	public References16Choice setIntraBalanceMovementIdentification(RestrictedFINXMax16Text intraBalanceMovementIdentification) {
 		this.intraBalanceMovementIdentification = intraBalanceMovementIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcrTxId", required = true)
 	public RestrictedFINXMax16Text getAccountServicerTransactionIdentification() {
 		return accountServicerTransactionIdentification;
 	}
 
-	public void setAccountServicerTransactionIdentification(RestrictedFINXMax16Text accountServicerTransactionIdentification) {
-		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
+	public References16Choice setAccountServicerTransactionIdentification(RestrictedFINXMax16Text accountServicerTransactionIdentification) {
+		this.accountServicerTransactionIdentification = Objects.requireNonNull(accountServicerTransactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "MktInfrstrctrTxId")
-	public RestrictedFINXMax16Text getMarketInfrastructureTransactionIdentification() {
-		return marketInfrastructureTransactionIdentification;
+	public Optional<RestrictedFINXMax16Text> getMarketInfrastructureTransactionIdentification() {
+		return marketInfrastructureTransactionIdentification == null ? Optional.empty() : Optional.of(marketInfrastructureTransactionIdentification);
 	}
 
-	public void setMarketInfrastructureTransactionIdentification(RestrictedFINXMax16Text marketInfrastructureTransactionIdentification) {
+	public References16Choice setMarketInfrastructureTransactionIdentification(RestrictedFINXMax16Text marketInfrastructureTransactionIdentification) {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PoolId", required = true)
 	public RestrictedFINXMax16Text getPoolIdentification() {
 		return poolIdentification;
 	}
 
-	public void setPoolIdentification(RestrictedFINXMax16Text poolIdentification) {
-		this.poolIdentification = poolIdentification;
+	public References16Choice setPoolIdentification(RestrictedFINXMax16Text poolIdentification) {
+		this.poolIdentification = Objects.requireNonNull(poolIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OthrTxId", required = true)
 	public RestrictedFINXMax16Text getOtherTransactionIdentification() {
 		return otherTransactionIdentification;
 	}
 
-	public void setOtherTransactionIdentification(RestrictedFINXMax16Text otherTransactionIdentification) {
-		this.otherTransactionIdentification = otherTransactionIdentification;
+	public References16Choice setOtherTransactionIdentification(RestrictedFINXMax16Text otherTransactionIdentification) {
+		this.otherTransactionIdentification = Objects.requireNonNull(otherTransactionIdentification);
+		return this;
 	}
 }

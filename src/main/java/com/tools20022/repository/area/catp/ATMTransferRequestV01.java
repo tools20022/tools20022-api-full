@@ -30,6 +30,8 @@ import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandA
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -38,22 +40,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.ATMCardTransactionLatestVersion
- * ATMCardTransactionLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion
- * ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "ATMTrfReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -72,6 +58,22 @@ import javax.xml.bind.annotation.*;
  * ATMTransferRequestV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion
+ * ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "ATMTrfReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.ATMCardTransactionLatestVersion
+ * ATMCardTransactionLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code catp.016.001.01}</li>
@@ -87,16 +89,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "ATMTransferRequestV01", propOrder = {"header", "protectedATMTransferRequest", "ATMTransferRequest", "securityTrailer"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "ATMTransferRequestV01", propOrder = {"header", "protectedATMTransferRequest", "aTMTransferRequest", "securityTrailer"})
 public class ATMTransferRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header31 header;
 	/**
-	 * Information related to the protocol management on a segment of the path
-	 * from the ATM to the acquirer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,10 +139,11 @@ public class ATMTransferRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "PrtctdATMTrfReq")
 	protected ContentInformationType10 protectedATMTransferRequest;
 	/**
-	 * Encrypted body of the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,10 +183,11 @@ public class ATMTransferRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "ATMTrfReq")
 	protected ATMTransferRequest1 aTMTransferRequest;
 	/**
-	 * Information related to the request of a fund transfer from an ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -224,10 +228,11 @@ public class ATMTransferRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SctyTrlr")
 	protected ContentInformationType15 securityTrailer;
 	/**
-	 * Trailer of the message containing a MAC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -298,43 +303,43 @@ public class ATMTransferRequestV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header31 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header31 header) {
-		this.header = header;
+	public ATMTransferRequestV01 setHeader(Header31 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "PrtctdATMTrfReq")
-	public ContentInformationType10 getProtectedATMTransferRequest() {
-		return protectedATMTransferRequest;
+	public Optional<ContentInformationType10> getProtectedATMTransferRequest() {
+		return protectedATMTransferRequest == null ? Optional.empty() : Optional.of(protectedATMTransferRequest);
 	}
 
-	public void setProtectedATMTransferRequest(ContentInformationType10 protectedATMTransferRequest) {
+	public ATMTransferRequestV01 setProtectedATMTransferRequest(ContentInformationType10 protectedATMTransferRequest) {
 		this.protectedATMTransferRequest = protectedATMTransferRequest;
+		return this;
 	}
 
-	@XmlElement(name = "ATMTrfReq")
-	public ATMTransferRequest1 getATMTransferRequest() {
-		return aTMTransferRequest;
+	public Optional<ATMTransferRequest1> getATMTransferRequest() {
+		return aTMTransferRequest == null ? Optional.empty() : Optional.of(aTMTransferRequest);
 	}
 
-	public void setATMTransferRequest(ATMTransferRequest1 aTMTransferRequest) {
+	public ATMTransferRequestV01 setATMTransferRequest(ATMTransferRequest1 aTMTransferRequest) {
 		this.aTMTransferRequest = aTMTransferRequest;
+		return this;
 	}
 
-	@XmlElement(name = "SctyTrlr")
-	public ContentInformationType15 getSecurityTrailer() {
-		return securityTrailer;
+	public Optional<ContentInformationType15> getSecurityTrailer() {
+		return securityTrailer == null ? Optional.empty() : Optional.of(securityTrailer);
 	}
 
-	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+	public ATMTransferRequestV01 setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catp.016.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:catp.016.001.01")
 	static public class Document {
 		@XmlElement(name = "ATMTrfReq", required = true)
 		public ATMTransferRequestV01 messageBody;

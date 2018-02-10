@@ -20,54 +20,57 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TypeOfPriceCode;
+import com.tools20022.repository.codeset.TypeOfPrice2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of price and information about the price.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#Bid
+ * TypeOfPrice2Code.Bid}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#Offer
+ * TypeOfPrice2Code.Offer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#NetAssetValue
+ * TypeOfPrice2Code.NetAssetValue}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#Creation
+ * TypeOfPrice2Code.Creation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#Cancellation
+ * TypeOfPrice2Code.Cancellation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#Interim
+ * TypeOfPrice2Code.Interim}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#Swing
+ * TypeOfPrice2Code.Swing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#Other
+ * TypeOfPrice2Code.Other}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#Mid
+ * TypeOfPrice2Code.Mid}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#Reinvestment
+ * TypeOfPrice2Code.Reinvestment}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#Switch
+ * TypeOfPrice2Code.Switch}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.TypeOfPriceCode
  * TypeOfPriceCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#mmBid
- * TypeOfPrice2Code.mmBid}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#mmOffer
- * TypeOfPrice2Code.mmOffer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#mmNetAssetValue
- * TypeOfPrice2Code.mmNetAssetValue}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#mmCreation
- * TypeOfPrice2Code.mmCreation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#mmCancellation
- * TypeOfPrice2Code.mmCancellation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#mmInterim
- * TypeOfPrice2Code.mmInterim}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#mmSwing
- * TypeOfPrice2Code.mmSwing}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#mmOther
- * TypeOfPrice2Code.mmOther}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#mmMid
- * TypeOfPrice2Code.mmMid}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#mmReinvestment
- * TypeOfPrice2Code.mmReinvestment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice2Code#mmSwitch
- * TypeOfPrice2Code.mmSwitch}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of price and information about the price."</li>
  * </ul>
  */
-public class TypeOfPrice2Code extends TypeOfPriceCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TypeOfPrice2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -103,11 +107,12 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 * name} = "Bid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBid = new MMCode() {
+	public static final TypeOfPrice2Code Bid = new TypeOfPrice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bid";
-			owner_lazy = () -> TypeOfPrice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfPrice2Code.mmObject();
+			codeName = TypeOfPriceCode.Bid.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -126,11 +131,12 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 * name} = "Offer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOffer = new MMCode() {
+	public static final TypeOfPrice2Code Offer = new TypeOfPrice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offer";
-			owner_lazy = () -> TypeOfPrice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfPrice2Code.mmObject();
+			codeName = TypeOfPriceCode.Offer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -149,11 +155,12 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 * name} = "NetAssetValue"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNetAssetValue = new MMCode() {
+	public static final TypeOfPrice2Code NetAssetValue = new TypeOfPrice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAssetValue";
-			owner_lazy = () -> TypeOfPrice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfPrice2Code.mmObject();
+			codeName = TypeOfPriceCode.NetAssetValue.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -172,11 +179,12 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 * name} = "Creation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreation = new MMCode() {
+	public static final TypeOfPrice2Code Creation = new TypeOfPrice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creation";
-			owner_lazy = () -> TypeOfPrice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfPrice2Code.mmObject();
+			codeName = TypeOfPriceCode.Creation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -195,11 +203,12 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 * name} = "Cancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellation = new MMCode() {
+	public static final TypeOfPrice2Code Cancellation = new TypeOfPrice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
-			owner_lazy = () -> TypeOfPrice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfPrice2Code.mmObject();
+			codeName = TypeOfPriceCode.Cancellation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -218,11 +227,12 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 * name} = "Interim"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterim = new MMCode() {
+	public static final TypeOfPrice2Code Interim = new TypeOfPrice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
-			owner_lazy = () -> TypeOfPrice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfPrice2Code.mmObject();
+			codeName = TypeOfPriceCode.Interim.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -241,11 +251,12 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 * name} = "Swing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSwing = new MMCode() {
+	public static final TypeOfPrice2Code Swing = new TypeOfPrice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swing";
-			owner_lazy = () -> TypeOfPrice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfPrice2Code.mmObject();
+			codeName = TypeOfPriceCode.Swing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -264,11 +275,12 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final TypeOfPrice2Code Other = new TypeOfPrice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> TypeOfPrice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfPrice2Code.mmObject();
+			codeName = TypeOfPriceCode.Other.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -287,11 +299,12 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 * name} = "Mid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMid = new MMCode() {
+	public static final TypeOfPrice2Code Mid = new TypeOfPrice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mid";
-			owner_lazy = () -> TypeOfPrice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfPrice2Code.mmObject();
+			codeName = TypeOfPriceCode.Mid.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -310,11 +323,12 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 * name} = "Reinvestment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReinvestment = new MMCode() {
+	public static final TypeOfPrice2Code Reinvestment = new TypeOfPrice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reinvestment";
-			owner_lazy = () -> TypeOfPrice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfPrice2Code.mmObject();
+			codeName = TypeOfPriceCode.Reinvestment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -333,27 +347,69 @@ public class TypeOfPrice2Code extends TypeOfPriceCode {
 	 * name} = "Switch"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSwitch = new MMCode() {
+	public static final TypeOfPrice2Code Switch = new TypeOfPrice2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Switch";
-			owner_lazy = () -> TypeOfPrice2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfPrice2Code.mmObject();
+			codeName = TypeOfPriceCode.Switch.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TypeOfPrice2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TypeOfPrice2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BIDE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfPrice2Code";
 				definition = "Specifies the type of price and information about the price.";
-				code_lazy = () -> Arrays.asList(TypeOfPrice2Code.mmBid, TypeOfPrice2Code.mmOffer, TypeOfPrice2Code.mmNetAssetValue, TypeOfPrice2Code.mmCreation, TypeOfPrice2Code.mmCancellation, TypeOfPrice2Code.mmInterim,
-						TypeOfPrice2Code.mmSwing, TypeOfPrice2Code.mmOther, TypeOfPrice2Code.mmMid, TypeOfPrice2Code.mmReinvestment, TypeOfPrice2Code.mmSwitch);
 				trace_lazy = () -> TypeOfPriceCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice2Code.Bid, com.tools20022.repository.codeset.TypeOfPrice2Code.Offer, com.tools20022.repository.codeset.TypeOfPrice2Code.NetAssetValue,
+						com.tools20022.repository.codeset.TypeOfPrice2Code.Creation, com.tools20022.repository.codeset.TypeOfPrice2Code.Cancellation, com.tools20022.repository.codeset.TypeOfPrice2Code.Interim,
+						com.tools20022.repository.codeset.TypeOfPrice2Code.Swing, com.tools20022.repository.codeset.TypeOfPrice2Code.Other, com.tools20022.repository.codeset.TypeOfPrice2Code.Mid,
+						com.tools20022.repository.codeset.TypeOfPrice2Code.Reinvestment, com.tools20022.repository.codeset.TypeOfPrice2Code.Switch);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Bid.getCodeName().get(), Bid);
+		codesByName.put(Offer.getCodeName().get(), Offer);
+		codesByName.put(NetAssetValue.getCodeName().get(), NetAssetValue);
+		codesByName.put(Creation.getCodeName().get(), Creation);
+		codesByName.put(Cancellation.getCodeName().get(), Cancellation);
+		codesByName.put(Interim.getCodeName().get(), Interim);
+		codesByName.put(Swing.getCodeName().get(), Swing);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(Mid.getCodeName().get(), Mid);
+		codesByName.put(Reinvestment.getCodeName().get(), Reinvestment);
+		codesByName.put(Switch.getCodeName().get(), Switch);
+	}
+
+	public static TypeOfPrice2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TypeOfPrice2Code[] values() {
+		TypeOfPrice2Code[] values = new TypeOfPrice2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TypeOfPrice2Code> {
+		@Override
+		public TypeOfPrice2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TypeOfPrice2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

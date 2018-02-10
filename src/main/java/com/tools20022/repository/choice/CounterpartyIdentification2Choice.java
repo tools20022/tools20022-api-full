@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ReportedPartyIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInterbankReportingRule#forCounterpartyIdentification2Choice
+ * ConstraintInterbankReportingRule.forCounterpartyIdentification2Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNonInterbankReportingRule#forCounterpartyIdentification2Choice
+ * ConstraintNonInterbankReportingRule.forCounterpartyIdentification2Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,16 +93,16 @@ import javax.xml.bind.annotation.XmlType;
  * CounterpartyIdentification1Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CounterpartyIdentification2Choice", propOrder = {"LEI", "other"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CounterpartyIdentification2Choice", propOrder = {"lEI", "other"})
 public class CounterpartyIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LEI", required = true)
 	protected LEIIdentifier lEI;
 	/**
-	 * Legal entity identifier code used to recognise the counterparty of the
-	 * reporting agent for the reported transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +151,7 @@ public class CounterpartyIdentification2Choice {
 	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
-			componentContext_lazy = () -> CounterpartyIdentification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CounterpartyIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LEI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,11 +164,11 @@ public class CounterpartyIdentification2Choice {
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Othr", required = true)
 	protected ReportedPartyIdentification1 other;
 	/**
-	 * Other identification of the counterparty through the sector and the
-	 * location.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -204,7 +216,7 @@ public class CounterpartyIdentification2Choice {
 	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> CounterpartyIdentification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CounterpartyIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,9 +234,11 @@ public class CounterpartyIdentification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CounterpartyIdentification2Choice.mmLEI, CounterpartyIdentification2Choice.mmOther);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CounterpartyIdentification2Choice.mmLEI, com.tools20022.repository.choice.CounterpartyIdentification2Choice.mmOther);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInterbankReportingRule.forCounterpartyIdentification2Choice,
+						com.tools20022.repository.constraints.ConstraintNonInterbankReportingRule.forCounterpartyIdentification2Choice);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CounterpartyIdentification2Choice";
 				definition = "Provides the identification of the reporting agent counterparty.";
@@ -235,21 +249,21 @@ public class CounterpartyIdentification2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LEI", required = true)
 	public LEIIdentifier getLEI() {
 		return lEI;
 	}
 
-	public void setLEI(LEIIdentifier lEI) {
-		this.lEI = lEI;
+	public CounterpartyIdentification2Choice setLEI(LEIIdentifier lEI) {
+		this.lEI = Objects.requireNonNull(lEI);
+		return this;
 	}
 
-	@XmlElement(name = "Othr", required = true)
 	public ReportedPartyIdentification1 getOther() {
 		return other;
 	}
 
-	public void setOther(ReportedPartyIdentification1 other) {
-		this.other = other;
+	public CounterpartyIdentification2Choice setOther(ReportedPartyIdentification1 other) {
+		this.other = Objects.requireNonNull(other);
+		return this;
 	}
 }

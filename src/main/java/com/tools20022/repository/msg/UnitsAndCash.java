@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnitsAndCash", propOrder = {"instrument", "grandTotalAmount", "group1Number", "group2Number", "completeIndicator"})
 public class UnitsAndCash {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Instrm", required = true)
 	protected FinancialInstrument7 instrument;
 	/**
-	 * Specifies the type of underlying assets for the PEP or ISA.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -121,7 +124,7 @@ public class UnitsAndCash {
 	public static final MMMessageAssociationEnd mmInstrument = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
-			componentContext_lazy = () -> UnitsAndCash.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitsAndCash.mmObject();
 			isDerived = false;
 			xmlTag = "Instrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,12 +136,11 @@ public class UnitsAndCash {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument7.mmObject();
 		}
 	};
+	@XmlElement(name = "GrdTtlAmt", required = true)
 	protected ImpliedCurrencyAndAmount grandTotalAmount;
 	/**
-	 * Quantity expressed as an amount, eg, in the investment fund business, a
-	 * quantity of a financial instrument may be expressed as an amount of
-	 * money.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +175,7 @@ public class UnitsAndCash {
 	public static final MMMessageAttribute mmGrandTotalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAmount;
-			componentContext_lazy = () -> UnitsAndCash.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitsAndCash.mmObject();
 			isDerived = false;
 			xmlTag = "GrdTtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,10 +186,11 @@ public class UnitsAndCash {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Grp1Nb")
 	protected DecimalNumber group1Number;
 	/**
-	 * Quantity expressed as a number, eg, a number of shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -220,7 +223,7 @@ public class UnitsAndCash {
 	public static final MMMessageAttribute mmGroup1Number = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
-			componentContext_lazy = () -> UnitsAndCash.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitsAndCash.mmObject();
 			isDerived = false;
 			xmlTag = "Grp1Nb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,10 +234,11 @@ public class UnitsAndCash {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "Grp2Nb")
 	protected DecimalNumber group2Number;
 	/**
-	 * Quantity expressed as a number, eg, a number of shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -267,7 +271,7 @@ public class UnitsAndCash {
 	public static final MMMessageAttribute mmGroup2Number = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
-			componentContext_lazy = () -> UnitsAndCash.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitsAndCash.mmObject();
 			isDerived = false;
 			xmlTag = "Grp2Nb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -278,11 +282,11 @@ public class UnitsAndCash {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "CmpltInd")
 	protected YesNoIndicator completeIndicator;
 	/**
-	 * Specifies whether the transfer of the asset is final or not, eg whether
-	 * dividends or units are still to be delivered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -311,7 +315,7 @@ public class UnitsAndCash {
 	 */
 	public static final MMMessageAttribute mmCompleteIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UnitsAndCash.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitsAndCash.mmObject();
 			isDerived = false;
 			xmlTag = "CmpltInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -326,9 +330,10 @@ public class UnitsAndCash {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnitsAndCash.mmInstrument, UnitsAndCash.mmGrandTotalAmount, UnitsAndCash.mmGroup1Number, UnitsAndCash.mmGroup2Number, UnitsAndCash.mmCompleteIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitsAndCash.mmInstrument, com.tools20022.repository.msg.UnitsAndCash.mmGrandTotalAmount, com.tools20022.repository.msg.UnitsAndCash.mmGroup1Number,
+						com.tools20022.repository.msg.UnitsAndCash.mmGroup2Number, com.tools20022.repository.msg.UnitsAndCash.mmCompleteIndicator);
 				trace_lazy = () -> InvestmentFundOrderExecution.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UnitsAndCash";
 				definition = "Completion of a securities settlement instruction, wherein securities are delivered/debited from a securities account and received/credited to the designated securities account.";
@@ -337,48 +342,48 @@ public class UnitsAndCash {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Instrm", required = true)
 	public FinancialInstrument7 getInstrument() {
 		return instrument;
 	}
 
-	public void setInstrument(com.tools20022.repository.msg.FinancialInstrument7 instrument) {
-		this.instrument = instrument;
+	public UnitsAndCash setInstrument(com.tools20022.repository.msg.FinancialInstrument7 instrument) {
+		this.instrument = Objects.requireNonNull(instrument);
+		return this;
 	}
 
-	@XmlElement(name = "GrdTtlAmt", required = true)
 	public ImpliedCurrencyAndAmount getGrandTotalAmount() {
 		return grandTotalAmount;
 	}
 
-	public void setGrandTotalAmount(ImpliedCurrencyAndAmount grandTotalAmount) {
-		this.grandTotalAmount = grandTotalAmount;
+	public UnitsAndCash setGrandTotalAmount(ImpliedCurrencyAndAmount grandTotalAmount) {
+		this.grandTotalAmount = Objects.requireNonNull(grandTotalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "Grp1Nb")
-	public DecimalNumber getGroup1Number() {
-		return group1Number;
+	public Optional<DecimalNumber> getGroup1Number() {
+		return group1Number == null ? Optional.empty() : Optional.of(group1Number);
 	}
 
-	public void setGroup1Number(DecimalNumber group1Number) {
+	public UnitsAndCash setGroup1Number(DecimalNumber group1Number) {
 		this.group1Number = group1Number;
+		return this;
 	}
 
-	@XmlElement(name = "Grp2Nb")
-	public DecimalNumber getGroup2Number() {
-		return group2Number;
+	public Optional<DecimalNumber> getGroup2Number() {
+		return group2Number == null ? Optional.empty() : Optional.of(group2Number);
 	}
 
-	public void setGroup2Number(DecimalNumber group2Number) {
+	public UnitsAndCash setGroup2Number(DecimalNumber group2Number) {
 		this.group2Number = group2Number;
+		return this;
 	}
 
-	@XmlElement(name = "CmpltInd")
-	public YesNoIndicator getCompleteIndicator() {
-		return completeIndicator;
+	public Optional<YesNoIndicator> getCompleteIndicator() {
+		return completeIndicator == null ? Optional.empty() : Optional.of(completeIndicator);
 	}
 
-	public void setCompleteIndicator(YesNoIndicator completeIndicator) {
+	public UnitsAndCash setCompleteIndicator(YesNoIndicator completeIndicator) {
 		this.completeIndicator = completeIndicator;
+		return this;
 	}
 }

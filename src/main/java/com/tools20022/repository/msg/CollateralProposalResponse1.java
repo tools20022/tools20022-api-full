@@ -25,6 +25,8 @@ import com.tools20022.repository.entity.CollateralProposal;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CollateralProposalResponse1", propOrder = {"variationMargin", "segregatedIndependentAmount"})
 public class CollateralProposalResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "VartnMrgn", required = true)
 	protected CollateralProposalResponseType1 variationMargin;
 	/**
-	 * Provides the collateral proposal response for the variation margin.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -125,7 +128,7 @@ public class CollateralProposalResponse1 {
 	public static final MMMessageAssociationEnd mmVariationMargin = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CollateralMovement.mmVariationMargin;
-			componentContext_lazy = () -> CollateralProposalResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralProposalResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "VartnMrgn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,11 +141,11 @@ public class CollateralProposalResponse1 {
 			type_lazy = () -> com.tools20022.repository.msg.CollateralProposalResponseType1.mmObject();
 		}
 	};
+	@XmlElement(name = "SgrtdIndpdntAmt")
 	protected CollateralProposalResponseType1 segregatedIndependentAmount;
 	/**
-	 * Provides the collateral proposal response for the segregated independent
-	 * amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -185,7 +188,7 @@ public class CollateralProposalResponse1 {
 	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CollateralMovement.mmSegregatedIndependentAmount;
-			componentContext_lazy = () -> CollateralProposalResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralProposalResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,9 +205,9 @@ public class CollateralProposalResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CollateralProposalResponse1.mmVariationMargin, CollateralProposalResponse1.mmSegregatedIndependentAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralProposalResponse1.mmVariationMargin, com.tools20022.repository.msg.CollateralProposalResponse1.mmSegregatedIndependentAmount);
 				trace_lazy = () -> CollateralProposal.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralProposalResponse1";
 				definition = "Provides the collateral proposal response for the variation margin and optionaly the segregated independent amount.";
@@ -214,21 +217,21 @@ public class CollateralProposalResponse1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "VartnMrgn", required = true)
 	public CollateralProposalResponseType1 getVariationMargin() {
 		return variationMargin;
 	}
 
-	public void setVariationMargin(com.tools20022.repository.msg.CollateralProposalResponseType1 variationMargin) {
-		this.variationMargin = variationMargin;
+	public CollateralProposalResponse1 setVariationMargin(com.tools20022.repository.msg.CollateralProposalResponseType1 variationMargin) {
+		this.variationMargin = Objects.requireNonNull(variationMargin);
+		return this;
 	}
 
-	@XmlElement(name = "SgrtdIndpdntAmt")
-	public CollateralProposalResponseType1 getSegregatedIndependentAmount() {
-		return segregatedIndependentAmount;
+	public Optional<CollateralProposalResponseType1> getSegregatedIndependentAmount() {
+		return segregatedIndependentAmount == null ? Optional.empty() : Optional.of(segregatedIndependentAmount);
 	}
 
-	public void setSegregatedIndependentAmount(com.tools20022.repository.msg.CollateralProposalResponseType1 segregatedIndependentAmount) {
+	public CollateralProposalResponse1 setSegregatedIndependentAmount(com.tools20022.repository.msg.CollateralProposalResponseType1 segregatedIndependentAmount) {
 		this.segregatedIndependentAmount = segregatedIndependentAmount;
+		return this;
 	}
 }

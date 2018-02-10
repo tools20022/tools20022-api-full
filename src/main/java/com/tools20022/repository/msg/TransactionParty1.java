@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +73,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,19 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionParty1", propOrder = {"initiatingParty", "debtor", "debtorAccount", "ultimateDebtor", "creditor", "creditorAccount", "ultimateCreditor", "tradingParty", "proprietary"})
 public class TransactionParty1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InitgPty")
 	protected PartyIdentification8 initiatingParty;
 	/**
-	 * Party initiating the payment to an agent. In the payment context, this
-	 * can either be the debtor (in a credit transfer), the creditor (in a
-	 * direct debit), or a party that initiates the payment on behalf of the
-	 * debtor or creditor. In the context of treasury, the party that instructs
-	 * the trading party to execute a treasury deal on its behalf.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -134,7 +130,7 @@ public class TransactionParty1 {
 	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> TransactionParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionParty1.mmObject();
 			isDerived = false;
 			xmlTag = "InitgPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,10 +142,11 @@ public class TransactionParty1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
 		}
 	};
+	@XmlElement(name = "Dbtr")
 	protected PartyIdentification8 debtor;
 	/**
-	 * Party that owes an amount of money to the (ultimate) creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -182,7 +179,7 @@ public class TransactionParty1 {
 	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> TransactionParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionParty1.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,10 +191,11 @@ public class TransactionParty1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
 		}
 	};
+	@XmlElement(name = "DbtrAcct")
 	protected CashAccount7 debtorAccount;
 	/**
-	 * Unambiguous identification of the account of the debtor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -229,7 +227,7 @@ public class TransactionParty1 {
 	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
-			componentContext_lazy = () -> TransactionParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionParty1.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,10 +239,11 @@ public class TransactionParty1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
 		}
 	};
+	@XmlElement(name = "UltmtDbtr")
 	protected PartyIdentification8 ultimateDebtor;
 	/**
-	 * Ultimate party that owes an amount of money to the (ultimate) creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -278,7 +277,7 @@ public class TransactionParty1 {
 	public static final MMMessageAssociationEnd mmUltimateDebtor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> TransactionParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionParty1.mmObject();
 			isDerived = false;
 			xmlTag = "UltmtDbtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -290,10 +289,11 @@ public class TransactionParty1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
 		}
 	};
+	@XmlElement(name = "Cdtr")
 	protected PartyIdentification8 creditor;
 	/**
-	 * Party to which an amount of money is due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -325,7 +325,7 @@ public class TransactionParty1 {
 	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> TransactionParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionParty1.mmObject();
 			isDerived = false;
 			xmlTag = "Cdtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -337,11 +337,11 @@ public class TransactionParty1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtrAcct")
 	protected CashAccount7 creditorAccount;
 	/**
-	 * Unambiguous identification of the account of the creditor of the payment
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -375,7 +375,7 @@ public class TransactionParty1 {
 	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
-			componentContext_lazy = () -> TransactionParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionParty1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -387,10 +387,11 @@ public class TransactionParty1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
 		}
 	};
+	@XmlElement(name = "UltmtCdtr")
 	protected PartyIdentification8 ultimateCreditor;
 	/**
-	 * Ultimate party to which an amount of money is due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -422,7 +423,7 @@ public class TransactionParty1 {
 	public static final MMMessageAssociationEnd mmUltimateCreditor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> TransactionParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionParty1.mmObject();
 			isDerived = false;
 			xmlTag = "UltmtCdtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -434,16 +435,11 @@ public class TransactionParty1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgPty")
 	protected PartyIdentification8 tradingParty;
 	/**
-	 * Party that plays an active role in planning and executing the
-	 * transactions that create or liquidate investments of the investors
-	 * assets, or that move the investor's assets from one investment to
-	 * another. A trading party is a trade instructor, an investment
-	 * decision-maker, a post trade administrator, or a trader. In the context
-	 * of treasury, it is the party that negotiates and executes the treasury
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -477,7 +473,7 @@ public class TransactionParty1 {
 	public static final MMMessageAssociationEnd mmTradingParty = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> TransactionParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionParty1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -489,10 +485,11 @@ public class TransactionParty1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry")
 	protected List<com.tools20022.repository.msg.ProprietaryParty1> proprietary;
 	/**
-	 * Provides proprietary party information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -518,7 +515,7 @@ public class TransactionParty1 {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionParty1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -533,10 +530,12 @@ public class TransactionParty1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionParty1.mmInitiatingParty, TransactionParty1.mmDebtor, TransactionParty1.mmDebtorAccount, TransactionParty1.mmUltimateDebtor, TransactionParty1.mmCreditor,
-						TransactionParty1.mmCreditorAccount, TransactionParty1.mmUltimateCreditor, TransactionParty1.mmTradingParty, TransactionParty1.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionParty1.mmInitiatingParty, com.tools20022.repository.msg.TransactionParty1.mmDebtor,
+						com.tools20022.repository.msg.TransactionParty1.mmDebtorAccount, com.tools20022.repository.msg.TransactionParty1.mmUltimateDebtor, com.tools20022.repository.msg.TransactionParty1.mmCreditor,
+						com.tools20022.repository.msg.TransactionParty1.mmCreditorAccount, com.tools20022.repository.msg.TransactionParty1.mmUltimateCreditor, com.tools20022.repository.msg.TransactionParty1.mmTradingParty,
+						com.tools20022.repository.msg.TransactionParty1.mmProprietary);
 				trace_lazy = () -> PaymentPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionParty1";
 				definition = "Set of elements providing information specific to the individual transaction(s) included in the message.";
@@ -545,84 +544,84 @@ public class TransactionParty1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InitgPty")
-	public PartyIdentification8 getInitiatingParty() {
-		return initiatingParty;
+	public Optional<PartyIdentification8> getInitiatingParty() {
+		return initiatingParty == null ? Optional.empty() : Optional.of(initiatingParty);
 	}
 
-	public void setInitiatingParty(com.tools20022.repository.msg.PartyIdentification8 initiatingParty) {
+	public TransactionParty1 setInitiatingParty(com.tools20022.repository.msg.PartyIdentification8 initiatingParty) {
 		this.initiatingParty = initiatingParty;
+		return this;
 	}
 
-	@XmlElement(name = "Dbtr")
-	public PartyIdentification8 getDebtor() {
-		return debtor;
+	public Optional<PartyIdentification8> getDebtor() {
+		return debtor == null ? Optional.empty() : Optional.of(debtor);
 	}
 
-	public void setDebtor(com.tools20022.repository.msg.PartyIdentification8 debtor) {
+	public TransactionParty1 setDebtor(com.tools20022.repository.msg.PartyIdentification8 debtor) {
 		this.debtor = debtor;
+		return this;
 	}
 
-	@XmlElement(name = "DbtrAcct")
-	public CashAccount7 getDebtorAccount() {
-		return debtorAccount;
+	public Optional<CashAccount7> getDebtorAccount() {
+		return debtorAccount == null ? Optional.empty() : Optional.of(debtorAccount);
 	}
 
-	public void setDebtorAccount(com.tools20022.repository.msg.CashAccount7 debtorAccount) {
+	public TransactionParty1 setDebtorAccount(com.tools20022.repository.msg.CashAccount7 debtorAccount) {
 		this.debtorAccount = debtorAccount;
+		return this;
 	}
 
-	@XmlElement(name = "UltmtDbtr")
-	public PartyIdentification8 getUltimateDebtor() {
-		return ultimateDebtor;
+	public Optional<PartyIdentification8> getUltimateDebtor() {
+		return ultimateDebtor == null ? Optional.empty() : Optional.of(ultimateDebtor);
 	}
 
-	public void setUltimateDebtor(com.tools20022.repository.msg.PartyIdentification8 ultimateDebtor) {
+	public TransactionParty1 setUltimateDebtor(com.tools20022.repository.msg.PartyIdentification8 ultimateDebtor) {
 		this.ultimateDebtor = ultimateDebtor;
+		return this;
 	}
 
-	@XmlElement(name = "Cdtr")
-	public PartyIdentification8 getCreditor() {
-		return creditor;
+	public Optional<PartyIdentification8> getCreditor() {
+		return creditor == null ? Optional.empty() : Optional.of(creditor);
 	}
 
-	public void setCreditor(com.tools20022.repository.msg.PartyIdentification8 creditor) {
+	public TransactionParty1 setCreditor(com.tools20022.repository.msg.PartyIdentification8 creditor) {
 		this.creditor = creditor;
+		return this;
 	}
 
-	@XmlElement(name = "CdtrAcct")
-	public CashAccount7 getCreditorAccount() {
-		return creditorAccount;
+	public Optional<CashAccount7> getCreditorAccount() {
+		return creditorAccount == null ? Optional.empty() : Optional.of(creditorAccount);
 	}
 
-	public void setCreditorAccount(com.tools20022.repository.msg.CashAccount7 creditorAccount) {
+	public TransactionParty1 setCreditorAccount(com.tools20022.repository.msg.CashAccount7 creditorAccount) {
 		this.creditorAccount = creditorAccount;
+		return this;
 	}
 
-	@XmlElement(name = "UltmtCdtr")
-	public PartyIdentification8 getUltimateCreditor() {
-		return ultimateCreditor;
+	public Optional<PartyIdentification8> getUltimateCreditor() {
+		return ultimateCreditor == null ? Optional.empty() : Optional.of(ultimateCreditor);
 	}
 
-	public void setUltimateCreditor(com.tools20022.repository.msg.PartyIdentification8 ultimateCreditor) {
+	public TransactionParty1 setUltimateCreditor(com.tools20022.repository.msg.PartyIdentification8 ultimateCreditor) {
 		this.ultimateCreditor = ultimateCreditor;
+		return this;
 	}
 
-	@XmlElement(name = "TradgPty")
-	public PartyIdentification8 getTradingParty() {
-		return tradingParty;
+	public Optional<PartyIdentification8> getTradingParty() {
+		return tradingParty == null ? Optional.empty() : Optional.of(tradingParty);
 	}
 
-	public void setTradingParty(com.tools20022.repository.msg.PartyIdentification8 tradingParty) {
+	public TransactionParty1 setTradingParty(com.tools20022.repository.msg.PartyIdentification8 tradingParty) {
 		this.tradingParty = tradingParty;
+		return this;
 	}
 
-	@XmlElement(name = "Prtry")
 	public List<ProprietaryParty1> getProprietary() {
-		return proprietary;
+		return proprietary == null ? proprietary = new ArrayList<>() : proprietary;
 	}
 
-	public void setProprietary(List<com.tools20022.repository.msg.ProprietaryParty1> proprietary) {
-		this.proprietary = proprietary;
+	public TransactionParty1 setProprietary(List<com.tools20022.repository.msg.ProprietaryParty1> proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

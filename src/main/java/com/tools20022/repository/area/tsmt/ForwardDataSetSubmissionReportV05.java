@@ -25,9 +25,8 @@ import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -42,22 +41,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
- * TradeServicesManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion
- * TradeServicesManagementISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "FwdDataSetSubmissnRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -100,6 +83,22 @@ import javax.xml.bind.annotation.*;
  * ForwardDataSetSubmissionReportV05.mmRequestForAction}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion
+ * TradeServicesManagementISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "FwdDataSetSubmissnRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
+ * TradeServicesManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code tsmt.017.001.05}</li>
@@ -119,16 +118,17 @@ import javax.xml.bind.annotation.*;
  * ForwardDataSetSubmissionReportV04}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ForwardDataSetSubmissionReportV05", propOrder = {"reportIdentification", "relatedTransactionReferences", "commonSubmissionReference", "submitter", "buyerBank", "sellerBank", "commercialDataSet", "transportDataSet",
 		"insuranceDataSet", "certificateDataSet", "otherCertificateDataSet", "requestForAction"})
 public class ForwardDataSetSubmissionReportV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptId", required = true)
 	protected MessageIdentification1 reportIdentification;
 	/**
-	 * Identifies the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,11 +174,11 @@ public class ForwardDataSetSubmissionReportV05 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdTxRefs", required = true)
 	protected List<DataSetSubmissionReferences4> relatedTransactionReferences;
 	/**
-	 * Identifies the transactions that this submission relates to and provides
-	 * associated information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,11 +225,11 @@ public class ForwardDataSetSubmissionReportV05 {
 			}
 		}
 	};
+	@XmlElement(name = "CmonSubmissnRef", required = true)
 	protected SimpleIdentificationInformation commonSubmissionReference;
 	/**
-	 * This reference must be used for all data sets belonging to the same
-	 * submission group.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -277,11 +277,11 @@ public class ForwardDataSetSubmissionReportV05 {
 			}
 		}
 	};
+	@XmlElement(name = "Submitr", required = true)
 	protected BICIdentification1 submitter;
 	/**
-	 * The financial institution that has submitted the data sets to the
-	 * matching engine.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -329,10 +329,11 @@ public class ForwardDataSetSubmissionReportV05 {
 			}
 		}
 	};
+	@XmlElement(name = "BuyrBk", required = true)
 	protected BICIdentification1 buyerBank;
 	/**
-	 * The financial institution of the buyer, uniquely identified by its BIC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -380,10 +381,11 @@ public class ForwardDataSetSubmissionReportV05 {
 			}
 		}
 	};
+	@XmlElement(name = "SellrBk", required = true)
 	protected BICIdentification1 sellerBank;
 	/**
-	 * The financial institution of the seller, uniquely identified by its BIC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -431,11 +433,11 @@ public class ForwardDataSetSubmissionReportV05 {
 			}
 		}
 	};
+	@XmlElement(name = "ComrclDataSet")
 	protected CommercialDataSet5 commercialDataSet;
 	/**
-	 * Commercial information that has been submitted to the matching
-	 * application by the other party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -483,11 +485,11 @@ public class ForwardDataSetSubmissionReportV05 {
 			}
 		}
 	};
+	@XmlElement(name = "TrnsprtDataSet")
 	protected TransportDataSet5 transportDataSet;
 	/**
-	 * Transport information that has been submitted to the matching application
-	 * by the other party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -535,11 +537,11 @@ public class ForwardDataSetSubmissionReportV05 {
 			}
 		}
 	};
+	@XmlElement(name = "InsrncDataSet")
 	protected InsuranceDataSet1 insuranceDataSet;
 	/**
-	 * Insurance information that has been submitted to the matching application
-	 * by the other party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -587,11 +589,11 @@ public class ForwardDataSetSubmissionReportV05 {
 			}
 		}
 	};
+	@XmlElement(name = "CertDataSet")
 	protected List<CertificateDataSet2> certificateDataSet;
 	/**
-	 * Certificate information that has been submitted to the matching
-	 * application by the other party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -638,11 +640,11 @@ public class ForwardDataSetSubmissionReportV05 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrCertDataSet")
 	protected List<OtherCertificateDataSet2> otherCertificateDataSet;
 	/**
-	 * Other certificate information that has been submitted to the matching
-	 * application by the other party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -689,10 +691,11 @@ public class ForwardDataSetSubmissionReportV05 {
 			}
 		}
 	};
+	@XmlElement(name = "ReqForActn")
 	protected PendingActivity2 requestForAction;
 	/**
-	 * Next processing step required.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -775,115 +778,115 @@ public class ForwardDataSetSubmissionReportV05 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptId", required = true)
 	public MessageIdentification1 getReportIdentification() {
 		return reportIdentification;
 	}
 
-	public void setReportIdentification(MessageIdentification1 reportIdentification) {
-		this.reportIdentification = reportIdentification;
+	public ForwardDataSetSubmissionReportV05 setReportIdentification(MessageIdentification1 reportIdentification) {
+		this.reportIdentification = Objects.requireNonNull(reportIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RltdTxRefs", required = true)
 	public List<DataSetSubmissionReferences4> getRelatedTransactionReferences() {
-		return relatedTransactionReferences;
+		return relatedTransactionReferences == null ? relatedTransactionReferences = new ArrayList<>() : relatedTransactionReferences;
 	}
 
-	public void setRelatedTransactionReferences(List<DataSetSubmissionReferences4> relatedTransactionReferences) {
-		this.relatedTransactionReferences = relatedTransactionReferences;
+	public ForwardDataSetSubmissionReportV05 setRelatedTransactionReferences(List<DataSetSubmissionReferences4> relatedTransactionReferences) {
+		this.relatedTransactionReferences = Objects.requireNonNull(relatedTransactionReferences);
+		return this;
 	}
 
-	@XmlElement(name = "CmonSubmissnRef", required = true)
 	public SimpleIdentificationInformation getCommonSubmissionReference() {
 		return commonSubmissionReference;
 	}
 
-	public void setCommonSubmissionReference(SimpleIdentificationInformation commonSubmissionReference) {
-		this.commonSubmissionReference = commonSubmissionReference;
+	public ForwardDataSetSubmissionReportV05 setCommonSubmissionReference(SimpleIdentificationInformation commonSubmissionReference) {
+		this.commonSubmissionReference = Objects.requireNonNull(commonSubmissionReference);
+		return this;
 	}
 
-	@XmlElement(name = "Submitr", required = true)
 	public BICIdentification1 getSubmitter() {
 		return submitter;
 	}
 
-	public void setSubmitter(BICIdentification1 submitter) {
-		this.submitter = submitter;
+	public ForwardDataSetSubmissionReportV05 setSubmitter(BICIdentification1 submitter) {
+		this.submitter = Objects.requireNonNull(submitter);
+		return this;
 	}
 
-	@XmlElement(name = "BuyrBk", required = true)
 	public BICIdentification1 getBuyerBank() {
 		return buyerBank;
 	}
 
-	public void setBuyerBank(BICIdentification1 buyerBank) {
-		this.buyerBank = buyerBank;
+	public ForwardDataSetSubmissionReportV05 setBuyerBank(BICIdentification1 buyerBank) {
+		this.buyerBank = Objects.requireNonNull(buyerBank);
+		return this;
 	}
 
-	@XmlElement(name = "SellrBk", required = true)
 	public BICIdentification1 getSellerBank() {
 		return sellerBank;
 	}
 
-	public void setSellerBank(BICIdentification1 sellerBank) {
-		this.sellerBank = sellerBank;
+	public ForwardDataSetSubmissionReportV05 setSellerBank(BICIdentification1 sellerBank) {
+		this.sellerBank = Objects.requireNonNull(sellerBank);
+		return this;
 	}
 
-	@XmlElement(name = "ComrclDataSet")
-	public CommercialDataSet5 getCommercialDataSet() {
-		return commercialDataSet;
+	public Optional<CommercialDataSet5> getCommercialDataSet() {
+		return commercialDataSet == null ? Optional.empty() : Optional.of(commercialDataSet);
 	}
 
-	public void setCommercialDataSet(CommercialDataSet5 commercialDataSet) {
+	public ForwardDataSetSubmissionReportV05 setCommercialDataSet(CommercialDataSet5 commercialDataSet) {
 		this.commercialDataSet = commercialDataSet;
+		return this;
 	}
 
-	@XmlElement(name = "TrnsprtDataSet")
-	public TransportDataSet5 getTransportDataSet() {
-		return transportDataSet;
+	public Optional<TransportDataSet5> getTransportDataSet() {
+		return transportDataSet == null ? Optional.empty() : Optional.of(transportDataSet);
 	}
 
-	public void setTransportDataSet(TransportDataSet5 transportDataSet) {
+	public ForwardDataSetSubmissionReportV05 setTransportDataSet(TransportDataSet5 transportDataSet) {
 		this.transportDataSet = transportDataSet;
+		return this;
 	}
 
-	@XmlElement(name = "InsrncDataSet")
-	public InsuranceDataSet1 getInsuranceDataSet() {
-		return insuranceDataSet;
+	public Optional<InsuranceDataSet1> getInsuranceDataSet() {
+		return insuranceDataSet == null ? Optional.empty() : Optional.of(insuranceDataSet);
 	}
 
-	public void setInsuranceDataSet(InsuranceDataSet1 insuranceDataSet) {
+	public ForwardDataSetSubmissionReportV05 setInsuranceDataSet(InsuranceDataSet1 insuranceDataSet) {
 		this.insuranceDataSet = insuranceDataSet;
+		return this;
 	}
 
-	@XmlElement(name = "CertDataSet")
 	public List<CertificateDataSet2> getCertificateDataSet() {
-		return certificateDataSet;
+		return certificateDataSet == null ? certificateDataSet = new ArrayList<>() : certificateDataSet;
 	}
 
-	public void setCertificateDataSet(List<CertificateDataSet2> certificateDataSet) {
-		this.certificateDataSet = certificateDataSet;
+	public ForwardDataSetSubmissionReportV05 setCertificateDataSet(List<CertificateDataSet2> certificateDataSet) {
+		this.certificateDataSet = Objects.requireNonNull(certificateDataSet);
+		return this;
 	}
 
-	@XmlElement(name = "OthrCertDataSet")
 	public List<OtherCertificateDataSet2> getOtherCertificateDataSet() {
-		return otherCertificateDataSet;
+		return otherCertificateDataSet == null ? otherCertificateDataSet = new ArrayList<>() : otherCertificateDataSet;
 	}
 
-	public void setOtherCertificateDataSet(List<OtherCertificateDataSet2> otherCertificateDataSet) {
-		this.otherCertificateDataSet = otherCertificateDataSet;
+	public ForwardDataSetSubmissionReportV05 setOtherCertificateDataSet(List<OtherCertificateDataSet2> otherCertificateDataSet) {
+		this.otherCertificateDataSet = Objects.requireNonNull(otherCertificateDataSet);
+		return this;
 	}
 
-	@XmlElement(name = "ReqForActn")
-	public PendingActivity2 getRequestForAction() {
-		return requestForAction;
+	public Optional<PendingActivity2> getRequestForAction() {
+		return requestForAction == null ? Optional.empty() : Optional.of(requestForAction);
 	}
 
-	public void setRequestForAction(PendingActivity2 requestForAction) {
+	public ForwardDataSetSubmissionReportV05 setRequestForAction(PendingActivity2 requestForAction) {
 		this.requestForAction = requestForAction;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.017.05.05")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.017.001.05")
 	static public class Document {
 		@XmlElement(name = "FwdDataSetSubmissnRpt", required = true)
 		public ForwardDataSetSubmissionReportV05 messageBody;

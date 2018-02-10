@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -27,6 +29,7 @@ import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -95,8 +98,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,15 +115,16 @@ import javax.xml.bind.annotation.XmlType;
  * CashParties17}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashParties26", propOrder = {"debtor", "debtorAgent", "creditor", "creditorAgent", "intermediary"})
 public class CashParties26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dbtr")
 	protected PartyIdentificationAndAccount111 debtor;
 	/**
-	 * Party that owes an amount of money to the (ultimate) creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -138,6 +142,10 @@ public class CashParties26 {
 	 * {@linkplain com.tools20022.repository.msg.CashParties26 CashParties26}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Dbtr"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 452, FIXSynonym: 448, FIXSynonym: 447,
+	 * ISO15022Synonym: :95a::DEBT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -158,9 +166,10 @@ public class CashParties26 {
 	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CashParties26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties26.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "452"), new FIXSynonym(this, "448"), new FIXSynonym(this, "447"), new ISO15022Synonym(this, ":95a::DEBT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes an amount of money to the (ultimate) creditor.";
@@ -171,10 +180,11 @@ public class CashParties26 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount111.mmObject();
 		}
 	};
+	@XmlElement(name = "DbtrAgt")
 	protected PartyIdentificationAndAccount112 debtorAgent;
 	/**
-	 * Financial institution servicing an account for the debtor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -192,6 +202,10 @@ public class CashParties26 {
 	 * {@linkplain com.tools20022.repository.msg.CashParties26 CashParties26}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DbtrAgt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 452, FIXSynonym: 448, FIXSynonym: 447,
+	 * ISO15022Synonym: :95a::PAYE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -212,9 +226,10 @@ public class CashParties26 {
 	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CashParties26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties26.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAgt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "452"), new FIXSynonym(this, "448"), new FIXSynonym(this, "447"), new ISO15022Synonym(this, ":95a::PAYE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
 			definition = "Financial institution servicing an account for the debtor.";
@@ -225,10 +240,11 @@ public class CashParties26 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmObject();
 		}
 	};
+	@XmlElement(name = "Cdtr")
 	protected PartyIdentificationAndAccount111 creditor;
 	/**
-	 * Party to which an amount of money is due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -246,6 +262,10 @@ public class CashParties26 {
 	 * {@linkplain com.tools20022.repository.msg.CashParties26 CashParties26}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Cdtr"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 452, FIXSynonym: 448, FIXSynonym: 447,
+	 * ISO15022Synonym: :95a::BENM</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -265,9 +285,10 @@ public class CashParties26 {
 	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CashParties26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties26.mmObject();
 			isDerived = false;
 			xmlTag = "Cdtr";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "452"), new FIXSynonym(this, "448"), new FIXSynonym(this, "447"), new ISO15022Synonym(this, ":95a::BENM"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Party to which an amount of money is due.";
@@ -278,10 +299,11 @@ public class CashParties26 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount111.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtrAgt")
 	protected PartyIdentificationAndAccount112 creditorAgent;
 	/**
-	 * Financial institution servicing an account for the creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -299,6 +321,10 @@ public class CashParties26 {
 	 * {@linkplain com.tools20022.repository.msg.CashParties26 CashParties26}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CdtrAgt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 452, FIXSynonym: 448, FIXSynonym: 447,
+	 * ISO15022Synonym: :95a::ACCW</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -319,9 +345,10 @@ public class CashParties26 {
 	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CashParties26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties26.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAgt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "452"), new FIXSynonym(this, "448"), new FIXSynonym(this, "447"), new ISO15022Synonym(this, ":95a::ACCW"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgent";
 			definition = "Financial institution servicing an account for the creditor.";
@@ -332,11 +359,11 @@ public class CashParties26 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmObject();
 		}
 	};
+	@XmlElement(name = "Intrmy")
 	protected PartyIdentificationAndAccount112 intermediary;
 	/**
-	 * Financial institution through which the transaction must pass to reach
-	 * the account with institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -376,7 +403,7 @@ public class CashParties26 {
 	public static final MMMessageAttribute mmIntermediary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CashParties26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties26.mmObject();
 			isDerived = false;
 			xmlTag = "Intrmy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -392,13 +419,14 @@ public class CashParties26 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashParties26.mmDebtor, CashParties26.mmDebtorAgent, CashParties26.mmCreditor, CashParties26.mmCreditorAgent, CashParties26.mmIntermediary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashParties26.mmDebtor, com.tools20022.repository.msg.CashParties26.mmDebtorAgent, com.tools20022.repository.msg.CashParties26.mmCreditor,
+						com.tools20022.repository.msg.CashParties26.mmCreditorAgent, com.tools20022.repository.msg.CashParties26.mmIntermediary);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionInstructionV06.mmCashParties, SecuritiesSettlementTransactionConfirmationV06.mmCashParties, SecuritiesFinancingInstructionV06.mmCashParties,
 						SecuritiesSettlementTransactionGenerationNotificationV06.mmCashParties, SecuritiesFinancingConfirmationV06.mmCashParties, SecuritiesFinancingInstructionV07.mmCashParties,
 						SecuritiesSettlementTransactionGenerationNotificationV07.mmCashParties, SecuritiesSettlementTransactionConfirmationV07.mmCashParties, SecuritiesFinancingConfirmationV07.mmCashParties,
 						SecuritiesSettlementTransactionInstructionV07.mmCashParties);
 				trace_lazy = () -> PaymentPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashParties26";
 				definition = "Payment processes required to transfer cash from the debtor to the creditor.";
@@ -408,48 +436,48 @@ public class CashParties26 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dbtr")
-	public PartyIdentificationAndAccount111 getDebtor() {
-		return debtor;
+	public Optional<PartyIdentificationAndAccount111> getDebtor() {
+		return debtor == null ? Optional.empty() : Optional.of(debtor);
 	}
 
-	public void setDebtor(com.tools20022.repository.msg.PartyIdentificationAndAccount111 debtor) {
+	public CashParties26 setDebtor(com.tools20022.repository.msg.PartyIdentificationAndAccount111 debtor) {
 		this.debtor = debtor;
+		return this;
 	}
 
-	@XmlElement(name = "DbtrAgt")
-	public PartyIdentificationAndAccount112 getDebtorAgent() {
-		return debtorAgent;
+	public Optional<PartyIdentificationAndAccount112> getDebtorAgent() {
+		return debtorAgent == null ? Optional.empty() : Optional.of(debtorAgent);
 	}
 
-	public void setDebtorAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount112 debtorAgent) {
+	public CashParties26 setDebtorAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount112 debtorAgent) {
 		this.debtorAgent = debtorAgent;
+		return this;
 	}
 
-	@XmlElement(name = "Cdtr")
-	public PartyIdentificationAndAccount111 getCreditor() {
-		return creditor;
+	public Optional<PartyIdentificationAndAccount111> getCreditor() {
+		return creditor == null ? Optional.empty() : Optional.of(creditor);
 	}
 
-	public void setCreditor(com.tools20022.repository.msg.PartyIdentificationAndAccount111 creditor) {
+	public CashParties26 setCreditor(com.tools20022.repository.msg.PartyIdentificationAndAccount111 creditor) {
 		this.creditor = creditor;
+		return this;
 	}
 
-	@XmlElement(name = "CdtrAgt")
-	public PartyIdentificationAndAccount112 getCreditorAgent() {
-		return creditorAgent;
+	public Optional<PartyIdentificationAndAccount112> getCreditorAgent() {
+		return creditorAgent == null ? Optional.empty() : Optional.of(creditorAgent);
 	}
 
-	public void setCreditorAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount112 creditorAgent) {
+	public CashParties26 setCreditorAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount112 creditorAgent) {
 		this.creditorAgent = creditorAgent;
+		return this;
 	}
 
-	@XmlElement(name = "Intrmy")
-	public PartyIdentificationAndAccount112 getIntermediary() {
-		return intermediary;
+	public Optional<PartyIdentificationAndAccount112> getIntermediary() {
+		return intermediary == null ? Optional.empty() : Optional.of(intermediary);
 	}
 
-	public void setIntermediary(com.tools20022.repository.msg.PartyIdentificationAndAccount112 intermediary) {
+	public CashParties26 setIntermediary(com.tools20022.repository.msg.PartyIdentificationAndAccount112 intermediary) {
 		this.intermediary = intermediary;
+		return this;
 	}
 }

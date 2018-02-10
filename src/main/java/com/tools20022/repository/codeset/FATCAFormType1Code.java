@@ -20,49 +20,53 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.FATCAFormTypeCode;
+import com.tools20022.repository.codeset.FATCAFormType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of Foreign Account Tax Compliance Act (FATCA) form.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.FATCAFormTypeCode
- * FATCAFormTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FATCAFormType1Code#mmCertificateForeignIntermediary
- * FATCAFormType1Code.mmCertificateForeignIntermediary}</li>
+ * {@linkplain com.tools20022.repository.codeset.FATCAFormType1Code#CertificateForeignIntermediary
+ * FATCAFormType1Code.CertificateForeignIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FATCAFormType1Code#mmCertificateForeignPersonsClaim
- * FATCAFormType1Code.mmCertificateForeignPersonsClaim}</li>
+ * {@linkplain com.tools20022.repository.codeset.FATCAFormType1Code#CertificateForeignPersonsClaim
+ * FATCAFormType1Code.CertificateForeignPersonsClaim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FATCAFormType1Code#mmCertificateForeignStatusBeneficialOwner
- * FATCAFormType1Code.mmCertificateForeignStatusBeneficialOwner}</li>
+ * {@linkplain com.tools20022.repository.codeset.FATCAFormType1Code#CertificateForeignStatusBeneficialOwner
+ * FATCAFormType1Code.CertificateForeignStatusBeneficialOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FATCAFormType1Code#mmCertificateLossNationality
- * FATCAFormType1Code.mmCertificateLossNationality}</li>
+ * {@linkplain com.tools20022.repository.codeset.FATCAFormType1Code#CertificateLossNationality
+ * FATCAFormType1Code.CertificateLossNationality}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FATCAFormType1Code#mmSelfCertification
- * FATCAFormType1Code.mmSelfCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.FATCAFormType1Code#SelfCertification
+ * FATCAFormType1Code.SelfCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FATCAFormType1Code#mmSelfCertificationLossNationality
- * FATCAFormType1Code.mmSelfCertificationLossNationality}</li>
+ * {@linkplain com.tools20022.repository.codeset.FATCAFormType1Code#SelfCertificationLossNationality
+ * FATCAFormType1Code.SelfCertificationLossNationality}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FATCAFormType1Code#mmTaxpayerIdentificationNumberRequest
- * FATCAFormType1Code.mmTaxpayerIdentificationNumberRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.FATCAFormType1Code#TaxpayerIdentificationNumberRequest
+ * FATCAFormType1Code.TaxpayerIdentificationNumberRequest}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.FATCAFormTypeCode
+ * FATCAFormTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,7 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the type of Foreign Account Tax Compliance Act (FATCA) form."</li>
  * </ul>
  */
-public class FATCAFormType1Code extends FATCAFormTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FATCAFormType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,11 +98,12 @@ public class FATCAFormType1Code extends FATCAFormTypeCode {
 	 * name} = "CertificateForeignIntermediary"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertificateForeignIntermediary = new MMCode() {
+	public static final FATCAFormType1Code CertificateForeignIntermediary = new FATCAFormType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateForeignIntermediary";
-			owner_lazy = () -> FATCAFormType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCAFormType1Code.mmObject();
+			codeName = FATCAFormTypeCode.CertificateForeignIntermediary.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -116,11 +122,12 @@ public class FATCAFormType1Code extends FATCAFormTypeCode {
 	 * name} = "CertificateForeignPersonsClaim"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertificateForeignPersonsClaim = new MMCode() {
+	public static final FATCAFormType1Code CertificateForeignPersonsClaim = new FATCAFormType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateForeignPersonsClaim";
-			owner_lazy = () -> FATCAFormType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCAFormType1Code.mmObject();
+			codeName = FATCAFormTypeCode.CertificateForeignPersonsClaim.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -139,11 +146,12 @@ public class FATCAFormType1Code extends FATCAFormTypeCode {
 	 * name} = "CertificateForeignStatusBeneficialOwner"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertificateForeignStatusBeneficialOwner = new MMCode() {
+	public static final FATCAFormType1Code CertificateForeignStatusBeneficialOwner = new FATCAFormType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateForeignStatusBeneficialOwner";
-			owner_lazy = () -> FATCAFormType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCAFormType1Code.mmObject();
+			codeName = FATCAFormTypeCode.CertificateForeignStatusBeneficialOwner.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -162,11 +170,12 @@ public class FATCAFormType1Code extends FATCAFormTypeCode {
 	 * name} = "CertificateLossNationality"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertificateLossNationality = new MMCode() {
+	public static final FATCAFormType1Code CertificateLossNationality = new FATCAFormType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateLossNationality";
-			owner_lazy = () -> FATCAFormType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCAFormType1Code.mmObject();
+			codeName = FATCAFormTypeCode.CertificateLossNationality.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -185,11 +194,12 @@ public class FATCAFormType1Code extends FATCAFormTypeCode {
 	 * name} = "SelfCertification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSelfCertification = new MMCode() {
+	public static final FATCAFormType1Code SelfCertification = new FATCAFormType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfCertification";
-			owner_lazy = () -> FATCAFormType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCAFormType1Code.mmObject();
+			codeName = FATCAFormTypeCode.SelfCertification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -208,11 +218,12 @@ public class FATCAFormType1Code extends FATCAFormTypeCode {
 	 * name} = "SelfCertificationLossNationality"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSelfCertificationLossNationality = new MMCode() {
+	public static final FATCAFormType1Code SelfCertificationLossNationality = new FATCAFormType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfCertificationLossNationality";
-			owner_lazy = () -> FATCAFormType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCAFormType1Code.mmObject();
+			codeName = FATCAFormTypeCode.SelfCertificationLossNationality.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -231,26 +242,64 @@ public class FATCAFormType1Code extends FATCAFormTypeCode {
 	 * name} = "TaxpayerIdentificationNumberRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxpayerIdentificationNumberRequest = new MMCode() {
+	public static final FATCAFormType1Code TaxpayerIdentificationNumberRequest = new FATCAFormType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxpayerIdentificationNumberRequest";
-			owner_lazy = () -> FATCAFormType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCAFormType1Code.mmObject();
+			codeName = FATCAFormTypeCode.TaxpayerIdentificationNumberRequest.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, FATCAFormType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FATCAFormType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FATCAFormType1Code";
 				definition = "Specifies the type of Foreign Account Tax Compliance Act (FATCA) form.";
-				code_lazy = () -> Arrays.asList(FATCAFormType1Code.mmCertificateForeignIntermediary, FATCAFormType1Code.mmCertificateForeignPersonsClaim, FATCAFormType1Code.mmCertificateForeignStatusBeneficialOwner,
-						FATCAFormType1Code.mmCertificateLossNationality, FATCAFormType1Code.mmSelfCertification, FATCAFormType1Code.mmSelfCertificationLossNationality, FATCAFormType1Code.mmTaxpayerIdentificationNumberRequest);
 				trace_lazy = () -> FATCAFormTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FATCAFormType1Code.CertificateForeignIntermediary, com.tools20022.repository.codeset.FATCAFormType1Code.CertificateForeignPersonsClaim,
+						com.tools20022.repository.codeset.FATCAFormType1Code.CertificateForeignStatusBeneficialOwner, com.tools20022.repository.codeset.FATCAFormType1Code.CertificateLossNationality,
+						com.tools20022.repository.codeset.FATCAFormType1Code.SelfCertification, com.tools20022.repository.codeset.FATCAFormType1Code.SelfCertificationLossNationality,
+						com.tools20022.repository.codeset.FATCAFormType1Code.TaxpayerIdentificationNumberRequest);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CertificateForeignIntermediary.getCodeName().get(), CertificateForeignIntermediary);
+		codesByName.put(CertificateForeignPersonsClaim.getCodeName().get(), CertificateForeignPersonsClaim);
+		codesByName.put(CertificateForeignStatusBeneficialOwner.getCodeName().get(), CertificateForeignStatusBeneficialOwner);
+		codesByName.put(CertificateLossNationality.getCodeName().get(), CertificateLossNationality);
+		codesByName.put(SelfCertification.getCodeName().get(), SelfCertification);
+		codesByName.put(SelfCertificationLossNationality.getCodeName().get(), SelfCertificationLossNationality);
+		codesByName.put(TaxpayerIdentificationNumberRequest.getCodeName().get(), TaxpayerIdentificationNumberRequest);
+	}
+
+	public static FATCAFormType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FATCAFormType1Code[] values() {
+		FATCAFormType1Code[] values = new FATCAFormType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FATCAFormType1Code> {
+		@Override
+		public FATCAFormType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FATCAFormType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -26,9 +26,8 @@ import com.tools20022.repository.entity.IntraPositionTransfer;
 import com.tools20022.repository.entity.SafekeepingPlace;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +59,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceFromToRule2#forIntraPositionDetails32
+ * ConstraintBalanceFromToRule2.forIntraPositionDetails32}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,18 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * IntraPositionDetails28}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IntraPositionDetails32", propOrder = {"safekeepingPlace", "balanceFrom", "intraPositionMovement"})
 public class IntraPositionDetails32 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SfkpgPlc")
 	protected SafekeepingPlaceFormat10Choice safekeepingPlace;
 	/**
-	 * Place where the securities are safe-kept, physically or notionally. This
-	 * place can be, for example, a local custodian, a Central Securities
-	 * Depository (CSD) or an International Central Securities Depository
-	 * (ICSD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -142,7 +147,7 @@ public class IntraPositionDetails32 {
 	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
-			componentContext_lazy = () -> IntraPositionDetails32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionDetails32.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +161,11 @@ public class IntraPositionDetails32 {
 			type_lazy = () -> SafekeepingPlaceFormat10Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "BalFr", required = true)
 	protected SecuritiesBalanceType6Choice balanceFrom;
 	/**
-	 * Balance from which the securities were moved.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -205,7 +211,7 @@ public class IntraPositionDetails32 {
 	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
-			componentContext_lazy = () -> IntraPositionDetails32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionDetails32.mmObject();
 			isDerived = false;
 			xmlTag = "BalFr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,10 +225,11 @@ public class IntraPositionDetails32 {
 			type_lazy = () -> SecuritiesBalanceType6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IntraPosMvmnt", required = true)
 	protected List<com.tools20022.repository.msg.IntraPositionMovementDetails11> intraPositionMovement;
 	/**
-	 * Intra-position movement(s) having been performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -268,7 +275,7 @@ public class IntraPositionDetails32 {
 	public static final MMMessageAssociationEnd mmIntraPositionMovement = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> IntraPositionTransfer.mmObject();
-			componentContext_lazy = () -> IntraPositionDetails32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionDetails32.mmObject();
 			isDerived = false;
 			xmlTag = "IntraPosMvmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -285,9 +292,11 @@ public class IntraPositionDetails32 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IntraPositionDetails32.mmSafekeepingPlace, IntraPositionDetails32.mmBalanceFrom, IntraPositionDetails32.mmIntraPositionMovement);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionDetails32.mmSafekeepingPlace, com.tools20022.repository.msg.IntraPositionDetails32.mmBalanceFrom,
+						com.tools20022.repository.msg.IntraPositionDetails32.mmIntraPositionMovement);
 				trace_lazy = () -> IntraPositionTransfer.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceFromToRule2.forIntraPositionDetails32);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IntraPositionDetails32";
 				definition = "Details of the intra-position movement.";
@@ -298,30 +307,30 @@ public class IntraPositionDetails32 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SfkpgPlc")
-	public SafekeepingPlaceFormat10Choice getSafekeepingPlace() {
-		return safekeepingPlace;
+	public Optional<SafekeepingPlaceFormat10Choice> getSafekeepingPlace() {
+		return safekeepingPlace == null ? Optional.empty() : Optional.of(safekeepingPlace);
 	}
 
-	public void setSafekeepingPlace(SafekeepingPlaceFormat10Choice safekeepingPlace) {
+	public IntraPositionDetails32 setSafekeepingPlace(SafekeepingPlaceFormat10Choice safekeepingPlace) {
 		this.safekeepingPlace = safekeepingPlace;
+		return this;
 	}
 
-	@XmlElement(name = "BalFr", required = true)
 	public SecuritiesBalanceType6Choice getBalanceFrom() {
 		return balanceFrom;
 	}
 
-	public void setBalanceFrom(SecuritiesBalanceType6Choice balanceFrom) {
-		this.balanceFrom = balanceFrom;
+	public IntraPositionDetails32 setBalanceFrom(SecuritiesBalanceType6Choice balanceFrom) {
+		this.balanceFrom = Objects.requireNonNull(balanceFrom);
+		return this;
 	}
 
-	@XmlElement(name = "IntraPosMvmnt", required = true)
 	public List<IntraPositionMovementDetails11> getIntraPositionMovement() {
-		return intraPositionMovement;
+		return intraPositionMovement == null ? intraPositionMovement = new ArrayList<>() : intraPositionMovement;
 	}
 
-	public void setIntraPositionMovement(List<com.tools20022.repository.msg.IntraPositionMovementDetails11> intraPositionMovement) {
-		this.intraPositionMovement = intraPositionMovement;
+	public IntraPositionDetails32 setIntraPositionMovement(List<com.tools20022.repository.msg.IntraPositionMovementDetails11> intraPositionMovement) {
+		this.intraPositionMovement = Objects.requireNonNull(intraPositionMovement);
+		return this;
 	}
 }

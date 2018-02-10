@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,16 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * CashAccount29}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashAccount34", propOrder = {"identification", "accountServicer"})
 public class CashAccount34 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected AccountIdentificationAndName5 identification;
 	/**
-	 * Unique and unambiguous identification of the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,7 +134,7 @@ public class CashAccount34 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> CashAccount34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount34.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -144,10 +146,11 @@ public class CashAccount34 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName5.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcr")
 	protected FinancialInstitutionIdentification7Choice accountServicer;
 	/**
-	 * Institution that maintains the records where the account is held.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,7 +189,7 @@ public class CashAccount34 {
 	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> CashAccount34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount34.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,10 +205,10 @@ public class CashAccount34 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashAccount34.mmIdentification, CashAccount34.mmAccountServicer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount34.mmIdentification, com.tools20022.repository.msg.CashAccount34.mmAccountServicer);
 				messageBuildingBlock_lazy = () -> Arrays.asList(PortfolioTransferInstructionV07.mmCashAccount, PortfolioTransferConfirmationV07.mmCashAccount);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccount34";
 				definition = "Information used for identifying an account.";
@@ -215,21 +218,21 @@ public class CashAccount34 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public AccountIdentificationAndName5 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.AccountIdentificationAndName5 identification) {
-		this.identification = identification;
+	public CashAccount34 setIdentification(com.tools20022.repository.msg.AccountIdentificationAndName5 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcr")
-	public FinancialInstitutionIdentification7Choice getAccountServicer() {
-		return accountServicer;
+	public Optional<FinancialInstitutionIdentification7Choice> getAccountServicer() {
+		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public void setAccountServicer(FinancialInstitutionIdentification7Choice accountServicer) {
+	public CashAccount34 setAccountServicer(FinancialInstitutionIdentification7Choice accountServicer) {
 		this.accountServicer = accountServicer;
+		return this;
 	}
 }

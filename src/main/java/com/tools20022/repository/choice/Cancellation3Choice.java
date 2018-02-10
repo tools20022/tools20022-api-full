@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.ISATransfer9;
 import com.tools20022.repository.msg.TransferReference3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Cancellation3Choice", propOrder = {"cancellationByTransferInstructionDetails", "cancellationByReference"})
 public class Cancellation3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CxlByTrfInstrDtls", required = true)
 	protected ISATransfer9 cancellationByTransferInstructionDetails;
 	/**
-	 * Information related to the transfer instruction to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,7 +137,7 @@ public class Cancellation3Choice {
 	public static final MMMessageAttribute mmCancellationByTransferInstructionDetails = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmTransferOperation;
-			componentContext_lazy = () -> Cancellation3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Cancellation3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CxlByTrfInstrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,10 +149,11 @@ public class Cancellation3Choice {
 			complexType_lazy = () -> ISATransfer9.mmObject();
 		}
 	};
+	@XmlElement(name = "CxlByRef", required = true)
 	protected TransferReference3 cancellationByReference;
 	/**
-	 * Reference of the transfer instruction to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,7 +195,7 @@ public class Cancellation3Choice {
 	public static final MMMessageAttribute mmCancellationByReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
-			componentContext_lazy = () -> Cancellation3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Cancellation3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CxlByRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,10 +211,10 @@ public class Cancellation3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Cancellation3Choice.mmCancellationByTransferInstructionDetails, Cancellation3Choice.mmCancellationByReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Cancellation3Choice.mmCancellationByTransferInstructionDetails, com.tools20022.repository.choice.Cancellation3Choice.mmCancellationByReference);
 				messageBuildingBlock_lazy = () -> Arrays.asList(PortfolioTransferCancellationRequestV04.mmCancellation);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Cancellation3Choice";
 				definition = "Choice between cancellation by transfer details or reference.";
@@ -221,21 +224,21 @@ public class Cancellation3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CxlByTrfInstrDtls", required = true)
 	public ISATransfer9 getCancellationByTransferInstructionDetails() {
 		return cancellationByTransferInstructionDetails;
 	}
 
-	public void setCancellationByTransferInstructionDetails(ISATransfer9 cancellationByTransferInstructionDetails) {
-		this.cancellationByTransferInstructionDetails = cancellationByTransferInstructionDetails;
+	public Cancellation3Choice setCancellationByTransferInstructionDetails(ISATransfer9 cancellationByTransferInstructionDetails) {
+		this.cancellationByTransferInstructionDetails = Objects.requireNonNull(cancellationByTransferInstructionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CxlByRef", required = true)
 	public TransferReference3 getCancellationByReference() {
 		return cancellationByReference;
 	}
 
-	public void setCancellationByReference(TransferReference3 cancellationByReference) {
-		this.cancellationByReference = cancellationByReference;
+	public Cancellation3Choice setCancellationByReference(TransferReference3 cancellationByReference) {
+		this.cancellationByReference = Objects.requireNonNull(cancellationByReference);
+		return this;
 	}
 }

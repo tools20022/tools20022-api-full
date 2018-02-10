@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
@@ -25,9 +27,8 @@ import com.tools20022.repository.entity.Order;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Intention to transfer an ownership of a financial instrument.
@@ -38,6 +39,8 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Order Order}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -172,46 +175,6 @@ import java.util.List;
  * SecuritiesOrder.mmType}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentFundOrder
- * InvestmentFundOrder}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CrossTrade CrossTrade}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Order Order}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OrderQuantity1 OrderQuantity1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order3 Order3}</li>
- * <li>{@linkplain com.tools20022.repository.choice.BusinessProcessType1Choice
- * BusinessProcessType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartialFill1 PartialFill1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order16 Order16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order14 Order14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order9 Order9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order1 Order1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SingleOrder1 SingleOrder1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MultiLegOrder1 MultiLegOrder1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Bid1 Bid1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Bid2 Bid2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Bid3 Bid3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OrderQuantity3 OrderQuantity3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order2 Order2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OrderSide1 OrderSide1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OrderIdentification3
- * OrderIdentification3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order6 Order6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order11 Order11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order17 Order17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Order18 Order18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PartialFill2 PartialFill2}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -319,11 +282,49 @@ import java.util.List;
  * Order18.mmPartialFillDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentFundOrder
+ * InvestmentFundOrder}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CrossTrade CrossTrade}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.OrderQuantity1 OrderQuantity1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order3 Order3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.BusinessProcessType1Choice
+ * BusinessProcessType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartialFill1 PartialFill1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order16 Order16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order14 Order14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order9 Order9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order1 Order1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SingleOrder1 SingleOrder1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MultiLegOrder1 MultiLegOrder1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Bid1 Bid1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Bid2 Bid2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Bid3 Bid3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OrderQuantity3 OrderQuantity3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order2 Order2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OrderSide1 OrderSide1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OrderIdentification3
+ * OrderIdentification3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order6 Order6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order11 Order11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order17 Order17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Order18 Order18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartialFill2 PartialFill2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -340,8 +341,8 @@ public class SecuritiesOrder extends Order {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected ISODateTime orderEffectiveDate;
 	/**
-	 * Date/time on which the order is effective.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -362,6 +363,9 @@ public class SecuritiesOrder extends Order {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder
 	 * SecuritiesOrder}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 168</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -375,8 +379,9 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAttribute mmOrderEffectiveDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrderParameters1.mmEffectiveDateAndTime);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "168"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderEffectiveDate";
 			definition = "Date/time on which the order is effective.";
@@ -395,8 +400,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected ISODateTime orderExpiryDate;
 	/**
-	 * Date/time on which the order is to expire.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -419,6 +424,9 @@ public class SecuritiesOrder extends Order {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder
 	 * SecuritiesOrder}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::EXPI, FIXSynonym: 432 and 126</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -432,8 +440,9 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAttribute mmOrderExpiryDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order1.mmExpiryDateTime, OrderParameters1.mmExpiryDateAndTime);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::EXPI"), new FIXSynonym(this, "432 and 126"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderExpiryDate";
 			definition = "Date/time on which the order is to expire.";
@@ -452,9 +461,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected Max35Text identification;
 	/**
-	 * Unique identifier for an order, as assigned by the sell-side. The
-	 * identifier must be unique within a single trading day.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -785,8 +793,8 @@ public class SecuritiesOrder extends Order {
 					IndividualOrderStatusAndReason8.mmOrderReference, SubscriptionExecution13.mmOrderReference, SubscriptionExecution12.mmOrderReference, SubscriptionOrder15.mmOrderReference, RedemptionOrder15.mmOrderReference,
 					RedemptionExecution16.mmOrderReference, SubscriptionOrder14.mmOrderReference, InvestmentFundOrder8.mmOrderReference, LegIdentification1Choice.mmRedemptionLegIdentification,
 					LegIdentification1Choice.mmSubscriptionLegIdentification, RedemptionExecution15.mmOrderReference, SwitchLegReferences2.mmLegIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier for an order, as assigned by the sell-side. The identifier must be unique within a single trading day.";
@@ -805,13 +813,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected CashMarginOrderCode cashMargin;
 	/**
-	 * Identifies whether an order is a margin order or a non-margin order. This
-	 * is primarily used when sending orders to Japanese exchanges to indicate
-	 * sell margin or buy to cover. The same tag could be assigned also by
-	 * buy-side to indicate the intent to sell or buy margin and the sell-side
-	 * to accept or reject (base on some validation criteria) the margin
-	 * request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -844,6 +847,9 @@ public class SecuritiesOrder extends Order {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder
 	 * SecuritiesOrder}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 544</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -859,8 +865,9 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAttribute mmCashMargin = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmCashMargin, Order16.mmCashMargin, Order14.mmCashMargin, Order9.mmCashMargin, Order6.mmCashMargin, Order17.mmCashMargin, Order18.mmCashMargin);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "544"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashMargin";
 			definition = "Identifies whether an order is a margin order or a non-margin order. This is primarily used when sending orders to Japanese exchanges to indicate sell margin or buy to cover. The same tag could be assigned also by buy-side to indicate the intent to sell or buy margin and the sell-side to accept or reject (base on some validation criteria) the margin request.";
@@ -879,8 +886,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected SideCode side;
 	/**
-	 * Coded list to specify the side of the order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -992,8 +999,8 @@ public class SecuritiesOrder extends Order {
 					TradeLeg2.mmBuySellIndicator, TradeLeg5.mmBuySellIndicator, TradeLeg1.mmBuySellIndicator, TradeLeg3.mmBuySellIndicator, TradeLeg6.mmBuySellIndicator, TradeLeg4.mmBuySellIndicator, TradeLeg7.mmBuySellIndicator,
 					OrderStatus1.mmSide, OrderStatus3.mmSide, Order1.mmSide, DisclosedBid1.mmSide, IndicationOfInterest1.mmSide, BidResponsePrice1.mmSide, BidResponsePrice2.mmSide, OrderSide1.mmSide, OrderIdentification3.mmSide,
 					Order6.mmSide, Order11.mmSide, ListStrikePriceDetails1.mmSide, Order17.mmSide, Order18.mmSide, TradeLeg8.mmBuySellIndicator, TradeLeg10.mmBuySellIndicator, TradeLeg9.mmBuySellIndicator, InstrumentLeg6.mmLegSide);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Side";
 			definition = "Coded list to specify the side of the order.";
@@ -1012,9 +1019,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected YesNoIndicator solicitedOrder;
 	/**
-	 * Indicates that an order has been generated in response to an
-	 * advertisement or an indication of interest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1040,6 +1046,9 @@ public class SecuritiesOrder extends Order {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder
 	 * SecuritiesOrder}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 377, ISO15022Synonym: 22F::TRCN</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1055,8 +1064,9 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAttribute mmSolicitedOrder = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmSolicitedOrderIndicator, Order9.mmSolicitedOrder, Order6.mmSolicitedOrder);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "377"), new ISO15022Synonym(this, "22F::TRCN"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SolicitedOrder";
 			definition = "Indicates that an order has been generated in response to an advertisement or an indication of interest.";
@@ -1075,10 +1085,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected CustomerOrderCapacityCode customerCapacity;
 	/**
-	 * Capacity of customer placing the order. Primarily used by futures
-	 * exchanges to indicate the CTI code (customer type indicator) as required
-	 * by the US CFTC (Commodity Futures Trading Commission).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1131,8 +1139,8 @@ public class SecuritiesOrder extends Order {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmTradingCapacity, Order3.mmCustomerCapacity, Order9.mmCustomerCapacity, Order1.mmTradingCapacity, Order1.mmCustomerCapacity, Order2.mmTradingCapacity, Order2.mmCustomerCapacity,
 					Order6.mmTradingCapacity, Order6.mmCustomerCapacity);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CustomerCapacity";
 			definition = "Capacity of customer placing the order. Primarily used by futures exchanges to indicate the CTI code (customer type indicator) as required by the US CFTC (Commodity Futures Trading Commission).";
@@ -1151,10 +1159,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected PositionEffectCode positionEffect;
 	/**
-	 * Indicates whether the resulting position after a trade should be an
-	 * opening position or closing position. Used for omnibus accounting - where
-	 * accounts are held on a gross basis instead of being netted together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1208,6 +1214,9 @@ public class SecuritiesOrder extends Order {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder
 	 * SecuritiesOrder}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 77</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1225,8 +1234,9 @@ public class SecuritiesOrder extends Order {
 			derivation_lazy = () -> Arrays.asList(Order3.mmPositionEffect, Order16.mmPositionEffect, Order14.mmPositionEffect, Order9.mmPositionEffect, InstrumentLeg3.mmLegPositionEffect, Order6.mmPositionEffect, Order17.mmPositionEffect,
 					Order18.mmPositionEffect, InvestmentAccount49.mmProcessingOrder, InvestmentAccount51.mmProcessingOrder, InvestmentAccount50.mmProcessingOrder, InvestmentAccount61.mmProcessingOrder,
 					InvestmentAccount63.mmProcessingOrder, InvestmentAccount62.mmProcessingOrder);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "77"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PositionEffect";
 			definition = "Indicates whether the resulting position after a  trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together.";
@@ -1245,9 +1255,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected YesNoIndicator foreignExchangeExecutionRequested;
 	/**
-	 * Indicates a request for a foreign exchange accommodation trade to be
-	 * executed along with security transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1278,6 +1287,9 @@ public class SecuritiesOrder extends Order {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder
 	 * SecuritiesOrder}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 121</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1294,8 +1306,9 @@ public class SecuritiesOrder extends Order {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmForeignExchangeExecutionRequestedIndicator, Order9.mmForeignExchangeExecutionRequested, Bid1.mmForeignExchangeExecutionRequestedIndicator,
 					Order6.mmForeignExchangeExecutionRequestedIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "121"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForeignExchangeExecutionRequested";
 			definition = "Indicates a request for a foreign exchange accommodation trade to be executed along with security transaction.";
@@ -1314,8 +1327,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected CurrencyCode settlementCurrency;
 	/**
-	 * Currency to be used for settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1368,8 +1381,8 @@ public class SecuritiesOrder extends Order {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmSettlementCurrency, SecuritiesSettlement1.mmCurrency, Order9.mmSettlementCurrency, Order6.mmSettlementCurrency, FundCashOutBreakdown3.mmSettlementCurrency,
 					FundCashInBreakdown3.mmSettlementCurrency, InstrumentLeg6.mmLegSettlementCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Currency to be used for settlement.";
@@ -1388,10 +1401,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected EligibilityCode orderOriginatorEligibility;
 	/**
-	 * Counterparties eligibility as defined by article 24 of the EU MiFID
-	 * Directive applicable to transactions executed by investment firms for
-	 * eligible counterparties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1453,8 +1464,8 @@ public class SecuritiesOrder extends Order {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmOrderOriginatorEligibility, Order16.mmOrderOriginatorEligibility, Order14.mmOrderOriginatorEligibility, InvestmentAccount21.mmOrderOriginatorEligibility,
 					Order9.mmOrderOriginatorEligibility, Order6.mmOrderOriginatorEligibility, Order17.mmOrderOriginatorEligibility, Order18.mmOrderOriginatorEligibility, InvestmentAccount58.mmOrderOriginatorEligibility);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderOriginatorEligibility";
 			definition = "Counterparties eligibility as defined by article 24 of the EU MiFID Directive applicable to transactions executed by investment firms for eligible counterparties.";
@@ -1473,8 +1484,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected SecuritiesQuantity orderedQuantity;
 	/**
-	 * Quantity of financial instrument to be ordered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1580,6 +1591,9 @@ public class SecuritiesOrder extends Order {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder
 	 * SecuritiesOrder}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::ORDR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1597,8 +1611,9 @@ public class SecuritiesOrder extends Order {
 					Order1.mmQuantityDetails, InstrumentLeg3.mmLegOrderQuantity, InstrumentLeg1.mmLegIOIQuantity, IndicationOfInterest1.mmOrderQuantity, Bid1.mmTotalNumberSecurities, Order2.mmQuantityDetails, Order6.mmQuantity2Details,
 					Order6.mmQuantity1Details, Order11.mmQuantityDetails, Order17.mmConfirmationQuantity, Order18.mmConfirmationQuantity, PartialFill2.mmConfirmationQuantity, PartialFill2.mmOriginalOrderedQuantity,
 					PartialFill2.mmPreviouslyExecutedQuantity, RedemptionOrder14.mmAmountOrUnitsOrPercentage, SubscriptionOrder15.mmAmountOrUnits, RedemptionOrder15.mmAmountOrUnitsOrPercentage, SubscriptionOrder14.mmAmountOrUnits);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::ORDR"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderedQuantity";
 			definition = "Quantity of financial instrument to be ordered.";
@@ -1611,8 +1626,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected BusinessProcessTypeCode businessProcessType;
 	/**
-	 * Type of business process model used to carry out the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1651,8 +1666,8 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAttribute mmBusinessProcessType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BusinessProcessType1Choice.mmCode, BusinessProcessType1Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BusinessProcessType";
 			definition = "Type of business process model used to carry out the transaction.";
@@ -1671,8 +1686,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected TradingMarket placeOfTrade;
 	/**
-	 * Market at which the order is to be traded.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1718,6 +1733,9 @@ public class SecuritiesOrder extends Order {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder
 	 * SecuritiesOrder}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94B::TRAD</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1732,8 +1750,9 @@ public class SecuritiesOrder extends Order {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmPlaceOfExecution, Order16.mmPlaceOfTrade, Order14.mmPlaceOfTrade, Order9.mmPlaceOfExecution, Order1.mmPlaceOfExecution, Order2.mmPlaceOfExecution, Order6.mmPlaceOfExecution,
 					Order11.mmPlaceOfExecution, Order17.mmPlaceOfTrade, Order18.mmPlaceOfTrade);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94B::TRAD"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlaceOfTrade";
 			definition = "Market at which the order is to be traded.";
@@ -1746,9 +1765,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected CurrencyAndAmount orderedAmount;
 	/**
-	 * Cash amount to be used to derive the appropriate quantity of financial
-	 * instrument to be bought or sold.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1823,6 +1841,9 @@ public class SecuritiesOrder extends Order {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder
 	 * SecuritiesOrder}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::ORDR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1842,8 +1863,9 @@ public class SecuritiesOrder extends Order {
 					SubscriptionExecution7.mmOrderedAmount, FinancialInstrumentQuantity9Choice.mmOrderedAmount, FinancialInstrumentQuantity3.mmOrderedAmount, FinancialInstrumentQuantity7Choice.mmOrderedAmount,
 					FinancialInstrumentQuantity8Choice.mmOrderedAmount, FinancialInstrumentQuantity12Choice.mmOrderedAmount, FinancialInstrumentQuantity13Choice.mmOrderedAmount, Order17.mmGrossTradeAmount, Order18.mmGrossTradeAmount,
 					TradeLeg8.mmGrossAmount, TradeLeg10.mmGrossAmount, TradeLeg9.mmGrossAmount, InvestmentFundsOrderBreakdown2.mmAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::ORDR"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderedAmount";
 			definition = "Cash amount to be used to derive the appropriate quantity of financial instrument to be bought or sold.";
@@ -1862,9 +1884,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected Max3Number giveUpNumberOfDays;
 	/**
-	 * Specifies the number of days from trade date that the counterparty on the
-	 * other side of the trade should be "given up" or divulged.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1909,8 +1930,8 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAttribute mmGiveUpNumberOfDays = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order16.mmGiveUpNumberOfDays, Order14.mmGiveUpNumberOfDays, Order17.mmGiveUpNumberOfDays, Order18.mmGiveUpNumberOfDays);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GiveUpNumberOfDays";
 			definition = "Specifies the number of days from trade date that the counterparty on the other side of the trade should be \"given up\" or divulged.";
@@ -1929,8 +1950,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected TradeRegulatoryConditionsCode tradeRegulatoryConditionsType;
 	/**
-	 * Specifies the regulatory conditions type of the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1974,8 +1995,8 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAttribute mmTradeRegulatoryConditionsType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order16.mmTradeRegulatoryConditionsType, Order14.mmTradeRegulatoryConditionsType, Order17.mmTradeRegulatoryConditionsType, Order18.mmTradeRegulatoryConditionsType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeRegulatoryConditionsType";
 			definition = "Specifies the regulatory conditions type of the trade.";
@@ -1994,9 +2015,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected SecuritiesQuantity dayOrderQuantity;
 	/**
-	 * For good till orders, the order quantity less all quantity (adjusted for
-	 * stock splits) that traded on previous days.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2017,6 +2037,9 @@ public class SecuritiesOrder extends Order {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder
 	 * SecuritiesOrder}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 424</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2031,8 +2054,9 @@ public class SecuritiesOrder extends Order {
 	 */
 	public static final MMBusinessAssociationEnd mmDayOrderQuantity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "424"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DayOrderQuantity";
 			definition = "For good till orders, the order quantity less all quantity (adjusted for stock splits) that traded on previous days.";
@@ -2045,9 +2069,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesOrderPartyRole> securitiesOrderPartyRole;
 	/**
-	 * Specifies the party which plays a role in the process of ordering
-	 * securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2101,8 +2124,8 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAssociationEnd mmSecuritiesOrderPartyRole = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmOtherBusinessParties, Order9.mmOtherBusinessParties, Order6.mmOtherBusinessParties, Order11.mmOtherBusinessParties);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesOrderPartyRole";
 			definition = "Specifies the party which plays a role in the process of ordering securities.";
@@ -2114,8 +2137,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesOrderStatus> status;
 	/**
-	 * Indicates the status of an order at a specific point in time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2159,8 +2182,8 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAssociationEnd mmStatus = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndividualOrderConfirmationStatusAndReason2.mmConfirmation);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
 			definition = "Indicates the status of an order at a specific point in time.";
@@ -2172,8 +2195,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected Negotiation relatedNegotiation;
 	/**
-	 * Negotiation which resulted in an order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2206,8 +2229,8 @@ public class SecuritiesOrder extends Order {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedNegotiation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedNegotiation";
 			definition = "Negotiation which resulted in an order.";
@@ -2220,8 +2243,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected List<com.tools20022.repository.entity.Adjustment> adjustments;
 	/**
-	 * Charges and commissions associated with a securities order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2255,8 +2278,8 @@ public class SecuritiesOrder extends Order {
 	 */
 	public static final MMBusinessAssociationEnd mmAdjustments = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Adjustments";
 			definition = "Charges and commissions associated with a securities order.";
@@ -2268,8 +2291,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected SecuritiesRegulatoryDetails legalParameters;
 	/**
-	 * Legal parameters required in a securities order for regulatory purposes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2305,8 +2328,8 @@ public class SecuritiesOrder extends Order {
 	 */
 	public static final MMBusinessAssociationEnd mmLegalParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LegalParameters";
 			definition = "Legal parameters required in a securities order for regulatory purposes.";
@@ -2319,9 +2342,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected SecuritiesPricing orderPrice;
 	/**
-	 * Indicates the requested price for the order. This can be a "stop" price a
-	 * "limit" price or a "deal" price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2364,6 +2386,9 @@ public class SecuritiesOrder extends Order {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder
 	 * SecuritiesOrder}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::DEAL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2380,8 +2405,9 @@ public class SecuritiesOrder extends Order {
 		{
 			derivation_lazy = () -> Arrays.asList(OrderQuantity1.mmPrice, PartialFill1.mmDealPrice, OrderStatus3.mmAveragePrice, OrderQuantity3.mmPrice, Order6.mmPreviousClosingPrice, ListStrikePriceDetails1.mmStrikePrice,
 					PartialFill2.mmDealPrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::DEAL"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderPrice";
 			definition = "Indicates the requested price for the order. This can be a \"stop\" price a \"limit\" price or a \"deal\" price.";
@@ -2394,8 +2420,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected SecuritiesPricing stopPrice;
 	/**
-	 * Indicates the stop price in case of a stop order or a stop limit order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2424,6 +2450,9 @@ public class SecuritiesOrder extends Order {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder
 	 * SecuritiesOrder}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 99</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2439,8 +2468,9 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAssociationEnd mmStopPrice = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrderParameters1.mmStopPrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "99"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StopPrice";
 			definition = "Indicates the stop price in case of a stop order or a stop limit order.";
@@ -2453,8 +2483,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected List<com.tools20022.repository.entity.Allocation> securitiesOrderAllocation;
 	/**
-	 * Information about the pre-allocation of an order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2507,8 +2537,8 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAssociationEnd mmSecuritiesOrderAllocation = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmPreAllocationDetails, Order9.mmPreAllocationDetails, InstrumentLeg3.mmLegPreAllocationDetails, Bid1.mmTotalNumberTickets, Order6.mmPreAllocationDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesOrderAllocation";
 			definition = "Information about the pre-allocation of an order.";
@@ -2520,8 +2550,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected SecuritiesOrderParameters orderExecutionParameters;
 	/**
-	 * Conditions under which a securities order must be executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2566,8 +2596,8 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAssociationEnd mmOrderExecutionParameters = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(QuoteEntry1.mmOrderType, Order6.mmOrderParameters);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderExecutionParameters";
 			definition = "Conditions under which a securities order must be executed.";
@@ -2580,8 +2610,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected SecuritiesTrade orderExecution;
 	/**
-	 * Result of a securities order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2628,8 +2658,8 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAssociationEnd mmOrderExecution = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmAmountsDetails, Order9.mmAmountsDetails, Order6.mmAmountDetails, Order11.mmAmountsDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderExecution";
 			definition = "Result of a securities order.";
@@ -2642,8 +2672,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesAccount> orderingAccount;
 	/**
-	 * Account impacted by a security transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2685,8 +2715,8 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAssociationEnd mmOrderingAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(DisclosedBid1.mmBiddingAccount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderingAccount";
 			definition = "Account impacted by a security transaction.";
@@ -2698,8 +2728,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected SecuritiesQuoteVariable quote;
 	/**
-	 * Quote for which the order conditions are specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2733,8 +2763,8 @@ public class SecuritiesOrder extends Order {
 	 */
 	public static final MMBusinessAssociationEnd mmQuote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quote";
 			definition = "Quote for which the order conditions are specified.";
@@ -2747,8 +2777,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected TransactionType1Code fundTransactionDirectionIndicator;
 	/**
-	 * Indicates the type of investment funds transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2762,6 +2792,9 @@ public class SecuritiesOrder extends Order {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder
 	 * SecuritiesOrder}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22a::BUSE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2774,8 +2807,9 @@ public class SecuritiesOrder extends Order {
 	 */
 	public static final MMBusinessAttribute mmFundTransactionDirectionIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22a::BUSE"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundTransactionDirectionIndicator";
 			definition = "Indicates the type of investment funds transaction.";
@@ -2794,9 +2828,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected ISODateTime orderDate;
 	/**
-	 * Date/time on which the order was placed by the investor with the trading
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2822,6 +2855,9 @@ public class SecuritiesOrder extends Order {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder
 	 * SecuritiesOrder}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::ORDR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2837,8 +2873,9 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAttribute mmOrderDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order16.mmOrderBookingDate, Order14.mmOrderBookingDate, Order17.mmOrderBookingDate, Order18.mmOrderBookingDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::ORDR"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderDate";
 			definition = "Date/time on which the order was placed by the investor with the \ntrading party.";
@@ -2857,8 +2894,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected CurrencyAndAmount pegDifference;
 	/**
-	 * Price difference for a pegged order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2872,6 +2909,9 @@ public class SecuritiesOrder extends Order {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder
 	 * SecuritiesOrder}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 211</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2884,8 +2924,9 @@ public class SecuritiesOrder extends Order {
 	 */
 	public static final MMBusinessAttribute mmPegDifference = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "211"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PegDifference";
 			definition = "Price difference for a pegged order.";
@@ -2904,8 +2945,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected TradingSession securitiesOrderTradingSession;
 	/**
-	 * Details of a specific trading session associated with a securities order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2940,8 +2981,8 @@ public class SecuritiesOrder extends Order {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesOrderTradingSession = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesOrderTradingSession";
 			definition = "Details of a specific trading session associated with a securities order.";
@@ -2954,8 +2995,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected OrderBook relatedOrderBook;
 	/**
-	 * Order book whichgenerates an order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2988,8 +3029,8 @@ public class SecuritiesOrder extends Order {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedOrderBook = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOrderBook";
 			definition = "Order book whichgenerates an order.";
@@ -3002,8 +3043,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected ListTrading listTrading;
 	/**
-	 * List trading information containing a serie of orders.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3036,8 +3077,8 @@ public class SecuritiesOrder extends Order {
 	 */
 	public static final MMBusinessAssociationEnd mmListTrading = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ListTrading";
 			definition = "List trading information containing a serie of orders.";
@@ -3050,8 +3091,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected CrossTrade buySideRelatedCrossTrade;
 	/**
-	 * Cross trade for which the buy side information is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3085,8 +3126,8 @@ public class SecuritiesOrder extends Order {
 	 */
 	public static final MMBusinessAssociationEnd mmBuySideRelatedCrossTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuySideRelatedCrossTrade";
 			definition = "Cross trade for which the buy side information is provided.";
@@ -3099,8 +3140,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected CrossTrade sellSideRelatedCrossTrade;
 	/**
-	 * Cross trade for which the sell side information is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3134,8 +3175,8 @@ public class SecuritiesOrder extends Order {
 	 */
 	public static final MMBusinessAssociationEnd mmSellSideRelatedCrossTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SellSideRelatedCrossTrade";
 			definition = "Cross trade for which the sell side information is provided.";
@@ -3148,8 +3189,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected List<com.tools20022.repository.entity.Security> orderedSecurity;
 	/**
-	 * Security for which an order is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3255,8 +3296,8 @@ public class SecuritiesOrder extends Order {
 					Order6.mmUnderlyingFinancialInstrumentAttributes, Order6.mmUnderlyingStipulations, Order11.mmFinancialInstrumentAttributes, Order11.mmStipulations, Order11.mmUnderlyingFinancialInstrumentAttributes,
 					Order11.mmUnderlyingStipulations, ListStrikePriceDetails1.mmStipulations, ListStrikePriceDetails1.mmUnderlyingStipulations, ListStrikePriceDetails1.mmFinancialInstrumentAttributes,
 					ListStrikePriceDetails1.mmUnderlyingFinancialInstrumentAttributes);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderedSecurity";
 			definition = "Security for which an order is specified.";
@@ -3268,8 +3309,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected SecuritiesPostTradeBooking bookingInstructions;
 	/**
-	 * Information about the booking of executions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3315,8 +3356,8 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAssociationEnd mmBookingInstructions = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmBookingDetails, Order9.mmBookingDetails, Order6.mmBookingDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BookingInstructions";
 			definition = "Information about the booking of executions.";
@@ -3329,9 +3370,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected ExchangeForPhysicalTrade exchangeForPhysicalTrade;
 	/**
-	 * Conditions under which an exchange for physical trade takes place in the
-	 * case of a non disclosed bid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3379,8 +3419,8 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAssociationEnd mmExchangeForPhysicalTrade = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Bid1.mmExchangeForPhysicalIndicator, NonDisclosedBid1.mmExchangeForPhysicalTrade);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExchangeForPhysicalTrade";
 			definition = "Conditions under which an exchange for physical trade takes place in the case of a non disclosed bid.";
@@ -3393,9 +3433,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected OrderQuantityTypeCode quantityType;
 	/**
-	 * Describes how the quantity is specified, that is by quantity of units or
-	 * by amount of money.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3467,8 +3506,8 @@ public class SecuritiesOrder extends Order {
 			derivation_lazy = () -> Arrays.asList(OrderQuantity1.mmQuantityType, OriginalOrderQuantityType1.mmStructured, FundCashInBreakdown1.mmOriginalOrderQuantityDetails, FundCashOutBreakdown1.mmOriginalOrderQuantityDetails,
 					FundCashInBreakdown2.mmOriginalOrderQuantityType, FundCashInBreakdown2.mmExtendedOriginalOrderQuantityType, FundCashOutBreakdown2.mmOriginalOrderQuantityType, FundCashOutBreakdown2.mmExtendedOriginalOrderQuantityType,
 					FundCashOutBreakdown3.mmOriginalOrderQuantityType, FundCashInBreakdown3.mmOriginalOrderQuantityType, QuantityType1Choice.mmCode, QuantityType1Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuantityType";
 			definition = "Describes how the quantity is specified, that is by quantity of units or by amount of money.";
@@ -3487,12 +3526,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected Max35Text clientOrderIdentification;
 	/**
-	 * Unique identifier for the order as assigned by the buy-side. Uniqueness
-	 * must be guaranteed within a single trading day. Firms, particularly those
-	 * that electronically submit multi-day orders, trade globally or throughout
-	 * market close periods, should ensure uniqueness across days, for example
-	 * by embedding a date within the ClientOrderIdentification element.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3644,8 +3679,8 @@ public class SecuritiesOrder extends Order {
 					TransferReference6.mmClientReference, Order17.mmClientOrderIdentification, Order17.mmSecondaryClientOrderIdentification, Order18.mmClientOrderIdentification, Order18.mmSecondaryClientOrderIdentification,
 					MessageAndBusinessReference8.mmClientReference, TransferStatusAndReason4.mmClientReference, TransferReference9.mmClientReference, TransferReference10.mmClientReference,
 					IndividualOrderConfirmationStatusAndReason2.mmClientReference, IndividualOrderStatusAndReason7.mmClientReference, IndividualOrderStatusAndReason8.mmClientReference);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClientOrderIdentification";
 			definition = "Unique identifier for the order as assigned by the buy-side.  Uniqueness must be guaranteed within a single trading day.  Firms, particularly those  that  electronically submit multi-day orders, trade globally or throughout market close periods, should ensure  uniqueness across days, for example by embedding a date within the ClientOrderIdentification element.";
@@ -3664,8 +3699,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected SecuritiesOrderExecutionInstruction executionInstructions;
 	/**
-	 * Execution instructions in which securities order parameters are defined.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3713,8 +3748,8 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAssociationEnd mmExecutionInstructions = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmExecutionInstructionsDetails, Order6.mmExecutionInstructionsDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExecutionInstructions";
 			definition = "Execution instructions in which securities order parameters are defined.";
@@ -3727,9 +3762,8 @@ public class SecuritiesOrder extends Order {
 	};
 	protected OrderTypeCode type;
 	/**
-	 * Indicates the type of instruction to a broker or dealer to buy or sell a
-	 * financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3759,6 +3793,9 @@ public class SecuritiesOrder extends Order {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesOrder
 	 * SecuritiesOrder}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22a::TOOR, FIXSynonym: 80</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3774,8 +3811,9 @@ public class SecuritiesOrder extends Order {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TriggeringInstructions.mmOrderType, QuoteEntry2.mmOrderType, Order1.mmType, Order2.mmType, OrderParameters1.mmType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22a::TOOR"), new FIXSynonym(this, "80"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Indicates the type of  instruction to a broker or dealer to buy or sell a financial instrument.";
@@ -3796,7 +3834,7 @@ public class SecuritiesOrder extends Order {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesOrder";
 				definition = "Intention to transfer an ownership of a financial instrument.";
@@ -3849,359 +3887,404 @@ public class SecuritiesOrder extends Order {
 		return orderEffectiveDate;
 	}
 
-	public void setOrderEffectiveDate(ISODateTime orderEffectiveDate) {
-		this.orderEffectiveDate = orderEffectiveDate;
+	public SecuritiesOrder setOrderEffectiveDate(ISODateTime orderEffectiveDate) {
+		this.orderEffectiveDate = Objects.requireNonNull(orderEffectiveDate);
+		return this;
 	}
 
 	public ISODateTime getOrderExpiryDate() {
 		return orderExpiryDate;
 	}
 
-	public void setOrderExpiryDate(ISODateTime orderExpiryDate) {
-		this.orderExpiryDate = orderExpiryDate;
+	public SecuritiesOrder setOrderExpiryDate(ISODateTime orderExpiryDate) {
+		this.orderExpiryDate = Objects.requireNonNull(orderExpiryDate);
+		return this;
 	}
 
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public SecuritiesOrder setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
 	public CashMarginOrderCode getCashMargin() {
 		return cashMargin;
 	}
 
-	public void setCashMargin(CashMarginOrderCode cashMargin) {
-		this.cashMargin = cashMargin;
+	public SecuritiesOrder setCashMargin(CashMarginOrderCode cashMargin) {
+		this.cashMargin = Objects.requireNonNull(cashMargin);
+		return this;
 	}
 
 	public SideCode getSide() {
 		return side;
 	}
 
-	public void setSide(SideCode side) {
-		this.side = side;
+	public SecuritiesOrder setSide(SideCode side) {
+		this.side = Objects.requireNonNull(side);
+		return this;
 	}
 
 	public YesNoIndicator getSolicitedOrder() {
 		return solicitedOrder;
 	}
 
-	public void setSolicitedOrder(YesNoIndicator solicitedOrder) {
-		this.solicitedOrder = solicitedOrder;
+	public SecuritiesOrder setSolicitedOrder(YesNoIndicator solicitedOrder) {
+		this.solicitedOrder = Objects.requireNonNull(solicitedOrder);
+		return this;
 	}
 
 	public CustomerOrderCapacityCode getCustomerCapacity() {
 		return customerCapacity;
 	}
 
-	public void setCustomerCapacity(CustomerOrderCapacityCode customerCapacity) {
-		this.customerCapacity = customerCapacity;
+	public SecuritiesOrder setCustomerCapacity(CustomerOrderCapacityCode customerCapacity) {
+		this.customerCapacity = Objects.requireNonNull(customerCapacity);
+		return this;
 	}
 
 	public PositionEffectCode getPositionEffect() {
 		return positionEffect;
 	}
 
-	public void setPositionEffect(PositionEffectCode positionEffect) {
-		this.positionEffect = positionEffect;
+	public SecuritiesOrder setPositionEffect(PositionEffectCode positionEffect) {
+		this.positionEffect = Objects.requireNonNull(positionEffect);
+		return this;
 	}
 
 	public YesNoIndicator getForeignExchangeExecutionRequested() {
 		return foreignExchangeExecutionRequested;
 	}
 
-	public void setForeignExchangeExecutionRequested(YesNoIndicator foreignExchangeExecutionRequested) {
-		this.foreignExchangeExecutionRequested = foreignExchangeExecutionRequested;
+	public SecuritiesOrder setForeignExchangeExecutionRequested(YesNoIndicator foreignExchangeExecutionRequested) {
+		this.foreignExchangeExecutionRequested = Objects.requireNonNull(foreignExchangeExecutionRequested);
+		return this;
 	}
 
 	public CurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
 
-	public void setSettlementCurrency(CurrencyCode settlementCurrency) {
-		this.settlementCurrency = settlementCurrency;
+	public SecuritiesOrder setSettlementCurrency(CurrencyCode settlementCurrency) {
+		this.settlementCurrency = Objects.requireNonNull(settlementCurrency);
+		return this;
 	}
 
 	public EligibilityCode getOrderOriginatorEligibility() {
 		return orderOriginatorEligibility;
 	}
 
-	public void setOrderOriginatorEligibility(EligibilityCode orderOriginatorEligibility) {
-		this.orderOriginatorEligibility = orderOriginatorEligibility;
+	public SecuritiesOrder setOrderOriginatorEligibility(EligibilityCode orderOriginatorEligibility) {
+		this.orderOriginatorEligibility = Objects.requireNonNull(orderOriginatorEligibility);
+		return this;
 	}
 
 	public SecuritiesQuantity getOrderedQuantity() {
 		return orderedQuantity;
 	}
 
-	public void setOrderedQuantity(com.tools20022.repository.entity.SecuritiesQuantity orderedQuantity) {
-		this.orderedQuantity = orderedQuantity;
+	public SecuritiesOrder setOrderedQuantity(com.tools20022.repository.entity.SecuritiesQuantity orderedQuantity) {
+		this.orderedQuantity = Objects.requireNonNull(orderedQuantity);
+		return this;
 	}
 
 	public BusinessProcessTypeCode getBusinessProcessType() {
 		return businessProcessType;
 	}
 
-	public void setBusinessProcessType(BusinessProcessTypeCode businessProcessType) {
-		this.businessProcessType = businessProcessType;
+	public SecuritiesOrder setBusinessProcessType(BusinessProcessTypeCode businessProcessType) {
+		this.businessProcessType = Objects.requireNonNull(businessProcessType);
+		return this;
 	}
 
 	public TradingMarket getPlaceOfTrade() {
 		return placeOfTrade;
 	}
 
-	public void setPlaceOfTrade(com.tools20022.repository.entity.TradingMarket placeOfTrade) {
-		this.placeOfTrade = placeOfTrade;
+	public SecuritiesOrder setPlaceOfTrade(com.tools20022.repository.entity.TradingMarket placeOfTrade) {
+		this.placeOfTrade = Objects.requireNonNull(placeOfTrade);
+		return this;
 	}
 
 	public CurrencyAndAmount getOrderedAmount() {
 		return orderedAmount;
 	}
 
-	public void setOrderedAmount(CurrencyAndAmount orderedAmount) {
-		this.orderedAmount = orderedAmount;
+	public SecuritiesOrder setOrderedAmount(CurrencyAndAmount orderedAmount) {
+		this.orderedAmount = Objects.requireNonNull(orderedAmount);
+		return this;
 	}
 
 	public Max3Number getGiveUpNumberOfDays() {
 		return giveUpNumberOfDays;
 	}
 
-	public void setGiveUpNumberOfDays(Max3Number giveUpNumberOfDays) {
-		this.giveUpNumberOfDays = giveUpNumberOfDays;
+	public SecuritiesOrder setGiveUpNumberOfDays(Max3Number giveUpNumberOfDays) {
+		this.giveUpNumberOfDays = Objects.requireNonNull(giveUpNumberOfDays);
+		return this;
 	}
 
-	public TradeRegulatoryConditionsCode getTradeRegulatoryConditionsType() {
-		return tradeRegulatoryConditionsType;
+	public Optional<TradeRegulatoryConditionsCode> getTradeRegulatoryConditionsType() {
+		return tradeRegulatoryConditionsType == null ? Optional.empty() : Optional.of(tradeRegulatoryConditionsType);
 	}
 
-	public void setTradeRegulatoryConditionsType(TradeRegulatoryConditionsCode tradeRegulatoryConditionsType) {
+	public SecuritiesOrder setTradeRegulatoryConditionsType(TradeRegulatoryConditionsCode tradeRegulatoryConditionsType) {
 		this.tradeRegulatoryConditionsType = tradeRegulatoryConditionsType;
+		return this;
 	}
 
 	public SecuritiesQuantity getDayOrderQuantity() {
 		return dayOrderQuantity;
 	}
 
-	public void setDayOrderQuantity(com.tools20022.repository.entity.SecuritiesQuantity dayOrderQuantity) {
-		this.dayOrderQuantity = dayOrderQuantity;
+	public SecuritiesOrder setDayOrderQuantity(com.tools20022.repository.entity.SecuritiesQuantity dayOrderQuantity) {
+		this.dayOrderQuantity = Objects.requireNonNull(dayOrderQuantity);
+		return this;
 	}
 
 	public List<SecuritiesOrderPartyRole> getSecuritiesOrderPartyRole() {
-		return securitiesOrderPartyRole;
+		return securitiesOrderPartyRole == null ? securitiesOrderPartyRole = new ArrayList<>() : securitiesOrderPartyRole;
 	}
 
-	public void setSecuritiesOrderPartyRole(List<com.tools20022.repository.entity.SecuritiesOrderPartyRole> securitiesOrderPartyRole) {
-		this.securitiesOrderPartyRole = securitiesOrderPartyRole;
+	public SecuritiesOrder setSecuritiesOrderPartyRole(List<com.tools20022.repository.entity.SecuritiesOrderPartyRole> securitiesOrderPartyRole) {
+		this.securitiesOrderPartyRole = Objects.requireNonNull(securitiesOrderPartyRole);
+		return this;
 	}
 
 	public List<SecuritiesOrderStatus> getStatus() {
-		return status;
+		return status == null ? status = new ArrayList<>() : status;
 	}
 
-	public void setStatus(List<com.tools20022.repository.entity.SecuritiesOrderStatus> status) {
-		this.status = status;
+	public SecuritiesOrder setStatus(List<com.tools20022.repository.entity.SecuritiesOrderStatus> status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
 	public Negotiation getRelatedNegotiation() {
 		return relatedNegotiation;
 	}
 
-	public void setRelatedNegotiation(com.tools20022.repository.entity.Negotiation relatedNegotiation) {
-		this.relatedNegotiation = relatedNegotiation;
+	public SecuritiesOrder setRelatedNegotiation(com.tools20022.repository.entity.Negotiation relatedNegotiation) {
+		this.relatedNegotiation = Objects.requireNonNull(relatedNegotiation);
+		return this;
 	}
 
 	public List<Adjustment> getAdjustments() {
-		return adjustments;
+		return adjustments == null ? adjustments = new ArrayList<>() : adjustments;
 	}
 
-	public void setAdjustments(List<com.tools20022.repository.entity.Adjustment> adjustments) {
-		this.adjustments = adjustments;
+	public SecuritiesOrder setAdjustments(List<com.tools20022.repository.entity.Adjustment> adjustments) {
+		this.adjustments = Objects.requireNonNull(adjustments);
+		return this;
 	}
 
 	public SecuritiesRegulatoryDetails getLegalParameters() {
 		return legalParameters;
 	}
 
-	public void setLegalParameters(com.tools20022.repository.entity.SecuritiesRegulatoryDetails legalParameters) {
-		this.legalParameters = legalParameters;
+	public SecuritiesOrder setLegalParameters(com.tools20022.repository.entity.SecuritiesRegulatoryDetails legalParameters) {
+		this.legalParameters = Objects.requireNonNull(legalParameters);
+		return this;
 	}
 
 	public SecuritiesPricing getOrderPrice() {
 		return orderPrice;
 	}
 
-	public void setOrderPrice(com.tools20022.repository.entity.SecuritiesPricing orderPrice) {
-		this.orderPrice = orderPrice;
+	public SecuritiesOrder setOrderPrice(com.tools20022.repository.entity.SecuritiesPricing orderPrice) {
+		this.orderPrice = Objects.requireNonNull(orderPrice);
+		return this;
 	}
 
 	public SecuritiesPricing getStopPrice() {
 		return stopPrice;
 	}
 
-	public void setStopPrice(com.tools20022.repository.entity.SecuritiesPricing stopPrice) {
-		this.stopPrice = stopPrice;
+	public SecuritiesOrder setStopPrice(com.tools20022.repository.entity.SecuritiesPricing stopPrice) {
+		this.stopPrice = Objects.requireNonNull(stopPrice);
+		return this;
 	}
 
 	public List<Allocation> getSecuritiesOrderAllocation() {
-		return securitiesOrderAllocation;
+		return securitiesOrderAllocation == null ? securitiesOrderAllocation = new ArrayList<>() : securitiesOrderAllocation;
 	}
 
-	public void setSecuritiesOrderAllocation(List<com.tools20022.repository.entity.Allocation> securitiesOrderAllocation) {
-		this.securitiesOrderAllocation = securitiesOrderAllocation;
+	public SecuritiesOrder setSecuritiesOrderAllocation(List<com.tools20022.repository.entity.Allocation> securitiesOrderAllocation) {
+		this.securitiesOrderAllocation = Objects.requireNonNull(securitiesOrderAllocation);
+		return this;
 	}
 
 	public SecuritiesOrderParameters getOrderExecutionParameters() {
 		return orderExecutionParameters;
 	}
 
-	public void setOrderExecutionParameters(com.tools20022.repository.entity.SecuritiesOrderParameters orderExecutionParameters) {
-		this.orderExecutionParameters = orderExecutionParameters;
+	public SecuritiesOrder setOrderExecutionParameters(com.tools20022.repository.entity.SecuritiesOrderParameters orderExecutionParameters) {
+		this.orderExecutionParameters = Objects.requireNonNull(orderExecutionParameters);
+		return this;
 	}
 
 	public SecuritiesTrade getOrderExecution() {
 		return orderExecution;
 	}
 
-	public void setOrderExecution(com.tools20022.repository.entity.SecuritiesTrade orderExecution) {
-		this.orderExecution = orderExecution;
+	public SecuritiesOrder setOrderExecution(com.tools20022.repository.entity.SecuritiesTrade orderExecution) {
+		this.orderExecution = Objects.requireNonNull(orderExecution);
+		return this;
 	}
 
 	public List<SecuritiesAccount> getOrderingAccount() {
-		return orderingAccount;
+		return orderingAccount == null ? orderingAccount = new ArrayList<>() : orderingAccount;
 	}
 
-	public void setOrderingAccount(List<com.tools20022.repository.entity.SecuritiesAccount> orderingAccount) {
-		this.orderingAccount = orderingAccount;
+	public SecuritiesOrder setOrderingAccount(List<com.tools20022.repository.entity.SecuritiesAccount> orderingAccount) {
+		this.orderingAccount = Objects.requireNonNull(orderingAccount);
+		return this;
 	}
 
-	public SecuritiesQuoteVariable getQuote() {
-		return quote;
+	public Optional<SecuritiesQuoteVariable> getQuote() {
+		return quote == null ? Optional.empty() : Optional.of(quote);
 	}
 
-	public void setQuote(com.tools20022.repository.entity.SecuritiesQuoteVariable quote) {
+	public SecuritiesOrder setQuote(com.tools20022.repository.entity.SecuritiesQuoteVariable quote) {
 		this.quote = quote;
+		return this;
 	}
 
 	public TransactionType1Code getFundTransactionDirectionIndicator() {
 		return fundTransactionDirectionIndicator;
 	}
 
-	public void setFundTransactionDirectionIndicator(TransactionType1Code fundTransactionDirectionIndicator) {
-		this.fundTransactionDirectionIndicator = fundTransactionDirectionIndicator;
+	public SecuritiesOrder setFundTransactionDirectionIndicator(TransactionType1Code fundTransactionDirectionIndicator) {
+		this.fundTransactionDirectionIndicator = Objects.requireNonNull(fundTransactionDirectionIndicator);
+		return this;
 	}
 
 	public ISODateTime getOrderDate() {
 		return orderDate;
 	}
 
-	public void setOrderDate(ISODateTime orderDate) {
-		this.orderDate = orderDate;
+	public SecuritiesOrder setOrderDate(ISODateTime orderDate) {
+		this.orderDate = Objects.requireNonNull(orderDate);
+		return this;
 	}
 
 	public CurrencyAndAmount getPegDifference() {
 		return pegDifference;
 	}
 
-	public void setPegDifference(CurrencyAndAmount pegDifference) {
-		this.pegDifference = pegDifference;
+	public SecuritiesOrder setPegDifference(CurrencyAndAmount pegDifference) {
+		this.pegDifference = Objects.requireNonNull(pegDifference);
+		return this;
 	}
 
 	public TradingSession getSecuritiesOrderTradingSession() {
 		return securitiesOrderTradingSession;
 	}
 
-	public void setSecuritiesOrderTradingSession(com.tools20022.repository.entity.TradingSession securitiesOrderTradingSession) {
-		this.securitiesOrderTradingSession = securitiesOrderTradingSession;
+	public SecuritiesOrder setSecuritiesOrderTradingSession(com.tools20022.repository.entity.TradingSession securitiesOrderTradingSession) {
+		this.securitiesOrderTradingSession = Objects.requireNonNull(securitiesOrderTradingSession);
+		return this;
 	}
 
-	public OrderBook getRelatedOrderBook() {
-		return relatedOrderBook;
+	public Optional<OrderBook> getRelatedOrderBook() {
+		return relatedOrderBook == null ? Optional.empty() : Optional.of(relatedOrderBook);
 	}
 
-	public void setRelatedOrderBook(com.tools20022.repository.entity.OrderBook relatedOrderBook) {
+	public SecuritiesOrder setRelatedOrderBook(com.tools20022.repository.entity.OrderBook relatedOrderBook) {
 		this.relatedOrderBook = relatedOrderBook;
+		return this;
 	}
 
-	public ListTrading getListTrading() {
-		return listTrading;
+	public Optional<ListTrading> getListTrading() {
+		return listTrading == null ? Optional.empty() : Optional.of(listTrading);
 	}
 
-	public void setListTrading(com.tools20022.repository.entity.ListTrading listTrading) {
+	public SecuritiesOrder setListTrading(com.tools20022.repository.entity.ListTrading listTrading) {
 		this.listTrading = listTrading;
+		return this;
 	}
 
 	public CrossTrade getBuySideRelatedCrossTrade() {
 		return buySideRelatedCrossTrade;
 	}
 
-	public void setBuySideRelatedCrossTrade(com.tools20022.repository.entity.CrossTrade buySideRelatedCrossTrade) {
-		this.buySideRelatedCrossTrade = buySideRelatedCrossTrade;
+	public SecuritiesOrder setBuySideRelatedCrossTrade(com.tools20022.repository.entity.CrossTrade buySideRelatedCrossTrade) {
+		this.buySideRelatedCrossTrade = Objects.requireNonNull(buySideRelatedCrossTrade);
+		return this;
 	}
 
 	public CrossTrade getSellSideRelatedCrossTrade() {
 		return sellSideRelatedCrossTrade;
 	}
 
-	public void setSellSideRelatedCrossTrade(com.tools20022.repository.entity.CrossTrade sellSideRelatedCrossTrade) {
-		this.sellSideRelatedCrossTrade = sellSideRelatedCrossTrade;
+	public SecuritiesOrder setSellSideRelatedCrossTrade(com.tools20022.repository.entity.CrossTrade sellSideRelatedCrossTrade) {
+		this.sellSideRelatedCrossTrade = Objects.requireNonNull(sellSideRelatedCrossTrade);
+		return this;
 	}
 
 	public List<Security> getOrderedSecurity() {
-		return orderedSecurity;
+		return orderedSecurity == null ? orderedSecurity = new ArrayList<>() : orderedSecurity;
 	}
 
-	public void setOrderedSecurity(List<com.tools20022.repository.entity.Security> orderedSecurity) {
-		this.orderedSecurity = orderedSecurity;
+	public SecuritiesOrder setOrderedSecurity(List<com.tools20022.repository.entity.Security> orderedSecurity) {
+		this.orderedSecurity = Objects.requireNonNull(orderedSecurity);
+		return this;
 	}
 
 	public SecuritiesPostTradeBooking getBookingInstructions() {
 		return bookingInstructions;
 	}
 
-	public void setBookingInstructions(com.tools20022.repository.entity.SecuritiesPostTradeBooking bookingInstructions) {
-		this.bookingInstructions = bookingInstructions;
+	public SecuritiesOrder setBookingInstructions(com.tools20022.repository.entity.SecuritiesPostTradeBooking bookingInstructions) {
+		this.bookingInstructions = Objects.requireNonNull(bookingInstructions);
+		return this;
 	}
 
 	public ExchangeForPhysicalTrade getExchangeForPhysicalTrade() {
 		return exchangeForPhysicalTrade;
 	}
 
-	public void setExchangeForPhysicalTrade(com.tools20022.repository.entity.ExchangeForPhysicalTrade exchangeForPhysicalTrade) {
-		this.exchangeForPhysicalTrade = exchangeForPhysicalTrade;
+	public SecuritiesOrder setExchangeForPhysicalTrade(com.tools20022.repository.entity.ExchangeForPhysicalTrade exchangeForPhysicalTrade) {
+		this.exchangeForPhysicalTrade = Objects.requireNonNull(exchangeForPhysicalTrade);
+		return this;
 	}
 
 	public OrderQuantityTypeCode getQuantityType() {
 		return quantityType;
 	}
 
-	public void setQuantityType(OrderQuantityTypeCode quantityType) {
-		this.quantityType = quantityType;
+	public SecuritiesOrder setQuantityType(OrderQuantityTypeCode quantityType) {
+		this.quantityType = Objects.requireNonNull(quantityType);
+		return this;
 	}
 
 	public Max35Text getClientOrderIdentification() {
 		return clientOrderIdentification;
 	}
 
-	public void setClientOrderIdentification(Max35Text clientOrderIdentification) {
-		this.clientOrderIdentification = clientOrderIdentification;
+	public SecuritiesOrder setClientOrderIdentification(Max35Text clientOrderIdentification) {
+		this.clientOrderIdentification = Objects.requireNonNull(clientOrderIdentification);
+		return this;
 	}
 
 	public SecuritiesOrderExecutionInstruction getExecutionInstructions() {
 		return executionInstructions;
 	}
 
-	public void setExecutionInstructions(com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction executionInstructions) {
-		this.executionInstructions = executionInstructions;
+	public SecuritiesOrder setExecutionInstructions(com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction executionInstructions) {
+		this.executionInstructions = Objects.requireNonNull(executionInstructions);
+		return this;
 	}
 
 	public OrderTypeCode getType() {
 		return type;
 	}
 
-	public void setType(OrderTypeCode type) {
-		this.type = type;
+	public SecuritiesOrder setType(OrderTypeCode type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 }

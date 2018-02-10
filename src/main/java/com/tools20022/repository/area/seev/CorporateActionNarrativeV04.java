@@ -30,9 +30,8 @@ import com.tools20022.repository.msg.UpdatedAdditionalInformation8;
 import com.tools20022.repository.msgset.CorporateActionsISOLatestversion;
 import com.tools20022.repository.msgset.CorporateActionsISOPreviousversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -52,25 +51,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
- * SecuritiesEventsLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CorporateActionsISOPreviousversion
- * CorporateActionsISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CorporateActionsISOLatestversion
- * CorporateActionsISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CorpActnNrrtv"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -92,6 +72,25 @@ import javax.xml.bind.annotation.*;
  * CorporateActionNarrativeV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CorporateActionsISOPreviousversion
+ * CorporateActionsISOPreviousversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CorporateActionsISOLatestversion
+ * CorporateActionsISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CorpActnNrrtv"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
+ * SecuritiesEventsLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.038.001.04}</li>
@@ -111,15 +110,16 @@ import javax.xml.bind.annotation.*;
  * CorporateActionNarrativeV03}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionNarrativeV04", propOrder = {"accountDetails", "underlyingSecurity", "corporateActionGeneralInformation", "additionalInformation", "supplementaryData"})
 public class CorporateActionNarrativeV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctDtls")
 	protected AccountIdentification33Choice accountDetails;
 	/**
-	 * General information about the safekeeping account and the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,10 +167,11 @@ public class CorporateActionNarrativeV04 {
 			}
 		}
 	};
+	@XmlElement(name = "UndrlygScty")
 	protected SecurityIdentification19 underlyingSecurity;
 	/**
-	 * Provides information about the securitised right for entitlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,10 +218,11 @@ public class CorporateActionNarrativeV04 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	protected CorporateActionGeneralInformation92 corporateActionGeneralInformation;
 	/**
-	 * General information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -266,10 +268,11 @@ public class CorporateActionNarrativeV04 {
 			}
 		}
 	};
+	@XmlElement(name = "AddtlInf", required = true)
 	protected UpdatedAdditionalInformation8 additionalInformation;
 	/**
-	 * Provides additional information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -315,11 +318,11 @@ public class CorporateActionNarrativeV04 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -399,52 +402,52 @@ public class CorporateActionNarrativeV04 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctDtls")
-	public AccountIdentification33Choice getAccountDetails() {
-		return accountDetails;
+	public Optional<AccountIdentification33Choice> getAccountDetails() {
+		return accountDetails == null ? Optional.empty() : Optional.of(accountDetails);
 	}
 
-	public void setAccountDetails(AccountIdentification33Choice accountDetails) {
+	public CorporateActionNarrativeV04 setAccountDetails(AccountIdentification33Choice accountDetails) {
 		this.accountDetails = accountDetails;
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygScty")
-	public SecurityIdentification19 getUnderlyingSecurity() {
-		return underlyingSecurity;
+	public Optional<SecurityIdentification19> getUnderlyingSecurity() {
+		return underlyingSecurity == null ? Optional.empty() : Optional.of(underlyingSecurity);
 	}
 
-	public void setUnderlyingSecurity(SecurityIdentification19 underlyingSecurity) {
+	public CorporateActionNarrativeV04 setUnderlyingSecurity(SecurityIdentification19 underlyingSecurity) {
 		this.underlyingSecurity = underlyingSecurity;
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionGeneralInformation92 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
 
-	public void setCorporateActionGeneralInformation(CorporateActionGeneralInformation92 corporateActionGeneralInformation) {
-		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	public CorporateActionNarrativeV04 setCorporateActionGeneralInformation(CorporateActionGeneralInformation92 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = Objects.requireNonNull(corporateActionGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf", required = true)
 	public UpdatedAdditionalInformation8 getAdditionalInformation() {
 		return additionalInformation;
 	}
 
-	public void setAdditionalInformation(UpdatedAdditionalInformation8 additionalInformation) {
-		this.additionalInformation = additionalInformation;
+	public CorporateActionNarrativeV04 setAdditionalInformation(UpdatedAdditionalInformation8 additionalInformation) {
+		this.additionalInformation = Objects.requireNonNull(additionalInformation);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public CorporateActionNarrativeV04 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.038.04.04")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.038.001.04")
 	static public class Document {
 		@XmlElement(name = "CorpActnNrrtv", required = true)
 		public CorporateActionNarrativeV04 messageBody;

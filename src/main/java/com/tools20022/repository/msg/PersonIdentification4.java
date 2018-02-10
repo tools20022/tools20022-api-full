@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.PersonIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,16 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Unique and unambiguous way to identify a person."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PersonIdentification4", propOrder = "otherIdentification")
 public class PersonIdentification4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OthrId", required = true)
 	protected RestrictedIdentification2 otherIdentification;
 	/**
-	 * Identifier issued to a person for which no specific identifier has been
-	 * defined.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -106,7 +107,7 @@ public class PersonIdentification4 {
 	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> PersonIdentification4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification4.mmObject();
 			isDerived = false;
 			xmlTag = "OthrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,9 +123,9 @@ public class PersonIdentification4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PersonIdentification4.mmOtherIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification4.mmOtherIdentification);
 				trace_lazy = () -> PersonIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PersonIdentification4";
 				definition = "Unique and unambiguous way to identify a person.";
@@ -133,12 +134,12 @@ public class PersonIdentification4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OthrId", required = true)
 	public RestrictedIdentification2 getOtherIdentification() {
 		return otherIdentification;
 	}
 
-	public void setOtherIdentification(com.tools20022.repository.msg.RestrictedIdentification2 otherIdentification) {
-		this.otherIdentification = otherIdentification;
+	public PersonIdentification4 setOtherIdentification(com.tools20022.repository.msg.RestrictedIdentification2 otherIdentification) {
+		this.otherIdentification = Objects.requireNonNull(otherIdentification);
+		return this;
 	}
 }

@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Rights for securities entitled to the account owner based on the terms of the
@@ -41,6 +42,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement
+ * CorporateActionEntitlement}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -50,30 +55,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement#mmRenounceableEntitlementStatusType
  * CorporateActionSecuritiesEntitlement.mmRenounceableEntitlementStatusType}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement
- * CorporateActionEntitlement}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.RenounceableEntitlementStatusTypeFormat1Choice
- * RenounceableEntitlementStatusTypeFormat1Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.RenounceableEntitlementStatusTypeFormat2Choice
- * RenounceableEntitlementStatusTypeFormat2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesEntitlement1
- * SecuritiesEntitlement1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.RenounceableEntitlementStatusTypeFormat3Choice
- * RenounceableEntitlementStatusTypeFormat3Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.RenounceableEntitlementStatusTypeFormat4Choice
- * RenounceableEntitlementStatusTypeFormat4Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,10 +76,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RenounceableEntitlementStatusTypeFormat1Choice
+ * RenounceableEntitlementStatusTypeFormat1Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RenounceableEntitlementStatusTypeFormat2Choice
+ * RenounceableEntitlementStatusTypeFormat2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesEntitlement1
+ * SecuritiesEntitlement1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RenounceableEntitlementStatusTypeFormat3Choice
+ * RenounceableEntitlementStatusTypeFormat3Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RenounceableEntitlementStatusTypeFormat4Choice
+ * RenounceableEntitlementStatusTypeFormat4Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -116,10 +117,8 @@ public class CorporateActionSecuritiesEntitlement extends CorporateActionEntitle
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected SecuritiesQuantity entitledSecuritiesQuantity;
 	/**
-	 * Quantity of securities based on the terms of the corporate action event
-	 * and balance of underlying securities entitled to the account owner. (This
-	 * quantity can be positive or negative).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -233,8 +232,8 @@ public class CorporateActionSecuritiesEntitlement extends CorporateActionEntitle
 					SecuritiesOption39.mmEntitledQuantity, SecuritiesOption6.mmEntitledQuantity, SecuritiesOption12.mmEntitledQuantity, SecuritiesOption14.mmEntitledQuantity, SecuritiesOption22.mmEntitledQuantity,
 					SecuritiesOption25.mmEntitledQuantity, SecuritiesOption30.mmEntitledQuantity, SecuritiesEntitlement1.mmEntitledSecuritiesQuantity, SecuritiesOption40.mmEntitledQuantity, SecuritiesOption45.mmEntitledQuantity,
 					SecuritiesOption49.mmEntitledQuantity, SecuritiesOption57.mmEntitledQuantity, SecuritiesOption59.mmEntitledQuantity, SecuritiesOption61.mmEntitledQuantity);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EntitledSecuritiesQuantity";
 			definition = "Quantity of securities based on the terms of the corporate action event and balance of underlying securities entitled to the account owner. (This quantity can be positive or negative).";
@@ -247,8 +246,8 @@ public class CorporateActionSecuritiesEntitlement extends CorporateActionEntitle
 	};
 	protected RenounceableStatusCode renounceableEntitlementStatusType;
 	/**
-	 * Specifies whether terms of the event allow resale of the rights.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -377,8 +376,8 @@ public class CorporateActionSecuritiesEntitlement extends CorporateActionEntitle
 					FinancialInstrumentAttributes68.mmRenounceableEntitlementStatusType, RenounceableEntitlementStatusTypeFormat3Choice.mmCode, RenounceableEntitlementStatusTypeFormat3Choice.mmProprietary,
 					FinancialInstrumentAttributes73.mmRenounceableEntitlementStatusType, CorporateAction40.mmRenounceableEntitlementStatusType, RenounceableEntitlementStatusTypeFormat4Choice.mmCode,
 					RenounceableEntitlementStatusTypeFormat4Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RenounceableEntitlementStatusType";
 			definition = "Specifies whether terms of the event allow resale of the rights.";
@@ -399,7 +398,7 @@ public class CorporateActionSecuritiesEntitlement extends CorporateActionEntitle
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionSecuritiesEntitlement";
 				definition = "Rights for securities entitled to the account owner based on the terms of the corporate action event and the balance of underlying securities.";
@@ -424,15 +423,17 @@ public class CorporateActionSecuritiesEntitlement extends CorporateActionEntitle
 		return entitledSecuritiesQuantity;
 	}
 
-	public void setEntitledSecuritiesQuantity(com.tools20022.repository.entity.SecuritiesQuantity entitledSecuritiesQuantity) {
-		this.entitledSecuritiesQuantity = entitledSecuritiesQuantity;
+	public CorporateActionSecuritiesEntitlement setEntitledSecuritiesQuantity(com.tools20022.repository.entity.SecuritiesQuantity entitledSecuritiesQuantity) {
+		this.entitledSecuritiesQuantity = Objects.requireNonNull(entitledSecuritiesQuantity);
+		return this;
 	}
 
 	public RenounceableStatusCode getRenounceableEntitlementStatusType() {
 		return renounceableEntitlementStatusType;
 	}
 
-	public void setRenounceableEntitlementStatusType(RenounceableStatusCode renounceableEntitlementStatusType) {
-		this.renounceableEntitlementStatusType = renounceableEntitlementStatusType;
+	public CorporateActionSecuritiesEntitlement setRenounceableEntitlementStatusType(RenounceableStatusCode renounceableEntitlementStatusType) {
+		this.renounceableEntitlementStatusType = Objects.requireNonNull(renounceableEntitlementStatusType);
+		return this;
 	}
 }

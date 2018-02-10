@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.IssuerStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies DTC (The Depository Trust Company) defined issuer status of the
@@ -33,62 +38,62 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmApprovedBySEC
- * IssuerStatusCode.mmApprovedBySEC}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#ApprovedBySEC
+ * IssuerStatusCode.ApprovedBySEC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmApprovedByShareholders
- * IssuerStatusCode.mmApprovedByShareholders}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#ApprovedByShareholders
+ * IssuerStatusCode.ApprovedByShareholders}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmApprovedByShareholdersAndSEC
- * IssuerStatusCode.mmApprovedByShareholdersAndSEC}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#ApprovedByShareholdersAndSEC
+ * IssuerStatusCode.ApprovedByShareholdersAndSEC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmApproximateRate
- * IssuerStatusCode.mmApproximateRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#ApproximateRate
+ * IssuerStatusCode.ApproximateRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmAwaitingInformationFromCompany
- * IssuerStatusCode.mmAwaitingInformationFromCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#AwaitingInformationFromCompany
+ * IssuerStatusCode.AwaitingInformationFromCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmDayGracePeriod
- * IssuerStatusCode.mmDayGracePeriod}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#DayGracePeriod
+ * IssuerStatusCode.DayGracePeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmDistributionRejected
- * IssuerStatusCode.mmDistributionRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#DistributionRejected
+ * IssuerStatusCode.DistributionRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmSeeComments
- * IssuerStatusCode.mmSeeComments}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#SeeComments
+ * IssuerStatusCode.SeeComments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmHolidayInCountryofOrigin
- * IssuerStatusCode.mmHolidayInCountryofOrigin}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#HolidayInCountryofOrigin
+ * IssuerStatusCode.HolidayInCountryofOrigin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmIssueNotFunded
- * IssuerStatusCode.mmIssueNotFunded}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#IssueNotFunded
+ * IssuerStatusCode.IssueNotFunded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmIssueTradingFlat
- * IssuerStatusCode.mmIssueTradingFlat}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#IssueTradingFlat
+ * IssuerStatusCode.IssueTradingFlat}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmLateAnnouncementWithElections
- * IssuerStatusCode.mmLateAnnouncementWithElections}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#LateAnnouncementWithElections
+ * IssuerStatusCode.LateAnnouncementWithElections}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmLiquidation
- * IssuerStatusCode.mmLiquidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#Liquidation
+ * IssuerStatusCode.Liquidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmPaidUponrReceiptOfFunds
- * IssuerStatusCode.mmPaidUponrReceiptOfFunds}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#PaidUponrReceiptOfFunds
+ * IssuerStatusCode.PaidUponrReceiptOfFunds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmPendingConversionOfFunds
- * IssuerStatusCode.mmPendingConversionOfFunds}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#PendingConversionOfFunds
+ * IssuerStatusCode.PendingConversionOfFunds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmPendingEDSElections
- * IssuerStatusCode.mmPendingEDSElections}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#PendingEDSElections
+ * IssuerStatusCode.PendingEDSElections}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmPendingSECApproval
- * IssuerStatusCode.mmPendingSECApproval}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#PendingSECApproval
+ * IssuerStatusCode.PendingSECApproval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmPendingShareholderAndSECApproval
- * IssuerStatusCode.mmPendingShareholderAndSECApproval}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#PendingShareholderAndSECApproval
+ * IssuerStatusCode.PendingShareholderAndSECApproval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#mmPendingShareholderApproval
- * IssuerStatusCode.mmPendingShareholderApproval}</li>
+ * {@linkplain com.tools20022.repository.codeset.IssuerStatusCode#PendingShareholderApproval
+ * IssuerStatusCode.PendingShareholderApproval}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -101,8 +106,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -121,7 +126,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class IssuerStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class IssuerStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -146,12 +152,12 @@ public class IssuerStatusCode {
 	 * "Event is approved by SEC (Securities and Exchange Commission)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmApprovedBySEC = new MMCode() {
+	public static final IssuerStatusCode ApprovedBySEC = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedBySEC";
 			definition = "Event is approved by SEC (Securities and Exchange Commission).";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "ASEC";
 		}
 	};
@@ -176,12 +182,12 @@ public class IssuerStatusCode {
 	 * definition} = "Event is approved by shareholders."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmApprovedByShareholders = new MMCode() {
+	public static final IssuerStatusCode ApprovedByShareholders = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedByShareholders";
 			definition = "Event is approved by shareholders.";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "ASHH";
 		}
 	};
@@ -209,12 +215,12 @@ public class IssuerStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmApprovedByShareholdersAndSEC = new MMCode() {
+	public static final IssuerStatusCode ApprovedByShareholdersAndSEC = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedByShareholdersAndSEC";
 			definition = "Event is approved by SEC (Securities and Exchange Commission and shareholders.";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "ASHS";
 		}
 	};
@@ -239,12 +245,12 @@ public class IssuerStatusCode {
 	 * definition} = "Event has approximate rate."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmApproximateRate = new MMCode() {
+	public static final IssuerStatusCode ApproximateRate = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApproximateRate";
 			definition = "Event has approximate rate.";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "APRT";
 		}
 	};
@@ -269,12 +275,12 @@ public class IssuerStatusCode {
 	 * definition} = "Awaiting information from company on the event."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingInformationFromCompany = new MMCode() {
+	public static final IssuerStatusCode AwaitingInformationFromCompany = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingInformationFromCompany";
 			definition = "Awaiting information from company on the event.";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "AIFC";
 		}
 	};
@@ -299,12 +305,12 @@ public class IssuerStatusCode {
 	 * definition} = "Event has day grace period."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDayGracePeriod = new MMCode() {
+	public static final IssuerStatusCode DayGracePeriod = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DayGracePeriod";
 			definition = "Event has day grace period.";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "DGRP";
 		}
 	};
@@ -329,12 +335,12 @@ public class IssuerStatusCode {
 	 * definition} = "Event distribution was rejected."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDistributionRejected = new MMCode() {
+	public static final IssuerStatusCode DistributionRejected = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistributionRejected";
 			definition = "Event distribution was rejected.";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "DREJ";
 		}
 	};
@@ -359,12 +365,12 @@ public class IssuerStatusCode {
 	 * definition} = "Event has free form comments for review."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSeeComments = new MMCode() {
+	public static final IssuerStatusCode SeeComments = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SeeComments";
 			definition = "Event has free form comments for review.";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "FFCO";
 		}
 	};
@@ -389,12 +395,12 @@ public class IssuerStatusCode {
 	 * definition} = "Holiday in country of origin of the event."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHolidayInCountryofOrigin = new MMCode() {
+	public static final IssuerStatusCode HolidayInCountryofOrigin = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HolidayInCountryofOrigin";
 			definition = "Holiday in country of origin of the event.";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "HOCO";
 		}
 	};
@@ -419,12 +425,12 @@ public class IssuerStatusCode {
 	 * definition} = "Event issue is not funded."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssueNotFunded = new MMCode() {
+	public static final IssuerStatusCode IssueNotFunded = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueNotFunded";
 			definition = "Event issue is not funded.";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "INFN";
 		}
 	};
@@ -449,12 +455,12 @@ public class IssuerStatusCode {
 	 * definition} = "Event issue is trading flat."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssueTradingFlat = new MMCode() {
+	public static final IssuerStatusCode IssueTradingFlat = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueTradingFlat";
 			definition = "Event issue is trading flat.";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "ITFL";
 		}
 	};
@@ -479,12 +485,12 @@ public class IssuerStatusCode {
 	 * definition} = "Event is a late announcement with elections."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLateAnnouncementWithElections = new MMCode() {
+	public static final IssuerStatusCode LateAnnouncementWithElections = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateAnnouncementWithElections";
 			definition = "Event is a late announcement with elections.";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "LAWE";
 		}
 	};
@@ -509,12 +515,12 @@ public class IssuerStatusCode {
 	 * definition} = "Event is a liquidation."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLiquidation = new MMCode() {
+	public static final IssuerStatusCode Liquidation = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Liquidation";
 			definition = "Event is a liquidation.";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "LIQU";
 		}
 	};
@@ -539,12 +545,12 @@ public class IssuerStatusCode {
 	 * definition} = "Event proceeds will be paid upon receipt of funds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPaidUponrReceiptOfFunds = new MMCode() {
+	public static final IssuerStatusCode PaidUponrReceiptOfFunds = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaidUponrReceiptOfFunds";
 			definition = "Event proceeds will be paid upon receipt of funds.";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "PURF";
 		}
 	};
@@ -569,12 +575,12 @@ public class IssuerStatusCode {
 	 * definition} = "Event processed are pending conversion of funds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingConversionOfFunds = new MMCode() {
+	public static final IssuerStatusCode PendingConversionOfFunds = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingConversionOfFunds";
 			definition = "Event processed are pending conversion of funds.";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "PCOF";
 		}
 	};
@@ -599,12 +605,12 @@ public class IssuerStatusCode {
 	 * definition} = "Event is pending election dividend services elections."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingEDSElections = new MMCode() {
+	public static final IssuerStatusCode PendingEDSElections = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingEDSElections";
 			definition = "Event is pending election dividend services elections.";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "PELE";
 		}
 	};
@@ -630,12 +636,12 @@ public class IssuerStatusCode {
 	 * "Event is pending SEC (Securities and Exchange Commission approval."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingSECApproval = new MMCode() {
+	public static final IssuerStatusCode PendingSECApproval = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingSECApproval";
 			definition = "Event is pending SEC (Securities and Exchange Commission approval.";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "PSEC";
 		}
 	};
@@ -663,12 +669,12 @@ public class IssuerStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingShareholderAndSECApproval = new MMCode() {
+	public static final IssuerStatusCode PendingShareholderAndSECApproval = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingShareholderAndSECApproval";
 			definition = "Event is pending SEC (Securities and Exchange Commission and shareholders approval.";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "PSHS";
 		}
 	};
@@ -693,32 +699,83 @@ public class IssuerStatusCode {
 	 * definition} = "Event is pending shareholder approval."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingShareholderApproval = new MMCode() {
+	public static final IssuerStatusCode PendingShareholderApproval = new IssuerStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingShareholderApproval";
 			definition = "Event is pending shareholder approval.";
-			owner_lazy = () -> IssuerStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IssuerStatusCode.mmObject();
 			codeName = "PSHA";
 		}
 	};
+	final static private LinkedHashMap<String, IssuerStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected IssuerStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ASEC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IssuerStatusCode";
 				definition = "Specifies DTC (The Depository Trust Company) defined issuer status of the event.";
-				code_lazy = () -> Arrays.asList(IssuerStatusCode.mmApprovedBySEC, IssuerStatusCode.mmApprovedByShareholders, IssuerStatusCode.mmApprovedByShareholdersAndSEC, IssuerStatusCode.mmApproximateRate,
-						IssuerStatusCode.mmAwaitingInformationFromCompany, IssuerStatusCode.mmDayGracePeriod, IssuerStatusCode.mmDistributionRejected, IssuerStatusCode.mmSeeComments, IssuerStatusCode.mmHolidayInCountryofOrigin,
-						IssuerStatusCode.mmIssueNotFunded, IssuerStatusCode.mmIssueTradingFlat, IssuerStatusCode.mmLateAnnouncementWithElections, IssuerStatusCode.mmLiquidation, IssuerStatusCode.mmPaidUponrReceiptOfFunds,
-						IssuerStatusCode.mmPendingConversionOfFunds, IssuerStatusCode.mmPendingEDSElections, IssuerStatusCode.mmPendingSECApproval, IssuerStatusCode.mmPendingShareholderAndSECApproval,
-						IssuerStatusCode.mmPendingShareholderApproval);
 				derivation_lazy = () -> Arrays.asList(IssuerStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IssuerStatusCode.ApprovedBySEC, com.tools20022.repository.codeset.IssuerStatusCode.ApprovedByShareholders,
+						com.tools20022.repository.codeset.IssuerStatusCode.ApprovedByShareholdersAndSEC, com.tools20022.repository.codeset.IssuerStatusCode.ApproximateRate,
+						com.tools20022.repository.codeset.IssuerStatusCode.AwaitingInformationFromCompany, com.tools20022.repository.codeset.IssuerStatusCode.DayGracePeriod,
+						com.tools20022.repository.codeset.IssuerStatusCode.DistributionRejected, com.tools20022.repository.codeset.IssuerStatusCode.SeeComments, com.tools20022.repository.codeset.IssuerStatusCode.HolidayInCountryofOrigin,
+						com.tools20022.repository.codeset.IssuerStatusCode.IssueNotFunded, com.tools20022.repository.codeset.IssuerStatusCode.IssueTradingFlat,
+						com.tools20022.repository.codeset.IssuerStatusCode.LateAnnouncementWithElections, com.tools20022.repository.codeset.IssuerStatusCode.Liquidation,
+						com.tools20022.repository.codeset.IssuerStatusCode.PaidUponrReceiptOfFunds, com.tools20022.repository.codeset.IssuerStatusCode.PendingConversionOfFunds,
+						com.tools20022.repository.codeset.IssuerStatusCode.PendingEDSElections, com.tools20022.repository.codeset.IssuerStatusCode.PendingSECApproval,
+						com.tools20022.repository.codeset.IssuerStatusCode.PendingShareholderAndSECApproval, com.tools20022.repository.codeset.IssuerStatusCode.PendingShareholderApproval);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ApprovedBySEC.getCodeName().get(), ApprovedBySEC);
+		codesByName.put(ApprovedByShareholders.getCodeName().get(), ApprovedByShareholders);
+		codesByName.put(ApprovedByShareholdersAndSEC.getCodeName().get(), ApprovedByShareholdersAndSEC);
+		codesByName.put(ApproximateRate.getCodeName().get(), ApproximateRate);
+		codesByName.put(AwaitingInformationFromCompany.getCodeName().get(), AwaitingInformationFromCompany);
+		codesByName.put(DayGracePeriod.getCodeName().get(), DayGracePeriod);
+		codesByName.put(DistributionRejected.getCodeName().get(), DistributionRejected);
+		codesByName.put(SeeComments.getCodeName().get(), SeeComments);
+		codesByName.put(HolidayInCountryofOrigin.getCodeName().get(), HolidayInCountryofOrigin);
+		codesByName.put(IssueNotFunded.getCodeName().get(), IssueNotFunded);
+		codesByName.put(IssueTradingFlat.getCodeName().get(), IssueTradingFlat);
+		codesByName.put(LateAnnouncementWithElections.getCodeName().get(), LateAnnouncementWithElections);
+		codesByName.put(Liquidation.getCodeName().get(), Liquidation);
+		codesByName.put(PaidUponrReceiptOfFunds.getCodeName().get(), PaidUponrReceiptOfFunds);
+		codesByName.put(PendingConversionOfFunds.getCodeName().get(), PendingConversionOfFunds);
+		codesByName.put(PendingEDSElections.getCodeName().get(), PendingEDSElections);
+		codesByName.put(PendingSECApproval.getCodeName().get(), PendingSECApproval);
+		codesByName.put(PendingShareholderAndSECApproval.getCodeName().get(), PendingShareholderAndSECApproval);
+		codesByName.put(PendingShareholderApproval.getCodeName().get(), PendingShareholderApproval);
+	}
+
+	public static IssuerStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static IssuerStatusCode[] values() {
+		IssuerStatusCode[] values = new IssuerStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, IssuerStatusCode> {
+		@Override
+		public IssuerStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(IssuerStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

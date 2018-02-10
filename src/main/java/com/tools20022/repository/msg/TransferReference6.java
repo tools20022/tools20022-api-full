@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReferenceRule#forTransferReference6
+ * ConstraintReferenceRule.forTransferReference6}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,17 +97,16 @@ import javax.xml.bind.annotation.XmlType;
  * TransferReference2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransferReference6", propOrder = {"masterReference", "transferReference", "clientReference", "transferConfirmationReference", "counterpartyReference"})
 public class TransferReference6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MstrRef")
 	protected Max35Text masterReference;
 	/**
-	 * Unique and unambiguous identifier for a group of individual transfers as
-	 * assigned by the instructing party. This identifier links the individual
-	 * transfers together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +154,7 @@ public class TransferReference6 {
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
-			componentContext_lazy = () -> TransferReference6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference6.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,11 +167,11 @@ public class TransferReference6 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfRef")
 	protected Max35Text transferReference;
 	/**
-	 * Unique and unambiguous identifier for a transfer instruction, as assigned
-	 * by the instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,7 +219,7 @@ public class TransferReference6 {
 	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmIdentification;
-			componentContext_lazy = () -> TransferReference6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference6.mmObject();
 			isDerived = false;
 			xmlTag = "TrfRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,12 +232,11 @@ public class TransferReference6 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntRef")
 	protected Max35Text clientReference;
 	/**
-	 * Unique and unambiguous investor's identification of a transfer. This
-	 * reference can typically be used in a hub scenario to give the reference
-	 * of the transfer as assigned by the underlying client.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -277,7 +284,7 @@ public class TransferReference6 {
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
-			componentContext_lazy = () -> TransferReference6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference6.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -290,11 +297,11 @@ public class TransferReference6 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfConfRef")
 	protected Max35Text transferConfirmationReference;
 	/**
-	 * Unique and unambiguous identifier for a transfer execution, as assigned
-	 * by a confirming party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -336,7 +343,7 @@ public class TransferReference6 {
 	 */
 	public static final MMMessageAttribute mmTransferConfirmationReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransferReference6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference6.mmObject();
 			isDerived = false;
 			xmlTag = "TrfConfRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -349,10 +356,11 @@ public class TransferReference6 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrPtyRef")
 	protected AdditionalReference2 counterpartyReference;
 	/**
-	 * Unambiguous identification of the transfer allocated by the counterparty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -390,7 +398,7 @@ public class TransferReference6 {
 	 */
 	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransferReference6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference6.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -406,10 +414,12 @@ public class TransferReference6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransferReference6.mmMasterReference, TransferReference6.mmTransferReference, TransferReference6.mmClientReference, TransferReference6.mmTransferConfirmationReference,
-						TransferReference6.mmCounterpartyReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferReference6.mmMasterReference, com.tools20022.repository.msg.TransferReference6.mmTransferReference,
+						com.tools20022.repository.msg.TransferReference6.mmClientReference, com.tools20022.repository.msg.TransferReference6.mmTransferConfirmationReference,
+						com.tools20022.repository.msg.TransferReference6.mmCounterpartyReference);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReferenceRule.forTransferReference6);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferReference6";
 				definition = "Reference of a transfer and of a transfer confirmation.";
@@ -420,48 +430,48 @@ public class TransferReference6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MstrRef")
-	public Max35Text getMasterReference() {
-		return masterReference;
+	public Optional<Max35Text> getMasterReference() {
+		return masterReference == null ? Optional.empty() : Optional.of(masterReference);
 	}
 
-	public void setMasterReference(Max35Text masterReference) {
+	public TransferReference6 setMasterReference(Max35Text masterReference) {
 		this.masterReference = masterReference;
+		return this;
 	}
 
-	@XmlElement(name = "TrfRef")
-	public Max35Text getTransferReference() {
-		return transferReference;
+	public Optional<Max35Text> getTransferReference() {
+		return transferReference == null ? Optional.empty() : Optional.of(transferReference);
 	}
 
-	public void setTransferReference(Max35Text transferReference) {
+	public TransferReference6 setTransferReference(Max35Text transferReference) {
 		this.transferReference = transferReference;
+		return this;
 	}
 
-	@XmlElement(name = "ClntRef")
-	public Max35Text getClientReference() {
-		return clientReference;
+	public Optional<Max35Text> getClientReference() {
+		return clientReference == null ? Optional.empty() : Optional.of(clientReference);
 	}
 
-	public void setClientReference(Max35Text clientReference) {
+	public TransferReference6 setClientReference(Max35Text clientReference) {
 		this.clientReference = clientReference;
+		return this;
 	}
 
-	@XmlElement(name = "TrfConfRef")
-	public Max35Text getTransferConfirmationReference() {
-		return transferConfirmationReference;
+	public Optional<Max35Text> getTransferConfirmationReference() {
+		return transferConfirmationReference == null ? Optional.empty() : Optional.of(transferConfirmationReference);
 	}
 
-	public void setTransferConfirmationReference(Max35Text transferConfirmationReference) {
+	public TransferReference6 setTransferConfirmationReference(Max35Text transferConfirmationReference) {
 		this.transferConfirmationReference = transferConfirmationReference;
+		return this;
 	}
 
-	@XmlElement(name = "CtrPtyRef")
-	public AdditionalReference2 getCounterpartyReference() {
-		return counterpartyReference;
+	public Optional<AdditionalReference2> getCounterpartyReference() {
+		return counterpartyReference == null ? Optional.empty() : Optional.of(counterpartyReference);
 	}
 
-	public void setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference2 counterpartyReference) {
+	public TransferReference6 setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference2 counterpartyReference) {
 		this.counterpartyReference = counterpartyReference;
+		return this;
 	}
 }

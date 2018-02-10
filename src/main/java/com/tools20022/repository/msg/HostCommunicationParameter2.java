@@ -25,9 +25,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.entity.TerminalManagementSystem;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,15 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * HostCommunicationParameter1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "HostCommunicationParameter2", propOrder = {"hostIdentification", "address", "key"})
 public class HostCommunicationParameter2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "HstId", required = true)
 	protected Max35Text hostIdentification;
 	/**
-	 * Identification of the host.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,7 +132,7 @@ public class HostCommunicationParameter2 {
 	public static final MMMessageAttribute mmHostIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
-			componentContext_lazy = () -> HostCommunicationParameter2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.HostCommunicationParameter2.mmObject();
 			isDerived = false;
 			xmlTag = "HstId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -144,10 +144,11 @@ public class HostCommunicationParameter2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Adr")
 	protected NetworkParameters1 address;
 	/**
-	 * Network parameters of the host.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -187,7 +188,7 @@ public class HostCommunicationParameter2 {
 	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementSystem.mmNetworkAccess;
-			componentContext_lazy = () -> HostCommunicationParameter2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.HostCommunicationParameter2.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,10 +201,11 @@ public class HostCommunicationParameter2 {
 			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
 		}
 	};
+	@XmlElement(name = "Key")
 	protected List<com.tools20022.repository.msg.CryptographicKey3> key;
 	/**
-	 * Cryptographic key used to communicate with the host.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -237,7 +239,7 @@ public class HostCommunicationParameter2 {
 	 */
 	public static final MMMessageAssociationEnd mmKey = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> HostCommunicationParameter2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.HostCommunicationParameter2.mmObject();
 			isDerived = false;
 			xmlTag = "Key";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -253,9 +255,10 @@ public class HostCommunicationParameter2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(HostCommunicationParameter2.mmHostIdentification, HostCommunicationParameter2.mmAddress, HostCommunicationParameter2.mmKey);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HostCommunicationParameter2.mmHostIdentification, com.tools20022.repository.msg.HostCommunicationParameter2.mmAddress,
+						com.tools20022.repository.msg.HostCommunicationParameter2.mmKey);
 				trace_lazy = () -> TerminalManagementSystem.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "HostCommunicationParameter2";
 				definition = "Configuration parameters to communicate with a host.";
@@ -266,30 +269,30 @@ public class HostCommunicationParameter2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "HstId", required = true)
 	public Max35Text getHostIdentification() {
 		return hostIdentification;
 	}
 
-	public void setHostIdentification(Max35Text hostIdentification) {
-		this.hostIdentification = hostIdentification;
+	public HostCommunicationParameter2 setHostIdentification(Max35Text hostIdentification) {
+		this.hostIdentification = Objects.requireNonNull(hostIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Adr")
-	public NetworkParameters1 getAddress() {
-		return address;
+	public Optional<NetworkParameters1> getAddress() {
+		return address == null ? Optional.empty() : Optional.of(address);
 	}
 
-	public void setAddress(com.tools20022.repository.msg.NetworkParameters1 address) {
+	public HostCommunicationParameter2 setAddress(com.tools20022.repository.msg.NetworkParameters1 address) {
 		this.address = address;
+		return this;
 	}
 
-	@XmlElement(name = "Key")
 	public List<CryptographicKey3> getKey() {
-		return key;
+		return key == null ? key = new ArrayList<>() : key;
 	}
 
-	public void setKey(List<com.tools20022.repository.msg.CryptographicKey3> key) {
-		this.key = key;
+	public HostCommunicationParameter2 setKey(List<com.tools20022.repository.msg.CryptographicKey3> key) {
+		this.key = Objects.requireNonNull(key);
+		return this;
 	}
 }

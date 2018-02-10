@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,16 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementDetails88", propOrder = {"tradeDate", "settlementParties", "collateralOwnership"})
 public class SettlementDetails88 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradDt", required = true)
 	protected ISODateTime tradeDate;
 	/**
-	 * Indicates the date as known by the two parties to be used for matching
-	 * purposes when settlement of securities occurs.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -136,7 +138,7 @@ public class SettlementDetails88 {
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> SettlementDetails88.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails88.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,11 +150,11 @@ public class SettlementDetails88 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmPties")
 	protected SettlementParties3Choice settlementParties;
 	/**
-	 * Provides details on either the delivering or receiving settlement
-	 * parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -195,7 +197,7 @@ public class SettlementDetails88 {
 	public static final MMMessageAssociationEnd mmSettlementParties = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
-			componentContext_lazy = () -> SettlementDetails88.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails88.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,10 +210,11 @@ public class SettlementDetails88 {
 			type_lazy = () -> SettlementParties3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CollOwnrsh", required = true)
 	protected CollateralOwnership1 collateralOwnership;
 	/**
-	 * Indicates the collateral ownership.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -251,7 +254,7 @@ public class SettlementDetails88 {
 	public static final MMMessageAssociationEnd mmCollateralOwnership = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralOwnership;
-			componentContext_lazy = () -> SettlementDetails88.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails88.mmObject();
 			isDerived = false;
 			xmlTag = "CollOwnrsh";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -268,9 +271,10 @@ public class SettlementDetails88 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementDetails88.mmTradeDate, SettlementDetails88.mmSettlementParties, SettlementDetails88.mmCollateralOwnership);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails88.mmTradeDate, com.tools20022.repository.msg.SettlementDetails88.mmSettlementParties,
+						com.tools20022.repository.msg.SettlementDetails88.mmCollateralOwnership);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementDetails88";
 				definition = "Parameters which explicitly state the conditions that must be fulfilled before a particular  transaction of a financial instrument can be settled.  These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.";
@@ -280,30 +284,30 @@ public class SettlementDetails88 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradDt", required = true)
 	public ISODateTime getTradeDate() {
 		return tradeDate;
 	}
 
-	public void setTradeDate(ISODateTime tradeDate) {
-		this.tradeDate = tradeDate;
+	public SettlementDetails88 setTradeDate(ISODateTime tradeDate) {
+		this.tradeDate = Objects.requireNonNull(tradeDate);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmPties")
-	public SettlementParties3Choice getSettlementParties() {
-		return settlementParties;
+	public Optional<SettlementParties3Choice> getSettlementParties() {
+		return settlementParties == null ? Optional.empty() : Optional.of(settlementParties);
 	}
 
-	public void setSettlementParties(SettlementParties3Choice settlementParties) {
+	public SettlementDetails88 setSettlementParties(SettlementParties3Choice settlementParties) {
 		this.settlementParties = settlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "CollOwnrsh", required = true)
 	public CollateralOwnership1 getCollateralOwnership() {
 		return collateralOwnership;
 	}
 
-	public void setCollateralOwnership(com.tools20022.repository.msg.CollateralOwnership1 collateralOwnership) {
-		this.collateralOwnership = collateralOwnership;
+	public SettlementDetails88 setCollateralOwnership(com.tools20022.repository.msg.CollateralOwnership1 collateralOwnership) {
+		this.collateralOwnership = Objects.requireNonNull(collateralOwnership);
+		return this;
 	}
 }

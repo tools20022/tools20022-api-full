@@ -25,6 +25,8 @@ import com.tools20022.repository.entity.InterestCalculation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,21 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Set of elements qualifying the interest rate."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Rate1", propOrder = {"rate", "validityRange"})
 public class Rate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rate", required = true)
 	protected RateTypeChoice rate;
 	/**
-	 * Percentage charged for the use of an amount of money, usually expressed
-	 * at an annual rate. The interest rate is the ratio of the amount of
-	 * interest paid during a certain period of time compared to the principal
-	 * amount of the interest bearing financial instrument. Example percentage
-	 * rate : Rate expressed as a percentage, ie, in hundredths, eg, 0.7 is 7/10
-	 * of a percent, and 7.0 is 7%. Example Textual rate : Rate is expressed as
-	 * a text.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +106,7 @@ public class Rate1 {
 	public static final MMMessageAssociationEnd mmRate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
-			componentContext_lazy = () -> Rate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Rate1.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +118,11 @@ public class Rate1 {
 			type_lazy = () -> RateTypeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "VldtyRg")
 	protected CurrencyAndAmountRange validityRange;
 	/**
-	 * An amount range where the interest rate is applicable
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +153,7 @@ public class Rate1 {
 	public static final MMMessageAssociationEnd mmValidityRange = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRateValidityRange;
-			componentContext_lazy = () -> Rate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Rate1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtyRg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,9 +169,9 @@ public class Rate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Rate1.mmRate, Rate1.mmValidityRange);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Rate1.mmRate, com.tools20022.repository.msg.Rate1.mmValidityRange);
 				trace_lazy = () -> InterestCalculation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Rate1";
 				definition = "Set of elements qualifying the interest rate.";
@@ -182,21 +180,21 @@ public class Rate1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rate", required = true)
 	public RateTypeChoice getRate() {
 		return rate;
 	}
 
-	public void setRate(RateTypeChoice rate) {
-		this.rate = rate;
+	public Rate1 setRate(RateTypeChoice rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 
-	@XmlElement(name = "VldtyRg")
-	public CurrencyAndAmountRange getValidityRange() {
-		return validityRange;
+	public Optional<CurrencyAndAmountRange> getValidityRange() {
+		return validityRange == null ? Optional.empty() : Optional.of(validityRange);
 	}
 
-	public void setValidityRange(com.tools20022.repository.msg.CurrencyAndAmountRange validityRange) {
+	public Rate1 setValidityRange(com.tools20022.repository.msg.CurrencyAndAmountRange validityRange) {
 		this.validityRange = validityRange;
+		return this;
 	}
 }

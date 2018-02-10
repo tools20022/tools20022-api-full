@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,18 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecurityDate8SD1", propOrder = {"placeAndName", "settlementDateOfNewSecurity", "tradingSuspendedDate"})
 public class SecurityDate8SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm")
 	protected Max350Text placeAndName;
 	/**
-	 * Unambiguous reference to the location where the supplementary data must
-	 * be inserted in the message instance. <br>
-	 * <br>
-	 * In the case of XML, this is expressed by a valid XPath.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +108,7 @@ public class SecurityDate8SD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityDate8SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityDate8SD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,11 +119,11 @@ public class SecurityDate8SD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmDtOfNewScty")
 	protected DateFormat22Choice settlementDateOfNewSecurity;
 	/**
-	 * Settlement date for the transaction where the new security is issued. <br>
-	 * 発行日決済日程情報/決済日
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -154,7 +153,7 @@ public class SecurityDate8SD1 {
 	 */
 	public static final MMMessageAttribute mmSettlementDateOfNewSecurity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityDate8SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityDate8SD1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDtOfNewScty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,11 +164,11 @@ public class SecurityDate8SD1 {
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgSspdDt")
 	protected DateFormat22Choice tradingSuspendedDate;
 	/**
-	 * Date/time at which trading of a security is suspended as the result of an
-	 * event.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -197,7 +196,7 @@ public class SecurityDate8SD1 {
 	 */
 	public static final MMMessageAssociationEnd mmTradingSuspendedDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecurityDate8SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityDate8SD1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSspdDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,8 +212,9 @@ public class SecurityDate8SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityDate8SD1.mmPlaceAndName, SecurityDate8SD1.mmSettlementDateOfNewSecurity, SecurityDate8SD1.mmTradingSuspendedDate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate8SD1.mmPlaceAndName, com.tools20022.repository.msg.SecurityDate8SD1.mmSettlementDateOfNewSecurity,
+						com.tools20022.repository.msg.SecurityDate8SD1.mmTradingSuspendedDate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityDate8SD1";
 				definition = "Extension to provide information about the dates related to securities movement.";
@@ -223,30 +223,30 @@ public class SecurityDate8SD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm")
-	public Max350Text getPlaceAndName() {
-		return placeAndName;
+	public Optional<Max350Text> getPlaceAndName() {
+		return placeAndName == null ? Optional.empty() : Optional.of(placeAndName);
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
+	public SecurityDate8SD1 setPlaceAndName(Max350Text placeAndName) {
 		this.placeAndName = placeAndName;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmDtOfNewScty")
-	public DateFormat22Choice getSettlementDateOfNewSecurity() {
-		return settlementDateOfNewSecurity;
+	public Optional<DateFormat22Choice> getSettlementDateOfNewSecurity() {
+		return settlementDateOfNewSecurity == null ? Optional.empty() : Optional.of(settlementDateOfNewSecurity);
 	}
 
-	public void setSettlementDateOfNewSecurity(DateFormat22Choice settlementDateOfNewSecurity) {
+	public SecurityDate8SD1 setSettlementDateOfNewSecurity(DateFormat22Choice settlementDateOfNewSecurity) {
 		this.settlementDateOfNewSecurity = settlementDateOfNewSecurity;
+		return this;
 	}
 
-	@XmlElement(name = "TradgSspdDt")
-	public DateFormat22Choice getTradingSuspendedDate() {
-		return tradingSuspendedDate;
+	public Optional<DateFormat22Choice> getTradingSuspendedDate() {
+		return tradingSuspendedDate == null ? Optional.empty() : Optional.of(tradingSuspendedDate);
 	}
 
-	public void setTradingSuspendedDate(DateFormat22Choice tradingSuspendedDate) {
+	public SecurityDate8SD1 setTradingSuspendedDate(DateFormat22Choice tradingSuspendedDate) {
 		this.tradingSuspendedDate = tradingSuspendedDate;
+		return this;
 	}
 }

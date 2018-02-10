@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ProxyNotAllowedCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates that the assignment of a proxy is not allowed for the meeting.
@@ -32,15 +37,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProxyNotAllowedCode#mmNotAllowed
- * ProxyNotAllowedCode.mmNotAllowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProxyNotAllowedCode#NotAllowed
+ * ProxyNotAllowedCode.NotAllowed}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -58,7 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Indicates that the assignment of a proxy is not allowed for the meeting."</li>
  * </ul>
  */
-public class ProxyNotAllowedCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProxyNotAllowedCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,27 +88,56 @@ public class ProxyNotAllowedCode {
 	 * definition} = "Proxy not allowed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotAllowed = new MMCode() {
+	public static final ProxyNotAllowedCode NotAllowed = new ProxyNotAllowedCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotAllowed";
 			definition = "Proxy not allowed.";
-			owner_lazy = () -> ProxyNotAllowedCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProxyNotAllowedCode.mmObject();
 			codeName = "NPRO";
 		}
 	};
+	final static private LinkedHashMap<String, ProxyNotAllowedCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProxyNotAllowedCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NPRO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProxyNotAllowedCode";
 				definition = "Indicates that the assignment of a proxy is not allowed for the meeting.";
-				code_lazy = () -> Arrays.asList(ProxyNotAllowedCode.mmNotAllowed);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProxyNotAllowedCode.NotAllowed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NotAllowed.getCodeName().get(), NotAllowed);
+	}
+
+	public static ProxyNotAllowedCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProxyNotAllowedCode[] values() {
+		ProxyNotAllowedCode[] values = new ProxyNotAllowedCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProxyNotAllowedCode> {
+		@Override
+		public ProxyNotAllowedCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProxyNotAllowedCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

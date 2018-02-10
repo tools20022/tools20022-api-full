@@ -81,8 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
  * businessProcessCatalogue} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmcatalogue
- * GeneratedRepository.mmcatalogue}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#catalogue
+ * GeneratedRepository.catalogue}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,7 +102,7 @@ public class CorporateActionsISOPreviousversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Corporate Actions - ISO - Previous version";
 				definition = "Set of messages used by intermediaries, such as (I)CSD's, global custodians or local custodians, involved in the corporate action processing chain between the issuer (agent) and the investors. The messages support corporate action events announcements and entitlements, elections, reminders, movements preliminary advices , movements confirmations , movements reversals and status reporting. \r\n";

@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the reason for cancelling a meeting."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MeetingCancellationReason", propOrder = {"code", "cancellationReason"})
 public class MeetingCancellationReason {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected MeetingCancellationReason1Code code;
 	/**
-	 * Specifies the reason for cancelling a meeting in coded form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +113,7 @@ public class MeetingCancellationReason {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatusReason.mmMeetingCancellationReason;
-			componentContext_lazy = () -> MeetingCancellationReason.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingCancellationReason.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +124,11 @@ public class MeetingCancellationReason {
 			simpleType_lazy = () -> MeetingCancellationReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "CxlRsn")
 	protected Max140Text cancellationReason;
 	/**
-	 * Specifies the reason for cancelling a meeting in free format form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +162,7 @@ public class MeetingCancellationReason {
 	public static final MMMessageAttribute mmCancellationReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> MeetingCancellationReason.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingCancellationReason.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,9 +177,9 @@ public class MeetingCancellationReason {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MeetingCancellationReason.mmCode, MeetingCancellationReason.mmCancellationReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingCancellationReason.mmCode, com.tools20022.repository.msg.MeetingCancellationReason.mmCancellationReason);
 				trace_lazy = () -> MeetingStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MeetingCancellationReason";
 				definition = "Specifies the reason for cancelling a meeting.";
@@ -184,21 +188,21 @@ public class MeetingCancellationReason {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public MeetingCancellationReason1Code getCode() {
 		return code;
 	}
 
-	public void setCode(MeetingCancellationReason1Code code) {
-		this.code = code;
+	public MeetingCancellationReason setCode(MeetingCancellationReason1Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "CxlRsn")
-	public Max140Text getCancellationReason() {
-		return cancellationReason;
+	public Optional<Max140Text> getCancellationReason() {
+		return cancellationReason == null ? Optional.empty() : Optional.of(cancellationReason);
 	}
 
-	public void setCancellationReason(Max140Text cancellationReason) {
+	public MeetingCancellationReason setCancellationReason(Max140Text cancellationReason) {
 		this.cancellationReason = cancellationReason;
+		return this;
 	}
 }

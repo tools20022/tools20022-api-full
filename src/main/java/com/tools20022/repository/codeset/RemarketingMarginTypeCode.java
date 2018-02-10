@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.RemarketingMarginTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of margin.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RemarketingMarginTypeCode#mmAgreed
- * RemarketingMarginTypeCode.mmAgreed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RemarketingMarginTypeCode#Agreed
+ * RemarketingMarginTypeCode.Agreed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RemarketingMarginTypeCode#mmAlternative
- * RemarketingMarginTypeCode.mmAlternative}</li>
+ * {@linkplain com.tools20022.repository.codeset.RemarketingMarginTypeCode#Alternative
+ * RemarketingMarginTypeCode.Alternative}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of margin."</li>
  * </ul>
  */
-public class RemarketingMarginTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RemarketingMarginTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,12 +97,12 @@ public class RemarketingMarginTypeCode {
 	 * definition} = "Agreed margin."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgreed = new MMCode() {
+	public static final RemarketingMarginTypeCode Agreed = new RemarketingMarginTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Agreed";
 			definition = "Agreed margin.";
-			owner_lazy = () -> RemarketingMarginTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RemarketingMarginTypeCode.mmObject();
 			codeName = "AGRE";
 		}
 	};
@@ -121,28 +127,58 @@ public class RemarketingMarginTypeCode {
 	 * definition} = "Alternative margin."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAlternative = new MMCode() {
+	public static final RemarketingMarginTypeCode Alternative = new RemarketingMarginTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Alternative";
 			definition = "Alternative margin.";
-			owner_lazy = () -> RemarketingMarginTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RemarketingMarginTypeCode.mmObject();
 			codeName = "ALTE";
 		}
 	};
+	final static private LinkedHashMap<String, RemarketingMarginTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RemarketingMarginTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AGRE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RemarketingMarginTypeCode";
 				definition = "Specifies the type of margin.";
-				code_lazy = () -> Arrays.asList(RemarketingMarginTypeCode.mmAgreed, RemarketingMarginTypeCode.mmAlternative);
 				derivation_lazy = () -> Arrays.asList(RemarketingMarginType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RemarketingMarginTypeCode.Agreed, com.tools20022.repository.codeset.RemarketingMarginTypeCode.Alternative);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Agreed.getCodeName().get(), Agreed);
+		codesByName.put(Alternative.getCodeName().get(), Alternative);
+	}
+
+	public static RemarketingMarginTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RemarketingMarginTypeCode[] values() {
+		RemarketingMarginTypeCode[] values = new RemarketingMarginTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RemarketingMarginTypeCode> {
+		@Override
+		public RemarketingMarginTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RemarketingMarginTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

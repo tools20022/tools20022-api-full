@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -26,6 +27,7 @@ import com.tools20022.repository.entity.CorporateActionPrice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGenericCashPricePerProductGuideline#forCorporateActionPrice43
+ * ConstraintGenericCashPricePerProductGuideline.forCorporateActionPrice43}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,15 +96,16 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateActionPrice38}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionPrice43", propOrder = {"indicativeOrMarketPrice", "cashInLieuOfSharePrice", "cashValueForTax", "genericCashPricePaidPerProduct", "genericCashPriceReceivedPerProduct"})
 public class CorporateActionPrice43 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IndctvOrMktPric")
 	protected IndicativeOrMarketPrice5Choice indicativeOrMarketPrice;
 	/**
-	 * Indicates whether the price is an indicative price or a market price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -113,6 +124,9 @@ public class CorporateActionPrice43 {
 	 * CorporateActionPrice43}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IndctvOrMktPric"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::INDC or MRKT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -141,9 +155,10 @@ public class CorporateActionPrice43 {
 	public static final MMMessageAssociationEnd mmIndicativeOrMarketPrice = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionPrice.mmObject();
-			componentContext_lazy = () -> CorporateActionPrice43.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice43.mmObject();
 			isDerived = false;
 			xmlTag = "IndctvOrMktPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::INDC or MRKT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndicativeOrMarketPrice";
 			definition = "Indicates whether the price is an indicative price or a market price.";
@@ -155,11 +170,11 @@ public class CorporateActionPrice43 {
 			type_lazy = () -> IndicativeOrMarketPrice5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CshInLieuOfShrPric")
 	protected PriceFormat19Choice cashInLieuOfSharePrice;
 	/**
-	 * Cash disbursement in lieu of equities; usually in lieu of fractional
-	 * quantity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -177,6 +192,9 @@ public class CorporateActionPrice43 {
 	 * CorporateActionPrice43}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CshInLieuOfShrPric"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::CINL</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -206,9 +224,10 @@ public class CorporateActionPrice43 {
 	public static final MMMessageAssociationEnd mmCashInLieuOfSharePrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmCashInLieuOfSharePrice;
-			componentContext_lazy = () -> CorporateActionPrice43.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice43.mmObject();
 			isDerived = false;
 			xmlTag = "CshInLieuOfShrPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::CINL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfSharePrice";
 			definition = "Cash disbursement in lieu of equities; usually in lieu of fractional quantity.";
@@ -220,11 +239,11 @@ public class CorporateActionPrice43 {
 			type_lazy = () -> PriceFormat19Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CshValForTax")
 	protected PriceFormat29Choice cashValueForTax;
 	/**
-	 * Cash value of resulting securities proceeds for tax calculation and/or
-	 * reporting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -273,7 +292,7 @@ public class CorporateActionPrice43 {
 	public static final MMMessageAttribute mmCashValueForTax = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmCashValueForTax;
-			componentContext_lazy = () -> CorporateActionPrice43.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice43.mmObject();
 			isDerived = false;
 			xmlTag = "CshValForTax";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,12 +305,11 @@ public class CorporateActionPrice43 {
 			complexType_lazy = () -> PriceFormat29Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "GncCshPricPdPerPdct")
 	protected PriceFormat23Choice genericCashPricePaidPerProduct;
 	/**
-	 * Generic cash price paid per product by the underlying security holder
-	 * either as a percentage or an amount or a number of points above an index,
-	 * for example, reinvestment price, strike price and exercise price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -338,7 +356,7 @@ public class CorporateActionPrice43 {
 	public static final MMMessageAssociationEnd mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPricePaidPerProduct;
-			componentContext_lazy = () -> CorporateActionPrice43.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice43.mmObject();
 			isDerived = false;
 			xmlTag = "GncCshPricPdPerPdct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -352,11 +370,11 @@ public class CorporateActionPrice43 {
 			type_lazy = () -> PriceFormat23Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "GncCshPricRcvdPerPdct")
 	protected PriceFormat32Choice genericCashPriceReceivedPerProduct;
 	/**
-	 * Generic cash price received per product by the underlying security holder
-	 * either as a percentage or an amount, for example, redemption price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -403,7 +421,7 @@ public class CorporateActionPrice43 {
 	public static final MMMessageAssociationEnd mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
-			componentContext_lazy = () -> CorporateActionPrice43.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice43.mmObject();
 			isDerived = false;
 			xmlTag = "GncCshPricRcvdPerPdct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -421,10 +439,12 @@ public class CorporateActionPrice43 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionPrice43.mmIndicativeOrMarketPrice, CorporateActionPrice43.mmCashInLieuOfSharePrice, CorporateActionPrice43.mmCashValueForTax,
-						CorporateActionPrice43.mmGenericCashPricePaidPerProduct, CorporateActionPrice43.mmGenericCashPriceReceivedPerProduct);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice43.mmIndicativeOrMarketPrice, com.tools20022.repository.msg.CorporateActionPrice43.mmCashInLieuOfSharePrice,
+						com.tools20022.repository.msg.CorporateActionPrice43.mmCashValueForTax, com.tools20022.repository.msg.CorporateActionPrice43.mmGenericCashPricePaidPerProduct,
+						com.tools20022.repository.msg.CorporateActionPrice43.mmGenericCashPriceReceivedPerProduct);
 				trace_lazy = () -> CorporateActionPrice.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGenericCashPricePerProductGuideline.forCorporateActionPrice43);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice43";
 				definition = "Specifies prices related to a corporate action option.";
@@ -435,48 +455,48 @@ public class CorporateActionPrice43 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IndctvOrMktPric")
-	public IndicativeOrMarketPrice5Choice getIndicativeOrMarketPrice() {
-		return indicativeOrMarketPrice;
+	public Optional<IndicativeOrMarketPrice5Choice> getIndicativeOrMarketPrice() {
+		return indicativeOrMarketPrice == null ? Optional.empty() : Optional.of(indicativeOrMarketPrice);
 	}
 
-	public void setIndicativeOrMarketPrice(IndicativeOrMarketPrice5Choice indicativeOrMarketPrice) {
+	public CorporateActionPrice43 setIndicativeOrMarketPrice(IndicativeOrMarketPrice5Choice indicativeOrMarketPrice) {
 		this.indicativeOrMarketPrice = indicativeOrMarketPrice;
+		return this;
 	}
 
-	@XmlElement(name = "CshInLieuOfShrPric")
-	public PriceFormat19Choice getCashInLieuOfSharePrice() {
-		return cashInLieuOfSharePrice;
+	public Optional<PriceFormat19Choice> getCashInLieuOfSharePrice() {
+		return cashInLieuOfSharePrice == null ? Optional.empty() : Optional.of(cashInLieuOfSharePrice);
 	}
 
-	public void setCashInLieuOfSharePrice(PriceFormat19Choice cashInLieuOfSharePrice) {
+	public CorporateActionPrice43 setCashInLieuOfSharePrice(PriceFormat19Choice cashInLieuOfSharePrice) {
 		this.cashInLieuOfSharePrice = cashInLieuOfSharePrice;
+		return this;
 	}
 
-	@XmlElement(name = "CshValForTax")
-	public PriceFormat29Choice getCashValueForTax() {
-		return cashValueForTax;
+	public Optional<PriceFormat29Choice> getCashValueForTax() {
+		return cashValueForTax == null ? Optional.empty() : Optional.of(cashValueForTax);
 	}
 
-	public void setCashValueForTax(PriceFormat29Choice cashValueForTax) {
+	public CorporateActionPrice43 setCashValueForTax(PriceFormat29Choice cashValueForTax) {
 		this.cashValueForTax = cashValueForTax;
+		return this;
 	}
 
-	@XmlElement(name = "GncCshPricPdPerPdct")
-	public PriceFormat23Choice getGenericCashPricePaidPerProduct() {
-		return genericCashPricePaidPerProduct;
+	public Optional<PriceFormat23Choice> getGenericCashPricePaidPerProduct() {
+		return genericCashPricePaidPerProduct == null ? Optional.empty() : Optional.of(genericCashPricePaidPerProduct);
 	}
 
-	public void setGenericCashPricePaidPerProduct(PriceFormat23Choice genericCashPricePaidPerProduct) {
+	public CorporateActionPrice43 setGenericCashPricePaidPerProduct(PriceFormat23Choice genericCashPricePaidPerProduct) {
 		this.genericCashPricePaidPerProduct = genericCashPricePaidPerProduct;
+		return this;
 	}
 
-	@XmlElement(name = "GncCshPricRcvdPerPdct")
-	public PriceFormat32Choice getGenericCashPriceReceivedPerProduct() {
-		return genericCashPriceReceivedPerProduct;
+	public Optional<PriceFormat32Choice> getGenericCashPriceReceivedPerProduct() {
+		return genericCashPriceReceivedPerProduct == null ? Optional.empty() : Optional.of(genericCashPriceReceivedPerProduct);
 	}
 
-	public void setGenericCashPriceReceivedPerProduct(PriceFormat32Choice genericCashPriceReceivedPerProduct) {
+	public CorporateActionPrice43 setGenericCashPriceReceivedPerProduct(PriceFormat32Choice genericCashPriceReceivedPerProduct) {
 		this.genericCashPriceReceivedPerProduct = genericCashPriceReceivedPerProduct;
+		return this;
 	}
 }

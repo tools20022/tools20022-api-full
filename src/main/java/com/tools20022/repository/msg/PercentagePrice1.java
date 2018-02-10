@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Price expressed as a percentage price."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PercentagePrice1", propOrder = {"percentagePriceType", "priceValue"})
 public class PercentagePrice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PctgPricTp", required = true)
 	protected PriceRateType3Code percentagePriceType;
 	/**
-	 * Specifies the type of percentage price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -94,6 +97,9 @@ public class PercentagePrice1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PctgPricTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90A::4!c//4!c</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -107,9 +113,10 @@ public class PercentagePrice1 {
 	public static final MMMessageAttribute mmPercentagePriceType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmTypeOfRate;
-			componentContext_lazy = () -> PercentagePrice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PercentagePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "PctgPricTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90A::4!c//4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentagePriceType";
 			definition = "Specifies the type of percentage price.";
@@ -118,10 +125,11 @@ public class PercentagePrice1 {
 			simpleType_lazy = () -> PriceRateType3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PricVal", required = true)
 	protected PercentageRate priceValue;
 	/**
-	 * Specifies the value of price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,6 +150,9 @@ public class PercentagePrice1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PricVal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90B::4!c//4!c/3!a15d</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -155,9 +166,10 @@ public class PercentagePrice1 {
 	public static final MMMessageAttribute mmPriceValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
-			componentContext_lazy = () -> PercentagePrice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PercentagePrice1.mmObject();
 			isDerived = false;
 			xmlTag = "PricVal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90B::4!c//4!c/3!a15d"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceValue";
 			definition = "Specifies the value of price.";
@@ -170,9 +182,9 @@ public class PercentagePrice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PercentagePrice1.mmPercentagePriceType, PercentagePrice1.mmPriceValue);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PercentagePrice1.mmPercentagePriceType, com.tools20022.repository.msg.PercentagePrice1.mmPriceValue);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PercentagePrice1";
 				definition = "Price expressed as a percentage price.";
@@ -181,21 +193,21 @@ public class PercentagePrice1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PctgPricTp", required = true)
 	public PriceRateType3Code getPercentagePriceType() {
 		return percentagePriceType;
 	}
 
-	public void setPercentagePriceType(PriceRateType3Code percentagePriceType) {
-		this.percentagePriceType = percentagePriceType;
+	public PercentagePrice1 setPercentagePriceType(PriceRateType3Code percentagePriceType) {
+		this.percentagePriceType = Objects.requireNonNull(percentagePriceType);
+		return this;
 	}
 
-	@XmlElement(name = "PricVal", required = true)
 	public PercentageRate getPriceValue() {
 		return priceValue;
 	}
 
-	public void setPriceValue(PercentageRate priceValue) {
-		this.priceValue = priceValue;
+	public PercentagePrice1 setPriceValue(PercentageRate priceValue) {
+		this.priceValue = Objects.requireNonNull(priceValue);
+		return this;
 	}
 }

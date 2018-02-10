@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,8 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +58,17 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountOwnerOrServicerIdentificationRule#forGenericIdentificationSD1
+ * ConstraintAccountOwnerOrServicerIdentificationRule.
+ * forGenericIdentificationSD1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GenericIdentificationSD1", propOrder = {"fiscalDomicile", "accountServicerIdentification", "accountOwnerIdentification"})
 public class GenericIdentificationSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FsclDmcl", required = true)
 	protected CountryCode fiscalDomicile;
 	/**
-	 * Country in which the account owner has one's fiscal domicile.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +118,7 @@ public class GenericIdentificationSD1 {
 	 */
 	public static final MMMessageAttribute mmFiscalDomicile = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericIdentificationSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentificationSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FsclDmcl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +129,11 @@ public class GenericIdentificationSD1 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcrId")
 	protected Max35Text accountServicerIdentification;
 	/**
-	 * Identification of the document assigned by the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,6 +153,9 @@ public class GenericIdentificationSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctSvcrId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -153,9 +170,10 @@ public class GenericIdentificationSD1 {
 	public static final MMMessageAttribute mmAccountServicerIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> GenericIdentificationSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentificationSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerIdentification";
 			definition = "Identification of the document assigned by the account servicer.";
@@ -164,10 +182,11 @@ public class GenericIdentificationSD1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnrId")
 	protected Max35Text accountOwnerIdentification;
 	/**
-	 * Identification of the document assigned by the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,6 +206,9 @@ public class GenericIdentificationSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctOwnrId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -201,9 +223,10 @@ public class GenericIdentificationSD1 {
 	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> GenericIdentificationSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentificationSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerIdentification";
 			definition = "Identification of the document assigned by the account owner.";
@@ -216,8 +239,10 @@ public class GenericIdentificationSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GenericIdentificationSD1.mmFiscalDomicile, GenericIdentificationSD1.mmAccountServicerIdentification, GenericIdentificationSD1.mmAccountOwnerIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentificationSD1.mmFiscalDomicile, com.tools20022.repository.msg.GenericIdentificationSD1.mmAccountServicerIdentification,
+						com.tools20022.repository.msg.GenericIdentificationSD1.mmAccountOwnerIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountOwnerOrServicerIdentificationRule.forGenericIdentificationSD1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GenericIdentificationSD1";
 				definition = "Identification information expressed as a country of fiscal domicile and a reference.";
@@ -226,30 +251,30 @@ public class GenericIdentificationSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FsclDmcl", required = true)
 	public CountryCode getFiscalDomicile() {
 		return fiscalDomicile;
 	}
 
-	public void setFiscalDomicile(CountryCode fiscalDomicile) {
-		this.fiscalDomicile = fiscalDomicile;
+	public GenericIdentificationSD1 setFiscalDomicile(CountryCode fiscalDomicile) {
+		this.fiscalDomicile = Objects.requireNonNull(fiscalDomicile);
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcrId")
-	public Max35Text getAccountServicerIdentification() {
-		return accountServicerIdentification;
+	public Optional<Max35Text> getAccountServicerIdentification() {
+		return accountServicerIdentification == null ? Optional.empty() : Optional.of(accountServicerIdentification);
 	}
 
-	public void setAccountServicerIdentification(Max35Text accountServicerIdentification) {
+	public GenericIdentificationSD1 setAccountServicerIdentification(Max35Text accountServicerIdentification) {
 		this.accountServicerIdentification = accountServicerIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnrId")
-	public Max35Text getAccountOwnerIdentification() {
-		return accountOwnerIdentification;
+	public Optional<Max35Text> getAccountOwnerIdentification() {
+		return accountOwnerIdentification == null ? Optional.empty() : Optional.of(accountOwnerIdentification);
 	}
 
-	public void setAccountOwnerIdentification(Max35Text accountOwnerIdentification) {
+	public GenericIdentificationSD1 setAccountOwnerIdentification(Max35Text accountOwnerIdentification) {
 		this.accountOwnerIdentification = accountOwnerIdentification;
+		return this;
 	}
 }

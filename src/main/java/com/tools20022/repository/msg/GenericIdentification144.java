@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Scheme;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,16 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Proprietary information related to a balance."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GenericIdentification144", propOrder = {"identification", "issuer", "schemeName", "balance"})
 public class GenericIdentification144 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Exact4AlphaNumericText identification;
 	/**
-	 * Proprietary information, often a code, issued by the data source scheme
-	 * issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +122,7 @@ public class GenericIdentification144 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> GenericIdentification144.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification144.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +133,11 @@ public class GenericIdentification144 {
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Issr", required = true)
 	protected Max4AlphaNumericText issuer;
 	/**
-	 * Entity that assigns the identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,7 +171,7 @@ public class GenericIdentification144 {
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
-			componentContext_lazy = () -> GenericIdentification144.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification144.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,10 +182,11 @@ public class GenericIdentification144 {
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "SchmeNm")
 	protected Max4AlphaNumericText schemeName;
 	/**
-	 * Short textual description of the scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -216,7 +220,7 @@ public class GenericIdentification144 {
 	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmNameShort;
-			componentContext_lazy = () -> GenericIdentification144.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification144.mmObject();
 			isDerived = false;
 			xmlTag = "SchmeNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,10 +231,11 @@ public class GenericIdentification144 {
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Bal", required = true)
 	protected RestrictedFINDecimalNumber balance;
 	/**
-	 * Value of the balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -258,7 +263,7 @@ public class GenericIdentification144 {
 	 */
 	public static final MMMessageAttribute mmBalance = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericIdentification144.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification144.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,9 +278,10 @@ public class GenericIdentification144 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GenericIdentification144.mmIdentification, GenericIdentification144.mmIssuer, GenericIdentification144.mmSchemeName, GenericIdentification144.mmBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification144.mmIdentification, com.tools20022.repository.msg.GenericIdentification144.mmIssuer,
+						com.tools20022.repository.msg.GenericIdentification144.mmSchemeName, com.tools20022.repository.msg.GenericIdentification144.mmBalance);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GenericIdentification144";
 				definition = "Proprietary information related to a balance.";
@@ -284,39 +290,39 @@ public class GenericIdentification144 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Exact4AlphaNumericText getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Exact4AlphaNumericText identification) {
-		this.identification = identification;
+	public GenericIdentification144 setIdentification(Exact4AlphaNumericText identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Issr", required = true)
 	public Max4AlphaNumericText getIssuer() {
 		return issuer;
 	}
 
-	public void setIssuer(Max4AlphaNumericText issuer) {
-		this.issuer = issuer;
+	public GenericIdentification144 setIssuer(Max4AlphaNumericText issuer) {
+		this.issuer = Objects.requireNonNull(issuer);
+		return this;
 	}
 
-	@XmlElement(name = "SchmeNm")
-	public Max4AlphaNumericText getSchemeName() {
-		return schemeName;
+	public Optional<Max4AlphaNumericText> getSchemeName() {
+		return schemeName == null ? Optional.empty() : Optional.of(schemeName);
 	}
 
-	public void setSchemeName(Max4AlphaNumericText schemeName) {
+	public GenericIdentification144 setSchemeName(Max4AlphaNumericText schemeName) {
 		this.schemeName = schemeName;
+		return this;
 	}
 
-	@XmlElement(name = "Bal", required = true)
 	public RestrictedFINDecimalNumber getBalance() {
 		return balance;
 	}
 
-	public void setBalance(RestrictedFINDecimalNumber balance) {
-		this.balance = balance;
+	public GenericIdentification144 setBalance(RestrictedFINDecimalNumber balance) {
+		this.balance = Objects.requireNonNull(balance);
+		return this;
 	}
 }

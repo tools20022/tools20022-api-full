@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DemandTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of demand for payment.
@@ -31,11 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DemandTypeCode#mmPayOnly
- * DemandTypeCode.mmPayOnly}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DemandTypeCode#mmPayOrExtend
- * DemandTypeCode.mmPayOrExtend}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DemandTypeCode#PayOnly
+ * DemandTypeCode.PayOnly}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DemandTypeCode#PayOrExtend
+ * DemandTypeCode.PayOrExtend}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -66,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of demand for payment."</li>
  * </ul>
  */
-public class DemandTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DemandTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,12 +95,12 @@ public class DemandTypeCode {
 	 * definition} = "Pay only."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPayOnly = new MMCode() {
+	public static final DemandTypeCode PayOnly = new DemandTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayOnly";
 			definition = "Pay only.";
-			owner_lazy = () -> DemandTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DemandTypeCode.mmObject();
 			codeName = "PAYM";
 		}
 	};
@@ -120,28 +125,58 @@ public class DemandTypeCode {
 	 * definition} = "Pay or extend."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPayOrExtend = new MMCode() {
+	public static final DemandTypeCode PayOrExtend = new DemandTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayOrExtend";
 			definition = "Pay or extend.";
-			owner_lazy = () -> DemandTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DemandTypeCode.mmObject();
 			codeName = "PAEX";
 		}
 	};
+	final static private LinkedHashMap<String, DemandTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DemandTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PAYM");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DemandTypeCode";
 				definition = "Specifies the type of demand for payment.";
-				code_lazy = () -> Arrays.asList(DemandTypeCode.mmPayOnly, DemandTypeCode.mmPayOrExtend);
 				derivation_lazy = () -> Arrays.asList(DemandType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DemandTypeCode.PayOnly, com.tools20022.repository.codeset.DemandTypeCode.PayOrExtend);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PayOnly.getCodeName().get(), PayOnly);
+		codesByName.put(PayOrExtend.getCodeName().get(), PayOrExtend);
+	}
+
+	public static DemandTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DemandTypeCode[] values() {
+		DemandTypeCode[] values = new DemandTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DemandTypeCode> {
+		@Override
+		public DemandTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DemandTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

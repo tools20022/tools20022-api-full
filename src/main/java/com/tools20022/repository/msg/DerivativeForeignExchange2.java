@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,16 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DerivativeForeignExchange2", propOrder = "otherNotionalCurrency")
 public class DerivativeForeignExchange2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OthrNtnlCcy", required = true)
 	protected ActiveOrHistoricCurrencyCode otherNotionalCurrency;
 	/**
-	 * Underlying currency 2 of the currency pair (the currency 1 will be
-	 * populated in the notional currency).<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +110,7 @@ public class DerivativeForeignExchange2 {
 	public static final MMMessageAttribute mmOtherNotionalCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrency;
-			componentContext_lazy = () -> DerivativeForeignExchange2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeForeignExchange2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrNtnlCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,9 +125,9 @@ public class DerivativeForeignExchange2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DerivativeForeignExchange2.mmOtherNotionalCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DerivativeForeignExchange2.mmOtherNotionalCurrency);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DerivativeForeignExchange2";
 				definition = "Attributes of non-financial instrument of type foreign exchange as underlying.";
@@ -135,12 +136,12 @@ public class DerivativeForeignExchange2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OthrNtnlCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getOtherNotionalCurrency() {
 		return otherNotionalCurrency;
 	}
 
-	public void setOtherNotionalCurrency(ActiveOrHistoricCurrencyCode otherNotionalCurrency) {
-		this.otherNotionalCurrency = otherNotionalCurrency;
+	public DerivativeForeignExchange2 setOtherNotionalCurrency(ActiveOrHistoricCurrencyCode otherNotionalCurrency) {
+		this.otherNotionalCurrency = Objects.requireNonNull(otherNotionalCurrency);
+		return this;
 	}
 }

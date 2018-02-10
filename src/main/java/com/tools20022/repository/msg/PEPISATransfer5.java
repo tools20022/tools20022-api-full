@@ -26,11 +26,9 @@ import com.tools20022.repository.entity.Order;
 import com.tools20022.repository.entity.PortfolioTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -43,8 +41,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer5#mmProductRule
- * PEPISATransfer5.mmProductRule}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PEPISATransfer5#ProductRule
+ * PEPISATransfer5.ProductRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -83,8 +81,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -103,17 +101,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PEPISATransfer5", propOrder = {"masterReference", "transferIdentification", "ISA", "PEP", "portfolio", "financialInstrumentAssetForTransfer"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PEPISATransfer5", propOrder = {"masterReference", "transferIdentification", "iSA", "pEP", "portfolio", "financialInstrumentAssetForTransfer"})
 public class PEPISATransfer5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MstrRef")
 	protected Max35Text masterReference;
 	/**
-	 * Unique and unambiguous identifier for a group of individual transfers as
-	 * assigned by the instructing party. This identifier links the individual
-	 * transfers together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,7 +145,7 @@ public class PEPISATransfer5 {
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
-			componentContext_lazy = () -> PEPISATransfer5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PEPISATransfer5.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,11 +156,11 @@ public class PEPISATransfer5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfId", required = true)
 	protected Max35Text transferIdentification;
 	/**
-	 * Identification assigned by the new plan manager to each transfer of
-	 * asset.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,7 +189,7 @@ public class PEPISATransfer5 {
 	 */
 	public static final MMMessageAttribute mmTransferIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PEPISATransfer5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PEPISATransfer5.mmObject();
 			isDerived = false;
 			xmlTag = "TrfId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,16 +200,11 @@ public class PEPISATransfer5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ISA", required = true)
 	protected ISAYearsOfIssue2 iSA;
 	/**
-	 * UK government schemes to encourage individuals to invest in securities
-	 * based unit and investment trusts, offering certain tax benefits. These
-	 * are not investment in their own right but are tax exempt wrappers in
-	 * which individuals can hold equities, bonds and funds to shelter them from
-	 * income and capital gains tax. The Personal Equity Plan (PEP) and the
-	 * Individual Savings Account (ISA) are provided only by UK based financial
-	 * institutions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -246,7 +238,7 @@ public class PEPISATransfer5 {
 	public static final MMMessageAssociationEnd mmISA = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
-			componentContext_lazy = () -> PEPISATransfer5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PEPISATransfer5.mmObject();
 			isDerived = false;
 			xmlTag = "ISA";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,16 +250,11 @@ public class PEPISATransfer5 {
 			type_lazy = () -> com.tools20022.repository.msg.ISAYearsOfIssue2.mmObject();
 		}
 	};
+	@XmlElement(name = "PEP", required = true)
 	protected PreviousYearChoice pEP;
 	/**
-	 * UK government schemes to encourage individuals to invest in securities
-	 * based unit and investment trusts, offering certain tax benefits. These
-	 * are not investment in their own right but are tax exempt wrappers in
-	 * which individuals can hold equities, bonds and funds to shelter them from
-	 * income and capital gains tax. The Personal Equity Plan (PEP) and the
-	 * Individual Savings Account (ISA) are provided only by UK based financial
-	 * institutions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -301,7 +288,7 @@ public class PEPISATransfer5 {
 	public static final MMMessageAssociationEnd mmPEP = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
-			componentContext_lazy = () -> PEPISATransfer5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PEPISATransfer5.mmObject();
 			isDerived = false;
 			xmlTag = "PEP";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -313,11 +300,11 @@ public class PEPISATransfer5 {
 			type_lazy = () -> PreviousYearChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtfl", required = true)
 	protected Portfolio1 portfolio;
 	/**
-	 * Wrapper for a specific product or a specific sub-product owned by a set
-	 * of beneficial owners.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -350,7 +337,7 @@ public class PEPISATransfer5 {
 	public static final MMMessageAssociationEnd mmPortfolio = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmTransferredPortfolio;
-			componentContext_lazy = () -> PEPISATransfer5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PEPISATransfer5.mmObject();
 			isDerived = false;
 			xmlTag = "Prtfl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -362,10 +349,11 @@ public class PEPISATransfer5 {
 			type_lazy = () -> com.tools20022.repository.msg.Portfolio1.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmAsstForTrf")
 	protected List<com.tools20022.repository.msg.FinancialInstrument12> financialInstrumentAssetForTransfer;
 	/**
-	 * Specifies the underlying assets for the PEP, ISA or portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -398,7 +386,7 @@ public class PEPISATransfer5 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentAssetForTransfer = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
-			componentContext_lazy = () -> PEPISATransfer5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PEPISATransfer5.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAsstForTrf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -444,24 +432,25 @@ public class PEPISATransfer5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmProductRule = new MMXor() {
+	public static final MMXor ProductRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductRule";
 			definition = "One and only one message element in the list (ISA, PEP, Portfolio) must be present.";
-			messageComponent_lazy = () -> PEPISATransfer5.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(PEPISATransfer5.mmISA, PEPISATransfer5.mmPEP, PEPISATransfer5.mmPortfolio);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.PEPISATransfer5.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer5.mmISA, com.tools20022.repository.msg.PEPISATransfer5.mmPEP, com.tools20022.repository.msg.PEPISATransfer5.mmPortfolio);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PEPISATransfer5.mmMasterReference, PEPISATransfer5.mmTransferIdentification, PEPISATransfer5.mmISA, PEPISATransfer5.mmPEP, PEPISATransfer5.mmPortfolio,
-						PEPISATransfer5.mmFinancialInstrumentAssetForTransfer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer5.mmMasterReference, com.tools20022.repository.msg.PEPISATransfer5.mmTransferIdentification,
+						com.tools20022.repository.msg.PEPISATransfer5.mmISA, com.tools20022.repository.msg.PEPISATransfer5.mmPEP, com.tools20022.repository.msg.PEPISATransfer5.mmPortfolio,
+						com.tools20022.repository.msg.PEPISATransfer5.mmFinancialInstrumentAssetForTransfer);
 				messageBuildingBlock_lazy = () -> Arrays.asList(RequestForPEPOrISAOrPortfolioInformationV01.mmProductTransfer);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -473,63 +462,63 @@ public class PEPISATransfer5 {
 				name = "PEPISATransfer5";
 				definition = "Describes the type of product and the assets to be transferred.";
 				nextVersions_lazy = () -> Arrays.asList(ISATransfer5.mmObject());
-				xors_lazy = () -> Arrays.asList(PEPISATransfer5.mmProductRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISATransfer5.ProductRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MstrRef")
-	public Max35Text getMasterReference() {
-		return masterReference;
+	public Optional<Max35Text> getMasterReference() {
+		return masterReference == null ? Optional.empty() : Optional.of(masterReference);
 	}
 
-	public void setMasterReference(Max35Text masterReference) {
+	public PEPISATransfer5 setMasterReference(Max35Text masterReference) {
 		this.masterReference = masterReference;
+		return this;
 	}
 
-	@XmlElement(name = "TrfId", required = true)
 	public Max35Text getTransferIdentification() {
 		return transferIdentification;
 	}
 
-	public void setTransferIdentification(Max35Text transferIdentification) {
-		this.transferIdentification = transferIdentification;
+	public PEPISATransfer5 setTransferIdentification(Max35Text transferIdentification) {
+		this.transferIdentification = Objects.requireNonNull(transferIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ISA", required = true)
 	public ISAYearsOfIssue2 getISA() {
 		return iSA;
 	}
 
-	public void setISA(com.tools20022.repository.msg.ISAYearsOfIssue2 iSA) {
-		this.iSA = iSA;
+	public PEPISATransfer5 setISA(com.tools20022.repository.msg.ISAYearsOfIssue2 iSA) {
+		this.iSA = Objects.requireNonNull(iSA);
+		return this;
 	}
 
-	@XmlElement(name = "PEP", required = true)
 	public PreviousYearChoice getPEP() {
 		return pEP;
 	}
 
-	public void setPEP(PreviousYearChoice pEP) {
-		this.pEP = pEP;
+	public PEPISATransfer5 setPEP(PreviousYearChoice pEP) {
+		this.pEP = Objects.requireNonNull(pEP);
+		return this;
 	}
 
-	@XmlElement(name = "Prtfl", required = true)
 	public Portfolio1 getPortfolio() {
 		return portfolio;
 	}
 
-	public void setPortfolio(com.tools20022.repository.msg.Portfolio1 portfolio) {
-		this.portfolio = portfolio;
+	public PEPISATransfer5 setPortfolio(com.tools20022.repository.msg.Portfolio1 portfolio) {
+		this.portfolio = Objects.requireNonNull(portfolio);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmAsstForTrf")
 	public List<FinancialInstrument12> getFinancialInstrumentAssetForTransfer() {
-		return financialInstrumentAssetForTransfer;
+		return financialInstrumentAssetForTransfer == null ? financialInstrumentAssetForTransfer = new ArrayList<>() : financialInstrumentAssetForTransfer;
 	}
 
-	public void setFinancialInstrumentAssetForTransfer(List<com.tools20022.repository.msg.FinancialInstrument12> financialInstrumentAssetForTransfer) {
-		this.financialInstrumentAssetForTransfer = financialInstrumentAssetForTransfer;
+	public PEPISATransfer5 setFinancialInstrumentAssetForTransfer(List<com.tools20022.repository.msg.FinancialInstrument12> financialInstrumentAssetForTransfer) {
+		this.financialInstrumentAssetForTransfer = Objects.requireNonNull(financialInstrumentAssetForTransfer);
+		return this;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -47,8 +48,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,15 +60,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Replacement of an existing content by a different one"</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Replacement1", propOrder = {"currentValue", "proposedValue"})
 public class Replacement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CurVal", required = true)
 	protected Max140Text currentValue;
 	/**
-	 * Content of the current element.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -93,7 +95,7 @@ public class Replacement1 {
 	 */
 	public static final MMMessageAttribute mmCurrentValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Replacement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Replacement1.mmObject();
 			isDerived = false;
 			xmlTag = "CurVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -104,10 +106,11 @@ public class Replacement1 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PropsdVal", required = true)
 	protected Max140Text proposedValue;
 	/**
-	 * Content of the new element
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,7 +136,7 @@ public class Replacement1 {
 	 */
 	public static final MMMessageAttribute mmProposedValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Replacement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Replacement1.mmObject();
 			isDerived = false;
 			xmlTag = "PropsdVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,8 +151,8 @@ public class Replacement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Replacement1.mmCurrentValue, Replacement1.mmProposedValue);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Replacement1.mmCurrentValue, com.tools20022.repository.msg.Replacement1.mmProposedValue);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Replacement1";
 				definition = "Replacement of an existing content by a different one";
@@ -158,21 +161,21 @@ public class Replacement1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CurVal", required = true)
 	public Max140Text getCurrentValue() {
 		return currentValue;
 	}
 
-	public void setCurrentValue(Max140Text currentValue) {
-		this.currentValue = currentValue;
+	public Replacement1 setCurrentValue(Max140Text currentValue) {
+		this.currentValue = Objects.requireNonNull(currentValue);
+		return this;
 	}
 
-	@XmlElement(name = "PropsdVal", required = true)
 	public Max140Text getProposedValue() {
 		return proposedValue;
 	}
 
-	public void setProposedValue(Max140Text proposedValue) {
-		this.proposedValue = proposedValue;
+	public Replacement1 setProposedValue(Max140Text proposedValue) {
+		this.proposedValue = Objects.requireNonNull(proposedValue);
+		return this;
 	}
 }

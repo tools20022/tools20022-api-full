@@ -28,6 +28,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,15 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * MerchantConfigurationParameters1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MerchantConfigurationParameters2", propOrder = {"actionType", "merchantIdentification", "version", "proxy", "otherParameters"})
 public class MerchantConfigurationParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ActnTp", required = true)
 	protected TerminalManagementAction3Code actionType;
 	/**
-	 * Type of action for the configuration parameters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +133,7 @@ public class MerchantConfigurationParameters2 {
 	 */
 	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MerchantConfigurationParameters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "ActnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,11 +145,11 @@ public class MerchantConfigurationParameters2 {
 			simpleType_lazy = () -> TerminalManagementAction3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MrchntId")
 	protected Max35Text merchantIdentification;
 	/**
-	 * Identification of the merchant for the MTM, if the POI manages several
-	 * merchants.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,7 +191,7 @@ public class MerchantConfigurationParameters2 {
 	 */
 	public static final MMMessageAttribute mmMerchantIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MerchantConfigurationParameters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "MrchntId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,10 +204,11 @@ public class MerchantConfigurationParameters2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Vrsn", required = true)
 	protected Max256Text version;
 	/**
-	 * Version of the merchant parameters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,7 +248,7 @@ public class MerchantConfigurationParameters2 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MerchantConfigurationParameters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,10 +261,11 @@ public class MerchantConfigurationParameters2 {
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Prxy")
 	protected NetworkParameters6 proxy;
 	/**
-	 * Local proxy configuration.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -294,7 +299,7 @@ public class MerchantConfigurationParameters2 {
 	 */
 	public static final MMMessageAssociationEnd mmProxy = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MerchantConfigurationParameters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "Prxy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -307,10 +312,11 @@ public class MerchantConfigurationParameters2 {
 			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters6.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrParams")
 	protected Max10000Binary otherParameters;
 	/**
-	 * Other merchant parameters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -351,7 +357,7 @@ public class MerchantConfigurationParameters2 {
 	 */
 	public static final MMMessageAttribute mmOtherParameters = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MerchantConfigurationParameters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -368,9 +374,10 @@ public class MerchantConfigurationParameters2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MerchantConfigurationParameters2.mmActionType, MerchantConfigurationParameters2.mmMerchantIdentification, MerchantConfigurationParameters2.mmVersion,
-						MerchantConfigurationParameters2.mmProxy, MerchantConfigurationParameters2.mmOtherParameters);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MerchantConfigurationParameters2.mmActionType, com.tools20022.repository.msg.MerchantConfigurationParameters2.mmMerchantIdentification,
+						com.tools20022.repository.msg.MerchantConfigurationParameters2.mmVersion, com.tools20022.repository.msg.MerchantConfigurationParameters2.mmProxy,
+						com.tools20022.repository.msg.MerchantConfigurationParameters2.mmOtherParameters);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MerchantConfigurationParameters2";
 				definition = "Acceptor parameters dedicated to the merchant.";
@@ -381,48 +388,48 @@ public class MerchantConfigurationParameters2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ActnTp", required = true)
 	public TerminalManagementAction3Code getActionType() {
 		return actionType;
 	}
 
-	public void setActionType(TerminalManagementAction3Code actionType) {
-		this.actionType = actionType;
+	public MerchantConfigurationParameters2 setActionType(TerminalManagementAction3Code actionType) {
+		this.actionType = Objects.requireNonNull(actionType);
+		return this;
 	}
 
-	@XmlElement(name = "MrchntId")
-	public Max35Text getMerchantIdentification() {
-		return merchantIdentification;
+	public Optional<Max35Text> getMerchantIdentification() {
+		return merchantIdentification == null ? Optional.empty() : Optional.of(merchantIdentification);
 	}
 
-	public void setMerchantIdentification(Max35Text merchantIdentification) {
+	public MerchantConfigurationParameters2 setMerchantIdentification(Max35Text merchantIdentification) {
 		this.merchantIdentification = merchantIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Vrsn", required = true)
 	public Max256Text getVersion() {
 		return version;
 	}
 
-	public void setVersion(Max256Text version) {
-		this.version = version;
+	public MerchantConfigurationParameters2 setVersion(Max256Text version) {
+		this.version = Objects.requireNonNull(version);
+		return this;
 	}
 
-	@XmlElement(name = "Prxy")
-	public NetworkParameters6 getProxy() {
-		return proxy;
+	public Optional<NetworkParameters6> getProxy() {
+		return proxy == null ? Optional.empty() : Optional.of(proxy);
 	}
 
-	public void setProxy(com.tools20022.repository.msg.NetworkParameters6 proxy) {
+	public MerchantConfigurationParameters2 setProxy(com.tools20022.repository.msg.NetworkParameters6 proxy) {
 		this.proxy = proxy;
+		return this;
 	}
 
-	@XmlElement(name = "OthrParams")
-	public Max10000Binary getOtherParameters() {
-		return otherParameters;
+	public Optional<Max10000Binary> getOtherParameters() {
+		return otherParameters == null ? Optional.empty() : Optional.of(otherParameters);
 	}
 
-	public void setOtherParameters(Max10000Binary otherParameters) {
+	public MerchantConfigurationParameters2 setOtherParameters(Max10000Binary otherParameters) {
 		this.otherParameters = otherParameters;
+		return this;
 	}
 }

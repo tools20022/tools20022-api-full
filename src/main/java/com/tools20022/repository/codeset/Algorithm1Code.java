@@ -20,47 +20,51 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AlgorithmCode;
+import com.tools20022.repository.codeset.Algorithm1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identification of a cryptographic algorithm
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AlgorithmCode AlgorithmCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm1Code#mmRetailCBCMAC
- * Algorithm1Code.mmRetailCBCMAC}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm1Code#RetailCBCMAC
+ * Algorithm1Code.RetailCBCMAC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm1Code#mmRetailSHA256MAC
- * Algorithm1Code.mmRetailSHA256MAC}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm1Code#mmUKPT
- * Algorithm1Code.mmUKPT}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm1Code#mmDUKPT
- * Algorithm1Code.mmDUKPT}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm1Code#mmDES112CBC
- * Algorithm1Code.mmDES112CBC}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Algorithm1Code#mmSHA256
- * Algorithm1Code.mmSHA256}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm1Code#RetailSHA256MAC
+ * Algorithm1Code.RetailSHA256MAC}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm1Code#UKPT
+ * Algorithm1Code.UKPT}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm1Code#DUKPT
+ * Algorithm1Code.DUKPT}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm1Code#DES112CBC
+ * Algorithm1Code.DES112CBC}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm1Code#SHA256
+ * Algorithm1Code.SHA256}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm1Code#mmSHA256WithRSA
- * Algorithm1Code.mmSHA256WithRSA}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm1Code#SHA256WithRSA
+ * Algorithm1Code.SHA256WithRSA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm1Code#mmRSAEncryption
- * Algorithm1Code.mmRSAEncryption}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm1Code#RSAEncryption
+ * Algorithm1Code.RSAEncryption}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode AlgorithmCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identification of a cryptographic algorithm"</li>
  * </ul>
  */
-public class Algorithm1Code extends AlgorithmCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Algorithm1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -96,11 +101,12 @@ public class Algorithm1Code extends AlgorithmCode {
 	 * name} = "RetailCBCMAC"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRetailCBCMAC = new MMCode() {
+	public static final Algorithm1Code RetailCBCMAC = new Algorithm1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetailCBCMAC";
-			owner_lazy = () -> Algorithm1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm1Code.mmObject();
+			codeName = AlgorithmCode.RetailCBCMAC.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -119,11 +125,12 @@ public class Algorithm1Code extends AlgorithmCode {
 	 * name} = "RetailSHA256MAC"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRetailSHA256MAC = new MMCode() {
+	public static final Algorithm1Code RetailSHA256MAC = new Algorithm1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetailSHA256MAC";
-			owner_lazy = () -> Algorithm1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm1Code.mmObject();
+			codeName = AlgorithmCode.RetailSHA256MAC.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -142,11 +149,12 @@ public class Algorithm1Code extends AlgorithmCode {
 	 * name} = "UKPT"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUKPT = new MMCode() {
+	public static final Algorithm1Code UKPT = new Algorithm1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UKPT";
-			owner_lazy = () -> Algorithm1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm1Code.mmObject();
+			codeName = AlgorithmCode.UKPT.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -165,11 +173,12 @@ public class Algorithm1Code extends AlgorithmCode {
 	 * name} = "DUKPT"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDUKPT = new MMCode() {
+	public static final Algorithm1Code DUKPT = new Algorithm1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DUKPT";
-			owner_lazy = () -> Algorithm1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm1Code.mmObject();
+			codeName = AlgorithmCode.DUKPT.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -188,11 +197,12 @@ public class Algorithm1Code extends AlgorithmCode {
 	 * name} = "DES112CBC"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDES112CBC = new MMCode() {
+	public static final Algorithm1Code DES112CBC = new Algorithm1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DES112CBC";
-			owner_lazy = () -> Algorithm1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm1Code.mmObject();
+			codeName = AlgorithmCode.DES112CBC.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -211,11 +221,12 @@ public class Algorithm1Code extends AlgorithmCode {
 	 * name} = "SHA256"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSHA256 = new MMCode() {
+	public static final Algorithm1Code SHA256 = new Algorithm1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA256";
-			owner_lazy = () -> Algorithm1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm1Code.mmObject();
+			codeName = AlgorithmCode.SHA256.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -234,11 +245,12 @@ public class Algorithm1Code extends AlgorithmCode {
 	 * name} = "SHA256WithRSA"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSHA256WithRSA = new MMCode() {
+	public static final Algorithm1Code SHA256WithRSA = new Algorithm1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA256WithRSA";
-			owner_lazy = () -> Algorithm1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm1Code.mmObject();
+			codeName = AlgorithmCode.SHA256WithRSA.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -257,27 +269,65 @@ public class Algorithm1Code extends AlgorithmCode {
 	 * name} = "RSAEncryption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRSAEncryption = new MMCode() {
+	public static final Algorithm1Code RSAEncryption = new Algorithm1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RSAEncryption";
-			owner_lazy = () -> Algorithm1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm1Code.mmObject();
+			codeName = AlgorithmCode.RSAEncryption.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Algorithm1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Algorithm1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MACC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Algorithm1Code";
 				definition = "Identification of a cryptographic algorithm";
-				code_lazy = () -> Arrays.asList(Algorithm1Code.mmRetailCBCMAC, Algorithm1Code.mmRetailSHA256MAC, Algorithm1Code.mmUKPT, Algorithm1Code.mmDUKPT, Algorithm1Code.mmDES112CBC, Algorithm1Code.mmSHA256,
-						Algorithm1Code.mmSHA256WithRSA, Algorithm1Code.mmRSAEncryption);
 				trace_lazy = () -> AlgorithmCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm1Code.RetailCBCMAC, com.tools20022.repository.codeset.Algorithm1Code.RetailSHA256MAC, com.tools20022.repository.codeset.Algorithm1Code.UKPT,
+						com.tools20022.repository.codeset.Algorithm1Code.DUKPT, com.tools20022.repository.codeset.Algorithm1Code.DES112CBC, com.tools20022.repository.codeset.Algorithm1Code.SHA256,
+						com.tools20022.repository.codeset.Algorithm1Code.SHA256WithRSA, com.tools20022.repository.codeset.Algorithm1Code.RSAEncryption);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(RetailCBCMAC.getCodeName().get(), RetailCBCMAC);
+		codesByName.put(RetailSHA256MAC.getCodeName().get(), RetailSHA256MAC);
+		codesByName.put(UKPT.getCodeName().get(), UKPT);
+		codesByName.put(DUKPT.getCodeName().get(), DUKPT);
+		codesByName.put(DES112CBC.getCodeName().get(), DES112CBC);
+		codesByName.put(SHA256.getCodeName().get(), SHA256);
+		codesByName.put(SHA256WithRSA.getCodeName().get(), SHA256WithRSA);
+		codesByName.put(RSAEncryption.getCodeName().get(), RSAEncryption);
+	}
+
+	public static Algorithm1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Algorithm1Code[] values() {
+		Algorithm1Code[] values = new Algorithm1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Algorithm1Code> {
+		@Override
+		public Algorithm1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Algorithm1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

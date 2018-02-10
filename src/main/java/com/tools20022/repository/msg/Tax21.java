@@ -33,6 +33,8 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,15 +89,16 @@ import javax.xml.bind.annotation.XmlType;
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Tax15 Tax15}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Tax21", propOrder = {"type", "amount", "basis", "recipientIdentification", "exemptionIndicator", "exemptionReason", "taxCalculationDetails"})
 public class Tax21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected TaxType1Choice type;
 	/**
-	 * Type of tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -131,7 +134,7 @@ public class Tax21 {
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
-			componentContext_lazy = () -> Tax21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Tax21.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -144,10 +147,11 @@ public class Tax21 {
 			type_lazy = () -> TaxType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveOrHistoricCurrencyAnd13DecimalAmount amount;
 	/**
-	 * Amount of money resulting from the calculation of the tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,7 +195,7 @@ public class Tax21 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> Tax21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Tax21.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,11 +208,11 @@ public class Tax21 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Bsis", required = true)
 	protected TaxBasis1Choice basis;
 	/**
-	 * Basis used to determine the capital gain or loss, for example, the
-	 * purchase price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -247,7 +251,7 @@ public class Tax21 {
 	public static final MMMessageAssociationEnd mmBasis = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
-			componentContext_lazy = () -> Tax21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Tax21.mmObject();
 			isDerived = false;
 			xmlTag = "Bsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -260,11 +264,11 @@ public class Tax21 {
 			type_lazy = () -> TaxBasis1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RcptId")
 	protected PartyIdentification2Choice recipientIdentification;
 	/**
-	 * Party that receives the tax. The recipient of, and the party entitled to,
-	 * the tax may be two different parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -312,7 +316,7 @@ public class Tax21 {
 	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Tax21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Tax21.mmObject();
 			isDerived = false;
 			xmlTag = "RcptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,10 +329,11 @@ public class Tax21 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "XmptnInd", required = true)
 	protected YesNoIndicator exemptionIndicator;
 	/**
-	 * Indicates whether a tax exemption applies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -373,7 +378,7 @@ public class Tax21 {
 	public static final MMMessageAttribute mmExemptionIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTax.mmExemptionIndicator;
-			componentContext_lazy = () -> Tax21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Tax21.mmObject();
 			isDerived = false;
 			xmlTag = "XmptnInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -386,10 +391,11 @@ public class Tax21 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "XmptnRsn")
 	protected ExemptionReason1Choice exemptionReason;
 	/**
-	 * Reason for a tax exemption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -428,7 +434,7 @@ public class Tax21 {
 	public static final MMMessageAssociationEnd mmExemptionReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmExemptionReason;
-			componentContext_lazy = () -> Tax21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Tax21.mmObject();
 			isDerived = false;
 			xmlTag = "XmptnRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -441,10 +447,11 @@ public class Tax21 {
 			type_lazy = () -> ExemptionReason1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxClctnDtls")
 	protected TaxCalculationInformation8 taxCalculationDetails;
 	/**
-	 * Information used to calculate the tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -484,7 +491,7 @@ public class Tax21 {
 	public static final MMMessageAssociationEnd mmTaxCalculationDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
-			componentContext_lazy = () -> Tax21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Tax21.mmObject();
 			isDerived = false;
 			xmlTag = "TaxClctnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -501,9 +508,11 @@ public class Tax21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Tax21.mmType, Tax21.mmAmount, Tax21.mmBasis, Tax21.mmRecipientIdentification, Tax21.mmExemptionIndicator, Tax21.mmExemptionReason, Tax21.mmTaxCalculationDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax21.mmType, com.tools20022.repository.msg.Tax21.mmAmount, com.tools20022.repository.msg.Tax21.mmBasis,
+						com.tools20022.repository.msg.Tax21.mmRecipientIdentification, com.tools20022.repository.msg.Tax21.mmExemptionIndicator, com.tools20022.repository.msg.Tax21.mmExemptionReason,
+						com.tools20022.repository.msg.Tax21.mmTaxCalculationDetails);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Tax21";
 				definition = "Tax related to an investment fund order.";
@@ -514,66 +523,66 @@ public class Tax21 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public TaxType1Choice getType() {
 		return type;
 	}
 
-	public void setType(TaxType1Choice type) {
-		this.type = type;
+	public Tax21 setType(TaxType1Choice type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveOrHistoricCurrencyAnd13DecimalAmount amount) {
-		this.amount = amount;
+	public Tax21 setAmount(ActiveOrHistoricCurrencyAnd13DecimalAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "Bsis", required = true)
 	public TaxBasis1Choice getBasis() {
 		return basis;
 	}
 
-	public void setBasis(TaxBasis1Choice basis) {
-		this.basis = basis;
+	public Tax21 setBasis(TaxBasis1Choice basis) {
+		this.basis = Objects.requireNonNull(basis);
+		return this;
 	}
 
-	@XmlElement(name = "RcptId")
-	public PartyIdentification2Choice getRecipientIdentification() {
-		return recipientIdentification;
+	public Optional<PartyIdentification2Choice> getRecipientIdentification() {
+		return recipientIdentification == null ? Optional.empty() : Optional.of(recipientIdentification);
 	}
 
-	public void setRecipientIdentification(PartyIdentification2Choice recipientIdentification) {
+	public Tax21 setRecipientIdentification(PartyIdentification2Choice recipientIdentification) {
 		this.recipientIdentification = recipientIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "XmptnInd", required = true)
 	public YesNoIndicator getExemptionIndicator() {
 		return exemptionIndicator;
 	}
 
-	public void setExemptionIndicator(YesNoIndicator exemptionIndicator) {
-		this.exemptionIndicator = exemptionIndicator;
+	public Tax21 setExemptionIndicator(YesNoIndicator exemptionIndicator) {
+		this.exemptionIndicator = Objects.requireNonNull(exemptionIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "XmptnRsn")
-	public ExemptionReason1Choice getExemptionReason() {
-		return exemptionReason;
+	public Optional<ExemptionReason1Choice> getExemptionReason() {
+		return exemptionReason == null ? Optional.empty() : Optional.of(exemptionReason);
 	}
 
-	public void setExemptionReason(ExemptionReason1Choice exemptionReason) {
+	public Tax21 setExemptionReason(ExemptionReason1Choice exemptionReason) {
 		this.exemptionReason = exemptionReason;
+		return this;
 	}
 
-	@XmlElement(name = "TaxClctnDtls")
-	public TaxCalculationInformation8 getTaxCalculationDetails() {
-		return taxCalculationDetails;
+	public Optional<TaxCalculationInformation8> getTaxCalculationDetails() {
+		return taxCalculationDetails == null ? Optional.empty() : Optional.of(taxCalculationDetails);
 	}
 
-	public void setTaxCalculationDetails(com.tools20022.repository.msg.TaxCalculationInformation8 taxCalculationDetails) {
+	public Tax21 setTaxCalculationDetails(com.tools20022.repository.msg.TaxCalculationInformation8 taxCalculationDetails) {
 		this.taxCalculationDetails = taxCalculationDetails;
+		return this;
 	}
 }

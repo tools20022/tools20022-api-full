@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TaxCharges1", propOrder = {"identification", "rate", "amount"})
 public class TaxCharges1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id")
 	protected Max35Text identification;
 	/**
-	 * Reference used to identify the nature of tax levied, such as Value Added
-	 * Tax (VAT).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +113,7 @@ public class TaxCharges1 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmIdentification;
-			componentContext_lazy = () -> TaxCharges1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCharges1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +124,11 @@ public class TaxCharges1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Rate")
 	protected PercentageRate rate;
 	/**
-	 * Rate used to calculate the tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +160,7 @@ public class TaxCharges1 {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
-			componentContext_lazy = () -> TaxCharges1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCharges1.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,10 +171,11 @@ public class TaxCharges1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt")
 	protected CurrencyAndAmount amount;
 	/**
-	 * Amount of money resulting from the calculation of the tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -205,7 +208,7 @@ public class TaxCharges1 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> TaxCharges1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCharges1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,9 +223,9 @@ public class TaxCharges1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TaxCharges1.mmIdentification, TaxCharges1.mmRate, TaxCharges1.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCharges1.mmIdentification, com.tools20022.repository.msg.TaxCharges1.mmRate, com.tools20022.repository.msg.TaxCharges1.mmAmount);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxCharges1";
 				definition = "Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.";
@@ -231,30 +234,30 @@ public class TaxCharges1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id")
-	public Max35Text getIdentification() {
-		return identification;
+	public Optional<Max35Text> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(Max35Text identification) {
+	public TaxCharges1 setIdentification(Max35Text identification) {
 		this.identification = identification;
+		return this;
 	}
 
-	@XmlElement(name = "Rate")
-	public PercentageRate getRate() {
-		return rate;
+	public Optional<PercentageRate> getRate() {
+		return rate == null ? Optional.empty() : Optional.of(rate);
 	}
 
-	public void setRate(PercentageRate rate) {
+	public TaxCharges1 setRate(PercentageRate rate) {
 		this.rate = rate;
+		return this;
 	}
 
-	@XmlElement(name = "Amt")
-	public CurrencyAndAmount getAmount() {
-		return amount;
+	public Optional<CurrencyAndAmount> getAmount() {
+		return amount == null ? Optional.empty() : Optional.of(amount);
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
+	public TaxCharges1 setAmount(CurrencyAndAmount amount) {
 		this.amount = amount;
+		return this;
 	}
 }

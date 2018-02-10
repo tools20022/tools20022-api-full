@@ -29,6 +29,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -70,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines proprietary reason  to reject a transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ProprietaryStatusJustification", propOrder = {"proprietaryStatusReason", "reason"})
 public class ProprietaryStatusJustification {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrtryStsRsn", required = true)
 	protected Max4AlphaNumericText proprietaryStatusReason;
 	/**
-	 * Defines the reason why the Target2 SSP system has rejected the
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +116,7 @@ public class ProprietaryStatusJustification {
 	public static final MMMessageAttribute mmProprietaryStatusReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> ProprietaryStatusJustification.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusJustification.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryStsRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,11 +127,11 @@ public class ProprietaryStatusJustification {
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn", required = true)
 	protected Max256Text reason;
 	/**
-	 * Provides detailed information about the reason why the Target2 SSP system
-	 * has rejected the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +166,7 @@ public class ProprietaryStatusJustification {
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> ProprietaryStatusJustification.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusJustification.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,9 +181,9 @@ public class ProprietaryStatusJustification {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProprietaryStatusJustification.mmProprietaryStatusReason, ProprietaryStatusJustification.mmReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryStatusJustification.mmProprietaryStatusReason, com.tools20022.repository.msg.ProprietaryStatusJustification.mmReason);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -198,21 +199,21 @@ public class ProprietaryStatusJustification {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrtryStsRsn", required = true)
 	public Max4AlphaNumericText getProprietaryStatusReason() {
 		return proprietaryStatusReason;
 	}
 
-	public void setProprietaryStatusReason(Max4AlphaNumericText proprietaryStatusReason) {
-		this.proprietaryStatusReason = proprietaryStatusReason;
+	public ProprietaryStatusJustification setProprietaryStatusReason(Max4AlphaNumericText proprietaryStatusReason) {
+		this.proprietaryStatusReason = Objects.requireNonNull(proprietaryStatusReason);
+		return this;
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public Max256Text getReason() {
 		return reason;
 	}
 
-	public void setReason(Max256Text reason) {
-		this.reason = reason;
+	public ProprietaryStatusJustification setReason(Max256Text reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 }

@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TradeTypeCode;
+import com.tools20022.repository.codeset.TradeType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of executed order in a bidding process.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TradeTypeCode TradeTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeType2Code#mmRiskTrade
- * TradeType2Code.mmRiskTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType2Code#RiskTrade
+ * TradeType2Code.RiskTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType2Code#mmVWAPGuarantee
- * TradeType2Code.mmVWAPGuarantee}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeType2Code#mmAgency
- * TradeType2Code.mmAgency}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeType2Code#VWAPGuarantee
+ * TradeType2Code.VWAPGuarantee}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType2Code#Agency
+ * TradeType2Code.Agency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType2Code#mmGuaranteedClose
- * TradeType2Code.mmGuaranteedClose}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeType2Code#GuaranteedClose
+ * TradeType2Code.GuaranteedClose}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TradeTypeCode TradeTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of executed order in a bidding process."</li>
  * </ul>
  */
-public class TradeType2Code extends TradeTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TradeType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class TradeType2Code extends TradeTypeCode {
 	 * name} = "RiskTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRiskTrade = new MMCode() {
+	public static final TradeType2Code RiskTrade = new TradeType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RiskTrade";
-			owner_lazy = () -> TradeType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeType2Code.mmObject();
+			codeName = TradeTypeCode.RiskTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class TradeType2Code extends TradeTypeCode {
 	 * name} = "VWAPGuarantee"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVWAPGuarantee = new MMCode() {
+	public static final TradeType2Code VWAPGuarantee = new TradeType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VWAPGuarantee";
-			owner_lazy = () -> TradeType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeType2Code.mmObject();
+			codeName = TradeTypeCode.VWAPGuarantee.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,11 +139,12 @@ public class TradeType2Code extends TradeTypeCode {
 	 * name} = "Agency"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgency = new MMCode() {
+	public static final TradeType2Code Agency = new TradeType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agency";
-			owner_lazy = () -> TradeType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeType2Code.mmObject();
+			codeName = TradeTypeCode.Agency.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -155,26 +163,60 @@ public class TradeType2Code extends TradeTypeCode {
 	 * name} = "GuaranteedClose"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGuaranteedClose = new MMCode() {
+	public static final TradeType2Code GuaranteedClose = new TradeType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteedClose";
-			owner_lazy = () -> TradeType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeType2Code.mmObject();
+			codeName = TradeTypeCode.GuaranteedClose.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TradeType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TradeType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RISK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeType2Code";
 				definition = "Specifies the type of executed order in a bidding process.";
-				code_lazy = () -> Arrays.asList(TradeType2Code.mmRiskTrade, TradeType2Code.mmVWAPGuarantee, TradeType2Code.mmAgency, TradeType2Code.mmGuaranteedClose);
 				trace_lazy = () -> TradeTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeType2Code.RiskTrade, com.tools20022.repository.codeset.TradeType2Code.VWAPGuarantee, com.tools20022.repository.codeset.TradeType2Code.Agency,
+						com.tools20022.repository.codeset.TradeType2Code.GuaranteedClose);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(RiskTrade.getCodeName().get(), RiskTrade);
+		codesByName.put(VWAPGuarantee.getCodeName().get(), VWAPGuarantee);
+		codesByName.put(Agency.getCodeName().get(), Agency);
+		codesByName.put(GuaranteedClose.getCodeName().get(), GuaranteedClose);
+	}
+
+	public static TradeType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TradeType2Code[] values() {
+		TradeType2Code[] values = new TradeType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TradeType2Code> {
+		@Override
+		public TradeType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TradeType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

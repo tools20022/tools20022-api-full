@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -34,6 +35,8 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -84,8 +87,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,15 +106,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionCancellation1", propOrder = {"cancellationReasonCode", "cancellationReason", "processingStatus"})
 public class CorporateActionCancellation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CxlRsnCd", required = true)
 	protected CorporateActionCancellationReason1Code cancellationReasonCode;
 	/**
-	 * Specifies reasons for cancellation of a corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,6 +135,9 @@ public class CorporateActionCancellation1 {
 	 * CorporateActionCancellation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CxlRsnCd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :24B::CAND//4!c</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -154,9 +161,10 @@ public class CorporateActionCancellation1 {
 	public static final MMMessageAttribute mmCancellationReasonCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
-			componentContext_lazy = () -> CorporateActionCancellation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellation1.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRsnCd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":24B::CAND//4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReasonCode";
 			definition = "Specifies reasons for cancellation of a corporate action event.";
@@ -166,10 +174,11 @@ public class CorporateActionCancellation1 {
 			simpleType_lazy = () -> CorporateActionCancellationReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "CxlRsn")
 	protected Max140Text cancellationReason;
 	/**
-	 * Additional information about cancellation of a corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,6 +197,9 @@ public class CorporateActionCancellation1 {
 	 * CorporateActionCancellation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CxlRsn"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :24B::CAND</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -211,9 +223,10 @@ public class CorporateActionCancellation1 {
 	public static final MMMessageAttribute mmCancellationReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
-			componentContext_lazy = () -> CorporateActionCancellation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellation1.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRsn";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":24B::CAND"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "Additional information about cancellation of a corporate action event.";
@@ -223,10 +236,11 @@ public class CorporateActionCancellation1 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcgSts", required = true)
 	protected CorporateActionProcessingStatus1Choice processingStatus;
 	/**
-	 * Specifies the status of the details of the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -245,6 +259,9 @@ public class CorporateActionCancellation1 {
 	 * CorporateActionCancellation1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrcgSts"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::PROC</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -267,9 +284,10 @@ public class CorporateActionCancellation1 {
 	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
-			componentContext_lazy = () -> CorporateActionCancellation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellation1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::PROC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Specifies the status of the details of the event.";
@@ -284,11 +302,12 @@ public class CorporateActionCancellation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionCancellation1.mmCancellationReasonCode, CorporateActionCancellation1.mmCancellationReason, CorporateActionCancellation1.mmProcessingStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionCancellation1.mmCancellationReasonCode, com.tools20022.repository.msg.CorporateActionCancellation1.mmCancellationReason,
+						com.tools20022.repository.msg.CorporateActionCancellation1.mmProcessingStatus);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionCancellationAdviceV01.mmCancellationAdviceGeneralInformation, CorporateActionCancellationAdviceV02.mmCancellationAdviceGeneralInformation,
 						CorporateActionCancellationAdviceV03.mmCancellationAdviceGeneralInformation, CorporateActionCancellationAdviceV04.mmCancellationAdviceGeneralInformation);
 				trace_lazy = () -> CorporateActionNotification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionCancellation1";
 				definition = "Corporate action event cancellation status and reason.";
@@ -298,30 +317,30 @@ public class CorporateActionCancellation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CxlRsnCd", required = true)
 	public CorporateActionCancellationReason1Code getCancellationReasonCode() {
 		return cancellationReasonCode;
 	}
 
-	public void setCancellationReasonCode(CorporateActionCancellationReason1Code cancellationReasonCode) {
-		this.cancellationReasonCode = cancellationReasonCode;
+	public CorporateActionCancellation1 setCancellationReasonCode(CorporateActionCancellationReason1Code cancellationReasonCode) {
+		this.cancellationReasonCode = Objects.requireNonNull(cancellationReasonCode);
+		return this;
 	}
 
-	@XmlElement(name = "CxlRsn")
-	public Max140Text getCancellationReason() {
-		return cancellationReason;
+	public Optional<Max140Text> getCancellationReason() {
+		return cancellationReason == null ? Optional.empty() : Optional.of(cancellationReason);
 	}
 
-	public void setCancellationReason(Max140Text cancellationReason) {
+	public CorporateActionCancellation1 setCancellationReason(Max140Text cancellationReason) {
 		this.cancellationReason = cancellationReason;
+		return this;
 	}
 
-	@XmlElement(name = "PrcgSts", required = true)
 	public CorporateActionProcessingStatus1Choice getProcessingStatus() {
 		return processingStatus;
 	}
 
-	public void setProcessingStatus(CorporateActionProcessingStatus1Choice processingStatus) {
-		this.processingStatus = processingStatus;
+	public CorporateActionCancellation1 setProcessingStatus(CorporateActionProcessingStatus1Choice processingStatus) {
+		this.processingStatus = Objects.requireNonNull(processingStatus);
+		return this;
 	}
 }

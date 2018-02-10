@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountAndDirection3", propOrder = {"amount", "creditDebit"})
 public class AmountAndDirection3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount amount;
 	/**
-	 * Amount of money in the cash entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +120,7 @@ public class AmountAndDirection3 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
-			componentContext_lazy = () -> AmountAndDirection3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection3.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,10 +131,11 @@ public class AmountAndDirection3 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbt", required = true)
 	protected CreditDebitCode creditDebit;
 	/**
-	 * Indicates whether an entry is a credit or a debit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,7 +169,7 @@ public class AmountAndDirection3 {
 	public static final MMMessageAttribute mmCreditDebit = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreditDebitIndicator;
-			componentContext_lazy = () -> AmountAndDirection3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection3.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,9 +184,9 @@ public class AmountAndDirection3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountAndDirection3.mmAmount, AmountAndDirection3.mmCreditDebit);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection3.mmAmount, com.tools20022.repository.msg.AmountAndDirection3.mmCreditDebit);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndDirection3";
 				definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.";
@@ -193,21 +196,21 @@ public class AmountAndDirection3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
-		this.amount = amount;
+	public AmountAndDirection3 setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbt", required = true)
 	public CreditDebitCode getCreditDebit() {
 		return creditDebit;
 	}
 
-	public void setCreditDebit(CreditDebitCode creditDebit) {
-		this.creditDebit = creditDebit;
+	public AmountAndDirection3 setCreditDebit(CreditDebitCode creditDebit) {
+		this.creditDebit = Objects.requireNonNull(creditDebit);
+		return this;
 	}
 }

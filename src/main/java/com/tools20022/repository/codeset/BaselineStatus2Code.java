@@ -20,37 +20,39 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.BaselineStatusCode;
+import com.tools20022.repository.codeset.BaselineStatus2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status requested to be assigned to the baseline.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.BaselineStatusCode
- * BaselineStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BaselineStatus2Code#mmComplete
- * BaselineStatus2Code.mmComplete}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BaselineStatus2Code#mmClosed
- * BaselineStatus2Code.mmClosed}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BaselineStatus2Code#mmActive
- * BaselineStatus2Code.mmActive}</li>
+ * {@linkplain com.tools20022.repository.codeset.BaselineStatus2Code#Complete
+ * BaselineStatus2Code.Complete}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BaselineStatus2Code#Closed
+ * BaselineStatus2Code.Closed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BaselineStatus2Code#Active
+ * BaselineStatus2Code.Active}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.BaselineStatusCode
+ * BaselineStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the status requested to be assigned to the baseline."</li>
  * </ul>
  */
-public class BaselineStatus2Code extends BaselineStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BaselineStatus2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,11 +90,12 @@ public class BaselineStatus2Code extends BaselineStatusCode {
 	 * name} = "Complete"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmComplete = new MMCode() {
+	public static final BaselineStatus2Code Complete = new BaselineStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
-			owner_lazy = () -> BaselineStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BaselineStatus2Code.mmObject();
+			codeName = BaselineStatusCode.Complete.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +114,12 @@ public class BaselineStatus2Code extends BaselineStatusCode {
 	 * name} = "Closed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClosed = new MMCode() {
+	public static final BaselineStatus2Code Closed = new BaselineStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closed";
-			owner_lazy = () -> BaselineStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BaselineStatus2Code.mmObject();
+			codeName = BaselineStatusCode.Closed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,26 +138,58 @@ public class BaselineStatus2Code extends BaselineStatusCode {
 	 * name} = "Active"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmActive = new MMCode() {
+	public static final BaselineStatus2Code Active = new BaselineStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
-			owner_lazy = () -> BaselineStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BaselineStatus2Code.mmObject();
+			codeName = BaselineStatusCode.Active.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, BaselineStatus2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BaselineStatus2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BaselineStatus2Code";
 				definition = "Specifies the status requested to be assigned to the baseline.";
-				code_lazy = () -> Arrays.asList(BaselineStatus2Code.mmComplete, BaselineStatus2Code.mmClosed, BaselineStatus2Code.mmActive);
 				trace_lazy = () -> BaselineStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BaselineStatus2Code.Complete, com.tools20022.repository.codeset.BaselineStatus2Code.Closed, com.tools20022.repository.codeset.BaselineStatus2Code.Active);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Complete.getCodeName().get(), Complete);
+		codesByName.put(Closed.getCodeName().get(), Closed);
+		codesByName.put(Active.getCodeName().get(), Active);
+	}
+
+	public static BaselineStatus2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BaselineStatus2Code[] values() {
+		BaselineStatus2Code[] values = new BaselineStatus2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BaselineStatus2Code> {
+		@Override
+		public BaselineStatus2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BaselineStatus2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

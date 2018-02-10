@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.TradeMarketCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies a code for a trade market.
@@ -31,19 +36,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeMarketCode#mmNAFTA
- * TradeMarketCode.mmNAFTA}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeMarketCode#NAFTA
+ * TradeMarketCode.NAFTA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeMarketCode#mmInternational
- * TradeMarketCode.mmInternational}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeMarketCode#International
+ * TradeMarketCode.International}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeMarketCode#mmFrenchDomTom
- * TradeMarketCode.mmFrenchDomTom}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeMarketCode#FrenchDomTom
+ * TradeMarketCode.FrenchDomTom}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeMarketCode#mmEuroDomestic
- * TradeMarketCode.mmEuroDomestic}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeMarketCode#mmDomestic
- * TradeMarketCode.mmDomestic}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeMarketCode#EuroDomestic
+ * TradeMarketCode.EuroDomestic}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeMarketCode#Domestic
+ * TradeMarketCode.Domestic}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -56,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies a code for a trade market."</li>
  * </ul>
  */
-public class TradeMarketCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TradeMarketCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -96,12 +102,12 @@ public class TradeMarketCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNAFTA = new MMCode() {
+	public static final TradeMarketCode NAFTA = new TradeMarketCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NAFTA";
 			definition = "Transaction is a North American Free Trade Association (NAFTA) transaction, ie, the first and final agent are both located in the NAFTA area.";
-			owner_lazy = () -> TradeMarketCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeMarketCode.mmObject();
 			codeName = "NFTA";
 		}
 	};
@@ -129,12 +135,12 @@ public class TradeMarketCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInternational = new MMCode() {
+	public static final TradeMarketCode International = new TradeMarketCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "International";
 			definition = "Transaction has an origin in one country and a destination in another and is made in the currency of either the origin or destination country.";
-			owner_lazy = () -> TradeMarketCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeMarketCode.mmObject();
 			codeName = "INTL";
 		}
 	};
@@ -162,12 +168,12 @@ public class TradeMarketCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFrenchDomTom = new MMCode() {
+	public static final TradeMarketCode FrenchDomTom = new TradeMarketCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FrenchDomTom";
 			definition = "Transaction is between a French Overseas Departments and Territories (Dom/Tom) and some country in the European Union (France included).";
-			owner_lazy = () -> TradeMarketCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeMarketCode.mmObject();
 			codeName = "FRDT";
 		}
 	};
@@ -196,12 +202,12 @@ public class TradeMarketCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEuroDomestic = new MMCode() {
+	public static final TradeMarketCode EuroDomestic = new TradeMarketCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EuroDomestic";
 			definition = "Transaction is a credit transfer in Euro with its country of origin and country of destination within the European Union. Origin and destination countries may be one and the same country.";
-			owner_lazy = () -> TradeMarketCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeMarketCode.mmObject();
 			codeName = "EUDM";
 		}
 	};
@@ -229,27 +235,61 @@ public class TradeMarketCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDomestic = new MMCode() {
+	public static final TradeMarketCode Domestic = new TradeMarketCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Domestic";
 			definition = "Transaction has an origin and a destination in the same country and is made in the currency of that country.";
-			owner_lazy = () -> TradeMarketCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeMarketCode.mmObject();
 			codeName = "DMST";
 		}
 	};
+	final static private LinkedHashMap<String, TradeMarketCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TradeMarketCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeMarketCode";
 				definition = "Specifies a code for a trade market.";
-				code_lazy = () -> Arrays.asList(TradeMarketCode.mmNAFTA, TradeMarketCode.mmInternational, TradeMarketCode.mmFrenchDomTom, TradeMarketCode.mmEuroDomestic, TradeMarketCode.mmDomestic);
 				derivation_lazy = () -> Arrays.asList(TradeMarket1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeMarketCode.NAFTA, com.tools20022.repository.codeset.TradeMarketCode.International, com.tools20022.repository.codeset.TradeMarketCode.FrenchDomTom,
+						com.tools20022.repository.codeset.TradeMarketCode.EuroDomestic, com.tools20022.repository.codeset.TradeMarketCode.Domestic);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NAFTA.getCodeName().get(), NAFTA);
+		codesByName.put(International.getCodeName().get(), International);
+		codesByName.put(FrenchDomTom.getCodeName().get(), FrenchDomTom);
+		codesByName.put(EuroDomestic.getCodeName().get(), EuroDomestic);
+		codesByName.put(Domestic.getCodeName().get(), Domestic);
+	}
+
+	public static TradeMarketCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TradeMarketCode[] values() {
+		TradeMarketCode[] values = new TradeMarketCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TradeMarketCode> {
+		@Override
+		public TradeMarketCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TradeMarketCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

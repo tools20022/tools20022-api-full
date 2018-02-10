@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Specifies a place.
@@ -81,16 +80,6 @@ import java.util.List;
  * Location.mmRelatedTransport}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Location#mmTimeZone
  * Location.mmTimeZone}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Location1 Location1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AirportDescription1
- * AirportDescription1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Location2 Location2}</li>
  * </ul>
  * </li>
  * <li>
@@ -152,10 +141,20 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Location1 Location1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AirportDescription1
+ * AirportDescription1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Location2 Location2}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -171,8 +170,8 @@ public class Location {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Person nativePerson;
 	/**
-	 * Person for which a birth place is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,8 +202,8 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmNativePerson = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NativePerson";
 			definition = "Person for which a birth place is specified.";
@@ -217,8 +216,8 @@ public class Location {
 	};
 	protected System system;
 	/**
-	 * System for which a location is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,8 +248,8 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "System";
 			definition = "System for which a location is specified.";
@@ -263,8 +262,8 @@ public class Location {
 	};
 	protected Party domiciledParty;
 	/**
-	 * Party which is domiciled in a specific location.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -295,8 +294,8 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmDomiciledParty = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DomiciledParty";
 			definition = "Party which is domiciled in a specific location.";
@@ -309,8 +308,8 @@ public class Location {
 	};
 	protected Organisation operatingOrganisation;
 	/**
-	 * Organisation which has its operations in a specific location.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -343,8 +342,8 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmOperatingOrganisation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OperatingOrganisation";
 			definition = "Organisation which has its operations in a specific location.";
@@ -357,8 +356,8 @@ public class Location {
 	};
 	protected List<com.tools20022.repository.entity.PostalAddress> address;
 	/**
-	 * Information that locates and identifies a specific address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -413,8 +412,8 @@ public class Location {
 		{
 			derivation_lazy = () -> Arrays.asList(Organisation12.mmOperationalAddress, OrganisationModification1.mmOperationalAddress, InsuranceDataSet1.mmPlaceOfIssue, IndividualPerson28.mmModifiedPostalAddress,
 					IndividualPerson33.mmModifiedPostalAddress);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Address";
 			definition = "Information that locates and identifies a specific address.";
@@ -426,8 +425,8 @@ public class Location {
 	};
 	protected List<com.tools20022.repository.entity.Document> issuedDocument;
 	/**
-	 * Document which was issued at a specific location.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -458,8 +457,8 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmIssuedDocument = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssuedDocument";
 			definition = "Document which was issued at a specific location.";
@@ -471,8 +470,8 @@ public class Location {
 	};
 	protected List<com.tools20022.repository.entity.Incoterms> incoterms;
 	/**
-	 * Incoterms associated with a location.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -504,8 +503,8 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmIncoterms = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Incoterms";
 			definition = "Incoterms associated with a location.";
@@ -517,8 +516,8 @@ public class Location {
 	};
 	protected Transport departureTransportParameters;
 	/**
-	 * Transport parameters linked to a place of departure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -550,8 +549,8 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmDepartureTransportParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepartureTransportParameters";
 			definition = "Transport parameters linked to a place of departure.";
@@ -564,8 +563,8 @@ public class Location {
 	};
 	protected Transport destinationTransportParameters;
 	/**
-	 * Transport parameters linked to a place of destination.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -597,8 +596,8 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmDestinationTransportParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DestinationTransportParameters";
 			definition = "Transport parameters linked to a place of destination.";
@@ -611,8 +610,8 @@ public class Location {
 	};
 	protected InsuranceCertificate insuranceCertificate;
 	/**
-	 * Insurance for which the claims are payable at a specific location.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -646,8 +645,8 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmInsuranceCertificate = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsuranceCertificate";
 			definition = "Insurance for which the claims are payable at a specific location.";
@@ -660,8 +659,8 @@ public class Location {
 	};
 	protected Party party;
 	/**
-	 * Party which resides in a specific location.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -692,8 +691,8 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmParty = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Party";
 			definition = "Party which resides in a specific location.";
@@ -706,8 +705,8 @@ public class Location {
 	};
 	protected Expiry relatedExpiry;
 	/**
-	 * Expiry information which contains an expiry location.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -738,8 +737,8 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedExpiry = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedExpiry";
 			definition = "Expiry information which contains an expiry location.";
@@ -752,8 +751,8 @@ public class Location {
 	};
 	protected Jurisdiction relatedJurisdiction;
 	/**
-	 * Jurisdiction of the location.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -785,8 +784,8 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedJurisdiction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedJurisdiction";
 			definition = "Jurisdiction of the location.";
@@ -799,10 +798,8 @@ public class Location {
 	};
 	protected List<com.tools20022.repository.entity.GenericIdentification> identification;
 	/**
-	 * Identifies the location, for instance, the name of an airport, a county,
-	 * a state, a province or a city by a code or a text. eg LHR for London
-	 * Heathrow airport.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -837,8 +834,8 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identifies the location, for instance, the name of an airport, a county, a state, a province or a city by a code or a text. eg LHR for London Heathrow airport.";
@@ -850,8 +847,8 @@ public class Location {
 	};
 	protected Party taxableParty;
 	/**
-	 * Party which is taxable at a specific location
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -882,8 +879,8 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmTaxableParty = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxableParty";
 			definition = "Party which is taxable at a specific location";
@@ -896,8 +893,8 @@ public class Location {
 	};
 	protected Organisation registeredOrganisation;
 	/**
-	 * Organisation which is registered at that location.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -929,8 +926,8 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmRegisteredOrganisation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegisteredOrganisation";
 			definition = "Organisation which is registered at that location.";
@@ -943,8 +940,8 @@ public class Location {
 	};
 	protected Transport relatedTransport;
 	/**
-	 * Transport process for which a transit location is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -977,8 +974,8 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedTransport = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedTransport";
 			definition = "Transport process for which a transit location is specified.";
@@ -991,8 +988,8 @@ public class Location {
 	};
 	protected List<com.tools20022.repository.entity.UTCOffset> timeZone;
 	/**
-	 * Offset of the time before or after 00:00 hour UTC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1033,8 +1030,8 @@ public class Location {
 	public static final MMBusinessAssociationEnd mmTimeZone = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(MainFundOrderDeskLocation1.mmTimeZoneOffSet);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TimeZone";
 			definition = "Offset of the time before or after 00:00 hour UTC.";
@@ -1048,7 +1045,7 @@ public class Location {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Location";
 				definition = "Specifies a place.";
@@ -1077,147 +1074,165 @@ public class Location {
 		return mmObject_lazy.get();
 	}
 
-	public Person getNativePerson() {
-		return nativePerson;
+	public Optional<Person> getNativePerson() {
+		return nativePerson == null ? Optional.empty() : Optional.of(nativePerson);
 	}
 
-	public void setNativePerson(com.tools20022.repository.entity.Person nativePerson) {
+	public Location setNativePerson(com.tools20022.repository.entity.Person nativePerson) {
 		this.nativePerson = nativePerson;
+		return this;
 	}
 
 	public System getSystem() {
 		return system;
 	}
 
-	public void setSystem(com.tools20022.repository.entity.System system) {
-		this.system = system;
+	public Location setSystem(com.tools20022.repository.entity.System system) {
+		this.system = Objects.requireNonNull(system);
+		return this;
 	}
 
-	public Party getDomiciledParty() {
-		return domiciledParty;
+	public Optional<Party> getDomiciledParty() {
+		return domiciledParty == null ? Optional.empty() : Optional.of(domiciledParty);
 	}
 
-	public void setDomiciledParty(com.tools20022.repository.entity.Party domiciledParty) {
+	public Location setDomiciledParty(com.tools20022.repository.entity.Party domiciledParty) {
 		this.domiciledParty = domiciledParty;
+		return this;
 	}
 
-	public Organisation getOperatingOrganisation() {
-		return operatingOrganisation;
+	public Optional<Organisation> getOperatingOrganisation() {
+		return operatingOrganisation == null ? Optional.empty() : Optional.of(operatingOrganisation);
 	}
 
-	public void setOperatingOrganisation(com.tools20022.repository.entity.Organisation operatingOrganisation) {
+	public Location setOperatingOrganisation(com.tools20022.repository.entity.Organisation operatingOrganisation) {
 		this.operatingOrganisation = operatingOrganisation;
+		return this;
 	}
 
 	public List<PostalAddress> getAddress() {
-		return address;
+		return address == null ? address = new ArrayList<>() : address;
 	}
 
-	public void setAddress(List<com.tools20022.repository.entity.PostalAddress> address) {
-		this.address = address;
+	public Location setAddress(List<com.tools20022.repository.entity.PostalAddress> address) {
+		this.address = Objects.requireNonNull(address);
+		return this;
 	}
 
 	public List<Document> getIssuedDocument() {
-		return issuedDocument;
+		return issuedDocument == null ? issuedDocument = new ArrayList<>() : issuedDocument;
 	}
 
-	public void setIssuedDocument(List<com.tools20022.repository.entity.Document> issuedDocument) {
-		this.issuedDocument = issuedDocument;
+	public Location setIssuedDocument(List<com.tools20022.repository.entity.Document> issuedDocument) {
+		this.issuedDocument = Objects.requireNonNull(issuedDocument);
+		return this;
 	}
 
 	public List<Incoterms> getIncoterms() {
-		return incoterms;
+		return incoterms == null ? incoterms = new ArrayList<>() : incoterms;
 	}
 
-	public void setIncoterms(List<com.tools20022.repository.entity.Incoterms> incoterms) {
-		this.incoterms = incoterms;
+	public Location setIncoterms(List<com.tools20022.repository.entity.Incoterms> incoterms) {
+		this.incoterms = Objects.requireNonNull(incoterms);
+		return this;
 	}
 
-	public Transport getDepartureTransportParameters() {
-		return departureTransportParameters;
+	public Optional<Transport> getDepartureTransportParameters() {
+		return departureTransportParameters == null ? Optional.empty() : Optional.of(departureTransportParameters);
 	}
 
-	public void setDepartureTransportParameters(com.tools20022.repository.entity.Transport departureTransportParameters) {
+	public Location setDepartureTransportParameters(com.tools20022.repository.entity.Transport departureTransportParameters) {
 		this.departureTransportParameters = departureTransportParameters;
+		return this;
 	}
 
-	public Transport getDestinationTransportParameters() {
-		return destinationTransportParameters;
+	public Optional<Transport> getDestinationTransportParameters() {
+		return destinationTransportParameters == null ? Optional.empty() : Optional.of(destinationTransportParameters);
 	}
 
-	public void setDestinationTransportParameters(com.tools20022.repository.entity.Transport destinationTransportParameters) {
+	public Location setDestinationTransportParameters(com.tools20022.repository.entity.Transport destinationTransportParameters) {
 		this.destinationTransportParameters = destinationTransportParameters;
+		return this;
 	}
 
-	public InsuranceCertificate getInsuranceCertificate() {
-		return insuranceCertificate;
+	public Optional<InsuranceCertificate> getInsuranceCertificate() {
+		return insuranceCertificate == null ? Optional.empty() : Optional.of(insuranceCertificate);
 	}
 
-	public void setInsuranceCertificate(com.tools20022.repository.entity.InsuranceCertificate insuranceCertificate) {
+	public Location setInsuranceCertificate(com.tools20022.repository.entity.InsuranceCertificate insuranceCertificate) {
 		this.insuranceCertificate = insuranceCertificate;
+		return this;
 	}
 
-	public Party getParty() {
-		return party;
+	public Optional<Party> getParty() {
+		return party == null ? Optional.empty() : Optional.of(party);
 	}
 
-	public void setParty(com.tools20022.repository.entity.Party party) {
+	public Location setParty(com.tools20022.repository.entity.Party party) {
 		this.party = party;
+		return this;
 	}
 
 	public Expiry getRelatedExpiry() {
 		return relatedExpiry;
 	}
 
-	public void setRelatedExpiry(com.tools20022.repository.entity.Expiry relatedExpiry) {
-		this.relatedExpiry = relatedExpiry;
+	public Location setRelatedExpiry(com.tools20022.repository.entity.Expiry relatedExpiry) {
+		this.relatedExpiry = Objects.requireNonNull(relatedExpiry);
+		return this;
 	}
 
-	public Jurisdiction getRelatedJurisdiction() {
-		return relatedJurisdiction;
+	public Optional<Jurisdiction> getRelatedJurisdiction() {
+		return relatedJurisdiction == null ? Optional.empty() : Optional.of(relatedJurisdiction);
 	}
 
-	public void setRelatedJurisdiction(com.tools20022.repository.entity.Jurisdiction relatedJurisdiction) {
+	public Location setRelatedJurisdiction(com.tools20022.repository.entity.Jurisdiction relatedJurisdiction) {
 		this.relatedJurisdiction = relatedJurisdiction;
+		return this;
 	}
 
 	public List<GenericIdentification> getIdentification() {
-		return identification;
+		return identification == null ? identification = new ArrayList<>() : identification;
 	}
 
-	public void setIdentification(List<com.tools20022.repository.entity.GenericIdentification> identification) {
-		this.identification = identification;
+	public Location setIdentification(List<com.tools20022.repository.entity.GenericIdentification> identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	public Party getTaxableParty() {
-		return taxableParty;
+	public Optional<Party> getTaxableParty() {
+		return taxableParty == null ? Optional.empty() : Optional.of(taxableParty);
 	}
 
-	public void setTaxableParty(com.tools20022.repository.entity.Party taxableParty) {
+	public Location setTaxableParty(com.tools20022.repository.entity.Party taxableParty) {
 		this.taxableParty = taxableParty;
+		return this;
 	}
 
-	public Organisation getRegisteredOrganisation() {
-		return registeredOrganisation;
+	public Optional<Organisation> getRegisteredOrganisation() {
+		return registeredOrganisation == null ? Optional.empty() : Optional.of(registeredOrganisation);
 	}
 
-	public void setRegisteredOrganisation(com.tools20022.repository.entity.Organisation registeredOrganisation) {
+	public Location setRegisteredOrganisation(com.tools20022.repository.entity.Organisation registeredOrganisation) {
 		this.registeredOrganisation = registeredOrganisation;
+		return this;
 	}
 
 	public Transport getRelatedTransport() {
 		return relatedTransport;
 	}
 
-	public void setRelatedTransport(com.tools20022.repository.entity.Transport relatedTransport) {
-		this.relatedTransport = relatedTransport;
+	public Location setRelatedTransport(com.tools20022.repository.entity.Transport relatedTransport) {
+		this.relatedTransport = Objects.requireNonNull(relatedTransport);
+		return this;
 	}
 
 	public List<UTCOffset> getTimeZone() {
-		return timeZone;
+		return timeZone == null ? timeZone = new ArrayList<>() : timeZone;
 	}
 
-	public void setTimeZone(List<com.tools20022.repository.entity.UTCOffset> timeZone) {
-		this.timeZone = timeZone;
+	public Location setTimeZone(List<com.tools20022.repository.entity.UTCOffset> timeZone) {
+		this.timeZone = Objects.requireNonNull(timeZone);
+		return this;
 	}
 }

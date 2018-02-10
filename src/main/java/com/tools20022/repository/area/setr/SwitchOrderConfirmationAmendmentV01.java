@@ -25,9 +25,8 @@ import com.tools20022.repository.area.SecuritiesTradeLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -49,22 +48,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
- * SecuritiesTradeLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
- * InvestmentFundsISOPreviousversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SwtchOrdrConfAmdmntV01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -92,9 +75,41 @@ import javax.xml.bind.annotation.*;
  * SwitchOrderConfirmationAmendmentV01.mmExtension}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
+ * InvestmentFundsISOPreviousversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SwtchOrdrConfAmdmntV01"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
+ * SecuritiesTradeLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code setr.056.001.01}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forSwitchOrderConfirmationAmendmentV01
+ * ConstraintAccountIdentificationRule.forSwitchOrderConfirmationAmendmentV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility4Rule#forSwitchOrderConfirmationAmendmentV01
+ * ConstraintOrderOriginatorEligibility4Rule.
+ * forSwitchOrderConfirmationAmendmentV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule#forSwitchOrderConfirmationAmendmentV01
+ * ConstraintMultipleSwitchExecutionRule.forSwitchOrderConfirmationAmendmentV01}
+ * </li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,16 +122,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SwitchOrderConfirmationAmendmentV01", propOrder = {"messageIdentification", "poolReference", "previousReference", "relatedReference", "switchExecutionDetails", "copyDetails", "extension"})
 public class SwitchOrderConfirmationAmendmentV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Reference that uniquely identifies a message from a business application
-	 * standpoint.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,10 +173,11 @@ public class SwitchOrderConfirmationAmendmentV01 {
 			}
 		}
 	};
+	@XmlElement(name = "PoolRef")
 	protected AdditionalReference3 poolReference;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,10 +217,11 @@ public class SwitchOrderConfirmationAmendmentV01 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsRef")
 	protected List<AdditionalReference3> previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -243,10 +260,11 @@ public class SwitchOrderConfirmationAmendmentV01 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdRef")
 	protected AdditionalReference3 relatedReference;
 	/**
-	 * Reference to a linked message that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -287,10 +305,11 @@ public class SwitchOrderConfirmationAmendmentV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SwtchExctnDtls", required = true)
 	protected List<SwitchExecution4> switchExecutionDetails;
 	/**
-	 * Information related to a switch execution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -329,10 +348,11 @@ public class SwitchOrderConfirmationAmendmentV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CpyDtls")
 	protected CopyInformation2 copyDetails;
 	/**
-	 * Information provided when the message is a copy of a previous message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -373,11 +393,11 @@ public class SwitchOrderConfirmationAmendmentV01 {
 			}
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -421,6 +441,9 @@ public class SwitchOrderConfirmationAmendmentV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSwitchOrderConfirmationAmendmentV01,
+						com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility4Rule.forSwitchOrderConfirmationAmendmentV01,
+						com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule.forSwitchOrderConfirmationAmendmentV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrderConfirmationAmendmentV01";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the SwitchOrderConfirmationAmendment message to the instructing party, for example, an investment manager or its authorised representative to amend a previously sent SwitchOrderConfirmation message.\r\nUsage\r\nThe SwitchOrderConfirmationAmendment message is used to amend a previously sent switch order confirmation.\r\nEach order confirmation amendment specified is identified in DealReference. The reference of the original order is specified in OrderReference.\r\nThe message identification of the SwitchOrder message in which the switch order was conveyed may also be quoted in RelatedReference. The message identification of the SwitchOrderConfirmation message in which the original switch order confirmation was conveyed may also be quoted in PreviousReference.";
@@ -450,70 +473,70 @@ public class SwitchOrderConfirmationAmendmentV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public SwitchOrderConfirmationAmendmentV01 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PoolRef")
-	public AdditionalReference3 getPoolReference() {
-		return poolReference;
+	public Optional<AdditionalReference3> getPoolReference() {
+		return poolReference == null ? Optional.empty() : Optional.of(poolReference);
 	}
 
-	public void setPoolReference(AdditionalReference3 poolReference) {
+	public SwitchOrderConfirmationAmendmentV01 setPoolReference(AdditionalReference3 poolReference) {
 		this.poolReference = poolReference;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef")
 	public List<AdditionalReference3> getPreviousReference() {
-		return previousReference;
+		return previousReference == null ? previousReference = new ArrayList<>() : previousReference;
 	}
 
-	public void setPreviousReference(List<AdditionalReference3> previousReference) {
-		this.previousReference = previousReference;
+	public SwitchOrderConfirmationAmendmentV01 setPreviousReference(List<AdditionalReference3> previousReference) {
+		this.previousReference = Objects.requireNonNull(previousReference);
+		return this;
 	}
 
-	@XmlElement(name = "RltdRef")
-	public AdditionalReference3 getRelatedReference() {
-		return relatedReference;
+	public Optional<AdditionalReference3> getRelatedReference() {
+		return relatedReference == null ? Optional.empty() : Optional.of(relatedReference);
 	}
 
-	public void setRelatedReference(AdditionalReference3 relatedReference) {
+	public SwitchOrderConfirmationAmendmentV01 setRelatedReference(AdditionalReference3 relatedReference) {
 		this.relatedReference = relatedReference;
+		return this;
 	}
 
-	@XmlElement(name = "SwtchExctnDtls", required = true)
 	public List<SwitchExecution4> getSwitchExecutionDetails() {
-		return switchExecutionDetails;
+		return switchExecutionDetails == null ? switchExecutionDetails = new ArrayList<>() : switchExecutionDetails;
 	}
 
-	public void setSwitchExecutionDetails(List<SwitchExecution4> switchExecutionDetails) {
-		this.switchExecutionDetails = switchExecutionDetails;
+	public SwitchOrderConfirmationAmendmentV01 setSwitchExecutionDetails(List<SwitchExecution4> switchExecutionDetails) {
+		this.switchExecutionDetails = Objects.requireNonNull(switchExecutionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CpyDtls")
-	public CopyInformation2 getCopyDetails() {
-		return copyDetails;
+	public Optional<CopyInformation2> getCopyDetails() {
+		return copyDetails == null ? Optional.empty() : Optional.of(copyDetails);
 	}
 
-	public void setCopyDetails(CopyInformation2 copyDetails) {
+	public SwitchOrderConfirmationAmendmentV01 setCopyDetails(CopyInformation2 copyDetails) {
 		this.copyDetails = copyDetails;
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<Extension1> extension) {
-		this.extension = extension;
+	public SwitchOrderConfirmationAmendmentV01 setExtension(List<Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.056.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:setr.056.001.01")
 	static public class Document {
 		@XmlElement(name = "SwtchOrdrConfAmdmntV01", required = true)
 		public SwitchOrderConfirmationAmendmentV01 messageBody;

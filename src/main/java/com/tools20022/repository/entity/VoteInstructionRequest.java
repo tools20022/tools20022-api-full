@@ -27,6 +27,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Decision of the voting party for one resolution. Several types of decisions
@@ -66,6 +68,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ProxyAppointment#mmVote
+ * ProxyAppointment.mmVote}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmVoteInstruction
+ * InstructionForMeeting.mmVoteInstruction}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Vote#mmVoteRequest
+ * Vote.mmVoteRequest}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.VotingPartyAndInstruction#mmVotePerResolution
+ * VotingPartyAndInstruction.mmVotePerResolution}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
  * <ul>
@@ -99,32 +123,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ProxyAppointment#mmVote
- * ProxyAppointment.mmVote}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InstructionForMeeting#mmVoteInstruction
- * InstructionForMeeting.mmVoteInstruction}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Vote#mmVoteRequest
- * Vote.mmVoteRequest}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.VotingPartyAndInstruction#mmVotePerResolution
- * VotingPartyAndInstruction.mmVotePerResolution}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -142,8 +144,8 @@ public class VoteInstructionRequest {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected InstructionForMeeting meetingInstruction;
 	/**
-	 * Meeting instruction which contains a vote instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,8 +179,8 @@ public class VoteInstructionRequest {
 	 */
 	public static final MMBusinessAssociationEnd mmMeetingInstruction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MeetingInstruction";
 			definition = "Meeting instruction which contains a vote instruction.";
@@ -191,8 +193,8 @@ public class VoteInstructionRequest {
 	};
 	protected Vote votePerResolution;
 	/**
-	 * Specifies the number of votes to be cast for a specific resolution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -269,8 +271,8 @@ public class VoteInstructionRequest {
 			derivation_lazy = () -> Arrays.asList(VoteChoice.mmVoteInstruction, VoteInstruction.mmVotePerResolution, Vote1Choice.mmVoteInstruction, VoteDetails1.mmVoteInstructionForAgendaResolution, Vote2Choice.mmVoteInstruction,
 					VoteDetails2.mmVoteInstructionForAgendaResolution, VoteInstruction1.mmVotePerResolution, DetailedInstructionStatus2.mmVotePerResolution, DetailedInstructionStatus9.mmVotePerResolution,
 					DetailedInstructionStatus10.mmVotePerResolution, Vote3Choice.mmVoteInstruction, VoteDetails3.mmVoteInstructionForAgendaResolution);
-			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VotePerResolution";
 			definition = "Specifies the number of votes to be cast for a specific resolution.";
@@ -283,9 +285,8 @@ public class VoteInstructionRequest {
 	};
 	protected Number discretionary;
 	/**
-	 * Number of votes for which decision is left to the party that will
-	 * exercise the voting right.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -326,8 +327,8 @@ public class VoteInstructionRequest {
 	public static final MMBusinessAttribute mmDiscretionary = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Vote1.mmDiscretionary, Vote4.mmDiscretionary, Vote6.mmDiscretionary, Vote8.mmDiscretionary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Discretionary";
 			definition = "Number of votes for which decision is left to the party that will exercise the voting right.";
@@ -346,8 +347,8 @@ public class VoteInstructionRequest {
 	};
 	protected VoteInstructionCode globalVoteInstruction;
 	/**
-	 * Vote instruction per resolution is cast for the entire entitlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -392,8 +393,8 @@ public class VoteInstructionRequest {
 	public static final MMBusinessAttribute mmGlobalVoteInstruction = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(VoteChoice.mmGlobalVoteInstruction, Vote1Choice.mmGlobalVoteInstruction, Vote2Choice.mmGlobalVoteInstruction, Vote3Choice.mmGlobalVoteInstruction);
-			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GlobalVoteInstruction";
 			definition = "Vote instruction per resolution is cast for the entire entitlement.";
@@ -412,9 +413,8 @@ public class VoteInstructionRequest {
 	};
 	protected VoteInstructionCode voteForMeetingResolution;
 	/**
-	 * Specifies the vote recommendation for resolutions added during the
-	 * meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -478,8 +478,8 @@ public class VoteInstructionRequest {
 			derivation_lazy = () -> Arrays.asList(Vote3.mmVoteOption, VoteInstructionForMeetingResolution.mmVoteIndication, VoteInstruction.mmVoteInstructionForMeetingResolution, VoteInstructionForMeetingResolution1.mmVoteIndication,
 					VoteDetails1.mmVoteInstructionForMeetingResolution, VoteInstructionForMeetingResolution1Choice.mmVoteIndication, VoteDetails2.mmVoteInstructionForMeetingResolution, Vote9.mmVoteOption,
 					VoteDetails3.mmVoteInstructionForMeetingResolution, VoteInstructionForMeetingResolution2Choice.mmVoteIndication);
-			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VoteForMeetingResolution";
 			definition = "Specifies the vote recommendation for resolutions added during the meeting.";
@@ -498,8 +498,8 @@ public class VoteInstructionRequest {
 	};
 	protected YesNoIndicator voteExecutionConfirmation;
 	/**
-	 * Indicates that a Vote execution confirmation is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -544,8 +544,8 @@ public class VoteInstructionRequest {
 	public static final MMBusinessAttribute mmVoteExecutionConfirmation = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(VoteInstruction.mmVoteExecutionConfirmation, Instruction1.mmVoteExecutionConfirmation, Instruction2.mmVoteExecutionConfirmation, Instruction3.mmVoteExecutionConfirmation);
-			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VoteExecutionConfirmation";
 			definition = "Indicates that a Vote execution confirmation is requested.";
@@ -564,8 +564,8 @@ public class VoteInstructionRequest {
 	};
 	protected ProxyAppointment relatedProxyAppointment;
 	/**
-	 * Proxy appointment to which instructions are attached.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -598,8 +598,8 @@ public class VoteInstructionRequest {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedProxyAppointment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedProxyAppointment";
 			definition = "Proxy appointment to which instructions are attached.";
@@ -614,7 +614,7 @@ public class VoteInstructionRequest {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VoteInstructionRequest";
 				definition = "Decision of the voting party for one resolution. Several types of decisions can be indicated to allow for split vote specification.";
@@ -638,59 +638,66 @@ public class VoteInstructionRequest {
 		return mmObject_lazy.get();
 	}
 
-	public InstructionForMeeting getMeetingInstruction() {
-		return meetingInstruction;
+	public Optional<InstructionForMeeting> getMeetingInstruction() {
+		return meetingInstruction == null ? Optional.empty() : Optional.of(meetingInstruction);
 	}
 
-	public void setMeetingInstruction(com.tools20022.repository.entity.InstructionForMeeting meetingInstruction) {
+	public VoteInstructionRequest setMeetingInstruction(com.tools20022.repository.entity.InstructionForMeeting meetingInstruction) {
 		this.meetingInstruction = meetingInstruction;
+		return this;
 	}
 
-	public Vote getVotePerResolution() {
-		return votePerResolution;
+	public Optional<Vote> getVotePerResolution() {
+		return votePerResolution == null ? Optional.empty() : Optional.of(votePerResolution);
 	}
 
-	public void setVotePerResolution(com.tools20022.repository.entity.Vote votePerResolution) {
+	public VoteInstructionRequest setVotePerResolution(com.tools20022.repository.entity.Vote votePerResolution) {
 		this.votePerResolution = votePerResolution;
+		return this;
 	}
 
 	public Number getDiscretionary() {
 		return discretionary;
 	}
 
-	public void setDiscretionary(Number discretionary) {
-		this.discretionary = discretionary;
+	public VoteInstructionRequest setDiscretionary(Number discretionary) {
+		this.discretionary = Objects.requireNonNull(discretionary);
+		return this;
 	}
 
 	public VoteInstructionCode getGlobalVoteInstruction() {
 		return globalVoteInstruction;
 	}
 
-	public void setGlobalVoteInstruction(VoteInstructionCode globalVoteInstruction) {
-		this.globalVoteInstruction = globalVoteInstruction;
+	public VoteInstructionRequest setGlobalVoteInstruction(VoteInstructionCode globalVoteInstruction) {
+		this.globalVoteInstruction = Objects.requireNonNull(globalVoteInstruction);
+		return this;
 	}
 
 	public VoteInstructionCode getVoteForMeetingResolution() {
 		return voteForMeetingResolution;
 	}
 
-	public void setVoteForMeetingResolution(VoteInstructionCode voteForMeetingResolution) {
-		this.voteForMeetingResolution = voteForMeetingResolution;
+	public VoteInstructionRequest setVoteForMeetingResolution(VoteInstructionCode voteForMeetingResolution) {
+		this.voteForMeetingResolution = Objects.requireNonNull(voteForMeetingResolution);
+		return this;
 	}
 
 	public YesNoIndicator getVoteExecutionConfirmation() {
 		return voteExecutionConfirmation;
 	}
 
-	public void setVoteExecutionConfirmation(YesNoIndicator voteExecutionConfirmation) {
-		this.voteExecutionConfirmation = voteExecutionConfirmation;
+	public VoteInstructionRequest setVoteExecutionConfirmation(YesNoIndicator voteExecutionConfirmation) {
+		this.voteExecutionConfirmation = Objects.requireNonNull(voteExecutionConfirmation);
+		return this;
 	}
 
-	public ProxyAppointment getRelatedProxyAppointment() {
-		return relatedProxyAppointment;
+	public Optional<ProxyAppointment> getRelatedProxyAppointment() {
+		return relatedProxyAppointment == null ? Optional.empty() : Optional.of(relatedProxyAppointment);
 	}
 
-	public void setRelatedProxyAppointment(com.tools20022.repository.entity.ProxyAppointment relatedProxyAppointment) {
+	public VoteInstructionRequest setRelatedProxyAppointment(com.tools20022.repository.entity.ProxyAppointment relatedProxyAppointment) {
 		this.relatedProxyAppointment = relatedProxyAppointment;
+		return this;
 	}
 }

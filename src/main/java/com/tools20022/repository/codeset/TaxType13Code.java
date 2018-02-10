@@ -20,64 +20,66 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TaxTypeCode;
+import com.tools20022.repository.codeset.TaxType13Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of tax.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TaxTypeCode TaxTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType13Code#mmConsumptionTax
- * TaxType13Code.mmConsumptionTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType13Code#ConsumptionTax
+ * TaxType13Code.ConsumptionTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType13Code#mmEUTaxRetention
- * TaxType13Code.mmEUTaxRetention}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#mmLocalTax
- * TaxType13Code.mmLocalTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType13Code#EUTaxRetention
+ * TaxType13Code.EUTaxRetention}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#LocalTax
+ * TaxType13Code.LocalTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#NationalTax
+ * TaxType13Code.NationalTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType13Code#mmNationalTax
- * TaxType13Code.mmNationalTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType13Code#PaymentLevyTax
+ * TaxType13Code.PaymentLevyTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#Provincial
+ * TaxType13Code.Provincial}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#StampDuty
+ * TaxType13Code.StampDuty}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#StateTax
+ * TaxType13Code.StateTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType13Code#mmPaymentLevyTax
- * TaxType13Code.mmPaymentLevyTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#mmProvincial
- * TaxType13Code.mmProvincial}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#mmStampDuty
- * TaxType13Code.mmStampDuty}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#mmStateTax
- * TaxType13Code.mmStateTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType13Code#StockExchangeTax
+ * TaxType13Code.StockExchangeTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#TaxCredit
+ * TaxType13Code.TaxCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType13Code#mmStockExchangeTax
- * TaxType13Code.mmStockExchangeTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#mmTaxCredit
- * TaxType13Code.mmTaxCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType13Code#TransactionTax
+ * TaxType13Code.TransactionTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxType13Code#TransferTax
+ * TaxType13Code.TransferTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType13Code#mmTransactionTax
- * TaxType13Code.mmTransactionTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType13Code#ValueAddedTax
+ * TaxType13Code.ValueAddedTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType13Code#mmTransferTax
- * TaxType13Code.mmTransferTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType13Code#mmValueAddedTax
- * TaxType13Code.mmValueAddedTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType13Code#mmWithholdingTax
- * TaxType13Code.mmWithholdingTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType13Code#WithholdingTax
+ * TaxType13Code.WithholdingTax}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TaxTypeCode TaxTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -94,7 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of tax."</li>
  * </ul>
  */
-public class TaxType13Code extends TaxTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TaxType13Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -113,11 +116,12 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "ConsumptionTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConsumptionTax = new MMCode() {
+	public static final TaxType13Code ConsumptionTax = new TaxType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsumptionTax";
-			owner_lazy = () -> TaxType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType13Code.mmObject();
+			codeName = TaxTypeCode.ConsumptionTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -136,11 +140,12 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "EUTaxRetention"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEUTaxRetention = new MMCode() {
+	public static final TaxType13Code EUTaxRetention = new TaxType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUTaxRetention";
-			owner_lazy = () -> TaxType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType13Code.mmObject();
+			codeName = TaxTypeCode.EUTaxRetention.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -159,11 +164,12 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "LocalTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLocalTax = new MMCode() {
+	public static final TaxType13Code LocalTax = new TaxType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalTax";
-			owner_lazy = () -> TaxType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType13Code.mmObject();
+			codeName = TaxTypeCode.LocalTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -182,11 +188,12 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "NationalTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNationalTax = new MMCode() {
+	public static final TaxType13Code NationalTax = new TaxType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalTax";
-			owner_lazy = () -> TaxType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType13Code.mmObject();
+			codeName = TaxTypeCode.NationalTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -205,11 +212,12 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "PaymentLevyTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPaymentLevyTax = new MMCode() {
+	public static final TaxType13Code PaymentLevyTax = new TaxType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentLevyTax";
-			owner_lazy = () -> TaxType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType13Code.mmObject();
+			codeName = TaxTypeCode.PaymentLevyTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -228,11 +236,12 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "Provincial"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProvincial = new MMCode() {
+	public static final TaxType13Code Provincial = new TaxType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Provincial";
-			owner_lazy = () -> TaxType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType13Code.mmObject();
+			codeName = TaxTypeCode.Provincial.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -251,11 +260,12 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "StampDuty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStampDuty = new MMCode() {
+	public static final TaxType13Code StampDuty = new TaxType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
-			owner_lazy = () -> TaxType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType13Code.mmObject();
+			codeName = TaxTypeCode.StampDuty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -274,11 +284,12 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "StateTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStateTax = new MMCode() {
+	public static final TaxType13Code StateTax = new TaxType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StateTax";
-			owner_lazy = () -> TaxType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType13Code.mmObject();
+			codeName = TaxTypeCode.StateTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -297,11 +308,12 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "StockExchangeTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockExchangeTax = new MMCode() {
+	public static final TaxType13Code StockExchangeTax = new TaxType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchangeTax";
-			owner_lazy = () -> TaxType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType13Code.mmObject();
+			codeName = TaxTypeCode.StockExchangeTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -320,11 +332,12 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "TaxCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxCredit = new MMCode() {
+	public static final TaxType13Code TaxCredit = new TaxType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCredit";
-			owner_lazy = () -> TaxType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType13Code.mmObject();
+			codeName = TaxTypeCode.TaxCredit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -343,11 +356,12 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "TransactionTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransactionTax = new MMCode() {
+	public static final TaxType13Code TransactionTax = new TaxType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTax";
-			owner_lazy = () -> TaxType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType13Code.mmObject();
+			codeName = TaxTypeCode.TransactionTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -366,11 +380,12 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "TransferTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransferTax = new MMCode() {
+	public static final TaxType13Code TransferTax = new TaxType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferTax";
-			owner_lazy = () -> TaxType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType13Code.mmObject();
+			codeName = TaxTypeCode.TransferTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -389,11 +404,12 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "ValueAddedTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmValueAddedTax = new MMCode() {
+	public static final TaxType13Code ValueAddedTax = new TaxType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
-			owner_lazy = () -> TaxType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType13Code.mmObject();
+			codeName = TaxTypeCode.ValueAddedTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -412,28 +428,73 @@ public class TaxType13Code extends TaxTypeCode {
 	 * name} = "WithholdingTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithholdingTax = new MMCode() {
+	public static final TaxType13Code WithholdingTax = new TaxType13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
-			owner_lazy = () -> TaxType13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType13Code.mmObject();
+			codeName = TaxTypeCode.WithholdingTax.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TaxType13Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TaxType13Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("COAX");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxType13Code";
 				definition = "Specifies the type of tax.";
-				code_lazy = () -> Arrays.asList(TaxType13Code.mmConsumptionTax, TaxType13Code.mmEUTaxRetention, TaxType13Code.mmLocalTax, TaxType13Code.mmNationalTax, TaxType13Code.mmPaymentLevyTax, TaxType13Code.mmProvincial,
-						TaxType13Code.mmStampDuty, TaxType13Code.mmStateTax, TaxType13Code.mmStockExchangeTax, TaxType13Code.mmTaxCredit, TaxType13Code.mmTransactionTax, TaxType13Code.mmTransferTax, TaxType13Code.mmValueAddedTax,
-						TaxType13Code.mmWithholdingTax);
 				trace_lazy = () -> TaxTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType13Code.ConsumptionTax, com.tools20022.repository.codeset.TaxType13Code.EUTaxRetention, com.tools20022.repository.codeset.TaxType13Code.LocalTax,
+						com.tools20022.repository.codeset.TaxType13Code.NationalTax, com.tools20022.repository.codeset.TaxType13Code.PaymentLevyTax, com.tools20022.repository.codeset.TaxType13Code.Provincial,
+						com.tools20022.repository.codeset.TaxType13Code.StampDuty, com.tools20022.repository.codeset.TaxType13Code.StateTax, com.tools20022.repository.codeset.TaxType13Code.StockExchangeTax,
+						com.tools20022.repository.codeset.TaxType13Code.TaxCredit, com.tools20022.repository.codeset.TaxType13Code.TransactionTax, com.tools20022.repository.codeset.TaxType13Code.TransferTax,
+						com.tools20022.repository.codeset.TaxType13Code.ValueAddedTax, com.tools20022.repository.codeset.TaxType13Code.WithholdingTax);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ConsumptionTax.getCodeName().get(), ConsumptionTax);
+		codesByName.put(EUTaxRetention.getCodeName().get(), EUTaxRetention);
+		codesByName.put(LocalTax.getCodeName().get(), LocalTax);
+		codesByName.put(NationalTax.getCodeName().get(), NationalTax);
+		codesByName.put(PaymentLevyTax.getCodeName().get(), PaymentLevyTax);
+		codesByName.put(Provincial.getCodeName().get(), Provincial);
+		codesByName.put(StampDuty.getCodeName().get(), StampDuty);
+		codesByName.put(StateTax.getCodeName().get(), StateTax);
+		codesByName.put(StockExchangeTax.getCodeName().get(), StockExchangeTax);
+		codesByName.put(TaxCredit.getCodeName().get(), TaxCredit);
+		codesByName.put(TransactionTax.getCodeName().get(), TransactionTax);
+		codesByName.put(TransferTax.getCodeName().get(), TransferTax);
+		codesByName.put(ValueAddedTax.getCodeName().get(), ValueAddedTax);
+		codesByName.put(WithholdingTax.getCodeName().get(), WithholdingTax);
+	}
+
+	public static TaxType13Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TaxType13Code[] values() {
+		TaxType13Code[] values = new TaxType13Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TaxType13Code> {
+		@Override
+		public TaxType13Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TaxType13Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

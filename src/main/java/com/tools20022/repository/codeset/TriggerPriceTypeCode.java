@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.TriggerPriceTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of price that the trigger is compared to.
@@ -32,23 +37,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TriggerPriceTypeCode#mmBestOffer
- * TriggerPriceTypeCode.mmBestOffer}</li>
+ * {@linkplain com.tools20022.repository.codeset.TriggerPriceTypeCode#BestOffer
+ * TriggerPriceTypeCode.BestOffer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TriggerPriceTypeCode#mmLastTrade
- * TriggerPriceTypeCode.mmLastTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TriggerPriceTypeCode#LastTrade
+ * TriggerPriceTypeCode.LastTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TriggerPriceTypeCode#mmBestBid
- * TriggerPriceTypeCode.mmBestBid}</li>
+ * {@linkplain com.tools20022.repository.codeset.TriggerPriceTypeCode#BestBid
+ * TriggerPriceTypeCode.BestBid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TriggerPriceTypeCode#mmBestBidOrLastTrade
- * TriggerPriceTypeCode.mmBestBidOrLastTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TriggerPriceTypeCode#BestBidOrLastTrade
+ * TriggerPriceTypeCode.BestBidOrLastTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TriggerPriceTypeCode#mmBestOfferOrLastTrade
- * TriggerPriceTypeCode.mmBestOfferOrLastTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TriggerPriceTypeCode#BestOfferOrLastTrade
+ * TriggerPriceTypeCode.BestOfferOrLastTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TriggerPriceTypeCode#mmBestMid
- * TriggerPriceTypeCode.mmBestMid}</li>
+ * {@linkplain com.tools20022.repository.codeset.TriggerPriceTypeCode#BestMid
+ * TriggerPriceTypeCode.BestMid}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -61,8 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of price that the trigger is compared to."</li>
  * </ul>
  */
-public class TriggerPriceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TriggerPriceTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -103,12 +109,12 @@ public class TriggerPriceTypeCode {
 	 * definition} = "Trigger is compared to best offer."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBestOffer = new MMCode() {
+	public static final TriggerPriceTypeCode BestOffer = new TriggerPriceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BestOffer";
 			definition = "Trigger is compared to best offer.";
-			owner_lazy = () -> TriggerPriceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TriggerPriceTypeCode.mmObject();
 			codeName = "BEOF";
 		}
 	};
@@ -133,12 +139,12 @@ public class TriggerPriceTypeCode {
 	 * definition} = "Trigger is compared to last trade."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLastTrade = new MMCode() {
+	public static final TriggerPriceTypeCode LastTrade = new TriggerPriceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastTrade";
 			definition = "Trigger is compared to last trade.";
-			owner_lazy = () -> TriggerPriceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TriggerPriceTypeCode.mmObject();
 			codeName = "LATR";
 		}
 	};
@@ -163,12 +169,12 @@ public class TriggerPriceTypeCode {
 	 * definition} = "Trigger is compared to best bid."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBestBid = new MMCode() {
+	public static final TriggerPriceTypeCode BestBid = new TriggerPriceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BestBid";
 			definition = "Trigger is compared to best bid.";
-			owner_lazy = () -> TriggerPriceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TriggerPriceTypeCode.mmObject();
 			codeName = "BEBI";
 		}
 	};
@@ -193,12 +199,12 @@ public class TriggerPriceTypeCode {
 	 * definition} = "Trigger is compared to best bid or last trade."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBestBidOrLastTrade = new MMCode() {
+	public static final TriggerPriceTypeCode BestBidOrLastTrade = new TriggerPriceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BestBidOrLastTrade";
 			definition = "Trigger is compared to best bid or last trade.";
-			owner_lazy = () -> TriggerPriceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TriggerPriceTypeCode.mmObject();
 			codeName = "BBLT";
 		}
 	};
@@ -223,12 +229,12 @@ public class TriggerPriceTypeCode {
 	 * definition} = "Trigger is compared to best offer or last trade."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBestOfferOrLastTrade = new MMCode() {
+	public static final TriggerPriceTypeCode BestOfferOrLastTrade = new TriggerPriceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BestOfferOrLastTrade";
 			definition = "Trigger is compared to best offer or last trade.";
-			owner_lazy = () -> TriggerPriceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TriggerPriceTypeCode.mmObject();
 			codeName = "BOLT";
 		}
 	};
@@ -253,29 +259,64 @@ public class TriggerPriceTypeCode {
 	 * definition} = "Trigger is compared to best mid."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBestMid = new MMCode() {
+	public static final TriggerPriceTypeCode BestMid = new TriggerPriceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BestMid";
 			definition = "Trigger is compared to best mid.";
-			owner_lazy = () -> TriggerPriceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TriggerPriceTypeCode.mmObject();
 			codeName = "BEMI";
 		}
 	};
+	final static private LinkedHashMap<String, TriggerPriceTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TriggerPriceTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BEOF");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TriggerPriceTypeCode";
 				definition = "Specifies the type of price that the trigger is compared to.";
-				code_lazy = () -> Arrays.asList(TriggerPriceTypeCode.mmBestOffer, TriggerPriceTypeCode.mmLastTrade, TriggerPriceTypeCode.mmBestBid, TriggerPriceTypeCode.mmBestBidOrLastTrade, TriggerPriceTypeCode.mmBestOfferOrLastTrade,
-						TriggerPriceTypeCode.mmBestMid);
 				derivation_lazy = () -> Arrays.asList(TriggerPriceType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TriggerPriceTypeCode.BestOffer, com.tools20022.repository.codeset.TriggerPriceTypeCode.LastTrade,
+						com.tools20022.repository.codeset.TriggerPriceTypeCode.BestBid, com.tools20022.repository.codeset.TriggerPriceTypeCode.BestBidOrLastTrade, com.tools20022.repository.codeset.TriggerPriceTypeCode.BestOfferOrLastTrade,
+						com.tools20022.repository.codeset.TriggerPriceTypeCode.BestMid);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BestOffer.getCodeName().get(), BestOffer);
+		codesByName.put(LastTrade.getCodeName().get(), LastTrade);
+		codesByName.put(BestBid.getCodeName().get(), BestBid);
+		codesByName.put(BestBidOrLastTrade.getCodeName().get(), BestBidOrLastTrade);
+		codesByName.put(BestOfferOrLastTrade.getCodeName().get(), BestOfferOrLastTrade);
+		codesByName.put(BestMid.getCodeName().get(), BestMid);
+	}
+
+	public static TriggerPriceTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TriggerPriceTypeCode[] values() {
+		TriggerPriceTypeCode[] values = new TriggerPriceTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TriggerPriceTypeCode> {
+		@Override
+		public TriggerPriceTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TriggerPriceTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

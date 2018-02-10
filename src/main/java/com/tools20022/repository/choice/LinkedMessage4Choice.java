@@ -24,6 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AdditionalReference6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline#forLinkedMessage4Choice
+ * ConstraintPreviousReferenceGuideline.forLinkedMessage4Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#forLinkedMessage4Choice
+ * ConstraintOtherReferenceGuideline.forLinkedMessage4Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * LinkedMessage3Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LinkedMessage4Choice", propOrder = {"previousReference", "otherReference"})
 public class LinkedMessage4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrvsRef", required = true)
 	protected AdditionalReference6 previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -104,7 +117,7 @@ public class LinkedMessage4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LinkedMessage4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.LinkedMessage4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,11 +130,11 @@ public class LinkedMessage4Choice {
 			type_lazy = () -> AdditionalReference6.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrRef", required = true)
 	protected AdditionalReference6 otherReference;
 	/**
-	 * Reference to a linked message sent in a proprietary way or reference of a
-	 * system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -154,7 +167,7 @@ public class LinkedMessage4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOtherReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LinkedMessage4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.LinkedMessage4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,8 +184,10 @@ public class LinkedMessage4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LinkedMessage4Choice.mmPreviousReference, LinkedMessage4Choice.mmOtherReference);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LinkedMessage4Choice.mmPreviousReference, com.tools20022.repository.choice.LinkedMessage4Choice.mmOtherReference);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline.forLinkedMessage4Choice,
+						com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forLinkedMessage4Choice);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LinkedMessage4Choice";
 				definition = "Reference to a message.";
@@ -182,21 +197,21 @@ public class LinkedMessage4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrvsRef", required = true)
 	public AdditionalReference6 getPreviousReference() {
 		return previousReference;
 	}
 
-	public void setPreviousReference(AdditionalReference6 previousReference) {
-		this.previousReference = previousReference;
+	public LinkedMessage4Choice setPreviousReference(AdditionalReference6 previousReference) {
+		this.previousReference = Objects.requireNonNull(previousReference);
+		return this;
 	}
 
-	@XmlElement(name = "OthrRef", required = true)
 	public AdditionalReference6 getOtherReference() {
 		return otherReference;
 	}
 
-	public void setOtherReference(AdditionalReference6 otherReference) {
-		this.otherReference = otherReference;
+	public LinkedMessage4Choice setOtherReference(AdditionalReference6 otherReference) {
+		this.otherReference = Objects.requireNonNull(otherReference);
+		return this;
 	}
 }

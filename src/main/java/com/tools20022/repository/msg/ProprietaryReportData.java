@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -45,8 +46,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,17 +59,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Full report data or reporting data of a single tranche of the full report."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ProprietaryReportData", propOrder = "data")
 public class ProprietaryReportData {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Data", required = true)
 	protected Max35Text data;
 	/**
-	 * IMPLEMENTORS WARNING - This element is replaced by the ANY XML type in
-	 * the schema. Therefore, the XML tag &lt;Data&gt; does not appear in an
-	 * actual XML instance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,7 +97,7 @@ public class ProprietaryReportData {
 	 */
 	public static final MMMessageAttribute mmData = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProprietaryReportData.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryReportData.mmObject();
 			isDerived = false;
 			xmlTag = "Data";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,8 +112,8 @@ public class ProprietaryReportData {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProprietaryReportData.mmData);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryReportData.mmData);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ProprietaryReportData";
 				definition = "Full report data or reporting data of a single tranche of the full report.";
@@ -122,12 +122,12 @@ public class ProprietaryReportData {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Data", required = true)
 	public Max35Text getData() {
 		return data;
 	}
 
-	public void setData(Max35Text data) {
-		this.data = data;
+	public ProprietaryReportData setData(Max35Text data) {
+		this.data = Objects.requireNonNull(data);
+		return this;
 	}
 }

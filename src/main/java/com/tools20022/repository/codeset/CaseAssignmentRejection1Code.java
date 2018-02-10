@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CaseAssignmentRejectionCode;
+import com.tools20022.repository.codeset.CaseAssignmentRejection1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for not accepting a Case.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejectionCode
- * CaseAssignmentRejectionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection1Code#mmUnderlyingPaymentNotFound
- * CaseAssignmentRejection1Code.mmUnderlyingPaymentNotFound}</li>
+ * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection1Code#UnderlyingPaymentNotFound
+ * CaseAssignmentRejection1Code.UnderlyingPaymentNotFound}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection1Code#mmNotAuthorisedToInvestigate
- * CaseAssignmentRejection1Code.mmNotAuthorisedToInvestigate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection1Code#NotAuthorisedToInvestigate
+ * CaseAssignmentRejection1Code.NotAuthorisedToInvestigate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection1Code#mmUnknownCase
- * CaseAssignmentRejection1Code.mmUnknownCase}</li>
+ * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection1Code#UnknownCase
+ * CaseAssignmentRejection1Code.UnknownCase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection1Code#mmPaymentRejected
- * CaseAssignmentRejection1Code.mmPaymentRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection1Code#PaymentRejected
+ * CaseAssignmentRejection1Code.PaymentRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection1Code#mmPaymentCancelled
- * CaseAssignmentRejection1Code.mmPaymentCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejection1Code#PaymentCancelled
+ * CaseAssignmentRejection1Code.PaymentCancelled}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CaseAssignmentRejectionCode
+ * CaseAssignmentRejectionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason for not accepting a Case."</li>
  * </ul>
  */
-public class CaseAssignmentRejection1Code extends CaseAssignmentRejectionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CaseAssignmentRejection1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class CaseAssignmentRejection1Code extends CaseAssignmentRejectionCode {
 	 * name} = "UnderlyingPaymentNotFound"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnderlyingPaymentNotFound = new MMCode() {
+	public static final CaseAssignmentRejection1Code UnderlyingPaymentNotFound = new CaseAssignmentRejection1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingPaymentNotFound";
-			owner_lazy = () -> CaseAssignmentRejection1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CaseAssignmentRejection1Code.mmObject();
+			codeName = CaseAssignmentRejectionCode.UnderlyingPaymentNotFound.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class CaseAssignmentRejection1Code extends CaseAssignmentRejectionCode {
 	 * name} = "NotAuthorisedToInvestigate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotAuthorisedToInvestigate = new MMCode() {
+	public static final CaseAssignmentRejection1Code NotAuthorisedToInvestigate = new CaseAssignmentRejection1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAuthorisedToInvestigate";
-			owner_lazy = () -> CaseAssignmentRejection1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CaseAssignmentRejection1Code.mmObject();
+			codeName = CaseAssignmentRejectionCode.NotAuthorisedToInvestigate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class CaseAssignmentRejection1Code extends CaseAssignmentRejectionCode {
 	 * name} = "UnknownCase"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknownCase = new MMCode() {
+	public static final CaseAssignmentRejection1Code UnknownCase = new CaseAssignmentRejection1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownCase";
-			owner_lazy = () -> CaseAssignmentRejection1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CaseAssignmentRejection1Code.mmObject();
+			codeName = CaseAssignmentRejectionCode.UnknownCase.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +169,12 @@ public class CaseAssignmentRejection1Code extends CaseAssignmentRejectionCode {
 	 * name} = "PaymentRejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPaymentRejected = new MMCode() {
+	public static final CaseAssignmentRejection1Code PaymentRejected = new CaseAssignmentRejection1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentRejected";
-			owner_lazy = () -> CaseAssignmentRejection1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CaseAssignmentRejection1Code.mmObject();
+			codeName = CaseAssignmentRejectionCode.PaymentRejected.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,27 +193,62 @@ public class CaseAssignmentRejection1Code extends CaseAssignmentRejectionCode {
 	 * name} = "PaymentCancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPaymentCancelled = new MMCode() {
+	public static final CaseAssignmentRejection1Code PaymentCancelled = new CaseAssignmentRejection1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCancelled";
-			owner_lazy = () -> CaseAssignmentRejection1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CaseAssignmentRejection1Code.mmObject();
+			codeName = CaseAssignmentRejectionCode.PaymentCancelled.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CaseAssignmentRejection1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CaseAssignmentRejection1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NFND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CaseAssignmentRejection1Code";
 				definition = "Specifies the reason for not accepting a Case.";
-				code_lazy = () -> Arrays.asList(CaseAssignmentRejection1Code.mmUnderlyingPaymentNotFound, CaseAssignmentRejection1Code.mmNotAuthorisedToInvestigate, CaseAssignmentRejection1Code.mmUnknownCase,
-						CaseAssignmentRejection1Code.mmPaymentRejected, CaseAssignmentRejection1Code.mmPaymentCancelled);
 				trace_lazy = () -> CaseAssignmentRejectionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CaseAssignmentRejection1Code.UnderlyingPaymentNotFound, com.tools20022.repository.codeset.CaseAssignmentRejection1Code.NotAuthorisedToInvestigate,
+						com.tools20022.repository.codeset.CaseAssignmentRejection1Code.UnknownCase, com.tools20022.repository.codeset.CaseAssignmentRejection1Code.PaymentRejected,
+						com.tools20022.repository.codeset.CaseAssignmentRejection1Code.PaymentCancelled);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(UnderlyingPaymentNotFound.getCodeName().get(), UnderlyingPaymentNotFound);
+		codesByName.put(NotAuthorisedToInvestigate.getCodeName().get(), NotAuthorisedToInvestigate);
+		codesByName.put(UnknownCase.getCodeName().get(), UnknownCase);
+		codesByName.put(PaymentRejected.getCodeName().get(), PaymentRejected);
+		codesByName.put(PaymentCancelled.getCodeName().get(), PaymentCancelled);
+	}
+
+	public static CaseAssignmentRejection1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CaseAssignmentRejection1Code[] values() {
+		CaseAssignmentRejection1Code[] values = new CaseAssignmentRejection1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CaseAssignmentRejection1Code> {
+		@Override
+		public CaseAssignmentRejection1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CaseAssignmentRejection1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

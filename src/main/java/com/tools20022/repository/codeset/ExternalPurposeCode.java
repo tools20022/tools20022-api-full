@@ -17,11 +17,17 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ExternalPurposeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the external purpose code in the format of character string with a
@@ -34,8 +40,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -54,20 +60,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ExternalPurposeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ExternalPurposeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
+	final static private LinkedHashMap<String, ExternalPurposeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ExternalPurposeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("External Purpose Code 1");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExternalPurposeCode";
 				definition = "Specifies the external purpose code in the format of character string with a maximum length of 35 characters.\r\nThe list of valid codes is an external code list published separately.\r\nExternal code sets can be downloaded from www.iso20022.org.";
+				minLength = 1;
+				maxLength = 35;
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+	}
+
+	public static ExternalPurposeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ExternalPurposeCode[] values() {
+		ExternalPurposeCode[] values = new ExternalPurposeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ExternalPurposeCode> {
+		@Override
+		public ExternalPurposeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ExternalPurposeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

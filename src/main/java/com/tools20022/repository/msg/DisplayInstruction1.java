@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.codeset.RefreshTime1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides details about strategy order/Iceberg orders."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DisplayInstruction1", propOrder = {"quantity", "secondaryQuantity", "method", "lowQuantity", "highQuantity", "minimumIncrement", "refreshQuantity", "refreshTime"})
 public class DisplayInstruction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Qty")
 	protected FinancialInstrumentQuantityChoice quantity;
 	/**
-	 * Indicates the quantity to be displayed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -103,6 +106,9 @@ public class DisplayInstruction1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Qty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1138</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -115,9 +121,10 @@ public class DisplayInstruction1 {
 	 */
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DisplayInstruction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1138"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Indicates the quantity to be displayed.";
@@ -126,12 +133,11 @@ public class DisplayInstruction1 {
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "ScndryQty")
 	protected FinancialInstrumentQuantityChoice secondaryQuantity;
 	/**
-	 * Used for reserve orders when Quantity applies to the primary execution
-	 * market (e.g.an Electronic Communication Network) and another quantity is
-	 * to be shown at other markets (e.g. the exchange).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,6 +153,9 @@ public class DisplayInstruction1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ScndryQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1082</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -161,9 +170,10 @@ public class DisplayInstruction1 {
 	 */
 	public static final MMMessageAttribute mmSecondaryQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DisplayInstruction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1082"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryQuantity";
 			definition = "Used for reserve orders when Quantity applies to the primary execution market (e.g.an Electronic Communication Network) and another quantity is to be shown at other markets (e.g. the exchange).";
@@ -172,10 +182,11 @@ public class DisplayInstruction1 {
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Mtd")
 	protected DisplayMethod1Code method;
 	/**
-	 * Instructions for the use of Quantity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,6 +202,9 @@ public class DisplayInstruction1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Mtd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1084</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -203,9 +217,10 @@ public class DisplayInstruction1 {
 	 */
 	public static final MMMessageAttribute mmMethod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DisplayInstruction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "Mtd";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1084"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Method";
 			definition = "Instructions for the use of Quantity.";
@@ -214,10 +229,11 @@ public class DisplayInstruction1 {
 			simpleType_lazy = () -> DisplayMethod1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "LwQty")
 	protected FinancialInstrumentQuantityChoice lowQuantity;
 	/**
-	 * Defines the lower quantity limit to a randomized refresh of Quantity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -233,6 +249,9 @@ public class DisplayInstruction1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LwQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1085</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -246,9 +265,10 @@ public class DisplayInstruction1 {
 	 */
 	public static final MMMessageAttribute mmLowQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DisplayInstruction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "LwQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1085"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LowQuantity";
 			definition = "Defines the lower quantity limit to a randomized refresh of Quantity.";
@@ -257,10 +277,11 @@ public class DisplayInstruction1 {
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "HghQty")
 	protected FinancialInstrumentQuantityChoice highQuantity;
 	/**
-	 * Defines the upper quantity limit to a randomized refresh of Quantity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -276,6 +297,9 @@ public class DisplayInstruction1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "HghQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1086</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -289,9 +313,10 @@ public class DisplayInstruction1 {
 	 */
 	public static final MMMessageAttribute mmHighQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DisplayInstruction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "HghQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1086"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighQuantity";
 			definition = "Defines the upper quantity limit to a randomized refresh of Quantity.";
@@ -300,13 +325,11 @@ public class DisplayInstruction1 {
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "MinIncrmt")
 	protected FinancialInstrumentQuantityChoice minimumIncrement;
 	/**
-	 * Defines the minimum increment to be used when calculating a random
-	 * refresh of Quantity. A user specifies this when he wants a larger
-	 * increment than the standard provided by the market (e.g. the round lot
-	 * size).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -322,6 +345,9 @@ public class DisplayInstruction1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MinIncrmt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1087</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -336,9 +362,10 @@ public class DisplayInstruction1 {
 	 */
 	public static final MMMessageAttribute mmMinimumIncrement = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DisplayInstruction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "MinIncrmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1087"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumIncrement";
 			definition = "Defines the minimum increment to be used when calculating a random refresh of Quantity. A user specifies this when he wants a larger increment than the standard provided by the market (e.g. the round lot size).";
@@ -347,10 +374,11 @@ public class DisplayInstruction1 {
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "RfrshQty")
 	protected FinancialInstrumentQuantityChoice refreshQuantity;
 	/**
-	 * Defines the quantity used to refresh Quantity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -366,6 +394,9 @@ public class DisplayInstruction1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RfrshQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1088</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -378,9 +409,10 @@ public class DisplayInstruction1 {
 	 */
 	public static final MMMessageAttribute mmRefreshQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DisplayInstruction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "RfrshQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1088"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefreshQuantity";
 			definition = "Defines the quantity used to refresh Quantity.";
@@ -389,10 +421,11 @@ public class DisplayInstruction1 {
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "RfrshTm")
 	protected RefreshTime1Code refreshTime;
 	/**
-	 * Defines when to refresh quantity (Immediate or Exhaust).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -408,6 +441,9 @@ public class DisplayInstruction1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RfrshTm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1083</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -420,9 +456,10 @@ public class DisplayInstruction1 {
 	 */
 	public static final MMMessageAttribute mmRefreshTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DisplayInstruction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "RfrshTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1083"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefreshTime";
 			definition = "Defines when to refresh quantity (Immediate or Exhaust).";
@@ -435,9 +472,10 @@ public class DisplayInstruction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DisplayInstruction1.mmQuantity, DisplayInstruction1.mmSecondaryQuantity, DisplayInstruction1.mmMethod, DisplayInstruction1.mmLowQuantity, DisplayInstruction1.mmHighQuantity,
-						DisplayInstruction1.mmMinimumIncrement, DisplayInstruction1.mmRefreshQuantity, DisplayInstruction1.mmRefreshTime);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisplayInstruction1.mmQuantity, com.tools20022.repository.msg.DisplayInstruction1.mmSecondaryQuantity,
+						com.tools20022.repository.msg.DisplayInstruction1.mmMethod, com.tools20022.repository.msg.DisplayInstruction1.mmLowQuantity, com.tools20022.repository.msg.DisplayInstruction1.mmHighQuantity,
+						com.tools20022.repository.msg.DisplayInstruction1.mmMinimumIncrement, com.tools20022.repository.msg.DisplayInstruction1.mmRefreshQuantity, com.tools20022.repository.msg.DisplayInstruction1.mmRefreshTime);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DisplayInstruction1";
 				definition = "Provides details about strategy order/Iceberg orders.";
@@ -446,75 +484,75 @@ public class DisplayInstruction1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Qty")
-	public FinancialInstrumentQuantityChoice getQuantity() {
-		return quantity;
+	public Optional<FinancialInstrumentQuantityChoice> getQuantity() {
+		return quantity == null ? Optional.empty() : Optional.of(quantity);
 	}
 
-	public void setQuantity(FinancialInstrumentQuantityChoice quantity) {
+	public DisplayInstruction1 setQuantity(FinancialInstrumentQuantityChoice quantity) {
 		this.quantity = quantity;
+		return this;
 	}
 
-	@XmlElement(name = "ScndryQty")
-	public FinancialInstrumentQuantityChoice getSecondaryQuantity() {
-		return secondaryQuantity;
+	public Optional<FinancialInstrumentQuantityChoice> getSecondaryQuantity() {
+		return secondaryQuantity == null ? Optional.empty() : Optional.of(secondaryQuantity);
 	}
 
-	public void setSecondaryQuantity(FinancialInstrumentQuantityChoice secondaryQuantity) {
+	public DisplayInstruction1 setSecondaryQuantity(FinancialInstrumentQuantityChoice secondaryQuantity) {
 		this.secondaryQuantity = secondaryQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "Mtd")
-	public DisplayMethod1Code getMethod() {
-		return method;
+	public Optional<DisplayMethod1Code> getMethod() {
+		return method == null ? Optional.empty() : Optional.of(method);
 	}
 
-	public void setMethod(DisplayMethod1Code method) {
+	public DisplayInstruction1 setMethod(DisplayMethod1Code method) {
 		this.method = method;
+		return this;
 	}
 
-	@XmlElement(name = "LwQty")
-	public FinancialInstrumentQuantityChoice getLowQuantity() {
-		return lowQuantity;
+	public Optional<FinancialInstrumentQuantityChoice> getLowQuantity() {
+		return lowQuantity == null ? Optional.empty() : Optional.of(lowQuantity);
 	}
 
-	public void setLowQuantity(FinancialInstrumentQuantityChoice lowQuantity) {
+	public DisplayInstruction1 setLowQuantity(FinancialInstrumentQuantityChoice lowQuantity) {
 		this.lowQuantity = lowQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "HghQty")
-	public FinancialInstrumentQuantityChoice getHighQuantity() {
-		return highQuantity;
+	public Optional<FinancialInstrumentQuantityChoice> getHighQuantity() {
+		return highQuantity == null ? Optional.empty() : Optional.of(highQuantity);
 	}
 
-	public void setHighQuantity(FinancialInstrumentQuantityChoice highQuantity) {
+	public DisplayInstruction1 setHighQuantity(FinancialInstrumentQuantityChoice highQuantity) {
 		this.highQuantity = highQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "MinIncrmt")
-	public FinancialInstrumentQuantityChoice getMinimumIncrement() {
-		return minimumIncrement;
+	public Optional<FinancialInstrumentQuantityChoice> getMinimumIncrement() {
+		return minimumIncrement == null ? Optional.empty() : Optional.of(minimumIncrement);
 	}
 
-	public void setMinimumIncrement(FinancialInstrumentQuantityChoice minimumIncrement) {
+	public DisplayInstruction1 setMinimumIncrement(FinancialInstrumentQuantityChoice minimumIncrement) {
 		this.minimumIncrement = minimumIncrement;
+		return this;
 	}
 
-	@XmlElement(name = "RfrshQty")
-	public FinancialInstrumentQuantityChoice getRefreshQuantity() {
-		return refreshQuantity;
+	public Optional<FinancialInstrumentQuantityChoice> getRefreshQuantity() {
+		return refreshQuantity == null ? Optional.empty() : Optional.of(refreshQuantity);
 	}
 
-	public void setRefreshQuantity(FinancialInstrumentQuantityChoice refreshQuantity) {
+	public DisplayInstruction1 setRefreshQuantity(FinancialInstrumentQuantityChoice refreshQuantity) {
 		this.refreshQuantity = refreshQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "RfrshTm")
-	public RefreshTime1Code getRefreshTime() {
-		return refreshTime;
+	public Optional<RefreshTime1Code> getRefreshTime() {
+		return refreshTime == null ? Optional.empty() : Optional.of(refreshTime);
 	}
 
-	public void setRefreshTime(RefreshTime1Code refreshTime) {
+	public DisplayInstruction1 setRefreshTime(RefreshTime1Code refreshTime) {
 		this.refreshTime = refreshTime;
+		return this;
 	}
 }

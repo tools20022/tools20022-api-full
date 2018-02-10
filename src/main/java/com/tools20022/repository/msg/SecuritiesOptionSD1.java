@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesOptionSD1", propOrder = {"placeAndName", "maximumOversubscriptionQuantity"})
 public class SecuritiesOptionSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +104,7 @@ public class SecuritiesOptionSD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesOptionSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +115,11 @@ public class SecuritiesOptionSD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxOvrsbcptQty")
 	protected DecimalNumber maximumOversubscriptionQuantity;
 	/**
-	 * Maximum oversubscription amount for the option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,6 +135,9 @@ public class SecuritiesOptionSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MaxOvrsbcptQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Maximum Oversubscription Quantity</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -142,9 +150,10 @@ public class SecuritiesOptionSD1 {
 	 */
 	public static final MMMessageAttribute mmMaximumOversubscriptionQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesOptionSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "MaxOvrsbcptQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Maximum Oversubscription Quantity"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumOversubscriptionQuantity";
 			definition = "Maximum oversubscription amount for the option.";
@@ -157,8 +166,8 @@ public class SecuritiesOptionSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesOptionSD1.mmPlaceAndName, SecuritiesOptionSD1.mmMaximumOversubscriptionQuantity);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD1.mmPlaceAndName, com.tools20022.repository.msg.SecuritiesOptionSD1.mmMaximumOversubscriptionQuantity);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesOptionSD1";
 				definition = "Provides additional information regarding corporate action option securities quantity details.";
@@ -167,21 +176,21 @@ public class SecuritiesOptionSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public SecuritiesOptionSD1 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "MaxOvrsbcptQty")
-	public DecimalNumber getMaximumOversubscriptionQuantity() {
-		return maximumOversubscriptionQuantity;
+	public Optional<DecimalNumber> getMaximumOversubscriptionQuantity() {
+		return maximumOversubscriptionQuantity == null ? Optional.empty() : Optional.of(maximumOversubscriptionQuantity);
 	}
 
-	public void setMaximumOversubscriptionQuantity(DecimalNumber maximumOversubscriptionQuantity) {
+	public SecuritiesOptionSD1 setMaximumOversubscriptionQuantity(DecimalNumber maximumOversubscriptionQuantity) {
 		this.maximumOversubscriptionQuantity = maximumOversubscriptionQuantity;
+		return this;
 	}
 }

@@ -25,6 +25,8 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,23 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintFinancialInstrumentIdentificationGuideline#forFinancialInstrument14
+ * ConstraintFinancialInstrumentIdentificationGuideline.forFinancialInstrument14
+ * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstrumentDescription1Rule#forFinancialInstrument14
+ * ConstraintInstrumentDescription1Rule.forFinancialInstrument14}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstrumentDescription2Rule#forFinancialInstrument14
+ * ConstraintInstrumentDescription2Rule.forFinancialInstrument14}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,16 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identifies the financial instrument."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrument14", propOrder = {"identification", "instrumentDescription", "underlyingInstrumentIdentification"})
 public class FinancialInstrument14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected SecurityIdentification5Choice identification;
 	/**
-	 * Identifies the financial instrument using a choice of either ISIN, local
-	 * code, or a description of the instrument. ISIN is the preferred format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,7 +128,7 @@ public class FinancialInstrument14 {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> FinancialInstrument14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument14.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,11 +140,11 @@ public class FinancialInstrument14 {
 			type_lazy = () -> SecurityIdentification5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrmDesc")
 	protected SecurityInstrumentDescription1 instrumentDescription;
 	/**
-	 * Provides the ability to describe the instrument through a description and
-	 * main characteristics.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -161,7 +178,7 @@ public class FinancialInstrument14 {
 	public static final MMMessageAssociationEnd mmInstrumentDescription = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
-			componentContext_lazy = () -> FinancialInstrument14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument14.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,13 +190,11 @@ public class FinancialInstrument14 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription1.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygInstrmId")
 	protected SecurityIdentification5Choice underlyingInstrumentIdentification;
 	/**
-	 * Provides details of the underlying financial instrument for which the
-	 * transaction report is being sent. If there is more than one underlying
-	 * financial instrument then it is the dominant/ultimate instrument that
-	 * should be identified here.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -214,7 +229,7 @@ public class FinancialInstrument14 {
 	public static final MMMessageAssociationEnd mmUnderlyingInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> FinancialInstrument14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument14.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,9 +245,12 @@ public class FinancialInstrument14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrument14.mmIdentification, FinancialInstrument14.mmInstrumentDescription, FinancialInstrument14.mmUnderlyingInstrumentIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument14.mmIdentification, com.tools20022.repository.msg.FinancialInstrument14.mmInstrumentDescription,
+						com.tools20022.repository.msg.FinancialInstrument14.mmUnderlyingInstrumentIdentification);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFinancialInstrumentIdentificationGuideline.forFinancialInstrument14,
+						com.tools20022.repository.constraints.ConstraintInstrumentDescription1Rule.forFinancialInstrument14, com.tools20022.repository.constraints.ConstraintInstrumentDescription2Rule.forFinancialInstrument14);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrument14";
 				definition = "Identifies the financial instrument.";
@@ -241,30 +259,30 @@ public class FinancialInstrument14 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification5Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(SecurityIdentification5Choice identification) {
-		this.identification = identification;
+	public FinancialInstrument14 setIdentification(SecurityIdentification5Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "InstrmDesc")
-	public SecurityInstrumentDescription1 getInstrumentDescription() {
-		return instrumentDescription;
+	public Optional<SecurityInstrumentDescription1> getInstrumentDescription() {
+		return instrumentDescription == null ? Optional.empty() : Optional.of(instrumentDescription);
 	}
 
-	public void setInstrumentDescription(com.tools20022.repository.msg.SecurityInstrumentDescription1 instrumentDescription) {
+	public FinancialInstrument14 setInstrumentDescription(com.tools20022.repository.msg.SecurityInstrumentDescription1 instrumentDescription) {
 		this.instrumentDescription = instrumentDescription;
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygInstrmId")
-	public SecurityIdentification5Choice getUnderlyingInstrumentIdentification() {
-		return underlyingInstrumentIdentification;
+	public Optional<SecurityIdentification5Choice> getUnderlyingInstrumentIdentification() {
+		return underlyingInstrumentIdentification == null ? Optional.empty() : Optional.of(underlyingInstrumentIdentification);
 	}
 
-	public void setUnderlyingInstrumentIdentification(SecurityIdentification5Choice underlyingInstrumentIdentification) {
+	public FinancialInstrument14 setUnderlyingInstrumentIdentification(SecurityIdentification5Choice underlyingInstrumentIdentification) {
 		this.underlyingInstrumentIdentification = underlyingInstrumentIdentification;
+		return this;
 	}
 }

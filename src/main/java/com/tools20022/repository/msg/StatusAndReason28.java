@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -75,8 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forStatusAndReason28
+ * ConstraintSettlementStatusAndMatchedRule.forStatusAndReason28}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,15 +100,16 @@ import javax.xml.bind.annotation.XmlType;
  * StatusAndReason19}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatusAndReason28", propOrder = {"processingStatus", "inferredMatchingStatus", "matchingStatus", "settlementStatus"})
 public class StatusAndReason28 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrcgSts")
 	protected ProcessingStatus52Choice processingStatus;
 	/**
-	 * Provides the status of an instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -136,7 +146,7 @@ public class StatusAndReason28 {
 	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
-			componentContext_lazy = () -> StatusAndReason28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason28.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,12 +159,11 @@ public class StatusAndReason28 {
 			type_lazy = () -> ProcessingStatus52Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IfrrdMtchgSts")
 	protected MatchingStatus24Choice inferredMatchingStatus;
 	/**
-	 * Provides the matching status of an instruction as known by the account
-	 * servicer based on an allegement. At this time no matching took place on
-	 * the market (at the CSD/ICSD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -194,7 +203,7 @@ public class StatusAndReason28 {
 	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
-			componentContext_lazy = () -> StatusAndReason28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason28.mmObject();
 			isDerived = false;
 			xmlTag = "IfrrdMtchgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,10 +216,11 @@ public class StatusAndReason28 {
 			type_lazy = () -> MatchingStatus24Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MtchgSts")
 	protected MatchingStatus24Choice matchingStatus;
 	/**
-	 * Provides the matching status of the instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -248,7 +258,7 @@ public class StatusAndReason28 {
 	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
-			componentContext_lazy = () -> StatusAndReason28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason28.mmObject();
 			isDerived = false;
 			xmlTag = "MtchgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -261,10 +271,11 @@ public class StatusAndReason28 {
 			type_lazy = () -> MatchingStatus24Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmSts")
 	protected SettlementStatus17Choice settlementStatus;
 	/**
-	 * Provides the status of settlement of a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -302,7 +313,7 @@ public class StatusAndReason28 {
 	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
-			componentContext_lazy = () -> StatusAndReason28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason28.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -319,10 +330,12 @@ public class StatusAndReason28 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatusAndReason28.mmProcessingStatus, StatusAndReason28.mmInferredMatchingStatus, StatusAndReason28.mmMatchingStatus, StatusAndReason28.mmSettlementStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason28.mmProcessingStatus, com.tools20022.repository.msg.StatusAndReason28.mmInferredMatchingStatus,
+						com.tools20022.repository.msg.StatusAndReason28.mmMatchingStatus, com.tools20022.repository.msg.StatusAndReason28.mmSettlementStatus);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionGenerationNotificationV06.mmStatusAndReason, SecuritiesSettlementTransactionGenerationNotificationV07.mmStatusAndReason);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forStatusAndReason28);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusAndReason28";
 				definition = "Status and reason of a transaction.";
@@ -332,39 +345,39 @@ public class StatusAndReason28 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrcgSts")
-	public ProcessingStatus52Choice getProcessingStatus() {
-		return processingStatus;
+	public Optional<ProcessingStatus52Choice> getProcessingStatus() {
+		return processingStatus == null ? Optional.empty() : Optional.of(processingStatus);
 	}
 
-	public void setProcessingStatus(ProcessingStatus52Choice processingStatus) {
+	public StatusAndReason28 setProcessingStatus(ProcessingStatus52Choice processingStatus) {
 		this.processingStatus = processingStatus;
+		return this;
 	}
 
-	@XmlElement(name = "IfrrdMtchgSts")
-	public MatchingStatus24Choice getInferredMatchingStatus() {
-		return inferredMatchingStatus;
+	public Optional<MatchingStatus24Choice> getInferredMatchingStatus() {
+		return inferredMatchingStatus == null ? Optional.empty() : Optional.of(inferredMatchingStatus);
 	}
 
-	public void setInferredMatchingStatus(MatchingStatus24Choice inferredMatchingStatus) {
+	public StatusAndReason28 setInferredMatchingStatus(MatchingStatus24Choice inferredMatchingStatus) {
 		this.inferredMatchingStatus = inferredMatchingStatus;
+		return this;
 	}
 
-	@XmlElement(name = "MtchgSts")
-	public MatchingStatus24Choice getMatchingStatus() {
-		return matchingStatus;
+	public Optional<MatchingStatus24Choice> getMatchingStatus() {
+		return matchingStatus == null ? Optional.empty() : Optional.of(matchingStatus);
 	}
 
-	public void setMatchingStatus(MatchingStatus24Choice matchingStatus) {
+	public StatusAndReason28 setMatchingStatus(MatchingStatus24Choice matchingStatus) {
 		this.matchingStatus = matchingStatus;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmSts")
-	public SettlementStatus17Choice getSettlementStatus() {
-		return settlementStatus;
+	public Optional<SettlementStatus17Choice> getSettlementStatus() {
+		return settlementStatus == null ? Optional.empty() : Optional.of(settlementStatus);
 	}
 
-	public void setSettlementStatus(SettlementStatus17Choice settlementStatus) {
+	public StatusAndReason28 setSettlementStatus(SettlementStatus17Choice settlementStatus) {
 		this.settlementStatus = settlementStatus;
+		return this;
 	}
 }

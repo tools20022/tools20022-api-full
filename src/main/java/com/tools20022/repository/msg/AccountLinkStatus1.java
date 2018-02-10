@@ -25,9 +25,11 @@ import com.tools20022.repository.codeset.Status6Code;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStatusReasonRule#forAccountLinkStatus1
+ * ConstraintStatusReasonRule.forAccountLinkStatus1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Business status of the party for processing in the system. "</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountLinkStatus1", propOrder = {"status", "statusReason"})
 public class AccountLinkStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts", required = true)
 	protected Status6Code status;
 	/**
-	 * Status of the account link instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +118,7 @@ public class AccountLinkStatus1 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
-			componentContext_lazy = () -> AccountLinkStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLinkStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +129,11 @@ public class AccountLinkStatus1 {
 			simpleType_lazy = () -> Status6Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StsRsn")
 	protected List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason;
 	/**
-	 * Underlying reason related to the creation of a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +167,7 @@ public class AccountLinkStatus1 {
 	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
-			componentContext_lazy = () -> AccountLinkStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLinkStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,9 +182,10 @@ public class AccountLinkStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountLinkStatus1.mmStatus, AccountLinkStatus1.mmStatusReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLinkStatus1.mmStatus, com.tools20022.repository.msg.AccountLinkStatus1.mmStatusReason);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusReasonRule.forAccountLinkStatus1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountLinkStatus1";
 				definition = "Business status of the party for processing in the system. ";
@@ -181,21 +194,21 @@ public class AccountLinkStatus1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public Status6Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(Status6Code status) {
-		this.status = status;
+	public AccountLinkStatus1 setStatus(Status6Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "StsRsn")
 	public List<StatusReasonInformation10> getStatusReason() {
-		return statusReason;
+		return statusReason == null ? statusReason = new ArrayList<>() : statusReason;
 	}
 
-	public void setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason) {
-		this.statusReason = statusReason;
+	public AccountLinkStatus1 setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason) {
+		this.statusReason = Objects.requireNonNull(statusReason);
+		return this;
 	}
 }

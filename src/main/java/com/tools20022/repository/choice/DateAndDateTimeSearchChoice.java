@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Choice between a date or a date time pattern as search selection criteria."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DateAndDateTimeSearchChoice", propOrder = {"dateTimeSearch", "dateSearch"})
 public class DateAndDateTimeSearchChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DtTmSch", required = true)
 	protected DateTimePeriodChoice dateTimeSearch;
 	/**
-	 * Patterns to search a date time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,7 +99,7 @@ public class DateAndDateTimeSearchChoice {
 	 */
 	public static final MMMessageAttribute mmDateTimeSearch = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "DtTmSch";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,10 +110,11 @@ public class DateAndDateTimeSearchChoice {
 			complexType_lazy = () -> com.tools20022.repository.choice.DateTimePeriodChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "DtSch", required = true)
 	protected DateSearchChoice dateSearch;
 	/**
-	 * Patterns to search a date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +142,7 @@ public class DateAndDateTimeSearchChoice {
 	 */
 	public static final MMMessageAttribute mmDateSearch = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "DtSch";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,8 +157,8 @@ public class DateAndDateTimeSearchChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DateAndDateTimeSearchChoice.mmDateTimeSearch, DateAndDateTimeSearchChoice.mmDateSearch);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateAndDateTimeSearchChoice.mmDateTimeSearch, com.tools20022.repository.choice.DateAndDateTimeSearchChoice.mmDateSearch);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateAndDateTimeSearchChoice";
 				definition = "Choice between a date or a date time pattern as search selection criteria.";
@@ -164,21 +167,21 @@ public class DateAndDateTimeSearchChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DtTmSch", required = true)
 	public DateTimePeriodChoice getDateTimeSearch() {
 		return dateTimeSearch;
 	}
 
-	public void setDateTimeSearch(com.tools20022.repository.choice.DateTimePeriodChoice dateTimeSearch) {
-		this.dateTimeSearch = dateTimeSearch;
+	public DateAndDateTimeSearchChoice setDateTimeSearch(com.tools20022.repository.choice.DateTimePeriodChoice dateTimeSearch) {
+		this.dateTimeSearch = Objects.requireNonNull(dateTimeSearch);
+		return this;
 	}
 
-	@XmlElement(name = "DtSch", required = true)
 	public DateSearchChoice getDateSearch() {
 		return dateSearch;
 	}
 
-	public void setDateSearch(com.tools20022.repository.choice.DateSearchChoice dateSearch) {
-		this.dateSearch = dateSearch;
+	public DateAndDateTimeSearchChoice setDateSearch(com.tools20022.repository.choice.DateSearchChoice dateSearch) {
+		this.dateSearch = Objects.requireNonNull(dateSearch);
+		return this;
 	}
 }

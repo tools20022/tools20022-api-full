@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -26,9 +27,8 @@ import com.tools20022.repository.codeset.Side1Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -108,8 +108,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,17 +121,18 @@ import javax.xml.bind.annotation.XmlType;
  * "Request for a proposition of price for a financial instrument."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "QuoteRequest1", propOrder = {"quoteRequestType", "expiryDateTime", "previousClosingPrice", "side", "financialInstrumentDetails", "financialInstrumentAttributes", "stipulations", "underlyingFinancialInstrumentDetails",
 		"underlyingFinancialInstrumentAttributes", "underlyingStipulations", "instrumentLegGroupDetails", "quoteDetails", "yieldDetails", "spreadAndBenchmarkCurveDetails", "tradingSessionDetails", "twoLegTransactionDetails",
 		"tradingParties", "cashParties", "receivingSettlementParties", "deliveringSettlementParties", "otherBusinessParties"})
 public class QuoteRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QtReqTp")
 	protected QuoteRequestType1Code quoteRequestType;
 	/**
-	 * Specifies the type of quote request being sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,6 +147,9 @@ public class QuoteRequest1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtReqTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 303</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -158,9 +162,10 @@ public class QuoteRequest1 {
 	 */
 	public static final MMMessageAttribute mmQuoteRequestType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "QtReqTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "303"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteRequestType";
 			definition = "Specifies the type of quote request being sent.";
@@ -169,10 +174,11 @@ public class QuoteRequest1 {
 			simpleType_lazy = () -> QuoteRequestType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XpryDtTm")
 	protected ISODateTime expiryDateTime;
 	/**
-	 * Expresses the validity date and time of the Quote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,6 +197,9 @@ public class QuoteRequest1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XpryDtTm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 126</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -204,9 +213,10 @@ public class QuoteRequest1 {
 	public static final MMMessageAttribute mmExpiryDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmValidUntilDateTime;
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDtTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "126"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDateTime";
 			definition = "Expresses the validity date and time of the Quote.";
@@ -215,11 +225,11 @@ public class QuoteRequest1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsClsgPric")
 	protected List<com.tools20022.repository.msg.Price1> previousClosingPrice;
 	/**
-	 * Price of a financial instrument at closing time of the exchange in which
-	 * it is traded.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -231,6 +241,9 @@ public class QuoteRequest1 {
 	 * {@linkplain com.tools20022.repository.msg.QuoteRequest1 QuoteRequest1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrvsClsgPric"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 140</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -246,9 +259,10 @@ public class QuoteRequest1 {
 	 */
 	public static final MMMessageAttribute mmPreviousClosingPrice = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsClsgPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "140"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousClosingPrice";
 			definition = "Price of a financial instrument at closing time of the exchange in which it is traded.";
@@ -256,10 +270,11 @@ public class QuoteRequest1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	@XmlElement(name = "Sd")
 	protected Side1Code side;
 	/**
-	 * Specifies the side of the requested quote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -278,6 +293,9 @@ public class QuoteRequest1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Sd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 54</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -291,9 +309,10 @@ public class QuoteRequest1 {
 	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmOfferSide;
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "Sd";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "54"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Specifies the side of the requested quote.";
@@ -302,10 +321,11 @@ public class QuoteRequest1 {
 			simpleType_lazy = () -> Side1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	protected SecurityIdentification7 financialInstrumentDetails;
 	/**
-	 * Provides details about the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -336,7 +356,7 @@ public class QuoteRequest1 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -348,10 +368,11 @@ public class QuoteRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmAttrbts")
 	protected FinancialInstrumentAttributes1 financialInstrumentAttributes;
 	/**
-	 * Provides details about the financial instrument attributes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -383,7 +404,7 @@ public class QuoteRequest1 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -395,10 +416,11 @@ public class QuoteRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmObject();
 		}
 	};
+	@XmlElement(name = "Stiptns")
 	protected FinancialInstrumentStipulations stipulations;
 	/**
-	 * Provides details about the financial instrument stipulations.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -430,7 +452,7 @@ public class QuoteRequest1 {
 	public static final MMMessageAssociationEnd mmStipulations = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Debt.mmObject();
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "Stiptns";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -442,10 +464,11 @@ public class QuoteRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentStipulations.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygFinInstrmDtls")
 	protected List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrumentDetails;
 	/**
-	 * Provides details about the underlying financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -477,7 +500,7 @@ public class QuoteRequest1 {
 	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -488,10 +511,11 @@ public class QuoteRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygFinInstrmAttrbts")
 	protected List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes;
 	/**
-	 * Provides details about the underlying financial instrument attributes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -523,7 +547,7 @@ public class QuoteRequest1 {
 	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmAttrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -534,10 +558,11 @@ public class QuoteRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygStiptns")
 	protected List<com.tools20022.repository.msg.FinancialInstrumentStipulations> underlyingStipulations;
 	/**
-	 * Provides details about the underlying financial instrument stipulations.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -570,7 +595,7 @@ public class QuoteRequest1 {
 	public static final MMMessageAssociationEnd mmUnderlyingStipulations = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Debt.mmObject();
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygStiptns";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -581,10 +606,11 @@ public class QuoteRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentStipulations.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrmLegGrpDtls")
 	protected List<com.tools20022.repository.msg.InstrumentLeg2> instrumentLegGroupDetails;
 	/**
-	 * Provides details about each intrument leg.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -614,7 +640,7 @@ public class QuoteRequest1 {
 	public static final MMMessageAssociationEnd mmInstrumentLegGroupDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Leg.mmObject();
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmLegGrpDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -625,10 +651,11 @@ public class QuoteRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.InstrumentLeg2.mmObject();
 		}
 	};
+	@XmlElement(name = "QtDtls", required = true)
 	protected List<com.tools20022.repository.msg.Quote3> quoteDetails;
 	/**
-	 * Details of the requested quote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -658,7 +685,7 @@ public class QuoteRequest1 {
 	public static final MMMessageAssociationEnd mmQuoteDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesQuoteVariable.mmObject();
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "QtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -669,10 +696,11 @@ public class QuoteRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
 		}
 	};
+	@XmlElement(name = "YldDtls")
 	protected YieldCalculation1 yieldDetails;
 	/**
-	 * Characteristics related to the yield.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -703,7 +731,7 @@ public class QuoteRequest1 {
 	public static final MMMessageAssociationEnd mmYieldDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> YieldCalculation.mmObject();
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "YldDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -715,11 +743,11 @@ public class QuoteRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.YieldCalculation1.mmObject();
 		}
 	};
+	@XmlElement(name = "SprdAndBchmkCrvDtls")
 	protected BenchmarkCurve1 spreadAndBenchmarkCurveDetails;
 	/**
-	 * Provides details about the benchmark against which the financial
-	 * instrument is measured.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -751,7 +779,7 @@ public class QuoteRequest1 {
 	public static final MMMessageAssociationEnd mmSpreadAndBenchmarkCurveDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Spread.mmObject();
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "SprdAndBchmkCrvDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -763,10 +791,11 @@ public class QuoteRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.BenchmarkCurve1.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgSsnDtls")
 	protected TradingSession1 tradingSessionDetails;
 	/**
-	 * Established constraints under which a market operates
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -797,7 +826,7 @@ public class QuoteRequest1 {
 	public static final MMMessageAssociationEnd mmTradingSessionDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> TradingSession.mmObject();
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSsnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -809,10 +838,11 @@ public class QuoteRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.TradingSession1.mmObject();
 		}
 	};
+	@XmlElement(name = "TwoLegTxDtls")
 	protected SecuritiesFinancing1 twoLegTransactionDetails;
 	/**
-	 * Provides details about the trading session.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -843,7 +873,7 @@ public class QuoteRequest1 {
 	public static final MMMessageAssociationEnd mmTwoLegTransactionDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesFinancing.mmObject();
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "TwoLegTxDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -855,10 +885,11 @@ public class QuoteRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgPties")
 	protected List<com.tools20022.repository.msg.Intermediary14> tradingParties;
 	/**
-	 * Parties involved in the process of quote request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -888,7 +919,7 @@ public class QuoteRequest1 {
 	public static final MMMessageAssociationEnd mmTradingParties = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -899,11 +930,11 @@ public class QuoteRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
 		}
 	};
+	@XmlElement(name = "CshPties")
 	protected CashParties1 cashParties;
 	/**
-	 * Payment processes required to transfer cash from the debtor to the
-	 * creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -936,7 +967,7 @@ public class QuoteRequest1 {
 	public static final MMMessageAssociationEnd mmCashParties = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PaymentPartyRole.mmObject();
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "CshPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -948,13 +979,11 @@ public class QuoteRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashParties1.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvgSttlmPties")
 	protected SettlementParties3 receivingSettlementParties;
 	/**
-	 * Chain of parties involved in the settlement of a transaction, including
-	 * receipts and deliveries, book transfers, treasury deals, or other
-	 * activities, resulting in the movement of a security or amount of money
-	 * from one account to another.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -987,7 +1016,7 @@ public class QuoteRequest1 {
 	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -999,13 +1028,11 @@ public class QuoteRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementParties3.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvrgSttlmPties")
 	protected SettlementParties3 deliveringSettlementParties;
 	/**
-	 * Chain of parties involved in the settlement of a transaction, including
-	 * receipts and deliveries, book transfers, treasury deals, or other
-	 * activities, resulting in the movement of a security or amount of money
-	 * from one account to another.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1038,7 +1065,7 @@ public class QuoteRequest1 {
 	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1050,13 +1077,11 @@ public class QuoteRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementParties3.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrBizPties")
 	protected OtherParties1 otherBusinessParties;
 	/**
-	 * Chain of parties involved in the settlement of a transaction, including
-	 * receipts and deliveries, book transfers, treasury deals, or other
-	 * activities, resulting in the movement of a security or amount of money
-	 * from one account to another.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1083,7 +1108,7 @@ public class QuoteRequest1 {
 	 */
 	public static final MMMessageAssociationEnd mmOtherBusinessParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> QuoteRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrBizPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1099,13 +1124,18 @@ public class QuoteRequest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(QuoteRequest1.mmQuoteRequestType, QuoteRequest1.mmExpiryDateTime, QuoteRequest1.mmPreviousClosingPrice, QuoteRequest1.mmSide, QuoteRequest1.mmFinancialInstrumentDetails,
-						QuoteRequest1.mmFinancialInstrumentAttributes, QuoteRequest1.mmStipulations, QuoteRequest1.mmUnderlyingFinancialInstrumentDetails, QuoteRequest1.mmUnderlyingFinancialInstrumentAttributes,
-						QuoteRequest1.mmUnderlyingStipulations, QuoteRequest1.mmInstrumentLegGroupDetails, QuoteRequest1.mmQuoteDetails, QuoteRequest1.mmYieldDetails, QuoteRequest1.mmSpreadAndBenchmarkCurveDetails,
-						QuoteRequest1.mmTradingSessionDetails, QuoteRequest1.mmTwoLegTransactionDetails, QuoteRequest1.mmTradingParties, QuoteRequest1.mmCashParties, QuoteRequest1.mmReceivingSettlementParties,
-						QuoteRequest1.mmDeliveringSettlementParties, QuoteRequest1.mmOtherBusinessParties);
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.msg.QuoteRequest1.mmQuoteRequestType, com.tools20022.repository.msg.QuoteRequest1.mmExpiryDateTime, com.tools20022.repository.msg.QuoteRequest1.mmPreviousClosingPrice,
+								com.tools20022.repository.msg.QuoteRequest1.mmSide, com.tools20022.repository.msg.QuoteRequest1.mmFinancialInstrumentDetails, com.tools20022.repository.msg.QuoteRequest1.mmFinancialInstrumentAttributes,
+								com.tools20022.repository.msg.QuoteRequest1.mmStipulations, com.tools20022.repository.msg.QuoteRequest1.mmUnderlyingFinancialInstrumentDetails,
+								com.tools20022.repository.msg.QuoteRequest1.mmUnderlyingFinancialInstrumentAttributes, com.tools20022.repository.msg.QuoteRequest1.mmUnderlyingStipulations,
+								com.tools20022.repository.msg.QuoteRequest1.mmInstrumentLegGroupDetails, com.tools20022.repository.msg.QuoteRequest1.mmQuoteDetails, com.tools20022.repository.msg.QuoteRequest1.mmYieldDetails,
+								com.tools20022.repository.msg.QuoteRequest1.mmSpreadAndBenchmarkCurveDetails, com.tools20022.repository.msg.QuoteRequest1.mmTradingSessionDetails,
+								com.tools20022.repository.msg.QuoteRequest1.mmTwoLegTransactionDetails, com.tools20022.repository.msg.QuoteRequest1.mmTradingParties, com.tools20022.repository.msg.QuoteRequest1.mmCashParties,
+								com.tools20022.repository.msg.QuoteRequest1.mmReceivingSettlementParties, com.tools20022.repository.msg.QuoteRequest1.mmDeliveringSettlementParties,
+								com.tools20022.repository.msg.QuoteRequest1.mmOtherBusinessParties);
 				trace_lazy = () -> SecuritiesQuoteVariable.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuoteRequest1";
 				definition = "Request for a proposition of price for a financial instrument.";
@@ -1114,192 +1144,192 @@ public class QuoteRequest1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QtReqTp")
-	public QuoteRequestType1Code getQuoteRequestType() {
-		return quoteRequestType;
+	public Optional<QuoteRequestType1Code> getQuoteRequestType() {
+		return quoteRequestType == null ? Optional.empty() : Optional.of(quoteRequestType);
 	}
 
-	public void setQuoteRequestType(QuoteRequestType1Code quoteRequestType) {
+	public QuoteRequest1 setQuoteRequestType(QuoteRequestType1Code quoteRequestType) {
 		this.quoteRequestType = quoteRequestType;
+		return this;
 	}
 
-	@XmlElement(name = "XpryDtTm")
-	public ISODateTime getExpiryDateTime() {
-		return expiryDateTime;
+	public Optional<ISODateTime> getExpiryDateTime() {
+		return expiryDateTime == null ? Optional.empty() : Optional.of(expiryDateTime);
 	}
 
-	public void setExpiryDateTime(ISODateTime expiryDateTime) {
+	public QuoteRequest1 setExpiryDateTime(ISODateTime expiryDateTime) {
 		this.expiryDateTime = expiryDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsClsgPric")
 	public List<Price1> getPreviousClosingPrice() {
-		return previousClosingPrice;
+		return previousClosingPrice == null ? previousClosingPrice = new ArrayList<>() : previousClosingPrice;
 	}
 
-	public void setPreviousClosingPrice(List<com.tools20022.repository.msg.Price1> previousClosingPrice) {
-		this.previousClosingPrice = previousClosingPrice;
+	public QuoteRequest1 setPreviousClosingPrice(List<com.tools20022.repository.msg.Price1> previousClosingPrice) {
+		this.previousClosingPrice = Objects.requireNonNull(previousClosingPrice);
+		return this;
 	}
 
-	@XmlElement(name = "Sd")
-	public Side1Code getSide() {
-		return side;
+	public Optional<Side1Code> getSide() {
+		return side == null ? Optional.empty() : Optional.of(side);
 	}
 
-	public void setSide(Side1Code side) {
+	public QuoteRequest1 setSide(Side1Code side) {
 		this.side = side;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmDtls", required = true)
 	public SecurityIdentification7 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
 
-	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.SecurityIdentification7 financialInstrumentDetails) {
-		this.financialInstrumentDetails = financialInstrumentDetails;
+	public QuoteRequest1 setFinancialInstrumentDetails(com.tools20022.repository.msg.SecurityIdentification7 financialInstrumentDetails) {
+		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmAttrbts")
-	public FinancialInstrumentAttributes1 getFinancialInstrumentAttributes() {
-		return financialInstrumentAttributes;
+	public Optional<FinancialInstrumentAttributes1> getFinancialInstrumentAttributes() {
+		return financialInstrumentAttributes == null ? Optional.empty() : Optional.of(financialInstrumentAttributes);
 	}
 
-	public void setFinancialInstrumentAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes1 financialInstrumentAttributes) {
+	public QuoteRequest1 setFinancialInstrumentAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes1 financialInstrumentAttributes) {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
+		return this;
 	}
 
-	@XmlElement(name = "Stiptns")
-	public FinancialInstrumentStipulations getStipulations() {
-		return stipulations;
+	public Optional<FinancialInstrumentStipulations> getStipulations() {
+		return stipulations == null ? Optional.empty() : Optional.of(stipulations);
 	}
 
-	public void setStipulations(com.tools20022.repository.msg.FinancialInstrumentStipulations stipulations) {
+	public QuoteRequest1 setStipulations(com.tools20022.repository.msg.FinancialInstrumentStipulations stipulations) {
 		this.stipulations = stipulations;
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygFinInstrmDtls")
 	public List<SecurityIdentification7> getUnderlyingFinancialInstrumentDetails() {
-		return underlyingFinancialInstrumentDetails;
+		return underlyingFinancialInstrumentDetails == null ? underlyingFinancialInstrumentDetails = new ArrayList<>() : underlyingFinancialInstrumentDetails;
 	}
 
-	public void setUnderlyingFinancialInstrumentDetails(List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrumentDetails) {
-		this.underlyingFinancialInstrumentDetails = underlyingFinancialInstrumentDetails;
+	public QuoteRequest1 setUnderlyingFinancialInstrumentDetails(List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrumentDetails) {
+		this.underlyingFinancialInstrumentDetails = Objects.requireNonNull(underlyingFinancialInstrumentDetails);
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygFinInstrmAttrbts")
 	public List<FinancialInstrumentAttributes1> getUnderlyingFinancialInstrumentAttributes() {
-		return underlyingFinancialInstrumentAttributes;
+		return underlyingFinancialInstrumentAttributes == null ? underlyingFinancialInstrumentAttributes = new ArrayList<>() : underlyingFinancialInstrumentAttributes;
 	}
 
-	public void setUnderlyingFinancialInstrumentAttributes(List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes) {
-		this.underlyingFinancialInstrumentAttributes = underlyingFinancialInstrumentAttributes;
+	public QuoteRequest1 setUnderlyingFinancialInstrumentAttributes(List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes) {
+		this.underlyingFinancialInstrumentAttributes = Objects.requireNonNull(underlyingFinancialInstrumentAttributes);
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygStiptns")
 	public List<FinancialInstrumentStipulations> getUnderlyingStipulations() {
-		return underlyingStipulations;
+		return underlyingStipulations == null ? underlyingStipulations = new ArrayList<>() : underlyingStipulations;
 	}
 
-	public void setUnderlyingStipulations(List<com.tools20022.repository.msg.FinancialInstrumentStipulations> underlyingStipulations) {
-		this.underlyingStipulations = underlyingStipulations;
+	public QuoteRequest1 setUnderlyingStipulations(List<com.tools20022.repository.msg.FinancialInstrumentStipulations> underlyingStipulations) {
+		this.underlyingStipulations = Objects.requireNonNull(underlyingStipulations);
+		return this;
 	}
 
-	@XmlElement(name = "InstrmLegGrpDtls")
 	public List<InstrumentLeg2> getInstrumentLegGroupDetails() {
-		return instrumentLegGroupDetails;
+		return instrumentLegGroupDetails == null ? instrumentLegGroupDetails = new ArrayList<>() : instrumentLegGroupDetails;
 	}
 
-	public void setInstrumentLegGroupDetails(List<com.tools20022.repository.msg.InstrumentLeg2> instrumentLegGroupDetails) {
-		this.instrumentLegGroupDetails = instrumentLegGroupDetails;
+	public QuoteRequest1 setInstrumentLegGroupDetails(List<com.tools20022.repository.msg.InstrumentLeg2> instrumentLegGroupDetails) {
+		this.instrumentLegGroupDetails = Objects.requireNonNull(instrumentLegGroupDetails);
+		return this;
 	}
 
-	@XmlElement(name = "QtDtls", required = true)
 	public List<Quote3> getQuoteDetails() {
-		return quoteDetails;
+		return quoteDetails == null ? quoteDetails = new ArrayList<>() : quoteDetails;
 	}
 
-	public void setQuoteDetails(List<com.tools20022.repository.msg.Quote3> quoteDetails) {
-		this.quoteDetails = quoteDetails;
+	public QuoteRequest1 setQuoteDetails(List<com.tools20022.repository.msg.Quote3> quoteDetails) {
+		this.quoteDetails = Objects.requireNonNull(quoteDetails);
+		return this;
 	}
 
-	@XmlElement(name = "YldDtls")
-	public YieldCalculation1 getYieldDetails() {
-		return yieldDetails;
+	public Optional<YieldCalculation1> getYieldDetails() {
+		return yieldDetails == null ? Optional.empty() : Optional.of(yieldDetails);
 	}
 
-	public void setYieldDetails(com.tools20022.repository.msg.YieldCalculation1 yieldDetails) {
+	public QuoteRequest1 setYieldDetails(com.tools20022.repository.msg.YieldCalculation1 yieldDetails) {
 		this.yieldDetails = yieldDetails;
+		return this;
 	}
 
-	@XmlElement(name = "SprdAndBchmkCrvDtls")
-	public BenchmarkCurve1 getSpreadAndBenchmarkCurveDetails() {
-		return spreadAndBenchmarkCurveDetails;
+	public Optional<BenchmarkCurve1> getSpreadAndBenchmarkCurveDetails() {
+		return spreadAndBenchmarkCurveDetails == null ? Optional.empty() : Optional.of(spreadAndBenchmarkCurveDetails);
 	}
 
-	public void setSpreadAndBenchmarkCurveDetails(com.tools20022.repository.msg.BenchmarkCurve1 spreadAndBenchmarkCurveDetails) {
+	public QuoteRequest1 setSpreadAndBenchmarkCurveDetails(com.tools20022.repository.msg.BenchmarkCurve1 spreadAndBenchmarkCurveDetails) {
 		this.spreadAndBenchmarkCurveDetails = spreadAndBenchmarkCurveDetails;
+		return this;
 	}
 
-	@XmlElement(name = "TradgSsnDtls")
-	public TradingSession1 getTradingSessionDetails() {
-		return tradingSessionDetails;
+	public Optional<TradingSession1> getTradingSessionDetails() {
+		return tradingSessionDetails == null ? Optional.empty() : Optional.of(tradingSessionDetails);
 	}
 
-	public void setTradingSessionDetails(com.tools20022.repository.msg.TradingSession1 tradingSessionDetails) {
+	public QuoteRequest1 setTradingSessionDetails(com.tools20022.repository.msg.TradingSession1 tradingSessionDetails) {
 		this.tradingSessionDetails = tradingSessionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "TwoLegTxDtls")
-	public SecuritiesFinancing1 getTwoLegTransactionDetails() {
-		return twoLegTransactionDetails;
+	public Optional<SecuritiesFinancing1> getTwoLegTransactionDetails() {
+		return twoLegTransactionDetails == null ? Optional.empty() : Optional.of(twoLegTransactionDetails);
 	}
 
-	public void setTwoLegTransactionDetails(com.tools20022.repository.msg.SecuritiesFinancing1 twoLegTransactionDetails) {
+	public QuoteRequest1 setTwoLegTransactionDetails(com.tools20022.repository.msg.SecuritiesFinancing1 twoLegTransactionDetails) {
 		this.twoLegTransactionDetails = twoLegTransactionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "TradgPties")
 	public List<Intermediary14> getTradingParties() {
-		return tradingParties;
+		return tradingParties == null ? tradingParties = new ArrayList<>() : tradingParties;
 	}
 
-	public void setTradingParties(List<com.tools20022.repository.msg.Intermediary14> tradingParties) {
-		this.tradingParties = tradingParties;
+	public QuoteRequest1 setTradingParties(List<com.tools20022.repository.msg.Intermediary14> tradingParties) {
+		this.tradingParties = Objects.requireNonNull(tradingParties);
+		return this;
 	}
 
-	@XmlElement(name = "CshPties")
-	public CashParties1 getCashParties() {
-		return cashParties;
+	public Optional<CashParties1> getCashParties() {
+		return cashParties == null ? Optional.empty() : Optional.of(cashParties);
 	}
 
-	public void setCashParties(com.tools20022.repository.msg.CashParties1 cashParties) {
+	public QuoteRequest1 setCashParties(com.tools20022.repository.msg.CashParties1 cashParties) {
 		this.cashParties = cashParties;
+		return this;
 	}
 
-	@XmlElement(name = "RcvgSttlmPties")
-	public SettlementParties3 getReceivingSettlementParties() {
-		return receivingSettlementParties;
+	public Optional<SettlementParties3> getReceivingSettlementParties() {
+		return receivingSettlementParties == null ? Optional.empty() : Optional.of(receivingSettlementParties);
 	}
 
-	public void setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties3 receivingSettlementParties) {
+	public QuoteRequest1 setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties3 receivingSettlementParties) {
 		this.receivingSettlementParties = receivingSettlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "DlvrgSttlmPties")
-	public SettlementParties3 getDeliveringSettlementParties() {
-		return deliveringSettlementParties;
+	public Optional<SettlementParties3> getDeliveringSettlementParties() {
+		return deliveringSettlementParties == null ? Optional.empty() : Optional.of(deliveringSettlementParties);
 	}
 
-	public void setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties3 deliveringSettlementParties) {
+	public QuoteRequest1 setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties3 deliveringSettlementParties) {
 		this.deliveringSettlementParties = deliveringSettlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "OthrBizPties")
-	public OtherParties1 getOtherBusinessParties() {
-		return otherBusinessParties;
+	public Optional<OtherParties1> getOtherBusinessParties() {
+		return otherBusinessParties == null ? Optional.empty() : Optional.of(otherBusinessParties);
 	}
 
-	public void setOtherBusinessParties(com.tools20022.repository.msg.OtherParties1 otherBusinessParties) {
+	public QuoteRequest1 setOtherBusinessParties(com.tools20022.repository.msg.OtherParties1 otherBusinessParties) {
 		this.otherBusinessParties = otherBusinessParties;
+		return this;
 	}
 }

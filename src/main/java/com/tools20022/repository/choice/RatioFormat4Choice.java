@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -32,6 +33,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule#forRatioFormat4Choice
+ * ConstraintCoexistenceQuantityRule.forRatioFormat4Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule#forRatioFormat4Choice
+ * ConstraintCoexistenceAmountRule.forRatioFormat4Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -83,15 +96,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RatioFormat4Choice", propOrder = {"quantityToQuantity", "amountToAmount", "amountToQuantity", "quantityToAmount"})
 public class RatioFormat4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QtyToQty", required = true)
 	protected QuantityToQuantityRatio1 quantityToQuantity;
 	/**
-	 * Ratio expressed as a quotient of quantities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,6 +125,9 @@ public class RatioFormat4Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtyToQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92D::</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -124,9 +141,10 @@ public class RatioFormat4Choice {
 	public static final MMMessageAssociationEnd mmQuantityToQuantity = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> QuantityRatio.mmObject();
-			componentContext_lazy = () -> RatioFormat4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyToQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92D::"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToQuantity";
 			definition = "Ratio expressed as a quotient of quantities.";
@@ -136,10 +154,11 @@ public class RatioFormat4Choice {
 			type_lazy = () -> QuantityToQuantityRatio1.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtToAmt", required = true)
 	protected AmountToAmountRatio2 amountToAmount;
 	/**
-	 * Ratio expressed as a quotient of amounts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -157,6 +176,9 @@ public class RatioFormat4Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AmtToAmt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92L:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -170,9 +192,10 @@ public class RatioFormat4Choice {
 	public static final MMMessageAssociationEnd mmAmountToAmount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> AmountRatio.mmObject();
-			componentContext_lazy = () -> RatioFormat4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToAmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92L:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToAmount";
 			definition = "Ratio expressed as a quotient of amounts.";
@@ -182,10 +205,11 @@ public class RatioFormat4Choice {
 			type_lazy = () -> AmountToAmountRatio2.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtToQty", required = true)
 	protected AmountAndQuantityRatio2 amountToQuantity;
 	/**
-	 * Ratio expressed as an amount to quantity ratio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -205,6 +229,9 @@ public class RatioFormat4Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AmtToQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92M:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -218,9 +245,10 @@ public class RatioFormat4Choice {
 	public static final MMMessageAssociationEnd mmAmountToQuantity = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> AmountAndQuantity.mmObject();
-			componentContext_lazy = () -> RatioFormat4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92M:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToQuantity";
 			definition = "Ratio expressed as an amount to quantity ratio.";
@@ -230,10 +258,11 @@ public class RatioFormat4Choice {
 			type_lazy = () -> AmountAndQuantityRatio2.mmObject();
 		}
 	};
+	@XmlElement(name = "QtyToAmt", required = true)
 	protected AmountAndQuantityRatio2 quantityToAmount;
 	/**
-	 * Ratio expressed as a quantity to amount ratio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -253,6 +282,9 @@ public class RatioFormat4Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtyToAmt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92N:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -266,9 +298,10 @@ public class RatioFormat4Choice {
 	public static final MMMessageAssociationEnd mmQuantityToAmount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> AmountAndQuantity.mmObject();
-			componentContext_lazy = () -> RatioFormat4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyToAmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92N:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToAmount";
 			definition = "Ratio expressed as a quantity to amount ratio.";
@@ -282,8 +315,11 @@ public class RatioFormat4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RatioFormat4Choice.mmQuantityToQuantity, RatioFormat4Choice.mmAmountToAmount, RatioFormat4Choice.mmAmountToQuantity, RatioFormat4Choice.mmQuantityToAmount);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RatioFormat4Choice.mmQuantityToQuantity, com.tools20022.repository.choice.RatioFormat4Choice.mmAmountToAmount,
+						com.tools20022.repository.choice.RatioFormat4Choice.mmAmountToQuantity, com.tools20022.repository.choice.RatioFormat4Choice.mmQuantityToAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule.forRatioFormat4Choice,
+						com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forRatioFormat4Choice);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -300,39 +336,39 @@ public class RatioFormat4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QtyToQty", required = true)
 	public QuantityToQuantityRatio1 getQuantityToQuantity() {
 		return quantityToQuantity;
 	}
 
-	public void setQuantityToQuantity(QuantityToQuantityRatio1 quantityToQuantity) {
-		this.quantityToQuantity = quantityToQuantity;
+	public RatioFormat4Choice setQuantityToQuantity(QuantityToQuantityRatio1 quantityToQuantity) {
+		this.quantityToQuantity = Objects.requireNonNull(quantityToQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "AmtToAmt", required = true)
 	public AmountToAmountRatio2 getAmountToAmount() {
 		return amountToAmount;
 	}
 
-	public void setAmountToAmount(AmountToAmountRatio2 amountToAmount) {
-		this.amountToAmount = amountToAmount;
+	public RatioFormat4Choice setAmountToAmount(AmountToAmountRatio2 amountToAmount) {
+		this.amountToAmount = Objects.requireNonNull(amountToAmount);
+		return this;
 	}
 
-	@XmlElement(name = "AmtToQty", required = true)
 	public AmountAndQuantityRatio2 getAmountToQuantity() {
 		return amountToQuantity;
 	}
 
-	public void setAmountToQuantity(AmountAndQuantityRatio2 amountToQuantity) {
-		this.amountToQuantity = amountToQuantity;
+	public RatioFormat4Choice setAmountToQuantity(AmountAndQuantityRatio2 amountToQuantity) {
+		this.amountToQuantity = Objects.requireNonNull(amountToQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "QtyToAmt", required = true)
 	public AmountAndQuantityRatio2 getQuantityToAmount() {
 		return quantityToAmount;
 	}
 
-	public void setQuantityToAmount(AmountAndQuantityRatio2 quantityToAmount) {
-		this.quantityToAmount = quantityToAmount;
+	public RatioFormat4Choice setQuantityToAmount(AmountAndQuantityRatio2 quantityToAmount) {
+		this.quantityToAmount = Objects.requireNonNull(quantityToAmount);
+		return this;
 	}
 }

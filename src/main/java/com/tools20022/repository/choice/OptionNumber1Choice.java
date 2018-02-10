@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,7 @@ import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Choice between an number and a option number in a code format."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OptionNumber1Choice", propOrder = {"number", "code"})
 public class OptionNumber1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nb", required = true)
 	protected Exact3NumericText number;
 	/**
-	 * Number identifying the available corporate action options.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -86,6 +89,9 @@ public class OptionNumber1Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Nb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13A:CAON</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -99,9 +105,10 @@ public class OptionNumber1Choice {
 	 */
 	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OptionNumber1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.OptionNumber1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13A:CAON"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Number identifying the available corporate action options.";
@@ -110,10 +117,11 @@ public class OptionNumber1Choice {
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Cd", required = true)
 	protected OptionNumber1Code code;
 	/**
-	 * Code identifying special corporate action option numbers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +150,7 @@ public class OptionNumber1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OptionNumber1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.OptionNumber1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,8 +165,8 @@ public class OptionNumber1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OptionNumber1Choice.mmNumber, OptionNumber1Choice.mmCode);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionNumber1Choice.mmNumber, com.tools20022.repository.choice.OptionNumber1Choice.mmCode);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionNumber1Choice";
 				definition = "Choice between an number and a option number in a code format.";
@@ -167,21 +175,21 @@ public class OptionNumber1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nb", required = true)
 	public Exact3NumericText getNumber() {
 		return number;
 	}
 
-	public void setNumber(Exact3NumericText number) {
-		this.number = number;
+	public OptionNumber1Choice setNumber(Exact3NumericText number) {
+		this.number = Objects.requireNonNull(number);
+		return this;
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public OptionNumber1Code getCode() {
 		return code;
 	}
 
-	public void setCode(OptionNumber1Code code) {
-		this.code = code;
+	public OptionNumber1Choice setCode(OptionNumber1Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 }

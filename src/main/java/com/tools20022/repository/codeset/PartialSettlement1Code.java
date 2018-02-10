@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PartialSettlementCode;
+import com.tools20022.repository.codeset.PartialSettlement1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Information about partial settlement.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PartialSettlementCode
- * PartialSettlementCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialSettlement1Code#mmPartialSettlement
- * PartialSettlement1Code.mmPartialSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialSettlement1Code#PartialSettlement
+ * PartialSettlement1Code.PartialSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialSettlement1Code#mmPreviouslyPartialConfirmed
- * PartialSettlement1Code.mmPreviouslyPartialConfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialSettlement1Code#PreviouslyPartialConfirmed
+ * PartialSettlement1Code.PreviouslyPartialConfirmed}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PartialSettlementCode
+ * PartialSettlementCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about partial settlement."</li>
  * </ul>
  */
-public class PartialSettlement1Code extends PartialSettlementCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PartialSettlement1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class PartialSettlement1Code extends PartialSettlementCode {
 	 * name} = "PartialSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialSettlement = new MMCode() {
+	public static final PartialSettlement1Code PartialSettlement = new PartialSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlement";
-			owner_lazy = () -> PartialSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartialSettlement1Code.mmObject();
+			codeName = PartialSettlementCode.PartialSettlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class PartialSettlement1Code extends PartialSettlementCode {
 	 * name} = "PreviouslyPartialConfirmed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreviouslyPartialConfirmed = new MMCode() {
+	public static final PartialSettlement1Code PreviouslyPartialConfirmed = new PartialSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslyPartialConfirmed";
-			owner_lazy = () -> PartialSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartialSettlement1Code.mmObject();
+			codeName = PartialSettlementCode.PreviouslyPartialConfirmed.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PartialSettlement1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PartialSettlement1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PAIN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartialSettlement1Code";
 				definition = "Information about partial settlement.";
-				code_lazy = () -> Arrays.asList(PartialSettlement1Code.mmPartialSettlement, PartialSettlement1Code.mmPreviouslyPartialConfirmed);
 				trace_lazy = () -> PartialSettlementCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartialSettlement1Code.PartialSettlement, com.tools20022.repository.codeset.PartialSettlement1Code.PreviouslyPartialConfirmed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PartialSettlement.getCodeName().get(), PartialSettlement);
+		codesByName.put(PreviouslyPartialConfirmed.getCodeName().get(), PreviouslyPartialConfirmed);
+	}
+
+	public static PartialSettlement1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PartialSettlement1Code[] values() {
+		PartialSettlement1Code[] values = new PartialSettlement1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PartialSettlement1Code> {
+		@Override
+		public PartialSettlement1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PartialSettlement1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

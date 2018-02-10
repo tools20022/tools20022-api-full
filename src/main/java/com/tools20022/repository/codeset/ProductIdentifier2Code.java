@@ -20,61 +20,64 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ProductIdentifierCode;
+import com.tools20022.repository.codeset.ProductIdentifier2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of identifier of a product.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode
- * ProductIdentifierCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#mmBuyersItemNumber
- * ProductIdentifier2Code.mmBuyersItemNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#BuyersItemNumber
+ * ProductIdentifier2Code.BuyersItemNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#mmCommercialDescriptionCodeName
- * ProductIdentifier2Code.mmCommercialDescriptionCodeName}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#CommercialDescriptionCodeName
+ * ProductIdentifier2Code.CommercialDescriptionCodeName}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#EAN
+ * ProductIdentifier2Code.EAN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#mmEAN
- * ProductIdentifier2Code.mmEAN}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#HarmonizedTariffCodeName
+ * ProductIdentifier2Code.HarmonizedTariffCodeName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#mmHarmonizedTariffCodeName
- * ProductIdentifier2Code.mmHarmonizedTariffCodeName}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#ManufacturersItemNumber
+ * ProductIdentifier2Code.ManufacturersItemNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#mmManufacturersItemNumber
- * ProductIdentifier2Code.mmManufacturersItemNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#ModelNumber
+ * ProductIdentifier2Code.ModelNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#mmModelNumber
- * ProductIdentifier2Code.mmModelNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#PartNumber
+ * ProductIdentifier2Code.PartNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#mmPartNumber
- * ProductIdentifier2Code.mmPartNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#QuotaCategory
+ * ProductIdentifier2Code.QuotaCategory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#mmQuotaCategory
- * ProductIdentifier2Code.mmQuotaCategory}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#StyleNumber
+ * ProductIdentifier2Code.StyleNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#mmStyleNumber
- * ProductIdentifier2Code.mmStyleNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#SuppliersItemNumber
+ * ProductIdentifier2Code.SuppliersItemNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#mmSuppliersItemNumber
- * ProductIdentifier2Code.mmSuppliersItemNumber}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#mmUniversalProductCode
- * ProductIdentifier2Code.mmUniversalProductCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifier2Code#UniversalProductCode
+ * ProductIdentifier2Code.UniversalProductCode}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ProductIdentifierCode
+ * ProductIdentifierCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of identifier of a product."</li>
  * </ul>
  */
-public class ProductIdentifier2Code extends ProductIdentifierCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProductIdentifier2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -110,11 +114,12 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 * name} = "BuyersItemNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBuyersItemNumber = new MMCode() {
+	public static final ProductIdentifier2Code BuyersItemNumber = new ProductIdentifier2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyersItemNumber";
-			owner_lazy = () -> ProductIdentifier2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductIdentifier2Code.mmObject();
+			codeName = ProductIdentifierCode.BuyersItemNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,11 +138,12 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 * name} = "CommercialDescriptionCodeName"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommercialDescriptionCodeName = new MMCode() {
+	public static final ProductIdentifier2Code CommercialDescriptionCodeName = new ProductIdentifier2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialDescriptionCodeName";
-			owner_lazy = () -> ProductIdentifier2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductIdentifier2Code.mmObject();
+			codeName = ProductIdentifierCode.CommercialDescriptionCodeName.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -156,11 +162,12 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 * name} = "EAN"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEAN = new MMCode() {
+	public static final ProductIdentifier2Code EAN = new ProductIdentifier2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EAN";
-			owner_lazy = () -> ProductIdentifier2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductIdentifier2Code.mmObject();
+			codeName = ProductIdentifierCode.EAN.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -179,11 +186,12 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 * name} = "HarmonizedTariffCodeName"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHarmonizedTariffCodeName = new MMCode() {
+	public static final ProductIdentifier2Code HarmonizedTariffCodeName = new ProductIdentifier2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HarmonizedTariffCodeName";
-			owner_lazy = () -> ProductIdentifier2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductIdentifier2Code.mmObject();
+			codeName = ProductIdentifierCode.HarmonizedTariffCodeName.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -202,11 +210,12 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 * name} = "ManufacturersItemNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmManufacturersItemNumber = new MMCode() {
+	public static final ProductIdentifier2Code ManufacturersItemNumber = new ProductIdentifier2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManufacturersItemNumber";
-			owner_lazy = () -> ProductIdentifier2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductIdentifier2Code.mmObject();
+			codeName = ProductIdentifierCode.ManufacturersItemNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -225,11 +234,12 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 * name} = "ModelNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmModelNumber = new MMCode() {
+	public static final ProductIdentifier2Code ModelNumber = new ProductIdentifier2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModelNumber";
-			owner_lazy = () -> ProductIdentifier2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductIdentifier2Code.mmObject();
+			codeName = ProductIdentifierCode.ModelNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -248,11 +258,12 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 * name} = "PartNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartNumber = new MMCode() {
+	public static final ProductIdentifier2Code PartNumber = new ProductIdentifier2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartNumber";
-			owner_lazy = () -> ProductIdentifier2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductIdentifier2Code.mmObject();
+			codeName = ProductIdentifierCode.PartNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -271,11 +282,12 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 * name} = "QuotaCategory"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQuotaCategory = new MMCode() {
+	public static final ProductIdentifier2Code QuotaCategory = new ProductIdentifier2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotaCategory";
-			owner_lazy = () -> ProductIdentifier2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductIdentifier2Code.mmObject();
+			codeName = ProductIdentifierCode.QuotaCategory.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -294,11 +306,12 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 * name} = "StyleNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStyleNumber = new MMCode() {
+	public static final ProductIdentifier2Code StyleNumber = new ProductIdentifier2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StyleNumber";
-			owner_lazy = () -> ProductIdentifier2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductIdentifier2Code.mmObject();
+			codeName = ProductIdentifierCode.StyleNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -317,11 +330,12 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 * name} = "SuppliersItemNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuppliersItemNumber = new MMCode() {
+	public static final ProductIdentifier2Code SuppliersItemNumber = new ProductIdentifier2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuppliersItemNumber";
-			owner_lazy = () -> ProductIdentifier2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductIdentifier2Code.mmObject();
+			codeName = ProductIdentifierCode.SuppliersItemNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -340,28 +354,70 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 * name} = "UniversalProductCode"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUniversalProductCode = new MMCode() {
+	public static final ProductIdentifier2Code UniversalProductCode = new ProductIdentifier2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniversalProductCode";
-			owner_lazy = () -> ProductIdentifier2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductIdentifier2Code.mmObject();
+			codeName = ProductIdentifierCode.UniversalProductCode.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ProductIdentifier2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProductIdentifier2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BINR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductIdentifier2Code";
 				definition = "Specifies the type of identifier of a product.";
-				code_lazy = () -> Arrays.asList(ProductIdentifier2Code.mmBuyersItemNumber, ProductIdentifier2Code.mmCommercialDescriptionCodeName, ProductIdentifier2Code.mmEAN, ProductIdentifier2Code.mmHarmonizedTariffCodeName,
-						ProductIdentifier2Code.mmManufacturersItemNumber, ProductIdentifier2Code.mmModelNumber, ProductIdentifier2Code.mmPartNumber, ProductIdentifier2Code.mmQuotaCategory, ProductIdentifier2Code.mmStyleNumber,
-						ProductIdentifier2Code.mmSuppliersItemNumber, ProductIdentifier2Code.mmUniversalProductCode);
 				trace_lazy = () -> ProductIdentifierCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductIdentifier2Code.BuyersItemNumber, com.tools20022.repository.codeset.ProductIdentifier2Code.CommercialDescriptionCodeName,
+						com.tools20022.repository.codeset.ProductIdentifier2Code.EAN, com.tools20022.repository.codeset.ProductIdentifier2Code.HarmonizedTariffCodeName,
+						com.tools20022.repository.codeset.ProductIdentifier2Code.ManufacturersItemNumber, com.tools20022.repository.codeset.ProductIdentifier2Code.ModelNumber,
+						com.tools20022.repository.codeset.ProductIdentifier2Code.PartNumber, com.tools20022.repository.codeset.ProductIdentifier2Code.QuotaCategory, com.tools20022.repository.codeset.ProductIdentifier2Code.StyleNumber,
+						com.tools20022.repository.codeset.ProductIdentifier2Code.SuppliersItemNumber, com.tools20022.repository.codeset.ProductIdentifier2Code.UniversalProductCode);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BuyersItemNumber.getCodeName().get(), BuyersItemNumber);
+		codesByName.put(CommercialDescriptionCodeName.getCodeName().get(), CommercialDescriptionCodeName);
+		codesByName.put(EAN.getCodeName().get(), EAN);
+		codesByName.put(HarmonizedTariffCodeName.getCodeName().get(), HarmonizedTariffCodeName);
+		codesByName.put(ManufacturersItemNumber.getCodeName().get(), ManufacturersItemNumber);
+		codesByName.put(ModelNumber.getCodeName().get(), ModelNumber);
+		codesByName.put(PartNumber.getCodeName().get(), PartNumber);
+		codesByName.put(QuotaCategory.getCodeName().get(), QuotaCategory);
+		codesByName.put(StyleNumber.getCodeName().get(), StyleNumber);
+		codesByName.put(SuppliersItemNumber.getCodeName().get(), SuppliersItemNumber);
+		codesByName.put(UniversalProductCode.getCodeName().get(), UniversalProductCode);
+	}
+
+	public static ProductIdentifier2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProductIdentifier2Code[] values() {
+		ProductIdentifier2Code[] values = new ProductIdentifier2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProductIdentifier2Code> {
+		@Override
+		public ProductIdentifier2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProductIdentifier2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.UnitOfMeasure2Code;
+import com.tools20022.repository.codeset.UnitOfMeasure4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies the unit of measure by means of a code. The code is taken from
@@ -31,137 +35,131 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure2Code
- * UnitOfMeasure2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmKilogram
- * UnitOfMeasure4Code.mmKilogram}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmEach
- * UnitOfMeasure4Code.mmEach}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmGBTon
- * UnitOfMeasure4Code.mmGBTon}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmMetre
- * UnitOfMeasure4Code.mmMetre}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmInch
- * UnitOfMeasure4Code.mmInch}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmYard
- * UnitOfMeasure4Code.mmYard}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Kilogram
+ * UnitOfMeasure4Code.Kilogram}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Each
+ * UnitOfMeasure4Code.Each}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#GBTon
+ * UnitOfMeasure4Code.GBTon}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Metre
+ * UnitOfMeasure4Code.Metre}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Inch
+ * UnitOfMeasure4Code.Inch}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Yard
+ * UnitOfMeasure4Code.Yard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmGBGallon
- * UnitOfMeasure4Code.mmGBGallon}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmGram
- * UnitOfMeasure4Code.mmGram}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#GBGallon
+ * UnitOfMeasure4Code.GBGallon}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Gram
+ * UnitOfMeasure4Code.Gram}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmCentimetre
- * UnitOfMeasure4Code.mmCentimetre}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Centimetre
+ * UnitOfMeasure4Code.Centimetre}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmSquareMetre
- * UnitOfMeasure4Code.mmSquareMetre}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmFoot
- * UnitOfMeasure4Code.mmFoot}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmMile
- * UnitOfMeasure4Code.mmMile}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#SquareMetre
+ * UnitOfMeasure4Code.SquareMetre}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Foot
+ * UnitOfMeasure4Code.Foot}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Mile
+ * UnitOfMeasure4Code.Mile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmSquareInch
- * UnitOfMeasure4Code.mmSquareInch}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#SquareInch
+ * UnitOfMeasure4Code.SquareInch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmSquareFoot
- * UnitOfMeasure4Code.mmSquareFoot}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#SquareFoot
+ * UnitOfMeasure4Code.SquareFoot}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmSquareMile
- * UnitOfMeasure4Code.mmSquareMile}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmOunce
- * UnitOfMeasure4Code.mmOunce}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#SquareMile
+ * UnitOfMeasure4Code.SquareMile}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Ounce
+ * UnitOfMeasure4Code.Ounce}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#GBPint
+ * UnitOfMeasure4Code.GBPint}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#USPint
+ * UnitOfMeasure4Code.USPint}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#GBQuart
+ * UnitOfMeasure4Code.GBQuart}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#USQuart
+ * UnitOfMeasure4Code.USQuart}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmGBPint
- * UnitOfMeasure4Code.mmGBPint}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#USGallon
+ * UnitOfMeasure4Code.USGallon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmUSPint
- * UnitOfMeasure4Code.mmUSPint}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Millimetre
+ * UnitOfMeasure4Code.Millimetre}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmGBQuart
- * UnitOfMeasure4Code.mmGBQuart}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Kilometre
+ * UnitOfMeasure4Code.Kilometre}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmUSQuart
- * UnitOfMeasure4Code.mmUSQuart}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#SquareYard
+ * UnitOfMeasure4Code.SquareYard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmUSGallon
- * UnitOfMeasure4Code.mmUSGallon}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#SquareMillimetre
+ * UnitOfMeasure4Code.SquareMillimetre}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmMillimetre
- * UnitOfMeasure4Code.mmMillimetre}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#SquareCentimetre
+ * UnitOfMeasure4Code.SquareCentimetre}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmKilometre
- * UnitOfMeasure4Code.mmKilometre}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#SquareKilometre
+ * UnitOfMeasure4Code.SquareKilometre}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmSquareYard
- * UnitOfMeasure4Code.mmSquareYard}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#CubicMillimetre
+ * UnitOfMeasure4Code.CubicMillimetre}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmSquareMillimetre
- * UnitOfMeasure4Code.mmSquareMillimetre}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Centilitre
+ * UnitOfMeasure4Code.Centilitre}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Litre
+ * UnitOfMeasure4Code.Litre}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Pound
+ * UnitOfMeasure4Code.Pound}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#USTon
+ * UnitOfMeasure4Code.USTon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmSquareCentimetre
- * UnitOfMeasure4Code.mmSquareCentimetre}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#USBarrel
+ * UnitOfMeasure4Code.USBarrel}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Box
+ * UnitOfMeasure4Code.Box}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Bottle
+ * UnitOfMeasure4Code.Bottle}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Carton
+ * UnitOfMeasure4Code.Carton}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmSquareKilometre
- * UnitOfMeasure4Code.mmSquareKilometre}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Container
+ * UnitOfMeasure4Code.Container}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Crate
+ * UnitOfMeasure4Code.Crate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmCubicMillimetre
- * UnitOfMeasure4Code.mmCubicMillimetre}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#CubicInch
+ * UnitOfMeasure4Code.CubicInch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmCentilitre
- * UnitOfMeasure4Code.mmCentilitre}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmLitre
- * UnitOfMeasure4Code.mmLitre}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmPound
- * UnitOfMeasure4Code.mmPound}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmUSTon
- * UnitOfMeasure4Code.mmUSTon}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#CubicMeter
+ * UnitOfMeasure4Code.CubicMeter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmUSBarrel
- * UnitOfMeasure4Code.mmUSBarrel}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmBox
- * UnitOfMeasure4Code.mmBox}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#GBFluidOunce
+ * UnitOfMeasure4Code.GBFluidOunce}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmBottle
- * UnitOfMeasure4Code.mmBottle}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#USFluidOunce
+ * UnitOfMeasure4Code.USFluidOunce}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Bag
+ * UnitOfMeasure4Code.Bag}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#Bale
+ * UnitOfMeasure4Code.Bale}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmCarton
- * UnitOfMeasure4Code.mmCarton}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmContainer
- * UnitOfMeasure4Code.mmContainer}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmCrate
- * UnitOfMeasure4Code.mmCrate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmCubicInch
- * UnitOfMeasure4Code.mmCubicInch}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmCubicMeter
- * UnitOfMeasure4Code.mmCubicMeter}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmGBFluidOunce
- * UnitOfMeasure4Code.mmGBFluidOunce}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmUSFluidOunce
- * UnitOfMeasure4Code.mmUSFluidOunce}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmBag
- * UnitOfMeasure4Code.mmBag}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmBale
- * UnitOfMeasure4Code.mmBale}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#mmMetricTon
- * UnitOfMeasure4Code.mmMetricTon}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure4Code#MetricTon
+ * UnitOfMeasure4Code.MetricTon}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasure2Code
+ * UnitOfMeasure2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -180,7 +178,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class UnitOfMeasure4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -199,11 +198,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Kilogram"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmKilogram = new MMCode() {
+	public static final UnitOfMeasure4Code Kilogram = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Kilogram";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Kilogram.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -222,11 +222,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Each"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEach = new MMCode() {
+	public static final UnitOfMeasure4Code Each = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Each";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Each.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -245,11 +246,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "GBTon"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGBTon = new MMCode() {
+	public static final UnitOfMeasure4Code GBTon = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GBTon";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.GBTon.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -268,11 +270,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Metre"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMetre = new MMCode() {
+	public static final UnitOfMeasure4Code Metre = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Metre";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Metre.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -291,11 +294,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Inch"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInch = new MMCode() {
+	public static final UnitOfMeasure4Code Inch = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inch";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Inch.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -314,11 +318,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Yard"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmYard = new MMCode() {
+	public static final UnitOfMeasure4Code Yard = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yard";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Yard.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -337,11 +342,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "GBGallon"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGBGallon = new MMCode() {
+	public static final UnitOfMeasure4Code GBGallon = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GBGallon";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.GBGallon.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -360,11 +366,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Gram"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGram = new MMCode() {
+	public static final UnitOfMeasure4Code Gram = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gram";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Gram.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -383,11 +390,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Centimetre"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCentimetre = new MMCode() {
+	public static final UnitOfMeasure4Code Centimetre = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Centimetre";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Centimetre.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -406,11 +414,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "SquareMetre"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSquareMetre = new MMCode() {
+	public static final UnitOfMeasure4Code SquareMetre = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SquareMetre";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.SquareMetre.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -429,11 +438,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Foot"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFoot = new MMCode() {
+	public static final UnitOfMeasure4Code Foot = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Foot";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Foot.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -452,11 +462,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Mile"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMile = new MMCode() {
+	public static final UnitOfMeasure4Code Mile = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mile";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Mile.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -475,11 +486,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "SquareInch"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSquareInch = new MMCode() {
+	public static final UnitOfMeasure4Code SquareInch = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SquareInch";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.SquareInch.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -498,11 +510,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "SquareFoot"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSquareFoot = new MMCode() {
+	public static final UnitOfMeasure4Code SquareFoot = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SquareFoot";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.SquareFoot.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -521,11 +534,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "SquareMile"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSquareMile = new MMCode() {
+	public static final UnitOfMeasure4Code SquareMile = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SquareMile";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.SquareMile.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -544,11 +558,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Ounce"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOunce = new MMCode() {
+	public static final UnitOfMeasure4Code Ounce = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ounce";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Ounce.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -567,11 +582,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "GBPint"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGBPint = new MMCode() {
+	public static final UnitOfMeasure4Code GBPint = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GBPint";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.GBPint.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -590,11 +606,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "USPint"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSPint = new MMCode() {
+	public static final UnitOfMeasure4Code USPint = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USPint";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.USPint.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -613,11 +630,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "GBQuart"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGBQuart = new MMCode() {
+	public static final UnitOfMeasure4Code GBQuart = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GBQuart";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.GBQuart.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -636,11 +654,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "USQuart"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSQuart = new MMCode() {
+	public static final UnitOfMeasure4Code USQuart = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USQuart";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.USQuart.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -659,11 +678,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "USGallon"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSGallon = new MMCode() {
+	public static final UnitOfMeasure4Code USGallon = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USGallon";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.USGallon.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -682,11 +702,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Millimetre"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMillimetre = new MMCode() {
+	public static final UnitOfMeasure4Code Millimetre = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Millimetre";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Millimetre.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -705,11 +726,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Kilometre"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmKilometre = new MMCode() {
+	public static final UnitOfMeasure4Code Kilometre = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Kilometre";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Kilometre.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -728,11 +750,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "SquareYard"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSquareYard = new MMCode() {
+	public static final UnitOfMeasure4Code SquareYard = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SquareYard";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.SquareYard.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -751,11 +774,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "SquareMillimetre"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSquareMillimetre = new MMCode() {
+	public static final UnitOfMeasure4Code SquareMillimetre = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SquareMillimetre";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.SquareMillimetre.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -774,11 +798,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "SquareCentimetre"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSquareCentimetre = new MMCode() {
+	public static final UnitOfMeasure4Code SquareCentimetre = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SquareCentimetre";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.SquareCentimetre.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -797,11 +822,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "SquareKilometre"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSquareKilometre = new MMCode() {
+	public static final UnitOfMeasure4Code SquareKilometre = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SquareKilometre";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.SquareKilometre.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -820,11 +846,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "CubicMillimetre"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCubicMillimetre = new MMCode() {
+	public static final UnitOfMeasure4Code CubicMillimetre = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CubicMillimetre";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.CubicMillimetre.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -843,11 +870,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Centilitre"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCentilitre = new MMCode() {
+	public static final UnitOfMeasure4Code Centilitre = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Centilitre";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Centilitre.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -866,11 +894,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Litre"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLitre = new MMCode() {
+	public static final UnitOfMeasure4Code Litre = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Litre";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Litre.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -889,11 +918,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Pound"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPound = new MMCode() {
+	public static final UnitOfMeasure4Code Pound = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pound";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Pound.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -912,11 +942,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "USTon"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSTon = new MMCode() {
+	public static final UnitOfMeasure4Code USTon = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USTon";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.USTon.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -935,11 +966,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "USBarrel"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSBarrel = new MMCode() {
+	public static final UnitOfMeasure4Code USBarrel = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USBarrel";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.USBarrel.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -958,11 +990,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Box"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBox = new MMCode() {
+	public static final UnitOfMeasure4Code Box = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Box";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Box.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -981,11 +1014,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Bottle"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBottle = new MMCode() {
+	public static final UnitOfMeasure4Code Bottle = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bottle";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Bottle.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1004,11 +1038,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Carton"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCarton = new MMCode() {
+	public static final UnitOfMeasure4Code Carton = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Carton";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Carton.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1027,11 +1062,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Container"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmContainer = new MMCode() {
+	public static final UnitOfMeasure4Code Container = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Container";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Container.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1050,11 +1086,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Crate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCrate = new MMCode() {
+	public static final UnitOfMeasure4Code Crate = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Crate";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Crate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1073,11 +1110,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "CubicInch"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCubicInch = new MMCode() {
+	public static final UnitOfMeasure4Code CubicInch = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CubicInch";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.CubicInch.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1096,11 +1134,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "CubicMeter"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCubicMeter = new MMCode() {
+	public static final UnitOfMeasure4Code CubicMeter = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CubicMeter";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.CubicMeter.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1119,11 +1158,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "GBFluidOunce"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGBFluidOunce = new MMCode() {
+	public static final UnitOfMeasure4Code GBFluidOunce = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GBFluidOunce";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.GBFluidOunce.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1142,11 +1182,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "USFluidOunce"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSFluidOunce = new MMCode() {
+	public static final UnitOfMeasure4Code USFluidOunce = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USFluidOunce";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.USFluidOunce.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1165,11 +1206,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Bag"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBag = new MMCode() {
+	public static final UnitOfMeasure4Code Bag = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bag";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Bag.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1188,11 +1230,12 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "Bale"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBale = new MMCode() {
+	public static final UnitOfMeasure4Code Bale = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bale";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.Bale.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1211,32 +1254,114 @@ public class UnitOfMeasure4Code extends UnitOfMeasure2Code {
 	 * name} = "MetricTon"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMetricTon = new MMCode() {
+	public static final UnitOfMeasure4Code MetricTon = new UnitOfMeasure4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MetricTon";
-			owner_lazy = () -> UnitOfMeasure4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasure4Code.mmObject();
+			codeName = UnitOfMeasure2Code.MetricTon.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, UnitOfMeasure4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected UnitOfMeasure4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("KGM");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnitOfMeasure4Code";
 				definition = "Identifies the unit of measure by means of a code. The code is taken from UN/ECE Recommendation 20.";
-				code_lazy = () -> Arrays.asList(UnitOfMeasure4Code.mmKilogram, UnitOfMeasure4Code.mmEach, UnitOfMeasure4Code.mmGBTon, UnitOfMeasure4Code.mmMetre, UnitOfMeasure4Code.mmInch, UnitOfMeasure4Code.mmYard,
-						UnitOfMeasure4Code.mmGBGallon, UnitOfMeasure4Code.mmGram, UnitOfMeasure4Code.mmCentimetre, UnitOfMeasure4Code.mmSquareMetre, UnitOfMeasure4Code.mmFoot, UnitOfMeasure4Code.mmMile, UnitOfMeasure4Code.mmSquareInch,
-						UnitOfMeasure4Code.mmSquareFoot, UnitOfMeasure4Code.mmSquareMile, UnitOfMeasure4Code.mmOunce, UnitOfMeasure4Code.mmGBPint, UnitOfMeasure4Code.mmUSPint, UnitOfMeasure4Code.mmGBQuart, UnitOfMeasure4Code.mmUSQuart,
-						UnitOfMeasure4Code.mmUSGallon, UnitOfMeasure4Code.mmMillimetre, UnitOfMeasure4Code.mmKilometre, UnitOfMeasure4Code.mmSquareYard, UnitOfMeasure4Code.mmSquareMillimetre, UnitOfMeasure4Code.mmSquareCentimetre,
-						UnitOfMeasure4Code.mmSquareKilometre, UnitOfMeasure4Code.mmCubicMillimetre, UnitOfMeasure4Code.mmCentilitre, UnitOfMeasure4Code.mmLitre, UnitOfMeasure4Code.mmPound, UnitOfMeasure4Code.mmUSTon,
-						UnitOfMeasure4Code.mmUSBarrel, UnitOfMeasure4Code.mmBox, UnitOfMeasure4Code.mmBottle, UnitOfMeasure4Code.mmCarton, UnitOfMeasure4Code.mmContainer, UnitOfMeasure4Code.mmCrate, UnitOfMeasure4Code.mmCubicInch,
-						UnitOfMeasure4Code.mmCubicMeter, UnitOfMeasure4Code.mmGBFluidOunce, UnitOfMeasure4Code.mmUSFluidOunce, UnitOfMeasure4Code.mmBag, UnitOfMeasure4Code.mmBale, UnitOfMeasure4Code.mmMetricTon);
 				trace_lazy = () -> UnitOfMeasure2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnitOfMeasure4Code.Kilogram, com.tools20022.repository.codeset.UnitOfMeasure4Code.Each, com.tools20022.repository.codeset.UnitOfMeasure4Code.GBTon,
+						com.tools20022.repository.codeset.UnitOfMeasure4Code.Metre, com.tools20022.repository.codeset.UnitOfMeasure4Code.Inch, com.tools20022.repository.codeset.UnitOfMeasure4Code.Yard,
+						com.tools20022.repository.codeset.UnitOfMeasure4Code.GBGallon, com.tools20022.repository.codeset.UnitOfMeasure4Code.Gram, com.tools20022.repository.codeset.UnitOfMeasure4Code.Centimetre,
+						com.tools20022.repository.codeset.UnitOfMeasure4Code.SquareMetre, com.tools20022.repository.codeset.UnitOfMeasure4Code.Foot, com.tools20022.repository.codeset.UnitOfMeasure4Code.Mile,
+						com.tools20022.repository.codeset.UnitOfMeasure4Code.SquareInch, com.tools20022.repository.codeset.UnitOfMeasure4Code.SquareFoot, com.tools20022.repository.codeset.UnitOfMeasure4Code.SquareMile,
+						com.tools20022.repository.codeset.UnitOfMeasure4Code.Ounce, com.tools20022.repository.codeset.UnitOfMeasure4Code.GBPint, com.tools20022.repository.codeset.UnitOfMeasure4Code.USPint,
+						com.tools20022.repository.codeset.UnitOfMeasure4Code.GBQuart, com.tools20022.repository.codeset.UnitOfMeasure4Code.USQuart, com.tools20022.repository.codeset.UnitOfMeasure4Code.USGallon,
+						com.tools20022.repository.codeset.UnitOfMeasure4Code.Millimetre, com.tools20022.repository.codeset.UnitOfMeasure4Code.Kilometre, com.tools20022.repository.codeset.UnitOfMeasure4Code.SquareYard,
+						com.tools20022.repository.codeset.UnitOfMeasure4Code.SquareMillimetre, com.tools20022.repository.codeset.UnitOfMeasure4Code.SquareCentimetre, com.tools20022.repository.codeset.UnitOfMeasure4Code.SquareKilometre,
+						com.tools20022.repository.codeset.UnitOfMeasure4Code.CubicMillimetre, com.tools20022.repository.codeset.UnitOfMeasure4Code.Centilitre, com.tools20022.repository.codeset.UnitOfMeasure4Code.Litre,
+						com.tools20022.repository.codeset.UnitOfMeasure4Code.Pound, com.tools20022.repository.codeset.UnitOfMeasure4Code.USTon, com.tools20022.repository.codeset.UnitOfMeasure4Code.USBarrel,
+						com.tools20022.repository.codeset.UnitOfMeasure4Code.Box, com.tools20022.repository.codeset.UnitOfMeasure4Code.Bottle, com.tools20022.repository.codeset.UnitOfMeasure4Code.Carton,
+						com.tools20022.repository.codeset.UnitOfMeasure4Code.Container, com.tools20022.repository.codeset.UnitOfMeasure4Code.Crate, com.tools20022.repository.codeset.UnitOfMeasure4Code.CubicInch,
+						com.tools20022.repository.codeset.UnitOfMeasure4Code.CubicMeter, com.tools20022.repository.codeset.UnitOfMeasure4Code.GBFluidOunce, com.tools20022.repository.codeset.UnitOfMeasure4Code.USFluidOunce,
+						com.tools20022.repository.codeset.UnitOfMeasure4Code.Bag, com.tools20022.repository.codeset.UnitOfMeasure4Code.Bale, com.tools20022.repository.codeset.UnitOfMeasure4Code.MetricTon);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Kilogram.getCodeName().get(), Kilogram);
+		codesByName.put(Each.getCodeName().get(), Each);
+		codesByName.put(GBTon.getCodeName().get(), GBTon);
+		codesByName.put(Metre.getCodeName().get(), Metre);
+		codesByName.put(Inch.getCodeName().get(), Inch);
+		codesByName.put(Yard.getCodeName().get(), Yard);
+		codesByName.put(GBGallon.getCodeName().get(), GBGallon);
+		codesByName.put(Gram.getCodeName().get(), Gram);
+		codesByName.put(Centimetre.getCodeName().get(), Centimetre);
+		codesByName.put(SquareMetre.getCodeName().get(), SquareMetre);
+		codesByName.put(Foot.getCodeName().get(), Foot);
+		codesByName.put(Mile.getCodeName().get(), Mile);
+		codesByName.put(SquareInch.getCodeName().get(), SquareInch);
+		codesByName.put(SquareFoot.getCodeName().get(), SquareFoot);
+		codesByName.put(SquareMile.getCodeName().get(), SquareMile);
+		codesByName.put(Ounce.getCodeName().get(), Ounce);
+		codesByName.put(GBPint.getCodeName().get(), GBPint);
+		codesByName.put(USPint.getCodeName().get(), USPint);
+		codesByName.put(GBQuart.getCodeName().get(), GBQuart);
+		codesByName.put(USQuart.getCodeName().get(), USQuart);
+		codesByName.put(USGallon.getCodeName().get(), USGallon);
+		codesByName.put(Millimetre.getCodeName().get(), Millimetre);
+		codesByName.put(Kilometre.getCodeName().get(), Kilometre);
+		codesByName.put(SquareYard.getCodeName().get(), SquareYard);
+		codesByName.put(SquareMillimetre.getCodeName().get(), SquareMillimetre);
+		codesByName.put(SquareCentimetre.getCodeName().get(), SquareCentimetre);
+		codesByName.put(SquareKilometre.getCodeName().get(), SquareKilometre);
+		codesByName.put(CubicMillimetre.getCodeName().get(), CubicMillimetre);
+		codesByName.put(Centilitre.getCodeName().get(), Centilitre);
+		codesByName.put(Litre.getCodeName().get(), Litre);
+		codesByName.put(Pound.getCodeName().get(), Pound);
+		codesByName.put(USTon.getCodeName().get(), USTon);
+		codesByName.put(USBarrel.getCodeName().get(), USBarrel);
+		codesByName.put(Box.getCodeName().get(), Box);
+		codesByName.put(Bottle.getCodeName().get(), Bottle);
+		codesByName.put(Carton.getCodeName().get(), Carton);
+		codesByName.put(Container.getCodeName().get(), Container);
+		codesByName.put(Crate.getCodeName().get(), Crate);
+		codesByName.put(CubicInch.getCodeName().get(), CubicInch);
+		codesByName.put(CubicMeter.getCodeName().get(), CubicMeter);
+		codesByName.put(GBFluidOunce.getCodeName().get(), GBFluidOunce);
+		codesByName.put(USFluidOunce.getCodeName().get(), USFluidOunce);
+		codesByName.put(Bag.getCodeName().get(), Bag);
+		codesByName.put(Bale.getCodeName().get(), Bale);
+		codesByName.put(MetricTon.getCodeName().get(), MetricTon);
+	}
+
+	public static UnitOfMeasure4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static UnitOfMeasure4Code[] values() {
+		UnitOfMeasure4Code[] values = new UnitOfMeasure4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, UnitOfMeasure4Code> {
+		@Override
+		public UnitOfMeasure4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(UnitOfMeasure4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Contains a list of owners and the quantity of securities they own.
@@ -49,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,8 +68,8 @@ public class ShareholderRegister {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Max35Text identification;
 	/**
-	 * Uniquely identifies the shareholder registry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -93,8 +94,8 @@ public class ShareholderRegister {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ShareholderRegister.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ShareholderRegister.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Uniquely identifies the shareholder registry.";
@@ -113,8 +114,8 @@ public class ShareholderRegister {
 	};
 	protected DecimalNumber entry;
 	/**
-	 * Number of securities issued by the same entity and registered by owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,8 +143,8 @@ public class ShareholderRegister {
 	 */
 	public static final MMBusinessAttribute mmEntry = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ShareholderRegister.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ShareholderRegister.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Entry";
 			definition = "Number of securities issued by the same entity and registered by owner.";
@@ -164,7 +165,7 @@ public class ShareholderRegister {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ShareholderRegister";
 				definition = "Contains a list of owners and the quantity of securities they own.";
@@ -183,15 +184,17 @@ public class ShareholderRegister {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public ShareholderRegister setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
 	public DecimalNumber getEntry() {
 		return entry;
 	}
 
-	public void setEntry(DecimalNumber entry) {
-		this.entry = entry;
+	public ShareholderRegister setEntry(DecimalNumber entry) {
+		this.entry = Objects.requireNonNull(entry);
+		return this;
 	}
 }

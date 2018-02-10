@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AttributeTypeCode;
+import com.tools20022.repository.codeset.AttributeType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Attributes of certificate extensions.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode
- * AttributeTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeType2Code#mmEmailAddress
- * AttributeType2Code.mmEmailAddress}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeType2Code#EmailAddress
+ * AttributeType2Code.EmailAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeType2Code#mmChallengePassword
- * AttributeType2Code.mmChallengePassword}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeType2Code#ChallengePassword
+ * AttributeType2Code.ChallengePassword}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode
+ * AttributeTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Attributes of certificate extensions."</li>
  * </ul>
  */
-public class AttributeType2Code extends AttributeTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AttributeType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class AttributeType2Code extends AttributeTypeCode {
 	 * name} = "EmailAddress"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEmailAddress = new MMCode() {
+	public static final AttributeType2Code EmailAddress = new AttributeType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmailAddress";
-			owner_lazy = () -> AttributeType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttributeType2Code.mmObject();
+			codeName = AttributeTypeCode.EmailAddress.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class AttributeType2Code extends AttributeTypeCode {
 	 * name} = "ChallengePassword"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmChallengePassword = new MMCode() {
+	public static final AttributeType2Code ChallengePassword = new AttributeType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChallengePassword";
-			owner_lazy = () -> AttributeType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttributeType2Code.mmObject();
+			codeName = AttributeTypeCode.ChallengePassword.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AttributeType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AttributeType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AttributeType2Code";
 				definition = "Attributes of certificate extensions.";
-				code_lazy = () -> Arrays.asList(AttributeType2Code.mmEmailAddress, AttributeType2Code.mmChallengePassword);
 				trace_lazy = () -> AttributeTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttributeType2Code.EmailAddress, com.tools20022.repository.codeset.AttributeType2Code.ChallengePassword);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(EmailAddress.getCodeName().get(), EmailAddress);
+		codesByName.put(ChallengePassword.getCodeName().get(), ChallengePassword);
+	}
+
+	public static AttributeType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AttributeType2Code[] values() {
+		AttributeType2Code[] values = new AttributeType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AttributeType2Code> {
+		@Override
+		public AttributeType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AttributeType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

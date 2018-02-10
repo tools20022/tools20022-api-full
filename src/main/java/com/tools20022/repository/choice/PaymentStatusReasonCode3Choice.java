@@ -28,6 +28,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusJustification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "A choice between payment status reasons."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentStatusReasonCode3Choice", propOrder = {"unmatchedStatusReason", "cancelledStatusReason", "suspendedStatusReason", "pendingFailingSettlement", "pendingSettlement", "proprietaryRejectionReason"})
 public class PaymentStatusReasonCode3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UmtchdStsRsn", required = true)
 	protected UnmatchedStatusReason1Code unmatchedStatusReason;
 	/**
-	 * Reason why the payment status is unmatched.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +124,7 @@ public class PaymentStatusReasonCode3Choice {
 	public static final MMMessageAttribute mmUnmatchedStatusReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> PaymentStatusReasonCode3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusReasonCode3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UmtchdStsRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,10 +135,11 @@ public class PaymentStatusReasonCode3Choice {
 			simpleType_lazy = () -> UnmatchedStatusReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "CancStsRsn", required = true)
 	protected CancelledStatusReason1Code cancelledStatusReason;
 	/**
-	 * Reason why the payment status is cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +167,7 @@ public class PaymentStatusReasonCode3Choice {
 	 */
 	public static final MMMessageAttribute mmCancelledStatusReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentStatusReasonCode3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusReasonCode3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CancStsRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,10 +178,11 @@ public class PaymentStatusReasonCode3Choice {
 			simpleType_lazy = () -> CancelledStatusReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SspdStsRsn", required = true)
 	protected SuspendedStatusReason1Code suspendedStatusReason;
 	/**
-	 * Reason why the payment status is suspended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,7 +210,7 @@ public class PaymentStatusReasonCode3Choice {
 	 */
 	public static final MMMessageAttribute mmSuspendedStatusReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentStatusReasonCode3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusReasonCode3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SspdStsRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,10 +221,11 @@ public class PaymentStatusReasonCode3Choice {
 			simpleType_lazy = () -> SuspendedStatusReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PdgFlngSttlm", required = true)
 	protected PendingFailingSettlement1Code pendingFailingSettlement;
 	/**
-	 * Reason why the payment status is pending (failing settlement).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -255,7 +260,7 @@ public class PaymentStatusReasonCode3Choice {
 	public static final MMMessageAttribute mmPendingFailingSettlement = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmPendingFailingSettlement;
-			componentContext_lazy = () -> PaymentStatusReasonCode3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusReasonCode3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PdgFlngSttlm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,10 +271,11 @@ public class PaymentStatusReasonCode3Choice {
 			simpleType_lazy = () -> PendingFailingSettlement1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PdgSttlm", required = true)
 	protected PendingSettlement2Code pendingSettlement;
 	/**
-	 * Reason why the payment status is pending (settlement).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -303,7 +309,7 @@ public class PaymentStatusReasonCode3Choice {
 	public static final MMMessageAttribute mmPendingSettlement = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmPendingSettlement;
-			componentContext_lazy = () -> PaymentStatusReasonCode3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusReasonCode3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PdgSttlm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -314,11 +320,11 @@ public class PaymentStatusReasonCode3Choice {
 			simpleType_lazy = () -> PendingSettlement2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryRjctnRsn", required = true)
 	protected ProprietaryStatusJustification proprietaryRejectionReason;
 	/**
-	 * Defines the reason that has been used by the Target2 SSP system to reject
-	 * the transaction
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -354,7 +360,7 @@ public class PaymentStatusReasonCode3Choice {
 	public static final MMMessageAttribute mmProprietaryRejectionReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
-			componentContext_lazy = () -> PaymentStatusReasonCode3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusReasonCode3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryRjctnRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -369,10 +375,11 @@ public class PaymentStatusReasonCode3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentStatusReasonCode3Choice.mmUnmatchedStatusReason, PaymentStatusReasonCode3Choice.mmCancelledStatusReason, PaymentStatusReasonCode3Choice.mmSuspendedStatusReason,
-						PaymentStatusReasonCode3Choice.mmPendingFailingSettlement, PaymentStatusReasonCode3Choice.mmPendingSettlement, PaymentStatusReasonCode3Choice.mmProprietaryRejectionReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusReasonCode3Choice.mmUnmatchedStatusReason, com.tools20022.repository.choice.PaymentStatusReasonCode3Choice.mmCancelledStatusReason,
+						com.tools20022.repository.choice.PaymentStatusReasonCode3Choice.mmSuspendedStatusReason, com.tools20022.repository.choice.PaymentStatusReasonCode3Choice.mmPendingFailingSettlement,
+						com.tools20022.repository.choice.PaymentStatusReasonCode3Choice.mmPendingSettlement, com.tools20022.repository.choice.PaymentStatusReasonCode3Choice.mmProprietaryRejectionReason);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentStatusReasonCode3Choice";
 				definition = "A choice between payment status reasons.";
@@ -381,57 +388,57 @@ public class PaymentStatusReasonCode3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UmtchdStsRsn", required = true)
 	public UnmatchedStatusReason1Code getUnmatchedStatusReason() {
 		return unmatchedStatusReason;
 	}
 
-	public void setUnmatchedStatusReason(UnmatchedStatusReason1Code unmatchedStatusReason) {
-		this.unmatchedStatusReason = unmatchedStatusReason;
+	public PaymentStatusReasonCode3Choice setUnmatchedStatusReason(UnmatchedStatusReason1Code unmatchedStatusReason) {
+		this.unmatchedStatusReason = Objects.requireNonNull(unmatchedStatusReason);
+		return this;
 	}
 
-	@XmlElement(name = "CancStsRsn", required = true)
 	public CancelledStatusReason1Code getCancelledStatusReason() {
 		return cancelledStatusReason;
 	}
 
-	public void setCancelledStatusReason(CancelledStatusReason1Code cancelledStatusReason) {
-		this.cancelledStatusReason = cancelledStatusReason;
+	public PaymentStatusReasonCode3Choice setCancelledStatusReason(CancelledStatusReason1Code cancelledStatusReason) {
+		this.cancelledStatusReason = Objects.requireNonNull(cancelledStatusReason);
+		return this;
 	}
 
-	@XmlElement(name = "SspdStsRsn", required = true)
 	public SuspendedStatusReason1Code getSuspendedStatusReason() {
 		return suspendedStatusReason;
 	}
 
-	public void setSuspendedStatusReason(SuspendedStatusReason1Code suspendedStatusReason) {
-		this.suspendedStatusReason = suspendedStatusReason;
+	public PaymentStatusReasonCode3Choice setSuspendedStatusReason(SuspendedStatusReason1Code suspendedStatusReason) {
+		this.suspendedStatusReason = Objects.requireNonNull(suspendedStatusReason);
+		return this;
 	}
 
-	@XmlElement(name = "PdgFlngSttlm", required = true)
 	public PendingFailingSettlement1Code getPendingFailingSettlement() {
 		return pendingFailingSettlement;
 	}
 
-	public void setPendingFailingSettlement(PendingFailingSettlement1Code pendingFailingSettlement) {
-		this.pendingFailingSettlement = pendingFailingSettlement;
+	public PaymentStatusReasonCode3Choice setPendingFailingSettlement(PendingFailingSettlement1Code pendingFailingSettlement) {
+		this.pendingFailingSettlement = Objects.requireNonNull(pendingFailingSettlement);
+		return this;
 	}
 
-	@XmlElement(name = "PdgSttlm", required = true)
 	public PendingSettlement2Code getPendingSettlement() {
 		return pendingSettlement;
 	}
 
-	public void setPendingSettlement(PendingSettlement2Code pendingSettlement) {
-		this.pendingSettlement = pendingSettlement;
+	public PaymentStatusReasonCode3Choice setPendingSettlement(PendingSettlement2Code pendingSettlement) {
+		this.pendingSettlement = Objects.requireNonNull(pendingSettlement);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryRjctnRsn", required = true)
 	public ProprietaryStatusJustification getProprietaryRejectionReason() {
 		return proprietaryRejectionReason;
 	}
 
-	public void setProprietaryRejectionReason(ProprietaryStatusJustification proprietaryRejectionReason) {
-		this.proprietaryRejectionReason = proprietaryRejectionReason;
+	public PaymentStatusReasonCode3Choice setProprietaryRejectionReason(ProprietaryStatusJustification proprietaryRejectionReason) {
+		this.proprietaryRejectionReason = Objects.requireNonNull(proprietaryRejectionReason);
+		return this;
 	}
 }

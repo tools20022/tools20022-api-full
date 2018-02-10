@@ -32,6 +32,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +75,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -89,18 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PartyIdentification24Choice", propOrder = {"BICOrBEI", "MIC"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PartyIdentification24Choice", propOrder = {"bICOrBEI", "mIC"})
 public class PartyIdentification24Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BICOrBEI", required = true)
 	protected AnyBICIdentifier bICOrBEI;
 	/**
-	 * Code allocated to a financial or non-financial institution by the ISO
-	 * 9362 Registration Authority, as described in ISO 9362
-	 * "Banking - Banking telecommunication messages - Business identifier code (BIC)"
-	 * .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -136,7 +135,7 @@ public class PartyIdentification24Choice {
 	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
-			componentContext_lazy = () -> PartyIdentification24Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification24Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BICOrBEI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,12 +146,11 @@ public class PartyIdentification24Choice {
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "MIC", required = true)
 	protected MICIdentifier mIC;
 	/**
-	 * Market Identifier Code. Identification of a financial market, as
-	 * stipulated in the norm ISO 10383
-	 * "Codes for exchanges and market identifications".
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,7 +186,7 @@ public class PartyIdentification24Choice {
 	public static final MMMessageAttribute mmMIC = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
-			componentContext_lazy = () -> PartyIdentification24Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification24Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MIC";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,10 +201,10 @@ public class PartyIdentification24Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification24Choice.mmBICOrBEI, PartyIdentification24Choice.mmMIC);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification24Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification24Choice.mmMIC);
 				messageBuildingBlock_lazy = () -> Arrays.asList(RegulatoryTransactionReportV02.mmReportingAgent, RegulatoryTransactionReportCancellationRequestV02.mmReportingAgent);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -222,21 +220,21 @@ public class PartyIdentification24Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BICOrBEI", required = true)
 	public AnyBICIdentifier getBICOrBEI() {
 		return bICOrBEI;
 	}
 
-	public void setBICOrBEI(AnyBICIdentifier bICOrBEI) {
-		this.bICOrBEI = bICOrBEI;
+	public PartyIdentification24Choice setBICOrBEI(AnyBICIdentifier bICOrBEI) {
+		this.bICOrBEI = Objects.requireNonNull(bICOrBEI);
+		return this;
 	}
 
-	@XmlElement(name = "MIC", required = true)
 	public MICIdentifier getMIC() {
 		return mIC;
 	}
 
-	public void setMIC(MICIdentifier mIC) {
-		this.mIC = mIC;
+	public PartyIdentification24Choice setMIC(MICIdentifier mIC) {
+		this.mIC = Objects.requireNonNull(mIC);
+		return this;
 	}
 }

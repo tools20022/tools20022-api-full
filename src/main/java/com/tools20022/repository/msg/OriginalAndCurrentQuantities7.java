@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +28,7 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Signed face amount and amortised value."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OriginalAndCurrentQuantities7", propOrder = {"shortLongPosition", "faceAmount", "amortisedValue"})
 public class OriginalAndCurrentQuantities7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ShrtLngPos", required = true)
 	protected ShortLong1Code shortLongPosition;
 	/**
-	 * Sign of the quantity of security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +109,7 @@ public class OriginalAndCurrentQuantities7 {
 	 */
 	public static final MMMessageAttribute mmShortLongPosition = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OriginalAndCurrentQuantities7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalAndCurrentQuantities7.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtLngPos";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,11 +120,11 @@ public class OriginalAndCurrentQuantities7 {
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "FaceAmt", required = true)
 	protected RestrictedFINImpliedCurrencyAndAmount faceAmount;
 	/**
-	 * Quantity expressed as an amount representing the face amount, that is,
-	 * the principal, of a debt instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,6 +145,9 @@ public class OriginalAndCurrentQuantities7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FaceAmt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::4!c//FAMT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -157,9 +163,10 @@ public class OriginalAndCurrentQuantities7 {
 	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
-			componentContext_lazy = () -> OriginalAndCurrentQuantities7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalAndCurrentQuantities7.mmObject();
 			isDerived = false;
 			xmlTag = "FaceAmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::4!c//FAMT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaceAmount";
 			definition = "Quantity expressed as an amount representing the face amount, that is, the principal, of a debt instrument.";
@@ -168,12 +175,11 @@ public class OriginalAndCurrentQuantities7 {
 			simpleType_lazy = () -> RestrictedFINImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtsdVal", required = true)
 	protected RestrictedFINImpliedCurrencyAndAmount amortisedValue;
 	/**
-	 * Quantity expressed as an amount representing the current amortised face
-	 * amount of a bond, for example, a periodic reduction/increase of a bond's
-	 * principal amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -194,6 +200,9 @@ public class OriginalAndCurrentQuantities7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AmtsdVal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::4!c//AMOR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -209,9 +218,10 @@ public class OriginalAndCurrentQuantities7 {
 	public static final MMMessageAttribute mmAmortisedValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmAmortisedFaceValue;
-			componentContext_lazy = () -> OriginalAndCurrentQuantities7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalAndCurrentQuantities7.mmObject();
 			isDerived = false;
 			xmlTag = "AmtsdVal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::4!c//AMOR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmortisedValue";
 			definition = "Quantity expressed as an amount representing the current amortised face amount of a bond, for example, a periodic reduction/increase of a bond's principal amount.";
@@ -224,9 +234,10 @@ public class OriginalAndCurrentQuantities7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OriginalAndCurrentQuantities7.mmShortLongPosition, OriginalAndCurrentQuantities7.mmFaceAmount, OriginalAndCurrentQuantities7.mmAmortisedValue);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalAndCurrentQuantities7.mmShortLongPosition, com.tools20022.repository.msg.OriginalAndCurrentQuantities7.mmFaceAmount,
+						com.tools20022.repository.msg.OriginalAndCurrentQuantities7.mmAmortisedValue);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalAndCurrentQuantities7";
 				definition = "Signed face amount and amortised value.";
@@ -235,30 +246,30 @@ public class OriginalAndCurrentQuantities7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ShrtLngPos", required = true)
 	public ShortLong1Code getShortLongPosition() {
 		return shortLongPosition;
 	}
 
-	public void setShortLongPosition(ShortLong1Code shortLongPosition) {
-		this.shortLongPosition = shortLongPosition;
+	public OriginalAndCurrentQuantities7 setShortLongPosition(ShortLong1Code shortLongPosition) {
+		this.shortLongPosition = Objects.requireNonNull(shortLongPosition);
+		return this;
 	}
 
-	@XmlElement(name = "FaceAmt", required = true)
 	public RestrictedFINImpliedCurrencyAndAmount getFaceAmount() {
 		return faceAmount;
 	}
 
-	public void setFaceAmount(RestrictedFINImpliedCurrencyAndAmount faceAmount) {
-		this.faceAmount = faceAmount;
+	public OriginalAndCurrentQuantities7 setFaceAmount(RestrictedFINImpliedCurrencyAndAmount faceAmount) {
+		this.faceAmount = Objects.requireNonNull(faceAmount);
+		return this;
 	}
 
-	@XmlElement(name = "AmtsdVal", required = true)
 	public RestrictedFINImpliedCurrencyAndAmount getAmortisedValue() {
 		return amortisedValue;
 	}
 
-	public void setAmortisedValue(RestrictedFINImpliedCurrencyAndAmount amortisedValue) {
-		this.amortisedValue = amortisedValue;
+	public OriginalAndCurrentQuantities7 setAmortisedValue(RestrictedFINImpliedCurrencyAndAmount amortisedValue) {
+		this.amortisedValue = Objects.requireNonNull(amortisedValue);
+		return this;
 	}
 }

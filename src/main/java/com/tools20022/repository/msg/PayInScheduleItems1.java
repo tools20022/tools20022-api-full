@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * PayInScheduleItems}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PayInScheduleItems1", propOrder = {"amount", "deadline"})
 public class PayInScheduleItems1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * Currency and amount to be paid in.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +124,7 @@ public class PayInScheduleItems1 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
-			componentContext_lazy = () -> PayInScheduleItems1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PayInScheduleItems1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,10 +135,11 @@ public class PayInScheduleItems1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Ddln", required = true)
 	protected ISODateTime deadline;
 	/**
-	 * Time by which the amount must be paid in.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +166,7 @@ public class PayInScheduleItems1 {
 	 */
 	public static final MMMessageAttribute mmDeadline = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PayInScheduleItems1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PayInScheduleItems1.mmObject();
 			isDerived = false;
 			xmlTag = "Ddln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +181,10 @@ public class PayInScheduleItems1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PayInScheduleItems1.mmAmount, PayInScheduleItems1.mmDeadline);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PayInScheduleItems1.mmAmount, com.tools20022.repository.msg.PayInScheduleItems1.mmDeadline);
 				messageBuildingBlock_lazy = () -> Arrays.asList(PayInScheduleV03.mmPayInScheduleItem);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PayInScheduleItems1";
 				definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.";
@@ -191,21 +194,21 @@ public class PayInScheduleItems1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
-		this.amount = amount;
+	public PayInScheduleItems1 setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "Ddln", required = true)
 	public ISODateTime getDeadline() {
 		return deadline;
 	}
 
-	public void setDeadline(ISODateTime deadline) {
-		this.deadline = deadline;
+	public PayInScheduleItems1 setDeadline(ISODateTime deadline) {
+		this.deadline = Objects.requireNonNull(deadline);
+		return this;
 	}
 }

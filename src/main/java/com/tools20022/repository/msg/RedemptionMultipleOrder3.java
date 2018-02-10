@@ -25,11 +25,9 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -43,8 +41,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder3#mmCancellationRightOrExtendedCancellationRightRule
- * RedemptionMultipleOrder3.mmCancellationRightOrExtendedCancellationRightRule}</li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleOrder3#CancellationRightOrExtendedCancellationRightRule
+ * RedemptionMultipleOrder3.CancellationRightOrExtendedCancellationRightRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,8 +96,25 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBulkCashSettlementDetails1Rule#forRedemptionMultipleOrder3
+ * ConstraintBulkCashSettlementDetails1Rule.forRedemptionMultipleOrder3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementCurrency5Rule#forRedemptionMultipleOrder3
+ * ConstraintSettlementCurrency5Rule.forRedemptionMultipleOrder3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCashSettlementDateRule#forRedemptionMultipleOrder3
+ * ConstraintCashSettlementDateRule.forRedemptionMultipleOrder3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule#forRedemptionMultipleOrder3
+ * ConstraintOrderOriginatorEligibility3Rule.forRedemptionMultipleOrder3}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -113,18 +128,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RedemptionMultipleOrder3", propOrder = {"masterReference", "placeOfTrade", "orderDateTime", "expiryDateTime", "requestedFutureTradeDate", "investmentAccountDetails", "cancellationRight", "extendedCancellationRight",
 		"beneficiaryDetails", "individualOrderDetails", "bulkCashSettlementDetails", "totalSettlementAmount", "cashSettlementDate"})
 public class RedemptionMultipleOrder3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MstrRef")
 	protected Max35Text masterReference;
 	/**
-	 * Unique and unambiguous identifier for a group of individual orders, as
-	 * assigned by the instructing party. This identifier links the individual
-	 * orders together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +173,7 @@ public class RedemptionMultipleOrder3 {
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
-			componentContext_lazy = () -> RedemptionMultipleOrder3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder3.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,10 +184,11 @@ public class RedemptionMultipleOrder3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfTrad")
 	protected PlaceOfTradeIdentification1Choice placeOfTrade;
 	/**
-	 * Market in which the advised trade transaction was executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,7 +223,7 @@ public class RedemptionMultipleOrder3 {
 	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> RedemptionMultipleOrder3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder3.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,10 +234,11 @@ public class RedemptionMultipleOrder3 {
 			complexType_lazy = () -> PlaceOfTradeIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrDtTm")
 	protected ISODateTime orderDateTime;
 	/**
-	 * Date and time at which the order was placed by the investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -256,7 +272,7 @@ public class RedemptionMultipleOrder3 {
 	public static final MMMessageAttribute mmOrderDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderDateTime;
-			componentContext_lazy = () -> RedemptionMultipleOrder3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder3.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,10 +283,11 @@ public class RedemptionMultipleOrder3 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "XpryDtTm")
 	protected DateAndDateTimeChoice expiryDateTime;
 	/**
-	 * Date on which the order expires.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -304,7 +321,7 @@ public class RedemptionMultipleOrder3 {
 	public static final MMMessageAttribute mmExpiryDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmExpiryDateTime;
-			componentContext_lazy = () -> RedemptionMultipleOrder3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder3.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -315,12 +332,11 @@ public class RedemptionMultipleOrder3 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdFutrTradDt")
 	protected ISODate requestedFutureTradeDate;
 	/**
-	 * Future date at which the investor requests the order to be executed. The
-	 * specification of a requested future trade date is not allowed in some
-	 * markets. The date must be a date in the future.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -355,7 +371,7 @@ public class RedemptionMultipleOrder3 {
 	public static final MMMessageAttribute mmRequestedFutureTradeDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmRequestedExecutionDateTime;
-			componentContext_lazy = () -> RedemptionMultipleOrder3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder3.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdFutrTradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -366,10 +382,11 @@ public class RedemptionMultipleOrder3 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	protected InvestmentAccount21 investmentAccountDetails;
 	/**
-	 * Account impacted by an investment fund order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -401,7 +418,7 @@ public class RedemptionMultipleOrder3 {
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
-			componentContext_lazy = () -> RedemptionMultipleOrder3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder3.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -413,11 +430,11 @@ public class RedemptionMultipleOrder3 {
 			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount21.mmObject();
 		}
 	};
+	@XmlElement(name = "CxlRght")
 	protected CancellationRight1Code cancellationRight;
 	/**
-	 * Cancellation right of an investor with respect to an investment fund
-	 * order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -453,7 +470,7 @@ public class RedemptionMultipleOrder3 {
 	public static final MMMessageAttribute mmCancellationRight = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmCancellationRight;
-			componentContext_lazy = () -> RedemptionMultipleOrder3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder3.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRght";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -464,11 +481,11 @@ public class RedemptionMultipleOrder3 {
 			simpleType_lazy = () -> CancellationRight1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedCxlRght")
 	protected Extended350Code extendedCancellationRight;
 	/**
-	 * Cancellation right of an investor with respect to an investment fund
-	 * order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -504,7 +521,7 @@ public class RedemptionMultipleOrder3 {
 	public static final MMMessageAttribute mmExtendedCancellationRight = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmCancellationRight;
-			componentContext_lazy = () -> RedemptionMultipleOrder3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder3.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedCxlRght";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -515,10 +532,11 @@ public class RedemptionMultipleOrder3 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "BnfcryDtls")
 	protected IndividualPerson12 beneficiaryDetails;
 	/**
-	 * Additional information about the investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -549,7 +567,7 @@ public class RedemptionMultipleOrder3 {
 	public static final MMMessageAssociationEnd mmBeneficiaryDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
-			componentContext_lazy = () -> RedemptionMultipleOrder3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder3.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -561,11 +579,11 @@ public class RedemptionMultipleOrder3 {
 			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson12.mmObject();
 		}
 	};
+	@XmlElement(name = "IndvOrdrDtls", required = true)
 	protected List<com.tools20022.repository.msg.RedemptionOrder6> individualOrderDetails;
 	/**
-	 * Instruction from an investor to sell investment fund units back to the
-	 * fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -599,7 +617,7 @@ public class RedemptionMultipleOrder3 {
 	public static final MMMessageAssociationEnd mmIndividualOrderDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RedemptionOrder.mmObject();
-			componentContext_lazy = () -> RedemptionMultipleOrder3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder3.mmObject();
 			isDerived = false;
 			xmlTag = "IndvOrdrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -610,11 +628,11 @@ public class RedemptionMultipleOrder3 {
 			type_lazy = () -> com.tools20022.repository.msg.RedemptionOrder6.mmObject();
 		}
 	};
+	@XmlElement(name = "BlkCshSttlmDtls")
 	protected PaymentTransaction21 bulkCashSettlementDetails;
 	/**
-	 * Payment processes required to transfer cash from the debtor to the
-	 * creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -647,7 +665,7 @@ public class RedemptionMultipleOrder3 {
 	public static final MMMessageAssociationEnd mmBulkCashSettlementDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> BulkPayment.mmObject();
-			componentContext_lazy = () -> RedemptionMultipleOrder3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder3.mmObject();
 			isDerived = false;
 			xmlTag = "BlkCshSttlmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -659,11 +677,11 @@ public class RedemptionMultipleOrder3 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentTransaction21.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlSttlmAmt")
 	protected ActiveCurrencyAndAmount totalSettlementAmount;
 	/**
-	 * Total amount of money paid /to be paid or received in exchange for the
-	 * financial instrument in the multiple order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -699,7 +717,7 @@ public class RedemptionMultipleOrder3 {
 	public static final MMMessageAttribute mmTotalSettlementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
-			componentContext_lazy = () -> RedemptionMultipleOrder3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlSttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -710,10 +728,11 @@ public class RedemptionMultipleOrder3 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CshSttlmDt")
 	protected ISODate cashSettlementDate;
 	/**
-	 * Date on which cash is available.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -746,7 +765,7 @@ public class RedemptionMultipleOrder3 {
 	public static final MMMessageAttribute mmCashSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
-			componentContext_lazy = () -> RedemptionMultipleOrder3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder3.mmObject();
 			isDerived = false;
 			xmlTag = "CshSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -791,25 +810,31 @@ public class RedemptionMultipleOrder3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmCancellationRightOrExtendedCancellationRightRule = new MMXor() {
+	public static final MMXor CancellationRightOrExtendedCancellationRightRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRightOrExtendedCancellationRightRule";
 			definition = "Either CancellationRight or ExtendedCancellationRight may be present but not both.";
-			messageComponent_lazy = () -> RedemptionMultipleOrder3.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(RedemptionMultipleOrder3.mmCancellationRight, RedemptionMultipleOrder3.mmExtendedCancellationRight);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder3.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionMultipleOrder3.mmCancellationRight, com.tools20022.repository.msg.RedemptionMultipleOrder3.mmExtendedCancellationRight);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RedemptionMultipleOrder3.mmMasterReference, RedemptionMultipleOrder3.mmPlaceOfTrade, RedemptionMultipleOrder3.mmOrderDateTime, RedemptionMultipleOrder3.mmExpiryDateTime,
-						RedemptionMultipleOrder3.mmRequestedFutureTradeDate, RedemptionMultipleOrder3.mmInvestmentAccountDetails, RedemptionMultipleOrder3.mmCancellationRight, RedemptionMultipleOrder3.mmExtendedCancellationRight,
-						RedemptionMultipleOrder3.mmBeneficiaryDetails, RedemptionMultipleOrder3.mmIndividualOrderDetails, RedemptionMultipleOrder3.mmBulkCashSettlementDetails, RedemptionMultipleOrder3.mmTotalSettlementAmount,
-						RedemptionMultipleOrder3.mmCashSettlementDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionMultipleOrder3.mmMasterReference, com.tools20022.repository.msg.RedemptionMultipleOrder3.mmPlaceOfTrade,
+						com.tools20022.repository.msg.RedemptionMultipleOrder3.mmOrderDateTime, com.tools20022.repository.msg.RedemptionMultipleOrder3.mmExpiryDateTime,
+						com.tools20022.repository.msg.RedemptionMultipleOrder3.mmRequestedFutureTradeDate, com.tools20022.repository.msg.RedemptionMultipleOrder3.mmInvestmentAccountDetails,
+						com.tools20022.repository.msg.RedemptionMultipleOrder3.mmCancellationRight, com.tools20022.repository.msg.RedemptionMultipleOrder3.mmExtendedCancellationRight,
+						com.tools20022.repository.msg.RedemptionMultipleOrder3.mmBeneficiaryDetails, com.tools20022.repository.msg.RedemptionMultipleOrder3.mmIndividualOrderDetails,
+						com.tools20022.repository.msg.RedemptionMultipleOrder3.mmBulkCashSettlementDetails, com.tools20022.repository.msg.RedemptionMultipleOrder3.mmTotalSettlementAmount,
+						com.tools20022.repository.msg.RedemptionMultipleOrder3.mmCashSettlementDate);
 				trace_lazy = () -> RedemptionOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBulkCashSettlementDetails1Rule.forRedemptionMultipleOrder3,
+						com.tools20022.repository.constraints.ConstraintSettlementCurrency5Rule.forRedemptionMultipleOrder3, com.tools20022.repository.constraints.ConstraintCashSettlementDateRule.forRedemptionMultipleOrder3,
+						com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forRedemptionMultipleOrder3);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -820,126 +845,126 @@ public class RedemptionMultipleOrder3 {
 				})).get();
 				name = "RedemptionMultipleOrder3";
 				definition = "Instruction from an investor to sell investment fund units back to the fund.";
-				xors_lazy = () -> Arrays.asList(RedemptionMultipleOrder3.mmCancellationRightOrExtendedCancellationRightRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionMultipleOrder3.CancellationRightOrExtendedCancellationRightRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MstrRef")
-	public Max35Text getMasterReference() {
-		return masterReference;
+	public Optional<Max35Text> getMasterReference() {
+		return masterReference == null ? Optional.empty() : Optional.of(masterReference);
 	}
 
-	public void setMasterReference(Max35Text masterReference) {
+	public RedemptionMultipleOrder3 setMasterReference(Max35Text masterReference) {
 		this.masterReference = masterReference;
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfTrad")
-	public PlaceOfTradeIdentification1Choice getPlaceOfTrade() {
-		return placeOfTrade;
+	public Optional<PlaceOfTradeIdentification1Choice> getPlaceOfTrade() {
+		return placeOfTrade == null ? Optional.empty() : Optional.of(placeOfTrade);
 	}
 
-	public void setPlaceOfTrade(PlaceOfTradeIdentification1Choice placeOfTrade) {
+	public RedemptionMultipleOrder3 setPlaceOfTrade(PlaceOfTradeIdentification1Choice placeOfTrade) {
 		this.placeOfTrade = placeOfTrade;
+		return this;
 	}
 
-	@XmlElement(name = "OrdrDtTm")
-	public ISODateTime getOrderDateTime() {
-		return orderDateTime;
+	public Optional<ISODateTime> getOrderDateTime() {
+		return orderDateTime == null ? Optional.empty() : Optional.of(orderDateTime);
 	}
 
-	public void setOrderDateTime(ISODateTime orderDateTime) {
+	public RedemptionMultipleOrder3 setOrderDateTime(ISODateTime orderDateTime) {
 		this.orderDateTime = orderDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "XpryDtTm")
-	public DateAndDateTimeChoice getExpiryDateTime() {
-		return expiryDateTime;
+	public Optional<DateAndDateTimeChoice> getExpiryDateTime() {
+		return expiryDateTime == null ? Optional.empty() : Optional.of(expiryDateTime);
 	}
 
-	public void setExpiryDateTime(DateAndDateTimeChoice expiryDateTime) {
+	public RedemptionMultipleOrder3 setExpiryDateTime(DateAndDateTimeChoice expiryDateTime) {
 		this.expiryDateTime = expiryDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "ReqdFutrTradDt")
-	public ISODate getRequestedFutureTradeDate() {
-		return requestedFutureTradeDate;
+	public Optional<ISODate> getRequestedFutureTradeDate() {
+		return requestedFutureTradeDate == null ? Optional.empty() : Optional.of(requestedFutureTradeDate);
 	}
 
-	public void setRequestedFutureTradeDate(ISODate requestedFutureTradeDate) {
+	public RedemptionMultipleOrder3 setRequestedFutureTradeDate(ISODate requestedFutureTradeDate) {
 		this.requestedFutureTradeDate = requestedFutureTradeDate;
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtAcctDtls", required = true)
 	public InvestmentAccount21 getInvestmentAccountDetails() {
 		return investmentAccountDetails;
 	}
 
-	public void setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount21 investmentAccountDetails) {
-		this.investmentAccountDetails = investmentAccountDetails;
+	public RedemptionMultipleOrder3 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount21 investmentAccountDetails) {
+		this.investmentAccountDetails = Objects.requireNonNull(investmentAccountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CxlRght")
-	public CancellationRight1Code getCancellationRight() {
-		return cancellationRight;
+	public Optional<CancellationRight1Code> getCancellationRight() {
+		return cancellationRight == null ? Optional.empty() : Optional.of(cancellationRight);
 	}
 
-	public void setCancellationRight(CancellationRight1Code cancellationRight) {
+	public RedemptionMultipleOrder3 setCancellationRight(CancellationRight1Code cancellationRight) {
 		this.cancellationRight = cancellationRight;
+		return this;
 	}
 
-	@XmlElement(name = "XtndedCxlRght")
-	public Extended350Code getExtendedCancellationRight() {
-		return extendedCancellationRight;
+	public Optional<Extended350Code> getExtendedCancellationRight() {
+		return extendedCancellationRight == null ? Optional.empty() : Optional.of(extendedCancellationRight);
 	}
 
-	public void setExtendedCancellationRight(Extended350Code extendedCancellationRight) {
+	public RedemptionMultipleOrder3 setExtendedCancellationRight(Extended350Code extendedCancellationRight) {
 		this.extendedCancellationRight = extendedCancellationRight;
+		return this;
 	}
 
-	@XmlElement(name = "BnfcryDtls")
-	public IndividualPerson12 getBeneficiaryDetails() {
-		return beneficiaryDetails;
+	public Optional<IndividualPerson12> getBeneficiaryDetails() {
+		return beneficiaryDetails == null ? Optional.empty() : Optional.of(beneficiaryDetails);
 	}
 
-	public void setBeneficiaryDetails(com.tools20022.repository.msg.IndividualPerson12 beneficiaryDetails) {
+	public RedemptionMultipleOrder3 setBeneficiaryDetails(com.tools20022.repository.msg.IndividualPerson12 beneficiaryDetails) {
 		this.beneficiaryDetails = beneficiaryDetails;
+		return this;
 	}
 
-	@XmlElement(name = "IndvOrdrDtls", required = true)
 	public List<RedemptionOrder6> getIndividualOrderDetails() {
-		return individualOrderDetails;
+		return individualOrderDetails == null ? individualOrderDetails = new ArrayList<>() : individualOrderDetails;
 	}
 
-	public void setIndividualOrderDetails(List<com.tools20022.repository.msg.RedemptionOrder6> individualOrderDetails) {
-		this.individualOrderDetails = individualOrderDetails;
+	public RedemptionMultipleOrder3 setIndividualOrderDetails(List<com.tools20022.repository.msg.RedemptionOrder6> individualOrderDetails) {
+		this.individualOrderDetails = Objects.requireNonNull(individualOrderDetails);
+		return this;
 	}
 
-	@XmlElement(name = "BlkCshSttlmDtls")
-	public PaymentTransaction21 getBulkCashSettlementDetails() {
-		return bulkCashSettlementDetails;
+	public Optional<PaymentTransaction21> getBulkCashSettlementDetails() {
+		return bulkCashSettlementDetails == null ? Optional.empty() : Optional.of(bulkCashSettlementDetails);
 	}
 
-	public void setBulkCashSettlementDetails(com.tools20022.repository.msg.PaymentTransaction21 bulkCashSettlementDetails) {
+	public RedemptionMultipleOrder3 setBulkCashSettlementDetails(com.tools20022.repository.msg.PaymentTransaction21 bulkCashSettlementDetails) {
 		this.bulkCashSettlementDetails = bulkCashSettlementDetails;
+		return this;
 	}
 
-	@XmlElement(name = "TtlSttlmAmt")
-	public ActiveCurrencyAndAmount getTotalSettlementAmount() {
-		return totalSettlementAmount;
+	public Optional<ActiveCurrencyAndAmount> getTotalSettlementAmount() {
+		return totalSettlementAmount == null ? Optional.empty() : Optional.of(totalSettlementAmount);
 	}
 
-	public void setTotalSettlementAmount(ActiveCurrencyAndAmount totalSettlementAmount) {
+	public RedemptionMultipleOrder3 setTotalSettlementAmount(ActiveCurrencyAndAmount totalSettlementAmount) {
 		this.totalSettlementAmount = totalSettlementAmount;
+		return this;
 	}
 
-	@XmlElement(name = "CshSttlmDt")
-	public ISODate getCashSettlementDate() {
-		return cashSettlementDate;
+	public Optional<ISODate> getCashSettlementDate() {
+		return cashSettlementDate == null ? Optional.empty() : Optional.of(cashSettlementDate);
 	}
 
-	public void setCashSettlementDate(ISODate cashSettlementDate) {
+	public RedemptionMultipleOrder3 setCashSettlementDate(ISODate cashSettlementDate) {
 		this.cashSettlementDate = cashSettlementDate;
+		return this;
 	}
 }

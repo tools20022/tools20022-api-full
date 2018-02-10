@@ -21,9 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,16 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Contains information about the payload."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PayloadDescription1", propOrder = {"payloadDetails", "applicationSpecificInformation", "payloadTypeDetails", "manifestDetails"})
 public class PayloadDescription1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PyldDtls", required = true)
 	protected PayloadDetails1 payloadDetails;
 	/**
-	 * This component is used to identify the instance of the document
-	 * exchanged.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -104,7 +103,7 @@ public class PayloadDescription1 {
 	 */
 	public static final MMMessageAssociationEnd mmPayloadDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PayloadDescription1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PayloadDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "PyldDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,11 +115,11 @@ public class PayloadDescription1 {
 			type_lazy = () -> com.tools20022.repository.msg.PayloadDetails1.mmObject();
 		}
 	};
+	@XmlElement(name = "ApplSpcfcInf")
 	protected ApplicationSpecifics1 applicationSpecificInformation;
 	/**
-	 * Contains business information that is considered as necessary by the
-	 * service provider.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -148,7 +147,7 @@ public class PayloadDescription1 {
 	 */
 	public static final MMMessageAssociationEnd mmApplicationSpecificInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PayloadDescription1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PayloadDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "ApplSpcfcInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,10 +159,11 @@ public class PayloadDescription1 {
 			type_lazy = () -> com.tools20022.repository.msg.ApplicationSpecifics1.mmObject();
 		}
 	};
+	@XmlElement(name = "PyldTpDtls", required = true)
 	protected PayloadTypeDetails1 payloadTypeDetails;
 	/**
-	 * Identification of the type of payload.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -189,7 +189,7 @@ public class PayloadDescription1 {
 	 */
 	public static final MMMessageAssociationEnd mmPayloadTypeDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PayloadDescription1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PayloadDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "PyldTpDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,11 +201,11 @@ public class PayloadDescription1 {
 			type_lazy = () -> com.tools20022.repository.msg.PayloadTypeDetails1.mmObject();
 		}
 	};
+	@XmlElement(name = "MnfstDtls")
 	protected List<com.tools20022.repository.msg.ManifestDetails1> manifestDetails;
 	/**
-	 * Manifest that describes the related items or attachments.<br>
-	 * This block is repeated for each different type of item.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -233,7 +233,7 @@ public class PayloadDescription1 {
 	 */
 	public static final MMMessageAssociationEnd mmManifestDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PayloadDescription1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PayloadDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "MnfstDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,8 +248,9 @@ public class PayloadDescription1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PayloadDescription1.mmPayloadDetails, PayloadDescription1.mmApplicationSpecificInformation, PayloadDescription1.mmPayloadTypeDetails, PayloadDescription1.mmManifestDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PayloadDescription1.mmPayloadDetails, com.tools20022.repository.msg.PayloadDescription1.mmApplicationSpecificInformation,
+						com.tools20022.repository.msg.PayloadDescription1.mmPayloadTypeDetails, com.tools20022.repository.msg.PayloadDescription1.mmManifestDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PayloadDescription1";
 				definition = "Contains information about the payload.";
@@ -258,39 +259,39 @@ public class PayloadDescription1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PyldDtls", required = true)
 	public PayloadDetails1 getPayloadDetails() {
 		return payloadDetails;
 	}
 
-	public void setPayloadDetails(com.tools20022.repository.msg.PayloadDetails1 payloadDetails) {
-		this.payloadDetails = payloadDetails;
+	public PayloadDescription1 setPayloadDetails(com.tools20022.repository.msg.PayloadDetails1 payloadDetails) {
+		this.payloadDetails = Objects.requireNonNull(payloadDetails);
+		return this;
 	}
 
-	@XmlElement(name = "ApplSpcfcInf")
-	public ApplicationSpecifics1 getApplicationSpecificInformation() {
-		return applicationSpecificInformation;
+	public Optional<ApplicationSpecifics1> getApplicationSpecificInformation() {
+		return applicationSpecificInformation == null ? Optional.empty() : Optional.of(applicationSpecificInformation);
 	}
 
-	public void setApplicationSpecificInformation(com.tools20022.repository.msg.ApplicationSpecifics1 applicationSpecificInformation) {
+	public PayloadDescription1 setApplicationSpecificInformation(com.tools20022.repository.msg.ApplicationSpecifics1 applicationSpecificInformation) {
 		this.applicationSpecificInformation = applicationSpecificInformation;
+		return this;
 	}
 
-	@XmlElement(name = "PyldTpDtls", required = true)
 	public PayloadTypeDetails1 getPayloadTypeDetails() {
 		return payloadTypeDetails;
 	}
 
-	public void setPayloadTypeDetails(com.tools20022.repository.msg.PayloadTypeDetails1 payloadTypeDetails) {
-		this.payloadTypeDetails = payloadTypeDetails;
+	public PayloadDescription1 setPayloadTypeDetails(com.tools20022.repository.msg.PayloadTypeDetails1 payloadTypeDetails) {
+		this.payloadTypeDetails = Objects.requireNonNull(payloadTypeDetails);
+		return this;
 	}
 
-	@XmlElement(name = "MnfstDtls")
 	public List<ManifestDetails1> getManifestDetails() {
-		return manifestDetails;
+		return manifestDetails == null ? manifestDetails = new ArrayList<>() : manifestDetails;
 	}
 
-	public void setManifestDetails(List<com.tools20022.repository.msg.ManifestDetails1> manifestDetails) {
-		this.manifestDetails = manifestDetails;
+	public PayloadDescription1 setManifestDetails(List<com.tools20022.repository.msg.ManifestDetails1> manifestDetails) {
+		this.manifestDetails = Objects.requireNonNull(manifestDetails);
+		return this;
 	}
 }

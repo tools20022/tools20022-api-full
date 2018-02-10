@@ -17,55 +17,56 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OrderStatusCode;
+import com.tools20022.repository.codeset.OrderStatus8Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies current status of order.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus8Code#Cancelled
+ * OrderStatus8Code.Cancelled}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus8Code#New
+ * OrderStatus8Code.New}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus8Code#Replaced
+ * OrderStatus8Code.Replaced}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus8Code#Stopped
+ * OrderStatus8Code.Stopped}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus8Code#Rejected
+ * OrderStatus8Code.Rejected}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus8Code#Expired
+ * OrderStatus8Code.Expired}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus8Code#SentToNextParty
+ * OrderStatus8Code.SentToNextParty}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus8Code#Received
+ * OrderStatus8Code.Received}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus8Code#PendingCancel
+ * OrderStatus8Code.PendingCancel}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.OrderStatusCode
  * OrderStatusCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus8Code#mmCancelled
- * OrderStatus8Code.mmCancelled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus8Code#mmNew
- * OrderStatus8Code.mmNew}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus8Code#mmReplaced
- * OrderStatus8Code.mmReplaced}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus8Code#mmStopped
- * OrderStatus8Code.mmStopped}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus8Code#mmRejected
- * OrderStatus8Code.mmRejected}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus8Code#mmExpired
- * OrderStatus8Code.mmExpired}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus8Code#mmSentToNextParty
- * OrderStatus8Code.mmSentToNextParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus8Code#mmReceived
- * OrderStatus8Code.mmReceived}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus8Code#mmPendingCancel
- * OrderStatus8Code.mmPendingCancel}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies current status of order."</li>
  * </ul>
  */
-public class OrderStatus8Code extends OrderStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OrderStatus8Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,6 +90,9 @@ public class OrderStatus8Code extends OrderStatusCode {
 	 * {@linkplain com.tools20022.repository.codeset.OrderStatus8Code
 	 * OrderStatus8Code}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -95,11 +100,13 @@ public class OrderStatus8Code extends OrderStatusCode {
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelled = new MMCode() {
+	public static final OrderStatus8Code Cancelled = new OrderStatus8Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
-			owner_lazy = () -> OrderStatus8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus8Code.mmObject();
+			codeName = OrderStatusCode.Cancelled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,6 +117,9 @@ public class OrderStatus8Code extends OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.OrderStatus8Code
 	 * OrderStatus8Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -118,11 +128,13 @@ public class OrderStatus8Code extends OrderStatusCode {
 	 * name} = "New"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNew = new MMCode() {
+	public static final OrderStatus8Code New = new OrderStatus8Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "New";
-			owner_lazy = () -> OrderStatus8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus8Code.mmObject();
+			codeName = OrderStatusCode.New.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,6 +145,9 @@ public class OrderStatus8Code extends OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.OrderStatus8Code
 	 * OrderStatus8Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -141,11 +156,13 @@ public class OrderStatus8Code extends OrderStatusCode {
 	 * name} = "Replaced"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReplaced = new MMCode() {
+	public static final OrderStatus8Code Replaced = new OrderStatus8Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replaced";
-			owner_lazy = () -> OrderStatus8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus8Code.mmObject();
+			codeName = OrderStatusCode.Replaced.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -156,6 +173,9 @@ public class OrderStatus8Code extends OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.OrderStatus8Code
 	 * OrderStatus8Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -164,11 +184,13 @@ public class OrderStatus8Code extends OrderStatusCode {
 	 * name} = "Stopped"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStopped = new MMCode() {
+	public static final OrderStatus8Code Stopped = new OrderStatus8Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stopped";
-			owner_lazy = () -> OrderStatus8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus8Code.mmObject();
+			codeName = OrderStatusCode.Stopped.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -179,6 +201,9 @@ public class OrderStatus8Code extends OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.OrderStatus8Code
 	 * OrderStatus8Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -187,11 +212,13 @@ public class OrderStatus8Code extends OrderStatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final OrderStatus8Code Rejected = new OrderStatus8Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> OrderStatus8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus8Code.mmObject();
+			codeName = OrderStatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -203,6 +230,9 @@ public class OrderStatus8Code extends OrderStatusCode {
 	 * {@linkplain com.tools20022.repository.codeset.OrderStatus8Code
 	 * OrderStatus8Code}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -210,11 +240,13 @@ public class OrderStatus8Code extends OrderStatusCode {
 	 * name} = "Expired"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExpired = new MMCode() {
+	public static final OrderStatus8Code Expired = new OrderStatus8Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expired";
-			owner_lazy = () -> OrderStatus8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus8Code.mmObject();
+			codeName = OrderStatusCode.Expired.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -233,11 +265,12 @@ public class OrderStatus8Code extends OrderStatusCode {
 	 * name} = "SentToNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSentToNextParty = new MMCode() {
+	public static final OrderStatus8Code SentToNextParty = new OrderStatus8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
-			owner_lazy = () -> OrderStatus8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus8Code.mmObject();
+			codeName = OrderStatusCode.SentToNextParty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -256,11 +289,12 @@ public class OrderStatus8Code extends OrderStatusCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceived = new MMCode() {
+	public static final OrderStatus8Code Received = new OrderStatus8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
-			owner_lazy = () -> OrderStatus8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus8Code.mmObject();
+			codeName = OrderStatusCode.Received.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -272,6 +306,9 @@ public class OrderStatus8Code extends OrderStatusCode {
 	 * {@linkplain com.tools20022.repository.codeset.OrderStatus8Code
 	 * OrderStatus8Code}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -279,26 +316,66 @@ public class OrderStatus8Code extends OrderStatusCode {
 	 * name} = "PendingCancel"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingCancel = new MMCode() {
+	public static final OrderStatus8Code PendingCancel = new OrderStatus8Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancel";
-			owner_lazy = () -> OrderStatus8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus8Code.mmObject();
+			codeName = OrderStatusCode.PendingCancel.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OrderStatus8Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OrderStatus8Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderStatus8Code";
 				definition = "Identifies current status of order.";
-				code_lazy = () -> Arrays.asList(OrderStatus8Code.mmCancelled, OrderStatus8Code.mmNew, OrderStatus8Code.mmReplaced, OrderStatus8Code.mmStopped, OrderStatus8Code.mmRejected, OrderStatus8Code.mmExpired,
-						OrderStatus8Code.mmSentToNextParty, OrderStatus8Code.mmReceived, OrderStatus8Code.mmPendingCancel);
 				trace_lazy = () -> OrderStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderStatus8Code.Cancelled, com.tools20022.repository.codeset.OrderStatus8Code.New, com.tools20022.repository.codeset.OrderStatus8Code.Replaced,
+						com.tools20022.repository.codeset.OrderStatus8Code.Stopped, com.tools20022.repository.codeset.OrderStatus8Code.Rejected, com.tools20022.repository.codeset.OrderStatus8Code.Expired,
+						com.tools20022.repository.codeset.OrderStatus8Code.SentToNextParty, com.tools20022.repository.codeset.OrderStatus8Code.Received, com.tools20022.repository.codeset.OrderStatus8Code.PendingCancel);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Cancelled.getCodeName().get(), Cancelled);
+		codesByName.put(New.getCodeName().get(), New);
+		codesByName.put(Replaced.getCodeName().get(), Replaced);
+		codesByName.put(Stopped.getCodeName().get(), Stopped);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+		codesByName.put(Expired.getCodeName().get(), Expired);
+		codesByName.put(SentToNextParty.getCodeName().get(), SentToNextParty);
+		codesByName.put(Received.getCodeName().get(), Received);
+		codesByName.put(PendingCancel.getCodeName().get(), PendingCancel);
+	}
+
+	public static OrderStatus8Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OrderStatus8Code[] values() {
+		OrderStatus8Code[] values = new OrderStatus8Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OrderStatus8Code> {
+		@Override
+		public OrderStatus8Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OrderStatus8Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

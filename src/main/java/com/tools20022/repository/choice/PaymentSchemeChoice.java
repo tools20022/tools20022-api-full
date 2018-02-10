@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.CashSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentSchemeChoice", propOrder = {"code", "proprietaryInformation"})
 public class PaymentSchemeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected CashClearingSystem2Code code;
 	/**
-	 * Specifies the channel through which the payment instruction is to be
-	 * processed in coded form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +110,7 @@ public class PaymentSchemeChoice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentSchemeChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentSchemeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,15 +121,11 @@ public class PaymentSchemeChoice {
 			simpleType_lazy = () -> CashClearingSystem2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryInf", required = true)
 	protected Max35Text proprietaryInformation;
 	/**
-	 * Channel that is specific to a user community and is required for use
-	 * within that user community.
 	 * 
-	 * Usage : if the channel is included in the list of codes provided for the
-	 * payment scheme, the code element should be used instead of the
-	 * proprietary element.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +154,7 @@ public class PaymentSchemeChoice {
 	 */
 	public static final MMMessageAttribute mmProprietaryInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentSchemeChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentSchemeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +169,9 @@ public class PaymentSchemeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentSchemeChoice.mmCode, PaymentSchemeChoice.mmProprietaryInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentSchemeChoice.mmCode, com.tools20022.repository.choice.PaymentSchemeChoice.mmProprietaryInformation);
 				trace_lazy = () -> CashSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentSchemeChoice";
 				definition = "Pre-agreed offering between clearing agents, or the channel through which the payment instruction is to be processed. This payment scheme can point to a specific rulebook governing the rules of clearing and settlement between two parties.";
@@ -183,21 +180,21 @@ public class PaymentSchemeChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public CashClearingSystem2Code getCode() {
 		return code;
 	}
 
-	public void setCode(CashClearingSystem2Code code) {
-		this.code = code;
+	public PaymentSchemeChoice setCode(CashClearingSystem2Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryInf", required = true)
 	public Max35Text getProprietaryInformation() {
 		return proprietaryInformation;
 	}
 
-	public void setProprietaryInformation(Max35Text proprietaryInformation) {
-		this.proprietaryInformation = proprietaryInformation;
+	public PaymentSchemeChoice setProprietaryInformation(Max35Text proprietaryInformation) {
+		this.proprietaryInformation = Objects.requireNonNull(proprietaryInformation);
+		return this;
 	}
 }

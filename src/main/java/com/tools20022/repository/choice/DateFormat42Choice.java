@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of formats for a date."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DateFormat42Choice", propOrder = {"yearMonth", "yearMonthDay"})
 public class DateFormat42Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "YrMnth", required = true)
 	protected ISOYearMonth yearMonth;
 	/**
-	 * Year and month.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +107,7 @@ public class DateFormat42Choice {
 	public static final MMMessageAttribute mmYearMonth = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmSeriesIssueIdentificationDate;
-			componentContext_lazy = () -> DateFormat42Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat42Choice.mmObject();
 			isDerived = false;
 			xmlTag = "YrMnth";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +118,11 @@ public class DateFormat42Choice {
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
 		}
 	};
+	@XmlElement(name = "YrMnthDay", required = true)
 	protected ISODate yearMonthDay;
 	/**
-	 * Year, month and day.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,7 +155,7 @@ public class DateFormat42Choice {
 	public static final MMMessageAttribute mmYearMonthDay = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmSeriesIssueIdentificationDate;
-			componentContext_lazy = () -> DateFormat42Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat42Choice.mmObject();
 			isDerived = false;
 			xmlTag = "YrMnthDay";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,8 +170,8 @@ public class DateFormat42Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DateFormat42Choice.mmYearMonth, DateFormat42Choice.mmYearMonthDay);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat42Choice.mmYearMonth, com.tools20022.repository.choice.DateFormat42Choice.mmYearMonthDay);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateFormat42Choice";
 				definition = "Choice of formats for a date.";
@@ -177,21 +180,21 @@ public class DateFormat42Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "YrMnth", required = true)
 	public ISOYearMonth getYearMonth() {
 		return yearMonth;
 	}
 
-	public void setYearMonth(ISOYearMonth yearMonth) {
-		this.yearMonth = yearMonth;
+	public DateFormat42Choice setYearMonth(ISOYearMonth yearMonth) {
+		this.yearMonth = Objects.requireNonNull(yearMonth);
+		return this;
 	}
 
-	@XmlElement(name = "YrMnthDay", required = true)
 	public ISODate getYearMonthDay() {
 		return yearMonthDay;
 	}
 
-	public void setYearMonthDay(ISODate yearMonthDay) {
-		this.yearMonthDay = yearMonthDay;
+	public DateFormat42Choice setYearMonthDay(ISODate yearMonthDay) {
+		this.yearMonthDay = Objects.requireNonNull(yearMonthDay);
+		return this;
 	}
 }

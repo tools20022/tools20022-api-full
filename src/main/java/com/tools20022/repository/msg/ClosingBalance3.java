@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintShortLongDefaultRule#forClosingBalance3
+ * ConstraintShortLongDefaultRule.forClosingBalance3}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * ClosingBalance1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ClosingBalance3", propOrder = {"shortLongIndicator", "closingBalance"})
 public class ClosingBalance3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ShrtLngInd", required = true)
 	protected ShortLong1Code shortLongIndicator;
 	/**
-	 * Indication that the position is short or long.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,6 +112,9 @@ public class ClosingBalance3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ShrtLngInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B::4!c/[4!c[4c]]/4!c/[N]</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -119,9 +133,10 @@ public class ClosingBalance3 {
 	public static final MMMessageAttribute mmShortLongIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmShortLong;
-			componentContext_lazy = () -> ClosingBalance3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClosingBalance3.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtLngInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::4!c/[4!c[4c]]/4!c/[N]"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongIndicator";
 			definition = "Indication that the position is short or long.";
@@ -131,11 +146,11 @@ public class ClosingBalance3 {
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ClsgBal", required = true)
 	protected ClosingBalance4Choice closingBalance;
 	/**
-	 * Closing balance for the statement period (final closing balance) or of
-	 * this page (intermediary closing balance).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,6 +170,9 @@ public class ClosingBalance3 {
 	 * ClosingBalance3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClsgBal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B::FICL or INCL</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -176,9 +194,10 @@ public class ClosingBalance3 {
 	public static final MMMessageAttribute mmClosingBalance = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
-			componentContext_lazy = () -> ClosingBalance3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClosingBalance3.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::FICL or INCL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingBalance";
 			definition = "Closing balance for the statement period (final closing balance) or of this page (intermediary closing balance).";
@@ -192,9 +211,10 @@ public class ClosingBalance3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ClosingBalance3.mmShortLongIndicator, ClosingBalance3.mmClosingBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClosingBalance3.mmShortLongIndicator, com.tools20022.repository.msg.ClosingBalance3.mmClosingBalance);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintShortLongDefaultRule.forClosingBalance3);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClosingBalance3";
 				definition = "Closing balance for the statement period (final closing balance) or of this page (intermediary closing balance).";
@@ -204,21 +224,21 @@ public class ClosingBalance3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ShrtLngInd", required = true)
 	public ShortLong1Code getShortLongIndicator() {
 		return shortLongIndicator;
 	}
 
-	public void setShortLongIndicator(ShortLong1Code shortLongIndicator) {
-		this.shortLongIndicator = shortLongIndicator;
+	public ClosingBalance3 setShortLongIndicator(ShortLong1Code shortLongIndicator) {
+		this.shortLongIndicator = Objects.requireNonNull(shortLongIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "ClsgBal", required = true)
 	public ClosingBalance4Choice getClosingBalance() {
 		return closingBalance;
 	}
 
-	public void setClosingBalance(ClosingBalance4Choice closingBalance) {
-		this.closingBalance = closingBalance;
+	public ClosingBalance3 setClosingBalance(ClosingBalance4Choice closingBalance) {
+		this.closingBalance = Objects.requireNonNull(closingBalance);
+		return this;
 	}
 }

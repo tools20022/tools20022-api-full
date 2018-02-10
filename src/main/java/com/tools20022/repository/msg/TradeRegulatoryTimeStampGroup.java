@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -29,6 +30,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -82,17 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TradeRegulatoryTimeStampGroup", propOrder = {"tradeRegulatoryTimeStamp", "tradeRegulatoryTimeStampType", "tradeRegulatoryTimeStampOrigin", "deskType", "deskTypeSource", "deskOrderHandlingInstructions"})
 public class TradeRegulatoryTimeStampGroup {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradRgltryTmStmp")
 	protected ISODateTime tradeRegulatoryTimeStamp;
 	/**
-	 * Traded / Regulatory timestamp value. Used to store time information
-	 * required by government regulators or self regulatory organizations (such
-	 * as an exchange or clearing house).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,6 +108,9 @@ public class TradeRegulatoryTimeStampGroup {
 	 * TradeRegulatoryTimeStampGroup}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradRgltryTmStmp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 769</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -121,9 +126,10 @@ public class TradeRegulatoryTimeStampGroup {
 	 */
 	public static final MMMessageAttribute mmTradeRegulatoryTimeStamp = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
 			xmlTag = "TradRgltryTmStmp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "769"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeRegulatoryTimeStamp";
 			definition = "Traded / Regulatory timestamp value. Used to store time information required by government regulators or self regulatory organizations (such as an exchange or clearing house).";
@@ -132,11 +138,11 @@ public class TradeRegulatoryTimeStampGroup {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "TradRgltryTmStmpTp")
 	protected Max35Text tradeRegulatoryTimeStampType;
 	/**
-	 * Traded / Regulatory timestamp type (eg, ExecutionTime, Time In, Time Out,
-	 * BrokerReceipt, BrokerExecution, Desk receipt).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,6 +156,9 @@ public class TradeRegulatoryTimeStampGroup {
 	 * TradeRegulatoryTimeStampGroup}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradRgltryTmStmpTp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 770</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -165,9 +174,10 @@ public class TradeRegulatoryTimeStampGroup {
 	 */
 	public static final MMMessageAttribute mmTradeRegulatoryTimeStampType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
 			xmlTag = "TradRgltryTmStmpTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "770"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeRegulatoryTimeStampType";
 			definition = "Traded / Regulatory timestamp type (eg, ExecutionTime, Time In, Time Out, BrokerReceipt, BrokerExecution, Desk receipt).";
@@ -176,10 +186,11 @@ public class TradeRegulatoryTimeStampGroup {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TradRgltryTmStmpOrgn", required = true)
 	protected Max35Text tradeRegulatoryTimeStampOrigin;
 	/**
-	 * Provides the origin of the timestamp.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,7 +217,7 @@ public class TradeRegulatoryTimeStampGroup {
 	 */
 	public static final MMMessageAttribute mmTradeRegulatoryTimeStampOrigin = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
 			xmlTag = "TradRgltryTmStmpOrgn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,13 +228,11 @@ public class TradeRegulatoryTimeStampGroup {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DskTp")
 	protected Max35Text deskType;
 	/**
-	 * Type of trading desk (eg, Agency, Arbitrage, Derivatives, International,
-	 * Institutional, Preferred Trading,...). Note of applicability: values are
-	 * required in US futures markets by the Commodity Futures Trading
-	 * Commission (CFTC) to support computerized trade reconstruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -237,6 +246,9 @@ public class TradeRegulatoryTimeStampGroup {
 	 * TradeRegulatoryTimeStampGroup}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DskTp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1033</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -252,9 +264,10 @@ public class TradeRegulatoryTimeStampGroup {
 	 */
 	public static final MMMessageAttribute mmDeskType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
 			xmlTag = "DskTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1033"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeskType";
 			definition = "Type of trading desk (eg, Agency, Arbitrage, Derivatives, International, Institutional, Preferred Trading,...). Note of applicability: values are required in US futures markets by the Commodity Futures Trading Commission (CFTC) to support computerized trade reconstruction.";
@@ -263,10 +276,11 @@ public class TradeRegulatoryTimeStampGroup {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DskTpSrc")
 	protected Max35Text deskTypeSource;
 	/**
-	 * Provides the desk type source, valid value is NASD OATS.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -281,6 +295,9 @@ public class TradeRegulatoryTimeStampGroup {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DskTpSrc"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1034</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -293,9 +310,10 @@ public class TradeRegulatoryTimeStampGroup {
 	 */
 	public static final MMMessageAttribute mmDeskTypeSource = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
 			xmlTag = "DskTpSrc";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1034"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeskTypeSource";
 			definition = "Provides the desk type source, valid value is NASD OATS.";
@@ -304,13 +322,11 @@ public class TradeRegulatoryTimeStampGroup {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DskOrdrHdlgInstrs")
 	protected CustomerHandlingInstructionChoice deskOrderHandlingInstructions;
 	/**
-	 * Firms that are taking in orders manually but routing for execution
-	 * electronically and for reporting to the Order Audit Trail System must
-	 * capture the client's handling instructions.This is intended for
-	 * compliance reporting only (OATS Phase III regulatory requirement).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -326,6 +342,9 @@ public class TradeRegulatoryTimeStampGroup {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DskOrdrHdlgInstrs"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1035</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -340,9 +359,10 @@ public class TradeRegulatoryTimeStampGroup {
 	 */
 	public static final MMMessageAttribute mmDeskOrderHandlingInstructions = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
 			xmlTag = "DskOrdrHdlgInstrs";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1035"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeskOrderHandlingInstructions";
 			definition = "Firms that are taking in orders manually but routing for execution electronically and for reporting to the Order Audit Trail System must capture the client's handling instructions.This is intended for compliance reporting only (OATS Phase III regulatory requirement).";
@@ -355,10 +375,10 @@ public class TradeRegulatoryTimeStampGroup {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(TradeRegulatoryTimeStampGroup.mmTradeRegulatoryTimeStamp, TradeRegulatoryTimeStampGroup.mmTradeRegulatoryTimeStampType, TradeRegulatoryTimeStampGroup.mmTradeRegulatoryTimeStampOrigin,
-								TradeRegulatoryTimeStampGroup.mmDeskType, TradeRegulatoryTimeStampGroup.mmDeskTypeSource, TradeRegulatoryTimeStampGroup.mmDeskOrderHandlingInstructions);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmTradeRegulatoryTimeStamp, com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmTradeRegulatoryTimeStampType,
+						com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmTradeRegulatoryTimeStampOrigin, com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmDeskType,
+						com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmDeskTypeSource, com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmDeskOrderHandlingInstructions);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -374,57 +394,57 @@ public class TradeRegulatoryTimeStampGroup {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradRgltryTmStmp")
-	public ISODateTime getTradeRegulatoryTimeStamp() {
-		return tradeRegulatoryTimeStamp;
+	public Optional<ISODateTime> getTradeRegulatoryTimeStamp() {
+		return tradeRegulatoryTimeStamp == null ? Optional.empty() : Optional.of(tradeRegulatoryTimeStamp);
 	}
 
-	public void setTradeRegulatoryTimeStamp(ISODateTime tradeRegulatoryTimeStamp) {
+	public TradeRegulatoryTimeStampGroup setTradeRegulatoryTimeStamp(ISODateTime tradeRegulatoryTimeStamp) {
 		this.tradeRegulatoryTimeStamp = tradeRegulatoryTimeStamp;
+		return this;
 	}
 
-	@XmlElement(name = "TradRgltryTmStmpTp")
-	public Max35Text getTradeRegulatoryTimeStampType() {
-		return tradeRegulatoryTimeStampType;
+	public Optional<Max35Text> getTradeRegulatoryTimeStampType() {
+		return tradeRegulatoryTimeStampType == null ? Optional.empty() : Optional.of(tradeRegulatoryTimeStampType);
 	}
 
-	public void setTradeRegulatoryTimeStampType(Max35Text tradeRegulatoryTimeStampType) {
+	public TradeRegulatoryTimeStampGroup setTradeRegulatoryTimeStampType(Max35Text tradeRegulatoryTimeStampType) {
 		this.tradeRegulatoryTimeStampType = tradeRegulatoryTimeStampType;
+		return this;
 	}
 
-	@XmlElement(name = "TradRgltryTmStmpOrgn", required = true)
 	public Max35Text getTradeRegulatoryTimeStampOrigin() {
 		return tradeRegulatoryTimeStampOrigin;
 	}
 
-	public void setTradeRegulatoryTimeStampOrigin(Max35Text tradeRegulatoryTimeStampOrigin) {
-		this.tradeRegulatoryTimeStampOrigin = tradeRegulatoryTimeStampOrigin;
+	public TradeRegulatoryTimeStampGroup setTradeRegulatoryTimeStampOrigin(Max35Text tradeRegulatoryTimeStampOrigin) {
+		this.tradeRegulatoryTimeStampOrigin = Objects.requireNonNull(tradeRegulatoryTimeStampOrigin);
+		return this;
 	}
 
-	@XmlElement(name = "DskTp")
-	public Max35Text getDeskType() {
-		return deskType;
+	public Optional<Max35Text> getDeskType() {
+		return deskType == null ? Optional.empty() : Optional.of(deskType);
 	}
 
-	public void setDeskType(Max35Text deskType) {
+	public TradeRegulatoryTimeStampGroup setDeskType(Max35Text deskType) {
 		this.deskType = deskType;
+		return this;
 	}
 
-	@XmlElement(name = "DskTpSrc")
-	public Max35Text getDeskTypeSource() {
-		return deskTypeSource;
+	public Optional<Max35Text> getDeskTypeSource() {
+		return deskTypeSource == null ? Optional.empty() : Optional.of(deskTypeSource);
 	}
 
-	public void setDeskTypeSource(Max35Text deskTypeSource) {
+	public TradeRegulatoryTimeStampGroup setDeskTypeSource(Max35Text deskTypeSource) {
 		this.deskTypeSource = deskTypeSource;
+		return this;
 	}
 
-	@XmlElement(name = "DskOrdrHdlgInstrs")
-	public CustomerHandlingInstructionChoice getDeskOrderHandlingInstructions() {
-		return deskOrderHandlingInstructions;
+	public Optional<CustomerHandlingInstructionChoice> getDeskOrderHandlingInstructions() {
+		return deskOrderHandlingInstructions == null ? Optional.empty() : Optional.of(deskOrderHandlingInstructions);
 	}
 
-	public void setDeskOrderHandlingInstructions(CustomerHandlingInstructionChoice deskOrderHandlingInstructions) {
+	public TradeRegulatoryTimeStampGroup setDeskOrderHandlingInstructions(CustomerHandlingInstructionChoice deskOrderHandlingInstructions) {
 		this.deskOrderHandlingInstructions = deskOrderHandlingInstructions;
+		return this;
 	}
 }

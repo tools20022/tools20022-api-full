@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Obligation1", propOrder = {"partyA", "servicingPartyA", "partyB", "servicingPartyB", "exposureType", "valuationDate"})
 public class Obligation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PtyA", required = true)
 	protected PartyIdentification33Choice partyA;
 	/**
-	 * Defines one of the entities associated with the collateral agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -122,7 +125,7 @@ public class Obligation1 {
 	public static final MMMessageAssociationEnd mmPartyA = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Obligation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Obligation1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyA";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,11 +137,11 @@ public class Obligation1 {
 			type_lazy = () -> PartyIdentification33Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SvcgPtyA")
 	protected PartyIdentification33Choice servicingPartyA;
 	/**
-	 * Party that is acting on behalf of party A and that offers collateral
-	 * management services.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -172,7 +175,7 @@ public class Obligation1 {
 	public static final MMMessageAssociationEnd mmServicingPartyA = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Obligation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Obligation1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcgPtyA";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,10 +187,11 @@ public class Obligation1 {
 			type_lazy = () -> PartyIdentification33Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PtyB", required = true)
 	protected PartyIdentification33Choice partyB;
 	/**
-	 * Defines the other entity associated with the collateral agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -220,7 +224,7 @@ public class Obligation1 {
 	public static final MMMessageAssociationEnd mmPartyB = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Obligation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Obligation1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyB";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,11 +236,11 @@ public class Obligation1 {
 			type_lazy = () -> PartyIdentification33Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SvcgPtyB")
 	protected PartyIdentification33Choice servicingPartyB;
 	/**
-	 * Party that is acting on behalf of party B and that offers collateral
-	 * management services.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -270,7 +274,7 @@ public class Obligation1 {
 	public static final MMMessageAssociationEnd mmServicingPartyB = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Obligation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Obligation1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcgPtyB";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -282,11 +286,11 @@ public class Obligation1 {
 			type_lazy = () -> PartyIdentification33Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "XpsrTp")
 	protected ExposureType1Code exposureType;
 	/**
-	 * Specifies the underlying business area/type of trade causing the
-	 * collateral movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -321,7 +325,7 @@ public class Obligation1 {
 	public static final MMMessageAttribute mmExposureType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmExposureType;
-			componentContext_lazy = () -> Obligation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Obligation1.mmObject();
 			isDerived = false;
 			xmlTag = "XpsrTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -332,10 +336,11 @@ public class Obligation1 {
 			simpleType_lazy = () -> ExposureType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ValtnDt", required = true)
 	protected DateAndDateTimeChoice valuationDate;
 	/**
-	 * Close of business date that initiating party is valuing the margin call.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -370,7 +375,7 @@ public class Obligation1 {
 	public static final MMMessageAttribute mmValuationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmMarginCallValuationDate;
-			componentContext_lazy = () -> Obligation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Obligation1.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -385,9 +390,10 @@ public class Obligation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Obligation1.mmPartyA, Obligation1.mmServicingPartyA, Obligation1.mmPartyB, Obligation1.mmServicingPartyB, Obligation1.mmExposureType, Obligation1.mmValuationDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Obligation1.mmPartyA, com.tools20022.repository.msg.Obligation1.mmServicingPartyA, com.tools20022.repository.msg.Obligation1.mmPartyB,
+						com.tools20022.repository.msg.Obligation1.mmServicingPartyB, com.tools20022.repository.msg.Obligation1.mmExposureType, com.tools20022.repository.msg.Obligation1.mmValuationDate);
 				trace_lazy = () -> CollateralAgreement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Obligation1";
 				definition = "Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.";
@@ -396,57 +402,57 @@ public class Obligation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PtyA", required = true)
 	public PartyIdentification33Choice getPartyA() {
 		return partyA;
 	}
 
-	public void setPartyA(PartyIdentification33Choice partyA) {
-		this.partyA = partyA;
+	public Obligation1 setPartyA(PartyIdentification33Choice partyA) {
+		this.partyA = Objects.requireNonNull(partyA);
+		return this;
 	}
 
-	@XmlElement(name = "SvcgPtyA")
-	public PartyIdentification33Choice getServicingPartyA() {
-		return servicingPartyA;
+	public Optional<PartyIdentification33Choice> getServicingPartyA() {
+		return servicingPartyA == null ? Optional.empty() : Optional.of(servicingPartyA);
 	}
 
-	public void setServicingPartyA(PartyIdentification33Choice servicingPartyA) {
+	public Obligation1 setServicingPartyA(PartyIdentification33Choice servicingPartyA) {
 		this.servicingPartyA = servicingPartyA;
+		return this;
 	}
 
-	@XmlElement(name = "PtyB", required = true)
 	public PartyIdentification33Choice getPartyB() {
 		return partyB;
 	}
 
-	public void setPartyB(PartyIdentification33Choice partyB) {
-		this.partyB = partyB;
+	public Obligation1 setPartyB(PartyIdentification33Choice partyB) {
+		this.partyB = Objects.requireNonNull(partyB);
+		return this;
 	}
 
-	@XmlElement(name = "SvcgPtyB")
-	public PartyIdentification33Choice getServicingPartyB() {
-		return servicingPartyB;
+	public Optional<PartyIdentification33Choice> getServicingPartyB() {
+		return servicingPartyB == null ? Optional.empty() : Optional.of(servicingPartyB);
 	}
 
-	public void setServicingPartyB(PartyIdentification33Choice servicingPartyB) {
+	public Obligation1 setServicingPartyB(PartyIdentification33Choice servicingPartyB) {
 		this.servicingPartyB = servicingPartyB;
+		return this;
 	}
 
-	@XmlElement(name = "XpsrTp")
-	public ExposureType1Code getExposureType() {
-		return exposureType;
+	public Optional<ExposureType1Code> getExposureType() {
+		return exposureType == null ? Optional.empty() : Optional.of(exposureType);
 	}
 
-	public void setExposureType(ExposureType1Code exposureType) {
+	public Obligation1 setExposureType(ExposureType1Code exposureType) {
 		this.exposureType = exposureType;
+		return this;
 	}
 
-	@XmlElement(name = "ValtnDt", required = true)
 	public DateAndDateTimeChoice getValuationDate() {
 		return valuationDate;
 	}
 
-	public void setValuationDate(DateAndDateTimeChoice valuationDate) {
-		this.valuationDate = valuationDate;
+	public Obligation1 setValuationDate(DateAndDateTimeChoice valuationDate) {
+		this.valuationDate = Objects.requireNonNull(valuationDate);
+		return this;
 	}
 }

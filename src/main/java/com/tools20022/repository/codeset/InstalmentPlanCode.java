@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.InstalmentPlanCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of instalment plan.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstalmentPlanCode#mmEqualPayment
- * InstalmentPlanCode.mmEqualPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstalmentPlanCode#EqualPayment
+ * InstalmentPlanCode.EqualPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstalmentPlanCode#mmInequalPayment
- * InstalmentPlanCode.mmInequalPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstalmentPlanCode#InequalPayment
+ * InstalmentPlanCode.InequalPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstalmentPlanCode#mmDeferredInstalment
- * InstalmentPlanCode.mmDeferredInstalment}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstalmentPlanCode#DeferredInstalment
+ * InstalmentPlanCode.DeferredInstalment}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of instalment plan."</li>
  * </ul>
  */
-public class InstalmentPlanCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InstalmentPlanCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,12 +95,12 @@ public class InstalmentPlanCode {
 	 * "The payment is split in several instalments of equal amounts."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEqualPayment = new MMCode() {
+	public static final InstalmentPlanCode EqualPayment = new InstalmentPlanCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualPayment";
 			definition = "The payment is split in several instalments of equal amounts.";
-			owner_lazy = () -> InstalmentPlanCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstalmentPlanCode.mmObject();
 			codeName = "EQPM";
 		}
 	};
@@ -120,12 +126,12 @@ public class InstalmentPlanCode {
 	 * "The payment is split in several instalments of different amounts."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInequalPayment = new MMCode() {
+	public static final InstalmentPlanCode InequalPayment = new InstalmentPlanCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InequalPayment";
 			definition = "The payment is split in several instalments of different amounts.";
-			owner_lazy = () -> InstalmentPlanCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstalmentPlanCode.mmObject();
 			codeName = "NQPM";
 		}
 	};
@@ -150,27 +156,59 @@ public class InstalmentPlanCode {
 	 * definition} = "The first instalment is deferred."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeferredInstalment = new MMCode() {
+	public static final InstalmentPlanCode DeferredInstalment = new InstalmentPlanCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeferredInstalment";
 			definition = "The first instalment is deferred.";
-			owner_lazy = () -> InstalmentPlanCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstalmentPlanCode.mmObject();
 			codeName = "DFRI";
 		}
 	};
+	final static private LinkedHashMap<String, InstalmentPlanCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InstalmentPlanCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstalmentPlanCode";
 				definition = "Type of instalment plan.";
-				code_lazy = () -> Arrays.asList(InstalmentPlanCode.mmEqualPayment, InstalmentPlanCode.mmInequalPayment, InstalmentPlanCode.mmDeferredInstalment);
 				derivation_lazy = () -> Arrays.asList(InstalmentPlan1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstalmentPlanCode.EqualPayment, com.tools20022.repository.codeset.InstalmentPlanCode.InequalPayment,
+						com.tools20022.repository.codeset.InstalmentPlanCode.DeferredInstalment);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(EqualPayment.getCodeName().get(), EqualPayment);
+		codesByName.put(InequalPayment.getCodeName().get(), InequalPayment);
+		codesByName.put(DeferredInstalment.getCodeName().get(), DeferredInstalment);
+	}
+
+	public static InstalmentPlanCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InstalmentPlanCode[] values() {
+		InstalmentPlanCode[] values = new InstalmentPlanCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InstalmentPlanCode> {
+		@Override
+		public InstalmentPlanCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InstalmentPlanCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

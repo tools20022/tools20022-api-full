@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.NonEligibleProceedsIndicatorCode;
+import com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies information regarding the non eligibility of the outturn resources.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.NonEligibleProceedsIndicatorCode
- * NonEligibleProceedsIndicatorCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code#mmNonEligibleCurrency
- * NonEligibleProceedsIndicator1Code.mmNonEligibleCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code#NonEligibleCurrency
+ * NonEligibleProceedsIndicator1Code.NonEligibleCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code#mmAccountLimitation
- * NonEligibleProceedsIndicator1Code.mmAccountLimitation}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code#AccountLimitation
+ * NonEligibleProceedsIndicator1Code.AccountLimitation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code#mmOtherNonEligibility
- * NonEligibleProceedsIndicator1Code.mmOtherNonEligibility}</li>
+ * {@linkplain com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code#OtherNonEligibility
+ * NonEligibleProceedsIndicator1Code.OtherNonEligibility}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.NonEligibleProceedsIndicatorCode
+ * NonEligibleProceedsIndicatorCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class NonEligibleProceedsIndicator1Code extends NonEligibleProceedsIndicatorCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class NonEligibleProceedsIndicator1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,11 +93,12 @@ public class NonEligibleProceedsIndicator1Code extends NonEligibleProceedsIndica
 	 * name} = "NonEligibleCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonEligibleCurrency = new MMCode() {
+	public static final NonEligibleProceedsIndicator1Code NonEligibleCurrency = new NonEligibleProceedsIndicator1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonEligibleCurrency";
-			owner_lazy = () -> NonEligibleProceedsIndicator1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code.mmObject();
+			codeName = NonEligibleProceedsIndicatorCode.NonEligibleCurrency.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -111,11 +117,12 @@ public class NonEligibleProceedsIndicator1Code extends NonEligibleProceedsIndica
 	 * name} = "AccountLimitation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountLimitation = new MMCode() {
+	public static final NonEligibleProceedsIndicator1Code AccountLimitation = new NonEligibleProceedsIndicator1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountLimitation";
-			owner_lazy = () -> NonEligibleProceedsIndicator1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code.mmObject();
+			codeName = NonEligibleProceedsIndicatorCode.AccountLimitation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -134,26 +141,59 @@ public class NonEligibleProceedsIndicator1Code extends NonEligibleProceedsIndica
 	 * name} = "OtherNonEligibility"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherNonEligibility = new MMCode() {
+	public static final NonEligibleProceedsIndicator1Code OtherNonEligibility = new NonEligibleProceedsIndicator1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherNonEligibility";
-			owner_lazy = () -> NonEligibleProceedsIndicator1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code.mmObject();
+			codeName = NonEligibleProceedsIndicatorCode.OtherNonEligibility.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, NonEligibleProceedsIndicator1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected NonEligibleProceedsIndicator1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NELC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NonEligibleProceedsIndicator1Code";
 				definition = "Specifies information regarding the non eligibility of the outturn resources.";
-				code_lazy = () -> Arrays.asList(NonEligibleProceedsIndicator1Code.mmNonEligibleCurrency, NonEligibleProceedsIndicator1Code.mmAccountLimitation, NonEligibleProceedsIndicator1Code.mmOtherNonEligibility);
 				trace_lazy = () -> NonEligibleProceedsIndicatorCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code.NonEligibleCurrency, com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code.AccountLimitation,
+						com.tools20022.repository.codeset.NonEligibleProceedsIndicator1Code.OtherNonEligibility);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NonEligibleCurrency.getCodeName().get(), NonEligibleCurrency);
+		codesByName.put(AccountLimitation.getCodeName().get(), AccountLimitation);
+		codesByName.put(OtherNonEligibility.getCodeName().get(), OtherNonEligibility);
+	}
+
+	public static NonEligibleProceedsIndicator1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static NonEligibleProceedsIndicator1Code[] values() {
+		NonEligibleProceedsIndicator1Code[] values = new NonEligibleProceedsIndicator1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, NonEligibleProceedsIndicator1Code> {
+		@Override
+		public NonEligibleProceedsIndicator1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(NonEligibleProceedsIndicator1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

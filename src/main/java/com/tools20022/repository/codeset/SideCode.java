@@ -17,12 +17,19 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.SideCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Side taken by a party on an order.
@@ -31,39 +38,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmBuy
- * SideCode.mmBuy}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmSell
- * SideCode.mmSell}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmCross
- * SideCode.mmCross}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmCrossShort
- * SideCode.mmCrossShort}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SideCode#mmCrossShortExempt
- * SideCode.mmCrossShortExempt}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmAsDefined
- * SideCode.mmAsDefined}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmOpposite
- * SideCode.mmOpposite}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmUndisclosed
- * SideCode.mmUndisclosed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmTwoSided
- * SideCode.mmTwoSided}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmBuyMinus
- * SideCode.mmBuyMinus}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmSellPlus
- * SideCode.mmSellPlus}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmSellShort
- * SideCode.mmSellShort}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmSellShortExempt
- * SideCode.mmSellShortExempt}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmLend
- * SideCode.mmLend}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmBorrow
- * SideCode.mmBorrow}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmOptionExercise
- * SideCode.mmOptionExercise}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SideCode#Buy SideCode.Buy}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SideCode#Sell
+ * SideCode.Sell}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SideCode#Cross
+ * SideCode.Cross}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SideCode#CrossShort
+ * SideCode.CrossShort}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SideCode#CrossShortExempt
+ * SideCode.CrossShortExempt}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SideCode#AsDefined
+ * SideCode.AsDefined}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SideCode#Opposite
+ * SideCode.Opposite}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SideCode#Undisclosed
+ * SideCode.Undisclosed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SideCode#TwoSided
+ * SideCode.TwoSided}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SideCode#BuyMinus
+ * SideCode.BuyMinus}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SideCode#SellPlus
+ * SideCode.SellPlus}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SideCode#SellShort
+ * SideCode.SellShort}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SideCode#SellShortExempt
+ * SideCode.SellShortExempt}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SideCode#Lend
+ * SideCode.Lend}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SideCode#Borrow
+ * SideCode.Borrow}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SideCode#OptionExercise
+ * SideCode.OptionExercise}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -81,8 +86,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = FIXSynonym: Field tag 54</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -99,7 +107,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Side taken by a party on an order."</li>
  * </ul>
  */
-public class SideCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SideCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -112,6 +121,9 @@ public class SideCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "BUYI"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::BUSE//BUYI, FIXSynonym: 54</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -122,12 +134,13 @@ public class SideCode {
 	 * definition} = "Order is buy driven."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBuy = new MMCode() {
+	public static final SideCode Buy = new SideCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::BUSE//BUYI"), new FIXSynonym(this, "54"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Buy";
 			definition = "Order is buy driven.";
-			owner_lazy = () -> SideCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SideCode.mmObject();
 			codeName = "BUYI";
 		}
 	};
@@ -141,6 +154,9 @@ public class SideCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SELL"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::BUSE//SELL, FIXSynonym: 54</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -151,12 +167,13 @@ public class SideCode {
 	 * definition} = "Order is sell driven."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSell = new MMCode() {
+	public static final SideCode Sell = new SideCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::BUSE//SELL"), new FIXSynonym(this, "54"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Sell";
 			definition = "Order is sell driven.";
-			owner_lazy = () -> SideCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SideCode.mmObject();
 			codeName = "SELL";
 		}
 	};
@@ -183,12 +200,12 @@ public class SideCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCross = new MMCode() {
+	public static final SideCode Cross = new SideCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cross";
 			definition = "Identifies an order for which a broker wishes to take the other side and cross with the client.";
-			owner_lazy = () -> SideCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SideCode.mmObject();
 			codeName = "CROS";
 		}
 	};
@@ -218,12 +235,12 @@ public class SideCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCrossShort = new MMCode() {
+	public static final SideCode CrossShort = new SideCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CrossShort";
 			definition = "Identifies a type of order for which a broker wants to cross with the client in the case a client wants to establish a short position, and sends a Sell Short order to the broker. Many exchanges have tick rules needing to be enforced, and the order getting converted from Sell Short to Cross (instead of Cross Short) could result in an illegal short sell.";
-			owner_lazy = () -> SideCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SideCode.mmObject();
 			codeName = "CRSH";
 		}
 	};
@@ -251,12 +268,12 @@ public class SideCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCrossShortExempt = new MMCode() {
+	public static final SideCode CrossShortExempt = new SideCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CrossShortExempt";
 			definition = "Identifies a type of order for which a broker wants to cross with the client in the case a client wants to establish a short position and is exempt from the uptick restriction. Used as audit trail on exchanges.";
-			owner_lazy = () -> SideCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SideCode.mmObject();
 			codeName = "CSHE";
 		}
 	};
@@ -283,12 +300,12 @@ public class SideCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAsDefined = new MMCode() {
+	public static final SideCode AsDefined = new SideCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AsDefined";
 			definition = "Indicates, in the case of a multileg instrument,that the sides of the legs are the same as defined at the creation of the multileg instrument.";
-			owner_lazy = () -> SideCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SideCode.mmObject();
 			codeName = "DEFI";
 		}
 	};
@@ -316,12 +333,12 @@ public class SideCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOpposite = new MMCode() {
+	public static final SideCode Opposite = new SideCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Opposite";
 			definition = "Indicates, in the case of a multileg instrument,that the sides of the legs are the opposite of their definition at the creation of the multileg instrument.";
-			owner_lazy = () -> SideCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SideCode.mmObject();
 			codeName = "OPPO";
 		}
 	};
@@ -335,6 +352,9 @@ public class SideCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "UNDI"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 54</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -345,12 +365,13 @@ public class SideCode {
 	 * definition} = "The side of the indication of interest is not disclosed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUndisclosed = new MMCode() {
+	public static final SideCode Undisclosed = new SideCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "54"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Undisclosed";
 			definition = "The side of the indication of interest is not disclosed.";
-			owner_lazy = () -> SideCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SideCode.mmObject();
 			codeName = "UNDI";
 		}
 	};
@@ -364,6 +385,9 @@ public class SideCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "TWOS"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 54</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -374,12 +398,13 @@ public class SideCode {
 	 * definition} = "Indicates that the side refers to both buys and sells."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTwoSided = new MMCode() {
+	public static final SideCode TwoSided = new SideCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "54"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TwoSided";
 			definition = "Indicates that the side refers to both buys and sells.";
-			owner_lazy = () -> SideCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SideCode.mmObject();
 			codeName = "TWOS";
 		}
 	};
@@ -410,12 +435,12 @@ public class SideCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBuyMinus = new MMCode() {
+	public static final SideCode BuyMinus = new SideCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyMinus";
 			definition = "A round-lot market order to buy minus is an order to buy a stated amount of a stock provided that its price is:\n- not higher than the last sale if the last sale was a minus or zero minus tick and\n- not higher than the last sale minus the minimum fractional change in the stock if the last sale was a plus or zero plus tick.\nA limit price order to buy minus also states the highest price at which it can be executed.";
-			owner_lazy = () -> SideCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SideCode.mmObject();
 			codeName = "BUMI";
 		}
 	};
@@ -446,12 +471,12 @@ public class SideCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSellPlus = new MMCode() {
+	public static final SideCode SellPlus = new SideCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellPlus";
 			definition = "A round-lot market order to sell plus is an order to sell a stated amount of a stock provided that its price is:\n- not lower than the last sale if the last sale was a plus or zero plus tick and\n- not lower than the last sale minus the minimum fractional change in the stock if the last sale was a minus or zero minus tick.\nA limit-price order to sell plus also states the lowest price at which it can be executed.";
-			owner_lazy = () -> SideCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SideCode.mmObject();
 			codeName = "SEPL";
 		}
 	};
@@ -479,12 +504,12 @@ public class SideCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSellShort = new MMCode() {
+	public static final SideCode SellShort = new SideCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellShort";
 			definition = "An order to sell a security that the seller does not own; a sale effected by delivering a security borrowed by, or for the account of, the seller. Can only be executed on a plus or zero plus tick.";
-			owner_lazy = () -> SideCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SideCode.mmObject();
 			codeName = "SESH";
 		}
 	};
@@ -508,12 +533,12 @@ public class SideCode {
 	 * definition} = "Short sale exempt from short-sale rules."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSellShortExempt = new MMCode() {
+	public static final SideCode SellShortExempt = new SideCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellShortExempt";
 			definition = "Short sale exempt from short-sale rules.";
-			owner_lazy = () -> SideCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SideCode.mmObject();
 			codeName = "SSEX";
 		}
 	};
@@ -537,12 +562,12 @@ public class SideCode {
 	 * definition} = "Order is to lend securities."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLend = new MMCode() {
+	public static final SideCode Lend = new SideCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lend";
 			definition = "Order is to lend securities.";
-			owner_lazy = () -> SideCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SideCode.mmObject();
 			codeName = "LEND";
 		}
 	};
@@ -566,12 +591,12 @@ public class SideCode {
 	 * definition} = "Order is to borrow securities."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBorrow = new MMCode() {
+	public static final SideCode Borrow = new SideCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Borrow";
 			definition = "Order is to borrow securities.";
-			owner_lazy = () -> SideCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SideCode.mmObject();
 			codeName = "BORW";
 		}
 	};
@@ -595,29 +620,77 @@ public class SideCode {
 	 * definition} = "Exercise of an option contract."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOptionExercise = new MMCode() {
+	public static final SideCode OptionExercise = new SideCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionExercise";
 			definition = "Exercise of an option contract.";
-			owner_lazy = () -> SideCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SideCode.mmObject();
 			codeName = "OPEX";
 		}
 	};
+	final static private LinkedHashMap<String, SideCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SideCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "Field tag 54"));
 				example = Arrays.asList("BUYI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SideCode";
 				definition = "Side taken by a party on an order.";
-				code_lazy = () -> Arrays.asList(SideCode.mmBuy, SideCode.mmSell, SideCode.mmCross, SideCode.mmCrossShort, SideCode.mmCrossShortExempt, SideCode.mmAsDefined, SideCode.mmOpposite, SideCode.mmUndisclosed, SideCode.mmTwoSided,
-						SideCode.mmBuyMinus, SideCode.mmSellPlus, SideCode.mmSellShort, SideCode.mmSellShortExempt, SideCode.mmLend, SideCode.mmBorrow, SideCode.mmOptionExercise);
 				derivation_lazy = () -> Arrays.asList(Side1Code.mmObject(), Side3Code.mmObject(), OrderDriverCode.mmObject(), IOISideTypeCode.mmObject(), Side5Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SideCode.Buy, com.tools20022.repository.codeset.SideCode.Sell, com.tools20022.repository.codeset.SideCode.Cross,
+						com.tools20022.repository.codeset.SideCode.CrossShort, com.tools20022.repository.codeset.SideCode.CrossShortExempt, com.tools20022.repository.codeset.SideCode.AsDefined,
+						com.tools20022.repository.codeset.SideCode.Opposite, com.tools20022.repository.codeset.SideCode.Undisclosed, com.tools20022.repository.codeset.SideCode.TwoSided, com.tools20022.repository.codeset.SideCode.BuyMinus,
+						com.tools20022.repository.codeset.SideCode.SellPlus, com.tools20022.repository.codeset.SideCode.SellShort, com.tools20022.repository.codeset.SideCode.SellShortExempt, com.tools20022.repository.codeset.SideCode.Lend,
+						com.tools20022.repository.codeset.SideCode.Borrow, com.tools20022.repository.codeset.SideCode.OptionExercise);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Buy.getCodeName().get(), Buy);
+		codesByName.put(Sell.getCodeName().get(), Sell);
+		codesByName.put(Cross.getCodeName().get(), Cross);
+		codesByName.put(CrossShort.getCodeName().get(), CrossShort);
+		codesByName.put(CrossShortExempt.getCodeName().get(), CrossShortExempt);
+		codesByName.put(AsDefined.getCodeName().get(), AsDefined);
+		codesByName.put(Opposite.getCodeName().get(), Opposite);
+		codesByName.put(Undisclosed.getCodeName().get(), Undisclosed);
+		codesByName.put(TwoSided.getCodeName().get(), TwoSided);
+		codesByName.put(BuyMinus.getCodeName().get(), BuyMinus);
+		codesByName.put(SellPlus.getCodeName().get(), SellPlus);
+		codesByName.put(SellShort.getCodeName().get(), SellShort);
+		codesByName.put(SellShortExempt.getCodeName().get(), SellShortExempt);
+		codesByName.put(Lend.getCodeName().get(), Lend);
+		codesByName.put(Borrow.getCodeName().get(), Borrow);
+		codesByName.put(OptionExercise.getCodeName().get(), OptionExercise);
+	}
+
+	public static SideCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SideCode[] values() {
+		SideCode[] values = new SideCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SideCode> {
+		@Override
+		public SideCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SideCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

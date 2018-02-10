@@ -30,6 +30,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of side pocket units, or amount, or rate."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SidePocketUnitsOrAmountOrRate1Choice", propOrder = {"unitsNumber", "orderedAmount", "holdingsRate"})
 public class SidePocketUnitsOrAmountOrRate1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UnitsNb", required = true)
 	protected FinancialInstrumentQuantity1 unitsNumber;
 	/**
-	 * Total quantity of units to be subscribed or redeemed in the side pocket.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +119,7 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
-			componentContext_lazy = () -> SidePocketUnitsOrAmountOrRate1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +130,11 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrdAmt", required = true)
 	protected ActiveCurrencyAndAmount orderedAmount;
 	/**
-	 * Amount of money to be invested or redeemed into the side pocket.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,7 +169,7 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	public static final MMMessageAttribute mmOrderedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedAmount;
-			componentContext_lazy = () -> SidePocketUnitsOrAmountOrRate1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,11 +180,11 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "HldgsRate", required = true)
 	protected PercentageRate holdingsRate;
 	/**
-	 * Percentage of the financial instrument quantity to be invested or
-	 * redeemed in the side pocket or lot.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,7 +220,7 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	public static final MMMessageAttribute mmHoldingsRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmHoldingsRate;
-			componentContext_lazy = () -> SidePocketUnitsOrAmountOrRate1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "HldgsRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,9 +235,10 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SidePocketUnitsOrAmountOrRate1Choice.mmUnitsNumber, SidePocketUnitsOrAmountOrRate1Choice.mmOrderedAmount, SidePocketUnitsOrAmountOrRate1Choice.mmHoldingsRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.mmUnitsNumber, com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.mmOrderedAmount,
+						com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.mmHoldingsRate);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SidePocketUnitsOrAmountOrRate1Choice";
 				definition = "Choice of side pocket units, or amount, or rate.";
@@ -243,30 +247,30 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
 
-	public void setUnitsNumber(FinancialInstrumentQuantity1 unitsNumber) {
-		this.unitsNumber = unitsNumber;
+	public SidePocketUnitsOrAmountOrRate1Choice setUnitsNumber(FinancialInstrumentQuantity1 unitsNumber) {
+		this.unitsNumber = Objects.requireNonNull(unitsNumber);
+		return this;
 	}
 
-	@XmlElement(name = "OrdrdAmt", required = true)
 	public ActiveCurrencyAndAmount getOrderedAmount() {
 		return orderedAmount;
 	}
 
-	public void setOrderedAmount(ActiveCurrencyAndAmount orderedAmount) {
-		this.orderedAmount = orderedAmount;
+	public SidePocketUnitsOrAmountOrRate1Choice setOrderedAmount(ActiveCurrencyAndAmount orderedAmount) {
+		this.orderedAmount = Objects.requireNonNull(orderedAmount);
+		return this;
 	}
 
-	@XmlElement(name = "HldgsRate", required = true)
 	public PercentageRate getHoldingsRate() {
 		return holdingsRate;
 	}
 
-	public void setHoldingsRate(PercentageRate holdingsRate) {
-		this.holdingsRate = holdingsRate;
+	public SidePocketUnitsOrAmountOrRate1Choice setHoldingsRate(PercentageRate holdingsRate) {
+		this.holdingsRate = Objects.requireNonNull(holdingsRate);
+		return this;
 	}
 }

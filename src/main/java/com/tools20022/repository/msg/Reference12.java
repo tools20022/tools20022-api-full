@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,16 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Additional references linked to the list order."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "Reference12", propOrder = {"bidIdentification", "clientBidIdentification", "IOIIdentification", "quoteIdentification", "referenceOrderIdentification"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "Reference12", propOrder = {"bidIdentification", "clientBidIdentification", "iOIIdentification", "quoteIdentification", "referenceOrderIdentification"})
 public class Reference12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BidId")
 	protected Max35Text bidIdentification;
 	/**
-	 * Unique identifier for bid response as assigned by sell-side (broker,
-	 * exchange, electronic communication network).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -92,6 +95,9 @@ public class Reference12 {
 	 * {@linkplain com.tools20022.repository.msg.Reference12 Reference12}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BidId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 390</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -107,9 +113,10 @@ public class Reference12 {
 	 */
 	public static final MMMessageAttribute mmBidIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference12.mmObject();
 			isDerived = false;
 			xmlTag = "BidId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "390"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidIdentification";
 			definition = "Unique identifier for bid response as assigned by sell-side (broker, exchange, electronic communication network).";
@@ -118,10 +125,11 @@ public class Reference12 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntBidId")
 	protected Max35Text clientBidIdentification;
 	/**
-	 * Unique identifier for a bid request as assigned by institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,6 +142,9 @@ public class Reference12 {
 	 * {@linkplain com.tools20022.repository.msg.Reference12 Reference12}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClntBidId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 391</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -148,9 +159,10 @@ public class Reference12 {
 	 */
 	public static final MMMessageAttribute mmClientBidIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference12.mmObject();
 			isDerived = false;
 			xmlTag = "ClntBidId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "391"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientBidIdentification";
 			definition = "Unique identifier for a bid request as assigned by institution.";
@@ -159,11 +171,11 @@ public class Reference12 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IOIId", required = true)
 	protected Max35Text iOIIdentification;
 	/**
-	 * Unique identifier of the indication of interest message. Required for
-	 * previously indicated orders.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,6 +188,9 @@ public class Reference12 {
 	 * {@linkplain com.tools20022.repository.msg.Reference12 Reference12}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IOIId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 23</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -191,9 +206,10 @@ public class Reference12 {
 	 */
 	public static final MMMessageAttribute mmIOIIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference12.mmObject();
 			isDerived = false;
 			xmlTag = "IOIId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "23"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IOIIdentification";
 			definition = "Unique identifier of the indication of interest message. Required for previously indicated orders.";
@@ -202,10 +218,11 @@ public class Reference12 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "QtId", required = true)
 	protected Max35Text quoteIdentification;
 	/**
-	 * Unique identifier for quote. Required for previously quoted orders.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,6 +235,9 @@ public class Reference12 {
 	 * {@linkplain com.tools20022.repository.msg.Reference12 Reference12}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 117</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -232,9 +252,10 @@ public class Reference12 {
 	 */
 	public static final MMMessageAttribute mmQuoteIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference12.mmObject();
 			isDerived = false;
 			xmlTag = "QtId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "117"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteIdentification";
 			definition = "Unique identifier for quote. Required for previously quoted orders.";
@@ -243,10 +264,11 @@ public class Reference12 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RefOrdrId", required = true)
 	protected Max35Text referenceOrderIdentification;
 	/**
-	 * Unique identifier of the order being hit or taken.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -260,6 +282,9 @@ public class Reference12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RefOrdrId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1080, FIXSynonym: 1081</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -272,9 +297,10 @@ public class Reference12 {
 	 */
 	public static final MMMessageAttribute mmReferenceOrderIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference12.mmObject();
 			isDerived = false;
 			xmlTag = "RefOrdrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1080"), new FIXSynonym(this, "1081"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceOrderIdentification";
 			definition = "Unique identifier of  the order being hit or taken.";
@@ -287,9 +313,9 @@ public class Reference12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Reference12.mmBidIdentification, Reference12.mmClientBidIdentification, Reference12.mmIOIIdentification, Reference12.mmQuoteIdentification,
-						Reference12.mmReferenceOrderIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference12.mmBidIdentification, com.tools20022.repository.msg.Reference12.mmClientBidIdentification,
+						com.tools20022.repository.msg.Reference12.mmIOIIdentification, com.tools20022.repository.msg.Reference12.mmQuoteIdentification, com.tools20022.repository.msg.Reference12.mmReferenceOrderIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference12";
 				definition = "Additional references linked to the list order.";
@@ -298,48 +324,48 @@ public class Reference12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BidId")
-	public Max35Text getBidIdentification() {
-		return bidIdentification;
+	public Optional<Max35Text> getBidIdentification() {
+		return bidIdentification == null ? Optional.empty() : Optional.of(bidIdentification);
 	}
 
-	public void setBidIdentification(Max35Text bidIdentification) {
+	public Reference12 setBidIdentification(Max35Text bidIdentification) {
 		this.bidIdentification = bidIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ClntBidId")
-	public Max35Text getClientBidIdentification() {
-		return clientBidIdentification;
+	public Optional<Max35Text> getClientBidIdentification() {
+		return clientBidIdentification == null ? Optional.empty() : Optional.of(clientBidIdentification);
 	}
 
-	public void setClientBidIdentification(Max35Text clientBidIdentification) {
+	public Reference12 setClientBidIdentification(Max35Text clientBidIdentification) {
 		this.clientBidIdentification = clientBidIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "IOIId", required = true)
 	public Max35Text getIOIIdentification() {
 		return iOIIdentification;
 	}
 
-	public void setIOIIdentification(Max35Text iOIIdentification) {
-		this.iOIIdentification = iOIIdentification;
+	public Reference12 setIOIIdentification(Max35Text iOIIdentification) {
+		this.iOIIdentification = Objects.requireNonNull(iOIIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "QtId", required = true)
 	public Max35Text getQuoteIdentification() {
 		return quoteIdentification;
 	}
 
-	public void setQuoteIdentification(Max35Text quoteIdentification) {
-		this.quoteIdentification = quoteIdentification;
+	public Reference12 setQuoteIdentification(Max35Text quoteIdentification) {
+		this.quoteIdentification = Objects.requireNonNull(quoteIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RefOrdrId", required = true)
 	public Max35Text getReferenceOrderIdentification() {
 		return referenceOrderIdentification;
 	}
 
-	public void setReferenceOrderIdentification(Max35Text referenceOrderIdentification) {
-		this.referenceOrderIdentification = referenceOrderIdentification;
+	public Reference12 setReferenceOrderIdentification(Max35Text referenceOrderIdentification) {
+		this.referenceOrderIdentification = Objects.requireNonNull(referenceOrderIdentification);
+		return this;
 	}
 }

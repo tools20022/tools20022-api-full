@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -31,6 +32,8 @@ import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +76,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,18 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides details related to the order."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OrderStatus1", propOrder = {"workingIndicator", "side", "remainingQuantity", "cumulativeQuantity", "totalNumberReports", "lastReportRequested", "orderQuantityDetails"})
 public class OrderStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "WorkgInd", required = true)
 	protected YesNoIndicator workingIndicator;
 	/**
-	 * Indicates if the order is currently being worked. Applicable only for
-	 * OrderStatus = New. For open outcry markets this indicates that the order
-	 * is being worked in the crowd. For electronic markets it indicates that
-	 * the order has transitioned from a contingent order to a market order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,6 +117,9 @@ public class OrderStatus1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "WorkgInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 636</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -131,9 +135,10 @@ public class OrderStatus1 {
 	public static final MMMessageAttribute mmWorkingIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmWorkingIndicator;
-			componentContext_lazy = () -> OrderStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "WorkgInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "636"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WorkingIndicator";
 			definition = "Indicates if the order is currently being worked. Applicable only for OrderStatus = New. For open outcry markets this indicates that the order is being worked in the crowd. For electronic markets it indicates that the order has transitioned from a contingent order to a market order.";
@@ -142,10 +147,11 @@ public class OrderStatus1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Sd", required = true)
 	protected Side1Code side;
 	/**
-	 * Side of order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,6 +170,9 @@ public class OrderStatus1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Sd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 54</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -177,9 +186,10 @@ public class OrderStatus1 {
 	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
-			componentContext_lazy = () -> OrderStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Sd";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "54"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Side of order.";
@@ -188,10 +198,11 @@ public class OrderStatus1 {
 			simpleType_lazy = () -> Side1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RmngQty", required = true)
 	protected FinancialInstrumentQuantityChoice remainingQuantity;
 	/**
-	 * Quantity opened for further execution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -224,7 +235,7 @@ public class OrderStatus1 {
 	public static final MMMessageAttribute mmRemainingQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmRemainingQuantity;
-			componentContext_lazy = () -> OrderStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "RmngQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -235,10 +246,11 @@ public class OrderStatus1 {
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "CmltvQty", required = true)
 	protected FinancialInstrumentQuantityChoice cumulativeQuantity;
 	/**
-	 * Total quantity (e.g. number of shares) filled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -258,6 +270,9 @@ public class OrderStatus1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CmltvQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 14</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -271,9 +286,10 @@ public class OrderStatus1 {
 	public static final MMMessageAttribute mmCumulativeQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmCumulativeQuantity;
-			componentContext_lazy = () -> OrderStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "CmltvQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "14"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumulativeQuantity";
 			definition = "Total quantity (e.g. number of shares) filled.";
@@ -282,10 +298,11 @@ public class OrderStatus1 {
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNbRpts", required = true)
 	protected Number totalNumberReports;
 	/**
-	 * Total number or reports returned in response to a request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -312,7 +329,7 @@ public class OrderStatus1 {
 	 */
 	public static final MMMessageAttribute mmTotalNumberReports = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OrderStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbRpts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -323,11 +340,11 @@ public class OrderStatus1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "LastRptReqd", required = true)
 	protected YesNoIndicator lastReportRequested;
 	/**
-	 * Indicates whether this message is the last report message in response to
-	 * a request, such as Order Mass Status Request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -356,7 +373,7 @@ public class OrderStatus1 {
 	 */
 	public static final MMMessageAttribute mmLastReportRequested = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OrderStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "LastRptReqd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -367,10 +384,11 @@ public class OrderStatus1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrQtyDtls")
 	protected OrderQuantity1 orderQuantityDetails;
 	/**
-	 * Provides details related to the ordered quantity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -401,7 +419,7 @@ public class OrderStatus1 {
 	public static final MMMessageAssociationEnd mmOrderQuantityDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
-			componentContext_lazy = () -> OrderStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrQtyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -417,10 +435,11 @@ public class OrderStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OrderStatus1.mmWorkingIndicator, OrderStatus1.mmSide, OrderStatus1.mmRemainingQuantity, OrderStatus1.mmCumulativeQuantity, OrderStatus1.mmTotalNumberReports,
-						OrderStatus1.mmLastReportRequested, OrderStatus1.mmOrderQuantityDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatus1.mmWorkingIndicator, com.tools20022.repository.msg.OrderStatus1.mmSide, com.tools20022.repository.msg.OrderStatus1.mmRemainingQuantity,
+						com.tools20022.repository.msg.OrderStatus1.mmCumulativeQuantity, com.tools20022.repository.msg.OrderStatus1.mmTotalNumberReports, com.tools20022.repository.msg.OrderStatus1.mmLastReportRequested,
+						com.tools20022.repository.msg.OrderStatus1.mmOrderQuantityDetails);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OrderStatus1";
 				definition = "Provides details related to the order.";
@@ -429,66 +448,66 @@ public class OrderStatus1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "WorkgInd", required = true)
 	public YesNoIndicator getWorkingIndicator() {
 		return workingIndicator;
 	}
 
-	public void setWorkingIndicator(YesNoIndicator workingIndicator) {
-		this.workingIndicator = workingIndicator;
+	public OrderStatus1 setWorkingIndicator(YesNoIndicator workingIndicator) {
+		this.workingIndicator = Objects.requireNonNull(workingIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "Sd", required = true)
 	public Side1Code getSide() {
 		return side;
 	}
 
-	public void setSide(Side1Code side) {
-		this.side = side;
+	public OrderStatus1 setSide(Side1Code side) {
+		this.side = Objects.requireNonNull(side);
+		return this;
 	}
 
-	@XmlElement(name = "RmngQty", required = true)
 	public FinancialInstrumentQuantityChoice getRemainingQuantity() {
 		return remainingQuantity;
 	}
 
-	public void setRemainingQuantity(FinancialInstrumentQuantityChoice remainingQuantity) {
-		this.remainingQuantity = remainingQuantity;
+	public OrderStatus1 setRemainingQuantity(FinancialInstrumentQuantityChoice remainingQuantity) {
+		this.remainingQuantity = Objects.requireNonNull(remainingQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "CmltvQty", required = true)
 	public FinancialInstrumentQuantityChoice getCumulativeQuantity() {
 		return cumulativeQuantity;
 	}
 
-	public void setCumulativeQuantity(FinancialInstrumentQuantityChoice cumulativeQuantity) {
-		this.cumulativeQuantity = cumulativeQuantity;
+	public OrderStatus1 setCumulativeQuantity(FinancialInstrumentQuantityChoice cumulativeQuantity) {
+		this.cumulativeQuantity = Objects.requireNonNull(cumulativeQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "TtlNbRpts", required = true)
 	public Number getTotalNumberReports() {
 		return totalNumberReports;
 	}
 
-	public void setTotalNumberReports(Number totalNumberReports) {
-		this.totalNumberReports = totalNumberReports;
+	public OrderStatus1 setTotalNumberReports(Number totalNumberReports) {
+		this.totalNumberReports = Objects.requireNonNull(totalNumberReports);
+		return this;
 	}
 
-	@XmlElement(name = "LastRptReqd", required = true)
 	public YesNoIndicator getLastReportRequested() {
 		return lastReportRequested;
 	}
 
-	public void setLastReportRequested(YesNoIndicator lastReportRequested) {
-		this.lastReportRequested = lastReportRequested;
+	public OrderStatus1 setLastReportRequested(YesNoIndicator lastReportRequested) {
+		this.lastReportRequested = Objects.requireNonNull(lastReportRequested);
+		return this;
 	}
 
-	@XmlElement(name = "OrdrQtyDtls")
-	public OrderQuantity1 getOrderQuantityDetails() {
-		return orderQuantityDetails;
+	public Optional<OrderQuantity1> getOrderQuantityDetails() {
+		return orderQuantityDetails == null ? Optional.empty() : Optional.of(orderQuantityDetails);
 	}
 
-	public void setOrderQuantityDetails(com.tools20022.repository.msg.OrderQuantity1 orderQuantityDetails) {
+	public OrderStatus1 setOrderQuantityDetails(com.tools20022.repository.msg.OrderQuantity1 orderQuantityDetails) {
 		this.orderQuantityDetails = orderQuantityDetails;
+		return this;
 	}
 }

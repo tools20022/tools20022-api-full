@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * TerminalManagementDataSet9}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TerminalManagementDataSet13", propOrder = {"identification", "sequenceCounter", "content"})
 public class TerminalManagementDataSet13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected DataSetIdentification4 identification;
 	/**
-	 * Identification of the data set containing the status report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -125,7 +128,7 @@ public class TerminalManagementDataSet13 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TerminalManagementDataSet13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet13.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,10 +142,11 @@ public class TerminalManagementDataSet13 {
 			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification4.mmObject();
 		}
 	};
+	@XmlElement(name = "SeqCntr")
 	protected Max9NumericText sequenceCounter;
 	/**
-	 * Counter to identify a single data set within the whole transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -184,7 +188,7 @@ public class TerminalManagementDataSet13 {
 	 */
 	public static final MMMessageAttribute mmSequenceCounter = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TerminalManagementDataSet13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet13.mmObject();
 			isDerived = false;
 			xmlTag = "SeqCntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,10 +201,11 @@ public class TerminalManagementDataSet13 {
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Cntt", required = true)
 	protected StatusReportContent4 content;
 	/**
-	 * Content of the status report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -239,7 +244,7 @@ public class TerminalManagementDataSet13 {
 	 */
 	public static final MMMessageAssociationEnd mmContent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TerminalManagementDataSet13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet13.mmObject();
 			isDerived = false;
 			xmlTag = "Cntt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,8 +262,9 @@ public class TerminalManagementDataSet13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TerminalManagementDataSet13.mmIdentification, TerminalManagementDataSet13.mmSequenceCounter, TerminalManagementDataSet13.mmContent);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet13.mmIdentification, com.tools20022.repository.msg.TerminalManagementDataSet13.mmSequenceCounter,
+						com.tools20022.repository.msg.TerminalManagementDataSet13.mmContent);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementDataSet13";
 				definition = "Data related to the status report of a point of interaction (POI).";
@@ -269,30 +275,30 @@ public class TerminalManagementDataSet13 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DataSetIdentification4 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.DataSetIdentification4 identification) {
-		this.identification = identification;
+	public TerminalManagementDataSet13 setIdentification(com.tools20022.repository.msg.DataSetIdentification4 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "SeqCntr")
-	public Max9NumericText getSequenceCounter() {
-		return sequenceCounter;
+	public Optional<Max9NumericText> getSequenceCounter() {
+		return sequenceCounter == null ? Optional.empty() : Optional.of(sequenceCounter);
 	}
 
-	public void setSequenceCounter(Max9NumericText sequenceCounter) {
+	public TerminalManagementDataSet13 setSequenceCounter(Max9NumericText sequenceCounter) {
 		this.sequenceCounter = sequenceCounter;
+		return this;
 	}
 
-	@XmlElement(name = "Cntt", required = true)
 	public StatusReportContent4 getContent() {
 		return content;
 	}
 
-	public void setContent(com.tools20022.repository.msg.StatusReportContent4 content) {
-		this.content = content;
+	public TerminalManagementDataSet13 setContent(com.tools20022.repository.msg.StatusReportContent4 content) {
+		this.content = Objects.requireNonNull(content);
+		return this;
 	}
 }

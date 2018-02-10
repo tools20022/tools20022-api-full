@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Transfer cancellation status is accepted or sent to next party."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransferCancellationStatus2", propOrder = {"status", "reason"})
 public class TransferCancellationStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts", required = true)
 	protected CancellationStatus2Code status;
 	/**
-	 * Status of the transfer cancellation is accepted or sent to next party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +114,7 @@ public class TransferCancellationStatus2 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmCancellationStatus;
-			componentContext_lazy = () -> TransferCancellationStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferCancellationStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +125,11 @@ public class TransferCancellationStatus2 {
 			simpleType_lazy = () -> CancellationStatus2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn")
 	protected Max350Text reason;
 	/**
-	 * Reason for the status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +162,7 @@ public class TransferCancellationStatus2 {
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> TransferCancellationStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferCancellationStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,9 +177,9 @@ public class TransferCancellationStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransferCancellationStatus2.mmStatus, TransferCancellationStatus2.mmReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferCancellationStatus2.mmStatus, com.tools20022.repository.msg.TransferCancellationStatus2.mmReason);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferCancellationStatus2";
 				definition = "Transfer cancellation status is accepted or sent to next party.";
@@ -184,21 +188,21 @@ public class TransferCancellationStatus2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public CancellationStatus2Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(CancellationStatus2Code status) {
-		this.status = status;
+	public TransferCancellationStatus2 setStatus(CancellationStatus2Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "Rsn")
-	public Max350Text getReason() {
-		return reason;
+	public Optional<Max350Text> getReason() {
+		return reason == null ? Optional.empty() : Optional.of(reason);
 	}
 
-	public void setReason(Max350Text reason) {
+	public TransferCancellationStatus2 setReason(Max350Text reason) {
 		this.reason = reason;
+		return this;
 	}
 }

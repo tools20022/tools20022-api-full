@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.RateBasisCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the rate basis.
@@ -31,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RateBasisCode#mmYears
- * RateBasisCode.mmYears}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateBasisCode#mmMonths
- * RateBasisCode.mmMonths}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateBasisCode#mmWeeks
- * RateBasisCode.mmWeeks}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateBasisCode#mmDays
- * RateBasisCode.mmDays}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateBasisCode#Years
+ * RateBasisCode.Years}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateBasisCode#Months
+ * RateBasisCode.Months}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateBasisCode#Weeks
+ * RateBasisCode.Weeks}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateBasisCode#Days
+ * RateBasisCode.Days}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the rate basis."</li>
  * </ul>
  */
-public class RateBasisCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RateBasisCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,12 +99,12 @@ public class RateBasisCode {
 	 * definition} = "Rate is reported in years."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmYears = new MMCode() {
+	public static final RateBasisCode Years = new RateBasisCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Years";
 			definition = "Rate is reported in years.";
-			owner_lazy = () -> RateBasisCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateBasisCode.mmObject();
 			codeName = "YEAR";
 		}
 	};
@@ -123,12 +129,12 @@ public class RateBasisCode {
 	 * definition} = "Rate is reported in months."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMonths = new MMCode() {
+	public static final RateBasisCode Months = new RateBasisCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Months";
 			definition = "Rate is reported in months.";
-			owner_lazy = () -> RateBasisCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateBasisCode.mmObject();
 			codeName = "MNTH";
 		}
 	};
@@ -153,12 +159,12 @@ public class RateBasisCode {
 	 * definition} = "Rate is reported in weeks."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWeeks = new MMCode() {
+	public static final RateBasisCode Weeks = new RateBasisCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weeks";
 			definition = "Rate is reported in weeks.";
-			owner_lazy = () -> RateBasisCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateBasisCode.mmObject();
 			codeName = "WEEK";
 		}
 	};
@@ -183,28 +189,61 @@ public class RateBasisCode {
 	 * definition} = "Rate is reported in days."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDays = new MMCode() {
+	public static final RateBasisCode Days = new RateBasisCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Days";
 			definition = "Rate is reported in days.";
-			owner_lazy = () -> RateBasisCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateBasisCode.mmObject();
 			codeName = "DAYS";
 		}
 	};
+	final static private LinkedHashMap<String, RateBasisCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RateBasisCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("YEAR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateBasisCode";
 				definition = "Specifies the rate basis.";
-				code_lazy = () -> Arrays.asList(RateBasisCode.mmYears, RateBasisCode.mmMonths, RateBasisCode.mmWeeks, RateBasisCode.mmDays);
 				derivation_lazy = () -> Arrays.asList(RateBasis1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateBasisCode.Years, com.tools20022.repository.codeset.RateBasisCode.Months, com.tools20022.repository.codeset.RateBasisCode.Weeks,
+						com.tools20022.repository.codeset.RateBasisCode.Days);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Years.getCodeName().get(), Years);
+		codesByName.put(Months.getCodeName().get(), Months);
+		codesByName.put(Weeks.getCodeName().get(), Weeks);
+		codesByName.put(Days.getCodeName().get(), Days);
+	}
+
+	public static RateBasisCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RateBasisCode[] values() {
+		RateBasisCode[] values = new RateBasisCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RateBasisCode> {
+		@Override
+		public RateBasisCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RateBasisCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

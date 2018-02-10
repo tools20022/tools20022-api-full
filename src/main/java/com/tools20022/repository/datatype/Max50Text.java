@@ -19,8 +19,12 @@ package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMText;
+import com.tools20022.repository.datatype.Max50Text.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies a character string with a maximum length of 50 characters.
@@ -30,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -43,14 +47,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies a character string with a maximum length of 50 characters."</li>
  * </ul>
  */
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
 public class Max50Text {
 
 	final static private AtomicReference<MMText> mmObject_lazy = new AtomicReference<>();
+	protected String value;
 
 	final static public MMText mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMText() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max50Text";
 				definition = "Specifies a character string with a maximum length of 50 characters.";
@@ -59,5 +65,26 @@ public class Max50Text {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max50Text(String value) {
+		this.value = value;
+	}
+
+	@Override
+	public String toString() {
+		return value;
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Max50Text> {
+		@Override
+		public Max50Text unmarshal(String value) {
+			return new Max50Text(value);
+		}
+
+		@Override
+		public String marshal(Max50Text typedData) {
+			return typedData.value;
+		}
 	}
 }

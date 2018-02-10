@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -87,8 +89,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,21 +101,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identification of a security by its symbol."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "SecurityIdentification3", propOrder = {"ISIN", "tickerSymbol", "CUSIP", "SEDOL", "QUICK", "otherIdentification"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "SecurityIdentification3", propOrder = {"iSIN", "tickerSymbol", "cUSIP", "sEDOL", "qUICK", "otherIdentification"})
 public class SecurityIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ISIN", required = true)
 	protected ISINIdentifier iSIN;
 	/**
-	 * International Securities Identification Number (ISIN). A numbering system
-	 * designed by the United Nation's International Organisation for
-	 * Standardisation (ISO). The ISIN is composed of a 2-character prefix
-	 * representing the country of issue, followed by the national security
-	 * number (if one exists), and a check digit. Each country has a national
-	 * numbering agency that assigns ISIN numbers for securities in that
-	 * country.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,7 +146,7 @@ public class SecurityIdentification3 {
 	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
-			componentContext_lazy = () -> SecurityIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "ISIN";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,12 +157,11 @@ public class SecurityIdentification3 {
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "TckrSymb")
 	protected TickerIdentifier tickerSymbol;
 	/**
-	 * Letters that identify a stock traded on a stock exchange. The Ticker
-	 * Symbol is a short and convenient way of identifying a stock, eg, RTR.L
-	 * for Reuters quoted in London.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,7 +197,7 @@ public class SecurityIdentification3 {
 	public static final MMMessageAttribute mmTickerSymbol = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmTickerSymbol;
-			componentContext_lazy = () -> SecurityIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "TckrSymb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,14 +208,11 @@ public class SecurityIdentification3 {
 			simpleType_lazy = () -> TickerIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "CUSIP")
 	protected CUSIPIdentifier cUSIP;
 	/**
-	 * Committee on Uniform Securities and Identification Procedures (CUSIP).
-	 * The standards body that created and maintains the securities
-	 * classification system in the US. The CUSIP is composed of a 9-character
-	 * number that uniquely identifies a particular security. Non-US securities
-	 * have a similar number called the CINS number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -255,7 +248,7 @@ public class SecurityIdentification3 {
 	public static final MMMessageAttribute mmCUSIP = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmCUSIP;
-			componentContext_lazy = () -> SecurityIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "CUSIP";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,12 +259,11 @@ public class SecurityIdentification3 {
 			simpleType_lazy = () -> CUSIPIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "SEDOL")
 	protected SEDOLIdentifier sEDOL;
 	/**
-	 * Stock Exchange Daily Official List (SEDOL) number. A code used by the
-	 * London Stock Exchange to identify foreign stocks, especially those that
-	 * aren't actively traded in the US and don't have a CUSIP number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -307,7 +299,7 @@ public class SecurityIdentification3 {
 	public static final MMMessageAttribute mmSEDOL = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSEDOL;
-			componentContext_lazy = () -> SecurityIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "SEDOL";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -318,11 +310,11 @@ public class SecurityIdentification3 {
 			simpleType_lazy = () -> SEDOLIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "QUICK")
 	protected QUICKIdentifier qUICK;
 	/**
-	 * Identifier of a security assigned by the Japanese QUICK identification
-	 * scheme for financial instruments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -358,7 +350,7 @@ public class SecurityIdentification3 {
 	public static final MMMessageAttribute mmQUICK = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmQUICK;
-			componentContext_lazy = () -> SecurityIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "QUICK";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -369,11 +361,11 @@ public class SecurityIdentification3 {
 			simpleType_lazy = () -> QUICKIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrId")
 	protected AlternateFinancialInstrumentIdentification1 otherIdentification;
 	/**
-	 * Proprietary identification of a security assigned by an institution or
-	 * organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -409,7 +401,7 @@ public class SecurityIdentification3 {
 	public static final MMMessageAttribute mmOtherIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
-			componentContext_lazy = () -> SecurityIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "OthrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -424,12 +416,13 @@ public class SecurityIdentification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityIdentification3.mmISIN, SecurityIdentification3.mmTickerSymbol, SecurityIdentification3.mmCUSIP, SecurityIdentification3.mmSEDOL, SecurityIdentification3.mmQUICK,
-						SecurityIdentification3.mmOtherIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityIdentification3.mmISIN, com.tools20022.repository.msg.SecurityIdentification3.mmTickerSymbol,
+						com.tools20022.repository.msg.SecurityIdentification3.mmCUSIP, com.tools20022.repository.msg.SecurityIdentification3.mmSEDOL, com.tools20022.repository.msg.SecurityIdentification3.mmQUICK,
+						com.tools20022.repository.msg.SecurityIdentification3.mmOtherIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingInstructionV02.mmSecurityIdentification, MeetingInstructionCancellationRequestV02.mmSecurityIdentification, MeetingInstructionStatusV02.mmSecurityIdentification,
 						MeetingVoteExecutionConfirmationV02.mmSecurityIdentification);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityIdentification3";
 				definition = "Identification of a security by its symbol.";
@@ -438,57 +431,57 @@ public class SecurityIdentification3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ISIN", required = true)
 	public ISINIdentifier getISIN() {
 		return iSIN;
 	}
 
-	public void setISIN(ISINIdentifier iSIN) {
-		this.iSIN = iSIN;
+	public SecurityIdentification3 setISIN(ISINIdentifier iSIN) {
+		this.iSIN = Objects.requireNonNull(iSIN);
+		return this;
 	}
 
-	@XmlElement(name = "TckrSymb")
-	public TickerIdentifier getTickerSymbol() {
-		return tickerSymbol;
+	public Optional<TickerIdentifier> getTickerSymbol() {
+		return tickerSymbol == null ? Optional.empty() : Optional.of(tickerSymbol);
 	}
 
-	public void setTickerSymbol(TickerIdentifier tickerSymbol) {
+	public SecurityIdentification3 setTickerSymbol(TickerIdentifier tickerSymbol) {
 		this.tickerSymbol = tickerSymbol;
+		return this;
 	}
 
-	@XmlElement(name = "CUSIP")
-	public CUSIPIdentifier getCUSIP() {
-		return cUSIP;
+	public Optional<CUSIPIdentifier> getCUSIP() {
+		return cUSIP == null ? Optional.empty() : Optional.of(cUSIP);
 	}
 
-	public void setCUSIP(CUSIPIdentifier cUSIP) {
+	public SecurityIdentification3 setCUSIP(CUSIPIdentifier cUSIP) {
 		this.cUSIP = cUSIP;
+		return this;
 	}
 
-	@XmlElement(name = "SEDOL")
-	public SEDOLIdentifier getSEDOL() {
-		return sEDOL;
+	public Optional<SEDOLIdentifier> getSEDOL() {
+		return sEDOL == null ? Optional.empty() : Optional.of(sEDOL);
 	}
 
-	public void setSEDOL(SEDOLIdentifier sEDOL) {
+	public SecurityIdentification3 setSEDOL(SEDOLIdentifier sEDOL) {
 		this.sEDOL = sEDOL;
+		return this;
 	}
 
-	@XmlElement(name = "QUICK")
-	public QUICKIdentifier getQUICK() {
-		return qUICK;
+	public Optional<QUICKIdentifier> getQUICK() {
+		return qUICK == null ? Optional.empty() : Optional.of(qUICK);
 	}
 
-	public void setQUICK(QUICKIdentifier qUICK) {
+	public SecurityIdentification3 setQUICK(QUICKIdentifier qUICK) {
 		this.qUICK = qUICK;
+		return this;
 	}
 
-	@XmlElement(name = "OthrId")
-	public AlternateFinancialInstrumentIdentification1 getOtherIdentification() {
-		return otherIdentification;
+	public Optional<AlternateFinancialInstrumentIdentification1> getOtherIdentification() {
+		return otherIdentification == null ? Optional.empty() : Optional.of(otherIdentification);
 	}
 
-	public void setOtherIdentification(com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1 otherIdentification) {
+	public SecurityIdentification3 setOtherIdentification(com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1 otherIdentification) {
 		this.otherIdentification = otherIdentification;
+		return this;
 	}
 }

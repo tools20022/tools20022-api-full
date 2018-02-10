@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.InvestmentFundOrderExecution;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ProfitAndLoss1Choice", propOrder = {"profit", "loss"})
 public class ProfitAndLoss1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Prft", required = true)
 	protected ActiveCurrencyAnd13DecimalAmount profit;
 	/**
-	 * Value of the positive amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +120,7 @@ public class ProfitAndLoss1Choice {
 	public static final MMMessageAttribute mmProfit = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmInterimProfitAmount;
-			componentContext_lazy = () -> ProfitAndLoss1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProfitAndLoss1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prft";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +132,11 @@ public class ProfitAndLoss1Choice {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Loss", required = true)
 	protected ActiveCurrencyAnd13DecimalAmount loss;
 	/**
-	 * Value of the negative amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -175,7 +178,7 @@ public class ProfitAndLoss1Choice {
 	public static final MMMessageAttribute mmLoss = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmInterimProfitAmount;
-			componentContext_lazy = () -> ProfitAndLoss1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProfitAndLoss1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Loss";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,8 +194,8 @@ public class ProfitAndLoss1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProfitAndLoss1Choice.mmProfit, ProfitAndLoss1Choice.mmLoss);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProfitAndLoss1Choice.mmProfit, com.tools20022.repository.choice.ProfitAndLoss1Choice.mmLoss);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProfitAndLoss1Choice";
 				definition = "Choice between profit and loss.";
@@ -202,21 +205,21 @@ public class ProfitAndLoss1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Prft", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getProfit() {
 		return profit;
 	}
 
-	public void setProfit(ActiveCurrencyAnd13DecimalAmount profit) {
-		this.profit = profit;
+	public ProfitAndLoss1Choice setProfit(ActiveCurrencyAnd13DecimalAmount profit) {
+		this.profit = Objects.requireNonNull(profit);
+		return this;
 	}
 
-	@XmlElement(name = "Loss", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getLoss() {
 		return loss;
 	}
 
-	public void setLoss(ActiveCurrencyAnd13DecimalAmount loss) {
-		this.loss = loss;
+	public ProfitAndLoss1Choice setLoss(ActiveCurrencyAnd13DecimalAmount loss) {
+		this.loss = Objects.requireNonNull(loss);
+		return this;
 	}
 }

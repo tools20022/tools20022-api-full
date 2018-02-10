@@ -32,6 +32,8 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -86,8 +88,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,16 +101,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IsabelEnhancedHeader1", propOrder = {"debitType", "bankDebitType", "accountBasedContract", "validationResults", "powerToSignValidationResults", "powerToSignValidationTimeStamp", "senderTrigger", "sendTimeStamp",
 		"extraConditionsAccepted", "source", "numberOfRequiredSignatures", "extended"})
 public class IsabelEnhancedHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DbtTp", required = true)
 	protected DebitType1Code debitType;
 	/**
-	 * Type of debit to be applied to the payment, as provided by the end-user.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -138,7 +141,7 @@ public class IsabelEnhancedHeader1 {
 	 */
 	public static final MMMessageAttribute mmDebitType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "DbtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,11 +152,11 @@ public class IsabelEnhancedHeader1 {
 			simpleType_lazy = () -> DebitType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "BkDbtTp", required = true)
 	protected DebitType1Code bankDebitType;
 	/**
-	 * Type of debit to be applied to the payment, as provided by the bank.<br>
-	 * This may supersede the debit type provided by the end-user.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,7 +186,7 @@ public class IsabelEnhancedHeader1 {
 	 */
 	public static final MMMessageAttribute mmBankDebitType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "BkDbtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,10 +197,11 @@ public class IsabelEnhancedHeader1 {
 			simpleType_lazy = () -> DebitType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctBasedCtrct", required = true)
 	protected TrueFalseIndicator accountBasedContract;
 	/**
-	 * Contract is defined on a specific account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,7 +229,7 @@ public class IsabelEnhancedHeader1 {
 	 */
 	public static final MMMessageAttribute mmAccountBasedContract = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctBasedCtrct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,11 +240,11 @@ public class IsabelEnhancedHeader1 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "VldtnRslts", required = true)
 	protected Validation1Code validationResults;
 	/**
-	 * Results of all validations performed during the processing of a file
-	 * provided in the payload.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -270,7 +274,7 @@ public class IsabelEnhancedHeader1 {
 	 */
 	public static final MMMessageAttribute mmValidationResults = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtnRslts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,10 +285,11 @@ public class IsabelEnhancedHeader1 {
 			simpleType_lazy = () -> Validation1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PwrToSgnVldtnRslts", required = true)
 	protected Validation2Code powerToSignValidationResults;
 	/**
-	 * Results of the signature validation provided by the 'PowerToSign' user.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -314,7 +319,7 @@ public class IsabelEnhancedHeader1 {
 	 */
 	public static final MMMessageAttribute mmPowerToSignValidationResults = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "PwrToSgnVldtnRslts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,10 +330,11 @@ public class IsabelEnhancedHeader1 {
 			simpleType_lazy = () -> Validation2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PwrToSgnVldtnTmStmp", required = true)
 	protected ISODateTime powerToSignValidationTimeStamp;
 	/**
-	 * Validation of the time stamp provided by the 'PowerToSign' user.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -356,7 +362,7 @@ public class IsabelEnhancedHeader1 {
 	 */
 	public static final MMMessageAttribute mmPowerToSignValidationTimeStamp = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "PwrToSgnVldtnTmStmp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -367,10 +373,11 @@ public class IsabelEnhancedHeader1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "SndrTrggr", required = true)
 	protected IsabelSenderTrigger1Choice senderTrigger;
 	/**
-	 * Trigger used by the sender to transfer the file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -397,7 +404,7 @@ public class IsabelEnhancedHeader1 {
 	 */
 	public static final MMMessageAssociationEnd mmSenderTrigger = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "SndrTrggr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -409,10 +416,11 @@ public class IsabelEnhancedHeader1 {
 			type_lazy = () -> IsabelSenderTrigger1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SndTmStmp", required = true)
 	protected ISODateTime sendTimeStamp;
 	/**
-	 * Time stamp on when the file is sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -439,7 +447,7 @@ public class IsabelEnhancedHeader1 {
 	 */
 	public static final MMMessageAttribute mmSendTimeStamp = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "SndTmStmp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -450,11 +458,11 @@ public class IsabelEnhancedHeader1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "XtraCondsAccptd", required = true)
 	protected TrueFalseIndicator extraConditionsAccepted;
 	/**
-	 * Indicates whether extra conditions are applicable and accepted for this
-	 * file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -484,7 +492,7 @@ public class IsabelEnhancedHeader1 {
 	 */
 	public static final MMMessageAttribute mmExtraConditionsAccepted = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "XtraCondsAccptd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -495,10 +503,11 @@ public class IsabelEnhancedHeader1 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Src", required = true)
 	protected IsabelInputSource1Choice source;
 	/**
-	 * Input source for the generation of the file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -525,7 +534,7 @@ public class IsabelEnhancedHeader1 {
 	 */
 	public static final MMMessageAssociationEnd mmSource = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "Src";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -537,10 +546,11 @@ public class IsabelEnhancedHeader1 {
 			type_lazy = () -> IsabelInputSource1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfReqrdSgntrs")
 	protected Number numberOfRequiredSignatures;
 	/**
-	 * Number of signatures required to validate the payments file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -568,7 +578,7 @@ public class IsabelEnhancedHeader1 {
 	 */
 	public static final MMMessageAttribute mmNumberOfRequiredSignatures = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfReqrdSgntrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -579,10 +589,11 @@ public class IsabelEnhancedHeader1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Xtnded")
 	protected IsabelExtendedHeader1 extended;
 	/**
-	 * Extended parameters for an Isabel payment initiation file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -609,7 +620,7 @@ public class IsabelEnhancedHeader1 {
 	 */
 	public static final MMMessageAssociationEnd mmExtended = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelEnhancedHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnded";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -625,10 +636,13 @@ public class IsabelEnhancedHeader1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IsabelEnhancedHeader1.mmDebitType, IsabelEnhancedHeader1.mmBankDebitType, IsabelEnhancedHeader1.mmAccountBasedContract, IsabelEnhancedHeader1.mmValidationResults,
-						IsabelEnhancedHeader1.mmPowerToSignValidationResults, IsabelEnhancedHeader1.mmPowerToSignValidationTimeStamp, IsabelEnhancedHeader1.mmSenderTrigger, IsabelEnhancedHeader1.mmSendTimeStamp,
-						IsabelEnhancedHeader1.mmExtraConditionsAccepted, IsabelEnhancedHeader1.mmSource, IsabelEnhancedHeader1.mmNumberOfRequiredSignatures, IsabelEnhancedHeader1.mmExtended);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelEnhancedHeader1.mmDebitType, com.tools20022.repository.msg.IsabelEnhancedHeader1.mmBankDebitType,
+						com.tools20022.repository.msg.IsabelEnhancedHeader1.mmAccountBasedContract, com.tools20022.repository.msg.IsabelEnhancedHeader1.mmValidationResults,
+						com.tools20022.repository.msg.IsabelEnhancedHeader1.mmPowerToSignValidationResults, com.tools20022.repository.msg.IsabelEnhancedHeader1.mmPowerToSignValidationTimeStamp,
+						com.tools20022.repository.msg.IsabelEnhancedHeader1.mmSenderTrigger, com.tools20022.repository.msg.IsabelEnhancedHeader1.mmSendTimeStamp,
+						com.tools20022.repository.msg.IsabelEnhancedHeader1.mmExtraConditionsAccepted, com.tools20022.repository.msg.IsabelEnhancedHeader1.mmSource,
+						com.tools20022.repository.msg.IsabelEnhancedHeader1.mmNumberOfRequiredSignatures, com.tools20022.repository.msg.IsabelEnhancedHeader1.mmExtended);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelEnhancedHeader1";
 				definition = "Specifies the enhanced parameters for an Isabel payment file.";
@@ -637,111 +651,111 @@ public class IsabelEnhancedHeader1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DbtTp", required = true)
 	public DebitType1Code getDebitType() {
 		return debitType;
 	}
 
-	public void setDebitType(DebitType1Code debitType) {
-		this.debitType = debitType;
+	public IsabelEnhancedHeader1 setDebitType(DebitType1Code debitType) {
+		this.debitType = Objects.requireNonNull(debitType);
+		return this;
 	}
 
-	@XmlElement(name = "BkDbtTp", required = true)
 	public DebitType1Code getBankDebitType() {
 		return bankDebitType;
 	}
 
-	public void setBankDebitType(DebitType1Code bankDebitType) {
-		this.bankDebitType = bankDebitType;
+	public IsabelEnhancedHeader1 setBankDebitType(DebitType1Code bankDebitType) {
+		this.bankDebitType = Objects.requireNonNull(bankDebitType);
+		return this;
 	}
 
-	@XmlElement(name = "AcctBasedCtrct", required = true)
 	public TrueFalseIndicator getAccountBasedContract() {
 		return accountBasedContract;
 	}
 
-	public void setAccountBasedContract(TrueFalseIndicator accountBasedContract) {
-		this.accountBasedContract = accountBasedContract;
+	public IsabelEnhancedHeader1 setAccountBasedContract(TrueFalseIndicator accountBasedContract) {
+		this.accountBasedContract = Objects.requireNonNull(accountBasedContract);
+		return this;
 	}
 
-	@XmlElement(name = "VldtnRslts", required = true)
 	public Validation1Code getValidationResults() {
 		return validationResults;
 	}
 
-	public void setValidationResults(Validation1Code validationResults) {
-		this.validationResults = validationResults;
+	public IsabelEnhancedHeader1 setValidationResults(Validation1Code validationResults) {
+		this.validationResults = Objects.requireNonNull(validationResults);
+		return this;
 	}
 
-	@XmlElement(name = "PwrToSgnVldtnRslts", required = true)
 	public Validation2Code getPowerToSignValidationResults() {
 		return powerToSignValidationResults;
 	}
 
-	public void setPowerToSignValidationResults(Validation2Code powerToSignValidationResults) {
-		this.powerToSignValidationResults = powerToSignValidationResults;
+	public IsabelEnhancedHeader1 setPowerToSignValidationResults(Validation2Code powerToSignValidationResults) {
+		this.powerToSignValidationResults = Objects.requireNonNull(powerToSignValidationResults);
+		return this;
 	}
 
-	@XmlElement(name = "PwrToSgnVldtnTmStmp", required = true)
 	public ISODateTime getPowerToSignValidationTimeStamp() {
 		return powerToSignValidationTimeStamp;
 	}
 
-	public void setPowerToSignValidationTimeStamp(ISODateTime powerToSignValidationTimeStamp) {
-		this.powerToSignValidationTimeStamp = powerToSignValidationTimeStamp;
+	public IsabelEnhancedHeader1 setPowerToSignValidationTimeStamp(ISODateTime powerToSignValidationTimeStamp) {
+		this.powerToSignValidationTimeStamp = Objects.requireNonNull(powerToSignValidationTimeStamp);
+		return this;
 	}
 
-	@XmlElement(name = "SndrTrggr", required = true)
 	public IsabelSenderTrigger1Choice getSenderTrigger() {
 		return senderTrigger;
 	}
 
-	public void setSenderTrigger(IsabelSenderTrigger1Choice senderTrigger) {
-		this.senderTrigger = senderTrigger;
+	public IsabelEnhancedHeader1 setSenderTrigger(IsabelSenderTrigger1Choice senderTrigger) {
+		this.senderTrigger = Objects.requireNonNull(senderTrigger);
+		return this;
 	}
 
-	@XmlElement(name = "SndTmStmp", required = true)
 	public ISODateTime getSendTimeStamp() {
 		return sendTimeStamp;
 	}
 
-	public void setSendTimeStamp(ISODateTime sendTimeStamp) {
-		this.sendTimeStamp = sendTimeStamp;
+	public IsabelEnhancedHeader1 setSendTimeStamp(ISODateTime sendTimeStamp) {
+		this.sendTimeStamp = Objects.requireNonNull(sendTimeStamp);
+		return this;
 	}
 
-	@XmlElement(name = "XtraCondsAccptd", required = true)
 	public TrueFalseIndicator getExtraConditionsAccepted() {
 		return extraConditionsAccepted;
 	}
 
-	public void setExtraConditionsAccepted(TrueFalseIndicator extraConditionsAccepted) {
-		this.extraConditionsAccepted = extraConditionsAccepted;
+	public IsabelEnhancedHeader1 setExtraConditionsAccepted(TrueFalseIndicator extraConditionsAccepted) {
+		this.extraConditionsAccepted = Objects.requireNonNull(extraConditionsAccepted);
+		return this;
 	}
 
-	@XmlElement(name = "Src", required = true)
 	public IsabelInputSource1Choice getSource() {
 		return source;
 	}
 
-	public void setSource(IsabelInputSource1Choice source) {
-		this.source = source;
+	public IsabelEnhancedHeader1 setSource(IsabelInputSource1Choice source) {
+		this.source = Objects.requireNonNull(source);
+		return this;
 	}
 
-	@XmlElement(name = "NbOfReqrdSgntrs")
-	public Number getNumberOfRequiredSignatures() {
-		return numberOfRequiredSignatures;
+	public Optional<Number> getNumberOfRequiredSignatures() {
+		return numberOfRequiredSignatures == null ? Optional.empty() : Optional.of(numberOfRequiredSignatures);
 	}
 
-	public void setNumberOfRequiredSignatures(Number numberOfRequiredSignatures) {
+	public IsabelEnhancedHeader1 setNumberOfRequiredSignatures(Number numberOfRequiredSignatures) {
 		this.numberOfRequiredSignatures = numberOfRequiredSignatures;
+		return this;
 	}
 
-	@XmlElement(name = "Xtnded")
-	public IsabelExtendedHeader1 getExtended() {
-		return extended;
+	public Optional<IsabelExtendedHeader1> getExtended() {
+		return extended == null ? Optional.empty() : Optional.of(extended);
 	}
 
-	public void setExtended(com.tools20022.repository.msg.IsabelExtendedHeader1 extended) {
+	public IsabelEnhancedHeader1 setExtended(com.tools20022.repository.msg.IsabelExtendedHeader1 extended) {
 		this.extended = extended;
+		return this;
 	}
 }

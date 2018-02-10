@@ -20,45 +20,49 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.FundOrderTypeCode;
+import com.tools20022.repository.codeset.FundOrderType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the category of the investment fund order.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode
- * FundOrderTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType2Code#mmBedAndBreakfast
- * FundOrderType2Code.mmBedAndBreakfast}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType2Code#BedAndBreakfast
+ * FundOrderType2Code.BedAndBreakfast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType2Code#mmInvestmentPlan
- * FundOrderType2Code.mmInvestmentPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType2Code#InvestmentPlan
+ * FundOrderType2Code.InvestmentPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType2Code#mmPreAdvice
- * FundOrderType2Code.mmPreAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType2Code#PreAdvice
+ * FundOrderType2Code.PreAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType2Code#mmStaffOrder
- * FundOrderType2Code.mmStaffOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType2Code#StaffOrder
+ * FundOrderType2Code.StaffOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOrderType2Code#mmRegularSavingsPlan
- * FundOrderType2Code.mmRegularSavingsPlan}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType2Code#mmOther
- * FundOrderType2Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOrderType2Code#RegularSavingsPlan
+ * FundOrderType2Code.RegularSavingsPlan}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FundOrderType2Code#Other
+ * FundOrderType2Code.Other}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.FundOrderTypeCode
+ * FundOrderTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -75,7 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the category of the investment fund order."</li>
  * </ul>
  */
-public class FundOrderType2Code extends FundOrderTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FundOrderType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -94,11 +99,12 @@ public class FundOrderType2Code extends FundOrderTypeCode {
 	 * name} = "BedAndBreakfast"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBedAndBreakfast = new MMCode() {
+	public static final FundOrderType2Code BedAndBreakfast = new FundOrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BedAndBreakfast";
-			owner_lazy = () -> FundOrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderType2Code.mmObject();
+			codeName = FundOrderTypeCode.BedAndBreakfast.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -117,11 +123,12 @@ public class FundOrderType2Code extends FundOrderTypeCode {
 	 * name} = "InvestmentPlan"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestmentPlan = new MMCode() {
+	public static final FundOrderType2Code InvestmentPlan = new FundOrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPlan";
-			owner_lazy = () -> FundOrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderType2Code.mmObject();
+			codeName = FundOrderTypeCode.InvestmentPlan.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -140,11 +147,12 @@ public class FundOrderType2Code extends FundOrderTypeCode {
 	 * name} = "PreAdvice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreAdvice = new MMCode() {
+	public static final FundOrderType2Code PreAdvice = new FundOrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAdvice";
-			owner_lazy = () -> FundOrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderType2Code.mmObject();
+			codeName = FundOrderTypeCode.PreAdvice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -163,11 +171,12 @@ public class FundOrderType2Code extends FundOrderTypeCode {
 	 * name} = "StaffOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStaffOrder = new MMCode() {
+	public static final FundOrderType2Code StaffOrder = new FundOrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StaffOrder";
-			owner_lazy = () -> FundOrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderType2Code.mmObject();
+			codeName = FundOrderTypeCode.StaffOrder.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -186,11 +195,12 @@ public class FundOrderType2Code extends FundOrderTypeCode {
 	 * name} = "RegularSavingsPlan"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegularSavingsPlan = new MMCode() {
+	public static final FundOrderType2Code RegularSavingsPlan = new FundOrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegularSavingsPlan";
-			owner_lazy = () -> FundOrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderType2Code.mmObject();
+			codeName = FundOrderTypeCode.RegularSavingsPlan.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -209,27 +219,63 @@ public class FundOrderType2Code extends FundOrderTypeCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final FundOrderType2Code Other = new FundOrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> FundOrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOrderType2Code.mmObject();
+			codeName = FundOrderTypeCode.Other.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, FundOrderType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FundOrderType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BEDB");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundOrderType2Code";
 				definition = "Specifies the category of the investment fund order.";
-				code_lazy = () -> Arrays.asList(FundOrderType2Code.mmBedAndBreakfast, FundOrderType2Code.mmInvestmentPlan, FundOrderType2Code.mmPreAdvice, FundOrderType2Code.mmStaffOrder, FundOrderType2Code.mmRegularSavingsPlan,
-						FundOrderType2Code.mmOther);
 				trace_lazy = () -> FundOrderTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundOrderType2Code.BedAndBreakfast, com.tools20022.repository.codeset.FundOrderType2Code.InvestmentPlan,
+						com.tools20022.repository.codeset.FundOrderType2Code.PreAdvice, com.tools20022.repository.codeset.FundOrderType2Code.StaffOrder, com.tools20022.repository.codeset.FundOrderType2Code.RegularSavingsPlan,
+						com.tools20022.repository.codeset.FundOrderType2Code.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BedAndBreakfast.getCodeName().get(), BedAndBreakfast);
+		codesByName.put(InvestmentPlan.getCodeName().get(), InvestmentPlan);
+		codesByName.put(PreAdvice.getCodeName().get(), PreAdvice);
+		codesByName.put(StaffOrder.getCodeName().get(), StaffOrder);
+		codesByName.put(RegularSavingsPlan.getCodeName().get(), RegularSavingsPlan);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static FundOrderType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FundOrderType2Code[] values() {
+		FundOrderType2Code[] values = new FundOrderType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FundOrderType2Code> {
+		@Override
+		public FundOrderType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FundOrderType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

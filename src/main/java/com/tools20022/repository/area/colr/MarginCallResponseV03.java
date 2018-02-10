@@ -28,9 +28,8 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CollateralManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -54,23 +53,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CollateralManagementPreviousVersion
- * CollateralManagementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CollateralManagementISOPreviousversion
- * CollateralManagementISOPreviousversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "MrgnCallRspn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -104,6 +86,23 @@ import javax.xml.bind.annotation.*;
  * MarginCallResponseV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CollateralManagementISOPreviousversion
+ * CollateralManagementISOPreviousversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "MrgnCallRspn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CollateralManagementPreviousVersion
+ * CollateralManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code colr.004.001.03}</li>
@@ -126,16 +125,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MarginCallResponseV03", propOrder = {"transactionIdentification", "obligation", "agreement", "marginDetailsDueToA", "marginDetailsDueToB", "agreedAmountDueToA", "agreedAmountDueToB", "responseDetails", "supplementaryData"})
 public class MarginCallResponseV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId", required = true)
 	protected Max35Text transactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as know by the instructing
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -185,12 +184,11 @@ public class MarginCallResponseV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Oblgtn", required = true)
 	protected Obligation3 obligation;
 	/**
-	 * Provides information like the identification of the party or parties
-	 * associated with the collateral agreement, the exposure type and the
-	 * valuation date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -240,10 +238,11 @@ public class MarginCallResponseV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Agrmt")
 	protected Agreement2 agreement;
 	/**
-	 * Agreement details for the over the counter market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -291,11 +290,11 @@ public class MarginCallResponseV03 {
 			}
 		}
 	};
+	@XmlElement(name = "MrgnDtlsDueToA")
 	protected MarginCall1 marginDetailsDueToA;
 	/**
-	 * Provides details about the margin calculation that would be due to party
-	 * A.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -345,11 +344,11 @@ public class MarginCallResponseV03 {
 			}
 		}
 	};
+	@XmlElement(name = "MrgnDtlsDueToB")
 	protected MarginCall1 marginDetailsDueToB;
 	/**
-	 * Provides details about the margin calculation that would be due to party
-	 * B.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -399,10 +398,11 @@ public class MarginCallResponseV03 {
 			}
 		}
 	};
+	@XmlElement(name = "AgrdAmtDueToA")
 	protected AgreedAmount1Choice agreedAmountDueToA;
 	/**
-	 * Provides details about the agreed amount that would be due to party A.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -452,10 +452,11 @@ public class MarginCallResponseV03 {
 			}
 		}
 	};
+	@XmlElement(name = "AgrdAmtDueToB")
 	protected AgreedAmount1Choice agreedAmountDueToB;
 	/**
-	 * Provides details about the agreed amount that would be due to party B.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -505,10 +506,11 @@ public class MarginCallResponseV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RspnDtls")
 	protected Response1 responseDetails;
 	/**
-	 * Provides response details about the margin call.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -556,11 +558,11 @@ public class MarginCallResponseV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -645,88 +647,88 @@ public class MarginCallResponseV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public MarginCallResponseV03 setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Oblgtn", required = true)
 	public Obligation3 getObligation() {
 		return obligation;
 	}
 
-	public void setObligation(Obligation3 obligation) {
-		this.obligation = obligation;
+	public MarginCallResponseV03 setObligation(Obligation3 obligation) {
+		this.obligation = Objects.requireNonNull(obligation);
+		return this;
 	}
 
-	@XmlElement(name = "Agrmt")
-	public Agreement2 getAgreement() {
-		return agreement;
+	public Optional<Agreement2> getAgreement() {
+		return agreement == null ? Optional.empty() : Optional.of(agreement);
 	}
 
-	public void setAgreement(Agreement2 agreement) {
+	public MarginCallResponseV03 setAgreement(Agreement2 agreement) {
 		this.agreement = agreement;
+		return this;
 	}
 
-	@XmlElement(name = "MrgnDtlsDueToA")
-	public MarginCall1 getMarginDetailsDueToA() {
-		return marginDetailsDueToA;
+	public Optional<MarginCall1> getMarginDetailsDueToA() {
+		return marginDetailsDueToA == null ? Optional.empty() : Optional.of(marginDetailsDueToA);
 	}
 
-	public void setMarginDetailsDueToA(MarginCall1 marginDetailsDueToA) {
+	public MarginCallResponseV03 setMarginDetailsDueToA(MarginCall1 marginDetailsDueToA) {
 		this.marginDetailsDueToA = marginDetailsDueToA;
+		return this;
 	}
 
-	@XmlElement(name = "MrgnDtlsDueToB")
-	public MarginCall1 getMarginDetailsDueToB() {
-		return marginDetailsDueToB;
+	public Optional<MarginCall1> getMarginDetailsDueToB() {
+		return marginDetailsDueToB == null ? Optional.empty() : Optional.of(marginDetailsDueToB);
 	}
 
-	public void setMarginDetailsDueToB(MarginCall1 marginDetailsDueToB) {
+	public MarginCallResponseV03 setMarginDetailsDueToB(MarginCall1 marginDetailsDueToB) {
 		this.marginDetailsDueToB = marginDetailsDueToB;
+		return this;
 	}
 
-	@XmlElement(name = "AgrdAmtDueToA")
-	public AgreedAmount1Choice getAgreedAmountDueToA() {
-		return agreedAmountDueToA;
+	public Optional<AgreedAmount1Choice> getAgreedAmountDueToA() {
+		return agreedAmountDueToA == null ? Optional.empty() : Optional.of(agreedAmountDueToA);
 	}
 
-	public void setAgreedAmountDueToA(AgreedAmount1Choice agreedAmountDueToA) {
+	public MarginCallResponseV03 setAgreedAmountDueToA(AgreedAmount1Choice agreedAmountDueToA) {
 		this.agreedAmountDueToA = agreedAmountDueToA;
+		return this;
 	}
 
-	@XmlElement(name = "AgrdAmtDueToB")
-	public AgreedAmount1Choice getAgreedAmountDueToB() {
-		return agreedAmountDueToB;
+	public Optional<AgreedAmount1Choice> getAgreedAmountDueToB() {
+		return agreedAmountDueToB == null ? Optional.empty() : Optional.of(agreedAmountDueToB);
 	}
 
-	public void setAgreedAmountDueToB(AgreedAmount1Choice agreedAmountDueToB) {
+	public MarginCallResponseV03 setAgreedAmountDueToB(AgreedAmount1Choice agreedAmountDueToB) {
 		this.agreedAmountDueToB = agreedAmountDueToB;
+		return this;
 	}
 
-	@XmlElement(name = "RspnDtls")
-	public Response1 getResponseDetails() {
-		return responseDetails;
+	public Optional<Response1> getResponseDetails() {
+		return responseDetails == null ? Optional.empty() : Optional.of(responseDetails);
 	}
 
-	public void setResponseDetails(Response1 responseDetails) {
+	public MarginCallResponseV03 setResponseDetails(Response1 responseDetails) {
 		this.responseDetails = responseDetails;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public MarginCallResponseV03 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:colr.004.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:colr.004.001.03")
 	static public class Document {
 		@XmlElement(name = "MrgnCallRspn", required = true)
 		public MarginCallResponseV03 messageBody;

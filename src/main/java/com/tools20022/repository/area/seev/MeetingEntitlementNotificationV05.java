@@ -25,9 +25,8 @@ import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ProxyVotingISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -51,21 +50,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
- * SecuritiesEventsLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ProxyVotingISOLatestversion
- * ProxyVotingISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "MtgEntitlmntNtfctn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -87,6 +71,21 @@ import javax.xml.bind.annotation.*;
  * MeetingEntitlementNotificationV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ProxyVotingISOLatestversion
+ * ProxyVotingISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "MtgEntitlmntNtfctn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
+ * SecuritiesEventsLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.003.001.05}</li>
@@ -106,15 +105,16 @@ import javax.xml.bind.annotation.*;
  * MeetingEntitlementNotificationV04}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MeetingEntitlementNotificationV05", propOrder = {"relatedReference", "meetingReference", "security", "eligibility", "supplementaryData"})
 public class MeetingEntitlementNotificationV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RltdRef")
 	protected MessageIdentification relatedReference;
 	/**
-	 * Identifies the meeting entitlement message to be modified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,10 +161,11 @@ public class MeetingEntitlementNotificationV05 {
 			}
 		}
 	};
+	@XmlElement(name = "MtgRef", required = true)
 	protected MeetingReference7 meetingReference;
 	/**
-	 * Series of elements which allow to identify a meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,11 +211,11 @@ public class MeetingEntitlementNotificationV05 {
 			}
 		}
 	};
+	@XmlElement(name = "Scty", required = true)
 	protected List<SecurityPosition9> security;
 	/**
-	 * Identifies the security for which the meeting is organised, the account
-	 * and the positions of the security holder.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -262,10 +263,11 @@ public class MeetingEntitlementNotificationV05 {
 			}
 		}
 	};
+	@XmlElement(name = "Elgblty", required = true)
 	protected EligibilityDates1 eligibility;
 	/**
-	 * Defines the dates determining eligibility.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -311,11 +313,11 @@ public class MeetingEntitlementNotificationV05 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -389,52 +391,52 @@ public class MeetingEntitlementNotificationV05 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RltdRef")
-	public MessageIdentification getRelatedReference() {
-		return relatedReference;
+	public Optional<MessageIdentification> getRelatedReference() {
+		return relatedReference == null ? Optional.empty() : Optional.of(relatedReference);
 	}
 
-	public void setRelatedReference(MessageIdentification relatedReference) {
+	public MeetingEntitlementNotificationV05 setRelatedReference(MessageIdentification relatedReference) {
 		this.relatedReference = relatedReference;
+		return this;
 	}
 
-	@XmlElement(name = "MtgRef", required = true)
 	public MeetingReference7 getMeetingReference() {
 		return meetingReference;
 	}
 
-	public void setMeetingReference(MeetingReference7 meetingReference) {
-		this.meetingReference = meetingReference;
+	public MeetingEntitlementNotificationV05 setMeetingReference(MeetingReference7 meetingReference) {
+		this.meetingReference = Objects.requireNonNull(meetingReference);
+		return this;
 	}
 
-	@XmlElement(name = "Scty", required = true)
 	public List<SecurityPosition9> getSecurity() {
-		return security;
+		return security == null ? security = new ArrayList<>() : security;
 	}
 
-	public void setSecurity(List<SecurityPosition9> security) {
-		this.security = security;
+	public MeetingEntitlementNotificationV05 setSecurity(List<SecurityPosition9> security) {
+		this.security = Objects.requireNonNull(security);
+		return this;
 	}
 
-	@XmlElement(name = "Elgblty", required = true)
 	public EligibilityDates1 getEligibility() {
 		return eligibility;
 	}
 
-	public void setEligibility(EligibilityDates1 eligibility) {
-		this.eligibility = eligibility;
+	public MeetingEntitlementNotificationV05 setEligibility(EligibilityDates1 eligibility) {
+		this.eligibility = Objects.requireNonNull(eligibility);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public MeetingEntitlementNotificationV05 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.003.05.05")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.003.001.05")
 	static public class Document {
 		@XmlElement(name = "MtgEntitlmntNtfctn", required = true)
 		public MeetingEntitlementNotificationV05 messageBody;

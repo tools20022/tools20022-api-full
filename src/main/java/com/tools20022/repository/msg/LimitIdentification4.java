@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +74,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,16 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LimitIdentification4", propOrder = {"accountIdentification", "type", "limitCurrency", "accountOwner", "bilateralLimitCounterpartyIdentification"})
 public class LimitIdentification4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId", required = true)
 	protected AccountIdentification4Choice accountIdentification;
 	/**
-	 * Unique identification as assigned by the account servicer to
-	 * unambiguously identify the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -130,7 +132,7 @@ public class LimitIdentification4 {
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> LimitIdentification4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentification4.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,10 +144,11 @@ public class LimitIdentification4 {
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected LimitType4Code type;
 	/**
-	 * Nature of the risk management limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,7 +181,7 @@ public class LimitIdentification4 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmType;
-			componentContext_lazy = () -> LimitIdentification4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentification4.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,10 +192,11 @@ public class LimitIdentification4 {
 			simpleType_lazy = () -> LimitType4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "LmtCcy")
 	protected ActiveCurrencyCode limitCurrency;
 	/**
-	 * Currency unit used to specify the limit amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -226,7 +230,7 @@ public class LimitIdentification4 {
 	public static final MMMessageAttribute mmLimitCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCurrency;
-			componentContext_lazy = () -> LimitIdentification4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentification4.mmObject();
 			isDerived = false;
 			xmlTag = "LmtCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,10 +241,11 @@ public class LimitIdentification4 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr", required = true)
 	protected BICFIIdentifier accountOwner;
 	/**
-	 * Owner of the account which is being queried.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -274,7 +279,7 @@ public class LimitIdentification4 {
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> LimitIdentification4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentification4.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -285,10 +290,11 @@ public class LimitIdentification4 {
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "BilLmtCtrPtyId")
 	protected SystemPartyIdentification4 bilateralLimitCounterpartyIdentification;
 	/**
-	 * Identification of the system member for which the limit is established.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -323,7 +329,7 @@ public class LimitIdentification4 {
 	public static final MMMessageAssociationEnd mmBilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> LimitIdentification4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentification4.mmObject();
 			isDerived = false;
 			xmlTag = "BilLmtCtrPtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -339,10 +345,11 @@ public class LimitIdentification4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LimitIdentification4.mmAccountIdentification, LimitIdentification4.mmType, LimitIdentification4.mmLimitCurrency, LimitIdentification4.mmAccountOwner,
-						LimitIdentification4.mmBilateralLimitCounterpartyIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitIdentification4.mmAccountIdentification, com.tools20022.repository.msg.LimitIdentification4.mmType,
+						com.tools20022.repository.msg.LimitIdentification4.mmLimitCurrency, com.tools20022.repository.msg.LimitIdentification4.mmAccountOwner,
+						com.tools20022.repository.msg.LimitIdentification4.mmBilateralLimitCounterpartyIdentification);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitIdentification4";
 				definition = "Cash management feature limiting the maximum risk a party accepts to take with respect to a counterparty or a set of counterparties. A risk management limit is either bilateral, ie, for a counterparty, or multilateral, ie, for a set of counterparties or all other members in a system.The limit may also apply to sponsored members, ie, indirect members. In principle, a risk management limit is calculated on the net position between two members and is expressed as a credit or debit limit, from the point of view of the party setting the limit.";
@@ -351,48 +358,48 @@ public class LimitIdentification4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public AccountIdentification4Choice getAccountIdentification() {
 		return accountIdentification;
 	}
 
-	public void setAccountIdentification(AccountIdentification4Choice accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public LimitIdentification4 setAccountIdentification(AccountIdentification4Choice accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public LimitType4Code getType() {
 		return type;
 	}
 
-	public void setType(LimitType4Code type) {
-		this.type = type;
+	public LimitIdentification4 setType(LimitType4Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "LmtCcy")
-	public ActiveCurrencyCode getLimitCurrency() {
-		return limitCurrency;
+	public Optional<ActiveCurrencyCode> getLimitCurrency() {
+		return limitCurrency == null ? Optional.empty() : Optional.of(limitCurrency);
 	}
 
-	public void setLimitCurrency(ActiveCurrencyCode limitCurrency) {
+	public LimitIdentification4 setLimitCurrency(ActiveCurrencyCode limitCurrency) {
 		this.limitCurrency = limitCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr", required = true)
 	public BICFIIdentifier getAccountOwner() {
 		return accountOwner;
 	}
 
-	public void setAccountOwner(BICFIIdentifier accountOwner) {
-		this.accountOwner = accountOwner;
+	public LimitIdentification4 setAccountOwner(BICFIIdentifier accountOwner) {
+		this.accountOwner = Objects.requireNonNull(accountOwner);
+		return this;
 	}
 
-	@XmlElement(name = "BilLmtCtrPtyId")
-	public SystemPartyIdentification4 getBilateralLimitCounterpartyIdentification() {
-		return bilateralLimitCounterpartyIdentification;
+	public Optional<SystemPartyIdentification4> getBilateralLimitCounterpartyIdentification() {
+		return bilateralLimitCounterpartyIdentification == null ? Optional.empty() : Optional.of(bilateralLimitCounterpartyIdentification);
 	}
 
-	public void setBilateralLimitCounterpartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification4 bilateralLimitCounterpartyIdentification) {
+	public LimitIdentification4 setBilateralLimitCounterpartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification4 bilateralLimitCounterpartyIdentification) {
 		this.bilateralLimitCounterpartyIdentification = bilateralLimitCounterpartyIdentification;
+		return this;
 	}
 }

@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the parameters for an Isabel reporting file."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "IsabelFile4", propOrder = {"format", "name", "MIMEType"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "IsabelFile4", propOrder = {"format", "name", "mIMEType"})
 public class IsabelFile4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Frmt", required = true)
 	protected Max16Text format;
 	/**
-	 * Format of the file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,7 +100,7 @@ public class IsabelFile4 {
 	 */
 	public static final MMMessageAttribute mmFormat = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelFile4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelFile4.mmObject();
 			isDerived = false;
 			xmlTag = "Frmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,10 +111,11 @@ public class IsabelFile4 {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm")
 	protected Max100AlphaNumericUnderscoreText name;
 	/**
-	 * Name of the mime file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -138,7 +142,7 @@ public class IsabelFile4 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelFile4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelFile4.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,10 +153,11 @@ public class IsabelFile4 {
 			simpleType_lazy = () -> Max100AlphaNumericUnderscoreText.mmObject();
 		}
 	};
+	@XmlElement(name = "MIMETp")
 	protected Max256Text mIMEType;
 	/**
-	 * Type of the mime file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,7 +183,7 @@ public class IsabelFile4 {
 	 */
 	public static final MMMessageAttribute mmMIMEType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelFile4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelFile4.mmObject();
 			isDerived = false;
 			xmlTag = "MIMETp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -193,8 +198,8 @@ public class IsabelFile4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IsabelFile4.mmFormat, IsabelFile4.mmName, IsabelFile4.mmMIMEType);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelFile4.mmFormat, com.tools20022.repository.msg.IsabelFile4.mmName, com.tools20022.repository.msg.IsabelFile4.mmMIMEType);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelFile4";
 				definition = "Specifies the parameters for an Isabel reporting file.";
@@ -203,30 +208,30 @@ public class IsabelFile4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Frmt", required = true)
 	public Max16Text getFormat() {
 		return format;
 	}
 
-	public void setFormat(Max16Text format) {
-		this.format = format;
+	public IsabelFile4 setFormat(Max16Text format) {
+		this.format = Objects.requireNonNull(format);
+		return this;
 	}
 
-	@XmlElement(name = "Nm")
-	public Max100AlphaNumericUnderscoreText getName() {
-		return name;
+	public Optional<Max100AlphaNumericUnderscoreText> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max100AlphaNumericUnderscoreText name) {
+	public IsabelFile4 setName(Max100AlphaNumericUnderscoreText name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "MIMETp")
-	public Max256Text getMIMEType() {
-		return mIMEType;
+	public Optional<Max256Text> getMIMEType() {
+		return mIMEType == null ? Optional.empty() : Optional.of(mIMEType);
 	}
 
-	public void setMIMEType(Max256Text mIMEType) {
+	public IsabelFile4 setMIMEType(Max256Text mIMEType) {
 		this.mIMEType = mIMEType;
+		return this;
 	}
 }

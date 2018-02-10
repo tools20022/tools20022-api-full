@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.QueryTypeCode;
+import com.tools20022.repository.codeset.QueryType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifyies the nature of the request, that is whether all information be
@@ -32,23 +36,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.QueryTypeCode QueryTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryType3Code#mmAll
- * QueryType3Code.mmAll}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryType3Code#mmChanged
- * QueryType3Code.mmChanged}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryType3Code#mmModified
- * QueryType3Code.mmModified}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryType3Code#All
+ * QueryType3Code.All}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryType3Code#Changed
+ * QueryType3Code.Changed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryType3Code#Modified
+ * QueryType3Code.Modified}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.QueryTypeCode QueryTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class QueryType3Code extends QueryTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class QueryType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class QueryType3Code extends QueryTypeCode {
 	 * name} = "All"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAll = new MMCode() {
+	public static final QueryType3Code All = new QueryType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
-			owner_lazy = () -> QueryType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryType3Code.mmObject();
+			codeName = QueryTypeCode.All.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class QueryType3Code extends QueryTypeCode {
 	 * name} = "Changed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmChanged = new MMCode() {
+	public static final QueryType3Code Changed = new QueryType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Changed";
-			owner_lazy = () -> QueryType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryType3Code.mmObject();
+			codeName = QueryTypeCode.Changed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,58 @@ public class QueryType3Code extends QueryTypeCode {
 	 * name} = "Modified"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmModified = new MMCode() {
+	public static final QueryType3Code Modified = new QueryType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modified";
-			owner_lazy = () -> QueryType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryType3Code.mmObject();
+			codeName = QueryTypeCode.Modified.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, QueryType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected QueryType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ALLL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueryType3Code";
 				definition = "Specifyies the nature of the request, that is whether all information be returned or only information that has changed since the last similar request was returned.";
-				code_lazy = () -> Arrays.asList(QueryType3Code.mmAll, QueryType3Code.mmChanged, QueryType3Code.mmModified);
 				trace_lazy = () -> QueryTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryType3Code.All, com.tools20022.repository.codeset.QueryType3Code.Changed, com.tools20022.repository.codeset.QueryType3Code.Modified);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(All.getCodeName().get(), All);
+		codesByName.put(Changed.getCodeName().get(), Changed);
+		codesByName.put(Modified.getCodeName().get(), Modified);
+	}
+
+	public static QueryType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static QueryType3Code[] values() {
+		QueryType3Code[] values = new QueryType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, QueryType3Code> {
+		@Override
+		public QueryType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(QueryType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

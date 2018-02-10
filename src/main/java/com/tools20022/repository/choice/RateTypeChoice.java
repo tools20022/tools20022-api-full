@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.InterestCalculation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,18 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Rate is expressed as a percentage or a text."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RateTypeChoice", propOrder = {"percentageRate", "textualRate"})
 public class RateTypeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PctgRate", required = true)
 	protected PercentageRate percentageRate;
 	/**
-	 * Percentage charged for the use of an amount of money, usually expressed
-	 * at an annual rate. The interest rate is the ratio of the amount of
-	 * interest paid during a certain period of time compared to the principal
-	 * amount of the interest bearing financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +112,7 @@ public class RateTypeChoice {
 	public static final MMMessageAttribute mmPercentageRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
-			componentContext_lazy = () -> RateTypeChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RateTypeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "PctgRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +123,11 @@ public class RateTypeChoice {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "TxtlRate", required = true)
 	protected Max35Text textualRate;
 	/**
-	 * Rate is expressed as a text.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +160,7 @@ public class RateTypeChoice {
 	public static final MMMessageAttribute mmTextualRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRateType;
-			componentContext_lazy = () -> RateTypeChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RateTypeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "TxtlRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,9 +175,9 @@ public class RateTypeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RateTypeChoice.mmPercentageRate, RateTypeChoice.mmTextualRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateTypeChoice.mmPercentageRate, com.tools20022.repository.choice.RateTypeChoice.mmTextualRate);
 				trace_lazy = () -> InterestCalculation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateTypeChoice";
 				definition = "Rate is expressed as a percentage or a text.";
@@ -186,21 +186,21 @@ public class RateTypeChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PctgRate", required = true)
 	public PercentageRate getPercentageRate() {
 		return percentageRate;
 	}
 
-	public void setPercentageRate(PercentageRate percentageRate) {
-		this.percentageRate = percentageRate;
+	public RateTypeChoice setPercentageRate(PercentageRate percentageRate) {
+		this.percentageRate = Objects.requireNonNull(percentageRate);
+		return this;
 	}
 
-	@XmlElement(name = "TxtlRate", required = true)
 	public Max35Text getTextualRate() {
 		return textualRate;
 	}
 
-	public void setTextualRate(Max35Text textualRate) {
-		this.textualRate = textualRate;
+	public RateTypeChoice setTextualRate(Max35Text textualRate) {
+		this.textualRate = Objects.requireNonNull(textualRate);
+		return this;
 	}
 }

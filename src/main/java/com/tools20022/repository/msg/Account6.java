@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -99,8 +101,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -119,16 +121,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Account6", propOrder = {"identification", "designation", "servicer"})
 public class Account6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,7 +171,7 @@ public class Account6 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> Account6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Account6.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,14 +183,11 @@ public class Account6 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Dsgnt")
 	protected Max35Text designation;
 	/**
-	 * Supplementary registration information applying to a specific block of
-	 * units for dealing and reporting purposes. The supplementary registration
-	 * information may be used when all the units are registered, for example,
-	 * to a funds supermarket, but holdings for each investor have to reconciled
-	 * individually.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -229,7 +228,7 @@ public class Account6 {
 	public static final MMMessageAttribute mmDesignation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmDesignation;
-			componentContext_lazy = () -> Account6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Account6.mmObject();
 			isDerived = false;
 			xmlTag = "Dsgnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,13 +240,11 @@ public class Account6 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Svcr")
 	protected PartyIdentification2Choice servicer;
 	/**
-	 * Party that manages the account on behalf of the account owner, that is
-	 * manages the registration and booking of entries on the account,
-	 * calculates balances on the account and provides information about the
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -288,7 +285,7 @@ public class Account6 {
 	public static final MMMessageAssociationEnd mmServicer = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> AccountServicerRole.mmObject();
-			componentContext_lazy = () -> Account6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Account6.mmObject();
 			isDerived = false;
 			xmlTag = "Svcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -305,13 +302,13 @@ public class Account6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Account6.mmIdentification, Account6.mmDesignation, Account6.mmServicer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Account6.mmIdentification, com.tools20022.repository.msg.Account6.mmDesignation, com.tools20022.repository.msg.Account6.mmServicer);
 				messageBuildingBlock_lazy = () -> Arrays.asList(PEPOrISAOrPortfolioInformationV01.mmNomineeAccount, AccountHoldingInformationV02.mmNomineeAccount, AccountHoldingInformationV03.mmNomineeAccount,
 						PEPOrISAOrPortfolioTransferConfirmationV02.mmNomineeAccount, PortfolioTransferConfirmationV03.mmNomineeAccount, PortfolioTransferConfirmationV04.mmNomineeAccount,
 						PEPOrISAOrPortfolioTransferInstructionV02.mmNomineeAccount, PortfolioTransferInstructionV03.mmNomineeAccount, PortfolioTransferInstructionV04.mmNomineeAccount,
 						RequestForPEPOrISAOrPortfolioInformationV01.mmNomineeAccount, AccountHoldingInformationRequestV02.mmNomineeAccount);
 				trace_lazy = () -> InvestmentAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Account6";
 				definition = "Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.";
@@ -321,30 +318,30 @@ public class Account6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public Account6 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Dsgnt")
-	public Max35Text getDesignation() {
-		return designation;
+	public Optional<Max35Text> getDesignation() {
+		return designation == null ? Optional.empty() : Optional.of(designation);
 	}
 
-	public void setDesignation(Max35Text designation) {
+	public Account6 setDesignation(Max35Text designation) {
 		this.designation = designation;
+		return this;
 	}
 
-	@XmlElement(name = "Svcr")
-	public PartyIdentification2Choice getServicer() {
-		return servicer;
+	public Optional<PartyIdentification2Choice> getServicer() {
+		return servicer == null ? Optional.empty() : Optional.of(servicer);
 	}
 
-	public void setServicer(PartyIdentification2Choice servicer) {
+	public Account6 setServicer(PartyIdentification2Choice servicer) {
 		this.servicer = servicer;
+		return this;
 	}
 }

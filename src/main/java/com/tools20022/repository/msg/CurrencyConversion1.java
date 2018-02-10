@@ -29,11 +29,9 @@ import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -117,8 +115,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -141,18 +139,18 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CurrencyConversion1", propOrder = {"currencyConversionIdentification", "result", "responseReason", "targetCurrency", "targetCurrencyNumeric", "targetCurrencyDecimal", "targetCurrencyName", "resultingAmount",
 		"exchangeRate", "invertedExchangeRate", "quotationDate", "validUntil", "sourceCurrency", "sourceCurrencyNumeric", "sourceCurrencyDecimal", "sourceCurrencyName", "originalAmount", "commissionDetails", "markUpDetails",
 		"declarationDetails"})
 public class CurrencyConversion1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CcyConvsId")
 	protected Max35Text currencyConversionIdentification;
 	/**
-	 * Identification of the currency conversion operation for the service
-	 * provider.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,7 +187,7 @@ public class CurrencyConversion1 {
 	 */
 	public static final MMMessageAttribute mmCurrencyConversionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "CcyConvsId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,10 +199,11 @@ public class CurrencyConversion1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Rslt", required = true)
 	protected CurrencyConversionResponse1Code result;
 	/**
-	 * Result of a requested currency conversion.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -232,7 +231,7 @@ public class CurrencyConversion1 {
 	 */
 	public static final MMMessageAttribute mmResult = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "Rslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,10 +242,11 @@ public class CurrencyConversion1 {
 			simpleType_lazy = () -> CurrencyConversionResponse1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RspnRsn")
 	protected Max35Text responseReason;
 	/**
-	 * Plain text explaining the result of the currency conversion request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -274,7 +274,7 @@ public class CurrencyConversion1 {
 	 */
 	public static final MMMessageAttribute mmResponseReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "RspnRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -285,11 +285,11 @@ public class CurrencyConversion1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrgtCcy", required = true)
 	protected CurrencyCode targetCurrency;
 	/**
-	 * Currency into which the amount is converted (ISO 4217, 3 alphanumeric
-	 * characters).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -335,7 +335,7 @@ public class CurrencyConversion1 {
 	public static final MMMessageAttribute mmTargetCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmTargetCurrency;
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "TrgtCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -347,11 +347,11 @@ public class CurrencyConversion1 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "TrgtCcyNmrc", required = true)
 	protected Exact3NumericText targetCurrencyNumeric;
 	/**
-	 * Currency into which the amount is converted (ISO 4217, 3 numeric
-	 * characters).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -389,7 +389,7 @@ public class CurrencyConversion1 {
 	 */
 	public static final MMMessageAttribute mmTargetCurrencyNumeric = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "TrgtCcyNmrc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -401,10 +401,11 @@ public class CurrencyConversion1 {
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "TrgtCcyDcml", required = true)
 	protected Number targetCurrencyDecimal;
 	/**
-	 * Maximal number of digits after the decimal separator for target currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -433,7 +434,7 @@ public class CurrencyConversion1 {
 	 */
 	public static final MMMessageAttribute mmTargetCurrencyDecimal = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "TrgtCcyDcml";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -444,10 +445,11 @@ public class CurrencyConversion1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "TrgtCcyNm")
 	protected Max35Text targetCurrencyName;
 	/**
-	 * Full name of the target currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -474,7 +476,7 @@ public class CurrencyConversion1 {
 	 */
 	public static final MMMessageAttribute mmTargetCurrencyName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "TrgtCcyNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -485,10 +487,11 @@ public class CurrencyConversion1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RsltgAmt", required = true)
 	protected ImpliedCurrencyAndAmount resultingAmount;
 	/**
-	 * Amount converted in the target currency, including additional charges.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -534,7 +537,7 @@ public class CurrencyConversion1 {
 	public static final MMMessageAttribute mmResultingAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmResultingAmount;
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "RsltgAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -546,11 +549,11 @@ public class CurrencyConversion1 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "XchgRate", required = true)
 	protected PercentageRate exchangeRate;
 	/**
-	 * Exchange rate, expressed as a percentage, applied to convert the original
-	 * amount into the resulting amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -596,7 +599,7 @@ public class CurrencyConversion1 {
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -608,11 +611,11 @@ public class CurrencyConversion1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "NvrtdXchgRate")
 	protected PercentageRate invertedExchangeRate;
 	/**
-	 * Exchange rate, expressed as a percentage, applied to convert the
-	 * resulting amount into the original amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -656,7 +659,7 @@ public class CurrencyConversion1 {
 	public static final MMMessageAttribute mmInvertedExchangeRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "NvrtdXchgRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -668,10 +671,11 @@ public class CurrencyConversion1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "QtnDt")
 	protected ISODateTime quotationDate;
 	/**
-	 * Date and time at which the exchange rate has been quoted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -713,7 +717,7 @@ public class CurrencyConversion1 {
 	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotationDate;
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "QtnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -725,10 +729,11 @@ public class CurrencyConversion1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "VldUntil")
 	protected ISODateTime validUntil;
 	/**
-	 * Validity limit of the exchange rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -763,7 +768,7 @@ public class CurrencyConversion1 {
 	 */
 	public static final MMMessageAttribute mmValidUntil = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "VldUntil";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -775,11 +780,11 @@ public class CurrencyConversion1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "SrcCcy", required = true)
 	protected CurrencyCode sourceCurrency;
 	/**
-	 * Currency from which the amount is converted (ISO 4217, 3 alphanumeric
-	 * characters).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -825,7 +830,7 @@ public class CurrencyConversion1 {
 	public static final MMMessageAttribute mmSourceCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmSourceCurrency;
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "SrcCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -837,11 +842,11 @@ public class CurrencyConversion1 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "SrcCcyNmrc")
 	protected CurrencyCode sourceCurrencyNumeric;
 	/**
-	 * Currency from which the amount is converted (ISO 4217, 3 numeric
-	 * characters).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -878,7 +883,7 @@ public class CurrencyConversion1 {
 	 */
 	public static final MMMessageAttribute mmSourceCurrencyNumeric = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "SrcCcyNmrc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -890,10 +895,11 @@ public class CurrencyConversion1 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "SrcCcyDcml", required = true)
 	protected Number sourceCurrencyDecimal;
 	/**
-	 * Maximal number of digits after the decimal separator for source currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -922,7 +928,7 @@ public class CurrencyConversion1 {
 	 */
 	public static final MMMessageAttribute mmSourceCurrencyDecimal = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "SrcCcyDcml";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -933,10 +939,11 @@ public class CurrencyConversion1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "SrcCcyNm")
 	protected Max35Text sourceCurrencyName;
 	/**
-	 * Full name of the source currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -963,7 +970,7 @@ public class CurrencyConversion1 {
 	 */
 	public static final MMMessageAttribute mmSourceCurrencyName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "SrcCcyNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -974,10 +981,11 @@ public class CurrencyConversion1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlAmt", required = true)
 	protected ImpliedCurrencyAndAmount originalAmount;
 	/**
-	 * Original amount in the source currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1019,7 +1027,7 @@ public class CurrencyConversion1 {
 	public static final MMMessageAttribute mmOriginalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1031,10 +1039,11 @@ public class CurrencyConversion1 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ComssnDtls")
 	protected List<com.tools20022.repository.msg.Commission19> commissionDetails;
 	/**
-	 * Commission or additional charges made as part of a currency conversion.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1075,7 +1084,7 @@ public class CurrencyConversion1 {
 	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Commission.mmObject();
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1087,10 +1096,11 @@ public class CurrencyConversion1 {
 			type_lazy = () -> com.tools20022.repository.msg.Commission19.mmObject();
 		}
 	};
+	@XmlElement(name = "MrkUpDtls")
 	protected List<com.tools20022.repository.msg.Commission18> markUpDetails;
 	/**
-	 * Markup made as part of a currency conversion.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1129,7 +1139,7 @@ public class CurrencyConversion1 {
 	public static final MMMessageAssociationEnd mmMarkUpDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Commission.mmObject();
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "MrkUpDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1141,10 +1151,11 @@ public class CurrencyConversion1 {
 			type_lazy = () -> com.tools20022.repository.msg.Commission18.mmObject();
 		}
 	};
+	@XmlElement(name = "DclrtnDtls")
 	protected Max2048Text declarationDetails;
 	/**
-	 * Card scheme declaration (disclaimer) to present to the cardholder.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1180,7 +1191,7 @@ public class CurrencyConversion1 {
 	 */
 	public static final MMMessageAttribute mmDeclarationDetails = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyConversion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
 			isDerived = false;
 			xmlTag = "DclrtnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1196,13 +1207,15 @@ public class CurrencyConversion1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CurrencyConversion1.mmCurrencyConversionIdentification, CurrencyConversion1.mmResult, CurrencyConversion1.mmResponseReason, CurrencyConversion1.mmTargetCurrency,
-						CurrencyConversion1.mmTargetCurrencyNumeric, CurrencyConversion1.mmTargetCurrencyDecimal, CurrencyConversion1.mmTargetCurrencyName, CurrencyConversion1.mmResultingAmount, CurrencyConversion1.mmExchangeRate,
-						CurrencyConversion1.mmInvertedExchangeRate, CurrencyConversion1.mmQuotationDate, CurrencyConversion1.mmValidUntil, CurrencyConversion1.mmSourceCurrency, CurrencyConversion1.mmSourceCurrencyNumeric,
-						CurrencyConversion1.mmSourceCurrencyDecimal, CurrencyConversion1.mmSourceCurrencyName, CurrencyConversion1.mmOriginalAmount, CurrencyConversion1.mmCommissionDetails, CurrencyConversion1.mmMarkUpDetails,
-						CurrencyConversion1.mmDeclarationDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion1.mmCurrencyConversionIdentification, com.tools20022.repository.msg.CurrencyConversion1.mmResult,
+						com.tools20022.repository.msg.CurrencyConversion1.mmResponseReason, com.tools20022.repository.msg.CurrencyConversion1.mmTargetCurrency, com.tools20022.repository.msg.CurrencyConversion1.mmTargetCurrencyNumeric,
+						com.tools20022.repository.msg.CurrencyConversion1.mmTargetCurrencyDecimal, com.tools20022.repository.msg.CurrencyConversion1.mmTargetCurrencyName, com.tools20022.repository.msg.CurrencyConversion1.mmResultingAmount,
+						com.tools20022.repository.msg.CurrencyConversion1.mmExchangeRate, com.tools20022.repository.msg.CurrencyConversion1.mmInvertedExchangeRate, com.tools20022.repository.msg.CurrencyConversion1.mmQuotationDate,
+						com.tools20022.repository.msg.CurrencyConversion1.mmValidUntil, com.tools20022.repository.msg.CurrencyConversion1.mmSourceCurrency, com.tools20022.repository.msg.CurrencyConversion1.mmSourceCurrencyNumeric,
+						com.tools20022.repository.msg.CurrencyConversion1.mmSourceCurrencyDecimal, com.tools20022.repository.msg.CurrencyConversion1.mmSourceCurrencyName, com.tools20022.repository.msg.CurrencyConversion1.mmOriginalAmount,
+						com.tools20022.repository.msg.CurrencyConversion1.mmCommissionDetails, com.tools20022.repository.msg.CurrencyConversion1.mmMarkUpDetails, com.tools20022.repository.msg.CurrencyConversion1.mmDeclarationDetails);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -1219,183 +1232,183 @@ public class CurrencyConversion1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CcyConvsId")
-	public Max35Text getCurrencyConversionIdentification() {
-		return currencyConversionIdentification;
+	public Optional<Max35Text> getCurrencyConversionIdentification() {
+		return currencyConversionIdentification == null ? Optional.empty() : Optional.of(currencyConversionIdentification);
 	}
 
-	public void setCurrencyConversionIdentification(Max35Text currencyConversionIdentification) {
+	public CurrencyConversion1 setCurrencyConversionIdentification(Max35Text currencyConversionIdentification) {
 		this.currencyConversionIdentification = currencyConversionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Rslt", required = true)
 	public CurrencyConversionResponse1Code getResult() {
 		return result;
 	}
 
-	public void setResult(CurrencyConversionResponse1Code result) {
-		this.result = result;
+	public CurrencyConversion1 setResult(CurrencyConversionResponse1Code result) {
+		this.result = Objects.requireNonNull(result);
+		return this;
 	}
 
-	@XmlElement(name = "RspnRsn")
-	public Max35Text getResponseReason() {
-		return responseReason;
+	public Optional<Max35Text> getResponseReason() {
+		return responseReason == null ? Optional.empty() : Optional.of(responseReason);
 	}
 
-	public void setResponseReason(Max35Text responseReason) {
+	public CurrencyConversion1 setResponseReason(Max35Text responseReason) {
 		this.responseReason = responseReason;
+		return this;
 	}
 
-	@XmlElement(name = "TrgtCcy", required = true)
 	public CurrencyCode getTargetCurrency() {
 		return targetCurrency;
 	}
 
-	public void setTargetCurrency(CurrencyCode targetCurrency) {
-		this.targetCurrency = targetCurrency;
+	public CurrencyConversion1 setTargetCurrency(CurrencyCode targetCurrency) {
+		this.targetCurrency = Objects.requireNonNull(targetCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "TrgtCcyNmrc", required = true)
 	public Exact3NumericText getTargetCurrencyNumeric() {
 		return targetCurrencyNumeric;
 	}
 
-	public void setTargetCurrencyNumeric(Exact3NumericText targetCurrencyNumeric) {
-		this.targetCurrencyNumeric = targetCurrencyNumeric;
+	public CurrencyConversion1 setTargetCurrencyNumeric(Exact3NumericText targetCurrencyNumeric) {
+		this.targetCurrencyNumeric = Objects.requireNonNull(targetCurrencyNumeric);
+		return this;
 	}
 
-	@XmlElement(name = "TrgtCcyDcml", required = true)
 	public Number getTargetCurrencyDecimal() {
 		return targetCurrencyDecimal;
 	}
 
-	public void setTargetCurrencyDecimal(Number targetCurrencyDecimal) {
-		this.targetCurrencyDecimal = targetCurrencyDecimal;
+	public CurrencyConversion1 setTargetCurrencyDecimal(Number targetCurrencyDecimal) {
+		this.targetCurrencyDecimal = Objects.requireNonNull(targetCurrencyDecimal);
+		return this;
 	}
 
-	@XmlElement(name = "TrgtCcyNm")
-	public Max35Text getTargetCurrencyName() {
-		return targetCurrencyName;
+	public Optional<Max35Text> getTargetCurrencyName() {
+		return targetCurrencyName == null ? Optional.empty() : Optional.of(targetCurrencyName);
 	}
 
-	public void setTargetCurrencyName(Max35Text targetCurrencyName) {
+	public CurrencyConversion1 setTargetCurrencyName(Max35Text targetCurrencyName) {
 		this.targetCurrencyName = targetCurrencyName;
+		return this;
 	}
 
-	@XmlElement(name = "RsltgAmt", required = true)
 	public ImpliedCurrencyAndAmount getResultingAmount() {
 		return resultingAmount;
 	}
 
-	public void setResultingAmount(ImpliedCurrencyAndAmount resultingAmount) {
-		this.resultingAmount = resultingAmount;
+	public CurrencyConversion1 setResultingAmount(ImpliedCurrencyAndAmount resultingAmount) {
+		this.resultingAmount = Objects.requireNonNull(resultingAmount);
+		return this;
 	}
 
-	@XmlElement(name = "XchgRate", required = true)
 	public PercentageRate getExchangeRate() {
 		return exchangeRate;
 	}
 
-	public void setExchangeRate(PercentageRate exchangeRate) {
-		this.exchangeRate = exchangeRate;
+	public CurrencyConversion1 setExchangeRate(PercentageRate exchangeRate) {
+		this.exchangeRate = Objects.requireNonNull(exchangeRate);
+		return this;
 	}
 
-	@XmlElement(name = "NvrtdXchgRate")
-	public PercentageRate getInvertedExchangeRate() {
-		return invertedExchangeRate;
+	public Optional<PercentageRate> getInvertedExchangeRate() {
+		return invertedExchangeRate == null ? Optional.empty() : Optional.of(invertedExchangeRate);
 	}
 
-	public void setInvertedExchangeRate(PercentageRate invertedExchangeRate) {
+	public CurrencyConversion1 setInvertedExchangeRate(PercentageRate invertedExchangeRate) {
 		this.invertedExchangeRate = invertedExchangeRate;
+		return this;
 	}
 
-	@XmlElement(name = "QtnDt")
-	public ISODateTime getQuotationDate() {
-		return quotationDate;
+	public Optional<ISODateTime> getQuotationDate() {
+		return quotationDate == null ? Optional.empty() : Optional.of(quotationDate);
 	}
 
-	public void setQuotationDate(ISODateTime quotationDate) {
+	public CurrencyConversion1 setQuotationDate(ISODateTime quotationDate) {
 		this.quotationDate = quotationDate;
+		return this;
 	}
 
-	@XmlElement(name = "VldUntil")
-	public ISODateTime getValidUntil() {
-		return validUntil;
+	public Optional<ISODateTime> getValidUntil() {
+		return validUntil == null ? Optional.empty() : Optional.of(validUntil);
 	}
 
-	public void setValidUntil(ISODateTime validUntil) {
+	public CurrencyConversion1 setValidUntil(ISODateTime validUntil) {
 		this.validUntil = validUntil;
+		return this;
 	}
 
-	@XmlElement(name = "SrcCcy", required = true)
 	public CurrencyCode getSourceCurrency() {
 		return sourceCurrency;
 	}
 
-	public void setSourceCurrency(CurrencyCode sourceCurrency) {
-		this.sourceCurrency = sourceCurrency;
+	public CurrencyConversion1 setSourceCurrency(CurrencyCode sourceCurrency) {
+		this.sourceCurrency = Objects.requireNonNull(sourceCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "SrcCcyNmrc")
-	public CurrencyCode getSourceCurrencyNumeric() {
-		return sourceCurrencyNumeric;
+	public Optional<CurrencyCode> getSourceCurrencyNumeric() {
+		return sourceCurrencyNumeric == null ? Optional.empty() : Optional.of(sourceCurrencyNumeric);
 	}
 
-	public void setSourceCurrencyNumeric(CurrencyCode sourceCurrencyNumeric) {
+	public CurrencyConversion1 setSourceCurrencyNumeric(CurrencyCode sourceCurrencyNumeric) {
 		this.sourceCurrencyNumeric = sourceCurrencyNumeric;
+		return this;
 	}
 
-	@XmlElement(name = "SrcCcyDcml", required = true)
 	public Number getSourceCurrencyDecimal() {
 		return sourceCurrencyDecimal;
 	}
 
-	public void setSourceCurrencyDecimal(Number sourceCurrencyDecimal) {
-		this.sourceCurrencyDecimal = sourceCurrencyDecimal;
+	public CurrencyConversion1 setSourceCurrencyDecimal(Number sourceCurrencyDecimal) {
+		this.sourceCurrencyDecimal = Objects.requireNonNull(sourceCurrencyDecimal);
+		return this;
 	}
 
-	@XmlElement(name = "SrcCcyNm")
-	public Max35Text getSourceCurrencyName() {
-		return sourceCurrencyName;
+	public Optional<Max35Text> getSourceCurrencyName() {
+		return sourceCurrencyName == null ? Optional.empty() : Optional.of(sourceCurrencyName);
 	}
 
-	public void setSourceCurrencyName(Max35Text sourceCurrencyName) {
+	public CurrencyConversion1 setSourceCurrencyName(Max35Text sourceCurrencyName) {
 		this.sourceCurrencyName = sourceCurrencyName;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlAmt", required = true)
 	public ImpliedCurrencyAndAmount getOriginalAmount() {
 		return originalAmount;
 	}
 
-	public void setOriginalAmount(ImpliedCurrencyAndAmount originalAmount) {
-		this.originalAmount = originalAmount;
+	public CurrencyConversion1 setOriginalAmount(ImpliedCurrencyAndAmount originalAmount) {
+		this.originalAmount = Objects.requireNonNull(originalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "ComssnDtls")
 	public List<Commission19> getCommissionDetails() {
-		return commissionDetails;
+		return commissionDetails == null ? commissionDetails = new ArrayList<>() : commissionDetails;
 	}
 
-	public void setCommissionDetails(List<com.tools20022.repository.msg.Commission19> commissionDetails) {
-		this.commissionDetails = commissionDetails;
+	public CurrencyConversion1 setCommissionDetails(List<com.tools20022.repository.msg.Commission19> commissionDetails) {
+		this.commissionDetails = Objects.requireNonNull(commissionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "MrkUpDtls")
 	public List<Commission18> getMarkUpDetails() {
-		return markUpDetails;
+		return markUpDetails == null ? markUpDetails = new ArrayList<>() : markUpDetails;
 	}
 
-	public void setMarkUpDetails(List<com.tools20022.repository.msg.Commission18> markUpDetails) {
-		this.markUpDetails = markUpDetails;
+	public CurrencyConversion1 setMarkUpDetails(List<com.tools20022.repository.msg.Commission18> markUpDetails) {
+		this.markUpDetails = Objects.requireNonNull(markUpDetails);
+		return this;
 	}
 
-	@XmlElement(name = "DclrtnDtls")
-	public Max2048Text getDeclarationDetails() {
-		return declarationDetails;
+	public Optional<Max2048Text> getDeclarationDetails() {
+		return declarationDetails == null ? Optional.empty() : Optional.of(declarationDetails);
 	}
 
-	public void setDeclarationDetails(Max2048Text declarationDetails) {
+	public CurrencyConversion1 setDeclarationDetails(Max2048Text declarationDetails) {
 		this.declarationDetails = declarationDetails;
+		return this;
 	}
 }

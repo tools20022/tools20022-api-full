@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -24,6 +26,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +73,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,16 +85,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Balance types related to an unallocated redemption payment."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionUnallocatedBalanceSD1", propOrder = {"totalEligibleBalance", "affectedBalance", "unaffectedBalance", "obligatedBalance", "originalBalance", "pledgedBalance", "unpledgedBalance", "investmentPledgedBalance",
 		"investmentUnpledgedBalance"})
 public class CorporateActionUnallocatedBalanceSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlElgblBal")
 	protected SignedQuantityFormat4 totalEligibleBalance;
 	/**
-	 * Total quantity of financial instruments of the balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,6 +111,10 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlElgblBal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B::ELIG, DTCCSynonym: Total
+	 * Eligible Balance</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -119,9 +127,10 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 */
 	public static final MMMessageAttribute mmTotalEligibleBalance = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlElgblBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::ELIG"), new DTCCSynonym(this, "Total Eligible Balance"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleBalance";
 			definition = "Total quantity of financial instruments of the balance.";
@@ -130,12 +139,11 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
 		}
 	};
+	@XmlElement(name = "AfctdBal")
 	protected SignedQuantityFormat4 affectedBalance;
 	/**
-	 * The quantity that has been determined to be redeemed if the participant
-	 * had<br>
-	 * position in a redemption security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -163,7 +171,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmAffectedBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AfctdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,10 +183,11 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
 		}
 	};
+	@XmlElement(name = "UafctdBal")
 	protected SignedQuantityFormat4 unaffectedBalance;
 	/**
-	 * Positions balance remaining after lottery is run.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -204,7 +213,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmUnaffectedBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "UafctdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,13 +225,11 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
 		}
 	};
+	@XmlElement(name = "OblgtdBal")
 	protected SignedQuantityFormat4 obligatedBalance;
 	/**
-	 * Position that account holders should return to the account servicer to
-	 * participate in the event or to fulfill their obligation for the event to
-	 * be complete, for example, return of securities for late announced
-	 * drawing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -250,7 +257,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmObligatedBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OblgtdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -262,14 +269,11 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlBal")
 	protected SignedQuantityFormat4 originalBalance;
 	/**
-	 * Position held in a security as of the day prior to publication date. This
-	 * position is subject to a redemption lottery call when this is the first
-	 * lottery. This balance will not be adjusted for the supplemental or
-	 * concurrent lotteries and will remain constant to report the original
-	 * position.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -297,7 +301,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -309,12 +313,11 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
 		}
 	};
+	@XmlElement(name = "PldgdBal")
 	protected SignedQuantityFormat4 pledgedBalance;
 	/**
-	 * Portion of the Original Balance position held in DTC General Free account
-	 * as of day prior to Publication Date. Position held in this account is
-	 * subject to redemption lottery call.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -342,7 +345,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmPledgedBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PldgdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -354,12 +357,11 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
 		}
 	};
+	@XmlElement(name = "UpldgdBal")
 	protected SignedQuantityFormat4 unpledgedBalance;
 	/**
-	 * Portion of the Original Balance position held in DTC General Free account
-	 * as of day prior to Publication Date. Position held in this account is
-	 * subject to redemption lottery call.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -387,7 +389,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmUnpledgedBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "UpldgdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -399,13 +401,11 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstmtPldgdBal")
 	protected SignedQuantityFormat4 investmentPledgedBalance;
 	/**
-	 * Portion of the Original Balance position held in DTC Investment account
-	 * as of day prior to Publication Date. Position held in this account is
-	 * subject to redemption lottery call and must be released to allow
-	 * allocation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -433,7 +433,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentPledgedBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtPldgdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -445,13 +445,11 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstmtUpldgdBal")
 	protected SignedQuantityFormat4 investmentUnpledgedBalance;
 	/**
-	 * Portion of the Original Balance position held in DTC Segregated account
-	 * as of day prior to Publication Date. Position held in this account is
-	 * subject to redemption lottery call and must be released to allow
-	 * allocation.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -479,7 +477,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentUnpledgedBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtUpldgdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -495,10 +493,12 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD1.mmTotalEligibleBalance, CorporateActionUnallocatedBalanceSD1.mmAffectedBalance, CorporateActionUnallocatedBalanceSD1.mmUnaffectedBalance,
-						CorporateActionUnallocatedBalanceSD1.mmObligatedBalance, CorporateActionUnallocatedBalanceSD1.mmOriginalBalance, CorporateActionUnallocatedBalanceSD1.mmPledgedBalance,
-						CorporateActionUnallocatedBalanceSD1.mmUnpledgedBalance, CorporateActionUnallocatedBalanceSD1.mmInvestmentPledgedBalance, CorporateActionUnallocatedBalanceSD1.mmInvestmentUnpledgedBalance);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmTotalEligibleBalance, com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmAffectedBalance,
+						com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmUnaffectedBalance, com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmObligatedBalance,
+						com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmOriginalBalance, com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmPledgedBalance,
+						com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmUnpledgedBalance, com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmInvestmentPledgedBalance,
+						com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmInvestmentUnpledgedBalance);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionUnallocatedBalanceSD1";
 				definition = "Balance types related to an unallocated redemption payment.";
@@ -507,84 +507,84 @@ public class CorporateActionUnallocatedBalanceSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlElgblBal")
-	public SignedQuantityFormat4 getTotalEligibleBalance() {
-		return totalEligibleBalance;
+	public Optional<SignedQuantityFormat4> getTotalEligibleBalance() {
+		return totalEligibleBalance == null ? Optional.empty() : Optional.of(totalEligibleBalance);
 	}
 
-	public void setTotalEligibleBalance(com.tools20022.repository.msg.SignedQuantityFormat4 totalEligibleBalance) {
+	public CorporateActionUnallocatedBalanceSD1 setTotalEligibleBalance(com.tools20022.repository.msg.SignedQuantityFormat4 totalEligibleBalance) {
 		this.totalEligibleBalance = totalEligibleBalance;
+		return this;
 	}
 
-	@XmlElement(name = "AfctdBal")
-	public SignedQuantityFormat4 getAffectedBalance() {
-		return affectedBalance;
+	public Optional<SignedQuantityFormat4> getAffectedBalance() {
+		return affectedBalance == null ? Optional.empty() : Optional.of(affectedBalance);
 	}
 
-	public void setAffectedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 affectedBalance) {
+	public CorporateActionUnallocatedBalanceSD1 setAffectedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 affectedBalance) {
 		this.affectedBalance = affectedBalance;
+		return this;
 	}
 
-	@XmlElement(name = "UafctdBal")
-	public SignedQuantityFormat4 getUnaffectedBalance() {
-		return unaffectedBalance;
+	public Optional<SignedQuantityFormat4> getUnaffectedBalance() {
+		return unaffectedBalance == null ? Optional.empty() : Optional.of(unaffectedBalance);
 	}
 
-	public void setUnaffectedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 unaffectedBalance) {
+	public CorporateActionUnallocatedBalanceSD1 setUnaffectedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 unaffectedBalance) {
 		this.unaffectedBalance = unaffectedBalance;
+		return this;
 	}
 
-	@XmlElement(name = "OblgtdBal")
-	public SignedQuantityFormat4 getObligatedBalance() {
-		return obligatedBalance;
+	public Optional<SignedQuantityFormat4> getObligatedBalance() {
+		return obligatedBalance == null ? Optional.empty() : Optional.of(obligatedBalance);
 	}
 
-	public void setObligatedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 obligatedBalance) {
+	public CorporateActionUnallocatedBalanceSD1 setObligatedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 obligatedBalance) {
 		this.obligatedBalance = obligatedBalance;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlBal")
-	public SignedQuantityFormat4 getOriginalBalance() {
-		return originalBalance;
+	public Optional<SignedQuantityFormat4> getOriginalBalance() {
+		return originalBalance == null ? Optional.empty() : Optional.of(originalBalance);
 	}
 
-	public void setOriginalBalance(com.tools20022.repository.msg.SignedQuantityFormat4 originalBalance) {
+	public CorporateActionUnallocatedBalanceSD1 setOriginalBalance(com.tools20022.repository.msg.SignedQuantityFormat4 originalBalance) {
 		this.originalBalance = originalBalance;
+		return this;
 	}
 
-	@XmlElement(name = "PldgdBal")
-	public SignedQuantityFormat4 getPledgedBalance() {
-		return pledgedBalance;
+	public Optional<SignedQuantityFormat4> getPledgedBalance() {
+		return pledgedBalance == null ? Optional.empty() : Optional.of(pledgedBalance);
 	}
 
-	public void setPledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 pledgedBalance) {
+	public CorporateActionUnallocatedBalanceSD1 setPledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 pledgedBalance) {
 		this.pledgedBalance = pledgedBalance;
+		return this;
 	}
 
-	@XmlElement(name = "UpldgdBal")
-	public SignedQuantityFormat4 getUnpledgedBalance() {
-		return unpledgedBalance;
+	public Optional<SignedQuantityFormat4> getUnpledgedBalance() {
+		return unpledgedBalance == null ? Optional.empty() : Optional.of(unpledgedBalance);
 	}
 
-	public void setUnpledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 unpledgedBalance) {
+	public CorporateActionUnallocatedBalanceSD1 setUnpledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 unpledgedBalance) {
 		this.unpledgedBalance = unpledgedBalance;
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtPldgdBal")
-	public SignedQuantityFormat4 getInvestmentPledgedBalance() {
-		return investmentPledgedBalance;
+	public Optional<SignedQuantityFormat4> getInvestmentPledgedBalance() {
+		return investmentPledgedBalance == null ? Optional.empty() : Optional.of(investmentPledgedBalance);
 	}
 
-	public void setInvestmentPledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 investmentPledgedBalance) {
+	public CorporateActionUnallocatedBalanceSD1 setInvestmentPledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 investmentPledgedBalance) {
 		this.investmentPledgedBalance = investmentPledgedBalance;
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtUpldgdBal")
-	public SignedQuantityFormat4 getInvestmentUnpledgedBalance() {
-		return investmentUnpledgedBalance;
+	public Optional<SignedQuantityFormat4> getInvestmentUnpledgedBalance() {
+		return investmentUnpledgedBalance == null ? Optional.empty() : Optional.of(investmentUnpledgedBalance);
 	}
 
-	public void setInvestmentUnpledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 investmentUnpledgedBalance) {
+	public CorporateActionUnallocatedBalanceSD1 setInvestmentUnpledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 investmentUnpledgedBalance) {
 		this.investmentUnpledgedBalance = investmentUnpledgedBalance;
+		return this;
 	}
 }

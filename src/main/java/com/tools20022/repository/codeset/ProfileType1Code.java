@@ -20,39 +20,42 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ProfileTypeCode;
+import com.tools20022.repository.codeset.ProfileType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of profile.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProfileType1Code#Hedge
+ * ProfileType1Code.Hedge}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ProfileType1Code#HighFrequencyTrader
+ * ProfileType1Code.HighFrequencyTrader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ProfileType1Code#MarketMaker
+ * ProfileType1Code.MarketMaker}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProfileType1Code#Treasury
+ * ProfileType1Code.Treasury}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.ProfileTypeCode
  * ProfileTypeCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ProfileType1Code#mmHedge
- * ProfileType1Code.mmHedge}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProfileType1Code#mmHighFrequencyTrader
- * ProfileType1Code.mmHighFrequencyTrader}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProfileType1Code#mmMarketMaker
- * ProfileType1Code.mmMarketMaker}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProfileType1Code#mmTreasury
- * ProfileType1Code.mmTreasury}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of profile."</li>
  * </ul>
  */
-public class ProfileType1Code extends ProfileTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProfileType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,11 +86,12 @@ public class ProfileType1Code extends ProfileTypeCode {
 	 * name} = "Hedge"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHedge = new MMCode() {
+	public static final ProfileType1Code Hedge = new ProfileType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hedge";
-			owner_lazy = () -> ProfileType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProfileType1Code.mmObject();
+			codeName = ProfileTypeCode.Hedge.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -105,11 +110,12 @@ public class ProfileType1Code extends ProfileTypeCode {
 	 * name} = "HighFrequencyTrader"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHighFrequencyTrader = new MMCode() {
+	public static final ProfileType1Code HighFrequencyTrader = new ProfileType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighFrequencyTrader";
-			owner_lazy = () -> ProfileType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProfileType1Code.mmObject();
+			codeName = ProfileTypeCode.HighFrequencyTrader.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -128,11 +134,12 @@ public class ProfileType1Code extends ProfileTypeCode {
 	 * name} = "MarketMaker"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarketMaker = new MMCode() {
+	public static final ProfileType1Code MarketMaker = new ProfileType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketMaker";
-			owner_lazy = () -> ProfileType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProfileType1Code.mmObject();
+			codeName = ProfileTypeCode.MarketMaker.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -151,25 +158,59 @@ public class ProfileType1Code extends ProfileTypeCode {
 	 * name} = "Treasury"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTreasury = new MMCode() {
+	public static final ProfileType1Code Treasury = new ProfileType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Treasury";
-			owner_lazy = () -> ProfileType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProfileType1Code.mmObject();
+			codeName = ProfileTypeCode.Treasury.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ProfileType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProfileType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProfileType1Code";
 				definition = "Specifies the type of profile.";
-				code_lazy = () -> Arrays.asList(ProfileType1Code.mmHedge, ProfileType1Code.mmHighFrequencyTrader, ProfileType1Code.mmMarketMaker, ProfileType1Code.mmTreasury);
 				trace_lazy = () -> ProfileTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProfileType1Code.Hedge, com.tools20022.repository.codeset.ProfileType1Code.HighFrequencyTrader,
+						com.tools20022.repository.codeset.ProfileType1Code.MarketMaker, com.tools20022.repository.codeset.ProfileType1Code.Treasury);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Hedge.getCodeName().get(), Hedge);
+		codesByName.put(HighFrequencyTrader.getCodeName().get(), HighFrequencyTrader);
+		codesByName.put(MarketMaker.getCodeName().get(), MarketMaker);
+		codesByName.put(Treasury.getCodeName().get(), Treasury);
+	}
+
+	public static ProfileType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProfileType1Code[] values() {
+		ProfileType1Code[] values = new ProfileType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProfileType1Code> {
+		@Override
+		public ProfileType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProfileType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

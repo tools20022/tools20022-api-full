@@ -26,9 +26,8 @@ import com.tools20022.repository.choice.PartyIdentification9Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -51,20 +50,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
- * SecuritiesEventsArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "MtgNtfctn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -110,9 +95,37 @@ import javax.xml.bind.annotation.*;
  * MeetingNotificationV03.mmPowerOfAttorneyRequirements}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "MtgNtfctn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
+ * SecuritiesEventsArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.001.001.03}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintResolution1Guideline#forMeetingNotificationV03
+ * ConstraintResolution1Guideline.forMeetingNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintVoteInstructionType1Guideline#forMeetingNotificationV03
+ * ConstraintVoteInstructionType1Guideline.forMeetingNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintEntitlementDate1Guideline#forMeetingNotificationV03
+ * ConstraintEntitlementDate1Guideline.forMeetingNotificationV03}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -136,16 +149,17 @@ import javax.xml.bind.annotation.*;
  * MeetingNotificationV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MeetingNotificationV03", propOrder = {"identification", "amendment", "notificationStatus", "meeting", "meetingDetails", "notifyingParty", "issuer", "issuerAgent", "security", "resolution", "vote",
 		"entitlementSpecification", "powerOfAttorneyRequirements"})
 public class MeetingNotificationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected MessageIdentification1 identification;
 	/**
-	 * Identifies the meeting notification message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -185,10 +199,11 @@ public class MeetingNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Amdmnt")
 	protected AmendInformation1 amendment;
 	/**
-	 * Information specific to an amendment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,10 +243,11 @@ public class MeetingNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "NtfctnSts", required = true)
 	protected NotificationStatus1 notificationStatus;
 	/**
-	 * Defines the global status of the event contained in the notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -272,13 +288,11 @@ public class MeetingNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Mtg", required = true)
 	protected MeetingNotice3 meeting;
 	/**
-	 * Specifies information about the meeting. This component contains meeting
-	 * identifications, various deadlines, contact persons, electronic and
-	 * postal locations for accessing information and proxy assignment
-	 * parameters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -319,10 +333,11 @@ public class MeetingNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "MtgDtls", required = true)
 	protected List<Meeting3> meetingDetails;
 	/**
-	 * Dates and details of the shareholders meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -361,10 +376,11 @@ public class MeetingNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "NtifngPty", required = true)
 	protected PartyIdentification9Choice notifyingParty;
 	/**
-	 * Party notifying the meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -404,11 +420,11 @@ public class MeetingNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Issr", required = true)
 	protected IssuerInformation1 issuer;
 	/**
-	 * Specifies the institution that is the issuer of the security to which the
-	 * meeting applies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -450,10 +466,11 @@ public class MeetingNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "IssrAgt")
 	protected List<IssuerAgent1> issuerAgent;
 	/**
-	 * Agents of the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -492,11 +509,11 @@ public class MeetingNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Scty", required = true)
 	protected List<SecurityPosition6> security;
 	/**
-	 * Net position of a segregated holding, in a single security, within the
-	 * overall position held in a securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -538,10 +555,11 @@ public class MeetingNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Rsltn")
 	protected List<Resolution2> resolution;
 	/**
-	 * Detailed information of a resolution proposed to the vote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -581,12 +599,11 @@ public class MeetingNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Vote")
 	protected VoteParameters2 vote;
 	/**
-	 * Specifies the conditions to be allowed to vote, the different voting
-	 * methods and options, the voting deadlines and the parameters of the
-	 * incentive premium.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -627,11 +644,11 @@ public class MeetingNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "EntitlmntSpcfctn", required = true)
 	protected EntitlementAssessment2 entitlementSpecification;
 	/**
-	 * Specifies the entitlement ratio and the different deadlines for
-	 * calculating the entitlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -673,10 +690,11 @@ public class MeetingNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PwrOfAttnyRqrmnts")
 	protected PowerOfAttorneyRequirements2 powerOfAttorneyRequirements;
 	/**
-	 * Specifies requirements relative to the use of Power of Attorney.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -721,6 +739,8 @@ public class MeetingNotificationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintResolution1Guideline.forMeetingNotificationV03,
+						com.tools20022.repository.constraints.ConstraintVoteInstructionType1Guideline.forMeetingNotificationV03, com.tools20022.repository.constraints.ConstraintEntitlementDate1Guideline.forMeetingNotificationV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingNotificationV03";
 				definition = "Scope\r\nA notifying party, eg, an issuer, its agent or an intermediary, sends the MeetingNotification message to a party holding the right to vote, to announce a shareholders meeting.\r\nUsage\r\nThe MeetingNotification message is used to announce a shareholders meeting, for example, it provides information on the participation details and requirements for the meeting, the vote parameters and the resolutions. The MeetingNotification message may also be used to announce an update.\r\nTo notify an update, the Amendment building block must be filled in. Any building block that is modified must be included in the amendment message. The information previously notified and not repeated in the amendment message remains valid.\r\nTo update the resolutions of the agenda, the complete list of resolutions must be repeated in the amendment message. The resolutions that are deleted should be assigned the status Withdrawn.";
@@ -754,124 +774,124 @@ public class MeetingNotificationV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public MessageIdentification1 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(MessageIdentification1 identification) {
-		this.identification = identification;
+	public MeetingNotificationV03 setIdentification(MessageIdentification1 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Amdmnt")
-	public AmendInformation1 getAmendment() {
-		return amendment;
+	public Optional<AmendInformation1> getAmendment() {
+		return amendment == null ? Optional.empty() : Optional.of(amendment);
 	}
 
-	public void setAmendment(AmendInformation1 amendment) {
+	public MeetingNotificationV03 setAmendment(AmendInformation1 amendment) {
 		this.amendment = amendment;
+		return this;
 	}
 
-	@XmlElement(name = "NtfctnSts", required = true)
 	public NotificationStatus1 getNotificationStatus() {
 		return notificationStatus;
 	}
 
-	public void setNotificationStatus(NotificationStatus1 notificationStatus) {
-		this.notificationStatus = notificationStatus;
+	public MeetingNotificationV03 setNotificationStatus(NotificationStatus1 notificationStatus) {
+		this.notificationStatus = Objects.requireNonNull(notificationStatus);
+		return this;
 	}
 
-	@XmlElement(name = "Mtg", required = true)
 	public MeetingNotice3 getMeeting() {
 		return meeting;
 	}
 
-	public void setMeeting(MeetingNotice3 meeting) {
-		this.meeting = meeting;
+	public MeetingNotificationV03 setMeeting(MeetingNotice3 meeting) {
+		this.meeting = Objects.requireNonNull(meeting);
+		return this;
 	}
 
-	@XmlElement(name = "MtgDtls", required = true)
 	public List<Meeting3> getMeetingDetails() {
-		return meetingDetails;
+		return meetingDetails == null ? meetingDetails = new ArrayList<>() : meetingDetails;
 	}
 
-	public void setMeetingDetails(List<Meeting3> meetingDetails) {
-		this.meetingDetails = meetingDetails;
+	public MeetingNotificationV03 setMeetingDetails(List<Meeting3> meetingDetails) {
+		this.meetingDetails = Objects.requireNonNull(meetingDetails);
+		return this;
 	}
 
-	@XmlElement(name = "NtifngPty", required = true)
 	public PartyIdentification9Choice getNotifyingParty() {
 		return notifyingParty;
 	}
 
-	public void setNotifyingParty(PartyIdentification9Choice notifyingParty) {
-		this.notifyingParty = notifyingParty;
+	public MeetingNotificationV03 setNotifyingParty(PartyIdentification9Choice notifyingParty) {
+		this.notifyingParty = Objects.requireNonNull(notifyingParty);
+		return this;
 	}
 
-	@XmlElement(name = "Issr", required = true)
 	public IssuerInformation1 getIssuer() {
 		return issuer;
 	}
 
-	public void setIssuer(IssuerInformation1 issuer) {
-		this.issuer = issuer;
+	public MeetingNotificationV03 setIssuer(IssuerInformation1 issuer) {
+		this.issuer = Objects.requireNonNull(issuer);
+		return this;
 	}
 
-	@XmlElement(name = "IssrAgt")
 	public List<IssuerAgent1> getIssuerAgent() {
-		return issuerAgent;
+		return issuerAgent == null ? issuerAgent = new ArrayList<>() : issuerAgent;
 	}
 
-	public void setIssuerAgent(List<IssuerAgent1> issuerAgent) {
-		this.issuerAgent = issuerAgent;
+	public MeetingNotificationV03 setIssuerAgent(List<IssuerAgent1> issuerAgent) {
+		this.issuerAgent = Objects.requireNonNull(issuerAgent);
+		return this;
 	}
 
-	@XmlElement(name = "Scty", required = true)
 	public List<SecurityPosition6> getSecurity() {
-		return security;
+		return security == null ? security = new ArrayList<>() : security;
 	}
 
-	public void setSecurity(List<SecurityPosition6> security) {
-		this.security = security;
+	public MeetingNotificationV03 setSecurity(List<SecurityPosition6> security) {
+		this.security = Objects.requireNonNull(security);
+		return this;
 	}
 
-	@XmlElement(name = "Rsltn")
 	public List<Resolution2> getResolution() {
-		return resolution;
+		return resolution == null ? resolution = new ArrayList<>() : resolution;
 	}
 
-	public void setResolution(List<Resolution2> resolution) {
-		this.resolution = resolution;
+	public MeetingNotificationV03 setResolution(List<Resolution2> resolution) {
+		this.resolution = Objects.requireNonNull(resolution);
+		return this;
 	}
 
-	@XmlElement(name = "Vote")
-	public VoteParameters2 getVote() {
-		return vote;
+	public Optional<VoteParameters2> getVote() {
+		return vote == null ? Optional.empty() : Optional.of(vote);
 	}
 
-	public void setVote(VoteParameters2 vote) {
+	public MeetingNotificationV03 setVote(VoteParameters2 vote) {
 		this.vote = vote;
+		return this;
 	}
 
-	@XmlElement(name = "EntitlmntSpcfctn", required = true)
 	public EntitlementAssessment2 getEntitlementSpecification() {
 		return entitlementSpecification;
 	}
 
-	public void setEntitlementSpecification(EntitlementAssessment2 entitlementSpecification) {
-		this.entitlementSpecification = entitlementSpecification;
+	public MeetingNotificationV03 setEntitlementSpecification(EntitlementAssessment2 entitlementSpecification) {
+		this.entitlementSpecification = Objects.requireNonNull(entitlementSpecification);
+		return this;
 	}
 
-	@XmlElement(name = "PwrOfAttnyRqrmnts")
-	public PowerOfAttorneyRequirements2 getPowerOfAttorneyRequirements() {
-		return powerOfAttorneyRequirements;
+	public Optional<PowerOfAttorneyRequirements2> getPowerOfAttorneyRequirements() {
+		return powerOfAttorneyRequirements == null ? Optional.empty() : Optional.of(powerOfAttorneyRequirements);
 	}
 
-	public void setPowerOfAttorneyRequirements(PowerOfAttorneyRequirements2 powerOfAttorneyRequirements) {
+	public MeetingNotificationV03 setPowerOfAttorneyRequirements(PowerOfAttorneyRequirements2 powerOfAttorneyRequirements) {
 		this.powerOfAttorneyRequirements = powerOfAttorneyRequirements;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.001.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.001.001.03")
 	static public class Document {
 		@XmlElement(name = "MtgNtfctn", required = true)
 		public MeetingNotificationV03 messageBody;

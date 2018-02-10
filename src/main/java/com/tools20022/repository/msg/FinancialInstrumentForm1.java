@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.FormOfSecurity5Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Indicates the form of the financial Instrument."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrumentForm1", propOrder = {"bookingAppearance", "legalForm"})
 public class FinancialInstrumentForm1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BookgApprnc")
 	protected Appearance2Choice bookingAppearance;
 	/**
-	 * Indicates the booking appareance of the financial Instrument
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,7 +101,7 @@ public class FinancialInstrumentForm1 {
 	 */
 	public static final MMMessageAttribute mmBookingAppearance = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentForm1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentForm1.mmObject();
 			isDerived = false;
 			xmlTag = "BookgApprnc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,10 +112,11 @@ public class FinancialInstrumentForm1 {
 			complexType_lazy = () -> Appearance2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LglForm")
 	protected FormOfSecurity5Choice legalForm;
 	/**
-	 * Specifies the form, ie, ownership, of the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,7 +144,7 @@ public class FinancialInstrumentForm1 {
 	 */
 	public static final MMMessageAttribute mmLegalForm = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentForm1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentForm1.mmObject();
 			isDerived = false;
 			xmlTag = "LglForm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,8 +159,8 @@ public class FinancialInstrumentForm1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentForm1.mmBookingAppearance, FinancialInstrumentForm1.mmLegalForm);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentForm1.mmBookingAppearance, com.tools20022.repository.msg.FinancialInstrumentForm1.mmLegalForm);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentForm1";
 				definition = "Indicates the form of the financial Instrument.";
@@ -166,21 +169,21 @@ public class FinancialInstrumentForm1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BookgApprnc")
-	public Appearance2Choice getBookingAppearance() {
-		return bookingAppearance;
+	public Optional<Appearance2Choice> getBookingAppearance() {
+		return bookingAppearance == null ? Optional.empty() : Optional.of(bookingAppearance);
 	}
 
-	public void setBookingAppearance(Appearance2Choice bookingAppearance) {
+	public FinancialInstrumentForm1 setBookingAppearance(Appearance2Choice bookingAppearance) {
 		this.bookingAppearance = bookingAppearance;
+		return this;
 	}
 
-	@XmlElement(name = "LglForm")
-	public FormOfSecurity5Choice getLegalForm() {
-		return legalForm;
+	public Optional<FormOfSecurity5Choice> getLegalForm() {
+		return legalForm == null ? Optional.empty() : Optional.of(legalForm);
 	}
 
-	public void setLegalForm(FormOfSecurity5Choice legalForm) {
+	public FinancialInstrumentForm1 setLegalForm(FormOfSecurity5Choice legalForm) {
 		this.legalForm = legalForm;
+		return this;
 	}
 }

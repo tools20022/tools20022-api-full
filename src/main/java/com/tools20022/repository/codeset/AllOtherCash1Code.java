@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AllOtherCashCode;
+import com.tools20022.repository.codeset.AllOtherCash1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies if remaining assets are transferred as cash.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AllOtherCashCode
- * AllOtherCashCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AllOtherCash1Code#mmLiquidatedTransferAsCash
- * AllOtherCash1Code.mmLiquidatedTransferAsCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.AllOtherCash1Code#LiquidatedTransferAsCash
+ * AllOtherCash1Code.LiquidatedTransferAsCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AllOtherCash1Code#mmNotLiquidatedTransferAsCash
- * AllOtherCash1Code.mmNotLiquidatedTransferAsCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.AllOtherCash1Code#NotLiquidatedTransferAsCash
+ * AllOtherCash1Code.NotLiquidatedTransferAsCash}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AllOtherCashCode
+ * AllOtherCashCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies if remaining assets are transferred as cash."</li>
  * </ul>
  */
-public class AllOtherCash1Code extends AllOtherCashCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AllOtherCash1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class AllOtherCash1Code extends AllOtherCashCode {
 	 * name} = "LiquidatedTransferAsCash"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLiquidatedTransferAsCash = new MMCode() {
+	public static final AllOtherCash1Code LiquidatedTransferAsCash = new AllOtherCash1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidatedTransferAsCash";
-			owner_lazy = () -> AllOtherCash1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AllOtherCash1Code.mmObject();
+			codeName = AllOtherCashCode.LiquidatedTransferAsCash.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class AllOtherCash1Code extends AllOtherCashCode {
 	 * name} = "NotLiquidatedTransferAsCash"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotLiquidatedTransferAsCash = new MMCode() {
+	public static final AllOtherCash1Code NotLiquidatedTransferAsCash = new AllOtherCash1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotLiquidatedTransferAsCash";
-			owner_lazy = () -> AllOtherCash1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AllOtherCash1Code.mmObject();
+			codeName = AllOtherCashCode.NotLiquidatedTransferAsCash.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AllOtherCash1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AllOtherCash1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AllOtherCash1Code";
 				definition = "Specifies if remaining assets are transferred as cash.";
-				code_lazy = () -> Arrays.asList(AllOtherCash1Code.mmLiquidatedTransferAsCash, AllOtherCash1Code.mmNotLiquidatedTransferAsCash);
 				trace_lazy = () -> AllOtherCashCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AllOtherCash1Code.LiquidatedTransferAsCash, com.tools20022.repository.codeset.AllOtherCash1Code.NotLiquidatedTransferAsCash);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(LiquidatedTransferAsCash.getCodeName().get(), LiquidatedTransferAsCash);
+		codesByName.put(NotLiquidatedTransferAsCash.getCodeName().get(), NotLiquidatedTransferAsCash);
+	}
+
+	public static AllOtherCash1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AllOtherCash1Code[] values() {
+		AllOtherCash1Code[] values = new AllOtherCash1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AllOtherCash1Code> {
+		@Override
+		public AllOtherCash1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AllOtherCash1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

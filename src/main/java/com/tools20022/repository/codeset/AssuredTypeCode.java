@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AssuredTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies which type of party should be the assured on the insurance
@@ -32,16 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AssuredTypeCode#mmBuyer
- * AssuredTypeCode.mmBuyer}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AssuredTypeCode#mmSeller
- * AssuredTypeCode.mmSeller}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssuredTypeCode#mmBuyerBank
- * AssuredTypeCode.mmBuyerBank}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AssuredTypeCode#mmSellerBank
- * AssuredTypeCode.mmSellerBank}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssuredTypeCode#Buyer
+ * AssuredTypeCode.Buyer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssuredTypeCode#Seller
+ * AssuredTypeCode.Seller}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssuredTypeCode#BuyerBank
+ * AssuredTypeCode.BuyerBank}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AssuredTypeCode#SellerBank
+ * AssuredTypeCode.SellerBank}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class AssuredTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AssuredTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,12 +102,12 @@ public class AssuredTypeCode {
 	 * definition} = "The buyer should be the assured."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBuyer = new MMCode() {
+	public static final AssuredTypeCode Buyer = new AssuredTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "The buyer should be the assured.";
-			owner_lazy = () -> AssuredTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssuredTypeCode.mmObject();
 			codeName = "BUYE";
 		}
 	};
@@ -128,12 +132,12 @@ public class AssuredTypeCode {
 	 * definition} = "The seller should be the assured."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSeller = new MMCode() {
+	public static final AssuredTypeCode Seller = new AssuredTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "The seller should be the assured.";
-			owner_lazy = () -> AssuredTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssuredTypeCode.mmObject();
 			codeName = "SELL";
 		}
 	};
@@ -158,12 +162,12 @@ public class AssuredTypeCode {
 	 * definition} = "The buyer's bank should be the assured."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBuyerBank = new MMCode() {
+	public static final AssuredTypeCode BuyerBank = new AssuredTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
 			definition = "The buyer's bank should be the assured.";
-			owner_lazy = () -> AssuredTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssuredTypeCode.mmObject();
 			codeName = "BUBA";
 		}
 	};
@@ -188,28 +192,61 @@ public class AssuredTypeCode {
 	 * definition} = "The seller's bank should be the assured."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSellerBank = new MMCode() {
+	public static final AssuredTypeCode SellerBank = new AssuredTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
 			definition = "The seller's bank should be the assured.";
-			owner_lazy = () -> AssuredTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssuredTypeCode.mmObject();
 			codeName = "SEBA";
 		}
 	};
+	final static private LinkedHashMap<String, AssuredTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AssuredTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BUYE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssuredTypeCode";
 				definition = "Specifies which type of party should be the assured on the insurance certificate.";
-				code_lazy = () -> Arrays.asList(AssuredTypeCode.mmBuyer, AssuredTypeCode.mmSeller, AssuredTypeCode.mmBuyerBank, AssuredTypeCode.mmSellerBank);
 				derivation_lazy = () -> Arrays.asList(AssuredType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssuredTypeCode.Buyer, com.tools20022.repository.codeset.AssuredTypeCode.Seller, com.tools20022.repository.codeset.AssuredTypeCode.BuyerBank,
+						com.tools20022.repository.codeset.AssuredTypeCode.SellerBank);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Buyer.getCodeName().get(), Buyer);
+		codesByName.put(Seller.getCodeName().get(), Seller);
+		codesByName.put(BuyerBank.getCodeName().get(), BuyerBank);
+		codesByName.put(SellerBank.getCodeName().get(), SellerBank);
+	}
+
+	public static AssuredTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AssuredTypeCode[] values() {
+		AssuredTypeCode[] values = new AssuredTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AssuredTypeCode> {
+		@Override
+		public AssuredTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AssuredTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

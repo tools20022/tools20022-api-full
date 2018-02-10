@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -76,8 +78,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,17 +94,16 @@ import javax.xml.bind.annotation.XmlType;
  * AgreedRate1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AgreedRate3", propOrder = {"exchangeRate", "unitCurrency", "quotedCurrency"})
 public class AgreedRate3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "XchgRate", required = true)
 	protected BaseOneRate exchangeRate;
 	/**
-	 * The value of one currency expressed in relation to another currency.
-	 * ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency
-	 * (ExchangeRate = UnitCurrency/QuotedCurrency).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,7 +142,7 @@ public class AgreedRate3 {
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
-			componentContext_lazy = () -> AgreedRate3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AgreedRate3.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,11 +154,11 @@ public class AgreedRate3 {
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	@XmlElement(name = "UnitCcy")
 	protected ActiveCurrencyCode unitCurrency;
 	/**
-	 * Currency in which the rate of exchange is expressed in a currency
-	 * exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,7 +198,7 @@ public class AgreedRate3 {
 	public static final MMMessageAttribute mmUnitCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmUnitCurrency;
-			componentContext_lazy = () -> AgreedRate3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AgreedRate3.mmObject();
 			isDerived = false;
 			xmlTag = "UnitCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,11 +210,11 @@ public class AgreedRate3 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "QtdCcy")
 	protected ActiveCurrencyCode quotedCurrency;
 	/**
-	 * Currency into which the base currency is converted, in a currency
-	 * exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -253,7 +254,7 @@ public class AgreedRate3 {
 	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotedCurrency;
-			componentContext_lazy = () -> AgreedRate3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AgreedRate3.mmObject();
 			isDerived = false;
 			xmlTag = "QtdCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,11 +270,11 @@ public class AgreedRate3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AgreedRate3.mmExchangeRate, AgreedRate3.mmUnitCurrency, AgreedRate3.mmQuotedCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgreedRate3.mmExchangeRate, com.tools20022.repository.msg.AgreedRate3.mmUnitCurrency, com.tools20022.repository.msg.AgreedRate3.mmQuotedCurrency);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeInstructionV04.mmAgreedRate, ForeignExchangeTradeInstructionCancellationV04.mmAgreedRate, ForeignExchangeTradeInstructionAmendmentV04.mmAgreedRate,
 						ForeignExchangeTradeStatusAndDetailsNotificationV04.mmAgreedRate);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgreedRate3";
 				definition = "Information needed to process a currency exchange or conversion.";
@@ -283,30 +284,30 @@ public class AgreedRate3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "XchgRate", required = true)
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
 
-	public void setExchangeRate(BaseOneRate exchangeRate) {
-		this.exchangeRate = exchangeRate;
+	public AgreedRate3 setExchangeRate(BaseOneRate exchangeRate) {
+		this.exchangeRate = Objects.requireNonNull(exchangeRate);
+		return this;
 	}
 
-	@XmlElement(name = "UnitCcy")
-	public ActiveCurrencyCode getUnitCurrency() {
-		return unitCurrency;
+	public Optional<ActiveCurrencyCode> getUnitCurrency() {
+		return unitCurrency == null ? Optional.empty() : Optional.of(unitCurrency);
 	}
 
-	public void setUnitCurrency(ActiveCurrencyCode unitCurrency) {
+	public AgreedRate3 setUnitCurrency(ActiveCurrencyCode unitCurrency) {
 		this.unitCurrency = unitCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "QtdCcy")
-	public ActiveCurrencyCode getQuotedCurrency() {
-		return quotedCurrency;
+	public Optional<ActiveCurrencyCode> getQuotedCurrency() {
+		return quotedCurrency == null ? Optional.empty() : Optional.of(quotedCurrency);
 	}
 
-	public void setQuotedCurrency(ActiveCurrencyCode quotedCurrency) {
+	public AgreedRate3 setQuotedCurrency(ActiveCurrencyCode quotedCurrency) {
 		this.quotedCurrency = quotedCurrency;
+		return this;
 	}
 }

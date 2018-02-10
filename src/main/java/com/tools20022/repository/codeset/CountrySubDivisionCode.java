@@ -17,11 +17,17 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CountrySubDivisionCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Code to identify a name of a unit resulting from the division of a country,
@@ -31,11 +37,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
+ * "[A-Z]{2,2}\\-[0-9A-Z]{1,3}"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -54,20 +62,50 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CountrySubDivisionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CountrySubDivisionCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
+	final static private LinkedHashMap<String, CountrySubDivisionCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CountrySubDivisionCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CountrySubDivisionCode";
 				definition = "Code to identify a name of a unit resulting from the division of a country, dependency, or other area of special geopolitical interest contained in ISO 3166-1, on the basis of country names obtained from the United Nations (ISO 3166-2: Country subdivision code).";
+				pattern = "[A-Z]{2,2}\\-[0-9A-Z]{1,3}";
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+	}
+
+	public static CountrySubDivisionCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CountrySubDivisionCode[] values() {
+		CountrySubDivisionCode[] values = new CountrySubDivisionCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CountrySubDivisionCode> {
+		@Override
+		public CountrySubDivisionCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CountrySubDivisionCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -27,6 +27,8 @@ import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversi
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -46,22 +48,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
- * SecuritiesEventsLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
- * IssuersAgentsCommunicationISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AgtCAElctnAmdmntReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -89,6 +75,22 @@ import javax.xml.bind.annotation.*;
  * AgentCAElectionAmendmentRequestV01.mmContactDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
+ * IssuersAgentsCommunicationISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AgtCAElctnAmdmntReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
+ * SecuritiesEventsLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.013.001.01}</li>
@@ -104,17 +106,17 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AgentCAElectionAmendmentRequestV01", propOrder = {"identification", "agentCAElectionAdviceIdentification", "corporateActionGeneralInformation", "accountDetails", "originalElectionDetails", "amendedElectionDetails",
 		"contactDetails"})
 public class AgentCAElectionAmendmentRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected DocumentIdentification8 identification;
 	/**
-	 * Identification assigned by the Sender to unambiguously identify the
-	 * request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,11 +158,11 @@ public class AgentCAElectionAmendmentRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AgtCAElctnAdvcId", required = true)
 	protected DocumentIdentification8 agentCAElectionAdviceIdentification;
 	/**
-	 * Identification of the linked Agent CA Election Advice for which an
-	 * amendment is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -202,10 +204,11 @@ public class AgentCAElectionAmendmentRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
-	 * General information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,10 +248,11 @@ public class AgentCAElectionAmendmentRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctDtls", required = true)
 	protected SecuritiesAccount7 accountDetails;
 	/**
-	 * Provides information about the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -288,10 +292,11 @@ public class AgentCAElectionAmendmentRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgnlElctnDtls", required = true)
 	protected CorporateActionElection1 originalElectionDetails;
 	/**
-	 * Provides information about the original election to be amended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -332,10 +337,11 @@ public class AgentCAElectionAmendmentRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AmddElctnDtls", required = true)
 	protected CorporateActionElection2 amendedElectionDetails;
 	/**
-	 * Provides information about the amendments to the election.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -376,10 +382,11 @@ public class AgentCAElectionAmendmentRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CtctDtls")
 	protected ContactPerson1 contactDetails;
 	/**
-	 * Contact responsible for the transaction identified in the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -453,70 +460,70 @@ public class AgentCAElectionAmendmentRequestV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(DocumentIdentification8 identification) {
-		this.identification = identification;
+	public AgentCAElectionAmendmentRequestV01 setIdentification(DocumentIdentification8 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "AgtCAElctnAdvcId", required = true)
 	public DocumentIdentification8 getAgentCAElectionAdviceIdentification() {
 		return agentCAElectionAdviceIdentification;
 	}
 
-	public void setAgentCAElectionAdviceIdentification(DocumentIdentification8 agentCAElectionAdviceIdentification) {
-		this.agentCAElectionAdviceIdentification = agentCAElectionAdviceIdentification;
+	public AgentCAElectionAmendmentRequestV01 setAgentCAElectionAdviceIdentification(DocumentIdentification8 agentCAElectionAdviceIdentification) {
+		this.agentCAElectionAdviceIdentification = Objects.requireNonNull(agentCAElectionAdviceIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
 
-	public void setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
-		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	public AgentCAElectionAmendmentRequestV01 setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = Objects.requireNonNull(corporateActionGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "AcctDtls", required = true)
 	public SecuritiesAccount7 getAccountDetails() {
 		return accountDetails;
 	}
 
-	public void setAccountDetails(SecuritiesAccount7 accountDetails) {
-		this.accountDetails = accountDetails;
+	public AgentCAElectionAmendmentRequestV01 setAccountDetails(SecuritiesAccount7 accountDetails) {
+		this.accountDetails = Objects.requireNonNull(accountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlElctnDtls", required = true)
 	public CorporateActionElection1 getOriginalElectionDetails() {
 		return originalElectionDetails;
 	}
 
-	public void setOriginalElectionDetails(CorporateActionElection1 originalElectionDetails) {
-		this.originalElectionDetails = originalElectionDetails;
+	public AgentCAElectionAmendmentRequestV01 setOriginalElectionDetails(CorporateActionElection1 originalElectionDetails) {
+		this.originalElectionDetails = Objects.requireNonNull(originalElectionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AmddElctnDtls", required = true)
 	public CorporateActionElection2 getAmendedElectionDetails() {
 		return amendedElectionDetails;
 	}
 
-	public void setAmendedElectionDetails(CorporateActionElection2 amendedElectionDetails) {
-		this.amendedElectionDetails = amendedElectionDetails;
+	public AgentCAElectionAmendmentRequestV01 setAmendedElectionDetails(CorporateActionElection2 amendedElectionDetails) {
+		this.amendedElectionDetails = Objects.requireNonNull(amendedElectionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CtctDtls")
-	public ContactPerson1 getContactDetails() {
-		return contactDetails;
+	public Optional<ContactPerson1> getContactDetails() {
+		return contactDetails == null ? Optional.empty() : Optional.of(contactDetails);
 	}
 
-	public void setContactDetails(ContactPerson1 contactDetails) {
+	public AgentCAElectionAmendmentRequestV01 setContactDetails(ContactPerson1 contactDetails) {
 		this.contactDetails = contactDetails;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.013.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.013.001.01")
 	static public class Document {
 		@XmlElement(name = "AgtCAElctnAmdmntReq", required = true)
 		public AgentCAElectionAmendmentRequestV01 messageBody;

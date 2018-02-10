@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.InvoiceFinancingRequestISOLatestversion;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -54,22 +55,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TradeServicesInitiationLatestVersion
- * TradeServicesInitiationLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvoiceFinancingRequestISOLatestversion
- * InvoiceFinancingRequestISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "InvcFincgCxlReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -82,6 +67,22 @@ import javax.xml.bind.annotation.*;
  * InvoiceFinancingCancellationRequestV01.mmCancellationRequestInformation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.InvoiceFinancingRequestISOLatestversion
+ * InvoiceFinancingRequestISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "InvcFincgCxlReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TradeServicesInitiationLatestVersion
+ * TradeServicesInitiationLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code tsin.003.001.01}</li>
@@ -97,15 +98,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvoiceFinancingCancellationRequestV01", propOrder = {"cancellationRequestIdentification", "cancellationRequestInformation"})
 public class InvoiceFinancingCancellationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CxlReqId", required = true)
 	protected MessageIdentification1 cancellationRequestIdentification;
 	/**
-	 * Unique and unambiguous identification of the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,12 +147,11 @@ public class InvoiceFinancingCancellationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CxlReqInf", required = true)
 	protected CancellationRequestInformation1 cancellationRequestInformation;
 	/**
-	 * Set of information related to the cancellation request, such as actors
-	 * involved and identification of the original invoice financing request to
-	 * which the cancellation request refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -223,25 +224,25 @@ public class InvoiceFinancingCancellationRequestV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CxlReqId", required = true)
 	public MessageIdentification1 getCancellationRequestIdentification() {
 		return cancellationRequestIdentification;
 	}
 
-	public void setCancellationRequestIdentification(MessageIdentification1 cancellationRequestIdentification) {
-		this.cancellationRequestIdentification = cancellationRequestIdentification;
+	public InvoiceFinancingCancellationRequestV01 setCancellationRequestIdentification(MessageIdentification1 cancellationRequestIdentification) {
+		this.cancellationRequestIdentification = Objects.requireNonNull(cancellationRequestIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CxlReqInf", required = true)
 	public CancellationRequestInformation1 getCancellationRequestInformation() {
 		return cancellationRequestInformation;
 	}
 
-	public void setCancellationRequestInformation(CancellationRequestInformation1 cancellationRequestInformation) {
-		this.cancellationRequestInformation = cancellationRequestInformation;
+	public InvoiceFinancingCancellationRequestV01 setCancellationRequestInformation(CancellationRequestInformation1 cancellationRequestInformation) {
+		this.cancellationRequestInformation = Objects.requireNonNull(cancellationRequestInformation);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsin.003.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:tsin.003.001.01")
 	static public class Document {
 		@XmlElement(name = "InvcFincgCxlReq", required = true)
 		public InvoiceFinancingCancellationRequestV01 messageBody;

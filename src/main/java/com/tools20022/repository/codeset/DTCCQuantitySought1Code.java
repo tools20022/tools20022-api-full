@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DTCCQuantitySoughtCode;
+import com.tools20022.repository.codeset.DTCCQuantitySought1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the quantity sought type.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DTCCQuantitySoughtCode
- * DTCCQuantitySoughtCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCQuantitySought1Code#mmQuantity
- * DTCCQuantitySought1Code.mmQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCQuantitySought1Code#Quantity
+ * DTCCQuantitySought1Code.Quantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCQuantitySought1Code#mmCheckComments
- * DTCCQuantitySought1Code.mmCheckComments}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCQuantitySought1Code#CheckComments
+ * DTCCQuantitySought1Code.CheckComments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCQuantitySought1Code#mmPercentage
- * DTCCQuantitySought1Code.mmPercentage}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCQuantitySought1Code#Percentage
+ * DTCCQuantitySought1Code.Percentage}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DTCCQuantitySoughtCode
+ * DTCCQuantitySoughtCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the quantity sought type."</li>
  * </ul>
  */
-public class DTCCQuantitySought1Code extends DTCCQuantitySoughtCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DTCCQuantitySought1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class DTCCQuantitySought1Code extends DTCCQuantitySoughtCode {
 	 * name} = "Quantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQuantity = new MMCode() {
+	public static final DTCCQuantitySought1Code Quantity = new DTCCQuantitySought1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
-			owner_lazy = () -> DTCCQuantitySought1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCQuantitySought1Code.mmObject();
+			codeName = DTCCQuantitySoughtCode.Quantity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class DTCCQuantitySought1Code extends DTCCQuantitySoughtCode {
 	 * name} = "CheckComments"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCheckComments = new MMCode() {
+	public static final DTCCQuantitySought1Code CheckComments = new DTCCQuantitySought1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CheckComments";
-			owner_lazy = () -> DTCCQuantitySought1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCQuantitySought1Code.mmObject();
+			codeName = DTCCQuantitySoughtCode.CheckComments.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class DTCCQuantitySought1Code extends DTCCQuantitySoughtCode {
 	 * name} = "Percentage"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPercentage = new MMCode() {
+	public static final DTCCQuantitySought1Code Percentage = new DTCCQuantitySought1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
-			owner_lazy = () -> DTCCQuantitySought1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCQuantitySought1Code.mmObject();
+			codeName = DTCCQuantitySoughtCode.Percentage.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DTCCQuantitySought1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DTCCQuantitySought1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("QTTY");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCCQuantitySought1Code";
 				definition = "Specifies the quantity sought type.";
-				code_lazy = () -> Arrays.asList(DTCCQuantitySought1Code.mmQuantity, DTCCQuantitySought1Code.mmCheckComments, DTCCQuantitySought1Code.mmPercentage);
 				trace_lazy = () -> DTCCQuantitySoughtCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCQuantitySought1Code.Quantity, com.tools20022.repository.codeset.DTCCQuantitySought1Code.CheckComments,
+						com.tools20022.repository.codeset.DTCCQuantitySought1Code.Percentage);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Quantity.getCodeName().get(), Quantity);
+		codesByName.put(CheckComments.getCodeName().get(), CheckComments);
+		codesByName.put(Percentage.getCodeName().get(), Percentage);
+	}
+
+	public static DTCCQuantitySought1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DTCCQuantitySought1Code[] values() {
+		DTCCQuantitySought1Code[] values = new DTCCQuantitySought1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DTCCQuantitySought1Code> {
+		@Override
+		public DTCCQuantitySought1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DTCCQuantitySought1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

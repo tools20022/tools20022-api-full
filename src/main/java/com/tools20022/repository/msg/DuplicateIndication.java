@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max30Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DuplicateIndication", propOrder = {"reference", "justification"})
 public class DuplicateIndication {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ref", required = true)
 	protected Max30Text reference;
 	/**
-	 * Reference of the original message, in case this is a duplicate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,7 +103,7 @@ public class DuplicateIndication {
 	 */
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DuplicateIndication.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DuplicateIndication.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +114,11 @@ public class DuplicateIndication {
 			simpleType_lazy = () -> Max30Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Info", required = true)
 	protected Max140Text justification;
 	/**
-	 * Information about the duplicate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +145,7 @@ public class DuplicateIndication {
 	 */
 	public static final MMMessageAttribute mmJustification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DuplicateIndication.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DuplicateIndication.mmObject();
 			isDerived = false;
 			xmlTag = "Info";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,8 +160,8 @@ public class DuplicateIndication {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DuplicateIndication.mmReference, DuplicateIndication.mmJustification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DuplicateIndication.mmReference, com.tools20022.repository.msg.DuplicateIndication.mmJustification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DuplicateIndication";
 				definition = "Reference to another message indicating that the containing message is a\tduplicate of the referenced message.";
@@ -167,21 +170,21 @@ public class DuplicateIndication {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ref", required = true)
 	public Max30Text getReference() {
 		return reference;
 	}
 
-	public void setReference(Max30Text reference) {
-		this.reference = reference;
+	public DuplicateIndication setReference(Max30Text reference) {
+		this.reference = Objects.requireNonNull(reference);
+		return this;
 	}
 
-	@XmlElement(name = "Info", required = true)
 	public Max140Text getJustification() {
 		return justification;
 	}
 
-	public void setJustification(Max140Text justification) {
-		this.justification = justification;
+	public DuplicateIndication setJustification(Max140Text justification) {
+		this.justification = Objects.requireNonNull(justification);
+		return this;
 	}
 }

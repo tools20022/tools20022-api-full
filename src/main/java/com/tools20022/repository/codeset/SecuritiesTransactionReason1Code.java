@@ -20,55 +20,59 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SecuritiesTransactionReasonCode;
+import com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies the reason why the transaction has a specific status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode
- * SecuritiesTransactionReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReason1Code#mmCancellation
- * SecuritiesTransactionReason1Code.mmCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReason1Code#Cancellation
+ * SecuritiesTransactionReason1Code.Cancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReason1Code#mmPendingCancellation
- * SecuritiesTransactionReason1Code.mmPendingCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReason1Code#PendingCancellation
+ * SecuritiesTransactionReason1Code.PendingCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReason1Code#mmGenerated
- * SecuritiesTransactionReason1Code.mmGenerated}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReason1Code#Generated
+ * SecuritiesTransactionReason1Code.Generated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReason1Code#mmUnmatched
- * SecuritiesTransactionReason1Code.mmUnmatched}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReason1Code#Unmatched
+ * SecuritiesTransactionReason1Code.Unmatched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReason1Code#mmAcknowledgement
- * SecuritiesTransactionReason1Code.mmAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReason1Code#Acknowledgement
+ * SecuritiesTransactionReason1Code.Acknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReason1Code#mmPending
- * SecuritiesTransactionReason1Code.mmPending}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReason1Code#Pending
+ * SecuritiesTransactionReason1Code.Pending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReason1Code#mmFailing
- * SecuritiesTransactionReason1Code.mmFailing}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReason1Code#Failing
+ * SecuritiesTransactionReason1Code.Failing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReason1Code#mmPendingProcessing
- * SecuritiesTransactionReason1Code.mmPendingProcessing}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReason1Code#PendingProcessing
+ * SecuritiesTransactionReason1Code.PendingProcessing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReason1Code#mmRepair
- * SecuritiesTransactionReason1Code.mmRepair}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReason1Code#Repair
+ * SecuritiesTransactionReason1Code.Repair}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionReasonCode
+ * SecuritiesTransactionReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Identifies the reason why the transaction has a specific status."</li>
  * </ul>
  */
-public class SecuritiesTransactionReason1Code extends SecuritiesTransactionReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SecuritiesTransactionReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -105,11 +110,12 @@ public class SecuritiesTransactionReason1Code extends SecuritiesTransactionReaso
 	 * name} = "Cancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellation = new MMCode() {
+	public static final SecuritiesTransactionReason1Code Cancellation = new SecuritiesTransactionReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
-			owner_lazy = () -> SecuritiesTransactionReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.mmObject();
+			codeName = SecuritiesTransactionReasonCode.Cancellation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -128,11 +134,12 @@ public class SecuritiesTransactionReason1Code extends SecuritiesTransactionReaso
 	 * name} = "PendingCancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingCancellation = new MMCode() {
+	public static final SecuritiesTransactionReason1Code PendingCancellation = new SecuritiesTransactionReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellation";
-			owner_lazy = () -> SecuritiesTransactionReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.mmObject();
+			codeName = SecuritiesTransactionReasonCode.PendingCancellation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -151,11 +158,12 @@ public class SecuritiesTransactionReason1Code extends SecuritiesTransactionReaso
 	 * name} = "Generated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGenerated = new MMCode() {
+	public static final SecuritiesTransactionReason1Code Generated = new SecuritiesTransactionReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Generated";
-			owner_lazy = () -> SecuritiesTransactionReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.mmObject();
+			codeName = SecuritiesTransactionReasonCode.Generated.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -174,11 +182,12 @@ public class SecuritiesTransactionReason1Code extends SecuritiesTransactionReaso
 	 * name} = "Unmatched"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnmatched = new MMCode() {
+	public static final SecuritiesTransactionReason1Code Unmatched = new SecuritiesTransactionReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
-			owner_lazy = () -> SecuritiesTransactionReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.mmObject();
+			codeName = SecuritiesTransactionReasonCode.Unmatched.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -197,11 +206,12 @@ public class SecuritiesTransactionReason1Code extends SecuritiesTransactionReaso
 	 * name} = "Acknowledgement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcknowledgement = new MMCode() {
+	public static final SecuritiesTransactionReason1Code Acknowledgement = new SecuritiesTransactionReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acknowledgement";
-			owner_lazy = () -> SecuritiesTransactionReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.mmObject();
+			codeName = SecuritiesTransactionReasonCode.Acknowledgement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -220,11 +230,12 @@ public class SecuritiesTransactionReason1Code extends SecuritiesTransactionReaso
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPending = new MMCode() {
+	public static final SecuritiesTransactionReason1Code Pending = new SecuritiesTransactionReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
-			owner_lazy = () -> SecuritiesTransactionReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.mmObject();
+			codeName = SecuritiesTransactionReasonCode.Pending.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -243,11 +254,12 @@ public class SecuritiesTransactionReason1Code extends SecuritiesTransactionReaso
 	 * name} = "Failing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFailing = new MMCode() {
+	public static final SecuritiesTransactionReason1Code Failing = new SecuritiesTransactionReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failing";
-			owner_lazy = () -> SecuritiesTransactionReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.mmObject();
+			codeName = SecuritiesTransactionReasonCode.Failing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -266,11 +278,12 @@ public class SecuritiesTransactionReason1Code extends SecuritiesTransactionReaso
 	 * name} = "PendingProcessing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingProcessing = new MMCode() {
+	public static final SecuritiesTransactionReason1Code PendingProcessing = new SecuritiesTransactionReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingProcessing";
-			owner_lazy = () -> SecuritiesTransactionReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.mmObject();
+			codeName = SecuritiesTransactionReasonCode.PendingProcessing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -289,28 +302,68 @@ public class SecuritiesTransactionReason1Code extends SecuritiesTransactionReaso
 	 * name} = "Repair"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRepair = new MMCode() {
+	public static final SecuritiesTransactionReason1Code Repair = new SecuritiesTransactionReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Repair";
-			owner_lazy = () -> SecuritiesTransactionReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.mmObject();
+			codeName = SecuritiesTransactionReasonCode.Repair.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SecuritiesTransactionReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SecuritiesTransactionReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CAND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionReason1Code";
 				definition = "Identifies the reason why the transaction has a specific status.";
-				code_lazy = () -> Arrays.asList(SecuritiesTransactionReason1Code.mmCancellation, SecuritiesTransactionReason1Code.mmPendingCancellation, SecuritiesTransactionReason1Code.mmGenerated,
-						SecuritiesTransactionReason1Code.mmUnmatched, SecuritiesTransactionReason1Code.mmAcknowledgement, SecuritiesTransactionReason1Code.mmPending, SecuritiesTransactionReason1Code.mmFailing,
-						SecuritiesTransactionReason1Code.mmPendingProcessing, SecuritiesTransactionReason1Code.mmRepair);
 				trace_lazy = () -> SecuritiesTransactionReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.Cancellation, com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.PendingCancellation,
+						com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.Generated, com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.Unmatched,
+						com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.Acknowledgement, com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.Pending,
+						com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.Failing, com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.PendingProcessing,
+						com.tools20022.repository.codeset.SecuritiesTransactionReason1Code.Repair);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Cancellation.getCodeName().get(), Cancellation);
+		codesByName.put(PendingCancellation.getCodeName().get(), PendingCancellation);
+		codesByName.put(Generated.getCodeName().get(), Generated);
+		codesByName.put(Unmatched.getCodeName().get(), Unmatched);
+		codesByName.put(Acknowledgement.getCodeName().get(), Acknowledgement);
+		codesByName.put(Pending.getCodeName().get(), Pending);
+		codesByName.put(Failing.getCodeName().get(), Failing);
+		codesByName.put(PendingProcessing.getCodeName().get(), PendingProcessing);
+		codesByName.put(Repair.getCodeName().get(), Repair);
+	}
+
+	public static SecuritiesTransactionReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SecuritiesTransactionReason1Code[] values() {
+		SecuritiesTransactionReason1Code[] values = new SecuritiesTransactionReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SecuritiesTransactionReason1Code> {
+		@Override
+		public SecuritiesTransactionReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SecuritiesTransactionReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

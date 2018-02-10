@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -29,6 +30,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +60,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule#forQuantityBreakdown20
+ * ConstraintCoexistenceQuantityRule.forQuantityBreakdown20}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -70,16 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of breakdown of a quantity."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "QuantityBreakdown20", propOrder = {"lotNumber", "lotQuantity"})
 public class QuantityBreakdown20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LotNb", required = true)
 	protected GenericIdentification39 lotNumber;
 	/**
-	 * Identification, for tax purposes, of a lot of identical securities that
-	 * are bought at a certain date and at a certain price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,6 +111,9 @@ public class QuantityBreakdown20 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LotNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13a::LOTS</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -115,9 +129,10 @@ public class QuantityBreakdown20 {
 	public static final MMMessageAttribute mmLotNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotNumber;
-			componentContext_lazy = () -> QuantityBreakdown20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown20.mmObject();
 			isDerived = false;
 			xmlTag = "LotNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13a::LOTS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotNumber";
 			definition = "Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price.";
@@ -126,10 +141,11 @@ public class QuantityBreakdown20 {
 			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification39.mmObject();
 		}
 	};
+	@XmlElement(name = "LotQty")
 	protected FinancialInstrumentQuantity15Choice lotQuantity;
 	/**
-	 * Quantity of financial instruments that is part of the lot described.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -149,6 +165,9 @@ public class QuantityBreakdown20 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LotQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::LOTS</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -163,9 +182,10 @@ public class QuantityBreakdown20 {
 	public static final MMMessageAssociationEnd mmLotQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmSecuritiesQuantity;
-			componentContext_lazy = () -> QuantityBreakdown20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown20.mmObject();
 			isDerived = false;
 			xmlTag = "LotQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::LOTS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotQuantity";
 			definition = "Quantity of financial instruments that is part of the lot described.";
@@ -179,9 +199,10 @@ public class QuantityBreakdown20 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(QuantityBreakdown20.mmLotNumber, QuantityBreakdown20.mmLotQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakdown20.mmLotNumber, com.tools20022.repository.msg.QuantityBreakdown20.mmLotQuantity);
 				trace_lazy = () -> LotBreakdown.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule.forQuantityBreakdown20);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -197,21 +218,21 @@ public class QuantityBreakdown20 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LotNb", required = true)
 	public GenericIdentification39 getLotNumber() {
 		return lotNumber;
 	}
 
-	public void setLotNumber(com.tools20022.repository.msg.GenericIdentification39 lotNumber) {
-		this.lotNumber = lotNumber;
+	public QuantityBreakdown20 setLotNumber(com.tools20022.repository.msg.GenericIdentification39 lotNumber) {
+		this.lotNumber = Objects.requireNonNull(lotNumber);
+		return this;
 	}
 
-	@XmlElement(name = "LotQty")
-	public FinancialInstrumentQuantity15Choice getLotQuantity() {
-		return lotQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getLotQuantity() {
+		return lotQuantity == null ? Optional.empty() : Optional.of(lotQuantity);
 	}
 
-	public void setLotQuantity(FinancialInstrumentQuantity15Choice lotQuantity) {
+	public QuantityBreakdown20 setLotQuantity(FinancialInstrumentQuantity15Choice lotQuantity) {
 		this.lotQuantity = lotQuantity;
+		return this;
 	}
 }

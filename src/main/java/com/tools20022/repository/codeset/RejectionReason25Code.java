@@ -20,121 +20,125 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RejectionReasonV2Code;
+import com.tools20022.repository.codeset.RejectionReason25Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason why the settlement instruction has a rejected status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RejectionReasonV2Code
- * RejectionReasonV2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmSafekeepingAccountRejection
- * RejectionReason25Code.mmSafekeepingAccountRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#SafekeepingAccountRejection
+ * RejectionReason25Code.SafekeepingAccountRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmQuantityRejection
- * RejectionReason25Code.mmQuantityRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#QuantityRejection
+ * RejectionReason25Code.QuantityRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmAccountServicerDeadlineMissed
- * RejectionReason25Code.mmAccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#AccountServicerDeadlineMissed
+ * RejectionReason25Code.AccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmInvalidSecurity
- * RejectionReason25Code.mmInvalidSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#InvalidSecurity
+ * RejectionReason25Code.InvalidSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmMarketDeadlineMissed
- * RejectionReason25Code.mmMarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#MarketDeadlineMissed
+ * RejectionReason25Code.MarketDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmCashAccount
- * RejectionReason25Code.mmCashAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#CashAccount
+ * RejectionReason25Code.CashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmDealPrice
- * RejectionReason25Code.mmDealPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#DealPrice
+ * RejectionReason25Code.DealPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmTradeDate
- * RejectionReason25Code.mmTradeDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#TradeDate
+ * RejectionReason25Code.TradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmPlaceOfTrade
- * RejectionReason25Code.mmPlaceOfTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#PlaceOfTrade
+ * RejectionReason25Code.PlaceOfTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmImpossibleToUseTheRTGSSystemInstructed
- * RejectionReason25Code.mmImpossibleToUseTheRTGSSystemInstructed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#ImpossibleToUseTheRTGSSystemInstructed
+ * RejectionReason25Code.ImpossibleToUseTheRTGSSystemInstructed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmSettlementAmountCurrencyRejection
- * RejectionReason25Code.mmSettlementAmountCurrencyRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#SettlementAmountCurrencyRejection
+ * RejectionReason25Code.SettlementAmountCurrencyRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmPhysicalSettlementImpossible
- * RejectionReason25Code.mmPhysicalSettlementImpossible}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#PhysicalSettlementImpossible
+ * RejectionReason25Code.PhysicalSettlementImpossible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmReferenceRejection
- * RejectionReason25Code.mmReferenceRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#ReferenceRejection
+ * RejectionReason25Code.ReferenceRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmSettlementAmountRejection
- * RejectionReason25Code.mmSettlementAmountRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#SettlementAmountRejection
+ * RejectionReason25Code.SettlementAmountRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmMinimumSettlementQuantity
- * RejectionReason25Code.mmMinimumSettlementQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#MinimumSettlementQuantity
+ * RejectionReason25Code.MinimumSettlementQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmProcessingBatchRejection
- * RejectionReason25Code.mmProcessingBatchRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#ProcessingBatchRejection
+ * RejectionReason25Code.ProcessingBatchRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmMultipleSettlementQuantity
- * RejectionReason25Code.mmMultipleSettlementQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#MultipleSettlementQuantity
+ * RejectionReason25Code.MultipleSettlementQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmTaxStatusRejection
- * RejectionReason25Code.mmTaxStatusRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#TaxStatusRejection
+ * RejectionReason25Code.TaxStatusRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmSettlementSystemMethodRejection
- * RejectionReason25Code.mmSettlementSystemMethodRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#SettlementSystemMethodRejection
+ * RejectionReason25Code.SettlementSystemMethodRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmCommonReferenceRejection
- * RejectionReason25Code.mmCommonReferenceRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#CommonReferenceRejection
+ * RejectionReason25Code.CommonReferenceRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmCorporateActionRejection
- * RejectionReason25Code.mmCorporateActionRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#CorporateActionRejection
+ * RejectionReason25Code.CorporateActionRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmImpossibleCashSettlementSystem
- * RejectionReason25Code.mmImpossibleCashSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#ImpossibleCashSettlementSystem
+ * RejectionReason25Code.ImpossibleCashSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmSettlementDateRejection
- * RejectionReason25Code.mmSettlementDateRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#SettlementDateRejection
+ * RejectionReason25Code.SettlementDateRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmSettlementTransactionRejection
- * RejectionReason25Code.mmSettlementTransactionRejection}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#SettlementTransactionRejection
+ * RejectionReason25Code.SettlementTransactionRejection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmLackOfStampDuty
- * RejectionReason25Code.mmLackOfStampDuty}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#LackOfStampDuty
+ * RejectionReason25Code.LackOfStampDuty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmPlaceOfSafekeeping
- * RejectionReason25Code.mmPlaceOfSafekeeping}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#PlaceOfSafekeeping
+ * RejectionReason25Code.PlaceOfSafekeeping}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmOther
- * RejectionReason25Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#Other
+ * RejectionReason25Code.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmReceivingDeliveringParty2
- * RejectionReason25Code.mmReceivingDeliveringParty2}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#ReceivingDeliveringParty2
+ * RejectionReason25Code.ReceivingDeliveringParty2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmReceivingDeliveringParty1
- * RejectionReason25Code.mmReceivingDeliveringParty1}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#ReceivingDeliveringParty1
+ * RejectionReason25Code.ReceivingDeliveringParty1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmReceivingDeliveringDepository
- * RejectionReason25Code.mmReceivingDeliveringDepository}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#ReceivingDeliveringDepository
+ * RejectionReason25Code.ReceivingDeliveringDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#mmReceivingDeliveringParty3
- * RejectionReason25Code.mmReceivingDeliveringParty3}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason25Code#ReceivingDeliveringParty3
+ * RejectionReason25Code.ReceivingDeliveringParty3}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RejectionReasonV2Code
+ * RejectionReasonV2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -161,7 +165,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class RejectionReason25Code extends RejectionReasonV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RejectionReason25Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -180,11 +185,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "SafekeepingAccountRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSafekeepingAccountRejection = new MMCode() {
+	public static final RejectionReason25Code SafekeepingAccountRejection = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRejection";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.SafekeepingAccountRejection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -203,11 +209,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "QuantityRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQuantityRejection = new MMCode() {
+	public static final RejectionReason25Code QuantityRejection = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRejection";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.QuantityRejection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -226,11 +233,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
+	public static final RejectionReason25Code AccountServicerDeadlineMissed = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.AccountServicerDeadlineMissed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -249,11 +257,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "InvalidSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalidSecurity = new MMCode() {
+	public static final RejectionReason25Code InvalidSecurity = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidSecurity";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.InvalidSecurity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -272,11 +281,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "MarketDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
+	public static final RejectionReason25Code MarketDeadlineMissed = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.MarketDeadlineMissed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -295,11 +305,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "CashAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashAccount = new MMCode() {
+	public static final RejectionReason25Code CashAccount = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.CashAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -318,11 +329,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "DealPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDealPrice = new MMCode() {
+	public static final RejectionReason25Code DealPrice = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.DealPrice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -341,11 +353,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "TradeDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradeDate = new MMCode() {
+	public static final RejectionReason25Code TradeDate = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.TradeDate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -364,11 +377,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "PlaceOfTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPlaceOfTrade = new MMCode() {
+	public static final RejectionReason25Code PlaceOfTrade = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.PlaceOfTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -387,11 +401,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "ImpossibleToUseTheRTGSSystemInstructed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmImpossibleToUseTheRTGSSystemInstructed = new MMCode() {
+	public static final RejectionReason25Code ImpossibleToUseTheRTGSSystemInstructed = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImpossibleToUseTheRTGSSystemInstructed";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.ImpossibleToUseTheRTGSSystemInstructed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -410,11 +425,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "SettlementAmountCurrencyRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementAmountCurrencyRejection = new MMCode() {
+	public static final RejectionReason25Code SettlementAmountCurrencyRejection = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountCurrencyRejection";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.SettlementAmountCurrencyRejection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -433,11 +449,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "PhysicalSettlementImpossible"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPhysicalSettlementImpossible = new MMCode() {
+	public static final RejectionReason25Code PhysicalSettlementImpossible = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSettlementImpossible";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.PhysicalSettlementImpossible.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -456,11 +473,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "ReferenceRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReferenceRejection = new MMCode() {
+	public static final RejectionReason25Code ReferenceRejection = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRejection";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.ReferenceRejection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -479,11 +497,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "SettlementAmountRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementAmountRejection = new MMCode() {
+	public static final RejectionReason25Code SettlementAmountRejection = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountRejection";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.SettlementAmountRejection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -502,11 +521,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "MinimumSettlementQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMinimumSettlementQuantity = new MMCode() {
+	public static final RejectionReason25Code MinimumSettlementQuantity = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumSettlementQuantity";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.MinimumSettlementQuantity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -525,11 +545,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "ProcessingBatchRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProcessingBatchRejection = new MMCode() {
+	public static final RejectionReason25Code ProcessingBatchRejection = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingBatchRejection";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.ProcessingBatchRejection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -548,11 +569,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "MultipleSettlementQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMultipleSettlementQuantity = new MMCode() {
+	public static final RejectionReason25Code MultipleSettlementQuantity = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSettlementQuantity";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.MultipleSettlementQuantity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -571,11 +593,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "TaxStatusRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxStatusRejection = new MMCode() {
+	public static final RejectionReason25Code TaxStatusRejection = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxStatusRejection";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.TaxStatusRejection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -594,11 +617,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "SettlementSystemMethodRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementSystemMethodRejection = new MMCode() {
+	public static final RejectionReason25Code SettlementSystemMethodRejection = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSystemMethodRejection";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.SettlementSystemMethodRejection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -617,11 +641,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "CommonReferenceRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommonReferenceRejection = new MMCode() {
+	public static final RejectionReason25Code CommonReferenceRejection = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReferenceRejection";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.CommonReferenceRejection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -640,11 +665,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "CorporateActionRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateActionRejection = new MMCode() {
+	public static final RejectionReason25Code CorporateActionRejection = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionRejection";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.CorporateActionRejection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -663,11 +689,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "ImpossibleCashSettlementSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmImpossibleCashSettlementSystem = new MMCode() {
+	public static final RejectionReason25Code ImpossibleCashSettlementSystem = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImpossibleCashSettlementSystem";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.ImpossibleCashSettlementSystem.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -686,11 +713,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "SettlementDateRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementDateRejection = new MMCode() {
+	public static final RejectionReason25Code SettlementDateRejection = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDateRejection";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.SettlementDateRejection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -709,11 +737,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "SettlementTransactionRejection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementTransactionRejection = new MMCode() {
+	public static final RejectionReason25Code SettlementTransactionRejection = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransactionRejection";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.SettlementTransactionRejection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -732,11 +761,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "LackOfStampDuty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLackOfStampDuty = new MMCode() {
+	public static final RejectionReason25Code LackOfStampDuty = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfStampDuty";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.LackOfStampDuty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -755,11 +785,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "PlaceOfSafekeeping"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPlaceOfSafekeeping = new MMCode() {
+	public static final RejectionReason25Code PlaceOfSafekeeping = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfSafekeeping";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.PlaceOfSafekeeping.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -778,11 +809,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final RejectionReason25Code Other = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.Other.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -801,11 +833,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "ReceivingDeliveringParty2"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceivingDeliveringParty2 = new MMCode() {
+	public static final RejectionReason25Code ReceivingDeliveringParty2 = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty2";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.ReceivingDeliveringParty2.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -824,11 +857,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "ReceivingDeliveringParty1"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceivingDeliveringParty1 = new MMCode() {
+	public static final RejectionReason25Code ReceivingDeliveringParty1 = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty1";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.ReceivingDeliveringParty1.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -847,11 +881,12 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "ReceivingDeliveringDepository"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceivingDeliveringDepository = new MMCode() {
+	public static final RejectionReason25Code ReceivingDeliveringDepository = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringDepository";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.ReceivingDeliveringDepository.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -870,34 +905,101 @@ public class RejectionReason25Code extends RejectionReasonV2Code {
 	 * name} = "ReceivingDeliveringParty3"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceivingDeliveringParty3 = new MMCode() {
+	public static final RejectionReason25Code ReceivingDeliveringParty3 = new RejectionReason25Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty3";
-			owner_lazy = () -> RejectionReason25Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason25Code.mmObject();
+			codeName = RejectionReasonV2Code.ReceivingDeliveringParty3.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RejectionReason25Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RejectionReason25Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SAFE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason25Code";
 				definition = "Specifies the reason why the settlement instruction has a rejected status.";
 				nextVersions_lazy = () -> Arrays.asList(RejectionReason30Code.mmObject(), RejectionReason31Code.mmObject());
-				code_lazy = () -> Arrays.asList(RejectionReason25Code.mmSafekeepingAccountRejection, RejectionReason25Code.mmQuantityRejection, RejectionReason25Code.mmAccountServicerDeadlineMissed, RejectionReason25Code.mmInvalidSecurity,
-						RejectionReason25Code.mmMarketDeadlineMissed, RejectionReason25Code.mmCashAccount, RejectionReason25Code.mmDealPrice, RejectionReason25Code.mmTradeDate, RejectionReason25Code.mmPlaceOfTrade,
-						RejectionReason25Code.mmImpossibleToUseTheRTGSSystemInstructed, RejectionReason25Code.mmSettlementAmountCurrencyRejection, RejectionReason25Code.mmPhysicalSettlementImpossible,
-						RejectionReason25Code.mmReferenceRejection, RejectionReason25Code.mmSettlementAmountRejection, RejectionReason25Code.mmMinimumSettlementQuantity, RejectionReason25Code.mmProcessingBatchRejection,
-						RejectionReason25Code.mmMultipleSettlementQuantity, RejectionReason25Code.mmTaxStatusRejection, RejectionReason25Code.mmSettlementSystemMethodRejection, RejectionReason25Code.mmCommonReferenceRejection,
-						RejectionReason25Code.mmCorporateActionRejection, RejectionReason25Code.mmImpossibleCashSettlementSystem, RejectionReason25Code.mmSettlementDateRejection, RejectionReason25Code.mmSettlementTransactionRejection,
-						RejectionReason25Code.mmLackOfStampDuty, RejectionReason25Code.mmPlaceOfSafekeeping, RejectionReason25Code.mmOther, RejectionReason25Code.mmReceivingDeliveringParty2,
-						RejectionReason25Code.mmReceivingDeliveringParty1, RejectionReason25Code.mmReceivingDeliveringDepository, RejectionReason25Code.mmReceivingDeliveringParty3);
 				trace_lazy = () -> RejectionReasonV2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason25Code.SafekeepingAccountRejection, com.tools20022.repository.codeset.RejectionReason25Code.QuantityRejection,
+						com.tools20022.repository.codeset.RejectionReason25Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.RejectionReason25Code.InvalidSecurity,
+						com.tools20022.repository.codeset.RejectionReason25Code.MarketDeadlineMissed, com.tools20022.repository.codeset.RejectionReason25Code.CashAccount, com.tools20022.repository.codeset.RejectionReason25Code.DealPrice,
+						com.tools20022.repository.codeset.RejectionReason25Code.TradeDate, com.tools20022.repository.codeset.RejectionReason25Code.PlaceOfTrade,
+						com.tools20022.repository.codeset.RejectionReason25Code.ImpossibleToUseTheRTGSSystemInstructed, com.tools20022.repository.codeset.RejectionReason25Code.SettlementAmountCurrencyRejection,
+						com.tools20022.repository.codeset.RejectionReason25Code.PhysicalSettlementImpossible, com.tools20022.repository.codeset.RejectionReason25Code.ReferenceRejection,
+						com.tools20022.repository.codeset.RejectionReason25Code.SettlementAmountRejection, com.tools20022.repository.codeset.RejectionReason25Code.MinimumSettlementQuantity,
+						com.tools20022.repository.codeset.RejectionReason25Code.ProcessingBatchRejection, com.tools20022.repository.codeset.RejectionReason25Code.MultipleSettlementQuantity,
+						com.tools20022.repository.codeset.RejectionReason25Code.TaxStatusRejection, com.tools20022.repository.codeset.RejectionReason25Code.SettlementSystemMethodRejection,
+						com.tools20022.repository.codeset.RejectionReason25Code.CommonReferenceRejection, com.tools20022.repository.codeset.RejectionReason25Code.CorporateActionRejection,
+						com.tools20022.repository.codeset.RejectionReason25Code.ImpossibleCashSettlementSystem, com.tools20022.repository.codeset.RejectionReason25Code.SettlementDateRejection,
+						com.tools20022.repository.codeset.RejectionReason25Code.SettlementTransactionRejection, com.tools20022.repository.codeset.RejectionReason25Code.LackOfStampDuty,
+						com.tools20022.repository.codeset.RejectionReason25Code.PlaceOfSafekeeping, com.tools20022.repository.codeset.RejectionReason25Code.Other,
+						com.tools20022.repository.codeset.RejectionReason25Code.ReceivingDeliveringParty2, com.tools20022.repository.codeset.RejectionReason25Code.ReceivingDeliveringParty1,
+						com.tools20022.repository.codeset.RejectionReason25Code.ReceivingDeliveringDepository, com.tools20022.repository.codeset.RejectionReason25Code.ReceivingDeliveringParty3);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SafekeepingAccountRejection.getCodeName().get(), SafekeepingAccountRejection);
+		codesByName.put(QuantityRejection.getCodeName().get(), QuantityRejection);
+		codesByName.put(AccountServicerDeadlineMissed.getCodeName().get(), AccountServicerDeadlineMissed);
+		codesByName.put(InvalidSecurity.getCodeName().get(), InvalidSecurity);
+		codesByName.put(MarketDeadlineMissed.getCodeName().get(), MarketDeadlineMissed);
+		codesByName.put(CashAccount.getCodeName().get(), CashAccount);
+		codesByName.put(DealPrice.getCodeName().get(), DealPrice);
+		codesByName.put(TradeDate.getCodeName().get(), TradeDate);
+		codesByName.put(PlaceOfTrade.getCodeName().get(), PlaceOfTrade);
+		codesByName.put(ImpossibleToUseTheRTGSSystemInstructed.getCodeName().get(), ImpossibleToUseTheRTGSSystemInstructed);
+		codesByName.put(SettlementAmountCurrencyRejection.getCodeName().get(), SettlementAmountCurrencyRejection);
+		codesByName.put(PhysicalSettlementImpossible.getCodeName().get(), PhysicalSettlementImpossible);
+		codesByName.put(ReferenceRejection.getCodeName().get(), ReferenceRejection);
+		codesByName.put(SettlementAmountRejection.getCodeName().get(), SettlementAmountRejection);
+		codesByName.put(MinimumSettlementQuantity.getCodeName().get(), MinimumSettlementQuantity);
+		codesByName.put(ProcessingBatchRejection.getCodeName().get(), ProcessingBatchRejection);
+		codesByName.put(MultipleSettlementQuantity.getCodeName().get(), MultipleSettlementQuantity);
+		codesByName.put(TaxStatusRejection.getCodeName().get(), TaxStatusRejection);
+		codesByName.put(SettlementSystemMethodRejection.getCodeName().get(), SettlementSystemMethodRejection);
+		codesByName.put(CommonReferenceRejection.getCodeName().get(), CommonReferenceRejection);
+		codesByName.put(CorporateActionRejection.getCodeName().get(), CorporateActionRejection);
+		codesByName.put(ImpossibleCashSettlementSystem.getCodeName().get(), ImpossibleCashSettlementSystem);
+		codesByName.put(SettlementDateRejection.getCodeName().get(), SettlementDateRejection);
+		codesByName.put(SettlementTransactionRejection.getCodeName().get(), SettlementTransactionRejection);
+		codesByName.put(LackOfStampDuty.getCodeName().get(), LackOfStampDuty);
+		codesByName.put(PlaceOfSafekeeping.getCodeName().get(), PlaceOfSafekeeping);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(ReceivingDeliveringParty2.getCodeName().get(), ReceivingDeliveringParty2);
+		codesByName.put(ReceivingDeliveringParty1.getCodeName().get(), ReceivingDeliveringParty1);
+		codesByName.put(ReceivingDeliveringDepository.getCodeName().get(), ReceivingDeliveringDepository);
+		codesByName.put(ReceivingDeliveringParty3.getCodeName().get(), ReceivingDeliveringParty3);
+	}
+
+	public static RejectionReason25Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RejectionReason25Code[] values() {
+		RejectionReason25Code[] values = new RejectionReason25Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RejectionReason25Code> {
+		@Override
+		public RejectionReason25Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RejectionReason25Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

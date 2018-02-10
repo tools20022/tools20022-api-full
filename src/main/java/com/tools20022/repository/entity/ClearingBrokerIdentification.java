@@ -22,9 +22,11 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ClearingBrokerIdentification1;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Reference number assigned by the clearing broker. A distinction can be made
@@ -53,14 +55,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ClearingBrokerIdentification1
- * ClearingBrokerIdentification1}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -70,10 +64,18 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ClearingBrokerIdentification1
+ * ClearingBrokerIdentification1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,9 +93,8 @@ public class ClearingBrokerIdentification {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.TradeIdentification> relatedTradeIdentification;
 	/**
-	 * Other identifications of a trade for which clearing broker
-	 * identifications are provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,8 +129,8 @@ public class ClearingBrokerIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedTradeIdentification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingBrokerIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingBrokerIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedTradeIdentification";
 			definition = "Other identifications of a trade for which clearing broker identifications are provided.";
@@ -141,9 +142,8 @@ public class ClearingBrokerIdentification {
 	};
 	protected Max35Text sideIndicator;
 	/**
-	 * Distinguishes the client leg from the central counterpatry (CCP) leg in
-	 * the clearing broker identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,8 +179,8 @@ public class ClearingBrokerIdentification {
 	public static final MMBusinessAttribute mmSideIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingBrokerIdentification1.mmSideIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingBrokerIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingBrokerIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SideIndicator";
 			definition = "Distinguishes the client leg from the central counterpatry (CCP) leg in the clearing broker identification.";
@@ -199,8 +199,8 @@ public class ClearingBrokerIdentification {
 	};
 	protected Max35Text identification;
 	/**
-	 * Identification assigned by the clearing broker.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,8 +234,8 @@ public class ClearingBrokerIdentification {
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingBrokerIdentification1.mmClearingBrokerIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingBrokerIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingBrokerIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identification assigned by the clearing broker.";
@@ -256,7 +256,7 @@ public class ClearingBrokerIdentification {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClearingBrokerIdentification";
 				definition = "Reference number assigned by the clearing broker. A distinction can be made between the reference for the Central Counterparty (CCP) leg and the reference for the client leg of the transaction.";
@@ -275,26 +275,29 @@ public class ClearingBrokerIdentification {
 	}
 
 	public List<TradeIdentification> getRelatedTradeIdentification() {
-		return relatedTradeIdentification;
+		return relatedTradeIdentification == null ? relatedTradeIdentification = new ArrayList<>() : relatedTradeIdentification;
 	}
 
-	public void setRelatedTradeIdentification(List<com.tools20022.repository.entity.TradeIdentification> relatedTradeIdentification) {
-		this.relatedTradeIdentification = relatedTradeIdentification;
+	public ClearingBrokerIdentification setRelatedTradeIdentification(List<com.tools20022.repository.entity.TradeIdentification> relatedTradeIdentification) {
+		this.relatedTradeIdentification = Objects.requireNonNull(relatedTradeIdentification);
+		return this;
 	}
 
 	public Max35Text getSideIndicator() {
 		return sideIndicator;
 	}
 
-	public void setSideIndicator(Max35Text sideIndicator) {
-		this.sideIndicator = sideIndicator;
+	public ClearingBrokerIdentification setSideIndicator(Max35Text sideIndicator) {
+		this.sideIndicator = Objects.requireNonNull(sideIndicator);
+		return this;
 	}
 
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public ClearingBrokerIdentification setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 }

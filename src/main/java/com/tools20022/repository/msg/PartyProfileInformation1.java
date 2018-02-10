@@ -31,6 +31,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -44,8 +46,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyProfileInformation1#mmCertificateTypeOrExtendedCertificateTypeRule
- * PartyProfileInformation1.mmCertificateTypeOrExtendedCertificateTypeRule}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyProfileInformation1#CertificateTypeOrExtendedCertificateTypeRule
+ * PartyProfileInformation1.CertificateTypeOrExtendedCertificateTypeRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,8 +95,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -113,16 +115,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyProfileInformation1", propOrder = {"certificationIndicator", "validatingParty", "checkingParty", "responsibleParty", "certificateType", "extendedCertificateType", "checkingDate", "checkingFrequency",
 		"nextRevisionDate", "salaryRange", "sourceOfWealth"})
 public class PartyProfileInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CertfctnInd", required = true)
 	protected YesNoIndicator certificationIndicator;
 	/**
-	 * Indicates whether the certificate type has been obtained and verified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +160,7 @@ public class PartyProfileInformation1 {
 	public static final MMMessageAttribute mmCertificationIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PrivateCertificate.mmCertificationIndicator;
-			componentContext_lazy = () -> PartyProfileInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CertfctnInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,10 +171,11 @@ public class PartyProfileInformation1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "VldtngPty")
 	protected Max140Text validatingParty;
 	/**
-	 * Identification of the person who validated the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,7 +208,7 @@ public class PartyProfileInformation1 {
 	public static final MMMessageAttribute mmValidatingParty = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> ValidatingPartyRole.mmObject();
-			componentContext_lazy = () -> PartyProfileInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtngPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,10 +219,11 @@ public class PartyProfileInformation1 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ChckngPty")
 	protected Max140Text checkingParty;
 	/**
-	 * Identification of the person who checked the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,7 +256,7 @@ public class PartyProfileInformation1 {
 	public static final MMMessageAttribute mmCheckingParty = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> CheckingPartyRole.mmObject();
-			componentContext_lazy = () -> PartyProfileInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ChckngPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -262,10 +267,11 @@ public class PartyProfileInformation1 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RspnsblPty")
 	protected Max140Text responsibleParty;
 	/**
-	 * Identification of the person who is responsible for the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -299,7 +305,7 @@ public class PartyProfileInformation1 {
 	public static final MMMessageAttribute mmResponsibleParty = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> ResponsiblePartyRole.mmObject();
-			componentContext_lazy = () -> PartyProfileInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "RspnsblPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -310,10 +316,11 @@ public class PartyProfileInformation1 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CertTp", required = true)
 	protected CertificateType1Code certificateType;
 	/**
-	 * Identifies the type of certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -347,7 +354,7 @@ public class PartyProfileInformation1 {
 	public static final MMMessageAttribute mmCertificateType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PrivateCertificate.mmCertificateType;
-			componentContext_lazy = () -> PartyProfileInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CertTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -358,10 +365,11 @@ public class PartyProfileInformation1 {
 			simpleType_lazy = () -> CertificateType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedCertTp", required = true)
 	protected Extended350Code extendedCertificateType;
 	/**
-	 * Identifies the type of certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -395,7 +403,7 @@ public class PartyProfileInformation1 {
 	public static final MMMessageAttribute mmExtendedCertificateType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PrivateCertificate.mmCertificateType;
-			componentContext_lazy = () -> PartyProfileInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedCertTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -406,10 +414,11 @@ public class PartyProfileInformation1 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ChckngDt")
 	protected ISODate checkingDate;
 	/**
-	 * Date at which the certification check has been performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -443,7 +452,7 @@ public class PartyProfileInformation1 {
 	public static final MMMessageAttribute mmCheckingDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PrivateCertificate.mmCheckingDate;
-			componentContext_lazy = () -> PartyProfileInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ChckngDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -454,10 +463,11 @@ public class PartyProfileInformation1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ChckngFrqcy")
 	protected EventFrequency1Code checkingFrequency;
 	/**
-	 * Specifies how frequently the check is performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -491,7 +501,7 @@ public class PartyProfileInformation1 {
 	public static final MMMessageAttribute mmCheckingFrequency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PrivateCertificate.mmCheckingFrequency;
-			componentContext_lazy = () -> PartyProfileInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ChckngFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -502,11 +512,11 @@ public class PartyProfileInformation1 {
 			simpleType_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "NxtRvsnDt")
 	protected ISODate nextRevisionDate;
 	/**
-	 * Specifies the date at which the next certification check will be
-	 * performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -541,7 +551,7 @@ public class PartyProfileInformation1 {
 	public static final MMMessageAttribute mmNextRevisionDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PrivateCertificate.mmNextRevisionDate;
-			componentContext_lazy = () -> PartyProfileInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "NxtRvsnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -552,10 +562,11 @@ public class PartyProfileInformation1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SlryRg")
 	protected Max35Text salaryRange;
 	/**
-	 * Limits between which a person's salary is estimated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -588,7 +599,7 @@ public class PartyProfileInformation1 {
 	public static final MMMessageAttribute mmSalaryRange = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PersonProfile.mmSalaryRange;
-			componentContext_lazy = () -> PartyProfileInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "SlryRg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -599,10 +610,11 @@ public class PartyProfileInformation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SrcOfWlth")
 	protected Max140Text sourceOfWealth;
 	/**
-	 * Indicates the main source of revenue.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -635,7 +647,7 @@ public class PartyProfileInformation1 {
 	public static final MMMessageAttribute mmSourceOfWealth = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PersonProfile.mmSourceOfWealth;
-			componentContext_lazy = () -> PartyProfileInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "SrcOfWlth";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -680,24 +692,27 @@ public class PartyProfileInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmCertificateTypeOrExtendedCertificateTypeRule = new MMXor() {
+	public static final MMXor CertificateTypeOrExtendedCertificateTypeRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateTypeOrExtendedCertificateTypeRule";
 			definition = "Either CertificateType or ExtendedCertificateType must be present, but not both.";
-			messageComponent_lazy = () -> PartyProfileInformation1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(PartyProfileInformation1.mmCertificateType, PartyProfileInformation1.mmExtendedCertificateType);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyProfileInformation1.mmCertificateType, com.tools20022.repository.msg.PartyProfileInformation1.mmExtendedCertificateType);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyProfileInformation1.mmCertificationIndicator, PartyProfileInformation1.mmValidatingParty, PartyProfileInformation1.mmCheckingParty, PartyProfileInformation1.mmResponsibleParty,
-						PartyProfileInformation1.mmCertificateType, PartyProfileInformation1.mmExtendedCertificateType, PartyProfileInformation1.mmCheckingDate, PartyProfileInformation1.mmCheckingFrequency,
-						PartyProfileInformation1.mmNextRevisionDate, PartyProfileInformation1.mmSalaryRange, PartyProfileInformation1.mmSourceOfWealth);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyProfileInformation1.mmCertificationIndicator, com.tools20022.repository.msg.PartyProfileInformation1.mmValidatingParty,
+						com.tools20022.repository.msg.PartyProfileInformation1.mmCheckingParty, com.tools20022.repository.msg.PartyProfileInformation1.mmResponsibleParty,
+						com.tools20022.repository.msg.PartyProfileInformation1.mmCertificateType, com.tools20022.repository.msg.PartyProfileInformation1.mmExtendedCertificateType,
+						com.tools20022.repository.msg.PartyProfileInformation1.mmCheckingDate, com.tools20022.repository.msg.PartyProfileInformation1.mmCheckingFrequency,
+						com.tools20022.repository.msg.PartyProfileInformation1.mmNextRevisionDate, com.tools20022.repository.msg.PartyProfileInformation1.mmSalaryRange,
+						com.tools20022.repository.msg.PartyProfileInformation1.mmSourceOfWealth);
 				trace_lazy = () -> PrivateCertificate.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -709,108 +724,108 @@ public class PartyProfileInformation1 {
 				name = "PartyProfileInformation1";
 				definition = "Information to support the Know Your Customer processes.";
 				nextVersions_lazy = () -> Arrays.asList(PartyProfileInformation2.mmObject());
-				xors_lazy = () -> Arrays.asList(PartyProfileInformation1.mmCertificateTypeOrExtendedCertificateTypeRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyProfileInformation1.CertificateTypeOrExtendedCertificateTypeRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CertfctnInd", required = true)
 	public YesNoIndicator getCertificationIndicator() {
 		return certificationIndicator;
 	}
 
-	public void setCertificationIndicator(YesNoIndicator certificationIndicator) {
-		this.certificationIndicator = certificationIndicator;
+	public PartyProfileInformation1 setCertificationIndicator(YesNoIndicator certificationIndicator) {
+		this.certificationIndicator = Objects.requireNonNull(certificationIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "VldtngPty")
-	public Max140Text getValidatingParty() {
-		return validatingParty;
+	public Optional<Max140Text> getValidatingParty() {
+		return validatingParty == null ? Optional.empty() : Optional.of(validatingParty);
 	}
 
-	public void setValidatingParty(Max140Text validatingParty) {
+	public PartyProfileInformation1 setValidatingParty(Max140Text validatingParty) {
 		this.validatingParty = validatingParty;
+		return this;
 	}
 
-	@XmlElement(name = "ChckngPty")
-	public Max140Text getCheckingParty() {
-		return checkingParty;
+	public Optional<Max140Text> getCheckingParty() {
+		return checkingParty == null ? Optional.empty() : Optional.of(checkingParty);
 	}
 
-	public void setCheckingParty(Max140Text checkingParty) {
+	public PartyProfileInformation1 setCheckingParty(Max140Text checkingParty) {
 		this.checkingParty = checkingParty;
+		return this;
 	}
 
-	@XmlElement(name = "RspnsblPty")
-	public Max140Text getResponsibleParty() {
-		return responsibleParty;
+	public Optional<Max140Text> getResponsibleParty() {
+		return responsibleParty == null ? Optional.empty() : Optional.of(responsibleParty);
 	}
 
-	public void setResponsibleParty(Max140Text responsibleParty) {
+	public PartyProfileInformation1 setResponsibleParty(Max140Text responsibleParty) {
 		this.responsibleParty = responsibleParty;
+		return this;
 	}
 
-	@XmlElement(name = "CertTp", required = true)
 	public CertificateType1Code getCertificateType() {
 		return certificateType;
 	}
 
-	public void setCertificateType(CertificateType1Code certificateType) {
-		this.certificateType = certificateType;
+	public PartyProfileInformation1 setCertificateType(CertificateType1Code certificateType) {
+		this.certificateType = Objects.requireNonNull(certificateType);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedCertTp", required = true)
 	public Extended350Code getExtendedCertificateType() {
 		return extendedCertificateType;
 	}
 
-	public void setExtendedCertificateType(Extended350Code extendedCertificateType) {
-		this.extendedCertificateType = extendedCertificateType;
+	public PartyProfileInformation1 setExtendedCertificateType(Extended350Code extendedCertificateType) {
+		this.extendedCertificateType = Objects.requireNonNull(extendedCertificateType);
+		return this;
 	}
 
-	@XmlElement(name = "ChckngDt")
-	public ISODate getCheckingDate() {
-		return checkingDate;
+	public Optional<ISODate> getCheckingDate() {
+		return checkingDate == null ? Optional.empty() : Optional.of(checkingDate);
 	}
 
-	public void setCheckingDate(ISODate checkingDate) {
+	public PartyProfileInformation1 setCheckingDate(ISODate checkingDate) {
 		this.checkingDate = checkingDate;
+		return this;
 	}
 
-	@XmlElement(name = "ChckngFrqcy")
-	public EventFrequency1Code getCheckingFrequency() {
-		return checkingFrequency;
+	public Optional<EventFrequency1Code> getCheckingFrequency() {
+		return checkingFrequency == null ? Optional.empty() : Optional.of(checkingFrequency);
 	}
 
-	public void setCheckingFrequency(EventFrequency1Code checkingFrequency) {
+	public PartyProfileInformation1 setCheckingFrequency(EventFrequency1Code checkingFrequency) {
 		this.checkingFrequency = checkingFrequency;
+		return this;
 	}
 
-	@XmlElement(name = "NxtRvsnDt")
-	public ISODate getNextRevisionDate() {
-		return nextRevisionDate;
+	public Optional<ISODate> getNextRevisionDate() {
+		return nextRevisionDate == null ? Optional.empty() : Optional.of(nextRevisionDate);
 	}
 
-	public void setNextRevisionDate(ISODate nextRevisionDate) {
+	public PartyProfileInformation1 setNextRevisionDate(ISODate nextRevisionDate) {
 		this.nextRevisionDate = nextRevisionDate;
+		return this;
 	}
 
-	@XmlElement(name = "SlryRg")
-	public Max35Text getSalaryRange() {
-		return salaryRange;
+	public Optional<Max35Text> getSalaryRange() {
+		return salaryRange == null ? Optional.empty() : Optional.of(salaryRange);
 	}
 
-	public void setSalaryRange(Max35Text salaryRange) {
+	public PartyProfileInformation1 setSalaryRange(Max35Text salaryRange) {
 		this.salaryRange = salaryRange;
+		return this;
 	}
 
-	@XmlElement(name = "SrcOfWlth")
-	public Max140Text getSourceOfWealth() {
-		return sourceOfWealth;
+	public Optional<Max140Text> getSourceOfWealth() {
+		return sourceOfWealth == null ? Optional.empty() : Optional.of(sourceOfWealth);
 	}
 
-	public void setSourceOfWealth(Max140Text sourceOfWealth) {
+	public PartyProfileInformation1 setSourceOfWealth(Max140Text sourceOfWealth) {
 		this.sourceOfWealth = sourceOfWealth;
+		return this;
 	}
 }

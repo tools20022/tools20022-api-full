@@ -29,9 +29,8 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -41,25 +40,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
- * CashManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
- * PostTradeForeignExchangeISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement
- * PostTradeForeignExchangeMaintenance20162017andSupplement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "NetRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -81,9 +61,36 @@ import javax.xml.bind.annotation.*;
  * NetReportV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
+ * PostTradeForeignExchangeISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement
+ * PostTradeForeignExchangeMaintenance20162017andSupplement}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "NetRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
+ * CashManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.088.001.01}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCounterpartyIdentificationRule#forNetReportV01
+ * ConstraintCounterpartyIdentificationRule.forNetReportV01}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,15 +103,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NetReportV01", propOrder = {"netReportData", "netServiceParticipantIdentification", "netServiceCounterpartyIdentification", "netObligation", "supplementaryData"})
 public class NetReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NetRptData", required = true)
 	protected NetReportData1 netReportData;
 	/**
-	 * Specifies the meta data associated with the net report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,10 +151,11 @@ public class NetReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "NetSvcPtcptId", required = true)
 	protected PartyIdentification73Choice netServiceParticipantIdentification;
 	/**
-	 * Describes the participant receiving the net report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,11 +195,11 @@ public class NetReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "NetSvcCtrPtyId")
 	protected PartyIdentification73Choice netServiceCounterpartyIdentification;
 	/**
-	 * Describes the counterparty participant involved in (all of) the
-	 * obligations of the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -232,11 +241,11 @@ public class NetReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "NetOblgtn", required = true)
 	protected List<NetObligation1> netObligation;
 	/**
-	 * Provides the amount, direct parties or netting groups involved in the
-	 * obligation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -276,11 +285,11 @@ public class NetReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -325,6 +334,7 @@ public class NetReportV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCounterpartyIdentificationRule.forNetReportV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetReportV01";
 				definition = "The Net Report message is sent to a participant by a central system to provide details of the of the bi-lateral payment obligations, calculated by the central system per currency.";
@@ -353,52 +363,52 @@ public class NetReportV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NetRptData", required = true)
 	public NetReportData1 getNetReportData() {
 		return netReportData;
 	}
 
-	public void setNetReportData(NetReportData1 netReportData) {
-		this.netReportData = netReportData;
+	public NetReportV01 setNetReportData(NetReportData1 netReportData) {
+		this.netReportData = Objects.requireNonNull(netReportData);
+		return this;
 	}
 
-	@XmlElement(name = "NetSvcPtcptId", required = true)
 	public PartyIdentification73Choice getNetServiceParticipantIdentification() {
 		return netServiceParticipantIdentification;
 	}
 
-	public void setNetServiceParticipantIdentification(PartyIdentification73Choice netServiceParticipantIdentification) {
-		this.netServiceParticipantIdentification = netServiceParticipantIdentification;
+	public NetReportV01 setNetServiceParticipantIdentification(PartyIdentification73Choice netServiceParticipantIdentification) {
+		this.netServiceParticipantIdentification = Objects.requireNonNull(netServiceParticipantIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "NetSvcCtrPtyId")
-	public PartyIdentification73Choice getNetServiceCounterpartyIdentification() {
-		return netServiceCounterpartyIdentification;
+	public Optional<PartyIdentification73Choice> getNetServiceCounterpartyIdentification() {
+		return netServiceCounterpartyIdentification == null ? Optional.empty() : Optional.of(netServiceCounterpartyIdentification);
 	}
 
-	public void setNetServiceCounterpartyIdentification(PartyIdentification73Choice netServiceCounterpartyIdentification) {
+	public NetReportV01 setNetServiceCounterpartyIdentification(PartyIdentification73Choice netServiceCounterpartyIdentification) {
 		this.netServiceCounterpartyIdentification = netServiceCounterpartyIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "NetOblgtn", required = true)
 	public List<NetObligation1> getNetObligation() {
-		return netObligation;
+		return netObligation == null ? netObligation = new ArrayList<>() : netObligation;
 	}
 
-	public void setNetObligation(List<NetObligation1> netObligation) {
-		this.netObligation = netObligation;
+	public NetReportV01 setNetObligation(List<NetObligation1> netObligation) {
+		this.netObligation = Objects.requireNonNull(netObligation);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public NetReportV01 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.088.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.088.001.01")
 	static public class Document {
 		@XmlElement(name = "NetRpt", required = true)
 		public NetReportV01 messageBody;

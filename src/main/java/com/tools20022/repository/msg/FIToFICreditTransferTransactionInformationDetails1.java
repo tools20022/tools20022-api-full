@@ -21,9 +21,11 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,16 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FIToFICreditTransferTransactionInformationDetails1", propOrder = {"groupHeader", "creditTransferTransactionInformation", "supplementaryData"})
 public class FIToFICreditTransferTransactionInformationDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader70 groupHeader;
 	/**
-	 * Common characteristics for all individual transactions included in the
-	 * message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -105,7 +107,7 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmGroupHeader = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FIToFICreditTransferTransactionInformationDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,11 +119,11 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.GroupHeader70.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtTrfTxInf", required = true)
 	protected List<com.tools20022.repository.msg.CreditTransferTransaction23> creditTransferTransactionInformation;
 	/**
-	 * Provide further details specific to the individual transaction(s)
-	 * included in the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -150,7 +152,7 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditTransferTransactionInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FIToFICreditTransferTransactionInformationDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtTrfTxInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,11 +163,11 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.CreditTransferTransaction23.mmObject();
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -193,7 +195,7 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FIToFICreditTransferTransactionInformationDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,9 +210,10 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FIToFICreditTransferTransactionInformationDetails1.mmGroupHeader, FIToFICreditTransferTransactionInformationDetails1.mmCreditTransferTransactionInformation,
-						FIToFICreditTransferTransactionInformationDetails1.mmSupplementaryData);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.mmGroupHeader,
+						com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.mmCreditTransferTransactionInformation,
+						com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.mmSupplementaryData);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FIToFICreditTransferTransactionInformationDetails1";
 				definition = "Set of elements providing information specific to the individual credit transfer(s).";
@@ -219,30 +222,30 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader70 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(com.tools20022.repository.msg.GroupHeader70 groupHeader) {
-		this.groupHeader = groupHeader;
+	public FIToFICreditTransferTransactionInformationDetails1 setGroupHeader(com.tools20022.repository.msg.GroupHeader70 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "CdtTrfTxInf", required = true)
 	public List<CreditTransferTransaction23> getCreditTransferTransactionInformation() {
-		return creditTransferTransactionInformation;
+		return creditTransferTransactionInformation == null ? creditTransferTransactionInformation = new ArrayList<>() : creditTransferTransactionInformation;
 	}
 
-	public void setCreditTransferTransactionInformation(List<com.tools20022.repository.msg.CreditTransferTransaction23> creditTransferTransactionInformation) {
-		this.creditTransferTransactionInformation = creditTransferTransactionInformation;
+	public FIToFICreditTransferTransactionInformationDetails1 setCreditTransferTransactionInformation(List<com.tools20022.repository.msg.CreditTransferTransaction23> creditTransferTransactionInformation) {
+		this.creditTransferTransactionInformation = Objects.requireNonNull(creditTransferTransactionInformation);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public FIToFICreditTransferTransactionInformationDetails1 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 }

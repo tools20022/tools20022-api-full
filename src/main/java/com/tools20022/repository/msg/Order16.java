@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -27,9 +29,8 @@ import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -161,8 +162,22 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCurrencyToBuyOrSellRule#forOrder16
+ * ConstraintCurrencyToBuyOrSellRule.forOrder16}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule#forOrder16
+ * ConstraintPlaceOfTradeRule.forOrder16}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTradeDateTimeUTCRule#forOrder16
+ * ConstraintTradeDateTimeUTCRule.forOrder16}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -180,19 +195,20 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Order16", propOrder = {"businessProcessType", "orderIdentification", "clientOrderIdentification", "secondaryClientOrderIdentification", "listIdentification", "financialInstrumentIdentification", "side", "payment",
-		"tradeTransactionType", "tradeTransactionCondition", "preAdvice", "placeOfTrade", "orderBookingDate", "tradeOriginationDate", "tradeDate", "processingDate", "settlementDate", "NAVDate", "partialFillDetails", "confirmationQuantity",
+		"tradeTransactionType", "tradeTransactionCondition", "preAdvice", "placeOfTrade", "orderBookingDate", "tradeOriginationDate", "tradeDate", "processingDate", "settlementDate", "nAVDate", "partialFillDetails", "confirmationQuantity",
 		"quantityBreakdown", "grossTradeAmount", "dealPrice", "typeOfPrice", "cashMargin", "commission", "numberOfDaysAccrued", "giveUpNumberOfDays", "interestType", "accruedInterestPercentage", "tradeRegulatoryConditionsType",
 		"currencyToBuyOrSell", "orderOriginatorEligibility", "positionEffect", "derivativeCovered", "chargeTaxBasisType", "capitalGainType", "matchStatus", "callInType", "yieldType", "reporting", "additionalPhysicalOrRegistrationDetails",
 		"additionalTradeInstructionProcessingInformation", "accruedInterestAmount"})
 public class Order16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BizPrcTp")
 	protected BusinessProcessType1Choice businessProcessType;
 	/**
-	 * Specifies the type of business process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -233,7 +249,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmBusinessProcessType = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrder.mmObject();
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "BizPrcTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,10 +261,11 @@ public class Order16 {
 			complexType_lazy = () -> BusinessProcessType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrId")
 	protected List<Max35Text> orderIdentification;
 	/**
-	 * Unique identifier for Order as assigned by sell-side.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -266,6 +283,9 @@ public class Order16 {
 	 * Order16}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrdrId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 37</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -288,9 +308,10 @@ public class Order16 {
 	public static final MMMessageAttribute mmOrderIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "37"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderIdentification";
 			definition = "Unique identifier for Order as assigned by sell-side.";
@@ -299,14 +320,11 @@ public class Order16 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntOrdrId")
 	protected List<Max35Text> clientOrderIdentification;
 	/**
-	 * Unique identifier for the order as assigned by the buy-side. Uniqueness
-	 * must be guaranteed within a single trading day. Firms, particularly those
-	 * that electronically submit multi-day orders, trade globally or throughout
-	 * market close periods, should ensure uniqueness across days, for example
-	 * by embedding a date within the ClientOrderIdentification element.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -324,6 +342,9 @@ public class Order16 {
 	 * Order16}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClntOrdrId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 11</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -348,9 +369,10 @@ public class Order16 {
 	public static final MMMessageAttribute mmClientOrderIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "ClntOrdrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "11"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientOrderIdentification";
 			definition = "Unique identifier for the order as assigned by the buy-side. Uniqueness must be guaranteed within a single trading day. Firms, particularly those that electronically submit multi-day orders, trade globally or throughout market close periods, should ensure uniqueness across days, for example by embedding a date within the ClientOrderIdentification element.";
@@ -359,11 +381,11 @@ public class Order16 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ScndryClntOrdrId")
 	protected List<Max35Text> secondaryClientOrderIdentification;
 	/**
-	 * Assigned by the party that originates the order. Can be used to provide
-	 * the ClientOrderIdentification used by an exchange or executing system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -381,6 +403,9 @@ public class Order16 {
 	 * Order16}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ScndryClntOrdrId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 526</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -405,9 +430,10 @@ public class Order16 {
 	public static final MMMessageAttribute mmSecondaryClientOrderIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryClntOrdrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "526"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryClientOrderIdentification";
 			definition = "Assigned by the party that originates the order. Can be used to provide the ClientOrderIdentification used by an exchange or executing system.";
@@ -416,11 +442,11 @@ public class Order16 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ListId")
 	protected List<Max35Text> listIdentification;
 	/**
-	 * Unique identifier for a list, as assigned by the trading party. The
-	 * identifier must be unique within a single trading day.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -438,6 +464,9 @@ public class Order16 {
 	 * Order16}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ListId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::LIST</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -462,9 +491,10 @@ public class Order16 {
 	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "ListId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::LIST"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListIdentification";
 			definition = "Unique identifier for a list, as assigned by the trading party. The identifier must be unique within a single trading day.";
@@ -473,11 +503,11 @@ public class Order16 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmId", required = true)
 	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
-	 * Unique and unambiguous identifier of a financial instrument, assigned
-	 * under a formal or proprietary identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -519,7 +549,7 @@ public class Order16 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -532,10 +562,11 @@ public class Order16 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	@XmlElement(name = "Sd", required = true)
 	protected Side3Code side;
 	/**
-	 * Coded list to specify the side of the order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -553,6 +584,9 @@ public class Order16 {
 	 * Order16}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Sd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 54</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -574,9 +608,10 @@ public class Order16 {
 	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "Sd";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "54"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Side";
 			definition = "Coded list to specify the side of the order.";
@@ -586,11 +621,11 @@ public class Order16 {
 			simpleType_lazy = () -> Side3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Pmt")
 	protected DeliveryReceiptType2Code payment;
 	/**
-	 * Specifies how the transaction is to be settled, for example, against
-	 * payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -604,6 +639,10 @@ public class Order16 {
 	 * Order16}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Pmt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22H::PAYM, ISO15022Synonym: MT
+	 * 541-543 or 540-542</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -626,9 +665,10 @@ public class Order16 {
 	 */
 	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "Pmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22H::PAYM"), new ISO15022Synonym(this, "MT 541-543 or 540-542"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Specifies how the transaction is to be settled, for example, against payment.";
@@ -638,10 +678,11 @@ public class Order16 {
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TradTxTp")
 	protected TradeType3Choice tradeTransactionType;
 	/**
-	 * Specifies the type of transaction of which the order is a component.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -683,7 +724,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmTradeTransactionType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTransactionType;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "TradTxTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -695,11 +736,11 @@ public class Order16 {
 			complexType_lazy = () -> TradeType3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TradTxCond")
 	protected List<TradeTransactionCondition4Choice> tradeTransactionCondition;
 	/**
-	 * Indicates the conditions under which the order/trade is to be/was
-	 * executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -718,6 +759,9 @@ public class Order16 {
 	 * Order16}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradTxCond"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::TTCO</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -742,9 +786,10 @@ public class Order16 {
 	public static final MMMessageAttribute mmTradeTransactionCondition = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeTransactionCondition;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "TradTxCond";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::TTCO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeTransactionCondition";
 			definition = "Indicates the conditions under which the order/trade is to be/was executed.";
@@ -753,10 +798,11 @@ public class Order16 {
 			complexType_lazy = () -> TradeTransactionCondition4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PreAdvc")
 	protected YesNoIndicator preAdvice;
 	/**
-	 * Transaction is a pre-advice, that is, for matching purposes only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -791,7 +837,7 @@ public class Order16 {
 	 */
 	public static final MMMessageAttribute mmPreAdvice = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "PreAdvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -803,10 +849,11 @@ public class Order16 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfTrad")
 	protected MarketIdentification77 placeOfTrade;
 	/**
-	 * Market in which a trade transaction is to be or has been executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -847,7 +894,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmPlaceOfTrade;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -859,11 +906,11 @@ public class Order16 {
 			complexType_lazy = () -> com.tools20022.repository.msg.MarketIdentification77.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrBookgDt")
 	protected ISODate orderBookingDate;
 	/**
-	 * Date and time when an entry is posted to an account on the account
-	 * servicer's books.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -904,7 +951,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmOrderBookingDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderDate;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrBookgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -916,12 +963,11 @@ public class Order16 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "TradOrgtnDt")
 	protected ISODateTime tradeOriginationDate;
 	/**
-	 * Indicates the date and time of the agreement in principal between
-	 * counter-parties prior to actual trade date. Used with fixed income for
-	 * municipal new issue markets.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -939,6 +985,9 @@ public class Order16 {
 	 * Order16}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradOrgtnDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 229</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -963,9 +1012,10 @@ public class Order16 {
 	public static final MMMessageAttribute mmTradeOriginationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeOriginationDate;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "TradOrgtnDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "229"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeOriginationDate";
 			definition = "Indicates the date and time of the agreement in principal between counter-parties prior to actual trade date.\nUsed with fixed income for municipal new issue markets.";
@@ -975,10 +1025,11 @@ public class Order16 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDt", required = true)
 	protected TradeDate4Choice tradeDate;
 	/**
-	 * Specifies the date/time on which the trade was executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -997,6 +1048,9 @@ public class Order16 {
 	 * Order16}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 75</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1018,9 +1072,10 @@ public class Order16 {
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "75"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
@@ -1030,10 +1085,11 @@ public class Order16 {
 			complexType_lazy = () -> TradeDate4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcgDt")
 	protected TradeDate4Choice processingDate;
 	/**
-	 * Processing date of the trading session.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1073,7 +1129,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmProcessingDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmStartDate;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1085,10 +1141,11 @@ public class Order16 {
 			complexType_lazy = () -> TradeDate4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmDt", required = true)
 	protected SettlementDate8Choice settlementDate;
 	/**
-	 * Date and time at which the securities are to be delivered or received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1107,6 +1164,9 @@ public class Order16 {
 	 * Order16}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::SETT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1129,9 +1189,10 @@ public class Order16 {
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::SETT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Date and time at which the securities are to be delivered or received.";
@@ -1141,11 +1202,11 @@ public class Order16 {
 			complexType_lazy = () -> SettlementDate8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NAVDt")
 	protected DateAndDateTime1Choice nAVDate;
 	/**
-	 * Valuation point, or valuation date of the portfolio (underlying assets).
-	 * This is also known as price date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1187,7 +1248,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmNAVDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationDateTime;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "NAVDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1199,11 +1260,11 @@ public class Order16 {
 			complexType_lazy = () -> DateAndDateTime1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtlFillDtls")
 	protected List<com.tools20022.repository.msg.PartialFill1> partialFillDetails;
 	/**
-	 * Quantity of financial instrument bought or sold which is less than the
-	 * quantity of financial instrument ordered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1244,7 +1305,7 @@ public class Order16 {
 	public static final MMMessageAssociationEnd mmPartialFillDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrder.mmObject();
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlFillDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1256,11 +1317,11 @@ public class Order16 {
 			type_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmObject();
 		}
 	};
+	@XmlElement(name = "ConfQty", required = true)
 	protected Quantity6Choice confirmationQuantity;
 	/**
-	 * Quantity of financial instrument that is being confirmed for the
-	 * account.The quantity of the security to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1303,7 +1364,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmConfirmationQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "ConfQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1315,11 +1376,11 @@ public class Order16 {
 			complexType_lazy = () -> Quantity6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "QtyBrkdwn")
 	protected List<com.tools20022.repository.msg.QuantityBreakdown11> quantityBreakdown;
 	/**
-	 * Breakdown of a quantity into lots such as tax lots, instrument series,
-	 * etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1362,7 +1423,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmQuantityBreakdown = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmLotBreakdown;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "QtyBrkdwn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1373,10 +1434,11 @@ public class Order16 {
 			complexType_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown11.mmObject();
 		}
 	};
+	@XmlElement(name = "GrssTradAmt")
 	protected AmountAndDirection29 grossTradeAmount;
 	/**
-	 * Principal amount of a trade (price multiplied by quantity).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1417,7 +1479,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmGrossTradeAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedAmount;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "GrssTradAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1429,10 +1491,11 @@ public class Order16 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
 		}
 	};
+	@XmlElement(name = "DealPric", required = true)
 	protected Price4 dealPrice;
 	/**
-	 * Amount of money for which goods or services are offered, sold, or bought.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1472,7 +1535,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmDealPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "DealPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1484,10 +1547,11 @@ public class Order16 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	@XmlElement(name = "TpOfPric")
 	protected TypeOfPrice10Choice typeOfPrice;
 	/**
-	 * Specifies the type of transaction price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1527,7 +1591,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmTypeOfPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "TpOfPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1539,15 +1603,11 @@ public class Order16 {
 			complexType_lazy = () -> TypeOfPrice10Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CshMrgn")
 	protected CashMarginOrder1Code cashMargin;
 	/**
-	 * Identifies whether an order is a margin order or a non-margin order. This
-	 * is primarily used when sending orders to Japanese exchanges to indicate
-	 * sell margin or buy to cover. The same tag could be assigned also by
-	 * buy-side to indicate the intent to sell or buy margin and the sell-side
-	 * to accept or reject (base on some validation criteria) the margin
-	 * request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1566,6 +1626,9 @@ public class Order16 {
 	 * Order16}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CshMrgn"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 544</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1589,9 +1652,10 @@ public class Order16 {
 	public static final MMMessageAttribute mmCashMargin = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmCashMargin;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "CshMrgn";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "544"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashMargin";
 			definition = "Identifies whether an order is a margin order or a non-margin order. This is primarily used when sending orders to Japanese exchanges to indicate sell margin or buy to cover. The same tag could be assigned also by buy-side to indicate the intent to sell or buy margin and the sell-side to accept or reject (base on some validation criteria) the margin request.";
@@ -1601,10 +1665,11 @@ public class Order16 {
 			simpleType_lazy = () -> CashMarginOrder1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Comssn")
 	protected Commission16 commission;
 	/**
-	 * Amount of money due to a party as compensation for a service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1643,7 +1708,7 @@ public class Order16 {
 	public static final MMMessageAssociationEnd mmCommission = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeCommission;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "Comssn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1656,10 +1721,11 @@ public class Order16 {
 			type_lazy = () -> com.tools20022.repository.msg.Commission16.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfDaysAcrd")
 	protected Max3Number numberOfDaysAccrued;
 	/**
-	 * Number of days on which the interest rate accrues (daily accrual note).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1677,6 +1743,9 @@ public class Order16 {
 	 * Order16}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NbOfDaysAcrd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :99A::DAAC</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1701,9 +1770,10 @@ public class Order16 {
 	public static final MMMessageAttribute mmNumberOfDaysAccrued = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfDaysAcrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":99A::DAAC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDaysAccrued";
 			definition = "Number of days on which the interest rate accrues (daily accrual note).";
@@ -1713,11 +1783,11 @@ public class Order16 {
 			simpleType_lazy = () -> Max3Number.mmObject();
 		}
 	};
+	@XmlElement(name = "GvUpNbOfDays")
 	protected Max3Number giveUpNumberOfDays;
 	/**
-	 * Specifies the number of days from trade date that the counterparty on the
-	 * other side of the trade should be "given up" or divulged.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1759,7 +1829,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmGiveUpNumberOfDays = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmGiveUpNumberOfDays;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "GvUpNbOfDays";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1771,10 +1841,11 @@ public class Order16 {
 			simpleType_lazy = () -> Max3Number.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstTp")
 	protected InterestType2Code interestType;
 	/**
-	 * Indicates whether the trade is cum interest or ex interest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1815,7 +1886,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmInterestType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmTypeOfInterest;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1827,10 +1898,11 @@ public class Order16 {
 			simpleType_lazy = () -> InterestType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AcrdIntrstPctg")
 	protected PercentageRate accruedInterestPercentage;
 	/**
-	 * Interest rate that has been accrued in between coupon payment periods.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1872,7 +1944,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmAccruedInterestPercentage = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "AcrdIntrstPctg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1884,10 +1956,11 @@ public class Order16 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "TradRgltryCondsTp")
 	protected TradeRegulatoryConditions1Code tradeRegulatoryConditionsType;
 	/**
-	 * Specifies the regulatory conditions type of the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1928,7 +2001,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmTradeRegulatoryConditionsType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmTradeRegulatoryConditionsType;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "TradRgltryCondsTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1940,12 +2013,11 @@ public class Order16 {
 			simpleType_lazy = () -> TradeRegulatoryConditions1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "CcyToBuyOrSell")
 	protected CurrencyToBuyOrSell1Choice currencyToBuyOrSell;
 	/**
-	 * Account servicer is instructed to buy the indicated currency after the
-	 * receipt of cash proceeds or to sell the indicated currency in order to
-	 * obtain the necessary currency to fund the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1964,6 +2036,9 @@ public class Order16 {
 	 * Order16}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CcyToBuyOrSell"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13B::FXIB or FXIS</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1988,9 +2063,10 @@ public class Order16 {
 	public static final MMMessageAttribute mmCurrencyToBuyOrSell = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "CcyToBuyOrSell";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13B::FXIB or FXIS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToBuyOrSell";
 			definition = "Account servicer is instructed to buy the indicated currency after the receipt of cash proceeds or to sell the indicated currency in order to obtain the necessary currency to fund the transaction.";
@@ -2000,12 +2076,11 @@ public class Order16 {
 			complexType_lazy = () -> CurrencyToBuyOrSell1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrOrgtrElgblty")
 	protected Eligibility1Code orderOriginatorEligibility;
 	/**
-	 * Counterparties eligibility as defined by article 24 of the EU MiFID
-	 * Directive applicable to transactions executed by investment firms for
-	 * eligible counterparties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2048,7 +2123,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmOrderOriginatorEligibility = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderOriginatorEligibility;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrOrgtrElgblty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2060,12 +2135,11 @@ public class Order16 {
 			simpleType_lazy = () -> Eligibility1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PosFct")
 	protected PositionEffect2Code positionEffect;
 	/**
-	 * Indicates whether the resulting position after a trade should be an
-	 * opening position or closing position. Used for omnibus accounting - where
-	 * accounts are held on a gross basis instead of being netted together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2084,6 +2158,9 @@ public class Order16 {
 	 * Order16}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PosFct"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 77</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2107,9 +2184,10 @@ public class Order16 {
 	public static final MMMessageAttribute mmPositionEffect = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmPositionEffect;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "PosFct";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "77"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PositionEffect";
 			definition = "Indicates whether the resulting position after a  trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together.";
@@ -2119,11 +2197,11 @@ public class Order16 {
 			simpleType_lazy = () -> PositionEffect2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DerivCvrd")
 	protected YesNoIndicator derivativeCovered;
 	/**
-	 * Indicates whether the derivative product is covered or not by an
-	 * underlying financial instrument position.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2142,6 +2220,9 @@ public class Order16 {
 	 * Order16}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DerivCvrd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 203</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2166,9 +2247,10 @@ public class Order16 {
 	public static final MMMessageAttribute mmDerivativeCovered = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmDerivativeCovered;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "DerivCvrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "203"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativeCovered";
 			definition = "Indicates whether the derivative product is covered or not by an underlying financial instrument position.";
@@ -2178,10 +2260,11 @@ public class Order16 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgTaxBsisTp")
 	protected ChargeTaxBasisType1Choice chargeTaxBasisType;
 	/**
-	 * Type of charge/tax basis.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -2220,7 +2303,7 @@ public class Order16 {
 	public static final MMMessageAssociationEnd mmChargeTaxBasisType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgTaxBsisTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2233,10 +2316,11 @@ public class Order16 {
 			type_lazy = () -> ChargeTaxBasisType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CptlGnTp")
 	protected EUCapitalGainType2Choice capitalGainType;
 	/**
-	 * Specifies the type of capital gain.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2276,7 +2360,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmCapitalGainType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "CptlGnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2288,10 +2372,11 @@ public class Order16 {
 			complexType_lazy = () -> EUCapitalGainType2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MtchSts")
 	protected MatchingStatus8Choice matchStatus;
 	/**
-	 * Provides the matching status of the trade confirmation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2310,6 +2395,9 @@ public class Order16 {
 	 * Order16}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MtchSts"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::MTCH</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2331,9 +2419,10 @@ public class Order16 {
 	public static final MMMessageAttribute mmMatchStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "MtchSts";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::MTCH"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchStatus";
 			definition = "Provides the matching status of the trade confirmation.";
@@ -2343,10 +2432,11 @@ public class Order16 {
 			complexType_lazy = () -> MatchingStatus8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CallInTp")
 	protected CallIn1Code callInType;
 	/**
-	 * Specifies the type of pay-in call report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2385,7 +2475,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmCallInType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashManagementService.mmCallInType;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "CallInTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2397,10 +2487,11 @@ public class Order16 {
 			simpleType_lazy = () -> CallIn1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "YldTp")
 	protected YieldCalculation2 yieldType;
 	/**
-	 * Type of yield at which the transaction was effected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2440,7 +2531,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmYieldType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmCalculationType;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "YldTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2452,10 +2543,11 @@ public class Order16 {
 			complexType_lazy = () -> com.tools20022.repository.msg.YieldCalculation2.mmObject();
 		}
 	};
+	@XmlElement(name = "Rptg")
 	protected List<Reporting5Choice> reporting;
 	/**
-	 * Specifies that a trade is to be reported to a third party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2474,6 +2566,9 @@ public class Order16 {
 	 * Order16}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Rptg"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::RPOR</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2496,9 +2591,10 @@ public class Order16 {
 	public static final MMMessageAttribute mmReporting = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmReportingType;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "Rptg";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::RPOR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reporting";
 			definition = "Specifies that a trade is to be reported to a third party.";
@@ -2507,11 +2603,11 @@ public class Order16 {
 			complexType_lazy = () -> Reporting5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlPhysOrRegnDtls")
 	protected RegistrationParameters3 additionalPhysicalOrRegistrationDetails;
 	/**
-	 * Provides information required for the registration or physical
-	 * settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2554,7 +2650,7 @@ public class Order16 {
 	public static final MMMessageAttribute mmAdditionalPhysicalOrRegistrationDetails = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistration;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlPhysOrRegnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2566,11 +2662,11 @@ public class Order16 {
 			complexType_lazy = () -> com.tools20022.repository.msg.RegistrationParameters3.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlTradInstrPrcgInf")
 	protected Max350Text additionalTradeInstructionProcessingInformation;
 	/**
-	 * Provides additional details of the trade process not included within
-	 * structured fields of this message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2606,7 +2702,7 @@ public class Order16 {
 	 */
 	public static final MMMessageAttribute mmAdditionalTradeInstructionProcessingInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlTradInstrPrcgInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2618,11 +2714,11 @@ public class Order16 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcrdIntrstAmt")
 	protected AmountAndDirection29 accruedInterestAmount;
 	/**
-	 * Interest amount that has accrued in between two periods, for example, in
-	 * between interest payment periods.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2641,6 +2737,9 @@ public class Order16 {
 	 * Order16}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcrdIntrstAmt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::ACRU</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -2665,9 +2764,10 @@ public class Order16 {
 	public static final MMMessageAttribute mmAccruedInterestAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
-			componentContext_lazy = () -> Order16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Order16.mmObject();
 			isDerived = false;
 			xmlTag = "AcrdIntrstAmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::ACRU"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount";
 			definition = "Interest amount that has accrued in between two periods, for example, in between interest payment periods.";
@@ -2681,16 +2781,26 @@ public class Order16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Order16.mmBusinessProcessType, Order16.mmOrderIdentification, Order16.mmClientOrderIdentification, Order16.mmSecondaryClientOrderIdentification, Order16.mmListIdentification,
-						Order16.mmFinancialInstrumentIdentification, Order16.mmSide, Order16.mmPayment, Order16.mmTradeTransactionType, Order16.mmTradeTransactionCondition, Order16.mmPreAdvice, Order16.mmPlaceOfTrade,
-						Order16.mmOrderBookingDate, Order16.mmTradeOriginationDate, Order16.mmTradeDate, Order16.mmProcessingDate, Order16.mmSettlementDate, Order16.mmNAVDate, Order16.mmPartialFillDetails, Order16.mmConfirmationQuantity,
-						Order16.mmQuantityBreakdown, Order16.mmGrossTradeAmount, Order16.mmDealPrice, Order16.mmTypeOfPrice, Order16.mmCashMargin, Order16.mmCommission, Order16.mmNumberOfDaysAccrued, Order16.mmGiveUpNumberOfDays,
-						Order16.mmInterestType, Order16.mmAccruedInterestPercentage, Order16.mmTradeRegulatoryConditionsType, Order16.mmCurrencyToBuyOrSell, Order16.mmOrderOriginatorEligibility, Order16.mmPositionEffect,
-						Order16.mmDerivativeCovered, Order16.mmChargeTaxBasisType, Order16.mmCapitalGainType, Order16.mmMatchStatus, Order16.mmCallInType, Order16.mmYieldType, Order16.mmReporting,
-						Order16.mmAdditionalPhysicalOrRegistrationDetails, Order16.mmAdditionalTradeInstructionProcessingInformation, Order16.mmAccruedInterestAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Order16.mmBusinessProcessType, com.tools20022.repository.msg.Order16.mmOrderIdentification,
+						com.tools20022.repository.msg.Order16.mmClientOrderIdentification, com.tools20022.repository.msg.Order16.mmSecondaryClientOrderIdentification, com.tools20022.repository.msg.Order16.mmListIdentification,
+						com.tools20022.repository.msg.Order16.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.Order16.mmSide, com.tools20022.repository.msg.Order16.mmPayment,
+						com.tools20022.repository.msg.Order16.mmTradeTransactionType, com.tools20022.repository.msg.Order16.mmTradeTransactionCondition, com.tools20022.repository.msg.Order16.mmPreAdvice,
+						com.tools20022.repository.msg.Order16.mmPlaceOfTrade, com.tools20022.repository.msg.Order16.mmOrderBookingDate, com.tools20022.repository.msg.Order16.mmTradeOriginationDate,
+						com.tools20022.repository.msg.Order16.mmTradeDate, com.tools20022.repository.msg.Order16.mmProcessingDate, com.tools20022.repository.msg.Order16.mmSettlementDate, com.tools20022.repository.msg.Order16.mmNAVDate,
+						com.tools20022.repository.msg.Order16.mmPartialFillDetails, com.tools20022.repository.msg.Order16.mmConfirmationQuantity, com.tools20022.repository.msg.Order16.mmQuantityBreakdown,
+						com.tools20022.repository.msg.Order16.mmGrossTradeAmount, com.tools20022.repository.msg.Order16.mmDealPrice, com.tools20022.repository.msg.Order16.mmTypeOfPrice, com.tools20022.repository.msg.Order16.mmCashMargin,
+						com.tools20022.repository.msg.Order16.mmCommission, com.tools20022.repository.msg.Order16.mmNumberOfDaysAccrued, com.tools20022.repository.msg.Order16.mmGiveUpNumberOfDays,
+						com.tools20022.repository.msg.Order16.mmInterestType, com.tools20022.repository.msg.Order16.mmAccruedInterestPercentage, com.tools20022.repository.msg.Order16.mmTradeRegulatoryConditionsType,
+						com.tools20022.repository.msg.Order16.mmCurrencyToBuyOrSell, com.tools20022.repository.msg.Order16.mmOrderOriginatorEligibility, com.tools20022.repository.msg.Order16.mmPositionEffect,
+						com.tools20022.repository.msg.Order16.mmDerivativeCovered, com.tools20022.repository.msg.Order16.mmChargeTaxBasisType, com.tools20022.repository.msg.Order16.mmCapitalGainType,
+						com.tools20022.repository.msg.Order16.mmMatchStatus, com.tools20022.repository.msg.Order16.mmCallInType, com.tools20022.repository.msg.Order16.mmYieldType, com.tools20022.repository.msg.Order16.mmReporting,
+						com.tools20022.repository.msg.Order16.mmAdditionalPhysicalOrRegistrationDetails, com.tools20022.repository.msg.Order16.mmAdditionalTradeInstructionProcessingInformation,
+						com.tools20022.repository.msg.Order16.mmAccruedInterestAmount);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV01.mmPartyTradingDetails, SecuritiesTradeConfirmationStatusAdviceV01.mmCounterpartyTradingDetails);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCurrencyToBuyOrSellRule.forOrder16, com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forOrder16,
+						com.tools20022.repository.constraints.ConstraintTradeDateTimeUTCRule.forOrder16);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Order16";
 				definition = "Intention to transfer an ownership of a financial instrument.";
@@ -2700,399 +2810,399 @@ public class Order16 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BizPrcTp")
-	public BusinessProcessType1Choice getBusinessProcessType() {
-		return businessProcessType;
+	public Optional<BusinessProcessType1Choice> getBusinessProcessType() {
+		return businessProcessType == null ? Optional.empty() : Optional.of(businessProcessType);
 	}
 
-	public void setBusinessProcessType(BusinessProcessType1Choice businessProcessType) {
+	public Order16 setBusinessProcessType(BusinessProcessType1Choice businessProcessType) {
 		this.businessProcessType = businessProcessType;
+		return this;
 	}
 
-	@XmlElement(name = "OrdrId")
 	public List<Max35Text> getOrderIdentification() {
-		return orderIdentification;
+		return orderIdentification == null ? orderIdentification = new ArrayList<>() : orderIdentification;
 	}
 
-	public void setOrderIdentification(List<Max35Text> orderIdentification) {
-		this.orderIdentification = orderIdentification;
+	public Order16 setOrderIdentification(List<Max35Text> orderIdentification) {
+		this.orderIdentification = Objects.requireNonNull(orderIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ClntOrdrId")
 	public List<Max35Text> getClientOrderIdentification() {
-		return clientOrderIdentification;
+		return clientOrderIdentification == null ? clientOrderIdentification = new ArrayList<>() : clientOrderIdentification;
 	}
 
-	public void setClientOrderIdentification(List<Max35Text> clientOrderIdentification) {
-		this.clientOrderIdentification = clientOrderIdentification;
+	public Order16 setClientOrderIdentification(List<Max35Text> clientOrderIdentification) {
+		this.clientOrderIdentification = Objects.requireNonNull(clientOrderIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ScndryClntOrdrId")
 	public List<Max35Text> getSecondaryClientOrderIdentification() {
-		return secondaryClientOrderIdentification;
+		return secondaryClientOrderIdentification == null ? secondaryClientOrderIdentification = new ArrayList<>() : secondaryClientOrderIdentification;
 	}
 
-	public void setSecondaryClientOrderIdentification(List<Max35Text> secondaryClientOrderIdentification) {
-		this.secondaryClientOrderIdentification = secondaryClientOrderIdentification;
+	public Order16 setSecondaryClientOrderIdentification(List<Max35Text> secondaryClientOrderIdentification) {
+		this.secondaryClientOrderIdentification = Objects.requireNonNull(secondaryClientOrderIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ListId")
 	public List<Max35Text> getListIdentification() {
-		return listIdentification;
+		return listIdentification == null ? listIdentification = new ArrayList<>() : listIdentification;
 	}
 
-	public void setListIdentification(List<Max35Text> listIdentification) {
-		this.listIdentification = listIdentification;
+	public Order16 setListIdentification(List<Max35Text> listIdentification) {
+		this.listIdentification = Objects.requireNonNull(listIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
 
-	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
-		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	public Order16 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Sd", required = true)
 	public Side3Code getSide() {
 		return side;
 	}
 
-	public void setSide(Side3Code side) {
-		this.side = side;
+	public Order16 setSide(Side3Code side) {
+		this.side = Objects.requireNonNull(side);
+		return this;
 	}
 
-	@XmlElement(name = "Pmt")
-	public DeliveryReceiptType2Code getPayment() {
-		return payment;
+	public Optional<DeliveryReceiptType2Code> getPayment() {
+		return payment == null ? Optional.empty() : Optional.of(payment);
 	}
 
-	public void setPayment(DeliveryReceiptType2Code payment) {
+	public Order16 setPayment(DeliveryReceiptType2Code payment) {
 		this.payment = payment;
+		return this;
 	}
 
-	@XmlElement(name = "TradTxTp")
-	public TradeType3Choice getTradeTransactionType() {
-		return tradeTransactionType;
+	public Optional<TradeType3Choice> getTradeTransactionType() {
+		return tradeTransactionType == null ? Optional.empty() : Optional.of(tradeTransactionType);
 	}
 
-	public void setTradeTransactionType(TradeType3Choice tradeTransactionType) {
+	public Order16 setTradeTransactionType(TradeType3Choice tradeTransactionType) {
 		this.tradeTransactionType = tradeTransactionType;
+		return this;
 	}
 
-	@XmlElement(name = "TradTxCond")
 	public List<TradeTransactionCondition4Choice> getTradeTransactionCondition() {
-		return tradeTransactionCondition;
+		return tradeTransactionCondition == null ? tradeTransactionCondition = new ArrayList<>() : tradeTransactionCondition;
 	}
 
-	public void setTradeTransactionCondition(List<TradeTransactionCondition4Choice> tradeTransactionCondition) {
-		this.tradeTransactionCondition = tradeTransactionCondition;
+	public Order16 setTradeTransactionCondition(List<TradeTransactionCondition4Choice> tradeTransactionCondition) {
+		this.tradeTransactionCondition = Objects.requireNonNull(tradeTransactionCondition);
+		return this;
 	}
 
-	@XmlElement(name = "PreAdvc")
-	public YesNoIndicator getPreAdvice() {
-		return preAdvice;
+	public Optional<YesNoIndicator> getPreAdvice() {
+		return preAdvice == null ? Optional.empty() : Optional.of(preAdvice);
 	}
 
-	public void setPreAdvice(YesNoIndicator preAdvice) {
+	public Order16 setPreAdvice(YesNoIndicator preAdvice) {
 		this.preAdvice = preAdvice;
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfTrad")
-	public MarketIdentification77 getPlaceOfTrade() {
-		return placeOfTrade;
+	public Optional<MarketIdentification77> getPlaceOfTrade() {
+		return placeOfTrade == null ? Optional.empty() : Optional.of(placeOfTrade);
 	}
 
-	public void setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification77 placeOfTrade) {
+	public Order16 setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification77 placeOfTrade) {
 		this.placeOfTrade = placeOfTrade;
+		return this;
 	}
 
-	@XmlElement(name = "OrdrBookgDt")
-	public ISODate getOrderBookingDate() {
-		return orderBookingDate;
+	public Optional<ISODate> getOrderBookingDate() {
+		return orderBookingDate == null ? Optional.empty() : Optional.of(orderBookingDate);
 	}
 
-	public void setOrderBookingDate(ISODate orderBookingDate) {
+	public Order16 setOrderBookingDate(ISODate orderBookingDate) {
 		this.orderBookingDate = orderBookingDate;
+		return this;
 	}
 
-	@XmlElement(name = "TradOrgtnDt")
-	public ISODateTime getTradeOriginationDate() {
-		return tradeOriginationDate;
+	public Optional<ISODateTime> getTradeOriginationDate() {
+		return tradeOriginationDate == null ? Optional.empty() : Optional.of(tradeOriginationDate);
 	}
 
-	public void setTradeOriginationDate(ISODateTime tradeOriginationDate) {
+	public Order16 setTradeOriginationDate(ISODateTime tradeOriginationDate) {
 		this.tradeOriginationDate = tradeOriginationDate;
+		return this;
 	}
 
-	@XmlElement(name = "TradDt", required = true)
 	public TradeDate4Choice getTradeDate() {
 		return tradeDate;
 	}
 
-	public void setTradeDate(TradeDate4Choice tradeDate) {
-		this.tradeDate = tradeDate;
+	public Order16 setTradeDate(TradeDate4Choice tradeDate) {
+		this.tradeDate = Objects.requireNonNull(tradeDate);
+		return this;
 	}
 
-	@XmlElement(name = "PrcgDt")
-	public TradeDate4Choice getProcessingDate() {
-		return processingDate;
+	public Optional<TradeDate4Choice> getProcessingDate() {
+		return processingDate == null ? Optional.empty() : Optional.of(processingDate);
 	}
 
-	public void setProcessingDate(TradeDate4Choice processingDate) {
+	public Order16 setProcessingDate(TradeDate4Choice processingDate) {
 		this.processingDate = processingDate;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmDt", required = true)
 	public SettlementDate8Choice getSettlementDate() {
 		return settlementDate;
 	}
 
-	public void setSettlementDate(SettlementDate8Choice settlementDate) {
-		this.settlementDate = settlementDate;
+	public Order16 setSettlementDate(SettlementDate8Choice settlementDate) {
+		this.settlementDate = Objects.requireNonNull(settlementDate);
+		return this;
 	}
 
-	@XmlElement(name = "NAVDt")
-	public DateAndDateTime1Choice getNAVDate() {
-		return nAVDate;
+	public Optional<DateAndDateTime1Choice> getNAVDate() {
+		return nAVDate == null ? Optional.empty() : Optional.of(nAVDate);
 	}
 
-	public void setNAVDate(DateAndDateTime1Choice nAVDate) {
+	public Order16 setNAVDate(DateAndDateTime1Choice nAVDate) {
 		this.nAVDate = nAVDate;
+		return this;
 	}
 
-	@XmlElement(name = "PrtlFillDtls")
 	public List<PartialFill1> getPartialFillDetails() {
-		return partialFillDetails;
+		return partialFillDetails == null ? partialFillDetails = new ArrayList<>() : partialFillDetails;
 	}
 
-	public void setPartialFillDetails(List<com.tools20022.repository.msg.PartialFill1> partialFillDetails) {
-		this.partialFillDetails = partialFillDetails;
+	public Order16 setPartialFillDetails(List<com.tools20022.repository.msg.PartialFill1> partialFillDetails) {
+		this.partialFillDetails = Objects.requireNonNull(partialFillDetails);
+		return this;
 	}
 
-	@XmlElement(name = "ConfQty", required = true)
 	public Quantity6Choice getConfirmationQuantity() {
 		return confirmationQuantity;
 	}
 
-	public void setConfirmationQuantity(Quantity6Choice confirmationQuantity) {
-		this.confirmationQuantity = confirmationQuantity;
+	public Order16 setConfirmationQuantity(Quantity6Choice confirmationQuantity) {
+		this.confirmationQuantity = Objects.requireNonNull(confirmationQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "QtyBrkdwn")
 	public List<QuantityBreakdown11> getQuantityBreakdown() {
-		return quantityBreakdown;
+		return quantityBreakdown == null ? quantityBreakdown = new ArrayList<>() : quantityBreakdown;
 	}
 
-	public void setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakdown11> quantityBreakdown) {
-		this.quantityBreakdown = quantityBreakdown;
+	public Order16 setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakdown11> quantityBreakdown) {
+		this.quantityBreakdown = Objects.requireNonNull(quantityBreakdown);
+		return this;
 	}
 
-	@XmlElement(name = "GrssTradAmt")
-	public AmountAndDirection29 getGrossTradeAmount() {
-		return grossTradeAmount;
+	public Optional<AmountAndDirection29> getGrossTradeAmount() {
+		return grossTradeAmount == null ? Optional.empty() : Optional.of(grossTradeAmount);
 	}
 
-	public void setGrossTradeAmount(com.tools20022.repository.msg.AmountAndDirection29 grossTradeAmount) {
+	public Order16 setGrossTradeAmount(com.tools20022.repository.msg.AmountAndDirection29 grossTradeAmount) {
 		this.grossTradeAmount = grossTradeAmount;
+		return this;
 	}
 
-	@XmlElement(name = "DealPric", required = true)
 	public Price4 getDealPrice() {
 		return dealPrice;
 	}
 
-	public void setDealPrice(com.tools20022.repository.msg.Price4 dealPrice) {
-		this.dealPrice = dealPrice;
+	public Order16 setDealPrice(com.tools20022.repository.msg.Price4 dealPrice) {
+		this.dealPrice = Objects.requireNonNull(dealPrice);
+		return this;
 	}
 
-	@XmlElement(name = "TpOfPric")
-	public TypeOfPrice10Choice getTypeOfPrice() {
-		return typeOfPrice;
+	public Optional<TypeOfPrice10Choice> getTypeOfPrice() {
+		return typeOfPrice == null ? Optional.empty() : Optional.of(typeOfPrice);
 	}
 
-	public void setTypeOfPrice(TypeOfPrice10Choice typeOfPrice) {
+	public Order16 setTypeOfPrice(TypeOfPrice10Choice typeOfPrice) {
 		this.typeOfPrice = typeOfPrice;
+		return this;
 	}
 
-	@XmlElement(name = "CshMrgn")
-	public CashMarginOrder1Code getCashMargin() {
-		return cashMargin;
+	public Optional<CashMarginOrder1Code> getCashMargin() {
+		return cashMargin == null ? Optional.empty() : Optional.of(cashMargin);
 	}
 
-	public void setCashMargin(CashMarginOrder1Code cashMargin) {
+	public Order16 setCashMargin(CashMarginOrder1Code cashMargin) {
 		this.cashMargin = cashMargin;
+		return this;
 	}
 
-	@XmlElement(name = "Comssn")
-	public Commission16 getCommission() {
-		return commission;
+	public Optional<Commission16> getCommission() {
+		return commission == null ? Optional.empty() : Optional.of(commission);
 	}
 
-	public void setCommission(com.tools20022.repository.msg.Commission16 commission) {
+	public Order16 setCommission(com.tools20022.repository.msg.Commission16 commission) {
 		this.commission = commission;
+		return this;
 	}
 
-	@XmlElement(name = "NbOfDaysAcrd")
-	public Max3Number getNumberOfDaysAccrued() {
-		return numberOfDaysAccrued;
+	public Optional<Max3Number> getNumberOfDaysAccrued() {
+		return numberOfDaysAccrued == null ? Optional.empty() : Optional.of(numberOfDaysAccrued);
 	}
 
-	public void setNumberOfDaysAccrued(Max3Number numberOfDaysAccrued) {
+	public Order16 setNumberOfDaysAccrued(Max3Number numberOfDaysAccrued) {
 		this.numberOfDaysAccrued = numberOfDaysAccrued;
+		return this;
 	}
 
-	@XmlElement(name = "GvUpNbOfDays")
-	public Max3Number getGiveUpNumberOfDays() {
-		return giveUpNumberOfDays;
+	public Optional<Max3Number> getGiveUpNumberOfDays() {
+		return giveUpNumberOfDays == null ? Optional.empty() : Optional.of(giveUpNumberOfDays);
 	}
 
-	public void setGiveUpNumberOfDays(Max3Number giveUpNumberOfDays) {
+	public Order16 setGiveUpNumberOfDays(Max3Number giveUpNumberOfDays) {
 		this.giveUpNumberOfDays = giveUpNumberOfDays;
+		return this;
 	}
 
-	@XmlElement(name = "IntrstTp")
-	public InterestType2Code getInterestType() {
-		return interestType;
+	public Optional<InterestType2Code> getInterestType() {
+		return interestType == null ? Optional.empty() : Optional.of(interestType);
 	}
 
-	public void setInterestType(InterestType2Code interestType) {
+	public Order16 setInterestType(InterestType2Code interestType) {
 		this.interestType = interestType;
+		return this;
 	}
 
-	@XmlElement(name = "AcrdIntrstPctg")
-	public PercentageRate getAccruedInterestPercentage() {
-		return accruedInterestPercentage;
+	public Optional<PercentageRate> getAccruedInterestPercentage() {
+		return accruedInterestPercentage == null ? Optional.empty() : Optional.of(accruedInterestPercentage);
 	}
 
-	public void setAccruedInterestPercentage(PercentageRate accruedInterestPercentage) {
+	public Order16 setAccruedInterestPercentage(PercentageRate accruedInterestPercentage) {
 		this.accruedInterestPercentage = accruedInterestPercentage;
+		return this;
 	}
 
-	@XmlElement(name = "TradRgltryCondsTp")
-	public TradeRegulatoryConditions1Code getTradeRegulatoryConditionsType() {
-		return tradeRegulatoryConditionsType;
+	public Optional<TradeRegulatoryConditions1Code> getTradeRegulatoryConditionsType() {
+		return tradeRegulatoryConditionsType == null ? Optional.empty() : Optional.of(tradeRegulatoryConditionsType);
 	}
 
-	public void setTradeRegulatoryConditionsType(TradeRegulatoryConditions1Code tradeRegulatoryConditionsType) {
+	public Order16 setTradeRegulatoryConditionsType(TradeRegulatoryConditions1Code tradeRegulatoryConditionsType) {
 		this.tradeRegulatoryConditionsType = tradeRegulatoryConditionsType;
+		return this;
 	}
 
-	@XmlElement(name = "CcyToBuyOrSell")
-	public CurrencyToBuyOrSell1Choice getCurrencyToBuyOrSell() {
-		return currencyToBuyOrSell;
+	public Optional<CurrencyToBuyOrSell1Choice> getCurrencyToBuyOrSell() {
+		return currencyToBuyOrSell == null ? Optional.empty() : Optional.of(currencyToBuyOrSell);
 	}
 
-	public void setCurrencyToBuyOrSell(CurrencyToBuyOrSell1Choice currencyToBuyOrSell) {
+	public Order16 setCurrencyToBuyOrSell(CurrencyToBuyOrSell1Choice currencyToBuyOrSell) {
 		this.currencyToBuyOrSell = currencyToBuyOrSell;
+		return this;
 	}
 
-	@XmlElement(name = "OrdrOrgtrElgblty")
-	public Eligibility1Code getOrderOriginatorEligibility() {
-		return orderOriginatorEligibility;
+	public Optional<Eligibility1Code> getOrderOriginatorEligibility() {
+		return orderOriginatorEligibility == null ? Optional.empty() : Optional.of(orderOriginatorEligibility);
 	}
 
-	public void setOrderOriginatorEligibility(Eligibility1Code orderOriginatorEligibility) {
+	public Order16 setOrderOriginatorEligibility(Eligibility1Code orderOriginatorEligibility) {
 		this.orderOriginatorEligibility = orderOriginatorEligibility;
+		return this;
 	}
 
-	@XmlElement(name = "PosFct")
-	public PositionEffect2Code getPositionEffect() {
-		return positionEffect;
+	public Optional<PositionEffect2Code> getPositionEffect() {
+		return positionEffect == null ? Optional.empty() : Optional.of(positionEffect);
 	}
 
-	public void setPositionEffect(PositionEffect2Code positionEffect) {
+	public Order16 setPositionEffect(PositionEffect2Code positionEffect) {
 		this.positionEffect = positionEffect;
+		return this;
 	}
 
-	@XmlElement(name = "DerivCvrd")
-	public YesNoIndicator getDerivativeCovered() {
-		return derivativeCovered;
+	public Optional<YesNoIndicator> getDerivativeCovered() {
+		return derivativeCovered == null ? Optional.empty() : Optional.of(derivativeCovered);
 	}
 
-	public void setDerivativeCovered(YesNoIndicator derivativeCovered) {
+	public Order16 setDerivativeCovered(YesNoIndicator derivativeCovered) {
 		this.derivativeCovered = derivativeCovered;
+		return this;
 	}
 
-	@XmlElement(name = "ChrgTaxBsisTp")
-	public ChargeTaxBasisType1Choice getChargeTaxBasisType() {
-		return chargeTaxBasisType;
+	public Optional<ChargeTaxBasisType1Choice> getChargeTaxBasisType() {
+		return chargeTaxBasisType == null ? Optional.empty() : Optional.of(chargeTaxBasisType);
 	}
 
-	public void setChargeTaxBasisType(ChargeTaxBasisType1Choice chargeTaxBasisType) {
+	public Order16 setChargeTaxBasisType(ChargeTaxBasisType1Choice chargeTaxBasisType) {
 		this.chargeTaxBasisType = chargeTaxBasisType;
+		return this;
 	}
 
-	@XmlElement(name = "CptlGnTp")
-	public EUCapitalGainType2Choice getCapitalGainType() {
-		return capitalGainType;
+	public Optional<EUCapitalGainType2Choice> getCapitalGainType() {
+		return capitalGainType == null ? Optional.empty() : Optional.of(capitalGainType);
 	}
 
-	public void setCapitalGainType(EUCapitalGainType2Choice capitalGainType) {
+	public Order16 setCapitalGainType(EUCapitalGainType2Choice capitalGainType) {
 		this.capitalGainType = capitalGainType;
+		return this;
 	}
 
-	@XmlElement(name = "MtchSts")
-	public MatchingStatus8Choice getMatchStatus() {
-		return matchStatus;
+	public Optional<MatchingStatus8Choice> getMatchStatus() {
+		return matchStatus == null ? Optional.empty() : Optional.of(matchStatus);
 	}
 
-	public void setMatchStatus(MatchingStatus8Choice matchStatus) {
+	public Order16 setMatchStatus(MatchingStatus8Choice matchStatus) {
 		this.matchStatus = matchStatus;
+		return this;
 	}
 
-	@XmlElement(name = "CallInTp")
-	public CallIn1Code getCallInType() {
-		return callInType;
+	public Optional<CallIn1Code> getCallInType() {
+		return callInType == null ? Optional.empty() : Optional.of(callInType);
 	}
 
-	public void setCallInType(CallIn1Code callInType) {
+	public Order16 setCallInType(CallIn1Code callInType) {
 		this.callInType = callInType;
+		return this;
 	}
 
-	@XmlElement(name = "YldTp")
-	public YieldCalculation2 getYieldType() {
-		return yieldType;
+	public Optional<YieldCalculation2> getYieldType() {
+		return yieldType == null ? Optional.empty() : Optional.of(yieldType);
 	}
 
-	public void setYieldType(com.tools20022.repository.msg.YieldCalculation2 yieldType) {
+	public Order16 setYieldType(com.tools20022.repository.msg.YieldCalculation2 yieldType) {
 		this.yieldType = yieldType;
+		return this;
 	}
 
-	@XmlElement(name = "Rptg")
 	public List<Reporting5Choice> getReporting() {
-		return reporting;
+		return reporting == null ? reporting = new ArrayList<>() : reporting;
 	}
 
-	public void setReporting(List<Reporting5Choice> reporting) {
-		this.reporting = reporting;
+	public Order16 setReporting(List<Reporting5Choice> reporting) {
+		this.reporting = Objects.requireNonNull(reporting);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlPhysOrRegnDtls")
-	public RegistrationParameters3 getAdditionalPhysicalOrRegistrationDetails() {
-		return additionalPhysicalOrRegistrationDetails;
+	public Optional<RegistrationParameters3> getAdditionalPhysicalOrRegistrationDetails() {
+		return additionalPhysicalOrRegistrationDetails == null ? Optional.empty() : Optional.of(additionalPhysicalOrRegistrationDetails);
 	}
 
-	public void setAdditionalPhysicalOrRegistrationDetails(com.tools20022.repository.msg.RegistrationParameters3 additionalPhysicalOrRegistrationDetails) {
+	public Order16 setAdditionalPhysicalOrRegistrationDetails(com.tools20022.repository.msg.RegistrationParameters3 additionalPhysicalOrRegistrationDetails) {
 		this.additionalPhysicalOrRegistrationDetails = additionalPhysicalOrRegistrationDetails;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlTradInstrPrcgInf")
-	public Max350Text getAdditionalTradeInstructionProcessingInformation() {
-		return additionalTradeInstructionProcessingInformation;
+	public Optional<Max350Text> getAdditionalTradeInstructionProcessingInformation() {
+		return additionalTradeInstructionProcessingInformation == null ? Optional.empty() : Optional.of(additionalTradeInstructionProcessingInformation);
 	}
 
-	public void setAdditionalTradeInstructionProcessingInformation(Max350Text additionalTradeInstructionProcessingInformation) {
+	public Order16 setAdditionalTradeInstructionProcessingInformation(Max350Text additionalTradeInstructionProcessingInformation) {
 		this.additionalTradeInstructionProcessingInformation = additionalTradeInstructionProcessingInformation;
+		return this;
 	}
 
-	@XmlElement(name = "AcrdIntrstAmt")
-	public AmountAndDirection29 getAccruedInterestAmount() {
-		return accruedInterestAmount;
+	public Optional<AmountAndDirection29> getAccruedInterestAmount() {
+		return accruedInterestAmount == null ? Optional.empty() : Optional.of(accruedInterestAmount);
 	}
 
-	public void setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection29 accruedInterestAmount) {
+	public Order16 setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection29 accruedInterestAmount) {
 		this.accruedInterestAmount = accruedInterestAmount;
+		return this;
 	}
 }

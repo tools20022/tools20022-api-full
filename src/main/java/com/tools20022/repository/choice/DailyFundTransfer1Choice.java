@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.TransferEvent1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between time and event fund transfer."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DailyFundTransfer1Choice", propOrder = {"transferTime", "transferEvent"})
 public class DailyFundTransfer1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TrfTm", required = true)
 	protected ISOTime transferTime;
 	/**
-	 * Time daily balances are transferred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +100,7 @@ public class DailyFundTransfer1Choice {
 	 */
 	public static final MMMessageAttribute mmTransferTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DailyFundTransfer1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DailyFundTransfer1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TrfTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,10 +111,11 @@ public class DailyFundTransfer1Choice {
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfEvt", required = true)
 	protected TransferEvent1 transferEvent;
 	/**
-	 * Information about code and number of transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -138,7 +141,7 @@ public class DailyFundTransfer1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmTransferEvent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DailyFundTransfer1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DailyFundTransfer1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TrfEvt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,8 +157,8 @@ public class DailyFundTransfer1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DailyFundTransfer1Choice.mmTransferTime, DailyFundTransfer1Choice.mmTransferEvent);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DailyFundTransfer1Choice.mmTransferTime, com.tools20022.repository.choice.DailyFundTransfer1Choice.mmTransferEvent);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DailyFundTransfer1Choice";
 				definition = "Choice between time and event fund transfer.";
@@ -164,21 +167,21 @@ public class DailyFundTransfer1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TrfTm", required = true)
 	public ISOTime getTransferTime() {
 		return transferTime;
 	}
 
-	public void setTransferTime(ISOTime transferTime) {
-		this.transferTime = transferTime;
+	public DailyFundTransfer1Choice setTransferTime(ISOTime transferTime) {
+		this.transferTime = Objects.requireNonNull(transferTime);
+		return this;
 	}
 
-	@XmlElement(name = "TrfEvt", required = true)
 	public TransferEvent1 getTransferEvent() {
 		return transferEvent;
 	}
 
-	public void setTransferEvent(TransferEvent1 transferEvent) {
-		this.transferEvent = transferEvent;
+	public DailyFundTransfer1Choice setTransferEvent(TransferEvent1 transferEvent) {
+		this.transferEvent = Objects.requireNonNull(transferEvent);
+		return this;
 	}
 }

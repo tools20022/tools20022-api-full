@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * NumberAndSumOfTransactions3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NumberAndSumOfTransactions4", propOrder = {"numberOfEntries", "sum", "totalNetEntry"})
 public class NumberAndSumOfTransactions4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NbOfNtries")
 	protected Max15NumericText numberOfEntries;
 	/**
-	 * Number of individual entries included in the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +107,7 @@ public class NumberAndSumOfTransactions4 {
 	 */
 	public static final MMMessageAttribute mmNumberOfEntries = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NumberAndSumOfTransactions4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactions4.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfNtries";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +118,11 @@ public class NumberAndSumOfTransactions4 {
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Sum")
 	protected DecimalNumber sum;
 	/**
-	 * Total of all individual entries included in the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,7 +150,7 @@ public class NumberAndSumOfTransactions4 {
 	 */
 	public static final MMMessageAttribute mmSum = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NumberAndSumOfTransactions4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactions4.mmObject();
 			isDerived = false;
 			xmlTag = "Sum";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,11 +161,11 @@ public class NumberAndSumOfTransactions4 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNetNtry")
 	protected AmountAndDirection35 totalNetEntry;
 	/**
-	 * Resulting debit or credit amount of the netted amounts for all debit and
-	 * credit entries.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,7 +195,7 @@ public class NumberAndSumOfTransactions4 {
 	 */
 	public static final MMMessageAttribute mmTotalNetEntry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NumberAndSumOfTransactions4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactions4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNetNtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,8 +210,9 @@ public class NumberAndSumOfTransactions4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NumberAndSumOfTransactions4.mmNumberOfEntries, NumberAndSumOfTransactions4.mmSum, NumberAndSumOfTransactions4.mmTotalNetEntry);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberAndSumOfTransactions4.mmNumberOfEntries, com.tools20022.repository.msg.NumberAndSumOfTransactions4.mmSum,
+						com.tools20022.repository.msg.NumberAndSumOfTransactions4.mmTotalNetEntry);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NumberAndSumOfTransactions4";
 				definition = "Set of elements providing the total sum of entries.";
@@ -218,30 +222,30 @@ public class NumberAndSumOfTransactions4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NbOfNtries")
-	public Max15NumericText getNumberOfEntries() {
-		return numberOfEntries;
+	public Optional<Max15NumericText> getNumberOfEntries() {
+		return numberOfEntries == null ? Optional.empty() : Optional.of(numberOfEntries);
 	}
 
-	public void setNumberOfEntries(Max15NumericText numberOfEntries) {
+	public NumberAndSumOfTransactions4 setNumberOfEntries(Max15NumericText numberOfEntries) {
 		this.numberOfEntries = numberOfEntries;
+		return this;
 	}
 
-	@XmlElement(name = "Sum")
-	public DecimalNumber getSum() {
-		return sum;
+	public Optional<DecimalNumber> getSum() {
+		return sum == null ? Optional.empty() : Optional.of(sum);
 	}
 
-	public void setSum(DecimalNumber sum) {
+	public NumberAndSumOfTransactions4 setSum(DecimalNumber sum) {
 		this.sum = sum;
+		return this;
 	}
 
-	@XmlElement(name = "TtlNetNtry")
-	public AmountAndDirection35 getTotalNetEntry() {
-		return totalNetEntry;
+	public Optional<AmountAndDirection35> getTotalNetEntry() {
+		return totalNetEntry == null ? Optional.empty() : Optional.of(totalNetEntry);
 	}
 
-	public void setTotalNetEntry(com.tools20022.repository.msg.AmountAndDirection35 totalNetEntry) {
+	public NumberAndSumOfTransactions4 setTotalNetEntry(com.tools20022.repository.msg.AmountAndDirection35 totalNetEntry) {
 		this.totalNetEntry = totalNetEntry;
+		return this;
 	}
 }

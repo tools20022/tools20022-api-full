@@ -25,9 +25,11 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * HoldIndicator2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "HoldIndicator4", propOrder = {"indicator", "reason"})
 public class HoldIndicator4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ind", required = true)
 	protected YesNoIndicator indicator;
 	/**
-	 * Specifies whether the transaction is on hold/blocked/frozen.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +127,7 @@ public class HoldIndicator4 {
 	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmHoldIndicator;
-			componentContext_lazy = () -> HoldIndicator4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.HoldIndicator4.mmObject();
 			isDerived = false;
 			xmlTag = "Ind";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +139,11 @@ public class HoldIndicator4 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn")
 	protected List<com.tools20022.repository.msg.RegistrationReason3> reason;
 	/**
-	 * Specifies the reason of the registration staus.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -177,7 +181,7 @@ public class HoldIndicator4 {
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistration;
-			componentContext_lazy = () -> HoldIndicator4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.HoldIndicator4.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -193,9 +197,9 @@ public class HoldIndicator4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(HoldIndicator4.mmIndicator, HoldIndicator4.mmReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldIndicator4.mmIndicator, com.tools20022.repository.msg.HoldIndicator4.mmReason);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "HoldIndicator4";
 				definition = "Specifies whether the transaction is on hold/blocked/frozen.";
@@ -206,21 +210,21 @@ public class HoldIndicator4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ind", required = true)
 	public YesNoIndicator getIndicator() {
 		return indicator;
 	}
 
-	public void setIndicator(YesNoIndicator indicator) {
-		this.indicator = indicator;
+	public HoldIndicator4 setIndicator(YesNoIndicator indicator) {
+		this.indicator = Objects.requireNonNull(indicator);
+		return this;
 	}
 
-	@XmlElement(name = "Rsn")
 	public List<RegistrationReason3> getReason() {
-		return reason;
+		return reason == null ? reason = new ArrayList<>() : reason;
 	}
 
-	public void setReason(List<com.tools20022.repository.msg.RegistrationReason3> reason) {
-		this.reason = reason;
+	public HoldIndicator4 setReason(List<com.tools20022.repository.msg.RegistrationReason3> reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 }

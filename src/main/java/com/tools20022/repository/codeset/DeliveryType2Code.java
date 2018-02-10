@@ -20,39 +20,42 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DeliveryTypeV2Code;
+import com.tools20022.repository.codeset.DeliveryType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Describes the delivery or custody arrangement for the underlying securities.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DeliveryTypeV2Code
- * DeliveryTypeV2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryType2Code#mmAgainstPayment
- * DeliveryType2Code.mmAgainstPayment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DeliveryType2Code#mmFree
- * DeliveryType2Code.mmFree}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryType2Code#AgainstPayment
+ * DeliveryType2Code.AgainstPayment}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DeliveryType2Code#Free
+ * DeliveryType2Code.Free}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DeliveryType2Code#Triparty
+ * DeliveryType2Code.Triparty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryType2Code#mmTriparty
- * DeliveryType2Code.mmTriparty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryType2Code#mmHoldInCustody
- * DeliveryType2Code.mmHoldInCustody}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryType2Code#HoldInCustody
+ * DeliveryType2Code.HoldInCustody}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DeliveryTypeV2Code
+ * DeliveryTypeV2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class DeliveryType2Code extends DeliveryTypeV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DeliveryType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,11 +94,12 @@ public class DeliveryType2Code extends DeliveryTypeV2Code {
 	 * name} = "AgainstPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgainstPayment = new MMCode() {
+	public static final DeliveryType2Code AgainstPayment = new DeliveryType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgainstPayment";
-			owner_lazy = () -> DeliveryType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DeliveryType2Code.mmObject();
+			codeName = DeliveryTypeV2Code.AgainstPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -113,11 +118,12 @@ public class DeliveryType2Code extends DeliveryTypeV2Code {
 	 * name} = "Free"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFree = new MMCode() {
+	public static final DeliveryType2Code Free = new DeliveryType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Free";
-			owner_lazy = () -> DeliveryType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DeliveryType2Code.mmObject();
+			codeName = DeliveryTypeV2Code.Free.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -136,11 +142,12 @@ public class DeliveryType2Code extends DeliveryTypeV2Code {
 	 * name} = "Triparty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTriparty = new MMCode() {
+	public static final DeliveryType2Code Triparty = new DeliveryType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Triparty";
-			owner_lazy = () -> DeliveryType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DeliveryType2Code.mmObject();
+			codeName = DeliveryTypeV2Code.Triparty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -159,26 +166,60 @@ public class DeliveryType2Code extends DeliveryTypeV2Code {
 	 * name} = "HoldInCustody"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHoldInCustody = new MMCode() {
+	public static final DeliveryType2Code HoldInCustody = new DeliveryType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldInCustody";
-			owner_lazy = () -> DeliveryType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DeliveryType2Code.mmObject();
+			codeName = DeliveryTypeV2Code.HoldInCustody.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DeliveryType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DeliveryType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("APMT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliveryType2Code";
 				definition = "Describes the delivery or custody arrangement for the underlying securities.";
-				code_lazy = () -> Arrays.asList(DeliveryType2Code.mmAgainstPayment, DeliveryType2Code.mmFree, DeliveryType2Code.mmTriparty, DeliveryType2Code.mmHoldInCustody);
 				trace_lazy = () -> DeliveryTypeV2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryType2Code.AgainstPayment, com.tools20022.repository.codeset.DeliveryType2Code.Free, com.tools20022.repository.codeset.DeliveryType2Code.Triparty,
+						com.tools20022.repository.codeset.DeliveryType2Code.HoldInCustody);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AgainstPayment.getCodeName().get(), AgainstPayment);
+		codesByName.put(Free.getCodeName().get(), Free);
+		codesByName.put(Triparty.getCodeName().get(), Triparty);
+		codesByName.put(HoldInCustody.getCodeName().get(), HoldInCustody);
+	}
+
+	public static DeliveryType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DeliveryType2Code[] values() {
+		DeliveryType2Code[] values = new DeliveryType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DeliveryType2Code> {
+		@Override
+		public DeliveryType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DeliveryType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

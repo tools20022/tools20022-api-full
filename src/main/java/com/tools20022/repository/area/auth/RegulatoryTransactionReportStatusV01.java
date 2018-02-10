@@ -25,9 +25,11 @@ import com.tools20022.repository.msg.ReportStatusAndReason1;
 import com.tools20022.repository.msg.TradeTransactionStatusAndReason1;
 import com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -46,30 +48,14 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
- * AuthoritiesLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive
- * TransactionRegulatoryReportingISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "RgltryTxRptStsV01"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#mmReportStatusOrIndividualTransactionStatusRule
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01#ReportStatusOrIndividualTransactionStatusRule
  * RegulatoryTransactionReportStatusV01.
- * mmReportStatusOrIndividualTransactionStatusRule}</li>
+ * ReportStatusOrIndividualTransactionStatusRule}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -88,6 +74,22 @@ import javax.xml.bind.annotation.*;
  * RegulatoryTransactionReportStatusV01.mmIndividualTransactionStatus}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive
+ * TransactionRegulatoryReportingISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "RgltryTxRptStsV01"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
+ * AuthoritiesLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code auth.010.001.01}</li>
@@ -103,7 +105,7 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RegulatoryTransactionReportStatusV01", propOrder = {"identification", "reportingInstitution", "reportStatus", "individualTransactionStatus"})
 public class RegulatoryTransactionReportStatusV01 {
 
@@ -143,7 +145,7 @@ public class RegulatoryTransactionReportStatusV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmReportStatusOrIndividualTransactionStatusRule = new MMXor() {
+	public static final MMXor ReportStatusOrIndividualTransactionStatusRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportStatusOrIndividualTransactionStatusRule";
@@ -153,10 +155,11 @@ public class RegulatoryTransactionReportStatusV01 {
 					com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmIndividualTransactionStatus);
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected DocumentIdentification8 identification;
 	/**
-	 * Identification of the RegulatoryTransactionReportStatus document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,11 +200,11 @@ public class RegulatoryTransactionReportStatusV01 {
 			}
 		}
 	};
+	@XmlElement(name = "RptgInstn", required = true)
 	protected PartyIdentification23Choice reportingInstitution;
 	/**
-	 * Identification of the firm that is legally responsible for sending the
-	 * transaction report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -243,11 +246,11 @@ public class RegulatoryTransactionReportStatusV01 {
 			}
 		}
 	};
+	@XmlElement(name = "RptSts", required = true)
 	protected ReportStatusAndReason1 reportStatus;
 	/**
-	 * Provides the status of the entire RegulatoryTransactionReport that was
-	 * previously sent by the reporting institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -289,11 +292,11 @@ public class RegulatoryTransactionReportStatusV01 {
 			}
 		}
 	};
+	@XmlElement(name = "IndvTxSts", required = true)
 	protected List<TradeTransactionStatusAndReason1> individualTransactionStatus;
 	/**
-	 * Provides the status of one or more transactions that were previously sent
-	 * within a RegulatoryTransactionReport by the reporting institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -342,7 +345,7 @@ public class RegulatoryTransactionReportStatusV01 {
 				name = "RegulatoryTransactionReportStatusV01";
 				definition = "Scope\r\nA regulator or an intermediary sends the RegulatoryTransactionReportStatus to a reporting institution to provide the status of a RegulatoryTransactionReport previously sent by the reporting institution.\r\nUsage\r\nThe message definition may be used to provide a status for the entire report or to provide a status at the level of individual transactions within the report. One of the following statuses can be reported:\r\n- Completed, or,\r\n- Pending, or,\r\n- Rejected.\r\nIf the status is rejected, then reason for the rejection must be specified.";
 				messageSet_lazy = () -> Arrays.asList(TransactionRegulatoryReportingISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.mmReportStatusOrIndividualTransactionStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportStatusV01.ReportStatusOrIndividualTransactionStatusRule);
 				rootElement = "Document";
 				xmlTag = "RgltryTxRptStsV01";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
@@ -367,43 +370,43 @@ public class RegulatoryTransactionReportStatusV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(DocumentIdentification8 identification) {
-		this.identification = identification;
+	public RegulatoryTransactionReportStatusV01 setIdentification(DocumentIdentification8 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "RptgInstn", required = true)
 	public PartyIdentification23Choice getReportingInstitution() {
 		return reportingInstitution;
 	}
 
-	public void setReportingInstitution(PartyIdentification23Choice reportingInstitution) {
-		this.reportingInstitution = reportingInstitution;
+	public RegulatoryTransactionReportStatusV01 setReportingInstitution(PartyIdentification23Choice reportingInstitution) {
+		this.reportingInstitution = Objects.requireNonNull(reportingInstitution);
+		return this;
 	}
 
-	@XmlElement(name = "RptSts", required = true)
 	public ReportStatusAndReason1 getReportStatus() {
 		return reportStatus;
 	}
 
-	public void setReportStatus(ReportStatusAndReason1 reportStatus) {
-		this.reportStatus = reportStatus;
+	public RegulatoryTransactionReportStatusV01 setReportStatus(ReportStatusAndReason1 reportStatus) {
+		this.reportStatus = Objects.requireNonNull(reportStatus);
+		return this;
 	}
 
-	@XmlElement(name = "IndvTxSts", required = true)
 	public List<TradeTransactionStatusAndReason1> getIndividualTransactionStatus() {
-		return individualTransactionStatus;
+		return individualTransactionStatus == null ? individualTransactionStatus = new ArrayList<>() : individualTransactionStatus;
 	}
 
-	public void setIndividualTransactionStatus(List<TradeTransactionStatusAndReason1> individualTransactionStatus) {
-		this.individualTransactionStatus = individualTransactionStatus;
+	public RegulatoryTransactionReportStatusV01 setIndividualTransactionStatus(List<TradeTransactionStatusAndReason1> individualTransactionStatus) {
+		this.individualTransactionStatus = Objects.requireNonNull(individualTransactionStatus);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.010.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:auth.010.001.01")
 	static public class Document {
 		@XmlElement(name = "RgltryTxRptStsV01", required = true)
 		public RegulatoryTransactionReportStatusV01 messageBody;

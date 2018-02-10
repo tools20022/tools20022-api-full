@@ -25,9 +25,8 @@ import com.tools20022.repository.choice.DataFormat2Choice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUserDefinedRule#forBreakdownByUserDefinedParameter3
+ * ConstraintUserDefinedRule.forBreakdownByUserDefinedParameter3}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * BreakdownByUserDefinedParameter1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BreakdownByUserDefinedParameter3", propOrder = {"party", "country", "currency", "userDefined", "cashInForecast", "cashOutForecast", "netCashForecast"})
 public class BreakdownByUserDefinedParameter3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pty")
 	protected InvestmentAccount42 party;
 	/**
-	 * Party for which the cash flow is being reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,7 +134,7 @@ public class BreakdownByUserDefinedParameter3 {
 	 */
 	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BreakdownByUserDefinedParameter3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,10 +146,11 @@ public class BreakdownByUserDefinedParameter3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.InvestmentAccount42.mmObject();
 		}
 	};
+	@XmlElement(name = "Ctry")
 	protected CountryCode country;
 	/**
-	 * Country for which the cash flow is being reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +182,7 @@ public class BreakdownByUserDefinedParameter3 {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BreakdownByUserDefinedParameter3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,10 +194,11 @@ public class BreakdownByUserDefinedParameter3 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected ActiveOrHistoricCurrencyCode currency;
 	/**
-	 * Currency for which the cash flow is being reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -221,7 +231,7 @@ public class BreakdownByUserDefinedParameter3 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BreakdownByUserDefinedParameter3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,10 +243,11 @@ public class BreakdownByUserDefinedParameter3 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "UsrDfnd")
 	protected DataFormat2Choice userDefined;
 	/**
-	 * Parameter for which the cash flow is being reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -269,7 +280,7 @@ public class BreakdownByUserDefinedParameter3 {
 	 */
 	public static final MMMessageAttribute mmUserDefined = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BreakdownByUserDefinedParameter3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
 			xmlTag = "UsrDfnd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,11 +292,11 @@ public class BreakdownByUserDefinedParameter3 {
 			complexType_lazy = () -> DataFormat2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CshInFcst")
 	protected List<com.tools20022.repository.msg.CashInForecast5> cashInForecast;
 	/**
-	 * Cash movement into the fund as a result of transactions in shares in an
-	 * investment fund, for example, subscriptions or switch-ins.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -318,7 +329,7 @@ public class BreakdownByUserDefinedParameter3 {
 	 */
 	public static final MMMessageAssociationEnd mmCashInForecast = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BreakdownByUserDefinedParameter3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
 			xmlTag = "CshInFcst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -330,11 +341,11 @@ public class BreakdownByUserDefinedParameter3 {
 			type_lazy = () -> com.tools20022.repository.msg.CashInForecast5.mmObject();
 		}
 	};
+	@XmlElement(name = "CshOutFcst")
 	protected List<com.tools20022.repository.msg.CashOutForecast5> cashOutForecast;
 	/**
-	 * Cash movement out of the fund as a result of transactions in shares in an
-	 * investment fund, for example, redemptions or switch-outs.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -367,7 +378,7 @@ public class BreakdownByUserDefinedParameter3 {
 	 */
 	public static final MMMessageAssociationEnd mmCashOutForecast = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BreakdownByUserDefinedParameter3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
 			xmlTag = "CshOutFcst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -379,11 +390,11 @@ public class BreakdownByUserDefinedParameter3 {
 			type_lazy = () -> com.tools20022.repository.msg.CashOutForecast5.mmObject();
 		}
 	};
+	@XmlElement(name = "NetCshFcst")
 	protected List<com.tools20022.repository.msg.NetCashForecast4> netCashForecast;
 	/**
-	 * Net cash as a result of the cash-in and cash-out flows specified for the
-	 * user defined parameter.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -416,7 +427,7 @@ public class BreakdownByUserDefinedParameter3 {
 	 */
 	public static final MMMessageAssociationEnd mmNetCashForecast = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BreakdownByUserDefinedParameter3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
 			xmlTag = "NetCshFcst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -432,9 +443,12 @@ public class BreakdownByUserDefinedParameter3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BreakdownByUserDefinedParameter3.mmParty, BreakdownByUserDefinedParameter3.mmCountry, BreakdownByUserDefinedParameter3.mmCurrency, BreakdownByUserDefinedParameter3.mmUserDefined,
-						BreakdownByUserDefinedParameter3.mmCashInForecast, BreakdownByUserDefinedParameter3.mmCashOutForecast, BreakdownByUserDefinedParameter3.mmNetCashForecast);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmParty, com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmCountry,
+						com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmCurrency, com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmUserDefined,
+						com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmCashInForecast, com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmCashOutForecast,
+						com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmNetCashForecast);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintUserDefinedRule.forBreakdownByUserDefinedParameter3);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BreakdownByUserDefinedParameter3";
 				definition = "Specifies the cash-in and cash-out flows by a user defined parameter/s.";
@@ -444,66 +458,66 @@ public class BreakdownByUserDefinedParameter3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pty")
-	public InvestmentAccount42 getParty() {
-		return party;
+	public Optional<InvestmentAccount42> getParty() {
+		return party == null ? Optional.empty() : Optional.of(party);
 	}
 
-	public void setParty(com.tools20022.repository.msg.InvestmentAccount42 party) {
+	public BreakdownByUserDefinedParameter3 setParty(com.tools20022.repository.msg.InvestmentAccount42 party) {
 		this.party = party;
+		return this;
 	}
 
-	@XmlElement(name = "Ctry")
-	public CountryCode getCountry() {
-		return country;
+	public Optional<CountryCode> getCountry() {
+		return country == null ? Optional.empty() : Optional.of(country);
 	}
 
-	public void setCountry(CountryCode country) {
+	public BreakdownByUserDefinedParameter3 setCountry(CountryCode country) {
 		this.country = country;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public ActiveOrHistoricCurrencyCode getCurrency() {
-		return currency;
+	public Optional<ActiveOrHistoricCurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(ActiveOrHistoricCurrencyCode currency) {
+	public BreakdownByUserDefinedParameter3 setCurrency(ActiveOrHistoricCurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "UsrDfnd")
-	public DataFormat2Choice getUserDefined() {
-		return userDefined;
+	public Optional<DataFormat2Choice> getUserDefined() {
+		return userDefined == null ? Optional.empty() : Optional.of(userDefined);
 	}
 
-	public void setUserDefined(DataFormat2Choice userDefined) {
+	public BreakdownByUserDefinedParameter3 setUserDefined(DataFormat2Choice userDefined) {
 		this.userDefined = userDefined;
+		return this;
 	}
 
-	@XmlElement(name = "CshInFcst")
 	public List<CashInForecast5> getCashInForecast() {
-		return cashInForecast;
+		return cashInForecast == null ? cashInForecast = new ArrayList<>() : cashInForecast;
 	}
 
-	public void setCashInForecast(List<com.tools20022.repository.msg.CashInForecast5> cashInForecast) {
-		this.cashInForecast = cashInForecast;
+	public BreakdownByUserDefinedParameter3 setCashInForecast(List<com.tools20022.repository.msg.CashInForecast5> cashInForecast) {
+		this.cashInForecast = Objects.requireNonNull(cashInForecast);
+		return this;
 	}
 
-	@XmlElement(name = "CshOutFcst")
 	public List<CashOutForecast5> getCashOutForecast() {
-		return cashOutForecast;
+		return cashOutForecast == null ? cashOutForecast = new ArrayList<>() : cashOutForecast;
 	}
 
-	public void setCashOutForecast(List<com.tools20022.repository.msg.CashOutForecast5> cashOutForecast) {
-		this.cashOutForecast = cashOutForecast;
+	public BreakdownByUserDefinedParameter3 setCashOutForecast(List<com.tools20022.repository.msg.CashOutForecast5> cashOutForecast) {
+		this.cashOutForecast = Objects.requireNonNull(cashOutForecast);
+		return this;
 	}
 
-	@XmlElement(name = "NetCshFcst")
 	public List<NetCashForecast4> getNetCashForecast() {
-		return netCashForecast;
+		return netCashForecast == null ? netCashForecast = new ArrayList<>() : netCashForecast;
 	}
 
-	public void setNetCashForecast(List<com.tools20022.repository.msg.NetCashForecast4> netCashForecast) {
-		this.netCashForecast = netCashForecast;
+	public BreakdownByUserDefinedParameter3 setNetCashForecast(List<com.tools20022.repository.msg.NetCashForecast4> netCashForecast) {
+		this.netCashForecast = Objects.requireNonNull(netCashForecast);
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -27,6 +28,7 @@ import com.tools20022.repository.entity.CrossTrade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides details about the cross order (common to each side of the cross)."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CrossOrder1", propOrder = {"crossType", "prioritisation", "buySideDetails", "sellSideDetails"})
 public class CrossOrder1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CrossTp", required = true)
 	protected CrossType1Code crossType;
 	/**
-	 * Type of cross being submitted to a market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,6 +100,9 @@ public class CrossOrder1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CrossTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 549</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -110,9 +116,10 @@ public class CrossOrder1 {
 	public static final MMMessageAttribute mmCrossType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CrossTrade.mmCrossType;
-			componentContext_lazy = () -> CrossOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "CrossTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "549"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossType";
 			definition = "Type of cross being submitted to a market.";
@@ -121,15 +128,11 @@ public class CrossOrder1 {
 			simpleType_lazy = () -> CrossType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtistn", required = true)
 	protected Prioritisation1Code prioritisation;
 	/**
-	 * Indicates if one side or the other of a cross order should be
-	 * prioritized. The definition of prioritization is left to the market. In
-	 * some markets prioritization means which side of the cross order is
-	 * applied to the market first. In other markets, prioritization may mean
-	 * that the prioritized side is fully executed (sometimes referred to as the
-	 * side being protected).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,6 +152,9 @@ public class CrossOrder1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Prtistn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 550</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -164,9 +170,10 @@ public class CrossOrder1 {
 	public static final MMMessageAttribute mmPrioritisation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CrossTrade.mmPrioritisation;
-			componentContext_lazy = () -> CrossOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtistn";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "550"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Prioritisation";
 			definition = "Indicates if one side or the other of a cross order should be prioritized.\nThe definition of prioritization is left to the market. In some markets prioritization means which side of the cross order is applied to the market first. In other markets, prioritization may mean that the prioritized side is fully executed (sometimes referred to as the side being protected).";
@@ -175,10 +182,11 @@ public class CrossOrder1 {
 			simpleType_lazy = () -> Prioritisation1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "BuySdDtls", required = true)
 	protected Order9 buySideDetails;
 	/**
-	 * Buyside order details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -195,6 +203,9 @@ public class CrossOrder1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BuySdDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 54</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -208,9 +219,10 @@ public class CrossOrder1 {
 	public static final MMMessageAssociationEnd mmBuySideDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CrossTrade.mmBuySideOrder;
-			componentContext_lazy = () -> CrossOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "BuySdDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "54"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuySideDetails";
 			definition = "Buyside order details.";
@@ -220,10 +232,11 @@ public class CrossOrder1 {
 			type_lazy = () -> com.tools20022.repository.msg.Order9.mmObject();
 		}
 	};
+	@XmlElement(name = "SellSdDtls", required = true)
 	protected Order9 sellSideDetails;
 	/**
-	 * Sell side order details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -240,6 +253,9 @@ public class CrossOrder1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SellSdDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 54</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -253,9 +269,10 @@ public class CrossOrder1 {
 	public static final MMMessageAssociationEnd mmSellSideDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CrossTrade.mmSellSideOrder;
-			componentContext_lazy = () -> CrossOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "SellSdDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "54"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellSideDetails";
 			definition = "Sell side order details.";
@@ -269,9 +286,10 @@ public class CrossOrder1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CrossOrder1.mmCrossType, CrossOrder1.mmPrioritisation, CrossOrder1.mmBuySideDetails, CrossOrder1.mmSellSideDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CrossOrder1.mmCrossType, com.tools20022.repository.msg.CrossOrder1.mmPrioritisation, com.tools20022.repository.msg.CrossOrder1.mmBuySideDetails,
+						com.tools20022.repository.msg.CrossOrder1.mmSellSideDetails);
 				trace_lazy = () -> CrossTrade.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CrossOrder1";
 				definition = "Provides details about the cross order (common to each side of the cross).";
@@ -280,39 +298,39 @@ public class CrossOrder1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CrossTp", required = true)
 	public CrossType1Code getCrossType() {
 		return crossType;
 	}
 
-	public void setCrossType(CrossType1Code crossType) {
-		this.crossType = crossType;
+	public CrossOrder1 setCrossType(CrossType1Code crossType) {
+		this.crossType = Objects.requireNonNull(crossType);
+		return this;
 	}
 
-	@XmlElement(name = "Prtistn", required = true)
 	public Prioritisation1Code getPrioritisation() {
 		return prioritisation;
 	}
 
-	public void setPrioritisation(Prioritisation1Code prioritisation) {
-		this.prioritisation = prioritisation;
+	public CrossOrder1 setPrioritisation(Prioritisation1Code prioritisation) {
+		this.prioritisation = Objects.requireNonNull(prioritisation);
+		return this;
 	}
 
-	@XmlElement(name = "BuySdDtls", required = true)
 	public Order9 getBuySideDetails() {
 		return buySideDetails;
 	}
 
-	public void setBuySideDetails(com.tools20022.repository.msg.Order9 buySideDetails) {
-		this.buySideDetails = buySideDetails;
+	public CrossOrder1 setBuySideDetails(com.tools20022.repository.msg.Order9 buySideDetails) {
+		this.buySideDetails = Objects.requireNonNull(buySideDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SellSdDtls", required = true)
 	public Order9 getSellSideDetails() {
 		return sellSideDetails;
 	}
 
-	public void setSellSideDetails(com.tools20022.repository.msg.Order9 sellSideDetails) {
-		this.sellSideDetails = sellSideDetails;
+	public CrossOrder1 setSellSideDetails(com.tools20022.repository.msg.Order9 sellSideDetails) {
+		this.sellSideDetails = Objects.requireNonNull(sellSideDetails);
+		return this;
 	}
 }

@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -79,8 +81,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,21 +95,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GroupHeader26", propOrder = {"messageIdentification", "creationDateTime", "batchBooking", "numberOfTransactions", "controlSum", "totalInterbankSettlementAmount", "interbankSettlementDate", "settlementInformation",
 		"paymentTypeInformation", "instructingAgent", "instructedAgent"})
 public class GroupHeader26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected Max35Text messageIdentification;
 	/**
-	 * Point to point reference assigned by the instructing party and sent to
-	 * the next party in the chain to unambiguously identify the message.
 	 * 
-	 * Usage: The instructing party has to make sure that
-	 * 'MessageIdentification' is unique per instructed party for a pre-agreed
-	 * period.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,7 +139,7 @@ public class GroupHeader26 {
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
-			componentContext_lazy = () -> GroupHeader26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader26.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,11 +150,11 @@ public class GroupHeader26 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm", required = true)
 	protected ISODateTime creationDateTime;
 	/**
-	 * Date and time at which a (group of) payment instruction(s) was created by
-	 * the instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +188,7 @@ public class GroupHeader26 {
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
-			componentContext_lazy = () -> GroupHeader26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader26.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,12 +199,11 @@ public class GroupHeader26 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "BtchBookg")
 	protected BatchBookingIndicator batchBooking;
 	/**
-	 * Identifies whether a single entry per individual transaction or a batch
-	 * entry for the sum of the amounts of all transactions in the message is
-	 * requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -235,7 +232,7 @@ public class GroupHeader26 {
 	 */
 	public static final MMMessageAttribute mmBatchBooking = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader26.mmObject();
 			isDerived = false;
 			xmlTag = "BtchBookg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -246,10 +243,11 @@ public class GroupHeader26 {
 			simpleType_lazy = () -> BatchBookingIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfTxs", required = true)
 	protected Max15NumericText numberOfTransactions;
 	/**
-	 * Number of individual transactions contained in the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -277,7 +275,7 @@ public class GroupHeader26 {
 	 */
 	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader26.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfTxs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,11 +286,11 @@ public class GroupHeader26 {
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrlSum")
 	protected DecimalNumber controlSum;
 	/**
-	 * Total of all individual amounts included in the message, irrespective of
-	 * currencies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -321,7 +319,7 @@ public class GroupHeader26 {
 	 */
 	public static final MMMessageAttribute mmControlSum = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader26.mmObject();
 			isDerived = false;
 			xmlTag = "CtrlSum";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -332,11 +330,11 @@ public class GroupHeader26 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlIntrBkSttlmAmt", required = true)
 	protected EuroMax15Amount totalInterbankSettlementAmount;
 	/**
-	 * Total amount of money transferred between instructing agent and
-	 * instructed agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -371,7 +369,7 @@ public class GroupHeader26 {
 	public static final MMMessageAttribute mmTotalInterbankSettlementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
-			componentContext_lazy = () -> GroupHeader26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader26.mmObject();
 			isDerived = false;
 			xmlTag = "TtlIntrBkSttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -382,12 +380,11 @@ public class GroupHeader26 {
 			simpleType_lazy = () -> EuroMax15Amount.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmDt", required = true)
 	protected ISODate interbankSettlementDate;
 	/**
-	 * Date on which the amount of money ceases to be available to the agent
-	 * that owes it and when the amount of money becomes available to the agent
-	 * to which it is due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -421,7 +418,7 @@ public class GroupHeader26 {
 	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
-			componentContext_lazy = () -> GroupHeader26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader26.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -432,11 +429,11 @@ public class GroupHeader26 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmInf", required = true)
 	protected SettlementInformation8 settlementInformation;
 	/**
-	 * Specifies the details on how the settlement of the transaction(s) between
-	 * the instructing agent and the instructed agent is completed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -469,7 +466,7 @@ public class GroupHeader26 {
 	public static final MMMessageAssociationEnd mmSettlementInformation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
-			componentContext_lazy = () -> GroupHeader26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader26.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -481,10 +478,11 @@ public class GroupHeader26 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementInformation8.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtTpInf")
 	protected PaymentTypeInformation16 paymentTypeInformation;
 	/**
-	 * Set of elements used to further specify the type of transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -517,7 +515,7 @@ public class GroupHeader26 {
 	public static final MMMessageAssociationEnd mmPaymentTypeInformation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmProcessingInstructions;
-			componentContext_lazy = () -> GroupHeader26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader26.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTpInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -529,11 +527,11 @@ public class GroupHeader26 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation16.mmObject();
 		}
 	};
+	@XmlElement(name = "InstgAgt")
 	protected FinancialInstitution2 instructingAgent;
 	/**
-	 * Agent that instructs the next party in the chain to carry out the (set
-	 * of) instruction(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -566,7 +564,7 @@ public class GroupHeader26 {
 	public static final MMMessageAssociationEnd mmInstructingAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> GroupHeader26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader26.mmObject();
 			isDerived = false;
 			xmlTag = "InstgAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -578,11 +576,11 @@ public class GroupHeader26 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
 		}
 	};
+	@XmlElement(name = "InstdAgt")
 	protected FinancialInstitution2 instructedAgent;
 	/**
-	 * Agent that is instructed by the previous party in the chain to carry out
-	 * the (set of) instruction(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -615,7 +613,7 @@ public class GroupHeader26 {
 	public static final MMMessageAssociationEnd mmInstructedAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> GroupHeader26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader26.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -631,11 +629,13 @@ public class GroupHeader26 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GroupHeader26.mmMessageIdentification, GroupHeader26.mmCreationDateTime, GroupHeader26.mmBatchBooking, GroupHeader26.mmNumberOfTransactions, GroupHeader26.mmControlSum,
-						GroupHeader26.mmTotalInterbankSettlementAmount, GroupHeader26.mmInterbankSettlementDate, GroupHeader26.mmSettlementInformation, GroupHeader26.mmPaymentTypeInformation, GroupHeader26.mmInstructingAgent,
-						GroupHeader26.mmInstructedAgent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader26.mmMessageIdentification, com.tools20022.repository.msg.GroupHeader26.mmCreationDateTime,
+						com.tools20022.repository.msg.GroupHeader26.mmBatchBooking, com.tools20022.repository.msg.GroupHeader26.mmNumberOfTransactions, com.tools20022.repository.msg.GroupHeader26.mmControlSum,
+						com.tools20022.repository.msg.GroupHeader26.mmTotalInterbankSettlementAmount, com.tools20022.repository.msg.GroupHeader26.mmInterbankSettlementDate,
+						com.tools20022.repository.msg.GroupHeader26.mmSettlementInformation, com.tools20022.repository.msg.GroupHeader26.mmPaymentTypeInformation, com.tools20022.repository.msg.GroupHeader26.mmInstructingAgent,
+						com.tools20022.repository.msg.GroupHeader26.mmInstructedAgent);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GroupHeader26";
 				definition = "Set of characteristics shared by all individual transactions included in the message.";
@@ -644,102 +644,102 @@ public class GroupHeader26 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(Max35Text messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public GroupHeader26 setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
-		this.creationDateTime = creationDateTime;
+	public GroupHeader26 setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = Objects.requireNonNull(creationDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "BtchBookg")
-	public BatchBookingIndicator getBatchBooking() {
-		return batchBooking;
+	public Optional<BatchBookingIndicator> getBatchBooking() {
+		return batchBooking == null ? Optional.empty() : Optional.of(batchBooking);
 	}
 
-	public void setBatchBooking(BatchBookingIndicator batchBooking) {
+	public GroupHeader26 setBatchBooking(BatchBookingIndicator batchBooking) {
 		this.batchBooking = batchBooking;
+		return this;
 	}
 
-	@XmlElement(name = "NbOfTxs", required = true)
 	public Max15NumericText getNumberOfTransactions() {
 		return numberOfTransactions;
 	}
 
-	public void setNumberOfTransactions(Max15NumericText numberOfTransactions) {
-		this.numberOfTransactions = numberOfTransactions;
+	public GroupHeader26 setNumberOfTransactions(Max15NumericText numberOfTransactions) {
+		this.numberOfTransactions = Objects.requireNonNull(numberOfTransactions);
+		return this;
 	}
 
-	@XmlElement(name = "CtrlSum")
-	public DecimalNumber getControlSum() {
-		return controlSum;
+	public Optional<DecimalNumber> getControlSum() {
+		return controlSum == null ? Optional.empty() : Optional.of(controlSum);
 	}
 
-	public void setControlSum(DecimalNumber controlSum) {
+	public GroupHeader26 setControlSum(DecimalNumber controlSum) {
 		this.controlSum = controlSum;
+		return this;
 	}
 
-	@XmlElement(name = "TtlIntrBkSttlmAmt", required = true)
 	public EuroMax15Amount getTotalInterbankSettlementAmount() {
 		return totalInterbankSettlementAmount;
 	}
 
-	public void setTotalInterbankSettlementAmount(EuroMax15Amount totalInterbankSettlementAmount) {
-		this.totalInterbankSettlementAmount = totalInterbankSettlementAmount;
+	public GroupHeader26 setTotalInterbankSettlementAmount(EuroMax15Amount totalInterbankSettlementAmount) {
+		this.totalInterbankSettlementAmount = Objects.requireNonNull(totalInterbankSettlementAmount);
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmDt", required = true)
 	public ISODate getInterbankSettlementDate() {
 		return interbankSettlementDate;
 	}
 
-	public void setInterbankSettlementDate(ISODate interbankSettlementDate) {
-		this.interbankSettlementDate = interbankSettlementDate;
+	public GroupHeader26 setInterbankSettlementDate(ISODate interbankSettlementDate) {
+		this.interbankSettlementDate = Objects.requireNonNull(interbankSettlementDate);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmInf", required = true)
 	public SettlementInformation8 getSettlementInformation() {
 		return settlementInformation;
 	}
 
-	public void setSettlementInformation(com.tools20022.repository.msg.SettlementInformation8 settlementInformation) {
-		this.settlementInformation = settlementInformation;
+	public GroupHeader26 setSettlementInformation(com.tools20022.repository.msg.SettlementInformation8 settlementInformation) {
+		this.settlementInformation = Objects.requireNonNull(settlementInformation);
+		return this;
 	}
 
-	@XmlElement(name = "PmtTpInf")
-	public PaymentTypeInformation16 getPaymentTypeInformation() {
-		return paymentTypeInformation;
+	public Optional<PaymentTypeInformation16> getPaymentTypeInformation() {
+		return paymentTypeInformation == null ? Optional.empty() : Optional.of(paymentTypeInformation);
 	}
 
-	public void setPaymentTypeInformation(com.tools20022.repository.msg.PaymentTypeInformation16 paymentTypeInformation) {
+	public GroupHeader26 setPaymentTypeInformation(com.tools20022.repository.msg.PaymentTypeInformation16 paymentTypeInformation) {
 		this.paymentTypeInformation = paymentTypeInformation;
+		return this;
 	}
 
-	@XmlElement(name = "InstgAgt")
-	public FinancialInstitution2 getInstructingAgent() {
-		return instructingAgent;
+	public Optional<FinancialInstitution2> getInstructingAgent() {
+		return instructingAgent == null ? Optional.empty() : Optional.of(instructingAgent);
 	}
 
-	public void setInstructingAgent(com.tools20022.repository.msg.FinancialInstitution2 instructingAgent) {
+	public GroupHeader26 setInstructingAgent(com.tools20022.repository.msg.FinancialInstitution2 instructingAgent) {
 		this.instructingAgent = instructingAgent;
+		return this;
 	}
 
-	@XmlElement(name = "InstdAgt")
-	public FinancialInstitution2 getInstructedAgent() {
-		return instructedAgent;
+	public Optional<FinancialInstitution2> getInstructedAgent() {
+		return instructedAgent == null ? Optional.empty() : Optional.of(instructedAgent);
 	}
 
-	public void setInstructedAgent(com.tools20022.repository.msg.FinancialInstitution2 instructedAgent) {
+	public GroupHeader26 setInstructedAgent(com.tools20022.repository.msg.FinancialInstitution2 instructedAgent) {
 		this.instructedAgent = instructedAgent;
+		return this;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * Charge16}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Charge26", propOrder = {"type", "chargeApplied"})
 public class Charge26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected ChargeType4Choice type;
 	/**
-	 * Type of charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -106,7 +108,7 @@ public class Charge26 {
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
-			componentContext_lazy = () -> Charge26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge26.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +120,11 @@ public class Charge26 {
 			type_lazy = () -> ChargeType4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgApld", required = true)
 	protected AmountOrRate3Choice chargeApplied;
 	/**
-	 * Charge amount or charge rate applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -152,7 +155,7 @@ public class Charge26 {
 	public static final MMMessageAssociationEnd mmChargeApplied = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> Charge26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge26.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgApld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,9 +171,9 @@ public class Charge26 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Charge26.mmType, Charge26.mmChargeApplied);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge26.mmType, com.tools20022.repository.msg.Charge26.mmChargeApplied);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Charge26";
 				definition = "Choice of formats for the type of charge.";
@@ -180,21 +183,21 @@ public class Charge26 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public ChargeType4Choice getType() {
 		return type;
 	}
 
-	public void setType(ChargeType4Choice type) {
-		this.type = type;
+	public Charge26 setType(ChargeType4Choice type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "ChrgApld", required = true)
 	public AmountOrRate3Choice getChargeApplied() {
 		return chargeApplied;
 	}
 
-	public void setChargeApplied(AmountOrRate3Choice chargeApplied) {
-		this.chargeApplied = chargeApplied;
+	public Charge26 setChargeApplied(AmountOrRate3Choice chargeApplied) {
+		this.chargeApplied = Objects.requireNonNull(chargeApplied);
+		return this;
 	}
 }

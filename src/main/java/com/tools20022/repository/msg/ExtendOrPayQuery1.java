@@ -29,9 +29,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.entity.UndertakingDocument;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -84,8 +83,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,15 +95,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Undertaking extend or pay query details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ExtendOrPayQuery1", propOrder = {"undertakingIdentification", "demandDetails", "requestedExpiryDate", "bankInstructions", "bankContact", "enclosedFile", "additionalInformation"})
 public class ExtendOrPayQuery1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UdrtkgId", required = true)
 	protected Undertaking9 undertakingIdentification;
 	/**
-	 * Details related to the identification of the undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -136,7 +136,7 @@ public class ExtendOrPayQuery1 {
 	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Undertaking.mmObject();
-			componentContext_lazy = () -> ExtendOrPayQuery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExtendOrPayQuery1.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,10 +148,11 @@ public class ExtendOrPayQuery1 {
 			type_lazy = () -> com.tools20022.repository.msg.Undertaking9.mmObject();
 		}
 	};
+	@XmlElement(name = "DmndDtls", required = true)
 	protected Demand2 demandDetails;
 	/**
-	 * Details related to the demand.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -182,7 +183,7 @@ public class ExtendOrPayQuery1 {
 	public static final MMMessageAssociationEnd mmDemandDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmDemand;
-			componentContext_lazy = () -> ExtendOrPayQuery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExtendOrPayQuery1.mmObject();
 			isDerived = false;
 			xmlTag = "DmndDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,10 +195,11 @@ public class ExtendOrPayQuery1 {
 			type_lazy = () -> com.tools20022.repository.msg.Demand2.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdXpryDt", required = true)
 	protected ISODate requestedExpiryDate;
 	/**
-	 * Requested new expiry date as an alternative to payment of the demand.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -231,7 +233,7 @@ public class ExtendOrPayQuery1 {
 	public static final MMMessageAttribute mmRequestedExpiryDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Expiry.mmExpiryDateTime;
-			componentContext_lazy = () -> ExtendOrPayQuery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExtendOrPayQuery1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdXpryDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -242,10 +244,11 @@ public class ExtendOrPayQuery1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "BkInstrs")
 	protected BankInstructions1 bankInstructions;
 	/**
-	 * Details of the instructions from the bank.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -271,7 +274,7 @@ public class ExtendOrPayQuery1 {
 	 */
 	public static final MMMessageAssociationEnd mmBankInstructions = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ExtendOrPayQuery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExtendOrPayQuery1.mmObject();
 			isDerived = false;
 			xmlTag = "BkInstrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,10 +286,11 @@ public class ExtendOrPayQuery1 {
 			type_lazy = () -> com.tools20022.repository.msg.BankInstructions1.mmObject();
 		}
 	};
+	@XmlElement(name = "BkCtct")
 	protected List<com.tools20022.repository.msg.Contacts3> bankContact;
 	/**
-	 * Contact at the issuing bank.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -319,7 +323,7 @@ public class ExtendOrPayQuery1 {
 	public static final MMMessageAttribute mmBankContact = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmContactPoint;
-			componentContext_lazy = () -> ExtendOrPayQuery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExtendOrPayQuery1.mmObject();
 			isDerived = false;
 			xmlTag = "BkCtct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -329,10 +333,11 @@ public class ExtendOrPayQuery1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Contacts3.mmObject();
 		}
 	};
+	@XmlElement(name = "NclsdFile")
 	protected List<com.tools20022.repository.msg.Document9> enclosedFile;
 	/**
-	 * Document or template enclosed in the request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -363,7 +368,7 @@ public class ExtendOrPayQuery1 {
 	public static final MMMessageAssociationEnd mmEnclosedFile = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingDocument.mmObject();
-			componentContext_lazy = () -> ExtendOrPayQuery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExtendOrPayQuery1.mmObject();
 			isDerived = false;
 			xmlTag = "NclsdFile";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -374,10 +379,11 @@ public class ExtendOrPayQuery1 {
 			type_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected List<Max2000Text> additionalInformation;
 	/**
-	 * Additional information related to the request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -404,7 +410,7 @@ public class ExtendOrPayQuery1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ExtendOrPayQuery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExtendOrPayQuery1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -419,11 +425,12 @@ public class ExtendOrPayQuery1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ExtendOrPayQuery1.mmUndertakingIdentification, ExtendOrPayQuery1.mmDemandDetails, ExtendOrPayQuery1.mmRequestedExpiryDate, ExtendOrPayQuery1.mmBankInstructions,
-						ExtendOrPayQuery1.mmBankContact, ExtendOrPayQuery1.mmEnclosedFile, ExtendOrPayQuery1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExtendOrPayQuery1.mmUndertakingIdentification, com.tools20022.repository.msg.ExtendOrPayQuery1.mmDemandDetails,
+						com.tools20022.repository.msg.ExtendOrPayQuery1.mmRequestedExpiryDate, com.tools20022.repository.msg.ExtendOrPayQuery1.mmBankInstructions, com.tools20022.repository.msg.ExtendOrPayQuery1.mmBankContact,
+						com.tools20022.repository.msg.ExtendOrPayQuery1.mmEnclosedFile, com.tools20022.repository.msg.ExtendOrPayQuery1.mmAdditionalInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ExtendOrPayRequestV01.mmExtendOrPayRequestDetails);
 				trace_lazy = () -> Undertaking.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExtendOrPayQuery1";
 				definition = "Undertaking extend or pay query details.";
@@ -432,66 +439,66 @@ public class ExtendOrPayQuery1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UdrtkgId", required = true)
 	public Undertaking9 getUndertakingIdentification() {
 		return undertakingIdentification;
 	}
 
-	public void setUndertakingIdentification(com.tools20022.repository.msg.Undertaking9 undertakingIdentification) {
-		this.undertakingIdentification = undertakingIdentification;
+	public ExtendOrPayQuery1 setUndertakingIdentification(com.tools20022.repository.msg.Undertaking9 undertakingIdentification) {
+		this.undertakingIdentification = Objects.requireNonNull(undertakingIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "DmndDtls", required = true)
 	public Demand2 getDemandDetails() {
 		return demandDetails;
 	}
 
-	public void setDemandDetails(com.tools20022.repository.msg.Demand2 demandDetails) {
-		this.demandDetails = demandDetails;
+	public ExtendOrPayQuery1 setDemandDetails(com.tools20022.repository.msg.Demand2 demandDetails) {
+		this.demandDetails = Objects.requireNonNull(demandDetails);
+		return this;
 	}
 
-	@XmlElement(name = "ReqdXpryDt", required = true)
 	public ISODate getRequestedExpiryDate() {
 		return requestedExpiryDate;
 	}
 
-	public void setRequestedExpiryDate(ISODate requestedExpiryDate) {
-		this.requestedExpiryDate = requestedExpiryDate;
+	public ExtendOrPayQuery1 setRequestedExpiryDate(ISODate requestedExpiryDate) {
+		this.requestedExpiryDate = Objects.requireNonNull(requestedExpiryDate);
+		return this;
 	}
 
-	@XmlElement(name = "BkInstrs")
-	public BankInstructions1 getBankInstructions() {
-		return bankInstructions;
+	public Optional<BankInstructions1> getBankInstructions() {
+		return bankInstructions == null ? Optional.empty() : Optional.of(bankInstructions);
 	}
 
-	public void setBankInstructions(com.tools20022.repository.msg.BankInstructions1 bankInstructions) {
+	public ExtendOrPayQuery1 setBankInstructions(com.tools20022.repository.msg.BankInstructions1 bankInstructions) {
 		this.bankInstructions = bankInstructions;
+		return this;
 	}
 
-	@XmlElement(name = "BkCtct")
 	public List<Contacts3> getBankContact() {
-		return bankContact;
+		return bankContact == null ? bankContact = new ArrayList<>() : bankContact;
 	}
 
-	public void setBankContact(List<com.tools20022.repository.msg.Contacts3> bankContact) {
-		this.bankContact = bankContact;
+	public ExtendOrPayQuery1 setBankContact(List<com.tools20022.repository.msg.Contacts3> bankContact) {
+		this.bankContact = Objects.requireNonNull(bankContact);
+		return this;
 	}
 
-	@XmlElement(name = "NclsdFile")
 	public List<Document9> getEnclosedFile() {
-		return enclosedFile;
+		return enclosedFile == null ? enclosedFile = new ArrayList<>() : enclosedFile;
 	}
 
-	public void setEnclosedFile(List<com.tools20022.repository.msg.Document9> enclosedFile) {
-		this.enclosedFile = enclosedFile;
+	public ExtendOrPayQuery1 setEnclosedFile(List<com.tools20022.repository.msg.Document9> enclosedFile) {
+		this.enclosedFile = Objects.requireNonNull(enclosedFile);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
-		return additionalInformation;
+		return additionalInformation == null ? additionalInformation = new ArrayList<>() : additionalInformation;
 	}
 
-	public void setAdditionalInformation(List<Max2000Text> additionalInformation) {
-		this.additionalInformation = additionalInformation;
+	public ExtendOrPayQuery1 setAdditionalInformation(List<Max2000Text> additionalInformation) {
+		this.additionalInformation = Objects.requireNonNull(additionalInformation);
+		return this;
 	}
 }

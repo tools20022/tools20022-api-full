@@ -17,184 +17,192 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TradeTransactionConditionCode;
+import com.tools20022.repository.codeset.TradeTransactionCondition1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the conditions under which the order/trade is to be/was executed.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode
- * TradeTransactionConditionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmCumBonus
- * TradeTransactionCondition1Code.mmCumBonus}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#CumBonus
+ * TradeTransactionCondition1Code.CumBonus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmExBonus
- * TradeTransactionCondition1Code.mmExBonus}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#ExBonus
+ * TradeTransactionCondition1Code.ExBonus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmCumCoupon
- * TradeTransactionCondition1Code.mmCumCoupon}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#CumCoupon
+ * TradeTransactionCondition1Code.CumCoupon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmExCoupon
- * TradeTransactionCondition1Code.mmExCoupon}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#ExCoupon
+ * TradeTransactionCondition1Code.ExCoupon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmCumDividend
- * TradeTransactionCondition1Code.mmCumDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#CumDividend
+ * TradeTransactionCondition1Code.CumDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmExDividend
- * TradeTransactionCondition1Code.mmExDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#ExDividend
+ * TradeTransactionCondition1Code.ExDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmCumRights
- * TradeTransactionCondition1Code.mmCumRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#CumRights
+ * TradeTransactionCondition1Code.CumRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmExRights
- * TradeTransactionCondition1Code.mmExRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#ExRights
+ * TradeTransactionCondition1Code.ExRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmCumWarrant
- * TradeTransactionCondition1Code.mmCumWarrant}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#CumWarrant
+ * TradeTransactionCondition1Code.CumWarrant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmExWarrant
- * TradeTransactionCondition1Code.mmExWarrant}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#ExWarrant
+ * TradeTransactionCondition1Code.ExWarrant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmSpecialCumDividend
- * TradeTransactionCondition1Code.mmSpecialCumDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#SpecialCumDividend
+ * TradeTransactionCondition1Code.SpecialCumDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmSpecialExDividend
- * TradeTransactionCondition1Code.mmSpecialExDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#SpecialExDividend
+ * TradeTransactionCondition1Code.SpecialExDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmBrokerDueBill
- * TradeTransactionCondition1Code.mmBrokerDueBill}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#BrokerDueBill
+ * TradeTransactionCondition1Code.BrokerDueBill}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmSoldShort
- * TradeTransactionCondition1Code.mmSoldShort}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#SoldShort
+ * TradeTransactionCondition1Code.SoldShort}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmDirty
- * TradeTransactionCondition1Code.mmDirty}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#Dirty
+ * TradeTransactionCondition1Code.Dirty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmClean
- * TradeTransactionCondition1Code.mmClean}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#Clean
+ * TradeTransactionCondition1Code.Clean}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmBlock
- * TradeTransactionCondition1Code.mmBlock}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#Block
+ * TradeTransactionCondition1Code.Block}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmGuaranteedDelivery
- * TradeTransactionCondition1Code.mmGuaranteedDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#GuaranteedDelivery
+ * TradeTransactionCondition1Code.GuaranteedDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmFractions
- * TradeTransactionCondition1Code.mmFractions}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#Fractions
+ * TradeTransactionCondition1Code.Fractions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmCrossTrade
- * TradeTransactionCondition1Code.mmCrossTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#CrossTrade
+ * TradeTransactionCondition1Code.CrossTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmNoCrossTrade
- * TradeTransactionCondition1Code.mmNoCrossTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#NoCrossTrade
+ * TradeTransactionCondition1Code.NoCrossTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmDirectOrder
- * TradeTransactionCondition1Code.mmDirectOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#DirectOrder
+ * TradeTransactionCondition1Code.DirectOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmDirectedOrder
- * TradeTransactionCondition1Code.mmDirectedOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#DirectedOrder
+ * TradeTransactionCondition1Code.DirectedOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmWarehouseTrade
- * TradeTransactionCondition1Code.mmWarehouseTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#WarehouseTrade
+ * TradeTransactionCondition1Code.WarehouseTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmNotIncrease
- * TradeTransactionCondition1Code.mmNotIncrease}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#NotIncrease
+ * TradeTransactionCondition1Code.NotIncrease}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmNotReduce
- * TradeTransactionCondition1Code.mmNotReduce}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#NotReduce
+ * TradeTransactionCondition1Code.NotReduce}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmForwardPriceTrade
- * TradeTransactionCondition1Code.mmForwardPriceTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#ForwardPriceTrade
+ * TradeTransactionCondition1Code.ForwardPriceTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmHistoricPriceTrade
- * TradeTransactionCondition1Code.mmHistoricPriceTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#HistoricPriceTrade
+ * TradeTransactionCondition1Code.HistoricPriceTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmResultOption
- * TradeTransactionCondition1Code.mmResultOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#ResultOption
+ * TradeTransactionCondition1Code.ResultOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmResultRepo
- * TradeTransactionCondition1Code.mmResultRepo}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#ResultRepo
+ * TradeTransactionCondition1Code.ResultRepo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmDeliverCountryIncorporation
- * TradeTransactionCondition1Code.mmDeliverCountryIncorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#DeliverCountryIncorporation
+ * TradeTransactionCondition1Code.DeliverCountryIncorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmDeliveryForm
- * TradeTransactionCondition1Code.mmDeliveryForm}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#DeliveryForm
+ * TradeTransactionCondition1Code.DeliveryForm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmBoardLot
- * TradeTransactionCondition1Code.mmBoardLot}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#BoardLot
+ * TradeTransactionCondition1Code.BoardLot}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmBadName
- * TradeTransactionCondition1Code.mmBadName}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#BadName
+ * TradeTransactionCondition1Code.BadName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmBestExecution
- * TradeTransactionCondition1Code.mmBestExecution}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#BestExecution
+ * TradeTransactionCondition1Code.BestExecution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmCall
- * TradeTransactionCondition1Code.mmCall}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#Call
+ * TradeTransactionCondition1Code.Call}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmClosureBeforeRollOver
- * TradeTransactionCondition1Code.mmClosureBeforeRollOver}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#ClosureBeforeRollOver
+ * TradeTransactionCondition1Code.ClosureBeforeRollOver}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmMonthly
- * TradeTransactionCondition1Code.mmMonthly}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#Monthly
+ * TradeTransactionCondition1Code.Monthly}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmNewTradeFollowingRollover
- * TradeTransactionCondition1Code.mmNewTradeFollowingRollover}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#NewTradeFollowingRollover
+ * TradeTransactionCondition1Code.NewTradeFollowingRollover}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmTradeFollowingRollover
- * TradeTransactionCondition1Code.mmTradeFollowingRollover}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#TradeFollowingRollover
+ * TradeTransactionCondition1Code.TradeFollowingRollover}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmPutt
- * TradeTransactionCondition1Code.mmPutt}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#Putt
+ * TradeTransactionCondition1Code.Putt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmSpecialCumCoupon
- * TradeTransactionCondition1Code.mmSpecialCumCoupon}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#SpecialCumCoupon
+ * TradeTransactionCondition1Code.SpecialCumCoupon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmSpecialExCoupon
- * TradeTransactionCondition1Code.mmSpecialExCoupon}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#SpecialExCoupon
+ * TradeTransactionCondition1Code.SpecialExCoupon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmSpecialExBonus
- * TradeTransactionCondition1Code.mmSpecialExBonus}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#SpecialExBonus
+ * TradeTransactionCondition1Code.SpecialExBonus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmSpecialCumBonus
- * TradeTransactionCondition1Code.mmSpecialCumBonus}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#SpecialCumBonus
+ * TradeTransactionCondition1Code.SpecialCumBonus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmSpecialCumRights
- * TradeTransactionCondition1Code.mmSpecialCumRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#SpecialCumRights
+ * TradeTransactionCondition1Code.SpecialCumRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmSpecialExRights
- * TradeTransactionCondition1Code.mmSpecialExRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#SpecialExRights
+ * TradeTransactionCondition1Code.SpecialExRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmSpecialCumCapitalRepayments
- * TradeTransactionCondition1Code.mmSpecialCumCapitalRepayments}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#SpecialCumCapitalRepayments
+ * TradeTransactionCondition1Code.SpecialCumCapitalRepayments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmSpecialExCapitalRepayments
- * TradeTransactionCondition1Code.mmSpecialExCapitalRepayments}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#SpecialExCapitalRepayments
+ * TradeTransactionCondition1Code.SpecialExCapitalRepayments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmCashSettlement
- * TradeTransactionCondition1Code.mmCashSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#CashSettlement
+ * TradeTransactionCondition1Code.CashSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#mmSpecialPrice
- * TradeTransactionCondition1Code.mmSpecialPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition1Code#SpecialPrice
+ * TradeTransactionCondition1Code.SpecialPrice}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode
+ * TradeTransactionConditionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = ISO15022Synonym: :22a::TTCO</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -213,7 +221,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TradeTransactionCondition1Code extends TradeTransactionConditionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TradeTransactionCondition1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -232,11 +241,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "CumBonus"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCumBonus = new MMCode() {
+	public static final TradeTransactionCondition1Code CumBonus = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumBonus";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.CumBonus.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -255,11 +265,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "ExBonus"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExBonus = new MMCode() {
+	public static final TradeTransactionCondition1Code ExBonus = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExBonus";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.ExBonus.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -278,11 +289,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "CumCoupon"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCumCoupon = new MMCode() {
+	public static final TradeTransactionCondition1Code CumCoupon = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumCoupon";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.CumCoupon.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -301,11 +313,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "ExCoupon"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExCoupon = new MMCode() {
+	public static final TradeTransactionCondition1Code ExCoupon = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExCoupon";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.ExCoupon.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -324,11 +337,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "CumDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCumDividend = new MMCode() {
+	public static final TradeTransactionCondition1Code CumDividend = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumDividend";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.CumDividend.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -347,11 +361,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "ExDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExDividend = new MMCode() {
+	public static final TradeTransactionCondition1Code ExDividend = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExDividend";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.ExDividend.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -370,11 +385,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "CumRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCumRights = new MMCode() {
+	public static final TradeTransactionCondition1Code CumRights = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumRights";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.CumRights.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -393,11 +409,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "ExRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExRights = new MMCode() {
+	public static final TradeTransactionCondition1Code ExRights = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExRights";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.ExRights.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -416,11 +433,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "CumWarrant"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCumWarrant = new MMCode() {
+	public static final TradeTransactionCondition1Code CumWarrant = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumWarrant";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.CumWarrant.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -439,11 +457,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "ExWarrant"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExWarrant = new MMCode() {
+	public static final TradeTransactionCondition1Code ExWarrant = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExWarrant";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.ExWarrant.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -462,11 +481,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "SpecialCumDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialCumDividend = new MMCode() {
+	public static final TradeTransactionCondition1Code SpecialCumDividend = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCumDividend";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.SpecialCumDividend.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -485,11 +505,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "SpecialExDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialExDividend = new MMCode() {
+	public static final TradeTransactionCondition1Code SpecialExDividend = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialExDividend";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.SpecialExDividend.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -508,11 +529,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "BrokerDueBill"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBrokerDueBill = new MMCode() {
+	public static final TradeTransactionCondition1Code BrokerDueBill = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerDueBill";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.BrokerDueBill.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -531,11 +553,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "SoldShort"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSoldShort = new MMCode() {
+	public static final TradeTransactionCondition1Code SoldShort = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SoldShort";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.SoldShort.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -554,11 +577,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "Dirty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDirty = new MMCode() {
+	public static final TradeTransactionCondition1Code Dirty = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dirty";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.Dirty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -577,11 +601,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "Clean"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClean = new MMCode() {
+	public static final TradeTransactionCondition1Code Clean = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Clean";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.Clean.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -600,11 +625,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "Block"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBlock = new MMCode() {
+	public static final TradeTransactionCondition1Code Block = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Block";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.Block.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -623,11 +649,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "GuaranteedDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGuaranteedDelivery = new MMCode() {
+	public static final TradeTransactionCondition1Code GuaranteedDelivery = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteedDelivery";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.GuaranteedDelivery.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -646,11 +673,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "Fractions"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFractions = new MMCode() {
+	public static final TradeTransactionCondition1Code Fractions = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fractions";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.Fractions.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -669,11 +697,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "CrossTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCrossTrade = new MMCode() {
+	public static final TradeTransactionCondition1Code CrossTrade = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossTrade";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.CrossTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -692,11 +721,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "NoCrossTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoCrossTrade = new MMCode() {
+	public static final TradeTransactionCondition1Code NoCrossTrade = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoCrossTrade";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.NoCrossTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -715,11 +745,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "DirectOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDirectOrder = new MMCode() {
+	public static final TradeTransactionCondition1Code DirectOrder = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectOrder";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.DirectOrder.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -738,11 +769,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "DirectedOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDirectedOrder = new MMCode() {
+	public static final TradeTransactionCondition1Code DirectedOrder = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectedOrder";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.DirectedOrder.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -761,11 +793,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "WarehouseTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWarehouseTrade = new MMCode() {
+	public static final TradeTransactionCondition1Code WarehouseTrade = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarehouseTrade";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.WarehouseTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -784,11 +817,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "NotIncrease"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotIncrease = new MMCode() {
+	public static final TradeTransactionCondition1Code NotIncrease = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotIncrease";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.NotIncrease.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -807,11 +841,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "NotReduce"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotReduce = new MMCode() {
+	public static final TradeTransactionCondition1Code NotReduce = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotReduce";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.NotReduce.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -830,11 +865,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "ForwardPriceTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForwardPriceTrade = new MMCode() {
+	public static final TradeTransactionCondition1Code ForwardPriceTrade = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardPriceTrade";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.ForwardPriceTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -853,11 +889,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "HistoricPriceTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHistoricPriceTrade = new MMCode() {
+	public static final TradeTransactionCondition1Code HistoricPriceTrade = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HistoricPriceTrade";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.HistoricPriceTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -876,11 +913,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "ResultOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmResultOption = new MMCode() {
+	public static final TradeTransactionCondition1Code ResultOption = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResultOption";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.ResultOption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -899,11 +937,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "ResultRepo"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmResultRepo = new MMCode() {
+	public static final TradeTransactionCondition1Code ResultRepo = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResultRepo";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.ResultRepo.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -922,11 +961,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "DeliverCountryIncorporation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeliverCountryIncorporation = new MMCode() {
+	public static final TradeTransactionCondition1Code DeliverCountryIncorporation = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverCountryIncorporation";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.DeliverCountryIncorporation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -945,11 +985,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "DeliveryForm"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeliveryForm = new MMCode() {
+	public static final TradeTransactionCondition1Code DeliveryForm = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryForm";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.DeliveryForm.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -968,11 +1009,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "BoardLot"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBoardLot = new MMCode() {
+	public static final TradeTransactionCondition1Code BoardLot = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BoardLot";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.BoardLot.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -991,11 +1033,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "BadName"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBadName = new MMCode() {
+	public static final TradeTransactionCondition1Code BadName = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BadName";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.BadName.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1014,11 +1057,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "BestExecution"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBestExecution = new MMCode() {
+	public static final TradeTransactionCondition1Code BestExecution = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BestExecution";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.BestExecution.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1037,11 +1081,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "Call"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCall = new MMCode() {
+	public static final TradeTransactionCondition1Code Call = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Call";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.Call.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1060,11 +1105,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "ClosureBeforeRollOver"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClosureBeforeRollOver = new MMCode() {
+	public static final TradeTransactionCondition1Code ClosureBeforeRollOver = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosureBeforeRollOver";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.ClosureBeforeRollOver.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1083,11 +1129,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "Monthly"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMonthly = new MMCode() {
+	public static final TradeTransactionCondition1Code Monthly = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Monthly";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.Monthly.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1106,11 +1153,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "NewTradeFollowingRollover"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNewTradeFollowingRollover = new MMCode() {
+	public static final TradeTransactionCondition1Code NewTradeFollowingRollover = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewTradeFollowingRollover";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.NewTradeFollowingRollover.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1129,11 +1177,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "TradeFollowingRollover"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradeFollowingRollover = new MMCode() {
+	public static final TradeTransactionCondition1Code TradeFollowingRollover = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeFollowingRollover";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.TradeFollowingRollover.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1152,11 +1201,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "Putt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPutt = new MMCode() {
+	public static final TradeTransactionCondition1Code Putt = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Putt";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.Putt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1175,11 +1225,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "SpecialCumCoupon"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialCumCoupon = new MMCode() {
+	public static final TradeTransactionCondition1Code SpecialCumCoupon = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCumCoupon";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.SpecialCumCoupon.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1198,11 +1249,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "SpecialExCoupon"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialExCoupon = new MMCode() {
+	public static final TradeTransactionCondition1Code SpecialExCoupon = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialExCoupon";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.SpecialExCoupon.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1221,11 +1273,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "SpecialExBonus"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialExBonus = new MMCode() {
+	public static final TradeTransactionCondition1Code SpecialExBonus = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialExBonus";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.SpecialExBonus.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1244,11 +1297,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "SpecialCumBonus"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialCumBonus = new MMCode() {
+	public static final TradeTransactionCondition1Code SpecialCumBonus = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCumBonus";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.SpecialCumBonus.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1267,11 +1321,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "SpecialCumRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialCumRights = new MMCode() {
+	public static final TradeTransactionCondition1Code SpecialCumRights = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCumRights";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.SpecialCumRights.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1290,11 +1345,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "SpecialExRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialExRights = new MMCode() {
+	public static final TradeTransactionCondition1Code SpecialExRights = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialExRights";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.SpecialExRights.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1313,11 +1369,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "SpecialCumCapitalRepayments"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialCumCapitalRepayments = new MMCode() {
+	public static final TradeTransactionCondition1Code SpecialCumCapitalRepayments = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCumCapitalRepayments";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.SpecialCumCapitalRepayments.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1336,11 +1393,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "SpecialExCapitalRepayments"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialExCapitalRepayments = new MMCode() {
+	public static final TradeTransactionCondition1Code SpecialExCapitalRepayments = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialExCapitalRepayments";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.SpecialExCapitalRepayments.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1359,11 +1417,12 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "CashSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashSettlement = new MMCode() {
+	public static final TradeTransactionCondition1Code CashSettlement = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlement";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.CashSettlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1382,38 +1441,131 @@ public class TradeTransactionCondition1Code extends TradeTransactionConditionCod
 	 * name} = "SpecialPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialPrice = new MMCode() {
+	public static final TradeTransactionCondition1Code SpecialPrice = new TradeTransactionCondition1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialPrice";
-			owner_lazy = () -> TradeTransactionCondition1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition1Code.mmObject();
+			codeName = TradeTransactionConditionCode.SpecialPrice.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TradeTransactionCondition1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TradeTransactionCondition1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22a::TTCO"));
 				example = Arrays.asList("CBNS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeTransactionCondition1Code";
 				definition = "Indicates the conditions under which the order/trade is to be/was executed.";
-				code_lazy = () -> Arrays.asList(TradeTransactionCondition1Code.mmCumBonus, TradeTransactionCondition1Code.mmExBonus, TradeTransactionCondition1Code.mmCumCoupon, TradeTransactionCondition1Code.mmExCoupon,
-						TradeTransactionCondition1Code.mmCumDividend, TradeTransactionCondition1Code.mmExDividend, TradeTransactionCondition1Code.mmCumRights, TradeTransactionCondition1Code.mmExRights,
-						TradeTransactionCondition1Code.mmCumWarrant, TradeTransactionCondition1Code.mmExWarrant, TradeTransactionCondition1Code.mmSpecialCumDividend, TradeTransactionCondition1Code.mmSpecialExDividend,
-						TradeTransactionCondition1Code.mmBrokerDueBill, TradeTransactionCondition1Code.mmSoldShort, TradeTransactionCondition1Code.mmDirty, TradeTransactionCondition1Code.mmClean, TradeTransactionCondition1Code.mmBlock,
-						TradeTransactionCondition1Code.mmGuaranteedDelivery, TradeTransactionCondition1Code.mmFractions, TradeTransactionCondition1Code.mmCrossTrade, TradeTransactionCondition1Code.mmNoCrossTrade,
-						TradeTransactionCondition1Code.mmDirectOrder, TradeTransactionCondition1Code.mmDirectedOrder, TradeTransactionCondition1Code.mmWarehouseTrade, TradeTransactionCondition1Code.mmNotIncrease,
-						TradeTransactionCondition1Code.mmNotReduce, TradeTransactionCondition1Code.mmForwardPriceTrade, TradeTransactionCondition1Code.mmHistoricPriceTrade, TradeTransactionCondition1Code.mmResultOption,
-						TradeTransactionCondition1Code.mmResultRepo, TradeTransactionCondition1Code.mmDeliverCountryIncorporation, TradeTransactionCondition1Code.mmDeliveryForm, TradeTransactionCondition1Code.mmBoardLot,
-						TradeTransactionCondition1Code.mmBadName, TradeTransactionCondition1Code.mmBestExecution, TradeTransactionCondition1Code.mmCall, TradeTransactionCondition1Code.mmClosureBeforeRollOver,
-						TradeTransactionCondition1Code.mmMonthly, TradeTransactionCondition1Code.mmNewTradeFollowingRollover, TradeTransactionCondition1Code.mmTradeFollowingRollover, TradeTransactionCondition1Code.mmPutt,
-						TradeTransactionCondition1Code.mmSpecialCumCoupon, TradeTransactionCondition1Code.mmSpecialExCoupon, TradeTransactionCondition1Code.mmSpecialExBonus, TradeTransactionCondition1Code.mmSpecialCumBonus,
-						TradeTransactionCondition1Code.mmSpecialCumRights, TradeTransactionCondition1Code.mmSpecialExRights, TradeTransactionCondition1Code.mmSpecialCumCapitalRepayments,
-						TradeTransactionCondition1Code.mmSpecialExCapitalRepayments, TradeTransactionCondition1Code.mmCashSettlement, TradeTransactionCondition1Code.mmSpecialPrice);
 				trace_lazy = () -> TradeTransactionConditionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeTransactionCondition1Code.CumBonus, com.tools20022.repository.codeset.TradeTransactionCondition1Code.ExBonus,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.CumCoupon, com.tools20022.repository.codeset.TradeTransactionCondition1Code.ExCoupon,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.CumDividend, com.tools20022.repository.codeset.TradeTransactionCondition1Code.ExDividend,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.CumRights, com.tools20022.repository.codeset.TradeTransactionCondition1Code.ExRights,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.CumWarrant, com.tools20022.repository.codeset.TradeTransactionCondition1Code.ExWarrant,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.SpecialCumDividend, com.tools20022.repository.codeset.TradeTransactionCondition1Code.SpecialExDividend,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.BrokerDueBill, com.tools20022.repository.codeset.TradeTransactionCondition1Code.SoldShort,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.Dirty, com.tools20022.repository.codeset.TradeTransactionCondition1Code.Clean, com.tools20022.repository.codeset.TradeTransactionCondition1Code.Block,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.GuaranteedDelivery, com.tools20022.repository.codeset.TradeTransactionCondition1Code.Fractions,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.CrossTrade, com.tools20022.repository.codeset.TradeTransactionCondition1Code.NoCrossTrade,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.DirectOrder, com.tools20022.repository.codeset.TradeTransactionCondition1Code.DirectedOrder,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.WarehouseTrade, com.tools20022.repository.codeset.TradeTransactionCondition1Code.NotIncrease,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.NotReduce, com.tools20022.repository.codeset.TradeTransactionCondition1Code.ForwardPriceTrade,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.HistoricPriceTrade, com.tools20022.repository.codeset.TradeTransactionCondition1Code.ResultOption,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.ResultRepo, com.tools20022.repository.codeset.TradeTransactionCondition1Code.DeliverCountryIncorporation,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.DeliveryForm, com.tools20022.repository.codeset.TradeTransactionCondition1Code.BoardLot,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.BadName, com.tools20022.repository.codeset.TradeTransactionCondition1Code.BestExecution,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.Call, com.tools20022.repository.codeset.TradeTransactionCondition1Code.ClosureBeforeRollOver,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.Monthly, com.tools20022.repository.codeset.TradeTransactionCondition1Code.NewTradeFollowingRollover,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.TradeFollowingRollover, com.tools20022.repository.codeset.TradeTransactionCondition1Code.Putt,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.SpecialCumCoupon, com.tools20022.repository.codeset.TradeTransactionCondition1Code.SpecialExCoupon,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.SpecialExBonus, com.tools20022.repository.codeset.TradeTransactionCondition1Code.SpecialCumBonus,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.SpecialCumRights, com.tools20022.repository.codeset.TradeTransactionCondition1Code.SpecialExRights,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.SpecialCumCapitalRepayments, com.tools20022.repository.codeset.TradeTransactionCondition1Code.SpecialExCapitalRepayments,
+						com.tools20022.repository.codeset.TradeTransactionCondition1Code.CashSettlement, com.tools20022.repository.codeset.TradeTransactionCondition1Code.SpecialPrice);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CumBonus.getCodeName().get(), CumBonus);
+		codesByName.put(ExBonus.getCodeName().get(), ExBonus);
+		codesByName.put(CumCoupon.getCodeName().get(), CumCoupon);
+		codesByName.put(ExCoupon.getCodeName().get(), ExCoupon);
+		codesByName.put(CumDividend.getCodeName().get(), CumDividend);
+		codesByName.put(ExDividend.getCodeName().get(), ExDividend);
+		codesByName.put(CumRights.getCodeName().get(), CumRights);
+		codesByName.put(ExRights.getCodeName().get(), ExRights);
+		codesByName.put(CumWarrant.getCodeName().get(), CumWarrant);
+		codesByName.put(ExWarrant.getCodeName().get(), ExWarrant);
+		codesByName.put(SpecialCumDividend.getCodeName().get(), SpecialCumDividend);
+		codesByName.put(SpecialExDividend.getCodeName().get(), SpecialExDividend);
+		codesByName.put(BrokerDueBill.getCodeName().get(), BrokerDueBill);
+		codesByName.put(SoldShort.getCodeName().get(), SoldShort);
+		codesByName.put(Dirty.getCodeName().get(), Dirty);
+		codesByName.put(Clean.getCodeName().get(), Clean);
+		codesByName.put(Block.getCodeName().get(), Block);
+		codesByName.put(GuaranteedDelivery.getCodeName().get(), GuaranteedDelivery);
+		codesByName.put(Fractions.getCodeName().get(), Fractions);
+		codesByName.put(CrossTrade.getCodeName().get(), CrossTrade);
+		codesByName.put(NoCrossTrade.getCodeName().get(), NoCrossTrade);
+		codesByName.put(DirectOrder.getCodeName().get(), DirectOrder);
+		codesByName.put(DirectedOrder.getCodeName().get(), DirectedOrder);
+		codesByName.put(WarehouseTrade.getCodeName().get(), WarehouseTrade);
+		codesByName.put(NotIncrease.getCodeName().get(), NotIncrease);
+		codesByName.put(NotReduce.getCodeName().get(), NotReduce);
+		codesByName.put(ForwardPriceTrade.getCodeName().get(), ForwardPriceTrade);
+		codesByName.put(HistoricPriceTrade.getCodeName().get(), HistoricPriceTrade);
+		codesByName.put(ResultOption.getCodeName().get(), ResultOption);
+		codesByName.put(ResultRepo.getCodeName().get(), ResultRepo);
+		codesByName.put(DeliverCountryIncorporation.getCodeName().get(), DeliverCountryIncorporation);
+		codesByName.put(DeliveryForm.getCodeName().get(), DeliveryForm);
+		codesByName.put(BoardLot.getCodeName().get(), BoardLot);
+		codesByName.put(BadName.getCodeName().get(), BadName);
+		codesByName.put(BestExecution.getCodeName().get(), BestExecution);
+		codesByName.put(Call.getCodeName().get(), Call);
+		codesByName.put(ClosureBeforeRollOver.getCodeName().get(), ClosureBeforeRollOver);
+		codesByName.put(Monthly.getCodeName().get(), Monthly);
+		codesByName.put(NewTradeFollowingRollover.getCodeName().get(), NewTradeFollowingRollover);
+		codesByName.put(TradeFollowingRollover.getCodeName().get(), TradeFollowingRollover);
+		codesByName.put(Putt.getCodeName().get(), Putt);
+		codesByName.put(SpecialCumCoupon.getCodeName().get(), SpecialCumCoupon);
+		codesByName.put(SpecialExCoupon.getCodeName().get(), SpecialExCoupon);
+		codesByName.put(SpecialExBonus.getCodeName().get(), SpecialExBonus);
+		codesByName.put(SpecialCumBonus.getCodeName().get(), SpecialCumBonus);
+		codesByName.put(SpecialCumRights.getCodeName().get(), SpecialCumRights);
+		codesByName.put(SpecialExRights.getCodeName().get(), SpecialExRights);
+		codesByName.put(SpecialCumCapitalRepayments.getCodeName().get(), SpecialCumCapitalRepayments);
+		codesByName.put(SpecialExCapitalRepayments.getCodeName().get(), SpecialExCapitalRepayments);
+		codesByName.put(CashSettlement.getCodeName().get(), CashSettlement);
+		codesByName.put(SpecialPrice.getCodeName().get(), SpecialPrice);
+	}
+
+	public static TradeTransactionCondition1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TradeTransactionCondition1Code[] values() {
+		TradeTransactionCondition1Code[] values = new TradeTransactionCondition1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TradeTransactionCondition1Code> {
+		@Override
+		public TradeTransactionCondition1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TradeTransactionCondition1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification18;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,15 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice number format."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "Number23Choice", propOrder = {"short", "long"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "Number23Choice", propOrder = {"short_", "long_"})
 public class Number23Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Shrt", required = true)
 	protected Exact3NumericText short_;
 	/**
-	 * Number of maximum 3 numeric text.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -84,6 +87,9 @@ public class Number23Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Shrt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13A:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -96,9 +102,10 @@ public class Number23Choice {
 	 */
 	public static final MMMessageAttribute mmShort = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Number23Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Number23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Shrt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13A:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Short";
 			definition = "Number of maximum 3 numeric text.";
@@ -107,11 +114,11 @@ public class Number23Choice {
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Lng", required = true)
 	protected GenericIdentification18 long_;
 	/**
-	 * Number of maximum 35 text, with the possibility to provide an issuer for
-	 * the number identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -127,6 +134,9 @@ public class Number23Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Lng"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13B:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -141,9 +151,10 @@ public class Number23Choice {
 	 */
 	public static final MMMessageAttribute mmLong = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Number23Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Number23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Lng";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13B:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Long";
 			definition = "Number of maximum 35 text, with the possibility to provide an issuer for the number identification.";
@@ -156,8 +167,8 @@ public class Number23Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Number23Choice.mmShort, Number23Choice.mmLong);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number23Choice.mmShort, com.tools20022.repository.choice.Number23Choice.mmLong);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Number23Choice";
 				definition = "Choice number format.";
@@ -166,21 +177,21 @@ public class Number23Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Shrt", required = true)
 	public Exact3NumericText getShort() {
 		return short_;
 	}
 
-	public void setShort(Exact3NumericText short_) {
-		this.short_ = short_;
+	public Number23Choice setShort(Exact3NumericText short_) {
+		this.short_ = Objects.requireNonNull(short_);
+		return this;
 	}
 
-	@XmlElement(name = "Lng", required = true)
 	public GenericIdentification18 getLong() {
 		return long_;
 	}
 
-	public void setLong(GenericIdentification18 long_) {
-		this.long_ = long_;
+	public Number23Choice setLong(GenericIdentification18 long_) {
+		this.long_ = Objects.requireNonNull(long_);
+		return this;
 	}
 }

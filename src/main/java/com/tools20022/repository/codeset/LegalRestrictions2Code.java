@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.LegalRestrictionsCode;
+import com.tools20022.repository.codeset.LegalRestrictions2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the regulatory restrictions applicable to a security.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.LegalRestrictionsCode
- * LegalRestrictionsCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LegalRestrictions2Code#mmJurisdictionOwnership
- * LegalRestrictions2Code.mmJurisdictionOwnership}</li>
+ * {@linkplain com.tools20022.repository.codeset.LegalRestrictions2Code#JurisdictionOwnership
+ * LegalRestrictions2Code.JurisdictionOwnership}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LegalRestrictions2Code#mmPrivatePlacements
- * LegalRestrictions2Code.mmPrivatePlacements}</li>
+ * {@linkplain com.tools20022.repository.codeset.LegalRestrictions2Code#PrivatePlacements
+ * LegalRestrictions2Code.PrivatePlacements}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LegalRestrictions2Code#mmAccreditedInvestor
- * LegalRestrictions2Code.mmAccreditedInvestor}</li>
+ * {@linkplain com.tools20022.repository.codeset.LegalRestrictions2Code#AccreditedInvestor
+ * LegalRestrictions2Code.AccreditedInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LegalRestrictions2Code#mmMargin
- * LegalRestrictions2Code.mmMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.LegalRestrictions2Code#Margin
+ * LegalRestrictions2Code.Margin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LegalRestrictions2Code#mmPrivilege
- * LegalRestrictions2Code.mmPrivilege}</li>
+ * {@linkplain com.tools20022.repository.codeset.LegalRestrictions2Code#Privilege
+ * LegalRestrictions2Code.Privilege}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.LegalRestrictionsCode
+ * LegalRestrictionsCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the regulatory restrictions applicable to a security."</li>
  * </ul>
  */
-public class LegalRestrictions2Code extends LegalRestrictionsCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class LegalRestrictions2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,11 +98,12 @@ public class LegalRestrictions2Code extends LegalRestrictionsCode {
 	 * name} = "JurisdictionOwnership"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmJurisdictionOwnership = new MMCode() {
+	public static final LegalRestrictions2Code JurisdictionOwnership = new LegalRestrictions2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JurisdictionOwnership";
-			owner_lazy = () -> LegalRestrictions2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LegalRestrictions2Code.mmObject();
+			codeName = LegalRestrictionsCode.JurisdictionOwnership.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -116,11 +122,12 @@ public class LegalRestrictions2Code extends LegalRestrictionsCode {
 	 * name} = "PrivatePlacements"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrivatePlacements = new MMCode() {
+	public static final LegalRestrictions2Code PrivatePlacements = new LegalRestrictions2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrivatePlacements";
-			owner_lazy = () -> LegalRestrictions2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LegalRestrictions2Code.mmObject();
+			codeName = LegalRestrictionsCode.PrivatePlacements.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -139,11 +146,12 @@ public class LegalRestrictions2Code extends LegalRestrictionsCode {
 	 * name} = "AccreditedInvestor"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccreditedInvestor = new MMCode() {
+	public static final LegalRestrictions2Code AccreditedInvestor = new LegalRestrictions2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccreditedInvestor";
-			owner_lazy = () -> LegalRestrictions2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LegalRestrictions2Code.mmObject();
+			codeName = LegalRestrictionsCode.AccreditedInvestor.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -162,11 +170,12 @@ public class LegalRestrictions2Code extends LegalRestrictionsCode {
 	 * name} = "Margin"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMargin = new MMCode() {
+	public static final LegalRestrictions2Code Margin = new LegalRestrictions2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Margin";
-			owner_lazy = () -> LegalRestrictions2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LegalRestrictions2Code.mmObject();
+			codeName = LegalRestrictionsCode.Margin.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -185,27 +194,61 @@ public class LegalRestrictions2Code extends LegalRestrictionsCode {
 	 * name} = "Privilege"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrivilege = new MMCode() {
+	public static final LegalRestrictions2Code Privilege = new LegalRestrictions2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Privilege";
-			owner_lazy = () -> LegalRestrictions2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LegalRestrictions2Code.mmObject();
+			codeName = LegalRestrictionsCode.Privilege.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, LegalRestrictions2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected LegalRestrictions2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("JURO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LegalRestrictions2Code";
 				definition = "Specifies the regulatory restrictions applicable to a security.";
-				code_lazy = () -> Arrays.asList(LegalRestrictions2Code.mmJurisdictionOwnership, LegalRestrictions2Code.mmPrivatePlacements, LegalRestrictions2Code.mmAccreditedInvestor, LegalRestrictions2Code.mmMargin,
-						LegalRestrictions2Code.mmPrivilege);
 				trace_lazy = () -> LegalRestrictionsCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LegalRestrictions2Code.JurisdictionOwnership, com.tools20022.repository.codeset.LegalRestrictions2Code.PrivatePlacements,
+						com.tools20022.repository.codeset.LegalRestrictions2Code.AccreditedInvestor, com.tools20022.repository.codeset.LegalRestrictions2Code.Margin, com.tools20022.repository.codeset.LegalRestrictions2Code.Privilege);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(JurisdictionOwnership.getCodeName().get(), JurisdictionOwnership);
+		codesByName.put(PrivatePlacements.getCodeName().get(), PrivatePlacements);
+		codesByName.put(AccreditedInvestor.getCodeName().get(), AccreditedInvestor);
+		codesByName.put(Margin.getCodeName().get(), Margin);
+		codesByName.put(Privilege.getCodeName().get(), Privilege);
+	}
+
+	public static LegalRestrictions2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static LegalRestrictions2Code[] values() {
+		LegalRestrictions2Code[] values = new LegalRestrictions2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, LegalRestrictions2Code> {
+		@Override
+		public LegalRestrictions2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(LegalRestrictions2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AccountOwnerType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of account owner.
@@ -32,27 +37,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#mmPrimaryOwner
- * AccountOwnerType1Code.mmPrimaryOwner}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#PrimaryOwner
+ * AccountOwnerType1Code.PrimaryOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#mmTrustee
- * AccountOwnerType1Code.mmTrustee}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#Trustee
+ * AccountOwnerType1Code.Trustee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#mmCustodianForMinor
- * AccountOwnerType1Code.mmCustodianForMinor}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#CustodianForMinor
+ * AccountOwnerType1Code.CustodianForMinor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#mmNominee
- * AccountOwnerType1Code.mmNominee}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#Nominee
+ * AccountOwnerType1Code.Nominee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#mmSecondaryOwner
- * AccountOwnerType1Code.mmSecondaryOwner}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnerType1Code#SecondaryOwner
+ * AccountOwnerType1Code.SecondaryOwner}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of account owner."</li>
  * </ul>
  */
-public class AccountOwnerType1Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AccountOwnerType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,12 +103,12 @@ public class AccountOwnerType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrimaryOwner = new MMCode() {
+	public static final AccountOwnerType1Code PrimaryOwner = new AccountOwnerType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryOwner";
 			definition = "Owner of the property. The ownership can be split among several owners, and the primary owner is the one giving its address and account details for the registration.";
-			owner_lazy = () -> AccountOwnerType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnerType1Code.mmObject();
 			codeName = "POWN";
 		}
 	};
@@ -130,12 +136,12 @@ public class AccountOwnerType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTrustee = new MMCode() {
+	public static final AccountOwnerType1Code Trustee = new AccountOwnerType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trustee";
 			definition = "Legal owners of the property. However, the beneficiary has the equitable or beneficial ownership.";
-			owner_lazy = () -> AccountOwnerType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnerType1Code.mmObject();
 			codeName = "TRUS";
 		}
 	};
@@ -164,12 +170,12 @@ public class AccountOwnerType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustodianForMinor = new MMCode() {
+	public static final AccountOwnerType1Code CustodianForMinor = new AccountOwnerType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodianForMinor";
 			definition = "Entity that holds shares/units on behalf of a legal minor. Although the account is registered under the name of the minor, the custodian retains control of the account.";
-			owner_lazy = () -> AccountOwnerType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnerType1Code.mmObject();
 			codeName = "CUST";
 		}
 	};
@@ -197,12 +203,12 @@ public class AccountOwnerType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNominee = new MMCode() {
+	public static final AccountOwnerType1Code Nominee = new AccountOwnerType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Nominee";
 			definition = "Entity named by the beneficial owner to act on its behalf, often to facilitate dealing, or to conceal the identity of the beneficiary.";
-			owner_lazy = () -> AccountOwnerType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnerType1Code.mmObject();
 			codeName = "NOMI";
 		}
 	};
@@ -231,27 +237,61 @@ public class AccountOwnerType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecondaryOwner = new MMCode() {
+	public static final AccountOwnerType1Code SecondaryOwner = new AccountOwnerType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryOwner";
 			definition = "One of the owners of the property. The ownership can be split among several owners, and only the primary owner gives its address and account details for the registration.";
-			owner_lazy = () -> AccountOwnerType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnerType1Code.mmObject();
 			codeName = "SECO";
 		}
 	};
+	final static private LinkedHashMap<String, AccountOwnerType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AccountOwnerType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("POWN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountOwnerType1Code";
 				definition = "Specifies the type of account owner.";
-				code_lazy = () -> Arrays.asList(AccountOwnerType1Code.mmPrimaryOwner, AccountOwnerType1Code.mmTrustee, AccountOwnerType1Code.mmCustodianForMinor, AccountOwnerType1Code.mmNominee, AccountOwnerType1Code.mmSecondaryOwner);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountOwnerType1Code.PrimaryOwner, com.tools20022.repository.codeset.AccountOwnerType1Code.Trustee,
+						com.tools20022.repository.codeset.AccountOwnerType1Code.CustodianForMinor, com.tools20022.repository.codeset.AccountOwnerType1Code.Nominee, com.tools20022.repository.codeset.AccountOwnerType1Code.SecondaryOwner);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PrimaryOwner.getCodeName().get(), PrimaryOwner);
+		codesByName.put(Trustee.getCodeName().get(), Trustee);
+		codesByName.put(CustodianForMinor.getCodeName().get(), CustodianForMinor);
+		codesByName.put(Nominee.getCodeName().get(), Nominee);
+		codesByName.put(SecondaryOwner.getCodeName().get(), SecondaryOwner);
+	}
+
+	public static AccountOwnerType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AccountOwnerType1Code[] values() {
+		AccountOwnerType1Code[] values = new AccountOwnerType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AccountOwnerType1Code> {
+		@Override
+		public AccountOwnerType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AccountOwnerType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

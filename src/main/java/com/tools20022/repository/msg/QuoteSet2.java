@@ -27,9 +27,8 @@ import com.tools20022.repository.entity.Quote;
 import com.tools20022.repository.entity.SecuritiesQuoteVariable;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,15 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "QuoteSet2", propOrder = {"identification", "validUntilDateTime", "quoteEntryDetails", "underlyingFinancialInstrument", "underlyingFinancialInstrumentAttributes", "underlyingStipulations"})
 public class QuoteSet2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Identification of a set of quotes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +117,7 @@ public class QuoteSet2 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> QuoteSet2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteSet2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +128,11 @@ public class QuoteSet2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "VldUntilDtTm")
 	protected ISODateTime validUntilDateTime;
 	/**
-	 * Expresses the validity of a set of quotes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +164,7 @@ public class QuoteSet2 {
 	public static final MMMessageAttribute mmValidUntilDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmValidUntilDateTime;
-			componentContext_lazy = () -> QuoteSet2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteSet2.mmObject();
 			isDerived = false;
 			xmlTag = "VldUntilDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +175,11 @@ public class QuoteSet2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "QtNtryDtls")
 	protected List<com.tools20022.repository.msg.QuoteEntry2> quoteEntryDetails;
 	/**
-	 * Details of the quote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -208,7 +210,7 @@ public class QuoteSet2 {
 	public static final MMMessageAssociationEnd mmQuoteEntryDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesQuoteVariable.mmObject();
-			componentContext_lazy = () -> QuoteSet2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteSet2.mmObject();
 			isDerived = false;
 			xmlTag = "QtNtryDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,10 +221,11 @@ public class QuoteSet2 {
 			type_lazy = () -> com.tools20022.repository.msg.QuoteEntry2.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygFinInstrm", required = true)
 	protected List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrument;
 	/**
-	 * Provides details about the underlying financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -255,7 +258,7 @@ public class QuoteSet2 {
 	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrument = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> QuoteSet2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteSet2.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,10 +269,11 @@ public class QuoteSet2 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygFinInstrmAttrbts")
 	protected FinancialInstrumentAttributes1 underlyingFinancialInstrumentAttributes;
 	/**
-	 * Provides details about the underlying financial instrument attributes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -302,7 +306,7 @@ public class QuoteSet2 {
 	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmQuotedSecurity;
-			componentContext_lazy = () -> QuoteSet2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteSet2.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmAttrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -314,10 +318,11 @@ public class QuoteSet2 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygStiptns")
 	protected FinancialInstrumentStipulations underlyingStipulations;
 	/**
-	 * Provides details about the underlying financial instrument stipulations.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -351,7 +356,7 @@ public class QuoteSet2 {
 	public static final MMMessageAssociationEnd mmUnderlyingStipulations = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmQuotedSecurity;
-			componentContext_lazy = () -> QuoteSet2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteSet2.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygStiptns";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -367,10 +372,11 @@ public class QuoteSet2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(QuoteSet2.mmIdentification, QuoteSet2.mmValidUntilDateTime, QuoteSet2.mmQuoteEntryDetails, QuoteSet2.mmUnderlyingFinancialInstrument,
-						QuoteSet2.mmUnderlyingFinancialInstrumentAttributes, QuoteSet2.mmUnderlyingStipulations);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteSet2.mmIdentification, com.tools20022.repository.msg.QuoteSet2.mmValidUntilDateTime, com.tools20022.repository.msg.QuoteSet2.mmQuoteEntryDetails,
+						com.tools20022.repository.msg.QuoteSet2.mmUnderlyingFinancialInstrument, com.tools20022.repository.msg.QuoteSet2.mmUnderlyingFinancialInstrumentAttributes,
+						com.tools20022.repository.msg.QuoteSet2.mmUnderlyingStipulations);
 				trace_lazy = () -> SecuritiesQuoteVariable.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuoteSet2";
 				definition = "Identifies a group of related quotes. This can, for example be used to represent an option class.";
@@ -379,57 +385,57 @@ public class QuoteSet2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public QuoteSet2 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "VldUntilDtTm")
-	public ISODateTime getValidUntilDateTime() {
-		return validUntilDateTime;
+	public Optional<ISODateTime> getValidUntilDateTime() {
+		return validUntilDateTime == null ? Optional.empty() : Optional.of(validUntilDateTime);
 	}
 
-	public void setValidUntilDateTime(ISODateTime validUntilDateTime) {
+	public QuoteSet2 setValidUntilDateTime(ISODateTime validUntilDateTime) {
 		this.validUntilDateTime = validUntilDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "QtNtryDtls")
 	public List<QuoteEntry2> getQuoteEntryDetails() {
-		return quoteEntryDetails;
+		return quoteEntryDetails == null ? quoteEntryDetails = new ArrayList<>() : quoteEntryDetails;
 	}
 
-	public void setQuoteEntryDetails(List<com.tools20022.repository.msg.QuoteEntry2> quoteEntryDetails) {
-		this.quoteEntryDetails = quoteEntryDetails;
+	public QuoteSet2 setQuoteEntryDetails(List<com.tools20022.repository.msg.QuoteEntry2> quoteEntryDetails) {
+		this.quoteEntryDetails = Objects.requireNonNull(quoteEntryDetails);
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygFinInstrm", required = true)
 	public List<SecurityIdentification7> getUnderlyingFinancialInstrument() {
-		return underlyingFinancialInstrument;
+		return underlyingFinancialInstrument == null ? underlyingFinancialInstrument = new ArrayList<>() : underlyingFinancialInstrument;
 	}
 
-	public void setUnderlyingFinancialInstrument(List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrument) {
-		this.underlyingFinancialInstrument = underlyingFinancialInstrument;
+	public QuoteSet2 setUnderlyingFinancialInstrument(List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrument) {
+		this.underlyingFinancialInstrument = Objects.requireNonNull(underlyingFinancialInstrument);
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygFinInstrmAttrbts")
-	public FinancialInstrumentAttributes1 getUnderlyingFinancialInstrumentAttributes() {
-		return underlyingFinancialInstrumentAttributes;
+	public Optional<FinancialInstrumentAttributes1> getUnderlyingFinancialInstrumentAttributes() {
+		return underlyingFinancialInstrumentAttributes == null ? Optional.empty() : Optional.of(underlyingFinancialInstrumentAttributes);
 	}
 
-	public void setUnderlyingFinancialInstrumentAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes1 underlyingFinancialInstrumentAttributes) {
+	public QuoteSet2 setUnderlyingFinancialInstrumentAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes1 underlyingFinancialInstrumentAttributes) {
 		this.underlyingFinancialInstrumentAttributes = underlyingFinancialInstrumentAttributes;
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygStiptns")
-	public FinancialInstrumentStipulations getUnderlyingStipulations() {
-		return underlyingStipulations;
+	public Optional<FinancialInstrumentStipulations> getUnderlyingStipulations() {
+		return underlyingStipulations == null ? Optional.empty() : Optional.of(underlyingStipulations);
 	}
 
-	public void setUnderlyingStipulations(com.tools20022.repository.msg.FinancialInstrumentStipulations underlyingStipulations) {
+	public QuoteSet2 setUnderlyingStipulations(com.tools20022.repository.msg.FinancialInstrumentStipulations underlyingStipulations) {
 		this.underlyingStipulations = underlyingStipulations;
+		return this;
 	}
 }

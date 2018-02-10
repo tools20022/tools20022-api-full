@@ -20,46 +20,50 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatusCode;
+import com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of a corporate action instruction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatusCode
- * CorporateActionInstructionProcessingStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code#mmCancelled
- * CorporateActionInstructionProcessingStatus1Code.mmCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code#Cancelled
+ * CorporateActionInstructionProcessingStatus1Code.Cancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code#mmDefaultAction
- * CorporateActionInstructionProcessingStatus1Code.mmDefaultAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code#DefaultAction
+ * CorporateActionInstructionProcessingStatus1Code.DefaultAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code#mmAccepted
- * CorporateActionInstructionProcessingStatus1Code.mmAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code#Accepted
+ * CorporateActionInstructionProcessingStatus1Code.Accepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code#mmPending
- * CorporateActionInstructionProcessingStatus1Code.mmPending}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code#Pending
+ * CorporateActionInstructionProcessingStatus1Code.Pending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code#mmRejected
- * CorporateActionInstructionProcessingStatus1Code.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code#Rejected
+ * CorporateActionInstructionProcessingStatus1Code.Rejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code#mmStandingInstruction
- * CorporateActionInstructionProcessingStatus1Code.mmStandingInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code#StandingInstruction
+ * CorporateActionInstructionProcessingStatus1Code.StandingInstruction}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatusCode
+ * CorporateActionInstructionProcessingStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -76,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of a corporate action instruction."</li>
  * </ul>
  */
-public class CorporateActionInstructionProcessingStatus1Code extends CorporateActionInstructionProcessingStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionInstructionProcessingStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,11 +100,12 @@ public class CorporateActionInstructionProcessingStatus1Code extends CorporateAc
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelled = new MMCode() {
+	public static final CorporateActionInstructionProcessingStatus1Code Cancelled = new CorporateActionInstructionProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
-			owner_lazy = () -> CorporateActionInstructionProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code.mmObject();
+			codeName = CorporateActionInstructionProcessingStatusCode.Cancelled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -118,11 +124,12 @@ public class CorporateActionInstructionProcessingStatus1Code extends CorporateAc
 	 * name} = "DefaultAction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDefaultAction = new MMCode() {
+	public static final CorporateActionInstructionProcessingStatus1Code DefaultAction = new CorporateActionInstructionProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultAction";
-			owner_lazy = () -> CorporateActionInstructionProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code.mmObject();
+			codeName = CorporateActionInstructionProcessingStatusCode.DefaultAction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -141,11 +148,12 @@ public class CorporateActionInstructionProcessingStatus1Code extends CorporateAc
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final CorporateActionInstructionProcessingStatus1Code Accepted = new CorporateActionInstructionProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> CorporateActionInstructionProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code.mmObject();
+			codeName = CorporateActionInstructionProcessingStatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -164,11 +172,12 @@ public class CorporateActionInstructionProcessingStatus1Code extends CorporateAc
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPending = new MMCode() {
+	public static final CorporateActionInstructionProcessingStatus1Code Pending = new CorporateActionInstructionProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
-			owner_lazy = () -> CorporateActionInstructionProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code.mmObject();
+			codeName = CorporateActionInstructionProcessingStatusCode.Pending.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -187,11 +196,12 @@ public class CorporateActionInstructionProcessingStatus1Code extends CorporateAc
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final CorporateActionInstructionProcessingStatus1Code Rejected = new CorporateActionInstructionProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> CorporateActionInstructionProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code.mmObject();
+			codeName = CorporateActionInstructionProcessingStatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -210,27 +220,63 @@ public class CorporateActionInstructionProcessingStatus1Code extends CorporateAc
 	 * name} = "StandingInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStandingInstruction = new MMCode() {
+	public static final CorporateActionInstructionProcessingStatus1Code StandingInstruction = new CorporateActionInstructionProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstruction";
-			owner_lazy = () -> CorporateActionInstructionProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code.mmObject();
+			codeName = CorporateActionInstructionProcessingStatusCode.StandingInstruction.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionInstructionProcessingStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionInstructionProcessingStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CAND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstructionProcessingStatus1Code";
 				definition = "Specifies the status of a corporate action instruction.";
-				code_lazy = () -> Arrays.asList(CorporateActionInstructionProcessingStatus1Code.mmCancelled, CorporateActionInstructionProcessingStatus1Code.mmDefaultAction, CorporateActionInstructionProcessingStatus1Code.mmAccepted,
-						CorporateActionInstructionProcessingStatus1Code.mmPending, CorporateActionInstructionProcessingStatus1Code.mmRejected, CorporateActionInstructionProcessingStatus1Code.mmStandingInstruction);
 				trace_lazy = () -> CorporateActionInstructionProcessingStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code.Cancelled, com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code.DefaultAction,
+						com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code.Accepted, com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code.Pending,
+						com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code.Rejected, com.tools20022.repository.codeset.CorporateActionInstructionProcessingStatus1Code.StandingInstruction);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Cancelled.getCodeName().get(), Cancelled);
+		codesByName.put(DefaultAction.getCodeName().get(), DefaultAction);
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+		codesByName.put(Pending.getCodeName().get(), Pending);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+		codesByName.put(StandingInstruction.getCodeName().get(), StandingInstruction);
+	}
+
+	public static CorporateActionInstructionProcessingStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionInstructionProcessingStatus1Code[] values() {
+		CorporateActionInstructionProcessingStatus1Code[] values = new CorporateActionInstructionProcessingStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionInstructionProcessingStatus1Code> {
+		@Override
+		public CorporateActionInstructionProcessingStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionInstructionProcessingStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

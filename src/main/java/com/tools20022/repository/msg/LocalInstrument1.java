@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.PaymentProcessing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,16 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LocalInstrument1", propOrder = "code")
 public class LocalInstrument1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected RestrictedB2BCORECodeText code;
 	/**
-	 * Specifies the local instrument published in an external local instrument
-	 * code list - restricted to B2B or CORE within SEPA.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +110,7 @@ public class LocalInstrument1 {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmLocalInstrument;
-			componentContext_lazy = () -> LocalInstrument1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LocalInstrument1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,9 +125,9 @@ public class LocalInstrument1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LocalInstrument1.mmCode);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LocalInstrument1.mmCode);
 				trace_lazy = () -> PaymentProcessing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LocalInstrument1";
 				definition = "Set of elements that further identifies the type of local instruments being requested by the initiating party.";
@@ -135,12 +136,12 @@ public class LocalInstrument1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public RestrictedB2BCORECodeText getCode() {
 		return code;
 	}
 
-	public void setCode(RestrictedB2BCORECodeText code) {
-		this.code = code;
+	public LocalInstrument1 setCode(RestrictedB2BCORECodeText code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 }

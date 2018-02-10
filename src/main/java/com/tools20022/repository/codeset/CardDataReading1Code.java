@@ -20,50 +20,54 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CardDataReadingCode;
+import com.tools20022.repository.codeset.CardDataReading1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of reading of the card data.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading1Code#Tag
+ * CardDataReading1Code.Tag}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardDataReading1Code#Physical
+ * CardDataReading1Code.Physical}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardDataReading1Code#BarCode
+ * CardDataReading1Code.BarCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardDataReading1Code#MagneticStripe
+ * CardDataReading1Code.MagneticStripe}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading1Code#ICC
+ * CardDataReading1Code.ICC}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardDataReading1Code#AccountData
+ * CardDataReading1Code.AccountData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardDataReading1Code#ProximityReader
+ * CardDataReading1Code.ProximityReader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardDataReading1Code#EMVProximityReader
+ * CardDataReading1Code.EMVProximityReader}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.CardDataReadingCode
  * CardDataReadingCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading1Code#mmTag
- * CardDataReading1Code.mmTag}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardDataReading1Code#mmPhysical
- * CardDataReading1Code.mmPhysical}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardDataReading1Code#mmBarCode
- * CardDataReading1Code.mmBarCode}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardDataReading1Code#mmMagneticStripe
- * CardDataReading1Code.mmMagneticStripe}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CardDataReading1Code#mmICC
- * CardDataReading1Code.mmICC}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardDataReading1Code#mmAccountData
- * CardDataReading1Code.mmAccountData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardDataReading1Code#mmProximityReader
- * CardDataReading1Code.mmProximityReader}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardDataReading1Code#mmEMVProximityReader
- * CardDataReading1Code.mmEMVProximityReader}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +91,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CardDataReading1Code extends CardDataReadingCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CardDataReading1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -108,18 +113,19 @@ public class CardDataReading1Code extends CardDataReadingCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardDataReading5Code#mmTag
-	 * CardDataReading5Code.mmTag}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardDataReading5Code#Tag
+	 * CardDataReading5Code.Tag}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTag = new MMCode() {
+	public static final CardDataReading1Code Tag = new CardDataReading1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tag";
-			nextVersions_lazy = () -> Arrays.asList(CardDataReading5Code.mmTag);
-			owner_lazy = () -> CardDataReading1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(CardDataReading5Code.Tag);
+			owner_lazy = () -> com.tools20022.repository.codeset.CardDataReading1Code.mmObject();
+			codeName = CardDataReadingCode.Tag.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -140,18 +146,19 @@ public class CardDataReading1Code extends CardDataReadingCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardDataReading5Code#mmPhysical
-	 * CardDataReading5Code.mmPhysical}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardDataReading5Code#Physical
+	 * CardDataReading5Code.Physical}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPhysical = new MMCode() {
+	public static final CardDataReading1Code Physical = new CardDataReading1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Physical";
-			nextVersions_lazy = () -> Arrays.asList(CardDataReading5Code.mmPhysical);
-			owner_lazy = () -> CardDataReading1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(CardDataReading5Code.Physical);
+			owner_lazy = () -> com.tools20022.repository.codeset.CardDataReading1Code.mmObject();
+			codeName = CardDataReadingCode.Physical.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -172,18 +179,19 @@ public class CardDataReading1Code extends CardDataReadingCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardDataReading5Code#mmBarCode
-	 * CardDataReading5Code.mmBarCode}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardDataReading5Code#BarCode
+	 * CardDataReading5Code.BarCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBarCode = new MMCode() {
+	public static final CardDataReading1Code BarCode = new CardDataReading1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BarCode";
-			nextVersions_lazy = () -> Arrays.asList(CardDataReading5Code.mmBarCode);
-			owner_lazy = () -> CardDataReading1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(CardDataReading5Code.BarCode);
+			owner_lazy = () -> com.tools20022.repository.codeset.CardDataReading1Code.mmObject();
+			codeName = CardDataReadingCode.BarCode.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -204,18 +212,19 @@ public class CardDataReading1Code extends CardDataReadingCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardDataReading5Code#mmMagneticStripe
-	 * CardDataReading5Code.mmMagneticStripe}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardDataReading5Code#MagneticStripe
+	 * CardDataReading5Code.MagneticStripe}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMagneticStripe = new MMCode() {
+	public static final CardDataReading1Code MagneticStripe = new CardDataReading1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MagneticStripe";
-			nextVersions_lazy = () -> Arrays.asList(CardDataReading5Code.mmMagneticStripe);
-			owner_lazy = () -> CardDataReading1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(CardDataReading5Code.MagneticStripe);
+			owner_lazy = () -> com.tools20022.repository.codeset.CardDataReading1Code.mmObject();
+			codeName = CardDataReadingCode.MagneticStripe.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -236,18 +245,19 @@ public class CardDataReading1Code extends CardDataReadingCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardDataReading5Code#mmICC
-	 * CardDataReading5Code.mmICC}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardDataReading5Code#ICC
+	 * CardDataReading5Code.ICC}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmICC = new MMCode() {
+	public static final CardDataReading1Code ICC = new CardDataReading1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ICC";
-			nextVersions_lazy = () -> Arrays.asList(CardDataReading5Code.mmICC);
-			owner_lazy = () -> CardDataReading1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(CardDataReading5Code.ICC);
+			owner_lazy = () -> com.tools20022.repository.codeset.CardDataReading1Code.mmObject();
+			codeName = CardDataReadingCode.ICC.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -268,18 +278,19 @@ public class CardDataReading1Code extends CardDataReadingCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardDataReading5Code#mmAccountData
-	 * CardDataReading5Code.mmAccountData}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardDataReading5Code#AccountData
+	 * CardDataReading5Code.AccountData}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountData = new MMCode() {
+	public static final CardDataReading1Code AccountData = new CardDataReading1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountData";
-			nextVersions_lazy = () -> Arrays.asList(CardDataReading5Code.mmAccountData);
-			owner_lazy = () -> CardDataReading1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(CardDataReading5Code.AccountData);
+			owner_lazy = () -> com.tools20022.repository.codeset.CardDataReading1Code.mmObject();
+			codeName = CardDataReadingCode.AccountData.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -300,18 +311,19 @@ public class CardDataReading1Code extends CardDataReadingCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardDataReading5Code#mmProximityReader
-	 * CardDataReading5Code.mmProximityReader}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardDataReading5Code#ProximityReader
+	 * CardDataReading5Code.ProximityReader}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmProximityReader = new MMCode() {
+	public static final CardDataReading1Code ProximityReader = new CardDataReading1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProximityReader";
-			nextVersions_lazy = () -> Arrays.asList(CardDataReading5Code.mmProximityReader);
-			owner_lazy = () -> CardDataReading1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(CardDataReading5Code.ProximityReader);
+			owner_lazy = () -> com.tools20022.repository.codeset.CardDataReading1Code.mmObject();
+			codeName = CardDataReadingCode.ProximityReader.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -332,35 +344,73 @@ public class CardDataReading1Code extends CardDataReadingCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CardDataReading5Code#mmEMVProximityReader
-	 * CardDataReading5Code.mmEMVProximityReader}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardDataReading5Code#EMVProximityReader
+	 * CardDataReading5Code.EMVProximityReader}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEMVProximityReader = new MMCode() {
+	public static final CardDataReading1Code EMVProximityReader = new CardDataReading1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EMVProximityReader";
-			nextVersions_lazy = () -> Arrays.asList(CardDataReading5Code.mmEMVProximityReader);
-			owner_lazy = () -> CardDataReading1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(CardDataReading5Code.EMVProximityReader);
+			owner_lazy = () -> com.tools20022.repository.codeset.CardDataReading1Code.mmObject();
+			codeName = CardDataReadingCode.EMVProximityReader.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CardDataReading1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CardDataReading1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("TAGC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardDataReading1Code";
 				definition = "Type of reading of the card data.";
 				nextVersions_lazy = () -> Arrays.asList(CardDataReading5Code.mmObject());
-				code_lazy = () -> Arrays.asList(CardDataReading1Code.mmTag, CardDataReading1Code.mmPhysical, CardDataReading1Code.mmBarCode, CardDataReading1Code.mmMagneticStripe, CardDataReading1Code.mmICC,
-						CardDataReading1Code.mmAccountData, CardDataReading1Code.mmProximityReader, CardDataReading1Code.mmEMVProximityReader);
 				trace_lazy = () -> CardDataReadingCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardDataReading1Code.Tag, com.tools20022.repository.codeset.CardDataReading1Code.Physical, com.tools20022.repository.codeset.CardDataReading1Code.BarCode,
+						com.tools20022.repository.codeset.CardDataReading1Code.MagneticStripe, com.tools20022.repository.codeset.CardDataReading1Code.ICC, com.tools20022.repository.codeset.CardDataReading1Code.AccountData,
+						com.tools20022.repository.codeset.CardDataReading1Code.ProximityReader, com.tools20022.repository.codeset.CardDataReading1Code.EMVProximityReader);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Tag.getCodeName().get(), Tag);
+		codesByName.put(Physical.getCodeName().get(), Physical);
+		codesByName.put(BarCode.getCodeName().get(), BarCode);
+		codesByName.put(MagneticStripe.getCodeName().get(), MagneticStripe);
+		codesByName.put(ICC.getCodeName().get(), ICC);
+		codesByName.put(AccountData.getCodeName().get(), AccountData);
+		codesByName.put(ProximityReader.getCodeName().get(), ProximityReader);
+		codesByName.put(EMVProximityReader.getCodeName().get(), EMVProximityReader);
+	}
+
+	public static CardDataReading1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CardDataReading1Code[] values() {
+		CardDataReading1Code[] values = new CardDataReading1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CardDataReading1Code> {
+		@Override
+		public CardDataReading1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CardDataReading1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

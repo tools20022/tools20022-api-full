@@ -29,9 +29,8 @@ import com.tools20022.repository.msg.PartyIdentification43;
 import com.tools20022.repository.msg.UndertakingAdvice1;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -47,22 +46,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TradeServicesLatestVersion
- * TradeServicesLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion
- * DemandGuaranteesandStandbyLettersofCreditISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "UdrtkgIssncAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -87,6 +70,22 @@ import javax.xml.bind.annotation.*;
  * UndertakingIssuanceAdviceV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion
+ * DemandGuaranteesandStandbyLettersofCreditISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "UdrtkgIssncAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TradeServicesLatestVersion
+ * TradeServicesLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code tsrv.002.001.01}</li>
@@ -102,15 +101,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UndertakingIssuanceAdviceV01", propOrder = {"advisingParty", "secondAdvisingParty", "dateOfAdvice", "undertakingIssuanceAdviceDetails", "bankToBankInformation", "digitalSignature"})
 public class UndertakingIssuanceAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AdvsgPty", required = true)
 	protected PartyIdentification43 advisingParty;
 	/**
-	 * Party advising the undertaking to the beneficiary or to another party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,10 +151,11 @@ public class UndertakingIssuanceAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "ScndAdvsgPty")
 	protected PartyIdentification43 secondAdvisingParty;
 	/**
-	 * Additional party that advises the undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -194,10 +195,11 @@ public class UndertakingIssuanceAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "DtOfAdvc", required = true)
 	protected DateAndDateTimeChoice dateOfAdvice;
 	/**
-	 * Date on which the undertaking is advised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -237,10 +239,11 @@ public class UndertakingIssuanceAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "UdrtkgIssncAdvcDtls", required = true)
 	protected UndertakingAdvice1 undertakingIssuanceAdviceDetails;
 	/**
-	 * Details related to the advice of the issued undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -280,10 +283,11 @@ public class UndertakingIssuanceAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "BkToBkInf")
 	protected List<Max2000Text> bankToBankInformation;
 	/**
-	 * Additional information specific to the bank-to-bank communication.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -323,10 +327,11 @@ public class UndertakingIssuanceAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "DgtlSgntr")
 	protected PartyAndSignature2 digitalSignature;
 	/**
-	 * Digital signature of the undertaking advice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -398,61 +403,61 @@ public class UndertakingIssuanceAdviceV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AdvsgPty", required = true)
 	public PartyIdentification43 getAdvisingParty() {
 		return advisingParty;
 	}
 
-	public void setAdvisingParty(PartyIdentification43 advisingParty) {
-		this.advisingParty = advisingParty;
+	public UndertakingIssuanceAdviceV01 setAdvisingParty(PartyIdentification43 advisingParty) {
+		this.advisingParty = Objects.requireNonNull(advisingParty);
+		return this;
 	}
 
-	@XmlElement(name = "ScndAdvsgPty")
-	public PartyIdentification43 getSecondAdvisingParty() {
-		return secondAdvisingParty;
+	public Optional<PartyIdentification43> getSecondAdvisingParty() {
+		return secondAdvisingParty == null ? Optional.empty() : Optional.of(secondAdvisingParty);
 	}
 
-	public void setSecondAdvisingParty(PartyIdentification43 secondAdvisingParty) {
+	public UndertakingIssuanceAdviceV01 setSecondAdvisingParty(PartyIdentification43 secondAdvisingParty) {
 		this.secondAdvisingParty = secondAdvisingParty;
+		return this;
 	}
 
-	@XmlElement(name = "DtOfAdvc", required = true)
 	public DateAndDateTimeChoice getDateOfAdvice() {
 		return dateOfAdvice;
 	}
 
-	public void setDateOfAdvice(DateAndDateTimeChoice dateOfAdvice) {
-		this.dateOfAdvice = dateOfAdvice;
+	public UndertakingIssuanceAdviceV01 setDateOfAdvice(DateAndDateTimeChoice dateOfAdvice) {
+		this.dateOfAdvice = Objects.requireNonNull(dateOfAdvice);
+		return this;
 	}
 
-	@XmlElement(name = "UdrtkgIssncAdvcDtls", required = true)
 	public UndertakingAdvice1 getUndertakingIssuanceAdviceDetails() {
 		return undertakingIssuanceAdviceDetails;
 	}
 
-	public void setUndertakingIssuanceAdviceDetails(UndertakingAdvice1 undertakingIssuanceAdviceDetails) {
-		this.undertakingIssuanceAdviceDetails = undertakingIssuanceAdviceDetails;
+	public UndertakingIssuanceAdviceV01 setUndertakingIssuanceAdviceDetails(UndertakingAdvice1 undertakingIssuanceAdviceDetails) {
+		this.undertakingIssuanceAdviceDetails = Objects.requireNonNull(undertakingIssuanceAdviceDetails);
+		return this;
 	}
 
-	@XmlElement(name = "BkToBkInf")
 	public List<Max2000Text> getBankToBankInformation() {
-		return bankToBankInformation;
+		return bankToBankInformation == null ? bankToBankInformation = new ArrayList<>() : bankToBankInformation;
 	}
 
-	public void setBankToBankInformation(List<Max2000Text> bankToBankInformation) {
-		this.bankToBankInformation = bankToBankInformation;
+	public UndertakingIssuanceAdviceV01 setBankToBankInformation(List<Max2000Text> bankToBankInformation) {
+		this.bankToBankInformation = Objects.requireNonNull(bankToBankInformation);
+		return this;
 	}
 
-	@XmlElement(name = "DgtlSgntr")
-	public PartyAndSignature2 getDigitalSignature() {
-		return digitalSignature;
+	public Optional<PartyAndSignature2> getDigitalSignature() {
+		return digitalSignature == null ? Optional.empty() : Optional.of(digitalSignature);
 	}
 
-	public void setDigitalSignature(PartyAndSignature2 digitalSignature) {
+	public UndertakingIssuanceAdviceV01 setDigitalSignature(PartyAndSignature2 digitalSignature) {
 		this.digitalSignature = digitalSignature;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsrv.002.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:tsrv.002.001.01")
 	static public class Document {
 		@XmlElement(name = "UdrtkgIssncAdvc", required = true)
 		public UndertakingIssuanceAdviceV01 messageBody;

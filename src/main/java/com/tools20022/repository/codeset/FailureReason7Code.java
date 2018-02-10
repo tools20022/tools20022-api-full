@@ -20,85 +20,88 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.FailureReasonCode;
+import com.tools20022.repository.codeset.FailureReason7Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Incident occurring during the processing of an ATM transaction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.FailureReasonCode
- * FailureReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmCardCaptured
- * FailureReason7Code.mmCardCaptured}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#CardCaptured
+ * FailureReason7Code.CardCaptured}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmCardDeclined
- * FailureReason7Code.mmCardDeclined}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#CardDeclined
+ * FailureReason7Code.CardDeclined}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmCardError
- * FailureReason7Code.mmCardError}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#CardError
+ * FailureReason7Code.CardError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmCustomerCancel
- * FailureReason7Code.mmCustomerCancel}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#CustomerCancel
+ * FailureReason7Code.CustomerCancel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmCustomerDecline
- * FailureReason7Code.mmCustomerDecline}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#CustomerDecline
+ * FailureReason7Code.CustomerDecline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmForgottenCard
- * FailureReason7Code.mmForgottenCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#ForgottenCard
+ * FailureReason7Code.ForgottenCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmFullfilmentError
- * FailureReason7Code.mmFullfilmentError}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#FullfilmentError
+ * FailureReason7Code.FullfilmentError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmMalfunction
- * FailureReason7Code.mmMalfunction}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#Malfunction
+ * FailureReason7Code.Malfunction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmOnLineDeclined
- * FailureReason7Code.mmOnLineDeclined}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#OnLineDeclined
+ * FailureReason7Code.OnLineDeclined}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmSecurityError
- * FailureReason7Code.mmSecurityError}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#SecurityError
+ * FailureReason7Code.SecurityError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmSuspectedFraud
- * FailureReason7Code.mmSuspectedFraud}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#SuspectedFraud
+ * FailureReason7Code.SuspectedFraud}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FailureReason7Code#TimeOut
+ * FailureReason7Code.TimeOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmTimeOut
- * FailureReason7Code.mmTimeOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#TooLateResponse
+ * FailureReason7Code.TooLateResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmTooLateResponse
- * FailureReason7Code.mmTooLateResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#UnableToCapture
+ * FailureReason7Code.UnableToCapture}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmUnableToCapture
- * FailureReason7Code.mmUnableToCapture}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#UnableToComplete
+ * FailureReason7Code.UnableToComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmUnableToComplete
- * FailureReason7Code.mmUnableToComplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#UnableToSend
+ * FailureReason7Code.UnableToSend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmUnableToSend
- * FailureReason7Code.mmUnableToSend}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#OutOfCustomerService
+ * FailureReason7Code.OutOfCustomerService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmOutOfCustomerService
- * FailureReason7Code.mmOutOfCustomerService}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#CardRetained
+ * FailureReason7Code.CardRetained}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmCardRetained
- * FailureReason7Code.mmCardRetained}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#mmCustomerTimeOut
- * FailureReason7Code.mmCustomerTimeOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason7Code#CustomerTimeOut
+ * FailureReason7Code.CustomerTimeOut}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.FailureReasonCode
+ * FailureReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,7 +113,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Incident occurring during the processing of an ATM transaction."</li>
  * </ul>
  */
-public class FailureReason7Code extends FailureReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FailureReason7Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -129,11 +133,12 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "CardCaptured"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardCaptured = new MMCode() {
+	public static final FailureReason7Code CardCaptured = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardCaptured";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.CardCaptured.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -152,11 +157,12 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "CardDeclined"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardDeclined = new MMCode() {
+	public static final FailureReason7Code CardDeclined = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardDeclined";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.CardDeclined.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -175,11 +181,12 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "CardError"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardError = new MMCode() {
+	public static final FailureReason7Code CardError = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardError";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.CardError.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -198,11 +205,12 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "CustomerCancel"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustomerCancel = new MMCode() {
+	public static final FailureReason7Code CustomerCancel = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerCancel";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.CustomerCancel.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -221,11 +229,12 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "CustomerDecline"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustomerDecline = new MMCode() {
+	public static final FailureReason7Code CustomerDecline = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerDecline";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.CustomerDecline.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -244,11 +253,12 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "ForgottenCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForgottenCard = new MMCode() {
+	public static final FailureReason7Code ForgottenCard = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForgottenCard";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.ForgottenCard.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -267,11 +277,12 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "FullfilmentError"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullfilmentError = new MMCode() {
+	public static final FailureReason7Code FullfilmentError = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullfilmentError";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.FullfilmentError.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -290,11 +301,12 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "Malfunction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMalfunction = new MMCode() {
+	public static final FailureReason7Code Malfunction = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Malfunction";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.Malfunction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -313,11 +325,12 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "OnLineDeclined"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOnLineDeclined = new MMCode() {
+	public static final FailureReason7Code OnLineDeclined = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLineDeclined";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.OnLineDeclined.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -336,11 +349,12 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "SecurityError"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecurityError = new MMCode() {
+	public static final FailureReason7Code SecurityError = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityError";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.SecurityError.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -359,11 +373,12 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "SuspectedFraud"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuspectedFraud = new MMCode() {
+	public static final FailureReason7Code SuspectedFraud = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspectedFraud";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.SuspectedFraud.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -382,11 +397,12 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "TimeOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTimeOut = new MMCode() {
+	public static final FailureReason7Code TimeOut = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeOut";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.TimeOut.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -405,11 +421,12 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "TooLateResponse"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTooLateResponse = new MMCode() {
+	public static final FailureReason7Code TooLateResponse = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TooLateResponse";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.TooLateResponse.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -428,11 +445,12 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "UnableToCapture"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnableToCapture = new MMCode() {
+	public static final FailureReason7Code UnableToCapture = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToCapture";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.UnableToCapture.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -451,11 +469,12 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "UnableToComplete"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnableToComplete = new MMCode() {
+	public static final FailureReason7Code UnableToComplete = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToComplete";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.UnableToComplete.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -474,11 +493,12 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "UnableToSend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnableToSend = new MMCode() {
+	public static final FailureReason7Code UnableToSend = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToSend";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.UnableToSend.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -497,11 +517,12 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "OutOfCustomerService"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOutOfCustomerService = new MMCode() {
+	public static final FailureReason7Code OutOfCustomerService = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfCustomerService";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.OutOfCustomerService.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -520,11 +541,12 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "CardRetained"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardRetained = new MMCode() {
+	public static final FailureReason7Code CardRetained = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardRetained";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.CardRetained.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -543,28 +565,79 @@ public class FailureReason7Code extends FailureReasonCode {
 	 * name} = "CustomerTimeOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustomerTimeOut = new MMCode() {
+	public static final FailureReason7Code CustomerTimeOut = new FailureReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerTimeOut";
-			owner_lazy = () -> FailureReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason7Code.mmObject();
+			codeName = FailureReasonCode.CustomerTimeOut.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, FailureReason7Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FailureReason7Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FailureReason7Code";
 				definition = "Incident occurring during the processing of an ATM transaction.";
-				code_lazy = () -> Arrays.asList(FailureReason7Code.mmCardCaptured, FailureReason7Code.mmCardDeclined, FailureReason7Code.mmCardError, FailureReason7Code.mmCustomerCancel, FailureReason7Code.mmCustomerDecline,
-						FailureReason7Code.mmForgottenCard, FailureReason7Code.mmFullfilmentError, FailureReason7Code.mmMalfunction, FailureReason7Code.mmOnLineDeclined, FailureReason7Code.mmSecurityError,
-						FailureReason7Code.mmSuspectedFraud, FailureReason7Code.mmTimeOut, FailureReason7Code.mmTooLateResponse, FailureReason7Code.mmUnableToCapture, FailureReason7Code.mmUnableToComplete,
-						FailureReason7Code.mmUnableToSend, FailureReason7Code.mmOutOfCustomerService, FailureReason7Code.mmCardRetained, FailureReason7Code.mmCustomerTimeOut);
 				trace_lazy = () -> FailureReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FailureReason7Code.CardCaptured, com.tools20022.repository.codeset.FailureReason7Code.CardDeclined,
+						com.tools20022.repository.codeset.FailureReason7Code.CardError, com.tools20022.repository.codeset.FailureReason7Code.CustomerCancel, com.tools20022.repository.codeset.FailureReason7Code.CustomerDecline,
+						com.tools20022.repository.codeset.FailureReason7Code.ForgottenCard, com.tools20022.repository.codeset.FailureReason7Code.FullfilmentError, com.tools20022.repository.codeset.FailureReason7Code.Malfunction,
+						com.tools20022.repository.codeset.FailureReason7Code.OnLineDeclined, com.tools20022.repository.codeset.FailureReason7Code.SecurityError, com.tools20022.repository.codeset.FailureReason7Code.SuspectedFraud,
+						com.tools20022.repository.codeset.FailureReason7Code.TimeOut, com.tools20022.repository.codeset.FailureReason7Code.TooLateResponse, com.tools20022.repository.codeset.FailureReason7Code.UnableToCapture,
+						com.tools20022.repository.codeset.FailureReason7Code.UnableToComplete, com.tools20022.repository.codeset.FailureReason7Code.UnableToSend, com.tools20022.repository.codeset.FailureReason7Code.OutOfCustomerService,
+						com.tools20022.repository.codeset.FailureReason7Code.CardRetained, com.tools20022.repository.codeset.FailureReason7Code.CustomerTimeOut);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CardCaptured.getCodeName().get(), CardCaptured);
+		codesByName.put(CardDeclined.getCodeName().get(), CardDeclined);
+		codesByName.put(CardError.getCodeName().get(), CardError);
+		codesByName.put(CustomerCancel.getCodeName().get(), CustomerCancel);
+		codesByName.put(CustomerDecline.getCodeName().get(), CustomerDecline);
+		codesByName.put(ForgottenCard.getCodeName().get(), ForgottenCard);
+		codesByName.put(FullfilmentError.getCodeName().get(), FullfilmentError);
+		codesByName.put(Malfunction.getCodeName().get(), Malfunction);
+		codesByName.put(OnLineDeclined.getCodeName().get(), OnLineDeclined);
+		codesByName.put(SecurityError.getCodeName().get(), SecurityError);
+		codesByName.put(SuspectedFraud.getCodeName().get(), SuspectedFraud);
+		codesByName.put(TimeOut.getCodeName().get(), TimeOut);
+		codesByName.put(TooLateResponse.getCodeName().get(), TooLateResponse);
+		codesByName.put(UnableToCapture.getCodeName().get(), UnableToCapture);
+		codesByName.put(UnableToComplete.getCodeName().get(), UnableToComplete);
+		codesByName.put(UnableToSend.getCodeName().get(), UnableToSend);
+		codesByName.put(OutOfCustomerService.getCodeName().get(), OutOfCustomerService);
+		codesByName.put(CardRetained.getCodeName().get(), CardRetained);
+		codesByName.put(CustomerTimeOut.getCodeName().get(), CustomerTimeOut);
+	}
+
+	public static FailureReason7Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FailureReason7Code[] values() {
+		FailureReason7Code[] values = new FailureReason7Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FailureReason7Code> {
+		@Override
+		public FailureReason7Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FailureReason7Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

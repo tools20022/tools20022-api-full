@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ReportPeriodActivityCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of report activity for a specific period.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivityCode#mmNoTransaction
- * ReportPeriodActivityCode.mmNoTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivityCode#NoTransaction
+ * ReportPeriodActivityCode.NoTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivityCode#mmNoReportFromAgent
- * ReportPeriodActivityCode.mmNoReportFromAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivityCode#NoReportFromAgent
+ * ReportPeriodActivityCode.NoReportFromAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivityCode#mmCorruptedReport
- * ReportPeriodActivityCode.mmCorruptedReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportPeriodActivityCode#CorruptedReport
+ * ReportPeriodActivityCode.CorruptedReport}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of report activity for a specific period."</li>
  * </ul>
  */
-public class ReportPeriodActivityCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ReportPeriodActivityCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,12 +96,12 @@ public class ReportPeriodActivityCode {
 	 * definition} = "No transaction has been identified during the period."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoTransaction = new MMCode() {
+	public static final ReportPeriodActivityCode NoTransaction = new ReportPeriodActivityCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoTransaction";
 			definition = "No transaction has been identified during the period.";
-			owner_lazy = () -> ReportPeriodActivityCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportPeriodActivityCode.mmObject();
 			codeName = "NOTX";
 		}
 	};
@@ -120,12 +126,12 @@ public class ReportPeriodActivityCode {
 	 * definition} = "No report has been received from reporting agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoReportFromAgent = new MMCode() {
+	public static final ReportPeriodActivityCode NoReportFromAgent = new ReportPeriodActivityCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoReportFromAgent";
 			definition = "No report has been received from reporting agent.";
-			owner_lazy = () -> ReportPeriodActivityCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportPeriodActivityCode.mmObject();
 			codeName = "NORA";
 		}
 	};
@@ -150,27 +156,59 @@ public class ReportPeriodActivityCode {
 	 * definition} = "Report has been received but was corrupted."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorruptedReport = new MMCode() {
+	public static final ReportPeriodActivityCode CorruptedReport = new ReportPeriodActivityCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorruptedReport";
 			definition = "Report has been received but was corrupted.";
-			owner_lazy = () -> ReportPeriodActivityCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportPeriodActivityCode.mmObject();
 			codeName = "CRPT";
 		}
 	};
+	final static private LinkedHashMap<String, ReportPeriodActivityCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ReportPeriodActivityCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportPeriodActivityCode";
 				definition = "Specifies the type of report activity for a specific period.";
-				code_lazy = () -> Arrays.asList(ReportPeriodActivityCode.mmNoTransaction, ReportPeriodActivityCode.mmNoReportFromAgent, ReportPeriodActivityCode.mmCorruptedReport);
 				derivation_lazy = () -> Arrays.asList(ReportPeriodActivity1Code.mmObject(), ReportPeriodActivity3Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportPeriodActivityCode.NoTransaction, com.tools20022.repository.codeset.ReportPeriodActivityCode.NoReportFromAgent,
+						com.tools20022.repository.codeset.ReportPeriodActivityCode.CorruptedReport);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NoTransaction.getCodeName().get(), NoTransaction);
+		codesByName.put(NoReportFromAgent.getCodeName().get(), NoReportFromAgent);
+		codesByName.put(CorruptedReport.getCodeName().get(), CorruptedReport);
+	}
+
+	public static ReportPeriodActivityCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ReportPeriodActivityCode[] values() {
+		ReportPeriodActivityCode[] values = new ReportPeriodActivityCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ReportPeriodActivityCode> {
+		@Override
+		public ReportPeriodActivityCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ReportPeriodActivityCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

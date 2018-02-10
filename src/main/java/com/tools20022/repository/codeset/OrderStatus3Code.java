@@ -20,37 +20,40 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OrderStatusCode;
+import com.tools20022.repository.codeset.OrderStatus3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the current status of the order.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode
- * OrderStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus3Code#mmSentToNextParty
- * OrderStatus3Code.mmSentToNextParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus3Code#SentToNextParty
+ * OrderStatus3Code.SentToNextParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus3Code#mmPendingCancel
- * OrderStatus3Code.mmPendingCancel}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus3Code#mmCompleted
- * OrderStatus3Code.mmCompleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus3Code#PendingCancel
+ * OrderStatus3Code.PendingCancel}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus3Code#Completed
+ * OrderStatus3Code.Completed}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.OrderStatusCode
+ * OrderStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the current status of the order."</li>
  * </ul>
  */
-public class OrderStatus3Code extends OrderStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OrderStatus3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +90,12 @@ public class OrderStatus3Code extends OrderStatusCode {
 	 * name} = "SentToNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSentToNextParty = new MMCode() {
+	public static final OrderStatus3Code SentToNextParty = new OrderStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
-			owner_lazy = () -> OrderStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus3Code.mmObject();
+			codeName = OrderStatusCode.SentToNextParty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +114,12 @@ public class OrderStatus3Code extends OrderStatusCode {
 	 * name} = "PendingCancel"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingCancel = new MMCode() {
+	public static final OrderStatus3Code PendingCancel = new OrderStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancel";
-			owner_lazy = () -> OrderStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus3Code.mmObject();
+			codeName = OrderStatusCode.PendingCancel.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +138,59 @@ public class OrderStatus3Code extends OrderStatusCode {
 	 * name} = "Completed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompleted = new MMCode() {
+	public static final OrderStatus3Code Completed = new OrderStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
-			owner_lazy = () -> OrderStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus3Code.mmObject();
+			codeName = OrderStatusCode.Completed.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OrderStatus3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OrderStatus3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("STNP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderStatus3Code";
 				definition = "Specifies the current status of the order.";
-				code_lazy = () -> Arrays.asList(OrderStatus3Code.mmSentToNextParty, OrderStatus3Code.mmPendingCancel, OrderStatus3Code.mmCompleted);
 				trace_lazy = () -> OrderStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderStatus3Code.SentToNextParty, com.tools20022.repository.codeset.OrderStatus3Code.PendingCancel,
+						com.tools20022.repository.codeset.OrderStatus3Code.Completed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SentToNextParty.getCodeName().get(), SentToNextParty);
+		codesByName.put(PendingCancel.getCodeName().get(), PendingCancel);
+		codesByName.put(Completed.getCodeName().get(), Completed);
+	}
+
+	public static OrderStatus3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OrderStatus3Code[] values() {
+		OrderStatus3Code[] values = new OrderStatus3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OrderStatus3Code> {
+		@Override
+		public OrderStatus3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OrderStatus3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

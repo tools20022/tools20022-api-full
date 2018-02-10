@@ -20,37 +20,40 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SecuritiesQuantityTypeCode;
+import com.tools20022.repository.codeset.SecuritiesQuantity1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * TSE/JASDEC codes for planned, maximum and minimum of shares to be purchased.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SecuritiesQuantity1Code#No
+ * SecuritiesQuantity1Code.No}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesQuantity1Code#Unknown
+ * SecuritiesQuantity1Code.Unknown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesQuantity1Code#Yes
+ * SecuritiesQuantity1Code.Yes}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.SecuritiesQuantityTypeCode
  * SecuritiesQuantityTypeCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesQuantity1Code#mmNo
- * SecuritiesQuantity1Code.mmNo}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesQuantity1Code#mmUnknown
- * SecuritiesQuantity1Code.mmUnknown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesQuantity1Code#mmYes
- * SecuritiesQuantity1Code.mmYes}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class SecuritiesQuantity1Code extends SecuritiesQuantityTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SecuritiesQuantity1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,12 +88,13 @@ public class SecuritiesQuantity1Code extends SecuritiesQuantityTypeCode {
 	 * name} = "No"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNo = new MMCode() {
+	public static final SecuritiesQuantity1Code No = new SecuritiesQuantity1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "No";
-			owner_lazy = () -> SecuritiesQuantity1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesQuantity1Code.mmObject();
 			codeName = "SQNO";
+			codeName = SecuritiesQuantityTypeCode.No.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,12 +115,13 @@ public class SecuritiesQuantity1Code extends SecuritiesQuantityTypeCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknown = new MMCode() {
+	public static final SecuritiesQuantity1Code Unknown = new SecuritiesQuantity1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
-			owner_lazy = () -> SecuritiesQuantity1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesQuantity1Code.mmObject();
 			codeName = "UKWN";
+			codeName = SecuritiesQuantityTypeCode.Unknown.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -136,26 +142,58 @@ public class SecuritiesQuantity1Code extends SecuritiesQuantityTypeCode {
 	 * name} = "Yes"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmYes = new MMCode() {
+	public static final SecuritiesQuantity1Code Yes = new SecuritiesQuantity1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yes";
-			owner_lazy = () -> SecuritiesQuantity1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesQuantity1Code.mmObject();
 			codeName = "SQYS";
+			codeName = SecuritiesQuantityTypeCode.Yes.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SecuritiesQuantity1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SecuritiesQuantity1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesQuantity1Code";
 				definition = "TSE/JASDEC codes for planned, maximum and minimum of shares to be purchased.";
-				code_lazy = () -> Arrays.asList(SecuritiesQuantity1Code.mmNo, SecuritiesQuantity1Code.mmUnknown, SecuritiesQuantity1Code.mmYes);
 				trace_lazy = () -> SecuritiesQuantityTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesQuantity1Code.No, com.tools20022.repository.codeset.SecuritiesQuantity1Code.Unknown, com.tools20022.repository.codeset.SecuritiesQuantity1Code.Yes);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(No.getCodeName().get(), No);
+		codesByName.put(Unknown.getCodeName().get(), Unknown);
+		codesByName.put(Yes.getCodeName().get(), Yes);
+	}
+
+	public static SecuritiesQuantity1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SecuritiesQuantity1Code[] values() {
+		SecuritiesQuantity1Code[] values = new SecuritiesQuantity1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SecuritiesQuantity1Code> {
+		@Override
+		public SecuritiesQuantity1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SecuritiesQuantity1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

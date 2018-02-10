@@ -24,6 +24,7 @@ import com.tools20022.repository.area.catp.ATMDepositCompletionAcknowledgementV0
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "ATMDepositCompletionAcknowledgement1", propOrder = {"ATM", "context", "transaction"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "ATMDepositCompletionAcknowledgement1", propOrder = {"aTM", "context", "transaction"})
 public class ATMDepositCompletionAcknowledgement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ATM", required = true)
 	protected AutomatedTellerMachine3 aTM;
 	/**
-	 * ATM information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -112,7 +114,7 @@ public class ATMDepositCompletionAcknowledgement1 {
 	 */
 	public static final MMMessageAssociationEnd mmATM = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMDepositCompletionAcknowledgement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositCompletionAcknowledgement1.mmObject();
 			isDerived = false;
 			xmlTag = "ATM";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +126,11 @@ public class ATMDepositCompletionAcknowledgement1 {
 			type_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine3.mmObject();
 		}
 	};
+	@XmlElement(name = "Cntxt", required = true)
 	protected ATMContext12 context;
 	/**
-	 * Context in which the transaction is performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -153,7 +156,7 @@ public class ATMDepositCompletionAcknowledgement1 {
 	 */
 	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMDepositCompletionAcknowledgement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositCompletionAcknowledgement1.mmObject();
 			isDerived = false;
 			xmlTag = "Cntxt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,10 +168,11 @@ public class ATMDepositCompletionAcknowledgement1 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMContext12.mmObject();
 		}
 	};
+	@XmlElement(name = "Tx", required = true)
 	protected ATMTransaction18 transaction;
 	/**
-	 * Acknowledgement of the deposit completion advice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -194,7 +198,7 @@ public class ATMDepositCompletionAcknowledgement1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMDepositCompletionAcknowledgement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositCompletionAcknowledgement1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,9 +214,10 @@ public class ATMDepositCompletionAcknowledgement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMDepositCompletionAcknowledgement1.mmATM, ATMDepositCompletionAcknowledgement1.mmContext, ATMDepositCompletionAcknowledgement1.mmTransaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDepositCompletionAcknowledgement1.mmATM, com.tools20022.repository.msg.ATMDepositCompletionAcknowledgement1.mmContext,
+						com.tools20022.repository.msg.ATMDepositCompletionAcknowledgement1.mmTransaction);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ATMDepositCompletionAcknowledgementV01.mmATMDepositCompletionAcknowledgement);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMDepositCompletionAcknowledgement1";
 				definition = "Information related to the acknowledgement  of an ATM deposit transaction from the ATM manager.";
@@ -221,30 +226,30 @@ public class ATMDepositCompletionAcknowledgement1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ATM", required = true)
 	public AutomatedTellerMachine3 getATM() {
 		return aTM;
 	}
 
-	public void setATM(com.tools20022.repository.msg.AutomatedTellerMachine3 aTM) {
-		this.aTM = aTM;
+	public ATMDepositCompletionAcknowledgement1 setATM(com.tools20022.repository.msg.AutomatedTellerMachine3 aTM) {
+		this.aTM = Objects.requireNonNull(aTM);
+		return this;
 	}
 
-	@XmlElement(name = "Cntxt", required = true)
 	public ATMContext12 getContext() {
 		return context;
 	}
 
-	public void setContext(com.tools20022.repository.msg.ATMContext12 context) {
-		this.context = context;
+	public ATMDepositCompletionAcknowledgement1 setContext(com.tools20022.repository.msg.ATMContext12 context) {
+		this.context = Objects.requireNonNull(context);
+		return this;
 	}
 
-	@XmlElement(name = "Tx", required = true)
 	public ATMTransaction18 getTransaction() {
 		return transaction;
 	}
 
-	public void setTransaction(com.tools20022.repository.msg.ATMTransaction18 transaction) {
-		this.transaction = transaction;
+	public ATMDepositCompletionAcknowledgement1 setTransaction(com.tools20022.repository.msg.ATMTransaction18 transaction) {
+		this.transaction = Objects.requireNonNull(transaction);
+		return this;
 	}
 }

@@ -17,12 +17,17 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ExternalReceivedReasonCode;
+import com.tools20022.repository.codeset.ExternalReceivedReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for a received status. <br>
@@ -37,8 +42,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -57,21 +62,52 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ExternalReceivedReason1Code extends ExternalReceivedReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ExternalReceivedReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
+	final static private LinkedHashMap<String, ExternalReceivedReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ExternalReceivedReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RECE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExternalReceivedReason1Code";
 				definition = "Specifies the reason for a received status.\n\r\nThe list of valid codes is an external code list published separately. \r\nExternal code sets can be downloaded from www.iso20022.org.";
 				trace_lazy = () -> ExternalReceivedReasonCode.mmObject();
+				minLength = 1;
+				maxLength = 4;
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+	}
+
+	public static ExternalReceivedReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ExternalReceivedReason1Code[] values() {
+		ExternalReceivedReason1Code[] values = new ExternalReceivedReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ExternalReceivedReason1Code> {
+		@Override
+		public ExternalReceivedReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ExternalReceivedReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CardServiceTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of administrative service.
@@ -32,38 +37,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmCheckPoint
- * CardServiceTypeCode.mmCheckPoint}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#CheckPoint
+ * CardServiceTypeCode.CheckPoint}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#Final
+ * CardServiceTypeCode.Final}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmFinal
- * CardServiceTypeCode.mmFinal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#TotalInquiry
+ * CardServiceTypeCode.TotalInquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmTotalInquiry
- * CardServiceTypeCode.mmTotalInquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#DisableStoreForward
+ * CardServiceTypeCode.DisableStoreForward}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmDisableStoreForward
- * CardServiceTypeCode.mmDisableStoreForward}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#EchoTest
+ * CardServiceTypeCode.EchoTest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmEchoTest
- * CardServiceTypeCode.mmEchoTest}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#EnableStoreForward
+ * CardServiceTypeCode.EnableStoreForward}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#SignOn
+ * CardServiceTypeCode.SignOn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmEnableStoreForward
- * CardServiceTypeCode.mmEnableStoreForward}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#SignOff
+ * CardServiceTypeCode.SignOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmSignOn
- * CardServiceTypeCode.mmSignOn}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#KeyChange
+ * CardServiceTypeCode.KeyChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmSignOff
- * CardServiceTypeCode.mmSignOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#DeliverKey
+ * CardServiceTypeCode.DeliverKey}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmKeyChange
- * CardServiceTypeCode.mmKeyChange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmDeliverKey
- * CardServiceTypeCode.mmDeliverKey}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#mmKeyVerification
- * CardServiceTypeCode.mmKeyVerification}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode#KeyVerification
+ * CardServiceTypeCode.KeyVerification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -80,8 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,7 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of administrative service."</li>
  * </ul>
  */
-public class CardServiceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CardServiceTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -116,12 +120,12 @@ public class CardServiceTypeCode {
 	 * definition} = "Partial reconciliation of the day."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCheckPoint = new MMCode() {
+	public static final CardServiceTypeCode CheckPoint = new CardServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CheckPoint";
 			definition = "Partial reconciliation of the day.";
-			owner_lazy = () -> CardServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardServiceTypeCode.mmObject();
 			codeName = "PART";
 		}
 	};
@@ -146,12 +150,12 @@ public class CardServiceTypeCode {
 	 * definition} = "Final reconciliation."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinal = new MMCode() {
+	public static final CardServiceTypeCode Final = new CardServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
 			definition = "Final reconciliation.";
-			owner_lazy = () -> CardServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardServiceTypeCode.mmObject();
 			codeName = "FINL";
 		}
 	};
@@ -176,12 +180,12 @@ public class CardServiceTypeCode {
 	 * definition} = "Request for totals of a previous reconciliation."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTotalInquiry = new MMCode() {
+	public static final CardServiceTypeCode TotalInquiry = new CardServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInquiry";
 			definition = "Request for totals of a previous reconciliation.";
-			owner_lazy = () -> CardServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardServiceTypeCode.mmObject();
 			codeName = "PRVS";
 		}
 	};
@@ -209,12 +213,12 @@ public class CardServiceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisableStoreForward = new MMCode() {
+	public static final CardServiceTypeCode DisableStoreForward = new CardServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisableStoreForward";
 			definition = "Close communication at application level to stop store and forward process.";
-			owner_lazy = () -> CardServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardServiceTypeCode.mmObject();
 			codeName = "SFDS";
 		}
 	};
@@ -240,12 +244,12 @@ public class CardServiceTypeCode {
 	 * "Detection whether communication at application level is still active."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEchoTest = new MMCode() {
+	public static final CardServiceTypeCode EchoTest = new CardServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EchoTest";
 			definition = "Detection whether communication at application level is still active.";
-			owner_lazy = () -> CardServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardServiceTypeCode.mmObject();
 			codeName = "ECHO";
 		}
 	};
@@ -273,12 +277,12 @@ public class CardServiceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEnableStoreForward = new MMCode() {
+	public static final CardServiceTypeCode EnableStoreForward = new CardServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnableStoreForward";
 			definition = "Establish communication at application level to start store and forward process.";
-			owner_lazy = () -> CardServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardServiceTypeCode.mmObject();
 			codeName = "SFEN";
 		}
 	};
@@ -303,12 +307,12 @@ public class CardServiceTypeCode {
 	 * definition} = "Establish communication at application level."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSignOn = new MMCode() {
+	public static final CardServiceTypeCode SignOn = new CardServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignOn";
 			definition = "Establish communication at application level.";
-			owner_lazy = () -> CardServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardServiceTypeCode.mmObject();
 			codeName = "SGNN";
 		}
 	};
@@ -333,12 +337,12 @@ public class CardServiceTypeCode {
 	 * definition} = "Terminate communication at application level."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSignOff = new MMCode() {
+	public static final CardServiceTypeCode SignOff = new CardServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignOff";
 			definition = "Terminate communication at application level.";
-			owner_lazy = () -> CardServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardServiceTypeCode.mmObject();
 			codeName = "SGNF";
 		}
 	};
@@ -364,12 +368,12 @@ public class CardServiceTypeCode {
 	 * "Request the keys that the receiver must send in the response."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmKeyChange = new MMCode() {
+	public static final CardServiceTypeCode KeyChange = new CardServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyChange";
 			definition = "Request the keys that the receiver must send in the response.";
-			owner_lazy = () -> CardServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardServiceTypeCode.mmObject();
 			codeName = "KYCG";
 		}
 	};
@@ -394,12 +398,12 @@ public class CardServiceTypeCode {
 	 * definition} = "Deliver the key to be change by the receiver."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeliverKey = new MMCode() {
+	public static final CardServiceTypeCode DeliverKey = new CardServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverKey";
 			definition = "Deliver the key to be change by the receiver.";
-			owner_lazy = () -> CardServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardServiceTypeCode.mmObject();
 			codeName = "KYDL";
 		}
 	};
@@ -424,28 +428,69 @@ public class CardServiceTypeCode {
 	 * definition} = "Request the receiver to verify the key check value."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmKeyVerification = new MMCode() {
+	public static final CardServiceTypeCode KeyVerification = new CardServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyVerification";
 			definition = "Request the receiver to verify the key check value.";
-			owner_lazy = () -> CardServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardServiceTypeCode.mmObject();
 			codeName = "KYVF";
 		}
 	};
+	final static private LinkedHashMap<String, CardServiceTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CardServiceTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardServiceTypeCode";
 				definition = "Type of administrative service.";
-				code_lazy = () -> Arrays.asList(CardServiceTypeCode.mmCheckPoint, CardServiceTypeCode.mmFinal, CardServiceTypeCode.mmTotalInquiry, CardServiceTypeCode.mmDisableStoreForward, CardServiceTypeCode.mmEchoTest,
-						CardServiceTypeCode.mmEnableStoreForward, CardServiceTypeCode.mmSignOn, CardServiceTypeCode.mmSignOff, CardServiceTypeCode.mmKeyChange, CardServiceTypeCode.mmDeliverKey, CardServiceTypeCode.mmKeyVerification);
 				derivation_lazy = () -> Arrays.asList(CardServiceType2Code.mmObject(), CardServiceType1Code.mmObject(), CardServiceType3Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardServiceTypeCode.CheckPoint, com.tools20022.repository.codeset.CardServiceTypeCode.Final,
+						com.tools20022.repository.codeset.CardServiceTypeCode.TotalInquiry, com.tools20022.repository.codeset.CardServiceTypeCode.DisableStoreForward, com.tools20022.repository.codeset.CardServiceTypeCode.EchoTest,
+						com.tools20022.repository.codeset.CardServiceTypeCode.EnableStoreForward, com.tools20022.repository.codeset.CardServiceTypeCode.SignOn, com.tools20022.repository.codeset.CardServiceTypeCode.SignOff,
+						com.tools20022.repository.codeset.CardServiceTypeCode.KeyChange, com.tools20022.repository.codeset.CardServiceTypeCode.DeliverKey, com.tools20022.repository.codeset.CardServiceTypeCode.KeyVerification);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CheckPoint.getCodeName().get(), CheckPoint);
+		codesByName.put(Final.getCodeName().get(), Final);
+		codesByName.put(TotalInquiry.getCodeName().get(), TotalInquiry);
+		codesByName.put(DisableStoreForward.getCodeName().get(), DisableStoreForward);
+		codesByName.put(EchoTest.getCodeName().get(), EchoTest);
+		codesByName.put(EnableStoreForward.getCodeName().get(), EnableStoreForward);
+		codesByName.put(SignOn.getCodeName().get(), SignOn);
+		codesByName.put(SignOff.getCodeName().get(), SignOff);
+		codesByName.put(KeyChange.getCodeName().get(), KeyChange);
+		codesByName.put(DeliverKey.getCodeName().get(), DeliverKey);
+		codesByName.put(KeyVerification.getCodeName().get(), KeyVerification);
+	}
+
+	public static CardServiceTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CardServiceTypeCode[] values() {
+		CardServiceTypeCode[] values = new CardServiceTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CardServiceTypeCode> {
+		@Override
+		public CardServiceTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CardServiceTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

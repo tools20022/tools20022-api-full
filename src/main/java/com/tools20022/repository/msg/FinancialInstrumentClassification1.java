@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.AssetClassification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,17 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrumentClassification1", propOrder = "classificationType")
 public class FinancialInstrumentClassification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ClssfctnTp", required = true)
 	protected SecurityClassificationType1Choice classificationType;
 	/**
-	 * Classification type of the financial instrument, as per the ISO
-	 * Classification of Financial Instrument (CFI) codification, eg, common
-	 * share with voting rights, fully paid, or registered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +111,7 @@ public class FinancialInstrumentClassification1 {
 	public static final MMMessageAttribute mmClassificationType = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AssetClassification.mmObject();
-			componentContext_lazy = () -> FinancialInstrumentClassification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentClassification1.mmObject();
 			isDerived = false;
 			xmlTag = "ClssfctnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,9 +126,9 @@ public class FinancialInstrumentClassification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentClassification1.mmClassificationType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentClassification1.mmClassificationType);
 				trace_lazy = () -> AssetClassification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentClassification1";
 				definition = "The classification type of the financial instrument, eg, common share with voting right, fully paid and registered etc.";
@@ -137,12 +137,12 @@ public class FinancialInstrumentClassification1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ClssfctnTp", required = true)
 	public SecurityClassificationType1Choice getClassificationType() {
 		return classificationType;
 	}
 
-	public void setClassificationType(SecurityClassificationType1Choice classificationType) {
-		this.classificationType = classificationType;
+	public FinancialInstrumentClassification1 setClassificationType(SecurityClassificationType1Choice classificationType) {
+		this.classificationType = Objects.requireNonNull(classificationType);
+		return this;
 	}
 }

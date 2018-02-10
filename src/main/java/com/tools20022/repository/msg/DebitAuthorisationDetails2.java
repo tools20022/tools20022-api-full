@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DebitAuthorisationDetails2", propOrder = {"cancellationReason", "amountToDebit", "valueDateToDebit"})
 public class DebitAuthorisationDetails2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CxlRsn", required = true)
 	protected CancellationReason3Code cancellationReason;
 	/**
-	 * Indicates the reason for cancellation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +119,7 @@ public class DebitAuthorisationDetails2 {
 	public static final MMMessageAttribute mmCancellationReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmCancellationReason;
-			componentContext_lazy = () -> DebitAuthorisationDetails2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DebitAuthorisationDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,12 +130,11 @@ public class DebitAuthorisationDetails2 {
 			simpleType_lazy = () -> CancellationReason3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtToDbt")
 	protected CurrencyAndAmount amountToDebit;
 	/**
-	 * Amount of money to be moved between the debtor and creditor, before
-	 * deduction of charges, expressed in the currency as ordered by the
-	 * initiating party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,7 +170,7 @@ public class DebitAuthorisationDetails2 {
 	public static final MMMessageAttribute mmAmountToDebit = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DebitAuthorisation.mmAmountToDebit;
-			componentContext_lazy = () -> DebitAuthorisationDetails2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DebitAuthorisationDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToDbt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,10 +181,11 @@ public class DebitAuthorisationDetails2 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ValDtToDbt")
 	protected ISODate valueDateToDebit;
 	/**
-	 * Value date for debiting the amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,7 +218,7 @@ public class DebitAuthorisationDetails2 {
 	public static final MMMessageAttribute mmValueDateToDebit = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DebitAuthorisation.mmValueDateToDebit;
-			componentContext_lazy = () -> DebitAuthorisationDetails2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DebitAuthorisationDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "ValDtToDbt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,9 +233,10 @@ public class DebitAuthorisationDetails2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DebitAuthorisationDetails2.mmCancellationReason, DebitAuthorisationDetails2.mmAmountToDebit, DebitAuthorisationDetails2.mmValueDateToDebit);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebitAuthorisationDetails2.mmCancellationReason, com.tools20022.repository.msg.DebitAuthorisationDetails2.mmAmountToDebit,
+						com.tools20022.repository.msg.DebitAuthorisationDetails2.mmValueDateToDebit);
 				trace_lazy = () -> DebitAuthorisation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DebitAuthorisationDetails2";
 				definition = "Provides the reason for requesting a debit authorisation as well as the amount of the requested debit.";
@@ -241,30 +245,30 @@ public class DebitAuthorisationDetails2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CxlRsn", required = true)
 	public CancellationReason3Code getCancellationReason() {
 		return cancellationReason;
 	}
 
-	public void setCancellationReason(CancellationReason3Code cancellationReason) {
-		this.cancellationReason = cancellationReason;
+	public DebitAuthorisationDetails2 setCancellationReason(CancellationReason3Code cancellationReason) {
+		this.cancellationReason = Objects.requireNonNull(cancellationReason);
+		return this;
 	}
 
-	@XmlElement(name = "AmtToDbt")
-	public CurrencyAndAmount getAmountToDebit() {
-		return amountToDebit;
+	public Optional<CurrencyAndAmount> getAmountToDebit() {
+		return amountToDebit == null ? Optional.empty() : Optional.of(amountToDebit);
 	}
 
-	public void setAmountToDebit(CurrencyAndAmount amountToDebit) {
+	public DebitAuthorisationDetails2 setAmountToDebit(CurrencyAndAmount amountToDebit) {
 		this.amountToDebit = amountToDebit;
+		return this;
 	}
 
-	@XmlElement(name = "ValDtToDbt")
-	public ISODate getValueDateToDebit() {
-		return valueDateToDebit;
+	public Optional<ISODate> getValueDateToDebit() {
+		return valueDateToDebit == null ? Optional.empty() : Optional.of(valueDateToDebit);
 	}
 
-	public void setValueDateToDebit(ISODate valueDateToDebit) {
+	public DebitAuthorisationDetails2 setValueDateToDebit(ISODate valueDateToDebit) {
 		this.valueDateToDebit = valueDateToDebit;
+		return this;
 	}
 }

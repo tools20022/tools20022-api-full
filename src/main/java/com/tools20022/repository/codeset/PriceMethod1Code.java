@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PriceMethodCode;
+import com.tools20022.repository.codeset.PriceMethod1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of pricing calculation method.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PriceMethodCode
- * PriceMethodCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceMethod1Code#mmForwardPrice
- * PriceMethod1Code.mmForwardPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceMethod1Code#ForwardPrice
+ * PriceMethod1Code.ForwardPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceMethod1Code#mmHistoricalPrice
- * PriceMethod1Code.mmHistoricalPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceMethod1Code#HistoricalPrice
+ * PriceMethod1Code.HistoricalPrice}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PriceMethodCode
+ * PriceMethodCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of pricing calculation method."</li>
  * </ul>
  */
-public class PriceMethod1Code extends PriceMethodCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PriceMethod1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class PriceMethod1Code extends PriceMethodCode {
 	 * name} = "ForwardPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForwardPrice = new MMCode() {
+	public static final PriceMethod1Code ForwardPrice = new PriceMethod1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardPrice";
-			owner_lazy = () -> PriceMethod1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceMethod1Code.mmObject();
+			codeName = PriceMethodCode.ForwardPrice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class PriceMethod1Code extends PriceMethodCode {
 	 * name} = "HistoricalPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHistoricalPrice = new MMCode() {
+	public static final PriceMethod1Code HistoricalPrice = new PriceMethod1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HistoricalPrice";
-			owner_lazy = () -> PriceMethod1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceMethod1Code.mmObject();
+			codeName = PriceMethodCode.HistoricalPrice.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PriceMethod1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PriceMethod1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FORW");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceMethod1Code";
 				definition = "Specifies the type of pricing calculation method.";
-				code_lazy = () -> Arrays.asList(PriceMethod1Code.mmForwardPrice, PriceMethod1Code.mmHistoricalPrice);
 				trace_lazy = () -> PriceMethodCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceMethod1Code.ForwardPrice, com.tools20022.repository.codeset.PriceMethod1Code.HistoricalPrice);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ForwardPrice.getCodeName().get(), ForwardPrice);
+		codesByName.put(HistoricalPrice.getCodeName().get(), HistoricalPrice);
+	}
+
+	public static PriceMethod1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PriceMethod1Code[] values() {
+		PriceMethod1Code[] values = new PriceMethod1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PriceMethod1Code> {
+		@Override
+		public PriceMethod1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PriceMethod1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

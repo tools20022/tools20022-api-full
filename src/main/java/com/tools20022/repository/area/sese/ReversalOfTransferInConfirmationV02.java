@@ -24,6 +24,8 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -53,28 +55,14 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
- * SecuritiesSettlementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "RvslOfTrfInConfV02"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02#mmReversalByReferenceOrByTransferInConfirmationDetailsRule
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02#ReversalByReferenceOrByTransferInConfirmationDetailsRule
  * ReversalOfTransferInConfirmationV02.
- * mmReversalByReferenceOrByTransferInConfirmationDetailsRule}</li>
+ * ReversalByReferenceOrByTransferInConfirmationDetailsRule}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -103,6 +91,20 @@ import javax.xml.bind.annotation.*;
  * ReversalOfTransferInConfirmationV02.mmCopyDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "RvslOfTrfInConfV02"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
+ * SecuritiesSettlementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.008.001.02}</li>
@@ -130,7 +132,7 @@ import javax.xml.bind.annotation.*;
  * ReversalOfTransferInConfirmation}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReversalOfTransferInConfirmationV02", propOrder = {"messageIdentification", "previousReference", "poolReference", "relatedReference", "reversalByReference", "reversalByTransferInConfirmationDetails", "copyDetails"})
 public class ReversalOfTransferInConfirmationV02 {
 
@@ -171,7 +173,7 @@ public class ReversalOfTransferInConfirmationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmReversalByReferenceOrByTransferInConfirmationDetailsRule = new MMXor() {
+	public static final MMXor ReversalByReferenceOrByTransferInConfirmationDetailsRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalByReferenceOrByTransferInConfirmationDetailsRule";
@@ -181,11 +183,11 @@ public class ReversalOfTransferInConfirmationV02 {
 					com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02.mmReversalByTransferInConfirmationDetails);
 		}
 	};
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Reference that uniquely identifies a message from a business application
-	 * standpoint.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -227,10 +229,11 @@ public class ReversalOfTransferInConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsRef")
 	protected AdditionalReference2 previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -270,10 +273,11 @@ public class ReversalOfTransferInConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PoolRef")
 	protected AdditionalReference2 poolReference;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -313,10 +317,11 @@ public class ReversalOfTransferInConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdRef")
 	protected AdditionalReference2 relatedReference;
 	/**
-	 * Reference to a linked message that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -357,10 +362,11 @@ public class ReversalOfTransferInConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "RvslByRef")
 	protected TransferReference2 reversalByReference;
 	/**
-	 * Reference of the transfer in confirmation to be reversed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -401,10 +407,11 @@ public class ReversalOfTransferInConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "RvslByTrfInConfDtls")
 	protected TransferIn4 reversalByTransferInConfirmationDetails;
 	/**
-	 * Copy of the transfer in confirmation to reverse.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -443,10 +450,11 @@ public class ReversalOfTransferInConfirmationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CpyDtls")
 	protected CopyInformation2 copyDetails;
 	/**
-	 * Information provided when the message is a copy of a previous message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -497,7 +505,7 @@ public class ReversalOfTransferInConfirmationV02 {
 				nextVersions_lazy = () -> Arrays.asList(ReversalOfTransferInConfirmationV03.mmObject());
 				previousVersion_lazy = () -> ReversalOfTransferInConfirmation.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02.mmReversalByReferenceOrByTransferInConfirmationDetailsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV02.ReversalByReferenceOrByTransferInConfirmationDetailsRule);
 				rootElement = "Document";
 				xmlTag = "RvslOfTrfInConfV02";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
@@ -523,70 +531,70 @@ public class ReversalOfTransferInConfirmationV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public ReversalOfTransferInConfirmationV02 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef")
-	public AdditionalReference2 getPreviousReference() {
-		return previousReference;
+	public Optional<AdditionalReference2> getPreviousReference() {
+		return previousReference == null ? Optional.empty() : Optional.of(previousReference);
 	}
 
-	public void setPreviousReference(AdditionalReference2 previousReference) {
+	public ReversalOfTransferInConfirmationV02 setPreviousReference(AdditionalReference2 previousReference) {
 		this.previousReference = previousReference;
+		return this;
 	}
 
-	@XmlElement(name = "PoolRef")
-	public AdditionalReference2 getPoolReference() {
-		return poolReference;
+	public Optional<AdditionalReference2> getPoolReference() {
+		return poolReference == null ? Optional.empty() : Optional.of(poolReference);
 	}
 
-	public void setPoolReference(AdditionalReference2 poolReference) {
+	public ReversalOfTransferInConfirmationV02 setPoolReference(AdditionalReference2 poolReference) {
 		this.poolReference = poolReference;
+		return this;
 	}
 
-	@XmlElement(name = "RltdRef")
-	public AdditionalReference2 getRelatedReference() {
-		return relatedReference;
+	public Optional<AdditionalReference2> getRelatedReference() {
+		return relatedReference == null ? Optional.empty() : Optional.of(relatedReference);
 	}
 
-	public void setRelatedReference(AdditionalReference2 relatedReference) {
+	public ReversalOfTransferInConfirmationV02 setRelatedReference(AdditionalReference2 relatedReference) {
 		this.relatedReference = relatedReference;
+		return this;
 	}
 
-	@XmlElement(name = "RvslByRef")
-	public TransferReference2 getReversalByReference() {
-		return reversalByReference;
+	public Optional<TransferReference2> getReversalByReference() {
+		return reversalByReference == null ? Optional.empty() : Optional.of(reversalByReference);
 	}
 
-	public void setReversalByReference(TransferReference2 reversalByReference) {
+	public ReversalOfTransferInConfirmationV02 setReversalByReference(TransferReference2 reversalByReference) {
 		this.reversalByReference = reversalByReference;
+		return this;
 	}
 
-	@XmlElement(name = "RvslByTrfInConfDtls")
-	public TransferIn4 getReversalByTransferInConfirmationDetails() {
-		return reversalByTransferInConfirmationDetails;
+	public Optional<TransferIn4> getReversalByTransferInConfirmationDetails() {
+		return reversalByTransferInConfirmationDetails == null ? Optional.empty() : Optional.of(reversalByTransferInConfirmationDetails);
 	}
 
-	public void setReversalByTransferInConfirmationDetails(TransferIn4 reversalByTransferInConfirmationDetails) {
+	public ReversalOfTransferInConfirmationV02 setReversalByTransferInConfirmationDetails(TransferIn4 reversalByTransferInConfirmationDetails) {
 		this.reversalByTransferInConfirmationDetails = reversalByTransferInConfirmationDetails;
+		return this;
 	}
 
-	@XmlElement(name = "CpyDtls")
-	public CopyInformation2 getCopyDetails() {
-		return copyDetails;
+	public Optional<CopyInformation2> getCopyDetails() {
+		return copyDetails == null ? Optional.empty() : Optional.of(copyDetails);
 	}
 
-	public void setCopyDetails(CopyInformation2 copyDetails) {
+	public ReversalOfTransferInConfirmationV02 setCopyDetails(CopyInformation2 copyDetails) {
 		this.copyDetails = copyDetails;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.008.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.008.001.02")
 	static public class Document {
 		@XmlElement(name = "RvslOfTrfInConfV02", required = true)
 		public ReversalOfTransferInConfirmationV02 messageBody;

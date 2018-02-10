@@ -28,6 +28,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Specifies the status of the security within its lifecycle.
@@ -38,6 +40,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -53,8 +57,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesStatus.mmSecurity}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmSecurityStatus
+ * Security.mmSecurityStatus}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -82,18 +92,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmSecurityStatus
- * Security.mmSecurityStatus}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -109,8 +111,8 @@ public class SecuritiesStatus extends Status {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected SecuritiesPaymentStatusCode paymentStatus;
 	/**
-	 * Status of payment of a security at a particular time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,8 +253,8 @@ public class SecuritiesStatus extends Status {
 					FinancialInstrumentAttributes2.mmPaymentStatus, FinancialInstrumentAttributes63.mmPaymentStatus, FinancialInstrumentAttributes64.mmPaymentStatus, SecuritiesPaymentStatus5Choice.mmCode,
 					SecuritiesPaymentStatus5Choice.mmProprietary, FinancialInstrumentAttributes75.mmPaymentStatus, FinancialInstrumentAttributes78.mmPaymentStatus, SecuritiesPaymentStatus6Choice.mmCode,
 					SecuritiesPaymentStatus6Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentStatus";
 			definition = "Status of payment of a security at a particular time.";
@@ -271,8 +273,8 @@ public class SecuritiesStatus extends Status {
 	};
 	protected SecurityStatusCode status;
 	/**
-	 * Specifies the status of the security within its lifecycle.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -308,8 +310,8 @@ public class SecuritiesStatus extends Status {
 	public static final MMBusinessAttribute mmStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmSecurityStatus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
 			definition = "Specifies the status of the security within its lifecycle.";
@@ -328,8 +330,8 @@ public class SecuritiesStatus extends Status {
 	};
 	protected RegistrationProcessingStatusCode registrationStatus;
 	/**
-	 * Specifies the status of the registration of the securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -374,8 +376,8 @@ public class SecuritiesStatus extends Status {
 	public static final MMBusinessAttribute mmRegistrationStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RegistrationProcessingStatus1Choice.mmCode, RegistrationProcessingStatus2Choice.mmCode, RegistrationProcessingStatus3Choice.mmCode, RegistrationProcessingStatus4Choice.mmCode);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationStatus";
 			definition = "Specifies the status of the registration of the securities.";
@@ -394,8 +396,8 @@ public class SecuritiesStatus extends Status {
 	};
 	protected Security security;
 	/**
-	 * Security for which a status is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -427,8 +429,8 @@ public class SecuritiesStatus extends Status {
 	 */
 	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Security for which a status is provided.";
@@ -443,7 +445,7 @@ public class SecuritiesStatus extends Status {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesStatus";
 				definition = "Specifies the status of the security within its lifecycle.";
@@ -467,31 +469,35 @@ public class SecuritiesStatus extends Status {
 		return paymentStatus;
 	}
 
-	public void setPaymentStatus(SecuritiesPaymentStatusCode paymentStatus) {
-		this.paymentStatus = paymentStatus;
+	public SecuritiesStatus setPaymentStatus(SecuritiesPaymentStatusCode paymentStatus) {
+		this.paymentStatus = Objects.requireNonNull(paymentStatus);
+		return this;
 	}
 
 	public SecurityStatusCode getStatus() {
 		return status;
 	}
 
-	public void setStatus(SecurityStatusCode status) {
-		this.status = status;
+	public SecuritiesStatus setStatus(SecurityStatusCode status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
 	public RegistrationProcessingStatusCode getRegistrationStatus() {
 		return registrationStatus;
 	}
 
-	public void setRegistrationStatus(RegistrationProcessingStatusCode registrationStatus) {
-		this.registrationStatus = registrationStatus;
+	public SecuritiesStatus setRegistrationStatus(RegistrationProcessingStatusCode registrationStatus) {
+		this.registrationStatus = Objects.requireNonNull(registrationStatus);
+		return this;
 	}
 
-	public Security getSecurity() {
-		return security;
+	public Optional<Security> getSecurity() {
+		return security == null ? Optional.empty() : Optional.of(security);
 	}
 
-	public void setSecurity(com.tools20022.repository.entity.Security security) {
+	public SecuritiesStatus setSecurity(com.tools20022.repository.entity.Security security) {
 		this.security = security;
+		return this;
 	}
 }

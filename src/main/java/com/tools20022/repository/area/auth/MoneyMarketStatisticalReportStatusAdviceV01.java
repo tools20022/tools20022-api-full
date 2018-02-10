@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.MoneyMarketStatisticalReportingISOLatestversion;
 import com.tools20022.repository.msgset.MoneyMarketStatisticalReportingISOPreviousversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -40,25 +42,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
- * AuthoritiesLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.MoneyMarketStatisticalReportingISOPreviousversion
- * MoneyMarketStatisticalReportingISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.MoneyMarketStatisticalReportingISOLatestversion
- * MoneyMarketStatisticalReportingISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "MnyMktSttstclRptStsAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -74,6 +57,25 @@ import javax.xml.bind.annotation.*;
  * MoneyMarketStatisticalReportStatusAdviceV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.MoneyMarketStatisticalReportingISOPreviousversion
+ * MoneyMarketStatisticalReportingISOPreviousversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.MoneyMarketStatisticalReportingISOLatestversion
+ * MoneyMarketStatisticalReportingISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "MnyMktSttstclRptStsAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
+ * AuthoritiesLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code auth.028.001.01}</li>
@@ -89,15 +91,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MoneyMarketStatisticalReportStatusAdviceV01", propOrder = {"statusReportHeader", "transactionStatus", "supplementaryData"})
 public class MoneyMarketStatisticalReportStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StsRptHdr", required = true)
 	protected MoneyMarketStatusReportHeader1 statusReportHeader;
 	/**
-	 * Provides the status on the global report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,11 +140,11 @@ public class MoneyMarketStatisticalReportStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "TxSts")
 	protected List<MoneyMarketTransactionStatus2> transactionStatus;
 	/**
-	 * Provides the status on an individual transaction and the related reason
-	 * if required.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -182,11 +185,11 @@ public class MoneyMarketStatisticalReportStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -258,34 +261,34 @@ public class MoneyMarketStatisticalReportStatusAdviceV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StsRptHdr", required = true)
 	public MoneyMarketStatusReportHeader1 getStatusReportHeader() {
 		return statusReportHeader;
 	}
 
-	public void setStatusReportHeader(MoneyMarketStatusReportHeader1 statusReportHeader) {
-		this.statusReportHeader = statusReportHeader;
+	public MoneyMarketStatisticalReportStatusAdviceV01 setStatusReportHeader(MoneyMarketStatusReportHeader1 statusReportHeader) {
+		this.statusReportHeader = Objects.requireNonNull(statusReportHeader);
+		return this;
 	}
 
-	@XmlElement(name = "TxSts")
 	public List<MoneyMarketTransactionStatus2> getTransactionStatus() {
-		return transactionStatus;
+		return transactionStatus == null ? transactionStatus = new ArrayList<>() : transactionStatus;
 	}
 
-	public void setTransactionStatus(List<MoneyMarketTransactionStatus2> transactionStatus) {
-		this.transactionStatus = transactionStatus;
+	public MoneyMarketStatisticalReportStatusAdviceV01 setTransactionStatus(List<MoneyMarketTransactionStatus2> transactionStatus) {
+		this.transactionStatus = Objects.requireNonNull(transactionStatus);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public MoneyMarketStatisticalReportStatusAdviceV01 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.028.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:auth.028.001.01")
 	static public class Document {
 		@XmlElement(name = "MnyMktSttstclRptStsAdvc", required = true)
 		public MoneyMarketStatisticalReportStatusAdviceV01 messageBody;

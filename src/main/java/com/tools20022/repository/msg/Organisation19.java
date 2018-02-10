@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * Organisation18}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Organisation19", propOrder = {"identification", "commonName", "selectedLanguage", "schemeData"})
 public class Organisation19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected GenericIdentification32 identification;
 	/**
-	 * Identification of the card acceptor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -122,7 +125,7 @@ public class Organisation19 {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Organisation19.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation19.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,12 +138,11 @@ public class Organisation19 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	@XmlElement(name = "CmonNm", required = true)
 	protected Max70Text commonName;
 	/**
-	 * Name of the card acceptor as appearing on the receipt or the statement of
-	 * account of the cardholder.<br>
-	 * It correspond to the ISO 8583, field number 43.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,7 +181,7 @@ public class Organisation19 {
 	public static final MMMessageAttribute mmCommonName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationName.mmShortName;
-			componentContext_lazy = () -> Organisation19.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation19.mmObject();
 			isDerived = false;
 			xmlTag = "CmonNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,11 +193,11 @@ public class Organisation19 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SelctdLang")
 	protected LanguageCode selectedLanguage;
 	/**
-	 * Selected language of the card acceptor. Reference ISO 639-1 (alpha-2) and
-	 * ISO 639-2 (alpha-3).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,7 +230,7 @@ public class Organisation19 {
 	 */
 	public static final MMMessageAttribute mmSelectedLanguage = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Organisation19.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation19.mmObject();
 			isDerived = false;
 			xmlTag = "SelctdLang";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,10 +242,11 @@ public class Organisation19 {
 			simpleType_lazy = () -> LanguageCode.mmObject();
 		}
 	};
+	@XmlElement(name = "SchmeData")
 	protected Max140Text schemeData;
 	/**
-	 * Additional card acceptor data required by a card scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -274,7 +277,7 @@ public class Organisation19 {
 	 */
 	public static final MMMessageAttribute mmSchemeData = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Organisation19.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation19.mmObject();
 			isDerived = false;
 			xmlTag = "SchmeData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -290,9 +293,10 @@ public class Organisation19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Organisation19.mmIdentification, Organisation19.mmCommonName, Organisation19.mmSelectedLanguage, Organisation19.mmSchemeData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation19.mmIdentification, com.tools20022.repository.msg.Organisation19.mmCommonName,
+						com.tools20022.repository.msg.Organisation19.mmSelectedLanguage, com.tools20022.repository.msg.Organisation19.mmSchemeData);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Organisation19";
 				definition = "Card acceptor performing the transaction.";
@@ -302,39 +306,39 @@ public class Organisation19 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public GenericIdentification32 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
-		this.identification = identification;
+	public Organisation19 setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "CmonNm", required = true)
 	public Max70Text getCommonName() {
 		return commonName;
 	}
 
-	public void setCommonName(Max70Text commonName) {
-		this.commonName = commonName;
+	public Organisation19 setCommonName(Max70Text commonName) {
+		this.commonName = Objects.requireNonNull(commonName);
+		return this;
 	}
 
-	@XmlElement(name = "SelctdLang")
-	public LanguageCode getSelectedLanguage() {
-		return selectedLanguage;
+	public Optional<LanguageCode> getSelectedLanguage() {
+		return selectedLanguage == null ? Optional.empty() : Optional.of(selectedLanguage);
 	}
 
-	public void setSelectedLanguage(LanguageCode selectedLanguage) {
+	public Organisation19 setSelectedLanguage(LanguageCode selectedLanguage) {
 		this.selectedLanguage = selectedLanguage;
+		return this;
 	}
 
-	@XmlElement(name = "SchmeData")
-	public Max140Text getSchemeData() {
-		return schemeData;
+	public Optional<Max140Text> getSchemeData() {
+		return schemeData == null ? Optional.empty() : Optional.of(schemeData);
 	}
 
-	public void setSchemeData(Max140Text schemeData) {
+	public Organisation19 setSchemeData(Max140Text schemeData) {
 		this.schemeData = schemeData;
+		return this;
 	}
 }

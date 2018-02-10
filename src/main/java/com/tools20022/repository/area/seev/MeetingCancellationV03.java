@@ -26,9 +26,8 @@ import com.tools20022.repository.choice.PartyIdentification9Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -47,20 +46,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
- * SecuritiesEventsArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "MtgCxl"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -85,9 +70,42 @@ import javax.xml.bind.annotation.*;
  * MeetingCancellationV03.mmReason}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "MtgCxl"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
+ * SecuritiesEventsArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.002.001.03}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCancellation1Guideline#forMeetingCancellationV03
+ * ConstraintCancellation1Guideline.forMeetingCancellationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCancellation2Guideline#forMeetingCancellationV03
+ * ConstraintCancellation2Guideline.forMeetingCancellationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMeetingIdentificationAndPreviousReference1Guideline#forMeetingCancellationV03
+ * ConstraintMeetingIdentificationAndPreviousReference1Guideline.
+ * forMeetingCancellationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMeetingIdentificationAndPreviousReference2Guideline#forMeetingCancellationV03
+ * ConstraintMeetingIdentificationAndPreviousReference2Guideline.
+ * forMeetingCancellationV03}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,15 +129,16 @@ import javax.xml.bind.annotation.*;
  * MeetingCancellationV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MeetingCancellationV03", propOrder = {"identification", "messageCancellation", "meetingReference", "notifyingParty", "security", "reason"})
 public class MeetingCancellationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected MessageIdentification1 identification;
 	/**
-	 * Identifies the cancellation message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,11 +178,11 @@ public class MeetingCancellationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "MsgCxl")
 	protected AmendInformation1 messageCancellation;
 	/**
-	 * Information indicating that the cancellation of a message previously sent
-	 * is requested (and not the cancellation of the meeting).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -205,10 +224,11 @@ public class MeetingCancellationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "MtgRef", required = true)
 	protected MeetingReference5 meetingReference;
 	/**
-	 * Series of elements which allow to identify a meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -248,10 +268,11 @@ public class MeetingCancellationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "NtifngPty")
 	protected PartyIdentification9Choice notifyingParty;
 	/**
-	 * Party notifying the cancellation of the meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -291,10 +312,11 @@ public class MeetingCancellationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Scty")
 	protected List<SecurityPosition6> security;
 	/**
-	 * Identifies the security for which the meeting was organised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -335,10 +357,11 @@ public class MeetingCancellationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Rsn", required = true)
 	protected MeetingCancellationReason2 reason;
 	/**
-	 * Defines the justification for the cancellation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -382,6 +405,10 @@ public class MeetingCancellationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCancellation1Guideline.forMeetingCancellationV03,
+						com.tools20022.repository.constraints.ConstraintCancellation2Guideline.forMeetingCancellationV03,
+						com.tools20022.repository.constraints.ConstraintMeetingIdentificationAndPreviousReference1Guideline.forMeetingCancellationV03,
+						com.tools20022.repository.constraints.ConstraintMeetingIdentificationAndPreviousReference2Guideline.forMeetingCancellationV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingCancellationV03";
 				definition = "Scope\r\nThe MeetingCancellation message is sent by the party that sent the MeetingNotification message to the original receiver. It is sent to cancel the previous MeetingNotification message or to advise the cancellation of a meeting.\r\nUsage\r\nThe MeetingCancellation message is used in two different situations.\r\nFirst, it is used to cancel a previously sent MeetingNotification message. In this case, the MessageCancellation, the MeetingReference and the Reason building blocks need to be present.\r\nSecond, it is used to advise that the meeting is cancelled. In this case, only the MeetingReference and Reason building blocks need to be present.";
@@ -412,61 +439,61 @@ public class MeetingCancellationV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public MessageIdentification1 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(MessageIdentification1 identification) {
-		this.identification = identification;
+	public MeetingCancellationV03 setIdentification(MessageIdentification1 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "MsgCxl")
-	public AmendInformation1 getMessageCancellation() {
-		return messageCancellation;
+	public Optional<AmendInformation1> getMessageCancellation() {
+		return messageCancellation == null ? Optional.empty() : Optional.of(messageCancellation);
 	}
 
-	public void setMessageCancellation(AmendInformation1 messageCancellation) {
+	public MeetingCancellationV03 setMessageCancellation(AmendInformation1 messageCancellation) {
 		this.messageCancellation = messageCancellation;
+		return this;
 	}
 
-	@XmlElement(name = "MtgRef", required = true)
 	public MeetingReference5 getMeetingReference() {
 		return meetingReference;
 	}
 
-	public void setMeetingReference(MeetingReference5 meetingReference) {
-		this.meetingReference = meetingReference;
+	public MeetingCancellationV03 setMeetingReference(MeetingReference5 meetingReference) {
+		this.meetingReference = Objects.requireNonNull(meetingReference);
+		return this;
 	}
 
-	@XmlElement(name = "NtifngPty")
-	public PartyIdentification9Choice getNotifyingParty() {
-		return notifyingParty;
+	public Optional<PartyIdentification9Choice> getNotifyingParty() {
+		return notifyingParty == null ? Optional.empty() : Optional.of(notifyingParty);
 	}
 
-	public void setNotifyingParty(PartyIdentification9Choice notifyingParty) {
+	public MeetingCancellationV03 setNotifyingParty(PartyIdentification9Choice notifyingParty) {
 		this.notifyingParty = notifyingParty;
+		return this;
 	}
 
-	@XmlElement(name = "Scty")
 	public List<SecurityPosition6> getSecurity() {
-		return security;
+		return security == null ? security = new ArrayList<>() : security;
 	}
 
-	public void setSecurity(List<SecurityPosition6> security) {
-		this.security = security;
+	public MeetingCancellationV03 setSecurity(List<SecurityPosition6> security) {
+		this.security = Objects.requireNonNull(security);
+		return this;
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public MeetingCancellationReason2 getReason() {
 		return reason;
 	}
 
-	public void setReason(MeetingCancellationReason2 reason) {
-		this.reason = reason;
+	public MeetingCancellationV03 setReason(MeetingCancellationReason2 reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.002.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.002.001.03")
 	static public class Document {
 		@XmlElement(name = "MtgCxl", required = true)
 		public MeetingCancellationV03 messageBody;

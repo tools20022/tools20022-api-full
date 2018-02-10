@@ -25,9 +25,8 @@ import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.entity.Expiry;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Expiry and extension information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ExpiryDetails1", propOrder = {"expiryTerms", "additionalExpiryInformation"})
 public class ExpiryDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "XpryTerms")
 	protected ExpiryTerms1 expiryTerms;
 	/**
-	 * Terms defining when the undertaking will cease to be available.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -106,7 +106,7 @@ public class ExpiryDetails1 {
 	public static final MMMessageAssociationEnd mmExpiryTerms = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmExpiry;
-			componentContext_lazy = () -> ExpiryDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExpiryDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "XpryTerms";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +118,11 @@ public class ExpiryDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.ExpiryTerms1.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlXpryInf")
 	protected List<Max2000Text> additionalExpiryInformation;
 	/**
-	 * Additional information related to the expiry and expiry extension.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,7 +149,7 @@ public class ExpiryDetails1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalExpiryInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ExpiryDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExpiryDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlXpryInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,9 +164,9 @@ public class ExpiryDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ExpiryDetails1.mmExpiryTerms, ExpiryDetails1.mmAdditionalExpiryInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpiryDetails1.mmExpiryTerms, com.tools20022.repository.msg.ExpiryDetails1.mmAdditionalExpiryInformation);
 				trace_lazy = () -> Expiry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExpiryDetails1";
 				definition = "Expiry and extension information.";
@@ -174,21 +175,21 @@ public class ExpiryDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "XpryTerms")
-	public ExpiryTerms1 getExpiryTerms() {
-		return expiryTerms;
+	public Optional<ExpiryTerms1> getExpiryTerms() {
+		return expiryTerms == null ? Optional.empty() : Optional.of(expiryTerms);
 	}
 
-	public void setExpiryTerms(com.tools20022.repository.msg.ExpiryTerms1 expiryTerms) {
+	public ExpiryDetails1 setExpiryTerms(com.tools20022.repository.msg.ExpiryTerms1 expiryTerms) {
 		this.expiryTerms = expiryTerms;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlXpryInf")
 	public List<Max2000Text> getAdditionalExpiryInformation() {
-		return additionalExpiryInformation;
+		return additionalExpiryInformation == null ? additionalExpiryInformation = new ArrayList<>() : additionalExpiryInformation;
 	}
 
-	public void setAdditionalExpiryInformation(List<Max2000Text> additionalExpiryInformation) {
-		this.additionalExpiryInformation = additionalExpiryInformation;
+	public ExpiryDetails1 setAdditionalExpiryInformation(List<Max2000Text> additionalExpiryInformation) {
+		this.additionalExpiryInformation = Objects.requireNonNull(additionalExpiryInformation);
+		return this;
 	}
 }

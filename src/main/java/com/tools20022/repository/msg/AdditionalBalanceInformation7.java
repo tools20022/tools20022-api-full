@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -31,6 +32,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +67,23 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSubBalanceAdditionalDetailsRule#forAdditionalBalanceInformation7
+ * ConstraintSubBalanceAdditionalDetailsRule.forAdditionalBalanceInformation7}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintEligibleForCollateralPurposesRule#forAdditionalBalanceInformation7
+ * ConstraintEligibleForCollateralPurposesRule.forAdditionalBalanceInformation7}
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule#forAdditionalBalanceInformation7
+ * ConstraintCoexistenceQuantityRule.forAdditionalBalanceInformation7}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -79,15 +97,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AdditionalBalanceInformation7", propOrder = {"subBalanceType", "quantity", "subBalanceAdditionalDetails"})
 public class AdditionalBalanceInformation7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SubBalTp", required = true)
 	protected SubBalanceType8Choice subBalanceType;
 	/**
-	 * Reason for the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -107,6 +126,9 @@ public class AdditionalBalanceInformation7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SubBalTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a::4!c</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -120,9 +142,10 @@ public class AdditionalBalanceInformation7 {
 	public static final MMMessageAssociationEnd mmSubBalanceType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
-			componentContext_lazy = () -> AdditionalBalanceInformation7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "SubBalTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceType";
 			definition = "Reason for the sub-balance.";
@@ -132,10 +155,11 @@ public class AdditionalBalanceInformation7 {
 			type_lazy = () -> SubBalanceType8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Qty", required = true)
 	protected SubBalanceQuantity4Choice quantity;
 	/**
-	 * Quantity of securities in the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,6 +179,9 @@ public class AdditionalBalanceInformation7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Qty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -168,9 +195,10 @@ public class AdditionalBalanceInformation7 {
 	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSubBalanceQuantity;
-			componentContext_lazy = () -> AdditionalBalanceInformation7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of securities in the sub-balance.";
@@ -180,10 +208,11 @@ public class AdditionalBalanceInformation7 {
 			type_lazy = () -> SubBalanceQuantity4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SubBalAddtlDtls")
 	protected RestrictedFINXMax140Text subBalanceAdditionalDetails;
 	/**
-	 * Provides additional subbalance information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,6 +228,9 @@ public class AdditionalBalanceInformation7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SubBalAddtlDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70C::SUBB</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -211,9 +243,10 @@ public class AdditionalBalanceInformation7 {
 	 */
 	public static final MMMessageAttribute mmSubBalanceAdditionalDetails = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AdditionalBalanceInformation7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "SubBalAddtlDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70C::SUBB"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetails";
 			definition = "Provides additional subbalance information.";
@@ -226,9 +259,13 @@ public class AdditionalBalanceInformation7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AdditionalBalanceInformation7.mmSubBalanceType, AdditionalBalanceInformation7.mmQuantity, AdditionalBalanceInformation7.mmSubBalanceAdditionalDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalBalanceInformation7.mmSubBalanceType, com.tools20022.repository.msg.AdditionalBalanceInformation7.mmQuantity,
+						com.tools20022.repository.msg.AdditionalBalanceInformation7.mmSubBalanceAdditionalDetails);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSubBalanceAdditionalDetailsRule.forAdditionalBalanceInformation7,
+						com.tools20022.repository.constraints.ConstraintEligibleForCollateralPurposesRule.forAdditionalBalanceInformation7,
+						com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule.forAdditionalBalanceInformation7);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -244,30 +281,30 @@ public class AdditionalBalanceInformation7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SubBalTp", required = true)
 	public SubBalanceType8Choice getSubBalanceType() {
 		return subBalanceType;
 	}
 
-	public void setSubBalanceType(SubBalanceType8Choice subBalanceType) {
-		this.subBalanceType = subBalanceType;
+	public AdditionalBalanceInformation7 setSubBalanceType(SubBalanceType8Choice subBalanceType) {
+		this.subBalanceType = Objects.requireNonNull(subBalanceType);
+		return this;
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public SubBalanceQuantity4Choice getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(SubBalanceQuantity4Choice quantity) {
-		this.quantity = quantity;
+	public AdditionalBalanceInformation7 setQuantity(SubBalanceQuantity4Choice quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	@XmlElement(name = "SubBalAddtlDtls")
-	public RestrictedFINXMax140Text getSubBalanceAdditionalDetails() {
-		return subBalanceAdditionalDetails;
+	public Optional<RestrictedFINXMax140Text> getSubBalanceAdditionalDetails() {
+		return subBalanceAdditionalDetails == null ? Optional.empty() : Optional.of(subBalanceAdditionalDetails);
 	}
 
-	public void setSubBalanceAdditionalDetails(RestrictedFINXMax140Text subBalanceAdditionalDetails) {
+	public AdditionalBalanceInformation7 setSubBalanceAdditionalDetails(RestrictedFINXMax140Text subBalanceAdditionalDetails) {
 		this.subBalanceAdditionalDetails = subBalanceAdditionalDetails;
+		return this;
 	}
 }

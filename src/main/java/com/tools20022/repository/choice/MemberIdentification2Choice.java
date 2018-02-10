@@ -30,6 +30,7 @@ import com.tools20022.repository.msg.ClearingSystemMemberIdentification2;
 import com.tools20022.repository.msg.GenericFinancialIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,18 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Set of elements used to identify a financial institution."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "MemberIdentification2Choice", propOrder = {"BICFI", "clearingSystemMemberIdentification", "other"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "MemberIdentification2Choice", propOrder = {"bICFI", "clearingSystemMemberIdentification", "other"})
 public class MemberIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BICFI", required = true)
 	protected BICFIIdentifier bICFI;
 	/**
-	 * Code allocated to a financial institution by the ISO 9362 Registration
-	 * Authority as described in ISO 9362
-	 * "Banking - Banking telecommunication messages - Business identifier code (BIC)"
-	 * .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +119,7 @@ public class MemberIdentification2Choice {
 	public static final MMMessageAttribute mmBICFI = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> MemberIdentification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BICFI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +130,11 @@ public class MemberIdentification2Choice {
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "ClrSysMmbId", required = true)
 	protected ClearingSystemMemberIdentification2 clearingSystemMemberIdentification;
 	/**
-	 * Information used to identify a member within a clearing system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -168,7 +168,7 @@ public class MemberIdentification2Choice {
 	public static final MMMessageAssociationEnd mmClearingSystemMemberIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmClearingSystemMemberIdentificationType;
-			componentContext_lazy = () -> MemberIdentification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ClrSysMmbId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,11 +180,11 @@ public class MemberIdentification2Choice {
 			type_lazy = () -> ClearingSystemMemberIdentification2.mmObject();
 		}
 	};
+	@XmlElement(name = "Othr", required = true)
 	protected GenericFinancialIdentification1 other;
 	/**
-	 * Unique identification of an agent, as assigned by an institution, using
-	 * an identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -219,7 +219,7 @@ public class MemberIdentification2Choice {
 	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> MemberIdentification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MemberIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -235,9 +235,10 @@ public class MemberIdentification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MemberIdentification2Choice.mmBICFI, MemberIdentification2Choice.mmClearingSystemMemberIdentification, MemberIdentification2Choice.mmOther);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MemberIdentification2Choice.mmBICFI, com.tools20022.repository.choice.MemberIdentification2Choice.mmClearingSystemMemberIdentification,
+						com.tools20022.repository.choice.MemberIdentification2Choice.mmOther);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MemberIdentification2Choice";
 				definition = "Set of elements used to identify a financial institution.";
@@ -246,30 +247,30 @@ public class MemberIdentification2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BICFI", required = true)
 	public BICFIIdentifier getBICFI() {
 		return bICFI;
 	}
 
-	public void setBICFI(BICFIIdentifier bICFI) {
-		this.bICFI = bICFI;
+	public MemberIdentification2Choice setBICFI(BICFIIdentifier bICFI) {
+		this.bICFI = Objects.requireNonNull(bICFI);
+		return this;
 	}
 
-	@XmlElement(name = "ClrSysMmbId", required = true)
 	public ClearingSystemMemberIdentification2 getClearingSystemMemberIdentification() {
 		return clearingSystemMemberIdentification;
 	}
 
-	public void setClearingSystemMemberIdentification(ClearingSystemMemberIdentification2 clearingSystemMemberIdentification) {
-		this.clearingSystemMemberIdentification = clearingSystemMemberIdentification;
+	public MemberIdentification2Choice setClearingSystemMemberIdentification(ClearingSystemMemberIdentification2 clearingSystemMemberIdentification) {
+		this.clearingSystemMemberIdentification = Objects.requireNonNull(clearingSystemMemberIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Othr", required = true)
 	public GenericFinancialIdentification1 getOther() {
 		return other;
 	}
 
-	public void setOther(GenericFinancialIdentification1 other) {
-		this.other = other;
+	public MemberIdentification2Choice setOther(GenericFinancialIdentification1 other) {
+		this.other = Objects.requireNonNull(other);
+		return this;
 	}
 }

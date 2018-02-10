@@ -25,6 +25,8 @@ import com.tools20022.repository.msg.PostalAddress3;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Characteristics of an address.
@@ -61,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,8 +80,8 @@ public class MailingInstructions {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected YesNoIndicator mailingIndicator;
 	/**
-	 * Indicates whether mail should be sent to an address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,8 +119,8 @@ public class MailingInstructions {
 	public static final MMBusinessAttribute mmMailingIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PostalAddress3.mmMailingIndicator, PostalAddress21.mmMailingIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.MailingInstructions.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.MailingInstructions.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MailingIndicator";
 			definition = "Indicates whether mail should be sent to an address.";
@@ -137,8 +139,8 @@ public class MailingInstructions {
 	};
 	protected YesNoIndicator registrationAddressIndicator;
 	/**
-	 * Indicates whether the address is the official address of the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,8 +179,8 @@ public class MailingInstructions {
 	public static final MMBusinessAttribute mmRegistrationAddressIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PostalAddress3.mmRegistrationAddressIndicator, PostalAddress21.mmRegistrationAddressIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.MailingInstructions.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.MailingInstructions.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationAddressIndicator";
 			definition = "Indicates whether the address is the official address of the party.";
@@ -197,8 +199,8 @@ public class MailingInstructions {
 	};
 	protected PostalAddress relatedPostalAddress;
 	/**
-	 * Postal address for which mailing instructions are specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -232,8 +234,8 @@ public class MailingInstructions {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPostalAddress = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.MailingInstructions.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.MailingInstructions.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPostalAddress";
 			definition = "Postal address for which mailing instructions are specified.";
@@ -248,7 +250,7 @@ public class MailingInstructions {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MailingInstructions";
 				definition = "Characteristics of an address.";
@@ -269,23 +271,26 @@ public class MailingInstructions {
 		return mailingIndicator;
 	}
 
-	public void setMailingIndicator(YesNoIndicator mailingIndicator) {
-		this.mailingIndicator = mailingIndicator;
+	public MailingInstructions setMailingIndicator(YesNoIndicator mailingIndicator) {
+		this.mailingIndicator = Objects.requireNonNull(mailingIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getRegistrationAddressIndicator() {
 		return registrationAddressIndicator;
 	}
 
-	public void setRegistrationAddressIndicator(YesNoIndicator registrationAddressIndicator) {
-		this.registrationAddressIndicator = registrationAddressIndicator;
+	public MailingInstructions setRegistrationAddressIndicator(YesNoIndicator registrationAddressIndicator) {
+		this.registrationAddressIndicator = Objects.requireNonNull(registrationAddressIndicator);
+		return this;
 	}
 
-	public PostalAddress getRelatedPostalAddress() {
-		return relatedPostalAddress;
+	public Optional<PostalAddress> getRelatedPostalAddress() {
+		return relatedPostalAddress == null ? Optional.empty() : Optional.of(relatedPostalAddress);
 	}
 
-	public void setRelatedPostalAddress(com.tools20022.repository.entity.PostalAddress relatedPostalAddress) {
+	public MailingInstructions setRelatedPostalAddress(com.tools20022.repository.entity.PostalAddress relatedPostalAddress) {
 		this.relatedPostalAddress = relatedPostalAddress;
+		return this;
 	}
 }

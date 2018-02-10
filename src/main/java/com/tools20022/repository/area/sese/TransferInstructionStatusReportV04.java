@@ -27,9 +27,8 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -62,23 +61,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
- * SecuritiesSettlementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
- * InvestmentFundsISOPreviousversion}</li>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "TrfInstrStsRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -103,9 +85,37 @@ import javax.xml.bind.annotation.*;
  * TransferInstructionStatusReportV04.mmExtension}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
+ * InvestmentFundsISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "TrfInstrStsRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
+ * SecuritiesSettlementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.011.001.04}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceRule#forTransferInstructionStatusReportV04
+ * ConstraintOtherReferenceRule.forTransferInstructionStatusReportV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedReferenceRule#forTransferInstructionStatusReportV04
+ * ConstraintRelatedReferenceRule.forTransferInstructionStatusReportV04}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -130,16 +140,16 @@ import javax.xml.bind.annotation.*;
  * TransferInstructionStatusReportV03}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransferInstructionStatusReportV04", propOrder = {"messageIdentification", "counterpartyReference", "reference", "statusReport", "marketPracticeVersion", "extension"})
 public class TransferInstructionStatusReportV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Reference that uniquely identifies a message from a business application
-	 * standpoint.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,10 +206,11 @@ public class TransferInstructionStatusReportV04 {
 			}
 		}
 	};
+	@XmlElement(name = "CtrPtyRef")
 	protected AdditionalReference2 counterpartyReference;
 	/**
-	 * Unambiguous identification of the transfer allocated by the counterparty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -256,10 +267,11 @@ public class TransferInstructionStatusReportV04 {
 			}
 		}
 	};
+	@XmlElement(name = "Ref")
 	protected References40Choice reference;
 	/**
-	 * Reference to the message or communication that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -310,10 +322,11 @@ public class TransferInstructionStatusReportV04 {
 			}
 		}
 	};
+	@XmlElement(name = "StsRpt", required = true)
 	protected TransferStatusAndReason3 statusReport;
 	/**
-	 * Status of the transfer instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -368,10 +381,11 @@ public class TransferInstructionStatusReportV04 {
 			}
 		}
 	};
+	@XmlElement(name = "MktPrctcVrsn")
 	protected MarketPracticeVersion1 marketPracticeVersion;
 	/**
-	 * Identifies the market practice to which the message conforms.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -421,11 +435,11 @@ public class TransferInstructionStatusReportV04 {
 			}
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -484,6 +498,8 @@ public class TransferInstructionStatusReportV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forTransferInstructionStatusReportV04,
+						com.tools20022.repository.constraints.ConstraintRelatedReferenceRule.forTransferInstructionStatusReportV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferInstructionStatusReportV04";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the TransferInstructionStatusReport message to the instructing party, for example, an investment manager or one of its authorised representatives to provide the status of a previously received transfer instruction.\r\nUsage\r\nThe TransferInstructionStatusReport message is used to report on the status of a transfer in or transfer out instruction. The reference of the transfer instruction for which the status is reported is identified in TransferReference.\r\nThe message identification of the transfer instruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.\r\nOne of the following statuses can be reported:\r\n- an accepted status, or,\r\n- an already executed status, or,\r\n- a sent to next party status, or,\r\n- a matched status, or,\r\n- a settled status, or,\r\n- a pending settlement status and the reason for the status, or,\r\n- an unmatched status and the reason for the status, or,\r\n- an in-repair status and the reason for the status, or,\r\n- a rejected status and the reason for the status, or,\r\n- a failed settlement status and the reason for the status, or,\r\n- a cancelled status and the reason for the status, or,\r\n- a cancelled status and the reason for the status, or,\r\n- a cancellation pending status and the reason for the status.";
@@ -515,61 +531,61 @@ public class TransferInstructionStatusReportV04 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public TransferInstructionStatusReportV04 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CtrPtyRef")
-	public AdditionalReference2 getCounterpartyReference() {
-		return counterpartyReference;
+	public Optional<AdditionalReference2> getCounterpartyReference() {
+		return counterpartyReference == null ? Optional.empty() : Optional.of(counterpartyReference);
 	}
 
-	public void setCounterpartyReference(AdditionalReference2 counterpartyReference) {
+	public TransferInstructionStatusReportV04 setCounterpartyReference(AdditionalReference2 counterpartyReference) {
 		this.counterpartyReference = counterpartyReference;
+		return this;
 	}
 
-	@XmlElement(name = "Ref")
-	public References40Choice getReference() {
-		return reference;
+	public Optional<References40Choice> getReference() {
+		return reference == null ? Optional.empty() : Optional.of(reference);
 	}
 
-	public void setReference(References40Choice reference) {
+	public TransferInstructionStatusReportV04 setReference(References40Choice reference) {
 		this.reference = reference;
+		return this;
 	}
 
-	@XmlElement(name = "StsRpt", required = true)
 	public TransferStatusAndReason3 getStatusReport() {
 		return statusReport;
 	}
 
-	public void setStatusReport(TransferStatusAndReason3 statusReport) {
-		this.statusReport = statusReport;
+	public TransferInstructionStatusReportV04 setStatusReport(TransferStatusAndReason3 statusReport) {
+		this.statusReport = Objects.requireNonNull(statusReport);
+		return this;
 	}
 
-	@XmlElement(name = "MktPrctcVrsn")
-	public MarketPracticeVersion1 getMarketPracticeVersion() {
-		return marketPracticeVersion;
+	public Optional<MarketPracticeVersion1> getMarketPracticeVersion() {
+		return marketPracticeVersion == null ? Optional.empty() : Optional.of(marketPracticeVersion);
 	}
 
-	public void setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
+	public TransferInstructionStatusReportV04 setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
 		this.marketPracticeVersion = marketPracticeVersion;
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<Extension1> extension) {
-		this.extension = extension;
+	public TransferInstructionStatusReportV04 setExtension(List<Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.011.04.04")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.011.001.04")
 	static public class Document {
 		@XmlElement(name = "TrfInstrStsRpt", required = true)
 		public TransferInstructionStatusReportV04 messageBody;

@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateActionMandatoryVoluntaryCode;
+import com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the event is mandatory, mandatory with options or
@@ -31,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateActionMandatoryVoluntaryCode
- * CorporateActionMandatoryVoluntaryCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code#mmMandatory
- * CorporateActionMandatoryVoluntary1Code.mmMandatory}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code#Mandatory
+ * CorporateActionMandatoryVoluntary1Code.Mandatory}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code#mmMandatoryWithOptions
- * CorporateActionMandatoryVoluntary1Code.mmMandatoryWithOptions}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code#MandatoryWithOptions
+ * CorporateActionMandatoryVoluntary1Code.MandatoryWithOptions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code#mmVoluntary
- * CorporateActionMandatoryVoluntary1Code.mmVoluntary}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code#Voluntary
+ * CorporateActionMandatoryVoluntary1Code.Voluntary}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionMandatoryVoluntaryCode
+ * CorporateActionMandatoryVoluntaryCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CorporateActionMandatoryVoluntary1Code extends CorporateActionMandatoryVoluntaryCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionMandatoryVoluntary1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class CorporateActionMandatoryVoluntary1Code extends CorporateActionManda
 	 * name} = "Mandatory"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMandatory = new MMCode() {
+	public static final CorporateActionMandatoryVoluntary1Code Mandatory = new CorporateActionMandatoryVoluntary1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandatory";
-			owner_lazy = () -> CorporateActionMandatoryVoluntary1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code.mmObject();
+			codeName = CorporateActionMandatoryVoluntaryCode.Mandatory.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class CorporateActionMandatoryVoluntary1Code extends CorporateActionManda
 	 * name} = "MandatoryWithOptions"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMandatoryWithOptions = new MMCode() {
+	public static final CorporateActionMandatoryVoluntary1Code MandatoryWithOptions = new CorporateActionMandatoryVoluntary1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryWithOptions";
-			owner_lazy = () -> CorporateActionMandatoryVoluntary1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code.mmObject();
+			codeName = CorporateActionMandatoryVoluntaryCode.MandatoryWithOptions.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,26 +142,59 @@ public class CorporateActionMandatoryVoluntary1Code extends CorporateActionManda
 	 * name} = "Voluntary"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVoluntary = new MMCode() {
+	public static final CorporateActionMandatoryVoluntary1Code Voluntary = new CorporateActionMandatoryVoluntary1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Voluntary";
-			owner_lazy = () -> CorporateActionMandatoryVoluntary1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code.mmObject();
+			codeName = CorporateActionMandatoryVoluntaryCode.Voluntary.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionMandatoryVoluntary1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionMandatoryVoluntary1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MAND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMandatoryVoluntary1Code";
 				definition = "Specifies whether the event is mandatory, mandatory with options or voluntary.";
-				code_lazy = () -> Arrays.asList(CorporateActionMandatoryVoluntary1Code.mmMandatory, CorporateActionMandatoryVoluntary1Code.mmMandatoryWithOptions, CorporateActionMandatoryVoluntary1Code.mmVoluntary);
 				trace_lazy = () -> CorporateActionMandatoryVoluntaryCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code.Mandatory, com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code.MandatoryWithOptions,
+						com.tools20022.repository.codeset.CorporateActionMandatoryVoluntary1Code.Voluntary);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Mandatory.getCodeName().get(), Mandatory);
+		codesByName.put(MandatoryWithOptions.getCodeName().get(), MandatoryWithOptions);
+		codesByName.put(Voluntary.getCodeName().get(), Voluntary);
+	}
+
+	public static CorporateActionMandatoryVoluntary1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionMandatoryVoluntary1Code[] values() {
+		CorporateActionMandatoryVoluntary1Code[] values = new CorporateActionMandatoryVoluntary1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionMandatoryVoluntary1Code> {
+		@Override
+		public CorporateActionMandatoryVoluntary1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionMandatoryVoluntary1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

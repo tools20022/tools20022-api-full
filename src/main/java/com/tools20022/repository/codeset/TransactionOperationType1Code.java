@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TransactionOperationTypeCode;
+import com.tools20022.repository.codeset.TransactionOperationType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of process related to a specific transaction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode
- * TransactionOperationTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code#mmAmendment
- * TransactionOperationType1Code.mmAmendment}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code#Amendment
+ * TransactionOperationType1Code.Amendment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code#mmCancellation
- * TransactionOperationType1Code.mmCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code#Cancellation
+ * TransactionOperationType1Code.Cancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code#mmCorrection
- * TransactionOperationType1Code.mmCorrection}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code#Correction
+ * TransactionOperationType1Code.Correction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code#mmNewTransaction
- * TransactionOperationType1Code.mmNewTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code#NewTransaction
+ * TransactionOperationType1Code.NewTransaction}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode
+ * TransactionOperationTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the type of process related to a specific transaction."</li>
  * </ul>
  */
-public class TransactionOperationType1Code extends TransactionOperationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransactionOperationType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +89,12 @@ public class TransactionOperationType1Code extends TransactionOperationTypeCode 
 	 * name} = "Amendment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAmendment = new MMCode() {
+	public static final TransactionOperationType1Code Amendment = new TransactionOperationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amendment";
-			owner_lazy = () -> TransactionOperationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionOperationType1Code.mmObject();
+			codeName = TransactionOperationTypeCode.Amendment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,11 +113,12 @@ public class TransactionOperationType1Code extends TransactionOperationTypeCode 
 	 * name} = "Cancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellation = new MMCode() {
+	public static final TransactionOperationType1Code Cancellation = new TransactionOperationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
-			owner_lazy = () -> TransactionOperationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionOperationType1Code.mmObject();
+			codeName = TransactionOperationTypeCode.Cancellation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -130,11 +137,12 @@ public class TransactionOperationType1Code extends TransactionOperationTypeCode 
 	 * name} = "Correction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorrection = new MMCode() {
+	public static final TransactionOperationType1Code Correction = new TransactionOperationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Correction";
-			owner_lazy = () -> TransactionOperationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionOperationType1Code.mmObject();
+			codeName = TransactionOperationTypeCode.Correction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -153,25 +161,59 @@ public class TransactionOperationType1Code extends TransactionOperationTypeCode 
 	 * name} = "NewTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNewTransaction = new MMCode() {
+	public static final TransactionOperationType1Code NewTransaction = new TransactionOperationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewTransaction";
-			owner_lazy = () -> TransactionOperationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionOperationType1Code.mmObject();
+			codeName = TransactionOperationTypeCode.NewTransaction.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TransactionOperationType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransactionOperationType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionOperationType1Code";
 				definition = "Specifies the type of process related to a specific transaction.";
-				code_lazy = () -> Arrays.asList(TransactionOperationType1Code.mmAmendment, TransactionOperationType1Code.mmCancellation, TransactionOperationType1Code.mmCorrection, TransactionOperationType1Code.mmNewTransaction);
 				trace_lazy = () -> TransactionOperationTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionOperationType1Code.Amendment, com.tools20022.repository.codeset.TransactionOperationType1Code.Cancellation,
+						com.tools20022.repository.codeset.TransactionOperationType1Code.Correction, com.tools20022.repository.codeset.TransactionOperationType1Code.NewTransaction);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Amendment.getCodeName().get(), Amendment);
+		codesByName.put(Cancellation.getCodeName().get(), Cancellation);
+		codesByName.put(Correction.getCodeName().get(), Correction);
+		codesByName.put(NewTransaction.getCodeName().get(), NewTransaction);
+	}
+
+	public static TransactionOperationType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransactionOperationType1Code[] values() {
+		TransactionOperationType1Code[] values = new TransactionOperationType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransactionOperationType1Code> {
+		@Override
+		public TransactionOperationType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransactionOperationType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

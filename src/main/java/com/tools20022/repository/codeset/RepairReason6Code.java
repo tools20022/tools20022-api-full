@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RepairReasonV2Code;
+import com.tools20022.repository.codeset.RepairReason6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason why the securities financing instruction has a repair
@@ -31,155 +35,150 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RepairReasonV2Code
- * RepairReasonV2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmProcessingBatch
- * RepairReason6Code.mmProcessingBatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#ProcessingBatch
+ * RepairReason6Code.ProcessingBatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmCorporateAction
- * RepairReason6Code.mmCorporateAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#CorporateAction
+ * RepairReason6Code.CorporateAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmCashAccount
- * RepairReason6Code.mmCashAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#CashAccount
+ * RepairReason6Code.CashAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmImpossibleCashSettlementSystem
- * RepairReason6Code.mmImpossibleCashSettlementSystem}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#ImpossibleCashSettlementSystem
+ * RepairReason6Code.ImpossibleCashSettlementSystem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmSettlementDate
- * RepairReason6Code.mmSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#SettlementDate
+ * RepairReason6Code.SettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmDealPrice
- * RepairReason6Code.mmDealPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#DealPrice
+ * RepairReason6Code.DealPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmSettlementAmount
- * RepairReason6Code.mmSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#SettlementAmount
+ * RepairReason6Code.SettlementAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepairReason6Code#Quantity
+ * RepairReason6Code.Quantity}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepairReason6Code#Security
+ * RepairReason6Code.Security}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmQuantity
- * RepairReason6Code.mmQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#TradeDate
+ * RepairReason6Code.TradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmSecurity
- * RepairReason6Code.mmSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#CommonReference
+ * RepairReason6Code.CommonReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmTradeDate
- * RepairReason6Code.mmTradeDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#MinimumSettlementQuantity
+ * RepairReason6Code.MinimumSettlementQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmCommonReference
- * RepairReason6Code.mmCommonReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#MultipleSettlementQuantity
+ * RepairReason6Code.MultipleSettlementQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmMinimumSettlementQuantity
- * RepairReason6Code.mmMinimumSettlementQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#SettlementAmountCurrency
+ * RepairReason6Code.SettlementAmountCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmMultipleSettlementQuantity
- * RepairReason6Code.mmMultipleSettlementQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#PhysicalSettlementImpossible
+ * RepairReason6Code.PhysicalSettlementImpossible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmSettlementAmountCurrency
- * RepairReason6Code.mmSettlementAmountCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#PlaceOfTrade
+ * RepairReason6Code.PlaceOfTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmPhysicalSettlementImpossible
- * RepairReason6Code.mmPhysicalSettlementImpossible}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#Reference
+ * RepairReason6Code.Reference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmPlaceOfTrade
- * RepairReason6Code.mmPlaceOfTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#ImpossibleToUseTheRTGSSystemInstructed
+ * RepairReason6Code.ImpossibleToUseTheRTGSSystemInstructed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmReference
- * RepairReason6Code.mmReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#SafekeepingAccount
+ * RepairReason6Code.SafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmImpossibleToUseTheRTGSSystemInstructed
- * RepairReason6Code.mmImpossibleToUseTheRTGSSystemInstructed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#SettlementTransaction
+ * RepairReason6Code.SettlementTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmSafekeepingAccount
- * RepairReason6Code.mmSafekeepingAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#SettlementSystemMethod
+ * RepairReason6Code.SettlementSystemMethod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmSettlementTransaction
- * RepairReason6Code.mmSettlementTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#TaxStatus
+ * RepairReason6Code.TaxStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmSettlementSystemMethod
- * RepairReason6Code.mmSettlementSystemMethod}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#PlaceOfSafekeeping
+ * RepairReason6Code.PlaceOfSafekeeping}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmTaxStatus
- * RepairReason6Code.mmTaxStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#StampDuty
+ * RepairReason6Code.StampDuty}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepairReason6Code#Other
+ * RepairReason6Code.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmPlaceOfSafekeeping
- * RepairReason6Code.mmPlaceOfSafekeeping}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#ReceivingDeliveringParty3
+ * RepairReason6Code.ReceivingDeliveringParty3}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmStampDuty
- * RepairReason6Code.mmStampDuty}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmOther
- * RepairReason6Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#ReceivingDeliveringParty1
+ * RepairReason6Code.ReceivingDeliveringParty1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmReceivingDeliveringParty3
- * RepairReason6Code.mmReceivingDeliveringParty3}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#ReceivingDeliveringDepository
+ * RepairReason6Code.ReceivingDeliveringDepository}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmReceivingDeliveringParty1
- * RepairReason6Code.mmReceivingDeliveringParty1}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#ReceivingDeliveringParty2
+ * RepairReason6Code.ReceivingDeliveringParty2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmReceivingDeliveringDepository
- * RepairReason6Code.mmReceivingDeliveringDepository}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#TerminationTransactionAmount
+ * RepairReason6Code.TerminationTransactionAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmReceivingDeliveringParty2
- * RepairReason6Code.mmReceivingDeliveringParty2}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#TransactionCallDelay
+ * RepairReason6Code.TransactionCallDelay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmTerminationTransactionAmount
- * RepairReason6Code.mmTerminationTransactionAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#RepurchaseRateType
+ * RepairReason6Code.RepurchaseRateType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmTransactionCallDelay
- * RepairReason6Code.mmTransactionCallDelay}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#SpreadRate
+ * RepairReason6Code.SpreadRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmRepurchaseRateType
- * RepairReason6Code.mmRepurchaseRateType}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#VariableRateSupport
+ * RepairReason6Code.VariableRateSupport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmSpreadRate
- * RepairReason6Code.mmSpreadRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#RepurchaseRate
+ * RepairReason6Code.RepurchaseRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmVariableRateSupport
- * RepairReason6Code.mmVariableRateSupport}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#PremiumAmount
+ * RepairReason6Code.PremiumAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmRepurchaseRate
- * RepairReason6Code.mmRepurchaseRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#ClosingDateTime
+ * RepairReason6Code.ClosingDateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmPremiumAmount
- * RepairReason6Code.mmPremiumAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#ForfeitAmount
+ * RepairReason6Code.ForfeitAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmClosingDateTime
- * RepairReason6Code.mmClosingDateTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#AccountServicerDeadlineMissed
+ * RepairReason6Code.AccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmForfeitAmount
- * RepairReason6Code.mmForfeitAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#TypeOfOrderRepair
+ * RepairReason6Code.TypeOfOrderRepair}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmAccountServicerDeadlineMissed
- * RepairReason6Code.mmAccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#CommercializationContractRepair
+ * RepairReason6Code.CommercializationContractRepair}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmTypeOfOrderRepair
- * RepairReason6Code.mmTypeOfOrderRepair}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#FeeCommissionRepair
+ * RepairReason6Code.FeeCommissionRepair}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmCommercializationContractRepair
- * RepairReason6Code.mmCommercializationContractRepair}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmFeeCommissionRepair
- * RepairReason6Code.mmFeeCommissionRepair}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmNarrativeInformationRepair
- * RepairReason6Code.mmNarrativeInformationRepair}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmNoMatch
- * RepairReason6Code.mmNoMatch}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmNotFound
- * RepairReason6Code.mmNotFound}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#mmUnknown
- * RepairReason6Code.mmUnknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason6Code#NarrativeInformationRepair
+ * RepairReason6Code.NarrativeInformationRepair}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepairReason6Code#NoMatch
+ * RepairReason6Code.NoMatch}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepairReason6Code#NotFound
+ * RepairReason6Code.NotFound}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepairReason6Code#Unknown
+ * RepairReason6Code.Unknown}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RepairReasonV2Code
+ * RepairReasonV2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -198,7 +197,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class RepairReason6Code extends RepairReasonV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RepairReason6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -217,11 +217,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "ProcessingBatch"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProcessingBatch = new MMCode() {
+	public static final RepairReason6Code ProcessingBatch = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingBatch";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.ProcessingBatch.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -240,11 +241,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "CorporateAction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateAction = new MMCode() {
+	public static final RepairReason6Code CorporateAction = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateAction";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.CorporateAction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -263,11 +265,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "CashAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashAccount = new MMCode() {
+	public static final RepairReason6Code CashAccount = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.CashAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -286,11 +289,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "ImpossibleCashSettlementSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmImpossibleCashSettlementSystem = new MMCode() {
+	public static final RepairReason6Code ImpossibleCashSettlementSystem = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImpossibleCashSettlementSystem";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.ImpossibleCashSettlementSystem.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -309,11 +313,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "SettlementDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementDate = new MMCode() {
+	public static final RepairReason6Code SettlementDate = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.SettlementDate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -332,11 +337,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "DealPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDealPrice = new MMCode() {
+	public static final RepairReason6Code DealPrice = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.DealPrice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -355,11 +361,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "SettlementAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementAmount = new MMCode() {
+	public static final RepairReason6Code SettlementAmount = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.SettlementAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -378,11 +385,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "Quantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQuantity = new MMCode() {
+	public static final RepairReason6Code Quantity = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.Quantity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -401,11 +409,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "Security"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecurity = new MMCode() {
+	public static final RepairReason6Code Security = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.Security.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -424,11 +433,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "TradeDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradeDate = new MMCode() {
+	public static final RepairReason6Code TradeDate = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.TradeDate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -447,11 +457,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "CommonReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommonReference = new MMCode() {
+	public static final RepairReason6Code CommonReference = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.CommonReference.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -470,11 +481,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "MinimumSettlementQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMinimumSettlementQuantity = new MMCode() {
+	public static final RepairReason6Code MinimumSettlementQuantity = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumSettlementQuantity";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.MinimumSettlementQuantity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -493,11 +505,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "MultipleSettlementQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMultipleSettlementQuantity = new MMCode() {
+	public static final RepairReason6Code MultipleSettlementQuantity = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSettlementQuantity";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.MultipleSettlementQuantity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -516,11 +529,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "SettlementAmountCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementAmountCurrency = new MMCode() {
+	public static final RepairReason6Code SettlementAmountCurrency = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountCurrency";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.SettlementAmountCurrency.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -539,11 +553,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "PhysicalSettlementImpossible"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPhysicalSettlementImpossible = new MMCode() {
+	public static final RepairReason6Code PhysicalSettlementImpossible = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSettlementImpossible";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.PhysicalSettlementImpossible.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -562,11 +577,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "PlaceOfTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPlaceOfTrade = new MMCode() {
+	public static final RepairReason6Code PlaceOfTrade = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.PlaceOfTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -585,11 +601,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "Reference"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReference = new MMCode() {
+	public static final RepairReason6Code Reference = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.Reference.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -608,11 +625,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "ImpossibleToUseTheRTGSSystemInstructed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmImpossibleToUseTheRTGSSystemInstructed = new MMCode() {
+	public static final RepairReason6Code ImpossibleToUseTheRTGSSystemInstructed = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImpossibleToUseTheRTGSSystemInstructed";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.ImpossibleToUseTheRTGSSystemInstructed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -631,11 +649,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "SafekeepingAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSafekeepingAccount = new MMCode() {
+	public static final RepairReason6Code SafekeepingAccount = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.SafekeepingAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -654,11 +673,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "SettlementTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementTransaction = new MMCode() {
+	public static final RepairReason6Code SettlementTransaction = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransaction";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.SettlementTransaction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -677,11 +697,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "SettlementSystemMethod"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementSystemMethod = new MMCode() {
+	public static final RepairReason6Code SettlementSystemMethod = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSystemMethod";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.SettlementSystemMethod.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -700,11 +721,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "TaxStatus"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxStatus = new MMCode() {
+	public static final RepairReason6Code TaxStatus = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxStatus";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.TaxStatus.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -723,11 +745,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "PlaceOfSafekeeping"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPlaceOfSafekeeping = new MMCode() {
+	public static final RepairReason6Code PlaceOfSafekeeping = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfSafekeeping";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.PlaceOfSafekeeping.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -746,11 +769,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "StampDuty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStampDuty = new MMCode() {
+	public static final RepairReason6Code StampDuty = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.StampDuty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -769,11 +793,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final RepairReason6Code Other = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.Other.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -792,11 +817,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "ReceivingDeliveringParty3"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceivingDeliveringParty3 = new MMCode() {
+	public static final RepairReason6Code ReceivingDeliveringParty3 = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty3";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.ReceivingDeliveringParty3.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -815,11 +841,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "ReceivingDeliveringParty1"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceivingDeliveringParty1 = new MMCode() {
+	public static final RepairReason6Code ReceivingDeliveringParty1 = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty1";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.ReceivingDeliveringParty1.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -838,11 +865,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "ReceivingDeliveringDepository"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceivingDeliveringDepository = new MMCode() {
+	public static final RepairReason6Code ReceivingDeliveringDepository = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringDepository";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.ReceivingDeliveringDepository.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -861,11 +889,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "ReceivingDeliveringParty2"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceivingDeliveringParty2 = new MMCode() {
+	public static final RepairReason6Code ReceivingDeliveringParty2 = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty2";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.ReceivingDeliveringParty2.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -884,11 +913,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "TerminationTransactionAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTerminationTransactionAmount = new MMCode() {
+	public static final RepairReason6Code TerminationTransactionAmount = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminationTransactionAmount";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.TerminationTransactionAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -907,11 +937,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "TransactionCallDelay"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransactionCallDelay = new MMCode() {
+	public static final RepairReason6Code TransactionCallDelay = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCallDelay";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.TransactionCallDelay.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -930,11 +961,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "RepurchaseRateType"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRepurchaseRateType = new MMCode() {
+	public static final RepairReason6Code RepurchaseRateType = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseRateType";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.RepurchaseRateType.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -953,11 +985,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "SpreadRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpreadRate = new MMCode() {
+	public static final RepairReason6Code SpreadRate = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpreadRate";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.SpreadRate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -976,11 +1009,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "VariableRateSupport"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVariableRateSupport = new MMCode() {
+	public static final RepairReason6Code VariableRateSupport = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateSupport";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.VariableRateSupport.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -999,11 +1033,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "RepurchaseRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRepurchaseRate = new MMCode() {
+	public static final RepairReason6Code RepurchaseRate = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseRate";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.RepurchaseRate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1022,11 +1057,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "PremiumAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPremiumAmount = new MMCode() {
+	public static final RepairReason6Code PremiumAmount = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PremiumAmount";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.PremiumAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1045,11 +1081,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "ClosingDateTime"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClosingDateTime = new MMCode() {
+	public static final RepairReason6Code ClosingDateTime = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDateTime";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.ClosingDateTime.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1068,11 +1105,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "ForfeitAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForfeitAmount = new MMCode() {
+	public static final RepairReason6Code ForfeitAmount = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForfeitAmount";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.ForfeitAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1091,11 +1129,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
+	public static final RepairReason6Code AccountServicerDeadlineMissed = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.AccountServicerDeadlineMissed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1114,11 +1153,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "TypeOfOrderRepair"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTypeOfOrderRepair = new MMCode() {
+	public static final RepairReason6Code TypeOfOrderRepair = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOfOrderRepair";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.TypeOfOrderRepair.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1137,11 +1177,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "CommercializationContractRepair"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommercializationContractRepair = new MMCode() {
+	public static final RepairReason6Code CommercializationContractRepair = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercializationContractRepair";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.CommercializationContractRepair.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1160,11 +1201,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "FeeCommissionRepair"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFeeCommissionRepair = new MMCode() {
+	public static final RepairReason6Code FeeCommissionRepair = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FeeCommissionRepair";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.FeeCommissionRepair.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1183,11 +1225,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "NarrativeInformationRepair"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNarrativeInformationRepair = new MMCode() {
+	public static final RepairReason6Code NarrativeInformationRepair = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeInformationRepair";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.NarrativeInformationRepair.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1206,11 +1249,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "NoMatch"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoMatch = new MMCode() {
+	public static final RepairReason6Code NoMatch = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatch";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.NoMatch.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1229,11 +1273,12 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "NotFound"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotFound = new MMCode() {
+	public static final RepairReason6Code NotFound = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotFound";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.NotFound.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1252,35 +1297,119 @@ public class RepairReason6Code extends RepairReasonV2Code {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknown = new MMCode() {
+	public static final RepairReason6Code Unknown = new RepairReason6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
-			owner_lazy = () -> RepairReason6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason6Code.mmObject();
+			codeName = RepairReasonV2Code.Unknown.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RepairReason6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RepairReason6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BATC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RepairReason6Code";
 				definition = "Specifies the reason why the securities financing instruction has a repair status.";
-				code_lazy = () -> Arrays.asList(RepairReason6Code.mmProcessingBatch, RepairReason6Code.mmCorporateAction, RepairReason6Code.mmCashAccount, RepairReason6Code.mmImpossibleCashSettlementSystem,
-						RepairReason6Code.mmSettlementDate, RepairReason6Code.mmDealPrice, RepairReason6Code.mmSettlementAmount, RepairReason6Code.mmQuantity, RepairReason6Code.mmSecurity, RepairReason6Code.mmTradeDate,
-						RepairReason6Code.mmCommonReference, RepairReason6Code.mmMinimumSettlementQuantity, RepairReason6Code.mmMultipleSettlementQuantity, RepairReason6Code.mmSettlementAmountCurrency,
-						RepairReason6Code.mmPhysicalSettlementImpossible, RepairReason6Code.mmPlaceOfTrade, RepairReason6Code.mmReference, RepairReason6Code.mmImpossibleToUseTheRTGSSystemInstructed, RepairReason6Code.mmSafekeepingAccount,
-						RepairReason6Code.mmSettlementTransaction, RepairReason6Code.mmSettlementSystemMethod, RepairReason6Code.mmTaxStatus, RepairReason6Code.mmPlaceOfSafekeeping, RepairReason6Code.mmStampDuty, RepairReason6Code.mmOther,
-						RepairReason6Code.mmReceivingDeliveringParty3, RepairReason6Code.mmReceivingDeliveringParty1, RepairReason6Code.mmReceivingDeliveringDepository, RepairReason6Code.mmReceivingDeliveringParty2,
-						RepairReason6Code.mmTerminationTransactionAmount, RepairReason6Code.mmTransactionCallDelay, RepairReason6Code.mmRepurchaseRateType, RepairReason6Code.mmSpreadRate, RepairReason6Code.mmVariableRateSupport,
-						RepairReason6Code.mmRepurchaseRate, RepairReason6Code.mmPremiumAmount, RepairReason6Code.mmClosingDateTime, RepairReason6Code.mmForfeitAmount, RepairReason6Code.mmAccountServicerDeadlineMissed,
-						RepairReason6Code.mmTypeOfOrderRepair, RepairReason6Code.mmCommercializationContractRepair, RepairReason6Code.mmFeeCommissionRepair, RepairReason6Code.mmNarrativeInformationRepair, RepairReason6Code.mmNoMatch,
-						RepairReason6Code.mmNotFound, RepairReason6Code.mmUnknown);
 				trace_lazy = () -> RepairReasonV2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepairReason6Code.ProcessingBatch, com.tools20022.repository.codeset.RepairReason6Code.CorporateAction,
+						com.tools20022.repository.codeset.RepairReason6Code.CashAccount, com.tools20022.repository.codeset.RepairReason6Code.ImpossibleCashSettlementSystem,
+						com.tools20022.repository.codeset.RepairReason6Code.SettlementDate, com.tools20022.repository.codeset.RepairReason6Code.DealPrice, com.tools20022.repository.codeset.RepairReason6Code.SettlementAmount,
+						com.tools20022.repository.codeset.RepairReason6Code.Quantity, com.tools20022.repository.codeset.RepairReason6Code.Security, com.tools20022.repository.codeset.RepairReason6Code.TradeDate,
+						com.tools20022.repository.codeset.RepairReason6Code.CommonReference, com.tools20022.repository.codeset.RepairReason6Code.MinimumSettlementQuantity,
+						com.tools20022.repository.codeset.RepairReason6Code.MultipleSettlementQuantity, com.tools20022.repository.codeset.RepairReason6Code.SettlementAmountCurrency,
+						com.tools20022.repository.codeset.RepairReason6Code.PhysicalSettlementImpossible, com.tools20022.repository.codeset.RepairReason6Code.PlaceOfTrade, com.tools20022.repository.codeset.RepairReason6Code.Reference,
+						com.tools20022.repository.codeset.RepairReason6Code.ImpossibleToUseTheRTGSSystemInstructed, com.tools20022.repository.codeset.RepairReason6Code.SafekeepingAccount,
+						com.tools20022.repository.codeset.RepairReason6Code.SettlementTransaction, com.tools20022.repository.codeset.RepairReason6Code.SettlementSystemMethod, com.tools20022.repository.codeset.RepairReason6Code.TaxStatus,
+						com.tools20022.repository.codeset.RepairReason6Code.PlaceOfSafekeeping, com.tools20022.repository.codeset.RepairReason6Code.StampDuty, com.tools20022.repository.codeset.RepairReason6Code.Other,
+						com.tools20022.repository.codeset.RepairReason6Code.ReceivingDeliveringParty3, com.tools20022.repository.codeset.RepairReason6Code.ReceivingDeliveringParty1,
+						com.tools20022.repository.codeset.RepairReason6Code.ReceivingDeliveringDepository, com.tools20022.repository.codeset.RepairReason6Code.ReceivingDeliveringParty2,
+						com.tools20022.repository.codeset.RepairReason6Code.TerminationTransactionAmount, com.tools20022.repository.codeset.RepairReason6Code.TransactionCallDelay,
+						com.tools20022.repository.codeset.RepairReason6Code.RepurchaseRateType, com.tools20022.repository.codeset.RepairReason6Code.SpreadRate, com.tools20022.repository.codeset.RepairReason6Code.VariableRateSupport,
+						com.tools20022.repository.codeset.RepairReason6Code.RepurchaseRate, com.tools20022.repository.codeset.RepairReason6Code.PremiumAmount, com.tools20022.repository.codeset.RepairReason6Code.ClosingDateTime,
+						com.tools20022.repository.codeset.RepairReason6Code.ForfeitAmount, com.tools20022.repository.codeset.RepairReason6Code.AccountServicerDeadlineMissed,
+						com.tools20022.repository.codeset.RepairReason6Code.TypeOfOrderRepair, com.tools20022.repository.codeset.RepairReason6Code.CommercializationContractRepair,
+						com.tools20022.repository.codeset.RepairReason6Code.FeeCommissionRepair, com.tools20022.repository.codeset.RepairReason6Code.NarrativeInformationRepair, com.tools20022.repository.codeset.RepairReason6Code.NoMatch,
+						com.tools20022.repository.codeset.RepairReason6Code.NotFound, com.tools20022.repository.codeset.RepairReason6Code.Unknown);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ProcessingBatch.getCodeName().get(), ProcessingBatch);
+		codesByName.put(CorporateAction.getCodeName().get(), CorporateAction);
+		codesByName.put(CashAccount.getCodeName().get(), CashAccount);
+		codesByName.put(ImpossibleCashSettlementSystem.getCodeName().get(), ImpossibleCashSettlementSystem);
+		codesByName.put(SettlementDate.getCodeName().get(), SettlementDate);
+		codesByName.put(DealPrice.getCodeName().get(), DealPrice);
+		codesByName.put(SettlementAmount.getCodeName().get(), SettlementAmount);
+		codesByName.put(Quantity.getCodeName().get(), Quantity);
+		codesByName.put(Security.getCodeName().get(), Security);
+		codesByName.put(TradeDate.getCodeName().get(), TradeDate);
+		codesByName.put(CommonReference.getCodeName().get(), CommonReference);
+		codesByName.put(MinimumSettlementQuantity.getCodeName().get(), MinimumSettlementQuantity);
+		codesByName.put(MultipleSettlementQuantity.getCodeName().get(), MultipleSettlementQuantity);
+		codesByName.put(SettlementAmountCurrency.getCodeName().get(), SettlementAmountCurrency);
+		codesByName.put(PhysicalSettlementImpossible.getCodeName().get(), PhysicalSettlementImpossible);
+		codesByName.put(PlaceOfTrade.getCodeName().get(), PlaceOfTrade);
+		codesByName.put(Reference.getCodeName().get(), Reference);
+		codesByName.put(ImpossibleToUseTheRTGSSystemInstructed.getCodeName().get(), ImpossibleToUseTheRTGSSystemInstructed);
+		codesByName.put(SafekeepingAccount.getCodeName().get(), SafekeepingAccount);
+		codesByName.put(SettlementTransaction.getCodeName().get(), SettlementTransaction);
+		codesByName.put(SettlementSystemMethod.getCodeName().get(), SettlementSystemMethod);
+		codesByName.put(TaxStatus.getCodeName().get(), TaxStatus);
+		codesByName.put(PlaceOfSafekeeping.getCodeName().get(), PlaceOfSafekeeping);
+		codesByName.put(StampDuty.getCodeName().get(), StampDuty);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(ReceivingDeliveringParty3.getCodeName().get(), ReceivingDeliveringParty3);
+		codesByName.put(ReceivingDeliveringParty1.getCodeName().get(), ReceivingDeliveringParty1);
+		codesByName.put(ReceivingDeliveringDepository.getCodeName().get(), ReceivingDeliveringDepository);
+		codesByName.put(ReceivingDeliveringParty2.getCodeName().get(), ReceivingDeliveringParty2);
+		codesByName.put(TerminationTransactionAmount.getCodeName().get(), TerminationTransactionAmount);
+		codesByName.put(TransactionCallDelay.getCodeName().get(), TransactionCallDelay);
+		codesByName.put(RepurchaseRateType.getCodeName().get(), RepurchaseRateType);
+		codesByName.put(SpreadRate.getCodeName().get(), SpreadRate);
+		codesByName.put(VariableRateSupport.getCodeName().get(), VariableRateSupport);
+		codesByName.put(RepurchaseRate.getCodeName().get(), RepurchaseRate);
+		codesByName.put(PremiumAmount.getCodeName().get(), PremiumAmount);
+		codesByName.put(ClosingDateTime.getCodeName().get(), ClosingDateTime);
+		codesByName.put(ForfeitAmount.getCodeName().get(), ForfeitAmount);
+		codesByName.put(AccountServicerDeadlineMissed.getCodeName().get(), AccountServicerDeadlineMissed);
+		codesByName.put(TypeOfOrderRepair.getCodeName().get(), TypeOfOrderRepair);
+		codesByName.put(CommercializationContractRepair.getCodeName().get(), CommercializationContractRepair);
+		codesByName.put(FeeCommissionRepair.getCodeName().get(), FeeCommissionRepair);
+		codesByName.put(NarrativeInformationRepair.getCodeName().get(), NarrativeInformationRepair);
+		codesByName.put(NoMatch.getCodeName().get(), NoMatch);
+		codesByName.put(NotFound.getCodeName().get(), NotFound);
+		codesByName.put(Unknown.getCodeName().get(), Unknown);
+	}
+
+	public static RepairReason6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RepairReason6Code[] values() {
+		RepairReason6Code[] values = new RepairReason6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RepairReason6Code> {
+		@Override
+		public RepairReason6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RepairReason6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

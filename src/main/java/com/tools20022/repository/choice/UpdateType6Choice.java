@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6;
 import com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UpdateType6Choice", propOrder = {"addition", "deletion", "modification"})
 public class UpdateType6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Addtn", required = true)
 	protected SecuritiesSettlementTransactionDetails5 addition;
 	/**
-	 * Addition of information to the securities transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -104,7 +106,7 @@ public class UpdateType6Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAddition = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UpdateType6Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Addtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +118,11 @@ public class UpdateType6Choice {
 			type_lazy = () -> SecuritiesSettlementTransactionDetails5.mmObject();
 		}
 	};
+	@XmlElement(name = "Deltn", required = true)
 	protected SecuritiesSettlementTransactionDetails6 deletion;
 	/**
-	 * Deletion of information in the securities transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -146,7 +149,7 @@ public class UpdateType6Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDeletion = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UpdateType6Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Deltn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,10 +161,11 @@ public class UpdateType6Choice {
 			type_lazy = () -> SecuritiesSettlementTransactionDetails6.mmObject();
 		}
 	};
+	@XmlElement(name = "Mod", required = true)
 	protected SecuritiesSettlementTransactionDetails7 modification;
 	/**
-	 * Modification of information in the securities transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -189,7 +193,7 @@ public class UpdateType6Choice {
 	 */
 	public static final MMMessageAssociationEnd mmModification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UpdateType6Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Mod";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,8 +209,9 @@ public class UpdateType6Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UpdateType6Choice.mmAddition, UpdateType6Choice.mmDeletion, UpdateType6Choice.mmModification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType6Choice.mmAddition, com.tools20022.repository.choice.UpdateType6Choice.mmDeletion,
+						com.tools20022.repository.choice.UpdateType6Choice.mmModification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UpdateType6Choice";
 				definition = "Specifies the type of update requested. That is addition, deletion or modification.";
@@ -215,30 +220,30 @@ public class UpdateType6Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Addtn", required = true)
 	public SecuritiesSettlementTransactionDetails5 getAddition() {
 		return addition;
 	}
 
-	public void setAddition(SecuritiesSettlementTransactionDetails5 addition) {
-		this.addition = addition;
+	public UpdateType6Choice setAddition(SecuritiesSettlementTransactionDetails5 addition) {
+		this.addition = Objects.requireNonNull(addition);
+		return this;
 	}
 
-	@XmlElement(name = "Deltn", required = true)
 	public SecuritiesSettlementTransactionDetails6 getDeletion() {
 		return deletion;
 	}
 
-	public void setDeletion(SecuritiesSettlementTransactionDetails6 deletion) {
-		this.deletion = deletion;
+	public UpdateType6Choice setDeletion(SecuritiesSettlementTransactionDetails6 deletion) {
+		this.deletion = Objects.requireNonNull(deletion);
+		return this;
 	}
 
-	@XmlElement(name = "Mod", required = true)
 	public SecuritiesSettlementTransactionDetails7 getModification() {
 		return modification;
 	}
 
-	public void setModification(SecuritiesSettlementTransactionDetails7 modification) {
-		this.modification = modification;
+	public UpdateType6Choice setModification(SecuritiesSettlementTransactionDetails7 modification) {
+		this.modification = Objects.requireNonNull(modification);
+		return this;
 	}
 }

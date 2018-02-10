@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -26,6 +27,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,16 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies security date details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecurityDate14", propOrder = {"paymentDate", "availableDate", "dividendRankingDate", "earliestPaymentDate", "pariPassuDate", "lastTradingDate"})
 public class SecurityDate14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmtDt", required = true)
 	protected DateFormat34Choice paymentDate;
 	/**
-	 * Date/time at which the movement is due to take place (cash and/or
-	 * securities).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -101,6 +104,9 @@ public class SecurityDate14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PmtDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::PAYD</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -116,9 +122,10 @@ public class SecurityDate14 {
 	public static final MMMessageAssociationEnd mmPaymentDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmMovementDate;
-			componentContext_lazy = () -> SecurityDate14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityDate14.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::PAYD"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date/time at which the movement is due to take place (cash and/or securities).";
@@ -128,11 +135,11 @@ public class SecurityDate14 {
 			type_lazy = () -> DateFormat34Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AvlblDt")
 	protected DateFormat34Choice availableDate;
 	/**
-	 * Date/time at which securities become available for trading, for example
-	 * first dealing date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -150,6 +157,9 @@ public class SecurityDate14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AvlblDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::AVAL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -165,9 +175,10 @@ public class SecurityDate14 {
 	public static final MMMessageAssociationEnd mmAvailableDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmAvailableDate;
-			componentContext_lazy = () -> SecurityDate14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityDate14.mmObject();
 			isDerived = false;
 			xmlTag = "AvlblDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::AVAL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableDate";
 			definition = "Date/time at which securities become available for trading, for example first dealing date.";
@@ -177,10 +188,11 @@ public class SecurityDate14 {
 			type_lazy = () -> DateFormat34Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DvddRnkgDt")
 	protected DateFormat34Choice dividendRankingDate;
 	/**
-	 * Date/time at which a security will be entitled to a dividend.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -198,6 +210,9 @@ public class SecurityDate14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DvddRnkgDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::DIVR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -212,9 +227,10 @@ public class SecurityDate14 {
 	public static final MMMessageAssociationEnd mmDividendRankingDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmDividendRankingDate;
-			componentContext_lazy = () -> SecurityDate14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityDate14.mmObject();
 			isDerived = false;
 			xmlTag = "DvddRnkgDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::DIVR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendRankingDate";
 			definition = "Date/time at which a security will be entitled to a dividend.";
@@ -224,11 +240,11 @@ public class SecurityDate14 {
 			type_lazy = () -> DateFormat34Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "EarlstPmtDt")
 	protected DateFormat34Choice earliestPaymentDate;
 	/**
-	 * Date/time at which a payment can be made, for example, if payment date is
-	 * a non-business day or to indicate the first payment date of an offer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -246,6 +262,9 @@ public class SecurityDate14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EarlstPmtDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::EARL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -261,9 +280,10 @@ public class SecurityDate14 {
 	public static final MMMessageAssociationEnd mmEarliestPaymentDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmEarliestPaymentDate;
-			componentContext_lazy = () -> SecurityDate14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityDate14.mmObject();
 			isDerived = false;
 			xmlTag = "EarlstPmtDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::EARL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPaymentDate";
 			definition = "Date/time at which a payment can be made, for example, if payment date is a non-business day or to indicate the first payment date of an offer.";
@@ -273,11 +293,11 @@ public class SecurityDate14 {
 			type_lazy = () -> DateFormat34Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrpssDt")
 	protected DateFormat34Choice pariPassuDate;
 	/**
-	 * Date/time at which security will assimilate, become fungible, or have the
-	 * same rights to dividends as the parent issue.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -295,6 +315,9 @@ public class SecurityDate14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrpssDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::PPDT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -310,9 +333,10 @@ public class SecurityDate14 {
 	public static final MMMessageAssociationEnd mmPariPassuDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmPariPassuDate;
-			componentContext_lazy = () -> SecurityDate14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityDate14.mmObject();
 			isDerived = false;
 			xmlTag = "PrpssDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::PPDT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PariPassuDate";
 			definition = "Date/time at which security will assimilate, become fungible, or have the same rights to dividends as the parent issue.";
@@ -322,11 +346,11 @@ public class SecurityDate14 {
 			type_lazy = () -> DateFormat34Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LastTradgDt")
 	protected DateFormat34Choice lastTradingDate;
 	/**
-	 * Date/time at which the securities to be reorganised will cease to be
-	 * tradeable.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -355,7 +379,7 @@ public class SecurityDate14 {
 	 */
 	public static final MMMessageAttribute mmLastTradingDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityDate14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityDate14.mmObject();
 			isDerived = false;
 			xmlTag = "LastTradgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -370,10 +394,11 @@ public class SecurityDate14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityDate14.mmPaymentDate, SecurityDate14.mmAvailableDate, SecurityDate14.mmDividendRankingDate, SecurityDate14.mmEarliestPaymentDate, SecurityDate14.mmPariPassuDate,
-						SecurityDate14.mmLastTradingDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate14.mmPaymentDate, com.tools20022.repository.msg.SecurityDate14.mmAvailableDate,
+						com.tools20022.repository.msg.SecurityDate14.mmDividendRankingDate, com.tools20022.repository.msg.SecurityDate14.mmEarliestPaymentDate, com.tools20022.repository.msg.SecurityDate14.mmPariPassuDate,
+						com.tools20022.repository.msg.SecurityDate14.mmLastTradingDate);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityDate14";
 				definition = "Specifies security date details.";
@@ -382,57 +407,57 @@ public class SecurityDate14 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmtDt", required = true)
 	public DateFormat34Choice getPaymentDate() {
 		return paymentDate;
 	}
 
-	public void setPaymentDate(DateFormat34Choice paymentDate) {
-		this.paymentDate = paymentDate;
+	public SecurityDate14 setPaymentDate(DateFormat34Choice paymentDate) {
+		this.paymentDate = Objects.requireNonNull(paymentDate);
+		return this;
 	}
 
-	@XmlElement(name = "AvlblDt")
-	public DateFormat34Choice getAvailableDate() {
-		return availableDate;
+	public Optional<DateFormat34Choice> getAvailableDate() {
+		return availableDate == null ? Optional.empty() : Optional.of(availableDate);
 	}
 
-	public void setAvailableDate(DateFormat34Choice availableDate) {
+	public SecurityDate14 setAvailableDate(DateFormat34Choice availableDate) {
 		this.availableDate = availableDate;
+		return this;
 	}
 
-	@XmlElement(name = "DvddRnkgDt")
-	public DateFormat34Choice getDividendRankingDate() {
-		return dividendRankingDate;
+	public Optional<DateFormat34Choice> getDividendRankingDate() {
+		return dividendRankingDate == null ? Optional.empty() : Optional.of(dividendRankingDate);
 	}
 
-	public void setDividendRankingDate(DateFormat34Choice dividendRankingDate) {
+	public SecurityDate14 setDividendRankingDate(DateFormat34Choice dividendRankingDate) {
 		this.dividendRankingDate = dividendRankingDate;
+		return this;
 	}
 
-	@XmlElement(name = "EarlstPmtDt")
-	public DateFormat34Choice getEarliestPaymentDate() {
-		return earliestPaymentDate;
+	public Optional<DateFormat34Choice> getEarliestPaymentDate() {
+		return earliestPaymentDate == null ? Optional.empty() : Optional.of(earliestPaymentDate);
 	}
 
-	public void setEarliestPaymentDate(DateFormat34Choice earliestPaymentDate) {
+	public SecurityDate14 setEarliestPaymentDate(DateFormat34Choice earliestPaymentDate) {
 		this.earliestPaymentDate = earliestPaymentDate;
+		return this;
 	}
 
-	@XmlElement(name = "PrpssDt")
-	public DateFormat34Choice getPariPassuDate() {
-		return pariPassuDate;
+	public Optional<DateFormat34Choice> getPariPassuDate() {
+		return pariPassuDate == null ? Optional.empty() : Optional.of(pariPassuDate);
 	}
 
-	public void setPariPassuDate(DateFormat34Choice pariPassuDate) {
+	public SecurityDate14 setPariPassuDate(DateFormat34Choice pariPassuDate) {
 		this.pariPassuDate = pariPassuDate;
+		return this;
 	}
 
-	@XmlElement(name = "LastTradgDt")
-	public DateFormat34Choice getLastTradingDate() {
-		return lastTradingDate;
+	public Optional<DateFormat34Choice> getLastTradingDate() {
+		return lastTradingDate == null ? Optional.empty() : Optional.of(lastTradingDate);
 	}
 
-	public void setLastTradingDate(DateFormat34Choice lastTradingDate) {
+	public SecurityDate14 setLastTradingDate(DateFormat34Choice lastTradingDate) {
 		this.lastTradingDate = lastTradingDate;
+		return this;
 	}
 }

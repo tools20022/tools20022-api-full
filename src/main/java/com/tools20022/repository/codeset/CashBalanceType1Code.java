@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.BalanceTypeCode;
+import com.tools20022.repository.codeset.CashBalanceType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of cash balance.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode
- * BalanceTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashBalanceType1Code#mmAvailable
- * CashBalanceType1Code.mmAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashBalanceType1Code#Available
+ * CashBalanceType1Code.Available}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashBalanceType1Code#mmRestricted
- * CashBalanceType1Code.mmRestricted}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashBalanceType1Code#Restricted
+ * CashBalanceType1Code.Restricted}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode
+ * BalanceTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of cash balance."</li>
  * </ul>
  */
-public class CashBalanceType1Code extends BalanceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CashBalanceType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class CashBalanceType1Code extends BalanceTypeCode {
 	 * name} = "Available"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAvailable = new MMCode() {
+	public static final CashBalanceType1Code Available = new CashBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Available";
-			owner_lazy = () -> CashBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashBalanceType1Code.mmObject();
+			codeName = BalanceTypeCode.Available.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class CashBalanceType1Code extends BalanceTypeCode {
 	 * name} = "Restricted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRestricted = new MMCode() {
+	public static final CashBalanceType1Code Restricted = new CashBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
-			owner_lazy = () -> CashBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashBalanceType1Code.mmObject();
+			codeName = BalanceTypeCode.Restricted.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CashBalanceType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CashBalanceType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AVLB");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashBalanceType1Code";
 				definition = "Specifies the type of cash balance.";
-				code_lazy = () -> Arrays.asList(CashBalanceType1Code.mmAvailable, CashBalanceType1Code.mmRestricted);
 				trace_lazy = () -> BalanceTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashBalanceType1Code.Available, com.tools20022.repository.codeset.CashBalanceType1Code.Restricted);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Available.getCodeName().get(), Available);
+		codesByName.put(Restricted.getCodeName().get(), Restricted);
+	}
+
+	public static CashBalanceType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CashBalanceType1Code[] values() {
+		CashBalanceType1Code[] values = new CashBalanceType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CashBalanceType1Code> {
+		@Override
+		public CashBalanceType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CashBalanceType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

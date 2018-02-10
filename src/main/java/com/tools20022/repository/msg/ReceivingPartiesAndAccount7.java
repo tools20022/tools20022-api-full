@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.SecuritiesSettlementSystem;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDepositoryGuideline#forReceivingPartiesAndAccount7
+ * ConstraintDepositoryGuideline.forReceivingPartiesAndAccount7}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,18 +100,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReceivingPartiesAndAccount7", propOrder = {"depository", "party1", "party2", "securitiesSettlementSystem"})
 public class ReceivingPartiesAndAccount7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dpstry", required = true)
 	protected PartyIdentification34Choice depository;
 	/**
-	 * First party in the settlement chain. In a plain vanilla settlement, it is
-	 * the Central Securities Depository where the counterparty requests to
-	 * receive the financial instrument or from where the counterparty delivers
-	 * the financial instruments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -147,7 +155,7 @@ public class ReceivingPartiesAndAccount7 {
 	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> ReceivingPartiesAndAccount7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount7.mmObject();
 			isDerived = false;
 			xmlTag = "Dpstry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,10 +168,11 @@ public class ReceivingPartiesAndAccount7 {
 			type_lazy = () -> PartyIdentification34Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Pty1", required = true)
 	protected PartyIdentificationAndAccount32 party1;
 	/**
-	 * Party that, in a settlement chain interacts with the depository.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -208,7 +217,7 @@ public class ReceivingPartiesAndAccount7 {
 	public static final MMMessageAssociationEnd mmParty1 = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-			componentContext_lazy = () -> ReceivingPartiesAndAccount7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount7.mmObject();
 			isDerived = false;
 			xmlTag = "Pty1";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,10 +230,11 @@ public class ReceivingPartiesAndAccount7 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount32.mmObject();
 		}
 	};
+	@XmlElement(name = "Pty2")
 	protected PartyIdentificationAndAccount32 party2;
 	/**
-	 * Party that, in a settlement chain interacts with the party 1.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -269,7 +279,7 @@ public class ReceivingPartiesAndAccount7 {
 	public static final MMMessageAssociationEnd mmParty2 = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-			componentContext_lazy = () -> ReceivingPartiesAndAccount7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount7.mmObject();
 			isDerived = false;
 			xmlTag = "Pty2";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -282,10 +292,11 @@ public class ReceivingPartiesAndAccount7 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount32.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesSttlmSys")
 	protected Max35Text securitiesSettlementSystem;
 	/**
-	 * Identifies the securities settlement system to be used.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -326,7 +337,7 @@ public class ReceivingPartiesAndAccount7 {
 	public static final MMMessageAttribute mmSecuritiesSettlementSystem = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlementSystem.mmObject();
-			componentContext_lazy = () -> ReceivingPartiesAndAccount7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount7.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSttlmSys";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -342,9 +353,11 @@ public class ReceivingPartiesAndAccount7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReceivingPartiesAndAccount7.mmDepository, ReceivingPartiesAndAccount7.mmParty1, ReceivingPartiesAndAccount7.mmParty2, ReceivingPartiesAndAccount7.mmSecuritiesSettlementSystem);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceivingPartiesAndAccount7.mmDepository, com.tools20022.repository.msg.ReceivingPartiesAndAccount7.mmParty1,
+						com.tools20022.repository.msg.ReceivingPartiesAndAccount7.mmParty2, com.tools20022.repository.msg.ReceivingPartiesAndAccount7.mmSecuritiesSettlementSystem);
 				trace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDepositoryGuideline.forReceivingPartiesAndAccount7);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReceivingPartiesAndAccount7";
 				definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
@@ -354,39 +367,39 @@ public class ReceivingPartiesAndAccount7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dpstry", required = true)
 	public PartyIdentification34Choice getDepository() {
 		return depository;
 	}
 
-	public void setDepository(PartyIdentification34Choice depository) {
-		this.depository = depository;
+	public ReceivingPartiesAndAccount7 setDepository(PartyIdentification34Choice depository) {
+		this.depository = Objects.requireNonNull(depository);
+		return this;
 	}
 
-	@XmlElement(name = "Pty1", required = true)
 	public PartyIdentificationAndAccount32 getParty1() {
 		return party1;
 	}
 
-	public void setParty1(com.tools20022.repository.msg.PartyIdentificationAndAccount32 party1) {
-		this.party1 = party1;
+	public ReceivingPartiesAndAccount7 setParty1(com.tools20022.repository.msg.PartyIdentificationAndAccount32 party1) {
+		this.party1 = Objects.requireNonNull(party1);
+		return this;
 	}
 
-	@XmlElement(name = "Pty2")
-	public PartyIdentificationAndAccount32 getParty2() {
-		return party2;
+	public Optional<PartyIdentificationAndAccount32> getParty2() {
+		return party2 == null ? Optional.empty() : Optional.of(party2);
 	}
 
-	public void setParty2(com.tools20022.repository.msg.PartyIdentificationAndAccount32 party2) {
+	public ReceivingPartiesAndAccount7 setParty2(com.tools20022.repository.msg.PartyIdentificationAndAccount32 party2) {
 		this.party2 = party2;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesSttlmSys")
-	public Max35Text getSecuritiesSettlementSystem() {
-		return securitiesSettlementSystem;
+	public Optional<Max35Text> getSecuritiesSettlementSystem() {
+		return securitiesSettlementSystem == null ? Optional.empty() : Optional.of(securitiesSettlementSystem);
 	}
 
-	public void setSecuritiesSettlementSystem(Max35Text securitiesSettlementSystem) {
+	public ReceivingPartiesAndAccount7 setSecuritiesSettlementSystem(Max35Text securitiesSettlementSystem) {
 		this.securitiesSettlementSystem = securitiesSettlementSystem;
+		return this;
 	}
 }

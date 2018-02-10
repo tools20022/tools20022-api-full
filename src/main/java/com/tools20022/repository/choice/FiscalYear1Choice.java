@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,15 +61,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of start date and end date for the fiscal year."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FiscalYear1Choice", propOrder = {"startDate", "endDate"})
 public class FiscalYear1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StartDt", required = true)
 	protected ISODate startDate;
 	/**
-	 * Start date of the fiscal year.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -95,7 +97,7 @@ public class FiscalYear1Choice {
 	 */
 	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FiscalYear1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FiscalYear1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -106,10 +108,11 @@ public class FiscalYear1Choice {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "EndDt", required = true)
 	protected ISODate endDate;
 	/**
-	 * End date of the fiscal year.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -136,7 +139,7 @@ public class FiscalYear1Choice {
 	 */
 	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FiscalYear1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FiscalYear1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EndDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,8 +154,8 @@ public class FiscalYear1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FiscalYear1Choice.mmStartDate, FiscalYear1Choice.mmEndDate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FiscalYear1Choice.mmStartDate, com.tools20022.repository.choice.FiscalYear1Choice.mmEndDate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FiscalYear1Choice";
 				definition = "Choice of start date and end date for the fiscal year.";
@@ -161,21 +164,21 @@ public class FiscalYear1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StartDt", required = true)
 	public ISODate getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(ISODate startDate) {
-		this.startDate = startDate;
+	public FiscalYear1Choice setStartDate(ISODate startDate) {
+		this.startDate = Objects.requireNonNull(startDate);
+		return this;
 	}
 
-	@XmlElement(name = "EndDt", required = true)
 	public ISODate getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(ISODate endDate) {
-		this.endDate = endDate;
+	public FiscalYear1Choice setEndDate(ISODate endDate) {
+		this.endDate = Objects.requireNonNull(endDate);
+		return this;
 	}
 }

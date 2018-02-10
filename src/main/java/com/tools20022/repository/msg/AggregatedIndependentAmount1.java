@@ -22,9 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.IndependentAmount;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,16 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AggregatedIndependentAmount1", propOrder = {"trade", "valueAtRisk", "netOpenPosition", "otherAmount"})
 public class AggregatedIndependentAmount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Trad")
 	protected IndependentAmount1 trade;
 	/**
-	 * Total independent amount defined in the confirmations of individual
-	 * trades.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +119,7 @@ public class AggregatedIndependentAmount1 {
 	public static final MMMessageAttribute mmTrade = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> IndependentAmount.mmIndependentAmountPerTrade;
-			componentContext_lazy = () -> AggregatedIndependentAmount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AggregatedIndependentAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "Trad";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,12 +130,11 @@ public class AggregatedIndependentAmount1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.IndependentAmount1.mmObject();
 		}
 	};
+	@XmlElement(name = "ValAtRsk")
 	protected IndependentAmount1 valueAtRisk;
 	/**
-	 * Portfolio level independent amount that reflects portfolio change over a
-	 * short time period using statistical techniques such as volatility and
-	 * risk factor correlations.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,7 +170,7 @@ public class AggregatedIndependentAmount1 {
 	public static final MMMessageAttribute mmValueAtRisk = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> IndependentAmount.mmIndependentAmountValueAtRisk;
-			componentContext_lazy = () -> AggregatedIndependentAmount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AggregatedIndependentAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "ValAtRsk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,14 +181,11 @@ public class AggregatedIndependentAmount1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.IndependentAmount1.mmObject();
 		}
 	};
+	@XmlElement(name = "NetOpnPos")
 	protected IndependentAmount1 netOpenPosition;
 	/**
-	 * Portfolio level independent amount related to parties net open position.
-	 * Net open position means the total of the net long FX and the net options
-	 * in respect of each currency where: net long FX for any currency shall be
-	 * the net amount (if any) of that currency which the party “A” is long as
-	 * against party “B” in respect of all FX transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -226,7 +221,7 @@ public class AggregatedIndependentAmount1 {
 	public static final MMMessageAttribute mmNetOpenPosition = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> IndependentAmount.mmIndependentAmountNetOpenPosition;
-			componentContext_lazy = () -> AggregatedIndependentAmount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AggregatedIndependentAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "NetOpnPos";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,11 +232,11 @@ public class AggregatedIndependentAmount1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.IndependentAmount1.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrAmt")
 	protected List<com.tools20022.repository.msg.IndependentAmount2> otherAmount;
 	/**
-	 * Any other amount that should be considered to calculate the independent
-	 * amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -277,7 +272,7 @@ public class AggregatedIndependentAmount1 {
 	public static final MMMessageAttribute mmOtherAmount = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> IndependentAmount.mmObject();
-			componentContext_lazy = () -> AggregatedIndependentAmount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AggregatedIndependentAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -291,9 +286,10 @@ public class AggregatedIndependentAmount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AggregatedIndependentAmount1.mmTrade, AggregatedIndependentAmount1.mmValueAtRisk, AggregatedIndependentAmount1.mmNetOpenPosition, AggregatedIndependentAmount1.mmOtherAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregatedIndependentAmount1.mmTrade, com.tools20022.repository.msg.AggregatedIndependentAmount1.mmValueAtRisk,
+						com.tools20022.repository.msg.AggregatedIndependentAmount1.mmNetOpenPosition, com.tools20022.repository.msg.AggregatedIndependentAmount1.mmOtherAmount);
 				trace_lazy = () -> IndependentAmount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AggregatedIndependentAmount1";
 				definition = "Independent amount could be defined at a trade level or portfolio level.  It is assumed that their treatment will be based on the exposure convention that is whether netted together or treated on a gross basis.";
@@ -302,39 +298,39 @@ public class AggregatedIndependentAmount1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Trad")
-	public IndependentAmount1 getTrade() {
-		return trade;
+	public Optional<IndependentAmount1> getTrade() {
+		return trade == null ? Optional.empty() : Optional.of(trade);
 	}
 
-	public void setTrade(com.tools20022.repository.msg.IndependentAmount1 trade) {
+	public AggregatedIndependentAmount1 setTrade(com.tools20022.repository.msg.IndependentAmount1 trade) {
 		this.trade = trade;
+		return this;
 	}
 
-	@XmlElement(name = "ValAtRsk")
-	public IndependentAmount1 getValueAtRisk() {
-		return valueAtRisk;
+	public Optional<IndependentAmount1> getValueAtRisk() {
+		return valueAtRisk == null ? Optional.empty() : Optional.of(valueAtRisk);
 	}
 
-	public void setValueAtRisk(com.tools20022.repository.msg.IndependentAmount1 valueAtRisk) {
+	public AggregatedIndependentAmount1 setValueAtRisk(com.tools20022.repository.msg.IndependentAmount1 valueAtRisk) {
 		this.valueAtRisk = valueAtRisk;
+		return this;
 	}
 
-	@XmlElement(name = "NetOpnPos")
-	public IndependentAmount1 getNetOpenPosition() {
-		return netOpenPosition;
+	public Optional<IndependentAmount1> getNetOpenPosition() {
+		return netOpenPosition == null ? Optional.empty() : Optional.of(netOpenPosition);
 	}
 
-	public void setNetOpenPosition(com.tools20022.repository.msg.IndependentAmount1 netOpenPosition) {
+	public AggregatedIndependentAmount1 setNetOpenPosition(com.tools20022.repository.msg.IndependentAmount1 netOpenPosition) {
 		this.netOpenPosition = netOpenPosition;
+		return this;
 	}
 
-	@XmlElement(name = "OthrAmt")
 	public List<IndependentAmount2> getOtherAmount() {
-		return otherAmount;
+		return otherAmount == null ? otherAmount = new ArrayList<>() : otherAmount;
 	}
 
-	public void setOtherAmount(List<com.tools20022.repository.msg.IndependentAmount2> otherAmount) {
-		this.otherAmount = otherAmount;
+	public AggregatedIndependentAmount1 setOtherAmount(List<com.tools20022.repository.msg.IndependentAmount2> otherAmount) {
+		this.otherAmount = Objects.requireNonNull(otherAmount);
+		return this;
 	}
 }

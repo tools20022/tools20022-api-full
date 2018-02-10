@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.TriggerActionCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines the type of action to take when the trigger hits.
@@ -31,13 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TriggerActionCode#mmActivate
- * TriggerActionCode.mmActivate}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TriggerActionCode#mmModify
- * TriggerActionCode.mmModify}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TriggerActionCode#mmCancel
- * TriggerActionCode.mmCancel}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TriggerActionCode#Activate
+ * TriggerActionCode.Activate}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TriggerActionCode#Modify
+ * TriggerActionCode.Modify}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TriggerActionCode#Cancel
+ * TriggerActionCode.Cancel}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the type of action to take when the trigger hits."</li>
  * </ul>
  */
-public class TriggerActionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TriggerActionCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,12 +97,12 @@ public class TriggerActionCode {
 	 * definition} = "Trigger action is activate."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmActivate = new MMCode() {
+	public static final TriggerActionCode Activate = new TriggerActionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Activate";
 			definition = "Trigger action is activate.";
-			owner_lazy = () -> TriggerActionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TriggerActionCode.mmObject();
 			codeName = "ACTI";
 		}
 	};
@@ -122,12 +127,12 @@ public class TriggerActionCode {
 	 * definition} = "Trigger action is modify."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmModify = new MMCode() {
+	public static final TriggerActionCode Modify = new TriggerActionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modify";
 			definition = "Trigger action is modify.";
-			owner_lazy = () -> TriggerActionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TriggerActionCode.mmObject();
 			codeName = "MODI";
 		}
 	};
@@ -152,28 +157,59 @@ public class TriggerActionCode {
 	 * definition} = "Trigger action is cancel."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancel = new MMCode() {
+	public static final TriggerActionCode Cancel = new TriggerActionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancel";
 			definition = "Trigger action is cancel.";
-			owner_lazy = () -> TriggerActionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TriggerActionCode.mmObject();
 			codeName = "CANC";
 		}
 	};
+	final static private LinkedHashMap<String, TriggerActionCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TriggerActionCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACTI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TriggerActionCode";
 				definition = "Defines the type of action to take when the trigger hits.";
-				code_lazy = () -> Arrays.asList(TriggerActionCode.mmActivate, TriggerActionCode.mmModify, TriggerActionCode.mmCancel);
 				derivation_lazy = () -> Arrays.asList(TriggerAction1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TriggerActionCode.Activate, com.tools20022.repository.codeset.TriggerActionCode.Modify, com.tools20022.repository.codeset.TriggerActionCode.Cancel);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Activate.getCodeName().get(), Activate);
+		codesByName.put(Modify.getCodeName().get(), Modify);
+		codesByName.put(Cancel.getCodeName().get(), Cancel);
+	}
+
+	public static TriggerActionCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TriggerActionCode[] values() {
+		TriggerActionCode[] values = new TriggerActionCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TriggerActionCode> {
+		@Override
+		public TriggerActionCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TriggerActionCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

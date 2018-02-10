@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CategoryPurpose1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the high level purpose of the instruction based on a set of
@@ -36,18 +41,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CategoryPurpose1Code#mmIntraCompanyPayment
- * CategoryPurpose1Code.mmIntraCompanyPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CategoryPurpose1Code#IntraCompanyPayment
+ * CategoryPurpose1Code.IntraCompanyPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CategoryPurpose1Code#mmTradeSettlementPayment
- * CategoryPurpose1Code.mmTradeSettlementPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CategoryPurpose1Code#TradeSettlementPayment
+ * CategoryPurpose1Code.TradeSettlementPayment}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CategoryPurpose1Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CategoryPurpose1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -79,11 +85,11 @@ public class CategoryPurpose1Code {
 	 * name} = "IntraCompanyPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntraCompanyPayment = new MMCode() {
+	public static final CategoryPurpose1Code IntraCompanyPayment = new CategoryPurpose1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraCompanyPayment";
-			owner_lazy = () -> CategoryPurpose1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CategoryPurpose1Code.mmObject();
 		}
 	};
 	/**
@@ -102,24 +108,54 @@ public class CategoryPurpose1Code {
 	 * name} = "TradeSettlementPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradeSettlementPayment = new MMCode() {
+	public static final CategoryPurpose1Code TradeSettlementPayment = new CategoryPurpose1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeSettlementPayment";
-			owner_lazy = () -> CategoryPurpose1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CategoryPurpose1Code.mmObject();
 		}
 	};
+	final static private LinkedHashMap<String, CategoryPurpose1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CategoryPurpose1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CategoryPurpose1Code";
 				definition = "Specifies the high level purpose of the instruction based on a set of pre-defined categories.\r\nUsage: This is used by the initiating party to provide information concerning the processing of the payment. It is likely to trigger special processing by any of the agents involved in the payment chain.";
-				code_lazy = () -> Arrays.asList(CategoryPurpose1Code.mmIntraCompanyPayment, CategoryPurpose1Code.mmTradeSettlementPayment);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CategoryPurpose1Code.IntraCompanyPayment, com.tools20022.repository.codeset.CategoryPurpose1Code.TradeSettlementPayment);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(IntraCompanyPayment.getCodeName().get(), IntraCompanyPayment);
+		codesByName.put(TradeSettlementPayment.getCodeName().get(), TradeSettlementPayment);
+	}
+
+	public static CategoryPurpose1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CategoryPurpose1Code[] values() {
+		CategoryPurpose1Code[] values = new CategoryPurpose1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CategoryPurpose1Code> {
+		@Override
+		public CategoryPurpose1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CategoryPurpose1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

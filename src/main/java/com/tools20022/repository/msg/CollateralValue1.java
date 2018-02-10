@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides details of the collateral reference data."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CollateralValue1", propOrder = {"securityIdentification", "valuationDate", "valuationCurrency", "valuationPrice"})
 public class CollateralValue1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctyId", required = true)
 	protected ISINIdentifier securityIdentification;
 	/**
-	 * Identification of a security by an ISIN.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +121,7 @@ public class CollateralValue1 {
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
-			componentContext_lazy = () -> CollateralValue1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValue1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,10 +132,11 @@ public class CollateralValue1 {
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "ValtnDt", required = true)
 	protected ISODate valuationDate;
 	/**
-	 * Valuation date for the price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +169,7 @@ public class CollateralValue1 {
 	public static final MMMessageAttribute mmValuationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CollateralValuation.mmCollateralValuationDate;
-			componentContext_lazy = () -> CollateralValue1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValue1.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,10 +180,11 @@ public class CollateralValue1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ValtnCcy")
 	protected ActiveCurrencyCode valuationCurrency;
 	/**
-	 * Provides details of the currency of the valuation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,7 +218,7 @@ public class CollateralValue1 {
 	public static final MMMessageAttribute mmValuationCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CollateralValuation.mmCollateralValuationCurrency;
-			componentContext_lazy = () -> CollateralValue1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValue1.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,10 +229,11 @@ public class CollateralValue1 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "ValtnPric", required = true)
 	protected AmountOrCoefficientPrice1Choice valuationPrice;
 	/**
-	 * Provides details of the price provided for the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -261,7 +267,7 @@ public class CollateralValue1 {
 	public static final MMMessageAttribute mmValuationPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPricing;
-			componentContext_lazy = () -> CollateralValue1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValue1.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,9 +282,10 @@ public class CollateralValue1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CollateralValue1.mmSecurityIdentification, CollateralValue1.mmValuationDate, CollateralValue1.mmValuationCurrency, CollateralValue1.mmValuationPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValue1.mmSecurityIdentification, com.tools20022.repository.msg.CollateralValue1.mmValuationDate,
+						com.tools20022.repository.msg.CollateralValue1.mmValuationCurrency, com.tools20022.repository.msg.CollateralValue1.mmValuationPrice);
 				trace_lazy = () -> CollateralValuation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValue1";
 				definition = "Provides details of the collateral reference data.";
@@ -287,39 +294,39 @@ public class CollateralValue1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctyId", required = true)
 	public ISINIdentifier getSecurityIdentification() {
 		return securityIdentification;
 	}
 
-	public void setSecurityIdentification(ISINIdentifier securityIdentification) {
-		this.securityIdentification = securityIdentification;
+	public CollateralValue1 setSecurityIdentification(ISINIdentifier securityIdentification) {
+		this.securityIdentification = Objects.requireNonNull(securityIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ValtnDt", required = true)
 	public ISODate getValuationDate() {
 		return valuationDate;
 	}
 
-	public void setValuationDate(ISODate valuationDate) {
-		this.valuationDate = valuationDate;
+	public CollateralValue1 setValuationDate(ISODate valuationDate) {
+		this.valuationDate = Objects.requireNonNull(valuationDate);
+		return this;
 	}
 
-	@XmlElement(name = "ValtnCcy")
-	public ActiveCurrencyCode getValuationCurrency() {
-		return valuationCurrency;
+	public Optional<ActiveCurrencyCode> getValuationCurrency() {
+		return valuationCurrency == null ? Optional.empty() : Optional.of(valuationCurrency);
 	}
 
-	public void setValuationCurrency(ActiveCurrencyCode valuationCurrency) {
+	public CollateralValue1 setValuationCurrency(ActiveCurrencyCode valuationCurrency) {
 		this.valuationCurrency = valuationCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "ValtnPric", required = true)
 	public AmountOrCoefficientPrice1Choice getValuationPrice() {
 		return valuationPrice;
 	}
 
-	public void setValuationPrice(AmountOrCoefficientPrice1Choice valuationPrice) {
-		this.valuationPrice = valuationPrice;
+	public CollateralValue1 setValuationPrice(AmountOrCoefficientPrice1Choice valuationPrice) {
+		this.valuationPrice = Objects.requireNonNull(valuationPrice);
+		return this;
 	}
 }

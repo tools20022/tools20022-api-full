@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,8 @@ import com.tools20022.repository.entity.SourceOfPrice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Source of a price quotation when it is not the local market."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PriceSource", propOrder = {"priceSource", "narrative"})
 public class PriceSource {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PricSrc", required = true)
 	protected PriceSource1Code priceSource;
 	/**
-	 * Source of the price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -87,6 +91,9 @@ public class PriceSource {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PricSrc"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94B:PRIC//</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -99,9 +106,10 @@ public class PriceSource {
 	 */
 	public static final MMMessageAttribute mmPriceSource = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PriceSource.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceSource.mmObject();
 			isDerived = false;
 			xmlTag = "PricSrc";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94B:PRIC//"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceSource";
 			definition = "Source of the price.";
@@ -110,10 +118,11 @@ public class PriceSource {
 			simpleType_lazy = () -> PriceSource1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Nrrtv")
 	protected Max35Text narrative;
 	/**
-	 * Additional information about the source of a price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +148,7 @@ public class PriceSource {
 	 */
 	public static final MMMessageAttribute mmNarrative = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PriceSource.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceSource.mmObject();
 			isDerived = false;
 			xmlTag = "Nrrtv";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,9 +163,9 @@ public class PriceSource {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PriceSource.mmPriceSource, PriceSource.mmNarrative);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceSource.mmPriceSource, com.tools20022.repository.msg.PriceSource.mmNarrative);
 				trace_lazy = () -> SourceOfPrice.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceSource";
 				definition = "Source of a price quotation when it is not the local market.";
@@ -165,21 +174,21 @@ public class PriceSource {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PricSrc", required = true)
 	public PriceSource1Code getPriceSource() {
 		return priceSource;
 	}
 
-	public void setPriceSource(PriceSource1Code priceSource) {
-		this.priceSource = priceSource;
+	public PriceSource setPriceSource(PriceSource1Code priceSource) {
+		this.priceSource = Objects.requireNonNull(priceSource);
+		return this;
 	}
 
-	@XmlElement(name = "Nrrtv")
-	public Max35Text getNarrative() {
-		return narrative;
+	public Optional<Max35Text> getNarrative() {
+		return narrative == null ? Optional.empty() : Optional.of(narrative);
 	}
 
-	public void setNarrative(Max35Text narrative) {
+	public PriceSource setNarrative(Max35Text narrative) {
 		this.narrative = narrative;
+		return this;
 	}
 }

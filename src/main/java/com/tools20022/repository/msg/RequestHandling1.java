@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,16 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Explains the status of the related request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RequestHandling1", propOrder = {"statusCode", "description"})
 public class RequestHandling1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StsCd", required = true)
 	protected Max4AlphaNumericText statusCode;
 	/**
-	 * Specifies the status of the request, for example the result of the schema
-	 * validation or a business processing result/error.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,7 +101,7 @@ public class RequestHandling1 {
 	 */
 	public static final MMMessageAttribute mmStatusCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequestHandling1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestHandling1.mmObject();
 			isDerived = false;
 			xmlTag = "StsCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,10 +112,11 @@ public class RequestHandling1 {
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Desc")
 	protected Max140Text description;
 	/**
-	 * Description of the status, in free format text.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,7 +143,7 @@ public class RequestHandling1 {
 	 */
 	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequestHandling1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestHandling1.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,8 +158,8 @@ public class RequestHandling1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RequestHandling1.mmStatusCode, RequestHandling1.mmDescription);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestHandling1.mmStatusCode, com.tools20022.repository.msg.RequestHandling1.mmDescription);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RequestHandling1";
 				definition = "Explains the status of the related request.";
@@ -165,21 +168,21 @@ public class RequestHandling1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StsCd", required = true)
 	public Max4AlphaNumericText getStatusCode() {
 		return statusCode;
 	}
 
-	public void setStatusCode(Max4AlphaNumericText statusCode) {
-		this.statusCode = statusCode;
+	public RequestHandling1 setStatusCode(Max4AlphaNumericText statusCode) {
+		this.statusCode = Objects.requireNonNull(statusCode);
+		return this;
 	}
 
-	@XmlElement(name = "Desc")
-	public Max140Text getDescription() {
-		return description;
+	public Optional<Max140Text> getDescription() {
+		return description == null ? Optional.empty() : Optional.of(description);
 	}
 
-	public void setDescription(Max140Text description) {
+	public RequestHandling1 setDescription(Max140Text description) {
 		this.description = description;
+		return this;
 	}
 }

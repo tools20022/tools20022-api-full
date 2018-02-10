@@ -27,9 +27,8 @@ import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * ApplicationParameters5}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ApplicationParameters6", propOrder = {"actionType", "applicationIdentification", "version", "parameters", "encryptedParameters"})
 public class ApplicationParameters6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ActnTp", required = true)
 	protected TerminalManagementAction3Code actionType;
 	/**
-	 * Type of action for the configuration parameters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -127,7 +127,7 @@ public class ApplicationParameters6 {
 	 */
 	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ApplicationParameters6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationParameters6.mmObject();
 			isDerived = false;
 			xmlTag = "ActnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,10 +139,11 @@ public class ApplicationParameters6 {
 			simpleType_lazy = () -> TerminalManagementAction3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ApplId", required = true)
 	protected Max35Text applicationIdentification;
 	/**
-	 * Identification of the payment application.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,7 +181,7 @@ public class ApplicationParameters6 {
 	public static final MMMessageAttribute mmApplicationIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmApplicationIdentification;
-			componentContext_lazy = () -> ApplicationParameters6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationParameters6.mmObject();
 			isDerived = false;
 			xmlTag = "ApplId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,10 +193,11 @@ public class ApplicationParameters6 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Vrsn")
 	protected Max256Text version;
 	/**
-	 * Version of the payment application configuration parameters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,7 +230,7 @@ public class ApplicationParameters6 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ApplicationParameters6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationParameters6.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,10 +242,11 @@ public class ApplicationParameters6 {
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Params")
 	protected List<Max100KBinary> parameters;
 	/**
-	 * Configuration parameters used by the related payment application.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -277,7 +280,7 @@ public class ApplicationParameters6 {
 	 */
 	public static final MMMessageAttribute mmParameters = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ApplicationParameters6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationParameters6.mmObject();
 			isDerived = false;
 			xmlTag = "Params";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,11 +291,11 @@ public class ApplicationParameters6 {
 			simpleType_lazy = () -> Max100KBinary.mmObject();
 		}
 	};
+	@XmlElement(name = "NcrptdParams")
 	protected ContentInformationType10 encryptedParameters;
 	/**
-	 * Sensitive parameters (sequence of parameters including the envelope)
-	 * encrypted with a cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -326,7 +329,7 @@ public class ApplicationParameters6 {
 	 */
 	public static final MMMessageAssociationEnd mmEncryptedParameters = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ApplicationParameters6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationParameters6.mmObject();
 			isDerived = false;
 			xmlTag = "NcrptdParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -343,10 +346,10 @@ public class ApplicationParameters6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ApplicationParameters6.mmActionType, ApplicationParameters6.mmApplicationIdentification, ApplicationParameters6.mmVersion, ApplicationParameters6.mmParameters,
-						ApplicationParameters6.mmEncryptedParameters);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationParameters6.mmActionType, com.tools20022.repository.msg.ApplicationParameters6.mmApplicationIdentification,
+						com.tools20022.repository.msg.ApplicationParameters6.mmVersion, com.tools20022.repository.msg.ApplicationParameters6.mmParameters, com.tools20022.repository.msg.ApplicationParameters6.mmEncryptedParameters);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ApplicationParameters6";
 				definition = "Acceptor parameters dedicated to a payment application of the point of interaction.";
@@ -356,48 +359,48 @@ public class ApplicationParameters6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ActnTp", required = true)
 	public TerminalManagementAction3Code getActionType() {
 		return actionType;
 	}
 
-	public void setActionType(TerminalManagementAction3Code actionType) {
-		this.actionType = actionType;
+	public ApplicationParameters6 setActionType(TerminalManagementAction3Code actionType) {
+		this.actionType = Objects.requireNonNull(actionType);
+		return this;
 	}
 
-	@XmlElement(name = "ApplId", required = true)
 	public Max35Text getApplicationIdentification() {
 		return applicationIdentification;
 	}
 
-	public void setApplicationIdentification(Max35Text applicationIdentification) {
-		this.applicationIdentification = applicationIdentification;
+	public ApplicationParameters6 setApplicationIdentification(Max35Text applicationIdentification) {
+		this.applicationIdentification = Objects.requireNonNull(applicationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Vrsn")
-	public Max256Text getVersion() {
-		return version;
+	public Optional<Max256Text> getVersion() {
+		return version == null ? Optional.empty() : Optional.of(version);
 	}
 
-	public void setVersion(Max256Text version) {
+	public ApplicationParameters6 setVersion(Max256Text version) {
 		this.version = version;
+		return this;
 	}
 
-	@XmlElement(name = "Params")
 	public List<Max100KBinary> getParameters() {
-		return parameters;
+		return parameters == null ? parameters = new ArrayList<>() : parameters;
 	}
 
-	public void setParameters(List<Max100KBinary> parameters) {
-		this.parameters = parameters;
+	public ApplicationParameters6 setParameters(List<Max100KBinary> parameters) {
+		this.parameters = Objects.requireNonNull(parameters);
+		return this;
 	}
 
-	@XmlElement(name = "NcrptdParams")
-	public ContentInformationType10 getEncryptedParameters() {
-		return encryptedParameters;
+	public Optional<ContentInformationType10> getEncryptedParameters() {
+		return encryptedParameters == null ? Optional.empty() : Optional.of(encryptedParameters);
 	}
 
-	public void setEncryptedParameters(com.tools20022.repository.msg.ContentInformationType10 encryptedParameters) {
+	public ApplicationParameters6 setEncryptedParameters(com.tools20022.repository.msg.ContentInformationType10 encryptedParameters) {
 		this.encryptedParameters = encryptedParameters;
+		return this;
 	}
 }

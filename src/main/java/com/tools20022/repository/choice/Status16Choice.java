@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +61,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPendingToFailingRule#forStatus16Choice
+ * ConstraintPendingToFailingRule.forStatus16Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule#forStatus16Choice
+ * ConstraintSettlementStatusAndMatchedRule.forStatus16Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of status."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Status16Choice", propOrder = {"proprietary", "matchingStatus", "inferredMatchingStatus", "settlementStatus", "instructionProcessingStatus"})
 public class Status16Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Prtry", required = true)
 	protected ProprietaryStatusAndReason2 proprietary;
 	/**
-	 * Proprietary status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -112,7 +125,7 @@ public class Status16Choice {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
-			componentContext_lazy = () -> Status16Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +137,11 @@ public class Status16Choice {
 			type_lazy = () -> ProprietaryStatusAndReason2.mmObject();
 		}
 	};
+	@XmlElement(name = "MtchgSts", required = true)
 	protected MatchingStatus22Choice matchingStatus;
 	/**
-	 * Provides the matching status of the instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -160,7 +174,7 @@ public class Status16Choice {
 	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
-			componentContext_lazy = () -> Status16Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MtchgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,12 +186,11 @@ public class Status16Choice {
 			type_lazy = () -> com.tools20022.repository.choice.MatchingStatus22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IfrrdMtchgSts", required = true)
 	protected MatchingStatus22Choice inferredMatchingStatus;
 	/**
-	 * Provides the matching status of an instruction as known by the account
-	 * servicer based on an allegement. At this time no matching took place on
-	 * the market (at the CSD/ICSD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -212,7 +225,7 @@ public class Status16Choice {
 	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
-			componentContext_lazy = () -> Status16Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IfrrdMtchgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,10 +237,11 @@ public class Status16Choice {
 			type_lazy = () -> com.tools20022.repository.choice.MatchingStatus22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmSts", required = true)
 	protected SettlementStatus13Choice settlementStatus;
 	/**
-	 * Provides the status of settlement of a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -260,7 +274,7 @@ public class Status16Choice {
 	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
-			componentContext_lazy = () -> Status16Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,10 +286,11 @@ public class Status16Choice {
 			type_lazy = () -> com.tools20022.repository.choice.SettlementStatus13Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrPrcgSts", required = true)
 	protected InstructionProcessingStatus17Choice instructionProcessingStatus;
 	/**
-	 * Provides the status of an instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -308,7 +323,7 @@ public class Status16Choice {
 	public static final MMMessageAssociationEnd mmInstructionProcessingStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
-			componentContext_lazy = () -> Status16Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InstrPrcgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -324,9 +339,11 @@ public class Status16Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Status16Choice.mmProprietary, Status16Choice.mmMatchingStatus, Status16Choice.mmInferredMatchingStatus, Status16Choice.mmSettlementStatus,
-						Status16Choice.mmInstructionProcessingStatus);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status16Choice.mmProprietary, com.tools20022.repository.choice.Status16Choice.mmMatchingStatus,
+						com.tools20022.repository.choice.Status16Choice.mmInferredMatchingStatus, com.tools20022.repository.choice.Status16Choice.mmSettlementStatus,
+						com.tools20022.repository.choice.Status16Choice.mmInstructionProcessingStatus);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPendingToFailingRule.forStatus16Choice, com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forStatus16Choice);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status16Choice";
 				definition = "Choice of status.";
@@ -335,48 +352,48 @@ public class Status16Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public ProprietaryStatusAndReason2 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(ProprietaryStatusAndReason2 proprietary) {
-		this.proprietary = proprietary;
+	public Status16Choice setProprietary(ProprietaryStatusAndReason2 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 
-	@XmlElement(name = "MtchgSts", required = true)
 	public MatchingStatus22Choice getMatchingStatus() {
 		return matchingStatus;
 	}
 
-	public void setMatchingStatus(com.tools20022.repository.choice.MatchingStatus22Choice matchingStatus) {
-		this.matchingStatus = matchingStatus;
+	public Status16Choice setMatchingStatus(com.tools20022.repository.choice.MatchingStatus22Choice matchingStatus) {
+		this.matchingStatus = Objects.requireNonNull(matchingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "IfrrdMtchgSts", required = true)
 	public MatchingStatus22Choice getInferredMatchingStatus() {
 		return inferredMatchingStatus;
 	}
 
-	public void setInferredMatchingStatus(com.tools20022.repository.choice.MatchingStatus22Choice inferredMatchingStatus) {
-		this.inferredMatchingStatus = inferredMatchingStatus;
+	public Status16Choice setInferredMatchingStatus(com.tools20022.repository.choice.MatchingStatus22Choice inferredMatchingStatus) {
+		this.inferredMatchingStatus = Objects.requireNonNull(inferredMatchingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmSts", required = true)
 	public SettlementStatus13Choice getSettlementStatus() {
 		return settlementStatus;
 	}
 
-	public void setSettlementStatus(com.tools20022.repository.choice.SettlementStatus13Choice settlementStatus) {
-		this.settlementStatus = settlementStatus;
+	public Status16Choice setSettlementStatus(com.tools20022.repository.choice.SettlementStatus13Choice settlementStatus) {
+		this.settlementStatus = Objects.requireNonNull(settlementStatus);
+		return this;
 	}
 
-	@XmlElement(name = "InstrPrcgSts", required = true)
 	public InstructionProcessingStatus17Choice getInstructionProcessingStatus() {
 		return instructionProcessingStatus;
 	}
 
-	public void setInstructionProcessingStatus(com.tools20022.repository.choice.InstructionProcessingStatus17Choice instructionProcessingStatus) {
-		this.instructionProcessingStatus = instructionProcessingStatus;
+	public Status16Choice setInstructionProcessingStatus(com.tools20022.repository.choice.InstructionProcessingStatus17Choice instructionProcessingStatus) {
+		this.instructionProcessingStatus = Objects.requireNonNull(instructionProcessingStatus);
+		return this;
 	}
 }

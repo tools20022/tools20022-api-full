@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the party and owner type."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountRole1", propOrder = {"party", "ownerType", "startDate", "endDate"})
 public class AccountRole1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pty", required = true)
 	protected PartyIdentification41 party;
 	/**
-	 * Account owner/user identification and contact information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -110,7 +113,7 @@ public class AccountRole1 {
 	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> AccountRole1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRole1.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +125,11 @@ public class AccountRole1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification41.mmObject();
 		}
 	};
+	@XmlElement(name = "OwnrTp", required = true)
 	protected OwnerType1 ownerType;
 	/**
-	 * Defines account owners/users relation to the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +159,7 @@ public class AccountRole1 {
 	public static final MMMessageAssociationEnd mmOwnerType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Role.mmPartyRole;
-			componentContext_lazy = () -> AccountRole1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRole1.mmObject();
 			isDerived = false;
 			xmlTag = "OwnrTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,10 +171,11 @@ public class AccountRole1 {
 			type_lazy = () -> com.tools20022.repository.msg.OwnerType1.mmObject();
 		}
 	};
+	@XmlElement(name = "StartDt")
 	protected ISODate startDate;
 	/**
-	 * Start date related to the role.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,7 +201,7 @@ public class AccountRole1 {
 	 */
 	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountRole1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRole1.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,10 +212,11 @@ public class AccountRole1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "EndDt")
 	protected ISODate endDate;
 	/**
-	 * End date related to the role.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,7 +242,7 @@ public class AccountRole1 {
 	 */
 	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountRole1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRole1.mmObject();
 			isDerived = false;
 			xmlTag = "EndDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,9 +257,10 @@ public class AccountRole1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountRole1.mmParty, AccountRole1.mmOwnerType, AccountRole1.mmStartDate, AccountRole1.mmEndDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountRole1.mmParty, com.tools20022.repository.msg.AccountRole1.mmOwnerType, com.tools20022.repository.msg.AccountRole1.mmStartDate,
+						com.tools20022.repository.msg.AccountRole1.mmEndDate);
 				trace_lazy = () -> AccountOwnerRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountRole1";
 				definition = "Specifies the party and owner type.";
@@ -262,39 +269,39 @@ public class AccountRole1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pty", required = true)
 	public PartyIdentification41 getParty() {
 		return party;
 	}
 
-	public void setParty(com.tools20022.repository.msg.PartyIdentification41 party) {
-		this.party = party;
+	public AccountRole1 setParty(com.tools20022.repository.msg.PartyIdentification41 party) {
+		this.party = Objects.requireNonNull(party);
+		return this;
 	}
 
-	@XmlElement(name = "OwnrTp", required = true)
 	public OwnerType1 getOwnerType() {
 		return ownerType;
 	}
 
-	public void setOwnerType(com.tools20022.repository.msg.OwnerType1 ownerType) {
-		this.ownerType = ownerType;
+	public AccountRole1 setOwnerType(com.tools20022.repository.msg.OwnerType1 ownerType) {
+		this.ownerType = Objects.requireNonNull(ownerType);
+		return this;
 	}
 
-	@XmlElement(name = "StartDt")
-	public ISODate getStartDate() {
-		return startDate;
+	public Optional<ISODate> getStartDate() {
+		return startDate == null ? Optional.empty() : Optional.of(startDate);
 	}
 
-	public void setStartDate(ISODate startDate) {
+	public AccountRole1 setStartDate(ISODate startDate) {
 		this.startDate = startDate;
+		return this;
 	}
 
-	@XmlElement(name = "EndDt")
-	public ISODate getEndDate() {
-		return endDate;
+	public Optional<ISODate> getEndDate() {
+		return endDate == null ? Optional.empty() : Optional.of(endDate);
 	}
 
-	public void setEndDate(ISODate endDate) {
+	public AccountRole1 setEndDate(ISODate endDate) {
 		this.endDate = endDate;
+		return this;
 	}
 }

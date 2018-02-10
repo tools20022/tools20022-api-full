@@ -31,6 +31,7 @@ import com.tools20022.repository.msg.QueueTransactionIdentificationDetails;
 import com.tools20022.repository.msg.ShortPaymentIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,22 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentIdentification4Choice", propOrder = {"transactionIdentification", "queueIdentification", "longBusinessIdentification", "shortBusinessIdentification", "proprietaryIdentification"})
 public class PaymentIdentification4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId", required = true)
 	protected Max35Text transactionIdentification;
 	/**
-	 * Unique identification, as assigned by the first instructing agent, to
-	 * unambiguously identify the transaction that is passed on, unchanged,
-	 * throughout the entire interbank chain. Usage: The transaction
-	 * identification can be used for reconciliation, tracking or to link tasks
-	 * relating to the transaction on the interbank level. The instructing agent
-	 * has to make sure that the transaction identification is unique for a
-	 * pre-agreed period. Usage: this is the former PaymentInstructionReference
-	 * element.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,7 +128,7 @@ public class PaymentIdentification4Choice {
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmTransactionIdentification;
-			componentContext_lazy = () -> PaymentIdentification4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -144,11 +139,11 @@ public class PaymentIdentification4Choice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "QId", required = true)
 	protected QueueTransactionIdentificationDetails queueIdentification;
 	/**
-	 * Identification of the payment instruction by its position in a queue
-	 * managed by the clearing agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -177,7 +172,7 @@ public class PaymentIdentification4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmQueueIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentIdentification4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,11 +184,11 @@ public class PaymentIdentification4Choice {
 			type_lazy = () -> QueueTransactionIdentificationDetails.mmObject();
 		}
 	};
+	@XmlElement(name = "LngBizId", required = true)
 	protected LongPaymentIdentification1 longBusinessIdentification;
 	/**
-	 * Business identification of the payment instruction given by the clearing
-	 * agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -228,7 +223,7 @@ public class PaymentIdentification4Choice {
 	public static final MMMessageAssociationEnd mmLongBusinessIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
-			componentContext_lazy = () -> PaymentIdentification4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LngBizId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,11 +235,11 @@ public class PaymentIdentification4Choice {
 			type_lazy = () -> LongPaymentIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "ShrtBizId", required = true)
 	protected ShortPaymentIdentification1 shortBusinessIdentification;
 	/**
-	 * Business identification of the payment instruction given by the clearing
-	 * agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -279,7 +274,7 @@ public class PaymentIdentification4Choice {
 	public static final MMMessageAssociationEnd mmShortBusinessIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
-			componentContext_lazy = () -> PaymentIdentification4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtBizId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -291,11 +286,11 @@ public class PaymentIdentification4Choice {
 			type_lazy = () -> ShortPaymentIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryId", required = true)
 	protected Max70Text proprietaryIdentification;
 	/**
-	 * Unique reference of the underlying payment instruction assigned by
-	 * Target2 SSP.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -324,7 +319,7 @@ public class PaymentIdentification4Choice {
 	 */
 	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentIdentification4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -339,10 +334,11 @@ public class PaymentIdentification4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentIdentification4Choice.mmTransactionIdentification, PaymentIdentification4Choice.mmQueueIdentification, PaymentIdentification4Choice.mmLongBusinessIdentification,
-						PaymentIdentification4Choice.mmShortBusinessIdentification, PaymentIdentification4Choice.mmProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentIdentification4Choice.mmTransactionIdentification, com.tools20022.repository.choice.PaymentIdentification4Choice.mmQueueIdentification,
+						com.tools20022.repository.choice.PaymentIdentification4Choice.mmLongBusinessIdentification, com.tools20022.repository.choice.PaymentIdentification4Choice.mmShortBusinessIdentification,
+						com.tools20022.repository.choice.PaymentIdentification4Choice.mmProprietaryIdentification);
 				trace_lazy = () -> PaymentIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentIdentification4Choice";
 				definition = "Choice between ways of identifying a payment instruction by its references and business identification.";
@@ -351,48 +347,48 @@ public class PaymentIdentification4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public PaymentIdentification4Choice setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "QId", required = true)
 	public QueueTransactionIdentificationDetails getQueueIdentification() {
 		return queueIdentification;
 	}
 
-	public void setQueueIdentification(QueueTransactionIdentificationDetails queueIdentification) {
-		this.queueIdentification = queueIdentification;
+	public PaymentIdentification4Choice setQueueIdentification(QueueTransactionIdentificationDetails queueIdentification) {
+		this.queueIdentification = Objects.requireNonNull(queueIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "LngBizId", required = true)
 	public LongPaymentIdentification1 getLongBusinessIdentification() {
 		return longBusinessIdentification;
 	}
 
-	public void setLongBusinessIdentification(LongPaymentIdentification1 longBusinessIdentification) {
-		this.longBusinessIdentification = longBusinessIdentification;
+	public PaymentIdentification4Choice setLongBusinessIdentification(LongPaymentIdentification1 longBusinessIdentification) {
+		this.longBusinessIdentification = Objects.requireNonNull(longBusinessIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ShrtBizId", required = true)
 	public ShortPaymentIdentification1 getShortBusinessIdentification() {
 		return shortBusinessIdentification;
 	}
 
-	public void setShortBusinessIdentification(ShortPaymentIdentification1 shortBusinessIdentification) {
-		this.shortBusinessIdentification = shortBusinessIdentification;
+	public PaymentIdentification4Choice setShortBusinessIdentification(ShortPaymentIdentification1 shortBusinessIdentification) {
+		this.shortBusinessIdentification = Objects.requireNonNull(shortBusinessIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryId", required = true)
 	public Max70Text getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}
 
-	public void setProprietaryIdentification(Max70Text proprietaryIdentification) {
-		this.proprietaryIdentification = proprietaryIdentification;
+	public PaymentIdentification4Choice setProprietaryIdentification(Max70Text proprietaryIdentification) {
+		this.proprietaryIdentification = Objects.requireNonNull(proprietaryIdentification);
+		return this;
 	}
 }

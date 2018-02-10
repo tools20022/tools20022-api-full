@@ -20,35 +20,39 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode;
+import com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the result of an investigation.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode
- * InvestigationExecutionConfirmationCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code#mmPartiallyExecutedCancellationRequest
- * InvestigationExecutionConfirmation4Code.
- * mmPartiallyExecutedCancellationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code#PartiallyExecutedCancellationRequest
+ * InvestigationExecutionConfirmation4Code.PartiallyExecutedCancellationRequest}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code#mmRejectedCancellationRequest
- * InvestigationExecutionConfirmation4Code.mmRejectedCancellationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code#RejectedCancellationRequest
+ * InvestigationExecutionConfirmation4Code.RejectedCancellationRequest}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode
+ * InvestigationExecutionConfirmationCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates the result of an investigation."</li>
  * </ul>
  */
-public class InvestigationExecutionConfirmation4Code extends InvestigationExecutionConfirmationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InvestigationExecutionConfirmation4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +89,12 @@ public class InvestigationExecutionConfirmation4Code extends InvestigationExecut
 	 * name} = "PartiallyExecutedCancellationRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartiallyExecutedCancellationRequest = new MMCode() {
+	public static final InvestigationExecutionConfirmation4Code PartiallyExecutedCancellationRequest = new InvestigationExecutionConfirmation4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyExecutedCancellationRequest";
-			owner_lazy = () -> InvestigationExecutionConfirmation4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code.mmObject();
+			codeName = InvestigationExecutionConfirmationCode.PartiallyExecutedCancellationRequest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,26 +113,58 @@ public class InvestigationExecutionConfirmation4Code extends InvestigationExecut
 	 * name} = "RejectedCancellationRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejectedCancellationRequest = new MMCode() {
+	public static final InvestigationExecutionConfirmation4Code RejectedCancellationRequest = new InvestigationExecutionConfirmation4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedCancellationRequest";
-			owner_lazy = () -> InvestigationExecutionConfirmation4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code.mmObject();
+			codeName = InvestigationExecutionConfirmationCode.RejectedCancellationRequest.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, InvestigationExecutionConfirmation4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InvestigationExecutionConfirmation4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PECR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestigationExecutionConfirmation4Code";
 				definition = "Indicates the result of an investigation.";
-				code_lazy = () -> Arrays.asList(InvestigationExecutionConfirmation4Code.mmPartiallyExecutedCancellationRequest, InvestigationExecutionConfirmation4Code.mmRejectedCancellationRequest);
 				trace_lazy = () -> InvestigationExecutionConfirmationCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code.PartiallyExecutedCancellationRequest,
+						com.tools20022.repository.codeset.InvestigationExecutionConfirmation4Code.RejectedCancellationRequest);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PartiallyExecutedCancellationRequest.getCodeName().get(), PartiallyExecutedCancellationRequest);
+		codesByName.put(RejectedCancellationRequest.getCodeName().get(), RejectedCancellationRequest);
+	}
+
+	public static InvestigationExecutionConfirmation4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InvestigationExecutionConfirmation4Code[] values() {
+		InvestigationExecutionConfirmation4Code[] values = new InvestigationExecutionConfirmation4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InvestigationExecutionConfirmation4Code> {
+		@Override
+		public InvestigationExecutionConfirmation4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InvestigationExecutionConfirmation4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

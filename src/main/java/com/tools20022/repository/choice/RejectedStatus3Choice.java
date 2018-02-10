@@ -25,9 +25,11 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.RejectedStatusReason5;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Status is rejected."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RejectedStatus3Choice", propOrder = {"reason", "dataSourceScheme"})
 public class RejectedStatus3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rsn", required = true)
 	protected List<RejectedStatusReason5> reason;
 	/**
-	 * Reason for a rejected status in the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +112,7 @@ public class RejectedStatus3Choice {
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
-			componentContext_lazy = () -> RejectedStatus3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,11 +124,11 @@ public class RejectedStatus3Choice {
 			type_lazy = () -> RejectedStatusReason5.mmObject();
 		}
 	};
+	@XmlElement(name = "DataSrcSchme", required = true)
 	protected List<GenericIdentification1> dataSourceScheme;
 	/**
-	 * Proprietary identification of a reason for a rejected status in the
-	 * report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -159,7 +162,7 @@ public class RejectedStatus3Choice {
 	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
-			componentContext_lazy = () -> RejectedStatus3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,9 +178,9 @@ public class RejectedStatus3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RejectedStatus3Choice.mmReason, RejectedStatus3Choice.mmDataSourceScheme);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectedStatus3Choice.mmReason, com.tools20022.repository.choice.RejectedStatus3Choice.mmDataSourceScheme);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectedStatus3Choice";
 				definition = "Status is rejected.";
@@ -186,21 +189,21 @@ public class RejectedStatus3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public List<RejectedStatusReason5> getReason() {
-		return reason;
+		return reason == null ? reason = new ArrayList<>() : reason;
 	}
 
-	public void setReason(List<RejectedStatusReason5> reason) {
-		this.reason = reason;
+	public RejectedStatus3Choice setReason(List<RejectedStatusReason5> reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	@XmlElement(name = "DataSrcSchme", required = true)
 	public List<GenericIdentification1> getDataSourceScheme() {
-		return dataSourceScheme;
+		return dataSourceScheme == null ? dataSourceScheme = new ArrayList<>() : dataSourceScheme;
 	}
 
-	public void setDataSourceScheme(List<GenericIdentification1> dataSourceScheme) {
-		this.dataSourceScheme = dataSourceScheme;
+	public RejectedStatus3Choice setDataSourceScheme(List<GenericIdentification1> dataSourceScheme) {
+		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
+		return this;
 	}
 }

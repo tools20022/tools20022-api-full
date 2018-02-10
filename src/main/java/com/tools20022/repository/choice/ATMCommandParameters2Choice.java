@@ -30,6 +30,7 @@ import com.tools20022.repository.msg.ATMConfigurationParameter1;
 import com.tools20022.repository.msg.ATMConfigurationParameter2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * ATMCommandParameters1Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "ATMCommandParameters2Choice", propOrder = {"ATMRequiredGlobalStatus", "expectedMessageFunction", "requiredConfigurationParameter", "requiredSecurityScheme", "securityDevice", "key"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "ATMCommandParameters2Choice", propOrder = {"aTMRequiredGlobalStatus", "expectedMessageFunction", "requiredConfigurationParameter", "requiredSecurityScheme", "securityDevice", "key"})
 public class ATMCommandParameters2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ATMReqrdGblSts", required = true)
 	protected ATMStatus1Code aTMRequiredGlobalStatus;
 	/**
-	 * Required status of the ATM, parameters of the status update command.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,7 +127,7 @@ public class ATMCommandParameters2Choice {
 	 */
 	public static final MMMessageAttribute mmATMRequiredGlobalStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCommandParameters2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ATMCommandParameters2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ATMReqrdGblSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,10 +139,11 @@ public class ATMCommandParameters2Choice {
 			simpleType_lazy = () -> ATMStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XpctdMsgFctn", required = true)
 	protected MessageFunction8Code expectedMessageFunction;
 	/**
-	 * Message to send for the send message command.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +176,7 @@ public class ATMCommandParameters2Choice {
 	 */
 	public static final MMMessageAttribute mmExpectedMessageFunction = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCommandParameters2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ATMCommandParameters2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdMsgFctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,10 +188,11 @@ public class ATMCommandParameters2Choice {
 			simpleType_lazy = () -> MessageFunction8Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqrdCfgtnParam", required = true)
 	protected ATMConfigurationParameter1 requiredConfigurationParameter;
 	/**
-	 * Parameters to be used by the configuration update command.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -221,7 +225,7 @@ public class ATMCommandParameters2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRequiredConfigurationParameter = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMCommandParameters2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ATMCommandParameters2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ReqrdCfgtnParam";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,10 +238,11 @@ public class ATMCommandParameters2Choice {
 			type_lazy = () -> ATMConfigurationParameter1.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqrdSctySchme", required = true)
 	protected ATMSecurityScheme2Code requiredSecurityScheme;
 	/**
-	 * Parameters to be used by the security scheme update command.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -266,7 +271,7 @@ public class ATMCommandParameters2Choice {
 	 */
 	public static final MMMessageAttribute mmRequiredSecurityScheme = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCommandParameters2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ATMCommandParameters2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ReqrdSctySchme";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -277,11 +282,11 @@ public class ATMCommandParameters2Choice {
 			simpleType_lazy = () -> ATMSecurityScheme2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyDvc", required = true)
 	protected ATMCommandParameters1 securityDevice;
 	/**
-	 * Parameters to be used to update the configuration or the status security
-	 * device.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -309,7 +314,7 @@ public class ATMCommandParameters2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSecurityDevice = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMCommandParameters2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ATMCommandParameters2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctyDvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,10 +326,11 @@ public class ATMCommandParameters2Choice {
 			type_lazy = () -> ATMCommandParameters1.mmObject();
 		}
 	};
+	@XmlElement(name = "Key", required = true)
 	protected ATMConfigurationParameter2 key;
 	/**
-	 * Parameters to be used by the various cryptographic key commands.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -352,7 +358,7 @@ public class ATMCommandParameters2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmKey = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMCommandParameters2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ATMCommandParameters2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Key";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -368,9 +374,10 @@ public class ATMCommandParameters2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMCommandParameters2Choice.mmATMRequiredGlobalStatus, ATMCommandParameters2Choice.mmExpectedMessageFunction, ATMCommandParameters2Choice.mmRequiredConfigurationParameter,
-						ATMCommandParameters2Choice.mmRequiredSecurityScheme, ATMCommandParameters2Choice.mmSecurityDevice, ATMCommandParameters2Choice.mmKey);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ATMCommandParameters2Choice.mmATMRequiredGlobalStatus, com.tools20022.repository.choice.ATMCommandParameters2Choice.mmExpectedMessageFunction,
+						com.tools20022.repository.choice.ATMCommandParameters2Choice.mmRequiredConfigurationParameter, com.tools20022.repository.choice.ATMCommandParameters2Choice.mmRequiredSecurityScheme,
+						com.tools20022.repository.choice.ATMCommandParameters2Choice.mmSecurityDevice, com.tools20022.repository.choice.ATMCommandParameters2Choice.mmKey);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommandParameters2Choice";
 				definition = "Specific parameters attached to an ATM command.";
@@ -380,57 +387,57 @@ public class ATMCommandParameters2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ATMReqrdGblSts", required = true)
 	public ATMStatus1Code getATMRequiredGlobalStatus() {
 		return aTMRequiredGlobalStatus;
 	}
 
-	public void setATMRequiredGlobalStatus(ATMStatus1Code aTMRequiredGlobalStatus) {
-		this.aTMRequiredGlobalStatus = aTMRequiredGlobalStatus;
+	public ATMCommandParameters2Choice setATMRequiredGlobalStatus(ATMStatus1Code aTMRequiredGlobalStatus) {
+		this.aTMRequiredGlobalStatus = Objects.requireNonNull(aTMRequiredGlobalStatus);
+		return this;
 	}
 
-	@XmlElement(name = "XpctdMsgFctn", required = true)
 	public MessageFunction8Code getExpectedMessageFunction() {
 		return expectedMessageFunction;
 	}
 
-	public void setExpectedMessageFunction(MessageFunction8Code expectedMessageFunction) {
-		this.expectedMessageFunction = expectedMessageFunction;
+	public ATMCommandParameters2Choice setExpectedMessageFunction(MessageFunction8Code expectedMessageFunction) {
+		this.expectedMessageFunction = Objects.requireNonNull(expectedMessageFunction);
+		return this;
 	}
 
-	@XmlElement(name = "ReqrdCfgtnParam", required = true)
 	public ATMConfigurationParameter1 getRequiredConfigurationParameter() {
 		return requiredConfigurationParameter;
 	}
 
-	public void setRequiredConfigurationParameter(ATMConfigurationParameter1 requiredConfigurationParameter) {
-		this.requiredConfigurationParameter = requiredConfigurationParameter;
+	public ATMCommandParameters2Choice setRequiredConfigurationParameter(ATMConfigurationParameter1 requiredConfigurationParameter) {
+		this.requiredConfigurationParameter = Objects.requireNonNull(requiredConfigurationParameter);
+		return this;
 	}
 
-	@XmlElement(name = "ReqrdSctySchme", required = true)
 	public ATMSecurityScheme2Code getRequiredSecurityScheme() {
 		return requiredSecurityScheme;
 	}
 
-	public void setRequiredSecurityScheme(ATMSecurityScheme2Code requiredSecurityScheme) {
-		this.requiredSecurityScheme = requiredSecurityScheme;
+	public ATMCommandParameters2Choice setRequiredSecurityScheme(ATMSecurityScheme2Code requiredSecurityScheme) {
+		this.requiredSecurityScheme = Objects.requireNonNull(requiredSecurityScheme);
+		return this;
 	}
 
-	@XmlElement(name = "SctyDvc", required = true)
 	public ATMCommandParameters1 getSecurityDevice() {
 		return securityDevice;
 	}
 
-	public void setSecurityDevice(ATMCommandParameters1 securityDevice) {
-		this.securityDevice = securityDevice;
+	public ATMCommandParameters2Choice setSecurityDevice(ATMCommandParameters1 securityDevice) {
+		this.securityDevice = Objects.requireNonNull(securityDevice);
+		return this;
 	}
 
-	@XmlElement(name = "Key", required = true)
 	public ATMConfigurationParameter2 getKey() {
 		return key;
 	}
 
-	public void setKey(ATMConfigurationParameter2 key) {
-		this.key = key;
+	public ATMCommandParameters2Choice setKey(ATMConfigurationParameter2 key) {
+		this.key = Objects.requireNonNull(key);
+		return this;
 	}
 }

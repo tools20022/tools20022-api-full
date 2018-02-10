@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode;
+import com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Further sub product code list for commodity derivative Emissions.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode
- * AssetClassDetailedSubProductTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#mmCER
- * AssetClassDetailedSubProductType8Code.mmCER}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#CER
+ * AssetClassDetailedSubProductType8Code.CER}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#mmERU
- * AssetClassDetailedSubProductType8Code.mmERU}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#ERU
+ * AssetClassDetailedSubProductType8Code.ERU}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#mmEUA
- * AssetClassDetailedSubProductType8Code.mmEUA}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#EUA
+ * AssetClassDetailedSubProductType8Code.EUA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#mmEUAA
- * AssetClassDetailedSubProductType8Code.mmEUAA}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#EUAA
+ * AssetClassDetailedSubProductType8Code.EUAA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#mmOther
- * AssetClassDetailedSubProductType8Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code#Other
+ * AssetClassDetailedSubProductType8Code.Other}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode
+ * AssetClassDetailedSubProductTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Further sub product code list for commodity derivative Emissions."</li>
  * </ul>
  */
-public class AssetClassDetailedSubProductType8Code extends AssetClassDetailedSubProductTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AssetClassDetailedSubProductType8Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,11 +92,12 @@ public class AssetClassDetailedSubProductType8Code extends AssetClassDetailedSub
 	 * name} = "CER"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCER = new MMCode() {
+	public static final AssetClassDetailedSubProductType8Code CER = new AssetClassDetailedSubProductType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CER";
-			owner_lazy = () -> AssetClassDetailedSubProductType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.CER.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +116,12 @@ public class AssetClassDetailedSubProductType8Code extends AssetClassDetailedSub
 	 * name} = "ERU"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmERU = new MMCode() {
+	public static final AssetClassDetailedSubProductType8Code ERU = new AssetClassDetailedSubProductType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERU";
-			owner_lazy = () -> AssetClassDetailedSubProductType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.ERU.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,11 +140,12 @@ public class AssetClassDetailedSubProductType8Code extends AssetClassDetailedSub
 	 * name} = "EUA"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEUA = new MMCode() {
+	public static final AssetClassDetailedSubProductType8Code EUA = new AssetClassDetailedSubProductType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUA";
-			owner_lazy = () -> AssetClassDetailedSubProductType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.EUA.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -156,11 +164,12 @@ public class AssetClassDetailedSubProductType8Code extends AssetClassDetailedSub
 	 * name} = "EUAA"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEUAA = new MMCode() {
+	public static final AssetClassDetailedSubProductType8Code EUAA = new AssetClassDetailedSubProductType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUAA";
-			owner_lazy = () -> AssetClassDetailedSubProductType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.EUAA.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -179,26 +188,61 @@ public class AssetClassDetailedSubProductType8Code extends AssetClassDetailedSub
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final AssetClassDetailedSubProductType8Code Other = new AssetClassDetailedSubProductType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> AssetClassDetailedSubProductType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.Other.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AssetClassDetailedSubProductType8Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AssetClassDetailedSubProductType8Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassDetailedSubProductType8Code";
 				definition = "Further sub product code list for commodity derivative Emissions.";
-				code_lazy = () -> Arrays.asList(AssetClassDetailedSubProductType8Code.mmCER, AssetClassDetailedSubProductType8Code.mmERU, AssetClassDetailedSubProductType8Code.mmEUA, AssetClassDetailedSubProductType8Code.mmEUAA,
-						AssetClassDetailedSubProductType8Code.mmOther);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.CER, com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.ERU,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.EUA, com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.EUAA,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CER.getCodeName().get(), CER);
+		codesByName.put(ERU.getCodeName().get(), ERU);
+		codesByName.put(EUA.getCodeName().get(), EUA);
+		codesByName.put(EUAA.getCodeName().get(), EUAA);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static AssetClassDetailedSubProductType8Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AssetClassDetailedSubProductType8Code[] values() {
+		AssetClassDetailedSubProductType8Code[] values = new AssetClassDetailedSubProductType8Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AssetClassDetailedSubProductType8Code> {
+		@Override
+		public AssetClassDetailedSubProductType8Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AssetClassDetailedSubProductType8Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

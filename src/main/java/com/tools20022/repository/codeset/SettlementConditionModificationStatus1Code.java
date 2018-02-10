@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SettlementConditionModificationStatusStatusCode;
+import com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of a securities settlement condition modification
@@ -31,33 +35,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatusStatusCode
- * SettlementConditionModificationStatusStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#mmAcknowledgedAccepted
- * SettlementConditionModificationStatus1Code.mmAcknowledgedAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#AcknowledgedAccepted
+ * SettlementConditionModificationStatus1Code.AcknowledgedAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#mmRejected
- * SettlementConditionModificationStatus1Code.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#Rejected
+ * SettlementConditionModificationStatus1Code.Rejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#mmPending
- * SettlementConditionModificationStatus1Code.mmPending}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#Pending
+ * SettlementConditionModificationStatus1Code.Pending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#mmDenied
- * SettlementConditionModificationStatus1Code.mmDenied}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#Denied
+ * SettlementConditionModificationStatus1Code.Denied}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#mmCompleted
- * SettlementConditionModificationStatus1Code.mmCompleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code#Completed
+ * SettlementConditionModificationStatus1Code.Completed}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SettlementConditionModificationStatusStatusCode
+ * SettlementConditionModificationStatusStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -76,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class SettlementConditionModificationStatus1Code extends SettlementConditionModificationStatusStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SettlementConditionModificationStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,11 +100,12 @@ public class SettlementConditionModificationStatus1Code extends SettlementCondit
 	 * name} = "AcknowledgedAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
+	public static final SettlementConditionModificationStatus1Code AcknowledgedAccepted = new SettlementConditionModificationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
-			owner_lazy = () -> SettlementConditionModificationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.mmObject();
+			codeName = SettlementConditionModificationStatusStatusCode.AcknowledgedAccepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -118,11 +124,12 @@ public class SettlementConditionModificationStatus1Code extends SettlementCondit
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final SettlementConditionModificationStatus1Code Rejected = new SettlementConditionModificationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> SettlementConditionModificationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.mmObject();
+			codeName = SettlementConditionModificationStatusStatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -141,11 +148,12 @@ public class SettlementConditionModificationStatus1Code extends SettlementCondit
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPending = new MMCode() {
+	public static final SettlementConditionModificationStatus1Code Pending = new SettlementConditionModificationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
-			owner_lazy = () -> SettlementConditionModificationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.mmObject();
+			codeName = SettlementConditionModificationStatusStatusCode.Pending.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -164,11 +172,12 @@ public class SettlementConditionModificationStatus1Code extends SettlementCondit
 	 * name} = "Denied"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDenied = new MMCode() {
+	public static final SettlementConditionModificationStatus1Code Denied = new SettlementConditionModificationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Denied";
-			owner_lazy = () -> SettlementConditionModificationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.mmObject();
+			codeName = SettlementConditionModificationStatusStatusCode.Denied.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -187,27 +196,62 @@ public class SettlementConditionModificationStatus1Code extends SettlementCondit
 	 * name} = "Completed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompleted = new MMCode() {
+	public static final SettlementConditionModificationStatus1Code Completed = new SettlementConditionModificationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
-			owner_lazy = () -> SettlementConditionModificationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.mmObject();
+			codeName = SettlementConditionModificationStatusStatusCode.Completed.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SettlementConditionModificationStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SettlementConditionModificationStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PACK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementConditionModificationStatus1Code";
 				definition = "Specifies the status of a securities settlement condition modification request.";
-				code_lazy = () -> Arrays.asList(SettlementConditionModificationStatus1Code.mmAcknowledgedAccepted, SettlementConditionModificationStatus1Code.mmRejected, SettlementConditionModificationStatus1Code.mmPending,
-						SettlementConditionModificationStatus1Code.mmDenied, SettlementConditionModificationStatus1Code.mmCompleted);
 				trace_lazy = () -> SettlementConditionModificationStatusStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.AcknowledgedAccepted, com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.Rejected,
+						com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.Pending, com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.Denied,
+						com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.Completed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AcknowledgedAccepted.getCodeName().get(), AcknowledgedAccepted);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+		codesByName.put(Pending.getCodeName().get(), Pending);
+		codesByName.put(Denied.getCodeName().get(), Denied);
+		codesByName.put(Completed.getCodeName().get(), Completed);
+	}
+
+	public static SettlementConditionModificationStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SettlementConditionModificationStatus1Code[] values() {
+		SettlementConditionModificationStatus1Code[] values = new SettlementConditionModificationStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SettlementConditionModificationStatus1Code> {
+		@Override
+		public SettlementConditionModificationStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SettlementConditionModificationStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -88,8 +87,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUltimateDebtorGuideline#forMandate5
+ * ConstraintUltimateDebtorGuideline.forMandate5}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUltimateCreditorGuideline#forMandate5
+ * ConstraintUltimateCreditorGuideline.forMandate5}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -109,17 +119,17 @@ import javax.xml.bind.annotation.XmlType;
  * Mandate1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Mandate5", propOrder = {"mandateIdentification", "mandateRequestIdentification", "type", "occurrences", "collectionAmount", "maximumAmount", "reason", "creditorSchemeIdentification", "creditor", "creditorAccount",
 		"creditorAgent", "ultimateCreditor", "debtor", "debtorAccount", "debtorAgent", "ultimateDebtor", "referredDocument"})
 public class Mandate5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MndtId", required = true)
 	protected Max35Text mandateIdentification;
 	/**
-	 * Unique identification, as assigned by the creditor, to unambiguously
-	 * identify the mandate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,7 +176,7 @@ public class Mandate5 {
 	public static final MMMessageAttribute mmMandateIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> Mandate5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Mandate5.mmObject();
 			isDerived = false;
 			xmlTag = "MndtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,11 +189,11 @@ public class Mandate5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MndtReqId")
 	protected Max35Text mandateRequestIdentification;
 	/**
-	 * Identification for the mandate request, as assigned by the initiating
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -224,7 +234,7 @@ public class Mandate5 {
 	 */
 	public static final MMMessageAttribute mmMandateRequestIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Mandate5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Mandate5.mmObject();
 			isDerived = false;
 			xmlTag = "MndtReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,10 +247,11 @@ public class Mandate5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected MandateTypeInformation1 type;
 	/**
-	 * Specifies the type of mandate, such as paper, electronic or scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -285,7 +296,7 @@ public class Mandate5 {
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> DirectDebitMandate.mmMandatePaymentType;
-			componentContext_lazy = () -> Mandate5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Mandate5.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -299,11 +310,11 @@ public class Mandate5 {
 			type_lazy = () -> com.tools20022.repository.msg.MandateTypeInformation1.mmObject();
 		}
 	};
+	@XmlElement(name = "Ocrncs")
 	protected MandateOccurrences3 occurrences;
 	/**
-	 * Provides details of the duration of the mandate and occurrence of the
-	 * underlying transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -348,7 +359,7 @@ public class Mandate5 {
 	public static final MMMessageAssociationEnd mmOccurrences = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> DirectDebitMandate.mmObject();
-			componentContext_lazy = () -> Mandate5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Mandate5.mmObject();
 			isDerived = false;
 			xmlTag = "Ocrncs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -362,10 +373,11 @@ public class Mandate5 {
 			type_lazy = () -> com.tools20022.repository.msg.MandateOccurrences3.mmObject();
 		}
 	};
+	@XmlElement(name = "ColltnAmt")
 	protected ActiveOrHistoricCurrencyAndAmount collectionAmount;
 	/**
-	 * Fixed amount to be collected from the debtor's account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -411,7 +423,7 @@ public class Mandate5 {
 	public static final MMMessageAttribute mmCollectionAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DirectDebitMandate.mmCollectionAmount;
-			componentContext_lazy = () -> Mandate5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Mandate5.mmObject();
 			isDerived = false;
 			xmlTag = "ColltnAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -424,11 +436,11 @@ public class Mandate5 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxAmt")
 	protected ActiveOrHistoricCurrencyAndAmount maximumAmount;
 	/**
-	 * Maximum amount that may be collected from the debtor's account, per
-	 * instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -475,7 +487,7 @@ public class Mandate5 {
 	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DirectDebitMandate.mmMaximumAmount;
-			componentContext_lazy = () -> Mandate5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Mandate5.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -488,10 +500,11 @@ public class Mandate5 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn")
 	protected MandateSetupReason1Choice reason;
 	/**
-	 * Provides the reason for the setup of the mandate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -530,7 +543,7 @@ public class Mandate5 {
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmDescription;
-			componentContext_lazy = () -> Mandate5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Mandate5.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -543,10 +556,11 @@ public class Mandate5 {
 			type_lazy = () -> MandateSetupReason1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtrSchmeId")
 	protected PartyIdentification43 creditorSchemeIdentification;
 	/**
-	 * Credit party that signs the mandate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -590,7 +604,7 @@ public class Mandate5 {
 	public static final MMMessageAssociationEnd mmCreditorSchemeIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Mandate5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Mandate5.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrSchmeId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -604,10 +618,11 @@ public class Mandate5 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	@XmlElement(name = "Cdtr", required = true)
 	protected PartyIdentification43 creditor;
 	/**
-	 * Party that signs the mandate and to whom an amount of money is due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -651,7 +666,7 @@ public class Mandate5 {
 	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Mandate5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Mandate5.mmObject();
 			isDerived = false;
 			xmlTag = "Cdtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -665,11 +680,11 @@ public class Mandate5 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtrAcct")
 	protected CashAccount24 creditorAccount;
 	/**
-	 * Unambiguous identification of the account of the creditor to which a
-	 * credit entry will be posted as a result of the payment transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -714,7 +729,7 @@ public class Mandate5 {
 	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
-			componentContext_lazy = () -> Mandate5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Mandate5.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -728,10 +743,11 @@ public class Mandate5 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtrAgt")
 	protected BranchAndFinancialInstitutionIdentification5 creditorAgent;
 	/**
-	 * Financial institution servicing an account for the creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -776,7 +792,7 @@ public class Mandate5 {
 	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> Mandate5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Mandate5.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -790,10 +806,11 @@ public class Mandate5 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "UltmtCdtr")
 	protected PartyIdentification43 ultimateCreditor;
 	/**
-	 * Ultimate party to which an amount of money is due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -837,7 +854,7 @@ public class Mandate5 {
 	public static final MMMessageAssociationEnd mmUltimateCreditor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Mandate5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Mandate5.mmObject();
 			isDerived = false;
 			xmlTag = "UltmtCdtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -851,11 +868,11 @@ public class Mandate5 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	@XmlElement(name = "Dbtr", required = true)
 	protected PartyIdentification43 debtor;
 	/**
-	 * Party that signs the mandate and owes an amount of money to the
-	 * (ultimate) creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -900,7 +917,7 @@ public class Mandate5 {
 	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Mandate5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Mandate5.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -914,11 +931,11 @@ public class Mandate5 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	@XmlElement(name = "DbtrAcct")
 	protected CashAccount24 debtorAccount;
 	/**
-	 * Unambiguous identification of the account of the debtor, to which a debit
-	 * entry will be made as a result of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -963,7 +980,7 @@ public class Mandate5 {
 	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
-			componentContext_lazy = () -> Mandate5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Mandate5.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -977,10 +994,11 @@ public class Mandate5 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "DbtrAgt", required = true)
 	protected BranchAndFinancialInstitutionIdentification5 debtorAgent;
 	/**
-	 * Financial institution servicing an account for the debtor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1025,7 +1043,7 @@ public class Mandate5 {
 	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> Mandate5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Mandate5.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1039,10 +1057,11 @@ public class Mandate5 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "UltmtDbtr")
 	protected PartyIdentification43 ultimateDebtor;
 	/**
-	 * Ultimate party that owes an amount of money to the (ultimate) creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1087,7 +1106,7 @@ public class Mandate5 {
 	public static final MMMessageAssociationEnd mmUltimateDebtor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Mandate5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Mandate5.mmObject();
 			isDerived = false;
 			xmlTag = "UltmtDbtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1101,11 +1120,11 @@ public class Mandate5 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	@XmlElement(name = "RfrdDoc")
 	protected List<com.tools20022.repository.msg.ReferredDocumentInformation6> referredDocument;
 	/**
-	 * Provides information to identify the underlying documents associated with
-	 * the mandate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1152,7 +1171,7 @@ public class Mandate5 {
 	public static final MMMessageAssociationEnd mmReferredDocument = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmDocument;
-			componentContext_lazy = () -> Mandate5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Mandate5.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdDoc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1169,11 +1188,15 @@ public class Mandate5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Mandate5.mmMandateIdentification, Mandate5.mmMandateRequestIdentification, Mandate5.mmType, Mandate5.mmOccurrences, Mandate5.mmCollectionAmount, Mandate5.mmMaximumAmount,
-						Mandate5.mmReason, Mandate5.mmCreditorSchemeIdentification, Mandate5.mmCreditor, Mandate5.mmCreditorAccount, Mandate5.mmCreditorAgent, Mandate5.mmUltimateCreditor, Mandate5.mmDebtor, Mandate5.mmDebtorAccount,
-						Mandate5.mmDebtorAgent, Mandate5.mmUltimateDebtor, Mandate5.mmReferredDocument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Mandate5.mmMandateIdentification, com.tools20022.repository.msg.Mandate5.mmMandateRequestIdentification, com.tools20022.repository.msg.Mandate5.mmType,
+						com.tools20022.repository.msg.Mandate5.mmOccurrences, com.tools20022.repository.msg.Mandate5.mmCollectionAmount, com.tools20022.repository.msg.Mandate5.mmMaximumAmount,
+						com.tools20022.repository.msg.Mandate5.mmReason, com.tools20022.repository.msg.Mandate5.mmCreditorSchemeIdentification, com.tools20022.repository.msg.Mandate5.mmCreditor,
+						com.tools20022.repository.msg.Mandate5.mmCreditorAccount, com.tools20022.repository.msg.Mandate5.mmCreditorAgent, com.tools20022.repository.msg.Mandate5.mmUltimateCreditor,
+						com.tools20022.repository.msg.Mandate5.mmDebtor, com.tools20022.repository.msg.Mandate5.mmDebtorAccount, com.tools20022.repository.msg.Mandate5.mmDebtorAgent, com.tools20022.repository.msg.Mandate5.mmUltimateDebtor,
+						com.tools20022.repository.msg.Mandate5.mmReferredDocument);
 				trace_lazy = () -> DirectDebitMandate.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintUltimateDebtorGuideline.forMandate5, com.tools20022.repository.constraints.ConstraintUltimateCreditorGuideline.forMandate5);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Mandate5";
 				definition = "Information that serves as a basis to debit an account.";
@@ -1184,156 +1207,156 @@ public class Mandate5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MndtId", required = true)
 	public Max35Text getMandateIdentification() {
 		return mandateIdentification;
 	}
 
-	public void setMandateIdentification(Max35Text mandateIdentification) {
-		this.mandateIdentification = mandateIdentification;
+	public Mandate5 setMandateIdentification(Max35Text mandateIdentification) {
+		this.mandateIdentification = Objects.requireNonNull(mandateIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "MndtReqId")
-	public Max35Text getMandateRequestIdentification() {
-		return mandateRequestIdentification;
+	public Optional<Max35Text> getMandateRequestIdentification() {
+		return mandateRequestIdentification == null ? Optional.empty() : Optional.of(mandateRequestIdentification);
 	}
 
-	public void setMandateRequestIdentification(Max35Text mandateRequestIdentification) {
+	public Mandate5 setMandateRequestIdentification(Max35Text mandateRequestIdentification) {
 		this.mandateRequestIdentification = mandateRequestIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public MandateTypeInformation1 getType() {
-		return type;
+	public Optional<MandateTypeInformation1> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(com.tools20022.repository.msg.MandateTypeInformation1 type) {
+	public Mandate5 setType(com.tools20022.repository.msg.MandateTypeInformation1 type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "Ocrncs")
-	public MandateOccurrences3 getOccurrences() {
-		return occurrences;
+	public Optional<MandateOccurrences3> getOccurrences() {
+		return occurrences == null ? Optional.empty() : Optional.of(occurrences);
 	}
 
-	public void setOccurrences(com.tools20022.repository.msg.MandateOccurrences3 occurrences) {
+	public Mandate5 setOccurrences(com.tools20022.repository.msg.MandateOccurrences3 occurrences) {
 		this.occurrences = occurrences;
+		return this;
 	}
 
-	@XmlElement(name = "ColltnAmt")
-	public ActiveOrHistoricCurrencyAndAmount getCollectionAmount() {
-		return collectionAmount;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getCollectionAmount() {
+		return collectionAmount == null ? Optional.empty() : Optional.of(collectionAmount);
 	}
 
-	public void setCollectionAmount(ActiveOrHistoricCurrencyAndAmount collectionAmount) {
+	public Mandate5 setCollectionAmount(ActiveOrHistoricCurrencyAndAmount collectionAmount) {
 		this.collectionAmount = collectionAmount;
+		return this;
 	}
 
-	@XmlElement(name = "MaxAmt")
-	public ActiveOrHistoricCurrencyAndAmount getMaximumAmount() {
-		return maximumAmount;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getMaximumAmount() {
+		return maximumAmount == null ? Optional.empty() : Optional.of(maximumAmount);
 	}
 
-	public void setMaximumAmount(ActiveOrHistoricCurrencyAndAmount maximumAmount) {
+	public Mandate5 setMaximumAmount(ActiveOrHistoricCurrencyAndAmount maximumAmount) {
 		this.maximumAmount = maximumAmount;
+		return this;
 	}
 
-	@XmlElement(name = "Rsn")
-	public MandateSetupReason1Choice getReason() {
-		return reason;
+	public Optional<MandateSetupReason1Choice> getReason() {
+		return reason == null ? Optional.empty() : Optional.of(reason);
 	}
 
-	public void setReason(MandateSetupReason1Choice reason) {
+	public Mandate5 setReason(MandateSetupReason1Choice reason) {
 		this.reason = reason;
+		return this;
 	}
 
-	@XmlElement(name = "CdtrSchmeId")
-	public PartyIdentification43 getCreditorSchemeIdentification() {
-		return creditorSchemeIdentification;
+	public Optional<PartyIdentification43> getCreditorSchemeIdentification() {
+		return creditorSchemeIdentification == null ? Optional.empty() : Optional.of(creditorSchemeIdentification);
 	}
 
-	public void setCreditorSchemeIdentification(com.tools20022.repository.msg.PartyIdentification43 creditorSchemeIdentification) {
+	public Mandate5 setCreditorSchemeIdentification(com.tools20022.repository.msg.PartyIdentification43 creditorSchemeIdentification) {
 		this.creditorSchemeIdentification = creditorSchemeIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Cdtr", required = true)
 	public PartyIdentification43 getCreditor() {
 		return creditor;
 	}
 
-	public void setCreditor(com.tools20022.repository.msg.PartyIdentification43 creditor) {
-		this.creditor = creditor;
+	public Mandate5 setCreditor(com.tools20022.repository.msg.PartyIdentification43 creditor) {
+		this.creditor = Objects.requireNonNull(creditor);
+		return this;
 	}
 
-	@XmlElement(name = "CdtrAcct")
-	public CashAccount24 getCreditorAccount() {
-		return creditorAccount;
+	public Optional<CashAccount24> getCreditorAccount() {
+		return creditorAccount == null ? Optional.empty() : Optional.of(creditorAccount);
 	}
 
-	public void setCreditorAccount(com.tools20022.repository.msg.CashAccount24 creditorAccount) {
+	public Mandate5 setCreditorAccount(com.tools20022.repository.msg.CashAccount24 creditorAccount) {
 		this.creditorAccount = creditorAccount;
+		return this;
 	}
 
-	@XmlElement(name = "CdtrAgt")
-	public BranchAndFinancialInstitutionIdentification5 getCreditorAgent() {
-		return creditorAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getCreditorAgent() {
+		return creditorAgent == null ? Optional.empty() : Optional.of(creditorAgent);
 	}
 
-	public void setCreditorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 creditorAgent) {
+	public Mandate5 setCreditorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 creditorAgent) {
 		this.creditorAgent = creditorAgent;
+		return this;
 	}
 
-	@XmlElement(name = "UltmtCdtr")
-	public PartyIdentification43 getUltimateCreditor() {
-		return ultimateCreditor;
+	public Optional<PartyIdentification43> getUltimateCreditor() {
+		return ultimateCreditor == null ? Optional.empty() : Optional.of(ultimateCreditor);
 	}
 
-	public void setUltimateCreditor(com.tools20022.repository.msg.PartyIdentification43 ultimateCreditor) {
+	public Mandate5 setUltimateCreditor(com.tools20022.repository.msg.PartyIdentification43 ultimateCreditor) {
 		this.ultimateCreditor = ultimateCreditor;
+		return this;
 	}
 
-	@XmlElement(name = "Dbtr", required = true)
 	public PartyIdentification43 getDebtor() {
 		return debtor;
 	}
 
-	public void setDebtor(com.tools20022.repository.msg.PartyIdentification43 debtor) {
-		this.debtor = debtor;
+	public Mandate5 setDebtor(com.tools20022.repository.msg.PartyIdentification43 debtor) {
+		this.debtor = Objects.requireNonNull(debtor);
+		return this;
 	}
 
-	@XmlElement(name = "DbtrAcct")
-	public CashAccount24 getDebtorAccount() {
-		return debtorAccount;
+	public Optional<CashAccount24> getDebtorAccount() {
+		return debtorAccount == null ? Optional.empty() : Optional.of(debtorAccount);
 	}
 
-	public void setDebtorAccount(com.tools20022.repository.msg.CashAccount24 debtorAccount) {
+	public Mandate5 setDebtorAccount(com.tools20022.repository.msg.CashAccount24 debtorAccount) {
 		this.debtorAccount = debtorAccount;
+		return this;
 	}
 
-	@XmlElement(name = "DbtrAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getDebtorAgent() {
 		return debtorAgent;
 	}
 
-	public void setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtorAgent) {
-		this.debtorAgent = debtorAgent;
+	public Mandate5 setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtorAgent) {
+		this.debtorAgent = Objects.requireNonNull(debtorAgent);
+		return this;
 	}
 
-	@XmlElement(name = "UltmtDbtr")
-	public PartyIdentification43 getUltimateDebtor() {
-		return ultimateDebtor;
+	public Optional<PartyIdentification43> getUltimateDebtor() {
+		return ultimateDebtor == null ? Optional.empty() : Optional.of(ultimateDebtor);
 	}
 
-	public void setUltimateDebtor(com.tools20022.repository.msg.PartyIdentification43 ultimateDebtor) {
+	public Mandate5 setUltimateDebtor(com.tools20022.repository.msg.PartyIdentification43 ultimateDebtor) {
 		this.ultimateDebtor = ultimateDebtor;
+		return this;
 	}
 
-	@XmlElement(name = "RfrdDoc")
 	public List<ReferredDocumentInformation6> getReferredDocument() {
-		return referredDocument;
+		return referredDocument == null ? referredDocument = new ArrayList<>() : referredDocument;
 	}
 
-	public void setReferredDocument(List<com.tools20022.repository.msg.ReferredDocumentInformation6> referredDocument) {
-		this.referredDocument = referredDocument;
+	public Mandate5 setReferredDocument(List<com.tools20022.repository.msg.ReferredDocumentInformation6> referredDocument) {
+		this.referredDocument = Objects.requireNonNull(referredDocument);
+		return this;
 	}
 }

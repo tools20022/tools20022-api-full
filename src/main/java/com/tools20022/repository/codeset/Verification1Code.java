@@ -20,45 +20,48 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.VerificationCode;
+import com.tools20022.repository.codeset.Verification1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Result of the verification.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Verification1Code#Failed
+ * Verification1Code.Failed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Verification1Code#Missing
+ * Verification1Code.Missing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Verification1Code#NotPerformed
+ * Verification1Code.NotPerformed}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Verification1Code#PartialMatch
+ * Verification1Code.PartialMatch}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Verification1Code#Successful
+ * Verification1Code.Successful}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.Verification1Code#TechnicalError
+ * Verification1Code.TechnicalError}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.VerificationCode
  * VerificationCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Verification1Code#mmFailed
- * Verification1Code.mmFailed}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Verification1Code#mmMissing
- * Verification1Code.mmMissing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Verification1Code#mmNotPerformed
- * Verification1Code.mmNotPerformed}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Verification1Code#mmPartialMatch
- * Verification1Code.mmPartialMatch}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Verification1Code#mmSuccessful
- * Verification1Code.mmSuccessful}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Verification1Code#mmTechnicalError
- * Verification1Code.mmTechnicalError}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Result of the verification."</li>
  * </ul>
  */
-public class Verification1Code extends VerificationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Verification1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,11 +92,12 @@ public class Verification1Code extends VerificationCode {
 	 * name} = "Failed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFailed = new MMCode() {
+	public static final Verification1Code Failed = new Verification1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failed";
-			owner_lazy = () -> Verification1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Verification1Code.mmObject();
+			codeName = VerificationCode.Failed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -111,11 +116,12 @@ public class Verification1Code extends VerificationCode {
 	 * name} = "Missing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissing = new MMCode() {
+	public static final Verification1Code Missing = new Verification1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Missing";
-			owner_lazy = () -> Verification1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Verification1Code.mmObject();
+			codeName = VerificationCode.Missing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -134,11 +140,12 @@ public class Verification1Code extends VerificationCode {
 	 * name} = "NotPerformed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotPerformed = new MMCode() {
+	public static final Verification1Code NotPerformed = new Verification1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotPerformed";
-			owner_lazy = () -> Verification1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Verification1Code.mmObject();
+			codeName = VerificationCode.NotPerformed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -157,11 +164,12 @@ public class Verification1Code extends VerificationCode {
 	 * name} = "PartialMatch"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialMatch = new MMCode() {
+	public static final Verification1Code PartialMatch = new Verification1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialMatch";
-			owner_lazy = () -> Verification1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Verification1Code.mmObject();
+			codeName = VerificationCode.PartialMatch.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -180,11 +188,12 @@ public class Verification1Code extends VerificationCode {
 	 * name} = "Successful"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuccessful = new MMCode() {
+	public static final Verification1Code Successful = new Verification1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Successful";
-			owner_lazy = () -> Verification1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Verification1Code.mmObject();
+			codeName = VerificationCode.Successful.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -203,26 +212,61 @@ public class Verification1Code extends VerificationCode {
 	 * name} = "TechnicalError"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTechnicalError = new MMCode() {
+	public static final Verification1Code TechnicalError = new Verification1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalError";
-			owner_lazy = () -> Verification1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Verification1Code.mmObject();
+			codeName = VerificationCode.TechnicalError.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Verification1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Verification1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Verification1Code";
 				definition = "Result of the verification.";
-				code_lazy = () -> Arrays
-						.asList(Verification1Code.mmFailed, Verification1Code.mmMissing, Verification1Code.mmNotPerformed, Verification1Code.mmPartialMatch, Verification1Code.mmSuccessful, Verification1Code.mmTechnicalError);
 				trace_lazy = () -> VerificationCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Verification1Code.Failed, com.tools20022.repository.codeset.Verification1Code.Missing, com.tools20022.repository.codeset.Verification1Code.NotPerformed,
+						com.tools20022.repository.codeset.Verification1Code.PartialMatch, com.tools20022.repository.codeset.Verification1Code.Successful, com.tools20022.repository.codeset.Verification1Code.TechnicalError);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Failed.getCodeName().get(), Failed);
+		codesByName.put(Missing.getCodeName().get(), Missing);
+		codesByName.put(NotPerformed.getCodeName().get(), NotPerformed);
+		codesByName.put(PartialMatch.getCodeName().get(), PartialMatch);
+		codesByName.put(Successful.getCodeName().get(), Successful);
+		codesByName.put(TechnicalError.getCodeName().get(), TechnicalError);
+	}
+
+	public static Verification1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Verification1Code[] values() {
+		Verification1Code[] values = new Verification1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Verification1Code> {
+		@Override
+		public Verification1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Verification1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,30 +20,34 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PartyRoleCode;
+import com.tools20022.repository.codeset.InternalPartyRole1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the role as an internal party in the transaction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode PartyRoleCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InternalPartyRole1Code#mmInternal
- * InternalPartyRole1Code.mmInternal}</li>
+ * {@linkplain com.tools20022.repository.codeset.InternalPartyRole1Code#Internal
+ * InternalPartyRole1Code.Internal}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode PartyRoleCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -54,7 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the role as an internal party in the transaction."</li>
  * </ul>
  */
-public class InternalPartyRole1Code extends PartyRoleCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InternalPartyRole1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -73,25 +78,55 @@ public class InternalPartyRole1Code extends PartyRoleCode {
 	 * name} = "Internal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInternal = new MMCode() {
+	public static final InternalPartyRole1Code Internal = new InternalPartyRole1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Internal";
-			owner_lazy = () -> InternalPartyRole1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InternalPartyRole1Code.mmObject();
+			codeName = PartyRoleCode.Internal.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, InternalPartyRole1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InternalPartyRole1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InternalPartyRole1Code";
 				definition = "Specifies the role as an internal party in the transaction.";
-				code_lazy = () -> Arrays.asList(InternalPartyRole1Code.mmInternal);
 				trace_lazy = () -> PartyRoleCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InternalPartyRole1Code.Internal);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Internal.getCodeName().get(), Internal);
+	}
+
+	public static InternalPartyRole1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InternalPartyRole1Code[] values() {
+		InternalPartyRole1Code[] values = new InternalPartyRole1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InternalPartyRole1Code> {
+		@Override
+		public InternalPartyRole1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InternalPartyRole1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

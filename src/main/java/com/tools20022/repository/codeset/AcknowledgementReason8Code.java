@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AcknowledgementReasonCode;
+import com.tools20022.repository.codeset.AcknowledgementReason8Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies additional information about the processed instruction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode
- * AcknowledgementReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason8Code#mmNarrativeReason
- * AcknowledgementReason8Code.mmNarrativeReason}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReason8Code#NarrativeReason
+ * AcknowledgementReason8Code.NarrativeReason}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AcknowledgementReasonCode
+ * AcknowledgementReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,7 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies additional information about the processed instruction."</li>
  * </ul>
  */
-public class AcknowledgementReason8Code extends AcknowledgementReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AcknowledgementReason8Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -75,25 +80,55 @@ public class AcknowledgementReason8Code extends AcknowledgementReasonCode {
 	 * name} = "NarrativeReason"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNarrativeReason = new MMCode() {
+	public static final AcknowledgementReason8Code NarrativeReason = new AcknowledgementReason8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeReason";
-			owner_lazy = () -> AcknowledgementReason8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AcknowledgementReason8Code.mmObject();
+			codeName = AcknowledgementReasonCode.NarrativeReason.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AcknowledgementReason8Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AcknowledgementReason8Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcknowledgementReason8Code";
 				definition = "Specifies additional information about the processed instruction.";
-				code_lazy = () -> Arrays.asList(AcknowledgementReason8Code.mmNarrativeReason);
 				trace_lazy = () -> AcknowledgementReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcknowledgementReason8Code.NarrativeReason);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NarrativeReason.getCodeName().get(), NarrativeReason);
+	}
+
+	public static AcknowledgementReason8Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AcknowledgementReason8Code[] values() {
+		AcknowledgementReason8Code[] values = new AcknowledgementReason8Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AcknowledgementReason8Code> {
+		@Override
+		public AcknowledgementReason8Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AcknowledgementReason8Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

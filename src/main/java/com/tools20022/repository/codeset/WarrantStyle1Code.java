@@ -20,37 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.WarrantStyleCode;
+import com.tools20022.repository.codeset.WarrantStyle1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines how an option can be exercised.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.WarrantStyle1Code#American
+ * WarrantStyle1Code.American}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.WarrantStyle1Code#European
+ * WarrantStyle1Code.European}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.WarrantStyle1Code#Bermudan
+ * WarrantStyle1Code.Bermudan}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.WarrantStyleCode
  * WarrantStyleCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.WarrantStyle1Code#mmAmerican
- * WarrantStyle1Code.mmAmerican}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.WarrantStyle1Code#mmEuropean
- * WarrantStyle1Code.mmEuropean}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.WarrantStyle1Code#mmBermudan
- * WarrantStyle1Code.mmBermudan}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines how an option can be exercised."</li>
  * </ul>
  */
-public class WarrantStyle1Code extends WarrantStyleCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class WarrantStyle1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +88,12 @@ public class WarrantStyle1Code extends WarrantStyleCode {
 	 * name} = "American"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAmerican = new MMCode() {
+	public static final WarrantStyle1Code American = new WarrantStyle1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "American";
-			owner_lazy = () -> WarrantStyle1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.WarrantStyle1Code.mmObject();
+			codeName = WarrantStyleCode.American.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +112,12 @@ public class WarrantStyle1Code extends WarrantStyleCode {
 	 * name} = "European"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEuropean = new MMCode() {
+	public static final WarrantStyle1Code European = new WarrantStyle1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "European";
-			owner_lazy = () -> WarrantStyle1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.WarrantStyle1Code.mmObject();
+			codeName = WarrantStyleCode.European.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +136,58 @@ public class WarrantStyle1Code extends WarrantStyleCode {
 	 * name} = "Bermudan"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBermudan = new MMCode() {
+	public static final WarrantStyle1Code Bermudan = new WarrantStyle1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bermudan";
-			owner_lazy = () -> WarrantStyle1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.WarrantStyle1Code.mmObject();
+			codeName = WarrantStyleCode.Bermudan.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, WarrantStyle1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected WarrantStyle1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AMER");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "WarrantStyle1Code";
 				definition = "Defines how an option can be exercised.";
-				code_lazy = () -> Arrays.asList(WarrantStyle1Code.mmAmerican, WarrantStyle1Code.mmEuropean, WarrantStyle1Code.mmBermudan);
 				trace_lazy = () -> WarrantStyleCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WarrantStyle1Code.American, com.tools20022.repository.codeset.WarrantStyle1Code.European, com.tools20022.repository.codeset.WarrantStyle1Code.Bermudan);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(American.getCodeName().get(), American);
+		codesByName.put(European.getCodeName().get(), European);
+		codesByName.put(Bermudan.getCodeName().get(), Bermudan);
+	}
+
+	public static WarrantStyle1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static WarrantStyle1Code[] values() {
+		WarrantStyle1Code[] values = new WarrantStyle1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, WarrantStyle1Code> {
+		@Override
+		public WarrantStyle1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(WarrantStyle1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,16 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * OrderStatusAndReason7}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OrderStatusAndReason10", propOrder = {"masterReference", "orderStatus", "statusInitiator"})
 public class OrderStatusAndReason10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MstrRef")
 	protected Max35Text masterReference;
 	/**
-	 * Reference assigned to a set of orders or trades in order to link them
-	 * together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +130,7 @@ public class OrderStatusAndReason10 {
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
-			componentContext_lazy = () -> OrderStatusAndReason10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason10.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,11 +142,11 @@ public class OrderStatusAndReason10 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrSts", required = true)
 	protected OrderStatus3Choice orderStatus;
 	/**
-	 * Status of a 'bulk' of orders. Can be used if all the individual orders
-	 * conveyed in a bulk or multiple order message have the same status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -178,7 +180,7 @@ public class OrderStatusAndReason10 {
 	public static final MMMessageAssociationEnd mmOrderStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmOrderStatus;
-			componentContext_lazy = () -> OrderStatusAndReason10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason10.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,10 +192,11 @@ public class OrderStatusAndReason10 {
 			type_lazy = () -> OrderStatus3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "StsInitr")
 	protected PartyIdentification113 statusInitiator;
 	/**
-	 * Party that initiates the status of the order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -230,7 +233,7 @@ public class OrderStatusAndReason10 {
 	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> OrderStatusAndReason10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason10.mmObject();
 			isDerived = false;
 			xmlTag = "StsInitr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -247,9 +250,10 @@ public class OrderStatusAndReason10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OrderStatusAndReason10.mmMasterReference, OrderStatusAndReason10.mmOrderStatus, OrderStatusAndReason10.mmStatusInitiator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatusAndReason10.mmMasterReference, com.tools20022.repository.msg.OrderStatusAndReason10.mmOrderStatus,
+						com.tools20022.repository.msg.OrderStatusAndReason10.mmStatusInitiator);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderStatusAndReason10";
 				definition = "Status report of a bulk or multiple or switch order that was previously received.";
@@ -259,30 +263,30 @@ public class OrderStatusAndReason10 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MstrRef")
-	public Max35Text getMasterReference() {
-		return masterReference;
+	public Optional<Max35Text> getMasterReference() {
+		return masterReference == null ? Optional.empty() : Optional.of(masterReference);
 	}
 
-	public void setMasterReference(Max35Text masterReference) {
+	public OrderStatusAndReason10 setMasterReference(Max35Text masterReference) {
 		this.masterReference = masterReference;
+		return this;
 	}
 
-	@XmlElement(name = "OrdrSts", required = true)
 	public OrderStatus3Choice getOrderStatus() {
 		return orderStatus;
 	}
 
-	public void setOrderStatus(OrderStatus3Choice orderStatus) {
-		this.orderStatus = orderStatus;
+	public OrderStatusAndReason10 setOrderStatus(OrderStatus3Choice orderStatus) {
+		this.orderStatus = Objects.requireNonNull(orderStatus);
+		return this;
 	}
 
-	@XmlElement(name = "StsInitr")
-	public PartyIdentification113 getStatusInitiator() {
-		return statusInitiator;
+	public Optional<PartyIdentification113> getStatusInitiator() {
+		return statusInitiator == null ? Optional.empty() : Optional.of(statusInitiator);
 	}
 
-	public void setStatusInitiator(com.tools20022.repository.msg.PartyIdentification113 statusInitiator) {
+	public OrderStatusAndReason10 setStatusInitiator(com.tools20022.repository.msg.PartyIdentification113 statusInitiator) {
 		this.statusInitiator = statusInitiator;
+		return this;
 	}
 }

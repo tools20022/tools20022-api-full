@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.UseCasesCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the action on the cash account.
@@ -31,14 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.UseCasesCode#mmOpening
- * UseCasesCode.mmOpening}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UseCasesCode#mmMaintenance
- * UseCasesCode.mmMaintenance}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UseCasesCode#mmClosing
- * UseCasesCode.mmClosing}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.UseCasesCode#mmView
- * UseCasesCode.mmView}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UseCasesCode#Opening
+ * UseCasesCode.Opening}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UseCasesCode#Maintenance
+ * UseCasesCode.Maintenance}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UseCasesCode#Closing
+ * UseCasesCode.Closing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UseCasesCode#View
+ * UseCasesCode.View}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the action on the cash account."</li>
  * </ul>
  */
-public class UseCasesCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class UseCasesCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,12 +98,12 @@ public class UseCasesCode {
 	 * definition} = "Code indicating the opening of an account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOpening = new MMCode() {
+	public static final UseCasesCode Opening = new UseCasesCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Opening";
 			definition = "Code indicating the opening of an account.";
-			owner_lazy = () -> UseCasesCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UseCasesCode.mmObject();
 			codeName = "OPEN";
 		}
 	};
@@ -121,12 +127,12 @@ public class UseCasesCode {
 	 * definition} = "Code indicating the maintenance of an account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMaintenance = new MMCode() {
+	public static final UseCasesCode Maintenance = new UseCasesCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Maintenance";
 			definition = "Code indicating the maintenance of an account.";
-			owner_lazy = () -> UseCasesCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UseCasesCode.mmObject();
 			codeName = "MNTN";
 		}
 	};
@@ -150,12 +156,12 @@ public class UseCasesCode {
 	 * definition} = "Code indicating the closing of an account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClosing = new MMCode() {
+	public static final UseCasesCode Closing = new UseCasesCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closing";
 			definition = "Code indicating the closing of an account.";
-			owner_lazy = () -> UseCasesCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UseCasesCode.mmObject();
 			codeName = "CLSG";
 		}
 	};
@@ -179,28 +185,61 @@ public class UseCasesCode {
 	 * definition} = "Code indicating the view of an account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmView = new MMCode() {
+	public static final UseCasesCode View = new UseCasesCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "View";
 			definition = "Code indicating the view of an account.";
-			owner_lazy = () -> UseCasesCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UseCasesCode.mmObject();
 			codeName = "VIEW";
 		}
 	};
+	final static private LinkedHashMap<String, UseCasesCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected UseCasesCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("OPEN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UseCasesCode";
 				definition = "Specifies the action on the cash account.";
-				code_lazy = () -> Arrays.asList(UseCasesCode.mmOpening, UseCasesCode.mmMaintenance, UseCasesCode.mmClosing, UseCasesCode.mmView);
 				derivation_lazy = () -> Arrays.asList(UseCases1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UseCasesCode.Opening, com.tools20022.repository.codeset.UseCasesCode.Maintenance, com.tools20022.repository.codeset.UseCasesCode.Closing,
+						com.tools20022.repository.codeset.UseCasesCode.View);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Opening.getCodeName().get(), Opening);
+		codesByName.put(Maintenance.getCodeName().get(), Maintenance);
+		codesByName.put(Closing.getCodeName().get(), Closing);
+		codesByName.put(View.getCodeName().get(), View);
+	}
+
+	public static UseCasesCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static UseCasesCode[] values() {
+		UseCasesCode[] values = new UseCasesCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, UseCasesCode> {
+		@Override
+		public UseCasesCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(UseCasesCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

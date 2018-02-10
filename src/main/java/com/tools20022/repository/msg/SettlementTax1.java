@@ -25,9 +25,8 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Species the tax applicable for this settlement."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementTax1", propOrder = {"typeCode", "calculatedAmount", "basisAmount", "taxPointDate"})
 public class SettlementTax1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TpCd")
 	protected TaxTypeFormat1Choice typeCode;
 	/**
-	 * Type of tax applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +110,7 @@ public class SettlementTax1 {
 	public static final MMMessageAttribute mmTypeCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
-			componentContext_lazy = () -> SettlementTax1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTax1.mmObject();
 			isDerived = false;
 			xmlTag = "TpCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +121,11 @@ public class SettlementTax1 {
 			complexType_lazy = () -> TaxTypeFormat1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ClctdAmt")
 	protected List<CurrencyAndAmount> calculatedAmount;
 	/**
-	 * Monetary value resulting from the calculation of this tax, levy or duty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +159,7 @@ public class SettlementTax1 {
 	public static final MMMessageAttribute mmCalculatedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> SettlementTax1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTax1.mmObject();
 			isDerived = false;
 			xmlTag = "ClctdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,11 +169,11 @@ public class SettlementTax1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "BsisAmt")
 	protected List<CurrencyAndAmount> basisAmount;
 	/**
-	 * Monetary value used as the basis on which this tax, levy or duty is
-	 * calculated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,7 +207,7 @@ public class SettlementTax1 {
 	public static final MMMessageAttribute mmBasisAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> SettlementTax1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTax1.mmObject();
 			isDerived = false;
 			xmlTag = "BsisAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,10 +217,11 @@ public class SettlementTax1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxPtDt")
 	protected ISODate taxPointDate;
 	/**
-	 * Date of the tax point when this tax, levy or duty becomes applicable.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -252,7 +254,7 @@ public class SettlementTax1 {
 	public static final MMMessageAttribute mmTaxPointDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxDate;
-			componentContext_lazy = () -> SettlementTax1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTax1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxPtDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,9 +269,10 @@ public class SettlementTax1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementTax1.mmTypeCode, SettlementTax1.mmCalculatedAmount, SettlementTax1.mmBasisAmount, SettlementTax1.mmTaxPointDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTax1.mmTypeCode, com.tools20022.repository.msg.SettlementTax1.mmCalculatedAmount, com.tools20022.repository.msg.SettlementTax1.mmBasisAmount,
+						com.tools20022.repository.msg.SettlementTax1.mmTaxPointDate);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementTax1";
 				definition = "Species the tax applicable for this settlement.";
@@ -278,39 +281,39 @@ public class SettlementTax1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TpCd")
-	public TaxTypeFormat1Choice getTypeCode() {
-		return typeCode;
+	public Optional<TaxTypeFormat1Choice> getTypeCode() {
+		return typeCode == null ? Optional.empty() : Optional.of(typeCode);
 	}
 
-	public void setTypeCode(TaxTypeFormat1Choice typeCode) {
+	public SettlementTax1 setTypeCode(TaxTypeFormat1Choice typeCode) {
 		this.typeCode = typeCode;
+		return this;
 	}
 
-	@XmlElement(name = "ClctdAmt")
 	public List<CurrencyAndAmount> getCalculatedAmount() {
-		return calculatedAmount;
+		return calculatedAmount == null ? calculatedAmount = new ArrayList<>() : calculatedAmount;
 	}
 
-	public void setCalculatedAmount(List<CurrencyAndAmount> calculatedAmount) {
-		this.calculatedAmount = calculatedAmount;
+	public SettlementTax1 setCalculatedAmount(List<CurrencyAndAmount> calculatedAmount) {
+		this.calculatedAmount = Objects.requireNonNull(calculatedAmount);
+		return this;
 	}
 
-	@XmlElement(name = "BsisAmt")
 	public List<CurrencyAndAmount> getBasisAmount() {
-		return basisAmount;
+		return basisAmount == null ? basisAmount = new ArrayList<>() : basisAmount;
 	}
 
-	public void setBasisAmount(List<CurrencyAndAmount> basisAmount) {
-		this.basisAmount = basisAmount;
+	public SettlementTax1 setBasisAmount(List<CurrencyAndAmount> basisAmount) {
+		this.basisAmount = Objects.requireNonNull(basisAmount);
+		return this;
 	}
 
-	@XmlElement(name = "TaxPtDt")
-	public ISODate getTaxPointDate() {
-		return taxPointDate;
+	public Optional<ISODate> getTaxPointDate() {
+		return taxPointDate == null ? Optional.empty() : Optional.of(taxPointDate);
 	}
 
-	public void setTaxPointDate(ISODate taxPointDate) {
+	public SettlementTax1 setTaxPointDate(ISODate taxPointDate) {
 		this.taxPointDate = taxPointDate;
+		return this;
 	}
 }

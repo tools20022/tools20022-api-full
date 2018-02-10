@@ -28,11 +28,9 @@ import com.tools20022.repository.entity.SystemEventInformation;
 import com.tools20022.repository.entity.TransactionAdministrator;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -82,16 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SystemAvailabilityAndEventsDetails1", propOrder = {"systemCurrency", "sessionPeriod", "event", "closureInformation"})
 public class SystemAvailabilityAndEventsDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SysCcy", required = true)
 	protected CurrencyCode systemCurrency;
 	/**
-	 * Currency which may be processed by the system. A system may process
-	 * transactions in a single currency or in multiple currencies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,7 +124,7 @@ public class SystemAvailabilityAndEventsDetails1 {
 	public static final MMMessageAttribute mmSystemCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TransactionAdministrator.mmCurrency;
-			componentContext_lazy = () -> SystemAvailabilityAndEventsDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SysCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,10 +135,11 @@ public class SystemAvailabilityAndEventsDetails1 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "SsnPrd")
 	protected TimePeriodDetails sessionPeriod;
 	/**
-	 * Time window of system activity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,7 +173,7 @@ public class SystemAvailabilityAndEventsDetails1 {
 	public static final MMMessageAttribute mmSessionPeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemAvailability.mmAvailableSessionPeriod;
-			componentContext_lazy = () -> SystemAvailabilityAndEventsDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SsnPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,13 +184,11 @@ public class SystemAvailabilityAndEventsDetails1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.TimePeriodDetails.mmObject();
 		}
 	};
+	@XmlElement(name = "Evt")
 	protected List<com.tools20022.repository.msg.SystemEvent1> event;
 	/**
-	 * Detailed information about an event occurring on a system, whether
-	 * planned, eg, cut-off time for a specific type of eligible transfer, or
-	 * unplanned, eg, an unsolicited failure, as stipulated in the
-	 * specifications of the system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -225,7 +222,7 @@ public class SystemAvailabilityAndEventsDetails1 {
 	public static final MMMessageAssociationEnd mmEvent = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SystemEventInformation.mmObject();
-			componentContext_lazy = () -> SystemAvailabilityAndEventsDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Evt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,10 +233,11 @@ public class SystemAvailabilityAndEventsDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.SystemEvent1.mmObject();
 		}
 	};
+	@XmlElement(name = "ClsrInf")
 	protected List<com.tools20022.repository.msg.SystemClosureDetails> closureInformation;
 	/**
-	 * Information about inactivity of a system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -265,7 +263,7 @@ public class SystemAvailabilityAndEventsDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmClosureInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SystemAvailabilityAndEventsDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ClsrInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,10 +278,10 @@ public class SystemAvailabilityAndEventsDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SystemAvailabilityAndEventsDetails1.mmSystemCurrency, SystemAvailabilityAndEventsDetails1.mmSessionPeriod, SystemAvailabilityAndEventsDetails1.mmEvent,
-						SystemAvailabilityAndEventsDetails1.mmClosureInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmSystemCurrency, com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmSessionPeriod,
+						com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmEvent, com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmClosureInformation);
 				trace_lazy = () -> System.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -299,39 +297,39 @@ public class SystemAvailabilityAndEventsDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SysCcy", required = true)
 	public CurrencyCode getSystemCurrency() {
 		return systemCurrency;
 	}
 
-	public void setSystemCurrency(CurrencyCode systemCurrency) {
-		this.systemCurrency = systemCurrency;
+	public SystemAvailabilityAndEventsDetails1 setSystemCurrency(CurrencyCode systemCurrency) {
+		this.systemCurrency = Objects.requireNonNull(systemCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "SsnPrd")
-	public TimePeriodDetails getSessionPeriod() {
-		return sessionPeriod;
+	public Optional<TimePeriodDetails> getSessionPeriod() {
+		return sessionPeriod == null ? Optional.empty() : Optional.of(sessionPeriod);
 	}
 
-	public void setSessionPeriod(com.tools20022.repository.msg.TimePeriodDetails sessionPeriod) {
+	public SystemAvailabilityAndEventsDetails1 setSessionPeriod(com.tools20022.repository.msg.TimePeriodDetails sessionPeriod) {
 		this.sessionPeriod = sessionPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "Evt")
 	public List<SystemEvent1> getEvent() {
-		return event;
+		return event == null ? event = new ArrayList<>() : event;
 	}
 
-	public void setEvent(List<com.tools20022.repository.msg.SystemEvent1> event) {
-		this.event = event;
+	public SystemAvailabilityAndEventsDetails1 setEvent(List<com.tools20022.repository.msg.SystemEvent1> event) {
+		this.event = Objects.requireNonNull(event);
+		return this;
 	}
 
-	@XmlElement(name = "ClsrInf")
 	public List<SystemClosureDetails> getClosureInformation() {
-		return closureInformation;
+		return closureInformation == null ? closureInformation = new ArrayList<>() : closureInformation;
 	}
 
-	public void setClosureInformation(List<com.tools20022.repository.msg.SystemClosureDetails> closureInformation) {
-		this.closureInformation = closureInformation;
+	public SystemAvailabilityAndEventsDetails1 setClosureInformation(List<com.tools20022.repository.msg.SystemClosureDetails> closureInformation) {
+		this.closureInformation = Objects.requireNonNull(closureInformation);
+		return this;
 	}
 }

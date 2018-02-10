@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +75,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,16 +87,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Instrument used to process a payment instruction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentInstrument13", propOrder = {"settlementCurrency", "dividendPercentage", "subscriptionPaymentInstrument", "redemptionPaymentInstrument", "dividendPaymentInstrument", "savingsPlanPaymentInstrument",
 		"interestPaymentInstrument"})
 public class PaymentInstrument13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SttlmCcy", required = true)
 	protected ActiveCurrencyCode settlementCurrency;
 	/**
-	 * Currency associated with the payment instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +131,7 @@ public class PaymentInstrument13 {
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmTargetCurrency;
-			componentContext_lazy = () -> PaymentInstrument13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument13.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,11 +142,11 @@ public class PaymentInstrument13 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "DvddPctg")
 	protected PercentageBoundedRate dividendPercentage;
 	/**
-	 * Percentage of the dividend payment not to be reinvested, that is, to be
-	 * paid in cash.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,7 +182,7 @@ public class PaymentInstrument13 {
 	public static final MMMessageAttribute mmDividendPercentage = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmAnnualTotalDividendRate;
-			componentContext_lazy = () -> PaymentInstrument13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument13.mmObject();
 			isDerived = false;
 			xmlTag = "DvddPctg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,11 +193,11 @@ public class PaymentInstrument13 {
 			simpleType_lazy = () -> PercentageBoundedRate.mmObject();
 		}
 	};
+	@XmlElement(name = "SbcptPmtInstrm")
 	protected PaymentInstrument18Choice subscriptionPaymentInstrument;
 	/**
-	 * Instrument that has or represents monetary value and is used to process a
-	 * payment instruction for a subscription payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -228,7 +231,7 @@ public class PaymentInstrument13 {
 	public static final MMMessageAssociationEnd mmSubscriptionPaymentInstrument = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
-			componentContext_lazy = () -> PaymentInstrument13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument13.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptPmtInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,11 +243,11 @@ public class PaymentInstrument13 {
 			type_lazy = () -> PaymentInstrument18Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RedPmtInstrm")
 	protected PaymentInstrument19Choice redemptionPaymentInstrument;
 	/**
-	 * Instrument that has or represents monetary value and is used to process a
-	 * payment instruction for a redemption payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -278,7 +281,7 @@ public class PaymentInstrument13 {
 	public static final MMMessageAssociationEnd mmRedemptionPaymentInstrument = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
-			componentContext_lazy = () -> PaymentInstrument13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument13.mmObject();
 			isDerived = false;
 			xmlTag = "RedPmtInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -290,11 +293,11 @@ public class PaymentInstrument13 {
 			type_lazy = () -> PaymentInstrument19Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DvddPmtInstrm")
 	protected PaymentInstrument19Choice dividendPaymentInstrument;
 	/**
-	 * Instrument that has or represents monetary value and is used to process a
-	 * payment instruction for a dividend payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -328,7 +331,7 @@ public class PaymentInstrument13 {
 	public static final MMMessageAssociationEnd mmDividendPaymentInstrument = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
-			componentContext_lazy = () -> PaymentInstrument13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument13.mmObject();
 			isDerived = false;
 			xmlTag = "DvddPmtInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -340,11 +343,11 @@ public class PaymentInstrument13 {
 			type_lazy = () -> PaymentInstrument19Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SvgsPlanPmtInstrm")
 	protected PaymentInstrument18Choice savingsPlanPaymentInstrument;
 	/**
-	 * Instrument that has or represents monetary value and is used to process a
-	 * payment instruction for a savings plan payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -378,7 +381,7 @@ public class PaymentInstrument13 {
 	public static final MMMessageAssociationEnd mmSavingsPlanPaymentInstrument = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
-			componentContext_lazy = () -> PaymentInstrument13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument13.mmObject();
 			isDerived = false;
 			xmlTag = "SvgsPlanPmtInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -390,11 +393,11 @@ public class PaymentInstrument13 {
 			type_lazy = () -> PaymentInstrument18Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstPmtInstrm")
 	protected PaymentInstrument19Choice interestPaymentInstrument;
 	/**
-	 * Instrument that has or represents monetary value and is used to process a
-	 * payment instruction for an interest payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -429,7 +432,7 @@ public class PaymentInstrument13 {
 	public static final MMMessageAttribute mmInterestPaymentInstrument = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
-			componentContext_lazy = () -> PaymentInstrument13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument13.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstPmtInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -444,10 +447,12 @@ public class PaymentInstrument13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentInstrument13.mmSettlementCurrency, PaymentInstrument13.mmDividendPercentage, PaymentInstrument13.mmSubscriptionPaymentInstrument,
-						PaymentInstrument13.mmRedemptionPaymentInstrument, PaymentInstrument13.mmDividendPaymentInstrument, PaymentInstrument13.mmSavingsPlanPaymentInstrument, PaymentInstrument13.mmInterestPaymentInstrument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument13.mmSettlementCurrency, com.tools20022.repository.msg.PaymentInstrument13.mmDividendPercentage,
+						com.tools20022.repository.msg.PaymentInstrument13.mmSubscriptionPaymentInstrument, com.tools20022.repository.msg.PaymentInstrument13.mmRedemptionPaymentInstrument,
+						com.tools20022.repository.msg.PaymentInstrument13.mmDividendPaymentInstrument, com.tools20022.repository.msg.PaymentInstrument13.mmSavingsPlanPaymentInstrument,
+						com.tools20022.repository.msg.PaymentInstrument13.mmInterestPaymentInstrument);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrument13";
 				definition = "Instrument used to process a payment instruction.";
@@ -456,66 +461,66 @@ public class PaymentInstrument13 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SttlmCcy", required = true)
 	public ActiveCurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
 
-	public void setSettlementCurrency(ActiveCurrencyCode settlementCurrency) {
-		this.settlementCurrency = settlementCurrency;
+	public PaymentInstrument13 setSettlementCurrency(ActiveCurrencyCode settlementCurrency) {
+		this.settlementCurrency = Objects.requireNonNull(settlementCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "DvddPctg")
-	public PercentageBoundedRate getDividendPercentage() {
-		return dividendPercentage;
+	public Optional<PercentageBoundedRate> getDividendPercentage() {
+		return dividendPercentage == null ? Optional.empty() : Optional.of(dividendPercentage);
 	}
 
-	public void setDividendPercentage(PercentageBoundedRate dividendPercentage) {
+	public PaymentInstrument13 setDividendPercentage(PercentageBoundedRate dividendPercentage) {
 		this.dividendPercentage = dividendPercentage;
+		return this;
 	}
 
-	@XmlElement(name = "SbcptPmtInstrm")
-	public PaymentInstrument18Choice getSubscriptionPaymentInstrument() {
-		return subscriptionPaymentInstrument;
+	public Optional<PaymentInstrument18Choice> getSubscriptionPaymentInstrument() {
+		return subscriptionPaymentInstrument == null ? Optional.empty() : Optional.of(subscriptionPaymentInstrument);
 	}
 
-	public void setSubscriptionPaymentInstrument(PaymentInstrument18Choice subscriptionPaymentInstrument) {
+	public PaymentInstrument13 setSubscriptionPaymentInstrument(PaymentInstrument18Choice subscriptionPaymentInstrument) {
 		this.subscriptionPaymentInstrument = subscriptionPaymentInstrument;
+		return this;
 	}
 
-	@XmlElement(name = "RedPmtInstrm")
-	public PaymentInstrument19Choice getRedemptionPaymentInstrument() {
-		return redemptionPaymentInstrument;
+	public Optional<PaymentInstrument19Choice> getRedemptionPaymentInstrument() {
+		return redemptionPaymentInstrument == null ? Optional.empty() : Optional.of(redemptionPaymentInstrument);
 	}
 
-	public void setRedemptionPaymentInstrument(PaymentInstrument19Choice redemptionPaymentInstrument) {
+	public PaymentInstrument13 setRedemptionPaymentInstrument(PaymentInstrument19Choice redemptionPaymentInstrument) {
 		this.redemptionPaymentInstrument = redemptionPaymentInstrument;
+		return this;
 	}
 
-	@XmlElement(name = "DvddPmtInstrm")
-	public PaymentInstrument19Choice getDividendPaymentInstrument() {
-		return dividendPaymentInstrument;
+	public Optional<PaymentInstrument19Choice> getDividendPaymentInstrument() {
+		return dividendPaymentInstrument == null ? Optional.empty() : Optional.of(dividendPaymentInstrument);
 	}
 
-	public void setDividendPaymentInstrument(PaymentInstrument19Choice dividendPaymentInstrument) {
+	public PaymentInstrument13 setDividendPaymentInstrument(PaymentInstrument19Choice dividendPaymentInstrument) {
 		this.dividendPaymentInstrument = dividendPaymentInstrument;
+		return this;
 	}
 
-	@XmlElement(name = "SvgsPlanPmtInstrm")
-	public PaymentInstrument18Choice getSavingsPlanPaymentInstrument() {
-		return savingsPlanPaymentInstrument;
+	public Optional<PaymentInstrument18Choice> getSavingsPlanPaymentInstrument() {
+		return savingsPlanPaymentInstrument == null ? Optional.empty() : Optional.of(savingsPlanPaymentInstrument);
 	}
 
-	public void setSavingsPlanPaymentInstrument(PaymentInstrument18Choice savingsPlanPaymentInstrument) {
+	public PaymentInstrument13 setSavingsPlanPaymentInstrument(PaymentInstrument18Choice savingsPlanPaymentInstrument) {
 		this.savingsPlanPaymentInstrument = savingsPlanPaymentInstrument;
+		return this;
 	}
 
-	@XmlElement(name = "IntrstPmtInstrm")
-	public PaymentInstrument19Choice getInterestPaymentInstrument() {
-		return interestPaymentInstrument;
+	public Optional<PaymentInstrument19Choice> getInterestPaymentInstrument() {
+		return interestPaymentInstrument == null ? Optional.empty() : Optional.of(interestPaymentInstrument);
 	}
 
-	public void setInterestPaymentInstrument(PaymentInstrument19Choice interestPaymentInstrument) {
+	public PaymentInstrument13 setInterestPaymentInstrument(PaymentInstrument19Choice interestPaymentInstrument) {
 		this.interestPaymentInstrument = interestPaymentInstrument;
+		return this;
 	}
 }

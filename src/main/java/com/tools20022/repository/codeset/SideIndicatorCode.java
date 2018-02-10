@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.SideIndicatorCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * To indicate either the reference for the Central Counterparty (CCP) leg or
@@ -33,10 +38,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SideIndicatorCode#mmClientLeg
- * SideIndicatorCode.mmClientLeg}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SideIndicatorCode#mmCCPLeg
- * SideIndicatorCode.mmCCPLeg}</li>
+ * {@linkplain com.tools20022.repository.codeset.SideIndicatorCode#ClientLeg
+ * SideIndicatorCode.ClientLeg}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SideIndicatorCode#CCPLeg
+ * SideIndicatorCode.CCPLeg}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class SideIndicatorCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SideIndicatorCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,12 +99,12 @@ public class SideIndicatorCode {
 	 * definition} = "Clearing broker identification is for the client leg."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClientLeg = new MMCode() {
+	public static final SideIndicatorCode ClientLeg = new SideIndicatorCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientLeg";
 			definition = "Clearing broker identification is for the client leg.";
-			owner_lazy = () -> SideIndicatorCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SideIndicatorCode.mmObject();
 			codeName = "CLNT";
 		}
 	};
@@ -125,28 +131,58 @@ public class SideIndicatorCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCCPLeg = new MMCode() {
+	public static final SideIndicatorCode CCPLeg = new SideIndicatorCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CCPLeg";
 			definition = "Clearing broker identification is for the Central Counterparty (CCP) leg.";
-			owner_lazy = () -> SideIndicatorCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SideIndicatorCode.mmObject();
 			codeName = "CCPL";
 		}
 	};
+	final static private LinkedHashMap<String, SideIndicatorCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SideIndicatorCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CLNT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SideIndicatorCode";
 				definition = "To indicate either the reference for the Central Counterparty (CCP) leg or the reference for the client leg of the transaction.";
-				code_lazy = () -> Arrays.asList(SideIndicatorCode.mmClientLeg, SideIndicatorCode.mmCCPLeg);
 				derivation_lazy = () -> Arrays.asList(SideIndicator1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SideIndicatorCode.ClientLeg, com.tools20022.repository.codeset.SideIndicatorCode.CCPLeg);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ClientLeg.getCodeName().get(), ClientLeg);
+		codesByName.put(CCPLeg.getCodeName().get(), CCPLeg);
+	}
+
+	public static SideIndicatorCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SideIndicatorCode[] values() {
+		SideIndicatorCode[] values = new SideIndicatorCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SideIndicatorCode> {
+		@Override
+		public SideIndicatorCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SideIndicatorCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

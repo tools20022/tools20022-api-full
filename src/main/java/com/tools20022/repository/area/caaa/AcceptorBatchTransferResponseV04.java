@@ -30,6 +30,7 @@ import com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerI
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -39,25 +40,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVersion
- * AcceptortoAcquirerCardTransactionLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion
- * CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20142015
- * CAPEAcceptortoAcquirerMaintenance20142015}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AccptrBtchTrfRspn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -73,6 +55,25 @@ import javax.xml.bind.annotation.*;
  * AcceptorBatchTransferResponseV04.mmSecurityTrailer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion
+ * CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20142015
+ * CAPEAcceptortoAcquirerMaintenance20142015}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AccptrBtchTrfRspn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVersion
+ * AcceptortoAcquirerCardTransactionLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code caaa.012.001.04}</li>
@@ -100,15 +101,16 @@ import javax.xml.bind.annotation.*;
  * AcceptorBatchTransferResponseV03}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcceptorBatchTransferResponseV04", propOrder = {"header", "batchTransferResponse", "securityTrailer"})
 public class AcceptorBatchTransferResponseV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header12 header;
 	/**
-	 * Capture advice response message management information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,10 +164,11 @@ public class AcceptorBatchTransferResponseV04 {
 			}
 		}
 	};
+	@XmlElement(name = "BtchTrfRspn", required = true)
 	protected CardPaymentBatchTransferResponse3 batchTransferResponse;
 	/**
-	 * Information related to the previously sent set of transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -221,10 +224,11 @@ public class AcceptorBatchTransferResponseV04 {
 			}
 		}
 	};
+	@XmlElement(name = "SctyTrlr", required = true)
 	protected ContentInformationType12 securityTrailer;
 	/**
-	 * Trailer of the message containing a MAC or a digital signature.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -313,34 +317,34 @@ public class AcceptorBatchTransferResponseV04 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header12 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header12 header) {
-		this.header = header;
+	public AcceptorBatchTransferResponseV04 setHeader(Header12 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "BtchTrfRspn", required = true)
 	public CardPaymentBatchTransferResponse3 getBatchTransferResponse() {
 		return batchTransferResponse;
 	}
 
-	public void setBatchTransferResponse(CardPaymentBatchTransferResponse3 batchTransferResponse) {
-		this.batchTransferResponse = batchTransferResponse;
+	public AcceptorBatchTransferResponseV04 setBatchTransferResponse(CardPaymentBatchTransferResponse3 batchTransferResponse) {
+		this.batchTransferResponse = Objects.requireNonNull(batchTransferResponse);
+		return this;
 	}
 
-	@XmlElement(name = "SctyTrlr", required = true)
 	public ContentInformationType12 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
-	public void setSecurityTrailer(ContentInformationType12 securityTrailer) {
-		this.securityTrailer = securityTrailer;
+	public AcceptorBatchTransferResponseV04 setSecurityTrailer(ContentInformationType12 securityTrailer) {
+		this.securityTrailer = Objects.requireNonNull(securityTrailer);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.012.04.04")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.012.001.04")
 	static public class Document {
 		@XmlElement(name = "AccptrBtchTrfRspn", required = true)
 		public AcceptorBatchTransferResponseV04 messageBody;

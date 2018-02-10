@@ -30,9 +30,8 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.ElectronicAddress;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +72,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,15 +93,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "DocumentGeneralInformation2", propOrder = {"documentType", "documentNumber", "senderReceiverSequenceIdentification", "issueDate", "URL", "attachedBinaryFile"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "DocumentGeneralInformation2", propOrder = {"documentType", "documentNumber", "senderReceiverSequenceIdentification", "issueDate", "uRL", "attachedBinaryFile"})
 public class DocumentGeneralInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DocTp", required = true)
 	protected ExternalDocumentType1Code documentType;
 	/**
-	 * Specifies the type of the document, for example commercial invoice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,7 +145,7 @@ public class DocumentGeneralInformation2 {
 	public static final MMMessageAttribute mmDocumentType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
-			componentContext_lazy = () -> DocumentGeneralInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "DocTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,10 +157,11 @@ public class DocumentGeneralInformation2 {
 			simpleType_lazy = () -> ExternalDocumentType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DocNb", required = true)
 	protected Max35Text documentNumber;
 	/**
-	 * Unique identifier of the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,7 +202,7 @@ public class DocumentGeneralInformation2 {
 	public static final MMMessageAttribute mmDocumentNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> DocumentGeneralInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "DocNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,11 +214,11 @@ public class DocumentGeneralInformation2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SndrRcvrSeqId")
 	protected Max140Text senderReceiverSequenceIdentification;
 	/**
-	 * Specifies the identification sequence number for a specific couple
-	 * sender/receiver.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -254,7 +255,7 @@ public class DocumentGeneralInformation2 {
 	 */
 	public static final MMMessageAttribute mmSenderReceiverSequenceIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DocumentGeneralInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "SndrRcvrSeqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,10 +267,11 @@ public class DocumentGeneralInformation2 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IsseDt")
 	protected ISODate issueDate;
 	/**
-	 * Issue date of the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -310,7 +312,7 @@ public class DocumentGeneralInformation2 {
 	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
-			componentContext_lazy = () -> DocumentGeneralInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -322,10 +324,11 @@ public class DocumentGeneralInformation2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "URL")
 	protected Max256Text uRL;
 	/**
-	 * URL (Uniform Resource Locator) where the document can be found
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -367,7 +370,7 @@ public class DocumentGeneralInformation2 {
 	public static final MMMessageAttribute mmURL = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
-			componentContext_lazy = () -> DocumentGeneralInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "URL";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -379,10 +382,11 @@ public class DocumentGeneralInformation2 {
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AttchdBinryFile")
 	protected List<com.tools20022.repository.msg.BinaryFile1> attachedBinaryFile;
 	/**
-	 * Attached binary file for this document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -416,7 +420,7 @@ public class DocumentGeneralInformation2 {
 	 */
 	public static final MMMessageAssociationEnd mmAttachedBinaryFile = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DocumentGeneralInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "AttchdBinryFile";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -432,10 +436,11 @@ public class DocumentGeneralInformation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DocumentGeneralInformation2.mmDocumentType, DocumentGeneralInformation2.mmDocumentNumber, DocumentGeneralInformation2.mmSenderReceiverSequenceIdentification,
-						DocumentGeneralInformation2.mmIssueDate, DocumentGeneralInformation2.mmURL, DocumentGeneralInformation2.mmAttachedBinaryFile);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentGeneralInformation2.mmDocumentType, com.tools20022.repository.msg.DocumentGeneralInformation2.mmDocumentNumber,
+						com.tools20022.repository.msg.DocumentGeneralInformation2.mmSenderReceiverSequenceIdentification, com.tools20022.repository.msg.DocumentGeneralInformation2.mmIssueDate,
+						com.tools20022.repository.msg.DocumentGeneralInformation2.mmURL, com.tools20022.repository.msg.DocumentGeneralInformation2.mmAttachedBinaryFile);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentGeneralInformation2";
 				definition = "General information that unambiguously identifies a document, such as identification number and issue date time.";
@@ -445,57 +450,57 @@ public class DocumentGeneralInformation2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DocTp", required = true)
 	public ExternalDocumentType1Code getDocumentType() {
 		return documentType;
 	}
 
-	public void setDocumentType(ExternalDocumentType1Code documentType) {
-		this.documentType = documentType;
+	public DocumentGeneralInformation2 setDocumentType(ExternalDocumentType1Code documentType) {
+		this.documentType = Objects.requireNonNull(documentType);
+		return this;
 	}
 
-	@XmlElement(name = "DocNb", required = true)
 	public Max35Text getDocumentNumber() {
 		return documentNumber;
 	}
 
-	public void setDocumentNumber(Max35Text documentNumber) {
-		this.documentNumber = documentNumber;
+	public DocumentGeneralInformation2 setDocumentNumber(Max35Text documentNumber) {
+		this.documentNumber = Objects.requireNonNull(documentNumber);
+		return this;
 	}
 
-	@XmlElement(name = "SndrRcvrSeqId")
-	public Max140Text getSenderReceiverSequenceIdentification() {
-		return senderReceiverSequenceIdentification;
+	public Optional<Max140Text> getSenderReceiverSequenceIdentification() {
+		return senderReceiverSequenceIdentification == null ? Optional.empty() : Optional.of(senderReceiverSequenceIdentification);
 	}
 
-	public void setSenderReceiverSequenceIdentification(Max140Text senderReceiverSequenceIdentification) {
+	public DocumentGeneralInformation2 setSenderReceiverSequenceIdentification(Max140Text senderReceiverSequenceIdentification) {
 		this.senderReceiverSequenceIdentification = senderReceiverSequenceIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "IsseDt")
-	public ISODate getIssueDate() {
-		return issueDate;
+	public Optional<ISODate> getIssueDate() {
+		return issueDate == null ? Optional.empty() : Optional.of(issueDate);
 	}
 
-	public void setIssueDate(ISODate issueDate) {
+	public DocumentGeneralInformation2 setIssueDate(ISODate issueDate) {
 		this.issueDate = issueDate;
+		return this;
 	}
 
-	@XmlElement(name = "URL")
-	public Max256Text getURL() {
-		return uRL;
+	public Optional<Max256Text> getURL() {
+		return uRL == null ? Optional.empty() : Optional.of(uRL);
 	}
 
-	public void setURL(Max256Text uRL) {
+	public DocumentGeneralInformation2 setURL(Max256Text uRL) {
 		this.uRL = uRL;
+		return this;
 	}
 
-	@XmlElement(name = "AttchdBinryFile")
 	public List<BinaryFile1> getAttachedBinaryFile() {
-		return attachedBinaryFile;
+		return attachedBinaryFile == null ? attachedBinaryFile = new ArrayList<>() : attachedBinaryFile;
 	}
 
-	public void setAttachedBinaryFile(List<com.tools20022.repository.msg.BinaryFile1> attachedBinaryFile) {
-		this.attachedBinaryFile = attachedBinaryFile;
+	public DocumentGeneralInformation2 setAttachedBinaryFile(List<com.tools20022.repository.msg.BinaryFile1> attachedBinaryFile) {
+		this.attachedBinaryFile = Objects.requireNonNull(attachedBinaryFile);
+		return this;
 	}
 }

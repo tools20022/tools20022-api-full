@@ -30,9 +30,8 @@ import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022Varia
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion;
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -70,28 +69,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestversionsubsetvariant
- * SecuritiesSettlementLatestversionsubsetvariant}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOLatestversion
- * SettlementAndReconciliationISO15022VariantsISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants
- * SettlementandReconciliationMaintenance20162017ISO15022Variants}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion
- * SettlementAndReconciliationISO15022VariantsISOPreviousversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SctiesTxCxlReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -132,9 +109,44 @@ import javax.xml.bind.annotation.*;
  * SecuritiesTransactionCancellationRequest002V05.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOLatestversion
+ * SettlementAndReconciliationISO15022VariantsISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants
+ * SettlementandReconciliationMaintenance20162017ISO15022Variants}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion
+ * SettlementAndReconciliationISO15022VariantsISOPreviousversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SctiesTxCxlReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestversionsubsetvariant
+ * SecuritiesSettlementLatestversionsubsetvariant}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.020.002.05}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionIdentificationPresence2Rule#forSecuritiesTransactionCancellationRequest002V05
+ * ConstraintTransactionIdentificationPresence2Rule.
+ * forSecuritiesTransactionCancellationRequest002V05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forSecuritiesTransactionCancellationRequest002V05
+ * ConstraintNoAccountOwnerTransactionIdentificationRule.
+ * forSecuritiesTransactionCancellationRequest002V05}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -147,17 +159,17 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesTransactionCancellationRequest002V05", propOrder = {"accountOwnerTransactionIdentification", "accountServicerTransactionIdentification", "marketInfrastructureTransactionIdentification",
-		"processorTransactionIdentification", "accountOwner", "safekeepingAccount", "transactionDetails", "cancellationReason", "FXCancellation", "supplementaryData"})
+		"processorTransactionIdentification", "accountOwner", "safekeepingAccount", "transactionDetails", "cancellationReason", "fXCancellation", "supplementaryData"})
 public class SecuritiesTransactionCancellationRequest002V05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctOwnrTxId", required = true)
 	protected References60Choice accountOwnerTransactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as known by the account
-	 * owner (or the instructing party managing the account).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,11 +211,11 @@ public class SecuritiesTransactionCancellationRequest002V05 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctSvcrTxId")
 	protected RestrictedFINXMax16Text accountServicerTransactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as known by the account
-	 * servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,11 +257,11 @@ public class SecuritiesTransactionCancellationRequest002V05 {
 			}
 		}
 	};
+	@XmlElement(name = "MktInfrstrctrTxId")
 	protected RestrictedFINXMax16Text marketInfrastructureTransactionIdentification;
 	/**
-	 * Identification of a transaction assigned by a market infrastructure other
-	 * than a central securities depository, for example, Target2-Securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -291,10 +303,11 @@ public class SecuritiesTransactionCancellationRequest002V05 {
 			}
 		}
 	};
+	@XmlElement(name = "PrcrTxId")
 	protected RestrictedFINXMax16Text processorTransactionIdentification;
 	/**
-	 * Message Reference identifying the Processor of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -335,10 +348,11 @@ public class SecuritiesTransactionCancellationRequest002V05 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification109 accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -378,10 +392,11 @@ public class SecuritiesTransactionCancellationRequest002V05 {
 			}
 		}
 	};
+	@XmlElement(name = "SfkpgAcct", required = true)
 	protected SecuritiesAccount30 safekeepingAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -421,10 +436,11 @@ public class SecuritiesTransactionCancellationRequest002V05 {
 			}
 		}
 	};
+	@XmlElement(name = "TxDtls")
 	protected TransactionDetails83 transactionDetails;
 	/**
-	 * Identifies the details of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -464,10 +480,11 @@ public class SecuritiesTransactionCancellationRequest002V05 {
 			}
 		}
 	};
+	@XmlElement(name = "CxlRsn")
 	protected CancellationReason19 cancellationReason;
 	/**
-	 * Specifies the reason of the cancellation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -507,10 +524,11 @@ public class SecuritiesTransactionCancellationRequest002V05 {
 			}
 		}
 	};
+	@XmlElement(name = "FxCxl")
 	protected FXCancellation4Choice fXCancellation;
 	/**
-	 * Specifies whether an associated FX should be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -550,11 +568,11 @@ public class SecuritiesTransactionCancellationRequest002V05 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -599,6 +617,8 @@ public class SecuritiesTransactionCancellationRequest002V05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionIdentificationPresence2Rule.forSecuritiesTransactionCancellationRequest002V05,
+						com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forSecuritiesTransactionCancellationRequest002V05);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionCancellationRequest002V05";
 				definition = "Scope\r\nAn account owner sends a SecuritiesTransactionCancellationRequest to an account servicer to request the cancellation of a securities transaction.\r\nThe account owner/servicer relationship may be:\r\n- a global custodian which has an account with a local custodian, or\r\n- an investment management institution which manage a fund account opened at a custodian, or - a broker which has an account with a custodian, or\r\n- a central securities depository participant which has an account with a central securities depository, or\r\n- a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure, or\r\n- a central counterparty or a stock exchange or a trade matching utility which need to instruct to a central securities depository ot another settlement market infrastructure.\r\n\r\nUsage\r\nThe transaction may be:\r\n- a securities settlement transaction\r\n- an intra-position movement\r\n- a securities financing transaction\r\nThe instruction cannot be:\r\n- a securities settlement conditions modification (another transaction processing command should be sent to reverse a processing change previously requested).\r\n- a securities financing modification\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.";
@@ -632,97 +652,97 @@ public class SecuritiesTransactionCancellationRequest002V05 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctOwnrTxId", required = true)
 	public References60Choice getAccountOwnerTransactionIdentification() {
 		return accountOwnerTransactionIdentification;
 	}
 
-	public void setAccountOwnerTransactionIdentification(References60Choice accountOwnerTransactionIdentification) {
-		this.accountOwnerTransactionIdentification = accountOwnerTransactionIdentification;
+	public SecuritiesTransactionCancellationRequest002V05 setAccountOwnerTransactionIdentification(References60Choice accountOwnerTransactionIdentification) {
+		this.accountOwnerTransactionIdentification = Objects.requireNonNull(accountOwnerTransactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcrTxId")
-	public RestrictedFINXMax16Text getAccountServicerTransactionIdentification() {
-		return accountServicerTransactionIdentification;
+	public Optional<RestrictedFINXMax16Text> getAccountServicerTransactionIdentification() {
+		return accountServicerTransactionIdentification == null ? Optional.empty() : Optional.of(accountServicerTransactionIdentification);
 	}
 
-	public void setAccountServicerTransactionIdentification(RestrictedFINXMax16Text accountServicerTransactionIdentification) {
+	public SecuritiesTransactionCancellationRequest002V05 setAccountServicerTransactionIdentification(RestrictedFINXMax16Text accountServicerTransactionIdentification) {
 		this.accountServicerTransactionIdentification = accountServicerTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "MktInfrstrctrTxId")
-	public RestrictedFINXMax16Text getMarketInfrastructureTransactionIdentification() {
-		return marketInfrastructureTransactionIdentification;
+	public Optional<RestrictedFINXMax16Text> getMarketInfrastructureTransactionIdentification() {
+		return marketInfrastructureTransactionIdentification == null ? Optional.empty() : Optional.of(marketInfrastructureTransactionIdentification);
 	}
 
-	public void setMarketInfrastructureTransactionIdentification(RestrictedFINXMax16Text marketInfrastructureTransactionIdentification) {
+	public SecuritiesTransactionCancellationRequest002V05 setMarketInfrastructureTransactionIdentification(RestrictedFINXMax16Text marketInfrastructureTransactionIdentification) {
 		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PrcrTxId")
-	public RestrictedFINXMax16Text getProcessorTransactionIdentification() {
-		return processorTransactionIdentification;
+	public Optional<RestrictedFINXMax16Text> getProcessorTransactionIdentification() {
+		return processorTransactionIdentification == null ? Optional.empty() : Optional.of(processorTransactionIdentification);
 	}
 
-	public void setProcessorTransactionIdentification(RestrictedFINXMax16Text processorTransactionIdentification) {
+	public SecuritiesTransactionCancellationRequest002V05 setProcessorTransactionIdentification(RestrictedFINXMax16Text processorTransactionIdentification) {
 		this.processorTransactionIdentification = processorTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification109 getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification109> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification109 accountOwner) {
+	public SecuritiesTransactionCancellationRequest002V05 setAccountOwner(PartyIdentification109 accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount30 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
 
-	public void setSafekeepingAccount(SecuritiesAccount30 safekeepingAccount) {
-		this.safekeepingAccount = safekeepingAccount;
+	public SecuritiesTransactionCancellationRequest002V05 setSafekeepingAccount(SecuritiesAccount30 safekeepingAccount) {
+		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "TxDtls")
-	public TransactionDetails83 getTransactionDetails() {
-		return transactionDetails;
+	public Optional<TransactionDetails83> getTransactionDetails() {
+		return transactionDetails == null ? Optional.empty() : Optional.of(transactionDetails);
 	}
 
-	public void setTransactionDetails(TransactionDetails83 transactionDetails) {
+	public SecuritiesTransactionCancellationRequest002V05 setTransactionDetails(TransactionDetails83 transactionDetails) {
 		this.transactionDetails = transactionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "CxlRsn")
-	public CancellationReason19 getCancellationReason() {
-		return cancellationReason;
+	public Optional<CancellationReason19> getCancellationReason() {
+		return cancellationReason == null ? Optional.empty() : Optional.of(cancellationReason);
 	}
 
-	public void setCancellationReason(CancellationReason19 cancellationReason) {
+	public SecuritiesTransactionCancellationRequest002V05 setCancellationReason(CancellationReason19 cancellationReason) {
 		this.cancellationReason = cancellationReason;
+		return this;
 	}
 
-	@XmlElement(name = "FxCxl")
-	public FXCancellation4Choice getFXCancellation() {
-		return fXCancellation;
+	public Optional<FXCancellation4Choice> getFXCancellation() {
+		return fXCancellation == null ? Optional.empty() : Optional.of(fXCancellation);
 	}
 
-	public void setFXCancellation(FXCancellation4Choice fXCancellation) {
+	public SecuritiesTransactionCancellationRequest002V05 setFXCancellation(FXCancellation4Choice fXCancellation) {
 		this.fXCancellation = fXCancellation;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecuritiesTransactionCancellationRequest002V05 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.020.05.05")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.020.002.05")
 	static public class Document {
 		@XmlElement(name = "SctiesTxCxlReq", required = true)
 		public SecuritiesTransactionCancellationRequest002V05 messageBody;

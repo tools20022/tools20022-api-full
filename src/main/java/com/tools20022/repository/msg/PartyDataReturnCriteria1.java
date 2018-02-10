@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -80,8 +81,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,16 +95,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PartyDataReturnCriteria1", propOrder = {"openingDate", "closingDate", "type", "partyIdentification", "CSDOrNCB", "restrictionIdentification", "restrictedOnDate", "name", "shortName", "address", "technicalAddress",
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PartyDataReturnCriteria1", propOrder = {"openingDate", "closingDate", "type", "partyIdentification", "cSDOrNCB", "restrictionIdentification", "restrictedOnDate", "name", "shortName", "address", "technicalAddress",
 		"marketSpecificAttribute"})
 public class PartyDataReturnCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OpngDt")
 	protected RequestedIndicator openingDate;
 	/**
-	 * Indicates whether the opening date of the party is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,7 +134,7 @@ public class PartyDataReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "OpngDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,10 +145,11 @@ public class PartyDataReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ClsgDt")
 	protected RequestedIndicator closingDate;
 	/**
-	 * Indicates whether the closing date of the party is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -175,7 +178,7 @@ public class PartyDataReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,10 +189,11 @@ public class PartyDataReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected RequestedIndicator type;
 	/**
-	 * Indicates whether the type is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,7 +221,7 @@ public class PartyDataReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,11 +232,11 @@ public class PartyDataReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PtyId")
 	protected RequestedIndicator partyIdentification;
 	/**
-	 * Indicates whether the unique identification to unambiguously identify the
-	 * party within the system is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -262,7 +266,7 @@ public class PartyDataReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,11 +277,11 @@ public class PartyDataReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CSDOrNCB")
 	protected RequestedIndicator cSDOrNCB;
 	/**
-	 * Indicates whether the central security depository or the national central
-	 * bank who initially created the party reference data is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -307,7 +311,7 @@ public class PartyDataReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmCSDOrNCB = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CSDOrNCB";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -318,10 +322,11 @@ public class PartyDataReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "RstrctnId")
 	protected RequestedIndicator restrictionIdentification;
 	/**
-	 * Indicates whether the identification of the restriction is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -350,7 +355,7 @@ public class PartyDataReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmRestrictionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -361,11 +366,11 @@ public class PartyDataReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "RstrctdOnDt")
 	protected RequestedIndicator restrictedOnDate;
 	/**
-	 * Indicates whether the date at which a restriction for party has been
-	 * issued is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -395,7 +400,7 @@ public class PartyDataReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmRestrictedOnDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctdOnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -406,10 +411,11 @@ public class PartyDataReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm")
 	protected RequestedIndicator name;
 	/**
-	 * Indicates whether the name for the party is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -437,7 +443,7 @@ public class PartyDataReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -448,10 +454,11 @@ public class PartyDataReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ShrtNm")
 	protected RequestedIndicator shortName;
 	/**
-	 * Indicates whether the short name for the party is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -480,7 +487,7 @@ public class PartyDataReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -491,10 +498,11 @@ public class PartyDataReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Adr")
 	protected RequestedIndicator address;
 	/**
-	 * Indicates whether the address for the party is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -523,7 +531,7 @@ public class PartyDataReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -534,10 +542,11 @@ public class PartyDataReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "TechAdr")
 	protected RequestedIndicator technicalAddress;
 	/**
-	 * Indicates whether the technical addresses for the party are requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -566,7 +575,7 @@ public class PartyDataReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmTechnicalAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "TechAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -577,11 +586,11 @@ public class PartyDataReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "MktSpcfcAttr")
 	protected RequestedIndicator marketSpecificAttribute;
 	/**
-	 * Indicates whether the market specific attributes for the party are
-	 * requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -611,7 +620,7 @@ public class PartyDataReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmMarketSpecificAttribute = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyDataReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "MktSpcfcAttr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -626,10 +635,12 @@ public class PartyDataReturnCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyDataReturnCriteria1.mmOpeningDate, PartyDataReturnCriteria1.mmClosingDate, PartyDataReturnCriteria1.mmType, PartyDataReturnCriteria1.mmPartyIdentification,
-						PartyDataReturnCriteria1.mmCSDOrNCB, PartyDataReturnCriteria1.mmRestrictionIdentification, PartyDataReturnCriteria1.mmRestrictedOnDate, PartyDataReturnCriteria1.mmName, PartyDataReturnCriteria1.mmShortName,
-						PartyDataReturnCriteria1.mmAddress, PartyDataReturnCriteria1.mmTechnicalAddress, PartyDataReturnCriteria1.mmMarketSpecificAttribute);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyDataReturnCriteria1.mmOpeningDate, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmClosingDate,
+						com.tools20022.repository.msg.PartyDataReturnCriteria1.mmType, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmPartyIdentification, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmCSDOrNCB,
+						com.tools20022.repository.msg.PartyDataReturnCriteria1.mmRestrictionIdentification, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmRestrictedOnDate,
+						com.tools20022.repository.msg.PartyDataReturnCriteria1.mmName, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmShortName, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmAddress,
+						com.tools20022.repository.msg.PartyDataReturnCriteria1.mmTechnicalAddress, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmMarketSpecificAttribute);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyDataReturnCriteria1";
 				definition = "Return criteria for information to be returned in the report deriving from a query about party reference data. ";
@@ -638,111 +649,111 @@ public class PartyDataReturnCriteria1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OpngDt")
-	public RequestedIndicator getOpeningDate() {
-		return openingDate;
+	public Optional<RequestedIndicator> getOpeningDate() {
+		return openingDate == null ? Optional.empty() : Optional.of(openingDate);
 	}
 
-	public void setOpeningDate(RequestedIndicator openingDate) {
+	public PartyDataReturnCriteria1 setOpeningDate(RequestedIndicator openingDate) {
 		this.openingDate = openingDate;
+		return this;
 	}
 
-	@XmlElement(name = "ClsgDt")
-	public RequestedIndicator getClosingDate() {
-		return closingDate;
+	public Optional<RequestedIndicator> getClosingDate() {
+		return closingDate == null ? Optional.empty() : Optional.of(closingDate);
 	}
 
-	public void setClosingDate(RequestedIndicator closingDate) {
+	public PartyDataReturnCriteria1 setClosingDate(RequestedIndicator closingDate) {
 		this.closingDate = closingDate;
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public RequestedIndicator getType() {
-		return type;
+	public Optional<RequestedIndicator> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(RequestedIndicator type) {
+	public PartyDataReturnCriteria1 setType(RequestedIndicator type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "PtyId")
-	public RequestedIndicator getPartyIdentification() {
-		return partyIdentification;
+	public Optional<RequestedIndicator> getPartyIdentification() {
+		return partyIdentification == null ? Optional.empty() : Optional.of(partyIdentification);
 	}
 
-	public void setPartyIdentification(RequestedIndicator partyIdentification) {
+	public PartyDataReturnCriteria1 setPartyIdentification(RequestedIndicator partyIdentification) {
 		this.partyIdentification = partyIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CSDOrNCB")
-	public RequestedIndicator getCSDOrNCB() {
-		return cSDOrNCB;
+	public Optional<RequestedIndicator> getCSDOrNCB() {
+		return cSDOrNCB == null ? Optional.empty() : Optional.of(cSDOrNCB);
 	}
 
-	public void setCSDOrNCB(RequestedIndicator cSDOrNCB) {
+	public PartyDataReturnCriteria1 setCSDOrNCB(RequestedIndicator cSDOrNCB) {
 		this.cSDOrNCB = cSDOrNCB;
+		return this;
 	}
 
-	@XmlElement(name = "RstrctnId")
-	public RequestedIndicator getRestrictionIdentification() {
-		return restrictionIdentification;
+	public Optional<RequestedIndicator> getRestrictionIdentification() {
+		return restrictionIdentification == null ? Optional.empty() : Optional.of(restrictionIdentification);
 	}
 
-	public void setRestrictionIdentification(RequestedIndicator restrictionIdentification) {
+	public PartyDataReturnCriteria1 setRestrictionIdentification(RequestedIndicator restrictionIdentification) {
 		this.restrictionIdentification = restrictionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "RstrctdOnDt")
-	public RequestedIndicator getRestrictedOnDate() {
-		return restrictedOnDate;
+	public Optional<RequestedIndicator> getRestrictedOnDate() {
+		return restrictedOnDate == null ? Optional.empty() : Optional.of(restrictedOnDate);
 	}
 
-	public void setRestrictedOnDate(RequestedIndicator restrictedOnDate) {
+	public PartyDataReturnCriteria1 setRestrictedOnDate(RequestedIndicator restrictedOnDate) {
 		this.restrictedOnDate = restrictedOnDate;
+		return this;
 	}
 
-	@XmlElement(name = "Nm")
-	public RequestedIndicator getName() {
-		return name;
+	public Optional<RequestedIndicator> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(RequestedIndicator name) {
+	public PartyDataReturnCriteria1 setName(RequestedIndicator name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "ShrtNm")
-	public RequestedIndicator getShortName() {
-		return shortName;
+	public Optional<RequestedIndicator> getShortName() {
+		return shortName == null ? Optional.empty() : Optional.of(shortName);
 	}
 
-	public void setShortName(RequestedIndicator shortName) {
+	public PartyDataReturnCriteria1 setShortName(RequestedIndicator shortName) {
 		this.shortName = shortName;
+		return this;
 	}
 
-	@XmlElement(name = "Adr")
-	public RequestedIndicator getAddress() {
-		return address;
+	public Optional<RequestedIndicator> getAddress() {
+		return address == null ? Optional.empty() : Optional.of(address);
 	}
 
-	public void setAddress(RequestedIndicator address) {
+	public PartyDataReturnCriteria1 setAddress(RequestedIndicator address) {
 		this.address = address;
+		return this;
 	}
 
-	@XmlElement(name = "TechAdr")
-	public RequestedIndicator getTechnicalAddress() {
-		return technicalAddress;
+	public Optional<RequestedIndicator> getTechnicalAddress() {
+		return technicalAddress == null ? Optional.empty() : Optional.of(technicalAddress);
 	}
 
-	public void setTechnicalAddress(RequestedIndicator technicalAddress) {
+	public PartyDataReturnCriteria1 setTechnicalAddress(RequestedIndicator technicalAddress) {
 		this.technicalAddress = technicalAddress;
+		return this;
 	}
 
-	@XmlElement(name = "MktSpcfcAttr")
-	public RequestedIndicator getMarketSpecificAttribute() {
-		return marketSpecificAttribute;
+	public Optional<RequestedIndicator> getMarketSpecificAttribute() {
+		return marketSpecificAttribute == null ? Optional.empty() : Optional.of(marketSpecificAttribute);
 	}
 
-	public void setMarketSpecificAttribute(RequestedIndicator marketSpecificAttribute) {
+	public PartyDataReturnCriteria1 setMarketSpecificAttribute(RequestedIndicator marketSpecificAttribute) {
 		this.marketSpecificAttribute = marketSpecificAttribute;
+		return this;
 	}
 }

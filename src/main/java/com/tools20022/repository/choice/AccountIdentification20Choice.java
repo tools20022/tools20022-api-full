@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecuritiesAccount13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountIdentification20Choice", propOrder = {"securitiesAccountIdentification", "cashAccountIdentification"})
 public class AccountIdentification20Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesAcctId", required = true)
 	protected SecuritiesAccount13 securitiesAccountIdentification;
 	/**
-	 * Unique identification of the securities account as assigned by the
-	 * account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +115,7 @@ public class AccountIdentification20Choice {
 	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
-			componentContext_lazy = () -> AccountIdentification20Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,11 +126,11 @@ public class AccountIdentification20Choice {
 			complexType_lazy = () -> SecuritiesAccount13.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAcctId", required = true)
 	protected AccountIdentification4Choice cashAccountIdentification;
 	/**
-	 * Unique identification of the cash account, as assigned by the account
-	 * servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +166,7 @@ public class AccountIdentification20Choice {
 	public static final MMMessageAttribute mmCashAccountIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
-			componentContext_lazy = () -> AccountIdentification20Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,9 +181,10 @@ public class AccountIdentification20Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountIdentification20Choice.mmSecuritiesAccountIdentification, AccountIdentification20Choice.mmCashAccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification20Choice.mmSecuritiesAccountIdentification,
+						com.tools20022.repository.choice.AccountIdentification20Choice.mmCashAccountIdentification);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountIdentification20Choice";
 				definition = "Unique identification of the securities account or the cash account owned by the customer.";
@@ -191,21 +193,21 @@ public class AccountIdentification20Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesAcctId", required = true)
 	public SecuritiesAccount13 getSecuritiesAccountIdentification() {
 		return securitiesAccountIdentification;
 	}
 
-	public void setSecuritiesAccountIdentification(SecuritiesAccount13 securitiesAccountIdentification) {
-		this.securitiesAccountIdentification = securitiesAccountIdentification;
+	public AccountIdentification20Choice setSecuritiesAccountIdentification(SecuritiesAccount13 securitiesAccountIdentification) {
+		this.securitiesAccountIdentification = Objects.requireNonNull(securitiesAccountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CshAcctId", required = true)
 	public AccountIdentification4Choice getCashAccountIdentification() {
 		return cashAccountIdentification;
 	}
 
-	public void setCashAccountIdentification(com.tools20022.repository.choice.AccountIdentification4Choice cashAccountIdentification) {
-		this.cashAccountIdentification = cashAccountIdentification;
+	public AccountIdentification20Choice setCashAccountIdentification(com.tools20022.repository.choice.AccountIdentification4Choice cashAccountIdentification) {
+		this.cashAccountIdentification = Objects.requireNonNull(cashAccountIdentification);
+		return this;
 	}
 }

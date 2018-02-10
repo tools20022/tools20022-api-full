@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceFromToRule#forIntraPositionType1
+ * ConstraintBalanceFromToRule.forIntraPositionType1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Intra-position type used to specify pairs of from/to balances."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IntraPositionType1", propOrder = {"balanceFrom", "balanceTo"})
 public class IntraPositionType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BalFr")
 	protected SecuritiesSubBalanceTypeAndQuantityBreakdown1 balanceFrom;
 	/**
-	 * Balance from which the securities are moving.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -92,6 +103,9 @@ public class IntraPositionType1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BalFr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93A::FROM</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -105,9 +119,10 @@ public class IntraPositionType1 {
 	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
-			componentContext_lazy = () -> IntraPositionType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionType1.mmObject();
 			isDerived = false;
 			xmlTag = "BalFr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93A::FROM"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFrom";
 			definition = "Balance from which the securities are moving.";
@@ -117,10 +132,11 @@ public class IntraPositionType1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown1.mmObject();
 		}
 	};
+	@XmlElement(name = "BalTo")
 	protected SecuritiesSubBalanceTypeAndQuantityBreakdown1 balanceTo;
 	/**
-	 * Balance to which the securities are moving.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -140,6 +156,9 @@ public class IntraPositionType1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BalTo"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93A::TOBA</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -153,9 +172,10 @@ public class IntraPositionType1 {
 	public static final MMMessageAssociationEnd mmBalanceTo = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
-			componentContext_lazy = () -> IntraPositionType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionType1.mmObject();
 			isDerived = false;
 			xmlTag = "BalTo";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93A::TOBA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTo";
 			definition = "Balance to which the securities are moving.";
@@ -169,9 +189,10 @@ public class IntraPositionType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IntraPositionType1.mmBalanceFrom, IntraPositionType1.mmBalanceTo);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionType1.mmBalanceFrom, com.tools20022.repository.msg.IntraPositionType1.mmBalanceTo);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceFromToRule.forIntraPositionType1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraPositionType1";
 				definition = "Intra-position type used to specify pairs of from/to balances.";
@@ -180,21 +201,21 @@ public class IntraPositionType1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BalFr")
-	public SecuritiesSubBalanceTypeAndQuantityBreakdown1 getBalanceFrom() {
-		return balanceFrom;
+	public Optional<SecuritiesSubBalanceTypeAndQuantityBreakdown1> getBalanceFrom() {
+		return balanceFrom == null ? Optional.empty() : Optional.of(balanceFrom);
 	}
 
-	public void setBalanceFrom(com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown1 balanceFrom) {
+	public IntraPositionType1 setBalanceFrom(com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown1 balanceFrom) {
 		this.balanceFrom = balanceFrom;
+		return this;
 	}
 
-	@XmlElement(name = "BalTo")
-	public SecuritiesSubBalanceTypeAndQuantityBreakdown1 getBalanceTo() {
-		return balanceTo;
+	public Optional<SecuritiesSubBalanceTypeAndQuantityBreakdown1> getBalanceTo() {
+		return balanceTo == null ? Optional.empty() : Optional.of(balanceTo);
 	}
 
-	public void setBalanceTo(com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown1 balanceTo) {
+	public IntraPositionType1 setBalanceTo(com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown1 balanceTo) {
 		this.balanceTo = balanceTo;
+		return this;
 	}
 }

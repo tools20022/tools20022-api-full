@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.CollateralProposal;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Proposal1", propOrder = {"proposalType", "proposalDetails"})
 public class Proposal1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrpslTp", required = true)
 	protected ProposalType1Code proposalType;
 	/**
-	 * Indicates whether this is an initial or counter proposal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class Proposal1 {
 	public static final MMMessageAttribute mmProposalType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmType;
-			componentContext_lazy = () -> Proposal1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Proposal1.mmObject();
 			isDerived = false;
 			xmlTag = "PrpslTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,11 +124,11 @@ public class Proposal1 {
 			simpleType_lazy = () -> ProposalType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrpslDtls", required = true)
 	protected CollateralProposal1Choice proposalDetails;
 	/**
-	 * Provides details about the proposal for the variation margin and the
-	 * segregated independent amount, or the segregated independent amount only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -160,7 +162,7 @@ public class Proposal1 {
 	public static final MMMessageAssociationEnd mmProposalDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CollateralProposal.mmObject();
-			componentContext_lazy = () -> Proposal1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Proposal1.mmObject();
 			isDerived = false;
 			xmlTag = "PrpslDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,9 +178,9 @@ public class Proposal1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Proposal1.mmProposalType, Proposal1.mmProposalDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proposal1.mmProposalType, com.tools20022.repository.msg.Proposal1.mmProposalDetails);
 				trace_lazy = () -> CollateralProposal.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Proposal1";
 				definition = "Indicates the type of proposal and if the proposal is  for the variation margin and the segregated independent amount, or the segregated independent amount only.";
@@ -187,21 +189,21 @@ public class Proposal1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrpslTp", required = true)
 	public ProposalType1Code getProposalType() {
 		return proposalType;
 	}
 
-	public void setProposalType(ProposalType1Code proposalType) {
-		this.proposalType = proposalType;
+	public Proposal1 setProposalType(ProposalType1Code proposalType) {
+		this.proposalType = Objects.requireNonNull(proposalType);
+		return this;
 	}
 
-	@XmlElement(name = "PrpslDtls", required = true)
 	public CollateralProposal1Choice getProposalDetails() {
 		return proposalDetails;
 	}
 
-	public void setProposalDetails(CollateralProposal1Choice proposalDetails) {
-		this.proposalDetails = proposalDetails;
+	public Proposal1 setProposalDetails(CollateralProposal1Choice proposalDetails) {
+		this.proposalDetails = Objects.requireNonNull(proposalDetails);
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ThresholdTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines whether the threshold was applied on an unsecured or securited basis.
@@ -31,12 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ThresholdTypeCode#Secured
+ * ThresholdTypeCode.Secured}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ThresholdTypeCode#mmSecured
- * ThresholdTypeCode.mmSecured}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ThresholdTypeCode#mmUnsecured
- * ThresholdTypeCode.mmUnsecured}</li>
+ * {@linkplain com.tools20022.repository.codeset.ThresholdTypeCode#Unsecured
+ * ThresholdTypeCode.Unsecured}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ThresholdTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ThresholdTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -96,12 +101,12 @@ public class ThresholdTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecured = new MMCode() {
+	public static final ThresholdTypeCode Secured = new ThresholdTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Secured";
 			definition = "Means that once the threshold is breached, collateral must be posted to cover the full exposure.";
-			owner_lazy = () -> ThresholdTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ThresholdTypeCode.mmObject();
 			codeName = "SECU";
 		}
 	};
@@ -130,28 +135,58 @@ public class ThresholdTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnsecured = new MMCode() {
+	public static final ThresholdTypeCode Unsecured = new ThresholdTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unsecured";
 			definition = "Means that the threshold provides a predetermined level of free trading. Once the threshold is breached, collateral must be posted to cover the exposure over and above the threshold level.";
-			owner_lazy = () -> ThresholdTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ThresholdTypeCode.mmObject();
 			codeName = "UNSE";
 		}
 	};
+	final static private LinkedHashMap<String, ThresholdTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ThresholdTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SECU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ThresholdTypeCode";
 				definition = "Defines whether the threshold was applied on an unsecured or securited basis.";
-				code_lazy = () -> Arrays.asList(ThresholdTypeCode.mmSecured, ThresholdTypeCode.mmUnsecured);
 				derivation_lazy = () -> Arrays.asList(ThresholdType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ThresholdTypeCode.Secured, com.tools20022.repository.codeset.ThresholdTypeCode.Unsecured);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Secured.getCodeName().get(), Secured);
+		codesByName.put(Unsecured.getCodeName().get(), Unsecured);
+	}
+
+	public static ThresholdTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ThresholdTypeCode[] values() {
+		ThresholdTypeCode[] values = new ThresholdTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ThresholdTypeCode> {
+		@Override
+		public ThresholdTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ThresholdTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

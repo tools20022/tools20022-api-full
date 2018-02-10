@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AutomaticBorrowing1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the condition under which automatic borrowing is allowed.
@@ -32,21 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AutomaticBorrowing1Code#mmLastResort
- * AutomaticBorrowing1Code.mmLastResort}</li>
+ * {@linkplain com.tools20022.repository.codeset.AutomaticBorrowing1Code#LastResort
+ * AutomaticBorrowing1Code.LastResort}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AutomaticBorrowing1Code#mmNoAutomatic
- * AutomaticBorrowing1Code.mmNoAutomatic}</li>
+ * {@linkplain com.tools20022.repository.codeset.AutomaticBorrowing1Code#NoAutomatic
+ * AutomaticBorrowing1Code.NoAutomatic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AutomaticBorrowing1Code#mmAutomatic
- * AutomaticBorrowing1Code.mmAutomatic}</li>
+ * {@linkplain com.tools20022.repository.codeset.AutomaticBorrowing1Code#Automatic
+ * AutomaticBorrowing1Code.Automatic}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -63,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the condition under which automatic borrowing is allowed."</li>
  * </ul>
  */
-public class AutomaticBorrowing1Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AutomaticBorrowing1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,12 +96,12 @@ public class AutomaticBorrowing1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmLastResort = new MMCode() {
+	public static final AutomaticBorrowing1Code LastResort = new AutomaticBorrowing1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "LastResort";
 			definition = "Automatic borrowing may be considered as a last resort to make a settlement occur.";
-			owner_lazy = () -> AutomaticBorrowing1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AutomaticBorrowing1Code.mmObject();
 			codeName = "LAST";
 		}
 	};
@@ -120,12 +126,12 @@ public class AutomaticBorrowing1Code {
 	 * definition} = "No automatic borrowing may take place."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoAutomatic = new MMCode() {
+	public static final AutomaticBorrowing1Code NoAutomatic = new AutomaticBorrowing1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "NoAutomatic";
 			definition = "No automatic borrowing may take place.";
-			owner_lazy = () -> AutomaticBorrowing1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AutomaticBorrowing1Code.mmObject();
 			codeName = "NOAT";
 		}
 	};
@@ -153,27 +159,59 @@ public class AutomaticBorrowing1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAutomatic = new MMCode() {
+	public static final AutomaticBorrowing1Code Automatic = new AutomaticBorrowing1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Automatic";
 			definition = "Automatic borrowing may take place to effect settlement in case of insufficient securities.";
-			owner_lazy = () -> AutomaticBorrowing1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AutomaticBorrowing1Code.mmObject();
 			codeName = "AUTO";
 		}
 	};
+	final static private LinkedHashMap<String, AutomaticBorrowing1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AutomaticBorrowing1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("LAST");
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "AutomaticBorrowing1Code";
 				definition = "Specifies the condition under which automatic borrowing is allowed.";
-				code_lazy = () -> Arrays.asList(AutomaticBorrowing1Code.mmLastResort, AutomaticBorrowing1Code.mmNoAutomatic, AutomaticBorrowing1Code.mmAutomatic);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AutomaticBorrowing1Code.LastResort, com.tools20022.repository.codeset.AutomaticBorrowing1Code.NoAutomatic,
+						com.tools20022.repository.codeset.AutomaticBorrowing1Code.Automatic);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(LastResort.getCodeName().get(), LastResort);
+		codesByName.put(NoAutomatic.getCodeName().get(), NoAutomatic);
+		codesByName.put(Automatic.getCodeName().get(), Automatic);
+	}
+
+	public static AutomaticBorrowing1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AutomaticBorrowing1Code[] values() {
+		AutomaticBorrowing1Code[] values = new AutomaticBorrowing1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AutomaticBorrowing1Code> {
+		@Override
+		public AutomaticBorrowing1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AutomaticBorrowing1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

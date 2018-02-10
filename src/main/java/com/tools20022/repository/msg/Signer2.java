@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Signer2", propOrder = {"version", "signerIdentification", "digestAlgorithm", "signatureAlgorithm", "signature"})
 public class Signer2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Vrsn")
 	protected Number version;
 	/**
-	 * Version of the Cryptographic Message Syntax (CMS) data structure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +121,7 @@ public class Signer2 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Signer2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Signer2.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +133,11 @@ public class Signer2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "SgnrId", required = true)
 	protected CertificateIdentifier1 signerIdentification;
 	/**
-	 * Identification of the entity who has signed the data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -166,7 +170,7 @@ public class Signer2 {
 	 */
 	public static final MMMessageAssociationEnd mmSignerIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Signer2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Signer2.mmObject();
 			isDerived = false;
 			xmlTag = "SgnrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,10 +183,11 @@ public class Signer2 {
 			type_lazy = () -> com.tools20022.repository.msg.CertificateIdentifier1.mmObject();
 		}
 	};
+	@XmlElement(name = "DgstAlgo", required = true)
 	protected AlgorithmIdentification5 digestAlgorithm;
 	/**
-	 * Identification of a digest algorithm to apply before signature.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -216,7 +221,7 @@ public class Signer2 {
 	 */
 	public static final MMMessageAssociationEnd mmDigestAlgorithm = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Signer2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Signer2.mmObject();
 			isDerived = false;
 			xmlTag = "DgstAlgo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,10 +234,11 @@ public class Signer2 {
 			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "SgntrAlgo", required = true)
 	protected AlgorithmIdentification4 signatureAlgorithm;
 	/**
-	 * Cryptographic digital signature algorithm.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -266,7 +272,7 @@ public class Signer2 {
 	 */
 	public static final MMMessageAssociationEnd mmSignatureAlgorithm = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Signer2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Signer2.mmObject();
 			isDerived = false;
 			xmlTag = "SgntrAlgo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,10 +285,11 @@ public class Signer2 {
 			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification4.mmObject();
 		}
 	};
+	@XmlElement(name = "Sgntr", required = true)
 	protected Max500Binary signature;
 	/**
-	 * Digital signature.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -316,7 +323,7 @@ public class Signer2 {
 	 */
 	public static final MMMessageAttribute mmSignature = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Signer2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Signer2.mmObject();
 			isDerived = false;
 			xmlTag = "Sgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -332,8 +339,9 @@ public class Signer2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Signer2.mmVersion, Signer2.mmSignerIdentification, Signer2.mmDigestAlgorithm, Signer2.mmSignatureAlgorithm, Signer2.mmSignature);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Signer2.mmVersion, com.tools20022.repository.msg.Signer2.mmSignerIdentification, com.tools20022.repository.msg.Signer2.mmDigestAlgorithm,
+						com.tools20022.repository.msg.Signer2.mmSignatureAlgorithm, com.tools20022.repository.msg.Signer2.mmSignature);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Signer2";
 				definition = "Entity who has signed the data and its digital signature.";
@@ -344,48 +352,48 @@ public class Signer2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Vrsn")
-	public Number getVersion() {
-		return version;
+	public Optional<Number> getVersion() {
+		return version == null ? Optional.empty() : Optional.of(version);
 	}
 
-	public void setVersion(Number version) {
+	public Signer2 setVersion(Number version) {
 		this.version = version;
+		return this;
 	}
 
-	@XmlElement(name = "SgnrId", required = true)
 	public CertificateIdentifier1 getSignerIdentification() {
 		return signerIdentification;
 	}
 
-	public void setSignerIdentification(com.tools20022.repository.msg.CertificateIdentifier1 signerIdentification) {
-		this.signerIdentification = signerIdentification;
+	public Signer2 setSignerIdentification(com.tools20022.repository.msg.CertificateIdentifier1 signerIdentification) {
+		this.signerIdentification = Objects.requireNonNull(signerIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "DgstAlgo", required = true)
 	public AlgorithmIdentification5 getDigestAlgorithm() {
 		return digestAlgorithm;
 	}
 
-	public void setDigestAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification5 digestAlgorithm) {
-		this.digestAlgorithm = digestAlgorithm;
+	public Signer2 setDigestAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification5 digestAlgorithm) {
+		this.digestAlgorithm = Objects.requireNonNull(digestAlgorithm);
+		return this;
 	}
 
-	@XmlElement(name = "SgntrAlgo", required = true)
 	public AlgorithmIdentification4 getSignatureAlgorithm() {
 		return signatureAlgorithm;
 	}
 
-	public void setSignatureAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification4 signatureAlgorithm) {
-		this.signatureAlgorithm = signatureAlgorithm;
+	public Signer2 setSignatureAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification4 signatureAlgorithm) {
+		this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
+		return this;
 	}
 
-	@XmlElement(name = "Sgntr", required = true)
 	public Max500Binary getSignature() {
 		return signature;
 	}
 
-	public void setSignature(Max500Binary signature) {
-		this.signature = signature;
+	public Signer2 setSignature(Max500Binary signature) {
+		this.signature = Objects.requireNonNull(signature);
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.PaymentReceiptCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies if an operation is a payment, or a receipt or none.
@@ -31,14 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentReceiptCode#mmPayment
- * PaymentReceiptCode.mmPayment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentReceiptCode#mmReceipt
- * PaymentReceiptCode.mmReceipt}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentReceiptCode#mmNone
- * PaymentReceiptCode.mmNone}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentReceiptCode#Payment
+ * PaymentReceiptCode.Payment}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentReceiptCode#Receipt
+ * PaymentReceiptCode.Receipt}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentReceiptCode#None
+ * PaymentReceiptCode.None}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PaymentReceiptCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PaymentReceiptCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,12 +92,12 @@ public class PaymentReceiptCode {
 	 * definition} = "Operation is a payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPayment = new MMCode() {
+	public static final PaymentReceiptCode Payment = new PaymentReceiptCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Operation is a payment.";
-			owner_lazy = () -> PaymentReceiptCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentReceiptCode.mmObject();
 			codeName = "PAYM";
 		}
 	};
@@ -118,12 +122,12 @@ public class PaymentReceiptCode {
 	 * definition} = "Operation is a receipt."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceipt = new MMCode() {
+	public static final PaymentReceiptCode Receipt = new PaymentReceiptCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Receipt";
 			definition = "Operation is a receipt.";
-			owner_lazy = () -> PaymentReceiptCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentReceiptCode.mmObject();
 			codeName = "RECE";
 		}
 	};
@@ -148,27 +152,58 @@ public class PaymentReceiptCode {
 	 * definition} = "Operation is null."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNone = new MMCode() {
+	public static final PaymentReceiptCode None = new PaymentReceiptCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
 			definition = "Operation is null.";
-			owner_lazy = () -> PaymentReceiptCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentReceiptCode.mmObject();
 			codeName = "NONE";
 		}
 	};
+	final static private LinkedHashMap<String, PaymentReceiptCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PaymentReceiptCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentReceiptCode";
 				definition = "Specifies if an operation is a payment, or a receipt or none.";
-				code_lazy = () -> Arrays.asList(PaymentReceiptCode.mmPayment, PaymentReceiptCode.mmReceipt, PaymentReceiptCode.mmNone);
 				derivation_lazy = () -> Arrays.asList(PaymentReceipt1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentReceiptCode.Payment, com.tools20022.repository.codeset.PaymentReceiptCode.Receipt, com.tools20022.repository.codeset.PaymentReceiptCode.None);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Payment.getCodeName().get(), Payment);
+		codesByName.put(Receipt.getCodeName().get(), Receipt);
+		codesByName.put(None.getCodeName().get(), None);
+	}
+
+	public static PaymentReceiptCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PaymentReceiptCode[] values() {
+		PaymentReceiptCode[] values = new PaymentReceiptCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PaymentReceiptCode> {
+		@Override
+		public PaymentReceiptCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PaymentReceiptCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

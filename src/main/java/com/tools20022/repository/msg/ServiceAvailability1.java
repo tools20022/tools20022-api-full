@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.SystemEventInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides details on the availability of a service."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ServiceAvailability1", propOrder = {"businessService", "availabilityStatus"})
 public class ServiceAvailability1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BizSvc")
 	protected Max35Text businessService;
 	/**
-	 * Specifies the applicable business service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,7 +104,7 @@ public class ServiceAvailability1 {
 	 */
 	public static final MMMessageAttribute mmBusinessService = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ServiceAvailability1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceAvailability1.mmObject();
 			isDerived = false;
 			xmlTag = "BizSvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +115,11 @@ public class ServiceAvailability1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AvlbtySts", required = true)
 	protected SystemEventType3Choice availabilityStatus;
 	/**
-	 * Status of service availability.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,7 +153,7 @@ public class ServiceAvailability1 {
 	public static final MMMessageAttribute mmAvailabilityStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemEventInformation.mmType;
-			componentContext_lazy = () -> ServiceAvailability1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceAvailability1.mmObject();
 			isDerived = false;
 			xmlTag = "AvlbtySts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,9 +168,9 @@ public class ServiceAvailability1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ServiceAvailability1.mmBusinessService, ServiceAvailability1.mmAvailabilityStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ServiceAvailability1.mmBusinessService, com.tools20022.repository.msg.ServiceAvailability1.mmAvailabilityStatus);
 				trace_lazy = () -> SystemEventInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ServiceAvailability1";
 				definition = "Provides details on the availability of a service.";
@@ -175,21 +179,21 @@ public class ServiceAvailability1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BizSvc")
-	public Max35Text getBusinessService() {
-		return businessService;
+	public Optional<Max35Text> getBusinessService() {
+		return businessService == null ? Optional.empty() : Optional.of(businessService);
 	}
 
-	public void setBusinessService(Max35Text businessService) {
+	public ServiceAvailability1 setBusinessService(Max35Text businessService) {
 		this.businessService = businessService;
+		return this;
 	}
 
-	@XmlElement(name = "AvlbtySts", required = true)
 	public SystemEventType3Choice getAvailabilityStatus() {
 		return availabilityStatus;
 	}
 
-	public void setAvailabilityStatus(SystemEventType3Choice availabilityStatus) {
-		this.availabilityStatus = availabilityStatus;
+	public ServiceAvailability1 setAvailabilityStatus(SystemEventType3Choice availabilityStatus) {
+		this.availabilityStatus = Objects.requireNonNull(availabilityStatus);
+		return this;
 	}
 }

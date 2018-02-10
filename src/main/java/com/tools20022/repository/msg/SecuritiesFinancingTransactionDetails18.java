@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -34,6 +35,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -170,8 +173,31 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesFinancingTransactionDetails18
+ * ConstraintCoexistenceIdentificationRule.
+ * forSecuritiesFinancingTransactionDetails18}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule#forSecuritiesFinancingTransactionDetails18
+ * ConstraintCoexistenceQuantityRule.forSecuritiesFinancingTransactionDetails18}
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule#forSecuritiesFinancingTransactionDetails18
+ * ConstraintCoexistenceAmountRule.forSecuritiesFinancingTransactionDetails18}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosingRule#forSecuritiesFinancingTransactionDetails18
+ * ConstraintTwoLegTransactionOpeningClosingRule.
+ * forSecuritiesFinancingTransactionDetails18}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule#forSecuritiesFinancingTransactionDetails18
+ * ConstraintAdditionalDetailsRule.forSecuritiesFinancingTransactionDetails18}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -188,7 +214,7 @@ import javax.xml.bind.annotation.XmlType;
  * SecuritiesFinancingTransactionDetails10}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesFinancingTransactionDetails18", propOrder = {"securitiesFinancingTradeIdentification", "closingLegIdentification", "poolIdentification", "corporateActionEventIdentification",
 		"tripartyAgentCollateralTransactionIdentification", "clientTripartyCollateralTransactionIdentification", "accountOwner", "safekeepingAccount", "safekeepingPlace", "placeOfTrade", "financialInstrumentIdentification",
 		"settlementQuantity", "openingSettlementAmount", "terminationTransactionAmount", "openingSettlementDate", "terminationDate", "tradeDate", "expectedSettlementDate", "expectedValueDate", "lateDeliveryDate", "rateChangeDate",
@@ -197,12 +223,11 @@ import javax.xml.bind.annotation.XmlType;
 public class SecuritiesFinancingTransactionDetails18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesFincgTradId")
 	protected RestrictedFINXMax16Text securitiesFinancingTradeIdentification;
 	/**
-	 * Unambiguous identification of the underlying securities financing trade
-	 * as assigned by the instructing party. The identification is common to all
-	 * collateral pieces (one or many).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,6 +243,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesFincgTradId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::REPO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -232,9 +260,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 */
 	public static final MMMessageAttribute mmSecuritiesFinancingTradeIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesFincgTradId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::REPO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingTradeIdentification";
 			definition = "Unambiguous identification of the underlying securities financing trade as assigned by the instructing party. The identification is common to all collateral pieces (one or many).";
@@ -243,11 +272,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClsgLegId")
 	protected RestrictedFINXMax16Text closingLegIdentification;
 	/**
-	 * Unambiguous identification of the second leg of the transaction as known
-	 * by the account owner (or the instructing party acting on its behalf).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -263,6 +292,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClsgLegId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::SECO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -277,9 +309,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 */
 	public static final MMMessageAttribute mmClosingLegIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgLegId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::SECO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingLegIdentification";
 			definition = "Unambiguous identification of the second leg of the transaction as known by the account owner (or the instructing party acting on its behalf).";
@@ -288,10 +321,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PoolId")
 	protected RestrictedFINXMax16Text poolIdentification;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -312,6 +346,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PoolId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::POOL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -325,9 +362,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmPoolIdentification;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "PoolId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::POOL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolIdentification";
 			definition = "Collective reference identifying a set of messages.";
@@ -336,11 +374,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CorpActnEvtId")
 	protected RestrictedFINXMax16Text corporateActionEventIdentification;
 	/**
-	 * Identification assigned by the account servicer to unambiguously identify
-	 * a corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -361,6 +399,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CorpActnEvtId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::CORP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -376,9 +417,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnEvtId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::CORP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Identification assigned by the account servicer to unambiguously identify a corporate action event.";
@@ -387,11 +429,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrptyAgtCollTxId")
 	protected RestrictedFINXMax16Text tripartyAgentCollateralTransactionIdentification;
 	/**
-	 * Unique reference identifying the triparty collateral management
-	 * transaction from the triparty agent's point of view.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -413,6 +455,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TrptyAgtCollTxId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::TCTR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -428,9 +473,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAttribute mmTripartyAgentCollateralTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmTripartyAgentCollateralTransactionIdentification;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "TrptyAgtCollTxId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::TCTR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgentCollateralTransactionIdentification";
 			definition = "Unique reference identifying the triparty collateral management transaction from the triparty agent's point of view.";
@@ -439,11 +485,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntTrptyCollTxId")
 	protected RestrictedFINXMax16Text clientTripartyCollateralTransactionIdentification;
 	/**
-	 * Unique reference identifying the triparty collateral management
-	 * transaction from the client's point of view.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -465,6 +511,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClntTrptyCollTxId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::CLTR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -480,9 +529,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAttribute mmClientTripartyCollateralTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmClientTripartyCollateralTransactionIdentification;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "ClntTrptyCollTxId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::CLTR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientTripartyCollateralTransactionIdentification";
 			definition = "Unique reference identifying the triparty collateral management transaction from the client's point of view.";
@@ -491,10 +541,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification51Choice accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -514,6 +565,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctOwnr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a::ACOW</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -527,9 +581,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::ACOW"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
@@ -539,10 +594,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> PartyIdentification51Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgAcct", required = true)
 	protected SecuritiesAccount17 safekeepingAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -561,6 +617,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SfkpgAcct"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :97a::SAFE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -574,9 +633,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":97a::SAFE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
@@ -586,13 +646,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount17.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgPlc")
 	protected SafekeepingPlaceFormat4Choice safekeepingPlace;
 	/**
-	 * Place where the securities are safe-kept, physically or notionally. This
-	 * place can be, for example, a local custodian, a Central Securities
-	 * Depository (CSD) or an International Central Securities Depository
-	 * (ICSD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -612,6 +670,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SfkpgPlc"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94F::SAFE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -627,9 +688,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94F::SAFE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
@@ -639,11 +701,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> SafekeepingPlaceFormat4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfTrad")
 	protected MarketIdentification8 placeOfTrade;
 	/**
-	 * Context, or geographic environment, in which trading parties may meet in
-	 * order to negotiate and execute trades among themselves.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -662,6 +724,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PlcOfTrad"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94B::TRAD</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -677,9 +742,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmPlaceOfTrade = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmTradingMarket;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94B::TRAD"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			definition = "Context, or geographic environment, in which trading parties may meet in order to negotiate and execute trades among themselves.";
@@ -689,11 +755,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> com.tools20022.repository.msg.MarketIdentification8.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmId", required = true)
 	protected SecurityIdentification15 financialInstrumentIdentification;
 	/**
-	 * Financial instruments representing a sum of rights of the investor
-	 * vis-a-vis the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -713,6 +779,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FinInstrmId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :35B:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -728,9 +797,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":35B:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
@@ -740,10 +810,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmQty", required = true)
 	protected Quantity10Choice settlementQuantity;
 	/**
-	 * Total quantity of securities to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -762,6 +833,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::SETT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -775,9 +849,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmSettlementQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementQuantity;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::SETT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementQuantity";
 			definition = "Total quantity of securities to be settled.";
@@ -787,11 +862,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> Quantity10Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "OpngSttlmAmt")
 	protected AmountAndDirection12 openingSettlementAmount;
 	/**
-	 * Total amount of money to be paid or received in exchange for the
-	 * securities at the opening of a securities financing transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -810,6 +885,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OpngSttlmAmt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::SETT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -825,9 +903,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmOpeningSettlementAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmOpeningSettlementAmount;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "OpngSttlmAmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::SETT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningSettlementAmount";
 			definition = "Total amount of money to be paid or received in exchange for the securities at the opening of a securities financing transaction.";
@@ -837,10 +916,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection12.mmObject();
 		}
 	};
+	@XmlElement(name = "TermntnTxAmt")
 	protected AmountAndDirection13 terminationTransactionAmount;
 	/**
-	 * Total amount of money to be settled to terminate the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -859,6 +939,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TermntnTxAmt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::TRTE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -873,9 +956,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmTerminationTransactionAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmTerminationTransactionAmount;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "TermntnTxAmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::TRTE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminationTransactionAmount";
 			definition = "Total amount of money to be settled to terminate the transaction.";
@@ -885,10 +969,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection13.mmObject();
 		}
 	};
+	@XmlElement(name = "OpngSttlmDt", required = true)
 	protected SettlementDate6Choice openingSettlementDate;
 	/**
-	 * Date and time at which the securities are to be delivered or received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -908,6 +993,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OpngSttlmDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::SETT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -922,9 +1010,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmOpeningSettlementDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmOpeningSettlementDate;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "OpngSttlmDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::SETT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningSettlementDate";
 			definition = "Date and time at which the securities are to be delivered or received.";
@@ -934,10 +1023,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> SettlementDate6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TermntnDt")
 	protected TerminationDate3Choice terminationDate;
 	/**
-	 * Closing date/time or maturity date/time of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -957,6 +1047,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TermntnDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::TERM</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -971,9 +1064,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmTerminationDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmTerminationDateTime;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "TermntnDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::TERM"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminationDate";
 			definition = "Closing date/time or maturity date/time of the transaction.";
@@ -983,10 +1077,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> TerminationDate3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDt")
 	protected TradeDate2Choice tradeDate;
 	/**
-	 * Specifies the date/time on which the trade was executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1005,6 +1100,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::TRAD</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1018,9 +1116,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmTradeDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::TRAD"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
@@ -1030,10 +1129,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> TradeDate2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "XpctdSttlmDt")
 	protected DateAndDateTimeChoice expectedSettlementDate;
 	/**
-	 * Date and time at which the securities are to be delivered or received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1053,6 +1153,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XpctdSttlmDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::EXSE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1067,9 +1170,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmExpectedSettlementDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdSttlmDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::EXSE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedSettlementDate";
 			definition = "Date and time at which the securities are to be delivered or received.";
@@ -1079,11 +1183,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "XpctdValDt")
 	protected DateAndDateTimeChoice expectedValueDate;
 	/**
-	 * For against payment transactions, the value date/time at which the
-	 * account servicer expects the settlement amount to be credited or debited.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1103,6 +1207,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XpctdValDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::EXVA</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1118,9 +1225,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmExpectedValueDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdValDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::EXVA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedValueDate";
 			definition = "For against payment transactions, the value date/time at which the account servicer expects the settlement amount to be credited or debited.";
@@ -1130,11 +1238,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "LateDlvryDt")
 	protected DateAndDateTimeChoice lateDeliveryDate;
 	/**
-	 * Date and time after the settlement date specified in the trade, used for
-	 * pool trades resulting from the original To Be Assigned (TBA) securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1154,6 +1262,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LateDlvryDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::ADEL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1169,9 +1280,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmLateDeliveryDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmLateDeliveryDate;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "LateDlvryDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::ADEL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDate";
 			definition = "Date and time after the settlement date specified in the trade, used for pool trades resulting from the original To Be Assigned (TBA) securities.";
@@ -1181,10 +1293,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "RateChngDt")
 	protected DateAndDateTimeChoice rateChangeDate;
 	/**
-	 * Date/Time at which rate change has taken place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1204,6 +1317,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RateChngDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::RERA</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1217,9 +1333,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmRateChangeDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRateChangeDateTime;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "RateChngDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::RERA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateChangeDate";
 			definition = "Date/Time at which rate change has taken place.";
@@ -1229,12 +1346,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesFincgTxTp", required = true)
 	protected SecuritiesFinancingTransactionType1Code securitiesFinancingTransactionType;
 	/**
-	 * Specifies the type of securities financing transaction, that is,
-	 * repurchase agreement, reverse repurchase agreement, securities lending or
-	 * securities borrowing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1255,6 +1371,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesFincgTxTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::REPT (repo) or :22F::SETR
+	 * (lending/borrowing)</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1270,9 +1390,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAttribute mmSecuritiesFinancingTransactionType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesFincgTxTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::REPT (repo) or :22F::SETR (lending/borrowing)"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingTransactionType";
 			definition = "Specifies the type of securities financing transaction, that is, repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing.";
@@ -1281,11 +1402,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			simpleType_lazy = () -> SecuritiesFinancingTransactionType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesMvmntTp", required = true)
 	protected ReceiveDelivery1Code securitiesMovementType;
 	/**
-	 * Specifies if the movement on a securities account results from a deliver
-	 * or a receive instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1306,6 +1427,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesMvmntTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22H::REDE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1321,9 +1445,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAttribute mmSecuritiesMovementType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesMovementType;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesMvmntTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22H::REDE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovementType";
 			definition = "Specifies if the movement on a securities account results from a deliver or a receive instruction.";
@@ -1332,11 +1457,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			simpleType_lazy = () -> ReceiveDelivery1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Pmt", required = true)
 	protected DeliveryReceiptType2Code payment;
 	/**
-	 * Specifies how the transaction is to be settled, for example, against
-	 * payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1357,6 +1482,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Pmt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22H::PAYM</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1372,9 +1500,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementType;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "Pmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22H::PAYM"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Specifies how the transaction is to be settled, for example, against payment.";
@@ -1383,10 +1512,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmParams")
 	protected SettlementDetails59 settlementParameters;
 	/**
-	 * Parameters applied to the settlement of a security transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1405,6 +1535,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmParams"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :16R:SETDET</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1419,9 +1552,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmSettlementParameters = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlement.mmObject();
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmParams";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":16R:SETDET"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParameters";
 			definition = "Parameters applied to the settlement of a security transfer.";
@@ -1431,10 +1565,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementDetails59.mmObject();
 		}
 	};
+	@XmlElement(name = "RateTp")
 	protected RateType8Choice rateType;
 	/**
-	 * Specifies whether the rate is fixed or variable.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1453,6 +1588,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RateTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::RERT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1466,9 +1604,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmRateType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRateType;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "RateTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::RERT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateType";
 			definition = "Specifies whether the rate is fixed or variable.";
@@ -1478,11 +1617,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> RateType8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "VarblRateSpprt")
 	protected RateName2 variableRateSupport;
 	/**
-	 * Index or support rate used together with the spread to calculate the
-	 * repurchase rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1500,6 +1639,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VarblRateSpprt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::VASU</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1515,9 +1657,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmVariableRateSupport = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmVariableRateSupport;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "VarblRateSpprt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::VASU"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateSupport";
 			definition = "Index or support rate used together with the spread to calculate the\nrepurchase rate.";
@@ -1527,10 +1670,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> com.tools20022.repository.msg.RateName2.mmObject();
 		}
 	};
+	@XmlElement(name = "RpRate")
 	protected Rate2 repurchaseRate;
 	/**
-	 * Rate to be used to recalculate the repurchase amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1548,6 +1692,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RpRate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::REPO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1561,9 +1708,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmRepurchaseRate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRepurchaseRate;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "RpRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::REPO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseRate";
 			definition = "Rate to be used to recalculate the repurchase amount.";
@@ -1573,11 +1721,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
 		}
 	};
+	@XmlElement(name = "StockLnMrgn")
 	protected Rate2 stockLoanMargin;
 	/**
-	 * Percentage mark-up on a loan consideration used to reflect the lender's
-	 * risk.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1595,6 +1743,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StockLnMrgn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::SLMG</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1610,9 +1761,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmStockLoanMargin = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmStockLoanMargin;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "StockLnMrgn";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::SLMG"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLoanMargin";
 			definition = "Percentage mark-up on a loan consideration used to reflect the lender's risk.";
@@ -1622,10 +1774,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesHrcut")
 	protected Rate2 securitiesHaircut;
 	/**
-	 * Haircut or valuation factor on the security expressed as a percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1643,6 +1796,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesHrcut"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::SHAI</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1657,9 +1813,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmSecuritiesHaircut = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmHaircut;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesHrcut";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::SHAI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesHaircut";
 			definition = "Haircut or valuation factor on the security expressed as a percentage.";
@@ -1669,11 +1826,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
 		}
 	};
+	@XmlElement(name = "PricgRate")
 	protected RateOrName2Choice pricingRate;
 	/**
-	 * Interest rate to be paid on the transaction amount, as agreed between the
-	 * counterparties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1692,6 +1849,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PricgRate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::PRIC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1707,9 +1867,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmPricingRate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmInterest;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "PricgRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::PRIC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PricingRate";
 			definition = "Interest rate to be paid on the transaction amount, as agreed between the counterparties.";
@@ -1719,11 +1880,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> RateOrName2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Sprd")
 	protected Rate2 spread;
 	/**
-	 * Repurchase spread expressed as a rate; margin over or under an index that
-	 * determines the repurchase rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1741,6 +1902,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Sprd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::RSPR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1756,9 +1920,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmSpread = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRepurchaseSpread;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "Sprd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::RSPR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Spread";
 			definition = "Repurchase spread expressed as a rate; margin over or under an index that determines the repurchase rate.";
@@ -1768,10 +1933,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvrgSttlmPties")
 	protected SettlementParties18 deliveringSettlementParties;
 	/**
-	 * Identifies the chain of delivering settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1790,6 +1956,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DlvrgSttlmPties"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :16R:SETPRTY</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1803,9 +1972,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":16R:SETPRTY"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Identifies the chain of delivering settlement parties.";
@@ -1815,10 +1985,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementParties18.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvgSttlmPties")
 	protected SettlementParties18 receivingSettlementParties;
 	/**
-	 * Identifies the chain of receiving settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1837,6 +2008,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RcvgSttlmPties"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :16R:SETPRTY</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1850,9 +2024,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":16R:SETPRTY"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Identifies the chain of receiving settlement parties.";
@@ -1862,11 +2037,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementParties18.mmObject();
 		}
 	};
+	@XmlElement(name = "Invstr")
 	protected PartyIdentification60Choice investor;
 	/**
-	 * Party, either an individual or organisation, whose assets are being
-	 * invested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1886,6 +2061,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Invstr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a::INVE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1901,9 +2079,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	public static final MMMessageAssociationEnd mmInvestor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "Invstr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::INVE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
 			definition = "Party, either an individual or organisation, whose assets are being invested.";
@@ -1913,11 +2092,11 @@ public class SecuritiesFinancingTransactionDetails18 {
 			type_lazy = () -> PartyIdentification60Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmInstrPrcgAddtlDtls")
 	protected RestrictedFINXMax350Text settlementInstructionProcessingAdditionalDetails;
 	/**
-	 * Provides additional settlement processing information which can not be
-	 * included within the structured fields of the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1933,6 +2112,9 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmInstrPrcgAddtlDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E::SPRO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1947,9 +2129,10 @@ public class SecuritiesFinancingTransactionDetails18 {
 	 */
 	public static final MMMessageAttribute mmSettlementInstructionProcessingAdditionalDetails = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmInstrPrcgAddtlDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E::SPRO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementInstructionProcessingAdditionalDetails";
 			definition = "Provides additional settlement processing information which can not be included within the structured fields of the message.";
@@ -1962,21 +2145,33 @@ public class SecuritiesFinancingTransactionDetails18 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails18.mmSecuritiesFinancingTradeIdentification, SecuritiesFinancingTransactionDetails18.mmClosingLegIdentification,
-						SecuritiesFinancingTransactionDetails18.mmPoolIdentification, SecuritiesFinancingTransactionDetails18.mmCorporateActionEventIdentification,
-						SecuritiesFinancingTransactionDetails18.mmTripartyAgentCollateralTransactionIdentification, SecuritiesFinancingTransactionDetails18.mmClientTripartyCollateralTransactionIdentification,
-						SecuritiesFinancingTransactionDetails18.mmAccountOwner, SecuritiesFinancingTransactionDetails18.mmSafekeepingAccount, SecuritiesFinancingTransactionDetails18.mmSafekeepingPlace,
-						SecuritiesFinancingTransactionDetails18.mmPlaceOfTrade, SecuritiesFinancingTransactionDetails18.mmFinancialInstrumentIdentification, SecuritiesFinancingTransactionDetails18.mmSettlementQuantity,
-						SecuritiesFinancingTransactionDetails18.mmOpeningSettlementAmount, SecuritiesFinancingTransactionDetails18.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails18.mmOpeningSettlementDate,
-						SecuritiesFinancingTransactionDetails18.mmTerminationDate, SecuritiesFinancingTransactionDetails18.mmTradeDate, SecuritiesFinancingTransactionDetails18.mmExpectedSettlementDate,
-						SecuritiesFinancingTransactionDetails18.mmExpectedValueDate, SecuritiesFinancingTransactionDetails18.mmLateDeliveryDate, SecuritiesFinancingTransactionDetails18.mmRateChangeDate,
-						SecuritiesFinancingTransactionDetails18.mmSecuritiesFinancingTransactionType, SecuritiesFinancingTransactionDetails18.mmSecuritiesMovementType, SecuritiesFinancingTransactionDetails18.mmPayment,
-						SecuritiesFinancingTransactionDetails18.mmSettlementParameters, SecuritiesFinancingTransactionDetails18.mmRateType, SecuritiesFinancingTransactionDetails18.mmVariableRateSupport,
-						SecuritiesFinancingTransactionDetails18.mmRepurchaseRate, SecuritiesFinancingTransactionDetails18.mmStockLoanMargin, SecuritiesFinancingTransactionDetails18.mmSecuritiesHaircut,
-						SecuritiesFinancingTransactionDetails18.mmPricingRate, SecuritiesFinancingTransactionDetails18.mmSpread, SecuritiesFinancingTransactionDetails18.mmDeliveringSettlementParties,
-						SecuritiesFinancingTransactionDetails18.mmReceivingSettlementParties, SecuritiesFinancingTransactionDetails18.mmInvestor, SecuritiesFinancingTransactionDetails18.mmSettlementInstructionProcessingAdditionalDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmSecuritiesFinancingTradeIdentification,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmClosingLegIdentification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmPoolIdentification,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmCorporateActionEventIdentification,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmTripartyAgentCollateralTransactionIdentification,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmAccountOwner,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmSafekeepingAccount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmPlaceOfTrade, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmSettlementQuantity, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmOpeningSettlementAmount,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmTerminationTransactionAmount, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmOpeningSettlementDate,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmTerminationDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmTradeDate,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmExpectedSettlementDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmExpectedValueDate,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmLateDeliveryDate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmRateChangeDate,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmSecuritiesFinancingTransactionType, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmSecuritiesMovementType,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmPayment, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmSettlementParameters,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmRateType, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmVariableRateSupport,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmRepurchaseRate, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmStockLoanMargin,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmSecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmPricingRate,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmSpread, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmDeliveringSettlementParties,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmInvestor,
+						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmSettlementInstructionProcessingAdditionalDetails);
 				trace_lazy = () -> SecuritiesFinancing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingTransactionDetails18,
+						com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule.forSecuritiesFinancingTransactionDetails18,
+						com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesFinancingTransactionDetails18,
+						com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosingRule.forSecuritiesFinancingTransactionDetails18,
+						com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesFinancingTransactionDetails18);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -1993,327 +2188,327 @@ public class SecuritiesFinancingTransactionDetails18 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesFincgTradId")
-	public RestrictedFINXMax16Text getSecuritiesFinancingTradeIdentification() {
-		return securitiesFinancingTradeIdentification;
+	public Optional<RestrictedFINXMax16Text> getSecuritiesFinancingTradeIdentification() {
+		return securitiesFinancingTradeIdentification == null ? Optional.empty() : Optional.of(securitiesFinancingTradeIdentification);
 	}
 
-	public void setSecuritiesFinancingTradeIdentification(RestrictedFINXMax16Text securitiesFinancingTradeIdentification) {
+	public SecuritiesFinancingTransactionDetails18 setSecuritiesFinancingTradeIdentification(RestrictedFINXMax16Text securitiesFinancingTradeIdentification) {
 		this.securitiesFinancingTradeIdentification = securitiesFinancingTradeIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ClsgLegId")
-	public RestrictedFINXMax16Text getClosingLegIdentification() {
-		return closingLegIdentification;
+	public Optional<RestrictedFINXMax16Text> getClosingLegIdentification() {
+		return closingLegIdentification == null ? Optional.empty() : Optional.of(closingLegIdentification);
 	}
 
-	public void setClosingLegIdentification(RestrictedFINXMax16Text closingLegIdentification) {
+	public SecuritiesFinancingTransactionDetails18 setClosingLegIdentification(RestrictedFINXMax16Text closingLegIdentification) {
 		this.closingLegIdentification = closingLegIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PoolId")
-	public RestrictedFINXMax16Text getPoolIdentification() {
-		return poolIdentification;
+	public Optional<RestrictedFINXMax16Text> getPoolIdentification() {
+		return poolIdentification == null ? Optional.empty() : Optional.of(poolIdentification);
 	}
 
-	public void setPoolIdentification(RestrictedFINXMax16Text poolIdentification) {
+	public SecuritiesFinancingTransactionDetails18 setPoolIdentification(RestrictedFINXMax16Text poolIdentification) {
 		this.poolIdentification = poolIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnEvtId")
-	public RestrictedFINXMax16Text getCorporateActionEventIdentification() {
-		return corporateActionEventIdentification;
+	public Optional<RestrictedFINXMax16Text> getCorporateActionEventIdentification() {
+		return corporateActionEventIdentification == null ? Optional.empty() : Optional.of(corporateActionEventIdentification);
 	}
 
-	public void setCorporateActionEventIdentification(RestrictedFINXMax16Text corporateActionEventIdentification) {
+	public SecuritiesFinancingTransactionDetails18 setCorporateActionEventIdentification(RestrictedFINXMax16Text corporateActionEventIdentification) {
 		this.corporateActionEventIdentification = corporateActionEventIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TrptyAgtCollTxId")
-	public RestrictedFINXMax16Text getTripartyAgentCollateralTransactionIdentification() {
-		return tripartyAgentCollateralTransactionIdentification;
+	public Optional<RestrictedFINXMax16Text> getTripartyAgentCollateralTransactionIdentification() {
+		return tripartyAgentCollateralTransactionIdentification == null ? Optional.empty() : Optional.of(tripartyAgentCollateralTransactionIdentification);
 	}
 
-	public void setTripartyAgentCollateralTransactionIdentification(RestrictedFINXMax16Text tripartyAgentCollateralTransactionIdentification) {
+	public SecuritiesFinancingTransactionDetails18 setTripartyAgentCollateralTransactionIdentification(RestrictedFINXMax16Text tripartyAgentCollateralTransactionIdentification) {
 		this.tripartyAgentCollateralTransactionIdentification = tripartyAgentCollateralTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ClntTrptyCollTxId")
-	public RestrictedFINXMax16Text getClientTripartyCollateralTransactionIdentification() {
-		return clientTripartyCollateralTransactionIdentification;
+	public Optional<RestrictedFINXMax16Text> getClientTripartyCollateralTransactionIdentification() {
+		return clientTripartyCollateralTransactionIdentification == null ? Optional.empty() : Optional.of(clientTripartyCollateralTransactionIdentification);
 	}
 
-	public void setClientTripartyCollateralTransactionIdentification(RestrictedFINXMax16Text clientTripartyCollateralTransactionIdentification) {
+	public SecuritiesFinancingTransactionDetails18 setClientTripartyCollateralTransactionIdentification(RestrictedFINXMax16Text clientTripartyCollateralTransactionIdentification) {
 		this.clientTripartyCollateralTransactionIdentification = clientTripartyCollateralTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification51Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification51Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification51Choice accountOwner) {
+	public SecuritiesFinancingTransactionDetails18 setAccountOwner(PartyIdentification51Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount17 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
 
-	public void setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount17 safekeepingAccount) {
-		this.safekeepingAccount = safekeepingAccount;
+	public SecuritiesFinancingTransactionDetails18 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount17 safekeepingAccount) {
+		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgPlc")
-	public SafekeepingPlaceFormat4Choice getSafekeepingPlace() {
-		return safekeepingPlace;
+	public Optional<SafekeepingPlaceFormat4Choice> getSafekeepingPlace() {
+		return safekeepingPlace == null ? Optional.empty() : Optional.of(safekeepingPlace);
 	}
 
-	public void setSafekeepingPlace(SafekeepingPlaceFormat4Choice safekeepingPlace) {
+	public SecuritiesFinancingTransactionDetails18 setSafekeepingPlace(SafekeepingPlaceFormat4Choice safekeepingPlace) {
 		this.safekeepingPlace = safekeepingPlace;
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfTrad")
-	public MarketIdentification8 getPlaceOfTrade() {
-		return placeOfTrade;
+	public Optional<MarketIdentification8> getPlaceOfTrade() {
+		return placeOfTrade == null ? Optional.empty() : Optional.of(placeOfTrade);
 	}
 
-	public void setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification8 placeOfTrade) {
+	public SecuritiesFinancingTransactionDetails18 setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification8 placeOfTrade) {
 		this.placeOfTrade = placeOfTrade;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification15 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
 
-	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification15 financialInstrumentIdentification) {
-		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	public SecuritiesFinancingTransactionDetails18 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification15 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmQty", required = true)
 	public Quantity10Choice getSettlementQuantity() {
 		return settlementQuantity;
 	}
 
-	public void setSettlementQuantity(Quantity10Choice settlementQuantity) {
-		this.settlementQuantity = settlementQuantity;
+	public SecuritiesFinancingTransactionDetails18 setSettlementQuantity(Quantity10Choice settlementQuantity) {
+		this.settlementQuantity = Objects.requireNonNull(settlementQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "OpngSttlmAmt")
-	public AmountAndDirection12 getOpeningSettlementAmount() {
-		return openingSettlementAmount;
+	public Optional<AmountAndDirection12> getOpeningSettlementAmount() {
+		return openingSettlementAmount == null ? Optional.empty() : Optional.of(openingSettlementAmount);
 	}
 
-	public void setOpeningSettlementAmount(com.tools20022.repository.msg.AmountAndDirection12 openingSettlementAmount) {
+	public SecuritiesFinancingTransactionDetails18 setOpeningSettlementAmount(com.tools20022.repository.msg.AmountAndDirection12 openingSettlementAmount) {
 		this.openingSettlementAmount = openingSettlementAmount;
+		return this;
 	}
 
-	@XmlElement(name = "TermntnTxAmt")
-	public AmountAndDirection13 getTerminationTransactionAmount() {
-		return terminationTransactionAmount;
+	public Optional<AmountAndDirection13> getTerminationTransactionAmount() {
+		return terminationTransactionAmount == null ? Optional.empty() : Optional.of(terminationTransactionAmount);
 	}
 
-	public void setTerminationTransactionAmount(com.tools20022.repository.msg.AmountAndDirection13 terminationTransactionAmount) {
+	public SecuritiesFinancingTransactionDetails18 setTerminationTransactionAmount(com.tools20022.repository.msg.AmountAndDirection13 terminationTransactionAmount) {
 		this.terminationTransactionAmount = terminationTransactionAmount;
+		return this;
 	}
 
-	@XmlElement(name = "OpngSttlmDt", required = true)
 	public SettlementDate6Choice getOpeningSettlementDate() {
 		return openingSettlementDate;
 	}
 
-	public void setOpeningSettlementDate(SettlementDate6Choice openingSettlementDate) {
-		this.openingSettlementDate = openingSettlementDate;
+	public SecuritiesFinancingTransactionDetails18 setOpeningSettlementDate(SettlementDate6Choice openingSettlementDate) {
+		this.openingSettlementDate = Objects.requireNonNull(openingSettlementDate);
+		return this;
 	}
 
-	@XmlElement(name = "TermntnDt")
-	public TerminationDate3Choice getTerminationDate() {
-		return terminationDate;
+	public Optional<TerminationDate3Choice> getTerminationDate() {
+		return terminationDate == null ? Optional.empty() : Optional.of(terminationDate);
 	}
 
-	public void setTerminationDate(TerminationDate3Choice terminationDate) {
+	public SecuritiesFinancingTransactionDetails18 setTerminationDate(TerminationDate3Choice terminationDate) {
 		this.terminationDate = terminationDate;
+		return this;
 	}
 
-	@XmlElement(name = "TradDt")
-	public TradeDate2Choice getTradeDate() {
-		return tradeDate;
+	public Optional<TradeDate2Choice> getTradeDate() {
+		return tradeDate == null ? Optional.empty() : Optional.of(tradeDate);
 	}
 
-	public void setTradeDate(TradeDate2Choice tradeDate) {
+	public SecuritiesFinancingTransactionDetails18 setTradeDate(TradeDate2Choice tradeDate) {
 		this.tradeDate = tradeDate;
+		return this;
 	}
 
-	@XmlElement(name = "XpctdSttlmDt")
-	public DateAndDateTimeChoice getExpectedSettlementDate() {
-		return expectedSettlementDate;
+	public Optional<DateAndDateTimeChoice> getExpectedSettlementDate() {
+		return expectedSettlementDate == null ? Optional.empty() : Optional.of(expectedSettlementDate);
 	}
 
-	public void setExpectedSettlementDate(DateAndDateTimeChoice expectedSettlementDate) {
+	public SecuritiesFinancingTransactionDetails18 setExpectedSettlementDate(DateAndDateTimeChoice expectedSettlementDate) {
 		this.expectedSettlementDate = expectedSettlementDate;
+		return this;
 	}
 
-	@XmlElement(name = "XpctdValDt")
-	public DateAndDateTimeChoice getExpectedValueDate() {
-		return expectedValueDate;
+	public Optional<DateAndDateTimeChoice> getExpectedValueDate() {
+		return expectedValueDate == null ? Optional.empty() : Optional.of(expectedValueDate);
 	}
 
-	public void setExpectedValueDate(DateAndDateTimeChoice expectedValueDate) {
+	public SecuritiesFinancingTransactionDetails18 setExpectedValueDate(DateAndDateTimeChoice expectedValueDate) {
 		this.expectedValueDate = expectedValueDate;
+		return this;
 	}
 
-	@XmlElement(name = "LateDlvryDt")
-	public DateAndDateTimeChoice getLateDeliveryDate() {
-		return lateDeliveryDate;
+	public Optional<DateAndDateTimeChoice> getLateDeliveryDate() {
+		return lateDeliveryDate == null ? Optional.empty() : Optional.of(lateDeliveryDate);
 	}
 
-	public void setLateDeliveryDate(DateAndDateTimeChoice lateDeliveryDate) {
+	public SecuritiesFinancingTransactionDetails18 setLateDeliveryDate(DateAndDateTimeChoice lateDeliveryDate) {
 		this.lateDeliveryDate = lateDeliveryDate;
+		return this;
 	}
 
-	@XmlElement(name = "RateChngDt")
-	public DateAndDateTimeChoice getRateChangeDate() {
-		return rateChangeDate;
+	public Optional<DateAndDateTimeChoice> getRateChangeDate() {
+		return rateChangeDate == null ? Optional.empty() : Optional.of(rateChangeDate);
 	}
 
-	public void setRateChangeDate(DateAndDateTimeChoice rateChangeDate) {
+	public SecuritiesFinancingTransactionDetails18 setRateChangeDate(DateAndDateTimeChoice rateChangeDate) {
 		this.rateChangeDate = rateChangeDate;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesFincgTxTp", required = true)
 	public SecuritiesFinancingTransactionType1Code getSecuritiesFinancingTransactionType() {
 		return securitiesFinancingTransactionType;
 	}
 
-	public void setSecuritiesFinancingTransactionType(SecuritiesFinancingTransactionType1Code securitiesFinancingTransactionType) {
-		this.securitiesFinancingTransactionType = securitiesFinancingTransactionType;
+	public SecuritiesFinancingTransactionDetails18 setSecuritiesFinancingTransactionType(SecuritiesFinancingTransactionType1Code securitiesFinancingTransactionType) {
+		this.securitiesFinancingTransactionType = Objects.requireNonNull(securitiesFinancingTransactionType);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesMvmntTp", required = true)
 	public ReceiveDelivery1Code getSecuritiesMovementType() {
 		return securitiesMovementType;
 	}
 
-	public void setSecuritiesMovementType(ReceiveDelivery1Code securitiesMovementType) {
-		this.securitiesMovementType = securitiesMovementType;
+	public SecuritiesFinancingTransactionDetails18 setSecuritiesMovementType(ReceiveDelivery1Code securitiesMovementType) {
+		this.securitiesMovementType = Objects.requireNonNull(securitiesMovementType);
+		return this;
 	}
 
-	@XmlElement(name = "Pmt", required = true)
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}
 
-	public void setPayment(DeliveryReceiptType2Code payment) {
-		this.payment = payment;
+	public SecuritiesFinancingTransactionDetails18 setPayment(DeliveryReceiptType2Code payment) {
+		this.payment = Objects.requireNonNull(payment);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmParams")
-	public SettlementDetails59 getSettlementParameters() {
-		return settlementParameters;
+	public Optional<SettlementDetails59> getSettlementParameters() {
+		return settlementParameters == null ? Optional.empty() : Optional.of(settlementParameters);
 	}
 
-	public void setSettlementParameters(com.tools20022.repository.msg.SettlementDetails59 settlementParameters) {
+	public SecuritiesFinancingTransactionDetails18 setSettlementParameters(com.tools20022.repository.msg.SettlementDetails59 settlementParameters) {
 		this.settlementParameters = settlementParameters;
+		return this;
 	}
 
-	@XmlElement(name = "RateTp")
-	public RateType8Choice getRateType() {
-		return rateType;
+	public Optional<RateType8Choice> getRateType() {
+		return rateType == null ? Optional.empty() : Optional.of(rateType);
 	}
 
-	public void setRateType(RateType8Choice rateType) {
+	public SecuritiesFinancingTransactionDetails18 setRateType(RateType8Choice rateType) {
 		this.rateType = rateType;
+		return this;
 	}
 
-	@XmlElement(name = "VarblRateSpprt")
-	public RateName2 getVariableRateSupport() {
-		return variableRateSupport;
+	public Optional<RateName2> getVariableRateSupport() {
+		return variableRateSupport == null ? Optional.empty() : Optional.of(variableRateSupport);
 	}
 
-	public void setVariableRateSupport(com.tools20022.repository.msg.RateName2 variableRateSupport) {
+	public SecuritiesFinancingTransactionDetails18 setVariableRateSupport(com.tools20022.repository.msg.RateName2 variableRateSupport) {
 		this.variableRateSupport = variableRateSupport;
+		return this;
 	}
 
-	@XmlElement(name = "RpRate")
-	public Rate2 getRepurchaseRate() {
-		return repurchaseRate;
+	public Optional<Rate2> getRepurchaseRate() {
+		return repurchaseRate == null ? Optional.empty() : Optional.of(repurchaseRate);
 	}
 
-	public void setRepurchaseRate(com.tools20022.repository.msg.Rate2 repurchaseRate) {
+	public SecuritiesFinancingTransactionDetails18 setRepurchaseRate(com.tools20022.repository.msg.Rate2 repurchaseRate) {
 		this.repurchaseRate = repurchaseRate;
+		return this;
 	}
 
-	@XmlElement(name = "StockLnMrgn")
-	public Rate2 getStockLoanMargin() {
-		return stockLoanMargin;
+	public Optional<Rate2> getStockLoanMargin() {
+		return stockLoanMargin == null ? Optional.empty() : Optional.of(stockLoanMargin);
 	}
 
-	public void setStockLoanMargin(com.tools20022.repository.msg.Rate2 stockLoanMargin) {
+	public SecuritiesFinancingTransactionDetails18 setStockLoanMargin(com.tools20022.repository.msg.Rate2 stockLoanMargin) {
 		this.stockLoanMargin = stockLoanMargin;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesHrcut")
-	public Rate2 getSecuritiesHaircut() {
-		return securitiesHaircut;
+	public Optional<Rate2> getSecuritiesHaircut() {
+		return securitiesHaircut == null ? Optional.empty() : Optional.of(securitiesHaircut);
 	}
 
-	public void setSecuritiesHaircut(com.tools20022.repository.msg.Rate2 securitiesHaircut) {
+	public SecuritiesFinancingTransactionDetails18 setSecuritiesHaircut(com.tools20022.repository.msg.Rate2 securitiesHaircut) {
 		this.securitiesHaircut = securitiesHaircut;
+		return this;
 	}
 
-	@XmlElement(name = "PricgRate")
-	public RateOrName2Choice getPricingRate() {
-		return pricingRate;
+	public Optional<RateOrName2Choice> getPricingRate() {
+		return pricingRate == null ? Optional.empty() : Optional.of(pricingRate);
 	}
 
-	public void setPricingRate(RateOrName2Choice pricingRate) {
+	public SecuritiesFinancingTransactionDetails18 setPricingRate(RateOrName2Choice pricingRate) {
 		this.pricingRate = pricingRate;
+		return this;
 	}
 
-	@XmlElement(name = "Sprd")
-	public Rate2 getSpread() {
-		return spread;
+	public Optional<Rate2> getSpread() {
+		return spread == null ? Optional.empty() : Optional.of(spread);
 	}
 
-	public void setSpread(com.tools20022.repository.msg.Rate2 spread) {
+	public SecuritiesFinancingTransactionDetails18 setSpread(com.tools20022.repository.msg.Rate2 spread) {
 		this.spread = spread;
+		return this;
 	}
 
-	@XmlElement(name = "DlvrgSttlmPties")
-	public SettlementParties18 getDeliveringSettlementParties() {
-		return deliveringSettlementParties;
+	public Optional<SettlementParties18> getDeliveringSettlementParties() {
+		return deliveringSettlementParties == null ? Optional.empty() : Optional.of(deliveringSettlementParties);
 	}
 
-	public void setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties18 deliveringSettlementParties) {
+	public SecuritiesFinancingTransactionDetails18 setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties18 deliveringSettlementParties) {
 		this.deliveringSettlementParties = deliveringSettlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "RcvgSttlmPties")
-	public SettlementParties18 getReceivingSettlementParties() {
-		return receivingSettlementParties;
+	public Optional<SettlementParties18> getReceivingSettlementParties() {
+		return receivingSettlementParties == null ? Optional.empty() : Optional.of(receivingSettlementParties);
 	}
 
-	public void setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties18 receivingSettlementParties) {
+	public SecuritiesFinancingTransactionDetails18 setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties18 receivingSettlementParties) {
 		this.receivingSettlementParties = receivingSettlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "Invstr")
-	public PartyIdentification60Choice getInvestor() {
-		return investor;
+	public Optional<PartyIdentification60Choice> getInvestor() {
+		return investor == null ? Optional.empty() : Optional.of(investor);
 	}
 
-	public void setInvestor(PartyIdentification60Choice investor) {
+	public SecuritiesFinancingTransactionDetails18 setInvestor(PartyIdentification60Choice investor) {
 		this.investor = investor;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmInstrPrcgAddtlDtls")
-	public RestrictedFINXMax350Text getSettlementInstructionProcessingAdditionalDetails() {
-		return settlementInstructionProcessingAdditionalDetails;
+	public Optional<RestrictedFINXMax350Text> getSettlementInstructionProcessingAdditionalDetails() {
+		return settlementInstructionProcessingAdditionalDetails == null ? Optional.empty() : Optional.of(settlementInstructionProcessingAdditionalDetails);
 	}
 
-	public void setSettlementInstructionProcessingAdditionalDetails(RestrictedFINXMax350Text settlementInstructionProcessingAdditionalDetails) {
+	public SecuritiesFinancingTransactionDetails18 setSettlementInstructionProcessingAdditionalDetails(RestrictedFINXMax350Text settlementInstructionProcessingAdditionalDetails) {
 		this.settlementInstructionProcessingAdditionalDetails = settlementInstructionProcessingAdditionalDetails;
+		return this;
 	}
 }

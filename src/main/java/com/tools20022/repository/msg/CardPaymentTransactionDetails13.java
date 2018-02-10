@@ -33,6 +33,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +75,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -101,15 +103,16 @@ import javax.xml.bind.annotation.XmlType;
  * CardPaymentTransactionDetails2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CardPaymentTransactionDetails13", propOrder = {"currency", "totalAmount", "detailedAmount", "validityDate", "accountType", "ICCRelatedData"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CardPaymentTransactionDetails13", propOrder = {"currency", "totalAmount", "detailedAmount", "validityDate", "accountType", "iCCRelatedData"})
 public class CardPaymentTransactionDetails13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ccy", required = true)
 	protected CurrencyCode currency;
 	/**
-	 * Currency associated with the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +161,7 @@ public class CardPaymentTransactionDetails13 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
-			componentContext_lazy = () -> CardPaymentTransactionDetails13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails13.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +174,11 @@ public class CardPaymentTransactionDetails13 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlAmt", required = true)
 	protected ImpliedCurrencyAndAmount totalAmount;
 	/**
-	 * Total amount of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -224,7 +228,7 @@ public class CardPaymentTransactionDetails13 {
 	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
-			componentContext_lazy = () -> CardPaymentTransactionDetails13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails13.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,10 +241,11 @@ public class CardPaymentTransactionDetails13 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "DtldAmt")
 	protected DetailedAmount5 detailedAmount;
 	/**
-	 * Detailed amounts associated with the total amount of transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -289,7 +294,7 @@ public class CardPaymentTransactionDetails13 {
 	public static final MMMessageAssociationEnd mmDetailedAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmDetailedAmount;
-			componentContext_lazy = () -> CardPaymentTransactionDetails13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails13.mmObject();
 			isDerived = false;
 			xmlTag = "DtldAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -303,10 +308,11 @@ public class CardPaymentTransactionDetails13 {
 			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount5.mmObject();
 		}
 	};
+	@XmlElement(name = "VldtyDt")
 	protected ISODate validityDate;
 	/**
-	 * Transaction authorisation deadline to complete the related payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -353,7 +359,7 @@ public class CardPaymentTransactionDetails13 {
 	public static final MMMessageAttribute mmValidityDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmValidityDate;
-			componentContext_lazy = () -> CardPaymentTransactionDetails13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails13.mmObject();
 			isDerived = false;
 			xmlTag = "VldtyDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -366,10 +372,11 @@ public class CardPaymentTransactionDetails13 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctTp")
 	protected CardAccountType1Code accountType;
 	/**
-	 * Type of cardholder account used for the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -416,7 +423,7 @@ public class CardPaymentTransactionDetails13 {
 	public static final MMMessageAttribute mmAccountType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmRelatedAccountType;
-			componentContext_lazy = () -> CardPaymentTransactionDetails13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails13.mmObject();
 			isDerived = false;
 			xmlTag = "AcctTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -429,10 +436,11 @@ public class CardPaymentTransactionDetails13 {
 			simpleType_lazy = () -> CardAccountType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ICCRltdData")
 	protected Max10000Binary iCCRelatedData;
 	/**
-	 * Data related to an integrated circuit card application.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -482,7 +490,7 @@ public class CardPaymentTransactionDetails13 {
 	public static final MMMessageAttribute mmICCRelatedData = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmICCRelatedData;
-			componentContext_lazy = () -> CardPaymentTransactionDetails13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails13.mmObject();
 			isDerived = false;
 			xmlTag = "ICCRltdData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -499,10 +507,11 @@ public class CardPaymentTransactionDetails13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardPaymentTransactionDetails13.mmCurrency, CardPaymentTransactionDetails13.mmTotalAmount, CardPaymentTransactionDetails13.mmDetailedAmount,
-						CardPaymentTransactionDetails13.mmValidityDate, CardPaymentTransactionDetails13.mmAccountType, CardPaymentTransactionDetails13.mmICCRelatedData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransactionDetails13.mmCurrency, com.tools20022.repository.msg.CardPaymentTransactionDetails13.mmTotalAmount,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails13.mmDetailedAmount, com.tools20022.repository.msg.CardPaymentTransactionDetails13.mmValidityDate,
+						com.tools20022.repository.msg.CardPaymentTransactionDetails13.mmAccountType, com.tools20022.repository.msg.CardPaymentTransactionDetails13.mmICCRelatedData);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -520,57 +529,57 @@ public class CardPaymentTransactionDetails13 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ccy", required = true)
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
 
-	public void setCurrency(CurrencyCode currency) {
-		this.currency = currency;
+	public CardPaymentTransactionDetails13 setCurrency(CurrencyCode currency) {
+		this.currency = Objects.requireNonNull(currency);
+		return this;
 	}
 
-	@XmlElement(name = "TtlAmt", required = true)
 	public ImpliedCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
 
-	public void setTotalAmount(ImpliedCurrencyAndAmount totalAmount) {
-		this.totalAmount = totalAmount;
+	public CardPaymentTransactionDetails13 setTotalAmount(ImpliedCurrencyAndAmount totalAmount) {
+		this.totalAmount = Objects.requireNonNull(totalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "DtldAmt")
-	public DetailedAmount5 getDetailedAmount() {
-		return detailedAmount;
+	public Optional<DetailedAmount5> getDetailedAmount() {
+		return detailedAmount == null ? Optional.empty() : Optional.of(detailedAmount);
 	}
 
-	public void setDetailedAmount(com.tools20022.repository.msg.DetailedAmount5 detailedAmount) {
+	public CardPaymentTransactionDetails13 setDetailedAmount(com.tools20022.repository.msg.DetailedAmount5 detailedAmount) {
 		this.detailedAmount = detailedAmount;
+		return this;
 	}
 
-	@XmlElement(name = "VldtyDt")
-	public ISODate getValidityDate() {
-		return validityDate;
+	public Optional<ISODate> getValidityDate() {
+		return validityDate == null ? Optional.empty() : Optional.of(validityDate);
 	}
 
-	public void setValidityDate(ISODate validityDate) {
+	public CardPaymentTransactionDetails13 setValidityDate(ISODate validityDate) {
 		this.validityDate = validityDate;
+		return this;
 	}
 
-	@XmlElement(name = "AcctTp")
-	public CardAccountType1Code getAccountType() {
-		return accountType;
+	public Optional<CardAccountType1Code> getAccountType() {
+		return accountType == null ? Optional.empty() : Optional.of(accountType);
 	}
 
-	public void setAccountType(CardAccountType1Code accountType) {
+	public CardPaymentTransactionDetails13 setAccountType(CardAccountType1Code accountType) {
 		this.accountType = accountType;
+		return this;
 	}
 
-	@XmlElement(name = "ICCRltdData")
-	public Max10000Binary getICCRelatedData() {
-		return iCCRelatedData;
+	public Optional<Max10000Binary> getICCRelatedData() {
+		return iCCRelatedData == null ? Optional.empty() : Optional.of(iCCRelatedData);
 	}
 
-	public void setICCRelatedData(Max10000Binary iCCRelatedData) {
+	public CardPaymentTransactionDetails13 setICCRelatedData(Max10000Binary iCCRelatedData) {
 		this.iCCRelatedData = iCCRelatedData;
+		return this;
 	}
 }

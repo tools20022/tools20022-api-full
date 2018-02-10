@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeCode;
+import com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specified the type of the payment adjustment.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeCode
- * DTCAdjustmentPaymentTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code#mmStockLoanPayment
- * DTCAdjustmentPaymentType1Code.mmStockLoanPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code#StockLoanPayment
+ * DTCAdjustmentPaymentType1Code.StockLoanPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code#mmRepoPayment
- * DTCAdjustmentPaymentType1Code.mmRepoPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code#RepoPayment
+ * DTCAdjustmentPaymentType1Code.RepoPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code#mmFailPayment
- * DTCAdjustmentPaymentType1Code.mmFailPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code#FailPayment
+ * DTCAdjustmentPaymentType1Code.FailPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code#mmMiscellaneousPayment
- * DTCAdjustmentPaymentType1Code.mmMiscellaneousPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code#MiscellaneousPayment
+ * DTCAdjustmentPaymentType1Code.MiscellaneousPayment}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeCode
+ * DTCAdjustmentPaymentTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specified the type of the payment adjustment."</li>
  * </ul>
  */
-public class DTCAdjustmentPaymentType1Code extends DTCAdjustmentPaymentTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DTCAdjustmentPaymentType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class DTCAdjustmentPaymentType1Code extends DTCAdjustmentPaymentTypeCode 
 	 * name} = "StockLoanPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockLoanPayment = new MMCode() {
+	public static final DTCAdjustmentPaymentType1Code StockLoanPayment = new DTCAdjustmentPaymentType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLoanPayment";
-			owner_lazy = () -> DTCAdjustmentPaymentType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.mmObject();
+			codeName = DTCAdjustmentPaymentTypeCode.StockLoanPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class DTCAdjustmentPaymentType1Code extends DTCAdjustmentPaymentTypeCode 
 	 * name} = "RepoPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRepoPayment = new MMCode() {
+	public static final DTCAdjustmentPaymentType1Code RepoPayment = new DTCAdjustmentPaymentType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepoPayment";
-			owner_lazy = () -> DTCAdjustmentPaymentType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.mmObject();
+			codeName = DTCAdjustmentPaymentTypeCode.RepoPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class DTCAdjustmentPaymentType1Code extends DTCAdjustmentPaymentTypeCode 
 	 * name} = "FailPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFailPayment = new MMCode() {
+	public static final DTCAdjustmentPaymentType1Code FailPayment = new DTCAdjustmentPaymentType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailPayment";
-			owner_lazy = () -> DTCAdjustmentPaymentType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.mmObject();
+			codeName = DTCAdjustmentPaymentTypeCode.FailPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,27 +166,60 @@ public class DTCAdjustmentPaymentType1Code extends DTCAdjustmentPaymentTypeCode 
 	 * name} = "MiscellaneousPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMiscellaneousPayment = new MMCode() {
+	public static final DTCAdjustmentPaymentType1Code MiscellaneousPayment = new DTCAdjustmentPaymentType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiscellaneousPayment";
-			owner_lazy = () -> DTCAdjustmentPaymentType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.mmObject();
+			codeName = DTCAdjustmentPaymentTypeCode.MiscellaneousPayment.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DTCAdjustmentPaymentType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DTCAdjustmentPaymentType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("STOK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCAdjustmentPaymentType1Code";
 				definition = "Specified the type of the payment adjustment.";
-				code_lazy = () -> Arrays.asList(DTCAdjustmentPaymentType1Code.mmStockLoanPayment, DTCAdjustmentPaymentType1Code.mmRepoPayment, DTCAdjustmentPaymentType1Code.mmFailPayment,
-						DTCAdjustmentPaymentType1Code.mmMiscellaneousPayment);
 				trace_lazy = () -> DTCAdjustmentPaymentTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.StockLoanPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.RepoPayment,
+						com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.FailPayment, com.tools20022.repository.codeset.DTCAdjustmentPaymentType1Code.MiscellaneousPayment);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(StockLoanPayment.getCodeName().get(), StockLoanPayment);
+		codesByName.put(RepoPayment.getCodeName().get(), RepoPayment);
+		codesByName.put(FailPayment.getCodeName().get(), FailPayment);
+		codesByName.put(MiscellaneousPayment.getCodeName().get(), MiscellaneousPayment);
+	}
+
+	public static DTCAdjustmentPaymentType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DTCAdjustmentPaymentType1Code[] values() {
+		DTCAdjustmentPaymentType1Code[] values = new DTCAdjustmentPaymentType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DTCAdjustmentPaymentType1Code> {
+		@Override
+		public DTCAdjustmentPaymentType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DTCAdjustmentPaymentType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

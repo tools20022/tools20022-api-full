@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.TreasuryTradeSettlementStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * StatusAndSubStatus1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatusAndSubStatus2", propOrder = {"statusCode", "subStatusCode"})
 public class StatusAndSubStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StsCd", required = true)
 	protected Status27Choice statusCode;
 	/**
-	 * Status expressed as a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +121,7 @@ public class StatusAndSubStatus2 {
 	public static final MMMessageAttribute mmStatusCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmTradeStatus;
-			componentContext_lazy = () -> StatusAndSubStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndSubStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "StsCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +133,11 @@ public class StatusAndSubStatus2 {
 			complexType_lazy = () -> Status27Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SubStsCd")
 	protected Exact4AlphaNumericText subStatusCode;
 	/**
-	 * Sub status expressed as a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,7 +176,7 @@ public class StatusAndSubStatus2 {
 	public static final MMMessageAttribute mmSubStatusCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmTradeStatus;
-			componentContext_lazy = () -> StatusAndSubStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndSubStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "SubStsCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,9 +192,9 @@ public class StatusAndSubStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatusAndSubStatus2.mmStatusCode, StatusAndSubStatus2.mmSubStatusCode);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndSubStatus2.mmStatusCode, com.tools20022.repository.msg.StatusAndSubStatus2.mmSubStatusCode);
 				trace_lazy = () -> TreasuryTradeSettlementStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusAndSubStatus2";
 				definition = "Specifies the status and optionally the sub status.";
@@ -200,21 +204,21 @@ public class StatusAndSubStatus2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StsCd", required = true)
 	public Status27Choice getStatusCode() {
 		return statusCode;
 	}
 
-	public void setStatusCode(Status27Choice statusCode) {
-		this.statusCode = statusCode;
+	public StatusAndSubStatus2 setStatusCode(Status27Choice statusCode) {
+		this.statusCode = Objects.requireNonNull(statusCode);
+		return this;
 	}
 
-	@XmlElement(name = "SubStsCd")
-	public Exact4AlphaNumericText getSubStatusCode() {
-		return subStatusCode;
+	public Optional<Exact4AlphaNumericText> getSubStatusCode() {
+		return subStatusCode == null ? Optional.empty() : Optional.of(subStatusCode);
 	}
 
-	public void setSubStatusCode(Exact4AlphaNumericText subStatusCode) {
+	public StatusAndSubStatus2 setSubStatusCode(Exact4AlphaNumericText subStatusCode) {
 		this.subStatusCode = subStatusCode;
+		return this;
 	}
 }

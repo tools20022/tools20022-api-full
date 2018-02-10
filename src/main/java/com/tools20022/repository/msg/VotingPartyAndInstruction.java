@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -40,8 +42,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.VotingPartyAndInstruction#mmQuantityOfSecurityOrVote
- * VotingPartyAndInstruction.mmQuantityOfSecurityOrVote}</li>
+ * {@linkplain com.tools20022.repository.msg.VotingPartyAndInstruction#QuantityOfSecurityOrVote
+ * VotingPartyAndInstruction.QuantityOfSecurityOrVote}</li>
  * </ul>
  * </li>
  * <li>
@@ -74,8 +76,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,15 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Groups the vote and the voting party information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "VotingPartyAndInstruction", propOrder = {"identification", "requestedExecutionDate", "personDetail", "quantityOfSecurity", "votePerResolution", "attendanceCardLabelling"})
 public class VotingPartyAndInstruction {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Identifies the detailed instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +124,7 @@ public class VotingPartyAndInstruction {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> VotingPartyAndInstruction.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VotingPartyAndInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +135,11 @@ public class VotingPartyAndInstruction {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdExctnDt")
 	protected ISODateTime requestedExecutionDate;
 	/**
-	 * Date at which the instruction must b e executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,7 +172,7 @@ public class VotingPartyAndInstruction {
 	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InstructionForMeeting.mmRequestedExecutionDate;
-			componentContext_lazy = () -> VotingPartyAndInstruction.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VotingPartyAndInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,10 +183,11 @@ public class VotingPartyAndInstruction {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "PrsnDtl", required = true)
 	protected IndividualPerson7 personDetail;
 	/**
-	 * Person attending the meeting or assigned as proxy.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -213,7 +218,7 @@ public class VotingPartyAndInstruction {
 	public static final MMMessageAssociationEnd mmPersonDetail = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
-			componentContext_lazy = () -> VotingPartyAndInstruction.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VotingPartyAndInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "PrsnDtl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,10 +230,11 @@ public class VotingPartyAndInstruction {
 			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson7.mmObject();
 		}
 	};
+	@XmlElement(name = "QtyOfScty")
 	protected Number quantityOfSecurity;
 	/**
-	 * Quantity expressed as a number, eg, a number of shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -261,7 +267,7 @@ public class VotingPartyAndInstruction {
 	public static final MMMessageAttribute mmQuantityOfSecurity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
-			componentContext_lazy = () -> VotingPartyAndInstruction.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VotingPartyAndInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "QtyOfScty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,10 +278,11 @@ public class VotingPartyAndInstruction {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "VotePerRsltn", required = true)
 	protected VoteChoice votePerResolution;
 	/**
-	 * Details of the vote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -307,7 +314,7 @@ public class VotingPartyAndInstruction {
 	public static final MMMessageAssociationEnd mmVotePerResolution = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> VoteInstructionRequest.mmObject();
-			componentContext_lazy = () -> VotingPartyAndInstruction.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VotingPartyAndInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "VotePerRsltn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -319,10 +326,11 @@ public class VotingPartyAndInstruction {
 			type_lazy = () -> VoteChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "AttndncCardLbllg")
 	protected Max105Text attendanceCardLabelling;
 	/**
-	 * Information to be indicated on the attendance card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -355,7 +363,7 @@ public class VotingPartyAndInstruction {
 	public static final MMMessageAttribute mmAttendanceCardLabelling = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AttendanceCard.mmAttendanceCardLabelling;
-			componentContext_lazy = () -> VotingPartyAndInstruction.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VotingPartyAndInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "AttndncCardLbllg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -394,82 +402,83 @@ public class VotingPartyAndInstruction {
 	 * name} = "QuantityOfSecurityOrVote"</li>
 	 * </ul>
 	 */
-	public static final MMXor mmQuantityOfSecurityOrVote = new MMXor() {
+	public static final MMXor QuantityOfSecurityOrVote = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityOfSecurityOrVote";
-			messageComponent_lazy = () -> VotingPartyAndInstruction.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(VotingPartyAndInstruction.mmQuantityOfSecurity, VotingPartyAndInstruction.mmVotePerResolution);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.VotingPartyAndInstruction.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VotingPartyAndInstruction.mmQuantityOfSecurity, com.tools20022.repository.msg.VotingPartyAndInstruction.mmVotePerResolution);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(VotingPartyAndInstruction.mmIdentification, VotingPartyAndInstruction.mmRequestedExecutionDate, VotingPartyAndInstruction.mmPersonDetail,
-						VotingPartyAndInstruction.mmQuantityOfSecurity, VotingPartyAndInstruction.mmVotePerResolution, VotingPartyAndInstruction.mmAttendanceCardLabelling);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VotingPartyAndInstruction.mmIdentification, com.tools20022.repository.msg.VotingPartyAndInstruction.mmRequestedExecutionDate,
+						com.tools20022.repository.msg.VotingPartyAndInstruction.mmPersonDetail, com.tools20022.repository.msg.VotingPartyAndInstruction.mmQuantityOfSecurity,
+						com.tools20022.repository.msg.VotingPartyAndInstruction.mmVotePerResolution, com.tools20022.repository.msg.VotingPartyAndInstruction.mmAttendanceCardLabelling);
 				trace_lazy = () -> VoteInstructionRequest.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "VotingPartyAndInstruction";
 				definition = "Groups the vote and the voting party information.";
-				xors_lazy = () -> Arrays.asList(VotingPartyAndInstruction.mmQuantityOfSecurityOrVote);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VotingPartyAndInstruction.QuantityOfSecurityOrVote);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public VotingPartyAndInstruction setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "ReqdExctnDt")
-	public ISODateTime getRequestedExecutionDate() {
-		return requestedExecutionDate;
+	public Optional<ISODateTime> getRequestedExecutionDate() {
+		return requestedExecutionDate == null ? Optional.empty() : Optional.of(requestedExecutionDate);
 	}
 
-	public void setRequestedExecutionDate(ISODateTime requestedExecutionDate) {
+	public VotingPartyAndInstruction setRequestedExecutionDate(ISODateTime requestedExecutionDate) {
 		this.requestedExecutionDate = requestedExecutionDate;
+		return this;
 	}
 
-	@XmlElement(name = "PrsnDtl", required = true)
 	public IndividualPerson7 getPersonDetail() {
 		return personDetail;
 	}
 
-	public void setPersonDetail(com.tools20022.repository.msg.IndividualPerson7 personDetail) {
-		this.personDetail = personDetail;
+	public VotingPartyAndInstruction setPersonDetail(com.tools20022.repository.msg.IndividualPerson7 personDetail) {
+		this.personDetail = Objects.requireNonNull(personDetail);
+		return this;
 	}
 
-	@XmlElement(name = "QtyOfScty")
-	public Number getQuantityOfSecurity() {
-		return quantityOfSecurity;
+	public Optional<Number> getQuantityOfSecurity() {
+		return quantityOfSecurity == null ? Optional.empty() : Optional.of(quantityOfSecurity);
 	}
 
-	public void setQuantityOfSecurity(Number quantityOfSecurity) {
+	public VotingPartyAndInstruction setQuantityOfSecurity(Number quantityOfSecurity) {
 		this.quantityOfSecurity = quantityOfSecurity;
+		return this;
 	}
 
-	@XmlElement(name = "VotePerRsltn", required = true)
 	public VoteChoice getVotePerResolution() {
 		return votePerResolution;
 	}
 
-	public void setVotePerResolution(VoteChoice votePerResolution) {
-		this.votePerResolution = votePerResolution;
+	public VotingPartyAndInstruction setVotePerResolution(VoteChoice votePerResolution) {
+		this.votePerResolution = Objects.requireNonNull(votePerResolution);
+		return this;
 	}
 
-	@XmlElement(name = "AttndncCardLbllg")
-	public Max105Text getAttendanceCardLabelling() {
-		return attendanceCardLabelling;
+	public Optional<Max105Text> getAttendanceCardLabelling() {
+		return attendanceCardLabelling == null ? Optional.empty() : Optional.of(attendanceCardLabelling);
 	}
 
-	public void setAttendanceCardLabelling(Max105Text attendanceCardLabelling) {
+	public VotingPartyAndInstruction setAttendanceCardLabelling(Max105Text attendanceCardLabelling) {
 		this.attendanceCardLabelling = attendanceCardLabelling;
+		return this;
 	}
 }

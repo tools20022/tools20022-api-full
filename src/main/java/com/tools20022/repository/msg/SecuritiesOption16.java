@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -32,6 +33,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -75,8 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule#forSecuritiesOption16
+ * ConstraintCoexistenceQuantityRule.forSecuritiesOption16}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -88,17 +98,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the security option of a corporate event."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesOption16", propOrder = {"maximumExercisableQuantity", "minimumExercisableQuantity", "minimumExercisableMultipleQuantity", "newBoardLotQuantity", "newDenominationQuantity", "frontEndOddLotQuantity",
 		"backEndOddLotQuantity"})
 public class SecuritiesOption16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MaxExrcblQty")
 	protected FinancialInstrumentQuantity15Choice maximumExercisableQuantity;
 	/**
-	 * Maximum quantity (or lot) of financial instrument that must be exercised
-	 * or tendered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -118,6 +128,9 @@ public class SecuritiesOption16 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MaxExrcblQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B:MAEX</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -133,9 +146,10 @@ public class SecuritiesOption16 {
 	public static final MMMessageAssociationEnd mmMaximumExercisableQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmMaximumExercisableQuantity;
-			componentContext_lazy = () -> SecuritiesOption16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption16.mmObject();
 			isDerived = false;
 			xmlTag = "MaxExrcblQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B:MAEX"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumExercisableQuantity";
 			definition = "Maximum quantity (or lot) of financial instrument that must be exercised or tendered.";
@@ -145,11 +159,11 @@ public class SecuritiesOption16 {
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MinExrcblQty")
 	protected FinancialInstrumentQuantity15Choice minimumExercisableQuantity;
 	/**
-	 * Minimum quantity (or lot) of financial instrument that must be exercised
-	 * or tendered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -169,6 +183,9 @@ public class SecuritiesOption16 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MinExrcblQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::MIEX</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -184,9 +201,10 @@ public class SecuritiesOption16 {
 	public static final MMMessageAssociationEnd mmMinimumExercisableQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmMinimumExercisableQuantity;
-			componentContext_lazy = () -> SecuritiesOption16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption16.mmObject();
 			isDerived = false;
 			xmlTag = "MinExrcblQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::MIEX"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumExercisableQuantity";
 			definition = "Minimum quantity (or lot) of financial instrument that must be exercised or tendered.";
@@ -196,11 +214,11 @@ public class SecuritiesOption16 {
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MinExrcblMltplQty")
 	protected FinancialInstrumentQuantity15Choice minimumExercisableMultipleQuantity;
 	/**
-	 * Minimum multiple quantity (or lot) of financial instrument that must be
-	 * exercised or tendered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -220,6 +238,9 @@ public class SecuritiesOption16 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MinExrcblMltplQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::MILT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -235,9 +256,10 @@ public class SecuritiesOption16 {
 	public static final MMMessageAssociationEnd mmMinimumExercisableMultipleQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmMinimumExercisableMultipleQuantity;
-			componentContext_lazy = () -> SecuritiesOption16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption16.mmObject();
 			isDerived = false;
 			xmlTag = "MinExrcblMltplQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::MILT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumExercisableMultipleQuantity";
 			definition = "Minimum multiple quantity (or lot) of financial  instrument that must be exercised or tendered.";
@@ -247,10 +269,11 @@ public class SecuritiesOption16 {
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NewBrdLotQty")
 	protected FinancialInstrumentQuantity15Choice newBoardLotQuantity;
 	/**
-	 * Quantity of equity that makes up the new board lot.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -270,6 +293,9 @@ public class SecuritiesOption16 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NewBrdLotQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::NBLT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -283,9 +309,10 @@ public class SecuritiesOption16 {
 	public static final MMMessageAssociationEnd mmNewBoardLotQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmBoardLotSecuritiesQuantity;
-			componentContext_lazy = () -> SecuritiesOption16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption16.mmObject();
 			isDerived = false;
 			xmlTag = "NewBrdLotQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::NBLT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewBoardLotQuantity";
 			definition = "Quantity of equity that makes up the new board lot.";
@@ -295,11 +322,11 @@ public class SecuritiesOption16 {
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NewDnmtnQty")
 	protected FinancialInstrumentQuantity15Choice newDenominationQuantity;
 	/**
-	 * New denomination of the equity following, for example, an increase or
-	 * decrease in nominal value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -319,6 +346,9 @@ public class SecuritiesOption16 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NewDnmtnQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::NEWD</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -334,9 +364,10 @@ public class SecuritiesOption16 {
 	public static final MMMessageAssociationEnd mmNewDenominationQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmNewDenominationSecuritiesQuantity;
-			componentContext_lazy = () -> SecuritiesOption16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption16.mmObject();
 			isDerived = false;
 			xmlTag = "NewDnmtnQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::NEWD"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewDenominationQuantity";
 			definition = "New denomination of the equity following, for example, an increase or decrease in nominal value.";
@@ -346,12 +377,11 @@ public class SecuritiesOption16 {
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FrntEndOddLotQty")
 	protected FinancialInstrumentQuantity17Choice frontEndOddLotQuantity;
 	/**
-	 * Specifies that if an order is prorated holders of odd lots who tender
-	 * their full position will not have tendered position prorated but rather
-	 * accepted in full.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -371,6 +401,9 @@ public class SecuritiesOption16 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FrntEndOddLotQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::FOLQ</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -386,9 +419,10 @@ public class SecuritiesOption16 {
 	public static final MMMessageAssociationEnd mmFrontEndOddLotQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmFrontEndOddLotQuantity;
-			componentContext_lazy = () -> SecuritiesOption16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption16.mmObject();
 			isDerived = false;
 			xmlTag = "FrntEndOddLotQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::FOLQ"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEndOddLotQuantity";
 			definition = "Specifies that if an order is prorated holders of odd lots who tender their full position will not have tendered position prorated but rather accepted in full.";
@@ -398,11 +432,11 @@ public class SecuritiesOption16 {
 			type_lazy = () -> FinancialInstrumentQuantity17Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "BckEndOddLotQty")
 	protected FinancialInstrumentQuantity17Choice backEndOddLotQuantity;
 	/**
-	 * Represents the presence of a back end odd lot provision and the quantity
-	 * of equity required after proration to be eligible for this privilege.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -422,6 +456,9 @@ public class SecuritiesOption16 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BckEndOddLotQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::BOLQ</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -437,9 +474,10 @@ public class SecuritiesOption16 {
 	public static final MMMessageAssociationEnd mmBackEndOddLotQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmBackEndOddLotQuantity;
-			componentContext_lazy = () -> SecuritiesOption16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption16.mmObject();
 			isDerived = false;
 			xmlTag = "BckEndOddLotQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::BOLQ"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEndOddLotQuantity";
 			definition = "Represents the presence of a back end odd lot provision and the quantity of equity required after proration to be eligible for this privilege.";
@@ -453,10 +491,13 @@ public class SecuritiesOption16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesOption16.mmMaximumExercisableQuantity, SecuritiesOption16.mmMinimumExercisableQuantity, SecuritiesOption16.mmMinimumExercisableMultipleQuantity,
-						SecuritiesOption16.mmNewBoardLotQuantity, SecuritiesOption16.mmNewDenominationQuantity, SecuritiesOption16.mmFrontEndOddLotQuantity, SecuritiesOption16.mmBackEndOddLotQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption16.mmMaximumExercisableQuantity, com.tools20022.repository.msg.SecuritiesOption16.mmMinimumExercisableQuantity,
+						com.tools20022.repository.msg.SecuritiesOption16.mmMinimumExercisableMultipleQuantity, com.tools20022.repository.msg.SecuritiesOption16.mmNewBoardLotQuantity,
+						com.tools20022.repository.msg.SecuritiesOption16.mmNewDenominationQuantity, com.tools20022.repository.msg.SecuritiesOption16.mmFrontEndOddLotQuantity,
+						com.tools20022.repository.msg.SecuritiesOption16.mmBackEndOddLotQuantity);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule.forSecuritiesOption16);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -472,66 +513,66 @@ public class SecuritiesOption16 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MaxExrcblQty")
-	public FinancialInstrumentQuantity15Choice getMaximumExercisableQuantity() {
-		return maximumExercisableQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getMaximumExercisableQuantity() {
+		return maximumExercisableQuantity == null ? Optional.empty() : Optional.of(maximumExercisableQuantity);
 	}
 
-	public void setMaximumExercisableQuantity(FinancialInstrumentQuantity15Choice maximumExercisableQuantity) {
+	public SecuritiesOption16 setMaximumExercisableQuantity(FinancialInstrumentQuantity15Choice maximumExercisableQuantity) {
 		this.maximumExercisableQuantity = maximumExercisableQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "MinExrcblQty")
-	public FinancialInstrumentQuantity15Choice getMinimumExercisableQuantity() {
-		return minimumExercisableQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getMinimumExercisableQuantity() {
+		return minimumExercisableQuantity == null ? Optional.empty() : Optional.of(minimumExercisableQuantity);
 	}
 
-	public void setMinimumExercisableQuantity(FinancialInstrumentQuantity15Choice minimumExercisableQuantity) {
+	public SecuritiesOption16 setMinimumExercisableQuantity(FinancialInstrumentQuantity15Choice minimumExercisableQuantity) {
 		this.minimumExercisableQuantity = minimumExercisableQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "MinExrcblMltplQty")
-	public FinancialInstrumentQuantity15Choice getMinimumExercisableMultipleQuantity() {
-		return minimumExercisableMultipleQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getMinimumExercisableMultipleQuantity() {
+		return minimumExercisableMultipleQuantity == null ? Optional.empty() : Optional.of(minimumExercisableMultipleQuantity);
 	}
 
-	public void setMinimumExercisableMultipleQuantity(FinancialInstrumentQuantity15Choice minimumExercisableMultipleQuantity) {
+	public SecuritiesOption16 setMinimumExercisableMultipleQuantity(FinancialInstrumentQuantity15Choice minimumExercisableMultipleQuantity) {
 		this.minimumExercisableMultipleQuantity = minimumExercisableMultipleQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "NewBrdLotQty")
-	public FinancialInstrumentQuantity15Choice getNewBoardLotQuantity() {
-		return newBoardLotQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getNewBoardLotQuantity() {
+		return newBoardLotQuantity == null ? Optional.empty() : Optional.of(newBoardLotQuantity);
 	}
 
-	public void setNewBoardLotQuantity(FinancialInstrumentQuantity15Choice newBoardLotQuantity) {
+	public SecuritiesOption16 setNewBoardLotQuantity(FinancialInstrumentQuantity15Choice newBoardLotQuantity) {
 		this.newBoardLotQuantity = newBoardLotQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "NewDnmtnQty")
-	public FinancialInstrumentQuantity15Choice getNewDenominationQuantity() {
-		return newDenominationQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getNewDenominationQuantity() {
+		return newDenominationQuantity == null ? Optional.empty() : Optional.of(newDenominationQuantity);
 	}
 
-	public void setNewDenominationQuantity(FinancialInstrumentQuantity15Choice newDenominationQuantity) {
+	public SecuritiesOption16 setNewDenominationQuantity(FinancialInstrumentQuantity15Choice newDenominationQuantity) {
 		this.newDenominationQuantity = newDenominationQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "FrntEndOddLotQty")
-	public FinancialInstrumentQuantity17Choice getFrontEndOddLotQuantity() {
-		return frontEndOddLotQuantity;
+	public Optional<FinancialInstrumentQuantity17Choice> getFrontEndOddLotQuantity() {
+		return frontEndOddLotQuantity == null ? Optional.empty() : Optional.of(frontEndOddLotQuantity);
 	}
 
-	public void setFrontEndOddLotQuantity(FinancialInstrumentQuantity17Choice frontEndOddLotQuantity) {
+	public SecuritiesOption16 setFrontEndOddLotQuantity(FinancialInstrumentQuantity17Choice frontEndOddLotQuantity) {
 		this.frontEndOddLotQuantity = frontEndOddLotQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "BckEndOddLotQty")
-	public FinancialInstrumentQuantity17Choice getBackEndOddLotQuantity() {
-		return backEndOddLotQuantity;
+	public Optional<FinancialInstrumentQuantity17Choice> getBackEndOddLotQuantity() {
+		return backEndOddLotQuantity == null ? Optional.empty() : Optional.of(backEndOddLotQuantity);
 	}
 
-	public void setBackEndOddLotQuantity(FinancialInstrumentQuantity17Choice backEndOddLotQuantity) {
+	public SecuritiesOption16 setBackEndOddLotQuantity(FinancialInstrumentQuantity17Choice backEndOddLotQuantity) {
 		this.backEndOddLotQuantity = backEndOddLotQuantity;
+		return this;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Defines how the securities account is linked to the cash account."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountLink2", propOrder = {"securitiesAccount", "cashAccount", "validFrom"})
 public class AccountLink2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesAcct", required = true)
 	protected SecuritiesAccount13 securitiesAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +112,7 @@ public class AccountLink2 {
 	public static final MMMessageAttribute mmSecuritiesAccount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountLink.mmSecuritiesAccount;
-			componentContext_lazy = () -> AccountLink2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink2.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +123,11 @@ public class AccountLink2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAcct", required = true)
 	protected CashAccount24 cashAccount;
 	/**
-	 * Account to or from which a cash entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +158,7 @@ public class AccountLink2 {
 	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AccountLink.mmCashAccount;
-			componentContext_lazy = () -> AccountLink2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink2.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,11 +170,11 @@ public class AccountLink2 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "VldFr", required = true)
 	protected DateAndDateTimeChoice validFrom;
 	/**
-	 * Defines the date since when the securities account is linked to the cash
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,7 +209,7 @@ public class AccountLink2 {
 	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
-			componentContext_lazy = () -> AccountLink2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink2.mmObject();
 			isDerived = false;
 			xmlTag = "VldFr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,9 +224,9 @@ public class AccountLink2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountLink2.mmSecuritiesAccount, AccountLink2.mmCashAccount, AccountLink2.mmValidFrom);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLink2.mmSecuritiesAccount, com.tools20022.repository.msg.AccountLink2.mmCashAccount, com.tools20022.repository.msg.AccountLink2.mmValidFrom);
 				trace_lazy = () -> AccountLink.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountLink2";
 				definition = "Defines how the securities account is linked to the cash account.";
@@ -232,30 +235,30 @@ public class AccountLink2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesAcct", required = true)
 	public SecuritiesAccount13 getSecuritiesAccount() {
 		return securitiesAccount;
 	}
 
-	public void setSecuritiesAccount(com.tools20022.repository.msg.SecuritiesAccount13 securitiesAccount) {
-		this.securitiesAccount = securitiesAccount;
+	public AccountLink2 setSecuritiesAccount(com.tools20022.repository.msg.SecuritiesAccount13 securitiesAccount) {
+		this.securitiesAccount = Objects.requireNonNull(securitiesAccount);
+		return this;
 	}
 
-	@XmlElement(name = "CshAcct", required = true)
 	public CashAccount24 getCashAccount() {
 		return cashAccount;
 	}
 
-	public void setCashAccount(com.tools20022.repository.msg.CashAccount24 cashAccount) {
-		this.cashAccount = cashAccount;
+	public AccountLink2 setCashAccount(com.tools20022.repository.msg.CashAccount24 cashAccount) {
+		this.cashAccount = Objects.requireNonNull(cashAccount);
+		return this;
 	}
 
-	@XmlElement(name = "VldFr", required = true)
 	public DateAndDateTimeChoice getValidFrom() {
 		return validFrom;
 	}
 
-	public void setValidFrom(DateAndDateTimeChoice validFrom) {
-		this.validFrom = validFrom;
+	public AccountLink2 setValidFrom(DateAndDateTimeChoice validFrom) {
+		this.validFrom = Objects.requireNonNull(validFrom);
+		return this;
 	}
 }

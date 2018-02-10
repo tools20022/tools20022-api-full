@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.InvestmentFundTransactionTypeCode;
+import com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of investment fund transaction that results in a cash
@@ -31,33 +35,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionTypeCode
- * InvestmentFundTransactionTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code#mmSubscription
- * InvestmentFundTransactionInType3Code.mmSubscription}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code#Subscription
+ * InvestmentFundTransactionInType3Code.Subscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code#mmSwitchIn
- * InvestmentFundTransactionInType3Code.mmSwitchIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code#SwitchIn
+ * InvestmentFundTransactionInType3Code.SwitchIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code#mmInSpecie
- * InvestmentFundTransactionInType3Code.mmInSpecie}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code#InSpecie
+ * InvestmentFundTransactionInType3Code.InSpecie}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code#mmCrossIn
- * InvestmentFundTransactionInType3Code.mmCrossIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code#CrossIn
+ * InvestmentFundTransactionInType3Code.CrossIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code#mmOther
- * InvestmentFundTransactionInType3Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code#Other
+ * InvestmentFundTransactionInType3Code.Other}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.InvestmentFundTransactionTypeCode
+ * InvestmentFundTransactionTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -76,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class InvestmentFundTransactionInType3Code extends InvestmentFundTransactionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InvestmentFundTransactionInType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,11 +100,12 @@ public class InvestmentFundTransactionInType3Code extends InvestmentFundTransact
 	 * name} = "Subscription"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubscription = new MMCode() {
+	public static final InvestmentFundTransactionInType3Code Subscription = new InvestmentFundTransactionInType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscription";
-			owner_lazy = () -> InvestmentFundTransactionInType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code.mmObject();
+			codeName = InvestmentFundTransactionTypeCode.Subscription.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -118,11 +124,12 @@ public class InvestmentFundTransactionInType3Code extends InvestmentFundTransact
 	 * name} = "SwitchIn"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSwitchIn = new MMCode() {
+	public static final InvestmentFundTransactionInType3Code SwitchIn = new InvestmentFundTransactionInType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchIn";
-			owner_lazy = () -> InvestmentFundTransactionInType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code.mmObject();
+			codeName = InvestmentFundTransactionTypeCode.SwitchIn.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -141,11 +148,12 @@ public class InvestmentFundTransactionInType3Code extends InvestmentFundTransact
 	 * name} = "InSpecie"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInSpecie = new MMCode() {
+	public static final InvestmentFundTransactionInType3Code InSpecie = new InvestmentFundTransactionInType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InSpecie";
-			owner_lazy = () -> InvestmentFundTransactionInType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code.mmObject();
+			codeName = InvestmentFundTransactionTypeCode.InSpecie.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -164,11 +172,12 @@ public class InvestmentFundTransactionInType3Code extends InvestmentFundTransact
 	 * name} = "CrossIn"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCrossIn = new MMCode() {
+	public static final InvestmentFundTransactionInType3Code CrossIn = new InvestmentFundTransactionInType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossIn";
-			owner_lazy = () -> InvestmentFundTransactionInType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code.mmObject();
+			codeName = InvestmentFundTransactionTypeCode.CrossIn.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -187,27 +196,62 @@ public class InvestmentFundTransactionInType3Code extends InvestmentFundTransact
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final InvestmentFundTransactionInType3Code Other = new InvestmentFundTransactionInType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> InvestmentFundTransactionInType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code.mmObject();
+			codeName = InvestmentFundTransactionTypeCode.Other.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, InvestmentFundTransactionInType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InvestmentFundTransactionInType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SUBS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundTransactionInType3Code";
 				definition = "Specifies the type of investment fund transaction that results in a cash movement into a fund.";
-				code_lazy = () -> Arrays.asList(InvestmentFundTransactionInType3Code.mmSubscription, InvestmentFundTransactionInType3Code.mmSwitchIn, InvestmentFundTransactionInType3Code.mmInSpecie,
-						InvestmentFundTransactionInType3Code.mmCrossIn, InvestmentFundTransactionInType3Code.mmOther);
 				trace_lazy = () -> InvestmentFundTransactionTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code.Subscription, com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code.SwitchIn,
+						com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code.InSpecie, com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code.CrossIn,
+						com.tools20022.repository.codeset.InvestmentFundTransactionInType3Code.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Subscription.getCodeName().get(), Subscription);
+		codesByName.put(SwitchIn.getCodeName().get(), SwitchIn);
+		codesByName.put(InSpecie.getCodeName().get(), InSpecie);
+		codesByName.put(CrossIn.getCodeName().get(), CrossIn);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static InvestmentFundTransactionInType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InvestmentFundTransactionInType3Code[] values() {
+		InvestmentFundTransactionInType3Code[] values = new InvestmentFundTransactionInType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InvestmentFundTransactionInType3Code> {
+		@Override
+		public InvestmentFundTransactionInType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InvestmentFundTransactionInType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

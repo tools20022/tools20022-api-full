@@ -26,9 +26,8 @@ import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -61,22 +60,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
- * SecuritiesClearingLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion
- * CentralCounterPartyCCPSecuritiesClearingISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "MrgnRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -101,6 +84,22 @@ import javax.xml.bind.annotation.*;
  * MarginReportV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion
+ * CentralCounterPartyCCPSecuritiesClearingISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "MrgnRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
+ * SecuritiesClearingLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code secl.005.001.02}</li>
@@ -116,16 +115,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MarginReportV02", propOrder = {"reportParameters", "pagination", "clearingMember", "reportSummary", "reportDetails", "supplementaryData"})
 public class MarginReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptParams", required = true)
 	protected ReportParameters3 reportParameters;
 	/**
-	 * Provides parameters of the margin report such as the creation date and
-	 * time, the report currency or the calculation date and time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,12 +166,11 @@ public class MarginReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Pgntn", required = true)
 	protected Pagination pagination;
 	/**
-	 * Page number of the message (within a report) and continuation indicator
-	 * to indicate that the report is to continue or that the message is the
-	 * last page of the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,11 +211,11 @@ public class MarginReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "ClrMmb", required = true)
 	protected PartyIdentification35Choice clearingMember;
 	/**
-	 * Provides the identification of the account owner, that is the clearing
-	 * member (individual clearing member or general clearing member).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,10 +257,11 @@ public class MarginReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "RptSummry")
 	protected MarginCalculation1 reportSummary;
 	/**
-	 * Provides details on the valuation of the collateral on deposit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -303,10 +302,11 @@ public class MarginReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "RptDtls", required = true)
 	protected List<MarginReport2> reportDetails;
 	/**
-	 * Provides the margin report details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -344,11 +344,11 @@ public class MarginReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can't be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -421,61 +421,61 @@ public class MarginReportV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptParams", required = true)
 	public ReportParameters3 getReportParameters() {
 		return reportParameters;
 	}
 
-	public void setReportParameters(ReportParameters3 reportParameters) {
-		this.reportParameters = reportParameters;
+	public MarginReportV02 setReportParameters(ReportParameters3 reportParameters) {
+		this.reportParameters = Objects.requireNonNull(reportParameters);
+		return this;
 	}
 
-	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
 
-	public void setPagination(Pagination pagination) {
-		this.pagination = pagination;
+	public MarginReportV02 setPagination(Pagination pagination) {
+		this.pagination = Objects.requireNonNull(pagination);
+		return this;
 	}
 
-	@XmlElement(name = "ClrMmb", required = true)
 	public PartyIdentification35Choice getClearingMember() {
 		return clearingMember;
 	}
 
-	public void setClearingMember(PartyIdentification35Choice clearingMember) {
-		this.clearingMember = clearingMember;
+	public MarginReportV02 setClearingMember(PartyIdentification35Choice clearingMember) {
+		this.clearingMember = Objects.requireNonNull(clearingMember);
+		return this;
 	}
 
-	@XmlElement(name = "RptSummry")
-	public MarginCalculation1 getReportSummary() {
-		return reportSummary;
+	public Optional<MarginCalculation1> getReportSummary() {
+		return reportSummary == null ? Optional.empty() : Optional.of(reportSummary);
 	}
 
-	public void setReportSummary(MarginCalculation1 reportSummary) {
+	public MarginReportV02 setReportSummary(MarginCalculation1 reportSummary) {
 		this.reportSummary = reportSummary;
+		return this;
 	}
 
-	@XmlElement(name = "RptDtls", required = true)
 	public List<MarginReport2> getReportDetails() {
-		return reportDetails;
+		return reportDetails == null ? reportDetails = new ArrayList<>() : reportDetails;
 	}
 
-	public void setReportDetails(List<MarginReport2> reportDetails) {
-		this.reportDetails = reportDetails;
+	public MarginReportV02 setReportDetails(List<MarginReport2> reportDetails) {
+		this.reportDetails = Objects.requireNonNull(reportDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public MarginReportV02 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:secl.005.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:secl.005.001.02")
 	static public class Document {
 		@XmlElement(name = "MrgnRpt", required = true)
 		public MarginReportV02 messageBody;

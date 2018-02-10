@@ -24,9 +24,11 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "IsabelSEPAFile1", propOrder = {"SEPAIndicator", "categoryPurpose", "marketPractices"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "IsabelSEPAFile1", propOrder = {"sEPAIndicator", "categoryPurpose", "marketPractices"})
 public class IsabelSEPAFile1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SEPAInd", required = true)
 	protected TrueFalseIndicator sEPAIndicator;
 	/**
-	 * Specifies whether the SEPA formatted file is compliant to the SEPA
-	 * rulebook.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +110,7 @@ public class IsabelSEPAFile1 {
 	 */
 	public static final MMMessageAttribute mmSEPAIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelSEPAFile1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSEPAFile1.mmObject();
 			isDerived = false;
 			xmlTag = "SEPAInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,11 +121,11 @@ public class IsabelSEPAFile1 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CtgyPurp", required = true)
 	protected Max6Text categoryPurpose;
 	/**
-	 * High level category purpose of the payment initiation messages in the
-	 * file, based on the SEPA rulebook.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,7 +154,7 @@ public class IsabelSEPAFile1 {
 	 */
 	public static final MMMessageAttribute mmCategoryPurpose = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelSEPAFile1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSEPAFile1.mmObject();
 			isDerived = false;
 			xmlTag = "CtgyPurp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,10 +165,11 @@ public class IsabelSEPAFile1 {
 			simpleType_lazy = () -> Max6Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MktPrctcs")
 	protected List<Max35Text> marketPractices;
 	/**
-	 * Local market practices applicable to the SEPA file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,7 +196,7 @@ public class IsabelSEPAFile1 {
 	 */
 	public static final MMMessageAttribute mmMarketPractices = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelSEPAFile1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSEPAFile1.mmObject();
 			isDerived = false;
 			xmlTag = "MktPrctcs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,8 +211,9 @@ public class IsabelSEPAFile1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IsabelSEPAFile1.mmSEPAIndicator, IsabelSEPAFile1.mmCategoryPurpose, IsabelSEPAFile1.mmMarketPractices);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSEPAFile1.mmSEPAIndicator, com.tools20022.repository.msg.IsabelSEPAFile1.mmCategoryPurpose,
+						com.tools20022.repository.msg.IsabelSEPAFile1.mmMarketPractices);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelSEPAFile1";
 				definition = "Specifies the characteristics for a SEPA formatted payment initiation file.";
@@ -218,30 +222,30 @@ public class IsabelSEPAFile1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SEPAInd", required = true)
 	public TrueFalseIndicator getSEPAIndicator() {
 		return sEPAIndicator;
 	}
 
-	public void setSEPAIndicator(TrueFalseIndicator sEPAIndicator) {
-		this.sEPAIndicator = sEPAIndicator;
+	public IsabelSEPAFile1 setSEPAIndicator(TrueFalseIndicator sEPAIndicator) {
+		this.sEPAIndicator = Objects.requireNonNull(sEPAIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "CtgyPurp", required = true)
 	public Max6Text getCategoryPurpose() {
 		return categoryPurpose;
 	}
 
-	public void setCategoryPurpose(Max6Text categoryPurpose) {
-		this.categoryPurpose = categoryPurpose;
+	public IsabelSEPAFile1 setCategoryPurpose(Max6Text categoryPurpose) {
+		this.categoryPurpose = Objects.requireNonNull(categoryPurpose);
+		return this;
 	}
 
-	@XmlElement(name = "MktPrctcs")
 	public List<Max35Text> getMarketPractices() {
-		return marketPractices;
+		return marketPractices == null ? marketPractices = new ArrayList<>() : marketPractices;
 	}
 
-	public void setMarketPractices(List<Max35Text> marketPractices) {
-		this.marketPractices = marketPractices;
+	public IsabelSEPAFile1 setMarketPractices(List<Max35Text> marketPractices) {
+		this.marketPractices = Objects.requireNonNull(marketPractices);
+		return this;
 	}
 }

@@ -20,34 +20,36 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ProposalTypeCode;
+import com.tools20022.repository.codeset.ProposalType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the proposal is an initial or a counter proposal.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProposalType1Code#Initial
+ * ProposalType1Code.Initial}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProposalType1Code#Counter
+ * ProposalType1Code.Counter}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.ProposalTypeCode
  * ProposalTypeCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProposalType1Code#mmInitial
- * ProposalType1Code.mmInitial}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProposalType1Code#mmCounter
- * ProposalType1Code.mmCounter}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies whether the proposal is an initial or a counter proposal."</li>
  * </ul>
  */
-public class ProposalType1Code extends ProposalTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProposalType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +87,12 @@ public class ProposalType1Code extends ProposalTypeCode {
 	 * name} = "Initial"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInitial = new MMCode() {
+	public static final ProposalType1Code Initial = new ProposalType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initial";
-			owner_lazy = () -> ProposalType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProposalType1Code.mmObject();
+			codeName = ProposalTypeCode.Initial.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,26 +111,57 @@ public class ProposalType1Code extends ProposalTypeCode {
 	 * name} = "Counter"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCounter = new MMCode() {
+	public static final ProposalType1Code Counter = new ProposalType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counter";
-			owner_lazy = () -> ProposalType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProposalType1Code.mmObject();
+			codeName = ProposalTypeCode.Counter.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ProposalType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProposalType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("INIT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProposalType1Code";
 				definition = "Specifies whether the proposal is an initial or a counter proposal.";
-				code_lazy = () -> Arrays.asList(ProposalType1Code.mmInitial, ProposalType1Code.mmCounter);
 				trace_lazy = () -> ProposalTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProposalType1Code.Initial, com.tools20022.repository.codeset.ProposalType1Code.Counter);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Initial.getCodeName().get(), Initial);
+		codesByName.put(Counter.getCodeName().get(), Counter);
+	}
+
+	public static ProposalType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProposalType1Code[] values() {
+		ProposalType1Code[] values = new ProposalType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProposalType1Code> {
+		@Override
+		public ProposalType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProposalType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

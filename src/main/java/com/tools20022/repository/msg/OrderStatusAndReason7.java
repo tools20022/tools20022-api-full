@@ -28,11 +28,9 @@ import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -47,8 +45,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason7#mmTypeOfStatusRule
- * OrderStatusAndReason7.mmTypeOfStatusRule}</li>
+ * {@linkplain com.tools20022.repository.msg.OrderStatusAndReason7#TypeOfStatusRule
+ * OrderStatusAndReason7.TypeOfStatusRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,8 +93,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -117,16 +115,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OrderStatusAndReason7", propOrder = {"masterReference", "status", "cancelled", "conditionallyAccepted", "rejected", "suspended", "partiallySettled", "statusInitiator"})
 public class OrderStatusAndReason7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MstrRef")
 	protected Max35Text masterReference;
 	/**
-	 * Reference assigned to a set of orders or trades in order to link them
-	 * together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,7 +167,7 @@ public class OrderStatusAndReason7 {
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
-			componentContext_lazy = () -> OrderStatusAndReason7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason7.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,11 +179,11 @@ public class OrderStatusAndReason7 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts", required = true)
 	protected OrderStatus4Code status;
 	/**
-	 * Status of all the orders in the order message. There is no reason
-	 * attached.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -221,7 +219,7 @@ public class OrderStatusAndReason7 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmOrderStatus;
-			componentContext_lazy = () -> OrderStatusAndReason7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason7.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,12 +230,11 @@ public class OrderStatusAndReason7 {
 			simpleType_lazy = () -> OrderStatus4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Canc", required = true)
 	protected CancelledStatus2 cancelled;
 	/**
-	 * Status of all the orders in the order message is cancelled. This status
-	 * is used for orders that have been accepted or that have been entered in
-	 * an order book but that can not be executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -271,7 +268,7 @@ public class OrderStatusAndReason7 {
 	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
-			componentContext_lazy = () -> OrderStatusAndReason7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason7.mmObject();
 			isDerived = false;
 			xmlTag = "Canc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,10 +280,11 @@ public class OrderStatusAndReason7 {
 			type_lazy = () -> com.tools20022.repository.msg.CancelledStatus2.mmObject();
 		}
 	};
+	@XmlElement(name = "CondlyAccptd", required = true)
 	protected ConditionallyAcceptedStatus2 conditionallyAccepted;
 	/**
-	 * Status of all the orders in the order message is conditionally accepted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -321,7 +319,7 @@ public class OrderStatusAndReason7 {
 	public static final MMMessageAssociationEnd mmConditionallyAccepted = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
-			componentContext_lazy = () -> OrderStatusAndReason7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason7.mmObject();
 			isDerived = false;
 			xmlTag = "CondlyAccptd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -333,11 +331,11 @@ public class OrderStatusAndReason7 {
 			type_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatus2.mmObject();
 		}
 	};
+	@XmlElement(name = "Rjctd", required = true)
 	protected List<com.tools20022.repository.msg.RejectedStatus6> rejected;
 	/**
-	 * Status of all the orders in the order message is rejected. This status is
-	 * used for orders that have not been accepted or entered in an order book.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -371,7 +369,7 @@ public class OrderStatusAndReason7 {
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
-			componentContext_lazy = () -> OrderStatusAndReason7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason7.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -383,10 +381,11 @@ public class OrderStatusAndReason7 {
 			type_lazy = () -> com.tools20022.repository.msg.RejectedStatus6.mmObject();
 		}
 	};
+	@XmlElement(name = "Sspd", required = true)
 	protected SuspendedStatus2 suspended;
 	/**
-	 * Status of all the orders in the order message is suspended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -419,7 +418,7 @@ public class OrderStatusAndReason7 {
 	public static final MMMessageAssociationEnd mmSuspended = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmSuspendedStatusReason;
-			componentContext_lazy = () -> OrderStatusAndReason7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason7.mmObject();
 			isDerived = false;
 			xmlTag = "Sspd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -431,10 +430,11 @@ public class OrderStatusAndReason7 {
 			type_lazy = () -> com.tools20022.repository.msg.SuspendedStatus2.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtlySttld", required = true)
 	protected PartiallySettledStatus1 partiallySettled;
 	/**
-	 * Status of all the orders in the order message is partially settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -468,7 +468,7 @@ public class OrderStatusAndReason7 {
 	public static final MMMessageAssociationEnd mmPartiallySettled = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmPartiallySettledStatusReason;
-			componentContext_lazy = () -> OrderStatusAndReason7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason7.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlySttld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -480,10 +480,11 @@ public class OrderStatusAndReason7 {
 			type_lazy = () -> com.tools20022.repository.msg.PartiallySettledStatus1.mmObject();
 		}
 	};
+	@XmlElement(name = "StsInitr")
 	protected PartyIdentification2Choice statusInitiator;
 	/**
-	 * Party that initiates the status of the order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -524,7 +525,7 @@ public class OrderStatusAndReason7 {
 	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> OrderStatusAndReason7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason7.mmObject();
 			isDerived = false;
 			xmlTag = "StsInitr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -585,25 +586,27 @@ public class OrderStatusAndReason7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmTypeOfStatusRule = new MMXor() {
+	public static final MMXor TypeOfStatusRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOfStatusRule";
 			definition = "One and only one message element in the list (Status, Cancelled, ConditionallyAccepted, Rejected, Suspended, PartiallySettled) must be present. This message element may be repeated more than once if allowed by its multiplicity.";
-			messageComponent_lazy = () -> OrderStatusAndReason7.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(OrderStatusAndReason7.mmStatus, OrderStatusAndReason7.mmCancelled, OrderStatusAndReason7.mmConditionallyAccepted, OrderStatusAndReason7.mmRejected, OrderStatusAndReason7.mmSuspended,
-					OrderStatusAndReason7.mmPartiallySettled);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason7.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatusAndReason7.mmStatus, com.tools20022.repository.msg.OrderStatusAndReason7.mmCancelled,
+					com.tools20022.repository.msg.OrderStatusAndReason7.mmConditionallyAccepted, com.tools20022.repository.msg.OrderStatusAndReason7.mmRejected, com.tools20022.repository.msg.OrderStatusAndReason7.mmSuspended,
+					com.tools20022.repository.msg.OrderStatusAndReason7.mmPartiallySettled);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OrderStatusAndReason7.mmMasterReference, OrderStatusAndReason7.mmStatus, OrderStatusAndReason7.mmCancelled, OrderStatusAndReason7.mmConditionallyAccepted,
-						OrderStatusAndReason7.mmRejected, OrderStatusAndReason7.mmSuspended, OrderStatusAndReason7.mmPartiallySettled, OrderStatusAndReason7.mmStatusInitiator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatusAndReason7.mmMasterReference, com.tools20022.repository.msg.OrderStatusAndReason7.mmStatus,
+						com.tools20022.repository.msg.OrderStatusAndReason7.mmCancelled, com.tools20022.repository.msg.OrderStatusAndReason7.mmConditionallyAccepted, com.tools20022.repository.msg.OrderStatusAndReason7.mmRejected,
+						com.tools20022.repository.msg.OrderStatusAndReason7.mmSuspended, com.tools20022.repository.msg.OrderStatusAndReason7.mmPartiallySettled, com.tools20022.repository.msg.OrderStatusAndReason7.mmStatusInitiator);
 				messageBuildingBlock_lazy = () -> Arrays.asList(OrderInstructionStatusReportV03.mmOrderDetailsReport);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -615,81 +618,81 @@ public class OrderStatusAndReason7 {
 				name = "OrderStatusAndReason7";
 				definition = "Status report of a bulk or multiple or switch order that was previously received.";
 				nextVersions_lazy = () -> Arrays.asList(OrderStatusAndReason10.mmObject());
-				xors_lazy = () -> Arrays.asList(OrderStatusAndReason7.mmTypeOfStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatusAndReason7.TypeOfStatusRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MstrRef")
-	public Max35Text getMasterReference() {
-		return masterReference;
+	public Optional<Max35Text> getMasterReference() {
+		return masterReference == null ? Optional.empty() : Optional.of(masterReference);
 	}
 
-	public void setMasterReference(Max35Text masterReference) {
+	public OrderStatusAndReason7 setMasterReference(Max35Text masterReference) {
 		this.masterReference = masterReference;
+		return this;
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public OrderStatus4Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(OrderStatus4Code status) {
-		this.status = status;
+	public OrderStatusAndReason7 setStatus(OrderStatus4Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "Canc", required = true)
 	public CancelledStatus2 getCancelled() {
 		return cancelled;
 	}
 
-	public void setCancelled(com.tools20022.repository.msg.CancelledStatus2 cancelled) {
-		this.cancelled = cancelled;
+	public OrderStatusAndReason7 setCancelled(com.tools20022.repository.msg.CancelledStatus2 cancelled) {
+		this.cancelled = Objects.requireNonNull(cancelled);
+		return this;
 	}
 
-	@XmlElement(name = "CondlyAccptd", required = true)
 	public ConditionallyAcceptedStatus2 getConditionallyAccepted() {
 		return conditionallyAccepted;
 	}
 
-	public void setConditionallyAccepted(com.tools20022.repository.msg.ConditionallyAcceptedStatus2 conditionallyAccepted) {
-		this.conditionallyAccepted = conditionallyAccepted;
+	public OrderStatusAndReason7 setConditionallyAccepted(com.tools20022.repository.msg.ConditionallyAcceptedStatus2 conditionallyAccepted) {
+		this.conditionallyAccepted = Objects.requireNonNull(conditionallyAccepted);
+		return this;
 	}
 
-	@XmlElement(name = "Rjctd", required = true)
 	public List<RejectedStatus6> getRejected() {
-		return rejected;
+		return rejected == null ? rejected = new ArrayList<>() : rejected;
 	}
 
-	public void setRejected(List<com.tools20022.repository.msg.RejectedStatus6> rejected) {
-		this.rejected = rejected;
+	public OrderStatusAndReason7 setRejected(List<com.tools20022.repository.msg.RejectedStatus6> rejected) {
+		this.rejected = Objects.requireNonNull(rejected);
+		return this;
 	}
 
-	@XmlElement(name = "Sspd", required = true)
 	public SuspendedStatus2 getSuspended() {
 		return suspended;
 	}
 
-	public void setSuspended(com.tools20022.repository.msg.SuspendedStatus2 suspended) {
-		this.suspended = suspended;
+	public OrderStatusAndReason7 setSuspended(com.tools20022.repository.msg.SuspendedStatus2 suspended) {
+		this.suspended = Objects.requireNonNull(suspended);
+		return this;
 	}
 
-	@XmlElement(name = "PrtlySttld", required = true)
 	public PartiallySettledStatus1 getPartiallySettled() {
 		return partiallySettled;
 	}
 
-	public void setPartiallySettled(com.tools20022.repository.msg.PartiallySettledStatus1 partiallySettled) {
-		this.partiallySettled = partiallySettled;
+	public OrderStatusAndReason7 setPartiallySettled(com.tools20022.repository.msg.PartiallySettledStatus1 partiallySettled) {
+		this.partiallySettled = Objects.requireNonNull(partiallySettled);
+		return this;
 	}
 
-	@XmlElement(name = "StsInitr")
-	public PartyIdentification2Choice getStatusInitiator() {
-		return statusInitiator;
+	public Optional<PartyIdentification2Choice> getStatusInitiator() {
+		return statusInitiator == null ? Optional.empty() : Optional.of(statusInitiator);
 	}
 
-	public void setStatusInitiator(PartyIdentification2Choice statusInitiator) {
+	public OrderStatusAndReason7 setStatusInitiator(PartyIdentification2Choice statusInitiator) {
 		this.statusInitiator = statusInitiator;
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.GroupingCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the grouping options of the payment transaction.
@@ -31,12 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.GroupingCode#mmSingle
- * GroupingCode.mmSingle}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.GroupingCode#mmGrouped
- * GroupingCode.mmGrouped}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.GroupingCode#mmMixed
- * GroupingCode.mmMixed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.GroupingCode#Single
+ * GroupingCode.Single}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.GroupingCode#Grouped
+ * GroupingCode.Grouped}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.GroupingCode#Mixed
+ * GroupingCode.Mixed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the grouping options of the payment transaction."</li>
  * </ul>
  */
-public class GroupingCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class GroupingCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,12 +99,12 @@ public class GroupingCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSingle = new MMCode() {
+	public static final GroupingCode Single = new GroupingCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Single";
 			definition = "Indicates that for each occurrences of the payment information block, exactly one occurrence of the payment transaction block is present.";
-			owner_lazy = () -> GroupingCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.GroupingCode.mmObject();
 			codeName = "SNGL";
 		}
 	};
@@ -125,12 +131,12 @@ public class GroupingCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmGrouped = new MMCode() {
+	public static final GroupingCode Grouped = new GroupingCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Grouped";
 			definition = "Indicates that there is only one occurrence of the payment information block and several occurrences of the payment transaction block.";
-			owner_lazy = () -> GroupingCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.GroupingCode.mmObject();
 			codeName = "GRPD";
 		}
 	};
@@ -158,28 +164,59 @@ public class GroupingCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMixed = new MMCode() {
+	public static final GroupingCode Mixed = new GroupingCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mixed";
 			definition = "Indicates that there are one or several occurrences of the payment information block where each of the occurrences might contain one or several occurrences of the payment transaction block.";
-			owner_lazy = () -> GroupingCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.GroupingCode.mmObject();
 			codeName = "MIXD";
 		}
 	};
+	final static private LinkedHashMap<String, GroupingCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected GroupingCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SNGL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GroupingCode";
 				definition = "Specifies the grouping options of the payment transaction.";
-				code_lazy = () -> Arrays.asList(GroupingCode.mmSingle, GroupingCode.mmGrouped, GroupingCode.mmMixed);
 				derivation_lazy = () -> Arrays.asList(Grouping1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GroupingCode.Single, com.tools20022.repository.codeset.GroupingCode.Grouped, com.tools20022.repository.codeset.GroupingCode.Mixed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Single.getCodeName().get(), Single);
+		codesByName.put(Grouped.getCodeName().get(), Grouped);
+		codesByName.put(Mixed.getCodeName().get(), Mixed);
+	}
+
+	public static GroupingCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static GroupingCode[] values() {
+		GroupingCode[] values = new GroupingCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, GroupingCode> {
+		@Override
+		public GroupingCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(GroupingCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

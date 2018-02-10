@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DeliverReturnCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies if the collateral is to be delivered or returned.
@@ -31,11 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliverReturnCode#mmDeliver
- * DeliverReturnCode.mmDeliver}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DeliverReturnCode#mmReturn
- * DeliverReturnCode.mmReturn}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DeliverReturnCode#Deliver
+ * DeliverReturnCode.Deliver}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DeliverReturnCode#Return
+ * DeliverReturnCode.Return}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -66,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies if the collateral is to be delivered or returned."</li>
  * </ul>
  */
-public class DeliverReturnCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DeliverReturnCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,12 +95,12 @@ public class DeliverReturnCode {
 	 * definition} = "Specifies that the collateral is to be delivered."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeliver = new MMCode() {
+	public static final DeliverReturnCode Deliver = new DeliverReturnCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deliver";
 			definition = "Specifies that the collateral is to be delivered.";
-			owner_lazy = () -> DeliverReturnCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DeliverReturnCode.mmObject();
 			codeName = "DELV";
 		}
 	};
@@ -120,28 +125,58 @@ public class DeliverReturnCode {
 	 * definition} = "Specifies that the collateral is to be returned."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReturn = new MMCode() {
+	public static final DeliverReturnCode Return = new DeliverReturnCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Return";
 			definition = "Specifies that the collateral is to be returned.";
-			owner_lazy = () -> DeliverReturnCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DeliverReturnCode.mmObject();
 			codeName = "RETN";
 		}
 	};
+	final static private LinkedHashMap<String, DeliverReturnCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DeliverReturnCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DELV");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliverReturnCode";
 				definition = "Specifies if the collateral is to be delivered or returned.";
-				code_lazy = () -> Arrays.asList(DeliverReturnCode.mmDeliver, DeliverReturnCode.mmReturn);
 				derivation_lazy = () -> Arrays.asList(DeliverReturn1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliverReturnCode.Deliver, com.tools20022.repository.codeset.DeliverReturnCode.Return);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Deliver.getCodeName().get(), Deliver);
+		codesByName.put(Return.getCodeName().get(), Return);
+	}
+
+	public static DeliverReturnCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DeliverReturnCode[] values() {
+		DeliverReturnCode[] values = new DeliverReturnCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DeliverReturnCode> {
+		@Override
+		public DeliverReturnCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DeliverReturnCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

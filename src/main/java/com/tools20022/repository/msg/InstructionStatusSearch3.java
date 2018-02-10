@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InstructionStatusSearch3", propOrder = {"paymentInstructionStatus", "paymentInstructionStatusDateTime", "proprietaryStatusReason"})
 public class InstructionStatusSearch3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmtInstrSts")
 	protected PaymentStatusCodeSearch2Choice paymentInstructionStatus;
 	/**
-	 * Status of a transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -115,7 +117,7 @@ public class InstructionStatusSearch3 {
 	public static final MMMessageAssociationEnd mmPaymentInstructionStatus = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
-			componentContext_lazy = () -> InstructionStatusSearch3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionStatusSearch3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +129,11 @@ public class InstructionStatusSearch3 {
 			type_lazy = () -> PaymentStatusCodeSearch2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtInstrStsDtTm")
 	protected DateTimePeriodChoice paymentInstructionStatusDateTime;
 	/**
-	 * Date and time at which the status was assigned to the transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +168,7 @@ public class InstructionStatusSearch3 {
 	public static final MMMessageAttribute mmPaymentInstructionStatusDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
-			componentContext_lazy = () -> InstructionStatusSearch3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionStatusSearch3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrStsDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,11 +179,11 @@ public class InstructionStatusSearch3 {
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryStsRsn")
 	protected Max4AlphaNumericText proprietaryStatusReason;
 	/**
-	 * Defines the reason that has been used by the Target2 SSP system to reject
-	 * the transaction
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -216,7 +219,7 @@ public class InstructionStatusSearch3 {
 	public static final MMMessageAttribute mmProprietaryStatusReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
-			componentContext_lazy = () -> InstructionStatusSearch3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionStatusSearch3.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryStsRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,9 +234,10 @@ public class InstructionStatusSearch3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InstructionStatusSearch3.mmPaymentInstructionStatus, InstructionStatusSearch3.mmPaymentInstructionStatusDateTime, InstructionStatusSearch3.mmProprietaryStatusReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionStatusSearch3.mmPaymentInstructionStatus, com.tools20022.repository.msg.InstructionStatusSearch3.mmPaymentInstructionStatusDateTime,
+						com.tools20022.repository.msg.InstructionStatusSearch3.mmProprietaryStatusReason);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionStatusSearch3";
 				definition = "Defines the criteria which are used to search for the status of the payment.";
@@ -242,30 +246,30 @@ public class InstructionStatusSearch3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmtInstrSts")
-	public PaymentStatusCodeSearch2Choice getPaymentInstructionStatus() {
-		return paymentInstructionStatus;
+	public Optional<PaymentStatusCodeSearch2Choice> getPaymentInstructionStatus() {
+		return paymentInstructionStatus == null ? Optional.empty() : Optional.of(paymentInstructionStatus);
 	}
 
-	public void setPaymentInstructionStatus(PaymentStatusCodeSearch2Choice paymentInstructionStatus) {
+	public InstructionStatusSearch3 setPaymentInstructionStatus(PaymentStatusCodeSearch2Choice paymentInstructionStatus) {
 		this.paymentInstructionStatus = paymentInstructionStatus;
+		return this;
 	}
 
-	@XmlElement(name = "PmtInstrStsDtTm")
-	public DateTimePeriodChoice getPaymentInstructionStatusDateTime() {
-		return paymentInstructionStatusDateTime;
+	public Optional<DateTimePeriodChoice> getPaymentInstructionStatusDateTime() {
+		return paymentInstructionStatusDateTime == null ? Optional.empty() : Optional.of(paymentInstructionStatusDateTime);
 	}
 
-	public void setPaymentInstructionStatusDateTime(DateTimePeriodChoice paymentInstructionStatusDateTime) {
+	public InstructionStatusSearch3 setPaymentInstructionStatusDateTime(DateTimePeriodChoice paymentInstructionStatusDateTime) {
 		this.paymentInstructionStatusDateTime = paymentInstructionStatusDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "PrtryStsRsn")
-	public Max4AlphaNumericText getProprietaryStatusReason() {
-		return proprietaryStatusReason;
+	public Optional<Max4AlphaNumericText> getProprietaryStatusReason() {
+		return proprietaryStatusReason == null ? Optional.empty() : Optional.of(proprietaryStatusReason);
 	}
 
-	public void setProprietaryStatusReason(Max4AlphaNumericText proprietaryStatusReason) {
+	public InstructionStatusSearch3 setProprietaryStatusReason(Max4AlphaNumericText proprietaryStatusReason) {
 		this.proprietaryStatusReason = proprietaryStatusReason;
+		return this;
 	}
 }

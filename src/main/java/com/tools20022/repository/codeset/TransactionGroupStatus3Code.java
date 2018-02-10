@@ -20,55 +20,59 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PaymentStatusCode;
+import com.tools20022.repository.codeset.TransactionGroupStatus3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of a group of payment instructions.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PaymentStatusCode
- * PaymentStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code#mmAcceptedTechnicalValidation
- * TransactionGroupStatus3Code.mmAcceptedTechnicalValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code#AcceptedTechnicalValidation
+ * TransactionGroupStatus3Code.AcceptedTechnicalValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code#mmReceived
- * TransactionGroupStatus3Code.mmReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code#Received
+ * TransactionGroupStatus3Code.Received}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code#mmPartiallyAccepted
- * TransactionGroupStatus3Code.mmPartiallyAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code#PartiallyAccepted
+ * TransactionGroupStatus3Code.PartiallyAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code#mmRejected
- * TransactionGroupStatus3Code.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code#Rejected
+ * TransactionGroupStatus3Code.Rejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code#mmPending
- * TransactionGroupStatus3Code.mmPending}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code#Pending
+ * TransactionGroupStatus3Code.Pending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code#mmAcceptedCustomerProfile
- * TransactionGroupStatus3Code.mmAcceptedCustomerProfile}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code#AcceptedCustomerProfile
+ * TransactionGroupStatus3Code.AcceptedCustomerProfile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code#mmAcceptedSettlementInProcess
- * TransactionGroupStatus3Code.mmAcceptedSettlementInProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code#AcceptedSettlementInProcess
+ * TransactionGroupStatus3Code.AcceptedSettlementInProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code#mmAcceptedSettlementCompleted
- * TransactionGroupStatus3Code.mmAcceptedSettlementCompleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code#AcceptedSettlementCompleted
+ * TransactionGroupStatus3Code.AcceptedSettlementCompleted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code#mmAcceptedWithChange
- * TransactionGroupStatus3Code.mmAcceptedWithChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionGroupStatus3Code#AcceptedWithChange
+ * TransactionGroupStatus3Code.AcceptedWithChange}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PaymentStatusCode
+ * PaymentStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of a group of payment instructions."</li>
  * </ul>
  */
-public class TransactionGroupStatus3Code extends PaymentStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransactionGroupStatus3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -104,11 +109,12 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	 * name} = "AcceptedTechnicalValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedTechnicalValidation = new MMCode() {
+	public static final TransactionGroupStatus3Code AcceptedTechnicalValidation = new TransactionGroupStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedTechnicalValidation";
-			owner_lazy = () -> TransactionGroupStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionGroupStatus3Code.mmObject();
+			codeName = PaymentStatusCode.AcceptedTechnicalValidation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -127,11 +133,12 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceived = new MMCode() {
+	public static final TransactionGroupStatus3Code Received = new TransactionGroupStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
-			owner_lazy = () -> TransactionGroupStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionGroupStatus3Code.mmObject();
+			codeName = PaymentStatusCode.Received.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -150,11 +157,12 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	 * name} = "PartiallyAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartiallyAccepted = new MMCode() {
+	public static final TransactionGroupStatus3Code PartiallyAccepted = new TransactionGroupStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyAccepted";
-			owner_lazy = () -> TransactionGroupStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionGroupStatus3Code.mmObject();
+			codeName = PaymentStatusCode.PartiallyAccepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -173,11 +181,12 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final TransactionGroupStatus3Code Rejected = new TransactionGroupStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> TransactionGroupStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionGroupStatus3Code.mmObject();
+			codeName = PaymentStatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -196,11 +205,12 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPending = new MMCode() {
+	public static final TransactionGroupStatus3Code Pending = new TransactionGroupStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
-			owner_lazy = () -> TransactionGroupStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionGroupStatus3Code.mmObject();
+			codeName = PaymentStatusCode.Pending.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -219,11 +229,12 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	 * name} = "AcceptedCustomerProfile"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedCustomerProfile = new MMCode() {
+	public static final TransactionGroupStatus3Code AcceptedCustomerProfile = new TransactionGroupStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedCustomerProfile";
-			owner_lazy = () -> TransactionGroupStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionGroupStatus3Code.mmObject();
+			codeName = PaymentStatusCode.AcceptedCustomerProfile.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -242,11 +253,12 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	 * name} = "AcceptedSettlementInProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedSettlementInProcess = new MMCode() {
+	public static final TransactionGroupStatus3Code AcceptedSettlementInProcess = new TransactionGroupStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedSettlementInProcess";
-			owner_lazy = () -> TransactionGroupStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionGroupStatus3Code.mmObject();
+			codeName = PaymentStatusCode.AcceptedSettlementInProcess.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -265,11 +277,12 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	 * name} = "AcceptedSettlementCompleted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedSettlementCompleted = new MMCode() {
+	public static final TransactionGroupStatus3Code AcceptedSettlementCompleted = new TransactionGroupStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedSettlementCompleted";
-			owner_lazy = () -> TransactionGroupStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionGroupStatus3Code.mmObject();
+			codeName = PaymentStatusCode.AcceptedSettlementCompleted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -288,28 +301,68 @@ public class TransactionGroupStatus3Code extends PaymentStatusCode {
 	 * name} = "AcceptedWithChange"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedWithChange = new MMCode() {
+	public static final TransactionGroupStatus3Code AcceptedWithChange = new TransactionGroupStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedWithChange";
-			owner_lazy = () -> TransactionGroupStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionGroupStatus3Code.mmObject();
+			codeName = PaymentStatusCode.AcceptedWithChange.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TransactionGroupStatus3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransactionGroupStatus3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACTC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionGroupStatus3Code";
 				definition = "Specifies the status of a group of payment instructions.";
-				code_lazy = () -> Arrays.asList(TransactionGroupStatus3Code.mmAcceptedTechnicalValidation, TransactionGroupStatus3Code.mmReceived, TransactionGroupStatus3Code.mmPartiallyAccepted, TransactionGroupStatus3Code.mmRejected,
-						TransactionGroupStatus3Code.mmPending, TransactionGroupStatus3Code.mmAcceptedCustomerProfile, TransactionGroupStatus3Code.mmAcceptedSettlementInProcess, TransactionGroupStatus3Code.mmAcceptedSettlementCompleted,
-						TransactionGroupStatus3Code.mmAcceptedWithChange);
 				trace_lazy = () -> PaymentStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionGroupStatus3Code.AcceptedTechnicalValidation, com.tools20022.repository.codeset.TransactionGroupStatus3Code.Received,
+						com.tools20022.repository.codeset.TransactionGroupStatus3Code.PartiallyAccepted, com.tools20022.repository.codeset.TransactionGroupStatus3Code.Rejected,
+						com.tools20022.repository.codeset.TransactionGroupStatus3Code.Pending, com.tools20022.repository.codeset.TransactionGroupStatus3Code.AcceptedCustomerProfile,
+						com.tools20022.repository.codeset.TransactionGroupStatus3Code.AcceptedSettlementInProcess, com.tools20022.repository.codeset.TransactionGroupStatus3Code.AcceptedSettlementCompleted,
+						com.tools20022.repository.codeset.TransactionGroupStatus3Code.AcceptedWithChange);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AcceptedTechnicalValidation.getCodeName().get(), AcceptedTechnicalValidation);
+		codesByName.put(Received.getCodeName().get(), Received);
+		codesByName.put(PartiallyAccepted.getCodeName().get(), PartiallyAccepted);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+		codesByName.put(Pending.getCodeName().get(), Pending);
+		codesByName.put(AcceptedCustomerProfile.getCodeName().get(), AcceptedCustomerProfile);
+		codesByName.put(AcceptedSettlementInProcess.getCodeName().get(), AcceptedSettlementInProcess);
+		codesByName.put(AcceptedSettlementCompleted.getCodeName().get(), AcceptedSettlementCompleted);
+		codesByName.put(AcceptedWithChange.getCodeName().get(), AcceptedWithChange);
+	}
+
+	public static TransactionGroupStatus3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransactionGroupStatus3Code[] values() {
+		TransactionGroupStatus3Code[] values = new TransactionGroupStatus3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransactionGroupStatus3Code> {
+		@Override
+		public TransactionGroupStatus3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransactionGroupStatus3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -35,17 +35,17 @@ import java.util.function.Supplier;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMUserDefined#getNamespace
- * namespace} = com.tools20022.metamodel.MMNamespace.list</li>
  * <li>{@linkplain com.tools20022.metamodel.MMUserDefined#getNamespaceList
  * namespaceList} = "http://www.w3.org/2000/09/xmldsig#"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMUserDefined#getNamespace
+ * namespace} = com.tools20022.metamodel.MMNamespace.list</li>
  * <li>{@linkplain com.tools20022.metamodel.MMUserDefined#getProcessContents
  * processContents} = com.tools20022.metamodel.MMProcessContent.LAX</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -66,7 +66,7 @@ public class XMLSignature {
 	final static public MMUserDefined mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMUserDefined() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {

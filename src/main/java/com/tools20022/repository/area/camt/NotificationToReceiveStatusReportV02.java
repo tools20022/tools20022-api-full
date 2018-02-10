@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -46,20 +47,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementArchive
- * CashManagementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "NtfctnToRcvStsRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -72,6 +59,20 @@ import javax.xml.bind.annotation.*;
  * NotificationToReceiveStatusReportV02.mmOriginalNotificationAndStatus}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "NtfctnToRcvStsRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementArchive
+ * CashManagementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.059.001.02}</li>
@@ -95,15 +96,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NotificationToReceiveStatusReportV02", propOrder = {"groupHeader", "originalNotificationAndStatus"})
 public class NotificationToReceiveStatusReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader44 groupHeader;
 	/**
-	 * Set of elements used to provide further details on the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,11 +145,11 @@ public class NotificationToReceiveStatusReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgnlNtfctnAndSts", required = true)
 	protected OriginalNotification3 originalNotificationAndStatus;
 	/**
-	 * Set of elements used to identify the original notification and to provide
-	 * the status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -221,25 +223,25 @@ public class NotificationToReceiveStatusReportV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader44 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader44 groupHeader) {
-		this.groupHeader = groupHeader;
+	public NotificationToReceiveStatusReportV02 setGroupHeader(GroupHeader44 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlNtfctnAndSts", required = true)
 	public OriginalNotification3 getOriginalNotificationAndStatus() {
 		return originalNotificationAndStatus;
 	}
 
-	public void setOriginalNotificationAndStatus(OriginalNotification3 originalNotificationAndStatus) {
-		this.originalNotificationAndStatus = originalNotificationAndStatus;
+	public NotificationToReceiveStatusReportV02 setOriginalNotificationAndStatus(OriginalNotification3 originalNotificationAndStatus) {
+		this.originalNotificationAndStatus = Objects.requireNonNull(originalNotificationAndStatus);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.059.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.059.001.02")
 	static public class Document {
 		@XmlElement(name = "NtfctnToRcvStsRpt", required = true)
 		public NotificationToReceiveStatusReportV02 messageBody;

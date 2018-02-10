@@ -24,6 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Amount of money representing a value paid by an agent bank to a creditor.
@@ -34,6 +35,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.CreditInstrument
+ * CreditInstrument}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -44,9 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CashDelivery.mmRelatedBankingTransaction}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.CreditInstrument
- * CreditInstrument}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -59,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,8 +78,8 @@ public class CashDelivery extends CreditInstrument {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected ActiveCurrencyAndAmount cashAmount;
 	/**
-	 * Amount of money to be physically delivered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -103,8 +104,8 @@ public class CashDelivery extends CreditInstrument {
 	 */
 	public static final MMBusinessAttribute mmCashAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashDelivery.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashDelivery.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAmount";
 			definition = "Amount of money to be physically delivered.";
@@ -123,8 +124,8 @@ public class CashDelivery extends CreditInstrument {
 	};
 	protected BankingTransaction relatedBankingTransaction;
 	/**
-	 * Describes the type of transaction associated with a cash delivery.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,8 +158,8 @@ public class CashDelivery extends CreditInstrument {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedBankingTransaction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashDelivery.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashDelivery.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedBankingTransaction";
 			definition = "Describes the type of transaction associated with a cash delivery.";
@@ -173,7 +174,7 @@ public class CashDelivery extends CreditInstrument {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashDelivery";
 				definition = "Amount of money representing a value paid by an agent bank to a creditor.";
@@ -194,15 +195,17 @@ public class CashDelivery extends CreditInstrument {
 		return cashAmount;
 	}
 
-	public void setCashAmount(ActiveCurrencyAndAmount cashAmount) {
-		this.cashAmount = cashAmount;
+	public CashDelivery setCashAmount(ActiveCurrencyAndAmount cashAmount) {
+		this.cashAmount = Objects.requireNonNull(cashAmount);
+		return this;
 	}
 
 	public BankingTransaction getRelatedBankingTransaction() {
 		return relatedBankingTransaction;
 	}
 
-	public void setRelatedBankingTransaction(com.tools20022.repository.entity.BankingTransaction relatedBankingTransaction) {
-		this.relatedBankingTransaction = relatedBankingTransaction;
+	public CashDelivery setRelatedBankingTransaction(com.tools20022.repository.entity.BankingTransaction relatedBankingTransaction) {
+		this.relatedBankingTransaction = Objects.requireNonNull(relatedBankingTransaction);
+		return this;
 	}
 }

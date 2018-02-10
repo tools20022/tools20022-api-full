@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -32,11 +33,9 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -143,8 +142,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalDeliveryDetailsRule#forSubscriptionExecution4
+ * ConstraintPhysicalDeliveryDetailsRule.forSubscriptionExecution4}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -156,18 +163,18 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Execution of a subscription order."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SubscriptionExecution4", propOrder = {"orderReference", "dealReference", "orderType", "financialInstrumentDetails", "unitsNumber", "rounding", "netAmount", "grossAmount", "tradeDateTime", "priceDetails",
 		"partiallyExecutedIndicator", "cumDividendIndicator", "interimProfitAmount", "foreignExchangeDetails", "incomePreference", "letterIntentReference", "accumulationRightReference", "chargeGeneralDetails", "commissionGeneralDetails",
 		"taxGeneralDetails", "settlementAndCustodyDetails", "physicalDeliveryIndicator", "physicalDeliveryDetails", "requestedSettlementCurrency", "requestedNAVCurrency", "refund", "subscriptionInterest", "cashSettlementDetails"})
 public class SubscriptionExecution4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrdrRef", required = true)
 	protected Max35Text orderReference;
 	/**
-	 * Unique and unambiguous identifier for an order, as assigned by the
-	 * instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -202,7 +209,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,11 +220,11 @@ public class SubscriptionExecution4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DealRef", required = true)
 	protected Max35Text dealReference;
 	/**
-	 * Unique and unambiguous identifier for an order execution, as assigned by
-	 * a confirming party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -252,7 +259,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmDealIdentification;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "DealRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,10 +270,11 @@ public class SubscriptionExecution4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrTp")
 	protected List<com.tools20022.repository.msg.FundOrderType1> orderType;
 	/**
-	 * Specifies the category of the investment fund order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -299,7 +307,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAttribute mmOrderType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderType;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -309,11 +317,11 @@ public class SubscriptionExecution4 {
 			complexType_lazy = () -> com.tools20022.repository.msg.FundOrderType1.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	protected FinancialInstrument6 financialInstrumentDetails;
 	/**
-	 * Investment fund class to which an investment fund order execution is
-	 * related.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -347,7 +355,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -359,10 +367,11 @@ public class SubscriptionExecution4 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument6.mmObject();
 		}
 	};
+	@XmlElement(name = "UnitsNb", required = true)
 	protected FinancialInstrumentQuantity1 unitsNumber;
 	/**
-	 * Number of investment fund units subscribed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -383,6 +392,9 @@ public class SubscriptionExecution4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UnitsNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::CONF</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -396,9 +408,10 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::CONF"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Number of investment fund units subscribed.";
@@ -407,10 +420,11 @@ public class SubscriptionExecution4 {
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	@XmlElement(name = "Rndg")
 	protected RoundingDirection2Code rounding;
 	/**
-	 * Indicates the rounding direction applied to nearest unit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -445,7 +459,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAttribute mmRounding = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RoundingParameters.mmRoundingDirection;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "Rndg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -456,11 +470,11 @@ public class SubscriptionExecution4 {
 			simpleType_lazy = () -> RoundingDirection2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "NetAmt", required = true)
 	protected ActiveCurrencyAndAmount netAmount;
 	/**
-	 * Net amount of money invested in a specific financial instrument by an
-	 * investor, expressed in the currency requested by the investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -496,7 +510,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SubscriptionExecution.mmInvestedNetAmount;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "NetAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -507,12 +521,11 @@ public class SubscriptionExecution4 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "GrssAmt")
 	protected ActiveCurrencyAndAmount grossAmount;
 	/**
-	 * Amount of money invested in a specific financial instrument by an
-	 * investor, including all charges, commissions, and tax, expressed in the
-	 * currency requested by the investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -548,7 +561,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAttribute mmGrossAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmGrossAmount;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "GrssAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -559,11 +572,11 @@ public class SubscriptionExecution4 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDtTm", required = true)
 	protected DateAndDateTimeChoice tradeDateTime;
 	/**
-	 * Date and time at which a price is applied, according to the terms stated
-	 * in the prospectus.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -599,7 +612,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAttribute mmTradeDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "TradDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -610,10 +623,11 @@ public class SubscriptionExecution4 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "PricDtls", required = true)
 	protected UnitPrice5 priceDetails;
 	/**
-	 * Price at which the order was executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -644,7 +658,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmExecutedTradePrice;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "PricDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -656,12 +670,11 @@ public class SubscriptionExecution4 {
 			type_lazy = () -> com.tools20022.repository.msg.UnitPrice5.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtlyExctdInd", required = true)
 	protected YesNoIndicator partiallyExecutedIndicator;
 	/**
-	 * Indicates whether the order has been partially executed, ie, the
-	 * confirmed quantity does not match the ordered quantity for a given
-	 * financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -697,7 +710,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAttribute mmPartiallyExecutedIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmPartiallyExecutedIndicator;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlyExctdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -708,12 +721,11 @@ public class SubscriptionExecution4 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CumDvddInd", required = true)
 	protected YesNoIndicator cumDividendIndicator;
 	/**
-	 * Indicates whether the dividend is included, ie, cum-dividend, in the
-	 * executed price. When the dividend is not included, the price will be
-	 * ex-dividend.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -749,7 +761,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAttribute mmCumDividendIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmCumDividendIndicator;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "CumDvddInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -760,11 +772,11 @@ public class SubscriptionExecution4 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrmPrftAmt")
 	protected ProfitAndLoss1Choice interimProfitAmount;
 	/**
-	 * Part of the price deemed as accrued income or profit rather than capital.
-	 * The interim profit amount is used for tax purposes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -800,7 +812,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAttribute mmInterimProfitAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmInterimProfitAmount;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmPrftAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -811,10 +823,11 @@ public class SubscriptionExecution4 {
 			complexType_lazy = () -> ProfitAndLoss1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FXDtls")
 	protected List<com.tools20022.repository.msg.ForeignExchangeTerms4> foreignExchangeDetails;
 	/**
-	 * Information needed to process a currency exchange or conversion.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -847,7 +860,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "FXDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -858,11 +871,11 @@ public class SubscriptionExecution4 {
 			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms4.mmObject();
 		}
 	};
+	@XmlElement(name = "IncmPref")
 	protected IncomePreference1Code incomePreference;
 	/**
-	 * Dividend option chosen by the account owner based on the options offered
-	 * in the prospectus.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -898,7 +911,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAttribute mmIncomePreference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountService.mmIncomePreference;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "IncmPref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -909,13 +922,11 @@ public class SubscriptionExecution4 {
 			simpleType_lazy = () -> IncomePreference1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "LttrInttRef")
 	protected Max35Text letterIntentReference;
 	/**
-	 * Reference of a letter of intent program, in which sales commissions are
-	 * reduced based on the aggregate of a customer's actual purchase and
-	 * anticipated purchases, over a specific period of time, and as agreed by
-	 * the customer. A letter of intent program is mainly used in the US market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -950,7 +961,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAttribute mmLetterIntentReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentAccountContract;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "LttrInttRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -961,13 +972,11 @@ public class SubscriptionExecution4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcmltnRghtRef")
 	protected Max35Text accumulationRightReference;
 	/**
-	 * Reference of an accumulation right program, in which sales commissions
-	 * are based on a customer's present purchases of shares and the aggregate
-	 * quantity previously purchased by the customer. An accumulation rights
-	 * program is mainly used in the US market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1002,7 +1011,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAttribute mmAccumulationRightReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountContract.mmAccumulationRightReference;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "AcmltnRghtRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1013,10 +1022,11 @@ public class SubscriptionExecution4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgGnlDtls")
 	protected TotalCharges2 chargeGeneralDetails;
 	/**
-	 * Amount of money associated with a service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1048,7 +1058,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAssociationEnd mmChargeGeneralDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmTransactionCharge;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgGnlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1060,10 +1070,11 @@ public class SubscriptionExecution4 {
 			type_lazy = () -> com.tools20022.repository.msg.TotalCharges2.mmObject();
 		}
 	};
+	@XmlElement(name = "ComssnGnlDtls")
 	protected TotalCommissions2 commissionGeneralDetails;
 	/**
-	 * Amount of money due to a party as compensation for a service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1096,7 +1107,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAssociationEnd mmCommissionGeneralDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeCommission;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnGnlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1108,10 +1119,11 @@ public class SubscriptionExecution4 {
 			type_lazy = () -> com.tools20022.repository.msg.TotalCommissions2.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxGnlDtls")
 	protected TotalTaxes2 taxGeneralDetails;
 	/**
-	 * Tax related to an investment fund order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1143,7 +1155,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAssociationEnd mmTaxGeneralDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmTransactionTax;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "TaxGnlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1155,10 +1167,11 @@ public class SubscriptionExecution4 {
 			type_lazy = () -> com.tools20022.repository.msg.TotalTaxes2.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmAndCtdyDtls")
 	protected FundSettlementParameters3 settlementAndCustodyDetails;
 	/**
-	 * Parameters used to execute the settlement of an investment fund order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1192,7 +1205,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAssociationEnd mmSettlementAndCustodyDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAndCtdyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1204,10 +1217,11 @@ public class SubscriptionExecution4 {
 			type_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters3.mmObject();
 		}
 	};
+	@XmlElement(name = "PhysDlvryInd", required = true)
 	protected YesNoIndicator physicalDeliveryIndicator;
 	/**
-	 * Indicates whether the financial instrument is to be physically delivered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1237,7 +1251,7 @@ public class SubscriptionExecution4 {
 	 */
 	public static final MMMessageAttribute mmPhysicalDeliveryIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "PhysDlvryInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1248,10 +1262,11 @@ public class SubscriptionExecution4 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PhysDlvryDtls")
 	protected DeliveryParameters3 physicalDeliveryDetails;
 	/**
-	 * Information related to physical delivery of the securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1284,7 +1299,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAssociationEnd mmPhysicalDeliveryDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "PhysDlvryDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1296,10 +1311,11 @@ public class SubscriptionExecution4 {
 			type_lazy = () -> com.tools20022.repository.msg.DeliveryParameters3.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdSttlmCcy")
 	protected CurrencyCode requestedSettlementCurrency;
 	/**
-	 * Currency requested for settlement of cash proceeds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1332,7 +1348,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAttribute mmRequestedSettlementCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmRequestedSettlementCurrency;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdSttlmCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1343,12 +1359,11 @@ public class SubscriptionExecution4 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdNAVCcy")
 	protected CurrencyCode requestedNAVCurrency;
 	/**
-	 * Currency to be used for pricing the fund. This currency must be among the
-	 * set of currencies in which the price may be expressed, as stated in the
-	 * prospectus.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1383,7 +1398,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAttribute mmRequestedNAVCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmRequestedNAVCurrency;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdNAVCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1394,10 +1409,11 @@ public class SubscriptionExecution4 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Rfnd")
 	protected ActiveCurrencyAndAmount refund;
 	/**
-	 * Return of cash that has been overpaid for a subscription.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1432,7 +1448,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAttribute mmRefund = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SubscriptionExecution.mmRefund;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "Rfnd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1443,11 +1459,11 @@ public class SubscriptionExecution4 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SbcptIntrst")
 	protected ActiveCurrencyAndAmount subscriptionInterest;
 	/**
-	 * Interest received when a subscription amount is paid in advance and then
-	 * invested by the fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1483,7 +1499,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAttribute mmSubscriptionInterest = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SubscriptionExecution.mmSubscriptionInterest;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptIntrst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1494,10 +1510,11 @@ public class SubscriptionExecution4 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CshSttlmDtls")
 	protected PaymentTransaction13 cashSettlementDetails;
 	/**
-	 * Payment transaction resulting from the investment fund order execution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1531,7 +1548,7 @@ public class SubscriptionExecution4 {
 	public static final MMMessageAssociationEnd mmCashSettlementDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentOffset;
-			componentContext_lazy = () -> SubscriptionExecution4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution4.mmObject();
 			isDerived = false;
 			xmlTag = "CshSttlmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1547,15 +1564,22 @@ public class SubscriptionExecution4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SubscriptionExecution4.mmOrderReference, SubscriptionExecution4.mmDealReference, SubscriptionExecution4.mmOrderType, SubscriptionExecution4.mmFinancialInstrumentDetails,
-						SubscriptionExecution4.mmUnitsNumber, SubscriptionExecution4.mmRounding, SubscriptionExecution4.mmNetAmount, SubscriptionExecution4.mmGrossAmount, SubscriptionExecution4.mmTradeDateTime,
-						SubscriptionExecution4.mmPriceDetails, SubscriptionExecution4.mmPartiallyExecutedIndicator, SubscriptionExecution4.mmCumDividendIndicator, SubscriptionExecution4.mmInterimProfitAmount,
-						SubscriptionExecution4.mmForeignExchangeDetails, SubscriptionExecution4.mmIncomePreference, SubscriptionExecution4.mmLetterIntentReference, SubscriptionExecution4.mmAccumulationRightReference,
-						SubscriptionExecution4.mmChargeGeneralDetails, SubscriptionExecution4.mmCommissionGeneralDetails, SubscriptionExecution4.mmTaxGeneralDetails, SubscriptionExecution4.mmSettlementAndCustodyDetails,
-						SubscriptionExecution4.mmPhysicalDeliveryIndicator, SubscriptionExecution4.mmPhysicalDeliveryDetails, SubscriptionExecution4.mmRequestedSettlementCurrency, SubscriptionExecution4.mmRequestedNAVCurrency,
-						SubscriptionExecution4.mmRefund, SubscriptionExecution4.mmSubscriptionInterest, SubscriptionExecution4.mmCashSettlementDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionExecution4.mmOrderReference, com.tools20022.repository.msg.SubscriptionExecution4.mmDealReference,
+						com.tools20022.repository.msg.SubscriptionExecution4.mmOrderType, com.tools20022.repository.msg.SubscriptionExecution4.mmFinancialInstrumentDetails,
+						com.tools20022.repository.msg.SubscriptionExecution4.mmUnitsNumber, com.tools20022.repository.msg.SubscriptionExecution4.mmRounding, com.tools20022.repository.msg.SubscriptionExecution4.mmNetAmount,
+						com.tools20022.repository.msg.SubscriptionExecution4.mmGrossAmount, com.tools20022.repository.msg.SubscriptionExecution4.mmTradeDateTime, com.tools20022.repository.msg.SubscriptionExecution4.mmPriceDetails,
+						com.tools20022.repository.msg.SubscriptionExecution4.mmPartiallyExecutedIndicator, com.tools20022.repository.msg.SubscriptionExecution4.mmCumDividendIndicator,
+						com.tools20022.repository.msg.SubscriptionExecution4.mmInterimProfitAmount, com.tools20022.repository.msg.SubscriptionExecution4.mmForeignExchangeDetails,
+						com.tools20022.repository.msg.SubscriptionExecution4.mmIncomePreference, com.tools20022.repository.msg.SubscriptionExecution4.mmLetterIntentReference,
+						com.tools20022.repository.msg.SubscriptionExecution4.mmAccumulationRightReference, com.tools20022.repository.msg.SubscriptionExecution4.mmChargeGeneralDetails,
+						com.tools20022.repository.msg.SubscriptionExecution4.mmCommissionGeneralDetails, com.tools20022.repository.msg.SubscriptionExecution4.mmTaxGeneralDetails,
+						com.tools20022.repository.msg.SubscriptionExecution4.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SubscriptionExecution4.mmPhysicalDeliveryIndicator,
+						com.tools20022.repository.msg.SubscriptionExecution4.mmPhysicalDeliveryDetails, com.tools20022.repository.msg.SubscriptionExecution4.mmRequestedSettlementCurrency,
+						com.tools20022.repository.msg.SubscriptionExecution4.mmRequestedNAVCurrency, com.tools20022.repository.msg.SubscriptionExecution4.mmRefund,
+						com.tools20022.repository.msg.SubscriptionExecution4.mmSubscriptionInterest, com.tools20022.repository.msg.SubscriptionExecution4.mmCashSettlementDetails);
 				trace_lazy = () -> SubscriptionExecution.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPhysicalDeliveryDetailsRule.forSubscriptionExecution4);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -1571,255 +1595,255 @@ public class SubscriptionExecution4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrdrRef", required = true)
 	public Max35Text getOrderReference() {
 		return orderReference;
 	}
 
-	public void setOrderReference(Max35Text orderReference) {
-		this.orderReference = orderReference;
+	public SubscriptionExecution4 setOrderReference(Max35Text orderReference) {
+		this.orderReference = Objects.requireNonNull(orderReference);
+		return this;
 	}
 
-	@XmlElement(name = "DealRef", required = true)
 	public Max35Text getDealReference() {
 		return dealReference;
 	}
 
-	public void setDealReference(Max35Text dealReference) {
-		this.dealReference = dealReference;
+	public SubscriptionExecution4 setDealReference(Max35Text dealReference) {
+		this.dealReference = Objects.requireNonNull(dealReference);
+		return this;
 	}
 
-	@XmlElement(name = "OrdrTp")
 	public List<FundOrderType1> getOrderType() {
-		return orderType;
+		return orderType == null ? orderType = new ArrayList<>() : orderType;
 	}
 
-	public void setOrderType(List<com.tools20022.repository.msg.FundOrderType1> orderType) {
-		this.orderType = orderType;
+	public SubscriptionExecution4 setOrderType(List<com.tools20022.repository.msg.FundOrderType1> orderType) {
+		this.orderType = Objects.requireNonNull(orderType);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument6 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
 
-	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument6 financialInstrumentDetails) {
-		this.financialInstrumentDetails = financialInstrumentDetails;
+	public SubscriptionExecution4 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument6 financialInstrumentDetails) {
+		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
+		return this;
 	}
 
-	@XmlElement(name = "UnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
 
-	public void setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
-		this.unitsNumber = unitsNumber;
+	public SubscriptionExecution4 setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
+		this.unitsNumber = Objects.requireNonNull(unitsNumber);
+		return this;
 	}
 
-	@XmlElement(name = "Rndg")
-	public RoundingDirection2Code getRounding() {
-		return rounding;
+	public Optional<RoundingDirection2Code> getRounding() {
+		return rounding == null ? Optional.empty() : Optional.of(rounding);
 	}
 
-	public void setRounding(RoundingDirection2Code rounding) {
+	public SubscriptionExecution4 setRounding(RoundingDirection2Code rounding) {
 		this.rounding = rounding;
+		return this;
 	}
 
-	@XmlElement(name = "NetAmt", required = true)
 	public ActiveCurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
 
-	public void setNetAmount(ActiveCurrencyAndAmount netAmount) {
-		this.netAmount = netAmount;
+	public SubscriptionExecution4 setNetAmount(ActiveCurrencyAndAmount netAmount) {
+		this.netAmount = Objects.requireNonNull(netAmount);
+		return this;
 	}
 
-	@XmlElement(name = "GrssAmt")
-	public ActiveCurrencyAndAmount getGrossAmount() {
-		return grossAmount;
+	public Optional<ActiveCurrencyAndAmount> getGrossAmount() {
+		return grossAmount == null ? Optional.empty() : Optional.of(grossAmount);
 	}
 
-	public void setGrossAmount(ActiveCurrencyAndAmount grossAmount) {
+	public SubscriptionExecution4 setGrossAmount(ActiveCurrencyAndAmount grossAmount) {
 		this.grossAmount = grossAmount;
+		return this;
 	}
 
-	@XmlElement(name = "TradDtTm", required = true)
 	public DateAndDateTimeChoice getTradeDateTime() {
 		return tradeDateTime;
 	}
 
-	public void setTradeDateTime(DateAndDateTimeChoice tradeDateTime) {
-		this.tradeDateTime = tradeDateTime;
+	public SubscriptionExecution4 setTradeDateTime(DateAndDateTimeChoice tradeDateTime) {
+		this.tradeDateTime = Objects.requireNonNull(tradeDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "PricDtls", required = true)
 	public UnitPrice5 getPriceDetails() {
 		return priceDetails;
 	}
 
-	public void setPriceDetails(com.tools20022.repository.msg.UnitPrice5 priceDetails) {
-		this.priceDetails = priceDetails;
+	public SubscriptionExecution4 setPriceDetails(com.tools20022.repository.msg.UnitPrice5 priceDetails) {
+		this.priceDetails = Objects.requireNonNull(priceDetails);
+		return this;
 	}
 
-	@XmlElement(name = "PrtlyExctdInd", required = true)
 	public YesNoIndicator getPartiallyExecutedIndicator() {
 		return partiallyExecutedIndicator;
 	}
 
-	public void setPartiallyExecutedIndicator(YesNoIndicator partiallyExecutedIndicator) {
-		this.partiallyExecutedIndicator = partiallyExecutedIndicator;
+	public SubscriptionExecution4 setPartiallyExecutedIndicator(YesNoIndicator partiallyExecutedIndicator) {
+		this.partiallyExecutedIndicator = Objects.requireNonNull(partiallyExecutedIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "CumDvddInd", required = true)
 	public YesNoIndicator getCumDividendIndicator() {
 		return cumDividendIndicator;
 	}
 
-	public void setCumDividendIndicator(YesNoIndicator cumDividendIndicator) {
-		this.cumDividendIndicator = cumDividendIndicator;
+	public SubscriptionExecution4 setCumDividendIndicator(YesNoIndicator cumDividendIndicator) {
+		this.cumDividendIndicator = Objects.requireNonNull(cumDividendIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "IntrmPrftAmt")
-	public ProfitAndLoss1Choice getInterimProfitAmount() {
-		return interimProfitAmount;
+	public Optional<ProfitAndLoss1Choice> getInterimProfitAmount() {
+		return interimProfitAmount == null ? Optional.empty() : Optional.of(interimProfitAmount);
 	}
 
-	public void setInterimProfitAmount(ProfitAndLoss1Choice interimProfitAmount) {
+	public SubscriptionExecution4 setInterimProfitAmount(ProfitAndLoss1Choice interimProfitAmount) {
 		this.interimProfitAmount = interimProfitAmount;
+		return this;
 	}
 
-	@XmlElement(name = "FXDtls")
 	public List<ForeignExchangeTerms4> getForeignExchangeDetails() {
-		return foreignExchangeDetails;
+		return foreignExchangeDetails == null ? foreignExchangeDetails = new ArrayList<>() : foreignExchangeDetails;
 	}
 
-	public void setForeignExchangeDetails(List<com.tools20022.repository.msg.ForeignExchangeTerms4> foreignExchangeDetails) {
-		this.foreignExchangeDetails = foreignExchangeDetails;
+	public SubscriptionExecution4 setForeignExchangeDetails(List<com.tools20022.repository.msg.ForeignExchangeTerms4> foreignExchangeDetails) {
+		this.foreignExchangeDetails = Objects.requireNonNull(foreignExchangeDetails);
+		return this;
 	}
 
-	@XmlElement(name = "IncmPref")
-	public IncomePreference1Code getIncomePreference() {
-		return incomePreference;
+	public Optional<IncomePreference1Code> getIncomePreference() {
+		return incomePreference == null ? Optional.empty() : Optional.of(incomePreference);
 	}
 
-	public void setIncomePreference(IncomePreference1Code incomePreference) {
+	public SubscriptionExecution4 setIncomePreference(IncomePreference1Code incomePreference) {
 		this.incomePreference = incomePreference;
+		return this;
 	}
 
-	@XmlElement(name = "LttrInttRef")
-	public Max35Text getLetterIntentReference() {
-		return letterIntentReference;
+	public Optional<Max35Text> getLetterIntentReference() {
+		return letterIntentReference == null ? Optional.empty() : Optional.of(letterIntentReference);
 	}
 
-	public void setLetterIntentReference(Max35Text letterIntentReference) {
+	public SubscriptionExecution4 setLetterIntentReference(Max35Text letterIntentReference) {
 		this.letterIntentReference = letterIntentReference;
+		return this;
 	}
 
-	@XmlElement(name = "AcmltnRghtRef")
-	public Max35Text getAccumulationRightReference() {
-		return accumulationRightReference;
+	public Optional<Max35Text> getAccumulationRightReference() {
+		return accumulationRightReference == null ? Optional.empty() : Optional.of(accumulationRightReference);
 	}
 
-	public void setAccumulationRightReference(Max35Text accumulationRightReference) {
+	public SubscriptionExecution4 setAccumulationRightReference(Max35Text accumulationRightReference) {
 		this.accumulationRightReference = accumulationRightReference;
+		return this;
 	}
 
-	@XmlElement(name = "ChrgGnlDtls")
-	public TotalCharges2 getChargeGeneralDetails() {
-		return chargeGeneralDetails;
+	public Optional<TotalCharges2> getChargeGeneralDetails() {
+		return chargeGeneralDetails == null ? Optional.empty() : Optional.of(chargeGeneralDetails);
 	}
 
-	public void setChargeGeneralDetails(com.tools20022.repository.msg.TotalCharges2 chargeGeneralDetails) {
+	public SubscriptionExecution4 setChargeGeneralDetails(com.tools20022.repository.msg.TotalCharges2 chargeGeneralDetails) {
 		this.chargeGeneralDetails = chargeGeneralDetails;
+		return this;
 	}
 
-	@XmlElement(name = "ComssnGnlDtls")
-	public TotalCommissions2 getCommissionGeneralDetails() {
-		return commissionGeneralDetails;
+	public Optional<TotalCommissions2> getCommissionGeneralDetails() {
+		return commissionGeneralDetails == null ? Optional.empty() : Optional.of(commissionGeneralDetails);
 	}
 
-	public void setCommissionGeneralDetails(com.tools20022.repository.msg.TotalCommissions2 commissionGeneralDetails) {
+	public SubscriptionExecution4 setCommissionGeneralDetails(com.tools20022.repository.msg.TotalCommissions2 commissionGeneralDetails) {
 		this.commissionGeneralDetails = commissionGeneralDetails;
+		return this;
 	}
 
-	@XmlElement(name = "TaxGnlDtls")
-	public TotalTaxes2 getTaxGeneralDetails() {
-		return taxGeneralDetails;
+	public Optional<TotalTaxes2> getTaxGeneralDetails() {
+		return taxGeneralDetails == null ? Optional.empty() : Optional.of(taxGeneralDetails);
 	}
 
-	public void setTaxGeneralDetails(com.tools20022.repository.msg.TotalTaxes2 taxGeneralDetails) {
+	public SubscriptionExecution4 setTaxGeneralDetails(com.tools20022.repository.msg.TotalTaxes2 taxGeneralDetails) {
 		this.taxGeneralDetails = taxGeneralDetails;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmAndCtdyDtls")
-	public FundSettlementParameters3 getSettlementAndCustodyDetails() {
-		return settlementAndCustodyDetails;
+	public Optional<FundSettlementParameters3> getSettlementAndCustodyDetails() {
+		return settlementAndCustodyDetails == null ? Optional.empty() : Optional.of(settlementAndCustodyDetails);
 	}
 
-	public void setSettlementAndCustodyDetails(com.tools20022.repository.msg.FundSettlementParameters3 settlementAndCustodyDetails) {
+	public SubscriptionExecution4 setSettlementAndCustodyDetails(com.tools20022.repository.msg.FundSettlementParameters3 settlementAndCustodyDetails) {
 		this.settlementAndCustodyDetails = settlementAndCustodyDetails;
+		return this;
 	}
 
-	@XmlElement(name = "PhysDlvryInd", required = true)
 	public YesNoIndicator getPhysicalDeliveryIndicator() {
 		return physicalDeliveryIndicator;
 	}
 
-	public void setPhysicalDeliveryIndicator(YesNoIndicator physicalDeliveryIndicator) {
-		this.physicalDeliveryIndicator = physicalDeliveryIndicator;
+	public SubscriptionExecution4 setPhysicalDeliveryIndicator(YesNoIndicator physicalDeliveryIndicator) {
+		this.physicalDeliveryIndicator = Objects.requireNonNull(physicalDeliveryIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "PhysDlvryDtls")
-	public DeliveryParameters3 getPhysicalDeliveryDetails() {
-		return physicalDeliveryDetails;
+	public Optional<DeliveryParameters3> getPhysicalDeliveryDetails() {
+		return physicalDeliveryDetails == null ? Optional.empty() : Optional.of(physicalDeliveryDetails);
 	}
 
-	public void setPhysicalDeliveryDetails(com.tools20022.repository.msg.DeliveryParameters3 physicalDeliveryDetails) {
+	public SubscriptionExecution4 setPhysicalDeliveryDetails(com.tools20022.repository.msg.DeliveryParameters3 physicalDeliveryDetails) {
 		this.physicalDeliveryDetails = physicalDeliveryDetails;
+		return this;
 	}
 
-	@XmlElement(name = "ReqdSttlmCcy")
-	public CurrencyCode getRequestedSettlementCurrency() {
-		return requestedSettlementCurrency;
+	public Optional<CurrencyCode> getRequestedSettlementCurrency() {
+		return requestedSettlementCurrency == null ? Optional.empty() : Optional.of(requestedSettlementCurrency);
 	}
 
-	public void setRequestedSettlementCurrency(CurrencyCode requestedSettlementCurrency) {
+	public SubscriptionExecution4 setRequestedSettlementCurrency(CurrencyCode requestedSettlementCurrency) {
 		this.requestedSettlementCurrency = requestedSettlementCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "ReqdNAVCcy")
-	public CurrencyCode getRequestedNAVCurrency() {
-		return requestedNAVCurrency;
+	public Optional<CurrencyCode> getRequestedNAVCurrency() {
+		return requestedNAVCurrency == null ? Optional.empty() : Optional.of(requestedNAVCurrency);
 	}
 
-	public void setRequestedNAVCurrency(CurrencyCode requestedNAVCurrency) {
+	public SubscriptionExecution4 setRequestedNAVCurrency(CurrencyCode requestedNAVCurrency) {
 		this.requestedNAVCurrency = requestedNAVCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "Rfnd")
-	public ActiveCurrencyAndAmount getRefund() {
-		return refund;
+	public Optional<ActiveCurrencyAndAmount> getRefund() {
+		return refund == null ? Optional.empty() : Optional.of(refund);
 	}
 
-	public void setRefund(ActiveCurrencyAndAmount refund) {
+	public SubscriptionExecution4 setRefund(ActiveCurrencyAndAmount refund) {
 		this.refund = refund;
+		return this;
 	}
 
-	@XmlElement(name = "SbcptIntrst")
-	public ActiveCurrencyAndAmount getSubscriptionInterest() {
-		return subscriptionInterest;
+	public Optional<ActiveCurrencyAndAmount> getSubscriptionInterest() {
+		return subscriptionInterest == null ? Optional.empty() : Optional.of(subscriptionInterest);
 	}
 
-	public void setSubscriptionInterest(ActiveCurrencyAndAmount subscriptionInterest) {
+	public SubscriptionExecution4 setSubscriptionInterest(ActiveCurrencyAndAmount subscriptionInterest) {
 		this.subscriptionInterest = subscriptionInterest;
+		return this;
 	}
 
-	@XmlElement(name = "CshSttlmDtls")
-	public PaymentTransaction13 getCashSettlementDetails() {
-		return cashSettlementDetails;
+	public Optional<PaymentTransaction13> getCashSettlementDetails() {
+		return cashSettlementDetails == null ? Optional.empty() : Optional.of(cashSettlementDetails);
 	}
 
-	public void setCashSettlementDetails(com.tools20022.repository.msg.PaymentTransaction13 cashSettlementDetails) {
+	public SubscriptionExecution4 setCashSettlementDetails(com.tools20022.repository.msg.PaymentTransaction13 cashSettlementDetails) {
 		this.cashSettlementDetails = cashSettlementDetails;
+		return this;
 	}
 }

@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ContentTypeCode;
+import com.tools20022.repository.codeset.ContentType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identification of the type of a Cryptographic Message Syntax (CMS) data
@@ -31,33 +35,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ContentType2Code#PlainData
+ * ContentType2Code.PlainData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ContentType2Code#SignedData
+ * ContentType2Code.SignedData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ContentType2Code#EnvelopedData
+ * ContentType2Code.EnvelopedData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ContentType2Code#DigestedData
+ * ContentType2Code.DigestedData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ContentType2Code#AuthenticatedData
+ * ContentType2Code.AuthenticatedData}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.ContentTypeCode
  * ContentTypeCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentType2Code#mmPlainData
- * ContentType2Code.mmPlainData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentType2Code#mmSignedData
- * ContentType2Code.mmSignedData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentType2Code#mmEnvelopedData
- * ContentType2Code.mmEnvelopedData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentType2Code#mmDigestedData
- * ContentType2Code.mmDigestedData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentType2Code#mmAuthenticatedData
- * ContentType2Code.mmAuthenticatedData}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ContentType1Code}</li>
  * </ul>
  */
-public class ContentType2Code extends ContentTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ContentType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -100,16 +104,17 @@ public class ContentType2Code extends ContentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ContentType1Code#mmPlainData
-	 * ContentType1Code.mmPlainData}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ContentType1Code#PlainData
+	 * ContentType1Code.PlainData}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPlainData = new MMCode() {
+	public static final ContentType2Code PlainData = new ContentType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlainData";
-			previousVersion_lazy = () -> ContentType1Code.mmPlainData;
-			owner_lazy = () -> ContentType2Code.mmObject();
+			previousVersion_lazy = () -> ContentType1Code.PlainData;
+			owner_lazy = () -> com.tools20022.repository.codeset.ContentType2Code.mmObject();
+			codeName = ContentTypeCode.PlainData.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -129,16 +134,17 @@ public class ContentType2Code extends ContentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ContentType1Code#mmSignedData
-	 * ContentType1Code.mmSignedData}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ContentType1Code#SignedData
+	 * ContentType1Code.SignedData}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSignedData = new MMCode() {
+	public static final ContentType2Code SignedData = new ContentType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignedData";
-			previousVersion_lazy = () -> ContentType1Code.mmSignedData;
-			owner_lazy = () -> ContentType2Code.mmObject();
+			previousVersion_lazy = () -> ContentType1Code.SignedData;
+			owner_lazy = () -> com.tools20022.repository.codeset.ContentType2Code.mmObject();
+			codeName = ContentTypeCode.SignedData.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,16 +164,17 @@ public class ContentType2Code extends ContentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ContentType1Code#mmEnvelopedData
-	 * ContentType1Code.mmEnvelopedData}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ContentType1Code#EnvelopedData
+	 * ContentType1Code.EnvelopedData}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEnvelopedData = new MMCode() {
+	public static final ContentType2Code EnvelopedData = new ContentType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvelopedData";
-			previousVersion_lazy = () -> ContentType1Code.mmEnvelopedData;
-			owner_lazy = () -> ContentType2Code.mmObject();
+			previousVersion_lazy = () -> ContentType1Code.EnvelopedData;
+			owner_lazy = () -> com.tools20022.repository.codeset.ContentType2Code.mmObject();
+			codeName = ContentTypeCode.EnvelopedData.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -187,16 +194,17 @@ public class ContentType2Code extends ContentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ContentType1Code#mmDigestedData
-	 * ContentType1Code.mmDigestedData}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ContentType1Code#DigestedData
+	 * ContentType1Code.DigestedData}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDigestedData = new MMCode() {
+	public static final ContentType2Code DigestedData = new ContentType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestedData";
-			previousVersion_lazy = () -> ContentType1Code.mmDigestedData;
-			owner_lazy = () -> ContentType2Code.mmObject();
+			previousVersion_lazy = () -> ContentType1Code.DigestedData;
+			owner_lazy = () -> com.tools20022.repository.codeset.ContentType2Code.mmObject();
+			codeName = ContentTypeCode.DigestedData.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -216,32 +224,67 @@ public class ContentType2Code extends ContentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ContentType1Code#mmAuthenticatedData
-	 * ContentType1Code.mmAuthenticatedData}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ContentType1Code#AuthenticatedData
+	 * ContentType1Code.AuthenticatedData}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAuthenticatedData = new MMCode() {
+	public static final ContentType2Code AuthenticatedData = new ContentType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticatedData";
-			previousVersion_lazy = () -> ContentType1Code.mmAuthenticatedData;
-			owner_lazy = () -> ContentType2Code.mmObject();
+			previousVersion_lazy = () -> ContentType1Code.AuthenticatedData;
+			owner_lazy = () -> com.tools20022.repository.codeset.ContentType2Code.mmObject();
+			codeName = ContentTypeCode.AuthenticatedData.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ContentType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ContentType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DATA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentType2Code";
 				definition = "Identification of the type of a Cryptographic Message Syntax (CMS) data structure.";
 				previousVersion_lazy = () -> ContentType1Code.mmObject();
-				code_lazy = () -> Arrays.asList(ContentType2Code.mmPlainData, ContentType2Code.mmSignedData, ContentType2Code.mmEnvelopedData, ContentType2Code.mmDigestedData, ContentType2Code.mmAuthenticatedData);
 				trace_lazy = () -> ContentTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ContentType2Code.PlainData, com.tools20022.repository.codeset.ContentType2Code.SignedData, com.tools20022.repository.codeset.ContentType2Code.EnvelopedData,
+						com.tools20022.repository.codeset.ContentType2Code.DigestedData, com.tools20022.repository.codeset.ContentType2Code.AuthenticatedData);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PlainData.getCodeName().get(), PlainData);
+		codesByName.put(SignedData.getCodeName().get(), SignedData);
+		codesByName.put(EnvelopedData.getCodeName().get(), EnvelopedData);
+		codesByName.put(DigestedData.getCodeName().get(), DigestedData);
+		codesByName.put(AuthenticatedData.getCodeName().get(), AuthenticatedData);
+	}
+
+	public static ContentType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ContentType2Code[] values() {
+		ContentType2Code[] values = new ContentType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ContentType2Code> {
+		@Override
+		public ContentType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ContentType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

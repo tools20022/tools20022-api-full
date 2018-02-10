@@ -28,6 +28,8 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -48,22 +50,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.ReferenceDataArchive
- * ReferenceDataArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "reda.002.001.02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "reda.002.001.02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -79,6 +65,22 @@ import javax.xml.bind.annotation.*;
  * PriceReportCancellationV02.mmPriceReportToBeCancelled}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "reda.002.001.02"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.ReferenceDataArchive
+ * ReferenceDataArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "reda.002.001.02"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code reda.002.001.02}</li>
@@ -102,15 +104,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "reda.002.001.02", propOrder = {"poolReference", "previousReference", "priceReportToBeCancelled"})
 public class PriceReportCancellationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PoolRef")
 	protected AdditionalReference3 poolReference;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,10 +153,11 @@ public class PriceReportCancellationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsRef", required = true)
 	protected AdditionalReference3 previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,10 +197,11 @@ public class PriceReportCancellationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PricRptToBeCanc")
 	protected PriceReport1 priceReportToBeCancelled;
 	/**
-	 * Common information related to all the price reports to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -269,34 +274,34 @@ public class PriceReportCancellationV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PoolRef")
-	public AdditionalReference3 getPoolReference() {
-		return poolReference;
+	public Optional<AdditionalReference3> getPoolReference() {
+		return poolReference == null ? Optional.empty() : Optional.of(poolReference);
 	}
 
-	public void setPoolReference(AdditionalReference3 poolReference) {
+	public PriceReportCancellationV02 setPoolReference(AdditionalReference3 poolReference) {
 		this.poolReference = poolReference;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef", required = true)
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
 
-	public void setPreviousReference(AdditionalReference3 previousReference) {
-		this.previousReference = previousReference;
+	public PriceReportCancellationV02 setPreviousReference(AdditionalReference3 previousReference) {
+		this.previousReference = Objects.requireNonNull(previousReference);
+		return this;
 	}
 
-	@XmlElement(name = "PricRptToBeCanc")
-	public PriceReport1 getPriceReportToBeCancelled() {
-		return priceReportToBeCancelled;
+	public Optional<PriceReport1> getPriceReportToBeCancelled() {
+		return priceReportToBeCancelled == null ? Optional.empty() : Optional.of(priceReportToBeCancelled);
 	}
 
-	public void setPriceReportToBeCancelled(PriceReport1 priceReportToBeCancelled) {
+	public PriceReportCancellationV02 setPriceReportToBeCancelled(PriceReport1 priceReportToBeCancelled) {
 		this.priceReportToBeCancelled = priceReportToBeCancelled;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:reda.002.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:reda.002.001.02")
 	static public class Document {
 		@XmlElement(name = "reda.002.001.02", required = true)
 		public PriceReportCancellationV02 messageBody;

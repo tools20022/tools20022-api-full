@@ -34,6 +34,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +74,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -88,18 +89,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "FinancialInstitutionIdentification1", propOrder = {"BIC", "clearingSystemMemberIdentification", "name", "postalAddress", "proprietaryIdentification"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "FinancialInstitutionIdentification1", propOrder = {"bIC", "clearingSystemMemberIdentification", "name", "postalAddress", "proprietaryIdentification"})
 public class FinancialInstitutionIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BIC")
 	protected BICIdentifier bIC;
 	/**
-	 * Code allocated to a financial institution by the ISO 9362 Registration
-	 * Authority as described in ISO 9362
-	 * "Banking - Banking telecommunication messages - Business identifier code (BIC)"
-	 * .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,7 +134,7 @@ public class FinancialInstitutionIdentification1 {
 	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> FinancialInstitutionIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "BIC";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,11 +145,11 @@ public class FinancialInstitutionIdentification1 {
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "ClrSysMmbId")
 	protected ClearingSystemMemberIdentificationChoice clearingSystemMemberIdentification;
 	/**
-	 * Unique and unambiguous identifier of a clearing system member, as
-	 * assigned by the system or system administrator.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,7 +185,7 @@ public class FinancialInstitutionIdentification1 {
 	public static final MMMessageAttribute mmClearingSystemMemberIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmClearingSystemMemberIdentificationType;
-			componentContext_lazy = () -> FinancialInstitutionIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrSysMmbId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,11 +196,11 @@ public class FinancialInstitutionIdentification1 {
 			complexType_lazy = () -> ClearingSystemMemberIdentificationChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm")
 	protected Max70Text name;
 	/**
-	 * Name by which a party is known and which is usually used to identify that
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,7 +235,7 @@ public class FinancialInstitutionIdentification1 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
-			componentContext_lazy = () -> FinancialInstitutionIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -247,11 +246,11 @@ public class FinancialInstitutionIdentification1 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PstlAdr")
 	protected PostalAddress1 postalAddress;
 	/**
-	 * Information that locates and identifies a specific address, as defined by
-	 * postal services.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -285,7 +284,7 @@ public class FinancialInstitutionIdentification1 {
 	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
-			componentContext_lazy = () -> FinancialInstitutionIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -297,11 +296,11 @@ public class FinancialInstitutionIdentification1 {
 			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryId")
 	protected GenericIdentification3 proprietaryIdentification;
 	/**
-	 * Unique and unambiguous identifier, as assigned to a financial institution
-	 * using a proprietary identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -335,7 +334,7 @@ public class FinancialInstitutionIdentification1 {
 	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> FinancialInstitutionIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -351,10 +350,11 @@ public class FinancialInstitutionIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstitutionIdentification1.mmBIC, FinancialInstitutionIdentification1.mmClearingSystemMemberIdentification, FinancialInstitutionIdentification1.mmName,
-						FinancialInstitutionIdentification1.mmPostalAddress, FinancialInstitutionIdentification1.mmProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstitutionIdentification1.mmBIC, com.tools20022.repository.msg.FinancialInstitutionIdentification1.mmClearingSystemMemberIdentification,
+						com.tools20022.repository.msg.FinancialInstitutionIdentification1.mmName, com.tools20022.repository.msg.FinancialInstitutionIdentification1.mmPostalAddress,
+						com.tools20022.repository.msg.FinancialInstitutionIdentification1.mmProprietaryIdentification);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -370,48 +370,48 @@ public class FinancialInstitutionIdentification1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BIC")
-	public BICIdentifier getBIC() {
-		return bIC;
+	public Optional<BICIdentifier> getBIC() {
+		return bIC == null ? Optional.empty() : Optional.of(bIC);
 	}
 
-	public void setBIC(BICIdentifier bIC) {
+	public FinancialInstitutionIdentification1 setBIC(BICIdentifier bIC) {
 		this.bIC = bIC;
+		return this;
 	}
 
-	@XmlElement(name = "ClrSysMmbId")
-	public ClearingSystemMemberIdentificationChoice getClearingSystemMemberIdentification() {
-		return clearingSystemMemberIdentification;
+	public Optional<ClearingSystemMemberIdentificationChoice> getClearingSystemMemberIdentification() {
+		return clearingSystemMemberIdentification == null ? Optional.empty() : Optional.of(clearingSystemMemberIdentification);
 	}
 
-	public void setClearingSystemMemberIdentification(ClearingSystemMemberIdentificationChoice clearingSystemMemberIdentification) {
+	public FinancialInstitutionIdentification1 setClearingSystemMemberIdentification(ClearingSystemMemberIdentificationChoice clearingSystemMemberIdentification) {
 		this.clearingSystemMemberIdentification = clearingSystemMemberIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Nm")
-	public Max70Text getName() {
-		return name;
+	public Optional<Max70Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max70Text name) {
+	public FinancialInstitutionIdentification1 setName(Max70Text name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "PstlAdr")
-	public PostalAddress1 getPostalAddress() {
-		return postalAddress;
+	public Optional<PostalAddress1> getPostalAddress() {
+		return postalAddress == null ? Optional.empty() : Optional.of(postalAddress);
 	}
 
-	public void setPostalAddress(com.tools20022.repository.msg.PostalAddress1 postalAddress) {
+	public FinancialInstitutionIdentification1 setPostalAddress(com.tools20022.repository.msg.PostalAddress1 postalAddress) {
 		this.postalAddress = postalAddress;
+		return this;
 	}
 
-	@XmlElement(name = "PrtryId")
-	public GenericIdentification3 getProprietaryIdentification() {
-		return proprietaryIdentification;
+	public Optional<GenericIdentification3> getProprietaryIdentification() {
+		return proprietaryIdentification == null ? Optional.empty() : Optional.of(proprietaryIdentification);
 	}
 
-	public void setProprietaryIdentification(com.tools20022.repository.msg.GenericIdentification3 proprietaryIdentification) {
+	public FinancialInstitutionIdentification1 setProprietaryIdentification(com.tools20022.repository.msg.GenericIdentification3 proprietaryIdentification) {
 		this.proprietaryIdentification = proprietaryIdentification;
+		return this;
 	}
 }

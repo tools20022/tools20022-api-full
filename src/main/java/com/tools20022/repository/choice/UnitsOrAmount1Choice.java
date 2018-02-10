@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between an amount or number of units."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnitsOrAmount1Choice", propOrder = {"amount", "unit"})
 public class UnitsOrAmount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * Currency and amount of the periodical payments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,7 +99,7 @@ public class UnitsOrAmount1Choice {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UnitsOrAmount1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UnitsOrAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,10 +110,11 @@ public class UnitsOrAmount1Choice {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Unit", required = true)
 	protected DecimalNumber unit;
 	/**
-	 * Number of units to be subscribed or withdrawn.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +142,7 @@ public class UnitsOrAmount1Choice {
 	 */
 	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UnitsOrAmount1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UnitsOrAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Unit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,8 +157,8 @@ public class UnitsOrAmount1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnitsOrAmount1Choice.mmAmount, UnitsOrAmount1Choice.mmUnit);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnitsOrAmount1Choice.mmAmount, com.tools20022.repository.choice.UnitsOrAmount1Choice.mmUnit);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnitsOrAmount1Choice";
 				definition = "Choice between an amount or number of units.";
@@ -164,21 +167,21 @@ public class UnitsOrAmount1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
-		this.amount = amount;
+	public UnitsOrAmount1Choice setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "Unit", required = true)
 	public DecimalNumber getUnit() {
 		return unit;
 	}
 
-	public void setUnit(DecimalNumber unit) {
-		this.unit = unit;
+	public UnitsOrAmount1Choice setUnit(DecimalNumber unit) {
+		this.unit = Objects.requireNonNull(unit);
+		return this;
 	}
 }

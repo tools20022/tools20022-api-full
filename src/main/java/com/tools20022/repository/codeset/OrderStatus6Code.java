@@ -20,48 +20,49 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OrderStatusCode;
+import com.tools20022.repository.codeset.OrderStatus6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies current status of order.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode
- * OrderStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus6Code#mmDoneForDay
- * OrderStatus6Code.mmDoneForDay}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus6Code#DoneForDay
+ * OrderStatus6Code.DoneForDay}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus6Code#Rejected
+ * OrderStatus6Code.Rejected}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus6Code#Executing
+ * OrderStatus6Code.Executing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus6Code#mmRejected
- * OrderStatus6Code.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus6Code#Cancelling
+ * OrderStatus6Code.Cancelling}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus6Code#Alert
+ * OrderStatus6Code.Alert}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus6Code#Accepted
+ * OrderStatus6Code.Accepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus6Code#mmExecuting
- * OrderStatus6Code.mmExecuting}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus6Code#mmCancelling
- * OrderStatus6Code.mmCancelling}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus6Code#mmAlert
- * OrderStatus6Code.mmAlert}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus6Code#mmAccepted
- * OrderStatus6Code.mmAccepted}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus6Code#mmAcceptedForBidding
- * OrderStatus6Code.mmAcceptedForBidding}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus6Code#AcceptedForBidding
+ * OrderStatus6Code.AcceptedForBidding}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.OrderStatusCode
+ * OrderStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies current status of order."</li>
  * </ul>
  */
-public class OrderStatus6Code extends OrderStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OrderStatus6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,11 +99,12 @@ public class OrderStatus6Code extends OrderStatusCode {
 	 * name} = "DoneForDay"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDoneForDay = new MMCode() {
+	public static final OrderStatus6Code DoneForDay = new OrderStatus6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DoneForDay";
-			owner_lazy = () -> OrderStatus6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus6Code.mmObject();
+			codeName = OrderStatusCode.DoneForDay.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -120,11 +123,12 @@ public class OrderStatus6Code extends OrderStatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final OrderStatus6Code Rejected = new OrderStatus6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> OrderStatus6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus6Code.mmObject();
+			codeName = OrderStatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -143,11 +147,12 @@ public class OrderStatus6Code extends OrderStatusCode {
 	 * name} = "Executing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExecuting = new MMCode() {
+	public static final OrderStatus6Code Executing = new OrderStatus6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Executing";
-			owner_lazy = () -> OrderStatus6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus6Code.mmObject();
+			codeName = OrderStatusCode.Executing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -166,11 +171,12 @@ public class OrderStatus6Code extends OrderStatusCode {
 	 * name} = "Cancelling"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelling = new MMCode() {
+	public static final OrderStatus6Code Cancelling = new OrderStatus6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelling";
-			owner_lazy = () -> OrderStatus6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus6Code.mmObject();
+			codeName = OrderStatusCode.Cancelling.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -189,11 +195,12 @@ public class OrderStatus6Code extends OrderStatusCode {
 	 * name} = "Alert"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAlert = new MMCode() {
+	public static final OrderStatus6Code Alert = new OrderStatus6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Alert";
-			owner_lazy = () -> OrderStatus6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus6Code.mmObject();
+			codeName = OrderStatusCode.Alert.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -212,11 +219,12 @@ public class OrderStatus6Code extends OrderStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final OrderStatus6Code Accepted = new OrderStatus6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> OrderStatus6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus6Code.mmObject();
+			codeName = OrderStatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -235,27 +243,64 @@ public class OrderStatus6Code extends OrderStatusCode {
 	 * name} = "AcceptedForBidding"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedForBidding = new MMCode() {
+	public static final OrderStatus6Code AcceptedForBidding = new OrderStatus6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedForBidding";
-			owner_lazy = () -> OrderStatus6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus6Code.mmObject();
+			codeName = OrderStatusCode.AcceptedForBidding.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OrderStatus6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OrderStatus6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DONE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderStatus6Code";
 				definition = "Identifies current status of order.";
-				code_lazy = () -> Arrays.asList(OrderStatus6Code.mmDoneForDay, OrderStatus6Code.mmRejected, OrderStatus6Code.mmExecuting, OrderStatus6Code.mmCancelling, OrderStatus6Code.mmAlert, OrderStatus6Code.mmAccepted,
-						OrderStatus6Code.mmAcceptedForBidding);
 				trace_lazy = () -> OrderStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderStatus6Code.DoneForDay, com.tools20022.repository.codeset.OrderStatus6Code.Rejected, com.tools20022.repository.codeset.OrderStatus6Code.Executing,
+						com.tools20022.repository.codeset.OrderStatus6Code.Cancelling, com.tools20022.repository.codeset.OrderStatus6Code.Alert, com.tools20022.repository.codeset.OrderStatus6Code.Accepted,
+						com.tools20022.repository.codeset.OrderStatus6Code.AcceptedForBidding);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(DoneForDay.getCodeName().get(), DoneForDay);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+		codesByName.put(Executing.getCodeName().get(), Executing);
+		codesByName.put(Cancelling.getCodeName().get(), Cancelling);
+		codesByName.put(Alert.getCodeName().get(), Alert);
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+		codesByName.put(AcceptedForBidding.getCodeName().get(), AcceptedForBidding);
+	}
+
+	public static OrderStatus6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OrderStatus6Code[] values() {
+		OrderStatus6Code[] values = new OrderStatus6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OrderStatus6Code> {
+		@Override
+		public OrderStatus6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OrderStatus6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

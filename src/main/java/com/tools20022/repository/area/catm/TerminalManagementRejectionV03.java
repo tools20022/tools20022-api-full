@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementI
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -38,25 +39,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TerminalManagementLatestVersion
- * TerminalManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOPreviousversion
- * CardPaymentsExchangesTerminalManagementISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20142015
- * CAPETerminalManagementMaintenance20142015}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "TermnlMgmtRjctn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -69,6 +51,25 @@ import javax.xml.bind.annotation.*;
  * TerminalManagementRejectionV03.mmReject}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOPreviousversion
+ * CardPaymentsExchangesTerminalManagementISOPreviousversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20142015
+ * CAPETerminalManagementMaintenance20142015}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "TermnlMgmtRjctn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TerminalManagementLatestVersion
+ * TerminalManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code catm.004.001.03}</li>
@@ -96,15 +97,16 @@ import javax.xml.bind.annotation.*;
  * TerminalManagementRejectionV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TerminalManagementRejectionV03", propOrder = {"header", "reject"})
 public class TerminalManagementRejectionV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header15 header;
 	/**
-	 * Rejection message management information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,10 +160,11 @@ public class TerminalManagementRejectionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Rjct", required = true)
 	protected AcceptorRejection3 reject;
 	/**
-	 * Information related to the reject.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -248,25 +251,25 @@ public class TerminalManagementRejectionV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header15 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header15 header) {
-		this.header = header;
+	public TerminalManagementRejectionV03 setHeader(Header15 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "Rjct", required = true)
 	public AcceptorRejection3 getReject() {
 		return reject;
 	}
 
-	public void setReject(AcceptorRejection3 reject) {
-		this.reject = reject;
+	public TerminalManagementRejectionV03 setReject(AcceptorRejection3 reject) {
+		this.reject = Objects.requireNonNull(reject);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catm.004.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:catm.004.001.03")
 	static public class Document {
 		@XmlElement(name = "TermnlMgmtRjctn", required = true)
 		public TerminalManagementRejectionV03 messageBody;

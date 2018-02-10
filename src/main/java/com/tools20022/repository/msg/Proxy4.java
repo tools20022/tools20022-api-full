@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.ProxyAppointment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintProxyAppointment1Rule#forProxy4
+ * ConstraintProxyAppointment1Rule.forProxy4}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Proxy4", propOrder = {"proxyType", "personDetails", "voteInstructionForAgendaResolution"})
 public class Proxy4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrxyTp", required = true)
 	protected ProxyType2Code proxyType;
 	/**
-	 * Specifies the type of proxy.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,7 +136,7 @@ public class Proxy4 {
 	public static final MMMessageAttribute mmProxyType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProxyAppointment.mmProxyType;
-			componentContext_lazy = () -> Proxy4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Proxy4.mmObject();
 			isDerived = false;
 			xmlTag = "PrxyTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,11 +148,11 @@ public class Proxy4 {
 			simpleType_lazy = () -> ProxyType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrsnDtls")
 	protected IndividualPerson17 personDetails;
 	/**
-	 * Person, other than the Chairman of the meeting, assigned by the security
-	 * holder as proxy.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -175,7 +186,7 @@ public class Proxy4 {
 	 */
 	public static final MMMessageAssociationEnd mmPersonDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Proxy4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Proxy4.mmObject();
 			isDerived = false;
 			xmlTag = "PrsnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,11 +199,11 @@ public class Proxy4 {
 			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson17.mmObject();
 		}
 	};
+	@XmlElement(name = "VoteInstrForAgndRsltn")
 	protected Vote2Choice voteInstructionForAgendaResolution;
 	/**
-	 * Indicates the vote instruction for the resolutions which are announced
-	 * via the meeting agenda in advance of the meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -227,7 +238,7 @@ public class Proxy4 {
 	 */
 	public static final MMMessageAssociationEnd mmVoteInstructionForAgendaResolution = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Proxy4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Proxy4.mmObject();
 			isDerived = false;
 			xmlTag = "VoteInstrForAgndRsltn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,9 +255,10 @@ public class Proxy4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Proxy4.mmProxyType, Proxy4.mmPersonDetails, Proxy4.mmVoteInstructionForAgendaResolution);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proxy4.mmProxyType, com.tools20022.repository.msg.Proxy4.mmPersonDetails, com.tools20022.repository.msg.Proxy4.mmVoteInstructionForAgendaResolution);
 				trace_lazy = () -> ProxyAppointment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintProxyAppointment1Rule.forProxy4);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Proxy4";
 				definition = "Specifies the elements that identify a proxy appointed to represent a party authorised to vote at a shareholders meeting.";
@@ -256,30 +268,30 @@ public class Proxy4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrxyTp", required = true)
 	public ProxyType2Code getProxyType() {
 		return proxyType;
 	}
 
-	public void setProxyType(ProxyType2Code proxyType) {
-		this.proxyType = proxyType;
+	public Proxy4 setProxyType(ProxyType2Code proxyType) {
+		this.proxyType = Objects.requireNonNull(proxyType);
+		return this;
 	}
 
-	@XmlElement(name = "PrsnDtls")
-	public IndividualPerson17 getPersonDetails() {
-		return personDetails;
+	public Optional<IndividualPerson17> getPersonDetails() {
+		return personDetails == null ? Optional.empty() : Optional.of(personDetails);
 	}
 
-	public void setPersonDetails(com.tools20022.repository.msg.IndividualPerson17 personDetails) {
+	public Proxy4 setPersonDetails(com.tools20022.repository.msg.IndividualPerson17 personDetails) {
 		this.personDetails = personDetails;
+		return this;
 	}
 
-	@XmlElement(name = "VoteInstrForAgndRsltn")
-	public Vote2Choice getVoteInstructionForAgendaResolution() {
-		return voteInstructionForAgendaResolution;
+	public Optional<Vote2Choice> getVoteInstructionForAgendaResolution() {
+		return voteInstructionForAgendaResolution == null ? Optional.empty() : Optional.of(voteInstructionForAgendaResolution);
 	}
 
-	public void setVoteInstructionForAgendaResolution(Vote2Choice voteInstructionForAgendaResolution) {
+	public Proxy4 setVoteInstructionForAgendaResolution(Vote2Choice voteInstructionForAgendaResolution) {
 		this.voteInstructionForAgendaResolution = voteInstructionForAgendaResolution;
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.CurrentLimitChoice;
 import com.tools20022.repository.choice.LimitType1Choice;
@@ -31,9 +32,8 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Value used for risk containment in a system or towards counterparts. The
@@ -77,6 +77,31 @@ import java.util.List;
  * Limit.mmRelatedPaymentCard}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Limit#mmAvailableAmount
  * Limit.mmAvailableAmount}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedLimit
+ * DateTimePeriod.mmRelatedLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmLimit
+ * PaymentCard.mmLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LimitStatus#mmLimit
+ * LimitStatus.mmLimit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DebitCreditFacility#mmCreditLine
+ * DebitCreditFacility.mmCreditLine}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Limit1#mmCurrent
+ * Limit1.mmCurrent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limit1#mmLimit Limit1.mmLimit}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -130,35 +155,10 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedLimit
- * DateTimePeriod.mmRelatedLimit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentCard#mmLimit
- * PaymentCard.mmLimit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LimitStatus#mmLimit
- * LimitStatus.mmLimit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DebitCreditFacility#mmCreditLine
- * DebitCreditFacility.mmCreditLine}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Limit1#mmCurrent
- * Limit1.mmCurrent}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limit1#mmLimit Limit1.mmLimit}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -176,8 +176,8 @@ public class Limit {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected LimitTypeCode type;
 	/**
-	 * Nature of the limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -267,8 +267,8 @@ public class Limit {
 					LimitType1Choice.mmProprietary, LimitIdentification1.mmType, LimitIdentification2.mmType, LimitSearchCriteria1.mmDefaultLimitType, LimitSearchCriteria1.mmCurrentLimitType, LimitSearchCriteria2.mmDefaultLimitType,
 					LimitSearchCriteria2.mmCurrentLimitType, LimitSearchCriteria3.mmDefaultLimitType, LimitSearchCriteria3.mmCurrentLimitType, LimitIdentification4.mmType, LimitUtilisationJournalSearchCriteria1.mmLimitType,
 					ATMTransactionAmounts3.mmType, ATMTransactionAmounts9.mmMediaType, ATMTransactionAmounts7.mmType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Nature of the limit.";
@@ -287,8 +287,8 @@ public class Limit {
 	};
 	protected CurrencyAndAmount amount;
 	/**
-	 * Amount of money of the limit, expressed in a currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -382,6 +382,17 @@ public class Limit {
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Limit
 	 * Limit}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=SampleData, SampleData=<?xml version="1.0"
+	 * encoding="UTF-8"?> <InstanceInfo> <key KeyValue="Sample1"/> <key
+	 * KeyValue="Sample2"/> <key KeyValue="Sample3"/> <key KeyValue="Sample4"/>
+	 * <key KeyValue="Sample5"/> <key KeyValue="Sample6"/> <key
+	 * KeyValue="Sample7"/> <key KeyValue="Sample8"/> <key KeyValue="Sample9"/>
+	 * <key KeyValue="Sample10"/> </InstanceInfo>
+	 * 
+	 * 
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -399,8 +410,15 @@ public class Limit {
 					Limit4.mmRemainingAmount, ReservationDetails1.mmAmount, Reservation1.mmAmount, CreditLine1.mmAmount, CreditLine2.mmAmount, CurrencyFactors1.mmShortPositionLimit, Limit2.mmAmount, FinancialCard1.mmCreditLimitAmount,
 					LimitAmount1.mmAmount, ATMTransactionAmounts2.mmMinimumAllowedAmount, ATMTransactionAmounts2.mmMaximumAllowedAmount, ATMTransactionAmounts3.mmMinimumAmount, ATMTransactionAmounts3.mmMaximumAmount,
 					ATMTransactionAmounts8.mmMinimumPossibleAmount, ATMTransactionAmounts6.mmMinimumPossibleAmount, ATMTransactionAmounts7.mmAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
+			semanticMarkup_lazy = () -> Arrays
+					.asList(new OtherSemanticMarkup(
+							this,
+							"SampleData",
+							new String[]{
+									"SampleData",
+									"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<InstanceInfo>\n<key KeyValue=\"Sample1\"/>\n<key KeyValue=\"Sample2\"/>\n<key KeyValue=\"Sample3\"/>\n<key KeyValue=\"Sample4\"/>\n<key KeyValue=\"Sample5\"/>\n<key KeyValue=\"Sample6\"/>\n<key KeyValue=\"Sample7\"/>\n<key KeyValue=\"Sample8\"/>\n<key KeyValue=\"Sample9\"/>\n<key KeyValue=\"Sample10\"/>\n</InstanceInfo>\n\n\n"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Amount of money of the limit, expressed in a currency.";
@@ -419,8 +437,8 @@ public class Limit {
 	};
 	protected FloorLimitTypeCode creditDebitIndicator;
 	/**
-	 * Specifies if a limit is a debit limit or a credit limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -477,6 +495,17 @@ public class Limit {
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Limit
 	 * Limit}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=SampleData, SampleData=<?xml version="1.0"
+	 * encoding="UTF-8"?> <InstanceInfo> <key KeyValue="Sample1"/> <key
+	 * KeyValue="Sample2"/> <key KeyValue="Sample3"/> <key KeyValue="Sample4"/>
+	 * <key KeyValue="Sample5"/> <key KeyValue="Sample6"/> <key
+	 * KeyValue="Sample7"/> <key KeyValue="Sample8"/> <key KeyValue="Sample9"/>
+	 * <key KeyValue="Sample10"/> </InstanceInfo>
+	 * 
+	 * 
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -492,8 +521,15 @@ public class Limit {
 			derivation_lazy = () -> Arrays.asList(LimitDetails2.mmCreditDebitIndicator, LimitDetails4.mmCreditDebitIndicator, Limit6.mmCreditDebitIndicator, LimitDetails.mmCreditDebitIndicator,
 					BilateralLimitDetails1.mmCreditDebitIndicator, BilateralLimitDetails2.mmCreditDebitIndicator, BilateralLimitDetails3.mmCreditDebitIndicator, Limit5.mmCreditDebitIndicator, BilateralLimit1.mmCreditDebitIndicator,
 					LimitDetails3.mmCreditDebitIndicator, Limit4.mmCreditDebitIndicator, Limit4.mmUsedAmountCreditDebitIndicator, Limit2.mmCreditDebitIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
+			semanticMarkup_lazy = () -> Arrays
+					.asList(new OtherSemanticMarkup(
+							this,
+							"SampleData",
+							new String[]{
+									"SampleData",
+									"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<InstanceInfo>\n<key KeyValue=\"Sample1\"/>\n<key KeyValue=\"Sample2\"/>\n<key KeyValue=\"Sample3\"/>\n<key KeyValue=\"Sample4\"/>\n<key KeyValue=\"Sample5\"/>\n<key KeyValue=\"Sample6\"/>\n<key KeyValue=\"Sample7\"/>\n<key KeyValue=\"Sample8\"/>\n<key KeyValue=\"Sample9\"/>\n<key KeyValue=\"Sample10\"/>\n</InstanceInfo>\n\n\n"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies if a limit is a debit limit or a credit limit.";
@@ -512,8 +548,8 @@ public class Limit {
 	};
 	protected CurrencyAndAmount usedAmount;
 	/**
-	 * Actual usage of the limit expressed as an amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -552,8 +588,8 @@ public class Limit {
 	public static final MMBusinessAttribute mmUsedAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(LimitSearchCriteria3.mmUsedAmount, Limit4.mmUsedAmount, LimitAmount1.mmUtilisationAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UsedAmount";
 			definition = "Actual usage of the limit expressed as an amount.";
@@ -572,8 +608,8 @@ public class Limit {
 	};
 	protected PercentageRate usedPercentage;
 	/**
-	 * Actual usage of the limit expressed as a percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -607,8 +643,8 @@ public class Limit {
 	public static final MMBusinessAttribute mmUsedPercentage = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(LimitSearchCriteria3.mmUsedPercentage);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UsedPercentage";
 			definition = "Actual usage of the limit expressed as a percentage.";
@@ -627,8 +663,8 @@ public class Limit {
 	};
 	protected CurrencyCode currency;
 	/**
-	 * Currency unit used to specify the limit amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -689,8 +725,8 @@ public class Limit {
 		{
 			derivation_lazy = () -> Arrays.asList(LimitSearchCriteria3.mmLimitCurrency, CurrencyFactors1.mmCurrency, LimitIdentification4.mmLimitCurrency, LimitUtilisationJournalSearchCriteria1.mmLimitCurrency,
 					ATMTransactionAmounts2.mmCurrency, ATMTransactionAmounts3.mmCurrency, ATMTransactionAmounts8.mmCurrency, ATMTransactionAmounts9.mmCurrency, ATMTransactionAmounts6.mmCurrency, ATMTransactionAmounts7.mmCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
 			definition = "Currency unit used to specify the limit amount.";
@@ -709,8 +745,8 @@ public class Limit {
 	};
 	protected List<com.tools20022.repository.entity.LimitStatus> limitStatus;
 	/**
-	 * Current status of the limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -763,8 +799,8 @@ public class Limit {
 	public static final MMBusinessAssociationEnd mmLimitStatus = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(LimitDetails3.mmStatus, Limit4.mmStatus, ReservationDetails1.mmStatus, ReservationStatus1Choice.mmCode, ReservationStatus1Choice.mmProprietary, Reservation1.mmStatus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LimitStatus";
 			definition = "Current status of the limit.";
@@ -776,8 +812,8 @@ public class Limit {
 	};
 	protected PercentageRate percentage;
 	/**
-	 * Specifies that the limit is a percentage of a related amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -811,8 +847,8 @@ public class Limit {
 	public static final MMBusinessAttribute mmPercentage = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Limit4.mmUsedPercentage);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Percentage";
 			definition = "Specifies that the limit is a percentage of a related amount.";
@@ -831,8 +867,8 @@ public class Limit {
 	};
 	protected DebitCreditFacility relatedDebitCreditFacility;
 	/**
-	 * Overdraft conditions for which limit parameters are specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -865,8 +901,8 @@ public class Limit {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedDebitCreditFacility = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedDebitCreditFacility";
 			definition = "Overdraft conditions for which limit parameters are specified.";
@@ -879,9 +915,8 @@ public class Limit {
 	};
 	protected FrequencyCode periodicity;
 	/**
-	 * Specifies the periodicity linked to a limit for example the periodicity
-	 * can indicate that the limit can be reached daily or monthly.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -908,8 +943,8 @@ public class Limit {
 	 */
 	public static final MMBusinessAttribute mmPeriodicity = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Periodicity";
 			definition = "Specifies the periodicity linked to a limit for example the periodicity can indicate that the limit can be reached daily or monthly.";
@@ -928,8 +963,8 @@ public class Limit {
 	};
 	protected DecimalNumber quantity;
 	/**
-	 * Specifies that the limit is a quantity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -954,8 +989,8 @@ public class Limit {
 	 */
 	public static final MMBusinessAttribute mmQuantity = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quantity";
 			definition = "Specifies that the limit is a quantity.";
@@ -974,8 +1009,8 @@ public class Limit {
 	};
 	protected List<com.tools20022.repository.entity.DateTimePeriod> validityPeriod;
 	/**
-	 * Period at which the limit is effective.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1007,8 +1042,8 @@ public class Limit {
 	 */
 	public static final MMBusinessAssociationEnd mmValidityPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Period at which the limit is effective.";
@@ -1020,8 +1055,8 @@ public class Limit {
 	};
 	protected PaymentCard relatedPaymentCard;
 	/**
-	 * Payment card for which a limit is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1053,8 +1088,8 @@ public class Limit {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPaymentCard = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPaymentCard";
 			definition = "Payment card for which a limit is specified.";
@@ -1067,8 +1102,8 @@ public class Limit {
 	};
 	protected CurrencyAndAmount availableAmount;
 	/**
-	 * Remaining amount of money of the limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1115,8 +1150,8 @@ public class Limit {
 		{
 			derivation_lazy = () -> Arrays.asList(LimitAmount1.mmAvailableAmount, ATMTransactionAmounts4.mmAvailableAmount, ATMTransactionAmounts2.mmMaximumAuthorisableAmount, ATMTransactionAmounts8.mmMaximumPossibleAmount,
 					ATMTransactionAmounts6.mmMaximumPossibleAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Limit.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AvailableAmount";
 			definition = "Remaining amount of money of the limit.";
@@ -1137,7 +1172,7 @@ public class Limit {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Limit";
 				definition = "Value used for risk containment in a system or towards counterparts. The limit may be a current limit or a default limit.";
@@ -1168,111 +1203,125 @@ public class Limit {
 		return type;
 	}
 
-	public void setType(LimitTypeCode type) {
-		this.type = type;
+	public Limit setType(LimitTypeCode type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
-		this.amount = amount;
+	public Limit setAmount(CurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
 	public FloorLimitTypeCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
 
-	public void setCreditDebitIndicator(FloorLimitTypeCode creditDebitIndicator) {
-		this.creditDebitIndicator = creditDebitIndicator;
+	public Limit setCreditDebitIndicator(FloorLimitTypeCode creditDebitIndicator) {
+		this.creditDebitIndicator = Objects.requireNonNull(creditDebitIndicator);
+		return this;
 	}
 
-	public CurrencyAndAmount getUsedAmount() {
-		return usedAmount;
+	public Optional<CurrencyAndAmount> getUsedAmount() {
+		return usedAmount == null ? Optional.empty() : Optional.of(usedAmount);
 	}
 
-	public void setUsedAmount(CurrencyAndAmount usedAmount) {
+	public Limit setUsedAmount(CurrencyAndAmount usedAmount) {
 		this.usedAmount = usedAmount;
+		return this;
 	}
 
-	public PercentageRate getUsedPercentage() {
-		return usedPercentage;
+	public Optional<PercentageRate> getUsedPercentage() {
+		return usedPercentage == null ? Optional.empty() : Optional.of(usedPercentage);
 	}
 
-	public void setUsedPercentage(PercentageRate usedPercentage) {
+	public Limit setUsedPercentage(PercentageRate usedPercentage) {
 		this.usedPercentage = usedPercentage;
+		return this;
 	}
 
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
 
-	public void setCurrency(CurrencyCode currency) {
-		this.currency = currency;
+	public Limit setCurrency(CurrencyCode currency) {
+		this.currency = Objects.requireNonNull(currency);
+		return this;
 	}
 
 	public List<LimitStatus> getLimitStatus() {
-		return limitStatus;
+		return limitStatus == null ? limitStatus = new ArrayList<>() : limitStatus;
 	}
 
-	public void setLimitStatus(List<com.tools20022.repository.entity.LimitStatus> limitStatus) {
-		this.limitStatus = limitStatus;
+	public Limit setLimitStatus(List<com.tools20022.repository.entity.LimitStatus> limitStatus) {
+		this.limitStatus = Objects.requireNonNull(limitStatus);
+		return this;
 	}
 
 	public PercentageRate getPercentage() {
 		return percentage;
 	}
 
-	public void setPercentage(PercentageRate percentage) {
-		this.percentage = percentage;
+	public Limit setPercentage(PercentageRate percentage) {
+		this.percentage = Objects.requireNonNull(percentage);
+		return this;
 	}
 
 	public DebitCreditFacility getRelatedDebitCreditFacility() {
 		return relatedDebitCreditFacility;
 	}
 
-	public void setRelatedDebitCreditFacility(com.tools20022.repository.entity.DebitCreditFacility relatedDebitCreditFacility) {
-		this.relatedDebitCreditFacility = relatedDebitCreditFacility;
+	public Limit setRelatedDebitCreditFacility(com.tools20022.repository.entity.DebitCreditFacility relatedDebitCreditFacility) {
+		this.relatedDebitCreditFacility = Objects.requireNonNull(relatedDebitCreditFacility);
+		return this;
 	}
 
 	public FrequencyCode getPeriodicity() {
 		return periodicity;
 	}
 
-	public void setPeriodicity(FrequencyCode periodicity) {
-		this.periodicity = periodicity;
+	public Limit setPeriodicity(FrequencyCode periodicity) {
+		this.periodicity = Objects.requireNonNull(periodicity);
+		return this;
 	}
 
 	public DecimalNumber getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(DecimalNumber quantity) {
-		this.quantity = quantity;
+	public Limit setQuantity(DecimalNumber quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
 	public List<DateTimePeriod> getValidityPeriod() {
-		return validityPeriod;
+		return validityPeriod == null ? validityPeriod = new ArrayList<>() : validityPeriod;
 	}
 
-	public void setValidityPeriod(List<com.tools20022.repository.entity.DateTimePeriod> validityPeriod) {
-		this.validityPeriod = validityPeriod;
+	public Limit setValidityPeriod(List<com.tools20022.repository.entity.DateTimePeriod> validityPeriod) {
+		this.validityPeriod = Objects.requireNonNull(validityPeriod);
+		return this;
 	}
 
 	public PaymentCard getRelatedPaymentCard() {
 		return relatedPaymentCard;
 	}
 
-	public void setRelatedPaymentCard(com.tools20022.repository.entity.PaymentCard relatedPaymentCard) {
-		this.relatedPaymentCard = relatedPaymentCard;
+	public Limit setRelatedPaymentCard(com.tools20022.repository.entity.PaymentCard relatedPaymentCard) {
+		this.relatedPaymentCard = Objects.requireNonNull(relatedPaymentCard);
+		return this;
 	}
 
 	public CurrencyAndAmount getAvailableAmount() {
 		return availableAmount;
 	}
 
-	public void setAvailableAmount(CurrencyAndAmount availableAmount) {
-		this.availableAmount = availableAmount;
+	public Limit setAvailableAmount(CurrencyAndAmount availableAmount) {
+		this.availableAmount = Objects.requireNonNull(availableAmount);
+		return this;
 	}
 }

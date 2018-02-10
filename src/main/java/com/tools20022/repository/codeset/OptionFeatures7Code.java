@@ -20,58 +20,62 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OptionFeaturesCode;
+import com.tools20022.repository.codeset.OptionFeatures7Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the features that may apply to a corporate action option.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.OptionFeaturesCode
- * OptionFeaturesCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#mmOptionApplicability
- * OptionFeatures7Code.mmOptionApplicability}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#OptionApplicability
+ * OptionFeatures7Code.OptionApplicability}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#mmConditional
- * OptionFeatures7Code.mmConditional}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#Conditional
+ * OptionFeatures7Code.Conditional}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#mmMaximumCash
- * OptionFeatures7Code.mmMaximumCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#MaximumCash
+ * OptionFeatures7Code.MaximumCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#mmMaximumSecurities
- * OptionFeatures7Code.mmMaximumSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#MaximumSecurities
+ * OptionFeatures7Code.MaximumSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#mmOddLotPreference
- * OptionFeatures7Code.mmOddLotPreference}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#OddLotPreference
+ * OptionFeatures7Code.OddLotPreference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#mmProration
- * OptionFeatures7Code.mmProration}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#Proration
+ * OptionFeatures7Code.Proration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#mmReducedWithholdingTax
- * OptionFeatures7Code.mmReducedWithholdingTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#ReducedWithholdingTax
+ * OptionFeatures7Code.ReducedWithholdingTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#mmNoServiceOffered
- * OptionFeatures7Code.mmNoServiceOffered}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#NoServiceOffered
+ * OptionFeatures7Code.NoServiceOffered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#mmPreviousInstructionInvalidity
- * OptionFeatures7Code.mmPreviousInstructionInvalidity}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#PreviousInstructionInvalidity
+ * OptionFeatures7Code.PreviousInstructionInvalidity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#mmAccountServicerOption
- * OptionFeatures7Code.mmAccountServicerOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionFeatures7Code#AccountServicerOption
+ * OptionFeatures7Code.AccountServicerOption}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.OptionFeaturesCode
+ * OptionFeaturesCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +97,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * OptionFeatures4Code}</li>
  * </ul>
  */
-public class OptionFeatures7Code extends OptionFeaturesCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OptionFeatures7Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -113,16 +118,17 @@ public class OptionFeatures7Code extends OptionFeaturesCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#mmOptionApplicability
-	 * OptionFeatures4Code.mmOptionApplicability}</li>
+	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#OptionApplicability
+	 * OptionFeatures4Code.OptionApplicability}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOptionApplicability = new MMCode() {
+	public static final OptionFeatures7Code OptionApplicability = new OptionFeatures7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionApplicability";
-			previousVersion_lazy = () -> OptionFeatures4Code.mmOptionApplicability;
-			owner_lazy = () -> OptionFeatures7Code.mmObject();
+			previousVersion_lazy = () -> OptionFeatures4Code.OptionApplicability;
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures7Code.mmObject();
+			codeName = OptionFeaturesCode.OptionApplicability.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -142,16 +148,17 @@ public class OptionFeatures7Code extends OptionFeaturesCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#mmConditional
-	 * OptionFeatures4Code.mmConditional}</li>
+	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#Conditional
+	 * OptionFeatures4Code.Conditional}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConditional = new MMCode() {
+	public static final OptionFeatures7Code Conditional = new OptionFeatures7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Conditional";
-			previousVersion_lazy = () -> OptionFeatures4Code.mmConditional;
-			owner_lazy = () -> OptionFeatures7Code.mmObject();
+			previousVersion_lazy = () -> OptionFeatures4Code.Conditional;
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures7Code.mmObject();
+			codeName = OptionFeaturesCode.Conditional.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -171,16 +178,17 @@ public class OptionFeatures7Code extends OptionFeaturesCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#mmMaximumCash
-	 * OptionFeatures4Code.mmMaximumCash}</li>
+	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#MaximumCash
+	 * OptionFeatures4Code.MaximumCash}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMaximumCash = new MMCode() {
+	public static final OptionFeatures7Code MaximumCash = new OptionFeatures7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumCash";
-			previousVersion_lazy = () -> OptionFeatures4Code.mmMaximumCash;
-			owner_lazy = () -> OptionFeatures7Code.mmObject();
+			previousVersion_lazy = () -> OptionFeatures4Code.MaximumCash;
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures7Code.mmObject();
+			codeName = OptionFeaturesCode.MaximumCash.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -200,16 +208,17 @@ public class OptionFeatures7Code extends OptionFeaturesCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#mmMaximumSecurities
-	 * OptionFeatures4Code.mmMaximumSecurities}</li>
+	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#MaximumSecurities
+	 * OptionFeatures4Code.MaximumSecurities}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMaximumSecurities = new MMCode() {
+	public static final OptionFeatures7Code MaximumSecurities = new OptionFeatures7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumSecurities";
-			previousVersion_lazy = () -> OptionFeatures4Code.mmMaximumSecurities;
-			owner_lazy = () -> OptionFeatures7Code.mmObject();
+			previousVersion_lazy = () -> OptionFeatures4Code.MaximumSecurities;
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures7Code.mmObject();
+			codeName = OptionFeaturesCode.MaximumSecurities.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -229,16 +238,17 @@ public class OptionFeatures7Code extends OptionFeaturesCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#mmOddLotPreference
-	 * OptionFeatures4Code.mmOddLotPreference}</li>
+	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#OddLotPreference
+	 * OptionFeatures4Code.OddLotPreference}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOddLotPreference = new MMCode() {
+	public static final OptionFeatures7Code OddLotPreference = new OptionFeatures7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OddLotPreference";
-			previousVersion_lazy = () -> OptionFeatures4Code.mmOddLotPreference;
-			owner_lazy = () -> OptionFeatures7Code.mmObject();
+			previousVersion_lazy = () -> OptionFeatures4Code.OddLotPreference;
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures7Code.mmObject();
+			codeName = OptionFeaturesCode.OddLotPreference.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -258,16 +268,17 @@ public class OptionFeatures7Code extends OptionFeaturesCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#mmProration
-	 * OptionFeatures4Code.mmProration}</li>
+	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#Proration
+	 * OptionFeatures4Code.Proration}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProration = new MMCode() {
+	public static final OptionFeatures7Code Proration = new OptionFeatures7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proration";
-			previousVersion_lazy = () -> OptionFeatures4Code.mmProration;
-			owner_lazy = () -> OptionFeatures7Code.mmObject();
+			previousVersion_lazy = () -> OptionFeatures4Code.Proration;
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures7Code.mmObject();
+			codeName = OptionFeaturesCode.Proration.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -287,16 +298,17 @@ public class OptionFeatures7Code extends OptionFeaturesCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#mmReducedWithholdingTax
-	 * OptionFeatures4Code.mmReducedWithholdingTax}</li>
+	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#ReducedWithholdingTax
+	 * OptionFeatures4Code.ReducedWithholdingTax}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReducedWithholdingTax = new MMCode() {
+	public static final OptionFeatures7Code ReducedWithholdingTax = new OptionFeatures7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReducedWithholdingTax";
-			previousVersion_lazy = () -> OptionFeatures4Code.mmReducedWithholdingTax;
-			owner_lazy = () -> OptionFeatures7Code.mmObject();
+			previousVersion_lazy = () -> OptionFeatures4Code.ReducedWithholdingTax;
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures7Code.mmObject();
+			codeName = OptionFeaturesCode.ReducedWithholdingTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -316,16 +328,17 @@ public class OptionFeatures7Code extends OptionFeaturesCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#mmNoServiceOffered
-	 * OptionFeatures4Code.mmNoServiceOffered}</li>
+	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#NoServiceOffered
+	 * OptionFeatures4Code.NoServiceOffered}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoServiceOffered = new MMCode() {
+	public static final OptionFeatures7Code NoServiceOffered = new OptionFeatures7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoServiceOffered";
-			previousVersion_lazy = () -> OptionFeatures4Code.mmNoServiceOffered;
-			owner_lazy = () -> OptionFeatures7Code.mmObject();
+			previousVersion_lazy = () -> OptionFeatures4Code.NoServiceOffered;
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures7Code.mmObject();
+			codeName = OptionFeaturesCode.NoServiceOffered.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -345,16 +358,17 @@ public class OptionFeatures7Code extends OptionFeaturesCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#mmPreviousInstructionInvalidity
-	 * OptionFeatures4Code.mmPreviousInstructionInvalidity}</li>
+	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#PreviousInstructionInvalidity
+	 * OptionFeatures4Code.PreviousInstructionInvalidity}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreviousInstructionInvalidity = new MMCode() {
+	public static final OptionFeatures7Code PreviousInstructionInvalidity = new OptionFeatures7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructionInvalidity";
-			previousVersion_lazy = () -> OptionFeatures4Code.mmPreviousInstructionInvalidity;
-			owner_lazy = () -> OptionFeatures7Code.mmObject();
+			previousVersion_lazy = () -> OptionFeatures4Code.PreviousInstructionInvalidity;
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures7Code.mmObject();
+			codeName = OptionFeaturesCode.PreviousInstructionInvalidity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -374,34 +388,74 @@ public class OptionFeatures7Code extends OptionFeaturesCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#mmAccountServicerOption
-	 * OptionFeatures4Code.mmAccountServicerOption}</li>
+	 * {@linkplain com.tools20022.repository.codeset.OptionFeatures4Code#AccountServicerOption
+	 * OptionFeatures4Code.AccountServicerOption}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountServicerOption = new MMCode() {
+	public static final OptionFeatures7Code AccountServicerOption = new OptionFeatures7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerOption";
-			previousVersion_lazy = () -> OptionFeatures4Code.mmAccountServicerOption;
-			owner_lazy = () -> OptionFeatures7Code.mmObject();
+			previousVersion_lazy = () -> OptionFeatures4Code.AccountServicerOption;
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionFeatures7Code.mmObject();
+			codeName = OptionFeaturesCode.AccountServicerOption.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OptionFeatures7Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OptionFeatures7Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CAOS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionFeatures7Code";
 				definition = "Specifies the features that may apply to a corporate action option.";
 				previousVersion_lazy = () -> OptionFeatures4Code.mmObject();
-				code_lazy = () -> Arrays.asList(OptionFeatures7Code.mmOptionApplicability, OptionFeatures7Code.mmConditional, OptionFeatures7Code.mmMaximumCash, OptionFeatures7Code.mmMaximumSecurities,
-						OptionFeatures7Code.mmOddLotPreference, OptionFeatures7Code.mmProration, OptionFeatures7Code.mmReducedWithholdingTax, OptionFeatures7Code.mmNoServiceOffered, OptionFeatures7Code.mmPreviousInstructionInvalidity,
-						OptionFeatures7Code.mmAccountServicerOption);
 				trace_lazy = () -> OptionFeaturesCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures7Code.OptionApplicability, com.tools20022.repository.codeset.OptionFeatures7Code.Conditional,
+						com.tools20022.repository.codeset.OptionFeatures7Code.MaximumCash, com.tools20022.repository.codeset.OptionFeatures7Code.MaximumSecurities, com.tools20022.repository.codeset.OptionFeatures7Code.OddLotPreference,
+						com.tools20022.repository.codeset.OptionFeatures7Code.Proration, com.tools20022.repository.codeset.OptionFeatures7Code.ReducedWithholdingTax, com.tools20022.repository.codeset.OptionFeatures7Code.NoServiceOffered,
+						com.tools20022.repository.codeset.OptionFeatures7Code.PreviousInstructionInvalidity, com.tools20022.repository.codeset.OptionFeatures7Code.AccountServicerOption);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(OptionApplicability.getCodeName().get(), OptionApplicability);
+		codesByName.put(Conditional.getCodeName().get(), Conditional);
+		codesByName.put(MaximumCash.getCodeName().get(), MaximumCash);
+		codesByName.put(MaximumSecurities.getCodeName().get(), MaximumSecurities);
+		codesByName.put(OddLotPreference.getCodeName().get(), OddLotPreference);
+		codesByName.put(Proration.getCodeName().get(), Proration);
+		codesByName.put(ReducedWithholdingTax.getCodeName().get(), ReducedWithholdingTax);
+		codesByName.put(NoServiceOffered.getCodeName().get(), NoServiceOffered);
+		codesByName.put(PreviousInstructionInvalidity.getCodeName().get(), PreviousInstructionInvalidity);
+		codesByName.put(AccountServicerOption.getCodeName().get(), AccountServicerOption);
+	}
+
+	public static OptionFeatures7Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OptionFeatures7Code[] values() {
+		OptionFeatures7Code[] values = new OptionFeatures7Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OptionFeatures7Code> {
+		@Override
+		public OptionFeatures7Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OptionFeatures7Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

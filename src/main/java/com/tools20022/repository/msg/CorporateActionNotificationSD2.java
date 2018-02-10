@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,8 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -90,8 +93,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,16 +106,17 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides additional information regarding corporate action notification."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionNotificationSD2", propOrder = {"placeAndName", "derivativeWorkflowStatus", "derivativeExchange", "derivativePublicationDate", "derivativeAdjustmentDate", "derivativeCalculationMethod", "derivativeFactor",
 		"lotSizeChangeFlag", "lotAdjustmentMethod", "strikePriceChangeFlag", "strikePriceRoundingMethod", "residualCashFlag", "referencePrice", "referencePriceCurrency", "approvedFlag"})
 public class CorporateActionNotificationSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +143,7 @@ public class CorporateActionNotificationSD2 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -150,10 +154,11 @@ public class CorporateActionNotificationSD2 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DerivWorkflwSts", required = true)
 	protected DerivativeWorkflowStatus1Code derivativeWorkflowStatus;
 	/**
-	 * Status of a notice of change.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,6 +174,9 @@ public class CorporateActionNotificationSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DerivWorkflwSts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Derivative Workflow Status</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -181,9 +189,10 @@ public class CorporateActionNotificationSD2 {
 	 */
 	public static final MMMessageAttribute mmDerivativeWorkflowStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DerivWorkflwSts";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Derivative Workflow Status"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativeWorkflowStatus";
 			definition = "Status of a notice of change.";
@@ -192,10 +201,11 @@ public class CorporateActionNotificationSD2 {
 			simpleType_lazy = () -> DerivativeWorkflowStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DerivXchg", required = true)
 	protected Max4AlphaNumericText derivativeExchange;
 	/**
-	 * Exchange where the derivative is traded.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,6 +221,9 @@ public class CorporateActionNotificationSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DerivXchg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Derivative Exchange</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -223,9 +236,10 @@ public class CorporateActionNotificationSD2 {
 	 */
 	public static final MMMessageAttribute mmDerivativeExchange = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DerivXchg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Derivative Exchange"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativeExchange";
 			definition = "Exchange where the derivative is traded.";
@@ -234,11 +248,11 @@ public class CorporateActionNotificationSD2 {
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "DerivPblctnDt")
 	protected ISODate derivativePublicationDate;
 	/**
-	 * Date when the notice of change to the derivative is published by the
-	 * exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -252,6 +266,9 @@ public class CorporateActionNotificationSD2 {
 	 * CorporateActionNotificationSD2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DerivPblctnDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Derivative Publication Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -267,9 +284,10 @@ public class CorporateActionNotificationSD2 {
 	 */
 	public static final MMMessageAttribute mmDerivativePublicationDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DerivPblctnDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Derivative Publication Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativePublicationDate";
 			definition = "Date when the notice of change to the derivative is published by the exchange.";
@@ -278,10 +296,11 @@ public class CorporateActionNotificationSD2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DerivAdjstmntDt", required = true)
 	protected ISODate derivativeAdjustmentDate;
 	/**
-	 * Effective date of the adjustment to the derivative contract.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -296,6 +315,9 @@ public class CorporateActionNotificationSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DerivAdjstmntDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Derivative Adjustment Date</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -309,9 +331,10 @@ public class CorporateActionNotificationSD2 {
 	 */
 	public static final MMMessageAttribute mmDerivativeAdjustmentDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DerivAdjstmntDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Derivative Adjustment Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativeAdjustmentDate";
 			definition = "Effective date of the adjustment to the derivative contract.";
@@ -320,12 +343,11 @@ public class CorporateActionNotificationSD2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DerivClctnMtd")
 	protected Max1025Text derivativeCalculationMethod;
 	/**
-	 * Method (usually a formula) that will be used to calculate the adjustment
-	 * factor that will be applied to the derivative to account for the impact
-	 * of a corporate action event on the underlying equity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -339,6 +361,9 @@ public class CorporateActionNotificationSD2 {
 	 * CorporateActionNotificationSD2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DerivClctnMtd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Derivative Calculation Method</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -354,9 +379,10 @@ public class CorporateActionNotificationSD2 {
 	 */
 	public static final MMMessageAttribute mmDerivativeCalculationMethod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DerivClctnMtd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Derivative Calculation Method"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativeCalculationMethod";
 			definition = "Method (usually a formula) that will be used to calculate the adjustment factor that will be applied to the derivative to account for the impact of a corporate action event on the underlying equity.";
@@ -365,12 +391,11 @@ public class CorporateActionNotificationSD2 {
 			simpleType_lazy = () -> Max1025Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DerivFctr")
 	protected DecimalNumber derivativeFactor;
 	/**
-	 * Adjustment factor to be applied to the derivative contract to account for
-	 * the impact of a corporate action event on the underlying equity. Derived
-	 * by using the calculation method.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -386,6 +411,9 @@ public class CorporateActionNotificationSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DerivFctr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Derivative Factor</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -400,9 +428,10 @@ public class CorporateActionNotificationSD2 {
 	 */
 	public static final MMMessageAttribute mmDerivativeFactor = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DerivFctr";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Derivative Factor"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativeFactor";
 			definition = "Adjustment factor to be applied to the derivative contract to account for the impact of a corporate action event on the underlying equity. Derived by using the calculation method. ";
@@ -411,11 +440,11 @@ public class CorporateActionNotificationSD2 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "LotSzChngFlg")
 	protected YesNoIndicator lotSizeChangeFlag;
 	/**
-	 * Indicates whether the deliverable stock amount on the derivative contract
-	 * will be changed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -431,6 +460,9 @@ public class CorporateActionNotificationSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LotSzChngFlg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Lot Size Change Flag</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -445,9 +477,10 @@ public class CorporateActionNotificationSD2 {
 	 */
 	public static final MMMessageAttribute mmLotSizeChangeFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "LotSzChngFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Lot Size Change Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotSizeChangeFlag";
 			definition = "Indicates whether the deliverable stock amount on the derivative contract will be changed.";
@@ -456,12 +489,11 @@ public class CorporateActionNotificationSD2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "LotAdjstmntMtd")
 	protected Max1025Text lotAdjustmentMethod;
 	/**
-	 * Method that is used to calculate the new stock deliverable on the
-	 * derivative contract. Usually multiplication or division by a stated
-	 * figure but may include explanatory text and examples.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -475,6 +507,9 @@ public class CorporateActionNotificationSD2 {
 	 * CorporateActionNotificationSD2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LotAdjstmntMtd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Lot Adjustment Method</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -490,9 +525,10 @@ public class CorporateActionNotificationSD2 {
 	 */
 	public static final MMMessageAttribute mmLotAdjustmentMethod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "LotAdjstmntMtd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Lot Adjustment Method"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotAdjustmentMethod";
 			definition = "Method that is used to calculate the new stock deliverable on the derivative contract. Usually multiplication or division by a stated figure but may include explanatory text and examples. ";
@@ -501,11 +537,11 @@ public class CorporateActionNotificationSD2 {
 			simpleType_lazy = () -> Max1025Text.mmObject();
 		}
 	};
+	@XmlElement(name = "StrkPricChngFlg")
 	protected YesNoIndicator strikePriceChangeFlag;
 	/**
-	 * Indicates whether there is a new strike price for the change of the
-	 * derivative contract as a result of the corporate action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -521,6 +557,9 @@ public class CorporateActionNotificationSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StrkPricChngFlg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Strike Price Change Flag</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -535,9 +574,10 @@ public class CorporateActionNotificationSD2 {
 	 */
 	public static final MMMessageAttribute mmStrikePriceChangeFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "StrkPricChngFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Strike Price Change Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikePriceChangeFlag";
 			definition = "Indicates whether there is a new strike price for the change of the derivative contract as a result of the corporate action.";
@@ -546,11 +586,11 @@ public class CorporateActionNotificationSD2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "StrkPricRndgMtd")
 	protected Max500Text strikePriceRoundingMethod;
 	/**
-	 * Method that will be used to adjust the strike price. May include the
-	 * number of decimal places and rounding rules, example up or down.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -564,6 +604,9 @@ public class CorporateActionNotificationSD2 {
 	 * CorporateActionNotificationSD2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StrkPricRndgMtd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Strike Price Rounding Method</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -579,9 +622,10 @@ public class CorporateActionNotificationSD2 {
 	 */
 	public static final MMMessageAttribute mmStrikePriceRoundingMethod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "StrkPricRndgMtd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Strike Price Rounding Method"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikePriceRoundingMethod";
 			definition = "Method that will be used to adjust the strike price. May include the number of decimal places and rounding rules, example up or down.";
@@ -590,12 +634,11 @@ public class CorporateActionNotificationSD2 {
 			simpleType_lazy = () -> Max500Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RsdlCshFlg")
 	protected YesNoIndicator residualCashFlag;
 	/**
-	 * Indicates whether a residual cash is paid on the derivative contract. For
-	 * example, this may be a cash element that is included in the terms of a
-	 * takeover that the underlying equity is subject to.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -611,6 +654,9 @@ public class CorporateActionNotificationSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RsdlCshFlg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Residual Cash Flag</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -625,9 +671,10 @@ public class CorporateActionNotificationSD2 {
 	 */
 	public static final MMMessageAttribute mmResidualCashFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "RsdlCshFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Residual Cash Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResidualCashFlag";
 			definition = "Indicates whether a residual cash is paid on the derivative contract. For example, this may be a cash element that is included in the terms of a takeover that the underlying equity is subject to.";
@@ -636,12 +683,11 @@ public class CorporateActionNotificationSD2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "RefPric")
 	protected DecimalNumber referencePrice;
 	/**
-	 * Price of the security to be used in factor calculations. Usually the
-	 * closing price of the underlying equity on the effective date of the
-	 * contract adjustment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -657,6 +703,9 @@ public class CorporateActionNotificationSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RefPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Reference Price</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -671,9 +720,10 @@ public class CorporateActionNotificationSD2 {
 	 */
 	public static final MMMessageAttribute mmReferencePrice = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "RefPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Reference Price"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferencePrice";
 			definition = "Price of the security to be used in factor calculations. Usually the closing price of the underlying equity on the effective date of the contract adjustment.";
@@ -682,10 +732,11 @@ public class CorporateActionNotificationSD2 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "RefPricCcy")
 	protected ActiveCurrencyCode referencePriceCurrency;
 	/**
-	 * Currency associated with the reference price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -701,6 +752,9 @@ public class CorporateActionNotificationSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RefPricCcy"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Reference Price Currency</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -713,9 +767,10 @@ public class CorporateActionNotificationSD2 {
 	 */
 	public static final MMMessageAttribute mmReferencePriceCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "RefPricCcy";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Reference Price Currency"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferencePriceCurrency";
 			definition = "Currency associated with the reference price.";
@@ -724,11 +779,11 @@ public class CorporateActionNotificationSD2 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "ApprvdFlg")
 	protected YesNoIndicator approvedFlag;
 	/**
-	 * Indicates whether the derivative data has/hasn't been approved by a
-	 * validation service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -744,6 +799,9 @@ public class CorporateActionNotificationSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ApprvdFlg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Approved Flag</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -758,9 +816,10 @@ public class CorporateActionNotificationSD2 {
 	 */
 	public static final MMMessageAttribute mmApprovedFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "ApprvdFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Approved Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedFlag";
 			definition = "Indicates whether the derivative data has/hasn't been approved by a validation service.";
@@ -773,12 +832,15 @@ public class CorporateActionNotificationSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionNotificationSD2.mmPlaceAndName, CorporateActionNotificationSD2.mmDerivativeWorkflowStatus, CorporateActionNotificationSD2.mmDerivativeExchange,
-						CorporateActionNotificationSD2.mmDerivativePublicationDate, CorporateActionNotificationSD2.mmDerivativeAdjustmentDate, CorporateActionNotificationSD2.mmDerivativeCalculationMethod,
-						CorporateActionNotificationSD2.mmDerivativeFactor, CorporateActionNotificationSD2.mmLotSizeChangeFlag, CorporateActionNotificationSD2.mmLotAdjustmentMethod, CorporateActionNotificationSD2.mmStrikePriceChangeFlag,
-						CorporateActionNotificationSD2.mmStrikePriceRoundingMethod, CorporateActionNotificationSD2.mmResidualCashFlag, CorporateActionNotificationSD2.mmReferencePrice,
-						CorporateActionNotificationSD2.mmReferencePriceCurrency, CorporateActionNotificationSD2.mmApprovedFlag);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotificationSD2.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionNotificationSD2.mmDerivativeWorkflowStatus,
+						com.tools20022.repository.msg.CorporateActionNotificationSD2.mmDerivativeExchange, com.tools20022.repository.msg.CorporateActionNotificationSD2.mmDerivativePublicationDate,
+						com.tools20022.repository.msg.CorporateActionNotificationSD2.mmDerivativeAdjustmentDate, com.tools20022.repository.msg.CorporateActionNotificationSD2.mmDerivativeCalculationMethod,
+						com.tools20022.repository.msg.CorporateActionNotificationSD2.mmDerivativeFactor, com.tools20022.repository.msg.CorporateActionNotificationSD2.mmLotSizeChangeFlag,
+						com.tools20022.repository.msg.CorporateActionNotificationSD2.mmLotAdjustmentMethod, com.tools20022.repository.msg.CorporateActionNotificationSD2.mmStrikePriceChangeFlag,
+						com.tools20022.repository.msg.CorporateActionNotificationSD2.mmStrikePriceRoundingMethod, com.tools20022.repository.msg.CorporateActionNotificationSD2.mmResidualCashFlag,
+						com.tools20022.repository.msg.CorporateActionNotificationSD2.mmReferencePrice, com.tools20022.repository.msg.CorporateActionNotificationSD2.mmReferencePriceCurrency,
+						com.tools20022.repository.msg.CorporateActionNotificationSD2.mmApprovedFlag);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionNotificationSD2";
 				definition = "Provides additional information regarding corporate action notification.";
@@ -787,138 +849,138 @@ public class CorporateActionNotificationSD2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionNotificationSD2 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "DerivWorkflwSts", required = true)
 	public DerivativeWorkflowStatus1Code getDerivativeWorkflowStatus() {
 		return derivativeWorkflowStatus;
 	}
 
-	public void setDerivativeWorkflowStatus(DerivativeWorkflowStatus1Code derivativeWorkflowStatus) {
-		this.derivativeWorkflowStatus = derivativeWorkflowStatus;
+	public CorporateActionNotificationSD2 setDerivativeWorkflowStatus(DerivativeWorkflowStatus1Code derivativeWorkflowStatus) {
+		this.derivativeWorkflowStatus = Objects.requireNonNull(derivativeWorkflowStatus);
+		return this;
 	}
 
-	@XmlElement(name = "DerivXchg", required = true)
 	public Max4AlphaNumericText getDerivativeExchange() {
 		return derivativeExchange;
 	}
 
-	public void setDerivativeExchange(Max4AlphaNumericText derivativeExchange) {
-		this.derivativeExchange = derivativeExchange;
+	public CorporateActionNotificationSD2 setDerivativeExchange(Max4AlphaNumericText derivativeExchange) {
+		this.derivativeExchange = Objects.requireNonNull(derivativeExchange);
+		return this;
 	}
 
-	@XmlElement(name = "DerivPblctnDt")
-	public ISODate getDerivativePublicationDate() {
-		return derivativePublicationDate;
+	public Optional<ISODate> getDerivativePublicationDate() {
+		return derivativePublicationDate == null ? Optional.empty() : Optional.of(derivativePublicationDate);
 	}
 
-	public void setDerivativePublicationDate(ISODate derivativePublicationDate) {
+	public CorporateActionNotificationSD2 setDerivativePublicationDate(ISODate derivativePublicationDate) {
 		this.derivativePublicationDate = derivativePublicationDate;
+		return this;
 	}
 
-	@XmlElement(name = "DerivAdjstmntDt", required = true)
 	public ISODate getDerivativeAdjustmentDate() {
 		return derivativeAdjustmentDate;
 	}
 
-	public void setDerivativeAdjustmentDate(ISODate derivativeAdjustmentDate) {
-		this.derivativeAdjustmentDate = derivativeAdjustmentDate;
+	public CorporateActionNotificationSD2 setDerivativeAdjustmentDate(ISODate derivativeAdjustmentDate) {
+		this.derivativeAdjustmentDate = Objects.requireNonNull(derivativeAdjustmentDate);
+		return this;
 	}
 
-	@XmlElement(name = "DerivClctnMtd")
-	public Max1025Text getDerivativeCalculationMethod() {
-		return derivativeCalculationMethod;
+	public Optional<Max1025Text> getDerivativeCalculationMethod() {
+		return derivativeCalculationMethod == null ? Optional.empty() : Optional.of(derivativeCalculationMethod);
 	}
 
-	public void setDerivativeCalculationMethod(Max1025Text derivativeCalculationMethod) {
+	public CorporateActionNotificationSD2 setDerivativeCalculationMethod(Max1025Text derivativeCalculationMethod) {
 		this.derivativeCalculationMethod = derivativeCalculationMethod;
+		return this;
 	}
 
-	@XmlElement(name = "DerivFctr")
-	public DecimalNumber getDerivativeFactor() {
-		return derivativeFactor;
+	public Optional<DecimalNumber> getDerivativeFactor() {
+		return derivativeFactor == null ? Optional.empty() : Optional.of(derivativeFactor);
 	}
 
-	public void setDerivativeFactor(DecimalNumber derivativeFactor) {
+	public CorporateActionNotificationSD2 setDerivativeFactor(DecimalNumber derivativeFactor) {
 		this.derivativeFactor = derivativeFactor;
+		return this;
 	}
 
-	@XmlElement(name = "LotSzChngFlg")
-	public YesNoIndicator getLotSizeChangeFlag() {
-		return lotSizeChangeFlag;
+	public Optional<YesNoIndicator> getLotSizeChangeFlag() {
+		return lotSizeChangeFlag == null ? Optional.empty() : Optional.of(lotSizeChangeFlag);
 	}
 
-	public void setLotSizeChangeFlag(YesNoIndicator lotSizeChangeFlag) {
+	public CorporateActionNotificationSD2 setLotSizeChangeFlag(YesNoIndicator lotSizeChangeFlag) {
 		this.lotSizeChangeFlag = lotSizeChangeFlag;
+		return this;
 	}
 
-	@XmlElement(name = "LotAdjstmntMtd")
-	public Max1025Text getLotAdjustmentMethod() {
-		return lotAdjustmentMethod;
+	public Optional<Max1025Text> getLotAdjustmentMethod() {
+		return lotAdjustmentMethod == null ? Optional.empty() : Optional.of(lotAdjustmentMethod);
 	}
 
-	public void setLotAdjustmentMethod(Max1025Text lotAdjustmentMethod) {
+	public CorporateActionNotificationSD2 setLotAdjustmentMethod(Max1025Text lotAdjustmentMethod) {
 		this.lotAdjustmentMethod = lotAdjustmentMethod;
+		return this;
 	}
 
-	@XmlElement(name = "StrkPricChngFlg")
-	public YesNoIndicator getStrikePriceChangeFlag() {
-		return strikePriceChangeFlag;
+	public Optional<YesNoIndicator> getStrikePriceChangeFlag() {
+		return strikePriceChangeFlag == null ? Optional.empty() : Optional.of(strikePriceChangeFlag);
 	}
 
-	public void setStrikePriceChangeFlag(YesNoIndicator strikePriceChangeFlag) {
+	public CorporateActionNotificationSD2 setStrikePriceChangeFlag(YesNoIndicator strikePriceChangeFlag) {
 		this.strikePriceChangeFlag = strikePriceChangeFlag;
+		return this;
 	}
 
-	@XmlElement(name = "StrkPricRndgMtd")
-	public Max500Text getStrikePriceRoundingMethod() {
-		return strikePriceRoundingMethod;
+	public Optional<Max500Text> getStrikePriceRoundingMethod() {
+		return strikePriceRoundingMethod == null ? Optional.empty() : Optional.of(strikePriceRoundingMethod);
 	}
 
-	public void setStrikePriceRoundingMethod(Max500Text strikePriceRoundingMethod) {
+	public CorporateActionNotificationSD2 setStrikePriceRoundingMethod(Max500Text strikePriceRoundingMethod) {
 		this.strikePriceRoundingMethod = strikePriceRoundingMethod;
+		return this;
 	}
 
-	@XmlElement(name = "RsdlCshFlg")
-	public YesNoIndicator getResidualCashFlag() {
-		return residualCashFlag;
+	public Optional<YesNoIndicator> getResidualCashFlag() {
+		return residualCashFlag == null ? Optional.empty() : Optional.of(residualCashFlag);
 	}
 
-	public void setResidualCashFlag(YesNoIndicator residualCashFlag) {
+	public CorporateActionNotificationSD2 setResidualCashFlag(YesNoIndicator residualCashFlag) {
 		this.residualCashFlag = residualCashFlag;
+		return this;
 	}
 
-	@XmlElement(name = "RefPric")
-	public DecimalNumber getReferencePrice() {
-		return referencePrice;
+	public Optional<DecimalNumber> getReferencePrice() {
+		return referencePrice == null ? Optional.empty() : Optional.of(referencePrice);
 	}
 
-	public void setReferencePrice(DecimalNumber referencePrice) {
+	public CorporateActionNotificationSD2 setReferencePrice(DecimalNumber referencePrice) {
 		this.referencePrice = referencePrice;
+		return this;
 	}
 
-	@XmlElement(name = "RefPricCcy")
-	public ActiveCurrencyCode getReferencePriceCurrency() {
-		return referencePriceCurrency;
+	public Optional<ActiveCurrencyCode> getReferencePriceCurrency() {
+		return referencePriceCurrency == null ? Optional.empty() : Optional.of(referencePriceCurrency);
 	}
 
-	public void setReferencePriceCurrency(ActiveCurrencyCode referencePriceCurrency) {
+	public CorporateActionNotificationSD2 setReferencePriceCurrency(ActiveCurrencyCode referencePriceCurrency) {
 		this.referencePriceCurrency = referencePriceCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "ApprvdFlg")
-	public YesNoIndicator getApprovedFlag() {
-		return approvedFlag;
+	public Optional<YesNoIndicator> getApprovedFlag() {
+		return approvedFlag == null ? Optional.empty() : Optional.of(approvedFlag);
 	}
 
-	public void setApprovedFlag(YesNoIndicator approvedFlag) {
+	public CorporateActionNotificationSD2 setApprovedFlag(YesNoIndicator approvedFlag) {
 		this.approvedFlag = approvedFlag;
+		return this;
 	}
 }

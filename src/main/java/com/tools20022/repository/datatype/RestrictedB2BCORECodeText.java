@@ -19,8 +19,12 @@ package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMText;
+import com.tools20022.repository.datatype.RestrictedB2BCORECodeText.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * EPC Technical validation subset restricted to B2B or CORE code: - CORE: Used
@@ -35,8 +39,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -49,14 +53,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
 public class RestrictedB2BCORECodeText {
 
 	final static private AtomicReference<MMText> mmObject_lazy = new AtomicReference<>();
+	protected String value;
 
 	final static public MMText mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMText() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RestrictedB2BCORECodeText";
 				definition = "EPC Technical validation subset restricted to B2B or CORE code:\n- CORE: Used to indicate that the SEPA Core Direct Debit Scheme rules apply.\n- B2B: Used to indicate that the SEPA Business-to-Business Direct Debit Scheme rules apply.";
@@ -64,5 +70,26 @@ public class RestrictedB2BCORECodeText {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedB2BCORECodeText(String value) {
+		this.value = value;
+	}
+
+	@Override
+	public String toString() {
+		return value;
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RestrictedB2BCORECodeText> {
+		@Override
+		public RestrictedB2BCORECodeText unmarshal(String value) {
+			return new RestrictedB2BCORECodeText(value);
+		}
+
+		@Override
+		public String marshal(RestrictedB2BCORECodeText typedData) {
+			return typedData.value;
+		}
 	}
 }

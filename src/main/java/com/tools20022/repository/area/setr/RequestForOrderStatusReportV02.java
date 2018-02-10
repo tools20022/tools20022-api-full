@@ -25,9 +25,11 @@ import com.tools20022.repository.area.SecuritiesTradeArchive;
 import com.tools20022.repository.msg.MessageAndBusinessReference2;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -54,22 +56,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesTradeArchive
- * SecuritiesTradeArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "setr.018.001.02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "setr.018.001.02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -79,6 +65,22 @@ import javax.xml.bind.annotation.*;
  * RequestForOrderStatusReportV02.mmRequestDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "setr.018.001.02"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesTradeArchive
+ * SecuritiesTradeArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "setr.018.001.02"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code setr.018.001.02}</li>
@@ -102,15 +104,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "setr.018.001.02", propOrder = "requestDetails")
 public class RequestForOrderStatusReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ReqDtls", required = true)
 	protected List<MessageAndBusinessReference2> requestDetails;
 	/**
-	 * Information to identify the order(s) for which the status is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,16 +186,16 @@ public class RequestForOrderStatusReportV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ReqDtls", required = true)
 	public List<MessageAndBusinessReference2> getRequestDetails() {
-		return requestDetails;
+		return requestDetails == null ? requestDetails = new ArrayList<>() : requestDetails;
 	}
 
-	public void setRequestDetails(List<MessageAndBusinessReference2> requestDetails) {
-		this.requestDetails = requestDetails;
+	public RequestForOrderStatusReportV02 setRequestDetails(List<MessageAndBusinessReference2> requestDetails) {
+		this.requestDetails = Objects.requireNonNull(requestDetails);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.018.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:setr.018.001.02")
 	static public class Document {
 		@XmlElement(name = "setr.018.001.02", required = true)
 		public RequestForOrderStatusReportV02 messageBody;

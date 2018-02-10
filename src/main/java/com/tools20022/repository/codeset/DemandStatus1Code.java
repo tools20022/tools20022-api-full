@@ -20,32 +20,36 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DemandStatusCode;
+import com.tools20022.repository.codeset.DemandStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of the demand for payment.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DemandStatus1Code#Extend
+ * DemandStatus1Code.Extend}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DemandStatus1Code#PAY
+ * DemandStatus1Code.PAY}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.DemandStatusCode
  * DemandStatusCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DemandStatus1Code#mmExtend
- * DemandStatus1Code.mmExtend}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DemandStatus1Code#mmPAY
- * DemandStatus1Code.mmPAY}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -62,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of the demand for payment."</li>
  * </ul>
  */
-public class DemandStatus1Code extends DemandStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DemandStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -81,11 +86,12 @@ public class DemandStatus1Code extends DemandStatusCode {
 	 * name} = "Extend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExtend = new MMCode() {
+	public static final DemandStatus1Code Extend = new DemandStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extend";
-			owner_lazy = () -> DemandStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DemandStatus1Code.mmObject();
+			codeName = DemandStatusCode.Extend.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -104,26 +110,57 @@ public class DemandStatus1Code extends DemandStatusCode {
 	 * name} = "PAY"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPAY = new MMCode() {
+	public static final DemandStatus1Code PAY = new DemandStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PAY";
-			owner_lazy = () -> DemandStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DemandStatus1Code.mmObject();
+			codeName = DemandStatusCode.PAY.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DemandStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DemandStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("EXTD");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DemandStatus1Code";
 				definition = "Specifies the status of the demand for payment.";
-				code_lazy = () -> Arrays.asList(DemandStatus1Code.mmExtend, DemandStatus1Code.mmPAY);
 				trace_lazy = () -> DemandStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DemandStatus1Code.Extend, com.tools20022.repository.codeset.DemandStatus1Code.PAY);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Extend.getCodeName().get(), Extend);
+		codesByName.put(PAY.getCodeName().get(), PAY);
+	}
+
+	public static DemandStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DemandStatus1Code[] values() {
+		DemandStatus1Code[] values = new DemandStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DemandStatus1Code> {
+		@Override
+		public DemandStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DemandStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

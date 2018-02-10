@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the financial instrument reporting classification for both equity
@@ -33,44 +38,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#mmSecuritisedDerivative
- * FinancialInstrumentReportingClassificationCode.mmSecuritisedDerivative}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#SecuritisedDerivative
+ * FinancialInstrumentReportingClassificationCode.SecuritisedDerivative}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#mmStructuredFinanceProduct
- * FinancialInstrumentReportingClassificationCode.mmStructuredFinanceProduct}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#StructuredFinanceProduct
+ * FinancialInstrumentReportingClassificationCode.StructuredFinanceProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#mmBond
- * FinancialInstrumentReportingClassificationCode.mmBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#Bond
+ * FinancialInstrumentReportingClassificationCode.Bond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#mmEmissionAllowance
- * FinancialInstrumentReportingClassificationCode.mmEmissionAllowance}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#EmissionAllowance
+ * FinancialInstrumentReportingClassificationCode.EmissionAllowance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#mmContractForDifference
- * FinancialInstrumentReportingClassificationCode.mmContractForDifference}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#ContractForDifference
+ * FinancialInstrumentReportingClassificationCode.ContractForDifference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#mmDerivative
- * FinancialInstrumentReportingClassificationCode.mmDerivative}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#Derivative
+ * FinancialInstrumentReportingClassificationCode.Derivative}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#mmShare
- * FinancialInstrumentReportingClassificationCode.mmShare}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#Share
+ * FinancialInstrumentReportingClassificationCode.Share}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#mmElectronicTradedFund
- * FinancialInstrumentReportingClassificationCode.mmElectronicTradedFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#ElectronicTradedFund
+ * FinancialInstrumentReportingClassificationCode.ElectronicTradedFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#mmDepositaryReceipt
- * FinancialInstrumentReportingClassificationCode.mmDepositaryReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#DepositaryReceipt
+ * FinancialInstrumentReportingClassificationCode.DepositaryReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#mmOther
- * FinancialInstrumentReportingClassificationCode.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#Other
+ * FinancialInstrumentReportingClassificationCode.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#mmCertificate
- * FinancialInstrumentReportingClassificationCode.mmCertificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#Certificate
+ * FinancialInstrumentReportingClassificationCode.Certificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#mmExchangeTradedNote
- * FinancialInstrumentReportingClassificationCode.mmExchangeTradedNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#ExchangeTradedNote
+ * FinancialInstrumentReportingClassificationCode.ExchangeTradedNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#mmExchangeTradedCommodities
- * FinancialInstrumentReportingClassificationCode.mmExchangeTradedCommodities}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode#ExchangeTradedCommodities
+ * FinancialInstrumentReportingClassificationCode.ExchangeTradedCommodities}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -87,8 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,7 +106,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class FinancialInstrumentReportingClassificationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FinancialInstrumentReportingClassificationCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -125,12 +131,12 @@ public class FinancialInstrumentReportingClassificationCode {
 	 * definition} = "Contract is of type securitised derivatives."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritisedDerivative = new MMCode() {
+	public static final FinancialInstrumentReportingClassificationCode SecuritisedDerivative = new FinancialInstrumentReportingClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritisedDerivative";
 			definition = "Contract is of type securitised derivatives.";
-			owner_lazy = () -> FinancialInstrumentReportingClassificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.mmObject();
 			codeName = "SDRV";
 		}
 	};
@@ -155,12 +161,12 @@ public class FinancialInstrumentReportingClassificationCode {
 	 * definition} = "Contract is of type structured finance products (SFPs)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStructuredFinanceProduct = new MMCode() {
+	public static final FinancialInstrumentReportingClassificationCode StructuredFinanceProduct = new FinancialInstrumentReportingClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StructuredFinanceProduct";
 			definition = "Contract is of type structured finance products (SFPs).";
-			owner_lazy = () -> FinancialInstrumentReportingClassificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.mmObject();
 			codeName = "SFPS";
 		}
 	};
@@ -185,12 +191,12 @@ public class FinancialInstrumentReportingClassificationCode {
 	 * definition} = "Contract is of type bonds.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBond = new MMCode() {
+	public static final FinancialInstrumentReportingClassificationCode Bond = new FinancialInstrumentReportingClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bond";
 			definition = "Contract is of type bonds.\r\n";
-			owner_lazy = () -> FinancialInstrumentReportingClassificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.mmObject();
 			codeName = "BOND";
 		}
 	};
@@ -215,12 +221,12 @@ public class FinancialInstrumentReportingClassificationCode {
 	 * definition} = "Contract is of type emission allowances."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEmissionAllowance = new MMCode() {
+	public static final FinancialInstrumentReportingClassificationCode EmissionAllowance = new FinancialInstrumentReportingClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmissionAllowance";
 			definition = "Contract is of type emission allowances.";
-			owner_lazy = () -> FinancialInstrumentReportingClassificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.mmObject();
 			codeName = "EMAL";
 		}
 	};
@@ -245,12 +251,12 @@ public class FinancialInstrumentReportingClassificationCode {
 	 * definition} = "Contract is of type contract for difference (CFD).\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmContractForDifference = new MMCode() {
+	public static final FinancialInstrumentReportingClassificationCode ContractForDifference = new FinancialInstrumentReportingClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractForDifference";
 			definition = "Contract is of type contract for difference (CFD).\r\n";
-			owner_lazy = () -> FinancialInstrumentReportingClassificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.mmObject();
 			codeName = "CFDS";
 		}
 	};
@@ -275,12 +281,12 @@ public class FinancialInstrumentReportingClassificationCode {
 	 * definition} = "Contract is of type derivative.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDerivative = new MMCode() {
+	public static final FinancialInstrumentReportingClassificationCode Derivative = new FinancialInstrumentReportingClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Derivative";
 			definition = "Contract is of type derivative.\r\n";
-			owner_lazy = () -> FinancialInstrumentReportingClassificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.mmObject();
 			codeName = "DERV";
 		}
 	};
@@ -305,12 +311,12 @@ public class FinancialInstrumentReportingClassificationCode {
 	 * definition} = "Contract is of type shares."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmShare = new MMCode() {
+	public static final FinancialInstrumentReportingClassificationCode Share = new FinancialInstrumentReportingClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Share";
 			definition = "Contract is of type shares.";
-			owner_lazy = () -> FinancialInstrumentReportingClassificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.mmObject();
 			codeName = "SHRS";
 		}
 	};
@@ -335,12 +341,12 @@ public class FinancialInstrumentReportingClassificationCode {
 	 * definition} = "Contract is of type electronic traded funds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmElectronicTradedFund = new MMCode() {
+	public static final FinancialInstrumentReportingClassificationCode ElectronicTradedFund = new FinancialInstrumentReportingClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicTradedFund";
 			definition = "Contract is of type electronic traded funds.";
-			owner_lazy = () -> FinancialInstrumentReportingClassificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.mmObject();
 			codeName = "ETFS";
 		}
 	};
@@ -365,12 +371,12 @@ public class FinancialInstrumentReportingClassificationCode {
 	 * definition} = "Contract is of type depositary receipt."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDepositaryReceipt = new MMCode() {
+	public static final FinancialInstrumentReportingClassificationCode DepositaryReceipt = new FinancialInstrumentReportingClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositaryReceipt";
 			definition = "Contract is of type depositary receipt.";
-			owner_lazy = () -> FinancialInstrumentReportingClassificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.mmObject();
 			codeName = "DPRS";
 		}
 	};
@@ -396,12 +402,12 @@ public class FinancialInstrumentReportingClassificationCode {
 	 * "Contract is of type other equity-like financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final FinancialInstrumentReportingClassificationCode Other = new FinancialInstrumentReportingClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Contract is of type other equity-like financial instrument.";
-			owner_lazy = () -> FinancialInstrumentReportingClassificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.mmObject();
 			codeName = "OTHR";
 		}
 	};
@@ -426,12 +432,12 @@ public class FinancialInstrumentReportingClassificationCode {
 	 * definition} = "Contract is of type certificates."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertificate = new MMCode() {
+	public static final FinancialInstrumentReportingClassificationCode Certificate = new FinancialInstrumentReportingClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
 			definition = "Contract is of type certificates.";
-			owner_lazy = () -> FinancialInstrumentReportingClassificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.mmObject();
 			codeName = "CRFT";
 		}
 	};
@@ -456,12 +462,12 @@ public class FinancialInstrumentReportingClassificationCode {
 	 * definition} = "Contract is of type exchange traded note."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExchangeTradedNote = new MMCode() {
+	public static final FinancialInstrumentReportingClassificationCode ExchangeTradedNote = new FinancialInstrumentReportingClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeTradedNote";
 			definition = "Contract is of type exchange traded note.";
-			owner_lazy = () -> FinancialInstrumentReportingClassificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.mmObject();
 			codeName = "ETNS";
 		}
 	};
@@ -486,31 +492,74 @@ public class FinancialInstrumentReportingClassificationCode {
 	 * definition} = "Contract is of type exchange traded commodities."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExchangeTradedCommodities = new MMCode() {
+	public static final FinancialInstrumentReportingClassificationCode ExchangeTradedCommodities = new FinancialInstrumentReportingClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeTradedCommodities";
 			definition = "Contract is of type exchange traded commodities.";
-			owner_lazy = () -> FinancialInstrumentReportingClassificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.mmObject();
 			codeName = "ETCS";
 		}
 	};
+	final static private LinkedHashMap<String, FinancialInstrumentReportingClassificationCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FinancialInstrumentReportingClassificationCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentReportingClassificationCode";
 				definition = "Specifies the financial instrument reporting classification for both equity and non-equity.";
-				code_lazy = () -> Arrays.asList(FinancialInstrumentReportingClassificationCode.mmSecuritisedDerivative, FinancialInstrumentReportingClassificationCode.mmStructuredFinanceProduct,
-						FinancialInstrumentReportingClassificationCode.mmBond, FinancialInstrumentReportingClassificationCode.mmEmissionAllowance, FinancialInstrumentReportingClassificationCode.mmContractForDifference,
-						FinancialInstrumentReportingClassificationCode.mmDerivative, FinancialInstrumentReportingClassificationCode.mmShare, FinancialInstrumentReportingClassificationCode.mmElectronicTradedFund,
-						FinancialInstrumentReportingClassificationCode.mmDepositaryReceipt, FinancialInstrumentReportingClassificationCode.mmOther, FinancialInstrumentReportingClassificationCode.mmCertificate,
-						FinancialInstrumentReportingClassificationCode.mmExchangeTradedNote, FinancialInstrumentReportingClassificationCode.mmExchangeTradedCommodities);
 				derivation_lazy = () -> Arrays.asList(NonEquityInstrumentReportingClassification1Code.mmObject(), EquityInstrumentReportingClassification1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.SecuritisedDerivative,
+						com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.StructuredFinanceProduct, com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.Bond,
+						com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.EmissionAllowance, com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.ContractForDifference,
+						com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.Derivative, com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.Share,
+						com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.ElectronicTradedFund, com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.DepositaryReceipt,
+						com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.Other, com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.Certificate,
+						com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.ExchangeTradedNote, com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode.ExchangeTradedCommodities);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SecuritisedDerivative.getCodeName().get(), SecuritisedDerivative);
+		codesByName.put(StructuredFinanceProduct.getCodeName().get(), StructuredFinanceProduct);
+		codesByName.put(Bond.getCodeName().get(), Bond);
+		codesByName.put(EmissionAllowance.getCodeName().get(), EmissionAllowance);
+		codesByName.put(ContractForDifference.getCodeName().get(), ContractForDifference);
+		codesByName.put(Derivative.getCodeName().get(), Derivative);
+		codesByName.put(Share.getCodeName().get(), Share);
+		codesByName.put(ElectronicTradedFund.getCodeName().get(), ElectronicTradedFund);
+		codesByName.put(DepositaryReceipt.getCodeName().get(), DepositaryReceipt);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(Certificate.getCodeName().get(), Certificate);
+		codesByName.put(ExchangeTradedNote.getCodeName().get(), ExchangeTradedNote);
+		codesByName.put(ExchangeTradedCommodities.getCodeName().get(), ExchangeTradedCommodities);
+	}
+
+	public static FinancialInstrumentReportingClassificationCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FinancialInstrumentReportingClassificationCode[] values() {
+		FinancialInstrumentReportingClassificationCode[] values = new FinancialInstrumentReportingClassificationCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FinancialInstrumentReportingClassificationCode> {
+		@Override
+		public FinancialInstrumentReportingClassificationCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FinancialInstrumentReportingClassificationCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

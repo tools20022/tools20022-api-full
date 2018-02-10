@@ -26,9 +26,11 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBasketInstrumentUniquenessRule#forFinancialInstrument53
+ * ConstraintBasketInstrumentUniquenessRule.forFinancialInstrument53}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOneElementPresentRule#forFinancialInstrument53
+ * ConstraintOneElementPresentRule.forFinancialInstrument53}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Specify the ISIN(s) and / or LEI(s) that are present in a basket."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "FinancialInstrument53", propOrder = {"ISIN", "LEI"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "FinancialInstrument53", propOrder = {"iSIN", "lEI"})
 public class FinancialInstrument53 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ISIN")
 	protected List<ISINOct2015Identifier> iSIN;
 	/**
-	 * Identifies the financial instrument using an ISIN.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +123,7 @@ public class FinancialInstrument53 {
 	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
-			componentContext_lazy = () -> FinancialInstrument53.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument53.mmObject();
 			isDerived = false;
 			xmlTag = "ISIN";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,11 +133,11 @@ public class FinancialInstrument53 {
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	@XmlElement(name = "LEI")
 	protected List<LEIIdentifier> lEI;
 	/**
-	 * The LEI code of the issuer where the instrument is referring to an issuer
-	 * rather than one single instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +173,7 @@ public class FinancialInstrument53 {
 	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
-			componentContext_lazy = () -> FinancialInstrument53.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument53.mmObject();
 			isDerived = false;
 			xmlTag = "LEI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,9 +187,11 @@ public class FinancialInstrument53 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrument53.mmISIN, FinancialInstrument53.mmLEI);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument53.mmISIN, com.tools20022.repository.msg.FinancialInstrument53.mmLEI);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBasketInstrumentUniquenessRule.forFinancialInstrument53,
+						com.tools20022.repository.constraints.ConstraintOneElementPresentRule.forFinancialInstrument53);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument53";
 				definition = "Specify the ISIN(s) and / or LEI(s) that are present in a basket.";
@@ -184,21 +200,21 @@ public class FinancialInstrument53 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ISIN")
 	public List<ISINOct2015Identifier> getISIN() {
-		return iSIN;
+		return iSIN == null ? iSIN = new ArrayList<>() : iSIN;
 	}
 
-	public void setISIN(List<ISINOct2015Identifier> iSIN) {
-		this.iSIN = iSIN;
+	public FinancialInstrument53 setISIN(List<ISINOct2015Identifier> iSIN) {
+		this.iSIN = Objects.requireNonNull(iSIN);
+		return this;
 	}
 
-	@XmlElement(name = "LEI")
 	public List<LEIIdentifier> getLEI() {
-		return lEI;
+		return lEI == null ? lEI = new ArrayList<>() : lEI;
 	}
 
-	public void setLEI(List<LEIIdentifier> lEI) {
-		this.lEI = lEI;
+	public FinancialInstrument53 setLEI(List<LEIIdentifier> lEI) {
+		this.lEI = Objects.requireNonNull(lEI);
+		return this;
 	}
 }

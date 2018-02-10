@@ -28,9 +28,11 @@ import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousve
 import com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20162017;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -67,29 +69,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
- * CashManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousversion
- * ExceptionsandInvestigationsISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestversion
- * ExceptionsandInvestigationsISOLatestversion}</li>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20162017
- * ExceptionsandInvestigationsMaintenance20162017}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "NtfctnOfCaseAssgnmt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -111,6 +90,29 @@ import javax.xml.bind.annotation.*;
  * NotificationOfCaseAssignmentV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousversion
+ * ExceptionsandInvestigationsISOPreviousversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestversion
+ * ExceptionsandInvestigationsISOLatestversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20162017
+ * ExceptionsandInvestigationsMaintenance20162017}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "NtfctnOfCaseAssgnmt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
+ * CashManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.030.001.04}</li>
@@ -130,16 +132,16 @@ import javax.xml.bind.annotation.*;
  * NotificationOfCaseAssignmentV03}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "NotificationOfCaseAssignmentV04", propOrder = {"header", "case", "assignment", "notification", "supplementaryData"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "NotificationOfCaseAssignmentV04", propOrder = {"header", "case_", "assignment", "notification", "supplementaryData"})
 public class NotificationOfCaseAssignmentV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected ReportHeader4 header;
 	/**
-	 * Specifies generic information about the notification. The receiver of a
-	 * notification must be the party which assigned the case to the sender.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,10 +182,11 @@ public class NotificationOfCaseAssignmentV04 {
 			}
 		}
 	};
+	@XmlElement(name = "Case", required = true)
 	protected Case3 case_;
 	/**
-	 * Identifies the investigation case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -221,12 +224,11 @@ public class NotificationOfCaseAssignmentV04 {
 			}
 		}
 	};
+	@XmlElement(name = "Assgnmt", required = true)
 	protected CaseAssignment3 assignment;
 	/**
-	 * Identifies the assignment of an investigation case from an assigner to an
-	 * assignee. Usage: The Assigner must be the sender of this confirmation and
-	 * the Assignee must be the receiver.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -267,10 +269,11 @@ public class NotificationOfCaseAssignmentV04 {
 			}
 		}
 	};
+	@XmlElement(name = "Ntfctn", required = true)
 	protected CaseForwardingNotification3 notification;
 	/**
-	 * Information about the type of action taken.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -310,11 +313,11 @@ public class NotificationOfCaseAssignmentV04 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -389,52 +392,52 @@ public class NotificationOfCaseAssignmentV04 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public ReportHeader4 getHeader() {
 		return header;
 	}
 
-	public void setHeader(ReportHeader4 header) {
-		this.header = header;
+	public NotificationOfCaseAssignmentV04 setHeader(ReportHeader4 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "Case", required = true)
 	public Case3 getCase() {
 		return case_;
 	}
 
-	public void setCase(Case3 case_) {
-		this.case_ = case_;
+	public NotificationOfCaseAssignmentV04 setCase(Case3 case_) {
+		this.case_ = Objects.requireNonNull(case_);
+		return this;
 	}
 
-	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment3 getAssignment() {
 		return assignment;
 	}
 
-	public void setAssignment(CaseAssignment3 assignment) {
-		this.assignment = assignment;
+	public NotificationOfCaseAssignmentV04 setAssignment(CaseAssignment3 assignment) {
+		this.assignment = Objects.requireNonNull(assignment);
+		return this;
 	}
 
-	@XmlElement(name = "Ntfctn", required = true)
 	public CaseForwardingNotification3 getNotification() {
 		return notification;
 	}
 
-	public void setNotification(CaseForwardingNotification3 notification) {
-		this.notification = notification;
+	public NotificationOfCaseAssignmentV04 setNotification(CaseForwardingNotification3 notification) {
+		this.notification = Objects.requireNonNull(notification);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public NotificationOfCaseAssignmentV04 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.030.04.04")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.030.001.04")
 	static public class Document {
 		@XmlElement(name = "NtfctnOfCaseAssgnmt", required = true)
 		public NotificationOfCaseAssignmentV04 messageBody;

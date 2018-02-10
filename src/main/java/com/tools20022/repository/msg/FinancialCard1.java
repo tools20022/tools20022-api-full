@@ -26,9 +26,8 @@ import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialCard1", propOrder = {"creditLimitAmount", "creditAvailableAmount", "interestRatePercent"})
 public class FinancialCard1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CdtLmtAmt")
 	protected List<CurrencyAndAmount> creditLimitAmount;
 	/**
-	 * Monetary value of the credit limit for this financial card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +117,7 @@ public class FinancialCard1 {
 	public static final MMMessageAttribute mmCreditLimitAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
-			componentContext_lazy = () -> FinancialCard1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialCard1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtLmtAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +127,11 @@ public class FinancialCard1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtAvlblAmt")
 	protected List<CurrencyAndAmount> creditAvailableAmount;
 	/**
-	 * Monetary value of the credit available for this financial card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +165,7 @@ public class FinancialCard1 {
 	public static final MMMessageAttribute mmCreditAvailableAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmCreditAvailableAmount;
-			componentContext_lazy = () -> FinancialCard1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialCard1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtAvlblAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +175,11 @@ public class FinancialCard1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstRatePct")
 	protected PercentageRate interestRatePercent;
 	/**
-	 * Interest rate expressed as a percentage for this financial card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,7 +213,7 @@ public class FinancialCard1 {
 	public static final MMMessageAttribute mmInterestRatePercent = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
-			componentContext_lazy = () -> FinancialCard1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialCard1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstRatePct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,9 +228,10 @@ public class FinancialCard1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialCard1.mmCreditLimitAmount, FinancialCard1.mmCreditAvailableAmount, FinancialCard1.mmInterestRatePercent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialCard1.mmCreditLimitAmount, com.tools20022.repository.msg.FinancialCard1.mmCreditAvailableAmount,
+						com.tools20022.repository.msg.FinancialCard1.mmInterestRatePercent);
 				trace_lazy = () -> PaymentCard.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialCard1";
 				definition = "Card used to represent a financial account for the purpose of payment settlement.";
@@ -237,30 +240,30 @@ public class FinancialCard1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CdtLmtAmt")
 	public List<CurrencyAndAmount> getCreditLimitAmount() {
-		return creditLimitAmount;
+		return creditLimitAmount == null ? creditLimitAmount = new ArrayList<>() : creditLimitAmount;
 	}
 
-	public void setCreditLimitAmount(List<CurrencyAndAmount> creditLimitAmount) {
-		this.creditLimitAmount = creditLimitAmount;
+	public FinancialCard1 setCreditLimitAmount(List<CurrencyAndAmount> creditLimitAmount) {
+		this.creditLimitAmount = Objects.requireNonNull(creditLimitAmount);
+		return this;
 	}
 
-	@XmlElement(name = "CdtAvlblAmt")
 	public List<CurrencyAndAmount> getCreditAvailableAmount() {
-		return creditAvailableAmount;
+		return creditAvailableAmount == null ? creditAvailableAmount = new ArrayList<>() : creditAvailableAmount;
 	}
 
-	public void setCreditAvailableAmount(List<CurrencyAndAmount> creditAvailableAmount) {
-		this.creditAvailableAmount = creditAvailableAmount;
+	public FinancialCard1 setCreditAvailableAmount(List<CurrencyAndAmount> creditAvailableAmount) {
+		this.creditAvailableAmount = Objects.requireNonNull(creditAvailableAmount);
+		return this;
 	}
 
-	@XmlElement(name = "IntrstRatePct")
-	public PercentageRate getInterestRatePercent() {
-		return interestRatePercent;
+	public Optional<PercentageRate> getInterestRatePercent() {
+		return interestRatePercent == null ? Optional.empty() : Optional.of(interestRatePercent);
 	}
 
-	public void setInterestRatePercent(PercentageRate interestRatePercent) {
+	public FinancialCard1 setInterestRatePercent(PercentageRate interestRatePercent) {
 		this.interestRatePercent = interestRatePercent;
+		return this;
 	}
 }

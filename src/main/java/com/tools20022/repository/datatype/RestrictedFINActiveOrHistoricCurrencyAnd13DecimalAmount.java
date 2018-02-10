@@ -20,9 +20,13 @@ package com.tools20022.repository.datatype;
 import com.tools20022.metamodel.MMAmount;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
+import com.tools20022.repository.datatype.RestrictedFINActiveOrHistoricCurrencyAnd13DecimalAmount.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * A number of monetary units specified in an active or a historic currency
@@ -42,8 +46,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -62,14 +66,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
 public class RestrictedFINActiveOrHistoricCurrencyAnd13DecimalAmount {
 
 	final static private AtomicReference<MMAmount> mmObject_lazy = new AtomicReference<>();
+	protected BigDecimal value;
 
 	final static public MMAmount mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMAmount() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("6284534.12");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RestrictedFINActiveOrHistoricCurrencyAnd13DecimalAmount";
@@ -81,5 +87,25 @@ public class RestrictedFINActiveOrHistoricCurrencyAnd13DecimalAmount {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINActiveOrHistoricCurrencyAnd13DecimalAmount(BigDecimal value) {
+		this.value = value;
+	}
+
+	public BigDecimal toBigDecimal() {
+		return value;
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<BigDecimal, RestrictedFINActiveOrHistoricCurrencyAnd13DecimalAmount> {
+		@Override
+		public RestrictedFINActiveOrHistoricCurrencyAnd13DecimalAmount unmarshal(BigDecimal value) {
+			return new RestrictedFINActiveOrHistoricCurrencyAnd13DecimalAmount(value);
+		}
+
+		@Override
+		public BigDecimal marshal(RestrictedFINActiveOrHistoricCurrencyAnd13DecimalAmount typedData) {
+			return typedData.value;
+		}
 	}
 }

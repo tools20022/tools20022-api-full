@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code;
+import com.tools20022.repository.codeset.SecuritiesTransactionType15Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of securities transaction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code
- * SecuritiesTransactionTypeV3Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType15Code#mmBuy
- * SecuritiesTransactionType15Code.mmBuy}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType15Code#Buy
+ * SecuritiesTransactionType15Code.Buy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType15Code#mmSell
- * SecuritiesTransactionType15Code.mmSell}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType15Code#Sell
+ * SecuritiesTransactionType15Code.Sell}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code
+ * SecuritiesTransactionTypeV3Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of securities transaction."</li>
  * </ul>
  */
-public class SecuritiesTransactionType15Code extends SecuritiesTransactionTypeV3Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SecuritiesTransactionType15Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class SecuritiesTransactionType15Code extends SecuritiesTransactionTypeV3
 	 * name} = "Buy"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBuy = new MMCode() {
+	public static final SecuritiesTransactionType15Code Buy = new SecuritiesTransactionType15Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buy";
-			owner_lazy = () -> SecuritiesTransactionType15Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType15Code.mmObject();
+			codeName = SecuritiesTransactionTypeV3Code.Buy.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class SecuritiesTransactionType15Code extends SecuritiesTransactionTypeV3
 	 * name} = "Sell"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSell = new MMCode() {
+	public static final SecuritiesTransactionType15Code Sell = new SecuritiesTransactionType15Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sell";
-			owner_lazy = () -> SecuritiesTransactionType15Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType15Code.mmObject();
+			codeName = SecuritiesTransactionTypeV3Code.Sell.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SecuritiesTransactionType15Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SecuritiesTransactionType15Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionType15Code";
 				definition = "Specifies the type of securities transaction.";
-				code_lazy = () -> Arrays.asList(SecuritiesTransactionType15Code.mmBuy, SecuritiesTransactionType15Code.mmSell);
 				trace_lazy = () -> SecuritiesTransactionTypeV3Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesTransactionType15Code.Buy, com.tools20022.repository.codeset.SecuritiesTransactionType15Code.Sell);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Buy.getCodeName().get(), Buy);
+		codesByName.put(Sell.getCodeName().get(), Sell);
+	}
+
+	public static SecuritiesTransactionType15Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SecuritiesTransactionType15Code[] values() {
+		SecuritiesTransactionType15Code[] values = new SecuritiesTransactionType15Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SecuritiesTransactionType15Code> {
+		@Override
+		public SecuritiesTransactionType15Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SecuritiesTransactionType15Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

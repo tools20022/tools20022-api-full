@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyIdentification21", propOrder = {"partyIdentification", "processingReference", "processingDate", "contactPerson"})
 public class PartyIdentification21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PtyId", required = true)
 	protected PartyIdentification2Choice partyIdentification;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,7 +136,7 @@ public class PartyIdentification21 {
 	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> PartyIdentification21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification21.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,11 +148,11 @@ public class PartyIdentification21 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcgRef")
 	protected Max35Text processingReference;
 	/**
-	 * Specifies the reference of the transaction at the party identified in the
-	 * sequence.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,7 +189,7 @@ public class PartyIdentification21 {
 	 */
 	public static final MMMessageAttribute mmProcessingReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification21.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,11 +201,11 @@ public class PartyIdentification21 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcgDt")
 	protected DateAndDateTimeChoice processingDate;
 	/**
-	 * Date and optionally the time, at which this transaction was processed by
-	 * the party identified in this sequence.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -240,7 +243,7 @@ public class PartyIdentification21 {
 	 */
 	public static final MMMessageAttribute mmProcessingDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification21.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -252,10 +255,11 @@ public class PartyIdentification21 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "CtctPrsn")
 	protected ContactIdentification2 contactPerson;
 	/**
-	 * Contact person and contact information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -295,7 +299,7 @@ public class PartyIdentification21 {
 	public static final MMMessageAssociationEnd mmContactPerson = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ContactPersonRole.mmObject();
-			componentContext_lazy = () -> PartyIdentification21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification21.mmObject();
 			isDerived = false;
 			xmlTag = "CtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -312,9 +316,10 @@ public class PartyIdentification21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification21.mmPartyIdentification, PartyIdentification21.mmProcessingReference, PartyIdentification21.mmProcessingDate, PartyIdentification21.mmContactPerson);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification21.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentification21.mmProcessingReference,
+						com.tools20022.repository.msg.PartyIdentification21.mmProcessingDate, com.tools20022.repository.msg.PartyIdentification21.mmContactPerson);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification21";
 				definition = "Party involved in the settlement chain.";
@@ -324,39 +329,39 @@ public class PartyIdentification21 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PtyId", required = true)
 	public PartyIdentification2Choice getPartyIdentification() {
 		return partyIdentification;
 	}
 
-	public void setPartyIdentification(PartyIdentification2Choice partyIdentification) {
-		this.partyIdentification = partyIdentification;
+	public PartyIdentification21 setPartyIdentification(PartyIdentification2Choice partyIdentification) {
+		this.partyIdentification = Objects.requireNonNull(partyIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PrcgRef")
-	public Max35Text getProcessingReference() {
-		return processingReference;
+	public Optional<Max35Text> getProcessingReference() {
+		return processingReference == null ? Optional.empty() : Optional.of(processingReference);
 	}
 
-	public void setProcessingReference(Max35Text processingReference) {
+	public PartyIdentification21 setProcessingReference(Max35Text processingReference) {
 		this.processingReference = processingReference;
+		return this;
 	}
 
-	@XmlElement(name = "PrcgDt")
-	public DateAndDateTimeChoice getProcessingDate() {
-		return processingDate;
+	public Optional<DateAndDateTimeChoice> getProcessingDate() {
+		return processingDate == null ? Optional.empty() : Optional.of(processingDate);
 	}
 
-	public void setProcessingDate(DateAndDateTimeChoice processingDate) {
+	public PartyIdentification21 setProcessingDate(DateAndDateTimeChoice processingDate) {
 		this.processingDate = processingDate;
+		return this;
 	}
 
-	@XmlElement(name = "CtctPrsn")
-	public ContactIdentification2 getContactPerson() {
-		return contactPerson;
+	public Optional<ContactIdentification2> getContactPerson() {
+		return contactPerson == null ? Optional.empty() : Optional.of(contactPerson);
 	}
 
-	public void setContactPerson(com.tools20022.repository.msg.ContactIdentification2 contactPerson) {
+	public PartyIdentification21 setContactPerson(com.tools20022.repository.msg.ContactIdentification2 contactPerson) {
 		this.contactPerson = contactPerson;
+		return this;
 	}
 }

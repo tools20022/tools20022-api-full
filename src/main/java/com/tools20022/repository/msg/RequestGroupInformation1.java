@@ -30,11 +30,9 @@ import com.tools20022.repository.entity.IntermediaryAgentRole;
 import com.tools20022.repository.entity.InvoiceFinancingAgreement;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -104,8 +102,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -119,20 +117,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RequestGroupInformation1", propOrder = {"groupIdentification", "creationDateTime", "authorisation", "numberOfInvoiceRequests", "totalBulkInvoiceAmount", "currency", "financingAgreement", "financingRequestor",
 		"intermediaryAgent", "firstAgent", "agreementClauses", "additionalInformation"})
 public class RequestGroupInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpId", required = true)
 	protected Max35Text groupIdentification;
 	/**
-	 * Point to point reference assigned by the financing requestor to
-	 * unambiguously identify the invoice financing request message.
 	 * 
-	 * Usage: The financing requestor has to make sure that
-	 * 'GroupIdentification' is unique for a pre-agreed period.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +156,7 @@ public class RequestGroupInformation1 {
 	 */
 	public static final MMMessageAttribute mmGroupIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "GrpId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,10 +167,11 @@ public class RequestGroupInformation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm", required = true)
 	protected ISODateTime creationDateTime;
 	/**
-	 * Date and time on which the invoice financing request was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,7 +199,7 @@ public class RequestGroupInformation1 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,16 +210,11 @@ public class RequestGroupInformation1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "Authstn")
 	protected List<Max128Text> authorisation;
 	/**
-	 * User identification or any user key that allows to check if the financing
-	 * requestor is allowed to ask for invoice financing.
 	 * 
-	 * Usage: the content is not of a technical nature, but reflects the
-	 * organisational structure at the requesting side. The authorisation
-	 * element can typically be used in case the financing requestor acts on
-	 * behalf of one or more suppliers.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -258,7 +249,7 @@ public class RequestGroupInformation1 {
 	public static final MMMessageAttribute mmAuthorisation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmAuthorisation;
-			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Authstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,11 +260,11 @@ public class RequestGroupInformation1 {
 			simpleType_lazy = () -> Max128Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfInvcReqs")
 	protected Max15NumericText numberOfInvoiceRequests;
 	/**
-	 * Specifies the number of single invoice financing requests included in the
-	 * bulk request message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -303,7 +294,7 @@ public class RequestGroupInformation1 {
 	 */
 	public static final MMMessageAttribute mmNumberOfInvoiceRequests = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfInvcReqs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -314,12 +305,11 @@ public class RequestGroupInformation1 {
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlBlkInvcAmt")
 	protected ActiveCurrencyAndAmount totalBulkInvoiceAmount;
 	/**
-	 * Total amount of the bulk invoice financing request. It is composed by the
-	 * sum of the total amounts of all invoices included in the financing
-	 * request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -349,7 +339,7 @@ public class RequestGroupInformation1 {
 	 */
 	public static final MMMessageAttribute mmTotalBulkInvoiceAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlBlkInvcAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -360,10 +350,11 @@ public class RequestGroupInformation1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy", required = true)
 	protected CurrencyCode currency;
 	/**
-	 * Reference currency of the invoice financing request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -390,7 +381,7 @@ public class RequestGroupInformation1 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -401,11 +392,11 @@ public class RequestGroupInformation1 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "FincgAgrmt")
 	protected Max350Text financingAgreement;
 	/**
-	 * Specifies the financing method related to invoice financing (eg
-	 * collection mandate).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -440,7 +431,7 @@ public class RequestGroupInformation1 {
 	public static final MMMessageAttribute mmFinancingAgreement = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmFinancingMethod;
-			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "FincgAgrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -451,10 +442,11 @@ public class RequestGroupInformation1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FincgRqstr", required = true)
 	protected PartyIdentificationAndAccount6 financingRequestor;
 	/**
-	 * Party that requests the invoice financing, on behalf of a creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -488,7 +480,7 @@ public class RequestGroupInformation1 {
 	public static final MMMessageAssociationEnd mmFinancingRequestor = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> FinancingRequestorRole.mmObject();
-			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "FincgRqstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -500,11 +492,11 @@ public class RequestGroupInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount6.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrmyAgt")
 	protected FinancialInstitutionIdentification6 intermediaryAgent;
 	/**
-	 * Financial institution that receives the request from the financing
-	 * requestor and forwards it to the first agent for execution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -539,7 +531,7 @@ public class RequestGroupInformation1 {
 	public static final MMMessageAssociationEnd mmIntermediaryAgent = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> IntermediaryAgentRole.mmObject();
-			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -551,11 +543,11 @@ public class RequestGroupInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification6.mmObject();
 		}
 	};
+	@XmlElement(name = "FrstAgt", required = true)
 	protected FinancialInstitutionIdentification6 firstAgent;
 	/**
-	 * Financial institution of financing requestor to which an invoice
-	 * financing request is addressed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -590,7 +582,7 @@ public class RequestGroupInformation1 {
 	public static final MMMessageAssociationEnd mmFirstAgent = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> FirstAgentRole.mmObject();
-			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "FrstAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -602,12 +594,11 @@ public class RequestGroupInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification6.mmObject();
 		}
 	};
+	@XmlElement(name = "AgrmtClauses")
 	protected List<com.tools20022.repository.msg.AgreementClauses1> agreementClauses;
 	/**
-	 * Agreements between financing requestor and his bank concerning conditions
-	 * about the service of invoice financing, based on specific contractual
-	 * schemes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -635,7 +626,7 @@ public class RequestGroupInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmAgreementClauses = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "AgrmtClauses";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -646,10 +637,11 @@ public class RequestGroupInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.AgreementClauses1.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected List<com.tools20022.repository.msg.AdditionalInformation1> additionalInformation;
 	/**
-	 * Additional information about the financing request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -675,7 +667,7 @@ public class RequestGroupInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -690,13 +682,15 @@ public class RequestGroupInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RequestGroupInformation1.mmGroupIdentification, RequestGroupInformation1.mmCreationDateTime, RequestGroupInformation1.mmAuthorisation,
-						RequestGroupInformation1.mmNumberOfInvoiceRequests, RequestGroupInformation1.mmTotalBulkInvoiceAmount, RequestGroupInformation1.mmCurrency, RequestGroupInformation1.mmFinancingAgreement,
-						RequestGroupInformation1.mmFinancingRequestor, RequestGroupInformation1.mmIntermediaryAgent, RequestGroupInformation1.mmFirstAgent, RequestGroupInformation1.mmAgreementClauses,
-						RequestGroupInformation1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestGroupInformation1.mmGroupIdentification, com.tools20022.repository.msg.RequestGroupInformation1.mmCreationDateTime,
+						com.tools20022.repository.msg.RequestGroupInformation1.mmAuthorisation, com.tools20022.repository.msg.RequestGroupInformation1.mmNumberOfInvoiceRequests,
+						com.tools20022.repository.msg.RequestGroupInformation1.mmTotalBulkInvoiceAmount, com.tools20022.repository.msg.RequestGroupInformation1.mmCurrency,
+						com.tools20022.repository.msg.RequestGroupInformation1.mmFinancingAgreement, com.tools20022.repository.msg.RequestGroupInformation1.mmFinancingRequestor,
+						com.tools20022.repository.msg.RequestGroupInformation1.mmIntermediaryAgent, com.tools20022.repository.msg.RequestGroupInformation1.mmFirstAgent,
+						com.tools20022.repository.msg.RequestGroupInformation1.mmAgreementClauses, com.tools20022.repository.msg.RequestGroupInformation1.mmAdditionalInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(InvoiceFinancingRequestV01.mmRequestGroupInformation);
 				trace_lazy = () -> InvoiceFinancingAgreement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -712,111 +706,111 @@ public class RequestGroupInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpId", required = true)
 	public Max35Text getGroupIdentification() {
 		return groupIdentification;
 	}
 
-	public void setGroupIdentification(Max35Text groupIdentification) {
-		this.groupIdentification = groupIdentification;
+	public RequestGroupInformation1 setGroupIdentification(Max35Text groupIdentification) {
+		this.groupIdentification = Objects.requireNonNull(groupIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
-		this.creationDateTime = creationDateTime;
+	public RequestGroupInformation1 setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = Objects.requireNonNull(creationDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "Authstn")
 	public List<Max128Text> getAuthorisation() {
-		return authorisation;
+		return authorisation == null ? authorisation = new ArrayList<>() : authorisation;
 	}
 
-	public void setAuthorisation(List<Max128Text> authorisation) {
-		this.authorisation = authorisation;
+	public RequestGroupInformation1 setAuthorisation(List<Max128Text> authorisation) {
+		this.authorisation = Objects.requireNonNull(authorisation);
+		return this;
 	}
 
-	@XmlElement(name = "NbOfInvcReqs")
-	public Max15NumericText getNumberOfInvoiceRequests() {
-		return numberOfInvoiceRequests;
+	public Optional<Max15NumericText> getNumberOfInvoiceRequests() {
+		return numberOfInvoiceRequests == null ? Optional.empty() : Optional.of(numberOfInvoiceRequests);
 	}
 
-	public void setNumberOfInvoiceRequests(Max15NumericText numberOfInvoiceRequests) {
+	public RequestGroupInformation1 setNumberOfInvoiceRequests(Max15NumericText numberOfInvoiceRequests) {
 		this.numberOfInvoiceRequests = numberOfInvoiceRequests;
+		return this;
 	}
 
-	@XmlElement(name = "TtlBlkInvcAmt")
-	public ActiveCurrencyAndAmount getTotalBulkInvoiceAmount() {
-		return totalBulkInvoiceAmount;
+	public Optional<ActiveCurrencyAndAmount> getTotalBulkInvoiceAmount() {
+		return totalBulkInvoiceAmount == null ? Optional.empty() : Optional.of(totalBulkInvoiceAmount);
 	}
 
-	public void setTotalBulkInvoiceAmount(ActiveCurrencyAndAmount totalBulkInvoiceAmount) {
+	public RequestGroupInformation1 setTotalBulkInvoiceAmount(ActiveCurrencyAndAmount totalBulkInvoiceAmount) {
 		this.totalBulkInvoiceAmount = totalBulkInvoiceAmount;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy", required = true)
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
 
-	public void setCurrency(CurrencyCode currency) {
-		this.currency = currency;
+	public RequestGroupInformation1 setCurrency(CurrencyCode currency) {
+		this.currency = Objects.requireNonNull(currency);
+		return this;
 	}
 
-	@XmlElement(name = "FincgAgrmt")
-	public Max350Text getFinancingAgreement() {
-		return financingAgreement;
+	public Optional<Max350Text> getFinancingAgreement() {
+		return financingAgreement == null ? Optional.empty() : Optional.of(financingAgreement);
 	}
 
-	public void setFinancingAgreement(Max350Text financingAgreement) {
+	public RequestGroupInformation1 setFinancingAgreement(Max350Text financingAgreement) {
 		this.financingAgreement = financingAgreement;
+		return this;
 	}
 
-	@XmlElement(name = "FincgRqstr", required = true)
 	public PartyIdentificationAndAccount6 getFinancingRequestor() {
 		return financingRequestor;
 	}
 
-	public void setFinancingRequestor(com.tools20022.repository.msg.PartyIdentificationAndAccount6 financingRequestor) {
-		this.financingRequestor = financingRequestor;
+	public RequestGroupInformation1 setFinancingRequestor(com.tools20022.repository.msg.PartyIdentificationAndAccount6 financingRequestor) {
+		this.financingRequestor = Objects.requireNonNull(financingRequestor);
+		return this;
 	}
 
-	@XmlElement(name = "IntrmyAgt")
-	public FinancialInstitutionIdentification6 getIntermediaryAgent() {
-		return intermediaryAgent;
+	public Optional<FinancialInstitutionIdentification6> getIntermediaryAgent() {
+		return intermediaryAgent == null ? Optional.empty() : Optional.of(intermediaryAgent);
 	}
 
-	public void setIntermediaryAgent(com.tools20022.repository.msg.FinancialInstitutionIdentification6 intermediaryAgent) {
+	public RequestGroupInformation1 setIntermediaryAgent(com.tools20022.repository.msg.FinancialInstitutionIdentification6 intermediaryAgent) {
 		this.intermediaryAgent = intermediaryAgent;
+		return this;
 	}
 
-	@XmlElement(name = "FrstAgt", required = true)
 	public FinancialInstitutionIdentification6 getFirstAgent() {
 		return firstAgent;
 	}
 
-	public void setFirstAgent(com.tools20022.repository.msg.FinancialInstitutionIdentification6 firstAgent) {
-		this.firstAgent = firstAgent;
+	public RequestGroupInformation1 setFirstAgent(com.tools20022.repository.msg.FinancialInstitutionIdentification6 firstAgent) {
+		this.firstAgent = Objects.requireNonNull(firstAgent);
+		return this;
 	}
 
-	@XmlElement(name = "AgrmtClauses")
 	public List<AgreementClauses1> getAgreementClauses() {
-		return agreementClauses;
+		return agreementClauses == null ? agreementClauses = new ArrayList<>() : agreementClauses;
 	}
 
-	public void setAgreementClauses(List<com.tools20022.repository.msg.AgreementClauses1> agreementClauses) {
-		this.agreementClauses = agreementClauses;
+	public RequestGroupInformation1 setAgreementClauses(List<com.tools20022.repository.msg.AgreementClauses1> agreementClauses) {
+		this.agreementClauses = Objects.requireNonNull(agreementClauses);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
 	public List<AdditionalInformation1> getAdditionalInformation() {
-		return additionalInformation;
+		return additionalInformation == null ? additionalInformation = new ArrayList<>() : additionalInformation;
 	}
 
-	public void setAdditionalInformation(List<com.tools20022.repository.msg.AdditionalInformation1> additionalInformation) {
-		this.additionalInformation = additionalInformation;
+	public RequestGroupInformation1 setAdditionalInformation(List<com.tools20022.repository.msg.AdditionalInformation1> additionalInformation) {
+		this.additionalInformation = Objects.requireNonNull(additionalInformation);
+		return this;
 	}
 }

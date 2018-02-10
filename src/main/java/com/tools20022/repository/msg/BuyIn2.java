@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.BuyIn;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -71,8 +73,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BuyIn2", propOrder = {"buyInNotificationIdentification", "buyInIdentification", "date", "price", "securitiesBuyIn", "requiredCashCompensation"})
 public class BuyIn2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BuyInNtfctnId")
 	protected Max35Text buyInNotificationIdentification;
 	/**
-	 * Indicates the reference of the BuyInNotification message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +123,7 @@ public class BuyIn2 {
 	 */
 	public static final MMMessageAttribute mmBuyInNotificationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BuyIn2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn2.mmObject();
 			isDerived = false;
 			xmlTag = "BuyInNtfctnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +134,11 @@ public class BuyIn2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BuyInId", required = true)
 	protected Max35Text buyInIdentification;
 	/**
-	 * Indicates the reference id of the buy in.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +164,7 @@ public class BuyIn2 {
 	 */
 	public static final MMMessageAttribute mmBuyInIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BuyIn2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn2.mmObject();
 			isDerived = false;
 			xmlTag = "BuyInId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +175,11 @@ public class BuyIn2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Dt", required = true)
 	protected ISODate date;
 	/**
-	 * Provides the date at which the buy occured.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,7 +211,7 @@ public class BuyIn2 {
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> BuyIn.mmBuyinDate;
-			componentContext_lazy = () -> BuyIn2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn2.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,10 +222,11 @@ public class BuyIn2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "Pric")
 	protected Price4 price;
 	/**
-	 * Provides the price of the buy-in.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -250,7 +256,7 @@ public class BuyIn2 {
 	public static final MMMessageAssociationEnd mmPrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BuyIn.mmBuyInPrice;
-			componentContext_lazy = () -> BuyIn2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn2.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -262,11 +268,11 @@ public class BuyIn2 {
 			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesBuyIn")
 	protected SecuritiesCompensation1 securitiesBuyIn;
 	/**
-	 * Specifies the elements related to the securities that the central
-	 * counterparty had to buy in the context of the buy-in process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -300,7 +306,7 @@ public class BuyIn2 {
 	public static final MMMessageAssociationEnd mmSecuritiesBuyIn = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BuyIn.mmSecuritiesCompensation;
-			componentContext_lazy = () -> BuyIn2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn2.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesBuyIn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -312,12 +318,11 @@ public class BuyIn2 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCompensation1.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqrdCshCompstn")
 	protected CashCompensation1 requiredCashCompensation;
 	/**
-	 * Provides details about the cash compensation required, in case the
-	 * central counterparty could not buy the securities to cover the trade(s)
-	 * that failed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -350,7 +355,7 @@ public class BuyIn2 {
 	public static final MMMessageAssociationEnd mmRequiredCashCompensation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BuyIn.mmCashCompensation;
-			componentContext_lazy = () -> BuyIn2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn2.mmObject();
 			isDerived = false;
 			xmlTag = "ReqrdCshCompstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -366,10 +371,11 @@ public class BuyIn2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BuyIn2.mmBuyInNotificationIdentification, BuyIn2.mmBuyInIdentification, BuyIn2.mmDate, BuyIn2.mmPrice, BuyIn2.mmSecuritiesBuyIn, BuyIn2.mmRequiredCashCompensation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn2.mmBuyInNotificationIdentification, com.tools20022.repository.msg.BuyIn2.mmBuyInIdentification, com.tools20022.repository.msg.BuyIn2.mmDate,
+						com.tools20022.repository.msg.BuyIn2.mmPrice, com.tools20022.repository.msg.BuyIn2.mmSecuritiesBuyIn, com.tools20022.repository.msg.BuyIn2.mmRequiredCashCompensation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(BuyInConfirmationV03.mmBuyInDetails);
 				trace_lazy = () -> BuyIn.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BuyIn2";
 				definition = "Specifies elements related to the confirmation sent by the central counterparty to the clearing member in the context of the buy in process.";
@@ -378,57 +384,57 @@ public class BuyIn2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BuyInNtfctnId")
-	public Max35Text getBuyInNotificationIdentification() {
-		return buyInNotificationIdentification;
+	public Optional<Max35Text> getBuyInNotificationIdentification() {
+		return buyInNotificationIdentification == null ? Optional.empty() : Optional.of(buyInNotificationIdentification);
 	}
 
-	public void setBuyInNotificationIdentification(Max35Text buyInNotificationIdentification) {
+	public BuyIn2 setBuyInNotificationIdentification(Max35Text buyInNotificationIdentification) {
 		this.buyInNotificationIdentification = buyInNotificationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "BuyInId", required = true)
 	public Max35Text getBuyInIdentification() {
 		return buyInIdentification;
 	}
 
-	public void setBuyInIdentification(Max35Text buyInIdentification) {
-		this.buyInIdentification = buyInIdentification;
+	public BuyIn2 setBuyInIdentification(Max35Text buyInIdentification) {
+		this.buyInIdentification = Objects.requireNonNull(buyInIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
 
-	public void setDate(ISODate date) {
-		this.date = date;
+	public BuyIn2 setDate(ISODate date) {
+		this.date = Objects.requireNonNull(date);
+		return this;
 	}
 
-	@XmlElement(name = "Pric")
-	public Price4 getPrice() {
-		return price;
+	public Optional<Price4> getPrice() {
+		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public void setPrice(com.tools20022.repository.msg.Price4 price) {
+	public BuyIn2 setPrice(com.tools20022.repository.msg.Price4 price) {
 		this.price = price;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesBuyIn")
-	public SecuritiesCompensation1 getSecuritiesBuyIn() {
-		return securitiesBuyIn;
+	public Optional<SecuritiesCompensation1> getSecuritiesBuyIn() {
+		return securitiesBuyIn == null ? Optional.empty() : Optional.of(securitiesBuyIn);
 	}
 
-	public void setSecuritiesBuyIn(com.tools20022.repository.msg.SecuritiesCompensation1 securitiesBuyIn) {
+	public BuyIn2 setSecuritiesBuyIn(com.tools20022.repository.msg.SecuritiesCompensation1 securitiesBuyIn) {
 		this.securitiesBuyIn = securitiesBuyIn;
+		return this;
 	}
 
-	@XmlElement(name = "ReqrdCshCompstn")
-	public CashCompensation1 getRequiredCashCompensation() {
-		return requiredCashCompensation;
+	public Optional<CashCompensation1> getRequiredCashCompensation() {
+		return requiredCashCompensation == null ? Optional.empty() : Optional.of(requiredCashCompensation);
 	}
 
-	public void setRequiredCashCompensation(com.tools20022.repository.msg.CashCompensation1 requiredCashCompensation) {
+	public BuyIn2 setRequiredCashCompensation(com.tools20022.repository.msg.CashCompensation1 requiredCashCompensation) {
 		this.requiredCashCompensation = requiredCashCompensation;
+		return this;
 	}
 }

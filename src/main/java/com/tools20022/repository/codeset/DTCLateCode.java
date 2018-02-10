@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DTCLateCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies late announcements: wither the announcement was made before or
@@ -33,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCLateCode#mmLateAnnouncement
- * DTCLateCode.mmLateAnnouncement}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCLateCode#LateAnnouncement
+ * DTCLateCode.LateAnnouncement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCLateCode#mmLateAnnouncementPending
- * DTCLateCode.mmLateAnnouncementPending}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCLateCode#LateAnnouncementPending
+ * DTCLateCode.LateAnnouncementPending}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class DTCLateCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DTCLateCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,12 +101,12 @@ public class DTCLateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmLateAnnouncement = new MMCode() {
+	public static final DTCLateCode LateAnnouncement = new DTCLateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateAnnouncement";
 			definition = "Informs both internal and external users that the announcement was added after the position capture date.";
-			owner_lazy = () -> DTCLateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCLateCode.mmObject();
 			codeName = "LATE";
 		}
 	};
@@ -127,28 +133,58 @@ public class DTCLateCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmLateAnnouncementPending = new MMCode() {
+	public static final DTCLateCode LateAnnouncementPending = new DTCLateCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateAnnouncementPending";
 			definition = "Informs both internal and external users that the announcement is late, however, it has not gone through the position capture stage.";
-			owner_lazy = () -> DTCLateCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCLateCode.mmObject();
 			codeName = "LAAS";
 		}
 	};
+	final static private LinkedHashMap<String, DTCLateCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DTCLateCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("LATE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCLateCode";
 				definition = "Specifies late announcements: wither the announcement was made before or after position capture.";
-				code_lazy = () -> Arrays.asList(DTCLateCode.mmLateAnnouncement, DTCLateCode.mmLateAnnouncementPending);
 				derivation_lazy = () -> Arrays.asList(DTCLate1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCLateCode.LateAnnouncement, com.tools20022.repository.codeset.DTCLateCode.LateAnnouncementPending);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(LateAnnouncement.getCodeName().get(), LateAnnouncement);
+		codesByName.put(LateAnnouncementPending.getCodeName().get(), LateAnnouncementPending);
+	}
+
+	public static DTCLateCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DTCLateCode[] values() {
+		DTCLateCode[] values = new DTCLateCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DTCLateCode> {
+		@Override
+		public DTCLateCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DTCLateCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

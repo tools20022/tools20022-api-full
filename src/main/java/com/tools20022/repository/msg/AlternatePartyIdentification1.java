@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AlternatePartyIdentification1", propOrder = {"typeOfIdentification", "country", "alternateIdentification"})
 public class AlternatePartyIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TpOfId", required = true)
 	protected IdentificationType2Choice typeOfIdentification;
 	/**
-	 * Specifies the type of alternate identification which can be used to give
-	 * an alternate identification of the party identified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +122,7 @@ public class AlternatePartyIdentification1 {
 	public static final MMMessageAttribute mmTypeOfIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> AlternatePartyIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "TpOfId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,12 +133,11 @@ public class AlternatePartyIdentification1 {
 			complexType_lazy = () -> IdentificationType2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Ctry", required = true)
 	protected CountryCode country;
 	/**
-	 * Country in which a person resides (the place of a person's home). In the
-	 * case of a company, it is the country from which the affairs of that
-	 * company are directed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,7 +172,7 @@ public class AlternatePartyIdentification1 {
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> AlternatePartyIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,10 +183,11 @@ public class AlternatePartyIdentification1 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "AltrnId", required = true)
 	protected Max35Text alternateIdentification;
 	/**
-	 * Alternate identification for a party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -219,7 +220,7 @@ public class AlternatePartyIdentification1 {
 	public static final MMMessageAttribute mmAlternateIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> AlternatePartyIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,9 +235,10 @@ public class AlternatePartyIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AlternatePartyIdentification1.mmTypeOfIdentification, AlternatePartyIdentification1.mmCountry, AlternatePartyIdentification1.mmAlternateIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification1.mmTypeOfIdentification, com.tools20022.repository.msg.AlternatePartyIdentification1.mmCountry,
+						com.tools20022.repository.msg.AlternatePartyIdentification1.mmAlternateIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AlternatePartyIdentification1";
 				definition = "Alternate identification for a party using an id type, a country code and an text field.";
@@ -245,30 +247,30 @@ public class AlternatePartyIdentification1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TpOfId", required = true)
 	public IdentificationType2Choice getTypeOfIdentification() {
 		return typeOfIdentification;
 	}
 
-	public void setTypeOfIdentification(IdentificationType2Choice typeOfIdentification) {
-		this.typeOfIdentification = typeOfIdentification;
+	public AlternatePartyIdentification1 setTypeOfIdentification(IdentificationType2Choice typeOfIdentification) {
+		this.typeOfIdentification = Objects.requireNonNull(typeOfIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
 
-	public void setCountry(CountryCode country) {
-		this.country = country;
+	public AlternatePartyIdentification1 setCountry(CountryCode country) {
+		this.country = Objects.requireNonNull(country);
+		return this;
 	}
 
-	@XmlElement(name = "AltrnId", required = true)
 	public Max35Text getAlternateIdentification() {
 		return alternateIdentification;
 	}
 
-	public void setAlternateIdentification(Max35Text alternateIdentification) {
-		this.alternateIdentification = alternateIdentification;
+	public AlternatePartyIdentification1 setAlternateIdentification(Max35Text alternateIdentification) {
+		this.alternateIdentification = Objects.requireNonNull(alternateIdentification);
+		return this;
 	}
 }

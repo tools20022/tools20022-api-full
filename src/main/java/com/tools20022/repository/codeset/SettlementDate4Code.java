@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SettlementDateCode;
+import com.tools20022.repository.codeset.SettlementDate4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the date of settlement, in coded form.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SettlementDateCode
- * SettlementDateCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementDate4Code#mmWhenIssued
- * SettlementDate4Code.mmWhenIssued}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDate4Code#WhenIssued
+ * SettlementDate4Code.WhenIssued}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SettlementDateCode
+ * SettlementDateCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the date of settlement, in coded form."</li>
  * </ul>
  */
-public class SettlementDate4Code extends SettlementDateCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SettlementDate4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,26 +85,56 @@ public class SettlementDate4Code extends SettlementDateCode {
 	 * name} = "WhenIssued"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWhenIssued = new MMCode() {
+	public static final SettlementDate4Code WhenIssued = new SettlementDate4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhenIssued";
-			owner_lazy = () -> SettlementDate4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDate4Code.mmObject();
+			codeName = SettlementDateCode.WhenIssued.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SettlementDate4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SettlementDate4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("WISS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementDate4Code";
 				definition = "Specifies the date of settlement, in coded form.";
-				code_lazy = () -> Arrays.asList(SettlementDate4Code.mmWhenIssued);
 				trace_lazy = () -> SettlementDateCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementDate4Code.WhenIssued);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(WhenIssued.getCodeName().get(), WhenIssued);
+	}
+
+	public static SettlementDate4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SettlementDate4Code[] values() {
+		SettlementDate4Code[] values = new SettlementDate4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SettlementDate4Code> {
+		@Override
+		public SettlementDate4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SettlementDate4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

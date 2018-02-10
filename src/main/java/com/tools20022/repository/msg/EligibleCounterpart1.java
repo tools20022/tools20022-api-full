@@ -28,6 +28,8 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,16 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Represents a party to be identified as eligible for the instructing party."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "EligibleCounterpart1", propOrder = {"issuerIdentification", "eligibleCounterpartIdentification", "validFrom", "validTo", "eligibilityType", "eligibilityIdentification"})
 public class EligibleCounterpart1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IssrId", required = true)
 	protected SystemPartyIdentification1Choice issuerIdentification;
 	/**
-	 * Unique business identifier code used to identify the party providing the
-	 * eligible counterpart information
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +118,7 @@ public class EligibleCounterpart1 {
 	 */
 	public static final MMMessageAttribute mmIssuerIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EligibleCounterpart1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EligibleCounterpart1.mmObject();
 			isDerived = false;
 			xmlTag = "IssrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,11 +129,11 @@ public class EligibleCounterpart1 {
 			complexType_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ElgblCntrptId", required = true)
 	protected SystemPartyIdentification1Choice eligibleCounterpartIdentification;
 	/**
-	 * Unique business identifier code used to identify the central securities
-	 * depository to be defined as eligible.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +163,7 @@ public class EligibleCounterpart1 {
 	 */
 	public static final MMMessageAttribute mmEligibleCounterpartIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EligibleCounterpart1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EligibleCounterpart1.mmObject();
 			isDerived = false;
 			xmlTag = "ElgblCntrptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,10 +174,11 @@ public class EligibleCounterpart1 {
 			complexType_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "VldFr", required = true)
 	protected ISODate validFrom;
 	/**
-	 * Date from when the eligible counterpart is valid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -202,7 +205,7 @@ public class EligibleCounterpart1 {
 	 */
 	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EligibleCounterpart1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EligibleCounterpart1.mmObject();
 			isDerived = false;
 			xmlTag = "VldFr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,10 +216,11 @@ public class EligibleCounterpart1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "VldTo")
 	protected ISODate validTo;
 	/**
-	 * Date until when the eligible counterpart is valid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -243,7 +247,7 @@ public class EligibleCounterpart1 {
 	 */
 	public static final MMMessageAttribute mmValidTo = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EligibleCounterpart1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EligibleCounterpart1.mmObject();
 			isDerived = false;
 			xmlTag = "VldTo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -254,10 +258,11 @@ public class EligibleCounterpart1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ElgbltyTp", required = true)
 	protected EligibilityType1Code eligibilityType;
 	/**
-	 * Defines the type of eligibility.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -285,7 +290,7 @@ public class EligibleCounterpart1 {
 	 */
 	public static final MMMessageAttribute mmEligibilityType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EligibleCounterpart1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EligibleCounterpart1.mmObject();
 			isDerived = false;
 			xmlTag = "ElgbltyTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -296,10 +301,11 @@ public class EligibleCounterpart1 {
 			simpleType_lazy = () -> EligibilityType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ElgbltyId", required = true)
 	protected EligibilityIdentification1Choice eligibilityIdentification;
 	/**
-	 * Unique identification of the eligible counterpart party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -326,7 +332,7 @@ public class EligibleCounterpart1 {
 	 */
 	public static final MMMessageAssociationEnd mmEligibilityIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> EligibleCounterpart1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EligibleCounterpart1.mmObject();
 			isDerived = false;
 			xmlTag = "ElgbltyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -342,9 +348,10 @@ public class EligibleCounterpart1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EligibleCounterpart1.mmIssuerIdentification, EligibleCounterpart1.mmEligibleCounterpartIdentification, EligibleCounterpart1.mmValidFrom, EligibleCounterpart1.mmValidTo,
-						EligibleCounterpart1.mmEligibilityType, EligibleCounterpart1.mmEligibilityIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EligibleCounterpart1.mmIssuerIdentification, com.tools20022.repository.msg.EligibleCounterpart1.mmEligibleCounterpartIdentification,
+						com.tools20022.repository.msg.EligibleCounterpart1.mmValidFrom, com.tools20022.repository.msg.EligibleCounterpart1.mmValidTo, com.tools20022.repository.msg.EligibleCounterpart1.mmEligibilityType,
+						com.tools20022.repository.msg.EligibleCounterpart1.mmEligibilityIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EligibleCounterpart1";
 				definition = "Represents a party to be identified as eligible for the instructing party.";
@@ -353,57 +360,57 @@ public class EligibleCounterpart1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IssrId", required = true)
 	public SystemPartyIdentification1Choice getIssuerIdentification() {
 		return issuerIdentification;
 	}
 
-	public void setIssuerIdentification(SystemPartyIdentification1Choice issuerIdentification) {
-		this.issuerIdentification = issuerIdentification;
+	public EligibleCounterpart1 setIssuerIdentification(SystemPartyIdentification1Choice issuerIdentification) {
+		this.issuerIdentification = Objects.requireNonNull(issuerIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ElgblCntrptId", required = true)
 	public SystemPartyIdentification1Choice getEligibleCounterpartIdentification() {
 		return eligibleCounterpartIdentification;
 	}
 
-	public void setEligibleCounterpartIdentification(SystemPartyIdentification1Choice eligibleCounterpartIdentification) {
-		this.eligibleCounterpartIdentification = eligibleCounterpartIdentification;
+	public EligibleCounterpart1 setEligibleCounterpartIdentification(SystemPartyIdentification1Choice eligibleCounterpartIdentification) {
+		this.eligibleCounterpartIdentification = Objects.requireNonNull(eligibleCounterpartIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "VldFr", required = true)
 	public ISODate getValidFrom() {
 		return validFrom;
 	}
 
-	public void setValidFrom(ISODate validFrom) {
-		this.validFrom = validFrom;
+	public EligibleCounterpart1 setValidFrom(ISODate validFrom) {
+		this.validFrom = Objects.requireNonNull(validFrom);
+		return this;
 	}
 
-	@XmlElement(name = "VldTo")
-	public ISODate getValidTo() {
-		return validTo;
+	public Optional<ISODate> getValidTo() {
+		return validTo == null ? Optional.empty() : Optional.of(validTo);
 	}
 
-	public void setValidTo(ISODate validTo) {
+	public EligibleCounterpart1 setValidTo(ISODate validTo) {
 		this.validTo = validTo;
+		return this;
 	}
 
-	@XmlElement(name = "ElgbltyTp", required = true)
 	public EligibilityType1Code getEligibilityType() {
 		return eligibilityType;
 	}
 
-	public void setEligibilityType(EligibilityType1Code eligibilityType) {
-		this.eligibilityType = eligibilityType;
+	public EligibleCounterpart1 setEligibilityType(EligibilityType1Code eligibilityType) {
+		this.eligibilityType = Objects.requireNonNull(eligibilityType);
+		return this;
 	}
 
-	@XmlElement(name = "ElgbltyId", required = true)
 	public EligibilityIdentification1Choice getEligibilityIdentification() {
 		return eligibilityIdentification;
 	}
 
-	public void setEligibilityIdentification(EligibilityIdentification1Choice eligibilityIdentification) {
-		this.eligibilityIdentification = eligibilityIdentification;
+	public EligibleCounterpart1 setEligibilityIdentification(EligibilityIdentification1Choice eligibilityIdentification) {
+		this.eligibilityIdentification = Objects.requireNonNull(eligibilityIdentification);
+		return this;
 	}
 }

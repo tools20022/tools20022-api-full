@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,16 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Cheque3", propOrder = {"number", "payeeIdentification", "draweeIdentification", "drawerIdentification"})
 public class Cheque3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nb")
 	protected Max35Text number;
 	/**
-	 * Unique and unambiguous identifier for a cheque as assigned by the
-	 * financial institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,7 +133,7 @@ public class Cheque3 {
 	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CreditInstrument.mmCreditInstrumentIdentification;
-			componentContext_lazy = () -> Cheque3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque3.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,10 +145,11 @@ public class Cheque3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PyeeId", required = true)
 	protected PartyIdentification2Choice payeeIdentification;
 	/**
-	 * Party to which a cheque is made payable.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,7 +190,7 @@ public class Cheque3 {
 	public static final MMMessageAttribute mmPayeeIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Cheque3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque3.mmObject();
 			isDerived = false;
 			xmlTag = "PyeeId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,12 +202,11 @@ public class Cheque3 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DrweeId")
 	protected FinancialInstitutionIdentification3Choice draweeIdentification;
 	/**
-	 * Financial institution on which a cheque is drawn, ie, the financial
-	 * institution that services the account of the entity that issued the
-	 * cheque.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -247,7 +249,7 @@ public class Cheque3 {
 	public static final MMMessageAttribute mmDraweeIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> Cheque3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque3.mmObject();
 			isDerived = false;
 			xmlTag = "DrweeId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -259,11 +261,11 @@ public class Cheque3 {
 			complexType_lazy = () -> FinancialInstitutionIdentification3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DrwrId")
 	protected PartyIdentification2Choice drawerIdentification;
 	/**
-	 * Account owner that issues a cheque ordering the drawee bank to pay a
-	 * specific amount, upon demand, to the payee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -306,7 +308,7 @@ public class Cheque3 {
 	public static final MMMessageAttribute mmDrawerIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Cheque3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque3.mmObject();
 			isDerived = false;
 			xmlTag = "DrwrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -322,9 +324,10 @@ public class Cheque3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Cheque3.mmNumber, Cheque3.mmPayeeIdentification, Cheque3.mmDraweeIdentification, Cheque3.mmDrawerIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque3.mmNumber, com.tools20022.repository.msg.Cheque3.mmPayeeIdentification, com.tools20022.repository.msg.Cheque3.mmDraweeIdentification,
+						com.tools20022.repository.msg.Cheque3.mmDrawerIdentification);
 				trace_lazy = () -> ChequeIssue.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Cheque3";
 				definition = "Set of characteristics related to a cheque instruction, such as cheque type or cheque number.";
@@ -334,39 +337,39 @@ public class Cheque3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nb")
-	public Max35Text getNumber() {
-		return number;
+	public Optional<Max35Text> getNumber() {
+		return number == null ? Optional.empty() : Optional.of(number);
 	}
 
-	public void setNumber(Max35Text number) {
+	public Cheque3 setNumber(Max35Text number) {
 		this.number = number;
+		return this;
 	}
 
-	@XmlElement(name = "PyeeId", required = true)
 	public PartyIdentification2Choice getPayeeIdentification() {
 		return payeeIdentification;
 	}
 
-	public void setPayeeIdentification(PartyIdentification2Choice payeeIdentification) {
-		this.payeeIdentification = payeeIdentification;
+	public Cheque3 setPayeeIdentification(PartyIdentification2Choice payeeIdentification) {
+		this.payeeIdentification = Objects.requireNonNull(payeeIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "DrweeId")
-	public FinancialInstitutionIdentification3Choice getDraweeIdentification() {
-		return draweeIdentification;
+	public Optional<FinancialInstitutionIdentification3Choice> getDraweeIdentification() {
+		return draweeIdentification == null ? Optional.empty() : Optional.of(draweeIdentification);
 	}
 
-	public void setDraweeIdentification(FinancialInstitutionIdentification3Choice draweeIdentification) {
+	public Cheque3 setDraweeIdentification(FinancialInstitutionIdentification3Choice draweeIdentification) {
 		this.draweeIdentification = draweeIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "DrwrId")
-	public PartyIdentification2Choice getDrawerIdentification() {
-		return drawerIdentification;
+	public Optional<PartyIdentification2Choice> getDrawerIdentification() {
+		return drawerIdentification == null ? Optional.empty() : Optional.of(drawerIdentification);
 	}
 
-	public void setDrawerIdentification(PartyIdentification2Choice drawerIdentification) {
+	public Cheque3 setDrawerIdentification(PartyIdentification2Choice drawerIdentification) {
 		this.drawerIdentification = drawerIdentification;
+		return this;
 	}
 }

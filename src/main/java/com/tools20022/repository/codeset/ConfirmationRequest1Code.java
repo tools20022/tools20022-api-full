@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ConfirmationRequestCode;
+import com.tools20022.repository.codeset.ConfirmationRequest1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies the type of confirmation message being sent.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ConfirmationRequestCode
- * ConfirmationRequestCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationRequest1Code#mmConfirmation
- * ConfirmationRequest1Code.mmConfirmation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationRequest1Code#Confirmation
+ * ConfirmationRequest1Code.Confirmation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationRequest1Code#mmConfirmationRequestRejected
- * ConfirmationRequest1Code.mmConfirmationRequestRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationRequest1Code#ConfirmationRequestRejected
+ * ConfirmationRequest1Code.ConfirmationRequestRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationRequest1Code#mmStatus
- * ConfirmationRequest1Code.mmStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationRequest1Code#Status
+ * ConfirmationRequest1Code.Status}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationRequestCode
+ * ConfirmationRequestCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies the type of confirmation message being sent."</li>
  * </ul>
  */
-public class ConfirmationRequest1Code extends ConfirmationRequestCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ConfirmationRequest1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,11 +85,12 @@ public class ConfirmationRequest1Code extends ConfirmationRequestCode {
 	 * name} = "Confirmation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConfirmation = new MMCode() {
+	public static final ConfirmationRequest1Code Confirmation = new ConfirmationRequest1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmation";
-			owner_lazy = () -> ConfirmationRequest1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConfirmationRequest1Code.mmObject();
+			codeName = ConfirmationRequestCode.Confirmation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -103,11 +109,12 @@ public class ConfirmationRequest1Code extends ConfirmationRequestCode {
 	 * name} = "ConfirmationRequestRejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConfirmationRequestRejected = new MMCode() {
+	public static final ConfirmationRequest1Code ConfirmationRequestRejected = new ConfirmationRequest1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationRequestRejected";
-			owner_lazy = () -> ConfirmationRequest1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConfirmationRequest1Code.mmObject();
+			codeName = ConfirmationRequestCode.ConfirmationRequestRejected.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -126,25 +133,58 @@ public class ConfirmationRequest1Code extends ConfirmationRequestCode {
 	 * name} = "Status"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStatus = new MMCode() {
+	public static final ConfirmationRequest1Code Status = new ConfirmationRequest1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
-			owner_lazy = () -> ConfirmationRequest1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConfirmationRequest1Code.mmObject();
+			codeName = ConfirmationRequestCode.Status.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ConfirmationRequest1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ConfirmationRequest1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationRequest1Code";
 				definition = "Identifies the type of confirmation message being sent.";
-				code_lazy = () -> Arrays.asList(ConfirmationRequest1Code.mmConfirmation, ConfirmationRequest1Code.mmConfirmationRequestRejected, ConfirmationRequest1Code.mmStatus);
 				trace_lazy = () -> ConfirmationRequestCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConfirmationRequest1Code.Confirmation, com.tools20022.repository.codeset.ConfirmationRequest1Code.ConfirmationRequestRejected,
+						com.tools20022.repository.codeset.ConfirmationRequest1Code.Status);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Confirmation.getCodeName().get(), Confirmation);
+		codesByName.put(ConfirmationRequestRejected.getCodeName().get(), ConfirmationRequestRejected);
+		codesByName.put(Status.getCodeName().get(), Status);
+	}
+
+	public static ConfirmationRequest1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ConfirmationRequest1Code[] values() {
+		ConfirmationRequest1Code[] values = new ConfirmationRequest1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ConfirmationRequest1Code> {
+		@Override
+		public ConfirmationRequest1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ConfirmationRequest1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

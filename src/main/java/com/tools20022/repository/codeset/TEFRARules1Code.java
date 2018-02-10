@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TEFRARulesCode;
+import com.tools20022.repository.codeset.TEFRARules1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the Tax Equity and Fiscal Responsibility Act (TEFRA) rule levied by
@@ -31,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TEFRARulesCode TEFRARulesCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TEFRARules1Code#mmC
- * TEFRARules1Code.mmC}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TEFRARules1Code#mmD
- * TEFRARules1Code.mmD}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TEFRARules1Code#C
+ * TEFRARules1Code.C}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TEFRARules1Code#D
+ * TEFRARules1Code.D}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TEFRARulesCode TEFRARulesCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TEFRARules1Code extends TEFRARulesCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TEFRARules1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class TEFRARules1Code extends TEFRARulesCode {
 	 * name} = "C"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmC = new MMCode() {
+	public static final TEFRARules1Code C = new TEFRARules1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "C";
-			owner_lazy = () -> TEFRARules1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TEFRARules1Code.mmObject();
+			codeName = TEFRARulesCode.C.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class TEFRARules1Code extends TEFRARulesCode {
 	 * name} = "D"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmD = new MMCode() {
+	public static final TEFRARules1Code D = new TEFRARules1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "D";
-			owner_lazy = () -> TEFRARules1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TEFRARules1Code.mmObject();
+			codeName = TEFRARulesCode.D.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TEFRARules1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TEFRARules1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RULC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TEFRARules1Code";
 				definition = "Indicates the Tax Equity and Fiscal Responsibility Act (TEFRA) rule levied by the IRS under which the security is issued.";
-				code_lazy = () -> Arrays.asList(TEFRARules1Code.mmC, TEFRARules1Code.mmD);
 				trace_lazy = () -> TEFRARulesCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TEFRARules1Code.C, com.tools20022.repository.codeset.TEFRARules1Code.D);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(C.getCodeName().get(), C);
+		codesByName.put(D.getCodeName().get(), D);
+	}
+
+	public static TEFRARules1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TEFRARules1Code[] values() {
+		TEFRARules1Code[] values = new TEFRARules1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TEFRARules1Code> {
+		@Override
+		public TEFRARules1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TEFRARules1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

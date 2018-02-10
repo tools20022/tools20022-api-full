@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.SettlementPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Role played by a party in the context of the settlement of a treasury trade.
@@ -36,12 +37,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SettlementPartyRole
+ * SettlementPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
  * <li>
  * {@linkplain com.tools20022.repository.entity.TreasurySettlementPartyRole#mmTreasuryTrade
  * TreasurySettlementPartyRole.mmTreasuryTrade}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TreasuryTrade#mmTreasurySettlementPartyRole
+ * TreasuryTrade.mmTreasurySettlementPartyRole}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -52,24 +66,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * TreasurySettlementSystemRole}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SettlementPartyRole
- * SettlementPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TreasuryTrade#mmTreasurySettlementPartyRole
- * TreasuryTrade.mmTreasurySettlementPartyRole}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,8 +88,8 @@ public class TreasurySettlementPartyRole extends SettlementPartyRole {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected TreasuryTrade treasuryTrade;
 	/**
-	 * Identifies the treasury trade for which a party plays a settlement role.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,8 +124,8 @@ public class TreasurySettlementPartyRole extends SettlementPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmTreasuryTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.TreasurySettlementPartyRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TreasurySettlementPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TreasuryTrade";
 			definition = "Identifies the treasury trade for which a party plays a settlement role.";
@@ -139,7 +140,7 @@ public class TreasurySettlementPartyRole extends SettlementPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TreasurySettlementPartyRole";
 				definition = "Role played by a party in the context of the settlement of a treasury trade.";
@@ -161,7 +162,8 @@ public class TreasurySettlementPartyRole extends SettlementPartyRole {
 		return treasuryTrade;
 	}
 
-	public void setTreasuryTrade(com.tools20022.repository.entity.TreasuryTrade treasuryTrade) {
-		this.treasuryTrade = treasuryTrade;
+	public TreasurySettlementPartyRole setTreasuryTrade(com.tools20022.repository.entity.TreasuryTrade treasuryTrade) {
+		this.treasuryTrade = Objects.requireNonNull(treasuryTrade);
+		return this;
 	}
 }

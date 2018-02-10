@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,16 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identification and creation date of a document."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DocumentIdentification16", propOrder = {"identification", "creationDateTime", "copyDuplicate"})
 public class DocumentIdentification16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected RestrictedFINXMax16Text identification;
 	/**
-	 * Unique identifier of the document (message) assigned by the sender of the
-	 * document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +118,7 @@ public class DocumentIdentification16 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> DocumentIdentification16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification16.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +129,11 @@ public class DocumentIdentification16 {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm")
 	protected DateAndDateTimeChoice creationDateTime;
 	/**
-	 * Date and time at which the document (message) was created by the sender.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -165,7 +168,7 @@ public class DocumentIdentification16 {
 	public static final MMMessageAssociationEnd mmCreationDateTime = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
-			componentContext_lazy = () -> DocumentIdentification16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification16.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,11 +180,11 @@ public class DocumentIdentification16 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "CpyDplct")
 	protected CopyDuplicate1Code copyDuplicate;
 	/**
-	 * Specifies if this document is a copy, a duplicate, or a duplicate of a
-	 * copy.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,7 +220,7 @@ public class DocumentIdentification16 {
 	public static final MMMessageAttribute mmCopyDuplicate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Document.mmCopyDuplicate;
-			componentContext_lazy = () -> DocumentIdentification16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification16.mmObject();
 			isDerived = false;
 			xmlTag = "CpyDplct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,9 +235,10 @@ public class DocumentIdentification16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DocumentIdentification16.mmIdentification, DocumentIdentification16.mmCreationDateTime, DocumentIdentification16.mmCopyDuplicate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification16.mmIdentification, com.tools20022.repository.msg.DocumentIdentification16.mmCreationDateTime,
+						com.tools20022.repository.msg.DocumentIdentification16.mmCopyDuplicate);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification16";
 				definition = "Identification and creation date of a document.";
@@ -243,30 +247,30 @@ public class DocumentIdentification16 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public RestrictedFINXMax16Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(RestrictedFINXMax16Text identification) {
-		this.identification = identification;
+	public DocumentIdentification16 setIdentification(RestrictedFINXMax16Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm")
-	public DateAndDateTimeChoice getCreationDateTime() {
-		return creationDateTime;
+	public Optional<DateAndDateTimeChoice> getCreationDateTime() {
+		return creationDateTime == null ? Optional.empty() : Optional.of(creationDateTime);
 	}
 
-	public void setCreationDateTime(DateAndDateTimeChoice creationDateTime) {
+	public DocumentIdentification16 setCreationDateTime(DateAndDateTimeChoice creationDateTime) {
 		this.creationDateTime = creationDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "CpyDplct")
-	public CopyDuplicate1Code getCopyDuplicate() {
-		return copyDuplicate;
+	public Optional<CopyDuplicate1Code> getCopyDuplicate() {
+		return copyDuplicate == null ? Optional.empty() : Optional.of(copyDuplicate);
 	}
 
-	public void setCopyDuplicate(CopyDuplicate1Code copyDuplicate) {
+	public DocumentIdentification16 setCopyDuplicate(CopyDuplicate1Code copyDuplicate) {
 		this.copyDuplicate = copyDuplicate;
+		return this;
 	}
 }

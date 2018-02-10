@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.PaymentTerms;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the payment terms by means of a code and a period."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentPeriod1", propOrder = {"code", "numberOfDays"})
 public class PaymentPeriod1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected PaymentTime1Code code;
 	/**
-	 * Code for the payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +109,7 @@ public class PaymentPeriod1 {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentTerms.mmPaymentTime;
-			componentContext_lazy = () -> PaymentPeriod1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentPeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +120,11 @@ public class PaymentPeriod1 {
 			simpleType_lazy = () -> PaymentTime1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfDays")
 	protected Number numberOfDays;
 	/**
-	 * Number of days after which the payment must be effected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,7 +156,7 @@ public class PaymentPeriod1 {
 	public static final MMMessageAttribute mmNumberOfDays = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
-			componentContext_lazy = () -> PaymentPeriod1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentPeriod1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfDays";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,9 +171,9 @@ public class PaymentPeriod1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentPeriod1.mmCode, PaymentPeriod1.mmNumberOfDays);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentPeriod1.mmCode, com.tools20022.repository.msg.PaymentPeriod1.mmNumberOfDays);
 				trace_lazy = () -> PaymentTerms.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentPeriod1";
 				definition = "Specifies the payment terms by means of a code and a period.";
@@ -178,21 +182,21 @@ public class PaymentPeriod1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public PaymentTime1Code getCode() {
 		return code;
 	}
 
-	public void setCode(PaymentTime1Code code) {
-		this.code = code;
+	public PaymentPeriod1 setCode(PaymentTime1Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "NbOfDays")
-	public Number getNumberOfDays() {
-		return numberOfDays;
+	public Optional<Number> getNumberOfDays() {
+		return numberOfDays == null ? Optional.empty() : Optional.of(numberOfDays);
 	}
 
-	public void setNumberOfDays(Number numberOfDays) {
+	public PaymentPeriod1 setNumberOfDays(Number numberOfDays) {
 		this.numberOfDays = numberOfDays;
+		return this;
 	}
 }

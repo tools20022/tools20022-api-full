@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PaymentStatusCode;
+import com.tools20022.repository.codeset.ValidationGroupStatus2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the status of a single payment transaction or of a group of payment
@@ -31,36 +35,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PaymentStatusCode
- * PaymentStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus2Code#mmAcceptedTechnicalValidation
- * ValidationGroupStatus2Code.mmAcceptedTechnicalValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus2Code#AcceptedTechnicalValidation
+ * ValidationGroupStatus2Code.AcceptedTechnicalValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus2Code#mmAcceptedCustomerProfile
- * ValidationGroupStatus2Code.mmAcceptedCustomerProfile}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus2Code#AcceptedCustomerProfile
+ * ValidationGroupStatus2Code.AcceptedCustomerProfile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus2Code#mmAcceptedSettlementInProcess
- * ValidationGroupStatus2Code.mmAcceptedSettlementInProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus2Code#AcceptedSettlementInProcess
+ * ValidationGroupStatus2Code.AcceptedSettlementInProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus2Code#mmAcceptedSettlementCompleted
- * ValidationGroupStatus2Code.mmAcceptedSettlementCompleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus2Code#AcceptedSettlementCompleted
+ * ValidationGroupStatus2Code.AcceptedSettlementCompleted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus2Code#mmAcceptedWithChange
- * ValidationGroupStatus2Code.mmAcceptedWithChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus2Code#AcceptedWithChange
+ * ValidationGroupStatus2Code.AcceptedWithChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus2Code#mmPending
- * ValidationGroupStatus2Code.mmPending}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValidationGroupStatus2Code#Pending
+ * ValidationGroupStatus2Code.Pending}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PaymentStatusCode
+ * PaymentStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ValidationGroupStatus2Code extends PaymentStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ValidationGroupStatus2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,11 +103,12 @@ public class ValidationGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "AcceptedTechnicalValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedTechnicalValidation = new MMCode() {
+	public static final ValidationGroupStatus2Code AcceptedTechnicalValidation = new ValidationGroupStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedTechnicalValidation";
-			owner_lazy = () -> ValidationGroupStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ValidationGroupStatus2Code.mmObject();
+			codeName = PaymentStatusCode.AcceptedTechnicalValidation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -121,11 +127,12 @@ public class ValidationGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "AcceptedCustomerProfile"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedCustomerProfile = new MMCode() {
+	public static final ValidationGroupStatus2Code AcceptedCustomerProfile = new ValidationGroupStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedCustomerProfile";
-			owner_lazy = () -> ValidationGroupStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ValidationGroupStatus2Code.mmObject();
+			codeName = PaymentStatusCode.AcceptedCustomerProfile.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -144,11 +151,12 @@ public class ValidationGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "AcceptedSettlementInProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedSettlementInProcess = new MMCode() {
+	public static final ValidationGroupStatus2Code AcceptedSettlementInProcess = new ValidationGroupStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedSettlementInProcess";
-			owner_lazy = () -> ValidationGroupStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ValidationGroupStatus2Code.mmObject();
+			codeName = PaymentStatusCode.AcceptedSettlementInProcess.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -167,11 +175,12 @@ public class ValidationGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "AcceptedSettlementCompleted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedSettlementCompleted = new MMCode() {
+	public static final ValidationGroupStatus2Code AcceptedSettlementCompleted = new ValidationGroupStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedSettlementCompleted";
-			owner_lazy = () -> ValidationGroupStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ValidationGroupStatus2Code.mmObject();
+			codeName = PaymentStatusCode.AcceptedSettlementCompleted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -190,11 +199,12 @@ public class ValidationGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "AcceptedWithChange"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedWithChange = new MMCode() {
+	public static final ValidationGroupStatus2Code AcceptedWithChange = new ValidationGroupStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedWithChange";
-			owner_lazy = () -> ValidationGroupStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ValidationGroupStatus2Code.mmObject();
+			codeName = PaymentStatusCode.AcceptedWithChange.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -213,27 +223,63 @@ public class ValidationGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPending = new MMCode() {
+	public static final ValidationGroupStatus2Code Pending = new ValidationGroupStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
-			owner_lazy = () -> ValidationGroupStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ValidationGroupStatus2Code.mmObject();
+			codeName = PaymentStatusCode.Pending.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ValidationGroupStatus2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ValidationGroupStatus2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACTC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ValidationGroupStatus2Code";
 				definition = "Indicates the status of a single payment transaction or of a group of payment transactions.";
-				code_lazy = () -> Arrays.asList(ValidationGroupStatus2Code.mmAcceptedTechnicalValidation, ValidationGroupStatus2Code.mmAcceptedCustomerProfile, ValidationGroupStatus2Code.mmAcceptedSettlementInProcess,
-						ValidationGroupStatus2Code.mmAcceptedSettlementCompleted, ValidationGroupStatus2Code.mmAcceptedWithChange, ValidationGroupStatus2Code.mmPending);
 				trace_lazy = () -> PaymentStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ValidationGroupStatus2Code.AcceptedTechnicalValidation, com.tools20022.repository.codeset.ValidationGroupStatus2Code.AcceptedCustomerProfile,
+						com.tools20022.repository.codeset.ValidationGroupStatus2Code.AcceptedSettlementInProcess, com.tools20022.repository.codeset.ValidationGroupStatus2Code.AcceptedSettlementCompleted,
+						com.tools20022.repository.codeset.ValidationGroupStatus2Code.AcceptedWithChange, com.tools20022.repository.codeset.ValidationGroupStatus2Code.Pending);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AcceptedTechnicalValidation.getCodeName().get(), AcceptedTechnicalValidation);
+		codesByName.put(AcceptedCustomerProfile.getCodeName().get(), AcceptedCustomerProfile);
+		codesByName.put(AcceptedSettlementInProcess.getCodeName().get(), AcceptedSettlementInProcess);
+		codesByName.put(AcceptedSettlementCompleted.getCodeName().get(), AcceptedSettlementCompleted);
+		codesByName.put(AcceptedWithChange.getCodeName().get(), AcceptedWithChange);
+		codesByName.put(Pending.getCodeName().get(), Pending);
+	}
+
+	public static ValidationGroupStatus2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ValidationGroupStatus2Code[] values() {
+		ValidationGroupStatus2Code[] values = new ValidationGroupStatus2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ValidationGroupStatus2Code> {
+		@Override
+		public ValidationGroupStatus2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ValidationGroupStatus2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

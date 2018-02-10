@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AdjustmentDirectionCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the adjustment is added or substracted to the total amount.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdjustmentDirectionCode#mmAdded
- * AdjustmentDirectionCode.mmAdded}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdjustmentDirectionCode#Added
+ * AdjustmentDirectionCode.Added}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdjustmentDirectionCode#mmSubstracted
- * AdjustmentDirectionCode.mmSubstracted}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdjustmentDirectionCode#Substracted
+ * AdjustmentDirectionCode.Substracted}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class AdjustmentDirectionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AdjustmentDirectionCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,12 +99,12 @@ public class AdjustmentDirectionCode {
 	 * definition} = "Adjustment amount must be added to the total amount."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAdded = new MMCode() {
+	public static final AdjustmentDirectionCode Added = new AdjustmentDirectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Added";
 			definition = "Adjustment amount must be added to the total amount.";
-			owner_lazy = () -> AdjustmentDirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AdjustmentDirectionCode.mmObject();
 			codeName = "ADDD";
 		}
 	};
@@ -124,28 +130,58 @@ public class AdjustmentDirectionCode {
 	 * "Adjustment amount must be substracted from the total amount."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubstracted = new MMCode() {
+	public static final AdjustmentDirectionCode Substracted = new AdjustmentDirectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Substracted";
 			definition = "Adjustment amount must be substracted from the total amount.";
-			owner_lazy = () -> AdjustmentDirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AdjustmentDirectionCode.mmObject();
 			codeName = "SUBS";
 		}
 	};
+	final static private LinkedHashMap<String, AdjustmentDirectionCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AdjustmentDirectionCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ADDD");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdjustmentDirectionCode";
 				definition = "Specifies whether the adjustment is added or substracted to the total amount.";
-				code_lazy = () -> Arrays.asList(AdjustmentDirectionCode.mmAdded, AdjustmentDirectionCode.mmSubstracted);
 				derivation_lazy = () -> Arrays.asList(AdjustmentDirection1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdjustmentDirectionCode.Added, com.tools20022.repository.codeset.AdjustmentDirectionCode.Substracted);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Added.getCodeName().get(), Added);
+		codesByName.put(Substracted.getCodeName().get(), Substracted);
+	}
+
+	public static AdjustmentDirectionCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AdjustmentDirectionCode[] values() {
+		AdjustmentDirectionCode[] values = new AdjustmentDirectionCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AdjustmentDirectionCode> {
+		@Override
+		public AdjustmentDirectionCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AdjustmentDirectionCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

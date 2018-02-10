@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,16 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Instalment2", propOrder = {"sequenceIdentification", "paymentDueDate", "amount", "paymentInstrument"})
 public class Instalment2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SeqId", required = true)
 	protected Max70Text sequenceIdentification;
 	/**
-	 * Specifies the progressive number of the single instalment related to an
-	 * invoice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +122,7 @@ public class Instalment2 {
 	public static final MMMessageAttribute mmSequenceIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Instalment.mmSequenceIdentification;
-			componentContext_lazy = () -> Instalment2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Instalment2.mmObject();
 			isDerived = false;
 			xmlTag = "SeqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +133,11 @@ public class Instalment2 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtDueDt", required = true)
 	protected ISODate paymentDueDate;
 	/**
-	 * Due date for the payment of the financing item instalment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +170,7 @@ public class Instalment2 {
 	public static final MMMessageAttribute mmPaymentDueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentDueDate;
-			componentContext_lazy = () -> Instalment2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Instalment2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDueDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +181,11 @@ public class Instalment2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * Amount of a single instalment related to an invoice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -214,7 +218,7 @@ public class Instalment2 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
-			componentContext_lazy = () -> Instalment2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Instalment2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,10 +229,11 @@ public class Instalment2 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtInstrm")
 	protected PaymentMeans1 paymentInstrument;
 	/**
-	 * Desired payment instrument to be used for the instalment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -260,7 +265,7 @@ public class Instalment2 {
 	public static final MMMessageAssociationEnd mmPaymentInstrument = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentOffset;
-			componentContext_lazy = () -> Instalment2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Instalment2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,9 +281,10 @@ public class Instalment2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Instalment2.mmSequenceIdentification, Instalment2.mmPaymentDueDate, Instalment2.mmAmount, Instalment2.mmPaymentInstrument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Instalment2.mmSequenceIdentification, com.tools20022.repository.msg.Instalment2.mmPaymentDueDate, com.tools20022.repository.msg.Instalment2.mmAmount,
+						com.tools20022.repository.msg.Instalment2.mmPaymentInstrument);
 				trace_lazy = () -> Instalment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Instalment2";
 				definition = "Specifies a single instalment related to an invoice settlement and optional reconciliation information.\r\nReconciliation information is used to indicate the amount to be allocated to a particular instalment of a financial document.";
@@ -287,39 +293,39 @@ public class Instalment2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SeqId", required = true)
 	public Max70Text getSequenceIdentification() {
 		return sequenceIdentification;
 	}
 
-	public void setSequenceIdentification(Max70Text sequenceIdentification) {
-		this.sequenceIdentification = sequenceIdentification;
+	public Instalment2 setSequenceIdentification(Max70Text sequenceIdentification) {
+		this.sequenceIdentification = Objects.requireNonNull(sequenceIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PmtDueDt", required = true)
 	public ISODate getPaymentDueDate() {
 		return paymentDueDate;
 	}
 
-	public void setPaymentDueDate(ISODate paymentDueDate) {
-		this.paymentDueDate = paymentDueDate;
+	public Instalment2 setPaymentDueDate(ISODate paymentDueDate) {
+		this.paymentDueDate = Objects.requireNonNull(paymentDueDate);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
-		this.amount = amount;
+	public Instalment2 setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "PmtInstrm")
-	public PaymentMeans1 getPaymentInstrument() {
-		return paymentInstrument;
+	public Optional<PaymentMeans1> getPaymentInstrument() {
+		return paymentInstrument == null ? Optional.empty() : Optional.of(paymentInstrument);
 	}
 
-	public void setPaymentInstrument(com.tools20022.repository.msg.PaymentMeans1 paymentInstrument) {
+	public Instalment2 setPaymentInstrument(com.tools20022.repository.msg.PaymentMeans1 paymentInstrument) {
 		this.paymentInstrument = paymentInstrument;
+		return this;
 	}
 }

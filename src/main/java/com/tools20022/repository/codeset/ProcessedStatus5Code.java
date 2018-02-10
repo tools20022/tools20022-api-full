@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateActionProcessedStatusCode;
+import com.tools20022.repository.codeset.ProcessedStatus5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the processing status of a request.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode
- * CorporateActionProcessedStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessedStatus5Code#mmReceived
- * ProcessedStatus5Code.mmReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessedStatus5Code#Received
+ * ProcessedStatus5Code.Received}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessedStatus5Code#mmAccepted
- * ProcessedStatus5Code.mmAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessedStatus5Code#Accepted
+ * ProcessedStatus5Code.Accepted}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionProcessedStatusCode
+ * CorporateActionProcessedStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the processing status of a request."</li>
  * </ul>
  */
-public class ProcessedStatus5Code extends CorporateActionProcessedStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProcessedStatus5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class ProcessedStatus5Code extends CorporateActionProcessedStatusCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceived = new MMCode() {
+	public static final ProcessedStatus5Code Received = new ProcessedStatus5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
-			owner_lazy = () -> ProcessedStatus5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessedStatus5Code.mmObject();
+			codeName = CorporateActionProcessedStatusCode.Received.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class ProcessedStatus5Code extends CorporateActionProcessedStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final ProcessedStatus5Code Accepted = new ProcessedStatus5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> ProcessedStatus5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessedStatus5Code.mmObject();
+			codeName = CorporateActionProcessedStatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ProcessedStatus5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProcessedStatus5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RECE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessedStatus5Code";
 				definition = "Specifies the processing status of a request.";
-				code_lazy = () -> Arrays.asList(ProcessedStatus5Code.mmReceived, ProcessedStatus5Code.mmAccepted);
 				trace_lazy = () -> CorporateActionProcessedStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessedStatus5Code.Received, com.tools20022.repository.codeset.ProcessedStatus5Code.Accepted);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Received.getCodeName().get(), Received);
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+	}
+
+	public static ProcessedStatus5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProcessedStatus5Code[] values() {
+		ProcessedStatus5Code[] values = new ProcessedStatus5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProcessedStatus5Code> {
+		@Override
+		public ProcessedStatus5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProcessedStatus5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

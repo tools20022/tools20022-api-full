@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.AmendmentOfUndertaking;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of the amendment."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Amendment9", propOrder = "undertakingAmendmentResponseMessage")
 public class Amendment9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UdrtkgAmdmntRspnMsg", required = true)
 	protected UndertakingAmendmentResponseMessage1 undertakingAmendmentResponseMessage;
 	/**
-	 * Contents of the related UndertakingAmendmentResponse message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -113,7 +115,7 @@ public class Amendment9 {
 	public static final MMMessageAssociationEnd mmUndertakingAmendmentResponseMessage = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> AmendmentOfUndertaking.mmObject();
-			componentContext_lazy = () -> Amendment9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment9.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgAmdmntRspnMsg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,10 +131,10 @@ public class Amendment9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Amendment9.mmUndertakingAmendmentResponseMessage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment9.mmUndertakingAmendmentResponseMessage);
 				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingAmendmentResponseNotificationV01.mmUndertakingAmendmentResponseNotificationDetails);
 				trace_lazy = () -> AmendmentOfUndertaking.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Amendment9";
 				definition = "Details of the amendment.";
@@ -141,12 +143,12 @@ public class Amendment9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UdrtkgAmdmntRspnMsg", required = true)
 	public UndertakingAmendmentResponseMessage1 getUndertakingAmendmentResponseMessage() {
 		return undertakingAmendmentResponseMessage;
 	}
 
-	public void setUndertakingAmendmentResponseMessage(com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1 undertakingAmendmentResponseMessage) {
-		this.undertakingAmendmentResponseMessage = undertakingAmendmentResponseMessage;
+	public Amendment9 setUndertakingAmendmentResponseMessage(com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1 undertakingAmendmentResponseMessage) {
+		this.undertakingAmendmentResponseMessage = Objects.requireNonNull(undertakingAmendmentResponseMessage);
+		return this;
 	}
 }

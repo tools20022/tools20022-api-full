@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of one or several keys of the request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RequestDetails4", propOrder = {"key", "reportData"})
 public class RequestDetails4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Key", required = true)
 	protected Max35Text key;
 	/**
-	 * Key for which the specific data is returned, for example, a BIC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,7 +100,7 @@ public class RequestDetails4 {
 	 */
 	public static final MMMessageAttribute mmKey = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequestDetails4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "Key";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,10 +111,11 @@ public class RequestDetails4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RptData")
 	protected List<com.tools20022.repository.msg.ReportParameter1> reportData;
 	/**
-	 * Data being returned.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -137,7 +141,7 @@ public class RequestDetails4 {
 	 */
 	public static final MMMessageAssociationEnd mmReportData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestDetails4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "RptData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,8 +156,8 @@ public class RequestDetails4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RequestDetails4.mmKey, RequestDetails4.mmReportData);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails4.mmKey, com.tools20022.repository.msg.RequestDetails4.mmReportData);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestDetails4";
 				definition = "Details of one or several keys of the request.";
@@ -162,21 +166,21 @@ public class RequestDetails4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Key", required = true)
 	public Max35Text getKey() {
 		return key;
 	}
 
-	public void setKey(Max35Text key) {
-		this.key = key;
+	public RequestDetails4 setKey(Max35Text key) {
+		this.key = Objects.requireNonNull(key);
+		return this;
 	}
 
-	@XmlElement(name = "RptData")
 	public List<ReportParameter1> getReportData() {
-		return reportData;
+		return reportData == null ? reportData = new ArrayList<>() : reportData;
 	}
 
-	public void setReportData(List<com.tools20022.repository.msg.ReportParameter1> reportData) {
-		this.reportData = reportData;
+	public RequestDetails4 setReportData(List<com.tools20022.repository.msg.ReportParameter1> reportData) {
+		this.reportData = Objects.requireNonNull(reportData);
+		return this;
 	}
 }

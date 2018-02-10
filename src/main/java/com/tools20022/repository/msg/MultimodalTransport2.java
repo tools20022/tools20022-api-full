@@ -28,9 +28,11 @@ import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.entity.TransportBySea;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -91,8 +93,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,16 +105,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information related to multimodal transportation of goods."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MultimodalTransport2", propOrder = {"departureAirport", "destinationAirport", "airCarrierName", "portOfLoading", "portOfDischarge", "vesselName", "placeOfReceipt", "placeOfDelivery", "takingInCharge",
 		"placeOfFinalDestination", "transitLocation", "roadCarrierName", "railCarrierName"})
 public class MultimodalTransport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DprtureAirprt")
 	protected List<AirportName1Choice> departureAirport;
 	/**
-	 * Place from where the goods must leave.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -144,7 +147,7 @@ public class MultimodalTransport2 {
 	public static final MMMessageAssociationEnd mmDepartureAirport = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
-			componentContext_lazy = () -> MultimodalTransport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "DprtureAirprt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,10 +158,11 @@ public class MultimodalTransport2 {
 			type_lazy = () -> AirportName1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DstnAirprt")
 	protected List<AirportName1Choice> destinationAirport;
 	/**
-	 * Place where the goods must arrive.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -190,7 +194,7 @@ public class MultimodalTransport2 {
 	public static final MMMessageAssociationEnd mmDestinationAirport = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
-			componentContext_lazy = () -> MultimodalTransport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "DstnAirprt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,11 +205,11 @@ public class MultimodalTransport2 {
 			type_lazy = () -> AirportName1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AirCrrierNm")
 	protected List<Max35Text> airCarrierName;
 	/**
-	 * Identifies the party that is responsible for the conveyance of the goods
-	 * from one place to another.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -240,7 +244,7 @@ public class MultimodalTransport2 {
 	public static final MMMessageAttribute mmAirCarrierName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
-			componentContext_lazy = () -> MultimodalTransport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "AirCrrierNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -250,10 +254,11 @@ public class MultimodalTransport2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PortOfLoadng")
 	protected List<Max35Text> portOfLoading;
 	/**
-	 * Identifies the port where the goods are loaded on board the ship.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -287,7 +292,7 @@ public class MultimodalTransport2 {
 	public static final MMMessageAttribute mmPortOfLoading = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
-			componentContext_lazy = () -> MultimodalTransport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "PortOfLoadng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -297,10 +302,11 @@ public class MultimodalTransport2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PortOfDschrge")
 	protected List<Max35Text> portOfDischarge;
 	/**
-	 * Identifies the port where the goods are discharged.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -333,7 +339,7 @@ public class MultimodalTransport2 {
 	public static final MMMessageAttribute mmPortOfDischarge = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
-			componentContext_lazy = () -> MultimodalTransport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "PortOfDschrge";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -343,10 +349,11 @@ public class MultimodalTransport2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "VsslNm")
 	protected List<Max35Text> vesselName;
 	/**
-	 * Name of a vessel.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -379,7 +386,7 @@ public class MultimodalTransport2 {
 	public static final MMMessageAttribute mmVesselName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TransportBySea.mmVesselName;
-			componentContext_lazy = () -> MultimodalTransport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "VsslNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -389,10 +396,11 @@ public class MultimodalTransport2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfRct")
 	protected List<Max35Text> placeOfReceipt;
 	/**
-	 * Identifies the location where the goods are received for transportation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -427,7 +435,7 @@ public class MultimodalTransport2 {
 	public static final MMMessageAttribute mmPlaceOfReceipt = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
-			componentContext_lazy = () -> MultimodalTransport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfRct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -437,10 +445,11 @@ public class MultimodalTransport2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfDlvry")
 	protected List<Max35Text> placeOfDelivery;
 	/**
-	 * Identifies the location of delivery of the goods.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -473,7 +482,7 @@ public class MultimodalTransport2 {
 	public static final MMMessageAttribute mmPlaceOfDelivery = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
-			componentContext_lazy = () -> MultimodalTransport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfDlvry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -483,11 +492,11 @@ public class MultimodalTransport2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TakngInChrg")
 	protected List<Max35Text> takingInCharge;
 	/**
-	 * Identifies the location where the goods are take in charge for
-	 * transportation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -522,7 +531,7 @@ public class MultimodalTransport2 {
 	public static final MMMessageAttribute mmTakingInCharge = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
-			componentContext_lazy = () -> MultimodalTransport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "TakngInChrg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -532,10 +541,11 @@ public class MultimodalTransport2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfFnlDstn")
 	protected List<Max35Text> placeOfFinalDestination;
 	/**
-	 * Identifies the location of the final destination of the goods.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -569,7 +579,7 @@ public class MultimodalTransport2 {
 	public static final MMMessageAttribute mmPlaceOfFinalDestination = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
-			componentContext_lazy = () -> MultimodalTransport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfFnlDstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -579,10 +589,11 @@ public class MultimodalTransport2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrnstLctn")
 	protected List<Max35Text> transitLocation;
 	/**
-	 * Specifies a place in a country.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -615,7 +626,7 @@ public class MultimodalTransport2 {
 	public static final MMMessageAttribute mmTransitLocation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> MultimodalTransport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "TrnstLctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -625,11 +636,11 @@ public class MultimodalTransport2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RoadCrrierNm")
 	protected List<Max35Text> roadCarrierName;
 	/**
-	 * Identifies the party that is responsible for the conveyance of the goods
-	 * from one place to another.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -664,7 +675,7 @@ public class MultimodalTransport2 {
 	public static final MMMessageAttribute mmRoadCarrierName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
-			componentContext_lazy = () -> MultimodalTransport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "RoadCrrierNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -674,11 +685,11 @@ public class MultimodalTransport2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RailCrrierNm")
 	protected List<Max35Text> railCarrierName;
 	/**
-	 * Identifies the party that is responsible for the conveyance of the goods
-	 * from one place to another.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -713,7 +724,7 @@ public class MultimodalTransport2 {
 	public static final MMMessageAttribute mmRailCarrierName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
-			componentContext_lazy = () -> MultimodalTransport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "RailCrrierNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -727,11 +738,13 @@ public class MultimodalTransport2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MultimodalTransport2.mmDepartureAirport, MultimodalTransport2.mmDestinationAirport, MultimodalTransport2.mmAirCarrierName, MultimodalTransport2.mmPortOfLoading,
-						MultimodalTransport2.mmPortOfDischarge, MultimodalTransport2.mmVesselName, MultimodalTransport2.mmPlaceOfReceipt, MultimodalTransport2.mmPlaceOfDelivery, MultimodalTransport2.mmTakingInCharge,
-						MultimodalTransport2.mmPlaceOfFinalDestination, MultimodalTransport2.mmTransitLocation, MultimodalTransport2.mmRoadCarrierName, MultimodalTransport2.mmRailCarrierName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MultimodalTransport2.mmDepartureAirport, com.tools20022.repository.msg.MultimodalTransport2.mmDestinationAirport,
+						com.tools20022.repository.msg.MultimodalTransport2.mmAirCarrierName, com.tools20022.repository.msg.MultimodalTransport2.mmPortOfLoading, com.tools20022.repository.msg.MultimodalTransport2.mmPortOfDischarge,
+						com.tools20022.repository.msg.MultimodalTransport2.mmVesselName, com.tools20022.repository.msg.MultimodalTransport2.mmPlaceOfReceipt, com.tools20022.repository.msg.MultimodalTransport2.mmPlaceOfDelivery,
+						com.tools20022.repository.msg.MultimodalTransport2.mmTakingInCharge, com.tools20022.repository.msg.MultimodalTransport2.mmPlaceOfFinalDestination,
+						com.tools20022.repository.msg.MultimodalTransport2.mmTransitLocation, com.tools20022.repository.msg.MultimodalTransport2.mmRoadCarrierName, com.tools20022.repository.msg.MultimodalTransport2.mmRailCarrierName);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MultimodalTransport2";
 				definition = "Information related to multimodal transportation of goods.";
@@ -740,120 +753,120 @@ public class MultimodalTransport2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DprtureAirprt")
 	public List<AirportName1Choice> getDepartureAirport() {
-		return departureAirport;
+		return departureAirport == null ? departureAirport = new ArrayList<>() : departureAirport;
 	}
 
-	public void setDepartureAirport(List<AirportName1Choice> departureAirport) {
-		this.departureAirport = departureAirport;
+	public MultimodalTransport2 setDepartureAirport(List<AirportName1Choice> departureAirport) {
+		this.departureAirport = Objects.requireNonNull(departureAirport);
+		return this;
 	}
 
-	@XmlElement(name = "DstnAirprt")
 	public List<AirportName1Choice> getDestinationAirport() {
-		return destinationAirport;
+		return destinationAirport == null ? destinationAirport = new ArrayList<>() : destinationAirport;
 	}
 
-	public void setDestinationAirport(List<AirportName1Choice> destinationAirport) {
-		this.destinationAirport = destinationAirport;
+	public MultimodalTransport2 setDestinationAirport(List<AirportName1Choice> destinationAirport) {
+		this.destinationAirport = Objects.requireNonNull(destinationAirport);
+		return this;
 	}
 
-	@XmlElement(name = "AirCrrierNm")
 	public List<Max35Text> getAirCarrierName() {
-		return airCarrierName;
+		return airCarrierName == null ? airCarrierName = new ArrayList<>() : airCarrierName;
 	}
 
-	public void setAirCarrierName(List<Max35Text> airCarrierName) {
-		this.airCarrierName = airCarrierName;
+	public MultimodalTransport2 setAirCarrierName(List<Max35Text> airCarrierName) {
+		this.airCarrierName = Objects.requireNonNull(airCarrierName);
+		return this;
 	}
 
-	@XmlElement(name = "PortOfLoadng")
 	public List<Max35Text> getPortOfLoading() {
-		return portOfLoading;
+		return portOfLoading == null ? portOfLoading = new ArrayList<>() : portOfLoading;
 	}
 
-	public void setPortOfLoading(List<Max35Text> portOfLoading) {
-		this.portOfLoading = portOfLoading;
+	public MultimodalTransport2 setPortOfLoading(List<Max35Text> portOfLoading) {
+		this.portOfLoading = Objects.requireNonNull(portOfLoading);
+		return this;
 	}
 
-	@XmlElement(name = "PortOfDschrge")
 	public List<Max35Text> getPortOfDischarge() {
-		return portOfDischarge;
+		return portOfDischarge == null ? portOfDischarge = new ArrayList<>() : portOfDischarge;
 	}
 
-	public void setPortOfDischarge(List<Max35Text> portOfDischarge) {
-		this.portOfDischarge = portOfDischarge;
+	public MultimodalTransport2 setPortOfDischarge(List<Max35Text> portOfDischarge) {
+		this.portOfDischarge = Objects.requireNonNull(portOfDischarge);
+		return this;
 	}
 
-	@XmlElement(name = "VsslNm")
 	public List<Max35Text> getVesselName() {
-		return vesselName;
+		return vesselName == null ? vesselName = new ArrayList<>() : vesselName;
 	}
 
-	public void setVesselName(List<Max35Text> vesselName) {
-		this.vesselName = vesselName;
+	public MultimodalTransport2 setVesselName(List<Max35Text> vesselName) {
+		this.vesselName = Objects.requireNonNull(vesselName);
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfRct")
 	public List<Max35Text> getPlaceOfReceipt() {
-		return placeOfReceipt;
+		return placeOfReceipt == null ? placeOfReceipt = new ArrayList<>() : placeOfReceipt;
 	}
 
-	public void setPlaceOfReceipt(List<Max35Text> placeOfReceipt) {
-		this.placeOfReceipt = placeOfReceipt;
+	public MultimodalTransport2 setPlaceOfReceipt(List<Max35Text> placeOfReceipt) {
+		this.placeOfReceipt = Objects.requireNonNull(placeOfReceipt);
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfDlvry")
 	public List<Max35Text> getPlaceOfDelivery() {
-		return placeOfDelivery;
+		return placeOfDelivery == null ? placeOfDelivery = new ArrayList<>() : placeOfDelivery;
 	}
 
-	public void setPlaceOfDelivery(List<Max35Text> placeOfDelivery) {
-		this.placeOfDelivery = placeOfDelivery;
+	public MultimodalTransport2 setPlaceOfDelivery(List<Max35Text> placeOfDelivery) {
+		this.placeOfDelivery = Objects.requireNonNull(placeOfDelivery);
+		return this;
 	}
 
-	@XmlElement(name = "TakngInChrg")
 	public List<Max35Text> getTakingInCharge() {
-		return takingInCharge;
+		return takingInCharge == null ? takingInCharge = new ArrayList<>() : takingInCharge;
 	}
 
-	public void setTakingInCharge(List<Max35Text> takingInCharge) {
-		this.takingInCharge = takingInCharge;
+	public MultimodalTransport2 setTakingInCharge(List<Max35Text> takingInCharge) {
+		this.takingInCharge = Objects.requireNonNull(takingInCharge);
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfFnlDstn")
 	public List<Max35Text> getPlaceOfFinalDestination() {
-		return placeOfFinalDestination;
+		return placeOfFinalDestination == null ? placeOfFinalDestination = new ArrayList<>() : placeOfFinalDestination;
 	}
 
-	public void setPlaceOfFinalDestination(List<Max35Text> placeOfFinalDestination) {
-		this.placeOfFinalDestination = placeOfFinalDestination;
+	public MultimodalTransport2 setPlaceOfFinalDestination(List<Max35Text> placeOfFinalDestination) {
+		this.placeOfFinalDestination = Objects.requireNonNull(placeOfFinalDestination);
+		return this;
 	}
 
-	@XmlElement(name = "TrnstLctn")
 	public List<Max35Text> getTransitLocation() {
-		return transitLocation;
+		return transitLocation == null ? transitLocation = new ArrayList<>() : transitLocation;
 	}
 
-	public void setTransitLocation(List<Max35Text> transitLocation) {
-		this.transitLocation = transitLocation;
+	public MultimodalTransport2 setTransitLocation(List<Max35Text> transitLocation) {
+		this.transitLocation = Objects.requireNonNull(transitLocation);
+		return this;
 	}
 
-	@XmlElement(name = "RoadCrrierNm")
 	public List<Max35Text> getRoadCarrierName() {
-		return roadCarrierName;
+		return roadCarrierName == null ? roadCarrierName = new ArrayList<>() : roadCarrierName;
 	}
 
-	public void setRoadCarrierName(List<Max35Text> roadCarrierName) {
-		this.roadCarrierName = roadCarrierName;
+	public MultimodalTransport2 setRoadCarrierName(List<Max35Text> roadCarrierName) {
+		this.roadCarrierName = Objects.requireNonNull(roadCarrierName);
+		return this;
 	}
 
-	@XmlElement(name = "RailCrrierNm")
 	public List<Max35Text> getRailCarrierName() {
-		return railCarrierName;
+		return railCarrierName == null ? railCarrierName = new ArrayList<>() : railCarrierName;
 	}
 
-	public void setRailCarrierName(List<Max35Text> railCarrierName) {
-		this.railCarrierName = railCarrierName;
+	public MultimodalTransport2 setRailCarrierName(List<Max35Text> railCarrierName) {
+		this.railCarrierName = Objects.requireNonNull(railCarrierName);
+		return this;
 	}
 }

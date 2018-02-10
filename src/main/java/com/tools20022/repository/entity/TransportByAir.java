@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Information related to the transportation of goods by air.
@@ -39,6 +40,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Transport
+ * Transport}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -48,27 +52,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.TransportByAir#mmFlightNumber
  * TransportByAir.mmFlightNumber}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Transport
- * Transport}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.AirportName1Choice
- * AirportName1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportByAir1
- * TransportByAir1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportByAir3
- * TransportByAir3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportByAir2
- * TransportByAir2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportByAir4
- * TransportByAir4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportByAir5
- * TransportByAir5}</li>
  * </ul>
  * </li>
  * <li>
@@ -102,10 +85,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.AirportName1Choice
+ * AirportName1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportByAir1
+ * TransportByAir1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportByAir3
+ * TransportByAir3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportByAir2
+ * TransportByAir2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportByAir4
+ * TransportByAir4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportByAir5
+ * TransportByAir5}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,9 +122,8 @@ public class TransportByAir extends Transport {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Max6Text airportName;
 	/**
-	 * Identifies an airport by means of its IATA identification code. Example:
-	 * LHR.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,8 +162,8 @@ public class TransportByAir extends Transport {
 	public static final MMBusinessAttribute mmAirportName = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AirportName1Choice.mmAirportCode, AirportName1Choice.mmOtherAirportDescription);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TransportByAir.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TransportByAir.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AirportName";
 			definition = "Identifies an airport by means of its IATA identification code. Example: LHR.";
@@ -182,8 +182,8 @@ public class TransportByAir extends Transport {
 	};
 	protected Max35Text flightNumber;
 	/**
-	 * Identifies the flight and the carrier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,8 +217,8 @@ public class TransportByAir extends Transport {
 	public static final MMBusinessAttribute mmFlightNumber = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransportByAir4.mmFlightNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TransportByAir.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TransportByAir.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FlightNumber";
 			definition = "Identifies the flight and the carrier.";
@@ -239,7 +239,7 @@ public class TransportByAir extends Transport {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransportByAir";
 				definition = "Information related to the transportation of goods by air.";
@@ -262,15 +262,17 @@ public class TransportByAir extends Transport {
 		return airportName;
 	}
 
-	public void setAirportName(Max6Text airportName) {
-		this.airportName = airportName;
+	public TransportByAir setAirportName(Max6Text airportName) {
+		this.airportName = Objects.requireNonNull(airportName);
+		return this;
 	}
 
 	public Max35Text getFlightNumber() {
 		return flightNumber;
 	}
 
-	public void setFlightNumber(Max35Text flightNumber) {
-		this.flightNumber = flightNumber;
+	public TransportByAir setFlightNumber(Max35Text flightNumber) {
+		this.flightNumber = Objects.requireNonNull(flightNumber);
+		return this;
 	}
 }

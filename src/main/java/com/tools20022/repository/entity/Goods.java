@@ -26,9 +26,8 @@ import com.tools20022.repository.entity.Product;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Good is a physical product that can be delivered to a purchaser and that
@@ -40,6 +39,8 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Product Product}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -54,16 +55,6 @@ import java.util.List;
  * Goods.mmPhytosanitaryInspection}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Goods#mmPartyRole
  * Goods.mmPartyRole}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Product Product}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransportedGoods1
- * TransportedGoods1}</li>
  * </ul>
  * </li>
  * <li>
@@ -96,10 +87,18 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportedGoods1
+ * TransportedGoods1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -117,8 +116,8 @@ public class Goods extends Product {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Transport transport;
 	/**
-	 * Specifies the transport information related to the delivery of goods.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,8 +150,8 @@ public class Goods extends Product {
 	 */
 	public static final MMBusinessAssociationEnd mmTransport = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Transport";
 			definition = "Specifies the transport information related to the delivery of goods.";
@@ -165,8 +164,8 @@ public class Goods extends Product {
 	};
 	protected Max70Text analysis;
 	/**
-	 * Analysis of the goods, as proven by the trade certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,8 +202,8 @@ public class Goods extends Product {
 	public static final MMBusinessAttribute mmAnalysis = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CertifiedCharacteristics1Choice.mmAnalysis, CertifiedCharacteristics2Choice.mmAnalysis);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Analysis";
 			definition = "Analysis of the goods, as proven by the trade certificate.";
@@ -223,8 +222,8 @@ public class Goods extends Product {
 	};
 	protected YesNoIndicator healthCheck;
 	/**
-	 * Indicates if the goods have passed the health check.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -261,8 +260,8 @@ public class Goods extends Product {
 	public static final MMBusinessAttribute mmHealthCheck = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CertifiedCharacteristics1Choice.mmHealthIndication, CertifiedCharacteristics2Choice.mmHealthIndication);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HealthCheck";
 			definition = "Indicates if the goods have passed the health check.";
@@ -281,8 +280,8 @@ public class Goods extends Product {
 	};
 	protected YesNoIndicator phytosanitaryInspection;
 	/**
-	 * Indicates if the goods have passed the phytosanitary inspection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -320,8 +319,8 @@ public class Goods extends Product {
 	public static final MMBusinessAttribute mmPhytosanitaryInspection = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CertifiedCharacteristics1Choice.mmPhytosanitaryIndication, CertifiedCharacteristics2Choice.mmPhytosanitaryIndication);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PhytosanitaryInspection";
 			definition = "Indicates if the goods have passed the phytosanitary inspection.";
@@ -340,8 +339,8 @@ public class Goods extends Product {
 	};
 	protected List<com.tools20022.repository.entity.GoodsPartyRole> partyRole;
 	/**
-	 * Role played by a party in the context of producing goods.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -374,8 +373,8 @@ public class Goods extends Product {
 	 */
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
 			definition = "Role played by a party in the context of producing goods.";
@@ -389,7 +388,7 @@ public class Goods extends Product {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Goods";
 				definition = "Good is a physical product that can be delivered to a purchaser and that involves the transfer of ownership from seller to customer.";
@@ -409,43 +408,48 @@ public class Goods extends Product {
 		return mmObject_lazy.get();
 	}
 
-	public Transport getTransport() {
-		return transport;
+	public Optional<Transport> getTransport() {
+		return transport == null ? Optional.empty() : Optional.of(transport);
 	}
 
-	public void setTransport(com.tools20022.repository.entity.Transport transport) {
+	public Goods setTransport(com.tools20022.repository.entity.Transport transport) {
 		this.transport = transport;
+		return this;
 	}
 
 	public Max70Text getAnalysis() {
 		return analysis;
 	}
 
-	public void setAnalysis(Max70Text analysis) {
-		this.analysis = analysis;
+	public Goods setAnalysis(Max70Text analysis) {
+		this.analysis = Objects.requireNonNull(analysis);
+		return this;
 	}
 
 	public YesNoIndicator getHealthCheck() {
 		return healthCheck;
 	}
 
-	public void setHealthCheck(YesNoIndicator healthCheck) {
-		this.healthCheck = healthCheck;
+	public Goods setHealthCheck(YesNoIndicator healthCheck) {
+		this.healthCheck = Objects.requireNonNull(healthCheck);
+		return this;
 	}
 
 	public YesNoIndicator getPhytosanitaryInspection() {
 		return phytosanitaryInspection;
 	}
 
-	public void setPhytosanitaryInspection(YesNoIndicator phytosanitaryInspection) {
-		this.phytosanitaryInspection = phytosanitaryInspection;
+	public Goods setPhytosanitaryInspection(YesNoIndicator phytosanitaryInspection) {
+		this.phytosanitaryInspection = Objects.requireNonNull(phytosanitaryInspection);
+		return this;
 	}
 
 	public List<GoodsPartyRole> getPartyRole() {
-		return partyRole;
+		return partyRole == null ? partyRole = new ArrayList<>() : partyRole;
 	}
 
-	public void setPartyRole(List<com.tools20022.repository.entity.GoodsPartyRole> partyRole) {
-		this.partyRole = partyRole;
+	public Goods setPartyRole(List<com.tools20022.repository.entity.GoodsPartyRole> partyRole) {
+		this.partyRole = Objects.requireNonNull(partyRole);
+		return this;
 	}
 }

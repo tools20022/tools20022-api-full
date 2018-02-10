@@ -24,9 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Set of elements used to provide details on the account notification."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountNotification3", propOrder = {"identification", "account", "relatedAccount", "item"})
 public class AccountNotification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id")
 	protected Max35Text identification;
 	/**
-	 * Unique identification, as assigned by the account owner, to unambiguously
-	 * identify the account notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +109,7 @@ public class AccountNotification3 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountNotification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +120,11 @@ public class AccountNotification3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Acct", required = true)
 	protected CashAccount20 account;
 	/**
-	 * Identifies the account to be credited with the incoming funds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -157,7 +157,7 @@ public class AccountNotification3 {
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCashAccount;
-			componentContext_lazy = () -> AccountNotification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification3.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,11 +169,11 @@ public class AccountNotification3 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount20.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdAcct")
 	protected CashAccount16 relatedAccount;
 	/**
-	 * Identifies the parent account of the account to be credited with the
-	 * incoming funds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -207,7 +207,7 @@ public class AccountNotification3 {
 	public static final MMMessageAssociationEnd mmRelatedAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCashAccount;
-			componentContext_lazy = () -> AccountNotification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification3.mmObject();
 			isDerived = false;
 			xmlTag = "RltdAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,11 +219,11 @@ public class AccountNotification3 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
 		}
 	};
+	@XmlElement(name = "Itm", required = true)
 	protected List<com.tools20022.repository.msg.NotificationEntry2> item;
 	/**
-	 * Set of elements used to provide details of the expected amount on the
-	 * account serviced by the receiver of the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -257,7 +257,7 @@ public class AccountNotification3 {
 	public static final MMMessageAssociationEnd mmItem = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCashBalanceEntry;
-			componentContext_lazy = () -> AccountNotification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification3.mmObject();
 			isDerived = false;
 			xmlTag = "Itm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,9 +272,10 @@ public class AccountNotification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountNotification3.mmIdentification, AccountNotification3.mmAccount, AccountNotification3.mmRelatedAccount, AccountNotification3.mmItem);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountNotification3.mmIdentification, com.tools20022.repository.msg.AccountNotification3.mmAccount,
+						com.tools20022.repository.msg.AccountNotification3.mmRelatedAccount, com.tools20022.repository.msg.AccountNotification3.mmItem);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountNotification3";
 				definition = "Set of elements used to provide details on the account notification.";
@@ -283,39 +284,39 @@ public class AccountNotification3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id")
-	public Max35Text getIdentification() {
-		return identification;
+	public Optional<Max35Text> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(Max35Text identification) {
+	public AccountNotification3 setIdentification(Max35Text identification) {
 		this.identification = identification;
+		return this;
 	}
 
-	@XmlElement(name = "Acct", required = true)
 	public CashAccount20 getAccount() {
 		return account;
 	}
 
-	public void setAccount(com.tools20022.repository.msg.CashAccount20 account) {
-		this.account = account;
+	public AccountNotification3 setAccount(com.tools20022.repository.msg.CashAccount20 account) {
+		this.account = Objects.requireNonNull(account);
+		return this;
 	}
 
-	@XmlElement(name = "RltdAcct")
-	public CashAccount16 getRelatedAccount() {
-		return relatedAccount;
+	public Optional<CashAccount16> getRelatedAccount() {
+		return relatedAccount == null ? Optional.empty() : Optional.of(relatedAccount);
 	}
 
-	public void setRelatedAccount(com.tools20022.repository.msg.CashAccount16 relatedAccount) {
+	public AccountNotification3 setRelatedAccount(com.tools20022.repository.msg.CashAccount16 relatedAccount) {
 		this.relatedAccount = relatedAccount;
+		return this;
 	}
 
-	@XmlElement(name = "Itm", required = true)
 	public List<NotificationEntry2> getItem() {
-		return item;
+		return item == null ? item = new ArrayList<>() : item;
 	}
 
-	public void setItem(List<com.tools20022.repository.msg.NotificationEntry2> item) {
-		this.item = item;
+	public AccountNotification3 setItem(List<com.tools20022.repository.msg.NotificationEntry2> item) {
+		this.item = Objects.requireNonNull(item);
+		return this;
 	}
 }

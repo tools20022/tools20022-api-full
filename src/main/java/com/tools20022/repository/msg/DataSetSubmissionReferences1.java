@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,17 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DataSetSubmissionReferences1", propOrder = {"transactionIdentification", "submitterTransactionReference", "finalSubmission"})
 public class DataSetSubmissionReferences1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId", required = true)
 	protected Max35Text transactionIdentification;
 	/**
-	 * Unique identification assigned by the TSU to the transaction. This
-	 * identification is to be used in any communication between the parties and
-	 * with the TSU.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +109,7 @@ public class DataSetSubmissionReferences1 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DataSetSubmissionReferences1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetSubmissionReferences1.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,11 +120,11 @@ public class DataSetSubmissionReferences1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SubmitrTxRef", required = true)
 	protected DocumentIdentification5 submitterTransactionReference;
 	/**
-	 * Reference to the transaction for the financial institution that submits
-	 * the data set.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -153,7 +153,7 @@ public class DataSetSubmissionReferences1 {
 	 */
 	public static final MMMessageAssociationEnd mmSubmitterTransactionReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DataSetSubmissionReferences1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetSubmissionReferences1.mmObject();
 			isDerived = false;
 			xmlTag = "SubmitrTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,12 +165,11 @@ public class DataSetSubmissionReferences1 {
 			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "FnlSubmissn", required = true)
 	protected YesNoIndicator finalSubmission;
 	/**
-	 * Specifies whether the current submission of data sets is the last
-	 * submission for the transaction identified by the TSU transaction
-	 * identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,7 +199,7 @@ public class DataSetSubmissionReferences1 {
 	 */
 	public static final MMMessageAttribute mmFinalSubmission = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DataSetSubmissionReferences1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetSubmissionReferences1.mmObject();
 			isDerived = false;
 			xmlTag = "FnlSubmissn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,8 +214,9 @@ public class DataSetSubmissionReferences1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DataSetSubmissionReferences1.mmTransactionIdentification, DataSetSubmissionReferences1.mmSubmitterTransactionReference, DataSetSubmissionReferences1.mmFinalSubmission);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetSubmissionReferences1.mmTransactionIdentification, com.tools20022.repository.msg.DataSetSubmissionReferences1.mmSubmitterTransactionReference,
+						com.tools20022.repository.msg.DataSetSubmissionReferences1.mmFinalSubmission);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DataSetSubmissionReferences1";
 				definition = "Provides references to the submitted data set both for the TSU and for the user.  Also specifies whether the submission is the last one for the underlying transaction.";
@@ -225,30 +225,30 @@ public class DataSetSubmissionReferences1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public DataSetSubmissionReferences1 setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "SubmitrTxRef", required = true)
 	public DocumentIdentification5 getSubmitterTransactionReference() {
 		return submitterTransactionReference;
 	}
 
-	public void setSubmitterTransactionReference(com.tools20022.repository.msg.DocumentIdentification5 submitterTransactionReference) {
-		this.submitterTransactionReference = submitterTransactionReference;
+	public DataSetSubmissionReferences1 setSubmitterTransactionReference(com.tools20022.repository.msg.DocumentIdentification5 submitterTransactionReference) {
+		this.submitterTransactionReference = Objects.requireNonNull(submitterTransactionReference);
+		return this;
 	}
 
-	@XmlElement(name = "FnlSubmissn", required = true)
 	public YesNoIndicator getFinalSubmission() {
 		return finalSubmission;
 	}
 
-	public void setFinalSubmission(YesNoIndicator finalSubmission) {
-		this.finalSubmission = finalSubmission;
+	public DataSetSubmissionReferences1 setFinalSubmission(YesNoIndicator finalSubmission) {
+		this.finalSubmission = Objects.requireNonNull(finalSubmission);
+		return this;
 	}
 }

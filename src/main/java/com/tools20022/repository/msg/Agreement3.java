@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -35,6 +36,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +74,11 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = FIXSynonym: FinDetls</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -86,16 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Agreement3", propOrder = {"description", "date", "currency", "closingType", "startDate", "deliveryType", "marginRatio"})
 public class Agreement3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Desc")
 	protected Max350Text description;
 	/**
-	 * Full name of the base standard agreement, annexes and amendments in place
-	 * between the principals and applicable to this deal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,6 +119,9 @@ public class Agreement3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Desc"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 913</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -129,9 +137,10 @@ public class Agreement3 {
 	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmDescription;
-			componentContext_lazy = () -> Agreement3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement3.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "913"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Full name of the base standard agreement, annexes and amendments in place between the principals and applicable to this deal.";
@@ -140,10 +149,11 @@ public class Agreement3 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Dt")
 	protected ISODateTime date;
 	/**
-	 * Numeric representation of the day of the month and year.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,6 +172,9 @@ public class Agreement3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Dt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 915</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -175,9 +188,10 @@ public class Agreement3 {
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmDateSigned;
-			componentContext_lazy = () -> Agreement3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement3.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "915"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Numeric representation of the day of the month and year.";
@@ -186,12 +200,11 @@ public class Agreement3 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected CurrencyCode currency;
 	/**
-	 * Contractual currency forming the basis of a financing agreement and
-	 * associated transactions. Usually, but not always, the same as the trade
-	 * currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,6 +223,9 @@ public class Agreement3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Ccy"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 918</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -225,9 +241,10 @@ public class Agreement3 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancingAgreement.mmCurrency;
-			componentContext_lazy = () -> Agreement3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement3.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "918"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Contractual currency forming the basis of a financing agreement and associated transactions. Usually, but not always, the same as the trade currency.";
@@ -236,10 +253,11 @@ public class Agreement3 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "ClsgTp")
 	protected ClosingType1Code closingType;
 	/**
-	 * Type of financing closing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,6 +277,9 @@ public class Agreement3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClsgTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 788</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -272,9 +293,10 @@ public class Agreement3 {
 	public static final MMMessageAttribute mmClosingType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancingAgreement.mmTerminationType;
-			componentContext_lazy = () -> Agreement3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement3.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "788"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingType";
 			definition = "Type of financing closing.";
@@ -283,11 +305,11 @@ public class Agreement3 {
 			simpleType_lazy = () -> ClosingType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StartDt")
 	protected ISODateTime startDate;
 	/**
-	 * Start date of a financing deal that is the date the buyer pays the seller
-	 * cash and takes control of the collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -306,6 +328,9 @@ public class Agreement3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StartDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 916</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -321,9 +346,10 @@ public class Agreement3 {
 	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
-			componentContext_lazy = () -> Agreement3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement3.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "916"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Start date of a financing deal that is the date the buyer pays the seller cash and takes control of the collateral.";
@@ -332,10 +358,11 @@ public class Agreement3 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvryTp")
 	protected DeliveryType2Code deliveryType;
 	/**
-	 * Identifies type of settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -355,6 +382,9 @@ public class Agreement3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DlvryTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 919</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -368,9 +398,10 @@ public class Agreement3 {
 	public static final MMMessageAttribute mmDeliveryType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancingAgreement.mmDeliveryType;
-			componentContext_lazy = () -> Agreement3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement3.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "919"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryType";
 			definition = "Identifies type of settlement.";
@@ -379,13 +410,11 @@ public class Agreement3 {
 			simpleType_lazy = () -> DeliveryType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MrgnRatio")
 	protected PercentageRate marginRatio;
 	/**
-	 * Fraction of the cash consideration that must be collateralized, expressed
-	 * as a percent. A margin ratio of 02% indicates that the value of the
-	 * collateral (after deducting for "haircut") must exceed the cash
-	 * consideration by 2%.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -405,6 +434,9 @@ public class Agreement3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MrgnRatio"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 898</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -420,9 +452,10 @@ public class Agreement3 {
 	public static final MMMessageAttribute mmMarginRatio = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancingAgreement.mmMarginRatio;
-			componentContext_lazy = () -> Agreement3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement3.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnRatio";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "898"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginRatio";
 			definition = "Fraction of the cash consideration that must be collateralized, expressed as a percent. A margin ratio of 02% indicates that the value of the collateral (after deducting for \"haircut\") must exceed the cash consideration by 2%.";
@@ -435,9 +468,12 @@ public class Agreement3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Agreement3.mmDescription, Agreement3.mmDate, Agreement3.mmCurrency, Agreement3.mmClosingType, Agreement3.mmStartDate, Agreement3.mmDeliveryType, Agreement3.mmMarginRatio);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Agreement3.mmDescription, com.tools20022.repository.msg.Agreement3.mmDate, com.tools20022.repository.msg.Agreement3.mmCurrency,
+						com.tools20022.repository.msg.Agreement3.mmClosingType, com.tools20022.repository.msg.Agreement3.mmStartDate, com.tools20022.repository.msg.Agreement3.mmDeliveryType,
+						com.tools20022.repository.msg.Agreement3.mmMarginRatio);
 				trace_lazy = () -> SecuritiesFinancingAgreement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FinDetls"));
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -453,66 +489,66 @@ public class Agreement3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Desc")
-	public Max350Text getDescription() {
-		return description;
+	public Optional<Max350Text> getDescription() {
+		return description == null ? Optional.empty() : Optional.of(description);
 	}
 
-	public void setDescription(Max350Text description) {
+	public Agreement3 setDescription(Max350Text description) {
 		this.description = description;
+		return this;
 	}
 
-	@XmlElement(name = "Dt")
-	public ISODateTime getDate() {
-		return date;
+	public Optional<ISODateTime> getDate() {
+		return date == null ? Optional.empty() : Optional.of(date);
 	}
 
-	public void setDate(ISODateTime date) {
+	public Agreement3 setDate(ISODateTime date) {
 		this.date = date;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public CurrencyCode getCurrency() {
-		return currency;
+	public Optional<CurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(CurrencyCode currency) {
+	public Agreement3 setCurrency(CurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "ClsgTp")
-	public ClosingType1Code getClosingType() {
-		return closingType;
+	public Optional<ClosingType1Code> getClosingType() {
+		return closingType == null ? Optional.empty() : Optional.of(closingType);
 	}
 
-	public void setClosingType(ClosingType1Code closingType) {
+	public Agreement3 setClosingType(ClosingType1Code closingType) {
 		this.closingType = closingType;
+		return this;
 	}
 
-	@XmlElement(name = "StartDt")
-	public ISODateTime getStartDate() {
-		return startDate;
+	public Optional<ISODateTime> getStartDate() {
+		return startDate == null ? Optional.empty() : Optional.of(startDate);
 	}
 
-	public void setStartDate(ISODateTime startDate) {
+	public Agreement3 setStartDate(ISODateTime startDate) {
 		this.startDate = startDate;
+		return this;
 	}
 
-	@XmlElement(name = "DlvryTp")
-	public DeliveryType2Code getDeliveryType() {
-		return deliveryType;
+	public Optional<DeliveryType2Code> getDeliveryType() {
+		return deliveryType == null ? Optional.empty() : Optional.of(deliveryType);
 	}
 
-	public void setDeliveryType(DeliveryType2Code deliveryType) {
+	public Agreement3 setDeliveryType(DeliveryType2Code deliveryType) {
 		this.deliveryType = deliveryType;
+		return this;
 	}
 
-	@XmlElement(name = "MrgnRatio")
-	public PercentageRate getMarginRatio() {
-		return marginRatio;
+	public Optional<PercentageRate> getMarginRatio() {
+		return marginRatio == null ? Optional.empty() : Optional.of(marginRatio);
 	}
 
-	public void setMarginRatio(PercentageRate marginRatio) {
+	public Agreement3 setMarginRatio(PercentageRate marginRatio) {
 		this.marginRatio = marginRatio;
+		return this;
 	}
 }

@@ -29,9 +29,8 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.entity.UmbrellaFund;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -88,8 +87,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,20 +101,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrument21", propOrder = {"classType", "securitiesForm", "distributionPolicy", "productGroup", "umbrellaName", "baseCurrency", "denominationCurrency", "requestedNAVCurrency", "dualFundIndicator",
 		"countryOfDomicile", "registeredDistributionCountry"})
 public class FinancialInstrument21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ClssTp")
 	protected Max35Text classType;
 	/**
-	 * Features of units offered by a fund. For example, a unit may have a
-	 * specific load structure, eg, front end or back end, an income policy, eg,
-	 * pay out or accumulate, or a trailer policy, eg, with or without. Fund
-	 * classes are typically denoted by a single character, eg, 'Class A',
-	 * 'Class 2'.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,7 +146,7 @@ public class FinancialInstrument21 {
 	public static final MMMessageAttribute mmClassType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmClassType;
-			componentContext_lazy = () -> FinancialInstrument21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument21.mmObject();
 			isDerived = false;
 			xmlTag = "ClssTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,10 +157,11 @@ public class FinancialInstrument21 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesForm")
 	protected FormOfSecurity1Code securitiesForm;
 	/**
-	 * Specifies the form, that is, ownership, of the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,7 +195,7 @@ public class FinancialInstrument21 {
 	public static final MMMessageAttribute mmSecuritiesForm = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
-			componentContext_lazy = () -> FinancialInstrument21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument21.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesForm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,11 +206,11 @@ public class FinancialInstrument21 {
 			simpleType_lazy = () -> FormOfSecurity1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DstrbtnPlcy")
 	protected DistributionPolicy1Code distributionPolicy;
 	/**
-	 * Income policy relating to a class type, that is, if income is paid out or
-	 * retained in the fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,7 +246,7 @@ public class FinancialInstrument21 {
 	public static final MMMessageAttribute mmDistributionPolicy = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmDistributionPolicy;
-			componentContext_lazy = () -> FinancialInstrument21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument21.mmObject();
 			isDerived = false;
 			xmlTag = "DstrbtnPlcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -260,10 +257,11 @@ public class FinancialInstrument21 {
 			simpleType_lazy = () -> DistributionPolicy1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PdctGrp")
 	protected Max140Text productGroup;
 	/**
-	 * Company specific description of a group of funds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -296,7 +294,7 @@ public class FinancialInstrument21 {
 	public static final MMMessageAttribute mmProductGroup = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmProductGroup;
-			componentContext_lazy = () -> FinancialInstrument21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument21.mmObject();
 			isDerived = false;
 			xmlTag = "PdctGrp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -307,10 +305,11 @@ public class FinancialInstrument21 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "UmbrllNm")
 	protected Max35Text umbrellaName;
 	/**
-	 * Name of the umbrella fund in which financial instrument is contained.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -344,7 +343,7 @@ public class FinancialInstrument21 {
 	public static final MMMessageAttribute mmUmbrellaName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> UmbrellaFund.mmName;
-			componentContext_lazy = () -> FinancialInstrument21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument21.mmObject();
 			isDerived = false;
 			xmlTag = "UmbrllNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -355,10 +354,11 @@ public class FinancialInstrument21 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BaseCcy")
 	protected ActiveCurrencyCode baseCurrency;
 	/**
-	 * Currency of the investment fund class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -392,7 +392,7 @@ public class FinancialInstrument21 {
 	public static final MMMessageAttribute mmBaseCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmTradingCurrency;
-			componentContext_lazy = () -> FinancialInstrument21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument21.mmObject();
 			isDerived = false;
 			xmlTag = "BaseCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -403,10 +403,11 @@ public class FinancialInstrument21 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "DnmtnCcy")
 	protected ActiveCurrencyCode denominationCurrency;
 	/**
-	 * Currency in which a security is issued or redenominated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -440,7 +441,7 @@ public class FinancialInstrument21 {
 	public static final MMMessageAttribute mmDenominationCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmDenominationCurrency;
-			componentContext_lazy = () -> FinancialInstrument21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument21.mmObject();
 			isDerived = false;
 			xmlTag = "DnmtnCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -451,12 +452,11 @@ public class FinancialInstrument21 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdNAVCcy")
 	protected ActiveOrHistoricCurrencyCode requestedNAVCurrency;
 	/**
-	 * Currency to be used for pricing the fund. This currency must be among the
-	 * set of currencies in which the price may be expressed, as stated in the
-	 * prospectus.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -492,7 +492,7 @@ public class FinancialInstrument21 {
 	public static final MMMessageAttribute mmRequestedNAVCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmRequestedNAVCurrency;
-			componentContext_lazy = () -> FinancialInstrument21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument21.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdNAVCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -503,10 +503,11 @@ public class FinancialInstrument21 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "DualFndInd")
 	protected YesNoIndicator dualFundIndicator;
 	/**
-	 * Indicates whether the fund has two prices.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -540,7 +541,7 @@ public class FinancialInstrument21 {
 	public static final MMMessageAttribute mmDualFundIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmDualFundIndicator;
-			componentContext_lazy = () -> FinancialInstrument21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument21.mmObject();
 			isDerived = false;
 			xmlTag = "DualFndInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -551,11 +552,11 @@ public class FinancialInstrument21 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CtryOfDmcl")
 	protected CountryCode countryOfDomicile;
 	/**
-	 * Country where the fund has legal domicile as reflected in the ISIN
-	 * classification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -590,7 +591,7 @@ public class FinancialInstrument21 {
 	public static final MMMessageAttribute mmCountryOfDomicile = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFund.mmDomicileCountry;
-			componentContext_lazy = () -> FinancialInstrument21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument21.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfDmcl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -601,10 +602,11 @@ public class FinancialInstrument21 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "RegdDstrbtnCtry")
 	protected List<CountryCode> registeredDistributionCountry;
 	/**
-	 * Countries where the fund is registered for distribution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -637,7 +639,7 @@ public class FinancialInstrument21 {
 	public static final MMMessageAttribute mmRegisteredDistributionCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegisteredDistributionCountry;
-			componentContext_lazy = () -> FinancialInstrument21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument21.mmObject();
 			isDerived = false;
 			xmlTag = "RegdDstrbtnCtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -651,11 +653,13 @@ public class FinancialInstrument21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrument21.mmClassType, FinancialInstrument21.mmSecuritiesForm, FinancialInstrument21.mmDistributionPolicy, FinancialInstrument21.mmProductGroup,
-						FinancialInstrument21.mmUmbrellaName, FinancialInstrument21.mmBaseCurrency, FinancialInstrument21.mmDenominationCurrency, FinancialInstrument21.mmRequestedNAVCurrency, FinancialInstrument21.mmDualFundIndicator,
-						FinancialInstrument21.mmCountryOfDomicile, FinancialInstrument21.mmRegisteredDistributionCountry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument21.mmClassType, com.tools20022.repository.msg.FinancialInstrument21.mmSecuritiesForm,
+						com.tools20022.repository.msg.FinancialInstrument21.mmDistributionPolicy, com.tools20022.repository.msg.FinancialInstrument21.mmProductGroup, com.tools20022.repository.msg.FinancialInstrument21.mmUmbrellaName,
+						com.tools20022.repository.msg.FinancialInstrument21.mmBaseCurrency, com.tools20022.repository.msg.FinancialInstrument21.mmDenominationCurrency,
+						com.tools20022.repository.msg.FinancialInstrument21.mmRequestedNAVCurrency, com.tools20022.repository.msg.FinancialInstrument21.mmDualFundIndicator,
+						com.tools20022.repository.msg.FinancialInstrument21.mmCountryOfDomicile, com.tools20022.repository.msg.FinancialInstrument21.mmRegisteredDistributionCountry);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument21";
 				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.";
@@ -664,102 +668,102 @@ public class FinancialInstrument21 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ClssTp")
-	public Max35Text getClassType() {
-		return classType;
+	public Optional<Max35Text> getClassType() {
+		return classType == null ? Optional.empty() : Optional.of(classType);
 	}
 
-	public void setClassType(Max35Text classType) {
+	public FinancialInstrument21 setClassType(Max35Text classType) {
 		this.classType = classType;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesForm")
-	public FormOfSecurity1Code getSecuritiesForm() {
-		return securitiesForm;
+	public Optional<FormOfSecurity1Code> getSecuritiesForm() {
+		return securitiesForm == null ? Optional.empty() : Optional.of(securitiesForm);
 	}
 
-	public void setSecuritiesForm(FormOfSecurity1Code securitiesForm) {
+	public FinancialInstrument21 setSecuritiesForm(FormOfSecurity1Code securitiesForm) {
 		this.securitiesForm = securitiesForm;
+		return this;
 	}
 
-	@XmlElement(name = "DstrbtnPlcy")
-	public DistributionPolicy1Code getDistributionPolicy() {
-		return distributionPolicy;
+	public Optional<DistributionPolicy1Code> getDistributionPolicy() {
+		return distributionPolicy == null ? Optional.empty() : Optional.of(distributionPolicy);
 	}
 
-	public void setDistributionPolicy(DistributionPolicy1Code distributionPolicy) {
+	public FinancialInstrument21 setDistributionPolicy(DistributionPolicy1Code distributionPolicy) {
 		this.distributionPolicy = distributionPolicy;
+		return this;
 	}
 
-	@XmlElement(name = "PdctGrp")
-	public Max140Text getProductGroup() {
-		return productGroup;
+	public Optional<Max140Text> getProductGroup() {
+		return productGroup == null ? Optional.empty() : Optional.of(productGroup);
 	}
 
-	public void setProductGroup(Max140Text productGroup) {
+	public FinancialInstrument21 setProductGroup(Max140Text productGroup) {
 		this.productGroup = productGroup;
+		return this;
 	}
 
-	@XmlElement(name = "UmbrllNm")
-	public Max35Text getUmbrellaName() {
-		return umbrellaName;
+	public Optional<Max35Text> getUmbrellaName() {
+		return umbrellaName == null ? Optional.empty() : Optional.of(umbrellaName);
 	}
 
-	public void setUmbrellaName(Max35Text umbrellaName) {
+	public FinancialInstrument21 setUmbrellaName(Max35Text umbrellaName) {
 		this.umbrellaName = umbrellaName;
+		return this;
 	}
 
-	@XmlElement(name = "BaseCcy")
-	public ActiveCurrencyCode getBaseCurrency() {
-		return baseCurrency;
+	public Optional<ActiveCurrencyCode> getBaseCurrency() {
+		return baseCurrency == null ? Optional.empty() : Optional.of(baseCurrency);
 	}
 
-	public void setBaseCurrency(ActiveCurrencyCode baseCurrency) {
+	public FinancialInstrument21 setBaseCurrency(ActiveCurrencyCode baseCurrency) {
 		this.baseCurrency = baseCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "DnmtnCcy")
-	public ActiveCurrencyCode getDenominationCurrency() {
-		return denominationCurrency;
+	public Optional<ActiveCurrencyCode> getDenominationCurrency() {
+		return denominationCurrency == null ? Optional.empty() : Optional.of(denominationCurrency);
 	}
 
-	public void setDenominationCurrency(ActiveCurrencyCode denominationCurrency) {
+	public FinancialInstrument21 setDenominationCurrency(ActiveCurrencyCode denominationCurrency) {
 		this.denominationCurrency = denominationCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "ReqdNAVCcy")
-	public ActiveOrHistoricCurrencyCode getRequestedNAVCurrency() {
-		return requestedNAVCurrency;
+	public Optional<ActiveOrHistoricCurrencyCode> getRequestedNAVCurrency() {
+		return requestedNAVCurrency == null ? Optional.empty() : Optional.of(requestedNAVCurrency);
 	}
 
-	public void setRequestedNAVCurrency(ActiveOrHistoricCurrencyCode requestedNAVCurrency) {
+	public FinancialInstrument21 setRequestedNAVCurrency(ActiveOrHistoricCurrencyCode requestedNAVCurrency) {
 		this.requestedNAVCurrency = requestedNAVCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "DualFndInd")
-	public YesNoIndicator getDualFundIndicator() {
-		return dualFundIndicator;
+	public Optional<YesNoIndicator> getDualFundIndicator() {
+		return dualFundIndicator == null ? Optional.empty() : Optional.of(dualFundIndicator);
 	}
 
-	public void setDualFundIndicator(YesNoIndicator dualFundIndicator) {
+	public FinancialInstrument21 setDualFundIndicator(YesNoIndicator dualFundIndicator) {
 		this.dualFundIndicator = dualFundIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "CtryOfDmcl")
-	public CountryCode getCountryOfDomicile() {
-		return countryOfDomicile;
+	public Optional<CountryCode> getCountryOfDomicile() {
+		return countryOfDomicile == null ? Optional.empty() : Optional.of(countryOfDomicile);
 	}
 
-	public void setCountryOfDomicile(CountryCode countryOfDomicile) {
+	public FinancialInstrument21 setCountryOfDomicile(CountryCode countryOfDomicile) {
 		this.countryOfDomicile = countryOfDomicile;
+		return this;
 	}
 
-	@XmlElement(name = "RegdDstrbtnCtry")
 	public List<CountryCode> getRegisteredDistributionCountry() {
-		return registeredDistributionCountry;
+		return registeredDistributionCountry == null ? registeredDistributionCountry = new ArrayList<>() : registeredDistributionCountry;
 	}
 
-	public void setRegisteredDistributionCountry(List<CountryCode> registeredDistributionCountry) {
-		this.registeredDistributionCountry = registeredDistributionCountry;
+	public FinancialInstrument21 setRegisteredDistributionCountry(List<CountryCode> registeredDistributionCountry) {
+		this.registeredDistributionCountry = Objects.requireNonNull(registeredDistributionCountry);
+		return this;
 	}
 }

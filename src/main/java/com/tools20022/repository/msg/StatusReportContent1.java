@@ -27,9 +27,8 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.PointOfInteraction;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "StatusReportContent1", propOrder = {"POICapabilities", "POIComponent", "attendanceContext", "POIDateTime", "dataSetRequired", "event", "errors"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "StatusReportContent1", propOrder = {"pOICapabilities", "pOIComponent", "attendanceContext", "pOIDateTime", "dataSetRequired", "event", "errors"})
 public class StatusReportContent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "POICpblties")
 	protected PointOfInteractionCapabilities1 pOICapabilities;
 	/**
-	 * Capabilities of the POI performing the status report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -128,7 +128,7 @@ public class StatusReportContent1 {
 	public static final MMMessageAssociationEnd mmPOICapabilities = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PointOfInteraction.mmObject();
-			componentContext_lazy = () -> StatusReportContent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportContent1.mmObject();
 			isDerived = false;
 			xmlTag = "POICpblties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,10 +140,11 @@ public class StatusReportContent1 {
 			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities1.mmObject();
 		}
 	};
+	@XmlElement(name = "POICmpnt")
 	protected List<com.tools20022.repository.msg.PointOfInteractionComponent2> pOIComponent;
 	/**
-	 * Data related to a component of the POI performing the status report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -177,7 +178,7 @@ public class StatusReportContent1 {
 	public static final MMMessageAssociationEnd mmPOIComponent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PointOfInteraction.mmComponent;
-			componentContext_lazy = () -> StatusReportContent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportContent1.mmObject();
 			isDerived = false;
 			xmlTag = "POICmpnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,10 +189,11 @@ public class StatusReportContent1 {
 			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent2.mmObject();
 		}
 	};
+	@XmlElement(name = "AttndncCntxt")
 	protected AttendanceContext1Code attendanceContext;
 	/**
-	 * Human attendance at the POI location during transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -226,7 +228,7 @@ public class StatusReportContent1 {
 	public static final MMMessageAttribute mmAttendanceContext = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmAttendanceContext;
-			componentContext_lazy = () -> StatusReportContent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportContent1.mmObject();
 			isDerived = false;
 			xmlTag = "AttndncCntxt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,11 +239,11 @@ public class StatusReportContent1 {
 			simpleType_lazy = () -> AttendanceContext1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "POIDtTm", required = true)
 	protected ISODateTime pOIDateTime;
 	/**
-	 * System date time of the point of interaction (POI) sending the status
-	 * report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -270,7 +272,7 @@ public class StatusReportContent1 {
 	 */
 	public static final MMMessageAttribute mmPOIDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatusReportContent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportContent1.mmObject();
 			isDerived = false;
 			xmlTag = "POIDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,11 +283,11 @@ public class StatusReportContent1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "DataSetReqrd")
 	protected DataSetIdentification2 dataSetRequired;
 	/**
-	 * Request the terminal management system to answer with the identified data
-	 * set.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -313,7 +315,7 @@ public class StatusReportContent1 {
 	 */
 	public static final MMMessageAssociationEnd mmDataSetRequired = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusReportContent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportContent1.mmObject();
 			isDerived = false;
 			xmlTag = "DataSetReqrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,11 +327,11 @@ public class StatusReportContent1 {
 			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification2.mmObject();
 		}
 	};
+	@XmlElement(name = "Evt")
 	protected List<com.tools20022.repository.msg.TMSEvent1> event;
 	/**
-	 * Result of an individual terminal management action by the point of
-	 * interaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -356,7 +358,7 @@ public class StatusReportContent1 {
 	 */
 	public static final MMMessageAssociationEnd mmEvent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusReportContent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportContent1.mmObject();
 			isDerived = false;
 			xmlTag = "Evt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -367,10 +369,11 @@ public class StatusReportContent1 {
 			type_lazy = () -> com.tools20022.repository.msg.TMSEvent1.mmObject();
 		}
 	};
+	@XmlElement(name = "Errs")
 	protected Max140Text errors;
 	/**
-	 * Error log of the point of interaction since the last status report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -398,7 +401,7 @@ public class StatusReportContent1 {
 	 */
 	public static final MMMessageAttribute mmErrors = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatusReportContent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportContent1.mmObject();
 			isDerived = false;
 			xmlTag = "Errs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -413,9 +416,10 @@ public class StatusReportContent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatusReportContent1.mmPOICapabilities, StatusReportContent1.mmPOIComponent, StatusReportContent1.mmAttendanceContext, StatusReportContent1.mmPOIDateTime,
-						StatusReportContent1.mmDataSetRequired, StatusReportContent1.mmEvent, StatusReportContent1.mmErrors);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportContent1.mmPOICapabilities, com.tools20022.repository.msg.StatusReportContent1.mmPOIComponent,
+						com.tools20022.repository.msg.StatusReportContent1.mmAttendanceContext, com.tools20022.repository.msg.StatusReportContent1.mmPOIDateTime, com.tools20022.repository.msg.StatusReportContent1.mmDataSetRequired,
+						com.tools20022.repository.msg.StatusReportContent1.mmEvent, com.tools20022.repository.msg.StatusReportContent1.mmErrors);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusReportContent1";
 				definition = "Content of the status report.";
@@ -425,66 +429,66 @@ public class StatusReportContent1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "POICpblties")
-	public PointOfInteractionCapabilities1 getPOICapabilities() {
-		return pOICapabilities;
+	public Optional<PointOfInteractionCapabilities1> getPOICapabilities() {
+		return pOICapabilities == null ? Optional.empty() : Optional.of(pOICapabilities);
 	}
 
-	public void setPOICapabilities(com.tools20022.repository.msg.PointOfInteractionCapabilities1 pOICapabilities) {
+	public StatusReportContent1 setPOICapabilities(com.tools20022.repository.msg.PointOfInteractionCapabilities1 pOICapabilities) {
 		this.pOICapabilities = pOICapabilities;
+		return this;
 	}
 
-	@XmlElement(name = "POICmpnt")
 	public List<PointOfInteractionComponent2> getPOIComponent() {
-		return pOIComponent;
+		return pOIComponent == null ? pOIComponent = new ArrayList<>() : pOIComponent;
 	}
 
-	public void setPOIComponent(List<com.tools20022.repository.msg.PointOfInteractionComponent2> pOIComponent) {
-		this.pOIComponent = pOIComponent;
+	public StatusReportContent1 setPOIComponent(List<com.tools20022.repository.msg.PointOfInteractionComponent2> pOIComponent) {
+		this.pOIComponent = Objects.requireNonNull(pOIComponent);
+		return this;
 	}
 
-	@XmlElement(name = "AttndncCntxt")
-	public AttendanceContext1Code getAttendanceContext() {
-		return attendanceContext;
+	public Optional<AttendanceContext1Code> getAttendanceContext() {
+		return attendanceContext == null ? Optional.empty() : Optional.of(attendanceContext);
 	}
 
-	public void setAttendanceContext(AttendanceContext1Code attendanceContext) {
+	public StatusReportContent1 setAttendanceContext(AttendanceContext1Code attendanceContext) {
 		this.attendanceContext = attendanceContext;
+		return this;
 	}
 
-	@XmlElement(name = "POIDtTm", required = true)
 	public ISODateTime getPOIDateTime() {
 		return pOIDateTime;
 	}
 
-	public void setPOIDateTime(ISODateTime pOIDateTime) {
-		this.pOIDateTime = pOIDateTime;
+	public StatusReportContent1 setPOIDateTime(ISODateTime pOIDateTime) {
+		this.pOIDateTime = Objects.requireNonNull(pOIDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "DataSetReqrd")
-	public DataSetIdentification2 getDataSetRequired() {
-		return dataSetRequired;
+	public Optional<DataSetIdentification2> getDataSetRequired() {
+		return dataSetRequired == null ? Optional.empty() : Optional.of(dataSetRequired);
 	}
 
-	public void setDataSetRequired(com.tools20022.repository.msg.DataSetIdentification2 dataSetRequired) {
+	public StatusReportContent1 setDataSetRequired(com.tools20022.repository.msg.DataSetIdentification2 dataSetRequired) {
 		this.dataSetRequired = dataSetRequired;
+		return this;
 	}
 
-	@XmlElement(name = "Evt")
 	public List<TMSEvent1> getEvent() {
-		return event;
+		return event == null ? event = new ArrayList<>() : event;
 	}
 
-	public void setEvent(List<com.tools20022.repository.msg.TMSEvent1> event) {
-		this.event = event;
+	public StatusReportContent1 setEvent(List<com.tools20022.repository.msg.TMSEvent1> event) {
+		this.event = Objects.requireNonNull(event);
+		return this;
 	}
 
-	@XmlElement(name = "Errs")
-	public Max140Text getErrors() {
-		return errors;
+	public Optional<Max140Text> getErrors() {
+		return errors == null ? Optional.empty() : Optional.of(errors);
 	}
 
-	public void setErrors(Max140Text errors) {
+	public StatusReportContent1 setErrors(Max140Text errors) {
 		this.errors = errors;
+		return this;
 	}
 }

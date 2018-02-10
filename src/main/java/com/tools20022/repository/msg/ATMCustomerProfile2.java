@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * ATMCustomerProfile1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMCustomerProfile2", propOrder = {"profileReference", "customerIdentification"})
 public class ATMCustomerProfile2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrflRef")
 	protected Max35Text profileReference;
 	/**
-	 * Reference of the customer profile.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +122,7 @@ public class ATMCustomerProfile2 {
 	 */
 	public static final MMMessageAttribute mmProfileReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCustomerProfile2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile2.mmObject();
 			isDerived = false;
 			xmlTag = "PrflRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,10 +135,11 @@ public class ATMCustomerProfile2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CstmrId")
 	protected Max35Text customerIdentification;
 	/**
-	 * Identification of the customer for the bank.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,7 +179,7 @@ public class ATMCustomerProfile2 {
 	 */
 	public static final MMMessageAttribute mmCustomerIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCustomerProfile2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile2.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -193,8 +196,8 @@ public class ATMCustomerProfile2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMCustomerProfile2.mmProfileReference, ATMCustomerProfile2.mmCustomerIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomerProfile2.mmProfileReference, com.tools20022.repository.msg.ATMCustomerProfile2.mmCustomerIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomerProfile2";
 				definition = "Profile of the customer selected by an ATM.";
@@ -205,21 +208,21 @@ public class ATMCustomerProfile2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrflRef")
-	public Max35Text getProfileReference() {
-		return profileReference;
+	public Optional<Max35Text> getProfileReference() {
+		return profileReference == null ? Optional.empty() : Optional.of(profileReference);
 	}
 
-	public void setProfileReference(Max35Text profileReference) {
+	public ATMCustomerProfile2 setProfileReference(Max35Text profileReference) {
 		this.profileReference = profileReference;
+		return this;
 	}
 
-	@XmlElement(name = "CstmrId")
-	public Max35Text getCustomerIdentification() {
-		return customerIdentification;
+	public Optional<Max35Text> getCustomerIdentification() {
+		return customerIdentification == null ? Optional.empty() : Optional.of(customerIdentification);
 	}
 
-	public void setCustomerIdentification(Max35Text customerIdentification) {
+	public ATMCustomerProfile2 setCustomerIdentification(Max35Text customerIdentification) {
 		this.customerIdentification = customerIdentification;
+		return this;
 	}
 }

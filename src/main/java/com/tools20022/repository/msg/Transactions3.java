@@ -21,9 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +48,25 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPaymentInstructionStatusRule#forTransactions3
+ * ConstraintPaymentInstructionStatusRule.forTransactions3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTransferValueDateRule#forTransactions3
+ * ConstraintTransferValueDateRule.forTransactions3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPaymentMessageTypeRule#forTransactions3
+ * ConstraintPaymentMessageTypeRule.forTransactions3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCreditDebitIndicator1Rule#forTransactions3
+ * ConstraintCreditDebitIndicator1Rule.forTransactions3}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Reports on transactions."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Transactions3", propOrder = {"paymentCommonInformation", "transactionReport"})
 public class Transactions3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmtCmonInf")
 	protected PaymentCommonDetails3 paymentCommonInformation;
 	/**
-	 * Common detailed payment instruction information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -94,7 +111,7 @@ public class Transactions3 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentCommonInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Transactions3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transactions3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtCmonInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -106,10 +123,11 @@ public class Transactions3 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentCommonDetails3.mmObject();
 		}
 	};
+	@XmlElement(name = "TxRpt", required = true)
 	protected List<com.tools20022.repository.msg.TransactionReportDetails4> transactionReport;
 	/**
-	 * Reports either on the transaction information or on a business error.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -136,7 +154,7 @@ public class Transactions3 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Transactions3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transactions3.mmObject();
 			isDerived = false;
 			xmlTag = "TxRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,8 +169,10 @@ public class Transactions3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Transactions3.mmPaymentCommonInformation, Transactions3.mmTransactionReport);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transactions3.mmPaymentCommonInformation, com.tools20022.repository.msg.Transactions3.mmTransactionReport);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPaymentInstructionStatusRule.forTransactions3, com.tools20022.repository.constraints.ConstraintTransferValueDateRule.forTransactions3,
+						com.tools20022.repository.constraints.ConstraintPaymentMessageTypeRule.forTransactions3, com.tools20022.repository.constraints.ConstraintCreditDebitIndicator1Rule.forTransactions3);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Transactions3";
 				definition = "Reports on transactions.";
@@ -161,21 +181,21 @@ public class Transactions3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmtCmonInf")
-	public PaymentCommonDetails3 getPaymentCommonInformation() {
-		return paymentCommonInformation;
+	public Optional<PaymentCommonDetails3> getPaymentCommonInformation() {
+		return paymentCommonInformation == null ? Optional.empty() : Optional.of(paymentCommonInformation);
 	}
 
-	public void setPaymentCommonInformation(com.tools20022.repository.msg.PaymentCommonDetails3 paymentCommonInformation) {
+	public Transactions3 setPaymentCommonInformation(com.tools20022.repository.msg.PaymentCommonDetails3 paymentCommonInformation) {
 		this.paymentCommonInformation = paymentCommonInformation;
+		return this;
 	}
 
-	@XmlElement(name = "TxRpt", required = true)
 	public List<TransactionReportDetails4> getTransactionReport() {
-		return transactionReport;
+		return transactionReport == null ? transactionReport = new ArrayList<>() : transactionReport;
 	}
 
-	public void setTransactionReport(List<com.tools20022.repository.msg.TransactionReportDetails4> transactionReport) {
-		this.transactionReport = transactionReport;
+	public Transactions3 setTransactionReport(List<com.tools20022.repository.msg.TransactionReportDetails4> transactionReport) {
+		this.transactionReport = Objects.requireNonNull(transactionReport);
+		return this;
 	}
 }

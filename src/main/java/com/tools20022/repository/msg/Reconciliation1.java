@@ -24,9 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max4NumericText;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Reconciliation1", propOrder = {"reportIdentification", "reportPagination", "bankToCustomerAccountReportCopy", "initialMessageIdentification", "controlCode"})
 public class Reconciliation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptId", required = true)
 	protected Max35Text reportIdentification;
 	/**
-	 * Unique Identifier of partitions aggregate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +110,7 @@ public class Reconciliation1 {
 	 */
 	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reconciliation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reconciliation1.mmObject();
 			isDerived = false;
 			xmlTag = "RptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,12 +121,11 @@ public class Reconciliation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RptPgntn")
 	protected Pagination reportPagination;
 	/**
-	 * Page number of the message and continuation indicator to indicate that
-	 * the multi-parts notification is to continue or that the message is the
-	 * last page of the multi-parts notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -153,7 +152,7 @@ public class Reconciliation1 {
 	 */
 	public static final MMMessageAssociationEnd mmReportPagination = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Reconciliation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reconciliation1.mmObject();
 			isDerived = false;
 			xmlTag = "RptPgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,15 +164,11 @@ public class Reconciliation1 {
 			type_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
 		}
 	};
+	@XmlElement(name = "BkToCstmrAcctRptCpy", required = true)
 	protected BankToCustomerAccountReportCopy1 bankToCustomerAccountReportCopy;
 	/**
-	 * The BankToCustomerAccountReport message is sent by the account servicer
-	 * to an account owner or to a party authorised by the account owner to
-	 * receive the message. It can be used to inform the account owner, or
-	 * authorised party, of the entries reported to the account, and/or to
-	 * provide the owner with balance information on the account at a given
-	 * point in time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -202,7 +197,7 @@ public class Reconciliation1 {
 	 */
 	public static final MMMessageAssociationEnd mmBankToCustomerAccountReportCopy = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Reconciliation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reconciliation1.mmObject();
 			isDerived = false;
 			xmlTag = "BkToCstmrAcctRptCpy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,10 +209,11 @@ public class Reconciliation1 {
 			type_lazy = () -> com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.mmObject();
 		}
 	};
+	@XmlElement(name = "InitlMsgId")
 	protected Max35Text initialMessageIdentification;
 	/**
-	 * Business identification of the initial message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,7 +240,7 @@ public class Reconciliation1 {
 	 */
 	public static final MMMessageAttribute mmInitialMessageIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reconciliation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reconciliation1.mmObject();
 			isDerived = false;
 			xmlTag = "InitlMsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -255,10 +251,11 @@ public class Reconciliation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrlCd")
 	protected List<Max4NumericText> controlCode;
 	/**
-	 * Electronic message control code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -286,7 +283,7 @@ public class Reconciliation1 {
 	 */
 	public static final MMMessageAttribute mmControlCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reconciliation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reconciliation1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrlCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -300,9 +297,10 @@ public class Reconciliation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Reconciliation1.mmReportIdentification, Reconciliation1.mmReportPagination, Reconciliation1.mmBankToCustomerAccountReportCopy, Reconciliation1.mmInitialMessageIdentification,
-						Reconciliation1.mmControlCode);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reconciliation1.mmReportIdentification, com.tools20022.repository.msg.Reconciliation1.mmReportPagination,
+						com.tools20022.repository.msg.Reconciliation1.mmBankToCustomerAccountReportCopy, com.tools20022.repository.msg.Reconciliation1.mmInitialMessageIdentification,
+						com.tools20022.repository.msg.Reconciliation1.mmControlCode);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reconciliation1";
 				definition = "Report on account transactions to reconcile documents of the day of participants.";
@@ -311,48 +309,48 @@ public class Reconciliation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptId", required = true)
 	public Max35Text getReportIdentification() {
 		return reportIdentification;
 	}
 
-	public void setReportIdentification(Max35Text reportIdentification) {
-		this.reportIdentification = reportIdentification;
+	public Reconciliation1 setReportIdentification(Max35Text reportIdentification) {
+		this.reportIdentification = Objects.requireNonNull(reportIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RptPgntn")
-	public Pagination getReportPagination() {
-		return reportPagination;
+	public Optional<Pagination> getReportPagination() {
+		return reportPagination == null ? Optional.empty() : Optional.of(reportPagination);
 	}
 
-	public void setReportPagination(com.tools20022.repository.msg.Pagination reportPagination) {
+	public Reconciliation1 setReportPagination(com.tools20022.repository.msg.Pagination reportPagination) {
 		this.reportPagination = reportPagination;
+		return this;
 	}
 
-	@XmlElement(name = "BkToCstmrAcctRptCpy", required = true)
 	public BankToCustomerAccountReportCopy1 getBankToCustomerAccountReportCopy() {
 		return bankToCustomerAccountReportCopy;
 	}
 
-	public void setBankToCustomerAccountReportCopy(com.tools20022.repository.msg.BankToCustomerAccountReportCopy1 bankToCustomerAccountReportCopy) {
-		this.bankToCustomerAccountReportCopy = bankToCustomerAccountReportCopy;
+	public Reconciliation1 setBankToCustomerAccountReportCopy(com.tools20022.repository.msg.BankToCustomerAccountReportCopy1 bankToCustomerAccountReportCopy) {
+		this.bankToCustomerAccountReportCopy = Objects.requireNonNull(bankToCustomerAccountReportCopy);
+		return this;
 	}
 
-	@XmlElement(name = "InitlMsgId")
-	public Max35Text getInitialMessageIdentification() {
-		return initialMessageIdentification;
+	public Optional<Max35Text> getInitialMessageIdentification() {
+		return initialMessageIdentification == null ? Optional.empty() : Optional.of(initialMessageIdentification);
 	}
 
-	public void setInitialMessageIdentification(Max35Text initialMessageIdentification) {
+	public Reconciliation1 setInitialMessageIdentification(Max35Text initialMessageIdentification) {
 		this.initialMessageIdentification = initialMessageIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CtrlCd")
 	public List<Max4NumericText> getControlCode() {
-		return controlCode;
+		return controlCode == null ? controlCode = new ArrayList<>() : controlCode;
 	}
 
-	public void setControlCode(List<Max4NumericText> controlCode) {
-		this.controlCode = controlCode;
+	public Reconciliation1 setControlCode(List<Max4NumericText> controlCode) {
+		this.controlCode = Objects.requireNonNull(controlCode);
+		return this;
 	}
 }

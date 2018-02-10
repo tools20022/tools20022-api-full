@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information specific to an amendment."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmendInformation", propOrder = {"previousReference", "reconfirmInstructions"})
 public class AmendInformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrvsRef", required = true)
 	protected InstructionIdentification previousReference;
 	/**
-	 * Identifies the meeting notification to be modified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -97,7 +99,7 @@ public class AmendInformation {
 	 */
 	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AmendInformation.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmendInformation.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,12 +111,11 @@ public class AmendInformation {
 			type_lazy = () -> com.tools20022.repository.msg.InstructionIdentification.mmObject();
 		}
 	};
+	@XmlElement(name = "RcnfrmInstrs", required = true)
 	protected YesNoIndicator reconfirmInstructions;
 	/**
-	 * Indicates whether instructions must be resent (in case of modification of
-	 * the parameters of a meeting for which instructions have already been
-	 * sent).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,7 +145,7 @@ public class AmendInformation {
 	 */
 	public static final MMMessageAttribute mmReconfirmInstructions = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AmendInformation.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmendInformation.mmObject();
 			isDerived = false;
 			xmlTag = "RcnfrmInstrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,8 +160,8 @@ public class AmendInformation {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmendInformation.mmPreviousReference, AmendInformation.mmReconfirmInstructions);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmendInformation.mmPreviousReference, com.tools20022.repository.msg.AmendInformation.mmReconfirmInstructions);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AmendInformation";
 				definition = "Information specific to an amendment.";
@@ -169,21 +170,21 @@ public class AmendInformation {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrvsRef", required = true)
 	public InstructionIdentification getPreviousReference() {
 		return previousReference;
 	}
 
-	public void setPreviousReference(com.tools20022.repository.msg.InstructionIdentification previousReference) {
-		this.previousReference = previousReference;
+	public AmendInformation setPreviousReference(com.tools20022.repository.msg.InstructionIdentification previousReference) {
+		this.previousReference = Objects.requireNonNull(previousReference);
+		return this;
 	}
 
-	@XmlElement(name = "RcnfrmInstrs", required = true)
 	public YesNoIndicator getReconfirmInstructions() {
 		return reconfirmInstructions;
 	}
 
-	public void setReconfirmInstructions(YesNoIndicator reconfirmInstructions) {
-		this.reconfirmInstructions = reconfirmInstructions;
+	public AmendInformation setReconfirmInstructions(YesNoIndicator reconfirmInstructions) {
+		this.reconfirmInstructions = Objects.requireNonNull(reconfirmInstructions);
+		return this;
 	}
 }

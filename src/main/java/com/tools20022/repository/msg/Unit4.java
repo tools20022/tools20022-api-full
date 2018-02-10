@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.LotBreakdown;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Unit4", propOrder = {"totalUnitsNumber", "unitDetails"})
 public class Unit4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlUnitsNb", required = true)
 	protected FinancialInstrumentQuantity1 totalUnitsNumber;
 	/**
-	 * Quantity expressed as a number, for example, a number of shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +115,7 @@ public class Unit4 {
 	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotUnit;
-			componentContext_lazy = () -> Unit4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Unit4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlUnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +126,11 @@ public class Unit4 {
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	@XmlElement(name = "UnitDtls")
 	protected List<com.tools20022.repository.msg.Unit5> unitDetails;
 	/**
-	 * Information about the units to be transferred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +161,7 @@ public class Unit4 {
 	public static final MMMessageAttribute mmUnitDetails = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmLotBreakdown;
-			componentContext_lazy = () -> Unit4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Unit4.mmObject();
 			isDerived = false;
 			xmlTag = "UnitDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +176,9 @@ public class Unit4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Unit4.mmTotalUnitsNumber, Unit4.mmUnitDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit4.mmTotalUnitsNumber, com.tools20022.repository.msg.Unit4.mmUnitDetails);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Unit4";
 				definition = "Quantity expressed as a number and its details.";
@@ -184,21 +188,21 @@ public class Unit4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlUnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
 		return totalUnitsNumber;
 	}
 
-	public void setTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsNumber) {
-		this.totalUnitsNumber = totalUnitsNumber;
+	public Unit4 setTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsNumber) {
+		this.totalUnitsNumber = Objects.requireNonNull(totalUnitsNumber);
+		return this;
 	}
 
-	@XmlElement(name = "UnitDtls")
 	public List<Unit5> getUnitDetails() {
-		return unitDetails;
+		return unitDetails == null ? unitDetails = new ArrayList<>() : unitDetails;
 	}
 
-	public void setUnitDetails(List<com.tools20022.repository.msg.Unit5> unitDetails) {
-		this.unitDetails = unitDetails;
+	public Unit4 setUnitDetails(List<com.tools20022.repository.msg.Unit5> unitDetails) {
+		this.unitDetails = Objects.requireNonNull(unitDetails);
+		return this;
 	}
 }

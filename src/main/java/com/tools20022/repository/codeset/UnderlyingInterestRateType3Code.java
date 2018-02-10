@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.UnderlyingTypeV3Code;
+import com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of an underlying contract for interest rate derivatives.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code
- * UnderlyingTypeV3Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingInterestRateType3Code#mmBond
- * UnderlyingInterestRateType3Code.mmBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingInterestRateType3Code#Bond
+ * UnderlyingInterestRateType3Code.Bond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingInterestRateType3Code#mmBondFuture
- * UnderlyingInterestRateType3Code.mmBondFuture}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingInterestRateType3Code#BondFuture
+ * UnderlyingInterestRateType3Code.BondFuture}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingInterestRateType3Code#mmInterestRate
- * UnderlyingInterestRateType3Code.mmInterestRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingInterestRateType3Code#InterestRate
+ * UnderlyingInterestRateType3Code.InterestRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingInterestRateType3Code#mmInterestRateFutureFRA
- * UnderlyingInterestRateType3Code.mmInterestRateFutureFRA}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingInterestRateType3Code#InterestRateFutureFRA
+ * UnderlyingInterestRateType3Code.InterestRateFutureFRA}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code
+ * UnderlyingTypeV3Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class UnderlyingInterestRateType3Code extends UnderlyingTypeV3Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class UnderlyingInterestRateType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,11 +90,12 @@ public class UnderlyingInterestRateType3Code extends UnderlyingTypeV3Code {
 	 * name} = "Bond"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBond = new MMCode() {
+	public static final UnderlyingInterestRateType3Code Bond = new UnderlyingInterestRateType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bond";
-			owner_lazy = () -> UnderlyingInterestRateType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.mmObject();
+			codeName = UnderlyingTypeV3Code.Bond.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -108,11 +114,12 @@ public class UnderlyingInterestRateType3Code extends UnderlyingTypeV3Code {
 	 * name} = "BondFuture"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBondFuture = new MMCode() {
+	public static final UnderlyingInterestRateType3Code BondFuture = new UnderlyingInterestRateType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondFuture";
-			owner_lazy = () -> UnderlyingInterestRateType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.mmObject();
+			codeName = UnderlyingTypeV3Code.BondFuture.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -131,11 +138,12 @@ public class UnderlyingInterestRateType3Code extends UnderlyingTypeV3Code {
 	 * name} = "InterestRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterestRate = new MMCode() {
+	public static final UnderlyingInterestRateType3Code InterestRate = new UnderlyingInterestRateType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
-			owner_lazy = () -> UnderlyingInterestRateType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.mmObject();
+			codeName = UnderlyingTypeV3Code.InterestRate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -154,25 +162,59 @@ public class UnderlyingInterestRateType3Code extends UnderlyingTypeV3Code {
 	 * name} = "InterestRateFutureFRA"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterestRateFutureFRA = new MMCode() {
+	public static final UnderlyingInterestRateType3Code InterestRateFutureFRA = new UnderlyingInterestRateType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRateFutureFRA";
-			owner_lazy = () -> UnderlyingInterestRateType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.mmObject();
+			codeName = UnderlyingTypeV3Code.InterestRateFutureFRA.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, UnderlyingInterestRateType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected UnderlyingInterestRateType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingInterestRateType3Code";
 				definition = "Specifies the type of an underlying contract for interest rate derivatives.";
-				code_lazy = () -> Arrays.asList(UnderlyingInterestRateType3Code.mmBond, UnderlyingInterestRateType3Code.mmBondFuture, UnderlyingInterestRateType3Code.mmInterestRate, UnderlyingInterestRateType3Code.mmInterestRateFutureFRA);
 				trace_lazy = () -> UnderlyingTypeV3Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.Bond, com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.BondFuture,
+						com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.InterestRate, com.tools20022.repository.codeset.UnderlyingInterestRateType3Code.InterestRateFutureFRA);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Bond.getCodeName().get(), Bond);
+		codesByName.put(BondFuture.getCodeName().get(), BondFuture);
+		codesByName.put(InterestRate.getCodeName().get(), InterestRate);
+		codesByName.put(InterestRateFutureFRA.getCodeName().get(), InterestRateFutureFRA);
+	}
+
+	public static UnderlyingInterestRateType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static UnderlyingInterestRateType3Code[] values() {
+		UnderlyingInterestRateType3Code[] values = new UnderlyingInterestRateType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, UnderlyingInterestRateType3Code> {
+		@Override
+		public UnderlyingInterestRateType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(UnderlyingInterestRateType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

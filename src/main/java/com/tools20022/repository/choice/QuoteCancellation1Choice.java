@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.FinancialInstrumentAttributes1;
 import com.tools20022.repository.msg.FinancialInstrumentStipulations;
 import com.tools20022.repository.msg.InstrumentLeg2;
 import com.tools20022.repository.msg.SecurityIdentification7;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +74,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,17 +88,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "QuoteCancellation1Choice", propOrder = {"financialInstrumentDetails", "financialInstrumentAttributes", "stipulations", "underlyingFinancialInstrumentDetails", "underlyingFinancialInstrumentAttributes",
 		"underlyingStipulations", "instrumentLegGroupDetails"})
 public class QuoteCancellation1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FinInstrmDtls")
 	protected List<SecurityIdentification7> financialInstrumentDetails;
 	/**
-	 * Provides details related to the financial instrument whose quotes are to
-	 * be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -130,7 +132,7 @@ public class QuoteCancellation1Choice {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
-			componentContext_lazy = () -> QuoteCancellation1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.QuoteCancellation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,11 +143,11 @@ public class QuoteCancellation1Choice {
 			type_lazy = () -> SecurityIdentification7.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmAttrbts")
 	protected List<FinancialInstrumentAttributes1> financialInstrumentAttributes;
 	/**
-	 * Provides details about the financial instrument attributes whose quotes
-	 * are to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -179,7 +181,7 @@ public class QuoteCancellation1Choice {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
-			componentContext_lazy = () -> QuoteCancellation1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.QuoteCancellation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,11 +192,11 @@ public class QuoteCancellation1Choice {
 			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
 		}
 	};
+	@XmlElement(name = "Stiptns")
 	protected List<FinancialInstrumentStipulations> stipulations;
 	/**
-	 * Provides details about the financial instrument stipulations whose quotes
-	 * are to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -228,7 +230,7 @@ public class QuoteCancellation1Choice {
 	public static final MMMessageAssociationEnd mmStipulations = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Debt.mmObject();
-			componentContext_lazy = () -> QuoteCancellation1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.QuoteCancellation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Stiptns";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,11 +241,11 @@ public class QuoteCancellation1Choice {
 			type_lazy = () -> FinancialInstrumentStipulations.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygFinInstrmDtls")
 	protected List<SecurityIdentification7> underlyingFinancialInstrumentDetails;
 	/**
-	 * Provides details related to the underlying financial instrument whose
-	 * quotes are to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -277,7 +279,7 @@ public class QuoteCancellation1Choice {
 	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
-			componentContext_lazy = () -> QuoteCancellation1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.QuoteCancellation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,11 +290,11 @@ public class QuoteCancellation1Choice {
 			type_lazy = () -> SecurityIdentification7.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygFinInstrmAttrbts")
 	protected List<FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes;
 	/**
-	 * Provides details about the underlying financial instrument attributes
-	 * whose quotes are to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -326,7 +328,7 @@ public class QuoteCancellation1Choice {
 	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
-			componentContext_lazy = () -> QuoteCancellation1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.QuoteCancellation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmAttrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -337,11 +339,11 @@ public class QuoteCancellation1Choice {
 			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygStiptns")
 	protected List<FinancialInstrumentStipulations> underlyingStipulations;
 	/**
-	 * Provides details about the underlying financial instrument stipulations
-	 * whose quotes are to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -375,7 +377,7 @@ public class QuoteCancellation1Choice {
 	public static final MMMessageAssociationEnd mmUnderlyingStipulations = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Debt.mmObject();
-			componentContext_lazy = () -> QuoteCancellation1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.QuoteCancellation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygStiptns";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -386,11 +388,11 @@ public class QuoteCancellation1Choice {
 			type_lazy = () -> FinancialInstrumentStipulations.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrmLegGrpDtls")
 	protected List<InstrumentLeg2> instrumentLegGroupDetails;
 	/**
-	 * Provides details about each intrument leg whose quotes are to be
-	 * canceled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -423,7 +425,7 @@ public class QuoteCancellation1Choice {
 	public static final MMMessageAssociationEnd mmInstrumentLegGroupDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Leg.mmObject();
-			componentContext_lazy = () -> QuoteCancellation1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.QuoteCancellation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmLegGrpDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -438,10 +440,11 @@ public class QuoteCancellation1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(QuoteCancellation1Choice.mmFinancialInstrumentDetails, QuoteCancellation1Choice.mmFinancialInstrumentAttributes, QuoteCancellation1Choice.mmStipulations,
-						QuoteCancellation1Choice.mmUnderlyingFinancialInstrumentDetails, QuoteCancellation1Choice.mmUnderlyingFinancialInstrumentAttributes, QuoteCancellation1Choice.mmUnderlyingStipulations,
-						QuoteCancellation1Choice.mmInstrumentLegGroupDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.QuoteCancellation1Choice.mmFinancialInstrumentDetails, com.tools20022.repository.choice.QuoteCancellation1Choice.mmFinancialInstrumentAttributes,
+						com.tools20022.repository.choice.QuoteCancellation1Choice.mmStipulations, com.tools20022.repository.choice.QuoteCancellation1Choice.mmUnderlyingFinancialInstrumentDetails,
+						com.tools20022.repository.choice.QuoteCancellation1Choice.mmUnderlyingFinancialInstrumentAttributes, com.tools20022.repository.choice.QuoteCancellation1Choice.mmUnderlyingStipulations,
+						com.tools20022.repository.choice.QuoteCancellation1Choice.mmInstrumentLegGroupDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuoteCancellation1Choice";
 				definition = "Choice between the type of quote to be cancelled. Not required when cancelling all quotes.";
@@ -450,66 +453,66 @@ public class QuoteCancellation1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FinInstrmDtls")
 	public List<SecurityIdentification7> getFinancialInstrumentDetails() {
-		return financialInstrumentDetails;
+		return financialInstrumentDetails == null ? financialInstrumentDetails = new ArrayList<>() : financialInstrumentDetails;
 	}
 
-	public void setFinancialInstrumentDetails(List<SecurityIdentification7> financialInstrumentDetails) {
-		this.financialInstrumentDetails = financialInstrumentDetails;
+	public QuoteCancellation1Choice setFinancialInstrumentDetails(List<SecurityIdentification7> financialInstrumentDetails) {
+		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmAttrbts")
 	public List<FinancialInstrumentAttributes1> getFinancialInstrumentAttributes() {
-		return financialInstrumentAttributes;
+		return financialInstrumentAttributes == null ? financialInstrumentAttributes = new ArrayList<>() : financialInstrumentAttributes;
 	}
 
-	public void setFinancialInstrumentAttributes(List<FinancialInstrumentAttributes1> financialInstrumentAttributes) {
-		this.financialInstrumentAttributes = financialInstrumentAttributes;
+	public QuoteCancellation1Choice setFinancialInstrumentAttributes(List<FinancialInstrumentAttributes1> financialInstrumentAttributes) {
+		this.financialInstrumentAttributes = Objects.requireNonNull(financialInstrumentAttributes);
+		return this;
 	}
 
-	@XmlElement(name = "Stiptns")
 	public List<FinancialInstrumentStipulations> getStipulations() {
-		return stipulations;
+		return stipulations == null ? stipulations = new ArrayList<>() : stipulations;
 	}
 
-	public void setStipulations(List<FinancialInstrumentStipulations> stipulations) {
-		this.stipulations = stipulations;
+	public QuoteCancellation1Choice setStipulations(List<FinancialInstrumentStipulations> stipulations) {
+		this.stipulations = Objects.requireNonNull(stipulations);
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygFinInstrmDtls")
 	public List<SecurityIdentification7> getUnderlyingFinancialInstrumentDetails() {
-		return underlyingFinancialInstrumentDetails;
+		return underlyingFinancialInstrumentDetails == null ? underlyingFinancialInstrumentDetails = new ArrayList<>() : underlyingFinancialInstrumentDetails;
 	}
 
-	public void setUnderlyingFinancialInstrumentDetails(List<SecurityIdentification7> underlyingFinancialInstrumentDetails) {
-		this.underlyingFinancialInstrumentDetails = underlyingFinancialInstrumentDetails;
+	public QuoteCancellation1Choice setUnderlyingFinancialInstrumentDetails(List<SecurityIdentification7> underlyingFinancialInstrumentDetails) {
+		this.underlyingFinancialInstrumentDetails = Objects.requireNonNull(underlyingFinancialInstrumentDetails);
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygFinInstrmAttrbts")
 	public List<FinancialInstrumentAttributes1> getUnderlyingFinancialInstrumentAttributes() {
-		return underlyingFinancialInstrumentAttributes;
+		return underlyingFinancialInstrumentAttributes == null ? underlyingFinancialInstrumentAttributes = new ArrayList<>() : underlyingFinancialInstrumentAttributes;
 	}
 
-	public void setUnderlyingFinancialInstrumentAttributes(List<FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes) {
-		this.underlyingFinancialInstrumentAttributes = underlyingFinancialInstrumentAttributes;
+	public QuoteCancellation1Choice setUnderlyingFinancialInstrumentAttributes(List<FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes) {
+		this.underlyingFinancialInstrumentAttributes = Objects.requireNonNull(underlyingFinancialInstrumentAttributes);
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygStiptns")
 	public List<FinancialInstrumentStipulations> getUnderlyingStipulations() {
-		return underlyingStipulations;
+		return underlyingStipulations == null ? underlyingStipulations = new ArrayList<>() : underlyingStipulations;
 	}
 
-	public void setUnderlyingStipulations(List<FinancialInstrumentStipulations> underlyingStipulations) {
-		this.underlyingStipulations = underlyingStipulations;
+	public QuoteCancellation1Choice setUnderlyingStipulations(List<FinancialInstrumentStipulations> underlyingStipulations) {
+		this.underlyingStipulations = Objects.requireNonNull(underlyingStipulations);
+		return this;
 	}
 
-	@XmlElement(name = "InstrmLegGrpDtls")
 	public List<InstrumentLeg2> getInstrumentLegGroupDetails() {
-		return instrumentLegGroupDetails;
+		return instrumentLegGroupDetails == null ? instrumentLegGroupDetails = new ArrayList<>() : instrumentLegGroupDetails;
 	}
 
-	public void setInstrumentLegGroupDetails(List<InstrumentLeg2> instrumentLegGroupDetails) {
-		this.instrumentLegGroupDetails = instrumentLegGroupDetails;
+	public QuoteCancellation1Choice setInstrumentLegGroupDetails(List<InstrumentLeg2> instrumentLegGroupDetails) {
+		this.instrumentLegGroupDetails = Objects.requireNonNull(instrumentLegGroupDetails);
+		return this;
 	}
 }

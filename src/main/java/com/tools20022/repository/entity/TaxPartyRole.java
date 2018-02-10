@@ -23,9 +23,8 @@ import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Role played by a party in the context of a tax due.
@@ -36,6 +35,8 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -44,32 +45,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.TaxPartyRole#mmVATRegistrationNumber
  * TaxPartyRole.mmVATRegistrationNumber}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CreditSideTaxDebtor
- * CreditSideTaxDebtor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TaxPayer TaxPayer}</li>
- * <li>{@linkplain com.tools20022.repository.entity.DebitSideTaxDebtor
- * DebitSideTaxDebtor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TaxRecipient TaxRecipient}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TaxParty1 TaxParty1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxAuthorisation1
- * TaxAuthorisation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxParty2 TaxParty2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxParty3 TaxParty3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingTaxIdentification1
- * BillingTaxIdentification1}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,11 +69,35 @@ import java.util.List;
  * TradeParty3.mmTaxParty}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CreditSideTaxDebtor
+ * CreditSideTaxDebtor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TaxPayer TaxPayer}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.DebitSideTaxDebtor
+ * DebitSideTaxDebtor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TaxRecipient TaxRecipient}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxParty1 TaxParty1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxAuthorisation1
+ * TaxAuthorisation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxParty2 TaxParty2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxParty3 TaxParty3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingTaxIdentification1
+ * BillingTaxIdentification1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,8 +113,8 @@ public class TaxPartyRole extends Role {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.Tax> tax;
 	/**
-	 * Identifies the taxfor which a party plays a role.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,8 +182,8 @@ public class TaxPartyRole extends Role {
 			derivation_lazy = () -> Arrays.asList(InvestmentAccount49.mmTaxReporting, InvestmentAccount51.mmTaxReporting, InvestmentAccount50.mmTaxReporting, InvestmentAccountOwnershipInformation12.mmTaxReporting,
 					InvestmentAccountOwnershipInformation13.mmTaxReporting, InvestmentAccount61.mmTaxReporting, InvestmentAccount63.mmTaxReporting, InvestmentAccount62.mmTaxReporting, InvestmentAccountOwnershipInformation15.mmTaxReporting,
 					InvestmentAccountOwnershipInformation14.mmTaxReporting);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxPartyRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Tax";
 			definition = "Identifies the taxfor which a party plays a role.";
@@ -196,8 +195,8 @@ public class TaxPartyRole extends Role {
 	};
 	protected Max35Text vATRegistrationNumber;
 	/**
-	 * Value added tax (VAT) registration number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -230,8 +229,8 @@ public class TaxPartyRole extends Role {
 	public static final MMBusinessAttribute mmVATRegistrationNumber = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingTaxIdentification1.mmVATRegistrationNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxPartyRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VATRegistrationNumber";
 			definition = "Value added tax (VAT) registration number.";
@@ -252,7 +251,7 @@ public class TaxPartyRole extends Role {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxPartyRole";
 				definition = "Role played by a party in the context of a tax due.";
@@ -273,18 +272,20 @@ public class TaxPartyRole extends Role {
 	}
 
 	public List<Tax> getTax() {
-		return tax;
+		return tax == null ? tax = new ArrayList<>() : tax;
 	}
 
-	public void setTax(List<com.tools20022.repository.entity.Tax> tax) {
-		this.tax = tax;
+	public TaxPartyRole setTax(List<com.tools20022.repository.entity.Tax> tax) {
+		this.tax = Objects.requireNonNull(tax);
+		return this;
 	}
 
-	public Max35Text getVATRegistrationNumber() {
-		return vATRegistrationNumber;
+	public Optional<Max35Text> getVATRegistrationNumber() {
+		return vATRegistrationNumber == null ? Optional.empty() : Optional.of(vATRegistrationNumber);
 	}
 
-	public void setVATRegistrationNumber(Max35Text vATRegistrationNumber) {
+	public TaxPartyRole setVATRegistrationNumber(Max35Text vATRegistrationNumber) {
 		this.vATRegistrationNumber = vATRegistrationNumber;
+		return this;
 	}
 }

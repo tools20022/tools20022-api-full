@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,17 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintFinancialInstrumentIdentificationGuideline#forFinancialInstrument36
+ * ConstraintFinancialInstrumentIdentificationGuideline.forFinancialInstrument36
+ * }</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,16 +99,16 @@ import javax.xml.bind.annotation.XmlType;
  * FinancialInstrument27}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrument36", propOrder = {"identification", "name", "transfereeAccount", "subAccountDetails"})
 public class FinancialInstrument36 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected SecurityIdentification3Choice identification;
 	/**
-	 * Unique and unambiguous identifier of a security, assigned under a formal
-	 * or proprietary identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +157,7 @@ public class FinancialInstrument36 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> FinancialInstrument36.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument36.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,10 +170,11 @@ public class FinancialInstrument36 {
 			complexType_lazy = () -> SecurityIdentification3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm")
 	protected Max350Text name;
 	/**
-	 * Name of the financial instrument in free format text.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,7 +220,7 @@ public class FinancialInstrument36 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
-			componentContext_lazy = () -> FinancialInstrument36.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument36.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,11 +233,11 @@ public class FinancialInstrument36 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfeeAcct")
 	protected Account16 transfereeAccount;
 	/**
-	 * Account held in the name of a party that is not the name of the
-	 * beneficial owner of the shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -273,7 +285,7 @@ public class FinancialInstrument36 {
 	public static final MMMessageAttribute mmTransfereeAccount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmInvestmentAccount;
-			componentContext_lazy = () -> FinancialInstrument36.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument36.mmObject();
 			isDerived = false;
 			xmlTag = "TrfeeAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,10 +298,11 @@ public class FinancialInstrument36 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Account16.mmObject();
 		}
 	};
+	@XmlElement(name = "SubAcctDtls")
 	protected SubAccount1 subAccountDetails;
 	/**
-	 * Sub-accounts that are grouped in a master or omnibus account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -330,7 +343,7 @@ public class FinancialInstrument36 {
 	public static final MMMessageAssociationEnd mmSubAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmInvestmentAccount;
-			componentContext_lazy = () -> FinancialInstrument36.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument36.mmObject();
 			isDerived = false;
 			xmlTag = "SubAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -347,9 +360,11 @@ public class FinancialInstrument36 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrument36.mmIdentification, FinancialInstrument36.mmName, FinancialInstrument36.mmTransfereeAccount, FinancialInstrument36.mmSubAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument36.mmIdentification, com.tools20022.repository.msg.FinancialInstrument36.mmName,
+						com.tools20022.repository.msg.FinancialInstrument36.mmTransfereeAccount, com.tools20022.repository.msg.FinancialInstrument36.mmSubAccountDetails);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFinancialInstrumentIdentificationGuideline.forFinancialInstrument36);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument36";
 				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.";
@@ -360,39 +375,39 @@ public class FinancialInstrument36 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification3Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(SecurityIdentification3Choice identification) {
-		this.identification = identification;
+	public FinancialInstrument36 setIdentification(SecurityIdentification3Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Nm")
-	public Max350Text getName() {
-		return name;
+	public Optional<Max350Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max350Text name) {
+	public FinancialInstrument36 setName(Max350Text name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "TrfeeAcct")
-	public Account16 getTransfereeAccount() {
-		return transfereeAccount;
+	public Optional<Account16> getTransfereeAccount() {
+		return transfereeAccount == null ? Optional.empty() : Optional.of(transfereeAccount);
 	}
 
-	public void setTransfereeAccount(com.tools20022.repository.msg.Account16 transfereeAccount) {
+	public FinancialInstrument36 setTransfereeAccount(com.tools20022.repository.msg.Account16 transfereeAccount) {
 		this.transfereeAccount = transfereeAccount;
+		return this;
 	}
 
-	@XmlElement(name = "SubAcctDtls")
-	public SubAccount1 getSubAccountDetails() {
-		return subAccountDetails;
+	public Optional<SubAccount1> getSubAccountDetails() {
+		return subAccountDetails == null ? Optional.empty() : Optional.of(subAccountDetails);
 	}
 
-	public void setSubAccountDetails(com.tools20022.repository.msg.SubAccount1 subAccountDetails) {
+	public FinancialInstrument36 setSubAccountDetails(com.tools20022.repository.msg.SubAccount1 subAccountDetails) {
 		this.subAccountDetails = subAccountDetails;
+		return this;
 	}
 }

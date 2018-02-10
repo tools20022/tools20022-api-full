@@ -24,6 +24,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * AutomatedTellerMachine6}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AutomatedTellerMachine7", propOrder = {"identification", "additionalIdentification", "sequenceNumber"})
 public class AutomatedTellerMachine7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * ATM terminal device identification for the acquirer and the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +112,7 @@ public class AutomatedTellerMachine7 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine7.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +124,11 @@ public class AutomatedTellerMachine7 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlId")
 	protected Max35Text additionalIdentification;
 	/**
-	 * ATM terminal device identification for the ATM manager.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +160,7 @@ public class AutomatedTellerMachine7 {
 	 */
 	public static final MMMessageAttribute mmAdditionalIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine7.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,10 +172,11 @@ public class AutomatedTellerMachine7 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SeqNb")
 	protected Max35Text sequenceNumber;
 	/**
-	 * ATM terminal device identification for the branch.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,7 +208,7 @@ public class AutomatedTellerMachine7 {
 	 */
 	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine7.mmObject();
 			isDerived = false;
 			xmlTag = "SeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,8 +224,9 @@ public class AutomatedTellerMachine7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AutomatedTellerMachine7.mmIdentification, AutomatedTellerMachine7.mmAdditionalIdentification, AutomatedTellerMachine7.mmSequenceNumber);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine7.mmIdentification, com.tools20022.repository.msg.AutomatedTellerMachine7.mmAdditionalIdentification,
+						com.tools20022.repository.msg.AutomatedTellerMachine7.mmSequenceNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AutomatedTellerMachine7";
 				definition = "ATM information.";
@@ -230,30 +236,30 @@ public class AutomatedTellerMachine7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public AutomatedTellerMachine7 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlId")
-	public Max35Text getAdditionalIdentification() {
-		return additionalIdentification;
+	public Optional<Max35Text> getAdditionalIdentification() {
+		return additionalIdentification == null ? Optional.empty() : Optional.of(additionalIdentification);
 	}
 
-	public void setAdditionalIdentification(Max35Text additionalIdentification) {
+	public AutomatedTellerMachine7 setAdditionalIdentification(Max35Text additionalIdentification) {
 		this.additionalIdentification = additionalIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "SeqNb")
-	public Max35Text getSequenceNumber() {
-		return sequenceNumber;
+	public Optional<Max35Text> getSequenceNumber() {
+		return sequenceNumber == null ? Optional.empty() : Optional.of(sequenceNumber);
 	}
 
-	public void setSequenceNumber(Max35Text sequenceNumber) {
+	public AutomatedTellerMachine7 setSequenceNumber(Max35Text sequenceNumber) {
 		this.sequenceNumber = sequenceNumber;
+		return this;
 	}
 }

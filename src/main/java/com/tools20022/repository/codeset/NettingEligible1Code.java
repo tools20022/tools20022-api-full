@@ -20,37 +20,39 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.NettingEligibleCode;
+import com.tools20022.repository.codeset.NettingEligible1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the trade is eligible for netting.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.NettingEligible1Code#Gross
+ * NettingEligible1Code.Gross}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NettingEligible1Code#Nett
+ * NettingEligible1Code.Nett}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.NettingEligible1Code#AggregationForSettlement
+ * NettingEligible1Code.AggregationForSettlement}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.NettingEligibleCode
  * NettingEligibleCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NettingEligible1Code#mmGross
- * NettingEligible1Code.mmGross}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NettingEligible1Code#mmNett
- * NettingEligible1Code.mmNett}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NettingEligible1Code#mmAggregationForSettlement
- * NettingEligible1Code.mmAggregationForSettlement}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies whether the trade is eligible for netting."</li>
  * </ul>
  */
-public class NettingEligible1Code extends NettingEligibleCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class NettingEligible1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +89,12 @@ public class NettingEligible1Code extends NettingEligibleCode {
 	 * name} = "Gross"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGross = new MMCode() {
+	public static final NettingEligible1Code Gross = new NettingEligible1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gross";
-			owner_lazy = () -> NettingEligible1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NettingEligible1Code.mmObject();
+			codeName = NettingEligibleCode.Gross.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +113,12 @@ public class NettingEligible1Code extends NettingEligibleCode {
 	 * name} = "Nett"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNett = new MMCode() {
+	public static final NettingEligible1Code Nett = new NettingEligible1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Nett";
-			owner_lazy = () -> NettingEligible1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NettingEligible1Code.mmObject();
+			codeName = NettingEligibleCode.Nett.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +137,59 @@ public class NettingEligible1Code extends NettingEligibleCode {
 	 * name} = "AggregationForSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAggregationForSettlement = new MMCode() {
+	public static final NettingEligible1Code AggregationForSettlement = new NettingEligible1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregationForSettlement";
-			owner_lazy = () -> NettingEligible1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NettingEligible1Code.mmObject();
+			codeName = NettingEligibleCode.AggregationForSettlement.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, NettingEligible1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected NettingEligible1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("GROS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NettingEligible1Code";
 				definition = "Specifies whether the trade is eligible for netting.";
-				code_lazy = () -> Arrays.asList(NettingEligible1Code.mmGross, NettingEligible1Code.mmNett, NettingEligible1Code.mmAggregationForSettlement);
 				trace_lazy = () -> NettingEligibleCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NettingEligible1Code.Gross, com.tools20022.repository.codeset.NettingEligible1Code.Nett,
+						com.tools20022.repository.codeset.NettingEligible1Code.AggregationForSettlement);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Gross.getCodeName().get(), Gross);
+		codesByName.put(Nett.getCodeName().get(), Nett);
+		codesByName.put(AggregationForSettlement.getCodeName().get(), AggregationForSettlement);
+	}
+
+	public static NettingEligible1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static NettingEligible1Code[] values() {
+		NettingEligible1Code[] values = new NettingEligible1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, NettingEligible1Code> {
+		@Override
+		public NettingEligible1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(NettingEligible1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

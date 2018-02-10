@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -30,6 +31,7 @@ import com.tools20022.repository.entity.Deadline;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -79,8 +81,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,19 +93,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies corporate action dates."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionDate33", propOrder = {"earlyResponseDeadline", "coverExpirationDate", "protectDate", "marketDeadline", "responseDeadline", "expiryDate", "subscriptionCostDebitDate", "depositoryCoverExpirationDate",
 		"stockLendingDeadline"})
 public class CorporateActionDate33 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "EarlyRspnDdln")
 	protected DateFormat22Choice earlyResponseDeadline;
 	/**
-	 * Date/time that the account servicer has set as the deadline to respond,
-	 * with instructions, to an outstanding event, giving the holder eligibility
-	 * to incentives. This time is dependent on the reference time zone of the
-	 * account servicer as specified in a Service Level Agreement (SLA).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -122,6 +122,9 @@ public class CorporateActionDate33 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EarlyRspnDdln"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::EARD</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -137,9 +140,10 @@ public class CorporateActionDate33 {
 	public static final MMMessageAssociationEnd mmEarlyResponseDeadline = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmEarlyResponseDeadline;
-			componentContext_lazy = () -> CorporateActionDate33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate33.mmObject();
 			isDerived = false;
 			xmlTag = "EarlyRspnDdln";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::EARD"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlyResponseDeadline";
 			definition = "Date/time that the account servicer has set as the deadline to respond, with instructions, to an outstanding event, giving the holder eligibility to incentives. This time is dependent on the reference time zone of the account servicer as specified in a Service Level Agreement (SLA).";
@@ -149,11 +153,11 @@ public class CorporateActionDate33 {
 			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CoverXprtnDt")
 	protected DateFormat22Choice coverExpirationDate;
 	/**
-	 * Last day a holder can deliver the securities that it had elected on
-	 * and/or previously protected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -172,6 +176,9 @@ public class CorporateActionDate33 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CoverXprtnDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::CVPR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -187,9 +194,10 @@ public class CorporateActionDate33 {
 	public static final MMMessageAssociationEnd mmCoverExpirationDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmCoverExpirationDate;
-			componentContext_lazy = () -> CorporateActionDate33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate33.mmObject();
 			isDerived = false;
 			xmlTag = "CoverXprtnDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::CVPR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoverExpirationDate";
 			definition = "Last day a holder can deliver the securities that it had elected on and/or previously protected.";
@@ -199,12 +207,11 @@ public class CorporateActionDate33 {
 			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctDt")
 	protected DateFormat22Choice protectDate;
 	/**
-	 * Last date/time a holder can request to defer delivery of securities
-	 * pursuant to a notice of guaranteed delivery or other required
-	 * documentation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -223,6 +230,9 @@ public class CorporateActionDate33 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrtctDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::PODT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -238,9 +248,10 @@ public class CorporateActionDate33 {
 	public static final MMMessageAssociationEnd mmProtectDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmProtectDate;
-			componentContext_lazy = () -> CorporateActionDate33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate33.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::PODT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectDate";
 			definition = "Last date/time a holder can request to defer delivery of securities pursuant to a notice of guaranteed delivery or other required documentation.";
@@ -250,11 +261,11 @@ public class CorporateActionDate33 {
 			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MktDdln")
 	protected DateFormat22Choice marketDeadline;
 	/**
-	 * Issuer or issuer's agent deadline to respond, with an instruction, to an
-	 * outstanding offer or privilege.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -273,6 +284,9 @@ public class CorporateActionDate33 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MktDdln"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::MKDT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -288,9 +302,10 @@ public class CorporateActionDate33 {
 	public static final MMMessageAssociationEnd mmMarketDeadline = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
-			componentContext_lazy = () -> CorporateActionDate33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate33.mmObject();
 			isDerived = false;
 			xmlTag = "MktDdln";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::MKDT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadline";
 			definition = "Issuer or issuer's agent deadline to respond, with an instruction, to an outstanding offer or privilege.";
@@ -300,13 +315,11 @@ public class CorporateActionDate33 {
 			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RspnDdln")
 	protected DateFormat23Choice responseDeadline;
 	/**
-	 * Date/time at which the account servicer has set as the deadline to
-	 * respond, with instructions, to an outstanding event. This time is
-	 * dependent on the reference time zone of the account servicer as specified
-	 * in a Service Level Agreement (SLA).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -325,6 +338,9 @@ public class CorporateActionDate33 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RspnDdln"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::RDDT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -340,9 +356,10 @@ public class CorporateActionDate33 {
 	public static final MMMessageAssociationEnd mmResponseDeadline = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmResponseDeadline;
-			componentContext_lazy = () -> CorporateActionDate33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate33.mmObject();
 			isDerived = false;
 			xmlTag = "RspnDdln";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::RDDT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseDeadline";
 			definition = "Date/time at which the account servicer has set as the deadline to respond, with instructions, to an outstanding event. This time is dependent on the reference time zone of the account servicer as specified in a Service Level Agreement (SLA).";
@@ -352,11 +369,11 @@ public class CorporateActionDate33 {
 			type_lazy = () -> DateFormat23Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "XpryDt")
 	protected DateFormat22Choice expiryDate;
 	/**
-	 * Date/time at which an order expires or on which a privilege or offer
-	 * terminates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -375,6 +392,9 @@ public class CorporateActionDate33 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XpryDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::EXPI</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -390,9 +410,10 @@ public class CorporateActionDate33 {
 	public static final MMMessageAssociationEnd mmExpiryDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmExpiryDate;
-			componentContext_lazy = () -> CorporateActionDate33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate33.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::EXPI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date/time at which an order expires or on which a privilege or offer terminates.";
@@ -402,11 +423,11 @@ public class CorporateActionDate33 {
 			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SbcptCostDbtDt")
 	protected DateFormat22Choice subscriptionCostDebitDate;
 	/**
-	 * Date/time by which cash must be in place in order to take part in the
-	 * event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -425,6 +446,9 @@ public class CorporateActionDate33 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SbcptCostDbtDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::SUBS</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -440,9 +464,10 @@ public class CorporateActionDate33 {
 	public static final MMMessageAssociationEnd mmSubscriptionCostDebitDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmSubscriptionCostDebitDate;
-			componentContext_lazy = () -> CorporateActionDate33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate33.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptCostDbtDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::SUBS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionCostDebitDate";
 			definition = "Date/time by which cash must be in place in order to take part in the event.";
@@ -452,11 +477,11 @@ public class CorporateActionDate33 {
 			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DpstryCoverXprtnDt")
 	protected DateFormat22Choice depositoryCoverExpirationDate;
 	/**
-	 * Last day that a participant of the depository can deliver securities that
-	 * it had elected on and/or previously protected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -475,6 +500,9 @@ public class CorporateActionDate33 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DpstryCoverXprtnDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::DVCP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -490,9 +518,10 @@ public class CorporateActionDate33 {
 	public static final MMMessageAssociationEnd mmDepositoryCoverExpirationDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmDepositoryCoverExpirationDate;
-			componentContext_lazy = () -> CorporateActionDate33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate33.mmObject();
 			isDerived = false;
 			xmlTag = "DpstryCoverXprtnDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::DVCP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryCoverExpirationDate";
 			definition = "Last day that a participant of the depository can deliver securities that it had elected on and/or previously protected.";
@@ -502,13 +531,11 @@ public class CorporateActionDate33 {
 			type_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "StockLndgDdln")
 	protected DateFormat24Choice stockLendingDeadline;
 	/**
-	 * Date/time that the account servicer has set as the deadline to respond,
-	 * with instructions, to an outstanding event, for which the underlying
-	 * security is out on loan. This time is dependent on the reference time
-	 * zone of the account servicer as specified in an SLA.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -542,7 +569,7 @@ public class CorporateActionDate33 {
 	public static final MMMessageAssociationEnd mmStockLendingDeadline = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmStockLendingDeadline;
-			componentContext_lazy = () -> CorporateActionDate33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate33.mmObject();
 			isDerived = false;
 			xmlTag = "StockLndgDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -558,11 +585,12 @@ public class CorporateActionDate33 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionDate33.mmEarlyResponseDeadline, CorporateActionDate33.mmCoverExpirationDate, CorporateActionDate33.mmProtectDate, CorporateActionDate33.mmMarketDeadline,
-						CorporateActionDate33.mmResponseDeadline, CorporateActionDate33.mmExpiryDate, CorporateActionDate33.mmSubscriptionCostDebitDate, CorporateActionDate33.mmDepositoryCoverExpirationDate,
-						CorporateActionDate33.mmStockLendingDeadline);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate33.mmEarlyResponseDeadline, com.tools20022.repository.msg.CorporateActionDate33.mmCoverExpirationDate,
+						com.tools20022.repository.msg.CorporateActionDate33.mmProtectDate, com.tools20022.repository.msg.CorporateActionDate33.mmMarketDeadline, com.tools20022.repository.msg.CorporateActionDate33.mmResponseDeadline,
+						com.tools20022.repository.msg.CorporateActionDate33.mmExpiryDate, com.tools20022.repository.msg.CorporateActionDate33.mmSubscriptionCostDebitDate,
+						com.tools20022.repository.msg.CorporateActionDate33.mmDepositoryCoverExpirationDate, com.tools20022.repository.msg.CorporateActionDate33.mmStockLendingDeadline);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate33";
 				definition = "Specifies corporate action dates.";
@@ -571,84 +599,84 @@ public class CorporateActionDate33 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "EarlyRspnDdln")
-	public DateFormat22Choice getEarlyResponseDeadline() {
-		return earlyResponseDeadline;
+	public Optional<DateFormat22Choice> getEarlyResponseDeadline() {
+		return earlyResponseDeadline == null ? Optional.empty() : Optional.of(earlyResponseDeadline);
 	}
 
-	public void setEarlyResponseDeadline(DateFormat22Choice earlyResponseDeadline) {
+	public CorporateActionDate33 setEarlyResponseDeadline(DateFormat22Choice earlyResponseDeadline) {
 		this.earlyResponseDeadline = earlyResponseDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "CoverXprtnDt")
-	public DateFormat22Choice getCoverExpirationDate() {
-		return coverExpirationDate;
+	public Optional<DateFormat22Choice> getCoverExpirationDate() {
+		return coverExpirationDate == null ? Optional.empty() : Optional.of(coverExpirationDate);
 	}
 
-	public void setCoverExpirationDate(DateFormat22Choice coverExpirationDate) {
+	public CorporateActionDate33 setCoverExpirationDate(DateFormat22Choice coverExpirationDate) {
 		this.coverExpirationDate = coverExpirationDate;
+		return this;
 	}
 
-	@XmlElement(name = "PrtctDt")
-	public DateFormat22Choice getProtectDate() {
-		return protectDate;
+	public Optional<DateFormat22Choice> getProtectDate() {
+		return protectDate == null ? Optional.empty() : Optional.of(protectDate);
 	}
 
-	public void setProtectDate(DateFormat22Choice protectDate) {
+	public CorporateActionDate33 setProtectDate(DateFormat22Choice protectDate) {
 		this.protectDate = protectDate;
+		return this;
 	}
 
-	@XmlElement(name = "MktDdln")
-	public DateFormat22Choice getMarketDeadline() {
-		return marketDeadline;
+	public Optional<DateFormat22Choice> getMarketDeadline() {
+		return marketDeadline == null ? Optional.empty() : Optional.of(marketDeadline);
 	}
 
-	public void setMarketDeadline(DateFormat22Choice marketDeadline) {
+	public CorporateActionDate33 setMarketDeadline(DateFormat22Choice marketDeadline) {
 		this.marketDeadline = marketDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "RspnDdln")
-	public DateFormat23Choice getResponseDeadline() {
-		return responseDeadline;
+	public Optional<DateFormat23Choice> getResponseDeadline() {
+		return responseDeadline == null ? Optional.empty() : Optional.of(responseDeadline);
 	}
 
-	public void setResponseDeadline(DateFormat23Choice responseDeadline) {
+	public CorporateActionDate33 setResponseDeadline(DateFormat23Choice responseDeadline) {
 		this.responseDeadline = responseDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "XpryDt")
-	public DateFormat22Choice getExpiryDate() {
-		return expiryDate;
+	public Optional<DateFormat22Choice> getExpiryDate() {
+		return expiryDate == null ? Optional.empty() : Optional.of(expiryDate);
 	}
 
-	public void setExpiryDate(DateFormat22Choice expiryDate) {
+	public CorporateActionDate33 setExpiryDate(DateFormat22Choice expiryDate) {
 		this.expiryDate = expiryDate;
+		return this;
 	}
 
-	@XmlElement(name = "SbcptCostDbtDt")
-	public DateFormat22Choice getSubscriptionCostDebitDate() {
-		return subscriptionCostDebitDate;
+	public Optional<DateFormat22Choice> getSubscriptionCostDebitDate() {
+		return subscriptionCostDebitDate == null ? Optional.empty() : Optional.of(subscriptionCostDebitDate);
 	}
 
-	public void setSubscriptionCostDebitDate(DateFormat22Choice subscriptionCostDebitDate) {
+	public CorporateActionDate33 setSubscriptionCostDebitDate(DateFormat22Choice subscriptionCostDebitDate) {
 		this.subscriptionCostDebitDate = subscriptionCostDebitDate;
+		return this;
 	}
 
-	@XmlElement(name = "DpstryCoverXprtnDt")
-	public DateFormat22Choice getDepositoryCoverExpirationDate() {
-		return depositoryCoverExpirationDate;
+	public Optional<DateFormat22Choice> getDepositoryCoverExpirationDate() {
+		return depositoryCoverExpirationDate == null ? Optional.empty() : Optional.of(depositoryCoverExpirationDate);
 	}
 
-	public void setDepositoryCoverExpirationDate(DateFormat22Choice depositoryCoverExpirationDate) {
+	public CorporateActionDate33 setDepositoryCoverExpirationDate(DateFormat22Choice depositoryCoverExpirationDate) {
 		this.depositoryCoverExpirationDate = depositoryCoverExpirationDate;
+		return this;
 	}
 
-	@XmlElement(name = "StockLndgDdln")
-	public DateFormat24Choice getStockLendingDeadline() {
-		return stockLendingDeadline;
+	public Optional<DateFormat24Choice> getStockLendingDeadline() {
+		return stockLendingDeadline == null ? Optional.empty() : Optional.of(stockLendingDeadline);
 	}
 
-	public void setStockLendingDeadline(DateFormat24Choice stockLendingDeadline) {
+	public CorporateActionDate33 setStockLendingDeadline(DateFormat24Choice stockLendingDeadline) {
 		this.stockLendingDeadline = stockLendingDeadline;
+		return this;
 	}
 }

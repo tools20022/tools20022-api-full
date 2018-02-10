@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OrderSide1", propOrder = {"side", "allOrdersIndicator"})
 public class OrderSide1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sd")
 	protected Side1Code side;
 	/**
-	 * Coded list to specify the side of the order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +110,7 @@ public class OrderSide1 {
 	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
-			componentContext_lazy = () -> OrderSide1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderSide1.mmObject();
 			isDerived = false;
 			xmlTag = "Sd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,12 +121,11 @@ public class OrderSide1 {
 			simpleType_lazy = () -> Side1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AllOrdrsInd")
 	protected YesNoIndicator allOrdersIndicator;
 	/**
-	 * Indicates whether the status request is applicable for all orders. Yes =
-	 * all orders No = status for orders matching certain criteria further
-	 * specified in this message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,7 +154,7 @@ public class OrderSide1 {
 	 */
 	public static final MMMessageAttribute mmAllOrdersIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OrderSide1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderSide1.mmObject();
 			isDerived = false;
 			xmlTag = "AllOrdrsInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,9 +169,9 @@ public class OrderSide1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OrderSide1.mmSide, OrderSide1.mmAllOrdersIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderSide1.mmSide, com.tools20022.repository.msg.OrderSide1.mmAllOrdersIndicator);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OrderSide1";
 				definition = "Indicates in which direction the intention is to transfer the ownership of a financial instrument.";
@@ -179,21 +180,21 @@ public class OrderSide1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sd")
-	public Side1Code getSide() {
-		return side;
+	public Optional<Side1Code> getSide() {
+		return side == null ? Optional.empty() : Optional.of(side);
 	}
 
-	public void setSide(Side1Code side) {
+	public OrderSide1 setSide(Side1Code side) {
 		this.side = side;
+		return this;
 	}
 
-	@XmlElement(name = "AllOrdrsInd")
-	public YesNoIndicator getAllOrdersIndicator() {
-		return allOrdersIndicator;
+	public Optional<YesNoIndicator> getAllOrdersIndicator() {
+		return allOrdersIndicator == null ? Optional.empty() : Optional.of(allOrdersIndicator);
 	}
 
-	public void setAllOrdersIndicator(YesNoIndicator allOrdersIndicator) {
+	public OrderSide1 setAllOrdersIndicator(YesNoIndicator allOrdersIndicator) {
 		this.allOrdersIndicator = allOrdersIndicator;
+		return this;
 	}
 }

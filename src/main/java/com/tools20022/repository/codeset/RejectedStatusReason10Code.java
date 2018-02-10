@@ -20,136 +20,140 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RejectedStatusReasonCode;
+import com.tools20022.repository.codeset.RejectedStatusReason10Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for a rejected status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReasonCode
- * RejectedStatusReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmAfterDeadline
- * RejectedStatusReason10Code.mmAfterDeadline}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#AfterDeadline
+ * RejectedStatusReason10Code.AfterDeadline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmAccountBlockedForTransfer
- * RejectedStatusReason10Code.mmAccountBlockedForTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#AccountBlockedForTransfer
+ * RejectedStatusReason10Code.AccountBlockedForTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmCutOffTime
- * RejectedStatusReason10Code.mmCutOffTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#CutOffTime
+ * RejectedStatusReason10Code.CutOffTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmSettlementDate
- * RejectedStatusReason10Code.mmSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#SettlementDate
+ * RejectedStatusReason10Code.SettlementDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmAccountBlockedMissingDocuments
- * RejectedStatusReason10Code.mmAccountBlockedMissingDocuments}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#AccountBlockedMissingDocuments
+ * RejectedStatusReason10Code.AccountBlockedMissingDocuments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmFinancialInstrumentQuantity
- * RejectedStatusReason10Code.mmFinancialInstrumentQuantity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#FinancialInstrumentQuantity
+ * RejectedStatusReason10Code.FinancialInstrumentQuantity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmFinancialInstrumentIdentification
- * RejectedStatusReason10Code.mmFinancialInstrumentIdentification}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#FinancialInstrumentIdentification
+ * RejectedStatusReason10Code.FinancialInstrumentIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmTradeDate
- * RejectedStatusReason10Code.mmTradeDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#TradeDate
+ * RejectedStatusReason10Code.TradeDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmFinancialInstrumentIdentificationAndName
- * RejectedStatusReason10Code.mmFinancialInstrumentIdentificationAndName}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#FinancialInstrumentIdentificationAndName
+ * RejectedStatusReason10Code.FinancialInstrumentIdentificationAndName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmSubscriberOrRedeemer
- * RejectedStatusReason10Code.mmSubscriberOrRedeemer}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#SubscriberOrRedeemer
+ * RejectedStatusReason10Code.SubscriberOrRedeemer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmIntermediary
- * RejectedStatusReason10Code.mmIntermediary}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#Intermediary
+ * RejectedStatusReason10Code.Intermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmInvalidOrderType
- * RejectedStatusReason10Code.mmInvalidOrderType}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#InvalidOrderType
+ * RejectedStatusReason10Code.InvalidOrderType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmInstructingPartyNotAllowedForAccount
- * RejectedStatusReason10Code.mmInstructingPartyNotAllowedForAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#InstructingPartyNotAllowedForAccount
+ * RejectedStatusReason10Code.InstructingPartyNotAllowedForAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmTooLate
- * RejectedStatusReason10Code.mmTooLate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#TooLate
+ * RejectedStatusReason10Code.TooLate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmNotEnoughCash
- * RejectedStatusReason10Code.mmNotEnoughCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#NotEnoughCash
+ * RejectedStatusReason10Code.NotEnoughCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmNoCancellationMatch
- * RejectedStatusReason10Code.mmNoCancellationMatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#NoCancellationMatch
+ * RejectedStatusReason10Code.NoCancellationMatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmNotCompliantWithSLA
- * RejectedStatusReason10Code.mmNotCompliantWithSLA}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#NotCompliantWithSLA
+ * RejectedStatusReason10Code.NotCompliantWithSLA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmDuplicateOrderReference
- * RejectedStatusReason10Code.mmDuplicateOrderReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#DuplicateOrderReference
+ * RejectedStatusReason10Code.DuplicateOrderReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmInvestmentAccount
- * RejectedStatusReason10Code.mmInvestmentAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#InvestmentAccount
+ * RejectedStatusReason10Code.InvestmentAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmNotEnoughFinancialInstrument
- * RejectedStatusReason10Code.mmNotEnoughFinancialInstrument}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#NotEnoughFinancialInstrument
+ * RejectedStatusReason10Code.NotEnoughFinancialInstrument}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmTooHighUnitsOrAmountToSubscribe
- * RejectedStatusReason10Code.mmTooHighUnitsOrAmountToSubscribe}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#TooHighUnitsOrAmountToSubscribe
+ * RejectedStatusReason10Code.TooHighUnitsOrAmountToSubscribe}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmTooLowUnitsOrAmountToSubscribe
- * RejectedStatusReason10Code.mmTooLowUnitsOrAmountToSubscribe}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#TooLowUnitsOrAmountToSubscribe
+ * RejectedStatusReason10Code.TooLowUnitsOrAmountToSubscribe}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmUnacceptedDealCurrency
- * RejectedStatusReason10Code.mmUnacceptedDealCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#UnacceptedDealCurrency
+ * RejectedStatusReason10Code.UnacceptedDealCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmUnknownLinkagesReference
- * RejectedStatusReason10Code.mmUnknownLinkagesReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#UnknownLinkagesReference
+ * RejectedStatusReason10Code.UnknownLinkagesReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmUnacceptedRequestedSettlementCurrency
- * RejectedStatusReason10Code.mmUnacceptedRequestedSettlementCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#UnacceptedRequestedSettlementCurrency
+ * RejectedStatusReason10Code.UnacceptedRequestedSettlementCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmInvalidOrderedAmount
- * RejectedStatusReason10Code.mmInvalidOrderedAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#InvalidOrderedAmount
+ * RejectedStatusReason10Code.InvalidOrderedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmBelowMinimumInitialInvestmentAmount
- * RejectedStatusReason10Code.mmBelowMinimumInitialInvestmentAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#BelowMinimumInitialInvestmentAmount
+ * RejectedStatusReason10Code.BelowMinimumInitialInvestmentAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmBelowMinimumTopUpAmount
- * RejectedStatusReason10Code.mmBelowMinimumTopUpAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#BelowMinimumTopUpAmount
+ * RejectedStatusReason10Code.BelowMinimumTopUpAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmInsufficientCapacity
- * RejectedStatusReason10Code.mmInsufficientCapacity}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#InsufficientCapacity
+ * RejectedStatusReason10Code.InsufficientCapacity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmPercentageHoldingBreach
- * RejectedStatusReason10Code.mmPercentageHoldingBreach}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#PercentageHoldingBreach
+ * RejectedStatusReason10Code.PercentageHoldingBreach}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmBelowMinimumRedemptionAmount
- * RejectedStatusReason10Code.mmBelowMinimumRedemptionAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#BelowMinimumRedemptionAmount
+ * RejectedStatusReason10Code.BelowMinimumRedemptionAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmBelowMinimumRetainedAmount
- * RejectedStatusReason10Code.mmBelowMinimumRetainedAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#BelowMinimumRetainedAmount
+ * RejectedStatusReason10Code.BelowMinimumRetainedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmLockUp
- * RejectedStatusReason10Code.mmLockUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#LockUp
+ * RejectedStatusReason10Code.LockUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmAssetsIlliquid
- * RejectedStatusReason10Code.mmAssetsIlliquid}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#AssetsIlliquid
+ * RejectedStatusReason10Code.AssetsIlliquid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmDataInvalid
- * RejectedStatusReason10Code.mmDataInvalid}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#DataInvalid
+ * RejectedStatusReason10Code.DataInvalid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#mmFundClosed
- * RejectedStatusReason10Code.mmFundClosed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReason10Code#FundClosed
+ * RejectedStatusReason10Code.FundClosed}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReasonCode
+ * RejectedStatusReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -166,7 +170,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason for a rejected status."</li>
  * </ul>
  */
-public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RejectedStatusReason10Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -185,11 +190,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "AfterDeadline"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAfterDeadline = new MMCode() {
+	public static final RejectedStatusReason10Code AfterDeadline = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AfterDeadline";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.AfterDeadline.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -208,11 +214,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "AccountBlockedForTransfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountBlockedForTransfer = new MMCode() {
+	public static final RejectedStatusReason10Code AccountBlockedForTransfer = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBlockedForTransfer";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.AccountBlockedForTransfer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -231,11 +238,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "CutOffTime"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCutOffTime = new MMCode() {
+	public static final RejectedStatusReason10Code CutOffTime = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CutOffTime";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.CutOffTime.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -254,11 +262,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "SettlementDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementDate = new MMCode() {
+	public static final RejectedStatusReason10Code SettlementDate = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.SettlementDate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -277,11 +286,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "AccountBlockedMissingDocuments"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountBlockedMissingDocuments = new MMCode() {
+	public static final RejectedStatusReason10Code AccountBlockedMissingDocuments = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBlockedMissingDocuments";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.AccountBlockedMissingDocuments.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -300,11 +310,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "FinancialInstrumentQuantity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinancialInstrumentQuantity = new MMCode() {
+	public static final RejectedStatusReason10Code FinancialInstrumentQuantity = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.FinancialInstrumentQuantity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -323,11 +334,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "FinancialInstrumentIdentification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinancialInstrumentIdentification = new MMCode() {
+	public static final RejectedStatusReason10Code FinancialInstrumentIdentification = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.FinancialInstrumentIdentification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -346,11 +358,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "TradeDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradeDate = new MMCode() {
+	public static final RejectedStatusReason10Code TradeDate = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.TradeDate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -369,11 +382,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "FinancialInstrumentIdentificationAndName"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinancialInstrumentIdentificationAndName = new MMCode() {
+	public static final RejectedStatusReason10Code FinancialInstrumentIdentificationAndName = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentificationAndName";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.FinancialInstrumentIdentificationAndName.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -392,11 +406,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "SubscriberOrRedeemer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubscriberOrRedeemer = new MMCode() {
+	public static final RejectedStatusReason10Code SubscriberOrRedeemer = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriberOrRedeemer";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.SubscriberOrRedeemer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -415,11 +430,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "Intermediary"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntermediary = new MMCode() {
+	public static final RejectedStatusReason10Code Intermediary = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.Intermediary.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -438,11 +454,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "InvalidOrderType"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalidOrderType = new MMCode() {
+	public static final RejectedStatusReason10Code InvalidOrderType = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidOrderType";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.InvalidOrderType.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -461,11 +478,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "InstructingPartyNotAllowedForAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstructingPartyNotAllowedForAccount = new MMCode() {
+	public static final RejectedStatusReason10Code InstructingPartyNotAllowedForAccount = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingPartyNotAllowedForAccount";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.InstructingPartyNotAllowedForAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -484,11 +502,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "TooLate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTooLate = new MMCode() {
+	public static final RejectedStatusReason10Code TooLate = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TooLate";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.TooLate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -507,11 +526,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "NotEnoughCash"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotEnoughCash = new MMCode() {
+	public static final RejectedStatusReason10Code NotEnoughCash = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEnoughCash";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.NotEnoughCash.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -530,11 +550,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "NoCancellationMatch"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoCancellationMatch = new MMCode() {
+	public static final RejectedStatusReason10Code NoCancellationMatch = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoCancellationMatch";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.NoCancellationMatch.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -553,11 +574,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "NotCompliantWithSLA"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotCompliantWithSLA = new MMCode() {
+	public static final RejectedStatusReason10Code NotCompliantWithSLA = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotCompliantWithSLA";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.NotCompliantWithSLA.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -576,11 +598,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "DuplicateOrderReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDuplicateOrderReference = new MMCode() {
+	public static final RejectedStatusReason10Code DuplicateOrderReference = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplicateOrderReference";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.DuplicateOrderReference.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -599,11 +622,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "InvestmentAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestmentAccount = new MMCode() {
+	public static final RejectedStatusReason10Code InvestmentAccount = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccount";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.InvestmentAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -622,11 +646,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "NotEnoughFinancialInstrument"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotEnoughFinancialInstrument = new MMCode() {
+	public static final RejectedStatusReason10Code NotEnoughFinancialInstrument = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEnoughFinancialInstrument";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.NotEnoughFinancialInstrument.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -645,11 +670,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "TooHighUnitsOrAmountToSubscribe"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTooHighUnitsOrAmountToSubscribe = new MMCode() {
+	public static final RejectedStatusReason10Code TooHighUnitsOrAmountToSubscribe = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TooHighUnitsOrAmountToSubscribe";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.TooHighUnitsOrAmountToSubscribe.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -668,11 +694,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "TooLowUnitsOrAmountToSubscribe"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTooLowUnitsOrAmountToSubscribe = new MMCode() {
+	public static final RejectedStatusReason10Code TooLowUnitsOrAmountToSubscribe = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TooLowUnitsOrAmountToSubscribe";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.TooLowUnitsOrAmountToSubscribe.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -691,11 +718,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "UnacceptedDealCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnacceptedDealCurrency = new MMCode() {
+	public static final RejectedStatusReason10Code UnacceptedDealCurrency = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnacceptedDealCurrency";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.UnacceptedDealCurrency.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -714,11 +742,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "UnknownLinkagesReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknownLinkagesReference = new MMCode() {
+	public static final RejectedStatusReason10Code UnknownLinkagesReference = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownLinkagesReference";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.UnknownLinkagesReference.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -737,11 +766,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "UnacceptedRequestedSettlementCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnacceptedRequestedSettlementCurrency = new MMCode() {
+	public static final RejectedStatusReason10Code UnacceptedRequestedSettlementCurrency = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnacceptedRequestedSettlementCurrency";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.UnacceptedRequestedSettlementCurrency.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -760,11 +790,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "InvalidOrderedAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalidOrderedAmount = new MMCode() {
+	public static final RejectedStatusReason10Code InvalidOrderedAmount = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidOrderedAmount";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.InvalidOrderedAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -783,11 +814,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "BelowMinimumInitialInvestmentAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBelowMinimumInitialInvestmentAmount = new MMCode() {
+	public static final RejectedStatusReason10Code BelowMinimumInitialInvestmentAmount = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BelowMinimumInitialInvestmentAmount";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.BelowMinimumInitialInvestmentAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -806,11 +838,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "BelowMinimumTopUpAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBelowMinimumTopUpAmount = new MMCode() {
+	public static final RejectedStatusReason10Code BelowMinimumTopUpAmount = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BelowMinimumTopUpAmount";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.BelowMinimumTopUpAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -829,11 +862,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "InsufficientCapacity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInsufficientCapacity = new MMCode() {
+	public static final RejectedStatusReason10Code InsufficientCapacity = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientCapacity";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.InsufficientCapacity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -852,11 +886,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "PercentageHoldingBreach"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPercentageHoldingBreach = new MMCode() {
+	public static final RejectedStatusReason10Code PercentageHoldingBreach = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageHoldingBreach";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.PercentageHoldingBreach.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -875,11 +910,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "BelowMinimumRedemptionAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBelowMinimumRedemptionAmount = new MMCode() {
+	public static final RejectedStatusReason10Code BelowMinimumRedemptionAmount = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BelowMinimumRedemptionAmount";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.BelowMinimumRedemptionAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -898,11 +934,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "BelowMinimumRetainedAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBelowMinimumRetainedAmount = new MMCode() {
+	public static final RejectedStatusReason10Code BelowMinimumRetainedAmount = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BelowMinimumRetainedAmount";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.BelowMinimumRetainedAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -921,11 +958,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "LockUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLockUp = new MMCode() {
+	public static final RejectedStatusReason10Code LockUp = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LockUp";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.LockUp.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -944,11 +982,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "AssetsIlliquid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAssetsIlliquid = new MMCode() {
+	public static final RejectedStatusReason10Code AssetsIlliquid = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetsIlliquid";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.AssetsIlliquid.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -967,11 +1006,12 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "DataInvalid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDataInvalid = new MMCode() {
+	public static final RejectedStatusReason10Code DataInvalid = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataInvalid";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.DataInvalid.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -990,36 +1030,108 @@ public class RejectedStatusReason10Code extends RejectedStatusReasonCode {
 	 * name} = "FundClosed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFundClosed = new MMCode() {
+	public static final RejectedStatusReason10Code FundClosed = new RejectedStatusReason10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundClosed";
-			owner_lazy = () -> RejectedStatusReason10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedStatusReason10Code.mmObject();
+			codeName = RejectedStatusReasonCode.FundClosed.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RejectedStatusReason10Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RejectedStatusReason10Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectedStatusReason10Code";
 				definition = "Specifies the reason for a rejected status.";
-				code_lazy = () -> Arrays.asList(RejectedStatusReason10Code.mmAfterDeadline, RejectedStatusReason10Code.mmAccountBlockedForTransfer, RejectedStatusReason10Code.mmCutOffTime, RejectedStatusReason10Code.mmSettlementDate,
-						RejectedStatusReason10Code.mmAccountBlockedMissingDocuments, RejectedStatusReason10Code.mmFinancialInstrumentQuantity, RejectedStatusReason10Code.mmFinancialInstrumentIdentification,
-						RejectedStatusReason10Code.mmTradeDate, RejectedStatusReason10Code.mmFinancialInstrumentIdentificationAndName, RejectedStatusReason10Code.mmSubscriberOrRedeemer, RejectedStatusReason10Code.mmIntermediary,
-						RejectedStatusReason10Code.mmInvalidOrderType, RejectedStatusReason10Code.mmInstructingPartyNotAllowedForAccount, RejectedStatusReason10Code.mmTooLate, RejectedStatusReason10Code.mmNotEnoughCash,
-						RejectedStatusReason10Code.mmNoCancellationMatch, RejectedStatusReason10Code.mmNotCompliantWithSLA, RejectedStatusReason10Code.mmDuplicateOrderReference, RejectedStatusReason10Code.mmInvestmentAccount,
-						RejectedStatusReason10Code.mmNotEnoughFinancialInstrument, RejectedStatusReason10Code.mmTooHighUnitsOrAmountToSubscribe, RejectedStatusReason10Code.mmTooLowUnitsOrAmountToSubscribe,
-						RejectedStatusReason10Code.mmUnacceptedDealCurrency, RejectedStatusReason10Code.mmUnknownLinkagesReference, RejectedStatusReason10Code.mmUnacceptedRequestedSettlementCurrency,
-						RejectedStatusReason10Code.mmInvalidOrderedAmount, RejectedStatusReason10Code.mmBelowMinimumInitialInvestmentAmount, RejectedStatusReason10Code.mmBelowMinimumTopUpAmount,
-						RejectedStatusReason10Code.mmInsufficientCapacity, RejectedStatusReason10Code.mmPercentageHoldingBreach, RejectedStatusReason10Code.mmBelowMinimumRedemptionAmount,
-						RejectedStatusReason10Code.mmBelowMinimumRetainedAmount, RejectedStatusReason10Code.mmLockUp, RejectedStatusReason10Code.mmAssetsIlliquid, RejectedStatusReason10Code.mmDataInvalid,
-						RejectedStatusReason10Code.mmFundClosed);
 				trace_lazy = () -> RejectedStatusReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectedStatusReason10Code.AfterDeadline, com.tools20022.repository.codeset.RejectedStatusReason10Code.AccountBlockedForTransfer,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.CutOffTime, com.tools20022.repository.codeset.RejectedStatusReason10Code.SettlementDate,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.AccountBlockedMissingDocuments, com.tools20022.repository.codeset.RejectedStatusReason10Code.FinancialInstrumentQuantity,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.FinancialInstrumentIdentification, com.tools20022.repository.codeset.RejectedStatusReason10Code.TradeDate,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.FinancialInstrumentIdentificationAndName, com.tools20022.repository.codeset.RejectedStatusReason10Code.SubscriberOrRedeemer,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.Intermediary, com.tools20022.repository.codeset.RejectedStatusReason10Code.InvalidOrderType,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.InstructingPartyNotAllowedForAccount, com.tools20022.repository.codeset.RejectedStatusReason10Code.TooLate,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.NotEnoughCash, com.tools20022.repository.codeset.RejectedStatusReason10Code.NoCancellationMatch,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.NotCompliantWithSLA, com.tools20022.repository.codeset.RejectedStatusReason10Code.DuplicateOrderReference,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.InvestmentAccount, com.tools20022.repository.codeset.RejectedStatusReason10Code.NotEnoughFinancialInstrument,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.TooHighUnitsOrAmountToSubscribe, com.tools20022.repository.codeset.RejectedStatusReason10Code.TooLowUnitsOrAmountToSubscribe,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.UnacceptedDealCurrency, com.tools20022.repository.codeset.RejectedStatusReason10Code.UnknownLinkagesReference,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.UnacceptedRequestedSettlementCurrency, com.tools20022.repository.codeset.RejectedStatusReason10Code.InvalidOrderedAmount,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.BelowMinimumInitialInvestmentAmount, com.tools20022.repository.codeset.RejectedStatusReason10Code.BelowMinimumTopUpAmount,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.InsufficientCapacity, com.tools20022.repository.codeset.RejectedStatusReason10Code.PercentageHoldingBreach,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.BelowMinimumRedemptionAmount, com.tools20022.repository.codeset.RejectedStatusReason10Code.BelowMinimumRetainedAmount,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.LockUp, com.tools20022.repository.codeset.RejectedStatusReason10Code.AssetsIlliquid,
+						com.tools20022.repository.codeset.RejectedStatusReason10Code.DataInvalid, com.tools20022.repository.codeset.RejectedStatusReason10Code.FundClosed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AfterDeadline.getCodeName().get(), AfterDeadline);
+		codesByName.put(AccountBlockedForTransfer.getCodeName().get(), AccountBlockedForTransfer);
+		codesByName.put(CutOffTime.getCodeName().get(), CutOffTime);
+		codesByName.put(SettlementDate.getCodeName().get(), SettlementDate);
+		codesByName.put(AccountBlockedMissingDocuments.getCodeName().get(), AccountBlockedMissingDocuments);
+		codesByName.put(FinancialInstrumentQuantity.getCodeName().get(), FinancialInstrumentQuantity);
+		codesByName.put(FinancialInstrumentIdentification.getCodeName().get(), FinancialInstrumentIdentification);
+		codesByName.put(TradeDate.getCodeName().get(), TradeDate);
+		codesByName.put(FinancialInstrumentIdentificationAndName.getCodeName().get(), FinancialInstrumentIdentificationAndName);
+		codesByName.put(SubscriberOrRedeemer.getCodeName().get(), SubscriberOrRedeemer);
+		codesByName.put(Intermediary.getCodeName().get(), Intermediary);
+		codesByName.put(InvalidOrderType.getCodeName().get(), InvalidOrderType);
+		codesByName.put(InstructingPartyNotAllowedForAccount.getCodeName().get(), InstructingPartyNotAllowedForAccount);
+		codesByName.put(TooLate.getCodeName().get(), TooLate);
+		codesByName.put(NotEnoughCash.getCodeName().get(), NotEnoughCash);
+		codesByName.put(NoCancellationMatch.getCodeName().get(), NoCancellationMatch);
+		codesByName.put(NotCompliantWithSLA.getCodeName().get(), NotCompliantWithSLA);
+		codesByName.put(DuplicateOrderReference.getCodeName().get(), DuplicateOrderReference);
+		codesByName.put(InvestmentAccount.getCodeName().get(), InvestmentAccount);
+		codesByName.put(NotEnoughFinancialInstrument.getCodeName().get(), NotEnoughFinancialInstrument);
+		codesByName.put(TooHighUnitsOrAmountToSubscribe.getCodeName().get(), TooHighUnitsOrAmountToSubscribe);
+		codesByName.put(TooLowUnitsOrAmountToSubscribe.getCodeName().get(), TooLowUnitsOrAmountToSubscribe);
+		codesByName.put(UnacceptedDealCurrency.getCodeName().get(), UnacceptedDealCurrency);
+		codesByName.put(UnknownLinkagesReference.getCodeName().get(), UnknownLinkagesReference);
+		codesByName.put(UnacceptedRequestedSettlementCurrency.getCodeName().get(), UnacceptedRequestedSettlementCurrency);
+		codesByName.put(InvalidOrderedAmount.getCodeName().get(), InvalidOrderedAmount);
+		codesByName.put(BelowMinimumInitialInvestmentAmount.getCodeName().get(), BelowMinimumInitialInvestmentAmount);
+		codesByName.put(BelowMinimumTopUpAmount.getCodeName().get(), BelowMinimumTopUpAmount);
+		codesByName.put(InsufficientCapacity.getCodeName().get(), InsufficientCapacity);
+		codesByName.put(PercentageHoldingBreach.getCodeName().get(), PercentageHoldingBreach);
+		codesByName.put(BelowMinimumRedemptionAmount.getCodeName().get(), BelowMinimumRedemptionAmount);
+		codesByName.put(BelowMinimumRetainedAmount.getCodeName().get(), BelowMinimumRetainedAmount);
+		codesByName.put(LockUp.getCodeName().get(), LockUp);
+		codesByName.put(AssetsIlliquid.getCodeName().get(), AssetsIlliquid);
+		codesByName.put(DataInvalid.getCodeName().get(), DataInvalid);
+		codesByName.put(FundClosed.getCodeName().get(), FundClosed);
+	}
+
+	public static RejectedStatusReason10Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RejectedStatusReason10Code[] values() {
+		RejectedStatusReason10Code[] values = new RejectedStatusReason10Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RejectedStatusReason10Code> {
+		@Override
+		public RejectedStatusReason10Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RejectedStatusReason10Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

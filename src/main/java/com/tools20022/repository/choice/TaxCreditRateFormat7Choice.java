@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
@@ -28,6 +29,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.RateTypeAndAmountAndStatus27;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * TaxCreditRateFormat2Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TaxCreditRateFormat7Choice", propOrder = {"rate", "amount", "rateTypeAndAmountAndRateStatus"})
 public class TaxCreditRateFormat7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rate", required = true)
 	protected PercentageRate rate;
 	/**
-	 * Value expressed as a rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,6 +107,9 @@ public class TaxCreditRateFormat7Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Rate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92A:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -122,9 +128,10 @@ public class TaxCreditRateFormat7Choice {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
-			componentContext_lazy = () -> TaxCreditRateFormat7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92A:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Value expressed as a rate.";
@@ -134,10 +141,11 @@ public class TaxCreditRateFormat7Choice {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
-	 * Value expressed as an amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,6 +166,9 @@ public class TaxCreditRateFormat7Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Amt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19B:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -176,9 +187,10 @@ public class TaxCreditRateFormat7Choice {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
-			componentContext_lazy = () -> TaxCreditRateFormat7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19B:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Value expressed as an amount.";
@@ -188,10 +200,11 @@ public class TaxCreditRateFormat7Choice {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
 	protected RateTypeAndAmountAndStatus27 rateTypeAndAmountAndRateStatus;
 	/**
-	 * Specifies different formats for the tax credit rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -205,6 +218,9 @@ public class TaxCreditRateFormat7Choice {
 	 * TaxCreditRateFormat7Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RateTpAndAmtAndRateSts"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92J:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -223,9 +239,10 @@ public class TaxCreditRateFormat7Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TaxCreditRateFormat7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RateTpAndAmtAndRateSts";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92J:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateTypeAndAmountAndRateStatus";
 			definition = "Specifies different formats for the tax credit rate.";
@@ -240,9 +257,10 @@ public class TaxCreditRateFormat7Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TaxCreditRateFormat7Choice.mmRate, TaxCreditRateFormat7Choice.mmAmount, TaxCreditRateFormat7Choice.mmRateTypeAndAmountAndRateStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TaxCreditRateFormat7Choice.mmRate, com.tools20022.repository.choice.TaxCreditRateFormat7Choice.mmAmount,
+						com.tools20022.repository.choice.TaxCreditRateFormat7Choice.mmRateTypeAndAmountAndRateStatus);
 				trace_lazy = () -> RateAndAmount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxCreditRateFormat7Choice";
 				definition = "Choice between an amount or an unspecified rate.";
@@ -252,30 +270,30 @@ public class TaxCreditRateFormat7Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
 
-	public void setRate(PercentageRate rate) {
-		this.rate = rate;
+	public TaxCreditRateFormat7Choice setRate(PercentageRate rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
-		this.amount = amount;
+	public TaxCreditRateFormat7Choice setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
 	public RateTypeAndAmountAndStatus27 getRateTypeAndAmountAndRateStatus() {
 		return rateTypeAndAmountAndRateStatus;
 	}
 
-	public void setRateTypeAndAmountAndRateStatus(RateTypeAndAmountAndStatus27 rateTypeAndAmountAndRateStatus) {
-		this.rateTypeAndAmountAndRateStatus = rateTypeAndAmountAndRateStatus;
+	public TaxCreditRateFormat7Choice setRateTypeAndAmountAndRateStatus(RateTypeAndAmountAndStatus27 rateTypeAndAmountAndRateStatus) {
+		this.rateTypeAndAmountAndRateStatus = Objects.requireNonNull(rateTypeAndAmountAndRateStatus);
+		return this;
 	}
 }

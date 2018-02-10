@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Specifies the different identifications associated with a securities
@@ -38,6 +39,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.TradeIdentification
+ * TradeIdentification}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -92,10 +97,105 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesTradeIdentification.mmCancellationRequestIdentification}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.TradeIdentification
- * TradeIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesTradeRelatedIdentifications
+ * SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Identification1#mmIdentification
+ * Identification1.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Identification4#mmIdentification
+ * Identification4.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages1#mmReference
+ * Linkages1.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages21#mmReference
+ * Linkages21.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages4#mmReference
+ * Linkages4.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages22#mmReference
+ * Linkages22.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages9#mmReference
+ * Linkages9.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages14#mmReference
+ * Linkages14.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages17#mmReference
+ * Linkages17.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages24#mmReference
+ * Linkages24.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages3#mmReference
+ * Linkages3.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages6#mmReference
+ * Linkages6.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages10#mmReference
+ * Linkages10.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages11#mmReference
+ * Linkages11.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages16#mmReference
+ * Linkages16.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages23#mmReference
+ * Linkages23.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages7#mmReference
+ * Linkages7.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages12#mmReference
+ * Linkages12.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages15#mmReference
+ * Linkages15.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages18#mmReference
+ * Linkages18.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages2#mmReference
+ * Linkages2.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages8#mmReference
+ * Linkages8.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages5#mmReference
+ * Linkages5.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages13#mmReference
+ * Linkages13.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages19#mmReference
+ * Linkages19.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages25#mmReference
+ * Linkages25.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages26#mmReference
+ * Linkages26.mmReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Identification14#mmIdentification
+ * Identification14.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference7#mmReference
+ * MessageAndBusinessReference7.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages36#mmReference
+ * Linkages36.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages37#mmReference
+ * Linkages37.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages38#mmReference
+ * Linkages38.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages40#mmReference
+ * Linkages40.mmReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference8#mmReference
+ * MessageAndBusinessReference8.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages43#mmReference
+ * Linkages43.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages42#mmReference
+ * Linkages42.mmReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Identification16#mmIdentification
+ * Identification16.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages49#mmReference
+ * Linkages49.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages48#mmReference
+ * Linkages48.mmReference}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -387,109 +487,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesTradeRelatedIdentifications
- * SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Identification1#mmIdentification
- * Identification1.mmIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Identification4#mmIdentification
- * Identification4.mmIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages1#mmReference
- * Linkages1.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages21#mmReference
- * Linkages21.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages4#mmReference
- * Linkages4.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages22#mmReference
- * Linkages22.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages9#mmReference
- * Linkages9.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages14#mmReference
- * Linkages14.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages17#mmReference
- * Linkages17.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages24#mmReference
- * Linkages24.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages3#mmReference
- * Linkages3.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages6#mmReference
- * Linkages6.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages10#mmReference
- * Linkages10.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages11#mmReference
- * Linkages11.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages16#mmReference
- * Linkages16.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages23#mmReference
- * Linkages23.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages7#mmReference
- * Linkages7.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages12#mmReference
- * Linkages12.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages15#mmReference
- * Linkages15.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages18#mmReference
- * Linkages18.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages2#mmReference
- * Linkages2.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages8#mmReference
- * Linkages8.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages5#mmReference
- * Linkages5.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages13#mmReference
- * Linkages13.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages19#mmReference
- * Linkages19.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages25#mmReference
- * Linkages25.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages26#mmReference
- * Linkages26.mmReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Identification14#mmIdentification
- * Identification14.mmIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference7#mmReference
- * MessageAndBusinessReference7.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages36#mmReference
- * Linkages36.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages37#mmReference
- * Linkages37.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages38#mmReference
- * Linkages38.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages40#mmReference
- * Linkages40.mmReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference8#mmReference
- * MessageAndBusinessReference8.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages43#mmReference
- * Linkages43.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages42#mmReference
- * Linkages42.mmReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Identification16#mmIdentification
- * Identification16.mmIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages49#mmReference
- * Linkages49.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages48#mmReference
- * Linkages48.mmReference}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -507,8 +508,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected SecuritiesTrade identifiedTrade;
 	/**
-	 * Trade for which one or more identifications are provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -542,8 +543,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentifiedTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentifiedTrade";
 			definition = "Trade for which one or more identifications are provided.";
@@ -556,9 +557,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	};
 	protected Max35Text marketInfrastructureTransactionIdentification;
 	/**
-	 * Identification of a transaction assigned by a market infrastructure other
-	 * than a central securities depository, for example, Target2-Securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1207,8 +1207,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 					Transaction53.mmMarketInfrastructureTransactionIdentification, SecuritiesTradeDetails68.mmMarketInfrastructureTransactionIdentification, Transaction54.mmMarketInfrastructureTransactionIdentification,
 					Transaction52.mmMarketInfrastructureTransactionIdentification, SecuritiesTradeDetails69.mmMarketInfrastructureTransactionIdentification, Transaction57.mmMarketInfrastructureTransactionIdentification,
 					Transaction56.mmMarketInfrastructureTransactionIdentification, Transaction55.mmMarketInfrastructureTransactionIdentification, TransactionDetails101.mmMarketInfrastructureTransactionIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketInfrastructureTransactionIdentification";
 			definition = "Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.";
@@ -1227,10 +1227,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	};
 	protected Max35Text processorTransactionIdentification;
 	/**
-	 * Identification of the transaction assigned by the processor of the
-	 * instruction other than the account owner the account servicer and the
-	 * market infrastructure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1703,8 +1701,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 					SecuritiesTradeDetails68.mmProcessorTransactionIdentification, Transaction54.mmProcessorTransactionIdentification, Transaction52.mmProcessorTransactionIdentification,
 					SecuritiesTradeDetails69.mmProcessorTransactionIdentification, Transaction57.mmProcessorTransactionIdentification, Transaction56.mmProcessorTransactionIdentification, Transaction55.mmProcessorTransactionIdentification,
 					TransactionDetails101.mmProcessorTransactionIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProcessorTransactionIdentification";
 			definition = "Identification of the transaction assigned by the processor of the instruction other than the account owner the account servicer and the market infrastructure.";
@@ -1723,8 +1721,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	};
 	protected Max35Text poolIdentification;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2322,8 +2320,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 					SecuritiesFinancingTransactionDetails35.mmPoolIdentification, Transaction54.mmPoolIdentification, Transaction52.mmPoolIdentification, TransactionTypeAndAdditionalParameters19.mmPoolIdentification,
 					SecuritiesTradeDetails69.mmPoolIdentification, TransactionTypeAndAdditionalParameters20.mmPoolIdentification, Transaction57.mmPoolIdentification, SecuritiesFinancingTransactionDetails36.mmPoolIdentification,
 					Transaction56.mmPoolIdentification, TransactionDetails100.mmPoolIdentification, Transaction55.mmPoolIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PoolIdentification";
 			definition = "Collective reference identifying a set of messages.";
@@ -2342,8 +2340,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	};
 	protected Max35Text collateralTransactionIdentification;
 	/**
-	 * Unambiguous identification of a collateral transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2660,8 +2658,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 					TransactionDetails97.mmClientCollateralInstructionIdentification, Transaction54.mmClientCollateralInstructionIdentification, Transaction52.mmClientCollateralInstructionIdentification,
 					SecuritiesTradeDetails69.mmCollateralTransactionIdentification, Transaction57.mmClientCollateralInstructionIdentification, SecuritiesTradeDetails70.mmCollateralTransactionIdentification,
 					Transaction56.mmClientCollateralInstructionIdentification, TransactionDetails100.mmClientCollateralInstructionIdentification, Transaction55.mmClientCollateralInstructionIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollateralTransactionIdentification";
 			definition = "Unambiguous identification of a collateral transaction.";
@@ -2680,9 +2678,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	};
 	protected Max35Text clientTripartyCollateralTransactionIdentification;
 	/**
-	 * Unique reference identifying the triparty collateral management
-	 * transaction from the client's point of view.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3134,8 +3131,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 					AdditionalParameters31.mmClientCollateralInstructionIdentification, Transaction57.mmClientTripartyCollateralTransactionIdentification,
 					SecuritiesFinancingTransactionDetails36.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters32.mmClientTripartyCollateralTransactionIdentification,
 					Transaction56.mmClientTripartyCollateralTransactionIdentification, TransactionDetails100.mmClientTripartyCollateralTransactionIdentification, Transaction55.mmClientTripartyCollateralTransactionIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClientTripartyCollateralTransactionIdentification";
 			definition = "Unique reference identifying the triparty collateral management transaction from the client's point of view.";
@@ -3154,9 +3151,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	};
 	protected Max35Text tripartyAgentCollateralTransactionIdentification;
 	/**
-	 * Unique reference identifying the triparty collateral management
-	 * transaction from the triparty agent's point of view.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3708,8 +3704,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 					Transaction56.mmTripartyAgentServiceProviderCollateralTransactionIdentification, Transaction56.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
 					TransactionDetails100.mmTripartyAgentServiceProviderCollateralTransactionIdentification, TransactionDetails100.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
 					Transaction55.mmTripartyAgentServiceProviderCollateralTransactionIdentification, Transaction55.mmTripartyAgentServiceProviderCollateralInstructionIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TripartyAgentCollateralTransactionIdentification";
 			definition = "Unique reference identifying the triparty collateral management transaction from the triparty agent's point of view.";
@@ -3728,8 +3724,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	};
 	protected Max35Text basketIdentification;
 	/**
-	 * Identification of a basket trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3795,8 +3791,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 			derivation_lazy = () -> Arrays.asList(Identification2.mmBasketIdentification, Identification7.mmBasketIdentification, Identification6.mmBasketIdentification, Identification5.mmBasketIdentification,
 					Identification8.mmBasketIdentification, Identification11.mmBasketIdentification, Identification13.mmBasketIdentification, Identification9.mmBasketIdentification, Identification3.mmBasketIdentification,
 					Identification15.mmBasketIdentification, Identification24.mmBasketIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BasketIdentification";
 			definition = "Identification of a basket trade.";
@@ -3815,8 +3811,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	};
 	protected Max35Text programIdentification;
 	/**
-	 * Program reference which identifies a program trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3882,8 +3878,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 			derivation_lazy = () -> Arrays.asList(Identification2.mmProgramIdentification, Identification7.mmProgramIdentification, Identification6.mmProgramIdentification, Identification5.mmProgramIdentification,
 					Identification8.mmProgramIdentification, Identification11.mmProgramIdentification, Identification13.mmProgramIdentification, Identification9.mmProgramIdentification, Identification3.mmProgramIdentification,
 					Identification15.mmProgramIdentification, Identification24.mmProgramIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProgramIdentification";
 			definition = "Program reference which identifies a program trade.";
@@ -3902,9 +3898,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	};
 	protected Max35Text blockIdentification;
 	/**
-	 * Reference of the linked message at the trade/block level which identifies
-	 * a centrally matched transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3943,8 +3938,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	public static final MMBusinessAttribute mmBlockIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(IdentificationReference8Choice.mmBlockIdentification, IdentificationReference11Choice.mmBlockIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BlockIdentification";
 			definition = "Reference of the linked message at the trade/block level which identifies a centrally matched transaction.";
@@ -3963,8 +3958,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	};
 	protected Max35Text allocationIdentification;
 	/**
-	 * Identification at the allocation level.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4024,8 +4019,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 			derivation_lazy = () -> Arrays.asList(IdentificationReference8Choice.mmAllocationIdentification, IdentificationReference8Choice.mmIndividualAllocationIdentification,
 					IdentificationReference8Choice.mmSecondaryAllocationIdentification, IdentificationReference11Choice.mmAllocationIdentification, IdentificationReference11Choice.mmIndividualAllocationIdentification,
 					IdentificationReference11Choice.mmSecondaryAllocationIdentification, TradeLeg8.mmAllocationIdentification, TradeLeg10.mmAllocationIdentification, TradeLeg9.mmAllocationIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllocationIdentification";
 			definition = "Identification at the allocation level.";
@@ -4044,8 +4039,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	};
 	protected Max35Text complianceIdentification;
 	/**
-	 * Identification which represents this transaction for compliance purposes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4087,8 +4082,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	public static final MMBusinessAttribute mmComplianceIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(IdentificationReference8Choice.mmComplianceIdentification, IdentificationReference11Choice.mmComplianceIdentification, OrderParameters1.mmComplianceIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ComplianceIdentification";
 			definition = "Identification which represents this transaction for compliance purposes.";
@@ -4107,9 +4102,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	};
 	protected Max35Text cSDTransactionIdentification;
 	/**
-	 * Identification given by the central securities depository to the
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4136,8 +4130,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 */
 	public static final MMBusinessAttribute mmCSDTransactionIdentification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CSDTransactionIdentification";
 			definition = "Identification given by the central securities depository  to the transaction.";
@@ -4156,8 +4150,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	};
 	protected Max35Text centralCounterpartyTransactionIdentification;
 	/**
-	 * Identification of the transaction assigned by the central counterparty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4200,8 +4194,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementObligation1.mmCentralCounterpartyTransactionIdentification, SettlementObligation6.mmCentralCounterpartyTransactionIdentification,
 					SettlementObligation7.mmCentralCounterpartyTransactionIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CentralCounterpartyTransactionIdentification";
 			definition = "Identification of the transaction assigned by the central counterparty.";
@@ -4220,9 +4214,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	};
 	protected Max35Text cancellationRequestIdentification;
 	/**
-	 * Unambiguous identification of the cancellation request as known by the
-	 * instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4277,8 +4270,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 		{
 			derivation_lazy = () -> Arrays.asList(IdentificationReference11Choice.mmCancellationRequestIdentification, InvestmentFundOrder5.mmCancellationReference, InvestmentFundOrder2.mmCancellationReference,
 					InvestmentFundOrder6.mmCancellationReference, InvestmentFundOrder11.mmCancellationReference, InvestmentFundOrder9.mmCancellationReference, InvestmentFundOrder8.mmCancellationReference);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CancellationRequestIdentification";
 			definition = "Unambiguous identification of the cancellation request as known by the instructing party.";
@@ -4299,7 +4292,7 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTradeIdentification";
 				definition = "Specifies the different identifications associated with a securities transaction.";
@@ -4360,119 +4353,134 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 		return identifiedTrade;
 	}
 
-	public void setIdentifiedTrade(com.tools20022.repository.entity.SecuritiesTrade identifiedTrade) {
-		this.identifiedTrade = identifiedTrade;
+	public SecuritiesTradeIdentification setIdentifiedTrade(com.tools20022.repository.entity.SecuritiesTrade identifiedTrade) {
+		this.identifiedTrade = Objects.requireNonNull(identifiedTrade);
+		return this;
 	}
 
 	public Max35Text getMarketInfrastructureTransactionIdentification() {
 		return marketInfrastructureTransactionIdentification;
 	}
 
-	public void setMarketInfrastructureTransactionIdentification(Max35Text marketInfrastructureTransactionIdentification) {
-		this.marketInfrastructureTransactionIdentification = marketInfrastructureTransactionIdentification;
+	public SecuritiesTradeIdentification setMarketInfrastructureTransactionIdentification(Max35Text marketInfrastructureTransactionIdentification) {
+		this.marketInfrastructureTransactionIdentification = Objects.requireNonNull(marketInfrastructureTransactionIdentification);
+		return this;
 	}
 
 	public Max35Text getProcessorTransactionIdentification() {
 		return processorTransactionIdentification;
 	}
 
-	public void setProcessorTransactionIdentification(Max35Text processorTransactionIdentification) {
-		this.processorTransactionIdentification = processorTransactionIdentification;
+	public SecuritiesTradeIdentification setProcessorTransactionIdentification(Max35Text processorTransactionIdentification) {
+		this.processorTransactionIdentification = Objects.requireNonNull(processorTransactionIdentification);
+		return this;
 	}
 
 	public Max35Text getPoolIdentification() {
 		return poolIdentification;
 	}
 
-	public void setPoolIdentification(Max35Text poolIdentification) {
-		this.poolIdentification = poolIdentification;
+	public SecuritiesTradeIdentification setPoolIdentification(Max35Text poolIdentification) {
+		this.poolIdentification = Objects.requireNonNull(poolIdentification);
+		return this;
 	}
 
 	public Max35Text getCollateralTransactionIdentification() {
 		return collateralTransactionIdentification;
 	}
 
-	public void setCollateralTransactionIdentification(Max35Text collateralTransactionIdentification) {
-		this.collateralTransactionIdentification = collateralTransactionIdentification;
+	public SecuritiesTradeIdentification setCollateralTransactionIdentification(Max35Text collateralTransactionIdentification) {
+		this.collateralTransactionIdentification = Objects.requireNonNull(collateralTransactionIdentification);
+		return this;
 	}
 
 	public Max35Text getClientTripartyCollateralTransactionIdentification() {
 		return clientTripartyCollateralTransactionIdentification;
 	}
 
-	public void setClientTripartyCollateralTransactionIdentification(Max35Text clientTripartyCollateralTransactionIdentification) {
-		this.clientTripartyCollateralTransactionIdentification = clientTripartyCollateralTransactionIdentification;
+	public SecuritiesTradeIdentification setClientTripartyCollateralTransactionIdentification(Max35Text clientTripartyCollateralTransactionIdentification) {
+		this.clientTripartyCollateralTransactionIdentification = Objects.requireNonNull(clientTripartyCollateralTransactionIdentification);
+		return this;
 	}
 
 	public Max35Text getTripartyAgentCollateralTransactionIdentification() {
 		return tripartyAgentCollateralTransactionIdentification;
 	}
 
-	public void setTripartyAgentCollateralTransactionIdentification(Max35Text tripartyAgentCollateralTransactionIdentification) {
-		this.tripartyAgentCollateralTransactionIdentification = tripartyAgentCollateralTransactionIdentification;
+	public SecuritiesTradeIdentification setTripartyAgentCollateralTransactionIdentification(Max35Text tripartyAgentCollateralTransactionIdentification) {
+		this.tripartyAgentCollateralTransactionIdentification = Objects.requireNonNull(tripartyAgentCollateralTransactionIdentification);
+		return this;
 	}
 
 	public Max35Text getBasketIdentification() {
 		return basketIdentification;
 	}
 
-	public void setBasketIdentification(Max35Text basketIdentification) {
-		this.basketIdentification = basketIdentification;
+	public SecuritiesTradeIdentification setBasketIdentification(Max35Text basketIdentification) {
+		this.basketIdentification = Objects.requireNonNull(basketIdentification);
+		return this;
 	}
 
 	public Max35Text getProgramIdentification() {
 		return programIdentification;
 	}
 
-	public void setProgramIdentification(Max35Text programIdentification) {
-		this.programIdentification = programIdentification;
+	public SecuritiesTradeIdentification setProgramIdentification(Max35Text programIdentification) {
+		this.programIdentification = Objects.requireNonNull(programIdentification);
+		return this;
 	}
 
 	public Max35Text getBlockIdentification() {
 		return blockIdentification;
 	}
 
-	public void setBlockIdentification(Max35Text blockIdentification) {
-		this.blockIdentification = blockIdentification;
+	public SecuritiesTradeIdentification setBlockIdentification(Max35Text blockIdentification) {
+		this.blockIdentification = Objects.requireNonNull(blockIdentification);
+		return this;
 	}
 
 	public Max35Text getAllocationIdentification() {
 		return allocationIdentification;
 	}
 
-	public void setAllocationIdentification(Max35Text allocationIdentification) {
-		this.allocationIdentification = allocationIdentification;
+	public SecuritiesTradeIdentification setAllocationIdentification(Max35Text allocationIdentification) {
+		this.allocationIdentification = Objects.requireNonNull(allocationIdentification);
+		return this;
 	}
 
 	public Max35Text getComplianceIdentification() {
 		return complianceIdentification;
 	}
 
-	public void setComplianceIdentification(Max35Text complianceIdentification) {
-		this.complianceIdentification = complianceIdentification;
+	public SecuritiesTradeIdentification setComplianceIdentification(Max35Text complianceIdentification) {
+		this.complianceIdentification = Objects.requireNonNull(complianceIdentification);
+		return this;
 	}
 
 	public Max35Text getCSDTransactionIdentification() {
 		return cSDTransactionIdentification;
 	}
 
-	public void setCSDTransactionIdentification(Max35Text cSDTransactionIdentification) {
-		this.cSDTransactionIdentification = cSDTransactionIdentification;
+	public SecuritiesTradeIdentification setCSDTransactionIdentification(Max35Text cSDTransactionIdentification) {
+		this.cSDTransactionIdentification = Objects.requireNonNull(cSDTransactionIdentification);
+		return this;
 	}
 
 	public Max35Text getCentralCounterpartyTransactionIdentification() {
 		return centralCounterpartyTransactionIdentification;
 	}
 
-	public void setCentralCounterpartyTransactionIdentification(Max35Text centralCounterpartyTransactionIdentification) {
-		this.centralCounterpartyTransactionIdentification = centralCounterpartyTransactionIdentification;
+	public SecuritiesTradeIdentification setCentralCounterpartyTransactionIdentification(Max35Text centralCounterpartyTransactionIdentification) {
+		this.centralCounterpartyTransactionIdentification = Objects.requireNonNull(centralCounterpartyTransactionIdentification);
+		return this;
 	}
 
 	public Max35Text getCancellationRequestIdentification() {
 		return cancellationRequestIdentification;
 	}
 
-	public void setCancellationRequestIdentification(Max35Text cancellationRequestIdentification) {
-		this.cancellationRequestIdentification = cancellationRequestIdentification;
+	public SecuritiesTradeIdentification setCancellationRequestIdentification(Max35Text cancellationRequestIdentification) {
+		this.cancellationRequestIdentification = Objects.requireNonNull(cancellationRequestIdentification);
+		return this;
 	}
 }

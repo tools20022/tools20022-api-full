@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.SystemRestriction1;
 import com.tools20022.repository.msg.SystemSecuritiesAccount2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesAccountModification1Choice", propOrder = {"systemSecuritiesAccount", "systemRestriction", "marketSpecificAttribute"})
 public class SecuritiesAccountModification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SysSctiesAcct", required = true)
 	protected SystemSecuritiesAccount2 systemSecuritiesAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +108,7 @@ public class SecuritiesAccountModification1Choice {
 	 */
 	public static final MMMessageAttribute mmSystemSecuritiesAccount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountModification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SysSctiesAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,12 +119,11 @@ public class SecuritiesAccountModification1Choice {
 			complexType_lazy = () -> SystemSecuritiesAccount2.mmObject();
 		}
 	};
+	@XmlElement(name = "SysRstrctn", required = true)
 	protected SystemRestriction1 systemRestriction;
 	/**
-	 * Defines the specific processing characteristics for a party to ensure
-	 * configurability of specific requirements, as prescribed by national legal
-	 * and regulatory requirements and practices.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -150,7 +151,7 @@ public class SecuritiesAccountModification1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSystemRestriction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountModification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SysRstrctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,11 +163,11 @@ public class SecuritiesAccountModification1Choice {
 			type_lazy = () -> SystemRestriction1.mmObject();
 		}
 	};
+	@XmlElement(name = "MktSpcfcAttr", required = true)
 	protected MarketSpecificAttribute1 marketSpecificAttribute;
 	/**
-	 * Additional attributes defined by a central security depositary for a
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -195,7 +196,7 @@ public class SecuritiesAccountModification1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmMarketSpecificAttribute = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountModification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MktSpcfcAttr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,9 +212,9 @@ public class SecuritiesAccountModification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountModification1Choice.mmSystemSecuritiesAccount, SecuritiesAccountModification1Choice.mmSystemRestriction,
-						SecuritiesAccountModification1Choice.mmMarketSpecificAttribute);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesAccountModification1Choice.mmSystemSecuritiesAccount,
+						com.tools20022.repository.choice.SecuritiesAccountModification1Choice.mmSystemRestriction, com.tools20022.repository.choice.SecuritiesAccountModification1Choice.mmMarketSpecificAttribute);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountModification1Choice";
 				definition = "Identifies which information are involved by a modification request for securities account reference data.";
@@ -222,30 +223,30 @@ public class SecuritiesAccountModification1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SysSctiesAcct", required = true)
 	public SystemSecuritiesAccount2 getSystemSecuritiesAccount() {
 		return systemSecuritiesAccount;
 	}
 
-	public void setSystemSecuritiesAccount(SystemSecuritiesAccount2 systemSecuritiesAccount) {
-		this.systemSecuritiesAccount = systemSecuritiesAccount;
+	public SecuritiesAccountModification1Choice setSystemSecuritiesAccount(SystemSecuritiesAccount2 systemSecuritiesAccount) {
+		this.systemSecuritiesAccount = Objects.requireNonNull(systemSecuritiesAccount);
+		return this;
 	}
 
-	@XmlElement(name = "SysRstrctn", required = true)
 	public SystemRestriction1 getSystemRestriction() {
 		return systemRestriction;
 	}
 
-	public void setSystemRestriction(SystemRestriction1 systemRestriction) {
-		this.systemRestriction = systemRestriction;
+	public SecuritiesAccountModification1Choice setSystemRestriction(SystemRestriction1 systemRestriction) {
+		this.systemRestriction = Objects.requireNonNull(systemRestriction);
+		return this;
 	}
 
-	@XmlElement(name = "MktSpcfcAttr", required = true)
 	public MarketSpecificAttribute1 getMarketSpecificAttribute() {
 		return marketSpecificAttribute;
 	}
 
-	public void setMarketSpecificAttribute(MarketSpecificAttribute1 marketSpecificAttribute) {
-		this.marketSpecificAttribute = marketSpecificAttribute;
+	public SecuritiesAccountModification1Choice setMarketSpecificAttribute(MarketSpecificAttribute1 marketSpecificAttribute) {
+		this.marketSpecificAttribute = Objects.requireNonNull(marketSpecificAttribute);
+		return this;
 	}
 }

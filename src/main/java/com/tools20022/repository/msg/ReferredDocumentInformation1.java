@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReferredDocumentInformation1", propOrder = {"referredDocumentType", "referredDocumentNumber"})
 public class ReferredDocumentInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RfrdDocTp")
 	protected ReferredDocumentType1 referredDocumentType;
 	/**
-	 * Provides the type of the referred document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +111,7 @@ public class ReferredDocumentInformation1 {
 	public static final MMMessageAssociationEnd mmReferredDocumentType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
-			componentContext_lazy = () -> ReferredDocumentInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdDocTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +123,11 @@ public class ReferredDocumentInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.ReferredDocumentType1.mmObject();
 		}
 	};
+	@XmlElement(name = "RfrdDocNb")
 	protected Max35Text referredDocumentNumber;
 	/**
-	 * Unique and unambiguous identification number of the referred document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +161,7 @@ public class ReferredDocumentInformation1 {
 	public static final MMMessageAttribute mmReferredDocumentNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> ReferredDocumentInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdDocNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,9 +176,9 @@ public class ReferredDocumentInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReferredDocumentInformation1.mmReferredDocumentType, ReferredDocumentInformation1.mmReferredDocumentNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredDocumentInformation1.mmReferredDocumentType, com.tools20022.repository.msg.ReferredDocumentInformation1.mmReferredDocumentNumber);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReferredDocumentInformation1";
 				definition = "Structured information supplied to fully identify the documents referred to in the remittance information.";
@@ -184,21 +187,21 @@ public class ReferredDocumentInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RfrdDocTp")
-	public ReferredDocumentType1 getReferredDocumentType() {
-		return referredDocumentType;
+	public Optional<ReferredDocumentType1> getReferredDocumentType() {
+		return referredDocumentType == null ? Optional.empty() : Optional.of(referredDocumentType);
 	}
 
-	public void setReferredDocumentType(com.tools20022.repository.msg.ReferredDocumentType1 referredDocumentType) {
+	public ReferredDocumentInformation1 setReferredDocumentType(com.tools20022.repository.msg.ReferredDocumentType1 referredDocumentType) {
 		this.referredDocumentType = referredDocumentType;
+		return this;
 	}
 
-	@XmlElement(name = "RfrdDocNb")
-	public Max35Text getReferredDocumentNumber() {
-		return referredDocumentNumber;
+	public Optional<Max35Text> getReferredDocumentNumber() {
+		return referredDocumentNumber == null ? Optional.empty() : Optional.of(referredDocumentNumber);
 	}
 
-	public void setReferredDocumentNumber(Max35Text referredDocumentNumber) {
+	public ReferredDocumentInformation1 setReferredDocumentNumber(Max35Text referredDocumentNumber) {
 		this.referredDocumentNumber = referredDocumentNumber;
+		return this;
 	}
 }

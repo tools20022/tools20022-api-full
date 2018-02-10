@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification38;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of format method applied to a lending transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LendingTransactionMethod1Choice", propOrder = {"code", "proprietary"})
 public class LendingTransactionMethod1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected LendingTransactionMethod1Code code;
 	/**
-	 * Lending transaction method expressed as a ISO20022 code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +110,7 @@ public class LendingTransactionMethod1Choice {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesLending.mmLendingTransactionMethod;
-			componentContext_lazy = () -> LendingTransactionMethod1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.LendingTransactionMethod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +121,11 @@ public class LendingTransactionMethod1Choice {
 			simpleType_lazy = () -> LendingTransactionMethod1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification38 proprietary;
 	/**
-	 * Lending transaction method expressed as a proprietary code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +160,7 @@ public class LendingTransactionMethod1Choice {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesLending.mmLendingTransactionMethod;
-			componentContext_lazy = () -> LendingTransactionMethod1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.LendingTransactionMethod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +175,9 @@ public class LendingTransactionMethod1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LendingTransactionMethod1Choice.mmCode, LendingTransactionMethod1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LendingTransactionMethod1Choice.mmCode, com.tools20022.repository.choice.LendingTransactionMethod1Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesLending.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LendingTransactionMethod1Choice";
 				definition = "Choice of format method applied to a lending transaction.";
@@ -183,21 +186,21 @@ public class LendingTransactionMethod1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public LendingTransactionMethod1Code getCode() {
 		return code;
 	}
 
-	public void setCode(LendingTransactionMethod1Code code) {
-		this.code = code;
+	public LendingTransactionMethod1Choice setCode(LendingTransactionMethod1Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification38 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification38 proprietary) {
-		this.proprietary = proprietary;
+	public LendingTransactionMethod1Choice setProprietary(GenericIdentification38 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

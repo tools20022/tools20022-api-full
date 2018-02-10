@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SettlingCapacityCode;
+import com.tools20022.repository.codeset.SettlingCapacity2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the role of the party in the settlement of the transaction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SettlingCapacityCode
- * SettlingCapacityCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlingCapacity2Code#mmSettlingAgent
- * SettlingCapacity2Code.mmSettlingAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlingCapacity2Code#SettlingAgent
+ * SettlingCapacity2Code.SettlingAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlingCapacity2Code#mmSettlingCustodian
- * SettlingCapacity2Code.mmSettlingCustodian}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlingCapacity2Code#SettlingCustodian
+ * SettlingCapacity2Code.SettlingCustodian}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlingCapacity2Code#mmSettlingPrincipal
- * SettlingCapacity2Code.mmSettlingPrincipal}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlingCapacity2Code#SettlingPrincipal
+ * SettlingCapacity2Code.SettlingPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlingCapacity2Code#mmSettlingRisklessPrincipal
- * SettlingCapacity2Code.mmSettlingRisklessPrincipal}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlingCapacity2Code#SettlingRisklessPrincipal
+ * SettlingCapacity2Code.SettlingRisklessPrincipal}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SettlingCapacityCode
+ * SettlingCapacityCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the role of the party in the settlement of the transaction."</li>
  * </ul>
  */
-public class SettlingCapacity2Code extends SettlingCapacityCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SettlingCapacity2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +89,12 @@ public class SettlingCapacity2Code extends SettlingCapacityCode {
 	 * name} = "SettlingAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlingAgent = new MMCode() {
+	public static final SettlingCapacity2Code SettlingAgent = new SettlingCapacity2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlingAgent";
-			owner_lazy = () -> SettlingCapacity2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlingCapacity2Code.mmObject();
+			codeName = SettlingCapacityCode.SettlingAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,11 +113,12 @@ public class SettlingCapacity2Code extends SettlingCapacityCode {
 	 * name} = "SettlingCustodian"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlingCustodian = new MMCode() {
+	public static final SettlingCapacity2Code SettlingCustodian = new SettlingCapacity2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlingCustodian";
-			owner_lazy = () -> SettlingCapacity2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlingCapacity2Code.mmObject();
+			codeName = SettlingCapacityCode.SettlingCustodian.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -130,11 +137,12 @@ public class SettlingCapacity2Code extends SettlingCapacityCode {
 	 * name} = "SettlingPrincipal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlingPrincipal = new MMCode() {
+	public static final SettlingCapacity2Code SettlingPrincipal = new SettlingCapacity2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlingPrincipal";
-			owner_lazy = () -> SettlingCapacity2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlingCapacity2Code.mmObject();
+			codeName = SettlingCapacityCode.SettlingPrincipal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -153,25 +161,59 @@ public class SettlingCapacity2Code extends SettlingCapacityCode {
 	 * name} = "SettlingRisklessPrincipal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlingRisklessPrincipal = new MMCode() {
+	public static final SettlingCapacity2Code SettlingRisklessPrincipal = new SettlingCapacity2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlingRisklessPrincipal";
-			owner_lazy = () -> SettlingCapacity2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlingCapacity2Code.mmObject();
+			codeName = SettlingCapacityCode.SettlingRisklessPrincipal.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SettlingCapacity2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SettlingCapacity2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlingCapacity2Code";
 				definition = "Specifies the role of the party in the settlement of the transaction.";
-				code_lazy = () -> Arrays.asList(SettlingCapacity2Code.mmSettlingAgent, SettlingCapacity2Code.mmSettlingCustodian, SettlingCapacity2Code.mmSettlingPrincipal, SettlingCapacity2Code.mmSettlingRisklessPrincipal);
 				trace_lazy = () -> SettlingCapacityCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlingCapacity2Code.SettlingAgent, com.tools20022.repository.codeset.SettlingCapacity2Code.SettlingCustodian,
+						com.tools20022.repository.codeset.SettlingCapacity2Code.SettlingPrincipal, com.tools20022.repository.codeset.SettlingCapacity2Code.SettlingRisklessPrincipal);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SettlingAgent.getCodeName().get(), SettlingAgent);
+		codesByName.put(SettlingCustodian.getCodeName().get(), SettlingCustodian);
+		codesByName.put(SettlingPrincipal.getCodeName().get(), SettlingPrincipal);
+		codesByName.put(SettlingRisklessPrincipal.getCodeName().get(), SettlingRisklessPrincipal);
+	}
+
+	public static SettlingCapacity2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SettlingCapacity2Code[] values() {
+		SettlingCapacity2Code[] values = new SettlingCapacity2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SettlingCapacity2Code> {
+		@Override
+		public SettlingCapacity2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SettlingCapacity2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.BalanceCounterpartyCode;
+import com.tools20022.repository.codeset.BalanceCounterparty1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of counterparty to be taken into account for calculation
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.BalanceCounterpartyCode
- * BalanceCounterpartyCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceCounterparty1Code#mmBilateral
- * BalanceCounterparty1Code.mmBilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceCounterparty1Code#Bilateral
+ * BalanceCounterparty1Code.Bilateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceCounterparty1Code#mmMultilateral
- * BalanceCounterparty1Code.mmMultilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceCounterparty1Code#Multilateral
+ * BalanceCounterparty1Code.Multilateral}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.BalanceCounterpartyCode
+ * BalanceCounterpartyCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class BalanceCounterparty1Code extends BalanceCounterpartyCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BalanceCounterparty1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class BalanceCounterparty1Code extends BalanceCounterpartyCode {
 	 * name} = "Bilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBilateral = new MMCode() {
+	public static final BalanceCounterparty1Code Bilateral = new BalanceCounterparty1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bilateral";
-			owner_lazy = () -> BalanceCounterparty1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceCounterparty1Code.mmObject();
+			codeName = BalanceCounterpartyCode.Bilateral.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,57 @@ public class BalanceCounterparty1Code extends BalanceCounterpartyCode {
 	 * name} = "Multilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMultilateral = new MMCode() {
+	public static final BalanceCounterparty1Code Multilateral = new BalanceCounterparty1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Multilateral";
-			owner_lazy = () -> BalanceCounterparty1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceCounterparty1Code.mmObject();
+			codeName = BalanceCounterpartyCode.Multilateral.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, BalanceCounterparty1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BalanceCounterparty1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BILA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceCounterparty1Code";
 				definition = "Specifies the type of counterparty to be taken into account for calculation of the balance.";
-				code_lazy = () -> Arrays.asList(BalanceCounterparty1Code.mmBilateral, BalanceCounterparty1Code.mmMultilateral);
 				trace_lazy = () -> BalanceCounterpartyCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BalanceCounterparty1Code.Bilateral, com.tools20022.repository.codeset.BalanceCounterparty1Code.Multilateral);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Bilateral.getCodeName().get(), Bilateral);
+		codesByName.put(Multilateral.getCodeName().get(), Multilateral);
+	}
+
+	public static BalanceCounterparty1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BalanceCounterparty1Code[] values() {
+		BalanceCounterparty1Code[] values = new BalanceCounterparty1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BalanceCounterparty1Code> {
+		@Override
+		public BalanceCounterparty1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BalanceCounterparty1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

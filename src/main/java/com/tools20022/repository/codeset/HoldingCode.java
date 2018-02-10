@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.HoldingCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies how the holding is blocked.
@@ -31,14 +36,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.HoldingCode#PartialHolding
+ * HoldingCode.PartialHolding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingCode#mmPartialHolding
- * HoldingCode.mmPartialHolding}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingCode#mmNonPartialHolding
- * HoldingCode.mmNonPartialHolding}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.HoldingCode#mmCertificate
- * HoldingCode.mmCertificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingCode#NonPartialHolding
+ * HoldingCode.NonPartialHolding}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.HoldingCode#Certificate
+ * HoldingCode.Certificate}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies how the holding is blocked."</li>
  * </ul>
  */
-public class HoldingCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class HoldingCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,12 +96,12 @@ public class HoldingCode {
 	 * definition} = "Partial holding."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialHolding = new MMCode() {
+	public static final HoldingCode PartialHolding = new HoldingCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialHolding";
 			definition = "Partial holding.";
-			owner_lazy = () -> HoldingCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.HoldingCode.mmObject();
 			codeName = "PRTH";
 		}
 	};
@@ -120,12 +125,12 @@ public class HoldingCode {
 	 * definition} = "Non partial holding."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonPartialHolding = new MMCode() {
+	public static final HoldingCode NonPartialHolding = new HoldingCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonPartialHolding";
 			definition = "Non partial holding.";
-			owner_lazy = () -> HoldingCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.HoldingCode.mmObject();
 			codeName = "NPRH";
 		}
 	};
@@ -149,28 +154,59 @@ public class HoldingCode {
 	 * definition} = "Certificate."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertificate = new MMCode() {
+	public static final HoldingCode Certificate = new HoldingCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
 			definition = "Certificate.";
-			owner_lazy = () -> HoldingCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.HoldingCode.mmObject();
 			codeName = "CERT";
 		}
 	};
+	final static private LinkedHashMap<String, HoldingCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected HoldingCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PRTH");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "HoldingCode";
 				definition = "Specifies how the holding is blocked.";
-				code_lazy = () -> Arrays.asList(HoldingCode.mmPartialHolding, HoldingCode.mmNonPartialHolding, HoldingCode.mmCertificate);
 				derivation_lazy = () -> Arrays.asList(Holding1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.HoldingCode.PartialHolding, com.tools20022.repository.codeset.HoldingCode.NonPartialHolding, com.tools20022.repository.codeset.HoldingCode.Certificate);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PartialHolding.getCodeName().get(), PartialHolding);
+		codesByName.put(NonPartialHolding.getCodeName().get(), NonPartialHolding);
+		codesByName.put(Certificate.getCodeName().get(), Certificate);
+	}
+
+	public static HoldingCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static HoldingCode[] values() {
+		HoldingCode[] values = new HoldingCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, HoldingCode> {
+		@Override
+		public HoldingCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(HoldingCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

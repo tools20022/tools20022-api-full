@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.ISAYearsOfIssue6;
 import com.tools20022.repository.msg.Portfolio1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,21 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "ISAPortfolio3Choice", propOrder = {"ISA", "portfolio"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "ISAPortfolio3Choice", propOrder = {"iSA", "portfolio"})
 public class ISAPortfolio3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ISA", required = true)
 	protected ISAYearsOfIssue6 iSA;
 	/**
-	 * UK government schemes to encourage individuals to invest in securities
-	 * based unit and investment trusts, offering certain tax benefits. These
-	 * are not investment in their own right but are tax exempt wrappers in
-	 * which individuals can hold equities, bonds and funds to shelter them from
-	 * income and capital gains tax. <br>
-	 * The Individual Savings Account (ISA) is provided only by UK based
-	 * financial institutions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -117,7 +113,7 @@ public class ISAPortfolio3Choice {
 	public static final MMMessageAssociationEnd mmISA = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Portfolio.mmTransfer;
-			componentContext_lazy = () -> ISAPortfolio3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ISAPortfolio3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ISA";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,11 +125,11 @@ public class ISAPortfolio3Choice {
 			type_lazy = () -> ISAYearsOfIssue6.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtfl", required = true)
 	protected Portfolio1 portfolio;
 	/**
-	 * Wrapper for a specific product or a specific sub-product owned by a set
-	 * of beneficial owners.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +163,7 @@ public class ISAPortfolio3Choice {
 	public static final MMMessageAttribute mmPortfolio = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> Portfolio.mmObject();
-			componentContext_lazy = () -> ISAPortfolio3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ISAPortfolio3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtfl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,9 +178,9 @@ public class ISAPortfolio3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ISAPortfolio3Choice.mmISA, ISAPortfolio3Choice.mmPortfolio);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ISAPortfolio3Choice.mmISA, com.tools20022.repository.choice.ISAPortfolio3Choice.mmPortfolio);
 				trace_lazy = () -> Portfolio.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ISAPortfolio3Choice";
 				definition = "Choice to provide additional portfolio information or individual savings account information (UK government scheme provided by UK based financial institutions only).";
@@ -193,21 +189,21 @@ public class ISAPortfolio3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ISA", required = true)
 	public ISAYearsOfIssue6 getISA() {
 		return iSA;
 	}
 
-	public void setISA(ISAYearsOfIssue6 iSA) {
-		this.iSA = iSA;
+	public ISAPortfolio3Choice setISA(ISAYearsOfIssue6 iSA) {
+		this.iSA = Objects.requireNonNull(iSA);
+		return this;
 	}
 
-	@XmlElement(name = "Prtfl", required = true)
 	public Portfolio1 getPortfolio() {
 		return portfolio;
 	}
 
-	public void setPortfolio(Portfolio1 portfolio) {
-		this.portfolio = portfolio;
+	public ISAPortfolio3Choice setPortfolio(Portfolio1 portfolio) {
+		this.portfolio = Objects.requireNonNull(portfolio);
+		return this;
 	}
 }

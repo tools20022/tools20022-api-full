@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.entity.LotBreakdown;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of breakdown of a quantity."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "QuantityBreakdown34", propOrder = {"lotNumber", "lotQuantity", "securitiesSubBalanceType"})
 public class QuantityBreakdown34 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LotNb")
 	protected GenericIdentification39 lotNumber;
 	/**
-	 * Identification, for tax purposes, of a lot of identical securities that
-	 * are bought at a certain date and at a certain price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -98,6 +100,9 @@ public class QuantityBreakdown34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LotNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13a::LOTS</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -113,9 +118,10 @@ public class QuantityBreakdown34 {
 	public static final MMMessageAssociationEnd mmLotNumber = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotNumber;
-			componentContext_lazy = () -> QuantityBreakdown34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown34.mmObject();
 			isDerived = false;
 			xmlTag = "LotNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13a::LOTS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotNumber";
 			definition = "Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price.";
@@ -125,10 +131,11 @@ public class QuantityBreakdown34 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification39.mmObject();
 		}
 	};
+	@XmlElement(name = "LotQty")
 	protected FinancialInstrumentQuantity1Choice lotQuantity;
 	/**
-	 * Quantity of financial instruments that is part of the lot described.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -148,6 +155,9 @@ public class QuantityBreakdown34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LotQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::LOTS</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -162,9 +172,10 @@ public class QuantityBreakdown34 {
 	public static final MMMessageAssociationEnd mmLotQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmSecuritiesQuantity;
-			componentContext_lazy = () -> QuantityBreakdown34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown34.mmObject();
 			isDerived = false;
 			xmlTag = "LotQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::LOTS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotQuantity";
 			definition = "Quantity of financial instruments that is part of the lot described.";
@@ -174,11 +185,11 @@ public class QuantityBreakdown34 {
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesSubBalTp")
 	protected GenericIdentification47 securitiesSubBalanceType;
 	/**
-	 * Specifies the securities sub balance type indicator (example restriction
-	 * type for a market infrastructure).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -213,7 +224,7 @@ public class QuantityBreakdown34 {
 	public static final MMMessageAssociationEnd mmSecuritiesSubBalanceType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
-			componentContext_lazy = () -> QuantityBreakdown34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown34.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSubBalTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,9 +240,10 @@ public class QuantityBreakdown34 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(QuantityBreakdown34.mmLotNumber, QuantityBreakdown34.mmLotQuantity, QuantityBreakdown34.mmSecuritiesSubBalanceType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakdown34.mmLotNumber, com.tools20022.repository.msg.QuantityBreakdown34.mmLotQuantity,
+						com.tools20022.repository.msg.QuantityBreakdown34.mmSecuritiesSubBalanceType);
 				trace_lazy = () -> LotBreakdown.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuantityBreakdown34";
 				definition = "Details of breakdown of a quantity.";
@@ -240,30 +252,30 @@ public class QuantityBreakdown34 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LotNb")
-	public GenericIdentification39 getLotNumber() {
-		return lotNumber;
+	public Optional<GenericIdentification39> getLotNumber() {
+		return lotNumber == null ? Optional.empty() : Optional.of(lotNumber);
 	}
 
-	public void setLotNumber(com.tools20022.repository.msg.GenericIdentification39 lotNumber) {
+	public QuantityBreakdown34 setLotNumber(com.tools20022.repository.msg.GenericIdentification39 lotNumber) {
 		this.lotNumber = lotNumber;
+		return this;
 	}
 
-	@XmlElement(name = "LotQty")
-	public FinancialInstrumentQuantity1Choice getLotQuantity() {
-		return lotQuantity;
+	public Optional<FinancialInstrumentQuantity1Choice> getLotQuantity() {
+		return lotQuantity == null ? Optional.empty() : Optional.of(lotQuantity);
 	}
 
-	public void setLotQuantity(FinancialInstrumentQuantity1Choice lotQuantity) {
+	public QuantityBreakdown34 setLotQuantity(FinancialInstrumentQuantity1Choice lotQuantity) {
 		this.lotQuantity = lotQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesSubBalTp")
-	public GenericIdentification47 getSecuritiesSubBalanceType() {
-		return securitiesSubBalanceType;
+	public Optional<GenericIdentification47> getSecuritiesSubBalanceType() {
+		return securitiesSubBalanceType == null ? Optional.empty() : Optional.of(securitiesSubBalanceType);
 	}
 
-	public void setSecuritiesSubBalanceType(com.tools20022.repository.msg.GenericIdentification47 securitiesSubBalanceType) {
+	public QuantityBreakdown34 setSecuritiesSubBalanceType(com.tools20022.repository.msg.GenericIdentification47 securitiesSubBalanceType) {
 		this.securitiesSubBalanceType = securitiesSubBalanceType;
+		return this;
 	}
 }

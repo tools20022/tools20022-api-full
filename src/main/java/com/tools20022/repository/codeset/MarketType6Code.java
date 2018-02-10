@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.MarketTypeCode;
+import com.tools20022.repository.codeset.MarketType6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of place where a trade was executed, a price was sourced
@@ -31,25 +35,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.MarketTypeCode MarketTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType6Code#mmOverTheCounter
- * MarketType6Code.mmOverTheCounter}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MarketType6Code#mmVarious
- * MarketType6Code.mmVarious}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType6Code#OverTheCounter
+ * MarketType6Code.OverTheCounter}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarketType6Code#Various
+ * MarketType6Code.Various}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType6Code#mmStockExchange
- * MarketType6Code.mmStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType6Code#StockExchange
+ * MarketType6Code.StockExchange}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.MarketTypeCode MarketTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class MarketType6Code extends MarketTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MarketType6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,11 +92,12 @@ public class MarketType6Code extends MarketTypeCode {
 	 * name} = "OverTheCounter"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOverTheCounter = new MMCode() {
+	public static final MarketType6Code OverTheCounter = new MarketType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverTheCounter";
-			owner_lazy = () -> MarketType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarketType6Code.mmObject();
+			codeName = MarketTypeCode.OverTheCounter.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +116,12 @@ public class MarketType6Code extends MarketTypeCode {
 	 * name} = "Various"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVarious = new MMCode() {
+	public static final MarketType6Code Various = new MarketType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Various";
-			owner_lazy = () -> MarketType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarketType6Code.mmObject();
+			codeName = MarketTypeCode.Various.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,26 +140,58 @@ public class MarketType6Code extends MarketTypeCode {
 	 * name} = "StockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockExchange = new MMCode() {
+	public static final MarketType6Code StockExchange = new MarketType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
-			owner_lazy = () -> MarketType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarketType6Code.mmObject();
+			codeName = MarketTypeCode.StockExchange.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, MarketType6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MarketType6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("OTCO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketType6Code";
 				definition = "Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed.";
-				code_lazy = () -> Arrays.asList(MarketType6Code.mmOverTheCounter, MarketType6Code.mmVarious, MarketType6Code.mmStockExchange);
 				trace_lazy = () -> MarketTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketType6Code.OverTheCounter, com.tools20022.repository.codeset.MarketType6Code.Various, com.tools20022.repository.codeset.MarketType6Code.StockExchange);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(OverTheCounter.getCodeName().get(), OverTheCounter);
+		codesByName.put(Various.getCodeName().get(), Various);
+		codesByName.put(StockExchange.getCodeName().get(), StockExchange);
+	}
+
+	public static MarketType6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MarketType6Code[] values() {
+		MarketType6Code[] values = new MarketType6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MarketType6Code> {
+		@Override
+		public MarketType6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MarketType6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

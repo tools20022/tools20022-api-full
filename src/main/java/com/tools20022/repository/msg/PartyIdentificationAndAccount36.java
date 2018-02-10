@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -33,6 +34,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +76,20 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIdentificationCountryOfResidenceRule#forPartyIdentificationAndAccount36
+ * ConstraintIdentificationCountryOfResidenceRule.
+ * forPartyIdentificationAndAccount36}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forPartyIdentificationAndAccount36
+ * ConstraintCoexistenceIdentificationRule.forPartyIdentificationAndAccount36}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -87,15 +101,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Party and account details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyIdentificationAndAccount36", propOrder = {"identification", "alternateIdentification", "countryOfResidence", "safekeepingAccount", "processingIdentification", "additionalInformation"})
 public class PartyIdentificationAndAccount36 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id")
 	protected PartyIdentification49Choice identification;
 	/**
-	 * Identification of the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -115,6 +130,9 @@ public class PartyIdentificationAndAccount36 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Id"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -128,9 +146,10 @@ public class PartyIdentificationAndAccount36 {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> PartyIdentificationAndAccount36.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount36.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the party.";
@@ -140,10 +159,11 @@ public class PartyIdentificationAndAccount36 {
 			type_lazy = () -> PartyIdentification49Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AltrnId")
 	protected AlternatePartyIdentification2 alternateIdentification;
 	/**
-	 * Alternate identification for a party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -163,6 +183,9 @@ public class PartyIdentificationAndAccount36 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AltrnId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -176,9 +199,10 @@ public class PartyIdentificationAndAccount36 {
 	public static final MMMessageAssociationEnd mmAlternateIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> PartyIdentificationAndAccount36.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount36.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateIdentification";
 			definition = "Alternate identification for a party.";
@@ -188,12 +212,11 @@ public class PartyIdentificationAndAccount36 {
 			type_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification2.mmObject();
 		}
 	};
+	@XmlElement(name = "CtryOfRes")
 	protected CountryCode countryOfResidence;
 	/**
-	 * Country in which a person resides (the place of a person's home). In the
-	 * case of a company, it is the country from which the affairs of that
-	 * company are directed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,6 +236,9 @@ public class PartyIdentificationAndAccount36 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtryOfRes"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95C:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -228,9 +254,10 @@ public class PartyIdentificationAndAccount36 {
 	public static final MMMessageAttribute mmCountryOfResidence = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> PartyIdentificationAndAccount36.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount36.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfRes";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfResidence";
 			definition = "Country in which a person resides (the place of a person's home). In the case of a company, it is the country from which the affairs of that company are directed.";
@@ -239,10 +266,11 @@ public class PartyIdentificationAndAccount36 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgAcct")
 	protected Max35Text safekeepingAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -262,6 +290,9 @@ public class PartyIdentificationAndAccount36 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SfkpgAcct"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :97A::SAFE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -275,9 +306,10 @@ public class PartyIdentificationAndAccount36 {
 	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
-			componentContext_lazy = () -> PartyIdentificationAndAccount36.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount36.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":97A::SAFE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
@@ -286,10 +318,11 @@ public class PartyIdentificationAndAccount36 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcgId")
 	protected Max35Text processingIdentification;
 	/**
-	 * Unambiguous identification of the transaction for the party identified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -303,6 +336,9 @@ public class PartyIdentificationAndAccount36 {
 	 * PartyIdentificationAndAccount36}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrcgId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::PROC</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -318,9 +354,10 @@ public class PartyIdentificationAndAccount36 {
 	 */
 	public static final MMMessageAttribute mmProcessingIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentificationAndAccount36.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount36.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::PROC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingIdentification";
 			definition = "Unambiguous identification of the transaction for the party identified.";
@@ -329,10 +366,11 @@ public class PartyIdentificationAndAccount36 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected PartyTextInformation1 additionalInformation;
 	/**
-	 * Provides additional information regarding the party,
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -346,6 +384,9 @@ public class PartyIdentificationAndAccount36 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlInf"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70a:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -358,9 +399,10 @@ public class PartyIdentificationAndAccount36 {
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentificationAndAccount36.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount36.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information regarding the party,";
@@ -374,10 +416,13 @@ public class PartyIdentificationAndAccount36 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentificationAndAccount36.mmIdentification, PartyIdentificationAndAccount36.mmAlternateIdentification, PartyIdentificationAndAccount36.mmCountryOfResidence,
-						PartyIdentificationAndAccount36.mmSafekeepingAccount, PartyIdentificationAndAccount36.mmProcessingIdentification, PartyIdentificationAndAccount36.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount36.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount36.mmAlternateIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount36.mmCountryOfResidence, com.tools20022.repository.msg.PartyIdentificationAndAccount36.mmSafekeepingAccount,
+						com.tools20022.repository.msg.PartyIdentificationAndAccount36.mmProcessingIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount36.mmAdditionalInformation);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIdentificationCountryOfResidenceRule.forPartyIdentificationAndAccount36,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forPartyIdentificationAndAccount36);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -393,57 +438,57 @@ public class PartyIdentificationAndAccount36 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id")
-	public PartyIdentification49Choice getIdentification() {
-		return identification;
+	public Optional<PartyIdentification49Choice> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(PartyIdentification49Choice identification) {
+	public PartyIdentificationAndAccount36 setIdentification(PartyIdentification49Choice identification) {
 		this.identification = identification;
+		return this;
 	}
 
-	@XmlElement(name = "AltrnId")
-	public AlternatePartyIdentification2 getAlternateIdentification() {
-		return alternateIdentification;
+	public Optional<AlternatePartyIdentification2> getAlternateIdentification() {
+		return alternateIdentification == null ? Optional.empty() : Optional.of(alternateIdentification);
 	}
 
-	public void setAlternateIdentification(com.tools20022.repository.msg.AlternatePartyIdentification2 alternateIdentification) {
+	public PartyIdentificationAndAccount36 setAlternateIdentification(com.tools20022.repository.msg.AlternatePartyIdentification2 alternateIdentification) {
 		this.alternateIdentification = alternateIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CtryOfRes")
-	public CountryCode getCountryOfResidence() {
-		return countryOfResidence;
+	public Optional<CountryCode> getCountryOfResidence() {
+		return countryOfResidence == null ? Optional.empty() : Optional.of(countryOfResidence);
 	}
 
-	public void setCountryOfResidence(CountryCode countryOfResidence) {
+	public PartyIdentificationAndAccount36 setCountryOfResidence(CountryCode countryOfResidence) {
 		this.countryOfResidence = countryOfResidence;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct")
-	public Max35Text getSafekeepingAccount() {
-		return safekeepingAccount;
+	public Optional<Max35Text> getSafekeepingAccount() {
+		return safekeepingAccount == null ? Optional.empty() : Optional.of(safekeepingAccount);
 	}
 
-	public void setSafekeepingAccount(Max35Text safekeepingAccount) {
+	public PartyIdentificationAndAccount36 setSafekeepingAccount(Max35Text safekeepingAccount) {
 		this.safekeepingAccount = safekeepingAccount;
+		return this;
 	}
 
-	@XmlElement(name = "PrcgId")
-	public Max35Text getProcessingIdentification() {
-		return processingIdentification;
+	public Optional<Max35Text> getProcessingIdentification() {
+		return processingIdentification == null ? Optional.empty() : Optional.of(processingIdentification);
 	}
 
-	public void setProcessingIdentification(Max35Text processingIdentification) {
+	public PartyIdentificationAndAccount36 setProcessingIdentification(Max35Text processingIdentification) {
 		this.processingIdentification = processingIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public PartyTextInformation1 getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<PartyTextInformation1> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(com.tools20022.repository.msg.PartyTextInformation1 additionalInformation) {
+	public PartyIdentificationAndAccount36 setAdditionalInformation(com.tools20022.repository.msg.PartyTextInformation1 additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 }

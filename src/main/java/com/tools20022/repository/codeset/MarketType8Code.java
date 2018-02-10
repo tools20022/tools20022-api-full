@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.MarketTypeCode;
+import com.tools20022.repository.codeset.MarketType8Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of place where a trade was executed, a price was sourced
@@ -31,36 +35,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.MarketTypeCode MarketTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MarketType8Code#mmCounter
- * MarketType8Code.mmCounter}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarketType8Code#Counter
+ * MarketType8Code.Counter}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarketType8Code#InterBank
+ * MarketType8Code.InterBank}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType8Code#mmInterBank
- * MarketType8Code.mmInterBank}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType8Code#OverTheCounter
+ * MarketType8Code.OverTheCounter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType8Code#mmOverTheCounter
- * MarketType8Code.mmOverTheCounter}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType8Code#PrimaryMarket
+ * MarketType8Code.PrimaryMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType8Code#mmPrimaryMarket
- * MarketType8Code.mmPrimaryMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType8Code#SecondaryMarket
+ * MarketType8Code.SecondaryMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType8Code#mmSecondaryMarket
- * MarketType8Code.mmSecondaryMarket}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType8Code#mmStockExchange
- * MarketType8Code.mmStockExchange}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MarketType8Code#mmVarious
- * MarketType8Code.mmVarious}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType8Code#StockExchange
+ * MarketType8Code.StockExchange}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarketType8Code#Various
+ * MarketType8Code.Various}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.MarketTypeCode MarketTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class MarketType8Code extends MarketTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MarketType8Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +96,12 @@ public class MarketType8Code extends MarketTypeCode {
 	 * name} = "Counter"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCounter = new MMCode() {
+	public static final MarketType8Code Counter = new MarketType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counter";
-			owner_lazy = () -> MarketType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarketType8Code.mmObject();
+			codeName = MarketTypeCode.Counter.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +120,12 @@ public class MarketType8Code extends MarketTypeCode {
 	 * name} = "InterBank"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterBank = new MMCode() {
+	public static final MarketType8Code InterBank = new MarketType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterBank";
-			owner_lazy = () -> MarketType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarketType8Code.mmObject();
+			codeName = MarketTypeCode.InterBank.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +144,12 @@ public class MarketType8Code extends MarketTypeCode {
 	 * name} = "OverTheCounter"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOverTheCounter = new MMCode() {
+	public static final MarketType8Code OverTheCounter = new MarketType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverTheCounter";
-			owner_lazy = () -> MarketType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarketType8Code.mmObject();
+			codeName = MarketTypeCode.OverTheCounter.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +168,12 @@ public class MarketType8Code extends MarketTypeCode {
 	 * name} = "PrimaryMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrimaryMarket = new MMCode() {
+	public static final MarketType8Code PrimaryMarket = new MarketType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryMarket";
-			owner_lazy = () -> MarketType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarketType8Code.mmObject();
+			codeName = MarketTypeCode.PrimaryMarket.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,11 +192,12 @@ public class MarketType8Code extends MarketTypeCode {
 	 * name} = "SecondaryMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecondaryMarket = new MMCode() {
+	public static final MarketType8Code SecondaryMarket = new MarketType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryMarket";
-			owner_lazy = () -> MarketType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarketType8Code.mmObject();
+			codeName = MarketTypeCode.SecondaryMarket.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -207,11 +216,12 @@ public class MarketType8Code extends MarketTypeCode {
 	 * name} = "StockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockExchange = new MMCode() {
+	public static final MarketType8Code StockExchange = new MarketType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
-			owner_lazy = () -> MarketType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarketType8Code.mmObject();
+			codeName = MarketTypeCode.StockExchange.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -230,26 +240,63 @@ public class MarketType8Code extends MarketTypeCode {
 	 * name} = "Various"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVarious = new MMCode() {
+	public static final MarketType8Code Various = new MarketType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Various";
-			owner_lazy = () -> MarketType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarketType8Code.mmObject();
+			codeName = MarketTypeCode.Various.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, MarketType8Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MarketType8Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketType8Code";
 				definition = "Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed.";
-				code_lazy = () -> Arrays.asList(MarketType8Code.mmCounter, MarketType8Code.mmInterBank, MarketType8Code.mmOverTheCounter, MarketType8Code.mmPrimaryMarket, MarketType8Code.mmSecondaryMarket, MarketType8Code.mmStockExchange,
-						MarketType8Code.mmVarious);
 				trace_lazy = () -> MarketTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketType8Code.Counter, com.tools20022.repository.codeset.MarketType8Code.InterBank, com.tools20022.repository.codeset.MarketType8Code.OverTheCounter,
+						com.tools20022.repository.codeset.MarketType8Code.PrimaryMarket, com.tools20022.repository.codeset.MarketType8Code.SecondaryMarket, com.tools20022.repository.codeset.MarketType8Code.StockExchange,
+						com.tools20022.repository.codeset.MarketType8Code.Various);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Counter.getCodeName().get(), Counter);
+		codesByName.put(InterBank.getCodeName().get(), InterBank);
+		codesByName.put(OverTheCounter.getCodeName().get(), OverTheCounter);
+		codesByName.put(PrimaryMarket.getCodeName().get(), PrimaryMarket);
+		codesByName.put(SecondaryMarket.getCodeName().get(), SecondaryMarket);
+		codesByName.put(StockExchange.getCodeName().get(), StockExchange);
+		codesByName.put(Various.getCodeName().get(), Various);
+	}
+
+	public static MarketType8Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MarketType8Code[] values() {
+		MarketType8Code[] values = new MarketType8Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MarketType8Code> {
+		@Override
+		public MarketType8Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MarketType8Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

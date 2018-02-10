@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.QuantityRatio;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Ratio expressed as a quotient of quantities."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "QuantityToQuantityRatio2", propOrder = {"quantity1", "quantity2"})
 public class QuantityToQuantityRatio2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Qty1", required = true)
 	protected RestrictedFINDecimalNumber quantity1;
 	/**
-	 * Numerator of the quotient of quantities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +109,7 @@ public class QuantityToQuantityRatio2 {
 	public static final MMMessageAttribute mmQuantity1 = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> QuantityRatio.mmQuantity1;
-			componentContext_lazy = () -> QuantityToQuantityRatio2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityToQuantityRatio2.mmObject();
 			isDerived = false;
 			xmlTag = "Qty1";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +120,11 @@ public class QuantityToQuantityRatio2 {
 			simpleType_lazy = () -> RestrictedFINDecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "Qty2", required = true)
 	protected RestrictedFINDecimalNumber quantity2;
 	/**
-	 * Denominator of the quotient of quantities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +158,7 @@ public class QuantityToQuantityRatio2 {
 	public static final MMMessageAttribute mmQuantity2 = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> QuantityRatio.mmQuantity2;
-			componentContext_lazy = () -> QuantityToQuantityRatio2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityToQuantityRatio2.mmObject();
 			isDerived = false;
 			xmlTag = "Qty2";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,9 +173,9 @@ public class QuantityToQuantityRatio2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(QuantityToQuantityRatio2.mmQuantity1, QuantityToQuantityRatio2.mmQuantity2);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityToQuantityRatio2.mmQuantity1, com.tools20022.repository.msg.QuantityToQuantityRatio2.mmQuantity2);
 				trace_lazy = () -> QuantityRatio.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuantityToQuantityRatio2";
 				definition = "Ratio expressed as a quotient of quantities.";
@@ -181,21 +184,21 @@ public class QuantityToQuantityRatio2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Qty1", required = true)
 	public RestrictedFINDecimalNumber getQuantity1() {
 		return quantity1;
 	}
 
-	public void setQuantity1(RestrictedFINDecimalNumber quantity1) {
-		this.quantity1 = quantity1;
+	public QuantityToQuantityRatio2 setQuantity1(RestrictedFINDecimalNumber quantity1) {
+		this.quantity1 = Objects.requireNonNull(quantity1);
+		return this;
 	}
 
-	@XmlElement(name = "Qty2", required = true)
 	public RestrictedFINDecimalNumber getQuantity2() {
 		return quantity2;
 	}
 
-	public void setQuantity2(RestrictedFINDecimalNumber quantity2) {
-		this.quantity2 = quantity2;
+	public QuantityToQuantityRatio2 setQuantity2(RestrictedFINDecimalNumber quantity2) {
+		this.quantity2 = Objects.requireNonNull(quantity2);
+		return this;
 	}
 }

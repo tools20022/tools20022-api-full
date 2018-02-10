@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * KEKIdentifier3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "KEKIdentifier4", propOrder = {"name", "keyIdentification", "keyVersion"})
 public class KEKIdentifier4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nm")
 	protected Max140Text name;
 	/**
-	 * Name or label of the key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +106,7 @@ public class KEKIdentifier4 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> KEKIdentifier4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier4.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +118,11 @@ public class KEKIdentifier4 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "KeyId")
 	protected Max140Text keyIdentification;
 	/**
-	 * Identification of the cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,7 +153,7 @@ public class KEKIdentifier4 {
 	 */
 	public static final MMMessageAttribute mmKeyIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> KEKIdentifier4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier4.mmObject();
 			isDerived = false;
 			xmlTag = "KeyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,10 +165,11 @@ public class KEKIdentifier4 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "KeyVrsn")
 	protected Max140Text keyVersion;
 	/**
-	 * Version of the cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,7 +200,7 @@ public class KEKIdentifier4 {
 	 */
 	public static final MMMessageAttribute mmKeyVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> KEKIdentifier4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier4.mmObject();
 			isDerived = false;
 			xmlTag = "KeyVrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,8 +216,8 @@ public class KEKIdentifier4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(KEKIdentifier4.mmName, KEKIdentifier4.mmKeyIdentification, KEKIdentifier4.mmKeyVersion);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KEKIdentifier4.mmName, com.tools20022.repository.msg.KEKIdentifier4.mmKeyIdentification, com.tools20022.repository.msg.KEKIdentifier4.mmKeyVersion);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "KEKIdentifier4";
 				definition = "Cryptographic key involved in the security command.";
@@ -223,30 +227,30 @@ public class KEKIdentifier4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nm")
-	public Max140Text getName() {
-		return name;
+	public Optional<Max140Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max140Text name) {
+	public KEKIdentifier4 setName(Max140Text name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "KeyId")
-	public Max140Text getKeyIdentification() {
-		return keyIdentification;
+	public Optional<Max140Text> getKeyIdentification() {
+		return keyIdentification == null ? Optional.empty() : Optional.of(keyIdentification);
 	}
 
-	public void setKeyIdentification(Max140Text keyIdentification) {
+	public KEKIdentifier4 setKeyIdentification(Max140Text keyIdentification) {
 		this.keyIdentification = keyIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "KeyVrsn")
-	public Max140Text getKeyVersion() {
-		return keyVersion;
+	public Optional<Max140Text> getKeyVersion() {
+		return keyVersion == null ? Optional.empty() : Optional.of(keyVersion);
 	}
 
-	public void setKeyVersion(Max140Text keyVersion) {
+	public KEKIdentifier4 setKeyVersion(Max140Text keyVersion) {
 		this.keyVersion = keyVersion;
+		return this;
 	}
 }

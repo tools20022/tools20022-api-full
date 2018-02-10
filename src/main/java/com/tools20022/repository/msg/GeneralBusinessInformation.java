@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.SystemBusinessInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details about business information related to a system."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GeneralBusinessInformation", propOrder = {"qualifier", "subject", "subjectDetails"})
 public class GeneralBusinessInformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Qlfr")
 	protected InformationQualifierType qualifier;
 	/**
-	 * Further information about the criticality or importance of a general
-	 * business information system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +116,7 @@ public class GeneralBusinessInformation {
 	public static final MMMessageAttribute mmQualifier = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemBusinessInformation.mmQualifier;
-			componentContext_lazy = () -> GeneralBusinessInformation.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformation.mmObject();
 			isDerived = false;
 			xmlTag = "Qlfr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,11 +127,11 @@ public class GeneralBusinessInformation {
 			complexType_lazy = () -> com.tools20022.repository.msg.InformationQualifierType.mmObject();
 		}
 	};
+	@XmlElement(name = "Sbjt")
 	protected Max35Text subject;
 	/**
-	 * Subject line of an item of general business information, summarizing the
-	 * topic and intended destination of the information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +166,7 @@ public class GeneralBusinessInformation {
 	public static final MMMessageAttribute mmSubject = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemBusinessInformation.mmSubject;
-			componentContext_lazy = () -> GeneralBusinessInformation.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformation.mmObject();
 			isDerived = false;
 			xmlTag = "Sbjt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,10 +177,11 @@ public class GeneralBusinessInformation {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SbjtDtls")
 	protected Max350Text subjectDetails;
 	/**
-	 * General business information, in unstructured form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -212,7 +214,7 @@ public class GeneralBusinessInformation {
 	public static final MMMessageAttribute mmSubjectDetails = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemBusinessInformation.mmSubjectDetails;
-			componentContext_lazy = () -> GeneralBusinessInformation.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformation.mmObject();
 			isDerived = false;
 			xmlTag = "SbjtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,9 +229,10 @@ public class GeneralBusinessInformation {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GeneralBusinessInformation.mmQualifier, GeneralBusinessInformation.mmSubject, GeneralBusinessInformation.mmSubjectDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformation.mmQualifier, com.tools20022.repository.msg.GeneralBusinessInformation.mmSubject,
+						com.tools20022.repository.msg.GeneralBusinessInformation.mmSubjectDetails);
 				trace_lazy = () -> SystemBusinessInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GeneralBusinessInformation";
 				definition = "Details about business information related to a system.";
@@ -238,30 +241,30 @@ public class GeneralBusinessInformation {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Qlfr")
-	public InformationQualifierType getQualifier() {
-		return qualifier;
+	public Optional<InformationQualifierType> getQualifier() {
+		return qualifier == null ? Optional.empty() : Optional.of(qualifier);
 	}
 
-	public void setQualifier(com.tools20022.repository.msg.InformationQualifierType qualifier) {
+	public GeneralBusinessInformation setQualifier(com.tools20022.repository.msg.InformationQualifierType qualifier) {
 		this.qualifier = qualifier;
+		return this;
 	}
 
-	@XmlElement(name = "Sbjt")
-	public Max35Text getSubject() {
-		return subject;
+	public Optional<Max35Text> getSubject() {
+		return subject == null ? Optional.empty() : Optional.of(subject);
 	}
 
-	public void setSubject(Max35Text subject) {
+	public GeneralBusinessInformation setSubject(Max35Text subject) {
 		this.subject = subject;
+		return this;
 	}
 
-	@XmlElement(name = "SbjtDtls")
-	public Max350Text getSubjectDetails() {
-		return subjectDetails;
+	public Optional<Max350Text> getSubjectDetails() {
+		return subjectDetails == null ? Optional.empty() : Optional.of(subjectDetails);
 	}
 
-	public void setSubjectDetails(Max350Text subjectDetails) {
+	public GeneralBusinessInformation setSubjectDetails(Max350Text subjectDetails) {
 		this.subjectDetails = subjectDetails;
+		return this;
 	}
 }

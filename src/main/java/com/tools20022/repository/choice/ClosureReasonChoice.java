@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.SystemStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Closure reason is expressed as a code or a bilaterally agreed code."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ClosureReasonChoice", propOrder = {"code", "proprietaryReason"})
 public class ClosureReasonChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected SystemClosureReason1Code code;
 	/**
-	 * Reason the system is closed/not operating.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +104,7 @@ public class ClosureReasonChoice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ClosureReasonChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ClosureReasonChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +115,11 @@ public class ClosureReasonChoice {
 			simpleType_lazy = () -> SystemClosureReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryRsn", required = true)
 	protected Max35Text proprietaryReason;
 	/**
-	 * Type of closure reason is a bilaterally agreed code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +146,7 @@ public class ClosureReasonChoice {
 	 */
 	public static final MMMessageAttribute mmProprietaryReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ClosureReasonChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ClosureReasonChoice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,9 +161,9 @@ public class ClosureReasonChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ClosureReasonChoice.mmCode, ClosureReasonChoice.mmProprietaryReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClosureReasonChoice.mmCode, com.tools20022.repository.choice.ClosureReasonChoice.mmProprietaryReason);
 				trace_lazy = () -> SystemStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ClosureReasonChoice";
 				definition = "Closure reason is expressed as a code or a bilaterally agreed code.";
@@ -169,21 +172,21 @@ public class ClosureReasonChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public SystemClosureReason1Code getCode() {
 		return code;
 	}
 
-	public void setCode(SystemClosureReason1Code code) {
-		this.code = code;
+	public ClosureReasonChoice setCode(SystemClosureReason1Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryRsn", required = true)
 	public Max35Text getProprietaryReason() {
 		return proprietaryReason;
 	}
 
-	public void setProprietaryReason(Max35Text proprietaryReason) {
-		this.proprietaryReason = proprietaryReason;
+	public ClosureReasonChoice setProprietaryReason(Max35Text proprietaryReason) {
+		this.proprietaryReason = Objects.requireNonNull(proprietaryReason);
+		return this;
 	}
 }

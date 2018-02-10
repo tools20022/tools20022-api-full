@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +74,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the status of an investigation case."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CaseStatus2", propOrder = {"dateTime", "caseStatus", "reason"})
 public class CaseStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DtTm", required = true)
 	protected ISODateTime dateTime;
 	/**
-	 * Date and time of the status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +127,7 @@ public class CaseStatus2 {
 	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
-			componentContext_lazy = () -> CaseStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CaseStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +138,11 @@ public class CaseStatus2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "CaseSts", required = true)
 	protected CaseStatus2Code caseStatus;
 	/**
-	 * Status of the case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +175,7 @@ public class CaseStatus2 {
 	public static final MMMessageAttribute mmCaseStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestigationCaseStatus.mmCaseStatus;
-			componentContext_lazy = () -> CaseStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CaseStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "CaseSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,10 +186,11 @@ public class CaseStatus2 {
 			simpleType_lazy = () -> CaseStatus2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn")
 	protected Max140Text reason;
 	/**
-	 * Free text justification of the status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,7 +222,7 @@ public class CaseStatus2 {
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> CaseStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CaseStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,10 +237,10 @@ public class CaseStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CaseStatus2.mmDateTime, CaseStatus2.mmCaseStatus, CaseStatus2.mmReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CaseStatus2.mmDateTime, com.tools20022.repository.msg.CaseStatus2.mmCaseStatus, com.tools20022.repository.msg.CaseStatus2.mmReason);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CaseStatusReportV03.mmStatus, CaseStatusReportV04.mmStatus);
 				trace_lazy = () -> InvestigationCaseStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CaseStatus2";
 				definition = "Defines the status of an investigation case.";
@@ -244,30 +249,30 @@ public class CaseStatus2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DtTm", required = true)
 	public ISODateTime getDateTime() {
 		return dateTime;
 	}
 
-	public void setDateTime(ISODateTime dateTime) {
-		this.dateTime = dateTime;
+	public CaseStatus2 setDateTime(ISODateTime dateTime) {
+		this.dateTime = Objects.requireNonNull(dateTime);
+		return this;
 	}
 
-	@XmlElement(name = "CaseSts", required = true)
 	public CaseStatus2Code getCaseStatus() {
 		return caseStatus;
 	}
 
-	public void setCaseStatus(CaseStatus2Code caseStatus) {
-		this.caseStatus = caseStatus;
+	public CaseStatus2 setCaseStatus(CaseStatus2Code caseStatus) {
+		this.caseStatus = Objects.requireNonNull(caseStatus);
+		return this;
 	}
 
-	@XmlElement(name = "Rsn")
-	public Max140Text getReason() {
-		return reason;
+	public Optional<Max140Text> getReason() {
+		return reason == null ? Optional.empty() : Optional.of(reason);
 	}
 
-	public void setReason(Max140Text reason) {
+	public CaseStatus2 setReason(Max140Text reason) {
 		this.reason = reason;
+		return this;
 	}
 }

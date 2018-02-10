@@ -22,9 +22,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.RiskManagementLimit;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Limits4", propOrder = {"currentLimit", "defaultLimit"})
 public class Limits4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CurLmt")
 	protected List<com.tools20022.repository.msg.LimitReport4> currentLimit;
 	/**
-	 * Report is given for a current risk management type limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -116,7 +119,7 @@ public class Limits4 {
 	public static final MMMessageAssociationEnd mmCurrentLimit = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
-			componentContext_lazy = () -> Limits4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Limits4.mmObject();
 			isDerived = false;
 			xmlTag = "CurLmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +131,11 @@ public class Limits4 {
 			type_lazy = () -> com.tools20022.repository.msg.LimitReport4.mmObject();
 		}
 	};
+	@XmlElement(name = "DfltLmt")
 	protected List<com.tools20022.repository.msg.LimitReport4> defaultLimit;
 	/**
-	 * Report is given for a default risk management type limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -170,7 +174,7 @@ public class Limits4 {
 	public static final MMMessageAssociationEnd mmDefaultLimit = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
-			componentContext_lazy = () -> Limits4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Limits4.mmObject();
 			isDerived = false;
 			xmlTag = "DfltLmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,9 +190,9 @@ public class Limits4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Limits4.mmCurrentLimit, Limits4.mmDefaultLimit);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Limits4.mmCurrentLimit, com.tools20022.repository.msg.Limits4.mmDefaultLimit);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Limits4";
 				definition = "Reports on limits.";
@@ -198,21 +202,21 @@ public class Limits4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CurLmt")
 	public List<LimitReport4> getCurrentLimit() {
-		return currentLimit;
+		return currentLimit == null ? currentLimit = new ArrayList<>() : currentLimit;
 	}
 
-	public void setCurrentLimit(List<com.tools20022.repository.msg.LimitReport4> currentLimit) {
-		this.currentLimit = currentLimit;
+	public Limits4 setCurrentLimit(List<com.tools20022.repository.msg.LimitReport4> currentLimit) {
+		this.currentLimit = Objects.requireNonNull(currentLimit);
+		return this;
 	}
 
-	@XmlElement(name = "DfltLmt")
 	public List<LimitReport4> getDefaultLimit() {
-		return defaultLimit;
+		return defaultLimit == null ? defaultLimit = new ArrayList<>() : defaultLimit;
 	}
 
-	public void setDefaultLimit(List<com.tools20022.repository.msg.LimitReport4> defaultLimit) {
-		this.defaultLimit = defaultLimit;
+	public Limits4 setDefaultLimit(List<com.tools20022.repository.msg.LimitReport4> defaultLimit) {
+		this.defaultLimit = Objects.requireNonNull(defaultLimit);
+		return this;
 	}
 }

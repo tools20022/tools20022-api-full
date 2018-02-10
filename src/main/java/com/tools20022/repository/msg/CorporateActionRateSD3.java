@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionRateSD3", propOrder = {"placeAndName", "declaredSecurityRate"})
 public class CorporateActionRateSD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +104,7 @@ public class CorporateActionRateSD3 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionRateSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD3.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,11 +115,11 @@ public class CorporateActionRateSD3 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DclrdSctyRate")
 	protected RatioFormat13Choice declaredSecurityRate;
 	/**
-	 * Corresponding rate of the security being disbursed as a result of the
-	 * corporate action as declared by the issuer or offeror on the market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,6 +135,9 @@ public class CorporateActionRateSD3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DclrdSctyRate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: New Quantity, DTCCSynonym: Old Quantity</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -145,9 +152,10 @@ public class CorporateActionRateSD3 {
 	 */
 	public static final MMMessageAttribute mmDeclaredSecurityRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionRateSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD3.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdSctyRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "New Quantity"), new DTCCSynonym(this, "Old Quantity"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredSecurityRate";
 			definition = "Corresponding rate of the security being disbursed as a result of the corporate action as declared by the issuer or offeror on the market.";
@@ -160,8 +168,8 @@ public class CorporateActionRateSD3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionRateSD3.mmPlaceAndName, CorporateActionRateSD3.mmDeclaredSecurityRate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRateSD3.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionRateSD3.mmDeclaredSecurityRate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionRateSD3";
 				definition = "Provides additional information regarding corporate action option securities movement rate details.";
@@ -170,21 +178,21 @@ public class CorporateActionRateSD3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionRateSD3 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "DclrdSctyRate")
-	public RatioFormat13Choice getDeclaredSecurityRate() {
-		return declaredSecurityRate;
+	public Optional<RatioFormat13Choice> getDeclaredSecurityRate() {
+		return declaredSecurityRate == null ? Optional.empty() : Optional.of(declaredSecurityRate);
 	}
 
-	public void setDeclaredSecurityRate(RatioFormat13Choice declaredSecurityRate) {
+	public CorporateActionRateSD3 setDeclaredSecurityRate(RatioFormat13Choice declaredSecurityRate) {
 		this.declaredSecurityRate = declaredSecurityRate;
+		return this;
 	}
 }

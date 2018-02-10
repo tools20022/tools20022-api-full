@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.TransportBySea;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information related for the transportation of goods by sea."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransportBySea2", propOrder = {"portOfLoading", "portOfDischarge", "vesselName"})
 public class TransportBySea2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PortOfLoadng", required = true)
 	protected Max35Text portOfLoading;
 	/**
-	 * Identifies the port where the goods are loaded on board the ship.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +113,7 @@ public class TransportBySea2 {
 	public static final MMMessageAttribute mmPortOfLoading = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
-			componentContext_lazy = () -> TransportBySea2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea2.mmObject();
 			isDerived = false;
 			xmlTag = "PortOfLoadng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +124,11 @@ public class TransportBySea2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PortOfDschrge", required = true)
 	protected Max35Text portOfDischarge;
 	/**
-	 * Identifies the port where the goods are discharged.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +161,7 @@ public class TransportBySea2 {
 	public static final MMMessageAttribute mmPortOfDischarge = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
-			componentContext_lazy = () -> TransportBySea2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea2.mmObject();
 			isDerived = false;
 			xmlTag = "PortOfDschrge";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,10 +172,11 @@ public class TransportBySea2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "VsslNm")
 	protected Max35Text vesselName;
 	/**
-	 * Name of a vessel.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,7 +209,7 @@ public class TransportBySea2 {
 	public static final MMMessageAttribute mmVesselName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TransportBySea.mmVesselName;
-			componentContext_lazy = () -> TransportBySea2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea2.mmObject();
 			isDerived = false;
 			xmlTag = "VsslNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,9 +224,10 @@ public class TransportBySea2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransportBySea2.mmPortOfLoading, TransportBySea2.mmPortOfDischarge, TransportBySea2.mmVesselName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportBySea2.mmPortOfLoading, com.tools20022.repository.msg.TransportBySea2.mmPortOfDischarge,
+						com.tools20022.repository.msg.TransportBySea2.mmVesselName);
 				trace_lazy = () -> TransportBySea.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransportBySea2";
 				definition = "Information related for the transportation of goods by sea.";
@@ -230,30 +236,30 @@ public class TransportBySea2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PortOfLoadng", required = true)
 	public Max35Text getPortOfLoading() {
 		return portOfLoading;
 	}
 
-	public void setPortOfLoading(Max35Text portOfLoading) {
-		this.portOfLoading = portOfLoading;
+	public TransportBySea2 setPortOfLoading(Max35Text portOfLoading) {
+		this.portOfLoading = Objects.requireNonNull(portOfLoading);
+		return this;
 	}
 
-	@XmlElement(name = "PortOfDschrge", required = true)
 	public Max35Text getPortOfDischarge() {
 		return portOfDischarge;
 	}
 
-	public void setPortOfDischarge(Max35Text portOfDischarge) {
-		this.portOfDischarge = portOfDischarge;
+	public TransportBySea2 setPortOfDischarge(Max35Text portOfDischarge) {
+		this.portOfDischarge = Objects.requireNonNull(portOfDischarge);
+		return this;
 	}
 
-	@XmlElement(name = "VsslNm")
-	public Max35Text getVesselName() {
-		return vesselName;
+	public Optional<Max35Text> getVesselName() {
+		return vesselName == null ? Optional.empty() : Optional.of(vesselName);
 	}
 
-	public void setVesselName(Max35Text vesselName) {
+	public TransportBySea2 setVesselName(Max35Text vesselName) {
 		this.vesselName = vesselName;
+		return this;
 	}
 }

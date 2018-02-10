@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -29,11 +30,9 @@ import com.tools20022.repository.entity.RegistrarRole;
 import com.tools20022.repository.entity.SecuritiesCertificate;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -151,8 +150,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forRegistrationParameters1
+ * ConstraintCoexistenceIdentificationRule.forRegistrationParameters1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -171,15 +178,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RegistrationParameters1", propOrder = {"certificationIdentification", "certificationDateTime", "registrarAccount", "certificateNumber"})
 public class RegistrationParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CertfctnId")
 	protected Max35Text certificationIdentification;
 	/**
-	 * Identification assigned to a deposit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,6 +206,9 @@ public class RegistrationParameters1 {
 	 * RegistrationParameters1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CertfctnId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::CERT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -220,9 +231,10 @@ public class RegistrationParameters1 {
 	public static final MMMessageAttribute mmCertificationIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> BasicSecuritiesRegistration.mmCertificationIdentification;
-			componentContext_lazy = () -> RegistrationParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RegistrationParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "CertfctnId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::CERT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationIdentification";
 			definition = "Identification assigned to a deposit.";
@@ -232,11 +244,11 @@ public class RegistrationParameters1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CertfctnDtTm")
 	protected DateAndDateTimeChoice certificationDateTime;
 	/**
-	 * Date/time at which the certificates in the deposit were validated by the
-	 * agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -256,6 +268,9 @@ public class RegistrationParameters1 {
 	 * RegistrationParameters1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CertfctnDtTm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::CERT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -280,9 +295,10 @@ public class RegistrationParameters1 {
 	public static final MMMessageAttribute mmCertificationDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> BasicSecuritiesRegistration.mmCertificationDate;
-			componentContext_lazy = () -> RegistrationParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RegistrationParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "CertfctnDtTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::CERT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationDateTime";
 			definition = "Date/time at which the certificates in the deposit were validated by the agent.";
@@ -292,10 +308,11 @@ public class RegistrationParameters1 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "RegarAcct")
 	protected Max35Text registrarAccount;
 	/**
-	 * Account at the registrar where financial instruments are registered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -314,6 +331,9 @@ public class RegistrationParameters1 {
 	 * RegistrationParameters1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RegarAcct"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :97a::REGI</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -337,9 +357,10 @@ public class RegistrationParameters1 {
 	public static final MMMessageAttribute mmRegistrarAccount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RegistrarRole.mmRegistrarAccount;
-			componentContext_lazy = () -> RegistrationParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RegistrationParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "RegarAcct";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":97a::REGI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrarAccount";
 			definition = "Account at the registrar where financial instruments are registered.";
@@ -349,11 +370,11 @@ public class RegistrationParameters1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CertNb")
 	protected List<com.tools20022.repository.msg.SecuritiesCertificate1> certificateNumber;
 	/**
-	 * Unique and unambiguous identifier of a certificate assigned by the
-	 * issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -371,6 +392,9 @@ public class RegistrationParameters1 {
 	 * RegistrationParameters1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CertNb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13B::CERT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -395,9 +419,10 @@ public class RegistrationParameters1 {
 	public static final MMMessageAssociationEnd mmCertificateNumber = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesCertificate.mmNumber;
-			componentContext_lazy = () -> RegistrationParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RegistrationParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "CertNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13B::CERT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateNumber";
 			definition = "Unique and unambiguous identifier of a certificate assigned by the issuer.";
@@ -411,8 +436,8 @@ public class RegistrationParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RegistrationParameters1.mmCertificationIdentification, RegistrationParameters1.mmCertificationDateTime, RegistrationParameters1.mmRegistrarAccount,
-						RegistrationParameters1.mmCertificateNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationParameters1.mmCertificationIdentification, com.tools20022.repository.msg.RegistrationParameters1.mmCertificationDateTime,
+						com.tools20022.repository.msg.RegistrationParameters1.mmRegistrarAccount, com.tools20022.repository.msg.RegistrationParameters1.mmCertificateNumber);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionConfirmationV01.mmAdditionalPhysicalOrRegistrationDetails,
 						SecuritiesSettlementTransactionConfirmationV02.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionConfirmationV03.mmAdditionalPhysicalOrRegistrationDetails,
 						SecuritiesSettlementTransactionConfirmationV04.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionGenerationNotificationV01.mmAdditionalPhysicalOrRegistrationDetails,
@@ -424,7 +449,8 @@ public class RegistrationParameters1 {
 						SecuritiesSettlementTransactionGenerationNotificationV05.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionReversalAdviceV04.mmAdditionalPhysicalOrRegistrationDetails,
 						SecuritiesSettlementTransactionInstructionV05.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionConfirmationV05.mmAdditionalPhysicalOrRegistrationDetails);
 				trace_lazy = () -> BasicSecuritiesRegistration.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forRegistrationParameters1);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -441,39 +467,39 @@ public class RegistrationParameters1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CertfctnId")
-	public Max35Text getCertificationIdentification() {
-		return certificationIdentification;
+	public Optional<Max35Text> getCertificationIdentification() {
+		return certificationIdentification == null ? Optional.empty() : Optional.of(certificationIdentification);
 	}
 
-	public void setCertificationIdentification(Max35Text certificationIdentification) {
+	public RegistrationParameters1 setCertificationIdentification(Max35Text certificationIdentification) {
 		this.certificationIdentification = certificationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CertfctnDtTm")
-	public DateAndDateTimeChoice getCertificationDateTime() {
-		return certificationDateTime;
+	public Optional<DateAndDateTimeChoice> getCertificationDateTime() {
+		return certificationDateTime == null ? Optional.empty() : Optional.of(certificationDateTime);
 	}
 
-	public void setCertificationDateTime(DateAndDateTimeChoice certificationDateTime) {
+	public RegistrationParameters1 setCertificationDateTime(DateAndDateTimeChoice certificationDateTime) {
 		this.certificationDateTime = certificationDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "RegarAcct")
-	public Max35Text getRegistrarAccount() {
-		return registrarAccount;
+	public Optional<Max35Text> getRegistrarAccount() {
+		return registrarAccount == null ? Optional.empty() : Optional.of(registrarAccount);
 	}
 
-	public void setRegistrarAccount(Max35Text registrarAccount) {
+	public RegistrationParameters1 setRegistrarAccount(Max35Text registrarAccount) {
 		this.registrarAccount = registrarAccount;
+		return this;
 	}
 
-	@XmlElement(name = "CertNb")
 	public List<SecuritiesCertificate1> getCertificateNumber() {
-		return certificateNumber;
+		return certificateNumber == null ? certificateNumber = new ArrayList<>() : certificateNumber;
 	}
 
-	public void setCertificateNumber(List<com.tools20022.repository.msg.SecuritiesCertificate1> certificateNumber) {
-		this.certificateNumber = certificateNumber;
+	public RegistrationParameters1 setCertificateNumber(List<com.tools20022.repository.msg.SecuritiesCertificate1> certificateNumber) {
+		this.certificateNumber = Objects.requireNonNull(certificateNumber);
+		return this;
 	}
 }

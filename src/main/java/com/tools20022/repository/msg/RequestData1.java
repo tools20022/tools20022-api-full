@@ -29,6 +29,8 @@ import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +75,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,15 +89,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RequestData1", propOrder = {"messageIdentification", "requestType", "requestedActivationDate", "requestServicer", "netServiceParticipantIdentification", "netServiceType"})
 public class RequestData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected Max35Text messageIdentification;
 	/**
-	 * Unique identification of the message
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +124,7 @@ public class RequestData1 {
 	 */
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequestData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestData1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +135,11 @@ public class RequestData1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqTp", required = true)
 	protected Max4Text requestType;
 	/**
-	 * Description of the type of request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +165,7 @@ public class RequestData1 {
 	 */
 	public static final MMMessageAttribute mmRequestType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequestData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestData1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,11 +176,11 @@ public class RequestData1 {
 			simpleType_lazy = () -> Max4Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdActvtnDt", required = true)
 	protected ISODate requestedActivationDate;
 	/**
-	 * Specifies the business date on which the new netting cut off(s) is (are)
-	 * to be activated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,7 +208,7 @@ public class RequestData1 {
 	 */
 	public static final MMMessageAttribute mmRequestedActivationDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequestData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestData1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdActvtnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,10 +219,11 @@ public class RequestData1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqSvcr")
 	protected PartyIdentification73Choice requestServicer;
 	/**
-	 * Describes the central system servicing the request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -244,7 +249,7 @@ public class RequestData1 {
 	 */
 	public static final MMMessageAssociationEnd mmRequestServicer = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestData1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,10 +261,11 @@ public class RequestData1 {
 			type_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NetSvcPtcptId", required = true)
 	protected PartyIdentification73Choice netServiceParticipantIdentification;
 	/**
-	 * Describes the participant issuing the request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -285,7 +291,7 @@ public class RequestData1 {
 	 */
 	public static final MMMessageAssociationEnd mmNetServiceParticipantIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestData1.mmObject();
 			isDerived = false;
 			xmlTag = "NetSvcPtcptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -297,10 +303,11 @@ public class RequestData1 {
 			type_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NetSvcTp")
 	protected Max35Text netServiceType;
 	/**
-	 * Describes the type of netting service supporting the net report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -327,7 +334,7 @@ public class RequestData1 {
 	 */
 	public static final MMMessageAttribute mmNetServiceType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequestData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestData1.mmObject();
 			isDerived = false;
 			xmlTag = "NetSvcTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -342,10 +349,11 @@ public class RequestData1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RequestData1.mmMessageIdentification, RequestData1.mmRequestType, RequestData1.mmRequestedActivationDate, RequestData1.mmRequestServicer,
-						RequestData1.mmNetServiceParticipantIdentification, RequestData1.mmNetServiceType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestData1.mmMessageIdentification, com.tools20022.repository.msg.RequestData1.mmRequestType,
+						com.tools20022.repository.msg.RequestData1.mmRequestedActivationDate, com.tools20022.repository.msg.RequestData1.mmRequestServicer, com.tools20022.repository.msg.RequestData1.mmNetServiceParticipantIdentification,
+						com.tools20022.repository.msg.RequestData1.mmNetServiceType);
 				messageBuildingBlock_lazy = () -> Arrays.asList(NettingCutOffReferenceDataUpdateRequestV01.mmRequestData);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestData1";
 				definition = "Contains the meta data for a netting cut off update request: message identification, request servicer and a request type.";
@@ -354,57 +362,57 @@ public class RequestData1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(Max35Text messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public RequestData1 setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ReqTp", required = true)
 	public Max4Text getRequestType() {
 		return requestType;
 	}
 
-	public void setRequestType(Max4Text requestType) {
-		this.requestType = requestType;
+	public RequestData1 setRequestType(Max4Text requestType) {
+		this.requestType = Objects.requireNonNull(requestType);
+		return this;
 	}
 
-	@XmlElement(name = "ReqdActvtnDt", required = true)
 	public ISODate getRequestedActivationDate() {
 		return requestedActivationDate;
 	}
 
-	public void setRequestedActivationDate(ISODate requestedActivationDate) {
-		this.requestedActivationDate = requestedActivationDate;
+	public RequestData1 setRequestedActivationDate(ISODate requestedActivationDate) {
+		this.requestedActivationDate = Objects.requireNonNull(requestedActivationDate);
+		return this;
 	}
 
-	@XmlElement(name = "ReqSvcr")
-	public PartyIdentification73Choice getRequestServicer() {
-		return requestServicer;
+	public Optional<PartyIdentification73Choice> getRequestServicer() {
+		return requestServicer == null ? Optional.empty() : Optional.of(requestServicer);
 	}
 
-	public void setRequestServicer(PartyIdentification73Choice requestServicer) {
+	public RequestData1 setRequestServicer(PartyIdentification73Choice requestServicer) {
 		this.requestServicer = requestServicer;
+		return this;
 	}
 
-	@XmlElement(name = "NetSvcPtcptId", required = true)
 	public PartyIdentification73Choice getNetServiceParticipantIdentification() {
 		return netServiceParticipantIdentification;
 	}
 
-	public void setNetServiceParticipantIdentification(PartyIdentification73Choice netServiceParticipantIdentification) {
-		this.netServiceParticipantIdentification = netServiceParticipantIdentification;
+	public RequestData1 setNetServiceParticipantIdentification(PartyIdentification73Choice netServiceParticipantIdentification) {
+		this.netServiceParticipantIdentification = Objects.requireNonNull(netServiceParticipantIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "NetSvcTp")
-	public Max35Text getNetServiceType() {
-		return netServiceType;
+	public Optional<Max35Text> getNetServiceType() {
+		return netServiceType == null ? Optional.empty() : Optional.of(netServiceType);
 	}
 
-	public void setNetServiceType(Max35Text netServiceType) {
+	public RequestData1 setNetServiceType(Max35Text netServiceType) {
 		this.netServiceType = netServiceType;
+		return this;
 	}
 }

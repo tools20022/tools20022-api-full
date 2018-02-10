@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,16 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PaymentOrigin1Choice", propOrder = {"FINMessageType", "XMLMessageName", "proprietary", "instrument"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PaymentOrigin1Choice", propOrder = {"fINMessageType", "xMLMessageName", "proprietary", "instrument"})
 public class PaymentOrigin1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FINMT", required = true)
 	protected Max3NumericText fINMessageType;
 	/**
-	 * Specifies that the payment was included in a SWIFT FIN format message eg,
-	 * MT 103.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +115,7 @@ public class PaymentOrigin1Choice {
 	 */
 	public static final MMMessageAttribute mmFINMessageType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentOrigin1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentOrigin1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FINMT";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +126,11 @@ public class PaymentOrigin1Choice {
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "XMLMsgNm", required = true)
 	protected Max35Text xMLMessageName;
 	/**
-	 * Specifies that the payment was included in a SWIFT XML message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +158,7 @@ public class PaymentOrigin1Choice {
 	 */
 	public static final MMMessageAttribute mmXMLMessageName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentOrigin1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentOrigin1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "XMLMsgNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,10 +169,11 @@ public class PaymentOrigin1Choice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected Max35Text proprietary;
 	/**
-	 * Specifies that the payment was included in a proprietary format message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,7 +202,7 @@ public class PaymentOrigin1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentOrigin1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentOrigin1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,11 +213,11 @@ public class PaymentOrigin1Choice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Instrm", required = true)
 	protected PaymentInstrument1Code instrument;
 	/**
-	 * Specifies the type of payment when not included in a SWIFT or proprietary
-	 * format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -250,7 +253,7 @@ public class PaymentOrigin1Choice {
 	public static final MMMessageAttribute mmInstrument = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentInstrument;
-			componentContext_lazy = () -> PaymentOrigin1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentOrigin1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Instrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -265,9 +268,10 @@ public class PaymentOrigin1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentOrigin1Choice.mmFINMessageType, PaymentOrigin1Choice.mmXMLMessageName, PaymentOrigin1Choice.mmProprietary, PaymentOrigin1Choice.mmInstrument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentOrigin1Choice.mmFINMessageType, com.tools20022.repository.choice.PaymentOrigin1Choice.mmXMLMessageName,
+						com.tools20022.repository.choice.PaymentOrigin1Choice.mmProprietary, com.tools20022.repository.choice.PaymentOrigin1Choice.mmInstrument);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentOrigin1Choice";
 				definition = "Specifies the format under which the payment that generated the entry was transmitted.";
@@ -276,39 +280,39 @@ public class PaymentOrigin1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FINMT", required = true)
 	public Max3NumericText getFINMessageType() {
 		return fINMessageType;
 	}
 
-	public void setFINMessageType(Max3NumericText fINMessageType) {
-		this.fINMessageType = fINMessageType;
+	public PaymentOrigin1Choice setFINMessageType(Max3NumericText fINMessageType) {
+		this.fINMessageType = Objects.requireNonNull(fINMessageType);
+		return this;
 	}
 
-	@XmlElement(name = "XMLMsgNm", required = true)
 	public Max35Text getXMLMessageName() {
 		return xMLMessageName;
 	}
 
-	public void setXMLMessageName(Max35Text xMLMessageName) {
-		this.xMLMessageName = xMLMessageName;
+	public PaymentOrigin1Choice setXMLMessageName(Max35Text xMLMessageName) {
+		this.xMLMessageName = Objects.requireNonNull(xMLMessageName);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public Max35Text getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(Max35Text proprietary) {
-		this.proprietary = proprietary;
+	public PaymentOrigin1Choice setProprietary(Max35Text proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 
-	@XmlElement(name = "Instrm", required = true)
 	public PaymentInstrument1Code getInstrument() {
 		return instrument;
 	}
 
-	public void setInstrument(PaymentInstrument1Code instrument) {
-		this.instrument = instrument;
+	public PaymentOrigin1Choice setInstrument(PaymentInstrument1Code instrument) {
+		this.instrument = Objects.requireNonNull(instrument);
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +28,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule#forStatusOrQuantityToReceive1Choice
+ * ConstraintCoexistenceQuantityRule.forStatusOrQuantityToReceive1Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -68,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatusOrQuantityToReceive1Choice", propOrder = {"statusQuantity", "quantityToReceive"})
 public class StatusOrQuantityToReceive1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StsQty", required = true)
 	protected Quantity6Choice statusQuantity;
 	/**
-	 * Quantity of securities that has been assigned the status indicated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +122,7 @@ public class StatusOrQuantityToReceive1Choice {
 	public static final MMMessageAttribute mmStatusQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmStatusQuantity;
-			componentContext_lazy = () -> StatusOrQuantityToReceive1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.StatusOrQuantityToReceive1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StsQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,11 +133,11 @@ public class StatusOrQuantityToReceive1Choice {
 			complexType_lazy = () -> com.tools20022.repository.choice.Quantity6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "QtyToRcv", required = true)
 	protected Quantity6Choice quantityToReceive;
 	/**
-	 * Quantity of the benefits that the account owner wants to receive, for
-	 * example, as a result of dividend reinvestment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,6 +158,9 @@ public class StatusOrQuantityToReceive1Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtyToRcv"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::STAQ or QREC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -162,9 +176,10 @@ public class StatusOrQuantityToReceive1Choice {
 	public static final MMMessageAttribute mmQuantityToReceive = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmQuantityToReceive;
-			componentContext_lazy = () -> StatusOrQuantityToReceive1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.StatusOrQuantityToReceive1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyToRcv";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::STAQ or QREC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToReceive";
 			definition = "Quantity of the benefits that the account owner wants to receive, for example, as a result of dividend reinvestment.";
@@ -177,8 +192,9 @@ public class StatusOrQuantityToReceive1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatusOrQuantityToReceive1Choice.mmStatusQuantity, StatusOrQuantityToReceive1Choice.mmQuantityToReceive);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatusOrQuantityToReceive1Choice.mmStatusQuantity, com.tools20022.repository.choice.StatusOrQuantityToReceive1Choice.mmQuantityToReceive);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule.forStatusOrQuantityToReceive1Choice);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -194,21 +210,21 @@ public class StatusOrQuantityToReceive1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StsQty", required = true)
 	public Quantity6Choice getStatusQuantity() {
 		return statusQuantity;
 	}
 
-	public void setStatusQuantity(com.tools20022.repository.choice.Quantity6Choice statusQuantity) {
-		this.statusQuantity = statusQuantity;
+	public StatusOrQuantityToReceive1Choice setStatusQuantity(com.tools20022.repository.choice.Quantity6Choice statusQuantity) {
+		this.statusQuantity = Objects.requireNonNull(statusQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "QtyToRcv", required = true)
 	public Quantity6Choice getQuantityToReceive() {
 		return quantityToReceive;
 	}
 
-	public void setQuantityToReceive(com.tools20022.repository.choice.Quantity6Choice quantityToReceive) {
-		this.quantityToReceive = quantityToReceive;
+	public StatusOrQuantityToReceive1Choice setQuantityToReceive(com.tools20022.repository.choice.Quantity6Choice quantityToReceive) {
+		this.quantityToReceive = Objects.requireNonNull(quantityToReceive);
+		return this;
 	}
 }

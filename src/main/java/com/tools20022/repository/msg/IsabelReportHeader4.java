@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IsabelReportHeader4", propOrder = {"actualSenderIdentification", "payloadCreationDate", "fileFormat", "sendTimeStamp", "transportIdentification", "originalRequestIdentification", "emptyPayload", "bankReference"})
 public class IsabelReportHeader4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ActlSndrId", required = true)
 	protected Max13AlphaNumericText actualSenderIdentification;
 	/**
-	 * Unique identification of the actual sender of the file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +122,7 @@ public class IsabelReportHeader4 {
 	 */
 	public static final MMMessageAttribute mmActualSenderIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelReportHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "ActlSndrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +133,11 @@ public class IsabelReportHeader4 {
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "PyldCreDt", required = true)
 	protected DateAndDateTimeChoice payloadCreationDate;
 	/**
-	 * Date and time at which the file in the payload was actually created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -162,7 +165,7 @@ public class IsabelReportHeader4 {
 	 */
 	public static final MMMessageAssociationEnd mmPayloadCreationDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelReportHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "PyldCreDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +177,11 @@ public class IsabelReportHeader4 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "FileFrmt", required = true)
 	protected Max16Text fileFormat;
 	/**
-	 * Format of the file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,7 +208,7 @@ public class IsabelReportHeader4 {
 	 */
 	public static final MMMessageAttribute mmFileFormat = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelReportHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "FileFrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,10 +219,11 @@ public class IsabelReportHeader4 {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SndTmStmp", required = true)
 	protected ISODateTime sendTimeStamp;
 	/**
-	 * Time stamp on when the file is sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,7 +250,7 @@ public class IsabelReportHeader4 {
 	 */
 	public static final MMMessageAttribute mmSendTimeStamp = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelReportHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "SndTmStmp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,10 +261,11 @@ public class IsabelReportHeader4 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "TrnsprtId", required = true)
 	protected Max14AlphaNumericText transportIdentification;
 	/**
-	 * Unique identification of the transport.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -287,7 +293,7 @@ public class IsabelReportHeader4 {
 	 */
 	public static final MMMessageAttribute mmTransportIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelReportHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -298,10 +304,11 @@ public class IsabelReportHeader4 {
 			simpleType_lazy = () -> Max14AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlReqId", required = true)
 	protected Max38AlphaNumericText originalRequestIdentification;
 	/**
-	 * Unique identification of the actual sender of the file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -329,7 +336,7 @@ public class IsabelReportHeader4 {
 	 */
 	public static final MMMessageAttribute mmOriginalRequestIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelReportHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -340,10 +347,11 @@ public class IsabelReportHeader4 {
 			simpleType_lazy = () -> Max38AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "MptyPyld", required = true)
 	protected TrueFalseIndicator emptyPayload;
 	/**
-	 * Specifies whether the payload is empty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -371,7 +379,7 @@ public class IsabelReportHeader4 {
 	 */
 	public static final MMMessageAttribute mmEmptyPayload = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelReportHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "MptyPyld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -382,10 +390,11 @@ public class IsabelReportHeader4 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "BkRef", required = true)
 	protected Max64Text bankReference;
 	/**
-	 * Unique reference as assigned by the bank to the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -412,7 +421,7 @@ public class IsabelReportHeader4 {
 	 */
 	public static final MMMessageAttribute mmBankReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelReportHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "BkRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -427,9 +436,10 @@ public class IsabelReportHeader4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IsabelReportHeader4.mmActualSenderIdentification, IsabelReportHeader4.mmPayloadCreationDate, IsabelReportHeader4.mmFileFormat, IsabelReportHeader4.mmSendTimeStamp,
-						IsabelReportHeader4.mmTransportIdentification, IsabelReportHeader4.mmOriginalRequestIdentification, IsabelReportHeader4.mmEmptyPayload, IsabelReportHeader4.mmBankReference);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelReportHeader4.mmActualSenderIdentification, com.tools20022.repository.msg.IsabelReportHeader4.mmPayloadCreationDate,
+						com.tools20022.repository.msg.IsabelReportHeader4.mmFileFormat, com.tools20022.repository.msg.IsabelReportHeader4.mmSendTimeStamp, com.tools20022.repository.msg.IsabelReportHeader4.mmTransportIdentification,
+						com.tools20022.repository.msg.IsabelReportHeader4.mmOriginalRequestIdentification, com.tools20022.repository.msg.IsabelReportHeader4.mmEmptyPayload, com.tools20022.repository.msg.IsabelReportHeader4.mmBankReference);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelReportHeader4";
 				definition = "Specifies the header information for a query response file, as part of the RequestForResponse flow.";
@@ -438,75 +448,75 @@ public class IsabelReportHeader4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ActlSndrId", required = true)
 	public Max13AlphaNumericText getActualSenderIdentification() {
 		return actualSenderIdentification;
 	}
 
-	public void setActualSenderIdentification(Max13AlphaNumericText actualSenderIdentification) {
-		this.actualSenderIdentification = actualSenderIdentification;
+	public IsabelReportHeader4 setActualSenderIdentification(Max13AlphaNumericText actualSenderIdentification) {
+		this.actualSenderIdentification = Objects.requireNonNull(actualSenderIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PyldCreDt", required = true)
 	public DateAndDateTimeChoice getPayloadCreationDate() {
 		return payloadCreationDate;
 	}
 
-	public void setPayloadCreationDate(DateAndDateTimeChoice payloadCreationDate) {
-		this.payloadCreationDate = payloadCreationDate;
+	public IsabelReportHeader4 setPayloadCreationDate(DateAndDateTimeChoice payloadCreationDate) {
+		this.payloadCreationDate = Objects.requireNonNull(payloadCreationDate);
+		return this;
 	}
 
-	@XmlElement(name = "FileFrmt", required = true)
 	public Max16Text getFileFormat() {
 		return fileFormat;
 	}
 
-	public void setFileFormat(Max16Text fileFormat) {
-		this.fileFormat = fileFormat;
+	public IsabelReportHeader4 setFileFormat(Max16Text fileFormat) {
+		this.fileFormat = Objects.requireNonNull(fileFormat);
+		return this;
 	}
 
-	@XmlElement(name = "SndTmStmp", required = true)
 	public ISODateTime getSendTimeStamp() {
 		return sendTimeStamp;
 	}
 
-	public void setSendTimeStamp(ISODateTime sendTimeStamp) {
-		this.sendTimeStamp = sendTimeStamp;
+	public IsabelReportHeader4 setSendTimeStamp(ISODateTime sendTimeStamp) {
+		this.sendTimeStamp = Objects.requireNonNull(sendTimeStamp);
+		return this;
 	}
 
-	@XmlElement(name = "TrnsprtId", required = true)
 	public Max14AlphaNumericText getTransportIdentification() {
 		return transportIdentification;
 	}
 
-	public void setTransportIdentification(Max14AlphaNumericText transportIdentification) {
-		this.transportIdentification = transportIdentification;
+	public IsabelReportHeader4 setTransportIdentification(Max14AlphaNumericText transportIdentification) {
+		this.transportIdentification = Objects.requireNonNull(transportIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlReqId", required = true)
 	public Max38AlphaNumericText getOriginalRequestIdentification() {
 		return originalRequestIdentification;
 	}
 
-	public void setOriginalRequestIdentification(Max38AlphaNumericText originalRequestIdentification) {
-		this.originalRequestIdentification = originalRequestIdentification;
+	public IsabelReportHeader4 setOriginalRequestIdentification(Max38AlphaNumericText originalRequestIdentification) {
+		this.originalRequestIdentification = Objects.requireNonNull(originalRequestIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "MptyPyld", required = true)
 	public TrueFalseIndicator getEmptyPayload() {
 		return emptyPayload;
 	}
 
-	public void setEmptyPayload(TrueFalseIndicator emptyPayload) {
-		this.emptyPayload = emptyPayload;
+	public IsabelReportHeader4 setEmptyPayload(TrueFalseIndicator emptyPayload) {
+		this.emptyPayload = Objects.requireNonNull(emptyPayload);
+		return this;
 	}
 
-	@XmlElement(name = "BkRef", required = true)
 	public Max64Text getBankReference() {
 		return bankReference;
 	}
 
-	public void setBankReference(Max64Text bankReference) {
-		this.bankReference = bankReference;
+	public IsabelReportHeader4 setBankReference(Max64Text bankReference) {
+		this.bankReference = Objects.requireNonNull(bankReference);
+		return this;
 	}
 }

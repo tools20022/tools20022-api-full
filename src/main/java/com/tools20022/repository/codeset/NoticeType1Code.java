@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.NoticeTypeCode;
+import com.tools20022.repository.codeset.NoticeType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies DTCC (The Depository Trust and Clearing Corporation) defined notice
@@ -31,23 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.NoticeTypeCode NoticeTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NoticeType1Code#mmUniversal
- * NoticeType1Code.mmUniversal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NoticeType1Code#mmCedeAndCo
- * NoticeType1Code.mmCedeAndCo}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NoticeType1Code#Universal
+ * NoticeType1Code.Universal}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NoticeType1Code#CedeAndCo
+ * NoticeType1Code.CedeAndCo}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.NoticeTypeCode NoticeTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -66,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class NoticeType1Code extends NoticeTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class NoticeType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,11 +88,12 @@ public class NoticeType1Code extends NoticeTypeCode {
 	 * name} = "Universal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUniversal = new MMCode() {
+	public static final NoticeType1Code Universal = new NoticeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Universal";
-			owner_lazy = () -> NoticeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NoticeType1Code.mmObject();
+			codeName = NoticeTypeCode.Universal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -108,26 +112,57 @@ public class NoticeType1Code extends NoticeTypeCode {
 	 * name} = "CedeAndCo"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCedeAndCo = new MMCode() {
+	public static final NoticeType1Code CedeAndCo = new NoticeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CedeAndCo";
-			owner_lazy = () -> NoticeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NoticeType1Code.mmObject();
+			codeName = NoticeTypeCode.CedeAndCo.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, NoticeType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected NoticeType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("UNVL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NoticeType1Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined notice type.";
-				code_lazy = () -> Arrays.asList(NoticeType1Code.mmUniversal, NoticeType1Code.mmCedeAndCo);
 				trace_lazy = () -> NoticeTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NoticeType1Code.Universal, com.tools20022.repository.codeset.NoticeType1Code.CedeAndCo);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Universal.getCodeName().get(), Universal);
+		codesByName.put(CedeAndCo.getCodeName().get(), CedeAndCo);
+	}
+
+	public static NoticeType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static NoticeType1Code[] values() {
+		NoticeType1Code[] values = new NoticeType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, NoticeType1Code> {
+		@Override
+		public NoticeType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(NoticeType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -19,8 +19,12 @@ package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMText;
+import com.tools20022.repository.datatype.RestrictedFINZMax256Text.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies a character string with a maximum length of 256 characters limited
@@ -35,8 +39,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -49,14 +53,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
 public class RestrictedFINZMax256Text {
 
 	final static private AtomicReference<MMText> mmObject_lazy = new AtomicReference<>();
+	protected String value;
 
 	final static public MMText mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMText() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RestrictedFINZMax256Text";
 				definition = "Specifies a character string with a maximum length of 256 characters limited to character set Z that is, a-z A-Z / - ? : ( ) . , ‘ += ! “ % & * < > ; @ #  .";
@@ -66,5 +72,26 @@ public class RestrictedFINZMax256Text {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public RestrictedFINZMax256Text(String value) {
+		this.value = value;
+	}
+
+	@Override
+	public String toString() {
+		return value;
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RestrictedFINZMax256Text> {
+		@Override
+		public RestrictedFINZMax256Text unmarshal(String value) {
+			return new RestrictedFINZMax256Text(value);
+		}
+
+		@Override
+		public String marshal(RestrictedFINZMax256Text typedData) {
+			return typedData.value;
+		}
 	}
 }

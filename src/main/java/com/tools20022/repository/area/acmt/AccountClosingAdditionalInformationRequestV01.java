@@ -26,9 +26,8 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.BankAccountManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -43,23 +42,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AccountManagementPreviousVersion
- * AccountManagementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.BankAccountManagementISOPreviousversion
- * BankAccountManagementISOPreviousversion}</li>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AcctClsgAddtlInfReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -89,6 +71,23 @@ import javax.xml.bind.annotation.*;
  * AccountClosingAdditionalInformationRequestV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.BankAccountManagementISOPreviousversion
+ * BankAccountManagementISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AcctClsgAddtlInfReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AccountManagementPreviousVersion
+ * AccountManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code acmt.021.001.01}</li>
@@ -112,17 +111,17 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountClosingAdditionalInformationRequestV01", propOrder = {"references", "organisationIdentification", "accountIdentification", "accountServicerIdentification", "balanceTransferAccount",
 		"transferAccountServicerIdentification", "digitalSignature"})
 public class AccountClosingAdditionalInformationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Refs", required = true)
 	protected References3 references;
 	/**
-	 * Set of elements for the identification of the message and related
-	 * references.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,10 +162,11 @@ public class AccountClosingAdditionalInformationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgId", required = true)
 	protected List<OrganisationIdentification6> organisationIdentification;
 	/**
-	 * Identifier for an organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -205,11 +205,11 @@ public class AccountClosingAdditionalInformationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctId", required = true)
 	protected AccountForAction1 accountIdentification;
 	/**
-	 * Unique and unambiguous identification of the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,11 +251,11 @@ public class AccountClosingAdditionalInformationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctSvcrId", required = true)
 	protected BranchAndFinancialInstitutionIdentification4 accountServicerIdentification;
 	/**
-	 * Unique and unambiguous identifier of a financial institution, as assigned
-	 * under an internationally recognised or proprietary identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -297,17 +297,11 @@ public class AccountClosingAdditionalInformationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "BalTrfAcct")
 	protected AccountForAction1 balanceTransferAccount;
 	/**
-	 * Identification of the account to which the remaining positive balance of
-	 * the account to be closed must be transferred or account from which funds
-	 * can be moved to the account to be closed and which balance is negative.
-	 * This account must be held in the same financial institution as the
-	 * account to be closed if the transfer account is used to compensate a
-	 * negative balance. For a positive balance to be transferred, an account in
-	 * another financial institution might be used. In that case the account
-	 * servicer is mandatory.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -349,12 +343,11 @@ public class AccountClosingAdditionalInformationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "TrfAcctSvcrId")
 	protected BranchAndFinancialInstitutionIdentification4 transferAccountServicerIdentification;
 	/**
-	 * Unique and unambiguous identifier of a financial institution, as assigned
-	 * under an internationally recognised or proprietary identification scheme,
-	 * that is the servicer of the transfer account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -396,11 +389,11 @@ public class AccountClosingAdditionalInformationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "DgtlSgntr")
 	protected List<PartyAndSignature1> digitalSignature;
 	/**
-	 * Contains the signature with its components, namely signed info, signature
-	 * value, key info and the object.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -478,70 +471,70 @@ public class AccountClosingAdditionalInformationRequestV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Refs", required = true)
 	public References3 getReferences() {
 		return references;
 	}
 
-	public void setReferences(References3 references) {
-		this.references = references;
+	public AccountClosingAdditionalInformationRequestV01 setReferences(References3 references) {
+		this.references = Objects.requireNonNull(references);
+		return this;
 	}
 
-	@XmlElement(name = "OrgId", required = true)
 	public List<OrganisationIdentification6> getOrganisationIdentification() {
-		return organisationIdentification;
+		return organisationIdentification == null ? organisationIdentification = new ArrayList<>() : organisationIdentification;
 	}
 
-	public void setOrganisationIdentification(List<OrganisationIdentification6> organisationIdentification) {
-		this.organisationIdentification = organisationIdentification;
+	public AccountClosingAdditionalInformationRequestV01 setOrganisationIdentification(List<OrganisationIdentification6> organisationIdentification) {
+		this.organisationIdentification = Objects.requireNonNull(organisationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public AccountForAction1 getAccountIdentification() {
 		return accountIdentification;
 	}
 
-	public void setAccountIdentification(AccountForAction1 accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public AccountClosingAdditionalInformationRequestV01 setAccountIdentification(AccountForAction1 accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcrId", required = true)
 	public BranchAndFinancialInstitutionIdentification4 getAccountServicerIdentification() {
 		return accountServicerIdentification;
 	}
 
-	public void setAccountServicerIdentification(BranchAndFinancialInstitutionIdentification4 accountServicerIdentification) {
-		this.accountServicerIdentification = accountServicerIdentification;
+	public AccountClosingAdditionalInformationRequestV01 setAccountServicerIdentification(BranchAndFinancialInstitutionIdentification4 accountServicerIdentification) {
+		this.accountServicerIdentification = Objects.requireNonNull(accountServicerIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "BalTrfAcct")
-	public AccountForAction1 getBalanceTransferAccount() {
-		return balanceTransferAccount;
+	public Optional<AccountForAction1> getBalanceTransferAccount() {
+		return balanceTransferAccount == null ? Optional.empty() : Optional.of(balanceTransferAccount);
 	}
 
-	public void setBalanceTransferAccount(AccountForAction1 balanceTransferAccount) {
+	public AccountClosingAdditionalInformationRequestV01 setBalanceTransferAccount(AccountForAction1 balanceTransferAccount) {
 		this.balanceTransferAccount = balanceTransferAccount;
+		return this;
 	}
 
-	@XmlElement(name = "TrfAcctSvcrId")
-	public BranchAndFinancialInstitutionIdentification4 getTransferAccountServicerIdentification() {
-		return transferAccountServicerIdentification;
+	public Optional<BranchAndFinancialInstitutionIdentification4> getTransferAccountServicerIdentification() {
+		return transferAccountServicerIdentification == null ? Optional.empty() : Optional.of(transferAccountServicerIdentification);
 	}
 
-	public void setTransferAccountServicerIdentification(BranchAndFinancialInstitutionIdentification4 transferAccountServicerIdentification) {
+	public AccountClosingAdditionalInformationRequestV01 setTransferAccountServicerIdentification(BranchAndFinancialInstitutionIdentification4 transferAccountServicerIdentification) {
 		this.transferAccountServicerIdentification = transferAccountServicerIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "DgtlSgntr")
 	public List<PartyAndSignature1> getDigitalSignature() {
-		return digitalSignature;
+		return digitalSignature == null ? digitalSignature = new ArrayList<>() : digitalSignature;
 	}
 
-	public void setDigitalSignature(List<PartyAndSignature1> digitalSignature) {
-		this.digitalSignature = digitalSignature;
+	public AccountClosingAdditionalInformationRequestV01 setDigitalSignature(List<PartyAndSignature1> digitalSignature) {
+		this.digitalSignature = Objects.requireNonNull(digitalSignature);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.021.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.021.001.01")
 	static public class Document {
 		@XmlElement(name = "AcctClsgAddtlInfReq", required = true)
 		public AccountClosingAdditionalInformationRequestV01 messageBody;

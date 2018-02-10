@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ForeignCurrencyPaymentAccountQuantity1", propOrder = {"customerCount", "accountQuantity"})
 public class ForeignCurrencyPaymentAccountQuantity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CstmrCnt", required = true)
 	protected Number customerCount;
 	/**
-	 * Number of customers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -88,6 +91,9 @@ public class ForeignCurrencyPaymentAccountQuantity1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CstmrCnt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Customer Count</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -100,9 +106,10 @@ public class ForeignCurrencyPaymentAccountQuantity1 {
 	 */
 	public static final MMMessageAttribute mmCustomerCount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ForeignCurrencyPaymentAccountQuantity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignCurrencyPaymentAccountQuantity1.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrCnt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Customer Count"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerCount";
 			definition = "Number of customers.";
@@ -111,10 +118,11 @@ public class ForeignCurrencyPaymentAccountQuantity1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctQty", required = true)
 	protected FinancialInstrumentQuantity15Choice accountQuantity;
 	/**
-	 * Quantity to be paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,6 +138,9 @@ public class ForeignCurrencyPaymentAccountQuantity1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Account Quantity</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -142,9 +153,10 @@ public class ForeignCurrencyPaymentAccountQuantity1 {
 	 */
 	public static final MMMessageAttribute mmAccountQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ForeignCurrencyPaymentAccountQuantity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignCurrencyPaymentAccountQuantity1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Account Quantity"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountQuantity";
 			definition = "Quantity to be paid.";
@@ -157,8 +169,8 @@ public class ForeignCurrencyPaymentAccountQuantity1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ForeignCurrencyPaymentAccountQuantity1.mmCustomerCount, ForeignCurrencyPaymentAccountQuantity1.mmAccountQuantity);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignCurrencyPaymentAccountQuantity1.mmCustomerCount, com.tools20022.repository.msg.ForeignCurrencyPaymentAccountQuantity1.mmAccountQuantity);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ForeignCurrencyPaymentAccountQuantity1";
 				definition = "DTC (The Depository Trust Company) Foreign Currency Payment service elections.";
@@ -167,21 +179,21 @@ public class ForeignCurrencyPaymentAccountQuantity1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CstmrCnt", required = true)
 	public Number getCustomerCount() {
 		return customerCount;
 	}
 
-	public void setCustomerCount(Number customerCount) {
-		this.customerCount = customerCount;
+	public ForeignCurrencyPaymentAccountQuantity1 setCustomerCount(Number customerCount) {
+		this.customerCount = Objects.requireNonNull(customerCount);
+		return this;
 	}
 
-	@XmlElement(name = "AcctQty", required = true)
 	public FinancialInstrumentQuantity15Choice getAccountQuantity() {
 		return accountQuantity;
 	}
 
-	public void setAccountQuantity(FinancialInstrumentQuantity15Choice accountQuantity) {
-		this.accountQuantity = accountQuantity;
+	public ForeignCurrencyPaymentAccountQuantity1 setAccountQuantity(FinancialInstrumentQuantity15Choice accountQuantity) {
+		this.accountQuantity = Objects.requireNonNull(accountQuantity);
+		return this;
 	}
 }

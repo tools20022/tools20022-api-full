@@ -30,6 +30,7 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -66,20 +67,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
- * CashManagementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "NtfctnOfCaseAssgnmt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -98,6 +85,20 @@ import javax.xml.bind.annotation.*;
  * NotificationOfCaseAssignmentV03.mmNotification}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "NtfctnOfCaseAssgnmt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
+ * CashManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.030.001.03}</li>
@@ -121,16 +122,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "NotificationOfCaseAssignmentV03", propOrder = {"header", "case", "assignment", "notification"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "NotificationOfCaseAssignmentV03", propOrder = {"header", "case_", "assignment", "notification"})
 public class NotificationOfCaseAssignmentV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected ReportHeader2 header;
 	/**
-	 * Specifies generic information about the notification. The receiver of a
-	 * notification must be the party which assigned the case to the sender.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,10 +172,11 @@ public class NotificationOfCaseAssignmentV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Case", required = true)
 	protected Case2 case_;
 	/**
-	 * Identifies the investigation case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -212,12 +214,11 @@ public class NotificationOfCaseAssignmentV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Assgnmt", required = true)
 	protected CaseAssignment2 assignment;
 	/**
-	 * Identifies the assignment of an investigation case from an assigner to an
-	 * assignee. Usage: The Assigner must be the sender of this confirmation and
-	 * the Assignee must be the receiver.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -258,10 +259,11 @@ public class NotificationOfCaseAssignmentV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Ntfctn", required = true)
 	protected CaseForwardingNotification3 notification;
 	/**
-	 * Information about the type of action taken.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -333,43 +335,43 @@ public class NotificationOfCaseAssignmentV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public ReportHeader2 getHeader() {
 		return header;
 	}
 
-	public void setHeader(ReportHeader2 header) {
-		this.header = header;
+	public NotificationOfCaseAssignmentV03 setHeader(ReportHeader2 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "Case", required = true)
 	public Case2 getCase() {
 		return case_;
 	}
 
-	public void setCase(Case2 case_) {
-		this.case_ = case_;
+	public NotificationOfCaseAssignmentV03 setCase(Case2 case_) {
+		this.case_ = Objects.requireNonNull(case_);
+		return this;
 	}
 
-	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment2 getAssignment() {
 		return assignment;
 	}
 
-	public void setAssignment(CaseAssignment2 assignment) {
-		this.assignment = assignment;
+	public NotificationOfCaseAssignmentV03 setAssignment(CaseAssignment2 assignment) {
+		this.assignment = Objects.requireNonNull(assignment);
+		return this;
 	}
 
-	@XmlElement(name = "Ntfctn", required = true)
 	public CaseForwardingNotification3 getNotification() {
 		return notification;
 	}
 
-	public void setNotification(CaseForwardingNotification3 notification) {
-		this.notification = notification;
+	public NotificationOfCaseAssignmentV03 setNotification(CaseForwardingNotification3 notification) {
+		this.notification = Objects.requireNonNull(notification);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.030.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.030.001.03")
 	static public class Document {
 		@XmlElement(name = "NtfctnOfCaseAssgnmt", required = true)
 		public NotificationOfCaseAssignmentV03 messageBody;

@@ -25,9 +25,8 @@ import com.tools20022.repository.entity.SafekeepingPlace;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -76,8 +75,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,16 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Reporting per financial instrument."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrumentDetails23", propOrder = {"financialInstrumentIdentification", "priceDetails", "safekeepingPlace", "openingBalance", "closingBalance", "transaction"})
 public class FinancialInstrumentDetails23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FinInstrmId", required = true)
 	protected SecurityIdentification20 financialInstrumentIdentification;
 	/**
-	 * Financial instruments representing a sum of rights of the investor
-	 * vis-a-vis the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -132,7 +131,7 @@ public class FinancialInstrumentDetails23 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> FinancialInstrumentDetails23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails23.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -144,10 +143,11 @@ public class FinancialInstrumentDetails23 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification20.mmObject();
 		}
 	};
+	@XmlElement(name = "PricDtls")
 	protected PriceInformation16 priceDetails;
 	/**
-	 * Information regarding the price of the instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -179,7 +179,7 @@ public class FinancialInstrumentDetails23 {
 	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPricing;
-			componentContext_lazy = () -> FinancialInstrumentDetails23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails23.mmObject();
 			isDerived = false;
 			xmlTag = "PricDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,13 +191,11 @@ public class FinancialInstrumentDetails23 {
 			type_lazy = () -> com.tools20022.repository.msg.PriceInformation16.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgPlc")
 	protected SafeKeepingPlace2 safekeepingPlace;
 	/**
-	 * Place where the securities are safe-kept, physically or notionally. This
-	 * place can be, for example, a local custodian, a Central Securities
-	 * Depository (CSD) or an International Central Securities Depository
-	 * (ICSD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -231,7 +229,7 @@ public class FinancialInstrumentDetails23 {
 	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
-			componentContext_lazy = () -> FinancialInstrumentDetails23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails23.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,11 +241,11 @@ public class FinancialInstrumentDetails23 {
 			type_lazy = () -> com.tools20022.repository.msg.SafeKeepingPlace2.mmObject();
 		}
 	};
+	@XmlElement(name = "OpngBal")
 	protected OpeningBalance4 openingBalance;
 	/**
-	 * Opening balance for the statement period (first opening balance) or of
-	 * this page (intermediary opening balance).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -281,7 +279,7 @@ public class FinancialInstrumentDetails23 {
 	public static final MMMessageAssociationEnd mmOpeningBalance = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAggregateQuantityBalance;
-			componentContext_lazy = () -> FinancialInstrumentDetails23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails23.mmObject();
 			isDerived = false;
 			xmlTag = "OpngBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -293,11 +291,11 @@ public class FinancialInstrumentDetails23 {
 			type_lazy = () -> com.tools20022.repository.msg.OpeningBalance4.mmObject();
 		}
 	};
+	@XmlElement(name = "ClsgBal")
 	protected ClosingBalance4 closingBalance;
 	/**
-	 * Closing balance for the statement period (final closing balance) or of
-	 * this page (intermediary closing balance).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -331,7 +329,7 @@ public class FinancialInstrumentDetails23 {
 	public static final MMMessageAssociationEnd mmClosingBalance = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAggregateQuantityBalance;
-			componentContext_lazy = () -> FinancialInstrumentDetails23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails23.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -343,10 +341,11 @@ public class FinancialInstrumentDetails23 {
 			type_lazy = () -> com.tools20022.repository.msg.ClosingBalance4.mmObject();
 		}
 	};
+	@XmlElement(name = "Tx", required = true)
 	protected List<com.tools20022.repository.msg.Transaction50> transaction;
 	/**
-	 * Transaction details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -378,7 +377,7 @@ public class FinancialInstrumentDetails23 {
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmTrade;
-			componentContext_lazy = () -> FinancialInstrumentDetails23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails23.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -393,11 +392,12 @@ public class FinancialInstrumentDetails23 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentDetails23.mmFinancialInstrumentIdentification, FinancialInstrumentDetails23.mmPriceDetails, FinancialInstrumentDetails23.mmSafekeepingPlace,
-						FinancialInstrumentDetails23.mmOpeningBalance, FinancialInstrumentDetails23.mmClosingBalance, FinancialInstrumentDetails23.mmTransaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentDetails23.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.FinancialInstrumentDetails23.mmPriceDetails,
+						com.tools20022.repository.msg.FinancialInstrumentDetails23.mmSafekeepingPlace, com.tools20022.repository.msg.FinancialInstrumentDetails23.mmOpeningBalance,
+						com.tools20022.repository.msg.FinancialInstrumentDetails23.mmClosingBalance, com.tools20022.repository.msg.FinancialInstrumentDetails23.mmTransaction);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTransactionPostingReport002V06.mmFinancialInstrumentDetails);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentDetails23";
 				definition = "Reporting per financial instrument.";
@@ -406,57 +406,57 @@ public class FinancialInstrumentDetails23 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification20 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
 
-	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification20 financialInstrumentIdentification) {
-		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	public FinancialInstrumentDetails23 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification20 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PricDtls")
-	public PriceInformation16 getPriceDetails() {
-		return priceDetails;
+	public Optional<PriceInformation16> getPriceDetails() {
+		return priceDetails == null ? Optional.empty() : Optional.of(priceDetails);
 	}
 
-	public void setPriceDetails(com.tools20022.repository.msg.PriceInformation16 priceDetails) {
+	public FinancialInstrumentDetails23 setPriceDetails(com.tools20022.repository.msg.PriceInformation16 priceDetails) {
 		this.priceDetails = priceDetails;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgPlc")
-	public SafeKeepingPlace2 getSafekeepingPlace() {
-		return safekeepingPlace;
+	public Optional<SafeKeepingPlace2> getSafekeepingPlace() {
+		return safekeepingPlace == null ? Optional.empty() : Optional.of(safekeepingPlace);
 	}
 
-	public void setSafekeepingPlace(com.tools20022.repository.msg.SafeKeepingPlace2 safekeepingPlace) {
+	public FinancialInstrumentDetails23 setSafekeepingPlace(com.tools20022.repository.msg.SafeKeepingPlace2 safekeepingPlace) {
 		this.safekeepingPlace = safekeepingPlace;
+		return this;
 	}
 
-	@XmlElement(name = "OpngBal")
-	public OpeningBalance4 getOpeningBalance() {
-		return openingBalance;
+	public Optional<OpeningBalance4> getOpeningBalance() {
+		return openingBalance == null ? Optional.empty() : Optional.of(openingBalance);
 	}
 
-	public void setOpeningBalance(com.tools20022.repository.msg.OpeningBalance4 openingBalance) {
+	public FinancialInstrumentDetails23 setOpeningBalance(com.tools20022.repository.msg.OpeningBalance4 openingBalance) {
 		this.openingBalance = openingBalance;
+		return this;
 	}
 
-	@XmlElement(name = "ClsgBal")
-	public ClosingBalance4 getClosingBalance() {
-		return closingBalance;
+	public Optional<ClosingBalance4> getClosingBalance() {
+		return closingBalance == null ? Optional.empty() : Optional.of(closingBalance);
 	}
 
-	public void setClosingBalance(com.tools20022.repository.msg.ClosingBalance4 closingBalance) {
+	public FinancialInstrumentDetails23 setClosingBalance(com.tools20022.repository.msg.ClosingBalance4 closingBalance) {
 		this.closingBalance = closingBalance;
+		return this;
 	}
 
-	@XmlElement(name = "Tx", required = true)
 	public List<Transaction50> getTransaction() {
-		return transaction;
+		return transaction == null ? transaction = new ArrayList<>() : transaction;
 	}
 
-	public void setTransaction(List<com.tools20022.repository.msg.Transaction50> transaction) {
-		this.transaction = transaction;
+	public FinancialInstrumentDetails23 setTransaction(List<com.tools20022.repository.msg.Transaction50> transaction) {
+		this.transaction = Objects.requireNonNull(transaction);
+		return this;
 	}
 }

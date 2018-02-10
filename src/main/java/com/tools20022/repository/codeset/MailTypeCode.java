@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.MailTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of mail service.
@@ -31,14 +36,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MailTypeCode#mmAirMail
- * MailTypeCode.mmAirMail}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MailTypeCode#AirMail
+ * MailTypeCode.AirMail}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MailTypeCode#OrdinaryMail
+ * MailTypeCode.OrdinaryMail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MailTypeCode#mmOrdinaryMail
- * MailTypeCode.mmOrdinaryMail}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.MailTypeCode#mmRegisteredMail
- * MailTypeCode.mmRegisteredMail}</li>
+ * {@linkplain com.tools20022.repository.codeset.MailTypeCode#RegisteredMail
+ * MailTypeCode.RegisteredMail}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of mail service."</li>
  * </ul>
  */
-public class MailTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MailTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,12 +91,12 @@ public class MailTypeCode {
 	 * definition} = "Air mail."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAirMail = new MMCode() {
+	public static final MailTypeCode AirMail = new MailTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AirMail";
 			definition = "Air mail.";
-			owner_lazy = () -> MailTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MailTypeCode.mmObject();
 			codeName = "AIRM";
 		}
 	};
@@ -115,12 +120,12 @@ public class MailTypeCode {
 	 * definition} = "Ordinary mail."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOrdinaryMail = new MMCode() {
+	public static final MailTypeCode OrdinaryMail = new MailTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrdinaryMail";
 			definition = "Ordinary mail.";
-			owner_lazy = () -> MailTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MailTypeCode.mmObject();
 			codeName = "ORDM";
 		}
 	};
@@ -144,27 +149,58 @@ public class MailTypeCode {
 	 * definition} = "Registered Mail."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegisteredMail = new MMCode() {
+	public static final MailTypeCode RegisteredMail = new MailTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredMail";
 			definition = "Registered Mail.";
-			owner_lazy = () -> MailTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MailTypeCode.mmObject();
 			codeName = "REGM";
 		}
 	};
+	final static private LinkedHashMap<String, MailTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MailTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MailTypeCode";
 				definition = "Specifies the type of mail service.";
-				code_lazy = () -> Arrays.asList(MailTypeCode.mmAirMail, MailTypeCode.mmOrdinaryMail, MailTypeCode.mmRegisteredMail);
 				derivation_lazy = () -> Arrays.asList(MailType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MailTypeCode.AirMail, com.tools20022.repository.codeset.MailTypeCode.OrdinaryMail, com.tools20022.repository.codeset.MailTypeCode.RegisteredMail);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AirMail.getCodeName().get(), AirMail);
+		codesByName.put(OrdinaryMail.getCodeName().get(), OrdinaryMail);
+		codesByName.put(RegisteredMail.getCodeName().get(), RegisteredMail);
+	}
+
+	public static MailTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MailTypeCode[] values() {
+		MailTypeCode[] values = new MailTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MailTypeCode> {
+		@Override
+		public MailTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MailTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

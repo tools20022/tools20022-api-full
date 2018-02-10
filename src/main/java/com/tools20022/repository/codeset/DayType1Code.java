@@ -20,33 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DayTypeCode;
+import com.tools20022.repository.codeset.DayType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of day.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DayTypeCode DayTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DayType1Code#mmElapsedCalendarDays
- * DayType1Code.mmElapsedCalendarDays}</li>
+ * {@linkplain com.tools20022.repository.codeset.DayType1Code#ElapsedCalendarDays
+ * DayType1Code.ElapsedCalendarDays}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DayType1Code#mmElapsedBusinessDays
- * DayType1Code.mmElapsedBusinessDays}</li>
+ * {@linkplain com.tools20022.repository.codeset.DayType1Code#ElapsedBusinessDays
+ * DayType1Code.ElapsedBusinessDays}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DayTypeCode DayTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -63,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of day."</li>
  * </ul>
  */
-public class DayType1Code extends DayTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DayType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -81,11 +86,12 @@ public class DayType1Code extends DayTypeCode {
 	 * name} = "ElapsedCalendarDays"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmElapsedCalendarDays = new MMCode() {
+	public static final DayType1Code ElapsedCalendarDays = new DayType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElapsedCalendarDays";
-			owner_lazy = () -> DayType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DayType1Code.mmObject();
+			codeName = DayTypeCode.ElapsedCalendarDays.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -103,26 +109,57 @@ public class DayType1Code extends DayTypeCode {
 	 * name} = "ElapsedBusinessDays"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmElapsedBusinessDays = new MMCode() {
+	public static final DayType1Code ElapsedBusinessDays = new DayType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElapsedBusinessDays";
-			owner_lazy = () -> DayType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DayType1Code.mmObject();
+			codeName = DayTypeCode.ElapsedBusinessDays.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DayType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DayType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACTU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DayType1Code";
 				definition = "Specifies the type of day.";
-				code_lazy = () -> Arrays.asList(DayType1Code.mmElapsedCalendarDays, DayType1Code.mmElapsedBusinessDays);
 				trace_lazy = () -> DayTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DayType1Code.ElapsedCalendarDays, com.tools20022.repository.codeset.DayType1Code.ElapsedBusinessDays);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ElapsedCalendarDays.getCodeName().get(), ElapsedCalendarDays);
+		codesByName.put(ElapsedBusinessDays.getCodeName().get(), ElapsedBusinessDays);
+	}
+
+	public static DayType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DayType1Code[] values() {
+		DayType1Code[] values = new DayType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DayType1Code> {
+		@Override
+		public DayType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DayType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

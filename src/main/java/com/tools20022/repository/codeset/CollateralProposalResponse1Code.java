@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CollateralProposalResponseCode;
+import com.tools20022.repository.codeset.CollateralProposalResponse1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies if the collateral proposal response is an initial or a counter
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CollateralProposalResponseCode
- * CollateralProposalResponseCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralProposalResponse1Code#mmInitialProposal
- * CollateralProposalResponse1Code.mmInitialProposal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralProposalResponse1Code#InitialProposal
+ * CollateralProposalResponse1Code.InitialProposal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralProposalResponse1Code#mmCounterProposal
- * CollateralProposalResponse1Code.mmCounterProposal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralProposalResponse1Code#CounterProposal
+ * CollateralProposalResponse1Code.CounterProposal}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CollateralProposalResponseCode
+ * CollateralProposalResponseCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CollateralProposalResponse1Code extends CollateralProposalResponseCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CollateralProposalResponse1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class CollateralProposalResponse1Code extends CollateralProposalResponseC
 	 * name} = "InitialProposal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInitialProposal = new MMCode() {
+	public static final CollateralProposalResponse1Code InitialProposal = new CollateralProposalResponse1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialProposal";
-			owner_lazy = () -> CollateralProposalResponse1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralProposalResponse1Code.mmObject();
+			codeName = CollateralProposalResponseCode.InitialProposal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,57 @@ public class CollateralProposalResponse1Code extends CollateralProposalResponseC
 	 * name} = "CounterProposal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCounterProposal = new MMCode() {
+	public static final CollateralProposalResponse1Code CounterProposal = new CollateralProposalResponse1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterProposal";
-			owner_lazy = () -> CollateralProposalResponse1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralProposalResponse1Code.mmObject();
+			codeName = CollateralProposalResponseCode.CounterProposal.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CollateralProposalResponse1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CollateralProposalResponse1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("INPR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralProposalResponse1Code";
 				definition = "Specifies if the collateral proposal response is an initial or a counter proposal.";
-				code_lazy = () -> Arrays.asList(CollateralProposalResponse1Code.mmInitialProposal, CollateralProposalResponse1Code.mmCounterProposal);
 				trace_lazy = () -> CollateralProposalResponseCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralProposalResponse1Code.InitialProposal, com.tools20022.repository.codeset.CollateralProposalResponse1Code.CounterProposal);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(InitialProposal.getCodeName().get(), InitialProposal);
+		codesByName.put(CounterProposal.getCodeName().get(), CounterProposal);
+	}
+
+	public static CollateralProposalResponse1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CollateralProposalResponse1Code[] values() {
+		CollateralProposalResponse1Code[] values = new CollateralProposalResponse1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CollateralProposalResponse1Code> {
+		@Override
+		public CollateralProposalResponse1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CollateralProposalResponse1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

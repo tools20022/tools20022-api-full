@@ -24,6 +24,8 @@ import com.tools20022.repository.area.semt.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -107,8 +109,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -120,15 +122,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Totals for the value of the holdings reported in the statement or page."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TotalValueInPageAndStatement2", propOrder = {"totalHoldingsValueOfPage", "totalHoldingsValueOfStatement", "totalBookValueOfStatement"})
 public class TotalValueInPageAndStatement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlHldgsValOfPg")
 	protected AmountAndDirection6 totalHoldingsValueOfPage;
 	/**
-	 * Total value of positions reported in this message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +159,7 @@ public class TotalValueInPageAndStatement2 {
 	 */
 	public static final MMMessageAttribute mmTotalHoldingsValueOfPage = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TotalValueInPageAndStatement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalValueInPageAndStatement2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlHldgsValOfPg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,11 +170,11 @@ public class TotalValueInPageAndStatement2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlHldgsValOfStmt", required = true)
 	protected AmountAndDirection6 totalHoldingsValueOfStatement;
 	/**
-	 * Total value of positions reported in this statement (a statement may
-	 * comprise one or more messages).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,7 +204,7 @@ public class TotalValueInPageAndStatement2 {
 	 */
 	public static final MMMessageAttribute mmTotalHoldingsValueOfStatement = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TotalValueInPageAndStatement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalValueInPageAndStatement2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlHldgsValOfStmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,11 +215,11 @@ public class TotalValueInPageAndStatement2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlBookValOfStmt")
 	protected AmountAndDirection6 totalBookValueOfStatement;
 	/**
-	 * Total book value of positions reported in this statement (a statement may
-	 * comprise one or more messages).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -246,7 +249,7 @@ public class TotalValueInPageAndStatement2 {
 	 */
 	public static final MMMessageAttribute mmTotalBookValueOfStatement = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TotalValueInPageAndStatement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalValueInPageAndStatement2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlBookValOfStmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -261,7 +264,8 @@ public class TotalValueInPageAndStatement2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TotalValueInPageAndStatement2.mmTotalHoldingsValueOfPage, TotalValueInPageAndStatement2.mmTotalHoldingsValueOfStatement, TotalValueInPageAndStatement2.mmTotalBookValueOfStatement);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalValueInPageAndStatement2.mmTotalHoldingsValueOfPage, com.tools20022.repository.msg.TotalValueInPageAndStatement2.mmTotalHoldingsValueOfStatement,
+						com.tools20022.repository.msg.TotalValueInPageAndStatement2.mmTotalBookValueOfStatement);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesBalanceAccountingReportV03.mmAccountBaseCurrencyTotalAmounts, SecuritiesBalanceAccountingReportV03.mmAlternateReportingCurrencyTotalAmounts,
 						SecuritiesBalanceAccountingReportV04.mmAccountBaseCurrencyTotalAmounts, SecuritiesBalanceAccountingReportV04.mmAlternateReportingCurrencyTotalAmounts,
 						SecuritiesBalanceAccountingReportV05.mmAccountBaseCurrencyTotalAmounts, SecuritiesBalanceAccountingReportV05.mmAlternateReportingCurrencyTotalAmounts,
@@ -269,7 +273,7 @@ public class TotalValueInPageAndStatement2 {
 						SecuritiesBalanceAccountingReportV07.mmAccountBaseCurrencyTotalAmounts, SecuritiesBalanceAccountingReportV07.mmAlternateReportingCurrencyTotalAmounts,
 						SecuritiesBalanceAccountingReportV08.mmAccountBaseCurrencyTotalAmounts, SecuritiesBalanceAccountingReportV08.mmAlternateReportingCurrencyTotalAmounts,
 						SecuritiesBalanceAccountingReportV09.mmAccountBaseCurrencyTotalAmounts, SecuritiesBalanceAccountingReportV09.mmAlternateReportingCurrencyTotalAmounts);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalValueInPageAndStatement2";
 				definition = "Totals for the value of the holdings reported in the statement or page.";
@@ -278,30 +282,30 @@ public class TotalValueInPageAndStatement2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlHldgsValOfPg")
-	public AmountAndDirection6 getTotalHoldingsValueOfPage() {
-		return totalHoldingsValueOfPage;
+	public Optional<AmountAndDirection6> getTotalHoldingsValueOfPage() {
+		return totalHoldingsValueOfPage == null ? Optional.empty() : Optional.of(totalHoldingsValueOfPage);
 	}
 
-	public void setTotalHoldingsValueOfPage(com.tools20022.repository.msg.AmountAndDirection6 totalHoldingsValueOfPage) {
+	public TotalValueInPageAndStatement2 setTotalHoldingsValueOfPage(com.tools20022.repository.msg.AmountAndDirection6 totalHoldingsValueOfPage) {
 		this.totalHoldingsValueOfPage = totalHoldingsValueOfPage;
+		return this;
 	}
 
-	@XmlElement(name = "TtlHldgsValOfStmt", required = true)
 	public AmountAndDirection6 getTotalHoldingsValueOfStatement() {
 		return totalHoldingsValueOfStatement;
 	}
 
-	public void setTotalHoldingsValueOfStatement(com.tools20022.repository.msg.AmountAndDirection6 totalHoldingsValueOfStatement) {
-		this.totalHoldingsValueOfStatement = totalHoldingsValueOfStatement;
+	public TotalValueInPageAndStatement2 setTotalHoldingsValueOfStatement(com.tools20022.repository.msg.AmountAndDirection6 totalHoldingsValueOfStatement) {
+		this.totalHoldingsValueOfStatement = Objects.requireNonNull(totalHoldingsValueOfStatement);
+		return this;
 	}
 
-	@XmlElement(name = "TtlBookValOfStmt")
-	public AmountAndDirection6 getTotalBookValueOfStatement() {
-		return totalBookValueOfStatement;
+	public Optional<AmountAndDirection6> getTotalBookValueOfStatement() {
+		return totalBookValueOfStatement == null ? Optional.empty() : Optional.of(totalBookValueOfStatement);
 	}
 
-	public void setTotalBookValueOfStatement(com.tools20022.repository.msg.AmountAndDirection6 totalBookValueOfStatement) {
+	public TotalValueInPageAndStatement2 setTotalBookValueOfStatement(com.tools20022.repository.msg.AmountAndDirection6 totalBookValueOfStatement) {
 		this.totalBookValueOfStatement = totalBookValueOfStatement;
+		return this;
 	}
 }

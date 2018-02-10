@@ -26,6 +26,8 @@ import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Report information about cash account reference data."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashAccountAuditTrailReport1", propOrder = {"cashAccountAuditTrailOrError", "datePeriod", "cashAccountIdentification"})
 public class CashAccountAuditTrailReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CshAcctAudtTrlOrErr", required = true)
 	protected AuditTrailOrBusinessError1Choice cashAccountAuditTrailOrError;
 	/**
-	 * Identifies the returned cash account reference data or error information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -103,7 +106,7 @@ public class CashAccountAuditTrailReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmCashAccountAuditTrailOrError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CashAccountAuditTrailReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountAuditTrailReport1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctAudtTrlOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +118,11 @@ public class CashAccountAuditTrailReport1 {
 			type_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DtPrd")
 	protected DateSearchChoice datePeriod;
 	/**
-	 * Period in dates for which the audit trail is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +150,7 @@ public class CashAccountAuditTrailReport1 {
 	 */
 	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashAccountAuditTrailReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountAuditTrailReport1.mmObject();
 			isDerived = false;
 			xmlTag = "DtPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,10 +161,11 @@ public class CashAccountAuditTrailReport1 {
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAcctId", required = true)
 	protected CashAccount16 cashAccountIdentification;
 	/**
-	 * Identifies the cash account for which the audit trail is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,7 +193,7 @@ public class CashAccountAuditTrailReport1 {
 	 */
 	public static final MMMessageAttribute mmCashAccountIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashAccountAuditTrailReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountAuditTrailReport1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,8 +208,9 @@ public class CashAccountAuditTrailReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashAccountAuditTrailReport1.mmCashAccountAuditTrailOrError, CashAccountAuditTrailReport1.mmDatePeriod, CashAccountAuditTrailReport1.mmCashAccountIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountAuditTrailReport1.mmCashAccountAuditTrailOrError, com.tools20022.repository.msg.CashAccountAuditTrailReport1.mmDatePeriod,
+						com.tools20022.repository.msg.CashAccountAuditTrailReport1.mmCashAccountIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashAccountAuditTrailReport1";
 				definition = "Report information about cash account reference data.";
@@ -213,30 +219,30 @@ public class CashAccountAuditTrailReport1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CshAcctAudtTrlOrErr", required = true)
 	public AuditTrailOrBusinessError1Choice getCashAccountAuditTrailOrError() {
 		return cashAccountAuditTrailOrError;
 	}
 
-	public void setCashAccountAuditTrailOrError(AuditTrailOrBusinessError1Choice cashAccountAuditTrailOrError) {
-		this.cashAccountAuditTrailOrError = cashAccountAuditTrailOrError;
+	public CashAccountAuditTrailReport1 setCashAccountAuditTrailOrError(AuditTrailOrBusinessError1Choice cashAccountAuditTrailOrError) {
+		this.cashAccountAuditTrailOrError = Objects.requireNonNull(cashAccountAuditTrailOrError);
+		return this;
 	}
 
-	@XmlElement(name = "DtPrd")
-	public DateSearchChoice getDatePeriod() {
-		return datePeriod;
+	public Optional<DateSearchChoice> getDatePeriod() {
+		return datePeriod == null ? Optional.empty() : Optional.of(datePeriod);
 	}
 
-	public void setDatePeriod(DateSearchChoice datePeriod) {
+	public CashAccountAuditTrailReport1 setDatePeriod(DateSearchChoice datePeriod) {
 		this.datePeriod = datePeriod;
+		return this;
 	}
 
-	@XmlElement(name = "CshAcctId", required = true)
 	public CashAccount16 getCashAccountIdentification() {
 		return cashAccountIdentification;
 	}
 
-	public void setCashAccountIdentification(com.tools20022.repository.msg.CashAccount16 cashAccountIdentification) {
-		this.cashAccountIdentification = cashAccountIdentification;
+	public CashAccountAuditTrailReport1 setCashAccountIdentification(com.tools20022.repository.msg.CashAccount16 cashAccountIdentification) {
+		this.cashAccountIdentification = Objects.requireNonNull(cashAccountIdentification);
+		return this;
 	}
 }

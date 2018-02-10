@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.LiquidityIndicatorTypeCode;
+import com.tools20022.repository.codeset.LiquidityIndicatorType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the market and statistic conditions upon which a liquidity
@@ -31,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.LiquidityIndicatorTypeCode
- * LiquidityIndicatorTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LiquidityIndicatorType1Code#mmFiveDayMovingAverage
- * LiquidityIndicatorType1Code.mmFiveDayMovingAverage}</li>
+ * {@linkplain com.tools20022.repository.codeset.LiquidityIndicatorType1Code#FiveDayMovingAverage
+ * LiquidityIndicatorType1Code.FiveDayMovingAverage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LiquidityIndicatorType1Code#mmTwentyDayMovingAverage
- * LiquidityIndicatorType1Code.mmTwentyDayMovingAverage}</li>
+ * {@linkplain com.tools20022.repository.codeset.LiquidityIndicatorType1Code#TwentyDayMovingAverage
+ * LiquidityIndicatorType1Code.TwentyDayMovingAverage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LiquidityIndicatorType1Code#mmNormalMarketSize
- * LiquidityIndicatorType1Code.mmNormalMarketSize}</li>
+ * {@linkplain com.tools20022.repository.codeset.LiquidityIndicatorType1Code#NormalMarketSize
+ * LiquidityIndicatorType1Code.NormalMarketSize}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.LiquidityIndicatorTypeCode
+ * LiquidityIndicatorTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class LiquidityIndicatorType1Code extends LiquidityIndicatorTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class LiquidityIndicatorType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class LiquidityIndicatorType1Code extends LiquidityIndicatorTypeCode {
 	 * name} = "FiveDayMovingAverage"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFiveDayMovingAverage = new MMCode() {
+	public static final LiquidityIndicatorType1Code FiveDayMovingAverage = new LiquidityIndicatorType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FiveDayMovingAverage";
-			owner_lazy = () -> LiquidityIndicatorType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LiquidityIndicatorType1Code.mmObject();
+			codeName = LiquidityIndicatorTypeCode.FiveDayMovingAverage.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class LiquidityIndicatorType1Code extends LiquidityIndicatorTypeCode {
 	 * name} = "TwentyDayMovingAverage"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTwentyDayMovingAverage = new MMCode() {
+	public static final LiquidityIndicatorType1Code TwentyDayMovingAverage = new LiquidityIndicatorType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwentyDayMovingAverage";
-			owner_lazy = () -> LiquidityIndicatorType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LiquidityIndicatorType1Code.mmObject();
+			codeName = LiquidityIndicatorTypeCode.TwentyDayMovingAverage.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,26 +142,59 @@ public class LiquidityIndicatorType1Code extends LiquidityIndicatorTypeCode {
 	 * name} = "NormalMarketSize"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNormalMarketSize = new MMCode() {
+	public static final LiquidityIndicatorType1Code NormalMarketSize = new LiquidityIndicatorType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NormalMarketSize";
-			owner_lazy = () -> LiquidityIndicatorType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LiquidityIndicatorType1Code.mmObject();
+			codeName = LiquidityIndicatorTypeCode.NormalMarketSize.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, LiquidityIndicatorType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected LiquidityIndicatorType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FIVE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LiquidityIndicatorType1Code";
 				definition = "Specifies the market and statistic conditions upon which a liquidity indicator has been computed.";
-				code_lazy = () -> Arrays.asList(LiquidityIndicatorType1Code.mmFiveDayMovingAverage, LiquidityIndicatorType1Code.mmTwentyDayMovingAverage, LiquidityIndicatorType1Code.mmNormalMarketSize);
 				trace_lazy = () -> LiquidityIndicatorTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LiquidityIndicatorType1Code.FiveDayMovingAverage, com.tools20022.repository.codeset.LiquidityIndicatorType1Code.TwentyDayMovingAverage,
+						com.tools20022.repository.codeset.LiquidityIndicatorType1Code.NormalMarketSize);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(FiveDayMovingAverage.getCodeName().get(), FiveDayMovingAverage);
+		codesByName.put(TwentyDayMovingAverage.getCodeName().get(), TwentyDayMovingAverage);
+		codesByName.put(NormalMarketSize.getCodeName().get(), NormalMarketSize);
+	}
+
+	public static LiquidityIndicatorType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static LiquidityIndicatorType1Code[] values() {
+		LiquidityIndicatorType1Code[] values = new LiquidityIndicatorType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, LiquidityIndicatorType1Code> {
+		@Override
+		public LiquidityIndicatorType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(LiquidityIndicatorType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

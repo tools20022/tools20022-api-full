@@ -27,9 +27,8 @@ import com.tools20022.repository.entity.AccountStatus;
 import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Blocked1", propOrder = {"orderType", "blocked", "reason"})
 public class Blocked1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrdrTp", required = true)
 	protected List<FundOrderType1Choice> orderType;
 	/**
-	 * Specifies the order type for which the account is blocked.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,7 +125,7 @@ public class Blocked1 {
 	public static final MMMessageAttribute mmOrderType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundOrder;
-			componentContext_lazy = () -> Blocked1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Blocked1.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +136,11 @@ public class Blocked1 {
 			complexType_lazy = () -> FundOrderType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Blckd", required = true)
 	protected YesNoIndicator blocked;
 	/**
-	 * Indicates whether the account is blocked.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,7 +180,7 @@ public class Blocked1 {
 	public static final MMMessageAttribute mmBlocked = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmBlocked;
-			componentContext_lazy = () -> Blocked1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Blocked1.mmObject();
 			isDerived = false;
 			xmlTag = "Blckd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,10 +192,11 @@ public class Blocked1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn")
 	protected BlockedReason1Choice reason;
 	/**
-	 * Specifies the reason the account is blocked.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,7 +236,7 @@ public class Blocked1 {
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
-			componentContext_lazy = () -> Blocked1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Blocked1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -250,9 +252,9 @@ public class Blocked1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Blocked1.mmOrderType, Blocked1.mmBlocked, Blocked1.mmReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Blocked1.mmOrderType, com.tools20022.repository.msg.Blocked1.mmBlocked, com.tools20022.repository.msg.Blocked1.mmReason);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Blocked1";
 				definition = "Specifies information about blocked accounts.";
@@ -262,30 +264,30 @@ public class Blocked1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrdrTp", required = true)
 	public List<FundOrderType1Choice> getOrderType() {
-		return orderType;
+		return orderType == null ? orderType = new ArrayList<>() : orderType;
 	}
 
-	public void setOrderType(List<FundOrderType1Choice> orderType) {
-		this.orderType = orderType;
+	public Blocked1 setOrderType(List<FundOrderType1Choice> orderType) {
+		this.orderType = Objects.requireNonNull(orderType);
+		return this;
 	}
 
-	@XmlElement(name = "Blckd", required = true)
 	public YesNoIndicator getBlocked() {
 		return blocked;
 	}
 
-	public void setBlocked(YesNoIndicator blocked) {
-		this.blocked = blocked;
+	public Blocked1 setBlocked(YesNoIndicator blocked) {
+		this.blocked = Objects.requireNonNull(blocked);
+		return this;
 	}
 
-	@XmlElement(name = "Rsn")
-	public BlockedReason1Choice getReason() {
-		return reason;
+	public Optional<BlockedReason1Choice> getReason() {
+		return reason == null ? Optional.empty() : Optional.of(reason);
 	}
 
-	public void setReason(BlockedReason1Choice reason) {
+	public Blocked1 setReason(BlockedReason1Choice reason) {
 		this.reason = reason;
+		return this;
 	}
 }

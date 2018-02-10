@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PartyRoleCode;
+import com.tools20022.repository.codeset.PaymentRole1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Role associated with a specific party in relation to a payment instruction.
@@ -32,34 +36,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PartyRoleCode PartyRoleCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentRole1Code#mmLiquidityManager
- * PaymentRole1Code.mmLiquidityManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentRole1Code#LiquidityManager
+ * PaymentRole1Code.LiquidityManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentRole1Code#mmLimitManager
- * PaymentRole1Code.mmLimitManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentRole1Code#LimitManager
+ * PaymentRole1Code.LimitManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentRole1Code#mmPaymentManager
- * PaymentRole1Code.mmPaymentManager}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentRole1Code#mmReader
- * PaymentRole1Code.mmReader}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentRole1Code#PaymentManager
+ * PaymentRole1Code.PaymentManager}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentRole1Code#Reader
+ * PaymentRole1Code.Reader}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentRole1Code#mmBackupManager
- * PaymentRole1Code.mmBackupManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentRole1Code#BackupManager
+ * PaymentRole1Code.BackupManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentRole1Code#mmSettlementManager
- * PaymentRole1Code.mmSettlementManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentRole1Code#SettlementManager
+ * PaymentRole1Code.SettlementManager}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PartyRoleCode PartyRoleCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PaymentRole1Code extends PartyRoleCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PaymentRole1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,11 +102,12 @@ public class PaymentRole1Code extends PartyRoleCode {
 	 * name} = "LiquidityManager"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLiquidityManager = new MMCode() {
+	public static final PaymentRole1Code LiquidityManager = new PaymentRole1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityManager";
-			owner_lazy = () -> PaymentRole1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentRole1Code.mmObject();
+			codeName = PartyRoleCode.LiquidityManager.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -120,11 +126,12 @@ public class PaymentRole1Code extends PartyRoleCode {
 	 * name} = "LimitManager"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLimitManager = new MMCode() {
+	public static final PaymentRole1Code LimitManager = new PaymentRole1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitManager";
-			owner_lazy = () -> PaymentRole1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentRole1Code.mmObject();
+			codeName = PartyRoleCode.LimitManager.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -143,11 +150,12 @@ public class PaymentRole1Code extends PartyRoleCode {
 	 * name} = "PaymentManager"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPaymentManager = new MMCode() {
+	public static final PaymentRole1Code PaymentManager = new PaymentRole1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentManager";
-			owner_lazy = () -> PaymentRole1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentRole1Code.mmObject();
+			codeName = PartyRoleCode.PaymentManager.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -166,11 +174,12 @@ public class PaymentRole1Code extends PartyRoleCode {
 	 * name} = "Reader"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReader = new MMCode() {
+	public static final PaymentRole1Code Reader = new PaymentRole1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reader";
-			owner_lazy = () -> PaymentRole1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentRole1Code.mmObject();
+			codeName = PartyRoleCode.Reader.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -189,11 +198,12 @@ public class PaymentRole1Code extends PartyRoleCode {
 	 * name} = "BackupManager"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBackupManager = new MMCode() {
+	public static final PaymentRole1Code BackupManager = new PaymentRole1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackupManager";
-			owner_lazy = () -> PaymentRole1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentRole1Code.mmObject();
+			codeName = PartyRoleCode.BackupManager.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -212,27 +222,63 @@ public class PaymentRole1Code extends PartyRoleCode {
 	 * name} = "SettlementManager"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementManager = new MMCode() {
+	public static final PaymentRole1Code SettlementManager = new PaymentRole1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementManager";
-			owner_lazy = () -> PaymentRole1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentRole1Code.mmObject();
+			codeName = PartyRoleCode.SettlementManager.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PaymentRole1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PaymentRole1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("LQMG");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentRole1Code";
 				definition = "Role associated with a specific party in relation to a payment instruction. The role identifies either the specific function of the party, or the party's rights regarding management of the instruction.";
-				code_lazy = () -> Arrays.asList(PaymentRole1Code.mmLiquidityManager, PaymentRole1Code.mmLimitManager, PaymentRole1Code.mmPaymentManager, PaymentRole1Code.mmReader, PaymentRole1Code.mmBackupManager,
-						PaymentRole1Code.mmSettlementManager);
 				trace_lazy = () -> PartyRoleCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentRole1Code.LiquidityManager, com.tools20022.repository.codeset.PaymentRole1Code.LimitManager,
+						com.tools20022.repository.codeset.PaymentRole1Code.PaymentManager, com.tools20022.repository.codeset.PaymentRole1Code.Reader, com.tools20022.repository.codeset.PaymentRole1Code.BackupManager,
+						com.tools20022.repository.codeset.PaymentRole1Code.SettlementManager);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(LiquidityManager.getCodeName().get(), LiquidityManager);
+		codesByName.put(LimitManager.getCodeName().get(), LimitManager);
+		codesByName.put(PaymentManager.getCodeName().get(), PaymentManager);
+		codesByName.put(Reader.getCodeName().get(), Reader);
+		codesByName.put(BackupManager.getCodeName().get(), BackupManager);
+		codesByName.put(SettlementManager.getCodeName().get(), SettlementManager);
+	}
+
+	public static PaymentRole1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PaymentRole1Code[] values() {
+		PaymentRole1Code[] values = new PaymentRole1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PaymentRole1Code> {
+		@Override
+		public PaymentRole1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PaymentRole1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

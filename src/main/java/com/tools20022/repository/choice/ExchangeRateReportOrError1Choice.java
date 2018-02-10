@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CurrencyExchangeReport3;
 import com.tools20022.repository.msg.ErrorHandling3;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ExchangeRateReportOrError1Choice", propOrder = {"currencyExchangeReport", "operationalError"})
 public class ExchangeRateReportOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CcyXchgRpt", required = true)
 	protected List<CurrencyExchangeReport3> currencyExchangeReport;
 	/**
-	 * Reports on currency exchange information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -102,7 +105,7 @@ public class ExchangeRateReportOrError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCurrencyExchangeReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ExchangeRateReportOrError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ExchangeRateReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CcyXchgRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,11 +116,11 @@ public class ExchangeRateReportOrError1Choice {
 			type_lazy = () -> CurrencyExchangeReport3.mmObject();
 		}
 	};
+	@XmlElement(name = "OprlErr", required = true)
 	protected List<ErrorHandling3> operationalError;
 	/**
-	 * Indicates that an operational error has been issued during the processing
-	 * of the related request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -145,7 +148,7 @@ public class ExchangeRateReportOrError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ExchangeRateReportOrError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ExchangeRateReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,8 +163,8 @@ public class ExchangeRateReportOrError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ExchangeRateReportOrError1Choice.mmCurrencyExchangeReport, ExchangeRateReportOrError1Choice.mmOperationalError);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExchangeRateReportOrError1Choice.mmCurrencyExchangeReport, com.tools20022.repository.choice.ExchangeRateReportOrError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExchangeRateReportOrError1Choice";
 				definition = "It is used to provide information on static data maintained by the transaction administrator and related to currency exchange details as maintained for system operations by the transaction administrator.";
@@ -170,21 +173,21 @@ public class ExchangeRateReportOrError1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CcyXchgRpt", required = true)
 	public List<CurrencyExchangeReport3> getCurrencyExchangeReport() {
-		return currencyExchangeReport;
+		return currencyExchangeReport == null ? currencyExchangeReport = new ArrayList<>() : currencyExchangeReport;
 	}
 
-	public void setCurrencyExchangeReport(List<CurrencyExchangeReport3> currencyExchangeReport) {
-		this.currencyExchangeReport = currencyExchangeReport;
+	public ExchangeRateReportOrError1Choice setCurrencyExchangeReport(List<CurrencyExchangeReport3> currencyExchangeReport) {
+		this.currencyExchangeReport = Objects.requireNonNull(currencyExchangeReport);
+		return this;
 	}
 
-	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling3> getOperationalError() {
-		return operationalError;
+		return operationalError == null ? operationalError = new ArrayList<>() : operationalError;
 	}
 
-	public void setOperationalError(List<ErrorHandling3> operationalError) {
-		this.operationalError = operationalError;
+	public ExchangeRateReportOrError1Choice setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = Objects.requireNonNull(operationalError);
+		return this;
 	}
 }

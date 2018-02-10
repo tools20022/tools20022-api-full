@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ExposureConventionTypeCode;
+import com.tools20022.repository.codeset.ExposureConventionType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Determines how the variation margin requirement will be calculated, either
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ExposureConventionTypeCode
- * ExposureConventionTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureConventionType1Code#mmGross
- * ExposureConventionType1Code.mmGross}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureConventionType1Code#Gross
+ * ExposureConventionType1Code.Gross}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExposureConventionType1Code#mmNet
- * ExposureConventionType1Code.mmNet}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExposureConventionType1Code#Net
+ * ExposureConventionType1Code.Net}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ExposureConventionTypeCode
+ * ExposureConventionTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ExposureConventionType1Code extends ExposureConventionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ExposureConventionType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class ExposureConventionType1Code extends ExposureConventionTypeCode {
 	 * name} = "Gross"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGross = new MMCode() {
+	public static final ExposureConventionType1Code Gross = new ExposureConventionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gross";
-			owner_lazy = () -> ExposureConventionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureConventionType1Code.mmObject();
+			codeName = ExposureConventionTypeCode.Gross.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,57 @@ public class ExposureConventionType1Code extends ExposureConventionTypeCode {
 	 * name} = "Net"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNet = new MMCode() {
+	public static final ExposureConventionType1Code Net = new ExposureConventionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Net";
-			owner_lazy = () -> ExposureConventionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExposureConventionType1Code.mmObject();
+			codeName = ExposureConventionTypeCode.Net.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ExposureConventionType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ExposureConventionType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("GROS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExposureConventionType1Code";
 				definition = "Determines how the variation margin requirement will be calculated, either net or gross.";
-				code_lazy = () -> Arrays.asList(ExposureConventionType1Code.mmGross, ExposureConventionType1Code.mmNet);
 				trace_lazy = () -> ExposureConventionTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExposureConventionType1Code.Gross, com.tools20022.repository.codeset.ExposureConventionType1Code.Net);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Gross.getCodeName().get(), Gross);
+		codesByName.put(Net.getCodeName().get(), Net);
+	}
+
+	public static ExposureConventionType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ExposureConventionType1Code[] values() {
+		ExposureConventionType1Code[] values = new ExposureConventionType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ExposureConventionType1Code> {
+		@Override
+		public ExposureConventionType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ExposureConventionType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

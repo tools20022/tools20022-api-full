@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.SystemPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CSDOrNCB1Choice", propOrder = {"CSDIdentification", "NCBIdentification"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CSDOrNCB1Choice", propOrder = {"cSDIdentification", "nCBIdentification"})
 public class CSDOrNCB1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CSDId", required = true)
 	protected BICFIIdentifier cSDIdentification;
 	/**
-	 * Unique identification to unambiguously identify the central security
-	 * depository within the system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +115,7 @@ public class CSDOrNCB1Choice {
 	public static final MMMessageAttribute mmCSDIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> CSDOrNCB1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CSDOrNCB1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CSDId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,11 +126,11 @@ public class CSDOrNCB1Choice {
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "NCBId", required = true)
 	protected BICFIIdentifier nCBIdentification;
 	/**
-	 * Unique identification to unambiguously identify the national central bank
-	 * within the system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +166,7 @@ public class CSDOrNCB1Choice {
 	public static final MMMessageAttribute mmNCBIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> CSDOrNCB1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CSDOrNCB1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NCBId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,9 +181,9 @@ public class CSDOrNCB1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CSDOrNCB1Choice.mmCSDIdentification, CSDOrNCB1Choice.mmNCBIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CSDOrNCB1Choice.mmCSDIdentification, com.tools20022.repository.choice.CSDOrNCB1Choice.mmNCBIdentification);
 				trace_lazy = () -> SystemPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CSDOrNCB1Choice";
 				definition = "Choice between a central securities depositary or a national central bank for querying party reference data.";
@@ -191,21 +192,21 @@ public class CSDOrNCB1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CSDId", required = true)
 	public BICFIIdentifier getCSDIdentification() {
 		return cSDIdentification;
 	}
 
-	public void setCSDIdentification(BICFIIdentifier cSDIdentification) {
-		this.cSDIdentification = cSDIdentification;
+	public CSDOrNCB1Choice setCSDIdentification(BICFIIdentifier cSDIdentification) {
+		this.cSDIdentification = Objects.requireNonNull(cSDIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "NCBId", required = true)
 	public BICFIIdentifier getNCBIdentification() {
 		return nCBIdentification;
 	}
 
-	public void setNCBIdentification(BICFIIdentifier nCBIdentification) {
-		this.nCBIdentification = nCBIdentification;
+	public CSDOrNCB1Choice setNCBIdentification(BICFIIdentifier nCBIdentification) {
+		this.nCBIdentification = Objects.requireNonNull(nCBIdentification);
+		return this;
 	}
 }

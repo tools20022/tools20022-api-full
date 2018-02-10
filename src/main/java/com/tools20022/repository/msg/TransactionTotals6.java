@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * TransactionTotals4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionTotals6", propOrder = {"authorisation", "authorisationReversal", "inquiry", "inquiryReversal", "payments", "paymentReversal", "transfer", "transferReversal", "feeCollection"})
 public class TransactionTotals6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Authstn")
 	protected Number authorisation;
 	/**
-	 * Sum number of all authorisation transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +120,7 @@ public class TransactionTotals6 {
 	 */
 	public static final MMMessageAttribute mmAuthorisation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionTotals6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 			isDerived = false;
 			xmlTag = "Authstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,10 +131,11 @@ public class TransactionTotals6 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "AuthstnRvsl")
 	protected Number authorisationReversal;
 	/**
-	 * Sum number of all reversed authorisation transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +162,7 @@ public class TransactionTotals6 {
 	 */
 	public static final MMMessageAttribute mmAuthorisationReversal = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionTotals6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnRvsl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,10 +173,11 @@ public class TransactionTotals6 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Nqry")
 	protected Number inquiry;
 	/**
-	 * Sum number of all inquiry transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,7 +204,7 @@ public class TransactionTotals6 {
 	 */
 	public static final MMMessageAttribute mmInquiry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionTotals6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 			isDerived = false;
 			xmlTag = "Nqry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,10 +215,11 @@ public class TransactionTotals6 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "NqryRvsl")
 	protected Number inquiryReversal;
 	/**
-	 * Sum number of all reversed inquiry transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -241,7 +246,7 @@ public class TransactionTotals6 {
 	 */
 	public static final MMMessageAttribute mmInquiryReversal = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionTotals6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 			isDerived = false;
 			xmlTag = "NqryRvsl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -252,10 +257,11 @@ public class TransactionTotals6 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Pmts")
 	protected Number payments;
 	/**
-	 * Sum number of all financial presentment payment transactions processed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -284,7 +290,7 @@ public class TransactionTotals6 {
 	 */
 	public static final MMMessageAttribute mmPayments = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionTotals6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 			isDerived = false;
 			xmlTag = "Pmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -295,11 +301,11 @@ public class TransactionTotals6 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtRvsl")
 	protected Number paymentReversal;
 	/**
-	 * Sum number of all financial presentment payment transactions which have
-	 * been reversed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -328,7 +334,7 @@ public class TransactionTotals6 {
 	 */
 	public static final MMMessageAttribute mmPaymentReversal = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionTotals6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 			isDerived = false;
 			xmlTag = "PmtRvsl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -339,10 +345,11 @@ public class TransactionTotals6 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Trf")
 	protected Number transfer;
 	/**
-	 * Sum number of all financial presentment transactions processed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -370,7 +377,7 @@ public class TransactionTotals6 {
 	 */
 	public static final MMMessageAttribute mmTransfer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionTotals6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 			isDerived = false;
 			xmlTag = "Trf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -381,10 +388,11 @@ public class TransactionTotals6 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfRvsl")
 	protected Number transferReversal;
 	/**
-	 * Sum number of all reversal transactions processed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -411,7 +419,7 @@ public class TransactionTotals6 {
 	 */
 	public static final MMMessageAttribute mmTransferReversal = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionTotals6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 			isDerived = false;
 			xmlTag = "TrfRvsl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -422,10 +430,11 @@ public class TransactionTotals6 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "FeeColltn")
 	protected Number feeCollection;
 	/**
-	 * Sum number of all fee collection transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -452,7 +461,7 @@ public class TransactionTotals6 {
 	 */
 	public static final MMMessageAttribute mmFeeCollection = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionTotals6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 			isDerived = false;
 			xmlTag = "FeeColltn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -467,9 +476,11 @@ public class TransactionTotals6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionTotals6.mmAuthorisation, TransactionTotals6.mmAuthorisationReversal, TransactionTotals6.mmInquiry, TransactionTotals6.mmInquiryReversal, TransactionTotals6.mmPayments,
-						TransactionTotals6.mmPaymentReversal, TransactionTotals6.mmTransfer, TransactionTotals6.mmTransferReversal, TransactionTotals6.mmFeeCollection);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals6.mmAuthorisation, com.tools20022.repository.msg.TransactionTotals6.mmAuthorisationReversal,
+						com.tools20022.repository.msg.TransactionTotals6.mmInquiry, com.tools20022.repository.msg.TransactionTotals6.mmInquiryReversal, com.tools20022.repository.msg.TransactionTotals6.mmPayments,
+						com.tools20022.repository.msg.TransactionTotals6.mmPaymentReversal, com.tools20022.repository.msg.TransactionTotals6.mmTransfer, com.tools20022.repository.msg.TransactionTotals6.mmTransferReversal,
+						com.tools20022.repository.msg.TransactionTotals6.mmFeeCollection);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionTotals6";
 				definition = "Additional count which may be utilised for reconciliation.";
@@ -479,84 +490,84 @@ public class TransactionTotals6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Authstn")
-	public Number getAuthorisation() {
-		return authorisation;
+	public Optional<Number> getAuthorisation() {
+		return authorisation == null ? Optional.empty() : Optional.of(authorisation);
 	}
 
-	public void setAuthorisation(Number authorisation) {
+	public TransactionTotals6 setAuthorisation(Number authorisation) {
 		this.authorisation = authorisation;
+		return this;
 	}
 
-	@XmlElement(name = "AuthstnRvsl")
-	public Number getAuthorisationReversal() {
-		return authorisationReversal;
+	public Optional<Number> getAuthorisationReversal() {
+		return authorisationReversal == null ? Optional.empty() : Optional.of(authorisationReversal);
 	}
 
-	public void setAuthorisationReversal(Number authorisationReversal) {
+	public TransactionTotals6 setAuthorisationReversal(Number authorisationReversal) {
 		this.authorisationReversal = authorisationReversal;
+		return this;
 	}
 
-	@XmlElement(name = "Nqry")
-	public Number getInquiry() {
-		return inquiry;
+	public Optional<Number> getInquiry() {
+		return inquiry == null ? Optional.empty() : Optional.of(inquiry);
 	}
 
-	public void setInquiry(Number inquiry) {
+	public TransactionTotals6 setInquiry(Number inquiry) {
 		this.inquiry = inquiry;
+		return this;
 	}
 
-	@XmlElement(name = "NqryRvsl")
-	public Number getInquiryReversal() {
-		return inquiryReversal;
+	public Optional<Number> getInquiryReversal() {
+		return inquiryReversal == null ? Optional.empty() : Optional.of(inquiryReversal);
 	}
 
-	public void setInquiryReversal(Number inquiryReversal) {
+	public TransactionTotals6 setInquiryReversal(Number inquiryReversal) {
 		this.inquiryReversal = inquiryReversal;
+		return this;
 	}
 
-	@XmlElement(name = "Pmts")
-	public Number getPayments() {
-		return payments;
+	public Optional<Number> getPayments() {
+		return payments == null ? Optional.empty() : Optional.of(payments);
 	}
 
-	public void setPayments(Number payments) {
+	public TransactionTotals6 setPayments(Number payments) {
 		this.payments = payments;
+		return this;
 	}
 
-	@XmlElement(name = "PmtRvsl")
-	public Number getPaymentReversal() {
-		return paymentReversal;
+	public Optional<Number> getPaymentReversal() {
+		return paymentReversal == null ? Optional.empty() : Optional.of(paymentReversal);
 	}
 
-	public void setPaymentReversal(Number paymentReversal) {
+	public TransactionTotals6 setPaymentReversal(Number paymentReversal) {
 		this.paymentReversal = paymentReversal;
+		return this;
 	}
 
-	@XmlElement(name = "Trf")
-	public Number getTransfer() {
-		return transfer;
+	public Optional<Number> getTransfer() {
+		return transfer == null ? Optional.empty() : Optional.of(transfer);
 	}
 
-	public void setTransfer(Number transfer) {
+	public TransactionTotals6 setTransfer(Number transfer) {
 		this.transfer = transfer;
+		return this;
 	}
 
-	@XmlElement(name = "TrfRvsl")
-	public Number getTransferReversal() {
-		return transferReversal;
+	public Optional<Number> getTransferReversal() {
+		return transferReversal == null ? Optional.empty() : Optional.of(transferReversal);
 	}
 
-	public void setTransferReversal(Number transferReversal) {
+	public TransactionTotals6 setTransferReversal(Number transferReversal) {
 		this.transferReversal = transferReversal;
+		return this;
 	}
 
-	@XmlElement(name = "FeeColltn")
-	public Number getFeeCollection() {
-		return feeCollection;
+	public Optional<Number> getFeeCollection() {
+		return feeCollection == null ? Optional.empty() : Optional.of(feeCollection);
 	}
 
-	public void setFeeCollection(Number feeCollection) {
+	public TransactionTotals6 setFeeCollection(Number feeCollection) {
 		this.feeCollection = feeCollection;
+		return this;
 	}
 }

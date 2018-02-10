@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +53,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule#forMemberCriteria2
+ * ConstraintReturnCriteriaAndOrSearchCriteriaRule.forMemberCriteria2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MemberCriteria2", propOrder = {"newQueryName", "searchCriteria", "returnCriteria"})
 public class MemberCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NewQryNm")
 	protected Max35Text newQueryName;
 	/**
-	 * Name of the query defined by the search criteria and return criteria.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +112,7 @@ public class MemberCriteria2 {
 	 */
 	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MemberCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MemberCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "NewQryNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +123,11 @@ public class MemberCriteria2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SchCrit")
 	protected List<com.tools20022.repository.msg.MemberSearchCriteria2> searchCriteria;
 	/**
-	 * Defines the criteria based on which the information is extracted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -145,7 +154,7 @@ public class MemberCriteria2 {
 	 */
 	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MemberCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MemberCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "SchCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +165,11 @@ public class MemberCriteria2 {
 			type_lazy = () -> com.tools20022.repository.msg.MemberSearchCriteria2.mmObject();
 		}
 	};
+	@XmlElement(name = "RtrCrit")
 	protected MemberReturnCriteria returnCriteria;
 	/**
-	 * Defines the expected report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -185,7 +195,7 @@ public class MemberCriteria2 {
 	 */
 	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MemberCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MemberCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "RtrCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,8 +211,10 @@ public class MemberCriteria2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MemberCriteria2.mmNewQueryName, MemberCriteria2.mmSearchCriteria, MemberCriteria2.mmReturnCriteria);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberCriteria2.mmNewQueryName, com.tools20022.repository.msg.MemberCriteria2.mmSearchCriteria,
+						com.tools20022.repository.msg.MemberCriteria2.mmReturnCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule.forMemberCriteria2);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberCriteria2";
 				definition = "Defines the criteria used to search for a member and to report on the member. A name may be given to the new query.";
@@ -211,30 +223,30 @@ public class MemberCriteria2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NewQryNm")
-	public Max35Text getNewQueryName() {
-		return newQueryName;
+	public Optional<Max35Text> getNewQueryName() {
+		return newQueryName == null ? Optional.empty() : Optional.of(newQueryName);
 	}
 
-	public void setNewQueryName(Max35Text newQueryName) {
+	public MemberCriteria2 setNewQueryName(Max35Text newQueryName) {
 		this.newQueryName = newQueryName;
+		return this;
 	}
 
-	@XmlElement(name = "SchCrit")
 	public List<MemberSearchCriteria2> getSearchCriteria() {
-		return searchCriteria;
+		return searchCriteria == null ? searchCriteria = new ArrayList<>() : searchCriteria;
 	}
 
-	public void setSearchCriteria(List<com.tools20022.repository.msg.MemberSearchCriteria2> searchCriteria) {
-		this.searchCriteria = searchCriteria;
+	public MemberCriteria2 setSearchCriteria(List<com.tools20022.repository.msg.MemberSearchCriteria2> searchCriteria) {
+		this.searchCriteria = Objects.requireNonNull(searchCriteria);
+		return this;
 	}
 
-	@XmlElement(name = "RtrCrit")
-	public MemberReturnCriteria getReturnCriteria() {
-		return returnCriteria;
+	public Optional<MemberReturnCriteria> getReturnCriteria() {
+		return returnCriteria == null ? Optional.empty() : Optional.of(returnCriteria);
 	}
 
-	public void setReturnCriteria(com.tools20022.repository.msg.MemberReturnCriteria returnCriteria) {
+	public MemberCriteria2 setReturnCriteria(com.tools20022.repository.msg.MemberReturnCriteria returnCriteria) {
 		this.returnCriteria = returnCriteria;
+		return this;
 	}
 }

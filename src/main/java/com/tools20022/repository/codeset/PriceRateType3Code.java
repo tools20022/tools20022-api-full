@@ -20,39 +20,42 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PriceValueTypeCode;
+import com.tools20022.repository.codeset.PriceRateType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of price rate.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode
- * PriceValueTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceRateType3Code#mmDiscount
- * PriceRateType3Code.mmDiscount}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceRateType3Code#Discount
+ * PriceRateType3Code.Discount}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceRateType3Code#Premium
+ * PriceRateType3Code.Premium}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceRateType3Code#mmPremium
- * PriceRateType3Code.mmPremium}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceRateType3Code#mmPercentage
- * PriceRateType3Code.mmPercentage}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceRateType3Code#mmYield
- * PriceRateType3Code.mmYield}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceRateType3Code#Percentage
+ * PriceRateType3Code.Percentage}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceRateType3Code#Yield
+ * PriceRateType3Code.Yield}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode
+ * PriceValueTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of price rate."</li>
  * </ul>
  */
-public class PriceRateType3Code extends PriceValueTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PriceRateType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,11 +92,12 @@ public class PriceRateType3Code extends PriceValueTypeCode {
 	 * name} = "Discount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiscount = new MMCode() {
+	public static final PriceRateType3Code Discount = new PriceRateType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
-			owner_lazy = () -> PriceRateType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceRateType3Code.mmObject();
+			codeName = PriceValueTypeCode.Discount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -111,11 +116,12 @@ public class PriceRateType3Code extends PriceValueTypeCode {
 	 * name} = "Premium"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPremium = new MMCode() {
+	public static final PriceRateType3Code Premium = new PriceRateType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
-			owner_lazy = () -> PriceRateType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceRateType3Code.mmObject();
+			codeName = PriceValueTypeCode.Premium.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -134,11 +140,12 @@ public class PriceRateType3Code extends PriceValueTypeCode {
 	 * name} = "Percentage"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPercentage = new MMCode() {
+	public static final PriceRateType3Code Percentage = new PriceRateType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
-			owner_lazy = () -> PriceRateType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceRateType3Code.mmObject();
+			codeName = PriceValueTypeCode.Percentage.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -157,26 +164,60 @@ public class PriceRateType3Code extends PriceValueTypeCode {
 	 * name} = "Yield"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmYield = new MMCode() {
+	public static final PriceRateType3Code Yield = new PriceRateType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yield";
-			owner_lazy = () -> PriceRateType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceRateType3Code.mmObject();
+			codeName = PriceValueTypeCode.Yield.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PriceRateType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PriceRateType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DISC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceRateType3Code";
 				definition = "Specifies the type of price rate.";
-				code_lazy = () -> Arrays.asList(PriceRateType3Code.mmDiscount, PriceRateType3Code.mmPremium, PriceRateType3Code.mmPercentage, PriceRateType3Code.mmYield);
 				trace_lazy = () -> PriceValueTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceRateType3Code.Discount, com.tools20022.repository.codeset.PriceRateType3Code.Premium, com.tools20022.repository.codeset.PriceRateType3Code.Percentage,
+						com.tools20022.repository.codeset.PriceRateType3Code.Yield);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Discount.getCodeName().get(), Discount);
+		codesByName.put(Premium.getCodeName().get(), Premium);
+		codesByName.put(Percentage.getCodeName().get(), Percentage);
+		codesByName.put(Yield.getCodeName().get(), Yield);
+	}
+
+	public static PriceRateType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PriceRateType3Code[] values() {
+		PriceRateType3Code[] values = new PriceRateType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PriceRateType3Code> {
+		@Override
+		public PriceRateType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PriceRateType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

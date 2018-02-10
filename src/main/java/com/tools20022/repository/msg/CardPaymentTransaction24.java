@@ -26,9 +26,8 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,15 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * CardPaymentTransaction18}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardPaymentTransaction24", propOrder = {"authorisationResult", "transactionVerificationResult", "balance", "action", "currencyConversion"})
 public class CardPaymentTransaction24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AuthstnRslt", required = true)
 	protected AuthorisationResult1 authorisationResult;
 	/**
-	 * Outcome of the authorisation, and actions to perform.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -142,7 +142,7 @@ public class CardPaymentTransaction24 {
 	public static final MMMessageAssociationEnd mmAuthorisationResult = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmValidation;
-			componentContext_lazy = () -> CardPaymentTransaction24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction24.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnRslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,11 +156,11 @@ public class CardPaymentTransaction24 {
 			type_lazy = () -> com.tools20022.repository.msg.AuthorisationResult1.mmObject();
 		}
 	};
+	@XmlElement(name = "TxVrfctnRslt")
 	protected TransactionVerificationResult2 transactionVerificationResult;
 	/**
-	 * Result of the verifications performed by the issuer to deliver or decline
-	 * the authorisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -202,7 +202,7 @@ public class CardPaymentTransaction24 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionVerificationResult = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardPaymentTransaction24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction24.mmObject();
 			isDerived = false;
 			xmlTag = "TxVrfctnRslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,10 +216,11 @@ public class CardPaymentTransaction24 {
 			type_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult2.mmObject();
 		}
 	};
+	@XmlElement(name = "Bal")
 	protected AmountAndDirection41 balance;
 	/**
-	 * Balance of the account, related to the payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -266,7 +267,7 @@ public class CardPaymentTransaction24 {
 	public static final MMMessageAttribute mmBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmAmount;
-			componentContext_lazy = () -> CardPaymentTransaction24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction24.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,10 +280,11 @@ public class CardPaymentTransaction24 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection41.mmObject();
 		}
 	};
+	@XmlElement(name = "Actn")
 	protected List<com.tools20022.repository.msg.Action3> action;
 	/**
-	 * Set of actions to be performed by the POI (Point Of Interaction) system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -322,7 +324,7 @@ public class CardPaymentTransaction24 {
 	 */
 	public static final MMMessageAssociationEnd mmAction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardPaymentTransaction24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction24.mmObject();
 			isDerived = false;
 			xmlTag = "Actn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -335,12 +337,11 @@ public class CardPaymentTransaction24 {
 			type_lazy = () -> com.tools20022.repository.msg.Action3.mmObject();
 		}
 	};
+	@XmlElement(name = "CcyConvs")
 	protected CurrencyConversion1 currencyConversion;
 	/**
-	 * Conversion between the currency of a card acceptor and the currency of a
-	 * card issuer, provided by a dedicated service provider. The currency
-	 * conversion has to be accepted by the cardholder.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -382,7 +383,7 @@ public class CardPaymentTransaction24 {
 	public static final MMMessageAssociationEnd mmCurrencyConversion = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
-			componentContext_lazy = () -> CardPaymentTransaction24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction24.mmObject();
 			isDerived = false;
 			xmlTag = "CcyConvs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -399,10 +400,10 @@ public class CardPaymentTransaction24 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardPaymentTransaction24.mmAuthorisationResult, CardPaymentTransaction24.mmTransactionVerificationResult, CardPaymentTransaction24.mmBalance, CardPaymentTransaction24.mmAction,
-						CardPaymentTransaction24.mmCurrencyConversion);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction24.mmAuthorisationResult, com.tools20022.repository.msg.CardPaymentTransaction24.mmTransactionVerificationResult,
+						com.tools20022.repository.msg.CardPaymentTransaction24.mmBalance, com.tools20022.repository.msg.CardPaymentTransaction24.mmAction, com.tools20022.repository.msg.CardPaymentTransaction24.mmCurrencyConversion);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentTransaction24";
 				definition = "Authorisation response from the acquirer.";
@@ -413,48 +414,48 @@ public class CardPaymentTransaction24 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AuthstnRslt", required = true)
 	public AuthorisationResult1 getAuthorisationResult() {
 		return authorisationResult;
 	}
 
-	public void setAuthorisationResult(com.tools20022.repository.msg.AuthorisationResult1 authorisationResult) {
-		this.authorisationResult = authorisationResult;
+	public CardPaymentTransaction24 setAuthorisationResult(com.tools20022.repository.msg.AuthorisationResult1 authorisationResult) {
+		this.authorisationResult = Objects.requireNonNull(authorisationResult);
+		return this;
 	}
 
-	@XmlElement(name = "TxVrfctnRslt")
-	public TransactionVerificationResult2 getTransactionVerificationResult() {
-		return transactionVerificationResult;
+	public Optional<TransactionVerificationResult2> getTransactionVerificationResult() {
+		return transactionVerificationResult == null ? Optional.empty() : Optional.of(transactionVerificationResult);
 	}
 
-	public void setTransactionVerificationResult(com.tools20022.repository.msg.TransactionVerificationResult2 transactionVerificationResult) {
+	public CardPaymentTransaction24 setTransactionVerificationResult(com.tools20022.repository.msg.TransactionVerificationResult2 transactionVerificationResult) {
 		this.transactionVerificationResult = transactionVerificationResult;
+		return this;
 	}
 
-	@XmlElement(name = "Bal")
-	public AmountAndDirection41 getBalance() {
-		return balance;
+	public Optional<AmountAndDirection41> getBalance() {
+		return balance == null ? Optional.empty() : Optional.of(balance);
 	}
 
-	public void setBalance(com.tools20022.repository.msg.AmountAndDirection41 balance) {
+	public CardPaymentTransaction24 setBalance(com.tools20022.repository.msg.AmountAndDirection41 balance) {
 		this.balance = balance;
+		return this;
 	}
 
-	@XmlElement(name = "Actn")
 	public List<Action3> getAction() {
-		return action;
+		return action == null ? action = new ArrayList<>() : action;
 	}
 
-	public void setAction(List<com.tools20022.repository.msg.Action3> action) {
-		this.action = action;
+	public CardPaymentTransaction24 setAction(List<com.tools20022.repository.msg.Action3> action) {
+		this.action = Objects.requireNonNull(action);
+		return this;
 	}
 
-	@XmlElement(name = "CcyConvs")
-	public CurrencyConversion1 getCurrencyConversion() {
-		return currencyConversion;
+	public Optional<CurrencyConversion1> getCurrencyConversion() {
+		return currencyConversion == null ? Optional.empty() : Optional.of(currencyConversion);
 	}
 
-	public void setCurrencyConversion(com.tools20022.repository.msg.CurrencyConversion1 currencyConversion) {
+	public CardPaymentTransaction24 setCurrencyConversion(com.tools20022.repository.msg.CurrencyConversion1 currencyConversion) {
 		this.currencyConversion = currencyConversion;
+		return this;
 	}
 }

@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Spread;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintValidISINRule#forFinancialInstrument46Choice
+ * ConstraintValidISINRule.forFinancialInstrument46Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,16 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies underlying instruments or index a derivative has."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "FinancialInstrument46Choice", propOrder = {"ISIN", "index"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "FinancialInstrument46Choice", propOrder = {"iSIN", "index"})
 public class FinancialInstrument46Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ISIN", required = true)
 	protected ISINOct2015Identifier iSIN;
 	/**
-	 * Identifies the financial instrument using an International Securities
-	 * Identification Number (ISIN).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +121,7 @@ public class FinancialInstrument46Choice {
 	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
-			componentContext_lazy = () -> FinancialInstrument46Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrument46Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ISIN";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +132,11 @@ public class FinancialInstrument46Choice {
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Indx", required = true)
 	protected BenchmarkCurveName2Code index;
 	/**
-	 * Name of the index on which the financial instrument is based.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +171,7 @@ public class FinancialInstrument46Choice {
 	public static final MMMessageAttribute mmIndex = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Spread.mmIndex;
-			componentContext_lazy = () -> FinancialInstrument46Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrument46Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Indx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,9 +186,10 @@ public class FinancialInstrument46Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrument46Choice.mmISIN, FinancialInstrument46Choice.mmIndex);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrument46Choice.mmISIN, com.tools20022.repository.choice.FinancialInstrument46Choice.mmIndex);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintValidISINRule.forFinancialInstrument46Choice);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument46Choice";
 				definition = "Specifies underlying instruments or index a derivative has.";
@@ -187,21 +198,21 @@ public class FinancialInstrument46Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ISIN", required = true)
 	public ISINOct2015Identifier getISIN() {
 		return iSIN;
 	}
 
-	public void setISIN(ISINOct2015Identifier iSIN) {
-		this.iSIN = iSIN;
+	public FinancialInstrument46Choice setISIN(ISINOct2015Identifier iSIN) {
+		this.iSIN = Objects.requireNonNull(iSIN);
+		return this;
 	}
 
-	@XmlElement(name = "Indx", required = true)
 	public BenchmarkCurveName2Code getIndex() {
 		return index;
 	}
 
-	public void setIndex(BenchmarkCurveName2Code index) {
-		this.index = index;
+	public FinancialInstrument46Choice setIndex(BenchmarkCurveName2Code index) {
+		this.index = Objects.requireNonNull(index);
+		return this;
 	}
 }

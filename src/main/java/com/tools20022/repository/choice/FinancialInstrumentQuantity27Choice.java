@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.InvestmentFundOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrumentQuantity27Choice", propOrder = {"unitsNumber", "grossAmount", "netAmount"})
 public class FinancialInstrumentQuantity27Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UnitsNb", required = true)
 	protected DecimalNumber unitsNumber;
 	/**
-	 * Number of investment fund units to be subscribed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -127,7 +129,7 @@ public class FinancialInstrumentQuantity27Choice {
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmUnitsNumber;
-			componentContext_lazy = () -> FinancialInstrumentQuantity27Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,12 +141,11 @@ public class FinancialInstrumentQuantity27Choice {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "GrssAmt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount grossAmount;
 	/**
-	 * Amount of money to be paid by the investor when subscribing to fund
-	 * units. <br>
-	 * Gross amount = (Quantity * Price) + (Fees + Taxes).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,7 +189,7 @@ public class FinancialInstrumentQuantity27Choice {
 	public static final MMMessageAttribute mmGrossAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmGrossAmount;
-			componentContext_lazy = () -> FinancialInstrumentQuantity27Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice.mmObject();
 			isDerived = false;
 			xmlTag = "GrssAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,11 +201,11 @@ public class FinancialInstrumentQuantity27Choice {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "NetAmt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount netAmount;
 	/**
-	 * Amount of money to be invested in the fund. <br>
-	 * Net Amount = Quantity * Price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -248,7 +249,7 @@ public class FinancialInstrumentQuantity27Choice {
 	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmNetAmount;
-			componentContext_lazy = () -> FinancialInstrumentQuantity27Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NetAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -264,8 +265,9 @@ public class FinancialInstrumentQuantity27Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentQuantity27Choice.mmUnitsNumber, FinancialInstrumentQuantity27Choice.mmGrossAmount, FinancialInstrumentQuantity27Choice.mmNetAmount);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice.mmUnitsNumber, com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice.mmGrossAmount,
+						com.tools20022.repository.choice.FinancialInstrumentQuantity27Choice.mmNetAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentQuantity27Choice";
 				definition = "Choice between formats for the specification of the number of units or amount of money.";
@@ -275,30 +277,30 @@ public class FinancialInstrumentQuantity27Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UnitsNb", required = true)
 	public DecimalNumber getUnitsNumber() {
 		return unitsNumber;
 	}
 
-	public void setUnitsNumber(DecimalNumber unitsNumber) {
-		this.unitsNumber = unitsNumber;
+	public FinancialInstrumentQuantity27Choice setUnitsNumber(DecimalNumber unitsNumber) {
+		this.unitsNumber = Objects.requireNonNull(unitsNumber);
+		return this;
 	}
 
-	@XmlElement(name = "GrssAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getGrossAmount() {
 		return grossAmount;
 	}
 
-	public void setGrossAmount(ActiveOrHistoricCurrencyAndAmount grossAmount) {
-		this.grossAmount = grossAmount;
+	public FinancialInstrumentQuantity27Choice setGrossAmount(ActiveOrHistoricCurrencyAndAmount grossAmount) {
+		this.grossAmount = Objects.requireNonNull(grossAmount);
+		return this;
 	}
 
-	@XmlElement(name = "NetAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
 
-	public void setNetAmount(ActiveOrHistoricCurrencyAndAmount netAmount) {
-		this.netAmount = netAmount;
+	public FinancialInstrumentQuantity27Choice setNetAmount(ActiveOrHistoricCurrencyAndAmount netAmount) {
+		this.netAmount = Objects.requireNonNull(netAmount);
+		return this;
 	}
 }

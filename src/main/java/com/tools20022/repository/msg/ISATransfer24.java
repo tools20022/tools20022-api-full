@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification70Choice;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -83,8 +82,31 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintISARule#forISATransfer24
+ * ConstraintISARule.forISATransfer24}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPortfolioRule#forISATransfer24
+ * ConstraintPortfolioRule.forISATransfer24}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forISATransfer24
+ * ConstraintInvestorRule.forISATransfer24}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateRule#forISATransfer24
+ * ConstraintCorporateRule.forISATransfer24}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forISATransfer24
+ * ConstraintDesignationRule.forISATransfer24}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forISATransfer24
+ * ConstraintNomineeAccountServicerRule.forISATransfer24}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,17 +121,17 @@ import javax.xml.bind.annotation.XmlType;
  * ISATransfer19}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ISATransfer24", propOrder = {"primaryIndividualInvestor", "secondaryIndividualInvestor", "otherIndividualInvestor", "primaryCorporateInvestor", "secondaryCorporateInvestor", "otherCorporateInvestor", "transferorAccount",
 		"nomineeAccount", "transferee", "intermediaryInformation", "cashAccount", "productTransferAndReference", "extension"})
 public class ISATransfer24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmryIndvInvstr")
 	protected IndividualPerson8 primaryIndividualInvestor;
 	/**
-	 * Information identifying the primary individual investor, for example,
-	 * name, address, social security number and date of birth.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -146,7 +168,7 @@ public class ISATransfer24 {
 	public static final MMMessageAssociationEnd mmPrimaryIndividualInvestor = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
-			componentContext_lazy = () -> ISATransfer24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer24.mmObject();
 			isDerived = false;
 			xmlTag = "PmryIndvInvstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,11 +181,11 @@ public class ISATransfer24 {
 			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson8.mmObject();
 		}
 	};
+	@XmlElement(name = "ScndryIndvInvstr")
 	protected IndividualPerson8 secondaryIndividualInvestor;
 	/**
-	 * Information identifying the secondary individual investor, for example,
-	 * name, address, social security number and date of birth.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -200,7 +222,7 @@ public class ISATransfer24 {
 	public static final MMMessageAssociationEnd mmSecondaryIndividualInvestor = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
-			componentContext_lazy = () -> ISATransfer24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer24.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryIndvInvstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,11 +235,11 @@ public class ISATransfer24 {
 			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson8.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrIndvInvstr")
 	protected List<com.tools20022.repository.msg.IndividualPerson8> otherIndividualInvestor;
 	/**
-	 * Information identifying the other individual investors, for example,
-	 * name, address, social security number and date of birth.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -254,7 +276,7 @@ public class ISATransfer24 {
 	public static final MMMessageAssociationEnd mmOtherIndividualInvestor = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
-			componentContext_lazy = () -> ISATransfer24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer24.mmObject();
 			isDerived = false;
 			xmlTag = "OthrIndvInvstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,11 +288,11 @@ public class ISATransfer24 {
 			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson8.mmObject();
 		}
 	};
+	@XmlElement(name = "PmryCorpInvstr")
 	protected Organisation21 primaryCorporateInvestor;
 	/**
-	 * Information identifying the primary corporate investor, for example, name
-	 * and address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -307,7 +329,7 @@ public class ISATransfer24 {
 	public static final MMMessageAssociationEnd mmPrimaryCorporateInvestor = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
-			componentContext_lazy = () -> ISATransfer24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer24.mmObject();
 			isDerived = false;
 			xmlTag = "PmryCorpInvstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -320,11 +342,11 @@ public class ISATransfer24 {
 			type_lazy = () -> com.tools20022.repository.msg.Organisation21.mmObject();
 		}
 	};
+	@XmlElement(name = "ScndryCorpInvstr")
 	protected Organisation21 secondaryCorporateInvestor;
 	/**
-	 * Information identifying the secondary corporate investor, for example,
-	 * name and address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -361,7 +383,7 @@ public class ISATransfer24 {
 	public static final MMMessageAssociationEnd mmSecondaryCorporateInvestor = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
-			componentContext_lazy = () -> ISATransfer24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer24.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryCorpInvstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -374,11 +396,11 @@ public class ISATransfer24 {
 			type_lazy = () -> com.tools20022.repository.msg.Organisation21.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrCorpInvstr")
 	protected List<com.tools20022.repository.msg.Organisation21> otherCorporateInvestor;
 	/**
-	 * Information identifying the other corporate investors, for example, name
-	 * and address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -415,7 +437,7 @@ public class ISATransfer24 {
 	public static final MMMessageAssociationEnd mmOtherCorporateInvestor = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
-			componentContext_lazy = () -> ISATransfer24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer24.mmObject();
 			isDerived = false;
 			xmlTag = "OthrCorpInvstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -427,11 +449,11 @@ public class ISATransfer24 {
 			type_lazy = () -> com.tools20022.repository.msg.Organisation21.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfrAcct", required = true)
 	protected Account19 transferorAccount;
 	/**
-	 * Identification of an account owned by the investor at the old plan
-	 * manager (account servicer).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -468,7 +490,7 @@ public class ISATransfer24 {
 	public static final MMMessageAssociationEnd mmTransferorAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmAccountFrom;
-			componentContext_lazy = () -> ISATransfer24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer24.mmObject();
 			isDerived = false;
 			xmlTag = "TrfrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -481,11 +503,11 @@ public class ISATransfer24 {
 			type_lazy = () -> com.tools20022.repository.msg.Account19.mmObject();
 		}
 	};
+	@XmlElement(name = "NmneeAcct")
 	protected Account19 nomineeAccount;
 	/**
-	 * Account held in the name of a party that is not the name of the
-	 * beneficial owner of the shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -522,7 +544,7 @@ public class ISATransfer24 {
 	public static final MMMessageAssociationEnd mmNomineeAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmNomineeAccount;
-			componentContext_lazy = () -> ISATransfer24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer24.mmObject();
 			isDerived = false;
 			xmlTag = "NmneeAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -535,11 +557,11 @@ public class ISATransfer24 {
 			type_lazy = () -> com.tools20022.repository.msg.Account19.mmObject();
 		}
 	};
+	@XmlElement(name = "Trfee", required = true)
 	protected PartyIdentification70Choice transferee;
 	/**
-	 * Information related to the institution to which the financial instrument
-	 * is to be transferred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -578,7 +600,7 @@ public class ISATransfer24 {
 	public static final MMMessageAssociationEnd mmTransferee = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> ISATransfer24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer24.mmObject();
 			isDerived = false;
 			xmlTag = "Trfee";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -591,10 +613,11 @@ public class ISATransfer24 {
 			type_lazy = () -> PartyIdentification70Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrmyInf")
 	protected List<com.tools20022.repository.msg.Intermediary34> intermediaryInformation;
 	/**
-	 * Identification of a related party or intermediary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -619,7 +642,7 @@ public class ISATransfer24 {
 	 */
 	public static final MMMessageAssociationEnd mmIntermediaryInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ISATransfer24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer24.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -630,11 +653,11 @@ public class ISATransfer24 {
 			type_lazy = () -> com.tools20022.repository.msg.Intermediary34.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAcct")
 	protected CashAccount34 cashAccount;
 	/**
-	 * Identification of an account owned by the investor to which a cash entry
-	 * is made based on the transfer of asset(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -672,7 +695,7 @@ public class ISATransfer24 {
 	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmCashAccount;
-			componentContext_lazy = () -> ISATransfer24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer24.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -685,10 +708,11 @@ public class ISATransfer24 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount34.mmObject();
 		}
 	};
+	@XmlElement(name = "PdctTrfAndRef", required = true)
 	protected ISATransfer25 productTransferAndReference;
 	/**
-	 * Details of the transfer to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -724,7 +748,7 @@ public class ISATransfer24 {
 	public static final MMMessageAssociationEnd mmProductTransferAndReference = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
-			componentContext_lazy = () -> ISATransfer24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer24.mmObject();
 			isDerived = false;
 			xmlTag = "PdctTrfAndRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -737,11 +761,11 @@ public class ISATransfer24 {
 			type_lazy = () -> com.tools20022.repository.msg.ISATransfer25.mmObject();
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -772,7 +796,7 @@ public class ISATransfer24 {
 	 */
 	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ISATransfer24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer24.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -788,11 +812,16 @@ public class ISATransfer24 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ISATransfer24.mmPrimaryIndividualInvestor, ISATransfer24.mmSecondaryIndividualInvestor, ISATransfer24.mmOtherIndividualInvestor, ISATransfer24.mmPrimaryCorporateInvestor,
-						ISATransfer24.mmSecondaryCorporateInvestor, ISATransfer24.mmOtherCorporateInvestor, ISATransfer24.mmTransferorAccount, ISATransfer24.mmNomineeAccount, ISATransfer24.mmTransferee,
-						ISATransfer24.mmIntermediaryInformation, ISATransfer24.mmCashAccount, ISATransfer24.mmProductTransferAndReference, ISATransfer24.mmExtension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer24.mmPrimaryIndividualInvestor, com.tools20022.repository.msg.ISATransfer24.mmSecondaryIndividualInvestor,
+						com.tools20022.repository.msg.ISATransfer24.mmOtherIndividualInvestor, com.tools20022.repository.msg.ISATransfer24.mmPrimaryCorporateInvestor,
+						com.tools20022.repository.msg.ISATransfer24.mmSecondaryCorporateInvestor, com.tools20022.repository.msg.ISATransfer24.mmOtherCorporateInvestor, com.tools20022.repository.msg.ISATransfer24.mmTransferorAccount,
+						com.tools20022.repository.msg.ISATransfer24.mmNomineeAccount, com.tools20022.repository.msg.ISATransfer24.mmTransferee, com.tools20022.repository.msg.ISATransfer24.mmIntermediaryInformation,
+						com.tools20022.repository.msg.ISATransfer24.mmCashAccount, com.tools20022.repository.msg.ISATransfer24.mmProductTransferAndReference, com.tools20022.repository.msg.ISATransfer24.mmExtension);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintISARule.forISATransfer24, com.tools20022.repository.constraints.ConstraintPortfolioRule.forISATransfer24,
+						com.tools20022.repository.constraints.ConstraintInvestorRule.forISATransfer24, com.tools20022.repository.constraints.ConstraintCorporateRule.forISATransfer24,
+						com.tools20022.repository.constraints.ConstraintDesignationRule.forISATransfer24, com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forISATransfer24);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ISATransfer24";
 				definition = "Describes the type of product and the assets to be transferred.";
@@ -802,120 +831,120 @@ public class ISATransfer24 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmryIndvInvstr")
-	public IndividualPerson8 getPrimaryIndividualInvestor() {
-		return primaryIndividualInvestor;
+	public Optional<IndividualPerson8> getPrimaryIndividualInvestor() {
+		return primaryIndividualInvestor == null ? Optional.empty() : Optional.of(primaryIndividualInvestor);
 	}
 
-	public void setPrimaryIndividualInvestor(com.tools20022.repository.msg.IndividualPerson8 primaryIndividualInvestor) {
+	public ISATransfer24 setPrimaryIndividualInvestor(com.tools20022.repository.msg.IndividualPerson8 primaryIndividualInvestor) {
 		this.primaryIndividualInvestor = primaryIndividualInvestor;
+		return this;
 	}
 
-	@XmlElement(name = "ScndryIndvInvstr")
-	public IndividualPerson8 getSecondaryIndividualInvestor() {
-		return secondaryIndividualInvestor;
+	public Optional<IndividualPerson8> getSecondaryIndividualInvestor() {
+		return secondaryIndividualInvestor == null ? Optional.empty() : Optional.of(secondaryIndividualInvestor);
 	}
 
-	public void setSecondaryIndividualInvestor(com.tools20022.repository.msg.IndividualPerson8 secondaryIndividualInvestor) {
+	public ISATransfer24 setSecondaryIndividualInvestor(com.tools20022.repository.msg.IndividualPerson8 secondaryIndividualInvestor) {
 		this.secondaryIndividualInvestor = secondaryIndividualInvestor;
+		return this;
 	}
 
-	@XmlElement(name = "OthrIndvInvstr")
 	public List<IndividualPerson8> getOtherIndividualInvestor() {
-		return otherIndividualInvestor;
+		return otherIndividualInvestor == null ? otherIndividualInvestor = new ArrayList<>() : otherIndividualInvestor;
 	}
 
-	public void setOtherIndividualInvestor(List<com.tools20022.repository.msg.IndividualPerson8> otherIndividualInvestor) {
-		this.otherIndividualInvestor = otherIndividualInvestor;
+	public ISATransfer24 setOtherIndividualInvestor(List<com.tools20022.repository.msg.IndividualPerson8> otherIndividualInvestor) {
+		this.otherIndividualInvestor = Objects.requireNonNull(otherIndividualInvestor);
+		return this;
 	}
 
-	@XmlElement(name = "PmryCorpInvstr")
-	public Organisation21 getPrimaryCorporateInvestor() {
-		return primaryCorporateInvestor;
+	public Optional<Organisation21> getPrimaryCorporateInvestor() {
+		return primaryCorporateInvestor == null ? Optional.empty() : Optional.of(primaryCorporateInvestor);
 	}
 
-	public void setPrimaryCorporateInvestor(com.tools20022.repository.msg.Organisation21 primaryCorporateInvestor) {
+	public ISATransfer24 setPrimaryCorporateInvestor(com.tools20022.repository.msg.Organisation21 primaryCorporateInvestor) {
 		this.primaryCorporateInvestor = primaryCorporateInvestor;
+		return this;
 	}
 
-	@XmlElement(name = "ScndryCorpInvstr")
-	public Organisation21 getSecondaryCorporateInvestor() {
-		return secondaryCorporateInvestor;
+	public Optional<Organisation21> getSecondaryCorporateInvestor() {
+		return secondaryCorporateInvestor == null ? Optional.empty() : Optional.of(secondaryCorporateInvestor);
 	}
 
-	public void setSecondaryCorporateInvestor(com.tools20022.repository.msg.Organisation21 secondaryCorporateInvestor) {
+	public ISATransfer24 setSecondaryCorporateInvestor(com.tools20022.repository.msg.Organisation21 secondaryCorporateInvestor) {
 		this.secondaryCorporateInvestor = secondaryCorporateInvestor;
+		return this;
 	}
 
-	@XmlElement(name = "OthrCorpInvstr")
 	public List<Organisation21> getOtherCorporateInvestor() {
-		return otherCorporateInvestor;
+		return otherCorporateInvestor == null ? otherCorporateInvestor = new ArrayList<>() : otherCorporateInvestor;
 	}
 
-	public void setOtherCorporateInvestor(List<com.tools20022.repository.msg.Organisation21> otherCorporateInvestor) {
-		this.otherCorporateInvestor = otherCorporateInvestor;
+	public ISATransfer24 setOtherCorporateInvestor(List<com.tools20022.repository.msg.Organisation21> otherCorporateInvestor) {
+		this.otherCorporateInvestor = Objects.requireNonNull(otherCorporateInvestor);
+		return this;
 	}
 
-	@XmlElement(name = "TrfrAcct", required = true)
 	public Account19 getTransferorAccount() {
 		return transferorAccount;
 	}
 
-	public void setTransferorAccount(com.tools20022.repository.msg.Account19 transferorAccount) {
-		this.transferorAccount = transferorAccount;
+	public ISATransfer24 setTransferorAccount(com.tools20022.repository.msg.Account19 transferorAccount) {
+		this.transferorAccount = Objects.requireNonNull(transferorAccount);
+		return this;
 	}
 
-	@XmlElement(name = "NmneeAcct")
-	public Account19 getNomineeAccount() {
-		return nomineeAccount;
+	public Optional<Account19> getNomineeAccount() {
+		return nomineeAccount == null ? Optional.empty() : Optional.of(nomineeAccount);
 	}
 
-	public void setNomineeAccount(com.tools20022.repository.msg.Account19 nomineeAccount) {
+	public ISATransfer24 setNomineeAccount(com.tools20022.repository.msg.Account19 nomineeAccount) {
 		this.nomineeAccount = nomineeAccount;
+		return this;
 	}
 
-	@XmlElement(name = "Trfee", required = true)
 	public PartyIdentification70Choice getTransferee() {
 		return transferee;
 	}
 
-	public void setTransferee(PartyIdentification70Choice transferee) {
-		this.transferee = transferee;
+	public ISATransfer24 setTransferee(PartyIdentification70Choice transferee) {
+		this.transferee = Objects.requireNonNull(transferee);
+		return this;
 	}
 
-	@XmlElement(name = "IntrmyInf")
 	public List<Intermediary34> getIntermediaryInformation() {
-		return intermediaryInformation;
+		return intermediaryInformation == null ? intermediaryInformation = new ArrayList<>() : intermediaryInformation;
 	}
 
-	public void setIntermediaryInformation(List<com.tools20022.repository.msg.Intermediary34> intermediaryInformation) {
-		this.intermediaryInformation = intermediaryInformation;
+	public ISATransfer24 setIntermediaryInformation(List<com.tools20022.repository.msg.Intermediary34> intermediaryInformation) {
+		this.intermediaryInformation = Objects.requireNonNull(intermediaryInformation);
+		return this;
 	}
 
-	@XmlElement(name = "CshAcct")
-	public CashAccount34 getCashAccount() {
-		return cashAccount;
+	public Optional<CashAccount34> getCashAccount() {
+		return cashAccount == null ? Optional.empty() : Optional.of(cashAccount);
 	}
 
-	public void setCashAccount(com.tools20022.repository.msg.CashAccount34 cashAccount) {
+	public ISATransfer24 setCashAccount(com.tools20022.repository.msg.CashAccount34 cashAccount) {
 		this.cashAccount = cashAccount;
+		return this;
 	}
 
-	@XmlElement(name = "PdctTrfAndRef", required = true)
 	public ISATransfer25 getProductTransferAndReference() {
 		return productTransferAndReference;
 	}
 
-	public void setProductTransferAndReference(com.tools20022.repository.msg.ISATransfer25 productTransferAndReference) {
-		this.productTransferAndReference = productTransferAndReference;
+	public ISATransfer24 setProductTransferAndReference(com.tools20022.repository.msg.ISATransfer25 productTransferAndReference) {
+		this.productTransferAndReference = Objects.requireNonNull(productTransferAndReference);
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
-		this.extension = extension;
+	public ISATransfer24 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 }

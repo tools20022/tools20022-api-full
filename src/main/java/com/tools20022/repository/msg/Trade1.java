@@ -27,9 +27,8 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -86,8 +85,40 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintForeignExchangeDetailsRule#forTrade1
+ * ConstraintForeignExchangeDetailsRule.forTrade1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSwapLegRule#forTrade1
+ * ConstraintSwapLegRule.forTrade1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintForeignExchangeTradeProductAndOptionRule1#forTrade1
+ * ConstraintForeignExchangeTradeProductAndOptionRule1.forTrade1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintForeignExchangeTradeProductAndOptionRule2#forTrade1
+ * ConstraintForeignExchangeTradeProductAndOptionRule2.forTrade1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOptionIndicatiorRule#forTrade1
+ * ConstraintOptionIndicatiorRule.forTrade1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeltaIndicatorRule#forTrade1
+ * ConstraintDeltaIndicatorRule.forTrade1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintFixingCurrencyAndFixingDateRule#forTrade1
+ * ConstraintFixingCurrencyAndFixingDateRule.forTrade1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintForwardPointsRule#forTrade1
+ * ConstraintForwardPointsRule.forTrade1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintForeignExchangeTradeProductRule#forTrade1
+ * ConstraintForeignExchangeTradeProductRule.forTrade1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,18 +129,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of the treasury trade captured."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Trade1", propOrder = {"tradeIdentification", "dateAndTime", "foreignExchangeTradeProduct", "tradingCurrency", "settlementCurrency", "tradingMethod", "tradingMode", "clearingMethod", "executionType", "symbol",
 		"placeOfConfirmation", "transactionTime", "foreignExchangeDetails", "swapLeg", "option", "productIdentification"})
 public class Trade1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradId", required = true)
 	protected Max35Text tradeIdentification;
 	/**
-	 * Unique reference identification assigned to the trade by the instructing
-	 * party. This reference will be used throughout the trade life cycle to
-	 * identify the particular trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,7 +167,7 @@ public class Trade1 {
 	 */
 	public static final MMMessageAttribute mmTradeIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade1.mmObject();
 			isDerived = false;
 			xmlTag = "TradId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,10 +178,11 @@ public class Trade1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DtAndTm", required = true)
 	protected ISODateTime dateAndTime;
 	/**
-	 * Date and time at which the trade was executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,7 +214,7 @@ public class Trade1 {
 	public static final MMMessageAttribute mmDateAndTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> Trade1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade1.mmObject();
 			isDerived = false;
 			xmlTag = "DtAndTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,10 +225,11 @@ public class Trade1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "FXTradPdct")
 	protected UnderlyingProductIdentifier1Code foreignExchangeTradeProduct;
 	/**
-	 * Specifies the underlying product type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -224,7 +256,7 @@ public class Trade1 {
 	 */
 	public static final MMMessageAttribute mmForeignExchangeTradeProduct = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade1.mmObject();
 			isDerived = false;
 			xmlTag = "FXTradPdct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -235,10 +267,11 @@ public class Trade1 {
 			simpleType_lazy = () -> UnderlyingProductIdentifier1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgCcy")
 	protected CurrencyCode tradingCurrency;
 	/**
-	 * Specifies the ISO code of the trade currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -270,7 +303,7 @@ public class Trade1 {
 	public static final MMMessageAttribute mmTradingCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmTradingCurrency;
-			componentContext_lazy = () -> Trade1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,10 +314,11 @@ public class Trade1 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmCcy")
 	protected CurrencyCode settlementCurrency;
 	/**
-	 * Settlement currency of the trade, agreed by both sides of the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -311,7 +345,7 @@ public class Trade1 {
 	 */
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -322,10 +356,11 @@ public class Trade1 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgMtd", required = true)
 	protected TradingMethodType1Code tradingMethod;
 	/**
-	 * Identifies the type of trading method.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -352,7 +387,7 @@ public class Trade1 {
 	 */
 	public static final MMMessageAttribute mmTradingMethod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -363,10 +398,11 @@ public class Trade1 {
 			simpleType_lazy = () -> TradingMethodType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgMd")
 	protected TradingModeType1Code tradingMode;
 	/**
-	 * Identifies the type of the trade mode.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -393,7 +429,7 @@ public class Trade1 {
 	 */
 	public static final MMMessageAttribute mmTradingMode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgMd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -404,10 +440,11 @@ public class Trade1 {
 			simpleType_lazy = () -> TradingModeType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ClrMtd", required = true)
 	protected ClearingMethod1Code clearingMethod;
 	/**
-	 * Clearing method of the trade, agreed by both sides of the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -435,7 +472,7 @@ public class Trade1 {
 	 */
 	public static final MMMessageAttribute mmClearingMethod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -446,10 +483,11 @@ public class Trade1 {
 			simpleType_lazy = () -> ClearingMethod1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ExctnTp", required = true)
 	protected OrderStatus8Code executionType;
 	/**
-	 * Identifies current status of the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -476,7 +514,7 @@ public class Trade1 {
 	 */
 	public static final MMMessageAttribute mmExecutionType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade1.mmObject();
 			isDerived = false;
 			xmlTag = "ExctnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -487,10 +525,11 @@ public class Trade1 {
 			simpleType_lazy = () -> OrderStatus8Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Symb", required = true)
 	protected Max35Text symbol;
 	/**
-	 * Symbol of the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -516,7 +555,7 @@ public class Trade1 {
 	 */
 	public static final MMMessageAttribute mmSymbol = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade1.mmObject();
 			isDerived = false;
 			xmlTag = "Symb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -527,10 +566,11 @@ public class Trade1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfConf")
 	protected Max35Text placeOfConfirmation;
 	/**
-	 * Infrastructure where the trade confirmation will take place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -563,7 +603,7 @@ public class Trade1 {
 	public static final MMMessageAttribute mmPlaceOfConfirmation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Market.mmGeographicalEnvironment;
-			componentContext_lazy = () -> Trade1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfConf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -574,10 +614,11 @@ public class Trade1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TxTm")
 	protected ISODateTime transactionTime;
 	/**
-	 * Date and time at which the message was executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -603,7 +644,7 @@ public class Trade1 {
 	 */
 	public static final MMMessageAttribute mmTransactionTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade1.mmObject();
 			isDerived = false;
 			xmlTag = "TxTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -614,11 +655,11 @@ public class Trade1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "FXDtls")
 	protected Trade3 foreignExchangeDetails;
 	/**
-	 * Provides details of the foreign exchange trade including Spot Forward and
-	 * NDF.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -644,7 +685,7 @@ public class Trade1 {
 	 */
 	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Trade1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade1.mmObject();
 			isDerived = false;
 			xmlTag = "FXDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -656,11 +697,11 @@ public class Trade1 {
 			type_lazy = () -> com.tools20022.repository.msg.Trade3.mmObject();
 		}
 	};
+	@XmlElement(name = "SwpLeg")
 	protected List<com.tools20022.repository.msg.InstrumentLeg6> swapLeg;
 	/**
-	 * Provides details about each leg of the multileg instrument (foreign
-	 * exchange swap).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -687,7 +728,7 @@ public class Trade1 {
 	 */
 	public static final MMMessageAssociationEnd mmSwapLeg = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Trade1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade1.mmObject();
 			isDerived = false;
 			xmlTag = "SwpLeg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -698,10 +739,11 @@ public class Trade1 {
 			type_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 		}
 	};
+	@XmlElement(name = "Optn")
 	protected Option10 option;
 	/**
-	 * Specifies the parameters of the foreign exchange option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -725,7 +767,7 @@ public class Trade1 {
 	 */
 	public static final MMMessageAssociationEnd mmOption = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Trade1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade1.mmObject();
 			isDerived = false;
 			xmlTag = "Optn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -737,11 +779,11 @@ public class Trade1 {
 			type_lazy = () -> com.tools20022.repository.msg.Option10.mmObject();
 		}
 	};
+	@XmlElement(name = "PdctId")
 	protected SecurityIdentification22Choice productIdentification;
 	/**
-	 * Identification of the treasury trade product, as assigned under a formal
-	 * or proprietary identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -775,7 +817,7 @@ public class Trade1 {
 	public static final MMMessageAssociationEnd mmProductIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
-			componentContext_lazy = () -> Trade1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade1.mmObject();
 			isDerived = false;
 			xmlTag = "PdctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -791,11 +833,18 @@ public class Trade1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Trade1.mmTradeIdentification, Trade1.mmDateAndTime, Trade1.mmForeignExchangeTradeProduct, Trade1.mmTradingCurrency, Trade1.mmSettlementCurrency, Trade1.mmTradingMethod,
-						Trade1.mmTradingMode, Trade1.mmClearingMethod, Trade1.mmExecutionType, Trade1.mmSymbol, Trade1.mmPlaceOfConfirmation, Trade1.mmTransactionTime, Trade1.mmForeignExchangeDetails, Trade1.mmSwapLeg, Trade1.mmOption,
-						Trade1.mmProductIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Trade1.mmTradeIdentification, com.tools20022.repository.msg.Trade1.mmDateAndTime, com.tools20022.repository.msg.Trade1.mmForeignExchangeTradeProduct,
+						com.tools20022.repository.msg.Trade1.mmTradingCurrency, com.tools20022.repository.msg.Trade1.mmSettlementCurrency, com.tools20022.repository.msg.Trade1.mmTradingMethod,
+						com.tools20022.repository.msg.Trade1.mmTradingMode, com.tools20022.repository.msg.Trade1.mmClearingMethod, com.tools20022.repository.msg.Trade1.mmExecutionType, com.tools20022.repository.msg.Trade1.mmSymbol,
+						com.tools20022.repository.msg.Trade1.mmPlaceOfConfirmation, com.tools20022.repository.msg.Trade1.mmTransactionTime, com.tools20022.repository.msg.Trade1.mmForeignExchangeDetails,
+						com.tools20022.repository.msg.Trade1.mmSwapLeg, com.tools20022.repository.msg.Trade1.mmOption, com.tools20022.repository.msg.Trade1.mmProductIdentification);
 				trace_lazy = () -> TreasuryTrade.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintForeignExchangeDetailsRule.forTrade1, com.tools20022.repository.constraints.ConstraintSwapLegRule.forTrade1,
+						com.tools20022.repository.constraints.ConstraintForeignExchangeTradeProductAndOptionRule1.forTrade1, com.tools20022.repository.constraints.ConstraintForeignExchangeTradeProductAndOptionRule2.forTrade1,
+						com.tools20022.repository.constraints.ConstraintOptionIndicatiorRule.forTrade1, com.tools20022.repository.constraints.ConstraintDeltaIndicatorRule.forTrade1,
+						com.tools20022.repository.constraints.ConstraintFixingCurrencyAndFixingDateRule.forTrade1, com.tools20022.repository.constraints.ConstraintForwardPointsRule.forTrade1,
+						com.tools20022.repository.constraints.ConstraintForeignExchangeTradeProductRule.forTrade1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Trade1";
 				definition = "Details of the treasury trade captured.";
@@ -804,147 +853,147 @@ public class Trade1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradId", required = true)
 	public Max35Text getTradeIdentification() {
 		return tradeIdentification;
 	}
 
-	public void setTradeIdentification(Max35Text tradeIdentification) {
-		this.tradeIdentification = tradeIdentification;
+	public Trade1 setTradeIdentification(Max35Text tradeIdentification) {
+		this.tradeIdentification = Objects.requireNonNull(tradeIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "DtAndTm", required = true)
 	public ISODateTime getDateAndTime() {
 		return dateAndTime;
 	}
 
-	public void setDateAndTime(ISODateTime dateAndTime) {
-		this.dateAndTime = dateAndTime;
+	public Trade1 setDateAndTime(ISODateTime dateAndTime) {
+		this.dateAndTime = Objects.requireNonNull(dateAndTime);
+		return this;
 	}
 
-	@XmlElement(name = "FXTradPdct")
-	public UnderlyingProductIdentifier1Code getForeignExchangeTradeProduct() {
-		return foreignExchangeTradeProduct;
+	public Optional<UnderlyingProductIdentifier1Code> getForeignExchangeTradeProduct() {
+		return foreignExchangeTradeProduct == null ? Optional.empty() : Optional.of(foreignExchangeTradeProduct);
 	}
 
-	public void setForeignExchangeTradeProduct(UnderlyingProductIdentifier1Code foreignExchangeTradeProduct) {
+	public Trade1 setForeignExchangeTradeProduct(UnderlyingProductIdentifier1Code foreignExchangeTradeProduct) {
 		this.foreignExchangeTradeProduct = foreignExchangeTradeProduct;
+		return this;
 	}
 
-	@XmlElement(name = "TradgCcy")
-	public CurrencyCode getTradingCurrency() {
-		return tradingCurrency;
+	public Optional<CurrencyCode> getTradingCurrency() {
+		return tradingCurrency == null ? Optional.empty() : Optional.of(tradingCurrency);
 	}
 
-	public void setTradingCurrency(CurrencyCode tradingCurrency) {
+	public Trade1 setTradingCurrency(CurrencyCode tradingCurrency) {
 		this.tradingCurrency = tradingCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmCcy")
-	public CurrencyCode getSettlementCurrency() {
-		return settlementCurrency;
+	public Optional<CurrencyCode> getSettlementCurrency() {
+		return settlementCurrency == null ? Optional.empty() : Optional.of(settlementCurrency);
 	}
 
-	public void setSettlementCurrency(CurrencyCode settlementCurrency) {
+	public Trade1 setSettlementCurrency(CurrencyCode settlementCurrency) {
 		this.settlementCurrency = settlementCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "TradgMtd", required = true)
 	public TradingMethodType1Code getTradingMethod() {
 		return tradingMethod;
 	}
 
-	public void setTradingMethod(TradingMethodType1Code tradingMethod) {
-		this.tradingMethod = tradingMethod;
+	public Trade1 setTradingMethod(TradingMethodType1Code tradingMethod) {
+		this.tradingMethod = Objects.requireNonNull(tradingMethod);
+		return this;
 	}
 
-	@XmlElement(name = "TradgMd")
-	public TradingModeType1Code getTradingMode() {
-		return tradingMode;
+	public Optional<TradingModeType1Code> getTradingMode() {
+		return tradingMode == null ? Optional.empty() : Optional.of(tradingMode);
 	}
 
-	public void setTradingMode(TradingModeType1Code tradingMode) {
+	public Trade1 setTradingMode(TradingModeType1Code tradingMode) {
 		this.tradingMode = tradingMode;
+		return this;
 	}
 
-	@XmlElement(name = "ClrMtd", required = true)
 	public ClearingMethod1Code getClearingMethod() {
 		return clearingMethod;
 	}
 
-	public void setClearingMethod(ClearingMethod1Code clearingMethod) {
-		this.clearingMethod = clearingMethod;
+	public Trade1 setClearingMethod(ClearingMethod1Code clearingMethod) {
+		this.clearingMethod = Objects.requireNonNull(clearingMethod);
+		return this;
 	}
 
-	@XmlElement(name = "ExctnTp", required = true)
 	public OrderStatus8Code getExecutionType() {
 		return executionType;
 	}
 
-	public void setExecutionType(OrderStatus8Code executionType) {
-		this.executionType = executionType;
+	public Trade1 setExecutionType(OrderStatus8Code executionType) {
+		this.executionType = Objects.requireNonNull(executionType);
+		return this;
 	}
 
-	@XmlElement(name = "Symb", required = true)
 	public Max35Text getSymbol() {
 		return symbol;
 	}
 
-	public void setSymbol(Max35Text symbol) {
-		this.symbol = symbol;
+	public Trade1 setSymbol(Max35Text symbol) {
+		this.symbol = Objects.requireNonNull(symbol);
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfConf")
-	public Max35Text getPlaceOfConfirmation() {
-		return placeOfConfirmation;
+	public Optional<Max35Text> getPlaceOfConfirmation() {
+		return placeOfConfirmation == null ? Optional.empty() : Optional.of(placeOfConfirmation);
 	}
 
-	public void setPlaceOfConfirmation(Max35Text placeOfConfirmation) {
+	public Trade1 setPlaceOfConfirmation(Max35Text placeOfConfirmation) {
 		this.placeOfConfirmation = placeOfConfirmation;
+		return this;
 	}
 
-	@XmlElement(name = "TxTm")
-	public ISODateTime getTransactionTime() {
-		return transactionTime;
+	public Optional<ISODateTime> getTransactionTime() {
+		return transactionTime == null ? Optional.empty() : Optional.of(transactionTime);
 	}
 
-	public void setTransactionTime(ISODateTime transactionTime) {
+	public Trade1 setTransactionTime(ISODateTime transactionTime) {
 		this.transactionTime = transactionTime;
+		return this;
 	}
 
-	@XmlElement(name = "FXDtls")
-	public Trade3 getForeignExchangeDetails() {
-		return foreignExchangeDetails;
+	public Optional<Trade3> getForeignExchangeDetails() {
+		return foreignExchangeDetails == null ? Optional.empty() : Optional.of(foreignExchangeDetails);
 	}
 
-	public void setForeignExchangeDetails(com.tools20022.repository.msg.Trade3 foreignExchangeDetails) {
+	public Trade1 setForeignExchangeDetails(com.tools20022.repository.msg.Trade3 foreignExchangeDetails) {
 		this.foreignExchangeDetails = foreignExchangeDetails;
+		return this;
 	}
 
-	@XmlElement(name = "SwpLeg")
 	public List<InstrumentLeg6> getSwapLeg() {
-		return swapLeg;
+		return swapLeg == null ? swapLeg = new ArrayList<>() : swapLeg;
 	}
 
-	public void setSwapLeg(List<com.tools20022.repository.msg.InstrumentLeg6> swapLeg) {
-		this.swapLeg = swapLeg;
+	public Trade1 setSwapLeg(List<com.tools20022.repository.msg.InstrumentLeg6> swapLeg) {
+		this.swapLeg = Objects.requireNonNull(swapLeg);
+		return this;
 	}
 
-	@XmlElement(name = "Optn")
-	public Option10 getOption() {
-		return option;
+	public Optional<Option10> getOption() {
+		return option == null ? Optional.empty() : Optional.of(option);
 	}
 
-	public void setOption(com.tools20022.repository.msg.Option10 option) {
+	public Trade1 setOption(com.tools20022.repository.msg.Option10 option) {
 		this.option = option;
+		return this;
 	}
 
-	@XmlElement(name = "PdctId")
-	public SecurityIdentification22Choice getProductIdentification() {
-		return productIdentification;
+	public Optional<SecurityIdentification22Choice> getProductIdentification() {
+		return productIdentification == null ? Optional.empty() : Optional.of(productIdentification);
 	}
 
-	public void setProductIdentification(SecurityIdentification22Choice productIdentification) {
+	public Trade1 setProductIdentification(SecurityIdentification22Choice productIdentification) {
 		this.productIdentification = productIdentification;
+		return this;
 	}
 }

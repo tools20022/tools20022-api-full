@@ -20,32 +20,36 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OptionPartyCode;
+import com.tools20022.repository.codeset.OptionParty3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies if a trade party is a taker or a maker.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionParty3Code#Maker
+ * OptionParty3Code.Maker}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionParty3Code#Taker
+ * OptionParty3Code.Taker}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.OptionPartyCode
  * OptionPartyCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionParty3Code#mmMaker
- * OptionParty3Code.mmMaker}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionParty3Code#mmTaker
- * OptionParty3Code.mmTaker}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,7 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies if a trade party is a taker or a maker."</li>
  * </ul>
  */
-public class OptionParty3Code extends OptionPartyCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OptionParty3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -75,11 +80,12 @@ public class OptionParty3Code extends OptionPartyCode {
 	 * name} = "Maker"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMaker = new MMCode() {
+	public static final OptionParty3Code Maker = new OptionParty3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Maker";
-			owner_lazy = () -> OptionParty3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionParty3Code.mmObject();
+			codeName = OptionPartyCode.Maker.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -98,25 +104,56 @@ public class OptionParty3Code extends OptionPartyCode {
 	 * name} = "Taker"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaker = new MMCode() {
+	public static final OptionParty3Code Taker = new OptionParty3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Taker";
-			owner_lazy = () -> OptionParty3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionParty3Code.mmObject();
+			codeName = OptionPartyCode.Taker.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OptionParty3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OptionParty3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionParty3Code";
 				definition = "Specifies if a trade party is a taker or a maker.";
-				code_lazy = () -> Arrays.asList(OptionParty3Code.mmMaker, OptionParty3Code.mmTaker);
 				trace_lazy = () -> OptionPartyCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionParty3Code.Maker, com.tools20022.repository.codeset.OptionParty3Code.Taker);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Maker.getCodeName().get(), Maker);
+		codesByName.put(Taker.getCodeName().get(), Taker);
+	}
+
+	public static OptionParty3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OptionParty3Code[] values() {
+		OptionParty3Code[] values = new OptionParty3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OptionParty3Code> {
+		@Override
+		public OptionParty3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OptionParty3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CorporateActionStatementReportingTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of statement reporting on account holdings for corporate action events
@@ -33,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementReportingTypeCode#mmMultipleAccounts
- * CorporateActionStatementReportingTypeCode.mmMultipleAccounts}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementReportingTypeCode#MultipleAccounts
+ * CorporateActionStatementReportingTypeCode.MultipleAccounts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementReportingTypeCode#mmMultipleEvents
- * CorporateActionStatementReportingTypeCode.mmMultipleEvents}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementReportingTypeCode#MultipleEvents
+ * CorporateActionStatementReportingTypeCode.MultipleEvents}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CorporateActionStatementReportingTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionStatementReportingTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -96,12 +102,12 @@ public class CorporateActionStatementReportingTypeCode {
 	 * "The reporting is for a single event and for multiple accounts."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMultipleAccounts = new MMCode() {
+	public static final CorporateActionStatementReportingTypeCode MultipleAccounts = new CorporateActionStatementReportingTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MultipleAccounts";
 			definition = "The reporting is for a single event and for multiple accounts.";
-			owner_lazy = () -> CorporateActionStatementReportingTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionStatementReportingTypeCode.mmObject();
 			codeName = "MASE";
 		}
 	};
@@ -127,28 +133,58 @@ public class CorporateActionStatementReportingTypeCode {
 	 * "The reporting is for multiple events for a single account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMultipleEvents = new MMCode() {
+	public static final CorporateActionStatementReportingTypeCode MultipleEvents = new CorporateActionStatementReportingTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MultipleEvents";
 			definition = "The reporting is for multiple events for a single account.";
-			owner_lazy = () -> CorporateActionStatementReportingTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionStatementReportingTypeCode.mmObject();
 			codeName = "SAME";
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionStatementReportingTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionStatementReportingTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MASE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionStatementReportingTypeCode";
 				definition = "Type of statement reporting on account holdings  for corporate action events eg. reporting on multiple accounts or multiple events.";
-				code_lazy = () -> Arrays.asList(CorporateActionStatementReportingTypeCode.mmMultipleAccounts, CorporateActionStatementReportingTypeCode.mmMultipleEvents);
 				derivation_lazy = () -> Arrays.asList(CorporateActionStatementReportingType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionStatementReportingTypeCode.MultipleAccounts, com.tools20022.repository.codeset.CorporateActionStatementReportingTypeCode.MultipleEvents);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(MultipleAccounts.getCodeName().get(), MultipleAccounts);
+		codesByName.put(MultipleEvents.getCodeName().get(), MultipleEvents);
+	}
+
+	public static CorporateActionStatementReportingTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionStatementReportingTypeCode[] values() {
+		CorporateActionStatementReportingTypeCode[] values = new CorporateActionStatementReportingTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionStatementReportingTypeCode> {
+		@Override
+		public CorporateActionStatementReportingTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionStatementReportingTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

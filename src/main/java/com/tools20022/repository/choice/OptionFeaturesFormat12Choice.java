@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,16 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * OptionFeaturesFormat9Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OptionFeaturesFormat12Choice", propOrder = {"code", "proprietary"})
 public class OptionFeaturesFormat12Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected OptionFeatures5Code code;
 	/**
-	 * Standard code to specify the features that may apply to a corporate
-	 * action option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,7 +141,7 @@ public class OptionFeaturesFormat12Choice {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionFeatures;
-			componentContext_lazy = () -> OptionFeaturesFormat12Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.OptionFeaturesFormat12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,11 +154,11 @@ public class OptionFeaturesFormat12Choice {
 			simpleType_lazy = () -> OptionFeatures5Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification20 proprietary;
 	/**
-	 * Proprietary identification of the features that may apply to a corporate
-	 * action option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -205,7 +206,7 @@ public class OptionFeaturesFormat12Choice {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionFeatures;
-			componentContext_lazy = () -> OptionFeaturesFormat12Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.OptionFeaturesFormat12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,9 +224,9 @@ public class OptionFeaturesFormat12Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OptionFeaturesFormat12Choice.mmCode, OptionFeaturesFormat12Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionFeaturesFormat12Choice.mmCode, com.tools20022.repository.choice.OptionFeaturesFormat12Choice.mmProprietary);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionFeaturesFormat12Choice";
 				definition = "Choice between a standard code or a proprietary code to specify the features that may apply to a corporate action option.";
@@ -236,21 +237,21 @@ public class OptionFeaturesFormat12Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public OptionFeatures5Code getCode() {
 		return code;
 	}
 
-	public void setCode(OptionFeatures5Code code) {
-		this.code = code;
+	public OptionFeaturesFormat12Choice setCode(OptionFeatures5Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification20 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification20 proprietary) {
-		this.proprietary = proprietary;
+	public OptionFeaturesFormat12Choice setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -41,8 +42,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EntitlementAssessment#mmEntitlementRatioOrEntitlementDescriptionRule
- * EntitlementAssessment.mmEntitlementRatioOrEntitlementDescriptionRule}</li>
+ * {@linkplain com.tools20022.repository.msg.EntitlementAssessment#EntitlementRatioOrEntitlementDescriptionRule
+ * EntitlementAssessment.EntitlementRatioOrEntitlementDescriptionRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -87,8 +88,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,17 +102,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "EntitlementAssessment", propOrder = {"securitiesBlockingDeadline", "securitiesBlockingMarketDeadline", "securitiesBlockingPeriodEndDate", "securitiesReregistrationDeadline", "securitiesReregistrationMarketDeadline",
 		"securitiesRegistrationDate", "registrationBeneficiary", "recordDate", "entitlementDescription", "entitlementRatio"})
 public class EntitlementAssessment {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesBlckgDdln")
 	protected ISODateTime securitiesBlockingDeadline;
 	/**
-	 * Date by which the securities should be blocked. This deadline is set by
-	 * an intermediary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +147,7 @@ public class EntitlementAssessment {
 	public static final MMMessageAttribute mmSecuritiesBlockingDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmIntermediaryDeadline;
-			componentContext_lazy = () -> EntitlementAssessment.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesBlckgDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,11 +158,11 @@ public class EntitlementAssessment {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesBlckgMktDdln")
 	protected ISODateTime securitiesBlockingMarketDeadline;
 	/**
-	 * Date by which the securities should be blocked. This deadline is set by
-	 * the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,7 +197,7 @@ public class EntitlementAssessment {
 	public static final MMMessageAttribute mmSecuritiesBlockingMarketDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
-			componentContext_lazy = () -> EntitlementAssessment.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesBlckgMktDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,10 +208,11 @@ public class EntitlementAssessment {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesBlckgPrdEndDt")
 	protected ISODateTime securitiesBlockingPeriodEndDate;
 	/**
-	 * Date by which the blocking period for the securities should end.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,7 +246,7 @@ public class EntitlementAssessment {
 	public static final MMMessageAttribute mmSecuritiesBlockingPeriodEndDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
-			componentContext_lazy = () -> EntitlementAssessment.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesBlckgPrdEndDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -255,11 +257,11 @@ public class EntitlementAssessment {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesRregnDdln")
 	protected ISODateTime securitiesReregistrationDeadline;
 	/**
-	 * Date by which the securities have to be registered or reregistered. This
-	 * deadline is specified by an intermediary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -294,7 +296,7 @@ public class EntitlementAssessment {
 	public static final MMMessageAttribute mmSecuritiesReregistrationDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmIntermediaryDeadline;
-			componentContext_lazy = () -> EntitlementAssessment.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesRregnDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -305,11 +307,11 @@ public class EntitlementAssessment {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesRregnMktDdln")
 	protected ISODateTime securitiesReregistrationMarketDeadline;
 	/**
-	 * Date by which the securities have to be registered or reregistered. This
-	 * deadline is set by the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -344,7 +346,7 @@ public class EntitlementAssessment {
 	public static final MMMessageAttribute mmSecuritiesReregistrationMarketDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
-			componentContext_lazy = () -> EntitlementAssessment.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesRregnMktDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -355,10 +357,11 @@ public class EntitlementAssessment {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesRegnDt")
 	protected ISODate securitiesRegistrationDate;
 	/**
-	 * Date at which the voting positions are established (in some countries).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -393,7 +396,7 @@ public class EntitlementAssessment {
 	public static final MMMessageAttribute mmSecuritiesRegistrationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesRegistrationDeadline.mmRegistrationDate;
-			componentContext_lazy = () -> EntitlementAssessment.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesRegnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -404,10 +407,11 @@ public class EntitlementAssessment {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "RegnBnfcry")
 	protected PartyIdentification7Choice registrationBeneficiary;
 	/**
-	 * Party in which name the securities are registered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -440,7 +444,7 @@ public class EntitlementAssessment {
 	public static final MMMessageAssociationEnd mmRegistrationBeneficiary = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> EntitlementAssessment.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
 			isDerived = false;
 			xmlTag = "RegnBnfcry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -452,11 +456,11 @@ public class EntitlementAssessment {
 			type_lazy = () -> PartyIdentification7Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RcrdDt")
 	protected ISODate recordDate;
 	/**
-	 * Date at which the positions are struck to note which parties will receive
-	 * the entitlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -491,7 +495,7 @@ public class EntitlementAssessment {
 	public static final MMMessageAttribute mmRecordDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmRecordDate;
-			componentContext_lazy = () -> EntitlementAssessment.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
 			isDerived = false;
 			xmlTag = "RcrdDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -502,12 +506,11 @@ public class EntitlementAssessment {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "EntitlmntDesc")
 	protected Max350Text entitlementDescription;
 	/**
-	 * Specifies the calculation method of the number of votes assigned to one
-	 * security. This element should be used when the entitlement calculation
-	 * rule is complex.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -536,7 +539,7 @@ public class EntitlementAssessment {
 	 */
 	public static final MMMessageAttribute mmEntitlementDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EntitlementAssessment.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
 			isDerived = false;
 			xmlTag = "EntitlmntDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -547,10 +550,11 @@ public class EntitlementAssessment {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "EntitlmntRatio")
 	protected DecimalNumber entitlementRatio;
 	/**
-	 * Number of votes assigned to one security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -584,7 +588,7 @@ public class EntitlementAssessment {
 	public static final MMMessageAttribute mmEntitlementRatio = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MeetingEntitlement.mmEntitlementRatio;
-			componentContext_lazy = () -> EntitlementAssessment.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
 			isDerived = false;
 			xmlTag = "EntitlmntRatio";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -629,120 +633,122 @@ public class EntitlementAssessment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmEntitlementRatioOrEntitlementDescriptionRule = new MMXor() {
+	public static final MMXor EntitlementRatioOrEntitlementDescriptionRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementRatioOrEntitlementDescriptionRule";
 			definition = "Either EntitlementRatio or EntitlementDescription must be present, but not both.";
-			messageComponent_lazy = () -> EntitlementAssessment.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(EntitlementAssessment.mmEntitlementDescription, EntitlementAssessment.mmEntitlementRatio);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntitlementAssessment.mmEntitlementDescription, com.tools20022.repository.msg.EntitlementAssessment.mmEntitlementRatio);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EntitlementAssessment.mmSecuritiesBlockingDeadline, EntitlementAssessment.mmSecuritiesBlockingMarketDeadline, EntitlementAssessment.mmSecuritiesBlockingPeriodEndDate,
-						EntitlementAssessment.mmSecuritiesReregistrationDeadline, EntitlementAssessment.mmSecuritiesReregistrationMarketDeadline, EntitlementAssessment.mmSecuritiesRegistrationDate,
-						EntitlementAssessment.mmRegistrationBeneficiary, EntitlementAssessment.mmRecordDate, EntitlementAssessment.mmEntitlementDescription, EntitlementAssessment.mmEntitlementRatio);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntitlementAssessment.mmSecuritiesBlockingDeadline, com.tools20022.repository.msg.EntitlementAssessment.mmSecuritiesBlockingMarketDeadline,
+						com.tools20022.repository.msg.EntitlementAssessment.mmSecuritiesBlockingPeriodEndDate, com.tools20022.repository.msg.EntitlementAssessment.mmSecuritiesReregistrationDeadline,
+						com.tools20022.repository.msg.EntitlementAssessment.mmSecuritiesReregistrationMarketDeadline, com.tools20022.repository.msg.EntitlementAssessment.mmSecuritiesRegistrationDate,
+						com.tools20022.repository.msg.EntitlementAssessment.mmRegistrationBeneficiary, com.tools20022.repository.msg.EntitlementAssessment.mmRecordDate,
+						com.tools20022.repository.msg.EntitlementAssessment.mmEntitlementDescription, com.tools20022.repository.msg.EntitlementAssessment.mmEntitlementRatio);
 				trace_lazy = () -> MeetingEntitlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EntitlementAssessment";
 				definition = "Specifies the parameters, such as dates, used to calculate the entitlement to vote at a general meeting.";
-				xors_lazy = () -> Arrays.asList(EntitlementAssessment.mmEntitlementRatioOrEntitlementDescriptionRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntitlementAssessment.EntitlementRatioOrEntitlementDescriptionRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesBlckgDdln")
-	public ISODateTime getSecuritiesBlockingDeadline() {
-		return securitiesBlockingDeadline;
+	public Optional<ISODateTime> getSecuritiesBlockingDeadline() {
+		return securitiesBlockingDeadline == null ? Optional.empty() : Optional.of(securitiesBlockingDeadline);
 	}
 
-	public void setSecuritiesBlockingDeadline(ISODateTime securitiesBlockingDeadline) {
+	public EntitlementAssessment setSecuritiesBlockingDeadline(ISODateTime securitiesBlockingDeadline) {
 		this.securitiesBlockingDeadline = securitiesBlockingDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesBlckgMktDdln")
-	public ISODateTime getSecuritiesBlockingMarketDeadline() {
-		return securitiesBlockingMarketDeadline;
+	public Optional<ISODateTime> getSecuritiesBlockingMarketDeadline() {
+		return securitiesBlockingMarketDeadline == null ? Optional.empty() : Optional.of(securitiesBlockingMarketDeadline);
 	}
 
-	public void setSecuritiesBlockingMarketDeadline(ISODateTime securitiesBlockingMarketDeadline) {
+	public EntitlementAssessment setSecuritiesBlockingMarketDeadline(ISODateTime securitiesBlockingMarketDeadline) {
 		this.securitiesBlockingMarketDeadline = securitiesBlockingMarketDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesBlckgPrdEndDt")
-	public ISODateTime getSecuritiesBlockingPeriodEndDate() {
-		return securitiesBlockingPeriodEndDate;
+	public Optional<ISODateTime> getSecuritiesBlockingPeriodEndDate() {
+		return securitiesBlockingPeriodEndDate == null ? Optional.empty() : Optional.of(securitiesBlockingPeriodEndDate);
 	}
 
-	public void setSecuritiesBlockingPeriodEndDate(ISODateTime securitiesBlockingPeriodEndDate) {
+	public EntitlementAssessment setSecuritiesBlockingPeriodEndDate(ISODateTime securitiesBlockingPeriodEndDate) {
 		this.securitiesBlockingPeriodEndDate = securitiesBlockingPeriodEndDate;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesRregnDdln")
-	public ISODateTime getSecuritiesReregistrationDeadline() {
-		return securitiesReregistrationDeadline;
+	public Optional<ISODateTime> getSecuritiesReregistrationDeadline() {
+		return securitiesReregistrationDeadline == null ? Optional.empty() : Optional.of(securitiesReregistrationDeadline);
 	}
 
-	public void setSecuritiesReregistrationDeadline(ISODateTime securitiesReregistrationDeadline) {
+	public EntitlementAssessment setSecuritiesReregistrationDeadline(ISODateTime securitiesReregistrationDeadline) {
 		this.securitiesReregistrationDeadline = securitiesReregistrationDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesRregnMktDdln")
-	public ISODateTime getSecuritiesReregistrationMarketDeadline() {
-		return securitiesReregistrationMarketDeadline;
+	public Optional<ISODateTime> getSecuritiesReregistrationMarketDeadline() {
+		return securitiesReregistrationMarketDeadline == null ? Optional.empty() : Optional.of(securitiesReregistrationMarketDeadline);
 	}
 
-	public void setSecuritiesReregistrationMarketDeadline(ISODateTime securitiesReregistrationMarketDeadline) {
+	public EntitlementAssessment setSecuritiesReregistrationMarketDeadline(ISODateTime securitiesReregistrationMarketDeadline) {
 		this.securitiesReregistrationMarketDeadline = securitiesReregistrationMarketDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesRegnDt")
-	public ISODate getSecuritiesRegistrationDate() {
-		return securitiesRegistrationDate;
+	public Optional<ISODate> getSecuritiesRegistrationDate() {
+		return securitiesRegistrationDate == null ? Optional.empty() : Optional.of(securitiesRegistrationDate);
 	}
 
-	public void setSecuritiesRegistrationDate(ISODate securitiesRegistrationDate) {
+	public EntitlementAssessment setSecuritiesRegistrationDate(ISODate securitiesRegistrationDate) {
 		this.securitiesRegistrationDate = securitiesRegistrationDate;
+		return this;
 	}
 
-	@XmlElement(name = "RegnBnfcry")
-	public PartyIdentification7Choice getRegistrationBeneficiary() {
-		return registrationBeneficiary;
+	public Optional<PartyIdentification7Choice> getRegistrationBeneficiary() {
+		return registrationBeneficiary == null ? Optional.empty() : Optional.of(registrationBeneficiary);
 	}
 
-	public void setRegistrationBeneficiary(PartyIdentification7Choice registrationBeneficiary) {
+	public EntitlementAssessment setRegistrationBeneficiary(PartyIdentification7Choice registrationBeneficiary) {
 		this.registrationBeneficiary = registrationBeneficiary;
+		return this;
 	}
 
-	@XmlElement(name = "RcrdDt")
-	public ISODate getRecordDate() {
-		return recordDate;
+	public Optional<ISODate> getRecordDate() {
+		return recordDate == null ? Optional.empty() : Optional.of(recordDate);
 	}
 
-	public void setRecordDate(ISODate recordDate) {
+	public EntitlementAssessment setRecordDate(ISODate recordDate) {
 		this.recordDate = recordDate;
+		return this;
 	}
 
-	@XmlElement(name = "EntitlmntDesc")
-	public Max350Text getEntitlementDescription() {
-		return entitlementDescription;
+	public Optional<Max350Text> getEntitlementDescription() {
+		return entitlementDescription == null ? Optional.empty() : Optional.of(entitlementDescription);
 	}
 
-	public void setEntitlementDescription(Max350Text entitlementDescription) {
+	public EntitlementAssessment setEntitlementDescription(Max350Text entitlementDescription) {
 		this.entitlementDescription = entitlementDescription;
+		return this;
 	}
 
-	@XmlElement(name = "EntitlmntRatio")
-	public DecimalNumber getEntitlementRatio() {
-		return entitlementRatio;
+	public Optional<DecimalNumber> getEntitlementRatio() {
+		return entitlementRatio == null ? Optional.empty() : Optional.of(entitlementRatio);
 	}
 
-	public void setEntitlementRatio(DecimalNumber entitlementRatio) {
+	public EntitlementAssessment setEntitlementRatio(DecimalNumber entitlementRatio) {
 		this.entitlementRatio = entitlementRatio;
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.TMSContactLevelCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Level of urgency in contacting the terminal management system.
@@ -32,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode#mmCritical
- * TMSContactLevelCode.mmCritical}</li>
+ * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode#Critical
+ * TMSContactLevelCode.Critical}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode#mmAsSoonAsPossible
- * TMSContactLevelCode.mmAsSoonAsPossible}</li>
+ * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode#AsSoonAsPossible
+ * TMSContactLevelCode.AsSoonAsPossible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode#mmDateTime
- * TMSContactLevelCode.mmDateTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode#DateTime
+ * TMSContactLevelCode.DateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode#mmEndCustomerSession
- * TMSContactLevelCode.mmEndCustomerSession}</li>
+ * {@linkplain com.tools20022.repository.codeset.TMSContactLevelCode#EndCustomerSession
+ * TMSContactLevelCode.EndCustomerSession}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -57,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -76,7 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Level of urgency in contacting the terminal management system."</li>
  * </ul>
  */
-public class TMSContactLevelCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TMSContactLevelCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -103,12 +109,12 @@ public class TMSContactLevelCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCritical = new MMCode() {
+	public static final TMSContactLevelCode Critical = new TMSContactLevelCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Critical";
 			definition = "Terminal management system has to be contacted before the next transaction.";
-			owner_lazy = () -> TMSContactLevelCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TMSContactLevelCode.mmObject();
 			codeName = "CRIT";
 		}
 	};
@@ -136,12 +142,12 @@ public class TMSContactLevelCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAsSoonAsPossible = new MMCode() {
+	public static final TMSContactLevelCode AsSoonAsPossible = new TMSContactLevelCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AsSoonAsPossible";
 			definition = "Terminal management system has to be contacted as soon as possible (for example after reconciliation).";
-			owner_lazy = () -> TMSContactLevelCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TMSContactLevelCode.mmObject();
 			codeName = "ASAP";
 		}
 	};
@@ -169,12 +175,12 @@ public class TMSContactLevelCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDateTime = new MMCode() {
+	public static final TMSContactLevelCode DateTime = new TMSContactLevelCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DateTime";
 			definition = "Terminal management system has to be contacted at the date and time provided.";
-			owner_lazy = () -> TMSContactLevelCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TMSContactLevelCode.mmObject();
 			codeName = "DTIM";
 		}
 	};
@@ -199,28 +205,61 @@ public class TMSContactLevelCode {
 	 * definition} = "After the end of the customer session"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEndCustomerSession = new MMCode() {
+	public static final TMSContactLevelCode EndCustomerSession = new TMSContactLevelCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndCustomerSession";
 			definition = "After the end of the customer session";
-			owner_lazy = () -> TMSContactLevelCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TMSContactLevelCode.mmObject();
 			codeName = "ENCS";
 		}
 	};
+	final static private LinkedHashMap<String, TMSContactLevelCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TMSContactLevelCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CRIT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TMSContactLevelCode";
 				definition = "Level of urgency in contacting the terminal management system.";
-				code_lazy = () -> Arrays.asList(TMSContactLevelCode.mmCritical, TMSContactLevelCode.mmAsSoonAsPossible, TMSContactLevelCode.mmDateTime, TMSContactLevelCode.mmEndCustomerSession);
 				derivation_lazy = () -> Arrays.asList(TMSContactLevel1Code.mmObject(), TMSContactLevel2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TMSContactLevelCode.Critical, com.tools20022.repository.codeset.TMSContactLevelCode.AsSoonAsPossible,
+						com.tools20022.repository.codeset.TMSContactLevelCode.DateTime, com.tools20022.repository.codeset.TMSContactLevelCode.EndCustomerSession);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Critical.getCodeName().get(), Critical);
+		codesByName.put(AsSoonAsPossible.getCodeName().get(), AsSoonAsPossible);
+		codesByName.put(DateTime.getCodeName().get(), DateTime);
+		codesByName.put(EndCustomerSession.getCodeName().get(), EndCustomerSession);
+	}
+
+	public static TMSContactLevelCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TMSContactLevelCode[] values() {
+		TMSContactLevelCode[] values = new TMSContactLevelCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TMSContactLevelCode> {
+		@Override
+		public TMSContactLevelCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TMSContactLevelCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

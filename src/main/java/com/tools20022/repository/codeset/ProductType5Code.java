@@ -20,44 +20,46 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ProductTypeV2Code;
+import com.tools20022.repository.codeset.ProductType5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the underlying type of product or financial instrument.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code
- * ProductTypeV2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductType5Code#mmEmissionAllowance
- * ProductType5Code.mmEmissionAllowance}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductType5Code#EmissionAllowance
+ * ProductType5Code.EmissionAllowance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductType5Code#mmInterestRate
- * ProductType5Code.mmInterestRate}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProductType5Code#mmEquity
- * ProductType5Code.mmEquity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductType5Code#mmCommodity
- * ProductType5Code.mmCommodity}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProductType5Code#mmCredit
- * ProductType5Code.mmCredit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProductType5Code#mmCurrency
- * ProductType5Code.mmCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProductType5Code#InterestRate
+ * ProductType5Code.InterestRate}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductType5Code#Equity
+ * ProductType5Code.Equity}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductType5Code#Commodity
+ * ProductType5Code.Commodity}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductType5Code#Credit
+ * ProductType5Code.Credit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductType5Code#Currency
+ * ProductType5Code.Currency}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ProductTypeV2Code
+ * ProductTypeV2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the underlying type of product or financial instrument."</li>
  * </ul>
  */
-public class ProductType5Code extends ProductTypeV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProductType5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,11 +91,12 @@ public class ProductType5Code extends ProductTypeV2Code {
 	 * name} = "EmissionAllowance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEmissionAllowance = new MMCode() {
+	public static final ProductType5Code EmissionAllowance = new ProductType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmissionAllowance";
-			owner_lazy = () -> ProductType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductType5Code.mmObject();
+			codeName = ProductTypeV2Code.EmissionAllowance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -111,11 +115,12 @@ public class ProductType5Code extends ProductTypeV2Code {
 	 * name} = "InterestRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterestRate = new MMCode() {
+	public static final ProductType5Code InterestRate = new ProductType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
-			owner_lazy = () -> ProductType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductType5Code.mmObject();
+			codeName = ProductTypeV2Code.InterestRate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -134,11 +139,12 @@ public class ProductType5Code extends ProductTypeV2Code {
 	 * name} = "Equity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEquity = new MMCode() {
+	public static final ProductType5Code Equity = new ProductType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity";
-			owner_lazy = () -> ProductType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductType5Code.mmObject();
+			codeName = ProductTypeV2Code.Equity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -157,11 +163,12 @@ public class ProductType5Code extends ProductTypeV2Code {
 	 * name} = "Commodity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommodity = new MMCode() {
+	public static final ProductType5Code Commodity = new ProductType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodity";
-			owner_lazy = () -> ProductType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductType5Code.mmObject();
+			codeName = ProductTypeV2Code.Commodity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -180,11 +187,12 @@ public class ProductType5Code extends ProductTypeV2Code {
 	 * name} = "Credit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCredit = new MMCode() {
+	public static final ProductType5Code Credit = new ProductType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Credit";
-			owner_lazy = () -> ProductType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductType5Code.mmObject();
+			codeName = ProductTypeV2Code.Credit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -203,25 +211,62 @@ public class ProductType5Code extends ProductTypeV2Code {
 	 * name} = "Currency"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrency = new MMCode() {
+	public static final ProductType5Code Currency = new ProductType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
-			owner_lazy = () -> ProductType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProductType5Code.mmObject();
+			codeName = ProductTypeV2Code.Currency.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ProductType5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProductType5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductType5Code";
 				definition = "Specifies the underlying type of product or financial instrument.";
-				code_lazy = () -> Arrays.asList(ProductType5Code.mmEmissionAllowance, ProductType5Code.mmInterestRate, ProductType5Code.mmEquity, ProductType5Code.mmCommodity, ProductType5Code.mmCredit, ProductType5Code.mmCurrency);
 				trace_lazy = () -> ProductTypeV2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductType5Code.EmissionAllowance, com.tools20022.repository.codeset.ProductType5Code.InterestRate,
+						com.tools20022.repository.codeset.ProductType5Code.Equity, com.tools20022.repository.codeset.ProductType5Code.Commodity, com.tools20022.repository.codeset.ProductType5Code.Credit,
+						com.tools20022.repository.codeset.ProductType5Code.Currency);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(EmissionAllowance.getCodeName().get(), EmissionAllowance);
+		codesByName.put(InterestRate.getCodeName().get(), InterestRate);
+		codesByName.put(Equity.getCodeName().get(), Equity);
+		codesByName.put(Commodity.getCodeName().get(), Commodity);
+		codesByName.put(Credit.getCodeName().get(), Credit);
+		codesByName.put(Currency.getCodeName().get(), Currency);
+	}
+
+	public static ProductType5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProductType5Code[] values() {
+		ProductType5Code[] values = new ProductType5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProductType5Code> {
+		@Override
+		public ProductType5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProductType5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

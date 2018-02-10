@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionInstructionSecuritiesQuantityExtension1", propOrder = {"placeAndName", "bondQuantity"})
 public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +104,7 @@ public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructionSecuritiesQuantityExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionSecuritiesQuantityExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +115,11 @@ public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BdQty")
 	protected FinancialInstrumentQuantity15Choice bondQuantity;
 	/**
-	 * Quantity of bonds in exchange of warrants.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,6 +135,9 @@ public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BdQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Bond Quantity</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -142,9 +150,10 @@ public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 	 */
 	public static final MMMessageAttribute mmBondQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructionSecuritiesQuantityExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionSecuritiesQuantityExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "BdQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Bond Quantity"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondQuantity";
 			definition = "Quantity of bonds in exchange of warrants.";
@@ -157,8 +166,9 @@ public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionInstructionSecuritiesQuantityExtension1.mmPlaceAndName, CorporateActionInstructionSecuritiesQuantityExtension1.mmBondQuantity);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionInstructionSecuritiesQuantityExtension1.mmPlaceAndName,
+						com.tools20022.repository.msg.CorporateActionInstructionSecuritiesQuantityExtension1.mmBondQuantity);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionInstructionSecuritiesQuantityExtension1";
 				definition = "Provides additional information regarding corporate action instruction securities quantity.";
@@ -167,21 +177,21 @@ public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionInstructionSecuritiesQuantityExtension1 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "BdQty")
-	public FinancialInstrumentQuantity15Choice getBondQuantity() {
-		return bondQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getBondQuantity() {
+		return bondQuantity == null ? Optional.empty() : Optional.of(bondQuantity);
 	}
 
-	public void setBondQuantity(FinancialInstrumentQuantity15Choice bondQuantity) {
+	public CorporateActionInstructionSecuritiesQuantityExtension1 setBondQuantity(FinancialInstrumentQuantity15Choice bondQuantity) {
 		this.bondQuantity = bondQuantity;
+		return this;
 	}
 }

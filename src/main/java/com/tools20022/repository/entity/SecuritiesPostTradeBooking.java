@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.BookingUnit1Choice;
 import com.tools20022.repository.codeset.BookingTypeCode;
@@ -28,6 +29,8 @@ import com.tools20022.repository.msg.Booking1;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Information used to book the executions of a trade.
@@ -60,13 +63,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Booking1 Booking1}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -76,10 +72,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Booking1 Booking1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,8 +98,8 @@ public class SecuritiesPostTradeBooking {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected DayBookingInstructionCode dayBooking;
 	/**
-	 * Indicates whether or not automatic booking can occur.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,6 +120,9 @@ public class SecuritiesPostTradeBooking {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesPostTradeBooking
 	 * SecuritiesPostTradeBooking}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 589</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -130,8 +136,9 @@ public class SecuritiesPostTradeBooking {
 	public static final MMBusinessAttribute mmDayBooking = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Booking1.mmDayBooking);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPostTradeBooking.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPostTradeBooking.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "589"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DayBooking";
 			definition = "Indicates whether or not automatic booking can occur.";
@@ -150,9 +157,8 @@ public class SecuritiesPostTradeBooking {
 	};
 	protected BookingUnitCode bookingUnit;
 	/**
-	 * Indicates what constitutes a bookable unit, ie, a partial execution, or
-	 * an aggregated execution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,6 +185,9 @@ public class SecuritiesPostTradeBooking {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesPostTradeBooking
 	 * SecuritiesPostTradeBooking}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 590</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -194,8 +203,9 @@ public class SecuritiesPostTradeBooking {
 	public static final MMBusinessAttribute mmBookingUnit = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BookingUnit1Choice.mmCode, BookingUnit1Choice.mmProprietary, Booking1.mmBookingUnit);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPostTradeBooking.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPostTradeBooking.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "590"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BookingUnit";
 			definition = "Indicates what constitutes a bookable unit, ie, a partial execution, or an aggregated execution.";
@@ -214,8 +224,8 @@ public class SecuritiesPostTradeBooking {
 	};
 	protected PreAllocationMethodCode preAllocationMethod;
 	/**
-	 * Indicates the method of preallocation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -250,8 +260,8 @@ public class SecuritiesPostTradeBooking {
 	public static final MMBusinessAttribute mmPreAllocationMethod = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Booking1.mmPreAllocationMethod);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPostTradeBooking.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPostTradeBooking.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreAllocationMethod";
 			definition = "Indicates the method of preallocation.";
@@ -270,8 +280,8 @@ public class SecuritiesPostTradeBooking {
 	};
 	protected BookingTypeCode bookingType;
 	/**
-	 * Method for booking out an order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -305,8 +315,8 @@ public class SecuritiesPostTradeBooking {
 	public static final MMBusinessAttribute mmBookingType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Booking1.mmBookingType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPostTradeBooking.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPostTradeBooking.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BookingType";
 			definition = "Method for booking out an order.";
@@ -325,8 +335,8 @@ public class SecuritiesPostTradeBooking {
 	};
 	protected SecuritiesOrder relatedOrder;
 	/**
-	 * Order for which booking instructions are specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -359,8 +369,8 @@ public class SecuritiesPostTradeBooking {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPostTradeBooking.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPostTradeBooking.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOrder";
 			definition = "Order for which booking instructions are specified.";
@@ -375,7 +385,7 @@ public class SecuritiesPostTradeBooking {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesPostTradeBooking";
 				definition = "Information used to book the executions of a trade.";
@@ -398,39 +408,44 @@ public class SecuritiesPostTradeBooking {
 		return dayBooking;
 	}
 
-	public void setDayBooking(DayBookingInstructionCode dayBooking) {
-		this.dayBooking = dayBooking;
+	public SecuritiesPostTradeBooking setDayBooking(DayBookingInstructionCode dayBooking) {
+		this.dayBooking = Objects.requireNonNull(dayBooking);
+		return this;
 	}
 
 	public BookingUnitCode getBookingUnit() {
 		return bookingUnit;
 	}
 
-	public void setBookingUnit(BookingUnitCode bookingUnit) {
-		this.bookingUnit = bookingUnit;
+	public SecuritiesPostTradeBooking setBookingUnit(BookingUnitCode bookingUnit) {
+		this.bookingUnit = Objects.requireNonNull(bookingUnit);
+		return this;
 	}
 
 	public PreAllocationMethodCode getPreAllocationMethod() {
 		return preAllocationMethod;
 	}
 
-	public void setPreAllocationMethod(PreAllocationMethodCode preAllocationMethod) {
-		this.preAllocationMethod = preAllocationMethod;
+	public SecuritiesPostTradeBooking setPreAllocationMethod(PreAllocationMethodCode preAllocationMethod) {
+		this.preAllocationMethod = Objects.requireNonNull(preAllocationMethod);
+		return this;
 	}
 
 	public BookingTypeCode getBookingType() {
 		return bookingType;
 	}
 
-	public void setBookingType(BookingTypeCode bookingType) {
-		this.bookingType = bookingType;
+	public SecuritiesPostTradeBooking setBookingType(BookingTypeCode bookingType) {
+		this.bookingType = Objects.requireNonNull(bookingType);
+		return this;
 	}
 
-	public SecuritiesOrder getRelatedOrder() {
-		return relatedOrder;
+	public Optional<SecuritiesOrder> getRelatedOrder() {
+		return relatedOrder == null ? Optional.empty() : Optional.of(relatedOrder);
 	}
 
-	public void setRelatedOrder(com.tools20022.repository.entity.SecuritiesOrder relatedOrder) {
+	public SecuritiesPostTradeBooking setRelatedOrder(com.tools20022.repository.entity.SecuritiesOrder relatedOrder) {
 		this.relatedOrder = relatedOrder;
+		return this;
 	}
 }

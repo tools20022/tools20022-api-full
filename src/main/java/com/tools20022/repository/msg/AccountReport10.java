@@ -27,6 +27,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -40,8 +41,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AccountReport10#mmAccountOrBusinessErrorRule
- * AccountReport10.mmAccountOrBusinessErrorRule}</li>
+ * {@linkplain com.tools20022.repository.msg.AccountReport10#AccountOrBusinessErrorRule
+ * AccountReport10.AccountOrBusinessErrorRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -64,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -78,16 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Reports either on the account information or on a business error."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountReport10", propOrder = {"accountIdentification", "account", "businessError"})
 public class AccountReport10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId", required = true)
 	protected AccountIdentification1Choice accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +124,7 @@ public class AccountReport10 {
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> AccountReport10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport10.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +135,11 @@ public class AccountReport10 {
 			complexType_lazy = () -> AccountIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Acct", required = true)
 	protected CashAccountDetails4 account;
 	/**
-	 * Requested information on the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -169,7 +171,7 @@ public class AccountReport10 {
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashAccountContract.mmCashAccount;
-			componentContext_lazy = () -> AccountReport10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport10.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,10 +183,11 @@ public class AccountReport10 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccountDetails4.mmObject();
 		}
 	};
+	@XmlElement(name = "BizErr", required = true)
 	protected ErrorHandling3 businessError;
 	/**
-	 * Reason the requested business information is not given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -210,7 +213,7 @@ public class AccountReport10 {
 	 */
 	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountReport10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport10.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -253,22 +256,23 @@ public class AccountReport10 {
 	 * "Either Account or BusinessError must be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmAccountOrBusinessErrorRule = new MMXor() {
+	public static final MMXor AccountOrBusinessErrorRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOrBusinessErrorRule";
 			definition = "Either Account or BusinessError must be present, but not both.";
-			messageComponent_lazy = () -> AccountReport10.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(AccountReport10.mmAccount, AccountReport10.mmBusinessError);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.AccountReport10.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountReport10.mmAccount, com.tools20022.repository.msg.AccountReport10.mmBusinessError);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountReport10.mmAccountIdentification, AccountReport10.mmAccount, AccountReport10.mmBusinessError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountReport10.mmAccountIdentification, com.tools20022.repository.msg.AccountReport10.mmAccount,
+						com.tools20022.repository.msg.AccountReport10.mmBusinessError);
 				trace_lazy = () -> CashAccountContract.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -279,36 +283,36 @@ public class AccountReport10 {
 				})).get();
 				name = "AccountReport10";
 				definition = "Reports either on the account information or on a business error.";
-				xors_lazy = () -> Arrays.asList(AccountReport10.mmAccountOrBusinessErrorRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountReport10.AccountOrBusinessErrorRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public AccountIdentification1Choice getAccountIdentification() {
 		return accountIdentification;
 	}
 
-	public void setAccountIdentification(AccountIdentification1Choice accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public AccountReport10 setAccountIdentification(AccountIdentification1Choice accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Acct", required = true)
 	public CashAccountDetails4 getAccount() {
 		return account;
 	}
 
-	public void setAccount(com.tools20022.repository.msg.CashAccountDetails4 account) {
-		this.account = account;
+	public AccountReport10 setAccount(com.tools20022.repository.msg.CashAccountDetails4 account) {
+		this.account = Objects.requireNonNull(account);
+		return this;
 	}
 
-	@XmlElement(name = "BizErr", required = true)
 	public ErrorHandling3 getBusinessError() {
 		return businessError;
 	}
 
-	public void setBusinessError(com.tools20022.repository.msg.ErrorHandling3 businessError) {
-		this.businessError = businessError;
+	public AccountReport10 setBusinessError(com.tools20022.repository.msg.ErrorHandling3 businessError) {
+		this.businessError = Objects.requireNonNull(businessError);
+		return this;
 	}
 }

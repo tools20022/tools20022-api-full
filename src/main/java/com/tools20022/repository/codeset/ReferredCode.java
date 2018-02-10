@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ReferredCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates if the investor was referred.
@@ -31,12 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ReferredCode#mmReferred
- * ReferredCode.mmReferred}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ReferredCode#mmNotReferred
- * ReferredCode.mmNotReferred}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ReferredCode#mmNotKnown
- * ReferredCode.mmNotKnown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ReferredCode#Referred
+ * ReferredCode.Referred}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ReferredCode#NotReferred
+ * ReferredCode.NotReferred}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ReferredCode#NotKnown
+ * ReferredCode.NotKnown}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates if the investor was referred."</li>
  * </ul>
  */
-public class ReferredCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ReferredCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,12 +97,12 @@ public class ReferredCode {
 	 * "The investor was referred to the fund by a placement agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReferred = new MMCode() {
+	public static final ReferredCode Referred = new ReferredCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Referred";
 			definition = "The investor was referred to the fund by a placement agent.";
-			owner_lazy = () -> ReferredCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReferredCode.mmObject();
 			codeName = "REFR";
 		}
 	};
@@ -121,12 +127,12 @@ public class ReferredCode {
 	 * "The investor was not referred to the fund by a placement agent."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotReferred = new MMCode() {
+	public static final ReferredCode NotReferred = new ReferredCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotReferred";
 			definition = "The investor was not referred to the fund by a placement agent.";
-			owner_lazy = () -> ReferredCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReferredCode.mmObject();
 			codeName = "NRFR";
 		}
 	};
@@ -153,28 +159,59 @@ public class ReferredCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotKnown = new MMCode() {
+	public static final ReferredCode NotKnown = new ReferredCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotKnown";
 			definition = "It is not known whether the investor was referred to the fund by a placement agent.";
-			owner_lazy = () -> ReferredCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReferredCode.mmObject();
 			codeName = "UKNW";
 		}
 	};
+	final static private LinkedHashMap<String, ReferredCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ReferredCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("REFR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReferredCode";
 				definition = "Indicates if the investor was referred.";
-				code_lazy = () -> Arrays.asList(ReferredCode.mmReferred, ReferredCode.mmNotReferred, ReferredCode.mmNotKnown);
 				derivation_lazy = () -> Arrays.asList(Referred1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReferredCode.Referred, com.tools20022.repository.codeset.ReferredCode.NotReferred, com.tools20022.repository.codeset.ReferredCode.NotKnown);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Referred.getCodeName().get(), Referred);
+		codesByName.put(NotReferred.getCodeName().get(), NotReferred);
+		codesByName.put(NotKnown.getCodeName().get(), NotKnown);
+	}
+
+	public static ReferredCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ReferredCode[] values() {
+		ReferredCode[] values = new ReferredCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ReferredCode> {
+		@Override
+		public ReferredCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ReferredCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

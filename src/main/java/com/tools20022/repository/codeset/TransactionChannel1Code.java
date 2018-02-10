@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TransactionChannelCode;
+import com.tools20022.repository.codeset.TransactionChannel1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies the type of the communication channels used by the cardholder to
@@ -31,30 +35,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TransactionChannelCode
- * TransactionChannelCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionChannel1Code#mmMailOrder
- * TransactionChannel1Code.mmMailOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionChannel1Code#MailOrder
+ * TransactionChannel1Code.MailOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionChannel1Code#mmTelephoneOrder
- * TransactionChannel1Code.mmTelephoneOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionChannel1Code#TelephoneOrder
+ * TransactionChannel1Code.TelephoneOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionChannel1Code#mmElectronicCommerce
- * TransactionChannel1Code.mmElectronicCommerce}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionChannel1Code#ElectronicCommerce
+ * TransactionChannel1Code.ElectronicCommerce}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionChannel1Code#mmTelevisionPayment
- * TransactionChannel1Code.mmTelevisionPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionChannel1Code#TelevisionPayment
+ * TransactionChannel1Code.TelevisionPayment}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TransactionChannelCode
+ * TransactionChannelCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TransactionChannel1Code extends TransactionChannelCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransactionChannel1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -101,18 +106,19 @@ public class TransactionChannel1Code extends TransactionChannelCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TransactionChannel3Code#mmMailOrder
-	 * TransactionChannel3Code.mmMailOrder}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TransactionChannel3Code#MailOrder
+	 * TransactionChannel3Code.MailOrder}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMailOrder = new MMCode() {
+	public static final TransactionChannel1Code MailOrder = new TransactionChannel1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MailOrder";
-			nextVersions_lazy = () -> Arrays.asList(TransactionChannel3Code.mmMailOrder);
-			owner_lazy = () -> TransactionChannel1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(TransactionChannel3Code.MailOrder);
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionChannel1Code.mmObject();
+			codeName = TransactionChannelCode.MailOrder.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,18 +139,19 @@ public class TransactionChannel1Code extends TransactionChannelCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TransactionChannel3Code#mmTelephoneOrder
-	 * TransactionChannel3Code.mmTelephoneOrder}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TransactionChannel3Code#TelephoneOrder
+	 * TransactionChannel3Code.TelephoneOrder}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTelephoneOrder = new MMCode() {
+	public static final TransactionChannel1Code TelephoneOrder = new TransactionChannel1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TelephoneOrder";
-			nextVersions_lazy = () -> Arrays.asList(TransactionChannel3Code.mmTelephoneOrder);
-			owner_lazy = () -> TransactionChannel1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(TransactionChannel3Code.TelephoneOrder);
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionChannel1Code.mmObject();
+			codeName = TransactionChannelCode.TelephoneOrder.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -165,18 +172,19 @@ public class TransactionChannel1Code extends TransactionChannelCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TransactionChannel3Code#mmElectronicCommerce
-	 * TransactionChannel3Code.mmElectronicCommerce}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TransactionChannel3Code#ElectronicCommerce
+	 * TransactionChannel3Code.ElectronicCommerce}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmElectronicCommerce = new MMCode() {
+	public static final TransactionChannel1Code ElectronicCommerce = new TransactionChannel1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicCommerce";
-			nextVersions_lazy = () -> Arrays.asList(TransactionChannel3Code.mmElectronicCommerce);
-			owner_lazy = () -> TransactionChannel1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(TransactionChannel3Code.ElectronicCommerce);
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionChannel1Code.mmObject();
+			codeName = TransactionChannelCode.ElectronicCommerce.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -197,34 +205,68 @@ public class TransactionChannel1Code extends TransactionChannelCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TransactionChannel3Code#mmTelevisionPayment
-	 * TransactionChannel3Code.mmTelevisionPayment}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TransactionChannel3Code#TelevisionPayment
+	 * TransactionChannel3Code.TelevisionPayment}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTelevisionPayment = new MMCode() {
+	public static final TransactionChannel1Code TelevisionPayment = new TransactionChannel1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TelevisionPayment";
-			nextVersions_lazy = () -> Arrays.asList(TransactionChannel3Code.mmTelevisionPayment);
-			owner_lazy = () -> TransactionChannel1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(TransactionChannel3Code.TelevisionPayment);
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionChannel1Code.mmObject();
+			codeName = TransactionChannelCode.TelevisionPayment.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TransactionChannel1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransactionChannel1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MAIL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionChannel1Code";
 				definition = "Identifies the type of the communication channels used by the cardholder to the acceptor system.";
 				nextVersions_lazy = () -> Arrays.asList(TransactionChannel3Code.mmObject());
-				code_lazy = () -> Arrays.asList(TransactionChannel1Code.mmMailOrder, TransactionChannel1Code.mmTelephoneOrder, TransactionChannel1Code.mmElectronicCommerce, TransactionChannel1Code.mmTelevisionPayment);
 				trace_lazy = () -> TransactionChannelCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionChannel1Code.MailOrder, com.tools20022.repository.codeset.TransactionChannel1Code.TelephoneOrder,
+						com.tools20022.repository.codeset.TransactionChannel1Code.ElectronicCommerce, com.tools20022.repository.codeset.TransactionChannel1Code.TelevisionPayment);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(MailOrder.getCodeName().get(), MailOrder);
+		codesByName.put(TelephoneOrder.getCodeName().get(), TelephoneOrder);
+		codesByName.put(ElectronicCommerce.getCodeName().get(), ElectronicCommerce);
+		codesByName.put(TelevisionPayment.getCodeName().get(), TelevisionPayment);
+	}
+
+	public static TransactionChannel1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransactionChannel1Code[] values() {
+		TransactionChannel1Code[] values = new TransactionChannel1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransactionChannel1Code> {
+		@Override
+		public TransactionChannel1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransactionChannel1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -36,6 +37,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashAccount12#mmTypeOrExtendedType
- * CashAccount12.mmTypeOrExtendedType}</li>
+ * {@linkplain com.tools20022.repository.msg.CashAccount12#TypeOrExtendedType
+ * CashAccount12.TypeOrExtendedType}</li>
  * </ul>
  * </li>
  * <li>
@@ -77,8 +80,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -90,16 +93,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Account to or from which a cash entry is made."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashAccount12", propOrder = {"identification", "name", "type", "extendedType", "currency", "status"})
 public class CashAccount12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected CashAccountIdentification1Choice identification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,7 +137,7 @@ public class CashAccount12 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> CashAccount12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount12.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,12 +148,11 @@ public class CashAccount12 {
 			complexType_lazy = () -> CashAccountIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm", required = true)
 	protected Max35Text name;
 	/**
-	 * Name of the account. It provides an additional means of identification,
-	 * and is designated by the account servicer in agreement with the account
-	 * owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -184,7 +186,7 @@ public class CashAccount12 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
-			componentContext_lazy = () -> CashAccount12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount12.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,10 +197,11 @@ public class CashAccount12 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected CashAccountType1Code type;
 	/**
-	 * Specifies the nature, or use, of the cash account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,6 +221,10 @@ public class CashAccount12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Tp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :97A::CASH, ISO15022Synonym:
+	 * :97A::COMM, ISO15022Synonym: :97A::TAXE, ISO15022Synonym: :97A::CHAR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -231,9 +238,10 @@ public class CashAccount12 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
-			componentContext_lazy = () -> CashAccount12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount12.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":97A::CASH"), new ISO15022Synonym(this, ":97A::COMM"), new ISO15022Synonym(this, ":97A::TAXE"), new ISO15022Synonym(this, ":97A::CHAR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the nature, or use, of the cash account.";
@@ -242,10 +250,11 @@ public class CashAccount12 {
 			simpleType_lazy = () -> CashAccountType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedTp")
 	protected Extended350Code extendedType;
 	/**
-	 * Specifies the nature, or use, of the cash account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -278,7 +287,7 @@ public class CashAccount12 {
 	public static final MMMessageAttribute mmExtendedType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
-			componentContext_lazy = () -> CashAccount12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount12.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -289,10 +298,11 @@ public class CashAccount12 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy", required = true)
 	protected ActiveCurrencyCode currency;
 	/**
-	 * Medium of exchange of value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -312,6 +322,9 @@ public class CashAccount12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Ccy"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :11A::ACCT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -325,9 +338,10 @@ public class CashAccount12 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
-			componentContext_lazy = () -> CashAccount12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount12.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":11A::ACCT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Medium of exchange of value.";
@@ -336,10 +350,11 @@ public class CashAccount12 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts", required = true)
 	protected AccountStatus1Code status;
 	/**
-	 * Specifies the current state of an account, eg, enabled or deleted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -373,7 +388,7 @@ public class CashAccount12 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmStatus;
-			componentContext_lazy = () -> CashAccount12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount12.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -414,22 +429,23 @@ public class CashAccount12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmTypeOrExtendedType = new MMXor() {
+	public static final MMXor TypeOrExtendedType = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOrExtendedType";
 			definition = "Either Type or ExtendedType may be present, but not both.";
-			messageComponent_lazy = () -> CashAccount12.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(CashAccount12.mmType, CashAccount12.mmExtendedType);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.CashAccount12.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount12.mmType, com.tools20022.repository.msg.CashAccount12.mmExtendedType);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashAccount12.mmIdentification, CashAccount12.mmName, CashAccount12.mmType, CashAccount12.mmExtendedType, CashAccount12.mmCurrency, CashAccount12.mmStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount12.mmIdentification, com.tools20022.repository.msg.CashAccount12.mmName, com.tools20022.repository.msg.CashAccount12.mmType,
+						com.tools20022.repository.msg.CashAccount12.mmExtendedType, com.tools20022.repository.msg.CashAccount12.mmCurrency, com.tools20022.repository.msg.CashAccount12.mmStatus);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -440,63 +456,63 @@ public class CashAccount12 {
 				})).get();
 				name = "CashAccount12";
 				definition = "Account to or from which a cash entry is made.";
-				xors_lazy = () -> Arrays.asList(CashAccount12.mmTypeOrExtendedType);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount12.TypeOrExtendedType);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public CashAccountIdentification1Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(CashAccountIdentification1Choice identification) {
-		this.identification = identification;
+	public CashAccount12 setIdentification(CashAccountIdentification1Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Nm", required = true)
 	public Max35Text getName() {
 		return name;
 	}
 
-	public void setName(Max35Text name) {
-		this.name = name;
+	public CashAccount12 setName(Max35Text name) {
+		this.name = Objects.requireNonNull(name);
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public CashAccountType1Code getType() {
-		return type;
+	public Optional<CashAccountType1Code> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(CashAccountType1Code type) {
+	public CashAccount12 setType(CashAccountType1Code type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "XtndedTp")
-	public Extended350Code getExtendedType() {
-		return extendedType;
+	public Optional<Extended350Code> getExtendedType() {
+		return extendedType == null ? Optional.empty() : Optional.of(extendedType);
 	}
 
-	public void setExtendedType(Extended350Code extendedType) {
+	public CashAccount12 setExtendedType(Extended350Code extendedType) {
 		this.extendedType = extendedType;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy", required = true)
 	public ActiveCurrencyCode getCurrency() {
 		return currency;
 	}
 
-	public void setCurrency(ActiveCurrencyCode currency) {
-		this.currency = currency;
+	public CashAccount12 setCurrency(ActiveCurrencyCode currency) {
+		this.currency = Objects.requireNonNull(currency);
+		return this;
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public AccountStatus1Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(AccountStatus1Code status) {
-		this.status = status;
+	public CashAccount12 setStatus(AccountStatus1Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 }

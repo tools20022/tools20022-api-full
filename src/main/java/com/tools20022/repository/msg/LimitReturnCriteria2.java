@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the criteria used to report on limit."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LimitReturnCriteria2", propOrder = {"startDateTimeIndicator", "statusIndicator", "usedAmountIndicator", "usedPercentageIndicator"})
 public class LimitReturnCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StartDtTmInd")
 	protected RequestedIndicator startDateTimeIndicator;
 	/**
-	 * Indicates whether the limit start date time is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +106,7 @@ public class LimitReturnCriteria2 {
 	 */
 	public static final MMMessageAttribute mmStartDateTimeIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LimitReturnCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "StartDtTmInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +117,11 @@ public class LimitReturnCriteria2 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "StsInd")
 	protected RequestedIndicator statusIndicator;
 	/**
-	 * Indicates whether the limit status is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +149,7 @@ public class LimitReturnCriteria2 {
 	 */
 	public static final MMMessageAttribute mmStatusIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LimitReturnCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "StsInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,10 +160,11 @@ public class LimitReturnCriteria2 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "UsdAmtInd")
 	protected RequestedIndicator usedAmountIndicator;
 	/**
-	 * Indicates whether the limit used amount is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,7 +192,7 @@ public class LimitReturnCriteria2 {
 	 */
 	public static final MMMessageAttribute mmUsedAmountIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LimitReturnCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "UsdAmtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,10 +203,11 @@ public class LimitReturnCriteria2 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "UsdPctgInd")
 	protected RequestedIndicator usedPercentageIndicator;
 	/**
-	 * Indicates whether the limit used percentage is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -231,7 +236,7 @@ public class LimitReturnCriteria2 {
 	 */
 	public static final MMMessageAttribute mmUsedPercentageIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LimitReturnCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "UsdPctgInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -246,8 +251,9 @@ public class LimitReturnCriteria2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LimitReturnCriteria2.mmStartDateTimeIndicator, LimitReturnCriteria2.mmStatusIndicator, LimitReturnCriteria2.mmUsedAmountIndicator, LimitReturnCriteria2.mmUsedPercentageIndicator);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReturnCriteria2.mmStartDateTimeIndicator, com.tools20022.repository.msg.LimitReturnCriteria2.mmStatusIndicator,
+						com.tools20022.repository.msg.LimitReturnCriteria2.mmUsedAmountIndicator, com.tools20022.repository.msg.LimitReturnCriteria2.mmUsedPercentageIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitReturnCriteria2";
 				definition = "Defines the criteria used to report on limit.";
@@ -256,39 +262,39 @@ public class LimitReturnCriteria2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StartDtTmInd")
-	public RequestedIndicator getStartDateTimeIndicator() {
-		return startDateTimeIndicator;
+	public Optional<RequestedIndicator> getStartDateTimeIndicator() {
+		return startDateTimeIndicator == null ? Optional.empty() : Optional.of(startDateTimeIndicator);
 	}
 
-	public void setStartDateTimeIndicator(RequestedIndicator startDateTimeIndicator) {
+	public LimitReturnCriteria2 setStartDateTimeIndicator(RequestedIndicator startDateTimeIndicator) {
 		this.startDateTimeIndicator = startDateTimeIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "StsInd")
-	public RequestedIndicator getStatusIndicator() {
-		return statusIndicator;
+	public Optional<RequestedIndicator> getStatusIndicator() {
+		return statusIndicator == null ? Optional.empty() : Optional.of(statusIndicator);
 	}
 
-	public void setStatusIndicator(RequestedIndicator statusIndicator) {
+	public LimitReturnCriteria2 setStatusIndicator(RequestedIndicator statusIndicator) {
 		this.statusIndicator = statusIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "UsdAmtInd")
-	public RequestedIndicator getUsedAmountIndicator() {
-		return usedAmountIndicator;
+	public Optional<RequestedIndicator> getUsedAmountIndicator() {
+		return usedAmountIndicator == null ? Optional.empty() : Optional.of(usedAmountIndicator);
 	}
 
-	public void setUsedAmountIndicator(RequestedIndicator usedAmountIndicator) {
+	public LimitReturnCriteria2 setUsedAmountIndicator(RequestedIndicator usedAmountIndicator) {
 		this.usedAmountIndicator = usedAmountIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "UsdPctgInd")
-	public RequestedIndicator getUsedPercentageIndicator() {
-		return usedPercentageIndicator;
+	public Optional<RequestedIndicator> getUsedPercentageIndicator() {
+		return usedPercentageIndicator == null ? Optional.empty() : Optional.of(usedPercentageIndicator);
 	}
 
-	public void setUsedPercentageIndicator(RequestedIndicator usedPercentageIndicator) {
+	public LimitReturnCriteria2 setUsedPercentageIndicator(RequestedIndicator usedPercentageIndicator) {
 		this.usedPercentageIndicator = usedPercentageIndicator;
+		return this;
 	}
 }

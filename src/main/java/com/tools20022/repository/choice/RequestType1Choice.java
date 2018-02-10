@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.RequestType2Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the type of action to be performed in the request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RequestType1Choice", propOrder = {"paymentControl", "enquiry"})
 public class RequestType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmtCtrl", required = true)
 	protected RequestType1Code paymentControl;
 	/**
-	 * Request type is a control command on a set of transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,7 +101,7 @@ public class RequestType1Choice {
 	 */
 	public static final MMMessageAttribute mmPaymentControl = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequestType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RequestType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PmtCtrl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,10 +112,11 @@ public class RequestType1Choice {
 			simpleType_lazy = () -> RequestType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Enqry", required = true)
 	protected RequestType2Code enquiry;
 	/**
-	 * Request type is an enquiry on the a position or a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +145,7 @@ public class RequestType1Choice {
 	 */
 	public static final MMMessageAttribute mmEnquiry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequestType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RequestType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Enqry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,8 +160,8 @@ public class RequestType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RequestType1Choice.mmPaymentControl, RequestType1Choice.mmEnquiry);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RequestType1Choice.mmPaymentControl, com.tools20022.repository.choice.RequestType1Choice.mmEnquiry);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RequestType1Choice";
 				definition = "Defines the type of action to be performed in the request.";
@@ -167,21 +170,21 @@ public class RequestType1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmtCtrl", required = true)
 	public RequestType1Code getPaymentControl() {
 		return paymentControl;
 	}
 
-	public void setPaymentControl(RequestType1Code paymentControl) {
-		this.paymentControl = paymentControl;
+	public RequestType1Choice setPaymentControl(RequestType1Code paymentControl) {
+		this.paymentControl = Objects.requireNonNull(paymentControl);
+		return this;
 	}
 
-	@XmlElement(name = "Enqry", required = true)
 	public RequestType2Code getEnquiry() {
 		return enquiry;
 	}
 
-	public void setEnquiry(RequestType2Code enquiry) {
-		this.enquiry = enquiry;
+	public RequestType1Choice setEnquiry(RequestType2Code enquiry) {
+		this.enquiry = Objects.requireNonNull(enquiry);
+		return this;
 	}
 }

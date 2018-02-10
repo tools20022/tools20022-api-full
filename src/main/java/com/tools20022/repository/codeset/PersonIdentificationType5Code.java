@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PersonIdentificationTypeCode;
+import com.tools20022.repository.codeset.PersonIdentificationType5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies an alternative identification of an individual person, for example,
@@ -31,54 +35,54 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationTypeCode
- * PersonIdentificationTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#mmAlienRegistrationNumber
- * PersonIdentificationType5Code.mmAlienRegistrationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#AlienRegistrationNumber
+ * PersonIdentificationType5Code.AlienRegistrationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#mmCPFAccountNumber
- * PersonIdentificationType5Code.mmCPFAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#CPFAccountNumber
+ * PersonIdentificationType5Code.CPFAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#mmDriversLicenseNumber
- * PersonIdentificationType5Code.mmDriversLicenseNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#DriversLicenseNumber
+ * PersonIdentificationType5Code.DriversLicenseNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#mmEmployerIdentificationNumber
- * PersonIdentificationType5Code.mmEmployerIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#EmployerIdentificationNumber
+ * PersonIdentificationType5Code.EmployerIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#mmIdentityCardNumber
- * PersonIdentificationType5Code.mmIdentityCardNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#IdentityCardNumber
+ * PersonIdentificationType5Code.IdentityCardNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#mmNationalRegistrationIdentificationNumber
- * PersonIdentificationType5Code.mmNationalRegistrationIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#NationalRegistrationIdentificationNumber
+ * PersonIdentificationType5Code.NationalRegistrationIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#mmOther
- * PersonIdentificationType5Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#Other
+ * PersonIdentificationType5Code.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#mmPassportNumber
- * PersonIdentificationType5Code.mmPassportNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#PassportNumber
+ * PersonIdentificationType5Code.PassportNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#mmPostOfficeCardNumber
- * PersonIdentificationType5Code.mmPostOfficeCardNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#PostOfficeCardNumber
+ * PersonIdentificationType5Code.PostOfficeCardNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#mmSocialSecurityNumber
- * PersonIdentificationType5Code.mmSocialSecurityNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#SocialSecurityNumber
+ * PersonIdentificationType5Code.SocialSecurityNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#mmSRSAccountNumber
- * PersonIdentificationType5Code.mmSRSAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#SRSAccountNumber
+ * PersonIdentificationType5Code.SRSAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#mmGunLicenseNumber
- * PersonIdentificationType5Code.mmGunLicenseNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType5Code#GunLicenseNumber
+ * PersonIdentificationType5Code.GunLicenseNumber}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationTypeCode
+ * PersonIdentificationTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -105,7 +109,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PersonIdentificationType5Code extends PersonIdentificationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PersonIdentificationType5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -126,18 +131,19 @@ public class PersonIdentificationType5Code extends PersonIdentificationTypeCode 
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#mmAlienRegistrationNumber
-	 * PersonIdentificationType6Code.mmAlienRegistrationNumber}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#AlienRegistrationNumber
+	 * PersonIdentificationType6Code.AlienRegistrationNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAlienRegistrationNumber = new MMCode() {
+	public static final PersonIdentificationType5Code AlienRegistrationNumber = new PersonIdentificationType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlienRegistrationNumber";
-			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.mmAlienRegistrationNumber);
-			owner_lazy = () -> PersonIdentificationType5Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.AlienRegistrationNumber);
+			owner_lazy = () -> com.tools20022.repository.codeset.PersonIdentificationType5Code.mmObject();
+			codeName = PersonIdentificationTypeCode.AlienRegistrationNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,18 +164,19 @@ public class PersonIdentificationType5Code extends PersonIdentificationTypeCode 
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#mmCPFAccountNumber
-	 * PersonIdentificationType6Code.mmCPFAccountNumber}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#CPFAccountNumber
+	 * PersonIdentificationType6Code.CPFAccountNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCPFAccountNumber = new MMCode() {
+	public static final PersonIdentificationType5Code CPFAccountNumber = new PersonIdentificationType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CPFAccountNumber";
-			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.mmCPFAccountNumber);
-			owner_lazy = () -> PersonIdentificationType5Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.CPFAccountNumber);
+			owner_lazy = () -> com.tools20022.repository.codeset.PersonIdentificationType5Code.mmObject();
+			codeName = PersonIdentificationTypeCode.CPFAccountNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -190,18 +197,19 @@ public class PersonIdentificationType5Code extends PersonIdentificationTypeCode 
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#mmDriversLicenseNumber
-	 * PersonIdentificationType6Code.mmDriversLicenseNumber}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#DriversLicenseNumber
+	 * PersonIdentificationType6Code.DriversLicenseNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDriversLicenseNumber = new MMCode() {
+	public static final PersonIdentificationType5Code DriversLicenseNumber = new PersonIdentificationType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DriversLicenseNumber";
-			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.mmDriversLicenseNumber);
-			owner_lazy = () -> PersonIdentificationType5Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.DriversLicenseNumber);
+			owner_lazy = () -> com.tools20022.repository.codeset.PersonIdentificationType5Code.mmObject();
+			codeName = PersonIdentificationTypeCode.DriversLicenseNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -222,18 +230,19 @@ public class PersonIdentificationType5Code extends PersonIdentificationTypeCode 
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#mmEmployerIdentificationNumber
-	 * PersonIdentificationType6Code.mmEmployerIdentificationNumber}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#EmployerIdentificationNumber
+	 * PersonIdentificationType6Code.EmployerIdentificationNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEmployerIdentificationNumber = new MMCode() {
+	public static final PersonIdentificationType5Code EmployerIdentificationNumber = new PersonIdentificationType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployerIdentificationNumber";
-			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.mmEmployerIdentificationNumber);
-			owner_lazy = () -> PersonIdentificationType5Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.EmployerIdentificationNumber);
+			owner_lazy = () -> com.tools20022.repository.codeset.PersonIdentificationType5Code.mmObject();
+			codeName = PersonIdentificationTypeCode.EmployerIdentificationNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -254,18 +263,19 @@ public class PersonIdentificationType5Code extends PersonIdentificationTypeCode 
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#mmIdentityCardNumber
-	 * PersonIdentificationType6Code.mmIdentityCardNumber}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#IdentityCardNumber
+	 * PersonIdentificationType6Code.IdentityCardNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmIdentityCardNumber = new MMCode() {
+	public static final PersonIdentificationType5Code IdentityCardNumber = new PersonIdentificationType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentityCardNumber";
-			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.mmIdentityCardNumber);
-			owner_lazy = () -> PersonIdentificationType5Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.IdentityCardNumber);
+			owner_lazy = () -> com.tools20022.repository.codeset.PersonIdentificationType5Code.mmObject();
+			codeName = PersonIdentificationTypeCode.IdentityCardNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -286,19 +296,19 @@ public class PersonIdentificationType5Code extends PersonIdentificationTypeCode 
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#mmNationalRegistrationIdentificationNumber
-	 * PersonIdentificationType6Code.mmNationalRegistrationIdentificationNumber}
-	 * </li>
+	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#NationalRegistrationIdentificationNumber
+	 * PersonIdentificationType6Code.NationalRegistrationIdentificationNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNationalRegistrationIdentificationNumber = new MMCode() {
+	public static final PersonIdentificationType5Code NationalRegistrationIdentificationNumber = new PersonIdentificationType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalRegistrationIdentificationNumber";
-			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.mmNationalRegistrationIdentificationNumber);
-			owner_lazy = () -> PersonIdentificationType5Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.NationalRegistrationIdentificationNumber);
+			owner_lazy = () -> com.tools20022.repository.codeset.PersonIdentificationType5Code.mmObject();
+			codeName = PersonIdentificationTypeCode.NationalRegistrationIdentificationNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -319,18 +329,19 @@ public class PersonIdentificationType5Code extends PersonIdentificationTypeCode 
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#mmOther
-	 * PersonIdentificationType6Code.mmOther}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#Other
+	 * PersonIdentificationType6Code.Other}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final PersonIdentificationType5Code Other = new PersonIdentificationType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.mmOther);
-			owner_lazy = () -> PersonIdentificationType5Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.Other);
+			owner_lazy = () -> com.tools20022.repository.codeset.PersonIdentificationType5Code.mmObject();
+			codeName = PersonIdentificationTypeCode.Other.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -351,18 +362,19 @@ public class PersonIdentificationType5Code extends PersonIdentificationTypeCode 
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#mmPassportNumber
-	 * PersonIdentificationType6Code.mmPassportNumber}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#PassportNumber
+	 * PersonIdentificationType6Code.PassportNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPassportNumber = new MMCode() {
+	public static final PersonIdentificationType5Code PassportNumber = new PersonIdentificationType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassportNumber";
-			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.mmPassportNumber);
-			owner_lazy = () -> PersonIdentificationType5Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.PassportNumber);
+			owner_lazy = () -> com.tools20022.repository.codeset.PersonIdentificationType5Code.mmObject();
+			codeName = PersonIdentificationTypeCode.PassportNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -383,18 +395,19 @@ public class PersonIdentificationType5Code extends PersonIdentificationTypeCode 
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#mmPostOfficeCardNumber
-	 * PersonIdentificationType6Code.mmPostOfficeCardNumber}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#PostOfficeCardNumber
+	 * PersonIdentificationType6Code.PostOfficeCardNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPostOfficeCardNumber = new MMCode() {
+	public static final PersonIdentificationType5Code PostOfficeCardNumber = new PersonIdentificationType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostOfficeCardNumber";
-			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.mmPostOfficeCardNumber);
-			owner_lazy = () -> PersonIdentificationType5Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.PostOfficeCardNumber);
+			owner_lazy = () -> com.tools20022.repository.codeset.PersonIdentificationType5Code.mmObject();
+			codeName = PersonIdentificationTypeCode.PostOfficeCardNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -415,18 +428,19 @@ public class PersonIdentificationType5Code extends PersonIdentificationTypeCode 
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#mmSocialSecurityNumber
-	 * PersonIdentificationType6Code.mmSocialSecurityNumber}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#SocialSecurityNumber
+	 * PersonIdentificationType6Code.SocialSecurityNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSocialSecurityNumber = new MMCode() {
+	public static final PersonIdentificationType5Code SocialSecurityNumber = new PersonIdentificationType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SocialSecurityNumber";
-			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.mmSocialSecurityNumber);
-			owner_lazy = () -> PersonIdentificationType5Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.SocialSecurityNumber);
+			owner_lazy = () -> com.tools20022.repository.codeset.PersonIdentificationType5Code.mmObject();
+			codeName = PersonIdentificationTypeCode.SocialSecurityNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -447,18 +461,19 @@ public class PersonIdentificationType5Code extends PersonIdentificationTypeCode 
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#mmSRSAccountNumber
-	 * PersonIdentificationType6Code.mmSRSAccountNumber}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#SRSAccountNumber
+	 * PersonIdentificationType6Code.SRSAccountNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSRSAccountNumber = new MMCode() {
+	public static final PersonIdentificationType5Code SRSAccountNumber = new PersonIdentificationType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SRSAccountNumber";
-			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.mmSRSAccountNumber);
-			owner_lazy = () -> PersonIdentificationType5Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.SRSAccountNumber);
+			owner_lazy = () -> com.tools20022.repository.codeset.PersonIdentificationType5Code.mmObject();
+			codeName = PersonIdentificationTypeCode.SRSAccountNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -479,37 +494,80 @@ public class PersonIdentificationType5Code extends PersonIdentificationTypeCode 
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#mmGunLicenseNumber
-	 * PersonIdentificationType6Code.mmGunLicenseNumber}</li>
+	 * {@linkplain com.tools20022.repository.codeset.PersonIdentificationType6Code#GunLicenseNumber
+	 * PersonIdentificationType6Code.GunLicenseNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmGunLicenseNumber = new MMCode() {
+	public static final PersonIdentificationType5Code GunLicenseNumber = new PersonIdentificationType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GunLicenseNumber";
-			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.mmGunLicenseNumber);
-			owner_lazy = () -> PersonIdentificationType5Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.GunLicenseNumber);
+			owner_lazy = () -> com.tools20022.repository.codeset.PersonIdentificationType5Code.mmObject();
+			codeName = PersonIdentificationTypeCode.GunLicenseNumber.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PersonIdentificationType5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PersonIdentificationType5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AREG");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PersonIdentificationType5Code";
 				definition = "Specifies an alternative identification of an individual person, for example, national registration identification number, passport number.";
 				nextVersions_lazy = () -> Arrays.asList(PersonIdentificationType6Code.mmObject());
-				code_lazy = () -> Arrays.asList(PersonIdentificationType5Code.mmAlienRegistrationNumber, PersonIdentificationType5Code.mmCPFAccountNumber, PersonIdentificationType5Code.mmDriversLicenseNumber,
-						PersonIdentificationType5Code.mmEmployerIdentificationNumber, PersonIdentificationType5Code.mmIdentityCardNumber, PersonIdentificationType5Code.mmNationalRegistrationIdentificationNumber,
-						PersonIdentificationType5Code.mmOther, PersonIdentificationType5Code.mmPassportNumber, PersonIdentificationType5Code.mmPostOfficeCardNumber, PersonIdentificationType5Code.mmSocialSecurityNumber,
-						PersonIdentificationType5Code.mmSRSAccountNumber, PersonIdentificationType5Code.mmGunLicenseNumber);
 				trace_lazy = () -> PersonIdentificationTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PersonIdentificationType5Code.AlienRegistrationNumber, com.tools20022.repository.codeset.PersonIdentificationType5Code.CPFAccountNumber,
+						com.tools20022.repository.codeset.PersonIdentificationType5Code.DriversLicenseNumber, com.tools20022.repository.codeset.PersonIdentificationType5Code.EmployerIdentificationNumber,
+						com.tools20022.repository.codeset.PersonIdentificationType5Code.IdentityCardNumber, com.tools20022.repository.codeset.PersonIdentificationType5Code.NationalRegistrationIdentificationNumber,
+						com.tools20022.repository.codeset.PersonIdentificationType5Code.Other, com.tools20022.repository.codeset.PersonIdentificationType5Code.PassportNumber,
+						com.tools20022.repository.codeset.PersonIdentificationType5Code.PostOfficeCardNumber, com.tools20022.repository.codeset.PersonIdentificationType5Code.SocialSecurityNumber,
+						com.tools20022.repository.codeset.PersonIdentificationType5Code.SRSAccountNumber, com.tools20022.repository.codeset.PersonIdentificationType5Code.GunLicenseNumber);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AlienRegistrationNumber.getCodeName().get(), AlienRegistrationNumber);
+		codesByName.put(CPFAccountNumber.getCodeName().get(), CPFAccountNumber);
+		codesByName.put(DriversLicenseNumber.getCodeName().get(), DriversLicenseNumber);
+		codesByName.put(EmployerIdentificationNumber.getCodeName().get(), EmployerIdentificationNumber);
+		codesByName.put(IdentityCardNumber.getCodeName().get(), IdentityCardNumber);
+		codesByName.put(NationalRegistrationIdentificationNumber.getCodeName().get(), NationalRegistrationIdentificationNumber);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(PassportNumber.getCodeName().get(), PassportNumber);
+		codesByName.put(PostOfficeCardNumber.getCodeName().get(), PostOfficeCardNumber);
+		codesByName.put(SocialSecurityNumber.getCodeName().get(), SocialSecurityNumber);
+		codesByName.put(SRSAccountNumber.getCodeName().get(), SRSAccountNumber);
+		codesByName.put(GunLicenseNumber.getCodeName().get(), GunLicenseNumber);
+	}
+
+	public static PersonIdentificationType5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PersonIdentificationType5Code[] values() {
+		PersonIdentificationType5Code[] values = new PersonIdentificationType5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PersonIdentificationType5Code> {
+		@Override
+		public PersonIdentificationType5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PersonIdentificationType5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

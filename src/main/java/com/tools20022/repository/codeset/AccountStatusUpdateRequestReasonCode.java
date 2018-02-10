@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AccountStatusUpdateRequestReasonCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for an instruction to change to an account status.
@@ -32,8 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateRequestReasonCode#mmAccountClosureInstructionError
- * AccountStatusUpdateRequestReasonCode.mmAccountClosureInstructionError}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountStatusUpdateRequestReasonCode#AccountClosureInstructionError
+ * AccountStatusUpdateRequestReasonCode.AccountClosureInstructionError}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the reason for an instruction to change to an account status."</li>
  * </ul>
  */
-public class AccountStatusUpdateRequestReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AccountStatusUpdateRequestReasonCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,27 +90,56 @@ public class AccountStatusUpdateRequestReasonCode {
 	 * definition} = "Previous account closure instruction was sent in error."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountClosureInstructionError = new MMCode() {
+	public static final AccountStatusUpdateRequestReasonCode AccountClosureInstructionError = new AccountStatusUpdateRequestReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountClosureInstructionError";
 			definition = "Previous account closure instruction was sent in error.";
-			owner_lazy = () -> AccountStatusUpdateRequestReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountStatusUpdateRequestReasonCode.mmObject();
 			codeName = "CLOE";
 		}
 	};
+	final static private LinkedHashMap<String, AccountStatusUpdateRequestReasonCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AccountStatusUpdateRequestReasonCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountStatusUpdateRequestReasonCode";
 				definition = "Specifies the reason for an instruction to change to an account status.";
-				code_lazy = () -> Arrays.asList(AccountStatusUpdateRequestReasonCode.mmAccountClosureInstructionError);
 				derivation_lazy = () -> Arrays.asList(AccountStatusUpdateRequestReason1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountStatusUpdateRequestReasonCode.AccountClosureInstructionError);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccountClosureInstructionError.getCodeName().get(), AccountClosureInstructionError);
+	}
+
+	public static AccountStatusUpdateRequestReasonCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AccountStatusUpdateRequestReasonCode[] values() {
+		AccountStatusUpdateRequestReasonCode[] values = new AccountStatusUpdateRequestReasonCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AccountStatusUpdateRequestReasonCode> {
+		@Override
+		public AccountStatusUpdateRequestReasonCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AccountStatusUpdateRequestReasonCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

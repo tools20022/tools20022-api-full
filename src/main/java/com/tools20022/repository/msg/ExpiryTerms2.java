@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Expiry;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,28 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDateTimeAndCondition5Rule#forExpiryTerms2
+ * ConstraintDateTimeAndCondition5Rule.forExpiryTerms2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDateTimeAndCondition6Rule#forExpiryTerms2
+ * ConstraintDateTimeAndCondition6Rule.forExpiryTerms2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOpenEnded2Rule#forExpiryTerms2
+ * ConstraintOpenEnded2Rule.forExpiryTerms2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDateTimeAndCondition7Rule#forExpiryTerms2
+ * ConstraintDateTimeAndCondition7Rule.forExpiryTerms2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDateTimeAndCondition8Rule#forExpiryTerms2
+ * ConstraintDateTimeAndCondition8Rule.forExpiryTerms2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Expiry conditions."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ExpiryTerms2", propOrder = {"dateTime", "autoExtension", "condition", "openEndedIndicator"})
 public class ExpiryTerms2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DtTm")
 	protected DateAndDateTimeChoice dateTime;
 	/**
-	 * Date and time when the undertaking will cease to be available.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +134,7 @@ public class ExpiryTerms2 {
 	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Expiry.mmExpiryDateTime;
-			componentContext_lazy = () -> ExpiryTerms2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExpiryTerms2.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +145,11 @@ public class ExpiryTerms2 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "AutoXtnsn")
 	protected AutoExtension1 autoExtension;
 	/**
-	 * Details related to the automatic extension of the undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -152,7 +175,7 @@ public class ExpiryTerms2 {
 	 */
 	public static final MMMessageAssociationEnd mmAutoExtension = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ExpiryTerms2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExpiryTerms2.mmObject();
 			isDerived = false;
 			xmlTag = "AutoXtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,11 +187,11 @@ public class ExpiryTerms2 {
 			type_lazy = () -> com.tools20022.repository.msg.AutoExtension1.mmObject();
 		}
 	};
+	@XmlElement(name = "Cond")
 	protected Max2000Text condition;
 	/**
-	 * Documentary condition that indicates when the undertaking will cease to
-	 * be available.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -202,7 +225,7 @@ public class ExpiryTerms2 {
 	public static final MMMessageAttribute mmCondition = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Expiry.mmExpiryCondition;
-			componentContext_lazy = () -> ExpiryTerms2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExpiryTerms2.mmObject();
 			isDerived = false;
 			xmlTag = "Cond";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,10 +236,11 @@ public class ExpiryTerms2 {
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OpnEnddInd")
 	protected YesNoIndicator openEndedIndicator;
 	/**
-	 * Indicates whether the expiry terms are without a fixed expiry date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -250,7 +274,7 @@ public class ExpiryTerms2 {
 	public static final MMMessageAttribute mmOpenEndedIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Expiry.mmOpenEndedIndicator;
-			componentContext_lazy = () -> ExpiryTerms2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExpiryTerms2.mmObject();
 			isDerived = false;
 			xmlTag = "OpnEnddInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -265,9 +289,13 @@ public class ExpiryTerms2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ExpiryTerms2.mmDateTime, ExpiryTerms2.mmAutoExtension, ExpiryTerms2.mmCondition, ExpiryTerms2.mmOpenEndedIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpiryTerms2.mmDateTime, com.tools20022.repository.msg.ExpiryTerms2.mmAutoExtension, com.tools20022.repository.msg.ExpiryTerms2.mmCondition,
+						com.tools20022.repository.msg.ExpiryTerms2.mmOpenEndedIndicator);
 				trace_lazy = () -> Expiry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDateTimeAndCondition5Rule.forExpiryTerms2, com.tools20022.repository.constraints.ConstraintDateTimeAndCondition6Rule.forExpiryTerms2,
+						com.tools20022.repository.constraints.ConstraintOpenEnded2Rule.forExpiryTerms2, com.tools20022.repository.constraints.ConstraintDateTimeAndCondition7Rule.forExpiryTerms2,
+						com.tools20022.repository.constraints.ConstraintDateTimeAndCondition8Rule.forExpiryTerms2);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExpiryTerms2";
 				definition = "Expiry conditions.";
@@ -276,39 +304,39 @@ public class ExpiryTerms2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DtTm")
-	public DateAndDateTimeChoice getDateTime() {
-		return dateTime;
+	public Optional<DateAndDateTimeChoice> getDateTime() {
+		return dateTime == null ? Optional.empty() : Optional.of(dateTime);
 	}
 
-	public void setDateTime(DateAndDateTimeChoice dateTime) {
+	public ExpiryTerms2 setDateTime(DateAndDateTimeChoice dateTime) {
 		this.dateTime = dateTime;
+		return this;
 	}
 
-	@XmlElement(name = "AutoXtnsn")
-	public AutoExtension1 getAutoExtension() {
-		return autoExtension;
+	public Optional<AutoExtension1> getAutoExtension() {
+		return autoExtension == null ? Optional.empty() : Optional.of(autoExtension);
 	}
 
-	public void setAutoExtension(com.tools20022.repository.msg.AutoExtension1 autoExtension) {
+	public ExpiryTerms2 setAutoExtension(com.tools20022.repository.msg.AutoExtension1 autoExtension) {
 		this.autoExtension = autoExtension;
+		return this;
 	}
 
-	@XmlElement(name = "Cond")
-	public Max2000Text getCondition() {
-		return condition;
+	public Optional<Max2000Text> getCondition() {
+		return condition == null ? Optional.empty() : Optional.of(condition);
 	}
 
-	public void setCondition(Max2000Text condition) {
+	public ExpiryTerms2 setCondition(Max2000Text condition) {
 		this.condition = condition;
+		return this;
 	}
 
-	@XmlElement(name = "OpnEnddInd")
-	public YesNoIndicator getOpenEndedIndicator() {
-		return openEndedIndicator;
+	public Optional<YesNoIndicator> getOpenEndedIndicator() {
+		return openEndedIndicator == null ? Optional.empty() : Optional.of(openEndedIndicator);
 	}
 
-	public void setOpenEndedIndicator(YesNoIndicator openEndedIndicator) {
+	public ExpiryTerms2 setOpenEndedIndicator(YesNoIndicator openEndedIndicator) {
 		this.openEndedIndicator = openEndedIndicator;
+		return this;
 	}
 }

@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.IdentificationTypeCode;
+import com.tools20022.repository.codeset.IdentificationType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the source of the leg identification.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.IdentificationTypeCode
- * IdentificationTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IdentificationType2Code#mmCDC
- * IdentificationType2Code.mmCDC}</li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationType2Code#CDC
+ * IdentificationType2Code.CDC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IdentificationType2Code#mmCFETS
- * IdentificationType2Code.mmCFETS}</li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationType2Code#CFETS
+ * IdentificationType2Code.CFETS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IdentificationType2Code#mmRICCode
- * IdentificationType2Code.mmRICCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationType2Code#RICCode
+ * IdentificationType2Code.RICCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.IdentificationType2Code#mmUserDefined
- * IdentificationType2Code.mmUserDefined}</li>
+ * {@linkplain com.tools20022.repository.codeset.IdentificationType2Code#UserDefined
+ * IdentificationType2Code.UserDefined}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.IdentificationTypeCode
+ * IdentificationTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates the source of the leg identification."</li>
  * </ul>
  */
-public class IdentificationType2Code extends IdentificationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class IdentificationType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class IdentificationType2Code extends IdentificationTypeCode {
 	 * name} = "CDC"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCDC = new MMCode() {
+	public static final IdentificationType2Code CDC = new IdentificationType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CDC";
-			owner_lazy = () -> IdentificationType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IdentificationType2Code.mmObject();
+			codeName = IdentificationTypeCode.CDC.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,11 +112,12 @@ public class IdentificationType2Code extends IdentificationTypeCode {
 	 * name} = "CFETS"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCFETS = new MMCode() {
+	public static final IdentificationType2Code CFETS = new IdentificationType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CFETS";
-			owner_lazy = () -> IdentificationType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IdentificationType2Code.mmObject();
+			codeName = IdentificationTypeCode.CFETS.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -129,11 +136,12 @@ public class IdentificationType2Code extends IdentificationTypeCode {
 	 * name} = "RICCode"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRICCode = new MMCode() {
+	public static final IdentificationType2Code RICCode = new IdentificationType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RICCode";
-			owner_lazy = () -> IdentificationType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IdentificationType2Code.mmObject();
+			codeName = IdentificationTypeCode.RICCode.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -152,25 +160,59 @@ public class IdentificationType2Code extends IdentificationTypeCode {
 	 * name} = "UserDefined"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUserDefined = new MMCode() {
+	public static final IdentificationType2Code UserDefined = new IdentificationType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefined";
-			owner_lazy = () -> IdentificationType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.IdentificationType2Code.mmObject();
+			codeName = IdentificationTypeCode.UserDefined.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, IdentificationType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected IdentificationType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IdentificationType2Code";
 				definition = "Indicates the source of the leg identification.";
-				code_lazy = () -> Arrays.asList(IdentificationType2Code.mmCDC, IdentificationType2Code.mmCFETS, IdentificationType2Code.mmRICCode, IdentificationType2Code.mmUserDefined);
 				trace_lazy = () -> IdentificationTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IdentificationType2Code.CDC, com.tools20022.repository.codeset.IdentificationType2Code.CFETS,
+						com.tools20022.repository.codeset.IdentificationType2Code.RICCode, com.tools20022.repository.codeset.IdentificationType2Code.UserDefined);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CDC.getCodeName().get(), CDC);
+		codesByName.put(CFETS.getCodeName().get(), CFETS);
+		codesByName.put(RICCode.getCodeName().get(), RICCode);
+		codesByName.put(UserDefined.getCodeName().get(), UserDefined);
+	}
+
+	public static IdentificationType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static IdentificationType2Code[] values() {
+		IdentificationType2Code[] values = new IdentificationType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, IdentificationType2Code> {
+		@Override
+		public IdentificationType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(IdentificationType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

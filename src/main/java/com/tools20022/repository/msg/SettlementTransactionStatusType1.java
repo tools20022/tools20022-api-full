@@ -24,9 +24,8 @@ import com.tools20022.repository.choice.MatchingStatus8Choice;
 import com.tools20022.repository.choice.ProcessingStatus30Choice;
 import com.tools20022.repository.choice.SettlementStatus1Choice;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of the securities settlement instruction status type."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementTransactionStatusType1", propOrder = {"processingStatus", "inferredMatchingStatus", "matchingStatus", "settlementStatus", "settled"})
 public class SettlementTransactionStatusType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrcgSts")
 	protected List<ProcessingStatus30Choice> processingStatus;
 	/**
-	 * Provides details on the processing status of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +109,7 @@ public class SettlementTransactionStatusType1 {
 	 */
 	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementTransactionStatusType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTransactionStatusType1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,12 +120,11 @@ public class SettlementTransactionStatusType1 {
 			type_lazy = () -> ProcessingStatus30Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IfrrdMtchgSts")
 	protected List<MatchingStatus8Choice> inferredMatchingStatus;
 	/**
-	 * Provides the matching status of an instruction as known by the account
-	 * servicer based on an allegement. At this time no matching took place on
-	 * the market (at the CSD/ICSD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -154,7 +153,7 @@ public class SettlementTransactionStatusType1 {
 	 */
 	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementTransactionStatusType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTransactionStatusType1.mmObject();
 			isDerived = false;
 			xmlTag = "IfrrdMtchgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,10 +164,11 @@ public class SettlementTransactionStatusType1 {
 			type_lazy = () -> MatchingStatus8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MtchgSts")
 	protected List<MatchingStatus8Choice> matchingStatus;
 	/**
-	 * Provides the matching status of the instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -195,7 +195,7 @@ public class SettlementTransactionStatusType1 {
 	 */
 	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementTransactionStatusType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTransactionStatusType1.mmObject();
 			isDerived = false;
 			xmlTag = "MtchgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,10 +206,11 @@ public class SettlementTransactionStatusType1 {
 			type_lazy = () -> MatchingStatus8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmSts")
 	protected List<SettlementStatus1Choice> settlementStatus;
 	/**
-	 * Provides the settlement status of a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -236,7 +237,7 @@ public class SettlementTransactionStatusType1 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementTransactionStatusType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTransactionStatusType1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -247,10 +248,11 @@ public class SettlementTransactionStatusType1 {
 			type_lazy = () -> SettlementStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Sttld")
 	protected ProprietaryReason1 settled;
 	/**
-	 * Defines that the transaction has been settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -276,7 +278,7 @@ public class SettlementTransactionStatusType1 {
 	 */
 	public static final MMMessageAssociationEnd mmSettled = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementTransactionStatusType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTransactionStatusType1.mmObject();
 			isDerived = false;
 			xmlTag = "Sttld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -292,9 +294,10 @@ public class SettlementTransactionStatusType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementTransactionStatusType1.mmProcessingStatus, SettlementTransactionStatusType1.mmInferredMatchingStatus, SettlementTransactionStatusType1.mmMatchingStatus,
-						SettlementTransactionStatusType1.mmSettlementStatus, SettlementTransactionStatusType1.mmSettled);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTransactionStatusType1.mmProcessingStatus, com.tools20022.repository.msg.SettlementTransactionStatusType1.mmInferredMatchingStatus,
+						com.tools20022.repository.msg.SettlementTransactionStatusType1.mmMatchingStatus, com.tools20022.repository.msg.SettlementTransactionStatusType1.mmSettlementStatus,
+						com.tools20022.repository.msg.SettlementTransactionStatusType1.mmSettled);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementTransactionStatusType1";
 				definition = "Choice of the securities settlement instruction status type.";
@@ -303,48 +306,48 @@ public class SettlementTransactionStatusType1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrcgSts")
 	public List<ProcessingStatus30Choice> getProcessingStatus() {
-		return processingStatus;
+		return processingStatus == null ? processingStatus = new ArrayList<>() : processingStatus;
 	}
 
-	public void setProcessingStatus(List<ProcessingStatus30Choice> processingStatus) {
-		this.processingStatus = processingStatus;
+	public SettlementTransactionStatusType1 setProcessingStatus(List<ProcessingStatus30Choice> processingStatus) {
+		this.processingStatus = Objects.requireNonNull(processingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "IfrrdMtchgSts")
 	public List<MatchingStatus8Choice> getInferredMatchingStatus() {
-		return inferredMatchingStatus;
+		return inferredMatchingStatus == null ? inferredMatchingStatus = new ArrayList<>() : inferredMatchingStatus;
 	}
 
-	public void setInferredMatchingStatus(List<MatchingStatus8Choice> inferredMatchingStatus) {
-		this.inferredMatchingStatus = inferredMatchingStatus;
+	public SettlementTransactionStatusType1 setInferredMatchingStatus(List<MatchingStatus8Choice> inferredMatchingStatus) {
+		this.inferredMatchingStatus = Objects.requireNonNull(inferredMatchingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "MtchgSts")
 	public List<MatchingStatus8Choice> getMatchingStatus() {
-		return matchingStatus;
+		return matchingStatus == null ? matchingStatus = new ArrayList<>() : matchingStatus;
 	}
 
-	public void setMatchingStatus(List<MatchingStatus8Choice> matchingStatus) {
-		this.matchingStatus = matchingStatus;
+	public SettlementTransactionStatusType1 setMatchingStatus(List<MatchingStatus8Choice> matchingStatus) {
+		this.matchingStatus = Objects.requireNonNull(matchingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmSts")
 	public List<SettlementStatus1Choice> getSettlementStatus() {
-		return settlementStatus;
+		return settlementStatus == null ? settlementStatus = new ArrayList<>() : settlementStatus;
 	}
 
-	public void setSettlementStatus(List<SettlementStatus1Choice> settlementStatus) {
-		this.settlementStatus = settlementStatus;
+	public SettlementTransactionStatusType1 setSettlementStatus(List<SettlementStatus1Choice> settlementStatus) {
+		this.settlementStatus = Objects.requireNonNull(settlementStatus);
+		return this;
 	}
 
-	@XmlElement(name = "Sttld")
-	public ProprietaryReason1 getSettled() {
-		return settled;
+	public Optional<ProprietaryReason1> getSettled() {
+		return settled == null ? Optional.empty() : Optional.of(settled);
 	}
 
-	public void setSettled(com.tools20022.repository.msg.ProprietaryReason1 settled) {
+	public SettlementTransactionStatusType1 setSettled(com.tools20022.repository.msg.ProprietaryReason1 settled) {
 		this.settled = settled;
+		return this;
 	}
 }

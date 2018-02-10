@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CashAccountTypeCode;
+import com.tools20022.repository.codeset.CashAccountType5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of cash account.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CashAccountTypeCode
- * CashAccountTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType5Code#mmLending
- * CashAccountType5Code.mmLending}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType5Code#Lending
+ * CashAccountType5Code.Lending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType5Code#mmCollateral
- * CashAccountType5Code.mmCollateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType5Code#Collateral
+ * CashAccountType5Code.Collateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType5Code#mmFinancialSettlement
- * CashAccountType5Code.mmFinancialSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType5Code#FinancialSettlement
+ * CashAccountType5Code.FinancialSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType5Code#mmMarginReturn
- * CashAccountType5Code.mmMarginReturn}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType5Code#MarginReturn
+ * CashAccountType5Code.MarginReturn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType5Code#mmSegregated
- * CashAccountType5Code.mmSegregated}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType5Code#Segregated
+ * CashAccountType5Code.Segregated}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CashAccountTypeCode
+ * CashAccountTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of cash account."</li>
  * </ul>
  */
-public class CashAccountType5Code extends CashAccountTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CashAccountType5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class CashAccountType5Code extends CashAccountTypeCode {
 	 * name} = "Lending"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLending = new MMCode() {
+	public static final CashAccountType5Code Lending = new CashAccountType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lending";
-			owner_lazy = () -> CashAccountType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType5Code.mmObject();
+			codeName = CashAccountTypeCode.Lending.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class CashAccountType5Code extends CashAccountTypeCode {
 	 * name} = "Collateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateral = new MMCode() {
+	public static final CashAccountType5Code Collateral = new CashAccountType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collateral";
-			owner_lazy = () -> CashAccountType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType5Code.mmObject();
+			codeName = CashAccountTypeCode.Collateral.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,11 +139,12 @@ public class CashAccountType5Code extends CashAccountTypeCode {
 	 * name} = "FinancialSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinancialSettlement = new MMCode() {
+	public static final CashAccountType5Code FinancialSettlement = new CashAccountType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialSettlement";
-			owner_lazy = () -> CashAccountType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType5Code.mmObject();
+			codeName = CashAccountTypeCode.FinancialSettlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -155,11 +163,12 @@ public class CashAccountType5Code extends CashAccountTypeCode {
 	 * name} = "MarginReturn"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarginReturn = new MMCode() {
+	public static final CashAccountType5Code MarginReturn = new CashAccountType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginReturn";
-			owner_lazy = () -> CashAccountType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType5Code.mmObject();
+			codeName = CashAccountTypeCode.MarginReturn.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -178,25 +187,60 @@ public class CashAccountType5Code extends CashAccountTypeCode {
 	 * name} = "Segregated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSegregated = new MMCode() {
+	public static final CashAccountType5Code Segregated = new CashAccountType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Segregated";
-			owner_lazy = () -> CashAccountType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType5Code.mmObject();
+			codeName = CashAccountTypeCode.Segregated.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CashAccountType5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CashAccountType5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccountType5Code";
 				definition = "Specifies the type of cash account.";
-				code_lazy = () -> Arrays.asList(CashAccountType5Code.mmLending, CashAccountType5Code.mmCollateral, CashAccountType5Code.mmFinancialSettlement, CashAccountType5Code.mmMarginReturn, CashAccountType5Code.mmSegregated);
 				trace_lazy = () -> CashAccountTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashAccountType5Code.Lending, com.tools20022.repository.codeset.CashAccountType5Code.Collateral,
+						com.tools20022.repository.codeset.CashAccountType5Code.FinancialSettlement, com.tools20022.repository.codeset.CashAccountType5Code.MarginReturn, com.tools20022.repository.codeset.CashAccountType5Code.Segregated);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Lending.getCodeName().get(), Lending);
+		codesByName.put(Collateral.getCodeName().get(), Collateral);
+		codesByName.put(FinancialSettlement.getCodeName().get(), FinancialSettlement);
+		codesByName.put(MarginReturn.getCodeName().get(), MarginReturn);
+		codesByName.put(Segregated.getCodeName().get(), Segregated);
+	}
+
+	public static CashAccountType5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CashAccountType5Code[] values() {
+		CashAccountType5Code[] values = new CashAccountType5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CashAccountType5Code> {
+		@Override
+		public CashAccountType5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CashAccountType5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

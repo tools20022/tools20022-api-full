@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.RankCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the rank of an element (party, market) in a specific environment.
@@ -31,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RankCode#mmPrimary
- * RankCode.mmPrimary}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RankCode#mmSecondary
- * RankCode.mmSecondary}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RankCode#Primary
+ * RankCode.Primary}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RankCode#Secondary
+ * RankCode.Secondary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -46,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -66,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class RankCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RankCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,12 +95,12 @@ public class RankCode {
 	 * definition} = "Element is the primary one."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrimary = new MMCode() {
+	public static final RankCode Primary = new RankCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Primary";
 			definition = "Element is the primary one.";
-			owner_lazy = () -> RankCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RankCode.mmObject();
 			codeName = "PRIM";
 		}
 	};
@@ -118,28 +124,58 @@ public class RankCode {
 	 * definition} = "Element is the primary one."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecondary = new MMCode() {
+	public static final RankCode Secondary = new RankCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Secondary";
 			definition = "Element is the primary one.";
-			owner_lazy = () -> RankCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RankCode.mmObject();
 			codeName = "SECO";
 		}
 	};
+	final static private LinkedHashMap<String, RankCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RankCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PRIM");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RankCode";
 				definition = "Specifies the rank of an element (party, market) in a specific environment.";
-				code_lazy = () -> Arrays.asList(RankCode.mmPrimary, RankCode.mmSecondary);
 				derivation_lazy = () -> Arrays.asList(Rank1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RankCode.Primary, com.tools20022.repository.codeset.RankCode.Secondary);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Primary.getCodeName().get(), Primary);
+		codesByName.put(Secondary.getCodeName().get(), Secondary);
+	}
+
+	public static RankCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RankCode[] values() {
+		RankCode[] values = new RankCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RankCode> {
+		@Override
+		public RankCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RankCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,72 +20,73 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SourceOfCashCode;
+import com.tools20022.repository.codeset.SourceOfCash1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the origin of cash.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#Alimony
+ * SourceOfCash1Code.Alimony}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#CashProceeds
+ * SourceOfCash1Code.CashProceeds}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#Compensation
+ * SourceOfCash1Code.Compensation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#EmployeeIncome
+ * SourceOfCash1Code.EmployeeIncome}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#Gift
+ * SourceOfCash1Code.Gift}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#Inheritance
+ * SourceOfCash1Code.Inheritance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#InsurancePremiumLiquidation
+ * SourceOfCash1Code.InsurancePremiumLiquidation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#RealEstateSale
+ * SourceOfCash1Code.RealEstateSale}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#Redemption
+ * SourceOfCash1Code.Redemption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#RetirementPolicy
+ * SourceOfCash1Code.RetirementPolicy}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#SaleAquisitionCorporation
+ * SourceOfCash1Code.SaleAquisitionCorporation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#SaleOfGoods
+ * SourceOfCash1Code.SaleOfGoods}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#Savings
+ * SourceOfCash1Code.Savings}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#SelfEmploymentIncome
+ * SourceOfCash1Code.SelfEmploymentIncome}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#Winnings
+ * SourceOfCash1Code.Winnings}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.SourceOfCashCode
  * SourceOfCashCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#mmAlimony
- * SourceOfCash1Code.mmAlimony}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#mmCashProceeds
- * SourceOfCash1Code.mmCashProceeds}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#mmCompensation
- * SourceOfCash1Code.mmCompensation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#mmEmployeeIncome
- * SourceOfCash1Code.mmEmployeeIncome}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#mmGift
- * SourceOfCash1Code.mmGift}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#mmInheritance
- * SourceOfCash1Code.mmInheritance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#mmInsurancePremiumLiquidation
- * SourceOfCash1Code.mmInsurancePremiumLiquidation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#mmRealEstateSale
- * SourceOfCash1Code.mmRealEstateSale}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#mmRedemption
- * SourceOfCash1Code.mmRedemption}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#mmRetirementPolicy
- * SourceOfCash1Code.mmRetirementPolicy}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#mmSaleAquisitionCorporation
- * SourceOfCash1Code.mmSaleAquisitionCorporation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#mmSaleOfGoods
- * SourceOfCash1Code.mmSaleOfGoods}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#mmSavings
- * SourceOfCash1Code.mmSavings}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#mmSelfEmploymentIncome
- * SourceOfCash1Code.mmSelfEmploymentIncome}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SourceOfCash1Code#mmWinnings
- * SourceOfCash1Code.mmWinnings}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,7 +97,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the origin of cash."</li>
  * </ul>
  */
-public class SourceOfCash1Code extends SourceOfCashCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SourceOfCash1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -115,11 +117,12 @@ public class SourceOfCash1Code extends SourceOfCashCode {
 	 * name} = "Alimony"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAlimony = new MMCode() {
+	public static final SourceOfCash1Code Alimony = new SourceOfCash1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Alimony";
-			owner_lazy = () -> SourceOfCash1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SourceOfCash1Code.mmObject();
+			codeName = SourceOfCashCode.Alimony.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +141,12 @@ public class SourceOfCash1Code extends SourceOfCashCode {
 	 * name} = "CashProceeds"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashProceeds = new MMCode() {
+	public static final SourceOfCash1Code CashProceeds = new SourceOfCash1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashProceeds";
-			owner_lazy = () -> SourceOfCash1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SourceOfCash1Code.mmObject();
+			codeName = SourceOfCashCode.CashProceeds.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +165,12 @@ public class SourceOfCash1Code extends SourceOfCashCode {
 	 * name} = "Compensation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompensation = new MMCode() {
+	public static final SourceOfCash1Code Compensation = new SourceOfCash1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compensation";
-			owner_lazy = () -> SourceOfCash1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SourceOfCash1Code.mmObject();
+			codeName = SourceOfCashCode.Compensation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,11 +189,12 @@ public class SourceOfCash1Code extends SourceOfCashCode {
 	 * name} = "EmployeeIncome"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEmployeeIncome = new MMCode() {
+	public static final SourceOfCash1Code EmployeeIncome = new SourceOfCash1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployeeIncome";
-			owner_lazy = () -> SourceOfCash1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SourceOfCash1Code.mmObject();
+			codeName = SourceOfCashCode.EmployeeIncome.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -207,11 +213,12 @@ public class SourceOfCash1Code extends SourceOfCashCode {
 	 * name} = "Gift"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGift = new MMCode() {
+	public static final SourceOfCash1Code Gift = new SourceOfCash1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gift";
-			owner_lazy = () -> SourceOfCash1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SourceOfCash1Code.mmObject();
+			codeName = SourceOfCashCode.Gift.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -230,11 +237,12 @@ public class SourceOfCash1Code extends SourceOfCashCode {
 	 * name} = "Inheritance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInheritance = new MMCode() {
+	public static final SourceOfCash1Code Inheritance = new SourceOfCash1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inheritance";
-			owner_lazy = () -> SourceOfCash1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SourceOfCash1Code.mmObject();
+			codeName = SourceOfCashCode.Inheritance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -253,11 +261,12 @@ public class SourceOfCash1Code extends SourceOfCashCode {
 	 * name} = "InsurancePremiumLiquidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInsurancePremiumLiquidation = new MMCode() {
+	public static final SourceOfCash1Code InsurancePremiumLiquidation = new SourceOfCash1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsurancePremiumLiquidation";
-			owner_lazy = () -> SourceOfCash1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SourceOfCash1Code.mmObject();
+			codeName = SourceOfCashCode.InsurancePremiumLiquidation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -276,11 +285,12 @@ public class SourceOfCash1Code extends SourceOfCashCode {
 	 * name} = "RealEstateSale"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRealEstateSale = new MMCode() {
+	public static final SourceOfCash1Code RealEstateSale = new SourceOfCash1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RealEstateSale";
-			owner_lazy = () -> SourceOfCash1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SourceOfCash1Code.mmObject();
+			codeName = SourceOfCashCode.RealEstateSale.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -299,11 +309,12 @@ public class SourceOfCash1Code extends SourceOfCashCode {
 	 * name} = "Redemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRedemption = new MMCode() {
+	public static final SourceOfCash1Code Redemption = new SourceOfCash1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
-			owner_lazy = () -> SourceOfCash1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SourceOfCash1Code.mmObject();
+			codeName = SourceOfCashCode.Redemption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -322,11 +333,12 @@ public class SourceOfCash1Code extends SourceOfCashCode {
 	 * name} = "RetirementPolicy"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRetirementPolicy = new MMCode() {
+	public static final SourceOfCash1Code RetirementPolicy = new SourceOfCash1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetirementPolicy";
-			owner_lazy = () -> SourceOfCash1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SourceOfCash1Code.mmObject();
+			codeName = SourceOfCashCode.RetirementPolicy.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -345,11 +357,12 @@ public class SourceOfCash1Code extends SourceOfCashCode {
 	 * name} = "SaleAquisitionCorporation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSaleAquisitionCorporation = new MMCode() {
+	public static final SourceOfCash1Code SaleAquisitionCorporation = new SourceOfCash1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleAquisitionCorporation";
-			owner_lazy = () -> SourceOfCash1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SourceOfCash1Code.mmObject();
+			codeName = SourceOfCashCode.SaleAquisitionCorporation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -368,11 +381,12 @@ public class SourceOfCash1Code extends SourceOfCashCode {
 	 * name} = "SaleOfGoods"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSaleOfGoods = new MMCode() {
+	public static final SourceOfCash1Code SaleOfGoods = new SourceOfCash1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleOfGoods";
-			owner_lazy = () -> SourceOfCash1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SourceOfCash1Code.mmObject();
+			codeName = SourceOfCashCode.SaleOfGoods.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -391,11 +405,12 @@ public class SourceOfCash1Code extends SourceOfCashCode {
 	 * name} = "Savings"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSavings = new MMCode() {
+	public static final SourceOfCash1Code Savings = new SourceOfCash1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Savings";
-			owner_lazy = () -> SourceOfCash1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SourceOfCash1Code.mmObject();
+			codeName = SourceOfCashCode.Savings.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -414,11 +429,12 @@ public class SourceOfCash1Code extends SourceOfCashCode {
 	 * name} = "SelfEmploymentIncome"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSelfEmploymentIncome = new MMCode() {
+	public static final SourceOfCash1Code SelfEmploymentIncome = new SourceOfCash1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfEmploymentIncome";
-			owner_lazy = () -> SourceOfCash1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SourceOfCash1Code.mmObject();
+			codeName = SourceOfCashCode.SelfEmploymentIncome.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -437,27 +453,74 @@ public class SourceOfCash1Code extends SourceOfCashCode {
 	 * name} = "Winnings"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWinnings = new MMCode() {
+	public static final SourceOfCash1Code Winnings = new SourceOfCash1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Winnings";
-			owner_lazy = () -> SourceOfCash1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SourceOfCash1Code.mmObject();
+			codeName = SourceOfCashCode.Winnings.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SourceOfCash1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SourceOfCash1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SourceOfCash1Code";
 				definition = "Specifies the origin of cash.";
-				code_lazy = () -> Arrays.asList(SourceOfCash1Code.mmAlimony, SourceOfCash1Code.mmCashProceeds, SourceOfCash1Code.mmCompensation, SourceOfCash1Code.mmEmployeeIncome, SourceOfCash1Code.mmGift, SourceOfCash1Code.mmInheritance,
-						SourceOfCash1Code.mmInsurancePremiumLiquidation, SourceOfCash1Code.mmRealEstateSale, SourceOfCash1Code.mmRedemption, SourceOfCash1Code.mmRetirementPolicy, SourceOfCash1Code.mmSaleAquisitionCorporation,
-						SourceOfCash1Code.mmSaleOfGoods, SourceOfCash1Code.mmSavings, SourceOfCash1Code.mmSelfEmploymentIncome, SourceOfCash1Code.mmWinnings);
 				trace_lazy = () -> SourceOfCashCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SourceOfCash1Code.Alimony, com.tools20022.repository.codeset.SourceOfCash1Code.CashProceeds,
+						com.tools20022.repository.codeset.SourceOfCash1Code.Compensation, com.tools20022.repository.codeset.SourceOfCash1Code.EmployeeIncome, com.tools20022.repository.codeset.SourceOfCash1Code.Gift,
+						com.tools20022.repository.codeset.SourceOfCash1Code.Inheritance, com.tools20022.repository.codeset.SourceOfCash1Code.InsurancePremiumLiquidation, com.tools20022.repository.codeset.SourceOfCash1Code.RealEstateSale,
+						com.tools20022.repository.codeset.SourceOfCash1Code.Redemption, com.tools20022.repository.codeset.SourceOfCash1Code.RetirementPolicy, com.tools20022.repository.codeset.SourceOfCash1Code.SaleAquisitionCorporation,
+						com.tools20022.repository.codeset.SourceOfCash1Code.SaleOfGoods, com.tools20022.repository.codeset.SourceOfCash1Code.Savings, com.tools20022.repository.codeset.SourceOfCash1Code.SelfEmploymentIncome,
+						com.tools20022.repository.codeset.SourceOfCash1Code.Winnings);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Alimony.getCodeName().get(), Alimony);
+		codesByName.put(CashProceeds.getCodeName().get(), CashProceeds);
+		codesByName.put(Compensation.getCodeName().get(), Compensation);
+		codesByName.put(EmployeeIncome.getCodeName().get(), EmployeeIncome);
+		codesByName.put(Gift.getCodeName().get(), Gift);
+		codesByName.put(Inheritance.getCodeName().get(), Inheritance);
+		codesByName.put(InsurancePremiumLiquidation.getCodeName().get(), InsurancePremiumLiquidation);
+		codesByName.put(RealEstateSale.getCodeName().get(), RealEstateSale);
+		codesByName.put(Redemption.getCodeName().get(), Redemption);
+		codesByName.put(RetirementPolicy.getCodeName().get(), RetirementPolicy);
+		codesByName.put(SaleAquisitionCorporation.getCodeName().get(), SaleAquisitionCorporation);
+		codesByName.put(SaleOfGoods.getCodeName().get(), SaleOfGoods);
+		codesByName.put(Savings.getCodeName().get(), Savings);
+		codesByName.put(SelfEmploymentIncome.getCodeName().get(), SelfEmploymentIncome);
+		codesByName.put(Winnings.getCodeName().get(), Winnings);
+	}
+
+	public static SourceOfCash1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SourceOfCash1Code[] values() {
+		SourceOfCash1Code[] values = new SourceOfCash1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SourceOfCash1Code> {
+		@Override
+		public SourceOfCash1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SourceOfCash1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

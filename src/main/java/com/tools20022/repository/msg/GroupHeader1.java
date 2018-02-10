@@ -27,9 +27,8 @@ import com.tools20022.repository.codeset.Grouping1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -85,8 +84,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,20 +98,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GroupHeader1", propOrder = {"messageIdentification", "creationDateTime", "authorisation", "batchBooking", "numberOfTransactions", "controlSum", "grouping", "initiatingParty", "forwardingAgent"})
 public class GroupHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected Max35Text messageIdentification;
 	/**
-	 * Point to point reference assigned by the instructing party and sent to
-	 * the next party in the chain to unambiguously identify the message.
 	 * 
-	 * Usage: The instructing party has to make sure that
-	 * 'MessageIdentification' is unique per instructed party for a pre-agreed
-	 * period.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +141,7 @@ public class GroupHeader1 {
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
-			componentContext_lazy = () -> GroupHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,11 +152,11 @@ public class GroupHeader1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm", required = true)
 	protected ISODateTime creationDateTime;
 	/**
-	 * Date and time at which a (group of) payment instruction(s) was created by
-	 * the instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,7 +190,7 @@ public class GroupHeader1 {
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
-			componentContext_lazy = () -> GroupHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,18 +201,11 @@ public class GroupHeader1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "Authstn")
 	protected List<Max128Text> authorisation;
 	/**
-	 * User identification or any user key that allows to check if the
-	 * initiating party is allowed to initiate transactions from the account
-	 * specified in the initiation.
 	 * 
-	 * Usage: the content is not of a technical nature, but reflects the
-	 * organisational structure at the initiating side. The authorisation
-	 * element can typically be used in relay scenarios, payment initiations,
-	 * payment returns or payment reversals that are initiated on behalf of a
-	 * different party than the initiating party.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,7 +233,7 @@ public class GroupHeader1 {
 	 */
 	public static final MMMessageAttribute mmAuthorisation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "Authstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,12 +244,11 @@ public class GroupHeader1 {
 			simpleType_lazy = () -> Max128Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BtchBookg")
 	protected BatchBookingIndicator batchBooking;
 	/**
-	 * Identifies whether a single entry per individual transaction or a batch
-	 * entry for the sum of the amounts of all transactions in the message is
-	 * requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -290,7 +277,7 @@ public class GroupHeader1 {
 	 */
 	public static final MMMessageAttribute mmBatchBooking = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "BtchBookg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -301,10 +288,11 @@ public class GroupHeader1 {
 			simpleType_lazy = () -> BatchBookingIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfTxs", required = true)
 	protected Max15NumericText numberOfTransactions;
 	/**
-	 * Number of individual transactions contained in the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -332,7 +320,7 @@ public class GroupHeader1 {
 	 */
 	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfTxs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -343,11 +331,11 @@ public class GroupHeader1 {
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrlSum")
 	protected DecimalNumber controlSum;
 	/**
-	 * Total of all individual amounts included in the message, irrespective of
-	 * currencies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -376,7 +364,7 @@ public class GroupHeader1 {
 	 */
 	public static final MMMessageAttribute mmControlSum = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrlSum";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -387,12 +375,11 @@ public class GroupHeader1 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "Grpg", required = true)
 	protected Grouping1Code grouping;
 	/**
-	 * Indicates whether common accounting information in the transaction is
-	 * included once for all transactions or repeated for each single
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -421,7 +408,7 @@ public class GroupHeader1 {
 	 */
 	public static final MMMessageAttribute mmGrouping = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GroupHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "Grpg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -432,12 +419,11 @@ public class GroupHeader1 {
 			simpleType_lazy = () -> Grouping1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "InitgPty", required = true)
 	protected PartyIdentification8 initiatingParty;
 	/**
-	 * Party initiating the payment. In the payment context, this can either be
-	 * the debtor (in a credit transfer), the creditor (in a direct debit), or
-	 * the party that initiates the payment on behalf of the debtor or creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -470,7 +456,7 @@ public class GroupHeader1 {
 	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> GroupHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "InitgPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -482,12 +468,11 @@ public class GroupHeader1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
 		}
 	};
+	@XmlElement(name = "FwdgAgt")
 	protected BranchAndFinancialInstitutionIdentification3 forwardingAgent;
 	/**
-	 * Financial institution that receives the instruction from the initiating
-	 * party and forwards it to the next agent in the payment chain for
-	 * execution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -521,7 +506,7 @@ public class GroupHeader1 {
 	public static final MMMessageAssociationEnd mmForwardingAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> GroupHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "FwdgAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -537,11 +522,13 @@ public class GroupHeader1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GroupHeader1.mmMessageIdentification, GroupHeader1.mmCreationDateTime, GroupHeader1.mmAuthorisation, GroupHeader1.mmBatchBooking, GroupHeader1.mmNumberOfTransactions,
-						GroupHeader1.mmControlSum, GroupHeader1.mmGrouping, GroupHeader1.mmInitiatingParty, GroupHeader1.mmForwardingAgent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader1.mmMessageIdentification, com.tools20022.repository.msg.GroupHeader1.mmCreationDateTime,
+						com.tools20022.repository.msg.GroupHeader1.mmAuthorisation, com.tools20022.repository.msg.GroupHeader1.mmBatchBooking, com.tools20022.repository.msg.GroupHeader1.mmNumberOfTransactions,
+						com.tools20022.repository.msg.GroupHeader1.mmControlSum, com.tools20022.repository.msg.GroupHeader1.mmGrouping, com.tools20022.repository.msg.GroupHeader1.mmInitiatingParty,
+						com.tools20022.repository.msg.GroupHeader1.mmForwardingAgent);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerCreditTransferInitiationV02.mmGroupHeader, CustomerDirectDebitInitiationV01.mmGroupHeader);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GroupHeader1";
 				definition = "Set of characteristics shared by all individual transactions included in the message.";
@@ -550,84 +537,84 @@ public class GroupHeader1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(Max35Text messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public GroupHeader1 setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
-		this.creationDateTime = creationDateTime;
+	public GroupHeader1 setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = Objects.requireNonNull(creationDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "Authstn")
 	public List<Max128Text> getAuthorisation() {
-		return authorisation;
+		return authorisation == null ? authorisation = new ArrayList<>() : authorisation;
 	}
 
-	public void setAuthorisation(List<Max128Text> authorisation) {
-		this.authorisation = authorisation;
+	public GroupHeader1 setAuthorisation(List<Max128Text> authorisation) {
+		this.authorisation = Objects.requireNonNull(authorisation);
+		return this;
 	}
 
-	@XmlElement(name = "BtchBookg")
-	public BatchBookingIndicator getBatchBooking() {
-		return batchBooking;
+	public Optional<BatchBookingIndicator> getBatchBooking() {
+		return batchBooking == null ? Optional.empty() : Optional.of(batchBooking);
 	}
 
-	public void setBatchBooking(BatchBookingIndicator batchBooking) {
+	public GroupHeader1 setBatchBooking(BatchBookingIndicator batchBooking) {
 		this.batchBooking = batchBooking;
+		return this;
 	}
 
-	@XmlElement(name = "NbOfTxs", required = true)
 	public Max15NumericText getNumberOfTransactions() {
 		return numberOfTransactions;
 	}
 
-	public void setNumberOfTransactions(Max15NumericText numberOfTransactions) {
-		this.numberOfTransactions = numberOfTransactions;
+	public GroupHeader1 setNumberOfTransactions(Max15NumericText numberOfTransactions) {
+		this.numberOfTransactions = Objects.requireNonNull(numberOfTransactions);
+		return this;
 	}
 
-	@XmlElement(name = "CtrlSum")
-	public DecimalNumber getControlSum() {
-		return controlSum;
+	public Optional<DecimalNumber> getControlSum() {
+		return controlSum == null ? Optional.empty() : Optional.of(controlSum);
 	}
 
-	public void setControlSum(DecimalNumber controlSum) {
+	public GroupHeader1 setControlSum(DecimalNumber controlSum) {
 		this.controlSum = controlSum;
+		return this;
 	}
 
-	@XmlElement(name = "Grpg", required = true)
 	public Grouping1Code getGrouping() {
 		return grouping;
 	}
 
-	public void setGrouping(Grouping1Code grouping) {
-		this.grouping = grouping;
+	public GroupHeader1 setGrouping(Grouping1Code grouping) {
+		this.grouping = Objects.requireNonNull(grouping);
+		return this;
 	}
 
-	@XmlElement(name = "InitgPty", required = true)
 	public PartyIdentification8 getInitiatingParty() {
 		return initiatingParty;
 	}
 
-	public void setInitiatingParty(com.tools20022.repository.msg.PartyIdentification8 initiatingParty) {
-		this.initiatingParty = initiatingParty;
+	public GroupHeader1 setInitiatingParty(com.tools20022.repository.msg.PartyIdentification8 initiatingParty) {
+		this.initiatingParty = Objects.requireNonNull(initiatingParty);
+		return this;
 	}
 
-	@XmlElement(name = "FwdgAgt")
-	public BranchAndFinancialInstitutionIdentification3 getForwardingAgent() {
-		return forwardingAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification3> getForwardingAgent() {
+		return forwardingAgent == null ? Optional.empty() : Optional.of(forwardingAgent);
 	}
 
-	public void setForwardingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 forwardingAgent) {
+	public GroupHeader1 setForwardingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 forwardingAgent) {
 		this.forwardingAgent = forwardingAgent;
+		return this;
 	}
 }

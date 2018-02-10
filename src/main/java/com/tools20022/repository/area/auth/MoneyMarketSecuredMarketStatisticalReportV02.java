@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.MoneyMarketReportHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.MoneyMarketStatisticalReportingISOLatestversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -39,22 +41,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
- * AuthoritiesLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.MoneyMarketStatisticalReportingISOLatestversion
- * MoneyMarketStatisticalReportingISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "MnyMktScrdMktSttstclRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -70,6 +56,22 @@ import javax.xml.bind.annotation.*;
  * MoneyMarketSecuredMarketStatisticalReportV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.MoneyMarketStatisticalReportingISOLatestversion
+ * MoneyMarketStatisticalReportingISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "MnyMktScrdMktSttstclRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
+ * AuthoritiesLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code auth.012.001.02}</li>
@@ -89,15 +91,16 @@ import javax.xml.bind.annotation.*;
  * MoneyMarketSecuredMarketStatisticalReportV01}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MoneyMarketSecuredMarketStatisticalReportV02", propOrder = {"reportHeader", "securedMarketReport", "supplementaryData"})
 public class MoneyMarketSecuredMarketStatisticalReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptHdr", required = true)
 	protected MoneyMarketReportHeader1 reportHeader;
 	/**
-	 * Provides the elements specific to the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,11 +146,11 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "ScrdMktRpt", required = true)
 	protected SecuredMarketReport4Choice securedMarketReport;
 	/**
-	 * Provides the reason why no activity is reported or the required list of
-	 * transactions for the secured market segment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,11 +198,11 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -278,34 +281,34 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptHdr", required = true)
 	public MoneyMarketReportHeader1 getReportHeader() {
 		return reportHeader;
 	}
 
-	public void setReportHeader(MoneyMarketReportHeader1 reportHeader) {
-		this.reportHeader = reportHeader;
+	public MoneyMarketSecuredMarketStatisticalReportV02 setReportHeader(MoneyMarketReportHeader1 reportHeader) {
+		this.reportHeader = Objects.requireNonNull(reportHeader);
+		return this;
 	}
 
-	@XmlElement(name = "ScrdMktRpt", required = true)
 	public SecuredMarketReport4Choice getSecuredMarketReport() {
 		return securedMarketReport;
 	}
 
-	public void setSecuredMarketReport(SecuredMarketReport4Choice securedMarketReport) {
-		this.securedMarketReport = securedMarketReport;
+	public MoneyMarketSecuredMarketStatisticalReportV02 setSecuredMarketReport(SecuredMarketReport4Choice securedMarketReport) {
+		this.securedMarketReport = Objects.requireNonNull(securedMarketReport);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public MoneyMarketSecuredMarketStatisticalReportV02 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.012.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:auth.012.001.02")
 	static public class Document {
 		@XmlElement(name = "MnyMktScrdMktSttstclRpt", required = true)
 		public MoneyMarketSecuredMarketStatisticalReportV02 messageBody;

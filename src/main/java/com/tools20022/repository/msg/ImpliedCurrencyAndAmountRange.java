@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.AmountRange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ImpliedCurrencyAndAmountRange", propOrder = {"amount", "creditDebitIndicator"})
 public class ImpliedCurrencyAndAmountRange {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ImpliedCurrencyAmountRangeChoice amount;
 	/**
-	 * A specified amount or amount range.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +113,7 @@ public class ImpliedCurrencyAndAmountRange {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
-			componentContext_lazy = () -> ImpliedCurrencyAndAmountRange.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +124,11 @@ public class ImpliedCurrencyAndAmountRange {
 			complexType_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd")
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Indicates whether the amount is a credited or debited amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +163,7 @@ public class ImpliedCurrencyAndAmountRange {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AmountRange.mmCreditDebitIndicator;
-			componentContext_lazy = () -> ImpliedCurrencyAndAmountRange.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,9 +178,9 @@ public class ImpliedCurrencyAndAmountRange {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ImpliedCurrencyAndAmountRange.mmAmount, ImpliedCurrencyAndAmountRange.mmCreditDebitIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange.mmAmount, com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange.mmCreditDebitIndicator);
 				trace_lazy = () -> AmountRange.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ImpliedCurrencyAndAmountRange";
 				definition = "Expresses an amount or an amount range with an explicit debit/credit indicator and where the currency is implied.";
@@ -185,21 +189,21 @@ public class ImpliedCurrencyAndAmountRange {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAmountRangeChoice getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ImpliedCurrencyAmountRangeChoice amount) {
-		this.amount = amount;
+	public ImpliedCurrencyAndAmountRange setAmount(ImpliedCurrencyAmountRangeChoice amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd")
-	public CreditDebitCode getCreditDebitIndicator() {
-		return creditDebitIndicator;
+	public Optional<CreditDebitCode> getCreditDebitIndicator() {
+		return creditDebitIndicator == null ? Optional.empty() : Optional.of(creditDebitIndicator);
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+	public ImpliedCurrencyAndAmountRange setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
 		this.creditDebitIndicator = creditDebitIndicator;
+		return this;
 	}
 }

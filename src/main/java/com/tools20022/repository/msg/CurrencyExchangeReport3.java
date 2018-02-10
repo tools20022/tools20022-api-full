@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.ExchangeRateReportOrError2Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Reports either on currency exchange information or on a business error."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CurrencyExchangeReport3", propOrder = {"currencyReference", "currencyExchangeOrError"})
 public class CurrencyExchangeReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CcyRef", required = true)
 	protected CurrencySourceTarget1 currencyReference;
 	/**
-	 * Source and target currencies for which information is request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -97,7 +99,7 @@ public class CurrencyExchangeReport3 {
 	 */
 	public static final MMMessageAssociationEnd mmCurrencyReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CurrencyExchangeReport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeReport3.mmObject();
 			isDerived = false;
 			xmlTag = "CcyRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,10 +111,11 @@ public class CurrencyExchangeReport3 {
 			type_lazy = () -> com.tools20022.repository.msg.CurrencySourceTarget1.mmObject();
 		}
 	};
+	@XmlElement(name = "CcyXchgOrErr", required = true)
 	protected ExchangeRateReportOrError2Choice currencyExchangeOrError;
 	/**
-	 * Reports either on currency exchange information or on a business error.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -141,7 +144,7 @@ public class CurrencyExchangeReport3 {
 	 */
 	public static final MMMessageAssociationEnd mmCurrencyExchangeOrError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CurrencyExchangeReport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeReport3.mmObject();
 			isDerived = false;
 			xmlTag = "CcyXchgOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,8 +160,8 @@ public class CurrencyExchangeReport3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CurrencyExchangeReport3.mmCurrencyReference, CurrencyExchangeReport3.mmCurrencyExchangeOrError);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyExchangeReport3.mmCurrencyReference, com.tools20022.repository.msg.CurrencyExchangeReport3.mmCurrencyExchangeOrError);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CurrencyExchangeReport3";
 				definition = "Reports either on currency exchange information or on a business error.";
@@ -167,21 +170,21 @@ public class CurrencyExchangeReport3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CcyRef", required = true)
 	public CurrencySourceTarget1 getCurrencyReference() {
 		return currencyReference;
 	}
 
-	public void setCurrencyReference(com.tools20022.repository.msg.CurrencySourceTarget1 currencyReference) {
-		this.currencyReference = currencyReference;
+	public CurrencyExchangeReport3 setCurrencyReference(com.tools20022.repository.msg.CurrencySourceTarget1 currencyReference) {
+		this.currencyReference = Objects.requireNonNull(currencyReference);
+		return this;
 	}
 
-	@XmlElement(name = "CcyXchgOrErr", required = true)
 	public ExchangeRateReportOrError2Choice getCurrencyExchangeOrError() {
 		return currencyExchangeOrError;
 	}
 
-	public void setCurrencyExchangeOrError(ExchangeRateReportOrError2Choice currencyExchangeOrError) {
-		this.currencyExchangeOrError = currencyExchangeOrError;
+	public CurrencyExchangeReport3 setCurrencyExchangeOrError(ExchangeRateReportOrError2Choice currencyExchangeOrError) {
+		this.currencyExchangeOrError = Objects.requireNonNull(currencyExchangeOrError);
+		return this;
 	}
 }

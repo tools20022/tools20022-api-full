@@ -27,9 +27,8 @@ import com.tools20022.repository.entity.InvestmentFundOrder;
 import com.tools20022.repository.entity.Order;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -79,8 +78,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,16 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Reference of an order, order cancellation and master reference."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvestmentFundOrder1", propOrder = {"masterReference", "orderReferences"})
 public class InvestmentFundOrder1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MstrRef")
 	protected Max35Text masterReference;
 	/**
-	 * Reference assigned to a set of orders or trades in order to link them
-	 * together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -136,7 +135,7 @@ public class InvestmentFundOrder1 {
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
-			componentContext_lazy = () -> InvestmentFundOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,10 +146,11 @@ public class InvestmentFundOrder1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrRefs", required = true)
 	protected List<com.tools20022.repository.msg.InvestmentFundOrder5> orderReferences;
 	/**
-	 * Reference of an order and order cancellation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -182,7 +182,7 @@ public class InvestmentFundOrder1 {
 	public static final MMMessageAssociationEnd mmOrderReferences = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
-			componentContext_lazy = () -> InvestmentFundOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrRefs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,11 +197,11 @@ public class InvestmentFundOrder1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InvestmentFundOrder1.mmMasterReference, InvestmentFundOrder1.mmOrderReferences);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrder1.mmMasterReference, com.tools20022.repository.msg.InvestmentFundOrder1.mmOrderReferences);
 				messageBuildingBlock_lazy = () -> Arrays.asList(RedemptionBulkOrderCancellationRequestV03.mmCancellationByReference, RedemptionOrderCancellationRequestV03.mmCancellationByReference,
 						SubscriptionBulkOrderCancellationRequestV03.mmCancellationByReference, SubscriptionOrderCancellationRequestV03.mmCancellationByReference, SwitchOrderCancellationRequestV03.mmCancellationByReference);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundOrder1";
 				definition = "Reference of an order, order cancellation and master reference.";
@@ -210,21 +210,21 @@ public class InvestmentFundOrder1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MstrRef")
-	public Max35Text getMasterReference() {
-		return masterReference;
+	public Optional<Max35Text> getMasterReference() {
+		return masterReference == null ? Optional.empty() : Optional.of(masterReference);
 	}
 
-	public void setMasterReference(Max35Text masterReference) {
+	public InvestmentFundOrder1 setMasterReference(Max35Text masterReference) {
 		this.masterReference = masterReference;
+		return this;
 	}
 
-	@XmlElement(name = "OrdrRefs", required = true)
 	public List<InvestmentFundOrder5> getOrderReferences() {
-		return orderReferences;
+		return orderReferences == null ? orderReferences = new ArrayList<>() : orderReferences;
 	}
 
-	public void setOrderReferences(List<com.tools20022.repository.msg.InvestmentFundOrder5> orderReferences) {
-		this.orderReferences = orderReferences;
+	public InvestmentFundOrder1 setOrderReferences(List<com.tools20022.repository.msg.InvestmentFundOrder5> orderReferences) {
+		this.orderReferences = Objects.requireNonNull(orderReferences);
+		return this;
 	}
 }

@@ -20,30 +20,34 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TypeOfPriceCode;
+import com.tools20022.repository.codeset.TypeOfPrice8Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of price.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice8Code#Actual
+ * TypeOfPrice8Code.Actual}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.TypeOfPriceCode
  * TypeOfPriceCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice8Code#mmActual
- * TypeOfPrice8Code.mmActual}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -60,7 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of price."</li>
  * </ul>
  */
-public class TypeOfPrice8Code extends TypeOfPriceCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TypeOfPrice8Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -79,26 +84,56 @@ public class TypeOfPrice8Code extends TypeOfPriceCode {
 	 * name} = "Actual"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmActual = new MMCode() {
+	public static final TypeOfPrice8Code Actual = new TypeOfPrice8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Actual";
-			owner_lazy = () -> TypeOfPrice8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfPrice8Code.mmObject();
+			codeName = TypeOfPriceCode.Actual.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TypeOfPrice8Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TypeOfPrice8Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACTU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfPrice8Code";
 				definition = "Specifies the type of price.";
-				code_lazy = () -> Arrays.asList(TypeOfPrice8Code.mmActual);
 				trace_lazy = () -> TypeOfPriceCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice8Code.Actual);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Actual.getCodeName().get(), Actual);
+	}
+
+	public static TypeOfPrice8Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TypeOfPrice8Code[] values() {
+		TypeOfPrice8Code[] values = new TypeOfPrice8Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TypeOfPrice8Code> {
+		@Override
+		public TypeOfPrice8Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TypeOfPrice8Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

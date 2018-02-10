@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.TaxReport1;
 import com.tools20022.repository.msg.TaxReportHeader1;
 import com.tools20022.repository.msgset.InvoiceTaxReportISOLatestversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -40,22 +42,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
- * AuthoritiesLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvoiceTaxReportISOLatestversion
- * InvoiceTaxReportISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "InvcTaxRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -71,6 +57,22 @@ import javax.xml.bind.annotation.*;
  * InvoiceTaxReportV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.InvoiceTaxReportISOLatestversion
+ * InvoiceTaxReportISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "InvcTaxRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
+ * AuthoritiesLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code auth.034.001.01}</li>
@@ -86,16 +88,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvoiceTaxReportV01", propOrder = {"invoiceTaxReportHeader", "taxReport", "supplementaryData"})
 public class InvoiceTaxReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InvcTaxRptHdr", required = true)
 	protected TaxReportHeader1 invoiceTaxReportHeader;
 	/**
-	 * Defines message level identification, number of individual tax reports
-	 * and tax authority.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,13 +139,11 @@ public class InvoiceTaxReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "TaxRpt", required = true)
 	protected List<TaxReport1> taxReport;
 	/**
-	 * Contains all needed party details for tax agency (sender of the
-	 * TaxReport) and tax authority (receiver of the TaxReport) and the details
-	 * of the reported sales transaction and calculated tax related that
-	 * specific business transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,11 +183,11 @@ public class InvoiceTaxReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,34 +259,34 @@ public class InvoiceTaxReportV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InvcTaxRptHdr", required = true)
 	public TaxReportHeader1 getInvoiceTaxReportHeader() {
 		return invoiceTaxReportHeader;
 	}
 
-	public void setInvoiceTaxReportHeader(TaxReportHeader1 invoiceTaxReportHeader) {
-		this.invoiceTaxReportHeader = invoiceTaxReportHeader;
+	public InvoiceTaxReportV01 setInvoiceTaxReportHeader(TaxReportHeader1 invoiceTaxReportHeader) {
+		this.invoiceTaxReportHeader = Objects.requireNonNull(invoiceTaxReportHeader);
+		return this;
 	}
 
-	@XmlElement(name = "TaxRpt", required = true)
 	public List<TaxReport1> getTaxReport() {
-		return taxReport;
+		return taxReport == null ? taxReport = new ArrayList<>() : taxReport;
 	}
 
-	public void setTaxReport(List<TaxReport1> taxReport) {
-		this.taxReport = taxReport;
+	public InvoiceTaxReportV01 setTaxReport(List<TaxReport1> taxReport) {
+		this.taxReport = Objects.requireNonNull(taxReport);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public InvoiceTaxReportV01 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.034.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:auth.034.001.01")
 	static public class Document {
 		@XmlElement(name = "InvcTaxRpt", required = true)
 		public InvoiceTaxReportV01 messageBody;

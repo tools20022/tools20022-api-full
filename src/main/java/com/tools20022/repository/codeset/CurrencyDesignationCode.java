@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CurrencyDesignationCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether a currency is settled offshore or onshore.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyDesignationCode#mmOnshore
- * CurrencyDesignationCode.mmOnshore}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyDesignationCode#Onshore
+ * CurrencyDesignationCode.Onshore}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CurrencyDesignationCode#mmOffshore
- * CurrencyDesignationCode.mmOffshore}</li>
+ * {@linkplain com.tools20022.repository.codeset.CurrencyDesignationCode#Offshore
+ * CurrencyDesignationCode.Offshore}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies whether a currency is settled offshore or onshore."</li>
  * </ul>
  */
-public class CurrencyDesignationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CurrencyDesignationCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,12 +91,12 @@ public class CurrencyDesignationCode {
 	 * definition} = "Onshore."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOnshore = new MMCode() {
+	public static final CurrencyDesignationCode Onshore = new CurrencyDesignationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Onshore";
 			definition = "Onshore.";
-			owner_lazy = () -> CurrencyDesignationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CurrencyDesignationCode.mmObject();
 			codeName = "ONSH";
 		}
 	};
@@ -115,27 +121,57 @@ public class CurrencyDesignationCode {
 	 * definition} = "Offshore."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOffshore = new MMCode() {
+	public static final CurrencyDesignationCode Offshore = new CurrencyDesignationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offshore";
 			definition = "Offshore.";
-			owner_lazy = () -> CurrencyDesignationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CurrencyDesignationCode.mmObject();
 			codeName = "OFFS";
 		}
 	};
+	final static private LinkedHashMap<String, CurrencyDesignationCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CurrencyDesignationCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyDesignationCode";
 				definition = "Specifies whether a currency is settled offshore or onshore.";
-				code_lazy = () -> Arrays.asList(CurrencyDesignationCode.mmOnshore, CurrencyDesignationCode.mmOffshore);
 				derivation_lazy = () -> Arrays.asList(CurrencyDesignation1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CurrencyDesignationCode.Onshore, com.tools20022.repository.codeset.CurrencyDesignationCode.Offshore);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Onshore.getCodeName().get(), Onshore);
+		codesByName.put(Offshore.getCodeName().get(), Offshore);
+	}
+
+	public static CurrencyDesignationCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CurrencyDesignationCode[] values() {
+		CurrencyDesignationCode[] values = new CurrencyDesignationCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CurrencyDesignationCode> {
+		@Override
+		public CurrencyDesignationCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CurrencyDesignationCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -24,9 +24,11 @@ import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Status of a payment by card.
@@ -37,6 +39,8 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -51,8 +55,15 @@ import java.util.List;
  * CardPaymentStatus.mmCardPayment}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPayment#mmCardPaymentStatus
+ * CardPayment.mmCardPaymentStatus}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -80,19 +91,10 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPayment#mmCardPaymentStatus
- * CardPayment.mmCardPaymentStatus}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,8 +110,8 @@ public class CardPaymentStatus extends Status {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected RejectReasonCode rejectionReason;
 	/**
-	 * Reason of the rejection of a request or an advice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,8 +155,8 @@ public class CardPaymentStatus extends Status {
 	public static final MMBusinessAttribute mmRejectionReason = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AcceptorRejection1.mmRejectReason, AcceptorRejection2.mmRejectReason, AcceptorRejection3.mmRejectReason, AcceptorRejection4.mmRejectReason);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentStatus.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RejectionReason";
 			definition = "Reason of the rejection of a request or an advice.";
@@ -173,8 +175,8 @@ public class CardPaymentStatus extends Status {
 	};
 	protected FailureReasonCode failureReason;
 	/**
-	 * List of incidents during the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -281,8 +283,8 @@ public class CardPaymentStatus extends Status {
 					CardPaymentTransaction25.mmFailureReason, CardPaymentTransaction30.mmFailureReason, CardPaymentTransaction44.mmFailureReason, CardPaymentTransaction45.mmFailureReason, CardPaymentTransaction46.mmFailureReason,
 					CardPaymentTransaction40.mmFailureReason, ATMTransaction5.mmIncident, CardPaymentTransaction60.mmFailureReason, CardPaymentTransaction61.mmFailureReason, CardPaymentTransaction59.mmFailureReason,
 					CardPaymentTransaction55.mmFailureReason, ATMTransaction20.mmIncident, CardPaymentTransaction75.mmFailureReason, CardPaymentTransaction70.mmFailureReason, CardPaymentTransaction69.mmFailureReason);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentStatus.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FailureReason";
 			definition = "List of incidents during the transaction.";
@@ -301,8 +303,8 @@ public class CardPaymentStatus extends Status {
 	};
 	protected List<com.tools20022.repository.entity.CardPayment> cardPayment;
 	/**
-	 * Card payment for which a status is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -353,8 +355,8 @@ public class CardPaymentStatus extends Status {
 	public static final MMBusinessAssociationEnd mmCardPayment = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(AcceptorReconciliationResponse1.mmEnvironment, AcceptorReconciliationResponse2.mmEnvironment, AcceptorReconciliationResponse3.mmEnvironment, AcceptorReconciliationResponse4.mmEnvironment);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentStatus.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardPayment";
 			definition = "Card payment for which a status is provided.";
@@ -368,7 +370,7 @@ public class CardPaymentStatus extends Status {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentStatus";
 				definition = "Status of a payment by card.";
@@ -392,23 +394,26 @@ public class CardPaymentStatus extends Status {
 		return rejectionReason;
 	}
 
-	public void setRejectionReason(RejectReasonCode rejectionReason) {
-		this.rejectionReason = rejectionReason;
+	public CardPaymentStatus setRejectionReason(RejectReasonCode rejectionReason) {
+		this.rejectionReason = Objects.requireNonNull(rejectionReason);
+		return this;
 	}
 
 	public FailureReasonCode getFailureReason() {
 		return failureReason;
 	}
 
-	public void setFailureReason(FailureReasonCode failureReason) {
-		this.failureReason = failureReason;
+	public CardPaymentStatus setFailureReason(FailureReasonCode failureReason) {
+		this.failureReason = Objects.requireNonNull(failureReason);
+		return this;
 	}
 
 	public List<CardPayment> getCardPayment() {
-		return cardPayment;
+		return cardPayment == null ? cardPayment = new ArrayList<>() : cardPayment;
 	}
 
-	public void setCardPayment(List<com.tools20022.repository.entity.CardPayment> cardPayment) {
-		this.cardPayment = cardPayment;
+	public CardPaymentStatus setCardPayment(List<com.tools20022.repository.entity.CardPayment> cardPayment) {
+		this.cardPayment = Objects.requireNonNull(cardPayment);
+		return this;
 	}
 }

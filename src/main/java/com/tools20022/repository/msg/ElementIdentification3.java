@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Description of the elements that violated a rule."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ElementIdentification3", propOrder = {"elementPath", "elementName", "elementValue"})
 public class ElementIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ElmtPth", required = true)
 	protected Max350Text elementPath;
 	/**
-	 * Specifies from the root of the message the complete path of the element
-	 * that violated a rule.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +106,7 @@ public class ElementIdentification3 {
 	 */
 	public static final MMMessageAttribute mmElementPath = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ElementIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ElementIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "ElmtPth";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +117,11 @@ public class ElementIdentification3 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ElmtNm", required = true)
 	protected Max35Text elementName;
 	/**
-	 * Name of the element.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,7 +148,7 @@ public class ElementIdentification3 {
 	 */
 	public static final MMMessageAttribute mmElementName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ElementIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ElementIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "ElmtNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +159,11 @@ public class ElementIdentification3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ElmtVal")
 	protected Max140Text elementValue;
 	/**
-	 * Contents of the element.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,7 +190,7 @@ public class ElementIdentification3 {
 	 */
 	public static final MMMessageAttribute mmElementValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ElementIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ElementIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "ElmtVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,8 +205,9 @@ public class ElementIdentification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ElementIdentification3.mmElementPath, ElementIdentification3.mmElementName, ElementIdentification3.mmElementValue);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ElementIdentification3.mmElementPath, com.tools20022.repository.msg.ElementIdentification3.mmElementName,
+						com.tools20022.repository.msg.ElementIdentification3.mmElementValue);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ElementIdentification3";
 				definition = "Description of the elements that violated a rule.";
@@ -211,30 +216,30 @@ public class ElementIdentification3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ElmtPth", required = true)
 	public Max350Text getElementPath() {
 		return elementPath;
 	}
 
-	public void setElementPath(Max350Text elementPath) {
-		this.elementPath = elementPath;
+	public ElementIdentification3 setElementPath(Max350Text elementPath) {
+		this.elementPath = Objects.requireNonNull(elementPath);
+		return this;
 	}
 
-	@XmlElement(name = "ElmtNm", required = true)
 	public Max35Text getElementName() {
 		return elementName;
 	}
 
-	public void setElementName(Max35Text elementName) {
-		this.elementName = elementName;
+	public ElementIdentification3 setElementName(Max35Text elementName) {
+		this.elementName = Objects.requireNonNull(elementName);
+		return this;
 	}
 
-	@XmlElement(name = "ElmtVal")
-	public Max140Text getElementValue() {
-		return elementValue;
+	public Optional<Max140Text> getElementValue() {
+		return elementValue == null ? Optional.empty() : Optional.of(elementValue);
 	}
 
-	public void setElementValue(Max140Text elementValue) {
+	public ElementIdentification3 setElementValue(Max140Text elementValue) {
 		this.elementValue = elementValue;
+		return this;
 	}
 }

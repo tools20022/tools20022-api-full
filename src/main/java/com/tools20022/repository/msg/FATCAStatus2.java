@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.FATCAStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * FATCAStatus1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FATCAStatus2", propOrder = {"type", "source"})
 public class FATCAStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected FATCAStatus2Choice type;
 	/**
-	 * Foreign Account Tax Compliance Act (FATCA) status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -112,7 +115,7 @@ public class FATCAStatus2 {
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> FATCAStatus.mmFATCAStatus;
-			componentContext_lazy = () -> FATCAStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FATCAStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +128,11 @@ public class FATCAStatus2 {
 			type_lazy = () -> FATCAStatus2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Src")
 	protected FATCASource1Choice source;
 	/**
-	 * Source of the Foreign Account Tax Compliance Act (FATCA) status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -165,7 +169,7 @@ public class FATCAStatus2 {
 	public static final MMMessageAssociationEnd mmSource = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> FATCAStatus.mmFATCASourceStatus;
-			componentContext_lazy = () -> FATCAStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FATCAStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Src";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,9 +186,9 @@ public class FATCAStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FATCAStatus2.mmType, FATCAStatus2.mmSource);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FATCAStatus2.mmType, com.tools20022.repository.msg.FATCAStatus2.mmSource);
 				trace_lazy = () -> FATCAStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FATCAStatus2";
 				definition = "Foreign Account Tax Compliance Act (FATCA) status information.";
@@ -194,21 +198,21 @@ public class FATCAStatus2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public FATCAStatus2Choice getType() {
 		return type;
 	}
 
-	public void setType(FATCAStatus2Choice type) {
-		this.type = type;
+	public FATCAStatus2 setType(FATCAStatus2Choice type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Src")
-	public FATCASource1Choice getSource() {
-		return source;
+	public Optional<FATCASource1Choice> getSource() {
+		return source == null ? Optional.empty() : Optional.of(source);
 	}
 
-	public void setSource(FATCASource1Choice source) {
+	public FATCAStatus2 setSource(FATCASource1Choice source) {
 		this.source = source;
+		return this;
 	}
 }

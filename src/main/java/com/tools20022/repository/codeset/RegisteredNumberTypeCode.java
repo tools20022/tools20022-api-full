@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.RegisteredNumberTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Code values for the registered number type.
@@ -32,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#mmAustralianBusinessNumber
- * RegisteredNumberTypeCode.mmAustralianBusinessNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#AustralianBusinessNumber
+ * RegisteredNumberTypeCode.AustralianBusinessNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#mmAustralianCompanyNumber
- * RegisteredNumberTypeCode.mmAustralianCompanyNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#AustralianCompanyNumber
+ * RegisteredNumberTypeCode.AustralianCompanyNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#mmAustralianRegisteredBodyNumber
- * RegisteredNumberTypeCode.mmAustralianRegisteredBodyNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#AustralianRegisteredBodyNumber
+ * RegisteredNumberTypeCode.AustralianRegisteredBodyNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#mmAustralianRegisteredSchemeNumber
- * RegisteredNumberTypeCode.mmAustralianRegisteredSchemeNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#AustralianRegisteredSchemeNumber
+ * RegisteredNumberTypeCode.AustralianRegisteredSchemeNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#mmOther
- * RegisteredNumberTypeCode.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#Other
+ * RegisteredNumberTypeCode.Other}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -58,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Code values for the registered number type."</li>
  * </ul>
  */
-public class RegisteredNumberTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RegisteredNumberTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,12 +104,12 @@ public class RegisteredNumberTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAustralianBusinessNumber = new MMCode() {
+	public static final RegisteredNumberTypeCode AustralianBusinessNumber = new RegisteredNumberTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianBusinessNumber";
 			definition = "Australian Business Number (ABN) is a single identifier for use in business dealings with the Australian Taxation Office (ATO) and with other government agencies.";
-			owner_lazy = () -> RegisteredNumberTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RegisteredNumberTypeCode.mmObject();
 			codeName = "ABN";
 		}
 	};
@@ -131,12 +137,12 @@ public class RegisteredNumberTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAustralianCompanyNumber = new MMCode() {
+	public static final RegisteredNumberTypeCode AustralianCompanyNumber = new RegisteredNumberTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianCompanyNumber";
 			definition = "Number identifying a company, issued by the Australian Securities & Investments Commission (ASIC) upon registration.";
-			owner_lazy = () -> RegisteredNumberTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RegisteredNumberTypeCode.mmObject();
 			codeName = "ACN";
 		}
 	};
@@ -164,12 +170,12 @@ public class RegisteredNumberTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAustralianRegisteredBodyNumber = new MMCode() {
+	public static final RegisteredNumberTypeCode AustralianRegisteredBodyNumber = new RegisteredNumberTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianRegisteredBodyNumber";
 			definition = "ARBNs are issued to registrable Australian bodies and foreign companies. The ARBN is a unique identifier and no two bodies can have the same ARBN. ";
-			owner_lazy = () -> RegisteredNumberTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RegisteredNumberTypeCode.mmObject();
 			codeName = "ARBN";
 		}
 	};
@@ -197,12 +203,12 @@ public class RegisteredNumberTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAustralianRegisteredSchemeNumber = new MMCode() {
+	public static final RegisteredNumberTypeCode AustralianRegisteredSchemeNumber = new RegisteredNumberTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianRegisteredSchemeNumber";
 			definition = "ARSNs are issued to Managed Investment Schemes. The ARSN is a unique identifier and no two bodies can have the same ARSN. ";
-			owner_lazy = () -> RegisteredNumberTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RegisteredNumberTypeCode.mmObject();
 			codeName = "ARSN";
 		}
 	};
@@ -227,28 +233,64 @@ public class RegisteredNumberTypeCode {
 	 * definition} = "Other registered number type."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final RegisteredNumberTypeCode Other = new RegisteredNumberTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other registered number type.";
-			owner_lazy = () -> RegisteredNumberTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RegisteredNumberTypeCode.mmObject();
 			codeName = "OTHR";
 		}
 	};
+	final static private LinkedHashMap<String, RegisteredNumberTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RegisteredNumberTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegisteredNumberTypeCode";
 				definition = "Code values for the registered number type.";
-				code_lazy = () -> Arrays.asList(RegisteredNumberTypeCode.mmAustralianBusinessNumber, RegisteredNumberTypeCode.mmAustralianCompanyNumber, RegisteredNumberTypeCode.mmAustralianRegisteredBodyNumber,
-						RegisteredNumberTypeCode.mmAustralianRegisteredSchemeNumber, RegisteredNumberTypeCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(RegisteredNumberType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegisteredNumberTypeCode.AustralianBusinessNumber, com.tools20022.repository.codeset.RegisteredNumberTypeCode.AustralianCompanyNumber,
+						com.tools20022.repository.codeset.RegisteredNumberTypeCode.AustralianRegisteredBodyNumber, com.tools20022.repository.codeset.RegisteredNumberTypeCode.AustralianRegisteredSchemeNumber,
+						com.tools20022.repository.codeset.RegisteredNumberTypeCode.Other);
+				minLength = 3;
+				maxLength = 4;
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AustralianBusinessNumber.getCodeName().get(), AustralianBusinessNumber);
+		codesByName.put(AustralianCompanyNumber.getCodeName().get(), AustralianCompanyNumber);
+		codesByName.put(AustralianRegisteredBodyNumber.getCodeName().get(), AustralianRegisteredBodyNumber);
+		codesByName.put(AustralianRegisteredSchemeNumber.getCodeName().get(), AustralianRegisteredSchemeNumber);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static RegisteredNumberTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RegisteredNumberTypeCode[] values() {
+		RegisteredNumberTypeCode[] values = new RegisteredNumberTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RegisteredNumberTypeCode> {
+		@Override
+		public RegisteredNumberTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RegisteredNumberTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

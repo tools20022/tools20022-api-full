@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -28,6 +29,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule#forPairedOrTurnedQuantity2Choice
+ * ConstraintCoexistenceQuantityRule.forPairedOrTurnedQuantity2Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -72,16 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PairedOrTurnedQuantity2Choice", propOrder = {"pairedOffQuantity", "turnedQuantity"})
 public class PairedOrTurnedQuantity2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PairdOffQty")
 	protected FinancialInstrumentQuantity15Choice pairedOffQuantity;
 	/**
-	 * Quantity of financial instruments of the linked transaction to be
-	 * paired-off.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -101,6 +111,9 @@ public class PairedOrTurnedQuantity2Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PairdOffQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::PAIR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -116,9 +129,10 @@ public class PairedOrTurnedQuantity2Choice {
 	public static final MMMessageAssociationEnd mmPairedOffQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PairOff.mmPairedOffQuantity;
-			componentContext_lazy = () -> PairedOrTurnedQuantity2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PairedOrTurnedQuantity2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PairdOffQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::PAIR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PairedOffQuantity";
 			definition = "Quantity of financial instruments of the linked transaction to be paired-off.";
@@ -128,10 +142,11 @@ public class PairedOrTurnedQuantity2Choice {
 			type_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TrndQty")
 	protected FinancialInstrumentQuantity15Choice turnedQuantity;
 	/**
-	 * Quantity of financial instruments of the linked transaction to be turned.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -151,6 +166,9 @@ public class PairedOrTurnedQuantity2Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TrndQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::PAIR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -166,9 +184,10 @@ public class PairedOrTurnedQuantity2Choice {
 	public static final MMMessageAssociationEnd mmTurnedQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmTurnedQuantity;
-			componentContext_lazy = () -> PairedOrTurnedQuantity2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PairedOrTurnedQuantity2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TrndQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::PAIR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TurnedQuantity";
 			definition = "Quantity of financial instruments of the linked transaction to be turned.";
@@ -182,9 +201,10 @@ public class PairedOrTurnedQuantity2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PairedOrTurnedQuantity2Choice.mmPairedOffQuantity, PairedOrTurnedQuantity2Choice.mmTurnedQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PairedOrTurnedQuantity2Choice.mmPairedOffQuantity, com.tools20022.repository.choice.PairedOrTurnedQuantity2Choice.mmTurnedQuantity);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule.forPairedOrTurnedQuantity2Choice);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -200,21 +220,21 @@ public class PairedOrTurnedQuantity2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PairdOffQty")
-	public FinancialInstrumentQuantity15Choice getPairedOffQuantity() {
-		return pairedOffQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getPairedOffQuantity() {
+		return pairedOffQuantity == null ? Optional.empty() : Optional.of(pairedOffQuantity);
 	}
 
-	public void setPairedOffQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice pairedOffQuantity) {
+	public PairedOrTurnedQuantity2Choice setPairedOffQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice pairedOffQuantity) {
 		this.pairedOffQuantity = pairedOffQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "TrndQty")
-	public FinancialInstrumentQuantity15Choice getTurnedQuantity() {
-		return turnedQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getTurnedQuantity() {
+		return turnedQuantity == null ? Optional.empty() : Optional.of(turnedQuantity);
 	}
 
-	public void setTurnedQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice turnedQuantity) {
+	public PairedOrTurnedQuantity2Choice setTurnedQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice turnedQuantity) {
 		this.turnedQuantity = turnedQuantity;
+		return this;
 	}
 }

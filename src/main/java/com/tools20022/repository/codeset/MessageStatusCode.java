@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.MessageStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of a whole message processing.
@@ -31,33 +36,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageStatusCode#Accepted
+ * MessageStatusCode.Accepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageStatusCode#mmAccepted
- * MessageStatusCode.mmAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageStatusCode#AcceptedTechnicalValidation
+ * MessageStatusCode.AcceptedTechnicalValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageStatusCode#mmAcceptedTechnicalValidation
- * MessageStatusCode.mmAcceptedTechnicalValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageStatusCode#PartiallyAccepted
+ * MessageStatusCode.PartiallyAccepted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageStatusCode#Received
+ * MessageStatusCode.Received}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageStatusCode#Rejected
+ * MessageStatusCode.Rejected}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageStatusCode#Reminder
+ * MessageStatusCode.Reminder}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageStatusCode#Warning
+ * MessageStatusCode.Warning}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageStatusCode#mmPartiallyAccepted
- * MessageStatusCode.mmPartiallyAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageStatusCode#CorruptedFile
+ * MessageStatusCode.CorruptedFile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageStatusCode#mmReceived
- * MessageStatusCode.mmReceived}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageStatusCode#mmRejected
- * MessageStatusCode.mmRejected}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageStatusCode#mmReminder
- * MessageStatusCode.mmReminder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageStatusCode#mmWarning
- * MessageStatusCode.mmWarning}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageStatusCode#mmCorruptedFile
- * MessageStatusCode.mmCorruptedFile}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageStatusCode#mmIncorrectFilename
- * MessageStatusCode.mmIncorrectFilename}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageStatusCode#IncorrectFilename
+ * MessageStatusCode.IncorrectFilename}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -71,8 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,7 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of a whole message processing."</li>
  * </ul>
  */
-public class MessageStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MessageStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -107,12 +108,12 @@ public class MessageStatusCode {
 	 * definition} = "Whole message has been accepted."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final MessageStatusCode Accepted = new MessageStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			definition = "Whole message has been accepted.";
-			owner_lazy = () -> MessageStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageStatusCode.mmObject();
 			codeName = "ACPT";
 		}
 	};
@@ -140,12 +141,12 @@ public class MessageStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedTechnicalValidation = new MMCode() {
+	public static final MessageStatusCode AcceptedTechnicalValidation = new MessageStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedTechnicalValidation";
 			definition = "Message has passed syntactical validation but further validations have not been completed yet.";
-			owner_lazy = () -> MessageStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageStatusCode.mmObject();
 			codeName = "ACTC";
 		}
 	};
@@ -174,12 +175,12 @@ public class MessageStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartiallyAccepted = new MMCode() {
+	public static final MessageStatusCode PartiallyAccepted = new MessageStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyAccepted";
 			definition = "Message has been partially accepted. A number of transactions have been accepted, whereas another number of transactions have not yet been accepted.";
-			owner_lazy = () -> MessageStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageStatusCode.mmObject();
 			codeName = "PART";
 		}
 	};
@@ -204,12 +205,12 @@ public class MessageStatusCode {
 	 * definition} = "Message has been received but not processed yet."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceived = new MMCode() {
+	public static final MessageStatusCode Received = new MessageStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
 			definition = "Message has been received but not processed yet.";
-			owner_lazy = () -> MessageStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageStatusCode.mmObject();
 			codeName = "RCVD";
 		}
 	};
@@ -234,12 +235,12 @@ public class MessageStatusCode {
 	 * definition} = "Message has been rejected."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final MessageStatusCode Rejected = new MessageStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Message has been rejected.";
-			owner_lazy = () -> MessageStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageStatusCode.mmObject();
 			codeName = "RJCT";
 		}
 	};
@@ -264,12 +265,12 @@ public class MessageStatusCode {
 	 * definition} = "Reminder of a non received message."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReminder = new MMCode() {
+	public static final MessageStatusCode Reminder = new MessageStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reminder";
 			definition = "Reminder of a non received message.";
-			owner_lazy = () -> MessageStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageStatusCode.mmObject();
 			codeName = "RMDR";
 		}
 	};
@@ -294,12 +295,12 @@ public class MessageStatusCode {
 	 * definition} = "Message has been accepted with warnings."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWarning = new MMCode() {
+	public static final MessageStatusCode Warning = new MessageStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Warning";
 			definition = "Message has been accepted with warnings.";
-			owner_lazy = () -> MessageStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageStatusCode.mmObject();
 			codeName = "WARN";
 		}
 	};
@@ -324,12 +325,12 @@ public class MessageStatusCode {
 	 * definition} = "File containing the report is corrupted."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorruptedFile = new MMCode() {
+	public static final MessageStatusCode CorruptedFile = new MessageStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorruptedFile";
 			definition = "File containing the report is corrupted.";
-			owner_lazy = () -> MessageStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageStatusCode.mmObject();
 			codeName = "CRPT";
 		}
 	};
@@ -354,28 +355,67 @@ public class MessageStatusCode {
 	 * definition} = "File containing the report has an incorrect filename."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectFilename = new MMCode() {
+	public static final MessageStatusCode IncorrectFilename = new MessageStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectFilename";
 			definition = "File containing the report has an incorrect filename.";
-			owner_lazy = () -> MessageStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageStatusCode.mmObject();
 			codeName = "INCF";
 		}
 	};
+	final static private LinkedHashMap<String, MessageStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MessageStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageStatusCode";
 				definition = "Specifies the status of a whole message processing.";
-				code_lazy = () -> Arrays.asList(MessageStatusCode.mmAccepted, MessageStatusCode.mmAcceptedTechnicalValidation, MessageStatusCode.mmPartiallyAccepted, MessageStatusCode.mmReceived, MessageStatusCode.mmRejected,
-						MessageStatusCode.mmReminder, MessageStatusCode.mmWarning, MessageStatusCode.mmCorruptedFile, MessageStatusCode.mmIncorrectFilename);
 				derivation_lazy = () -> Arrays.asList(ReportingMessageStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageStatusCode.Accepted, com.tools20022.repository.codeset.MessageStatusCode.AcceptedTechnicalValidation,
+						com.tools20022.repository.codeset.MessageStatusCode.PartiallyAccepted, com.tools20022.repository.codeset.MessageStatusCode.Received, com.tools20022.repository.codeset.MessageStatusCode.Rejected,
+						com.tools20022.repository.codeset.MessageStatusCode.Reminder, com.tools20022.repository.codeset.MessageStatusCode.Warning, com.tools20022.repository.codeset.MessageStatusCode.CorruptedFile,
+						com.tools20022.repository.codeset.MessageStatusCode.IncorrectFilename);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+		codesByName.put(AcceptedTechnicalValidation.getCodeName().get(), AcceptedTechnicalValidation);
+		codesByName.put(PartiallyAccepted.getCodeName().get(), PartiallyAccepted);
+		codesByName.put(Received.getCodeName().get(), Received);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+		codesByName.put(Reminder.getCodeName().get(), Reminder);
+		codesByName.put(Warning.getCodeName().get(), Warning);
+		codesByName.put(CorruptedFile.getCodeName().get(), CorruptedFile);
+		codesByName.put(IncorrectFilename.getCodeName().get(), IncorrectFilename);
+	}
+
+	public static MessageStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MessageStatusCode[] values() {
+		MessageStatusCode[] values = new MessageStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MessageStatusCode> {
+		@Override
+		public MessageStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MessageStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

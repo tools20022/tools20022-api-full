@@ -20,42 +20,46 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode;
+import com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of a corporate action instruction cancellation process.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode
- * CorporateActionInstructionCancellationProcessingStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code#mmCancellationCompleted
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code#CancellationCompleted
  * CorporateActionInstructionCancellationProcessingStatus1Code.
- * mmCancellationCompleted}</li>
+ * CancellationCompleted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code#mmPendingCancellation
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code#PendingCancellation
  * CorporateActionInstructionCancellationProcessingStatus1Code.
- * mmPendingCancellation}</li>
+ * PendingCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code#mmAccepted
- * CorporateActionInstructionCancellationProcessingStatus1Code.mmAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code#Accepted
+ * CorporateActionInstructionCancellationProcessingStatus1Code.Accepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code#mmRejected
- * CorporateActionInstructionCancellationProcessingStatus1Code.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code#Rejected
+ * CorporateActionInstructionCancellationProcessingStatus1Code.Rejected}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatusCode
+ * CorporateActionInstructionCancellationProcessingStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CorporateActionInstructionCancellationProcessingStatus1Code extends CorporateActionInstructionCancellationProcessingStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionInstructionCancellationProcessingStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,11 +98,12 @@ public class CorporateActionInstructionCancellationProcessingStatus1Code extends
 	 * name} = "CancellationCompleted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellationCompleted = new MMCode() {
+	public static final CorporateActionInstructionCancellationProcessingStatus1Code CancellationCompleted = new CorporateActionInstructionCancellationProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationCompleted";
-			owner_lazy = () -> CorporateActionInstructionCancellationProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code.mmObject();
+			codeName = CorporateActionInstructionCancellationProcessingStatusCode.CancellationCompleted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -116,11 +122,12 @@ public class CorporateActionInstructionCancellationProcessingStatus1Code extends
 	 * name} = "PendingCancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingCancellation = new MMCode() {
+	public static final CorporateActionInstructionCancellationProcessingStatus1Code PendingCancellation = new CorporateActionInstructionCancellationProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellation";
-			owner_lazy = () -> CorporateActionInstructionCancellationProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code.mmObject();
+			codeName = CorporateActionInstructionCancellationProcessingStatusCode.PendingCancellation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -139,11 +146,12 @@ public class CorporateActionInstructionCancellationProcessingStatus1Code extends
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final CorporateActionInstructionCancellationProcessingStatus1Code Accepted = new CorporateActionInstructionCancellationProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> CorporateActionInstructionCancellationProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code.mmObject();
+			codeName = CorporateActionInstructionCancellationProcessingStatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -162,27 +170,61 @@ public class CorporateActionInstructionCancellationProcessingStatus1Code extends
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final CorporateActionInstructionCancellationProcessingStatus1Code Rejected = new CorporateActionInstructionCancellationProcessingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> CorporateActionInstructionCancellationProcessingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code.mmObject();
+			codeName = CorporateActionInstructionCancellationProcessingStatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionInstructionCancellationProcessingStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionInstructionCancellationProcessingStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CAND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstructionCancellationProcessingStatus1Code";
 				definition = "Specifies the status of a corporate action instruction cancellation process.";
-				code_lazy = () -> Arrays.asList(CorporateActionInstructionCancellationProcessingStatus1Code.mmCancellationCompleted, CorporateActionInstructionCancellationProcessingStatus1Code.mmPendingCancellation,
-						CorporateActionInstructionCancellationProcessingStatus1Code.mmAccepted, CorporateActionInstructionCancellationProcessingStatus1Code.mmRejected);
 				trace_lazy = () -> CorporateActionInstructionCancellationProcessingStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code.CancellationCompleted,
+						com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code.PendingCancellation,
+						com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code.Accepted, com.tools20022.repository.codeset.CorporateActionInstructionCancellationProcessingStatus1Code.Rejected);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CancellationCompleted.getCodeName().get(), CancellationCompleted);
+		codesByName.put(PendingCancellation.getCodeName().get(), PendingCancellation);
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+	}
+
+	public static CorporateActionInstructionCancellationProcessingStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionInstructionCancellationProcessingStatus1Code[] values() {
+		CorporateActionInstructionCancellationProcessingStatus1Code[] values = new CorporateActionInstructionCancellationProcessingStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionInstructionCancellationProcessingStatus1Code> {
+		@Override
+		public CorporateActionInstructionCancellationProcessingStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionInstructionCancellationProcessingStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

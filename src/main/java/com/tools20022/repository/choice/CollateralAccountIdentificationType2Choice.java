@@ -29,6 +29,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * CollateralAccountIdentificationType1Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CollateralAccountIdentificationType2Choice", propOrder = {"type", "proprietary"})
 public class CollateralAccountIdentificationType2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp")
 	protected CollateralAccountType1Code type;
 	/**
-	 * Indicates the type of collateral account expressed as a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,7 +140,7 @@ public class CollateralAccountIdentificationType2Choice {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmCollateralAccountType;
-			componentContext_lazy = () -> CollateralAccountIdentificationType2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralAccountIdentificationType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -150,10 +153,11 @@ public class CollateralAccountIdentificationType2Choice {
 			simpleType_lazy = () -> CollateralAccountType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification36 proprietary;
 	/**
-	 * Specifies the collateral account expressed as a proprietary code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,7 +205,7 @@ public class CollateralAccountIdentificationType2Choice {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmCollateralAccountType;
-			componentContext_lazy = () -> CollateralAccountIdentificationType2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralAccountIdentificationType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,9 +222,9 @@ public class CollateralAccountIdentificationType2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CollateralAccountIdentificationType2Choice.mmType, CollateralAccountIdentificationType2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralAccountIdentificationType2Choice.mmType, com.tools20022.repository.choice.CollateralAccountIdentificationType2Choice.mmProprietary);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -238,21 +242,21 @@ public class CollateralAccountIdentificationType2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp")
-	public CollateralAccountType1Code getType() {
-		return type;
+	public Optional<CollateralAccountType1Code> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(CollateralAccountType1Code type) {
+	public CollateralAccountIdentificationType2Choice setType(CollateralAccountType1Code type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification36 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification36 proprietary) {
-		this.proprietary = proprietary;
+	public CollateralAccountIdentificationType2Choice setProprietary(GenericIdentification36 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

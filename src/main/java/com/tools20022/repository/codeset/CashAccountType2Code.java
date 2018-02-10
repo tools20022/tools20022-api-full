@@ -20,60 +20,64 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CashAccountTypeCode;
+import com.tools20022.repository.codeset.CashAccountType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the nature, or use, of the cash account.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CashAccountTypeCode
- * CashAccountTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#mmCashPayment
- * CashAccountType2Code.mmCashPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#CashPayment
+ * CashAccountType2Code.CashPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#mmCharges
- * CashAccountType2Code.mmCharges}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#Charges
+ * CashAccountType2Code.Charges}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#mmCommission
- * CashAccountType2Code.mmCommission}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CashAccountType2Code#mmTax
- * CashAccountType2Code.mmTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#Commission
+ * CashAccountType2Code.Commission}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CashAccountType2Code#Tax
+ * CashAccountType2Code.Tax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#mmCashIncome
- * CashAccountType2Code.mmCashIncome}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#CashIncome
+ * CashAccountType2Code.CashIncome}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#mmCashTrading
- * CashAccountType2Code.mmCashTrading}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#CashTrading
+ * CashAccountType2Code.CashTrading}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#mmSettlement
- * CashAccountType2Code.mmSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#Settlement
+ * CashAccountType2Code.Settlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#mmCurrent
- * CashAccountType2Code.mmCurrent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#Current
+ * CashAccountType2Code.Current}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#mmSavings
- * CashAccountType2Code.mmSavings}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#Savings
+ * CashAccountType2Code.Savings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#mmOverNightDeposit
- * CashAccountType2Code.mmOverNightDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#OverNightDeposit
+ * CashAccountType2Code.OverNightDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#mmMarginalLending
- * CashAccountType2Code.mmMarginalLending}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType2Code#MarginalLending
+ * CashAccountType2Code.MarginalLending}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CashAccountTypeCode
+ * CashAccountTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the nature, or use, of the cash account."</li>
  * </ul>
  */
-public class CashAccountType2Code extends CashAccountTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CashAccountType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -109,11 +114,12 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 * name} = "CashPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashPayment = new MMCode() {
+	public static final CashAccountType2Code CashPayment = new CashAccountType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPayment";
-			owner_lazy = () -> CashAccountType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType2Code.mmObject();
+			codeName = CashAccountTypeCode.CashPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,11 +138,12 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 * name} = "Charges"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCharges = new MMCode() {
+	public static final CashAccountType2Code Charges = new CashAccountType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charges";
-			owner_lazy = () -> CashAccountType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType2Code.mmObject();
+			codeName = CashAccountTypeCode.Charges.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -155,11 +162,12 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 * name} = "Commission"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommission = new MMCode() {
+	public static final CashAccountType2Code Commission = new CashAccountType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commission";
-			owner_lazy = () -> CashAccountType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType2Code.mmObject();
+			codeName = CashAccountTypeCode.Commission.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -178,11 +186,12 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 * name} = "Tax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTax = new MMCode() {
+	public static final CashAccountType2Code Tax = new CashAccountType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tax";
-			owner_lazy = () -> CashAccountType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType2Code.mmObject();
+			codeName = CashAccountTypeCode.Tax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -201,11 +210,12 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 * name} = "CashIncome"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashIncome = new MMCode() {
+	public static final CashAccountType2Code CashIncome = new CashAccountType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashIncome";
-			owner_lazy = () -> CashAccountType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType2Code.mmObject();
+			codeName = CashAccountTypeCode.CashIncome.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -224,11 +234,12 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 * name} = "CashTrading"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashTrading = new MMCode() {
+	public static final CashAccountType2Code CashTrading = new CashAccountType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashTrading";
-			owner_lazy = () -> CashAccountType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType2Code.mmObject();
+			codeName = CashAccountTypeCode.CashTrading.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -247,11 +258,12 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 * name} = "Settlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlement = new MMCode() {
+	public static final CashAccountType2Code Settlement = new CashAccountType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settlement";
-			owner_lazy = () -> CashAccountType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType2Code.mmObject();
+			codeName = CashAccountTypeCode.Settlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -270,11 +282,12 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 * name} = "Current"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrent = new MMCode() {
+	public static final CashAccountType2Code Current = new CashAccountType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
-			owner_lazy = () -> CashAccountType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType2Code.mmObject();
+			codeName = CashAccountTypeCode.Current.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -293,11 +306,12 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 * name} = "Savings"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSavings = new MMCode() {
+	public static final CashAccountType2Code Savings = new CashAccountType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Savings";
-			owner_lazy = () -> CashAccountType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType2Code.mmObject();
+			codeName = CashAccountTypeCode.Savings.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -316,11 +330,12 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 * name} = "OverNightDeposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOverNightDeposit = new MMCode() {
+	public static final CashAccountType2Code OverNightDeposit = new CashAccountType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverNightDeposit";
-			owner_lazy = () -> CashAccountType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType2Code.mmObject();
+			codeName = CashAccountTypeCode.OverNightDeposit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -339,27 +354,69 @@ public class CashAccountType2Code extends CashAccountTypeCode {
 	 * name} = "MarginalLending"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarginalLending = new MMCode() {
+	public static final CashAccountType2Code MarginalLending = new CashAccountType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginalLending";
-			owner_lazy = () -> CashAccountType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType2Code.mmObject();
+			codeName = CashAccountTypeCode.MarginalLending.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CashAccountType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CashAccountType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CASH");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccountType2Code";
 				definition = "Specifies the nature, or use, of the cash account.";
-				code_lazy = () -> Arrays.asList(CashAccountType2Code.mmCashPayment, CashAccountType2Code.mmCharges, CashAccountType2Code.mmCommission, CashAccountType2Code.mmTax, CashAccountType2Code.mmCashIncome,
-						CashAccountType2Code.mmCashTrading, CashAccountType2Code.mmSettlement, CashAccountType2Code.mmCurrent, CashAccountType2Code.mmSavings, CashAccountType2Code.mmOverNightDeposit, CashAccountType2Code.mmMarginalLending);
 				trace_lazy = () -> CashAccountTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashAccountType2Code.CashPayment, com.tools20022.repository.codeset.CashAccountType2Code.Charges,
+						com.tools20022.repository.codeset.CashAccountType2Code.Commission, com.tools20022.repository.codeset.CashAccountType2Code.Tax, com.tools20022.repository.codeset.CashAccountType2Code.CashIncome,
+						com.tools20022.repository.codeset.CashAccountType2Code.CashTrading, com.tools20022.repository.codeset.CashAccountType2Code.Settlement, com.tools20022.repository.codeset.CashAccountType2Code.Current,
+						com.tools20022.repository.codeset.CashAccountType2Code.Savings, com.tools20022.repository.codeset.CashAccountType2Code.OverNightDeposit, com.tools20022.repository.codeset.CashAccountType2Code.MarginalLending);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CashPayment.getCodeName().get(), CashPayment);
+		codesByName.put(Charges.getCodeName().get(), Charges);
+		codesByName.put(Commission.getCodeName().get(), Commission);
+		codesByName.put(Tax.getCodeName().get(), Tax);
+		codesByName.put(CashIncome.getCodeName().get(), CashIncome);
+		codesByName.put(CashTrading.getCodeName().get(), CashTrading);
+		codesByName.put(Settlement.getCodeName().get(), Settlement);
+		codesByName.put(Current.getCodeName().get(), Current);
+		codesByName.put(Savings.getCodeName().get(), Savings);
+		codesByName.put(OverNightDeposit.getCodeName().get(), OverNightDeposit);
+		codesByName.put(MarginalLending.getCodeName().get(), MarginalLending);
+	}
+
+	public static CashAccountType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CashAccountType2Code[] values() {
+		CashAccountType2Code[] values = new CashAccountType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CashAccountType2Code> {
+		@Override
+		public CashAccountType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CashAccountType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

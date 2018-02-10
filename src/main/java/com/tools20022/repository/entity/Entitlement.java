@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.FinancialInstrumentAttributes44;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Financial instrument providing the holder the privilege to subscribe to or to
@@ -40,6 +41,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -59,8 +62,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Entitlement.mmCappedIndicator}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -73,8 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,9 +93,8 @@ public class Entitlement extends Security {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected SecuritiesPricing strikePrice;
 	/**
-	 * Predetermined price at which the holder buys or sells the underlying
-	 * assets.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,8 +128,8 @@ public class Entitlement extends Security {
 	 */
 	public static final MMBusinessAssociationEnd mmStrikePrice = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Entitlement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StrikePrice";
 			definition = "Predetermined price at which the holder buys or sells the underlying assets.";
@@ -142,9 +142,8 @@ public class Entitlement extends Security {
 	};
 	protected YesNoIndicator coveredIndicator;
 	/**
-	 * Indicates whether the underlying security is owned by the writer of the
-	 * entitlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,8 +182,8 @@ public class Entitlement extends Security {
 	public static final MMBusinessAttribute mmCoveredIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes44.mmCoveredIndicator, CommonFinancialInstrumentAttributes1.mmCoveredIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Entitlement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CoveredIndicator";
 			definition = "Indicates whether the underlying security is owned by the writer of the entitlement.";
@@ -203,8 +202,8 @@ public class Entitlement extends Security {
 	};
 	protected OptionStyleCode optionStyle;
 	/**
-	 * Specifies how an option can be exercised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -229,8 +228,8 @@ public class Entitlement extends Security {
 	 */
 	public static final MMBusinessAttribute mmOptionStyle = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Entitlement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionStyle";
 			definition = "Specifies how an option can be exercised.";
@@ -249,10 +248,8 @@ public class Entitlement extends Security {
 	};
 	protected OptionTypeCode optionType;
 	/**
-	 * Specifies whether it is a call option (right to purchase a specific
-	 * underlying asset) or a put option (right to sell a specific underlying
-	 * asset).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -279,8 +276,8 @@ public class Entitlement extends Security {
 	 */
 	public static final MMBusinessAttribute mmOptionType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Entitlement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionType";
 			definition = "Specifies whether it is a call option (right to purchase a specific underlying asset) or a put option (right to sell a specific underlying asset).";
@@ -299,10 +296,8 @@ public class Entitlement extends Security {
 	};
 	protected CurrencyAndAmount cappedValue;
 	/**
-	 * Limit on the pay-out on the expiration of the entitlement. The positive
-	 * difference between the cap value and the strike price is the maximum
-	 * amount that would be paid off at expiration.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -329,8 +324,8 @@ public class Entitlement extends Security {
 	 */
 	public static final MMBusinessAttribute mmCappedValue = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Entitlement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CappedValue";
 			definition = "Limit on the pay-out on the expiration of the entitlement. The positive difference between the cap value and the strike price is the maximum amount that would be paid off at expiration.";
@@ -349,8 +344,8 @@ public class Entitlement extends Security {
 	};
 	protected YesNoIndicator cappedIndicator;
 	/**
-	 * Indicates whether an entitlement is capped.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -375,8 +370,8 @@ public class Entitlement extends Security {
 	 */
 	public static final MMBusinessAttribute mmCappedIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Entitlement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Entitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CappedIndicator";
 			definition = "Indicates whether an entitlement is capped.";
@@ -397,7 +392,7 @@ public class Entitlement extends Security {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Entitlement";
 				definition = "Financial instrument providing the holder the privilege to subscribe to or to receive specific assets on terms specified.";
@@ -419,47 +414,53 @@ public class Entitlement extends Security {
 		return strikePrice;
 	}
 
-	public void setStrikePrice(com.tools20022.repository.entity.SecuritiesPricing strikePrice) {
-		this.strikePrice = strikePrice;
+	public Entitlement setStrikePrice(com.tools20022.repository.entity.SecuritiesPricing strikePrice) {
+		this.strikePrice = Objects.requireNonNull(strikePrice);
+		return this;
 	}
 
 	public YesNoIndicator getCoveredIndicator() {
 		return coveredIndicator;
 	}
 
-	public void setCoveredIndicator(YesNoIndicator coveredIndicator) {
-		this.coveredIndicator = coveredIndicator;
+	public Entitlement setCoveredIndicator(YesNoIndicator coveredIndicator) {
+		this.coveredIndicator = Objects.requireNonNull(coveredIndicator);
+		return this;
 	}
 
 	public OptionStyleCode getOptionStyle() {
 		return optionStyle;
 	}
 
-	public void setOptionStyle(OptionStyleCode optionStyle) {
-		this.optionStyle = optionStyle;
+	public Entitlement setOptionStyle(OptionStyleCode optionStyle) {
+		this.optionStyle = Objects.requireNonNull(optionStyle);
+		return this;
 	}
 
 	public OptionTypeCode getOptionType() {
 		return optionType;
 	}
 
-	public void setOptionType(OptionTypeCode optionType) {
-		this.optionType = optionType;
+	public Entitlement setOptionType(OptionTypeCode optionType) {
+		this.optionType = Objects.requireNonNull(optionType);
+		return this;
 	}
 
 	public CurrencyAndAmount getCappedValue() {
 		return cappedValue;
 	}
 
-	public void setCappedValue(CurrencyAndAmount cappedValue) {
-		this.cappedValue = cappedValue;
+	public Entitlement setCappedValue(CurrencyAndAmount cappedValue) {
+		this.cappedValue = Objects.requireNonNull(cappedValue);
+		return this;
 	}
 
 	public YesNoIndicator getCappedIndicator() {
 		return cappedIndicator;
 	}
 
-	public void setCappedIndicator(YesNoIndicator cappedIndicator) {
-		this.cappedIndicator = cappedIndicator;
+	public Entitlement setCappedIndicator(YesNoIndicator cappedIndicator) {
+		this.cappedIndicator = Objects.requireNonNull(cappedIndicator);
+		return this;
 	}
 }

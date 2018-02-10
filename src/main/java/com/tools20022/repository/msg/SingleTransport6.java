@@ -22,9 +22,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.msg.SingleTransport5 SingleTransport5}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SingleTransport6", propOrder = {"transportByAir", "transportBySea", "transportByRoad", "transportByRail"})
 public class SingleTransport6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TrnsprtByAir")
 	protected List<com.tools20022.repository.msg.TransportByAir4> transportByAir;
 	/**
-	 * Information related to the transportation of goods by air.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -134,7 +137,7 @@ public class SingleTransport6 {
 	public static final MMMessageAssociationEnd mmTransportByAir = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> TransportByAir.mmObject();
-			componentContext_lazy = () -> SingleTransport6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SingleTransport6.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtByAir";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,10 +150,11 @@ public class SingleTransport6 {
 			type_lazy = () -> com.tools20022.repository.msg.TransportByAir4.mmObject();
 		}
 	};
+	@XmlElement(name = "TrnsprtBySea")
 	protected List<com.tools20022.repository.msg.TransportBySea5> transportBySea;
 	/**
-	 * Information related for the transportation of goods by sea.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -196,7 +200,7 @@ public class SingleTransport6 {
 	public static final MMMessageAssociationEnd mmTransportBySea = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> TransportBySea.mmObject();
-			componentContext_lazy = () -> SingleTransport6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SingleTransport6.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtBySea";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,10 +213,11 @@ public class SingleTransport6 {
 			type_lazy = () -> com.tools20022.repository.msg.TransportBySea5.mmObject();
 		}
 	};
+	@XmlElement(name = "TrnsprtByRoad")
 	protected List<com.tools20022.repository.msg.TransportByRoad4> transportByRoad;
 	/**
-	 * Moving of goods or people from one place to another by vehicle.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -258,7 +263,7 @@ public class SingleTransport6 {
 	public static final MMMessageAssociationEnd mmTransportByRoad = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> TransportByRoad.mmObject();
-			componentContext_lazy = () -> SingleTransport6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SingleTransport6.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtByRoad";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -271,10 +276,11 @@ public class SingleTransport6 {
 			type_lazy = () -> com.tools20022.repository.msg.TransportByRoad4.mmObject();
 		}
 	};
+	@XmlElement(name = "TrnsprtByRail")
 	protected List<com.tools20022.repository.msg.TransportByRail4> transportByRail;
 	/**
-	 * Information related to the transportation of goods by rail.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -320,7 +326,7 @@ public class SingleTransport6 {
 	public static final MMMessageAssociationEnd mmTransportByRail = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> TransportByRail.mmObject();
-			componentContext_lazy = () -> SingleTransport6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SingleTransport6.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtByRail";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -337,9 +343,10 @@ public class SingleTransport6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SingleTransport6.mmTransportByAir, SingleTransport6.mmTransportBySea, SingleTransport6.mmTransportByRoad, SingleTransport6.mmTransportByRail);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleTransport6.mmTransportByAir, com.tools20022.repository.msg.SingleTransport6.mmTransportBySea,
+						com.tools20022.repository.msg.SingleTransport6.mmTransportByRoad, com.tools20022.repository.msg.SingleTransport6.mmTransportByRail);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SingleTransport6";
 				definition = "Specifies individually each leg of a transport of goods.";
@@ -350,39 +357,39 @@ public class SingleTransport6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TrnsprtByAir")
 	public List<TransportByAir4> getTransportByAir() {
-		return transportByAir;
+		return transportByAir == null ? transportByAir = new ArrayList<>() : transportByAir;
 	}
 
-	public void setTransportByAir(List<com.tools20022.repository.msg.TransportByAir4> transportByAir) {
-		this.transportByAir = transportByAir;
+	public SingleTransport6 setTransportByAir(List<com.tools20022.repository.msg.TransportByAir4> transportByAir) {
+		this.transportByAir = Objects.requireNonNull(transportByAir);
+		return this;
 	}
 
-	@XmlElement(name = "TrnsprtBySea")
 	public List<TransportBySea5> getTransportBySea() {
-		return transportBySea;
+		return transportBySea == null ? transportBySea = new ArrayList<>() : transportBySea;
 	}
 
-	public void setTransportBySea(List<com.tools20022.repository.msg.TransportBySea5> transportBySea) {
-		this.transportBySea = transportBySea;
+	public SingleTransport6 setTransportBySea(List<com.tools20022.repository.msg.TransportBySea5> transportBySea) {
+		this.transportBySea = Objects.requireNonNull(transportBySea);
+		return this;
 	}
 
-	@XmlElement(name = "TrnsprtByRoad")
 	public List<TransportByRoad4> getTransportByRoad() {
-		return transportByRoad;
+		return transportByRoad == null ? transportByRoad = new ArrayList<>() : transportByRoad;
 	}
 
-	public void setTransportByRoad(List<com.tools20022.repository.msg.TransportByRoad4> transportByRoad) {
-		this.transportByRoad = transportByRoad;
+	public SingleTransport6 setTransportByRoad(List<com.tools20022.repository.msg.TransportByRoad4> transportByRoad) {
+		this.transportByRoad = Objects.requireNonNull(transportByRoad);
+		return this;
 	}
 
-	@XmlElement(name = "TrnsprtByRail")
 	public List<TransportByRail4> getTransportByRail() {
-		return transportByRail;
+		return transportByRail == null ? transportByRail = new ArrayList<>() : transportByRail;
 	}
 
-	public void setTransportByRail(List<com.tools20022.repository.msg.TransportByRail4> transportByRail) {
-		this.transportByRail = transportByRail;
+	public SingleTransport6 setTransportByRail(List<com.tools20022.repository.msg.TransportByRail4> transportByRail) {
+		this.transportByRail = Objects.requireNonNull(transportByRail);
+		return this;
 	}
 }

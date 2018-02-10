@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Customer security identification reference information.\r\n"</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionNotificationSD1", propOrder = {"placeAndName", "customerInternalSecurityIdentification", "securityOfInterestMatchingSecurity"})
 public class CorporateActionNotificationSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +104,7 @@ public class CorporateActionNotificationSD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,11 +115,11 @@ public class CorporateActionNotificationSD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CstmrIntlSctyId")
 	protected Max16Text customerInternalSecurityIdentification;
 	/**
-	 * Internal security identification as provided by the customer for the
-	 * given security on the security of interest (SOI) import file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -129,6 +133,9 @@ public class CorporateActionNotificationSD1 {
 	 * CorporateActionNotificationSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CstmrIntlSctyId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Customer Internal Security ID</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -144,9 +151,10 @@ public class CorporateActionNotificationSD1 {
 	 */
 	public static final MMMessageAttribute mmCustomerInternalSecurityIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrIntlSctyId";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Customer Internal Security ID"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerInternalSecurityIdentification";
 			definition = "Internal security identification as provided by the customer for the given security on the security of interest (SOI) import file. ";
@@ -155,11 +163,11 @@ public class CorporateActionNotificationSD1 {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyOfIntrstMtchgScty")
 	protected SecurityIdentification15 securityOfInterestMatchingSecurity;
 	/**
-	 * Security identifier that is used to match the customer's SOI (Security of
-	 * Interest) to the GCA VS Security Cross Reference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -175,6 +183,10 @@ public class CorporateActionNotificationSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctyOfIntrstMtchgScty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: SOI Matching Security ID, DTCCSynonym: SOI
+	 * Matching Security ID Type</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -189,9 +201,10 @@ public class CorporateActionNotificationSD1 {
 	 */
 	public static final MMMessageAttribute mmSecurityOfInterestMatchingSecurity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyOfIntrstMtchgScty";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "SOI Matching Security ID"), new DTCCSynonym(this, "SOI Matching Security ID Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityOfInterestMatchingSecurity";
 			definition = "Security identifier that is used to match the customer's SOI (Security of Interest) to the GCA VS Security Cross Reference.";
@@ -204,9 +217,9 @@ public class CorporateActionNotificationSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionNotificationSD1.mmPlaceAndName, CorporateActionNotificationSD1.mmCustomerInternalSecurityIdentification,
-						CorporateActionNotificationSD1.mmSecurityOfInterestMatchingSecurity);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotificationSD1.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionNotificationSD1.mmCustomerInternalSecurityIdentification,
+						com.tools20022.repository.msg.CorporateActionNotificationSD1.mmSecurityOfInterestMatchingSecurity);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNotificationSD1";
 				definition = "Customer security identification reference information.\r\n";
@@ -215,30 +228,30 @@ public class CorporateActionNotificationSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionNotificationSD1 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "CstmrIntlSctyId")
-	public Max16Text getCustomerInternalSecurityIdentification() {
-		return customerInternalSecurityIdentification;
+	public Optional<Max16Text> getCustomerInternalSecurityIdentification() {
+		return customerInternalSecurityIdentification == null ? Optional.empty() : Optional.of(customerInternalSecurityIdentification);
 	}
 
-	public void setCustomerInternalSecurityIdentification(Max16Text customerInternalSecurityIdentification) {
+	public CorporateActionNotificationSD1 setCustomerInternalSecurityIdentification(Max16Text customerInternalSecurityIdentification) {
 		this.customerInternalSecurityIdentification = customerInternalSecurityIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "SctyOfIntrstMtchgScty")
-	public SecurityIdentification15 getSecurityOfInterestMatchingSecurity() {
-		return securityOfInterestMatchingSecurity;
+	public Optional<SecurityIdentification15> getSecurityOfInterestMatchingSecurity() {
+		return securityOfInterestMatchingSecurity == null ? Optional.empty() : Optional.of(securityOfInterestMatchingSecurity);
 	}
 
-	public void setSecurityOfInterestMatchingSecurity(com.tools20022.repository.msg.SecurityIdentification15 securityOfInterestMatchingSecurity) {
+	public CorporateActionNotificationSD1 setSecurityOfInterestMatchingSecurity(com.tools20022.repository.msg.SecurityIdentification15 securityOfInterestMatchingSecurity) {
 		this.securityOfInterestMatchingSecurity = securityOfInterestMatchingSecurity;
+		return this;
 	}
 }

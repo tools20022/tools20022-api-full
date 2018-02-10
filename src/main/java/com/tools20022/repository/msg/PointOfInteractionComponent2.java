@@ -28,9 +28,8 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.PointOfInteraction;
 import com.tools20022.repository.entity.SystemIdentification;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -71,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,15 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Data related to a component of the POI."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PointOfInteractionComponent2", propOrder = {"POIComponentType", "manufacturerIdentification", "model", "versionNumber", "serialNumber", "approvalNumber"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PointOfInteractionComponent2", propOrder = {"pOIComponentType", "manufacturerIdentification", "model", "versionNumber", "serialNumber", "approvalNumber"})
 public class PointOfInteractionComponent2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "POICmpntTp", required = true)
 	protected POIComponentType2Code pOIComponentType;
 	/**
-	 * Type of component belonging to a POI Terminal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +119,7 @@ public class PointOfInteractionComponent2 {
 	 */
 	public static final MMMessageAttribute mmPOIComponentType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PointOfInteractionComponent2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent2.mmObject();
 			isDerived = false;
 			xmlTag = "POICmpntTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,11 +130,11 @@ public class PointOfInteractionComponent2 {
 			simpleType_lazy = () -> POIComponentType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ManfctrId")
 	protected Max35Text manufacturerIdentification;
 	/**
-	 * Identification of the software, hardware or system provider of the POI
-	 * component.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,7 +169,7 @@ public class PointOfInteractionComponent2 {
 	public static final MMMessageAttribute mmManufacturerIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> PointOfInteractionComponent2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent2.mmObject();
 			isDerived = false;
 			xmlTag = "ManfctrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,10 +180,11 @@ public class PointOfInteractionComponent2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Mdl")
 	protected Max35Text model;
 	/**
-	 * Identification of a model of POI component for a given manufacturer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,7 +218,7 @@ public class PointOfInteractionComponent2 {
 	public static final MMMessageAttribute mmModel = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemIdentification.mmModel;
-			componentContext_lazy = () -> PointOfInteractionComponent2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent2.mmObject();
 			isDerived = false;
 			xmlTag = "Mdl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,10 +229,11 @@ public class PointOfInteractionComponent2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "VrsnNb")
 	protected Max16Text versionNumber;
 	/**
-	 * Version of component belonging to a given model.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -264,7 +266,7 @@ public class PointOfInteractionComponent2 {
 	public static final MMMessageAttribute mmVersionNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemIdentification.mmSystemVersion;
-			componentContext_lazy = () -> PointOfInteractionComponent2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent2.mmObject();
 			isDerived = false;
 			xmlTag = "VrsnNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -275,10 +277,11 @@ public class PointOfInteractionComponent2 {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SrlNb")
 	protected Max35Text serialNumber;
 	/**
-	 * Serial number of a component.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -311,7 +314,7 @@ public class PointOfInteractionComponent2 {
 	public static final MMMessageAttribute mmSerialNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemIdentification.mmSerialNumber;
-			componentContext_lazy = () -> PointOfInteractionComponent2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent2.mmObject();
 			isDerived = false;
 			xmlTag = "SrlNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -322,14 +325,11 @@ public class PointOfInteractionComponent2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ApprvlNb")
 	protected List<Max70Text> approvalNumber;
 	/**
-	 * Unique approval number for a component, delivered by a certification
-	 * body.<br>
-	 * Usage: More than one approval number could be present, when assigned by
-	 * different bodies. The certification body identification must be provided
-	 * within the approval number (for example at the beginning of the value).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -364,7 +364,7 @@ public class PointOfInteractionComponent2 {
 	public static final MMMessageAttribute mmApprovalNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemIdentification.mmApprovalNumber;
-			componentContext_lazy = () -> PointOfInteractionComponent2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent2.mmObject();
 			isDerived = false;
 			xmlTag = "ApprvlNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -378,10 +378,11 @@ public class PointOfInteractionComponent2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PointOfInteractionComponent2.mmPOIComponentType, PointOfInteractionComponent2.mmManufacturerIdentification, PointOfInteractionComponent2.mmModel,
-						PointOfInteractionComponent2.mmVersionNumber, PointOfInteractionComponent2.mmSerialNumber, PointOfInteractionComponent2.mmApprovalNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent2.mmPOIComponentType, com.tools20022.repository.msg.PointOfInteractionComponent2.mmManufacturerIdentification,
+						com.tools20022.repository.msg.PointOfInteractionComponent2.mmModel, com.tools20022.repository.msg.PointOfInteractionComponent2.mmVersionNumber,
+						com.tools20022.repository.msg.PointOfInteractionComponent2.mmSerialNumber, com.tools20022.repository.msg.PointOfInteractionComponent2.mmApprovalNumber);
 				trace_lazy = () -> PointOfInteraction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionComponent2";
 				definition = "Data related to a component of the POI.";
@@ -390,57 +391,57 @@ public class PointOfInteractionComponent2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "POICmpntTp", required = true)
 	public POIComponentType2Code getPOIComponentType() {
 		return pOIComponentType;
 	}
 
-	public void setPOIComponentType(POIComponentType2Code pOIComponentType) {
-		this.pOIComponentType = pOIComponentType;
+	public PointOfInteractionComponent2 setPOIComponentType(POIComponentType2Code pOIComponentType) {
+		this.pOIComponentType = Objects.requireNonNull(pOIComponentType);
+		return this;
 	}
 
-	@XmlElement(name = "ManfctrId")
-	public Max35Text getManufacturerIdentification() {
-		return manufacturerIdentification;
+	public Optional<Max35Text> getManufacturerIdentification() {
+		return manufacturerIdentification == null ? Optional.empty() : Optional.of(manufacturerIdentification);
 	}
 
-	public void setManufacturerIdentification(Max35Text manufacturerIdentification) {
+	public PointOfInteractionComponent2 setManufacturerIdentification(Max35Text manufacturerIdentification) {
 		this.manufacturerIdentification = manufacturerIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Mdl")
-	public Max35Text getModel() {
-		return model;
+	public Optional<Max35Text> getModel() {
+		return model == null ? Optional.empty() : Optional.of(model);
 	}
 
-	public void setModel(Max35Text model) {
+	public PointOfInteractionComponent2 setModel(Max35Text model) {
 		this.model = model;
+		return this;
 	}
 
-	@XmlElement(name = "VrsnNb")
-	public Max16Text getVersionNumber() {
-		return versionNumber;
+	public Optional<Max16Text> getVersionNumber() {
+		return versionNumber == null ? Optional.empty() : Optional.of(versionNumber);
 	}
 
-	public void setVersionNumber(Max16Text versionNumber) {
+	public PointOfInteractionComponent2 setVersionNumber(Max16Text versionNumber) {
 		this.versionNumber = versionNumber;
+		return this;
 	}
 
-	@XmlElement(name = "SrlNb")
-	public Max35Text getSerialNumber() {
-		return serialNumber;
+	public Optional<Max35Text> getSerialNumber() {
+		return serialNumber == null ? Optional.empty() : Optional.of(serialNumber);
 	}
 
-	public void setSerialNumber(Max35Text serialNumber) {
+	public PointOfInteractionComponent2 setSerialNumber(Max35Text serialNumber) {
 		this.serialNumber = serialNumber;
+		return this;
 	}
 
-	@XmlElement(name = "ApprvlNb")
 	public List<Max70Text> getApprovalNumber() {
-		return approvalNumber;
+		return approvalNumber == null ? approvalNumber = new ArrayList<>() : approvalNumber;
 	}
 
-	public void setApprovalNumber(List<Max70Text> approvalNumber) {
-		this.approvalNumber = approvalNumber;
+	public PointOfInteractionComponent2 setApprovalNumber(List<Max70Text> approvalNumber) {
+		this.approvalNumber = Objects.requireNonNull(approvalNumber);
+		return this;
 	}
 }

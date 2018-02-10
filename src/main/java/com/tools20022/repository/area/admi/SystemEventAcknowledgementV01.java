@@ -29,9 +29,8 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -41,25 +40,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AdministrationLatestVersion
- * AdministrationLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
- * PostTradeForeignExchangeISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement
- * PostTradeForeignExchangeMaintenance20162017andSupplement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SysEvtAck"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -81,6 +61,25 @@ import javax.xml.bind.annotation.*;
  * SystemEventAcknowledgementV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
+ * PostTradeForeignExchangeISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement
+ * PostTradeForeignExchangeMaintenance20162017andSupplement}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SysEvtAck"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AdministrationLatestVersion
+ * AdministrationLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code admi.011.001.01}</li>
@@ -96,16 +95,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SystemEventAcknowledgementV01", propOrder = {"messageIdentification", "originatorReference", "settlementSessionIdentifier", "acknowledgementDetails", "supplementaryData"})
 public class SystemEventAcknowledgementV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected Max35Text messageIdentification;
 	/**
-	 * Unique and unambiguous identifier for the message, as assigned by the
-	 * sender.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,11 +145,11 @@ public class SystemEventAcknowledgementV01 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgtrRef")
 	protected Max35Text originatorReference;
 	/**
-	 * Represents the original reference of the system event notification for
-	 * which the acknowledgement is given, as assigned by the central system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,11 +190,11 @@ public class SystemEventAcknowledgementV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SttlmSsnIdr")
 	protected Exact4AlphaNumericText settlementSessionIdentifier;
 	/**
-	 * To indicate the requested CLS Settlement Session that the related trade
-	 * is part of.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -237,10 +236,11 @@ public class SystemEventAcknowledgementV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AckDtls")
 	protected Event1 acknowledgementDetails;
 	/**
-	 * Details of the system event being acknowledged.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -278,11 +278,11 @@ public class SystemEventAcknowledgementV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -355,52 +355,52 @@ public class SystemEventAcknowledgementV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(Max35Text messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public SystemEventAcknowledgementV01 setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OrgtrRef")
-	public Max35Text getOriginatorReference() {
-		return originatorReference;
+	public Optional<Max35Text> getOriginatorReference() {
+		return originatorReference == null ? Optional.empty() : Optional.of(originatorReference);
 	}
 
-	public void setOriginatorReference(Max35Text originatorReference) {
+	public SystemEventAcknowledgementV01 setOriginatorReference(Max35Text originatorReference) {
 		this.originatorReference = originatorReference;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmSsnIdr")
-	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
-		return settlementSessionIdentifier;
+	public Optional<Exact4AlphaNumericText> getSettlementSessionIdentifier() {
+		return settlementSessionIdentifier == null ? Optional.empty() : Optional.of(settlementSessionIdentifier);
 	}
 
-	public void setSettlementSessionIdentifier(Exact4AlphaNumericText settlementSessionIdentifier) {
+	public SystemEventAcknowledgementV01 setSettlementSessionIdentifier(Exact4AlphaNumericText settlementSessionIdentifier) {
 		this.settlementSessionIdentifier = settlementSessionIdentifier;
+		return this;
 	}
 
-	@XmlElement(name = "AckDtls")
-	public Event1 getAcknowledgementDetails() {
-		return acknowledgementDetails;
+	public Optional<Event1> getAcknowledgementDetails() {
+		return acknowledgementDetails == null ? Optional.empty() : Optional.of(acknowledgementDetails);
 	}
 
-	public void setAcknowledgementDetails(Event1 acknowledgementDetails) {
+	public SystemEventAcknowledgementV01 setAcknowledgementDetails(Event1 acknowledgementDetails) {
 		this.acknowledgementDetails = acknowledgementDetails;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SystemEventAcknowledgementV01 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:admi.011.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:admi.011.001.01")
 	static public class Document {
 		@XmlElement(name = "SysEvtAck", required = true)
 		public SystemEventAcknowledgementV01 messageBody;

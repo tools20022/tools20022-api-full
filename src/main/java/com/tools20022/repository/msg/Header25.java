@@ -32,6 +32,8 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -82,8 +84,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,15 +100,16 @@ import javax.xml.bind.annotation.XmlType;
  * Header12}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Header25", propOrder = {"downloadTransfer", "formatVersion", "exchangeIdentification", "creationDateTime", "initiatingParty", "recipientParty"})
 public class Header25 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DwnldTrf", required = true)
 	protected TrueFalseIndicator downloadTransfer;
 	/**
-	 * Indicates if the file transfer is a download or an upload.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +142,7 @@ public class Header25 {
 	 */
 	public static final MMMessageAttribute mmDownloadTransfer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Header25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Header25.mmObject();
 			isDerived = false;
 			xmlTag = "DwnldTrf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,10 +154,11 @@ public class Header25 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "FrmtVrsn", required = true)
 	protected Max6Text formatVersion;
 	/**
-	 * Version of file format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -185,7 +189,7 @@ public class Header25 {
 	 */
 	public static final MMMessageAttribute mmFormatVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Header25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Header25.mmObject();
 			isDerived = false;
 			xmlTag = "FrmtVrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,10 +201,11 @@ public class Header25 {
 			simpleType_lazy = () -> Max6Text.mmObject();
 		}
 	};
+	@XmlElement(name = "XchgId", required = true)
 	protected Number exchangeIdentification;
 	/**
-	 * Unique identification of an exchange occurrence.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -231,7 +236,7 @@ public class Header25 {
 	 */
 	public static final MMMessageAttribute mmExchangeIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Header25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Header25.mmObject();
 			isDerived = false;
 			xmlTag = "XchgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,10 +248,11 @@ public class Header25 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm", required = true)
 	protected ISODateTime creationDateTime;
 	/**
-	 * Date and time at which the file or message was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -277,7 +283,7 @@ public class Header25 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Header25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Header25.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -289,10 +295,11 @@ public class Header25 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "InitgPty", required = true)
 	protected GenericIdentification53 initiatingParty;
 	/**
-	 * Unique identification of the partner that has initiated the exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -324,7 +331,7 @@ public class Header25 {
 	 */
 	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Header25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Header25.mmObject();
 			isDerived = false;
 			xmlTag = "InitgPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -337,11 +344,11 @@ public class Header25 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification53.mmObject();
 		}
 	};
+	@XmlElement(name = "RcptPty")
 	protected GenericIdentification94 recipientParty;
 	/**
-	 * Unique identification of the partner that is the recipient of the
-	 * exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -374,7 +381,7 @@ public class Header25 {
 	 */
 	public static final MMMessageAssociationEnd mmRecipientParty = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Header25.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Header25.mmObject();
 			isDerived = false;
 			xmlTag = "RcptPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -391,9 +398,10 @@ public class Header25 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Header25.mmDownloadTransfer, Header25.mmFormatVersion, Header25.mmExchangeIdentification, Header25.mmCreationDateTime, Header25.mmInitiatingParty, Header25.mmRecipientParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header25.mmDownloadTransfer, com.tools20022.repository.msg.Header25.mmFormatVersion, com.tools20022.repository.msg.Header25.mmExchangeIdentification,
+						com.tools20022.repository.msg.Header25.mmCreationDateTime, com.tools20022.repository.msg.Header25.mmInitiatingParty, com.tools20022.repository.msg.Header25.mmRecipientParty);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorBatchTransferResponseV05.mmHeader, AcceptorBatchTransferV05.mmHeader, AcceptorBatchTransferResponseV06.mmHeader, AcceptorBatchTransferV06.mmHeader);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Header25";
 				definition = "Set of characteristics related to the transfer of transactions.";
@@ -403,57 +411,57 @@ public class Header25 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DwnldTrf", required = true)
 	public TrueFalseIndicator getDownloadTransfer() {
 		return downloadTransfer;
 	}
 
-	public void setDownloadTransfer(TrueFalseIndicator downloadTransfer) {
-		this.downloadTransfer = downloadTransfer;
+	public Header25 setDownloadTransfer(TrueFalseIndicator downloadTransfer) {
+		this.downloadTransfer = Objects.requireNonNull(downloadTransfer);
+		return this;
 	}
 
-	@XmlElement(name = "FrmtVrsn", required = true)
 	public Max6Text getFormatVersion() {
 		return formatVersion;
 	}
 
-	public void setFormatVersion(Max6Text formatVersion) {
-		this.formatVersion = formatVersion;
+	public Header25 setFormatVersion(Max6Text formatVersion) {
+		this.formatVersion = Objects.requireNonNull(formatVersion);
+		return this;
 	}
 
-	@XmlElement(name = "XchgId", required = true)
 	public Number getExchangeIdentification() {
 		return exchangeIdentification;
 	}
 
-	public void setExchangeIdentification(Number exchangeIdentification) {
-		this.exchangeIdentification = exchangeIdentification;
+	public Header25 setExchangeIdentification(Number exchangeIdentification) {
+		this.exchangeIdentification = Objects.requireNonNull(exchangeIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
-		this.creationDateTime = creationDateTime;
+	public Header25 setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = Objects.requireNonNull(creationDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "InitgPty", required = true)
 	public GenericIdentification53 getInitiatingParty() {
 		return initiatingParty;
 	}
 
-	public void setInitiatingParty(com.tools20022.repository.msg.GenericIdentification53 initiatingParty) {
-		this.initiatingParty = initiatingParty;
+	public Header25 setInitiatingParty(com.tools20022.repository.msg.GenericIdentification53 initiatingParty) {
+		this.initiatingParty = Objects.requireNonNull(initiatingParty);
+		return this;
 	}
 
-	@XmlElement(name = "RcptPty")
-	public GenericIdentification94 getRecipientParty() {
-		return recipientParty;
+	public Optional<GenericIdentification94> getRecipientParty() {
+		return recipientParty == null ? Optional.empty() : Optional.of(recipientParty);
 	}
 
-	public void setRecipientParty(com.tools20022.repository.msg.GenericIdentification94 recipientParty) {
+	public Header25 setRecipientParty(com.tools20022.repository.msg.GenericIdentification94 recipientParty) {
 		this.recipientParty = recipientParty;
+		return this;
 	}
 }

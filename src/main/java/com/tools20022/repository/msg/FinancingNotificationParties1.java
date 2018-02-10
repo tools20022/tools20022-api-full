@@ -22,9 +22,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvoiceFinancingPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancingNotificationParties1", propOrder = {"notifyingParty", "notificationReceiver", "acknowledgementReceiver"})
 public class FinancingNotificationParties1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NtifngPty", required = true)
 	protected QualifiedPartyIdentification1 notifyingParty;
 	/**
-	 * Party that notifies a third party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -110,7 +113,7 @@ public class FinancingNotificationParties1 {
 	public static final MMMessageAssociationEnd mmNotifyingParty = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvoiceFinancingPartyRole.mmObject();
-			componentContext_lazy = () -> FinancingNotificationParties1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingNotificationParties1.mmObject();
 			isDerived = false;
 			xmlTag = "NtifngPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +125,11 @@ public class FinancingNotificationParties1 {
 			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "NtfctnRcvr", required = true)
 	protected QualifiedPartyIdentification1 notificationReceiver;
 	/**
-	 * Party (to be) notified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -158,7 +162,7 @@ public class FinancingNotificationParties1 {
 	public static final MMMessageAssociationEnd mmNotificationReceiver = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvoiceFinancingPartyRole.mmObject();
-			componentContext_lazy = () -> FinancingNotificationParties1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingNotificationParties1.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnRcvr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,11 +174,11 @@ public class FinancingNotificationParties1 {
 			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "AckRcvr")
 	protected List<com.tools20022.repository.msg.QualifiedPartyIdentification1> acknowledgementReceiver;
 	/**
-	 * Party to whom a notification acknowledgement has to be sent by the
-	 * notification receiver.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -209,7 +213,7 @@ public class FinancingNotificationParties1 {
 	public static final MMMessageAssociationEnd mmAcknowledgementReceiver = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvoiceFinancingPartyRole.mmObject();
-			componentContext_lazy = () -> FinancingNotificationParties1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingNotificationParties1.mmObject();
 			isDerived = false;
 			xmlTag = "AckRcvr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,8 +228,9 @@ public class FinancingNotificationParties1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancingNotificationParties1.mmNotifyingParty, FinancingNotificationParties1.mmNotificationReceiver, FinancingNotificationParties1.mmAcknowledgementReceiver);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingNotificationParties1.mmNotifyingParty, com.tools20022.repository.msg.FinancingNotificationParties1.mmNotificationReceiver,
+						com.tools20022.repository.msg.FinancingNotificationParties1.mmAcknowledgementReceiver);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancingNotificationParties1";
 				definition = "Identifies a party that notifies a financial document, the party to be notified, and whether notified party must send an acknowledgement and to whom.";
@@ -234,30 +239,30 @@ public class FinancingNotificationParties1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NtifngPty", required = true)
 	public QualifiedPartyIdentification1 getNotifyingParty() {
 		return notifyingParty;
 	}
 
-	public void setNotifyingParty(com.tools20022.repository.msg.QualifiedPartyIdentification1 notifyingParty) {
-		this.notifyingParty = notifyingParty;
+	public FinancingNotificationParties1 setNotifyingParty(com.tools20022.repository.msg.QualifiedPartyIdentification1 notifyingParty) {
+		this.notifyingParty = Objects.requireNonNull(notifyingParty);
+		return this;
 	}
 
-	@XmlElement(name = "NtfctnRcvr", required = true)
 	public QualifiedPartyIdentification1 getNotificationReceiver() {
 		return notificationReceiver;
 	}
 
-	public void setNotificationReceiver(com.tools20022.repository.msg.QualifiedPartyIdentification1 notificationReceiver) {
-		this.notificationReceiver = notificationReceiver;
+	public FinancingNotificationParties1 setNotificationReceiver(com.tools20022.repository.msg.QualifiedPartyIdentification1 notificationReceiver) {
+		this.notificationReceiver = Objects.requireNonNull(notificationReceiver);
+		return this;
 	}
 
-	@XmlElement(name = "AckRcvr")
 	public List<QualifiedPartyIdentification1> getAcknowledgementReceiver() {
-		return acknowledgementReceiver;
+		return acknowledgementReceiver == null ? acknowledgementReceiver = new ArrayList<>() : acknowledgementReceiver;
 	}
 
-	public void setAcknowledgementReceiver(List<com.tools20022.repository.msg.QualifiedPartyIdentification1> acknowledgementReceiver) {
-		this.acknowledgementReceiver = acknowledgementReceiver;
+	public FinancingNotificationParties1 setAcknowledgementReceiver(List<com.tools20022.repository.msg.QualifiedPartyIdentification1> acknowledgementReceiver) {
+		this.acknowledgementReceiver = Objects.requireNonNull(acknowledgementReceiver);
+		return this;
 	}
 }

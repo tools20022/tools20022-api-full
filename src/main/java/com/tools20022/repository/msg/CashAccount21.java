@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,18 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Account to or from which a cash entry is made."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashAccount21", propOrder = {"servicer", "identification"})
 public class CashAccount21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Svcr")
 	protected BICIdentifier servicer;
 	/**
-	 * Party that manages the account on behalf of the account owner, that is
-	 * manages the registration and booking of entries on the account,
-	 * calculates balances on the account and provides information about the
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +112,7 @@ public class CashAccount21 {
 	public static final MMMessageAttribute mmServicer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> CashAccount21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount21.mmObject();
 			isDerived = false;
 			xmlTag = "Svcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,11 +123,11 @@ public class CashAccount21 {
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected AccountIdentification5Choice identification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +162,7 @@ public class CashAccount21 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> CashAccount21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount21.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,9 +177,9 @@ public class CashAccount21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashAccount21.mmServicer, CashAccount21.mmIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount21.mmServicer, com.tools20022.repository.msg.CashAccount21.mmIdentification);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccount21";
 				definition = "Account to or from which a cash entry is made.";
@@ -188,21 +188,21 @@ public class CashAccount21 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Svcr")
-	public BICIdentifier getServicer() {
-		return servicer;
+	public Optional<BICIdentifier> getServicer() {
+		return servicer == null ? Optional.empty() : Optional.of(servicer);
 	}
 
-	public void setServicer(BICIdentifier servicer) {
+	public CashAccount21 setServicer(BICIdentifier servicer) {
 		this.servicer = servicer;
+		return this;
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public AccountIdentification5Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(AccountIdentification5Choice identification) {
-		this.identification = identification;
+	public CashAccount21 setIdentification(AccountIdentification5Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 }

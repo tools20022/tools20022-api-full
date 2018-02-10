@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.RiskManagementLimit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LimitStructure1", propOrder = {"limitIdentification", "newLimitValueSet"})
 public class LimitStructure1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LmtId", required = true)
 	protected LimitIdentification1Choice limitIdentification;
 	/**
-	 * Identification of the default limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +111,7 @@ public class LimitStructure1 {
 	public static final MMMessageAssociationEnd mmLimitIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
-			componentContext_lazy = () -> LimitStructure1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitStructure1.mmObject();
 			isDerived = false;
 			xmlTag = "LmtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +123,11 @@ public class LimitStructure1 {
 			type_lazy = () -> LimitIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NewLmtValSet", required = true)
 	protected Limit6 newLimitValueSet;
 	/**
-	 * New limit values.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +158,7 @@ public class LimitStructure1 {
 	public static final MMMessageAssociationEnd mmNewLimitValueSet = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
-			componentContext_lazy = () -> LimitStructure1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitStructure1.mmObject();
 			isDerived = false;
 			xmlTag = "NewLmtValSet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,9 +174,9 @@ public class LimitStructure1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LimitStructure1.mmLimitIdentification, LimitStructure1.mmNewLimitValueSet);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitStructure1.mmLimitIdentification, com.tools20022.repository.msg.LimitStructure1.mmNewLimitValueSet);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitStructure1";
 				definition = "Limit details of one particular limit set by the member and managed by the transaction administrator.";
@@ -182,21 +185,21 @@ public class LimitStructure1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LmtId", required = true)
 	public LimitIdentification1Choice getLimitIdentification() {
 		return limitIdentification;
 	}
 
-	public void setLimitIdentification(LimitIdentification1Choice limitIdentification) {
-		this.limitIdentification = limitIdentification;
+	public LimitStructure1 setLimitIdentification(LimitIdentification1Choice limitIdentification) {
+		this.limitIdentification = Objects.requireNonNull(limitIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "NewLmtValSet", required = true)
 	public Limit6 getNewLimitValueSet() {
 		return newLimitValueSet;
 	}
 
-	public void setNewLimitValueSet(com.tools20022.repository.msg.Limit6 newLimitValueSet) {
-		this.newLimitValueSet = newLimitValueSet;
+	public LimitStructure1 setNewLimitValueSet(com.tools20022.repository.msg.Limit6 newLimitValueSet) {
+		this.newLimitValueSet = Objects.requireNonNull(newLimitValueSet);
+		return this;
 	}
 }

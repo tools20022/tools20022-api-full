@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +60,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReferenceRule#forInvestmentFundOrderExecution2
+ * ConstraintReferenceRule.forInvestmentFundOrderExecution2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,16 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Reference of an order, client or deal reference."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvestmentFundOrderExecution2", propOrder = {"orderReference", "clientReference", "dealReference"})
 public class InvestmentFundOrderExecution2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrdrRef")
 	protected Max35Text orderReference;
 	/**
-	 * Unique and unambiguous identifier for an order, as assigned by the
-	 * instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +124,7 @@ public class InvestmentFundOrderExecution2 {
 	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
-			componentContext_lazy = () -> InvestmentFundOrderExecution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrderExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,12 +135,11 @@ public class InvestmentFundOrderExecution2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntRef")
 	protected Max35Text clientReference;
 	/**
-	 * Unique and unambiguous investor's identification of an order. This
-	 * reference can typically be used in a hub scenario to give the reference
-	 * of the order as assigned by the underlying client.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,7 +174,7 @@ public class InvestmentFundOrderExecution2 {
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
-			componentContext_lazy = () -> InvestmentFundOrderExecution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrderExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,11 +185,11 @@ public class InvestmentFundOrderExecution2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DealRef")
 	protected Max35Text dealReference;
 	/**
-	 * Unique and unambiguous identifier for an order cancellation, as assigned
-	 * by the instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -216,7 +224,7 @@ public class InvestmentFundOrderExecution2 {
 	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmDealIdentification;
-			componentContext_lazy = () -> InvestmentFundOrderExecution2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrderExecution2.mmObject();
 			isDerived = false;
 			xmlTag = "DealRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,9 +239,11 @@ public class InvestmentFundOrderExecution2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InvestmentFundOrderExecution2.mmOrderReference, InvestmentFundOrderExecution2.mmClientReference, InvestmentFundOrderExecution2.mmDealReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrderExecution2.mmOrderReference, com.tools20022.repository.msg.InvestmentFundOrderExecution2.mmClientReference,
+						com.tools20022.repository.msg.InvestmentFundOrderExecution2.mmDealReference);
 				trace_lazy = () -> InvestmentFundOrderExecution.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReferenceRule.forInvestmentFundOrderExecution2);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundOrderExecution2";
 				definition = "Reference of an order, client or deal reference.";
@@ -242,30 +252,30 @@ public class InvestmentFundOrderExecution2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrdrRef")
-	public Max35Text getOrderReference() {
-		return orderReference;
+	public Optional<Max35Text> getOrderReference() {
+		return orderReference == null ? Optional.empty() : Optional.of(orderReference);
 	}
 
-	public void setOrderReference(Max35Text orderReference) {
+	public InvestmentFundOrderExecution2 setOrderReference(Max35Text orderReference) {
 		this.orderReference = orderReference;
+		return this;
 	}
 
-	@XmlElement(name = "ClntRef")
-	public Max35Text getClientReference() {
-		return clientReference;
+	public Optional<Max35Text> getClientReference() {
+		return clientReference == null ? Optional.empty() : Optional.of(clientReference);
 	}
 
-	public void setClientReference(Max35Text clientReference) {
+	public InvestmentFundOrderExecution2 setClientReference(Max35Text clientReference) {
 		this.clientReference = clientReference;
+		return this;
 	}
 
-	@XmlElement(name = "DealRef")
-	public Max35Text getDealReference() {
-		return dealReference;
+	public Optional<Max35Text> getDealReference() {
+		return dealReference == null ? Optional.empty() : Optional.of(dealReference);
 	}
 
-	public void setDealReference(Max35Text dealReference) {
+	public InvestmentFundOrderExecution2 setDealReference(Max35Text dealReference) {
 		this.dealReference = dealReference;
+		return this;
 	}
 }

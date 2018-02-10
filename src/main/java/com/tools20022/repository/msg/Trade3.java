@@ -28,9 +28,8 @@ import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.entity.ForeignExchangeTrade;
 import com.tools20022.repository.entity.TreasuryTradeSettlementStatus;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -87,8 +86,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,16 +100,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Trade3", propOrder = {"executionPrice", "lastQuantity", "settlementType", "settlementDate", "valuationRate", "forwardPoints", "calculatedCounterpartyCurrencyLastQuantity", "valueDate", "riskAmount",
 		"securityIdentification", "fixingCurrency", "fixingDate", "optionIndicator", "deltaIndicator", "associatedTradeReference"})
 public class Trade3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ExctnPric", required = true)
 	protected ActiveCurrencyAnd13DecimalAmount executionPrice;
 	/**
-	 * Price of the execution of the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,7 +137,7 @@ public class Trade3 {
 	 */
 	public static final MMMessageAttribute mmExecutionPrice = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "ExctnPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,10 +148,11 @@ public class Trade3 {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "LastQty", required = true)
 	protected CurrencyAndAmount lastQuantity;
 	/**
-	 * Amount of trade in trading currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,7 +179,7 @@ public class Trade3 {
 	 */
 	public static final MMMessageAttribute mmLastQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "LastQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,10 +190,11 @@ public class Trade3 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmTp", required = true)
 	protected SettlementDateCode settlementType;
 	/**
-	 * Specifies the settlment period of the foreign exchange trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -220,7 +222,7 @@ public class Trade3 {
 	 */
 	public static final MMMessageAttribute mmSettlementType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,10 +233,11 @@ public class Trade3 {
 			simpleType_lazy = () -> SettlementDateCode.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmDt", required = true)
 	protected ISODate settlementDate;
 	/**
-	 * Specifies the date on which the trade will be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -266,7 +269,7 @@ public class Trade3 {
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmSettlementDate;
-			componentContext_lazy = () -> Trade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -277,10 +280,11 @@ public class Trade3 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ValtnRate", required = true)
 	protected AgreedRate3 valuationRate;
 	/**
-	 * Specifies the valuation rate used for the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -311,7 +315,7 @@ public class Trade3 {
 	public static final MMMessageAssociationEnd mmValuationRate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
-			componentContext_lazy = () -> Trade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -323,10 +327,11 @@ public class Trade3 {
 			type_lazy = () -> com.tools20022.repository.msg.AgreedRate3.mmObject();
 		}
 	};
+	@XmlElement(name = "FwdPts")
 	protected DecimalNumber forwardPoints;
 	/**
-	 * Specifies the forward points of the trade if needed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -353,7 +358,7 @@ public class Trade3 {
 	 */
 	public static final MMMessageAttribute mmForwardPoints = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "FwdPts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -364,10 +369,11 @@ public class Trade3 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "ClctdCtrPtyCcyLastQty", required = true)
 	protected CurrencyAndAmount calculatedCounterpartyCurrencyLastQuantity;
 	/**
-	 * Amount of trade in corresponding currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -394,7 +400,7 @@ public class Trade3 {
 	 */
 	public static final MMMessageAttribute mmCalculatedCounterpartyCurrencyLastQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "ClctdCtrPtyCcyLastQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -405,10 +411,11 @@ public class Trade3 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ValDt", required = true)
 	protected ISODate valueDate;
 	/**
-	 * Specifies the value date of spot transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -434,7 +441,7 @@ public class Trade3 {
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -445,11 +452,11 @@ public class Trade3 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "RskAmt", required = true)
 	protected ActiveCurrencyAndAmount riskAmount;
 	/**
-	 * Measurement of the amount of the trade values converted in the US
-	 * dollars.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -478,7 +485,7 @@ public class Trade3 {
 	 */
 	public static final MMMessageAttribute mmRiskAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "RskAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -489,10 +496,11 @@ public class Trade3 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyId", required = true)
 	protected SecurityIdentification18 securityIdentification;
 	/**
-	 * Security identification of the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -518,7 +526,7 @@ public class Trade3 {
 	 */
 	public static final MMMessageAssociationEnd mmSecurityIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Trade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -530,10 +538,11 @@ public class Trade3 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification18.mmObject();
 		}
 	};
+	@XmlElement(name = "FxgCcy")
 	protected CurrencyCode fixingCurrency;
 	/**
-	 * Specifies the ISO code of the fixing currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -559,7 +568,7 @@ public class Trade3 {
 	 */
 	public static final MMMessageAttribute mmFixingCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "FxgCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -570,10 +579,11 @@ public class Trade3 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "FxgDt")
 	protected ISODate fixingDate;
 	/**
-	 * Date at which the rate determination is made in the NDF trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -606,7 +616,7 @@ public class Trade3 {
 	public static final MMMessageAttribute mmFixingDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmSettlementDate;
-			componentContext_lazy = () -> Trade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "FxgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -617,10 +627,11 @@ public class Trade3 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnInd")
 	protected YesNoIndicator optionIndicator;
 	/**
-	 * Indicates whether the spot trade is produced by the option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -648,7 +659,7 @@ public class Trade3 {
 	 */
 	public static final MMMessageAttribute mmOptionIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "OptnInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -659,10 +670,11 @@ public class Trade3 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "DltaInd")
 	protected YesNoIndicator deltaIndicator;
 	/**
-	 * Indicate the trade whether it's exchange delta.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -689,7 +701,7 @@ public class Trade3 {
 	 */
 	public static final MMMessageAttribute mmDeltaIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "DltaInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -700,10 +712,11 @@ public class Trade3 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AssoctdTradRef")
 	protected List<Max70Text> associatedTradeReference;
 	/**
-	 * Some associated trade reference needs to be specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -729,7 +742,7 @@ public class Trade3 {
 	 */
 	public static final MMMessageAttribute mmAssociatedTradeReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Trade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Trade3.mmObject();
 			isDerived = false;
 			xmlTag = "AssoctdTradRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -743,11 +756,13 @@ public class Trade3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Trade3.mmExecutionPrice, Trade3.mmLastQuantity, Trade3.mmSettlementType, Trade3.mmSettlementDate, Trade3.mmValuationRate, Trade3.mmForwardPoints,
-						Trade3.mmCalculatedCounterpartyCurrencyLastQuantity, Trade3.mmValueDate, Trade3.mmRiskAmount, Trade3.mmSecurityIdentification, Trade3.mmFixingCurrency, Trade3.mmFixingDate, Trade3.mmOptionIndicator,
-						Trade3.mmDeltaIndicator, Trade3.mmAssociatedTradeReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Trade3.mmExecutionPrice, com.tools20022.repository.msg.Trade3.mmLastQuantity, com.tools20022.repository.msg.Trade3.mmSettlementType,
+						com.tools20022.repository.msg.Trade3.mmSettlementDate, com.tools20022.repository.msg.Trade3.mmValuationRate, com.tools20022.repository.msg.Trade3.mmForwardPoints,
+						com.tools20022.repository.msg.Trade3.mmCalculatedCounterpartyCurrencyLastQuantity, com.tools20022.repository.msg.Trade3.mmValueDate, com.tools20022.repository.msg.Trade3.mmRiskAmount,
+						com.tools20022.repository.msg.Trade3.mmSecurityIdentification, com.tools20022.repository.msg.Trade3.mmFixingCurrency, com.tools20022.repository.msg.Trade3.mmFixingDate,
+						com.tools20022.repository.msg.Trade3.mmOptionIndicator, com.tools20022.repository.msg.Trade3.mmDeltaIndicator, com.tools20022.repository.msg.Trade3.mmAssociatedTradeReference);
 				trace_lazy = () -> ForeignExchangeTrade.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Trade3";
 				definition = "Details of the foreign exchange trade including Spot\\Forward\\NDF that is captured";
@@ -756,138 +771,138 @@ public class Trade3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ExctnPric", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getExecutionPrice() {
 		return executionPrice;
 	}
 
-	public void setExecutionPrice(ActiveCurrencyAnd13DecimalAmount executionPrice) {
-		this.executionPrice = executionPrice;
+	public Trade3 setExecutionPrice(ActiveCurrencyAnd13DecimalAmount executionPrice) {
+		this.executionPrice = Objects.requireNonNull(executionPrice);
+		return this;
 	}
 
-	@XmlElement(name = "LastQty", required = true)
 	public CurrencyAndAmount getLastQuantity() {
 		return lastQuantity;
 	}
 
-	public void setLastQuantity(CurrencyAndAmount lastQuantity) {
-		this.lastQuantity = lastQuantity;
+	public Trade3 setLastQuantity(CurrencyAndAmount lastQuantity) {
+		this.lastQuantity = Objects.requireNonNull(lastQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmTp", required = true)
 	public SettlementDateCode getSettlementType() {
 		return settlementType;
 	}
 
-	public void setSettlementType(SettlementDateCode settlementType) {
-		this.settlementType = settlementType;
+	public Trade3 setSettlementType(SettlementDateCode settlementType) {
+		this.settlementType = Objects.requireNonNull(settlementType);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmDt", required = true)
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
 
-	public void setSettlementDate(ISODate settlementDate) {
-		this.settlementDate = settlementDate;
+	public Trade3 setSettlementDate(ISODate settlementDate) {
+		this.settlementDate = Objects.requireNonNull(settlementDate);
+		return this;
 	}
 
-	@XmlElement(name = "ValtnRate", required = true)
 	public AgreedRate3 getValuationRate() {
 		return valuationRate;
 	}
 
-	public void setValuationRate(com.tools20022.repository.msg.AgreedRate3 valuationRate) {
-		this.valuationRate = valuationRate;
+	public Trade3 setValuationRate(com.tools20022.repository.msg.AgreedRate3 valuationRate) {
+		this.valuationRate = Objects.requireNonNull(valuationRate);
+		return this;
 	}
 
-	@XmlElement(name = "FwdPts")
-	public DecimalNumber getForwardPoints() {
-		return forwardPoints;
+	public Optional<DecimalNumber> getForwardPoints() {
+		return forwardPoints == null ? Optional.empty() : Optional.of(forwardPoints);
 	}
 
-	public void setForwardPoints(DecimalNumber forwardPoints) {
+	public Trade3 setForwardPoints(DecimalNumber forwardPoints) {
 		this.forwardPoints = forwardPoints;
+		return this;
 	}
 
-	@XmlElement(name = "ClctdCtrPtyCcyLastQty", required = true)
 	public CurrencyAndAmount getCalculatedCounterpartyCurrencyLastQuantity() {
 		return calculatedCounterpartyCurrencyLastQuantity;
 	}
 
-	public void setCalculatedCounterpartyCurrencyLastQuantity(CurrencyAndAmount calculatedCounterpartyCurrencyLastQuantity) {
-		this.calculatedCounterpartyCurrencyLastQuantity = calculatedCounterpartyCurrencyLastQuantity;
+	public Trade3 setCalculatedCounterpartyCurrencyLastQuantity(CurrencyAndAmount calculatedCounterpartyCurrencyLastQuantity) {
+		this.calculatedCounterpartyCurrencyLastQuantity = Objects.requireNonNull(calculatedCounterpartyCurrencyLastQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "ValDt", required = true)
 	public ISODate getValueDate() {
 		return valueDate;
 	}
 
-	public void setValueDate(ISODate valueDate) {
-		this.valueDate = valueDate;
+	public Trade3 setValueDate(ISODate valueDate) {
+		this.valueDate = Objects.requireNonNull(valueDate);
+		return this;
 	}
 
-	@XmlElement(name = "RskAmt", required = true)
 	public ActiveCurrencyAndAmount getRiskAmount() {
 		return riskAmount;
 	}
 
-	public void setRiskAmount(ActiveCurrencyAndAmount riskAmount) {
-		this.riskAmount = riskAmount;
+	public Trade3 setRiskAmount(ActiveCurrencyAndAmount riskAmount) {
+		this.riskAmount = Objects.requireNonNull(riskAmount);
+		return this;
 	}
 
-	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification18 getSecurityIdentification() {
 		return securityIdentification;
 	}
 
-	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification18 securityIdentification) {
-		this.securityIdentification = securityIdentification;
+	public Trade3 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification18 securityIdentification) {
+		this.securityIdentification = Objects.requireNonNull(securityIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "FxgCcy")
-	public CurrencyCode getFixingCurrency() {
-		return fixingCurrency;
+	public Optional<CurrencyCode> getFixingCurrency() {
+		return fixingCurrency == null ? Optional.empty() : Optional.of(fixingCurrency);
 	}
 
-	public void setFixingCurrency(CurrencyCode fixingCurrency) {
+	public Trade3 setFixingCurrency(CurrencyCode fixingCurrency) {
 		this.fixingCurrency = fixingCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "FxgDt")
-	public ISODate getFixingDate() {
-		return fixingDate;
+	public Optional<ISODate> getFixingDate() {
+		return fixingDate == null ? Optional.empty() : Optional.of(fixingDate);
 	}
 
-	public void setFixingDate(ISODate fixingDate) {
+	public Trade3 setFixingDate(ISODate fixingDate) {
 		this.fixingDate = fixingDate;
+		return this;
 	}
 
-	@XmlElement(name = "OptnInd")
-	public YesNoIndicator getOptionIndicator() {
-		return optionIndicator;
+	public Optional<YesNoIndicator> getOptionIndicator() {
+		return optionIndicator == null ? Optional.empty() : Optional.of(optionIndicator);
 	}
 
-	public void setOptionIndicator(YesNoIndicator optionIndicator) {
+	public Trade3 setOptionIndicator(YesNoIndicator optionIndicator) {
 		this.optionIndicator = optionIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "DltaInd")
-	public YesNoIndicator getDeltaIndicator() {
-		return deltaIndicator;
+	public Optional<YesNoIndicator> getDeltaIndicator() {
+		return deltaIndicator == null ? Optional.empty() : Optional.of(deltaIndicator);
 	}
 
-	public void setDeltaIndicator(YesNoIndicator deltaIndicator) {
+	public Trade3 setDeltaIndicator(YesNoIndicator deltaIndicator) {
 		this.deltaIndicator = deltaIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "AssoctdTradRef")
 	public List<Max70Text> getAssociatedTradeReference() {
-		return associatedTradeReference;
+		return associatedTradeReference == null ? associatedTradeReference = new ArrayList<>() : associatedTradeReference;
 	}
 
-	public void setAssociatedTradeReference(List<Max70Text> associatedTradeReference) {
-		this.associatedTradeReference = associatedTradeReference;
+	public Trade3 setAssociatedTradeReference(List<Max70Text> associatedTradeReference) {
+		this.associatedTradeReference = Objects.requireNonNull(associatedTradeReference);
+		return this;
 	}
 }

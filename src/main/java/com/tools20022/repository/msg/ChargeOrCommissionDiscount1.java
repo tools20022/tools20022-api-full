@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +60,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDiscountElementRule#forChargeOrCommissionDiscount1
+ * ConstraintDiscountElementRule.forChargeOrCommissionDiscount1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,20 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Information about discounts or waivers to charges and commissions."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ChargeOrCommissionDiscount1", propOrder = {"amount", "rate", "basis"})
 public class ChargeOrCommissionDiscount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt")
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * Difference between the standard fee (charge/commission) amount and the
-	 * applied fee (charge/commission) amount.<br>
-	 * EXAMPLE:<br>
-	 * Standard charge is EUR 100<br>
-	 * Discount is EUR 30<br>
-	 * Applied charge is EUR 70.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +126,7 @@ public class ChargeOrCommissionDiscount1 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionAmount;
-			componentContext_lazy = () -> ChargeOrCommissionDiscount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ChargeOrCommissionDiscount1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,15 +137,11 @@ public class ChargeOrCommissionDiscount1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Rate")
 	protected PercentageRate rate;
 	/**
-	 * Difference between the standard fee (charge/commission) rate and the
-	 * applied rate of the fee (charge/commission).<br>
-	 * EXAMPLE:<br>
-	 * Standard rate is 5%<br>
-	 * Discount rate is 3%<br>
-	 * Applied rate is 2%
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,7 +177,7 @@ public class ChargeOrCommissionDiscount1 {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
-			componentContext_lazy = () -> ChargeOrCommissionDiscount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ChargeOrCommissionDiscount1.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,10 +188,11 @@ public class ChargeOrCommissionDiscount1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "Bsis")
 	protected WaivingInstruction2Choice basis;
 	/**
-	 * Form of the discount or rebate, for example, cash.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -223,7 +225,7 @@ public class ChargeOrCommissionDiscount1 {
 	public static final MMMessageAssociationEnd mmBasis = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionWaiving;
-			componentContext_lazy = () -> ChargeOrCommissionDiscount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ChargeOrCommissionDiscount1.mmObject();
 			isDerived = false;
 			xmlTag = "Bsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,9 +241,11 @@ public class ChargeOrCommissionDiscount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ChargeOrCommissionDiscount1.mmAmount, ChargeOrCommissionDiscount1.mmRate, ChargeOrCommissionDiscount1.mmBasis);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargeOrCommissionDiscount1.mmAmount, com.tools20022.repository.msg.ChargeOrCommissionDiscount1.mmRate,
+						com.tools20022.repository.msg.ChargeOrCommissionDiscount1.mmBasis);
 				trace_lazy = () -> Commission.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDiscountElementRule.forChargeOrCommissionDiscount1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeOrCommissionDiscount1";
 				definition = "Information about discounts or waivers to charges and commissions.";
@@ -250,30 +254,30 @@ public class ChargeOrCommissionDiscount1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt")
-	public ActiveCurrencyAndAmount getAmount() {
-		return amount;
+	public Optional<ActiveCurrencyAndAmount> getAmount() {
+		return amount == null ? Optional.empty() : Optional.of(amount);
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
+	public ChargeOrCommissionDiscount1 setAmount(ActiveCurrencyAndAmount amount) {
 		this.amount = amount;
+		return this;
 	}
 
-	@XmlElement(name = "Rate")
-	public PercentageRate getRate() {
-		return rate;
+	public Optional<PercentageRate> getRate() {
+		return rate == null ? Optional.empty() : Optional.of(rate);
 	}
 
-	public void setRate(PercentageRate rate) {
+	public ChargeOrCommissionDiscount1 setRate(PercentageRate rate) {
 		this.rate = rate;
+		return this;
 	}
 
-	@XmlElement(name = "Bsis")
-	public WaivingInstruction2Choice getBasis() {
-		return basis;
+	public Optional<WaivingInstruction2Choice> getBasis() {
+		return basis == null ? Optional.empty() : Optional.of(basis);
 	}
 
-	public void setBasis(WaivingInstruction2Choice basis) {
+	public ChargeOrCommissionDiscount1 setBasis(WaivingInstruction2Choice basis) {
 		this.basis = basis;
+		return this;
 	}
 }

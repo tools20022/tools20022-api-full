@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Identification of market in which a trade transaction has been executed."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PlaceOfTradeIdentification1", propOrder = {"marketTypeAndIdentification", "LEI"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PlaceOfTradeIdentification1", propOrder = {"marketTypeAndIdentification", "lEI"})
 public class PlaceOfTradeIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MktTpAndId")
 	protected MarketIdentification84 marketTypeAndIdentification;
 	/**
-	 * Identification and type of the place of trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -116,7 +118,7 @@ public class PlaceOfTradeIdentification1 {
 	public static final MMMessageAssociationEnd mmMarketTypeAndIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> PlaceOfTradeIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PlaceOfTradeIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "MktTpAndId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,11 +131,11 @@ public class PlaceOfTradeIdentification1 {
 			type_lazy = () -> com.tools20022.repository.msg.MarketIdentification84.mmObject();
 		}
 	};
+	@XmlElement(name = "LEI")
 	protected LEIIdentifier lEI;
 	/**
-	 * Legal entity identification as an alternate identification for a place of
-	 * trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +173,7 @@ public class PlaceOfTradeIdentification1 {
 	 */
 	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PlaceOfTradeIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PlaceOfTradeIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "LEI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,9 +189,9 @@ public class PlaceOfTradeIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PlaceOfTradeIdentification1.mmMarketTypeAndIdentification, PlaceOfTradeIdentification1.mmLEI);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PlaceOfTradeIdentification1.mmMarketTypeAndIdentification, com.tools20022.repository.msg.PlaceOfTradeIdentification1.mmLEI);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PlaceOfTradeIdentification1";
 				definition = "Identification of market in which a trade transaction has been executed.";
@@ -198,21 +200,21 @@ public class PlaceOfTradeIdentification1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MktTpAndId")
-	public MarketIdentification84 getMarketTypeAndIdentification() {
-		return marketTypeAndIdentification;
+	public Optional<MarketIdentification84> getMarketTypeAndIdentification() {
+		return marketTypeAndIdentification == null ? Optional.empty() : Optional.of(marketTypeAndIdentification);
 	}
 
-	public void setMarketTypeAndIdentification(com.tools20022.repository.msg.MarketIdentification84 marketTypeAndIdentification) {
+	public PlaceOfTradeIdentification1 setMarketTypeAndIdentification(com.tools20022.repository.msg.MarketIdentification84 marketTypeAndIdentification) {
 		this.marketTypeAndIdentification = marketTypeAndIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "LEI")
-	public LEIIdentifier getLEI() {
-		return lEI;
+	public Optional<LEIIdentifier> getLEI() {
+		return lEI == null ? Optional.empty() : Optional.of(lEI);
 	}
 
-	public void setLEI(LEIIdentifier lEI) {
+	public PlaceOfTradeIdentification1 setLEI(LEIIdentifier lEI) {
 		this.lEI = lEI;
+		return this;
 	}
 }

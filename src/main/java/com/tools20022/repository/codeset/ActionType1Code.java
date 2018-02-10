@@ -20,51 +20,54 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ActionTypeCode;
+import com.tools20022.repository.codeset.ActionType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of action to be performed by the POI System.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ActionTypeCode ActionTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType1Code#mmDisplayMessage
- * ActionType1Code.mmDisplayMessage}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType1Code#DisplayMessage
+ * ActionType1Code.DisplayMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType1Code#mmPrintMessage
- * ActionType1Code.mmPrintMessage}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType1Code#mmReferral
- * ActionType1Code.mmReferral}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType1Code#PrintMessage
+ * ActionType1Code.PrintMessage}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType1Code#Referral
+ * ActionType1Code.Referral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType1Code#mmCaptureCard
- * ActionType1Code.mmCaptureCard}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType1Code#mmPINRetry
- * ActionType1Code.mmPINRetry}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType1Code#CaptureCard
+ * ActionType1Code.CaptureCard}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType1Code#PINRetry
+ * ActionType1Code.PINRetry}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType1Code#PINLastTry
+ * ActionType1Code.PINLastTry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType1Code#mmPINLastTry
- * ActionType1Code.mmPINLastTry}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType1Code#RequestData
+ * ActionType1Code.RequestData}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType1Code#Busy
+ * ActionType1Code.Busy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType1Code#mmRequestData
- * ActionType1Code.mmRequestData}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType1Code#mmBusy
- * ActionType1Code.mmBusy}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType1Code#mmIdentificationRequired
- * ActionType1Code.mmIdentificationRequired}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType1Code#IdentificationRequired
+ * ActionType1Code.IdentificationRequired}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ActionTypeCode ActionTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of action to be performed by the POI System."</li>
  * </ul>
  */
-public class ActionType1Code extends ActionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ActionType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -100,11 +104,12 @@ public class ActionType1Code extends ActionTypeCode {
 	 * name} = "DisplayMessage"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisplayMessage = new MMCode() {
+	public static final ActionType1Code DisplayMessage = new ActionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisplayMessage";
-			owner_lazy = () -> ActionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionType1Code.mmObject();
+			codeName = ActionTypeCode.DisplayMessage.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -123,11 +128,12 @@ public class ActionType1Code extends ActionTypeCode {
 	 * name} = "PrintMessage"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrintMessage = new MMCode() {
+	public static final ActionType1Code PrintMessage = new ActionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrintMessage";
-			owner_lazy = () -> ActionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionType1Code.mmObject();
+			codeName = ActionTypeCode.PrintMessage.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -146,11 +152,12 @@ public class ActionType1Code extends ActionTypeCode {
 	 * name} = "Referral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReferral = new MMCode() {
+	public static final ActionType1Code Referral = new ActionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Referral";
-			owner_lazy = () -> ActionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionType1Code.mmObject();
+			codeName = ActionTypeCode.Referral.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -169,11 +176,12 @@ public class ActionType1Code extends ActionTypeCode {
 	 * name} = "CaptureCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCaptureCard = new MMCode() {
+	public static final ActionType1Code CaptureCard = new ActionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaptureCard";
-			owner_lazy = () -> ActionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionType1Code.mmObject();
+			codeName = ActionTypeCode.CaptureCard.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -192,11 +200,12 @@ public class ActionType1Code extends ActionTypeCode {
 	 * name} = "PINRetry"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPINRetry = new MMCode() {
+	public static final ActionType1Code PINRetry = new ActionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINRetry";
-			owner_lazy = () -> ActionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionType1Code.mmObject();
+			codeName = ActionTypeCode.PINRetry.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -215,11 +224,12 @@ public class ActionType1Code extends ActionTypeCode {
 	 * name} = "PINLastTry"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPINLastTry = new MMCode() {
+	public static final ActionType1Code PINLastTry = new ActionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINLastTry";
-			owner_lazy = () -> ActionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionType1Code.mmObject();
+			codeName = ActionTypeCode.PINLastTry.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -238,11 +248,12 @@ public class ActionType1Code extends ActionTypeCode {
 	 * name} = "RequestData"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRequestData = new MMCode() {
+	public static final ActionType1Code RequestData = new ActionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestData";
-			owner_lazy = () -> ActionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionType1Code.mmObject();
+			codeName = ActionTypeCode.RequestData.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -261,11 +272,12 @@ public class ActionType1Code extends ActionTypeCode {
 	 * name} = "Busy"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBusy = new MMCode() {
+	public static final ActionType1Code Busy = new ActionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Busy";
-			owner_lazy = () -> ActionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionType1Code.mmObject();
+			codeName = ActionTypeCode.Busy.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -284,27 +296,66 @@ public class ActionType1Code extends ActionTypeCode {
 	 * name} = "IdentificationRequired"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIdentificationRequired = new MMCode() {
+	public static final ActionType1Code IdentificationRequired = new ActionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationRequired";
-			owner_lazy = () -> ActionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionType1Code.mmObject();
+			codeName = ActionTypeCode.IdentificationRequired.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ActionType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ActionType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DISP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ActionType1Code";
 				definition = "Type of action to be performed by the POI System.";
-				code_lazy = () -> Arrays.asList(ActionType1Code.mmDisplayMessage, ActionType1Code.mmPrintMessage, ActionType1Code.mmReferral, ActionType1Code.mmCaptureCard, ActionType1Code.mmPINRetry, ActionType1Code.mmPINLastTry,
-						ActionType1Code.mmRequestData, ActionType1Code.mmBusy, ActionType1Code.mmIdentificationRequired);
 				trace_lazy = () -> ActionTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType1Code.DisplayMessage, com.tools20022.repository.codeset.ActionType1Code.PrintMessage, com.tools20022.repository.codeset.ActionType1Code.Referral,
+						com.tools20022.repository.codeset.ActionType1Code.CaptureCard, com.tools20022.repository.codeset.ActionType1Code.PINRetry, com.tools20022.repository.codeset.ActionType1Code.PINLastTry,
+						com.tools20022.repository.codeset.ActionType1Code.RequestData, com.tools20022.repository.codeset.ActionType1Code.Busy, com.tools20022.repository.codeset.ActionType1Code.IdentificationRequired);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(DisplayMessage.getCodeName().get(), DisplayMessage);
+		codesByName.put(PrintMessage.getCodeName().get(), PrintMessage);
+		codesByName.put(Referral.getCodeName().get(), Referral);
+		codesByName.put(CaptureCard.getCodeName().get(), CaptureCard);
+		codesByName.put(PINRetry.getCodeName().get(), PINRetry);
+		codesByName.put(PINLastTry.getCodeName().get(), PINLastTry);
+		codesByName.put(RequestData.getCodeName().get(), RequestData);
+		codesByName.put(Busy.getCodeName().get(), Busy);
+		codesByName.put(IdentificationRequired.getCodeName().get(), IdentificationRequired);
+	}
+
+	public static ActionType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ActionType1Code[] values() {
+		ActionType1Code[] values = new ActionType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ActionType1Code> {
+		@Override
+		public ActionType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ActionType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

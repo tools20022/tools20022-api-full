@@ -17,12 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.OptionDefinitionTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates whether it is a Call option (right to purchase a specific
@@ -34,14 +40,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionDefinitionTypeCode#mmCall
- * OptionDefinitionTypeCode.mmCall}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionDefinitionTypeCode#Call
+ * OptionDefinitionTypeCode.Call}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionDefinitionTypeCode#mmPut
- * OptionDefinitionTypeCode.mmPut}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionDefinitionTypeCode#Put
+ * OptionDefinitionTypeCode.Put}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionDefinitionTypeCode#mmOther
- * OptionDefinitionTypeCode.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionDefinitionTypeCode#Other
+ * OptionDefinitionTypeCode.Other}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -58,8 +64,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = ISO15022Synonym: 12a::OPTI</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class OptionDefinitionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OptionDefinitionTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,6 +102,9 @@ public class OptionDefinitionTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CALL"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :12a::OPTI//CALL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -104,12 +117,13 @@ public class OptionDefinitionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCall = new MMCode() {
+	public static final OptionDefinitionTypeCode Call = new OptionDefinitionTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":12a::OPTI//CALL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Call";
 			definition = "Right to buy a quantity of an asset for an agreed price at exercise date.";
-			owner_lazy = () -> OptionDefinitionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionDefinitionTypeCode.mmObject();
 			codeName = "CALL";
 		}
 	};
@@ -125,6 +139,9 @@ public class OptionDefinitionTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PUTO"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :12a::OPTI//PUTO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -137,12 +154,13 @@ public class OptionDefinitionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPut = new MMCode() {
+	public static final OptionDefinitionTypeCode Put = new OptionDefinitionTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":12a::OPTI//PUTO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Put";
 			definition = "Right to sell a quantity of an asset for an agreed price at exercise date.";
-			owner_lazy = () -> OptionDefinitionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionDefinitionTypeCode.mmObject();
 			codeName = "PUTO";
 		}
 	};
@@ -170,28 +188,61 @@ public class OptionDefinitionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final OptionDefinitionTypeCode Other = new OptionDefinitionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Right where the holder of the option decides whether the option is put or call.";
-			owner_lazy = () -> OptionDefinitionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionDefinitionTypeCode.mmObject();
 			codeName = "OTHR";
 		}
 	};
+	final static private LinkedHashMap<String, OptionDefinitionTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OptionDefinitionTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "12a::OPTI"));
 				example = Arrays.asList("CALL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionDefinitionTypeCode";
 				definition = "Indicates whether it is a Call option (right to purchase a specific underlying asset) or a Put option (right to sell a specific underlying asset).";
-				code_lazy = () -> Arrays.asList(OptionDefinitionTypeCode.mmCall, OptionDefinitionTypeCode.mmPut, OptionDefinitionTypeCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(OptionType1Code.mmObject(), OptionTypeCode.mmObject(), OptionType2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionDefinitionTypeCode.Call, com.tools20022.repository.codeset.OptionDefinitionTypeCode.Put,
+						com.tools20022.repository.codeset.OptionDefinitionTypeCode.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Call.getCodeName().get(), Call);
+		codesByName.put(Put.getCodeName().get(), Put);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static OptionDefinitionTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OptionDefinitionTypeCode[] values() {
+		OptionDefinitionTypeCode[] values = new OptionDefinitionTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OptionDefinitionTypeCode> {
+		@Override
+		public OptionDefinitionTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OptionDefinitionTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

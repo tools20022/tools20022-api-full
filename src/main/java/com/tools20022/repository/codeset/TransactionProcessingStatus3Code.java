@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.InstructionProcessingStatusCode;
+import com.tools20022.repository.codeset.TransactionProcessingStatus3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Provides the processing status of a transaction (at account servicer level).
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode
- * InstructionProcessingStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus3Code#mmCancelled
- * TransactionProcessingStatus3Code.mmCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus3Code#Cancelled
+ * TransactionProcessingStatus3Code.Cancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus3Code#mmAcknowledgedAccepted
- * TransactionProcessingStatus3Code.mmAcknowledgedAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus3Code#AcknowledgedAccepted
+ * TransactionProcessingStatus3Code.AcknowledgedAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus3Code#mmRejected
- * TransactionProcessingStatus3Code.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus3Code#Rejected
+ * TransactionProcessingStatus3Code.Rejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus3Code#mmInRepair
- * TransactionProcessingStatus3Code.mmInRepair}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionProcessingStatus3Code#InRepair
+ * TransactionProcessingStatus3Code.InRepair}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.InstructionProcessingStatusCode
+ * InstructionProcessingStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -72,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TransactionProcessingStatus3Code extends InstructionProcessingStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransactionProcessingStatus3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,11 +96,12 @@ public class TransactionProcessingStatus3Code extends InstructionProcessingStatu
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelled = new MMCode() {
+	public static final TransactionProcessingStatus3Code Cancelled = new TransactionProcessingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
-			owner_lazy = () -> TransactionProcessingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionProcessingStatus3Code.mmObject();
+			codeName = InstructionProcessingStatusCode.Cancelled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -114,11 +120,12 @@ public class TransactionProcessingStatus3Code extends InstructionProcessingStatu
 	 * name} = "AcknowledgedAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
+	public static final TransactionProcessingStatus3Code AcknowledgedAccepted = new TransactionProcessingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
-			owner_lazy = () -> TransactionProcessingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionProcessingStatus3Code.mmObject();
+			codeName = InstructionProcessingStatusCode.AcknowledgedAccepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -137,11 +144,12 @@ public class TransactionProcessingStatus3Code extends InstructionProcessingStatu
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final TransactionProcessingStatus3Code Rejected = new TransactionProcessingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> TransactionProcessingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionProcessingStatus3Code.mmObject();
+			codeName = InstructionProcessingStatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -160,27 +168,60 @@ public class TransactionProcessingStatus3Code extends InstructionProcessingStatu
 	 * name} = "InRepair"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInRepair = new MMCode() {
+	public static final TransactionProcessingStatus3Code InRepair = new TransactionProcessingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InRepair";
-			owner_lazy = () -> TransactionProcessingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionProcessingStatus3Code.mmObject();
+			codeName = InstructionProcessingStatusCode.InRepair.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TransactionProcessingStatus3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransactionProcessingStatus3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CAND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionProcessingStatus3Code";
 				definition = "Provides the processing status of a transaction (at account servicer level).";
-				code_lazy = () -> Arrays
-						.asList(TransactionProcessingStatus3Code.mmCancelled, TransactionProcessingStatus3Code.mmAcknowledgedAccepted, TransactionProcessingStatus3Code.mmRejected, TransactionProcessingStatus3Code.mmInRepair);
 				trace_lazy = () -> InstructionProcessingStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionProcessingStatus3Code.Cancelled, com.tools20022.repository.codeset.TransactionProcessingStatus3Code.AcknowledgedAccepted,
+						com.tools20022.repository.codeset.TransactionProcessingStatus3Code.Rejected, com.tools20022.repository.codeset.TransactionProcessingStatus3Code.InRepair);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Cancelled.getCodeName().get(), Cancelled);
+		codesByName.put(AcknowledgedAccepted.getCodeName().get(), AcknowledgedAccepted);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+		codesByName.put(InRepair.getCodeName().get(), InRepair);
+	}
+
+	public static TransactionProcessingStatus3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransactionProcessingStatus3Code[] values() {
+		TransactionProcessingStatus3Code[] values = new TransactionProcessingStatus3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransactionProcessingStatus3Code> {
+		@Override
+		public TransactionProcessingStatus3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransactionProcessingStatus3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

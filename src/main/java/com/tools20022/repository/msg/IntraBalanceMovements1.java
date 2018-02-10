@@ -25,9 +25,8 @@ import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +60,22 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCashAccountRule#forIntraBalanceMovements1
+ * ConstraintCashAccountRule.forIntraBalanceMovements1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountOwnerRule#forIntraBalanceMovements1
+ * ConstraintAccountOwnerRule.forIntraBalanceMovements1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStatusAndReasonRule#forIntraBalanceMovements1
+ * ConstraintStatusAndReasonRule.forIntraBalanceMovements1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides the intra-balance movements in the report."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IntraBalanceMovements1", propOrder = {"accountOwner", "cashAccount", "statusAndReason", "movement"})
 public class IntraBalanceMovements1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctOwnr")
 	protected SystemPartyIdentification5 accountOwner;
 	/**
-	 * Party that owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -114,7 +128,7 @@ public class IntraBalanceMovements1 {
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> System.mmPartyRole;
-			componentContext_lazy = () -> IntraBalanceMovements1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovements1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +140,11 @@ public class IntraBalanceMovements1 {
 			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAcct")
 	protected CashAccount24 cashAccount;
 	/**
-	 * Account to or from which an entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -161,7 +176,7 @@ public class IntraBalanceMovements1 {
 	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
-			componentContext_lazy = () -> IntraBalanceMovements1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovements1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +188,11 @@ public class IntraBalanceMovements1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "StsAndRsn")
 	protected IntraBalanceStatusAndReason1 statusAndReason;
 	/**
-	 * Status and status reason of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -209,7 +225,7 @@ public class IntraBalanceMovements1 {
 	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentStatus;
-			componentContext_lazy = () -> IntraBalanceMovements1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovements1.mmObject();
 			isDerived = false;
 			xmlTag = "StsAndRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,10 +237,11 @@ public class IntraBalanceMovements1 {
 			type_lazy = () -> com.tools20022.repository.msg.IntraBalanceStatusAndReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "Mvmnt", required = true)
 	protected List<com.tools20022.repository.msg.IntraBalanceMovement1> movement;
 	/**
-	 * Identifies the individual transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -255,7 +272,7 @@ public class IntraBalanceMovements1 {
 	public static final MMMessageAssociationEnd mmMovement = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> BookEntry.mmObject();
-			componentContext_lazy = () -> IntraBalanceMovements1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovements1.mmObject();
 			isDerived = false;
 			xmlTag = "Mvmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,9 +287,12 @@ public class IntraBalanceMovements1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IntraBalanceMovements1.mmAccountOwner, IntraBalanceMovements1.mmCashAccount, IntraBalanceMovements1.mmStatusAndReason, IntraBalanceMovements1.mmMovement);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceMovements1.mmAccountOwner, com.tools20022.repository.msg.IntraBalanceMovements1.mmCashAccount,
+						com.tools20022.repository.msg.IntraBalanceMovements1.mmStatusAndReason, com.tools20022.repository.msg.IntraBalanceMovements1.mmMovement);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashAccountRule.forIntraBalanceMovements1, com.tools20022.repository.constraints.ConstraintAccountOwnerRule.forIntraBalanceMovements1,
+						com.tools20022.repository.constraints.ConstraintStatusAndReasonRule.forIntraBalanceMovements1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceMovements1";
 				definition = "Provides the intra-balance movements in the report.";
@@ -281,39 +301,39 @@ public class IntraBalanceMovements1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public SystemPartyIdentification5 getAccountOwner() {
-		return accountOwner;
+	public Optional<SystemPartyIdentification5> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification5 accountOwner) {
+	public IntraBalanceMovements1 setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification5 accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "CshAcct")
-	public CashAccount24 getCashAccount() {
-		return cashAccount;
+	public Optional<CashAccount24> getCashAccount() {
+		return cashAccount == null ? Optional.empty() : Optional.of(cashAccount);
 	}
 
-	public void setCashAccount(com.tools20022.repository.msg.CashAccount24 cashAccount) {
+	public IntraBalanceMovements1 setCashAccount(com.tools20022.repository.msg.CashAccount24 cashAccount) {
 		this.cashAccount = cashAccount;
+		return this;
 	}
 
-	@XmlElement(name = "StsAndRsn")
-	public IntraBalanceStatusAndReason1 getStatusAndReason() {
-		return statusAndReason;
+	public Optional<IntraBalanceStatusAndReason1> getStatusAndReason() {
+		return statusAndReason == null ? Optional.empty() : Optional.of(statusAndReason);
 	}
 
-	public void setStatusAndReason(com.tools20022.repository.msg.IntraBalanceStatusAndReason1 statusAndReason) {
+	public IntraBalanceMovements1 setStatusAndReason(com.tools20022.repository.msg.IntraBalanceStatusAndReason1 statusAndReason) {
 		this.statusAndReason = statusAndReason;
+		return this;
 	}
 
-	@XmlElement(name = "Mvmnt", required = true)
 	public List<IntraBalanceMovement1> getMovement() {
-		return movement;
+		return movement == null ? movement = new ArrayList<>() : movement;
 	}
 
-	public void setMovement(List<com.tools20022.repository.msg.IntraBalanceMovement1> movement) {
-		this.movement = movement;
+	public IntraBalanceMovements1 setMovement(List<com.tools20022.repository.msg.IntraBalanceMovement1> movement) {
+		this.movement = Objects.requireNonNull(movement);
+		return this;
 	}
 }

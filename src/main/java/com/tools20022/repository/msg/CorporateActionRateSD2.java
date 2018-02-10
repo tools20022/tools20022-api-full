@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,16 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionRateSD2", propOrder = {"receiptBaseQuantity", "ordinaryShare"})
 public class CorporateActionRateSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RctBaseQty")
 	protected DecimalNumber receiptBaseQuantity;
 	/**
-	 * Receipts quantity (base) of the American or Global Depository Receipt(s)
-	 * per ordinary share(s) ratio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -88,6 +90,9 @@ public class CorporateActionRateSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RctBaseQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: ADR/ GDR Base</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -102,9 +107,10 @@ public class CorporateActionRateSD2 {
 	 */
 	public static final MMMessageAttribute mmReceiptBaseQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionRateSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD2.mmObject();
 			isDerived = false;
 			xmlTag = "RctBaseQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "ADR/ GDR Base"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiptBaseQuantity";
 			definition = "Receipts quantity (base) of the American or Global Depository Receipt(s) per ordinary share(s) ratio.";
@@ -113,11 +119,11 @@ public class CorporateActionRateSD2 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdnryShr")
 	protected DecimalNumber ordinaryShare;
 	/**
-	 * Ordinary shares quantity of the American or Global Depository Receipt(s)
-	 * per ordinary share(s) ratio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,6 +139,9 @@ public class CorporateActionRateSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrdnryShr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Ordinary Share</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -147,9 +156,10 @@ public class CorporateActionRateSD2 {
 	 */
 	public static final MMMessageAttribute mmOrdinaryShare = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionRateSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD2.mmObject();
 			isDerived = false;
 			xmlTag = "OrdnryShr";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Ordinary Share"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrdinaryShare";
 			definition = " Ordinary shares quantity of the American or Global Depository Receipt(s) per ordinary share(s)  ratio.";
@@ -162,8 +172,8 @@ public class CorporateActionRateSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionRateSD2.mmReceiptBaseQuantity, CorporateActionRateSD2.mmOrdinaryShare);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRateSD2.mmReceiptBaseQuantity, com.tools20022.repository.msg.CorporateActionRateSD2.mmOrdinaryShare);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRateSD2";
 				definition = "Ratio of the American or Global Depository Receipt(s) per ordinary share(s).";
@@ -172,21 +182,21 @@ public class CorporateActionRateSD2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RctBaseQty")
-	public DecimalNumber getReceiptBaseQuantity() {
-		return receiptBaseQuantity;
+	public Optional<DecimalNumber> getReceiptBaseQuantity() {
+		return receiptBaseQuantity == null ? Optional.empty() : Optional.of(receiptBaseQuantity);
 	}
 
-	public void setReceiptBaseQuantity(DecimalNumber receiptBaseQuantity) {
+	public CorporateActionRateSD2 setReceiptBaseQuantity(DecimalNumber receiptBaseQuantity) {
 		this.receiptBaseQuantity = receiptBaseQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "OrdnryShr")
-	public DecimalNumber getOrdinaryShare() {
-		return ordinaryShare;
+	public Optional<DecimalNumber> getOrdinaryShare() {
+		return ordinaryShare == null ? Optional.empty() : Optional.of(ordinaryShare);
 	}
 
-	public void setOrdinaryShare(DecimalNumber ordinaryShare) {
+	public CorporateActionRateSD2 setOrdinaryShare(DecimalNumber ordinaryShare) {
 		this.ordinaryShare = ordinaryShare;
+		return this;
 	}
 }

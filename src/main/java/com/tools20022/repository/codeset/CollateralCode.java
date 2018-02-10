@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CollateralCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the item is used as collateral.
@@ -31,12 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CollateralCode#Collateral
+ * CollateralCode.Collateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralCode#mmCollateral
- * CollateralCode.mmCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralCode#mmNotCollateral
- * CollateralCode.mmNotCollateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralCode#NotCollateral
+ * CollateralCode.NotCollateral}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies whether the item is used as collateral."</li>
  * </ul>
  */
-public class CollateralCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CollateralCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,12 +90,12 @@ public class CollateralCode {
 	 * definition} = "Item is used as collateral."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateral = new MMCode() {
+	public static final CollateralCode Collateral = new CollateralCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collateral";
 			definition = "Item is used as collateral.";
-			owner_lazy = () -> CollateralCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralCode.mmObject();
 			codeName = "COLL";
 		}
 	};
@@ -115,27 +120,57 @@ public class CollateralCode {
 	 * definition} = "Item is not used as collateral."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotCollateral = new MMCode() {
+	public static final CollateralCode NotCollateral = new CollateralCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotCollateral";
 			definition = "Item is not used as collateral.";
-			owner_lazy = () -> CollateralCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralCode.mmObject();
 			codeName = "NCOL";
 		}
 	};
+	final static private LinkedHashMap<String, CollateralCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CollateralCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralCode";
 				definition = "Specifies whether the item is used as collateral.";
-				code_lazy = () -> Arrays.asList(CollateralCode.mmCollateral, CollateralCode.mmNotCollateral);
 				derivation_lazy = () -> Arrays.asList(Collateral1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralCode.Collateral, com.tools20022.repository.codeset.CollateralCode.NotCollateral);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Collateral.getCodeName().get(), Collateral);
+		codesByName.put(NotCollateral.getCodeName().get(), NotCollateral);
+	}
+
+	public static CollateralCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CollateralCode[] values() {
+		CollateralCode[] values = new CollateralCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CollateralCode> {
+		@Override
+		public CollateralCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CollateralCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

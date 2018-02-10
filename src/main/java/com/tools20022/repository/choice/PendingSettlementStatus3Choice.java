@@ -31,6 +31,7 @@ import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.PendingSettlementStatus2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * PendingSettlementStatus2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PendingSettlementStatus3Choice", propOrder = {"reason", "extendedReason", "dataSourceScheme", "noSpecifiedReason"})
 public class PendingSettlementStatus3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rsn", required = true)
 	protected PendingSettlementStatusReason2Code reason;
 	/**
-	 * Reason for the settlement pending status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -129,7 +131,7 @@ public class PendingSettlementStatus3Choice {
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmPendingSettlementReason;
-			componentContext_lazy = () -> PendingSettlementStatus3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,10 +143,11 @@ public class PendingSettlementStatus3Choice {
 			simpleType_lazy = () -> PendingSettlementStatusReason2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedRsn", required = true)
 	protected Extended350Code extendedReason;
 	/**
-	 * Reason for the settlement pending status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,7 +180,7 @@ public class PendingSettlementStatus3Choice {
 	 */
 	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PendingSettlementStatus3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,11 +192,11 @@ public class PendingSettlementStatus3Choice {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DataSrcSchme", required = true)
 	protected GenericIdentification1 dataSourceScheme;
 	/**
-	 * Proprietary identification of the reason for the pending settlement
-	 * status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -232,7 +235,7 @@ public class PendingSettlementStatus3Choice {
 	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
-			componentContext_lazy = () -> PendingSettlementStatus3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,10 +248,11 @@ public class PendingSettlementStatus3Choice {
 			type_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	protected NoReasonCode noSpecifiedReason;
 	/**
-	 * Indicates that there is no reason available or to report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -287,7 +291,7 @@ public class PendingSettlementStatus3Choice {
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
-			componentContext_lazy = () -> PendingSettlementStatus3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -303,10 +307,10 @@ public class PendingSettlementStatus3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PendingSettlementStatus3Choice.mmReason, PendingSettlementStatus3Choice.mmExtendedReason, PendingSettlementStatus3Choice.mmDataSourceScheme,
-						PendingSettlementStatus3Choice.mmNoSpecifiedReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmReason, com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmExtendedReason,
+						com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmDataSourceScheme, com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmNoSpecifiedReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingSettlementStatus3Choice";
 				definition = "Reason for the pending settlement status.";
@@ -316,39 +320,39 @@ public class PendingSettlementStatus3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public PendingSettlementStatusReason2Code getReason() {
 		return reason;
 	}
 
-	public void setReason(PendingSettlementStatusReason2Code reason) {
-		this.reason = reason;
+	public PendingSettlementStatus3Choice setReason(PendingSettlementStatusReason2Code reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedRsn", required = true)
 	public Extended350Code getExtendedReason() {
 		return extendedReason;
 	}
 
-	public void setExtendedReason(Extended350Code extendedReason) {
-		this.extendedReason = extendedReason;
+	public PendingSettlementStatus3Choice setExtendedReason(Extended350Code extendedReason) {
+		this.extendedReason = Objects.requireNonNull(extendedReason);
+		return this;
 	}
 
-	@XmlElement(name = "DataSrcSchme", required = true)
 	public GenericIdentification1 getDataSourceScheme() {
 		return dataSourceScheme;
 	}
 
-	public void setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
-		this.dataSourceScheme = dataSourceScheme;
+	public PendingSettlementStatus3Choice setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
+		return this;
 	}
 
-	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}
 
-	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
-		this.noSpecifiedReason = noSpecifiedReason;
+	public PendingSettlementStatus3Choice setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = Objects.requireNonNull(noSpecifiedReason);
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.RedemptionTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the redemption type of the interest bearing instrument.
@@ -32,20 +37,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RedemptionTypeCode#mmPreFunded
- * RedemptionTypeCode.mmPreFunded}</li>
+ * {@linkplain com.tools20022.repository.codeset.RedemptionTypeCode#PreFunded
+ * RedemptionTypeCode.PreFunded}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RedemptionTypeCode#mmEscrowed
- * RedemptionTypeCode.mmEscrowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RedemptionTypeCode#Escrowed
+ * RedemptionTypeCode.Escrowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RedemptionTypeCode#mmConvertible
- * RedemptionTypeCode.mmConvertible}</li>
+ * {@linkplain com.tools20022.repository.codeset.RedemptionTypeCode#Convertible
+ * RedemptionTypeCode.Convertible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RedemptionTypeCode#mmCallable
- * RedemptionTypeCode.mmCallable}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RedemptionTypeCode#mmPutable
- * RedemptionTypeCode.mmPutable}</li>
+ * {@linkplain com.tools20022.repository.codeset.RedemptionTypeCode#Callable
+ * RedemptionTypeCode.Callable}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RedemptionTypeCode#Putable
+ * RedemptionTypeCode.Putable}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -58,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Indicates the redemption type of the interest bearing instrument."</li>
  * </ul>
  */
-public class RedemptionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RedemptionTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -108,12 +113,12 @@ public class RedemptionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreFunded = new MMCode() {
+	public static final RedemptionTypeCode PreFunded = new RedemptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreFunded";
 			definition = "Indicates whether an interest bearing instrument is being escrowed or collateralized either by direct obligations guaranteed by the US government, or by other types of securities. The maturity schedules of the securities in the escrow fund are determined in such a way to pay the maturity value, coupon, and premium payments (if any) of the refunded bonds.";
-			owner_lazy = () -> RedemptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RedemptionTypeCode.mmObject();
 			codeName = "PFIN";
 		}
 	};
@@ -141,12 +146,12 @@ public class RedemptionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEscrowed = new MMCode() {
+	public static final RedemptionTypeCode Escrowed = new RedemptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Escrowed";
 			definition = "Indicates whether an interest bearing instrument is deposited in a fund that will be used to pay debt service on refunded securities.";
-			owner_lazy = () -> RedemptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RedemptionTypeCode.mmObject();
 			codeName = "ESIN";
 		}
 	};
@@ -174,12 +179,12 @@ public class RedemptionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmConvertible = new MMCode() {
+	public static final RedemptionTypeCode Convertible = new RedemptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Convertible";
 			definition = "Indicates whether the interest bearing instrument is convertible into another type of financial instrument or not.";
-			owner_lazy = () -> RedemptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RedemptionTypeCode.mmObject();
 			codeName = "COIN";
 		}
 	};
@@ -207,12 +212,12 @@ public class RedemptionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCallable = new MMCode() {
+	public static final RedemptionTypeCode Callable = new RedemptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Callable";
 			definition = "Indicates whether the issuer has the right to pay the bond prior to maturity.";
-			owner_lazy = () -> RedemptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RedemptionTypeCode.mmObject();
 			codeName = "CAIN";
 		}
 	};
@@ -240,28 +245,62 @@ public class RedemptionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPutable = new MMCode() {
+	public static final RedemptionTypeCode Putable = new RedemptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Putable";
 			definition = "Indicates whether the bondholder has the right to redeem the principal amount of a bond prior to final maturity.";
-			owner_lazy = () -> RedemptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RedemptionTypeCode.mmObject();
 			codeName = "PUIN";
 		}
 	};
+	final static private LinkedHashMap<String, RedemptionTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RedemptionTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PFIN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionTypeCode";
 				definition = "Indicates the redemption type of the interest bearing instrument.";
-				code_lazy = () -> Arrays.asList(RedemptionTypeCode.mmPreFunded, RedemptionTypeCode.mmEscrowed, RedemptionTypeCode.mmConvertible, RedemptionTypeCode.mmCallable, RedemptionTypeCode.mmPutable);
 				derivation_lazy = () -> Arrays.asList(RedemptionType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RedemptionTypeCode.PreFunded, com.tools20022.repository.codeset.RedemptionTypeCode.Escrowed,
+						com.tools20022.repository.codeset.RedemptionTypeCode.Convertible, com.tools20022.repository.codeset.RedemptionTypeCode.Callable, com.tools20022.repository.codeset.RedemptionTypeCode.Putable);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PreFunded.getCodeName().get(), PreFunded);
+		codesByName.put(Escrowed.getCodeName().get(), Escrowed);
+		codesByName.put(Convertible.getCodeName().get(), Convertible);
+		codesByName.put(Callable.getCodeName().get(), Callable);
+		codesByName.put(Putable.getCodeName().get(), Putable);
+	}
+
+	public static RedemptionTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RedemptionTypeCode[] values() {
+		RedemptionTypeCode[] values = new RedemptionTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RedemptionTypeCode> {
+		@Override
+		public RedemptionTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RedemptionTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

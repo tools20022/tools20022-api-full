@@ -33,6 +33,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,8 +48,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnitPrice8#mmUnitOfMeasureCodeOrOtherUnitOfMeasureRule
- * UnitPrice8.mmUnitOfMeasureCodeOrOtherUnitOfMeasureRule}</li>
+ * {@linkplain com.tools20022.repository.msg.UnitPrice8#UnitOfMeasureCodeOrOtherUnitOfMeasureRule
+ * UnitPrice8.UnitOfMeasureCodeOrOtherUnitOfMeasureRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -70,8 +72,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -84,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Amount of money for which goods or services are offered, sold, or bought."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnitPrice8", propOrder = {"unitOfMeasureCode", "otherUnitOfMeasure", "amount", "factor"})
 public class UnitPrice8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UnitOfMeasrCd", required = true)
 	protected UnitOfMeasure3Code unitOfMeasureCode;
 	/**
-	 * Specifies the unit of measurement. For example, kilo, tons.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,7 +129,7 @@ public class UnitPrice8 {
 	public static final MMMessageAttribute mmUnitOfMeasureCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Price.mmUnitOfMeasure;
-			componentContext_lazy = () -> UnitPrice8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice8.mmObject();
 			isDerived = false;
 			xmlTag = "UnitOfMeasrCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,10 +140,11 @@ public class UnitPrice8 {
 			simpleType_lazy = () -> UnitOfMeasure3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrUnitOfMeasr", required = true)
 	protected Max35Text otherUnitOfMeasure;
 	/**
-	 * Identifies the unit of measure not present in the code list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +177,7 @@ public class UnitPrice8 {
 	public static final MMMessageAttribute mmOtherUnitOfMeasure = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Price.mmUnitOfMeasure;
-			componentContext_lazy = () -> UnitPrice8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice8.mmObject();
 			isDerived = false;
 			xmlTag = "OthrUnitOfMeasr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,10 +188,11 @@ public class UnitPrice8 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected CurrencyAndAmount amount;
 	/**
-	 * Price expressed as a currency and value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -220,7 +225,7 @@ public class UnitPrice8 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Price.mmAmount;
-			componentContext_lazy = () -> UnitPrice8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice8.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,11 +236,11 @@ public class UnitPrice8 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Fctr")
 	protected Max15NumericText factor;
 	/**
-	 * Multiplication factor of measurement values. For example: goods that can
-	 * be ordered by 36 pieces.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -270,7 +275,7 @@ public class UnitPrice8 {
 	public static final MMMessageAttribute mmFactor = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmFactor;
-			componentContext_lazy = () -> UnitPrice8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice8.mmObject();
 			isDerived = false;
 			xmlTag = "Fctr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -315,22 +320,23 @@ public class UnitPrice8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmUnitOfMeasureCodeOrOtherUnitOfMeasureRule = new MMXor() {
+	public static final MMXor UnitOfMeasureCodeOrOtherUnitOfMeasureRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitOfMeasureCodeOrOtherUnitOfMeasureRule";
 			definition = "If UnitOfMeasureCode is present, then OtherUnitOfMeasure is not allowed. If UnitOfMeasureCode is not present, then OtherUnitOfMeasure is mandatory.";
-			messageComponent_lazy = () -> UnitPrice8.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(UnitPrice8.mmUnitOfMeasureCode, UnitPrice8.mmOtherUnitOfMeasure);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.UnitPrice8.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice8.mmUnitOfMeasureCode, com.tools20022.repository.msg.UnitPrice8.mmOtherUnitOfMeasure);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnitPrice8.mmUnitOfMeasureCode, UnitPrice8.mmOtherUnitOfMeasure, UnitPrice8.mmAmount, UnitPrice8.mmFactor);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice8.mmUnitOfMeasureCode, com.tools20022.repository.msg.UnitPrice8.mmOtherUnitOfMeasure, com.tools20022.repository.msg.UnitPrice8.mmAmount,
+						com.tools20022.repository.msg.UnitPrice8.mmFactor);
 				trace_lazy = () -> Price.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -341,45 +347,45 @@ public class UnitPrice8 {
 				})).get();
 				name = "UnitPrice8";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
-				xors_lazy = () -> Arrays.asList(UnitPrice8.mmUnitOfMeasureCodeOrOtherUnitOfMeasureRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice8.UnitOfMeasureCodeOrOtherUnitOfMeasureRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UnitOfMeasrCd", required = true)
 	public UnitOfMeasure3Code getUnitOfMeasureCode() {
 		return unitOfMeasureCode;
 	}
 
-	public void setUnitOfMeasureCode(UnitOfMeasure3Code unitOfMeasureCode) {
-		this.unitOfMeasureCode = unitOfMeasureCode;
+	public UnitPrice8 setUnitOfMeasureCode(UnitOfMeasure3Code unitOfMeasureCode) {
+		this.unitOfMeasureCode = Objects.requireNonNull(unitOfMeasureCode);
+		return this;
 	}
 
-	@XmlElement(name = "OthrUnitOfMeasr", required = true)
 	public Max35Text getOtherUnitOfMeasure() {
 		return otherUnitOfMeasure;
 	}
 
-	public void setOtherUnitOfMeasure(Max35Text otherUnitOfMeasure) {
-		this.otherUnitOfMeasure = otherUnitOfMeasure;
+	public UnitPrice8 setOtherUnitOfMeasure(Max35Text otherUnitOfMeasure) {
+		this.otherUnitOfMeasure = Objects.requireNonNull(otherUnitOfMeasure);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
-		this.amount = amount;
+	public UnitPrice8 setAmount(CurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "Fctr")
-	public Max15NumericText getFactor() {
-		return factor;
+	public Optional<Max15NumericText> getFactor() {
+		return factor == null ? Optional.empty() : Optional.of(factor);
 	}
 
-	public void setFactor(Max15NumericText factor) {
+	public UnitPrice8 setFactor(Max15NumericText factor) {
 		this.factor = factor;
+		return this;
 	}
 }

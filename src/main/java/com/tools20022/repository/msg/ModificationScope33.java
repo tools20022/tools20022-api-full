@@ -27,6 +27,7 @@ import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * ModificationScope26}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ModificationScope33", propOrder = {"modificationScopeIndication", "placement"})
 public class ModificationScope33 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ModScpIndctn", required = true)
 	protected DataModification1Code modificationScopeIndication;
 	/**
-	 * Specifies the type of modification to be applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +125,7 @@ public class ModificationScope33 {
 	 */
 	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ModificationScope33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope33.mmObject();
 			isDerived = false;
 			xmlTag = "ModScpIndctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +137,11 @@ public class ModificationScope33 {
 			simpleType_lazy = () -> DataModification1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Plcmnt", required = true)
 	protected ReferredAgent2 placement;
 	/**
-	 * Referral information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -164,7 +167,7 @@ public class ModificationScope33 {
 	 */
 	public static final MMMessageAssociationEnd mmPlacement = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ModificationScope33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope33.mmObject();
 			isDerived = false;
 			xmlTag = "Plcmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,9 +183,9 @@ public class ModificationScope33 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ModificationScope33.mmModificationScopeIndication, ModificationScope33.mmPlacement);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope33.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope33.mmPlacement);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AccountModificationInstructionV06.mmModifiedPlacement, AccountModificationInstructionV07.mmModifiedPlacement);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope33";
 				definition = "Scope of the modification to be applied on an identified set of information.";
@@ -192,21 +195,21 @@ public class ModificationScope33 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ModScpIndctn", required = true)
 	public DataModification1Code getModificationScopeIndication() {
 		return modificationScopeIndication;
 	}
 
-	public void setModificationScopeIndication(DataModification1Code modificationScopeIndication) {
-		this.modificationScopeIndication = modificationScopeIndication;
+	public ModificationScope33 setModificationScopeIndication(DataModification1Code modificationScopeIndication) {
+		this.modificationScopeIndication = Objects.requireNonNull(modificationScopeIndication);
+		return this;
 	}
 
-	@XmlElement(name = "Plcmnt", required = true)
 	public ReferredAgent2 getPlacement() {
 		return placement;
 	}
 
-	public void setPlacement(com.tools20022.repository.msg.ReferredAgent2 placement) {
-		this.placement = placement;
+	public ModificationScope33 setPlacement(com.tools20022.repository.msg.ReferredAgent2 placement) {
+		this.placement = Objects.requireNonNull(placement);
+		return this;
 	}
 }

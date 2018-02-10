@@ -21,9 +21,11 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,16 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Clearing instructions transactions list."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "ClearingInstructions1", propOrder = {"FIToFICreditTransferTransactionInformation", "FIToFIDirectDebitTransactionInformation"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "ClearingInstructions1", propOrder = {"fIToFICreditTransferTransactionInformation", "fIToFIDirectDebitTransactionInformation"})
 public class ClearingInstructions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FIToFICdtTrfTxInf", required = true)
 	protected List<com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1> fIToFICreditTransferTransactionInformation;
 	/**
-	 * Set of elements providing information specific to the individual credit
-	 * transfer(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -99,7 +101,7 @@ public class ClearingInstructions1 {
 	 */
 	public static final MMMessageAssociationEnd mmFIToFICreditTransferTransactionInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ClearingInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "FIToFICdtTrfTxInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,11 +112,11 @@ public class ClearingInstructions1 {
 			type_lazy = () -> com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.mmObject();
 		}
 	};
+	@XmlElement(name = "FIToFIDrctDbtTxInf", required = true)
 	protected List<com.tools20022.repository.msg.FIToFIDirectDebitTransactionInformationDetails1> fIToFIDirectDebitTransactionInformation;
 	/**
-	 * Set of elements providing information specific to the individual direct
-	 * debit(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -143,7 +145,7 @@ public class ClearingInstructions1 {
 	 */
 	public static final MMMessageAssociationEnd mmFIToFIDirectDebitTransactionInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ClearingInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "FIToFIDrctDbtTxInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,8 +160,9 @@ public class ClearingInstructions1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ClearingInstructions1.mmFIToFICreditTransferTransactionInformation, ClearingInstructions1.mmFIToFIDirectDebitTransactionInformation);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClearingInstructions1.mmFIToFICreditTransferTransactionInformation,
+						com.tools20022.repository.msg.ClearingInstructions1.mmFIToFIDirectDebitTransactionInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ClearingInstructions1";
 				definition = "Clearing instructions transactions list.";
@@ -168,21 +171,21 @@ public class ClearingInstructions1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FIToFICdtTrfTxInf", required = true)
 	public List<FIToFICreditTransferTransactionInformationDetails1> getFIToFICreditTransferTransactionInformation() {
-		return fIToFICreditTransferTransactionInformation;
+		return fIToFICreditTransferTransactionInformation == null ? fIToFICreditTransferTransactionInformation = new ArrayList<>() : fIToFICreditTransferTransactionInformation;
 	}
 
-	public void setFIToFICreditTransferTransactionInformation(List<com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1> fIToFICreditTransferTransactionInformation) {
-		this.fIToFICreditTransferTransactionInformation = fIToFICreditTransferTransactionInformation;
+	public ClearingInstructions1 setFIToFICreditTransferTransactionInformation(List<com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1> fIToFICreditTransferTransactionInformation) {
+		this.fIToFICreditTransferTransactionInformation = Objects.requireNonNull(fIToFICreditTransferTransactionInformation);
+		return this;
 	}
 
-	@XmlElement(name = "FIToFIDrctDbtTxInf", required = true)
 	public List<FIToFIDirectDebitTransactionInformationDetails1> getFIToFIDirectDebitTransactionInformation() {
-		return fIToFIDirectDebitTransactionInformation;
+		return fIToFIDirectDebitTransactionInformation == null ? fIToFIDirectDebitTransactionInformation = new ArrayList<>() : fIToFIDirectDebitTransactionInformation;
 	}
 
-	public void setFIToFIDirectDebitTransactionInformation(List<com.tools20022.repository.msg.FIToFIDirectDebitTransactionInformationDetails1> fIToFIDirectDebitTransactionInformation) {
-		this.fIToFIDirectDebitTransactionInformation = fIToFIDirectDebitTransactionInformation;
+	public ClearingInstructions1 setFIToFIDirectDebitTransactionInformation(List<com.tools20022.repository.msg.FIToFIDirectDebitTransactionInformationDetails1> fIToFIDirectDebitTransactionInformation) {
+		this.fIToFIDirectDebitTransactionInformation = Objects.requireNonNull(fIToFIDirectDebitTransactionInformation);
+		return this;
 	}
 }

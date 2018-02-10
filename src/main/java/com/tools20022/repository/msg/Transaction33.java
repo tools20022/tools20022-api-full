@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +60,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCreditDebitIndicatorGuideline#forTransaction33
+ * ConstraintCreditDebitIndicatorGuideline.forTransaction33}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionCreditDebitIndicatorRule#forTransaction33
+ * ConstraintTransactionCreditDebitIndicatorRule.forTransaction33}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * Transaction24}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Transaction33", propOrder = {"paymentTo", "paymentFrom", "creditDebitIndicator", "payment", "accountEntry"})
 public class Transaction33 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmtTo")
 	protected System1 paymentTo;
 	/**
-	 * Destination of the payment (be it a member or a system or both).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -117,7 +130,7 @@ public class Transaction33 {
 	public static final MMMessageAssociationEnd mmPaymentTo = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> System.mmObject();
-			componentContext_lazy = () -> Transaction33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction33.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +143,11 @@ public class Transaction33 {
 			type_lazy = () -> com.tools20022.repository.msg.System1.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtFr")
 	protected System1 paymentFrom;
 	/**
-	 * Origin of the payment (be it a member or a system or both).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -168,7 +182,7 @@ public class Transaction33 {
 	public static final MMMessageAssociationEnd mmPaymentFrom = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> System.mmObject();
-			componentContext_lazy = () -> Transaction33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction33.mmObject();
 			isDerived = false;
 			xmlTag = "PmtFr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,11 +195,11 @@ public class Transaction33 {
 			type_lazy = () -> com.tools20022.repository.msg.System1.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd")
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Indicates whether the payment transaction is a debit or credit
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,7 +239,7 @@ public class Transaction33 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreditDebitIndicator;
-			componentContext_lazy = () -> Transaction33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction33.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,12 +251,11 @@ public class Transaction33 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Pmt")
 	protected PaymentInstruction14 payment;
 	/**
-	 * Instruction to pay an amount of money to an ultimate beneficiary, on
-	 * behalf of an originator. This instruction may have to be forwarded
-	 * several times to complete the settlement chain.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -280,7 +293,7 @@ public class Transaction33 {
 	public static final MMMessageAssociationEnd mmPayment = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
-			componentContext_lazy = () -> Transaction33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction33.mmObject();
 			isDerived = false;
 			xmlTag = "Pmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -293,12 +306,11 @@ public class Transaction33 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentInstruction14.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctNtry")
 	protected CashAccountAndEntry1 accountEntry;
 	/**
-	 * Posting of an item to a cash account, in the context of a cash
-	 * transaction, that results in an increase or decrease to the balance of
-	 * the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -336,7 +348,7 @@ public class Transaction33 {
 	public static final MMMessageAssociationEnd mmAccountEntry = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BookEntry.mmCashEntry;
-			componentContext_lazy = () -> Transaction33.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction33.mmObject();
 			isDerived = false;
 			xmlTag = "AcctNtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -353,9 +365,12 @@ public class Transaction33 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Transaction33.mmPaymentTo, Transaction33.mmPaymentFrom, Transaction33.mmCreditDebitIndicator, Transaction33.mmPayment, Transaction33.mmAccountEntry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction33.mmPaymentTo, com.tools20022.repository.msg.Transaction33.mmPaymentFrom,
+						com.tools20022.repository.msg.Transaction33.mmCreditDebitIndicator, com.tools20022.repository.msg.Transaction33.mmPayment, com.tools20022.repository.msg.Transaction33.mmAccountEntry);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCreditDebitIndicatorGuideline.forTransaction33,
+						com.tools20022.repository.constraints.ConstraintTransactionCreditDebitIndicatorRule.forTransaction33);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Transaction33";
 				definition = "Information related to the payment transaction.";
@@ -365,48 +380,48 @@ public class Transaction33 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmtTo")
-	public System1 getPaymentTo() {
-		return paymentTo;
+	public Optional<System1> getPaymentTo() {
+		return paymentTo == null ? Optional.empty() : Optional.of(paymentTo);
 	}
 
-	public void setPaymentTo(com.tools20022.repository.msg.System1 paymentTo) {
+	public Transaction33 setPaymentTo(com.tools20022.repository.msg.System1 paymentTo) {
 		this.paymentTo = paymentTo;
+		return this;
 	}
 
-	@XmlElement(name = "PmtFr")
-	public System1 getPaymentFrom() {
-		return paymentFrom;
+	public Optional<System1> getPaymentFrom() {
+		return paymentFrom == null ? Optional.empty() : Optional.of(paymentFrom);
 	}
 
-	public void setPaymentFrom(com.tools20022.repository.msg.System1 paymentFrom) {
+	public Transaction33 setPaymentFrom(com.tools20022.repository.msg.System1 paymentFrom) {
 		this.paymentFrom = paymentFrom;
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd")
-	public CreditDebitCode getCreditDebitIndicator() {
-		return creditDebitIndicator;
+	public Optional<CreditDebitCode> getCreditDebitIndicator() {
+		return creditDebitIndicator == null ? Optional.empty() : Optional.of(creditDebitIndicator);
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+	public Transaction33 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
 		this.creditDebitIndicator = creditDebitIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "Pmt")
-	public PaymentInstruction14 getPayment() {
-		return payment;
+	public Optional<PaymentInstruction14> getPayment() {
+		return payment == null ? Optional.empty() : Optional.of(payment);
 	}
 
-	public void setPayment(com.tools20022.repository.msg.PaymentInstruction14 payment) {
+	public Transaction33 setPayment(com.tools20022.repository.msg.PaymentInstruction14 payment) {
 		this.payment = payment;
+		return this;
 	}
 
-	@XmlElement(name = "AcctNtry")
-	public CashAccountAndEntry1 getAccountEntry() {
-		return accountEntry;
+	public Optional<CashAccountAndEntry1> getAccountEntry() {
+		return accountEntry == null ? Optional.empty() : Optional.of(accountEntry);
 	}
 
-	public void setAccountEntry(com.tools20022.repository.msg.CashAccountAndEntry1 accountEntry) {
+	public Transaction33 setAccountEntry(com.tools20022.repository.msg.CashAccountAndEntry1 accountEntry) {
 		this.accountEntry = accountEntry;
+		return this;
 	}
 }

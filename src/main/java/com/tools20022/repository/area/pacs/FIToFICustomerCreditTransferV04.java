@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.GroupHeader49;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -65,20 +67,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementArchive
- * PaymentsClearingandSettlementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "FIToFICstmrCdtTrf"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -94,9 +82,60 @@ import javax.xml.bind.annotation.*;
  * FIToFICustomerCreditTransferV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "FIToFICstmrCdtTrf"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementArchive
+ * PaymentsClearingandSettlementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pacs.008.001.04}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#forFIToFICustomerCreditTransferV04
+ * ConstraintInstructedAgentRule.forFIToFICustomerCreditTransferV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#forFIToFICustomerCreditTransferV04
+ * ConstraintInstructingAgentRule.forFIToFICustomerCreditTransferV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountRule#forFIToFICustomerCreditTransferV04
+ * ConstraintTotalInterbankSettlementAmountRule.
+ * forFIToFICustomerCreditTransferV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountAndSumRule#forFIToFICustomerCreditTransferV04
+ * ConstraintTotalInterbankSettlementAmountAndSumRule.
+ * forFIToFICustomerCreditTransferV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupHeaderInterbankSettlementDateRule#forFIToFICustomerCreditTransferV04
+ * ConstraintGroupHeaderInterbankSettlementDateRule.
+ * forFIToFICustomerCreditTransferV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionInterbankSettlementDateRule#forFIToFICustomerCreditTransferV04
+ * ConstraintTransactionInterbankSettlementDateRule.
+ * forFIToFICustomerCreditTransferV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule#forFIToFICustomerCreditTransferV04
+ * ConstraintPaymentTypeInformationRule.forFIToFICustomerCreditTransferV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNumberOfTransactionsAndCreditTransfersRule#forFIToFICustomerCreditTransferV04
+ * ConstraintNumberOfTransactionsAndCreditTransfersRule.
+ * forFIToFICustomerCreditTransferV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#forFIToFICustomerCreditTransferV04
+ * ConstraintSupplementaryDataRule.forFIToFICustomerCreditTransferV04}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,16 +160,16 @@ import javax.xml.bind.annotation.*;
  * FIToFICustomerCreditTransferV03}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FIToFICustomerCreditTransferV04", propOrder = {"groupHeader", "creditTransferTransactionInformation", "supplementaryData"})
 public class FIToFICustomerCreditTransferV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader49 groupHeader;
 	/**
-	 * Set of characteristics shared by all individual transactions included in
-	 * the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,11 +219,11 @@ public class FIToFICustomerCreditTransferV04 {
 			}
 		}
 	};
+	@XmlElement(name = "CdtTrfTxInf", required = true)
 	protected List<CreditTransferTransaction7> creditTransferTransactionInformation;
 	/**
-	 * Set of elements providing information specific to the individual credit
-	 * transfer(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,11 +273,11 @@ public class FIToFICustomerCreditTransferV04 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -292,6 +331,15 @@ public class FIToFICustomerCreditTransferV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructedAgentRule.forFIToFICustomerCreditTransferV04,
+						com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFIToFICustomerCreditTransferV04,
+						com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountRule.forFIToFICustomerCreditTransferV04,
+						com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountAndSumRule.forFIToFICustomerCreditTransferV04,
+						com.tools20022.repository.constraints.ConstraintGroupHeaderInterbankSettlementDateRule.forFIToFICustomerCreditTransferV04,
+						com.tools20022.repository.constraints.ConstraintTransactionInterbankSettlementDateRule.forFIToFICustomerCreditTransferV04,
+						com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule.forFIToFICustomerCreditTransferV04,
+						com.tools20022.repository.constraints.ConstraintNumberOfTransactionsAndCreditTransfersRule.forFIToFICustomerCreditTransferV04,
+						com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFICustomerCreditTransferV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FIToFICustomerCreditTransferV04";
 				definition = "Scope\r\nThe FinancialInstitutionToFinancialInstitutionCustomerCreditTransfer message is sent by the debtor agent to the creditor agent, directly or through other agents and/or a payment clearing and settlement system. It is used to move funds from a debtor account to a creditor.\r\nUsage\r\nThe FIToFICustomerCreditTransfer message is exchanged between agents and can contain one or more customer credit transfer instructions.\r\nThe FIToFICustomerCreditTransfer message does not allow for grouping: a CreditTransferTransactionInformation block must be present for each credit transfer transaction.\r\nThe FIToFICustomerCreditTransfer message can be used in different ways:\r\n- If the instructing agent and the instructed agent wish to use their direct account relationship in the currency of the transfer then the message contains both the funds for the customer transfer(s) as well as the payment details;\r\n- If the instructing agent and the instructed agent have no direct account relationship in the currency of the transfer, or do not wish to use their account relationship, then other (reimbursement) agents will be involved to cover for the customer transfer(s). The FIToFICustomerCreditTransfer contains only the payment details and the instructing agent must cover the customer transfer by sending a FinancialInstitutionCreditTransfer to a reimbursement agent. This payment method is called the Cover method;\r\n- If more than two financial institutions are involved in the payment chain and if the FIToFICustomerCreditTransfer is sent from one financial institution to the next financial institution in the payment chain, then the payment method is called the Serial method.\r\nThe FIToFICustomerCreditTransfer message can be used in domestic and cross-border scenarios.";
@@ -321,34 +369,34 @@ public class FIToFICustomerCreditTransferV04 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader49 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader49 groupHeader) {
-		this.groupHeader = groupHeader;
+	public FIToFICustomerCreditTransferV04 setGroupHeader(GroupHeader49 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "CdtTrfTxInf", required = true)
 	public List<CreditTransferTransaction7> getCreditTransferTransactionInformation() {
-		return creditTransferTransactionInformation;
+		return creditTransferTransactionInformation == null ? creditTransferTransactionInformation = new ArrayList<>() : creditTransferTransactionInformation;
 	}
 
-	public void setCreditTransferTransactionInformation(List<CreditTransferTransaction7> creditTransferTransactionInformation) {
-		this.creditTransferTransactionInformation = creditTransferTransactionInformation;
+	public FIToFICustomerCreditTransferV04 setCreditTransferTransactionInformation(List<CreditTransferTransaction7> creditTransferTransactionInformation) {
+		this.creditTransferTransactionInformation = Objects.requireNonNull(creditTransferTransactionInformation);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public FIToFICustomerCreditTransferV04 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.008.04.04")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.008.001.04")
 	static public class Document {
 		@XmlElement(name = "FIToFICstmrCdtTrf", required = true)
 		public FIToFICustomerCreditTransferV04 messageBody;

@@ -19,8 +19,12 @@ package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMText;
+import com.tools20022.repository.datatype.Max15AlphaNumericText.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies an alphanumeric string with a maximum length of 15 characters.
@@ -32,8 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -45,14 +49,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies an alphanumeric string with a maximum length of 15 characters."</li>
  * </ul>
  */
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
 public class Max15AlphaNumericText {
 
 	final static private AtomicReference<MMText> mmObject_lazy = new AtomicReference<>();
+	protected String value;
 
 	final static public MMText mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMText() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max15AlphaNumericText";
 				definition = "Specifies an alphanumeric string with a maximum length of 15 characters.";
@@ -62,5 +68,26 @@ public class Max15AlphaNumericText {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max15AlphaNumericText(String value) {
+		this.value = value;
+	}
+
+	@Override
+	public String toString() {
+		return value;
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Max15AlphaNumericText> {
+		@Override
+		public Max15AlphaNumericText unmarshal(String value) {
+			return new Max15AlphaNumericText(value);
+		}
+
+		@Override
+		public String marshal(Max15AlphaNumericText typedData) {
+			return typedData.value;
+		}
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -29,6 +30,8 @@ import com.tools20022.repository.entity.Lottery;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateActionQuantity8}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionQuantitySD2", propOrder = {"placeAndName", "baseDenomination", "incrementalDenomination"})
 public class CorporateActionQuantitySD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +115,7 @@ public class CorporateActionQuantitySD2 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionQuantitySD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantitySD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,11 +126,11 @@ public class CorporateActionQuantitySD2 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BaseDnmtn")
 	protected FinancialInstrumentQuantity22Choice baseDenomination;
 	/**
-	 * Minimum integral amount of securities that each account owner must have
-	 * remaining after the called amounts are applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -145,6 +149,9 @@ public class CorporateActionQuantitySD2 {
 	 * CorporateActionQuantitySD2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BaseDnmtn"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::BASE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -166,9 +173,10 @@ public class CorporateActionQuantitySD2 {
 	public static final MMMessageAssociationEnd mmBaseDenomination = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmBaseDenomination;
-			componentContext_lazy = () -> CorporateActionQuantitySD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantitySD2.mmObject();
 			isDerived = false;
 			xmlTag = "BaseDnmtn";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::BASE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseDenomination";
 			definition = "Minimum integral amount of securities that each account owner must have remaining after the called amounts are applied.";
@@ -179,11 +187,11 @@ public class CorporateActionQuantitySD2 {
 			type_lazy = () -> FinancialInstrumentQuantity22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IncrmtlDnmtn")
 	protected FinancialInstrumentQuantity22Choice incrementalDenomination;
 	/**
-	 * Amount used when the called amount is not met by running the lottery with
-	 * the base denomination.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -202,6 +210,9 @@ public class CorporateActionQuantitySD2 {
 	 * CorporateActionQuantitySD2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IncrmtlDnmtn"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::INCR</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -223,9 +234,10 @@ public class CorporateActionQuantitySD2 {
 	public static final MMMessageAssociationEnd mmIncrementalDenomination = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmIncrementalDenomination;
-			componentContext_lazy = () -> CorporateActionQuantitySD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantitySD2.mmObject();
 			isDerived = false;
 			xmlTag = "IncrmtlDnmtn";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::INCR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncrementalDenomination";
 			definition = "Amount used when the called amount is not met by running the lottery with the base denomination.";
@@ -240,9 +252,10 @@ public class CorporateActionQuantitySD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionQuantitySD2.mmPlaceAndName, CorporateActionQuantitySD2.mmBaseDenomination, CorporateActionQuantitySD2.mmIncrementalDenomination);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionQuantitySD2.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionQuantitySD2.mmBaseDenomination,
+						com.tools20022.repository.msg.CorporateActionQuantitySD2.mmIncrementalDenomination);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionQuantitySD2";
 				definition = "Specifies corporate action quantities.";
@@ -252,30 +265,30 @@ public class CorporateActionQuantitySD2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionQuantitySD2 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "BaseDnmtn")
-	public FinancialInstrumentQuantity22Choice getBaseDenomination() {
-		return baseDenomination;
+	public Optional<FinancialInstrumentQuantity22Choice> getBaseDenomination() {
+		return baseDenomination == null ? Optional.empty() : Optional.of(baseDenomination);
 	}
 
-	public void setBaseDenomination(FinancialInstrumentQuantity22Choice baseDenomination) {
+	public CorporateActionQuantitySD2 setBaseDenomination(FinancialInstrumentQuantity22Choice baseDenomination) {
 		this.baseDenomination = baseDenomination;
+		return this;
 	}
 
-	@XmlElement(name = "IncrmtlDnmtn")
-	public FinancialInstrumentQuantity22Choice getIncrementalDenomination() {
-		return incrementalDenomination;
+	public Optional<FinancialInstrumentQuantity22Choice> getIncrementalDenomination() {
+		return incrementalDenomination == null ? Optional.empty() : Optional.of(incrementalDenomination);
 	}
 
-	public void setIncrementalDenomination(FinancialInstrumentQuantity22Choice incrementalDenomination) {
+	public CorporateActionQuantitySD2 setIncrementalDenomination(FinancialInstrumentQuantity22Choice incrementalDenomination) {
 		this.incrementalDenomination = incrementalDenomination;
+		return this;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.AmountRatio;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Ratio expressed as a quotient of amounts."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountToAmountRatio1", propOrder = {"amount1", "amount2"})
 public class AmountToAmountRatio1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt1", required = true)
 	protected ActiveCurrencyAndAmount amount1;
 	/**
-	 * Numerator of the quotient of amounts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +107,7 @@ public class AmountToAmountRatio1 {
 	public static final MMMessageAttribute mmAmount1 = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AmountRatio.mmAmount1;
-			componentContext_lazy = () -> AmountToAmountRatio1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountToAmountRatio1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt1";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +118,11 @@ public class AmountToAmountRatio1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt2", required = true)
 	protected ActiveCurrencyAndAmount amount2;
 	/**
-	 * Denominator of the quotient of amounts
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,7 +156,7 @@ public class AmountToAmountRatio1 {
 	public static final MMMessageAttribute mmAmount2 = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AmountRatio.mmAmount2;
-			componentContext_lazy = () -> AmountToAmountRatio1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountToAmountRatio1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt2";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,9 +171,9 @@ public class AmountToAmountRatio1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountToAmountRatio1.mmAmount1, AmountToAmountRatio1.mmAmount2);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountToAmountRatio1.mmAmount1, com.tools20022.repository.msg.AmountToAmountRatio1.mmAmount2);
 				trace_lazy = () -> AmountRatio.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountToAmountRatio1";
 				definition = "Ratio expressed as a quotient of amounts.";
@@ -179,21 +182,21 @@ public class AmountToAmountRatio1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt1", required = true)
 	public ActiveCurrencyAndAmount getAmount1() {
 		return amount1;
 	}
 
-	public void setAmount1(ActiveCurrencyAndAmount amount1) {
-		this.amount1 = amount1;
+	public AmountToAmountRatio1 setAmount1(ActiveCurrencyAndAmount amount1) {
+		this.amount1 = Objects.requireNonNull(amount1);
+		return this;
 	}
 
-	@XmlElement(name = "Amt2", required = true)
 	public ActiveCurrencyAndAmount getAmount2() {
 		return amount2;
 	}
 
-	public void setAmount2(ActiveCurrencyAndAmount amount2) {
-		this.amount2 = amount2;
+	public AmountToAmountRatio1 setAmount2(ActiveCurrencyAndAmount amount2) {
+		this.amount2 = Objects.requireNonNull(amount2);
+		return this;
 	}
 }

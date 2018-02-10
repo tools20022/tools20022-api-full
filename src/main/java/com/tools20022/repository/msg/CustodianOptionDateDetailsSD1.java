@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CustodianOptionDateDetailsSD1", propOrder = {"placeAndName", "agentDeadlineDate", "agentDeadlineTime"})
 public class CustodianOptionDateDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +106,7 @@ public class CustodianOptionDateDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustodianOptionDateDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianOptionDateDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,11 +117,11 @@ public class CustodianOptionDateDetailsSD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AgtDdlnDt")
 	protected ISODate agentDeadlineDate;
 	/**
-	 * Custodian deadline date for the option instructions. Applicable to
-	 * custodian service only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,6 +135,9 @@ public class CustodianOptionDateDetailsSD1 {
 	 * CustodianOptionDateDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AgtDdlnDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Agent Deadline Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -146,9 +153,10 @@ public class CustodianOptionDateDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmAgentDeadlineDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustodianOptionDateDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianOptionDateDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AgtDdlnDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Agent Deadline Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentDeadlineDate";
 			definition = "Custodian deadline date for the option instructions. Applicable to custodian service only.";
@@ -157,11 +165,11 @@ public class CustodianOptionDateDetailsSD1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "AgtDdlnTm")
 	protected ISOTime agentDeadlineTime;
 	/**
-	 * Custodian deadline time for the option instructions. Applicable to
-	 * custodian service only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -175,6 +183,9 @@ public class CustodianOptionDateDetailsSD1 {
 	 * CustodianOptionDateDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AgtDdlnTm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Agent Deadline Time</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -190,9 +201,10 @@ public class CustodianOptionDateDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmAgentDeadlineTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustodianOptionDateDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianOptionDateDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AgtDdlnTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Agent Deadline Time"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentDeadlineTime";
 			definition = "Custodian deadline time for the option instructions. Applicable to custodian service only.";
@@ -205,8 +217,9 @@ public class CustodianOptionDateDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CustodianOptionDateDetailsSD1.mmPlaceAndName, CustodianOptionDateDetailsSD1.mmAgentDeadlineDate, CustodianOptionDateDetailsSD1.mmAgentDeadlineTime);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustodianOptionDateDetailsSD1.mmPlaceAndName, com.tools20022.repository.msg.CustodianOptionDateDetailsSD1.mmAgentDeadlineDate,
+						com.tools20022.repository.msg.CustodianOptionDateDetailsSD1.mmAgentDeadlineTime);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CustodianOptionDateDetailsSD1";
 				definition = "Corporate action option information for the custodian record.";
@@ -215,30 +228,30 @@ public class CustodianOptionDateDetailsSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CustodianOptionDateDetailsSD1 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "AgtDdlnDt")
-	public ISODate getAgentDeadlineDate() {
-		return agentDeadlineDate;
+	public Optional<ISODate> getAgentDeadlineDate() {
+		return agentDeadlineDate == null ? Optional.empty() : Optional.of(agentDeadlineDate);
 	}
 
-	public void setAgentDeadlineDate(ISODate agentDeadlineDate) {
+	public CustodianOptionDateDetailsSD1 setAgentDeadlineDate(ISODate agentDeadlineDate) {
 		this.agentDeadlineDate = agentDeadlineDate;
+		return this;
 	}
 
-	@XmlElement(name = "AgtDdlnTm")
-	public ISOTime getAgentDeadlineTime() {
-		return agentDeadlineTime;
+	public Optional<ISOTime> getAgentDeadlineTime() {
+		return agentDeadlineTime == null ? Optional.empty() : Optional.of(agentDeadlineTime);
 	}
 
-	public void setAgentDeadlineTime(ISOTime agentDeadlineTime) {
+	public CustodianOptionDateDetailsSD1 setAgentDeadlineTime(ISOTime agentDeadlineTime) {
 		this.agentDeadlineTime = agentDeadlineTime;
+		return this;
 	}
 }

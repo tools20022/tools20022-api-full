@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Other accepted financial instrument's identification than ISIN."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OtherIdentification2", propOrder = {"identification", "suffix", "type"})
 public class OtherIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected RestrictedFINXMax31Text identification;
 	/**
-	 * Identification of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +118,7 @@ public class OtherIdentification2 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> OtherIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +129,11 @@ public class OtherIdentification2 {
 			simpleType_lazy = () -> RestrictedFINXMax31Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Sfx")
 	protected Max16Text suffix;
 	/**
-	 * Identifies the suffix of the security identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +166,7 @@ public class OtherIdentification2 {
 	public static final MMMessageAttribute mmSuffix = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmIdentificationSuffix;
-			componentContext_lazy = () -> OtherIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Sfx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +177,11 @@ public class OtherIdentification2 {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected IdentificationSource4Choice type;
 	/**
-	 * Type of the identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -209,7 +214,7 @@ public class OtherIdentification2 {
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmIdentification;
-			componentContext_lazy = () -> OtherIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,9 +230,10 @@ public class OtherIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OtherIdentification2.mmIdentification, OtherIdentification2.mmSuffix, OtherIdentification2.mmType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherIdentification2.mmIdentification, com.tools20022.repository.msg.OtherIdentification2.mmSuffix,
+						com.tools20022.repository.msg.OtherIdentification2.mmType);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OtherIdentification2";
 				definition = "Other accepted financial instrument's identification than ISIN.";
@@ -236,30 +242,30 @@ public class OtherIdentification2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public RestrictedFINXMax31Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(RestrictedFINXMax31Text identification) {
-		this.identification = identification;
+	public OtherIdentification2 setIdentification(RestrictedFINXMax31Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Sfx")
-	public Max16Text getSuffix() {
-		return suffix;
+	public Optional<Max16Text> getSuffix() {
+		return suffix == null ? Optional.empty() : Optional.of(suffix);
 	}
 
-	public void setSuffix(Max16Text suffix) {
+	public OtherIdentification2 setSuffix(Max16Text suffix) {
 		this.suffix = suffix;
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public IdentificationSource4Choice getType() {
 		return type;
 	}
 
-	public void setType(IdentificationSource4Choice type) {
-		this.type = type;
+	public OtherIdentification2 setType(IdentificationSource4Choice type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 }

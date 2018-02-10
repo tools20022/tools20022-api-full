@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversi
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -54,36 +55,19 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
- * SecuritiesEventsLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
- * IssuersAgentsCommunicationISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AgtCAElctnStsAdvc"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01#mmElectionAdviceIDOrElectionCancellationRequestIDOrElectionAmendmentRequestIDRule
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01#ElectionAdviceIDOrElectionCancellationRequestIDOrElectionAmendmentRequestIDRule
  * AgentCAElectionStatusAdviceV01.
- * mmElectionAdviceIDOrElectionCancellationRequestIDOrElectionAmendmentRequestIDRule
+ * ElectionAdviceIDOrElectionCancellationRequestIDOrElectionAmendmentRequestIDRule
  * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01#mmElectionAdviceStatusOrCancellationRequestStatusOrAmendmentRequestStatusRule
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01#ElectionAdviceStatusOrCancellationRequestStatusOrAmendmentRequestStatusRule
  * AgentCAElectionStatusAdviceV01.
- * mmElectionAdviceStatusOrCancellationRequestStatusOrAmendmentRequestStatusRule
- * }</li>
+ * ElectionAdviceStatusOrCancellationRequestStatusOrAmendmentRequestStatusRule}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -116,9 +100,41 @@ import javax.xml.bind.annotation.*;
  * AgentCAElectionStatusAdviceV01.mmElectionAmendmentRequestStatus}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
+ * IssuersAgentsCommunicationISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AgtCAElctnStsAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
+ * SecuritiesEventsLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.015.001.01}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintElectionAdviceStatusRule#forAgentCAElectionStatusAdviceV01
+ * ConstraintElectionAdviceStatusRule.forAgentCAElectionStatusAdviceV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintElectionAmendmentRequestStatusRule#forAgentCAElectionStatusAdviceV01
+ * ConstraintElectionAmendmentRequestStatusRule.
+ * forAgentCAElectionStatusAdviceV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintElectionCancellationRequestStatusRule#forAgentCAElectionStatusAdviceV01
+ * ConstraintElectionCancellationRequestStatusRule.
+ * forAgentCAElectionStatusAdviceV01}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -131,7 +147,7 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AgentCAElectionStatusAdviceV01", propOrder = {"identification", "agentCAElectionAdviceIdentification", "agentCAElectionCancellationRequestIdentification", "agentCAElectionAmendmentRequestIdentification",
 		"corporateActionGeneralInformation", "electionAdviceStatus", "electionCancellationRequestStatus", "electionAmendmentRequestStatus"})
 public class AgentCAElectionStatusAdviceV01 {
@@ -180,7 +196,7 @@ public class AgentCAElectionStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmElectionAdviceIDOrElectionCancellationRequestIDOrElectionAmendmentRequestIDRule = new MMXor() {
+	public static final MMXor ElectionAdviceIDOrElectionCancellationRequestIDOrElectionAmendmentRequestIDRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionAdviceIDOrElectionCancellationRequestIDOrElectionAmendmentRequestIDRule";
@@ -231,7 +247,7 @@ public class AgentCAElectionStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmElectionAdviceStatusOrCancellationRequestStatusOrAmendmentRequestStatusRule = new MMXor() {
+	public static final MMXor ElectionAdviceStatusOrCancellationRequestStatusOrAmendmentRequestStatusRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionAdviceStatusOrCancellationRequestStatusOrAmendmentRequestStatusRule";
@@ -241,11 +257,11 @@ public class AgentCAElectionStatusAdviceV01 {
 					com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmElectionCancellationRequestStatus, com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmElectionAmendmentRequestStatus);
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected DocumentIdentification8 identification;
 	/**
-	 * Identification assigned by the Sender to unambiguously identify the
-	 * status advice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -287,11 +303,11 @@ public class AgentCAElectionStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AgtCAElctnAdvcId", required = true)
 	protected DocumentIdentification8 agentCAElectionAdviceIdentification;
 	/**
-	 * Identification of the linked Agent CA Election Advice for which a status
-	 * is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -333,11 +349,11 @@ public class AgentCAElectionStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AgtCAElctnCxlReqId", required = true)
 	protected DocumentIdentification8 agentCAElectionCancellationRequestIdentification;
 	/**
-	 * Identification of the linked Agent CA Election Cancellation Request for
-	 * which a status is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -379,11 +395,11 @@ public class AgentCAElectionStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AgtCAElctnAmdmntReqId", required = true)
 	protected DocumentIdentification8 agentCAElectionAmendmentRequestIdentification;
 	/**
-	 * Identification of the linked Agent CA Election Amendment Request for
-	 * which a status is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -425,10 +441,11 @@ public class AgentCAElectionStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
-	 * General information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -468,10 +485,11 @@ public class AgentCAElectionStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "ElctnAdvcSts", required = true)
 	protected ElectionAdviceStatus1Choice electionAdviceStatus;
 	/**
-	 * Status of the election advice sent by the CSD.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -511,10 +529,11 @@ public class AgentCAElectionStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "ElctnCxlReqSts", required = true)
 	protected ElectionCancellationStatus1Choice electionCancellationRequestStatus;
 	/**
-	 * Status of the election cancellation request sent by the CSD.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -555,10 +574,11 @@ public class AgentCAElectionStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "ElctnAmdmntReqSts", required = true)
 	protected ElectionAmendmentStatus1Choice electionAmendmentRequestStatus;
 	/**
-	 * Status of the amendment request sent by the CSD.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -602,12 +622,15 @@ public class AgentCAElectionStatusAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintElectionAdviceStatusRule.forAgentCAElectionStatusAdviceV01,
+						com.tools20022.repository.constraints.ConstraintElectionAmendmentRequestStatusRule.forAgentCAElectionStatusAdviceV01,
+						com.tools20022.repository.constraints.ConstraintElectionCancellationRequestStatusRule.forAgentCAElectionStatusAdviceV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentCAElectionStatusAdviceV01";
 				definition = "Scope\r\nThis message is sent by an issuer (or its agent) to the CSD to report the status, or a change in status, of:\r\n- a corporate action election advice;\r\n- an election cancellation request; or\r\n- an election amendment request.\r\nUsage\r\nThis message must be sent in response to an:\r\n- Agent Corporation Action Election Advice to provide the status of an election advice in the case of a rejection. However, it may also be used in all other situations, in which case, the building blocks Election Advice Identification and the Election Advice Status must be present.\r\n- Agent Corporation Action Election Cancellation Request to provide the status of the cancellation request, in which case, the building blocks Election Cancellation Request Identification and the Election Cancellation Request Status must be present.\r\n- Agent Corporation Action Election Amendment Request to provide the status of the amendment request, in which case, the building blocks Election Amendment Request Identification and the Election Amendment Request Status must be present.";
 				messageSet_lazy = () -> Arrays.asList(IssuersAgentsCommunicationISOLatestversion.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmElectionAdviceIDOrElectionCancellationRequestIDOrElectionAmendmentRequestIDRule,
-						com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.mmElectionAdviceStatusOrCancellationRequestStatusOrAmendmentRequestStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.ElectionAdviceIDOrElectionCancellationRequestIDOrElectionAmendmentRequestIDRule,
+						com.tools20022.repository.area.seev.AgentCAElectionStatusAdviceV01.ElectionAdviceStatusOrCancellationRequestStatusOrAmendmentRequestStatusRule);
 				rootElement = "Document";
 				xmlTag = "AgtCAElctnStsAdvc";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
@@ -635,79 +658,79 @@ public class AgentCAElectionStatusAdviceV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(DocumentIdentification8 identification) {
-		this.identification = identification;
+	public AgentCAElectionStatusAdviceV01 setIdentification(DocumentIdentification8 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "AgtCAElctnAdvcId", required = true)
 	public DocumentIdentification8 getAgentCAElectionAdviceIdentification() {
 		return agentCAElectionAdviceIdentification;
 	}
 
-	public void setAgentCAElectionAdviceIdentification(DocumentIdentification8 agentCAElectionAdviceIdentification) {
-		this.agentCAElectionAdviceIdentification = agentCAElectionAdviceIdentification;
+	public AgentCAElectionStatusAdviceV01 setAgentCAElectionAdviceIdentification(DocumentIdentification8 agentCAElectionAdviceIdentification) {
+		this.agentCAElectionAdviceIdentification = Objects.requireNonNull(agentCAElectionAdviceIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AgtCAElctnCxlReqId", required = true)
 	public DocumentIdentification8 getAgentCAElectionCancellationRequestIdentification() {
 		return agentCAElectionCancellationRequestIdentification;
 	}
 
-	public void setAgentCAElectionCancellationRequestIdentification(DocumentIdentification8 agentCAElectionCancellationRequestIdentification) {
-		this.agentCAElectionCancellationRequestIdentification = agentCAElectionCancellationRequestIdentification;
+	public AgentCAElectionStatusAdviceV01 setAgentCAElectionCancellationRequestIdentification(DocumentIdentification8 agentCAElectionCancellationRequestIdentification) {
+		this.agentCAElectionCancellationRequestIdentification = Objects.requireNonNull(agentCAElectionCancellationRequestIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AgtCAElctnAmdmntReqId", required = true)
 	public DocumentIdentification8 getAgentCAElectionAmendmentRequestIdentification() {
 		return agentCAElectionAmendmentRequestIdentification;
 	}
 
-	public void setAgentCAElectionAmendmentRequestIdentification(DocumentIdentification8 agentCAElectionAmendmentRequestIdentification) {
-		this.agentCAElectionAmendmentRequestIdentification = agentCAElectionAmendmentRequestIdentification;
+	public AgentCAElectionStatusAdviceV01 setAgentCAElectionAmendmentRequestIdentification(DocumentIdentification8 agentCAElectionAmendmentRequestIdentification) {
+		this.agentCAElectionAmendmentRequestIdentification = Objects.requireNonNull(agentCAElectionAmendmentRequestIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
 
-	public void setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
-		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	public AgentCAElectionStatusAdviceV01 setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = Objects.requireNonNull(corporateActionGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "ElctnAdvcSts", required = true)
 	public ElectionAdviceStatus1Choice getElectionAdviceStatus() {
 		return electionAdviceStatus;
 	}
 
-	public void setElectionAdviceStatus(ElectionAdviceStatus1Choice electionAdviceStatus) {
-		this.electionAdviceStatus = electionAdviceStatus;
+	public AgentCAElectionStatusAdviceV01 setElectionAdviceStatus(ElectionAdviceStatus1Choice electionAdviceStatus) {
+		this.electionAdviceStatus = Objects.requireNonNull(electionAdviceStatus);
+		return this;
 	}
 
-	@XmlElement(name = "ElctnCxlReqSts", required = true)
 	public ElectionCancellationStatus1Choice getElectionCancellationRequestStatus() {
 		return electionCancellationRequestStatus;
 	}
 
-	public void setElectionCancellationRequestStatus(ElectionCancellationStatus1Choice electionCancellationRequestStatus) {
-		this.electionCancellationRequestStatus = electionCancellationRequestStatus;
+	public AgentCAElectionStatusAdviceV01 setElectionCancellationRequestStatus(ElectionCancellationStatus1Choice electionCancellationRequestStatus) {
+		this.electionCancellationRequestStatus = Objects.requireNonNull(electionCancellationRequestStatus);
+		return this;
 	}
 
-	@XmlElement(name = "ElctnAmdmntReqSts", required = true)
 	public ElectionAmendmentStatus1Choice getElectionAmendmentRequestStatus() {
 		return electionAmendmentRequestStatus;
 	}
 
-	public void setElectionAmendmentRequestStatus(ElectionAmendmentStatus1Choice electionAmendmentRequestStatus) {
-		this.electionAmendmentRequestStatus = electionAmendmentRequestStatus;
+	public AgentCAElectionStatusAdviceV01 setElectionAmendmentRequestStatus(ElectionAmendmentStatus1Choice electionAmendmentRequestStatus) {
+		this.electionAmendmentRequestStatus = Objects.requireNonNull(electionAmendmentRequestStatus);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.015.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.015.001.01")
 	static public class Document {
 		@XmlElement(name = "AgtCAElctnStsAdvc", required = true)
 		public AgentCAElectionStatusAdviceV01 messageBody;

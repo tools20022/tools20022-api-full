@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +74,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Card transaction information to be transferred."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionData1", propOrder = {"cardBrand", "cardData", "pointOfInteraction", "transactionDetails", "prePaidAccount"})
 public class TransactionData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CardBrnd")
 	protected Max35Text cardBrand;
 	/**
-	 * Brand name of the card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,7 +128,7 @@ public class TransactionData1 {
 	public static final MMMessageAttribute mmCardBrand = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmCardBrand;
-			componentContext_lazy = () -> TransactionData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionData1.mmObject();
 			isDerived = false;
 			xmlTag = "CardBrnd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,10 +139,11 @@ public class TransactionData1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CardData")
 	protected PlainCardData3 cardData;
 	/**
-	 * Card data associated with the card performing the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -172,7 +175,7 @@ public class TransactionData1 {
 	public static final MMMessageAssociationEnd mmCardData = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PaymentCard.mmObject();
-			componentContext_lazy = () -> TransactionData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionData1.mmObject();
 			isDerived = false;
 			xmlTag = "CardData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,10 +187,11 @@ public class TransactionData1 {
 			type_lazy = () -> com.tools20022.repository.msg.PlainCardData3.mmObject();
 		}
 	};
+	@XmlElement(name = "PtOfIntractn")
 	protected PointOfInteraction1 pointOfInteraction;
 	/**
-	 * Point of interaction (POI) performing the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -219,7 +223,7 @@ public class TransactionData1 {
 	public static final MMMessageAssociationEnd mmPointOfInteraction = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmPointOfInteraction;
-			componentContext_lazy = () -> TransactionData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionData1.mmObject();
 			isDerived = false;
 			xmlTag = "PtOfIntractn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,10 +235,11 @@ public class TransactionData1 {
 			type_lazy = () -> com.tools20022.repository.msg.PointOfInteraction1.mmObject();
 		}
 	};
+	@XmlElement(name = "TxDtls")
 	protected CardPaymentTransactionDetails8 transactionDetails;
 	/**
-	 * Details of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -266,7 +271,7 @@ public class TransactionData1 {
 	public static final MMMessageAssociationEnd mmTransactionDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> TransactionData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionData1.mmObject();
 			isDerived = false;
 			xmlTag = "TxDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -278,10 +283,11 @@ public class TransactionData1 {
 			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails8.mmObject();
 		}
 	};
+	@XmlElement(name = "PrePdAcct")
 	protected CashAccount24 prePaidAccount;
 	/**
-	 * PrePaid Account for funds transfer or loading.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -313,7 +319,7 @@ public class TransactionData1 {
 	public static final MMMessageAssociationEnd mmPrePaidAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmRelatedAccount;
-			componentContext_lazy = () -> TransactionData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionData1.mmObject();
 			isDerived = false;
 			xmlTag = "PrePdAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -329,10 +335,11 @@ public class TransactionData1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionData1.mmCardBrand, TransactionData1.mmCardData, TransactionData1.mmPointOfInteraction, TransactionData1.mmTransactionDetails, TransactionData1.mmPrePaidAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionData1.mmCardBrand, com.tools20022.repository.msg.TransactionData1.mmCardData,
+						com.tools20022.repository.msg.TransactionData1.mmPointOfInteraction, com.tools20022.repository.msg.TransactionData1.mmTransactionDetails, com.tools20022.repository.msg.TransactionData1.mmPrePaidAccount);
 				messageBuildingBlock_lazy = () -> Arrays.asList(PaymentSD1V01.mmCardRemittanceInformation);
 				trace_lazy = () -> PaymentCard.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionData1";
 				definition = "Card transaction information to be transferred.";
@@ -341,48 +348,48 @@ public class TransactionData1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CardBrnd")
-	public Max35Text getCardBrand() {
-		return cardBrand;
+	public Optional<Max35Text> getCardBrand() {
+		return cardBrand == null ? Optional.empty() : Optional.of(cardBrand);
 	}
 
-	public void setCardBrand(Max35Text cardBrand) {
+	public TransactionData1 setCardBrand(Max35Text cardBrand) {
 		this.cardBrand = cardBrand;
+		return this;
 	}
 
-	@XmlElement(name = "CardData")
-	public PlainCardData3 getCardData() {
-		return cardData;
+	public Optional<PlainCardData3> getCardData() {
+		return cardData == null ? Optional.empty() : Optional.of(cardData);
 	}
 
-	public void setCardData(com.tools20022.repository.msg.PlainCardData3 cardData) {
+	public TransactionData1 setCardData(com.tools20022.repository.msg.PlainCardData3 cardData) {
 		this.cardData = cardData;
+		return this;
 	}
 
-	@XmlElement(name = "PtOfIntractn")
-	public PointOfInteraction1 getPointOfInteraction() {
-		return pointOfInteraction;
+	public Optional<PointOfInteraction1> getPointOfInteraction() {
+		return pointOfInteraction == null ? Optional.empty() : Optional.of(pointOfInteraction);
 	}
 
-	public void setPointOfInteraction(com.tools20022.repository.msg.PointOfInteraction1 pointOfInteraction) {
+	public TransactionData1 setPointOfInteraction(com.tools20022.repository.msg.PointOfInteraction1 pointOfInteraction) {
 		this.pointOfInteraction = pointOfInteraction;
+		return this;
 	}
 
-	@XmlElement(name = "TxDtls")
-	public CardPaymentTransactionDetails8 getTransactionDetails() {
-		return transactionDetails;
+	public Optional<CardPaymentTransactionDetails8> getTransactionDetails() {
+		return transactionDetails == null ? Optional.empty() : Optional.of(transactionDetails);
 	}
 
-	public void setTransactionDetails(com.tools20022.repository.msg.CardPaymentTransactionDetails8 transactionDetails) {
+	public TransactionData1 setTransactionDetails(com.tools20022.repository.msg.CardPaymentTransactionDetails8 transactionDetails) {
 		this.transactionDetails = transactionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "PrePdAcct")
-	public CashAccount24 getPrePaidAccount() {
-		return prePaidAccount;
+	public Optional<CashAccount24> getPrePaidAccount() {
+		return prePaidAccount == null ? Optional.empty() : Optional.of(prePaidAccount);
 	}
 
-	public void setPrePaidAccount(com.tools20022.repository.msg.CashAccount24 prePaidAccount) {
+	public TransactionData1 setPrePaidAccount(com.tools20022.repository.msg.CashAccount24 prePaidAccount) {
 		this.prePaidAccount = prePaidAccount;
+		return this;
 	}
 }

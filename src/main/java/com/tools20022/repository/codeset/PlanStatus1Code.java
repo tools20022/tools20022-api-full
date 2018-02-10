@@ -20,34 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PlanStatusCode;
+import com.tools20022.repository.codeset.PlanStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of a plan.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PlanStatusCode PlanStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PlanStatus1Code#mmActive
- * PlanStatus1Code.mmActive}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PlanStatus1Code#mmClosed
- * PlanStatus1Code.mmClosed}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PlanStatus1Code#mmSuspended
- * PlanStatus1Code.mmSuspended}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PlanStatus1Code#Active
+ * PlanStatus1Code.Active}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PlanStatus1Code#Closed
+ * PlanStatus1Code.Closed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PlanStatus1Code#Suspended
+ * PlanStatus1Code.Suspended}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PlanStatusCode PlanStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of a plan."</li>
  * </ul>
  */
-public class PlanStatus1Code extends PlanStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PlanStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +81,12 @@ public class PlanStatus1Code extends PlanStatusCode {
 	 * name} = "Active"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmActive = new MMCode() {
+	public static final PlanStatus1Code Active = new PlanStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
-			owner_lazy = () -> PlanStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PlanStatus1Code.mmObject();
+			codeName = PlanStatusCode.Active.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,11 +105,12 @@ public class PlanStatus1Code extends PlanStatusCode {
 	 * name} = "Closed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClosed = new MMCode() {
+	public static final PlanStatus1Code Closed = new PlanStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closed";
-			owner_lazy = () -> PlanStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PlanStatus1Code.mmObject();
+			codeName = PlanStatusCode.Closed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -123,25 +129,57 @@ public class PlanStatus1Code extends PlanStatusCode {
 	 * name} = "Suspended"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuspended = new MMCode() {
+	public static final PlanStatus1Code Suspended = new PlanStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
-			owner_lazy = () -> PlanStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PlanStatus1Code.mmObject();
+			codeName = PlanStatusCode.Suspended.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PlanStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PlanStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PlanStatus1Code";
 				definition = "Specifies the status of a plan.";
-				code_lazy = () -> Arrays.asList(PlanStatus1Code.mmActive, PlanStatus1Code.mmClosed, PlanStatus1Code.mmSuspended);
 				trace_lazy = () -> PlanStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PlanStatus1Code.Active, com.tools20022.repository.codeset.PlanStatus1Code.Closed, com.tools20022.repository.codeset.PlanStatus1Code.Suspended);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Active.getCodeName().get(), Active);
+		codesByName.put(Closed.getCodeName().get(), Closed);
+		codesByName.put(Suspended.getCodeName().get(), Suspended);
+	}
+
+	public static PlanStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PlanStatus1Code[] values() {
+		PlanStatus1Code[] values = new PlanStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PlanStatus1Code> {
+		@Override
+		public PlanStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PlanStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -24,6 +24,8 @@ import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashAccountAndEntry1", propOrder = {"account", "entry"})
 public class CashAccountAndEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Acct", required = true)
 	protected CashAccount25 account;
 	/**
-	 * Account to or from which a cash entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -104,7 +107,7 @@ public class CashAccountAndEntry1 {
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
-			componentContext_lazy = () -> CashAccountAndEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountAndEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,12 +119,11 @@ public class CashAccountAndEntry1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount25.mmObject();
 		}
 	};
+	@XmlElement(name = "Ntry")
 	protected CashEntry1 entry;
 	/**
-	 * Posting of an item to a cash account, in the context of a cash
-	 * transaction, that results in an increase or decrease to the balance of
-	 * the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -154,7 +156,7 @@ public class CashAccountAndEntry1 {
 	public static final MMMessageAssociationEnd mmEntry = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashEntry;
-			componentContext_lazy = () -> CashAccountAndEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountAndEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "Ntry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,9 +172,9 @@ public class CashAccountAndEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashAccountAndEntry1.mmAccount, CashAccountAndEntry1.mmEntry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountAndEntry1.mmAccount, com.tools20022.repository.msg.CashAccountAndEntry1.mmEntry);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccountAndEntry1";
 				definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account. ";
@@ -181,21 +183,21 @@ public class CashAccountAndEntry1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Acct", required = true)
 	public CashAccount25 getAccount() {
 		return account;
 	}
 
-	public void setAccount(com.tools20022.repository.msg.CashAccount25 account) {
-		this.account = account;
+	public CashAccountAndEntry1 setAccount(com.tools20022.repository.msg.CashAccount25 account) {
+		this.account = Objects.requireNonNull(account);
+		return this;
 	}
 
-	@XmlElement(name = "Ntry")
-	public CashEntry1 getEntry() {
-		return entry;
+	public Optional<CashEntry1> getEntry() {
+		return entry == null ? Optional.empty() : Optional.of(entry);
 	}
 
-	public void setEntry(com.tools20022.repository.msg.CashEntry1 entry) {
+	public CashAccountAndEntry1 setEntry(com.tools20022.repository.msg.CashEntry1 entry) {
 		this.entry = entry;
+		return this;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,16 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides information on the rejection reason of an individual element."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RejectedElement1", propOrder = {"elementSequenceNumber", "individualRejectionReason"})
 public class RejectedElement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ElmtSeqNb", required = true)
 	protected Number elementSequenceNumber;
 	/**
-	 * Sequence number that allows to easily identify the element that is
-	 * rejected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,7 +102,7 @@ public class RejectedElement1 {
 	 */
 	public static final MMMessageAttribute mmElementSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RejectedElement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedElement1.mmObject();
 			isDerived = false;
 			xmlTag = "ElmtSeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +113,11 @@ public class RejectedElement1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "IndvRjctnRsn", required = true)
 	protected Max140Text individualRejectionReason;
 	/**
-	 * Reason for rejecting an individual element.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +144,7 @@ public class RejectedElement1 {
 	 */
 	public static final MMMessageAttribute mmIndividualRejectionReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RejectedElement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedElement1.mmObject();
 			isDerived = false;
 			xmlTag = "IndvRjctnRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,8 +159,8 @@ public class RejectedElement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RejectedElement1.mmElementSequenceNumber, RejectedElement1.mmIndividualRejectionReason);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedElement1.mmElementSequenceNumber, com.tools20022.repository.msg.RejectedElement1.mmIndividualRejectionReason);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectedElement1";
 				definition = "Provides information on the rejection reason of an individual element.";
@@ -167,21 +169,21 @@ public class RejectedElement1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ElmtSeqNb", required = true)
 	public Number getElementSequenceNumber() {
 		return elementSequenceNumber;
 	}
 
-	public void setElementSequenceNumber(Number elementSequenceNumber) {
-		this.elementSequenceNumber = elementSequenceNumber;
+	public RejectedElement1 setElementSequenceNumber(Number elementSequenceNumber) {
+		this.elementSequenceNumber = Objects.requireNonNull(elementSequenceNumber);
+		return this;
 	}
 
-	@XmlElement(name = "IndvRjctnRsn", required = true)
 	public Max140Text getIndividualRejectionReason() {
 		return individualRejectionReason;
 	}
 
-	public void setIndividualRejectionReason(Max140Text individualRejectionReason) {
-		this.individualRejectionReason = individualRejectionReason;
+	public RejectedElement1 setIndividualRejectionReason(Max140Text individualRejectionReason) {
+		this.individualRejectionReason = Objects.requireNonNull(individualRejectionReason);
+		return this;
 	}
 }

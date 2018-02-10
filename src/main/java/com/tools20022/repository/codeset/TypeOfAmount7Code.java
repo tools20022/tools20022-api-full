@@ -20,42 +20,46 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TypeOfAmountCode;
+import com.tools20022.repository.codeset.TypeOfAmount7Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type or class of amount.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#Fees
+ * TypeOfAmount7Code.Fees}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#IssuerFees
+ * TypeOfAmount7Code.IssuerFees}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#InterchangeFees
+ * TypeOfAmount7Code.InterchangeFees}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#ProcessingFees
+ * TypeOfAmount7Code.ProcessingFees}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#InternationalServiceAssessmentFees
+ * TypeOfAmount7Code.InternationalServiceAssessmentFees}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.TypeOfAmountCode
  * TypeOfAmountCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#mmFees
- * TypeOfAmount7Code.mmFees}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#mmIssuerFees
- * TypeOfAmount7Code.mmIssuerFees}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#mmInterchangeFees
- * TypeOfAmount7Code.mmInterchangeFees}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#mmProcessingFees
- * TypeOfAmount7Code.mmProcessingFees}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount7Code#mmInternationalServiceAssessmentFees
- * TypeOfAmount7Code.mmInternationalServiceAssessmentFees}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type or class of amount. "</li>
  * </ul>
  */
-public class TypeOfAmount7Code extends TypeOfAmountCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TypeOfAmount7Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,11 +90,12 @@ public class TypeOfAmount7Code extends TypeOfAmountCode {
 	 * name} = "Fees"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFees = new MMCode() {
+	public static final TypeOfAmount7Code Fees = new TypeOfAmount7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fees";
-			owner_lazy = () -> TypeOfAmount7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount7Code.mmObject();
+			codeName = TypeOfAmountCode.Fees.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -108,11 +114,12 @@ public class TypeOfAmount7Code extends TypeOfAmountCode {
 	 * name} = "IssuerFees"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuerFees = new MMCode() {
+	public static final TypeOfAmount7Code IssuerFees = new TypeOfAmount7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerFees";
-			owner_lazy = () -> TypeOfAmount7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount7Code.mmObject();
+			codeName = TypeOfAmountCode.IssuerFees.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -131,11 +138,12 @@ public class TypeOfAmount7Code extends TypeOfAmountCode {
 	 * name} = "InterchangeFees"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterchangeFees = new MMCode() {
+	public static final TypeOfAmount7Code InterchangeFees = new TypeOfAmount7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterchangeFees";
-			owner_lazy = () -> TypeOfAmount7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount7Code.mmObject();
+			codeName = TypeOfAmountCode.InterchangeFees.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -154,11 +162,12 @@ public class TypeOfAmount7Code extends TypeOfAmountCode {
 	 * name} = "ProcessingFees"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProcessingFees = new MMCode() {
+	public static final TypeOfAmount7Code ProcessingFees = new TypeOfAmount7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingFees";
-			owner_lazy = () -> TypeOfAmount7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount7Code.mmObject();
+			codeName = TypeOfAmountCode.ProcessingFees.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -177,25 +186,60 @@ public class TypeOfAmount7Code extends TypeOfAmountCode {
 	 * name} = "InternationalServiceAssessmentFees"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInternationalServiceAssessmentFees = new MMCode() {
+	public static final TypeOfAmount7Code InternationalServiceAssessmentFees = new TypeOfAmount7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternationalServiceAssessmentFees";
-			owner_lazy = () -> TypeOfAmount7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount7Code.mmObject();
+			codeName = TypeOfAmountCode.InternationalServiceAssessmentFees.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TypeOfAmount7Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TypeOfAmount7Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfAmount7Code";
 				definition = "Type or class of amount. ";
-				code_lazy = () -> Arrays.asList(TypeOfAmount7Code.mmFees, TypeOfAmount7Code.mmIssuerFees, TypeOfAmount7Code.mmInterchangeFees, TypeOfAmount7Code.mmProcessingFees, TypeOfAmount7Code.mmInternationalServiceAssessmentFees);
 				trace_lazy = () -> TypeOfAmountCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmount7Code.Fees, com.tools20022.repository.codeset.TypeOfAmount7Code.IssuerFees, com.tools20022.repository.codeset.TypeOfAmount7Code.InterchangeFees,
+						com.tools20022.repository.codeset.TypeOfAmount7Code.ProcessingFees, com.tools20022.repository.codeset.TypeOfAmount7Code.InternationalServiceAssessmentFees);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Fees.getCodeName().get(), Fees);
+		codesByName.put(IssuerFees.getCodeName().get(), IssuerFees);
+		codesByName.put(InterchangeFees.getCodeName().get(), InterchangeFees);
+		codesByName.put(ProcessingFees.getCodeName().get(), ProcessingFees);
+		codesByName.put(InternationalServiceAssessmentFees.getCodeName().get(), InternationalServiceAssessmentFees);
+	}
+
+	public static TypeOfAmount7Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TypeOfAmount7Code[] values() {
+		TypeOfAmount7Code[] values = new TypeOfAmount7Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TypeOfAmount7Code> {
+		@Override
+		public TypeOfAmount7Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TypeOfAmount7Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -17,37 +17,40 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.EventFrequencyCode;
+import com.tools20022.repository.codeset.EventFrequency10Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the regularity of an event.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency10Code#Daily
+ * EventFrequency10Code.Daily}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency10Code#Adhoc
+ * EventFrequency10Code.Adhoc}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.EventFrequencyCode
  * EventFrequencyCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency10Code#mmDaily
- * EventFrequency10Code.mmDaily}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency10Code#mmAdhoc
- * EventFrequency10Code.mmAdhoc}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the regularity of an event."</li>
  * </ul>
  */
-public class EventFrequency10Code extends EventFrequencyCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EventFrequency10Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -70,6 +74,9 @@ public class EventFrequency10Code extends EventFrequencyCode {
 	 * {@linkplain com.tools20022.repository.codeset.EventFrequency10Code
 	 * EventFrequency10Code}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::SFRE//DAIL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -77,11 +84,13 @@ public class EventFrequency10Code extends EventFrequencyCode {
 	 * name} = "Daily"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDaily = new MMCode() {
+	public static final EventFrequency10Code Daily = new EventFrequency10Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::SFRE//DAIL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Daily";
-			owner_lazy = () -> EventFrequency10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency10Code.mmObject();
+			codeName = EventFrequencyCode.Daily.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -93,6 +102,9 @@ public class EventFrequency10Code extends EventFrequencyCode {
 	 * {@linkplain com.tools20022.repository.codeset.EventFrequency10Code
 	 * EventFrequency10Code}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::SFRE//ADHO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -100,25 +112,57 @@ public class EventFrequency10Code extends EventFrequencyCode {
 	 * name} = "Adhoc"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAdhoc = new MMCode() {
+	public static final EventFrequency10Code Adhoc = new EventFrequency10Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::SFRE//ADHO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Adhoc";
-			owner_lazy = () -> EventFrequency10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency10Code.mmObject();
+			codeName = EventFrequencyCode.Adhoc.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, EventFrequency10Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EventFrequency10Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventFrequency10Code";
 				definition = "Specifies the regularity of an event.";
-				code_lazy = () -> Arrays.asList(EventFrequency10Code.mmDaily, EventFrequency10Code.mmAdhoc);
 				trace_lazy = () -> EventFrequencyCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency10Code.Daily, com.tools20022.repository.codeset.EventFrequency10Code.Adhoc);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Daily.getCodeName().get(), Daily);
+		codesByName.put(Adhoc.getCodeName().get(), Adhoc);
+	}
+
+	public static EventFrequency10Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EventFrequency10Code[] values() {
+		EventFrequency10Code[] values = new EventFrequency10Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EventFrequency10Code> {
+		@Override
+		public EventFrequency10Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EventFrequency10Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

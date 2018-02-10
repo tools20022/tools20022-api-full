@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,8 @@ import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,16 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Generic identification scheme for a document."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GenericDocumentIdentification5", propOrder = {"messageNumber", "identification"})
 public class GenericDocumentIdentification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgNb")
 	protected DocumentNumber6Choice messageNumber;
 	/**
-	 * Message type number/message identifier of the message referenced in the
-	 * linkage sequence.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -87,6 +90,9 @@ public class GenericDocumentIdentification5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MsgNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13a::LINK</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -101,9 +107,10 @@ public class GenericDocumentIdentification5 {
 	 */
 	public static final MMMessageAttribute mmMessageNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericDocumentIdentification5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericDocumentIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13a::LINK"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumber";
 			definition = "Message type number/message identifier of the message referenced in the linkage sequence.";
@@ -112,10 +119,11 @@ public class GenericDocumentIdentification5 {
 			complexType_lazy = () -> DocumentNumber6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected RestrictedFINXMax16Text identification;
 	/**
-	 * Identification of the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,6 +139,9 @@ public class GenericDocumentIdentification5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Id"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -143,9 +154,10 @@ public class GenericDocumentIdentification5 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericDocumentIdentification5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericDocumentIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the document.";
@@ -158,8 +170,8 @@ public class GenericDocumentIdentification5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GenericDocumentIdentification5.mmMessageNumber, GenericDocumentIdentification5.mmIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericDocumentIdentification5.mmMessageNumber, com.tools20022.repository.msg.GenericDocumentIdentification5.mmIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GenericDocumentIdentification5";
 				definition = "Generic identification scheme for a document.";
@@ -168,21 +180,21 @@ public class GenericDocumentIdentification5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgNb")
-	public DocumentNumber6Choice getMessageNumber() {
-		return messageNumber;
+	public Optional<DocumentNumber6Choice> getMessageNumber() {
+		return messageNumber == null ? Optional.empty() : Optional.of(messageNumber);
 	}
 
-	public void setMessageNumber(DocumentNumber6Choice messageNumber) {
+	public GenericDocumentIdentification5 setMessageNumber(DocumentNumber6Choice messageNumber) {
 		this.messageNumber = messageNumber;
+		return this;
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public RestrictedFINXMax16Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(RestrictedFINXMax16Text identification) {
-		this.identification = identification;
+	public GenericDocumentIdentification5 setIdentification(RestrictedFINXMax16Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 }

@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MisMatchReport2", propOrder = {"numberOfMisMatches", "misMatchInformation"})
 public class MisMatchReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NbOfMisMtchs", required = true)
 	protected Number numberOfMisMatches;
 	/**
-	 * Total number of mismatches between two baselines or between one baseline
-	 * and one data set.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +106,7 @@ public class MisMatchReport2 {
 	 */
 	public static final MMMessageAttribute mmNumberOfMisMatches = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MisMatchReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MisMatchReport2.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfMisMtchs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +117,11 @@ public class MisMatchReport2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "MisMtchInf")
 	protected List<com.tools20022.repository.msg.ValidationResult4> misMatchInformation;
 	/**
-	 * Details of each mismatch occurrence.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -144,7 +147,7 @@ public class MisMatchReport2 {
 	 */
 	public static final MMMessageAssociationEnd mmMisMatchInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MisMatchReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MisMatchReport2.mmObject();
 			isDerived = false;
 			xmlTag = "MisMtchInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,8 +162,8 @@ public class MisMatchReport2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MisMatchReport2.mmNumberOfMisMatches, MisMatchReport2.mmMisMatchInformation);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MisMatchReport2.mmNumberOfMisMatches, com.tools20022.repository.msg.MisMatchReport2.mmMisMatchInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MisMatchReport2";
 				definition = "Description of the mis-matched situation between two baselines or between a baseline and a data set.";
@@ -169,21 +172,21 @@ public class MisMatchReport2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NbOfMisMtchs", required = true)
 	public Number getNumberOfMisMatches() {
 		return numberOfMisMatches;
 	}
 
-	public void setNumberOfMisMatches(Number numberOfMisMatches) {
-		this.numberOfMisMatches = numberOfMisMatches;
+	public MisMatchReport2 setNumberOfMisMatches(Number numberOfMisMatches) {
+		this.numberOfMisMatches = Objects.requireNonNull(numberOfMisMatches);
+		return this;
 	}
 
-	@XmlElement(name = "MisMtchInf")
 	public List<ValidationResult4> getMisMatchInformation() {
-		return misMatchInformation;
+		return misMatchInformation == null ? misMatchInformation = new ArrayList<>() : misMatchInformation;
 	}
 
-	public void setMisMatchInformation(List<com.tools20022.repository.msg.ValidationResult4> misMatchInformation) {
-		this.misMatchInformation = misMatchInformation;
+	public MisMatchReport2 setMisMatchInformation(List<com.tools20022.repository.msg.ValidationResult4> misMatchInformation) {
+		this.misMatchInformation = Objects.requireNonNull(misMatchInformation);
+		return this;
 	}
 }

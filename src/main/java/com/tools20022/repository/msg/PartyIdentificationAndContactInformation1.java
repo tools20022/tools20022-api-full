@@ -25,6 +25,8 @@ import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identification of a person, or a non-financial institution."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyIdentificationAndContactInformation1", propOrder = {"partyIdentification", "contactInformation"})
 public class PartyIdentificationAndContactInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PtyId", required = true)
 	protected PartyIdentification8 partyIdentification;
 	/**
-	 * Identification of the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -106,7 +109,7 @@ public class PartyIdentificationAndContactInformation1 {
 	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> PartyIdentificationAndContactInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndContactInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,11 +121,11 @@ public class PartyIdentificationAndContactInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
 		}
 	};
+	@XmlElement(name = "CtctInf")
 	protected ContactIdentification1 contactInformation;
 	/**
-	 * Information needed to contact a physical person related to the party,
-	 * such as name, phone number, email address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -156,7 +159,7 @@ public class PartyIdentificationAndContactInformation1 {
 	public static final MMMessageAssociationEnd mmContactInformation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Person.mmContactPersonRole;
-			componentContext_lazy = () -> PartyIdentificationAndContactInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndContactInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CtctInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +175,10 @@ public class PartyIdentificationAndContactInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentificationAndContactInformation1.mmPartyIdentification, PartyIdentificationAndContactInformation1.mmContactInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndContactInformation1.mmPartyIdentification,
+						com.tools20022.repository.msg.PartyIdentificationAndContactInformation1.mmContactInformation);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationAndContactInformation1";
 				definition = "Identification of a person, or a non-financial institution.";
@@ -183,21 +187,21 @@ public class PartyIdentificationAndContactInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PtyId", required = true)
 	public PartyIdentification8 getPartyIdentification() {
 		return partyIdentification;
 	}
 
-	public void setPartyIdentification(com.tools20022.repository.msg.PartyIdentification8 partyIdentification) {
-		this.partyIdentification = partyIdentification;
+	public PartyIdentificationAndContactInformation1 setPartyIdentification(com.tools20022.repository.msg.PartyIdentification8 partyIdentification) {
+		this.partyIdentification = Objects.requireNonNull(partyIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CtctInf")
-	public ContactIdentification1 getContactInformation() {
-		return contactInformation;
+	public Optional<ContactIdentification1> getContactInformation() {
+		return contactInformation == null ? Optional.empty() : Optional.of(contactInformation);
 	}
 
-	public void setContactInformation(com.tools20022.repository.msg.ContactIdentification1 contactInformation) {
+	public PartyIdentificationAndContactInformation1 setContactInformation(com.tools20022.repository.msg.ContactIdentification1 contactInformation) {
 		this.contactInformation = contactInformation;
+		return this;
 	}
 }

@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +74,17 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintFinancialInstrumentIdentificationGuideline#forFinancialInstrument23
+ * ConstraintFinancialInstrumentIdentificationGuideline.forFinancialInstrument23
+ * }</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,16 +108,16 @@ import javax.xml.bind.annotation.XmlType;
  * FinancialInstrument11}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrument23", propOrder = {"identification", "name", "transferType", "quantity", "averageAcquisitionPrice", "totalBookValue", "transfereeAccount"})
 public class FinancialInstrument23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected SecurityIdentification3Choice identification;
 	/**
-	 * Unique and unambiguous identifier of a security, assigned under a formal
-	 * or proprietary identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +153,7 @@ public class FinancialInstrument23 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> FinancialInstrument23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument23.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,10 +164,11 @@ public class FinancialInstrument23 {
 			complexType_lazy = () -> SecurityIdentification3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm")
 	protected Max350Text name;
 	/**
-	 * Name of the financial instrument in free format text.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,7 +201,7 @@ public class FinancialInstrument23 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
-			componentContext_lazy = () -> FinancialInstrument23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument23.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,11 +212,11 @@ public class FinancialInstrument23 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfTp", required = true)
 	protected TransferType1Code transferType;
 	/**
-	 * Specifies whether the financial instrument is transferred as an asset or
-	 * as cash.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -240,7 +252,7 @@ public class FinancialInstrument23 {
 	public static final MMMessageAttribute mmTransferType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferType;
-			componentContext_lazy = () -> FinancialInstrument23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument23.mmObject();
 			isDerived = false;
 			xmlTag = "TrfTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,11 +263,11 @@ public class FinancialInstrument23 {
 			simpleType_lazy = () -> TransferType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Qty")
 	protected Quantity12Choice quantity;
 	/**
-	 * Specifies the quantity of assets to be transferred in units or in a
-	 * percentage rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -291,7 +303,7 @@ public class FinancialInstrument23 {
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
-			componentContext_lazy = () -> FinancialInstrument23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument23.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -302,11 +314,11 @@ public class FinancialInstrument23 {
 			complexType_lazy = () -> Quantity12Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AvrgAcqstnPric")
 	protected ActiveOrHistoricCurrencyAndAmount averageAcquisitionPrice;
 	/**
-	 * Average cost per share of a security, including all charges and
-	 * commissions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -342,7 +354,7 @@ public class FinancialInstrument23 {
 	public static final MMMessageAttribute mmAverageAcquisitionPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmHoldingValue;
-			componentContext_lazy = () -> FinancialInstrument23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument23.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgAcqstnPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -353,11 +365,11 @@ public class FinancialInstrument23 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlBookVal")
 	protected ActiveOrHistoricCurrencyAndAmount totalBookValue;
 	/**
-	 * Net asset on balance sheet - total portfolio value minus or plus the
-	 * unrealised gain or loss.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -393,7 +405,7 @@ public class FinancialInstrument23 {
 	public static final MMMessageAttribute mmTotalBookValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
-			componentContext_lazy = () -> FinancialInstrument23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument23.mmObject();
 			isDerived = false;
 			xmlTag = "TtlBookVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -404,11 +416,11 @@ public class FinancialInstrument23 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfeeAcct")
 	protected Account6 transfereeAccount;
 	/**
-	 * Account held in the name of a party that is not the name of the
-	 * beneficial owner of the shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -443,7 +455,7 @@ public class FinancialInstrument23 {
 	public static final MMMessageAttribute mmTransfereeAccount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmInvestmentAccount;
-			componentContext_lazy = () -> FinancialInstrument23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument23.mmObject();
 			isDerived = false;
 			xmlTag = "TrfeeAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -458,10 +470,12 @@ public class FinancialInstrument23 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrument23.mmIdentification, FinancialInstrument23.mmName, FinancialInstrument23.mmTransferType, FinancialInstrument23.mmQuantity,
-						FinancialInstrument23.mmAverageAcquisitionPrice, FinancialInstrument23.mmTotalBookValue, FinancialInstrument23.mmTransfereeAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument23.mmIdentification, com.tools20022.repository.msg.FinancialInstrument23.mmName,
+						com.tools20022.repository.msg.FinancialInstrument23.mmTransferType, com.tools20022.repository.msg.FinancialInstrument23.mmQuantity, com.tools20022.repository.msg.FinancialInstrument23.mmAverageAcquisitionPrice,
+						com.tools20022.repository.msg.FinancialInstrument23.mmTotalBookValue, com.tools20022.repository.msg.FinancialInstrument23.mmTransfereeAccount);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFinancialInstrumentIdentificationGuideline.forFinancialInstrument23);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument23";
 				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.";
@@ -472,66 +486,66 @@ public class FinancialInstrument23 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification3Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(SecurityIdentification3Choice identification) {
-		this.identification = identification;
+	public FinancialInstrument23 setIdentification(SecurityIdentification3Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Nm")
-	public Max350Text getName() {
-		return name;
+	public Optional<Max350Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max350Text name) {
+	public FinancialInstrument23 setName(Max350Text name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "TrfTp", required = true)
 	public TransferType1Code getTransferType() {
 		return transferType;
 	}
 
-	public void setTransferType(TransferType1Code transferType) {
-		this.transferType = transferType;
+	public FinancialInstrument23 setTransferType(TransferType1Code transferType) {
+		this.transferType = Objects.requireNonNull(transferType);
+		return this;
 	}
 
-	@XmlElement(name = "Qty")
-	public Quantity12Choice getQuantity() {
-		return quantity;
+	public Optional<Quantity12Choice> getQuantity() {
+		return quantity == null ? Optional.empty() : Optional.of(quantity);
 	}
 
-	public void setQuantity(Quantity12Choice quantity) {
+	public FinancialInstrument23 setQuantity(Quantity12Choice quantity) {
 		this.quantity = quantity;
+		return this;
 	}
 
-	@XmlElement(name = "AvrgAcqstnPric")
-	public ActiveOrHistoricCurrencyAndAmount getAverageAcquisitionPrice() {
-		return averageAcquisitionPrice;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getAverageAcquisitionPrice() {
+		return averageAcquisitionPrice == null ? Optional.empty() : Optional.of(averageAcquisitionPrice);
 	}
 
-	public void setAverageAcquisitionPrice(ActiveOrHistoricCurrencyAndAmount averageAcquisitionPrice) {
+	public FinancialInstrument23 setAverageAcquisitionPrice(ActiveOrHistoricCurrencyAndAmount averageAcquisitionPrice) {
 		this.averageAcquisitionPrice = averageAcquisitionPrice;
+		return this;
 	}
 
-	@XmlElement(name = "TtlBookVal")
-	public ActiveOrHistoricCurrencyAndAmount getTotalBookValue() {
-		return totalBookValue;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getTotalBookValue() {
+		return totalBookValue == null ? Optional.empty() : Optional.of(totalBookValue);
 	}
 
-	public void setTotalBookValue(ActiveOrHistoricCurrencyAndAmount totalBookValue) {
+	public FinancialInstrument23 setTotalBookValue(ActiveOrHistoricCurrencyAndAmount totalBookValue) {
 		this.totalBookValue = totalBookValue;
+		return this;
 	}
 
-	@XmlElement(name = "TrfeeAcct")
-	public Account6 getTransfereeAccount() {
-		return transfereeAccount;
+	public Optional<Account6> getTransfereeAccount() {
+		return transfereeAccount == null ? Optional.empty() : Optional.of(transfereeAccount);
 	}
 
-	public void setTransfereeAccount(com.tools20022.repository.msg.Account6 transfereeAccount) {
+	public FinancialInstrument23 setTransfereeAccount(com.tools20022.repository.msg.Account6 transfereeAccount) {
 		this.transfereeAccount = transfereeAccount;
+		return this;
 	}
 }

@@ -30,11 +30,9 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -96,8 +94,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalDeliveryDetailsRule#forSwitchRedemptionLegOrder2
+ * ConstraintPhysicalDeliveryDetailsRule.forSwitchRedemptionLegOrder2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -109,16 +115,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Redemption leg, or switch-out, of a switch transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SwitchRedemptionLegOrder2", propOrder = {"legIdentification", "financialInstrumentDetails", "financialInstrumentQuantityChoice", "incomePreference", "group1Or2Units", "requestedSettlementCurrency", "requestedNAVCurrency",
 		"chargeDetails", "commissionDetails", "taxDetails", "settlementAndCustodyDetails", "physicalDeliveryIndicator", "physicalDeliveryDetails"})
 public class SwitchRedemptionLegOrder2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LegId")
 	protected Max35Text legIdentification;
 	/**
-	 * Unique technical identifier for an instance of a leg within a switch.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +153,7 @@ public class SwitchRedemptionLegOrder2 {
 	 */
 	public static final MMMessageAttribute mmLegIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SwitchRedemptionLegOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "LegId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,10 +164,11 @@ public class SwitchRedemptionLegOrder2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	protected FinancialInstrument6 financialInstrumentDetails;
 	/**
-	 * Investment fund class related to an order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -192,7 +200,7 @@ public class SwitchRedemptionLegOrder2 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
-			componentContext_lazy = () -> SwitchRedemptionLegOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,10 +212,11 @@ public class SwitchRedemptionLegOrder2 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument6.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmQtyChc")
 	protected FinancialInstrumentQuantity3Choice financialInstrumentQuantityChoice;
 	/**
-	 * Investment fund class related to an order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -240,7 +249,7 @@ public class SwitchRedemptionLegOrder2 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentQuantityChoice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmUnitsNumber;
-			componentContext_lazy = () -> SwitchRedemptionLegOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmQtyChc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -252,11 +261,11 @@ public class SwitchRedemptionLegOrder2 {
 			type_lazy = () -> FinancialInstrumentQuantity3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IncmPref")
 	protected IncomePreference1Code incomePreference;
 	/**
-	 * Dividend option chosen by the account owner based on the options offered
-	 * in the prospectus.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -292,7 +301,7 @@ public class SwitchRedemptionLegOrder2 {
 	public static final MMMessageAttribute mmIncomePreference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountService.mmIncomePreference;
-			componentContext_lazy = () -> SwitchRedemptionLegOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "IncmPref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -303,12 +312,11 @@ public class SwitchRedemptionLegOrder2 {
 			simpleType_lazy = () -> IncomePreference1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Grp1Or2Units")
 	protected UKTaxGroupUnitCode group1Or2Units;
 	/**
-	 * Tax group to which the purchased investment fund units belong. The
-	 * investor indicates to the intermediary operating pooled nominees, which
-	 * type of unit is to be sold.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -344,7 +352,7 @@ public class SwitchRedemptionLegOrder2 {
 	public static final MMMessageAttribute mmGroup1Or2Units = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmGroup1Or2Units;
-			componentContext_lazy = () -> SwitchRedemptionLegOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "Grp1Or2Units";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -355,10 +363,11 @@ public class SwitchRedemptionLegOrder2 {
 			simpleType_lazy = () -> UKTaxGroupUnitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdSttlmCcy")
 	protected CurrencyCode requestedSettlementCurrency;
 	/**
-	 * Currency requested for settlement of cash proceeds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -391,7 +400,7 @@ public class SwitchRedemptionLegOrder2 {
 	public static final MMMessageAttribute mmRequestedSettlementCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmRequestedSettlementCurrency;
-			componentContext_lazy = () -> SwitchRedemptionLegOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdSttlmCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -402,12 +411,11 @@ public class SwitchRedemptionLegOrder2 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdNAVCcy")
 	protected CurrencyCode requestedNAVCurrency;
 	/**
-	 * Currency to be used for pricing the fund. This currency must be among the
-	 * set of currencies in which the price may be expressed, as stated in the
-	 * prospectus.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -442,7 +450,7 @@ public class SwitchRedemptionLegOrder2 {
 	public static final MMMessageAttribute mmRequestedNAVCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmRequestedNAVCurrency;
-			componentContext_lazy = () -> SwitchRedemptionLegOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdNAVCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -453,10 +461,11 @@ public class SwitchRedemptionLegOrder2 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgDtls")
 	protected List<com.tools20022.repository.msg.Charge8> chargeDetails;
 	/**
-	 * Amount of money associated with a service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -487,7 +496,7 @@ public class SwitchRedemptionLegOrder2 {
 	public static final MMMessageAssociationEnd mmChargeDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmTransactionCharge;
-			componentContext_lazy = () -> SwitchRedemptionLegOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -498,10 +507,11 @@ public class SwitchRedemptionLegOrder2 {
 			type_lazy = () -> com.tools20022.repository.msg.Charge8.mmObject();
 		}
 	};
+	@XmlElement(name = "ComssnDtls")
 	protected List<com.tools20022.repository.msg.Commission6> commissionDetails;
 	/**
-	 * Commission linked to the execution of an investment fund order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -534,7 +544,7 @@ public class SwitchRedemptionLegOrder2 {
 	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeCommission;
-			componentContext_lazy = () -> SwitchRedemptionLegOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -545,10 +555,11 @@ public class SwitchRedemptionLegOrder2 {
 			type_lazy = () -> com.tools20022.repository.msg.Commission6.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxDtls")
 	protected List<com.tools20022.repository.msg.Tax6> taxDetails;
 	/**
-	 * Tax related to an investment fund order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -579,7 +590,7 @@ public class SwitchRedemptionLegOrder2 {
 	public static final MMMessageAssociationEnd mmTaxDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmTransactionTax;
-			componentContext_lazy = () -> SwitchRedemptionLegOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -590,10 +601,11 @@ public class SwitchRedemptionLegOrder2 {
 			type_lazy = () -> com.tools20022.repository.msg.Tax6.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmAndCtdyDtls")
 	protected FundSettlementParameters3 settlementAndCustodyDetails;
 	/**
-	 * Parameters used to execute the settlement of an investment fund order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -627,7 +639,7 @@ public class SwitchRedemptionLegOrder2 {
 	public static final MMMessageAssociationEnd mmSettlementAndCustodyDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmRelatedSettlement;
-			componentContext_lazy = () -> SwitchRedemptionLegOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAndCtdyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -639,10 +651,11 @@ public class SwitchRedemptionLegOrder2 {
 			type_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters3.mmObject();
 		}
 	};
+	@XmlElement(name = "PhysDlvryInd", required = true)
 	protected YesNoIndicator physicalDeliveryIndicator;
 	/**
-	 * Indicates whether the financial instrument is to be physically delivered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -672,7 +685,7 @@ public class SwitchRedemptionLegOrder2 {
 	 */
 	public static final MMMessageAttribute mmPhysicalDeliveryIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SwitchRedemptionLegOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "PhysDlvryInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -683,10 +696,11 @@ public class SwitchRedemptionLegOrder2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PhysDlvryDtls")
 	protected DeliveryParameters3 physicalDeliveryDetails;
 	/**
-	 * Information related to physical delivery of the securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -719,7 +733,7 @@ public class SwitchRedemptionLegOrder2 {
 	public static final MMMessageAssociationEnd mmPhysicalDeliveryDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
-			componentContext_lazy = () -> SwitchRedemptionLegOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "PhysDlvryDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -735,12 +749,16 @@ public class SwitchRedemptionLegOrder2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SwitchRedemptionLegOrder2.mmLegIdentification, SwitchRedemptionLegOrder2.mmFinancialInstrumentDetails, SwitchRedemptionLegOrder2.mmFinancialInstrumentQuantityChoice,
-						SwitchRedemptionLegOrder2.mmIncomePreference, SwitchRedemptionLegOrder2.mmGroup1Or2Units, SwitchRedemptionLegOrder2.mmRequestedSettlementCurrency, SwitchRedemptionLegOrder2.mmRequestedNAVCurrency,
-						SwitchRedemptionLegOrder2.mmChargeDetails, SwitchRedemptionLegOrder2.mmCommissionDetails, SwitchRedemptionLegOrder2.mmTaxDetails, SwitchRedemptionLegOrder2.mmSettlementAndCustodyDetails,
-						SwitchRedemptionLegOrder2.mmPhysicalDeliveryIndicator, SwitchRedemptionLegOrder2.mmPhysicalDeliveryDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmLegIdentification, com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmFinancialInstrumentDetails,
+						com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmFinancialInstrumentQuantityChoice, com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmIncomePreference,
+						com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmGroup1Or2Units, com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmRequestedSettlementCurrency,
+						com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmRequestedNAVCurrency, com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmChargeDetails,
+						com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmCommissionDetails, com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmTaxDetails,
+						com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmSettlementAndCustodyDetails, com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmPhysicalDeliveryIndicator,
+						com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmPhysicalDeliveryDetails);
 				trace_lazy = () -> SwitchRedemptionLeg.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPhysicalDeliveryDetailsRule.forSwitchRedemptionLegOrder2);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -756,120 +774,120 @@ public class SwitchRedemptionLegOrder2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LegId")
-	public Max35Text getLegIdentification() {
-		return legIdentification;
+	public Optional<Max35Text> getLegIdentification() {
+		return legIdentification == null ? Optional.empty() : Optional.of(legIdentification);
 	}
 
-	public void setLegIdentification(Max35Text legIdentification) {
+	public SwitchRedemptionLegOrder2 setLegIdentification(Max35Text legIdentification) {
 		this.legIdentification = legIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument6 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
 
-	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument6 financialInstrumentDetails) {
-		this.financialInstrumentDetails = financialInstrumentDetails;
+	public SwitchRedemptionLegOrder2 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument6 financialInstrumentDetails) {
+		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmQtyChc")
-	public FinancialInstrumentQuantity3Choice getFinancialInstrumentQuantityChoice() {
-		return financialInstrumentQuantityChoice;
+	public Optional<FinancialInstrumentQuantity3Choice> getFinancialInstrumentQuantityChoice() {
+		return financialInstrumentQuantityChoice == null ? Optional.empty() : Optional.of(financialInstrumentQuantityChoice);
 	}
 
-	public void setFinancialInstrumentQuantityChoice(FinancialInstrumentQuantity3Choice financialInstrumentQuantityChoice) {
+	public SwitchRedemptionLegOrder2 setFinancialInstrumentQuantityChoice(FinancialInstrumentQuantity3Choice financialInstrumentQuantityChoice) {
 		this.financialInstrumentQuantityChoice = financialInstrumentQuantityChoice;
+		return this;
 	}
 
-	@XmlElement(name = "IncmPref")
-	public IncomePreference1Code getIncomePreference() {
-		return incomePreference;
+	public Optional<IncomePreference1Code> getIncomePreference() {
+		return incomePreference == null ? Optional.empty() : Optional.of(incomePreference);
 	}
 
-	public void setIncomePreference(IncomePreference1Code incomePreference) {
+	public SwitchRedemptionLegOrder2 setIncomePreference(IncomePreference1Code incomePreference) {
 		this.incomePreference = incomePreference;
+		return this;
 	}
 
-	@XmlElement(name = "Grp1Or2Units")
-	public UKTaxGroupUnitCode getGroup1Or2Units() {
-		return group1Or2Units;
+	public Optional<UKTaxGroupUnitCode> getGroup1Or2Units() {
+		return group1Or2Units == null ? Optional.empty() : Optional.of(group1Or2Units);
 	}
 
-	public void setGroup1Or2Units(UKTaxGroupUnitCode group1Or2Units) {
+	public SwitchRedemptionLegOrder2 setGroup1Or2Units(UKTaxGroupUnitCode group1Or2Units) {
 		this.group1Or2Units = group1Or2Units;
+		return this;
 	}
 
-	@XmlElement(name = "ReqdSttlmCcy")
-	public CurrencyCode getRequestedSettlementCurrency() {
-		return requestedSettlementCurrency;
+	public Optional<CurrencyCode> getRequestedSettlementCurrency() {
+		return requestedSettlementCurrency == null ? Optional.empty() : Optional.of(requestedSettlementCurrency);
 	}
 
-	public void setRequestedSettlementCurrency(CurrencyCode requestedSettlementCurrency) {
+	public SwitchRedemptionLegOrder2 setRequestedSettlementCurrency(CurrencyCode requestedSettlementCurrency) {
 		this.requestedSettlementCurrency = requestedSettlementCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "ReqdNAVCcy")
-	public CurrencyCode getRequestedNAVCurrency() {
-		return requestedNAVCurrency;
+	public Optional<CurrencyCode> getRequestedNAVCurrency() {
+		return requestedNAVCurrency == null ? Optional.empty() : Optional.of(requestedNAVCurrency);
 	}
 
-	public void setRequestedNAVCurrency(CurrencyCode requestedNAVCurrency) {
+	public SwitchRedemptionLegOrder2 setRequestedNAVCurrency(CurrencyCode requestedNAVCurrency) {
 		this.requestedNAVCurrency = requestedNAVCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "ChrgDtls")
 	public List<Charge8> getChargeDetails() {
-		return chargeDetails;
+		return chargeDetails == null ? chargeDetails = new ArrayList<>() : chargeDetails;
 	}
 
-	public void setChargeDetails(List<com.tools20022.repository.msg.Charge8> chargeDetails) {
-		this.chargeDetails = chargeDetails;
+	public SwitchRedemptionLegOrder2 setChargeDetails(List<com.tools20022.repository.msg.Charge8> chargeDetails) {
+		this.chargeDetails = Objects.requireNonNull(chargeDetails);
+		return this;
 	}
 
-	@XmlElement(name = "ComssnDtls")
 	public List<Commission6> getCommissionDetails() {
-		return commissionDetails;
+		return commissionDetails == null ? commissionDetails = new ArrayList<>() : commissionDetails;
 	}
 
-	public void setCommissionDetails(List<com.tools20022.repository.msg.Commission6> commissionDetails) {
-		this.commissionDetails = commissionDetails;
+	public SwitchRedemptionLegOrder2 setCommissionDetails(List<com.tools20022.repository.msg.Commission6> commissionDetails) {
+		this.commissionDetails = Objects.requireNonNull(commissionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "TaxDtls")
 	public List<Tax6> getTaxDetails() {
-		return taxDetails;
+		return taxDetails == null ? taxDetails = new ArrayList<>() : taxDetails;
 	}
 
-	public void setTaxDetails(List<com.tools20022.repository.msg.Tax6> taxDetails) {
-		this.taxDetails = taxDetails;
+	public SwitchRedemptionLegOrder2 setTaxDetails(List<com.tools20022.repository.msg.Tax6> taxDetails) {
+		this.taxDetails = Objects.requireNonNull(taxDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmAndCtdyDtls")
-	public FundSettlementParameters3 getSettlementAndCustodyDetails() {
-		return settlementAndCustodyDetails;
+	public Optional<FundSettlementParameters3> getSettlementAndCustodyDetails() {
+		return settlementAndCustodyDetails == null ? Optional.empty() : Optional.of(settlementAndCustodyDetails);
 	}
 
-	public void setSettlementAndCustodyDetails(com.tools20022.repository.msg.FundSettlementParameters3 settlementAndCustodyDetails) {
+	public SwitchRedemptionLegOrder2 setSettlementAndCustodyDetails(com.tools20022.repository.msg.FundSettlementParameters3 settlementAndCustodyDetails) {
 		this.settlementAndCustodyDetails = settlementAndCustodyDetails;
+		return this;
 	}
 
-	@XmlElement(name = "PhysDlvryInd", required = true)
 	public YesNoIndicator getPhysicalDeliveryIndicator() {
 		return physicalDeliveryIndicator;
 	}
 
-	public void setPhysicalDeliveryIndicator(YesNoIndicator physicalDeliveryIndicator) {
-		this.physicalDeliveryIndicator = physicalDeliveryIndicator;
+	public SwitchRedemptionLegOrder2 setPhysicalDeliveryIndicator(YesNoIndicator physicalDeliveryIndicator) {
+		this.physicalDeliveryIndicator = Objects.requireNonNull(physicalDeliveryIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "PhysDlvryDtls")
-	public DeliveryParameters3 getPhysicalDeliveryDetails() {
-		return physicalDeliveryDetails;
+	public Optional<DeliveryParameters3> getPhysicalDeliveryDetails() {
+		return physicalDeliveryDetails == null ? Optional.empty() : Optional.of(physicalDeliveryDetails);
 	}
 
-	public void setPhysicalDeliveryDetails(com.tools20022.repository.msg.DeliveryParameters3 physicalDeliveryDetails) {
+	public SwitchRedemptionLegOrder2 setPhysicalDeliveryDetails(com.tools20022.repository.msg.DeliveryParameters3 physicalDeliveryDetails) {
 		this.physicalDeliveryDetails = physicalDeliveryDetails;
+		return this;
 	}
 }

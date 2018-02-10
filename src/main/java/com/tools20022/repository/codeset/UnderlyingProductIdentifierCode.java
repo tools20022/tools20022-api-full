@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.UnderlyingProductIdentifierCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the underlying product type for reporting to trade repositories.
@@ -33,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingProductIdentifierCode#mmForeignExchangeForward
- * UnderlyingProductIdentifierCode.mmForeignExchangeForward}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingProductIdentifierCode#ForeignExchangeForward
+ * UnderlyingProductIdentifierCode.ForeignExchangeForward}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingProductIdentifierCode#mmForeignExchangeNonDeliverableForward
- * UnderlyingProductIdentifierCode.mmForeignExchangeNonDeliverableForward}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingProductIdentifierCode#ForeignExchangeNonDeliverableForward
+ * UnderlyingProductIdentifierCode.ForeignExchangeNonDeliverableForward}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingProductIdentifierCode#mmForeignExchangeSpot
- * UnderlyingProductIdentifierCode.mmForeignExchangeSpot}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingProductIdentifierCode#ForeignExchangeSpot
+ * UnderlyingProductIdentifierCode.ForeignExchangeSpot}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingProductIdentifierCode#mmForeignExchangeSWAP
- * UnderlyingProductIdentifierCode.mmForeignExchangeSWAP}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingProductIdentifierCode#ForeignExchangeSWAP
+ * UnderlyingProductIdentifierCode.ForeignExchangeSWAP}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -57,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class UnderlyingProductIdentifierCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class UnderlyingProductIdentifierCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -103,12 +109,12 @@ public class UnderlyingProductIdentifierCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignExchangeForward = new MMCode() {
+	public static final UnderlyingProductIdentifierCode ForeignExchangeForward = new UnderlyingProductIdentifierCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeForward";
 			definition = "Underlying product type of the transaction is a Foreign Exchange Forward.";
-			owner_lazy = () -> UnderlyingProductIdentifierCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingProductIdentifierCode.mmObject();
 			codeName = "FORW";
 		}
 	};
@@ -136,12 +142,12 @@ public class UnderlyingProductIdentifierCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignExchangeNonDeliverableForward = new MMCode() {
+	public static final UnderlyingProductIdentifierCode ForeignExchangeNonDeliverableForward = new UnderlyingProductIdentifierCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeNonDeliverableForward";
 			definition = "Underlying product type of the transaction is a Foreign Exchange Non Deliverable Forward.";
-			owner_lazy = () -> UnderlyingProductIdentifierCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingProductIdentifierCode.mmObject();
 			codeName = "NDFO";
 		}
 	};
@@ -167,12 +173,12 @@ public class UnderlyingProductIdentifierCode {
 	 * "Underlying product type of the transaction is Foreign Exchange Spot."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignExchangeSpot = new MMCode() {
+	public static final UnderlyingProductIdentifierCode ForeignExchangeSpot = new UnderlyingProductIdentifierCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeSpot";
 			definition = "Underlying product type of the transaction is Foreign Exchange Spot.";
-			owner_lazy = () -> UnderlyingProductIdentifierCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingProductIdentifierCode.mmObject();
 			codeName = "SPOT";
 		}
 	};
@@ -198,29 +204,62 @@ public class UnderlyingProductIdentifierCode {
 	 * "Underlying product type of the transaction is a Foreign Exchange SWAP."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignExchangeSWAP = new MMCode() {
+	public static final UnderlyingProductIdentifierCode ForeignExchangeSWAP = new UnderlyingProductIdentifierCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeSWAP";
 			definition = "Underlying product type of the transaction is a Foreign Exchange SWAP.";
-			owner_lazy = () -> UnderlyingProductIdentifierCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingProductIdentifierCode.mmObject();
 			codeName = "SWAP";
 		}
 	};
+	final static private LinkedHashMap<String, UnderlyingProductIdentifierCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected UnderlyingProductIdentifierCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FORW");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingProductIdentifierCode";
 				definition = "Indicates the underlying product type for reporting to trade repositories. These product codes must be in line with the ISDA Product Taxonomy.";
-				code_lazy = () -> Arrays.asList(UnderlyingProductIdentifierCode.mmForeignExchangeForward, UnderlyingProductIdentifierCode.mmForeignExchangeNonDeliverableForward, UnderlyingProductIdentifierCode.mmForeignExchangeSpot,
-						UnderlyingProductIdentifierCode.mmForeignExchangeSWAP);
 				derivation_lazy = () -> Arrays.asList(UnderlyingProductIdentifier1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingProductIdentifierCode.ForeignExchangeForward,
+						com.tools20022.repository.codeset.UnderlyingProductIdentifierCode.ForeignExchangeNonDeliverableForward, com.tools20022.repository.codeset.UnderlyingProductIdentifierCode.ForeignExchangeSpot,
+						com.tools20022.repository.codeset.UnderlyingProductIdentifierCode.ForeignExchangeSWAP);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ForeignExchangeForward.getCodeName().get(), ForeignExchangeForward);
+		codesByName.put(ForeignExchangeNonDeliverableForward.getCodeName().get(), ForeignExchangeNonDeliverableForward);
+		codesByName.put(ForeignExchangeSpot.getCodeName().get(), ForeignExchangeSpot);
+		codesByName.put(ForeignExchangeSWAP.getCodeName().get(), ForeignExchangeSWAP);
+	}
+
+	public static UnderlyingProductIdentifierCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static UnderlyingProductIdentifierCode[] values() {
+		UnderlyingProductIdentifierCode[] values = new UnderlyingProductIdentifierCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, UnderlyingProductIdentifierCode> {
+		@Override
+		public UnderlyingProductIdentifierCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(UnderlyingProductIdentifierCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

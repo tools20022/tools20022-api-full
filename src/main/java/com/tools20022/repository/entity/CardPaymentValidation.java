@@ -29,9 +29,8 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Results and parameters of the card payment verification.
@@ -91,6 +90,27 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashBalance#mmRelatedCardPaymentValidationProcess
+ * CashBalance.mmRelatedCardPaymentValidationProcess}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Signature#mmCardPaymentValidation
+ * Signature.mmCardPaymentValidation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmValidation
+ * CardPaymentAcquiring.mmValidation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductCategory#mmRelatedCardPaymentValidation
+ * ProductCategory.mmRelatedCardPaymentValidation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Response#mmRelatedCardPaymentValidation
+ * Response.mmRelatedCardPaymentValidation}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
  * <ul>
@@ -123,31 +143,10 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashBalance#mmRelatedCardPaymentValidationProcess
- * CashBalance.mmRelatedCardPaymentValidationProcess}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Signature#mmCardPaymentValidation
- * Signature.mmCardPaymentValidation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CardPaymentAcquiring#mmValidation
- * CardPaymentAcquiring.mmValidation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductCategory#mmRelatedCardPaymentValidation
- * ProductCategory.mmRelatedCardPaymentValidation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Response#mmRelatedCardPaymentValidation
- * Response.mmRelatedCardPaymentValidation}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -163,8 +162,8 @@ public class CardPaymentValidation {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected TrueFalseIndicator transactionSuccess;
 	/**
-	 * Outcome of the transaction at the acceptor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -267,8 +266,8 @@ public class CardPaymentValidation {
 					CardPaymentTransaction45.mmTransactionSuccess, CardPaymentTransaction46.mmTransactionSuccess, CardPaymentTransaction40.mmTransactionSuccess, CardPaymentTransaction60.mmTransactionSuccess,
 					CardPaymentTransaction61.mmTransactionSuccess, CardPaymentTransaction59.mmTransactionSuccess, CardPaymentTransaction55.mmTransactionSuccess, CardPaymentTransaction75.mmTransactionSuccess,
 					CardPaymentTransaction70.mmTransactionSuccess, CardPaymentTransaction69.mmTransactionSuccess);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionSuccess";
 			definition = "Outcome of the transaction at the acceptor.";
@@ -287,10 +286,8 @@ public class CardPaymentValidation {
 	};
 	protected TrueFalseIndicator merchantOverride;
 	/**
-	 * Indicate that the acceptor has forced the transaction in spite of the
-	 * authorisation result (online or offline), or incident to complete the
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -362,8 +359,8 @@ public class CardPaymentValidation {
 			derivation_lazy = () -> Arrays.asList(CardPaymentTransaction4.mmMerchantOverride, CardPaymentTransaction14.mmMerchantOverride, CardPaymentTransaction3.mmMerchantOverride, CardPaymentTransaction13.mmMerchantOverride,
 					CardPaymentTransaction29.mmMerchantOverride, CardPaymentTransaction25.mmMerchantOverride, CardPaymentTransaction45.mmMerchantOverride, CardPaymentTransaction40.mmMerchantOverride,
 					CardPaymentTransaction60.mmMerchantOverride, CardPaymentTransaction55.mmMerchantOverride, CardPaymentTransaction70.mmMerchantOverride, CardPaymentTransaction69.mmMerchantOverride);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MerchantOverride";
 			definition = "Indicate that the acceptor has forced the transaction in spite of the authorisation result (online or offline), or incident to complete the transaction.";
@@ -382,8 +379,8 @@ public class CardPaymentValidation {
 	};
 	protected ISODate validityDate;
 	/**
-	 * Transaction authorisation deadline to complete the related payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -525,8 +522,8 @@ public class CardPaymentValidation {
 					CardPaymentTransactionDetails30.mmValidityDate, CardPaymentTransactionDetails27.mmValidityDate, CardPaymentTransactionDetails31.mmValidityDate, CardPaymentTransactionDetails34.mmValidityDate,
 					CardPaymentTransactionDetails39.mmValidityDate, CardPaymentTransactionDetails38.mmValidityDate, CardPaymentTransactionDetails41.mmValidityDate, CardPaymentTransactionDetails37.mmValidityDate,
 					CardPaymentTransactionDetails42.mmValidityDate, CardPaymentTransactionDetails43.mmValidityDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidityDate";
 			definition = "Transaction authorisation deadline to complete the related payment.";
@@ -545,8 +542,8 @@ public class CardPaymentValidation {
 	};
 	protected CardPaymentAcquiring cardPayment;
 	/**
-	 * Card payment to which the validation process applies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -612,8 +609,8 @@ public class CardPaymentValidation {
 			derivation_lazy = () -> Arrays.asList(CardPaymentTransactionAdviceResponse2.mmTransactionIdentification, CardPaymentTransactionAdviceResponse1.mmTransactionIdentification,
 					CardPaymentTransactionAdviceResponse3.mmTransactionIdentification, CardPaymentTransactionAdviceResponse4.mmTransactionIdentification, CardPaymentTransactionAdviceResponse5.mmTransactionIdentification,
 					AuthorisationResult9.mmAction, CardPaymentTransactionAdviceResponse6.mmTransactionIdentification, AuthorisationResult13.mmAction);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardPayment";
 			definition = "Card payment to which the validation process applies.";
@@ -626,8 +623,8 @@ public class CardPaymentValidation {
 	};
 	protected List<com.tools20022.repository.entity.Response> response;
 	/**
-	 * Response to an authorisation request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -793,8 +790,8 @@ public class CardPaymentValidation {
 					CardTransactionDetail4.mmTransactionVerificationResult, AcceptorCancellationAdviceResponse5.mmTransaction, AcceptorReconciliationResponse4.mmTransactionResponse, AcceptorCompletionAdviceResponse5.mmTransaction,
 					AuthorisationResult12.mmResponseToAuthorisation, AuthorisationResult11.mmResponseToAuthorisation, AuthorisationResult10.mmResponseToAuthorisation, AuthorisationResult13.mmAuthorisationResponse,
 					ATMTransaction18.mmResponse, AcceptorCancellationAdviceResponse6.mmTransaction, AcceptorCompletionAdviceResponse6.mmTransaction);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Response";
 			definition = "Response to an authorisation request.";
@@ -806,8 +803,8 @@ public class CardPaymentValidation {
 	};
 	protected Min6Max8Text authorisationCode;
 	/**
-	 * Value assigned by the authorising party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -890,8 +887,8 @@ public class CardPaymentValidation {
 					AuthorisationResult4.mmAuthorisationCode, AuthorisationResult5.mmAuthorisationCode, CardPaymentTransactionResult2.mmAuthorisationCode, AuthorisationResult6.mmAuthorisationCode, AuthorisationResult8.mmAuthorisationCode,
 					AuthorisationResult7.mmAuthorisationCode, AuthorisationResult9.mmAuthorisationCode, CardPaymentTransactionResult3.mmAuthorisationCode, AuthorisationResult12.mmAuthorisationCode,
 					AuthorisationResult11.mmAuthorisationCode, AuthorisationResult10.mmAuthorisationCode, AuthorisationResult13.mmAuthorisationCode);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthorisationCode";
 			definition = "Value assigned by the authorising party.";
@@ -910,8 +907,8 @@ public class CardPaymentValidation {
 	};
 	protected OnLineReasonCode onLineReason;
 	/**
-	 * Reason to process an online authorisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -975,8 +972,8 @@ public class CardPaymentValidation {
 			derivation_lazy = () -> Arrays.asList(CardPaymentTransactionDetails1.mmOnLineReason, CardPaymentTransactionDetails10.mmOnLineReason, CardPaymentTransactionDetails12.mmOnLineReason,
 					CardPaymentTransactionDetails16.mmOnLineReason, CardPaymentTransactionDetails19.mmOnLineReason, CardPaymentTransactionDetails24.mmOnLineReason, CardPaymentTransactionDetails27.mmOnLineReason,
 					CardPaymentTransactionDetails31.mmOnLineReason, CardPaymentTransactionDetails39.mmOnLineReason, CardPaymentTransactionDetails41.mmOnLineReason);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OnLineReason";
 			definition = "Reason to process an online authorisation.";
@@ -995,8 +992,8 @@ public class CardPaymentValidation {
 	};
 	protected CashBalance balance;
 	/**
-	 * Balance of the account attached to the payment card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1029,8 +1026,8 @@ public class CardPaymentValidation {
 	 */
 	public static final MMBusinessAssociationEnd mmBalance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Balance";
 			definition = "Balance of the account attached to the payment card.";
@@ -1043,9 +1040,8 @@ public class CardPaymentValidation {
 	};
 	protected CardholderAddressVerificationResultCode cardholderAddressVerificationResult;
 	/**
-	 * Result of the cardholder verification address checks on the street number
-	 * and the postal code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1073,8 +1069,8 @@ public class CardPaymentValidation {
 	 */
 	public static final MMBusinessAttribute mmCardholderAddressVerificationResult = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardholderAddressVerificationResult";
 			definition = "Result of the cardholder verification address checks on the street number and the postal code.";
@@ -1093,8 +1089,8 @@ public class CardPaymentValidation {
 	};
 	protected CSCResultCode cSCResult;
 	/**
-	 * Result of the printed CSC (Card Security Code) validation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1121,8 +1117,8 @@ public class CardPaymentValidation {
 	 */
 	public static final MMBusinessAttribute mmCSCResult = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CSCResult";
 			definition = "Result of the printed CSC (Card Security Code) validation.";
@@ -1141,8 +1137,8 @@ public class CardPaymentValidation {
 	};
 	protected List<com.tools20022.repository.entity.ProductCategory> declinedProductCode;
 	/**
-	 * Product code for which the payment authorisation was declined.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1176,8 +1172,8 @@ public class CardPaymentValidation {
 	 */
 	public static final MMBusinessAssociationEnd mmDeclinedProductCode = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeclinedProductCode";
 			definition = "Product code for which the payment authorisation was declined.";
@@ -1189,8 +1185,8 @@ public class CardPaymentValidation {
 	};
 	protected Max500Text electronicCommerceAuthenticationResult;
 	/**
-	 * Result of an e-commerce authentication process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1215,8 +1211,8 @@ public class CardPaymentValidation {
 	 */
 	public static final MMBusinessAttribute mmElectronicCommerceAuthenticationResult = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ElectronicCommerceAuthenticationResult";
 			definition = "Result of an e-commerce authentication process.";
@@ -1235,8 +1231,8 @@ public class CardPaymentValidation {
 	};
 	protected FailureReasonCode failureReason;
 	/**
-	 * Incident occuring during the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1262,8 +1258,8 @@ public class CardPaymentValidation {
 	 */
 	public static final MMBusinessAttribute mmFailureReason = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FailureReason";
 			definition = "Incident occuring during the transaction.";
@@ -1282,8 +1278,8 @@ public class CardPaymentValidation {
 	};
 	protected List<com.tools20022.repository.entity.Signature> signature;
 	/**
-	 * Signature of the message to display or print.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1316,8 +1312,8 @@ public class CardPaymentValidation {
 	 */
 	public static final MMBusinessAssociationEnd mmSignature = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Signature";
 			definition = "Signature of the message to display or print.";
@@ -1331,7 +1327,7 @@ public class CardPaymentValidation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentValidation";
 				definition = "Results and parameters of the card payment verification.";
@@ -1361,111 +1357,125 @@ public class CardPaymentValidation {
 		return transactionSuccess;
 	}
 
-	public void setTransactionSuccess(TrueFalseIndicator transactionSuccess) {
-		this.transactionSuccess = transactionSuccess;
+	public CardPaymentValidation setTransactionSuccess(TrueFalseIndicator transactionSuccess) {
+		this.transactionSuccess = Objects.requireNonNull(transactionSuccess);
+		return this;
 	}
 
 	public TrueFalseIndicator getMerchantOverride() {
 		return merchantOverride;
 	}
 
-	public void setMerchantOverride(TrueFalseIndicator merchantOverride) {
-		this.merchantOverride = merchantOverride;
+	public CardPaymentValidation setMerchantOverride(TrueFalseIndicator merchantOverride) {
+		this.merchantOverride = Objects.requireNonNull(merchantOverride);
+		return this;
 	}
 
 	public ISODate getValidityDate() {
 		return validityDate;
 	}
 
-	public void setValidityDate(ISODate validityDate) {
-		this.validityDate = validityDate;
+	public CardPaymentValidation setValidityDate(ISODate validityDate) {
+		this.validityDate = Objects.requireNonNull(validityDate);
+		return this;
 	}
 
-	public CardPaymentAcquiring getCardPayment() {
-		return cardPayment;
+	public Optional<CardPaymentAcquiring> getCardPayment() {
+		return cardPayment == null ? Optional.empty() : Optional.of(cardPayment);
 	}
 
-	public void setCardPayment(com.tools20022.repository.entity.CardPaymentAcquiring cardPayment) {
+	public CardPaymentValidation setCardPayment(com.tools20022.repository.entity.CardPaymentAcquiring cardPayment) {
 		this.cardPayment = cardPayment;
+		return this;
 	}
 
 	public List<Response> getResponse() {
-		return response;
+		return response == null ? response = new ArrayList<>() : response;
 	}
 
-	public void setResponse(List<com.tools20022.repository.entity.Response> response) {
-		this.response = response;
+	public CardPaymentValidation setResponse(List<com.tools20022.repository.entity.Response> response) {
+		this.response = Objects.requireNonNull(response);
+		return this;
 	}
 
 	public Min6Max8Text getAuthorisationCode() {
 		return authorisationCode;
 	}
 
-	public void setAuthorisationCode(Min6Max8Text authorisationCode) {
-		this.authorisationCode = authorisationCode;
+	public CardPaymentValidation setAuthorisationCode(Min6Max8Text authorisationCode) {
+		this.authorisationCode = Objects.requireNonNull(authorisationCode);
+		return this;
 	}
 
 	public OnLineReasonCode getOnLineReason() {
 		return onLineReason;
 	}
 
-	public void setOnLineReason(OnLineReasonCode onLineReason) {
-		this.onLineReason = onLineReason;
+	public CardPaymentValidation setOnLineReason(OnLineReasonCode onLineReason) {
+		this.onLineReason = Objects.requireNonNull(onLineReason);
+		return this;
 	}
 
-	public CashBalance getBalance() {
-		return balance;
+	public Optional<CashBalance> getBalance() {
+		return balance == null ? Optional.empty() : Optional.of(balance);
 	}
 
-	public void setBalance(com.tools20022.repository.entity.CashBalance balance) {
+	public CardPaymentValidation setBalance(com.tools20022.repository.entity.CashBalance balance) {
 		this.balance = balance;
+		return this;
 	}
 
 	public CardholderAddressVerificationResultCode getCardholderAddressVerificationResult() {
 		return cardholderAddressVerificationResult;
 	}
 
-	public void setCardholderAddressVerificationResult(CardholderAddressVerificationResultCode cardholderAddressVerificationResult) {
-		this.cardholderAddressVerificationResult = cardholderAddressVerificationResult;
+	public CardPaymentValidation setCardholderAddressVerificationResult(CardholderAddressVerificationResultCode cardholderAddressVerificationResult) {
+		this.cardholderAddressVerificationResult = Objects.requireNonNull(cardholderAddressVerificationResult);
+		return this;
 	}
 
 	public CSCResultCode getCSCResult() {
 		return cSCResult;
 	}
 
-	public void setCSCResult(CSCResultCode cSCResult) {
-		this.cSCResult = cSCResult;
+	public CardPaymentValidation setCSCResult(CSCResultCode cSCResult) {
+		this.cSCResult = Objects.requireNonNull(cSCResult);
+		return this;
 	}
 
 	public List<ProductCategory> getDeclinedProductCode() {
-		return declinedProductCode;
+		return declinedProductCode == null ? declinedProductCode = new ArrayList<>() : declinedProductCode;
 	}
 
-	public void setDeclinedProductCode(List<com.tools20022.repository.entity.ProductCategory> declinedProductCode) {
-		this.declinedProductCode = declinedProductCode;
+	public CardPaymentValidation setDeclinedProductCode(List<com.tools20022.repository.entity.ProductCategory> declinedProductCode) {
+		this.declinedProductCode = Objects.requireNonNull(declinedProductCode);
+		return this;
 	}
 
 	public Max500Text getElectronicCommerceAuthenticationResult() {
 		return electronicCommerceAuthenticationResult;
 	}
 
-	public void setElectronicCommerceAuthenticationResult(Max500Text electronicCommerceAuthenticationResult) {
-		this.electronicCommerceAuthenticationResult = electronicCommerceAuthenticationResult;
+	public CardPaymentValidation setElectronicCommerceAuthenticationResult(Max500Text electronicCommerceAuthenticationResult) {
+		this.electronicCommerceAuthenticationResult = Objects.requireNonNull(electronicCommerceAuthenticationResult);
+		return this;
 	}
 
 	public FailureReasonCode getFailureReason() {
 		return failureReason;
 	}
 
-	public void setFailureReason(FailureReasonCode failureReason) {
-		this.failureReason = failureReason;
+	public CardPaymentValidation setFailureReason(FailureReasonCode failureReason) {
+		this.failureReason = Objects.requireNonNull(failureReason);
+		return this;
 	}
 
 	public List<Signature> getSignature() {
-		return signature;
+		return signature == null ? signature = new ArrayList<>() : signature;
 	}
 
-	public void setSignature(List<com.tools20022.repository.entity.Signature> signature) {
-		this.signature = signature;
+	public CardPaymentValidation setSignature(List<com.tools20022.repository.entity.Signature> signature) {
+		this.signature = Objects.requireNonNull(signature);
+		return this;
 	}
 }

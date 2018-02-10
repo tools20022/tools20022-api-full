@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.PortfolioTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PreviousYear3", propOrder = {"previousYear", "cashComponentIndicator"})
 public class PreviousYear3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrvsYr", required = true)
 	protected PreviousYear1Choice previousYear;
 	/**
-	 * Choice between selected investment plans issued during previous years or
-	 * the entirety of the investment plans.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,7 +112,7 @@ public class PreviousYear3 {
 	public static final MMMessageAssociationEnd mmPreviousYear = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmTransferredYear;
-			componentContext_lazy = () -> PreviousYear3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PreviousYear3.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsYr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +124,11 @@ public class PreviousYear3 {
 			type_lazy = () -> PreviousYear1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CshCmpntInd", required = true)
 	protected YesNoIndicator cashComponentIndicator;
 	/**
-	 * Indicates whether the ISA contains a cash component asset for transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +163,7 @@ public class PreviousYear3 {
 	public static final MMMessageAttribute mmCashComponentIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmCashComponentIndicator;
-			componentContext_lazy = () -> PreviousYear3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PreviousYear3.mmObject();
 			isDerived = false;
 			xmlTag = "CshCmpntInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,9 +178,9 @@ public class PreviousYear3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PreviousYear3.mmPreviousYear, PreviousYear3.mmCashComponentIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PreviousYear3.mmPreviousYear, com.tools20022.repository.msg.PreviousYear3.mmCashComponentIndicator);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PreviousYear3";
 				definition = "Choice between selected investment plans issued during previous years or the entirety of the investment plans.";
@@ -187,21 +189,21 @@ public class PreviousYear3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrvsYr", required = true)
 	public PreviousYear1Choice getPreviousYear() {
 		return previousYear;
 	}
 
-	public void setPreviousYear(PreviousYear1Choice previousYear) {
-		this.previousYear = previousYear;
+	public PreviousYear3 setPreviousYear(PreviousYear1Choice previousYear) {
+		this.previousYear = Objects.requireNonNull(previousYear);
+		return this;
 	}
 
-	@XmlElement(name = "CshCmpntInd", required = true)
 	public YesNoIndicator getCashComponentIndicator() {
 		return cashComponentIndicator;
 	}
 
-	public void setCashComponentIndicator(YesNoIndicator cashComponentIndicator) {
-		this.cashComponentIndicator = cashComponentIndicator;
+	public PreviousYear3 setCashComponentIndicator(YesNoIndicator cashComponentIndicator) {
+		this.cashComponentIndicator = Objects.requireNonNull(cashComponentIndicator);
+		return this;
 	}
 }

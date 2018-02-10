@@ -25,6 +25,8 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Period defining the last date for which an action will be accepted and the
@@ -123,8 +125,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -142,9 +144,8 @@ public class SuspensionPeriod {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected DateTimePeriod privilegeSuspensionPeriod;
 	/**
-	 * Period during which the privilege is not available, eg, this can happen
-	 * whenever a meeting takes place or whenever a coupon payment is due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -194,8 +195,8 @@ public class SuspensionPeriod {
 	public static final MMBusinessAssociationEnd mmPrivilegeSuspensionPeriod = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod5.mmPrivilegeSuspensionPeriod, CorporateActionPeriod7.mmPrivilegeSuspensionPeriod, CorporateActionPeriod2.mmPrivilegeSuspensionPeriod);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PrivilegeSuspensionPeriod";
 			definition = "Period during which the privilege is not available, eg, this can happen whenever a meeting takes place or whenever a coupon payment is due.";
@@ -208,11 +209,8 @@ public class SuspensionPeriod {
 	};
 	protected DateTimePeriod depositorySuspensionPeriodForWithdrawal;
 	/**
-	 * Period defining the last date on which withdrawal in street name requests
-	 * on the outturn security will be accepted and the date on which the
-	 * suspension will be released and withdrawal by transfer processing on the
-	 * outturn security will resume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,8 +257,8 @@ public class SuspensionPeriod {
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForWithdrawal = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod5.mmDepositorySuspensionPeriodForWithdrawal, CorporateActionPeriod7.mmDepositorySuspensionPeriodForWithdrawal);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositorySuspensionPeriodForWithdrawal";
 			definition = "Period defining the last date on which withdrawal in street name requests on the outturn security will be accepted and the date on which the suspension will be released and withdrawal by transfer processing on the outturn security will resume.";
@@ -273,10 +271,8 @@ public class SuspensionPeriod {
 	};
 	protected DateTimePeriod depositorySuspensionPeriodForBookEntryTransfer;
 	/**
-	 * Period defining the last date for which book entry transfers will be
-	 * accepted and the date on which the suspension will be released and book
-	 * entry transfer processing will resume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -331,8 +327,8 @@ public class SuspensionPeriod {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForBookEntryTransfer, CorporateActionPeriod6.mmDepositorySuspensionPeriodForBookEntryTransfer,
 					CorporateActionPeriod8.mmDepositorySuspensionPeriodForBookEntryTransfer, CorporateActionPeriod10.mmDepositorySuspensionPeriodForBookEntryTransfer);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositorySuspensionPeriodForBookEntryTransfer";
 			definition = "Period defining the last date for which book entry transfers will be accepted and the date on which the suspension will be released and book entry transfer processing will resume.";
@@ -345,10 +341,8 @@ public class SuspensionPeriod {
 	};
 	protected DateTimePeriod depositorySuspensionPeriodForDepositAtAgent;
 	/**
-	 * Period defining the last date for which deposits, into nominee name, at
-	 * the agent will be accepted and the date on which the suspension will be
-	 * released and deposits at agent will resume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -402,8 +396,8 @@ public class SuspensionPeriod {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForDepositAtAgent, CorporateActionPeriod6.mmDepositorySuspensionPeriodForDepositAtAgent,
 					CorporateActionPeriod8.mmDepositorySuspensionPeriodForDepositAtAgent, CorporateActionPeriod10.mmDepositorySuspensionPeriodForDepositAtAgent);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositorySuspensionPeriodForDepositAtAgent";
 			definition = "Period defining the last date for which deposits, into nominee name, at the agent will be accepted and the date on which the suspension will be released and deposits at agent will resume.";
@@ -416,9 +410,8 @@ public class SuspensionPeriod {
 	};
 	protected DateTimePeriod depositorySuspensionPeriodForDeposit;
 	/**
-	 * Period defining the last date for which deposits will be accepted and the
-	 * date on which the suspension will be released and deposits will resume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -472,8 +465,8 @@ public class SuspensionPeriod {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForDeposit, CorporateActionPeriod6.mmDepositorySuspensionPeriodForDeposit, CorporateActionPeriod8.mmDepositorySuspensionPeriodForDeposit,
 					CorporateActionPeriod10.mmDepositorySuspensionPeriodForDeposit);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositorySuspensionPeriodForDeposit";
 			definition = "Period defining the last date for which deposits will be accepted and the date on which the suspension will be released and deposits will resume.";
@@ -486,10 +479,8 @@ public class SuspensionPeriod {
 	};
 	protected DateTimePeriod depositorySuspensionPeriodForPledge;
 	/**
-	 * Period defining the last date for which pledges will be accepted and the
-	 * date on which the suspension will be released and pledge processing will
-	 * resume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -543,8 +534,8 @@ public class SuspensionPeriod {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForPledge, CorporateActionPeriod6.mmDepositorySuspensionPeriodForPledge, CorporateActionPeriod8.mmDepositorySuspensionPeriodForPledge,
 					CorporateActionPeriod10.mmDepositorySuspensionPeriodForPledge);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositorySuspensionPeriodForPledge";
 			definition = "Period defining the last date for which pledges will be accepted and the date on which the suspension will be released and pledge processing will resume.";
@@ -557,10 +548,8 @@ public class SuspensionPeriod {
 	};
 	protected DateTimePeriod depositorySuspensionPeriodForSegregation;
 	/**
-	 * Period defining the last date for which intra-position balances can be
-	 * segregated and the date on which the suspension will be released and the
-	 * ability to segregate intra-position balances will resume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -614,8 +603,8 @@ public class SuspensionPeriod {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForSegregation, CorporateActionPeriod6.mmDepositorySuspensionPeriodForSegregation,
 					CorporateActionPeriod8.mmDepositorySuspensionPeriodForSegregation, CorporateActionPeriod10.mmDepositorySuspensionPeriodForSegregation);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositorySuspensionPeriodForSegregation";
 			definition = "Period defining the last date for which intra-position balances can be segregated and the date on which the suspension will be released and the ability to segregate intra-position balances will resume.";
@@ -628,10 +617,8 @@ public class SuspensionPeriod {
 	};
 	protected DateTimePeriod depositorySuspensionPeriodForWithdrawalAtAgent;
 	/**
-	 * Period defining the last date for which withdrawals, from nominee name at
-	 * the agent will be accepted and the date on which the suspension will be
-	 * released and withdrawals at agent processing will resume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -686,8 +673,8 @@ public class SuspensionPeriod {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForWithdrawalAtAgent, CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalAtAgent,
 					CorporateActionPeriod8.mmDepositorySuspensionPeriodForWithdrawalAtAgent, CorporateActionPeriod10.mmDepositorySuspensionPeriodForWithdrawalAtAgent);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositorySuspensionPeriodForWithdrawalAtAgent";
 			definition = "Period defining the last date for which withdrawals, from nominee name at the agent will be accepted and the date on which the suspension will be released and withdrawals at agent processing will resume.";
@@ -700,10 +687,8 @@ public class SuspensionPeriod {
 	};
 	protected DateTimePeriod depositorySuspensionPeriodForWithdrawalInNomineeName;
 	/**
-	 * Period defining the last date for which physical withdrawals in the
-	 * nominee's name will be accepted and the date on which the suspension will
-	 * be released and physical withdrawals in the nominee's name will resume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -761,8 +746,8 @@ public class SuspensionPeriod {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForWithdrawalInNomineeName, CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalInNomineeName,
 					CorporateActionPeriod8.mmDepositorySuspensionPeriodForWithdrawalInNomineeName, CorporateActionPeriod10.mmDepositorySuspensionPeriodForWithdrawalInNomineeName);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositorySuspensionPeriodForWithdrawalInNomineeName";
 			definition = "Period defining the last date for which physical withdrawals in the nominee's name will be accepted and the date on which the suspension will be released and physical withdrawals in the nominee's name will resume.";
@@ -775,11 +760,8 @@ public class SuspensionPeriod {
 	};
 	protected DateTimePeriod depositorySuspensionPeriodForWithdrawalInStreetName;
 	/**
-	 * Period defining the last date on which withdrawal requests in street
-	 * name's will be accepted on the event security and the date on which the
-	 * suspension will be released and withdrawal in street name's processing on
-	 * the event security will resume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -837,8 +819,8 @@ public class SuspensionPeriod {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForWithdrawalInStreetName, CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalInStreetName,
 					CorporateActionPeriod8.mmDepositorySuspensionPeriodForWithdrawalInStreetName, CorporateActionPeriod10.mmDepositorySuspensionPeriodForWithdrawalInStreetName);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositorySuspensionPeriodForWithdrawalInStreetName";
 			definition = "Period defining the last date on which withdrawal requests in street name's will be accepted on the event security and the date on which the suspension will be released and withdrawal in street name's processing on the event security will resume.";
@@ -851,9 +833,8 @@ public class SuspensionPeriod {
 	};
 	protected DateTimePeriod coDepositoriesSuspensionPeriod;
 	/**
-	 * Period during which the settlement activities at the co-depositories are
-	 * suspended in order to stabilise the holdings at the CSD.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -900,8 +881,8 @@ public class SuspensionPeriod {
 	public static final MMBusinessAssociationEnd mmCoDepositoriesSuspensionPeriod = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod8.mmCoDepositoriesSuspensionPeriod, CorporateActionPeriod10.mmCoDepositoriesSuspensionPeriod);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CoDepositoriesSuspensionPeriod";
 			definition = "Period during which the settlement activities at the co-depositories are suspended in order to stabilise the holdings at the CSD.";
@@ -914,9 +895,8 @@ public class SuspensionPeriod {
 	};
 	protected CorporateActionEvent corporateActionEvent;
 	/**
-	 * Corporate action event for which a depository suspension period is
-	 * specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -952,8 +932,8 @@ public class SuspensionPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionEvent";
 			definition = "Corporate action event for which a depository suspension period is specified.";
@@ -968,7 +948,7 @@ public class SuspensionPeriod {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SuspensionPeriod";
 				definition = "Period defining the last date for which an action will be accepted and the date on which the suspension will be released and normal processing will resume.";
@@ -998,95 +978,107 @@ public class SuspensionPeriod {
 		return privilegeSuspensionPeriod;
 	}
 
-	public void setPrivilegeSuspensionPeriod(com.tools20022.repository.entity.DateTimePeriod privilegeSuspensionPeriod) {
-		this.privilegeSuspensionPeriod = privilegeSuspensionPeriod;
+	public SuspensionPeriod setPrivilegeSuspensionPeriod(com.tools20022.repository.entity.DateTimePeriod privilegeSuspensionPeriod) {
+		this.privilegeSuspensionPeriod = Objects.requireNonNull(privilegeSuspensionPeriod);
+		return this;
 	}
 
 	public DateTimePeriod getDepositorySuspensionPeriodForWithdrawal() {
 		return depositorySuspensionPeriodForWithdrawal;
 	}
 
-	public void setDepositorySuspensionPeriodForWithdrawal(com.tools20022.repository.entity.DateTimePeriod depositorySuspensionPeriodForWithdrawal) {
-		this.depositorySuspensionPeriodForWithdrawal = depositorySuspensionPeriodForWithdrawal;
+	public SuspensionPeriod setDepositorySuspensionPeriodForWithdrawal(com.tools20022.repository.entity.DateTimePeriod depositorySuspensionPeriodForWithdrawal) {
+		this.depositorySuspensionPeriodForWithdrawal = Objects.requireNonNull(depositorySuspensionPeriodForWithdrawal);
+		return this;
 	}
 
 	public DateTimePeriod getDepositorySuspensionPeriodForBookEntryTransfer() {
 		return depositorySuspensionPeriodForBookEntryTransfer;
 	}
 
-	public void setDepositorySuspensionPeriodForBookEntryTransfer(com.tools20022.repository.entity.DateTimePeriod depositorySuspensionPeriodForBookEntryTransfer) {
-		this.depositorySuspensionPeriodForBookEntryTransfer = depositorySuspensionPeriodForBookEntryTransfer;
+	public SuspensionPeriod setDepositorySuspensionPeriodForBookEntryTransfer(com.tools20022.repository.entity.DateTimePeriod depositorySuspensionPeriodForBookEntryTransfer) {
+		this.depositorySuspensionPeriodForBookEntryTransfer = Objects.requireNonNull(depositorySuspensionPeriodForBookEntryTransfer);
+		return this;
 	}
 
 	public DateTimePeriod getDepositorySuspensionPeriodForDepositAtAgent() {
 		return depositorySuspensionPeriodForDepositAtAgent;
 	}
 
-	public void setDepositorySuspensionPeriodForDepositAtAgent(com.tools20022.repository.entity.DateTimePeriod depositorySuspensionPeriodForDepositAtAgent) {
-		this.depositorySuspensionPeriodForDepositAtAgent = depositorySuspensionPeriodForDepositAtAgent;
+	public SuspensionPeriod setDepositorySuspensionPeriodForDepositAtAgent(com.tools20022.repository.entity.DateTimePeriod depositorySuspensionPeriodForDepositAtAgent) {
+		this.depositorySuspensionPeriodForDepositAtAgent = Objects.requireNonNull(depositorySuspensionPeriodForDepositAtAgent);
+		return this;
 	}
 
 	public DateTimePeriod getDepositorySuspensionPeriodForDeposit() {
 		return depositorySuspensionPeriodForDeposit;
 	}
 
-	public void setDepositorySuspensionPeriodForDeposit(com.tools20022.repository.entity.DateTimePeriod depositorySuspensionPeriodForDeposit) {
-		this.depositorySuspensionPeriodForDeposit = depositorySuspensionPeriodForDeposit;
+	public SuspensionPeriod setDepositorySuspensionPeriodForDeposit(com.tools20022.repository.entity.DateTimePeriod depositorySuspensionPeriodForDeposit) {
+		this.depositorySuspensionPeriodForDeposit = Objects.requireNonNull(depositorySuspensionPeriodForDeposit);
+		return this;
 	}
 
 	public DateTimePeriod getDepositorySuspensionPeriodForPledge() {
 		return depositorySuspensionPeriodForPledge;
 	}
 
-	public void setDepositorySuspensionPeriodForPledge(com.tools20022.repository.entity.DateTimePeriod depositorySuspensionPeriodForPledge) {
-		this.depositorySuspensionPeriodForPledge = depositorySuspensionPeriodForPledge;
+	public SuspensionPeriod setDepositorySuspensionPeriodForPledge(com.tools20022.repository.entity.DateTimePeriod depositorySuspensionPeriodForPledge) {
+		this.depositorySuspensionPeriodForPledge = Objects.requireNonNull(depositorySuspensionPeriodForPledge);
+		return this;
 	}
 
 	public DateTimePeriod getDepositorySuspensionPeriodForSegregation() {
 		return depositorySuspensionPeriodForSegregation;
 	}
 
-	public void setDepositorySuspensionPeriodForSegregation(com.tools20022.repository.entity.DateTimePeriod depositorySuspensionPeriodForSegregation) {
-		this.depositorySuspensionPeriodForSegregation = depositorySuspensionPeriodForSegregation;
+	public SuspensionPeriod setDepositorySuspensionPeriodForSegregation(com.tools20022.repository.entity.DateTimePeriod depositorySuspensionPeriodForSegregation) {
+		this.depositorySuspensionPeriodForSegregation = Objects.requireNonNull(depositorySuspensionPeriodForSegregation);
+		return this;
 	}
 
 	public DateTimePeriod getDepositorySuspensionPeriodForWithdrawalAtAgent() {
 		return depositorySuspensionPeriodForWithdrawalAtAgent;
 	}
 
-	public void setDepositorySuspensionPeriodForWithdrawalAtAgent(com.tools20022.repository.entity.DateTimePeriod depositorySuspensionPeriodForWithdrawalAtAgent) {
-		this.depositorySuspensionPeriodForWithdrawalAtAgent = depositorySuspensionPeriodForWithdrawalAtAgent;
+	public SuspensionPeriod setDepositorySuspensionPeriodForWithdrawalAtAgent(com.tools20022.repository.entity.DateTimePeriod depositorySuspensionPeriodForWithdrawalAtAgent) {
+		this.depositorySuspensionPeriodForWithdrawalAtAgent = Objects.requireNonNull(depositorySuspensionPeriodForWithdrawalAtAgent);
+		return this;
 	}
 
 	public DateTimePeriod getDepositorySuspensionPeriodForWithdrawalInNomineeName() {
 		return depositorySuspensionPeriodForWithdrawalInNomineeName;
 	}
 
-	public void setDepositorySuspensionPeriodForWithdrawalInNomineeName(com.tools20022.repository.entity.DateTimePeriod depositorySuspensionPeriodForWithdrawalInNomineeName) {
-		this.depositorySuspensionPeriodForWithdrawalInNomineeName = depositorySuspensionPeriodForWithdrawalInNomineeName;
+	public SuspensionPeriod setDepositorySuspensionPeriodForWithdrawalInNomineeName(com.tools20022.repository.entity.DateTimePeriod depositorySuspensionPeriodForWithdrawalInNomineeName) {
+		this.depositorySuspensionPeriodForWithdrawalInNomineeName = Objects.requireNonNull(depositorySuspensionPeriodForWithdrawalInNomineeName);
+		return this;
 	}
 
 	public DateTimePeriod getDepositorySuspensionPeriodForWithdrawalInStreetName() {
 		return depositorySuspensionPeriodForWithdrawalInStreetName;
 	}
 
-	public void setDepositorySuspensionPeriodForWithdrawalInStreetName(com.tools20022.repository.entity.DateTimePeriod depositorySuspensionPeriodForWithdrawalInStreetName) {
-		this.depositorySuspensionPeriodForWithdrawalInStreetName = depositorySuspensionPeriodForWithdrawalInStreetName;
+	public SuspensionPeriod setDepositorySuspensionPeriodForWithdrawalInStreetName(com.tools20022.repository.entity.DateTimePeriod depositorySuspensionPeriodForWithdrawalInStreetName) {
+		this.depositorySuspensionPeriodForWithdrawalInStreetName = Objects.requireNonNull(depositorySuspensionPeriodForWithdrawalInStreetName);
+		return this;
 	}
 
 	public DateTimePeriod getCoDepositoriesSuspensionPeriod() {
 		return coDepositoriesSuspensionPeriod;
 	}
 
-	public void setCoDepositoriesSuspensionPeriod(com.tools20022.repository.entity.DateTimePeriod coDepositoriesSuspensionPeriod) {
-		this.coDepositoriesSuspensionPeriod = coDepositoriesSuspensionPeriod;
+	public SuspensionPeriod setCoDepositoriesSuspensionPeriod(com.tools20022.repository.entity.DateTimePeriod coDepositoriesSuspensionPeriod) {
+		this.coDepositoriesSuspensionPeriod = Objects.requireNonNull(coDepositoriesSuspensionPeriod);
+		return this;
 	}
 
-	public CorporateActionEvent getCorporateActionEvent() {
-		return corporateActionEvent;
+	public Optional<CorporateActionEvent> getCorporateActionEvent() {
+		return corporateActionEvent == null ? Optional.empty() : Optional.of(corporateActionEvent);
 	}
 
-	public void setCorporateActionEvent(com.tools20022.repository.entity.CorporateActionEvent corporateActionEvent) {
+	public SuspensionPeriod setCorporateActionEvent(com.tools20022.repository.entity.CorporateActionEvent corporateActionEvent) {
 		this.corporateActionEvent = corporateActionEvent;
+		return this;
 	}
 }

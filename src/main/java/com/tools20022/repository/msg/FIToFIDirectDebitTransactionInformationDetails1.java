@@ -21,9 +21,11 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,16 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FIToFIDirectDebitTransactionInformationDetails1", propOrder = {"groupHeader", "creditInstruction", "supplementaryData"})
 public class FIToFIDirectDebitTransactionInformationDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader63 groupHeader;
 	/**
-	 * Common characteristics for all individual transactions included in the
-	 * message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -104,7 +106,7 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmGroupHeader = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FIToFIDirectDebitTransactionInformationDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FIToFIDirectDebitTransactionInformationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,11 +118,11 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.GroupHeader63.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtInstr", required = true)
 	protected List<com.tools20022.repository.msg.CreditTransferTransaction9> creditInstruction;
 	/**
-	 * Characteristics that apply to the credit side of the payment
-	 * transaction(s) included in the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -149,7 +151,7 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditInstruction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FIToFIDirectDebitTransactionInformationDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FIToFIDirectDebitTransactionInformationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtInstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,11 +162,11 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.CreditTransferTransaction9.mmObject();
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -192,7 +194,7 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FIToFIDirectDebitTransactionInformationDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FIToFIDirectDebitTransactionInformationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,9 +209,9 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FIToFIDirectDebitTransactionInformationDetails1.mmGroupHeader, FIToFIDirectDebitTransactionInformationDetails1.mmCreditInstruction,
-						FIToFIDirectDebitTransactionInformationDetails1.mmSupplementaryData);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FIToFIDirectDebitTransactionInformationDetails1.mmGroupHeader,
+						com.tools20022.repository.msg.FIToFIDirectDebitTransactionInformationDetails1.mmCreditInstruction, com.tools20022.repository.msg.FIToFIDirectDebitTransactionInformationDetails1.mmSupplementaryData);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FIToFIDirectDebitTransactionInformationDetails1";
 				definition = "Set of elements providing information specific to the individual direct debit(s).";
@@ -218,30 +220,30 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader63 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(com.tools20022.repository.msg.GroupHeader63 groupHeader) {
-		this.groupHeader = groupHeader;
+	public FIToFIDirectDebitTransactionInformationDetails1 setGroupHeader(com.tools20022.repository.msg.GroupHeader63 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "CdtInstr", required = true)
 	public List<CreditTransferTransaction9> getCreditInstruction() {
-		return creditInstruction;
+		return creditInstruction == null ? creditInstruction = new ArrayList<>() : creditInstruction;
 	}
 
-	public void setCreditInstruction(List<com.tools20022.repository.msg.CreditTransferTransaction9> creditInstruction) {
-		this.creditInstruction = creditInstruction;
+	public FIToFIDirectDebitTransactionInformationDetails1 setCreditInstruction(List<com.tools20022.repository.msg.CreditTransferTransaction9> creditInstruction) {
+		this.creditInstruction = Objects.requireNonNull(creditInstruction);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public FIToFIDirectDebitTransactionInformationDetails1 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 }

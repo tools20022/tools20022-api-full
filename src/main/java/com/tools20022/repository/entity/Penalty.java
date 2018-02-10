@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.PaymentTerms3;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Fee charged when the conditions of a contract are not met.
@@ -37,6 +38,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Adjustment
+ * Adjustment}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -45,14 +49,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * Penalty.mmPenaltyBasisAmount}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Adjustment
- * Adjustment}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,8 +69,8 @@ public class Penalty extends Adjustment {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyAndAmount penaltyBasisAmount;
 	/**
-	 * Amount used as a basis to calculate the penalty amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -103,8 +104,8 @@ public class Penalty extends Adjustment {
 	public static final MMBusinessAttribute mmPenaltyBasisAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentTerms3.mmPenaltyBasisAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Penalty.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Penalty.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PenaltyBasisAmount";
 			definition = "Amount used as a basis to calculate the penalty amount.";
@@ -125,7 +126,7 @@ public class Penalty extends Adjustment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Penalty";
 				definition = "Fee charged when the conditions of a contract are not met.";
@@ -145,7 +146,8 @@ public class Penalty extends Adjustment {
 		return penaltyBasisAmount;
 	}
 
-	public void setPenaltyBasisAmount(CurrencyAndAmount penaltyBasisAmount) {
-		this.penaltyBasisAmount = penaltyBasisAmount;
+	public Penalty setPenaltyBasisAmount(CurrencyAndAmount penaltyBasisAmount) {
+		this.penaltyBasisAmount = Objects.requireNonNull(penaltyBasisAmount);
+		return this;
 	}
 }

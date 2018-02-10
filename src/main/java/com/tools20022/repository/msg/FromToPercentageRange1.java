@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,8 +47,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,15 +59,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Range of percentage rates."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FromToPercentageRange1", propOrder = {"from", "to"})
 public class FromToPercentageRange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Fr", required = true)
 	protected PercentageRangeBoundary1 from;
 	/**
-	 * Lower boundary of a range of percentage rates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -93,7 +95,7 @@ public class FromToPercentageRange1 {
 	 */
 	public static final MMMessageAssociationEnd mmFrom = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FromToPercentageRange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FromToPercentageRange1.mmObject();
 			isDerived = false;
 			xmlTag = "Fr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -105,10 +107,11 @@ public class FromToPercentageRange1 {
 			type_lazy = () -> com.tools20022.repository.msg.PercentageRangeBoundary1.mmObject();
 		}
 	};
+	@XmlElement(name = "To", required = true)
 	protected PercentageRangeBoundary1 to;
 	/**
-	 * Upper boundary of a range of percentage rates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -135,7 +138,7 @@ public class FromToPercentageRange1 {
 	 */
 	public static final MMMessageAssociationEnd mmTo = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FromToPercentageRange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FromToPercentageRange1.mmObject();
 			isDerived = false;
 			xmlTag = "To";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,8 +154,8 @@ public class FromToPercentageRange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FromToPercentageRange1.mmFrom, FromToPercentageRange1.mmTo);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FromToPercentageRange1.mmFrom, com.tools20022.repository.msg.FromToPercentageRange1.mmTo);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FromToPercentageRange1";
 				definition = "Range of percentage rates.";
@@ -161,21 +164,21 @@ public class FromToPercentageRange1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Fr", required = true)
 	public PercentageRangeBoundary1 getFrom() {
 		return from;
 	}
 
-	public void setFrom(com.tools20022.repository.msg.PercentageRangeBoundary1 from) {
-		this.from = from;
+	public FromToPercentageRange1 setFrom(com.tools20022.repository.msg.PercentageRangeBoundary1 from) {
+		this.from = Objects.requireNonNull(from);
+		return this;
 	}
 
-	@XmlElement(name = "To", required = true)
 	public PercentageRangeBoundary1 getTo() {
 		return to;
 	}
 
-	public void setTo(com.tools20022.repository.msg.PercentageRangeBoundary1 to) {
-		this.to = to;
+	public FromToPercentageRange1 setTo(com.tools20022.repository.msg.PercentageRangeBoundary1 to) {
+		this.to = Objects.requireNonNull(to);
+		return this;
 	}
 }

@@ -20,51 +20,54 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RepurchaseTypeCode;
+import com.tools20022.repository.codeset.RepurchaseType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of repurchase transaction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType3Code#Swap
+ * RepurchaseType3Code.Swap}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType3Code#RepurchaseCall
+ * RepurchaseType3Code.RepurchaseCall}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType3Code#Pairoff
+ * RepurchaseType3Code.Pairoff}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType3Code#RepoRate
+ * RepurchaseType3Code.RepoRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType3Code#Rollover
+ * RepurchaseType3Code.Rollover}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType3Code#TopUp
+ * RepurchaseType3Code.TopUp}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType3Code#Withdrawal
+ * RepurchaseType3Code.Withdrawal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.RepurchaseType3Code#PrincipalExposureAdjustment
+ * RepurchaseType3Code.PrincipalExposureAdjustment}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.RepurchaseTypeCode
  * RepurchaseTypeCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RepurchaseType3Code#mmSwap
- * RepurchaseType3Code.mmSwap}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType3Code#mmRepurchaseCall
- * RepurchaseType3Code.mmRepurchaseCall}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType3Code#mmPairoff
- * RepurchaseType3Code.mmPairoff}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType3Code#mmRepoRate
- * RepurchaseType3Code.mmRepoRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType3Code#mmRollover
- * RepurchaseType3Code.mmRollover}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType3Code#mmTopUp
- * RepurchaseType3Code.mmTopUp}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType3Code#mmWithdrawal
- * RepurchaseType3Code.mmWithdrawal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RepurchaseType3Code#mmPrincipalExposureAdjustment
- * RepurchaseType3Code.mmPrincipalExposureAdjustment}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of repurchase transaction."</li>
  * </ul>
  */
-public class RepurchaseType3Code extends RepurchaseTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RepurchaseType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -100,11 +104,12 @@ public class RepurchaseType3Code extends RepurchaseTypeCode {
 	 * name} = "Swap"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSwap = new MMCode() {
+	public static final RepurchaseType3Code Swap = new RepurchaseType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swap";
-			owner_lazy = () -> RepurchaseType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepurchaseType3Code.mmObject();
+			codeName = RepurchaseTypeCode.Swap.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -123,11 +128,12 @@ public class RepurchaseType3Code extends RepurchaseTypeCode {
 	 * name} = "RepurchaseCall"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRepurchaseCall = new MMCode() {
+	public static final RepurchaseType3Code RepurchaseCall = new RepurchaseType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseCall";
-			owner_lazy = () -> RepurchaseType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepurchaseType3Code.mmObject();
+			codeName = RepurchaseTypeCode.RepurchaseCall.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -146,11 +152,12 @@ public class RepurchaseType3Code extends RepurchaseTypeCode {
 	 * name} = "Pairoff"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPairoff = new MMCode() {
+	public static final RepurchaseType3Code Pairoff = new RepurchaseType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pairoff";
-			owner_lazy = () -> RepurchaseType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepurchaseType3Code.mmObject();
+			codeName = RepurchaseTypeCode.Pairoff.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -169,11 +176,12 @@ public class RepurchaseType3Code extends RepurchaseTypeCode {
 	 * name} = "RepoRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRepoRate = new MMCode() {
+	public static final RepurchaseType3Code RepoRate = new RepurchaseType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepoRate";
-			owner_lazy = () -> RepurchaseType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepurchaseType3Code.mmObject();
+			codeName = RepurchaseTypeCode.RepoRate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -192,11 +200,12 @@ public class RepurchaseType3Code extends RepurchaseTypeCode {
 	 * name} = "Rollover"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRollover = new MMCode() {
+	public static final RepurchaseType3Code Rollover = new RepurchaseType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rollover";
-			owner_lazy = () -> RepurchaseType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepurchaseType3Code.mmObject();
+			codeName = RepurchaseTypeCode.Rollover.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -215,11 +224,12 @@ public class RepurchaseType3Code extends RepurchaseTypeCode {
 	 * name} = "TopUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTopUp = new MMCode() {
+	public static final RepurchaseType3Code TopUp = new RepurchaseType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TopUp";
-			owner_lazy = () -> RepurchaseType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepurchaseType3Code.mmObject();
+			codeName = RepurchaseTypeCode.TopUp.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -238,11 +248,12 @@ public class RepurchaseType3Code extends RepurchaseTypeCode {
 	 * name} = "Withdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithdrawal = new MMCode() {
+	public static final RepurchaseType3Code Withdrawal = new RepurchaseType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withdrawal";
-			owner_lazy = () -> RepurchaseType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepurchaseType3Code.mmObject();
+			codeName = RepurchaseTypeCode.Withdrawal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -261,27 +272,65 @@ public class RepurchaseType3Code extends RepurchaseTypeCode {
 	 * name} = "PrincipalExposureAdjustment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrincipalExposureAdjustment = new MMCode() {
+	public static final RepurchaseType3Code PrincipalExposureAdjustment = new RepurchaseType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrincipalExposureAdjustment";
-			owner_lazy = () -> RepurchaseType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepurchaseType3Code.mmObject();
+			codeName = RepurchaseTypeCode.PrincipalExposureAdjustment.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RepurchaseType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RepurchaseType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CADJ");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RepurchaseType3Code";
 				definition = "Specifies the type of repurchase transaction.";
-				code_lazy = () -> Arrays.asList(RepurchaseType3Code.mmSwap, RepurchaseType3Code.mmRepurchaseCall, RepurchaseType3Code.mmPairoff, RepurchaseType3Code.mmRepoRate, RepurchaseType3Code.mmRollover, RepurchaseType3Code.mmTopUp,
-						RepurchaseType3Code.mmWithdrawal, RepurchaseType3Code.mmPrincipalExposureAdjustment);
 				trace_lazy = () -> RepurchaseTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepurchaseType3Code.Swap, com.tools20022.repository.codeset.RepurchaseType3Code.RepurchaseCall,
+						com.tools20022.repository.codeset.RepurchaseType3Code.Pairoff, com.tools20022.repository.codeset.RepurchaseType3Code.RepoRate, com.tools20022.repository.codeset.RepurchaseType3Code.Rollover,
+						com.tools20022.repository.codeset.RepurchaseType3Code.TopUp, com.tools20022.repository.codeset.RepurchaseType3Code.Withdrawal, com.tools20022.repository.codeset.RepurchaseType3Code.PrincipalExposureAdjustment);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Swap.getCodeName().get(), Swap);
+		codesByName.put(RepurchaseCall.getCodeName().get(), RepurchaseCall);
+		codesByName.put(Pairoff.getCodeName().get(), Pairoff);
+		codesByName.put(RepoRate.getCodeName().get(), RepoRate);
+		codesByName.put(Rollover.getCodeName().get(), Rollover);
+		codesByName.put(TopUp.getCodeName().get(), TopUp);
+		codesByName.put(Withdrawal.getCodeName().get(), Withdrawal);
+		codesByName.put(PrincipalExposureAdjustment.getCodeName().get(), PrincipalExposureAdjustment);
+	}
+
+	public static RepurchaseType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RepurchaseType3Code[] values() {
+		RepurchaseType3Code[] values = new RepurchaseType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RepurchaseType3Code> {
+		@Override
+		public RepurchaseType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RepurchaseType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

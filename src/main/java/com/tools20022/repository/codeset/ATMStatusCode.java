@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ATMStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Required status of the ATM, parameters of the status update command.
@@ -31,19 +36,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMStatusCode#mmInService
- * ATMStatusCode.mmInService}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMStatusCode#InService
+ * ATMStatusCode.InService}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMStatusCode#OutOfService
+ * ATMStatusCode.OutOfService}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMStatusCode#InOperation
+ * ATMStatusCode.InOperation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMStatusCode#Stopped
+ * ATMStatusCode.Stopped}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMStatusCode#mmOutOfService
- * ATMStatusCode.mmOutOfService}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMStatusCode#mmInOperation
- * ATMStatusCode.mmInOperation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMStatusCode#mmStopped
- * ATMStatusCode.mmStopped}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMStatusCode#mmWaitingActivation
- * ATMStatusCode.mmWaitingActivation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMStatusCode#WaitingActivation
+ * ATMStatusCode.WaitingActivation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -60,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Required status of the ATM, parameters of the status update command."</li>
  * </ul>
  */
-public class ATMStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ATMStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,12 +101,12 @@ public class ATMStatusCode {
 	 * definition} = "Component is in service."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInService = new MMCode() {
+	public static final ATMStatusCode InService = new ATMStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InService";
 			definition = "Component is in service.";
-			owner_lazy = () -> ATMStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMStatusCode.mmObject();
 			codeName = "INSV";
 		}
 	};
@@ -127,12 +131,12 @@ public class ATMStatusCode {
 	 * definition} = "ATM out of service."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOutOfService = new MMCode() {
+	public static final ATMStatusCode OutOfService = new ATMStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfService";
 			definition = "ATM out of service.";
-			owner_lazy = () -> ATMStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMStatusCode.mmObject();
 			codeName = "OUTS";
 		}
 	};
@@ -157,12 +161,12 @@ public class ATMStatusCode {
 	 * definition} = "Component is activated and in operation."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInOperation = new MMCode() {
+	public static final ATMStatusCode InOperation = new ATMStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InOperation";
 			definition = "Component is activated and in operation.";
-			owner_lazy = () -> ATMStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMStatusCode.mmObject();
 			codeName = "OPER";
 		}
 	};
@@ -187,12 +191,12 @@ public class ATMStatusCode {
 	 * definition} = "Component has been stopped."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStopped = new MMCode() {
+	public static final ATMStatusCode Stopped = new ATMStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stopped";
 			definition = "Component has been stopped.";
-			owner_lazy = () -> ATMStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMStatusCode.mmObject();
 			codeName = "STOP";
 		}
 	};
@@ -217,27 +221,61 @@ public class ATMStatusCode {
 	 * definition} = "Component has been loaded, but not yet activated."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWaitingActivation = new MMCode() {
+	public static final ATMStatusCode WaitingActivation = new ATMStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaitingActivation";
 			definition = "Component has been loaded, but not yet activated.";
-			owner_lazy = () -> ATMStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMStatusCode.mmObject();
 			codeName = "WACT";
 		}
 	};
+	final static private LinkedHashMap<String, ATMStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ATMStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMStatusCode";
 				definition = "Required status of the ATM, parameters of the status update command.";
-				code_lazy = () -> Arrays.asList(ATMStatusCode.mmInService, ATMStatusCode.mmOutOfService, ATMStatusCode.mmInOperation, ATMStatusCode.mmStopped, ATMStatusCode.mmWaitingActivation);
 				derivation_lazy = () -> Arrays.asList(ATMStatus1Code.mmObject(), ATMStatus2Code.mmObject(), ATMStatus3Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMStatusCode.InService, com.tools20022.repository.codeset.ATMStatusCode.OutOfService, com.tools20022.repository.codeset.ATMStatusCode.InOperation,
+						com.tools20022.repository.codeset.ATMStatusCode.Stopped, com.tools20022.repository.codeset.ATMStatusCode.WaitingActivation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(InService.getCodeName().get(), InService);
+		codesByName.put(OutOfService.getCodeName().get(), OutOfService);
+		codesByName.put(InOperation.getCodeName().get(), InOperation);
+		codesByName.put(Stopped.getCodeName().get(), Stopped);
+		codesByName.put(WaitingActivation.getCodeName().get(), WaitingActivation);
+	}
+
+	public static ATMStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ATMStatusCode[] values() {
+		ATMStatusCode[] values = new ATMStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ATMStatusCode> {
+		@Override
+		public ATMStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ATMStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

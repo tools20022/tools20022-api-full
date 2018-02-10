@@ -28,9 +28,8 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOLatestversion;
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -64,25 +63,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestversionsubsetvariant
- * SecuritiesSettlementLatestversionsubsetvariant}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOLatestversion
- * SettlementAndReconciliationISO15022VariantsISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants
- * SettlementandReconciliationMaintenance20162017ISO15022Variants}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SctiesFincgInstr"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -144,9 +124,68 @@ import javax.xml.bind.annotation.*;
  * SecuritiesFinancingInstruction002V07.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOLatestversion
+ * SettlementAndReconciliationISO15022VariantsISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants
+ * SettlementandReconciliationMaintenance20162017ISO15022Variants}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SctiesFincgInstr"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestversionsubsetvariant
+ * SecuritiesSettlementLatestversionsubsetvariant}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.033.002.07}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementAmountRule#forSecuritiesFinancingInstruction002V07
+ * ConstraintSettlementAmountRule.forSecuritiesFinancingInstruction002V07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSellerSSI2Rule#forSecuritiesFinancingInstruction002V07
+ * ConstraintSellerSSI2Rule.forSecuritiesFinancingInstruction002V07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBuyerSSI2Rule#forSecuritiesFinancingInstruction002V07
+ * ConstraintBuyerSSI2Rule.forSecuritiesFinancingInstruction002V07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Part1Rule#forSecuritiesFinancingInstruction002V07
+ * ConstraintDeliveringDepositoryAndParty1Part1Rule.
+ * forSecuritiesFinancingInstruction002V07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Part1Rule#forSecuritiesFinancingInstruction002V07
+ * ConstraintReceivingDepositoryAndParty1Part1Rule.
+ * forSecuritiesFinancingInstruction002V07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Part2Rule#forSecuritiesFinancingInstruction002V07
+ * ConstraintDeliveringDepositoryAndParty1Part2Rule.
+ * forSecuritiesFinancingInstruction002V07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Part2Rule#forSecuritiesFinancingInstruction002V07
+ * ConstraintReceivingDepositoryAndParty1Part2Rule.
+ * forSecuritiesFinancingInstruction002V07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesFinancingInstruction002V07
+ * ConstraintSecuritiesMarketPracticeGroupGuideline.
+ * forSecuritiesFinancingInstruction002V07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSellerSSI1Rule#forSecuritiesFinancingInstruction002V07
+ * ConstraintSellerSSI1Rule.forSecuritiesFinancingInstruction002V07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBuyerSSI1Rule#forSecuritiesFinancingInstruction002V07
+ * ConstraintBuyerSSI1Rule.forSecuritiesFinancingInstruction002V07}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -163,18 +202,18 @@ import javax.xml.bind.annotation.*;
  * SecuritiesFinancingInstruction002V06}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesFinancingInstruction002V07", propOrder = {"transactionIdentification", "transactionTypeAndAdditionalParameters", "numberCounts", "linkages", "tradeDetails", "financialInstrumentIdentification",
 		"financialInstrumentAttributes", "quantityAndAccountDetails", "securitiesFinancingDetails", "settlementParameters", "standingSettlementInstructionDetails", "deliveringSettlementParties", "receivingSettlementParties", "cashParties",
 		"openingSettlementAmount", "otherAmounts", "otherBusinessParties", "supplementaryData"})
 public class SecuritiesFinancingInstruction002V07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId", required = true)
 	protected RestrictedFINXMax16Text transactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as know by the instructing
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -216,12 +255,11 @@ public class SecuritiesFinancingInstruction002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "TxTpAndAddtlParams", required = true)
 	protected TransactionTypeAndAdditionalParameters18 transactionTypeAndAdditionalParameters;
 	/**
-	 * Securities financing transaction identification information, type
-	 * (repurchase agreement, reverse repurchase agreement, securities lending
-	 * or securities borrowing) and other parameters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -263,10 +301,11 @@ public class SecuritiesFinancingInstruction002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "NbCounts")
 	protected NumberCount1Choice numberCounts;
 	/**
-	 * Count of the number of transactions linked.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -306,11 +345,11 @@ public class SecuritiesFinancingInstruction002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "Lnkgs")
 	protected List<Linkages43> linkages;
 	/**
-	 * Link to another transaction that must be processed after, before or at
-	 * the same time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -350,10 +389,11 @@ public class SecuritiesFinancingInstruction002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "TradDtls", required = true)
 	protected SecuritiesTradeDetails59 tradeDetails;
 	/**
-	 * Details of the securities financing deal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -393,11 +433,11 @@ public class SecuritiesFinancingInstruction002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "FinInstrmId", required = true)
 	protected SecurityIdentification20 financialInstrumentIdentification;
 	/**
-	 * Financial instrument representing a sum of rights of the investor
-	 * vis-a-vis the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -439,10 +479,11 @@ public class SecuritiesFinancingInstruction002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "FinInstrmAttrbts")
 	protected FinancialInstrumentAttributes78 financialInstrumentAttributes;
 	/**
-	 * Elements characterising a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -482,10 +523,11 @@ public class SecuritiesFinancingInstruction002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "QtyAndAcctDtls", required = true)
 	protected QuantityAndAccount56 quantityAndAccountDetails;
 	/**
-	 * Details related to the account and quantity involved in the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -527,10 +569,11 @@ public class SecuritiesFinancingInstruction002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "SctiesFincgDtls", required = true)
 	protected SecuritiesFinancingTransactionDetails30 securitiesFinancingDetails;
 	/**
-	 * Details for the closing of the securities financing transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -571,13 +614,11 @@ public class SecuritiesFinancingInstruction002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "SttlmParams")
 	protected SettlementDetails105 settlementParameters;
 	/**
-	 * Parameters which explicitly state the conditions that must be fulfilled
-	 * before a particular transaction of a financial instrument can be settled.
-	 * These parameters are defined by the instructing party in compliance with
-	 * settlement rules in the market the transaction will settle in.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -619,11 +660,11 @@ public class SecuritiesFinancingInstruction002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "StgSttlmInstrDtls")
 	protected StandingSettlementInstruction12 standingSettlementInstructionDetails;
 	/**
-	 * Specifies what settlement standing instruction database is to be used to
-	 * derive the settlement parties involved in the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -665,10 +706,11 @@ public class SecuritiesFinancingInstruction002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "DlvrgSttlmPties")
 	protected SettlementParties44 deliveringSettlementParties;
 	/**
-	 * Identifies the chain of delivering settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -708,10 +750,11 @@ public class SecuritiesFinancingInstruction002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "RcvgSttlmPties")
 	protected SettlementParties44 receivingSettlementParties;
 	/**
-	 * Identifies the chain of receiving settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -751,11 +794,11 @@ public class SecuritiesFinancingInstruction002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "CshPties")
 	protected CashParties30 cashParties;
 	/**
-	 * Cash parties involved in the transaction if different for the securities
-	 * settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -796,11 +839,11 @@ public class SecuritiesFinancingInstruction002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "OpngSttlmAmt")
 	protected AmountAndDirection60 openingSettlementAmount;
 	/**
-	 * Total amount of money to be paid or received in exchange for the
-	 * securities at the opening of a securities financing transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -842,10 +885,11 @@ public class SecuritiesFinancingInstruction002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrAmts")
 	protected OtherAmounts35 otherAmounts;
 	/**
-	 * Other amounts than the settlement amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -884,10 +928,11 @@ public class SecuritiesFinancingInstruction002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrBizPties")
 	protected OtherParties29 otherBusinessParties;
 	/**
-	 * Other business parties relevant to the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -926,11 +971,11 @@ public class SecuritiesFinancingInstruction002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -975,6 +1020,14 @@ public class SecuritiesFinancingInstruction002V07 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementAmountRule.forSecuritiesFinancingInstruction002V07,
+						com.tools20022.repository.constraints.ConstraintSellerSSI2Rule.forSecuritiesFinancingInstruction002V07, com.tools20022.repository.constraints.ConstraintBuyerSSI2Rule.forSecuritiesFinancingInstruction002V07,
+						com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Part1Rule.forSecuritiesFinancingInstruction002V07,
+						com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Part1Rule.forSecuritiesFinancingInstruction002V07,
+						com.tools20022.repository.constraints.ConstraintDeliveringDepositoryAndParty1Part2Rule.forSecuritiesFinancingInstruction002V07,
+						com.tools20022.repository.constraints.ConstraintReceivingDepositoryAndParty1Part2Rule.forSecuritiesFinancingInstruction002V07,
+						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesFinancingInstruction002V07,
+						com.tools20022.repository.constraints.ConstraintSellerSSI1Rule.forSecuritiesFinancingInstruction002V07, com.tools20022.repository.constraints.ConstraintBuyerSSI1Rule.forSecuritiesFinancingInstruction002V07);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesFinancingInstruction002V07";
 				definition = "Scope\r\nAn account owner sends a SecuritiesFinancingInstruction to a securities financing transaction account servicer to notify the securities financing transaction account servicer of the details of a repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing transaction to allow the account servicer to manage the settlement and follow-up of the opening and closing leg of the transaction.\r\nThe account owner/servicer relationship may be:\r\n- a global custodian which has an account with a local custodian, or\r\n- an investment management institution which manage a fund account opened at a custodian, or\r\n- a broker which has an account with a custodian, or\r\n- a central securities depository participant which has an account with a central securities depository, or\r\n- a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure, or\r\n- a central counterparty or a stock exchange or a trade matching utility which need to instruct the settlement of securities financing transactions to a central securities depository or another settlement market infrastructure.\r\n\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.";
@@ -1011,169 +1064,169 @@ public class SecuritiesFinancingInstruction002V07 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public RestrictedFINXMax16Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(RestrictedFINXMax16Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public SecuritiesFinancingInstruction002V07 setTransactionIdentification(RestrictedFINXMax16Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TxTpAndAddtlParams", required = true)
 	public TransactionTypeAndAdditionalParameters18 getTransactionTypeAndAdditionalParameters() {
 		return transactionTypeAndAdditionalParameters;
 	}
 
-	public void setTransactionTypeAndAdditionalParameters(TransactionTypeAndAdditionalParameters18 transactionTypeAndAdditionalParameters) {
-		this.transactionTypeAndAdditionalParameters = transactionTypeAndAdditionalParameters;
+	public SecuritiesFinancingInstruction002V07 setTransactionTypeAndAdditionalParameters(TransactionTypeAndAdditionalParameters18 transactionTypeAndAdditionalParameters) {
+		this.transactionTypeAndAdditionalParameters = Objects.requireNonNull(transactionTypeAndAdditionalParameters);
+		return this;
 	}
 
-	@XmlElement(name = "NbCounts")
-	public NumberCount1Choice getNumberCounts() {
-		return numberCounts;
+	public Optional<NumberCount1Choice> getNumberCounts() {
+		return numberCounts == null ? Optional.empty() : Optional.of(numberCounts);
 	}
 
-	public void setNumberCounts(NumberCount1Choice numberCounts) {
+	public SecuritiesFinancingInstruction002V07 setNumberCounts(NumberCount1Choice numberCounts) {
 		this.numberCounts = numberCounts;
+		return this;
 	}
 
-	@XmlElement(name = "Lnkgs")
 	public List<Linkages43> getLinkages() {
-		return linkages;
+		return linkages == null ? linkages = new ArrayList<>() : linkages;
 	}
 
-	public void setLinkages(List<Linkages43> linkages) {
-		this.linkages = linkages;
+	public SecuritiesFinancingInstruction002V07 setLinkages(List<Linkages43> linkages) {
+		this.linkages = Objects.requireNonNull(linkages);
+		return this;
 	}
 
-	@XmlElement(name = "TradDtls", required = true)
 	public SecuritiesTradeDetails59 getTradeDetails() {
 		return tradeDetails;
 	}
 
-	public void setTradeDetails(SecuritiesTradeDetails59 tradeDetails) {
-		this.tradeDetails = tradeDetails;
+	public SecuritiesFinancingInstruction002V07 setTradeDetails(SecuritiesTradeDetails59 tradeDetails) {
+		this.tradeDetails = Objects.requireNonNull(tradeDetails);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification20 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
 
-	public void setFinancialInstrumentIdentification(SecurityIdentification20 financialInstrumentIdentification) {
-		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	public SecuritiesFinancingInstruction002V07 setFinancialInstrumentIdentification(SecurityIdentification20 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmAttrbts")
-	public FinancialInstrumentAttributes78 getFinancialInstrumentAttributes() {
-		return financialInstrumentAttributes;
+	public Optional<FinancialInstrumentAttributes78> getFinancialInstrumentAttributes() {
+		return financialInstrumentAttributes == null ? Optional.empty() : Optional.of(financialInstrumentAttributes);
 	}
 
-	public void setFinancialInstrumentAttributes(FinancialInstrumentAttributes78 financialInstrumentAttributes) {
+	public SecuritiesFinancingInstruction002V07 setFinancialInstrumentAttributes(FinancialInstrumentAttributes78 financialInstrumentAttributes) {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
+		return this;
 	}
 
-	@XmlElement(name = "QtyAndAcctDtls", required = true)
 	public QuantityAndAccount56 getQuantityAndAccountDetails() {
 		return quantityAndAccountDetails;
 	}
 
-	public void setQuantityAndAccountDetails(QuantityAndAccount56 quantityAndAccountDetails) {
-		this.quantityAndAccountDetails = quantityAndAccountDetails;
+	public SecuritiesFinancingInstruction002V07 setQuantityAndAccountDetails(QuantityAndAccount56 quantityAndAccountDetails) {
+		this.quantityAndAccountDetails = Objects.requireNonNull(quantityAndAccountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesFincgDtls", required = true)
 	public SecuritiesFinancingTransactionDetails30 getSecuritiesFinancingDetails() {
 		return securitiesFinancingDetails;
 	}
 
-	public void setSecuritiesFinancingDetails(SecuritiesFinancingTransactionDetails30 securitiesFinancingDetails) {
-		this.securitiesFinancingDetails = securitiesFinancingDetails;
+	public SecuritiesFinancingInstruction002V07 setSecuritiesFinancingDetails(SecuritiesFinancingTransactionDetails30 securitiesFinancingDetails) {
+		this.securitiesFinancingDetails = Objects.requireNonNull(securitiesFinancingDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmParams")
-	public SettlementDetails105 getSettlementParameters() {
-		return settlementParameters;
+	public Optional<SettlementDetails105> getSettlementParameters() {
+		return settlementParameters == null ? Optional.empty() : Optional.of(settlementParameters);
 	}
 
-	public void setSettlementParameters(SettlementDetails105 settlementParameters) {
+	public SecuritiesFinancingInstruction002V07 setSettlementParameters(SettlementDetails105 settlementParameters) {
 		this.settlementParameters = settlementParameters;
+		return this;
 	}
 
-	@XmlElement(name = "StgSttlmInstrDtls")
-	public StandingSettlementInstruction12 getStandingSettlementInstructionDetails() {
-		return standingSettlementInstructionDetails;
+	public Optional<StandingSettlementInstruction12> getStandingSettlementInstructionDetails() {
+		return standingSettlementInstructionDetails == null ? Optional.empty() : Optional.of(standingSettlementInstructionDetails);
 	}
 
-	public void setStandingSettlementInstructionDetails(StandingSettlementInstruction12 standingSettlementInstructionDetails) {
+	public SecuritiesFinancingInstruction002V07 setStandingSettlementInstructionDetails(StandingSettlementInstruction12 standingSettlementInstructionDetails) {
 		this.standingSettlementInstructionDetails = standingSettlementInstructionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "DlvrgSttlmPties")
-	public SettlementParties44 getDeliveringSettlementParties() {
-		return deliveringSettlementParties;
+	public Optional<SettlementParties44> getDeliveringSettlementParties() {
+		return deliveringSettlementParties == null ? Optional.empty() : Optional.of(deliveringSettlementParties);
 	}
 
-	public void setDeliveringSettlementParties(SettlementParties44 deliveringSettlementParties) {
+	public SecuritiesFinancingInstruction002V07 setDeliveringSettlementParties(SettlementParties44 deliveringSettlementParties) {
 		this.deliveringSettlementParties = deliveringSettlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "RcvgSttlmPties")
-	public SettlementParties44 getReceivingSettlementParties() {
-		return receivingSettlementParties;
+	public Optional<SettlementParties44> getReceivingSettlementParties() {
+		return receivingSettlementParties == null ? Optional.empty() : Optional.of(receivingSettlementParties);
 	}
 
-	public void setReceivingSettlementParties(SettlementParties44 receivingSettlementParties) {
+	public SecuritiesFinancingInstruction002V07 setReceivingSettlementParties(SettlementParties44 receivingSettlementParties) {
 		this.receivingSettlementParties = receivingSettlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "CshPties")
-	public CashParties30 getCashParties() {
-		return cashParties;
+	public Optional<CashParties30> getCashParties() {
+		return cashParties == null ? Optional.empty() : Optional.of(cashParties);
 	}
 
-	public void setCashParties(CashParties30 cashParties) {
+	public SecuritiesFinancingInstruction002V07 setCashParties(CashParties30 cashParties) {
 		this.cashParties = cashParties;
+		return this;
 	}
 
-	@XmlElement(name = "OpngSttlmAmt")
-	public AmountAndDirection60 getOpeningSettlementAmount() {
-		return openingSettlementAmount;
+	public Optional<AmountAndDirection60> getOpeningSettlementAmount() {
+		return openingSettlementAmount == null ? Optional.empty() : Optional.of(openingSettlementAmount);
 	}
 
-	public void setOpeningSettlementAmount(AmountAndDirection60 openingSettlementAmount) {
+	public SecuritiesFinancingInstruction002V07 setOpeningSettlementAmount(AmountAndDirection60 openingSettlementAmount) {
 		this.openingSettlementAmount = openingSettlementAmount;
+		return this;
 	}
 
-	@XmlElement(name = "OthrAmts")
-	public OtherAmounts35 getOtherAmounts() {
-		return otherAmounts;
+	public Optional<OtherAmounts35> getOtherAmounts() {
+		return otherAmounts == null ? Optional.empty() : Optional.of(otherAmounts);
 	}
 
-	public void setOtherAmounts(OtherAmounts35 otherAmounts) {
+	public SecuritiesFinancingInstruction002V07 setOtherAmounts(OtherAmounts35 otherAmounts) {
 		this.otherAmounts = otherAmounts;
+		return this;
 	}
 
-	@XmlElement(name = "OthrBizPties")
-	public OtherParties29 getOtherBusinessParties() {
-		return otherBusinessParties;
+	public Optional<OtherParties29> getOtherBusinessParties() {
+		return otherBusinessParties == null ? Optional.empty() : Optional.of(otherBusinessParties);
 	}
 
-	public void setOtherBusinessParties(OtherParties29 otherBusinessParties) {
+	public SecuritiesFinancingInstruction002V07 setOtherBusinessParties(OtherParties29 otherBusinessParties) {
 		this.otherBusinessParties = otherBusinessParties;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecuritiesFinancingInstruction002V07 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.033.07.07")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.033.002.07")
 	static public class Document {
 		@XmlElement(name = "SctiesFincgInstr", required = true)
 		public SecuritiesFinancingInstruction002V07 messageBody;

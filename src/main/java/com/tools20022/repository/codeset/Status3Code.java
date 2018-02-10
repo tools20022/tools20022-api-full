@@ -20,41 +20,45 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.StatusCode;
+import com.tools20022.repository.codeset.Status3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of an instruction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.StatusCode StatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Status3Code#mmCancelled
- * Status3Code.mmCancelled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status3Code#mmAccepted
- * Status3Code.mmAccepted}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status3Code#mmNotReceived
- * Status3Code.mmNotReceived}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status3Code#mmCompleted
- * Status3Code.mmCompleted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status3Code#Cancelled
+ * Status3Code.Cancelled}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status3Code#Accepted
+ * Status3Code.Accepted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status3Code#NotReceived
+ * Status3Code.NotReceived}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status3Code#Completed
+ * Status3Code.Completed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Status3Code#mmReceivedByIssuerOrRegistrar
- * Status3Code.mmReceivedByIssuerOrRegistrar}</li>
+ * {@linkplain com.tools20022.repository.codeset.Status3Code#ReceivedByIssuerOrRegistrar
+ * Status3Code.ReceivedByIssuerOrRegistrar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Status3Code#mmStandingInstruction
- * Status3Code.mmStandingInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.Status3Code#StandingInstruction
+ * Status3Code.StandingInstruction}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.StatusCode StatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of an instruction."</li>
  * </ul>
  */
-public class Status3Code extends StatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Status3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class Status3Code extends StatusCode {
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelled = new MMCode() {
+	public static final Status3Code Cancelled = new Status3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
-			owner_lazy = () -> Status3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status3Code.mmObject();
+			codeName = StatusCode.Cancelled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -111,11 +117,12 @@ public class Status3Code extends StatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final Status3Code Accepted = new Status3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> Status3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status3Code.mmObject();
+			codeName = StatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,11 +140,12 @@ public class Status3Code extends StatusCode {
 	 * name} = "NotReceived"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotReceived = new MMCode() {
+	public static final Status3Code NotReceived = new Status3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotReceived";
-			owner_lazy = () -> Status3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status3Code.mmObject();
+			codeName = StatusCode.NotReceived.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -155,11 +163,12 @@ public class Status3Code extends StatusCode {
 	 * name} = "Completed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompleted = new MMCode() {
+	public static final Status3Code Completed = new Status3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
-			owner_lazy = () -> Status3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status3Code.mmObject();
+			codeName = StatusCode.Completed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -177,11 +186,12 @@ public class Status3Code extends StatusCode {
 	 * name} = "ReceivedByIssuerOrRegistrar"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceivedByIssuerOrRegistrar = new MMCode() {
+	public static final Status3Code ReceivedByIssuerOrRegistrar = new Status3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedByIssuerOrRegistrar";
-			owner_lazy = () -> Status3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status3Code.mmObject();
+			codeName = StatusCode.ReceivedByIssuerOrRegistrar.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -199,26 +209,62 @@ public class Status3Code extends StatusCode {
 	 * name} = "StandingInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStandingInstruction = new MMCode() {
+	public static final Status3Code StandingInstruction = new Status3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstruction";
-			owner_lazy = () -> Status3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status3Code.mmObject();
+			codeName = StatusCode.StandingInstruction.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Status3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Status3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CAND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status3Code";
 				definition = "Specifies the status of an instruction.";
-				code_lazy = () -> Arrays.asList(Status3Code.mmCancelled, Status3Code.mmAccepted, Status3Code.mmNotReceived, Status3Code.mmCompleted, Status3Code.mmReceivedByIssuerOrRegistrar, Status3Code.mmStandingInstruction);
 				trace_lazy = () -> StatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Status3Code.Cancelled, com.tools20022.repository.codeset.Status3Code.Accepted, com.tools20022.repository.codeset.Status3Code.NotReceived,
+						com.tools20022.repository.codeset.Status3Code.Completed, com.tools20022.repository.codeset.Status3Code.ReceivedByIssuerOrRegistrar, com.tools20022.repository.codeset.Status3Code.StandingInstruction);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Cancelled.getCodeName().get(), Cancelled);
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+		codesByName.put(NotReceived.getCodeName().get(), NotReceived);
+		codesByName.put(Completed.getCodeName().get(), Completed);
+		codesByName.put(ReceivedByIssuerOrRegistrar.getCodeName().get(), ReceivedByIssuerOrRegistrar);
+		codesByName.put(StandingInstruction.getCodeName().get(), StandingInstruction);
+	}
+
+	public static Status3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Status3Code[] values() {
+		Status3Code[] values = new Status3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Status3Code> {
+		@Override
+		public Status3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Status3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -26,9 +26,11 @@ import com.tools20022.repository.entity.CommercialTrade;
 import com.tools20022.repository.entity.Invoice;
 import com.tools20022.repository.entity.PurchaseOrder;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -75,8 +77,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,16 +91,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LineItem6", propOrder = {"lineItemDetails", "orderedLineItemsTotalAmount", "acceptedLineItemsTotalAmount", "outstandingLineItemsTotalAmount", "pendingLineItemsTotalAmount", "orderedTotalNetAmount",
 		"acceptedTotalNetAmount", "outstandingTotalNetAmount", "pendingTotalNetAmount"})
 public class LineItem6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LineItmDtls", required = true)
 	protected List<com.tools20022.repository.msg.LineItemDetails5> lineItemDetails;
 	/**
-	 * Calculated information about the goods of the underlying transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -130,7 +133,7 @@ public class LineItem6 {
 	public static final MMMessageAssociationEnd mmLineItemDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmLineItem;
-			componentContext_lazy = () -> LineItem6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem6.mmObject();
 			isDerived = false;
 			xmlTag = "LineItmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,10 +144,11 @@ public class LineItem6 {
 			type_lazy = () -> com.tools20022.repository.msg.LineItemDetails5.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrdLineItmsTtlAmt", required = true)
 	protected CurrencyAndAmount orderedLineItemsTotalAmount;
 	/**
-	 * Line items total amount as indicated in the baseline.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,7 +181,7 @@ public class LineItem6 {
 	public static final MMMessageAttribute mmOrderedLineItemsTotalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PurchaseOrder.mmTotalAmount;
-			componentContext_lazy = () -> LineItem6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem6.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrdLineItmsTtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,10 +192,11 @@ public class LineItem6 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "AccptdLineItmsTtlAmt", required = true)
 	protected CurrencyAndAmount acceptedLineItemsTotalAmount;
 	/**
-	 * Line items total amount accepted by a data set submission(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,7 +230,7 @@ public class LineItem6 {
 	public static final MMMessageAttribute mmAcceptedLineItemsTotalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CommercialTrade.mmTotalAcceptedAmount;
-			componentContext_lazy = () -> LineItem6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem6.mmObject();
 			isDerived = false;
 			xmlTag = "AccptdLineItmsTtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,10 +241,11 @@ public class LineItem6 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "OutsdngLineItmsTtlAmt", required = true)
 	protected CurrencyAndAmount outstandingLineItemsTotalAmount;
 	/**
-	 * Difference between the ordered and the accepted line items total amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -268,7 +274,7 @@ public class LineItem6 {
 	 */
 	public static final MMMessageAttribute mmOutstandingLineItemsTotalAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LineItem6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem6.mmObject();
 			isDerived = false;
 			xmlTag = "OutsdngLineItmsTtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,11 +285,11 @@ public class LineItem6 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "PdgLineItmsTtlAmt", required = true)
 	protected CurrencyAndAmount pendingLineItemsTotalAmount;
 	/**
-	 * Line item total amount for which a mismatched data set has been submitted
-	 * and has not yet been accepted or rejected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -312,7 +318,7 @@ public class LineItem6 {
 	 */
 	public static final MMMessageAttribute mmPendingLineItemsTotalAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LineItem6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem6.mmObject();
 			isDerived = false;
 			xmlTag = "PdgLineItmsTtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -323,10 +329,11 @@ public class LineItem6 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrdTtlNetAmt", required = true)
 	protected CurrencyAndAmount orderedTotalNetAmount;
 	/**
-	 * Total net amount as indicated in the baseline.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -359,7 +366,7 @@ public class LineItem6 {
 	public static final MMMessageAttribute mmOrderedTotalNetAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmTotalNetAmount;
-			componentContext_lazy = () -> LineItem6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem6.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrdTtlNetAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -370,10 +377,11 @@ public class LineItem6 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "AccptdTtlNetAmt", required = true)
 	protected CurrencyAndAmount acceptedTotalNetAmount;
 	/**
-	 * Total net amount accepted by a data set submission.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -406,7 +414,7 @@ public class LineItem6 {
 	public static final MMMessageAttribute mmAcceptedTotalNetAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmTotalInvoiceAmount;
-			componentContext_lazy = () -> LineItem6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem6.mmObject();
 			isDerived = false;
 			xmlTag = "AccptdTtlNetAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -417,11 +425,11 @@ public class LineItem6 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "OutsdngTtlNetAmt", required = true)
 	protected CurrencyAndAmount outstandingTotalNetAmount;
 	/**
-	 * Total net amount for which a mismatched data set has been submitted and
-	 * has not yet been accepted or rejected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -450,7 +458,7 @@ public class LineItem6 {
 	 */
 	public static final MMMessageAttribute mmOutstandingTotalNetAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LineItem6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem6.mmObject();
 			isDerived = false;
 			xmlTag = "OutsdngTtlNetAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -461,10 +469,11 @@ public class LineItem6 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "PdgTtlNetAmt", required = true)
 	protected CurrencyAndAmount pendingTotalNetAmount;
 	/**
-	 * Difference between the ordered and the accepted total net amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -492,7 +501,7 @@ public class LineItem6 {
 	 */
 	public static final MMMessageAttribute mmPendingTotalNetAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LineItem6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem6.mmObject();
 			isDerived = false;
 			xmlTag = "PdgTtlNetAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -507,9 +516,11 @@ public class LineItem6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LineItem6.mmLineItemDetails, LineItem6.mmOrderedLineItemsTotalAmount, LineItem6.mmAcceptedLineItemsTotalAmount, LineItem6.mmOutstandingLineItemsTotalAmount,
-						LineItem6.mmPendingLineItemsTotalAmount, LineItem6.mmOrderedTotalNetAmount, LineItem6.mmAcceptedTotalNetAmount, LineItem6.mmOutstandingTotalNetAmount, LineItem6.mmPendingTotalNetAmount);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem6.mmLineItemDetails, com.tools20022.repository.msg.LineItem6.mmOrderedLineItemsTotalAmount,
+						com.tools20022.repository.msg.LineItem6.mmAcceptedLineItemsTotalAmount, com.tools20022.repository.msg.LineItem6.mmOutstandingLineItemsTotalAmount,
+						com.tools20022.repository.msg.LineItem6.mmPendingLineItemsTotalAmount, com.tools20022.repository.msg.LineItem6.mmOrderedTotalNetAmount, com.tools20022.repository.msg.LineItem6.mmAcceptedTotalNetAmount,
+						com.tools20022.repository.msg.LineItem6.mmOutstandingTotalNetAmount, com.tools20022.repository.msg.LineItem6.mmPendingTotalNetAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LineItem6";
 				definition = "Calculation of the current situation of a baseline as a result of the submission of a commercial data set.";
@@ -518,84 +529,84 @@ public class LineItem6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LineItmDtls", required = true)
 	public List<LineItemDetails5> getLineItemDetails() {
-		return lineItemDetails;
+		return lineItemDetails == null ? lineItemDetails = new ArrayList<>() : lineItemDetails;
 	}
 
-	public void setLineItemDetails(List<com.tools20022.repository.msg.LineItemDetails5> lineItemDetails) {
-		this.lineItemDetails = lineItemDetails;
+	public LineItem6 setLineItemDetails(List<com.tools20022.repository.msg.LineItemDetails5> lineItemDetails) {
+		this.lineItemDetails = Objects.requireNonNull(lineItemDetails);
+		return this;
 	}
 
-	@XmlElement(name = "OrdrdLineItmsTtlAmt", required = true)
 	public CurrencyAndAmount getOrderedLineItemsTotalAmount() {
 		return orderedLineItemsTotalAmount;
 	}
 
-	public void setOrderedLineItemsTotalAmount(CurrencyAndAmount orderedLineItemsTotalAmount) {
-		this.orderedLineItemsTotalAmount = orderedLineItemsTotalAmount;
+	public LineItem6 setOrderedLineItemsTotalAmount(CurrencyAndAmount orderedLineItemsTotalAmount) {
+		this.orderedLineItemsTotalAmount = Objects.requireNonNull(orderedLineItemsTotalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "AccptdLineItmsTtlAmt", required = true)
 	public CurrencyAndAmount getAcceptedLineItemsTotalAmount() {
 		return acceptedLineItemsTotalAmount;
 	}
 
-	public void setAcceptedLineItemsTotalAmount(CurrencyAndAmount acceptedLineItemsTotalAmount) {
-		this.acceptedLineItemsTotalAmount = acceptedLineItemsTotalAmount;
+	public LineItem6 setAcceptedLineItemsTotalAmount(CurrencyAndAmount acceptedLineItemsTotalAmount) {
+		this.acceptedLineItemsTotalAmount = Objects.requireNonNull(acceptedLineItemsTotalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "OutsdngLineItmsTtlAmt", required = true)
 	public CurrencyAndAmount getOutstandingLineItemsTotalAmount() {
 		return outstandingLineItemsTotalAmount;
 	}
 
-	public void setOutstandingLineItemsTotalAmount(CurrencyAndAmount outstandingLineItemsTotalAmount) {
-		this.outstandingLineItemsTotalAmount = outstandingLineItemsTotalAmount;
+	public LineItem6 setOutstandingLineItemsTotalAmount(CurrencyAndAmount outstandingLineItemsTotalAmount) {
+		this.outstandingLineItemsTotalAmount = Objects.requireNonNull(outstandingLineItemsTotalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "PdgLineItmsTtlAmt", required = true)
 	public CurrencyAndAmount getPendingLineItemsTotalAmount() {
 		return pendingLineItemsTotalAmount;
 	}
 
-	public void setPendingLineItemsTotalAmount(CurrencyAndAmount pendingLineItemsTotalAmount) {
-		this.pendingLineItemsTotalAmount = pendingLineItemsTotalAmount;
+	public LineItem6 setPendingLineItemsTotalAmount(CurrencyAndAmount pendingLineItemsTotalAmount) {
+		this.pendingLineItemsTotalAmount = Objects.requireNonNull(pendingLineItemsTotalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "OrdrdTtlNetAmt", required = true)
 	public CurrencyAndAmount getOrderedTotalNetAmount() {
 		return orderedTotalNetAmount;
 	}
 
-	public void setOrderedTotalNetAmount(CurrencyAndAmount orderedTotalNetAmount) {
-		this.orderedTotalNetAmount = orderedTotalNetAmount;
+	public LineItem6 setOrderedTotalNetAmount(CurrencyAndAmount orderedTotalNetAmount) {
+		this.orderedTotalNetAmount = Objects.requireNonNull(orderedTotalNetAmount);
+		return this;
 	}
 
-	@XmlElement(name = "AccptdTtlNetAmt", required = true)
 	public CurrencyAndAmount getAcceptedTotalNetAmount() {
 		return acceptedTotalNetAmount;
 	}
 
-	public void setAcceptedTotalNetAmount(CurrencyAndAmount acceptedTotalNetAmount) {
-		this.acceptedTotalNetAmount = acceptedTotalNetAmount;
+	public LineItem6 setAcceptedTotalNetAmount(CurrencyAndAmount acceptedTotalNetAmount) {
+		this.acceptedTotalNetAmount = Objects.requireNonNull(acceptedTotalNetAmount);
+		return this;
 	}
 
-	@XmlElement(name = "OutsdngTtlNetAmt", required = true)
 	public CurrencyAndAmount getOutstandingTotalNetAmount() {
 		return outstandingTotalNetAmount;
 	}
 
-	public void setOutstandingTotalNetAmount(CurrencyAndAmount outstandingTotalNetAmount) {
-		this.outstandingTotalNetAmount = outstandingTotalNetAmount;
+	public LineItem6 setOutstandingTotalNetAmount(CurrencyAndAmount outstandingTotalNetAmount) {
+		this.outstandingTotalNetAmount = Objects.requireNonNull(outstandingTotalNetAmount);
+		return this;
 	}
 
-	@XmlElement(name = "PdgTtlNetAmt", required = true)
 	public CurrencyAndAmount getPendingTotalNetAmount() {
 		return pendingTotalNetAmount;
 	}
 
-	public void setPendingTotalNetAmount(CurrencyAndAmount pendingTotalNetAmount) {
-		this.pendingTotalNetAmount = pendingTotalNetAmount;
+	public LineItem6 setPendingTotalNetAmount(CurrencyAndAmount pendingTotalNetAmount) {
+		this.pendingTotalNetAmount = Objects.requireNonNull(pendingTotalNetAmount);
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -27,6 +28,7 @@ import com.tools20022.repository.entity.CrossTrade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides details about the order to be cancelled."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CrossOrder2", propOrder = {"crossType", "prioritisation", "buySideDetails", "sellSideDetails", "cancellationDetails"})
 public class CrossOrder2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CrossTp", required = true)
 	protected CrossType1Code crossType;
 	/**
-	 * Type of cross being submitted to a market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,6 +102,9 @@ public class CrossOrder2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CrossTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 549</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -112,9 +118,10 @@ public class CrossOrder2 {
 	public static final MMMessageAttribute mmCrossType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CrossTrade.mmCrossType;
-			componentContext_lazy = () -> CrossOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "CrossTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "549"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossType";
 			definition = "Type of cross being submitted to a market.";
@@ -123,15 +130,11 @@ public class CrossOrder2 {
 			simpleType_lazy = () -> CrossType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtistn", required = true)
 	protected Prioritisation1Code prioritisation;
 	/**
-	 * Indicates if one side or the other of a cross order should be
-	 * prioritized. The definition of prioritization is left to the market. In
-	 * some markets prioritization means which side of the cross order is
-	 * applied to the market first. In other markets, prioritization may mean
-	 * that the prioritized side is fully executed (sometimes referred to as the
-	 * side being protected).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,6 +154,9 @@ public class CrossOrder2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Prtistn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 550</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -166,9 +172,10 @@ public class CrossOrder2 {
 	public static final MMMessageAttribute mmPrioritisation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CrossTrade.mmPrioritisation;
-			componentContext_lazy = () -> CrossOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "Prtistn";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "550"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Prioritisation";
 			definition = "Indicates if one side or the other of a cross order should be prioritized.\nThe definition of prioritization is left to the market. In some markets prioritization means which side of the cross order is applied to the market first. In other markets, prioritization may mean that the prioritized side is fully executed (sometimes referred to as the side being protected).";
@@ -177,10 +184,11 @@ public class CrossOrder2 {
 			simpleType_lazy = () -> Prioritisation1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "BuySdDtls", required = true)
 	protected Order9 buySideDetails;
 	/**
-	 * Buyside order details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -197,6 +205,9 @@ public class CrossOrder2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BuySdDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 54</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -210,9 +221,10 @@ public class CrossOrder2 {
 	public static final MMMessageAssociationEnd mmBuySideDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CrossTrade.mmBuySideOrder;
-			componentContext_lazy = () -> CrossOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "BuySdDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "54"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuySideDetails";
 			definition = "Buyside order details.";
@@ -222,10 +234,11 @@ public class CrossOrder2 {
 			type_lazy = () -> com.tools20022.repository.msg.Order9.mmObject();
 		}
 	};
+	@XmlElement(name = "SellSdDtls", required = true)
 	protected Order9 sellSideDetails;
 	/**
-	 * Sell side order details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -242,6 +255,9 @@ public class CrossOrder2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SellSdDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 54</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -255,9 +271,10 @@ public class CrossOrder2 {
 	public static final MMMessageAssociationEnd mmSellSideDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CrossTrade.mmSellSideOrder;
-			componentContext_lazy = () -> CrossOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "SellSdDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "54"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellSideDetails";
 			definition = "Sell side order details.";
@@ -267,10 +284,11 @@ public class CrossOrder2 {
 			type_lazy = () -> com.tools20022.repository.msg.Order9.mmObject();
 		}
 	};
+	@XmlElement(name = "CxlDtls", required = true)
 	protected CrossOrderCancel1 cancellationDetails;
 	/**
-	 * Additionnal details related to the cancellation request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -295,7 +313,7 @@ public class CrossOrder2 {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CrossOrder2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrder2.mmObject();
 			isDerived = false;
 			xmlTag = "CxlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -311,9 +329,10 @@ public class CrossOrder2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CrossOrder2.mmCrossType, CrossOrder2.mmPrioritisation, CrossOrder2.mmBuySideDetails, CrossOrder2.mmSellSideDetails, CrossOrder2.mmCancellationDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CrossOrder2.mmCrossType, com.tools20022.repository.msg.CrossOrder2.mmPrioritisation, com.tools20022.repository.msg.CrossOrder2.mmBuySideDetails,
+						com.tools20022.repository.msg.CrossOrder2.mmSellSideDetails, com.tools20022.repository.msg.CrossOrder2.mmCancellationDetails);
 				trace_lazy = () -> CrossTrade.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CrossOrder2";
 				definition = "Provides details about the order to be cancelled.";
@@ -322,48 +341,48 @@ public class CrossOrder2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CrossTp", required = true)
 	public CrossType1Code getCrossType() {
 		return crossType;
 	}
 
-	public void setCrossType(CrossType1Code crossType) {
-		this.crossType = crossType;
+	public CrossOrder2 setCrossType(CrossType1Code crossType) {
+		this.crossType = Objects.requireNonNull(crossType);
+		return this;
 	}
 
-	@XmlElement(name = "Prtistn", required = true)
 	public Prioritisation1Code getPrioritisation() {
 		return prioritisation;
 	}
 
-	public void setPrioritisation(Prioritisation1Code prioritisation) {
-		this.prioritisation = prioritisation;
+	public CrossOrder2 setPrioritisation(Prioritisation1Code prioritisation) {
+		this.prioritisation = Objects.requireNonNull(prioritisation);
+		return this;
 	}
 
-	@XmlElement(name = "BuySdDtls", required = true)
 	public Order9 getBuySideDetails() {
 		return buySideDetails;
 	}
 
-	public void setBuySideDetails(com.tools20022.repository.msg.Order9 buySideDetails) {
-		this.buySideDetails = buySideDetails;
+	public CrossOrder2 setBuySideDetails(com.tools20022.repository.msg.Order9 buySideDetails) {
+		this.buySideDetails = Objects.requireNonNull(buySideDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SellSdDtls", required = true)
 	public Order9 getSellSideDetails() {
 		return sellSideDetails;
 	}
 
-	public void setSellSideDetails(com.tools20022.repository.msg.Order9 sellSideDetails) {
-		this.sellSideDetails = sellSideDetails;
+	public CrossOrder2 setSellSideDetails(com.tools20022.repository.msg.Order9 sellSideDetails) {
+		this.sellSideDetails = Objects.requireNonNull(sellSideDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CxlDtls", required = true)
 	public CrossOrderCancel1 getCancellationDetails() {
 		return cancellationDetails;
 	}
 
-	public void setCancellationDetails(com.tools20022.repository.msg.CrossOrderCancel1 cancellationDetails) {
-		this.cancellationDetails = cancellationDetails;
+	public CrossOrder2 setCancellationDetails(com.tools20022.repository.msg.CrossOrderCancel1 cancellationDetails) {
+		this.cancellationDetails = Objects.requireNonNull(cancellationDetails);
+		return this;
 	}
 }

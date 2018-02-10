@@ -26,9 +26,11 @@ import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MarginReport1", propOrder = {"marginAccount", "nonClearingMember", "marginProduct", "marginDetails"})
 public class MarginReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MrgnAcct", required = true)
 	protected SecuritiesAccount18 marginAccount;
 	/**
-	 * Identifies the clearing member's account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -113,7 +116,7 @@ public class MarginReport1 {
 	public static final MMMessageAssociationEnd mmMarginAccount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
-			componentContext_lazy = () -> MarginReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarginReport1.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,11 +128,11 @@ public class MarginReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount18.mmObject();
 		}
 	};
+	@XmlElement(name = "NonClrMmb")
 	protected List<com.tools20022.repository.msg.PartyIdentificationAndAccount31> nonClearingMember;
 	/**
-	 * Provides details about the non clearing member identification and
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -163,7 +166,7 @@ public class MarginReport1 {
 	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> MarginReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarginReport1.mmObject();
 			isDerived = false;
 			xmlTag = "NonClrMmb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +177,11 @@ public class MarginReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
 		}
 	};
+	@XmlElement(name = "MrgnPdct", required = true)
 	protected List<MarginProductType1Choice> marginProduct;
 	/**
-	 * Specifies if the margin is related to equities or fixed income.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,7 +214,7 @@ public class MarginReport1 {
 	public static final MMMessageAttribute mmMarginProduct = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> MarginCall.mmObject();
-			componentContext_lazy = () -> MarginReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarginReport1.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnPdct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,11 +224,11 @@ public class MarginReport1 {
 			complexType_lazy = () -> MarginProductType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MrgnDtls", required = true)
 	protected List<com.tools20022.repository.msg.Margin2> marginDetails;
 	/**
-	 * Provides the margin details such as the exposure amount and the initial
-	 * margin.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -255,7 +259,7 @@ public class MarginReport1 {
 	public static final MMMessageAssociationEnd mmMarginDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> MarginCall.mmObject();
-			componentContext_lazy = () -> MarginReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarginReport1.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,9 +274,10 @@ public class MarginReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MarginReport1.mmMarginAccount, MarginReport1.mmNonClearingMember, MarginReport1.mmMarginProduct, MarginReport1.mmMarginDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginReport1.mmMarginAccount, com.tools20022.repository.msg.MarginReport1.mmNonClearingMember,
+						com.tools20022.repository.msg.MarginReport1.mmMarginProduct, com.tools20022.repository.msg.MarginReport1.mmMarginDetails);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MarginReport1";
 				definition = "Provides the details on the margin report per clearing member, and optionaly either per financial instrument or per non-clearing member.";
@@ -281,39 +286,39 @@ public class MarginReport1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MrgnAcct", required = true)
 	public SecuritiesAccount18 getMarginAccount() {
 		return marginAccount;
 	}
 
-	public void setMarginAccount(com.tools20022.repository.msg.SecuritiesAccount18 marginAccount) {
-		this.marginAccount = marginAccount;
+	public MarginReport1 setMarginAccount(com.tools20022.repository.msg.SecuritiesAccount18 marginAccount) {
+		this.marginAccount = Objects.requireNonNull(marginAccount);
+		return this;
 	}
 
-	@XmlElement(name = "NonClrMmb")
 	public List<PartyIdentificationAndAccount31> getNonClearingMember() {
-		return nonClearingMember;
+		return nonClearingMember == null ? nonClearingMember = new ArrayList<>() : nonClearingMember;
 	}
 
-	public void setNonClearingMember(List<com.tools20022.repository.msg.PartyIdentificationAndAccount31> nonClearingMember) {
-		this.nonClearingMember = nonClearingMember;
+	public MarginReport1 setNonClearingMember(List<com.tools20022.repository.msg.PartyIdentificationAndAccount31> nonClearingMember) {
+		this.nonClearingMember = Objects.requireNonNull(nonClearingMember);
+		return this;
 	}
 
-	@XmlElement(name = "MrgnPdct", required = true)
 	public List<MarginProductType1Choice> getMarginProduct() {
-		return marginProduct;
+		return marginProduct == null ? marginProduct = new ArrayList<>() : marginProduct;
 	}
 
-	public void setMarginProduct(List<MarginProductType1Choice> marginProduct) {
-		this.marginProduct = marginProduct;
+	public MarginReport1 setMarginProduct(List<MarginProductType1Choice> marginProduct) {
+		this.marginProduct = Objects.requireNonNull(marginProduct);
+		return this;
 	}
 
-	@XmlElement(name = "MrgnDtls", required = true)
 	public List<Margin2> getMarginDetails() {
-		return marginDetails;
+		return marginDetails == null ? marginDetails = new ArrayList<>() : marginDetails;
 	}
 
-	public void setMarginDetails(List<com.tools20022.repository.msg.Margin2> marginDetails) {
-		this.marginDetails = marginDetails;
+	public MarginReport1 setMarginDetails(List<com.tools20022.repository.msg.Margin2> marginDetails) {
+		this.marginDetails = Objects.requireNonNull(marginDetails);
+		return this;
 	}
 }

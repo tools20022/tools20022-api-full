@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ResponseStatusCode;
+import com.tools20022.repository.codeset.ResponseStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of the received collateral message (collateral claim, a
@@ -32,30 +36,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ResponseStatusCode
- * ResponseStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResponseStatus1Code#mmPartlyAccepted
- * ResponseStatus1Code.mmPartlyAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResponseStatus1Code#PartlyAccepted
+ * ResponseStatus1Code.PartlyAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResponseStatus1Code#mmAccepted
- * ResponseStatus1Code.mmAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResponseStatus1Code#Accepted
+ * ResponseStatus1Code.Accepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResponseStatus1Code#mmRejected
- * ResponseStatus1Code.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResponseStatus1Code#Rejected
+ * ResponseStatus1Code.Rejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResponseStatus1Code#mmSubstitutionAccepted
- * ResponseStatus1Code.mmSubstitutionAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResponseStatus1Code#SubstitutionAccepted
+ * ResponseStatus1Code.SubstitutionAccepted}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ResponseStatusCode
+ * ResponseStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ResponseStatus1Code extends ResponseStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ResponseStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,11 +98,12 @@ public class ResponseStatus1Code extends ResponseStatusCode {
 	 * name} = "PartlyAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartlyAccepted = new MMCode() {
+	public static final ResponseStatus1Code PartlyAccepted = new ResponseStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartlyAccepted";
-			owner_lazy = () -> ResponseStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResponseStatus1Code.mmObject();
+			codeName = ResponseStatusCode.PartlyAccepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -116,11 +122,12 @@ public class ResponseStatus1Code extends ResponseStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final ResponseStatus1Code Accepted = new ResponseStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> ResponseStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResponseStatus1Code.mmObject();
+			codeName = ResponseStatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -139,11 +146,12 @@ public class ResponseStatus1Code extends ResponseStatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final ResponseStatus1Code Rejected = new ResponseStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> ResponseStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResponseStatus1Code.mmObject();
+			codeName = ResponseStatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -162,26 +170,60 @@ public class ResponseStatus1Code extends ResponseStatusCode {
 	 * name} = "SubstitutionAccepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubstitutionAccepted = new MMCode() {
+	public static final ResponseStatus1Code SubstitutionAccepted = new ResponseStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubstitutionAccepted";
-			owner_lazy = () -> ResponseStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResponseStatus1Code.mmObject();
+			codeName = ResponseStatusCode.SubstitutionAccepted.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ResponseStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ResponseStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACCP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResponseStatus1Code";
 				definition = "Specifies the status of the received collateral message (collateral claim, a collateral proposal or a proposal/request for collateral substitution) from a collateral management perspective.";
-				code_lazy = () -> Arrays.asList(ResponseStatus1Code.mmPartlyAccepted, ResponseStatus1Code.mmAccepted, ResponseStatus1Code.mmRejected, ResponseStatus1Code.mmSubstitutionAccepted);
 				trace_lazy = () -> ResponseStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResponseStatus1Code.PartlyAccepted, com.tools20022.repository.codeset.ResponseStatus1Code.Accepted,
+						com.tools20022.repository.codeset.ResponseStatus1Code.Rejected, com.tools20022.repository.codeset.ResponseStatus1Code.SubstitutionAccepted);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PartlyAccepted.getCodeName().get(), PartlyAccepted);
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+		codesByName.put(SubstitutionAccepted.getCodeName().get(), SubstitutionAccepted);
+	}
+
+	public static ResponseStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ResponseStatus1Code[] values() {
+		ResponseStatus1Code[] values = new ResponseStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ResponseStatus1Code> {
+		@Override
+		public ResponseStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ResponseStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

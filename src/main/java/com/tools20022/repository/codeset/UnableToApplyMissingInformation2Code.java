@@ -20,79 +20,83 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.UnableToApplyMissingInformationV2Code;
+import com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason of an unable to apply due to missing information.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformationV2Code
- * UnableToApplyMissingInformationV2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#mmMissingRemittanceInformation
- * UnableToApplyMissingInformation2Code.mmMissingRemittanceInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#MissingRemittanceInformation
+ * UnableToApplyMissingInformation2Code.MissingRemittanceInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#mmMissingInstructionForNextAgent
- * UnableToApplyMissingInformation2Code.mmMissingInstructionForNextAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#MissingInstructionForNextAgent
+ * UnableToApplyMissingInformation2Code.MissingInstructionForNextAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#mmMissingDebtor
- * UnableToApplyMissingInformation2Code.mmMissingDebtor}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#MissingDebtor
+ * UnableToApplyMissingInformation2Code.MissingDebtor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#mmMissingDebtorAccount
- * UnableToApplyMissingInformation2Code.mmMissingDebtorAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#MissingDebtorAccount
+ * UnableToApplyMissingInformation2Code.MissingDebtorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#mmMissingDebtorAgent
- * UnableToApplyMissingInformation2Code.mmMissingDebtorAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#MissingDebtorAgent
+ * UnableToApplyMissingInformation2Code.MissingDebtorAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#mmMissingAmount
- * UnableToApplyMissingInformation2Code.mmMissingAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#MissingAmount
+ * UnableToApplyMissingInformation2Code.MissingAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#mmMissingSettlementAccount
- * UnableToApplyMissingInformation2Code.mmMissingSettlementAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#MissingSettlementAccount
+ * UnableToApplyMissingInformation2Code.MissingSettlementAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#mmMissingIntermediary
- * UnableToApplyMissingInformation2Code.mmMissingIntermediary}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#MissingIntermediary
+ * UnableToApplyMissingInformation2Code.MissingIntermediary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#mmMissingInstructingReimbursementAgent
- * UnableToApplyMissingInformation2Code.mmMissingInstructingReimbursementAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#MissingInstructingReimbursementAgent
+ * UnableToApplyMissingInformation2Code.MissingInstructingReimbursementAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#mmMissingInstructedReimbursementAgent
- * UnableToApplyMissingInformation2Code.mmMissingInstructedReimbursementAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#MissingInstructedReimbursementAgent
+ * UnableToApplyMissingInformation2Code.MissingInstructedReimbursementAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#mmMissingThirdReimbursementAgent
- * UnableToApplyMissingInformation2Code.mmMissingThirdReimbursementAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#MissingThirdReimbursementAgent
+ * UnableToApplyMissingInformation2Code.MissingThirdReimbursementAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#mmMissingCreditor
- * UnableToApplyMissingInformation2Code.mmMissingCreditor}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#MissingCreditor
+ * UnableToApplyMissingInformation2Code.MissingCreditor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#mmMissingCreditorAccount
- * UnableToApplyMissingInformation2Code.mmMissingCreditorAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#MissingCreditorAccount
+ * UnableToApplyMissingInformation2Code.MissingCreditorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#mmMissingInstruction
- * UnableToApplyMissingInformation2Code.mmMissingInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#MissingInstruction
+ * UnableToApplyMissingInformation2Code.MissingInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#mmMissingCreditorAgent
- * UnableToApplyMissingInformation2Code.mmMissingCreditorAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#MissingCreditorAgent
+ * UnableToApplyMissingInformation2Code.MissingCreditorAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#mmMissingInstructionForCreditorAgent
- * UnableToApplyMissingInformation2Code.mmMissingInstructionForCreditorAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#MissingInstructionForCreditorAgent
+ * UnableToApplyMissingInformation2Code.MissingInstructionForCreditorAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#mmMissingInstructionForDebtorAgent
- * UnableToApplyMissingInformation2Code.mmMissingInstructionForDebtorAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code#MissingInstructionForDebtorAgent
+ * UnableToApplyMissingInformation2Code.MissingInstructionForDebtorAgent}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.UnableToApplyMissingInformationV2Code
+ * UnableToApplyMissingInformationV2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -110,7 +114,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the reason of an unable to apply due to missing information."</li>
  * </ul>
  */
-public class UnableToApplyMissingInformation2Code extends UnableToApplyMissingInformationV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class UnableToApplyMissingInformation2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -129,11 +134,12 @@ public class UnableToApplyMissingInformation2Code extends UnableToApplyMissingIn
 	 * name} = "MissingRemittanceInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingRemittanceInformation = new MMCode() {
+	public static final UnableToApplyMissingInformation2Code MissingRemittanceInformation = new UnableToApplyMissingInformation2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingRemittanceInformation";
-			owner_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.mmObject();
+			codeName = UnableToApplyMissingInformationV2Code.MissingRemittanceInformation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -152,11 +158,12 @@ public class UnableToApplyMissingInformation2Code extends UnableToApplyMissingIn
 	 * name} = "MissingInstructionForNextAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingInstructionForNextAgent = new MMCode() {
+	public static final UnableToApplyMissingInformation2Code MissingInstructionForNextAgent = new UnableToApplyMissingInformation2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingInstructionForNextAgent";
-			owner_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.mmObject();
+			codeName = UnableToApplyMissingInformationV2Code.MissingInstructionForNextAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -175,11 +182,12 @@ public class UnableToApplyMissingInformation2Code extends UnableToApplyMissingIn
 	 * name} = "MissingDebtor"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingDebtor = new MMCode() {
+	public static final UnableToApplyMissingInformation2Code MissingDebtor = new UnableToApplyMissingInformation2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingDebtor";
-			owner_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.mmObject();
+			codeName = UnableToApplyMissingInformationV2Code.MissingDebtor.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -198,11 +206,12 @@ public class UnableToApplyMissingInformation2Code extends UnableToApplyMissingIn
 	 * name} = "MissingDebtorAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingDebtorAccount = new MMCode() {
+	public static final UnableToApplyMissingInformation2Code MissingDebtorAccount = new UnableToApplyMissingInformation2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingDebtorAccount";
-			owner_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.mmObject();
+			codeName = UnableToApplyMissingInformationV2Code.MissingDebtorAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -221,11 +230,12 @@ public class UnableToApplyMissingInformation2Code extends UnableToApplyMissingIn
 	 * name} = "MissingDebtorAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingDebtorAgent = new MMCode() {
+	public static final UnableToApplyMissingInformation2Code MissingDebtorAgent = new UnableToApplyMissingInformation2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingDebtorAgent";
-			owner_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.mmObject();
+			codeName = UnableToApplyMissingInformationV2Code.MissingDebtorAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -244,11 +254,12 @@ public class UnableToApplyMissingInformation2Code extends UnableToApplyMissingIn
 	 * name} = "MissingAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingAmount = new MMCode() {
+	public static final UnableToApplyMissingInformation2Code MissingAmount = new UnableToApplyMissingInformation2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingAmount";
-			owner_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.mmObject();
+			codeName = UnableToApplyMissingInformationV2Code.MissingAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -267,11 +278,12 @@ public class UnableToApplyMissingInformation2Code extends UnableToApplyMissingIn
 	 * name} = "MissingSettlementAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingSettlementAccount = new MMCode() {
+	public static final UnableToApplyMissingInformation2Code MissingSettlementAccount = new UnableToApplyMissingInformation2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingSettlementAccount";
-			owner_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.mmObject();
+			codeName = UnableToApplyMissingInformationV2Code.MissingSettlementAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -290,11 +302,12 @@ public class UnableToApplyMissingInformation2Code extends UnableToApplyMissingIn
 	 * name} = "MissingIntermediary"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingIntermediary = new MMCode() {
+	public static final UnableToApplyMissingInformation2Code MissingIntermediary = new UnableToApplyMissingInformation2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingIntermediary";
-			owner_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.mmObject();
+			codeName = UnableToApplyMissingInformationV2Code.MissingIntermediary.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -313,11 +326,12 @@ public class UnableToApplyMissingInformation2Code extends UnableToApplyMissingIn
 	 * name} = "MissingInstructingReimbursementAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingInstructingReimbursementAgent = new MMCode() {
+	public static final UnableToApplyMissingInformation2Code MissingInstructingReimbursementAgent = new UnableToApplyMissingInformation2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingInstructingReimbursementAgent";
-			owner_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.mmObject();
+			codeName = UnableToApplyMissingInformationV2Code.MissingInstructingReimbursementAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -336,11 +350,12 @@ public class UnableToApplyMissingInformation2Code extends UnableToApplyMissingIn
 	 * name} = "MissingInstructedReimbursementAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingInstructedReimbursementAgent = new MMCode() {
+	public static final UnableToApplyMissingInformation2Code MissingInstructedReimbursementAgent = new UnableToApplyMissingInformation2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingInstructedReimbursementAgent";
-			owner_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.mmObject();
+			codeName = UnableToApplyMissingInformationV2Code.MissingInstructedReimbursementAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -359,11 +374,12 @@ public class UnableToApplyMissingInformation2Code extends UnableToApplyMissingIn
 	 * name} = "MissingThirdReimbursementAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingThirdReimbursementAgent = new MMCode() {
+	public static final UnableToApplyMissingInformation2Code MissingThirdReimbursementAgent = new UnableToApplyMissingInformation2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingThirdReimbursementAgent";
-			owner_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.mmObject();
+			codeName = UnableToApplyMissingInformationV2Code.MissingThirdReimbursementAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -382,11 +398,12 @@ public class UnableToApplyMissingInformation2Code extends UnableToApplyMissingIn
 	 * name} = "MissingCreditor"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingCreditor = new MMCode() {
+	public static final UnableToApplyMissingInformation2Code MissingCreditor = new UnableToApplyMissingInformation2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCreditor";
-			owner_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.mmObject();
+			codeName = UnableToApplyMissingInformationV2Code.MissingCreditor.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -405,11 +422,12 @@ public class UnableToApplyMissingInformation2Code extends UnableToApplyMissingIn
 	 * name} = "MissingCreditorAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingCreditorAccount = new MMCode() {
+	public static final UnableToApplyMissingInformation2Code MissingCreditorAccount = new UnableToApplyMissingInformation2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCreditorAccount";
-			owner_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.mmObject();
+			codeName = UnableToApplyMissingInformationV2Code.MissingCreditorAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -428,11 +446,12 @@ public class UnableToApplyMissingInformation2Code extends UnableToApplyMissingIn
 	 * name} = "MissingInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingInstruction = new MMCode() {
+	public static final UnableToApplyMissingInformation2Code MissingInstruction = new UnableToApplyMissingInformation2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingInstruction";
-			owner_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.mmObject();
+			codeName = UnableToApplyMissingInformationV2Code.MissingInstruction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -451,11 +470,12 @@ public class UnableToApplyMissingInformation2Code extends UnableToApplyMissingIn
 	 * name} = "MissingCreditorAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingCreditorAgent = new MMCode() {
+	public static final UnableToApplyMissingInformation2Code MissingCreditorAgent = new UnableToApplyMissingInformation2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCreditorAgent";
-			owner_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.mmObject();
+			codeName = UnableToApplyMissingInformationV2Code.MissingCreditorAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -474,11 +494,12 @@ public class UnableToApplyMissingInformation2Code extends UnableToApplyMissingIn
 	 * name} = "MissingInstructionForCreditorAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingInstructionForCreditorAgent = new MMCode() {
+	public static final UnableToApplyMissingInformation2Code MissingInstructionForCreditorAgent = new UnableToApplyMissingInformation2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingInstructionForCreditorAgent";
-			owner_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.mmObject();
+			codeName = UnableToApplyMissingInformationV2Code.MissingInstructionForCreditorAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -497,32 +518,80 @@ public class UnableToApplyMissingInformation2Code extends UnableToApplyMissingIn
 	 * name} = "MissingInstructionForDebtorAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingInstructionForDebtorAgent = new MMCode() {
+	public static final UnableToApplyMissingInformation2Code MissingInstructionForDebtorAgent = new UnableToApplyMissingInformation2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingInstructionForDebtorAgent";
-			owner_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.mmObject();
+			codeName = UnableToApplyMissingInformationV2Code.MissingInstructionForDebtorAgent.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, UnableToApplyMissingInformation2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected UnableToApplyMissingInformation2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MS01");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnableToApplyMissingInformation2Code";
 				definition = "Specifies the reason of an unable to apply due to missing information.";
-				code_lazy = () -> Arrays.asList(UnableToApplyMissingInformation2Code.mmMissingRemittanceInformation, UnableToApplyMissingInformation2Code.mmMissingInstructionForNextAgent,
-						UnableToApplyMissingInformation2Code.mmMissingDebtor, UnableToApplyMissingInformation2Code.mmMissingDebtorAccount, UnableToApplyMissingInformation2Code.mmMissingDebtorAgent,
-						UnableToApplyMissingInformation2Code.mmMissingAmount, UnableToApplyMissingInformation2Code.mmMissingSettlementAccount, UnableToApplyMissingInformation2Code.mmMissingIntermediary,
-						UnableToApplyMissingInformation2Code.mmMissingInstructingReimbursementAgent, UnableToApplyMissingInformation2Code.mmMissingInstructedReimbursementAgent,
-						UnableToApplyMissingInformation2Code.mmMissingThirdReimbursementAgent, UnableToApplyMissingInformation2Code.mmMissingCreditor, UnableToApplyMissingInformation2Code.mmMissingCreditorAccount,
-						UnableToApplyMissingInformation2Code.mmMissingInstruction, UnableToApplyMissingInformation2Code.mmMissingCreditorAgent, UnableToApplyMissingInformation2Code.mmMissingInstructionForCreditorAgent,
-						UnableToApplyMissingInformation2Code.mmMissingInstructionForDebtorAgent);
 				trace_lazy = () -> UnableToApplyMissingInformationV2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.MissingRemittanceInformation,
+						com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.MissingInstructionForNextAgent, com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.MissingDebtor,
+						com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.MissingDebtorAccount, com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.MissingDebtorAgent,
+						com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.MissingAmount, com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.MissingSettlementAccount,
+						com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.MissingIntermediary, com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.MissingInstructingReimbursementAgent,
+						com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.MissingInstructedReimbursementAgent, com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.MissingThirdReimbursementAgent,
+						com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.MissingCreditor, com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.MissingCreditorAccount,
+						com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.MissingInstruction, com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.MissingCreditorAgent,
+						com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.MissingInstructionForCreditorAgent, com.tools20022.repository.codeset.UnableToApplyMissingInformation2Code.MissingInstructionForDebtorAgent);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(MissingRemittanceInformation.getCodeName().get(), MissingRemittanceInformation);
+		codesByName.put(MissingInstructionForNextAgent.getCodeName().get(), MissingInstructionForNextAgent);
+		codesByName.put(MissingDebtor.getCodeName().get(), MissingDebtor);
+		codesByName.put(MissingDebtorAccount.getCodeName().get(), MissingDebtorAccount);
+		codesByName.put(MissingDebtorAgent.getCodeName().get(), MissingDebtorAgent);
+		codesByName.put(MissingAmount.getCodeName().get(), MissingAmount);
+		codesByName.put(MissingSettlementAccount.getCodeName().get(), MissingSettlementAccount);
+		codesByName.put(MissingIntermediary.getCodeName().get(), MissingIntermediary);
+		codesByName.put(MissingInstructingReimbursementAgent.getCodeName().get(), MissingInstructingReimbursementAgent);
+		codesByName.put(MissingInstructedReimbursementAgent.getCodeName().get(), MissingInstructedReimbursementAgent);
+		codesByName.put(MissingThirdReimbursementAgent.getCodeName().get(), MissingThirdReimbursementAgent);
+		codesByName.put(MissingCreditor.getCodeName().get(), MissingCreditor);
+		codesByName.put(MissingCreditorAccount.getCodeName().get(), MissingCreditorAccount);
+		codesByName.put(MissingInstruction.getCodeName().get(), MissingInstruction);
+		codesByName.put(MissingCreditorAgent.getCodeName().get(), MissingCreditorAgent);
+		codesByName.put(MissingInstructionForCreditorAgent.getCodeName().get(), MissingInstructionForCreditorAgent);
+		codesByName.put(MissingInstructionForDebtorAgent.getCodeName().get(), MissingInstructionForDebtorAgent);
+	}
+
+	public static UnableToApplyMissingInformation2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static UnableToApplyMissingInformation2Code[] values() {
+		UnableToApplyMissingInformation2Code[] values = new UnableToApplyMissingInformation2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, UnableToApplyMissingInformation2Code> {
+		@Override
+		public UnableToApplyMissingInformation2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(UnableToApplyMissingInformation2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

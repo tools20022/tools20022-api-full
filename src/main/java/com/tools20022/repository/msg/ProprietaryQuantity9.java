@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -28,6 +29,8 @@ import com.tools20022.repository.entity.Scheme;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Proprietary quantity format."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ProprietaryQuantity9", propOrder = {"quantity", "quantityType", "issuer", "schemeName"})
 public class ProprietaryQuantity9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Qty", required = true)
 	protected RestrictedFINDecimalNumber quantity;
 	/**
-	 * Provides the proprietary quantity with a decimal number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +110,7 @@ public class ProprietaryQuantity9 {
 	 */
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProprietaryQuantity9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity9.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +121,11 @@ public class ProprietaryQuantity9 {
 			simpleType_lazy = () -> RestrictedFINDecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "QtyTp", required = true)
 	protected Exact4AlphaNumericText quantityType;
 	/**
-	 * Identifies the type of proprietary quantity reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,7 +153,7 @@ public class ProprietaryQuantity9 {
 	 */
 	public static final MMMessageAttribute mmQuantityType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProprietaryQuantity9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity9.mmObject();
 			isDerived = false;
 			xmlTag = "QtyTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,10 +164,11 @@ public class ProprietaryQuantity9 {
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Issr", required = true)
 	protected Max4AlphaNumericText issuer;
 	/**
-	 * Provides information related to issuer in free format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,6 +189,9 @@ public class ProprietaryQuantity9 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Issr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B::4!c/4c</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -196,9 +205,10 @@ public class ProprietaryQuantity9 {
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmPartyRole;
-			componentContext_lazy = () -> ProprietaryQuantity9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity9.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::4!c/4c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Provides information related to issuer in free format.";
@@ -207,10 +217,11 @@ public class ProprietaryQuantity9 {
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "SchmeNm")
 	protected Max4AlphaNumericText schemeName;
 	/**
-	 * Name of the identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,7 +255,7 @@ public class ProprietaryQuantity9 {
 	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmNameShort;
-			componentContext_lazy = () -> ProprietaryQuantity9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity9.mmObject();
 			isDerived = false;
 			xmlTag = "SchmeNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -259,8 +270,9 @@ public class ProprietaryQuantity9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProprietaryQuantity9.mmQuantity, ProprietaryQuantity9.mmQuantityType, ProprietaryQuantity9.mmIssuer, ProprietaryQuantity9.mmSchemeName);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryQuantity9.mmQuantity, com.tools20022.repository.msg.ProprietaryQuantity9.mmQuantityType,
+						com.tools20022.repository.msg.ProprietaryQuantity9.mmIssuer, com.tools20022.repository.msg.ProprietaryQuantity9.mmSchemeName);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProprietaryQuantity9";
 				definition = "Proprietary quantity format.";
@@ -269,39 +281,39 @@ public class ProprietaryQuantity9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public RestrictedFINDecimalNumber getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(RestrictedFINDecimalNumber quantity) {
-		this.quantity = quantity;
+	public ProprietaryQuantity9 setQuantity(RestrictedFINDecimalNumber quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	@XmlElement(name = "QtyTp", required = true)
 	public Exact4AlphaNumericText getQuantityType() {
 		return quantityType;
 	}
 
-	public void setQuantityType(Exact4AlphaNumericText quantityType) {
-		this.quantityType = quantityType;
+	public ProprietaryQuantity9 setQuantityType(Exact4AlphaNumericText quantityType) {
+		this.quantityType = Objects.requireNonNull(quantityType);
+		return this;
 	}
 
-	@XmlElement(name = "Issr", required = true)
 	public Max4AlphaNumericText getIssuer() {
 		return issuer;
 	}
 
-	public void setIssuer(Max4AlphaNumericText issuer) {
-		this.issuer = issuer;
+	public ProprietaryQuantity9 setIssuer(Max4AlphaNumericText issuer) {
+		this.issuer = Objects.requireNonNull(issuer);
+		return this;
 	}
 
-	@XmlElement(name = "SchmeNm")
-	public Max4AlphaNumericText getSchemeName() {
-		return schemeName;
+	public Optional<Max4AlphaNumericText> getSchemeName() {
+		return schemeName == null ? Optional.empty() : Optional.of(schemeName);
 	}
 
-	public void setSchemeName(Max4AlphaNumericText schemeName) {
+	public ProprietaryQuantity9 setSchemeName(Max4AlphaNumericText schemeName) {
 		this.schemeName = schemeName;
+		return this;
 	}
 }

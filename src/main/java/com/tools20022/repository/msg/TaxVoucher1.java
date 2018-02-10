@@ -30,6 +30,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -43,8 +45,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.TaxVoucher1#mmTaxCreditOrTaxDeductionRule
- * TaxVoucher1.mmTaxCreditOrTaxDeductionRule}</li>
+ * {@linkplain com.tools20022.repository.msg.TaxVoucher1#TaxCreditOrTaxDeductionRule
+ * TaxVoucher1.TaxCreditOrTaxDeductionRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -110,8 +112,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -123,17 +125,18 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information about the tax voucher."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TaxVoucher1", propOrder = {"taxVoucherRate", "taxCredit", "taxDeduction", "grossAmount", "netAmount", "recordDateHolding", "taxCreditRate", "withholdingTaxAmount", "withholdingTaxRate",
 		"scripDividendReinvestmentPricePerShare", "cashAmountBroughtForward", "allotedSharesCost", "cashAmountCarriedForward", "notionalTax", "notionalDividendPayable", "bargainDate", "bargainSettlementDate", "stampDutyAmount",
 		"chargeAmount", "commissionAmount", "foreignExchangeDetails"})
 public class TaxVoucher1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TaxVchrRate", required = true)
 	protected BaseOneRate taxVoucherRate;
 	/**
-	 * Distribution rate per share.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +168,7 @@ public class TaxVoucher1 {
 	public static final MMMessageAttribute mmTaxVoucherRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmTaxVoucherRate;
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxVchrRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,10 +179,11 @@ public class TaxVoucher1 {
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxCdt", required = true)
 	protected ActiveCurrencyAndAmount taxCredit;
 	/**
-	 * Amount of tax that have been previously paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,7 +210,7 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmTaxCredit = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxCdt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,10 +221,11 @@ public class TaxVoucher1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxDdctn", required = true)
 	protected ActiveCurrencyAndAmount taxDeduction;
 	/**
-	 * Amount of tax that have been previously deducted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -247,7 +252,7 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmTaxDeduction = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDdctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,10 +263,11 @@ public class TaxVoucher1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "GrssAmt", required = true)
 	protected ActiveCurrencyAndAmount grossAmount;
 	/**
-	 * Cash amount before any deductions and allowances have been made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -295,7 +301,7 @@ public class TaxVoucher1 {
 	public static final MMMessageAttribute mmGrossAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmGrossAmount;
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "GrssAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -306,10 +312,11 @@ public class TaxVoucher1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "NetAmt", required = true)
 	protected ActiveCurrencyAndAmount netAmount;
 	/**
-	 * Cash amount after any deductions and allowances have been made
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -343,7 +350,7 @@ public class TaxVoucher1 {
 	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmNetAmount;
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "NetAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -354,10 +361,11 @@ public class TaxVoucher1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RcrdDtHldg", required = true)
 	protected UnitOrFaceAmount1Choice recordDateHolding;
 	/**
-	 * Securities holding on record date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -390,7 +398,7 @@ public class TaxVoucher1 {
 	public static final MMMessageAttribute mmRecordDateHolding = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmRecordDateHolding;
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "RcrdDtHldg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -401,10 +409,11 @@ public class TaxVoucher1 {
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxCdtRate")
 	protected PercentageRate taxCreditRate;
 	/**
-	 * Applicable tax rate on the tax credit amount
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -436,7 +445,7 @@ public class TaxVoucher1 {
 	public static final MMMessageAttribute mmTaxCreditRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxCdtRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -447,10 +456,11 @@ public class TaxVoucher1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "WhldgTaxAmt")
 	protected ActiveCurrencyAndAmount withholdingTaxAmount;
 	/**
-	 * Cash amount that will be withheld by a tax authority.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -482,7 +492,7 @@ public class TaxVoucher1 {
 	public static final MMMessageAttribute mmWithholdingTaxAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "WhldgTaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -493,10 +503,11 @@ public class TaxVoucher1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "WhldgTaxRate")
 	protected PercentageRate withholdingTaxRate;
 	/**
-	 * Rate of a cash distribution that wil be withheld by a tax authority
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -529,7 +540,7 @@ public class TaxVoucher1 {
 	public static final MMMessageAttribute mmWithholdingTaxRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "WhldgTaxRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -540,10 +551,11 @@ public class TaxVoucher1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "ScripDvddRinvstmtPricPerShr")
 	protected PriceValue1 scripDividendReinvestmentPricePerShare;
 	/**
-	 * Cost per share of new shares allotted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -575,7 +587,7 @@ public class TaxVoucher1 {
 	public static final MMMessageAttribute mmScripDividendReinvestmentPricePerShare = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmScripDividendReinvestmentPricePerShare;
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "ScripDvddRinvstmtPricPerShr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -586,10 +598,11 @@ public class TaxVoucher1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAmtBrghtFwd")
 	protected ActiveCurrencyAndAmount cashAmountBroughtForward;
 	/**
-	 * Cash amount retained from previous dividend or interest payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -623,7 +636,7 @@ public class TaxVoucher1 {
 	public static final MMMessageAttribute mmCashAmountBroughtForward = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmCashAmountBroughtForward;
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAmtBrghtFwd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -634,10 +647,11 @@ public class TaxVoucher1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "AlltdShrsCost")
 	protected PriceValue1 allotedSharesCost;
 	/**
-	 * Total cash amount required to purchase shares allotted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -669,7 +683,7 @@ public class TaxVoucher1 {
 	public static final MMMessageAttribute mmAllotedSharesCost = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmAllotedSharesCost;
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "AlltdShrsCost";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -680,10 +694,11 @@ public class TaxVoucher1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAmtCrrdFwd")
 	protected ActiveCurrencyAndAmount cashAmountCarriedForward;
 	/**
-	 * Cash amount carried forward to next dividend or interest payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -717,7 +732,7 @@ public class TaxVoucher1 {
 	public static final MMMessageAttribute mmCashAmountCarriedForward = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmCashAmountCarriedForward;
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAmtCrrdFwd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -728,12 +743,11 @@ public class TaxVoucher1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "NtnlTax")
 	protected ActiveCurrencyAndAmount notionalTax;
 	/**
-	 * Where new securities are issued in lieu of a cash dividend, the notional
-	 * tax is the tax on the amount of cash that would have been paid. For
-	 * scrips only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -762,7 +776,7 @@ public class TaxVoucher1 {
 	 */
 	public static final MMMessageAttribute mmNotionalTax = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "NtnlTax";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -773,11 +787,11 @@ public class TaxVoucher1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "NtnlDvddPybl")
 	protected ActiveCurrencyAndAmount notionalDividendPayable;
 	/**
-	 * Amount of cash that would have been payable if the dividend had been
-	 * taken in the form of cash rather than shares. For scrip only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -811,7 +825,7 @@ public class TaxVoucher1 {
 	public static final MMMessageAttribute mmNotionalDividendPayable = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> Dividend.mmObject();
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "NtnlDvddPybl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -822,10 +836,11 @@ public class TaxVoucher1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "BrgnDt")
 	protected ISODate bargainDate;
 	/**
-	 * Date on which DRIP purchase completed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -857,7 +872,7 @@ public class TaxVoucher1 {
 	public static final MMMessageAttribute mmBargainDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmBargainDate;
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "BrgnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -868,10 +883,11 @@ public class TaxVoucher1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "BrgnSttlmDt")
 	protected ISODate bargainSettlementDate;
 	/**
-	 * Settlement date of the DRIP purchase transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -903,7 +919,7 @@ public class TaxVoucher1 {
 	public static final MMMessageAttribute mmBargainSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmBargainSettlementDate;
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "BrgnSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -914,10 +930,11 @@ public class TaxVoucher1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "StmpDtyAmt")
 	protected ActiveCurrencyAndAmount stampDutyAmount;
 	/**
-	 * Amount of stamp duty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -949,7 +966,7 @@ public class TaxVoucher1 {
 	public static final MMMessageAttribute mmStampDutyAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "StmpDtyAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -960,10 +977,11 @@ public class TaxVoucher1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgAmt")
 	protected ActiveCurrencyAndAmount chargeAmount;
 	/**
-	 * Amount of charges/fees charged to the client.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -996,7 +1014,7 @@ public class TaxVoucher1 {
 	public static final MMMessageAttribute mmChargeAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1007,10 +1025,11 @@ public class TaxVoucher1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ComssnAmt")
 	protected ActiveCurrencyAndAmount commissionAmount;
 	/**
-	 * Amount due to the paying agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1043,7 +1062,7 @@ public class TaxVoucher1 {
 	public static final MMMessageAttribute mmCommissionAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1054,10 +1073,11 @@ public class TaxVoucher1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "FXDtls")
 	protected ForeignExchangeTerms9 foreignExchangeDetails;
 	/**
-	 * Provides information about the foreign exchange transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1089,7 +1109,7 @@ public class TaxVoucher1 {
 	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CurrencyExchange.mmObject();
-			componentContext_lazy = () -> TaxVoucher1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
 			isDerived = false;
 			xmlTag = "FXDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1129,25 +1149,29 @@ public class TaxVoucher1 {
 	 * definition} = "Either TaxCredit orTaxDeduction must be present."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmTaxCreditOrTaxDeductionRule = new MMXor() {
+	public static final MMXor TaxCreditOrTaxDeductionRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditOrTaxDeductionRule";
 			definition = "Either TaxCredit orTaxDeduction must be present.";
-			messageComponent_lazy = () -> TaxVoucher1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(TaxVoucher1.mmTaxCredit, TaxVoucher1.mmTaxDeduction);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher1.mmTaxCredit, com.tools20022.repository.msg.TaxVoucher1.mmTaxDeduction);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TaxVoucher1.mmTaxVoucherRate, TaxVoucher1.mmTaxCredit, TaxVoucher1.mmTaxDeduction, TaxVoucher1.mmGrossAmount, TaxVoucher1.mmNetAmount, TaxVoucher1.mmRecordDateHolding,
-						TaxVoucher1.mmTaxCreditRate, TaxVoucher1.mmWithholdingTaxAmount, TaxVoucher1.mmWithholdingTaxRate, TaxVoucher1.mmScripDividendReinvestmentPricePerShare, TaxVoucher1.mmCashAmountBroughtForward,
-						TaxVoucher1.mmAllotedSharesCost, TaxVoucher1.mmCashAmountCarriedForward, TaxVoucher1.mmNotionalTax, TaxVoucher1.mmNotionalDividendPayable, TaxVoucher1.mmBargainDate, TaxVoucher1.mmBargainSettlementDate,
-						TaxVoucher1.mmStampDutyAmount, TaxVoucher1.mmChargeAmount, TaxVoucher1.mmCommissionAmount, TaxVoucher1.mmForeignExchangeDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher1.mmTaxVoucherRate, com.tools20022.repository.msg.TaxVoucher1.mmTaxCredit, com.tools20022.repository.msg.TaxVoucher1.mmTaxDeduction,
+						com.tools20022.repository.msg.TaxVoucher1.mmGrossAmount, com.tools20022.repository.msg.TaxVoucher1.mmNetAmount, com.tools20022.repository.msg.TaxVoucher1.mmRecordDateHolding,
+						com.tools20022.repository.msg.TaxVoucher1.mmTaxCreditRate, com.tools20022.repository.msg.TaxVoucher1.mmWithholdingTaxAmount, com.tools20022.repository.msg.TaxVoucher1.mmWithholdingTaxRate,
+						com.tools20022.repository.msg.TaxVoucher1.mmScripDividendReinvestmentPricePerShare, com.tools20022.repository.msg.TaxVoucher1.mmCashAmountBroughtForward,
+						com.tools20022.repository.msg.TaxVoucher1.mmAllotedSharesCost, com.tools20022.repository.msg.TaxVoucher1.mmCashAmountCarriedForward, com.tools20022.repository.msg.TaxVoucher1.mmNotionalTax,
+						com.tools20022.repository.msg.TaxVoucher1.mmNotionalDividendPayable, com.tools20022.repository.msg.TaxVoucher1.mmBargainDate, com.tools20022.repository.msg.TaxVoucher1.mmBargainSettlementDate,
+						com.tools20022.repository.msg.TaxVoucher1.mmStampDutyAmount, com.tools20022.repository.msg.TaxVoucher1.mmChargeAmount, com.tools20022.repository.msg.TaxVoucher1.mmCommissionAmount,
+						com.tools20022.repository.msg.TaxVoucher1.mmForeignExchangeDetails);
 				trace_lazy = () -> TaxVoucher.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -1158,198 +1182,198 @@ public class TaxVoucher1 {
 				})).get();
 				name = "TaxVoucher1";
 				definition = "Provides information about the tax voucher.";
-				xors_lazy = () -> Arrays.asList(TaxVoucher1.mmTaxCreditOrTaxDeductionRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxVoucher1.TaxCreditOrTaxDeductionRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TaxVchrRate", required = true)
 	public BaseOneRate getTaxVoucherRate() {
 		return taxVoucherRate;
 	}
 
-	public void setTaxVoucherRate(BaseOneRate taxVoucherRate) {
-		this.taxVoucherRate = taxVoucherRate;
+	public TaxVoucher1 setTaxVoucherRate(BaseOneRate taxVoucherRate) {
+		this.taxVoucherRate = Objects.requireNonNull(taxVoucherRate);
+		return this;
 	}
 
-	@XmlElement(name = "TaxCdt", required = true)
 	public ActiveCurrencyAndAmount getTaxCredit() {
 		return taxCredit;
 	}
 
-	public void setTaxCredit(ActiveCurrencyAndAmount taxCredit) {
-		this.taxCredit = taxCredit;
+	public TaxVoucher1 setTaxCredit(ActiveCurrencyAndAmount taxCredit) {
+		this.taxCredit = Objects.requireNonNull(taxCredit);
+		return this;
 	}
 
-	@XmlElement(name = "TaxDdctn", required = true)
 	public ActiveCurrencyAndAmount getTaxDeduction() {
 		return taxDeduction;
 	}
 
-	public void setTaxDeduction(ActiveCurrencyAndAmount taxDeduction) {
-		this.taxDeduction = taxDeduction;
+	public TaxVoucher1 setTaxDeduction(ActiveCurrencyAndAmount taxDeduction) {
+		this.taxDeduction = Objects.requireNonNull(taxDeduction);
+		return this;
 	}
 
-	@XmlElement(name = "GrssAmt", required = true)
 	public ActiveCurrencyAndAmount getGrossAmount() {
 		return grossAmount;
 	}
 
-	public void setGrossAmount(ActiveCurrencyAndAmount grossAmount) {
-		this.grossAmount = grossAmount;
+	public TaxVoucher1 setGrossAmount(ActiveCurrencyAndAmount grossAmount) {
+		this.grossAmount = Objects.requireNonNull(grossAmount);
+		return this;
 	}
 
-	@XmlElement(name = "NetAmt", required = true)
 	public ActiveCurrencyAndAmount getNetAmount() {
 		return netAmount;
 	}
 
-	public void setNetAmount(ActiveCurrencyAndAmount netAmount) {
-		this.netAmount = netAmount;
+	public TaxVoucher1 setNetAmount(ActiveCurrencyAndAmount netAmount) {
+		this.netAmount = Objects.requireNonNull(netAmount);
+		return this;
 	}
 
-	@XmlElement(name = "RcrdDtHldg", required = true)
 	public UnitOrFaceAmount1Choice getRecordDateHolding() {
 		return recordDateHolding;
 	}
 
-	public void setRecordDateHolding(UnitOrFaceAmount1Choice recordDateHolding) {
-		this.recordDateHolding = recordDateHolding;
+	public TaxVoucher1 setRecordDateHolding(UnitOrFaceAmount1Choice recordDateHolding) {
+		this.recordDateHolding = Objects.requireNonNull(recordDateHolding);
+		return this;
 	}
 
-	@XmlElement(name = "TaxCdtRate")
-	public PercentageRate getTaxCreditRate() {
-		return taxCreditRate;
+	public Optional<PercentageRate> getTaxCreditRate() {
+		return taxCreditRate == null ? Optional.empty() : Optional.of(taxCreditRate);
 	}
 
-	public void setTaxCreditRate(PercentageRate taxCreditRate) {
+	public TaxVoucher1 setTaxCreditRate(PercentageRate taxCreditRate) {
 		this.taxCreditRate = taxCreditRate;
+		return this;
 	}
 
-	@XmlElement(name = "WhldgTaxAmt")
-	public ActiveCurrencyAndAmount getWithholdingTaxAmount() {
-		return withholdingTaxAmount;
+	public Optional<ActiveCurrencyAndAmount> getWithholdingTaxAmount() {
+		return withholdingTaxAmount == null ? Optional.empty() : Optional.of(withholdingTaxAmount);
 	}
 
-	public void setWithholdingTaxAmount(ActiveCurrencyAndAmount withholdingTaxAmount) {
+	public TaxVoucher1 setWithholdingTaxAmount(ActiveCurrencyAndAmount withholdingTaxAmount) {
 		this.withholdingTaxAmount = withholdingTaxAmount;
+		return this;
 	}
 
-	@XmlElement(name = "WhldgTaxRate")
-	public PercentageRate getWithholdingTaxRate() {
-		return withholdingTaxRate;
+	public Optional<PercentageRate> getWithholdingTaxRate() {
+		return withholdingTaxRate == null ? Optional.empty() : Optional.of(withholdingTaxRate);
 	}
 
-	public void setWithholdingTaxRate(PercentageRate withholdingTaxRate) {
+	public TaxVoucher1 setWithholdingTaxRate(PercentageRate withholdingTaxRate) {
 		this.withholdingTaxRate = withholdingTaxRate;
+		return this;
 	}
 
-	@XmlElement(name = "ScripDvddRinvstmtPricPerShr")
-	public PriceValue1 getScripDividendReinvestmentPricePerShare() {
-		return scripDividendReinvestmentPricePerShare;
+	public Optional<PriceValue1> getScripDividendReinvestmentPricePerShare() {
+		return scripDividendReinvestmentPricePerShare == null ? Optional.empty() : Optional.of(scripDividendReinvestmentPricePerShare);
 	}
 
-	public void setScripDividendReinvestmentPricePerShare(com.tools20022.repository.msg.PriceValue1 scripDividendReinvestmentPricePerShare) {
+	public TaxVoucher1 setScripDividendReinvestmentPricePerShare(com.tools20022.repository.msg.PriceValue1 scripDividendReinvestmentPricePerShare) {
 		this.scripDividendReinvestmentPricePerShare = scripDividendReinvestmentPricePerShare;
+		return this;
 	}
 
-	@XmlElement(name = "CshAmtBrghtFwd")
-	public ActiveCurrencyAndAmount getCashAmountBroughtForward() {
-		return cashAmountBroughtForward;
+	public Optional<ActiveCurrencyAndAmount> getCashAmountBroughtForward() {
+		return cashAmountBroughtForward == null ? Optional.empty() : Optional.of(cashAmountBroughtForward);
 	}
 
-	public void setCashAmountBroughtForward(ActiveCurrencyAndAmount cashAmountBroughtForward) {
+	public TaxVoucher1 setCashAmountBroughtForward(ActiveCurrencyAndAmount cashAmountBroughtForward) {
 		this.cashAmountBroughtForward = cashAmountBroughtForward;
+		return this;
 	}
 
-	@XmlElement(name = "AlltdShrsCost")
-	public PriceValue1 getAllotedSharesCost() {
-		return allotedSharesCost;
+	public Optional<PriceValue1> getAllotedSharesCost() {
+		return allotedSharesCost == null ? Optional.empty() : Optional.of(allotedSharesCost);
 	}
 
-	public void setAllotedSharesCost(com.tools20022.repository.msg.PriceValue1 allotedSharesCost) {
+	public TaxVoucher1 setAllotedSharesCost(com.tools20022.repository.msg.PriceValue1 allotedSharesCost) {
 		this.allotedSharesCost = allotedSharesCost;
+		return this;
 	}
 
-	@XmlElement(name = "CshAmtCrrdFwd")
-	public ActiveCurrencyAndAmount getCashAmountCarriedForward() {
-		return cashAmountCarriedForward;
+	public Optional<ActiveCurrencyAndAmount> getCashAmountCarriedForward() {
+		return cashAmountCarriedForward == null ? Optional.empty() : Optional.of(cashAmountCarriedForward);
 	}
 
-	public void setCashAmountCarriedForward(ActiveCurrencyAndAmount cashAmountCarriedForward) {
+	public TaxVoucher1 setCashAmountCarriedForward(ActiveCurrencyAndAmount cashAmountCarriedForward) {
 		this.cashAmountCarriedForward = cashAmountCarriedForward;
+		return this;
 	}
 
-	@XmlElement(name = "NtnlTax")
-	public ActiveCurrencyAndAmount getNotionalTax() {
-		return notionalTax;
+	public Optional<ActiveCurrencyAndAmount> getNotionalTax() {
+		return notionalTax == null ? Optional.empty() : Optional.of(notionalTax);
 	}
 
-	public void setNotionalTax(ActiveCurrencyAndAmount notionalTax) {
+	public TaxVoucher1 setNotionalTax(ActiveCurrencyAndAmount notionalTax) {
 		this.notionalTax = notionalTax;
+		return this;
 	}
 
-	@XmlElement(name = "NtnlDvddPybl")
-	public ActiveCurrencyAndAmount getNotionalDividendPayable() {
-		return notionalDividendPayable;
+	public Optional<ActiveCurrencyAndAmount> getNotionalDividendPayable() {
+		return notionalDividendPayable == null ? Optional.empty() : Optional.of(notionalDividendPayable);
 	}
 
-	public void setNotionalDividendPayable(ActiveCurrencyAndAmount notionalDividendPayable) {
+	public TaxVoucher1 setNotionalDividendPayable(ActiveCurrencyAndAmount notionalDividendPayable) {
 		this.notionalDividendPayable = notionalDividendPayable;
+		return this;
 	}
 
-	@XmlElement(name = "BrgnDt")
-	public ISODate getBargainDate() {
-		return bargainDate;
+	public Optional<ISODate> getBargainDate() {
+		return bargainDate == null ? Optional.empty() : Optional.of(bargainDate);
 	}
 
-	public void setBargainDate(ISODate bargainDate) {
+	public TaxVoucher1 setBargainDate(ISODate bargainDate) {
 		this.bargainDate = bargainDate;
+		return this;
 	}
 
-	@XmlElement(name = "BrgnSttlmDt")
-	public ISODate getBargainSettlementDate() {
-		return bargainSettlementDate;
+	public Optional<ISODate> getBargainSettlementDate() {
+		return bargainSettlementDate == null ? Optional.empty() : Optional.of(bargainSettlementDate);
 	}
 
-	public void setBargainSettlementDate(ISODate bargainSettlementDate) {
+	public TaxVoucher1 setBargainSettlementDate(ISODate bargainSettlementDate) {
 		this.bargainSettlementDate = bargainSettlementDate;
+		return this;
 	}
 
-	@XmlElement(name = "StmpDtyAmt")
-	public ActiveCurrencyAndAmount getStampDutyAmount() {
-		return stampDutyAmount;
+	public Optional<ActiveCurrencyAndAmount> getStampDutyAmount() {
+		return stampDutyAmount == null ? Optional.empty() : Optional.of(stampDutyAmount);
 	}
 
-	public void setStampDutyAmount(ActiveCurrencyAndAmount stampDutyAmount) {
+	public TaxVoucher1 setStampDutyAmount(ActiveCurrencyAndAmount stampDutyAmount) {
 		this.stampDutyAmount = stampDutyAmount;
+		return this;
 	}
 
-	@XmlElement(name = "ChrgAmt")
-	public ActiveCurrencyAndAmount getChargeAmount() {
-		return chargeAmount;
+	public Optional<ActiveCurrencyAndAmount> getChargeAmount() {
+		return chargeAmount == null ? Optional.empty() : Optional.of(chargeAmount);
 	}
 
-	public void setChargeAmount(ActiveCurrencyAndAmount chargeAmount) {
+	public TaxVoucher1 setChargeAmount(ActiveCurrencyAndAmount chargeAmount) {
 		this.chargeAmount = chargeAmount;
+		return this;
 	}
 
-	@XmlElement(name = "ComssnAmt")
-	public ActiveCurrencyAndAmount getCommissionAmount() {
-		return commissionAmount;
+	public Optional<ActiveCurrencyAndAmount> getCommissionAmount() {
+		return commissionAmount == null ? Optional.empty() : Optional.of(commissionAmount);
 	}
 
-	public void setCommissionAmount(ActiveCurrencyAndAmount commissionAmount) {
+	public TaxVoucher1 setCommissionAmount(ActiveCurrencyAndAmount commissionAmount) {
 		this.commissionAmount = commissionAmount;
+		return this;
 	}
 
-	@XmlElement(name = "FXDtls")
-	public ForeignExchangeTerms9 getForeignExchangeDetails() {
-		return foreignExchangeDetails;
+	public Optional<ForeignExchangeTerms9> getForeignExchangeDetails() {
+		return foreignExchangeDetails == null ? Optional.empty() : Optional.of(foreignExchangeDetails);
 	}
 
-	public void setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms9 foreignExchangeDetails) {
+	public TaxVoucher1 setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms9 foreignExchangeDetails) {
 		this.foreignExchangeDetails = foreignExchangeDetails;
+		return this;
 	}
 }

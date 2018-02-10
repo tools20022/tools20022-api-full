@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.DataModification2Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * ModificationScope17}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ModificationScope23", propOrder = {"modificationScopeIndication", "otherIdentification"})
 public class ModificationScope23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ModScpIndctn", required = true)
 	protected DataModification2Code modificationScopeIndication;
 	/**
-	 * Specifies the type of modification to be applied on a set of information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +112,7 @@ public class ModificationScope23 {
 	 */
 	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ModificationScope23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope23.mmObject();
 			isDerived = false;
 			xmlTag = "ModScpIndctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,13 +124,11 @@ public class ModificationScope23 {
 			simpleType_lazy = () -> DataModification2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrId", required = true)
 	protected GenericIdentification55 otherIdentification;
 	/**
-	 * Alternative identification, for example, national registration
-	 * identification number, passport number, or an account number used to
-	 * further identify the beneficial owner, for example, a Central Provident
-	 * Fund (CFP) account as required for Singapore.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -162,7 +162,7 @@ public class ModificationScope23 {
 	 */
 	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ModificationScope23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope23.mmObject();
 			isDerived = false;
 			xmlTag = "OthrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,8 +179,8 @@ public class ModificationScope23 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ModificationScope23.mmModificationScopeIndication, ModificationScope23.mmOtherIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope23.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope23.mmOtherIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ModificationScope23";
 				definition = "Specifies the type of modification to be applied on a data set.";
@@ -190,21 +190,21 @@ public class ModificationScope23 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ModScpIndctn", required = true)
 	public DataModification2Code getModificationScopeIndication() {
 		return modificationScopeIndication;
 	}
 
-	public void setModificationScopeIndication(DataModification2Code modificationScopeIndication) {
-		this.modificationScopeIndication = modificationScopeIndication;
+	public ModificationScope23 setModificationScopeIndication(DataModification2Code modificationScopeIndication) {
+		this.modificationScopeIndication = Objects.requireNonNull(modificationScopeIndication);
+		return this;
 	}
 
-	@XmlElement(name = "OthrId", required = true)
 	public GenericIdentification55 getOtherIdentification() {
 		return otherIdentification;
 	}
 
-	public void setOtherIdentification(com.tools20022.repository.msg.GenericIdentification55 otherIdentification) {
-		this.otherIdentification = otherIdentification;
+	public ModificationScope23 setOtherIdentification(com.tools20022.repository.msg.GenericIdentification55 otherIdentification) {
+		this.otherIdentification = Objects.requireNonNull(otherIdentification);
+		return this;
 	}
 }

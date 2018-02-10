@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.HoldingsPlanTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the holdings plan of the assets to transfer.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingsPlanTypeCode#mmInvestmentPlan
- * HoldingsPlanTypeCode.mmInvestmentPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingsPlanTypeCode#InvestmentPlan
+ * HoldingsPlanTypeCode.InvestmentPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingsPlanTypeCode#mmSwitchPlan
- * HoldingsPlanTypeCode.mmSwitchPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingsPlanTypeCode#SwitchPlan
+ * HoldingsPlanTypeCode.SwitchPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.HoldingsPlanTypeCode#mmWithdrawalPlan
- * HoldingsPlanTypeCode.mmWithdrawalPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.HoldingsPlanTypeCode#WithdrawalPlan
+ * HoldingsPlanTypeCode.WithdrawalPlan}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the holdings plan of the assets to transfer."</li>
  * </ul>
  */
-public class HoldingsPlanTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class HoldingsPlanTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,12 +103,12 @@ public class HoldingsPlanTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestmentPlan = new MMCode() {
+	public static final HoldingsPlanTypeCode InvestmentPlan = new HoldingsPlanTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPlan";
 			definition = "Identifies whether or not.holding to be transferred belong to an investment plan.";
-			owner_lazy = () -> HoldingsPlanTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.HoldingsPlanTypeCode.mmObject();
 			codeName = "INVP";
 		}
 	};
@@ -130,12 +136,12 @@ public class HoldingsPlanTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSwitchPlan = new MMCode() {
+	public static final HoldingsPlanTypeCode SwitchPlan = new HoldingsPlanTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchPlan";
 			definition = "Identifies whether or not holdings to be transferred belong to switch plan.";
-			owner_lazy = () -> HoldingsPlanTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.HoldingsPlanTypeCode.mmObject();
 			codeName = "SWIP";
 		}
 	};
@@ -163,28 +169,60 @@ public class HoldingsPlanTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithdrawalPlan = new MMCode() {
+	public static final HoldingsPlanTypeCode WithdrawalPlan = new HoldingsPlanTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalPlan";
 			definition = "Identifies whether or not holdings to be transferred belong to a withdrawal plan.";
-			owner_lazy = () -> HoldingsPlanTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.HoldingsPlanTypeCode.mmObject();
 			codeName = "PLAR";
 		}
 	};
+	final static private LinkedHashMap<String, HoldingsPlanTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected HoldingsPlanTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("INVP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "HoldingsPlanTypeCode";
 				definition = "Specifies the holdings plan of the assets to transfer.";
-				code_lazy = () -> Arrays.asList(HoldingsPlanTypeCode.mmInvestmentPlan, HoldingsPlanTypeCode.mmSwitchPlan, HoldingsPlanTypeCode.mmWithdrawalPlan);
 				derivation_lazy = () -> Arrays.asList(HoldingsPlanType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.HoldingsPlanTypeCode.InvestmentPlan, com.tools20022.repository.codeset.HoldingsPlanTypeCode.SwitchPlan,
+						com.tools20022.repository.codeset.HoldingsPlanTypeCode.WithdrawalPlan);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(InvestmentPlan.getCodeName().get(), InvestmentPlan);
+		codesByName.put(SwitchPlan.getCodeName().get(), SwitchPlan);
+		codesByName.put(WithdrawalPlan.getCodeName().get(), WithdrawalPlan);
+	}
+
+	public static HoldingsPlanTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static HoldingsPlanTypeCode[] values() {
+		HoldingsPlanTypeCode[] values = new HoldingsPlanTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, HoldingsPlanTypeCode> {
+		@Override
+		public HoldingsPlanTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(HoldingsPlanTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

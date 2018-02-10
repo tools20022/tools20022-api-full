@@ -25,9 +25,8 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,17 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * CardTransactionAmount1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardTransactionAmount2", propOrder = {"totalAmount", "cardholderBillingTransactionAmount", "detailedAmount"})
 public class CardTransactionAmount2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlAmt", required = true)
 	protected CurrencyAndAmount totalAmount;
 	/**
-	 * Total amount of the transaction.<br>
-	 * It corresponds to ISO 8583, field number 4, completed by the field number
-	 * 49 for the versions 87 and 93.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +140,7 @@ public class CardTransactionAmount2 {
 	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
-			componentContext_lazy = () -> CardTransactionAmount2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,13 +153,11 @@ public class CardTransactionAmount2 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CrdhldrBllgTxAmt")
 	protected DetailedAmount8 cardholderBillingTransactionAmount;
 	/**
-	 * Present when cardholder billing currency differs from transaction
-	 * currency expressed in TransactionAmount. It may be populated by the
-	 * scheme or intermediary processor as normally Acceptor does not know
-	 * cardholder billing currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -202,7 +198,7 @@ public class CardTransactionAmount2 {
 	 */
 	public static final MMMessageAssociationEnd mmCardholderBillingTransactionAmount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardTransactionAmount2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "CrdhldrBllgTxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,13 +212,11 @@ public class CardTransactionAmount2 {
 			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount8.mmObject();
 		}
 	};
+	@XmlElement(name = "DtldAmt")
 	protected List<com.tools20022.repository.msg.DetailedAmount9> detailedAmount;
 	/**
-	 * Details of the TransactionAmount, for informational purposes only, except
-	 * for cash back which is mandatory for a payment transaction with cashback.
-	 * The transaction amount is not necessarly the sum of all the detailed
-	 * amount values.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -269,7 +263,7 @@ public class CardTransactionAmount2 {
 	public static final MMMessageAssociationEnd mmDetailedAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmDetailedAmount;
-			componentContext_lazy = () -> CardTransactionAmount2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "DtldAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,9 +280,10 @@ public class CardTransactionAmount2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardTransactionAmount2.mmTotalAmount, CardTransactionAmount2.mmCardholderBillingTransactionAmount, CardTransactionAmount2.mmDetailedAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionAmount2.mmTotalAmount, com.tools20022.repository.msg.CardTransactionAmount2.mmCardholderBillingTransactionAmount,
+						com.tools20022.repository.msg.CardTransactionAmount2.mmDetailedAmount);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransactionAmount2";
 				definition = "Amounts of the transaction expressed within the terminal currency.";
@@ -299,30 +294,30 @@ public class CardTransactionAmount2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlAmt", required = true)
 	public CurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
 
-	public void setTotalAmount(CurrencyAndAmount totalAmount) {
-		this.totalAmount = totalAmount;
+	public CardTransactionAmount2 setTotalAmount(CurrencyAndAmount totalAmount) {
+		this.totalAmount = Objects.requireNonNull(totalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "CrdhldrBllgTxAmt")
-	public DetailedAmount8 getCardholderBillingTransactionAmount() {
-		return cardholderBillingTransactionAmount;
+	public Optional<DetailedAmount8> getCardholderBillingTransactionAmount() {
+		return cardholderBillingTransactionAmount == null ? Optional.empty() : Optional.of(cardholderBillingTransactionAmount);
 	}
 
-	public void setCardholderBillingTransactionAmount(com.tools20022.repository.msg.DetailedAmount8 cardholderBillingTransactionAmount) {
+	public CardTransactionAmount2 setCardholderBillingTransactionAmount(com.tools20022.repository.msg.DetailedAmount8 cardholderBillingTransactionAmount) {
 		this.cardholderBillingTransactionAmount = cardholderBillingTransactionAmount;
+		return this;
 	}
 
-	@XmlElement(name = "DtldAmt")
 	public List<DetailedAmount9> getDetailedAmount() {
-		return detailedAmount;
+		return detailedAmount == null ? detailedAmount = new ArrayList<>() : detailedAmount;
 	}
 
-	public void setDetailedAmount(List<com.tools20022.repository.msg.DetailedAmount9> detailedAmount) {
-		this.detailedAmount = detailedAmount;
+	public CardTransactionAmount2 setDetailedAmount(List<com.tools20022.repository.msg.DetailedAmount9> detailedAmount) {
+		this.detailedAmount = Objects.requireNonNull(detailedAmount);
+		return this;
 	}
 }

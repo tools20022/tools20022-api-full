@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CardFallbackCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Information about card entry mode fallback.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardFallbackCode#mmNoFallback
- * CardFallbackCode.mmNoFallback}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardFallbackCode#NoFallback
+ * CardFallbackCode.NoFallback}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardFallbackCode#mmFallbackAfterSuccess
- * CardFallbackCode.mmFallbackAfterSuccess}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardFallbackCode#FallbackAfterSuccess
+ * CardFallbackCode.FallbackAfterSuccess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardFallbackCode#mmFallbackAfterFailure
- * CardFallbackCode.mmFallbackAfterFailure}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardFallbackCode#FallbackAfterFailure
+ * CardFallbackCode.FallbackAfterFailure}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about card entry mode fallback."</li>
  * </ul>
  */
-public class CardFallbackCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CardFallbackCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,12 +94,12 @@ public class CardFallbackCode {
 	 * definition} = "No card fall-back during the transaction in progress."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoFallback = new MMCode() {
+	public static final CardFallbackCode NoFallback = new CardFallbackCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoFallback";
 			definition = "No card fall-back during the transaction in progress.";
-			owner_lazy = () -> CardFallbackCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardFallbackCode.mmObject();
 			codeName = "NFLB";
 		}
 	};
@@ -121,12 +127,12 @@ public class CardFallbackCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFallbackAfterSuccess = new MMCode() {
+	public static final CardFallbackCode FallbackAfterSuccess = new CardFallbackCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FallbackAfterSuccess";
 			definition = "Card fall-back occurred during the transaction in progress. The previous transaction on the terminal was successful.";
-			owner_lazy = () -> CardFallbackCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardFallbackCode.mmObject();
 			codeName = "SFLB";
 		}
 	};
@@ -154,27 +160,59 @@ public class CardFallbackCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFallbackAfterFailure = new MMCode() {
+	public static final CardFallbackCode FallbackAfterFailure = new CardFallbackCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FallbackAfterFailure";
 			definition = "Card fall-back occurred during the transaction in progress. The previous transaction on the terminal failed.";
-			owner_lazy = () -> CardFallbackCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardFallbackCode.mmObject();
 			codeName = "FFLB";
 		}
 	};
+	final static private LinkedHashMap<String, CardFallbackCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CardFallbackCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardFallbackCode";
 				definition = "Information about card entry mode fallback.";
-				code_lazy = () -> Arrays.asList(CardFallbackCode.mmNoFallback, CardFallbackCode.mmFallbackAfterSuccess, CardFallbackCode.mmFallbackAfterFailure);
 				derivation_lazy = () -> Arrays.asList(CardFallback1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardFallbackCode.NoFallback, com.tools20022.repository.codeset.CardFallbackCode.FallbackAfterSuccess,
+						com.tools20022.repository.codeset.CardFallbackCode.FallbackAfterFailure);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NoFallback.getCodeName().get(), NoFallback);
+		codesByName.put(FallbackAfterSuccess.getCodeName().get(), FallbackAfterSuccess);
+		codesByName.put(FallbackAfterFailure.getCodeName().get(), FallbackAfterFailure);
+	}
+
+	public static CardFallbackCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CardFallbackCode[] values() {
+		CardFallbackCode[] values = new CardFallbackCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CardFallbackCode> {
+		@Override
+		public CardFallbackCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CardFallbackCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

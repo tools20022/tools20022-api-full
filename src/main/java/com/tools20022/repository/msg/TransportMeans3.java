@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,18 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Describes the multimodal or the individual transport of goods."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransportMeans3", propOrder = {"modeCode", "identification", "name"})
 public class TransportMeans3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MdCd")
 	protected Max4Text modeCode;
 	/**
-	 * Code specifying the transport mode for the delivery of the consignment,
-	 * such as by air, sea, rail, road or inland waterway. Reference UN/ECE
-	 * Recommendation 19 - Code for Modes of Transport
-	 * (www.unece.org/cefact/recommendations).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +111,7 @@ public class TransportMeans3 {
 	public static final MMMessageAttribute mmModeCode = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> Transport.mmObject();
-			componentContext_lazy = () -> TransportMeans3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportMeans3.mmObject();
 			isDerived = false;
 			xmlTag = "MdCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,11 +122,11 @@ public class TransportMeans3 {
 			simpleType_lazy = () -> Max4Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Id")
 	protected Max35Text identification;
 	/**
-	 * Unique identification of the means of transport, such as the
-	 * International Maritime Organization number of a vessel.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +161,7 @@ public class TransportMeans3 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmIdentification;
-			componentContext_lazy = () -> TransportMeans3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportMeans3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +172,11 @@ public class TransportMeans3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm")
 	protected Max35Text name;
 	/**
-	 * Name, expressed as text, of the means of transport.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,7 +203,7 @@ public class TransportMeans3 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransportMeans3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportMeans3.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,9 +218,9 @@ public class TransportMeans3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransportMeans3.mmModeCode, TransportMeans3.mmIdentification, TransportMeans3.mmName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportMeans3.mmModeCode, com.tools20022.repository.msg.TransportMeans3.mmIdentification, com.tools20022.repository.msg.TransportMeans3.mmName);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransportMeans3";
 				definition = "Describes the multimodal or the individual transport of goods.";
@@ -229,30 +229,30 @@ public class TransportMeans3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MdCd")
-	public Max4Text getModeCode() {
-		return modeCode;
+	public Optional<Max4Text> getModeCode() {
+		return modeCode == null ? Optional.empty() : Optional.of(modeCode);
 	}
 
-	public void setModeCode(Max4Text modeCode) {
+	public TransportMeans3 setModeCode(Max4Text modeCode) {
 		this.modeCode = modeCode;
+		return this;
 	}
 
-	@XmlElement(name = "Id")
-	public Max35Text getIdentification() {
-		return identification;
+	public Optional<Max35Text> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(Max35Text identification) {
+	public TransportMeans3 setIdentification(Max35Text identification) {
 		this.identification = identification;
+		return this;
 	}
 
-	@XmlElement(name = "Nm")
-	public Max35Text getName() {
-		return name;
+	public Optional<Max35Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max35Text name) {
+	public TransportMeans3 setName(Max35Text name) {
 		this.name = name;
+		return this;
 	}
 }

@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +72,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "ATM information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AutomatedTellerMachine9", propOrder = {"identification", "additionalIdentification", "sequenceNumber", "baseCurrency", "location", "locationCategory", "capabilities", "equipment"})
 public class AutomatedTellerMachine9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * ATM terminal device identification for the acquirer and the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +121,7 @@ public class AutomatedTellerMachine9 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine9.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,10 +132,11 @@ public class AutomatedTellerMachine9 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlId")
 	protected Max35Text additionalIdentification;
 	/**
-	 * ATM terminal device identification for the ATM manager.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +163,7 @@ public class AutomatedTellerMachine9 {
 	 */
 	public static final MMMessageAttribute mmAdditionalIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine9.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,10 +174,11 @@ public class AutomatedTellerMachine9 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SeqNb")
 	protected Max35Text sequenceNumber;
 	/**
-	 * ATM terminal device identification for the branch.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,7 +205,7 @@ public class AutomatedTellerMachine9 {
 	 */
 	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine9.mmObject();
 			isDerived = false;
 			xmlTag = "SeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,10 +216,11 @@ public class AutomatedTellerMachine9 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BaseCcy", required = true)
 	protected ActiveCurrencyCode baseCurrency;
 	/**
-	 * Reference currency of the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -242,7 +248,7 @@ public class AutomatedTellerMachine9 {
 	 */
 	public static final MMMessageAttribute mmBaseCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine9.mmObject();
 			isDerived = false;
 			xmlTag = "BaseCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -253,10 +259,11 @@ public class AutomatedTellerMachine9 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Lctn")
 	protected PostalAddress17 location;
 	/**
-	 * Location of the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -282,7 +289,7 @@ public class AutomatedTellerMachine9 {
 	 */
 	public static final MMMessageAssociationEnd mmLocation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine9.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -294,10 +301,11 @@ public class AutomatedTellerMachine9 {
 			type_lazy = () -> com.tools20022.repository.msg.PostalAddress17.mmObject();
 		}
 	};
+	@XmlElement(name = "LctnCtgy")
 	protected TransactionEnvironment2Code locationCategory;
 	/**
-	 * Indicates the environment of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -325,7 +333,7 @@ public class AutomatedTellerMachine9 {
 	 */
 	public static final MMMessageAttribute mmLocationCategory = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine9.mmObject();
 			isDerived = false;
 			xmlTag = "LctnCtgy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -336,10 +344,11 @@ public class AutomatedTellerMachine9 {
 			simpleType_lazy = () -> TransactionEnvironment2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Cpblties")
 	protected PointOfInteractionCapabilities7 capabilities;
 	/**
-	 * Capabilities of the ATM terminal performing the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -367,7 +376,7 @@ public class AutomatedTellerMachine9 {
 	 */
 	public static final MMMessageAssociationEnd mmCapabilities = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine9.mmObject();
 			isDerived = false;
 			xmlTag = "Cpblties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -379,10 +388,11 @@ public class AutomatedTellerMachine9 {
 			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities7.mmObject();
 		}
 	};
+	@XmlElement(name = "Eqpmnt")
 	protected ATMEquipment1 equipment;
 	/**
-	 * ATM terminal equipment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -408,7 +418,7 @@ public class AutomatedTellerMachine9 {
 	 */
 	public static final MMMessageAssociationEnd mmEquipment = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine9.mmObject();
 			isDerived = false;
 			xmlTag = "Eqpmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -424,9 +434,10 @@ public class AutomatedTellerMachine9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AutomatedTellerMachine9.mmIdentification, AutomatedTellerMachine9.mmAdditionalIdentification, AutomatedTellerMachine9.mmSequenceNumber, AutomatedTellerMachine9.mmBaseCurrency,
-						AutomatedTellerMachine9.mmLocation, AutomatedTellerMachine9.mmLocationCategory, AutomatedTellerMachine9.mmCapabilities, AutomatedTellerMachine9.mmEquipment);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine9.mmIdentification, com.tools20022.repository.msg.AutomatedTellerMachine9.mmAdditionalIdentification,
+						com.tools20022.repository.msg.AutomatedTellerMachine9.mmSequenceNumber, com.tools20022.repository.msg.AutomatedTellerMachine9.mmBaseCurrency, com.tools20022.repository.msg.AutomatedTellerMachine9.mmLocation,
+						com.tools20022.repository.msg.AutomatedTellerMachine9.mmLocationCategory, com.tools20022.repository.msg.AutomatedTellerMachine9.mmCapabilities, com.tools20022.repository.msg.AutomatedTellerMachine9.mmEquipment);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AutomatedTellerMachine9";
 				definition = "ATM information.";
@@ -435,75 +446,75 @@ public class AutomatedTellerMachine9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public AutomatedTellerMachine9 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlId")
-	public Max35Text getAdditionalIdentification() {
-		return additionalIdentification;
+	public Optional<Max35Text> getAdditionalIdentification() {
+		return additionalIdentification == null ? Optional.empty() : Optional.of(additionalIdentification);
 	}
 
-	public void setAdditionalIdentification(Max35Text additionalIdentification) {
+	public AutomatedTellerMachine9 setAdditionalIdentification(Max35Text additionalIdentification) {
 		this.additionalIdentification = additionalIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "SeqNb")
-	public Max35Text getSequenceNumber() {
-		return sequenceNumber;
+	public Optional<Max35Text> getSequenceNumber() {
+		return sequenceNumber == null ? Optional.empty() : Optional.of(sequenceNumber);
 	}
 
-	public void setSequenceNumber(Max35Text sequenceNumber) {
+	public AutomatedTellerMachine9 setSequenceNumber(Max35Text sequenceNumber) {
 		this.sequenceNumber = sequenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "BaseCcy", required = true)
 	public ActiveCurrencyCode getBaseCurrency() {
 		return baseCurrency;
 	}
 
-	public void setBaseCurrency(ActiveCurrencyCode baseCurrency) {
-		this.baseCurrency = baseCurrency;
+	public AutomatedTellerMachine9 setBaseCurrency(ActiveCurrencyCode baseCurrency) {
+		this.baseCurrency = Objects.requireNonNull(baseCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "Lctn")
-	public PostalAddress17 getLocation() {
-		return location;
+	public Optional<PostalAddress17> getLocation() {
+		return location == null ? Optional.empty() : Optional.of(location);
 	}
 
-	public void setLocation(com.tools20022.repository.msg.PostalAddress17 location) {
+	public AutomatedTellerMachine9 setLocation(com.tools20022.repository.msg.PostalAddress17 location) {
 		this.location = location;
+		return this;
 	}
 
-	@XmlElement(name = "LctnCtgy")
-	public TransactionEnvironment2Code getLocationCategory() {
-		return locationCategory;
+	public Optional<TransactionEnvironment2Code> getLocationCategory() {
+		return locationCategory == null ? Optional.empty() : Optional.of(locationCategory);
 	}
 
-	public void setLocationCategory(TransactionEnvironment2Code locationCategory) {
+	public AutomatedTellerMachine9 setLocationCategory(TransactionEnvironment2Code locationCategory) {
 		this.locationCategory = locationCategory;
+		return this;
 	}
 
-	@XmlElement(name = "Cpblties")
-	public PointOfInteractionCapabilities7 getCapabilities() {
-		return capabilities;
+	public Optional<PointOfInteractionCapabilities7> getCapabilities() {
+		return capabilities == null ? Optional.empty() : Optional.of(capabilities);
 	}
 
-	public void setCapabilities(com.tools20022.repository.msg.PointOfInteractionCapabilities7 capabilities) {
+	public AutomatedTellerMachine9 setCapabilities(com.tools20022.repository.msg.PointOfInteractionCapabilities7 capabilities) {
 		this.capabilities = capabilities;
+		return this;
 	}
 
-	@XmlElement(name = "Eqpmnt")
-	public ATMEquipment1 getEquipment() {
-		return equipment;
+	public Optional<ATMEquipment1> getEquipment() {
+		return equipment == null ? Optional.empty() : Optional.of(equipment);
 	}
 
-	public void setEquipment(com.tools20022.repository.msg.ATMEquipment1 equipment) {
+	public AutomatedTellerMachine9 setEquipment(com.tools20022.repository.msg.ATMEquipment1 equipment) {
 		this.equipment = equipment;
+		return this;
 	}
 }

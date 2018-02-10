@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides additional information regarding corporate action date details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionDateDetailsExtension2", propOrder = {"placeAndName", "dueBillRedemptionDate", "newYorkCutOffDate", "paymentDate"})
 public class CorporateActionDateDetailsExtension2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +108,7 @@ public class CorporateActionDateDetailsExtension2 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDateDetailsExtension2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +119,11 @@ public class CorporateActionDateDetailsExtension2 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DueBllRedDt")
 	protected ISODate dueBillRedemptionDate;
 	/**
-	 * Date on which accounting for due bills and associated tracking ends.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,6 +138,9 @@ public class CorporateActionDateDetailsExtension2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DueBllRedDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Due Bill Redemption Date</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -146,9 +154,10 @@ public class CorporateActionDateDetailsExtension2 {
 	 */
 	public static final MMMessageAttribute mmDueBillRedemptionDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDateDetailsExtension2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "DueBllRedDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Due Bill Redemption Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueBillRedemptionDate";
 			definition = "Date on which accounting for due bills and associated tracking ends.";
@@ -157,12 +166,11 @@ public class CorporateActionDateDetailsExtension2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "NewYorkCutOffDt")
 	protected ISODate newYorkCutOffDate;
 	/**
-	 * Last day to deposit securities at DTC and receive the entitlement for an
-	 * event approaching record date. Issues that have a New York cut-off date
-	 * have an out-of-town agent on DTC's records.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,6 +184,9 @@ public class CorporateActionDateDetailsExtension2 {
 	 * CorporateActionDateDetailsExtension2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NewYorkCutOffDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: New York Cut-Off Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -191,9 +202,10 @@ public class CorporateActionDateDetailsExtension2 {
 	 */
 	public static final MMMessageAttribute mmNewYorkCutOffDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDateDetailsExtension2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "NewYorkCutOffDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "New York Cut-Off Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewYorkCutOffDate";
 			definition = "Last day to deposit securities at DTC and receive the entitlement for an event approaching record date. Issues that have a New York cut-off date have an out-of-town agent on DTC's records.";
@@ -202,10 +214,11 @@ public class CorporateActionDateDetailsExtension2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtDt")
 	protected ISODate paymentDate;
 	/**
-	 * Payable date as declared by the issuer/offeror.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -220,6 +233,9 @@ public class CorporateActionDateDetailsExtension2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PmtDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Declared Payable Date</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -232,9 +248,10 @@ public class CorporateActionDateDetailsExtension2 {
 	 */
 	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDateDetailsExtension2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Declared Payable Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Payable date as declared by the issuer/offeror.";
@@ -247,9 +264,9 @@ public class CorporateActionDateDetailsExtension2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionDateDetailsExtension2.mmPlaceAndName, CorporateActionDateDetailsExtension2.mmDueBillRedemptionDate, CorporateActionDateDetailsExtension2.mmNewYorkCutOffDate,
-						CorporateActionDateDetailsExtension2.mmPaymentDate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDateDetailsExtension2.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionDateDetailsExtension2.mmDueBillRedemptionDate,
+						com.tools20022.repository.msg.CorporateActionDateDetailsExtension2.mmNewYorkCutOffDate, com.tools20022.repository.msg.CorporateActionDateDetailsExtension2.mmPaymentDate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionDateDetailsExtension2";
 				definition = "Provides additional information regarding corporate action date details.";
@@ -258,39 +275,39 @@ public class CorporateActionDateDetailsExtension2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionDateDetailsExtension2 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "DueBllRedDt")
-	public ISODate getDueBillRedemptionDate() {
-		return dueBillRedemptionDate;
+	public Optional<ISODate> getDueBillRedemptionDate() {
+		return dueBillRedemptionDate == null ? Optional.empty() : Optional.of(dueBillRedemptionDate);
 	}
 
-	public void setDueBillRedemptionDate(ISODate dueBillRedemptionDate) {
+	public CorporateActionDateDetailsExtension2 setDueBillRedemptionDate(ISODate dueBillRedemptionDate) {
 		this.dueBillRedemptionDate = dueBillRedemptionDate;
+		return this;
 	}
 
-	@XmlElement(name = "NewYorkCutOffDt")
-	public ISODate getNewYorkCutOffDate() {
-		return newYorkCutOffDate;
+	public Optional<ISODate> getNewYorkCutOffDate() {
+		return newYorkCutOffDate == null ? Optional.empty() : Optional.of(newYorkCutOffDate);
 	}
 
-	public void setNewYorkCutOffDate(ISODate newYorkCutOffDate) {
+	public CorporateActionDateDetailsExtension2 setNewYorkCutOffDate(ISODate newYorkCutOffDate) {
 		this.newYorkCutOffDate = newYorkCutOffDate;
+		return this;
 	}
 
-	@XmlElement(name = "PmtDt")
-	public ISODate getPaymentDate() {
-		return paymentDate;
+	public Optional<ISODate> getPaymentDate() {
+		return paymentDate == null ? Optional.empty() : Optional.of(paymentDate);
 	}
 
-	public void setPaymentDate(ISODate paymentDate) {
+	public CorporateActionDateDetailsExtension2 setPaymentDate(ISODate paymentDate) {
 		this.paymentDate = paymentDate;
+		return this;
 	}
 }

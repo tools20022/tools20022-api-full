@@ -24,6 +24,8 @@ import com.tools20022.repository.codeset.ATMStatus1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -47,8 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,15 +61,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Global status of the ATM."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMStatus1", propOrder = {"currentStatus", "demandedStatus"})
 public class ATMStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CurSts", required = true)
 	protected ATMStatus1Code currentStatus;
 	/**
-	 * Actual status of the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -94,7 +97,7 @@ public class ATMStatus1 {
 	 */
 	public static final MMMessageAttribute mmCurrentStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "CurSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -105,11 +108,11 @@ public class ATMStatus1 {
 			simpleType_lazy = () -> ATMStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DmnddSts")
 	protected ATMStatus1Code demandedStatus;
 	/**
-	 * Present if the status required by the ATM manager is different from the
-	 * current status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -138,7 +141,7 @@ public class ATMStatus1 {
 	 */
 	public static final MMMessageAttribute mmDemandedStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "DmnddSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,8 +156,8 @@ public class ATMStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMStatus1.mmCurrentStatus, ATMStatus1.mmDemandedStatus);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMStatus1.mmCurrentStatus, com.tools20022.repository.msg.ATMStatus1.mmDemandedStatus);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMStatus1";
 				definition = "Global status of the ATM.";
@@ -163,21 +166,21 @@ public class ATMStatus1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CurSts", required = true)
 	public ATMStatus1Code getCurrentStatus() {
 		return currentStatus;
 	}
 
-	public void setCurrentStatus(ATMStatus1Code currentStatus) {
-		this.currentStatus = currentStatus;
+	public ATMStatus1 setCurrentStatus(ATMStatus1Code currentStatus) {
+		this.currentStatus = Objects.requireNonNull(currentStatus);
+		return this;
 	}
 
-	@XmlElement(name = "DmnddSts")
-	public ATMStatus1Code getDemandedStatus() {
-		return demandedStatus;
+	public Optional<ATMStatus1Code> getDemandedStatus() {
+		return demandedStatus == null ? Optional.empty() : Optional.of(demandedStatus);
 	}
 
-	public void setDemandedStatus(ATMStatus1Code demandedStatus) {
+	public ATMStatus1 setDemandedStatus(ATMStatus1Code demandedStatus) {
 		this.demandedStatus = demandedStatus;
+		return this;
 	}
 }

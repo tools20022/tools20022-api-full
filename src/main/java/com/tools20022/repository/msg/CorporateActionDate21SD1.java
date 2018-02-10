@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -84,8 +85,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -96,20 +97,18 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Extension to cater for specific corporate action dates."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionDate21SD1", propOrder = {"placeAndName", "webServiceNotificationDate", "previousWebServiceNotificationDate", "actualRecordDate", "boardMeetingDate", "corporateRegistrationDate",
 		"earliestPlannedDateOfIssuePrice", "latestPlannedDateOfIssuePrice", "dateOfIssuePrice", "earliestPlannedSubscriptionCostPaymentDate", "latestPlannedSubscriptionCostPaymentDate", "subsequentListingDate",
 		"newShareUnitQuantityEffectiveDate"})
 public class CorporateActionDate21SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm")
 	protected Max350Text placeAndName;
 	/**
-	 * Unambiguous reference to the location where the supplementary data must
-	 * be inserted in the message instance. <br>
-	 * <br>
-	 * In the case of XML, this is expressed by a valid XPath.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -138,7 +137,7 @@ public class CorporateActionDate21SD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,11 +148,11 @@ public class CorporateActionDate21SD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "WebSvcNtfctnDt")
 	protected DateFormat22Choice webServiceNotificationDate;
 	/**
-	 * Date and time of notification via web service as reference information.<br>
-	 * 通知日時 Notification date and time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,7 +182,7 @@ public class CorporateActionDate21SD1 {
 	 */
 	public static final MMMessageAttribute mmWebServiceNotificationDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "WebSvcNtfctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,12 +193,11 @@ public class CorporateActionDate21SD1 {
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsWebSvcNtfctnDt")
 	protected DateFormat22Choice previousWebServiceNotificationDate;
 	/**
-	 * Date and time of previous notification via web service as a reference
-	 * information (in case of replacement). <br>
-	 * 訂正（削除）前通知日時
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -229,7 +227,7 @@ public class CorporateActionDate21SD1 {
 	 */
 	public static final MMMessageAttribute mmPreviousWebServiceNotificationDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsWebSvcNtfctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,12 +238,11 @@ public class CorporateActionDate21SD1 {
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ActlRcrdDt")
 	protected DateFormat22Choice actualRecordDate;
 	/**
-	 * Actual record date - the previous business day of the record date if the
-	 * record date falls to Saturday, Sunday or national holiday.<br>
-	 * 権利確定日
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -275,7 +272,7 @@ public class CorporateActionDate21SD1 {
 	 */
 	public static final MMMessageAttribute mmActualRecordDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "ActlRcrdDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,11 +283,11 @@ public class CorporateActionDate21SD1 {
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "BrdMtgDt")
 	protected DateFormat22Choice boardMeetingDate;
 	/**
-	 * Date of the board meeting.<br>
-	 * 取締役会決議日
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -318,7 +315,7 @@ public class CorporateActionDate21SD1 {
 	 */
 	public static final MMMessageAttribute mmBoardMeetingDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "BrdMtgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -329,11 +326,11 @@ public class CorporateActionDate21SD1 {
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CorpRegnDt")
 	protected DateFormat22Choice corporateRegistrationDate;
 	/**
-	 * Date on which the new company will be registered.<br>
-	 * 新設会社登記日
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -362,7 +359,7 @@ public class CorporateActionDate21SD1 {
 	 */
 	public static final MMMessageAttribute mmCorporateRegistrationDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "CorpRegnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -373,11 +370,11 @@ public class CorporateActionDate21SD1 {
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "EarlstPlandDtOfIssePric")
 	protected DateFormat22Choice earliestPlannedDateOfIssuePrice;
 	/**
-	 * Earliest planned date on which the issue price will be set.<br>
-	 * 発行価格決定予定日（最短）
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -407,7 +404,7 @@ public class CorporateActionDate21SD1 {
 	 */
 	public static final MMMessageAttribute mmEarliestPlannedDateOfIssuePrice = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "EarlstPlandDtOfIssePric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -418,11 +415,11 @@ public class CorporateActionDate21SD1 {
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LatstPlandDtOfIssePric")
 	protected DateFormat22Choice latestPlannedDateOfIssuePrice;
 	/**
-	 * Latest planned date on which the issue price will be set.<br>
-	 * 発行価格決定予定日（最長）
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -452,7 +449,7 @@ public class CorporateActionDate21SD1 {
 	 */
 	public static final MMMessageAttribute mmLatestPlannedDateOfIssuePrice = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "LatstPlandDtOfIssePric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -463,11 +460,11 @@ public class CorporateActionDate21SD1 {
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DtOfIssePric")
 	protected DateFormat22Choice dateOfIssuePrice;
 	/**
-	 * Date on which the issue price will be set.<br>
-	 * 発行価格決定日
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -495,7 +492,7 @@ public class CorporateActionDate21SD1 {
 	 */
 	public static final MMMessageAttribute mmDateOfIssuePrice = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "DtOfIssePric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -506,12 +503,11 @@ public class CorporateActionDate21SD1 {
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "EarlstPlandSbcptCostPmtDt")
 	protected DateFormat22Choice earliestPlannedSubscriptionCostPaymentDate;
 	/**
-	 * Earliest planned date on which the cash payment (for the subscription
-	 * cost) will be made.<br>
-	 * 払込期日予定日（最短）
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -541,7 +537,7 @@ public class CorporateActionDate21SD1 {
 	 */
 	public static final MMMessageAttribute mmEarliestPlannedSubscriptionCostPaymentDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "EarlstPlandSbcptCostPmtDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -552,12 +548,11 @@ public class CorporateActionDate21SD1 {
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LatstPlandSbcptCostPmtDt")
 	protected DateFormat22Choice latestPlannedSubscriptionCostPaymentDate;
 	/**
-	 * Latest planned date on which the cash payment (for the subscription cost)
-	 * will be made.<br>
-	 * 払込期日予定日（最長）
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -587,7 +582,7 @@ public class CorporateActionDate21SD1 {
 	 */
 	public static final MMMessageAttribute mmLatestPlannedSubscriptionCostPaymentDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "LatstPlandSbcptCostPmtDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -598,11 +593,11 @@ public class CorporateActionDate21SD1 {
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SbsqntListgDt")
 	protected DateFormat22Choice subsequentListingDate;
 	/**
-	 * Listing date of the new shares announced by Stock Exchange.<br>
-	 * 変更上場日
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -631,7 +626,7 @@ public class CorporateActionDate21SD1 {
 	 */
 	public static final MMMessageAttribute mmSubsequentListingDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "SbsqntListgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -642,10 +637,11 @@ public class CorporateActionDate21SD1 {
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NewShrUnitQtyFctvDt")
 	protected DateFormat22Choice newShareUnitQuantityEffectiveDate;
 	/**
-	 * Date at which the new share unit quantity becomes effective.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -672,7 +668,7 @@ public class CorporateActionDate21SD1 {
 	 */
 	public static final MMMessageAssociationEnd mmNewShareUnitQuantityEffectiveDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionDate21SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
 			xmlTag = "NewShrUnitQtyFctvDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -688,11 +684,14 @@ public class CorporateActionDate21SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionDate21SD1.mmPlaceAndName, CorporateActionDate21SD1.mmWebServiceNotificationDate, CorporateActionDate21SD1.mmPreviousWebServiceNotificationDate,
-						CorporateActionDate21SD1.mmActualRecordDate, CorporateActionDate21SD1.mmBoardMeetingDate, CorporateActionDate21SD1.mmCorporateRegistrationDate, CorporateActionDate21SD1.mmEarliestPlannedDateOfIssuePrice,
-						CorporateActionDate21SD1.mmLatestPlannedDateOfIssuePrice, CorporateActionDate21SD1.mmDateOfIssuePrice, CorporateActionDate21SD1.mmEarliestPlannedSubscriptionCostPaymentDate,
-						CorporateActionDate21SD1.mmLatestPlannedSubscriptionCostPaymentDate, CorporateActionDate21SD1.mmSubsequentListingDate, CorporateActionDate21SD1.mmNewShareUnitQuantityEffectiveDate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate21SD1.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionDate21SD1.mmWebServiceNotificationDate,
+						com.tools20022.repository.msg.CorporateActionDate21SD1.mmPreviousWebServiceNotificationDate, com.tools20022.repository.msg.CorporateActionDate21SD1.mmActualRecordDate,
+						com.tools20022.repository.msg.CorporateActionDate21SD1.mmBoardMeetingDate, com.tools20022.repository.msg.CorporateActionDate21SD1.mmCorporateRegistrationDate,
+						com.tools20022.repository.msg.CorporateActionDate21SD1.mmEarliestPlannedDateOfIssuePrice, com.tools20022.repository.msg.CorporateActionDate21SD1.mmLatestPlannedDateOfIssuePrice,
+						com.tools20022.repository.msg.CorporateActionDate21SD1.mmDateOfIssuePrice, com.tools20022.repository.msg.CorporateActionDate21SD1.mmEarliestPlannedSubscriptionCostPaymentDate,
+						com.tools20022.repository.msg.CorporateActionDate21SD1.mmLatestPlannedSubscriptionCostPaymentDate, com.tools20022.repository.msg.CorporateActionDate21SD1.mmSubsequentListingDate,
+						com.tools20022.repository.msg.CorporateActionDate21SD1.mmNewShareUnitQuantityEffectiveDate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate21SD1";
 				definition = "Extension to cater for specific corporate action dates.";
@@ -701,120 +700,120 @@ public class CorporateActionDate21SD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm")
-	public Max350Text getPlaceAndName() {
-		return placeAndName;
+	public Optional<Max350Text> getPlaceAndName() {
+		return placeAndName == null ? Optional.empty() : Optional.of(placeAndName);
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
+	public CorporateActionDate21SD1 setPlaceAndName(Max350Text placeAndName) {
 		this.placeAndName = placeAndName;
+		return this;
 	}
 
-	@XmlElement(name = "WebSvcNtfctnDt")
-	public DateFormat22Choice getWebServiceNotificationDate() {
-		return webServiceNotificationDate;
+	public Optional<DateFormat22Choice> getWebServiceNotificationDate() {
+		return webServiceNotificationDate == null ? Optional.empty() : Optional.of(webServiceNotificationDate);
 	}
 
-	public void setWebServiceNotificationDate(DateFormat22Choice webServiceNotificationDate) {
+	public CorporateActionDate21SD1 setWebServiceNotificationDate(DateFormat22Choice webServiceNotificationDate) {
 		this.webServiceNotificationDate = webServiceNotificationDate;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsWebSvcNtfctnDt")
-	public DateFormat22Choice getPreviousWebServiceNotificationDate() {
-		return previousWebServiceNotificationDate;
+	public Optional<DateFormat22Choice> getPreviousWebServiceNotificationDate() {
+		return previousWebServiceNotificationDate == null ? Optional.empty() : Optional.of(previousWebServiceNotificationDate);
 	}
 
-	public void setPreviousWebServiceNotificationDate(DateFormat22Choice previousWebServiceNotificationDate) {
+	public CorporateActionDate21SD1 setPreviousWebServiceNotificationDate(DateFormat22Choice previousWebServiceNotificationDate) {
 		this.previousWebServiceNotificationDate = previousWebServiceNotificationDate;
+		return this;
 	}
 
-	@XmlElement(name = "ActlRcrdDt")
-	public DateFormat22Choice getActualRecordDate() {
-		return actualRecordDate;
+	public Optional<DateFormat22Choice> getActualRecordDate() {
+		return actualRecordDate == null ? Optional.empty() : Optional.of(actualRecordDate);
 	}
 
-	public void setActualRecordDate(DateFormat22Choice actualRecordDate) {
+	public CorporateActionDate21SD1 setActualRecordDate(DateFormat22Choice actualRecordDate) {
 		this.actualRecordDate = actualRecordDate;
+		return this;
 	}
 
-	@XmlElement(name = "BrdMtgDt")
-	public DateFormat22Choice getBoardMeetingDate() {
-		return boardMeetingDate;
+	public Optional<DateFormat22Choice> getBoardMeetingDate() {
+		return boardMeetingDate == null ? Optional.empty() : Optional.of(boardMeetingDate);
 	}
 
-	public void setBoardMeetingDate(DateFormat22Choice boardMeetingDate) {
+	public CorporateActionDate21SD1 setBoardMeetingDate(DateFormat22Choice boardMeetingDate) {
 		this.boardMeetingDate = boardMeetingDate;
+		return this;
 	}
 
-	@XmlElement(name = "CorpRegnDt")
-	public DateFormat22Choice getCorporateRegistrationDate() {
-		return corporateRegistrationDate;
+	public Optional<DateFormat22Choice> getCorporateRegistrationDate() {
+		return corporateRegistrationDate == null ? Optional.empty() : Optional.of(corporateRegistrationDate);
 	}
 
-	public void setCorporateRegistrationDate(DateFormat22Choice corporateRegistrationDate) {
+	public CorporateActionDate21SD1 setCorporateRegistrationDate(DateFormat22Choice corporateRegistrationDate) {
 		this.corporateRegistrationDate = corporateRegistrationDate;
+		return this;
 	}
 
-	@XmlElement(name = "EarlstPlandDtOfIssePric")
-	public DateFormat22Choice getEarliestPlannedDateOfIssuePrice() {
-		return earliestPlannedDateOfIssuePrice;
+	public Optional<DateFormat22Choice> getEarliestPlannedDateOfIssuePrice() {
+		return earliestPlannedDateOfIssuePrice == null ? Optional.empty() : Optional.of(earliestPlannedDateOfIssuePrice);
 	}
 
-	public void setEarliestPlannedDateOfIssuePrice(DateFormat22Choice earliestPlannedDateOfIssuePrice) {
+	public CorporateActionDate21SD1 setEarliestPlannedDateOfIssuePrice(DateFormat22Choice earliestPlannedDateOfIssuePrice) {
 		this.earliestPlannedDateOfIssuePrice = earliestPlannedDateOfIssuePrice;
+		return this;
 	}
 
-	@XmlElement(name = "LatstPlandDtOfIssePric")
-	public DateFormat22Choice getLatestPlannedDateOfIssuePrice() {
-		return latestPlannedDateOfIssuePrice;
+	public Optional<DateFormat22Choice> getLatestPlannedDateOfIssuePrice() {
+		return latestPlannedDateOfIssuePrice == null ? Optional.empty() : Optional.of(latestPlannedDateOfIssuePrice);
 	}
 
-	public void setLatestPlannedDateOfIssuePrice(DateFormat22Choice latestPlannedDateOfIssuePrice) {
+	public CorporateActionDate21SD1 setLatestPlannedDateOfIssuePrice(DateFormat22Choice latestPlannedDateOfIssuePrice) {
 		this.latestPlannedDateOfIssuePrice = latestPlannedDateOfIssuePrice;
+		return this;
 	}
 
-	@XmlElement(name = "DtOfIssePric")
-	public DateFormat22Choice getDateOfIssuePrice() {
-		return dateOfIssuePrice;
+	public Optional<DateFormat22Choice> getDateOfIssuePrice() {
+		return dateOfIssuePrice == null ? Optional.empty() : Optional.of(dateOfIssuePrice);
 	}
 
-	public void setDateOfIssuePrice(DateFormat22Choice dateOfIssuePrice) {
+	public CorporateActionDate21SD1 setDateOfIssuePrice(DateFormat22Choice dateOfIssuePrice) {
 		this.dateOfIssuePrice = dateOfIssuePrice;
+		return this;
 	}
 
-	@XmlElement(name = "EarlstPlandSbcptCostPmtDt")
-	public DateFormat22Choice getEarliestPlannedSubscriptionCostPaymentDate() {
-		return earliestPlannedSubscriptionCostPaymentDate;
+	public Optional<DateFormat22Choice> getEarliestPlannedSubscriptionCostPaymentDate() {
+		return earliestPlannedSubscriptionCostPaymentDate == null ? Optional.empty() : Optional.of(earliestPlannedSubscriptionCostPaymentDate);
 	}
 
-	public void setEarliestPlannedSubscriptionCostPaymentDate(DateFormat22Choice earliestPlannedSubscriptionCostPaymentDate) {
+	public CorporateActionDate21SD1 setEarliestPlannedSubscriptionCostPaymentDate(DateFormat22Choice earliestPlannedSubscriptionCostPaymentDate) {
 		this.earliestPlannedSubscriptionCostPaymentDate = earliestPlannedSubscriptionCostPaymentDate;
+		return this;
 	}
 
-	@XmlElement(name = "LatstPlandSbcptCostPmtDt")
-	public DateFormat22Choice getLatestPlannedSubscriptionCostPaymentDate() {
-		return latestPlannedSubscriptionCostPaymentDate;
+	public Optional<DateFormat22Choice> getLatestPlannedSubscriptionCostPaymentDate() {
+		return latestPlannedSubscriptionCostPaymentDate == null ? Optional.empty() : Optional.of(latestPlannedSubscriptionCostPaymentDate);
 	}
 
-	public void setLatestPlannedSubscriptionCostPaymentDate(DateFormat22Choice latestPlannedSubscriptionCostPaymentDate) {
+	public CorporateActionDate21SD1 setLatestPlannedSubscriptionCostPaymentDate(DateFormat22Choice latestPlannedSubscriptionCostPaymentDate) {
 		this.latestPlannedSubscriptionCostPaymentDate = latestPlannedSubscriptionCostPaymentDate;
+		return this;
 	}
 
-	@XmlElement(name = "SbsqntListgDt")
-	public DateFormat22Choice getSubsequentListingDate() {
-		return subsequentListingDate;
+	public Optional<DateFormat22Choice> getSubsequentListingDate() {
+		return subsequentListingDate == null ? Optional.empty() : Optional.of(subsequentListingDate);
 	}
 
-	public void setSubsequentListingDate(DateFormat22Choice subsequentListingDate) {
+	public CorporateActionDate21SD1 setSubsequentListingDate(DateFormat22Choice subsequentListingDate) {
 		this.subsequentListingDate = subsequentListingDate;
+		return this;
 	}
 
-	@XmlElement(name = "NewShrUnitQtyFctvDt")
-	public DateFormat22Choice getNewShareUnitQuantityEffectiveDate() {
-		return newShareUnitQuantityEffectiveDate;
+	public Optional<DateFormat22Choice> getNewShareUnitQuantityEffectiveDate() {
+		return newShareUnitQuantityEffectiveDate == null ? Optional.empty() : Optional.of(newShareUnitQuantityEffectiveDate);
 	}
 
-	public void setNewShareUnitQuantityEffectiveDate(DateFormat22Choice newShareUnitQuantityEffectiveDate) {
+	public CorporateActionDate21SD1 setNewShareUnitQuantityEffectiveDate(DateFormat22Choice newShareUnitQuantityEffectiveDate) {
 		this.newShareUnitQuantityEffectiveDate = newShareUnitQuantityEffectiveDate;
+		return this;
 	}
 }

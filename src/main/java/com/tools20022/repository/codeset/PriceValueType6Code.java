@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PriceValueTypeCode;
+import com.tools20022.repository.codeset.PriceValueType6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the value of a price.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode
- * PriceValueTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType6Code#mmUnknown
- * PriceValueType6Code.mmUnknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType6Code#Unknown
+ * PriceValueType6Code.Unknown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType6Code#mmOpenDated
- * PriceValueType6Code.mmOpenDated}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType6Code#OpenDated
+ * PriceValueType6Code.OpenDated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType6Code#mmUnspecified
- * PriceValueType6Code.mmUnspecified}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType6Code#Unspecified
+ * PriceValueType6Code.Unspecified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType6Code#mmToBeSpecified
- * PriceValueType6Code.mmToBeSpecified}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType6Code#ToBeSpecified
+ * PriceValueType6Code.ToBeSpecified}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode
+ * PriceValueTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies  the value of a price."</li>
  * </ul>
  */
-public class PriceValueType6Code extends PriceValueTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PriceValueType6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class PriceValueType6Code extends PriceValueTypeCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknown = new MMCode() {
+	public static final PriceValueType6Code Unknown = new PriceValueType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
-			owner_lazy = () -> PriceValueType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType6Code.mmObject();
+			codeName = PriceValueTypeCode.Unknown.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class PriceValueType6Code extends PriceValueTypeCode {
 	 * name} = "OpenDated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOpenDated = new MMCode() {
+	public static final PriceValueType6Code OpenDated = new PriceValueType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenDated";
-			owner_lazy = () -> PriceValueType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType6Code.mmObject();
+			codeName = PriceValueTypeCode.OpenDated.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class PriceValueType6Code extends PriceValueTypeCode {
 	 * name} = "Unspecified"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnspecified = new MMCode() {
+	public static final PriceValueType6Code Unspecified = new PriceValueType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unspecified";
-			owner_lazy = () -> PriceValueType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType6Code.mmObject();
+			codeName = PriceValueTypeCode.Unspecified.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,26 +166,60 @@ public class PriceValueType6Code extends PriceValueTypeCode {
 	 * name} = "ToBeSpecified"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmToBeSpecified = new MMCode() {
+	public static final PriceValueType6Code ToBeSpecified = new PriceValueType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToBeSpecified";
-			owner_lazy = () -> PriceValueType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType6Code.mmObject();
+			codeName = PriceValueTypeCode.ToBeSpecified.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PriceValueType6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PriceValueType6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("UKWN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceValueType6Code";
 				definition = "Specifies  the value of a price.";
-				code_lazy = () -> Arrays.asList(PriceValueType6Code.mmUnknown, PriceValueType6Code.mmOpenDated, PriceValueType6Code.mmUnspecified, PriceValueType6Code.mmToBeSpecified);
 				trace_lazy = () -> PriceValueTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceValueType6Code.Unknown, com.tools20022.repository.codeset.PriceValueType6Code.OpenDated,
+						com.tools20022.repository.codeset.PriceValueType6Code.Unspecified, com.tools20022.repository.codeset.PriceValueType6Code.ToBeSpecified);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Unknown.getCodeName().get(), Unknown);
+		codesByName.put(OpenDated.getCodeName().get(), OpenDated);
+		codesByName.put(Unspecified.getCodeName().get(), Unspecified);
+		codesByName.put(ToBeSpecified.getCodeName().get(), ToBeSpecified);
+	}
+
+	public static PriceValueType6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PriceValueType6Code[] values() {
+		PriceValueType6Code[] values = new PriceValueType6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PriceValueType6Code> {
+		@Override
+		public PriceValueType6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PriceValueType6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification38;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,18 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "EUCapitalGainType2Choice", propOrder = {"EUCapitalGain", "proprietary"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "EUCapitalGainType2Choice", propOrder = {"eUCapitalGain", "proprietary"})
 public class EUCapitalGainType2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "EUCptlGn", required = true)
 	protected EUCapitalGain2Code eUCapitalGain;
 	/**
-	 * Specifies whether capital gain is in the scope of the European directive
-	 * on taxation of savings income in the form of interest payments (Council
-	 * Directive 2003/48/EC 3 June), or an income realised upon sale, a refund
-	 * or redemption of shares and units, etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +127,7 @@ public class EUCapitalGainType2Choice {
 	public static final MMMessageAttribute mmEUCapitalGain = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
-			componentContext_lazy = () -> EUCapitalGainType2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.EUCapitalGainType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EUCptlGn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,13 +139,11 @@ public class EUCapitalGainType2Choice {
 			simpleType_lazy = () -> EUCapitalGain2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification38 proprietary;
 	/**
-	 * Specifies whether capital gain is in the scope of the European directive
-	 * on taxation of savings income in the form of interest payments (Council
-	 * Directive 2003/48/EC 3 June), or an income realised upon sale, a refund
-	 * or redemption of shares and units, etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +187,7 @@ public class EUCapitalGainType2Choice {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
-			componentContext_lazy = () -> EUCapitalGainType2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.EUCapitalGainType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,9 +203,9 @@ public class EUCapitalGainType2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EUCapitalGainType2Choice.mmEUCapitalGain, EUCapitalGainType2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EUCapitalGainType2Choice.mmEUCapitalGain, com.tools20022.repository.choice.EUCapitalGainType2Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTax.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EUCapitalGainType2Choice";
 				definition = "Choice of an EU capital gain type.";
@@ -218,21 +215,21 @@ public class EUCapitalGainType2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "EUCptlGn", required = true)
 	public EUCapitalGain2Code getEUCapitalGain() {
 		return eUCapitalGain;
 	}
 
-	public void setEUCapitalGain(EUCapitalGain2Code eUCapitalGain) {
-		this.eUCapitalGain = eUCapitalGain;
+	public EUCapitalGainType2Choice setEUCapitalGain(EUCapitalGain2Code eUCapitalGain) {
+		this.eUCapitalGain = Objects.requireNonNull(eUCapitalGain);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification38 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification38 proprietary) {
-		this.proprietary = proprietary;
+	public EUCapitalGainType2Choice setProprietary(GenericIdentification38 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

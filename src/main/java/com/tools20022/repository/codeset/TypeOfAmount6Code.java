@@ -20,63 +20,66 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TypeOfAmountCode;
+import com.tools20022.repository.codeset.TypeOfAmount6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type or class of amount.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmountCode
- * TypeOfAmountCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmATMCommissionFee
- * TypeOfAmount6Code.mmATMCommissionFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#ATMCommissionFee
+ * TypeOfAmount6Code.ATMCommissionFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmAuthorisedAmount
- * TypeOfAmount6Code.mmAuthorisedAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#AuthorisedAmount
+ * TypeOfAmount6Code.AuthorisedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmCardRemainingBalance
- * TypeOfAmount6Code.mmCardRemainingBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#CardRemainingBalance
+ * TypeOfAmount6Code.CardRemainingBalance}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#Discount
+ * TypeOfAmount6Code.Discount}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#Fees
+ * TypeOfAmount6Code.Fees}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmDiscount
- * TypeOfAmount6Code.mmDiscount}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmFees
- * TypeOfAmount6Code.mmFees}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#MaximumAllowedAmount
+ * TypeOfAmount6Code.MaximumAllowedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmMaximumAllowedAmount
- * TypeOfAmount6Code.mmMaximumAllowedAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#MinimumAllowedAmount
+ * TypeOfAmount6Code.MinimumAllowedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmMinimumAllowedAmount
- * TypeOfAmount6Code.mmMinimumAllowedAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#RequestedAmount
+ * TypeOfAmount6Code.RequestedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmRequestedAmount
- * TypeOfAmount6Code.mmRequestedAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#Surcharge
+ * TypeOfAmount6Code.Surcharge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmSurcharge
- * TypeOfAmount6Code.mmSurcharge}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#ValueAddedTax
+ * TypeOfAmount6Code.ValueAddedTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmValueAddedTax
- * TypeOfAmount6Code.mmValueAddedTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#IssuerCommission
+ * TypeOfAmount6Code.IssuerCommission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmIssuerCommission
- * TypeOfAmount6Code.mmIssuerCommission}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#mmIssuerFees
- * TypeOfAmount6Code.mmIssuerFees}</li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount6Code#IssuerFees
+ * TypeOfAmount6Code.IssuerFees}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmountCode
+ * TypeOfAmountCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,7 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type or class of amount."</li>
  * </ul>
  */
-public class TypeOfAmount6Code extends TypeOfAmountCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TypeOfAmount6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -106,11 +110,12 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "ATMCommissionFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmATMCommissionFee = new MMCode() {
+	public static final TypeOfAmount6Code ATMCommissionFee = new TypeOfAmount6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMCommissionFee";
-			owner_lazy = () -> TypeOfAmount6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount6Code.mmObject();
+			codeName = TypeOfAmountCode.ATMCommissionFee.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -129,11 +134,12 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "AuthorisedAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAuthorisedAmount = new MMCode() {
+	public static final TypeOfAmount6Code AuthorisedAmount = new TypeOfAmount6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisedAmount";
-			owner_lazy = () -> TypeOfAmount6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount6Code.mmObject();
+			codeName = TypeOfAmountCode.AuthorisedAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -152,11 +158,12 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "CardRemainingBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardRemainingBalance = new MMCode() {
+	public static final TypeOfAmount6Code CardRemainingBalance = new TypeOfAmount6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardRemainingBalance";
-			owner_lazy = () -> TypeOfAmount6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount6Code.mmObject();
+			codeName = TypeOfAmountCode.CardRemainingBalance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -175,11 +182,12 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "Discount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiscount = new MMCode() {
+	public static final TypeOfAmount6Code Discount = new TypeOfAmount6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
-			owner_lazy = () -> TypeOfAmount6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount6Code.mmObject();
+			codeName = TypeOfAmountCode.Discount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -198,11 +206,12 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "Fees"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFees = new MMCode() {
+	public static final TypeOfAmount6Code Fees = new TypeOfAmount6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fees";
-			owner_lazy = () -> TypeOfAmount6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount6Code.mmObject();
+			codeName = TypeOfAmountCode.Fees.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -221,11 +230,12 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "MaximumAllowedAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMaximumAllowedAmount = new MMCode() {
+	public static final TypeOfAmount6Code MaximumAllowedAmount = new TypeOfAmount6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAllowedAmount";
-			owner_lazy = () -> TypeOfAmount6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount6Code.mmObject();
+			codeName = TypeOfAmountCode.MaximumAllowedAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -244,11 +254,12 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "MinimumAllowedAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMinimumAllowedAmount = new MMCode() {
+	public static final TypeOfAmount6Code MinimumAllowedAmount = new TypeOfAmount6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumAllowedAmount";
-			owner_lazy = () -> TypeOfAmount6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount6Code.mmObject();
+			codeName = TypeOfAmountCode.MinimumAllowedAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -267,11 +278,12 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "RequestedAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRequestedAmount = new MMCode() {
+	public static final TypeOfAmount6Code RequestedAmount = new TypeOfAmount6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedAmount";
-			owner_lazy = () -> TypeOfAmount6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount6Code.mmObject();
+			codeName = TypeOfAmountCode.RequestedAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -290,11 +302,12 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "Surcharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSurcharge = new MMCode() {
+	public static final TypeOfAmount6Code Surcharge = new TypeOfAmount6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Surcharge";
-			owner_lazy = () -> TypeOfAmount6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount6Code.mmObject();
+			codeName = TypeOfAmountCode.Surcharge.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -313,11 +326,12 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "ValueAddedTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmValueAddedTax = new MMCode() {
+	public static final TypeOfAmount6Code ValueAddedTax = new TypeOfAmount6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
-			owner_lazy = () -> TypeOfAmount6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount6Code.mmObject();
+			codeName = TypeOfAmountCode.ValueAddedTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -336,11 +350,12 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "IssuerCommission"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuerCommission = new MMCode() {
+	public static final TypeOfAmount6Code IssuerCommission = new TypeOfAmount6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCommission";
-			owner_lazy = () -> TypeOfAmount6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount6Code.mmObject();
+			codeName = TypeOfAmountCode.IssuerCommission.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -359,27 +374,70 @@ public class TypeOfAmount6Code extends TypeOfAmountCode {
 	 * name} = "IssuerFees"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuerFees = new MMCode() {
+	public static final TypeOfAmount6Code IssuerFees = new TypeOfAmount6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerFees";
-			owner_lazy = () -> TypeOfAmount6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount6Code.mmObject();
+			codeName = TypeOfAmountCode.IssuerFees.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TypeOfAmount6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TypeOfAmount6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfAmount6Code";
 				definition = "Type or class of amount.";
-				code_lazy = () -> Arrays.asList(TypeOfAmount6Code.mmATMCommissionFee, TypeOfAmount6Code.mmAuthorisedAmount, TypeOfAmount6Code.mmCardRemainingBalance, TypeOfAmount6Code.mmDiscount, TypeOfAmount6Code.mmFees,
-						TypeOfAmount6Code.mmMaximumAllowedAmount, TypeOfAmount6Code.mmMinimumAllowedAmount, TypeOfAmount6Code.mmRequestedAmount, TypeOfAmount6Code.mmSurcharge, TypeOfAmount6Code.mmValueAddedTax,
-						TypeOfAmount6Code.mmIssuerCommission, TypeOfAmount6Code.mmIssuerFees);
 				trace_lazy = () -> TypeOfAmountCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmount6Code.ATMCommissionFee, com.tools20022.repository.codeset.TypeOfAmount6Code.AuthorisedAmount,
+						com.tools20022.repository.codeset.TypeOfAmount6Code.CardRemainingBalance, com.tools20022.repository.codeset.TypeOfAmount6Code.Discount, com.tools20022.repository.codeset.TypeOfAmount6Code.Fees,
+						com.tools20022.repository.codeset.TypeOfAmount6Code.MaximumAllowedAmount, com.tools20022.repository.codeset.TypeOfAmount6Code.MinimumAllowedAmount,
+						com.tools20022.repository.codeset.TypeOfAmount6Code.RequestedAmount, com.tools20022.repository.codeset.TypeOfAmount6Code.Surcharge, com.tools20022.repository.codeset.TypeOfAmount6Code.ValueAddedTax,
+						com.tools20022.repository.codeset.TypeOfAmount6Code.IssuerCommission, com.tools20022.repository.codeset.TypeOfAmount6Code.IssuerFees);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ATMCommissionFee.getCodeName().get(), ATMCommissionFee);
+		codesByName.put(AuthorisedAmount.getCodeName().get(), AuthorisedAmount);
+		codesByName.put(CardRemainingBalance.getCodeName().get(), CardRemainingBalance);
+		codesByName.put(Discount.getCodeName().get(), Discount);
+		codesByName.put(Fees.getCodeName().get(), Fees);
+		codesByName.put(MaximumAllowedAmount.getCodeName().get(), MaximumAllowedAmount);
+		codesByName.put(MinimumAllowedAmount.getCodeName().get(), MinimumAllowedAmount);
+		codesByName.put(RequestedAmount.getCodeName().get(), RequestedAmount);
+		codesByName.put(Surcharge.getCodeName().get(), Surcharge);
+		codesByName.put(ValueAddedTax.getCodeName().get(), ValueAddedTax);
+		codesByName.put(IssuerCommission.getCodeName().get(), IssuerCommission);
+		codesByName.put(IssuerFees.getCodeName().get(), IssuerFees);
+	}
+
+	public static TypeOfAmount6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TypeOfAmount6Code[] values() {
+		TypeOfAmount6Code[] values = new TypeOfAmount6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TypeOfAmount6Code> {
+		@Override
+		public TypeOfAmount6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TypeOfAmount6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

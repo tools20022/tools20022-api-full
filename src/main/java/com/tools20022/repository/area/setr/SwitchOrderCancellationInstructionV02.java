@@ -28,6 +28,8 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -55,22 +57,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesTradeArchive
- * SecuritiesTradeArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "setr.014.001.02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "setr.014.001.02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -89,9 +75,37 @@ import javax.xml.bind.annotation.*;
  * SwitchOrderCancellationInstructionV02.mmOrderToBeCancelled}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "setr.014.001.02"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesTradeArchive
+ * SecuritiesTradeArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "setr.014.001.02"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code setr.014.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSwitchRule#forSwitchOrderCancellationInstructionV02
+ * ConstraintSwitchRule.forSwitchOrderCancellationInstructionV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forSwitchOrderCancellationInstructionV02
+ * ConstraintAccountIdentificationRule.forSwitchOrderCancellationInstructionV02}
+ * </li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,16 +126,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "setr.014.001.02", propOrder = {"masterReference", "poolReference", "previousReference", "orderToBeCancelled"})
 public class SwitchOrderCancellationInstructionV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MstrRef")
 	protected AdditionalReference3 masterReference;
 	/**
-	 * Reference assigned to a set of orders or trades in order to link them
-	 * together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,10 +177,11 @@ public class SwitchOrderCancellationInstructionV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PoolRef")
 	protected AdditionalReference3 poolReference;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,10 +221,11 @@ public class SwitchOrderCancellationInstructionV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsRef", required = true)
 	protected AdditionalReference3 previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,10 +265,11 @@ public class SwitchOrderCancellationInstructionV02 {
 			}
 		}
 	};
+	@XmlElement(name = "OrdrToBeCanc")
 	protected SwitchOrderInstruction1 orderToBeCancelled;
 	/**
-	 * Common information related to all the orders to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -297,6 +314,8 @@ public class SwitchOrderCancellationInstructionV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSwitchRule.forSwitchOrderCancellationInstructionV02,
+						com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSwitchOrderCancellationInstructionV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrderCancellationInstructionV02";
 				definition = "Scope\r\nThe SwitchOrderCancellationInstruction message is sent by an instructing party, eg, an investment manager or its authorised representative, to an executing party, eg, a transfer agent. There may be one or more intermediary parties between the instructing party and the executing party. The intermediary party is, for example, an intermediary or a concentrator.\r\nThis message is sent to cancel a previously sent SwitchOrderInstruction message.\r\nUsage\r\nThe SwitchOrderCancellationInstruction message is used to cancel the entire previously sent SwitchOrder message and all the individual legs that it contains. There is no amendment, but a cancellation and re-instruct policy.\r\nThis message must contain the reference of the message to be cancelled. This message may also contain all the details of the message to be cancelled, but this is not recommended.\r\nThe deadline and acceptance of a cancellation instruction is subject to a service level agreement (SLA). This cancellation message is a cancellation instruction. There is no automatic acceptance of the cancellation instruction.\r\nThe rejection or acceptance of a cancellation message instruction is made using an OrderCancellationStatusReport message.";
@@ -327,43 +346,43 @@ public class SwitchOrderCancellationInstructionV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MstrRef")
-	public AdditionalReference3 getMasterReference() {
-		return masterReference;
+	public Optional<AdditionalReference3> getMasterReference() {
+		return masterReference == null ? Optional.empty() : Optional.of(masterReference);
 	}
 
-	public void setMasterReference(AdditionalReference3 masterReference) {
+	public SwitchOrderCancellationInstructionV02 setMasterReference(AdditionalReference3 masterReference) {
 		this.masterReference = masterReference;
+		return this;
 	}
 
-	@XmlElement(name = "PoolRef")
-	public AdditionalReference3 getPoolReference() {
-		return poolReference;
+	public Optional<AdditionalReference3> getPoolReference() {
+		return poolReference == null ? Optional.empty() : Optional.of(poolReference);
 	}
 
-	public void setPoolReference(AdditionalReference3 poolReference) {
+	public SwitchOrderCancellationInstructionV02 setPoolReference(AdditionalReference3 poolReference) {
 		this.poolReference = poolReference;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef", required = true)
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
 
-	public void setPreviousReference(AdditionalReference3 previousReference) {
-		this.previousReference = previousReference;
+	public SwitchOrderCancellationInstructionV02 setPreviousReference(AdditionalReference3 previousReference) {
+		this.previousReference = Objects.requireNonNull(previousReference);
+		return this;
 	}
 
-	@XmlElement(name = "OrdrToBeCanc")
-	public SwitchOrderInstruction1 getOrderToBeCancelled() {
-		return orderToBeCancelled;
+	public Optional<SwitchOrderInstruction1> getOrderToBeCancelled() {
+		return orderToBeCancelled == null ? Optional.empty() : Optional.of(orderToBeCancelled);
 	}
 
-	public void setOrderToBeCancelled(SwitchOrderInstruction1 orderToBeCancelled) {
+	public SwitchOrderCancellationInstructionV02 setOrderToBeCancelled(SwitchOrderInstruction1 orderToBeCancelled) {
 		this.orderToBeCancelled = orderToBeCancelled;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.014.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:setr.014.001.02")
 	static public class Document {
 		@XmlElement(name = "setr.014.001.02", required = true)
 		public SwitchOrderCancellationInstructionV02 messageBody;

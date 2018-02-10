@@ -30,6 +30,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -43,8 +44,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ProprietaryDate1#mmDateOrDateTime
- * ProprietaryDate1.mmDateOrDateTime}</li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryDate1#DateOrDateTime
+ * ProprietaryDate1.DateOrDateTime}</li>
  * </ul>
  * </li>
  * <li>
@@ -62,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -75,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Proprietary date information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ProprietaryDate1", propOrder = {"type", "date", "dateTime"})
 public class ProprietaryDate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected Max35Text type;
 	/**
-	 * Identifies the type of date reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +112,7 @@ public class ProprietaryDate1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProprietaryDate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryDate1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +123,11 @@ public class ProprietaryDate1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Dt", required = true)
 	protected ISODate date;
 	/**
-	 * Date in ISO format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,7 +154,7 @@ public class ProprietaryDate1 {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProprietaryDate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryDate1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,10 +165,11 @@ public class ProprietaryDate1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DtTm", required = true)
 	protected ISODateTime dateTime;
 	/**
-	 * Date and time in ISO format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,7 +196,7 @@ public class ProprietaryDate1 {
 	 */
 	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProprietaryDate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryDate1.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,21 +240,21 @@ public class ProprietaryDate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmDateOrDateTime = new MMXor() {
+	public static final MMXor DateOrDateTime = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOrDateTime";
 			definition = "If Date is present, then DateTime is not allowed.\nIf DateTime is present, then Date is not allowed.";
-			messageComponent_lazy = () -> ProprietaryDate1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(ProprietaryDate1.mmDate, ProprietaryDate1.mmDateTime);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.ProprietaryDate1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryDate1.mmDate, com.tools20022.repository.msg.ProprietaryDate1.mmDateTime);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProprietaryDate1.mmType, ProprietaryDate1.mmDate, ProprietaryDate1.mmDateTime);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryDate1.mmType, com.tools20022.repository.msg.ProprietaryDate1.mmDate, com.tools20022.repository.msg.ProprietaryDate1.mmDateTime);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -261,36 +265,36 @@ public class ProprietaryDate1 {
 				})).get();
 				name = "ProprietaryDate1";
 				definition = "Proprietary date information.";
-				xors_lazy = () -> Arrays.asList(ProprietaryDate1.mmDateOrDateTime);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryDate1.DateOrDateTime);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public Max35Text getType() {
 		return type;
 	}
 
-	public void setType(Max35Text type) {
-		this.type = type;
+	public ProprietaryDate1 setType(Max35Text type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
 
-	public void setDate(ISODate date) {
-		this.date = date;
+	public ProprietaryDate1 setDate(ISODate date) {
+		this.date = Objects.requireNonNull(date);
+		return this;
 	}
 
-	@XmlElement(name = "DtTm", required = true)
 	public ISODateTime getDateTime() {
 		return dateTime;
 	}
 
-	public void setDateTime(ISODateTime dateTime) {
-		this.dateTime = dateTime;
+	public ProprietaryDate1 setDateTime(ISODateTime dateTime) {
+		this.dateTime = Objects.requireNonNull(dateTime);
+		return this;
 	}
 }

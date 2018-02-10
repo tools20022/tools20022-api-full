@@ -26,6 +26,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Value expressed as an amount or a quantity. For example, the value of a
@@ -48,22 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.AmountAndQuantity#mmQuantity
  * AmountAndQuantity.mmQuantity}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio2
- * AmountAndQuantityRatio2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio3
- * AmountAndQuantityRatio3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio1
- * AmountAndQuantityRatio1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio4
- * AmountAndQuantityRatio4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio5
- * AmountAndQuantityRatio5}</li>
  * </ul>
  * </li>
  * <li>
@@ -184,10 +170,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio2
+ * AmountAndQuantityRatio2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio3
+ * AmountAndQuantityRatio3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio1
+ * AmountAndQuantityRatio1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio4
+ * AmountAndQuantityRatio4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio5
+ * AmountAndQuantityRatio5}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -205,8 +207,8 @@ public class AmountAndQuantity {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected SecuritiesPricing securitiesPricing;
 	/**
-	 * Pricing which uses the amount and quantity as format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -239,8 +241,8 @@ public class AmountAndQuantity {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesPricing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndQuantity.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndQuantity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesPricing";
 			definition = "Pricing which uses the amount and quantity as format.";
@@ -253,8 +255,8 @@ public class AmountAndQuantity {
 	};
 	protected CurrencyAndAmount amount;
 	/**
-	 * A number of monetary units specified in a currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -301,8 +303,8 @@ public class AmountAndQuantity {
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountAndQuantityRatio2.mmAmount, AmountAndQuantityRatio3.mmAmount, AmountAndQuantityRatio1.mmAmount, AmountAndQuantityRatio4.mmAmount, AmountAndQuantityRatio5.mmAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndQuantity.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndQuantity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "A number of monetary units specified in a currency.";
@@ -321,8 +323,8 @@ public class AmountAndQuantity {
 	};
 	protected DecimalNumber quantity;
 	/**
-	 * A number of non-monetary units.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -369,8 +371,8 @@ public class AmountAndQuantity {
 	public static final MMBusinessAttribute mmQuantity = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountAndQuantityRatio2.mmQuantity, AmountAndQuantityRatio3.mmQuantity, AmountAndQuantityRatio1.mmQuantity, AmountAndQuantityRatio4.mmQuantity, AmountAndQuantityRatio5.mmQuantity);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndQuantity.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndQuantity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quantity";
 			definition = "A number of non-monetary units.";
@@ -391,7 +393,7 @@ public class AmountAndQuantity {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndQuantity";
 				definition = "Value expressed as an amount or a quantity. For example, the value of a financial instrument.";
@@ -418,27 +420,30 @@ public class AmountAndQuantity {
 		return mmObject_lazy.get();
 	}
 
-	public SecuritiesPricing getSecuritiesPricing() {
-		return securitiesPricing;
+	public Optional<SecuritiesPricing> getSecuritiesPricing() {
+		return securitiesPricing == null ? Optional.empty() : Optional.of(securitiesPricing);
 	}
 
-	public void setSecuritiesPricing(com.tools20022.repository.entity.SecuritiesPricing securitiesPricing) {
+	public AmountAndQuantity setSecuritiesPricing(com.tools20022.repository.entity.SecuritiesPricing securitiesPricing) {
 		this.securitiesPricing = securitiesPricing;
+		return this;
 	}
 
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
-		this.amount = amount;
+	public AmountAndQuantity setAmount(CurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
 	public DecimalNumber getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(DecimalNumber quantity) {
-		this.quantity = quantity;
+	public AmountAndQuantity setQuantity(DecimalNumber quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 }

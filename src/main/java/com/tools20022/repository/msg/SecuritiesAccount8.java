@@ -32,6 +32,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -77,8 +79,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,15 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information about the securities account."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesAccount8", propOrder = {"creditDebitIndicator", "accountOwnerIdentification", "accountIdentification", "balanceType", "optionType", "optionNumber", "securityHoldingForm", "stampDuty"})
 public class SecuritiesAccount8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CdtDbtInd", required = true)
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Specifies whether the value is a debit or credit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,7 +134,7 @@ public class SecuritiesAccount8 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmCreditDebitIndicator;
-			componentContext_lazy = () -> SecuritiesAccount8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,10 +145,11 @@ public class SecuritiesAccount8 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnrId")
 	protected PartyIdentification2Choice accountOwnerIdentification;
 	/**
-	 * Identification of the party that owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,7 +183,7 @@ public class SecuritiesAccount8 {
 	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SecuritiesAccount8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,10 +194,11 @@ public class SecuritiesAccount8 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctId", required = true)
 	protected Max35Text accountIdentification;
 	/**
-	 * Idenfitication of the account where financial instruments are maintained.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,7 +233,7 @@ public class SecuritiesAccount8 {
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> SecuritiesAccount8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,10 +244,11 @@ public class SecuritiesAccount8 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BalTp")
 	protected SecuritiesBalanceType10FormatChoice balanceType;
 	/**
-	 * Type of balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -276,7 +282,7 @@ public class SecuritiesAccount8 {
 	public static final MMMessageAttribute mmBalanceType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
-			componentContext_lazy = () -> SecuritiesAccount8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "BalTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -287,10 +293,11 @@ public class SecuritiesAccount8 {
 			complexType_lazy = () -> SecuritiesBalanceType10FormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnTp")
 	protected CorporateActionOption1FormatChoice optionType;
 	/**
-	 * Specifies the corporate action options available to the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -325,7 +332,7 @@ public class SecuritiesAccount8 {
 	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
-			componentContext_lazy = () -> SecuritiesAccount8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -336,10 +343,11 @@ public class SecuritiesAccount8 {
 			complexType_lazy = () -> CorporateActionOption1FormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnNb")
 	protected Exact3NumericText optionNumber;
 	/**
-	 * Number identifying the available corporate action options.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -374,7 +382,7 @@ public class SecuritiesAccount8 {
 	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
-			componentContext_lazy = () -> SecuritiesAccount8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "OptnNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -385,10 +393,11 @@ public class SecuritiesAccount8 {
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyHldgForm")
 	protected FormOfSecurity1Code securityHoldingForm;
 	/**
-	 * Specifies the form of the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -422,7 +431,7 @@ public class SecuritiesAccount8 {
 	public static final MMMessageAttribute mmSecurityHoldingForm = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
-			componentContext_lazy = () -> SecuritiesAccount8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "SctyHldgForm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -433,10 +442,11 @@ public class SecuritiesAccount8 {
 			simpleType_lazy = () -> FormOfSecurity1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StmpDty")
 	protected StampDutyType1FormatChoice stampDuty;
 	/**
-	 * Specifies if the stamp duty is applicable.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -470,7 +480,7 @@ public class SecuritiesAccount8 {
 	public static final MMMessageAttribute mmStampDuty = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmTaxDetails;
-			componentContext_lazy = () -> SecuritiesAccount8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount8.mmObject();
 			isDerived = false;
 			xmlTag = "StmpDty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -485,10 +495,11 @@ public class SecuritiesAccount8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesAccount8.mmCreditDebitIndicator, SecuritiesAccount8.mmAccountOwnerIdentification, SecuritiesAccount8.mmAccountIdentification, SecuritiesAccount8.mmBalanceType,
-						SecuritiesAccount8.mmOptionType, SecuritiesAccount8.mmOptionNumber, SecuritiesAccount8.mmSecurityHoldingForm, SecuritiesAccount8.mmStampDuty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount8.mmCreditDebitIndicator, com.tools20022.repository.msg.SecuritiesAccount8.mmAccountOwnerIdentification,
+						com.tools20022.repository.msg.SecuritiesAccount8.mmAccountIdentification, com.tools20022.repository.msg.SecuritiesAccount8.mmBalanceType, com.tools20022.repository.msg.SecuritiesAccount8.mmOptionType,
+						com.tools20022.repository.msg.SecuritiesAccount8.mmOptionNumber, com.tools20022.repository.msg.SecuritiesAccount8.mmSecurityHoldingForm, com.tools20022.repository.msg.SecuritiesAccount8.mmStampDuty);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAccount8";
 				definition = "Provides information about the securities account.";
@@ -497,75 +508,75 @@ public class SecuritiesAccount8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
-		this.creditDebitIndicator = creditDebitIndicator;
+	public SecuritiesAccount8 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = Objects.requireNonNull(creditDebitIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnrId")
-	public PartyIdentification2Choice getAccountOwnerIdentification() {
-		return accountOwnerIdentification;
+	public Optional<PartyIdentification2Choice> getAccountOwnerIdentification() {
+		return accountOwnerIdentification == null ? Optional.empty() : Optional.of(accountOwnerIdentification);
 	}
 
-	public void setAccountOwnerIdentification(PartyIdentification2Choice accountOwnerIdentification) {
+	public SecuritiesAccount8 setAccountOwnerIdentification(PartyIdentification2Choice accountOwnerIdentification) {
 		this.accountOwnerIdentification = accountOwnerIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public Max35Text getAccountIdentification() {
 		return accountIdentification;
 	}
 
-	public void setAccountIdentification(Max35Text accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public SecuritiesAccount8 setAccountIdentification(Max35Text accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "BalTp")
-	public SecuritiesBalanceType10FormatChoice getBalanceType() {
-		return balanceType;
+	public Optional<SecuritiesBalanceType10FormatChoice> getBalanceType() {
+		return balanceType == null ? Optional.empty() : Optional.of(balanceType);
 	}
 
-	public void setBalanceType(SecuritiesBalanceType10FormatChoice balanceType) {
+	public SecuritiesAccount8 setBalanceType(SecuritiesBalanceType10FormatChoice balanceType) {
 		this.balanceType = balanceType;
+		return this;
 	}
 
-	@XmlElement(name = "OptnTp")
-	public CorporateActionOption1FormatChoice getOptionType() {
-		return optionType;
+	public Optional<CorporateActionOption1FormatChoice> getOptionType() {
+		return optionType == null ? Optional.empty() : Optional.of(optionType);
 	}
 
-	public void setOptionType(CorporateActionOption1FormatChoice optionType) {
+	public SecuritiesAccount8 setOptionType(CorporateActionOption1FormatChoice optionType) {
 		this.optionType = optionType;
+		return this;
 	}
 
-	@XmlElement(name = "OptnNb")
-	public Exact3NumericText getOptionNumber() {
-		return optionNumber;
+	public Optional<Exact3NumericText> getOptionNumber() {
+		return optionNumber == null ? Optional.empty() : Optional.of(optionNumber);
 	}
 
-	public void setOptionNumber(Exact3NumericText optionNumber) {
+	public SecuritiesAccount8 setOptionNumber(Exact3NumericText optionNumber) {
 		this.optionNumber = optionNumber;
+		return this;
 	}
 
-	@XmlElement(name = "SctyHldgForm")
-	public FormOfSecurity1Code getSecurityHoldingForm() {
-		return securityHoldingForm;
+	public Optional<FormOfSecurity1Code> getSecurityHoldingForm() {
+		return securityHoldingForm == null ? Optional.empty() : Optional.of(securityHoldingForm);
 	}
 
-	public void setSecurityHoldingForm(FormOfSecurity1Code securityHoldingForm) {
+	public SecuritiesAccount8 setSecurityHoldingForm(FormOfSecurity1Code securityHoldingForm) {
 		this.securityHoldingForm = securityHoldingForm;
+		return this;
 	}
 
-	@XmlElement(name = "StmpDty")
-	public StampDutyType1FormatChoice getStampDuty() {
-		return stampDuty;
+	public Optional<StampDutyType1FormatChoice> getStampDuty() {
+		return stampDuty == null ? Optional.empty() : Optional.of(stampDuty);
 	}
 
-	public void setStampDuty(StampDutyType1FormatChoice stampDuty) {
+	public SecuritiesAccount8 setStampDuty(StampDutyType1FormatChoice stampDuty) {
 		this.stampDuty = stampDuty;
+		return this;
 	}
 }

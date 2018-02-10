@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -30,6 +31,8 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +72,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalReasonInforrmationRule#forStatusAndReason10
+ * ConstraintAdditionalReasonInforrmationRule.forStatusAndReason10}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUnaffirmedReasonRule#forStatusAndReason10
+ * ConstraintUnaffirmedReasonRule.forStatusAndReason10}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +95,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides details related to the status of the order."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatusAndReason10", propOrder = {"affirmationStatus", "unaffirmedReason", "additionalReasonInformation"})
 public class StatusAndReason10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AffirmSts", required = true)
 	protected AffirmationStatus7Choice affirmationStatus;
 	/**
-	 * Status of affirmation of a trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,6 +125,9 @@ public class StatusAndReason10 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AffirmSts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::AFFM</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -123,9 +141,10 @@ public class StatusAndReason10 {
 	public static final MMMessageAttribute mmAffirmationStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
-			componentContext_lazy = () -> StatusAndReason10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason10.mmObject();
 			isDerived = false;
 			xmlTag = "AffirmSts";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::AFFM"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffirmationStatus";
 			definition = "Status of affirmation of a trade.";
@@ -134,10 +153,11 @@ public class StatusAndReason10 {
 			complexType_lazy = () -> AffirmationStatus7Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "UaffrmdRsn")
 	protected UnaffirmedReason2Choice unaffirmedReason;
 	/**
-	 * Specifies the reason why the instruction has an unaffirmed status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,7 +186,7 @@ public class StatusAndReason10 {
 	 */
 	public static final MMMessageAttribute mmUnaffirmedReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatusAndReason10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason10.mmObject();
 			isDerived = false;
 			xmlTag = "UaffrmdRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,10 +197,11 @@ public class StatusAndReason10 {
 			complexType_lazy = () -> UnaffirmedReason2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRsnInf")
 	protected Max210Text additionalReasonInformation;
 	/**
-	 * Provides additional information about the reason in narrative form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -214,7 +235,7 @@ public class StatusAndReason10 {
 	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> StatusAndReason10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason10.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,10 +250,13 @@ public class StatusAndReason10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatusAndReason10.mmAffirmationStatus, StatusAndReason10.mmUnaffirmedReason, StatusAndReason10.mmAdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason10.mmAffirmationStatus, com.tools20022.repository.msg.StatusAndReason10.mmUnaffirmedReason,
+						com.tools20022.repository.msg.StatusAndReason10.mmAdditionalReasonInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationResponseV01.mmStatus);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalReasonInforrmationRule.forStatusAndReason10,
+						com.tools20022.repository.constraints.ConstraintUnaffirmedReasonRule.forStatusAndReason10);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusAndReason10";
 				definition = "Provides details related to the status of the order.";
@@ -241,30 +265,30 @@ public class StatusAndReason10 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AffirmSts", required = true)
 	public AffirmationStatus7Choice getAffirmationStatus() {
 		return affirmationStatus;
 	}
 
-	public void setAffirmationStatus(AffirmationStatus7Choice affirmationStatus) {
-		this.affirmationStatus = affirmationStatus;
+	public StatusAndReason10 setAffirmationStatus(AffirmationStatus7Choice affirmationStatus) {
+		this.affirmationStatus = Objects.requireNonNull(affirmationStatus);
+		return this;
 	}
 
-	@XmlElement(name = "UaffrmdRsn")
-	public UnaffirmedReason2Choice getUnaffirmedReason() {
-		return unaffirmedReason;
+	public Optional<UnaffirmedReason2Choice> getUnaffirmedReason() {
+		return unaffirmedReason == null ? Optional.empty() : Optional.of(unaffirmedReason);
 	}
 
-	public void setUnaffirmedReason(UnaffirmedReason2Choice unaffirmedReason) {
+	public StatusAndReason10 setUnaffirmedReason(UnaffirmedReason2Choice unaffirmedReason) {
 		this.unaffirmedReason = unaffirmedReason;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRsnInf")
-	public Max210Text getAdditionalReasonInformation() {
-		return additionalReasonInformation;
+	public Optional<Max210Text> getAdditionalReasonInformation() {
+		return additionalReasonInformation == null ? Optional.empty() : Optional.of(additionalReasonInformation);
 	}
 
-	public void setAdditionalReasonInformation(Max210Text additionalReasonInformation) {
+	public StatusAndReason10 setAdditionalReasonInformation(Max210Text additionalReasonInformation) {
 		this.additionalReasonInformation = additionalReasonInformation;
+		return this;
 	}
 }

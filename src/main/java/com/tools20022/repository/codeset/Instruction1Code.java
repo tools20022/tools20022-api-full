@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.InstructionCode;
+import com.tools20022.repository.codeset.Instruction1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies further instructions concerning the processing of a payment
@@ -31,27 +35,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.InstructionCode
- * InstructionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Instruction1Code#mmPayTheBeneficiary
- * Instruction1Code.mmPayTheBeneficiary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Instruction1Code#mmTimeTill
- * Instruction1Code.mmTimeTill}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Instruction1Code#mmTimeFrom
- * Instruction1Code.mmTimeFrom}</li>
+ * {@linkplain com.tools20022.repository.codeset.Instruction1Code#PayTheBeneficiary
+ * Instruction1Code.PayTheBeneficiary}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Instruction1Code#TimeTill
+ * Instruction1Code.TimeTill}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Instruction1Code#TimeFrom
+ * Instruction1Code.TimeFrom}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.InstructionCode
+ * InstructionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class Instruction1Code extends InstructionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Instruction1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +92,12 @@ public class Instruction1Code extends InstructionCode {
 	 * name} = "PayTheBeneficiary"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPayTheBeneficiary = new MMCode() {
+	public static final Instruction1Code PayTheBeneficiary = new Instruction1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayTheBeneficiary";
-			owner_lazy = () -> Instruction1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Instruction1Code.mmObject();
+			codeName = InstructionCode.PayTheBeneficiary.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +116,12 @@ public class Instruction1Code extends InstructionCode {
 	 * name} = "TimeTill"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTimeTill = new MMCode() {
+	public static final Instruction1Code TimeTill = new Instruction1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeTill";
-			owner_lazy = () -> Instruction1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Instruction1Code.mmObject();
+			codeName = InstructionCode.TimeTill.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,26 +140,58 @@ public class Instruction1Code extends InstructionCode {
 	 * name} = "TimeFrom"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTimeFrom = new MMCode() {
+	public static final Instruction1Code TimeFrom = new Instruction1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeFrom";
-			owner_lazy = () -> Instruction1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Instruction1Code.mmObject();
+			codeName = InstructionCode.TimeFrom.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Instruction1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Instruction1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PBEN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Instruction1Code";
 				definition = "Specifies further instructions concerning the processing of a payment instruction, provided by the sending clearing agent to the next agent(s).";
-				code_lazy = () -> Arrays.asList(Instruction1Code.mmPayTheBeneficiary, Instruction1Code.mmTimeTill, Instruction1Code.mmTimeFrom);
 				trace_lazy = () -> InstructionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Instruction1Code.PayTheBeneficiary, com.tools20022.repository.codeset.Instruction1Code.TimeTill, com.tools20022.repository.codeset.Instruction1Code.TimeFrom);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PayTheBeneficiary.getCodeName().get(), PayTheBeneficiary);
+		codesByName.put(TimeTill.getCodeName().get(), TimeTill);
+		codesByName.put(TimeFrom.getCodeName().get(), TimeFrom);
+	}
+
+	public static Instruction1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Instruction1Code[] values() {
+		Instruction1Code[] values = new Instruction1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Instruction1Code> {
+		@Override
+		public Instruction1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Instruction1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

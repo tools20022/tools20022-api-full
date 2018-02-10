@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between a date or a date and time format."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DateAndDateTimeChoice", propOrder = {"date", "dateTime"})
 public class DateAndDateTimeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dt", required = true)
 	protected ISODate date;
 	/**
-	 * Specified date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +109,7 @@ public class DateAndDateTimeChoice {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndDateTimeChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +120,11 @@ public class DateAndDateTimeChoice {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DtTm", required = true)
 	protected ISODateTime dateTime;
 	/**
-	 * Specified date and time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,7 +151,7 @@ public class DateAndDateTimeChoice {
 	 */
 	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndDateTimeChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,9 +166,9 @@ public class DateAndDateTimeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DateAndDateTimeChoice.mmDate, DateAndDateTimeChoice.mmDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateAndDateTimeChoice.mmDate, com.tools20022.repository.choice.DateAndDateTimeChoice.mmDateTime);
 				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingIssuanceAdviceV01.mmDateOfAdvice);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateAndDateTimeChoice";
 				definition = "Choice between a date or a date and time format.";
@@ -174,21 +177,21 @@ public class DateAndDateTimeChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
 
-	public void setDate(ISODate date) {
-		this.date = date;
+	public DateAndDateTimeChoice setDate(ISODate date) {
+		this.date = Objects.requireNonNull(date);
+		return this;
 	}
 
-	@XmlElement(name = "DtTm", required = true)
 	public ISODateTime getDateTime() {
 		return dateTime;
 	}
 
-	public void setDateTime(ISODateTime dateTime) {
-		this.dateTime = dateTime;
+	public DateAndDateTimeChoice setDateTime(ISODateTime dateTime) {
+		this.dateTime = Objects.requireNonNull(dateTime);
+		return this;
 	}
 }

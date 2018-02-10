@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.StatementUpdateTypeV2Code;
+import com.tools20022.repository.codeset.StatementUpdateType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the nature of a statement update, for example, it is a complete
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.StatementUpdateTypeV2Code
- * StatementUpdateTypeV2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementUpdateType1Code#mmComplete
- * StatementUpdateType1Code.mmComplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementUpdateType1Code#Complete
+ * StatementUpdateType1Code.Complete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatementUpdateType1Code#mmDelta
- * StatementUpdateType1Code.mmDelta}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatementUpdateType1Code#Delta
+ * StatementUpdateType1Code.Delta}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.StatementUpdateTypeV2Code
+ * StatementUpdateTypeV2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class StatementUpdateType1Code extends StatementUpdateTypeV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class StatementUpdateType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class StatementUpdateType1Code extends StatementUpdateTypeV2Code {
 	 * name} = "Complete"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmComplete = new MMCode() {
+	public static final StatementUpdateType1Code Complete = new StatementUpdateType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
-			owner_lazy = () -> StatementUpdateType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StatementUpdateType1Code.mmObject();
+			codeName = StatementUpdateTypeV2Code.Complete.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,57 @@ public class StatementUpdateType1Code extends StatementUpdateTypeV2Code {
 	 * name} = "Delta"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDelta = new MMCode() {
+	public static final StatementUpdateType1Code Delta = new StatementUpdateType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delta";
-			owner_lazy = () -> StatementUpdateType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StatementUpdateType1Code.mmObject();
+			codeName = StatementUpdateTypeV2Code.Delta.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, StatementUpdateType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected StatementUpdateType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementUpdateType1Code";
 				definition = "Specifies the nature of a statement update, for example, it is a complete statement.";
-				code_lazy = () -> Arrays.asList(StatementUpdateType1Code.mmComplete, StatementUpdateType1Code.mmDelta);
 				trace_lazy = () -> StatementUpdateTypeV2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementUpdateType1Code.Complete, com.tools20022.repository.codeset.StatementUpdateType1Code.Delta);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Complete.getCodeName().get(), Complete);
+		codesByName.put(Delta.getCodeName().get(), Delta);
+	}
+
+	public static StatementUpdateType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static StatementUpdateType1Code[] values() {
+		StatementUpdateType1Code[] values = new StatementUpdateType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, StatementUpdateType1Code> {
+		@Override
+		public StatementUpdateType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(StatementUpdateType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -26,9 +26,11 @@ import com.tools20022.repository.entity.Country;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.TradingMarket;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Processing information specific to a local market."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LocalMarketAnnex", propOrder = {"country", "localOrderDesk"})
 public class LocalMarketAnnex {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ctry", required = true)
 	protected List<CountryCode> country;
 	/**
-	 * Country in which the processing characteristic applies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +112,7 @@ public class LocalMarketAnnex {
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> LocalMarketAnnex.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LocalMarketAnnex.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +122,11 @@ public class LocalMarketAnnex {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "LclOrdrDsk", required = true)
 	protected OrderDeskContactDetails localOrderDesk;
 	/**
-	 * Contact information for the local fund order desk.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +159,7 @@ public class LocalMarketAnnex {
 	public static final MMMessageAssociationEnd mmLocalOrderDesk = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmContactPoint;
-			componentContext_lazy = () -> LocalMarketAnnex.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LocalMarketAnnex.mmObject();
 			isDerived = false;
 			xmlTag = "LclOrdrDsk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,9 +175,9 @@ public class LocalMarketAnnex {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LocalMarketAnnex.mmCountry, LocalMarketAnnex.mmLocalOrderDesk);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LocalMarketAnnex.mmCountry, com.tools20022.repository.msg.LocalMarketAnnex.mmLocalOrderDesk);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LocalMarketAnnex";
 				definition = "Processing information specific to a local market.";
@@ -182,21 +186,21 @@ public class LocalMarketAnnex {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ctry", required = true)
 	public List<CountryCode> getCountry() {
-		return country;
+		return country == null ? country = new ArrayList<>() : country;
 	}
 
-	public void setCountry(List<CountryCode> country) {
-		this.country = country;
+	public LocalMarketAnnex setCountry(List<CountryCode> country) {
+		this.country = Objects.requireNonNull(country);
+		return this;
 	}
 
-	@XmlElement(name = "LclOrdrDsk", required = true)
 	public OrderDeskContactDetails getLocalOrderDesk() {
 		return localOrderDesk;
 	}
 
-	public void setLocalOrderDesk(com.tools20022.repository.msg.OrderDeskContactDetails localOrderDesk) {
-		this.localOrderDesk = localOrderDesk;
+	public LocalMarketAnnex setLocalOrderDesk(com.tools20022.repository.msg.OrderDeskContactDetails localOrderDesk) {
+		this.localOrderDesk = Objects.requireNonNull(localOrderDesk);
+		return this;
 	}
 }

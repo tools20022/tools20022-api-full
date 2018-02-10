@@ -30,11 +30,9 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -119,8 +117,20 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule#forTransfer26
+ * ConstraintTotalUnitsNumberRule.forTransfer26}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1#forTransfer26
+ * ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1.
+ * forTransfer26}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -143,18 +153,18 @@ import javax.xml.bind.annotation.XmlType;
  * Transfer18}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Transfer26", propOrder = {"transferConfirmationReference", "transferReference", "clientReference", "counterpartyReference", "effectiveTransferDate", "requestedSettlementDate", "effectiveSettlementDate", "tradeDate",
 		"transferOrderDateForm", "transferReason", "holdingsPlanType", "financialInstrumentDetails", "totalUnitsNumber", "unitsDetails", "averagePrice", "transferCurrency", "ownAccountTransferIndicator", "nonStandardSettlementInformation",
 		"receivingAgentDetails", "deliveringAgentDetails"})
 public class Transfer26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TrfConfRef", required = true)
 	protected Max35Text transferConfirmationReference;
 	/**
-	 * Unique and unambiguous identifier for a transfer execution, as assigned
-	 * by a confirming party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +200,7 @@ public class Transfer26 {
 	 */
 	public static final MMMessageAttribute mmTransferConfirmationReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "TrfConfRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,11 +212,11 @@ public class Transfer26 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfRef", required = true)
 	protected Max35Text transferReference;
 	/**
-	 * Unique and unambiguous identifier for a transfer instruction, as assigned
-	 * by the instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -248,7 +258,7 @@ public class Transfer26 {
 	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmIdentification;
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "TrfRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -260,12 +270,11 @@ public class Transfer26 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntRef")
 	protected Max35Text clientReference;
 	/**
-	 * Unique and unambiguous investor's identification of a transfer. This
-	 * reference can typically be used in a hub scenario to give the reference
-	 * of the transfer as assigned by the underlying client.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -307,7 +316,7 @@ public class Transfer26 {
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -319,10 +328,11 @@ public class Transfer26 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrPtyRef")
 	protected AdditionalReference2 counterpartyReference;
 	/**
-	 * Unambiguous identification of the transfer allocated by the counterparty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -365,7 +375,7 @@ public class Transfer26 {
 	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -377,10 +387,11 @@ public class Transfer26 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
 		}
 	};
+	@XmlElement(name = "FctvTrfDt", required = true)
 	protected DateAndDateTimeChoice effectiveTransferDate;
 	/**
-	 * Date and time at which the transfer was executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -421,7 +432,7 @@ public class Transfer26 {
 	public static final MMMessageAttribute mmEffectiveTransferDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "FctvTrfDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -433,12 +444,11 @@ public class Transfer26 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdSttlmDt")
 	protected ISODate requestedSettlementDate;
 	/**
-	 * Date and time at which the securities are to be exchanged at the
-	 * International Central Securities Depository (ICSD) or Central Securities
-	 * Depository (CSD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -480,7 +490,7 @@ public class Transfer26 {
 	public static final MMMessageAttribute mmRequestedSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -492,12 +502,11 @@ public class Transfer26 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "FctvSttlmDt")
 	protected DateAndDateTimeChoice effectiveSettlementDate;
 	/**
-	 * Date and time at which the securities were exchanged at the International
-	 * Central Securities Depository (ICSD) or Central Securities Depository
-	 * (CSD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -540,7 +549,7 @@ public class Transfer26 {
 	public static final MMMessageAttribute mmEffectiveSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "FctvSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -552,11 +561,11 @@ public class Transfer26 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDt")
 	protected DateAndDateTimeChoice tradeDate;
 	/**
-	 * Date and time at which a transaction is completed and cleared, ie,
-	 * securities are delivered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -598,7 +607,7 @@ public class Transfer26 {
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -610,10 +619,11 @@ public class Transfer26 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfOrdrDtForm")
 	protected ISODate transferOrderDateForm;
 	/**
-	 * Identifies in which date the investor signed the transfer order form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -654,7 +664,7 @@ public class Transfer26 {
 	public static final MMMessageAttribute mmTransferOrderDateForm = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "TrfOrdrDtForm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -666,10 +676,11 @@ public class Transfer26 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfRsn")
 	protected TransferReason1 transferReason;
 	/**
-	 * Specifies the reason for the assets transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -710,7 +721,7 @@ public class Transfer26 {
 	public static final MMMessageAttribute mmTransferReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferReason;
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "TrfRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -722,11 +733,11 @@ public class Transfer26 {
 			complexType_lazy = () -> TransferReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "HldgsPlanTp")
 	protected List<HoldingsPlanType1Code> holdingsPlanType;
 	/**
-	 * Identifies whether or not saving plan or withdrawal or switch plan are
-	 * included in the holdings.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -769,7 +780,7 @@ public class Transfer26 {
 	public static final MMMessageAttribute mmHoldingsPlanType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmHoldingsPlanType;
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "HldgsPlanTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -781,10 +792,11 @@ public class Transfer26 {
 			simpleType_lazy = () -> HoldingsPlanType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	protected FinancialInstrument13 financialInstrumentDetails;
 	/**
-	 * Information related to the financial instrument received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -826,7 +838,7 @@ public class Transfer26 {
 	public static final MMMessageAttribute mmFinancialInstrumentDetails = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -838,10 +850,11 @@ public class Transfer26 {
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrument13.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlUnitsNb", required = true)
 	protected FinancialInstrumentQuantity1 totalUnitsNumber;
 	/**
-	 * Total quantity of securities settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -882,7 +895,7 @@ public class Transfer26 {
 	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "TtlUnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -894,10 +907,11 @@ public class Transfer26 {
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	@XmlElement(name = "UnitsDtls")
 	protected List<com.tools20022.repository.msg.Unit3> unitsDetails;
 	/**
-	 * Information about the units to be transferred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -934,7 +948,7 @@ public class Transfer26 {
 	public static final MMMessageAssociationEnd mmUnitsDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -946,11 +960,11 @@ public class Transfer26 {
 			type_lazy = () -> com.tools20022.repository.msg.Unit3.mmObject();
 		}
 	};
+	@XmlElement(name = "AvrgPric")
 	protected ActiveOrHistoricCurrencyAnd13DecimalAmount averagePrice;
 	/**
-	 * Value of a security, as booked in an account. Book value is often
-	 * different from the current market value of the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -992,7 +1006,7 @@ public class Transfer26 {
 	public static final MMMessageAttribute mmAveragePrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1004,10 +1018,11 @@ public class Transfer26 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfCcy")
 	protected CurrencyCode transferCurrency;
 	/**
-	 * Identifies the currency to be used to transfer the holdings.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1048,7 +1063,7 @@ public class Transfer26 {
 	public static final MMMessageAttribute mmTransferCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesDeliveryObligation.mmTransferCurrency;
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "TrfCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1060,10 +1075,11 @@ public class Transfer26 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "OwnAcctTrfInd")
 	protected YesNoIndicator ownAccountTransferIndicator;
 	/**
-	 * Indicates whether the transfer results in a change of beneficial owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1106,7 +1122,7 @@ public class Transfer26 {
 	public static final MMMessageAttribute mmOwnAccountTransferIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmOwnAccountTransferIndicator;
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "OwnAcctTrfInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1118,11 +1134,11 @@ public class Transfer26 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "NonStdSttlmInf")
 	protected Max350Text nonStandardSettlementInformation;
 	/**
-	 * Additional specific settlement information for non-regulated traded
-	 * funds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1164,7 +1180,7 @@ public class Transfer26 {
 	public static final MMMessageAttribute mmNonStandardSettlementInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmNonStandardSettlementInformation;
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "NonStdSttlmInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1176,11 +1192,11 @@ public class Transfer26 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvgAgtDtls")
 	protected PartyIdentificationAndAccount93 receivingAgentDetails;
 	/**
-	 * Party that receives securities from the delivering agent via the place of
-	 * settlement, for example, securities central depository.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1223,7 +1239,7 @@ public class Transfer26 {
 	public static final MMMessageAttribute mmReceivingAgentDetails = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgAgtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1235,11 +1251,11 @@ public class Transfer26 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount93.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvrgAgtDtls")
 	protected PartyIdentificationAndAccount93 deliveringAgentDetails;
 	/**
-	 * Party that delivers securities to the receiving agent at the place of
-	 * settlement, for example, a central securities depository.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1282,7 +1298,7 @@ public class Transfer26 {
 	public static final MMMessageAttribute mmDeliveringAgentDetails = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Transfer26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer26.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgAgtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1298,13 +1314,18 @@ public class Transfer26 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Transfer26.mmTransferConfirmationReference, Transfer26.mmTransferReference, Transfer26.mmClientReference, Transfer26.mmCounterpartyReference, Transfer26.mmEffectiveTransferDate,
-						Transfer26.mmRequestedSettlementDate, Transfer26.mmEffectiveSettlementDate, Transfer26.mmTradeDate, Transfer26.mmTransferOrderDateForm, Transfer26.mmTransferReason, Transfer26.mmHoldingsPlanType,
-						Transfer26.mmFinancialInstrumentDetails, Transfer26.mmTotalUnitsNumber, Transfer26.mmUnitsDetails, Transfer26.mmAveragePrice, Transfer26.mmTransferCurrency, Transfer26.mmOwnAccountTransferIndicator,
-						Transfer26.mmNonStandardSettlementInformation, Transfer26.mmReceivingAgentDetails, Transfer26.mmDeliveringAgentDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer26.mmTransferConfirmationReference, com.tools20022.repository.msg.Transfer26.mmTransferReference,
+						com.tools20022.repository.msg.Transfer26.mmClientReference, com.tools20022.repository.msg.Transfer26.mmCounterpartyReference, com.tools20022.repository.msg.Transfer26.mmEffectiveTransferDate,
+						com.tools20022.repository.msg.Transfer26.mmRequestedSettlementDate, com.tools20022.repository.msg.Transfer26.mmEffectiveSettlementDate, com.tools20022.repository.msg.Transfer26.mmTradeDate,
+						com.tools20022.repository.msg.Transfer26.mmTransferOrderDateForm, com.tools20022.repository.msg.Transfer26.mmTransferReason, com.tools20022.repository.msg.Transfer26.mmHoldingsPlanType,
+						com.tools20022.repository.msg.Transfer26.mmFinancialInstrumentDetails, com.tools20022.repository.msg.Transfer26.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer26.mmUnitsDetails,
+						com.tools20022.repository.msg.Transfer26.mmAveragePrice, com.tools20022.repository.msg.Transfer26.mmTransferCurrency, com.tools20022.repository.msg.Transfer26.mmOwnAccountTransferIndicator,
+						com.tools20022.repository.msg.Transfer26.mmNonStandardSettlementInformation, com.tools20022.repository.msg.Transfer26.mmReceivingAgentDetails, com.tools20022.repository.msg.Transfer26.mmDeliveringAgentDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInConfirmationV04.mmTransferDetails);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer26,
+						com.tools20022.repository.constraints.ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1.forTransfer26);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -1322,183 +1343,183 @@ public class Transfer26 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TrfConfRef", required = true)
 	public Max35Text getTransferConfirmationReference() {
 		return transferConfirmationReference;
 	}
 
-	public void setTransferConfirmationReference(Max35Text transferConfirmationReference) {
-		this.transferConfirmationReference = transferConfirmationReference;
+	public Transfer26 setTransferConfirmationReference(Max35Text transferConfirmationReference) {
+		this.transferConfirmationReference = Objects.requireNonNull(transferConfirmationReference);
+		return this;
 	}
 
-	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
 
-	public void setTransferReference(Max35Text transferReference) {
-		this.transferReference = transferReference;
+	public Transfer26 setTransferReference(Max35Text transferReference) {
+		this.transferReference = Objects.requireNonNull(transferReference);
+		return this;
 	}
 
-	@XmlElement(name = "ClntRef")
-	public Max35Text getClientReference() {
-		return clientReference;
+	public Optional<Max35Text> getClientReference() {
+		return clientReference == null ? Optional.empty() : Optional.of(clientReference);
 	}
 
-	public void setClientReference(Max35Text clientReference) {
+	public Transfer26 setClientReference(Max35Text clientReference) {
 		this.clientReference = clientReference;
+		return this;
 	}
 
-	@XmlElement(name = "CtrPtyRef")
-	public AdditionalReference2 getCounterpartyReference() {
-		return counterpartyReference;
+	public Optional<AdditionalReference2> getCounterpartyReference() {
+		return counterpartyReference == null ? Optional.empty() : Optional.of(counterpartyReference);
 	}
 
-	public void setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference2 counterpartyReference) {
+	public Transfer26 setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference2 counterpartyReference) {
 		this.counterpartyReference = counterpartyReference;
+		return this;
 	}
 
-	@XmlElement(name = "FctvTrfDt", required = true)
 	public DateAndDateTimeChoice getEffectiveTransferDate() {
 		return effectiveTransferDate;
 	}
 
-	public void setEffectiveTransferDate(DateAndDateTimeChoice effectiveTransferDate) {
-		this.effectiveTransferDate = effectiveTransferDate;
+	public Transfer26 setEffectiveTransferDate(DateAndDateTimeChoice effectiveTransferDate) {
+		this.effectiveTransferDate = Objects.requireNonNull(effectiveTransferDate);
+		return this;
 	}
 
-	@XmlElement(name = "ReqdSttlmDt")
-	public ISODate getRequestedSettlementDate() {
-		return requestedSettlementDate;
+	public Optional<ISODate> getRequestedSettlementDate() {
+		return requestedSettlementDate == null ? Optional.empty() : Optional.of(requestedSettlementDate);
 	}
 
-	public void setRequestedSettlementDate(ISODate requestedSettlementDate) {
+	public Transfer26 setRequestedSettlementDate(ISODate requestedSettlementDate) {
 		this.requestedSettlementDate = requestedSettlementDate;
+		return this;
 	}
 
-	@XmlElement(name = "FctvSttlmDt")
-	public DateAndDateTimeChoice getEffectiveSettlementDate() {
-		return effectiveSettlementDate;
+	public Optional<DateAndDateTimeChoice> getEffectiveSettlementDate() {
+		return effectiveSettlementDate == null ? Optional.empty() : Optional.of(effectiveSettlementDate);
 	}
 
-	public void setEffectiveSettlementDate(DateAndDateTimeChoice effectiveSettlementDate) {
+	public Transfer26 setEffectiveSettlementDate(DateAndDateTimeChoice effectiveSettlementDate) {
 		this.effectiveSettlementDate = effectiveSettlementDate;
+		return this;
 	}
 
-	@XmlElement(name = "TradDt")
-	public DateAndDateTimeChoice getTradeDate() {
-		return tradeDate;
+	public Optional<DateAndDateTimeChoice> getTradeDate() {
+		return tradeDate == null ? Optional.empty() : Optional.of(tradeDate);
 	}
 
-	public void setTradeDate(DateAndDateTimeChoice tradeDate) {
+	public Transfer26 setTradeDate(DateAndDateTimeChoice tradeDate) {
 		this.tradeDate = tradeDate;
+		return this;
 	}
 
-	@XmlElement(name = "TrfOrdrDtForm")
-	public ISODate getTransferOrderDateForm() {
-		return transferOrderDateForm;
+	public Optional<ISODate> getTransferOrderDateForm() {
+		return transferOrderDateForm == null ? Optional.empty() : Optional.of(transferOrderDateForm);
 	}
 
-	public void setTransferOrderDateForm(ISODate transferOrderDateForm) {
+	public Transfer26 setTransferOrderDateForm(ISODate transferOrderDateForm) {
 		this.transferOrderDateForm = transferOrderDateForm;
+		return this;
 	}
 
-	@XmlElement(name = "TrfRsn")
-	public TransferReason1 getTransferReason() {
-		return transferReason;
+	public Optional<TransferReason1> getTransferReason() {
+		return transferReason == null ? Optional.empty() : Optional.of(transferReason);
 	}
 
-	public void setTransferReason(TransferReason1 transferReason) {
+	public Transfer26 setTransferReason(TransferReason1 transferReason) {
 		this.transferReason = transferReason;
+		return this;
 	}
 
-	@XmlElement(name = "HldgsPlanTp")
 	public List<HoldingsPlanType1Code> getHoldingsPlanType() {
-		return holdingsPlanType;
+		return holdingsPlanType == null ? holdingsPlanType = new ArrayList<>() : holdingsPlanType;
 	}
 
-	public void setHoldingsPlanType(List<HoldingsPlanType1Code> holdingsPlanType) {
-		this.holdingsPlanType = holdingsPlanType;
+	public Transfer26 setHoldingsPlanType(List<HoldingsPlanType1Code> holdingsPlanType) {
+		this.holdingsPlanType = Objects.requireNonNull(holdingsPlanType);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument13 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
 
-	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument13 financialInstrumentDetails) {
-		this.financialInstrumentDetails = financialInstrumentDetails;
+	public Transfer26 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument13 financialInstrumentDetails) {
+		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
+		return this;
 	}
 
-	@XmlElement(name = "TtlUnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
 		return totalUnitsNumber;
 	}
 
-	public void setTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsNumber) {
-		this.totalUnitsNumber = totalUnitsNumber;
+	public Transfer26 setTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsNumber) {
+		this.totalUnitsNumber = Objects.requireNonNull(totalUnitsNumber);
+		return this;
 	}
 
-	@XmlElement(name = "UnitsDtls")
 	public List<Unit3> getUnitsDetails() {
-		return unitsDetails;
+		return unitsDetails == null ? unitsDetails = new ArrayList<>() : unitsDetails;
 	}
 
-	public void setUnitsDetails(List<com.tools20022.repository.msg.Unit3> unitsDetails) {
-		this.unitsDetails = unitsDetails;
+	public Transfer26 setUnitsDetails(List<com.tools20022.repository.msg.Unit3> unitsDetails) {
+		this.unitsDetails = Objects.requireNonNull(unitsDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AvrgPric")
-	public ActiveOrHistoricCurrencyAnd13DecimalAmount getAveragePrice() {
-		return averagePrice;
+	public Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount> getAveragePrice() {
+		return averagePrice == null ? Optional.empty() : Optional.of(averagePrice);
 	}
 
-	public void setAveragePrice(ActiveOrHistoricCurrencyAnd13DecimalAmount averagePrice) {
+	public Transfer26 setAveragePrice(ActiveOrHistoricCurrencyAnd13DecimalAmount averagePrice) {
 		this.averagePrice = averagePrice;
+		return this;
 	}
 
-	@XmlElement(name = "TrfCcy")
-	public CurrencyCode getTransferCurrency() {
-		return transferCurrency;
+	public Optional<CurrencyCode> getTransferCurrency() {
+		return transferCurrency == null ? Optional.empty() : Optional.of(transferCurrency);
 	}
 
-	public void setTransferCurrency(CurrencyCode transferCurrency) {
+	public Transfer26 setTransferCurrency(CurrencyCode transferCurrency) {
 		this.transferCurrency = transferCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "OwnAcctTrfInd")
-	public YesNoIndicator getOwnAccountTransferIndicator() {
-		return ownAccountTransferIndicator;
+	public Optional<YesNoIndicator> getOwnAccountTransferIndicator() {
+		return ownAccountTransferIndicator == null ? Optional.empty() : Optional.of(ownAccountTransferIndicator);
 	}
 
-	public void setOwnAccountTransferIndicator(YesNoIndicator ownAccountTransferIndicator) {
+	public Transfer26 setOwnAccountTransferIndicator(YesNoIndicator ownAccountTransferIndicator) {
 		this.ownAccountTransferIndicator = ownAccountTransferIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "NonStdSttlmInf")
-	public Max350Text getNonStandardSettlementInformation() {
-		return nonStandardSettlementInformation;
+	public Optional<Max350Text> getNonStandardSettlementInformation() {
+		return nonStandardSettlementInformation == null ? Optional.empty() : Optional.of(nonStandardSettlementInformation);
 	}
 
-	public void setNonStandardSettlementInformation(Max350Text nonStandardSettlementInformation) {
+	public Transfer26 setNonStandardSettlementInformation(Max350Text nonStandardSettlementInformation) {
 		this.nonStandardSettlementInformation = nonStandardSettlementInformation;
+		return this;
 	}
 
-	@XmlElement(name = "RcvgAgtDtls")
-	public PartyIdentificationAndAccount93 getReceivingAgentDetails() {
-		return receivingAgentDetails;
+	public Optional<PartyIdentificationAndAccount93> getReceivingAgentDetails() {
+		return receivingAgentDetails == null ? Optional.empty() : Optional.of(receivingAgentDetails);
 	}
 
-	public void setReceivingAgentDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount93 receivingAgentDetails) {
+	public Transfer26 setReceivingAgentDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount93 receivingAgentDetails) {
 		this.receivingAgentDetails = receivingAgentDetails;
+		return this;
 	}
 
-	@XmlElement(name = "DlvrgAgtDtls")
-	public PartyIdentificationAndAccount93 getDeliveringAgentDetails() {
-		return deliveringAgentDetails;
+	public Optional<PartyIdentificationAndAccount93> getDeliveringAgentDetails() {
+		return deliveringAgentDetails == null ? Optional.empty() : Optional.of(deliveringAgentDetails);
 	}
 
-	public void setDeliveringAgentDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount93 deliveringAgentDetails) {
+	public Transfer26 setDeliveringAgentDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount93 deliveringAgentDetails) {
 		this.deliveringAgentDetails = deliveringAgentDetails;
+		return this;
 	}
 }

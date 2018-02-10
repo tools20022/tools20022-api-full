@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PendingFailingReasonCode;
+import com.tools20022.repository.codeset.PendingCancellationReason2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason why a cancellation request sent for the related
@@ -31,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PendingFailingReasonCode
- * PendingFailingReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason2Code#mmAccountServicerDeadlineMissed
- * PendingCancellationReason2Code.mmAccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason2Code#AccountServicerDeadlineMissed
+ * PendingCancellationReason2Code.AccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason2Code#mmConfirmationOfPayment
- * PendingCancellationReason2Code.mmConfirmationOfPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason2Code#ConfirmationOfPayment
+ * PendingCancellationReason2Code.ConfirmationOfPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason2Code#mmQuantityDisagreement
- * PendingCancellationReason2Code.mmQuantityDisagreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason2Code#QuantityDisagreement
+ * PendingCancellationReason2Code.QuantityDisagreement}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingReasonCode
+ * PendingFailingReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PendingCancellationReason2Code extends PendingFailingReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PendingCancellationReason2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class PendingCancellationReason2Code extends PendingFailingReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
+	public static final PendingCancellationReason2Code AccountServicerDeadlineMissed = new PendingCancellationReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
-			owner_lazy = () -> PendingCancellationReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingCancellationReason2Code.mmObject();
+			codeName = PendingFailingReasonCode.AccountServicerDeadlineMissed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class PendingCancellationReason2Code extends PendingFailingReasonCode {
 	 * name} = "ConfirmationOfPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConfirmationOfPayment = new MMCode() {
+	public static final PendingCancellationReason2Code ConfirmationOfPayment = new PendingCancellationReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationOfPayment";
-			owner_lazy = () -> PendingCancellationReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingCancellationReason2Code.mmObject();
+			codeName = PendingFailingReasonCode.ConfirmationOfPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,26 +142,59 @@ public class PendingCancellationReason2Code extends PendingFailingReasonCode {
 	 * name} = "QuantityDisagreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQuantityDisagreement = new MMCode() {
+	public static final PendingCancellationReason2Code QuantityDisagreement = new PendingCancellationReason2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityDisagreement";
-			owner_lazy = () -> PendingCancellationReason2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingCancellationReason2Code.mmObject();
+			codeName = PendingFailingReasonCode.QuantityDisagreement.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PendingCancellationReason2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PendingCancellationReason2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingCancellationReason2Code";
 				definition = "Specifies the reason why a cancellation request sent for the related instruction is pending.";
-				code_lazy = () -> Arrays.asList(PendingCancellationReason2Code.mmAccountServicerDeadlineMissed, PendingCancellationReason2Code.mmConfirmationOfPayment, PendingCancellationReason2Code.mmQuantityDisagreement);
 				trace_lazy = () -> PendingFailingReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingCancellationReason2Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingCancellationReason2Code.ConfirmationOfPayment,
+						com.tools20022.repository.codeset.PendingCancellationReason2Code.QuantityDisagreement);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccountServicerDeadlineMissed.getCodeName().get(), AccountServicerDeadlineMissed);
+		codesByName.put(ConfirmationOfPayment.getCodeName().get(), ConfirmationOfPayment);
+		codesByName.put(QuantityDisagreement.getCodeName().get(), QuantityDisagreement);
+	}
+
+	public static PendingCancellationReason2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PendingCancellationReason2Code[] values() {
+		PendingCancellationReason2Code[] values = new PendingCancellationReason2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PendingCancellationReason2Code> {
+		@Override
+		public PendingCancellationReason2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PendingCancellationReason2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

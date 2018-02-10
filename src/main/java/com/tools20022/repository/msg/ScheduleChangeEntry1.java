@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +74,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details about the schedule change."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ScheduleChangeEntry1", propOrder = {"scheduleEventType", "scheduleEventIdentification", "eventFrequency", "eventPreviousFrequency", "eventTime", "eventPreviousTime", "eventDuration", "eventPreviousDuration", "changeType"})
 public class ScheduleChangeEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SchdlEvtTp", required = true)
 	protected SystemEventType2Choice scheduleEventType;
 	/**
-	 * Type of the scheduled event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -119,7 +122,7 @@ public class ScheduleChangeEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmScheduleEventType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "SchdlEvtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +134,11 @@ public class ScheduleChangeEntry1 {
 			type_lazy = () -> SystemEventType2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SchdlEvtId")
 	protected Exact1NumericText scheduleEventIdentification;
 	/**
-	 * Identificaiton of the scheduled event
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +166,7 @@ public class ScheduleChangeEntry1 {
 	 */
 	public static final MMMessageAttribute mmScheduleEventIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "SchdlEvtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +177,11 @@ public class ScheduleChangeEntry1 {
 			simpleType_lazy = () -> Exact1NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtFrqcy")
 	protected Max4Text eventFrequency;
 	/**
-	 * New frequency of the scheduled event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,7 +208,7 @@ public class ScheduleChangeEntry1 {
 	 */
 	public static final MMMessageAttribute mmEventFrequency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,10 +219,11 @@ public class ScheduleChangeEntry1 {
 			simpleType_lazy = () -> Max4Text.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtPrvsFrqcy")
 	protected Max4Text eventPreviousFrequency;
 	/**
-	 * Frequency of the scheduled event before change.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,7 +250,7 @@ public class ScheduleChangeEntry1 {
 	 */
 	public static final MMMessageAttribute mmEventPreviousFrequency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtPrvsFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -255,10 +261,11 @@ public class ScheduleChangeEntry1 {
 			simpleType_lazy = () -> Max4Text.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtTm")
 	protected ISOTime eventTime;
 	/**
-	 * New scheduled time of the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -285,7 +292,7 @@ public class ScheduleChangeEntry1 {
 	 */
 	public static final MMMessageAttribute mmEventTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -296,10 +303,11 @@ public class ScheduleChangeEntry1 {
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtPrvsTm")
 	protected ISOTime eventPreviousTime;
 	/**
-	 * Scheduled time of the event before change.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -326,7 +334,7 @@ public class ScheduleChangeEntry1 {
 	 */
 	public static final MMMessageAttribute mmEventPreviousTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtPrvsTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -337,10 +345,11 @@ public class ScheduleChangeEntry1 {
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtDrtn")
 	protected Max3NumericText eventDuration;
 	/**
-	 * Minimum duration of event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -368,7 +377,7 @@ public class ScheduleChangeEntry1 {
 	 */
 	public static final MMMessageAttribute mmEventDuration = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtDrtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -379,10 +388,11 @@ public class ScheduleChangeEntry1 {
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtPrvsDrtn")
 	protected Max3NumericText eventPreviousDuration;
 	/**
-	 * Set earlier duration of event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -410,7 +420,7 @@ public class ScheduleChangeEntry1 {
 	 */
 	public static final MMMessageAttribute mmEventPreviousDuration = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtPrvsDrtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -421,10 +431,11 @@ public class ScheduleChangeEntry1 {
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "ChngTp", required = true)
 	protected Max35Text changeType;
 	/**
-	 * Type of schedule modification (i.e. event cancelled, new event).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -452,7 +463,7 @@ public class ScheduleChangeEntry1 {
 	 */
 	public static final MMMessageAttribute mmChangeType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ScheduleChangeEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "ChngTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -467,9 +478,11 @@ public class ScheduleChangeEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ScheduleChangeEntry1.mmScheduleEventType, ScheduleChangeEntry1.mmScheduleEventIdentification, ScheduleChangeEntry1.mmEventFrequency, ScheduleChangeEntry1.mmEventPreviousFrequency,
-						ScheduleChangeEntry1.mmEventTime, ScheduleChangeEntry1.mmEventPreviousTime, ScheduleChangeEntry1.mmEventDuration, ScheduleChangeEntry1.mmEventPreviousDuration, ScheduleChangeEntry1.mmChangeType);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ScheduleChangeEntry1.mmScheduleEventType, com.tools20022.repository.msg.ScheduleChangeEntry1.mmScheduleEventIdentification,
+						com.tools20022.repository.msg.ScheduleChangeEntry1.mmEventFrequency, com.tools20022.repository.msg.ScheduleChangeEntry1.mmEventPreviousFrequency, com.tools20022.repository.msg.ScheduleChangeEntry1.mmEventTime,
+						com.tools20022.repository.msg.ScheduleChangeEntry1.mmEventPreviousTime, com.tools20022.repository.msg.ScheduleChangeEntry1.mmEventDuration, com.tools20022.repository.msg.ScheduleChangeEntry1.mmEventPreviousDuration,
+						com.tools20022.repository.msg.ScheduleChangeEntry1.mmChangeType);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ScheduleChangeEntry1";
 				definition = "Details about the schedule change.";
@@ -478,84 +491,84 @@ public class ScheduleChangeEntry1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SchdlEvtTp", required = true)
 	public SystemEventType2Choice getScheduleEventType() {
 		return scheduleEventType;
 	}
 
-	public void setScheduleEventType(SystemEventType2Choice scheduleEventType) {
-		this.scheduleEventType = scheduleEventType;
+	public ScheduleChangeEntry1 setScheduleEventType(SystemEventType2Choice scheduleEventType) {
+		this.scheduleEventType = Objects.requireNonNull(scheduleEventType);
+		return this;
 	}
 
-	@XmlElement(name = "SchdlEvtId")
-	public Exact1NumericText getScheduleEventIdentification() {
-		return scheduleEventIdentification;
+	public Optional<Exact1NumericText> getScheduleEventIdentification() {
+		return scheduleEventIdentification == null ? Optional.empty() : Optional.of(scheduleEventIdentification);
 	}
 
-	public void setScheduleEventIdentification(Exact1NumericText scheduleEventIdentification) {
+	public ScheduleChangeEntry1 setScheduleEventIdentification(Exact1NumericText scheduleEventIdentification) {
 		this.scheduleEventIdentification = scheduleEventIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "EvtFrqcy")
-	public Max4Text getEventFrequency() {
-		return eventFrequency;
+	public Optional<Max4Text> getEventFrequency() {
+		return eventFrequency == null ? Optional.empty() : Optional.of(eventFrequency);
 	}
 
-	public void setEventFrequency(Max4Text eventFrequency) {
+	public ScheduleChangeEntry1 setEventFrequency(Max4Text eventFrequency) {
 		this.eventFrequency = eventFrequency;
+		return this;
 	}
 
-	@XmlElement(name = "EvtPrvsFrqcy")
-	public Max4Text getEventPreviousFrequency() {
-		return eventPreviousFrequency;
+	public Optional<Max4Text> getEventPreviousFrequency() {
+		return eventPreviousFrequency == null ? Optional.empty() : Optional.of(eventPreviousFrequency);
 	}
 
-	public void setEventPreviousFrequency(Max4Text eventPreviousFrequency) {
+	public ScheduleChangeEntry1 setEventPreviousFrequency(Max4Text eventPreviousFrequency) {
 		this.eventPreviousFrequency = eventPreviousFrequency;
+		return this;
 	}
 
-	@XmlElement(name = "EvtTm")
-	public ISOTime getEventTime() {
-		return eventTime;
+	public Optional<ISOTime> getEventTime() {
+		return eventTime == null ? Optional.empty() : Optional.of(eventTime);
 	}
 
-	public void setEventTime(ISOTime eventTime) {
+	public ScheduleChangeEntry1 setEventTime(ISOTime eventTime) {
 		this.eventTime = eventTime;
+		return this;
 	}
 
-	@XmlElement(name = "EvtPrvsTm")
-	public ISOTime getEventPreviousTime() {
-		return eventPreviousTime;
+	public Optional<ISOTime> getEventPreviousTime() {
+		return eventPreviousTime == null ? Optional.empty() : Optional.of(eventPreviousTime);
 	}
 
-	public void setEventPreviousTime(ISOTime eventPreviousTime) {
+	public ScheduleChangeEntry1 setEventPreviousTime(ISOTime eventPreviousTime) {
 		this.eventPreviousTime = eventPreviousTime;
+		return this;
 	}
 
-	@XmlElement(name = "EvtDrtn")
-	public Max3NumericText getEventDuration() {
-		return eventDuration;
+	public Optional<Max3NumericText> getEventDuration() {
+		return eventDuration == null ? Optional.empty() : Optional.of(eventDuration);
 	}
 
-	public void setEventDuration(Max3NumericText eventDuration) {
+	public ScheduleChangeEntry1 setEventDuration(Max3NumericText eventDuration) {
 		this.eventDuration = eventDuration;
+		return this;
 	}
 
-	@XmlElement(name = "EvtPrvsDrtn")
-	public Max3NumericText getEventPreviousDuration() {
-		return eventPreviousDuration;
+	public Optional<Max3NumericText> getEventPreviousDuration() {
+		return eventPreviousDuration == null ? Optional.empty() : Optional.of(eventPreviousDuration);
 	}
 
-	public void setEventPreviousDuration(Max3NumericText eventPreviousDuration) {
+	public ScheduleChangeEntry1 setEventPreviousDuration(Max3NumericText eventPreviousDuration) {
 		this.eventPreviousDuration = eventPreviousDuration;
+		return this;
 	}
 
-	@XmlElement(name = "ChngTp", required = true)
 	public Max35Text getChangeType() {
 		return changeType;
 	}
 
-	public void setChangeType(Max35Text changeType) {
-		this.changeType = changeType;
+	public ScheduleChangeEntry1 setChangeType(Max35Text changeType) {
+		this.changeType = Objects.requireNonNull(changeType);
+		return this;
 	}
 }

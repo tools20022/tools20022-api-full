@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.PriceStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Status of the price of a financial instrument.
@@ -31,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceStatusCode#mmPending
- * PriceStatusCode.mmPending}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceStatusCode#Pending
+ * PriceStatusCode.Pending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceStatusCode#mmNotApplicable
- * PriceStatusCode.mmNotApplicable}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceStatusCode#NotApplicable
+ * PriceStatusCode.NotApplicable}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Status of the price of a financial instrument."</li>
  * </ul>
  */
-public class PriceStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PriceStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,12 +90,12 @@ public class PriceStatusCode {
 	 * definition} = "Price is pending."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPending = new MMCode() {
+	public static final PriceStatusCode Pending = new PriceStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Price is pending.";
-			owner_lazy = () -> PriceStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceStatusCode.mmObject();
 			codeName = "PNDG";
 		}
 	};
@@ -115,27 +121,57 @@ public class PriceStatusCode {
 	 * "No price for transaction (e.g. transfer between accounts)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotApplicable = new MMCode() {
+	public static final PriceStatusCode NotApplicable = new PriceStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotApplicable";
 			definition = "No price for transaction (e.g. transfer between accounts).";
-			owner_lazy = () -> PriceStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceStatusCode.mmObject();
 			codeName = "NOAP";
 		}
 	};
+	final static private LinkedHashMap<String, PriceStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PriceStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceStatusCode";
 				definition = "Status of the price of a financial instrument.";
-				code_lazy = () -> Arrays.asList(PriceStatusCode.mmPending, PriceStatusCode.mmNotApplicable);
 				derivation_lazy = () -> Arrays.asList(PriceStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceStatusCode.Pending, com.tools20022.repository.codeset.PriceStatusCode.NotApplicable);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Pending.getCodeName().get(), Pending);
+		codesByName.put(NotApplicable.getCodeName().get(), NotApplicable);
+	}
+
+	public static PriceStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PriceStatusCode[] values() {
+		PriceStatusCode[] values = new PriceStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PriceStatusCode> {
+		@Override
+		public PriceStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PriceStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

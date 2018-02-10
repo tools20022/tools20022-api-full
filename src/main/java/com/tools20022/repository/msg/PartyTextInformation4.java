@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule#forPartyTextInformation4
+ * ConstraintAdditionalDetailsRule.forPartyTextInformation4}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyTextInformation4", propOrder = {"declarationDetails", "partyContactDetails"})
 public class PartyTextInformation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DclrtnDtls")
 	protected RestrictedFINXMax350Text declarationDetails;
 	/**
-	 * Provides declaration details narrative relative to the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +124,7 @@ public class PartyTextInformation4 {
 	public static final MMMessageAttribute mmDeclarationDetails = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmDeclaration;
-			componentContext_lazy = () -> PartyTextInformation4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyTextInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "DclrtnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,12 +135,11 @@ public class PartyTextInformation4 {
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PtyCtctDtls")
 	protected RestrictedFINXMax140Text partyContactDetails;
 	/**
-	 * Provides additional information regarding the party, for example, the
-	 * contact unit or person responsible for the transaction identified in the
-	 * message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,7 +175,7 @@ public class PartyTextInformation4 {
 	public static final MMMessageAttribute mmPartyContactDetails = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmContactPoint;
-			componentContext_lazy = () -> PartyTextInformation4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyTextInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "PtyCtctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,9 +190,10 @@ public class PartyTextInformation4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyTextInformation4.mmDeclarationDetails, PartyTextInformation4.mmPartyContactDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyTextInformation4.mmDeclarationDetails, com.tools20022.repository.msg.PartyTextInformation4.mmPartyContactDetails);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forPartyTextInformation4);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyTextInformation4";
 				definition = "Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.";
@@ -192,21 +202,21 @@ public class PartyTextInformation4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DclrtnDtls")
-	public RestrictedFINXMax350Text getDeclarationDetails() {
-		return declarationDetails;
+	public Optional<RestrictedFINXMax350Text> getDeclarationDetails() {
+		return declarationDetails == null ? Optional.empty() : Optional.of(declarationDetails);
 	}
 
-	public void setDeclarationDetails(RestrictedFINXMax350Text declarationDetails) {
+	public PartyTextInformation4 setDeclarationDetails(RestrictedFINXMax350Text declarationDetails) {
 		this.declarationDetails = declarationDetails;
+		return this;
 	}
 
-	@XmlElement(name = "PtyCtctDtls")
-	public RestrictedFINXMax140Text getPartyContactDetails() {
-		return partyContactDetails;
+	public Optional<RestrictedFINXMax140Text> getPartyContactDetails() {
+		return partyContactDetails == null ? Optional.empty() : Optional.of(partyContactDetails);
 	}
 
-	public void setPartyContactDetails(RestrictedFINXMax140Text partyContactDetails) {
+	public PartyTextInformation4 setPartyContactDetails(RestrictedFINXMax140Text partyContactDetails) {
 		this.partyContactDetails = partyContactDetails;
+		return this;
 	}
 }

@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Quantity of the financial instrument subscribed."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrumentQuantity2", propOrder = {"unitsNumber", "orderedAmount", "netAmount", "grossAmount", "executedAmount", "settlementAmount"})
 public class FinancialInstrumentQuantity2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UnitsNb", required = true)
 	protected FinancialInstrumentQuantity1 unitsNumber;
 	/**
-	 * Quantity of investment fund units to be subscribed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +126,7 @@ public class FinancialInstrumentQuantity2 {
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
-			componentContext_lazy = () -> FinancialInstrumentQuantity2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity2.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +137,11 @@ public class FinancialInstrumentQuantity2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrdAmt")
 	protected ActiveOrHistoricCurrencyAndAmount orderedAmount;
 	/**
-	 * Amount of money to be invested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +175,7 @@ public class FinancialInstrumentQuantity2 {
 	public static final MMMessageAttribute mmOrderedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmNetAmount;
-			componentContext_lazy = () -> FinancialInstrumentQuantity2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity2.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,11 +186,11 @@ public class FinancialInstrumentQuantity2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "NetAmt")
 	protected ActiveOrHistoricCurrencyAndAmount netAmount;
 	/**
-	 * Amount of money invested after deduction of charges, commissions and
-	 * taxes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,7 +226,7 @@ public class FinancialInstrumentQuantity2 {
 	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmNetAmount;
-			componentContext_lazy = () -> FinancialInstrumentQuantity2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity2.mmObject();
 			isDerived = false;
 			xmlTag = "NetAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,11 +237,11 @@ public class FinancialInstrumentQuantity2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "GrssAmt")
 	protected ActiveOrHistoricCurrencyAndAmount grossAmount;
 	/**
-	 * Amount of money invested before deduction of charges, commissions and
-	 * taxes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -273,7 +277,7 @@ public class FinancialInstrumentQuantity2 {
 	public static final MMMessageAttribute mmGrossAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmGrossAmount;
-			componentContext_lazy = () -> FinancialInstrumentQuantity2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity2.mmObject();
 			isDerived = false;
 			xmlTag = "GrssAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,10 +288,11 @@ public class FinancialInstrumentQuantity2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ExctdAmt")
 	protected ActiveCurrencyAndAmount executedAmount;
 	/**
-	 * Amount of money invested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -321,7 +326,7 @@ public class FinancialInstrumentQuantity2 {
 	public static final MMMessageAttribute mmExecutedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmExecutedAmount;
-			componentContext_lazy = () -> FinancialInstrumentQuantity2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity2.mmObject();
 			isDerived = false;
 			xmlTag = "ExctdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -332,11 +337,11 @@ public class FinancialInstrumentQuantity2 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmAmt")
 	protected ActiveCurrencyAndAmount settlementAmount;
 	/**
-	 * Total amount of money paid /to be paid or received in exchange for the
-	 * financial instrument in the individual order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -372,7 +377,7 @@ public class FinancialInstrumentQuantity2 {
 	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
-			componentContext_lazy = () -> FinancialInstrumentQuantity2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -387,10 +392,11 @@ public class FinancialInstrumentQuantity2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentQuantity2.mmUnitsNumber, FinancialInstrumentQuantity2.mmOrderedAmount, FinancialInstrumentQuantity2.mmNetAmount, FinancialInstrumentQuantity2.mmGrossAmount,
-						FinancialInstrumentQuantity2.mmExecutedAmount, FinancialInstrumentQuantity2.mmSettlementAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentQuantity2.mmUnitsNumber, com.tools20022.repository.msg.FinancialInstrumentQuantity2.mmOrderedAmount,
+						com.tools20022.repository.msg.FinancialInstrumentQuantity2.mmNetAmount, com.tools20022.repository.msg.FinancialInstrumentQuantity2.mmGrossAmount,
+						com.tools20022.repository.msg.FinancialInstrumentQuantity2.mmExecutedAmount, com.tools20022.repository.msg.FinancialInstrumentQuantity2.mmSettlementAmount);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentQuantity2";
 				definition = "Quantity of the financial instrument subscribed.";
@@ -399,57 +405,57 @@ public class FinancialInstrumentQuantity2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
 
-	public void setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
-		this.unitsNumber = unitsNumber;
+	public FinancialInstrumentQuantity2 setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
+		this.unitsNumber = Objects.requireNonNull(unitsNumber);
+		return this;
 	}
 
-	@XmlElement(name = "OrdrdAmt")
-	public ActiveOrHistoricCurrencyAndAmount getOrderedAmount() {
-		return orderedAmount;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getOrderedAmount() {
+		return orderedAmount == null ? Optional.empty() : Optional.of(orderedAmount);
 	}
 
-	public void setOrderedAmount(ActiveOrHistoricCurrencyAndAmount orderedAmount) {
+	public FinancialInstrumentQuantity2 setOrderedAmount(ActiveOrHistoricCurrencyAndAmount orderedAmount) {
 		this.orderedAmount = orderedAmount;
+		return this;
 	}
 
-	@XmlElement(name = "NetAmt")
-	public ActiveOrHistoricCurrencyAndAmount getNetAmount() {
-		return netAmount;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getNetAmount() {
+		return netAmount == null ? Optional.empty() : Optional.of(netAmount);
 	}
 
-	public void setNetAmount(ActiveOrHistoricCurrencyAndAmount netAmount) {
+	public FinancialInstrumentQuantity2 setNetAmount(ActiveOrHistoricCurrencyAndAmount netAmount) {
 		this.netAmount = netAmount;
+		return this;
 	}
 
-	@XmlElement(name = "GrssAmt")
-	public ActiveOrHistoricCurrencyAndAmount getGrossAmount() {
-		return grossAmount;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getGrossAmount() {
+		return grossAmount == null ? Optional.empty() : Optional.of(grossAmount);
 	}
 
-	public void setGrossAmount(ActiveOrHistoricCurrencyAndAmount grossAmount) {
+	public FinancialInstrumentQuantity2 setGrossAmount(ActiveOrHistoricCurrencyAndAmount grossAmount) {
 		this.grossAmount = grossAmount;
+		return this;
 	}
 
-	@XmlElement(name = "ExctdAmt")
-	public ActiveCurrencyAndAmount getExecutedAmount() {
-		return executedAmount;
+	public Optional<ActiveCurrencyAndAmount> getExecutedAmount() {
+		return executedAmount == null ? Optional.empty() : Optional.of(executedAmount);
 	}
 
-	public void setExecutedAmount(ActiveCurrencyAndAmount executedAmount) {
+	public FinancialInstrumentQuantity2 setExecutedAmount(ActiveCurrencyAndAmount executedAmount) {
 		this.executedAmount = executedAmount;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmAmt")
-	public ActiveCurrencyAndAmount getSettlementAmount() {
-		return settlementAmount;
+	public Optional<ActiveCurrencyAndAmount> getSettlementAmount() {
+		return settlementAmount == null ? Optional.empty() : Optional.of(settlementAmount);
 	}
 
-	public void setSettlementAmount(ActiveCurrencyAndAmount settlementAmount) {
+	public FinancialInstrumentQuantity2 setSettlementAmount(ActiveCurrencyAndAmount settlementAmount) {
 		this.settlementAmount = settlementAmount;
+		return this;
 	}
 }

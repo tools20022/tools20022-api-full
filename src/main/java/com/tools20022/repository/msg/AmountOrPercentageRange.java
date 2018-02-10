@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Operation1Code;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +61,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides constrains on a range of business values."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountOrPercentageRange", propOrder = {"operation", "term"})
 public class AmountOrPercentageRange {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Opr")
 	protected Operation1Code operation;
 	/**
-	 * Indication of the relationship between two variables.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +98,7 @@ public class AmountOrPercentageRange {
 	 */
 	public static final MMMessageAttribute mmOperation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AmountOrPercentageRange.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountOrPercentageRange.mmObject();
 			isDerived = false;
 			xmlTag = "Opr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,10 +109,11 @@ public class AmountOrPercentageRange {
 			simpleType_lazy = () -> Operation1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Term")
 	protected List<com.tools20022.repository.msg.Term1> term;
 	/**
-	 * Indicates one of the constraints of a range of business values.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -138,7 +139,7 @@ public class AmountOrPercentageRange {
 	 */
 	public static final MMMessageAssociationEnd mmTerm = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AmountOrPercentageRange.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountOrPercentageRange.mmObject();
 			isDerived = false;
 			xmlTag = "Term";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,8 +155,8 @@ public class AmountOrPercentageRange {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountOrPercentageRange.mmOperation, AmountOrPercentageRange.mmTerm);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountOrPercentageRange.mmOperation, com.tools20022.repository.msg.AmountOrPercentageRange.mmTerm);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountOrPercentageRange";
 				definition = "Provides constrains on a range of business values.";
@@ -164,21 +165,21 @@ public class AmountOrPercentageRange {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Opr")
-	public Operation1Code getOperation() {
-		return operation;
+	public Optional<Operation1Code> getOperation() {
+		return operation == null ? Optional.empty() : Optional.of(operation);
 	}
 
-	public void setOperation(Operation1Code operation) {
+	public AmountOrPercentageRange setOperation(Operation1Code operation) {
 		this.operation = operation;
+		return this;
 	}
 
-	@XmlElement(name = "Term")
 	public List<Term1> getTerm() {
-		return term;
+		return term == null ? term = new ArrayList<>() : term;
 	}
 
-	public void setTerm(List<com.tools20022.repository.msg.Term1> term) {
-		this.term = term;
+	public AmountOrPercentageRange setTerm(List<com.tools20022.repository.msg.Term1> term) {
+		this.term = Objects.requireNonNull(term);
+		return this;
 	}
 }

@@ -25,6 +25,8 @@ import com.tools20022.repository.codeset.AssetClassSubProductType34Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IndustrialProductCommodityManufacturing1", propOrder = {"baseProduct", "subProduct"})
 public class IndustrialProductCommodityManufacturing1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BasePdct", required = true)
 	protected AssetClassProductType6Code baseProduct;
 	/**
-	 * Base product for the underlying asset class as specified in the
-	 * classification of commodities derivatives table.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +106,7 @@ public class IndustrialProductCommodityManufacturing1 {
 	 */
 	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IndustrialProductCommodityManufacturing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndustrialProductCommodityManufacturing1.mmObject();
 			isDerived = false;
 			xmlTag = "BasePdct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +117,11 @@ public class IndustrialProductCommodityManufacturing1 {
 			simpleType_lazy = () -> AssetClassProductType6Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SubPdct")
 	protected AssetClassSubProductType34Code subProduct;
 	/**
-	 * Sub-product for the underlying asset class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +149,7 @@ public class IndustrialProductCommodityManufacturing1 {
 	 */
 	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IndustrialProductCommodityManufacturing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndustrialProductCommodityManufacturing1.mmObject();
 			isDerived = false;
 			xmlTag = "SubPdct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,8 +164,8 @@ public class IndustrialProductCommodityManufacturing1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IndustrialProductCommodityManufacturing1.mmBaseProduct, IndustrialProductCommodityManufacturing1.mmSubProduct);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndustrialProductCommodityManufacturing1.mmBaseProduct, com.tools20022.repository.msg.IndustrialProductCommodityManufacturing1.mmSubProduct);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndustrialProductCommodityManufacturing1";
 				definition = "Defines commodity sub-product attributes of an industrial product derivative of type manufacturing.";
@@ -171,21 +174,21 @@ public class IndustrialProductCommodityManufacturing1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BasePdct", required = true)
 	public AssetClassProductType6Code getBaseProduct() {
 		return baseProduct;
 	}
 
-	public void setBaseProduct(AssetClassProductType6Code baseProduct) {
-		this.baseProduct = baseProduct;
+	public IndustrialProductCommodityManufacturing1 setBaseProduct(AssetClassProductType6Code baseProduct) {
+		this.baseProduct = Objects.requireNonNull(baseProduct);
+		return this;
 	}
 
-	@XmlElement(name = "SubPdct")
-	public AssetClassSubProductType34Code getSubProduct() {
-		return subProduct;
+	public Optional<AssetClassSubProductType34Code> getSubProduct() {
+		return subProduct == null ? Optional.empty() : Optional.of(subProduct);
 	}
 
-	public void setSubProduct(AssetClassSubProductType34Code subProduct) {
+	public IndustrialProductCommodityManufacturing1 setSubProduct(AssetClassSubProductType34Code subProduct) {
 		this.subProduct = subProduct;
+		return this;
 	}
 }

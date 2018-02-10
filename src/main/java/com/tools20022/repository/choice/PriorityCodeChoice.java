@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,17 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Priority is expressed  as a code or a text."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PriorityCodeChoice", propOrder = {"code", "proprietaryCode"})
 public class PriorityCodeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected Priority1Code code;
 	/**
-	 * Urgency or order of importance that the originator would like the
-	 * recipient of the payment instruction to apply to the processing of the
-	 * payment instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +108,7 @@ public class PriorityCodeChoice {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPriority;
-			componentContext_lazy = () -> PriorityCodeChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PriorityCodeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +119,11 @@ public class PriorityCodeChoice {
 			simpleType_lazy = () -> Priority1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryCd", required = true)
 	protected Max4AlphaNumericText proprietaryCode;
 	/**
-	 * Priority code bilaterally defined between parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,7 +151,7 @@ public class PriorityCodeChoice {
 	 */
 	public static final MMMessageAttribute mmProprietaryCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PriorityCodeChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PriorityCodeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,8 +166,8 @@ public class PriorityCodeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PriorityCodeChoice.mmCode, PriorityCodeChoice.mmProprietaryCode);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriorityCodeChoice.mmCode, com.tools20022.repository.choice.PriorityCodeChoice.mmProprietaryCode);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PriorityCodeChoice";
 				definition = "Priority is expressed  as a code or a text.";
@@ -175,21 +176,21 @@ public class PriorityCodeChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public Priority1Code getCode() {
 		return code;
 	}
 
-	public void setCode(Priority1Code code) {
-		this.code = code;
+	public PriorityCodeChoice setCode(Priority1Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryCd", required = true)
 	public Max4AlphaNumericText getProprietaryCode() {
 		return proprietaryCode;
 	}
 
-	public void setProprietaryCode(Max4AlphaNumericText proprietaryCode) {
-		this.proprietaryCode = proprietaryCode;
+	public PriorityCodeChoice setProprietaryCode(Max4AlphaNumericText proprietaryCode) {
+		this.proprietaryCode = Objects.requireNonNull(proprietaryCode);
+		return this;
 	}
 }

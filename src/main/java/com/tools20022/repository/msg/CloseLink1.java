@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CloseLink1", propOrder = {"securityIdentification", "partyIdentification"})
 public class CloseLink1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctyId", required = true)
 	protected ISINIdentifier securityIdentification;
 	/**
-	 * Identification of a security by an ISIN.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +111,7 @@ public class CloseLink1 {
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmCloseLink;
-			componentContext_lazy = () -> CloseLink1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CloseLink1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +122,11 @@ public class CloseLink1 {
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "PtyId", required = true)
 	protected SystemPartyIdentification1Choice partyIdentification;
 	/**
-	 * Identifies the party for which the close link is defined.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,7 +154,7 @@ public class CloseLink1 {
 	 */
 	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CloseLink1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CloseLink1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,9 +169,9 @@ public class CloseLink1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CloseLink1.mmSecurityIdentification, CloseLink1.mmPartyIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CloseLink1.mmSecurityIdentification, com.tools20022.repository.msg.CloseLink1.mmPartyIdentification);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CloseLink1";
 				definition = "Provides details of the close links as defined in the collateral reference data.";
@@ -177,21 +180,21 @@ public class CloseLink1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctyId", required = true)
 	public ISINIdentifier getSecurityIdentification() {
 		return securityIdentification;
 	}
 
-	public void setSecurityIdentification(ISINIdentifier securityIdentification) {
-		this.securityIdentification = securityIdentification;
+	public CloseLink1 setSecurityIdentification(ISINIdentifier securityIdentification) {
+		this.securityIdentification = Objects.requireNonNull(securityIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PtyId", required = true)
 	public SystemPartyIdentification1Choice getPartyIdentification() {
 		return partyIdentification;
 	}
 
-	public void setPartyIdentification(SystemPartyIdentification1Choice partyIdentification) {
-		this.partyIdentification = partyIdentification;
+	public CloseLink1 setPartyIdentification(SystemPartyIdentification1Choice partyIdentification) {
+		this.partyIdentification = Objects.requireNonNull(partyIdentification);
+		return this;
 	}
 }

@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details on the limits."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Limit4", propOrder = {"amount", "creditDebitIndicator", "status", "startDateTime", "usedAmount", "usedAmountCreditDebitIndicator", "usedPercentage", "remainingAmount"})
 public class Limit4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected Amount2Choice amount;
 	/**
-	 * Amount of money of the limit, expressed in an eligible currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +125,7 @@ public class Limit4 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
-			componentContext_lazy = () -> Limit4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Limit4.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,10 +136,11 @@ public class Limit4 {
 			complexType_lazy = () -> Amount2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd")
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Specifies if a limit is a debit limit or a credit limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,7 +173,7 @@ public class Limit4 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCreditDebitIndicator;
-			componentContext_lazy = () -> Limit4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Limit4.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,10 +184,11 @@ public class Limit4 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts")
 	protected LimitStatus1Code status;
 	/**
-	 * Status of the limit, such as enabled or disabled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -216,7 +221,7 @@ public class Limit4 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmLimitStatus;
-			componentContext_lazy = () -> Limit4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Limit4.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,10 +232,11 @@ public class Limit4 {
 			simpleType_lazy = () -> LimitStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StartDtTm")
 	protected DateAndDateTimeChoice startDateTime;
 	/**
-	 * Date and time at which the limit becomes effective.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -263,7 +269,7 @@ public class Limit4 {
 	public static final MMMessageAttribute mmStartDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
-			componentContext_lazy = () -> Limit4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Limit4.mmObject();
 			isDerived = false;
 			xmlTag = "StartDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -274,10 +280,11 @@ public class Limit4 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "UsdAmt")
 	protected Amount2Choice usedAmount;
 	/**
-	 * Actual usage of the limit expressed as an amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -310,7 +317,7 @@ public class Limit4 {
 	public static final MMMessageAttribute mmUsedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmUsedAmount;
-			componentContext_lazy = () -> Limit4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Limit4.mmObject();
 			isDerived = false;
 			xmlTag = "UsdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,11 +328,11 @@ public class Limit4 {
 			complexType_lazy = () -> Amount2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "UsdAmtCdtDbtInd")
 	protected CreditDebitCode usedAmountCreditDebitIndicator;
 	/**
-	 * Specifies if the used amount of the limit is a debit amount or a credit
-	 * amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -360,7 +367,7 @@ public class Limit4 {
 	public static final MMMessageAttribute mmUsedAmountCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCreditDebitIndicator;
-			componentContext_lazy = () -> Limit4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Limit4.mmObject();
 			isDerived = false;
 			xmlTag = "UsdAmtCdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -371,10 +378,11 @@ public class Limit4 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "UsdPctg")
 	protected PercentageRate usedPercentage;
 	/**
-	 * Actual usage of the limit expressed as a percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -407,7 +415,7 @@ public class Limit4 {
 	public static final MMMessageAttribute mmUsedPercentage = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmPercentage;
-			componentContext_lazy = () -> Limit4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Limit4.mmObject();
 			isDerived = false;
 			xmlTag = "UsdPctg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -418,10 +426,11 @@ public class Limit4 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "RmngAmt")
 	protected Amount2Choice remainingAmount;
 	/**
-	 * Actual usage of the limit expressed as an amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -454,7 +463,7 @@ public class Limit4 {
 	public static final MMMessageAttribute mmRemainingAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
-			componentContext_lazy = () -> Limit4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Limit4.mmObject();
 			isDerived = false;
 			xmlTag = "RmngAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -469,10 +478,11 @@ public class Limit4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Limit4.mmAmount, Limit4.mmCreditDebitIndicator, Limit4.mmStatus, Limit4.mmStartDateTime, Limit4.mmUsedAmount, Limit4.mmUsedAmountCreditDebitIndicator, Limit4.mmUsedPercentage,
-						Limit4.mmRemainingAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Limit4.mmAmount, com.tools20022.repository.msg.Limit4.mmCreditDebitIndicator, com.tools20022.repository.msg.Limit4.mmStatus,
+						com.tools20022.repository.msg.Limit4.mmStartDateTime, com.tools20022.repository.msg.Limit4.mmUsedAmount, com.tools20022.repository.msg.Limit4.mmUsedAmountCreditDebitIndicator,
+						com.tools20022.repository.msg.Limit4.mmUsedPercentage, com.tools20022.repository.msg.Limit4.mmRemainingAmount);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Limit4";
 				definition = "Details on the limits.";
@@ -481,75 +491,75 @@ public class Limit4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public Amount2Choice getAmount() {
 		return amount;
 	}
 
-	public void setAmount(Amount2Choice amount) {
-		this.amount = amount;
+	public Limit4 setAmount(Amount2Choice amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd")
-	public CreditDebitCode getCreditDebitIndicator() {
-		return creditDebitIndicator;
+	public Optional<CreditDebitCode> getCreditDebitIndicator() {
+		return creditDebitIndicator == null ? Optional.empty() : Optional.of(creditDebitIndicator);
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+	public Limit4 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
 		this.creditDebitIndicator = creditDebitIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "Sts")
-	public LimitStatus1Code getStatus() {
-		return status;
+	public Optional<LimitStatus1Code> getStatus() {
+		return status == null ? Optional.empty() : Optional.of(status);
 	}
 
-	public void setStatus(LimitStatus1Code status) {
+	public Limit4 setStatus(LimitStatus1Code status) {
 		this.status = status;
+		return this;
 	}
 
-	@XmlElement(name = "StartDtTm")
-	public DateAndDateTimeChoice getStartDateTime() {
-		return startDateTime;
+	public Optional<DateAndDateTimeChoice> getStartDateTime() {
+		return startDateTime == null ? Optional.empty() : Optional.of(startDateTime);
 	}
 
-	public void setStartDateTime(DateAndDateTimeChoice startDateTime) {
+	public Limit4 setStartDateTime(DateAndDateTimeChoice startDateTime) {
 		this.startDateTime = startDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "UsdAmt")
-	public Amount2Choice getUsedAmount() {
-		return usedAmount;
+	public Optional<Amount2Choice> getUsedAmount() {
+		return usedAmount == null ? Optional.empty() : Optional.of(usedAmount);
 	}
 
-	public void setUsedAmount(Amount2Choice usedAmount) {
+	public Limit4 setUsedAmount(Amount2Choice usedAmount) {
 		this.usedAmount = usedAmount;
+		return this;
 	}
 
-	@XmlElement(name = "UsdAmtCdtDbtInd")
-	public CreditDebitCode getUsedAmountCreditDebitIndicator() {
-		return usedAmountCreditDebitIndicator;
+	public Optional<CreditDebitCode> getUsedAmountCreditDebitIndicator() {
+		return usedAmountCreditDebitIndicator == null ? Optional.empty() : Optional.of(usedAmountCreditDebitIndicator);
 	}
 
-	public void setUsedAmountCreditDebitIndicator(CreditDebitCode usedAmountCreditDebitIndicator) {
+	public Limit4 setUsedAmountCreditDebitIndicator(CreditDebitCode usedAmountCreditDebitIndicator) {
 		this.usedAmountCreditDebitIndicator = usedAmountCreditDebitIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "UsdPctg")
-	public PercentageRate getUsedPercentage() {
-		return usedPercentage;
+	public Optional<PercentageRate> getUsedPercentage() {
+		return usedPercentage == null ? Optional.empty() : Optional.of(usedPercentage);
 	}
 
-	public void setUsedPercentage(PercentageRate usedPercentage) {
+	public Limit4 setUsedPercentage(PercentageRate usedPercentage) {
 		this.usedPercentage = usedPercentage;
+		return this;
 	}
 
-	@XmlElement(name = "RmngAmt")
-	public Amount2Choice getRemainingAmount() {
-		return remainingAmount;
+	public Optional<Amount2Choice> getRemainingAmount() {
+		return remainingAmount == null ? Optional.empty() : Optional.of(remainingAmount);
 	}
 
-	public void setRemainingAmount(Amount2Choice remainingAmount) {
+	public Limit4 setRemainingAmount(Amount2Choice remainingAmount) {
 		this.remainingAmount = remainingAmount;
+		return this;
 	}
 }

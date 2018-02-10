@@ -20,76 +20,79 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DocumentTypeCode;
+import com.tools20022.repository.codeset.DocumentType6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies a type of financial or commercial document.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DocumentTypeCode
- * DocumentTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#mmMeteredServiceInvoice
- * DocumentType6Code.mmMeteredServiceInvoice}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#MeteredServiceInvoice
+ * DocumentType6Code.MeteredServiceInvoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#mmCreditNoteRelatedToFinancialAdjustment
- * DocumentType6Code.mmCreditNoteRelatedToFinancialAdjustment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#CreditNoteRelatedToFinancialAdjustment
+ * DocumentType6Code.CreditNoteRelatedToFinancialAdjustment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#mmDebitNoteRelatedToFinancialAdjustment
- * DocumentType6Code.mmDebitNoteRelatedToFinancialAdjustment}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#DebitNoteRelatedToFinancialAdjustment
+ * DocumentType6Code.DebitNoteRelatedToFinancialAdjustment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#mmCommercialInvoice
- * DocumentType6Code.mmCommercialInvoice}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#CommercialInvoice
+ * DocumentType6Code.CommercialInvoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#mmCreditNote
- * DocumentType6Code.mmCreditNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#CreditNote
+ * DocumentType6Code.CreditNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#mmDebitNote
- * DocumentType6Code.mmDebitNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#DebitNote
+ * DocumentType6Code.DebitNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#mmHireInvoice
- * DocumentType6Code.mmHireInvoice}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#HireInvoice
+ * DocumentType6Code.HireInvoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#mmSelfBilledInvoice
- * DocumentType6Code.mmSelfBilledInvoice}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#SelfBilledInvoice
+ * DocumentType6Code.SelfBilledInvoice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#mmCommercialContract
- * DocumentType6Code.mmCommercialContract}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#CommercialContract
+ * DocumentType6Code.CommercialContract}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#mmStatementOfAccount
- * DocumentType6Code.mmStatementOfAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#StatementOfAccount
+ * DocumentType6Code.StatementOfAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#mmDispatchAdvice
- * DocumentType6Code.mmDispatchAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#DispatchAdvice
+ * DocumentType6Code.DispatchAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#mmBillOfLading
- * DocumentType6Code.mmBillOfLading}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#BillOfLading
+ * DocumentType6Code.BillOfLading}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DocumentType6Code#Voucher
+ * DocumentType6Code.Voucher}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#mmVoucher
- * DocumentType6Code.mmVoucher}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#AccountReceivableOpenItem
+ * DocumentType6Code.AccountReceivableOpenItem}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#mmAccountReceivableOpenItem
- * DocumentType6Code.mmAccountReceivableOpenItem}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#TradeServicesUtilityTransaction
+ * DocumentType6Code.TradeServicesUtilityTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#mmTradeServicesUtilityTransaction
- * DocumentType6Code.mmTradeServicesUtilityTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#mmPurchaseOrder
- * DocumentType6Code.mmPurchaseOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.DocumentType6Code#PurchaseOrder
+ * DocumentType6Code.PurchaseOrder}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DocumentTypeCode
+ * DocumentTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -110,7 +113,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * DocumentType5Code}</li>
  * </ul>
  */
-public class DocumentType6Code extends DocumentTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DocumentType6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -130,16 +134,17 @@ public class DocumentType6Code extends DocumentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#mmMeteredServiceInvoice
-	 * DocumentType5Code.mmMeteredServiceInvoice}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#MeteredServiceInvoice
+	 * DocumentType5Code.MeteredServiceInvoice}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMeteredServiceInvoice = new MMCode() {
+	public static final DocumentType6Code MeteredServiceInvoice = new DocumentType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeteredServiceInvoice";
-			previousVersion_lazy = () -> DocumentType5Code.mmMeteredServiceInvoice;
-			owner_lazy = () -> DocumentType6Code.mmObject();
+			previousVersion_lazy = () -> DocumentType5Code.MeteredServiceInvoice;
+			owner_lazy = () -> com.tools20022.repository.codeset.DocumentType6Code.mmObject();
+			codeName = DocumentTypeCode.MeteredServiceInvoice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -159,16 +164,17 @@ public class DocumentType6Code extends DocumentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#mmCreditNoteRelatedToFinancialAdjustment
-	 * DocumentType5Code.mmCreditNoteRelatedToFinancialAdjustment}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#CreditNoteRelatedToFinancialAdjustment
+	 * DocumentType5Code.CreditNoteRelatedToFinancialAdjustment}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreditNoteRelatedToFinancialAdjustment = new MMCode() {
+	public static final DocumentType6Code CreditNoteRelatedToFinancialAdjustment = new DocumentType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditNoteRelatedToFinancialAdjustment";
-			previousVersion_lazy = () -> DocumentType5Code.mmCreditNoteRelatedToFinancialAdjustment;
-			owner_lazy = () -> DocumentType6Code.mmObject();
+			previousVersion_lazy = () -> DocumentType5Code.CreditNoteRelatedToFinancialAdjustment;
+			owner_lazy = () -> com.tools20022.repository.codeset.DocumentType6Code.mmObject();
+			codeName = DocumentTypeCode.CreditNoteRelatedToFinancialAdjustment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -188,16 +194,17 @@ public class DocumentType6Code extends DocumentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#mmDebitNoteRelatedToFinancialAdjustment
-	 * DocumentType5Code.mmDebitNoteRelatedToFinancialAdjustment}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#DebitNoteRelatedToFinancialAdjustment
+	 * DocumentType5Code.DebitNoteRelatedToFinancialAdjustment}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDebitNoteRelatedToFinancialAdjustment = new MMCode() {
+	public static final DocumentType6Code DebitNoteRelatedToFinancialAdjustment = new DocumentType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitNoteRelatedToFinancialAdjustment";
-			previousVersion_lazy = () -> DocumentType5Code.mmDebitNoteRelatedToFinancialAdjustment;
-			owner_lazy = () -> DocumentType6Code.mmObject();
+			previousVersion_lazy = () -> DocumentType5Code.DebitNoteRelatedToFinancialAdjustment;
+			owner_lazy = () -> com.tools20022.repository.codeset.DocumentType6Code.mmObject();
+			codeName = DocumentTypeCode.DebitNoteRelatedToFinancialAdjustment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -217,16 +224,17 @@ public class DocumentType6Code extends DocumentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#mmCommercialInvoice
-	 * DocumentType5Code.mmCommercialInvoice}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#CommercialInvoice
+	 * DocumentType5Code.CommercialInvoice}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommercialInvoice = new MMCode() {
+	public static final DocumentType6Code CommercialInvoice = new DocumentType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialInvoice";
-			previousVersion_lazy = () -> DocumentType5Code.mmCommercialInvoice;
-			owner_lazy = () -> DocumentType6Code.mmObject();
+			previousVersion_lazy = () -> DocumentType5Code.CommercialInvoice;
+			owner_lazy = () -> com.tools20022.repository.codeset.DocumentType6Code.mmObject();
+			codeName = DocumentTypeCode.CommercialInvoice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -246,16 +254,17 @@ public class DocumentType6Code extends DocumentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#mmCreditNote
-	 * DocumentType5Code.mmCreditNote}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#CreditNote
+	 * DocumentType5Code.CreditNote}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreditNote = new MMCode() {
+	public static final DocumentType6Code CreditNote = new DocumentType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditNote";
-			previousVersion_lazy = () -> DocumentType5Code.mmCreditNote;
-			owner_lazy = () -> DocumentType6Code.mmObject();
+			previousVersion_lazy = () -> DocumentType5Code.CreditNote;
+			owner_lazy = () -> com.tools20022.repository.codeset.DocumentType6Code.mmObject();
+			codeName = DocumentTypeCode.CreditNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -275,16 +284,17 @@ public class DocumentType6Code extends DocumentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#mmDebitNote
-	 * DocumentType5Code.mmDebitNote}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#DebitNote
+	 * DocumentType5Code.DebitNote}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDebitNote = new MMCode() {
+	public static final DocumentType6Code DebitNote = new DocumentType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitNote";
-			previousVersion_lazy = () -> DocumentType5Code.mmDebitNote;
-			owner_lazy = () -> DocumentType6Code.mmObject();
+			previousVersion_lazy = () -> DocumentType5Code.DebitNote;
+			owner_lazy = () -> com.tools20022.repository.codeset.DocumentType6Code.mmObject();
+			codeName = DocumentTypeCode.DebitNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -304,16 +314,17 @@ public class DocumentType6Code extends DocumentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#mmHireInvoice
-	 * DocumentType5Code.mmHireInvoice}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#HireInvoice
+	 * DocumentType5Code.HireInvoice}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHireInvoice = new MMCode() {
+	public static final DocumentType6Code HireInvoice = new DocumentType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HireInvoice";
-			previousVersion_lazy = () -> DocumentType5Code.mmHireInvoice;
-			owner_lazy = () -> DocumentType6Code.mmObject();
+			previousVersion_lazy = () -> DocumentType5Code.HireInvoice;
+			owner_lazy = () -> com.tools20022.repository.codeset.DocumentType6Code.mmObject();
+			codeName = DocumentTypeCode.HireInvoice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -333,16 +344,17 @@ public class DocumentType6Code extends DocumentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#mmSelfBilledInvoice
-	 * DocumentType5Code.mmSelfBilledInvoice}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#SelfBilledInvoice
+	 * DocumentType5Code.SelfBilledInvoice}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSelfBilledInvoice = new MMCode() {
+	public static final DocumentType6Code SelfBilledInvoice = new DocumentType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfBilledInvoice";
-			previousVersion_lazy = () -> DocumentType5Code.mmSelfBilledInvoice;
-			owner_lazy = () -> DocumentType6Code.mmObject();
+			previousVersion_lazy = () -> DocumentType5Code.SelfBilledInvoice;
+			owner_lazy = () -> com.tools20022.repository.codeset.DocumentType6Code.mmObject();
+			codeName = DocumentTypeCode.SelfBilledInvoice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -362,16 +374,17 @@ public class DocumentType6Code extends DocumentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#mmCommercialContract
-	 * DocumentType5Code.mmCommercialContract}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#CommercialContract
+	 * DocumentType5Code.CommercialContract}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommercialContract = new MMCode() {
+	public static final DocumentType6Code CommercialContract = new DocumentType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialContract";
-			previousVersion_lazy = () -> DocumentType5Code.mmCommercialContract;
-			owner_lazy = () -> DocumentType6Code.mmObject();
+			previousVersion_lazy = () -> DocumentType5Code.CommercialContract;
+			owner_lazy = () -> com.tools20022.repository.codeset.DocumentType6Code.mmObject();
+			codeName = DocumentTypeCode.CommercialContract.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -391,16 +404,17 @@ public class DocumentType6Code extends DocumentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#mmStatementOfAccount
-	 * DocumentType5Code.mmStatementOfAccount}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#StatementOfAccount
+	 * DocumentType5Code.StatementOfAccount}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStatementOfAccount = new MMCode() {
+	public static final DocumentType6Code StatementOfAccount = new DocumentType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementOfAccount";
-			previousVersion_lazy = () -> DocumentType5Code.mmStatementOfAccount;
-			owner_lazy = () -> DocumentType6Code.mmObject();
+			previousVersion_lazy = () -> DocumentType5Code.StatementOfAccount;
+			owner_lazy = () -> com.tools20022.repository.codeset.DocumentType6Code.mmObject();
+			codeName = DocumentTypeCode.StatementOfAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -420,16 +434,17 @@ public class DocumentType6Code extends DocumentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#mmDispatchAdvice
-	 * DocumentType5Code.mmDispatchAdvice}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#DispatchAdvice
+	 * DocumentType5Code.DispatchAdvice}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDispatchAdvice = new MMCode() {
+	public static final DocumentType6Code DispatchAdvice = new DocumentType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DispatchAdvice";
-			previousVersion_lazy = () -> DocumentType5Code.mmDispatchAdvice;
-			owner_lazy = () -> DocumentType6Code.mmObject();
+			previousVersion_lazy = () -> DocumentType5Code.DispatchAdvice;
+			owner_lazy = () -> com.tools20022.repository.codeset.DocumentType6Code.mmObject();
+			codeName = DocumentTypeCode.DispatchAdvice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -449,16 +464,17 @@ public class DocumentType6Code extends DocumentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#mmBillOfLading
-	 * DocumentType5Code.mmBillOfLading}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#BillOfLading
+	 * DocumentType5Code.BillOfLading}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBillOfLading = new MMCode() {
+	public static final DocumentType6Code BillOfLading = new DocumentType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillOfLading";
-			previousVersion_lazy = () -> DocumentType5Code.mmBillOfLading;
-			owner_lazy = () -> DocumentType6Code.mmObject();
+			previousVersion_lazy = () -> DocumentType5Code.BillOfLading;
+			owner_lazy = () -> com.tools20022.repository.codeset.DocumentType6Code.mmObject();
+			codeName = DocumentTypeCode.BillOfLading.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -478,16 +494,17 @@ public class DocumentType6Code extends DocumentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#mmVoucher
-	 * DocumentType5Code.mmVoucher}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#Voucher
+	 * DocumentType5Code.Voucher}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVoucher = new MMCode() {
+	public static final DocumentType6Code Voucher = new DocumentType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Voucher";
-			previousVersion_lazy = () -> DocumentType5Code.mmVoucher;
-			owner_lazy = () -> DocumentType6Code.mmObject();
+			previousVersion_lazy = () -> DocumentType5Code.Voucher;
+			owner_lazy = () -> com.tools20022.repository.codeset.DocumentType6Code.mmObject();
+			codeName = DocumentTypeCode.Voucher.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -507,16 +524,17 @@ public class DocumentType6Code extends DocumentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#mmAccountReceivableOpenItem
-	 * DocumentType5Code.mmAccountReceivableOpenItem}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#AccountReceivableOpenItem
+	 * DocumentType5Code.AccountReceivableOpenItem}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountReceivableOpenItem = new MMCode() {
+	public static final DocumentType6Code AccountReceivableOpenItem = new DocumentType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountReceivableOpenItem";
-			previousVersion_lazy = () -> DocumentType5Code.mmAccountReceivableOpenItem;
-			owner_lazy = () -> DocumentType6Code.mmObject();
+			previousVersion_lazy = () -> DocumentType5Code.AccountReceivableOpenItem;
+			owner_lazy = () -> com.tools20022.repository.codeset.DocumentType6Code.mmObject();
+			codeName = DocumentTypeCode.AccountReceivableOpenItem.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -536,16 +554,17 @@ public class DocumentType6Code extends DocumentTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#mmTradeServicesUtilityTransaction
-	 * DocumentType5Code.mmTradeServicesUtilityTransaction}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DocumentType5Code#TradeServicesUtilityTransaction
+	 * DocumentType5Code.TradeServicesUtilityTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradeServicesUtilityTransaction = new MMCode() {
+	public static final DocumentType6Code TradeServicesUtilityTransaction = new DocumentType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeServicesUtilityTransaction";
-			previousVersion_lazy = () -> DocumentType5Code.mmTradeServicesUtilityTransaction;
-			owner_lazy = () -> DocumentType6Code.mmObject();
+			previousVersion_lazy = () -> DocumentType5Code.TradeServicesUtilityTransaction;
+			owner_lazy = () -> com.tools20022.repository.codeset.DocumentType6Code.mmObject();
+			codeName = DocumentTypeCode.TradeServicesUtilityTransaction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -564,30 +583,78 @@ public class DocumentType6Code extends DocumentTypeCode {
 	 * name} = "PurchaseOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPurchaseOrder = new MMCode() {
+	public static final DocumentType6Code PurchaseOrder = new DocumentType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseOrder";
-			owner_lazy = () -> DocumentType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DocumentType6Code.mmObject();
+			codeName = DocumentTypeCode.PurchaseOrder.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DocumentType6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DocumentType6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MSIN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentType6Code";
 				definition = "Specifies a type of financial or commercial document.";
 				previousVersion_lazy = () -> DocumentType5Code.mmObject();
-				code_lazy = () -> Arrays.asList(DocumentType6Code.mmMeteredServiceInvoice, DocumentType6Code.mmCreditNoteRelatedToFinancialAdjustment, DocumentType6Code.mmDebitNoteRelatedToFinancialAdjustment,
-						DocumentType6Code.mmCommercialInvoice, DocumentType6Code.mmCreditNote, DocumentType6Code.mmDebitNote, DocumentType6Code.mmHireInvoice, DocumentType6Code.mmSelfBilledInvoice, DocumentType6Code.mmCommercialContract,
-						DocumentType6Code.mmStatementOfAccount, DocumentType6Code.mmDispatchAdvice, DocumentType6Code.mmBillOfLading, DocumentType6Code.mmVoucher, DocumentType6Code.mmAccountReceivableOpenItem,
-						DocumentType6Code.mmTradeServicesUtilityTransaction, DocumentType6Code.mmPurchaseOrder);
 				trace_lazy = () -> DocumentTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DocumentType6Code.MeteredServiceInvoice, com.tools20022.repository.codeset.DocumentType6Code.CreditNoteRelatedToFinancialAdjustment,
+						com.tools20022.repository.codeset.DocumentType6Code.DebitNoteRelatedToFinancialAdjustment, com.tools20022.repository.codeset.DocumentType6Code.CommercialInvoice,
+						com.tools20022.repository.codeset.DocumentType6Code.CreditNote, com.tools20022.repository.codeset.DocumentType6Code.DebitNote, com.tools20022.repository.codeset.DocumentType6Code.HireInvoice,
+						com.tools20022.repository.codeset.DocumentType6Code.SelfBilledInvoice, com.tools20022.repository.codeset.DocumentType6Code.CommercialContract, com.tools20022.repository.codeset.DocumentType6Code.StatementOfAccount,
+						com.tools20022.repository.codeset.DocumentType6Code.DispatchAdvice, com.tools20022.repository.codeset.DocumentType6Code.BillOfLading, com.tools20022.repository.codeset.DocumentType6Code.Voucher,
+						com.tools20022.repository.codeset.DocumentType6Code.AccountReceivableOpenItem, com.tools20022.repository.codeset.DocumentType6Code.TradeServicesUtilityTransaction,
+						com.tools20022.repository.codeset.DocumentType6Code.PurchaseOrder);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(MeteredServiceInvoice.getCodeName().get(), MeteredServiceInvoice);
+		codesByName.put(CreditNoteRelatedToFinancialAdjustment.getCodeName().get(), CreditNoteRelatedToFinancialAdjustment);
+		codesByName.put(DebitNoteRelatedToFinancialAdjustment.getCodeName().get(), DebitNoteRelatedToFinancialAdjustment);
+		codesByName.put(CommercialInvoice.getCodeName().get(), CommercialInvoice);
+		codesByName.put(CreditNote.getCodeName().get(), CreditNote);
+		codesByName.put(DebitNote.getCodeName().get(), DebitNote);
+		codesByName.put(HireInvoice.getCodeName().get(), HireInvoice);
+		codesByName.put(SelfBilledInvoice.getCodeName().get(), SelfBilledInvoice);
+		codesByName.put(CommercialContract.getCodeName().get(), CommercialContract);
+		codesByName.put(StatementOfAccount.getCodeName().get(), StatementOfAccount);
+		codesByName.put(DispatchAdvice.getCodeName().get(), DispatchAdvice);
+		codesByName.put(BillOfLading.getCodeName().get(), BillOfLading);
+		codesByName.put(Voucher.getCodeName().get(), Voucher);
+		codesByName.put(AccountReceivableOpenItem.getCodeName().get(), AccountReceivableOpenItem);
+		codesByName.put(TradeServicesUtilityTransaction.getCodeName().get(), TradeServicesUtilityTransaction);
+		codesByName.put(PurchaseOrder.getCodeName().get(), PurchaseOrder);
+	}
+
+	public static DocumentType6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DocumentType6Code[] values() {
+		DocumentType6Code[] values = new DocumentType6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DocumentType6Code> {
+		@Override
+		public DocumentType6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DocumentType6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

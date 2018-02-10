@@ -31,6 +31,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -76,8 +78,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,15 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Statement3", propOrder = {"reference", "statementDateTime", "creationDateTime", "frequency", "updateType", "activityIndicator", "statementBasis", "reportNumber"})
 public class Statement3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ref", required = true)
 	protected Max35Text reference;
 	/**
-	 * Reference of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +127,7 @@ public class Statement3 {
 	 */
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement3.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +138,11 @@ public class Statement3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtDtTm", required = true)
 	protected DateAndDateTimeChoice statementDateTime;
 	/**
-	 * Date of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +169,7 @@ public class Statement3 {
 	 */
 	public static final MMMessageAttribute mmStatementDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement3.mmObject();
 			isDerived = false;
 			xmlTag = "StmtDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,10 +180,11 @@ public class Statement3 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm")
 	protected DateAndDateTimeChoice creationDateTime;
 	/**
-	 * Preparation date of the statement
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,7 +211,7 @@ public class Statement3 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement3.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,10 +222,11 @@ public class Statement3 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Frqcy")
 	protected FrequencyCodeAndDSSCodeChoice frequency;
 	/**
-	 * Frequency of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -247,7 +253,7 @@ public class Statement3 {
 	 */
 	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement3.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,10 +264,11 @@ public class Statement3 {
 			complexType_lazy = () -> FrequencyCodeAndDSSCodeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "UpdTp")
 	protected StatementUpdateTypeCodeAndDSSCodeChoice updateType;
 	/**
-	 * Indicates whether the report is complete or contains changes only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -289,7 +296,7 @@ public class Statement3 {
 	 */
 	public static final MMMessageAttribute mmUpdateType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement3.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -300,10 +307,11 @@ public class Statement3 {
 			complexType_lazy = () -> StatementUpdateTypeCodeAndDSSCodeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "ActvtyInd", required = true)
 	protected YesNoIndicator activityIndicator;
 	/**
-	 * Indicates whether there is activity reported in the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -331,7 +339,7 @@ public class Statement3 {
 	 */
 	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement3.mmObject();
 			isDerived = false;
 			xmlTag = "ActvtyInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -342,10 +350,11 @@ public class Statement3 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtBsis")
 	protected StatementBasisCodeAndDSSCodeChoice statementBasis;
 	/**
-	 * Type of balance on which the statement is prepared.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -372,7 +381,7 @@ public class Statement3 {
 	 */
 	public static final MMMessageAttribute mmStatementBasis = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement3.mmObject();
 			isDerived = false;
 			xmlTag = "StmtBsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -383,10 +392,11 @@ public class Statement3 {
 			complexType_lazy = () -> StatementBasisCodeAndDSSCodeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "RptNb")
 	protected Max5NumericText reportNumber;
 	/**
-	 * Sequential number of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -413,7 +423,7 @@ public class Statement3 {
 	 */
 	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement3.mmObject();
 			isDerived = false;
 			xmlTag = "RptNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -428,10 +438,11 @@ public class Statement3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Statement3.mmReference, Statement3.mmStatementDateTime, Statement3.mmCreationDateTime, Statement3.mmFrequency, Statement3.mmUpdateType, Statement3.mmActivityIndicator,
-						Statement3.mmStatementBasis, Statement3.mmReportNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement3.mmReference, com.tools20022.repository.msg.Statement3.mmStatementDateTime, com.tools20022.repository.msg.Statement3.mmCreationDateTime,
+						com.tools20022.repository.msg.Statement3.mmFrequency, com.tools20022.repository.msg.Statement3.mmUpdateType, com.tools20022.repository.msg.Statement3.mmActivityIndicator,
+						com.tools20022.repository.msg.Statement3.mmStatementBasis, com.tools20022.repository.msg.Statement3.mmReportNumber);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CustodyStatementOfHoldings.mmStatementGeneralDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Statement3";
 				definition = "General characteristics related to a statement which reports information for a precise date.";
@@ -440,75 +451,75 @@ public class Statement3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ref", required = true)
 	public Max35Text getReference() {
 		return reference;
 	}
 
-	public void setReference(Max35Text reference) {
-		this.reference = reference;
+	public Statement3 setReference(Max35Text reference) {
+		this.reference = Objects.requireNonNull(reference);
+		return this;
 	}
 
-	@XmlElement(name = "StmtDtTm", required = true)
 	public DateAndDateTimeChoice getStatementDateTime() {
 		return statementDateTime;
 	}
 
-	public void setStatementDateTime(DateAndDateTimeChoice statementDateTime) {
-		this.statementDateTime = statementDateTime;
+	public Statement3 setStatementDateTime(DateAndDateTimeChoice statementDateTime) {
+		this.statementDateTime = Objects.requireNonNull(statementDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm")
-	public DateAndDateTimeChoice getCreationDateTime() {
-		return creationDateTime;
+	public Optional<DateAndDateTimeChoice> getCreationDateTime() {
+		return creationDateTime == null ? Optional.empty() : Optional.of(creationDateTime);
 	}
 
-	public void setCreationDateTime(DateAndDateTimeChoice creationDateTime) {
+	public Statement3 setCreationDateTime(DateAndDateTimeChoice creationDateTime) {
 		this.creationDateTime = creationDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "Frqcy")
-	public FrequencyCodeAndDSSCodeChoice getFrequency() {
-		return frequency;
+	public Optional<FrequencyCodeAndDSSCodeChoice> getFrequency() {
+		return frequency == null ? Optional.empty() : Optional.of(frequency);
 	}
 
-	public void setFrequency(FrequencyCodeAndDSSCodeChoice frequency) {
+	public Statement3 setFrequency(FrequencyCodeAndDSSCodeChoice frequency) {
 		this.frequency = frequency;
+		return this;
 	}
 
-	@XmlElement(name = "UpdTp")
-	public StatementUpdateTypeCodeAndDSSCodeChoice getUpdateType() {
-		return updateType;
+	public Optional<StatementUpdateTypeCodeAndDSSCodeChoice> getUpdateType() {
+		return updateType == null ? Optional.empty() : Optional.of(updateType);
 	}
 
-	public void setUpdateType(StatementUpdateTypeCodeAndDSSCodeChoice updateType) {
+	public Statement3 setUpdateType(StatementUpdateTypeCodeAndDSSCodeChoice updateType) {
 		this.updateType = updateType;
+		return this;
 	}
 
-	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}
 
-	public void setActivityIndicator(YesNoIndicator activityIndicator) {
-		this.activityIndicator = activityIndicator;
+	public Statement3 setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = Objects.requireNonNull(activityIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "StmtBsis")
-	public StatementBasisCodeAndDSSCodeChoice getStatementBasis() {
-		return statementBasis;
+	public Optional<StatementBasisCodeAndDSSCodeChoice> getStatementBasis() {
+		return statementBasis == null ? Optional.empty() : Optional.of(statementBasis);
 	}
 
-	public void setStatementBasis(StatementBasisCodeAndDSSCodeChoice statementBasis) {
+	public Statement3 setStatementBasis(StatementBasisCodeAndDSSCodeChoice statementBasis) {
 		this.statementBasis = statementBasis;
+		return this;
 	}
 
-	@XmlElement(name = "RptNb")
-	public Max5NumericText getReportNumber() {
-		return reportNumber;
+	public Optional<Max5NumericText> getReportNumber() {
+		return reportNumber == null ? Optional.empty() : Optional.of(reportNumber);
 	}
 
-	public void setReportNumber(Max5NumericText reportNumber) {
+	public Statement3 setReportNumber(Max5NumericText reportNumber) {
 		this.reportNumber = reportNumber;
+		return this;
 	}
 }

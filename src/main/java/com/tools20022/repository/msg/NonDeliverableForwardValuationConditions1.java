@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,16 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NonDeliverableForwardValuationConditions1", propOrder = {"settlementCurrency", "valuationDate", "additionalValuationInformation", "settlementParty"})
 public class NonDeliverableForwardValuationConditions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SttlmCcy", required = true)
 	protected ActiveOrHistoricCurrencyCode settlementCurrency;
 	/**
-	 * Specifies the currency in which the non deliverable trade has to be
-	 * settled ie the deliverable currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +126,7 @@ public class NonDeliverableForwardValuationConditions1 {
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NonDeliverableTrade.mmSettlementCurrency;
-			componentContext_lazy = () -> NonDeliverableForwardValuationConditions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,11 +137,11 @@ public class NonDeliverableForwardValuationConditions1 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "ValtnDt", required = true)
 	protected ISODate valuationDate;
 	/**
-	 * Date at which the rate used for calculating the net amount to be settled
-	 * is observed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,7 +176,7 @@ public class NonDeliverableForwardValuationConditions1 {
 	public static final MMMessageAttribute mmValuationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> FixingCondition.mmFixingDateTime;
-			componentContext_lazy = () -> NonDeliverableForwardValuationConditions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,11 +187,11 @@ public class NonDeliverableForwardValuationConditions1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlValtnInf")
 	protected Max140Text additionalValuationInformation;
 	/**
-	 * Free format text that may contain valuation information such as the
-	 * place, the time or the source of the rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,7 +220,7 @@ public class NonDeliverableForwardValuationConditions1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalValuationInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NonDeliverableForwardValuationConditions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlValtnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,11 +231,11 @@ public class NonDeliverableForwardValuationConditions1 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmPty")
 	protected PartyIdentification7Choice settlementParty;
 	/**
-	 * Party through which the settlement will take place. It may contain the
-	 * BIC of a central settlement system eg CLSBUS33.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -269,7 +271,7 @@ public class NonDeliverableForwardValuationConditions1 {
 	public static final MMMessageAttribute mmSettlementParty = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> NonDeliverableForwardValuationConditions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,10 +286,11 @@ public class NonDeliverableForwardValuationConditions1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NonDeliverableForwardValuationConditions1.mmSettlementCurrency, NonDeliverableForwardValuationConditions1.mmValuationDate,
-						NonDeliverableForwardValuationConditions1.mmAdditionalValuationInformation, NonDeliverableForwardValuationConditions1.mmSettlementParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.mmSettlementCurrency,
+						com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.mmValuationDate, com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.mmAdditionalValuationInformation,
+						com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.mmSettlementParty);
 				trace_lazy = () -> FixingCondition.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "NonDeliverableForwardValuationConditions1";
 				definition = "Set of parameters used to calculate the fixing rate to be applied to a non-deliverable agreement.";
@@ -296,39 +299,39 @@ public class NonDeliverableForwardValuationConditions1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SttlmCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
 
-	public void setSettlementCurrency(ActiveOrHistoricCurrencyCode settlementCurrency) {
-		this.settlementCurrency = settlementCurrency;
+	public NonDeliverableForwardValuationConditions1 setSettlementCurrency(ActiveOrHistoricCurrencyCode settlementCurrency) {
+		this.settlementCurrency = Objects.requireNonNull(settlementCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "ValtnDt", required = true)
 	public ISODate getValuationDate() {
 		return valuationDate;
 	}
 
-	public void setValuationDate(ISODate valuationDate) {
-		this.valuationDate = valuationDate;
+	public NonDeliverableForwardValuationConditions1 setValuationDate(ISODate valuationDate) {
+		this.valuationDate = Objects.requireNonNull(valuationDate);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlValtnInf")
-	public Max140Text getAdditionalValuationInformation() {
-		return additionalValuationInformation;
+	public Optional<Max140Text> getAdditionalValuationInformation() {
+		return additionalValuationInformation == null ? Optional.empty() : Optional.of(additionalValuationInformation);
 	}
 
-	public void setAdditionalValuationInformation(Max140Text additionalValuationInformation) {
+	public NonDeliverableForwardValuationConditions1 setAdditionalValuationInformation(Max140Text additionalValuationInformation) {
 		this.additionalValuationInformation = additionalValuationInformation;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmPty")
-	public PartyIdentification7Choice getSettlementParty() {
-		return settlementParty;
+	public Optional<PartyIdentification7Choice> getSettlementParty() {
+		return settlementParty == null ? Optional.empty() : Optional.of(settlementParty);
 	}
 
-	public void setSettlementParty(PartyIdentification7Choice settlementParty) {
+	public NonDeliverableForwardValuationConditions1 setSettlementParty(PartyIdentification7Choice settlementParty) {
 		this.settlementParty = settlementParty;
+		return this;
 	}
 }

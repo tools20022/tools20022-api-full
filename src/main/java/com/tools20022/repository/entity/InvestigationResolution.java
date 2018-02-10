@@ -26,6 +26,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Specifies the actions taken as a result of an investigation.
@@ -46,6 +48,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InvestigationResolution#mmInvestigationCaseReference
  * InvestigationResolution.mmInvestigationCaseReference}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmInvestigationResolution
+ * InvestigationCase.mmInvestigationResolution}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -72,19 +83,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationCase#mmInvestigationResolution
- * InvestigationCase.mmInvestigationResolution}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,8 +102,8 @@ public class InvestigationResolution {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected InvestigationCase investigationCase;
 	/**
-	 * Case for which a resolution is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,8 +161,8 @@ public class InvestigationResolution {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestigationStatus.mmDuplicateOf, OriginalGroupInformation24.mmResolvedCase, OriginalPaymentInstruction3.mmResolvedCase, OriginalPaymentInstruction10.mmResolvedCase,
 					OriginalPaymentInstruction17.mmResolvedCase, OriginalPaymentInstruction22.mmResolvedCase);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationResolution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationResolution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestigationCase";
 			definition = "Case for which a resolution is provided.";
@@ -173,8 +175,8 @@ public class InvestigationResolution {
 	};
 	protected Max35Text investigationCaseReference;
 	/**
-	 * Identifies the case for which a resolution is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,8 +201,8 @@ public class InvestigationResolution {
 	 */
 	public static final MMBusinessAttribute mmInvestigationCaseReference = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationResolution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationResolution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestigationCaseReference";
 			definition = "Identifies the case for which a resolution is provided.";
@@ -221,7 +223,7 @@ public class InvestigationResolution {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestigationResolution";
 				definition = "Specifies the actions taken as a result of an investigation.";
@@ -239,19 +241,21 @@ public class InvestigationResolution {
 		return mmObject_lazy.get();
 	}
 
-	public InvestigationCase getInvestigationCase() {
-		return investigationCase;
+	public Optional<InvestigationCase> getInvestigationCase() {
+		return investigationCase == null ? Optional.empty() : Optional.of(investigationCase);
 	}
 
-	public void setInvestigationCase(com.tools20022.repository.entity.InvestigationCase investigationCase) {
+	public InvestigationResolution setInvestigationCase(com.tools20022.repository.entity.InvestigationCase investigationCase) {
 		this.investigationCase = investigationCase;
+		return this;
 	}
 
 	public Max35Text getInvestigationCaseReference() {
 		return investigationCaseReference;
 	}
 
-	public void setInvestigationCaseReference(Max35Text investigationCaseReference) {
-		this.investigationCaseReference = investigationCaseReference;
+	public InvestigationResolution setInvestigationCaseReference(Max35Text investigationCaseReference) {
+		this.investigationCaseReference = Objects.requireNonNull(investigationCaseReference);
+		return this;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Collateral;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,16 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Collateral3", propOrder = {"postHaircutValue", "marketValue", "collateralType"})
 public class Collateral3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PstHrcutVal", required = true)
 	protected ActiveCurrencyAndAmount postHaircutValue;
 	/**
-	 * Value of the collateral after deduction of a percentage (the haircut)
-	 * that reflects the perceived risk associated with holding this collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +112,7 @@ public class Collateral3 {
 	public static final MMMessageAttribute mmPostHaircutValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmPostHaircutValue;
-			componentContext_lazy = () -> Collateral3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral3.mmObject();
 			isDerived = false;
 			xmlTag = "PstHrcutVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,11 +123,11 @@ public class Collateral3 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "MktVal", required = true)
 	protected ActiveCurrencyAndAmount marketValue;
 	/**
-	 * Value of the underlying collateral (cash, securities, LoC) based on
-	 * current market prices.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +162,7 @@ public class Collateral3 {
 	public static final MMMessageAttribute mmMarketValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmMarketValue;
-			componentContext_lazy = () -> Collateral3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral3.mmObject();
 			isDerived = false;
 			xmlTag = "MktVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,10 +173,11 @@ public class Collateral3 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CollTp", required = true)
 	protected CollateralType2Code collateralType;
 	/**
-	 * Provides the type of collateral, such as securities or cash.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -209,7 +211,7 @@ public class Collateral3 {
 	public static final MMMessageAttribute mmCollateralType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralType;
-			componentContext_lazy = () -> Collateral3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral3.mmObject();
 			isDerived = false;
 			xmlTag = "CollTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,9 +226,9 @@ public class Collateral3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Collateral3.mmPostHaircutValue, Collateral3.mmMarketValue, Collateral3.mmCollateralType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Collateral3.mmPostHaircutValue, com.tools20022.repository.msg.Collateral3.mmMarketValue, com.tools20022.repository.msg.Collateral3.mmCollateralType);
 				trace_lazy = () -> Collateral.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Collateral3";
 				definition = "Provides the current and market value of the collateral held.";
@@ -235,30 +237,30 @@ public class Collateral3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PstHrcutVal", required = true)
 	public ActiveCurrencyAndAmount getPostHaircutValue() {
 		return postHaircutValue;
 	}
 
-	public void setPostHaircutValue(ActiveCurrencyAndAmount postHaircutValue) {
-		this.postHaircutValue = postHaircutValue;
+	public Collateral3 setPostHaircutValue(ActiveCurrencyAndAmount postHaircutValue) {
+		this.postHaircutValue = Objects.requireNonNull(postHaircutValue);
+		return this;
 	}
 
-	@XmlElement(name = "MktVal", required = true)
 	public ActiveCurrencyAndAmount getMarketValue() {
 		return marketValue;
 	}
 
-	public void setMarketValue(ActiveCurrencyAndAmount marketValue) {
-		this.marketValue = marketValue;
+	public Collateral3 setMarketValue(ActiveCurrencyAndAmount marketValue) {
+		this.marketValue = Objects.requireNonNull(marketValue);
+		return this;
 	}
 
-	@XmlElement(name = "CollTp", required = true)
 	public CollateralType2Code getCollateralType() {
 		return collateralType;
 	}
 
-	public void setCollateralType(CollateralType2Code collateralType) {
-		this.collateralType = collateralType;
+	public Collateral3 setCollateralType(CollateralType2Code collateralType) {
+		this.collateralType = Objects.requireNonNull(collateralType);
+		return this;
 	}
 }

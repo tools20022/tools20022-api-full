@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -29,6 +30,8 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CorporateActionGeneralInformationExtension3", propOrder = {"placeAndName", "eventType", "subEventType", "transactionCategory", "reasonCode", "DTCReasonCode"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CorporateActionGeneralInformationExtension3", propOrder = {"placeAndName", "eventType", "subEventType", "transactionCategory", "reasonCode", "dTCReasonCode"})
 public class CorporateActionGeneralInformationExtension3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +120,7 @@ public class CorporateActionGeneralInformationExtension3 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,16 +131,11 @@ public class CorporateActionGeneralInformationExtension3 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtTp")
 	protected ExtendedEventType1Code eventType;
 	/**
-	 * DTCC (The Depository Trust and Clearing Corporation) native corporate
-	 * action event type name. Used in place for the events that cannot be
-	 * classified by ISO Code and are marked as OTHR. Can be used in combination
-	 * with DTCC sub event type (when provided) to identify the event. For an
-	 * example: a distribution based on recapitalisation event will be presented
-	 * as event type: OTHR in standard message. DTCC native event type would be
-	 * Distribution (DIST) and DTCC sub event type would be Recapitalisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,6 +151,9 @@ public class CorporateActionGeneralInformationExtension3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EvtTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Event Type</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -166,9 +168,10 @@ public class CorporateActionGeneralInformationExtension3 {
 	 */
 	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "EvtTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Event Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action event type name. Used in place for the events that cannot be classified by ISO Code and are marked as OTHR. Can be used in combination with DTCC sub event type (when provided) to identify the event. For an example: a distribution based on recapitalisation event will be presented as event type: OTHR in standard message. DTCC native event type would be Distribution (DIST) and DTCC sub event type would be Recapitalisation. ";
@@ -177,14 +180,11 @@ public class CorporateActionGeneralInformationExtension3 {
 			simpleType_lazy = () -> ExtendedEventType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SubEvtTp")
 	protected DTCCSubEventType1Code subEventType;
 	/**
-	 * DTCC (The Depository Trust and Clearing Corporation) native corporate
-	 * action sub event type name further defines the event type. For an
-	 * example: a cash dividend event with currency election will be noted as
-	 * event type: Cash Dividend (DVCA) and DTCC sub event type: Currency
-	 * Election(CURR).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,6 +200,9 @@ public class CorporateActionGeneralInformationExtension3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SubEvtTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Sub Event Type</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -214,9 +217,10 @@ public class CorporateActionGeneralInformationExtension3 {
 	 */
 	public static final MMMessageAttribute mmSubEventType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "SubEvtTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Sub Event Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubEventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action sub event type name further defines the event type. For an example: a cash dividend event with currency election will be noted as event type: Cash Dividend (DVCA) and DTCC sub event type: Currency Election(CURR).";
@@ -225,11 +229,11 @@ public class CorporateActionGeneralInformationExtension3 {
 			simpleType_lazy = () -> DTCCSubEventType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TxCtgy")
 	protected CorporateActionTransactionCategory1Code transactionCategory;
 	/**
-	 * Transaction category to which the corporate action event type belongs to
-	 * for reporting purposes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,6 +249,9 @@ public class CorporateActionGeneralInformationExtension3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TxCtgy"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Transaction Category</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -259,9 +266,10 @@ public class CorporateActionGeneralInformationExtension3 {
 	 */
 	public static final MMMessageAttribute mmTransactionCategory = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "TxCtgy";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Transaction Category"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCategory";
 			definition = "Transaction category to which the corporate action event type belongs to for reporting purposes.";
@@ -270,10 +278,11 @@ public class CorporateActionGeneralInformationExtension3 {
 			simpleType_lazy = () -> CorporateActionTransactionCategory1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RsnCd")
 	protected Max4AlphaNumericText reasonCode;
 	/**
-	 * Reason for the adjustment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -289,6 +298,9 @@ public class CorporateActionGeneralInformationExtension3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RsnCd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Reason Code</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -301,9 +313,10 @@ public class CorporateActionGeneralInformationExtension3 {
 	 */
 	public static final MMMessageAttribute mmReasonCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "RsnCd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Reason Code"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonCode";
 			definition = "Reason for the adjustment.";
@@ -312,11 +325,11 @@ public class CorporateActionGeneralInformationExtension3 {
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCRsnCd")
 	protected Exact5NumericText dTCReasonCode;
 	/**
-	 * Reason for the adjustment from ATP system at DTC (The Depository Trust
-	 * Corporation).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -332,6 +345,9 @@ public class CorporateActionGeneralInformationExtension3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCRsnCd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Contra Participant Number</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -346,9 +362,10 @@ public class CorporateActionGeneralInformationExtension3 {
 	 */
 	public static final MMMessageAttribute mmDTCReasonCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "DTCRsnCd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Contra Participant Number"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCReasonCode";
 			definition = "Reason for the adjustment from ATP system at DTC (The Depository Trust Corporation). ";
@@ -361,9 +378,10 @@ public class CorporateActionGeneralInformationExtension3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionGeneralInformationExtension3.mmPlaceAndName, CorporateActionGeneralInformationExtension3.mmEventType, CorporateActionGeneralInformationExtension3.mmSubEventType,
-						CorporateActionGeneralInformationExtension3.mmTransactionCategory, CorporateActionGeneralInformationExtension3.mmReasonCode, CorporateActionGeneralInformationExtension3.mmDTCReasonCode);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationExtension3.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationExtension3.mmEventType,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationExtension3.mmSubEventType, com.tools20022.repository.msg.CorporateActionGeneralInformationExtension3.mmTransactionCategory,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationExtension3.mmReasonCode, com.tools20022.repository.msg.CorporateActionGeneralInformationExtension3.mmDTCReasonCode);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionGeneralInformationExtension3";
 				definition = "Provides additional information regarding corporate action general information details.";
@@ -372,57 +390,57 @@ public class CorporateActionGeneralInformationExtension3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionGeneralInformationExtension3 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "EvtTp")
-	public ExtendedEventType1Code getEventType() {
-		return eventType;
+	public Optional<ExtendedEventType1Code> getEventType() {
+		return eventType == null ? Optional.empty() : Optional.of(eventType);
 	}
 
-	public void setEventType(ExtendedEventType1Code eventType) {
+	public CorporateActionGeneralInformationExtension3 setEventType(ExtendedEventType1Code eventType) {
 		this.eventType = eventType;
+		return this;
 	}
 
-	@XmlElement(name = "SubEvtTp")
-	public DTCCSubEventType1Code getSubEventType() {
-		return subEventType;
+	public Optional<DTCCSubEventType1Code> getSubEventType() {
+		return subEventType == null ? Optional.empty() : Optional.of(subEventType);
 	}
 
-	public void setSubEventType(DTCCSubEventType1Code subEventType) {
+	public CorporateActionGeneralInformationExtension3 setSubEventType(DTCCSubEventType1Code subEventType) {
 		this.subEventType = subEventType;
+		return this;
 	}
 
-	@XmlElement(name = "TxCtgy")
-	public CorporateActionTransactionCategory1Code getTransactionCategory() {
-		return transactionCategory;
+	public Optional<CorporateActionTransactionCategory1Code> getTransactionCategory() {
+		return transactionCategory == null ? Optional.empty() : Optional.of(transactionCategory);
 	}
 
-	public void setTransactionCategory(CorporateActionTransactionCategory1Code transactionCategory) {
+	public CorporateActionGeneralInformationExtension3 setTransactionCategory(CorporateActionTransactionCategory1Code transactionCategory) {
 		this.transactionCategory = transactionCategory;
+		return this;
 	}
 
-	@XmlElement(name = "RsnCd")
-	public Max4AlphaNumericText getReasonCode() {
-		return reasonCode;
+	public Optional<Max4AlphaNumericText> getReasonCode() {
+		return reasonCode == null ? Optional.empty() : Optional.of(reasonCode);
 	}
 
-	public void setReasonCode(Max4AlphaNumericText reasonCode) {
+	public CorporateActionGeneralInformationExtension3 setReasonCode(Max4AlphaNumericText reasonCode) {
 		this.reasonCode = reasonCode;
+		return this;
 	}
 
-	@XmlElement(name = "DTCRsnCd")
-	public Exact5NumericText getDTCReasonCode() {
-		return dTCReasonCode;
+	public Optional<Exact5NumericText> getDTCReasonCode() {
+		return dTCReasonCode == null ? Optional.empty() : Optional.of(dTCReasonCode);
 	}
 
-	public void setDTCReasonCode(Exact5NumericText dTCReasonCode) {
+	public CorporateActionGeneralInformationExtension3 setDTCReasonCode(Exact5NumericText dTCReasonCode) {
 		this.dTCReasonCode = dTCReasonCode;
+		return this;
 	}
 }

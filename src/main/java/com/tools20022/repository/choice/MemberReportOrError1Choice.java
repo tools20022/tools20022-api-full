@@ -24,9 +24,11 @@ import com.tools20022.repository.entity.SystemMemberRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.MemberReport3;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MemberReportOrError1Choice", propOrder = {"report", "operationalError"})
 public class MemberReportOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rpt", required = true)
 	protected List<MemberReport3> report;
 	/**
-	 * Provides the details on the requested member.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -110,7 +113,7 @@ public class MemberReportOrError1Choice {
 	public static final MMMessageAssociationEnd mmReport = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SystemMemberRole.mmObject();
-			componentContext_lazy = () -> MemberReportOrError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MemberReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,11 +124,11 @@ public class MemberReportOrError1Choice {
 			type_lazy = () -> MemberReport3.mmObject();
 		}
 	};
+	@XmlElement(name = "OprlErr", required = true)
 	protected List<ErrorHandling3> operationalError;
 	/**
-	 * Indicates that an operational error has been issued during the processing
-	 * of the related request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -153,7 +156,7 @@ public class MemberReportOrError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MemberReportOrError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MemberReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,9 +171,9 @@ public class MemberReportOrError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MemberReportOrError1Choice.mmReport, MemberReportOrError1Choice.mmOperationalError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MemberReportOrError1Choice.mmReport, com.tools20022.repository.choice.MemberReportOrError1Choice.mmOperationalError);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberReportOrError1Choice";
 				definition = "It is used to provide information on transactions and booked entries held at the transaction administrator.";
@@ -179,21 +182,21 @@ public class MemberReportOrError1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rpt", required = true)
 	public List<MemberReport3> getReport() {
-		return report;
+		return report == null ? report = new ArrayList<>() : report;
 	}
 
-	public void setReport(List<MemberReport3> report) {
-		this.report = report;
+	public MemberReportOrError1Choice setReport(List<MemberReport3> report) {
+		this.report = Objects.requireNonNull(report);
+		return this;
 	}
 
-	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling3> getOperationalError() {
-		return operationalError;
+		return operationalError == null ? operationalError = new ArrayList<>() : operationalError;
 	}
 
-	public void setOperationalError(List<ErrorHandling3> operationalError) {
-		this.operationalError = operationalError;
+	public MemberReportOrError1Choice setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = Objects.requireNonNull(operationalError);
+		return this;
 	}
 }

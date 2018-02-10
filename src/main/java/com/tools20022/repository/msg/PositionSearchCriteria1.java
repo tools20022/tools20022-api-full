@@ -29,6 +29,8 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the securities account position query criteria."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PositionSearchCriteria1", propOrder = {"accountOwner", "accountServicer", "safekeepingAccount", "financialInstrument", "countryOfIssue", "subBalanceType", "returnZeroPosition"})
 public class PositionSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification71Choice accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +120,7 @@ public class PositionSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PositionSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,13 +131,11 @@ public class PositionSearchCriteria1 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcr")
 	protected PartyIdentification71Choice accountServicer;
 	/**
-	 * Party that manages the account on behalf of the account owner, that is
-	 * manages the registration and booking of entries on the account,
-	 * calculates balances on the account and provides information about the
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +165,7 @@ public class PositionSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PositionSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,10 +176,11 @@ public class PositionSearchCriteria1 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgAcct")
 	protected SecuritiesAccount1Choice safekeepingAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -205,7 +207,7 @@ public class PositionSearchCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PositionSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,11 +219,11 @@ public class PositionSearchCriteria1 {
 			type_lazy = () -> SecuritiesAccount1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrm")
 	protected SecurityIdentification14 financialInstrument;
 	/**
-	 * Financial instrument representing a sum of rights of the investor
-	 * vis-à-vis the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -250,7 +252,7 @@ public class PositionSearchCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PositionSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -262,10 +264,11 @@ public class PositionSearchCriteria1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	@XmlElement(name = "CtryOfIsse")
 	protected CountryCode countryOfIssue;
 	/**
-	 * Country where the security is issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -292,7 +295,7 @@ public class PositionSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmCountryOfIssue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PositionSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfIsse";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -303,10 +306,11 @@ public class PositionSearchCriteria1 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "SubBalTp")
 	protected SecuritiesBalanceType2Choice subBalanceType;
 	/**
-	 * Defines specific restriction characteristics for a securities position.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -335,7 +339,7 @@ public class PositionSearchCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmSubBalanceType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PositionSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SubBalTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -347,10 +351,11 @@ public class PositionSearchCriteria1 {
 			type_lazy = () -> SecuritiesBalanceType2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RtrZeroPos", required = true)
 	protected TrueFalseIndicator returnZeroPosition;
 	/**
-	 * Option to provide output zero position in the results.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -378,7 +383,7 @@ public class PositionSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmReturnZeroPosition = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PositionSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PositionSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RtrZeroPos";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -393,9 +398,11 @@ public class PositionSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PositionSearchCriteria1.mmAccountOwner, PositionSearchCriteria1.mmAccountServicer, PositionSearchCriteria1.mmSafekeepingAccount, PositionSearchCriteria1.mmFinancialInstrument,
-						PositionSearchCriteria1.mmCountryOfIssue, PositionSearchCriteria1.mmSubBalanceType, PositionSearchCriteria1.mmReturnZeroPosition);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PositionSearchCriteria1.mmAccountOwner, com.tools20022.repository.msg.PositionSearchCriteria1.mmAccountServicer,
+						com.tools20022.repository.msg.PositionSearchCriteria1.mmSafekeepingAccount, com.tools20022.repository.msg.PositionSearchCriteria1.mmFinancialInstrument,
+						com.tools20022.repository.msg.PositionSearchCriteria1.mmCountryOfIssue, com.tools20022.repository.msg.PositionSearchCriteria1.mmSubBalanceType,
+						com.tools20022.repository.msg.PositionSearchCriteria1.mmReturnZeroPosition);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PositionSearchCriteria1";
 				definition = "Defines the securities account position query criteria.";
@@ -404,66 +411,66 @@ public class PositionSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification71Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification71Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification71Choice accountOwner) {
+	public PositionSearchCriteria1 setAccountOwner(PartyIdentification71Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcr")
-	public PartyIdentification71Choice getAccountServicer() {
-		return accountServicer;
+	public Optional<PartyIdentification71Choice> getAccountServicer() {
+		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public void setAccountServicer(PartyIdentification71Choice accountServicer) {
+	public PositionSearchCriteria1 setAccountServicer(PartyIdentification71Choice accountServicer) {
 		this.accountServicer = accountServicer;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct")
-	public SecuritiesAccount1Choice getSafekeepingAccount() {
-		return safekeepingAccount;
+	public Optional<SecuritiesAccount1Choice> getSafekeepingAccount() {
+		return safekeepingAccount == null ? Optional.empty() : Optional.of(safekeepingAccount);
 	}
 
-	public void setSafekeepingAccount(SecuritiesAccount1Choice safekeepingAccount) {
+	public PositionSearchCriteria1 setSafekeepingAccount(SecuritiesAccount1Choice safekeepingAccount) {
 		this.safekeepingAccount = safekeepingAccount;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrm")
-	public SecurityIdentification14 getFinancialInstrument() {
-		return financialInstrument;
+	public Optional<SecurityIdentification14> getFinancialInstrument() {
+		return financialInstrument == null ? Optional.empty() : Optional.of(financialInstrument);
 	}
 
-	public void setFinancialInstrument(com.tools20022.repository.msg.SecurityIdentification14 financialInstrument) {
+	public PositionSearchCriteria1 setFinancialInstrument(com.tools20022.repository.msg.SecurityIdentification14 financialInstrument) {
 		this.financialInstrument = financialInstrument;
+		return this;
 	}
 
-	@XmlElement(name = "CtryOfIsse")
-	public CountryCode getCountryOfIssue() {
-		return countryOfIssue;
+	public Optional<CountryCode> getCountryOfIssue() {
+		return countryOfIssue == null ? Optional.empty() : Optional.of(countryOfIssue);
 	}
 
-	public void setCountryOfIssue(CountryCode countryOfIssue) {
+	public PositionSearchCriteria1 setCountryOfIssue(CountryCode countryOfIssue) {
 		this.countryOfIssue = countryOfIssue;
+		return this;
 	}
 
-	@XmlElement(name = "SubBalTp")
-	public SecuritiesBalanceType2Choice getSubBalanceType() {
-		return subBalanceType;
+	public Optional<SecuritiesBalanceType2Choice> getSubBalanceType() {
+		return subBalanceType == null ? Optional.empty() : Optional.of(subBalanceType);
 	}
 
-	public void setSubBalanceType(SecuritiesBalanceType2Choice subBalanceType) {
+	public PositionSearchCriteria1 setSubBalanceType(SecuritiesBalanceType2Choice subBalanceType) {
 		this.subBalanceType = subBalanceType;
+		return this;
 	}
 
-	@XmlElement(name = "RtrZeroPos", required = true)
 	public TrueFalseIndicator getReturnZeroPosition() {
 		return returnZeroPosition;
 	}
 
-	public void setReturnZeroPosition(TrueFalseIndicator returnZeroPosition) {
-		this.returnZeroPosition = returnZeroPosition;
+	public PositionSearchCriteria1 setReturnZeroPosition(TrueFalseIndicator returnZeroPosition) {
+		this.returnZeroPosition = Objects.requireNonNull(returnZeroPosition);
+		return this;
 	}
 }

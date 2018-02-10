@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DocumentIdentification4Choice", propOrder = {"accountServicerDocumentIdentification", "accountOwnerDocumentIdentification"})
 public class DocumentIdentification4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctSvcrDocId", required = true)
 	protected RestrictedFINXMax16Text accountServicerDocumentIdentification;
 	/**
-	 * Identification of the document assigned by the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,6 +100,9 @@ public class DocumentIdentification4Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctSvcrDocId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -111,9 +117,10 @@ public class DocumentIdentification4Choice {
 	public static final MMMessageAttribute mmAccountServicerDocumentIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> DocumentIdentification4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrDocId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDocumentIdentification";
 			definition = "Identification of the document assigned by the account servicer.";
@@ -122,10 +129,11 @@ public class DocumentIdentification4Choice {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnrDocId", required = true)
 	protected RestrictedFINXMax16Text accountOwnerDocumentIdentification;
 	/**
-	 * Identification of the document assigned by the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,6 +154,9 @@ public class DocumentIdentification4Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctOwnrDocId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -160,9 +171,10 @@ public class DocumentIdentification4Choice {
 	public static final MMMessageAttribute mmAccountOwnerDocumentIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> DocumentIdentification4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentIdentification4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrDocId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerDocumentIdentification";
 			definition = "Identification of the document assigned by the account owner.";
@@ -175,9 +187,10 @@ public class DocumentIdentification4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DocumentIdentification4Choice.mmAccountServicerDocumentIdentification, DocumentIdentification4Choice.mmAccountOwnerDocumentIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DocumentIdentification4Choice.mmAccountServicerDocumentIdentification,
+						com.tools20022.repository.choice.DocumentIdentification4Choice.mmAccountOwnerDocumentIdentification);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification4Choice";
 				definition = "Choice between a document identification provided either by the account owner or by the account servicer.";
@@ -186,21 +199,21 @@ public class DocumentIdentification4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctSvcrDocId", required = true)
 	public RestrictedFINXMax16Text getAccountServicerDocumentIdentification() {
 		return accountServicerDocumentIdentification;
 	}
 
-	public void setAccountServicerDocumentIdentification(RestrictedFINXMax16Text accountServicerDocumentIdentification) {
-		this.accountServicerDocumentIdentification = accountServicerDocumentIdentification;
+	public DocumentIdentification4Choice setAccountServicerDocumentIdentification(RestrictedFINXMax16Text accountServicerDocumentIdentification) {
+		this.accountServicerDocumentIdentification = Objects.requireNonNull(accountServicerDocumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnrDocId", required = true)
 	public RestrictedFINXMax16Text getAccountOwnerDocumentIdentification() {
 		return accountOwnerDocumentIdentification;
 	}
 
-	public void setAccountOwnerDocumentIdentification(RestrictedFINXMax16Text accountOwnerDocumentIdentification) {
-		this.accountOwnerDocumentIdentification = accountOwnerDocumentIdentification;
+	public DocumentIdentification4Choice setAccountOwnerDocumentIdentification(RestrictedFINXMax16Text accountOwnerDocumentIdentification) {
+		this.accountOwnerDocumentIdentification = Objects.requireNonNull(accountOwnerDocumentIdentification);
+		return this;
 	}
 }

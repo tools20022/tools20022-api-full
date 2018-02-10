@@ -25,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between formats for the frequency."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FrequencyCodeAndDSSCode1Choice", propOrder = {"frequencyAsCode", "frequencyAsDSS"})
 public class FrequencyCodeAndDSSCode1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FrqcyAsCd", required = true)
 	protected EventFrequency1Code frequencyAsCode;
 	/**
-	 * Frequency expressed as a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +100,7 @@ public class FrequencyCodeAndDSSCode1Choice {
 	 */
 	public static final MMMessageAttribute mmFrequencyAsCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FrequencyCodeAndDSSCode1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FrequencyCodeAndDSSCode1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrqcyAsCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,11 +111,11 @@ public class FrequencyCodeAndDSSCode1Choice {
 			simpleType_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "FrqcyAsDSS", required = true)
 	protected GenericIdentification7 frequencyAsDSS;
 	/**
-	 * Frequency expressed as a data source scheme and a code used within the
-	 * data source scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +145,7 @@ public class FrequencyCodeAndDSSCode1Choice {
 	 */
 	public static final MMMessageAttribute mmFrequencyAsDSS = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FrequencyCodeAndDSSCode1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FrequencyCodeAndDSSCode1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrqcyAsDSS";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,8 +160,8 @@ public class FrequencyCodeAndDSSCode1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FrequencyCodeAndDSSCode1Choice.mmFrequencyAsCode, FrequencyCodeAndDSSCode1Choice.mmFrequencyAsDSS);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FrequencyCodeAndDSSCode1Choice.mmFrequencyAsCode, com.tools20022.repository.choice.FrequencyCodeAndDSSCode1Choice.mmFrequencyAsDSS);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FrequencyCodeAndDSSCode1Choice";
 				definition = "Choice between formats for the frequency.";
@@ -168,21 +170,21 @@ public class FrequencyCodeAndDSSCode1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FrqcyAsCd", required = true)
 	public EventFrequency1Code getFrequencyAsCode() {
 		return frequencyAsCode;
 	}
 
-	public void setFrequencyAsCode(EventFrequency1Code frequencyAsCode) {
-		this.frequencyAsCode = frequencyAsCode;
+	public FrequencyCodeAndDSSCode1Choice setFrequencyAsCode(EventFrequency1Code frequencyAsCode) {
+		this.frequencyAsCode = Objects.requireNonNull(frequencyAsCode);
+		return this;
 	}
 
-	@XmlElement(name = "FrqcyAsDSS", required = true)
 	public GenericIdentification7 getFrequencyAsDSS() {
 		return frequencyAsDSS;
 	}
 
-	public void setFrequencyAsDSS(GenericIdentification7 frequencyAsDSS) {
-		this.frequencyAsDSS = frequencyAsDSS;
+	public FrequencyCodeAndDSSCode1Choice setFrequencyAsDSS(GenericIdentification7 frequencyAsDSS) {
+		this.frequencyAsDSS = Objects.requireNonNull(frequencyAsDSS);
+		return this;
 	}
 }

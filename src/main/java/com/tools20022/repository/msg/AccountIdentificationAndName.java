@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Account to or from which a cash entry is made."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountIdentificationAndName", propOrder = {"accountIdentification", "accountName"})
 public class AccountIdentificationAndName {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId", required = true)
 	protected AccountIdentification1Choice accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class AccountIdentificationAndName {
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
-			componentContext_lazy = () -> AccountIdentificationAndName.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,12 +124,11 @@ public class AccountIdentificationAndName {
 			complexType_lazy = () -> AccountIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctNm")
 	protected Max35Text accountName;
 	/**
-	 * Name of the account. It provides an additional means of identification,
-	 * and is designated by the account servicer in agreement with the account
-	 * owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +163,7 @@ public class AccountIdentificationAndName {
 	public static final MMMessageAttribute mmAccountName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
-			componentContext_lazy = () -> AccountIdentificationAndName.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName.mmObject();
 			isDerived = false;
 			xmlTag = "AcctNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,9 +178,9 @@ public class AccountIdentificationAndName {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountIdentificationAndName.mmAccountIdentification, AccountIdentificationAndName.mmAccountName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentificationAndName.mmAccountIdentification, com.tools20022.repository.msg.AccountIdentificationAndName.mmAccountName);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountIdentificationAndName";
 				definition = "Account to or from which a cash entry is made.";
@@ -188,21 +189,21 @@ public class AccountIdentificationAndName {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public AccountIdentification1Choice getAccountIdentification() {
 		return accountIdentification;
 	}
 
-	public void setAccountIdentification(AccountIdentification1Choice accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public AccountIdentificationAndName setAccountIdentification(AccountIdentification1Choice accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctNm")
-	public Max35Text getAccountName() {
-		return accountName;
+	public Optional<Max35Text> getAccountName() {
+		return accountName == null ? Optional.empty() : Optional.of(accountName);
 	}
 
-	public void setAccountName(Max35Text accountName) {
+	public AccountIdentificationAndName setAccountName(Max35Text accountName) {
 		this.accountName = accountName;
+		return this;
 	}
 }

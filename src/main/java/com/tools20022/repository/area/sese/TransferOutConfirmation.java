@@ -25,9 +25,8 @@ import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -46,22 +45,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
- * SecuritiesSettlementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "sese.003.001.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "sese.003.001.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -92,6 +75,22 @@ import javax.xml.bind.annotation.*;
  * TransferOutConfirmation.mmExtension}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "sese.003.001.01"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
+ * SecuritiesSettlementArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "sese.003.001.01"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.003.001.01}</li>
@@ -115,15 +114,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "sese.003.001.01", propOrder = {"relatedReference", "poolReference", "previousReference", "transferDetails", "financialInstrumentDetails", "accountDetails", "settlementDetails", "extension"})
 public class TransferOutConfirmation {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RltdRef", required = true)
 	protected AdditionalReference2 relatedReference;
 	/**
-	 * Reference to a linked message that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,10 +164,11 @@ public class TransferOutConfirmation {
 			}
 		}
 	};
+	@XmlElement(name = "PoolRef")
 	protected AdditionalReference2 poolReference;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -207,10 +208,11 @@ public class TransferOutConfirmation {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsRef")
 	protected AdditionalReference2 previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -250,10 +252,11 @@ public class TransferOutConfirmation {
 			}
 		}
 	};
+	@XmlElement(name = "TrfDtls", required = true)
 	protected Transfer2 transferDetails;
 	/**
-	 * General information related to the transfer of a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -294,10 +297,11 @@ public class TransferOutConfirmation {
 			}
 		}
 	};
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	protected FinancialInstrument3 financialInstrumentDetails;
 	/**
-	 * Information related to the financial instrument withdrawn.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -338,11 +342,11 @@ public class TransferOutConfirmation {
 			}
 		}
 	};
+	@XmlElement(name = "AcctDtls", required = true)
 	protected InvestmentAccount10 accountDetails;
 	/**
-	 * Information related to the account from which the financial instrument
-	 * was withdrawn.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -384,10 +388,11 @@ public class TransferOutConfirmation {
 			}
 		}
 	};
+	@XmlElement(name = "SttlmDtls", required = true)
 	protected ReceiveInformation2 settlementDetails;
 	/**
-	 * Information related to the receiving side of the transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -428,11 +433,11 @@ public class TransferOutConfirmation {
 			}
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -507,79 +512,79 @@ public class TransferOutConfirmation {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RltdRef", required = true)
 	public AdditionalReference2 getRelatedReference() {
 		return relatedReference;
 	}
 
-	public void setRelatedReference(AdditionalReference2 relatedReference) {
-		this.relatedReference = relatedReference;
+	public TransferOutConfirmation setRelatedReference(AdditionalReference2 relatedReference) {
+		this.relatedReference = Objects.requireNonNull(relatedReference);
+		return this;
 	}
 
-	@XmlElement(name = "PoolRef")
-	public AdditionalReference2 getPoolReference() {
-		return poolReference;
+	public Optional<AdditionalReference2> getPoolReference() {
+		return poolReference == null ? Optional.empty() : Optional.of(poolReference);
 	}
 
-	public void setPoolReference(AdditionalReference2 poolReference) {
+	public TransferOutConfirmation setPoolReference(AdditionalReference2 poolReference) {
 		this.poolReference = poolReference;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef")
-	public AdditionalReference2 getPreviousReference() {
-		return previousReference;
+	public Optional<AdditionalReference2> getPreviousReference() {
+		return previousReference == null ? Optional.empty() : Optional.of(previousReference);
 	}
 
-	public void setPreviousReference(AdditionalReference2 previousReference) {
+	public TransferOutConfirmation setPreviousReference(AdditionalReference2 previousReference) {
 		this.previousReference = previousReference;
+		return this;
 	}
 
-	@XmlElement(name = "TrfDtls", required = true)
 	public Transfer2 getTransferDetails() {
 		return transferDetails;
 	}
 
-	public void setTransferDetails(Transfer2 transferDetails) {
-		this.transferDetails = transferDetails;
+	public TransferOutConfirmation setTransferDetails(Transfer2 transferDetails) {
+		this.transferDetails = Objects.requireNonNull(transferDetails);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument3 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
 
-	public void setFinancialInstrumentDetails(FinancialInstrument3 financialInstrumentDetails) {
-		this.financialInstrumentDetails = financialInstrumentDetails;
+	public TransferOutConfirmation setFinancialInstrumentDetails(FinancialInstrument3 financialInstrumentDetails) {
+		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AcctDtls", required = true)
 	public InvestmentAccount10 getAccountDetails() {
 		return accountDetails;
 	}
 
-	public void setAccountDetails(InvestmentAccount10 accountDetails) {
-		this.accountDetails = accountDetails;
+	public TransferOutConfirmation setAccountDetails(InvestmentAccount10 accountDetails) {
+		this.accountDetails = Objects.requireNonNull(accountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmDtls", required = true)
 	public ReceiveInformation2 getSettlementDetails() {
 		return settlementDetails;
 	}
 
-	public void setSettlementDetails(ReceiveInformation2 settlementDetails) {
-		this.settlementDetails = settlementDetails;
+	public TransferOutConfirmation setSettlementDetails(ReceiveInformation2 settlementDetails) {
+		this.settlementDetails = Objects.requireNonNull(settlementDetails);
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<Extension1> extension) {
-		this.extension = extension;
+	public TransferOutConfirmation setExtension(List<Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.003.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.003.001.01")
 	static public class Document {
 		@XmlElement(name = "sese.003.001.01", required = true)
 		public TransferOutConfirmation messageBody;

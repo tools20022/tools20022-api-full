@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +75,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Card performing the withdrawal transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentCard23", propOrder = {"cardDataEntryMode", "fallbackIndicator", "protectedCardData", "plainCardData", "cardCountryCode", "cardCurrencyCode", "electronicPurseBalance"})
 public class PaymentCard23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CardDataNtryMd", required = true)
 	protected CardDataReading1Code cardDataEntryMode;
 	/**
-	 * Entry mode that used to obtain the card data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +123,7 @@ public class PaymentCard23 {
 	 */
 	public static final MMMessageAttribute mmCardDataEntryMode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentCard23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard23.mmObject();
 			isDerived = false;
 			xmlTag = "CardDataNtryMd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +134,11 @@ public class PaymentCard23 {
 			simpleType_lazy = () -> CardDataReading1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "FllbckInd")
 	protected CardFallback1Code fallbackIndicator;
 	/**
-	 * Indicate the occurrence of a fall-back on the card entry mode.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +166,7 @@ public class PaymentCard23 {
 	 */
 	public static final MMMessageAttribute mmFallbackIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentCard23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard23.mmObject();
 			isDerived = false;
 			xmlTag = "FllbckInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,11 +177,11 @@ public class PaymentCard23 {
 			simpleType_lazy = () -> CardFallback1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctdCardData")
 	protected ContentInformationType10 protectedCardData;
 	/**
-	 * Replacement of the message element PlainCardData by a digital envelope
-	 * using a cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -205,7 +209,7 @@ public class PaymentCard23 {
 	 */
 	public static final MMMessageAssociationEnd mmProtectedCardData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentCard23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard23.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctdCardData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,10 +221,11 @@ public class PaymentCard23 {
 			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType10.mmObject();
 		}
 	};
+	@XmlElement(name = "PlainCardData")
 	protected PlainCardData19 plainCardData;
 	/**
-	 * Sensitive data associated with the card performing the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -246,7 +251,7 @@ public class PaymentCard23 {
 	 */
 	public static final MMMessageAssociationEnd mmPlainCardData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentCard23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard23.mmObject();
 			isDerived = false;
 			xmlTag = "PlainCardData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,10 +263,11 @@ public class PaymentCard23 {
 			type_lazy = () -> com.tools20022.repository.msg.PlainCardData19.mmObject();
 		}
 	};
+	@XmlElement(name = "CardCtryCd")
 	protected Max3Text cardCountryCode;
 	/**
-	 * Country code assigned to the card by the card issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -293,7 +299,7 @@ public class PaymentCard23 {
 	public static final MMMessageAttribute mmCardCountryCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmCardCountryCode;
-			componentContext_lazy = () -> PaymentCard23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard23.mmObject();
 			isDerived = false;
 			xmlTag = "CardCtryCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -304,10 +310,11 @@ public class PaymentCard23 {
 			simpleType_lazy = () -> Max3Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CardCcyCd")
 	protected Exact3AlphaNumericText cardCurrencyCode;
 	/**
-	 * Currency code of the card issuer (ISO 4217 numeric code).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -341,7 +348,7 @@ public class PaymentCard23 {
 	public static final MMMessageAttribute mmCardCurrencyCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmCardCurrencyCode;
-			componentContext_lazy = () -> PaymentCard23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard23.mmObject();
 			isDerived = false;
 			xmlTag = "CardCcyCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -352,10 +359,11 @@ public class PaymentCard23 {
 			simpleType_lazy = () -> Exact3AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "ElctrncPrsBal")
 	protected CurrencyAndAmount electronicPurseBalance;
 	/**
-	 * Balance of the captured card or epurse if available.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -388,7 +396,7 @@ public class PaymentCard23 {
 	public static final MMMessageAttribute mmElectronicPurseBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBalance;
-			componentContext_lazy = () -> PaymentCard23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard23.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncPrsBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -403,10 +411,11 @@ public class PaymentCard23 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentCard23.mmCardDataEntryMode, PaymentCard23.mmFallbackIndicator, PaymentCard23.mmProtectedCardData, PaymentCard23.mmPlainCardData, PaymentCard23.mmCardCountryCode,
-						PaymentCard23.mmCardCurrencyCode, PaymentCard23.mmElectronicPurseBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard23.mmCardDataEntryMode, com.tools20022.repository.msg.PaymentCard23.mmFallbackIndicator,
+						com.tools20022.repository.msg.PaymentCard23.mmProtectedCardData, com.tools20022.repository.msg.PaymentCard23.mmPlainCardData, com.tools20022.repository.msg.PaymentCard23.mmCardCountryCode,
+						com.tools20022.repository.msg.PaymentCard23.mmCardCurrencyCode, com.tools20022.repository.msg.PaymentCard23.mmElectronicPurseBalance);
 				trace_lazy = () -> PaymentCard.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentCard23";
 				definition = "Card performing the withdrawal transaction.";
@@ -415,66 +424,66 @@ public class PaymentCard23 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CardDataNtryMd", required = true)
 	public CardDataReading1Code getCardDataEntryMode() {
 		return cardDataEntryMode;
 	}
 
-	public void setCardDataEntryMode(CardDataReading1Code cardDataEntryMode) {
-		this.cardDataEntryMode = cardDataEntryMode;
+	public PaymentCard23 setCardDataEntryMode(CardDataReading1Code cardDataEntryMode) {
+		this.cardDataEntryMode = Objects.requireNonNull(cardDataEntryMode);
+		return this;
 	}
 
-	@XmlElement(name = "FllbckInd")
-	public CardFallback1Code getFallbackIndicator() {
-		return fallbackIndicator;
+	public Optional<CardFallback1Code> getFallbackIndicator() {
+		return fallbackIndicator == null ? Optional.empty() : Optional.of(fallbackIndicator);
 	}
 
-	public void setFallbackIndicator(CardFallback1Code fallbackIndicator) {
+	public PaymentCard23 setFallbackIndicator(CardFallback1Code fallbackIndicator) {
 		this.fallbackIndicator = fallbackIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PrtctdCardData")
-	public ContentInformationType10 getProtectedCardData() {
-		return protectedCardData;
+	public Optional<ContentInformationType10> getProtectedCardData() {
+		return protectedCardData == null ? Optional.empty() : Optional.of(protectedCardData);
 	}
 
-	public void setProtectedCardData(com.tools20022.repository.msg.ContentInformationType10 protectedCardData) {
+	public PaymentCard23 setProtectedCardData(com.tools20022.repository.msg.ContentInformationType10 protectedCardData) {
 		this.protectedCardData = protectedCardData;
+		return this;
 	}
 
-	@XmlElement(name = "PlainCardData")
-	public PlainCardData19 getPlainCardData() {
-		return plainCardData;
+	public Optional<PlainCardData19> getPlainCardData() {
+		return plainCardData == null ? Optional.empty() : Optional.of(plainCardData);
 	}
 
-	public void setPlainCardData(com.tools20022.repository.msg.PlainCardData19 plainCardData) {
+	public PaymentCard23 setPlainCardData(com.tools20022.repository.msg.PlainCardData19 plainCardData) {
 		this.plainCardData = plainCardData;
+		return this;
 	}
 
-	@XmlElement(name = "CardCtryCd")
-	public Max3Text getCardCountryCode() {
-		return cardCountryCode;
+	public Optional<Max3Text> getCardCountryCode() {
+		return cardCountryCode == null ? Optional.empty() : Optional.of(cardCountryCode);
 	}
 
-	public void setCardCountryCode(Max3Text cardCountryCode) {
+	public PaymentCard23 setCardCountryCode(Max3Text cardCountryCode) {
 		this.cardCountryCode = cardCountryCode;
+		return this;
 	}
 
-	@XmlElement(name = "CardCcyCd")
-	public Exact3AlphaNumericText getCardCurrencyCode() {
-		return cardCurrencyCode;
+	public Optional<Exact3AlphaNumericText> getCardCurrencyCode() {
+		return cardCurrencyCode == null ? Optional.empty() : Optional.of(cardCurrencyCode);
 	}
 
-	public void setCardCurrencyCode(Exact3AlphaNumericText cardCurrencyCode) {
+	public PaymentCard23 setCardCurrencyCode(Exact3AlphaNumericText cardCurrencyCode) {
 		this.cardCurrencyCode = cardCurrencyCode;
+		return this;
 	}
 
-	@XmlElement(name = "ElctrncPrsBal")
-	public CurrencyAndAmount getElectronicPurseBalance() {
-		return electronicPurseBalance;
+	public Optional<CurrencyAndAmount> getElectronicPurseBalance() {
+		return electronicPurseBalance == null ? Optional.empty() : Optional.of(electronicPurseBalance);
 	}
 
-	public void setElectronicPurseBalance(CurrencyAndAmount electronicPurseBalance) {
+	public PaymentCard23 setElectronicPurseBalance(CurrencyAndAmount electronicPurseBalance) {
 		this.electronicPurseBalance = electronicPurseBalance;
+		return this;
 	}
 }

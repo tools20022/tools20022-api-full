@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -78,8 +79,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,15 +93,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "QuantityBreakDown2", propOrder = {"lotNumber", "lotQuantity", "lotDateTime", "lotPrice", "typeOfPrice", "accountBaseCurrencyAmounts", "instrumentCurrencyAmounts", "alternateReportingCurrencyAmounts"})
 public class QuantityBreakDown2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LotNb")
 	protected Number1Choice lotNumber;
 	/**
-	 * Number identifying a lot constituting the financial instrument
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,7 +137,7 @@ public class QuantityBreakDown2 {
 	public static final MMMessageAttribute mmLotNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotNumber;
-			componentContext_lazy = () -> QuantityBreakDown2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakDown2.mmObject();
 			isDerived = false;
 			xmlTag = "LotNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,10 +148,11 @@ public class QuantityBreakDown2 {
 			complexType_lazy = () -> Number1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LotQty")
 	protected FinancialInstrumentQuantity1Choice lotQuantity;
 	/**
-	 * Quantity of financial instruments that is part of the lot described.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -183,7 +186,7 @@ public class QuantityBreakDown2 {
 	public static final MMMessageAssociationEnd mmLotQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmSecuritiesQuantity;
-			componentContext_lazy = () -> QuantityBreakDown2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakDown2.mmObject();
 			isDerived = false;
 			xmlTag = "LotQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,10 +198,11 @@ public class QuantityBreakDown2 {
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LotDtTm")
 	protected DateAndDateTimeChoice lotDateTime;
 	/**
-	 * Date/time at which the lot was purchased.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -232,7 +236,7 @@ public class QuantityBreakDown2 {
 	public static final MMMessageAttribute mmLotDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotDateTime;
-			componentContext_lazy = () -> QuantityBreakDown2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakDown2.mmObject();
 			isDerived = false;
 			xmlTag = "LotDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,10 +247,11 @@ public class QuantityBreakDown2 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "LotPric")
 	protected Price2 lotPrice;
 	/**
-	 * Price at which the lot was purchased.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -277,7 +282,7 @@ public class QuantityBreakDown2 {
 	public static final MMMessageAssociationEnd mmLotPrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotPrice;
-			componentContext_lazy = () -> QuantityBreakDown2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakDown2.mmObject();
 			isDerived = false;
 			xmlTag = "LotPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -289,10 +294,11 @@ public class QuantityBreakDown2 {
 			type_lazy = () -> com.tools20022.repository.msg.Price2.mmObject();
 		}
 	};
+	@XmlElement(name = "TpOfPric")
 	protected TypeOfPrice1Choice typeOfPrice;
 	/**
-	 * Specifies the type of price and information about the price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -327,7 +333,7 @@ public class QuantityBreakDown2 {
 	public static final MMMessageAttribute mmTypeOfPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
-			componentContext_lazy = () -> QuantityBreakDown2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakDown2.mmObject();
 			isDerived = false;
 			xmlTag = "TpOfPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -338,11 +344,11 @@ public class QuantityBreakDown2 {
 			complexType_lazy = () -> TypeOfPrice1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctBaseCcyAmts")
 	protected BalanceAmounts2 accountBaseCurrencyAmounts;
 	/**
-	 * Valuation amounts for the lot provided in the base currency of the
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -376,7 +382,7 @@ public class QuantityBreakDown2 {
 	public static final MMMessageAssociationEnd mmAccountBaseCurrencyAmounts = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmAssetValue;
-			componentContext_lazy = () -> QuantityBreakDown2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakDown2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctBaseCcyAmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -388,11 +394,11 @@ public class QuantityBreakDown2 {
 			type_lazy = () -> com.tools20022.repository.msg.BalanceAmounts2.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrmCcyAmts")
 	protected BalanceAmounts2 instrumentCurrencyAmounts;
 	/**
-	 * Valuation amounts for the lot provided in the currency of the financial
-	 * instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -426,7 +432,7 @@ public class QuantityBreakDown2 {
 	public static final MMMessageAssociationEnd mmInstrumentCurrencyAmounts = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmAssetValue;
-			componentContext_lazy = () -> QuantityBreakDown2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakDown2.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmCcyAmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -438,11 +444,11 @@ public class QuantityBreakDown2 {
 			type_lazy = () -> com.tools20022.repository.msg.BalanceAmounts2.mmObject();
 		}
 	};
+	@XmlElement(name = "AltrnRptgCcyAmts")
 	protected BalanceAmounts2 alternateReportingCurrencyAmounts;
 	/**
-	 * Valuation amounts for the lot provided in another currency than the base
-	 * currency of the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -476,7 +482,7 @@ public class QuantityBreakDown2 {
 	public static final MMMessageAssociationEnd mmAlternateReportingCurrencyAmounts = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmAssetValue;
-			componentContext_lazy = () -> QuantityBreakDown2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakDown2.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnRptgCcyAmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -492,10 +498,12 @@ public class QuantityBreakDown2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(QuantityBreakDown2.mmLotNumber, QuantityBreakDown2.mmLotQuantity, QuantityBreakDown2.mmLotDateTime, QuantityBreakDown2.mmLotPrice, QuantityBreakDown2.mmTypeOfPrice,
-						QuantityBreakDown2.mmAccountBaseCurrencyAmounts, QuantityBreakDown2.mmInstrumentCurrencyAmounts, QuantityBreakDown2.mmAlternateReportingCurrencyAmounts);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakDown2.mmLotNumber, com.tools20022.repository.msg.QuantityBreakDown2.mmLotQuantity,
+						com.tools20022.repository.msg.QuantityBreakDown2.mmLotDateTime, com.tools20022.repository.msg.QuantityBreakDown2.mmLotPrice, com.tools20022.repository.msg.QuantityBreakDown2.mmTypeOfPrice,
+						com.tools20022.repository.msg.QuantityBreakDown2.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.QuantityBreakDown2.mmInstrumentCurrencyAmounts,
+						com.tools20022.repository.msg.QuantityBreakDown2.mmAlternateReportingCurrencyAmounts);
 				trace_lazy = () -> LotBreakdown.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuantityBreakDown2";
 				definition = "Transaction between two counterparties in which they agree to buy and sell a financial instrument. A trade transaction occurs with the matching of the two counterparties orders. There could be several trade transactions necessary to execute the trade.";
@@ -504,75 +512,75 @@ public class QuantityBreakDown2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LotNb")
-	public Number1Choice getLotNumber() {
-		return lotNumber;
+	public Optional<Number1Choice> getLotNumber() {
+		return lotNumber == null ? Optional.empty() : Optional.of(lotNumber);
 	}
 
-	public void setLotNumber(Number1Choice lotNumber) {
+	public QuantityBreakDown2 setLotNumber(Number1Choice lotNumber) {
 		this.lotNumber = lotNumber;
+		return this;
 	}
 
-	@XmlElement(name = "LotQty")
-	public FinancialInstrumentQuantity1Choice getLotQuantity() {
-		return lotQuantity;
+	public Optional<FinancialInstrumentQuantity1Choice> getLotQuantity() {
+		return lotQuantity == null ? Optional.empty() : Optional.of(lotQuantity);
 	}
 
-	public void setLotQuantity(FinancialInstrumentQuantity1Choice lotQuantity) {
+	public QuantityBreakDown2 setLotQuantity(FinancialInstrumentQuantity1Choice lotQuantity) {
 		this.lotQuantity = lotQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "LotDtTm")
-	public DateAndDateTimeChoice getLotDateTime() {
-		return lotDateTime;
+	public Optional<DateAndDateTimeChoice> getLotDateTime() {
+		return lotDateTime == null ? Optional.empty() : Optional.of(lotDateTime);
 	}
 
-	public void setLotDateTime(DateAndDateTimeChoice lotDateTime) {
+	public QuantityBreakDown2 setLotDateTime(DateAndDateTimeChoice lotDateTime) {
 		this.lotDateTime = lotDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "LotPric")
-	public Price2 getLotPrice() {
-		return lotPrice;
+	public Optional<Price2> getLotPrice() {
+		return lotPrice == null ? Optional.empty() : Optional.of(lotPrice);
 	}
 
-	public void setLotPrice(com.tools20022.repository.msg.Price2 lotPrice) {
+	public QuantityBreakDown2 setLotPrice(com.tools20022.repository.msg.Price2 lotPrice) {
 		this.lotPrice = lotPrice;
+		return this;
 	}
 
-	@XmlElement(name = "TpOfPric")
-	public TypeOfPrice1Choice getTypeOfPrice() {
-		return typeOfPrice;
+	public Optional<TypeOfPrice1Choice> getTypeOfPrice() {
+		return typeOfPrice == null ? Optional.empty() : Optional.of(typeOfPrice);
 	}
 
-	public void setTypeOfPrice(TypeOfPrice1Choice typeOfPrice) {
+	public QuantityBreakDown2 setTypeOfPrice(TypeOfPrice1Choice typeOfPrice) {
 		this.typeOfPrice = typeOfPrice;
+		return this;
 	}
 
-	@XmlElement(name = "AcctBaseCcyAmts")
-	public BalanceAmounts2 getAccountBaseCurrencyAmounts() {
-		return accountBaseCurrencyAmounts;
+	public Optional<BalanceAmounts2> getAccountBaseCurrencyAmounts() {
+		return accountBaseCurrencyAmounts == null ? Optional.empty() : Optional.of(accountBaseCurrencyAmounts);
 	}
 
-	public void setAccountBaseCurrencyAmounts(com.tools20022.repository.msg.BalanceAmounts2 accountBaseCurrencyAmounts) {
+	public QuantityBreakDown2 setAccountBaseCurrencyAmounts(com.tools20022.repository.msg.BalanceAmounts2 accountBaseCurrencyAmounts) {
 		this.accountBaseCurrencyAmounts = accountBaseCurrencyAmounts;
+		return this;
 	}
 
-	@XmlElement(name = "InstrmCcyAmts")
-	public BalanceAmounts2 getInstrumentCurrencyAmounts() {
-		return instrumentCurrencyAmounts;
+	public Optional<BalanceAmounts2> getInstrumentCurrencyAmounts() {
+		return instrumentCurrencyAmounts == null ? Optional.empty() : Optional.of(instrumentCurrencyAmounts);
 	}
 
-	public void setInstrumentCurrencyAmounts(com.tools20022.repository.msg.BalanceAmounts2 instrumentCurrencyAmounts) {
+	public QuantityBreakDown2 setInstrumentCurrencyAmounts(com.tools20022.repository.msg.BalanceAmounts2 instrumentCurrencyAmounts) {
 		this.instrumentCurrencyAmounts = instrumentCurrencyAmounts;
+		return this;
 	}
 
-	@XmlElement(name = "AltrnRptgCcyAmts")
-	public BalanceAmounts2 getAlternateReportingCurrencyAmounts() {
-		return alternateReportingCurrencyAmounts;
+	public Optional<BalanceAmounts2> getAlternateReportingCurrencyAmounts() {
+		return alternateReportingCurrencyAmounts == null ? Optional.empty() : Optional.of(alternateReportingCurrencyAmounts);
 	}
 
-	public void setAlternateReportingCurrencyAmounts(com.tools20022.repository.msg.BalanceAmounts2 alternateReportingCurrencyAmounts) {
+	public QuantityBreakDown2 setAlternateReportingCurrencyAmounts(com.tools20022.repository.msg.BalanceAmounts2 alternateReportingCurrencyAmounts) {
 		this.alternateReportingCurrencyAmounts = alternateReportingCurrencyAmounts;
+		return this;
 	}
 }

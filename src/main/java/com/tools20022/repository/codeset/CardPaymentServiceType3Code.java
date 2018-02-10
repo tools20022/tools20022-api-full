@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CardPaymentServiceTypeCode;
+import com.tools20022.repository.codeset.CardPaymentServiceType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Additional attributes of the service provided by the card payment
@@ -31,36 +35,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode
- * CardPaymentServiceTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#mmInitialReservation
- * CardPaymentServiceType3Code.mmInitialReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#InitialReservation
+ * CardPaymentServiceType3Code.InitialReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#mmUpdateReservation
- * CardPaymentServiceType3Code.mmUpdateReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#UpdateReservation
+ * CardPaymentServiceType3Code.UpdateReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#mmPaymentReservation
- * CardPaymentServiceType3Code.mmPaymentReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#PaymentReservation
+ * CardPaymentServiceType3Code.PaymentReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#mmAdditionalPayment
- * CardPaymentServiceType3Code.mmAdditionalPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#AdditionalPayment
+ * CardPaymentServiceType3Code.AdditionalPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#mmFirstRecurring
- * CardPaymentServiceType3Code.mmFirstRecurring}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#FirstRecurring
+ * CardPaymentServiceType3Code.FirstRecurring}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#mmFollowingRecurring
- * CardPaymentServiceType3Code.mmFollowingRecurring}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType3Code#FollowingRecurring
+ * CardPaymentServiceType3Code.FollowingRecurring}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode
+ * CardPaymentServiceTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CardPaymentServiceType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,11 +103,12 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	 * name} = "InitialReservation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInitialReservation = new MMCode() {
+	public static final CardPaymentServiceType3Code InitialReservation = new CardPaymentServiceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialReservation";
-			owner_lazy = () -> CardPaymentServiceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType3Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.InitialReservation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -121,11 +127,12 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	 * name} = "UpdateReservation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUpdateReservation = new MMCode() {
+	public static final CardPaymentServiceType3Code UpdateReservation = new CardPaymentServiceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateReservation";
-			owner_lazy = () -> CardPaymentServiceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType3Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.UpdateReservation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -144,11 +151,12 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	 * name} = "PaymentReservation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPaymentReservation = new MMCode() {
+	public static final CardPaymentServiceType3Code PaymentReservation = new CardPaymentServiceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentReservation";
-			owner_lazy = () -> CardPaymentServiceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType3Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.PaymentReservation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -167,11 +175,12 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	 * name} = "AdditionalPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAdditionalPayment = new MMCode() {
+	public static final CardPaymentServiceType3Code AdditionalPayment = new CardPaymentServiceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalPayment";
-			owner_lazy = () -> CardPaymentServiceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType3Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.AdditionalPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -190,11 +199,12 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	 * name} = "FirstRecurring"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFirstRecurring = new MMCode() {
+	public static final CardPaymentServiceType3Code FirstRecurring = new CardPaymentServiceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstRecurring";
-			owner_lazy = () -> CardPaymentServiceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType3Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.FirstRecurring.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -213,27 +223,63 @@ public class CardPaymentServiceType3Code extends CardPaymentServiceTypeCode {
 	 * name} = "FollowingRecurring"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFollowingRecurring = new MMCode() {
+	public static final CardPaymentServiceType3Code FollowingRecurring = new CardPaymentServiceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FollowingRecurring";
-			owner_lazy = () -> CardPaymentServiceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType3Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.FollowingRecurring.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CardPaymentServiceType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CardPaymentServiceType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("IRES");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentServiceType3Code";
 				definition = "Additional attributes of the service provided by the card payment transaction.";
-				code_lazy = () -> Arrays.asList(CardPaymentServiceType3Code.mmInitialReservation, CardPaymentServiceType3Code.mmUpdateReservation, CardPaymentServiceType3Code.mmPaymentReservation,
-						CardPaymentServiceType3Code.mmAdditionalPayment, CardPaymentServiceType3Code.mmFirstRecurring, CardPaymentServiceType3Code.mmFollowingRecurring);
 				trace_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType3Code.InitialReservation, com.tools20022.repository.codeset.CardPaymentServiceType3Code.UpdateReservation,
+						com.tools20022.repository.codeset.CardPaymentServiceType3Code.PaymentReservation, com.tools20022.repository.codeset.CardPaymentServiceType3Code.AdditionalPayment,
+						com.tools20022.repository.codeset.CardPaymentServiceType3Code.FirstRecurring, com.tools20022.repository.codeset.CardPaymentServiceType3Code.FollowingRecurring);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(InitialReservation.getCodeName().get(), InitialReservation);
+		codesByName.put(UpdateReservation.getCodeName().get(), UpdateReservation);
+		codesByName.put(PaymentReservation.getCodeName().get(), PaymentReservation);
+		codesByName.put(AdditionalPayment.getCodeName().get(), AdditionalPayment);
+		codesByName.put(FirstRecurring.getCodeName().get(), FirstRecurring);
+		codesByName.put(FollowingRecurring.getCodeName().get(), FollowingRecurring);
+	}
+
+	public static CardPaymentServiceType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CardPaymentServiceType3Code[] values() {
+		CardPaymentServiceType3Code[] values = new CardPaymentServiceType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CardPaymentServiceType3Code> {
+		@Override
+		public CardPaymentServiceType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CardPaymentServiceType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,9 +25,11 @@ import com.tools20022.repository.codeset.RoutingType1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +56,11 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = FIXSynonym: 216</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Routing1", propOrder = {"list", "firm", "routingType"})
 public class Routing1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "List")
 	protected List<Max35Text> list;
 	/**
-	 * Identifies a list of firms or a vendor maintained list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -89,6 +96,9 @@ public class Routing1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "List"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 217</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -101,9 +111,10 @@ public class Routing1 {
 	 */
 	public static final MMMessageAttribute mmList = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Routing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Routing1.mmObject();
 			isDerived = false;
 			xmlTag = "List";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "217"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "List";
 			definition = "Identifies a list of firms or a vendor maintained list.";
@@ -111,11 +122,11 @@ public class Routing1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Firm")
 	protected List<com.tools20022.repository.msg.PartyIdentification23> firm;
 	/**
-	 * Organised structure that is set up for a particular purpose, eg, a
-	 * business, government body, department, charity, or financial institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,6 +145,9 @@ public class Routing1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Firm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 217</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -149,9 +163,10 @@ public class Routing1 {
 	public static final MMMessageAttribute mmFirm = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
-			componentContext_lazy = () -> Routing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Routing1.mmObject();
 			isDerived = false;
 			xmlTag = "Firm";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "217"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Firm";
 			definition = "Organised structure that is set up for a particular purpose, eg, a business, government body, department, charity, or financial institution.";
@@ -159,10 +174,11 @@ public class Routing1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification23.mmObject();
 		}
 	};
+	@XmlElement(name = "RtgTp", required = true)
 	protected RoutingType1Code routingType;
 	/**
-	 * Indicates if the type of routing is allowed or blocked.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,6 +193,9 @@ public class Routing1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RtgTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 216</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -189,9 +208,10 @@ public class Routing1 {
 	 */
 	public static final MMMessageAttribute mmRoutingType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Routing1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Routing1.mmObject();
 			isDerived = false;
 			xmlTag = "RtgTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "216"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoutingType";
 			definition = "Indicates if the type of routing is allowed or blocked.";
@@ -204,8 +224,9 @@ public class Routing1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Routing1.mmList, Routing1.mmFirm, Routing1.mmRoutingType);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Routing1.mmList, com.tools20022.repository.msg.Routing1.mmFirm, com.tools20022.repository.msg.Routing1.mmRoutingType);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "216"));
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Routing1";
 				definition = "Firms or vendor maintained list of identifiers for the purpose of message routing.";
@@ -214,30 +235,30 @@ public class Routing1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "List")
 	public List<Max35Text> getList() {
-		return list;
+		return list == null ? list = new ArrayList<>() : list;
 	}
 
-	public void setList(List<Max35Text> list) {
-		this.list = list;
+	public Routing1 setList(List<Max35Text> list) {
+		this.list = Objects.requireNonNull(list);
+		return this;
 	}
 
-	@XmlElement(name = "Firm")
 	public List<PartyIdentification23> getFirm() {
-		return firm;
+		return firm == null ? firm = new ArrayList<>() : firm;
 	}
 
-	public void setFirm(List<com.tools20022.repository.msg.PartyIdentification23> firm) {
-		this.firm = firm;
+	public Routing1 setFirm(List<com.tools20022.repository.msg.PartyIdentification23> firm) {
+		this.firm = Objects.requireNonNull(firm);
+		return this;
 	}
 
-	@XmlElement(name = "RtgTp", required = true)
 	public RoutingType1Code getRoutingType() {
 		return routingType;
 	}
 
-	public void setRoutingType(RoutingType1Code routingType) {
-		this.routingType = routingType;
+	public Routing1 setRoutingType(RoutingType1Code routingType) {
+		this.routingType = Objects.requireNonNull(routingType);
+		return this;
 	}
 }

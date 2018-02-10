@@ -27,6 +27,8 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -51,27 +53,13 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
- * SecuritiesSettlementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "PrtflTrfCxlReq"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03#mmOperation1
- * PortfolioTransferCancellationRequestV03.mmOperation1}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03#Operation1
+ * PortfolioTransferCancellationRequestV03.Operation1}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -97,6 +85,20 @@ import javax.xml.bind.annotation.*;
  * PortfolioTransferCancellationRequestV03.mmCancellationByReference}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "PrtflTrfCxlReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
+ * SecuritiesSettlementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.014.001.03}</li>
@@ -124,7 +126,7 @@ import javax.xml.bind.annotation.*;
  * PEPOrISAOrPortfolioTransferCancellationRequestV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PortfolioTransferCancellationRequestV03", propOrder = {"messageReference", "poolReference", "previousReference", "relatedReference", "cancellationByTransferInstructionDetails", "cancellationByReference"})
 public class PortfolioTransferCancellationRequestV03 {
 
@@ -159,7 +161,7 @@ public class PortfolioTransferCancellationRequestV03 {
 	 * name} = "Operation1"</li>
 	 * </ul>
 	 */
-	public static final MMXor mmOperation1 = new MMXor() {
+	public static final MMXor Operation1 = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Operation1";
@@ -168,10 +170,11 @@ public class PortfolioTransferCancellationRequestV03 {
 					com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.mmCancellationByReference);
 		}
 	};
+	@XmlElement(name = "MsgRef", required = true)
 	protected MessageIdentification1 messageReference;
 	/**
-	 * Identifies the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,10 +214,11 @@ public class PortfolioTransferCancellationRequestV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PoolRef")
 	protected AdditionalReference3 poolReference;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -254,10 +258,11 @@ public class PortfolioTransferCancellationRequestV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsRef")
 	protected AdditionalReference3 previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -297,10 +302,11 @@ public class PortfolioTransferCancellationRequestV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdRef")
 	protected AdditionalReference3 relatedReference;
 	/**
-	 * Reference to a linked message that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -341,10 +347,11 @@ public class PortfolioTransferCancellationRequestV03 {
 			}
 		}
 	};
+	@XmlElement(name = "CxlByTrfInstrDtls")
 	protected PEPISATransfer11 cancellationByTransferInstructionDetails;
 	/**
-	 * Information related to the transfer instruction to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -385,10 +392,11 @@ public class PortfolioTransferCancellationRequestV03 {
 			}
 		}
 	};
+	@XmlElement(name = "CxlByRef")
 	protected TransferReference3 cancellationByReference;
 	/**
-	 * Reference of the transfer instruction to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -438,7 +446,7 @@ public class PortfolioTransferCancellationRequestV03 {
 				nextVersions_lazy = () -> Arrays.asList(PortfolioTransferCancellationRequestV04.mmObject());
 				previousVersion_lazy = () -> PEPOrISAOrPortfolioTransferCancellationRequestV02.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.mmOperation1);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV03.Operation1);
 				rootElement = "Document";
 				xmlTag = "PrtflTrfCxlReq";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
@@ -464,61 +472,61 @@ public class PortfolioTransferCancellationRequestV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgRef", required = true)
 	public MessageIdentification1 getMessageReference() {
 		return messageReference;
 	}
 
-	public void setMessageReference(MessageIdentification1 messageReference) {
-		this.messageReference = messageReference;
+	public PortfolioTransferCancellationRequestV03 setMessageReference(MessageIdentification1 messageReference) {
+		this.messageReference = Objects.requireNonNull(messageReference);
+		return this;
 	}
 
-	@XmlElement(name = "PoolRef")
-	public AdditionalReference3 getPoolReference() {
-		return poolReference;
+	public Optional<AdditionalReference3> getPoolReference() {
+		return poolReference == null ? Optional.empty() : Optional.of(poolReference);
 	}
 
-	public void setPoolReference(AdditionalReference3 poolReference) {
+	public PortfolioTransferCancellationRequestV03 setPoolReference(AdditionalReference3 poolReference) {
 		this.poolReference = poolReference;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef")
-	public AdditionalReference3 getPreviousReference() {
-		return previousReference;
+	public Optional<AdditionalReference3> getPreviousReference() {
+		return previousReference == null ? Optional.empty() : Optional.of(previousReference);
 	}
 
-	public void setPreviousReference(AdditionalReference3 previousReference) {
+	public PortfolioTransferCancellationRequestV03 setPreviousReference(AdditionalReference3 previousReference) {
 		this.previousReference = previousReference;
+		return this;
 	}
 
-	@XmlElement(name = "RltdRef")
-	public AdditionalReference3 getRelatedReference() {
-		return relatedReference;
+	public Optional<AdditionalReference3> getRelatedReference() {
+		return relatedReference == null ? Optional.empty() : Optional.of(relatedReference);
 	}
 
-	public void setRelatedReference(AdditionalReference3 relatedReference) {
+	public PortfolioTransferCancellationRequestV03 setRelatedReference(AdditionalReference3 relatedReference) {
 		this.relatedReference = relatedReference;
+		return this;
 	}
 
-	@XmlElement(name = "CxlByTrfInstrDtls")
-	public PEPISATransfer11 getCancellationByTransferInstructionDetails() {
-		return cancellationByTransferInstructionDetails;
+	public Optional<PEPISATransfer11> getCancellationByTransferInstructionDetails() {
+		return cancellationByTransferInstructionDetails == null ? Optional.empty() : Optional.of(cancellationByTransferInstructionDetails);
 	}
 
-	public void setCancellationByTransferInstructionDetails(PEPISATransfer11 cancellationByTransferInstructionDetails) {
+	public PortfolioTransferCancellationRequestV03 setCancellationByTransferInstructionDetails(PEPISATransfer11 cancellationByTransferInstructionDetails) {
 		this.cancellationByTransferInstructionDetails = cancellationByTransferInstructionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "CxlByRef")
-	public TransferReference3 getCancellationByReference() {
-		return cancellationByReference;
+	public Optional<TransferReference3> getCancellationByReference() {
+		return cancellationByReference == null ? Optional.empty() : Optional.of(cancellationByReference);
 	}
 
-	public void setCancellationByReference(TransferReference3 cancellationByReference) {
+	public PortfolioTransferCancellationRequestV03 setCancellationByReference(TransferReference3 cancellationByReference) {
 		this.cancellationByReference = cancellationByReference;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.014.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.014.001.03")
 	static public class Document {
 		@XmlElement(name = "PrtflTrfCxlReq", required = true)
 		public PortfolioTransferCancellationRequestV03 messageBody;

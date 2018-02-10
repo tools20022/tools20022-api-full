@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -28,6 +29,7 @@ import com.tools20022.repository.entity.SecuritiesTradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -96,8 +98,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,15 +110,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Unique identifier of a document, message or transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Identification16", propOrder = "identification")
 public class Identification16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected RestrictedFINXMax16Text identification;
 	/**
-	 * Unique identifier of a document, message or transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,6 +140,9 @@ public class Identification16 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Id"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -150,9 +156,10 @@ public class Identification16 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-			componentContext_lazy = () -> Identification16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Identification16.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of a document, message or transaction.";
@@ -165,7 +172,7 @@ public class Identification16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Identification16.mmIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Identification16.mmIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04.mmModificationRequestReference,
 						SecuritiesSettlementTransactionAllegementNotification002V05.mmMarketInfrastructureTransactionIdentification, SecuritiesSettlementTransactionReversalAdvice002V05.mmConfirmationReference,
 						SecuritiesSettlementTransactionAuditTrailReport002V03.mmQueryReference, SecuritiesSettlementAllegementRemovalAdvice002V04.mmMarketInfrastructureTransactionIdentification,
@@ -173,7 +180,7 @@ public class Identification16 {
 						SecuritiesSettlementConditionModificationStatusAdvice002V07.mmRequestReference, SecuritiesSettlementTransactionAllegementNotification002V06.mmMarketInfrastructureTransactionIdentification,
 						SecuritiesSettlementTransactionReversalAdvice002V06.mmConfirmationReference);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Identification16";
 				definition = "Unique identifier of a document, message or transaction.";
@@ -182,12 +189,12 @@ public class Identification16 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public RestrictedFINXMax16Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(RestrictedFINXMax16Text identification) {
-		this.identification = identification;
+	public Identification16 setIdentification(RestrictedFINXMax16Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 }

@@ -20,36 +20,40 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PaymentReceiptCode;
+import com.tools20022.repository.codeset.PaymentReceipt1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies if an operation is a payment, or a receipt or none.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PaymentReceiptCode
- * PaymentReceiptCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentReceipt1Code#mmPayment
- * PaymentReceipt1Code.mmPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentReceipt1Code#Payment
+ * PaymentReceipt1Code.Payment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentReceipt1Code#mmReceipt
- * PaymentReceipt1Code.mmReceipt}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentReceipt1Code#mmNone
- * PaymentReceipt1Code.mmNone}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentReceipt1Code#Receipt
+ * PaymentReceipt1Code.Receipt}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentReceipt1Code#None
+ * PaymentReceipt1Code.None}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PaymentReceiptCode
+ * PaymentReceiptCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PaymentReceipt1Code extends PaymentReceiptCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PaymentReceipt1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,11 +85,12 @@ public class PaymentReceipt1Code extends PaymentReceiptCode {
 	 * name} = "Payment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPayment = new MMCode() {
+	public static final PaymentReceipt1Code Payment = new PaymentReceipt1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
-			owner_lazy = () -> PaymentReceipt1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentReceipt1Code.mmObject();
+			codeName = PaymentReceiptCode.Payment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -103,11 +109,12 @@ public class PaymentReceipt1Code extends PaymentReceiptCode {
 	 * name} = "Receipt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceipt = new MMCode() {
+	public static final PaymentReceipt1Code Receipt = new PaymentReceipt1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Receipt";
-			owner_lazy = () -> PaymentReceipt1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentReceipt1Code.mmObject();
+			codeName = PaymentReceiptCode.Receipt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -126,25 +133,57 @@ public class PaymentReceipt1Code extends PaymentReceiptCode {
 	 * name} = "None"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNone = new MMCode() {
+	public static final PaymentReceipt1Code None = new PaymentReceipt1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
-			owner_lazy = () -> PaymentReceipt1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentReceipt1Code.mmObject();
+			codeName = PaymentReceiptCode.None.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PaymentReceipt1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PaymentReceipt1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentReceipt1Code";
 				definition = "Specifies if an operation is a payment, or a receipt or none.";
-				code_lazy = () -> Arrays.asList(PaymentReceipt1Code.mmPayment, PaymentReceipt1Code.mmReceipt, PaymentReceipt1Code.mmNone);
 				trace_lazy = () -> PaymentReceiptCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentReceipt1Code.Payment, com.tools20022.repository.codeset.PaymentReceipt1Code.Receipt, com.tools20022.repository.codeset.PaymentReceipt1Code.None);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Payment.getCodeName().get(), Payment);
+		codesByName.put(Receipt.getCodeName().get(), Receipt);
+		codesByName.put(None.getCodeName().get(), None);
+	}
+
+	public static PaymentReceipt1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PaymentReceipt1Code[] values() {
+		PaymentReceipt1Code[] values = new PaymentReceipt1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PaymentReceipt1Code> {
+		@Override
+		public PaymentReceipt1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PaymentReceipt1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

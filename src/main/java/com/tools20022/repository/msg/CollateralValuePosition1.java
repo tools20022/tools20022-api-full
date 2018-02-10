@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.CollateralValuation;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of the collateral value position/balance."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CollateralValuePosition1", propOrder = {"dataAccessTime", "totalCollateralValuation", "securitiesAccount", "securities"})
 public class CollateralValuePosition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DataAccsTm", required = true)
 	protected ISODateTime dataAccessTime;
 	/**
-	 * Date and time when the data was last accessed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +110,7 @@ public class CollateralValuePosition1 {
 	 */
 	public static final MMMessageAttribute mmDataAccessTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CollateralValuePosition1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValuePosition1.mmObject();
 			isDerived = false;
 			xmlTag = "DataAccsTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +121,11 @@ public class CollateralValuePosition1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlCollValtn")
 	protected ActiveCurrencyAndAmount totalCollateralValuation;
 	/**
-	 * Total value of the collateral valuation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +159,7 @@ public class CollateralValuePosition1 {
 	public static final MMMessageAttribute mmTotalCollateralValuation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CollateralValuation.mmReportedCurrencyAndAmount;
-			componentContext_lazy = () -> CollateralValuePosition1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValuePosition1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlCollValtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,11 +170,11 @@ public class CollateralValuePosition1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesAcct")
 	protected SecuritiesAccount2 securitiesAccount;
 	/**
-	 * Unique identification, as assigned by the account servicer, to
-	 * unambiguously identify the securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -207,7 +208,7 @@ public class CollateralValuePosition1 {
 	public static final MMMessageAssociationEnd mmSecuritiesAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesAccount;
-			componentContext_lazy = () -> CollateralValuePosition1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValuePosition1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,12 +220,11 @@ public class CollateralValuePosition1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount2.mmObject();
 		}
 	};
+	@XmlElement(name = "Scties")
 	protected List<com.tools20022.repository.msg.SecurityCharacteristics1> securities;
 	/**
-	 * Unique identification, as known by the account owner, to unambiguously
-	 * identify the securities on which the collateral value position is
-	 * requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -258,7 +258,7 @@ public class CollateralValuePosition1 {
 	public static final MMMessageAssociationEnd mmSecurities = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
-			componentContext_lazy = () -> CollateralValuePosition1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValuePosition1.mmObject();
 			isDerived = false;
 			xmlTag = "Scties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,9 +273,10 @@ public class CollateralValuePosition1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CollateralValuePosition1.mmDataAccessTime, CollateralValuePosition1.mmTotalCollateralValuation, CollateralValuePosition1.mmSecuritiesAccount, CollateralValuePosition1.mmSecurities);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuePosition1.mmDataAccessTime, com.tools20022.repository.msg.CollateralValuePosition1.mmTotalCollateralValuation,
+						com.tools20022.repository.msg.CollateralValuePosition1.mmSecuritiesAccount, com.tools20022.repository.msg.CollateralValuePosition1.mmSecurities);
 				trace_lazy = () -> CollateralValuation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValuePosition1";
 				definition = "Details of the collateral value position/balance.";
@@ -284,39 +285,39 @@ public class CollateralValuePosition1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DataAccsTm", required = true)
 	public ISODateTime getDataAccessTime() {
 		return dataAccessTime;
 	}
 
-	public void setDataAccessTime(ISODateTime dataAccessTime) {
-		this.dataAccessTime = dataAccessTime;
+	public CollateralValuePosition1 setDataAccessTime(ISODateTime dataAccessTime) {
+		this.dataAccessTime = Objects.requireNonNull(dataAccessTime);
+		return this;
 	}
 
-	@XmlElement(name = "TtlCollValtn")
-	public ActiveCurrencyAndAmount getTotalCollateralValuation() {
-		return totalCollateralValuation;
+	public Optional<ActiveCurrencyAndAmount> getTotalCollateralValuation() {
+		return totalCollateralValuation == null ? Optional.empty() : Optional.of(totalCollateralValuation);
 	}
 
-	public void setTotalCollateralValuation(ActiveCurrencyAndAmount totalCollateralValuation) {
+	public CollateralValuePosition1 setTotalCollateralValuation(ActiveCurrencyAndAmount totalCollateralValuation) {
 		this.totalCollateralValuation = totalCollateralValuation;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesAcct")
-	public SecuritiesAccount2 getSecuritiesAccount() {
-		return securitiesAccount;
+	public Optional<SecuritiesAccount2> getSecuritiesAccount() {
+		return securitiesAccount == null ? Optional.empty() : Optional.of(securitiesAccount);
 	}
 
-	public void setSecuritiesAccount(com.tools20022.repository.msg.SecuritiesAccount2 securitiesAccount) {
+	public CollateralValuePosition1 setSecuritiesAccount(com.tools20022.repository.msg.SecuritiesAccount2 securitiesAccount) {
 		this.securitiesAccount = securitiesAccount;
+		return this;
 	}
 
-	@XmlElement(name = "Scties")
 	public List<SecurityCharacteristics1> getSecurities() {
-		return securities;
+		return securities == null ? securities = new ArrayList<>() : securities;
 	}
 
-	public void setSecurities(List<com.tools20022.repository.msg.SecurityCharacteristics1> securities) {
-		this.securities = securities;
+	public CollateralValuePosition1 setSecurities(List<com.tools20022.repository.msg.SecurityCharacteristics1> securities) {
+		this.securities = Objects.requireNonNull(securities);
+		return this;
 	}
 }

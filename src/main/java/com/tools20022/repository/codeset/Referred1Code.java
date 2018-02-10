@@ -20,34 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ReferredCode;
+import com.tools20022.repository.codeset.Referred1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates if the investor was referred.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ReferredCode ReferredCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Referred1Code#mmReferred
- * Referred1Code.mmReferred}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Referred1Code#mmNotReferred
- * Referred1Code.mmNotReferred}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Referred1Code#mmNotKnown
- * Referred1Code.mmNotKnown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Referred1Code#Referred
+ * Referred1Code.Referred}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Referred1Code#NotReferred
+ * Referred1Code.NotReferred}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Referred1Code#NotKnown
+ * Referred1Code.NotKnown}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ReferredCode ReferredCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates if the investor was referred."</li>
  * </ul>
  */
-public class Referred1Code extends ReferredCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Referred1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +87,12 @@ public class Referred1Code extends ReferredCode {
 	 * name} = "Referred"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReferred = new MMCode() {
+	public static final Referred1Code Referred = new Referred1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Referred";
-			owner_lazy = () -> Referred1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Referred1Code.mmObject();
+			codeName = ReferredCode.Referred.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,11 +111,12 @@ public class Referred1Code extends ReferredCode {
 	 * name} = "NotReferred"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotReferred = new MMCode() {
+	public static final Referred1Code NotReferred = new Referred1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotReferred";
-			owner_lazy = () -> Referred1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Referred1Code.mmObject();
+			codeName = ReferredCode.NotReferred.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -129,26 +135,58 @@ public class Referred1Code extends ReferredCode {
 	 * name} = "NotKnown"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotKnown = new MMCode() {
+	public static final Referred1Code NotKnown = new Referred1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotKnown";
-			owner_lazy = () -> Referred1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Referred1Code.mmObject();
+			codeName = ReferredCode.NotKnown.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Referred1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Referred1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("REFR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Referred1Code";
 				definition = "Indicates if the investor was referred.";
-				code_lazy = () -> Arrays.asList(Referred1Code.mmReferred, Referred1Code.mmNotReferred, Referred1Code.mmNotKnown);
 				trace_lazy = () -> ReferredCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Referred1Code.Referred, com.tools20022.repository.codeset.Referred1Code.NotReferred, com.tools20022.repository.codeset.Referred1Code.NotKnown);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Referred.getCodeName().get(), Referred);
+		codesByName.put(NotReferred.getCodeName().get(), NotReferred);
+		codesByName.put(NotKnown.getCodeName().get(), NotKnown);
+	}
+
+	public static Referred1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Referred1Code[] values() {
+		Referred1Code[] values = new Referred1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Referred1Code> {
+		@Override
+		public Referred1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Referred1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

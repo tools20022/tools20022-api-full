@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.PreferredContactMethodCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Preferred method used to reach the individual contact within an organisation.
@@ -32,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreferredContactMethodCode#mmLetter
- * PreferredContactMethodCode.mmLetter}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreferredContactMethodCode#Letter
+ * PreferredContactMethodCode.Letter}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreferredContactMethodCode#mmEmail
- * PreferredContactMethodCode.mmEmail}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreferredContactMethodCode#Email
+ * PreferredContactMethodCode.Email}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreferredContactMethodCode#mmPhone
- * PreferredContactMethodCode.mmPhone}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreferredContactMethodCode#Phone
+ * PreferredContactMethodCode.Phone}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreferredContactMethodCode#mmFax
- * PreferredContactMethodCode.mmFax}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreferredContactMethodCode#Fax
+ * PreferredContactMethodCode.Fax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreferredContactMethodCode#mmMobileOrCellPhone
- * PreferredContactMethodCode.mmMobileOrCellPhone}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreferredContactMethodCode#MobileOrCellPhone
+ * PreferredContactMethodCode.MobileOrCellPhone}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -59,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PreferredContactMethodCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PreferredContactMethodCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -104,12 +110,12 @@ public class PreferredContactMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmLetter = new MMCode() {
+	public static final PreferredContactMethodCode Letter = new PreferredContactMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Letter";
 			definition = "Preferred method used to reach the contact is per letter.";
-			owner_lazy = () -> PreferredContactMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PreferredContactMethodCode.mmObject();
 			codeName = "LETT";
 		}
 	};
@@ -134,12 +140,12 @@ public class PreferredContactMethodCode {
 	 * definition} = "Preferred method used to reach the contact is per email."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEmail = new MMCode() {
+	public static final PreferredContactMethodCode Email = new PreferredContactMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Email";
 			definition = "Preferred method used to reach the contact is per email.";
-			owner_lazy = () -> PreferredContactMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PreferredContactMethodCode.mmObject();
 			codeName = "MAIL";
 		}
 	};
@@ -164,12 +170,12 @@ public class PreferredContactMethodCode {
 	 * definition} = "Preferred method used to reach the contact is per phone."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPhone = new MMCode() {
+	public static final PreferredContactMethodCode Phone = new PreferredContactMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Phone";
 			definition = "Preferred method used to reach the contact is per phone.";
-			owner_lazy = () -> PreferredContactMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PreferredContactMethodCode.mmObject();
 			codeName = "PHON";
 		}
 	};
@@ -194,12 +200,12 @@ public class PreferredContactMethodCode {
 	 * definition} = "Preferred method used to reach the contact is per fax."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFax = new MMCode() {
+	public static final PreferredContactMethodCode Fax = new PreferredContactMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fax";
 			definition = "Preferred method used to reach the contact is per fax.";
-			owner_lazy = () -> PreferredContactMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PreferredContactMethodCode.mmObject();
 			codeName = "FAXX";
 		}
 	};
@@ -226,28 +232,62 @@ public class PreferredContactMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMobileOrCellPhone = new MMCode() {
+	public static final PreferredContactMethodCode MobileOrCellPhone = new PreferredContactMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MobileOrCellPhone";
 			definition = "Preferred method used to reach the contact is per mobile or cell phone.";
-			owner_lazy = () -> PreferredContactMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PreferredContactMethodCode.mmObject();
 			codeName = "CELL";
 		}
 	};
+	final static private LinkedHashMap<String, PreferredContactMethodCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PreferredContactMethodCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("LETT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PreferredContactMethodCode";
 				definition = "Preferred method used to reach the individual contact within an organisation.";
-				code_lazy = () -> Arrays.asList(PreferredContactMethodCode.mmLetter, PreferredContactMethodCode.mmEmail, PreferredContactMethodCode.mmPhone, PreferredContactMethodCode.mmFax, PreferredContactMethodCode.mmMobileOrCellPhone);
 				derivation_lazy = () -> Arrays.asList(PreferredContactMethod1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PreferredContactMethodCode.Letter, com.tools20022.repository.codeset.PreferredContactMethodCode.Email,
+						com.tools20022.repository.codeset.PreferredContactMethodCode.Phone, com.tools20022.repository.codeset.PreferredContactMethodCode.Fax, com.tools20022.repository.codeset.PreferredContactMethodCode.MobileOrCellPhone);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Letter.getCodeName().get(), Letter);
+		codesByName.put(Email.getCodeName().get(), Email);
+		codesByName.put(Phone.getCodeName().get(), Phone);
+		codesByName.put(Fax.getCodeName().get(), Fax);
+		codesByName.put(MobileOrCellPhone.getCodeName().get(), MobileOrCellPhone);
+	}
+
+	public static PreferredContactMethodCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PreferredContactMethodCode[] values() {
+		PreferredContactMethodCode[] values = new PreferredContactMethodCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PreferredContactMethodCode> {
+		@Override
+		public PreferredContactMethodCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PreferredContactMethodCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

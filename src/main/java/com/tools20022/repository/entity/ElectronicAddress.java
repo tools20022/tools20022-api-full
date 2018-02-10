@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Address which is accessed by electronic means.
@@ -37,6 +38,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.ContactPoint
+ * ContactPoint}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -60,9 +64,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ElectronicAddress.mmISDNAddress}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.ContactPoint
- * ContactPoint}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -247,8 +248,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -264,8 +265,8 @@ public class ElectronicAddress extends ContactPoint {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Max256Text emailAddress;
 	/**
-	 * Address for electronic mail (e-mail).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -352,8 +353,8 @@ public class ElectronicAddress extends ContactPoint {
 					ContactIdentification2.mmEmailAddress, ContactIdentification1.mmEmailAddress, Contacts3.mmEmailAddress, ContactInformation1.mmEmailAddress, CommunicationAddress4.mmEmailAddress, ContactIdentification4.mmEmailAddress,
 					ContactIdentification3.mmEmailAddress, CommunicationAddressDetails.mmEmailAddress, ContactDetails3.mmEmailAddress, PersonIdentification7.mmEmailAddress, CommunicationAddress5.mmEmail, CommunicationAddress6.mmEmail,
 					PersonIdentification11.mmEmailAddress);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EmailAddress";
 			definition = "Address for electronic mail (e-mail).";
@@ -372,9 +373,8 @@ public class ElectronicAddress extends ContactPoint {
 	};
 	protected Max256Text uRLAddress;
 	/**
-	 * Address for the Universal Resource Locator (URL), eg, used over the www
-	 * (HTTP) service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -477,8 +477,8 @@ public class ElectronicAddress extends ContactPoint {
 					MeetingNotice3.mmAdditionalDocumentationURLAddress, IssuerInformation1.mmURLAddress, CorporateActionNarrative1.mmURLAddress, AgreementClauses1.mmDocumentURL, DocumentGeneralInformation1.mmURL,
 					DocumentGeneralInformation2.mmURL, IssuerInformation2.mmURLAddress, MeetingNotice4.mmAdditionalDocumentationURLAddress, AdditionalRights2.mmAdditionalRightInformationURLAddress, QualifiedDocumentInformation1.mmURL,
 					CommunicationAddress5.mmURLAddress, DocumentGeneralInformation3.mmURL, CommunicationAddress6.mmURLAddress);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "URLAddress";
 			definition = "Address for the Universal Resource Locator (URL), eg, used over the www (HTTP) service.";
@@ -497,8 +497,8 @@ public class ElectronicAddress extends ContactPoint {
 	};
 	protected Max35Text telexAddress;
 	/**
-	 * Address for a telex machine.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -535,8 +535,8 @@ public class ElectronicAddress extends ContactPoint {
 	public static final MMBusinessAttribute mmTelexAddress = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CommunicationAddress3.mmTelexAddress, CommunicationAddress6.mmTelexAddress);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TelexAddress";
 			definition = "Address for a telex machine.";
@@ -555,9 +555,8 @@ public class ElectronicAddress extends ContactPoint {
 	};
 	protected Presentation relatedPresentation;
 	/**
-	 * Presentation process for which an electronic presentation address is
-	 * specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -592,8 +591,8 @@ public class ElectronicAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPresentation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPresentation";
 			definition = "Presentation process for which an electronic presentation address is specified.";
@@ -606,8 +605,8 @@ public class ElectronicAddress extends ContactPoint {
 	};
 	protected Max35Text teletextAddress;
 	/**
-	 * Address for a teletext.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -632,8 +631,8 @@ public class ElectronicAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmTeletextAddress = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TeletextAddress";
 			definition = "Address for a teletext.";
@@ -652,8 +651,8 @@ public class ElectronicAddress extends ContactPoint {
 	};
 	protected Max35Text iSDNAddress;
 	/**
-	 * Address for an Integrated Services Digital Network.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -678,8 +677,8 @@ public class ElectronicAddress extends ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmISDNAddress = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ISDNAddress";
 			definition = "Address for an Integrated Services Digital Network.";
@@ -700,7 +699,7 @@ public class ElectronicAddress extends ContactPoint {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ElectronicAddress";
 				definition = "Address which is accessed by electronic means.";
@@ -740,47 +739,53 @@ public class ElectronicAddress extends ContactPoint {
 		return emailAddress;
 	}
 
-	public void setEmailAddress(Max256Text emailAddress) {
-		this.emailAddress = emailAddress;
+	public ElectronicAddress setEmailAddress(Max256Text emailAddress) {
+		this.emailAddress = Objects.requireNonNull(emailAddress);
+		return this;
 	}
 
 	public Max256Text getURLAddress() {
 		return uRLAddress;
 	}
 
-	public void setURLAddress(Max256Text uRLAddress) {
-		this.uRLAddress = uRLAddress;
+	public ElectronicAddress setURLAddress(Max256Text uRLAddress) {
+		this.uRLAddress = Objects.requireNonNull(uRLAddress);
+		return this;
 	}
 
 	public Max35Text getTelexAddress() {
 		return telexAddress;
 	}
 
-	public void setTelexAddress(Max35Text telexAddress) {
-		this.telexAddress = telexAddress;
+	public ElectronicAddress setTelexAddress(Max35Text telexAddress) {
+		this.telexAddress = Objects.requireNonNull(telexAddress);
+		return this;
 	}
 
 	public Presentation getRelatedPresentation() {
 		return relatedPresentation;
 	}
 
-	public void setRelatedPresentation(com.tools20022.repository.entity.Presentation relatedPresentation) {
-		this.relatedPresentation = relatedPresentation;
+	public ElectronicAddress setRelatedPresentation(com.tools20022.repository.entity.Presentation relatedPresentation) {
+		this.relatedPresentation = Objects.requireNonNull(relatedPresentation);
+		return this;
 	}
 
 	public Max35Text getTeletextAddress() {
 		return teletextAddress;
 	}
 
-	public void setTeletextAddress(Max35Text teletextAddress) {
-		this.teletextAddress = teletextAddress;
+	public ElectronicAddress setTeletextAddress(Max35Text teletextAddress) {
+		this.teletextAddress = Objects.requireNonNull(teletextAddress);
+		return this;
 	}
 
 	public Max35Text getISDNAddress() {
 		return iSDNAddress;
 	}
 
-	public void setISDNAddress(Max35Text iSDNAddress) {
-		this.iSDNAddress = iSDNAddress;
+	public ElectronicAddress setISDNAddress(Max35Text iSDNAddress) {
+		this.iSDNAddress = Objects.requireNonNull(iSDNAddress);
+		return this;
 	}
 }

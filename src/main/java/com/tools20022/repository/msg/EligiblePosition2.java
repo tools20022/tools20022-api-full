@@ -27,9 +27,8 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline#forEligiblePosition2
+ * ConstraintRightsHolderMultiplicty1Guideline.forEligiblePosition2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the voting entitlement."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "EligiblePosition2", propOrder = {"accountIdentification", "accountOwner", "holdingBalance", "rightsHolder"})
 public class EligiblePosition2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId")
 	protected Max35Text accountIdentification;
 	/**
-	 * Identification of the securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +125,7 @@ public class EligiblePosition2 {
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> EligiblePosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EligiblePosition2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +136,11 @@ public class EligiblePosition2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification9Choice accountOwner;
 	/**
-	 * Identifies party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -164,7 +173,7 @@ public class EligiblePosition2 {
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> EligiblePosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EligiblePosition2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,12 +185,11 @@ public class EligiblePosition2 {
 			type_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "HldgBal")
 	protected List<com.tools20022.repository.msg.HoldingBalance3> holdingBalance;
 	/**
-	 * Net position of a segregated holding of a single security within the
-	 * overall position held in a securities account, eg, sub-balance per
-	 * status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -215,7 +223,7 @@ public class EligiblePosition2 {
 	public static final MMMessageAssociationEnd mmHoldingBalance = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
-			componentContext_lazy = () -> EligiblePosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EligiblePosition2.mmObject();
 			isDerived = false;
 			xmlTag = "HldgBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,10 +235,11 @@ public class EligiblePosition2 {
 			type_lazy = () -> com.tools20022.repository.msg.HoldingBalance3.mmObject();
 		}
 	};
+	@XmlElement(name = "RghtsHldr")
 	protected List<PartyIdentification9Choice> rightsHolder;
 	/**
-	 * Identifies owner of the voting rights.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -263,7 +272,7 @@ public class EligiblePosition2 {
 	public static final MMMessageAssociationEnd mmRightsHolder = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> EligiblePosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EligiblePosition2.mmObject();
 			isDerived = false;
 			xmlTag = "RghtsHldr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,9 +288,11 @@ public class EligiblePosition2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EligiblePosition2.mmAccountIdentification, EligiblePosition2.mmAccountOwner, EligiblePosition2.mmHoldingBalance, EligiblePosition2.mmRightsHolder);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EligiblePosition2.mmAccountIdentification, com.tools20022.repository.msg.EligiblePosition2.mmAccountOwner,
+						com.tools20022.repository.msg.EligiblePosition2.mmHoldingBalance, com.tools20022.repository.msg.EligiblePosition2.mmRightsHolder);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline.forEligiblePosition2);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EligiblePosition2";
 				definition = "Specifies the voting entitlement.";
@@ -290,39 +301,39 @@ public class EligiblePosition2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId")
-	public Max35Text getAccountIdentification() {
-		return accountIdentification;
+	public Optional<Max35Text> getAccountIdentification() {
+		return accountIdentification == null ? Optional.empty() : Optional.of(accountIdentification);
 	}
 
-	public void setAccountIdentification(Max35Text accountIdentification) {
+	public EligiblePosition2 setAccountIdentification(Max35Text accountIdentification) {
 		this.accountIdentification = accountIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification9Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification9Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification9Choice accountOwner) {
+	public EligiblePosition2 setAccountOwner(PartyIdentification9Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "HldgBal")
 	public List<HoldingBalance3> getHoldingBalance() {
-		return holdingBalance;
+		return holdingBalance == null ? holdingBalance = new ArrayList<>() : holdingBalance;
 	}
 
-	public void setHoldingBalance(List<com.tools20022.repository.msg.HoldingBalance3> holdingBalance) {
-		this.holdingBalance = holdingBalance;
+	public EligiblePosition2 setHoldingBalance(List<com.tools20022.repository.msg.HoldingBalance3> holdingBalance) {
+		this.holdingBalance = Objects.requireNonNull(holdingBalance);
+		return this;
 	}
 
-	@XmlElement(name = "RghtsHldr")
 	public List<PartyIdentification9Choice> getRightsHolder() {
-		return rightsHolder;
+		return rightsHolder == null ? rightsHolder = new ArrayList<>() : rightsHolder;
 	}
 
-	public void setRightsHolder(List<PartyIdentification9Choice> rightsHolder) {
-		this.rightsHolder = rightsHolder;
+	public EligiblePosition2 setRightsHolder(List<PartyIdentification9Choice> rightsHolder) {
+		this.rightsHolder = Objects.requireNonNull(rightsHolder);
+		return this;
 	}
 }

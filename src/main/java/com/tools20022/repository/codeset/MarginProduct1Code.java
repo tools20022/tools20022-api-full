@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.MarginProductCode;
+import com.tools20022.repository.codeset.MarginProduct1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the underlying product of the margin.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.MarginProductCode
- * MarginProductCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginProduct1Code#mmEquities
- * MarginProduct1Code.mmEquities}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginProduct1Code#Equities
+ * MarginProduct1Code.Equities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginProduct1Code#mmFixedIncome
- * MarginProduct1Code.mmFixedIncome}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginProduct1Code#FixedIncome
+ * MarginProduct1Code.FixedIncome}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.MarginProductCode
+ * MarginProductCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the underlying product of the margin."</li>
  * </ul>
  */
-public class MarginProduct1Code extends MarginProductCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MarginProduct1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class MarginProduct1Code extends MarginProductCode {
 	 * name} = "Equities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEquities = new MMCode() {
+	public static final MarginProduct1Code Equities = new MarginProduct1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equities";
-			owner_lazy = () -> MarginProduct1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarginProduct1Code.mmObject();
+			codeName = MarginProductCode.Equities.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class MarginProduct1Code extends MarginProductCode {
 	 * name} = "FixedIncome"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFixedIncome = new MMCode() {
+	public static final MarginProduct1Code FixedIncome = new MarginProduct1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedIncome";
-			owner_lazy = () -> MarginProduct1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarginProduct1Code.mmObject();
+			codeName = MarginProductCode.FixedIncome.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, MarginProduct1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MarginProduct1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("EQUI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginProduct1Code";
 				definition = "Specifies the underlying product of the margin.";
-				code_lazy = () -> Arrays.asList(MarginProduct1Code.mmEquities, MarginProduct1Code.mmFixedIncome);
 				trace_lazy = () -> MarginProductCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarginProduct1Code.Equities, com.tools20022.repository.codeset.MarginProduct1Code.FixedIncome);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Equities.getCodeName().get(), Equities);
+		codesByName.put(FixedIncome.getCodeName().get(), FixedIncome);
+	}
+
+	public static MarginProduct1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MarginProduct1Code[] values() {
+		MarginProduct1Code[] values = new MarginProduct1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MarginProduct1Code> {
+		@Override
+		public MarginProduct1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MarginProduct1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

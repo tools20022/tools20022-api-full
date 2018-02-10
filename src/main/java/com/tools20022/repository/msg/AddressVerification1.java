@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max5NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,16 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Numeric characters of the cardholder's address for verification."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AddressVerification1", propOrder = {"addressDigits", "postalCodeDigits"})
 public class AddressVerification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AdrDgts")
 	protected Max5NumericText addressDigits;
 	/**
-	 * Numeric characters from the cardholder's address excluding the postal
-	 * code (that is street number).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,7 +102,7 @@ public class AddressVerification1 {
 	 */
 	public static final MMMessageAttribute mmAddressDigits = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AddressVerification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AddressVerification1.mmObject();
 			isDerived = false;
 			xmlTag = "AdrDgts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +113,11 @@ public class AddressVerification1 {
 			simpleType_lazy = () -> Max5NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "PstlCdDgts")
 	protected Max5NumericText postalCodeDigits;
 	/**
-	 * Numeric characters from the cardholder's postal code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +145,7 @@ public class AddressVerification1 {
 	 */
 	public static final MMMessageAttribute mmPostalCodeDigits = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AddressVerification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AddressVerification1.mmObject();
 			isDerived = false;
 			xmlTag = "PstlCdDgts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,8 +160,8 @@ public class AddressVerification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AddressVerification1.mmAddressDigits, AddressVerification1.mmPostalCodeDigits);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AddressVerification1.mmAddressDigits, com.tools20022.repository.msg.AddressVerification1.mmPostalCodeDigits);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AddressVerification1";
 				definition = "Numeric characters of the cardholder's address for verification.";
@@ -168,21 +170,21 @@ public class AddressVerification1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AdrDgts")
-	public Max5NumericText getAddressDigits() {
-		return addressDigits;
+	public Optional<Max5NumericText> getAddressDigits() {
+		return addressDigits == null ? Optional.empty() : Optional.of(addressDigits);
 	}
 
-	public void setAddressDigits(Max5NumericText addressDigits) {
+	public AddressVerification1 setAddressDigits(Max5NumericText addressDigits) {
 		this.addressDigits = addressDigits;
+		return this;
 	}
 
-	@XmlElement(name = "PstlCdDgts")
-	public Max5NumericText getPostalCodeDigits() {
-		return postalCodeDigits;
+	public Optional<Max5NumericText> getPostalCodeDigits() {
+		return postalCodeDigits == null ? Optional.empty() : Optional.of(postalCodeDigits);
 	}
 
-	public void setPostalCodeDigits(Max5NumericText postalCodeDigits) {
+	public AddressVerification1 setPostalCodeDigits(Max5NumericText postalCodeDigits) {
 		this.postalCodeDigits = postalCodeDigits;
+		return this;
 	}
 }

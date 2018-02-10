@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CryptographicKeyTypeCode;
+import com.tools20022.repository.codeset.CryptographicKeyType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of algorithm used by the cryptographic key.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode
- * CryptographicKeyTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType1Code#mmDES
- * CryptographicKeyType1Code.mmDES}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType1Code#DES
+ * CryptographicKeyType1Code.DES}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType1Code#mmAES
- * CryptographicKeyType1Code.mmAES}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType1Code#AES
+ * CryptographicKeyType1Code.AES}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType1Code#mmRSA
- * CryptographicKeyType1Code.mmRSA}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType1Code#RSA
+ * CryptographicKeyType1Code.RSA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType1Code#mmECC
- * CryptographicKeyType1Code.mmECC}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType1Code#ECC
+ * CryptographicKeyType1Code.ECC}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode
+ * CryptographicKeyTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of algorithm used by the cryptographic key."</li>
  * </ul>
  */
-public class CryptographicKeyType1Code extends CryptographicKeyTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CryptographicKeyType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class CryptographicKeyType1Code extends CryptographicKeyTypeCode {
 	 * name} = "DES"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDES = new MMCode() {
+	public static final CryptographicKeyType1Code DES = new CryptographicKeyType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DES";
-			owner_lazy = () -> CryptographicKeyType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType1Code.mmObject();
+			codeName = CryptographicKeyTypeCode.DES.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class CryptographicKeyType1Code extends CryptographicKeyTypeCode {
 	 * name} = "AES"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAES = new MMCode() {
+	public static final CryptographicKeyType1Code AES = new CryptographicKeyType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES";
-			owner_lazy = () -> CryptographicKeyType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType1Code.mmObject();
+			codeName = CryptographicKeyTypeCode.AES.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class CryptographicKeyType1Code extends CryptographicKeyTypeCode {
 	 * name} = "RSA"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRSA = new MMCode() {
+	public static final CryptographicKeyType1Code RSA = new CryptographicKeyType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RSA";
-			owner_lazy = () -> CryptographicKeyType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType1Code.mmObject();
+			codeName = CryptographicKeyTypeCode.RSA.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,26 +166,60 @@ public class CryptographicKeyType1Code extends CryptographicKeyTypeCode {
 	 * name} = "ECC"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmECC = new MMCode() {
+	public static final CryptographicKeyType1Code ECC = new CryptographicKeyType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ECC";
-			owner_lazy = () -> CryptographicKeyType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType1Code.mmObject();
+			codeName = CryptographicKeyTypeCode.ECC.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CryptographicKeyType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CryptographicKeyType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DESC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CryptographicKeyType1Code";
 				definition = "Type of algorithm used by the cryptographic key.";
-				code_lazy = () -> Arrays.asList(CryptographicKeyType1Code.mmDES, CryptographicKeyType1Code.mmAES, CryptographicKeyType1Code.mmRSA, CryptographicKeyType1Code.mmECC);
 				trace_lazy = () -> CryptographicKeyTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CryptographicKeyType1Code.DES, com.tools20022.repository.codeset.CryptographicKeyType1Code.AES,
+						com.tools20022.repository.codeset.CryptographicKeyType1Code.RSA, com.tools20022.repository.codeset.CryptographicKeyType1Code.ECC);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(DES.getCodeName().get(), DES);
+		codesByName.put(AES.getCodeName().get(), AES);
+		codesByName.put(RSA.getCodeName().get(), RSA);
+		codesByName.put(ECC.getCodeName().get(), ECC);
+	}
+
+	public static CryptographicKeyType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CryptographicKeyType1Code[] values() {
+		CryptographicKeyType1Code[] values = new CryptographicKeyType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CryptographicKeyType1Code> {
+		@Override
+		public CryptographicKeyType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CryptographicKeyType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

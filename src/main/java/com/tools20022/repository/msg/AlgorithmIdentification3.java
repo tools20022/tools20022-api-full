@@ -25,6 +25,8 @@ import com.tools20022.repository.codeset.Algorithm3Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * AlgorithmIdentification1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AlgorithmIdentification3", propOrder = {"algorithm", "parameter"})
 public class AlgorithmIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Algo", required = true)
 	protected Algorithm3Code algorithm;
 	/**
-	 * Identification of the algorithm.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +125,7 @@ public class AlgorithmIdentification3 {
 	 */
 	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AlgorithmIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "Algo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +137,11 @@ public class AlgorithmIdentification3 {
 			simpleType_lazy = () -> Algorithm3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Param")
 	protected Parameter1 parameter;
 	/**
-	 * Parameters associated to the algorithm.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -170,7 +174,7 @@ public class AlgorithmIdentification3 {
 	 */
 	public static final MMMessageAssociationEnd mmParameter = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AlgorithmIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "Param";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,8 +191,8 @@ public class AlgorithmIdentification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AlgorithmIdentification3.mmAlgorithm, AlgorithmIdentification3.mmParameter);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification3.mmAlgorithm, com.tools20022.repository.msg.AlgorithmIdentification3.mmParameter);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification3";
 				definition = "Identification of a cryptographic algorithm and parameters for the MAC computation.";
@@ -199,21 +203,21 @@ public class AlgorithmIdentification3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Algo", required = true)
 	public Algorithm3Code getAlgorithm() {
 		return algorithm;
 	}
 
-	public void setAlgorithm(Algorithm3Code algorithm) {
-		this.algorithm = algorithm;
+	public AlgorithmIdentification3 setAlgorithm(Algorithm3Code algorithm) {
+		this.algorithm = Objects.requireNonNull(algorithm);
+		return this;
 	}
 
-	@XmlElement(name = "Param")
-	public Parameter1 getParameter() {
-		return parameter;
+	public Optional<Parameter1> getParameter() {
+		return parameter == null ? Optional.empty() : Optional.of(parameter);
 	}
 
-	public void setParameter(com.tools20022.repository.msg.Parameter1 parameter) {
+	public AlgorithmIdentification3 setParameter(com.tools20022.repository.msg.Parameter1 parameter) {
 		this.parameter = parameter;
+		return this;
 	}
 }

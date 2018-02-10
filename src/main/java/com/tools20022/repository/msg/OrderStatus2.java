@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -30,9 +31,8 @@ import com.tools20022.repository.entity.ListTrading;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -76,8 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRejectionReason#forOrderStatus2
+ * ConstraintRejectionReason.forOrderStatus2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,16 +96,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Status and reason of an instructed order."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OrderStatus2", propOrder = {"listIdentification", "listStatusType", "listOrderStatus", "totalNumberOfReports", "reportSequenceNumber", "totalNumberOfOrders", "rejectionReason", "singleOrderDetails"})
 public class OrderStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ListId", required = true)
 	protected Max35Text listIdentification;
 	/**
-	 * Unique identifier for a list, as assigned by the trading party. The
-	 * identifier must be unique within a single trading day.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,6 +124,9 @@ public class OrderStatus2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ListId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 66</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -131,9 +142,10 @@ public class OrderStatus2 {
 	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
-			componentContext_lazy = () -> OrderStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "ListId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "66"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListIdentification";
 			definition = "Unique identifier for a list, as assigned by the trading party. The identifier must be unique within a single trading day.";
@@ -142,10 +154,11 @@ public class OrderStatus2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ListStsTp", required = true)
 	protected ListStatusType1Code listStatusType;
 	/**
-	 * Status of an instructed order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,6 +178,9 @@ public class OrderStatus2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ListStsTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 429</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -178,9 +194,10 @@ public class OrderStatus2 {
 	public static final MMMessageAttribute mmListStatusType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmListOrderStatus;
-			componentContext_lazy = () -> OrderStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "ListStsTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "429"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListStatusType";
 			definition = "Status of an instructed order.";
@@ -189,10 +206,11 @@ public class OrderStatus2 {
 			simpleType_lazy = () -> ListStatusType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ListOrdrSts", required = true)
 	protected OrderStatus6Code listOrderStatus;
 	/**
-	 * Indicates the status of a list order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -212,6 +230,9 @@ public class OrderStatus2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ListOrdrSts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 431</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -225,9 +246,10 @@ public class OrderStatus2 {
 	public static final MMMessageAttribute mmListOrderStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmOrderStatus;
-			componentContext_lazy = () -> OrderStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "ListOrdrSts";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "431"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListOrderStatus";
 			definition = "Indicates the status of a list order.";
@@ -236,10 +258,11 @@ public class OrderStatus2 {
 			simpleType_lazy = () -> OrderStatus6Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNbOfRpts", required = true)
 	protected Number totalNumberOfReports;
 	/**
-	 * Total number of messages required to get a complete status list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -266,7 +289,7 @@ public class OrderStatus2 {
 	 */
 	public static final MMMessageAttribute mmTotalNumberOfReports = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OrderStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfRpts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -277,10 +300,11 @@ public class OrderStatus2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "RptSeqNb", required = true)
 	protected Number reportSequenceNumber;
 	/**
-	 * Sequence number of this report message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -294,6 +318,9 @@ public class OrderStatus2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RptSeqNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 83</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -306,9 +333,10 @@ public class OrderStatus2 {
 	 */
 	public static final MMMessageAttribute mmReportSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OrderStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "RptSeqNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "83"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportSequenceNumber";
 			definition = "Sequence number of this report message.";
@@ -317,11 +345,11 @@ public class OrderStatus2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNbOfOrdrs", required = true)
 	protected Number totalNumberOfOrders;
 	/**
-	 * Identifies the total number of orders across all ListOrder messages with
-	 * the same ListIdentification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -334,6 +362,9 @@ public class OrderStatus2 {
 	 * {@linkplain com.tools20022.repository.msg.OrderStatus2 OrderStatus2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlNbOfOrdrs"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 68</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -349,9 +380,10 @@ public class OrderStatus2 {
 	 */
 	public static final MMMessageAttribute mmTotalNumberOfOrders = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OrderStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfOrdrs";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "68"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfOrders";
 			definition = "Identifies the total number of orders across all ListOrder messages with the same ListIdentification.";
@@ -360,10 +392,11 @@ public class OrderStatus2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "RjctnRsn")
 	protected RejectionReason3Choice rejectionReason;
 	/**
-	 * Reason for which an order is rejected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -383,6 +416,9 @@ public class OrderStatus2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RjctnRsn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 103</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -396,9 +432,10 @@ public class OrderStatus2 {
 	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
-			componentContext_lazy = () -> OrderStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "RjctnRsn";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "103"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Reason for which an order is rejected.";
@@ -407,10 +444,11 @@ public class OrderStatus2 {
 			complexType_lazy = () -> RejectionReason3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SnglOrdrDtls")
 	protected List<com.tools20022.repository.msg.OrderStatus3> singleOrderDetails;
 	/**
-	 * Status details specific to each order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -441,7 +479,7 @@ public class OrderStatus2 {
 	public static final MMMessageAssociationEnd mmSingleOrderDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrderStatus.mmObject();
-			componentContext_lazy = () -> OrderStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "SnglOrdrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -456,10 +494,12 @@ public class OrderStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OrderStatus2.mmListIdentification, OrderStatus2.mmListStatusType, OrderStatus2.mmListOrderStatus, OrderStatus2.mmTotalNumberOfReports, OrderStatus2.mmReportSequenceNumber,
-						OrderStatus2.mmTotalNumberOfOrders, OrderStatus2.mmRejectionReason, OrderStatus2.mmSingleOrderDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatus2.mmListIdentification, com.tools20022.repository.msg.OrderStatus2.mmListStatusType,
+						com.tools20022.repository.msg.OrderStatus2.mmListOrderStatus, com.tools20022.repository.msg.OrderStatus2.mmTotalNumberOfReports, com.tools20022.repository.msg.OrderStatus2.mmReportSequenceNumber,
+						com.tools20022.repository.msg.OrderStatus2.mmTotalNumberOfOrders, com.tools20022.repository.msg.OrderStatus2.mmRejectionReason, com.tools20022.repository.msg.OrderStatus2.mmSingleOrderDetails);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRejectionReason.forOrderStatus2);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OrderStatus2";
 				definition = "Status and reason of an instructed order.";
@@ -468,75 +508,75 @@ public class OrderStatus2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ListId", required = true)
 	public Max35Text getListIdentification() {
 		return listIdentification;
 	}
 
-	public void setListIdentification(Max35Text listIdentification) {
-		this.listIdentification = listIdentification;
+	public OrderStatus2 setListIdentification(Max35Text listIdentification) {
+		this.listIdentification = Objects.requireNonNull(listIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ListStsTp", required = true)
 	public ListStatusType1Code getListStatusType() {
 		return listStatusType;
 	}
 
-	public void setListStatusType(ListStatusType1Code listStatusType) {
-		this.listStatusType = listStatusType;
+	public OrderStatus2 setListStatusType(ListStatusType1Code listStatusType) {
+		this.listStatusType = Objects.requireNonNull(listStatusType);
+		return this;
 	}
 
-	@XmlElement(name = "ListOrdrSts", required = true)
 	public OrderStatus6Code getListOrderStatus() {
 		return listOrderStatus;
 	}
 
-	public void setListOrderStatus(OrderStatus6Code listOrderStatus) {
-		this.listOrderStatus = listOrderStatus;
+	public OrderStatus2 setListOrderStatus(OrderStatus6Code listOrderStatus) {
+		this.listOrderStatus = Objects.requireNonNull(listOrderStatus);
+		return this;
 	}
 
-	@XmlElement(name = "TtlNbOfRpts", required = true)
 	public Number getTotalNumberOfReports() {
 		return totalNumberOfReports;
 	}
 
-	public void setTotalNumberOfReports(Number totalNumberOfReports) {
-		this.totalNumberOfReports = totalNumberOfReports;
+	public OrderStatus2 setTotalNumberOfReports(Number totalNumberOfReports) {
+		this.totalNumberOfReports = Objects.requireNonNull(totalNumberOfReports);
+		return this;
 	}
 
-	@XmlElement(name = "RptSeqNb", required = true)
 	public Number getReportSequenceNumber() {
 		return reportSequenceNumber;
 	}
 
-	public void setReportSequenceNumber(Number reportSequenceNumber) {
-		this.reportSequenceNumber = reportSequenceNumber;
+	public OrderStatus2 setReportSequenceNumber(Number reportSequenceNumber) {
+		this.reportSequenceNumber = Objects.requireNonNull(reportSequenceNumber);
+		return this;
 	}
 
-	@XmlElement(name = "TtlNbOfOrdrs", required = true)
 	public Number getTotalNumberOfOrders() {
 		return totalNumberOfOrders;
 	}
 
-	public void setTotalNumberOfOrders(Number totalNumberOfOrders) {
-		this.totalNumberOfOrders = totalNumberOfOrders;
+	public OrderStatus2 setTotalNumberOfOrders(Number totalNumberOfOrders) {
+		this.totalNumberOfOrders = Objects.requireNonNull(totalNumberOfOrders);
+		return this;
 	}
 
-	@XmlElement(name = "RjctnRsn")
-	public RejectionReason3Choice getRejectionReason() {
-		return rejectionReason;
+	public Optional<RejectionReason3Choice> getRejectionReason() {
+		return rejectionReason == null ? Optional.empty() : Optional.of(rejectionReason);
 	}
 
-	public void setRejectionReason(RejectionReason3Choice rejectionReason) {
+	public OrderStatus2 setRejectionReason(RejectionReason3Choice rejectionReason) {
 		this.rejectionReason = rejectionReason;
+		return this;
 	}
 
-	@XmlElement(name = "SnglOrdrDtls")
 	public List<OrderStatus3> getSingleOrderDetails() {
-		return singleOrderDetails;
+		return singleOrderDetails == null ? singleOrderDetails = new ArrayList<>() : singleOrderDetails;
 	}
 
-	public void setSingleOrderDetails(List<com.tools20022.repository.msg.OrderStatus3> singleOrderDetails) {
-		this.singleOrderDetails = singleOrderDetails;
+	public OrderStatus2 setSingleOrderDetails(List<com.tools20022.repository.msg.OrderStatus3> singleOrderDetails) {
+		this.singleOrderDetails = Objects.requireNonNull(singleOrderDetails);
+		return this;
 	}
 }

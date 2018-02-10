@@ -28,6 +28,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FundParameters4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReportParameterRule1#forFundParameters3Choice
+ * ConstraintReportParameterRule1.forFundParameters3Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,17 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of fund parameters."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FundParameters3Choice", propOrder = {"noCriteria", "parameters"})
 public class FundParameters3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NoCrit", required = true)
 	protected NoCriteria1Code noCriteria;
 	/**
-	 * Specifies that there is no criteria for the report. The request is a
-	 * request for all reports, rather than reports attributed to a specific
-	 * fund manager, date or financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +125,7 @@ public class FundParameters3Choice {
 	 */
 	public static final MMMessageAttribute mmNoCriteria = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FundParameters3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FundParameters3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +136,11 @@ public class FundParameters3Choice {
 			simpleType_lazy = () -> NoCriteria1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Params", required = true)
 	protected FundParameters4 parameters;
 	/**
-	 * Report parameters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -157,7 +166,7 @@ public class FundParameters3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmParameters = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FundParameters3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FundParameters3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Params";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +182,11 @@ public class FundParameters3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FundParameters3Choice.mmNoCriteria, FundParameters3Choice.mmParameters);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FundParameters3Choice.mmNoCriteria, com.tools20022.repository.choice.FundParameters3Choice.mmParameters);
 				messageBuildingBlock_lazy = () -> Arrays.asList(InvestmentFundReportRequestV02.mmFundProcessingPassportReport);
 				trace_lazy = () -> InvestmentFund.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReportParameterRule1.forFundParameters3Choice);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundParameters3Choice";
 				definition = "Choice of fund parameters.";
@@ -185,21 +195,21 @@ public class FundParameters3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NoCrit", required = true)
 	public NoCriteria1Code getNoCriteria() {
 		return noCriteria;
 	}
 
-	public void setNoCriteria(NoCriteria1Code noCriteria) {
-		this.noCriteria = noCriteria;
+	public FundParameters3Choice setNoCriteria(NoCriteria1Code noCriteria) {
+		this.noCriteria = Objects.requireNonNull(noCriteria);
+		return this;
 	}
 
-	@XmlElement(name = "Params", required = true)
 	public FundParameters4 getParameters() {
 		return parameters;
 	}
 
-	public void setParameters(FundParameters4 parameters) {
-		this.parameters = parameters;
+	public FundParameters3Choice setParameters(FundParameters4 parameters) {
+		this.parameters = Objects.requireNonNull(parameters);
+		return this;
 	}
 }

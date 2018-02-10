@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DebitTypeCode;
+import com.tools20022.repository.codeset.DebitType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of debit to be applied to the payment.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DebitTypeCode DebitTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DebitType1Code#mmGlobal
- * DebitType1Code.mmGlobal}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DebitType1Code#mmSingle
- * DebitType1Code.mmSingle}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DebitType1Code#Global
+ * DebitType1Code.Global}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DebitType1Code#Single
+ * DebitType1Code.Single}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DebitTypeCode DebitTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,7 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of debit to be applied to the payment."</li>
  * </ul>
  */
-public class DebitType1Code extends DebitTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DebitType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -74,11 +79,12 @@ public class DebitType1Code extends DebitTypeCode {
 	 * name} = "Global"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGlobal = new MMCode() {
+	public static final DebitType1Code Global = new DebitType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Global";
-			owner_lazy = () -> DebitType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DebitType1Code.mmObject();
+			codeName = DebitTypeCode.Global.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -97,25 +103,56 @@ public class DebitType1Code extends DebitTypeCode {
 	 * name} = "Single"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSingle = new MMCode() {
+	public static final DebitType1Code Single = new DebitType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Single";
-			owner_lazy = () -> DebitType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DebitType1Code.mmObject();
+			codeName = DebitTypeCode.Single.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DebitType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DebitType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DebitType1Code";
 				definition = "Specifies the type of debit to be applied to the payment.";
-				code_lazy = () -> Arrays.asList(DebitType1Code.mmGlobal, DebitType1Code.mmSingle);
 				trace_lazy = () -> DebitTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DebitType1Code.Global, com.tools20022.repository.codeset.DebitType1Code.Single);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Global.getCodeName().get(), Global);
+		codesByName.put(Single.getCodeName().get(), Single);
+	}
+
+	public static DebitType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DebitType1Code[] values() {
+		DebitType1Code[] values = new DebitType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DebitType1Code> {
+		@Override
+		public DebitType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DebitType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

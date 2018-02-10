@@ -21,9 +21,11 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,8 +48,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,15 +60,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Certificate issuer name (see X.509)."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CertificateIssuer1", propOrder = "relativeDistinguishedName")
 public class CertificateIssuer1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RltvDstngshdNm", required = true)
 	protected List<com.tools20022.repository.msg.RelativeDistinguishedName1> relativeDistinguishedName;
 	/**
-	 * Relative distinguished name inside a X.509 certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -93,7 +96,7 @@ public class CertificateIssuer1 {
 	 */
 	public static final MMMessageAssociationEnd mmRelativeDistinguishedName = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CertificateIssuer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateIssuer1.mmObject();
 			isDerived = false;
 			xmlTag = "RltvDstngshdNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,8 +111,8 @@ public class CertificateIssuer1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CertificateIssuer1.mmRelativeDistinguishedName);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificateIssuer1.mmRelativeDistinguishedName);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificateIssuer1";
 				definition = "Certificate issuer name (see X.509).";
@@ -118,12 +121,12 @@ public class CertificateIssuer1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RltvDstngshdNm", required = true)
 	public List<RelativeDistinguishedName1> getRelativeDistinguishedName() {
-		return relativeDistinguishedName;
+		return relativeDistinguishedName == null ? relativeDistinguishedName = new ArrayList<>() : relativeDistinguishedName;
 	}
 
-	public void setRelativeDistinguishedName(List<com.tools20022.repository.msg.RelativeDistinguishedName1> relativeDistinguishedName) {
-		this.relativeDistinguishedName = relativeDistinguishedName;
+	public CertificateIssuer1 setRelativeDistinguishedName(List<com.tools20022.repository.msg.RelativeDistinguishedName1> relativeDistinguishedName) {
+		this.relativeDistinguishedName = Objects.requireNonNull(relativeDistinguishedName);
+		return this;
 	}
 }

@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +72,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,15 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * ATMCassetteCounters1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMCassetteCounters2", propOrder = {"type", "addedNumber", "removedNumber", "dispensedNumber", "depositNumber", "recycledNumber", "retractedNumber", "rejectedNumber", "presentedNumber"})
 public class ATMCassetteCounters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected ATMCounterType1Code type;
 	/**
-	 * Type of counters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +125,7 @@ public class ATMCassetteCounters2 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCassetteCounters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,10 +136,11 @@ public class ATMCassetteCounters2 {
 			simpleType_lazy = () -> ATMCounterType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AddedNb")
 	protected Number addedNumber;
 	/**
-	 * Number of added media during servicing operations.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +167,7 @@ public class ATMCassetteCounters2 {
 	 */
 	public static final MMMessageAttribute mmAddedNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCassetteCounters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 			isDerived = false;
 			xmlTag = "AddedNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +178,11 @@ public class ATMCassetteCounters2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "RmvdNb")
 	protected Number removedNumber;
 	/**
-	 * Number of removed media during servicing operations.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,7 +209,7 @@ public class ATMCassetteCounters2 {
 	 */
 	public static final MMMessageAttribute mmRemovedNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCassetteCounters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 			isDerived = false;
 			xmlTag = "RmvdNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,10 +220,11 @@ public class ATMCassetteCounters2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "DspnsdNb")
 	protected Number dispensedNumber;
 	/**
-	 * Total number of media out of the cassette.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,7 +251,7 @@ public class ATMCassetteCounters2 {
 	 */
 	public static final MMMessageAttribute mmDispensedNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCassetteCounters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 			isDerived = false;
 			xmlTag = "DspnsdNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,10 +262,11 @@ public class ATMCassetteCounters2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "DpstNb")
 	protected Number depositNumber;
 	/**
-	 * Total number of media deposited in the cassette.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -286,7 +293,7 @@ public class ATMCassetteCounters2 {
 	 */
 	public static final MMMessageAttribute mmDepositNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCassetteCounters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 			isDerived = false;
 			xmlTag = "DpstNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -297,10 +304,11 @@ public class ATMCassetteCounters2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "RcycldNb")
 	protected Number recycledNumber;
 	/**
-	 * Total number of recycled media from the cassette.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -327,7 +335,7 @@ public class ATMCassetteCounters2 {
 	 */
 	public static final MMMessageAttribute mmRecycledNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCassetteCounters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 			isDerived = false;
 			xmlTag = "RcycldNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -338,10 +346,11 @@ public class ATMCassetteCounters2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "RtrctdNb")
 	protected Number retractedNumber;
 	/**
-	 * Total number of retracted media originating from the cassette.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -369,7 +378,7 @@ public class ATMCassetteCounters2 {
 	 */
 	public static final MMMessageAttribute mmRetractedNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCassetteCounters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 			isDerived = false;
 			xmlTag = "RtrctdNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -380,10 +389,11 @@ public class ATMCassetteCounters2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "RjctdNb")
 	protected Number rejectedNumber;
 	/**
-	 * Total number of media from this cassette which are on the reject bin.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -411,7 +421,7 @@ public class ATMCassetteCounters2 {
 	 */
 	public static final MMMessageAttribute mmRejectedNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCassetteCounters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -422,10 +432,11 @@ public class ATMCassetteCounters2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "PresntdNb")
 	protected Number presentedNumber;
 	/**
-	 * Total number of media presented to the customer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -452,7 +463,7 @@ public class ATMCassetteCounters2 {
 	 */
 	public static final MMMessageAttribute mmPresentedNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCassetteCounters2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 			isDerived = false;
 			xmlTag = "PresntdNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -467,9 +478,11 @@ public class ATMCassetteCounters2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMCassetteCounters2.mmType, ATMCassetteCounters2.mmAddedNumber, ATMCassetteCounters2.mmRemovedNumber, ATMCassetteCounters2.mmDispensedNumber, ATMCassetteCounters2.mmDepositNumber,
-						ATMCassetteCounters2.mmRecycledNumber, ATMCassetteCounters2.mmRetractedNumber, ATMCassetteCounters2.mmRejectedNumber, ATMCassetteCounters2.mmPresentedNumber);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCassetteCounters2.mmType, com.tools20022.repository.msg.ATMCassetteCounters2.mmAddedNumber,
+						com.tools20022.repository.msg.ATMCassetteCounters2.mmRemovedNumber, com.tools20022.repository.msg.ATMCassetteCounters2.mmDispensedNumber, com.tools20022.repository.msg.ATMCassetteCounters2.mmDepositNumber,
+						com.tools20022.repository.msg.ATMCassetteCounters2.mmRecycledNumber, com.tools20022.repository.msg.ATMCassetteCounters2.mmRetractedNumber, com.tools20022.repository.msg.ATMCassetteCounters2.mmRejectedNumber,
+						com.tools20022.repository.msg.ATMCassetteCounters2.mmPresentedNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCassetteCounters2";
 				definition = "Counters of media inside an ATM cassette.";
@@ -479,84 +492,84 @@ public class ATMCassetteCounters2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public ATMCounterType1Code getType() {
 		return type;
 	}
 
-	public void setType(ATMCounterType1Code type) {
-		this.type = type;
+	public ATMCassetteCounters2 setType(ATMCounterType1Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "AddedNb")
-	public Number getAddedNumber() {
-		return addedNumber;
+	public Optional<Number> getAddedNumber() {
+		return addedNumber == null ? Optional.empty() : Optional.of(addedNumber);
 	}
 
-	public void setAddedNumber(Number addedNumber) {
+	public ATMCassetteCounters2 setAddedNumber(Number addedNumber) {
 		this.addedNumber = addedNumber;
+		return this;
 	}
 
-	@XmlElement(name = "RmvdNb")
-	public Number getRemovedNumber() {
-		return removedNumber;
+	public Optional<Number> getRemovedNumber() {
+		return removedNumber == null ? Optional.empty() : Optional.of(removedNumber);
 	}
 
-	public void setRemovedNumber(Number removedNumber) {
+	public ATMCassetteCounters2 setRemovedNumber(Number removedNumber) {
 		this.removedNumber = removedNumber;
+		return this;
 	}
 
-	@XmlElement(name = "DspnsdNb")
-	public Number getDispensedNumber() {
-		return dispensedNumber;
+	public Optional<Number> getDispensedNumber() {
+		return dispensedNumber == null ? Optional.empty() : Optional.of(dispensedNumber);
 	}
 
-	public void setDispensedNumber(Number dispensedNumber) {
+	public ATMCassetteCounters2 setDispensedNumber(Number dispensedNumber) {
 		this.dispensedNumber = dispensedNumber;
+		return this;
 	}
 
-	@XmlElement(name = "DpstNb")
-	public Number getDepositNumber() {
-		return depositNumber;
+	public Optional<Number> getDepositNumber() {
+		return depositNumber == null ? Optional.empty() : Optional.of(depositNumber);
 	}
 
-	public void setDepositNumber(Number depositNumber) {
+	public ATMCassetteCounters2 setDepositNumber(Number depositNumber) {
 		this.depositNumber = depositNumber;
+		return this;
 	}
 
-	@XmlElement(name = "RcycldNb")
-	public Number getRecycledNumber() {
-		return recycledNumber;
+	public Optional<Number> getRecycledNumber() {
+		return recycledNumber == null ? Optional.empty() : Optional.of(recycledNumber);
 	}
 
-	public void setRecycledNumber(Number recycledNumber) {
+	public ATMCassetteCounters2 setRecycledNumber(Number recycledNumber) {
 		this.recycledNumber = recycledNumber;
+		return this;
 	}
 
-	@XmlElement(name = "RtrctdNb")
-	public Number getRetractedNumber() {
-		return retractedNumber;
+	public Optional<Number> getRetractedNumber() {
+		return retractedNumber == null ? Optional.empty() : Optional.of(retractedNumber);
 	}
 
-	public void setRetractedNumber(Number retractedNumber) {
+	public ATMCassetteCounters2 setRetractedNumber(Number retractedNumber) {
 		this.retractedNumber = retractedNumber;
+		return this;
 	}
 
-	@XmlElement(name = "RjctdNb")
-	public Number getRejectedNumber() {
-		return rejectedNumber;
+	public Optional<Number> getRejectedNumber() {
+		return rejectedNumber == null ? Optional.empty() : Optional.of(rejectedNumber);
 	}
 
-	public void setRejectedNumber(Number rejectedNumber) {
+	public ATMCassetteCounters2 setRejectedNumber(Number rejectedNumber) {
 		this.rejectedNumber = rejectedNumber;
+		return this;
 	}
 
-	@XmlElement(name = "PresntdNb")
-	public Number getPresentedNumber() {
-		return presentedNumber;
+	public Optional<Number> getPresentedNumber() {
+		return presentedNumber == null ? Optional.empty() : Optional.of(presentedNumber);
 	}
 
-	public void setPresentedNumber(Number presentedNumber) {
+	public ATMCassetteCounters2 setPresentedNumber(Number presentedNumber) {
 		this.presentedNumber = presentedNumber;
+		return this;
 	}
 }

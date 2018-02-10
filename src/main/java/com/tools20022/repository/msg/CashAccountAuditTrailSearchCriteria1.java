@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashAccountAuditTrailSearchCriteria1", propOrder = {"cashAccountIdentification", "datePeriod"})
 public class CashAccountAuditTrailSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CshAcctId")
 	protected CashAccount16 cashAccountIdentification;
 	/**
-	 * Describes cash account to be queried.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,7 +99,7 @@ public class CashAccountAuditTrailSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmCashAccountIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashAccountAuditTrailSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountAuditTrailSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,10 +110,11 @@ public class CashAccountAuditTrailSearchCriteria1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
 		}
 	};
+	@XmlElement(name = "DtPrd")
 	protected DateSearchChoice datePeriod;
 	/**
-	 * Describes date period for querying information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +142,7 @@ public class CashAccountAuditTrailSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashAccountAuditTrailSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountAuditTrailSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "DtPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,8 +157,8 @@ public class CashAccountAuditTrailSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashAccountAuditTrailSearchCriteria1.mmCashAccountIdentification, CashAccountAuditTrailSearchCriteria1.mmDatePeriod);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccountAuditTrailSearchCriteria1.mmCashAccountIdentification, com.tools20022.repository.msg.CashAccountAuditTrailSearchCriteria1.mmDatePeriod);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashAccountAuditTrailSearchCriteria1";
 				definition = "Describes search criteria for cash account audit trail query.";
@@ -164,21 +167,21 @@ public class CashAccountAuditTrailSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CshAcctId")
-	public CashAccount16 getCashAccountIdentification() {
-		return cashAccountIdentification;
+	public Optional<CashAccount16> getCashAccountIdentification() {
+		return cashAccountIdentification == null ? Optional.empty() : Optional.of(cashAccountIdentification);
 	}
 
-	public void setCashAccountIdentification(com.tools20022.repository.msg.CashAccount16 cashAccountIdentification) {
+	public CashAccountAuditTrailSearchCriteria1 setCashAccountIdentification(com.tools20022.repository.msg.CashAccount16 cashAccountIdentification) {
 		this.cashAccountIdentification = cashAccountIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "DtPrd")
-	public DateSearchChoice getDatePeriod() {
-		return datePeriod;
+	public Optional<DateSearchChoice> getDatePeriod() {
+		return datePeriod == null ? Optional.empty() : Optional.of(datePeriod);
 	}
 
-	public void setDatePeriod(DateSearchChoice datePeriod) {
+	public CashAccountAuditTrailSearchCriteria1 setDatePeriod(DateSearchChoice datePeriod) {
 		this.datePeriod = datePeriod;
+		return this;
 	}
 }

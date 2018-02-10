@@ -28,9 +28,8 @@ import com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Cod
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -101,8 +100,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -124,16 +123,17 @@ import javax.xml.bind.annotation.XmlType;
  * TMSAction3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "TMSAction4", propOrder = {"type", "remoteAccess", "terminalManagerIdentification", "TMSProtocol", "TMSProtocolVersion", "dataSetIdentification", "componentType", "parametersSubsetIdentification",
-		"parametersSubsetDefinition", "delegationProof", "protectedDelegationProof", "trigger", "additionalProcess", "reTry", "timeCondition", "TMChallenge", "keyEnciphermentCertificate", "errorAction", "additionalInformation"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "TMSAction4", propOrder = {"type", "remoteAccess", "terminalManagerIdentification", "tMSProtocol", "tMSProtocolVersion", "dataSetIdentification", "componentType", "parametersSubsetIdentification",
+		"parametersSubsetDefinition", "delegationProof", "protectedDelegationProof", "trigger", "additionalProcess", "reTry", "timeCondition", "tMChallenge", "keyEnciphermentCertificate", "errorAction", "additionalInformation"})
 public class TMSAction4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected TerminalManagementAction1Code type;
 	/**
-	 * Types of action to be performed by a point of interaction (POI).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,7 +179,7 @@ public class TMSAction4 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmType;
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,10 +192,11 @@ public class TMSAction4 {
 			simpleType_lazy = () -> TerminalManagementAction1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RmotAccs")
 	protected NetworkParameters3 remoteAccess;
 	/**
-	 * Host access information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -227,7 +228,7 @@ public class TMSAction4 {
 	 */
 	public static final MMMessageAssociationEnd mmRemoteAccess = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "RmotAccs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,11 +241,11 @@ public class TMSAction4 {
 			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters3.mmObject();
 		}
 	};
+	@XmlElement(name = "TermnlMgrId")
 	protected GenericIdentification71 terminalManagerIdentification;
 	/**
-	 * Identification of the master terminal manager or the terminal manager
-	 * with which the POI has to perform the action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -280,7 +281,7 @@ public class TMSAction4 {
 	 */
 	public static final MMMessageAssociationEnd mmTerminalManagerIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "TermnlMgrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -293,10 +294,11 @@ public class TMSAction4 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
 		}
 	};
+	@XmlElement(name = "TMSPrtcol")
 	protected Max35Text tMSProtocol;
 	/**
-	 * TMS protocol to use for performing the maintenance action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -330,7 +332,7 @@ public class TMSAction4 {
 	 */
 	public static final MMMessageAttribute mmTMSProtocol = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "TMSPrtcol";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -342,10 +344,11 @@ public class TMSAction4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TMSPrtcolVrsn")
 	protected Max35Text tMSProtocolVersion;
 	/**
-	 * Version of the TMS protocol to use to perform the maintenance action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -380,7 +383,7 @@ public class TMSAction4 {
 	 */
 	public static final MMMessageAttribute mmTMSProtocolVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "TMSPrtcolVrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -392,10 +395,11 @@ public class TMSAction4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DataSetId")
 	protected DataSetIdentification4 dataSetIdentification;
 	/**
-	 * Data set on which the action has to be performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -433,7 +437,7 @@ public class TMSAction4 {
 	 */
 	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "DataSetId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -447,10 +451,11 @@ public class TMSAction4 {
 			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification4.mmObject();
 		}
 	};
+	@XmlElement(name = "CmpntTp")
 	protected List<DataSetCategory4Code> componentType;
 	/**
-	 * Type of POI components to send in a status report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -484,7 +489,7 @@ public class TMSAction4 {
 	 */
 	public static final MMMessageAttribute mmComponentType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "CmpntTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -495,10 +500,11 @@ public class TMSAction4 {
 			simpleType_lazy = () -> DataSetCategory4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ParamsSubsetId")
 	protected Max35Text parametersSubsetIdentification;
 	/**
-	 * Identification of the parameters subset assigned by the MTM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -533,7 +539,7 @@ public class TMSAction4 {
 	 */
 	public static final MMMessageAttribute mmParametersSubsetIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "ParamsSubsetId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -545,12 +551,11 @@ public class TMSAction4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ParamsSubsetDef")
 	protected Max3000Binary parametersSubsetDefinition;
 	/**
-	 * Definition of the subset of application parameters, for instance the
-	 * range of application profiles, the RID (registered application provider
-	 * identification).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -587,7 +592,7 @@ public class TMSAction4 {
 	 */
 	public static final MMMessageAttribute mmParametersSubsetDefinition = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "ParamsSubsetDef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -599,11 +604,11 @@ public class TMSAction4 {
 			simpleType_lazy = () -> Max3000Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "DlgtnProof")
 	protected Max5000Binary delegationProof;
 	/**
-	 * Proof of delegation to be verified by the POI, when performing the
-	 * delegated actions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -640,7 +645,7 @@ public class TMSAction4 {
 	 */
 	public static final MMMessageAttribute mmDelegationProof = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "DlgtnProof";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -652,10 +657,11 @@ public class TMSAction4 {
 			simpleType_lazy = () -> Max5000Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctdDlgtnProof")
 	protected ContentInformationType12 protectedDelegationProof;
 	/**
-	 * Protected proof of delegation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -689,7 +695,7 @@ public class TMSAction4 {
 	 */
 	public static final MMMessageAssociationEnd mmProtectedDelegationProof = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctdDlgtnProof";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -702,11 +708,11 @@ public class TMSAction4 {
 			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType12.mmObject();
 		}
 	};
+	@XmlElement(name = "Trggr", required = true)
 	protected TerminalManagementActionTrigger1Code trigger;
 	/**
-	 * Event on which the action has to be activated by the point of interaction
-	 * (POI).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -753,7 +759,7 @@ public class TMSAction4 {
 	public static final MMMessageAttribute mmTrigger = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmTrigger;
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "Trggr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -766,11 +772,11 @@ public class TMSAction4 {
 			simpleType_lazy = () -> TerminalManagementActionTrigger1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlPrc")
 	protected List<TerminalManagementAdditionalProcess1Code> additionalProcess;
 	/**
-	 * Additional process to perform before starting or after completing the
-	 * action by the point of interaction (POI).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -818,7 +824,7 @@ public class TMSAction4 {
 	public static final MMMessageAttribute mmAdditionalProcess = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmAdditionalProcess;
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlPrc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -830,10 +836,11 @@ public class TMSAction4 {
 			simpleType_lazy = () -> TerminalManagementAdditionalProcess1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ReTry")
 	protected ProcessRetry2 reTry;
 	/**
-	 * Definition of retry process if activation of the action fails.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -871,7 +878,7 @@ public class TMSAction4 {
 	 */
 	public static final MMMessageAssociationEnd mmReTry = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "ReTry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -885,10 +892,11 @@ public class TMSAction4 {
 			type_lazy = () -> com.tools20022.repository.msg.ProcessRetry2.mmObject();
 		}
 	};
+	@XmlElement(name = "TmCond")
 	protected ProcessTiming3 timeCondition;
 	/**
-	 * Date and time the action has to be performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -925,7 +933,7 @@ public class TMSAction4 {
 	 */
 	public static final MMMessageAssociationEnd mmTimeCondition = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "TmCond";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -939,10 +947,11 @@ public class TMSAction4 {
 			type_lazy = () -> com.tools20022.repository.msg.ProcessTiming3.mmObject();
 		}
 	};
+	@XmlElement(name = "TMChllng")
 	protected Max140Binary tMChallenge;
 	/**
-	 * Terminal manager challenge for cryptographic key injection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -982,7 +991,7 @@ public class TMSAction4 {
 	 */
 	public static final MMMessageAttribute mmTMChallenge = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "TMChllng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -995,11 +1004,11 @@ public class TMSAction4 {
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "KeyNcphrmntCert")
 	protected List<Max10KBinary> keyEnciphermentCertificate;
 	/**
-	 * Certificate chain for the encryption of temporary transport key of the
-	 * key to inject.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1041,7 +1050,7 @@ public class TMSAction4 {
 	 */
 	public static final MMMessageAttribute mmKeyEnciphermentCertificate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "KeyNcphrmntCert";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1053,10 +1062,11 @@ public class TMSAction4 {
 			simpleType_lazy = () -> Max10KBinary.mmObject();
 		}
 	};
+	@XmlElement(name = "ErrActn")
 	protected List<com.tools20022.repository.msg.ErrorAction2> errorAction;
 	/**
-	 * Action to perform in case of error on the related action in progress.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1094,7 +1104,7 @@ public class TMSAction4 {
 	 */
 	public static final MMMessageAssociationEnd mmErrorAction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "ErrActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1107,10 +1117,11 @@ public class TMSAction4 {
 			type_lazy = () -> com.tools20022.repository.msg.ErrorAction2.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected List<Max3000Binary> additionalInformation;
 	/**
-	 * Additional information about the maintenance action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1145,7 +1156,7 @@ public class TMSAction4 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TMSAction4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction4.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1160,12 +1171,15 @@ public class TMSAction4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TMSAction4.mmType, TMSAction4.mmRemoteAccess, TMSAction4.mmTerminalManagerIdentification, TMSAction4.mmTMSProtocol, TMSAction4.mmTMSProtocolVersion,
-						TMSAction4.mmDataSetIdentification, TMSAction4.mmComponentType, TMSAction4.mmParametersSubsetIdentification, TMSAction4.mmParametersSubsetDefinition, TMSAction4.mmDelegationProof,
-						TMSAction4.mmProtectedDelegationProof, TMSAction4.mmTrigger, TMSAction4.mmAdditionalProcess, TMSAction4.mmReTry, TMSAction4.mmTimeCondition, TMSAction4.mmTMChallenge, TMSAction4.mmKeyEnciphermentCertificate,
-						TMSAction4.mmErrorAction, TMSAction4.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSAction4.mmType, com.tools20022.repository.msg.TMSAction4.mmRemoteAccess, com.tools20022.repository.msg.TMSAction4.mmTerminalManagerIdentification,
+						com.tools20022.repository.msg.TMSAction4.mmTMSProtocol, com.tools20022.repository.msg.TMSAction4.mmTMSProtocolVersion, com.tools20022.repository.msg.TMSAction4.mmDataSetIdentification,
+						com.tools20022.repository.msg.TMSAction4.mmComponentType, com.tools20022.repository.msg.TMSAction4.mmParametersSubsetIdentification, com.tools20022.repository.msg.TMSAction4.mmParametersSubsetDefinition,
+						com.tools20022.repository.msg.TMSAction4.mmDelegationProof, com.tools20022.repository.msg.TMSAction4.mmProtectedDelegationProof, com.tools20022.repository.msg.TMSAction4.mmTrigger,
+						com.tools20022.repository.msg.TMSAction4.mmAdditionalProcess, com.tools20022.repository.msg.TMSAction4.mmReTry, com.tools20022.repository.msg.TMSAction4.mmTimeCondition,
+						com.tools20022.repository.msg.TMSAction4.mmTMChallenge, com.tools20022.repository.msg.TMSAction4.mmKeyEnciphermentCertificate, com.tools20022.repository.msg.TMSAction4.mmErrorAction,
+						com.tools20022.repository.msg.TMSAction4.mmAdditionalInformation);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TMSAction4";
 				definition = "Single terminal management action to be performed by the point of interaction.";
@@ -1176,174 +1190,174 @@ public class TMSAction4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public TerminalManagementAction1Code getType() {
 		return type;
 	}
 
-	public void setType(TerminalManagementAction1Code type) {
-		this.type = type;
+	public TMSAction4 setType(TerminalManagementAction1Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "RmotAccs")
-	public NetworkParameters3 getRemoteAccess() {
-		return remoteAccess;
+	public Optional<NetworkParameters3> getRemoteAccess() {
+		return remoteAccess == null ? Optional.empty() : Optional.of(remoteAccess);
 	}
 
-	public void setRemoteAccess(com.tools20022.repository.msg.NetworkParameters3 remoteAccess) {
+	public TMSAction4 setRemoteAccess(com.tools20022.repository.msg.NetworkParameters3 remoteAccess) {
 		this.remoteAccess = remoteAccess;
+		return this;
 	}
 
-	@XmlElement(name = "TermnlMgrId")
-	public GenericIdentification71 getTerminalManagerIdentification() {
-		return terminalManagerIdentification;
+	public Optional<GenericIdentification71> getTerminalManagerIdentification() {
+		return terminalManagerIdentification == null ? Optional.empty() : Optional.of(terminalManagerIdentification);
 	}
 
-	public void setTerminalManagerIdentification(com.tools20022.repository.msg.GenericIdentification71 terminalManagerIdentification) {
+	public TMSAction4 setTerminalManagerIdentification(com.tools20022.repository.msg.GenericIdentification71 terminalManagerIdentification) {
 		this.terminalManagerIdentification = terminalManagerIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TMSPrtcol")
-	public Max35Text getTMSProtocol() {
-		return tMSProtocol;
+	public Optional<Max35Text> getTMSProtocol() {
+		return tMSProtocol == null ? Optional.empty() : Optional.of(tMSProtocol);
 	}
 
-	public void setTMSProtocol(Max35Text tMSProtocol) {
+	public TMSAction4 setTMSProtocol(Max35Text tMSProtocol) {
 		this.tMSProtocol = tMSProtocol;
+		return this;
 	}
 
-	@XmlElement(name = "TMSPrtcolVrsn")
-	public Max35Text getTMSProtocolVersion() {
-		return tMSProtocolVersion;
+	public Optional<Max35Text> getTMSProtocolVersion() {
+		return tMSProtocolVersion == null ? Optional.empty() : Optional.of(tMSProtocolVersion);
 	}
 
-	public void setTMSProtocolVersion(Max35Text tMSProtocolVersion) {
+	public TMSAction4 setTMSProtocolVersion(Max35Text tMSProtocolVersion) {
 		this.tMSProtocolVersion = tMSProtocolVersion;
+		return this;
 	}
 
-	@XmlElement(name = "DataSetId")
-	public DataSetIdentification4 getDataSetIdentification() {
-		return dataSetIdentification;
+	public Optional<DataSetIdentification4> getDataSetIdentification() {
+		return dataSetIdentification == null ? Optional.empty() : Optional.of(dataSetIdentification);
 	}
 
-	public void setDataSetIdentification(com.tools20022.repository.msg.DataSetIdentification4 dataSetIdentification) {
+	public TMSAction4 setDataSetIdentification(com.tools20022.repository.msg.DataSetIdentification4 dataSetIdentification) {
 		this.dataSetIdentification = dataSetIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CmpntTp")
 	public List<DataSetCategory4Code> getComponentType() {
-		return componentType;
+		return componentType == null ? componentType = new ArrayList<>() : componentType;
 	}
 
-	public void setComponentType(List<DataSetCategory4Code> componentType) {
-		this.componentType = componentType;
+	public TMSAction4 setComponentType(List<DataSetCategory4Code> componentType) {
+		this.componentType = Objects.requireNonNull(componentType);
+		return this;
 	}
 
-	@XmlElement(name = "ParamsSubsetId")
-	public Max35Text getParametersSubsetIdentification() {
-		return parametersSubsetIdentification;
+	public Optional<Max35Text> getParametersSubsetIdentification() {
+		return parametersSubsetIdentification == null ? Optional.empty() : Optional.of(parametersSubsetIdentification);
 	}
 
-	public void setParametersSubsetIdentification(Max35Text parametersSubsetIdentification) {
+	public TMSAction4 setParametersSubsetIdentification(Max35Text parametersSubsetIdentification) {
 		this.parametersSubsetIdentification = parametersSubsetIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ParamsSubsetDef")
-	public Max3000Binary getParametersSubsetDefinition() {
-		return parametersSubsetDefinition;
+	public Optional<Max3000Binary> getParametersSubsetDefinition() {
+		return parametersSubsetDefinition == null ? Optional.empty() : Optional.of(parametersSubsetDefinition);
 	}
 
-	public void setParametersSubsetDefinition(Max3000Binary parametersSubsetDefinition) {
+	public TMSAction4 setParametersSubsetDefinition(Max3000Binary parametersSubsetDefinition) {
 		this.parametersSubsetDefinition = parametersSubsetDefinition;
+		return this;
 	}
 
-	@XmlElement(name = "DlgtnProof")
-	public Max5000Binary getDelegationProof() {
-		return delegationProof;
+	public Optional<Max5000Binary> getDelegationProof() {
+		return delegationProof == null ? Optional.empty() : Optional.of(delegationProof);
 	}
 
-	public void setDelegationProof(Max5000Binary delegationProof) {
+	public TMSAction4 setDelegationProof(Max5000Binary delegationProof) {
 		this.delegationProof = delegationProof;
+		return this;
 	}
 
-	@XmlElement(name = "PrtctdDlgtnProof")
-	public ContentInformationType12 getProtectedDelegationProof() {
-		return protectedDelegationProof;
+	public Optional<ContentInformationType12> getProtectedDelegationProof() {
+		return protectedDelegationProof == null ? Optional.empty() : Optional.of(protectedDelegationProof);
 	}
 
-	public void setProtectedDelegationProof(com.tools20022.repository.msg.ContentInformationType12 protectedDelegationProof) {
+	public TMSAction4 setProtectedDelegationProof(com.tools20022.repository.msg.ContentInformationType12 protectedDelegationProof) {
 		this.protectedDelegationProof = protectedDelegationProof;
+		return this;
 	}
 
-	@XmlElement(name = "Trggr", required = true)
 	public TerminalManagementActionTrigger1Code getTrigger() {
 		return trigger;
 	}
 
-	public void setTrigger(TerminalManagementActionTrigger1Code trigger) {
-		this.trigger = trigger;
+	public TMSAction4 setTrigger(TerminalManagementActionTrigger1Code trigger) {
+		this.trigger = Objects.requireNonNull(trigger);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlPrc")
 	public List<TerminalManagementAdditionalProcess1Code> getAdditionalProcess() {
-		return additionalProcess;
+		return additionalProcess == null ? additionalProcess = new ArrayList<>() : additionalProcess;
 	}
 
-	public void setAdditionalProcess(List<TerminalManagementAdditionalProcess1Code> additionalProcess) {
-		this.additionalProcess = additionalProcess;
+	public TMSAction4 setAdditionalProcess(List<TerminalManagementAdditionalProcess1Code> additionalProcess) {
+		this.additionalProcess = Objects.requireNonNull(additionalProcess);
+		return this;
 	}
 
-	@XmlElement(name = "ReTry")
-	public ProcessRetry2 getReTry() {
-		return reTry;
+	public Optional<ProcessRetry2> getReTry() {
+		return reTry == null ? Optional.empty() : Optional.of(reTry);
 	}
 
-	public void setReTry(com.tools20022.repository.msg.ProcessRetry2 reTry) {
+	public TMSAction4 setReTry(com.tools20022.repository.msg.ProcessRetry2 reTry) {
 		this.reTry = reTry;
+		return this;
 	}
 
-	@XmlElement(name = "TmCond")
-	public ProcessTiming3 getTimeCondition() {
-		return timeCondition;
+	public Optional<ProcessTiming3> getTimeCondition() {
+		return timeCondition == null ? Optional.empty() : Optional.of(timeCondition);
 	}
 
-	public void setTimeCondition(com.tools20022.repository.msg.ProcessTiming3 timeCondition) {
+	public TMSAction4 setTimeCondition(com.tools20022.repository.msg.ProcessTiming3 timeCondition) {
 		this.timeCondition = timeCondition;
+		return this;
 	}
 
-	@XmlElement(name = "TMChllng")
-	public Max140Binary getTMChallenge() {
-		return tMChallenge;
+	public Optional<Max140Binary> getTMChallenge() {
+		return tMChallenge == null ? Optional.empty() : Optional.of(tMChallenge);
 	}
 
-	public void setTMChallenge(Max140Binary tMChallenge) {
+	public TMSAction4 setTMChallenge(Max140Binary tMChallenge) {
 		this.tMChallenge = tMChallenge;
+		return this;
 	}
 
-	@XmlElement(name = "KeyNcphrmntCert")
 	public List<Max10KBinary> getKeyEnciphermentCertificate() {
-		return keyEnciphermentCertificate;
+		return keyEnciphermentCertificate == null ? keyEnciphermentCertificate = new ArrayList<>() : keyEnciphermentCertificate;
 	}
 
-	public void setKeyEnciphermentCertificate(List<Max10KBinary> keyEnciphermentCertificate) {
-		this.keyEnciphermentCertificate = keyEnciphermentCertificate;
+	public TMSAction4 setKeyEnciphermentCertificate(List<Max10KBinary> keyEnciphermentCertificate) {
+		this.keyEnciphermentCertificate = Objects.requireNonNull(keyEnciphermentCertificate);
+		return this;
 	}
 
-	@XmlElement(name = "ErrActn")
 	public List<ErrorAction2> getErrorAction() {
-		return errorAction;
+		return errorAction == null ? errorAction = new ArrayList<>() : errorAction;
 	}
 
-	public void setErrorAction(List<com.tools20022.repository.msg.ErrorAction2> errorAction) {
-		this.errorAction = errorAction;
+	public TMSAction4 setErrorAction(List<com.tools20022.repository.msg.ErrorAction2> errorAction) {
+		this.errorAction = Objects.requireNonNull(errorAction);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
 	public List<Max3000Binary> getAdditionalInformation() {
-		return additionalInformation;
+		return additionalInformation == null ? additionalInformation = new ArrayList<>() : additionalInformation;
 	}
 
-	public void setAdditionalInformation(List<Max3000Binary> additionalInformation) {
-		this.additionalInformation = additionalInformation;
+	public TMSAction4 setAdditionalInformation(List<Max3000Binary> additionalInformation) {
+		this.additionalInformation = Objects.requireNonNull(additionalInformation);
+		return this;
 	}
 }

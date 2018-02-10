@@ -27,9 +27,8 @@ import com.tools20022.repository.codeset.MemberType1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about the members of a system."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Member1", propOrder = {"name", "returnAddress", "account", "type", "status", "contactReference", "communicationAddress"})
 public class Member1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nm")
 	protected Max35Text name;
 	/**
-	 * Word by which something is called or known or the family name of a
-	 * person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +118,7 @@ public class Member1 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
-			componentContext_lazy = () -> Member1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Member1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,13 +129,11 @@ public class Member1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RtrAdr")
 	protected List<MemberIdentification2Choice> returnAddress;
 	/**
-	 * Physical/logical address belonging to a member, segregated from its main
-	 * address that is used for normal operations. The fund return address is
-	 * used to route messages that require specific attention/exception
-	 * handling, for example returns or rejects.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +168,7 @@ public class Member1 {
 	public static final MMMessageAttribute mmReturnAddress = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ContactPoint.mmBICAddress;
-			componentContext_lazy = () -> Member1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Member1.mmObject();
 			isDerived = false;
 			xmlTag = "RtrAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,10 +178,11 @@ public class Member1 {
 			complexType_lazy = () -> MemberIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Acct")
 	protected List<com.tools20022.repository.msg.CashAccount24> account;
 	/**
-	 * Account to or from which a cash entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -214,7 +212,7 @@ public class Member1 {
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
-			componentContext_lazy = () -> Member1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Member1.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,10 +223,11 @@ public class Member1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected MemberType1Code type;
 	/**
-	 * Nature of the relationship a member has with a system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -261,7 +260,7 @@ public class Member1 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemMemberRole.mmType;
-			componentContext_lazy = () -> Member1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Member1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,10 +271,11 @@ public class Member1 {
 			simpleType_lazy = () -> MemberType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts")
 	protected MemberStatus1Code status;
 	/**
-	 * Status of a member in a system, for example enabled or deleted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -309,7 +309,7 @@ public class Member1 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemStatus.mmMemberStatus;
-			componentContext_lazy = () -> Member1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Member1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -320,10 +320,11 @@ public class Member1 {
 			simpleType_lazy = () -> MemberStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "CtctRef")
 	protected List<com.tools20022.repository.msg.ContactIdentificationAndAddress> contactReference;
 	/**
-	 * Person to be contacted in a given organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -354,7 +355,7 @@ public class Member1 {
 	public static final MMMessageAssociationEnd mmContactReference = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
-			componentContext_lazy = () -> Member1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Member1.mmObject();
 			isDerived = false;
 			xmlTag = "CtctRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -365,10 +366,11 @@ public class Member1 {
 			type_lazy = () -> com.tools20022.repository.msg.ContactIdentificationAndAddress.mmObject();
 		}
 	};
+	@XmlElement(name = "ComAdr")
 	protected CommunicationAddressDetails communicationAddress;
 	/**
-	 * Number, or virtual address, used for communication.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -400,7 +402,7 @@ public class Member1 {
 	public static final MMMessageAssociationEnd mmCommunicationAddress = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmContactPoint;
-			componentContext_lazy = () -> Member1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Member1.mmObject();
 			isDerived = false;
 			xmlTag = "ComAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -416,9 +418,10 @@ public class Member1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Member1.mmName, Member1.mmReturnAddress, Member1.mmAccount, Member1.mmType, Member1.mmStatus, Member1.mmContactReference, Member1.mmCommunicationAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Member1.mmName, com.tools20022.repository.msg.Member1.mmReturnAddress, com.tools20022.repository.msg.Member1.mmAccount,
+						com.tools20022.repository.msg.Member1.mmType, com.tools20022.repository.msg.Member1.mmStatus, com.tools20022.repository.msg.Member1.mmContactReference, com.tools20022.repository.msg.Member1.mmCommunicationAddress);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Member1";
 				definition = "Information about the members of a system.";
@@ -427,66 +430,66 @@ public class Member1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nm")
-	public Max35Text getName() {
-		return name;
+	public Optional<Max35Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max35Text name) {
+	public Member1 setName(Max35Text name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "RtrAdr")
 	public List<MemberIdentification2Choice> getReturnAddress() {
-		return returnAddress;
+		return returnAddress == null ? returnAddress = new ArrayList<>() : returnAddress;
 	}
 
-	public void setReturnAddress(List<MemberIdentification2Choice> returnAddress) {
-		this.returnAddress = returnAddress;
+	public Member1 setReturnAddress(List<MemberIdentification2Choice> returnAddress) {
+		this.returnAddress = Objects.requireNonNull(returnAddress);
+		return this;
 	}
 
-	@XmlElement(name = "Acct")
 	public List<CashAccount24> getAccount() {
-		return account;
+		return account == null ? account = new ArrayList<>() : account;
 	}
 
-	public void setAccount(List<com.tools20022.repository.msg.CashAccount24> account) {
-		this.account = account;
+	public Member1 setAccount(List<com.tools20022.repository.msg.CashAccount24> account) {
+		this.account = Objects.requireNonNull(account);
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public MemberType1Code getType() {
-		return type;
+	public Optional<MemberType1Code> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(MemberType1Code type) {
+	public Member1 setType(MemberType1Code type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "Sts")
-	public MemberStatus1Code getStatus() {
-		return status;
+	public Optional<MemberStatus1Code> getStatus() {
+		return status == null ? Optional.empty() : Optional.of(status);
 	}
 
-	public void setStatus(MemberStatus1Code status) {
+	public Member1 setStatus(MemberStatus1Code status) {
 		this.status = status;
+		return this;
 	}
 
-	@XmlElement(name = "CtctRef")
 	public List<ContactIdentificationAndAddress> getContactReference() {
-		return contactReference;
+		return contactReference == null ? contactReference = new ArrayList<>() : contactReference;
 	}
 
-	public void setContactReference(List<com.tools20022.repository.msg.ContactIdentificationAndAddress> contactReference) {
-		this.contactReference = contactReference;
+	public Member1 setContactReference(List<com.tools20022.repository.msg.ContactIdentificationAndAddress> contactReference) {
+		this.contactReference = Objects.requireNonNull(contactReference);
+		return this;
 	}
 
-	@XmlElement(name = "ComAdr")
-	public CommunicationAddressDetails getCommunicationAddress() {
-		return communicationAddress;
+	public Optional<CommunicationAddressDetails> getCommunicationAddress() {
+		return communicationAddress == null ? Optional.empty() : Optional.of(communicationAddress);
 	}
 
-	public void setCommunicationAddress(com.tools20022.repository.msg.CommunicationAddressDetails communicationAddress) {
+	public Member1 setCommunicationAddress(com.tools20022.repository.msg.CommunicationAddressDetails communicationAddress) {
 		this.communicationAddress = communicationAddress;
+		return this;
 	}
 }

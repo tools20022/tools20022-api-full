@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -81,8 +82,22 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintFundIdentification1Rule#forFund4
+ * ConstraintFundIdentification1Rule.forFund4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintFundIdentification2Rule#forFund4
+ * ConstraintFundIdentification2Rule.forFund4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintFundIdentification3Rule#forFund4
+ * ConstraintFundIdentification3Rule.forFund4}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,15 +110,16 @@ import javax.xml.bind.annotation.XmlType;
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Fund2 Fund2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Fund4", propOrder = {"name", "legalEntityIdentifier", "identification", "currency", "totalNAV", "previousTotalNAV", "totalUnitsNumber", "previousTotalUnitsNumber", "percentageOfFundTotalNAV"})
 public class Fund4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nm")
 	protected Max350Text name;
 	/**
-	 * Name of the fund/sub fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +155,7 @@ public class Fund4 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
-			componentContext_lazy = () -> Fund4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Fund4.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,12 +167,11 @@ public class Fund4 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "LglNttyIdr")
 	protected LEIIdentifier legalEntityIdentifier;
 	/**
-	 * Identification of the fund/sub fund with a Legal Entity Identifier. This
-	 * is a code allocated to a party as described in ISO 17442
-	 * "Financial Services - Legal Entity Identifier (LEI)".
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,7 +211,7 @@ public class Fund4 {
 	public static final MMMessageAttribute mmLegalEntityIdentifier = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
-			componentContext_lazy = () -> Fund4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Fund4.mmObject();
 			isDerived = false;
 			xmlTag = "LglNttyIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,11 +223,11 @@ public class Fund4 {
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Id")
 	protected OtherIdentification4 identification;
 	/**
-	 * Unique and unambiguous identifier for the fund/sub fund, assigned under a
-	 * formal or proprietary identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -250,7 +265,7 @@ public class Fund4 {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> Fund4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Fund4.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,10 +278,11 @@ public class Fund4 {
 			type_lazy = () -> com.tools20022.repository.msg.OtherIdentification4.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected ActiveOrHistoricCurrencyCode currency;
 	/**
-	 * Currency of the fund/sub fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -304,7 +320,7 @@ public class Fund4 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmTradingCurrency;
-			componentContext_lazy = () -> Fund4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Fund4.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -316,11 +332,11 @@ public class Fund4 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNAV")
 	protected ActiveOrHistoricCurrencyAndAmount totalNAV;
 	/**
-	 * Total value of all the holdings, less the fund's liabilities, of the
-	 * fund/sub fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -360,7 +376,7 @@ public class Fund4 {
 	public static final MMMessageAttribute mmTotalNAV = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmNetAssetValue;
-			componentContext_lazy = () -> Fund4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Fund4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNAV";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -372,11 +388,11 @@ public class Fund4 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsTtlNAV")
 	protected ActiveOrHistoricCurrencyAndAmount previousTotalNAV;
 	/**
-	 * Previous total value of all the holdings, less the fund's liabilities, of
-	 * the fund/sub fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -416,7 +432,7 @@ public class Fund4 {
 	public static final MMMessageAttribute mmPreviousTotalNAV = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmNetAssetValue;
-			componentContext_lazy = () -> Fund4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Fund4.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsTtlNAV";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -428,10 +444,11 @@ public class Fund4 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlUnitsNb")
 	protected FinancialInstrumentQuantity1 totalUnitsNumber;
 	/**
-	 * Total number of units of the fund/sub fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -469,7 +486,7 @@ public class Fund4 {
 	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
-			componentContext_lazy = () -> Fund4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Fund4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlUnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -481,10 +498,11 @@ public class Fund4 {
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsTtlUnitsNb")
 	protected FinancialInstrumentQuantity1 previousTotalUnitsNumber;
 	/**
-	 * Previous total number of units of the fund/sub fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -522,7 +540,7 @@ public class Fund4 {
 	public static final MMMessageAttribute mmPreviousTotalUnitsNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
-			componentContext_lazy = () -> Fund4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Fund4.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsTtlUnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -534,11 +552,11 @@ public class Fund4 {
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	@XmlElement(name = "PctgOfFndTtlNAV")
 	protected PercentageRate percentageOfFundTotalNAV;
 	/**
-	 * Consolidated net cash flow expressed as a percentage of the total NAV for
-	 * the fund/sub fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -572,7 +590,7 @@ public class Fund4 {
 	 */
 	public static final MMMessageAttribute mmPercentageOfFundTotalNAV = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Fund4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Fund4.mmObject();
 			isDerived = false;
 			xmlTag = "PctgOfFndTtlNAV";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -588,11 +606,14 @@ public class Fund4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Fund4.mmName, Fund4.mmLegalEntityIdentifier, Fund4.mmIdentification, Fund4.mmCurrency, Fund4.mmTotalNAV, Fund4.mmPreviousTotalNAV, Fund4.mmTotalUnitsNumber,
-						Fund4.mmPreviousTotalUnitsNumber, Fund4.mmPercentageOfFundTotalNAV);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Fund4.mmName, com.tools20022.repository.msg.Fund4.mmLegalEntityIdentifier, com.tools20022.repository.msg.Fund4.mmIdentification,
+						com.tools20022.repository.msg.Fund4.mmCurrency, com.tools20022.repository.msg.Fund4.mmTotalNAV, com.tools20022.repository.msg.Fund4.mmPreviousTotalNAV, com.tools20022.repository.msg.Fund4.mmTotalUnitsNumber,
+						com.tools20022.repository.msg.Fund4.mmPreviousTotalUnitsNumber, com.tools20022.repository.msg.Fund4.mmPercentageOfFundTotalNAV);
 				messageBuildingBlock_lazy = () -> Arrays.asList(FundDetailedConfirmedCashForecastReportV04.mmFundOrSubFundDetails);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundIdentification1Rule.forFund4, com.tools20022.repository.constraints.ConstraintFundIdentification2Rule.forFund4,
+						com.tools20022.repository.constraints.ConstraintFundIdentification3Rule.forFund4);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Fund4";
 				definition = "Information about an investment fund.";
@@ -602,84 +623,84 @@ public class Fund4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nm")
-	public Max350Text getName() {
-		return name;
+	public Optional<Max350Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max350Text name) {
+	public Fund4 setName(Max350Text name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "LglNttyIdr")
-	public LEIIdentifier getLegalEntityIdentifier() {
-		return legalEntityIdentifier;
+	public Optional<LEIIdentifier> getLegalEntityIdentifier() {
+		return legalEntityIdentifier == null ? Optional.empty() : Optional.of(legalEntityIdentifier);
 	}
 
-	public void setLegalEntityIdentifier(LEIIdentifier legalEntityIdentifier) {
+	public Fund4 setLegalEntityIdentifier(LEIIdentifier legalEntityIdentifier) {
 		this.legalEntityIdentifier = legalEntityIdentifier;
+		return this;
 	}
 
-	@XmlElement(name = "Id")
-	public OtherIdentification4 getIdentification() {
-		return identification;
+	public Optional<OtherIdentification4> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.OtherIdentification4 identification) {
+	public Fund4 setIdentification(com.tools20022.repository.msg.OtherIdentification4 identification) {
 		this.identification = identification;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public ActiveOrHistoricCurrencyCode getCurrency() {
-		return currency;
+	public Optional<ActiveOrHistoricCurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(ActiveOrHistoricCurrencyCode currency) {
+	public Fund4 setCurrency(ActiveOrHistoricCurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "TtlNAV")
-	public ActiveOrHistoricCurrencyAndAmount getTotalNAV() {
-		return totalNAV;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getTotalNAV() {
+		return totalNAV == null ? Optional.empty() : Optional.of(totalNAV);
 	}
 
-	public void setTotalNAV(ActiveOrHistoricCurrencyAndAmount totalNAV) {
+	public Fund4 setTotalNAV(ActiveOrHistoricCurrencyAndAmount totalNAV) {
 		this.totalNAV = totalNAV;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsTtlNAV")
-	public ActiveOrHistoricCurrencyAndAmount getPreviousTotalNAV() {
-		return previousTotalNAV;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getPreviousTotalNAV() {
+		return previousTotalNAV == null ? Optional.empty() : Optional.of(previousTotalNAV);
 	}
 
-	public void setPreviousTotalNAV(ActiveOrHistoricCurrencyAndAmount previousTotalNAV) {
+	public Fund4 setPreviousTotalNAV(ActiveOrHistoricCurrencyAndAmount previousTotalNAV) {
 		this.previousTotalNAV = previousTotalNAV;
+		return this;
 	}
 
-	@XmlElement(name = "TtlUnitsNb")
-	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
-		return totalUnitsNumber;
+	public Optional<FinancialInstrumentQuantity1> getTotalUnitsNumber() {
+		return totalUnitsNumber == null ? Optional.empty() : Optional.of(totalUnitsNumber);
 	}
 
-	public void setTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsNumber) {
+	public Fund4 setTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsNumber) {
 		this.totalUnitsNumber = totalUnitsNumber;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsTtlUnitsNb")
-	public FinancialInstrumentQuantity1 getPreviousTotalUnitsNumber() {
-		return previousTotalUnitsNumber;
+	public Optional<FinancialInstrumentQuantity1> getPreviousTotalUnitsNumber() {
+		return previousTotalUnitsNumber == null ? Optional.empty() : Optional.of(previousTotalUnitsNumber);
 	}
 
-	public void setPreviousTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 previousTotalUnitsNumber) {
+	public Fund4 setPreviousTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 previousTotalUnitsNumber) {
 		this.previousTotalUnitsNumber = previousTotalUnitsNumber;
+		return this;
 	}
 
-	@XmlElement(name = "PctgOfFndTtlNAV")
-	public PercentageRate getPercentageOfFundTotalNAV() {
-		return percentageOfFundTotalNAV;
+	public Optional<PercentageRate> getPercentageOfFundTotalNAV() {
+		return percentageOfFundTotalNAV == null ? Optional.empty() : Optional.of(percentageOfFundTotalNAV);
 	}
 
-	public void setPercentageOfFundTotalNAV(PercentageRate percentageOfFundTotalNAV) {
+	public Fund4 setPercentageOfFundTotalNAV(PercentageRate percentageOfFundTotalNAV) {
 		this.percentageOfFundTotalNAV = percentageOfFundTotalNAV;
+		return this;
 	}
 }

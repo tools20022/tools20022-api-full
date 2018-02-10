@@ -24,6 +24,7 @@ import com.tools20022.repository.area.catp.ATMDepositResponseV01;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Response to a deposit request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMDepositResponse1", propOrder = {"environment", "context", "transaction"})
 public class ATMDepositResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Envt", required = true)
 	protected ATMEnvironment12 environment;
 	/**
-	 * Environment of the deposit transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -106,7 +108,7 @@ public class ATMDepositResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMDepositResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +120,11 @@ public class ATMDepositResponse1 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment12.mmObject();
 		}
 	};
+	@XmlElement(name = "Cntxt", required = true)
 	protected ATMContext11 context;
 	/**
-	 * Context in which the transaction is performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -147,7 +150,7 @@ public class ATMDepositResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMDepositResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Cntxt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,10 +162,11 @@ public class ATMDepositResponse1 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMContext11.mmObject();
 		}
 	};
+	@XmlElement(name = "Tx", required = true)
 	protected ATMTransaction16 transaction;
 	/**
-	 * Response to the deposit request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -188,7 +192,7 @@ public class ATMDepositResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMDepositResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,9 +208,10 @@ public class ATMDepositResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMDepositResponse1.mmEnvironment, ATMDepositResponse1.mmContext, ATMDepositResponse1.mmTransaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDepositResponse1.mmEnvironment, com.tools20022.repository.msg.ATMDepositResponse1.mmContext,
+						com.tools20022.repository.msg.ATMDepositResponse1.mmTransaction);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ATMDepositResponseV01.mmATMDepositResponse);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMDepositResponse1";
 				definition = "Response to a deposit request.";
@@ -215,30 +220,30 @@ public class ATMDepositResponse1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Envt", required = true)
 	public ATMEnvironment12 getEnvironment() {
 		return environment;
 	}
 
-	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment12 environment) {
-		this.environment = environment;
+	public ATMDepositResponse1 setEnvironment(com.tools20022.repository.msg.ATMEnvironment12 environment) {
+		this.environment = Objects.requireNonNull(environment);
+		return this;
 	}
 
-	@XmlElement(name = "Cntxt", required = true)
 	public ATMContext11 getContext() {
 		return context;
 	}
 
-	public void setContext(com.tools20022.repository.msg.ATMContext11 context) {
-		this.context = context;
+	public ATMDepositResponse1 setContext(com.tools20022.repository.msg.ATMContext11 context) {
+		this.context = Objects.requireNonNull(context);
+		return this;
 	}
 
-	@XmlElement(name = "Tx", required = true)
 	public ATMTransaction16 getTransaction() {
 		return transaction;
 	}
 
-	public void setTransaction(com.tools20022.repository.msg.ATMTransaction16 transaction) {
-		this.transaction = transaction;
+	public ATMDepositResponse1 setTransaction(com.tools20022.repository.msg.ATMTransaction16 transaction) {
+		this.transaction = Objects.requireNonNull(transaction);
+		return this;
 	}
 }

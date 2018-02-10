@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -29,6 +30,8 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -79,8 +82,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,16 +96,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NotificationGeneralInformationExtension1", propOrder = {"placeAndName", "eventStatus", "createDateAndTime", "updateDateAndTime", "approvedDate", "matchDate", "activeUntilDate", "serviceLevelAgreementPeriod",
 		"issuerStatus", "validationNotSupportedReason"})
 public class NotificationGeneralInformationExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -129,7 +133,7 @@ public class NotificationGeneralInformationExtension1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,10 +144,11 @@ public class NotificationGeneralInformationExtension1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtSts", required = true)
 	protected EventWorkflowStatus1Code eventStatus;
 	/**
-	 * Workflow status of the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,6 +164,9 @@ public class NotificationGeneralInformationExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EvtSts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Event Status</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -171,9 +179,10 @@ public class NotificationGeneralInformationExtension1 {
 	 */
 	public static final MMMessageAttribute mmEventStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtSts";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Event Status"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventStatus";
 			definition = "Workflow status of the event.";
@@ -182,11 +191,11 @@ public class NotificationGeneralInformationExtension1 {
 			simpleType_lazy = () -> EventWorkflowStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "CretDtAndTm", required = true)
 	protected ISODateTime createDateAndTime;
 	/**
-	 * Date and time when DTCC (The Depository Trust and Clearing Corporation)
-	 * created the announcement record.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,6 +209,9 @@ public class NotificationGeneralInformationExtension1 {
 	 * NotificationGeneralInformationExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CretDtAndTm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Create Date and Time</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -215,9 +227,10 @@ public class NotificationGeneralInformationExtension1 {
 	 */
 	public static final MMMessageAttribute mmCreateDateAndTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "CretDtAndTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Create Date and Time"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreateDateAndTime";
 			definition = "Date and time when DTCC  (The Depository Trust and Clearing Corporation) created the announcement record.";
@@ -226,11 +239,11 @@ public class NotificationGeneralInformationExtension1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "UpdDtAndTm")
 	protected ISODateTime updateDateAndTime;
 	/**
-	 * Date and time when DTCC (The Depository Trust and Clearing Corporation)
-	 * last updated the announcement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,6 +257,9 @@ public class NotificationGeneralInformationExtension1 {
 	 * NotificationGeneralInformationExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UpdDtAndTm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Update Date and Time</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -259,9 +275,10 @@ public class NotificationGeneralInformationExtension1 {
 	 */
 	public static final MMMessageAttribute mmUpdateDateAndTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "UpdDtAndTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Update Date and Time"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDateAndTime";
 			definition = "Date and time when DTCC  (The Depository Trust and Clearing Corporation) last updated the announcement.";
@@ -270,10 +287,11 @@ public class NotificationGeneralInformationExtension1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "ApprvdDt")
 	protected ISODate approvedDate;
 	/**
-	 * Date by which the announcement is set to approve event status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -288,6 +306,9 @@ public class NotificationGeneralInformationExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ApprvdDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Approved Date</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -301,9 +322,10 @@ public class NotificationGeneralInformationExtension1 {
 	 */
 	public static final MMMessageAttribute mmApprovedDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "ApprvdDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Approved Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedDate";
 			definition = "Date by which the announcement is set to approve event status.";
@@ -312,11 +334,11 @@ public class NotificationGeneralInformationExtension1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "MtchDt")
 	protected ISODate matchDate;
 	/**
-	 * Date used to match records from multiple vendors to the same event. It is
-	 * typically the first key date on the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -330,6 +352,9 @@ public class NotificationGeneralInformationExtension1 {
 	 * NotificationGeneralInformationExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MtchDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Match Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -345,9 +370,10 @@ public class NotificationGeneralInformationExtension1 {
 	 */
 	public static final MMMessageAttribute mmMatchDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "MtchDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Match Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchDate";
 			definition = "Date used to match records from multiple vendors to the same event. It is typically the first key date on the event.";
@@ -356,11 +382,11 @@ public class NotificationGeneralInformationExtension1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ActvUntilDt")
 	protected ISODate activeUntilDate;
 	/**
-	 * Date until which the event will remain in an active status on DTCC (The
-	 * Depository Trust and Clearing Corporation) system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -374,6 +400,9 @@ public class NotificationGeneralInformationExtension1 {
 	 * NotificationGeneralInformationExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ActvUntilDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Active Until Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -389,9 +418,10 @@ public class NotificationGeneralInformationExtension1 {
 	 */
 	public static final MMMessageAttribute mmActiveUntilDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "ActvUntilDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Active Until Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActiveUntilDate";
 			definition = "Date until which the event will remain in an active status on DTCC  (The Depository Trust and Clearing Corporation) system.";
@@ -400,10 +430,11 @@ public class NotificationGeneralInformationExtension1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SvcLvlAgrmtPrd")
 	protected Period3 serviceLevelAgreementPeriod;
 	/**
-	 * Start date and end date of the service level agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -418,6 +449,9 @@ public class NotificationGeneralInformationExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SvcLvlAgrmtPrd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: SLA Begin Date, DTCCSynonym: SLA End Date</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -430,9 +464,10 @@ public class NotificationGeneralInformationExtension1 {
 	 */
 	public static final MMMessageAttribute mmServiceLevelAgreementPeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcLvlAgrmtPrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "SLA Begin Date"), new DTCCSynonym(this, "SLA End Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceLevelAgreementPeriod";
 			definition = "Start date and end date of the service level agreement.";
@@ -441,10 +476,11 @@ public class NotificationGeneralInformationExtension1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
 		}
 	};
+	@XmlElement(name = "IssrSts")
 	protected IssuerStatus1Code issuerStatus;
 	/**
-	 * Status of the event as announced by the issuer/offeror.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -460,6 +496,9 @@ public class NotificationGeneralInformationExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IssrSts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Issuer Status</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -472,9 +511,10 @@ public class NotificationGeneralInformationExtension1 {
 	 */
 	public static final MMMessageAttribute mmIssuerStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "IssrSts";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Issuer Status"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerStatus";
 			definition = "Status of the event as announced by the issuer/offeror.";
@@ -483,13 +523,11 @@ public class NotificationGeneralInformationExtension1 {
 			simpleType_lazy = () -> IssuerStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "VldtnNotSpprtdRsn")
 	protected Max4AlphaNumericText validationNotSupportedReason;
 	/**
-	 * Specifies a reason why a corporate action will not be supported by the
-	 * validation service. This is usually due to the event type or the product
-	 * (security) type. The list of values will be provided externally to the
-	 * schema.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -505,6 +543,9 @@ public class NotificationGeneralInformationExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VldtnNotSpprtdRsn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Validation Not Supported Reason Code</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -519,9 +560,10 @@ public class NotificationGeneralInformationExtension1 {
 	 */
 	public static final MMMessageAttribute mmValidationNotSupportedReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NotificationGeneralInformationExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtnNotSpprtdRsn";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Validation Not Supported Reason Code"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationNotSupportedReason";
 			definition = "Specifies a reason why a corporate action will not be supported by the validation service. This is usually due to the event type or the product (security) type. The list of values will be provided externally to the schema.";
@@ -534,11 +576,12 @@ public class NotificationGeneralInformationExtension1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NotificationGeneralInformationExtension1.mmPlaceAndName, NotificationGeneralInformationExtension1.mmEventStatus, NotificationGeneralInformationExtension1.mmCreateDateAndTime,
-						NotificationGeneralInformationExtension1.mmUpdateDateAndTime, NotificationGeneralInformationExtension1.mmApprovedDate, NotificationGeneralInformationExtension1.mmMatchDate,
-						NotificationGeneralInformationExtension1.mmActiveUntilDate, NotificationGeneralInformationExtension1.mmServiceLevelAgreementPeriod, NotificationGeneralInformationExtension1.mmIssuerStatus,
-						NotificationGeneralInformationExtension1.mmValidationNotSupportedReason);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmPlaceAndName, com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmEventStatus,
+						com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmCreateDateAndTime, com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmUpdateDateAndTime,
+						com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmApprovedDate, com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmMatchDate,
+						com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmActiveUntilDate, com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmServiceLevelAgreementPeriod,
+						com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmIssuerStatus, com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmValidationNotSupportedReason);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "NotificationGeneralInformationExtension1";
 				definition = "Provides additional information regarding notification general information details.";
@@ -547,93 +590,93 @@ public class NotificationGeneralInformationExtension1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public NotificationGeneralInformationExtension1 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "EvtSts", required = true)
 	public EventWorkflowStatus1Code getEventStatus() {
 		return eventStatus;
 	}
 
-	public void setEventStatus(EventWorkflowStatus1Code eventStatus) {
-		this.eventStatus = eventStatus;
+	public NotificationGeneralInformationExtension1 setEventStatus(EventWorkflowStatus1Code eventStatus) {
+		this.eventStatus = Objects.requireNonNull(eventStatus);
+		return this;
 	}
 
-	@XmlElement(name = "CretDtAndTm", required = true)
 	public ISODateTime getCreateDateAndTime() {
 		return createDateAndTime;
 	}
 
-	public void setCreateDateAndTime(ISODateTime createDateAndTime) {
-		this.createDateAndTime = createDateAndTime;
+	public NotificationGeneralInformationExtension1 setCreateDateAndTime(ISODateTime createDateAndTime) {
+		this.createDateAndTime = Objects.requireNonNull(createDateAndTime);
+		return this;
 	}
 
-	@XmlElement(name = "UpdDtAndTm")
-	public ISODateTime getUpdateDateAndTime() {
-		return updateDateAndTime;
+	public Optional<ISODateTime> getUpdateDateAndTime() {
+		return updateDateAndTime == null ? Optional.empty() : Optional.of(updateDateAndTime);
 	}
 
-	public void setUpdateDateAndTime(ISODateTime updateDateAndTime) {
+	public NotificationGeneralInformationExtension1 setUpdateDateAndTime(ISODateTime updateDateAndTime) {
 		this.updateDateAndTime = updateDateAndTime;
+		return this;
 	}
 
-	@XmlElement(name = "ApprvdDt")
-	public ISODate getApprovedDate() {
-		return approvedDate;
+	public Optional<ISODate> getApprovedDate() {
+		return approvedDate == null ? Optional.empty() : Optional.of(approvedDate);
 	}
 
-	public void setApprovedDate(ISODate approvedDate) {
+	public NotificationGeneralInformationExtension1 setApprovedDate(ISODate approvedDate) {
 		this.approvedDate = approvedDate;
+		return this;
 	}
 
-	@XmlElement(name = "MtchDt")
-	public ISODate getMatchDate() {
-		return matchDate;
+	public Optional<ISODate> getMatchDate() {
+		return matchDate == null ? Optional.empty() : Optional.of(matchDate);
 	}
 
-	public void setMatchDate(ISODate matchDate) {
+	public NotificationGeneralInformationExtension1 setMatchDate(ISODate matchDate) {
 		this.matchDate = matchDate;
+		return this;
 	}
 
-	@XmlElement(name = "ActvUntilDt")
-	public ISODate getActiveUntilDate() {
-		return activeUntilDate;
+	public Optional<ISODate> getActiveUntilDate() {
+		return activeUntilDate == null ? Optional.empty() : Optional.of(activeUntilDate);
 	}
 
-	public void setActiveUntilDate(ISODate activeUntilDate) {
+	public NotificationGeneralInformationExtension1 setActiveUntilDate(ISODate activeUntilDate) {
 		this.activeUntilDate = activeUntilDate;
+		return this;
 	}
 
-	@XmlElement(name = "SvcLvlAgrmtPrd")
-	public Period3 getServiceLevelAgreementPeriod() {
-		return serviceLevelAgreementPeriod;
+	public Optional<Period3> getServiceLevelAgreementPeriod() {
+		return serviceLevelAgreementPeriod == null ? Optional.empty() : Optional.of(serviceLevelAgreementPeriod);
 	}
 
-	public void setServiceLevelAgreementPeriod(com.tools20022.repository.msg.Period3 serviceLevelAgreementPeriod) {
+	public NotificationGeneralInformationExtension1 setServiceLevelAgreementPeriod(com.tools20022.repository.msg.Period3 serviceLevelAgreementPeriod) {
 		this.serviceLevelAgreementPeriod = serviceLevelAgreementPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "IssrSts")
-	public IssuerStatus1Code getIssuerStatus() {
-		return issuerStatus;
+	public Optional<IssuerStatus1Code> getIssuerStatus() {
+		return issuerStatus == null ? Optional.empty() : Optional.of(issuerStatus);
 	}
 
-	public void setIssuerStatus(IssuerStatus1Code issuerStatus) {
+	public NotificationGeneralInformationExtension1 setIssuerStatus(IssuerStatus1Code issuerStatus) {
 		this.issuerStatus = issuerStatus;
+		return this;
 	}
 
-	@XmlElement(name = "VldtnNotSpprtdRsn")
-	public Max4AlphaNumericText getValidationNotSupportedReason() {
-		return validationNotSupportedReason;
+	public Optional<Max4AlphaNumericText> getValidationNotSupportedReason() {
+		return validationNotSupportedReason == null ? Optional.empty() : Optional.of(validationNotSupportedReason);
 	}
 
-	public void setValidationNotSupportedReason(Max4AlphaNumericText validationNotSupportedReason) {
+	public NotificationGeneralInformationExtension1 setValidationNotSupportedReason(Max4AlphaNumericText validationNotSupportedReason) {
 		this.validationNotSupportedReason = validationNotSupportedReason;
+		return this;
 	}
 }

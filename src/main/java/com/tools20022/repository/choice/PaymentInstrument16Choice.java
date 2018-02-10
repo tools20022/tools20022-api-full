@@ -26,9 +26,11 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CashAccount26;
 import com.tools20022.repository.msg.Cheque4;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,16 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * PaymentInstrument17Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentInstrument16Choice", propOrder = {"cashAccountDetails", "chequeDetails", "bankersDraftDetails"})
 public class PaymentInstrument16Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CshAcctDtls", required = true)
 	protected List<CashAccount26> cashAccountDetails;
 	/**
-	 * Cash account to credit for the payment of the dividends or of the
-	 * redeemed investments funds or of interest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -125,7 +127,7 @@ public class PaymentInstrument16Choice {
 	public static final MMMessageAssociationEnd mmCashAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
-			componentContext_lazy = () -> PaymentInstrument16Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,10 +139,11 @@ public class PaymentInstrument16Choice {
 			type_lazy = () -> CashAccount26.mmObject();
 		}
 	};
+	@XmlElement(name = "ChqDtls", required = true)
 	protected Cheque4 chequeDetails;
 	/**
-	 * Settlement instructions for a payment by cheque.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -178,7 +181,7 @@ public class PaymentInstrument16Choice {
 	public static final MMMessageAssociationEnd mmChequeDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
-			componentContext_lazy = () -> PaymentInstrument16Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ChqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,10 +194,11 @@ public class PaymentInstrument16Choice {
 			type_lazy = () -> Cheque4.mmObject();
 		}
 	};
+	@XmlElement(name = "BkrsDrftDtls", required = true)
 	protected Cheque4 bankersDraftDetails;
 	/**
-	 * Settlement instructions for a payment by draft.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -232,7 +236,7 @@ public class PaymentInstrument16Choice {
 	public static final MMMessageAssociationEnd mmBankersDraftDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
-			componentContext_lazy = () -> PaymentInstrument16Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument16Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BkrsDrftDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -249,9 +253,10 @@ public class PaymentInstrument16Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentInstrument16Choice.mmCashAccountDetails, PaymentInstrument16Choice.mmChequeDetails, PaymentInstrument16Choice.mmBankersDraftDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument16Choice.mmCashAccountDetails, com.tools20022.repository.choice.PaymentInstrument16Choice.mmChequeDetails,
+						com.tools20022.repository.choice.PaymentInstrument16Choice.mmBankersDraftDetails);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrument16Choice";
 				definition = "Choice of payment instruments.";
@@ -262,30 +267,30 @@ public class PaymentInstrument16Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CshAcctDtls", required = true)
 	public List<CashAccount26> getCashAccountDetails() {
-		return cashAccountDetails;
+		return cashAccountDetails == null ? cashAccountDetails = new ArrayList<>() : cashAccountDetails;
 	}
 
-	public void setCashAccountDetails(List<CashAccount26> cashAccountDetails) {
-		this.cashAccountDetails = cashAccountDetails;
+	public PaymentInstrument16Choice setCashAccountDetails(List<CashAccount26> cashAccountDetails) {
+		this.cashAccountDetails = Objects.requireNonNull(cashAccountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "ChqDtls", required = true)
 	public Cheque4 getChequeDetails() {
 		return chequeDetails;
 	}
 
-	public void setChequeDetails(Cheque4 chequeDetails) {
-		this.chequeDetails = chequeDetails;
+	public PaymentInstrument16Choice setChequeDetails(Cheque4 chequeDetails) {
+		this.chequeDetails = Objects.requireNonNull(chequeDetails);
+		return this;
 	}
 
-	@XmlElement(name = "BkrsDrftDtls", required = true)
 	public Cheque4 getBankersDraftDetails() {
 		return bankersDraftDetails;
 	}
 
-	public void setBankersDraftDetails(Cheque4 bankersDraftDetails) {
-		this.bankersDraftDetails = bankersDraftDetails;
+	public PaymentInstrument16Choice setBankersDraftDetails(Cheque4 bankersDraftDetails) {
+		this.bankersDraftDetails = Objects.requireNonNull(bankersDraftDetails);
+		return this;
 	}
 }

@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.Meeting;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +72,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,17 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * AdditionalRights1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AdditionalRights2", propOrder = {"additionalRight", "additionalRightInformationURLAddress", "additionalRightDeadline", "additionalRightMarketDeadline", "additionalRightThreshold"})
 public class AdditionalRights2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AddtlRght", required = true)
 	protected AdditionalRightCode1Choice additionalRight;
 	/**
-	 * Specific rights granted to the shareholders that can be exercised at
-	 * shareholders meetings, for example, the right to ask questions, the right
-	 * to add items to the agenda or table draft resolutions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +140,7 @@ public class AdditionalRights2 {
 	public static final MMMessageAttribute mmAdditionalRight = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AdditionalRight.mmType;
-			componentContext_lazy = () -> AdditionalRights2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalRights2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRght";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,11 +152,11 @@ public class AdditionalRights2 {
 			complexType_lazy = () -> AdditionalRightCode1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRghtInfURLAdr")
 	protected Max256Text additionalRightInformationURLAddress;
 	/**
-	 * Address to use over the www (HTTP) service where additional information
-	 * on specific rights granted to the shareholders can be found.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,7 +196,7 @@ public class AdditionalRights2 {
 	public static final MMMessageAttribute mmAdditionalRightInformationURLAddress = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
-			componentContext_lazy = () -> AdditionalRights2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalRights2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRghtInfURLAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,12 +208,11 @@ public class AdditionalRights2 {
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRghtDdln")
 	protected DateFormat29Choice additionalRightDeadline;
 	/**
-	 * Additional right granted to determine the date and time by which security
-	 * holders can propose amendments or new resolutions. This deadline is set
-	 * by an intermediary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -253,7 +253,7 @@ public class AdditionalRights2 {
 	public static final MMMessageAttribute mmAdditionalRightDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmDeadline;
-			componentContext_lazy = () -> AdditionalRights2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalRights2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRghtDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -265,12 +265,11 @@ public class AdditionalRights2 {
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRghtMktDdln")
 	protected DateFormat29Choice additionalRightMarketDeadline;
 	/**
-	 * Additional right granted to determine the date and time by which security
-	 * holders can propose amendments or new resolutions. This deadline is set
-	 * by the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -311,7 +310,7 @@ public class AdditionalRights2 {
 	public static final MMMessageAttribute mmAdditionalRightMarketDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
-			componentContext_lazy = () -> AdditionalRights2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalRights2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRghtMktDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -323,11 +322,11 @@ public class AdditionalRights2 {
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRghtThrshld")
 	protected AdditionalRightThreshold1Choice additionalRightThreshold;
 	/**
-	 * Additional right granted to specify the minimum stake in share capital or
-	 * cash value or number of security holders required to table resolutions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -368,7 +367,7 @@ public class AdditionalRights2 {
 	public static final MMMessageAttribute mmAdditionalRightThreshold = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AdditionalRight.mmAdditionalRightThreshold;
-			componentContext_lazy = () -> AdditionalRights2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalRights2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRghtThrshld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -384,10 +383,11 @@ public class AdditionalRights2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AdditionalRights2.mmAdditionalRight, AdditionalRights2.mmAdditionalRightInformationURLAddress, AdditionalRights2.mmAdditionalRightDeadline,
-						AdditionalRights2.mmAdditionalRightMarketDeadline, AdditionalRights2.mmAdditionalRightThreshold);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalRights2.mmAdditionalRight, com.tools20022.repository.msg.AdditionalRights2.mmAdditionalRightInformationURLAddress,
+						com.tools20022.repository.msg.AdditionalRights2.mmAdditionalRightDeadline, com.tools20022.repository.msg.AdditionalRights2.mmAdditionalRightMarketDeadline,
+						com.tools20022.repository.msg.AdditionalRights2.mmAdditionalRightThreshold);
 				trace_lazy = () -> AdditionalRight.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalRights2";
 				definition = "Information about the general meeting, specifying the participation requirements and the voting procedures. Alternatively, it may indicate where such information may be obtained.";
@@ -397,48 +397,48 @@ public class AdditionalRights2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AddtlRght", required = true)
 	public AdditionalRightCode1Choice getAdditionalRight() {
 		return additionalRight;
 	}
 
-	public void setAdditionalRight(AdditionalRightCode1Choice additionalRight) {
-		this.additionalRight = additionalRight;
+	public AdditionalRights2 setAdditionalRight(AdditionalRightCode1Choice additionalRight) {
+		this.additionalRight = Objects.requireNonNull(additionalRight);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRghtInfURLAdr")
-	public Max256Text getAdditionalRightInformationURLAddress() {
-		return additionalRightInformationURLAddress;
+	public Optional<Max256Text> getAdditionalRightInformationURLAddress() {
+		return additionalRightInformationURLAddress == null ? Optional.empty() : Optional.of(additionalRightInformationURLAddress);
 	}
 
-	public void setAdditionalRightInformationURLAddress(Max256Text additionalRightInformationURLAddress) {
+	public AdditionalRights2 setAdditionalRightInformationURLAddress(Max256Text additionalRightInformationURLAddress) {
 		this.additionalRightInformationURLAddress = additionalRightInformationURLAddress;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRghtDdln")
-	public DateFormat29Choice getAdditionalRightDeadline() {
-		return additionalRightDeadline;
+	public Optional<DateFormat29Choice> getAdditionalRightDeadline() {
+		return additionalRightDeadline == null ? Optional.empty() : Optional.of(additionalRightDeadline);
 	}
 
-	public void setAdditionalRightDeadline(DateFormat29Choice additionalRightDeadline) {
+	public AdditionalRights2 setAdditionalRightDeadline(DateFormat29Choice additionalRightDeadline) {
 		this.additionalRightDeadline = additionalRightDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRghtMktDdln")
-	public DateFormat29Choice getAdditionalRightMarketDeadline() {
-		return additionalRightMarketDeadline;
+	public Optional<DateFormat29Choice> getAdditionalRightMarketDeadline() {
+		return additionalRightMarketDeadline == null ? Optional.empty() : Optional.of(additionalRightMarketDeadline);
 	}
 
-	public void setAdditionalRightMarketDeadline(DateFormat29Choice additionalRightMarketDeadline) {
+	public AdditionalRights2 setAdditionalRightMarketDeadline(DateFormat29Choice additionalRightMarketDeadline) {
 		this.additionalRightMarketDeadline = additionalRightMarketDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRghtThrshld")
-	public AdditionalRightThreshold1Choice getAdditionalRightThreshold() {
-		return additionalRightThreshold;
+	public Optional<AdditionalRightThreshold1Choice> getAdditionalRightThreshold() {
+		return additionalRightThreshold == null ? Optional.empty() : Optional.of(additionalRightThreshold);
 	}
 
-	public void setAdditionalRightThreshold(AdditionalRightThreshold1Choice additionalRightThreshold) {
+	public AdditionalRights2 setAdditionalRightThreshold(AdditionalRightThreshold1Choice additionalRightThreshold) {
 		this.additionalRightThreshold = additionalRightThreshold;
+		return this;
 	}
 }

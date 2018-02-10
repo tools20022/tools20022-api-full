@@ -29,9 +29,8 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Tangible items of value to a business.
@@ -85,6 +84,103 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.Asset#mmStandingSettlementInstruction
  * Asset.mmStandingSettlementInstruction}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmAsset Trade.mmAsset}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmAsset
+ * InvestmentPlan.mmAsset}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Portfolio#mmAssetDescription
+ * Portfolio.mmAssetDescription}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmAsset
+ * AssetHolding.mmAsset}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetPartyRole#mmAsset
+ * AssetPartyRole.mmAsset}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetClassification#mmAsset
+ * AssetClassification.mmAsset}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Derivative#mmUnderlyingAsset
+ * Derivative.mmUnderlyingAsset}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Issuance#mmIssuedAsset
+ * Issuance.mmIssuedAsset}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmAsset
+ * StandingSettlementInstruction.mmAsset}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Leg#mmRelatedAsset
+ * Leg.mmRelatedAsset}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tranche#mmAsset
+ * Tranche.mmAsset}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes1#mmProperties
+ * FinancialInstrumentAttributes1.mmProperties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes1#mmAdditionalUnderlyingAttributes
+ * FinancialInstrumentAttributes1.mmAdditionalUnderlyingAttributes}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral1#mmOtherTypeOfCollateral
+ * OtherCollateral1.mmOtherTypeOfCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitution1#mmOtherCollateral
+ * CollateralSubstitution1.mmOtherCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmOtherCollateralDetails
+ * CollateralValuation1.mmOtherCollateralDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecurityAttributes1#mmFinancialInstrumentType
+ * SecurityAttributes1.mmFinancialInstrumentType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitution2#mmOtherCollateral
+ * CollateralSubstitution2.mmOtherCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmOtherCollateral
+ * CollateralValuation2.mmOtherCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral2#mmOtherTypeOfCollateral
+ * OtherCollateral2.mmOtherTypeOfCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral3#mmLetterOfCreditIdentification
+ * OtherCollateral3.mmLetterOfCreditIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral3#mmOtherTypeOfCollateral
+ * OtherCollateral3.mmOtherTypeOfCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral4#mmOtherTypeOfCollateral
+ * OtherCollateral4.mmOtherTypeOfCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitution3#mmOtherCollateral
+ * CollateralSubstitution3.mmOtherCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitution5#mmOtherCollateral
+ * CollateralSubstitution5.mmOtherCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitution4#mmOtherCollateral
+ * CollateralSubstitution4.mmOtherCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral7#mmOtherTypeOfCollateral
+ * OtherCollateral7.mmOtherTypeOfCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmOtherCollateral
+ * CollateralValuation5.mmOtherCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral6#mmLetterOfCreditIdentification
+ * OtherCollateral6.mmLetterOfCreditIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral6#mmOtherTypeOfCollateral
+ * OtherCollateral6.mmOtherTypeOfCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral5#mmOtherTypeOfCollateral
+ * OtherCollateral5.mmOtherTypeOfCollateral}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -337,107 +433,10 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmAsset Trade.mmAsset}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmAsset
- * InvestmentPlan.mmAsset}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Portfolio#mmAssetDescription
- * Portfolio.mmAssetDescription}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmAsset
- * AssetHolding.mmAsset}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetPartyRole#mmAsset
- * AssetPartyRole.mmAsset}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetClassification#mmAsset
- * AssetClassification.mmAsset}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Derivative#mmUnderlyingAsset
- * Derivative.mmUnderlyingAsset}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Issuance#mmIssuedAsset
- * Issuance.mmIssuedAsset}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmAsset
- * StandingSettlementInstruction.mmAsset}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Leg#mmRelatedAsset
- * Leg.mmRelatedAsset}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tranche#mmAsset
- * Tranche.mmAsset}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes1#mmProperties
- * FinancialInstrumentAttributes1.mmProperties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes1#mmAdditionalUnderlyingAttributes
- * FinancialInstrumentAttributes1.mmAdditionalUnderlyingAttributes}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral1#mmOtherTypeOfCollateral
- * OtherCollateral1.mmOtherTypeOfCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitution1#mmOtherCollateral
- * CollateralSubstitution1.mmOtherCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmOtherCollateralDetails
- * CollateralValuation1.mmOtherCollateralDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityAttributes1#mmFinancialInstrumentType
- * SecurityAttributes1.mmFinancialInstrumentType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitution2#mmOtherCollateral
- * CollateralSubstitution2.mmOtherCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmOtherCollateral
- * CollateralValuation2.mmOtherCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral2#mmOtherTypeOfCollateral
- * OtherCollateral2.mmOtherTypeOfCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral3#mmLetterOfCreditIdentification
- * OtherCollateral3.mmLetterOfCreditIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral3#mmOtherTypeOfCollateral
- * OtherCollateral3.mmOtherTypeOfCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral4#mmOtherTypeOfCollateral
- * OtherCollateral4.mmOtherTypeOfCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitution3#mmOtherCollateral
- * CollateralSubstitution3.mmOtherCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitution5#mmOtherCollateral
- * CollateralSubstitution5.mmOtherCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitution4#mmOtherCollateral
- * CollateralSubstitution4.mmOtherCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral7#mmOtherTypeOfCollateral
- * OtherCollateral7.mmOtherTypeOfCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmOtherCollateral
- * CollateralValuation5.mmOtherCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral6#mmLetterOfCreditIdentification
- * OtherCollateral6.mmLetterOfCreditIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral6#mmOtherTypeOfCollateral
- * OtherCollateral6.mmOtherTypeOfCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral5#mmOtherTypeOfCollateral
- * OtherCollateral5.mmOtherTypeOfCollateral}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -453,10 +452,8 @@ public class Asset {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected ISODateTime expiryDate;
 	/**
-	 * Date on which an order, a privilege, an entitlement or an offer
-	 * terminates. For an interest bearing asset, it is the date/time at which
-	 * it becomes due and has to be repaid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -712,8 +709,8 @@ public class Asset {
 					FinancialInstrumentAttributes65.mmExpiryDate, OtherCollateral7.mmExpiryDate, OtherCollateral6.mmExpiryDate, OtherCollateral5.mmExpiryDate, FinancialInstrumentAttributes73.mmExpiryDate,
 					FinancialInstrumentAttributes70.mmExpiryDate, FinancialInstrumentAttributes69.mmExpiryDate, FinancialInstrumentAttributes75.mmExpiryDate, FinancialInstrumentAttributes78.mmExpiryDate,
 					FinancialInstrumentAttributes79.mmExpiryDate, FinancialInstrumentAttributes81.mmExpiryDate, FinancialInstrumentAttributes85.mmExpiryDate, FinancialInstrumentAttributes84.mmExpiryDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date on which an order, a privilege, an entitlement or an offer terminates. For an interest bearing asset, it is the date/time at which it becomes due and has to be repaid.";
@@ -732,10 +729,8 @@ public class Asset {
 	};
 	protected ISODateTime maturityDate;
 	/**
-	 * Planned date, at the time of issuance, on which an interest bearing
-	 * financial instrument becomes due and principal is repaid by the issuer to
-	 * the investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1150,8 +1145,8 @@ public class Asset {
 					FinancialInstrumentAttributes80.mmMaturityDate, CorporateActionConfirmationSecuritiesMovementDetailsSD5.mmMaturityDate, SecuritiesCollateral8.mmMaturityDate, FinancialInstrumentAttributes85.mmMaturityDate,
 					FinancialInstrumentAttributes84.mmMaturityDate, FinancialInstrumentAttributes83.mmMaturityDate, SecuredMarketTransaction4.mmMaturityDate, ForeignExchangeSwapTransaction3.mmMaturityDate,
 					OvernightIndexSwapTransaction4.mmMaturityDate, UnsecuredMarketTransaction4.mmMaturityDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaturityDate";
 			definition = "Planned date, at the time of issuance, on which an interest bearing financial instrument becomes due and principal is repaid by the issuer to the investor.";
@@ -1170,9 +1165,8 @@ public class Asset {
 	};
 	protected List<com.tools20022.repository.entity.Derivative> derivative;
 	/**
-	 * Specifies the parameters of a derivative instrument based on a specific
-	 * asset.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1271,8 +1265,8 @@ public class Asset {
 					TwoLegTransactionType1Choice.mmFutureOrOptionDetails, FinancialInstrument28.mmDerivative, FinancialInstrument2.mmAdditionalDerivativeAttributes, AggregateBalanceInformation26.mmAdditionalDerivativeAttributes,
 					AggregateBalanceInformation27.mmAdditionalDerivativeAttributes, AggregateBalanceInformation31.mmAdditionalDerivativeAttributes, AggregateBalanceInformation32.mmAdditionalDerivativeAttributes,
 					SecuritiesReferenceDataReport5.mmDerivativeInstrumentAttributes, TransparencyDataReport10.mmDerivative, SecurityInstrumentDescription13.mmDerivativeInstrumentAttributes);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Derivative";
 			definition = "Specifies the parameters of a derivative instrument based on a specific asset.";
@@ -1284,8 +1278,8 @@ public class Asset {
 	};
 	protected List<com.tools20022.repository.entity.AssetHolding> assetValue;
 	/**
-	 * Specifies the different values of an asset.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1410,8 +1404,8 @@ public class Asset {
 					QuantityBreakdown25.mmAccountBaseCurrencyAmounts, QuantityBreakdown25.mmInstrumentCurrencyAmounts, QuantityBreakdown25.mmAlternateReportingCurrencyAmounts, QuantityBreakDown2.mmAccountBaseCurrencyAmounts,
 					QuantityBreakDown2.mmInstrumentCurrencyAmounts, QuantityBreakDown2.mmAlternateReportingCurrencyAmounts, QuantityBreakdown28.mmAccountBaseCurrencyAmounts, QuantityBreakdown28.mmInstrumentCurrencyAmounts,
 					QuantityBreakdown28.mmAlternateReportingCurrencyAmounts, QuantityBreakdown39.mmAccountBaseCurrencyAmounts, QuantityBreakdown39.mmInstrumentCurrencyAmounts, QuantityBreakdown39.mmAlternateReportingCurrencyAmounts);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssetValue";
 			definition = "Specifies the different values of an asset.";
@@ -1423,8 +1417,8 @@ public class Asset {
 	};
 	protected List<com.tools20022.repository.entity.AssetClassification> assetClassification;
 	/**
-	 * Classification of the asset.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1500,8 +1494,8 @@ public class Asset {
 			derivation_lazy = () -> Arrays.asList(AdditionalInformation3.mmClassificationType, AdditionalInformation4.mmClassificationType, AdditionalInformation7.mmClassificationType, AdditionalInformation8.mmClassificationType,
 					FinancialInstrumentAttributes1.mmProductType, CommonFinancialInstrumentAttributes1.mmClassificationType, AdditionalInformation9.mmClassificationType, AdditionalInformation10.mmClassificationType,
 					AdditionalInformation11.mmClassificationType, AdditionalInformation12.mmClassificationType, AdditionalInformation13.mmClassificationType, AdditionalInformation14.mmClassificationType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssetClassification";
 			definition = "Classification of the asset.";
@@ -1513,8 +1507,8 @@ public class Asset {
 	};
 	protected FinancialAssetTypeCategoryCode financialAssetCategory;
 	/**
-	 * Categorization of financial asset type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1550,8 +1544,8 @@ public class Asset {
 	public static final MMBusinessAttribute mmFinancialAssetCategory = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BalanceDetails6.mmCategory, DerivativeForeignExchange3.mmFXType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialAssetCategory";
 			definition = "Categorization of financial asset type.";
@@ -1570,8 +1564,8 @@ public class Asset {
 	};
 	protected AssetPartyRole assetPartyRole;
 	/**
-	 * Party which plays a role for a specific asset.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1615,8 +1609,8 @@ public class Asset {
 	public static final MMBusinessAssociationEnd mmAssetPartyRole = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(InstrumentLeg2.mmOtherBusinessParties, InstrumentLeg3.mmOtherBusinessParties);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssetPartyRole";
 			definition = "Party which plays a role for a specific asset.";
@@ -1629,8 +1623,8 @@ public class Asset {
 	};
 	protected List<com.tools20022.repository.entity.Issuance> issuance;
 	/**
-	 * Details regarding the issuance of an asset.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1672,8 +1666,8 @@ public class Asset {
 	public static final MMBusinessAssociationEnd mmIssuance = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt2.mmGlobalType, CommonFinancialInstrumentAttributes1.mmIssuance);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Issuance";
 			definition = "Details regarding the issuance of an asset.";
@@ -1685,8 +1679,8 @@ public class Asset {
 	};
 	protected Portfolio portfolio;
 	/**
-	 * Asset which is part of a portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1718,8 +1712,8 @@ public class Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmPortfolio = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Portfolio";
 			definition = "Asset which is part of a portfolio.";
@@ -1732,8 +1726,8 @@ public class Asset {
 	};
 	protected CurrencyAndAmount investmentAmount;
 	/**
-	 * Invested amount of the portfolio asset.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1758,8 +1752,8 @@ public class Asset {
 	 */
 	public static final MMBusinessAttribute mmInvestmentAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAmount";
 			definition = "Invested amount of the portfolio asset.";
@@ -1778,8 +1772,8 @@ public class Asset {
 	};
 	protected PercentageRate investmentRate;
 	/**
-	 * Invested percentage of the portfolio asset.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1804,8 +1798,8 @@ public class Asset {
 	 */
 	public static final MMBusinessAttribute mmInvestmentRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentRate";
 			definition = "Invested percentage of the portfolio asset.";
@@ -1824,8 +1818,8 @@ public class Asset {
 	};
 	protected ISODateTime effectiveDate;
 	/**
-	 * Cut off date/time for the information of the specified portfolio asset.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1851,8 +1845,8 @@ public class Asset {
 	 */
 	public static final MMBusinessAttribute mmEffectiveDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EffectiveDate";
 			definition = "Cut off date/time for the information of the specified portfolio asset.";
@@ -1871,8 +1865,8 @@ public class Asset {
 	};
 	protected InstrumentSubStructureTypeCode financialInstrumentSubStructure;
 	/**
-	 * Indicates the type of deal for structured finance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1912,8 +1906,8 @@ public class Asset {
 	public static final MMBusinessAttribute mmFinancialInstrumentSubStructure = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InstrumentSubStructureType1Choice.mmCode, InstrumentSubStructureType1Choice.mmProprietary, Debt2.mmInstrumentStructureType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentSubStructure";
 			definition = "Indicates the type of deal for structured finance.";
@@ -1932,8 +1926,8 @@ public class Asset {
 	};
 	protected InvestmentPlan investmentPlan;
 	/**
-	 * Investment plan that invests in a specific asset.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1965,8 +1959,8 @@ public class Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentPlan = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentPlan";
 			definition = "Investment plan that invests in a specific asset.";
@@ -1979,8 +1973,8 @@ public class Asset {
 	};
 	protected List<com.tools20022.repository.entity.Trade> trade;
 	/**
-	 * Trade which which involves a specific asset.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2010,8 +2004,8 @@ public class Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trade";
 			definition = "Trade which which involves a specific asset.";
@@ -2023,9 +2017,8 @@ public class Asset {
 	};
 	protected Tranche tranche;
 	/**
-	 * One of a number of related assets offered as part of the same
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2065,8 +2058,8 @@ public class Asset {
 	public static final MMBusinessAssociationEnd mmTranche = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(LoanContract1.mmTranche);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tranche";
 			definition = "One of a number of related assets offered as part of the same transaction.";
@@ -2079,8 +2072,8 @@ public class Asset {
 	};
 	protected List<com.tools20022.repository.entity.Leg> legAdditionalInformation;
 	/**
-	 * Provides details about the leg.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2136,8 +2129,8 @@ public class Asset {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmLegAttributes, QuoteEntry2.mmInstrumentLegGroupDetails, QuoteEntry2.mmLegFinancialInstrumentAttributes, QuoteEntry1.mmInstrumentLegGroupDetails,
 					MultiLegOrder1.mmLegGroupDetails, IndicationOfInterest1.mmInstrumentLegGroupDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LegAdditionalInformation";
 			definition = "Provides details about the leg.";
@@ -2149,8 +2142,8 @@ public class Asset {
 	};
 	protected StandingSettlementInstruction standingSettlementInstruction;
 	/**
-	 * Standing settlement instruction for which an asset is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2184,8 +2177,8 @@ public class Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmStandingSettlementInstruction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingSettlementInstruction";
 			definition = "Standing settlement instruction for which an asset is specified.";
@@ -2200,7 +2193,7 @@ public class Asset {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Asset";
 				definition = "Tangible items of value to a business.";
@@ -2254,143 +2247,161 @@ public class Asset {
 		return expiryDate;
 	}
 
-	public void setExpiryDate(ISODateTime expiryDate) {
-		this.expiryDate = expiryDate;
+	public Asset setExpiryDate(ISODateTime expiryDate) {
+		this.expiryDate = Objects.requireNonNull(expiryDate);
+		return this;
 	}
 
 	public ISODateTime getMaturityDate() {
 		return maturityDate;
 	}
 
-	public void setMaturityDate(ISODateTime maturityDate) {
-		this.maturityDate = maturityDate;
+	public Asset setMaturityDate(ISODateTime maturityDate) {
+		this.maturityDate = Objects.requireNonNull(maturityDate);
+		return this;
 	}
 
 	public List<Derivative> getDerivative() {
-		return derivative;
+		return derivative == null ? derivative = new ArrayList<>() : derivative;
 	}
 
-	public void setDerivative(List<com.tools20022.repository.entity.Derivative> derivative) {
-		this.derivative = derivative;
+	public Asset setDerivative(List<com.tools20022.repository.entity.Derivative> derivative) {
+		this.derivative = Objects.requireNonNull(derivative);
+		return this;
 	}
 
 	public List<AssetHolding> getAssetValue() {
-		return assetValue;
+		return assetValue == null ? assetValue = new ArrayList<>() : assetValue;
 	}
 
-	public void setAssetValue(List<com.tools20022.repository.entity.AssetHolding> assetValue) {
-		this.assetValue = assetValue;
+	public Asset setAssetValue(List<com.tools20022.repository.entity.AssetHolding> assetValue) {
+		this.assetValue = Objects.requireNonNull(assetValue);
+		return this;
 	}
 
 	public List<AssetClassification> getAssetClassification() {
-		return assetClassification;
+		return assetClassification == null ? assetClassification = new ArrayList<>() : assetClassification;
 	}
 
-	public void setAssetClassification(List<com.tools20022.repository.entity.AssetClassification> assetClassification) {
-		this.assetClassification = assetClassification;
+	public Asset setAssetClassification(List<com.tools20022.repository.entity.AssetClassification> assetClassification) {
+		this.assetClassification = Objects.requireNonNull(assetClassification);
+		return this;
 	}
 
 	public FinancialAssetTypeCategoryCode getFinancialAssetCategory() {
 		return financialAssetCategory;
 	}
 
-	public void setFinancialAssetCategory(FinancialAssetTypeCategoryCode financialAssetCategory) {
-		this.financialAssetCategory = financialAssetCategory;
+	public Asset setFinancialAssetCategory(FinancialAssetTypeCategoryCode financialAssetCategory) {
+		this.financialAssetCategory = Objects.requireNonNull(financialAssetCategory);
+		return this;
 	}
 
-	public AssetPartyRole getAssetPartyRole() {
-		return assetPartyRole;
+	public Optional<AssetPartyRole> getAssetPartyRole() {
+		return assetPartyRole == null ? Optional.empty() : Optional.of(assetPartyRole);
 	}
 
-	public void setAssetPartyRole(com.tools20022.repository.entity.AssetPartyRole assetPartyRole) {
+	public Asset setAssetPartyRole(com.tools20022.repository.entity.AssetPartyRole assetPartyRole) {
 		this.assetPartyRole = assetPartyRole;
+		return this;
 	}
 
 	public List<Issuance> getIssuance() {
-		return issuance;
+		return issuance == null ? issuance = new ArrayList<>() : issuance;
 	}
 
-	public void setIssuance(List<com.tools20022.repository.entity.Issuance> issuance) {
-		this.issuance = issuance;
+	public Asset setIssuance(List<com.tools20022.repository.entity.Issuance> issuance) {
+		this.issuance = Objects.requireNonNull(issuance);
+		return this;
 	}
 
-	public Portfolio getPortfolio() {
-		return portfolio;
+	public Optional<Portfolio> getPortfolio() {
+		return portfolio == null ? Optional.empty() : Optional.of(portfolio);
 	}
 
-	public void setPortfolio(com.tools20022.repository.entity.Portfolio portfolio) {
+	public Asset setPortfolio(com.tools20022.repository.entity.Portfolio portfolio) {
 		this.portfolio = portfolio;
+		return this;
 	}
 
 	public CurrencyAndAmount getInvestmentAmount() {
 		return investmentAmount;
 	}
 
-	public void setInvestmentAmount(CurrencyAndAmount investmentAmount) {
-		this.investmentAmount = investmentAmount;
+	public Asset setInvestmentAmount(CurrencyAndAmount investmentAmount) {
+		this.investmentAmount = Objects.requireNonNull(investmentAmount);
+		return this;
 	}
 
 	public PercentageRate getInvestmentRate() {
 		return investmentRate;
 	}
 
-	public void setInvestmentRate(PercentageRate investmentRate) {
-		this.investmentRate = investmentRate;
+	public Asset setInvestmentRate(PercentageRate investmentRate) {
+		this.investmentRate = Objects.requireNonNull(investmentRate);
+		return this;
 	}
 
 	public ISODateTime getEffectiveDate() {
 		return effectiveDate;
 	}
 
-	public void setEffectiveDate(ISODateTime effectiveDate) {
-		this.effectiveDate = effectiveDate;
+	public Asset setEffectiveDate(ISODateTime effectiveDate) {
+		this.effectiveDate = Objects.requireNonNull(effectiveDate);
+		return this;
 	}
 
 	public InstrumentSubStructureTypeCode getFinancialInstrumentSubStructure() {
 		return financialInstrumentSubStructure;
 	}
 
-	public void setFinancialInstrumentSubStructure(InstrumentSubStructureTypeCode financialInstrumentSubStructure) {
-		this.financialInstrumentSubStructure = financialInstrumentSubStructure;
+	public Asset setFinancialInstrumentSubStructure(InstrumentSubStructureTypeCode financialInstrumentSubStructure) {
+		this.financialInstrumentSubStructure = Objects.requireNonNull(financialInstrumentSubStructure);
+		return this;
 	}
 
-	public InvestmentPlan getInvestmentPlan() {
-		return investmentPlan;
+	public Optional<InvestmentPlan> getInvestmentPlan() {
+		return investmentPlan == null ? Optional.empty() : Optional.of(investmentPlan);
 	}
 
-	public void setInvestmentPlan(com.tools20022.repository.entity.InvestmentPlan investmentPlan) {
+	public Asset setInvestmentPlan(com.tools20022.repository.entity.InvestmentPlan investmentPlan) {
 		this.investmentPlan = investmentPlan;
+		return this;
 	}
 
 	public List<Trade> getTrade() {
-		return trade;
+		return trade == null ? trade = new ArrayList<>() : trade;
 	}
 
-	public void setTrade(List<com.tools20022.repository.entity.Trade> trade) {
-		this.trade = trade;
+	public Asset setTrade(List<com.tools20022.repository.entity.Trade> trade) {
+		this.trade = Objects.requireNonNull(trade);
+		return this;
 	}
 
 	public Tranche getTranche() {
 		return tranche;
 	}
 
-	public void setTranche(com.tools20022.repository.entity.Tranche tranche) {
-		this.tranche = tranche;
+	public Asset setTranche(com.tools20022.repository.entity.Tranche tranche) {
+		this.tranche = Objects.requireNonNull(tranche);
+		return this;
 	}
 
 	public List<Leg> getLegAdditionalInformation() {
-		return legAdditionalInformation;
+		return legAdditionalInformation == null ? legAdditionalInformation = new ArrayList<>() : legAdditionalInformation;
 	}
 
-	public void setLegAdditionalInformation(List<com.tools20022.repository.entity.Leg> legAdditionalInformation) {
-		this.legAdditionalInformation = legAdditionalInformation;
+	public Asset setLegAdditionalInformation(List<com.tools20022.repository.entity.Leg> legAdditionalInformation) {
+		this.legAdditionalInformation = Objects.requireNonNull(legAdditionalInformation);
+		return this;
 	}
 
 	public StandingSettlementInstruction getStandingSettlementInstruction() {
 		return standingSettlementInstruction;
 	}
 
-	public void setStandingSettlementInstruction(com.tools20022.repository.entity.StandingSettlementInstruction standingSettlementInstruction) {
-		this.standingSettlementInstruction = standingSettlementInstruction;
+	public Asset setStandingSettlementInstruction(com.tools20022.repository.entity.StandingSettlementInstruction standingSettlementInstruction) {
+		this.standingSettlementInstruction = Objects.requireNonNull(standingSettlementInstruction);
+		return this;
 	}
 }

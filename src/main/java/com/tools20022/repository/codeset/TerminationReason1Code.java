@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TerminationReasonCode;
+import com.tools20022.repository.codeset.TerminationReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the termination reason.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TerminationReasonCode
- * TerminationReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminationReason1Code#mmReductionTermsFulfilled
- * TerminationReason1Code.mmReductionTermsFulfilled}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminationReason1Code#ReductionTermsFulfilled
+ * TerminationReason1Code.ReductionTermsFulfilled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminationReason1Code#mmTenderNonAcceptance
- * TerminationReason1Code.mmTenderNonAcceptance}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminationReason1Code#TenderNonAcceptance
+ * TerminationReason1Code.TenderNonAcceptance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminationReason1Code#mmUnderlyingBusinessFinished
- * TerminationReason1Code.mmUnderlyingBusinessFinished}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminationReason1Code#UnderlyingBusinessFinished
+ * TerminationReason1Code.UnderlyingBusinessFinished}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminationReason1Code#mmWarrantyObligationPeriodExpired
- * TerminationReason1Code.mmWarrantyObligationPeriodExpired}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminationReason1Code#WarrantyObligationPeriodExpired
+ * TerminationReason1Code.WarrantyObligationPeriodExpired}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TerminationReasonCode
+ * TerminationReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the termination reason."</li>
  * </ul>
  */
-public class TerminationReason1Code extends TerminationReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TerminationReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class TerminationReason1Code extends TerminationReasonCode {
 	 * name} = "ReductionTermsFulfilled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReductionTermsFulfilled = new MMCode() {
+	public static final TerminationReason1Code ReductionTermsFulfilled = new TerminationReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReductionTermsFulfilled";
-			owner_lazy = () -> TerminationReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminationReason1Code.mmObject();
+			codeName = TerminationReasonCode.ReductionTermsFulfilled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class TerminationReason1Code extends TerminationReasonCode {
 	 * name} = "TenderNonAcceptance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTenderNonAcceptance = new MMCode() {
+	public static final TerminationReason1Code TenderNonAcceptance = new TerminationReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TenderNonAcceptance";
-			owner_lazy = () -> TerminationReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminationReason1Code.mmObject();
+			codeName = TerminationReasonCode.TenderNonAcceptance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class TerminationReason1Code extends TerminationReasonCode {
 	 * name} = "UnderlyingBusinessFinished"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnderlyingBusinessFinished = new MMCode() {
+	public static final TerminationReason1Code UnderlyingBusinessFinished = new TerminationReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingBusinessFinished";
-			owner_lazy = () -> TerminationReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminationReason1Code.mmObject();
+			codeName = TerminationReasonCode.UnderlyingBusinessFinished.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,27 +166,60 @@ public class TerminationReason1Code extends TerminationReasonCode {
 	 * name} = "WarrantyObligationPeriodExpired"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWarrantyObligationPeriodExpired = new MMCode() {
+	public static final TerminationReason1Code WarrantyObligationPeriodExpired = new TerminationReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarrantyObligationPeriodExpired";
-			owner_lazy = () -> TerminationReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminationReason1Code.mmObject();
+			codeName = TerminationReasonCode.WarrantyObligationPeriodExpired.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TerminationReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TerminationReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("REFU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminationReason1Code";
 				definition = "Specifies the termination reason.";
-				code_lazy = () -> Arrays.asList(TerminationReason1Code.mmReductionTermsFulfilled, TerminationReason1Code.mmTenderNonAcceptance, TerminationReason1Code.mmUnderlyingBusinessFinished,
-						TerminationReason1Code.mmWarrantyObligationPeriodExpired);
 				trace_lazy = () -> TerminationReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminationReason1Code.ReductionTermsFulfilled, com.tools20022.repository.codeset.TerminationReason1Code.TenderNonAcceptance,
+						com.tools20022.repository.codeset.TerminationReason1Code.UnderlyingBusinessFinished, com.tools20022.repository.codeset.TerminationReason1Code.WarrantyObligationPeriodExpired);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ReductionTermsFulfilled.getCodeName().get(), ReductionTermsFulfilled);
+		codesByName.put(TenderNonAcceptance.getCodeName().get(), TenderNonAcceptance);
+		codesByName.put(UnderlyingBusinessFinished.getCodeName().get(), UnderlyingBusinessFinished);
+		codesByName.put(WarrantyObligationPeriodExpired.getCodeName().get(), WarrantyObligationPeriodExpired);
+	}
+
+	public static TerminationReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TerminationReason1Code[] values() {
+		TerminationReason1Code[] values = new TerminationReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TerminationReason1Code> {
+		@Override
+		public TerminationReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TerminationReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SystemParty2", propOrder = {"openingDate", "closingDate"})
 public class SystemParty2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OpngDt")
 	protected ISODate openingDate;
 	/**
-	 * Specifies the opening date of the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,7 +103,7 @@ public class SystemParty2 {
 	 */
 	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemParty2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty2.mmObject();
 			isDerived = false;
 			xmlTag = "OpngDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +114,11 @@ public class SystemParty2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ClsgDt")
 	protected ISODate closingDate;
 	/**
-	 * Specifies the closing date of the party
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,7 +144,7 @@ public class SystemParty2 {
 	 */
 	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemParty2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty2.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,8 +159,8 @@ public class SystemParty2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SystemParty2.mmOpeningDate, SystemParty2.mmClosingDate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemParty2.mmOpeningDate, com.tools20022.repository.msg.SystemParty2.mmClosingDate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemParty2";
 				definition = "Provides the definition of a party within a system. \r\nA party shall denote any legal or organisational entity required in the system. \r\nThis entity shall store the parties from the first three levels: the system operator, the central securities depositaries, the participants of the central securities depositaries, the national central banks and payment banks.";
@@ -166,21 +169,21 @@ public class SystemParty2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OpngDt")
-	public ISODate getOpeningDate() {
-		return openingDate;
+	public Optional<ISODate> getOpeningDate() {
+		return openingDate == null ? Optional.empty() : Optional.of(openingDate);
 	}
 
-	public void setOpeningDate(ISODate openingDate) {
+	public SystemParty2 setOpeningDate(ISODate openingDate) {
 		this.openingDate = openingDate;
+		return this;
 	}
 
-	@XmlElement(name = "ClsgDt")
-	public ISODate getClosingDate() {
-		return closingDate;
+	public Optional<ISODate> getClosingDate() {
+		return closingDate == null ? Optional.empty() : Optional.of(closingDate);
 	}
 
-	public void setClosingDate(ISODate closingDate) {
+	public SystemParty2 setClosingDate(ISODate closingDate) {
 		this.closingDate = closingDate;
+		return this;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PolypropyleneCommodityPlastic1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AssetClassCommodityPolypropylene1Choice", propOrder = "plastic")
 public class AssetClassCommodityPolypropylene1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Plstc", required = true)
 	protected PolypropyleneCommodityPlastic1 plastic;
 	/**
-	 * Plastic commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -104,7 +106,7 @@ public class AssetClassCommodityPolypropylene1Choice {
 	public static final MMMessageAssociationEnd mmPlastic = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityPolypropylene1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityPolypropylene1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Plstc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,9 +122,9 @@ public class AssetClassCommodityPolypropylene1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AssetClassCommodityPolypropylene1Choice.mmPlastic);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityPolypropylene1Choice.mmPlastic);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityPolypropylene1Choice";
 				definition = "Defines commodity attributes of a derivative where the type is polypropylene.";
@@ -131,12 +133,12 @@ public class AssetClassCommodityPolypropylene1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Plstc", required = true)
 	public PolypropyleneCommodityPlastic1 getPlastic() {
 		return plastic;
 	}
 
-	public void setPlastic(PolypropyleneCommodityPlastic1 plastic) {
-		this.plastic = plastic;
+	public AssetClassCommodityPolypropylene1Choice setPlastic(PolypropyleneCommodityPlastic1 plastic) {
+		this.plastic = Objects.requireNonNull(plastic);
+		return this;
 	}
 }

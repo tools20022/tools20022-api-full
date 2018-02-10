@@ -20,33 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TaxTypeCode;
+import com.tools20022.repository.codeset.TaxType4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of tax.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TaxTypeCode TaxTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType4Code#mmWithholdingOfForeignTax
- * TaxType4Code.mmWithholdingOfForeignTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType4Code#WithholdingOfForeignTax
+ * TaxType4Code.WithholdingOfForeignTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxType4Code#mmWithholdingOfLocalTax
- * TaxType4Code.mmWithholdingOfLocalTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxType4Code#WithholdingOfLocalTax
+ * TaxType4Code.WithholdingOfLocalTax}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TaxTypeCode TaxTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -63,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of tax."</li>
  * </ul>
  */
-public class TaxType4Code extends TaxTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TaxType4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -81,11 +86,12 @@ public class TaxType4Code extends TaxTypeCode {
 	 * name} = "WithholdingOfForeignTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithholdingOfForeignTax = new MMCode() {
+	public static final TaxType4Code WithholdingOfForeignTax = new TaxType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingOfForeignTax";
-			owner_lazy = () -> TaxType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType4Code.mmObject();
+			codeName = TaxTypeCode.WithholdingOfForeignTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -103,26 +109,57 @@ public class TaxType4Code extends TaxTypeCode {
 	 * name} = "WithholdingOfLocalTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithholdingOfLocalTax = new MMCode() {
+	public static final TaxType4Code WithholdingOfLocalTax = new TaxType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingOfLocalTax";
-			owner_lazy = () -> TaxType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxType4Code.mmObject();
+			codeName = TaxTypeCode.WithholdingOfLocalTax.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TaxType4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TaxType4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("WITF");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxType4Code";
 				definition = "Specifies the type of tax.";
-				code_lazy = () -> Arrays.asList(TaxType4Code.mmWithholdingOfForeignTax, TaxType4Code.mmWithholdingOfLocalTax);
 				trace_lazy = () -> TaxTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType4Code.WithholdingOfForeignTax, com.tools20022.repository.codeset.TaxType4Code.WithholdingOfLocalTax);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(WithholdingOfForeignTax.getCodeName().get(), WithholdingOfForeignTax);
+		codesByName.put(WithholdingOfLocalTax.getCodeName().get(), WithholdingOfLocalTax);
+	}
+
+	public static TaxType4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TaxType4Code[] values() {
+		TaxType4Code[] values = new TaxType4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TaxType4Code> {
+		@Override
+		public TaxType4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TaxType4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

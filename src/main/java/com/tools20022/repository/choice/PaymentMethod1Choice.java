@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,16 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentMethod1Choice", propOrder = {"code", "proprietary"})
 public class PaymentMethod1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected Max4AlphaNumericText code;
 	/**
-	 * Method of payment for the remittance of the CSD or NCB to the invoicing
-	 * party, in a coded form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -103,7 +104,7 @@ public class PaymentMethod1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentMethod1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentMethod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,11 +115,11 @@ public class PaymentMethod1Choice {
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected Max210Text proprietary;
 	/**
-	 * Method of payment for the remittance of the CSD or the NCB to the
-	 * invoicing party, in a proprietary free text format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,7 +148,7 @@ public class PaymentMethod1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentMethod1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentMethod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,8 +163,8 @@ public class PaymentMethod1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentMethod1Choice.mmCode, PaymentMethod1Choice.mmProprietary);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentMethod1Choice.mmCode, com.tools20022.repository.choice.PaymentMethod1Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentMethod1Choice";
 				definition = "Method of payment for the remittance of the CSD or the NCB to the invoicing party.";
@@ -172,21 +173,21 @@ public class PaymentMethod1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public Max4AlphaNumericText getCode() {
 		return code;
 	}
 
-	public void setCode(Max4AlphaNumericText code) {
-		this.code = code;
+	public PaymentMethod1Choice setCode(Max4AlphaNumericText code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public Max210Text getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(Max210Text proprietary) {
-		this.proprietary = proprietary;
+	public PaymentMethod1Choice setProprietary(Max210Text proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

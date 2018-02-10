@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.FailureReasonCode;
+import com.tools20022.repository.codeset.FailureReason5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Incident occurring on a device.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.FailureReasonCode
- * FailureReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason5Code#mmSecurity
- * FailureReason5Code.mmSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason5Code#Security
+ * FailureReason5Code.Security}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FailureReason5Code#mmHardware
- * FailureReason5Code.mmHardware}</li>
+ * {@linkplain com.tools20022.repository.codeset.FailureReason5Code#Hardware
+ * FailureReason5Code.Hardware}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.FailureReasonCode
+ * FailureReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Incident occurring on a device."</li>
  * </ul>
  */
-public class FailureReason5Code extends FailureReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FailureReason5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class FailureReason5Code extends FailureReasonCode {
 	 * name} = "Security"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecurity = new MMCode() {
+	public static final FailureReason5Code Security = new FailureReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
-			owner_lazy = () -> FailureReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason5Code.mmObject();
+			codeName = FailureReasonCode.Security.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class FailureReason5Code extends FailureReasonCode {
 	 * name} = "Hardware"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHardware = new MMCode() {
+	public static final FailureReason5Code Hardware = new FailureReason5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hardware";
-			owner_lazy = () -> FailureReason5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FailureReason5Code.mmObject();
+			codeName = FailureReasonCode.Hardware.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, FailureReason5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FailureReason5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FailureReason5Code";
 				definition = "Incident occurring on a device.";
-				code_lazy = () -> Arrays.asList(FailureReason5Code.mmSecurity, FailureReason5Code.mmHardware);
 				trace_lazy = () -> FailureReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FailureReason5Code.Security, com.tools20022.repository.codeset.FailureReason5Code.Hardware);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Security.getCodeName().get(), Security);
+		codesByName.put(Hardware.getCodeName().get(), Hardware);
+	}
+
+	public static FailureReason5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FailureReason5Code[] values() {
+		FailureReason5Code[] values = new FailureReason5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FailureReason5Code> {
+		@Override
+		public FailureReason5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FailureReason5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

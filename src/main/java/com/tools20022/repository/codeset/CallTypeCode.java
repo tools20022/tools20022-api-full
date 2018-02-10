@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CallTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines the type of execution of the call feature.
@@ -31,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CallTypeCode#mmLottery
- * CallTypeCode.mmLottery}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CallTypeCode#mmProRata
- * CallTypeCode.mmProRata}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CallTypeCode#Lottery
+ * CallTypeCode.Lottery}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CallTypeCode#ProRata
+ * CallTypeCode.ProRata}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the type of execution of the call feature."</li>
  * </ul>
  */
-public class CallTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CallTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,12 +94,12 @@ public class CallTypeCode {
 	 * definition} = "Type of execution of the call feature is a lottery."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLottery = new MMCode() {
+	public static final CallTypeCode Lottery = new CallTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lottery";
 			definition = "Type of execution of the call feature is a lottery.";
-			owner_lazy = () -> CallTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CallTypeCode.mmObject();
 			codeName = "LOTT";
 		}
 	};
@@ -117,28 +123,58 @@ public class CallTypeCode {
 	 * definition} = "Type of execution of the call feature is pro-rata."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProRata = new MMCode() {
+	public static final CallTypeCode ProRata = new CallTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProRata";
 			definition = "Type of execution of the call feature is pro-rata.";
-			owner_lazy = () -> CallTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CallTypeCode.mmObject();
 			codeName = "PRTA";
 		}
 	};
+	final static private LinkedHashMap<String, CallTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CallTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("LOTT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CallTypeCode";
 				definition = "Defines the type of execution of the call feature.";
-				code_lazy = () -> Arrays.asList(CallTypeCode.mmLottery, CallTypeCode.mmProRata);
 				derivation_lazy = () -> Arrays.asList(CallType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CallTypeCode.Lottery, com.tools20022.repository.codeset.CallTypeCode.ProRata);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Lottery.getCodeName().get(), Lottery);
+		codesByName.put(ProRata.getCodeName().get(), ProRata);
+	}
+
+	public static CallTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CallTypeCode[] values() {
+		CallTypeCode[] values = new CallTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CallTypeCode> {
+		@Override
+		public CallTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CallTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

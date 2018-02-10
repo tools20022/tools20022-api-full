@@ -20,40 +20,43 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AdjustmentTypeCode;
+import com.tools20022.repository.codeset.AdjustmentType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of adjustment.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AdjustmentType2Code#Rebate
+ * AdjustmentType2Code.Rebate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AdjustmentType2Code#Discount
+ * AdjustmentType2Code.Discount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AdjustmentType2Code#CreditNote
+ * AdjustmentType2Code.CreditNote}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AdjustmentType2Code#Surcharge
+ * AdjustmentType2Code.Surcharge}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.AdjustmentTypeCode
  * AdjustmentTypeCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AdjustmentType2Code#mmRebate
- * AdjustmentType2Code.mmRebate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AdjustmentType2Code#mmDiscount
- * AdjustmentType2Code.mmDiscount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AdjustmentType2Code#mmCreditNote
- * AdjustmentType2Code.mmCreditNote}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AdjustmentType2Code#mmSurcharge
- * AdjustmentType2Code.mmSurcharge}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of adjustment."</li>
  * </ul>
  */
-public class AdjustmentType2Code extends AdjustmentTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AdjustmentType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +93,12 @@ public class AdjustmentType2Code extends AdjustmentTypeCode {
 	 * name} = "Rebate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRebate = new MMCode() {
+	public static final AdjustmentType2Code Rebate = new AdjustmentType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rebate";
-			owner_lazy = () -> AdjustmentType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AdjustmentType2Code.mmObject();
+			codeName = AdjustmentTypeCode.Rebate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +117,12 @@ public class AdjustmentType2Code extends AdjustmentTypeCode {
 	 * name} = "Discount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiscount = new MMCode() {
+	public static final AdjustmentType2Code Discount = new AdjustmentType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
-			owner_lazy = () -> AdjustmentType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AdjustmentType2Code.mmObject();
+			codeName = AdjustmentTypeCode.Discount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +141,12 @@ public class AdjustmentType2Code extends AdjustmentTypeCode {
 	 * name} = "CreditNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreditNote = new MMCode() {
+	public static final AdjustmentType2Code CreditNote = new AdjustmentType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditNote";
-			owner_lazy = () -> AdjustmentType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AdjustmentType2Code.mmObject();
+			codeName = AdjustmentTypeCode.CreditNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,26 +165,60 @@ public class AdjustmentType2Code extends AdjustmentTypeCode {
 	 * name} = "Surcharge"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSurcharge = new MMCode() {
+	public static final AdjustmentType2Code Surcharge = new AdjustmentType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Surcharge";
-			owner_lazy = () -> AdjustmentType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AdjustmentType2Code.mmObject();
+			codeName = AdjustmentTypeCode.Surcharge.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AdjustmentType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AdjustmentType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("REBA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdjustmentType2Code";
 				definition = "Specifies the type of adjustment.";
-				code_lazy = () -> Arrays.asList(AdjustmentType2Code.mmRebate, AdjustmentType2Code.mmDiscount, AdjustmentType2Code.mmCreditNote, AdjustmentType2Code.mmSurcharge);
 				trace_lazy = () -> AdjustmentTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdjustmentType2Code.Rebate, com.tools20022.repository.codeset.AdjustmentType2Code.Discount, com.tools20022.repository.codeset.AdjustmentType2Code.CreditNote,
+						com.tools20022.repository.codeset.AdjustmentType2Code.Surcharge);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Rebate.getCodeName().get(), Rebate);
+		codesByName.put(Discount.getCodeName().get(), Discount);
+		codesByName.put(CreditNote.getCodeName().get(), CreditNote);
+		codesByName.put(Surcharge.getCodeName().get(), Surcharge);
+	}
+
+	public static AdjustmentType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AdjustmentType2Code[] values() {
+		AdjustmentType2Code[] values = new AdjustmentType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AdjustmentType2Code> {
+		@Override
+		public AdjustmentType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AdjustmentType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

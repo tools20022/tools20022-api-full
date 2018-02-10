@@ -20,36 +20,40 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ValidationCode;
+import com.tools20022.repository.codeset.Validation1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the validation of a signature used to sign the file.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ValidationCode ValidationCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Validation1Code#mmValidationSuccessful
- * Validation1Code.mmValidationSuccessful}</li>
+ * {@linkplain com.tools20022.repository.codeset.Validation1Code#ValidationSuccessful
+ * Validation1Code.ValidationSuccessful}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Validation1Code#mmValidationUnkonwn
- * Validation1Code.mmValidationUnkonwn}</li>
+ * {@linkplain com.tools20022.repository.codeset.Validation1Code#ValidationUnkonwn
+ * Validation1Code.ValidationUnkonwn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Validation1Code#mmValidationFailed
- * Validation1Code.mmValidationFailed}</li>
+ * {@linkplain com.tools20022.repository.codeset.Validation1Code#ValidationFailed
+ * Validation1Code.ValidationFailed}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ValidationCode ValidationCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the validation of a signature used to sign the file."</li>
  * </ul>
  */
-public class Validation1Code extends ValidationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Validation1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,11 +85,12 @@ public class Validation1Code extends ValidationCode {
 	 * name} = "ValidationSuccessful"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmValidationSuccessful = new MMCode() {
+	public static final Validation1Code ValidationSuccessful = new Validation1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationSuccessful";
-			owner_lazy = () -> Validation1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Validation1Code.mmObject();
+			codeName = ValidationCode.ValidationSuccessful.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -103,11 +109,12 @@ public class Validation1Code extends ValidationCode {
 	 * name} = "ValidationUnkonwn"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmValidationUnkonwn = new MMCode() {
+	public static final Validation1Code ValidationUnkonwn = new Validation1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationUnkonwn";
-			owner_lazy = () -> Validation1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Validation1Code.mmObject();
+			codeName = ValidationCode.ValidationUnkonwn.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -126,25 +133,58 @@ public class Validation1Code extends ValidationCode {
 	 * name} = "ValidationFailed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmValidationFailed = new MMCode() {
+	public static final Validation1Code ValidationFailed = new Validation1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationFailed";
-			owner_lazy = () -> Validation1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Validation1Code.mmObject();
+			codeName = ValidationCode.ValidationFailed.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Validation1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Validation1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Validation1Code";
 				definition = "Specifies the validation of a signature used to sign the file.";
-				code_lazy = () -> Arrays.asList(Validation1Code.mmValidationSuccessful, Validation1Code.mmValidationUnkonwn, Validation1Code.mmValidationFailed);
 				trace_lazy = () -> ValidationCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Validation1Code.ValidationSuccessful, com.tools20022.repository.codeset.Validation1Code.ValidationUnkonwn,
+						com.tools20022.repository.codeset.Validation1Code.ValidationFailed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ValidationSuccessful.getCodeName().get(), ValidationSuccessful);
+		codesByName.put(ValidationUnkonwn.getCodeName().get(), ValidationUnkonwn);
+		codesByName.put(ValidationFailed.getCodeName().get(), ValidationFailed);
+	}
+
+	public static Validation1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Validation1Code[] values() {
+		Validation1Code[] values = new Validation1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Validation1Code> {
+		@Override
+		public Validation1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Validation1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

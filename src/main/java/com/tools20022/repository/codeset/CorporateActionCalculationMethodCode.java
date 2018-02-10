@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CorporateActionCalculationMethodCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the calculation method.
@@ -32,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionCalculationMethodCode#mmProRata
- * CorporateActionCalculationMethodCode.mmProRata}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionCalculationMethodCode#ProRata
+ * CorporateActionCalculationMethodCode.ProRata}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionCalculationMethodCode#mmLottery
- * CorporateActionCalculationMethodCode.mmLottery}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionCalculationMethodCode#Lottery
+ * CorporateActionCalculationMethodCode.Lottery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionCalculationMethodCode#mmNominalReduction
- * CorporateActionCalculationMethodCode.mmNominalReduction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionCalculationMethodCode#NominalReduction
+ * CorporateActionCalculationMethodCode.NominalReduction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionCalculationMethodCode#mmNoNominalReduction
- * CorporateActionCalculationMethodCode.mmNoNominalReduction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionCalculationMethodCode#NoNominalReduction
+ * CorporateActionCalculationMethodCode.NoNominalReduction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -56,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the calculation method."</li>
  * </ul>
  */
-public class CorporateActionCalculationMethodCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionCalculationMethodCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,12 +104,12 @@ public class CorporateActionCalculationMethodCode {
 	 * definition} = "Pro-rata for drawings."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProRata = new MMCode() {
+	public static final CorporateActionCalculationMethodCode ProRata = new CorporateActionCalculationMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProRata";
 			definition = "Pro-rata for drawings.";
-			owner_lazy = () -> CorporateActionCalculationMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionCalculationMethodCode.mmObject();
 			codeName = "PROR";
 		}
 	};
@@ -128,12 +134,12 @@ public class CorporateActionCalculationMethodCode {
 	 * definition} = "Lottery for drawings."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLottery = new MMCode() {
+	public static final CorporateActionCalculationMethodCode Lottery = new CorporateActionCalculationMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Lottery";
 			definition = "Lottery for drawings.";
-			owner_lazy = () -> CorporateActionCalculationMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionCalculationMethodCode.mmObject();
 			codeName = "LOTT";
 		}
 	};
@@ -158,12 +164,12 @@ public class CorporateActionCalculationMethodCode {
 	 * definition} = "Reduction of nominal for partial redemption."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNominalReduction = new MMCode() {
+	public static final CorporateActionCalculationMethodCode NominalReduction = new CorporateActionCalculationMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NominalReduction";
 			definition = "Reduction of nominal for partial redemption.";
-			owner_lazy = () -> CorporateActionCalculationMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionCalculationMethodCode.mmObject();
 			codeName = "NOMI";
 		}
 	};
@@ -190,29 +196,61 @@ public class CorporateActionCalculationMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoNominalReduction = new MMCode() {
+	public static final CorporateActionCalculationMethodCode NoNominalReduction = new CorporateActionCalculationMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoNominalReduction";
 			definition = "Without  reduction of nominal (via pool factor) for partial redemption.";
-			owner_lazy = () -> CorporateActionCalculationMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionCalculationMethodCode.mmObject();
 			codeName = "NNOM";
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionCalculationMethodCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionCalculationMethodCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PROR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionCalculationMethodCode";
 				definition = "Specifies the calculation method.";
-				code_lazy = () -> Arrays.asList(CorporateActionCalculationMethodCode.mmProRata, CorporateActionCalculationMethodCode.mmLottery, CorporateActionCalculationMethodCode.mmNominalReduction,
-						CorporateActionCalculationMethodCode.mmNoNominalReduction);
 				derivation_lazy = () -> Arrays.asList(CorporateActionCalculationMethod1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionCalculationMethodCode.ProRata, com.tools20022.repository.codeset.CorporateActionCalculationMethodCode.Lottery,
+						com.tools20022.repository.codeset.CorporateActionCalculationMethodCode.NominalReduction, com.tools20022.repository.codeset.CorporateActionCalculationMethodCode.NoNominalReduction);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ProRata.getCodeName().get(), ProRata);
+		codesByName.put(Lottery.getCodeName().get(), Lottery);
+		codesByName.put(NominalReduction.getCodeName().get(), NominalReduction);
+		codesByName.put(NoNominalReduction.getCodeName().get(), NoNominalReduction);
+	}
+
+	public static CorporateActionCalculationMethodCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionCalculationMethodCode[] values() {
+		CorporateActionCalculationMethodCode[] values = new CorporateActionCalculationMethodCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionCalculationMethodCode> {
+		@Override
+		public CorporateActionCalculationMethodCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionCalculationMethodCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

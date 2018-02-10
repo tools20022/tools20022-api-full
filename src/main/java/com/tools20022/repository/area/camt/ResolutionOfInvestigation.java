@@ -30,6 +30,8 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -82,22 +84,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementArchive
- * CashManagementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "camt.029.001.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "camt.029.001.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -116,6 +102,22 @@ import javax.xml.bind.annotation.*;
  * ResolutionOfInvestigation.mmCorrectionTransaction}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "camt.029.001.01"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementArchive
+ * CashManagementArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "camt.029.001.01"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.029.001.01}</li>
@@ -131,16 +133,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "camt.029.001.01", propOrder = {"assignment", "resolvedCase", "status", "correctionTransaction"})
 public class ResolutionOfInvestigation {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Assgnmt", required = true)
 	protected CaseAssignment assignment;
 	/**
-	 * Note: the Assigner must be the sender of this confirmation and the
-	 * Assignee must be the receiver.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -181,10 +183,11 @@ public class ResolutionOfInvestigation {
 			}
 		}
 	};
+	@XmlElement(name = "RslvdCase", required = true)
 	protected Case resolvedCase;
 	/**
-	 * Identifies a resolved case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,10 +225,11 @@ public class ResolutionOfInvestigation {
 			}
 		}
 	};
+	@XmlElement(name = "Sts")
 	protected InvestigationStatusChoice status;
 	/**
-	 * Indicates the status of the investigation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -265,10 +269,11 @@ public class ResolutionOfInvestigation {
 			}
 		}
 	};
+	@XmlElement(name = "CrrctnTx")
 	protected PaymentInstructionExtract correctionTransaction;
 	/**
-	 * References a transaction intitiated to fix the case under investigation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -342,43 +347,43 @@ public class ResolutionOfInvestigation {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment getAssignment() {
 		return assignment;
 	}
 
-	public void setAssignment(CaseAssignment assignment) {
-		this.assignment = assignment;
+	public ResolutionOfInvestigation setAssignment(CaseAssignment assignment) {
+		this.assignment = Objects.requireNonNull(assignment);
+		return this;
 	}
 
-	@XmlElement(name = "RslvdCase", required = true)
 	public Case getResolvedCase() {
 		return resolvedCase;
 	}
 
-	public void setResolvedCase(Case resolvedCase) {
-		this.resolvedCase = resolvedCase;
+	public ResolutionOfInvestigation setResolvedCase(Case resolvedCase) {
+		this.resolvedCase = Objects.requireNonNull(resolvedCase);
+		return this;
 	}
 
-	@XmlElement(name = "Sts")
-	public InvestigationStatusChoice getStatus() {
-		return status;
+	public Optional<InvestigationStatusChoice> getStatus() {
+		return status == null ? Optional.empty() : Optional.of(status);
 	}
 
-	public void setStatus(InvestigationStatusChoice status) {
+	public ResolutionOfInvestigation setStatus(InvestigationStatusChoice status) {
 		this.status = status;
+		return this;
 	}
 
-	@XmlElement(name = "CrrctnTx")
-	public PaymentInstructionExtract getCorrectionTransaction() {
-		return correctionTransaction;
+	public Optional<PaymentInstructionExtract> getCorrectionTransaction() {
+		return correctionTransaction == null ? Optional.empty() : Optional.of(correctionTransaction);
 	}
 
-	public void setCorrectionTransaction(PaymentInstructionExtract correctionTransaction) {
+	public ResolutionOfInvestigation setCorrectionTransaction(PaymentInstructionExtract correctionTransaction) {
 		this.correctionTransaction = correctionTransaction;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.029.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.029.001.01")
 	static public class Document {
 		@XmlElement(name = "camt.029.001.01", required = true)
 		public ResolutionOfInvestigation messageBody;

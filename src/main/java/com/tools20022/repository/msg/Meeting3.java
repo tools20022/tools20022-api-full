@@ -31,9 +31,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Meeting;
 import com.tools20022.repository.entity.Quorum;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -78,8 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDateStatus1Rule#forMeeting3
+ * ConstraintDateStatus1Rule.forMeeting3}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,15 +105,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Meeting3", propOrder = {"dateAndTime", "dateStatus", "quorumRequired", "location", "quorumQuantity"})
 public class Meeting3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DtAndTm", required = true)
 	protected DateFormat2Choice dateAndTime;
 	/**
-	 * Date and time at which the meeting will take place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +154,7 @@ public class Meeting3 {
 	public static final MMMessageAttribute mmDateAndTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmDateAndTime;
-			componentContext_lazy = () -> Meeting3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting3.mmObject();
 			isDerived = false;
 			xmlTag = "DtAndTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,10 +166,11 @@ public class Meeting3 {
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DtSts")
 	protected MeetingDateStatus1Code dateStatus;
 	/**
-	 * Indicates the status of a meeting date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,7 +210,7 @@ public class Meeting3 {
 	public static final MMMessageAttribute mmDateStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmDateStatus;
-			componentContext_lazy = () -> Meeting3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting3.mmObject();
 			isDerived = false;
 			xmlTag = "DtSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,11 +222,11 @@ public class Meeting3 {
 			simpleType_lazy = () -> MeetingDateStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "QrmReqrd", required = true)
 	protected YesNoIndicator quorumRequired;
 	/**
-	 * Specifies whether a minimum number of security representation is required
-	 * to hold a meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,7 +268,7 @@ public class Meeting3 {
 	public static final MMMessageAttribute mmQuorumRequired = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Quorum.mmQuorumRequired;
-			componentContext_lazy = () -> Meeting3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting3.mmObject();
 			isDerived = false;
 			xmlTag = "QrmReqrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -271,10 +280,11 @@ public class Meeting3 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Lctn", required = true)
 	protected List<LocationFormat1Choice> location;
 	/**
-	 * Specifies location where meeting will take place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -313,7 +323,7 @@ public class Meeting3 {
 	public static final MMMessageAssociationEnd mmLocation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmMeetingLocation;
-			componentContext_lazy = () -> Meeting3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting3.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -326,10 +336,11 @@ public class Meeting3 {
 			type_lazy = () -> LocationFormat1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "QrmQty")
 	protected QuorumQuantity1Choice quorumQuantity;
 	/**
-	 * Minimum quantity of securities required to hold a meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -370,7 +381,7 @@ public class Meeting3 {
 	public static final MMMessageAttribute mmQuorumQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Quorum.mmQuantity;
-			componentContext_lazy = () -> Meeting3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting3.mmObject();
 			isDerived = false;
 			xmlTag = "QrmQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -386,10 +397,12 @@ public class Meeting3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Meeting3.mmDateAndTime, Meeting3.mmDateStatus, Meeting3.mmQuorumRequired, Meeting3.mmLocation, Meeting3.mmQuorumQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting3.mmDateAndTime, com.tools20022.repository.msg.Meeting3.mmDateStatus, com.tools20022.repository.msg.Meeting3.mmQuorumRequired,
+						com.tools20022.repository.msg.Meeting3.mmLocation, com.tools20022.repository.msg.Meeting3.mmQuorumQuantity);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV03.mmMeetingDetails, MeetingNotificationV04.mmMeetingDetails);
 				trace_lazy = () -> Meeting.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDateStatus1Rule.forMeeting3);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Meeting3";
 				definition = "Specifies the physical parameters of a shareholders meeting. Several dates and places can be defined for a meeting";
@@ -399,48 +412,48 @@ public class Meeting3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DtAndTm", required = true)
 	public DateFormat2Choice getDateAndTime() {
 		return dateAndTime;
 	}
 
-	public void setDateAndTime(DateFormat2Choice dateAndTime) {
-		this.dateAndTime = dateAndTime;
+	public Meeting3 setDateAndTime(DateFormat2Choice dateAndTime) {
+		this.dateAndTime = Objects.requireNonNull(dateAndTime);
+		return this;
 	}
 
-	@XmlElement(name = "DtSts")
-	public MeetingDateStatus1Code getDateStatus() {
-		return dateStatus;
+	public Optional<MeetingDateStatus1Code> getDateStatus() {
+		return dateStatus == null ? Optional.empty() : Optional.of(dateStatus);
 	}
 
-	public void setDateStatus(MeetingDateStatus1Code dateStatus) {
+	public Meeting3 setDateStatus(MeetingDateStatus1Code dateStatus) {
 		this.dateStatus = dateStatus;
+		return this;
 	}
 
-	@XmlElement(name = "QrmReqrd", required = true)
 	public YesNoIndicator getQuorumRequired() {
 		return quorumRequired;
 	}
 
-	public void setQuorumRequired(YesNoIndicator quorumRequired) {
-		this.quorumRequired = quorumRequired;
+	public Meeting3 setQuorumRequired(YesNoIndicator quorumRequired) {
+		this.quorumRequired = Objects.requireNonNull(quorumRequired);
+		return this;
 	}
 
-	@XmlElement(name = "Lctn", required = true)
 	public List<LocationFormat1Choice> getLocation() {
-		return location;
+		return location == null ? location = new ArrayList<>() : location;
 	}
 
-	public void setLocation(List<LocationFormat1Choice> location) {
-		this.location = location;
+	public Meeting3 setLocation(List<LocationFormat1Choice> location) {
+		this.location = Objects.requireNonNull(location);
+		return this;
 	}
 
-	@XmlElement(name = "QrmQty")
-	public QuorumQuantity1Choice getQuorumQuantity() {
-		return quorumQuantity;
+	public Optional<QuorumQuantity1Choice> getQuorumQuantity() {
+		return quorumQuantity == null ? Optional.empty() : Optional.of(quorumQuantity);
 	}
 
-	public void setQuorumQuantity(QuorumQuantity1Choice quorumQuantity) {
+	public Meeting3 setQuorumQuantity(QuorumQuantity1Choice quorumQuantity) {
 		this.quorumQuantity = quorumQuantity;
+		return this;
 	}
 }

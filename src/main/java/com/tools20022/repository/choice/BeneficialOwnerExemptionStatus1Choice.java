@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.msg.IncompetentExemptionStatus1;
 import com.tools20022.repository.msg.NonExemptExemptionStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BeneficialOwnerExemptionStatus1Choice", propOrder = {"deceased", "incompetent", "nonExempt"})
 public class BeneficialOwnerExemptionStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dcsd", required = true)
 	protected DeceasedExemptionStatus1 deceased;
 	/**
-	 * Beneficial owner is deceased.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -92,6 +95,9 @@ public class BeneficialOwnerExemptionStatus1Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Dcsd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Deceased</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -104,9 +110,10 @@ public class BeneficialOwnerExemptionStatus1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDeceased = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BeneficialOwnerExemptionStatus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dcsd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Deceased"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deceased";
 			definition = "Beneficial owner is deceased.";
@@ -116,10 +123,11 @@ public class BeneficialOwnerExemptionStatus1Choice {
 			type_lazy = () -> DeceasedExemptionStatus1.mmObject();
 		}
 	};
+	@XmlElement(name = "Incmptnt", required = true)
 	protected IncompetentExemptionStatus1 incompetent;
 	/**
-	 * Beneficial owner is incompetent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -134,6 +142,9 @@ public class BeneficialOwnerExemptionStatus1Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Incmptnt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Incompetent</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -146,9 +157,10 @@ public class BeneficialOwnerExemptionStatus1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmIncompetent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BeneficialOwnerExemptionStatus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Incmptnt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Incompetent"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incompetent";
 			definition = "Beneficial owner is incompetent.";
@@ -158,10 +170,11 @@ public class BeneficialOwnerExemptionStatus1Choice {
 			type_lazy = () -> IncompetentExemptionStatus1.mmObject();
 		}
 	};
+	@XmlElement(name = "NonXmpt", required = true)
 	protected NonExemptExemptionStatus1 nonExempt;
 	/**
-	 * Beneficial owner is non-exempt.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -176,6 +189,9 @@ public class BeneficialOwnerExemptionStatus1Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NonXmpt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Non Exempt</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -188,9 +204,10 @@ public class BeneficialOwnerExemptionStatus1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmNonExempt = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BeneficialOwnerExemptionStatus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NonXmpt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Non Exempt"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonExempt";
 			definition = "Beneficial owner is non-exempt.";
@@ -204,8 +221,9 @@ public class BeneficialOwnerExemptionStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BeneficialOwnerExemptionStatus1Choice.mmDeceased, BeneficialOwnerExemptionStatus1Choice.mmIncompetent, BeneficialOwnerExemptionStatus1Choice.mmNonExempt);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice.mmDeceased, com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice.mmIncompetent,
+						com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice.mmNonExempt);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BeneficialOwnerExemptionStatus1Choice";
 				definition = "Exemption reason for the beneficial owner. Usually applicable for CD (Cash Deposit) Early Redemption events.";
@@ -214,30 +232,30 @@ public class BeneficialOwnerExemptionStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dcsd", required = true)
 	public DeceasedExemptionStatus1 getDeceased() {
 		return deceased;
 	}
 
-	public void setDeceased(DeceasedExemptionStatus1 deceased) {
-		this.deceased = deceased;
+	public BeneficialOwnerExemptionStatus1Choice setDeceased(DeceasedExemptionStatus1 deceased) {
+		this.deceased = Objects.requireNonNull(deceased);
+		return this;
 	}
 
-	@XmlElement(name = "Incmptnt", required = true)
 	public IncompetentExemptionStatus1 getIncompetent() {
 		return incompetent;
 	}
 
-	public void setIncompetent(IncompetentExemptionStatus1 incompetent) {
-		this.incompetent = incompetent;
+	public BeneficialOwnerExemptionStatus1Choice setIncompetent(IncompetentExemptionStatus1 incompetent) {
+		this.incompetent = Objects.requireNonNull(incompetent);
+		return this;
 	}
 
-	@XmlElement(name = "NonXmpt", required = true)
 	public NonExemptExemptionStatus1 getNonExempt() {
 		return nonExempt;
 	}
 
-	public void setNonExempt(NonExemptExemptionStatus1 nonExempt) {
-		this.nonExempt = nonExempt;
+	public BeneficialOwnerExemptionStatus1Choice setNonExempt(NonExemptExemptionStatus1 nonExempt) {
+		this.nonExempt = Objects.requireNonNull(nonExempt);
+		return this;
 	}
 }

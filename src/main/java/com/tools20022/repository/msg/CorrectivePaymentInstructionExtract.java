@@ -31,6 +31,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -45,13 +46,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#mmInstructedAmountOrInterbankSettlementAmount
+ * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#InstructedAmountOrInterbankSettlementAmount
  * CorrectivePaymentInstructionExtract.
- * mmInstructedAmountOrInterbankSettlementAmount}</li>
+ * InstructedAmountOrInterbankSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#mmRequestedExecutionDateOrInterbankSettlementDate
+ * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInstructionExtract#RequestedExecutionDateOrInterbankSettlementDate
  * CorrectivePaymentInstructionExtract.
- * mmRequestedExecutionDateOrInterbankSettlementDate}</li>
+ * RequestedExecutionDateOrInterbankSettlementDate}</li>
  * </ul>
  * </li>
  * <li>
@@ -81,8 +82,21 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAmountAndRequestedExecutionDateRule#forCorrectivePaymentInstructionExtract
+ * ConstraintInstructedAmountAndRequestedExecutionDateRule.
+ * forCorrectivePaymentInstructionExtract}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInterbankSettlementAmountAndDateRule#forCorrectivePaymentInstructionExtract
+ * ConstraintInterbankSettlementAmountAndDateRule.
+ * forCorrectivePaymentInstructionExtract}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -96,16 +110,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorrectivePaymentInstructionExtract", propOrder = {"instructionIdentification", "instructedAmount", "interbankSettlementAmount", "requestedExecutionDate", "interbankSettlementDate"})
 public class CorrectivePaymentInstructionExtract {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InstrId", required = true)
 	protected Max35Text instructionIdentification;
 	/**
-	 * Identification of the corrective payment instruction (eg, field 20 of an
-	 * MT 103) sent to resolve the case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,7 +154,7 @@ public class CorrectivePaymentInstructionExtract {
 	public static final MMMessageAttribute mmInstructionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmInstructionIdentification;
-			componentContext_lazy = () -> CorrectivePaymentInstructionExtract.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmObject();
 			isDerived = false;
 			xmlTag = "InstrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,12 +165,11 @@ public class CorrectivePaymentInstructionExtract {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "InstdAmt", required = true)
 	protected CurrencyAndAmount instructedAmount;
 	/**
-	 * Amount of money to be moved between the debtor and creditor, before
-	 * deduction of charges, expressed in the currency as ordered by the
-	 * initiating party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,7 +205,7 @@ public class CorrectivePaymentInstructionExtract {
 	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
-			componentContext_lazy = () -> CorrectivePaymentInstructionExtract.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,11 +216,11 @@ public class CorrectivePaymentInstructionExtract {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmAmt", required = true)
 	protected CurrencyAndAmount interbankSettlementAmount;
 	/**
-	 * Amount of money moved between the instructing agent and the instructed
-	 * agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -243,7 +256,7 @@ public class CorrectivePaymentInstructionExtract {
 	public static final MMMessageAttribute mmInterbankSettlementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
-			componentContext_lazy = () -> CorrectivePaymentInstructionExtract.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -254,11 +267,11 @@ public class CorrectivePaymentInstructionExtract {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdExctnDt", required = true)
 	protected ISODate requestedExecutionDate;
 	/**
-	 * Date the debtor requests the clearing agent to process the payment
-	 * instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -293,7 +306,7 @@ public class CorrectivePaymentInstructionExtract {
 	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRequestedExecutionDate;
-			componentContext_lazy = () -> CorrectivePaymentInstructionExtract.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -304,12 +317,11 @@ public class CorrectivePaymentInstructionExtract {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmDt", required = true)
 	protected ISODate interbankSettlementDate;
 	/**
-	 * Date on which the amount of money ceases to be available to the agent
-	 * that owes it and when the amount of money becomes available to the agent
-	 * to which it is due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -344,7 +356,7 @@ public class CorrectivePaymentInstructionExtract {
 	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
-			componentContext_lazy = () -> CorrectivePaymentInstructionExtract.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -390,13 +402,13 @@ public class CorrectivePaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmInstructedAmountOrInterbankSettlementAmount = new MMXor() {
+	public static final MMXor InstructedAmountOrInterbankSettlementAmount = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountOrInterbankSettlementAmount";
 			definition = "If InstructedAmount is present, then InterbankSettlementAmount is not allowed.\nIf InterbankSettlementAmount is present, then InstructedAmount is not allowed.";
-			messageComponent_lazy = () -> CorrectivePaymentInstructionExtract.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(CorrectivePaymentInstructionExtract.mmInstructedAmount, CorrectivePaymentInstructionExtract.mmInterbankSettlementAmount);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmInstructedAmount, com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmInterbankSettlementAmount);
 		}
 	};
 	/**
@@ -434,23 +446,27 @@ public class CorrectivePaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmRequestedExecutionDateOrInterbankSettlementDate = new MMXor() {
+	public static final MMXor RequestedExecutionDateOrInterbankSettlementDate = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDateOrInterbankSettlementDate";
 			definition = "If RequestedExecutionDate is present, then InterbankSettlementDate is not allowed.\nIf InterbankSettlementDate is present, then RequestedExecutionDate is not allowed.";
-			messageComponent_lazy = () -> CorrectivePaymentInstructionExtract.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(CorrectivePaymentInstructionExtract.mmRequestedExecutionDate, CorrectivePaymentInstructionExtract.mmInterbankSettlementDate);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmObject();
+			impactedElements_lazy = () -> Arrays
+					.asList(com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmRequestedExecutionDate, com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmInterbankSettlementDate);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorrectivePaymentInstructionExtract.mmInstructionIdentification, CorrectivePaymentInstructionExtract.mmInstructedAmount,
-						CorrectivePaymentInstructionExtract.mmInterbankSettlementAmount, CorrectivePaymentInstructionExtract.mmRequestedExecutionDate, CorrectivePaymentInstructionExtract.mmInterbankSettlementDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmInstructionIdentification, com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmInstructedAmount,
+						com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmInterbankSettlementAmount, com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmRequestedExecutionDate,
+						com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmInterbankSettlementDate);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructedAmountAndRequestedExecutionDateRule.forCorrectivePaymentInstructionExtract,
+						com.tools20022.repository.constraints.ConstraintInterbankSettlementAmountAndDateRule.forCorrectivePaymentInstructionExtract);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -461,54 +477,55 @@ public class CorrectivePaymentInstructionExtract {
 				})).get();
 				name = "CorrectivePaymentInstructionExtract";
 				definition = "Details of a correction of a payment instruction. The information contained in this component is sufficient to retrieve a payment instruction.";
-				xors_lazy = () -> Arrays.asList(CorrectivePaymentInstructionExtract.mmInstructedAmountOrInterbankSettlementAmount, CorrectivePaymentInstructionExtract.mmRequestedExecutionDateOrInterbankSettlementDate);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.InstructedAmountOrInterbankSettlementAmount,
+						com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.RequestedExecutionDateOrInterbankSettlementDate);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InstrId", required = true)
 	public Max35Text getInstructionIdentification() {
 		return instructionIdentification;
 	}
 
-	public void setInstructionIdentification(Max35Text instructionIdentification) {
-		this.instructionIdentification = instructionIdentification;
+	public CorrectivePaymentInstructionExtract setInstructionIdentification(Max35Text instructionIdentification) {
+		this.instructionIdentification = Objects.requireNonNull(instructionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "InstdAmt", required = true)
 	public CurrencyAndAmount getInstructedAmount() {
 		return instructedAmount;
 	}
 
-	public void setInstructedAmount(CurrencyAndAmount instructedAmount) {
-		this.instructedAmount = instructedAmount;
+	public CorrectivePaymentInstructionExtract setInstructedAmount(CurrencyAndAmount instructedAmount) {
+		this.instructedAmount = Objects.requireNonNull(instructedAmount);
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmAmt", required = true)
 	public CurrencyAndAmount getInterbankSettlementAmount() {
 		return interbankSettlementAmount;
 	}
 
-	public void setInterbankSettlementAmount(CurrencyAndAmount interbankSettlementAmount) {
-		this.interbankSettlementAmount = interbankSettlementAmount;
+	public CorrectivePaymentInstructionExtract setInterbankSettlementAmount(CurrencyAndAmount interbankSettlementAmount) {
+		this.interbankSettlementAmount = Objects.requireNonNull(interbankSettlementAmount);
+		return this;
 	}
 
-	@XmlElement(name = "ReqdExctnDt", required = true)
 	public ISODate getRequestedExecutionDate() {
 		return requestedExecutionDate;
 	}
 
-	public void setRequestedExecutionDate(ISODate requestedExecutionDate) {
-		this.requestedExecutionDate = requestedExecutionDate;
+	public CorrectivePaymentInstructionExtract setRequestedExecutionDate(ISODate requestedExecutionDate) {
+		this.requestedExecutionDate = Objects.requireNonNull(requestedExecutionDate);
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmDt", required = true)
 	public ISODate getInterbankSettlementDate() {
 		return interbankSettlementDate;
 	}
 
-	public void setInterbankSettlementDate(ISODate interbankSettlementDate) {
-		this.interbankSettlementDate = interbankSettlementDate;
+	public CorrectivePaymentInstructionExtract setInterbankSettlementDate(ISODate interbankSettlementDate) {
+		this.interbankSettlementDate = Objects.requireNonNull(interbankSettlementDate);
+		return this;
 	}
 }

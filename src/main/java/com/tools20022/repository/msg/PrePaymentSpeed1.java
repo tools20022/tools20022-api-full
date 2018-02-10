@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.PrePaymentSpeed;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,16 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PrePaymentSpeed1", propOrder = {"type", "rate"})
 public class PrePaymentSpeed1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected PrePaymentSpeed1Code type;
 	/**
-	 * Specifies the type of prepayment speed of the fixed income instrument in
-	 * coded form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +113,7 @@ public class PrePaymentSpeed1 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PrePaymentSpeed.mmType;
-			componentContext_lazy = () -> PrePaymentSpeed1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PrePaymentSpeed1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +124,11 @@ public class PrePaymentSpeed1 {
 			simpleType_lazy = () -> PrePaymentSpeed1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Rate", required = true)
 	protected PercentageRate rate;
 	/**
-	 * Rate of prepayment speed of the fixed income instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +162,7 @@ public class PrePaymentSpeed1 {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PrePaymentSpeed.mmRate;
-			componentContext_lazy = () -> PrePaymentSpeed1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PrePaymentSpeed1.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,9 +177,9 @@ public class PrePaymentSpeed1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PrePaymentSpeed1.mmType, PrePaymentSpeed1.mmRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PrePaymentSpeed1.mmType, com.tools20022.repository.msg.PrePaymentSpeed1.mmRate);
 				trace_lazy = () -> PrePaymentSpeed.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PrePaymentSpeed1";
 				definition = "Specifies the type and rate of prepayment speed of the fixed income instrument.";
@@ -186,21 +188,21 @@ public class PrePaymentSpeed1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public PrePaymentSpeed1Code getType() {
 		return type;
 	}
 
-	public void setType(PrePaymentSpeed1Code type) {
-		this.type = type;
+	public PrePaymentSpeed1 setType(PrePaymentSpeed1Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
 
-	public void setRate(PercentageRate rate) {
-		this.rate = rate;
+	public PrePaymentSpeed1 setRate(PercentageRate rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 }

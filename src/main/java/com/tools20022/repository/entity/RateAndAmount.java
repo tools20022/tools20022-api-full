@@ -28,6 +28,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Specifies the value expressed as a rate or an amount. For example, the value
@@ -92,6 +94,108 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmRelatedYieldCalculation
  * RateAndAmount.mmRelatedYieldCalculation}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmFinalDividend
+ * Dividend.mmFinalDividend}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Dividend#mmFullyFrankedRateAndAmount
+ * Dividend.mmFullyFrankedRateAndAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmGrossDividend
+ * Dividend.mmGrossDividend}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmNetDividend
+ * Dividend.mmNetDividend}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Dividend#mmProvisionalDividend
+ * Dividend.mmProvisionalDividend}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax#mmRelatedTax
+ * SecuritiesTax.mmRelatedTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Issuance#mmInterestShortfall
+ * Issuance.mmInterestShortfall}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Issuance#mmRealisedLoss
+ * Issuance.mmRealisedLoss}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexFactor
+ * Index.mmIndexFactor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmMaximumAllowedOverSubscription
+ * BiddingConditions.mmMaximumAllowedOverSubscription}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmApplicableRate
+ * BiddingConditions.mmApplicableRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmSolicitationFee
+ * CorporateActionFeesAndCharges.mmSolicitationFee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmEarlySolicitationFeeRate
+ * CorporateActionFeesAndCharges.mmEarlySolicitationFeeRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmYieldRange
+ * YieldCalculation.mmYieldRange}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat19Choice#mmAmountAndRateStatus
+ * GrossDividendRateFormat19Choice.mmAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AmountAndRateStatus1#mmRateStatus
+ * AmountAndRateStatus1.mmRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat21Choice#mmAmountAndRateStatus
+ * NetDividendRateFormat21Choice.mmAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat23Choice#mmAmountAndRateStatus
+ * NetDividendRateFormat23Choice.mmAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat21Choice#mmAmountAndRateStatus
+ * GrossDividendRateFormat21Choice.mmAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat22Choice#mmAmountAndRateStatus
+ * NetDividendRateFormat22Choice.mmAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat20Choice#mmAmountAndRateStatus
+ * GrossDividendRateFormat20Choice.mmAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat24Choice#mmAmountAndRateStatus
+ * NetDividendRateFormat24Choice.mmAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat22Choice#mmAmountAndRateStatus
+ * GrossDividendRateFormat22Choice.mmAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat28Choice#mmAmountAndRateStatus
+ * NetDividendRateFormat28Choice.mmAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat26Choice#mmAmountAndRateStatus
+ * GrossDividendRateFormat26Choice.mmAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat25Choice#mmAmountAndRateStatus
+ * NetDividendRateFormat25Choice.mmAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat23Choice#mmAmountAndRateStatus
+ * GrossDividendRateFormat23Choice.mmAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat24Choice#mmAmountAndRateStatus
+ * GrossDividendRateFormat24Choice.mmAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat26Choice#mmAmountAndRateStatus
+ * NetDividendRateFormat26Choice.mmAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat27Choice#mmAmountAndRateStatus
+ * NetDividendRateFormat27Choice.mmAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat25Choice#mmAmountAndRateStatus
+ * GrossDividendRateFormat25Choice.mmAmountAndRateStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AmountAndRateStatus2#mmRateStatus
+ * AmountAndRateStatus2.mmRateStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -207,112 +311,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmFinalDividend
- * Dividend.mmFinalDividend}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Dividend#mmFullyFrankedRateAndAmount
- * Dividend.mmFullyFrankedRateAndAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmGrossDividend
- * Dividend.mmGrossDividend}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmNetDividend
- * Dividend.mmNetDividend}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Dividend#mmProvisionalDividend
- * Dividend.mmProvisionalDividend}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesTax#mmRelatedTax
- * SecuritiesTax.mmRelatedTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Issuance#mmInterestShortfall
- * Issuance.mmInterestShortfall}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Issuance#mmRealisedLoss
- * Issuance.mmRealisedLoss}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Index#mmIndexFactor
- * Index.mmIndexFactor}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmMaximumAllowedOverSubscription
- * BiddingConditions.mmMaximumAllowedOverSubscription}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BiddingConditions#mmApplicableRate
- * BiddingConditions.mmApplicableRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmSolicitationFee
- * CorporateActionFeesAndCharges.mmSolicitationFee}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges#mmEarlySolicitationFeeRate
- * CorporateActionFeesAndCharges.mmEarlySolicitationFeeRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.YieldCalculation#mmYieldRange
- * YieldCalculation.mmYieldRange}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat19Choice#mmAmountAndRateStatus
- * GrossDividendRateFormat19Choice.mmAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AmountAndRateStatus1#mmRateStatus
- * AmountAndRateStatus1.mmRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat21Choice#mmAmountAndRateStatus
- * NetDividendRateFormat21Choice.mmAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat23Choice#mmAmountAndRateStatus
- * NetDividendRateFormat23Choice.mmAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat21Choice#mmAmountAndRateStatus
- * GrossDividendRateFormat21Choice.mmAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat22Choice#mmAmountAndRateStatus
- * NetDividendRateFormat22Choice.mmAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat20Choice#mmAmountAndRateStatus
- * GrossDividendRateFormat20Choice.mmAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat24Choice#mmAmountAndRateStatus
- * NetDividendRateFormat24Choice.mmAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat22Choice#mmAmountAndRateStatus
- * GrossDividendRateFormat22Choice.mmAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat28Choice#mmAmountAndRateStatus
- * NetDividendRateFormat28Choice.mmAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat26Choice#mmAmountAndRateStatus
- * GrossDividendRateFormat26Choice.mmAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat25Choice#mmAmountAndRateStatus
- * NetDividendRateFormat25Choice.mmAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat23Choice#mmAmountAndRateStatus
- * GrossDividendRateFormat23Choice.mmAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat24Choice#mmAmountAndRateStatus
- * GrossDividendRateFormat24Choice.mmAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat26Choice#mmAmountAndRateStatus
- * NetDividendRateFormat26Choice.mmAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat27Choice#mmAmountAndRateStatus
- * NetDividendRateFormat27Choice.mmAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat25Choice#mmAmountAndRateStatus
- * GrossDividendRateFormat25Choice.mmAmountAndRateStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AmountAndRateStatus2#mmRateStatus
- * AmountAndRateStatus2.mmRateStatus}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -330,8 +332,8 @@ public class RateAndAmount {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Dividend finalDividendParameters;
 	/**
-	 * Dividend information for which a final dividend rate is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -364,8 +366,8 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmFinalDividendParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinalDividendParameters";
 			definition = "Dividend information for which a final dividend rate is specified.";
@@ -378,9 +380,8 @@ public class RateAndAmount {
 	};
 	protected Dividend fullyFrankedRateAndAmountDividendParameters;
 	/**
-	 * Dividend information for which a fully franked rate and amount is
-	 * specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -414,8 +415,8 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmFullyFrankedRateAndAmountDividendParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FullyFrankedRateAndAmountDividendParameters";
 			definition = "Dividend information for which a fully franked rate and amount is specified.";
@@ -428,8 +429,8 @@ public class RateAndAmount {
 	};
 	protected Dividend grossDividendParameters;
 	/**
-	 * Dividend information for which a gross dividend rate is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -462,8 +463,8 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmGrossDividendParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossDividendParameters";
 			definition = "Dividend information for which a gross dividend rate is specified.";
@@ -476,8 +477,8 @@ public class RateAndAmount {
 	};
 	protected CurrencyAndAmount amount;
 	/**
-	 * Value expressed as an amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -802,8 +803,8 @@ public class RateAndAmount {
 					CorporateActionAmounts41.mmFullyFrankedAmount, SolicitationFeeRateFormat10Choice.mmAmount, CorporateActionAmounts40.mmFullyFrankedAmount, TaxCreditRateFormat10Choice.mmAmount, RateAndAmountFormat43Choice.mmAmount,
 					GrossDividendRateFormat26Choice.mmAmount, GrossDividendRateFormat23Choice.mmAmount, GrossDividendRateFormat24Choice.mmAmount, TaxCreditRateFormat9Choice.mmAmount, SolicitationFeeRateFormat9Choice.mmAmount,
 					GrossDividendRateFormat25Choice.mmAmount, AmountAndRateStatus2.mmAmount, OriginalAmountDetails1.mmActualAmount, OriginalAmountDetails1.mmMinimumAmount, OriginalAmountDetails1.mmMaximumAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Value expressed as an amount.";
@@ -822,8 +823,8 @@ public class RateAndAmount {
 	};
 	protected Index index;
 	/**
-	 * Index for which a factor is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -855,8 +856,8 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmIndex = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Index";
 			definition = "Index for which a factor is specified.";
@@ -869,8 +870,8 @@ public class RateAndAmount {
 	};
 	protected Dividend netDividendParameters;
 	/**
-	 * Dividend information for which a net dividend rate is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -903,8 +904,8 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmNetDividendParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetDividendParameters";
 			definition = "Dividend information for which a net dividend rate is specified.";
@@ -917,8 +918,8 @@ public class RateAndAmount {
 	};
 	protected BiddingConditions maximumAllowedBiddingConditions;
 	/**
-	 * Bidding conditions for which a maximum amount is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -952,8 +953,8 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmMaximumAllowedBiddingConditions = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumAllowedBiddingConditions";
 			definition = "Bidding conditions for which a maximum amount is specified.";
@@ -966,8 +967,8 @@ public class RateAndAmount {
 	};
 	protected Dividend provisionalDividendParameters;
 	/**
-	 * Dividend information for which a provisional dividend rate is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1001,8 +1002,8 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmProvisionalDividendParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProvisionalDividendParameters";
 			definition = "Dividend information for which a provisional dividend rate is specified.";
@@ -1015,8 +1016,8 @@ public class RateAndAmount {
 	};
 	protected CorporateActionFeesAndCharges solicitationFeeCorporateActionParameters;
 	/**
-	 * Corporate event for which a solicitation fee is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1051,8 +1052,8 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmSolicitationFeeCorporateActionParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SolicitationFeeCorporateActionParameters";
 			definition = "Corporate event for which a solicitation fee is specified.";
@@ -1065,8 +1066,8 @@ public class RateAndAmount {
 	};
 	protected PercentageRate rate;
 	/**
-	 * Value expressed as a rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1227,8 +1228,8 @@ public class RateAndAmount {
 					RateFormat12Choice.mmRate, RateFormat11Choice.mmRate, RateFormat14Choice.mmRate, RateFormat17Choice.mmRate, RateAndAmountFormat36Choice.mmRate, TaxCreditRateFormat7Choice.mmRate, RateAndAmountFormat39Choice.mmRate,
 					SolicitationFeeRateFormat7Choice.mmRate, TaxCreditRateFormat8Choice.mmRate, RateFormat20Choice.mmRate, SolicitationFeeRateFormat8Choice.mmRate, RateFormat21Choice.mmRate, SolicitationFeeRateFormat10Choice.mmRate,
 					TaxCreditRateFormat10Choice.mmRate, RateAndAmountFormat43Choice.mmRate, TaxCreditRateFormat9Choice.mmRate, SolicitationFeeRateFormat9Choice.mmRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
 			definition = "Value expressed as a rate.";
@@ -1247,8 +1248,8 @@ public class RateAndAmount {
 	};
 	protected BiddingConditions rateBiddingConditions;
 	/**
-	 * Bidding conditions for which a rate is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1281,8 +1282,8 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmRateBiddingConditions = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RateBiddingConditions";
 			definition = "Bidding conditions for which a rate is specified.";
@@ -1295,8 +1296,8 @@ public class RateAndAmount {
 	};
 	protected SecuritiesTax securitiesTax;
 	/**
-	 * Tax for which a percentage of the gross dividend rate is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1330,8 +1331,8 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesTax = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesTax";
 			definition = "Tax for which a percentage of the gross dividend rate is specified.";
@@ -1344,8 +1345,8 @@ public class RateAndAmount {
 	};
 	protected CorporateActionFeesAndCharges earlySolicitationFeeCorporateActionParameters;
 	/**
-	 * Corporate event for which an early solicitation fee is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1380,8 +1381,8 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmEarlySolicitationFeeCorporateActionParameters = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarlySolicitationFeeCorporateActionParameters";
 			definition = "Corporate event for which an early solicitation fee is specified.";
@@ -1394,8 +1395,8 @@ public class RateAndAmount {
 	};
 	protected Issuance interestRelatedIssuance;
 	/**
-	 * Issuance for which an interest shortfall has been specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1428,8 +1429,8 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmInterestRelatedIssuance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestRelatedIssuance";
 			definition = "Issuance for which an interest shortfall has been specified.";
@@ -1442,8 +1443,8 @@ public class RateAndAmount {
 	};
 	protected Issuance lossRelatedIssuance;
 	/**
-	 * Issuance for which a realised loss has been specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1475,8 +1476,8 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmLossRelatedIssuance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LossRelatedIssuance";
 			definition = "Issuance for which a realised loss has been specified.";
@@ -1489,8 +1490,8 @@ public class RateAndAmount {
 	};
 	protected Number absoluteValue;
 	/**
-	 * Absolute value determined with a number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1524,8 +1525,8 @@ public class RateAndAmount {
 	public static final MMBusinessAttribute mmAbsoluteValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RateOrAbsoluteValue1Choice.mmAbsoluteValue);
-			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AbsoluteValue";
 			definition = "Absolute value determined with a number.";
@@ -1544,8 +1545,8 @@ public class RateAndAmount {
 	};
 	protected OperatorCode operator;
 	/**
-	 * Provides the relationship between a variable and a fixed value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1571,8 +1572,8 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAttribute mmOperator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Operator";
 			definition = "Provides the relationship between a variable and a fixed value.";
@@ -1591,8 +1592,8 @@ public class RateAndAmount {
 	};
 	protected YieldCalculation relatedYieldCalculation;
 	/**
-	 * Yield calculation which uses a yield range.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1625,8 +1626,8 @@ public class RateAndAmount {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedYieldCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RateAndAmount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedYieldCalculation";
 			definition = "Yield calculation which uses a yield range.";
@@ -1641,7 +1642,7 @@ public class RateAndAmount {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateAndAmount";
 				definition = "Specifies the value expressed as a rate or an amount. For example, the value of a tax or a commission.";
@@ -1688,143 +1689,161 @@ public class RateAndAmount {
 		return finalDividendParameters;
 	}
 
-	public void setFinalDividendParameters(com.tools20022.repository.entity.Dividend finalDividendParameters) {
-		this.finalDividendParameters = finalDividendParameters;
+	public RateAndAmount setFinalDividendParameters(com.tools20022.repository.entity.Dividend finalDividendParameters) {
+		this.finalDividendParameters = Objects.requireNonNull(finalDividendParameters);
+		return this;
 	}
 
-	public Dividend getFullyFrankedRateAndAmountDividendParameters() {
-		return fullyFrankedRateAndAmountDividendParameters;
+	public Optional<Dividend> getFullyFrankedRateAndAmountDividendParameters() {
+		return fullyFrankedRateAndAmountDividendParameters == null ? Optional.empty() : Optional.of(fullyFrankedRateAndAmountDividendParameters);
 	}
 
-	public void setFullyFrankedRateAndAmountDividendParameters(com.tools20022.repository.entity.Dividend fullyFrankedRateAndAmountDividendParameters) {
+	public RateAndAmount setFullyFrankedRateAndAmountDividendParameters(com.tools20022.repository.entity.Dividend fullyFrankedRateAndAmountDividendParameters) {
 		this.fullyFrankedRateAndAmountDividendParameters = fullyFrankedRateAndAmountDividendParameters;
+		return this;
 	}
 
 	public Dividend getGrossDividendParameters() {
 		return grossDividendParameters;
 	}
 
-	public void setGrossDividendParameters(com.tools20022.repository.entity.Dividend grossDividendParameters) {
-		this.grossDividendParameters = grossDividendParameters;
+	public RateAndAmount setGrossDividendParameters(com.tools20022.repository.entity.Dividend grossDividendParameters) {
+		this.grossDividendParameters = Objects.requireNonNull(grossDividendParameters);
+		return this;
 	}
 
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
-		this.amount = amount;
+	public RateAndAmount setAmount(CurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
 	public Index getIndex() {
 		return index;
 	}
 
-	public void setIndex(com.tools20022.repository.entity.Index index) {
-		this.index = index;
+	public RateAndAmount setIndex(com.tools20022.repository.entity.Index index) {
+		this.index = Objects.requireNonNull(index);
+		return this;
 	}
 
 	public Dividend getNetDividendParameters() {
 		return netDividendParameters;
 	}
 
-	public void setNetDividendParameters(com.tools20022.repository.entity.Dividend netDividendParameters) {
-		this.netDividendParameters = netDividendParameters;
+	public RateAndAmount setNetDividendParameters(com.tools20022.repository.entity.Dividend netDividendParameters) {
+		this.netDividendParameters = Objects.requireNonNull(netDividendParameters);
+		return this;
 	}
 
 	public BiddingConditions getMaximumAllowedBiddingConditions() {
 		return maximumAllowedBiddingConditions;
 	}
 
-	public void setMaximumAllowedBiddingConditions(com.tools20022.repository.entity.BiddingConditions maximumAllowedBiddingConditions) {
-		this.maximumAllowedBiddingConditions = maximumAllowedBiddingConditions;
+	public RateAndAmount setMaximumAllowedBiddingConditions(com.tools20022.repository.entity.BiddingConditions maximumAllowedBiddingConditions) {
+		this.maximumAllowedBiddingConditions = Objects.requireNonNull(maximumAllowedBiddingConditions);
+		return this;
 	}
 
 	public Dividend getProvisionalDividendParameters() {
 		return provisionalDividendParameters;
 	}
 
-	public void setProvisionalDividendParameters(com.tools20022.repository.entity.Dividend provisionalDividendParameters) {
-		this.provisionalDividendParameters = provisionalDividendParameters;
+	public RateAndAmount setProvisionalDividendParameters(com.tools20022.repository.entity.Dividend provisionalDividendParameters) {
+		this.provisionalDividendParameters = Objects.requireNonNull(provisionalDividendParameters);
+		return this;
 	}
 
 	public CorporateActionFeesAndCharges getSolicitationFeeCorporateActionParameters() {
 		return solicitationFeeCorporateActionParameters;
 	}
 
-	public void setSolicitationFeeCorporateActionParameters(com.tools20022.repository.entity.CorporateActionFeesAndCharges solicitationFeeCorporateActionParameters) {
-		this.solicitationFeeCorporateActionParameters = solicitationFeeCorporateActionParameters;
+	public RateAndAmount setSolicitationFeeCorporateActionParameters(com.tools20022.repository.entity.CorporateActionFeesAndCharges solicitationFeeCorporateActionParameters) {
+		this.solicitationFeeCorporateActionParameters = Objects.requireNonNull(solicitationFeeCorporateActionParameters);
+		return this;
 	}
 
 	public PercentageRate getRate() {
 		return rate;
 	}
 
-	public void setRate(PercentageRate rate) {
-		this.rate = rate;
+	public RateAndAmount setRate(PercentageRate rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 
 	public BiddingConditions getRateBiddingConditions() {
 		return rateBiddingConditions;
 	}
 
-	public void setRateBiddingConditions(com.tools20022.repository.entity.BiddingConditions rateBiddingConditions) {
-		this.rateBiddingConditions = rateBiddingConditions;
+	public RateAndAmount setRateBiddingConditions(com.tools20022.repository.entity.BiddingConditions rateBiddingConditions) {
+		this.rateBiddingConditions = Objects.requireNonNull(rateBiddingConditions);
+		return this;
 	}
 
 	public SecuritiesTax getSecuritiesTax() {
 		return securitiesTax;
 	}
 
-	public void setSecuritiesTax(com.tools20022.repository.entity.SecuritiesTax securitiesTax) {
-		this.securitiesTax = securitiesTax;
+	public RateAndAmount setSecuritiesTax(com.tools20022.repository.entity.SecuritiesTax securitiesTax) {
+		this.securitiesTax = Objects.requireNonNull(securitiesTax);
+		return this;
 	}
 
 	public CorporateActionFeesAndCharges getEarlySolicitationFeeCorporateActionParameters() {
 		return earlySolicitationFeeCorporateActionParameters;
 	}
 
-	public void setEarlySolicitationFeeCorporateActionParameters(com.tools20022.repository.entity.CorporateActionFeesAndCharges earlySolicitationFeeCorporateActionParameters) {
-		this.earlySolicitationFeeCorporateActionParameters = earlySolicitationFeeCorporateActionParameters;
+	public RateAndAmount setEarlySolicitationFeeCorporateActionParameters(com.tools20022.repository.entity.CorporateActionFeesAndCharges earlySolicitationFeeCorporateActionParameters) {
+		this.earlySolicitationFeeCorporateActionParameters = Objects.requireNonNull(earlySolicitationFeeCorporateActionParameters);
+		return this;
 	}
 
 	public Issuance getInterestRelatedIssuance() {
 		return interestRelatedIssuance;
 	}
 
-	public void setInterestRelatedIssuance(com.tools20022.repository.entity.Issuance interestRelatedIssuance) {
-		this.interestRelatedIssuance = interestRelatedIssuance;
+	public RateAndAmount setInterestRelatedIssuance(com.tools20022.repository.entity.Issuance interestRelatedIssuance) {
+		this.interestRelatedIssuance = Objects.requireNonNull(interestRelatedIssuance);
+		return this;
 	}
 
 	public Issuance getLossRelatedIssuance() {
 		return lossRelatedIssuance;
 	}
 
-	public void setLossRelatedIssuance(com.tools20022.repository.entity.Issuance lossRelatedIssuance) {
-		this.lossRelatedIssuance = lossRelatedIssuance;
+	public RateAndAmount setLossRelatedIssuance(com.tools20022.repository.entity.Issuance lossRelatedIssuance) {
+		this.lossRelatedIssuance = Objects.requireNonNull(lossRelatedIssuance);
+		return this;
 	}
 
 	public Number getAbsoluteValue() {
 		return absoluteValue;
 	}
 
-	public void setAbsoluteValue(Number absoluteValue) {
-		this.absoluteValue = absoluteValue;
+	public RateAndAmount setAbsoluteValue(Number absoluteValue) {
+		this.absoluteValue = Objects.requireNonNull(absoluteValue);
+		return this;
 	}
 
 	public OperatorCode getOperator() {
 		return operator;
 	}
 
-	public void setOperator(OperatorCode operator) {
-		this.operator = operator;
+	public RateAndAmount setOperator(OperatorCode operator) {
+		this.operator = Objects.requireNonNull(operator);
+		return this;
 	}
 
-	public YieldCalculation getRelatedYieldCalculation() {
-		return relatedYieldCalculation;
+	public Optional<YieldCalculation> getRelatedYieldCalculation() {
+		return relatedYieldCalculation == null ? Optional.empty() : Optional.of(relatedYieldCalculation);
 	}
 
-	public void setRelatedYieldCalculation(com.tools20022.repository.entity.YieldCalculation relatedYieldCalculation) {
+	public RateAndAmount setRelatedYieldCalculation(com.tools20022.repository.entity.YieldCalculation relatedYieldCalculation) {
 		this.relatedYieldCalculation = relatedYieldCalculation;
+		return this;
 	}
 }

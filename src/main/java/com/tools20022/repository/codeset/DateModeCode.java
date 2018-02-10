@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DateModeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies, for a date, when the event or operation is to take place, for
@@ -32,10 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DateModeCode#mmBODY
- * DateModeCode.mmBODY}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DateModeCode#mmEODY
- * DateModeCode.mmEODY}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateModeCode#BODY
+ * DateModeCode.BODY}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateModeCode#EODY
+ * DateModeCode.EODY}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class DateModeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DateModeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,12 +91,12 @@ public class DateModeCode {
 	 * definition} = "Beginning of day."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBODY = new MMCode() {
+	public static final DateModeCode BODY = new DateModeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BODY";
 			definition = "Beginning of day.";
-			owner_lazy = () -> DateModeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DateModeCode.mmObject();
 			codeName = "BODY";
 		}
 	};
@@ -114,27 +120,57 @@ public class DateModeCode {
 	 * definition} = "End of day."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEODY = new MMCode() {
+	public static final DateModeCode EODY = new DateModeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EODY";
 			definition = "End of day.";
-			owner_lazy = () -> DateModeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DateModeCode.mmObject();
 			codeName = "EODY";
 		}
 	};
+	final static private LinkedHashMap<String, DateModeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DateModeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateModeCode";
 				definition = "Specifies, for a date, when the event or operation is to take place, for example at the beginning or end of the day.";
-				code_lazy = () -> Arrays.asList(DateModeCode.mmBODY, DateModeCode.mmEODY);
 				derivation_lazy = () -> Arrays.asList(DateMode1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DateModeCode.BODY, com.tools20022.repository.codeset.DateModeCode.EODY);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BODY.getCodeName().get(), BODY);
+		codesByName.put(EODY.getCodeName().get(), EODY);
+	}
+
+	public static DateModeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DateModeCode[] values() {
+		DateModeCode[] values = new DateModeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DateModeCode> {
+		@Override
+		public DateModeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DateModeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

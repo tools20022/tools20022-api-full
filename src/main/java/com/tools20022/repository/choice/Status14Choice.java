@@ -26,9 +26,11 @@ import com.tools20022.repository.entity.AccountStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.RejectionReason16;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,16 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.choice.Status12Choice Status12Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Status14Choice", propOrder = {"status", "rejected"})
 public class Status14Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts", required = true)
 	protected AccountManagementStatus1Code status;
 	/**
-	 * Status of the account opening instruction or account modification
-	 * instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,7 +136,7 @@ public class Status14Choice {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmManagementStatus;
-			componentContext_lazy = () -> Status14Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status14Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,10 +149,11 @@ public class Status14Choice {
 			simpleType_lazy = () -> AccountManagementStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Rjctd", required = true)
 	protected List<RejectionReason16> rejected;
 	/**
-	 * Status of the order is rejected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -195,7 +198,7 @@ public class Status14Choice {
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
-			componentContext_lazy = () -> Status14Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status14Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,9 +216,9 @@ public class Status14Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Status14Choice.mmStatus, Status14Choice.mmRejected);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status14Choice.mmStatus, com.tools20022.repository.choice.Status14Choice.mmRejected);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status14Choice";
 				definition = "Choice of formats for the specification of the status.";
@@ -226,21 +229,21 @@ public class Status14Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public AccountManagementStatus1Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(AccountManagementStatus1Code status) {
-		this.status = status;
+	public Status14Choice setStatus(AccountManagementStatus1Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "Rjctd", required = true)
 	public List<RejectionReason16> getRejected() {
-		return rejected;
+		return rejected == null ? rejected = new ArrayList<>() : rejected;
 	}
 
-	public void setRejected(List<RejectionReason16> rejected) {
-		this.rejected = rejected;
+	public Status14Choice setRejected(List<RejectionReason16> rejected) {
+		this.rejected = Objects.requireNonNull(rejected);
+		return this;
 	}
 }

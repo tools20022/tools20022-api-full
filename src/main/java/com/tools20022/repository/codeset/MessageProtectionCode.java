@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.MessageProtectionCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Mechanism used to protect the message of the ATM protocol.
@@ -32,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageProtectionCode#mmEnvelopedMessage
- * MessageProtectionCode.mmEnvelopedMessage}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageProtectionCode#EnvelopedMessage
+ * MessageProtectionCode.EnvelopedMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageProtectionCode#mmMACBody
- * MessageProtectionCode.mmMACBody}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageProtectionCode#MACBody
+ * MessageProtectionCode.MACBody}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageProtectionCode#mmMACMessage
- * MessageProtectionCode.mmMACMessage}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageProtectionCode#MACMessage
+ * MessageProtectionCode.MACMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageProtectionCode#mmNoProtection
- * MessageProtectionCode.mmNoProtection}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageProtectionCode#NoProtection
+ * MessageProtectionCode.NoProtection}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -55,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Mechanism used to protect the message of the ATM protocol."</li>
  * </ul>
  */
-public class MessageProtectionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MessageProtectionCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -94,12 +100,12 @@ public class MessageProtectionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEnvelopedMessage = new MMCode() {
+	public static final MessageProtectionCode EnvelopedMessage = new MessageProtectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvelopedMessage";
 			definition = "Messages contain an encrypted body and a MAC or a digital signature computed on the complete message (header plus body after encryption).";
-			owner_lazy = () -> MessageProtectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageProtectionCode.mmObject();
 			codeName = "EVLP";
 		}
 	};
@@ -126,12 +132,12 @@ public class MessageProtectionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMACBody = new MMCode() {
+	public static final MessageProtectionCode MACBody = new MessageProtectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MACBody";
 			definition = "Messages contain a MAC or a digital signature computed on the body only.";
-			owner_lazy = () -> MessageProtectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageProtectionCode.mmObject();
 			codeName = "MACB";
 		}
 	};
@@ -159,12 +165,12 @@ public class MessageProtectionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMACMessage = new MMCode() {
+	public static final MessageProtectionCode MACMessage = new MessageProtectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MACMessage";
 			definition = "Messages contain a MAC or a digital signature computed on the complete message (header plus body).";
-			owner_lazy = () -> MessageProtectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageProtectionCode.mmObject();
 			codeName = "MACM";
 		}
 	};
@@ -192,27 +198,60 @@ public class MessageProtectionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoProtection = new MMCode() {
+	public static final MessageProtectionCode NoProtection = new MessageProtectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoProtection";
 			definition = "Messages are not protected, no encryption and no MAC or digital signature.";
-			owner_lazy = () -> MessageProtectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageProtectionCode.mmObject();
 			codeName = "UNPR";
 		}
 	};
+	final static private LinkedHashMap<String, MessageProtectionCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MessageProtectionCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageProtectionCode";
 				definition = "Mechanism used to protect the message of the ATM protocol.";
-				code_lazy = () -> Arrays.asList(MessageProtectionCode.mmEnvelopedMessage, MessageProtectionCode.mmMACBody, MessageProtectionCode.mmMACMessage, MessageProtectionCode.mmNoProtection);
 				derivation_lazy = () -> Arrays.asList(MessageProtection1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageProtectionCode.EnvelopedMessage, com.tools20022.repository.codeset.MessageProtectionCode.MACBody,
+						com.tools20022.repository.codeset.MessageProtectionCode.MACMessage, com.tools20022.repository.codeset.MessageProtectionCode.NoProtection);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(EnvelopedMessage.getCodeName().get(), EnvelopedMessage);
+		codesByName.put(MACBody.getCodeName().get(), MACBody);
+		codesByName.put(MACMessage.getCodeName().get(), MACMessage);
+		codesByName.put(NoProtection.getCodeName().get(), NoProtection);
+	}
+
+	public static MessageProtectionCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MessageProtectionCode[] values() {
+		MessageProtectionCode[] values = new MessageProtectionCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MessageProtectionCode> {
+		@Override
+		public MessageProtectionCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MessageProtectionCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

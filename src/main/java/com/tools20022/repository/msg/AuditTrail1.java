@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AuditTrail1", propOrder = {"fieldName", "oldFieldValue", "newFieldValue", "operationTimeStamp", "instructingUser", "approvingUser"})
 public class AuditTrail1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FldNm", required = true)
 	protected Max35Text fieldName;
 	/**
-	 * Name of the field whose value has been changed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +111,7 @@ public class AuditTrail1 {
 	 */
 	public static final MMMessageAttribute mmFieldName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AuditTrail1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuditTrail1.mmObject();
 			isDerived = false;
 			xmlTag = "FldNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +122,11 @@ public class AuditTrail1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OdFldVal", required = true)
 	protected Max350Text oldFieldValue;
 	/**
-	 * Value of the field before the change.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,7 +152,7 @@ public class AuditTrail1 {
 	 */
 	public static final MMMessageAttribute mmOldFieldValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AuditTrail1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuditTrail1.mmObject();
 			isDerived = false;
 			xmlTag = "OdFldVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,10 +163,11 @@ public class AuditTrail1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NewFldVal", required = true)
 	protected Max350Text newFieldValue;
 	/**
-	 * Value of the field after the change.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,7 +193,7 @@ public class AuditTrail1 {
 	 */
 	public static final MMMessageAttribute mmNewFieldValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AuditTrail1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuditTrail1.mmObject();
 			isDerived = false;
 			xmlTag = "NewFldVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,10 +204,11 @@ public class AuditTrail1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OprTmStmp", required = true)
 	protected ISODateTime operationTimeStamp;
 	/**
-	 * Timestamp of the change.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,7 +234,7 @@ public class AuditTrail1 {
 	 */
 	public static final MMMessageAttribute mmOperationTimeStamp = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AuditTrail1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuditTrail1.mmObject();
 			isDerived = false;
 			xmlTag = "OprTmStmp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,10 +245,11 @@ public class AuditTrail1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "InstgUsr", required = true)
 	protected Max256Text instructingUser;
 	/**
-	 * User who instructed the change.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -268,7 +275,7 @@ public class AuditTrail1 {
 	 */
 	public static final MMMessageAttribute mmInstructingUser = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AuditTrail1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuditTrail1.mmObject();
 			isDerived = false;
 			xmlTag = "InstgUsr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,10 +286,11 @@ public class AuditTrail1 {
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ApprvgUsr")
 	protected Max256Text approvingUser;
 	/**
-	 * User who approved the change instructed by the instructing user.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -309,7 +317,7 @@ public class AuditTrail1 {
 	 */
 	public static final MMMessageAttribute mmApprovingUser = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AuditTrail1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuditTrail1.mmObject();
 			isDerived = false;
 			xmlTag = "ApprvgUsr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -324,8 +332,9 @@ public class AuditTrail1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AuditTrail1.mmFieldName, AuditTrail1.mmOldFieldValue, AuditTrail1.mmNewFieldValue, AuditTrail1.mmOperationTimeStamp, AuditTrail1.mmInstructingUser, AuditTrail1.mmApprovingUser);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuditTrail1.mmFieldName, com.tools20022.repository.msg.AuditTrail1.mmOldFieldValue, com.tools20022.repository.msg.AuditTrail1.mmNewFieldValue,
+						com.tools20022.repository.msg.AuditTrail1.mmOperationTimeStamp, com.tools20022.repository.msg.AuditTrail1.mmInstructingUser, com.tools20022.repository.msg.AuditTrail1.mmApprovingUser);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AuditTrail1";
 				definition = "Describes information needed to identify a change for a static data, the time when it was performed and the user requesting the change and approving it.";
@@ -334,57 +343,57 @@ public class AuditTrail1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FldNm", required = true)
 	public Max35Text getFieldName() {
 		return fieldName;
 	}
 
-	public void setFieldName(Max35Text fieldName) {
-		this.fieldName = fieldName;
+	public AuditTrail1 setFieldName(Max35Text fieldName) {
+		this.fieldName = Objects.requireNonNull(fieldName);
+		return this;
 	}
 
-	@XmlElement(name = "OdFldVal", required = true)
 	public Max350Text getOldFieldValue() {
 		return oldFieldValue;
 	}
 
-	public void setOldFieldValue(Max350Text oldFieldValue) {
-		this.oldFieldValue = oldFieldValue;
+	public AuditTrail1 setOldFieldValue(Max350Text oldFieldValue) {
+		this.oldFieldValue = Objects.requireNonNull(oldFieldValue);
+		return this;
 	}
 
-	@XmlElement(name = "NewFldVal", required = true)
 	public Max350Text getNewFieldValue() {
 		return newFieldValue;
 	}
 
-	public void setNewFieldValue(Max350Text newFieldValue) {
-		this.newFieldValue = newFieldValue;
+	public AuditTrail1 setNewFieldValue(Max350Text newFieldValue) {
+		this.newFieldValue = Objects.requireNonNull(newFieldValue);
+		return this;
 	}
 
-	@XmlElement(name = "OprTmStmp", required = true)
 	public ISODateTime getOperationTimeStamp() {
 		return operationTimeStamp;
 	}
 
-	public void setOperationTimeStamp(ISODateTime operationTimeStamp) {
-		this.operationTimeStamp = operationTimeStamp;
+	public AuditTrail1 setOperationTimeStamp(ISODateTime operationTimeStamp) {
+		this.operationTimeStamp = Objects.requireNonNull(operationTimeStamp);
+		return this;
 	}
 
-	@XmlElement(name = "InstgUsr", required = true)
 	public Max256Text getInstructingUser() {
 		return instructingUser;
 	}
 
-	public void setInstructingUser(Max256Text instructingUser) {
-		this.instructingUser = instructingUser;
+	public AuditTrail1 setInstructingUser(Max256Text instructingUser) {
+		this.instructingUser = Objects.requireNonNull(instructingUser);
+		return this;
 	}
 
-	@XmlElement(name = "ApprvgUsr")
-	public Max256Text getApprovingUser() {
-		return approvingUser;
+	public Optional<Max256Text> getApprovingUser() {
+		return approvingUser == null ? Optional.empty() : Optional.of(approvingUser);
 	}
 
-	public void setApprovingUser(Max256Text approvingUser) {
+	public AuditTrail1 setApprovingUser(Max256Text approvingUser) {
 		this.approvingUser = approvingUser;
+		return this;
 	}
 }

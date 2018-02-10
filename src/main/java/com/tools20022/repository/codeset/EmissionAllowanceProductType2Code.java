@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode;
+import com.tools20022.repository.codeset.EmissionAllowanceProductType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies an mission allowance type.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode
- * AssetClassDetailedSubProductTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType2Code#mmCER
- * EmissionAllowanceProductType2Code.mmCER}</li>
+ * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType2Code#CER
+ * EmissionAllowanceProductType2Code.CER}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType2Code#mmERU
- * EmissionAllowanceProductType2Code.mmERU}</li>
+ * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType2Code#ERU
+ * EmissionAllowanceProductType2Code.ERU}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType2Code#mmEUA
- * EmissionAllowanceProductType2Code.mmEUA}</li>
+ * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType2Code#EUA
+ * EmissionAllowanceProductType2Code.EUA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType2Code#mmEUAA
- * EmissionAllowanceProductType2Code.mmEUAA}</li>
+ * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType2Code#EUAA
+ * EmissionAllowanceProductType2Code.EUAA}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode
+ * AssetClassDetailedSubProductTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies an mission allowance type."</li>
  * </ul>
  */
-public class EmissionAllowanceProductType2Code extends AssetClassDetailedSubProductTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EmissionAllowanceProductType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class EmissionAllowanceProductType2Code extends AssetClassDetailedSubProd
 	 * name} = "CER"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCER = new MMCode() {
+	public static final EmissionAllowanceProductType2Code CER = new EmissionAllowanceProductType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CER";
-			owner_lazy = () -> EmissionAllowanceProductType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EmissionAllowanceProductType2Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.CER.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,11 +112,12 @@ public class EmissionAllowanceProductType2Code extends AssetClassDetailedSubProd
 	 * name} = "ERU"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmERU = new MMCode() {
+	public static final EmissionAllowanceProductType2Code ERU = new EmissionAllowanceProductType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERU";
-			owner_lazy = () -> EmissionAllowanceProductType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EmissionAllowanceProductType2Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.ERU.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -129,11 +136,12 @@ public class EmissionAllowanceProductType2Code extends AssetClassDetailedSubProd
 	 * name} = "EUA"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEUA = new MMCode() {
+	public static final EmissionAllowanceProductType2Code EUA = new EmissionAllowanceProductType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUA";
-			owner_lazy = () -> EmissionAllowanceProductType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EmissionAllowanceProductType2Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.EUA.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -152,25 +160,59 @@ public class EmissionAllowanceProductType2Code extends AssetClassDetailedSubProd
 	 * name} = "EUAA"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEUAA = new MMCode() {
+	public static final EmissionAllowanceProductType2Code EUAA = new EmissionAllowanceProductType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUAA";
-			owner_lazy = () -> EmissionAllowanceProductType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EmissionAllowanceProductType2Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.EUAA.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, EmissionAllowanceProductType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EmissionAllowanceProductType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EmissionAllowanceProductType2Code";
 				definition = "Specifies an mission allowance type.";
-				code_lazy = () -> Arrays.asList(EmissionAllowanceProductType2Code.mmCER, EmissionAllowanceProductType2Code.mmERU, EmissionAllowanceProductType2Code.mmEUA, EmissionAllowanceProductType2Code.mmEUAA);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EmissionAllowanceProductType2Code.CER, com.tools20022.repository.codeset.EmissionAllowanceProductType2Code.ERU,
+						com.tools20022.repository.codeset.EmissionAllowanceProductType2Code.EUA, com.tools20022.repository.codeset.EmissionAllowanceProductType2Code.EUAA);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CER.getCodeName().get(), CER);
+		codesByName.put(ERU.getCodeName().get(), ERU);
+		codesByName.put(EUA.getCodeName().get(), EUA);
+		codesByName.put(EUAA.getCodeName().get(), EUAA);
+	}
+
+	public static EmissionAllowanceProductType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EmissionAllowanceProductType2Code[] values() {
+		EmissionAllowanceProductType2Code[] values = new EmissionAllowanceProductType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EmissionAllowanceProductType2Code> {
+		@Override
+		public EmissionAllowanceProductType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EmissionAllowanceProductType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

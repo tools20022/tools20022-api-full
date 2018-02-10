@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,16 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Extension3", propOrder = {"placeAndName", "extensionEnvelope"})
 public class Extension3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm")
 	protected Max350Text placeAndName;
 	/**
-	 * Name qualifying the information provided in the Text field, and place
-	 * where this information should be inserted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +102,7 @@ public class Extension3 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Extension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Extension3.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +113,11 @@ public class Extension3 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "XtnsnEnvlp", required = true)
 	protected ExtensionEnvelope2 extensionEnvelope;
 	/**
-	 * Technical element wrapping the extension.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -139,7 +142,7 @@ public class Extension3 {
 	 */
 	public static final MMMessageAssociationEnd mmExtensionEnvelope = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Extension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Extension3.mmObject();
 			isDerived = false;
 			xmlTag = "XtnsnEnvlp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,8 +158,8 @@ public class Extension3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Extension3.mmPlaceAndName, Extension3.mmExtensionEnvelope);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Extension3.mmPlaceAndName, com.tools20022.repository.msg.Extension3.mmExtensionEnvelope);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Extension3";
 				definition = "Additional information that can not be captured in the structured fields and/or any other specific block .";
@@ -165,21 +168,21 @@ public class Extension3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm")
-	public Max350Text getPlaceAndName() {
-		return placeAndName;
+	public Optional<Max350Text> getPlaceAndName() {
+		return placeAndName == null ? Optional.empty() : Optional.of(placeAndName);
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
+	public Extension3 setPlaceAndName(Max350Text placeAndName) {
 		this.placeAndName = placeAndName;
+		return this;
 	}
 
-	@XmlElement(name = "XtnsnEnvlp", required = true)
 	public ExtensionEnvelope2 getExtensionEnvelope() {
 		return extensionEnvelope;
 	}
 
-	public void setExtensionEnvelope(com.tools20022.repository.msg.ExtensionEnvelope2 extensionEnvelope) {
-		this.extensionEnvelope = extensionEnvelope;
+	public Extension3 setExtensionEnvelope(com.tools20022.repository.msg.ExtensionEnvelope2 extensionEnvelope) {
+		this.extensionEnvelope = Objects.requireNonNull(extensionEnvelope);
+		return this;
 	}
 }

@@ -25,9 +25,8 @@ import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -106,20 +105,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementArchive
- * CashManagementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "FIToFIPmtCxlReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -141,9 +126,35 @@ import javax.xml.bind.annotation.*;
  * FIToFIPaymentCancellationRequestV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "FIToFIPmtCxlReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementArchive
+ * CashManagementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.056.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrGroupCaseRule#forFIToFIPaymentCancellationRequestV02
+ * ConstraintMessageOrGroupCaseRule.forFIToFIPaymentCancellationRequestV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrTransactionCaseRule#forFIToFIPaymentCancellationRequestV02
+ * ConstraintMessageOrTransactionCaseRule.forFIToFIPaymentCancellationRequestV02
+ * }</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -168,17 +179,16 @@ import javax.xml.bind.annotation.*;
  * FIToFIPaymentCancellationRequestV01}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "FIToFIPaymentCancellationRequestV02", propOrder = {"assignment", "case", "controlData", "underlying", "supplementaryData"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "FIToFIPaymentCancellationRequestV02", propOrder = {"assignment", "case_", "controlData", "underlying", "supplementaryData"})
 public class FIToFIPaymentCancellationRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Assgnmt", required = true)
 	protected CaseAssignment3 assignment;
 	/**
-	 * Identifies the assignment of an investigation case from an assigner to an
-	 * assignee. Usage: The Assigner must be the sender of this confirmation and
-	 * the Assignee must be the receiver.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -219,10 +229,11 @@ public class FIToFIPaymentCancellationRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Case")
 	protected Case3 case_;
 	/**
-	 * Identifies the investigation case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -260,11 +271,11 @@ public class FIToFIPaymentCancellationRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CtrlData")
 	protected ControlData1 controlData;
 	/**
-	 * Provides details on the number of transactions and the control sum of the
-	 * message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -305,10 +316,11 @@ public class FIToFIPaymentCancellationRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Undrlyg", required = true)
 	protected List<UnderlyingTransaction5> underlying;
 	/**
-	 * Identifies the payment instruction to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -347,11 +359,11 @@ public class FIToFIPaymentCancellationRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -396,6 +408,8 @@ public class FIToFIPaymentCancellationRequestV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrGroupCaseRule.forFIToFIPaymentCancellationRequestV02,
+						com.tools20022.repository.constraints.ConstraintMessageOrTransactionCaseRule.forFIToFIPaymentCancellationRequestV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FIToFIPaymentCancellationRequestV02";
 				definition = "Scope\r\nThe FIToFI Payment Cancellation Request message is sent by a case creator/case assigner to a case assignee.\r\nThis message is used to request the cancellation of an original payment instruction. The FIToFI Payment Cancellation Request message is exchanged between the instructing agent and the instructed agent to request the cancellation of a interbank payment message previously sent (such as FIToFICustomerCreditTransfer, FIToFICustomerDirectDebit or FinancialInstitutionCreditTransfer).\r\nUsage\r\nThe FIToFI Payment Cancellation Request message must be answered with a:\r\n- Resolution Of Investigation message with a positive final outcome when the case assignee can perform the requested cancellation\r\n- Resolution Of Investigation message with a negative final outcome when the case assignee may perform the requested cancellation but fails to do so (too late, irrevocable instruction, ...)\r\n- Reject Investigation message when the case assignee is unable or not authorised to perform the requested cancellation\r\n- Notification Of Case Assignment message to indicate whether the case assignee will take on the case himself or reassign the case to a subsequent party in the payment processing chain.\r\nA FIToFI Payment Cancellation Request message concerns one and only one original payment instruction at a time.\r\nWhen a case assignee successfully performs a cancellation, it must return the corresponding funds to the case assigner. It may provide some details about the return in the Resolution Of Investigation message.\r\nThe processing of a FIToFI Payment Cancellation Request message case may lead to a Debit Authorisation Request message sent to the creditor by its account servicing institution.\r\nThe FIToFI Payment Cancellation Request message may be used to escalate a case after an unsuccessful request to modify the payment. In this scenario, the case identification remains the same as in the original FIToFI Payment Cancellation Request message and the element ReopenCaseIndication is set to 'Yes' or 'true'.\r\nThe FIToFI Payment Cancellation Request message has the following main characteristics:\r\nCase Identification:\nThe case creator assigns a unique case identification and the reason code for the cancellation request. This information will be passed unchanged to all subsequent case assignee(s). For the FIToFI Payment Cancellation Request message has been made optional, as the message might be used outside of a case management environment where the case identification is not relevant.\r\nMoreover, the case identification may be present at different levels:\r\n- One unique case is defined per cancellation request message: If multiple underlying groups or transactions are present in the message and the case assignee has already forwarded the transaction for which the cancellation is requested, the case cannot be forwarded to the next party in the chain (see rule on uniqueness of the case) and the case creator will have to issue individual cancellation requests for each underlying individual transaction. In response to this cancellation request, the case must also be present at the message level in the Resolution of Investigation message.\r\n- One case per original group or transaction present in the cancellation request: For each group or transaction, a unique case has been assigned. This means, when a payment instruction has already been forwarded by the case assignee, the cancellation request may be forwarded to next party in the payment chain, with the unique case assigned to the transaction. When the group can only be cancelled partially, new cancellation requests need however to be issued for the individual transactions within the group for which the cancellation request has not been successful. In response to this cancellation request, the case must be present in the cancellation details identifying the original group or transaction in the Resolution of Investigation message.\r\n- No case used in cancellation request message.\r\nCancellation of a cover payment:\nThe cancellation of a payment instruction for which cover is provided by a separate instruction always results in the cancellation of the whole transaction, including the cover. The case assignee performing the cancellation must initiate the return of funds to the case creator. The case assigner must not request the cancellation of the cover separately.\r\nCancellation request initiators:\nThe cancellation of a payment instruction can be initiated by either the debtor/creditor or any subsequent agent in the payment instruction processing chain.";
@@ -426,52 +440,52 @@ public class FIToFIPaymentCancellationRequestV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment3 getAssignment() {
 		return assignment;
 	}
 
-	public void setAssignment(CaseAssignment3 assignment) {
-		this.assignment = assignment;
+	public FIToFIPaymentCancellationRequestV02 setAssignment(CaseAssignment3 assignment) {
+		this.assignment = Objects.requireNonNull(assignment);
+		return this;
 	}
 
-	@XmlElement(name = "Case")
-	public Case3 getCase() {
-		return case_;
+	public Optional<Case3> getCase() {
+		return case_ == null ? Optional.empty() : Optional.of(case_);
 	}
 
-	public void setCase(Case3 case_) {
+	public FIToFIPaymentCancellationRequestV02 setCase(Case3 case_) {
 		this.case_ = case_;
+		return this;
 	}
 
-	@XmlElement(name = "CtrlData")
-	public ControlData1 getControlData() {
-		return controlData;
+	public Optional<ControlData1> getControlData() {
+		return controlData == null ? Optional.empty() : Optional.of(controlData);
 	}
 
-	public void setControlData(ControlData1 controlData) {
+	public FIToFIPaymentCancellationRequestV02 setControlData(ControlData1 controlData) {
 		this.controlData = controlData;
+		return this;
 	}
 
-	@XmlElement(name = "Undrlyg", required = true)
 	public List<UnderlyingTransaction5> getUnderlying() {
-		return underlying;
+		return underlying == null ? underlying = new ArrayList<>() : underlying;
 	}
 
-	public void setUnderlying(List<UnderlyingTransaction5> underlying) {
-		this.underlying = underlying;
+	public FIToFIPaymentCancellationRequestV02 setUnderlying(List<UnderlyingTransaction5> underlying) {
+		this.underlying = Objects.requireNonNull(underlying);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public FIToFIPaymentCancellationRequestV02 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.056.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.056.001.02")
 	static public class Document {
 		@XmlElement(name = "FIToFIPmtCxlReq", required = true)
 		public FIToFIPaymentCancellationRequestV02 messageBody;

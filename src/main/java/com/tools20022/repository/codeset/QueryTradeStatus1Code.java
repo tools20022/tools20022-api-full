@@ -20,46 +20,50 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.QueryTradeStatusCode;
+import com.tools20022.repository.codeset.QueryTradeStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the inquiry status of the trade.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.QueryTradeStatusCode
- * QueryTradeStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryTradeStatus1Code#mmQueryAllStatus
- * QueryTradeStatus1Code.mmQueryAllStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryTradeStatus1Code#QueryAllStatus
+ * QueryTradeStatus1Code.QueryAllStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryTradeStatus1Code#mmQueryCanceledTrade
- * QueryTradeStatus1Code.mmQueryCanceledTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryTradeStatus1Code#QueryCanceledTrade
+ * QueryTradeStatus1Code.QueryCanceledTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryTradeStatus1Code#mmQueryCancellingTrade
- * QueryTradeStatus1Code.mmQueryCancellingTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryTradeStatus1Code#QueryCancellingTrade
+ * QueryTradeStatus1Code.QueryCancellingTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryTradeStatus1Code#mmQueryEmergencyTrade
- * QueryTradeStatus1Code.mmQueryEmergencyTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryTradeStatus1Code#QueryEmergencyTrade
+ * QueryTradeStatus1Code.QueryEmergencyTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryTradeStatus1Code#mmQueryNewTrade
- * QueryTradeStatus1Code.mmQueryNewTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryTradeStatus1Code#QueryNewTrade
+ * QueryTradeStatus1Code.QueryNewTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryTradeStatus1Code#mmQueryReplacedTrade
- * QueryTradeStatus1Code.mmQueryReplacedTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryTradeStatus1Code#QueryReplacedTrade
+ * QueryTradeStatus1Code.QueryReplacedTrade}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.QueryTradeStatusCode
+ * QueryTradeStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the inquiry status of the trade."</li>
  * </ul>
  */
-public class QueryTradeStatus1Code extends QueryTradeStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class QueryTradeStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class QueryTradeStatus1Code extends QueryTradeStatusCode {
 	 * name} = "QueryAllStatus"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQueryAllStatus = new MMCode() {
+	public static final QueryTradeStatus1Code QueryAllStatus = new QueryTradeStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryAllStatus";
-			owner_lazy = () -> QueryTradeStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryTradeStatus1Code.mmObject();
+			codeName = QueryTradeStatusCode.QueryAllStatus.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class QueryTradeStatus1Code extends QueryTradeStatusCode {
 	 * name} = "QueryCanceledTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQueryCanceledTrade = new MMCode() {
+	public static final QueryTradeStatus1Code QueryCanceledTrade = new QueryTradeStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryCanceledTrade";
-			owner_lazy = () -> QueryTradeStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryTradeStatus1Code.mmObject();
+			codeName = QueryTradeStatusCode.QueryCanceledTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class QueryTradeStatus1Code extends QueryTradeStatusCode {
 	 * name} = "QueryCancellingTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQueryCancellingTrade = new MMCode() {
+	public static final QueryTradeStatus1Code QueryCancellingTrade = new QueryTradeStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryCancellingTrade";
-			owner_lazy = () -> QueryTradeStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryTradeStatus1Code.mmObject();
+			codeName = QueryTradeStatusCode.QueryCancellingTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,11 +166,12 @@ public class QueryTradeStatus1Code extends QueryTradeStatusCode {
 	 * name} = "QueryEmergencyTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQueryEmergencyTrade = new MMCode() {
+	public static final QueryTradeStatus1Code QueryEmergencyTrade = new QueryTradeStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryEmergencyTrade";
-			owner_lazy = () -> QueryTradeStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryTradeStatus1Code.mmObject();
+			codeName = QueryTradeStatusCode.QueryEmergencyTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -181,11 +190,12 @@ public class QueryTradeStatus1Code extends QueryTradeStatusCode {
 	 * name} = "QueryNewTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQueryNewTrade = new MMCode() {
+	public static final QueryTradeStatus1Code QueryNewTrade = new QueryTradeStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryNewTrade";
-			owner_lazy = () -> QueryTradeStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryTradeStatus1Code.mmObject();
+			codeName = QueryTradeStatusCode.QueryNewTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -204,26 +214,62 @@ public class QueryTradeStatus1Code extends QueryTradeStatusCode {
 	 * name} = "QueryReplacedTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQueryReplacedTrade = new MMCode() {
+	public static final QueryTradeStatus1Code QueryReplacedTrade = new QueryTradeStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReplacedTrade";
-			owner_lazy = () -> QueryTradeStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryTradeStatus1Code.mmObject();
+			codeName = QueryTradeStatusCode.QueryReplacedTrade.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, QueryTradeStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected QueryTradeStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueryTradeStatus1Code";
 				definition = "Specifies the inquiry status of the trade.";
-				code_lazy = () -> Arrays.asList(QueryTradeStatus1Code.mmQueryAllStatus, QueryTradeStatus1Code.mmQueryCanceledTrade, QueryTradeStatus1Code.mmQueryCancellingTrade, QueryTradeStatus1Code.mmQueryEmergencyTrade,
-						QueryTradeStatus1Code.mmQueryNewTrade, QueryTradeStatus1Code.mmQueryReplacedTrade);
 				trace_lazy = () -> QueryTradeStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryTradeStatus1Code.QueryAllStatus, com.tools20022.repository.codeset.QueryTradeStatus1Code.QueryCanceledTrade,
+						com.tools20022.repository.codeset.QueryTradeStatus1Code.QueryCancellingTrade, com.tools20022.repository.codeset.QueryTradeStatus1Code.QueryEmergencyTrade,
+						com.tools20022.repository.codeset.QueryTradeStatus1Code.QueryNewTrade, com.tools20022.repository.codeset.QueryTradeStatus1Code.QueryReplacedTrade);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(QueryAllStatus.getCodeName().get(), QueryAllStatus);
+		codesByName.put(QueryCanceledTrade.getCodeName().get(), QueryCanceledTrade);
+		codesByName.put(QueryCancellingTrade.getCodeName().get(), QueryCancellingTrade);
+		codesByName.put(QueryEmergencyTrade.getCodeName().get(), QueryEmergencyTrade);
+		codesByName.put(QueryNewTrade.getCodeName().get(), QueryNewTrade);
+		codesByName.put(QueryReplacedTrade.getCodeName().get(), QueryReplacedTrade);
+	}
+
+	public static QueryTradeStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static QueryTradeStatus1Code[] values() {
+		QueryTradeStatus1Code[] values = new QueryTradeStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, QueryTradeStatus1Code> {
+		@Override
+		public QueryTradeStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(QueryTradeStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ExtendedOptionFeatureCode;
+import com.tools20022.repository.codeset.ExtendedOptionFeature1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies DTCC (The Depository Trust and Clearing Corporation) specific
@@ -31,48 +35,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeatureCode
- * ExtendedOptionFeatureCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#mmForeignTaxUnfavorable
- * ExtendedOptionFeature1Code.mmForeignTaxUnfavorable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#ForeignTaxUnfavorable
+ * ExtendedOptionFeature1Code.ForeignTaxUnfavorable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#mmForeignTaxFavorable
- * ExtendedOptionFeature1Code.mmForeignTaxFavorable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#ForeignTaxFavorable
+ * ExtendedOptionFeature1Code.ForeignTaxFavorable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#mmForeignTaxExempt
- * ExtendedOptionFeature1Code.mmForeignTaxExempt}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#ForeignTaxExempt
+ * ExtendedOptionFeature1Code.ForeignTaxExempt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#mmDRIPUnfavorable
- * ExtendedOptionFeature1Code.mmDRIPUnfavorable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#DRIPUnfavorable
+ * ExtendedOptionFeature1Code.DRIPUnfavorable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#mmDRIPFavorable
- * ExtendedOptionFeature1Code.mmDRIPFavorable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#DRIPFavorable
+ * ExtendedOptionFeature1Code.DRIPFavorable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#mmDRIPExempt
- * ExtendedOptionFeature1Code.mmDRIPExempt}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#DRIPExempt
+ * ExtendedOptionFeature1Code.DRIPExempt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#mmForeignCurrencyPayment
- * ExtendedOptionFeature1Code.mmForeignCurrencyPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#ForeignCurrencyPayment
+ * ExtendedOptionFeature1Code.ForeignCurrencyPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#mmForeignCurrencyPaymentUnfavorable
- * ExtendedOptionFeature1Code.mmForeignCurrencyPaymentUnfavorable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#ForeignCurrencyPaymentUnfavorable
+ * ExtendedOptionFeature1Code.ForeignCurrencyPaymentUnfavorable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#mmForeignCurrencyPaymentFavorable
- * ExtendedOptionFeature1Code.mmForeignCurrencyPaymentFavorable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#ForeignCurrencyPaymentFavorable
+ * ExtendedOptionFeature1Code.ForeignCurrencyPaymentFavorable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#mmForeignCurrencyPaymentExempt
- * ExtendedOptionFeature1Code.mmForeignCurrencyPaymentExempt}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeature1Code#ForeignCurrencyPaymentExempt
+ * ExtendedOptionFeature1Code.ForeignCurrencyPaymentExempt}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ExtendedOptionFeatureCode
+ * ExtendedOptionFeatureCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ExtendedOptionFeature1Code extends ExtendedOptionFeatureCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ExtendedOptionFeature1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -110,11 +115,12 @@ public class ExtendedOptionFeature1Code extends ExtendedOptionFeatureCode {
 	 * name} = "ForeignTaxUnfavorable"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignTaxUnfavorable = new MMCode() {
+	public static final ExtendedOptionFeature1Code ForeignTaxUnfavorable = new ExtendedOptionFeature1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignTaxUnfavorable";
-			owner_lazy = () -> ExtendedOptionFeature1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedOptionFeature1Code.mmObject();
+			codeName = ExtendedOptionFeatureCode.ForeignTaxUnfavorable.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,11 +139,12 @@ public class ExtendedOptionFeature1Code extends ExtendedOptionFeatureCode {
 	 * name} = "ForeignTaxFavorable"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignTaxFavorable = new MMCode() {
+	public static final ExtendedOptionFeature1Code ForeignTaxFavorable = new ExtendedOptionFeature1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignTaxFavorable";
-			owner_lazy = () -> ExtendedOptionFeature1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedOptionFeature1Code.mmObject();
+			codeName = ExtendedOptionFeatureCode.ForeignTaxFavorable.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -156,11 +163,12 @@ public class ExtendedOptionFeature1Code extends ExtendedOptionFeatureCode {
 	 * name} = "ForeignTaxExempt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignTaxExempt = new MMCode() {
+	public static final ExtendedOptionFeature1Code ForeignTaxExempt = new ExtendedOptionFeature1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignTaxExempt";
-			owner_lazy = () -> ExtendedOptionFeature1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedOptionFeature1Code.mmObject();
+			codeName = ExtendedOptionFeatureCode.ForeignTaxExempt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -179,11 +187,12 @@ public class ExtendedOptionFeature1Code extends ExtendedOptionFeatureCode {
 	 * name} = "DRIPUnfavorable"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDRIPUnfavorable = new MMCode() {
+	public static final ExtendedOptionFeature1Code DRIPUnfavorable = new ExtendedOptionFeature1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DRIPUnfavorable";
-			owner_lazy = () -> ExtendedOptionFeature1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedOptionFeature1Code.mmObject();
+			codeName = ExtendedOptionFeatureCode.DRIPUnfavorable.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -202,11 +211,12 @@ public class ExtendedOptionFeature1Code extends ExtendedOptionFeatureCode {
 	 * name} = "DRIPFavorable"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDRIPFavorable = new MMCode() {
+	public static final ExtendedOptionFeature1Code DRIPFavorable = new ExtendedOptionFeature1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DRIPFavorable";
-			owner_lazy = () -> ExtendedOptionFeature1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedOptionFeature1Code.mmObject();
+			codeName = ExtendedOptionFeatureCode.DRIPFavorable.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -225,11 +235,12 @@ public class ExtendedOptionFeature1Code extends ExtendedOptionFeatureCode {
 	 * name} = "DRIPExempt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDRIPExempt = new MMCode() {
+	public static final ExtendedOptionFeature1Code DRIPExempt = new ExtendedOptionFeature1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DRIPExempt";
-			owner_lazy = () -> ExtendedOptionFeature1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedOptionFeature1Code.mmObject();
+			codeName = ExtendedOptionFeatureCode.DRIPExempt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -248,11 +259,12 @@ public class ExtendedOptionFeature1Code extends ExtendedOptionFeatureCode {
 	 * name} = "ForeignCurrencyPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignCurrencyPayment = new MMCode() {
+	public static final ExtendedOptionFeature1Code ForeignCurrencyPayment = new ExtendedOptionFeature1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCurrencyPayment";
-			owner_lazy = () -> ExtendedOptionFeature1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedOptionFeature1Code.mmObject();
+			codeName = ExtendedOptionFeatureCode.ForeignCurrencyPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -271,11 +283,12 @@ public class ExtendedOptionFeature1Code extends ExtendedOptionFeatureCode {
 	 * name} = "ForeignCurrencyPaymentUnfavorable"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignCurrencyPaymentUnfavorable = new MMCode() {
+	public static final ExtendedOptionFeature1Code ForeignCurrencyPaymentUnfavorable = new ExtendedOptionFeature1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCurrencyPaymentUnfavorable";
-			owner_lazy = () -> ExtendedOptionFeature1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedOptionFeature1Code.mmObject();
+			codeName = ExtendedOptionFeatureCode.ForeignCurrencyPaymentUnfavorable.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -294,11 +307,12 @@ public class ExtendedOptionFeature1Code extends ExtendedOptionFeatureCode {
 	 * name} = "ForeignCurrencyPaymentFavorable"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignCurrencyPaymentFavorable = new MMCode() {
+	public static final ExtendedOptionFeature1Code ForeignCurrencyPaymentFavorable = new ExtendedOptionFeature1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCurrencyPaymentFavorable";
-			owner_lazy = () -> ExtendedOptionFeature1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedOptionFeature1Code.mmObject();
+			codeName = ExtendedOptionFeatureCode.ForeignCurrencyPaymentFavorable.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -317,28 +331,69 @@ public class ExtendedOptionFeature1Code extends ExtendedOptionFeatureCode {
 	 * name} = "ForeignCurrencyPaymentExempt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignCurrencyPaymentExempt = new MMCode() {
+	public static final ExtendedOptionFeature1Code ForeignCurrencyPaymentExempt = new ExtendedOptionFeature1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCurrencyPaymentExempt";
-			owner_lazy = () -> ExtendedOptionFeature1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedOptionFeature1Code.mmObject();
+			codeName = ExtendedOptionFeatureCode.ForeignCurrencyPaymentExempt.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ExtendedOptionFeature1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ExtendedOptionFeature1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FORU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExtendedOptionFeature1Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) specific options.";
-				code_lazy = () -> Arrays.asList(ExtendedOptionFeature1Code.mmForeignTaxUnfavorable, ExtendedOptionFeature1Code.mmForeignTaxFavorable, ExtendedOptionFeature1Code.mmForeignTaxExempt,
-						ExtendedOptionFeature1Code.mmDRIPUnfavorable, ExtendedOptionFeature1Code.mmDRIPFavorable, ExtendedOptionFeature1Code.mmDRIPExempt, ExtendedOptionFeature1Code.mmForeignCurrencyPayment,
-						ExtendedOptionFeature1Code.mmForeignCurrencyPaymentUnfavorable, ExtendedOptionFeature1Code.mmForeignCurrencyPaymentFavorable, ExtendedOptionFeature1Code.mmForeignCurrencyPaymentExempt);
 				trace_lazy = () -> ExtendedOptionFeatureCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExtendedOptionFeature1Code.ForeignTaxUnfavorable, com.tools20022.repository.codeset.ExtendedOptionFeature1Code.ForeignTaxFavorable,
+						com.tools20022.repository.codeset.ExtendedOptionFeature1Code.ForeignTaxExempt, com.tools20022.repository.codeset.ExtendedOptionFeature1Code.DRIPUnfavorable,
+						com.tools20022.repository.codeset.ExtendedOptionFeature1Code.DRIPFavorable, com.tools20022.repository.codeset.ExtendedOptionFeature1Code.DRIPExempt,
+						com.tools20022.repository.codeset.ExtendedOptionFeature1Code.ForeignCurrencyPayment, com.tools20022.repository.codeset.ExtendedOptionFeature1Code.ForeignCurrencyPaymentUnfavorable,
+						com.tools20022.repository.codeset.ExtendedOptionFeature1Code.ForeignCurrencyPaymentFavorable, com.tools20022.repository.codeset.ExtendedOptionFeature1Code.ForeignCurrencyPaymentExempt);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ForeignTaxUnfavorable.getCodeName().get(), ForeignTaxUnfavorable);
+		codesByName.put(ForeignTaxFavorable.getCodeName().get(), ForeignTaxFavorable);
+		codesByName.put(ForeignTaxExempt.getCodeName().get(), ForeignTaxExempt);
+		codesByName.put(DRIPUnfavorable.getCodeName().get(), DRIPUnfavorable);
+		codesByName.put(DRIPFavorable.getCodeName().get(), DRIPFavorable);
+		codesByName.put(DRIPExempt.getCodeName().get(), DRIPExempt);
+		codesByName.put(ForeignCurrencyPayment.getCodeName().get(), ForeignCurrencyPayment);
+		codesByName.put(ForeignCurrencyPaymentUnfavorable.getCodeName().get(), ForeignCurrencyPaymentUnfavorable);
+		codesByName.put(ForeignCurrencyPaymentFavorable.getCodeName().get(), ForeignCurrencyPaymentFavorable);
+		codesByName.put(ForeignCurrencyPaymentExempt.getCodeName().get(), ForeignCurrencyPaymentExempt);
+	}
+
+	public static ExtendedOptionFeature1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ExtendedOptionFeature1Code[] values() {
+		ExtendedOptionFeature1Code[] values = new ExtendedOptionFeature1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ExtendedOptionFeature1Code> {
+		@Override
+		public ExtendedOptionFeature1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ExtendedOptionFeature1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

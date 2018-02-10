@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -28,9 +29,8 @@ import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.entity.TradingMarket;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -76,8 +76,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,18 +88,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Place at which the security is traded."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TradingParameters1", propOrder = {"marketIdentification", "roundLot", "tradeLotSize", "secondaryPlaceOfListing", "minimumTradedNominalQuantity", "maximumTradedNominalQuantity", "minimumTradingPricingIncrement",
 		"primaryPlaceOfListingIdentification"})
 public class TradingParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MktId")
 	protected MICIdentifier marketIdentification;
 	/**
-	 * Code allocated to places of trade, ie, stock exchanges, regulated
-	 * markets, for example, Electronic Trading Platforms (ECN), and unregulated
-	 * markets, for example, Automated Trading Systems (ATS) (MIC - ISO 3166).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,7 +134,7 @@ public class TradingParameters1 {
 	public static final MMMessageAttribute mmMarketIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
-			componentContext_lazy = () -> TradingParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "MktId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,13 +145,11 @@ public class TradingParameters1 {
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "RndLot")
 	protected FinancialInstrumentQuantity1Choice roundLot;
 	/**
-	 * Minimum quantity of securities that can be purchased without incurring a
-	 * larger fee. For example, if the round lot size is 100 and the trade is
-	 * for 125 shares, then 100 will be processed without a fee and the
-	 * remaining 25 will incur a service fee for being an odd lot size.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,7 +185,7 @@ public class TradingParameters1 {
 	public static final MMMessageAttribute mmRoundLot = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmRoundLot;
-			componentContext_lazy = () -> TradingParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "RndLot";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,10 +196,11 @@ public class TradingParameters1 {
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TradLotSz")
 	protected FinancialInstrumentQuantity1Choice tradeLotSize;
 	/**
-	 * Minimum number of securities that can be traded.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,7 +234,7 @@ public class TradingParameters1 {
 	public static final MMMessageAttribute mmTradeLotSize = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmTradeLotSize;
-			componentContext_lazy = () -> TradingParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "TradLotSz";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -247,10 +245,11 @@ public class TradingParameters1 {
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ScndryPlcOfListg")
 	protected List<MICIdentifier> secondaryPlaceOfListing;
 	/**
-	 * Market(s) on which the security is listed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -284,7 +283,7 @@ public class TradingParameters1 {
 	public static final MMMessageAttribute mmSecondaryPlaceOfListing = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
-			componentContext_lazy = () -> TradingParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryPlcOfListg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -295,10 +294,11 @@ public class TradingParameters1 {
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "MinTraddNmnlQty")
 	protected UnitOrFaceAmountChoice minimumTradedNominalQuantity;
 	/**
-	 * Minimum number of securities that can be traded.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -332,7 +332,7 @@ public class TradingParameters1 {
 	public static final MMMessageAttribute mmMinimumTradedNominalQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmMinimumTradedNominalQuantity;
-			componentContext_lazy = () -> TradingParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "MinTraddNmnlQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -343,10 +343,11 @@ public class TradingParameters1 {
 			complexType_lazy = () -> UnitOrFaceAmountChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxTraddNmnlQty")
 	protected UnitOrFaceAmountChoice maximumTradedNominalQuantity;
 	/**
-	 * Maximum number of securities that can be traded.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -380,7 +381,7 @@ public class TradingParameters1 {
 	public static final MMMessageAttribute mmMaximumTradedNominalQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmMaximumTradedNominalQuantity;
-			componentContext_lazy = () -> TradingParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "MaxTraddNmnlQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -391,11 +392,11 @@ public class TradingParameters1 {
 			complexType_lazy = () -> UnitOrFaceAmountChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "MinTradgPricgIncrmt")
 	protected Number minimumTradingPricingIncrement;
 	/**
-	 * Indicates the minimum or smallest movement (up or down) in the price
-	 * allowed for the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -415,6 +416,9 @@ public class TradingParameters1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MinTradgPricgIncrmt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 969</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -430,9 +434,10 @@ public class TradingParameters1 {
 	public static final MMMessageAttribute mmMinimumTradingPricingIncrement = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmMinimumTradingPricingIncrement;
-			componentContext_lazy = () -> TradingParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "MinTradgPricgIncrmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "969"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumTradingPricingIncrement";
 			definition = "Indicates the minimum or smallest movement (up or down) in the price allowed for the security.";
@@ -441,10 +446,11 @@ public class TradingParameters1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "PmryPlcOfListgId")
 	protected MICIdentifier primaryPlaceOfListingIdentification;
 	/**
-	 * Market(s) on which the security is listed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -465,6 +471,9 @@ public class TradingParameters1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PmryPlcOfListgId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 207</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -478,9 +487,10 @@ public class TradingParameters1 {
 	public static final MMMessageAttribute mmPrimaryPlaceOfListingIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
-			componentContext_lazy = () -> TradingParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "PmryPlcOfListgId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "207"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryPlaceOfListingIdentification";
 			definition = "Market(s) on which the security is listed.";
@@ -493,10 +503,12 @@ public class TradingParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TradingParameters1.mmMarketIdentification, TradingParameters1.mmRoundLot, TradingParameters1.mmTradeLotSize, TradingParameters1.mmSecondaryPlaceOfListing,
-						TradingParameters1.mmMinimumTradedNominalQuantity, TradingParameters1.mmMaximumTradedNominalQuantity, TradingParameters1.mmMinimumTradingPricingIncrement, TradingParameters1.mmPrimaryPlaceOfListingIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradingParameters1.mmMarketIdentification, com.tools20022.repository.msg.TradingParameters1.mmRoundLot,
+						com.tools20022.repository.msg.TradingParameters1.mmTradeLotSize, com.tools20022.repository.msg.TradingParameters1.mmSecondaryPlaceOfListing,
+						com.tools20022.repository.msg.TradingParameters1.mmMinimumTradedNominalQuantity, com.tools20022.repository.msg.TradingParameters1.mmMaximumTradedNominalQuantity,
+						com.tools20022.repository.msg.TradingParameters1.mmMinimumTradingPricingIncrement, com.tools20022.repository.msg.TradingParameters1.mmPrimaryPlaceOfListingIdentification);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TradingParameters1";
 				definition = "Place at which the security is traded.";
@@ -505,75 +517,75 @@ public class TradingParameters1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MktId")
-	public MICIdentifier getMarketIdentification() {
-		return marketIdentification;
+	public Optional<MICIdentifier> getMarketIdentification() {
+		return marketIdentification == null ? Optional.empty() : Optional.of(marketIdentification);
 	}
 
-	public void setMarketIdentification(MICIdentifier marketIdentification) {
+	public TradingParameters1 setMarketIdentification(MICIdentifier marketIdentification) {
 		this.marketIdentification = marketIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "RndLot")
-	public FinancialInstrumentQuantity1Choice getRoundLot() {
-		return roundLot;
+	public Optional<FinancialInstrumentQuantity1Choice> getRoundLot() {
+		return roundLot == null ? Optional.empty() : Optional.of(roundLot);
 	}
 
-	public void setRoundLot(FinancialInstrumentQuantity1Choice roundLot) {
+	public TradingParameters1 setRoundLot(FinancialInstrumentQuantity1Choice roundLot) {
 		this.roundLot = roundLot;
+		return this;
 	}
 
-	@XmlElement(name = "TradLotSz")
-	public FinancialInstrumentQuantity1Choice getTradeLotSize() {
-		return tradeLotSize;
+	public Optional<FinancialInstrumentQuantity1Choice> getTradeLotSize() {
+		return tradeLotSize == null ? Optional.empty() : Optional.of(tradeLotSize);
 	}
 
-	public void setTradeLotSize(FinancialInstrumentQuantity1Choice tradeLotSize) {
+	public TradingParameters1 setTradeLotSize(FinancialInstrumentQuantity1Choice tradeLotSize) {
 		this.tradeLotSize = tradeLotSize;
+		return this;
 	}
 
-	@XmlElement(name = "ScndryPlcOfListg")
 	public List<MICIdentifier> getSecondaryPlaceOfListing() {
-		return secondaryPlaceOfListing;
+		return secondaryPlaceOfListing == null ? secondaryPlaceOfListing = new ArrayList<>() : secondaryPlaceOfListing;
 	}
 
-	public void setSecondaryPlaceOfListing(List<MICIdentifier> secondaryPlaceOfListing) {
-		this.secondaryPlaceOfListing = secondaryPlaceOfListing;
+	public TradingParameters1 setSecondaryPlaceOfListing(List<MICIdentifier> secondaryPlaceOfListing) {
+		this.secondaryPlaceOfListing = Objects.requireNonNull(secondaryPlaceOfListing);
+		return this;
 	}
 
-	@XmlElement(name = "MinTraddNmnlQty")
-	public UnitOrFaceAmountChoice getMinimumTradedNominalQuantity() {
-		return minimumTradedNominalQuantity;
+	public Optional<UnitOrFaceAmountChoice> getMinimumTradedNominalQuantity() {
+		return minimumTradedNominalQuantity == null ? Optional.empty() : Optional.of(minimumTradedNominalQuantity);
 	}
 
-	public void setMinimumTradedNominalQuantity(UnitOrFaceAmountChoice minimumTradedNominalQuantity) {
+	public TradingParameters1 setMinimumTradedNominalQuantity(UnitOrFaceAmountChoice minimumTradedNominalQuantity) {
 		this.minimumTradedNominalQuantity = minimumTradedNominalQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "MaxTraddNmnlQty")
-	public UnitOrFaceAmountChoice getMaximumTradedNominalQuantity() {
-		return maximumTradedNominalQuantity;
+	public Optional<UnitOrFaceAmountChoice> getMaximumTradedNominalQuantity() {
+		return maximumTradedNominalQuantity == null ? Optional.empty() : Optional.of(maximumTradedNominalQuantity);
 	}
 
-	public void setMaximumTradedNominalQuantity(UnitOrFaceAmountChoice maximumTradedNominalQuantity) {
+	public TradingParameters1 setMaximumTradedNominalQuantity(UnitOrFaceAmountChoice maximumTradedNominalQuantity) {
 		this.maximumTradedNominalQuantity = maximumTradedNominalQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "MinTradgPricgIncrmt")
-	public Number getMinimumTradingPricingIncrement() {
-		return minimumTradingPricingIncrement;
+	public Optional<Number> getMinimumTradingPricingIncrement() {
+		return minimumTradingPricingIncrement == null ? Optional.empty() : Optional.of(minimumTradingPricingIncrement);
 	}
 
-	public void setMinimumTradingPricingIncrement(Number minimumTradingPricingIncrement) {
+	public TradingParameters1 setMinimumTradingPricingIncrement(Number minimumTradingPricingIncrement) {
 		this.minimumTradingPricingIncrement = minimumTradingPricingIncrement;
+		return this;
 	}
 
-	@XmlElement(name = "PmryPlcOfListgId")
-	public MICIdentifier getPrimaryPlaceOfListingIdentification() {
-		return primaryPlaceOfListingIdentification;
+	public Optional<MICIdentifier> getPrimaryPlaceOfListingIdentification() {
+		return primaryPlaceOfListingIdentification == null ? Optional.empty() : Optional.of(primaryPlaceOfListingIdentification);
 	}
 
-	public void setPrimaryPlaceOfListingIdentification(MICIdentifier primaryPlaceOfListingIdentification) {
+	public TradingParameters1 setPrimaryPlaceOfListingIdentification(MICIdentifier primaryPlaceOfListingIdentification) {
 		this.primaryPlaceOfListingIdentification = primaryPlaceOfListingIdentification;
+		return this;
 	}
 }

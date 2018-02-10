@@ -28,9 +28,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.entity.InterestCalculation;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionInterest2", propOrder = {"amount", "creditDebitIndicator", "type", "rate", "fromToDate", "reason"})
 public class TransactionInterest2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount amount;
 	/**
-	 * Amount of interest included in the entry amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +124,7 @@ public class TransactionInterest2 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
-			componentContext_lazy = () -> TransactionInterest2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionInterest2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,11 +135,11 @@ public class TransactionInterest2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd", required = true)
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Indicates whether the interest amount included in the entry is credit or
-	 * debit amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -175,7 +175,7 @@ public class TransactionInterest2 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmCreditDebitIndicator;
-			componentContext_lazy = () -> TransactionInterest2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionInterest2.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,10 +186,11 @@ public class TransactionInterest2 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected InterestType1Choice type;
 	/**
-	 * Specifies the type of interest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -221,7 +222,7 @@ public class TransactionInterest2 {
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterestType;
-			componentContext_lazy = () -> TransactionInterest2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionInterest2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,10 +234,11 @@ public class TransactionInterest2 {
 			type_lazy = () -> InterestType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Rate")
 	protected List<com.tools20022.repository.msg.Rate3> rate;
 	/**
-	 * Set of elements used to qualify the interest rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -267,7 +269,7 @@ public class TransactionInterest2 {
 	public static final MMMessageAssociationEnd mmRate = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InterestCalculation.mmObject();
-			componentContext_lazy = () -> TransactionInterest2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionInterest2.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -278,11 +280,11 @@ public class TransactionInterest2 {
 			type_lazy = () -> com.tools20022.repository.msg.Rate3.mmObject();
 		}
 	};
+	@XmlElement(name = "FrToDt")
 	protected DateTimePeriodDetails fromToDate;
 	/**
-	 * Range of time between a start date and an end date for the calculation of
-	 * the interest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -316,7 +318,7 @@ public class TransactionInterest2 {
 	public static final MMMessageAssociationEnd mmFromToDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterestPeriod;
-			componentContext_lazy = () -> TransactionInterest2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionInterest2.mmObject();
 			isDerived = false;
 			xmlTag = "FrToDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -328,10 +330,11 @@ public class TransactionInterest2 {
 			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn")
 	protected Max35Text reason;
 	/**
-	 * Specifies the reason for the interest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -358,7 +361,7 @@ public class TransactionInterest2 {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionInterest2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionInterest2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -373,10 +376,11 @@ public class TransactionInterest2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionInterest2.mmAmount, TransactionInterest2.mmCreditDebitIndicator, TransactionInterest2.mmType, TransactionInterest2.mmRate, TransactionInterest2.mmFromToDate,
-						TransactionInterest2.mmReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionInterest2.mmAmount, com.tools20022.repository.msg.TransactionInterest2.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.TransactionInterest2.mmType, com.tools20022.repository.msg.TransactionInterest2.mmRate, com.tools20022.repository.msg.TransactionInterest2.mmFromToDate,
+						com.tools20022.repository.msg.TransactionInterest2.mmReason);
 				trace_lazy = () -> InterestCalculation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionInterest2";
 				definition = "Set of elements used to provide transaction specific interest information that applies to the underlying transaction.";
@@ -385,57 +389,57 @@ public class TransactionInterest2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
-		this.amount = amount;
+	public TransactionInterest2 setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
-		this.creditDebitIndicator = creditDebitIndicator;
+	public TransactionInterest2 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = Objects.requireNonNull(creditDebitIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public InterestType1Choice getType() {
-		return type;
+	public Optional<InterestType1Choice> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(InterestType1Choice type) {
+	public TransactionInterest2 setType(InterestType1Choice type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "Rate")
 	public List<Rate3> getRate() {
-		return rate;
+		return rate == null ? rate = new ArrayList<>() : rate;
 	}
 
-	public void setRate(List<com.tools20022.repository.msg.Rate3> rate) {
-		this.rate = rate;
+	public TransactionInterest2 setRate(List<com.tools20022.repository.msg.Rate3> rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 
-	@XmlElement(name = "FrToDt")
-	public DateTimePeriodDetails getFromToDate() {
-		return fromToDate;
+	public Optional<DateTimePeriodDetails> getFromToDate() {
+		return fromToDate == null ? Optional.empty() : Optional.of(fromToDate);
 	}
 
-	public void setFromToDate(com.tools20022.repository.msg.DateTimePeriodDetails fromToDate) {
+	public TransactionInterest2 setFromToDate(com.tools20022.repository.msg.DateTimePeriodDetails fromToDate) {
 		this.fromToDate = fromToDate;
+		return this;
 	}
 
-	@XmlElement(name = "Rsn")
-	public Max35Text getReason() {
-		return reason;
+	public Optional<Max35Text> getReason() {
+		return reason == null ? Optional.empty() : Optional.of(reason);
 	}
 
-	public void setReason(Max35Text reason) {
+	public TransactionInterest2 setReason(Max35Text reason) {
 		this.reason = reason;
+		return this;
 	}
 }

@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CashAccountTypeCode;
+import com.tools20022.repository.codeset.CashAccountType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the nature, or use, of the cash account.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CashAccountTypeCode
- * CashAccountTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#mmCashPayment
- * CashAccountType3Code.mmCashPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#CashPayment
+ * CashAccountType3Code.CashPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#mmCharges
- * CashAccountType3Code.mmCharges}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#Charges
+ * CashAccountType3Code.Charges}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#mmSettlement
- * CashAccountType3Code.mmSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#Settlement
+ * CashAccountType3Code.Settlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#mmCurrent
- * CashAccountType3Code.mmCurrent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#Current
+ * CashAccountType3Code.Current}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#mmSavings
- * CashAccountType3Code.mmSavings}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashAccountType3Code#Savings
+ * CashAccountType3Code.Savings}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CashAccountTypeCode
+ * CashAccountTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the nature, or use, of the cash account."</li>
  * </ul>
  */
-public class CashAccountType3Code extends CashAccountTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CashAccountType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class CashAccountType3Code extends CashAccountTypeCode {
 	 * name} = "CashPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashPayment = new MMCode() {
+	public static final CashAccountType3Code CashPayment = new CashAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPayment";
-			owner_lazy = () -> CashAccountType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType3Code.mmObject();
+			codeName = CashAccountTypeCode.CashPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class CashAccountType3Code extends CashAccountTypeCode {
 	 * name} = "Charges"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCharges = new MMCode() {
+	public static final CashAccountType3Code Charges = new CashAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charges";
-			owner_lazy = () -> CashAccountType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType3Code.mmObject();
+			codeName = CashAccountTypeCode.Charges.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class CashAccountType3Code extends CashAccountTypeCode {
 	 * name} = "Settlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlement = new MMCode() {
+	public static final CashAccountType3Code Settlement = new CashAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settlement";
-			owner_lazy = () -> CashAccountType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType3Code.mmObject();
+			codeName = CashAccountTypeCode.Settlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +169,12 @@ public class CashAccountType3Code extends CashAccountTypeCode {
 	 * name} = "Current"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrent = new MMCode() {
+	public static final CashAccountType3Code Current = new CashAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
-			owner_lazy = () -> CashAccountType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType3Code.mmObject();
+			codeName = CashAccountTypeCode.Current.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,26 +193,61 @@ public class CashAccountType3Code extends CashAccountTypeCode {
 	 * name} = "Savings"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSavings = new MMCode() {
+	public static final CashAccountType3Code Savings = new CashAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Savings";
-			owner_lazy = () -> CashAccountType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashAccountType3Code.mmObject();
+			codeName = CashAccountTypeCode.Savings.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CashAccountType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CashAccountType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CASH");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccountType3Code";
 				definition = "Specifies the nature, or use, of the cash account.";
-				code_lazy = () -> Arrays.asList(CashAccountType3Code.mmCashPayment, CashAccountType3Code.mmCharges, CashAccountType3Code.mmSettlement, CashAccountType3Code.mmCurrent, CashAccountType3Code.mmSavings);
 				trace_lazy = () -> CashAccountTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashAccountType3Code.CashPayment, com.tools20022.repository.codeset.CashAccountType3Code.Charges,
+						com.tools20022.repository.codeset.CashAccountType3Code.Settlement, com.tools20022.repository.codeset.CashAccountType3Code.Current, com.tools20022.repository.codeset.CashAccountType3Code.Savings);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CashPayment.getCodeName().get(), CashPayment);
+		codesByName.put(Charges.getCodeName().get(), Charges);
+		codesByName.put(Settlement.getCodeName().get(), Settlement);
+		codesByName.put(Current.getCodeName().get(), Current);
+		codesByName.put(Savings.getCodeName().get(), Savings);
+	}
+
+	public static CashAccountType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CashAccountType3Code[] values() {
+		CashAccountType3Code[] values = new CashAccountType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CashAccountType3Code> {
+		@Override
+		public CashAccountType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CashAccountType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

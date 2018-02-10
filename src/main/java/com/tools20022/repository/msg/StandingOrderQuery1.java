@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.QueryType2Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,16 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specification of the query criteria."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StandingOrderQuery1", propOrder = {"queryType", "standingOrderCriteria"})
 public class StandingOrderQuery1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QryTp")
 	protected QueryType2Code queryType;
 	/**
-	 * Specifies the type of matching items to be returned in the response to
-	 * the query.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +103,7 @@ public class StandingOrderQuery1 {
 	 */
 	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderQuery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderQuery1.mmObject();
 			isDerived = false;
 			xmlTag = "QryTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +114,11 @@ public class StandingOrderQuery1 {
 			simpleType_lazy = () -> QueryType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StgOrdrCrit")
 	protected StandingOrderCriteria1Choice standingOrderCriteria;
 	/**
-	 * Definition of the standing order query criteria.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -143,7 +145,7 @@ public class StandingOrderQuery1 {
 	 */
 	public static final MMMessageAssociationEnd mmStandingOrderCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StandingOrderQuery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderQuery1.mmObject();
 			isDerived = false;
 			xmlTag = "StgOrdrCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,8 +161,8 @@ public class StandingOrderQuery1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StandingOrderQuery1.mmQueryType, StandingOrderQuery1.mmStandingOrderCriteria);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderQuery1.mmQueryType, com.tools20022.repository.msg.StandingOrderQuery1.mmStandingOrderCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderQuery1";
 				definition = "Specification of the query criteria.";
@@ -169,21 +171,21 @@ public class StandingOrderQuery1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QryTp")
-	public QueryType2Code getQueryType() {
-		return queryType;
+	public Optional<QueryType2Code> getQueryType() {
+		return queryType == null ? Optional.empty() : Optional.of(queryType);
 	}
 
-	public void setQueryType(QueryType2Code queryType) {
+	public StandingOrderQuery1 setQueryType(QueryType2Code queryType) {
 		this.queryType = queryType;
+		return this;
 	}
 
-	@XmlElement(name = "StgOrdrCrit")
-	public StandingOrderCriteria1Choice getStandingOrderCriteria() {
-		return standingOrderCriteria;
+	public Optional<StandingOrderCriteria1Choice> getStandingOrderCriteria() {
+		return standingOrderCriteria == null ? Optional.empty() : Optional.of(standingOrderCriteria);
 	}
 
-	public void setStandingOrderCriteria(StandingOrderCriteria1Choice standingOrderCriteria) {
+	public StandingOrderQuery1 setStandingOrderCriteria(StandingOrderCriteria1Choice standingOrderCriteria) {
 		this.standingOrderCriteria = standingOrderCriteria;
+		return this;
 	}
 }

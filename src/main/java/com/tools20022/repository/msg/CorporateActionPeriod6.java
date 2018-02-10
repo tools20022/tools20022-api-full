@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,7 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -91,8 +93,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInterestPeriodRule#forCorporateActionPeriod6
+ * ConstraintInterestPeriodRule.forCorporateActionPeriod6}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,17 +120,18 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionPeriod6", propOrder = {"priceCalculationPeriod", "interestPeriod", "compulsoryPurchasePeriod", "blockingPeriod", "claimPeriod", "depositorySuspensionPeriodForBookEntryTransfer",
 		"depositorySuspensionPeriodForDepositAtAgent", "depositorySuspensionPeriodForDeposit", "depositorySuspensionPeriodForPledge", "depositorySuspensionPeriodForSegregation", "depositorySuspensionPeriodForWithdrawalAtAgent",
 		"depositorySuspensionPeriodForWithdrawalInNomineeName", "depositorySuspensionPeriodForWithdrawalInStreetName", "bookClosurePeriod"})
 public class CorporateActionPeriod6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PricClctnPrd")
 	protected Period3Choice priceCalculationPeriod;
 	/**
-	 * Period during which the price of a security is determined.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -139,6 +150,9 @@ public class CorporateActionPeriod6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PricClctnPrd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a:PRIC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -153,9 +167,10 @@ public class CorporateActionPeriod6 {
 	public static final MMMessageAssociationEnd mmPriceCalculationPeriod = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceCalculationPeriod;
-			componentContext_lazy = () -> CorporateActionPeriod6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod6.mmObject();
 			isDerived = false;
 			xmlTag = "PricClctnPrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a:PRIC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceCalculationPeriod";
 			definition = "Period during which the price of a security is determined.";
@@ -165,10 +180,11 @@ public class CorporateActionPeriod6 {
 			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstPrd")
 	protected Period3Choice interestPeriod;
 	/**
-	 * Period during which the interest rate has been applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -187,6 +203,9 @@ public class CorporateActionPeriod6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IntrstPrd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a:INPE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -200,9 +219,10 @@ public class CorporateActionPeriod6 {
 	public static final MMMessageAssociationEnd mmInterestPeriod = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterestPeriod;
-			componentContext_lazy = () -> CorporateActionPeriod6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod6.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstPrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a:INPE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPeriod";
 			definition = "Period during which the interest rate has been applied.";
@@ -212,11 +232,11 @@ public class CorporateActionPeriod6 {
 			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CmplsryPurchsPrd")
 	protected Period3Choice compulsoryPurchasePeriod;
 	/**
-	 * Period during a take-over where any outstanding equity must be purchased
-	 * by the take-over company.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -235,6 +255,9 @@ public class CorporateActionPeriod6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CmplsryPurchsPrd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a::CSPD</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -250,9 +273,10 @@ public class CorporateActionPeriod6 {
 	public static final MMMessageAssociationEnd mmCompulsoryPurchasePeriod = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmCompulsoryPurchasePeriod;
-			componentContext_lazy = () -> CorporateActionPeriod6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod6.mmObject();
 			isDerived = false;
 			xmlTag = "CmplsryPurchsPrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a::CSPD"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompulsoryPurchasePeriod";
 			definition = "Period during a take-over where any outstanding equity must be purchased by the take-over company.";
@@ -262,10 +286,11 @@ public class CorporateActionPeriod6 {
 			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "BlckgPrd")
 	protected Period3Choice blockingPeriod;
 	/**
-	 * Period during which the security is blocked.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -284,6 +309,9 @@ public class CorporateActionPeriod6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BlckgPrd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a::BLOK</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -297,9 +325,10 @@ public class CorporateActionPeriod6 {
 	public static final MMMessageAssociationEnd mmBlockingPeriod = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBlockingDeadline.mmBlockingPeriod;
-			componentContext_lazy = () -> CorporateActionPeriod6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod6.mmObject();
 			isDerived = false;
 			xmlTag = "BlckgPrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a::BLOK"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockingPeriod";
 			definition = "Period during which the security is blocked.";
@@ -309,12 +338,11 @@ public class CorporateActionPeriod6 {
 			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ClmPrd")
 	protected Period3Choice claimPeriod;
 	/**
-	 * Period assigned by the court in a class action. It determines the
-	 * client's eligible transactions that will be included in the class action
-	 * and used to determine the resulting entitlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -333,6 +361,9 @@ public class CorporateActionPeriod6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClmPrd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a::CLCP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -348,9 +379,10 @@ public class CorporateActionPeriod6 {
 	public static final MMMessageAssociationEnd mmClaimPeriod = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ClassAction.mmClaimPeriod;
-			componentContext_lazy = () -> CorporateActionPeriod6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod6.mmObject();
 			isDerived = false;
 			xmlTag = "ClmPrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a::CLCP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClaimPeriod";
 			definition = "Period assigned by the court in a class action. It determines the client's eligible transactions that will be included in the class action and used to determine the resulting entitlement.";
@@ -360,12 +392,11 @@ public class CorporateActionPeriod6 {
 			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DpstrySspnsnPrdForBookNtryTrf")
 	protected Period3Choice depositorySuspensionPeriodForBookEntryTransfer;
 	/**
-	 * Period defining the last date for which book entry transfers will be
-	 * accepted and the date on which the suspension will be released and book
-	 * entry transfer processing will resume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -384,6 +415,9 @@ public class CorporateActionPeriod6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DpstrySspnsnPrdForBookNtryTrf"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a::DSBT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -399,9 +433,10 @@ public class CorporateActionPeriod6 {
 	public static final MMMessageAssociationEnd mmDepositorySuspensionPeriodForBookEntryTransfer = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SuspensionPeriod.mmDepositorySuspensionPeriodForBookEntryTransfer;
-			componentContext_lazy = () -> CorporateActionPeriod6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod6.mmObject();
 			isDerived = false;
 			xmlTag = "DpstrySspnsnPrdForBookNtryTrf";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a::DSBT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositorySuspensionPeriodForBookEntryTransfer";
 			definition = "Period defining the last date for which book entry transfers will be accepted and the date on which the suspension will be released and book entry transfer processing will resume.";
@@ -411,12 +446,11 @@ public class CorporateActionPeriod6 {
 			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DpstrySspnsnPrdForDpstAtAgt")
 	protected Period3Choice depositorySuspensionPeriodForDepositAtAgent;
 	/**
-	 * Period defining the last date for which deposits, into nominee name, at
-	 * the agent will be accepted and the date on which the suspension will be
-	 * released and deposits at agent will resume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -435,6 +469,9 @@ public class CorporateActionPeriod6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DpstrySspnsnPrdForDpstAtAgt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a::DSDA</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -450,9 +487,10 @@ public class CorporateActionPeriod6 {
 	public static final MMMessageAssociationEnd mmDepositorySuspensionPeriodForDepositAtAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SuspensionPeriod.mmDepositorySuspensionPeriodForDepositAtAgent;
-			componentContext_lazy = () -> CorporateActionPeriod6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod6.mmObject();
 			isDerived = false;
 			xmlTag = "DpstrySspnsnPrdForDpstAtAgt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a::DSDA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositorySuspensionPeriodForDepositAtAgent";
 			definition = "Period defining the last date for which deposits, into nominee name, at the agent will be accepted and the date on which the suspension will be released and deposits at agent will resume.";
@@ -462,11 +500,11 @@ public class CorporateActionPeriod6 {
 			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DpstrySspnsnPrdForDpst")
 	protected Period3Choice depositorySuspensionPeriodForDeposit;
 	/**
-	 * Period defining the last date for which deposits will be accepted and the
-	 * date on which the suspension will be released and deposits will resume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -485,6 +523,9 @@ public class CorporateActionPeriod6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DpstrySspnsnPrdForDpst"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a::DSDE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -500,9 +541,10 @@ public class CorporateActionPeriod6 {
 	public static final MMMessageAssociationEnd mmDepositorySuspensionPeriodForDeposit = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SuspensionPeriod.mmDepositorySuspensionPeriodForDeposit;
-			componentContext_lazy = () -> CorporateActionPeriod6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod6.mmObject();
 			isDerived = false;
 			xmlTag = "DpstrySspnsnPrdForDpst";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a::DSDE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositorySuspensionPeriodForDeposit";
 			definition = "Period defining the last date for which deposits will be accepted and the date on which the suspension will be released and deposits will resume.";
@@ -512,12 +554,11 @@ public class CorporateActionPeriod6 {
 			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DpstrySspnsnPrdForPldg")
 	protected Period3Choice depositorySuspensionPeriodForPledge;
 	/**
-	 * Period defining the last date for which pledges will be accepted and the
-	 * date on which the suspension will be released and pledge processing will
-	 * resume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -536,6 +577,9 @@ public class CorporateActionPeriod6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DpstrySspnsnPrdForPldg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a::DSPL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -551,9 +595,10 @@ public class CorporateActionPeriod6 {
 	public static final MMMessageAssociationEnd mmDepositorySuspensionPeriodForPledge = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SuspensionPeriod.mmDepositorySuspensionPeriodForPledge;
-			componentContext_lazy = () -> CorporateActionPeriod6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod6.mmObject();
 			isDerived = false;
 			xmlTag = "DpstrySspnsnPrdForPldg";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a::DSPL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositorySuspensionPeriodForPledge";
 			definition = "Period defining the last date for which pledges will be accepted and the date on which the suspension will be released and pledge processing will resume.";
@@ -563,12 +608,11 @@ public class CorporateActionPeriod6 {
 			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DpstrySspnsnPrdForSgrtn")
 	protected Period3Choice depositorySuspensionPeriodForSegregation;
 	/**
-	 * Period defining the last date for which intra-position balances can be
-	 * segregated and the date on which the suspension will be released and the
-	 * ability to segregate intra-position balances will resume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -587,6 +631,9 @@ public class CorporateActionPeriod6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DpstrySspnsnPrdForSgrtn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a::DSSE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -602,9 +649,10 @@ public class CorporateActionPeriod6 {
 	public static final MMMessageAssociationEnd mmDepositorySuspensionPeriodForSegregation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SuspensionPeriod.mmDepositorySuspensionPeriodForSegregation;
-			componentContext_lazy = () -> CorporateActionPeriod6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod6.mmObject();
 			isDerived = false;
 			xmlTag = "DpstrySspnsnPrdForSgrtn";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a::DSSE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositorySuspensionPeriodForSegregation";
 			definition = "Period defining the last date for which intra-position balances can be segregated and the date on which the suspension will be released and the ability to segregate intra-position balances will resume.";
@@ -614,12 +662,11 @@ public class CorporateActionPeriod6 {
 			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DpstrySspnsnPrdForWdrwlAtAgt")
 	protected Period3Choice depositorySuspensionPeriodForWithdrawalAtAgent;
 	/**
-	 * Period defining the last date for which withdrawals, from nominee name at
-	 * the agent will be accepted and the date on which the suspension will be
-	 * released and withdrawals at agent processing will resume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -638,6 +685,9 @@ public class CorporateActionPeriod6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DpstrySspnsnPrdForWdrwlAtAgt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a::DSWA</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -653,9 +703,10 @@ public class CorporateActionPeriod6 {
 	public static final MMMessageAssociationEnd mmDepositorySuspensionPeriodForWithdrawalAtAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawalAtAgent;
-			componentContext_lazy = () -> CorporateActionPeriod6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod6.mmObject();
 			isDerived = false;
 			xmlTag = "DpstrySspnsnPrdForWdrwlAtAgt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a::DSWA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositorySuspensionPeriodForWithdrawalAtAgent";
 			definition = "Period defining the last date for which withdrawals, from nominee name at the agent will be accepted and the date on which the suspension will be released and withdrawals at agent processing will resume.";
@@ -665,12 +716,11 @@ public class CorporateActionPeriod6 {
 			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DpstrySspnsnPrdForWdrwlInNmneeNm")
 	protected Period3Choice depositorySuspensionPeriodForWithdrawalInNomineeName;
 	/**
-	 * Period defining the last date for which physical withdrawals in the
-	 * nominee's name will be accepted and the date on which the suspension will
-	 * be released and physical withdrawals in the nominee's name will resume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -689,6 +739,9 @@ public class CorporateActionPeriod6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DpstrySspnsnPrdForWdrwlInNmneeNm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a::DSWN</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -704,9 +757,10 @@ public class CorporateActionPeriod6 {
 	public static final MMMessageAssociationEnd mmDepositorySuspensionPeriodForWithdrawalInNomineeName = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawalInNomineeName;
-			componentContext_lazy = () -> CorporateActionPeriod6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod6.mmObject();
 			isDerived = false;
 			xmlTag = "DpstrySspnsnPrdForWdrwlInNmneeNm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a::DSWN"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositorySuspensionPeriodForWithdrawalInNomineeName";
 			definition = "Period defining the last date for which physical withdrawals in the nominee's name will be accepted and the date on which the suspension will be released and physical withdrawals in the nominee's name will resume.";
@@ -716,13 +770,11 @@ public class CorporateActionPeriod6 {
 			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DpstrySspnsnPrdForWdrwlInStrtNm")
 	protected Period3Choice depositorySuspensionPeriodForWithdrawalInStreetName;
 	/**
-	 * Period defining the last date on which withdrawal requests in street
-	 * name's will be accepted on the event security and the date on which the
-	 * suspension will be released and withdrawal in street name's processing on
-	 * the event security will resume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -741,6 +793,9 @@ public class CorporateActionPeriod6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DpstrySspnsnPrdForWdrwlInStrtNm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a::DSWS</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -756,9 +811,10 @@ public class CorporateActionPeriod6 {
 	public static final MMMessageAssociationEnd mmDepositorySuspensionPeriodForWithdrawalInStreetName = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawalInStreetName;
-			componentContext_lazy = () -> CorporateActionPeriod6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod6.mmObject();
 			isDerived = false;
 			xmlTag = "DpstrySspnsnPrdForWdrwlInStrtNm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a::DSWS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositorySuspensionPeriodForWithdrawalInStreetName";
 			definition = "Period defining the last date on which withdrawal requests in street name's will be accepted on the event security and the date on which the suspension will be released and withdrawal in street name's processing on the event security will resume.";
@@ -768,12 +824,11 @@ public class CorporateActionPeriod6 {
 			type_lazy = () -> Period3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "BookClsrPrd")
 	protected Period3Choice bookClosurePeriod;
 	/**
-	 * Period defining the last date on which shareholder registration will be
-	 * accepted by the issuer and the date on which shareholder registration
-	 * will resume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -792,6 +847,9 @@ public class CorporateActionPeriod6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BookClsrPrd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a::BOCL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -807,9 +865,10 @@ public class CorporateActionPeriod6 {
 	public static final MMMessageAssociationEnd mmBookClosurePeriod = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmBookClosurePeriod;
-			componentContext_lazy = () -> CorporateActionPeriod6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod6.mmObject();
 			isDerived = false;
 			xmlTag = "BookClsrPrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a::BOCL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookClosurePeriod";
 			definition = "Period defining the last date on which shareholder registration will be accepted by the issuer and the date on which shareholder registration will resume.";
@@ -823,13 +882,16 @@ public class CorporateActionPeriod6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionPeriod6.mmPriceCalculationPeriod, CorporateActionPeriod6.mmInterestPeriod, CorporateActionPeriod6.mmCompulsoryPurchasePeriod, CorporateActionPeriod6.mmBlockingPeriod,
-						CorporateActionPeriod6.mmClaimPeriod, CorporateActionPeriod6.mmDepositorySuspensionPeriodForBookEntryTransfer, CorporateActionPeriod6.mmDepositorySuspensionPeriodForDepositAtAgent,
-						CorporateActionPeriod6.mmDepositorySuspensionPeriodForDeposit, CorporateActionPeriod6.mmDepositorySuspensionPeriodForPledge, CorporateActionPeriod6.mmDepositorySuspensionPeriodForSegregation,
-						CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalAtAgent, CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalInNomineeName,
-						CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalInStreetName, CorporateActionPeriod6.mmBookClosurePeriod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod6.mmPriceCalculationPeriod, com.tools20022.repository.msg.CorporateActionPeriod6.mmInterestPeriod,
+						com.tools20022.repository.msg.CorporateActionPeriod6.mmCompulsoryPurchasePeriod, com.tools20022.repository.msg.CorporateActionPeriod6.mmBlockingPeriod,
+						com.tools20022.repository.msg.CorporateActionPeriod6.mmClaimPeriod, com.tools20022.repository.msg.CorporateActionPeriod6.mmDepositorySuspensionPeriodForBookEntryTransfer,
+						com.tools20022.repository.msg.CorporateActionPeriod6.mmDepositorySuspensionPeriodForDepositAtAgent, com.tools20022.repository.msg.CorporateActionPeriod6.mmDepositorySuspensionPeriodForDeposit,
+						com.tools20022.repository.msg.CorporateActionPeriod6.mmDepositorySuspensionPeriodForPledge, com.tools20022.repository.msg.CorporateActionPeriod6.mmDepositorySuspensionPeriodForSegregation,
+						com.tools20022.repository.msg.CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalAtAgent, com.tools20022.repository.msg.CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalInNomineeName,
+						com.tools20022.repository.msg.CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalInStreetName, com.tools20022.repository.msg.CorporateActionPeriod6.mmBookClosurePeriod);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInterestPeriodRule.forCorporateActionPeriod6);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPeriod6";
 				definition = "Specifies periods of a corporate action.";
@@ -839,129 +901,129 @@ public class CorporateActionPeriod6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PricClctnPrd")
-	public Period3Choice getPriceCalculationPeriod() {
-		return priceCalculationPeriod;
+	public Optional<Period3Choice> getPriceCalculationPeriod() {
+		return priceCalculationPeriod == null ? Optional.empty() : Optional.of(priceCalculationPeriod);
 	}
 
-	public void setPriceCalculationPeriod(Period3Choice priceCalculationPeriod) {
+	public CorporateActionPeriod6 setPriceCalculationPeriod(Period3Choice priceCalculationPeriod) {
 		this.priceCalculationPeriod = priceCalculationPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "IntrstPrd")
-	public Period3Choice getInterestPeriod() {
-		return interestPeriod;
+	public Optional<Period3Choice> getInterestPeriod() {
+		return interestPeriod == null ? Optional.empty() : Optional.of(interestPeriod);
 	}
 
-	public void setInterestPeriod(Period3Choice interestPeriod) {
+	public CorporateActionPeriod6 setInterestPeriod(Period3Choice interestPeriod) {
 		this.interestPeriod = interestPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "CmplsryPurchsPrd")
-	public Period3Choice getCompulsoryPurchasePeriod() {
-		return compulsoryPurchasePeriod;
+	public Optional<Period3Choice> getCompulsoryPurchasePeriod() {
+		return compulsoryPurchasePeriod == null ? Optional.empty() : Optional.of(compulsoryPurchasePeriod);
 	}
 
-	public void setCompulsoryPurchasePeriod(Period3Choice compulsoryPurchasePeriod) {
+	public CorporateActionPeriod6 setCompulsoryPurchasePeriod(Period3Choice compulsoryPurchasePeriod) {
 		this.compulsoryPurchasePeriod = compulsoryPurchasePeriod;
+		return this;
 	}
 
-	@XmlElement(name = "BlckgPrd")
-	public Period3Choice getBlockingPeriod() {
-		return blockingPeriod;
+	public Optional<Period3Choice> getBlockingPeriod() {
+		return blockingPeriod == null ? Optional.empty() : Optional.of(blockingPeriod);
 	}
 
-	public void setBlockingPeriod(Period3Choice blockingPeriod) {
+	public CorporateActionPeriod6 setBlockingPeriod(Period3Choice blockingPeriod) {
 		this.blockingPeriod = blockingPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "ClmPrd")
-	public Period3Choice getClaimPeriod() {
-		return claimPeriod;
+	public Optional<Period3Choice> getClaimPeriod() {
+		return claimPeriod == null ? Optional.empty() : Optional.of(claimPeriod);
 	}
 
-	public void setClaimPeriod(Period3Choice claimPeriod) {
+	public CorporateActionPeriod6 setClaimPeriod(Period3Choice claimPeriod) {
 		this.claimPeriod = claimPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "DpstrySspnsnPrdForBookNtryTrf")
-	public Period3Choice getDepositorySuspensionPeriodForBookEntryTransfer() {
-		return depositorySuspensionPeriodForBookEntryTransfer;
+	public Optional<Period3Choice> getDepositorySuspensionPeriodForBookEntryTransfer() {
+		return depositorySuspensionPeriodForBookEntryTransfer == null ? Optional.empty() : Optional.of(depositorySuspensionPeriodForBookEntryTransfer);
 	}
 
-	public void setDepositorySuspensionPeriodForBookEntryTransfer(Period3Choice depositorySuspensionPeriodForBookEntryTransfer) {
+	public CorporateActionPeriod6 setDepositorySuspensionPeriodForBookEntryTransfer(Period3Choice depositorySuspensionPeriodForBookEntryTransfer) {
 		this.depositorySuspensionPeriodForBookEntryTransfer = depositorySuspensionPeriodForBookEntryTransfer;
+		return this;
 	}
 
-	@XmlElement(name = "DpstrySspnsnPrdForDpstAtAgt")
-	public Period3Choice getDepositorySuspensionPeriodForDepositAtAgent() {
-		return depositorySuspensionPeriodForDepositAtAgent;
+	public Optional<Period3Choice> getDepositorySuspensionPeriodForDepositAtAgent() {
+		return depositorySuspensionPeriodForDepositAtAgent == null ? Optional.empty() : Optional.of(depositorySuspensionPeriodForDepositAtAgent);
 	}
 
-	public void setDepositorySuspensionPeriodForDepositAtAgent(Period3Choice depositorySuspensionPeriodForDepositAtAgent) {
+	public CorporateActionPeriod6 setDepositorySuspensionPeriodForDepositAtAgent(Period3Choice depositorySuspensionPeriodForDepositAtAgent) {
 		this.depositorySuspensionPeriodForDepositAtAgent = depositorySuspensionPeriodForDepositAtAgent;
+		return this;
 	}
 
-	@XmlElement(name = "DpstrySspnsnPrdForDpst")
-	public Period3Choice getDepositorySuspensionPeriodForDeposit() {
-		return depositorySuspensionPeriodForDeposit;
+	public Optional<Period3Choice> getDepositorySuspensionPeriodForDeposit() {
+		return depositorySuspensionPeriodForDeposit == null ? Optional.empty() : Optional.of(depositorySuspensionPeriodForDeposit);
 	}
 
-	public void setDepositorySuspensionPeriodForDeposit(Period3Choice depositorySuspensionPeriodForDeposit) {
+	public CorporateActionPeriod6 setDepositorySuspensionPeriodForDeposit(Period3Choice depositorySuspensionPeriodForDeposit) {
 		this.depositorySuspensionPeriodForDeposit = depositorySuspensionPeriodForDeposit;
+		return this;
 	}
 
-	@XmlElement(name = "DpstrySspnsnPrdForPldg")
-	public Period3Choice getDepositorySuspensionPeriodForPledge() {
-		return depositorySuspensionPeriodForPledge;
+	public Optional<Period3Choice> getDepositorySuspensionPeriodForPledge() {
+		return depositorySuspensionPeriodForPledge == null ? Optional.empty() : Optional.of(depositorySuspensionPeriodForPledge);
 	}
 
-	public void setDepositorySuspensionPeriodForPledge(Period3Choice depositorySuspensionPeriodForPledge) {
+	public CorporateActionPeriod6 setDepositorySuspensionPeriodForPledge(Period3Choice depositorySuspensionPeriodForPledge) {
 		this.depositorySuspensionPeriodForPledge = depositorySuspensionPeriodForPledge;
+		return this;
 	}
 
-	@XmlElement(name = "DpstrySspnsnPrdForSgrtn")
-	public Period3Choice getDepositorySuspensionPeriodForSegregation() {
-		return depositorySuspensionPeriodForSegregation;
+	public Optional<Period3Choice> getDepositorySuspensionPeriodForSegregation() {
+		return depositorySuspensionPeriodForSegregation == null ? Optional.empty() : Optional.of(depositorySuspensionPeriodForSegregation);
 	}
 
-	public void setDepositorySuspensionPeriodForSegregation(Period3Choice depositorySuspensionPeriodForSegregation) {
+	public CorporateActionPeriod6 setDepositorySuspensionPeriodForSegregation(Period3Choice depositorySuspensionPeriodForSegregation) {
 		this.depositorySuspensionPeriodForSegregation = depositorySuspensionPeriodForSegregation;
+		return this;
 	}
 
-	@XmlElement(name = "DpstrySspnsnPrdForWdrwlAtAgt")
-	public Period3Choice getDepositorySuspensionPeriodForWithdrawalAtAgent() {
-		return depositorySuspensionPeriodForWithdrawalAtAgent;
+	public Optional<Period3Choice> getDepositorySuspensionPeriodForWithdrawalAtAgent() {
+		return depositorySuspensionPeriodForWithdrawalAtAgent == null ? Optional.empty() : Optional.of(depositorySuspensionPeriodForWithdrawalAtAgent);
 	}
 
-	public void setDepositorySuspensionPeriodForWithdrawalAtAgent(Period3Choice depositorySuspensionPeriodForWithdrawalAtAgent) {
+	public CorporateActionPeriod6 setDepositorySuspensionPeriodForWithdrawalAtAgent(Period3Choice depositorySuspensionPeriodForWithdrawalAtAgent) {
 		this.depositorySuspensionPeriodForWithdrawalAtAgent = depositorySuspensionPeriodForWithdrawalAtAgent;
+		return this;
 	}
 
-	@XmlElement(name = "DpstrySspnsnPrdForWdrwlInNmneeNm")
-	public Period3Choice getDepositorySuspensionPeriodForWithdrawalInNomineeName() {
-		return depositorySuspensionPeriodForWithdrawalInNomineeName;
+	public Optional<Period3Choice> getDepositorySuspensionPeriodForWithdrawalInNomineeName() {
+		return depositorySuspensionPeriodForWithdrawalInNomineeName == null ? Optional.empty() : Optional.of(depositorySuspensionPeriodForWithdrawalInNomineeName);
 	}
 
-	public void setDepositorySuspensionPeriodForWithdrawalInNomineeName(Period3Choice depositorySuspensionPeriodForWithdrawalInNomineeName) {
+	public CorporateActionPeriod6 setDepositorySuspensionPeriodForWithdrawalInNomineeName(Period3Choice depositorySuspensionPeriodForWithdrawalInNomineeName) {
 		this.depositorySuspensionPeriodForWithdrawalInNomineeName = depositorySuspensionPeriodForWithdrawalInNomineeName;
+		return this;
 	}
 
-	@XmlElement(name = "DpstrySspnsnPrdForWdrwlInStrtNm")
-	public Period3Choice getDepositorySuspensionPeriodForWithdrawalInStreetName() {
-		return depositorySuspensionPeriodForWithdrawalInStreetName;
+	public Optional<Period3Choice> getDepositorySuspensionPeriodForWithdrawalInStreetName() {
+		return depositorySuspensionPeriodForWithdrawalInStreetName == null ? Optional.empty() : Optional.of(depositorySuspensionPeriodForWithdrawalInStreetName);
 	}
 
-	public void setDepositorySuspensionPeriodForWithdrawalInStreetName(Period3Choice depositorySuspensionPeriodForWithdrawalInStreetName) {
+	public CorporateActionPeriod6 setDepositorySuspensionPeriodForWithdrawalInStreetName(Period3Choice depositorySuspensionPeriodForWithdrawalInStreetName) {
 		this.depositorySuspensionPeriodForWithdrawalInStreetName = depositorySuspensionPeriodForWithdrawalInStreetName;
+		return this;
 	}
 
-	@XmlElement(name = "BookClsrPrd")
-	public Period3Choice getBookClosurePeriod() {
-		return bookClosurePeriod;
+	public Optional<Period3Choice> getBookClosurePeriod() {
+		return bookClosurePeriod == null ? Optional.empty() : Optional.of(bookClosurePeriod);
 	}
 
-	public void setBookClosurePeriod(Period3Choice bookClosurePeriod) {
+	public CorporateActionPeriod6 setBookClosurePeriod(Period3Choice bookClosurePeriod) {
 		this.bookClosurePeriod = bookClosurePeriod;
+		return this;
 	}
 }

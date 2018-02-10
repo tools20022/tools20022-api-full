@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -78,8 +77,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,15 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionAgents1", propOrder = {"debtorAgent", "creditorAgent", "intermediaryAgent1", "intermediaryAgent2", "intermediaryAgent3", "receivingAgent", "deliveringAgent", "issuingAgent", "settlementPlace", "proprietary"})
 public class TransactionAgents1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DbtrAgt")
 	protected BranchAndFinancialInstitutionIdentification3 debtorAgent;
 	/**
-	 * Financial institution servicing an account for the debtor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -134,7 +134,7 @@ public class TransactionAgents1 {
 	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> TransactionAgents1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAgents1.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,10 +146,11 @@ public class TransactionAgents1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtrAgt")
 	protected BranchAndFinancialInstitutionIdentification3 creditorAgent;
 	/**
-	 * Financial institution servicing an account for the creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -183,7 +184,7 @@ public class TransactionAgents1 {
 	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> TransactionAgents1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAgents1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,14 +196,11 @@ public class TransactionAgents1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrmyAgt1")
 	protected BranchAndFinancialInstitutionIdentification3 intermediaryAgent1;
 	/**
-	 * Agent between the debtor agent and creditor agent.
 	 * 
-	 * Usage: If more than one intermediary agent is present, then
-	 * IntermediaryAgent1 identifies the agent between the debtor agent and the
-	 * intermediary agent 2.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -237,7 +235,7 @@ public class TransactionAgents1 {
 	public static final MMMessageAssociationEnd mmIntermediaryAgent1 = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> TransactionAgents1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAgents1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyAgt1";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -249,14 +247,11 @@ public class TransactionAgents1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrmyAgt2")
 	protected BranchAndFinancialInstitutionIdentification3 intermediaryAgent2;
 	/**
-	 * Agent between the debtor agent and creditor agent.
 	 * 
-	 * Usage: If more than two intermediary agents are present, then
-	 * IntermediaryAgent2 identifies the agent between the intermediary agent 1
-	 * and the intermediary agent 3.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -291,7 +286,7 @@ public class TransactionAgents1 {
 	public static final MMMessageAssociationEnd mmIntermediaryAgent2 = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> TransactionAgents1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAgents1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyAgt2";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -303,13 +298,11 @@ public class TransactionAgents1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrmyAgt3")
 	protected BranchAndFinancialInstitutionIdentification3 intermediaryAgent3;
 	/**
-	 * Agent between the debtor agent and creditor agent.
 	 * 
-	 * Usage: If IntermediaryAgent3 is present, then it identifies the agent
-	 * between the intermediary agent 2 and the creditor agent.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -344,7 +337,7 @@ public class TransactionAgents1 {
 	public static final MMMessageAssociationEnd mmIntermediaryAgent3 = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> TransactionAgents1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAgents1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyAgt3";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -356,12 +349,11 @@ public class TransactionAgents1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvgAgt")
 	protected BranchAndFinancialInstitutionIdentification3 receivingAgent;
 	/**
-	 * Party that receives securities from the delivering agent at the place of
-	 * settlement, eg, central securities depository. Can also be used in the
-	 * context of treasury operations.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -396,7 +388,7 @@ public class TransactionAgents1 {
 	public static final MMMessageAssociationEnd mmReceivingAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> TransactionAgents1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAgents1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -408,12 +400,11 @@ public class TransactionAgents1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvrgAgt")
 	protected BranchAndFinancialInstitutionIdentification3 deliveringAgent;
 	/**
-	 * Party that delivers securities to the receiving agent at the place of
-	 * settlement, eg, central securities depository. Can also be used in the
-	 * context of treasury operations.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -448,7 +439,7 @@ public class TransactionAgents1 {
 	public static final MMMessageAssociationEnd mmDeliveringAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> TransactionAgents1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAgents1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -460,10 +451,11 @@ public class TransactionAgents1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	@XmlElement(name = "IssgAgt")
 	protected BranchAndFinancialInstitutionIdentification3 issuingAgent;
 	/**
-	 * Legal entity that has the right to issue securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -496,7 +488,7 @@ public class TransactionAgents1 {
 	public static final MMMessageAssociationEnd mmIssuingAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> TransactionAgents1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAgents1.mmObject();
 			isDerived = false;
 			xmlTag = "IssgAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -508,14 +500,11 @@ public class TransactionAgents1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmPlc")
 	protected BranchAndFinancialInstitutionIdentification3 settlementPlace;
 	/**
-	 * Place where settlement of the securities takes place.
 	 * 
-	 * Note : this is typed by a financial institution identification - as this
-	 * is the standard way of identifying eg securities settlement agent/central
-	 * system.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -550,7 +539,7 @@ public class TransactionAgents1 {
 	public static final MMMessageAssociationEnd mmSettlementPlace = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> TransactionAgents1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAgents1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPlc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -562,10 +551,11 @@ public class TransactionAgents1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry")
 	protected List<com.tools20022.repository.msg.ProprietaryAgent1> proprietary;
 	/**
-	 * Proprietary agent related to the underlying transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -597,7 +587,7 @@ public class TransactionAgents1 {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> TransactionAgents1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAgents1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -612,11 +602,12 @@ public class TransactionAgents1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionAgents1.mmDebtorAgent, TransactionAgents1.mmCreditorAgent, TransactionAgents1.mmIntermediaryAgent1, TransactionAgents1.mmIntermediaryAgent2,
-						TransactionAgents1.mmIntermediaryAgent3, TransactionAgents1.mmReceivingAgent, TransactionAgents1.mmDeliveringAgent, TransactionAgents1.mmIssuingAgent, TransactionAgents1.mmSettlementPlace,
-						TransactionAgents1.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionAgents1.mmDebtorAgent, com.tools20022.repository.msg.TransactionAgents1.mmCreditorAgent,
+						com.tools20022.repository.msg.TransactionAgents1.mmIntermediaryAgent1, com.tools20022.repository.msg.TransactionAgents1.mmIntermediaryAgent2, com.tools20022.repository.msg.TransactionAgents1.mmIntermediaryAgent3,
+						com.tools20022.repository.msg.TransactionAgents1.mmReceivingAgent, com.tools20022.repository.msg.TransactionAgents1.mmDeliveringAgent, com.tools20022.repository.msg.TransactionAgents1.mmIssuingAgent,
+						com.tools20022.repository.msg.TransactionAgents1.mmSettlementPlace, com.tools20022.repository.msg.TransactionAgents1.mmProprietary);
 				trace_lazy = () -> Role.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionAgents1";
 				definition = "Set of elements providing information specific to the individual transaction(s) included in the message.";
@@ -625,93 +616,93 @@ public class TransactionAgents1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DbtrAgt")
-	public BranchAndFinancialInstitutionIdentification3 getDebtorAgent() {
-		return debtorAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification3> getDebtorAgent() {
+		return debtorAgent == null ? Optional.empty() : Optional.of(debtorAgent);
 	}
 
-	public void setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 debtorAgent) {
+	public TransactionAgents1 setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 debtorAgent) {
 		this.debtorAgent = debtorAgent;
+		return this;
 	}
 
-	@XmlElement(name = "CdtrAgt")
-	public BranchAndFinancialInstitutionIdentification3 getCreditorAgent() {
-		return creditorAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification3> getCreditorAgent() {
+		return creditorAgent == null ? Optional.empty() : Optional.of(creditorAgent);
 	}
 
-	public void setCreditorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 creditorAgent) {
+	public TransactionAgents1 setCreditorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 creditorAgent) {
 		this.creditorAgent = creditorAgent;
+		return this;
 	}
 
-	@XmlElement(name = "IntrmyAgt1")
-	public BranchAndFinancialInstitutionIdentification3 getIntermediaryAgent1() {
-		return intermediaryAgent1;
+	public Optional<BranchAndFinancialInstitutionIdentification3> getIntermediaryAgent1() {
+		return intermediaryAgent1 == null ? Optional.empty() : Optional.of(intermediaryAgent1);
 	}
 
-	public void setIntermediaryAgent1(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 intermediaryAgent1) {
+	public TransactionAgents1 setIntermediaryAgent1(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 intermediaryAgent1) {
 		this.intermediaryAgent1 = intermediaryAgent1;
+		return this;
 	}
 
-	@XmlElement(name = "IntrmyAgt2")
-	public BranchAndFinancialInstitutionIdentification3 getIntermediaryAgent2() {
-		return intermediaryAgent2;
+	public Optional<BranchAndFinancialInstitutionIdentification3> getIntermediaryAgent2() {
+		return intermediaryAgent2 == null ? Optional.empty() : Optional.of(intermediaryAgent2);
 	}
 
-	public void setIntermediaryAgent2(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 intermediaryAgent2) {
+	public TransactionAgents1 setIntermediaryAgent2(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 intermediaryAgent2) {
 		this.intermediaryAgent2 = intermediaryAgent2;
+		return this;
 	}
 
-	@XmlElement(name = "IntrmyAgt3")
-	public BranchAndFinancialInstitutionIdentification3 getIntermediaryAgent3() {
-		return intermediaryAgent3;
+	public Optional<BranchAndFinancialInstitutionIdentification3> getIntermediaryAgent3() {
+		return intermediaryAgent3 == null ? Optional.empty() : Optional.of(intermediaryAgent3);
 	}
 
-	public void setIntermediaryAgent3(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 intermediaryAgent3) {
+	public TransactionAgents1 setIntermediaryAgent3(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 intermediaryAgent3) {
 		this.intermediaryAgent3 = intermediaryAgent3;
+		return this;
 	}
 
-	@XmlElement(name = "RcvgAgt")
-	public BranchAndFinancialInstitutionIdentification3 getReceivingAgent() {
-		return receivingAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification3> getReceivingAgent() {
+		return receivingAgent == null ? Optional.empty() : Optional.of(receivingAgent);
 	}
 
-	public void setReceivingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 receivingAgent) {
+	public TransactionAgents1 setReceivingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 receivingAgent) {
 		this.receivingAgent = receivingAgent;
+		return this;
 	}
 
-	@XmlElement(name = "DlvrgAgt")
-	public BranchAndFinancialInstitutionIdentification3 getDeliveringAgent() {
-		return deliveringAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification3> getDeliveringAgent() {
+		return deliveringAgent == null ? Optional.empty() : Optional.of(deliveringAgent);
 	}
 
-	public void setDeliveringAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 deliveringAgent) {
+	public TransactionAgents1 setDeliveringAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 deliveringAgent) {
 		this.deliveringAgent = deliveringAgent;
+		return this;
 	}
 
-	@XmlElement(name = "IssgAgt")
-	public BranchAndFinancialInstitutionIdentification3 getIssuingAgent() {
-		return issuingAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification3> getIssuingAgent() {
+		return issuingAgent == null ? Optional.empty() : Optional.of(issuingAgent);
 	}
 
-	public void setIssuingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 issuingAgent) {
+	public TransactionAgents1 setIssuingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 issuingAgent) {
 		this.issuingAgent = issuingAgent;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmPlc")
-	public BranchAndFinancialInstitutionIdentification3 getSettlementPlace() {
-		return settlementPlace;
+	public Optional<BranchAndFinancialInstitutionIdentification3> getSettlementPlace() {
+		return settlementPlace == null ? Optional.empty() : Optional.of(settlementPlace);
 	}
 
-	public void setSettlementPlace(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 settlementPlace) {
+	public TransactionAgents1 setSettlementPlace(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 settlementPlace) {
 		this.settlementPlace = settlementPlace;
+		return this;
 	}
 
-	@XmlElement(name = "Prtry")
 	public List<ProprietaryAgent1> getProprietary() {
-		return proprietary;
+		return proprietary == null ? proprietary = new ArrayList<>() : proprietary;
 	}
 
-	public void setProprietary(List<com.tools20022.repository.msg.ProprietaryAgent1> proprietary) {
-		this.proprietary = proprietary;
+	public TransactionAgents1 setProprietary(List<com.tools20022.repository.msg.ProprietaryAgent1> proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

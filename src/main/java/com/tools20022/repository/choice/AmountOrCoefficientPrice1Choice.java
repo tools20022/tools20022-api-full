@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between an amount and a coefficient."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountOrCoefficientPrice1Choice", propOrder = {"amount", "coefficient"})
 public class AmountOrCoefficientPrice1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ImpliedCurrencyAndAmount amount;
 	/**
-	 * Provides details of the price when expressed with an amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,7 +101,7 @@ public class AmountOrCoefficientPrice1Choice {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AmountOrCoefficientPrice1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AmountOrCoefficientPrice1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,10 +112,11 @@ public class AmountOrCoefficientPrice1Choice {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Coeff", required = true)
 	protected DecimalNumber coefficient;
 	/**
-	 * Provides details of the price when expressed with a coefficient.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +145,7 @@ public class AmountOrCoefficientPrice1Choice {
 	 */
 	public static final MMMessageAttribute mmCoefficient = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AmountOrCoefficientPrice1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AmountOrCoefficientPrice1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Coeff";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,8 +160,8 @@ public class AmountOrCoefficientPrice1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountOrCoefficientPrice1Choice.mmAmount, AmountOrCoefficientPrice1Choice.mmCoefficient);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountOrCoefficientPrice1Choice.mmAmount, com.tools20022.repository.choice.AmountOrCoefficientPrice1Choice.mmCoefficient);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AmountOrCoefficientPrice1Choice";
 				definition = "Choice between an amount and a coefficient.";
@@ -167,21 +170,21 @@ public class AmountOrCoefficientPrice1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ImpliedCurrencyAndAmount amount) {
-		this.amount = amount;
+	public AmountOrCoefficientPrice1Choice setAmount(ImpliedCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "Coeff", required = true)
 	public DecimalNumber getCoefficient() {
 		return coefficient;
 	}
 
-	public void setCoefficient(DecimalNumber coefficient) {
-		this.coefficient = coefficient;
+	public AmountOrCoefficientPrice1Choice setCoefficient(DecimalNumber coefficient) {
+		this.coefficient = Objects.requireNonNull(coefficient);
+		return this;
 	}
 }

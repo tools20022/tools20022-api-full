@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -30,6 +31,7 @@ import com.tools20022.repository.entity.Lottery;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -75,8 +77,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,15 +93,16 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateAction24}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateAction32", propOrder = {"dateDetails", "eventStage", "additionalBusinessProcessIndicator", "lotteryType"})
 public class CorporateAction32 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DtDtls")
 	protected CorporateActionDate45 dateDetails;
 	/**
-	 * Provides information about the dates related to a corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -138,7 +141,7 @@ public class CorporateAction32 {
 	public static final MMMessageAssociationEnd mmDateDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionEvent.mmObject();
-			componentContext_lazy = () -> CorporateAction32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction32.mmObject();
 			isDerived = false;
 			xmlTag = "DtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,10 +154,11 @@ public class CorporateAction32 {
 			type_lazy = () -> com.tools20022.repository.msg.CorporateActionDate45.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtStag")
 	protected CorporateActionEventStageFormat14Choice eventStage;
 	/**
-	 * Stage in the corporate action event life cycle.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -192,7 +196,7 @@ public class CorporateAction32 {
 	public static final MMMessageAssociationEnd mmEventStage = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventStage;
-			componentContext_lazy = () -> CorporateAction32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction32.mmObject();
 			isDerived = false;
 			xmlTag = "EvtStag";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,11 +209,11 @@ public class CorporateAction32 {
 			type_lazy = () -> CorporateActionEventStageFormat14Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlBizPrcInd")
 	protected AdditionalBusinessProcessFormat10Choice additionalBusinessProcessIndicator;
 	/**
-	 * Indicates whether the message is related to a claim on the associated
-	 * corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -229,6 +233,9 @@ public class CorporateAction32 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlBizPrcInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::ADDB</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -244,9 +251,10 @@ public class CorporateAction32 {
 	public static final MMMessageAssociationEnd mmAdditionalBusinessProcessIndicator = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmAdditionalBusinessProcess;
-			componentContext_lazy = () -> CorporateAction32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction32.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlBizPrcInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::ADDB"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalBusinessProcessIndicator";
 			definition = "Indicates whether the message is related to a claim on the associated corporate action event.";
@@ -256,10 +264,11 @@ public class CorporateAction32 {
 			type_lazy = () -> AdditionalBusinessProcessFormat10Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LtryTp")
 	protected LotteryTypeFormat4Choice lotteryType;
 	/**
-	 * Specifies the type of lottery announced.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -279,6 +288,9 @@ public class CorporateAction32 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LtryTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::LOTO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -297,9 +309,10 @@ public class CorporateAction32 {
 	public static final MMMessageAssociationEnd mmLotteryType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmLotteryType;
-			componentContext_lazy = () -> CorporateAction32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction32.mmObject();
 			isDerived = false;
 			xmlTag = "LtryTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::LOTO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryType";
 			definition = "Specifies the type of lottery announced.";
@@ -314,10 +327,11 @@ public class CorporateAction32 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateAction32.mmDateDetails, CorporateAction32.mmEventStage, CorporateAction32.mmAdditionalBusinessProcessIndicator, CorporateAction32.mmLotteryType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction32.mmDateDetails, com.tools20022.repository.msg.CorporateAction32.mmEventStage,
+						com.tools20022.repository.msg.CorporateAction32.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.msg.CorporateAction32.mmLotteryType);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceV07.mmCorporateActionDetails, CorporateActionMovementPreliminaryAdviceV08.mmCorporateActionDetails);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateAction32";
 				definition = "Provides information about the corporate action event.";
@@ -327,39 +341,39 @@ public class CorporateAction32 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DtDtls")
-	public CorporateActionDate45 getDateDetails() {
-		return dateDetails;
+	public Optional<CorporateActionDate45> getDateDetails() {
+		return dateDetails == null ? Optional.empty() : Optional.of(dateDetails);
 	}
 
-	public void setDateDetails(com.tools20022.repository.msg.CorporateActionDate45 dateDetails) {
+	public CorporateAction32 setDateDetails(com.tools20022.repository.msg.CorporateActionDate45 dateDetails) {
 		this.dateDetails = dateDetails;
+		return this;
 	}
 
-	@XmlElement(name = "EvtStag")
-	public CorporateActionEventStageFormat14Choice getEventStage() {
-		return eventStage;
+	public Optional<CorporateActionEventStageFormat14Choice> getEventStage() {
+		return eventStage == null ? Optional.empty() : Optional.of(eventStage);
 	}
 
-	public void setEventStage(CorporateActionEventStageFormat14Choice eventStage) {
+	public CorporateAction32 setEventStage(CorporateActionEventStageFormat14Choice eventStage) {
 		this.eventStage = eventStage;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlBizPrcInd")
-	public AdditionalBusinessProcessFormat10Choice getAdditionalBusinessProcessIndicator() {
-		return additionalBusinessProcessIndicator;
+	public Optional<AdditionalBusinessProcessFormat10Choice> getAdditionalBusinessProcessIndicator() {
+		return additionalBusinessProcessIndicator == null ? Optional.empty() : Optional.of(additionalBusinessProcessIndicator);
 	}
 
-	public void setAdditionalBusinessProcessIndicator(AdditionalBusinessProcessFormat10Choice additionalBusinessProcessIndicator) {
+	public CorporateAction32 setAdditionalBusinessProcessIndicator(AdditionalBusinessProcessFormat10Choice additionalBusinessProcessIndicator) {
 		this.additionalBusinessProcessIndicator = additionalBusinessProcessIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "LtryTp")
-	public LotteryTypeFormat4Choice getLotteryType() {
-		return lotteryType;
+	public Optional<LotteryTypeFormat4Choice> getLotteryType() {
+		return lotteryType == null ? Optional.empty() : Optional.of(lotteryType);
 	}
 
-	public void setLotteryType(LotteryTypeFormat4Choice lotteryType) {
+	public CorporateAction32 setLotteryType(LotteryTypeFormat4Choice lotteryType) {
 		this.lotteryType = lotteryType;
+		return this;
 	}
 }

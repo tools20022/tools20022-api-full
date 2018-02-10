@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between channel mode and terminal identification."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CommunicationChannel1Choice", propOrder = {"channelMode", "terminalIdentification"})
 public class CommunicationChannel1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ChanlMd", required = true)
 	protected Exact1NumericText channelMode;
 	/**
-	 * CBRF communication channel mode.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +100,7 @@ public class CommunicationChannel1Choice {
 	 */
 	public static final MMMessageAttribute mmChannelMode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CommunicationChannel1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CommunicationChannel1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ChanlMd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,10 +111,11 @@ public class CommunicationChannel1Choice {
 			simpleType_lazy = () -> Exact1NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "TermnlId", required = true)
 	protected Max35Text terminalIdentification;
 	/**
-	 * CBRF identification of the terminal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +142,7 @@ public class CommunicationChannel1Choice {
 	 */
 	public static final MMMessageAttribute mmTerminalIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CommunicationChannel1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CommunicationChannel1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TermnlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,8 +157,8 @@ public class CommunicationChannel1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CommunicationChannel1Choice.mmChannelMode, CommunicationChannel1Choice.mmTerminalIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CommunicationChannel1Choice.mmChannelMode, com.tools20022.repository.choice.CommunicationChannel1Choice.mmTerminalIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CommunicationChannel1Choice";
 				definition = "Choice between channel mode and terminal identification.";
@@ -164,21 +167,21 @@ public class CommunicationChannel1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ChanlMd", required = true)
 	public Exact1NumericText getChannelMode() {
 		return channelMode;
 	}
 
-	public void setChannelMode(Exact1NumericText channelMode) {
-		this.channelMode = channelMode;
+	public CommunicationChannel1Choice setChannelMode(Exact1NumericText channelMode) {
+		this.channelMode = Objects.requireNonNull(channelMode);
+		return this;
 	}
 
-	@XmlElement(name = "TermnlId", required = true)
 	public Max35Text getTerminalIdentification() {
 		return terminalIdentification;
 	}
 
-	public void setTerminalIdentification(Max35Text terminalIdentification) {
-		this.terminalIdentification = terminalIdentification;
+	public CommunicationChannel1Choice setTerminalIdentification(Max35Text terminalIdentification) {
+		this.terminalIdentification = Objects.requireNonNull(terminalIdentification);
+		return this;
 	}
 }

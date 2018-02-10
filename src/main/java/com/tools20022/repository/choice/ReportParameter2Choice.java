@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between types of reporting parameter."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReportParameter2Choice", propOrder = {"party", "country", "currency", "userDefined"})
 public class ReportParameter2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pty", required = true)
 	protected PartyIdentification2Choice party;
 	/**
-	 * Party for which the estimated cash flow is being reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +107,7 @@ public class ReportParameter2Choice {
 	 */
 	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportParameter2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReportParameter2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +118,11 @@ public class ReportParameter2Choice {
 			complexType_lazy = () -> com.tools20022.repository.choice.PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Ctry", required = true)
 	protected CountryCode country;
 	/**
-	 * Country for which the estimated cash flow is being reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,7 +150,7 @@ public class ReportParameter2Choice {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportParameter2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReportParameter2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,10 +161,11 @@ public class ReportParameter2Choice {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy", required = true)
 	protected ActiveOrHistoricCurrencyCode currency;
 	/**
-	 * Currency for which the estimated cash flow is being reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +194,7 @@ public class ReportParameter2Choice {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportParameter2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReportParameter2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,10 +205,11 @@ public class ReportParameter2Choice {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "UsrDfnd", required = true)
 	protected DataFormat2Choice userDefined;
 	/**
-	 * Parameter for which the estimated cash flow is being reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -233,7 +238,7 @@ public class ReportParameter2Choice {
 	 */
 	public static final MMMessageAttribute mmUserDefined = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportParameter2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReportParameter2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UsrDfnd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,8 +253,9 @@ public class ReportParameter2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReportParameter2Choice.mmParty, ReportParameter2Choice.mmCountry, ReportParameter2Choice.mmCurrency, ReportParameter2Choice.mmUserDefined);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReportParameter2Choice.mmParty, com.tools20022.repository.choice.ReportParameter2Choice.mmCountry,
+						com.tools20022.repository.choice.ReportParameter2Choice.mmCurrency, com.tools20022.repository.choice.ReportParameter2Choice.mmUserDefined);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportParameter2Choice";
 				definition = "Choice between types of reporting parameter.";
@@ -258,39 +264,39 @@ public class ReportParameter2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pty", required = true)
 	public PartyIdentification2Choice getParty() {
 		return party;
 	}
 
-	public void setParty(com.tools20022.repository.choice.PartyIdentification2Choice party) {
-		this.party = party;
+	public ReportParameter2Choice setParty(com.tools20022.repository.choice.PartyIdentification2Choice party) {
+		this.party = Objects.requireNonNull(party);
+		return this;
 	}
 
-	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
 
-	public void setCountry(CountryCode country) {
-		this.country = country;
+	public ReportParameter2Choice setCountry(CountryCode country) {
+		this.country = Objects.requireNonNull(country);
+		return this;
 	}
 
-	@XmlElement(name = "Ccy", required = true)
 	public ActiveOrHistoricCurrencyCode getCurrency() {
 		return currency;
 	}
 
-	public void setCurrency(ActiveOrHistoricCurrencyCode currency) {
-		this.currency = currency;
+	public ReportParameter2Choice setCurrency(ActiveOrHistoricCurrencyCode currency) {
+		this.currency = Objects.requireNonNull(currency);
+		return this;
 	}
 
-	@XmlElement(name = "UsrDfnd", required = true)
 	public DataFormat2Choice getUserDefined() {
 		return userDefined;
 	}
 
-	public void setUserDefined(com.tools20022.repository.choice.DataFormat2Choice userDefined) {
-		this.userDefined = userDefined;
+	public ReportParameter2Choice setUserDefined(com.tools20022.repository.choice.DataFormat2Choice userDefined) {
+		this.userDefined = Objects.requireNonNull(userDefined);
+		return this;
 	}
 }

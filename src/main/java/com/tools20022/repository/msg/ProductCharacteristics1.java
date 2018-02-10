@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.ProductCharacteristics;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identifies the characteristic of a product."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ProductCharacteristics1", propOrder = {"type", "characteristics"})
 public class ProductCharacteristics1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected ProductCharacteristics1Code type;
 	/**
-	 * Specifies the type of product characteristic by means of a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +110,7 @@ public class ProductCharacteristics1 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProductCharacteristics.mmType;
-			componentContext_lazy = () -> ProductCharacteristics1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProductCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +121,11 @@ public class ProductCharacteristics1 {
 			simpleType_lazy = () -> ProductCharacteristics1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Chrtcs", required = true)
 	protected Max35Text characteristics;
 	/**
-	 * Specifies the characteristic of a product.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +158,7 @@ public class ProductCharacteristics1 {
 	public static final MMMessageAttribute mmCharacteristics = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProductCharacteristics.mmCharacteristics;
-			componentContext_lazy = () -> ProductCharacteristics1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProductCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "Chrtcs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,9 +173,9 @@ public class ProductCharacteristics1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProductCharacteristics1.mmType, ProductCharacteristics1.mmCharacteristics);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCharacteristics1.mmType, com.tools20022.repository.msg.ProductCharacteristics1.mmCharacteristics);
 				trace_lazy = () -> ProductCharacteristics.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductCharacteristics1";
 				definition = "Identifies the characteristic of a product.";
@@ -181,21 +184,21 @@ public class ProductCharacteristics1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public ProductCharacteristics1Code getType() {
 		return type;
 	}
 
-	public void setType(ProductCharacteristics1Code type) {
-		this.type = type;
+	public ProductCharacteristics1 setType(ProductCharacteristics1Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Chrtcs", required = true)
 	public Max35Text getCharacteristics() {
 		return characteristics;
 	}
 
-	public void setCharacteristics(Max35Text characteristics) {
-		this.characteristics = characteristics;
+	public ProductCharacteristics1 setCharacteristics(Max35Text characteristics) {
+		this.characteristics = Objects.requireNonNull(characteristics);
+		return this;
 	}
 }

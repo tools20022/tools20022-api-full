@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.OrganisationName;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * GenericIdentification76}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GenericIdentification74", propOrder = {"identification", "type", "issuer", "country", "shortName"})
 public class GenericIdentification74 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Identification of the entity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -127,7 +130,7 @@ public class GenericIdentification74 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> GenericIdentification74.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification74.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,10 +142,11 @@ public class GenericIdentification74 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected PartyType10Code type;
 	/**
-	 * Type of identified entity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -181,7 +185,7 @@ public class GenericIdentification74 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
-			componentContext_lazy = () -> GenericIdentification74.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification74.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -193,11 +197,11 @@ public class GenericIdentification74 {
 			simpleType_lazy = () -> PartyType10Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Issr")
 	protected PartyType10Code issuer;
 	/**
-	 * Entity assigning the identification (for example merchant, acceptor,
-	 * acquirer, or tax authority).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -238,7 +242,7 @@ public class GenericIdentification74 {
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
-			componentContext_lazy = () -> GenericIdentification74.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification74.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -250,10 +254,11 @@ public class GenericIdentification74 {
 			simpleType_lazy = () -> PartyType10Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Ctry")
 	protected Min2Max3AlphaText country;
 	/**
-	 * Country of the entity (ISO 3166-1 alpha-2 or alpha-3)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -286,7 +291,7 @@ public class GenericIdentification74 {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GenericIdentification74.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification74.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -298,10 +303,11 @@ public class GenericIdentification74 {
 			simpleType_lazy = () -> Min2Max3AlphaText.mmObject();
 		}
 	};
+	@XmlElement(name = "ShrtNm")
 	protected Max35Text shortName;
 	/**
-	 * Name of the entity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -339,7 +345,7 @@ public class GenericIdentification74 {
 	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationName.mmShortName;
-			componentContext_lazy = () -> GenericIdentification74.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification74.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -355,9 +361,10 @@ public class GenericIdentification74 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GenericIdentification74.mmIdentification, GenericIdentification74.mmType, GenericIdentification74.mmIssuer, GenericIdentification74.mmCountry, GenericIdentification74.mmShortName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification74.mmIdentification, com.tools20022.repository.msg.GenericIdentification74.mmType,
+						com.tools20022.repository.msg.GenericIdentification74.mmIssuer, com.tools20022.repository.msg.GenericIdentification74.mmCountry, com.tools20022.repository.msg.GenericIdentification74.mmShortName);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GenericIdentification74";
 				definition = "Identification of an entity.";
@@ -367,48 +374,48 @@ public class GenericIdentification74 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public GenericIdentification74 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public PartyType10Code getType() {
 		return type;
 	}
 
-	public void setType(PartyType10Code type) {
-		this.type = type;
+	public GenericIdentification74 setType(PartyType10Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Issr")
-	public PartyType10Code getIssuer() {
-		return issuer;
+	public Optional<PartyType10Code> getIssuer() {
+		return issuer == null ? Optional.empty() : Optional.of(issuer);
 	}
 
-	public void setIssuer(PartyType10Code issuer) {
+	public GenericIdentification74 setIssuer(PartyType10Code issuer) {
 		this.issuer = issuer;
+		return this;
 	}
 
-	@XmlElement(name = "Ctry")
-	public Min2Max3AlphaText getCountry() {
-		return country;
+	public Optional<Min2Max3AlphaText> getCountry() {
+		return country == null ? Optional.empty() : Optional.of(country);
 	}
 
-	public void setCountry(Min2Max3AlphaText country) {
+	public GenericIdentification74 setCountry(Min2Max3AlphaText country) {
 		this.country = country;
+		return this;
 	}
 
-	@XmlElement(name = "ShrtNm")
-	public Max35Text getShortName() {
-		return shortName;
+	public Optional<Max35Text> getShortName() {
+		return shortName == null ? Optional.empty() : Optional.of(shortName);
 	}
 
-	public void setShortName(Max35Text shortName) {
+	public GenericIdentification74 setShortName(Max35Text shortName) {
 		this.shortName = shortName;
+		return this;
 	}
 }

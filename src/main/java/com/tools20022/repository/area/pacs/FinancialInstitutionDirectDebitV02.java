@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PaymentsClearingandSettlementISOLatestversion;
 import com.tools20022.repository.msgset.PaymentsClearingandSettlementMaintenance20162017;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -49,25 +51,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementLatestVersion
- * PaymentsClearingandSettlementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PaymentsClearingandSettlementISOLatestversion
- * PaymentsClearingandSettlementISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PaymentsClearingandSettlementMaintenance20162017
- * PaymentsClearingandSettlementMaintenance20162017}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "FIDrctDbt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -83,9 +66,36 @@ import javax.xml.bind.annotation.*;
  * FinancialInstitutionDirectDebitV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PaymentsClearingandSettlementISOLatestversion
+ * PaymentsClearingandSettlementISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PaymentsClearingandSettlementMaintenance20162017
+ * PaymentsClearingandSettlementMaintenance20162017}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "FIDrctDbt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementLatestVersion
+ * PaymentsClearingandSettlementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pacs.010.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#forFinancialInstitutionDirectDebitV02
+ * ConstraintSupplementaryDataRule.forFinancialInstitutionDirectDebitV02}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,16 +108,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstitutionDirectDebitV02", propOrder = {"groupHeader", "creditInstruction", "supplementaryData"})
 public class FinancialInstitutionDirectDebitV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader63 groupHeader;
 	/**
-	 * Common characteristics for all individual transactions included in the
-	 * message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,11 +158,11 @@ public class FinancialInstitutionDirectDebitV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CdtInstr", required = true)
 	protected List<CreditTransferTransaction9> creditInstruction;
 	/**
-	 * Characteristics that apply to the credit side of the payment
-	 * transaction(s) included in the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,11 +203,11 @@ public class FinancialInstitutionDirectDebitV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -242,6 +252,7 @@ public class FinancialInstitutionDirectDebitV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFinancialInstitutionDirectDebitV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstitutionDirectDebitV02";
 				definition = "Scope:\r\nThe FinancialInstitutionDirectDebit message is sent by an exchange or clearing house, or a financial institution, directly or through another agent, to the DebtorAgent.  It is used to instruct the DebtorAgent to move funds from one or more debtor(s) account(s) to one or more creditor(s), where both debtor and creditor are financial institutions.\r\n\r\nUsage:\r\nThe FinancialInstitutionDirectDebit message is exchanged between agents and can contain one or more financial institution direct debit instruction(s) for one or more creditor(s). The FinancialInstitutionDirectDebit message can be used in domestic and cross-border scenarios.\r\n";
@@ -269,34 +280,34 @@ public class FinancialInstitutionDirectDebitV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader63 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader63 groupHeader) {
-		this.groupHeader = groupHeader;
+	public FinancialInstitutionDirectDebitV02 setGroupHeader(GroupHeader63 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "CdtInstr", required = true)
 	public List<CreditTransferTransaction9> getCreditInstruction() {
-		return creditInstruction;
+		return creditInstruction == null ? creditInstruction = new ArrayList<>() : creditInstruction;
 	}
 
-	public void setCreditInstruction(List<CreditTransferTransaction9> creditInstruction) {
-		this.creditInstruction = creditInstruction;
+	public FinancialInstitutionDirectDebitV02 setCreditInstruction(List<CreditTransferTransaction9> creditInstruction) {
+		this.creditInstruction = Objects.requireNonNull(creditInstruction);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public FinancialInstitutionDirectDebitV02 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.010.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.010.001.02")
 	static public class Document {
 		@XmlElement(name = "FIDrctDbt", required = true)
 		public FinancialInstitutionDirectDebitV02 messageBody;

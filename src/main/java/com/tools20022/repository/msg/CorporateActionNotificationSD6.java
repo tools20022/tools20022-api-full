@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +28,8 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionNotificationSD6", propOrder = {"placeAndName", "eventStatus", "approvedDate", "matchDate", "activeUntilDate", "serviceLevelAgreementPeriod", "validationNotSupportedReason"})
 public class CorporateActionNotificationSD6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +121,7 @@ public class CorporateActionNotificationSD6 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +132,11 @@ public class CorporateActionNotificationSD6 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtSts")
 	protected EventWorkflowStatus1Code eventStatus;
 	/**
-	 * Workflow status of the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,6 +152,9 @@ public class CorporateActionNotificationSD6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EvtSts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Declared Event Status</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -159,9 +167,10 @@ public class CorporateActionNotificationSD6 {
 	 */
 	public static final MMMessageAttribute mmEventStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
 			xmlTag = "EvtSts";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Declared Event Status"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventStatus";
 			definition = "Workflow status of the event.";
@@ -170,10 +179,11 @@ public class CorporateActionNotificationSD6 {
 			simpleType_lazy = () -> EventWorkflowStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ApprvdDt")
 	protected ISODate approvedDate;
 	/**
-	 * Date by which the announcement is set to approve event status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,6 +198,9 @@ public class CorporateActionNotificationSD6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ApprvdDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Approved Date</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -201,9 +214,10 @@ public class CorporateActionNotificationSD6 {
 	 */
 	public static final MMMessageAttribute mmApprovedDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
 			xmlTag = "ApprvdDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Approved Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedDate";
 			definition = "Date by which the announcement is set to approve event status.";
@@ -212,11 +226,11 @@ public class CorporateActionNotificationSD6 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "MtchDt")
 	protected ISODate matchDate;
 	/**
-	 * Date used to match records from multiple vendors to the same event. It is
-	 * typically the first key date on the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -230,6 +244,9 @@ public class CorporateActionNotificationSD6 {
 	 * CorporateActionNotificationSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MtchDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Match Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -245,9 +262,10 @@ public class CorporateActionNotificationSD6 {
 	 */
 	public static final MMMessageAttribute mmMatchDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
 			xmlTag = "MtchDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Match Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchDate";
 			definition = "Date used to match records from multiple vendors to the same event. It is typically the first key date on the event.";
@@ -256,11 +274,11 @@ public class CorporateActionNotificationSD6 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ActvUntilDt")
 	protected ISODate activeUntilDate;
 	/**
-	 * Date until which the event will remain in an active status on DTCC (The
-	 * Depository Trust and Clearing Corporation) system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -274,6 +292,9 @@ public class CorporateActionNotificationSD6 {
 	 * CorporateActionNotificationSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ActvUntilDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Active Until Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -289,9 +310,10 @@ public class CorporateActionNotificationSD6 {
 	 */
 	public static final MMMessageAttribute mmActiveUntilDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
 			xmlTag = "ActvUntilDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Active Until Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActiveUntilDate";
 			definition = "Date until which the event will remain in an active status on DTCC  (The Depository Trust and Clearing Corporation) system.";
@@ -300,10 +322,11 @@ public class CorporateActionNotificationSD6 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SvcLvlAgrmtPrd")
 	protected Period3 serviceLevelAgreementPeriod;
 	/**
-	 * Start date and end date of the service level agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -318,6 +341,9 @@ public class CorporateActionNotificationSD6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SvcLvlAgrmtPrd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: SLA Begin Date, DTCCSynonym: SLA End Date</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -330,9 +356,10 @@ public class CorporateActionNotificationSD6 {
 	 */
 	public static final MMMessageAttribute mmServiceLevelAgreementPeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
 			xmlTag = "SvcLvlAgrmtPrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "SLA Begin Date"), new DTCCSynonym(this, "SLA End Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceLevelAgreementPeriod";
 			definition = "Start date and end date of the service level agreement.";
@@ -341,13 +368,11 @@ public class CorporateActionNotificationSD6 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
 		}
 	};
+	@XmlElement(name = "VldtnNotSpprtdRsn")
 	protected Max4AlphaNumericText validationNotSupportedReason;
 	/**
-	 * Specifies a reason why a corporate action will not be supported by the
-	 * validation service. This is usually due to the event type or the product
-	 * (security) type. The list of values will be provided externally to the
-	 * schema.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -363,6 +388,9 @@ public class CorporateActionNotificationSD6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VldtnNotSpprtdRsn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Validation Not Supported Reason Code</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -377,9 +405,10 @@ public class CorporateActionNotificationSD6 {
 	 */
 	public static final MMMessageAttribute mmValidationNotSupportedReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
 			xmlTag = "VldtnNotSpprtdRsn";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Validation Not Supported Reason Code"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationNotSupportedReason";
 			definition = "Specifies a reason why a corporate action will not be supported by the validation service. This is usually due to the event type or the product (security) type. The list of values will be provided externally to the schema.";
@@ -392,10 +421,11 @@ public class CorporateActionNotificationSD6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionNotificationSD6.mmPlaceAndName, CorporateActionNotificationSD6.mmEventStatus, CorporateActionNotificationSD6.mmApprovedDate,
-						CorporateActionNotificationSD6.mmMatchDate, CorporateActionNotificationSD6.mmActiveUntilDate, CorporateActionNotificationSD6.mmServiceLevelAgreementPeriod,
-						CorporateActionNotificationSD6.mmValidationNotSupportedReason);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotificationSD6.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionNotificationSD6.mmEventStatus,
+						com.tools20022.repository.msg.CorporateActionNotificationSD6.mmApprovedDate, com.tools20022.repository.msg.CorporateActionNotificationSD6.mmMatchDate,
+						com.tools20022.repository.msg.CorporateActionNotificationSD6.mmActiveUntilDate, com.tools20022.repository.msg.CorporateActionNotificationSD6.mmServiceLevelAgreementPeriod,
+						com.tools20022.repository.msg.CorporateActionNotificationSD6.mmValidationNotSupportedReason);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionNotificationSD6";
 				definition = "Provides additional information regarding notification general information details.";
@@ -404,66 +434,66 @@ public class CorporateActionNotificationSD6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionNotificationSD6 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "EvtSts")
-	public EventWorkflowStatus1Code getEventStatus() {
-		return eventStatus;
+	public Optional<EventWorkflowStatus1Code> getEventStatus() {
+		return eventStatus == null ? Optional.empty() : Optional.of(eventStatus);
 	}
 
-	public void setEventStatus(EventWorkflowStatus1Code eventStatus) {
+	public CorporateActionNotificationSD6 setEventStatus(EventWorkflowStatus1Code eventStatus) {
 		this.eventStatus = eventStatus;
+		return this;
 	}
 
-	@XmlElement(name = "ApprvdDt")
-	public ISODate getApprovedDate() {
-		return approvedDate;
+	public Optional<ISODate> getApprovedDate() {
+		return approvedDate == null ? Optional.empty() : Optional.of(approvedDate);
 	}
 
-	public void setApprovedDate(ISODate approvedDate) {
+	public CorporateActionNotificationSD6 setApprovedDate(ISODate approvedDate) {
 		this.approvedDate = approvedDate;
+		return this;
 	}
 
-	@XmlElement(name = "MtchDt")
-	public ISODate getMatchDate() {
-		return matchDate;
+	public Optional<ISODate> getMatchDate() {
+		return matchDate == null ? Optional.empty() : Optional.of(matchDate);
 	}
 
-	public void setMatchDate(ISODate matchDate) {
+	public CorporateActionNotificationSD6 setMatchDate(ISODate matchDate) {
 		this.matchDate = matchDate;
+		return this;
 	}
 
-	@XmlElement(name = "ActvUntilDt")
-	public ISODate getActiveUntilDate() {
-		return activeUntilDate;
+	public Optional<ISODate> getActiveUntilDate() {
+		return activeUntilDate == null ? Optional.empty() : Optional.of(activeUntilDate);
 	}
 
-	public void setActiveUntilDate(ISODate activeUntilDate) {
+	public CorporateActionNotificationSD6 setActiveUntilDate(ISODate activeUntilDate) {
 		this.activeUntilDate = activeUntilDate;
+		return this;
 	}
 
-	@XmlElement(name = "SvcLvlAgrmtPrd")
-	public Period3 getServiceLevelAgreementPeriod() {
-		return serviceLevelAgreementPeriod;
+	public Optional<Period3> getServiceLevelAgreementPeriod() {
+		return serviceLevelAgreementPeriod == null ? Optional.empty() : Optional.of(serviceLevelAgreementPeriod);
 	}
 
-	public void setServiceLevelAgreementPeriod(com.tools20022.repository.msg.Period3 serviceLevelAgreementPeriod) {
+	public CorporateActionNotificationSD6 setServiceLevelAgreementPeriod(com.tools20022.repository.msg.Period3 serviceLevelAgreementPeriod) {
 		this.serviceLevelAgreementPeriod = serviceLevelAgreementPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "VldtnNotSpprtdRsn")
-	public Max4AlphaNumericText getValidationNotSupportedReason() {
-		return validationNotSupportedReason;
+	public Optional<Max4AlphaNumericText> getValidationNotSupportedReason() {
+		return validationNotSupportedReason == null ? Optional.empty() : Optional.of(validationNotSupportedReason);
 	}
 
-	public void setValidationNotSupportedReason(Max4AlphaNumericText validationNotSupportedReason) {
+	public CorporateActionNotificationSD6 setValidationNotSupportedReason(Max4AlphaNumericText validationNotSupportedReason) {
 		this.validationNotSupportedReason = validationNotSupportedReason;
+		return this;
 	}
 }

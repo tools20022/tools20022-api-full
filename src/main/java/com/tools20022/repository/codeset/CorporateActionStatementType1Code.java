@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateActionStatementTypeCode;
+import com.tools20022.repository.codeset.CorporateActionStatementType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates whether the statement contains missing instructions only or all
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementTypeCode
- * CorporateActionStatementTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementType1Code#mmMissing
- * CorporateActionStatementType1Code.mmMissing}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementType1Code#Missing
+ * CorporateActionStatementType1Code.Missing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementType1Code#mmAll
- * CorporateActionStatementType1Code.mmAll}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementType1Code#All
+ * CorporateActionStatementType1Code.All}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionStatementTypeCode
+ * CorporateActionStatementTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CorporateActionStatementType1Code extends CorporateActionStatementTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionStatementType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class CorporateActionStatementType1Code extends CorporateActionStatementT
 	 * name} = "Missing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissing = new MMCode() {
+	public static final CorporateActionStatementType1Code Missing = new CorporateActionStatementType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Missing";
-			owner_lazy = () -> CorporateActionStatementType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionStatementType1Code.mmObject();
+			codeName = CorporateActionStatementTypeCode.Missing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,57 @@ public class CorporateActionStatementType1Code extends CorporateActionStatementT
 	 * name} = "All"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAll = new MMCode() {
+	public static final CorporateActionStatementType1Code All = new CorporateActionStatementType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
-			owner_lazy = () -> CorporateActionStatementType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionStatementType1Code.mmObject();
+			codeName = CorporateActionStatementTypeCode.All.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionStatementType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionStatementType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MISS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionStatementType1Code";
 				definition = "Indicates whether the statement contains missing instructions only or all instructions.";
-				code_lazy = () -> Arrays.asList(CorporateActionStatementType1Code.mmMissing, CorporateActionStatementType1Code.mmAll);
 				trace_lazy = () -> CorporateActionStatementTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionStatementType1Code.Missing, com.tools20022.repository.codeset.CorporateActionStatementType1Code.All);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Missing.getCodeName().get(), Missing);
+		codesByName.put(All.getCodeName().get(), All);
+	}
+
+	public static CorporateActionStatementType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionStatementType1Code[] values() {
+		CorporateActionStatementType1Code[] values = new CorporateActionStatementType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionStatementType1Code> {
+		@Override
+		public CorporateActionStatementType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionStatementType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

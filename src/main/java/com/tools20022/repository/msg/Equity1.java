@@ -32,6 +32,8 @@ import com.tools20022.repository.entity.SecuritiesStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +75,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,18 +89,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Equity1", propOrder = {"preferenceToIncome", "paymentStatus", "convertibleIndicator", "maturityDate", "nonPaidAmount", "parValue", "votingRightsPerShare"})
 public class Equity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrefToIncm", required = true)
 	protected PreferenceToIncome1Code preferenceToIncome;
 	/**
-	 * Indicates the level of priority to claim on income and assets of the
-	 * company in case of the payment of dividends and in the event of a
-	 * bankruptcy, for example, ordinary/common stocks, preferred stocks,
-	 * subordinated debt, etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,7 +133,7 @@ public class Equity1 {
 	public static final MMMessageAttribute mmPreferenceToIncome = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmPreferenceToIncome;
-			componentContext_lazy = () -> Equity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Equity1.mmObject();
 			isDerived = false;
 			xmlTag = "PrefToIncm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -144,10 +144,11 @@ public class Equity1 {
 			simpleType_lazy = () -> PreferenceToIncome1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtSts")
 	protected SecuritiesPaymentStatus1Code paymentStatus;
 	/**
-	 * Status of payment of a security at a particular time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,7 +181,7 @@ public class Equity1 {
 	public static final MMMessageAttribute mmPaymentStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesStatus.mmPaymentStatus;
-			componentContext_lazy = () -> Equity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Equity1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,10 +192,11 @@ public class Equity1 {
 			simpleType_lazy = () -> SecuritiesPaymentStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ConvtblInd")
 	protected YesNoIndicator convertibleIndicator;
 	/**
-	 * Indicates whether the investor or the issuer has a conversion option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,7 +230,7 @@ public class Equity1 {
 	public static final MMMessageAttribute mmConvertibleIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmConvertibleIndicator;
-			componentContext_lazy = () -> Equity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Equity1.mmObject();
 			isDerived = false;
 			xmlTag = "ConvtblInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,11 +241,11 @@ public class Equity1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "MtrtyDt")
 	protected ISODateTime maturityDate;
 	/**
-	 * Date/time at which the security will no longer exist, for example,
-	 * redeemable preference shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -277,7 +279,7 @@ public class Equity1 {
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
-			componentContext_lazy = () -> Equity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Equity1.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,10 +290,11 @@ public class Equity1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "NonPdAmt")
 	protected ActiveCurrencyAndAmount nonPaidAmount;
 	/**
-	 * Nominal amount which is not paid yet.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -324,7 +327,7 @@ public class Equity1 {
 	public static final MMMessageAttribute mmNonPaidAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmNonPaidAmount;
-			componentContext_lazy = () -> Equity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Equity1.mmObject();
 			isDerived = false;
 			xmlTag = "NonPdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -335,10 +338,11 @@ public class Equity1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ParVal")
 	protected ActiveCurrencyAndAmount parValue;
 	/**
-	 * Nominal value of an equity security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -371,7 +375,7 @@ public class Equity1 {
 	public static final MMMessageAttribute mmParValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmParValue;
-			componentContext_lazy = () -> Equity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Equity1.mmObject();
 			isDerived = false;
 			xmlTag = "ParVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -382,10 +386,11 @@ public class Equity1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "VtngRghtsPerShr")
 	protected Number votingRightsPerShare;
 	/**
-	 * Number of voting rights per share.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -417,7 +422,7 @@ public class Equity1 {
 	public static final MMMessageAttribute mmVotingRightsPerShare = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmVotingRightsPerShare;
-			componentContext_lazy = () -> Equity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Equity1.mmObject();
 			isDerived = false;
 			xmlTag = "VtngRghtsPerShr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -432,10 +437,11 @@ public class Equity1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Equity1.mmPreferenceToIncome, Equity1.mmPaymentStatus, Equity1.mmConvertibleIndicator, Equity1.mmMaturityDate, Equity1.mmNonPaidAmount, Equity1.mmParValue,
-						Equity1.mmVotingRightsPerShare);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Equity1.mmPreferenceToIncome, com.tools20022.repository.msg.Equity1.mmPaymentStatus, com.tools20022.repository.msg.Equity1.mmConvertibleIndicator,
+						com.tools20022.repository.msg.Equity1.mmMaturityDate, com.tools20022.repository.msg.Equity1.mmNonPaidAmount, com.tools20022.repository.msg.Equity1.mmParValue,
+						com.tools20022.repository.msg.Equity1.mmVotingRightsPerShare);
 				trace_lazy = () -> Equity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Equity1";
 				definition = "Financial instrument which represents a title of ownership  in a company, ie,  the shareholder is entitled to a part of the company's profit - usually by payment of a dividend - and to voting rights, if any. Each company issues generally different classes of shares, eg, ordinary or common shares, which have no guaranteed amount of dividend but carry voting rights, or preferred shares, which receive dividends before ordinary shares but have no voting right.";
@@ -444,66 +450,66 @@ public class Equity1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrefToIncm", required = true)
 	public PreferenceToIncome1Code getPreferenceToIncome() {
 		return preferenceToIncome;
 	}
 
-	public void setPreferenceToIncome(PreferenceToIncome1Code preferenceToIncome) {
-		this.preferenceToIncome = preferenceToIncome;
+	public Equity1 setPreferenceToIncome(PreferenceToIncome1Code preferenceToIncome) {
+		this.preferenceToIncome = Objects.requireNonNull(preferenceToIncome);
+		return this;
 	}
 
-	@XmlElement(name = "PmtSts")
-	public SecuritiesPaymentStatus1Code getPaymentStatus() {
-		return paymentStatus;
+	public Optional<SecuritiesPaymentStatus1Code> getPaymentStatus() {
+		return paymentStatus == null ? Optional.empty() : Optional.of(paymentStatus);
 	}
 
-	public void setPaymentStatus(SecuritiesPaymentStatus1Code paymentStatus) {
+	public Equity1 setPaymentStatus(SecuritiesPaymentStatus1Code paymentStatus) {
 		this.paymentStatus = paymentStatus;
+		return this;
 	}
 
-	@XmlElement(name = "ConvtblInd")
-	public YesNoIndicator getConvertibleIndicator() {
-		return convertibleIndicator;
+	public Optional<YesNoIndicator> getConvertibleIndicator() {
+		return convertibleIndicator == null ? Optional.empty() : Optional.of(convertibleIndicator);
 	}
 
-	public void setConvertibleIndicator(YesNoIndicator convertibleIndicator) {
+	public Equity1 setConvertibleIndicator(YesNoIndicator convertibleIndicator) {
 		this.convertibleIndicator = convertibleIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "MtrtyDt")
-	public ISODateTime getMaturityDate() {
-		return maturityDate;
+	public Optional<ISODateTime> getMaturityDate() {
+		return maturityDate == null ? Optional.empty() : Optional.of(maturityDate);
 	}
 
-	public void setMaturityDate(ISODateTime maturityDate) {
+	public Equity1 setMaturityDate(ISODateTime maturityDate) {
 		this.maturityDate = maturityDate;
+		return this;
 	}
 
-	@XmlElement(name = "NonPdAmt")
-	public ActiveCurrencyAndAmount getNonPaidAmount() {
-		return nonPaidAmount;
+	public Optional<ActiveCurrencyAndAmount> getNonPaidAmount() {
+		return nonPaidAmount == null ? Optional.empty() : Optional.of(nonPaidAmount);
 	}
 
-	public void setNonPaidAmount(ActiveCurrencyAndAmount nonPaidAmount) {
+	public Equity1 setNonPaidAmount(ActiveCurrencyAndAmount nonPaidAmount) {
 		this.nonPaidAmount = nonPaidAmount;
+		return this;
 	}
 
-	@XmlElement(name = "ParVal")
-	public ActiveCurrencyAndAmount getParValue() {
-		return parValue;
+	public Optional<ActiveCurrencyAndAmount> getParValue() {
+		return parValue == null ? Optional.empty() : Optional.of(parValue);
 	}
 
-	public void setParValue(ActiveCurrencyAndAmount parValue) {
+	public Equity1 setParValue(ActiveCurrencyAndAmount parValue) {
 		this.parValue = parValue;
+		return this;
 	}
 
-	@XmlElement(name = "VtngRghtsPerShr")
-	public Number getVotingRightsPerShare() {
-		return votingRightsPerShare;
+	public Optional<Number> getVotingRightsPerShare() {
+		return votingRightsPerShare == null ? Optional.empty() : Optional.of(votingRightsPerShare);
 	}
 
-	public void setVotingRightsPerShare(Number votingRightsPerShare) {
+	public Equity1 setVotingRightsPerShare(Number votingRightsPerShare) {
 		this.votingRightsPerShare = votingRightsPerShare;
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +72,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,15 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DocumentNumber1", propOrder = "number")
 public class DocumentNumber1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nb", required = true)
 	protected DocumentNumber1Choice number;
 	/**
-	 * Number used to identify a message or document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,6 +114,9 @@ public class DocumentNumber1 {
 	 * DocumentNumber1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Nb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13a:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -131,9 +137,10 @@ public class DocumentNumber1 {
 	 */
 	public static final MMMessageAssociationEnd mmNumber = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DocumentNumber1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentNumber1.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Number used to identify a message or document.";
@@ -148,11 +155,11 @@ public class DocumentNumber1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DocumentNumber1.mmNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentNumber1.mmNumber);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesStatementQueryV01.mmStatementRequested, SecuritiesStatementQueryV02.mmStatementRequested, SecuritiesStatementQueryV03.mmStatementRequested,
 						SecuritiesStatementQueryV04.mmStatementRequested, SecuritiesStatementQueryV05.mmStatementRequested);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentNumber1";
 				definition = "Identification of a document.";
@@ -162,12 +169,12 @@ public class DocumentNumber1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nb", required = true)
 	public DocumentNumber1Choice getNumber() {
 		return number;
 	}
 
-	public void setNumber(DocumentNumber1Choice number) {
-		this.number = number;
+	public DocumentNumber1 setNumber(DocumentNumber1Choice number) {
+		this.number = Objects.requireNonNull(number);
+		return this;
 	}
 }

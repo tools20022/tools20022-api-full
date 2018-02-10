@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RequestModeTypeCode;
+import com.tools20022.repository.codeset.RequestModeType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the combination of mode and type of the query information.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RequestModeTypeCode
- * RequestModeTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestModeType1Code#mmForecast
- * RequestModeType1Code.mmForecast}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestModeType1Code#Forecast
+ * RequestModeType1Code.Forecast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestModeType1Code#mmOnDemandDayInformation
- * RequestModeType1Code.mmOnDemandDayInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestModeType1Code#OnDemandDayInformation
+ * RequestModeType1Code.OnDemandDayInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestModeType1Code#mmOnDemandFutureInformation
- * RequestModeType1Code.mmOnDemandFutureInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestModeType1Code#OnDemandFutureInformation
+ * RequestModeType1Code.OnDemandFutureInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestModeType1Code#mmScheduledDayInformation
- * RequestModeType1Code.mmScheduledDayInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestModeType1Code#ScheduledDayInformation
+ * RequestModeType1Code.ScheduledDayInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestModeType1Code#mmScheduledFutureInformation
- * RequestModeType1Code.mmScheduledFutureInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestModeType1Code#ScheduledFutureInformation
+ * RequestModeType1Code.ScheduledFutureInformation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RequestModeTypeCode
+ * RequestModeTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the combination of mode and type of the query information."</li>
  * </ul>
  */
-public class RequestModeType1Code extends RequestModeTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RequestModeType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,11 +92,12 @@ public class RequestModeType1Code extends RequestModeTypeCode {
 	 * name} = "Forecast"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForecast = new MMCode() {
+	public static final RequestModeType1Code Forecast = new RequestModeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Forecast";
-			owner_lazy = () -> RequestModeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestModeType1Code.mmObject();
+			codeName = RequestModeTypeCode.Forecast.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +116,12 @@ public class RequestModeType1Code extends RequestModeTypeCode {
 	 * name} = "OnDemandDayInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOnDemandDayInformation = new MMCode() {
+	public static final RequestModeType1Code OnDemandDayInformation = new RequestModeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnDemandDayInformation";
-			owner_lazy = () -> RequestModeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestModeType1Code.mmObject();
+			codeName = RequestModeTypeCode.OnDemandDayInformation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,11 +140,12 @@ public class RequestModeType1Code extends RequestModeTypeCode {
 	 * name} = "OnDemandFutureInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOnDemandFutureInformation = new MMCode() {
+	public static final RequestModeType1Code OnDemandFutureInformation = new RequestModeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnDemandFutureInformation";
-			owner_lazy = () -> RequestModeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestModeType1Code.mmObject();
+			codeName = RequestModeTypeCode.OnDemandFutureInformation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -156,11 +164,12 @@ public class RequestModeType1Code extends RequestModeTypeCode {
 	 * name} = "ScheduledDayInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmScheduledDayInformation = new MMCode() {
+	public static final RequestModeType1Code ScheduledDayInformation = new RequestModeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScheduledDayInformation";
-			owner_lazy = () -> RequestModeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestModeType1Code.mmObject();
+			codeName = RequestModeTypeCode.ScheduledDayInformation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -179,26 +188,61 @@ public class RequestModeType1Code extends RequestModeTypeCode {
 	 * name} = "ScheduledFutureInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmScheduledFutureInformation = new MMCode() {
+	public static final RequestModeType1Code ScheduledFutureInformation = new RequestModeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScheduledFutureInformation";
-			owner_lazy = () -> RequestModeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestModeType1Code.mmObject();
+			codeName = RequestModeTypeCode.ScheduledFutureInformation.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RequestModeType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RequestModeType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestModeType1Code";
 				definition = "Specifies the combination of mode and type of the query information.";
-				code_lazy = () -> Arrays.asList(RequestModeType1Code.mmForecast, RequestModeType1Code.mmOnDemandDayInformation, RequestModeType1Code.mmOnDemandFutureInformation, RequestModeType1Code.mmScheduledDayInformation,
-						RequestModeType1Code.mmScheduledFutureInformation);
 				trace_lazy = () -> RequestModeTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RequestModeType1Code.Forecast, com.tools20022.repository.codeset.RequestModeType1Code.OnDemandDayInformation,
+						com.tools20022.repository.codeset.RequestModeType1Code.OnDemandFutureInformation, com.tools20022.repository.codeset.RequestModeType1Code.ScheduledDayInformation,
+						com.tools20022.repository.codeset.RequestModeType1Code.ScheduledFutureInformation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Forecast.getCodeName().get(), Forecast);
+		codesByName.put(OnDemandDayInformation.getCodeName().get(), OnDemandDayInformation);
+		codesByName.put(OnDemandFutureInformation.getCodeName().get(), OnDemandFutureInformation);
+		codesByName.put(ScheduledDayInformation.getCodeName().get(), ScheduledDayInformation);
+		codesByName.put(ScheduledFutureInformation.getCodeName().get(), ScheduledFutureInformation);
+	}
+
+	public static RequestModeType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RequestModeType1Code[] values() {
+		RequestModeType1Code[] values = new RequestModeType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RequestModeType1Code> {
+		@Override
+		public RequestModeType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RequestModeType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

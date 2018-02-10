@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +74,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,16 +89,16 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.msg.AccountSubLevel2 AccountSubLevel2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountSubLevel12", propOrder = {"accountIdentification", "accountOwner", "accountServicer", "beneficialOwner", "balanceDetails", "accountSubLevel3", "accountSubLevel3Difference", "supplementaryData"})
 public class AccountSubLevel12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId", required = true)
 	protected SecuritiesAccount19 accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the sub-account between the
-	 * account owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -135,7 +137,7 @@ public class AccountSubLevel12 {
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> AccountSubLevel12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSubLevel12.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,10 +150,11 @@ public class AccountSubLevel12 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr", required = true)
 	protected PartyIdentification100 accountOwner;
 	/**
-	 * Party that legally owns the sub-account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +193,7 @@ public class AccountSubLevel12 {
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> AccountSubLevel12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSubLevel12.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,13 +205,11 @@ public class AccountSubLevel12 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcr", required = true)
 	protected PartyIdentification100 accountServicer;
 	/**
-	 * Party that manages the sub-account on behalf of the account owner, that
-	 * is manages the registration and booking of entries on the account,
-	 * calculates balances on the account and provides information about the
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,7 +250,7 @@ public class AccountSubLevel12 {
 	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> AccountSubLevel12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSubLevel12.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -261,12 +262,11 @@ public class AccountSubLevel12 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
 		}
 	};
+	@XmlElement(name = "BnfclOwnr")
 	protected List<com.tools20022.repository.msg.BeneficialOwner2> beneficialOwner;
 	/**
-	 * Individual or entity that is ultimately entitled to the benefit of income
-	 * and rights in a financial instrument, as opposed to a nominal or legal
-	 * owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -305,7 +305,7 @@ public class AccountSubLevel12 {
 	public static final MMMessageAssociationEnd mmBeneficialOwner = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> BeneficialOwner.mmObject();
-			componentContext_lazy = () -> AccountSubLevel12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSubLevel12.mmObject();
 			isDerived = false;
 			xmlTag = "BnfclOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -317,12 +317,11 @@ public class AccountSubLevel12 {
 			type_lazy = () -> com.tools20022.repository.msg.BeneficialOwner2.mmObject();
 		}
 	};
+	@XmlElement(name = "BalDtls")
 	protected List<com.tools20022.repository.msg.AggregateHoldingBalance3> balanceDetails;
 	/**
-	 * Report on the net position of a financial instrument on the sub-account
-	 * (sub-account level 2), for a certain date. The agent, for example, a
-	 * trade intermediary, may also be specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -357,7 +356,7 @@ public class AccountSubLevel12 {
 	public static final MMMessageAssociationEnd mmBalanceDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
-			componentContext_lazy = () -> AccountSubLevel12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSubLevel12.mmObject();
 			isDerived = false;
 			xmlTag = "BalDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -368,10 +367,11 @@ public class AccountSubLevel12 {
 			type_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance3.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSubLvl3")
 	protected List<com.tools20022.repository.msg.AccountSubLevel13> accountSubLevel3;
 	/**
-	 * Holdings of level 3.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -408,7 +408,7 @@ public class AccountSubLevel12 {
 	public static final MMMessageAssociationEnd mmAccountSubLevel3 = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
-			componentContext_lazy = () -> AccountSubLevel12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSubLevel12.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSubLvl3";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -420,11 +420,11 @@ public class AccountSubLevel12 {
 			type_lazy = () -> com.tools20022.repository.msg.AccountSubLevel13.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSubLvl3Diff")
 	protected List<com.tools20022.repository.msg.AggregateHoldingBalance2> accountSubLevel3Difference;
 	/**
-	 * Difference in holdings between the sub-account at level 2 and the
-	 * sub-accounts of level 3.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -464,7 +464,7 @@ public class AccountSubLevel12 {
 	public static final MMMessageAssociationEnd mmAccountSubLevel3Difference = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
-			componentContext_lazy = () -> AccountSubLevel12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSubLevel12.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSubLvl3Diff";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -476,11 +476,11 @@ public class AccountSubLevel12 {
 			type_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance2.mmObject();
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -513,7 +513,7 @@ public class AccountSubLevel12 {
 	 */
 	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountSubLevel12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSubLevel12.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -529,10 +529,11 @@ public class AccountSubLevel12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountSubLevel12.mmAccountIdentification, AccountSubLevel12.mmAccountOwner, AccountSubLevel12.mmAccountServicer, AccountSubLevel12.mmBeneficialOwner,
-						AccountSubLevel12.mmBalanceDetails, AccountSubLevel12.mmAccountSubLevel3, AccountSubLevel12.mmAccountSubLevel3Difference, AccountSubLevel12.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountSubLevel12.mmAccountIdentification, com.tools20022.repository.msg.AccountSubLevel12.mmAccountOwner,
+						com.tools20022.repository.msg.AccountSubLevel12.mmAccountServicer, com.tools20022.repository.msg.AccountSubLevel12.mmBeneficialOwner, com.tools20022.repository.msg.AccountSubLevel12.mmBalanceDetails,
+						com.tools20022.repository.msg.AccountSubLevel12.mmAccountSubLevel3, com.tools20022.repository.msg.AccountSubLevel12.mmAccountSubLevel3Difference, com.tools20022.repository.msg.AccountSubLevel12.mmSupplementaryData);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountSubLevel12";
 				definition = "Account and holding of the next sub-level (Level 2).";
@@ -542,75 +543,75 @@ public class AccountSubLevel12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public SecuritiesAccount19 getAccountIdentification() {
 		return accountIdentification;
 	}
 
-	public void setAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount19 accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public AccountSubLevel12 setAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount19 accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr", required = true)
 	public PartyIdentification100 getAccountOwner() {
 		return accountOwner;
 	}
 
-	public void setAccountOwner(com.tools20022.repository.msg.PartyIdentification100 accountOwner) {
-		this.accountOwner = accountOwner;
+	public AccountSubLevel12 setAccountOwner(com.tools20022.repository.msg.PartyIdentification100 accountOwner) {
+		this.accountOwner = Objects.requireNonNull(accountOwner);
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcr", required = true)
 	public PartyIdentification100 getAccountServicer() {
 		return accountServicer;
 	}
 
-	public void setAccountServicer(com.tools20022.repository.msg.PartyIdentification100 accountServicer) {
-		this.accountServicer = accountServicer;
+	public AccountSubLevel12 setAccountServicer(com.tools20022.repository.msg.PartyIdentification100 accountServicer) {
+		this.accountServicer = Objects.requireNonNull(accountServicer);
+		return this;
 	}
 
-	@XmlElement(name = "BnfclOwnr")
 	public List<BeneficialOwner2> getBeneficialOwner() {
-		return beneficialOwner;
+		return beneficialOwner == null ? beneficialOwner = new ArrayList<>() : beneficialOwner;
 	}
 
-	public void setBeneficialOwner(List<com.tools20022.repository.msg.BeneficialOwner2> beneficialOwner) {
-		this.beneficialOwner = beneficialOwner;
+	public AccountSubLevel12 setBeneficialOwner(List<com.tools20022.repository.msg.BeneficialOwner2> beneficialOwner) {
+		this.beneficialOwner = Objects.requireNonNull(beneficialOwner);
+		return this;
 	}
 
-	@XmlElement(name = "BalDtls")
 	public List<AggregateHoldingBalance3> getBalanceDetails() {
-		return balanceDetails;
+		return balanceDetails == null ? balanceDetails = new ArrayList<>() : balanceDetails;
 	}
 
-	public void setBalanceDetails(List<com.tools20022.repository.msg.AggregateHoldingBalance3> balanceDetails) {
-		this.balanceDetails = balanceDetails;
+	public AccountSubLevel12 setBalanceDetails(List<com.tools20022.repository.msg.AggregateHoldingBalance3> balanceDetails) {
+		this.balanceDetails = Objects.requireNonNull(balanceDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AcctSubLvl3")
 	public List<AccountSubLevel13> getAccountSubLevel3() {
-		return accountSubLevel3;
+		return accountSubLevel3 == null ? accountSubLevel3 = new ArrayList<>() : accountSubLevel3;
 	}
 
-	public void setAccountSubLevel3(List<com.tools20022.repository.msg.AccountSubLevel13> accountSubLevel3) {
-		this.accountSubLevel3 = accountSubLevel3;
+	public AccountSubLevel12 setAccountSubLevel3(List<com.tools20022.repository.msg.AccountSubLevel13> accountSubLevel3) {
+		this.accountSubLevel3 = Objects.requireNonNull(accountSubLevel3);
+		return this;
 	}
 
-	@XmlElement(name = "AcctSubLvl3Diff")
 	public List<AggregateHoldingBalance2> getAccountSubLevel3Difference() {
-		return accountSubLevel3Difference;
+		return accountSubLevel3Difference == null ? accountSubLevel3Difference = new ArrayList<>() : accountSubLevel3Difference;
 	}
 
-	public void setAccountSubLevel3Difference(List<com.tools20022.repository.msg.AggregateHoldingBalance2> accountSubLevel3Difference) {
-		this.accountSubLevel3Difference = accountSubLevel3Difference;
+	public AccountSubLevel12 setAccountSubLevel3Difference(List<com.tools20022.repository.msg.AggregateHoldingBalance2> accountSubLevel3Difference) {
+		this.accountSubLevel3Difference = Objects.requireNonNull(accountSubLevel3Difference);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public AccountSubLevel12 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 }

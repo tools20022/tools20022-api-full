@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the parameters for an Isabel payment file."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IsabelFile1", propOrder = {"identification", "originator", "size", "format", "formatVersion", "recordLength"})
 public class IsabelFile1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max14AlphaNumericText identification;
 	/**
-	 * Unique identification of the file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +108,7 @@ public class IsabelFile1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelFile1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelFile1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +119,11 @@ public class IsabelFile1 {
 			simpleType_lazy = () -> Max14AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Orgtr")
 	protected Max14AlphaNumericText originator;
 	/**
-	 * Unique identification of the originator of the file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +150,7 @@ public class IsabelFile1 {
 	 */
 	public static final MMMessageAttribute mmOriginator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelFile1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelFile1.mmObject();
 			isDerived = false;
 			xmlTag = "Orgtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,10 +161,11 @@ public class IsabelFile1 {
 			simpleType_lazy = () -> Max14AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Sz", required = true)
 	protected Number size;
 	/**
-	 * Size of the file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,7 +191,7 @@ public class IsabelFile1 {
 	 */
 	public static final MMMessageAttribute mmSize = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelFile1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelFile1.mmObject();
 			isDerived = false;
 			xmlTag = "Sz";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,10 +202,11 @@ public class IsabelFile1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Frmt", required = true)
 	protected Max16Text format;
 	/**
-	 * Format of the file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -226,7 +232,7 @@ public class IsabelFile1 {
 	 */
 	public static final MMMessageAttribute mmFormat = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelFile1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelFile1.mmObject();
 			isDerived = false;
 			xmlTag = "Frmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,10 +243,11 @@ public class IsabelFile1 {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FrmtVrsn")
 	protected Max16Text formatVersion;
 	/**
-	 * Version of the format of the file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -266,7 +273,7 @@ public class IsabelFile1 {
 	 */
 	public static final MMMessageAttribute mmFormatVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelFile1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelFile1.mmObject();
 			isDerived = false;
 			xmlTag = "FrmtVrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -277,10 +284,11 @@ public class IsabelFile1 {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RcrdLngth")
 	protected Max4NumericText recordLength;
 	/**
-	 * Length of the individual records in the file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -307,7 +315,7 @@ public class IsabelFile1 {
 	 */
 	public static final MMMessageAttribute mmRecordLength = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelFile1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelFile1.mmObject();
 			isDerived = false;
 			xmlTag = "RcrdLngth";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -322,8 +330,9 @@ public class IsabelFile1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IsabelFile1.mmIdentification, IsabelFile1.mmOriginator, IsabelFile1.mmSize, IsabelFile1.mmFormat, IsabelFile1.mmFormatVersion, IsabelFile1.mmRecordLength);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelFile1.mmIdentification, com.tools20022.repository.msg.IsabelFile1.mmOriginator, com.tools20022.repository.msg.IsabelFile1.mmSize,
+						com.tools20022.repository.msg.IsabelFile1.mmFormat, com.tools20022.repository.msg.IsabelFile1.mmFormatVersion, com.tools20022.repository.msg.IsabelFile1.mmRecordLength);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelFile1";
 				definition = "Specifies the parameters for an Isabel payment file.";
@@ -332,57 +341,57 @@ public class IsabelFile1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max14AlphaNumericText getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max14AlphaNumericText identification) {
-		this.identification = identification;
+	public IsabelFile1 setIdentification(Max14AlphaNumericText identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Orgtr")
-	public Max14AlphaNumericText getOriginator() {
-		return originator;
+	public Optional<Max14AlphaNumericText> getOriginator() {
+		return originator == null ? Optional.empty() : Optional.of(originator);
 	}
 
-	public void setOriginator(Max14AlphaNumericText originator) {
+	public IsabelFile1 setOriginator(Max14AlphaNumericText originator) {
 		this.originator = originator;
+		return this;
 	}
 
-	@XmlElement(name = "Sz", required = true)
 	public Number getSize() {
 		return size;
 	}
 
-	public void setSize(Number size) {
-		this.size = size;
+	public IsabelFile1 setSize(Number size) {
+		this.size = Objects.requireNonNull(size);
+		return this;
 	}
 
-	@XmlElement(name = "Frmt", required = true)
 	public Max16Text getFormat() {
 		return format;
 	}
 
-	public void setFormat(Max16Text format) {
-		this.format = format;
+	public IsabelFile1 setFormat(Max16Text format) {
+		this.format = Objects.requireNonNull(format);
+		return this;
 	}
 
-	@XmlElement(name = "FrmtVrsn")
-	public Max16Text getFormatVersion() {
-		return formatVersion;
+	public Optional<Max16Text> getFormatVersion() {
+		return formatVersion == null ? Optional.empty() : Optional.of(formatVersion);
 	}
 
-	public void setFormatVersion(Max16Text formatVersion) {
+	public IsabelFile1 setFormatVersion(Max16Text formatVersion) {
 		this.formatVersion = formatVersion;
+		return this;
 	}
 
-	@XmlElement(name = "RcrdLngth")
-	public Max4NumericText getRecordLength() {
-		return recordLength;
+	public Optional<Max4NumericText> getRecordLength() {
+		return recordLength == null ? Optional.empty() : Optional.of(recordLength);
 	}
 
-	public void setRecordLength(Max4NumericText recordLength) {
+	public IsabelFile1 setRecordLength(Max4NumericText recordLength) {
 		this.recordLength = recordLength;
+		return this;
 	}
 }

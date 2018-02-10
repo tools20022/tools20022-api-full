@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AccountingStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the accounting status.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountingStatusCode#mmDomestic
- * AccountingStatusCode.mmDomestic}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountingStatusCode#Domestic
+ * AccountingStatusCode.Domestic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccountingStatusCode#mmNotDomestic
- * AccountingStatusCode.mmNotDomestic}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccountingStatusCode#NotDomestic
+ * AccountingStatusCode.NotDomestic}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the accounting status."</li>
  * </ul>
  */
-public class AccountingStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AccountingStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,12 +92,12 @@ public class AccountingStatusCode {
 	 * "Account or party is regarded as domestic for reporting purposes."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDomestic = new MMCode() {
+	public static final AccountingStatusCode Domestic = new AccountingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Domestic";
 			definition = "Account or party is regarded as domestic for reporting purposes.";
-			owner_lazy = () -> AccountingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountingStatusCode.mmObject();
 			codeName = "YDOM";
 		}
 	};
@@ -117,27 +123,57 @@ public class AccountingStatusCode {
 	 * "Account or party is not regarded as domestic for reporting purposes."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotDomestic = new MMCode() {
+	public static final AccountingStatusCode NotDomestic = new AccountingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotDomestic";
 			definition = "Account or party is not regarded as domestic for reporting purposes.";
-			owner_lazy = () -> AccountingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccountingStatusCode.mmObject();
 			codeName = "NDOM";
 		}
 	};
+	final static private LinkedHashMap<String, AccountingStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AccountingStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountingStatusCode";
 				definition = "Specifies the accounting status.";
-				code_lazy = () -> Arrays.asList(AccountingStatusCode.mmDomestic, AccountingStatusCode.mmNotDomestic);
 				derivation_lazy = () -> Arrays.asList(AccountingStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountingStatusCode.Domestic, com.tools20022.repository.codeset.AccountingStatusCode.NotDomestic);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Domestic.getCodeName().get(), Domestic);
+		codesByName.put(NotDomestic.getCodeName().get(), NotDomestic);
+	}
+
+	public static AccountingStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AccountingStatusCode[] values() {
+		AccountingStatusCode[] values = new AccountingStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AccountingStatusCode> {
+		@Override
+		public AccountingStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AccountingStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

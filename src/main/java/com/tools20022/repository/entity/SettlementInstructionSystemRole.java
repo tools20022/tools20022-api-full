@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashSettlementInstructionPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Identification of a specific system or set of rules and/or processes to be
@@ -39,6 +41,10 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.CashSettlementInstructionPartyRole
+ * CashSettlementInstructionPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -47,10 +53,6 @@ import java.util.List;
  * SettlementInstructionSystemRole.mmSystem}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.CashSettlementInstructionPartyRole
- * CashSettlementInstructionPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -78,8 +80,8 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,8 +99,8 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.CashClearingSystem> system;
 	/**
-	 * Specifies the system which plays a role in the settlement of a payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -519,8 +521,8 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 					SettlementDetails120.mmCashClearingSystem, SettlementDetails119.mmCashClearingSystem, SettlementDetails125.mmCashClearingSystem, SettlementDetails126.mmCashClearingSystem, SettlementDetails122.mmCashClearingSystem,
 					SettlementDetails127.mmCashClearingSystem, SettlementDetails121.mmCashClearingSystem, SettlementDetails134.mmCashClearingSystem, SettlementDetails137.mmCashClearingSystem, SettlementDetails132.mmCashClearingSystem,
 					SettlementDetails138.mmCashClearingSystem, SettlementDetails130.mmCashClearingSystem, SettlementDetails131.mmCashClearingSystem, SettlementDetails133.mmCashClearingSystem, SettlementDetails139.mmCashClearingSystem);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SettlementInstructionSystemRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SettlementInstructionSystemRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "System";
 			definition = "Specifies the system which plays a role in the settlement of a payment.";
@@ -534,7 +536,7 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementInstructionSystemRole";
 				definition = "Identification of a specific system or set of rules and/or processes to be applied at the settlement place.";
@@ -553,10 +555,11 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 	}
 
 	public List<CashClearingSystem> getSystem() {
-		return system;
+		return system == null ? system = new ArrayList<>() : system;
 	}
 
-	public void setSystem(List<com.tools20022.repository.entity.CashClearingSystem> system) {
-		this.system = system;
+	public SettlementInstructionSystemRole setSystem(List<com.tools20022.repository.entity.CashClearingSystem> system) {
+		this.system = Objects.requireNonNull(system);
+		return this;
 	}
 }

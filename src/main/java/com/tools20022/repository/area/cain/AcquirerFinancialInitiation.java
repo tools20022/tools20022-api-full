@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.AcquirertoIssuerCardMessagesISOLatestver
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -38,22 +39,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AcquirertoIssuerCardTransactionLatestVersion
- * AcquirertoIssuerCardTransactionLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.AcquirertoIssuerCardMessagesISOLatestversion
- * AcquirertoIssuerCardMessagesISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AcqrrFinInitn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -69,6 +54,22 @@ import javax.xml.bind.annotation.*;
  * AcquirerFinancialInitiation.mmSecurityTrailer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.AcquirertoIssuerCardMessagesISOLatestversion
+ * AcquirertoIssuerCardMessagesISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AcqrrFinInitn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AcquirertoIssuerCardTransactionLatestVersion
+ * AcquirertoIssuerCardTransactionLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code cain.003.001.01}</li>
@@ -84,15 +85,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcquirerFinancialInitiation", propOrder = {"header", "financialInitiation", "securityTrailer"})
 public class AcquirerFinancialInitiation {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header17 header;
 	/**
-	 * Information related to the protocol management.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,10 +133,11 @@ public class AcquirerFinancialInitiation {
 			}
 		}
 	};
+	@XmlElement(name = "FinInitn", required = true)
 	protected AcquirerFinancialInitiation1 financialInitiation;
 	/**
-	 * Information related to financial authorisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,10 +177,11 @@ public class AcquirerFinancialInitiation {
 			}
 		}
 	};
+	@XmlElement(name = "SctyTrlr", required = true)
 	protected ContentInformationType15 securityTrailer;
 	/**
-	 * Trailer of the message containing a MAC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -248,34 +252,34 @@ public class AcquirerFinancialInitiation {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header17 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header17 header) {
-		this.header = header;
+	public AcquirerFinancialInitiation setHeader(Header17 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "FinInitn", required = true)
 	public AcquirerFinancialInitiation1 getFinancialInitiation() {
 		return financialInitiation;
 	}
 
-	public void setFinancialInitiation(AcquirerFinancialInitiation1 financialInitiation) {
-		this.financialInitiation = financialInitiation;
+	public AcquirerFinancialInitiation setFinancialInitiation(AcquirerFinancialInitiation1 financialInitiation) {
+		this.financialInitiation = Objects.requireNonNull(financialInitiation);
+		return this;
 	}
 
-	@XmlElement(name = "SctyTrlr", required = true)
 	public ContentInformationType15 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
-	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
-		this.securityTrailer = securityTrailer;
+	public AcquirerFinancialInitiation setSecurityTrailer(ContentInformationType15 securityTrailer) {
+		this.securityTrailer = Objects.requireNonNull(securityTrailer);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:cain.003.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:cain.003.001.01")
 	static public class Document {
 		@XmlElement(name = "AcqrrFinInitn", required = true)
 		public AcquirerFinancialInitiation messageBody;

@@ -25,9 +25,8 @@ import com.tools20022.repository.choice.CashAccountIdentification5Choice;
 import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +65,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDenominationRule#forQuantityAndAccount44
+ * ConstraintDenominationRule.forQuantityAndAccount44}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline#forQuantityAndAccount44
+ * ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount44}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,15 +94,16 @@ import javax.xml.bind.annotation.XmlType;
  * QuantityAndAccount29}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "QuantityAndAccount44", propOrder = {"denominationChoice", "accountOwner", "cashAccount", "safekeepingPlace", "quantityBreakdown"})
 public class QuantityAndAccount44 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DnmtnChc")
 	protected Max210Text denominationChoice;
 	/**
-	 * Denomination of the security to be received or delivered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,7 +142,7 @@ public class QuantityAndAccount44 {
 	public static final MMMessageAttribute mmDenominationChoice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmDenominationChoice;
-			componentContext_lazy = () -> QuantityAndAccount44.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityAndAccount44.mmObject();
 			isDerived = false;
 			xmlTag = "DnmtnChc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,10 +154,11 @@ public class QuantityAndAccount44 {
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification98 accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -183,7 +195,7 @@ public class QuantityAndAccount44 {
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> QuantityAndAccount44.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityAndAccount44.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -196,10 +208,11 @@ public class QuantityAndAccount44 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification98.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAcct")
 	protected CashAccountIdentification5Choice cashAccount;
 	/**
-	 * Account to or from which a cash entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -237,7 +250,7 @@ public class QuantityAndAccount44 {
 	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> QuantityAndAccount44.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityAndAccount44.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -250,13 +263,11 @@ public class QuantityAndAccount44 {
 			type_lazy = () -> CashAccountIdentification5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgPlc")
 	protected SafeKeepingPlace1 safekeepingPlace;
 	/**
-	 * Place where the securities are safe-kept, physically or notionally. This
-	 * place can be, for example, a local custodian, a Central Securities
-	 * Depository (CSD) or an International Central Securities Depository
-	 * (ICSD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -295,7 +306,7 @@ public class QuantityAndAccount44 {
 	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
-			componentContext_lazy = () -> QuantityAndAccount44.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityAndAccount44.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -308,11 +319,11 @@ public class QuantityAndAccount44 {
 			type_lazy = () -> com.tools20022.repository.msg.SafeKeepingPlace1.mmObject();
 		}
 	};
+	@XmlElement(name = "QtyBrkdwn")
 	protected List<com.tools20022.repository.msg.QuantityBreakdown30> quantityBreakdown;
 	/**
-	 * Breakdown of a quantity into lots such as tax lots, instrument series,
-	 * etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -351,7 +362,7 @@ public class QuantityAndAccount44 {
 	public static final MMMessageAssociationEnd mmQuantityBreakdown = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmLotBreakdown;
-			componentContext_lazy = () -> QuantityAndAccount44.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityAndAccount44.mmObject();
 			isDerived = false;
 			xmlTag = "QtyBrkdwn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -367,10 +378,12 @@ public class QuantityAndAccount44 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(QuantityAndAccount44.mmDenominationChoice, QuantityAndAccount44.mmAccountOwner, QuantityAndAccount44.mmCashAccount, QuantityAndAccount44.mmSafekeepingPlace,
-						QuantityAndAccount44.mmQuantityBreakdown);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount44.mmDenominationChoice, com.tools20022.repository.msg.QuantityAndAccount44.mmAccountOwner,
+						com.tools20022.repository.msg.QuantityAndAccount44.mmCashAccount, com.tools20022.repository.msg.QuantityAndAccount44.mmSafekeepingPlace, com.tools20022.repository.msg.QuantityAndAccount44.mmQuantityBreakdown);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount44,
+						com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount44);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuantityAndAccount44";
 				definition = "Details on the quantity, account and other related information involved in a transaction.";
@@ -380,48 +393,48 @@ public class QuantityAndAccount44 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DnmtnChc")
-	public Max210Text getDenominationChoice() {
-		return denominationChoice;
+	public Optional<Max210Text> getDenominationChoice() {
+		return denominationChoice == null ? Optional.empty() : Optional.of(denominationChoice);
 	}
 
-	public void setDenominationChoice(Max210Text denominationChoice) {
+	public QuantityAndAccount44 setDenominationChoice(Max210Text denominationChoice) {
 		this.denominationChoice = denominationChoice;
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification98 getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification98> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(com.tools20022.repository.msg.PartyIdentification98 accountOwner) {
+	public QuantityAndAccount44 setAccountOwner(com.tools20022.repository.msg.PartyIdentification98 accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "CshAcct")
-	public CashAccountIdentification5Choice getCashAccount() {
-		return cashAccount;
+	public Optional<CashAccountIdentification5Choice> getCashAccount() {
+		return cashAccount == null ? Optional.empty() : Optional.of(cashAccount);
 	}
 
-	public void setCashAccount(CashAccountIdentification5Choice cashAccount) {
+	public QuantityAndAccount44 setCashAccount(CashAccountIdentification5Choice cashAccount) {
 		this.cashAccount = cashAccount;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgPlc")
-	public SafeKeepingPlace1 getSafekeepingPlace() {
-		return safekeepingPlace;
+	public Optional<SafeKeepingPlace1> getSafekeepingPlace() {
+		return safekeepingPlace == null ? Optional.empty() : Optional.of(safekeepingPlace);
 	}
 
-	public void setSafekeepingPlace(com.tools20022.repository.msg.SafeKeepingPlace1 safekeepingPlace) {
+	public QuantityAndAccount44 setSafekeepingPlace(com.tools20022.repository.msg.SafeKeepingPlace1 safekeepingPlace) {
 		this.safekeepingPlace = safekeepingPlace;
+		return this;
 	}
 
-	@XmlElement(name = "QtyBrkdwn")
 	public List<QuantityBreakdown30> getQuantityBreakdown() {
-		return quantityBreakdown;
+		return quantityBreakdown == null ? quantityBreakdown = new ArrayList<>() : quantityBreakdown;
 	}
 
-	public void setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakdown30> quantityBreakdown) {
-		this.quantityBreakdown = quantityBreakdown;
+	public QuantityAndAccount44 setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakdown30> quantityBreakdown) {
+		this.quantityBreakdown = Objects.requireNonNull(quantityBreakdown);
+		return this;
 	}
 }

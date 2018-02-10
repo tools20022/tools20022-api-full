@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMMediaMix1", propOrder = {"cashUnitNumber", "number", "unitValue"})
 public class ATMMediaMix1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CshUnitNb")
 	protected Number cashUnitNumber;
 	/**
-	 * Logical unit number of the cash dispenser.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +105,7 @@ public class ATMMediaMix1 {
 	 */
 	public static final MMMessageAttribute mmCashUnitNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMMediaMix1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMMediaMix1.mmObject();
 			isDerived = false;
 			xmlTag = "CshUnitNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +116,11 @@ public class ATMMediaMix1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Nb", required = true)
 	protected Number number;
 	/**
-	 * Number of notes or coins.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,7 +153,7 @@ public class ATMMediaMix1 {
 	 */
 	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMMediaMix1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMMediaMix1.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,10 +165,11 @@ public class ATMMediaMix1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "UnitVal", required = true)
 	protected ImpliedCurrencyAndAmount unitValue;
 	/**
-	 * Unit value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,7 +203,7 @@ public class ATMMediaMix1 {
 	 */
 	public static final MMMessageAttribute mmUnitValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMMediaMix1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMMediaMix1.mmObject();
 			isDerived = false;
 			xmlTag = "UnitVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,8 +219,8 @@ public class ATMMediaMix1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMMediaMix1.mmCashUnitNumber, ATMMediaMix1.mmNumber, ATMMediaMix1.mmUnitValue);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMMediaMix1.mmCashUnitNumber, com.tools20022.repository.msg.ATMMediaMix1.mmNumber, com.tools20022.repository.msg.ATMMediaMix1.mmUnitValue);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMMediaMix1";
 				definition = "Media mix selected.";
@@ -225,30 +230,30 @@ public class ATMMediaMix1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CshUnitNb")
-	public Number getCashUnitNumber() {
-		return cashUnitNumber;
+	public Optional<Number> getCashUnitNumber() {
+		return cashUnitNumber == null ? Optional.empty() : Optional.of(cashUnitNumber);
 	}
 
-	public void setCashUnitNumber(Number cashUnitNumber) {
+	public ATMMediaMix1 setCashUnitNumber(Number cashUnitNumber) {
 		this.cashUnitNumber = cashUnitNumber;
+		return this;
 	}
 
-	@XmlElement(name = "Nb", required = true)
 	public Number getNumber() {
 		return number;
 	}
 
-	public void setNumber(Number number) {
-		this.number = number;
+	public ATMMediaMix1 setNumber(Number number) {
+		this.number = Objects.requireNonNull(number);
+		return this;
 	}
 
-	@XmlElement(name = "UnitVal", required = true)
 	public ImpliedCurrencyAndAmount getUnitValue() {
 		return unitValue;
 	}
 
-	public void setUnitValue(ImpliedCurrencyAndAmount unitValue) {
-		this.unitValue = unitValue;
+	public ATMMediaMix1 setUnitValue(ImpliedCurrencyAndAmount unitValue) {
+		this.unitValue = Objects.requireNonNull(unitValue);
+		return this;
 	}
 }

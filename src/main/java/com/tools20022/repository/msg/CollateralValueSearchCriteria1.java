@@ -25,9 +25,8 @@ import com.tools20022.repository.choice.AccountIdentification4Choice;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +67,17 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCashAccountIdentificationGuideline#forCollateralValueSearchCriteria1
+ * ConstraintCashAccountIdentificationGuideline.
+ * forCollateralValueSearchCriteria1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,16 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the criteria used to search for an account."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CollateralValueSearchCriteria1", propOrder = {"accountIdentification", "currency", "accountOwner", "accountServicer", "financialInstrumentIdentification", "securitiesAccountOwner", "securitiesAccountServicer"})
 public class CollateralValueSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId")
 	protected AccountIdentification4Choice accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -118,7 +126,7 @@ public class CollateralValueSearchCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +138,11 @@ public class CollateralValueSearchCriteria1 {
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected List<ActiveOrHistoricCurrencyCode> currency;
 	/**
-	 * Medium of exchange of value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +170,7 @@ public class CollateralValueSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +180,11 @@ public class CollateralValueSearchCriteria1 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification71Choice accountOwner;
 	/**
-	 * Party that legally owns the account being queried.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -202,7 +212,7 @@ public class CollateralValueSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,11 +223,11 @@ public class CollateralValueSearchCriteria1 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcr")
 	protected PartyIdentification71Choice accountServicer;
 	/**
-	 * Party that manages the account on behalf of the account owner, which is
-	 * being queried.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -247,7 +257,7 @@ public class CollateralValueSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,11 +268,11 @@ public class CollateralValueSearchCriteria1 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmId")
 	protected List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification;
 	/**
-	 * ISIN identification of the related financial instrument into which this
-	 * security can be converted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -291,7 +301,7 @@ public class CollateralValueSearchCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -302,10 +312,11 @@ public class CollateralValueSearchCriteria1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesAcctOwnr")
 	protected PartyIdentification71Choice securitiesAccountOwner;
 	/**
-	 * Unique and unambiguous identification of the securities account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -334,7 +345,7 @@ public class CollateralValueSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmSecuritiesAccountOwner = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -345,10 +356,11 @@ public class CollateralValueSearchCriteria1 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesAcctSvcr")
 	protected PartyIdentification71Choice securitiesAccountServicer;
 	/**
-	 * Party that manages the securities account on behalf of the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -378,7 +390,7 @@ public class CollateralValueSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmSecuritiesAccountServicer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CollateralValueSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -393,10 +405,12 @@ public class CollateralValueSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CollateralValueSearchCriteria1.mmAccountIdentification, CollateralValueSearchCriteria1.mmCurrency, CollateralValueSearchCriteria1.mmAccountOwner,
-						CollateralValueSearchCriteria1.mmAccountServicer, CollateralValueSearchCriteria1.mmFinancialInstrumentIdentification, CollateralValueSearchCriteria1.mmSecuritiesAccountOwner,
-						CollateralValueSearchCriteria1.mmSecuritiesAccountServicer);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmAccountIdentification, com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmCurrency,
+						com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmAccountOwner, com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmAccountServicer,
+						com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmSecuritiesAccountOwner,
+						com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmSecuritiesAccountServicer);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashAccountIdentificationGuideline.forCollateralValueSearchCriteria1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueSearchCriteria1";
 				definition = "Defines the criteria used to search for an account.";
@@ -405,66 +419,66 @@ public class CollateralValueSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId")
-	public AccountIdentification4Choice getAccountIdentification() {
-		return accountIdentification;
+	public Optional<AccountIdentification4Choice> getAccountIdentification() {
+		return accountIdentification == null ? Optional.empty() : Optional.of(accountIdentification);
 	}
 
-	public void setAccountIdentification(AccountIdentification4Choice accountIdentification) {
+	public CollateralValueSearchCriteria1 setAccountIdentification(AccountIdentification4Choice accountIdentification) {
 		this.accountIdentification = accountIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
 	public List<ActiveOrHistoricCurrencyCode> getCurrency() {
-		return currency;
+		return currency == null ? currency = new ArrayList<>() : currency;
 	}
 
-	public void setCurrency(List<ActiveOrHistoricCurrencyCode> currency) {
-		this.currency = currency;
+	public CollateralValueSearchCriteria1 setCurrency(List<ActiveOrHistoricCurrencyCode> currency) {
+		this.currency = Objects.requireNonNull(currency);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification71Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification71Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification71Choice accountOwner) {
+	public CollateralValueSearchCriteria1 setAccountOwner(PartyIdentification71Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcr")
-	public PartyIdentification71Choice getAccountServicer() {
-		return accountServicer;
+	public Optional<PartyIdentification71Choice> getAccountServicer() {
+		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public void setAccountServicer(PartyIdentification71Choice accountServicer) {
+	public CollateralValueSearchCriteria1 setAccountServicer(PartyIdentification71Choice accountServicer) {
 		this.accountServicer = accountServicer;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmId")
 	public List<SecurityIdentification14> getFinancialInstrumentIdentification() {
-		return financialInstrumentIdentification;
+		return financialInstrumentIdentification == null ? financialInstrumentIdentification = new ArrayList<>() : financialInstrumentIdentification;
 	}
 
-	public void setFinancialInstrumentIdentification(List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification) {
-		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	public CollateralValueSearchCriteria1 setFinancialInstrumentIdentification(List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesAcctOwnr")
-	public PartyIdentification71Choice getSecuritiesAccountOwner() {
-		return securitiesAccountOwner;
+	public Optional<PartyIdentification71Choice> getSecuritiesAccountOwner() {
+		return securitiesAccountOwner == null ? Optional.empty() : Optional.of(securitiesAccountOwner);
 	}
 
-	public void setSecuritiesAccountOwner(PartyIdentification71Choice securitiesAccountOwner) {
+	public CollateralValueSearchCriteria1 setSecuritiesAccountOwner(PartyIdentification71Choice securitiesAccountOwner) {
 		this.securitiesAccountOwner = securitiesAccountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesAcctSvcr")
-	public PartyIdentification71Choice getSecuritiesAccountServicer() {
-		return securitiesAccountServicer;
+	public Optional<PartyIdentification71Choice> getSecuritiesAccountServicer() {
+		return securitiesAccountServicer == null ? Optional.empty() : Optional.of(securitiesAccountServicer);
 	}
 
-	public void setSecuritiesAccountServicer(PartyIdentification71Choice securitiesAccountServicer) {
+	public CollateralValueSearchCriteria1 setSecuritiesAccountServicer(PartyIdentification71Choice securitiesAccountServicer) {
 		this.securitiesAccountServicer = securitiesAccountServicer;
+		return this;
 	}
 }

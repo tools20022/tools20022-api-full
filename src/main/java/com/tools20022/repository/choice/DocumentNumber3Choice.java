@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
@@ -27,6 +28,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification34;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintShortLongNumberRule#forDocumentNumber3Choice
+ * ConstraintShortLongNumberRule.forDocumentNumber3Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DocumentNumber3Choice", propOrder = {"shortNumber", "longNumber", "proprietaryNumber"})
 public class DocumentNumber3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ShrtNb", required = true)
 	protected Exact3NumericText shortNumber;
 	/**
-	 * Message type number of the document referenced.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -94,6 +105,9 @@ public class DocumentNumber3Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ShrtNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13A::LINK</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -106,9 +120,10 @@ public class DocumentNumber3Choice {
 	 */
 	public static final MMMessageAttribute mmShortNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DocumentNumber3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentNumber3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13A::LINK"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortNumber";
 			definition = "Message type number of the document referenced.";
@@ -117,10 +132,11 @@ public class DocumentNumber3Choice {
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "LngNb", required = true)
 	protected ISO20022MessageIdentificationText longNumber;
 	/**
-	 * MX Message identifier of the referenced document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -136,6 +152,9 @@ public class DocumentNumber3Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LngNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13B::LINK//30x</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -148,9 +167,10 @@ public class DocumentNumber3Choice {
 	 */
 	public static final MMMessageAttribute mmLongNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DocumentNumber3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentNumber3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LngNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13B::LINK//30x"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongNumber";
 			definition = "MX Message identifier of the referenced document.";
@@ -159,10 +179,11 @@ public class DocumentNumber3Choice {
 			simpleType_lazy = () -> ISO20022MessageIdentificationText.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryNb", required = true)
 	protected GenericIdentification34 proprietaryNumber;
 	/**
-	 * Proprietary document identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -177,6 +198,9 @@ public class DocumentNumber3Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrtryNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13B::LINK/[8c]/30x</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -189,9 +213,10 @@ public class DocumentNumber3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietaryNumber = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DocumentNumber3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentNumber3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13B::LINK/[8c]/30x"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryNumber";
 			definition = "Proprietary document identification.";
@@ -205,8 +230,10 @@ public class DocumentNumber3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DocumentNumber3Choice.mmShortNumber, DocumentNumber3Choice.mmLongNumber, DocumentNumber3Choice.mmProprietaryNumber);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DocumentNumber3Choice.mmShortNumber, com.tools20022.repository.choice.DocumentNumber3Choice.mmLongNumber,
+						com.tools20022.repository.choice.DocumentNumber3Choice.mmProprietaryNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintShortLongNumberRule.forDocumentNumber3Choice);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentNumber3Choice";
 				definition = "Choice between a short document number, a long document number or a proprietary document number.";
@@ -215,30 +242,30 @@ public class DocumentNumber3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ShrtNb", required = true)
 	public Exact3NumericText getShortNumber() {
 		return shortNumber;
 	}
 
-	public void setShortNumber(Exact3NumericText shortNumber) {
-		this.shortNumber = shortNumber;
+	public DocumentNumber3Choice setShortNumber(Exact3NumericText shortNumber) {
+		this.shortNumber = Objects.requireNonNull(shortNumber);
+		return this;
 	}
 
-	@XmlElement(name = "LngNb", required = true)
 	public ISO20022MessageIdentificationText getLongNumber() {
 		return longNumber;
 	}
 
-	public void setLongNumber(ISO20022MessageIdentificationText longNumber) {
-		this.longNumber = longNumber;
+	public DocumentNumber3Choice setLongNumber(ISO20022MessageIdentificationText longNumber) {
+		this.longNumber = Objects.requireNonNull(longNumber);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryNb", required = true)
 	public GenericIdentification34 getProprietaryNumber() {
 		return proprietaryNumber;
 	}
 
-	public void setProprietaryNumber(GenericIdentification34 proprietaryNumber) {
-		this.proprietaryNumber = proprietaryNumber;
+	public DocumentNumber3Choice setProprietaryNumber(GenericIdentification34 proprietaryNumber) {
+		this.proprietaryNumber = Objects.requireNonNull(proprietaryNumber);
+		return this;
 	}
 }

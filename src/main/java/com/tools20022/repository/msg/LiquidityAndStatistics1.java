@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -31,6 +32,8 @@ import com.tools20022.repository.entity.NonDisclosedListTrading;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +77,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,16 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LiquidityAndStatistics1", propOrder = {"grossIndicator", "indicatorType", "weightedAverageLiquidity", "outMainCountryIndex", "crossPercent", "sideValue1", "sideValue2"})
 public class LiquidityAndStatistics1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrssInd", required = true)
 	protected TrueFalseIndicator grossIndicator;
 	/**
-	 * Indicates whether an amount is a gross amount (including all charges,
-	 * commissions and tax), or a net amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,6 +121,9 @@ public class LiquidityAndStatistics1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "GrssInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 416</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -133,9 +139,10 @@ public class LiquidityAndStatistics1 {
 	public static final MMMessageAttribute mmGrossIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmGrossAmountIndicator;
-			componentContext_lazy = () -> LiquidityAndStatistics1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityAndStatistics1.mmObject();
 			isDerived = false;
 			xmlTag = "GrssInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "416"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossIndicator";
 			definition = "Indicates whether an amount is a gross amount (including all charges, commissions and tax), or a net amount.";
@@ -144,10 +151,11 @@ public class LiquidityAndStatistics1 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "IndTp", required = true)
 	protected LiquidityIndicatorType1Code indicatorType;
 	/**
-	 * Type of liquidity measure, of a financial instrument, on a market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,6 +176,9 @@ public class LiquidityAndStatistics1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IndTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 409</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -182,9 +193,10 @@ public class LiquidityAndStatistics1 {
 	public static final MMMessageAttribute mmIndicatorType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Liquidity.mmIndicatorType;
-			componentContext_lazy = () -> LiquidityAndStatistics1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityAndStatistics1.mmObject();
 			isDerived = false;
 			xmlTag = "IndTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "409"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndicatorType";
 			definition = "Type of liquidity measure, of a financial instrument, on a market.";
@@ -193,11 +205,11 @@ public class LiquidityAndStatistics1 {
 			simpleType_lazy = () -> LiquidityIndicatorType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "WghtdAvrgLqdty", required = true)
 	protected PercentageRate weightedAverageLiquidity;
 	/**
-	 * Indicates the overall weighted average liquidity expressed as a
-	 * percentage of average daily volume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,6 +230,9 @@ public class LiquidityAndStatistics1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "WghtdAvrgLqdty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 410</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -233,9 +248,10 @@ public class LiquidityAndStatistics1 {
 	public static final MMMessageAttribute mmWeightedAverageLiquidity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Liquidity.mmWeightedAverageLiquidity;
-			componentContext_lazy = () -> LiquidityAndStatistics1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityAndStatistics1.mmObject();
 			isDerived = false;
 			xmlTag = "WghtdAvrgLqdty";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "410"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WeightedAverageLiquidity";
 			definition = "Indicates the overall weighted average liquidity expressed as a percentage of average daily volume.";
@@ -244,11 +260,11 @@ public class LiquidityAndStatistics1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "OutMainCtryIndx", required = true)
 	protected ActiveCurrencyAndAmount outMainCountryIndex;
 	/**
-	 * Accepted value of stocks composing an index located outside its country
-	 * of origin.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -269,6 +285,9 @@ public class LiquidityAndStatistics1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OutMainCtryIndx"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 412</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -284,9 +303,10 @@ public class LiquidityAndStatistics1 {
 	public static final MMMessageAttribute mmOutMainCountryIndex = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ExchangeForPhysicalTrade.mmOutMainCountryIndex;
-			componentContext_lazy = () -> LiquidityAndStatistics1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityAndStatistics1.mmObject();
 			isDerived = false;
 			xmlTag = "OutMainCtryIndx";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "412"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutMainCountryIndex";
 			definition = "Accepted value of stocks composing an index located outside its country of origin.";
@@ -295,10 +315,11 @@ public class LiquidityAndStatistics1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CrossPct")
 	protected PercentageRate crossPercent;
 	/**
-	 * Percentage of program that crosses in Currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -314,6 +335,9 @@ public class LiquidityAndStatistics1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CrossPct"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 413</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -326,9 +350,10 @@ public class LiquidityAndStatistics1 {
 	 */
 	public static final MMMessageAttribute mmCrossPercent = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LiquidityAndStatistics1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityAndStatistics1.mmObject();
 			isDerived = false;
 			xmlTag = "CrossPct";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "413"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossPercent";
 			definition = "Percentage of program that crosses in Currency.";
@@ -337,12 +362,11 @@ public class LiquidityAndStatistics1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "SdVal1")
 	protected ActiveCurrencyAndAmount sideValue1;
 	/**
-	 * SideValue1 is used to show the monetary total value in either direction
-	 * (buy or sell) of the transaction without revealing whether it is the
-	 * buy-side institutions intention to buy or sell.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -363,6 +387,9 @@ public class LiquidityAndStatistics1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SdVal1"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 396, FIXSynonym: 15</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -378,9 +405,10 @@ public class LiquidityAndStatistics1 {
 	public static final MMMessageAttribute mmSideValue1 = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmSideValue;
-			componentContext_lazy = () -> LiquidityAndStatistics1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityAndStatistics1.mmObject();
 			isDerived = false;
 			xmlTag = "SdVal1";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "396"), new FIXSynonym(this, "15"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SideValue1";
 			definition = "SideValue1 is used to show the monetary total value in either direction (buy or sell) of the transaction without revealing whether it is the buy-side institutions intention to buy or sell.";
@@ -389,12 +417,11 @@ public class LiquidityAndStatistics1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SdVal2")
 	protected ActiveCurrencyAndAmount sideValue2;
 	/**
-	 * SideValue2 is used to show the monetary total value in either direction
-	 * (buy or sell) of the transaction without revealing whether it is the
-	 * buy-side institutions intention to buy or sell.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -415,6 +442,9 @@ public class LiquidityAndStatistics1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SdVal2"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 397, FIXSynonym: 15</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -430,9 +460,10 @@ public class LiquidityAndStatistics1 {
 	public static final MMMessageAttribute mmSideValue2 = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmSideValue;
-			componentContext_lazy = () -> LiquidityAndStatistics1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityAndStatistics1.mmObject();
 			isDerived = false;
 			xmlTag = "SdVal2";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "397"), new FIXSynonym(this, "15"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SideValue2";
 			definition = "SideValue2 is used to show the monetary total value in either direction (buy or sell) of the transaction without revealing whether it is the buy-side institutions intention to buy or sell.";
@@ -445,10 +476,11 @@ public class LiquidityAndStatistics1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LiquidityAndStatistics1.mmGrossIndicator, LiquidityAndStatistics1.mmIndicatorType, LiquidityAndStatistics1.mmWeightedAverageLiquidity, LiquidityAndStatistics1.mmOutMainCountryIndex,
-						LiquidityAndStatistics1.mmCrossPercent, LiquidityAndStatistics1.mmSideValue1, LiquidityAndStatistics1.mmSideValue2);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityAndStatistics1.mmGrossIndicator, com.tools20022.repository.msg.LiquidityAndStatistics1.mmIndicatorType,
+						com.tools20022.repository.msg.LiquidityAndStatistics1.mmWeightedAverageLiquidity, com.tools20022.repository.msg.LiquidityAndStatistics1.mmOutMainCountryIndex,
+						com.tools20022.repository.msg.LiquidityAndStatistics1.mmCrossPercent, com.tools20022.repository.msg.LiquidityAndStatistics1.mmSideValue1, com.tools20022.repository.msg.LiquidityAndStatistics1.mmSideValue2);
 				trace_lazy = () -> Liquidity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LiquidityAndStatistics1";
 				definition = "Ability of a financial instrument to be easily traded and converted to cash, at conditions that do not affect its price.";
@@ -457,66 +489,66 @@ public class LiquidityAndStatistics1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrssInd", required = true)
 	public TrueFalseIndicator getGrossIndicator() {
 		return grossIndicator;
 	}
 
-	public void setGrossIndicator(TrueFalseIndicator grossIndicator) {
-		this.grossIndicator = grossIndicator;
+	public LiquidityAndStatistics1 setGrossIndicator(TrueFalseIndicator grossIndicator) {
+		this.grossIndicator = Objects.requireNonNull(grossIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "IndTp", required = true)
 	public LiquidityIndicatorType1Code getIndicatorType() {
 		return indicatorType;
 	}
 
-	public void setIndicatorType(LiquidityIndicatorType1Code indicatorType) {
-		this.indicatorType = indicatorType;
+	public LiquidityAndStatistics1 setIndicatorType(LiquidityIndicatorType1Code indicatorType) {
+		this.indicatorType = Objects.requireNonNull(indicatorType);
+		return this;
 	}
 
-	@XmlElement(name = "WghtdAvrgLqdty", required = true)
 	public PercentageRate getWeightedAverageLiquidity() {
 		return weightedAverageLiquidity;
 	}
 
-	public void setWeightedAverageLiquidity(PercentageRate weightedAverageLiquidity) {
-		this.weightedAverageLiquidity = weightedAverageLiquidity;
+	public LiquidityAndStatistics1 setWeightedAverageLiquidity(PercentageRate weightedAverageLiquidity) {
+		this.weightedAverageLiquidity = Objects.requireNonNull(weightedAverageLiquidity);
+		return this;
 	}
 
-	@XmlElement(name = "OutMainCtryIndx", required = true)
 	public ActiveCurrencyAndAmount getOutMainCountryIndex() {
 		return outMainCountryIndex;
 	}
 
-	public void setOutMainCountryIndex(ActiveCurrencyAndAmount outMainCountryIndex) {
-		this.outMainCountryIndex = outMainCountryIndex;
+	public LiquidityAndStatistics1 setOutMainCountryIndex(ActiveCurrencyAndAmount outMainCountryIndex) {
+		this.outMainCountryIndex = Objects.requireNonNull(outMainCountryIndex);
+		return this;
 	}
 
-	@XmlElement(name = "CrossPct")
-	public PercentageRate getCrossPercent() {
-		return crossPercent;
+	public Optional<PercentageRate> getCrossPercent() {
+		return crossPercent == null ? Optional.empty() : Optional.of(crossPercent);
 	}
 
-	public void setCrossPercent(PercentageRate crossPercent) {
+	public LiquidityAndStatistics1 setCrossPercent(PercentageRate crossPercent) {
 		this.crossPercent = crossPercent;
+		return this;
 	}
 
-	@XmlElement(name = "SdVal1")
-	public ActiveCurrencyAndAmount getSideValue1() {
-		return sideValue1;
+	public Optional<ActiveCurrencyAndAmount> getSideValue1() {
+		return sideValue1 == null ? Optional.empty() : Optional.of(sideValue1);
 	}
 
-	public void setSideValue1(ActiveCurrencyAndAmount sideValue1) {
+	public LiquidityAndStatistics1 setSideValue1(ActiveCurrencyAndAmount sideValue1) {
 		this.sideValue1 = sideValue1;
+		return this;
 	}
 
-	@XmlElement(name = "SdVal2")
-	public ActiveCurrencyAndAmount getSideValue2() {
-		return sideValue2;
+	public Optional<ActiveCurrencyAndAmount> getSideValue2() {
+		return sideValue2 == null ? Optional.empty() : Optional.of(sideValue2);
 	}
 
-	public void setSideValue2(ActiveCurrencyAndAmount sideValue2) {
+	public LiquidityAndStatistics1 setSideValue2(ActiveCurrencyAndAmount sideValue2) {
 		this.sideValue2 = sideValue2;
+		return this;
 	}
 }

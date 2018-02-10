@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.TradingMarket;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MarketIdentification1", propOrder = {"identification", "type"})
 public class MarketIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected PartyIdentification6Choice identification;
 	/**
-	 * Unique and unambiguous way to identify an organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -110,7 +112,7 @@ public class MarketIdentification1 {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
-			componentContext_lazy = () -> MarketIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class MarketIdentification1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected MarketType1Code type;
 	/**
-	 * Nature of a market in which transactions take place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +162,7 @@ public class MarketIdentification1 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmType;
-			componentContext_lazy = () -> MarketIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,9 +177,9 @@ public class MarketIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MarketIdentification1.mmIdentification, MarketIdentification1.mmType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification1.mmIdentification, com.tools20022.repository.msg.MarketIdentification1.mmType);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MarketIdentification1";
 				definition = "Context, or geographic environment, in which trading parties may meet in order to negotiate and execute trades among themselves.";
@@ -185,21 +188,21 @@ public class MarketIdentification1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public PartyIdentification6Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.PartyIdentification6Choice identification) {
-		this.identification = identification;
+	public MarketIdentification1 setIdentification(com.tools20022.repository.msg.PartyIdentification6Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public MarketType1Code getType() {
 		return type;
 	}
 
-	public void setType(MarketType1Code type) {
-		this.type = type;
+	public MarketIdentification1 setType(MarketType1Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 }

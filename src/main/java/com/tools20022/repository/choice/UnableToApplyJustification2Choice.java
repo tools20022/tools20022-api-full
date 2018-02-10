@@ -29,6 +29,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MissingOrIncorrectInformation2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,16 +93,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnableToApplyJustification2Choice", propOrder = {"anyInformation", "missingOrIncorrectInformation", "possibleDuplicateInstruction"})
 public class UnableToApplyJustification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AnyInf", required = true)
 	protected YesNoIndicator anyInformation;
 	/**
-	 * Indicates whether or not all available information on the underlying
-	 * payment instruction is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +140,7 @@ public class UnableToApplyJustification2Choice {
 	 */
 	public static final MMMessageAttribute mmAnyInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UnableToApplyJustification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UnableToApplyJustification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AnyInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,11 +152,11 @@ public class UnableToApplyJustification2Choice {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "MssngOrIncrrctInf", required = true)
 	protected MissingOrIncorrectInformation2 missingOrIncorrectInformation;
 	/**
-	 * Set of elements used to indicate which information is missing or
-	 * incorrect.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -192,7 +193,7 @@ public class UnableToApplyJustification2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmMissingOrIncorrectInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UnableToApplyJustification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UnableToApplyJustification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MssngOrIncrrctInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,11 +206,11 @@ public class UnableToApplyJustification2Choice {
 			type_lazy = () -> MissingOrIncorrectInformation2.mmObject();
 		}
 	};
+	@XmlElement(name = "PssblDplctInstr", required = true)
 	protected TrueFalseIndicator possibleDuplicateInstruction;
 	/**
-	 * Indicates whether or not the referred item is a possible duplicate of a
-	 * previous instruction or entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -247,7 +248,7 @@ public class UnableToApplyJustification2Choice {
 	 */
 	public static final MMMessageAttribute mmPossibleDuplicateInstruction = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UnableToApplyJustification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UnableToApplyJustification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PssblDplctInstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,10 +264,10 @@ public class UnableToApplyJustification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnableToApplyJustification2Choice.mmAnyInformation, UnableToApplyJustification2Choice.mmMissingOrIncorrectInformation,
-						UnableToApplyJustification2Choice.mmPossibleDuplicateInstruction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnableToApplyJustification2Choice.mmAnyInformation,
+						com.tools20022.repository.choice.UnableToApplyJustification2Choice.mmMissingOrIncorrectInformation, com.tools20022.repository.choice.UnableToApplyJustification2Choice.mmPossibleDuplicateInstruction);
 				messageBuildingBlock_lazy = () -> Arrays.asList(UnableToApplyV03.mmJustification, UnableToApplyV04.mmJustification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnableToApplyJustification2Choice";
 				definition = "Specifies the details of missing information or the complete set of available information.";
@@ -276,30 +277,30 @@ public class UnableToApplyJustification2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AnyInf", required = true)
 	public YesNoIndicator getAnyInformation() {
 		return anyInformation;
 	}
 
-	public void setAnyInformation(YesNoIndicator anyInformation) {
-		this.anyInformation = anyInformation;
+	public UnableToApplyJustification2Choice setAnyInformation(YesNoIndicator anyInformation) {
+		this.anyInformation = Objects.requireNonNull(anyInformation);
+		return this;
 	}
 
-	@XmlElement(name = "MssngOrIncrrctInf", required = true)
 	public MissingOrIncorrectInformation2 getMissingOrIncorrectInformation() {
 		return missingOrIncorrectInformation;
 	}
 
-	public void setMissingOrIncorrectInformation(MissingOrIncorrectInformation2 missingOrIncorrectInformation) {
-		this.missingOrIncorrectInformation = missingOrIncorrectInformation;
+	public UnableToApplyJustification2Choice setMissingOrIncorrectInformation(MissingOrIncorrectInformation2 missingOrIncorrectInformation) {
+		this.missingOrIncorrectInformation = Objects.requireNonNull(missingOrIncorrectInformation);
+		return this;
 	}
 
-	@XmlElement(name = "PssblDplctInstr", required = true)
 	public TrueFalseIndicator getPossibleDuplicateInstruction() {
 		return possibleDuplicateInstruction;
 	}
 
-	public void setPossibleDuplicateInstruction(TrueFalseIndicator possibleDuplicateInstruction) {
-		this.possibleDuplicateInstruction = possibleDuplicateInstruction;
+	public UnableToApplyJustification2Choice setPossibleDuplicateInstruction(TrueFalseIndicator possibleDuplicateInstruction) {
+		this.possibleDuplicateInstruction = Objects.requireNonNull(possibleDuplicateInstruction);
+		return this;
 	}
 }

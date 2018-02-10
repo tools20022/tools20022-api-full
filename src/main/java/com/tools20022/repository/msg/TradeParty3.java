@@ -25,9 +25,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.entity.TaxPartyRole;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * TradeParty1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TradeParty3", propOrder = {"partyIdentification", "legalOrganisation", "taxParty"})
 public class TradeParty3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PtyId", required = true)
 	protected PartyIdentification112 partyIdentification;
 	/**
-	 * Unique identification, as assigned by an organisation, to unambiguously
-	 * identify a party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -119,7 +118,7 @@ public class TradeParty3 {
 	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> TradeParty3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeParty3.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +131,11 @@ public class TradeParty3 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification112.mmObject();
 		}
 	};
+	@XmlElement(name = "LglOrg")
 	protected LegalOrganisation1 legalOrganisation;
 	/**
-	 * Legally constituted organization specified for this trade party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -171,7 +171,7 @@ public class TradeParty3 {
 	public static final MMMessageAssociationEnd mmLegalOrganisation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
-			componentContext_lazy = () -> TradeParty3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeParty3.mmObject();
 			isDerived = false;
 			xmlTag = "LglOrg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,10 +184,11 @@ public class TradeParty3 {
 			type_lazy = () -> com.tools20022.repository.msg.LegalOrganisation1.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxPty")
 	protected List<com.tools20022.repository.msg.TaxParty3> taxParty;
 	/**
-	 * Entity involved in an activity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -221,7 +222,7 @@ public class TradeParty3 {
 	public static final MMMessageAssociationEnd mmTaxParty = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> TaxPartyRole.mmObject();
-			componentContext_lazy = () -> TradeParty3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeParty3.mmObject();
 			isDerived = false;
 			xmlTag = "TaxPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,9 +238,9 @@ public class TradeParty3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TradeParty3.mmPartyIdentification, TradeParty3.mmLegalOrganisation, TradeParty3.mmTaxParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeParty3.mmPartyIdentification, com.tools20022.repository.msg.TradeParty3.mmLegalOrganisation, com.tools20022.repository.msg.TradeParty3.mmTaxParty);
 				trace_lazy = () -> Role.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeParty3";
 				definition = "Specifies an entity involved in a trade activity.";
@@ -249,30 +250,30 @@ public class TradeParty3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PtyId", required = true)
 	public PartyIdentification112 getPartyIdentification() {
 		return partyIdentification;
 	}
 
-	public void setPartyIdentification(com.tools20022.repository.msg.PartyIdentification112 partyIdentification) {
-		this.partyIdentification = partyIdentification;
+	public TradeParty3 setPartyIdentification(com.tools20022.repository.msg.PartyIdentification112 partyIdentification) {
+		this.partyIdentification = Objects.requireNonNull(partyIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "LglOrg")
-	public LegalOrganisation1 getLegalOrganisation() {
-		return legalOrganisation;
+	public Optional<LegalOrganisation1> getLegalOrganisation() {
+		return legalOrganisation == null ? Optional.empty() : Optional.of(legalOrganisation);
 	}
 
-	public void setLegalOrganisation(com.tools20022.repository.msg.LegalOrganisation1 legalOrganisation) {
+	public TradeParty3 setLegalOrganisation(com.tools20022.repository.msg.LegalOrganisation1 legalOrganisation) {
 		this.legalOrganisation = legalOrganisation;
+		return this;
 	}
 
-	@XmlElement(name = "TaxPty")
 	public List<TaxParty3> getTaxParty() {
-		return taxParty;
+		return taxParty == null ? taxParty = new ArrayList<>() : taxParty;
 	}
 
-	public void setTaxParty(List<com.tools20022.repository.msg.TaxParty3> taxParty) {
-		this.taxParty = taxParty;
+	public TradeParty3 setTaxParty(List<com.tools20022.repository.msg.TaxParty3> taxParty) {
+		this.taxParty = Objects.requireNonNull(taxParty);
+		return this;
 	}
 }

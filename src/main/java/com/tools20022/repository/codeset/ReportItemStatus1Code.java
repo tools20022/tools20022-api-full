@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ReportItemStatusCode;
+import com.tools20022.repository.codeset.ReportItemStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of an entry in a report.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ReportItemStatusCode
- * ReportItemStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportItemStatus1Code#mmAccepted
- * ReportItemStatus1Code.mmAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportItemStatus1Code#Accepted
+ * ReportItemStatus1Code.Accepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportItemStatus1Code#mmRejected
- * ReportItemStatus1Code.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportItemStatus1Code#Rejected
+ * ReportItemStatus1Code.Rejected}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ReportItemStatusCode
+ * ReportItemStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of an entry in a report."</li>
  * </ul>
  */
-public class ReportItemStatus1Code extends ReportItemStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ReportItemStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class ReportItemStatus1Code extends ReportItemStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final ReportItemStatus1Code Accepted = new ReportItemStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> ReportItemStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportItemStatus1Code.mmObject();
+			codeName = ReportItemStatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class ReportItemStatus1Code extends ReportItemStatusCode {
 	 * name} = "Rejected"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final ReportItemStatus1Code Rejected = new ReportItemStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			owner_lazy = () -> ReportItemStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportItemStatus1Code.mmObject();
+			codeName = ReportItemStatusCode.Rejected.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ReportItemStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ReportItemStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportItemStatus1Code";
 				definition = "Specifies the status of an entry in a report.";
-				code_lazy = () -> Arrays.asList(ReportItemStatus1Code.mmAccepted, ReportItemStatus1Code.mmRejected);
 				trace_lazy = () -> ReportItemStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportItemStatus1Code.Accepted, com.tools20022.repository.codeset.ReportItemStatus1Code.Rejected);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+	}
+
+	public static ReportItemStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ReportItemStatus1Code[] values() {
+		ReportItemStatus1Code[] values = new ReportItemStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ReportItemStatus1Code> {
+		@Override
+		public ReportItemStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ReportItemStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

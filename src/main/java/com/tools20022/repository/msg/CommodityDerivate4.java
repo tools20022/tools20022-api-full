@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Transparency calculation specific details for an commodity derivatives."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CommodityDerivate4", propOrder = {"classSpecific", "notionalCurrency"})
 public class CommodityDerivate4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ClssSpcfc")
 	protected CommodityDerivate2Choice classSpecific;
 	/**
-	 * Provides specific information related to commodity derivatives.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +112,7 @@ public class CommodityDerivate4 {
 	public static final MMMessageAssociationEnd mmClassSpecific = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Commodity.mmObject();
-			componentContext_lazy = () -> CommodityDerivate4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommodityDerivate4.mmObject();
 			isDerived = false;
 			xmlTag = "ClssSpcfc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +124,11 @@ public class CommodityDerivate4 {
 			type_lazy = () -> CommodityDerivate2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NtnlCcy", required = true)
 	protected ActiveOrHistoricCurrencyCode notionalCurrency;
 	/**
-	 * Currency in which the notional is denominated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +162,7 @@ public class CommodityDerivate4 {
 	public static final MMMessageAttribute mmNotionalCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrency;
-			componentContext_lazy = () -> CommodityDerivate4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommodityDerivate4.mmObject();
 			isDerived = false;
 			xmlTag = "NtnlCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,9 +177,9 @@ public class CommodityDerivate4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CommodityDerivate4.mmClassSpecific, CommodityDerivate4.mmNotionalCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommodityDerivate4.mmClassSpecific, com.tools20022.repository.msg.CommodityDerivate4.mmNotionalCurrency);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommodityDerivate4";
 				definition = "Transparency calculation specific details for an commodity derivatives.";
@@ -184,21 +188,21 @@ public class CommodityDerivate4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ClssSpcfc")
-	public CommodityDerivate2Choice getClassSpecific() {
-		return classSpecific;
+	public Optional<CommodityDerivate2Choice> getClassSpecific() {
+		return classSpecific == null ? Optional.empty() : Optional.of(classSpecific);
 	}
 
-	public void setClassSpecific(CommodityDerivate2Choice classSpecific) {
+	public CommodityDerivate4 setClassSpecific(CommodityDerivate2Choice classSpecific) {
 		this.classSpecific = classSpecific;
+		return this;
 	}
 
-	@XmlElement(name = "NtnlCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getNotionalCurrency() {
 		return notionalCurrency;
 	}
 
-	public void setNotionalCurrency(ActiveOrHistoricCurrencyCode notionalCurrency) {
-		this.notionalCurrency = notionalCurrency;
+	public CommodityDerivate4 setNotionalCurrency(ActiveOrHistoricCurrencyCode notionalCurrency) {
+		this.notionalCurrency = Objects.requireNonNull(notionalCurrency);
+		return this;
 	}
 }

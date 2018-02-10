@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.InsuranceClausesCode;
+import com.tools20022.repository.codeset.InsuranceClauses1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * List of standards insurance clauses. (standard policy wordings issued by the
@@ -32,51 +36,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.InsuranceClausesCode
- * InsuranceClausesCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#mmInstituteCargoClauseA
- * InsuranceClauses1Code.mmInstituteCargoClauseA}</li>
+ * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#InstituteCargoClauseA
+ * InsuranceClauses1Code.InstituteCargoClauseA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#mmInstituteCargoClauseB
- * InsuranceClauses1Code.mmInstituteCargoClauseB}</li>
+ * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#InstituteCargoClauseB
+ * InsuranceClauses1Code.InstituteCargoClauseB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#mmInstituteCargoClauseC
- * InsuranceClauses1Code.mmInstituteCargoClauseC}</li>
+ * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#InstituteCargoClauseC
+ * InsuranceClauses1Code.InstituteCargoClauseC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#mmInstituteCargoClauseAir
- * InsuranceClauses1Code.mmInstituteCargoClauseAir}</li>
+ * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#InstituteCargoClauseAir
+ * InsuranceClauses1Code.InstituteCargoClauseAir}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#mmInstituteWarClauseCargo
- * InsuranceClauses1Code.mmInstituteWarClauseCargo}</li>
+ * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#InstituteWarClauseCargo
+ * InsuranceClauses1Code.InstituteWarClauseCargo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#mmInstituteStrikesClauseCargo
- * InsuranceClauses1Code.mmInstituteStrikesClauseCargo}</li>
+ * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#InstituteStrikesClauseCargo
+ * InsuranceClauses1Code.InstituteStrikesClauseCargo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#mmInstituteReplacementClause
- * InsuranceClauses1Code.mmInstituteReplacementClause}</li>
+ * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#InstituteReplacementClause
+ * InsuranceClauses1Code.InstituteReplacementClause}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#mmInstituteClassificationClause
- * InsuranceClauses1Code.mmInstituteClassificationClause}</li>
+ * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#InstituteClassificationClause
+ * InsuranceClauses1Code.InstituteClassificationClause}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#mmISMCodeEndorsement
- * InsuranceClauses1Code.mmISMCodeEndorsement}</li>
+ * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#ISMCodeEndorsement
+ * InsuranceClauses1Code.ISMCodeEndorsement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#mmComputerMilleniumClauseCargo
- * InsuranceClauses1Code.mmComputerMilleniumClauseCargo}</li>
+ * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#ComputerMilleniumClauseCargo
+ * InsuranceClauses1Code.ComputerMilleniumClauseCargo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#mmInstituteRadioactiveContaminationExclusionClause
- * InsuranceClauses1Code.mmInstituteRadioactiveContaminationExclusionClause}</li>
+ * {@linkplain com.tools20022.repository.codeset.InsuranceClauses1Code#InstituteRadioactiveContaminationExclusionClause
+ * InsuranceClauses1Code.InstituteRadioactiveContaminationExclusionClause}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.InsuranceClausesCode
+ * InsuranceClausesCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -95,7 +99,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class InsuranceClauses1Code extends InsuranceClausesCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InsuranceClauses1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -114,11 +119,12 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 * name} = "InstituteCargoClauseA"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstituteCargoClauseA = new MMCode() {
+	public static final InsuranceClauses1Code InstituteCargoClauseA = new InsuranceClauses1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteCargoClauseA";
-			owner_lazy = () -> InsuranceClauses1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClauses1Code.mmObject();
+			codeName = InsuranceClausesCode.InstituteCargoClauseA.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -137,11 +143,12 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 * name} = "InstituteCargoClauseB"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstituteCargoClauseB = new MMCode() {
+	public static final InsuranceClauses1Code InstituteCargoClauseB = new InsuranceClauses1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteCargoClauseB";
-			owner_lazy = () -> InsuranceClauses1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClauses1Code.mmObject();
+			codeName = InsuranceClausesCode.InstituteCargoClauseB.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -160,11 +167,12 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 * name} = "InstituteCargoClauseC"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstituteCargoClauseC = new MMCode() {
+	public static final InsuranceClauses1Code InstituteCargoClauseC = new InsuranceClauses1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteCargoClauseC";
-			owner_lazy = () -> InsuranceClauses1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClauses1Code.mmObject();
+			codeName = InsuranceClausesCode.InstituteCargoClauseC.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -183,11 +191,12 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 * name} = "InstituteCargoClauseAir"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstituteCargoClauseAir = new MMCode() {
+	public static final InsuranceClauses1Code InstituteCargoClauseAir = new InsuranceClauses1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteCargoClauseAir";
-			owner_lazy = () -> InsuranceClauses1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClauses1Code.mmObject();
+			codeName = InsuranceClausesCode.InstituteCargoClauseAir.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -206,11 +215,12 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 * name} = "InstituteWarClauseCargo"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstituteWarClauseCargo = new MMCode() {
+	public static final InsuranceClauses1Code InstituteWarClauseCargo = new InsuranceClauses1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteWarClauseCargo";
-			owner_lazy = () -> InsuranceClauses1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClauses1Code.mmObject();
+			codeName = InsuranceClausesCode.InstituteWarClauseCargo.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -229,11 +239,12 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 * name} = "InstituteStrikesClauseCargo"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstituteStrikesClauseCargo = new MMCode() {
+	public static final InsuranceClauses1Code InstituteStrikesClauseCargo = new InsuranceClauses1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteStrikesClauseCargo";
-			owner_lazy = () -> InsuranceClauses1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClauses1Code.mmObject();
+			codeName = InsuranceClausesCode.InstituteStrikesClauseCargo.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -252,11 +263,12 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 * name} = "InstituteReplacementClause"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstituteReplacementClause = new MMCode() {
+	public static final InsuranceClauses1Code InstituteReplacementClause = new InsuranceClauses1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteReplacementClause";
-			owner_lazy = () -> InsuranceClauses1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClauses1Code.mmObject();
+			codeName = InsuranceClausesCode.InstituteReplacementClause.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -275,11 +287,12 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 * name} = "InstituteClassificationClause"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstituteClassificationClause = new MMCode() {
+	public static final InsuranceClauses1Code InstituteClassificationClause = new InsuranceClauses1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteClassificationClause";
-			owner_lazy = () -> InsuranceClauses1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClauses1Code.mmObject();
+			codeName = InsuranceClausesCode.InstituteClassificationClause.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -298,11 +311,12 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 * name} = "ISMCodeEndorsement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmISMCodeEndorsement = new MMCode() {
+	public static final InsuranceClauses1Code ISMCodeEndorsement = new InsuranceClauses1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISMCodeEndorsement";
-			owner_lazy = () -> InsuranceClauses1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClauses1Code.mmObject();
+			codeName = InsuranceClausesCode.ISMCodeEndorsement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -321,11 +335,12 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 * name} = "ComputerMilleniumClauseCargo"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmComputerMilleniumClauseCargo = new MMCode() {
+	public static final InsuranceClauses1Code ComputerMilleniumClauseCargo = new InsuranceClauses1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ComputerMilleniumClauseCargo";
-			owner_lazy = () -> InsuranceClauses1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClauses1Code.mmObject();
+			codeName = InsuranceClausesCode.ComputerMilleniumClauseCargo.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -344,28 +359,71 @@ public class InsuranceClauses1Code extends InsuranceClausesCode {
 	 * name} = "InstituteRadioactiveContaminationExclusionClause"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstituteRadioactiveContaminationExclusionClause = new MMCode() {
+	public static final InsuranceClauses1Code InstituteRadioactiveContaminationExclusionClause = new InsuranceClauses1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteRadioactiveContaminationExclusionClause";
-			owner_lazy = () -> InsuranceClauses1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClauses1Code.mmObject();
+			codeName = InsuranceClausesCode.InstituteRadioactiveContaminationExclusionClause.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, InsuranceClauses1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InsuranceClauses1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ICCA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InsuranceClauses1Code";
 				definition = "List of standards insurance clauses. (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
-				code_lazy = () -> Arrays.asList(InsuranceClauses1Code.mmInstituteCargoClauseA, InsuranceClauses1Code.mmInstituteCargoClauseB, InsuranceClauses1Code.mmInstituteCargoClauseC, InsuranceClauses1Code.mmInstituteCargoClauseAir,
-						InsuranceClauses1Code.mmInstituteWarClauseCargo, InsuranceClauses1Code.mmInstituteStrikesClauseCargo, InsuranceClauses1Code.mmInstituteReplacementClause, InsuranceClauses1Code.mmInstituteClassificationClause,
-						InsuranceClauses1Code.mmISMCodeEndorsement, InsuranceClauses1Code.mmComputerMilleniumClauseCargo, InsuranceClauses1Code.mmInstituteRadioactiveContaminationExclusionClause);
 				trace_lazy = () -> InsuranceClausesCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InsuranceClauses1Code.InstituteCargoClauseA, com.tools20022.repository.codeset.InsuranceClauses1Code.InstituteCargoClauseB,
+						com.tools20022.repository.codeset.InsuranceClauses1Code.InstituteCargoClauseC, com.tools20022.repository.codeset.InsuranceClauses1Code.InstituteCargoClauseAir,
+						com.tools20022.repository.codeset.InsuranceClauses1Code.InstituteWarClauseCargo, com.tools20022.repository.codeset.InsuranceClauses1Code.InstituteStrikesClauseCargo,
+						com.tools20022.repository.codeset.InsuranceClauses1Code.InstituteReplacementClause, com.tools20022.repository.codeset.InsuranceClauses1Code.InstituteClassificationClause,
+						com.tools20022.repository.codeset.InsuranceClauses1Code.ISMCodeEndorsement, com.tools20022.repository.codeset.InsuranceClauses1Code.ComputerMilleniumClauseCargo,
+						com.tools20022.repository.codeset.InsuranceClauses1Code.InstituteRadioactiveContaminationExclusionClause);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(InstituteCargoClauseA.getCodeName().get(), InstituteCargoClauseA);
+		codesByName.put(InstituteCargoClauseB.getCodeName().get(), InstituteCargoClauseB);
+		codesByName.put(InstituteCargoClauseC.getCodeName().get(), InstituteCargoClauseC);
+		codesByName.put(InstituteCargoClauseAir.getCodeName().get(), InstituteCargoClauseAir);
+		codesByName.put(InstituteWarClauseCargo.getCodeName().get(), InstituteWarClauseCargo);
+		codesByName.put(InstituteStrikesClauseCargo.getCodeName().get(), InstituteStrikesClauseCargo);
+		codesByName.put(InstituteReplacementClause.getCodeName().get(), InstituteReplacementClause);
+		codesByName.put(InstituteClassificationClause.getCodeName().get(), InstituteClassificationClause);
+		codesByName.put(ISMCodeEndorsement.getCodeName().get(), ISMCodeEndorsement);
+		codesByName.put(ComputerMilleniumClauseCargo.getCodeName().get(), ComputerMilleniumClauseCargo);
+		codesByName.put(InstituteRadioactiveContaminationExclusionClause.getCodeName().get(), InstituteRadioactiveContaminationExclusionClause);
+	}
+
+	public static InsuranceClauses1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InsuranceClauses1Code[] values() {
+		InsuranceClauses1Code[] values = new InsuranceClauses1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InsuranceClauses1Code> {
+		@Override
+		public InsuranceClauses1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InsuranceClauses1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

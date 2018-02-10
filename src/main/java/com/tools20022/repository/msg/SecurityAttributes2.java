@@ -21,9 +21,11 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Tangible items of value to a business."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecurityAttributes2", propOrder = {"financialInstrumentType", "financialInstrumentAttributes", "supplementaryData"})
 public class SecurityAttributes2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FinInstrmTp")
 	protected List<com.tools20022.repository.msg.FinancialInstrument28> financialInstrumentType;
 	/**
-	 * Provides additional details about the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -99,7 +102,7 @@ public class SecurityAttributes2 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecurityAttributes2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,11 +113,11 @@ public class SecurityAttributes2 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument28.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmAttrbts")
 	protected List<com.tools20022.repository.msg.CommonFinancialInstrumentAttributes2> financialInstrumentAttributes;
 	/**
-	 * Provides details about the financial instrument attributes of a
-	 * particular leg.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -143,7 +146,7 @@ public class SecurityAttributes2 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecurityAttributes2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,11 +157,11 @@ public class SecurityAttributes2 {
 			type_lazy = () -> com.tools20022.repository.msg.CommonFinancialInstrumentAttributes2.mmObject();
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -186,7 +189,7 @@ public class SecurityAttributes2 {
 	 */
 	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecurityAttributes2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,8 +204,9 @@ public class SecurityAttributes2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityAttributes2.mmFinancialInstrumentType, SecurityAttributes2.mmFinancialInstrumentAttributes, SecurityAttributes2.mmSupplementaryData);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityAttributes2.mmFinancialInstrumentType, com.tools20022.repository.msg.SecurityAttributes2.mmFinancialInstrumentAttributes,
+						com.tools20022.repository.msg.SecurityAttributes2.mmSupplementaryData);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityAttributes2";
 				definition = "Tangible items of value to a business.";
@@ -211,30 +215,30 @@ public class SecurityAttributes2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FinInstrmTp")
 	public List<FinancialInstrument28> getFinancialInstrumentType() {
-		return financialInstrumentType;
+		return financialInstrumentType == null ? financialInstrumentType = new ArrayList<>() : financialInstrumentType;
 	}
 
-	public void setFinancialInstrumentType(List<com.tools20022.repository.msg.FinancialInstrument28> financialInstrumentType) {
-		this.financialInstrumentType = financialInstrumentType;
+	public SecurityAttributes2 setFinancialInstrumentType(List<com.tools20022.repository.msg.FinancialInstrument28> financialInstrumentType) {
+		this.financialInstrumentType = Objects.requireNonNull(financialInstrumentType);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmAttrbts")
 	public List<CommonFinancialInstrumentAttributes2> getFinancialInstrumentAttributes() {
-		return financialInstrumentAttributes;
+		return financialInstrumentAttributes == null ? financialInstrumentAttributes = new ArrayList<>() : financialInstrumentAttributes;
 	}
 
-	public void setFinancialInstrumentAttributes(List<com.tools20022.repository.msg.CommonFinancialInstrumentAttributes2> financialInstrumentAttributes) {
-		this.financialInstrumentAttributes = financialInstrumentAttributes;
+	public SecurityAttributes2 setFinancialInstrumentAttributes(List<com.tools20022.repository.msg.CommonFinancialInstrumentAttributes2> financialInstrumentAttributes) {
+		this.financialInstrumentAttributes = Objects.requireNonNull(financialInstrumentAttributes);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecurityAttributes2 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 }

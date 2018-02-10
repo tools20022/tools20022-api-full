@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -101,8 +103,28 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintParty2PresenceRule#forSettlementParties23
+ * ConstraintParty2PresenceRule.forSettlementParties23}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintParty3PresenceRule#forSettlementParties23
+ * ConstraintParty3PresenceRule.forSettlementParties23}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintParty4PresenceRule#forSettlementParties23
+ * ConstraintParty4PresenceRule.forSettlementParties23}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintParty5PresenceRule#forSettlementParties23
+ * ConstraintParty5PresenceRule.forSettlementParties23}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDepositoryGuideline#forSettlementParties23
+ * ConstraintDepositoryGuideline.forSettlementParties23}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -115,18 +137,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementParties23", propOrder = {"depository", "party1", "party2", "party3", "party4", "party5"})
 public class SettlementParties23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dpstry")
 	protected PartyIdentification55 depository;
 	/**
-	 * First party in the settlement chain. In a plain vanilla settlement, it is
-	 * the Central Securities Depository where the counterparty requests to
-	 * receive the financial instrument or from where the counterparty delivers
-	 * the financial instruments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,6 +167,9 @@ public class SettlementParties23 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Dpstry"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a::PSET</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -162,9 +185,10 @@ public class SettlementParties23 {
 	public static final MMMessageAttribute mmDepository = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SettlementParties23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties23.mmObject();
 			isDerived = false;
 			xmlTag = "Dpstry";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::PSET"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Depository";
 			definition = "First party in the settlement chain. In a plain vanilla settlement, it is the Central Securities Depository where the counterparty requests to receive the financial instrument or from where the counterparty delivers the financial instruments.";
@@ -173,10 +197,11 @@ public class SettlementParties23 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification55.mmObject();
 		}
 	};
+	@XmlElement(name = "Pty1")
 	protected PartyIdentificationAndAccount34 party1;
 	/**
-	 * Party that, in a settlement chain interacts with the depository.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,6 +222,9 @@ public class SettlementParties23 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Pty1"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a::REAG or DEAG</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -211,9 +239,10 @@ public class SettlementParties23 {
 	public static final MMMessageAttribute mmParty1 = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SettlementParties23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties23.mmObject();
 			isDerived = false;
 			xmlTag = "Pty1";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::REAG or DEAG"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party1";
 			definition = "Party that, in a settlement chain interacts with the depository.";
@@ -222,10 +251,11 @@ public class SettlementParties23 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount34.mmObject();
 		}
 	};
+	@XmlElement(name = "Pty2")
 	protected PartyIdentificationAndAccount34 party2;
 	/**
-	 * Party that, in a settlement chain interacts with the party 1.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -246,6 +276,11 @@ public class SettlementParties23 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Pty2"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a::REI2 or DEI2, ISO15022Synonym:
+	 * :95a::REI1 or DEI1, ISO15022Synonym: :95a::RECU or DECU, ISO15022Synonym:
+	 * :95a::BUYR or SELL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -260,9 +295,11 @@ public class SettlementParties23 {
 	public static final MMMessageAttribute mmParty2 = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SettlementParties23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties23.mmObject();
 			isDerived = false;
 			xmlTag = "Pty2";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::REI2 or DEI2"), new ISO15022Synonym(this, ":95a::REI1 or DEI1"), new ISO15022Synonym(this, ":95a::RECU or DECU"), new ISO15022Synonym(this,
+					":95a::BUYR or SELL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party2";
 			definition = "Party that, in a settlement chain interacts with the party 1.";
@@ -271,10 +308,11 @@ public class SettlementParties23 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount34.mmObject();
 		}
 	};
+	@XmlElement(name = "Pty3")
 	protected PartyIdentificationAndAccount34 party3;
 	/**
-	 * Party that, in a settlement chain interacts with the party 2.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -295,6 +333,10 @@ public class SettlementParties23 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Pty3"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a::REI1 or DEI1, ISO15022Synonym:
+	 * :95a::RECU or DECU, ISO15022Synonym: :95a::BUYR or SELL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -309,9 +351,10 @@ public class SettlementParties23 {
 	public static final MMMessageAttribute mmParty3 = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SettlementParties23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties23.mmObject();
 			isDerived = false;
 			xmlTag = "Pty3";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::REI1 or DEI1"), new ISO15022Synonym(this, ":95a::RECU or DECU"), new ISO15022Synonym(this, ":95a::BUYR or SELL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party3";
 			definition = "Party that, in a settlement chain interacts with the party 2.";
@@ -320,10 +363,11 @@ public class SettlementParties23 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount34.mmObject();
 		}
 	};
+	@XmlElement(name = "Pty4")
 	protected PartyIdentificationAndAccount34 party4;
 	/**
-	 * Party that, in a settlement chain interacts with the party 3.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -344,6 +388,10 @@ public class SettlementParties23 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Pty4"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a::RECU or DECU, ISO15022Synonym:
+	 * :95a::BUYR or SELL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -358,9 +406,10 @@ public class SettlementParties23 {
 	public static final MMMessageAttribute mmParty4 = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SettlementParties23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties23.mmObject();
 			isDerived = false;
 			xmlTag = "Pty4";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::RECU or DECU"), new ISO15022Synonym(this, ":95a::BUYR or SELL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party4";
 			definition = "Party that, in a settlement chain interacts with the party 3.";
@@ -369,10 +418,11 @@ public class SettlementParties23 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount34.mmObject();
 		}
 	};
+	@XmlElement(name = "Pty5")
 	protected PartyIdentificationAndAccount34 party5;
 	/**
-	 * Party that, in a settlement chain interacts with the party 4.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -393,6 +443,9 @@ public class SettlementParties23 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Pty5"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a::BUYR or SELL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -407,9 +460,10 @@ public class SettlementParties23 {
 	public static final MMMessageAttribute mmParty5 = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SettlementParties23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties23.mmObject();
 			isDerived = false;
 			xmlTag = "Pty5";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::BUYR or SELL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party5";
 			definition = "Party that, in a settlement chain interacts with the party 4.";
@@ -422,14 +476,18 @@ public class SettlementParties23 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementParties23.mmDepository, SettlementParties23.mmParty1, SettlementParties23.mmParty2, SettlementParties23.mmParty3, SettlementParties23.mmParty4,
-						SettlementParties23.mmParty5);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementParties23.mmDepository, com.tools20022.repository.msg.SettlementParties23.mmParty1,
+						com.tools20022.repository.msg.SettlementParties23.mmParty2, com.tools20022.repository.msg.SettlementParties23.mmParty3, com.tools20022.repository.msg.SettlementParties23.mmParty4,
+						com.tools20022.repository.msg.SettlementParties23.mmParty5);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV01.mmDeliveringSettlementParties, SecuritiesTradeConfirmationStatusAdviceV01.mmReceivingSettlementParties,
 						SecuritiesTradeConfirmationV01.mmDeliveringSettlementParties, SecuritiesTradeConfirmationV01.mmReceivingSettlementParties, SecuritiesTradeConfirmationV02.mmDeliveringSettlementParties,
 						SecuritiesTradeConfirmationV02.mmReceivingSettlementParties, SecuritiesTradeConfirmationV03.mmDeliveringSettlementParties, SecuritiesTradeConfirmationV03.mmReceivingSettlementParties,
 						SecuritiesTradeConfirmationStatusAdviceV02.mmDeliveringSettlementParties, SecuritiesTradeConfirmationStatusAdviceV02.mmReceivingSettlementParties);
 				trace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintParty2PresenceRule.forSettlementParties23, com.tools20022.repository.constraints.ConstraintParty3PresenceRule.forSettlementParties23,
+						com.tools20022.repository.constraints.ConstraintParty4PresenceRule.forSettlementParties23, com.tools20022.repository.constraints.ConstraintParty5PresenceRule.forSettlementParties23,
+						com.tools20022.repository.constraints.ConstraintDepositoryGuideline.forSettlementParties23);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementParties23";
 				definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
@@ -438,57 +496,57 @@ public class SettlementParties23 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dpstry")
-	public PartyIdentification55 getDepository() {
-		return depository;
+	public Optional<PartyIdentification55> getDepository() {
+		return depository == null ? Optional.empty() : Optional.of(depository);
 	}
 
-	public void setDepository(com.tools20022.repository.msg.PartyIdentification55 depository) {
+	public SettlementParties23 setDepository(com.tools20022.repository.msg.PartyIdentification55 depository) {
 		this.depository = depository;
+		return this;
 	}
 
-	@XmlElement(name = "Pty1")
-	public PartyIdentificationAndAccount34 getParty1() {
-		return party1;
+	public Optional<PartyIdentificationAndAccount34> getParty1() {
+		return party1 == null ? Optional.empty() : Optional.of(party1);
 	}
 
-	public void setParty1(com.tools20022.repository.msg.PartyIdentificationAndAccount34 party1) {
+	public SettlementParties23 setParty1(com.tools20022.repository.msg.PartyIdentificationAndAccount34 party1) {
 		this.party1 = party1;
+		return this;
 	}
 
-	@XmlElement(name = "Pty2")
-	public PartyIdentificationAndAccount34 getParty2() {
-		return party2;
+	public Optional<PartyIdentificationAndAccount34> getParty2() {
+		return party2 == null ? Optional.empty() : Optional.of(party2);
 	}
 
-	public void setParty2(com.tools20022.repository.msg.PartyIdentificationAndAccount34 party2) {
+	public SettlementParties23 setParty2(com.tools20022.repository.msg.PartyIdentificationAndAccount34 party2) {
 		this.party2 = party2;
+		return this;
 	}
 
-	@XmlElement(name = "Pty3")
-	public PartyIdentificationAndAccount34 getParty3() {
-		return party3;
+	public Optional<PartyIdentificationAndAccount34> getParty3() {
+		return party3 == null ? Optional.empty() : Optional.of(party3);
 	}
 
-	public void setParty3(com.tools20022.repository.msg.PartyIdentificationAndAccount34 party3) {
+	public SettlementParties23 setParty3(com.tools20022.repository.msg.PartyIdentificationAndAccount34 party3) {
 		this.party3 = party3;
+		return this;
 	}
 
-	@XmlElement(name = "Pty4")
-	public PartyIdentificationAndAccount34 getParty4() {
-		return party4;
+	public Optional<PartyIdentificationAndAccount34> getParty4() {
+		return party4 == null ? Optional.empty() : Optional.of(party4);
 	}
 
-	public void setParty4(com.tools20022.repository.msg.PartyIdentificationAndAccount34 party4) {
+	public SettlementParties23 setParty4(com.tools20022.repository.msg.PartyIdentificationAndAccount34 party4) {
 		this.party4 = party4;
+		return this;
 	}
 
-	@XmlElement(name = "Pty5")
-	public PartyIdentificationAndAccount34 getParty5() {
-		return party5;
+	public Optional<PartyIdentificationAndAccount34> getParty5() {
+		return party5 == null ? Optional.empty() : Optional.of(party5);
 	}
 
-	public void setParty5(com.tools20022.repository.msg.PartyIdentificationAndAccount34 party5) {
+	public SettlementParties23 setParty5(com.tools20022.repository.msg.PartyIdentificationAndAccount34 party5) {
 		this.party5 = party5;
+		return this;
 	}
 }

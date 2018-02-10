@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IncludedAccount1", propOrder = {"securitiesAccountIdentification", "includedIndicator"})
 public class IncludedAccount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesAcctId", required = true)
 	protected Max35Text securitiesAccountIdentification;
 	/**
-	 * Identification of the securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class IncludedAccount1 {
 	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> IncludedAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IncludedAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,14 +124,11 @@ public class IncludedAccount1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "InclInd", required = true)
 	protected YesNoIndicator includedIndicator;
 	/**
-	 * Indicates whether the account is impacted or not by the standing
-	 * instruction.
 	 * 
-	 * Yes = The account is impacted by the standing instruction. No = The
-	 * account is not impacted by the standing instruction.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +158,7 @@ public class IncludedAccount1 {
 	 */
 	public static final MMMessageAttribute mmIncludedIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IncludedAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IncludedAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "InclInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,9 +173,9 @@ public class IncludedAccount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IncludedAccount1.mmSecuritiesAccountIdentification, IncludedAccount1.mmIncludedIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IncludedAccount1.mmSecuritiesAccountIdentification, com.tools20022.repository.msg.IncludedAccount1.mmIncludedIndicator);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IncludedAccount1";
 				definition = "Provides information about the account that is impacted or not by the standing instruction.";
@@ -185,21 +184,21 @@ public class IncludedAccount1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesAcctId", required = true)
 	public Max35Text getSecuritiesAccountIdentification() {
 		return securitiesAccountIdentification;
 	}
 
-	public void setSecuritiesAccountIdentification(Max35Text securitiesAccountIdentification) {
-		this.securitiesAccountIdentification = securitiesAccountIdentification;
+	public IncludedAccount1 setSecuritiesAccountIdentification(Max35Text securitiesAccountIdentification) {
+		this.securitiesAccountIdentification = Objects.requireNonNull(securitiesAccountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "InclInd", required = true)
 	public YesNoIndicator getIncludedIndicator() {
 		return includedIndicator;
 	}
 
-	public void setIncludedIndicator(YesNoIndicator includedIndicator) {
-		this.includedIndicator = includedIndicator;
+	public IncludedAccount1 setIncludedIndicator(YesNoIndicator includedIndicator) {
+		this.includedIndicator = Objects.requireNonNull(includedIndicator);
+		return this;
 	}
 }

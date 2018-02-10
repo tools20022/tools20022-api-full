@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.ProductQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies a unit of measure with a code or free text."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnitOfMeasure3Choice", propOrder = {"unitOfMeasureCode", "otherUnitOfMeasure"})
 public class UnitOfMeasure3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UnitOfMeasrCd", required = true)
 	protected UnitOfMeasure4Code unitOfMeasureCode;
 	/**
-	 * Quantity of a product on a line specified by a number. For example, 100
-	 * (kgs), 50 (pieces).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +112,7 @@ public class UnitOfMeasure3Choice {
 	public static final MMMessageAttribute mmUnitOfMeasureCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
-			componentContext_lazy = () -> UnitOfMeasure3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UnitOfMeasure3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UnitOfMeasrCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +123,11 @@ public class UnitOfMeasure3Choice {
 			simpleType_lazy = () -> UnitOfMeasure4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrUnitOfMeasr", required = true)
 	protected Max35Text otherUnitOfMeasure;
 	/**
-	 * Identifies the unit of measure not present in the code list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +161,7 @@ public class UnitOfMeasure3Choice {
 	public static final MMMessageAttribute mmOtherUnitOfMeasure = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
-			componentContext_lazy = () -> UnitOfMeasure3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UnitOfMeasure3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrUnitOfMeasr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,9 +176,9 @@ public class UnitOfMeasure3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnitOfMeasure3Choice.mmUnitOfMeasureCode, UnitOfMeasure3Choice.mmOtherUnitOfMeasure);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnitOfMeasure3Choice.mmUnitOfMeasureCode, com.tools20022.repository.choice.UnitOfMeasure3Choice.mmOtherUnitOfMeasure);
 				trace_lazy = () -> ProductQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnitOfMeasure3Choice";
 				definition = "Specifies a unit of measure with a code or free text.";
@@ -185,21 +187,21 @@ public class UnitOfMeasure3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UnitOfMeasrCd", required = true)
 	public UnitOfMeasure4Code getUnitOfMeasureCode() {
 		return unitOfMeasureCode;
 	}
 
-	public void setUnitOfMeasureCode(UnitOfMeasure4Code unitOfMeasureCode) {
-		this.unitOfMeasureCode = unitOfMeasureCode;
+	public UnitOfMeasure3Choice setUnitOfMeasureCode(UnitOfMeasure4Code unitOfMeasureCode) {
+		this.unitOfMeasureCode = Objects.requireNonNull(unitOfMeasureCode);
+		return this;
 	}
 
-	@XmlElement(name = "OthrUnitOfMeasr", required = true)
 	public Max35Text getOtherUnitOfMeasure() {
 		return otherUnitOfMeasure;
 	}
 
-	public void setOtherUnitOfMeasure(Max35Text otherUnitOfMeasure) {
-		this.otherUnitOfMeasure = otherUnitOfMeasure;
+	public UnitOfMeasure3Choice setOtherUnitOfMeasure(Max35Text otherUnitOfMeasure) {
+		this.otherUnitOfMeasure = Objects.requireNonNull(otherUnitOfMeasure);
+		return this;
 	}
 }

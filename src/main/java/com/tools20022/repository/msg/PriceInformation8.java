@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -29,6 +30,8 @@ import com.tools20022.repository.entity.SourceOfPrice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintValueRule#forPriceInformation8
+ * ConstraintValueRule.forPriceInformation8}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Amount of money for which goods or services are offered, sold, or bought."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PriceInformation8", propOrder = {"type", "valueType", "value", "sourceOfPrice", "quotationDate"})
 public class PriceInformation8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected TypeOfPrice8Choice type;
 	/**
-	 * Specifies the type of price and information about the price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -103,6 +115,9 @@ public class PriceInformation8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Tp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::4!c</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -117,9 +132,10 @@ public class PriceInformation8 {
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
-			componentContext_lazy = () -> PriceInformation8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation8.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of price and information about the price.";
@@ -129,10 +145,11 @@ public class PriceInformation8 {
 			type_lazy = () -> TypeOfPrice8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ValTp", required = true)
 	protected YieldedOrValueType1Choice valueType;
 	/**
-	 * Type of value in which the price is expressed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -152,6 +169,9 @@ public class PriceInformation8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ValTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::4!c//4!c</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -165,9 +185,10 @@ public class PriceInformation8 {
 	public static final MMMessageAssociationEnd mmValueType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmTypeOfRate;
-			componentContext_lazy = () -> PriceInformation8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation8.mmObject();
 			isDerived = false;
 			xmlTag = "ValTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::4!c//4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueType";
 			definition = "Type of value in which the price is expressed.";
@@ -177,10 +198,11 @@ public class PriceInformation8 {
 			type_lazy = () -> YieldedOrValueType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Val", required = true)
 	protected PriceRateOrAmountOrUnknown1Choice value;
 	/**
-	 * Value of the price, eg, as a currency and value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -200,6 +222,9 @@ public class PriceInformation8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Val"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -213,9 +238,10 @@ public class PriceInformation8 {
 	public static final MMMessageAssociationEnd mmValue = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
-			componentContext_lazy = () -> PriceInformation8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation8.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Value of the price, eg, as a currency and value.";
@@ -225,10 +251,11 @@ public class PriceInformation8 {
 			type_lazy = () -> PriceRateOrAmountOrUnknown1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SrcOfPric")
 	protected MarketIdentification10 sourceOfPrice;
 	/**
-	 * Place from which the price was obtained.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -247,6 +274,9 @@ public class PriceInformation8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SrcOfPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94B::PRIC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -260,9 +290,10 @@ public class PriceInformation8 {
 	public static final MMMessageAssociationEnd mmSourceOfPrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SourceOfPrice.mmMarketIdentification;
-			componentContext_lazy = () -> PriceInformation8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation8.mmObject();
 			isDerived = false;
 			xmlTag = "SrcOfPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94B::PRIC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SourceOfPrice";
 			definition = "Place from which the price was obtained.";
@@ -272,11 +303,11 @@ public class PriceInformation8 {
 			type_lazy = () -> com.tools20022.repository.msg.MarketIdentification10.mmObject();
 		}
 	};
+	@XmlElement(name = "QtnDt")
 	protected DateAndDateTimeChoice quotationDate;
 	/**
-	 * Date on which the price is obtained. With an investment fund, this is as
-	 * stated in the prospectus.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -296,6 +327,9 @@ public class PriceInformation8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtnDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::PRIC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -311,9 +345,10 @@ public class PriceInformation8 {
 	public static final MMMessageAssociationEnd mmQuotationDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmQuotationDate;
-			componentContext_lazy = () -> PriceInformation8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation8.mmObject();
 			isDerived = false;
 			xmlTag = "QtnDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::PRIC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationDate";
 			definition = "Date on which the price is obtained. With an investment fund, this is as stated in the prospectus.";
@@ -327,9 +362,11 @@ public class PriceInformation8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PriceInformation8.mmType, PriceInformation8.mmValueType, PriceInformation8.mmValue, PriceInformation8.mmSourceOfPrice, PriceInformation8.mmQuotationDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceInformation8.mmType, com.tools20022.repository.msg.PriceInformation8.mmValueType, com.tools20022.repository.msg.PriceInformation8.mmValue,
+						com.tools20022.repository.msg.PriceInformation8.mmSourceOfPrice, com.tools20022.repository.msg.PriceInformation8.mmQuotationDate);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintValueRule.forPriceInformation8);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceInformation8";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
@@ -338,48 +375,48 @@ public class PriceInformation8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public TypeOfPrice8Choice getType() {
 		return type;
 	}
 
-	public void setType(TypeOfPrice8Choice type) {
-		this.type = type;
+	public PriceInformation8 setType(TypeOfPrice8Choice type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "ValTp", required = true)
 	public YieldedOrValueType1Choice getValueType() {
 		return valueType;
 	}
 
-	public void setValueType(YieldedOrValueType1Choice valueType) {
-		this.valueType = valueType;
+	public PriceInformation8 setValueType(YieldedOrValueType1Choice valueType) {
+		this.valueType = Objects.requireNonNull(valueType);
+		return this;
 	}
 
-	@XmlElement(name = "Val", required = true)
 	public PriceRateOrAmountOrUnknown1Choice getValue() {
 		return value;
 	}
 
-	public void setValue(PriceRateOrAmountOrUnknown1Choice value) {
-		this.value = value;
+	public PriceInformation8 setValue(PriceRateOrAmountOrUnknown1Choice value) {
+		this.value = Objects.requireNonNull(value);
+		return this;
 	}
 
-	@XmlElement(name = "SrcOfPric")
-	public MarketIdentification10 getSourceOfPrice() {
-		return sourceOfPrice;
+	public Optional<MarketIdentification10> getSourceOfPrice() {
+		return sourceOfPrice == null ? Optional.empty() : Optional.of(sourceOfPrice);
 	}
 
-	public void setSourceOfPrice(com.tools20022.repository.msg.MarketIdentification10 sourceOfPrice) {
+	public PriceInformation8 setSourceOfPrice(com.tools20022.repository.msg.MarketIdentification10 sourceOfPrice) {
 		this.sourceOfPrice = sourceOfPrice;
+		return this;
 	}
 
-	@XmlElement(name = "QtnDt")
-	public DateAndDateTimeChoice getQuotationDate() {
-		return quotationDate;
+	public Optional<DateAndDateTimeChoice> getQuotationDate() {
+		return quotationDate == null ? Optional.empty() : Optional.of(quotationDate);
 	}
 
-	public void setQuotationDate(DateAndDateTimeChoice quotationDate) {
+	public PriceInformation8 setQuotationDate(DateAndDateTimeChoice quotationDate) {
 		this.quotationDate = quotationDate;
+		return this;
 	}
 }

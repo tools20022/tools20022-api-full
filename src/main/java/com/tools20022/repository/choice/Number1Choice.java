@@ -25,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of format for the number."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Number1Choice", propOrder = {"numberIdentification", "proprietary"})
 public class Number1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NbId", required = true)
 	protected Max3NumericText numberIdentification;
 	/**
-	 * Number of maximum 3 numeric text.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,7 +99,7 @@ public class Number1Choice {
 	 */
 	public static final MMMessageAttribute mmNumberIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Number1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Number1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NbId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,10 +110,11 @@ public class Number1Choice {
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification7 proprietary;
 	/**
-	 * Proprietary number format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +142,7 @@ public class Number1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Number1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Number1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,8 +157,8 @@ public class Number1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Number1Choice.mmNumberIdentification, Number1Choice.mmProprietary);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number1Choice.mmNumberIdentification, com.tools20022.repository.choice.Number1Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Number1Choice";
 				definition = "Choice of format for the number.";
@@ -164,21 +167,21 @@ public class Number1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NbId", required = true)
 	public Max3NumericText getNumberIdentification() {
 		return numberIdentification;
 	}
 
-	public void setNumberIdentification(Max3NumericText numberIdentification) {
-		this.numberIdentification = numberIdentification;
+	public Number1Choice setNumberIdentification(Max3NumericText numberIdentification) {
+		this.numberIdentification = Objects.requireNonNull(numberIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification7 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification7 proprietary) {
-		this.proprietary = proprietary;
+	public Number1Choice setProprietary(GenericIdentification7 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

@@ -30,9 +30,8 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.References20;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -60,22 +59,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestVersion
- * SecuritiesSettlementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOLatestversion
- * InvestmentFundsISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "RvslOfTrfInConf"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -100,9 +83,33 @@ import javax.xml.bind.annotation.*;
  * ReversalOfTransferInConfirmationV07.mmCopyDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOLatestversion
+ * InvestmentFundsISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "RvslOfTrfInConf"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestVersion
+ * SecuritiesSettlementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.008.001.07}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveTradeDateRule#forReversalOfTransferInConfirmationV07
+ * ConstraintEffectiveTradeDateRule.forReversalOfTransferInConfirmationV07}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -119,16 +126,16 @@ import javax.xml.bind.annotation.*;
  * ReversalOfTransferInConfirmationV06}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReversalOfTransferInConfirmationV07", propOrder = {"messageIdentification", "references", "function", "reversal", "marketPracticeVersion", "copyDetails"})
 public class ReversalOfTransferInConfirmationV07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Reference that uniquely identifies a message from a business application
-	 * standpoint.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,12 +183,11 @@ public class ReversalOfTransferInConfirmationV07 {
 			}
 		}
 	};
+	@XmlElement(name = "Refs")
 	protected List<References20> references;
 	/**
-	 * Reference to the transaction identifier issued by the counterparty.
-	 * Building block may also be used to reference a previous transaction, or
-	 * tie a set of messages together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -227,13 +233,11 @@ public class ReversalOfTransferInConfirmationV07 {
 			}
 		}
 	};
+	@XmlElement(name = "Fctn")
 	protected TransferInFunction2Code function;
 	/**
-	 * Function of the transfer-in, that is, whether the message is used as a
-	 * reversal of a previously sent confirmation or as a reversal of a
-	 * previously sent advice. The absence of Function indicates the message is
-	 * a reversal of a previously sent confirmation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -275,10 +279,11 @@ public class ReversalOfTransferInConfirmationV07 {
 			}
 		}
 	};
+	@XmlElement(name = "Rvsl", required = true)
 	protected Reversal7Choice reversal;
 	/**
-	 * Choice between reversal by reference or by reversal details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -325,10 +330,11 @@ public class ReversalOfTransferInConfirmationV07 {
 			}
 		}
 	};
+	@XmlElement(name = "MktPrctcVrsn")
 	protected MarketPracticeVersion1 marketPracticeVersion;
 	/**
-	 * Identifies the market practice to which the message conforms.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -375,10 +381,11 @@ public class ReversalOfTransferInConfirmationV07 {
 			}
 		}
 	};
+	@XmlElement(name = "CpyDtls")
 	protected CopyInformation4 copyDetails;
 	/**
-	 * Information provided when the message is a copy of a previous message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -429,6 +436,7 @@ public class ReversalOfTransferInConfirmationV07 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveTradeDateRule.forReversalOfTransferInConfirmationV07);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReversalOfTransferInConfirmationV07";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the ReversalOfTransferInConfirmation message to the instructing party, for example, an investment manager or its authorised representative, to cancel a previously sent TransferInConfirmation message.\r\nUsage\r\nThe ReversalOfTransferInConfirmation message is used to reverse a previously sent TransferInConfirmation.\r\nThere are two ways to specify the reversal of the transfer in confirmation. Either:\r\n- the business references, for example, TransferReference, TransferConfirmationIdentification, of the transfer confirmation are quoted, or,\r\n- all the details of the transfer confirmation (this includes TransferReference and TransferConfirmationIdentification) are quoted but this is not recommended.\r\nThe message identification of the TransferInConfirmation message in which the transfer confirmation was conveyed may also be quoted in PreviousReference.\r\nThe message reference (MessageIdentification) of the TransferInInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.\r\n";
@@ -459,61 +467,61 @@ public class ReversalOfTransferInConfirmationV07 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public ReversalOfTransferInConfirmationV07 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Refs")
 	public List<References20> getReferences() {
-		return references;
+		return references == null ? references = new ArrayList<>() : references;
 	}
 
-	public void setReferences(List<References20> references) {
-		this.references = references;
+	public ReversalOfTransferInConfirmationV07 setReferences(List<References20> references) {
+		this.references = Objects.requireNonNull(references);
+		return this;
 	}
 
-	@XmlElement(name = "Fctn")
-	public TransferInFunction2Code getFunction() {
-		return function;
+	public Optional<TransferInFunction2Code> getFunction() {
+		return function == null ? Optional.empty() : Optional.of(function);
 	}
 
-	public void setFunction(TransferInFunction2Code function) {
+	public ReversalOfTransferInConfirmationV07 setFunction(TransferInFunction2Code function) {
 		this.function = function;
+		return this;
 	}
 
-	@XmlElement(name = "Rvsl", required = true)
 	public Reversal7Choice getReversal() {
 		return reversal;
 	}
 
-	public void setReversal(Reversal7Choice reversal) {
-		this.reversal = reversal;
+	public ReversalOfTransferInConfirmationV07 setReversal(Reversal7Choice reversal) {
+		this.reversal = Objects.requireNonNull(reversal);
+		return this;
 	}
 
-	@XmlElement(name = "MktPrctcVrsn")
-	public MarketPracticeVersion1 getMarketPracticeVersion() {
-		return marketPracticeVersion;
+	public Optional<MarketPracticeVersion1> getMarketPracticeVersion() {
+		return marketPracticeVersion == null ? Optional.empty() : Optional.of(marketPracticeVersion);
 	}
 
-	public void setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
+	public ReversalOfTransferInConfirmationV07 setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
 		this.marketPracticeVersion = marketPracticeVersion;
+		return this;
 	}
 
-	@XmlElement(name = "CpyDtls")
-	public CopyInformation4 getCopyDetails() {
-		return copyDetails;
+	public Optional<CopyInformation4> getCopyDetails() {
+		return copyDetails == null ? Optional.empty() : Optional.of(copyDetails);
 	}
 
-	public void setCopyDetails(CopyInformation4 copyDetails) {
+	public ReversalOfTransferInConfirmationV07 setCopyDetails(CopyInformation4 copyDetails) {
 		this.copyDetails = copyDetails;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.008.07.07")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.008.001.07")
 	static public class Document {
 		@XmlElement(name = "RvslOfTrfInConf", required = true)
 		public ReversalOfTransferInConfirmationV07 messageBody;

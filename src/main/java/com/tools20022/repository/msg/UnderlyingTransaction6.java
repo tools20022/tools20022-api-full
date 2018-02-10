@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV02;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +63,34 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupCancellationAndReasonRule#forUnderlyingTransaction6
+ * ConstraintGroupCancellationAndReasonRule.forUnderlyingTransaction6}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupCancellationAndNumberOfTransactionsRule#forUnderlyingTransaction6
+ * ConstraintGroupCancellationAndNumberOfTransactionsRule.
+ * forUnderlyingTransaction6}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupCancellationTrueAndPaymentInformationRule#forUnderlyingTransaction6
+ * ConstraintGroupCancellationTrueAndPaymentInformationRule.
+ * forUnderlyingTransaction6}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupCancellationFalseAndPaymentInformationRule#forUnderlyingTransaction6
+ * ConstraintGroupCancellationFalseAndPaymentInformationRule.
+ * forUnderlyingTransaction6}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupOrPaymentInformationCaseRule#forUnderlyingTransaction6
+ * ConstraintGroupOrPaymentInformationCaseRule.forUnderlyingTransaction6}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupOrTransactionCaseRule#forUnderlyingTransaction6
+ * ConstraintGroupOrTransactionCaseRule.forUnderlyingTransaction6}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,16 +110,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnderlyingTransaction6", propOrder = {"originalGroupInformationAndCancellation", "originalPaymentInformationAndCancellation"})
 public class UnderlyingTransaction6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgnlGrpInfAndCxl")
 	protected OriginalGroupHeader4 originalGroupInformationAndCancellation;
 	/**
-	 * Provides information on the original message, to which the cancellation
-	 * refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -128,7 +153,7 @@ public class UnderlyingTransaction6 {
 	public static final MMMessageAssociationEnd mmOriginalGroupInformationAndCancellation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
-			componentContext_lazy = () -> UnderlyingTransaction6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction6.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlGrpInfAndCxl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,11 +165,11 @@ public class UnderlyingTransaction6 {
 			type_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader4.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlPmtInfAndCxl")
 	protected List<com.tools20022.repository.msg.OriginalPaymentInstruction4> originalPaymentInformationAndCancellation;
 	/**
-	 * Provides information on the original (group of) transactions, to which
-	 * the cancellation request refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -179,7 +204,7 @@ public class UnderlyingTransaction6 {
 	public static final MMMessageAssociationEnd mmOriginalPaymentInformationAndCancellation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
-			componentContext_lazy = () -> UnderlyingTransaction6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction6.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPmtInfAndCxl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,10 +219,16 @@ public class UnderlyingTransaction6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnderlyingTransaction6.mmOriginalGroupInformationAndCancellation, UnderlyingTransaction6.mmOriginalPaymentInformationAndCancellation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTransaction6.mmOriginalGroupInformationAndCancellation,
+						com.tools20022.repository.msg.UnderlyingTransaction6.mmOriginalPaymentInformationAndCancellation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentCancellationRequestV02.mmUnderlying);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupCancellationAndReasonRule.forUnderlyingTransaction6,
+						com.tools20022.repository.constraints.ConstraintGroupCancellationAndNumberOfTransactionsRule.forUnderlyingTransaction6,
+						com.tools20022.repository.constraints.ConstraintGroupCancellationTrueAndPaymentInformationRule.forUnderlyingTransaction6,
+						com.tools20022.repository.constraints.ConstraintGroupCancellationFalseAndPaymentInformationRule.forUnderlyingTransaction6,
+						com.tools20022.repository.constraints.ConstraintGroupOrPaymentInformationCaseRule.forUnderlyingTransaction6, com.tools20022.repository.constraints.ConstraintGroupOrTransactionCaseRule.forUnderlyingTransaction6);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingTransaction6";
 				definition = "Identifies the underlying (group of) transaction(s) to which the investigation applies.";
@@ -207,21 +238,21 @@ public class UnderlyingTransaction6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgnlGrpInfAndCxl")
-	public OriginalGroupHeader4 getOriginalGroupInformationAndCancellation() {
-		return originalGroupInformationAndCancellation;
+	public Optional<OriginalGroupHeader4> getOriginalGroupInformationAndCancellation() {
+		return originalGroupInformationAndCancellation == null ? Optional.empty() : Optional.of(originalGroupInformationAndCancellation);
 	}
 
-	public void setOriginalGroupInformationAndCancellation(com.tools20022.repository.msg.OriginalGroupHeader4 originalGroupInformationAndCancellation) {
+	public UnderlyingTransaction6 setOriginalGroupInformationAndCancellation(com.tools20022.repository.msg.OriginalGroupHeader4 originalGroupInformationAndCancellation) {
 		this.originalGroupInformationAndCancellation = originalGroupInformationAndCancellation;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlPmtInfAndCxl")
 	public List<OriginalPaymentInstruction4> getOriginalPaymentInformationAndCancellation() {
-		return originalPaymentInformationAndCancellation;
+		return originalPaymentInformationAndCancellation == null ? originalPaymentInformationAndCancellation = new ArrayList<>() : originalPaymentInformationAndCancellation;
 	}
 
-	public void setOriginalPaymentInformationAndCancellation(List<com.tools20022.repository.msg.OriginalPaymentInstruction4> originalPaymentInformationAndCancellation) {
-		this.originalPaymentInformationAndCancellation = originalPaymentInformationAndCancellation;
+	public UnderlyingTransaction6 setOriginalPaymentInformationAndCancellation(List<com.tools20022.repository.msg.OriginalPaymentInstruction4> originalPaymentInformationAndCancellation) {
+		this.originalPaymentInformationAndCancellation = Objects.requireNonNull(originalPaymentInformationAndCancellation);
+		return this;
 	}
 }

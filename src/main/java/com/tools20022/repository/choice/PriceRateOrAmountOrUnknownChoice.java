@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of formats for the price."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PriceRateOrAmountOrUnknownChoice", propOrder = {"rate", "amount", "unknownIndicator"})
 public class PriceRateOrAmountOrUnknownChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rate", required = true)
 	protected PercentageRate rate;
 	/**
-	 * Price expressed as a rate, ie, percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +114,7 @@ public class PriceRateOrAmountOrUnknownChoice {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
-			componentContext_lazy = () -> PriceRateOrAmountOrUnknownChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PriceRateOrAmountOrUnknownChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +125,11 @@ public class PriceRateOrAmountOrUnknownChoice {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveOrHistoricCurrencyAnd13DecimalAmount amount;
 	/**
-	 * Price expressed as a currency and value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +163,7 @@ public class PriceRateOrAmountOrUnknownChoice {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
-			componentContext_lazy = () -> PriceRateOrAmountOrUnknownChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PriceRateOrAmountOrUnknownChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +174,11 @@ public class PriceRateOrAmountOrUnknownChoice {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "UknwnInd", required = true)
 	protected YesNoIndicator unknownIndicator;
 	/**
-	 * Indicates whether the market price is unknown.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -202,7 +206,7 @@ public class PriceRateOrAmountOrUnknownChoice {
 	 */
 	public static final MMMessageAttribute mmUnknownIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PriceRateOrAmountOrUnknownChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PriceRateOrAmountOrUnknownChoice.mmObject();
 			isDerived = false;
 			xmlTag = "UknwnInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,9 +221,10 @@ public class PriceRateOrAmountOrUnknownChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PriceRateOrAmountOrUnknownChoice.mmRate, PriceRateOrAmountOrUnknownChoice.mmAmount, PriceRateOrAmountOrUnknownChoice.mmUnknownIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceRateOrAmountOrUnknownChoice.mmRate, com.tools20022.repository.choice.PriceRateOrAmountOrUnknownChoice.mmAmount,
+						com.tools20022.repository.choice.PriceRateOrAmountOrUnknownChoice.mmUnknownIndicator);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceRateOrAmountOrUnknownChoice";
 				definition = "Choice of formats for the price.";
@@ -228,30 +233,30 @@ public class PriceRateOrAmountOrUnknownChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
 
-	public void setRate(PercentageRate rate) {
-		this.rate = rate;
+	public PriceRateOrAmountOrUnknownChoice setRate(PercentageRate rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveOrHistoricCurrencyAnd13DecimalAmount amount) {
-		this.amount = amount;
+	public PriceRateOrAmountOrUnknownChoice setAmount(ActiveOrHistoricCurrencyAnd13DecimalAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "UknwnInd", required = true)
 	public YesNoIndicator getUnknownIndicator() {
 		return unknownIndicator;
 	}
 
-	public void setUnknownIndicator(YesNoIndicator unknownIndicator) {
-		this.unknownIndicator = unknownIndicator;
+	public PriceRateOrAmountOrUnknownChoice setUnknownIndicator(YesNoIndicator unknownIndicator) {
+		this.unknownIndicator = Objects.requireNonNull(unknownIndicator);
+		return this;
 	}
 }

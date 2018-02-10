@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DataSetCategoryCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Category of data set to transfer.
@@ -32,98 +37,98 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmSoftwareModule
- * DataSetCategoryCode.mmSoftwareModule}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#SoftwareModule
+ * DataSetCategoryCode.SoftwareModule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmVendorParameters
- * DataSetCategoryCode.mmVendorParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#VendorParameters
+ * DataSetCategoryCode.VendorParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmAcquirerParameters
- * DataSetCategoryCode.mmAcquirerParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#AcquirerParameters
+ * DataSetCategoryCode.AcquirerParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmApplicationParameters
- * DataSetCategoryCode.mmApplicationParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#ApplicationParameters
+ * DataSetCategoryCode.ApplicationParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmMerchantParameters
- * DataSetCategoryCode.mmMerchantParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#MerchantParameters
+ * DataSetCategoryCode.MerchantParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmBatchCapture
- * DataSetCategoryCode.mmBatchCapture}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#BatchCapture
+ * DataSetCategoryCode.BatchCapture}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmCaptureResponse
- * DataSetCategoryCode.mmCaptureResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#CaptureResponse
+ * DataSetCategoryCode.CaptureResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmStatusReport
- * DataSetCategoryCode.mmStatusReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#StatusReport
+ * DataSetCategoryCode.StatusReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmDelegationData
- * DataSetCategoryCode.mmDelegationData}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#DelegationData
+ * DataSetCategoryCode.DelegationData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmManagementPlan
- * DataSetCategoryCode.mmManagementPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#ManagementPlan
+ * DataSetCategoryCode.ManagementPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmSecurityParameters
- * DataSetCategoryCode.mmSecurityParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#SecurityParameters
+ * DataSetCategoryCode.SecurityParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmTerminalParameters
- * DataSetCategoryCode.mmTerminalParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#TerminalParameters
+ * DataSetCategoryCode.TerminalParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmParameters
- * DataSetCategoryCode.mmParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#Parameters
+ * DataSetCategoryCode.Parameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmMasterTerminalManager
- * DataSetCategoryCode.mmMasterTerminalManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#MasterTerminalManager
+ * DataSetCategoryCode.MasterTerminalManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmMonitoring
- * DataSetCategoryCode.mmMonitoring}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#Monitoring
+ * DataSetCategoryCode.Monitoring}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmAcquirerProtocolParameters
- * DataSetCategoryCode.mmAcquirerProtocolParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#AcquirerProtocolParameters
+ * DataSetCategoryCode.AcquirerProtocolParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmApplicationParametersSubsetCreation
- * DataSetCategoryCode.mmApplicationParametersSubsetCreation}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#ApplicationParametersSubsetCreation
+ * DataSetCategoryCode.ApplicationParametersSubsetCreation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmKeyDownload
- * DataSetCategoryCode.mmKeyDownload}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#KeyDownload
+ * DataSetCategoryCode.KeyDownload}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmKeyManagement
- * DataSetCategoryCode.mmKeyManagement}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#KeyManagement
+ * DataSetCategoryCode.KeyManagement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmReporting
- * DataSetCategoryCode.mmReporting}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#Reporting
+ * DataSetCategoryCode.Reporting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmTMSProtocolParameters
- * DataSetCategoryCode.mmTMSProtocolParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#TMSProtocolParameters
+ * DataSetCategoryCode.TMSProtocolParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmATMProtocol
- * DataSetCategoryCode.mmATMProtocol}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#ATMProtocol
+ * DataSetCategoryCode.ATMProtocol}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmATMConfiguration
- * DataSetCategoryCode.mmATMConfiguration}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#ATMConfiguration
+ * DataSetCategoryCode.ATMConfiguration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmCardApplication
- * DataSetCategoryCode.mmCardApplication}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#CardApplication
+ * DataSetCategoryCode.CardApplication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmCardConfiguration
- * DataSetCategoryCode.mmCardConfiguration}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#CardConfiguration
+ * DataSetCategoryCode.CardConfiguration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmOfflineExchangeRate
- * DataSetCategoryCode.mmOfflineExchangeRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#OfflineExchangeRate
+ * DataSetCategoryCode.OfflineExchangeRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmPreDefinedAmount
- * DataSetCategoryCode.mmPreDefinedAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#PreDefinedAmount
+ * DataSetCategoryCode.PreDefinedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmLocationConfiguration
- * DataSetCategoryCode.mmLocationConfiguration}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#LocationConfiguration
+ * DataSetCategoryCode.LocationConfiguration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmMobileOperator
- * DataSetCategoryCode.mmMobileOperator}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#MobileOperator
+ * DataSetCategoryCode.MobileOperator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmReconciliationError
- * DataSetCategoryCode.mmReconciliationError}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#ReconciliationError
+ * DataSetCategoryCode.ReconciliationError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#mmCertificateParameters
- * DataSetCategoryCode.mmCertificateParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode#CertificateParameters
+ * DataSetCategoryCode.CertificateParameters}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -156,8 +161,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -174,7 +179,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Category of data set to transfer."</li>
  * </ul>
  */
-public class DataSetCategoryCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DataSetCategoryCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -198,12 +204,12 @@ public class DataSetCategoryCode {
 	 * definition} = "Software module."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSoftwareModule = new MMCode() {
+	public static final DataSetCategoryCode SoftwareModule = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SoftwareModule";
 			definition = "Software module.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "SWPK";
 		}
 	};
@@ -231,12 +237,12 @@ public class DataSetCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmVendorParameters = new MMCode() {
+	public static final DataSetCategoryCode VendorParameters = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VendorParameters";
 			definition = "Point of interaction parameters defined by the manufacturer for instance the PIN verification capabilities.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "VDPR";
 		}
 	};
@@ -264,12 +270,12 @@ public class DataSetCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcquirerParameters = new MMCode() {
+	public static final DataSetCategoryCode AcquirerParameters = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AcquirerParameters";
 			definition = "Acquirer specific configuration parameters for the point of interaction (POI) system.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "AQPR";
 		}
 	};
@@ -297,12 +303,12 @@ public class DataSetCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmApplicationParameters = new MMCode() {
+	public static final DataSetCategoryCode ApplicationParameters = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ApplicationParameters";
 			definition = "Payment application specific configuration parameters for the point of interaction (POI) system.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "APPR";
 		}
 	};
@@ -328,12 +334,12 @@ public class DataSetCategoryCode {
 	 * "Merchant configuration parameters for the point of interaction (POI)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMerchantParameters = new MMCode() {
+	public static final DataSetCategoryCode MerchantParameters = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MerchantParameters";
 			definition = "Merchant configuration parameters for the point of interaction (POI).";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "MRPR";
 		}
 	};
@@ -361,12 +367,12 @@ public class DataSetCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBatchCapture = new MMCode() {
+	public static final DataSetCategoryCode BatchCapture = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BatchCapture";
 			definition = "Batch upload of transaction data (data capture of a group of transactions).";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "TXCP";
 		}
 	};
@@ -392,12 +398,12 @@ public class DataSetCategoryCode {
 	 * "Batch download response for the batch capture of transactions."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCaptureResponse = new MMCode() {
+	public static final DataSetCategoryCode CaptureResponse = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CaptureResponse";
 			definition = "Batch download response for the batch capture of transactions.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "AKCP";
 		}
 	};
@@ -422,12 +428,12 @@ public class DataSetCategoryCode {
 	 * definition} = "Report of software configuration and parameter status."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStatusReport = new MMCode() {
+	public static final DataSetCategoryCode StatusReport = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StatusReport";
 			definition = "Report of software configuration and parameter status.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "STRP";
 		}
 	};
@@ -452,12 +458,12 @@ public class DataSetCategoryCode {
 	 * definition} = "Data needed to create a terminal management sub-domain."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDelegationData = new MMCode() {
+	public static final DataSetCategoryCode DelegationData = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DelegationData";
 			definition = "Data needed to create a terminal management sub-domain.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "DLGT";
 		}
 	};
@@ -483,12 +489,12 @@ public class DataSetCategoryCode {
 	 * "Configuration of management plan in the point of interaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmManagementPlan = new MMCode() {
+	public static final DataSetCategoryCode ManagementPlan = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ManagementPlan";
 			definition = "Configuration of management plan in the point of interaction.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "MGTP";
 		}
 	};
@@ -516,12 +522,12 @@ public class DataSetCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecurityParameters = new MMCode() {
+	public static final DataSetCategoryCode SecurityParameters = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecurityParameters";
 			definition = "Point of interaction parameters related to the security of software application and application protocol.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "SCPR";
 		}
 	};
@@ -549,12 +555,12 @@ public class DataSetCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTerminalParameters = new MMCode() {
+	public static final DataSetCategoryCode TerminalParameters = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TerminalParameters";
 			definition = "Point of interaction parameters attached to the terminal as serial number or physical capabilities.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "TRPR";
 		}
 	};
@@ -582,12 +588,12 @@ public class DataSetCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmParameters = new MMCode() {
+	public static final DataSetCategoryCode Parameters = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameters";
 			definition = "Any combination of configuration parameters for the point of interaction (POI).";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "PARA";
 		}
 	};
@@ -612,12 +618,12 @@ public class DataSetCategoryCode {
 	 * definition} = "The terminal manager is the master."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMasterTerminalManager = new MMCode() {
+	public static final DataSetCategoryCode MasterTerminalManager = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterTerminalManager";
 			definition = "The terminal manager is the master.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "MTMG";
 		}
 	};
@@ -642,12 +648,12 @@ public class DataSetCategoryCode {
 	 * definition} = "Monitoring of the terminal estate."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMonitoring = new MMCode() {
+	public static final DataSetCategoryCode Monitoring = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Monitoring";
 			definition = "Monitoring of the terminal estate.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "MTOR";
 		}
 	};
@@ -673,12 +679,12 @@ public class DataSetCategoryCode {
 	 * "Configuration parameters of the payment acquirer protocol."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcquirerProtocolParameters = new MMCode() {
+	public static final DataSetCategoryCode AcquirerProtocolParameters = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerProtocolParameters";
 			definition = "Configuration parameters of the payment acquirer protocol.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "ACQP";
 		}
 	};
@@ -705,12 +711,12 @@ public class DataSetCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmApplicationParametersSubsetCreation = new MMCode() {
+	public static final DataSetCategoryCode ApplicationParametersSubsetCreation = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationParametersSubsetCreation";
 			definition = "Creation of a subset of the configuration parameters of an application.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "APSB";
 		}
 	};
@@ -736,12 +742,12 @@ public class DataSetCategoryCode {
 	 * "Download of cryptographic keys with the related information."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmKeyDownload = new MMCode() {
+	public static final DataSetCategoryCode KeyDownload = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyDownload";
 			definition = "Download of cryptographic keys with the related information.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "KDWL";
 		}
 	};
@@ -767,12 +773,12 @@ public class DataSetCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmKeyManagement = new MMCode() {
+	public static final DataSetCategoryCode KeyManagement = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyManagement";
 			definition = "Activate, deactivate or revoke loaded cryptographic keys.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "KMGT";
 		}
 	};
@@ -798,12 +804,12 @@ public class DataSetCategoryCode {
 	 * "Reporting on activity, status and error of a point of interaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReporting = new MMCode() {
+	public static final DataSetCategoryCode Reporting = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reporting";
 			definition = "Reporting on activity, status and error of a point of interaction.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "RPRT";
 		}
 	};
@@ -828,12 +834,12 @@ public class DataSetCategoryCode {
 	 * definition} = "Configuration parameters for the TMS protocol."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTMSProtocolParameters = new MMCode() {
+	public static final DataSetCategoryCode TMSProtocolParameters = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSProtocolParameters";
 			definition = "Configuration parameters for the TMS protocol.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "TMSP";
 		}
 	};
@@ -859,12 +865,12 @@ public class DataSetCategoryCode {
 	 * "ATM protocol parameters, including the configuration of the hosts."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmATMProtocol = new MMCode() {
+	public static final DataSetCategoryCode ATMProtocol = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMProtocol";
 			definition = "ATM protocol parameters, including the configuration of the hosts.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "ATMP";
 		}
 	};
@@ -889,12 +895,12 @@ public class DataSetCategoryCode {
 	 * definition} = "Configuration parameters of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmATMConfiguration = new MMCode() {
+	public static final DataSetCategoryCode ATMConfiguration = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMConfiguration";
 			definition = "Configuration parameters of the ATM.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "ATMC";
 		}
 	};
@@ -919,12 +925,12 @@ public class DataSetCategoryCode {
 	 * definition} = "Configuration parameters of the card application."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardApplication = new MMCode() {
+	public static final DataSetCategoryCode CardApplication = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardApplication";
 			definition = "Configuration parameters of the card application.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "CRAP";
 		}
 	};
@@ -949,12 +955,12 @@ public class DataSetCategoryCode {
 	 * definition} = "Configuration of the cards accepted by the terminal."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardConfiguration = new MMCode() {
+	public static final DataSetCategoryCode CardConfiguration = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardConfiguration";
 			definition = "Configuration of the cards accepted by the terminal.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "CPRC";
 		}
 	};
@@ -979,12 +985,12 @@ public class DataSetCategoryCode {
 	 * definition} = "Local rates for currency exchanges."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOfflineExchangeRate = new MMCode() {
+	public static final DataSetCategoryCode OfflineExchangeRate = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfflineExchangeRate";
 			definition = "Local rates for currency exchanges.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "OEXR";
 		}
 	};
@@ -1009,12 +1015,12 @@ public class DataSetCategoryCode {
 	 * definition} = "Predefined amounts to be presented to the customer."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreDefinedAmount = new MMCode() {
+	public static final DataSetCategoryCode PreDefinedAmount = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreDefinedAmount";
 			definition = "Predefined amounts to be presented to the customer.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "AMNT";
 		}
 	};
@@ -1039,12 +1045,12 @@ public class DataSetCategoryCode {
 	 * definition} = "Configuration of the location."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLocationConfiguration = new MMCode() {
+	public static final DataSetCategoryCode LocationConfiguration = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocationConfiguration";
 			definition = "Configuration of the location.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "LOCC";
 		}
 	};
@@ -1070,12 +1076,12 @@ public class DataSetCategoryCode {
 	 * "Configuration of the mobile operator cards accepted by the terminal."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMobileOperator = new MMCode() {
+	public static final DataSetCategoryCode MobileOperator = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MobileOperator";
 			definition = "Configuration of the mobile operator cards accepted by the terminal.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "MNOC";
 		}
 	};
@@ -1103,12 +1109,12 @@ public class DataSetCategoryCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmReconciliationError = new MMCode() {
+	public static final DataSetCategoryCode ReconciliationError = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationError";
 			definition = "Batch of transaction that have generated an error in the totals of the reconciliation.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "RCLE";
 		}
 	};
@@ -1133,35 +1139,100 @@ public class DataSetCategoryCode {
 	 * definition} = "Certificate provided by a terminal manager."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertificateParameters = new MMCode() {
+	public static final DataSetCategoryCode CertificateParameters = new DataSetCategoryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateParameters";
 			definition = "Certificate provided by a terminal manager.";
-			owner_lazy = () -> DataSetCategoryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategoryCode.mmObject();
 			codeName = "CRTF";
 		}
 	};
+	final static private LinkedHashMap<String, DataSetCategoryCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DataSetCategoryCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SWPK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DataSetCategoryCode";
 				definition = "Category of data set to transfer.";
-				code_lazy = () -> Arrays.asList(DataSetCategoryCode.mmSoftwareModule, DataSetCategoryCode.mmVendorParameters, DataSetCategoryCode.mmAcquirerParameters, DataSetCategoryCode.mmApplicationParameters,
-						DataSetCategoryCode.mmMerchantParameters, DataSetCategoryCode.mmBatchCapture, DataSetCategoryCode.mmCaptureResponse, DataSetCategoryCode.mmStatusReport, DataSetCategoryCode.mmDelegationData,
-						DataSetCategoryCode.mmManagementPlan, DataSetCategoryCode.mmSecurityParameters, DataSetCategoryCode.mmTerminalParameters, DataSetCategoryCode.mmParameters, DataSetCategoryCode.mmMasterTerminalManager,
-						DataSetCategoryCode.mmMonitoring, DataSetCategoryCode.mmAcquirerProtocolParameters, DataSetCategoryCode.mmApplicationParametersSubsetCreation, DataSetCategoryCode.mmKeyDownload, DataSetCategoryCode.mmKeyManagement,
-						DataSetCategoryCode.mmReporting, DataSetCategoryCode.mmTMSProtocolParameters, DataSetCategoryCode.mmATMProtocol, DataSetCategoryCode.mmATMConfiguration, DataSetCategoryCode.mmCardApplication,
-						DataSetCategoryCode.mmCardConfiguration, DataSetCategoryCode.mmOfflineExchangeRate, DataSetCategoryCode.mmPreDefinedAmount, DataSetCategoryCode.mmLocationConfiguration, DataSetCategoryCode.mmMobileOperator,
-						DataSetCategoryCode.mmReconciliationError, DataSetCategoryCode.mmCertificateParameters);
 				derivation_lazy = () -> Arrays.asList(DataSetCategory2Code.mmObject(), DataSetCategory3Code.mmObject(), DataSetCategory1Code.mmObject(), DataSetCategory5Code.mmObject(), DataSetCategory6Code.mmObject(),
 						DataSetCategory4Code.mmObject(), DataSetCategory7Code.mmObject(), DataSetCategory9Code.mmObject(), DataSetCategory10Code.mmObject(), DataSetCategory8Code.mmObject(), DataSetCategory11Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataSetCategoryCode.SoftwareModule, com.tools20022.repository.codeset.DataSetCategoryCode.VendorParameters,
+						com.tools20022.repository.codeset.DataSetCategoryCode.AcquirerParameters, com.tools20022.repository.codeset.DataSetCategoryCode.ApplicationParameters,
+						com.tools20022.repository.codeset.DataSetCategoryCode.MerchantParameters, com.tools20022.repository.codeset.DataSetCategoryCode.BatchCapture, com.tools20022.repository.codeset.DataSetCategoryCode.CaptureResponse,
+						com.tools20022.repository.codeset.DataSetCategoryCode.StatusReport, com.tools20022.repository.codeset.DataSetCategoryCode.DelegationData, com.tools20022.repository.codeset.DataSetCategoryCode.ManagementPlan,
+						com.tools20022.repository.codeset.DataSetCategoryCode.SecurityParameters, com.tools20022.repository.codeset.DataSetCategoryCode.TerminalParameters, com.tools20022.repository.codeset.DataSetCategoryCode.Parameters,
+						com.tools20022.repository.codeset.DataSetCategoryCode.MasterTerminalManager, com.tools20022.repository.codeset.DataSetCategoryCode.Monitoring,
+						com.tools20022.repository.codeset.DataSetCategoryCode.AcquirerProtocolParameters, com.tools20022.repository.codeset.DataSetCategoryCode.ApplicationParametersSubsetCreation,
+						com.tools20022.repository.codeset.DataSetCategoryCode.KeyDownload, com.tools20022.repository.codeset.DataSetCategoryCode.KeyManagement, com.tools20022.repository.codeset.DataSetCategoryCode.Reporting,
+						com.tools20022.repository.codeset.DataSetCategoryCode.TMSProtocolParameters, com.tools20022.repository.codeset.DataSetCategoryCode.ATMProtocol, com.tools20022.repository.codeset.DataSetCategoryCode.ATMConfiguration,
+						com.tools20022.repository.codeset.DataSetCategoryCode.CardApplication, com.tools20022.repository.codeset.DataSetCategoryCode.CardConfiguration,
+						com.tools20022.repository.codeset.DataSetCategoryCode.OfflineExchangeRate, com.tools20022.repository.codeset.DataSetCategoryCode.PreDefinedAmount,
+						com.tools20022.repository.codeset.DataSetCategoryCode.LocationConfiguration, com.tools20022.repository.codeset.DataSetCategoryCode.MobileOperator,
+						com.tools20022.repository.codeset.DataSetCategoryCode.ReconciliationError, com.tools20022.repository.codeset.DataSetCategoryCode.CertificateParameters);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SoftwareModule.getCodeName().get(), SoftwareModule);
+		codesByName.put(VendorParameters.getCodeName().get(), VendorParameters);
+		codesByName.put(AcquirerParameters.getCodeName().get(), AcquirerParameters);
+		codesByName.put(ApplicationParameters.getCodeName().get(), ApplicationParameters);
+		codesByName.put(MerchantParameters.getCodeName().get(), MerchantParameters);
+		codesByName.put(BatchCapture.getCodeName().get(), BatchCapture);
+		codesByName.put(CaptureResponse.getCodeName().get(), CaptureResponse);
+		codesByName.put(StatusReport.getCodeName().get(), StatusReport);
+		codesByName.put(DelegationData.getCodeName().get(), DelegationData);
+		codesByName.put(ManagementPlan.getCodeName().get(), ManagementPlan);
+		codesByName.put(SecurityParameters.getCodeName().get(), SecurityParameters);
+		codesByName.put(TerminalParameters.getCodeName().get(), TerminalParameters);
+		codesByName.put(Parameters.getCodeName().get(), Parameters);
+		codesByName.put(MasterTerminalManager.getCodeName().get(), MasterTerminalManager);
+		codesByName.put(Monitoring.getCodeName().get(), Monitoring);
+		codesByName.put(AcquirerProtocolParameters.getCodeName().get(), AcquirerProtocolParameters);
+		codesByName.put(ApplicationParametersSubsetCreation.getCodeName().get(), ApplicationParametersSubsetCreation);
+		codesByName.put(KeyDownload.getCodeName().get(), KeyDownload);
+		codesByName.put(KeyManagement.getCodeName().get(), KeyManagement);
+		codesByName.put(Reporting.getCodeName().get(), Reporting);
+		codesByName.put(TMSProtocolParameters.getCodeName().get(), TMSProtocolParameters);
+		codesByName.put(ATMProtocol.getCodeName().get(), ATMProtocol);
+		codesByName.put(ATMConfiguration.getCodeName().get(), ATMConfiguration);
+		codesByName.put(CardApplication.getCodeName().get(), CardApplication);
+		codesByName.put(CardConfiguration.getCodeName().get(), CardConfiguration);
+		codesByName.put(OfflineExchangeRate.getCodeName().get(), OfflineExchangeRate);
+		codesByName.put(PreDefinedAmount.getCodeName().get(), PreDefinedAmount);
+		codesByName.put(LocationConfiguration.getCodeName().get(), LocationConfiguration);
+		codesByName.put(MobileOperator.getCodeName().get(), MobileOperator);
+		codesByName.put(ReconciliationError.getCodeName().get(), ReconciliationError);
+		codesByName.put(CertificateParameters.getCodeName().get(), CertificateParameters);
+	}
+
+	public static DataSetCategoryCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DataSetCategoryCode[] values() {
+		DataSetCategoryCode[] values = new DataSetCategoryCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DataSetCategoryCode> {
+		@Override
+		public DataSetCategoryCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DataSetCategoryCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

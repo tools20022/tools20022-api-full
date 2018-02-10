@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -86,8 +87,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,16 +102,17 @@ import javax.xml.bind.annotation.XmlType;
  * InstrumentLeg1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InstrumentLeg6", propOrder = {"legSide", "legSettlementType", "legSettlementDate", "legLastPrice", "legSettlementCurrency", "legOrderQuantity", "legForwardPoints", "legCalculatedCounterpartyCurrencyLastQuantity",
 		"legRiskAmount", "legValuationRate", "legValueDate", "legCurrency", "legSymbol", "legSecurityIdentification"})
 public class InstrumentLeg6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LegSd", required = true)
 	protected Side1Code legSide;
 	/**
-	 * Coded list to specify the side of the trade leg.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +144,7 @@ public class InstrumentLeg6 {
 	public static final MMMessageAttribute mmLegSide = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
-			componentContext_lazy = () -> InstrumentLeg6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegSd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,10 +155,11 @@ public class InstrumentLeg6 {
 			simpleType_lazy = () -> Side1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "LegSttlmTp", required = true)
 	protected SettlementDateCode legSettlementType;
 	/**
-	 * Specifies the date of settlement, in coded form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,7 +186,7 @@ public class InstrumentLeg6 {
 	 */
 	public static final MMMessageAttribute mmLegSettlementType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InstrumentLeg6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegSttlmTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,10 +197,11 @@ public class InstrumentLeg6 {
 			simpleType_lazy = () -> SettlementDateCode.mmObject();
 		}
 	};
+	@XmlElement(name = "LegSttlmDt", required = true)
 	protected ISODateTime legSettlementDate;
 	/**
-	 * Specifies the date and time on which the trade will be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -230,7 +234,7 @@ public class InstrumentLeg6 {
 	public static final MMMessageAttribute mmLegSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
-			componentContext_lazy = () -> InstrumentLeg6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,10 +245,11 @@ public class InstrumentLeg6 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "LegLastPric", required = true)
 	protected ActiveCurrencyAnd13DecimalAmount legLastPrice;
 	/**
-	 * Execution price of trade leg.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -271,7 +276,7 @@ public class InstrumentLeg6 {
 	 */
 	public static final MMMessageAttribute mmLegLastPrice = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InstrumentLeg6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegLastPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -282,10 +287,11 @@ public class InstrumentLeg6 {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "LegSttlmCcy", required = true)
 	protected CurrencyCode legSettlementCurrency;
 	/**
-	 * Settlement currency of trade leg, agreed by both sides of the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -318,7 +324,7 @@ public class InstrumentLeg6 {
 	public static final MMMessageAttribute mmLegSettlementCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSettlementCurrency;
-			componentContext_lazy = () -> InstrumentLeg6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegSttlmCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -329,10 +335,11 @@ public class InstrumentLeg6 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "LegOrdrQty", required = true)
 	protected CurrencyAndAmount legOrderQuantity;
 	/**
-	 * Amount of trade leg in trading currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -365,7 +372,7 @@ public class InstrumentLeg6 {
 	public static final MMMessageAttribute mmLegOrderQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
-			componentContext_lazy = () -> InstrumentLeg6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegOrdrQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -376,11 +383,11 @@ public class InstrumentLeg6 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "LegFwdPts", required = true)
 	protected DecimalNumber legForwardPoints;
 	/**
-	 * Forward points added to last spot rate . May be a negative value.
-	 * Expressed in decimal form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -409,7 +416,7 @@ public class InstrumentLeg6 {
 	 */
 	public static final MMMessageAttribute mmLegForwardPoints = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InstrumentLeg6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegFwdPts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -420,11 +427,11 @@ public class InstrumentLeg6 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "LegClctdCtrPtyCcyLastQty", required = true)
 	protected CurrencyAndAmount legCalculatedCounterpartyCurrencyLastQuantity;
 	/**
-	 * Used for the calculated quantity of the other side of the currency trade.
-	 * Can be derived from leg order quantity and leg last price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -453,7 +460,7 @@ public class InstrumentLeg6 {
 	 */
 	public static final MMMessageAttribute mmLegCalculatedCounterpartyCurrencyLastQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InstrumentLeg6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegClctdCtrPtyCcyLastQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -464,11 +471,11 @@ public class InstrumentLeg6 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "LegRskAmt", required = true)
 	protected ActiveCurrencyAndAmount legRiskAmount;
 	/**
-	 * Measurement of the leg trade values in terms of a currency (for
-	 * example,the amount of trade in US dollars)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -497,7 +504,7 @@ public class InstrumentLeg6 {
 	 */
 	public static final MMMessageAttribute mmLegRiskAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InstrumentLeg6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegRskAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -508,10 +515,11 @@ public class InstrumentLeg6 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "LegValtnRate", required = true)
 	protected AgreedRate3 legValuationRate;
 	/**
-	 * Specifies the valuation rate used for the trade leg.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -542,7 +550,7 @@ public class InstrumentLeg6 {
 	public static final MMMessageAssociationEnd mmLegValuationRate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
-			componentContext_lazy = () -> InstrumentLeg6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegValtnRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -554,10 +562,11 @@ public class InstrumentLeg6 {
 			type_lazy = () -> com.tools20022.repository.msg.AgreedRate3.mmObject();
 		}
 	};
+	@XmlElement(name = "LegValDt", required = true)
 	protected ISODate legValueDate;
 	/**
-	 * Specifies the value date of leg spot transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -583,7 +592,7 @@ public class InstrumentLeg6 {
 	 */
 	public static final MMMessageAttribute mmLegValueDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InstrumentLeg6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegValDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -594,10 +603,11 @@ public class InstrumentLeg6 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "LegCcy", required = true)
 	protected CurrencyCode legCurrency;
 	/**
-	 * Currency trade is conducted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -629,7 +639,7 @@ public class InstrumentLeg6 {
 	public static final MMMessageAttribute mmLegCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Leg.mmCurrency;
-			componentContext_lazy = () -> InstrumentLeg6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -640,10 +650,11 @@ public class InstrumentLeg6 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "LegSymb", required = true)
 	protected Max35Text legSymbol;
 	/**
-	 * Symbol of the leg trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -669,7 +680,7 @@ public class InstrumentLeg6 {
 	 */
 	public static final MMMessageAttribute mmLegSymbol = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InstrumentLeg6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegSymb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -680,10 +691,11 @@ public class InstrumentLeg6 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "LegSctyId", required = true)
 	protected SecurityIdentification18 legSecurityIdentification;
 	/**
-	 * Security identification of the leg trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -709,7 +721,7 @@ public class InstrumentLeg6 {
 	 */
 	public static final MMMessageAssociationEnd mmLegSecurityIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InstrumentLeg6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
 			xmlTag = "LegSctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -725,11 +737,14 @@ public class InstrumentLeg6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InstrumentLeg6.mmLegSide, InstrumentLeg6.mmLegSettlementType, InstrumentLeg6.mmLegSettlementDate, InstrumentLeg6.mmLegLastPrice, InstrumentLeg6.mmLegSettlementCurrency,
-						InstrumentLeg6.mmLegOrderQuantity, InstrumentLeg6.mmLegForwardPoints, InstrumentLeg6.mmLegCalculatedCounterpartyCurrencyLastQuantity, InstrumentLeg6.mmLegRiskAmount, InstrumentLeg6.mmLegValuationRate,
-						InstrumentLeg6.mmLegValueDate, InstrumentLeg6.mmLegCurrency, InstrumentLeg6.mmLegSymbol, InstrumentLeg6.mmLegSecurityIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstrumentLeg6.mmLegSide, com.tools20022.repository.msg.InstrumentLeg6.mmLegSettlementType,
+						com.tools20022.repository.msg.InstrumentLeg6.mmLegSettlementDate, com.tools20022.repository.msg.InstrumentLeg6.mmLegLastPrice, com.tools20022.repository.msg.InstrumentLeg6.mmLegSettlementCurrency,
+						com.tools20022.repository.msg.InstrumentLeg6.mmLegOrderQuantity, com.tools20022.repository.msg.InstrumentLeg6.mmLegForwardPoints,
+						com.tools20022.repository.msg.InstrumentLeg6.mmLegCalculatedCounterpartyCurrencyLastQuantity, com.tools20022.repository.msg.InstrumentLeg6.mmLegRiskAmount,
+						com.tools20022.repository.msg.InstrumentLeg6.mmLegValuationRate, com.tools20022.repository.msg.InstrumentLeg6.mmLegValueDate, com.tools20022.repository.msg.InstrumentLeg6.mmLegCurrency,
+						com.tools20022.repository.msg.InstrumentLeg6.mmLegSymbol, com.tools20022.repository.msg.InstrumentLeg6.mmLegSecurityIdentification);
 				trace_lazy = () -> Leg.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstrumentLeg6";
 				definition = "Additionnal details related to the leg.";
@@ -739,129 +754,129 @@ public class InstrumentLeg6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LegSd", required = true)
 	public Side1Code getLegSide() {
 		return legSide;
 	}
 
-	public void setLegSide(Side1Code legSide) {
-		this.legSide = legSide;
+	public InstrumentLeg6 setLegSide(Side1Code legSide) {
+		this.legSide = Objects.requireNonNull(legSide);
+		return this;
 	}
 
-	@XmlElement(name = "LegSttlmTp", required = true)
 	public SettlementDateCode getLegSettlementType() {
 		return legSettlementType;
 	}
 
-	public void setLegSettlementType(SettlementDateCode legSettlementType) {
-		this.legSettlementType = legSettlementType;
+	public InstrumentLeg6 setLegSettlementType(SettlementDateCode legSettlementType) {
+		this.legSettlementType = Objects.requireNonNull(legSettlementType);
+		return this;
 	}
 
-	@XmlElement(name = "LegSttlmDt", required = true)
 	public ISODateTime getLegSettlementDate() {
 		return legSettlementDate;
 	}
 
-	public void setLegSettlementDate(ISODateTime legSettlementDate) {
-		this.legSettlementDate = legSettlementDate;
+	public InstrumentLeg6 setLegSettlementDate(ISODateTime legSettlementDate) {
+		this.legSettlementDate = Objects.requireNonNull(legSettlementDate);
+		return this;
 	}
 
-	@XmlElement(name = "LegLastPric", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getLegLastPrice() {
 		return legLastPrice;
 	}
 
-	public void setLegLastPrice(ActiveCurrencyAnd13DecimalAmount legLastPrice) {
-		this.legLastPrice = legLastPrice;
+	public InstrumentLeg6 setLegLastPrice(ActiveCurrencyAnd13DecimalAmount legLastPrice) {
+		this.legLastPrice = Objects.requireNonNull(legLastPrice);
+		return this;
 	}
 
-	@XmlElement(name = "LegSttlmCcy", required = true)
 	public CurrencyCode getLegSettlementCurrency() {
 		return legSettlementCurrency;
 	}
 
-	public void setLegSettlementCurrency(CurrencyCode legSettlementCurrency) {
-		this.legSettlementCurrency = legSettlementCurrency;
+	public InstrumentLeg6 setLegSettlementCurrency(CurrencyCode legSettlementCurrency) {
+		this.legSettlementCurrency = Objects.requireNonNull(legSettlementCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "LegOrdrQty", required = true)
 	public CurrencyAndAmount getLegOrderQuantity() {
 		return legOrderQuantity;
 	}
 
-	public void setLegOrderQuantity(CurrencyAndAmount legOrderQuantity) {
-		this.legOrderQuantity = legOrderQuantity;
+	public InstrumentLeg6 setLegOrderQuantity(CurrencyAndAmount legOrderQuantity) {
+		this.legOrderQuantity = Objects.requireNonNull(legOrderQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "LegFwdPts", required = true)
 	public DecimalNumber getLegForwardPoints() {
 		return legForwardPoints;
 	}
 
-	public void setLegForwardPoints(DecimalNumber legForwardPoints) {
-		this.legForwardPoints = legForwardPoints;
+	public InstrumentLeg6 setLegForwardPoints(DecimalNumber legForwardPoints) {
+		this.legForwardPoints = Objects.requireNonNull(legForwardPoints);
+		return this;
 	}
 
-	@XmlElement(name = "LegClctdCtrPtyCcyLastQty", required = true)
 	public CurrencyAndAmount getLegCalculatedCounterpartyCurrencyLastQuantity() {
 		return legCalculatedCounterpartyCurrencyLastQuantity;
 	}
 
-	public void setLegCalculatedCounterpartyCurrencyLastQuantity(CurrencyAndAmount legCalculatedCounterpartyCurrencyLastQuantity) {
-		this.legCalculatedCounterpartyCurrencyLastQuantity = legCalculatedCounterpartyCurrencyLastQuantity;
+	public InstrumentLeg6 setLegCalculatedCounterpartyCurrencyLastQuantity(CurrencyAndAmount legCalculatedCounterpartyCurrencyLastQuantity) {
+		this.legCalculatedCounterpartyCurrencyLastQuantity = Objects.requireNonNull(legCalculatedCounterpartyCurrencyLastQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "LegRskAmt", required = true)
 	public ActiveCurrencyAndAmount getLegRiskAmount() {
 		return legRiskAmount;
 	}
 
-	public void setLegRiskAmount(ActiveCurrencyAndAmount legRiskAmount) {
-		this.legRiskAmount = legRiskAmount;
+	public InstrumentLeg6 setLegRiskAmount(ActiveCurrencyAndAmount legRiskAmount) {
+		this.legRiskAmount = Objects.requireNonNull(legRiskAmount);
+		return this;
 	}
 
-	@XmlElement(name = "LegValtnRate", required = true)
 	public AgreedRate3 getLegValuationRate() {
 		return legValuationRate;
 	}
 
-	public void setLegValuationRate(com.tools20022.repository.msg.AgreedRate3 legValuationRate) {
-		this.legValuationRate = legValuationRate;
+	public InstrumentLeg6 setLegValuationRate(com.tools20022.repository.msg.AgreedRate3 legValuationRate) {
+		this.legValuationRate = Objects.requireNonNull(legValuationRate);
+		return this;
 	}
 
-	@XmlElement(name = "LegValDt", required = true)
 	public ISODate getLegValueDate() {
 		return legValueDate;
 	}
 
-	public void setLegValueDate(ISODate legValueDate) {
-		this.legValueDate = legValueDate;
+	public InstrumentLeg6 setLegValueDate(ISODate legValueDate) {
+		this.legValueDate = Objects.requireNonNull(legValueDate);
+		return this;
 	}
 
-	@XmlElement(name = "LegCcy", required = true)
 	public CurrencyCode getLegCurrency() {
 		return legCurrency;
 	}
 
-	public void setLegCurrency(CurrencyCode legCurrency) {
-		this.legCurrency = legCurrency;
+	public InstrumentLeg6 setLegCurrency(CurrencyCode legCurrency) {
+		this.legCurrency = Objects.requireNonNull(legCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "LegSymb", required = true)
 	public Max35Text getLegSymbol() {
 		return legSymbol;
 	}
 
-	public void setLegSymbol(Max35Text legSymbol) {
-		this.legSymbol = legSymbol;
+	public InstrumentLeg6 setLegSymbol(Max35Text legSymbol) {
+		this.legSymbol = Objects.requireNonNull(legSymbol);
+		return this;
 	}
 
-	@XmlElement(name = "LegSctyId", required = true)
 	public SecurityIdentification18 getLegSecurityIdentification() {
 		return legSecurityIdentification;
 	}
 
-	public void setLegSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification18 legSecurityIdentification) {
-		this.legSecurityIdentification = legSecurityIdentification;
+	public InstrumentLeg6 setLegSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification18 legSecurityIdentification) {
+		this.legSecurityIdentification = Objects.requireNonNull(legSecurityIdentification);
+		return this;
 	}
 }

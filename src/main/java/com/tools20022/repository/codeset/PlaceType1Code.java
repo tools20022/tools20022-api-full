@@ -20,29 +20,33 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PlaceTypeCode;
+import com.tools20022.repository.codeset.PlaceType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of date
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PlaceTypeCode PlaceTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PlaceType1Code#mmUnknown
- * PlaceType1Code.mmUnknown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PlaceType1Code#Unknown
+ * PlaceType1Code.Unknown}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PlaceTypeCode PlaceTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -59,7 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of date"</li>
  * </ul>
  */
-public class PlaceType1Code extends PlaceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PlaceType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -78,26 +83,56 @@ public class PlaceType1Code extends PlaceTypeCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknown = new MMCode() {
+	public static final PlaceType1Code Unknown = new PlaceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
-			owner_lazy = () -> PlaceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PlaceType1Code.mmObject();
+			codeName = PlaceTypeCode.Unknown.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PlaceType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PlaceType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("UKWN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PlaceType1Code";
 				definition = "Type of date";
-				code_lazy = () -> Arrays.asList(PlaceType1Code.mmUnknown);
 				trace_lazy = () -> PlaceTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PlaceType1Code.Unknown);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Unknown.getCodeName().get(), Unknown);
+	}
+
+	public static PlaceType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PlaceType1Code[] values() {
+		PlaceType1Code[] values = new PlaceType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PlaceType1Code> {
+		@Override
+		public PlaceType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PlaceType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

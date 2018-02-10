@@ -25,9 +25,8 @@ import com.tools20022.repository.area.CashManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -67,22 +66,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
- * CashManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOLatestversion
- * InvestmentFundsISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "FndDtldConfdCshFcstRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -116,6 +99,22 @@ import javax.xml.bind.annotation.*;
  * FundDetailedConfirmedCashForecastReportV04.mmExtension}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOLatestversion
+ * InvestmentFundsISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "FndDtldConfdCshFcstRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
+ * CashManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.043.001.04}</li>
@@ -135,16 +134,17 @@ import javax.xml.bind.annotation.*;
  * FundDetailedConfirmedCashForecastReportV03}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FundDetailedConfirmedCashForecastReportV04", propOrder = {"messageIdentification", "poolReference", "previousReference", "relatedReference", "messagePagination", "fundOrSubFundDetails", "fundCashForecastDetails",
 		"consolidatedNetCashForecast", "extension"})
 public class FundDetailedConfirmedCashForecastReportV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Identifies the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,10 +190,11 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 			}
 		}
 	};
+	@XmlElement(name = "PoolRef")
 	protected AdditionalReference3 poolReference;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -239,10 +240,11 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsRef")
 	protected List<AdditionalReference3> previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -287,10 +289,11 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdRef")
 	protected List<AdditionalReference3> relatedReference;
 	/**
-	 * Reference to a linked message that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -336,10 +339,11 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 			}
 		}
 	};
+	@XmlElement(name = "MsgPgntn", required = true)
 	protected Pagination messagePagination;
 	/**
-	 * Pagination of the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -384,11 +388,11 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 			}
 		}
 	};
+	@XmlElement(name = "FndOrSubFndDtls")
 	protected Fund4 fundOrSubFundDetails;
 	/**
-	 * Information about the fund/sub fund when the report either specifies cash
-	 * flow for the fund/sub fund or for a share class of the fund/sub fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -428,14 +432,11 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 			}
 		}
 	};
+	@XmlElement(name = "FndCshFcstDtls", required = true)
 	protected List<FundCashForecast6> fundCashForecastDetails;
 	/**
-	 * Information related to the cash-in and cash-out flows for a specific
-	 * trade date as a result of transactions in shares in an investment fund,
-	 * for example, subscriptions, redemptions or switches. The information
-	 * provided is sorted by pre-defined criteria such as country, institution,
-	 * currency or user defined criteria.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -482,11 +483,11 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 			}
 		}
 	};
+	@XmlElement(name = "CnsltdNetCshFcst")
 	protected NetCashForecast3 consolidatedNetCashForecast;
 	/**
-	 * Net cash as a result of the cash-in and cash-out flows specified in the
-	 * fund cash forecast details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -535,11 +536,11 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 			}
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -620,88 +621,88 @@ public class FundDetailedConfirmedCashForecastReportV04 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public FundDetailedConfirmedCashForecastReportV04 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PoolRef")
-	public AdditionalReference3 getPoolReference() {
-		return poolReference;
+	public Optional<AdditionalReference3> getPoolReference() {
+		return poolReference == null ? Optional.empty() : Optional.of(poolReference);
 	}
 
-	public void setPoolReference(AdditionalReference3 poolReference) {
+	public FundDetailedConfirmedCashForecastReportV04 setPoolReference(AdditionalReference3 poolReference) {
 		this.poolReference = poolReference;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef")
 	public List<AdditionalReference3> getPreviousReference() {
-		return previousReference;
+		return previousReference == null ? previousReference = new ArrayList<>() : previousReference;
 	}
 
-	public void setPreviousReference(List<AdditionalReference3> previousReference) {
-		this.previousReference = previousReference;
+	public FundDetailedConfirmedCashForecastReportV04 setPreviousReference(List<AdditionalReference3> previousReference) {
+		this.previousReference = Objects.requireNonNull(previousReference);
+		return this;
 	}
 
-	@XmlElement(name = "RltdRef")
 	public List<AdditionalReference3> getRelatedReference() {
-		return relatedReference;
+		return relatedReference == null ? relatedReference = new ArrayList<>() : relatedReference;
 	}
 
-	public void setRelatedReference(List<AdditionalReference3> relatedReference) {
-		this.relatedReference = relatedReference;
+	public FundDetailedConfirmedCashForecastReportV04 setRelatedReference(List<AdditionalReference3> relatedReference) {
+		this.relatedReference = Objects.requireNonNull(relatedReference);
+		return this;
 	}
 
-	@XmlElement(name = "MsgPgntn", required = true)
 	public Pagination getMessagePagination() {
 		return messagePagination;
 	}
 
-	public void setMessagePagination(Pagination messagePagination) {
-		this.messagePagination = messagePagination;
+	public FundDetailedConfirmedCashForecastReportV04 setMessagePagination(Pagination messagePagination) {
+		this.messagePagination = Objects.requireNonNull(messagePagination);
+		return this;
 	}
 
-	@XmlElement(name = "FndOrSubFndDtls")
-	public Fund4 getFundOrSubFundDetails() {
-		return fundOrSubFundDetails;
+	public Optional<Fund4> getFundOrSubFundDetails() {
+		return fundOrSubFundDetails == null ? Optional.empty() : Optional.of(fundOrSubFundDetails);
 	}
 
-	public void setFundOrSubFundDetails(Fund4 fundOrSubFundDetails) {
+	public FundDetailedConfirmedCashForecastReportV04 setFundOrSubFundDetails(Fund4 fundOrSubFundDetails) {
 		this.fundOrSubFundDetails = fundOrSubFundDetails;
+		return this;
 	}
 
-	@XmlElement(name = "FndCshFcstDtls", required = true)
 	public List<FundCashForecast6> getFundCashForecastDetails() {
-		return fundCashForecastDetails;
+		return fundCashForecastDetails == null ? fundCashForecastDetails = new ArrayList<>() : fundCashForecastDetails;
 	}
 
-	public void setFundCashForecastDetails(List<FundCashForecast6> fundCashForecastDetails) {
-		this.fundCashForecastDetails = fundCashForecastDetails;
+	public FundDetailedConfirmedCashForecastReportV04 setFundCashForecastDetails(List<FundCashForecast6> fundCashForecastDetails) {
+		this.fundCashForecastDetails = Objects.requireNonNull(fundCashForecastDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CnsltdNetCshFcst")
-	public NetCashForecast3 getConsolidatedNetCashForecast() {
-		return consolidatedNetCashForecast;
+	public Optional<NetCashForecast3> getConsolidatedNetCashForecast() {
+		return consolidatedNetCashForecast == null ? Optional.empty() : Optional.of(consolidatedNetCashForecast);
 	}
 
-	public void setConsolidatedNetCashForecast(NetCashForecast3 consolidatedNetCashForecast) {
+	public FundDetailedConfirmedCashForecastReportV04 setConsolidatedNetCashForecast(NetCashForecast3 consolidatedNetCashForecast) {
 		this.consolidatedNetCashForecast = consolidatedNetCashForecast;
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<Extension1> extension) {
-		this.extension = extension;
+	public FundDetailedConfirmedCashForecastReportV04 setExtension(List<Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.043.04.04")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.043.001.04")
 	static public class Document {
 		@XmlElement(name = "FndDtldConfdCshFcstRpt", required = true)
 		public FundDetailedConfirmedCashForecastReportV04 messageBody;

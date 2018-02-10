@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.LotteryTypeCode;
+import com.tools20022.repository.codeset.LotteryType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of lottery.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.LotteryTypeCode
- * LotteryTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LotteryType1Code#mmOriginalLotteryNotification
- * LotteryType1Code.mmOriginalLotteryNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.LotteryType1Code#OriginalLotteryNotification
+ * LotteryType1Code.OriginalLotteryNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LotteryType1Code#mmSupplementalLotteryNotification
- * LotteryType1Code.mmSupplementalLotteryNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.LotteryType1Code#SupplementalLotteryNotification
+ * LotteryType1Code.SupplementalLotteryNotification}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.LotteryTypeCode
+ * LotteryTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of lottery."</li>
  * </ul>
  */
-public class LotteryType1Code extends LotteryTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class LotteryType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class LotteryType1Code extends LotteryTypeCode {
 	 * name} = "OriginalLotteryNotification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOriginalLotteryNotification = new MMCode() {
+	public static final LotteryType1Code OriginalLotteryNotification = new LotteryType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalLotteryNotification";
-			owner_lazy = () -> LotteryType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LotteryType1Code.mmObject();
+			codeName = LotteryTypeCode.OriginalLotteryNotification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class LotteryType1Code extends LotteryTypeCode {
 	 * name} = "SupplementalLotteryNotification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSupplementalLotteryNotification = new MMCode() {
+	public static final LotteryType1Code SupplementalLotteryNotification = new LotteryType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementalLotteryNotification";
-			owner_lazy = () -> LotteryType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LotteryType1Code.mmObject();
+			codeName = LotteryTypeCode.SupplementalLotteryNotification.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, LotteryType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected LotteryType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ORIG");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LotteryType1Code";
 				definition = "Specifies the type of lottery.";
-				code_lazy = () -> Arrays.asList(LotteryType1Code.mmOriginalLotteryNotification, LotteryType1Code.mmSupplementalLotteryNotification);
 				trace_lazy = () -> LotteryTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LotteryType1Code.OriginalLotteryNotification, com.tools20022.repository.codeset.LotteryType1Code.SupplementalLotteryNotification);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(OriginalLotteryNotification.getCodeName().get(), OriginalLotteryNotification);
+		codesByName.put(SupplementalLotteryNotification.getCodeName().get(), SupplementalLotteryNotification);
+	}
+
+	public static LotteryType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static LotteryType1Code[] values() {
+		LotteryType1Code[] values = new LotteryType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, LotteryType1Code> {
+		@Override
+		public LotteryType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(LotteryType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

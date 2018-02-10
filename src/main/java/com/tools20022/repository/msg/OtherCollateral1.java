@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -80,8 +82,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,15 +103,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OtherCollateral1", propOrder = {"letterOfCreditAmount", "guaranteeAmount", "otherTypeOfCollateral", "issueDate", "expiryDate", "issuer", "valueDate", "exchangeRate", "marketValue", "haircut", "collateralValue"})
 public class OtherCollateral1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LttrOfCdtAmt")
 	protected ActiveCurrencyAndAmount letterOfCreditAmount;
 	/**
-	 * Amount of the letter/documentary credit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,7 +154,7 @@ public class OtherCollateral1 {
 	public static final MMMessageAttribute mmLetterOfCreditAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LetterOfCredit.mmAmount;
-			componentContext_lazy = () -> OtherCollateral1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "LttrOfCdtAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,10 +166,11 @@ public class OtherCollateral1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "GrntAmt")
 	protected ActiveCurrencyAndAmount guaranteeAmount;
 	/**
-	 * Amount of the bank guarantee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,7 +212,7 @@ public class OtherCollateral1 {
 	public static final MMMessageAttribute mmGuaranteeAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Guarantee.mmCoveredAmount;
-			componentContext_lazy = () -> OtherCollateral1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "GrntAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,10 +224,11 @@ public class OtherCollateral1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrTpOfColl")
 	protected OtherTypeOfCollateral1 otherTypeOfCollateral;
 	/**
-	 * Provides a description and an amount of another type of collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -263,7 +268,7 @@ public class OtherCollateral1 {
 	public static final MMMessageAssociationEnd mmOtherTypeOfCollateral = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Asset.mmObject();
-			componentContext_lazy = () -> OtherCollateral1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrTpOfColl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,10 +281,11 @@ public class OtherCollateral1 {
 			type_lazy = () -> com.tools20022.repository.msg.OtherTypeOfCollateral1.mmObject();
 		}
 	};
+	@XmlElement(name = "IsseDt", required = true)
 	protected DateFormat14Choice issueDate;
 	/**
-	 * Date on which the other collateral was issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -319,7 +325,7 @@ public class OtherCollateral1 {
 	public static final MMMessageAssociationEnd mmIssueDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssueDate;
-			componentContext_lazy = () -> OtherCollateral1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -332,10 +338,11 @@ public class OtherCollateral1 {
 			type_lazy = () -> DateFormat14Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "XpryDt")
 	protected DateFormat14Choice expiryDate;
 	/**
-	 * Date on which the other collateral expires.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -375,7 +382,7 @@ public class OtherCollateral1 {
 	public static final MMMessageAssociationEnd mmExpiryDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmExpiryDate;
-			componentContext_lazy = () -> OtherCollateral1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -388,10 +395,11 @@ public class OtherCollateral1 {
 			type_lazy = () -> DateFormat14Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Issr", required = true)
 	protected PartyIdentification33Choice issuer;
 	/**
-	 * Party that issues the bank guarantee or letter of / documentary credit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -433,7 +441,7 @@ public class OtherCollateral1 {
 	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> OtherCollateral1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -446,10 +454,11 @@ public class OtherCollateral1 {
 			type_lazy = () -> PartyIdentification33Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ValDt")
 	protected ISODate valueDate;
 	/**
-	 * Valuation date of the other collateral when it was taken as collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -492,7 +501,7 @@ public class OtherCollateral1 {
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CollateralValuation.mmCollateralValuationDate;
-			componentContext_lazy = () -> OtherCollateral1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -504,10 +513,11 @@ public class OtherCollateral1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "XchgRate")
 	protected BaseOneRate exchangeRate;
 	/**
-	 * Exchange rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -548,7 +558,7 @@ public class OtherCollateral1 {
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmExchangeRate;
-			componentContext_lazy = () -> OtherCollateral1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -560,10 +570,11 @@ public class OtherCollateral1 {
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	@XmlElement(name = "MktVal")
 	protected ActiveCurrencyAndAmount marketValue;
 	/**
-	 * Value of the collateral based on current market prices.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -605,7 +616,7 @@ public class OtherCollateral1 {
 	public static final MMMessageAttribute mmMarketValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmMarketValue;
-			componentContext_lazy = () -> OtherCollateral1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "MktVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -617,10 +628,11 @@ public class OtherCollateral1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Hrcut")
 	protected PercentageRate haircut;
 	/**
-	 * Haircut or valuation factor on the collateral expressed as a percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -663,7 +675,7 @@ public class OtherCollateral1 {
 	public static final MMMessageAttribute mmHaircut = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> HaircutValuation.mmHaircut;
-			componentContext_lazy = () -> OtherCollateral1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "Hrcut";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -675,10 +687,11 @@ public class OtherCollateral1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "CollVal", required = true)
 	protected ActiveCurrencyAndAmount collateralValue;
 	/**
-	 * Value of the collateral after taking into account the haircut, if any.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -721,7 +734,7 @@ public class OtherCollateral1 {
 	public static final MMMessageAttribute mmCollateralValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmRiskAdjustedValue;
-			componentContext_lazy = () -> OtherCollateral1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "CollVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -737,10 +750,12 @@ public class OtherCollateral1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OtherCollateral1.mmLetterOfCreditAmount, OtherCollateral1.mmGuaranteeAmount, OtherCollateral1.mmOtherTypeOfCollateral, OtherCollateral1.mmIssueDate, OtherCollateral1.mmExpiryDate,
-						OtherCollateral1.mmIssuer, OtherCollateral1.mmValueDate, OtherCollateral1.mmExchangeRate, OtherCollateral1.mmMarketValue, OtherCollateral1.mmHaircut, OtherCollateral1.mmCollateralValue);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherCollateral1.mmLetterOfCreditAmount, com.tools20022.repository.msg.OtherCollateral1.mmGuaranteeAmount,
+						com.tools20022.repository.msg.OtherCollateral1.mmOtherTypeOfCollateral, com.tools20022.repository.msg.OtherCollateral1.mmIssueDate, com.tools20022.repository.msg.OtherCollateral1.mmExpiryDate,
+						com.tools20022.repository.msg.OtherCollateral1.mmIssuer, com.tools20022.repository.msg.OtherCollateral1.mmValueDate, com.tools20022.repository.msg.OtherCollateral1.mmExchangeRate,
+						com.tools20022.repository.msg.OtherCollateral1.mmMarketValue, com.tools20022.repository.msg.OtherCollateral1.mmHaircut, com.tools20022.repository.msg.OtherCollateral1.mmCollateralValue);
 				trace_lazy = () -> Asset.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OtherCollateral1";
 				definition = "Provides details about the letter of credit or bank guarantee, or other collateral, posted as collateral.";
@@ -750,102 +765,102 @@ public class OtherCollateral1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LttrOfCdtAmt")
-	public ActiveCurrencyAndAmount getLetterOfCreditAmount() {
-		return letterOfCreditAmount;
+	public Optional<ActiveCurrencyAndAmount> getLetterOfCreditAmount() {
+		return letterOfCreditAmount == null ? Optional.empty() : Optional.of(letterOfCreditAmount);
 	}
 
-	public void setLetterOfCreditAmount(ActiveCurrencyAndAmount letterOfCreditAmount) {
+	public OtherCollateral1 setLetterOfCreditAmount(ActiveCurrencyAndAmount letterOfCreditAmount) {
 		this.letterOfCreditAmount = letterOfCreditAmount;
+		return this;
 	}
 
-	@XmlElement(name = "GrntAmt")
-	public ActiveCurrencyAndAmount getGuaranteeAmount() {
-		return guaranteeAmount;
+	public Optional<ActiveCurrencyAndAmount> getGuaranteeAmount() {
+		return guaranteeAmount == null ? Optional.empty() : Optional.of(guaranteeAmount);
 	}
 
-	public void setGuaranteeAmount(ActiveCurrencyAndAmount guaranteeAmount) {
+	public OtherCollateral1 setGuaranteeAmount(ActiveCurrencyAndAmount guaranteeAmount) {
 		this.guaranteeAmount = guaranteeAmount;
+		return this;
 	}
 
-	@XmlElement(name = "OthrTpOfColl")
-	public OtherTypeOfCollateral1 getOtherTypeOfCollateral() {
-		return otherTypeOfCollateral;
+	public Optional<OtherTypeOfCollateral1> getOtherTypeOfCollateral() {
+		return otherTypeOfCollateral == null ? Optional.empty() : Optional.of(otherTypeOfCollateral);
 	}
 
-	public void setOtherTypeOfCollateral(com.tools20022.repository.msg.OtherTypeOfCollateral1 otherTypeOfCollateral) {
+	public OtherCollateral1 setOtherTypeOfCollateral(com.tools20022.repository.msg.OtherTypeOfCollateral1 otherTypeOfCollateral) {
 		this.otherTypeOfCollateral = otherTypeOfCollateral;
+		return this;
 	}
 
-	@XmlElement(name = "IsseDt", required = true)
 	public DateFormat14Choice getIssueDate() {
 		return issueDate;
 	}
 
-	public void setIssueDate(DateFormat14Choice issueDate) {
-		this.issueDate = issueDate;
+	public OtherCollateral1 setIssueDate(DateFormat14Choice issueDate) {
+		this.issueDate = Objects.requireNonNull(issueDate);
+		return this;
 	}
 
-	@XmlElement(name = "XpryDt")
-	public DateFormat14Choice getExpiryDate() {
-		return expiryDate;
+	public Optional<DateFormat14Choice> getExpiryDate() {
+		return expiryDate == null ? Optional.empty() : Optional.of(expiryDate);
 	}
 
-	public void setExpiryDate(DateFormat14Choice expiryDate) {
+	public OtherCollateral1 setExpiryDate(DateFormat14Choice expiryDate) {
 		this.expiryDate = expiryDate;
+		return this;
 	}
 
-	@XmlElement(name = "Issr", required = true)
 	public PartyIdentification33Choice getIssuer() {
 		return issuer;
 	}
 
-	public void setIssuer(PartyIdentification33Choice issuer) {
-		this.issuer = issuer;
+	public OtherCollateral1 setIssuer(PartyIdentification33Choice issuer) {
+		this.issuer = Objects.requireNonNull(issuer);
+		return this;
 	}
 
-	@XmlElement(name = "ValDt")
-	public ISODate getValueDate() {
-		return valueDate;
+	public Optional<ISODate> getValueDate() {
+		return valueDate == null ? Optional.empty() : Optional.of(valueDate);
 	}
 
-	public void setValueDate(ISODate valueDate) {
+	public OtherCollateral1 setValueDate(ISODate valueDate) {
 		this.valueDate = valueDate;
+		return this;
 	}
 
-	@XmlElement(name = "XchgRate")
-	public BaseOneRate getExchangeRate() {
-		return exchangeRate;
+	public Optional<BaseOneRate> getExchangeRate() {
+		return exchangeRate == null ? Optional.empty() : Optional.of(exchangeRate);
 	}
 
-	public void setExchangeRate(BaseOneRate exchangeRate) {
+	public OtherCollateral1 setExchangeRate(BaseOneRate exchangeRate) {
 		this.exchangeRate = exchangeRate;
+		return this;
 	}
 
-	@XmlElement(name = "MktVal")
-	public ActiveCurrencyAndAmount getMarketValue() {
-		return marketValue;
+	public Optional<ActiveCurrencyAndAmount> getMarketValue() {
+		return marketValue == null ? Optional.empty() : Optional.of(marketValue);
 	}
 
-	public void setMarketValue(ActiveCurrencyAndAmount marketValue) {
+	public OtherCollateral1 setMarketValue(ActiveCurrencyAndAmount marketValue) {
 		this.marketValue = marketValue;
+		return this;
 	}
 
-	@XmlElement(name = "Hrcut")
-	public PercentageRate getHaircut() {
-		return haircut;
+	public Optional<PercentageRate> getHaircut() {
+		return haircut == null ? Optional.empty() : Optional.of(haircut);
 	}
 
-	public void setHaircut(PercentageRate haircut) {
+	public OtherCollateral1 setHaircut(PercentageRate haircut) {
 		this.haircut = haircut;
+		return this;
 	}
 
-	@XmlElement(name = "CollVal", required = true)
 	public ActiveCurrencyAndAmount getCollateralValue() {
 		return collateralValue;
 	}
 
-	public void setCollateralValue(ActiveCurrencyAndAmount collateralValue) {
-		this.collateralValue = collateralValue;
+	public OtherCollateral1 setCollateralValue(ActiveCurrencyAndAmount collateralValue) {
+		this.collateralValue = Objects.requireNonNull(collateralValue);
+		return this;
 	}
 }

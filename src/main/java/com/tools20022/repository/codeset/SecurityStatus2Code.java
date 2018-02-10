@@ -20,37 +20,40 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SecurityStatusCode;
+import com.tools20022.repository.codeset.SecurityStatus2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of the security.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SecurityStatus2Code#Active
+ * SecurityStatus2Code.Active}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecurityStatus2Code#Inactive
+ * SecurityStatus2Code.Inactive}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecurityStatus2Code#Suspended
+ * SecurityStatus2Code.Suspended}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.SecurityStatusCode
  * SecurityStatusCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecurityStatus2Code#mmActive
- * SecurityStatus2Code.mmActive}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecurityStatus2Code#mmInactive
- * SecurityStatus2Code.mmInactive}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecurityStatus2Code#mmSuspended
- * SecurityStatus2Code.mmSuspended}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of the security."</li>
  * </ul>
  */
-public class SecurityStatus2Code extends SecurityStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SecurityStatus2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +90,12 @@ public class SecurityStatus2Code extends SecurityStatusCode {
 	 * name} = "Active"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmActive = new MMCode() {
+	public static final SecurityStatus2Code Active = new SecurityStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
-			owner_lazy = () -> SecurityStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecurityStatus2Code.mmObject();
+			codeName = SecurityStatusCode.Active.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +114,12 @@ public class SecurityStatus2Code extends SecurityStatusCode {
 	 * name} = "Inactive"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInactive = new MMCode() {
+	public static final SecurityStatus2Code Inactive = new SecurityStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactive";
-			owner_lazy = () -> SecurityStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecurityStatus2Code.mmObject();
+			codeName = SecurityStatusCode.Inactive.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +138,58 @@ public class SecurityStatus2Code extends SecurityStatusCode {
 	 * name} = "Suspended"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuspended = new MMCode() {
+	public static final SecurityStatus2Code Suspended = new SecurityStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
-			owner_lazy = () -> SecurityStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecurityStatus2Code.mmObject();
+			codeName = SecurityStatusCode.Suspended.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SecurityStatus2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SecurityStatus2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACTV");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityStatus2Code";
 				definition = "Specifies the status of the security.";
-				code_lazy = () -> Arrays.asList(SecurityStatus2Code.mmActive, SecurityStatus2Code.mmInactive, SecurityStatus2Code.mmSuspended);
 				trace_lazy = () -> SecurityStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecurityStatus2Code.Active, com.tools20022.repository.codeset.SecurityStatus2Code.Inactive, com.tools20022.repository.codeset.SecurityStatus2Code.Suspended);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Active.getCodeName().get(), Active);
+		codesByName.put(Inactive.getCodeName().get(), Inactive);
+		codesByName.put(Suspended.getCodeName().get(), Suspended);
+	}
+
+	public static SecurityStatus2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SecurityStatus2Code[] values() {
+		SecurityStatus2Code[] values = new SecurityStatus2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SecurityStatus2Code> {
+		@Override
+		public SecurityStatus2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SecurityStatus2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

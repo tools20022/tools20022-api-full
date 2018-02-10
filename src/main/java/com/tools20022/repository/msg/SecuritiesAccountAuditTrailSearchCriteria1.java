@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Describes search criteria for securities account audit trail query."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesAccountAuditTrailSearchCriteria1", propOrder = {"securitiesAccountIdentification", "datePeriod"})
 public class SecuritiesAccountAuditTrailSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesAcctId")
 	protected SecuritiesAccount13 securitiesAccountIdentification;
 	/**
-	 * Describes securities account to be queried.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,7 +101,7 @@ public class SecuritiesAccountAuditTrailSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountAuditTrailSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountAuditTrailSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,10 +112,11 @@ public class SecuritiesAccountAuditTrailSearchCriteria1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	@XmlElement(name = "DtPrd")
 	protected DateSearchChoice datePeriod;
 	/**
-	 * Describes date period for querying information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,7 +144,7 @@ public class SecuritiesAccountAuditTrailSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountAuditTrailSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountAuditTrailSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "DtPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,8 +159,9 @@ public class SecuritiesAccountAuditTrailSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountAuditTrailSearchCriteria1.mmSecuritiesAccountIdentification, SecuritiesAccountAuditTrailSearchCriteria1.mmDatePeriod);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountAuditTrailSearchCriteria1.mmSecuritiesAccountIdentification,
+						com.tools20022.repository.msg.SecuritiesAccountAuditTrailSearchCriteria1.mmDatePeriod);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountAuditTrailSearchCriteria1";
 				definition = "Describes search criteria for securities account audit trail query.";
@@ -166,21 +170,21 @@ public class SecuritiesAccountAuditTrailSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesAcctId")
-	public SecuritiesAccount13 getSecuritiesAccountIdentification() {
-		return securitiesAccountIdentification;
+	public Optional<SecuritiesAccount13> getSecuritiesAccountIdentification() {
+		return securitiesAccountIdentification == null ? Optional.empty() : Optional.of(securitiesAccountIdentification);
 	}
 
-	public void setSecuritiesAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount13 securitiesAccountIdentification) {
+	public SecuritiesAccountAuditTrailSearchCriteria1 setSecuritiesAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount13 securitiesAccountIdentification) {
 		this.securitiesAccountIdentification = securitiesAccountIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "DtPrd")
-	public DateSearchChoice getDatePeriod() {
-		return datePeriod;
+	public Optional<DateSearchChoice> getDatePeriod() {
+		return datePeriod == null ? Optional.empty() : Optional.of(datePeriod);
 	}
 
-	public void setDatePeriod(DateSearchChoice datePeriod) {
+	public SecuritiesAccountAuditTrailSearchCriteria1 setDatePeriod(DateSearchChoice datePeriod) {
 		this.datePeriod = datePeriod;
+		return this;
 	}
 }

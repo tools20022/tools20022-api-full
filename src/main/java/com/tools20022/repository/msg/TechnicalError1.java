@@ -25,9 +25,11 @@ import com.tools20022.repository.choice.TechnicalError1Choice;
 import com.tools20022.repository.codeset.ErrorSeverity1Code;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TechnicalError1", propOrder = {"severity", "errorCode", "description"})
 public class TechnicalError1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "svrty", required = true)
 	protected ErrorSeverity1Code severity;
 	/**
-	 * Indicates the severity of the related error.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +107,7 @@ public class TechnicalError1 {
 	 */
 	public static final MMMessageAttribute mmSeverity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TechnicalError1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TechnicalError1.mmObject();
 			isDerived = false;
 			xmlTag = "svrty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +118,11 @@ public class TechnicalError1 {
 			simpleType_lazy = () -> ErrorSeverity1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ErrCd", required = true)
 	protected TechnicalError1Choice errorCode;
 	/**
-	 * Specifies the error code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -145,7 +149,7 @@ public class TechnicalError1 {
 	 */
 	public static final MMMessageAssociationEnd mmErrorCode = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TechnicalError1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TechnicalError1.mmObject();
 			isDerived = false;
 			xmlTag = "ErrCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,10 +161,11 @@ public class TechnicalError1 {
 			type_lazy = () -> TechnicalError1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Desc", required = true)
 	protected List<Max140Text> description;
 	/**
-	 * Specification of the error, in free format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,7 +192,7 @@ public class TechnicalError1 {
 	 */
 	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TechnicalError1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TechnicalError1.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,8 +206,8 @@ public class TechnicalError1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TechnicalError1.mmSeverity, TechnicalError1.mmErrorCode, TechnicalError1.mmDescription);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TechnicalError1.mmSeverity, com.tools20022.repository.msg.TechnicalError1.mmErrorCode, com.tools20022.repository.msg.TechnicalError1.mmDescription);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TechnicalError1";
 				definition = "Specifies information concerning the technical error that prevented delivery of the referenced messaging by the payment gateway application.";
@@ -211,30 +216,30 @@ public class TechnicalError1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "svrty", required = true)
 	public ErrorSeverity1Code getSeverity() {
 		return severity;
 	}
 
-	public void setSeverity(ErrorSeverity1Code severity) {
-		this.severity = severity;
+	public TechnicalError1 setSeverity(ErrorSeverity1Code severity) {
+		this.severity = Objects.requireNonNull(severity);
+		return this;
 	}
 
-	@XmlElement(name = "ErrCd", required = true)
 	public TechnicalError1Choice getErrorCode() {
 		return errorCode;
 	}
 
-	public void setErrorCode(TechnicalError1Choice errorCode) {
-		this.errorCode = errorCode;
+	public TechnicalError1 setErrorCode(TechnicalError1Choice errorCode) {
+		this.errorCode = Objects.requireNonNull(errorCode);
+		return this;
 	}
 
-	@XmlElement(name = "Desc", required = true)
 	public List<Max140Text> getDescription() {
-		return description;
+		return description == null ? description = new ArrayList<>() : description;
 	}
 
-	public void setDescription(List<Max140Text> description) {
-		this.description = description;
+	public TechnicalError1 setDescription(List<Max140Text> description) {
+		this.description = Objects.requireNonNull(description);
+		return this;
 	}
 }

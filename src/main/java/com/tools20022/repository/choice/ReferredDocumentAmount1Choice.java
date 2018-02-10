@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReferredDocumentAmount1Choice", propOrder = {"duePayableAmount", "discountAppliedAmount", "remittedAmount", "creditNoteAmount", "taxAmount"})
 public class ReferredDocumentAmount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DuePyblAmt", required = true)
 	protected CurrencyAndAmount duePayableAmount;
 	/**
-	 * Amount specified is the exact amount due and payable to the creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +125,7 @@ public class ReferredDocumentAmount1Choice {
 	public static final MMMessageAttribute mmDuePayableAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
-			componentContext_lazy = () -> ReferredDocumentAmount1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DuePyblAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,11 +136,11 @@ public class ReferredDocumentAmount1Choice {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "DscntApldAmt", required = true)
 	protected CurrencyAndAmount discountAppliedAmount;
 	/**
-	 * Amount of money that results from the application of an agreed discount
-	 * to the amount due and payable to the creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,7 +176,7 @@ public class ReferredDocumentAmount1Choice {
 	public static final MMMessageAttribute mmDiscountAppliedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Discount.mmDiscountAppliedAmount;
-			componentContext_lazy = () -> ReferredDocumentAmount1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DscntApldAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,10 +187,11 @@ public class ReferredDocumentAmount1Choice {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RmtdAmt", required = true)
 	protected CurrencyAndAmount remittedAmount;
 	/**
-	 * Amount of money remitted for the referred document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,7 +225,7 @@ public class ReferredDocumentAmount1Choice {
 	public static final MMMessageAttribute mmRemittedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Document.mmRemittedAmount;
-			componentContext_lazy = () -> ReferredDocumentAmount1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RmtdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,11 +236,11 @@ public class ReferredDocumentAmount1Choice {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtNoteAmt", required = true)
 	protected CurrencyAndAmount creditNoteAmount;
 	/**
-	 * Amount specified for the referred document is the amount of a credit
-	 * note.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -273,7 +276,7 @@ public class ReferredDocumentAmount1Choice {
 	public static final MMMessageAttribute mmCreditNoteAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Document.mmAmount;
-			componentContext_lazy = () -> ReferredDocumentAmount1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CdtNoteAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,10 +287,11 @@ public class ReferredDocumentAmount1Choice {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxAmt", required = true)
 	protected CurrencyAndAmount taxAmount;
 	/**
-	 * Quantity of cash resulting from the calculation of the tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -321,7 +325,7 @@ public class ReferredDocumentAmount1Choice {
 	public static final MMMessageAttribute mmTaxAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> ReferredDocumentAmount1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -336,10 +340,11 @@ public class ReferredDocumentAmount1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReferredDocumentAmount1Choice.mmDuePayableAmount, ReferredDocumentAmount1Choice.mmDiscountAppliedAmount, ReferredDocumentAmount1Choice.mmRemittedAmount,
-						ReferredDocumentAmount1Choice.mmCreditNoteAmount, ReferredDocumentAmount1Choice.mmTaxAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmDuePayableAmount, com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmDiscountAppliedAmount,
+						com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmRemittedAmount, com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmCreditNoteAmount,
+						com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmTaxAmount);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReferredDocumentAmount1Choice";
 				definition = "Nature of the amount and currency on a document referred to in the remittance section, typically either the original amount due/payable or the amount actually remitted for the referenced document.";
@@ -348,48 +353,48 @@ public class ReferredDocumentAmount1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DuePyblAmt", required = true)
 	public CurrencyAndAmount getDuePayableAmount() {
 		return duePayableAmount;
 	}
 
-	public void setDuePayableAmount(CurrencyAndAmount duePayableAmount) {
-		this.duePayableAmount = duePayableAmount;
+	public ReferredDocumentAmount1Choice setDuePayableAmount(CurrencyAndAmount duePayableAmount) {
+		this.duePayableAmount = Objects.requireNonNull(duePayableAmount);
+		return this;
 	}
 
-	@XmlElement(name = "DscntApldAmt", required = true)
 	public CurrencyAndAmount getDiscountAppliedAmount() {
 		return discountAppliedAmount;
 	}
 
-	public void setDiscountAppliedAmount(CurrencyAndAmount discountAppliedAmount) {
-		this.discountAppliedAmount = discountAppliedAmount;
+	public ReferredDocumentAmount1Choice setDiscountAppliedAmount(CurrencyAndAmount discountAppliedAmount) {
+		this.discountAppliedAmount = Objects.requireNonNull(discountAppliedAmount);
+		return this;
 	}
 
-	@XmlElement(name = "RmtdAmt", required = true)
 	public CurrencyAndAmount getRemittedAmount() {
 		return remittedAmount;
 	}
 
-	public void setRemittedAmount(CurrencyAndAmount remittedAmount) {
-		this.remittedAmount = remittedAmount;
+	public ReferredDocumentAmount1Choice setRemittedAmount(CurrencyAndAmount remittedAmount) {
+		this.remittedAmount = Objects.requireNonNull(remittedAmount);
+		return this;
 	}
 
-	@XmlElement(name = "CdtNoteAmt", required = true)
 	public CurrencyAndAmount getCreditNoteAmount() {
 		return creditNoteAmount;
 	}
 
-	public void setCreditNoteAmount(CurrencyAndAmount creditNoteAmount) {
-		this.creditNoteAmount = creditNoteAmount;
+	public ReferredDocumentAmount1Choice setCreditNoteAmount(CurrencyAndAmount creditNoteAmount) {
+		this.creditNoteAmount = Objects.requireNonNull(creditNoteAmount);
+		return this;
 	}
 
-	@XmlElement(name = "TaxAmt", required = true)
 	public CurrencyAndAmount getTaxAmount() {
 		return taxAmount;
 	}
 
-	public void setTaxAmount(CurrencyAndAmount taxAmount) {
-		this.taxAmount = taxAmount;
+	public ReferredDocumentAmount1Choice setTaxAmount(CurrencyAndAmount taxAmount) {
+		this.taxAmount = Objects.requireNonNull(taxAmount);
+		return this;
 	}
 }

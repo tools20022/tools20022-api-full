@@ -20,33 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CollateralTypeCode;
+import com.tools20022.repository.codeset.CollateralType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of collateral.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CollateralType2Code#Cash
+ * CollateralType2Code.Cash}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralType2Code#Securities
+ * CollateralType2Code.Securities}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.CollateralTypeCode
  * CollateralTypeCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CollateralType2Code#mmCash
- * CollateralType2Code.mmCash}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralType2Code#mmSecurities
- * CollateralType2Code.mmSecurities}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -63,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of collateral."</li>
  * </ul>
  */
-public class CollateralType2Code extends CollateralTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CollateralType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,11 +87,12 @@ public class CollateralType2Code extends CollateralTypeCode {
 	 * name} = "Cash"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCash = new MMCode() {
+	public static final CollateralType2Code Cash = new CollateralType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
-			owner_lazy = () -> CollateralType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralType2Code.mmObject();
+			codeName = CollateralTypeCode.Cash.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -105,26 +111,57 @@ public class CollateralType2Code extends CollateralTypeCode {
 	 * name} = "Securities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecurities = new MMCode() {
+	public static final CollateralType2Code Securities = new CollateralType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
-			owner_lazy = () -> CollateralType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralType2Code.mmObject();
+			codeName = CollateralTypeCode.Securities.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CollateralType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CollateralType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CASH");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralType2Code";
 				definition = "Specifies the type of collateral.";
-				code_lazy = () -> Arrays.asList(CollateralType2Code.mmCash, CollateralType2Code.mmSecurities);
 				trace_lazy = () -> CollateralTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralType2Code.Cash, com.tools20022.repository.codeset.CollateralType2Code.Securities);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Cash.getCodeName().get(), Cash);
+		codesByName.put(Securities.getCodeName().get(), Securities);
+	}
+
+	public static CollateralType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CollateralType2Code[] values() {
+		CollateralType2Code[] values = new CollateralType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CollateralType2Code> {
+		@Override
+		public CollateralType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CollateralType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

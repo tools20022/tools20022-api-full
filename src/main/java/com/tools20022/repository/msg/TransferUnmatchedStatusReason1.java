@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherStatusRule#forTransferUnmatchedStatusReason1
+ * ConstraintOtherStatusRule.forTransferUnmatchedStatusReason1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Reason for an unmatched status."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransferUnmatchedStatusReason1", propOrder = {"structured", "additionalInformation"})
 public class TransferUnmatchedStatusReason1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Strd", required = true)
 	protected TransferUnmatchedReason1Code structured;
 	/**
-	 * Reason for a rejected status in structured form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +113,7 @@ public class TransferUnmatchedStatusReason1 {
 	 */
 	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransferUnmatchedStatusReason1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferUnmatchedStatusReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Strd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,11 +124,11 @@ public class TransferUnmatchedStatusReason1 {
 			simpleType_lazy = () -> TransferUnmatchedReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected Max350Text additionalInformation;
 	/**
-	 * Additional information about the reason for the unmatched status in
-	 * textual form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +157,7 @@ public class TransferUnmatchedStatusReason1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransferUnmatchedStatusReason1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferUnmatchedStatusReason1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,9 +172,10 @@ public class TransferUnmatchedStatusReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransferUnmatchedStatusReason1.mmStructured, TransferUnmatchedStatusReason1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferUnmatchedStatusReason1.mmStructured, com.tools20022.repository.msg.TransferUnmatchedStatusReason1.mmAdditionalInformation);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherStatusRule.forTransferUnmatchedStatusReason1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferUnmatchedStatusReason1";
 				definition = "Reason for an unmatched status.";
@@ -172,21 +184,21 @@ public class TransferUnmatchedStatusReason1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Strd", required = true)
 	public TransferUnmatchedReason1Code getStructured() {
 		return structured;
 	}
 
-	public void setStructured(TransferUnmatchedReason1Code structured) {
-		this.structured = structured;
+	public TransferUnmatchedStatusReason1 setStructured(TransferUnmatchedReason1Code structured) {
+		this.structured = Objects.requireNonNull(structured);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public Max350Text getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<Max350Text> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(Max350Text additionalInformation) {
+	public TransferUnmatchedStatusReason1 setAdditionalInformation(Max350Text additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 }

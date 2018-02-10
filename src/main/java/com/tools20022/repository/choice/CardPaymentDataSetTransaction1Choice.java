@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.CardPaymentDataSetTransaction4;
 import com.tools20022.repository.msg.CardPaymentDataSetTransaction5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardPaymentDataSetTransaction1Choice", propOrder = {"completion", "cancellation", "authorisationRequest", "authorisationResponse"})
 public class CardPaymentDataSetTransaction1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cmpltn")
 	protected CardPaymentDataSetTransaction2 completion;
 	/**
-	 * Completed card payment transaction to be captured.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,7 +127,7 @@ public class CardPaymentDataSetTransaction1Choice {
 	 */
 	public static final MMMessageAttribute mmCompletion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardPaymentDataSetTransaction1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cmpltn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,10 +139,11 @@ public class CardPaymentDataSetTransaction1Choice {
 			complexType_lazy = () -> CardPaymentDataSetTransaction2.mmObject();
 		}
 	};
+	@XmlElement(name = "Cxl")
 	protected CardPaymentDataSetTransaction3 cancellation;
 	/**
-	 * Cancelled card payment transaction to be captured.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,7 +179,7 @@ public class CardPaymentDataSetTransaction1Choice {
 	 */
 	public static final MMMessageAttribute mmCancellation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardPaymentDataSetTransaction1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cxl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,10 +191,11 @@ public class CardPaymentDataSetTransaction1Choice {
 			complexType_lazy = () -> CardPaymentDataSetTransaction3.mmObject();
 		}
 	};
+	@XmlElement(name = "AuthstnReq")
 	protected CardPaymentDataSetTransaction4 authorisationRequest;
 	/**
-	 * Card payment transaction including an authorisation request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,7 +232,7 @@ public class CardPaymentDataSetTransaction1Choice {
 	 */
 	public static final MMMessageAttribute mmAuthorisationRequest = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardPaymentDataSetTransaction1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,10 +244,11 @@ public class CardPaymentDataSetTransaction1Choice {
 			complexType_lazy = () -> CardPaymentDataSetTransaction4.mmObject();
 		}
 	};
+	@XmlElement(name = "AuthstnRspn")
 	protected CardPaymentDataSetTransaction5 authorisationResponse;
 	/**
-	 * Card payment transaction including an authorisation response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -280,7 +285,7 @@ public class CardPaymentDataSetTransaction1Choice {
 	 */
 	public static final MMMessageAttribute mmAuthorisationResponse = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardPaymentDataSetTransaction1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -296,9 +301,9 @@ public class CardPaymentDataSetTransaction1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardPaymentDataSetTransaction1Choice.mmCompletion, CardPaymentDataSetTransaction1Choice.mmCancellation, CardPaymentDataSetTransaction1Choice.mmAuthorisationRequest,
-						CardPaymentDataSetTransaction1Choice.mmAuthorisationResponse);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CardPaymentDataSetTransaction1Choice.mmCompletion, com.tools20022.repository.choice.CardPaymentDataSetTransaction1Choice.mmCancellation,
+						com.tools20022.repository.choice.CardPaymentDataSetTransaction1Choice.mmAuthorisationRequest, com.tools20022.repository.choice.CardPaymentDataSetTransaction1Choice.mmAuthorisationResponse);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentDataSetTransaction1Choice";
 				definition = "Card payment transaction choice between cancellation, authorisation request and authorisation response.";
@@ -308,39 +313,39 @@ public class CardPaymentDataSetTransaction1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cmpltn")
-	public CardPaymentDataSetTransaction2 getCompletion() {
-		return completion;
+	public Optional<CardPaymentDataSetTransaction2> getCompletion() {
+		return completion == null ? Optional.empty() : Optional.of(completion);
 	}
 
-	public void setCompletion(CardPaymentDataSetTransaction2 completion) {
+	public CardPaymentDataSetTransaction1Choice setCompletion(CardPaymentDataSetTransaction2 completion) {
 		this.completion = completion;
+		return this;
 	}
 
-	@XmlElement(name = "Cxl")
-	public CardPaymentDataSetTransaction3 getCancellation() {
-		return cancellation;
+	public Optional<CardPaymentDataSetTransaction3> getCancellation() {
+		return cancellation == null ? Optional.empty() : Optional.of(cancellation);
 	}
 
-	public void setCancellation(CardPaymentDataSetTransaction3 cancellation) {
+	public CardPaymentDataSetTransaction1Choice setCancellation(CardPaymentDataSetTransaction3 cancellation) {
 		this.cancellation = cancellation;
+		return this;
 	}
 
-	@XmlElement(name = "AuthstnReq")
-	public CardPaymentDataSetTransaction4 getAuthorisationRequest() {
-		return authorisationRequest;
+	public Optional<CardPaymentDataSetTransaction4> getAuthorisationRequest() {
+		return authorisationRequest == null ? Optional.empty() : Optional.of(authorisationRequest);
 	}
 
-	public void setAuthorisationRequest(CardPaymentDataSetTransaction4 authorisationRequest) {
+	public CardPaymentDataSetTransaction1Choice setAuthorisationRequest(CardPaymentDataSetTransaction4 authorisationRequest) {
 		this.authorisationRequest = authorisationRequest;
+		return this;
 	}
 
-	@XmlElement(name = "AuthstnRspn")
-	public CardPaymentDataSetTransaction5 getAuthorisationResponse() {
-		return authorisationResponse;
+	public Optional<CardPaymentDataSetTransaction5> getAuthorisationResponse() {
+		return authorisationResponse == null ? Optional.empty() : Optional.of(authorisationResponse);
 	}
 
-	public void setAuthorisationResponse(CardPaymentDataSetTransaction5 authorisationResponse) {
+	public CardPaymentDataSetTransaction1Choice setAuthorisationResponse(CardPaymentDataSetTransaction5 authorisationResponse) {
 		this.authorisationResponse = authorisationResponse;
+		return this;
 	}
 }

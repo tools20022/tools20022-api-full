@@ -28,6 +28,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -41,8 +42,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ConfirmationRejectedStatus1#mmReasonRule
- * ConfirmationRejectedStatus1.mmReasonRule}</li>
+ * {@linkplain com.tools20022.repository.msg.ConfirmationRejectedStatus1#ReasonRule
+ * ConfirmationRejectedStatus1.ReasonRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -66,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -86,15 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ConfirmationRejectedStatus1", propOrder = {"reason", "extendedReason", "dataSourceScheme"})
 public class ConfirmationRejectedStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rsn", required = true)
 	protected RejectedConfirmationStatusReason1Code reason;
 	/**
-	 * Reason for the rejected status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -136,7 +138,7 @@ public class ConfirmationRejectedStatus1 {
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConfirmationRejectedStatusReason;
-			componentContext_lazy = () -> ConfirmationRejectedStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,10 +150,11 @@ public class ConfirmationRejectedStatus1 {
 			simpleType_lazy = () -> RejectedConfirmationStatusReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedRsn", required = true)
 	protected Extended350Code extendedReason;
 	/**
-	 * Reason for the rejected status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,7 +182,7 @@ public class ConfirmationRejectedStatus1 {
 	 */
 	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ConfirmationRejectedStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,10 +193,11 @@ public class ConfirmationRejectedStatus1 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DataSrcSchme", required = true)
 	protected GenericIdentification1 dataSourceScheme;
 	/**
-	 * Proprietary identification of the reason for a rejected status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -226,7 +230,7 @@ public class ConfirmationRejectedStatus1 {
 	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
-			componentContext_lazy = () -> ConfirmationRejectedStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -275,22 +279,24 @@ public class ConfirmationRejectedStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmReasonRule = new MMXor() {
+	public static final MMXor ReasonRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "One and only one message element in the list (ExtendedReason, Reason, DataSourceScheme) must be present.";
-			messageComponent_lazy = () -> ConfirmationRejectedStatus1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(ConfirmationRejectedStatus1.mmReason, ConfirmationRejectedStatus1.mmExtendedReason, ConfirmationRejectedStatus1.mmDataSourceScheme);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmReason, com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmExtendedReason,
+					com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmDataSourceScheme);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ConfirmationRejectedStatus1.mmReason, ConfirmationRejectedStatus1.mmExtendedReason, ConfirmationRejectedStatus1.mmDataSourceScheme);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmReason, com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmExtendedReason,
+						com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmDataSourceScheme);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -302,36 +308,36 @@ public class ConfirmationRejectedStatus1 {
 				name = "ConfirmationRejectedStatus1";
 				definition = "Status is rejected.";
 				nextVersions_lazy = () -> Arrays.asList(ConfirmationRejectedStatus2.mmObject());
-				xors_lazy = () -> Arrays.asList(ConfirmationRejectedStatus1.mmReasonRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationRejectedStatus1.ReasonRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public RejectedConfirmationStatusReason1Code getReason() {
 		return reason;
 	}
 
-	public void setReason(RejectedConfirmationStatusReason1Code reason) {
-		this.reason = reason;
+	public ConfirmationRejectedStatus1 setReason(RejectedConfirmationStatusReason1Code reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedRsn", required = true)
 	public Extended350Code getExtendedReason() {
 		return extendedReason;
 	}
 
-	public void setExtendedReason(Extended350Code extendedReason) {
-		this.extendedReason = extendedReason;
+	public ConfirmationRejectedStatus1 setExtendedReason(Extended350Code extendedReason) {
+		this.extendedReason = Objects.requireNonNull(extendedReason);
+		return this;
 	}
 
-	@XmlElement(name = "DataSrcSchme", required = true)
 	public GenericIdentification1 getDataSourceScheme() {
 		return dataSourceScheme;
 	}
 
-	public void setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
-		this.dataSourceScheme = dataSourceScheme;
+	public ConfirmationRejectedStatus1 setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
+		return this;
 	}
 }

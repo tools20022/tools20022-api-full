@@ -27,6 +27,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Permission given by an account owner to debit its account as the result of a
@@ -62,18 +64,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails
- * DebitAuthorisationDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails2
- * DebitAuthorisationDetails2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails3
- * DebitAuthorisationDetails3}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -86,10 +76,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails
+ * DebitAuthorisationDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails2
+ * DebitAuthorisationDetails2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DebitAuthorisationDetails3
+ * DebitAuthorisationDetails3}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,8 +109,8 @@ public class DebitAuthorisation {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected ISODate valueDateToDebit;
 	/**
-	 * Value date for debiting the amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,8 +163,8 @@ public class DebitAuthorisation {
 		{
 			derivation_lazy = () -> Arrays.asList(DebitAuthorisationDetails.mmValueDateToDebit, DebitAuthorisationDetails2.mmValueDateToDebit, DebitAuthorisationConfirmation.mmValueDateToDebit,
 					DebitAuthorisationConfirmation2.mmValueDateToDebit, DebitAuthorisationDetails3.mmValueDateToDebit, DebitAuthorisation1.mmValueDateToDebit, DebitAuthorisation2.mmValueDateToDebit);
-			elementContext_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValueDateToDebit";
 			definition = "Value date for debiting the amount.";
@@ -181,9 +183,8 @@ public class DebitAuthorisation {
 	};
 	protected YesNoIndicator debitAuthorisationDecision;
 	/**
-	 * Code expressing the decision taken by the account owner relative to the
-	 * request for debit authorization.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -223,8 +224,8 @@ public class DebitAuthorisation {
 	public static final MMBusinessAttribute mmDebitAuthorisationDecision = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DebitAuthorisationConfirmation.mmDebitAuthorisation, DebitAuthorisationConfirmation2.mmDebitAuthorisation);
-			elementContext_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitAuthorisationDecision";
 			definition = "Code expressing the decision taken by the account owner relative to the request for debit authorization.";
@@ -243,9 +244,8 @@ public class DebitAuthorisation {
 	};
 	protected CurrencyAndAmount amountToDebit;
 	/**
-	 * Specifies the amount to debit when the amount is lower than the amount of
-	 * the underlying transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -301,8 +301,8 @@ public class DebitAuthorisation {
 		{
 			derivation_lazy = () -> Arrays.asList(DebitAuthorisationDetails.mmAmountToDebit, DebitAuthorisationDetails2.mmAmountToDebit, DebitAuthorisationConfirmation.mmAmountToDebit, DebitAuthorisationConfirmation2.mmAmountToDebit,
 					DebitAuthorisationDetails3.mmAmountToDebit, DebitAuthorisation1.mmAmountToDebit, DebitAuthorisation2.mmAmountToDebit);
-			elementContext_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AmountToDebit";
 			definition = "Specifies the amount to debit when the amount is lower than the amount of the underlying transaction.";
@@ -321,8 +321,8 @@ public class DebitAuthorisation {
 	};
 	protected Max140Text reason;
 	/**
-	 * Justification of the (partial) debit authorisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -359,8 +359,8 @@ public class DebitAuthorisation {
 	public static final MMBusinessAttribute mmReason = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DebitAuthorisationConfirmation.mmReason, DebitAuthorisationConfirmation2.mmReason);
-			elementContext_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reason";
 			definition = "Justification of the (partial) debit authorisation.";
@@ -379,9 +379,8 @@ public class DebitAuthorisation {
 	};
 	protected Payment authorisedReturn;
 	/**
-	 * Authorisation given by a credited party to return the payment which was
-	 * the reason for the credit and therefore to debit its account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -415,8 +414,8 @@ public class DebitAuthorisation {
 	 */
 	public static final MMBusinessAssociationEnd mmAuthorisedReturn = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthorisedReturn";
 			definition = "Authorisation given by a credited party to return the payment which was the reason for the credit and therefore to debit its account.";
@@ -429,9 +428,8 @@ public class DebitAuthorisation {
 	};
 	protected PaymentInvestigationCaseResolution relatedInvestigationCaseResolution;
 	/**
-	 * Payment investigation case resolution which is the source of the debit
-	 * authorisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -467,8 +465,8 @@ public class DebitAuthorisation {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedInvestigationCaseResolution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvestigationCaseResolution";
 			definition = "Payment investigation case resolution which is the source of the debit authorisation.";
@@ -483,7 +481,7 @@ public class DebitAuthorisation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DebitAuthorisation";
 				definition = "Permission given by an account owner to debit its account as the result of a cancelled payment. The authoriser is the party whose account was credited as the result of a payment instruction.";
@@ -506,47 +504,53 @@ public class DebitAuthorisation {
 		return valueDateToDebit;
 	}
 
-	public void setValueDateToDebit(ISODate valueDateToDebit) {
-		this.valueDateToDebit = valueDateToDebit;
+	public DebitAuthorisation setValueDateToDebit(ISODate valueDateToDebit) {
+		this.valueDateToDebit = Objects.requireNonNull(valueDateToDebit);
+		return this;
 	}
 
 	public YesNoIndicator getDebitAuthorisationDecision() {
 		return debitAuthorisationDecision;
 	}
 
-	public void setDebitAuthorisationDecision(YesNoIndicator debitAuthorisationDecision) {
-		this.debitAuthorisationDecision = debitAuthorisationDecision;
+	public DebitAuthorisation setDebitAuthorisationDecision(YesNoIndicator debitAuthorisationDecision) {
+		this.debitAuthorisationDecision = Objects.requireNonNull(debitAuthorisationDecision);
+		return this;
 	}
 
 	public CurrencyAndAmount getAmountToDebit() {
 		return amountToDebit;
 	}
 
-	public void setAmountToDebit(CurrencyAndAmount amountToDebit) {
-		this.amountToDebit = amountToDebit;
+	public DebitAuthorisation setAmountToDebit(CurrencyAndAmount amountToDebit) {
+		this.amountToDebit = Objects.requireNonNull(amountToDebit);
+		return this;
 	}
 
 	public Max140Text getReason() {
 		return reason;
 	}
 
-	public void setReason(Max140Text reason) {
-		this.reason = reason;
+	public DebitAuthorisation setReason(Max140Text reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	public Payment getAuthorisedReturn() {
-		return authorisedReturn;
+	public Optional<Payment> getAuthorisedReturn() {
+		return authorisedReturn == null ? Optional.empty() : Optional.of(authorisedReturn);
 	}
 
-	public void setAuthorisedReturn(com.tools20022.repository.entity.Payment authorisedReturn) {
+	public DebitAuthorisation setAuthorisedReturn(com.tools20022.repository.entity.Payment authorisedReturn) {
 		this.authorisedReturn = authorisedReturn;
+		return this;
 	}
 
-	public PaymentInvestigationCaseResolution getRelatedInvestigationCaseResolution() {
-		return relatedInvestigationCaseResolution;
+	public Optional<PaymentInvestigationCaseResolution> getRelatedInvestigationCaseResolution() {
+		return relatedInvestigationCaseResolution == null ? Optional.empty() : Optional.of(relatedInvestigationCaseResolution);
 	}
 
-	public void setRelatedInvestigationCaseResolution(com.tools20022.repository.entity.PaymentInvestigationCaseResolution relatedInvestigationCaseResolution) {
+	public DebitAuthorisation setRelatedInvestigationCaseResolution(com.tools20022.repository.entity.PaymentInvestigationCaseResolution relatedInvestigationCaseResolution) {
 		this.relatedInvestigationCaseResolution = relatedInvestigationCaseResolution;
+		return this;
 	}
 }

@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max40Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -82,8 +81,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,16 +93,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details from participant profile account."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ParticipantAccount1", propOrder = {"accountTypeName", "accountTypeShortName", "openingDate", "closingDate", "deletionDate", "licenseWithdrawalDocument", "accountRestrictions", "designatedAccount",
 		"liquidityPoolParticipantDetails", "limits", "arrests", "migration"})
 public class ParticipantAccount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctTpNm", required = true)
 	protected Max40Text accountTypeName;
 	/**
-	 * Type of the account
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +130,7 @@ public class ParticipantAccount1 {
 	 */
 	public static final MMMessageAttribute mmAccountTypeName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ParticipantAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctTpNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,10 +141,11 @@ public class ParticipantAccount1 {
 			simpleType_lazy = () -> Max40Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctTpShrtNm", required = true)
 	protected Max140Text accountTypeShortName;
 	/**
-	 * Short name for the account type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +172,7 @@ public class ParticipantAccount1 {
 	 */
 	public static final MMMessageAttribute mmAccountTypeShortName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ParticipantAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctTpShrtNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,10 +183,11 @@ public class ParticipantAccount1 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OpngDt", required = true)
 	protected ISODateTime openingDate;
 	/**
-	 * Date the account was open.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -212,7 +214,7 @@ public class ParticipantAccount1 {
 	 */
 	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ParticipantAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "OpngDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,10 +225,11 @@ public class ParticipantAccount1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "ClsgDt")
 	protected ISODateTime closingDate;
 	/**
-	 * Date the account was closed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -253,7 +256,7 @@ public class ParticipantAccount1 {
 	 */
 	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ParticipantAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -264,10 +267,11 @@ public class ParticipantAccount1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "DeltnDt")
 	protected ISODateTime deletionDate;
 	/**
-	 * Date the information about the account was deleted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -294,7 +298,7 @@ public class ParticipantAccount1 {
 	 */
 	public static final MMMessageAttribute mmDeletionDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ParticipantAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "DeltnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -305,10 +309,11 @@ public class ParticipantAccount1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "LicWdrwlDoc")
 	protected DocumentIdentification11 licenseWithdrawalDocument;
 	/**
-	 * Details related to license withdrawal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -335,7 +340,7 @@ public class ParticipantAccount1 {
 	 */
 	public static final MMMessageAssociationEnd mmLicenseWithdrawalDocument = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ParticipantAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "LicWdrwlDoc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -347,10 +352,11 @@ public class ParticipantAccount1 {
 			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification11.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctRstrctns")
 	protected List<com.tools20022.repository.msg.AccountRestrictions1> accountRestrictions;
 	/**
-	 * Details regarding intraday account restrictions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -376,7 +382,7 @@ public class ParticipantAccount1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountRestrictions = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ParticipantAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctRstrctns";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -387,11 +393,11 @@ public class ParticipantAccount1 {
 			type_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
 		}
 	};
+	@XmlElement(name = "DsgntdAcct")
 	protected DefaultAccountDetails1 designatedAccount;
 	/**
-	 * Balance sweeping account used for automated funds transfer when the
-	 * receiver account is not available.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -419,7 +425,7 @@ public class ParticipantAccount1 {
 	 */
 	public static final MMMessageAssociationEnd mmDesignatedAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ParticipantAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "DsgntdAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -431,10 +437,11 @@ public class ParticipantAccount1 {
 			type_lazy = () -> com.tools20022.repository.msg.DefaultAccountDetails1.mmObject();
 		}
 	};
+	@XmlElement(name = "LqdtyPoolPtcptDtls")
 	protected LiquidityPoolMembers1Choice liquidityPoolParticipantDetails;
 	/**
-	 * Information about account and account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -461,7 +468,7 @@ public class ParticipantAccount1 {
 	 */
 	public static final MMMessageAssociationEnd mmLiquidityPoolParticipantDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ParticipantAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "LqdtyPoolPtcptDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -473,10 +480,11 @@ public class ParticipantAccount1 {
 			type_lazy = () -> LiquidityPoolMembers1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Lmts")
 	protected List<com.tools20022.repository.msg.AccountLimits1> limits;
 	/**
-	 * Values and types of limits set on the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -502,7 +510,7 @@ public class ParticipantAccount1 {
 	 */
 	public static final MMMessageAssociationEnd mmLimits = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ParticipantAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Lmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -513,10 +521,11 @@ public class ParticipantAccount1 {
 			type_lazy = () -> com.tools20022.repository.msg.AccountLimits1.mmObject();
 		}
 	};
+	@XmlElement(name = "Arrsts")
 	protected List<com.tools20022.repository.msg.ArrestedFunds1> arrests;
 	/**
-	 * Information related to the arrest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -542,7 +551,7 @@ public class ParticipantAccount1 {
 	 */
 	public static final MMMessageAssociationEnd mmArrests = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ParticipantAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Arrsts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -553,10 +562,11 @@ public class ParticipantAccount1 {
 			type_lazy = () -> com.tools20022.repository.msg.ArrestedFunds1.mmObject();
 		}
 	};
+	@XmlElement(name = "Mgrtn")
 	protected SystemMigration1 migration;
 	/**
-	 * Information related for participant migration process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -582,7 +592,7 @@ public class ParticipantAccount1 {
 	 */
 	public static final MMMessageAssociationEnd mmMigration = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ParticipantAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Mgrtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -598,10 +608,12 @@ public class ParticipantAccount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ParticipantAccount1.mmAccountTypeName, ParticipantAccount1.mmAccountTypeShortName, ParticipantAccount1.mmOpeningDate, ParticipantAccount1.mmClosingDate,
-						ParticipantAccount1.mmDeletionDate, ParticipantAccount1.mmLicenseWithdrawalDocument, ParticipantAccount1.mmAccountRestrictions, ParticipantAccount1.mmDesignatedAccount,
-						ParticipantAccount1.mmLiquidityPoolParticipantDetails, ParticipantAccount1.mmLimits, ParticipantAccount1.mmArrests, ParticipantAccount1.mmMigration);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParticipantAccount1.mmAccountTypeName, com.tools20022.repository.msg.ParticipantAccount1.mmAccountTypeShortName,
+						com.tools20022.repository.msg.ParticipantAccount1.mmOpeningDate, com.tools20022.repository.msg.ParticipantAccount1.mmClosingDate, com.tools20022.repository.msg.ParticipantAccount1.mmDeletionDate,
+						com.tools20022.repository.msg.ParticipantAccount1.mmLicenseWithdrawalDocument, com.tools20022.repository.msg.ParticipantAccount1.mmAccountRestrictions,
+						com.tools20022.repository.msg.ParticipantAccount1.mmDesignatedAccount, com.tools20022.repository.msg.ParticipantAccount1.mmLiquidityPoolParticipantDetails, com.tools20022.repository.msg.ParticipantAccount1.mmLimits,
+						com.tools20022.repository.msg.ParticipantAccount1.mmArrests, com.tools20022.repository.msg.ParticipantAccount1.mmMigration);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ParticipantAccount1";
 				definition = "Details from participant profile account.";
@@ -610,111 +622,111 @@ public class ParticipantAccount1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctTpNm", required = true)
 	public Max40Text getAccountTypeName() {
 		return accountTypeName;
 	}
 
-	public void setAccountTypeName(Max40Text accountTypeName) {
-		this.accountTypeName = accountTypeName;
+	public ParticipantAccount1 setAccountTypeName(Max40Text accountTypeName) {
+		this.accountTypeName = Objects.requireNonNull(accountTypeName);
+		return this;
 	}
 
-	@XmlElement(name = "AcctTpShrtNm", required = true)
 	public Max140Text getAccountTypeShortName() {
 		return accountTypeShortName;
 	}
 
-	public void setAccountTypeShortName(Max140Text accountTypeShortName) {
-		this.accountTypeShortName = accountTypeShortName;
+	public ParticipantAccount1 setAccountTypeShortName(Max140Text accountTypeShortName) {
+		this.accountTypeShortName = Objects.requireNonNull(accountTypeShortName);
+		return this;
 	}
 
-	@XmlElement(name = "OpngDt", required = true)
 	public ISODateTime getOpeningDate() {
 		return openingDate;
 	}
 
-	public void setOpeningDate(ISODateTime openingDate) {
-		this.openingDate = openingDate;
+	public ParticipantAccount1 setOpeningDate(ISODateTime openingDate) {
+		this.openingDate = Objects.requireNonNull(openingDate);
+		return this;
 	}
 
-	@XmlElement(name = "ClsgDt")
-	public ISODateTime getClosingDate() {
-		return closingDate;
+	public Optional<ISODateTime> getClosingDate() {
+		return closingDate == null ? Optional.empty() : Optional.of(closingDate);
 	}
 
-	public void setClosingDate(ISODateTime closingDate) {
+	public ParticipantAccount1 setClosingDate(ISODateTime closingDate) {
 		this.closingDate = closingDate;
+		return this;
 	}
 
-	@XmlElement(name = "DeltnDt")
-	public ISODateTime getDeletionDate() {
-		return deletionDate;
+	public Optional<ISODateTime> getDeletionDate() {
+		return deletionDate == null ? Optional.empty() : Optional.of(deletionDate);
 	}
 
-	public void setDeletionDate(ISODateTime deletionDate) {
+	public ParticipantAccount1 setDeletionDate(ISODateTime deletionDate) {
 		this.deletionDate = deletionDate;
+		return this;
 	}
 
-	@XmlElement(name = "LicWdrwlDoc")
-	public DocumentIdentification11 getLicenseWithdrawalDocument() {
-		return licenseWithdrawalDocument;
+	public Optional<DocumentIdentification11> getLicenseWithdrawalDocument() {
+		return licenseWithdrawalDocument == null ? Optional.empty() : Optional.of(licenseWithdrawalDocument);
 	}
 
-	public void setLicenseWithdrawalDocument(com.tools20022.repository.msg.DocumentIdentification11 licenseWithdrawalDocument) {
+	public ParticipantAccount1 setLicenseWithdrawalDocument(com.tools20022.repository.msg.DocumentIdentification11 licenseWithdrawalDocument) {
 		this.licenseWithdrawalDocument = licenseWithdrawalDocument;
+		return this;
 	}
 
-	@XmlElement(name = "AcctRstrctns")
 	public List<AccountRestrictions1> getAccountRestrictions() {
-		return accountRestrictions;
+		return accountRestrictions == null ? accountRestrictions = new ArrayList<>() : accountRestrictions;
 	}
 
-	public void setAccountRestrictions(List<com.tools20022.repository.msg.AccountRestrictions1> accountRestrictions) {
-		this.accountRestrictions = accountRestrictions;
+	public ParticipantAccount1 setAccountRestrictions(List<com.tools20022.repository.msg.AccountRestrictions1> accountRestrictions) {
+		this.accountRestrictions = Objects.requireNonNull(accountRestrictions);
+		return this;
 	}
 
-	@XmlElement(name = "DsgntdAcct")
-	public DefaultAccountDetails1 getDesignatedAccount() {
-		return designatedAccount;
+	public Optional<DefaultAccountDetails1> getDesignatedAccount() {
+		return designatedAccount == null ? Optional.empty() : Optional.of(designatedAccount);
 	}
 
-	public void setDesignatedAccount(com.tools20022.repository.msg.DefaultAccountDetails1 designatedAccount) {
+	public ParticipantAccount1 setDesignatedAccount(com.tools20022.repository.msg.DefaultAccountDetails1 designatedAccount) {
 		this.designatedAccount = designatedAccount;
+		return this;
 	}
 
-	@XmlElement(name = "LqdtyPoolPtcptDtls")
-	public LiquidityPoolMembers1Choice getLiquidityPoolParticipantDetails() {
-		return liquidityPoolParticipantDetails;
+	public Optional<LiquidityPoolMembers1Choice> getLiquidityPoolParticipantDetails() {
+		return liquidityPoolParticipantDetails == null ? Optional.empty() : Optional.of(liquidityPoolParticipantDetails);
 	}
 
-	public void setLiquidityPoolParticipantDetails(LiquidityPoolMembers1Choice liquidityPoolParticipantDetails) {
+	public ParticipantAccount1 setLiquidityPoolParticipantDetails(LiquidityPoolMembers1Choice liquidityPoolParticipantDetails) {
 		this.liquidityPoolParticipantDetails = liquidityPoolParticipantDetails;
+		return this;
 	}
 
-	@XmlElement(name = "Lmts")
 	public List<AccountLimits1> getLimits() {
-		return limits;
+		return limits == null ? limits = new ArrayList<>() : limits;
 	}
 
-	public void setLimits(List<com.tools20022.repository.msg.AccountLimits1> limits) {
-		this.limits = limits;
+	public ParticipantAccount1 setLimits(List<com.tools20022.repository.msg.AccountLimits1> limits) {
+		this.limits = Objects.requireNonNull(limits);
+		return this;
 	}
 
-	@XmlElement(name = "Arrsts")
 	public List<ArrestedFunds1> getArrests() {
-		return arrests;
+		return arrests == null ? arrests = new ArrayList<>() : arrests;
 	}
 
-	public void setArrests(List<com.tools20022.repository.msg.ArrestedFunds1> arrests) {
-		this.arrests = arrests;
+	public ParticipantAccount1 setArrests(List<com.tools20022.repository.msg.ArrestedFunds1> arrests) {
+		this.arrests = Objects.requireNonNull(arrests);
+		return this;
 	}
 
-	@XmlElement(name = "Mgrtn")
-	public SystemMigration1 getMigration() {
-		return migration;
+	public Optional<SystemMigration1> getMigration() {
+		return migration == null ? Optional.empty() : Optional.of(migration);
 	}
 
-	public void setMigration(com.tools20022.repository.msg.SystemMigration1 migration) {
+	public ParticipantAccount1 setMigration(com.tools20022.repository.msg.SystemMigration1 migration) {
 		this.migration = migration;
+		return this;
 	}
 }

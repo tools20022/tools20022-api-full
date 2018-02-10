@@ -27,6 +27,8 @@ import com.tools20022.repository.codeset.Referred1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -94,8 +96,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReferredPlacementAgentRule#forReferredAgent1
+ * ConstraintReferredPlacementAgentRule.forReferredAgent1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,15 +124,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReferredAgent1", propOrder = {"referred", "referredPlacementAgent"})
 public class ReferredAgent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rfrd", required = true)
 	protected Referred1Code referred;
 	/**
-	 * Indicates if the investor was referred by a placement agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +168,7 @@ public class ReferredAgent1 {
 	 */
 	public static final MMMessageAttribute mmReferred = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReferredAgent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredAgent1.mmObject();
 			isDerived = false;
 			xmlTag = "Rfrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,10 +180,11 @@ public class ReferredAgent1 {
 			simpleType_lazy = () -> Referred1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RfrdPlcmntAgt")
 	protected PartyIdentification2Choice referredPlacementAgent;
 	/**
-	 * Placement agent that referred the investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -206,7 +218,7 @@ public class ReferredAgent1 {
 	 */
 	public static final MMMessageAssociationEnd mmReferredPlacementAgent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReferredAgent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredAgent1.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdPlcmntAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,12 +235,13 @@ public class ReferredAgent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReferredAgent1.mmReferred, ReferredAgent1.mmReferredPlacementAgent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredAgent1.mmReferred, com.tools20022.repository.msg.ReferredAgent1.mmReferredPlacementAgent);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV02.mmPlacement, AccountDetailsConfirmationV03.mmPlacement, AccountModificationInstructionV02.mmModifiedPlacement,
 						AccountModificationInstructionV03.mmModifiedPlacement, AccountOpeningInstructionV02.mmPlacement, AccountOpeningInstructionV03.mmPlacement, AccountDetailsConfirmationV04.mmPlacement,
 						AccountModificationInstructionV04.mmModifiedPlacement, AccountOpeningInstructionV04.mmPlacement, AccountOpeningInstructionV05.mmPlacement, AccountModificationInstructionV05.mmModifiedPlacement,
 						AccountDetailsConfirmationV05.mmPlacement);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReferredPlacementAgentRule.forReferredAgent1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReferredAgent1";
 				definition = "Provides the placement agent identification for a hedge fund if the investor was referred by one.";
@@ -238,21 +251,21 @@ public class ReferredAgent1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rfrd", required = true)
 	public Referred1Code getReferred() {
 		return referred;
 	}
 
-	public void setReferred(Referred1Code referred) {
-		this.referred = referred;
+	public ReferredAgent1 setReferred(Referred1Code referred) {
+		this.referred = Objects.requireNonNull(referred);
+		return this;
 	}
 
-	@XmlElement(name = "RfrdPlcmntAgt")
-	public PartyIdentification2Choice getReferredPlacementAgent() {
-		return referredPlacementAgent;
+	public Optional<PartyIdentification2Choice> getReferredPlacementAgent() {
+		return referredPlacementAgent == null ? Optional.empty() : Optional.of(referredPlacementAgent);
 	}
 
-	public void setReferredPlacementAgent(PartyIdentification2Choice referredPlacementAgent) {
+	public ReferredAgent1 setReferredPlacementAgent(PartyIdentification2Choice referredPlacementAgent) {
 		this.referredPlacementAgent = referredPlacementAgent;
+		return this;
 	}
 }

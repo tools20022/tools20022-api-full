@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateActionOptionCode;
+import com.tools20022.repository.codeset.CorporateActionOption5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the corporate action options available to the account owner.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionCode
- * CorporateActionOptionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption5Code#mmCash
- * CorporateActionOption5Code.mmCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption5Code#Cash
+ * CorporateActionOption5Code.Cash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption5Code#mmSecurity
- * CorporateActionOption5Code.mmSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption5Code#Security
+ * CorporateActionOption5Code.Security}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionCode
+ * CorporateActionOptionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the corporate action options available to the account owner."</li>
  * </ul>
  */
-public class CorporateActionOption5Code extends CorporateActionOptionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionOption5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +89,12 @@ public class CorporateActionOption5Code extends CorporateActionOptionCode {
 	 * name} = "Cash"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCash = new MMCode() {
+	public static final CorporateActionOption5Code Cash = new CorporateActionOption5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
-			owner_lazy = () -> CorporateActionOption5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption5Code.mmObject();
+			codeName = CorporateActionOptionCode.Cash.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,26 +113,57 @@ public class CorporateActionOption5Code extends CorporateActionOptionCode {
 	 * name} = "Security"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecurity = new MMCode() {
+	public static final CorporateActionOption5Code Security = new CorporateActionOption5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
-			owner_lazy = () -> CorporateActionOption5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption5Code.mmObject();
+			codeName = CorporateActionOptionCode.Security.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionOption5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionOption5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CASH");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOption5Code";
 				definition = "Specifies the corporate action options available to the account owner.";
-				code_lazy = () -> Arrays.asList(CorporateActionOption5Code.mmCash, CorporateActionOption5Code.mmSecurity);
 				trace_lazy = () -> CorporateActionOptionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionOption5Code.Cash, com.tools20022.repository.codeset.CorporateActionOption5Code.Security);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Cash.getCodeName().get(), Cash);
+		codesByName.put(Security.getCodeName().get(), Security);
+	}
+
+	public static CorporateActionOption5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionOption5Code[] values() {
+		CorporateActionOption5Code[] values = new CorporateActionOption5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionOption5Code> {
+		@Override
+		public CorporateActionOption5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionOption5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

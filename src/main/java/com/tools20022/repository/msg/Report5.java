@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.secl.SettlementObligationReportV03;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,17 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Report5", propOrder = {"nonClearingMember", "settlementObligationDetails"})
 public class Report5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NonClrMmb")
 	protected List<com.tools20022.repository.msg.PartyIdentificationAndAccount31> nonClearingMember;
 	/**
-	 * Provides the identification for the non-clearing member. This is
-	 * mandatory if the clearing member identification equals a general clearing
-	 * member.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -122,7 +123,7 @@ public class Report5 {
 	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Party.mmObject();
-			componentContext_lazy = () -> Report5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Report5.mmObject();
 			isDerived = false;
 			xmlTag = "NonClrMmb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +135,11 @@ public class Report5 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmOblgtnDtls", required = true)
 	protected List<com.tools20022.repository.msg.SettlementObligation8> settlementObligationDetails;
 	/**
-	 * Provides information about the settlement obligation details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -168,7 +170,7 @@ public class Report5 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementObligationDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Report5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Report5.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmOblgtnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,9 +186,9 @@ public class Report5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Report5.mmNonClearingMember, Report5.mmSettlementObligationDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Report5.mmNonClearingMember, com.tools20022.repository.msg.Report5.mmSettlementObligationDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SettlementObligationReportV03.mmReportDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Report5";
 				definition = "Provides details on the settlement obligation report.";
@@ -196,21 +198,21 @@ public class Report5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NonClrMmb")
 	public List<PartyIdentificationAndAccount31> getNonClearingMember() {
-		return nonClearingMember;
+		return nonClearingMember == null ? nonClearingMember = new ArrayList<>() : nonClearingMember;
 	}
 
-	public void setNonClearingMember(List<com.tools20022.repository.msg.PartyIdentificationAndAccount31> nonClearingMember) {
-		this.nonClearingMember = nonClearingMember;
+	public Report5 setNonClearingMember(List<com.tools20022.repository.msg.PartyIdentificationAndAccount31> nonClearingMember) {
+		this.nonClearingMember = Objects.requireNonNull(nonClearingMember);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmOblgtnDtls", required = true)
 	public List<SettlementObligation8> getSettlementObligationDetails() {
-		return settlementObligationDetails;
+		return settlementObligationDetails == null ? settlementObligationDetails = new ArrayList<>() : settlementObligationDetails;
 	}
 
-	public void setSettlementObligationDetails(List<com.tools20022.repository.msg.SettlementObligation8> settlementObligationDetails) {
-		this.settlementObligationDetails = settlementObligationDetails;
+	public Report5 setSettlementObligationDetails(List<com.tools20022.repository.msg.SettlementObligation8> settlementObligationDetails) {
+		this.settlementObligationDetails = Objects.requireNonNull(settlementObligationDetails);
+		return this;
 	}
 }

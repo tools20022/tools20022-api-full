@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule#forCorporateActionNarrative18
+ * ConstraintAdditionalInforrmationRule.forCorporateActionNarrative18}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,16 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides additional information such as the taxation conditions."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CorporateActionNarrative18", propOrder = {"offeror", "newCompanyName", "URLAddress"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CorporateActionNarrative18", propOrder = {"offeror", "newCompanyName", "uRLAddress"})
 public class CorporateActionNarrative18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Offerr")
 	protected UpdatedAdditionalInformation6 offeror;
 	/**
-	 * Provides the entity making the offer and is different from the issuing
-	 * company.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -99,6 +109,9 @@ public class CorporateActionNarrative18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Offerr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E:OFFO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -114,9 +127,10 @@ public class CorporateActionNarrative18 {
 	public static final MMMessageAssociationEnd mmOfferor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CorporateActionNarrative18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative18.mmObject();
 			isDerived = false;
 			xmlTag = "Offerr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E:OFFO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offeror";
 			definition = "Provides the entity making the offer and is different from the issuing company.";
@@ -126,10 +140,11 @@ public class CorporateActionNarrative18 {
 			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6.mmObject();
 		}
 	};
+	@XmlElement(name = "NewCpnyNm")
 	protected UpdatedAdditionalInformation6 newCompanyName;
 	/**
-	 * Provides the new name of a company following a name change.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -144,6 +159,9 @@ public class CorporateActionNarrative18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NewCpnyNm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E:NAME</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -157,9 +175,10 @@ public class CorporateActionNarrative18 {
 	 */
 	public static final MMMessageAssociationEnd mmNewCompanyName = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionNarrative18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative18.mmObject();
 			isDerived = false;
 			xmlTag = "NewCpnyNm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E:NAME"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewCompanyName";
 			definition = "Provides the new name of a company following a name change.";
@@ -169,12 +188,11 @@ public class CorporateActionNarrative18 {
 			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6.mmObject();
 		}
 	};
+	@XmlElement(name = "URLAdr")
 	protected UpdatedURLlnformation1 uRLAddress;
 	/**
-	 * Provides the web address published for the event, that is, the address
-	 * for the Universal Resource Locator (URL), for example, used over the www
-	 * (HTTP) service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -193,6 +211,9 @@ public class CorporateActionNarrative18 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "URLAdr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E::WEBB</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -208,9 +229,10 @@ public class CorporateActionNarrative18 {
 	public static final MMMessageAssociationEnd mmURLAddress = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
-			componentContext_lazy = () -> CorporateActionNarrative18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative18.mmObject();
 			isDerived = false;
 			xmlTag = "URLAdr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E::WEBB"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URLAddress";
 			definition = "Provides the web address published for the event, that is, the address for the Universal Resource Locator (URL), for example, used over the www (HTTP) service.";
@@ -224,9 +246,11 @@ public class CorporateActionNarrative18 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionNarrative18.mmOfferor, CorporateActionNarrative18.mmNewCompanyName, CorporateActionNarrative18.mmURLAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative18.mmOfferor, com.tools20022.repository.msg.CorporateActionNarrative18.mmNewCompanyName,
+						com.tools20022.repository.msg.CorporateActionNarrative18.mmURLAddress);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forCorporateActionNarrative18);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrative18";
 				definition = "Provides additional information such as the taxation conditions.";
@@ -235,30 +259,30 @@ public class CorporateActionNarrative18 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Offerr")
-	public UpdatedAdditionalInformation6 getOfferor() {
-		return offeror;
+	public Optional<UpdatedAdditionalInformation6> getOfferor() {
+		return offeror == null ? Optional.empty() : Optional.of(offeror);
 	}
 
-	public void setOfferor(com.tools20022.repository.msg.UpdatedAdditionalInformation6 offeror) {
+	public CorporateActionNarrative18 setOfferor(com.tools20022.repository.msg.UpdatedAdditionalInformation6 offeror) {
 		this.offeror = offeror;
+		return this;
 	}
 
-	@XmlElement(name = "NewCpnyNm")
-	public UpdatedAdditionalInformation6 getNewCompanyName() {
-		return newCompanyName;
+	public Optional<UpdatedAdditionalInformation6> getNewCompanyName() {
+		return newCompanyName == null ? Optional.empty() : Optional.of(newCompanyName);
 	}
 
-	public void setNewCompanyName(com.tools20022.repository.msg.UpdatedAdditionalInformation6 newCompanyName) {
+	public CorporateActionNarrative18 setNewCompanyName(com.tools20022.repository.msg.UpdatedAdditionalInformation6 newCompanyName) {
 		this.newCompanyName = newCompanyName;
+		return this;
 	}
 
-	@XmlElement(name = "URLAdr")
-	public UpdatedURLlnformation1 getURLAddress() {
-		return uRLAddress;
+	public Optional<UpdatedURLlnformation1> getURLAddress() {
+		return uRLAddress == null ? Optional.empty() : Optional.of(uRLAddress);
 	}
 
-	public void setURLAddress(com.tools20022.repository.msg.UpdatedURLlnformation1 uRLAddress) {
+	public CorporateActionNarrative18 setURLAddress(com.tools20022.repository.msg.UpdatedURLlnformation1 uRLAddress) {
 		this.uRLAddress = uRLAddress;
+		return this;
 	}
 }

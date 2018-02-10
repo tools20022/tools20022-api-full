@@ -26,9 +26,8 @@ import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBilateralBalanceRule#forCashAccount23
+ * ConstraintBilateralBalanceRule.forCashAccount23}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,17 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Account to or from which a cash entry is made."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashAccount23", propOrder = {"name", "type", "currency", "currentMultilateralLimit", "owner", "servicer", "multilateralBalance", "currentBilateralLimit", "standingOrder"})
 public class CashAccount23 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nm")
 	protected Max70Text name;
 	/**
-	 * Name of the account. It provides an additional means of identification,
-	 * and is designated by the account servicer in agreement with the account
-	 * owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +134,7 @@ public class CashAccount23 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
-			componentContext_lazy = () -> CashAccount23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount23.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,10 +145,11 @@ public class CashAccount23 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected CashAccountType2Choice type;
 	/**
-	 * Specifies the nature, or use, of the cash account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -175,7 +182,7 @@ public class CashAccount23 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
-			componentContext_lazy = () -> CashAccount23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount23.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,10 +193,11 @@ public class CashAccount23 {
 			complexType_lazy = () -> CashAccountType2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected ActiveOrHistoricCurrencyCode currency;
 	/**
-	 * Specifies the currency of the cash account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,7 +230,7 @@ public class CashAccount23 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
-			componentContext_lazy = () -> CashAccount23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount23.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,15 +241,11 @@ public class CashAccount23 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CurMulLmt")
 	protected Limit5 currentMultilateralLimit;
 	/**
-	 * Maximum amount value applied to or by a participant versus a set of
-	 * counterparts. The multilateral system is taken into account by the
-	 * transaction administrator to contain the risk in the system. With the
-	 * help of the multilateral limit, the direct participant restricts the use
-	 * of liquidity when clearing payments with all other direct participants
-	 * for whom no bilateral limit was set.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -273,7 +277,7 @@ public class CashAccount23 {
 	public static final MMMessageAssociationEnd mmCurrentMultilateralLimit = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashManagementService.mmRiskManagementLimit;
-			componentContext_lazy = () -> CashAccount23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount23.mmObject();
 			isDerived = false;
 			xmlTag = "CurMulLmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -285,10 +289,11 @@ public class CashAccount23 {
 			type_lazy = () -> com.tools20022.repository.msg.Limit5.mmObject();
 		}
 	};
+	@XmlElement(name = "Ownr")
 	protected PartyIdentification43 owner;
 	/**
-	 * Owner of the account which is being queried.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -319,7 +324,7 @@ public class CashAccount23 {
 	public static final MMMessageAssociationEnd mmOwner = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CashAccount23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount23.mmObject();
 			isDerived = false;
 			xmlTag = "Ownr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -331,10 +336,11 @@ public class CashAccount23 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	@XmlElement(name = "Svcr")
 	protected BranchAndFinancialInstitutionIdentification5 servicer;
 	/**
-	 * Servicer of the account which is being queried.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -366,7 +372,7 @@ public class CashAccount23 {
 	public static final MMMessageAssociationEnd mmServicer = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> CashAccount23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount23.mmObject();
 			isDerived = false;
 			xmlTag = "Svcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -378,10 +384,11 @@ public class CashAccount23 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "MulBal")
 	protected List<com.tools20022.repository.msg.CashBalance5> multilateralBalance;
 	/**
-	 * Balance is calculated with regard to many members in the system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -413,7 +420,7 @@ public class CashAccount23 {
 	public static final MMMessageAssociationEnd mmMultilateralBalance = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashBalance;
-			componentContext_lazy = () -> CashAccount23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount23.mmObject();
 			isDerived = false;
 			xmlTag = "MulBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -424,15 +431,11 @@ public class CashAccount23 {
 			type_lazy = () -> com.tools20022.repository.msg.CashBalance5.mmObject();
 		}
 	};
+	@XmlElement(name = "CurBilLmt")
 	protected List<com.tools20022.repository.msg.BilateralLimit1> currentBilateralLimit;
 	/**
-	 * Limit fixed by a party A with regard to a specific counterparty B and
-	 * corresponding to the maximum amount of traffic that party A may send to
-	 * party B. The bilateral limit can be expressed as a debit limit or a
-	 * credit limit. With the help of a bilateral limit, the direct participant
-	 * restricts the use of liquidity when clearing payments with another direct
-	 * participant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -465,7 +468,7 @@ public class CashAccount23 {
 	public static final MMMessageAssociationEnd mmCurrentBilateralLimit = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashManagementService.mmRiskManagementLimit;
-			componentContext_lazy = () -> CashAccount23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount23.mmObject();
 			isDerived = false;
 			xmlTag = "CurBilLmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -476,14 +479,11 @@ public class CashAccount23 {
 			type_lazy = () -> com.tools20022.repository.msg.BilateralLimit1.mmObject();
 		}
 	};
+	@XmlElement(name = "StgOrdr")
 	protected List<com.tools20022.repository.msg.StandingOrder2> standingOrder;
 	/**
-	 * Instruction given by a party that has explicit authority to instruct a
-	 * debit on the account, that is either the debtor or originating party, to
-	 * the debtor agent, to process liquidity transfers at specified intervals
-	 * during an implicit or explicit period of time. A standing order is given
-	 * once and is valid for an open or closed period of time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -516,7 +516,7 @@ public class CashAccount23 {
 	public static final MMMessageAssociationEnd mmStandingOrder = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashManagementService.mmStandingOrder;
-			componentContext_lazy = () -> CashAccount23.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount23.mmObject();
 			isDerived = false;
 			xmlTag = "StgOrdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -531,10 +531,12 @@ public class CashAccount23 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashAccount23.mmName, CashAccount23.mmType, CashAccount23.mmCurrency, CashAccount23.mmCurrentMultilateralLimit, CashAccount23.mmOwner, CashAccount23.mmServicer,
-						CashAccount23.mmMultilateralBalance, CashAccount23.mmCurrentBilateralLimit, CashAccount23.mmStandingOrder);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount23.mmName, com.tools20022.repository.msg.CashAccount23.mmType, com.tools20022.repository.msg.CashAccount23.mmCurrency,
+						com.tools20022.repository.msg.CashAccount23.mmCurrentMultilateralLimit, com.tools20022.repository.msg.CashAccount23.mmOwner, com.tools20022.repository.msg.CashAccount23.mmServicer,
+						com.tools20022.repository.msg.CashAccount23.mmMultilateralBalance, com.tools20022.repository.msg.CashAccount23.mmCurrentBilateralLimit, com.tools20022.repository.msg.CashAccount23.mmStandingOrder);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBilateralBalanceRule.forCashAccount23);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccount23";
 				definition = "Account to or from which a cash entry is made.";
@@ -543,84 +545,84 @@ public class CashAccount23 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nm")
-	public Max70Text getName() {
-		return name;
+	public Optional<Max70Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max70Text name) {
+	public CashAccount23 setName(Max70Text name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public CashAccountType2Choice getType() {
-		return type;
+	public Optional<CashAccountType2Choice> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(CashAccountType2Choice type) {
+	public CashAccount23 setType(CashAccountType2Choice type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public ActiveOrHistoricCurrencyCode getCurrency() {
-		return currency;
+	public Optional<ActiveOrHistoricCurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(ActiveOrHistoricCurrencyCode currency) {
+	public CashAccount23 setCurrency(ActiveOrHistoricCurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "CurMulLmt")
-	public Limit5 getCurrentMultilateralLimit() {
-		return currentMultilateralLimit;
+	public Optional<Limit5> getCurrentMultilateralLimit() {
+		return currentMultilateralLimit == null ? Optional.empty() : Optional.of(currentMultilateralLimit);
 	}
 
-	public void setCurrentMultilateralLimit(com.tools20022.repository.msg.Limit5 currentMultilateralLimit) {
+	public CashAccount23 setCurrentMultilateralLimit(com.tools20022.repository.msg.Limit5 currentMultilateralLimit) {
 		this.currentMultilateralLimit = currentMultilateralLimit;
+		return this;
 	}
 
-	@XmlElement(name = "Ownr")
-	public PartyIdentification43 getOwner() {
-		return owner;
+	public Optional<PartyIdentification43> getOwner() {
+		return owner == null ? Optional.empty() : Optional.of(owner);
 	}
 
-	public void setOwner(com.tools20022.repository.msg.PartyIdentification43 owner) {
+	public CashAccount23 setOwner(com.tools20022.repository.msg.PartyIdentification43 owner) {
 		this.owner = owner;
+		return this;
 	}
 
-	@XmlElement(name = "Svcr")
-	public BranchAndFinancialInstitutionIdentification5 getServicer() {
-		return servicer;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getServicer() {
+		return servicer == null ? Optional.empty() : Optional.of(servicer);
 	}
 
-	public void setServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 servicer) {
+	public CashAccount23 setServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 servicer) {
 		this.servicer = servicer;
+		return this;
 	}
 
-	@XmlElement(name = "MulBal")
 	public List<CashBalance5> getMultilateralBalance() {
-		return multilateralBalance;
+		return multilateralBalance == null ? multilateralBalance = new ArrayList<>() : multilateralBalance;
 	}
 
-	public void setMultilateralBalance(List<com.tools20022.repository.msg.CashBalance5> multilateralBalance) {
-		this.multilateralBalance = multilateralBalance;
+	public CashAccount23 setMultilateralBalance(List<com.tools20022.repository.msg.CashBalance5> multilateralBalance) {
+		this.multilateralBalance = Objects.requireNonNull(multilateralBalance);
+		return this;
 	}
 
-	@XmlElement(name = "CurBilLmt")
 	public List<BilateralLimit1> getCurrentBilateralLimit() {
-		return currentBilateralLimit;
+		return currentBilateralLimit == null ? currentBilateralLimit = new ArrayList<>() : currentBilateralLimit;
 	}
 
-	public void setCurrentBilateralLimit(List<com.tools20022.repository.msg.BilateralLimit1> currentBilateralLimit) {
-		this.currentBilateralLimit = currentBilateralLimit;
+	public CashAccount23 setCurrentBilateralLimit(List<com.tools20022.repository.msg.BilateralLimit1> currentBilateralLimit) {
+		this.currentBilateralLimit = Objects.requireNonNull(currentBilateralLimit);
+		return this;
 	}
 
-	@XmlElement(name = "StgOrdr")
 	public List<StandingOrder2> getStandingOrder() {
-		return standingOrder;
+		return standingOrder == null ? standingOrder = new ArrayList<>() : standingOrder;
 	}
 
-	public void setStandingOrder(List<com.tools20022.repository.msg.StandingOrder2> standingOrder) {
-		this.standingOrder = standingOrder;
+	public CashAccount23 setStandingOrder(List<com.tools20022.repository.msg.StandingOrder2> standingOrder) {
+		this.standingOrder = Objects.requireNonNull(standingOrder);
+		return this;
 	}
 }

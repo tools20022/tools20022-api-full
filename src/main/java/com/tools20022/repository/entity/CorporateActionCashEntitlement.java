@@ -23,9 +23,11 @@ import com.tools20022.repository.entity.CorporateActionEntitlement;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Rights for cash entitled to the account owner based on the terms of the
@@ -38,6 +40,10 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement
+ * CorporateActionEntitlement}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -61,18 +67,6 @@ import java.util.List;
  * CorporateActionCashEntitlement.mmExchangeRate}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.CorporateActionEntitlement
- * CorporateActionEntitlement}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CashEntitlement1
- * CashEntitlement1}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -92,10 +86,18 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CashEntitlement1
+ * CashEntitlement1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -113,8 +115,8 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyAndAmount grossCashAmount;
 	/**
-	 * Amount of money before any deductions and allowances have been made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -265,8 +267,8 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 					CorporateActionAmounts1.mmGrossCashAmount, CorporateActionAmounts29.mmGrossCashAmount, CorporateActionAmounts27.mmGrossCashAmount, CorporateActionAmounts28.mmGrossCashAmount, CorporateActionAmounts33.mmGrossCashAmount,
 					CorporateActionAmounts32.mmGrossCashAmount, CorporateActionAmounts35.mmGrossCashAmount, CorporateActionAmounts37.mmGrossCashAmount, CorporateActionAmounts36.mmGrossCashAmount, CorporateActionAmounts38.mmGrossCashAmount,
 					CorporateActionAmounts39.mmGrossCashAmount, CorporateActionAmounts41.mmGrossCashAmount, CorporateActionAmounts40.mmGrossCashAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossCashAmount";
 			definition = "Amount of money before any deductions and allowances have been made.";
@@ -285,9 +287,8 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	};
 	protected CurrencyAndAmount netCashAmount;
 	/**
-	 * Amount of money after deductions and allowances have been made, if any,
-	 * ie, the total amount +/- charges/fees.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -439,8 +440,8 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 					CorporateActionAmounts1.mmNetCashAmount, CorporateActionAmounts29.mmNetCashAmount, CorporateActionAmounts27.mmNetCashAmount, CorporateActionAmounts28.mmNetCashAmount, CorporateActionAmounts33.mmNetCashAmount,
 					CorporateActionAmounts32.mmNetCashAmount, CorporateActionAmounts35.mmNetCashAmount, CorporateActionAmounts37.mmNetCashAmount, CorporateActionAmounts36.mmNetCashAmount, CorporateActionAmounts38.mmNetCashAmount,
 					CorporateActionAmounts39.mmNetCashAmount, CorporateActionAmounts41.mmNetCashAmount, CorporateActionAmounts40.mmNetCashAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetCashAmount";
 			definition = "Amount of money after deductions and allowances have been made, if any, ie, the total amount +/- charges/fees.";
@@ -459,8 +460,8 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	};
 	protected CurrencyAndAmount cashInLieuOfShare;
 	/**
-	 * Cash disbursement in lieu of a fractional quantity of, eg, equity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -616,8 +617,8 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 					CorporateActionAmounts33.mmCashInLieuOfShare, CorporateActionAmounts32.mmCashInLieuOfShare, CorporateActionAmounts35.mmCashInLieuOfShare, CorporateActionAmounts37.mmCashInLieuOfShare,
 					CorporateActionAmounts36.mmCashInLieuOfShare, CorporateActionAmounts38.mmCashInLieuOfShare, CorporateActionAmounts39.mmCashInLieuOfShare, CorporateActionAmounts41.mmCashInLieuOfShare,
 					CorporateActionAmounts40.mmCashInLieuOfShare, OptionTransactionDetailsSD2.mmCashInLieuOfShare);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashInLieuOfShare";
 			definition = "Cash disbursement in lieu of a fractional quantity of, eg, equity.";
@@ -636,8 +637,8 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	};
 	protected CurrencyAndAmount capitalGain;
 	/**
-	 * Amount of money distributed as the result of a capital gain.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -788,8 +789,8 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 					CorporateActionAmounts1.mmCapitalGain, CorporateActionAmounts29.mmCapitalGain, CorporateActionAmounts27.mmCapitalGain, CorporateActionAmounts28.mmCapitalGain, CorporateActionAmounts33.mmCapitalGain,
 					CorporateActionAmounts32.mmCapitalGain, CorporateActionAmounts35.mmCapitalGain, CorporateActionAmounts37.mmCapitalGain, CorporateActionAmounts36.mmCapitalGain, CorporateActionAmounts38.mmCapitalGain,
 					CorporateActionAmounts39.mmCapitalGain, CorporateActionAmounts41.mmCapitalGain, CorporateActionAmounts40.mmCapitalGain);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CapitalGain";
 			definition = "Amount of money distributed as the result of a capital gain.";
@@ -808,10 +809,8 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	};
 	protected CurrencyAndAmount entitledCashAmount;
 	/**
-	 * Cash amount based on terms of corporate action event and balance of
-	 * underlying securities, entitled to/from account owner (which may be
-	 * positive or negative).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -928,8 +927,8 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 					CorporateActionAmounts21.mmEntitledAmount, CorporateActionAmounts26.mmEntitledAmount, CorporateActionAmounts1.mmEntitledAmount, CashEntitlement1.mmCashAmount, CorporateActionAmounts27.mmEntitledAmount,
 					CorporateActionAmounts28.mmEntitledAmount, CorporateActionAmounts33.mmEntitledAmount, CorporateActionAmounts32.mmEntitledAmount, CorporateActionAmounts36.mmEntitledAmount, CorporateActionAmounts38.mmEntitledAmount,
 					CorporateActionAmounts41.mmEntitledAmount, CorporateActionAmounts40.mmEntitledAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EntitledCashAmount";
 			definition = "Cash amount based on terms of corporate action event and balance of underlying securities, entitled to/from account owner (which may be positive or negative).";
@@ -948,9 +947,8 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	};
 	protected List<com.tools20022.repository.entity.CurrencyExchange> exchangeRate;
 	/**
-	 * Specifies the exchange rate used to convert the cash entitlement value in
-	 * another currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -985,8 +983,8 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 */
 	public static final MMBusinessAssociationEnd mmExchangeRate = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExchangeRate";
 			definition = "Specifies the exchange rate used to convert the cash entitlement value in another currency.";
@@ -1000,7 +998,7 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionCashEntitlement";
 				definition = "Rights for cash entitled to the account owner based on the terms of the corporate action event and the balance of underlying securities.";
@@ -1025,47 +1023,53 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 		return grossCashAmount;
 	}
 
-	public void setGrossCashAmount(CurrencyAndAmount grossCashAmount) {
-		this.grossCashAmount = grossCashAmount;
+	public CorporateActionCashEntitlement setGrossCashAmount(CurrencyAndAmount grossCashAmount) {
+		this.grossCashAmount = Objects.requireNonNull(grossCashAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getNetCashAmount() {
 		return netCashAmount;
 	}
 
-	public void setNetCashAmount(CurrencyAndAmount netCashAmount) {
-		this.netCashAmount = netCashAmount;
+	public CorporateActionCashEntitlement setNetCashAmount(CurrencyAndAmount netCashAmount) {
+		this.netCashAmount = Objects.requireNonNull(netCashAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getCashInLieuOfShare() {
 		return cashInLieuOfShare;
 	}
 
-	public void setCashInLieuOfShare(CurrencyAndAmount cashInLieuOfShare) {
-		this.cashInLieuOfShare = cashInLieuOfShare;
+	public CorporateActionCashEntitlement setCashInLieuOfShare(CurrencyAndAmount cashInLieuOfShare) {
+		this.cashInLieuOfShare = Objects.requireNonNull(cashInLieuOfShare);
+		return this;
 	}
 
 	public CurrencyAndAmount getCapitalGain() {
 		return capitalGain;
 	}
 
-	public void setCapitalGain(CurrencyAndAmount capitalGain) {
-		this.capitalGain = capitalGain;
+	public CorporateActionCashEntitlement setCapitalGain(CurrencyAndAmount capitalGain) {
+		this.capitalGain = Objects.requireNonNull(capitalGain);
+		return this;
 	}
 
 	public CurrencyAndAmount getEntitledCashAmount() {
 		return entitledCashAmount;
 	}
 
-	public void setEntitledCashAmount(CurrencyAndAmount entitledCashAmount) {
-		this.entitledCashAmount = entitledCashAmount;
+	public CorporateActionCashEntitlement setEntitledCashAmount(CurrencyAndAmount entitledCashAmount) {
+		this.entitledCashAmount = Objects.requireNonNull(entitledCashAmount);
+		return this;
 	}
 
 	public List<CurrencyExchange> getExchangeRate() {
-		return exchangeRate;
+		return exchangeRate == null ? exchangeRate = new ArrayList<>() : exchangeRate;
 	}
 
-	public void setExchangeRate(List<com.tools20022.repository.entity.CurrencyExchange> exchangeRate) {
-		this.exchangeRate = exchangeRate;
+	public CorporateActionCashEntitlement setExchangeRate(List<com.tools20022.repository.entity.CurrencyExchange> exchangeRate) {
+		this.exchangeRate = Objects.requireNonNull(exchangeRate);
+		return this;
 	}
 }

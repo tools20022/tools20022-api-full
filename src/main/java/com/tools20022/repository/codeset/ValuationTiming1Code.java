@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ValuationTimingCode;
+import com.tools20022.repository.codeset.ValuationTiming1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies how the price valuation timing is done based on the timeline
@@ -31,27 +35,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ValuationTimingCode
- * ValuationTimingCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValuationTiming1Code#mmExceptional
- * ValuationTiming1Code.mmExceptional}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValuationTiming1Code#Exceptional
+ * ValuationTiming1Code.Exceptional}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ValuationTiming1Code#Usual
+ * ValuationTiming1Code.Usual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValuationTiming1Code#mmUsual
- * ValuationTiming1Code.mmUsual}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ValuationTiming1Code#mmParticular
- * ValuationTiming1Code.mmParticular}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValuationTiming1Code#Particular
+ * ValuationTiming1Code.Particular}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ValuationTimingCode
+ * ValuationTimingCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ValuationTiming1Code extends ValuationTimingCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ValuationTiming1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +93,12 @@ public class ValuationTiming1Code extends ValuationTimingCode {
 	 * name} = "Exceptional"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExceptional = new MMCode() {
+	public static final ValuationTiming1Code Exceptional = new ValuationTiming1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exceptional";
-			owner_lazy = () -> ValuationTiming1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ValuationTiming1Code.mmObject();
+			codeName = ValuationTimingCode.Exceptional.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +117,12 @@ public class ValuationTiming1Code extends ValuationTimingCode {
 	 * name} = "Usual"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUsual = new MMCode() {
+	public static final ValuationTiming1Code Usual = new ValuationTiming1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Usual";
-			owner_lazy = () -> ValuationTiming1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ValuationTiming1Code.mmObject();
+			codeName = ValuationTimingCode.Usual.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,26 +141,59 @@ public class ValuationTiming1Code extends ValuationTimingCode {
 	 * name} = "Particular"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmParticular = new MMCode() {
+	public static final ValuationTiming1Code Particular = new ValuationTiming1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Particular";
-			owner_lazy = () -> ValuationTiming1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ValuationTiming1Code.mmObject();
+			codeName = ValuationTimingCode.Particular.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ValuationTiming1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ValuationTiming1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("EXCP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ValuationTiming1Code";
 				definition = "Specifies how the price valuation timing is done based on the timeline defined in the prospectus.";
-				code_lazy = () -> Arrays.asList(ValuationTiming1Code.mmExceptional, ValuationTiming1Code.mmUsual, ValuationTiming1Code.mmParticular);
 				trace_lazy = () -> ValuationTimingCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ValuationTiming1Code.Exceptional, com.tools20022.repository.codeset.ValuationTiming1Code.Usual,
+						com.tools20022.repository.codeset.ValuationTiming1Code.Particular);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Exceptional.getCodeName().get(), Exceptional);
+		codesByName.put(Usual.getCodeName().get(), Usual);
+		codesByName.put(Particular.getCodeName().get(), Particular);
+	}
+
+	public static ValuationTiming1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ValuationTiming1Code[] values() {
+		ValuationTiming1Code[] values = new ValuationTiming1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ValuationTiming1Code> {
+		@Override
+		public ValuationTiming1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ValuationTiming1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

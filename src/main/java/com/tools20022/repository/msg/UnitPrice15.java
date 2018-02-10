@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.EUDividendStatus1Code;
 import com.tools20022.repository.codeset.PriceMethod1Code;
@@ -27,11 +28,9 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -45,16 +44,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnitPrice15#mmTypeOrExtendedTypeRule
- * UnitPrice15.mmTypeOrExtendedTypeRule}</li>
+ * {@linkplain com.tools20022.repository.msg.UnitPrice15#TypeOrExtendedTypeRule
+ * UnitPrice15.TypeOrExtendedTypeRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnitPrice15#mmTaxableIncomePerShareCalculatedOrExtendedTaxableIncomePerShareCalculatedRule
+ * {@linkplain com.tools20022.repository.msg.UnitPrice15#TaxableIncomePerShareCalculatedOrExtendedTaxableIncomePerShareCalculatedRule
  * UnitPrice15.
- * mmTaxableIncomePerShareCalculatedOrExtendedTaxableIncomePerShareCalculatedRule
- * }</li>
+ * TaxableIncomePerShareCalculatedOrExtendedTaxableIncomePerShareCalculatedRule}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.UnitPrice15#mmEUDividendStatusOrExtendedEUDividendStatusRule
- * UnitPrice15.mmEUDividendStatusOrExtendedEUDividendStatusRule}</li>
+ * {@linkplain com.tools20022.repository.msg.UnitPrice15#EUDividendStatusOrExtendedEUDividendStatusRule
+ * UnitPrice15.EUDividendStatusOrExtendedEUDividendStatusRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -119,8 +118,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCalculationBasisRule#forUnitPrice15
+ * ConstraintCalculationBasisRule.forUnitPrice15}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -133,17 +140,18 @@ import javax.xml.bind.annotation.XmlType;
  * "Amount of money for which goods or services are offered, sold, or bought."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnitPrice15", propOrder = {"type", "extendedType", "priceMethod", "valueInInvestmentCurrency", "valueInAlternativeCurrency", "forExecutionIndicator", "cumDividendIndicator", "calculationBasis", "estimatedPriceIndicator",
-		"numberOfDaysAccrued", "taxableIncomePerShare", "taxableIncomePerShareCalculated", "extendedTaxableIncomePerShareCalculated", "taxableIncomePerDividend", "EUDividendStatus", "extendedEUDividendStatus", "chargeDetails",
+		"numberOfDaysAccrued", "taxableIncomePerShare", "taxableIncomePerShareCalculated", "extendedTaxableIncomePerShareCalculated", "taxableIncomePerDividend", "eUDividendStatus", "extendedEUDividendStatus", "chargeDetails",
 		"taxLiabilityDetails", "taxRefundDetails"})
 public class UnitPrice15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected TypeOfPrice9Code type;
 	/**
-	 * Type and information about a price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,7 +184,7 @@ public class UnitPrice15 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,10 +195,11 @@ public class UnitPrice15 {
 			simpleType_lazy = () -> TypeOfPrice9Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedTp", required = true)
 	protected Extended350Code extendedType;
 	/**
-	 * Type and information about a price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -223,7 +232,7 @@ public class UnitPrice15 {
 	public static final MMMessageAttribute mmExtendedType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,10 +243,11 @@ public class UnitPrice15 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PricMtd")
 	protected PriceMethod1Code priceMethod;
 	/**
-	 * Type of pricing calculation method.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -270,7 +280,7 @@ public class UnitPrice15 {
 	public static final MMMessageAttribute mmPriceMethod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceMethod;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "PricMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,10 +291,11 @@ public class UnitPrice15 {
 			simpleType_lazy = () -> PriceMethod1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ValInInvstmtCcy", required = true)
 	protected List<com.tools20022.repository.msg.PriceValue1> valueInInvestmentCurrency;
 	/**
-	 * Value of the price, eg, as a currency and value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -316,7 +327,7 @@ public class UnitPrice15 {
 	public static final MMMessageAttribute mmValueInInvestmentCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "ValInInvstmtCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -326,10 +337,11 @@ public class UnitPrice15 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
 		}
 	};
+	@XmlElement(name = "ValInAltrntvCcy")
 	protected List<com.tools20022.repository.msg.PriceValue1> valueInAlternativeCurrency;
 	/**
-	 * Value of the price, eg, as a currency and value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -361,7 +373,7 @@ public class UnitPrice15 {
 	public static final MMMessageAttribute mmValueInAlternativeCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "ValInAltrntvCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -371,11 +383,11 @@ public class UnitPrice15 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
 		}
 	};
+	@XmlElement(name = "ForExctnInd", required = true)
 	protected YesNoIndicator forExecutionIndicator;
 	/**
-	 * Indicates whether the price information can be used for the execution of
-	 * a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -410,7 +422,7 @@ public class UnitPrice15 {
 	public static final MMMessageAttribute mmForExecutionIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmForExecutionIndicator;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "ForExctnInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -421,11 +433,11 @@ public class UnitPrice15 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CumDvddInd", required = true)
 	protected YesNoIndicator cumDividendIndicator;
 	/**
-	 * Indicates whether the dividend is included, ie, cum-dividend, in the
-	 * price. When the dividend is not included, the price will be ex-dividend.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -460,7 +472,7 @@ public class UnitPrice15 {
 	public static final MMMessageAttribute mmCumDividendIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmCumDividendIndicator;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "CumDvddInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -471,10 +483,11 @@ public class UnitPrice15 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ClctnBsis")
 	protected PercentageRate calculationBasis;
 	/**
-	 * Ratio applied on the non-adjusted price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -507,7 +520,7 @@ public class UnitPrice15 {
 	public static final MMMessageAttribute mmCalculationBasis = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmCalculationBasis;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "ClctnBsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -518,10 +531,11 @@ public class UnitPrice15 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "EstmtdPricInd", required = true)
 	protected YesNoIndicator estimatedPriceIndicator;
 	/**
-	 * Indicates whether the price is an estimated price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -554,7 +568,7 @@ public class UnitPrice15 {
 	public static final MMMessageAttribute mmEstimatedPriceIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmEstimatedPriceIndicator;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdPricInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -565,11 +579,11 @@ public class UnitPrice15 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfDaysAcrd")
 	protected Number numberOfDaysAccrued;
 	/**
-	 * Specifies the number of days from trade date that the counterparty on the
-	 * other side of the trade should "given up" or divulged.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -588,6 +602,9 @@ public class UnitPrice15 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NbOfDaysAcrd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :99A::DAAC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -603,9 +620,10 @@ public class UnitPrice15 {
 	public static final MMMessageAttribute mmNumberOfDaysAccrued = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfDaysAcrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":99A::DAAC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDaysAccrued";
 			definition = "Specifies the number of days from trade date that the counterparty on the other side of the trade should \"given up\" or divulged.";
@@ -614,12 +632,11 @@ public class UnitPrice15 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxblIncmPerShr")
 	protected ActiveOrHistoricCurrencyAnd13DecimalAmount taxableIncomePerShare;
 	/**
-	 * Amount included in the NAV that corresponds to gains directly or
-	 * indirectly derived from interest payment in the scope of the European
-	 * Directive on taxation of savings income in the form of interest payments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -654,7 +671,7 @@ public class UnitPrice15 {
 	public static final MMMessageAttribute mmTaxableIncomePerShare = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShare;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "TaxblIncmPerShr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -665,10 +682,11 @@ public class UnitPrice15 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxblIncmPerShrClctd")
 	protected TaxableIncomePerShareCalculated2Code taxableIncomePerShareCalculated;
 	/**
-	 * Specifies whether the fund calculates a taxable interest per share (TIS).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -703,7 +721,7 @@ public class UnitPrice15 {
 	public static final MMMessageAttribute mmTaxableIncomePerShareCalculated = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShareCalculated;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "TaxblIncmPerShrClctd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -714,10 +732,11 @@ public class UnitPrice15 {
 			simpleType_lazy = () -> TaxableIncomePerShareCalculated2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedTaxblIncmPerShrClctd")
 	protected Extended350Code extendedTaxableIncomePerShareCalculated;
 	/**
-	 * Specifies whether the fund calculates a taxable interest per share (TIS).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -752,7 +771,7 @@ public class UnitPrice15 {
 	public static final MMMessageAttribute mmExtendedTaxableIncomePerShareCalculated = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShareCalculated;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedTaxblIncmPerShrClctd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -763,12 +782,11 @@ public class UnitPrice15 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxblIncmPerDvdd")
 	protected ActiveOrHistoricCurrencyAnd13DecimalAmount taxableIncomePerDividend;
 	/**
-	 * Amount included in the dividend that corresponds to gains directly or
-	 * indirectly derived from interest payment in the scope of the European
-	 * Directive on taxation of savings income in the form of interest payments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -803,7 +821,7 @@ public class UnitPrice15 {
 	public static final MMMessageAttribute mmTaxableIncomePerDividend = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerDividend;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "TaxblIncmPerDvdd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -814,13 +832,11 @@ public class UnitPrice15 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "EUDvddSts")
 	protected EUDividendStatus1Code eUDividendStatus;
 	/**
-	 * Specifies whether dividend is in the scope of the European directive on
-	 * taxation of savings income in the form of interest payments (Council
-	 * Directive 2003/48/EC 3 June), or an income realised upon sale, a refund
-	 * or redemption of shares and units, etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -855,7 +871,7 @@ public class UnitPrice15 {
 	public static final MMMessageAttribute mmEUDividendStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUDividendStatus;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "EUDvddSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -866,13 +882,11 @@ public class UnitPrice15 {
 			simpleType_lazy = () -> EUDividendStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedEUDvddSts")
 	protected Extended350Code extendedEUDividendStatus;
 	/**
-	 * Specifies whether dividend is in the scope of the European directive on
-	 * taxation of savings income in the form of interest payments (Council
-	 * Directive 2003/48/EC 3 June), or an income realised upon sale, a refund
-	 * or redemption of shares and units, etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -907,7 +921,7 @@ public class UnitPrice15 {
 	public static final MMMessageAttribute mmExtendedEUDividendStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUDividendStatus;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedEUDvddSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -918,10 +932,11 @@ public class UnitPrice15 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgDtls")
 	protected List<com.tools20022.repository.msg.Charge15> chargeDetails;
 	/**
-	 * Amount of money associated with a service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -951,7 +966,7 @@ public class UnitPrice15 {
 	public static final MMMessageAssociationEnd mmChargeDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmFees;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -962,10 +977,11 @@ public class UnitPrice15 {
 			type_lazy = () -> com.tools20022.repository.msg.Charge15.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxLbltyDtls")
 	protected List<com.tools20022.repository.msg.Tax17> taxLiabilityDetails;
 	/**
-	 * Information related to taxes that are due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -995,7 +1011,7 @@ public class UnitPrice15 {
 	public static final MMMessageAssociationEnd mmTaxLiabilityDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmTaxLiability;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "TaxLbltyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1006,10 +1022,11 @@ public class UnitPrice15 {
 			type_lazy = () -> com.tools20022.repository.msg.Tax17.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxRfndDtls")
 	protected List<com.tools20022.repository.msg.Tax17> taxRefundDetails;
 	/**
-	 * Information related to taxes that are paid back.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1039,7 +1056,7 @@ public class UnitPrice15 {
 	public static final MMMessageAssociationEnd mmTaxRefundDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmTaxRefund;
-			componentContext_lazy = () -> UnitPrice15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
 			isDerived = false;
 			xmlTag = "TaxRfndDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1079,13 +1096,13 @@ public class UnitPrice15 {
 	 * "Either Type or ExtendedType must be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmTypeOrExtendedTypeRule = new MMXor() {
+	public static final MMXor TypeOrExtendedTypeRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOrExtendedTypeRule";
 			definition = "Either Type or ExtendedType must be present, but not both.";
-			messageComponent_lazy = () -> UnitPrice15.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(UnitPrice15.mmType, UnitPrice15.mmExtendedType);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice15.mmType, com.tools20022.repository.msg.UnitPrice15.mmExtendedType);
 		}
 	};
 	/**
@@ -1123,13 +1140,13 @@ public class UnitPrice15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmTaxableIncomePerShareCalculatedOrExtendedTaxableIncomePerShareCalculatedRule = new MMXor() {
+	public static final MMXor TaxableIncomePerShareCalculatedOrExtendedTaxableIncomePerShareCalculatedRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableIncomePerShareCalculatedOrExtendedTaxableIncomePerShareCalculatedRule";
 			definition = "Either TaxableIncomePerShareCalculated or ExtendedTaxableIncomePerShareCalculated may be present, but not both.";
-			messageComponent_lazy = () -> UnitPrice15.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(UnitPrice15.mmTaxableIncomePerShareCalculated, UnitPrice15.mmExtendedTaxableIncomePerShareCalculated);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice15.mmTaxableIncomePerShareCalculated, com.tools20022.repository.msg.UnitPrice15.mmExtendedTaxableIncomePerShareCalculated);
 		}
 	};
 	/**
@@ -1165,25 +1182,29 @@ public class UnitPrice15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmEUDividendStatusOrExtendedEUDividendStatusRule = new MMXor() {
+	public static final MMXor EUDividendStatusOrExtendedEUDividendStatusRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUDividendStatusOrExtendedEUDividendStatusRule";
 			definition = "Either EUDividendStatus or ExtendedEUDividendStatus may be present, but not both.";
-			messageComponent_lazy = () -> UnitPrice15.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(UnitPrice15.mmEUDividendStatus, UnitPrice15.mmExtendedEUDividendStatus);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.UnitPrice15.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice15.mmEUDividendStatus, com.tools20022.repository.msg.UnitPrice15.mmExtendedEUDividendStatus);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnitPrice15.mmType, UnitPrice15.mmExtendedType, UnitPrice15.mmPriceMethod, UnitPrice15.mmValueInInvestmentCurrency, UnitPrice15.mmValueInAlternativeCurrency,
-						UnitPrice15.mmForExecutionIndicator, UnitPrice15.mmCumDividendIndicator, UnitPrice15.mmCalculationBasis, UnitPrice15.mmEstimatedPriceIndicator, UnitPrice15.mmNumberOfDaysAccrued, UnitPrice15.mmTaxableIncomePerShare,
-						UnitPrice15.mmTaxableIncomePerShareCalculated, UnitPrice15.mmExtendedTaxableIncomePerShareCalculated, UnitPrice15.mmTaxableIncomePerDividend, UnitPrice15.mmEUDividendStatus, UnitPrice15.mmExtendedEUDividendStatus,
-						UnitPrice15.mmChargeDetails, UnitPrice15.mmTaxLiabilityDetails, UnitPrice15.mmTaxRefundDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice15.mmType, com.tools20022.repository.msg.UnitPrice15.mmExtendedType, com.tools20022.repository.msg.UnitPrice15.mmPriceMethod,
+						com.tools20022.repository.msg.UnitPrice15.mmValueInInvestmentCurrency, com.tools20022.repository.msg.UnitPrice15.mmValueInAlternativeCurrency, com.tools20022.repository.msg.UnitPrice15.mmForExecutionIndicator,
+						com.tools20022.repository.msg.UnitPrice15.mmCumDividendIndicator, com.tools20022.repository.msg.UnitPrice15.mmCalculationBasis, com.tools20022.repository.msg.UnitPrice15.mmEstimatedPriceIndicator,
+						com.tools20022.repository.msg.UnitPrice15.mmNumberOfDaysAccrued, com.tools20022.repository.msg.UnitPrice15.mmTaxableIncomePerShare, com.tools20022.repository.msg.UnitPrice15.mmTaxableIncomePerShareCalculated,
+						com.tools20022.repository.msg.UnitPrice15.mmExtendedTaxableIncomePerShareCalculated, com.tools20022.repository.msg.UnitPrice15.mmTaxableIncomePerDividend,
+						com.tools20022.repository.msg.UnitPrice15.mmEUDividendStatus, com.tools20022.repository.msg.UnitPrice15.mmExtendedEUDividendStatus, com.tools20022.repository.msg.UnitPrice15.mmChargeDetails,
+						com.tools20022.repository.msg.UnitPrice15.mmTaxLiabilityDetails, com.tools20022.repository.msg.UnitPrice15.mmTaxRefundDetails);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCalculationBasisRule.forUnitPrice15);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -1194,180 +1215,181 @@ public class UnitPrice15 {
 				})).get();
 				name = "UnitPrice15";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
-				xors_lazy = () -> Arrays.asList(UnitPrice15.mmTypeOrExtendedTypeRule, UnitPrice15.mmTaxableIncomePerShareCalculatedOrExtendedTaxableIncomePerShareCalculatedRule, UnitPrice15.mmEUDividendStatusOrExtendedEUDividendStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice15.TypeOrExtendedTypeRule, com.tools20022.repository.msg.UnitPrice15.TaxableIncomePerShareCalculatedOrExtendedTaxableIncomePerShareCalculatedRule,
+						com.tools20022.repository.msg.UnitPrice15.EUDividendStatusOrExtendedEUDividendStatusRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public TypeOfPrice9Code getType() {
 		return type;
 	}
 
-	public void setType(TypeOfPrice9Code type) {
-		this.type = type;
+	public UnitPrice15 setType(TypeOfPrice9Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedTp", required = true)
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}
 
-	public void setExtendedType(Extended350Code extendedType) {
-		this.extendedType = extendedType;
+	public UnitPrice15 setExtendedType(Extended350Code extendedType) {
+		this.extendedType = Objects.requireNonNull(extendedType);
+		return this;
 	}
 
-	@XmlElement(name = "PricMtd")
-	public PriceMethod1Code getPriceMethod() {
-		return priceMethod;
+	public Optional<PriceMethod1Code> getPriceMethod() {
+		return priceMethod == null ? Optional.empty() : Optional.of(priceMethod);
 	}
 
-	public void setPriceMethod(PriceMethod1Code priceMethod) {
+	public UnitPrice15 setPriceMethod(PriceMethod1Code priceMethod) {
 		this.priceMethod = priceMethod;
+		return this;
 	}
 
-	@XmlElement(name = "ValInInvstmtCcy", required = true)
 	public List<PriceValue1> getValueInInvestmentCurrency() {
-		return valueInInvestmentCurrency;
+		return valueInInvestmentCurrency == null ? valueInInvestmentCurrency = new ArrayList<>() : valueInInvestmentCurrency;
 	}
 
-	public void setValueInInvestmentCurrency(List<com.tools20022.repository.msg.PriceValue1> valueInInvestmentCurrency) {
-		this.valueInInvestmentCurrency = valueInInvestmentCurrency;
+	public UnitPrice15 setValueInInvestmentCurrency(List<com.tools20022.repository.msg.PriceValue1> valueInInvestmentCurrency) {
+		this.valueInInvestmentCurrency = Objects.requireNonNull(valueInInvestmentCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "ValInAltrntvCcy")
 	public List<PriceValue1> getValueInAlternativeCurrency() {
-		return valueInAlternativeCurrency;
+		return valueInAlternativeCurrency == null ? valueInAlternativeCurrency = new ArrayList<>() : valueInAlternativeCurrency;
 	}
 
-	public void setValueInAlternativeCurrency(List<com.tools20022.repository.msg.PriceValue1> valueInAlternativeCurrency) {
-		this.valueInAlternativeCurrency = valueInAlternativeCurrency;
+	public UnitPrice15 setValueInAlternativeCurrency(List<com.tools20022.repository.msg.PriceValue1> valueInAlternativeCurrency) {
+		this.valueInAlternativeCurrency = Objects.requireNonNull(valueInAlternativeCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "ForExctnInd", required = true)
 	public YesNoIndicator getForExecutionIndicator() {
 		return forExecutionIndicator;
 	}
 
-	public void setForExecutionIndicator(YesNoIndicator forExecutionIndicator) {
-		this.forExecutionIndicator = forExecutionIndicator;
+	public UnitPrice15 setForExecutionIndicator(YesNoIndicator forExecutionIndicator) {
+		this.forExecutionIndicator = Objects.requireNonNull(forExecutionIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "CumDvddInd", required = true)
 	public YesNoIndicator getCumDividendIndicator() {
 		return cumDividendIndicator;
 	}
 
-	public void setCumDividendIndicator(YesNoIndicator cumDividendIndicator) {
-		this.cumDividendIndicator = cumDividendIndicator;
+	public UnitPrice15 setCumDividendIndicator(YesNoIndicator cumDividendIndicator) {
+		this.cumDividendIndicator = Objects.requireNonNull(cumDividendIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "ClctnBsis")
-	public PercentageRate getCalculationBasis() {
-		return calculationBasis;
+	public Optional<PercentageRate> getCalculationBasis() {
+		return calculationBasis == null ? Optional.empty() : Optional.of(calculationBasis);
 	}
 
-	public void setCalculationBasis(PercentageRate calculationBasis) {
+	public UnitPrice15 setCalculationBasis(PercentageRate calculationBasis) {
 		this.calculationBasis = calculationBasis;
+		return this;
 	}
 
-	@XmlElement(name = "EstmtdPricInd", required = true)
 	public YesNoIndicator getEstimatedPriceIndicator() {
 		return estimatedPriceIndicator;
 	}
 
-	public void setEstimatedPriceIndicator(YesNoIndicator estimatedPriceIndicator) {
-		this.estimatedPriceIndicator = estimatedPriceIndicator;
+	public UnitPrice15 setEstimatedPriceIndicator(YesNoIndicator estimatedPriceIndicator) {
+		this.estimatedPriceIndicator = Objects.requireNonNull(estimatedPriceIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "NbOfDaysAcrd")
-	public Number getNumberOfDaysAccrued() {
-		return numberOfDaysAccrued;
+	public Optional<Number> getNumberOfDaysAccrued() {
+		return numberOfDaysAccrued == null ? Optional.empty() : Optional.of(numberOfDaysAccrued);
 	}
 
-	public void setNumberOfDaysAccrued(Number numberOfDaysAccrued) {
+	public UnitPrice15 setNumberOfDaysAccrued(Number numberOfDaysAccrued) {
 		this.numberOfDaysAccrued = numberOfDaysAccrued;
+		return this;
 	}
 
-	@XmlElement(name = "TaxblIncmPerShr")
-	public ActiveOrHistoricCurrencyAnd13DecimalAmount getTaxableIncomePerShare() {
-		return taxableIncomePerShare;
+	public Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount> getTaxableIncomePerShare() {
+		return taxableIncomePerShare == null ? Optional.empty() : Optional.of(taxableIncomePerShare);
 	}
 
-	public void setTaxableIncomePerShare(ActiveOrHistoricCurrencyAnd13DecimalAmount taxableIncomePerShare) {
+	public UnitPrice15 setTaxableIncomePerShare(ActiveOrHistoricCurrencyAnd13DecimalAmount taxableIncomePerShare) {
 		this.taxableIncomePerShare = taxableIncomePerShare;
+		return this;
 	}
 
-	@XmlElement(name = "TaxblIncmPerShrClctd")
-	public TaxableIncomePerShareCalculated2Code getTaxableIncomePerShareCalculated() {
-		return taxableIncomePerShareCalculated;
+	public Optional<TaxableIncomePerShareCalculated2Code> getTaxableIncomePerShareCalculated() {
+		return taxableIncomePerShareCalculated == null ? Optional.empty() : Optional.of(taxableIncomePerShareCalculated);
 	}
 
-	public void setTaxableIncomePerShareCalculated(TaxableIncomePerShareCalculated2Code taxableIncomePerShareCalculated) {
+	public UnitPrice15 setTaxableIncomePerShareCalculated(TaxableIncomePerShareCalculated2Code taxableIncomePerShareCalculated) {
 		this.taxableIncomePerShareCalculated = taxableIncomePerShareCalculated;
+		return this;
 	}
 
-	@XmlElement(name = "XtndedTaxblIncmPerShrClctd")
-	public Extended350Code getExtendedTaxableIncomePerShareCalculated() {
-		return extendedTaxableIncomePerShareCalculated;
+	public Optional<Extended350Code> getExtendedTaxableIncomePerShareCalculated() {
+		return extendedTaxableIncomePerShareCalculated == null ? Optional.empty() : Optional.of(extendedTaxableIncomePerShareCalculated);
 	}
 
-	public void setExtendedTaxableIncomePerShareCalculated(Extended350Code extendedTaxableIncomePerShareCalculated) {
+	public UnitPrice15 setExtendedTaxableIncomePerShareCalculated(Extended350Code extendedTaxableIncomePerShareCalculated) {
 		this.extendedTaxableIncomePerShareCalculated = extendedTaxableIncomePerShareCalculated;
+		return this;
 	}
 
-	@XmlElement(name = "TaxblIncmPerDvdd")
-	public ActiveOrHistoricCurrencyAnd13DecimalAmount getTaxableIncomePerDividend() {
-		return taxableIncomePerDividend;
+	public Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount> getTaxableIncomePerDividend() {
+		return taxableIncomePerDividend == null ? Optional.empty() : Optional.of(taxableIncomePerDividend);
 	}
 
-	public void setTaxableIncomePerDividend(ActiveOrHistoricCurrencyAnd13DecimalAmount taxableIncomePerDividend) {
+	public UnitPrice15 setTaxableIncomePerDividend(ActiveOrHistoricCurrencyAnd13DecimalAmount taxableIncomePerDividend) {
 		this.taxableIncomePerDividend = taxableIncomePerDividend;
+		return this;
 	}
 
-	@XmlElement(name = "EUDvddSts")
-	public EUDividendStatus1Code getEUDividendStatus() {
-		return eUDividendStatus;
+	public Optional<EUDividendStatus1Code> getEUDividendStatus() {
+		return eUDividendStatus == null ? Optional.empty() : Optional.of(eUDividendStatus);
 	}
 
-	public void setEUDividendStatus(EUDividendStatus1Code eUDividendStatus) {
+	public UnitPrice15 setEUDividendStatus(EUDividendStatus1Code eUDividendStatus) {
 		this.eUDividendStatus = eUDividendStatus;
+		return this;
 	}
 
-	@XmlElement(name = "XtndedEUDvddSts")
-	public Extended350Code getExtendedEUDividendStatus() {
-		return extendedEUDividendStatus;
+	public Optional<Extended350Code> getExtendedEUDividendStatus() {
+		return extendedEUDividendStatus == null ? Optional.empty() : Optional.of(extendedEUDividendStatus);
 	}
 
-	public void setExtendedEUDividendStatus(Extended350Code extendedEUDividendStatus) {
+	public UnitPrice15 setExtendedEUDividendStatus(Extended350Code extendedEUDividendStatus) {
 		this.extendedEUDividendStatus = extendedEUDividendStatus;
+		return this;
 	}
 
-	@XmlElement(name = "ChrgDtls")
 	public List<Charge15> getChargeDetails() {
-		return chargeDetails;
+		return chargeDetails == null ? chargeDetails = new ArrayList<>() : chargeDetails;
 	}
 
-	public void setChargeDetails(List<com.tools20022.repository.msg.Charge15> chargeDetails) {
-		this.chargeDetails = chargeDetails;
+	public UnitPrice15 setChargeDetails(List<com.tools20022.repository.msg.Charge15> chargeDetails) {
+		this.chargeDetails = Objects.requireNonNull(chargeDetails);
+		return this;
 	}
 
-	@XmlElement(name = "TaxLbltyDtls")
 	public List<Tax17> getTaxLiabilityDetails() {
-		return taxLiabilityDetails;
+		return taxLiabilityDetails == null ? taxLiabilityDetails = new ArrayList<>() : taxLiabilityDetails;
 	}
 
-	public void setTaxLiabilityDetails(List<com.tools20022.repository.msg.Tax17> taxLiabilityDetails) {
-		this.taxLiabilityDetails = taxLiabilityDetails;
+	public UnitPrice15 setTaxLiabilityDetails(List<com.tools20022.repository.msg.Tax17> taxLiabilityDetails) {
+		this.taxLiabilityDetails = Objects.requireNonNull(taxLiabilityDetails);
+		return this;
 	}
 
-	@XmlElement(name = "TaxRfndDtls")
 	public List<Tax17> getTaxRefundDetails() {
-		return taxRefundDetails;
+		return taxRefundDetails == null ? taxRefundDetails = new ArrayList<>() : taxRefundDetails;
 	}
 
-	public void setTaxRefundDetails(List<com.tools20022.repository.msg.Tax17> taxRefundDetails) {
-		this.taxRefundDetails = taxRefundDetails;
+	public UnitPrice15 setTaxRefundDetails(List<com.tools20022.repository.msg.Tax17> taxRefundDetails) {
+		this.taxRefundDetails = Objects.requireNonNull(taxRefundDetails);
+		return this;
 	}
 }

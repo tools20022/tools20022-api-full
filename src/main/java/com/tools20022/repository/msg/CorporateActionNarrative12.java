@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,9 +25,11 @@ import com.tools20022.repository.datatype.RestrictedFINXMax350Text;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,17 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides additional information such as the registration details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionNarrative12", propOrder = {"additionalText", "narrativeVersion", "registrationDetails", "partyContactNarrative", "disclaimer", "basketOrIndexInformation"})
 public class CorporateActionNarrative12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AddtlTxt")
 	protected List<RestrictedFINXMax350Text> additionalText;
 	/**
-	 * Provides additional information or specifies in more detail the content
-	 * of a message. This field may only be used when the information to be
-	 * transmitted, cannot be coded.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,6 +108,9 @@ public class CorporateActionNarrative12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlTxt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E::ADTX</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -120,9 +125,10 @@ public class CorporateActionNarrative12 {
 	 */
 	public static final MMMessageAttribute mmAdditionalText = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNarrative12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative12.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlTxt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E::ADTX"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalText";
 			definition = "Provides additional information or specifies in more detail the content of a message. This field may only be used when the information to be transmitted, cannot be coded.";
@@ -130,13 +136,11 @@ public class CorporateActionNarrative12 {
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NrrtvVrsn")
 	protected List<RestrictedFINXMax350Text> narrativeVersion;
 	/**
-	 * Provides information that can be ignored for automated processing; -
-	 * reiteration of information that has been included within structured
-	 * fields of this message, - or narrative information not needed for
-	 * automatic processing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,6 +156,9 @@ public class CorporateActionNarrative12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NrrtvVrsn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E::TXNR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -166,9 +173,10 @@ public class CorporateActionNarrative12 {
 	 */
 	public static final MMMessageAttribute mmNarrativeVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNarrative12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative12.mmObject();
 			isDerived = false;
 			xmlTag = "NrrtvVrsn";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E::TXNR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeVersion";
 			definition = "Provides information that can be ignored for automated processing; - reiteration of information that has been included within structured fields of this message, - or narrative information not needed for automatic processing.";
@@ -176,10 +184,11 @@ public class CorporateActionNarrative12 {
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RegnDtls")
 	protected List<RestrictedFINXMax350Text> registrationDetails;
 	/**
-	 * Provides information required for the registration.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,6 +209,9 @@ public class CorporateActionNarrative12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RegnDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E::REGI</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -213,9 +225,10 @@ public class CorporateActionNarrative12 {
 	public static final MMMessageAttribute mmRegistrationDetails = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmRegistrationDetails;
-			componentContext_lazy = () -> CorporateActionNarrative12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative12.mmObject();
 			isDerived = false;
 			xmlTag = "RegnDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E::REGI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDetails";
 			definition = "Provides information required for the registration.";
@@ -223,12 +236,11 @@ public class CorporateActionNarrative12 {
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PtyCtctNrrtv")
 	protected List<RestrictedFINXMax350Text> partyContactNarrative;
 	/**
-	 * Provides additional information regarding the party, for example, the
-	 * contact unit or person responsible for the transaction identified in the
-	 * message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,6 +261,9 @@ public class CorporateActionNarrative12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PtyCtctNrrtv"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E::PACO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -264,9 +279,10 @@ public class CorporateActionNarrative12 {
 	public static final MMMessageAttribute mmPartyContactNarrative = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Role.mmContactPersonRole;
-			componentContext_lazy = () -> CorporateActionNarrative12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative12.mmObject();
 			isDerived = false;
 			xmlTag = "PtyCtctNrrtv";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E::PACO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyContactNarrative";
 			definition = "Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.";
@@ -274,12 +290,11 @@ public class CorporateActionNarrative12 {
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Dsclmr")
 	protected List<RestrictedFINXMax350Text> disclaimer;
 	/**
-	 * Disclaimer relative to the information provided in the message. It may be
-	 * ignored for automated processing. No information about the instruction
-	 * itself is allowed here.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -295,6 +310,9 @@ public class CorporateActionNarrative12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Dsclmr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E::DISC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -309,9 +327,10 @@ public class CorporateActionNarrative12 {
 	 */
 	public static final MMMessageAttribute mmDisclaimer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNarrative12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative12.mmObject();
 			isDerived = false;
 			xmlTag = "Dsclmr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E::DISC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disclaimer";
 			definition = "Disclaimer relative to the information provided in the message. It may be ignored for automated processing. No information about the instruction itself is allowed here.";
@@ -319,11 +338,11 @@ public class CorporateActionNarrative12 {
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BsktOrIndxInf")
 	protected List<RestrictedFINXMax350Text> basketOrIndexInformation;
 	/**
-	 * Provides additional information on the basket or index underlying a
-	 * security, for example a warrant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -344,6 +363,9 @@ public class CorporateActionNarrative12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BsktOrIndxInf"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E::BAIN</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -359,9 +381,10 @@ public class CorporateActionNarrative12 {
 	public static final MMMessageAttribute mmBasketOrIndexInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmBasketOrIndexInformation;
-			componentContext_lazy = () -> CorporateActionNarrative12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative12.mmObject();
 			isDerived = false;
 			xmlTag = "BsktOrIndxInf";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E::BAIN"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasketOrIndexInformation";
 			definition = "Provides additional information on the basket or index underlying a security, for example a warrant.";
@@ -373,10 +396,11 @@ public class CorporateActionNarrative12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionNarrative12.mmAdditionalText, CorporateActionNarrative12.mmNarrativeVersion, CorporateActionNarrative12.mmRegistrationDetails,
-						CorporateActionNarrative12.mmPartyContactNarrative, CorporateActionNarrative12.mmDisclaimer, CorporateActionNarrative12.mmBasketOrIndexInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative12.mmAdditionalText, com.tools20022.repository.msg.CorporateActionNarrative12.mmNarrativeVersion,
+						com.tools20022.repository.msg.CorporateActionNarrative12.mmRegistrationDetails, com.tools20022.repository.msg.CorporateActionNarrative12.mmPartyContactNarrative,
+						com.tools20022.repository.msg.CorporateActionNarrative12.mmDisclaimer, com.tools20022.repository.msg.CorporateActionNarrative12.mmBasketOrIndexInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrative12";
 				definition = "Provides additional information such as the registration details.";
@@ -385,57 +409,57 @@ public class CorporateActionNarrative12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AddtlTxt")
 	public List<RestrictedFINXMax350Text> getAdditionalText() {
-		return additionalText;
+		return additionalText == null ? additionalText = new ArrayList<>() : additionalText;
 	}
 
-	public void setAdditionalText(List<RestrictedFINXMax350Text> additionalText) {
-		this.additionalText = additionalText;
+	public CorporateActionNarrative12 setAdditionalText(List<RestrictedFINXMax350Text> additionalText) {
+		this.additionalText = Objects.requireNonNull(additionalText);
+		return this;
 	}
 
-	@XmlElement(name = "NrrtvVrsn")
 	public List<RestrictedFINXMax350Text> getNarrativeVersion() {
-		return narrativeVersion;
+		return narrativeVersion == null ? narrativeVersion = new ArrayList<>() : narrativeVersion;
 	}
 
-	public void setNarrativeVersion(List<RestrictedFINXMax350Text> narrativeVersion) {
-		this.narrativeVersion = narrativeVersion;
+	public CorporateActionNarrative12 setNarrativeVersion(List<RestrictedFINXMax350Text> narrativeVersion) {
+		this.narrativeVersion = Objects.requireNonNull(narrativeVersion);
+		return this;
 	}
 
-	@XmlElement(name = "RegnDtls")
 	public List<RestrictedFINXMax350Text> getRegistrationDetails() {
-		return registrationDetails;
+		return registrationDetails == null ? registrationDetails = new ArrayList<>() : registrationDetails;
 	}
 
-	public void setRegistrationDetails(List<RestrictedFINXMax350Text> registrationDetails) {
-		this.registrationDetails = registrationDetails;
+	public CorporateActionNarrative12 setRegistrationDetails(List<RestrictedFINXMax350Text> registrationDetails) {
+		this.registrationDetails = Objects.requireNonNull(registrationDetails);
+		return this;
 	}
 
-	@XmlElement(name = "PtyCtctNrrtv")
 	public List<RestrictedFINXMax350Text> getPartyContactNarrative() {
-		return partyContactNarrative;
+		return partyContactNarrative == null ? partyContactNarrative = new ArrayList<>() : partyContactNarrative;
 	}
 
-	public void setPartyContactNarrative(List<RestrictedFINXMax350Text> partyContactNarrative) {
-		this.partyContactNarrative = partyContactNarrative;
+	public CorporateActionNarrative12 setPartyContactNarrative(List<RestrictedFINXMax350Text> partyContactNarrative) {
+		this.partyContactNarrative = Objects.requireNonNull(partyContactNarrative);
+		return this;
 	}
 
-	@XmlElement(name = "Dsclmr")
 	public List<RestrictedFINXMax350Text> getDisclaimer() {
-		return disclaimer;
+		return disclaimer == null ? disclaimer = new ArrayList<>() : disclaimer;
 	}
 
-	public void setDisclaimer(List<RestrictedFINXMax350Text> disclaimer) {
-		this.disclaimer = disclaimer;
+	public CorporateActionNarrative12 setDisclaimer(List<RestrictedFINXMax350Text> disclaimer) {
+		this.disclaimer = Objects.requireNonNull(disclaimer);
+		return this;
 	}
 
-	@XmlElement(name = "BsktOrIndxInf")
 	public List<RestrictedFINXMax350Text> getBasketOrIndexInformation() {
-		return basketOrIndexInformation;
+		return basketOrIndexInformation == null ? basketOrIndexInformation = new ArrayList<>() : basketOrIndexInformation;
 	}
 
-	public void setBasketOrIndexInformation(List<RestrictedFINXMax350Text> basketOrIndexInformation) {
-		this.basketOrIndexInformation = basketOrIndexInformation;
+	public CorporateActionNarrative12 setBasketOrIndexInformation(List<RestrictedFINXMax350Text> basketOrIndexInformation) {
+		this.basketOrIndexInformation = Objects.requireNonNull(basketOrIndexInformation);
+		return this;
 	}
 }

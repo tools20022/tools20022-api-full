@@ -30,6 +30,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -187,8 +188,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -202,18 +203,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "BICIdentification1", propOrder = "BIC")
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "BICIdentification1", propOrder = "bIC")
 public class BICIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BIC", required = true)
 	protected BICIdentifier bIC;
 	/**
-	 * Code allocated to a financial institution by the ISO 9362 Registration
-	 * Authority as described in ISO 9362
-	 * "Banking - Banking telecommunication messages - Business identifier code (BIC)"
-	 * .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,7 +248,7 @@ public class BICIdentification1 {
 	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> BICIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "BIC";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -264,7 +263,7 @@ public class BICIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BICIdentification1.mmBIC);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BICIdentification1.mmBIC);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ActivityReportRequestV03.mmEntitiesToBeReported, AmendmentAcceptanceNotificationV03.mmInitiator, AmendmentRejectionNotificationV03.mmInitiator,
 						BaselineMatchReportV03.mmBuyerBank, BaselineMatchReportV03.mmSellerBank, BaselineReportV03.mmBuyerBank, BaselineReportV03.mmSellerBank, DataSetMatchReportV03.mmBuyerBank, DataSetMatchReportV03.mmSellerBank,
 						DataSetSubmissionV03.mmBuyerBank, DataSetSubmissionV03.mmSellerBank, DeltaReportV03.mmBuyerBank, DeltaReportV03.mmSellerBank, ForwardDataSetSubmissionReportV03.mmSubmitter,
@@ -276,7 +275,7 @@ public class BICIdentification1 {
 						BaselineReportV04.mmSellerBank, ForwardDataSetSubmissionReportV05.mmSubmitter, ForwardDataSetSubmissionReportV05.mmBuyerBank, ForwardDataSetSubmissionReportV05.mmSellerBank, DataSetSubmissionV05.mmBuyerBank,
 						DataSetSubmissionV05.mmSellerBank);
 				trace_lazy = () -> FinancialInstitution.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -292,12 +291,12 @@ public class BICIdentification1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BIC", required = true)
 	public BICIdentifier getBIC() {
 		return bIC;
 	}
 
-	public void setBIC(BICIdentifier bIC) {
-		this.bIC = bIC;
+	public BICIdentification1 setBIC(BICIdentifier bIC) {
+		this.bIC = Objects.requireNonNull(bIC);
+		return this;
 	}
 }

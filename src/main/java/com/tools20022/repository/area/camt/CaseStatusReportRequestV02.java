@@ -28,6 +28,7 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -60,20 +61,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
- * CashManagementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CaseStsRptReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -86,6 +73,20 @@ import javax.xml.bind.annotation.*;
  * CaseStatusReportRequestV02.mmCase}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CaseStsRptReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
+ * CashManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.038.001.02}</li>
@@ -113,16 +114,16 @@ import javax.xml.bind.annotation.*;
  * CaseStatusReportRequest}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CaseStatusReportRequestV02", propOrder = {"requestHeader", "case"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CaseStatusReportRequestV02", propOrder = {"requestHeader", "case_"})
 public class CaseStatusReportRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ReqHdr", required = true)
 	protected ReportHeader2 requestHeader;
 	/**
-	 * Identifies the party requesting the status, the requested party, the
-	 * identification and the date of the status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,10 +164,11 @@ public class CaseStatusReportRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Case", required = true)
 	protected Case2 case_;
 	/**
-	 * Identifies the investigation case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,25 +238,25 @@ public class CaseStatusReportRequestV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ReqHdr", required = true)
 	public ReportHeader2 getRequestHeader() {
 		return requestHeader;
 	}
 
-	public void setRequestHeader(ReportHeader2 requestHeader) {
-		this.requestHeader = requestHeader;
+	public CaseStatusReportRequestV02 setRequestHeader(ReportHeader2 requestHeader) {
+		this.requestHeader = Objects.requireNonNull(requestHeader);
+		return this;
 	}
 
-	@XmlElement(name = "Case", required = true)
 	public Case2 getCase() {
 		return case_;
 	}
 
-	public void setCase(Case2 case_) {
-		this.case_ = case_;
+	public CaseStatusReportRequestV02 setCase(Case2 case_) {
+		this.case_ = Objects.requireNonNull(case_);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.038.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.038.001.02")
 	static public class Document {
 		@XmlElement(name = "CaseStsRptReq", required = true)
 		public CaseStatusReportRequestV02 messageBody;

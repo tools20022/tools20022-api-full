@@ -20,49 +20,53 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TradingModeTypeCode;
+import com.tools20022.repository.codeset.TradingModeType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies the type of the trading mode.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TradingModeTypeCode
- * TradingModeTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingModeType1Code#mmQuotationDriven
- * TradingModeType1Code.mmQuotationDriven}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingModeType1Code#QuotationDriven
+ * TradingModeType1Code.QuotationDriven}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingModeType1Code#mmOrderDriven
- * TradingModeType1Code.mmOrderDriven}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingModeType1Code#OrderDriven
+ * TradingModeType1Code.OrderDriven}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingModeType1Code#mmNegotiationTrade
- * TradingModeType1Code.mmNegotiationTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingModeType1Code#NegotiationTrade
+ * TradingModeType1Code.NegotiationTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingModeType1Code#mmAuction
- * TradingModeType1Code.mmAuction}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingModeType1Code#Auction
+ * TradingModeType1Code.Auction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingModeType1Code#mmMatching
- * TradingModeType1Code.mmMatching}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingModeType1Code#Matching
+ * TradingModeType1Code.Matching}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingModeType1Code#mmBilateral
- * TradingModeType1Code.mmBilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingModeType1Code#Bilateral
+ * TradingModeType1Code.Bilateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingModeType1Code#mmAnonymous
- * TradingModeType1Code.mmAnonymous}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingModeType1Code#Anonymous
+ * TradingModeType1Code.Anonymous}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TradingModeTypeCode
+ * TradingModeTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies the type of the trading mode."</li>
  * </ul>
  */
-public class TradingModeType1Code extends TradingModeTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TradingModeType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class TradingModeType1Code extends TradingModeTypeCode {
 	 * name} = "QuotationDriven"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQuotationDriven = new MMCode() {
+	public static final TradingModeType1Code QuotationDriven = new TradingModeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationDriven";
-			owner_lazy = () -> TradingModeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingModeType1Code.mmObject();
+			codeName = TradingModeTypeCode.QuotationDriven.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class TradingModeType1Code extends TradingModeTypeCode {
 	 * name} = "OrderDriven"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOrderDriven = new MMCode() {
+	public static final TradingModeType1Code OrderDriven = new TradingModeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDriven";
-			owner_lazy = () -> TradingModeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingModeType1Code.mmObject();
+			codeName = TradingModeTypeCode.OrderDriven.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class TradingModeType1Code extends TradingModeTypeCode {
 	 * name} = "NegotiationTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNegotiationTrade = new MMCode() {
+	public static final TradingModeType1Code NegotiationTrade = new TradingModeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegotiationTrade";
-			owner_lazy = () -> TradingModeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingModeType1Code.mmObject();
+			codeName = TradingModeTypeCode.NegotiationTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +169,12 @@ public class TradingModeType1Code extends TradingModeTypeCode {
 	 * name} = "Auction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAuction = new MMCode() {
+	public static final TradingModeType1Code Auction = new TradingModeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Auction";
-			owner_lazy = () -> TradingModeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingModeType1Code.mmObject();
+			codeName = TradingModeTypeCode.Auction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,11 +193,12 @@ public class TradingModeType1Code extends TradingModeTypeCode {
 	 * name} = "Matching"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMatching = new MMCode() {
+	public static final TradingModeType1Code Matching = new TradingModeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matching";
-			owner_lazy = () -> TradingModeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingModeType1Code.mmObject();
+			codeName = TradingModeTypeCode.Matching.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -207,11 +217,12 @@ public class TradingModeType1Code extends TradingModeTypeCode {
 	 * name} = "Bilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBilateral = new MMCode() {
+	public static final TradingModeType1Code Bilateral = new TradingModeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bilateral";
-			owner_lazy = () -> TradingModeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingModeType1Code.mmObject();
+			codeName = TradingModeTypeCode.Bilateral.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -230,26 +241,63 @@ public class TradingModeType1Code extends TradingModeTypeCode {
 	 * name} = "Anonymous"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAnonymous = new MMCode() {
+	public static final TradingModeType1Code Anonymous = new TradingModeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Anonymous";
-			owner_lazy = () -> TradingModeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingModeType1Code.mmObject();
+			codeName = TradingModeTypeCode.Anonymous.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TradingModeType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TradingModeType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingModeType1Code";
 				definition = "Identifies the type of the trading mode.";
-				code_lazy = () -> Arrays.asList(TradingModeType1Code.mmQuotationDriven, TradingModeType1Code.mmOrderDriven, TradingModeType1Code.mmNegotiationTrade, TradingModeType1Code.mmAuction, TradingModeType1Code.mmMatching,
-						TradingModeType1Code.mmBilateral, TradingModeType1Code.mmAnonymous);
 				trace_lazy = () -> TradingModeTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingModeType1Code.QuotationDriven, com.tools20022.repository.codeset.TradingModeType1Code.OrderDriven,
+						com.tools20022.repository.codeset.TradingModeType1Code.NegotiationTrade, com.tools20022.repository.codeset.TradingModeType1Code.Auction, com.tools20022.repository.codeset.TradingModeType1Code.Matching,
+						com.tools20022.repository.codeset.TradingModeType1Code.Bilateral, com.tools20022.repository.codeset.TradingModeType1Code.Anonymous);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(QuotationDriven.getCodeName().get(), QuotationDriven);
+		codesByName.put(OrderDriven.getCodeName().get(), OrderDriven);
+		codesByName.put(NegotiationTrade.getCodeName().get(), NegotiationTrade);
+		codesByName.put(Auction.getCodeName().get(), Auction);
+		codesByName.put(Matching.getCodeName().get(), Matching);
+		codesByName.put(Bilateral.getCodeName().get(), Bilateral);
+		codesByName.put(Anonymous.getCodeName().get(), Anonymous);
+	}
+
+	public static TradingModeType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TradingModeType1Code[] values() {
+		TradingModeType1Code[] values = new TradingModeType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TradingModeType1Code> {
+		@Override
+		public TradingModeType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TradingModeType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

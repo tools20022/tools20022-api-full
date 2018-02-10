@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.LateReportCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether a transaction report is late.
@@ -31,11 +36,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.LateReportCode#mmLate
- * LateReportCode.mmLate}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LateReportCode#Late
+ * LateReportCode.Late}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LateReportCode#mmLateBecausePartial
- * LateReportCode.mmLateBecausePartial}</li>
+ * {@linkplain com.tools20022.repository.codeset.LateReportCode#LateBecausePartial
+ * LateReportCode.LateBecausePartial}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -66,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies whether a transaction report is late."</li>
  * </ul>
  */
-public class LateReportCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class LateReportCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,12 +96,12 @@ public class LateReportCode {
 	 * definition} = "The confirmation is late."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLate = new MMCode() {
+	public static final LateReportCode Late = new LateReportCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Late";
 			definition = "The confirmation is late.";
-			owner_lazy = () -> LateReportCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LateReportCode.mmObject();
 			codeName = "LAT1";
 		}
 	};
@@ -123,28 +129,58 @@ public class LateReportCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmLateBecausePartial = new MMCode() {
+	public static final LateReportCode LateBecausePartial = new LateReportCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LateBecausePartial";
 			definition = "The confirmation is late because the trade was executed as a number of partials.";
-			owner_lazy = () -> LateReportCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LateReportCode.mmObject();
 			codeName = "LAT2";
 		}
 	};
+	final static private LinkedHashMap<String, LateReportCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected LateReportCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("LAT1");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LateReportCode";
 				definition = "Specifies whether a transaction report is late.";
-				code_lazy = () -> Arrays.asList(LateReportCode.mmLate, LateReportCode.mmLateBecausePartial);
 				derivation_lazy = () -> Arrays.asList(LateReport1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LateReportCode.Late, com.tools20022.repository.codeset.LateReportCode.LateBecausePartial);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Late.getCodeName().get(), Late);
+		codesByName.put(LateBecausePartial.getCodeName().get(), LateBecausePartial);
+	}
+
+	public static LateReportCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static LateReportCode[] values() {
+		LateReportCode[] values = new LateReportCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, LateReportCode> {
+		@Override
+		public LateReportCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(LateReportCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.Collateral1;
 import com.tools20022.repository.msg.MarginCollateral1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,16 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CollateralBalance1Choice", propOrder = {"totalCollateral", "collateralDetails", "segregatedIndependentAmount"})
 public class CollateralBalance1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlColl", required = true)
 	protected ActiveCurrencyAndAmount totalCollateral;
 	/**
-	 * Collateral currently received (+)/delivered (-) in the base currency.
-	 * This amount is after the haircut has been applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +120,7 @@ public class CollateralBalance1Choice {
 	public static final MMMessageAttribute mmTotalCollateral = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> ExposureCalculation.mmObject();
-			componentContext_lazy = () -> CollateralBalance1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralBalance1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TtlColl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,12 +131,11 @@ public class CollateralBalance1Choice {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CollDtls", required = true)
 	protected Collateral1 collateralDetails;
 	/**
-	 * Provides details about the collateral held, in transit or that still
-	 * needs to be agreed by both parties, for the variation margin and
-	 * optionally the segregated independent amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -169,7 +169,7 @@ public class CollateralBalance1Choice {
 	public static final MMMessageAssociationEnd mmCollateralDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ExposureCalculation.mmObject();
-			componentContext_lazy = () -> CollateralBalance1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralBalance1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,12 +181,11 @@ public class CollateralBalance1Choice {
 			type_lazy = () -> Collateral1.mmObject();
 		}
 	};
+	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
 	protected MarginCollateral1 segregatedIndependentAmount;
 	/**
-	 * Provides details about the collateral held, in transit or that still
-	 * needs to be agreed by both parties, against the segregated independent
-	 * amount only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -220,7 +219,7 @@ public class CollateralBalance1Choice {
 	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmCurrentSegregatedIndependentAmount;
-			componentContext_lazy = () -> CollateralBalance1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralBalance1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,9 +235,10 @@ public class CollateralBalance1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CollateralBalance1Choice.mmTotalCollateral, CollateralBalance1Choice.mmCollateralDetails, CollateralBalance1Choice.mmSegregatedIndependentAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralBalance1Choice.mmTotalCollateral, com.tools20022.repository.choice.CollateralBalance1Choice.mmCollateralDetails,
+						com.tools20022.repository.choice.CollateralBalance1Choice.mmSegregatedIndependentAmount);
 				trace_lazy = () -> ExposureCalculation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralBalance1Choice";
 				definition = "Choice to provide the collateral balance for the variation margin and the segregated independent amount, or the segregated independent amount only.";
@@ -247,30 +247,30 @@ public class CollateralBalance1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlColl", required = true)
 	public ActiveCurrencyAndAmount getTotalCollateral() {
 		return totalCollateral;
 	}
 
-	public void setTotalCollateral(ActiveCurrencyAndAmount totalCollateral) {
-		this.totalCollateral = totalCollateral;
+	public CollateralBalance1Choice setTotalCollateral(ActiveCurrencyAndAmount totalCollateral) {
+		this.totalCollateral = Objects.requireNonNull(totalCollateral);
+		return this;
 	}
 
-	@XmlElement(name = "CollDtls", required = true)
 	public Collateral1 getCollateralDetails() {
 		return collateralDetails;
 	}
 
-	public void setCollateralDetails(Collateral1 collateralDetails) {
-		this.collateralDetails = collateralDetails;
+	public CollateralBalance1Choice setCollateralDetails(Collateral1 collateralDetails) {
+		this.collateralDetails = Objects.requireNonNull(collateralDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
 	public MarginCollateral1 getSegregatedIndependentAmount() {
 		return segregatedIndependentAmount;
 	}
 
-	public void setSegregatedIndependentAmount(MarginCollateral1 segregatedIndependentAmount) {
-		this.segregatedIndependentAmount = segregatedIndependentAmount;
+	public CollateralBalance1Choice setSegregatedIndependentAmount(MarginCollateral1 segregatedIndependentAmount) {
+		this.segregatedIndependentAmount = Objects.requireNonNull(segregatedIndependentAmount);
+		return this;
 	}
 }

@@ -29,9 +29,8 @@ import com.tools20022.repository.msg.ControlData1;
 import com.tools20022.repository.msg.UnderlyingTransaction1;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -71,20 +70,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementArchive
- * CashManagementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CstmrPmtCxlReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -103,9 +88,39 @@ import javax.xml.bind.annotation.*;
  * CustomerPaymentCancellationRequestV01.mmUnderlying}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CstmrPmtCxlReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementArchive
+ * CashManagementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.055.001.01}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrGroupCaseRule#forCustomerPaymentCancellationRequestV01
+ * ConstraintMessageOrGroupCaseRule.forCustomerPaymentCancellationRequestV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule#forCustomerPaymentCancellationRequestV01
+ * ConstraintMessageOrPaymentInformationCaseRule.
+ * forCustomerPaymentCancellationRequestV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrTransactionCaseRule#forCustomerPaymentCancellationRequestV01
+ * ConstraintMessageOrTransactionCaseRule.
+ * forCustomerPaymentCancellationRequestV01}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -130,17 +145,16 @@ import javax.xml.bind.annotation.*;
  * PaymentCancellationRequestV01}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CustomerPaymentCancellationRequestV01", propOrder = {"assignment", "case", "controlData", "underlying"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CustomerPaymentCancellationRequestV01", propOrder = {"assignment", "case_", "controlData", "underlying"})
 public class CustomerPaymentCancellationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Assgnmt", required = true)
 	protected CaseAssignment2 assignment;
 	/**
-	 * Identifies the assignment of an investigation case from an assigner to an
-	 * assignee. Usage: The Assigner must be the sender of this confirmation and
-	 * the Assignee must be the receiver.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -181,10 +195,11 @@ public class CustomerPaymentCancellationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "Case")
 	protected Case2 case_;
 	/**
-	 * Identifies the investigation case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,11 +237,11 @@ public class CustomerPaymentCancellationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CtrlData")
 	protected ControlData1 controlData;
 	/**
-	 * Provides details on the number of transactions and the control sum of the
-	 * message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -267,10 +282,11 @@ public class CustomerPaymentCancellationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "Undrlyg", required = true)
 	protected List<UnderlyingTransaction1> underlying;
 	/**
-	 * Identifies the payment instruction to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -313,6 +329,9 @@ public class CustomerPaymentCancellationRequestV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrGroupCaseRule.forCustomerPaymentCancellationRequestV01,
+						com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationCaseRule.forCustomerPaymentCancellationRequestV01,
+						com.tools20022.repository.constraints.ConstraintMessageOrTransactionCaseRule.forCustomerPaymentCancellationRequestV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustomerPaymentCancellationRequestV01";
 				definition = "Scope\r\nThe Customer Payment Cancellation Request message is sent by a case creator/case assigner to a case assignee.\r\nThis message is used to request the cancellation of an original payment instruction. The Customer Payment Cancellation Request message is issued by the initiating party to request the cancellation of an initiation payment message previously sent (such as CustomerCreditTransferInitiation or CustomerDirectDebitInitiation).\r\nUsage\r\nThe Customer Payment Cancellation Request message must be answered with a:\r\n- Resolution Of Investigation message with a positive final outcome when the case assignee can perform the requested cancellation\r\n- Resolution Of Investigation message with a negative final outcome when the case assignee may perform the requested cancellation but fails to do so (too late, irrevocable instruction, ...)\r\n- Reject Investigation message when the case assignee is unable or not authorised to perform the requested cancellation\r\n- Notification Of Case Assignment message to indicate whether the case assignee will take on the case himself or reassign the case to a subsequent party in the payment processing chain.\r\nA Customer Payment Cancellation Request message concerns one and only one original payment instruction at a time.\r\nWhen a case assignee successfully performs a cancellation, it must return the corresponding funds to the case assigner. It may provide some details about the return in the Resolution Of Investigation message.\r\nThe processing of a Customer Payment Cancellation Request message case may lead to a Debit Authorisation Request message sent to the creditor by its account servicing institution.\r\nThe Customer Payment Cancellation Request message may be used to escalate a case after an unsuccessful request to modify the payment. In this scenario, the case identification remains the same as in the original Customer Payment Cancellation Request message and the element ReopenCaseIndication is set to 'Yes' or 'true'.";
@@ -342,43 +361,43 @@ public class CustomerPaymentCancellationRequestV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment2 getAssignment() {
 		return assignment;
 	}
 
-	public void setAssignment(CaseAssignment2 assignment) {
-		this.assignment = assignment;
+	public CustomerPaymentCancellationRequestV01 setAssignment(CaseAssignment2 assignment) {
+		this.assignment = Objects.requireNonNull(assignment);
+		return this;
 	}
 
-	@XmlElement(name = "Case")
-	public Case2 getCase() {
-		return case_;
+	public Optional<Case2> getCase() {
+		return case_ == null ? Optional.empty() : Optional.of(case_);
 	}
 
-	public void setCase(Case2 case_) {
+	public CustomerPaymentCancellationRequestV01 setCase(Case2 case_) {
 		this.case_ = case_;
+		return this;
 	}
 
-	@XmlElement(name = "CtrlData")
-	public ControlData1 getControlData() {
-		return controlData;
+	public Optional<ControlData1> getControlData() {
+		return controlData == null ? Optional.empty() : Optional.of(controlData);
 	}
 
-	public void setControlData(ControlData1 controlData) {
+	public CustomerPaymentCancellationRequestV01 setControlData(ControlData1 controlData) {
 		this.controlData = controlData;
+		return this;
 	}
 
-	@XmlElement(name = "Undrlyg", required = true)
 	public List<UnderlyingTransaction1> getUnderlying() {
-		return underlying;
+		return underlying == null ? underlying = new ArrayList<>() : underlying;
 	}
 
-	public void setUnderlying(List<UnderlyingTransaction1> underlying) {
-		this.underlying = underlying;
+	public CustomerPaymentCancellationRequestV01 setUnderlying(List<UnderlyingTransaction1> underlying) {
+		this.underlying = Objects.requireNonNull(underlying);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.055.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.055.001.01")
 	static public class Document {
 		@XmlElement(name = "CstmrPmtCxlReq", required = true)
 		public CustomerPaymentCancellationRequestV01 messageBody;

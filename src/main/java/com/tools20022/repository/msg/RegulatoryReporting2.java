@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.RegulatoryReport;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,17 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Information needed due to regulatory and/or statutory requirements."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RegulatoryReporting2", propOrder = {"debitCreditReportingIndicator", "authority", "regulatoryDetails"})
 public class RegulatoryReporting2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DbtCdtRptgInd")
 	protected RegulatoryReportingType1Code debitCreditReportingIndicator;
 	/**
-	 * Identifies whether the regulatory reporting information applies to the
-	 * debit side, to the credit side or to both debit and credit sides of the
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +116,7 @@ public class RegulatoryReporting2 {
 	public static final MMMessageAttribute mmDebitCreditReportingIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RegulatoryReport.mmDebitCreditReportingIndicator;
-			componentContext_lazy = () -> RegulatoryReporting2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting2.mmObject();
 			isDerived = false;
 			xmlTag = "DbtCdtRptgInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +127,11 @@ public class RegulatoryReporting2 {
 			simpleType_lazy = () -> RegulatoryReportingType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Authrty")
 	protected RegulatoryAuthority authority;
 	/**
-	 * Entity requiring the regulatory reporting information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -162,7 +163,7 @@ public class RegulatoryReporting2 {
 	public static final MMMessageAssociationEnd mmAuthority = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> RegulatoryReport.mmAuthority;
-			componentContext_lazy = () -> RegulatoryReporting2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting2.mmObject();
 			isDerived = false;
 			xmlTag = "Authrty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +175,11 @@ public class RegulatoryReporting2 {
 			type_lazy = () -> com.tools20022.repository.msg.RegulatoryAuthority.mmObject();
 		}
 	};
+	@XmlElement(name = "RgltryDtls")
 	protected StructuredRegulatoryReporting2 regulatoryDetails;
 	/**
-	 * Details related to the regulatory reporting information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -210,7 +212,7 @@ public class RegulatoryReporting2 {
 	public static final MMMessageAssociationEnd mmRegulatoryDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RegulatoryReport.mmObject();
-			componentContext_lazy = () -> RegulatoryReporting2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting2.mmObject();
 			isDerived = false;
 			xmlTag = "RgltryDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,9 +228,10 @@ public class RegulatoryReporting2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RegulatoryReporting2.mmDebitCreditReportingIndicator, RegulatoryReporting2.mmAuthority, RegulatoryReporting2.mmRegulatoryDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting2.mmDebitCreditReportingIndicator, com.tools20022.repository.msg.RegulatoryReporting2.mmAuthority,
+						com.tools20022.repository.msg.RegulatoryReporting2.mmRegulatoryDetails);
 				trace_lazy = () -> RegulatoryReport.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegulatoryReporting2";
 				definition = "Information needed due to regulatory and/or statutory requirements.";
@@ -237,30 +240,30 @@ public class RegulatoryReporting2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DbtCdtRptgInd")
-	public RegulatoryReportingType1Code getDebitCreditReportingIndicator() {
-		return debitCreditReportingIndicator;
+	public Optional<RegulatoryReportingType1Code> getDebitCreditReportingIndicator() {
+		return debitCreditReportingIndicator == null ? Optional.empty() : Optional.of(debitCreditReportingIndicator);
 	}
 
-	public void setDebitCreditReportingIndicator(RegulatoryReportingType1Code debitCreditReportingIndicator) {
+	public RegulatoryReporting2 setDebitCreditReportingIndicator(RegulatoryReportingType1Code debitCreditReportingIndicator) {
 		this.debitCreditReportingIndicator = debitCreditReportingIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "Authrty")
-	public RegulatoryAuthority getAuthority() {
-		return authority;
+	public Optional<RegulatoryAuthority> getAuthority() {
+		return authority == null ? Optional.empty() : Optional.of(authority);
 	}
 
-	public void setAuthority(com.tools20022.repository.msg.RegulatoryAuthority authority) {
+	public RegulatoryReporting2 setAuthority(com.tools20022.repository.msg.RegulatoryAuthority authority) {
 		this.authority = authority;
+		return this;
 	}
 
-	@XmlElement(name = "RgltryDtls")
-	public StructuredRegulatoryReporting2 getRegulatoryDetails() {
-		return regulatoryDetails;
+	public Optional<StructuredRegulatoryReporting2> getRegulatoryDetails() {
+		return regulatoryDetails == null ? Optional.empty() : Optional.of(regulatoryDetails);
 	}
 
-	public void setRegulatoryDetails(com.tools20022.repository.msg.StructuredRegulatoryReporting2 regulatoryDetails) {
+	public RegulatoryReporting2 setRegulatoryDetails(com.tools20022.repository.msg.StructuredRegulatoryReporting2 regulatoryDetails) {
 		this.regulatoryDetails = regulatoryDetails;
+		return this;
 	}
 }

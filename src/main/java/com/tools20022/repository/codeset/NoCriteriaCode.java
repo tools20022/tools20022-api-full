@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.NoCriteriaCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies that there is no criteria.
@@ -31,9 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NoCriteriaCode#mmNoCriteria
- * NoCriteriaCode.mmNoCriteria}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NoCriteriaCode#NoCriteria
+ * NoCriteriaCode.NoCriteria}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -46,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies that there is no criteria."</li>
  * </ul>
  */
-public class NoCriteriaCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class NoCriteriaCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,28 +93,57 @@ public class NoCriteriaCode {
 	 * definition} = "No criteria."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoCriteria = new MMCode() {
+	public static final NoCriteriaCode NoCriteria = new NoCriteriaCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoCriteria";
 			definition = "No criteria.";
-			owner_lazy = () -> NoCriteriaCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NoCriteriaCode.mmObject();
 			codeName = "NOCR";
 		}
 	};
+	final static private LinkedHashMap<String, NoCriteriaCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected NoCriteriaCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NOCR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NoCriteriaCode";
 				definition = "Specifies that there is no criteria.";
-				code_lazy = () -> Arrays.asList(NoCriteriaCode.mmNoCriteria);
 				derivation_lazy = () -> Arrays.asList(NoCriteria1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NoCriteriaCode.NoCriteria);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NoCriteria.getCodeName().get(), NoCriteria);
+	}
+
+	public static NoCriteriaCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static NoCriteriaCode[] values() {
+		NoCriteriaCode[] values = new NoCriteriaCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, NoCriteriaCode> {
+		@Override
+		public NoCriteriaCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(NoCriteriaCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CashClearingSystemCode;
+import com.tools20022.repository.codeset.CashClearingSystem1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specification of a pre-agreed offering between clearing agents or the channel
@@ -31,147 +35,147 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystemCode
- * CashClearingSystemCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmEBAEuro1Step1
- * CashClearingSystem1Code.mmEBAEuro1Step1}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#EBAEuro1Step1
+ * CashClearingSystem1Code.EBAEuro1Step1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmAustrian
- * CashClearingSystem1Code.mmAustrian}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Austrian
+ * CashClearingSystem1Code.Austrian}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmNewZealand
- * CashClearingSystem1Code.mmNewZealand}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#NewZealand
+ * CashClearingSystem1Code.NewZealand}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmAzerbaijan
- * CashClearingSystem1Code.mmAzerbaijan}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Azerbaijan
+ * CashClearingSystem1Code.Azerbaijan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmBosniaHerzegovina
- * CashClearingSystem1Code.mmBosniaHerzegovina}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#BosniaHerzegovina
+ * CashClearingSystem1Code.BosniaHerzegovina}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmBelgium
- * CashClearingSystem1Code.mmBelgium}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Belgium
+ * CashClearingSystem1Code.Belgium}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmFinland
- * CashClearingSystem1Code.mmFinland}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Finland
+ * CashClearingSystem1Code.Finland}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmItaly
- * CashClearingSystem1Code.mmItaly}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Italy
+ * CashClearingSystem1Code.Italy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmCanada
- * CashClearingSystem1Code.mmCanada}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Canada
+ * CashClearingSystem1Code.Canada}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmSpainCAM
- * CashClearingSystem1Code.mmSpainCAM}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#SpainCAM
+ * CashClearingSystem1Code.SpainCAM}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmIreland
- * CashClearingSystem1Code.mmIreland}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Ireland
+ * CashClearingSystem1Code.Ireland}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmUnitedKingdom
- * CashClearingSystem1Code.mmUnitedKingdom}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#UnitedKingdom
+ * CashClearingSystem1Code.UnitedKingdom}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmDenmark
- * CashClearingSystem1Code.mmDenmark}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Denmark
+ * CashClearingSystem1Code.Denmark}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmGermanyRTGSPlus
- * CashClearingSystem1Code.mmGermanyRTGSPlus}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#GermanyRTGSPlus
+ * CashClearingSystem1Code.GermanyRTGSPlus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmEBAEuro1
- * CashClearingSystem1Code.mmEBAEuro1}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#EBAEuro1
+ * CashClearingSystem1Code.EBAEuro1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmGermanyELS
- * CashClearingSystem1Code.mmGermanyELS}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#GermanyELS
+ * CashClearingSystem1Code.GermanyELS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmEBAStep1
- * CashClearingSystem1Code.mmEBAStep1}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#EBAStep1
+ * CashClearingSystem1Code.EBAStep1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmEBAStep2
- * CashClearingSystem1Code.mmEBAStep2}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#EBAStep2
+ * CashClearingSystem1Code.EBAStep2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmCroatia
- * CashClearingSystem1Code.mmCroatia}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Croatia
+ * CashClearingSystem1Code.Croatia}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmGreece
- * CashClearingSystem1Code.mmGreece}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Greece
+ * CashClearingSystem1Code.Greece}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmHungary
- * CashClearingSystem1Code.mmHungary}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Hungary
+ * CashClearingSystem1Code.Hungary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmLuxemburg
- * CashClearingSystem1Code.mmLuxemburg}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Luxemburg
+ * CashClearingSystem1Code.Luxemburg}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmLatvia
- * CashClearingSystem1Code.mmLatvia}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Latvia
+ * CashClearingSystem1Code.Latvia}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmSouthAfrica
- * CashClearingSystem1Code.mmSouthAfrica}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#SouthAfrica
+ * CashClearingSystem1Code.SouthAfrica}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmMauritius
- * CashClearingSystem1Code.mmMauritius}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Mauritius
+ * CashClearingSystem1Code.Mauritius}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmNorway
- * CashClearingSystem1Code.mmNorway}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Norway
+ * CashClearingSystem1Code.Norway}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmSwitzerland
- * CashClearingSystem1Code.mmSwitzerland}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Switzerland
+ * CashClearingSystem1Code.Switzerland}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmAustralia
- * CashClearingSystem1Code.mmAustralia}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Australia
+ * CashClearingSystem1Code.Australia}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmEgypt
- * CashClearingSystem1Code.mmEgypt}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Egypt
+ * CashClearingSystem1Code.Egypt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmFrancePNS
- * CashClearingSystem1Code.mmFrancePNS}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#FrancePNS
+ * CashClearingSystem1Code.FrancePNS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmVenezuela
- * CashClearingSystem1Code.mmVenezuela}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Venezuela
+ * CashClearingSystem1Code.Venezuela}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmSwedenSEC
- * CashClearingSystem1Code.mmSwedenSEC}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#SwedenSEC
+ * CashClearingSystem1Code.SwedenSEC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmSlovania
- * CashClearingSystem1Code.mmSlovania}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Slovania
+ * CashClearingSystem1Code.Slovania}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmSpainES
- * CashClearingSystem1Code.mmSpainES}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#SpainES
+ * CashClearingSystem1Code.SpainES}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmPortugal
- * CashClearingSystem1Code.mmPortugal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Portugal
+ * CashClearingSystem1Code.Portugal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmSwedenSSK
- * CashClearingSystem1Code.mmSwedenSSK}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#SwedenSSK
+ * CashClearingSystem1Code.SwedenSSK}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmFranceFR
- * CashClearingSystem1Code.mmFranceFR}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#FranceFR
+ * CashClearingSystem1Code.FranceFR}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmTarget
- * CashClearingSystem1Code.mmTarget}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Target
+ * CashClearingSystem1Code.Target}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmNetherlands
- * CashClearingSystem1Code.mmNetherlands}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Netherlands
+ * CashClearingSystem1Code.Netherlands}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmFedwire
- * CashClearingSystem1Code.mmFedwire}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Fedwire
+ * CashClearingSystem1Code.Fedwire}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmBankOfJapanNet
- * CashClearingSystem1Code.mmBankOfJapanNet}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#BankOfJapanNet
+ * CashClearingSystem1Code.BankOfJapanNet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmForeignExchangeYenClearing
- * CashClearingSystem1Code.mmForeignExchangeYenClearing}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#ForeignExchangeYenClearing
+ * CashClearingSystem1Code.ForeignExchangeYenClearing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#mmZengin
- * CashClearingSystem1Code.mmZengin}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem1Code#Zengin
+ * CashClearingSystem1Code.Zengin}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystemCode
+ * CashClearingSystemCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -190,7 +194,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CashClearingSystem1Code extends CashClearingSystemCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CashClearingSystem1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -209,11 +214,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "EBAEuro1Step1"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEBAEuro1Step1 = new MMCode() {
+	public static final CashClearingSystem1Code EBAEuro1Step1 = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EBAEuro1Step1";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.EBAEuro1Step1.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -232,11 +238,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Austrian"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAustrian = new MMCode() {
+	public static final CashClearingSystem1Code Austrian = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Austrian";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Austrian.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -255,11 +262,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "NewZealand"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNewZealand = new MMCode() {
+	public static final CashClearingSystem1Code NewZealand = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewZealand";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.NewZealand.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -278,11 +286,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Azerbaijan"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAzerbaijan = new MMCode() {
+	public static final CashClearingSystem1Code Azerbaijan = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Azerbaijan";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Azerbaijan.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -301,11 +310,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "BosniaHerzegovina"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBosniaHerzegovina = new MMCode() {
+	public static final CashClearingSystem1Code BosniaHerzegovina = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BosniaHerzegovina";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.BosniaHerzegovina.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -324,11 +334,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Belgium"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBelgium = new MMCode() {
+	public static final CashClearingSystem1Code Belgium = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Belgium";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Belgium.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -347,11 +358,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Finland"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinland = new MMCode() {
+	public static final CashClearingSystem1Code Finland = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Finland";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Finland.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -370,11 +382,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Italy"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmItaly = new MMCode() {
+	public static final CashClearingSystem1Code Italy = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Italy";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Italy.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -393,11 +406,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Canada"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCanada = new MMCode() {
+	public static final CashClearingSystem1Code Canada = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Canada";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Canada.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -416,11 +430,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "SpainCAM"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpainCAM = new MMCode() {
+	public static final CashClearingSystem1Code SpainCAM = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpainCAM";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.SpainCAM.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -439,11 +454,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Ireland"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIreland = new MMCode() {
+	public static final CashClearingSystem1Code Ireland = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ireland";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Ireland.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -462,11 +478,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "UnitedKingdom"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnitedKingdom = new MMCode() {
+	public static final CashClearingSystem1Code UnitedKingdom = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitedKingdom";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.UnitedKingdom.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -485,11 +502,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Denmark"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDenmark = new MMCode() {
+	public static final CashClearingSystem1Code Denmark = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Denmark";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Denmark.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -508,11 +526,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "GermanyRTGSPlus"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGermanyRTGSPlus = new MMCode() {
+	public static final CashClearingSystem1Code GermanyRTGSPlus = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GermanyRTGSPlus";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.GermanyRTGSPlus.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -531,11 +550,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "EBAEuro1"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEBAEuro1 = new MMCode() {
+	public static final CashClearingSystem1Code EBAEuro1 = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EBAEuro1";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.EBAEuro1.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -554,11 +574,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "GermanyELS"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGermanyELS = new MMCode() {
+	public static final CashClearingSystem1Code GermanyELS = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GermanyELS";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.GermanyELS.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -577,11 +598,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "EBAStep1"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEBAStep1 = new MMCode() {
+	public static final CashClearingSystem1Code EBAStep1 = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EBAStep1";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.EBAStep1.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -600,11 +622,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "EBAStep2"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEBAStep2 = new MMCode() {
+	public static final CashClearingSystem1Code EBAStep2 = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EBAStep2";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.EBAStep2.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -623,11 +646,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Croatia"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCroatia = new MMCode() {
+	public static final CashClearingSystem1Code Croatia = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Croatia";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Croatia.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -646,11 +670,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Greece"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGreece = new MMCode() {
+	public static final CashClearingSystem1Code Greece = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Greece";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Greece.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -669,11 +694,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Hungary"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHungary = new MMCode() {
+	public static final CashClearingSystem1Code Hungary = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hungary";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Hungary.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -692,11 +718,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Luxemburg"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLuxemburg = new MMCode() {
+	public static final CashClearingSystem1Code Luxemburg = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Luxemburg";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Luxemburg.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -715,11 +742,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Latvia"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLatvia = new MMCode() {
+	public static final CashClearingSystem1Code Latvia = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Latvia";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Latvia.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -738,11 +766,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "SouthAfrica"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSouthAfrica = new MMCode() {
+	public static final CashClearingSystem1Code SouthAfrica = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SouthAfrica";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.SouthAfrica.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -761,11 +790,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Mauritius"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMauritius = new MMCode() {
+	public static final CashClearingSystem1Code Mauritius = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mauritius";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Mauritius.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -784,11 +814,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Norway"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNorway = new MMCode() {
+	public static final CashClearingSystem1Code Norway = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Norway";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Norway.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -807,11 +838,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Switzerland"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSwitzerland = new MMCode() {
+	public static final CashClearingSystem1Code Switzerland = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Switzerland";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Switzerland.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -830,11 +862,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Australia"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAustralia = new MMCode() {
+	public static final CashClearingSystem1Code Australia = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Australia";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Australia.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -853,11 +886,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Egypt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEgypt = new MMCode() {
+	public static final CashClearingSystem1Code Egypt = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Egypt";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Egypt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -876,11 +910,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "FrancePNS"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFrancePNS = new MMCode() {
+	public static final CashClearingSystem1Code FrancePNS = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrancePNS";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.FrancePNS.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -899,11 +934,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Venezuela"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVenezuela = new MMCode() {
+	public static final CashClearingSystem1Code Venezuela = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Venezuela";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Venezuela.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -922,11 +958,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "SwedenSEC"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSwedenSEC = new MMCode() {
+	public static final CashClearingSystem1Code SwedenSEC = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwedenSEC";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.SwedenSEC.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -945,11 +982,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Slovania"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSlovania = new MMCode() {
+	public static final CashClearingSystem1Code Slovania = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Slovania";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Slovania.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -968,11 +1006,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "SpainES"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpainES = new MMCode() {
+	public static final CashClearingSystem1Code SpainES = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpainES";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.SpainES.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -991,11 +1030,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Portugal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPortugal = new MMCode() {
+	public static final CashClearingSystem1Code Portugal = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Portugal";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Portugal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1014,11 +1054,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "SwedenSSK"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSwedenSSK = new MMCode() {
+	public static final CashClearingSystem1Code SwedenSSK = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwedenSSK";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.SwedenSSK.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1037,11 +1078,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "FranceFR"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFranceFR = new MMCode() {
+	public static final CashClearingSystem1Code FranceFR = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FranceFR";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.FranceFR.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1060,11 +1102,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Target"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTarget = new MMCode() {
+	public static final CashClearingSystem1Code Target = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Target";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Target.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1083,11 +1126,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Netherlands"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNetherlands = new MMCode() {
+	public static final CashClearingSystem1Code Netherlands = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Netherlands";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Netherlands.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1106,11 +1150,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Fedwire"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFedwire = new MMCode() {
+	public static final CashClearingSystem1Code Fedwire = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fedwire";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Fedwire.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1129,11 +1174,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "BankOfJapanNet"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBankOfJapanNet = new MMCode() {
+	public static final CashClearingSystem1Code BankOfJapanNet = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankOfJapanNet";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.BankOfJapanNet.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1152,11 +1198,12 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "ForeignExchangeYenClearing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignExchangeYenClearing = new MMCode() {
+	public static final CashClearingSystem1Code ForeignExchangeYenClearing = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeYenClearing";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.ForeignExchangeYenClearing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1175,34 +1222,113 @@ public class CashClearingSystem1Code extends CashClearingSystemCode {
 	 * name} = "Zengin"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmZengin = new MMCode() {
+	public static final CashClearingSystem1Code Zengin = new CashClearingSystem1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Zengin";
-			owner_lazy = () -> CashClearingSystem1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem1Code.mmObject();
+			codeName = CashClearingSystemCode.Zengin.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CashClearingSystem1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CashClearingSystem1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ABE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashClearingSystem1Code";
 				definition = "Specification of a pre-agreed offering between clearing agents or the channel through which the payment instruction is to be processed.";
-				code_lazy = () -> Arrays.asList(CashClearingSystem1Code.mmEBAEuro1Step1, CashClearingSystem1Code.mmAustrian, CashClearingSystem1Code.mmNewZealand, CashClearingSystem1Code.mmAzerbaijan,
-						CashClearingSystem1Code.mmBosniaHerzegovina, CashClearingSystem1Code.mmBelgium, CashClearingSystem1Code.mmFinland, CashClearingSystem1Code.mmItaly, CashClearingSystem1Code.mmCanada,
-						CashClearingSystem1Code.mmSpainCAM, CashClearingSystem1Code.mmIreland, CashClearingSystem1Code.mmUnitedKingdom, CashClearingSystem1Code.mmDenmark, CashClearingSystem1Code.mmGermanyRTGSPlus,
-						CashClearingSystem1Code.mmEBAEuro1, CashClearingSystem1Code.mmGermanyELS, CashClearingSystem1Code.mmEBAStep1, CashClearingSystem1Code.mmEBAStep2, CashClearingSystem1Code.mmCroatia, CashClearingSystem1Code.mmGreece,
-						CashClearingSystem1Code.mmHungary, CashClearingSystem1Code.mmLuxemburg, CashClearingSystem1Code.mmLatvia, CashClearingSystem1Code.mmSouthAfrica, CashClearingSystem1Code.mmMauritius, CashClearingSystem1Code.mmNorway,
-						CashClearingSystem1Code.mmSwitzerland, CashClearingSystem1Code.mmAustralia, CashClearingSystem1Code.mmEgypt, CashClearingSystem1Code.mmFrancePNS, CashClearingSystem1Code.mmVenezuela,
-						CashClearingSystem1Code.mmSwedenSEC, CashClearingSystem1Code.mmSlovania, CashClearingSystem1Code.mmSpainES, CashClearingSystem1Code.mmPortugal, CashClearingSystem1Code.mmSwedenSSK,
-						CashClearingSystem1Code.mmFranceFR, CashClearingSystem1Code.mmTarget, CashClearingSystem1Code.mmNetherlands, CashClearingSystem1Code.mmFedwire, CashClearingSystem1Code.mmBankOfJapanNet,
-						CashClearingSystem1Code.mmForeignExchangeYenClearing, CashClearingSystem1Code.mmZengin);
 				trace_lazy = () -> CashClearingSystemCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashClearingSystem1Code.EBAEuro1Step1, com.tools20022.repository.codeset.CashClearingSystem1Code.Austrian,
+						com.tools20022.repository.codeset.CashClearingSystem1Code.NewZealand, com.tools20022.repository.codeset.CashClearingSystem1Code.Azerbaijan,
+						com.tools20022.repository.codeset.CashClearingSystem1Code.BosniaHerzegovina, com.tools20022.repository.codeset.CashClearingSystem1Code.Belgium, com.tools20022.repository.codeset.CashClearingSystem1Code.Finland,
+						com.tools20022.repository.codeset.CashClearingSystem1Code.Italy, com.tools20022.repository.codeset.CashClearingSystem1Code.Canada, com.tools20022.repository.codeset.CashClearingSystem1Code.SpainCAM,
+						com.tools20022.repository.codeset.CashClearingSystem1Code.Ireland, com.tools20022.repository.codeset.CashClearingSystem1Code.UnitedKingdom, com.tools20022.repository.codeset.CashClearingSystem1Code.Denmark,
+						com.tools20022.repository.codeset.CashClearingSystem1Code.GermanyRTGSPlus, com.tools20022.repository.codeset.CashClearingSystem1Code.EBAEuro1, com.tools20022.repository.codeset.CashClearingSystem1Code.GermanyELS,
+						com.tools20022.repository.codeset.CashClearingSystem1Code.EBAStep1, com.tools20022.repository.codeset.CashClearingSystem1Code.EBAStep2, com.tools20022.repository.codeset.CashClearingSystem1Code.Croatia,
+						com.tools20022.repository.codeset.CashClearingSystem1Code.Greece, com.tools20022.repository.codeset.CashClearingSystem1Code.Hungary, com.tools20022.repository.codeset.CashClearingSystem1Code.Luxemburg,
+						com.tools20022.repository.codeset.CashClearingSystem1Code.Latvia, com.tools20022.repository.codeset.CashClearingSystem1Code.SouthAfrica, com.tools20022.repository.codeset.CashClearingSystem1Code.Mauritius,
+						com.tools20022.repository.codeset.CashClearingSystem1Code.Norway, com.tools20022.repository.codeset.CashClearingSystem1Code.Switzerland, com.tools20022.repository.codeset.CashClearingSystem1Code.Australia,
+						com.tools20022.repository.codeset.CashClearingSystem1Code.Egypt, com.tools20022.repository.codeset.CashClearingSystem1Code.FrancePNS, com.tools20022.repository.codeset.CashClearingSystem1Code.Venezuela,
+						com.tools20022.repository.codeset.CashClearingSystem1Code.SwedenSEC, com.tools20022.repository.codeset.CashClearingSystem1Code.Slovania, com.tools20022.repository.codeset.CashClearingSystem1Code.SpainES,
+						com.tools20022.repository.codeset.CashClearingSystem1Code.Portugal, com.tools20022.repository.codeset.CashClearingSystem1Code.SwedenSSK, com.tools20022.repository.codeset.CashClearingSystem1Code.FranceFR,
+						com.tools20022.repository.codeset.CashClearingSystem1Code.Target, com.tools20022.repository.codeset.CashClearingSystem1Code.Netherlands, com.tools20022.repository.codeset.CashClearingSystem1Code.Fedwire,
+						com.tools20022.repository.codeset.CashClearingSystem1Code.BankOfJapanNet, com.tools20022.repository.codeset.CashClearingSystem1Code.ForeignExchangeYenClearing,
+						com.tools20022.repository.codeset.CashClearingSystem1Code.Zengin);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(EBAEuro1Step1.getCodeName().get(), EBAEuro1Step1);
+		codesByName.put(Austrian.getCodeName().get(), Austrian);
+		codesByName.put(NewZealand.getCodeName().get(), NewZealand);
+		codesByName.put(Azerbaijan.getCodeName().get(), Azerbaijan);
+		codesByName.put(BosniaHerzegovina.getCodeName().get(), BosniaHerzegovina);
+		codesByName.put(Belgium.getCodeName().get(), Belgium);
+		codesByName.put(Finland.getCodeName().get(), Finland);
+		codesByName.put(Italy.getCodeName().get(), Italy);
+		codesByName.put(Canada.getCodeName().get(), Canada);
+		codesByName.put(SpainCAM.getCodeName().get(), SpainCAM);
+		codesByName.put(Ireland.getCodeName().get(), Ireland);
+		codesByName.put(UnitedKingdom.getCodeName().get(), UnitedKingdom);
+		codesByName.put(Denmark.getCodeName().get(), Denmark);
+		codesByName.put(GermanyRTGSPlus.getCodeName().get(), GermanyRTGSPlus);
+		codesByName.put(EBAEuro1.getCodeName().get(), EBAEuro1);
+		codesByName.put(GermanyELS.getCodeName().get(), GermanyELS);
+		codesByName.put(EBAStep1.getCodeName().get(), EBAStep1);
+		codesByName.put(EBAStep2.getCodeName().get(), EBAStep2);
+		codesByName.put(Croatia.getCodeName().get(), Croatia);
+		codesByName.put(Greece.getCodeName().get(), Greece);
+		codesByName.put(Hungary.getCodeName().get(), Hungary);
+		codesByName.put(Luxemburg.getCodeName().get(), Luxemburg);
+		codesByName.put(Latvia.getCodeName().get(), Latvia);
+		codesByName.put(SouthAfrica.getCodeName().get(), SouthAfrica);
+		codesByName.put(Mauritius.getCodeName().get(), Mauritius);
+		codesByName.put(Norway.getCodeName().get(), Norway);
+		codesByName.put(Switzerland.getCodeName().get(), Switzerland);
+		codesByName.put(Australia.getCodeName().get(), Australia);
+		codesByName.put(Egypt.getCodeName().get(), Egypt);
+		codesByName.put(FrancePNS.getCodeName().get(), FrancePNS);
+		codesByName.put(Venezuela.getCodeName().get(), Venezuela);
+		codesByName.put(SwedenSEC.getCodeName().get(), SwedenSEC);
+		codesByName.put(Slovania.getCodeName().get(), Slovania);
+		codesByName.put(SpainES.getCodeName().get(), SpainES);
+		codesByName.put(Portugal.getCodeName().get(), Portugal);
+		codesByName.put(SwedenSSK.getCodeName().get(), SwedenSSK);
+		codesByName.put(FranceFR.getCodeName().get(), FranceFR);
+		codesByName.put(Target.getCodeName().get(), Target);
+		codesByName.put(Netherlands.getCodeName().get(), Netherlands);
+		codesByName.put(Fedwire.getCodeName().get(), Fedwire);
+		codesByName.put(BankOfJapanNet.getCodeName().get(), BankOfJapanNet);
+		codesByName.put(ForeignExchangeYenClearing.getCodeName().get(), ForeignExchangeYenClearing);
+		codesByName.put(Zengin.getCodeName().get(), Zengin);
+	}
+
+	public static CashClearingSystem1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CashClearingSystem1Code[] values() {
+		CashClearingSystem1Code[] values = new CashClearingSystem1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CashClearingSystem1Code> {
+		@Override
+		public CashClearingSystem1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CashClearingSystem1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

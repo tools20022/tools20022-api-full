@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.SecuritiesLendingTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of securities lending contract.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesLendingTypeCode#mmNewRegistration
- * SecuritiesLendingTypeCode.mmNewRegistration}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesLendingTypeCode#NewRegistration
+ * SecuritiesLendingTypeCode.NewRegistration}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesLendingTypeCode#mmRollOverRenewal
- * SecuritiesLendingTypeCode.mmRollOverRenewal}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesLendingTypeCode#RollOverRenewal
+ * SecuritiesLendingTypeCode.RollOverRenewal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesLendingTypeCode#mmCallBack
- * SecuritiesLendingTypeCode.mmCallBack}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesLendingTypeCode#CallBack
+ * SecuritiesLendingTypeCode.CallBack}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of securities lending contract."</li>
  * </ul>
  */
-public class SecuritiesLendingTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SecuritiesLendingTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -94,12 +100,12 @@ public class SecuritiesLendingTypeCode {
 	 * definition} = "Securities lending contract is new and registered."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNewRegistration = new MMCode() {
+	public static final SecuritiesLendingTypeCode NewRegistration = new SecuritiesLendingTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewRegistration";
 			definition = "Securities lending contract is new and registered.";
-			owner_lazy = () -> SecuritiesLendingTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesLendingTypeCode.mmObject();
 			codeName = "NWRG";
 		}
 	};
@@ -124,12 +130,12 @@ public class SecuritiesLendingTypeCode {
 	 * definition} = "Securities lending contract is renewed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRollOverRenewal = new MMCode() {
+	public static final SecuritiesLendingTypeCode RollOverRenewal = new SecuritiesLendingTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RollOverRenewal";
 			definition = "Securities lending contract is renewed.";
-			owner_lazy = () -> SecuritiesLendingTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesLendingTypeCode.mmObject();
 			codeName = "RENW";
 		}
 	};
@@ -154,28 +160,60 @@ public class SecuritiesLendingTypeCode {
 	 * definition} = "Securities lending contract is called back."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCallBack = new MMCode() {
+	public static final SecuritiesLendingTypeCode CallBack = new SecuritiesLendingTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallBack";
 			definition = "Securities lending contract is called back.";
-			owner_lazy = () -> SecuritiesLendingTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesLendingTypeCode.mmObject();
 			codeName = "CABK";
 		}
 	};
+	final static private LinkedHashMap<String, SecuritiesLendingTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SecuritiesLendingTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NWRG");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesLendingTypeCode";
 				definition = "Type of securities lending contract.";
-				code_lazy = () -> Arrays.asList(SecuritiesLendingTypeCode.mmNewRegistration, SecuritiesLendingTypeCode.mmRollOverRenewal, SecuritiesLendingTypeCode.mmCallBack);
 				derivation_lazy = () -> Arrays.asList(SecuritiesLendingType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesLendingTypeCode.NewRegistration, com.tools20022.repository.codeset.SecuritiesLendingTypeCode.RollOverRenewal,
+						com.tools20022.repository.codeset.SecuritiesLendingTypeCode.CallBack);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NewRegistration.getCodeName().get(), NewRegistration);
+		codesByName.put(RollOverRenewal.getCodeName().get(), RollOverRenewal);
+		codesByName.put(CallBack.getCodeName().get(), CallBack);
+	}
+
+	public static SecuritiesLendingTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SecuritiesLendingTypeCode[] values() {
+		SecuritiesLendingTypeCode[] values = new SecuritiesLendingTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SecuritiesLendingTypeCode> {
+		@Override
+		public SecuritiesLendingTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SecuritiesLendingTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

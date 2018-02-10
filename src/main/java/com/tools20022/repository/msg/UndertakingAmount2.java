@@ -25,9 +25,11 @@ import com.tools20022.repository.choice.Amount1Choice;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.entity.UndertakingAmount;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about an amount."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UndertakingAmount2", propOrder = {"amountChoice", "additionalInformation"})
 public class UndertakingAmount2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AmtChc", required = true)
 	protected Amount1Choice amountChoice;
 	/**
-	 * Choice of amounts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -108,7 +111,7 @@ public class UndertakingAmount2 {
 	public static final MMMessageAssociationEnd mmAmountChoice = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingAmount.mmObject();
-			componentContext_lazy = () -> UndertakingAmount2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "AmtChc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +123,11 @@ public class UndertakingAmount2 {
 			type_lazy = () -> Amount1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected List<Max2000Text> additionalInformation;
 	/**
-	 * Additional information concerning the amended amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,7 +154,7 @@ public class UndertakingAmount2 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UndertakingAmount2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,9 +169,9 @@ public class UndertakingAmount2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UndertakingAmount2.mmAmountChoice, UndertakingAmount2.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingAmount2.mmAmountChoice, com.tools20022.repository.msg.UndertakingAmount2.mmAdditionalInformation);
 				trace_lazy = () -> UndertakingAmount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingAmount2";
 				definition = "Information about an amount.";
@@ -176,21 +180,21 @@ public class UndertakingAmount2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AmtChc", required = true)
 	public Amount1Choice getAmountChoice() {
 		return amountChoice;
 	}
 
-	public void setAmountChoice(Amount1Choice amountChoice) {
-		this.amountChoice = amountChoice;
+	public UndertakingAmount2 setAmountChoice(Amount1Choice amountChoice) {
+		this.amountChoice = Objects.requireNonNull(amountChoice);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
-		return additionalInformation;
+		return additionalInformation == null ? additionalInformation = new ArrayList<>() : additionalInformation;
 	}
 
-	public void setAdditionalInformation(List<Max2000Text> additionalInformation) {
-		this.additionalInformation = additionalInformation;
+	public UndertakingAmount2 setAdditionalInformation(List<Max2000Text> additionalInformation) {
+		this.additionalInformation = Objects.requireNonNull(additionalInformation);
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.SenderBusinessRoleCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether account owner or account servicer sends the message.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SenderBusinessRoleCode#mmAccountOwner
- * SenderBusinessRoleCode.mmAccountOwner}</li>
+ * {@linkplain com.tools20022.repository.codeset.SenderBusinessRoleCode#AccountOwner
+ * SenderBusinessRoleCode.AccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SenderBusinessRoleCode#mmAccountServicer
- * SenderBusinessRoleCode.mmAccountServicer}</li>
+ * {@linkplain com.tools20022.repository.codeset.SenderBusinessRoleCode#AccountServicer
+ * SenderBusinessRoleCode.AccountServicer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies whether account owner or account servicer sends the message."</li>
  * </ul>
  */
-public class SenderBusinessRoleCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SenderBusinessRoleCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,12 +96,12 @@ public class SenderBusinessRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountOwner = new MMCode() {
+	public static final SenderBusinessRoleCode AccountOwner = new SenderBusinessRoleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Sender is the owner of the safekeeping account. The sender is disclosing the breakdown of the underlying owners of sender’s holdings with the receiver.";
-			owner_lazy = () -> SenderBusinessRoleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SenderBusinessRoleCode.mmObject();
 			codeName = "AOWN";
 		}
 	};
@@ -121,27 +127,57 @@ public class SenderBusinessRoleCode {
 	 * "Sender is the account servicer of an account owned by the receiver."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountServicer = new MMCode() {
+	public static final SenderBusinessRoleCode AccountServicer = new SenderBusinessRoleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Sender is the account servicer of an account owned by the receiver.";
-			owner_lazy = () -> SenderBusinessRoleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SenderBusinessRoleCode.mmObject();
 			codeName = "ASER";
 		}
 	};
+	final static private LinkedHashMap<String, SenderBusinessRoleCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SenderBusinessRoleCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SenderBusinessRoleCode";
 				definition = "Specifies whether account owner or account servicer sends the message.";
-				code_lazy = () -> Arrays.asList(SenderBusinessRoleCode.mmAccountOwner, SenderBusinessRoleCode.mmAccountServicer);
 				derivation_lazy = () -> Arrays.asList(SenderBusinessRole1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SenderBusinessRoleCode.AccountOwner, com.tools20022.repository.codeset.SenderBusinessRoleCode.AccountServicer);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccountOwner.getCodeName().get(), AccountOwner);
+		codesByName.put(AccountServicer.getCodeName().get(), AccountServicer);
+	}
+
+	public static SenderBusinessRoleCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SenderBusinessRoleCode[] values() {
+		SenderBusinessRoleCode[] values = new SenderBusinessRoleCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SenderBusinessRoleCode> {
+		@Override
+		public SenderBusinessRoleCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SenderBusinessRoleCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

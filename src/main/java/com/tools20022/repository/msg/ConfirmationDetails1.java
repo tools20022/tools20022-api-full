@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ConfirmationDetails1", propOrder = "payInScheduleReference")
 public class ConfirmationDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PayInSchdlRef", required = true)
 	protected Max35Text payInScheduleReference;
 	/**
-	 * Reference to the pay in schedule confirmed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +108,7 @@ public class ConfirmationDetails1 {
 	 */
 	public static final MMMessageAttribute mmPayInScheduleReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ConfirmationDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "PayInSchdlRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,8 +123,8 @@ public class ConfirmationDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ConfirmationDetails1.mmPayInScheduleReference);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationDetails1.mmPayInScheduleReference);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationDetails1";
 				definition = "Reference of the PayInSchedule being confirmed. This is the Message Identification element from the Report Data sequence of the Pay In Schedule message";
@@ -132,12 +134,12 @@ public class ConfirmationDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PayInSchdlRef", required = true)
 	public Max35Text getPayInScheduleReference() {
 		return payInScheduleReference;
 	}
 
-	public void setPayInScheduleReference(Max35Text payInScheduleReference) {
-		this.payInScheduleReference = payInScheduleReference;
+	public ConfirmationDetails1 setPayInScheduleReference(Max35Text payInScheduleReference) {
+		this.payInScheduleReference = Objects.requireNonNull(payInScheduleReference);
+		return this;
 	}
 }

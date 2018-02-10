@@ -21,9 +21,11 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,15 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides details on the request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Receipt1", propOrder = {"originalMessageIdentification", "requestHandling"})
 public class Receipt1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgnlMsgId", required = true)
 	protected OriginalMessageAndIssuer1 originalMessageIdentification;
 	/**
-	 * Identification of the original request message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -94,7 +97,7 @@ public class Receipt1 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalMessageIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Receipt1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Receipt1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -106,10 +109,11 @@ public class Receipt1 {
 			type_lazy = () -> com.tools20022.repository.msg.OriginalMessageAndIssuer1.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqHdlg")
 	protected List<com.tools20022.repository.msg.RequestHandling> requestHandling;
 	/**
-	 * Gives the status of the request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -134,7 +138,7 @@ public class Receipt1 {
 	 */
 	public static final MMMessageAssociationEnd mmRequestHandling = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Receipt1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Receipt1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqHdlg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,8 +153,8 @@ public class Receipt1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Receipt1.mmOriginalMessageIdentification, Receipt1.mmRequestHandling);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Receipt1.mmOriginalMessageIdentification, com.tools20022.repository.msg.Receipt1.mmRequestHandling);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Receipt1";
 				definition = "Provides details on the request.";
@@ -159,21 +163,21 @@ public class Receipt1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgnlMsgId", required = true)
 	public OriginalMessageAndIssuer1 getOriginalMessageIdentification() {
 		return originalMessageIdentification;
 	}
 
-	public void setOriginalMessageIdentification(com.tools20022.repository.msg.OriginalMessageAndIssuer1 originalMessageIdentification) {
-		this.originalMessageIdentification = originalMessageIdentification;
+	public Receipt1 setOriginalMessageIdentification(com.tools20022.repository.msg.OriginalMessageAndIssuer1 originalMessageIdentification) {
+		this.originalMessageIdentification = Objects.requireNonNull(originalMessageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ReqHdlg")
 	public List<RequestHandling> getRequestHandling() {
-		return requestHandling;
+		return requestHandling == null ? requestHandling = new ArrayList<>() : requestHandling;
 	}
 
-	public void setRequestHandling(List<com.tools20022.repository.msg.RequestHandling> requestHandling) {
-		this.requestHandling = requestHandling;
+	public Receipt1 setRequestHandling(List<com.tools20022.repository.msg.RequestHandling> requestHandling) {
+		this.requestHandling = Objects.requireNonNull(requestHandling);
+		return this;
 	}
 }

@@ -27,9 +27,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,15 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.msg.DetailedAmount12 DetailedAmount12}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DetailedAmount16", propOrder = {"accountSequenceNumber", "amountToDeposit", "currency", "cashBackAmount", "fees", "donation"})
 public class DetailedAmount16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctSeqNb")
 	protected Number accountSequenceNumber;
 	/**
-	 * Link to the account for multi-account deposit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +124,7 @@ public class DetailedAmount16 {
 	 */
 	public static final MMMessageAttribute mmAccountSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DetailedAmount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount16.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,11 +135,11 @@ public class DetailedAmount16 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtToDpst")
 	protected ImpliedCurrencyAndAmount amountToDeposit;
 	/**
-	 * Amount of the deposit to be made on the ATM after the approval of the
-	 * deposit transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,7 +188,7 @@ public class DetailedAmount16 {
 	public static final MMMessageAttribute mmAmountToDeposit = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
-			componentContext_lazy = () -> DetailedAmount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount16.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToDpst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,11 +201,11 @@ public class DetailedAmount16 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected ActiveCurrencyCode currency;
 	/**
-	 * Currency of the amount to deposit when different from the base currency
-	 * of the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -254,7 +254,7 @@ public class DetailedAmount16 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
-			componentContext_lazy = () -> DetailedAmount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount16.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,10 +267,11 @@ public class DetailedAmount16 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CshBckAmt")
 	protected ImpliedCurrencyAndAmount cashBackAmount;
 	/**
-	 * Cashback amount value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -298,7 +299,7 @@ public class DetailedAmount16 {
 	 */
 	public static final MMMessageAttribute mmCashBackAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DetailedAmount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount16.mmObject();
 			isDerived = false;
 			xmlTag = "CshBckAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -309,10 +310,11 @@ public class DetailedAmount16 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Fees")
 	protected List<com.tools20022.repository.msg.DetailedAmount13> fees;
 	/**
-	 * Deposit fees, accepted by the customer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -355,7 +357,7 @@ public class DetailedAmount16 {
 	public static final MMMessageAssociationEnd mmFees = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> DetailedAmount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount16.mmObject();
 			isDerived = false;
 			xmlTag = "Fees";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -368,10 +370,11 @@ public class DetailedAmount16 {
 			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount13.mmObject();
 		}
 	};
+	@XmlElement(name = "Dontn")
 	protected List<com.tools20022.repository.msg.DetailedAmount13> donation;
 	/**
-	 * Amount of the donation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -415,7 +418,7 @@ public class DetailedAmount16 {
 	public static final MMMessageAssociationEnd mmDonation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> DetailedAmount16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount16.mmObject();
 			isDerived = false;
 			xmlTag = "Dontn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -432,10 +435,11 @@ public class DetailedAmount16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DetailedAmount16.mmAccountSequenceNumber, DetailedAmount16.mmAmountToDeposit, DetailedAmount16.mmCurrency, DetailedAmount16.mmCashBackAmount, DetailedAmount16.mmFees,
-						DetailedAmount16.mmDonation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount16.mmAccountSequenceNumber, com.tools20022.repository.msg.DetailedAmount16.mmAmountToDeposit,
+						com.tools20022.repository.msg.DetailedAmount16.mmCurrency, com.tools20022.repository.msg.DetailedAmount16.mmCashBackAmount, com.tools20022.repository.msg.DetailedAmount16.mmFees,
+						com.tools20022.repository.msg.DetailedAmount16.mmDonation);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DetailedAmount16";
 				definition = "Amounts of the deposit transaction.";
@@ -446,57 +450,57 @@ public class DetailedAmount16 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctSeqNb")
-	public Number getAccountSequenceNumber() {
-		return accountSequenceNumber;
+	public Optional<Number> getAccountSequenceNumber() {
+		return accountSequenceNumber == null ? Optional.empty() : Optional.of(accountSequenceNumber);
 	}
 
-	public void setAccountSequenceNumber(Number accountSequenceNumber) {
+	public DetailedAmount16 setAccountSequenceNumber(Number accountSequenceNumber) {
 		this.accountSequenceNumber = accountSequenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "AmtToDpst")
-	public ImpliedCurrencyAndAmount getAmountToDeposit() {
-		return amountToDeposit;
+	public Optional<ImpliedCurrencyAndAmount> getAmountToDeposit() {
+		return amountToDeposit == null ? Optional.empty() : Optional.of(amountToDeposit);
 	}
 
-	public void setAmountToDeposit(ImpliedCurrencyAndAmount amountToDeposit) {
+	public DetailedAmount16 setAmountToDeposit(ImpliedCurrencyAndAmount amountToDeposit) {
 		this.amountToDeposit = amountToDeposit;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public ActiveCurrencyCode getCurrency() {
-		return currency;
+	public Optional<ActiveCurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(ActiveCurrencyCode currency) {
+	public DetailedAmount16 setCurrency(ActiveCurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "CshBckAmt")
-	public ImpliedCurrencyAndAmount getCashBackAmount() {
-		return cashBackAmount;
+	public Optional<ImpliedCurrencyAndAmount> getCashBackAmount() {
+		return cashBackAmount == null ? Optional.empty() : Optional.of(cashBackAmount);
 	}
 
-	public void setCashBackAmount(ImpliedCurrencyAndAmount cashBackAmount) {
+	public DetailedAmount16 setCashBackAmount(ImpliedCurrencyAndAmount cashBackAmount) {
 		this.cashBackAmount = cashBackAmount;
+		return this;
 	}
 
-	@XmlElement(name = "Fees")
 	public List<DetailedAmount13> getFees() {
-		return fees;
+		return fees == null ? fees = new ArrayList<>() : fees;
 	}
 
-	public void setFees(List<com.tools20022.repository.msg.DetailedAmount13> fees) {
-		this.fees = fees;
+	public DetailedAmount16 setFees(List<com.tools20022.repository.msg.DetailedAmount13> fees) {
+		this.fees = Objects.requireNonNull(fees);
+		return this;
 	}
 
-	@XmlElement(name = "Dontn")
 	public List<DetailedAmount13> getDonation() {
-		return donation;
+		return donation == null ? donation = new ArrayList<>() : donation;
 	}
 
-	public void setDonation(List<com.tools20022.repository.msg.DetailedAmount13> donation) {
-		this.donation = donation;
+	public DetailedAmount16 setDonation(List<com.tools20022.repository.msg.DetailedAmount13> donation) {
+		this.donation = Objects.requireNonNull(donation);
+		return this;
 	}
 }

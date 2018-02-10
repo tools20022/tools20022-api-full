@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.StandingOrderTypeCode;
+import com.tools20022.repository.codeset.StandingOrderType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of standing order, such as a user defined standing order
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.StandingOrderTypeCode
- * StandingOrderTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingOrderType1Code#mmUserDefinedStandingOrder
- * StandingOrderType1Code.mmUserDefinedStandingOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingOrderType1Code#UserDefinedStandingOrder
+ * StandingOrderType1Code.UserDefinedStandingOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingOrderType1Code#mmPredefinedStandingOrder
- * StandingOrderType1Code.mmPredefinedStandingOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingOrderType1Code#PredefinedStandingOrder
+ * StandingOrderType1Code.PredefinedStandingOrder}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.StandingOrderTypeCode
+ * StandingOrderTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class StandingOrderType1Code extends StandingOrderTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class StandingOrderType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class StandingOrderType1Code extends StandingOrderTypeCode {
 	 * name} = "UserDefinedStandingOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUserDefinedStandingOrder = new MMCode() {
+	public static final StandingOrderType1Code UserDefinedStandingOrder = new StandingOrderType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefinedStandingOrder";
-			owner_lazy = () -> StandingOrderType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StandingOrderType1Code.mmObject();
+			codeName = StandingOrderTypeCode.UserDefinedStandingOrder.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,57 @@ public class StandingOrderType1Code extends StandingOrderTypeCode {
 	 * name} = "PredefinedStandingOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPredefinedStandingOrder = new MMCode() {
+	public static final StandingOrderType1Code PredefinedStandingOrder = new StandingOrderType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PredefinedStandingOrder";
-			owner_lazy = () -> StandingOrderType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StandingOrderType1Code.mmObject();
+			codeName = StandingOrderTypeCode.PredefinedStandingOrder.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, StandingOrderType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected StandingOrderType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("USTO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingOrderType1Code";
 				definition = "Specifies the type of standing order, such as a user defined standing order or a predefined liquidity transfer.";
-				code_lazy = () -> Arrays.asList(StandingOrderType1Code.mmUserDefinedStandingOrder, StandingOrderType1Code.mmPredefinedStandingOrder);
 				trace_lazy = () -> StandingOrderTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandingOrderType1Code.UserDefinedStandingOrder, com.tools20022.repository.codeset.StandingOrderType1Code.PredefinedStandingOrder);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(UserDefinedStandingOrder.getCodeName().get(), UserDefinedStandingOrder);
+		codesByName.put(PredefinedStandingOrder.getCodeName().get(), PredefinedStandingOrder);
+	}
+
+	public static StandingOrderType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static StandingOrderType1Code[] values() {
+		StandingOrderType1Code[] values = new StandingOrderType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, StandingOrderType1Code> {
+		@Override
+		public StandingOrderType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(StandingOrderType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

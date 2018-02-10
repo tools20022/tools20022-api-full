@@ -30,6 +30,7 @@ import com.tools20022.repository.msg.PaymentInstructionReferenceDetails3;
 import com.tools20022.repository.msg.QueueTransactionIdentificationDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,16 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentIdentification2Choice", propOrder = {"paymentInstructionReference", "queueIdentification", "longBusinessIdentification", "shortBusinessIdentification", "proprietaryReference"})
 public class PaymentIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmtInstrRef", required = true)
 	protected Max35Text paymentInstructionReference;
 	/**
-	 * Unique and unambiguous identifier for a payment instruction, as assigned
-	 * by the clearing agent or the initiating party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,7 +127,7 @@ public class PaymentIdentification2Choice {
 	public static final MMMessageAttribute mmPaymentInstructionReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
-			componentContext_lazy = () -> PaymentIdentification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,11 +138,11 @@ public class PaymentIdentification2Choice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "QId", required = true)
 	protected QueueTransactionIdentificationDetails queueIdentification;
 	/**
-	 * Identification of the payment instruction by its position in a queue
-	 * managed by the clearing agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +172,7 @@ public class PaymentIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmQueueIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentIdentification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,11 +183,11 @@ public class PaymentIdentification2Choice {
 			complexType_lazy = () -> QueueTransactionIdentificationDetails.mmObject();
 		}
 	};
+	@XmlElement(name = "LngBizId", required = true)
 	protected PaymentInstructionReferenceDetails3 longBusinessIdentification;
 	/**
-	 * Business identification of the payment instruction given by the clearing
-	 * agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,7 +223,7 @@ public class PaymentIdentification2Choice {
 	public static final MMMessageAttribute mmLongBusinessIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
-			componentContext_lazy = () -> PaymentIdentification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LngBizId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,11 +234,11 @@ public class PaymentIdentification2Choice {
 			complexType_lazy = () -> PaymentInstructionReferenceDetails3.mmObject();
 		}
 	};
+	@XmlElement(name = "ShrtBizId", required = true)
 	protected PaymentInstructionReferenceDetails2 shortBusinessIdentification;
 	/**
-	 * Business identification of the payment instruction given by the clearing
-	 * agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -273,7 +274,7 @@ public class PaymentIdentification2Choice {
 	public static final MMMessageAttribute mmShortBusinessIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
-			componentContext_lazy = () -> PaymentIdentification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtBizId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,11 +285,11 @@ public class PaymentIdentification2Choice {
 			complexType_lazy = () -> PaymentInstructionReferenceDetails2.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryRef", required = true)
 	protected Max70Text proprietaryReference;
 	/**
-	 * Unique reference of the underlying payment instruction assigned by
-	 * Target2 SSP.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -317,7 +318,7 @@ public class PaymentIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmProprietaryReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentIdentification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -332,10 +333,11 @@ public class PaymentIdentification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentIdentification2Choice.mmPaymentInstructionReference, PaymentIdentification2Choice.mmQueueIdentification, PaymentIdentification2Choice.mmLongBusinessIdentification,
-						PaymentIdentification2Choice.mmShortBusinessIdentification, PaymentIdentification2Choice.mmProprietaryReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentIdentification2Choice.mmPaymentInstructionReference, com.tools20022.repository.choice.PaymentIdentification2Choice.mmQueueIdentification,
+						com.tools20022.repository.choice.PaymentIdentification2Choice.mmLongBusinessIdentification, com.tools20022.repository.choice.PaymentIdentification2Choice.mmShortBusinessIdentification,
+						com.tools20022.repository.choice.PaymentIdentification2Choice.mmProprietaryReference);
 				trace_lazy = () -> PaymentIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentIdentification2Choice";
 				definition = "Choice between ways of identifying a payment instruction by its references and business identification.";
@@ -344,48 +346,48 @@ public class PaymentIdentification2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmtInstrRef", required = true)
 	public Max35Text getPaymentInstructionReference() {
 		return paymentInstructionReference;
 	}
 
-	public void setPaymentInstructionReference(Max35Text paymentInstructionReference) {
-		this.paymentInstructionReference = paymentInstructionReference;
+	public PaymentIdentification2Choice setPaymentInstructionReference(Max35Text paymentInstructionReference) {
+		this.paymentInstructionReference = Objects.requireNonNull(paymentInstructionReference);
+		return this;
 	}
 
-	@XmlElement(name = "QId", required = true)
 	public QueueTransactionIdentificationDetails getQueueIdentification() {
 		return queueIdentification;
 	}
 
-	public void setQueueIdentification(QueueTransactionIdentificationDetails queueIdentification) {
-		this.queueIdentification = queueIdentification;
+	public PaymentIdentification2Choice setQueueIdentification(QueueTransactionIdentificationDetails queueIdentification) {
+		this.queueIdentification = Objects.requireNonNull(queueIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "LngBizId", required = true)
 	public PaymentInstructionReferenceDetails3 getLongBusinessIdentification() {
 		return longBusinessIdentification;
 	}
 
-	public void setLongBusinessIdentification(PaymentInstructionReferenceDetails3 longBusinessIdentification) {
-		this.longBusinessIdentification = longBusinessIdentification;
+	public PaymentIdentification2Choice setLongBusinessIdentification(PaymentInstructionReferenceDetails3 longBusinessIdentification) {
+		this.longBusinessIdentification = Objects.requireNonNull(longBusinessIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ShrtBizId", required = true)
 	public PaymentInstructionReferenceDetails2 getShortBusinessIdentification() {
 		return shortBusinessIdentification;
 	}
 
-	public void setShortBusinessIdentification(PaymentInstructionReferenceDetails2 shortBusinessIdentification) {
-		this.shortBusinessIdentification = shortBusinessIdentification;
+	public PaymentIdentification2Choice setShortBusinessIdentification(PaymentInstructionReferenceDetails2 shortBusinessIdentification) {
+		this.shortBusinessIdentification = Objects.requireNonNull(shortBusinessIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryRef", required = true)
 	public Max70Text getProprietaryReference() {
 		return proprietaryReference;
 	}
 
-	public void setProprietaryReference(Max70Text proprietaryReference) {
-		this.proprietaryReference = proprietaryReference;
+	public PaymentIdentification2Choice setProprietaryReference(Max70Text proprietaryReference) {
+		this.proprietaryReference = Objects.requireNonNull(proprietaryReference);
+		return this;
 	}
 }

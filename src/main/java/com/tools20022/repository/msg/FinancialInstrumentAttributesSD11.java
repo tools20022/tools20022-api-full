@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -31,6 +32,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -77,8 +80,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,16 +101,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "FinancialInstrumentAttributesSD11", propOrder = {"placeAndName", "incomeSourceCountry", "DTCAssetClass", "DTCAssetType", "securityEligibilityIndicator", "tickerSymbol", "linkedSecurity",
-		"originatingSecurityIdentification", "DIVANNSecurityDescription"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "FinancialInstrumentAttributesSD11", propOrder = {"placeAndName", "incomeSourceCountry", "dTCAssetClass", "dTCAssetType", "securityEligibilityIndicator", "tickerSymbol", "linkedSecurity",
+		"originatingSecurityIdentification", "dIVANNSecurityDescription"})
 public class FinancialInstrumentAttributesSD11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +146,7 @@ public class FinancialInstrumentAttributesSD11 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD11.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,10 +158,11 @@ public class FinancialInstrumentAttributesSD11 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IncmSrcCtry")
 	protected CountryCode incomeSourceCountry;
 	/**
-	 * Country of source income for the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,6 +176,9 @@ public class FinancialInstrumentAttributesSD11 {
 	 * FinancialInstrumentAttributesSD11}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IncmSrcCtry"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Income Source Country</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -192,9 +200,10 @@ public class FinancialInstrumentAttributesSD11 {
 	 */
 	public static final MMMessageAttribute mmIncomeSourceCountry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD11.mmObject();
 			isDerived = false;
 			xmlTag = "IncmSrcCtry";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Income Source Country"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomeSourceCountry";
 			definition = "Country of source income for the security.";
@@ -204,11 +213,11 @@ public class FinancialInstrumentAttributesSD11 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCAsstClss")
 	protected AssetClass1Code dTCAssetClass;
 	/**
-	 * Classification of instruments into asset classes at DTC (The Depository
-	 * Trust Corporation).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -223,6 +232,9 @@ public class FinancialInstrumentAttributesSD11 {
 	 * FinancialInstrumentAttributesSD11}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCAsstClss"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Asset Class</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -246,9 +258,10 @@ public class FinancialInstrumentAttributesSD11 {
 	 */
 	public static final MMMessageAttribute mmDTCAssetClass = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD11.mmObject();
 			isDerived = false;
 			xmlTag = "DTCAsstClss";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Asset Class"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetClass";
 			definition = "Classification of instruments into asset classes at DTC (The Depository Trust Corporation).";
@@ -258,11 +271,11 @@ public class FinancialInstrumentAttributesSD11 {
 			simpleType_lazy = () -> AssetClass1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCAsstTp")
 	protected DTCAssetType1Code dTCAssetType;
 	/**
-	 * Further classification of instruments into (issue) asset types at DTC
-	 * (The Depository Trust Corporation).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -277,6 +290,9 @@ public class FinancialInstrumentAttributesSD11 {
 	 * FinancialInstrumentAttributesSD11}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCAsstTp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Asset Type</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -300,9 +316,10 @@ public class FinancialInstrumentAttributesSD11 {
 	 */
 	public static final MMMessageAttribute mmDTCAssetType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD11.mmObject();
 			isDerived = false;
 			xmlTag = "DTCAsstTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Asset Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetType";
 			definition = "Further classification of instruments into (issue) asset types at DTC (The Depository Trust Corporation).";
@@ -312,10 +329,11 @@ public class FinancialInstrumentAttributesSD11 {
 			simpleType_lazy = () -> DTCAssetType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyElgbltyInd")
 	protected YesNoIndicator securityEligibilityIndicator;
 	/**
-	 * Indicates whether the security is eligible for holding at DTC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -330,6 +348,9 @@ public class FinancialInstrumentAttributesSD11 {
 	 * FinancialInstrumentAttributesSD11}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctyElgbltyInd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Security Eligibility Indicator</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -352,9 +373,10 @@ public class FinancialInstrumentAttributesSD11 {
 	 */
 	public static final MMMessageAttribute mmSecurityEligibilityIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD11.mmObject();
 			isDerived = false;
 			xmlTag = "SctyElgbltyInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Security Eligibility Indicator"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityEligibilityIndicator";
 			definition = "Indicates whether the security is eligible for holding at DTC.";
@@ -364,10 +386,11 @@ public class FinancialInstrumentAttributesSD11 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "TckrSymb")
 	protected Max35Text tickerSymbol;
 	/**
-	 * Ticket symbol for the event security (underlying security).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -381,6 +404,9 @@ public class FinancialInstrumentAttributesSD11 {
 	 * FinancialInstrumentAttributesSD11}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TckrSymb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Ticker Symbol</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -403,9 +429,10 @@ public class FinancialInstrumentAttributesSD11 {
 	 */
 	public static final MMMessageAttribute mmTickerSymbol = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD11.mmObject();
 			isDerived = false;
 			xmlTag = "TckrSymb";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Ticker Symbol"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TickerSymbol";
 			definition = "Ticket symbol for the event security (underlying security). ";
@@ -415,13 +442,11 @@ public class FinancialInstrumentAttributesSD11 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "LkdScty")
 	protected SecurityIdentification15 linkedSecurity;
 	/**
-	 * Security whose characteristics mirror the event security for purposes of
-	 * FCP eligibility and tax relief. Certain derivative securities like HOLDR
-	 * may have certain events where the source of payments are from an
-	 * underlying security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -436,6 +461,10 @@ public class FinancialInstrumentAttributesSD11 {
 	 * FinancialInstrumentAttributesSD11}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LkdScty"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Linked Security ID, DTCCSynonym: Linked
+	 * Security ID Type</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -459,9 +488,10 @@ public class FinancialInstrumentAttributesSD11 {
 	 */
 	public static final MMMessageAttribute mmLinkedSecurity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD11.mmObject();
 			isDerived = false;
 			xmlTag = "LkdScty";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Linked Security ID"), new DTCCSynonym(this, "Linked Security ID Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedSecurity";
 			definition = "Security whose characteristics mirror the event security for purposes of FCP eligibility and tax relief. Certain derivative securities like HOLDR may have certain events where the source of payments are from an underlying security. ";
@@ -471,15 +501,11 @@ public class FinancialInstrumentAttributesSD11 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgtgSctyId")
 	protected OtherIdentification2 originatingSecurityIdentification;
 	/**
-	 * Represents the 'original' security identifier of the event. It is used in
-	 * the scenarios like "partial call" where there are 2 events. The first
-	 * event distributes into the Contra CUSIP, a temporary security; and on the
-	 * second event that temporary security becomes the underlying security of
-	 * the event. This element is used in the second event to point to the
-	 * original CUSIP.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -515,7 +541,7 @@ public class FinancialInstrumentAttributesSD11 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginatingSecurityIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD11.mmObject();
 			isDerived = false;
 			xmlTag = "OrgtgSctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -528,11 +554,11 @@ public class FinancialInstrumentAttributesSD11 {
 			type_lazy = () -> com.tools20022.repository.msg.OtherIdentification2.mmObject();
 		}
 	};
+	@XmlElement(name = "DIVANNSctyDesc")
 	protected Max50Text dIVANNSecurityDescription;
 	/**
-	 * Security description associated with DIVANN legacy system which contains
-	 * additional values such as NTL for interest only notional.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -569,7 +595,7 @@ public class FinancialInstrumentAttributesSD11 {
 	 */
 	public static final MMMessageAttribute mmDIVANNSecurityDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD11.mmObject();
 			isDerived = false;
 			xmlTag = "DIVANNSctyDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -585,10 +611,12 @@ public class FinancialInstrumentAttributesSD11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD11.mmPlaceAndName, FinancialInstrumentAttributesSD11.mmIncomeSourceCountry, FinancialInstrumentAttributesSD11.mmDTCAssetClass,
-						FinancialInstrumentAttributesSD11.mmDTCAssetType, FinancialInstrumentAttributesSD11.mmSecurityEligibilityIndicator, FinancialInstrumentAttributesSD11.mmTickerSymbol,
-						FinancialInstrumentAttributesSD11.mmLinkedSecurity, FinancialInstrumentAttributesSD11.mmOriginatingSecurityIdentification, FinancialInstrumentAttributesSD11.mmDIVANNSecurityDescription);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD11.mmPlaceAndName, com.tools20022.repository.msg.FinancialInstrumentAttributesSD11.mmIncomeSourceCountry,
+						com.tools20022.repository.msg.FinancialInstrumentAttributesSD11.mmDTCAssetClass, com.tools20022.repository.msg.FinancialInstrumentAttributesSD11.mmDTCAssetType,
+						com.tools20022.repository.msg.FinancialInstrumentAttributesSD11.mmSecurityEligibilityIndicator, com.tools20022.repository.msg.FinancialInstrumentAttributesSD11.mmTickerSymbol,
+						com.tools20022.repository.msg.FinancialInstrumentAttributesSD11.mmLinkedSecurity, com.tools20022.repository.msg.FinancialInstrumentAttributesSD11.mmOriginatingSecurityIdentification,
+						com.tools20022.repository.msg.FinancialInstrumentAttributesSD11.mmDIVANNSecurityDescription);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentAttributesSD11";
 				definition = "Provides additional information regarding underlying security details.";
@@ -598,84 +626,84 @@ public class FinancialInstrumentAttributesSD11 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public FinancialInstrumentAttributesSD11 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "IncmSrcCtry")
-	public CountryCode getIncomeSourceCountry() {
-		return incomeSourceCountry;
+	public Optional<CountryCode> getIncomeSourceCountry() {
+		return incomeSourceCountry == null ? Optional.empty() : Optional.of(incomeSourceCountry);
 	}
 
-	public void setIncomeSourceCountry(CountryCode incomeSourceCountry) {
+	public FinancialInstrumentAttributesSD11 setIncomeSourceCountry(CountryCode incomeSourceCountry) {
 		this.incomeSourceCountry = incomeSourceCountry;
+		return this;
 	}
 
-	@XmlElement(name = "DTCAsstClss")
-	public AssetClass1Code getDTCAssetClass() {
-		return dTCAssetClass;
+	public Optional<AssetClass1Code> getDTCAssetClass() {
+		return dTCAssetClass == null ? Optional.empty() : Optional.of(dTCAssetClass);
 	}
 
-	public void setDTCAssetClass(AssetClass1Code dTCAssetClass) {
+	public FinancialInstrumentAttributesSD11 setDTCAssetClass(AssetClass1Code dTCAssetClass) {
 		this.dTCAssetClass = dTCAssetClass;
+		return this;
 	}
 
-	@XmlElement(name = "DTCAsstTp")
-	public DTCAssetType1Code getDTCAssetType() {
-		return dTCAssetType;
+	public Optional<DTCAssetType1Code> getDTCAssetType() {
+		return dTCAssetType == null ? Optional.empty() : Optional.of(dTCAssetType);
 	}
 
-	public void setDTCAssetType(DTCAssetType1Code dTCAssetType) {
+	public FinancialInstrumentAttributesSD11 setDTCAssetType(DTCAssetType1Code dTCAssetType) {
 		this.dTCAssetType = dTCAssetType;
+		return this;
 	}
 
-	@XmlElement(name = "SctyElgbltyInd")
-	public YesNoIndicator getSecurityEligibilityIndicator() {
-		return securityEligibilityIndicator;
+	public Optional<YesNoIndicator> getSecurityEligibilityIndicator() {
+		return securityEligibilityIndicator == null ? Optional.empty() : Optional.of(securityEligibilityIndicator);
 	}
 
-	public void setSecurityEligibilityIndicator(YesNoIndicator securityEligibilityIndicator) {
+	public FinancialInstrumentAttributesSD11 setSecurityEligibilityIndicator(YesNoIndicator securityEligibilityIndicator) {
 		this.securityEligibilityIndicator = securityEligibilityIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "TckrSymb")
-	public Max35Text getTickerSymbol() {
-		return tickerSymbol;
+	public Optional<Max35Text> getTickerSymbol() {
+		return tickerSymbol == null ? Optional.empty() : Optional.of(tickerSymbol);
 	}
 
-	public void setTickerSymbol(Max35Text tickerSymbol) {
+	public FinancialInstrumentAttributesSD11 setTickerSymbol(Max35Text tickerSymbol) {
 		this.tickerSymbol = tickerSymbol;
+		return this;
 	}
 
-	@XmlElement(name = "LkdScty")
-	public SecurityIdentification15 getLinkedSecurity() {
-		return linkedSecurity;
+	public Optional<SecurityIdentification15> getLinkedSecurity() {
+		return linkedSecurity == null ? Optional.empty() : Optional.of(linkedSecurity);
 	}
 
-	public void setLinkedSecurity(com.tools20022.repository.msg.SecurityIdentification15 linkedSecurity) {
+	public FinancialInstrumentAttributesSD11 setLinkedSecurity(com.tools20022.repository.msg.SecurityIdentification15 linkedSecurity) {
 		this.linkedSecurity = linkedSecurity;
+		return this;
 	}
 
-	@XmlElement(name = "OrgtgSctyId")
-	public OtherIdentification2 getOriginatingSecurityIdentification() {
-		return originatingSecurityIdentification;
+	public Optional<OtherIdentification2> getOriginatingSecurityIdentification() {
+		return originatingSecurityIdentification == null ? Optional.empty() : Optional.of(originatingSecurityIdentification);
 	}
 
-	public void setOriginatingSecurityIdentification(com.tools20022.repository.msg.OtherIdentification2 originatingSecurityIdentification) {
+	public FinancialInstrumentAttributesSD11 setOriginatingSecurityIdentification(com.tools20022.repository.msg.OtherIdentification2 originatingSecurityIdentification) {
 		this.originatingSecurityIdentification = originatingSecurityIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "DIVANNSctyDesc")
-	public Max50Text getDIVANNSecurityDescription() {
-		return dIVANNSecurityDescription;
+	public Optional<Max50Text> getDIVANNSecurityDescription() {
+		return dIVANNSecurityDescription == null ? Optional.empty() : Optional.of(dIVANNSecurityDescription);
 	}
 
-	public void setDIVANNSecurityDescription(Max50Text dIVANNSecurityDescription) {
+	public FinancialInstrumentAttributesSD11 setDIVANNSecurityDescription(Max50Text dIVANNSecurityDescription) {
 		this.dIVANNSecurityDescription = dIVANNSecurityDescription;
+		return this;
 	}
 }

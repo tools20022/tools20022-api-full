@@ -25,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification40;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,16 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between the type of restriction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecurityRestrictionType1Choice", propOrder = {"proprietaryRestriction", "restrictionType"})
 public class SecurityRestrictionType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrtryRstrctn", required = true)
 	protected GenericIdentification40 proprietaryRestriction;
 	/**
-	 * Type of the restriction, for example, selling restriction, buying
-	 * restriction, placing restriction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,7 +102,7 @@ public class SecurityRestrictionType1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietaryRestriction = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityRestrictionType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityRestrictionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryRstrctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,11 +113,11 @@ public class SecurityRestrictionType1Choice {
 			complexType_lazy = () -> GenericIdentification40.mmObject();
 		}
 	};
+	@XmlElement(name = "RstrctnTp", required = true)
 	protected RestrictionType1Code restrictionType;
 	/**
-	 * Type of the restriction, for example, selling restriction, buying
-	 * restriction, placing restriction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +147,7 @@ public class SecurityRestrictionType1Choice {
 	 */
 	public static final MMMessageAttribute mmRestrictionType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityRestrictionType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityRestrictionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,8 +162,8 @@ public class SecurityRestrictionType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityRestrictionType1Choice.mmProprietaryRestriction, SecurityRestrictionType1Choice.mmRestrictionType);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityRestrictionType1Choice.mmProprietaryRestriction, com.tools20022.repository.choice.SecurityRestrictionType1Choice.mmRestrictionType);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityRestrictionType1Choice";
 				definition = "Choice between the type of restriction.";
@@ -171,21 +172,21 @@ public class SecurityRestrictionType1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrtryRstrctn", required = true)
 	public GenericIdentification40 getProprietaryRestriction() {
 		return proprietaryRestriction;
 	}
 
-	public void setProprietaryRestriction(GenericIdentification40 proprietaryRestriction) {
-		this.proprietaryRestriction = proprietaryRestriction;
+	public SecurityRestrictionType1Choice setProprietaryRestriction(GenericIdentification40 proprietaryRestriction) {
+		this.proprietaryRestriction = Objects.requireNonNull(proprietaryRestriction);
+		return this;
 	}
 
-	@XmlElement(name = "RstrctnTp", required = true)
 	public RestrictionType1Code getRestrictionType() {
 		return restrictionType;
 	}
 
-	public void setRestrictionType(RestrictionType1Code restrictionType) {
-		this.restrictionType = restrictionType;
+	public SecurityRestrictionType1Choice setRestrictionType(RestrictionType1Code restrictionType) {
+		this.restrictionType = Objects.requireNonNull(restrictionType);
+		return this;
 	}
 }

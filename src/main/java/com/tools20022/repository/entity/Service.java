@@ -30,6 +30,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Service is the intangible equivalent of a good.
@@ -40,6 +41,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Product Product}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -60,13 +63,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * FinancialService}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Product Product}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,8 +83,8 @@ public class Service extends Product {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyAndAmount amount;
 	/**
-	 * Amount charged for the service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,8 +153,8 @@ public class Service extends Product {
 			derivation_lazy = () -> Arrays.asList(BillingCompensation1.mmValue, BillingServicesAmount1.mmHostAmount, BillingServicesAmount2.mmHostAmount, BillingServicesAmount2.mmSettlementAmount,
 					BillingService1.mmOriginalChargeSettlementAmount, BillingServicesAmount3.mmSourceAmount, BillingServicesAmount3.mmHostAmount, TaxCalculation1.mmTotalTaxableServiceChargeHostAmount, BillingServiceAdjustment1.mmAmount,
 					BillingServiceAdjustment1.mmOriginalChargeAmount, BillingServiceAdjustment1.mmNewChargeAmount, BillingService2.mmOriginalChargeSettlementAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Service.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Service.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Amount charged for the service.";
@@ -172,8 +173,8 @@ public class Service extends Product {
 	};
 	protected Max35Text type;
 	/**
-	 * Type used to classify and organise different services.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,8 +207,8 @@ public class Service extends Product {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingServiceAdjustment1.mmType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Service.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Service.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Type used to classify and organise different services.";
@@ -226,8 +227,8 @@ public class Service extends Product {
 	};
 	protected ServiceTaxDesignationCode taxDesignation;
 	/**
-	 * Identifies the taxable status of the service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -252,8 +253,8 @@ public class Service extends Product {
 	 */
 	public static final MMBusinessAttribute mmTaxDesignation = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Service.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Service.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxDesignation";
 			definition = "Identifies the taxable status of the service.";
@@ -272,8 +273,8 @@ public class Service extends Product {
 	};
 	protected PercentageRate rate;
 	/**
-	 * Rate applied on a basis amount to calculate the service charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -299,8 +300,8 @@ public class Service extends Product {
 	 */
 	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Service.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Service.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
 			definition = "Rate applied on a basis amount to calculate the service charge.";
@@ -321,7 +322,7 @@ public class Service extends Product {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Service";
 				definition = "Service is the intangible equivalent of a good.";
@@ -343,31 +344,35 @@ public class Service extends Product {
 		return amount;
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
-		this.amount = amount;
+	public Service setAmount(CurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
 	public Max35Text getType() {
 		return type;
 	}
 
-	public void setType(Max35Text type) {
-		this.type = type;
+	public Service setType(Max35Text type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
 	public ServiceTaxDesignationCode getTaxDesignation() {
 		return taxDesignation;
 	}
 
-	public void setTaxDesignation(ServiceTaxDesignationCode taxDesignation) {
-		this.taxDesignation = taxDesignation;
+	public Service setTaxDesignation(ServiceTaxDesignationCode taxDesignation) {
+		this.taxDesignation = Objects.requireNonNull(taxDesignation);
+		return this;
 	}
 
 	public PercentageRate getRate() {
 		return rate;
 	}
 
-	public void setRate(PercentageRate rate) {
-		this.rate = rate;
+	public Service setRate(PercentageRate rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 }

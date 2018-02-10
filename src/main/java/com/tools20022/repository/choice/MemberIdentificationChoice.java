@@ -29,6 +29,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -71,18 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "MemberIdentificationChoice", propOrder = {"BIC", "clearingSystemMemberIdentification"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "MemberIdentificationChoice", propOrder = {"bIC", "clearingSystemMemberIdentification"})
 public class MemberIdentificationChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BIC", required = true)
 	protected BICIdentifier bIC;
 	/**
-	 * Code allocated to a financial institution by the ISO 9362 Registration
-	 * Authority as described in ISO 9362
-	 * "Banking - Banking telecommunication messages - Business identifier code (BIC)"
-	 * .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +117,7 @@ public class MemberIdentificationChoice {
 	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> MemberIdentificationChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MemberIdentificationChoice.mmObject();
 			isDerived = false;
 			xmlTag = "BIC";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,11 +128,11 @@ public class MemberIdentificationChoice {
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "ClrSysMmbId", required = true)
 	protected ClearingSystemMemberIdentificationChoice clearingSystemMemberIdentification;
 	/**
-	 * Unique and unambiguous identifier of a clearing system member, as
-	 * assigned by the system or system administrator.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,7 +168,7 @@ public class MemberIdentificationChoice {
 	public static final MMMessageAttribute mmClearingSystemMemberIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmClearingSystemMemberIdentificationType;
-			componentContext_lazy = () -> MemberIdentificationChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MemberIdentificationChoice.mmObject();
 			isDerived = false;
 			xmlTag = "ClrSysMmbId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,9 +183,9 @@ public class MemberIdentificationChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MemberIdentificationChoice.mmBIC, MemberIdentificationChoice.mmClearingSystemMemberIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MemberIdentificationChoice.mmBIC, com.tools20022.repository.choice.MemberIdentificationChoice.mmClearingSystemMemberIdentification);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -202,21 +201,21 @@ public class MemberIdentificationChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BIC", required = true)
 	public BICIdentifier getBIC() {
 		return bIC;
 	}
 
-	public void setBIC(BICIdentifier bIC) {
-		this.bIC = bIC;
+	public MemberIdentificationChoice setBIC(BICIdentifier bIC) {
+		this.bIC = Objects.requireNonNull(bIC);
+		return this;
 	}
 
-	@XmlElement(name = "ClrSysMmbId", required = true)
 	public ClearingSystemMemberIdentificationChoice getClearingSystemMemberIdentification() {
 		return clearingSystemMemberIdentification;
 	}
 
-	public void setClearingSystemMemberIdentification(com.tools20022.repository.choice.ClearingSystemMemberIdentificationChoice clearingSystemMemberIdentification) {
-		this.clearingSystemMemberIdentification = clearingSystemMemberIdentification;
+	public MemberIdentificationChoice setClearingSystemMemberIdentification(com.tools20022.repository.choice.ClearingSystemMemberIdentificationChoice clearingSystemMemberIdentification) {
+		this.clearingSystemMemberIdentification = Objects.requireNonNull(clearingSystemMemberIdentification);
+		return this;
 	}
 }

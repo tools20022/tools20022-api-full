@@ -26,9 +26,11 @@ import com.tools20022.repository.msg.GroupHeader1;
 import com.tools20022.repository.msg.PaymentInstructionInformation2;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -79,22 +81,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
- * PaymentsInitiationArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "pain.008.001.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "pain.008.001.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -107,9 +93,36 @@ import javax.xml.bind.annotation.*;
  * CustomerDirectDebitInitiationV01.mmPaymentInformation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "pain.008.001.01"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
+ * PaymentsInitiationArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "pain.008.001.01"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pain.008.001.01}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGrouping1Rule#forCustomerDirectDebitInitiationV01
+ * ConstraintGrouping1Rule.forCustomerDirectDebitInitiationV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGrouping2Rule#forCustomerDirectDebitInitiationV01
+ * ConstraintGrouping2Rule.forCustomerDirectDebitInitiationV01}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -130,16 +143,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "pain.008.001.01", propOrder = {"groupHeader", "paymentInformation"})
 public class CustomerDirectDebitInitiationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader1 groupHeader;
 	/**
-	 * Set of characteristics shared by all individual transactions included in
-	 * the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,11 +193,11 @@ public class CustomerDirectDebitInitiationV01 {
 			}
 		}
 	};
+	@XmlElement(name = "PmtInf", required = true)
 	protected List<PaymentInstructionInformation2> paymentInformation;
 	/**
-	 * Set of characteristics that apply to the credit side of the payment
-	 * transactions included in the direct debit transaction initiation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -229,6 +242,8 @@ public class CustomerDirectDebitInitiationV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGrouping1Rule.forCustomerDirectDebitInitiationV01,
+						com.tools20022.repository.constraints.ConstraintGrouping2Rule.forCustomerDirectDebitInitiationV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustomerDirectDebitInitiationV01";
 				definition = "Scope\r\nThe CustomerDirectDebitInitiation message is sent by the initiating party to the forwarding agent or creditor agent. It is used to request single or bulk collection(s) of funds from one or various debtor's account(s) for a creditor.\r\nUsage\r\nThe CustomerDirectDebitInitiation message can contain one or more direct debit instructions.\r\nThe message can be used in a direct or a relay scenario:\r\n- In a direct scenario, the message is sent directly to the creditor agent. The creditor agent is the account servicer of the creditor.\r\n- In a relay scenario, the message is sent to a forwarding agent. The forwarding agent acts as a concentrating financial institution. It will forward the CustomerDirectDebitInitiation message to the creditor agent.\r\nThe message can also be used by an initiating party that has authority to send the message on behalf of the creditor. This caters for example for the scenario of a payments factory initiating all payments on behalf of a large corporate.\r\nThe CustomerDirectDebitInitiation message can be used in domestic and cross-border scenarios.\r\nThe CustomerDirectDebitInitiation may or may not contain mandate related information, i.e. extracts from a mandate, such as MandateIdentification or DateOfSignature. The CustomerDirectDebitInitiation message must not be considered as a mandate.\r\nThe CustomerDirectDebitInitiation message must not be used by the creditor agent to execute the direct debit instruction(s). The FIToFICustomerDirectDebit message must be used instead.\r\nIf it is agreed to include the payment information related to the credit side only once (i.e. Grouped mode), the PaymentInformation block will be present only once. If it is agreed to repeat the payment information related to the credit side (i.e. Single mode), the PaymentInformation block must be present once per occurrence of the DirectDebitTransactionInformation block. The CustomerDirectDebitInitiation message also allows for a Mixed mode where the PaymentInformation block can be repeated and each PaymentInformation block can contain one or several DirectDebitTransactionInformation block(s).\nSingle\nWhen grouping is set to Single, information for each individual instruction is included separately. This means the\nPaymentInformation block is repeated, and present for each occurrence of the Direct Debit TransactionInformation block.\nGrouped\nWhen grouping is set to Grouped, the PaymentInformation block will be present once and the Direct Debit\nTransactionInformation block will be repeated.\nMixed\nWhen grouping is set to Mixed, the PaymentInformation block may be present once or may be repeated. Each sequence\nof the PaymentInformation block may contain one or several Direct Debit TransactionInformation block(s).";
@@ -257,25 +272,25 @@ public class CustomerDirectDebitInitiationV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader1 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader1 groupHeader) {
-		this.groupHeader = groupHeader;
+	public CustomerDirectDebitInitiationV01 setGroupHeader(GroupHeader1 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "PmtInf", required = true)
 	public List<PaymentInstructionInformation2> getPaymentInformation() {
-		return paymentInformation;
+		return paymentInformation == null ? paymentInformation = new ArrayList<>() : paymentInformation;
 	}
 
-	public void setPaymentInformation(List<PaymentInstructionInformation2> paymentInformation) {
-		this.paymentInformation = paymentInformation;
+	public CustomerDirectDebitInitiationV01 setPaymentInformation(List<PaymentInstructionInformation2> paymentInformation) {
+		this.paymentInformation = Objects.requireNonNull(paymentInformation);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.01")
 	static public class Document {
 		@XmlElement(name = "pain.008.001.01", required = true)
 		public CustomerDirectDebitInitiationV01 messageBody;

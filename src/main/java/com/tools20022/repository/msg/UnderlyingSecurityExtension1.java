@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -30,6 +31,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -79,8 +82,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,16 +95,17 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides additional information regarding underlying security details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "UnderlyingSecurityExtension1", propOrder = {"placeAndName", "issuerDescription", "countryOfListing", "countryOfIncorporation", "incomeSourceCountry", "DTCAssetClass", "DTCAssetType", "securityEligibilityIndicator",
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "UnderlyingSecurityExtension1", propOrder = {"placeAndName", "issuerDescription", "countryOfListing", "countryOfIncorporation", "incomeSourceCountry", "dTCAssetClass", "dTCAssetType", "securityEligibilityIndicator",
 		"primaryExchangeFlag", "tickerSymbol"})
 public class UnderlyingSecurityExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +132,7 @@ public class UnderlyingSecurityExtension1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UnderlyingSecurityExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,10 +143,11 @@ public class UnderlyingSecurityExtension1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IssrDesc")
 	protected Max70Text issuerDescription;
 	/**
-	 * Name of the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,6 +162,9 @@ public class UnderlyingSecurityExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IssrDesc"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Issuer Description</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -169,9 +177,10 @@ public class UnderlyingSecurityExtension1 {
 	 */
 	public static final MMMessageAttribute mmIssuerDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UnderlyingSecurityExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "IssrDesc";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Issuer Description"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerDescription";
 			definition = "Name of the issuer.";
@@ -180,10 +189,11 @@ public class UnderlyingSecurityExtension1 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CtryOfListg")
 	protected CountryCode countryOfListing;
 	/**
-	 * Country in which the security was issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,6 +208,9 @@ public class UnderlyingSecurityExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtryOfListg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Country of Listing</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -210,9 +223,10 @@ public class UnderlyingSecurityExtension1 {
 	 */
 	public static final MMMessageAttribute mmCountryOfListing = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UnderlyingSecurityExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfListg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Country of Listing"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfListing";
 			definition = "Country in which the security was issued.";
@@ -221,10 +235,11 @@ public class UnderlyingSecurityExtension1 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CtryOfIncorprtn")
 	protected CountryCode countryOfIncorporation;
 	/**
-	 * Country of incorporation of the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -239,6 +254,9 @@ public class UnderlyingSecurityExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtryOfIncorprtn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Country of Incorporation</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -251,9 +269,10 @@ public class UnderlyingSecurityExtension1 {
 	 */
 	public static final MMMessageAttribute mmCountryOfIncorporation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UnderlyingSecurityExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfIncorprtn";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Country of Incorporation"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIncorporation";
 			definition = "Country of incorporation of the issuer.";
@@ -262,10 +281,11 @@ public class UnderlyingSecurityExtension1 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "IncmSrcCtry")
 	protected CountryCode incomeSourceCountry;
 	/**
-	 * Country of source income for the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -280,6 +300,9 @@ public class UnderlyingSecurityExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IncmSrcCtry"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Income Source Country</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -292,9 +315,10 @@ public class UnderlyingSecurityExtension1 {
 	 */
 	public static final MMMessageAttribute mmIncomeSourceCountry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UnderlyingSecurityExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "IncmSrcCtry";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Income Source Country"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomeSourceCountry";
 			definition = "Country of source income for the security.";
@@ -303,11 +327,11 @@ public class UnderlyingSecurityExtension1 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCAsstClss")
 	protected AssetClass1Code dTCAssetClass;
 	/**
-	 * Classification of instruments into asset classes at DTC (The Depository
-	 * Trust Corporation).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -323,6 +347,9 @@ public class UnderlyingSecurityExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCAsstClss"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Asset Class</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -337,9 +364,10 @@ public class UnderlyingSecurityExtension1 {
 	 */
 	public static final MMMessageAttribute mmDTCAssetClass = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UnderlyingSecurityExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCAsstClss";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Asset Class"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetClass";
 			definition = "Classification of instruments into asset classes at DTC (The Depository Trust Corporation).";
@@ -348,11 +376,11 @@ public class UnderlyingSecurityExtension1 {
 			simpleType_lazy = () -> AssetClass1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCAsstTp")
 	protected DTCAssetType1Code dTCAssetType;
 	/**
-	 * Further classification of instruments into (issue) asset types at DTC
-	 * (The Depository Trust Corporation).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -368,6 +396,9 @@ public class UnderlyingSecurityExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCAsstTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Asset Type</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -382,9 +413,10 @@ public class UnderlyingSecurityExtension1 {
 	 */
 	public static final MMMessageAttribute mmDTCAssetType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UnderlyingSecurityExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCAsstTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Asset Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetType";
 			definition = "Further classification of instruments into (issue) asset types at DTC (The Depository Trust Corporation).";
@@ -393,10 +425,11 @@ public class UnderlyingSecurityExtension1 {
 			simpleType_lazy = () -> DTCAssetType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyElgbltyInd")
 	protected YesNoIndicator securityEligibilityIndicator;
 	/**
-	 * Indicates whether the security is eligible for holding at DTC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -412,6 +445,9 @@ public class UnderlyingSecurityExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctyElgbltyInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Security Eligibility Indicator</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -425,9 +461,10 @@ public class UnderlyingSecurityExtension1 {
 	 */
 	public static final MMMessageAttribute mmSecurityEligibilityIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UnderlyingSecurityExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyElgbltyInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Security Eligibility Indicator"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityEligibilityIndicator";
 			definition = "Indicates whether the security is eligible for holding at DTC.";
@@ -436,11 +473,11 @@ public class UnderlyingSecurityExtension1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PmryXchgFlg")
 	protected YesNoIndicator primaryExchangeFlag;
 	/**
-	 * Indicates if the stock exchange associated to place of listing code is
-	 * primary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -456,6 +493,9 @@ public class UnderlyingSecurityExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PmryXchgFlg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Primary Exchange Flag</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -470,9 +510,10 @@ public class UnderlyingSecurityExtension1 {
 	 */
 	public static final MMMessageAttribute mmPrimaryExchangeFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UnderlyingSecurityExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "PmryXchgFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Primary Exchange Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryExchangeFlag";
 			definition = "Indicates if the stock exchange associated to place of listing code is primary.";
@@ -481,10 +522,11 @@ public class UnderlyingSecurityExtension1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "TckrSymb")
 	protected Max35Text tickerSymbol;
 	/**
-	 * Ticket symbol for the event security (underlying security).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -499,6 +541,9 @@ public class UnderlyingSecurityExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TckrSymb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Ticker Symbol</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -512,9 +557,10 @@ public class UnderlyingSecurityExtension1 {
 	 */
 	public static final MMMessageAttribute mmTickerSymbol = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UnderlyingSecurityExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "TckrSymb";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Ticker Symbol"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TickerSymbol";
 			definition = "Ticket symbol for the event security (underlying security). ";
@@ -527,10 +573,12 @@ public class UnderlyingSecurityExtension1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnderlyingSecurityExtension1.mmPlaceAndName, UnderlyingSecurityExtension1.mmIssuerDescription, UnderlyingSecurityExtension1.mmCountryOfListing,
-						UnderlyingSecurityExtension1.mmCountryOfIncorporation, UnderlyingSecurityExtension1.mmIncomeSourceCountry, UnderlyingSecurityExtension1.mmDTCAssetClass, UnderlyingSecurityExtension1.mmDTCAssetType,
-						UnderlyingSecurityExtension1.mmSecurityEligibilityIndicator, UnderlyingSecurityExtension1.mmPrimaryExchangeFlag, UnderlyingSecurityExtension1.mmTickerSymbol);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmPlaceAndName, com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmIssuerDescription,
+						com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmCountryOfListing, com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmCountryOfIncorporation,
+						com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmIncomeSourceCountry, com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmDTCAssetClass,
+						com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmDTCAssetType, com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmSecurityEligibilityIndicator,
+						com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmPrimaryExchangeFlag, com.tools20022.repository.msg.UnderlyingSecurityExtension1.mmTickerSymbol);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UnderlyingSecurityExtension1";
 				definition = "Provides additional information regarding underlying security details.";
@@ -539,93 +587,93 @@ public class UnderlyingSecurityExtension1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public UnderlyingSecurityExtension1 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "IssrDesc")
-	public Max70Text getIssuerDescription() {
-		return issuerDescription;
+	public Optional<Max70Text> getIssuerDescription() {
+		return issuerDescription == null ? Optional.empty() : Optional.of(issuerDescription);
 	}
 
-	public void setIssuerDescription(Max70Text issuerDescription) {
+	public UnderlyingSecurityExtension1 setIssuerDescription(Max70Text issuerDescription) {
 		this.issuerDescription = issuerDescription;
+		return this;
 	}
 
-	@XmlElement(name = "CtryOfListg")
-	public CountryCode getCountryOfListing() {
-		return countryOfListing;
+	public Optional<CountryCode> getCountryOfListing() {
+		return countryOfListing == null ? Optional.empty() : Optional.of(countryOfListing);
 	}
 
-	public void setCountryOfListing(CountryCode countryOfListing) {
+	public UnderlyingSecurityExtension1 setCountryOfListing(CountryCode countryOfListing) {
 		this.countryOfListing = countryOfListing;
+		return this;
 	}
 
-	@XmlElement(name = "CtryOfIncorprtn")
-	public CountryCode getCountryOfIncorporation() {
-		return countryOfIncorporation;
+	public Optional<CountryCode> getCountryOfIncorporation() {
+		return countryOfIncorporation == null ? Optional.empty() : Optional.of(countryOfIncorporation);
 	}
 
-	public void setCountryOfIncorporation(CountryCode countryOfIncorporation) {
+	public UnderlyingSecurityExtension1 setCountryOfIncorporation(CountryCode countryOfIncorporation) {
 		this.countryOfIncorporation = countryOfIncorporation;
+		return this;
 	}
 
-	@XmlElement(name = "IncmSrcCtry")
-	public CountryCode getIncomeSourceCountry() {
-		return incomeSourceCountry;
+	public Optional<CountryCode> getIncomeSourceCountry() {
+		return incomeSourceCountry == null ? Optional.empty() : Optional.of(incomeSourceCountry);
 	}
 
-	public void setIncomeSourceCountry(CountryCode incomeSourceCountry) {
+	public UnderlyingSecurityExtension1 setIncomeSourceCountry(CountryCode incomeSourceCountry) {
 		this.incomeSourceCountry = incomeSourceCountry;
+		return this;
 	}
 
-	@XmlElement(name = "DTCAsstClss")
-	public AssetClass1Code getDTCAssetClass() {
-		return dTCAssetClass;
+	public Optional<AssetClass1Code> getDTCAssetClass() {
+		return dTCAssetClass == null ? Optional.empty() : Optional.of(dTCAssetClass);
 	}
 
-	public void setDTCAssetClass(AssetClass1Code dTCAssetClass) {
+	public UnderlyingSecurityExtension1 setDTCAssetClass(AssetClass1Code dTCAssetClass) {
 		this.dTCAssetClass = dTCAssetClass;
+		return this;
 	}
 
-	@XmlElement(name = "DTCAsstTp")
-	public DTCAssetType1Code getDTCAssetType() {
-		return dTCAssetType;
+	public Optional<DTCAssetType1Code> getDTCAssetType() {
+		return dTCAssetType == null ? Optional.empty() : Optional.of(dTCAssetType);
 	}
 
-	public void setDTCAssetType(DTCAssetType1Code dTCAssetType) {
+	public UnderlyingSecurityExtension1 setDTCAssetType(DTCAssetType1Code dTCAssetType) {
 		this.dTCAssetType = dTCAssetType;
+		return this;
 	}
 
-	@XmlElement(name = "SctyElgbltyInd")
-	public YesNoIndicator getSecurityEligibilityIndicator() {
-		return securityEligibilityIndicator;
+	public Optional<YesNoIndicator> getSecurityEligibilityIndicator() {
+		return securityEligibilityIndicator == null ? Optional.empty() : Optional.of(securityEligibilityIndicator);
 	}
 
-	public void setSecurityEligibilityIndicator(YesNoIndicator securityEligibilityIndicator) {
+	public UnderlyingSecurityExtension1 setSecurityEligibilityIndicator(YesNoIndicator securityEligibilityIndicator) {
 		this.securityEligibilityIndicator = securityEligibilityIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PmryXchgFlg")
-	public YesNoIndicator getPrimaryExchangeFlag() {
-		return primaryExchangeFlag;
+	public Optional<YesNoIndicator> getPrimaryExchangeFlag() {
+		return primaryExchangeFlag == null ? Optional.empty() : Optional.of(primaryExchangeFlag);
 	}
 
-	public void setPrimaryExchangeFlag(YesNoIndicator primaryExchangeFlag) {
+	public UnderlyingSecurityExtension1 setPrimaryExchangeFlag(YesNoIndicator primaryExchangeFlag) {
 		this.primaryExchangeFlag = primaryExchangeFlag;
+		return this;
 	}
 
-	@XmlElement(name = "TckrSymb")
-	public Max35Text getTickerSymbol() {
-		return tickerSymbol;
+	public Optional<Max35Text> getTickerSymbol() {
+		return tickerSymbol == null ? Optional.empty() : Optional.of(tickerSymbol);
 	}
 
-	public void setTickerSymbol(Max35Text tickerSymbol) {
+	public UnderlyingSecurityExtension1 setTickerSymbol(Max35Text tickerSymbol) {
 		this.tickerSymbol = tickerSymbol;
+		return this;
 	}
 }

@@ -20,34 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ConversionTypeCode;
+import com.tools20022.repository.codeset.ConversionType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of conversion.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ConversionType1Code#Final
+ * ConversionType1Code.Final}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ConversionType1Code#Interim
+ * ConversionType1Code.Interim}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.ConversionTypeCode
  * ConversionTypeCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ConversionType1Code#mmFinal
- * ConversionType1Code.mmFinal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ConversionType1Code#mmInterim
- * ConversionType1Code.mmInterim}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of conversion."</li>
  * </ul>
  */
-public class ConversionType1Code extends ConversionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ConversionType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +87,12 @@ public class ConversionType1Code extends ConversionTypeCode {
 	 * name} = "Final"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinal = new MMCode() {
+	public static final ConversionType1Code Final = new ConversionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
-			owner_lazy = () -> ConversionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConversionType1Code.mmObject();
+			codeName = ConversionTypeCode.Final.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +111,57 @@ public class ConversionType1Code extends ConversionTypeCode {
 	 * name} = "Interim"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterim = new MMCode() {
+	public static final ConversionType1Code Interim = new ConversionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
-			owner_lazy = () -> ConversionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConversionType1Code.mmObject();
+			codeName = ConversionTypeCode.Interim.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ConversionType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ConversionType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FINL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConversionType1Code";
 				definition = "Specifies the type of conversion.";
-				code_lazy = () -> Arrays.asList(ConversionType1Code.mmFinal, ConversionType1Code.mmInterim);
 				trace_lazy = () -> ConversionTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConversionType1Code.Final, com.tools20022.repository.codeset.ConversionType1Code.Interim);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Final.getCodeName().get(), Final);
+		codesByName.put(Interim.getCodeName().get(), Interim);
+	}
+
+	public static ConversionType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ConversionType1Code[] values() {
+		ConversionType1Code[] values = new ConversionType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ConversionType1Code> {
+		@Override
+		public ConversionType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ConversionType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecurityPosition4", propOrder = {"subAccount", "voteInstruction"})
 public class SecurityPosition4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SubAcct", required = true)
 	protected EligiblePosition1 subAccount;
 	/**
-	 * Amount of securities that are eligible for the vote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -108,7 +110,7 @@ public class SecurityPosition4 {
 	public static final MMMessageAssociationEnd mmSubAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmSubAccount;
-			componentContext_lazy = () -> SecurityPosition4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition4.mmObject();
 			isDerived = false;
 			xmlTag = "SubAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +122,11 @@ public class SecurityPosition4 {
 			type_lazy = () -> com.tools20022.repository.msg.EligiblePosition1.mmObject();
 		}
 	};
+	@XmlElement(name = "VoteInstr", required = true)
 	protected VoteInstruction1 voteInstruction;
 	/**
-	 * Specifies how a party has voted for each agenda item.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +158,7 @@ public class SecurityPosition4 {
 	public static final MMMessageAssociationEnd mmVoteInstruction = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InstructionForMeeting.mmVoteInstruction;
-			componentContext_lazy = () -> SecurityPosition4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition4.mmObject();
 			isDerived = false;
 			xmlTag = "VoteInstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,9 +174,9 @@ public class SecurityPosition4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityPosition4.mmSubAccount, SecurityPosition4.mmVoteInstruction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition4.mmSubAccount, com.tools20022.repository.msg.SecurityPosition4.mmVoteInstruction);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityPosition4";
 				definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account.";
@@ -182,21 +185,21 @@ public class SecurityPosition4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SubAcct", required = true)
 	public EligiblePosition1 getSubAccount() {
 		return subAccount;
 	}
 
-	public void setSubAccount(com.tools20022.repository.msg.EligiblePosition1 subAccount) {
-		this.subAccount = subAccount;
+	public SecurityPosition4 setSubAccount(com.tools20022.repository.msg.EligiblePosition1 subAccount) {
+		this.subAccount = Objects.requireNonNull(subAccount);
+		return this;
 	}
 
-	@XmlElement(name = "VoteInstr", required = true)
 	public VoteInstruction1 getVoteInstruction() {
 		return voteInstruction;
 	}
 
-	public void setVoteInstruction(com.tools20022.repository.msg.VoteInstruction1 voteInstruction) {
-		this.voteInstruction = voteInstruction;
+	public SecurityPosition4 setVoteInstruction(com.tools20022.repository.msg.VoteInstruction1 voteInstruction) {
+		this.voteInstruction = Objects.requireNonNull(voteInstruction);
+		return this;
 	}
 }

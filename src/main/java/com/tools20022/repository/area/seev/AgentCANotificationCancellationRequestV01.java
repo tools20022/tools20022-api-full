@@ -30,6 +30,8 @@ import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversi
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -47,22 +49,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
- * SecuritiesEventsLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
- * IssuersAgentsCommunicationISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AgtCANtfctnCxlReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -84,6 +70,22 @@ import javax.xml.bind.annotation.*;
  * mmCorporateActionNotificationDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
+ * IssuersAgentsCommunicationISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AgtCANtfctnCxlReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
+ * SecuritiesEventsLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.010.001.01}</li>
@@ -99,16 +101,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AgentCANotificationCancellationRequestV01", propOrder = {"identification", "notificationCancellationTypeAndLinkage", "corporateActionGeneralInformation", "corporateActionNotificationDetails"})
 public class AgentCANotificationCancellationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected DocumentIdentification8 identification;
 	/**
-	 * Identification assigned by the Sender to unambiguously identify the
-	 * cancellation request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,11 +152,11 @@ public class AgentCANotificationCancellationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "NtfctnCxlTpAndLkg", required = true)
 	protected NotificationCancellation1 notificationCancellationTypeAndLinkage;
 	/**
-	 * Provides information about the type of notification cancellation request
-	 * and linked message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,10 +198,11 @@ public class AgentCANotificationCancellationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	protected CorporateActionInformation2 corporateActionGeneralInformation;
 	/**
-	 * General information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -239,10 +242,11 @@ public class AgentCANotificationCancellationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnNtfctnDtls")
 	protected CorporateActionNotificationAdvice1 corporateActionNotificationDetails;
 	/**
-	 * Detailed information of the notification advice to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -316,43 +320,43 @@ public class AgentCANotificationCancellationRequestV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(DocumentIdentification8 identification) {
-		this.identification = identification;
+	public AgentCANotificationCancellationRequestV01 setIdentification(DocumentIdentification8 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "NtfctnCxlTpAndLkg", required = true)
 	public NotificationCancellation1 getNotificationCancellationTypeAndLinkage() {
 		return notificationCancellationTypeAndLinkage;
 	}
 
-	public void setNotificationCancellationTypeAndLinkage(NotificationCancellation1 notificationCancellationTypeAndLinkage) {
-		this.notificationCancellationTypeAndLinkage = notificationCancellationTypeAndLinkage;
+	public AgentCANotificationCancellationRequestV01 setNotificationCancellationTypeAndLinkage(NotificationCancellation1 notificationCancellationTypeAndLinkage) {
+		this.notificationCancellationTypeAndLinkage = Objects.requireNonNull(notificationCancellationTypeAndLinkage);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionInformation2 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
 
-	public void setCorporateActionGeneralInformation(CorporateActionInformation2 corporateActionGeneralInformation) {
-		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	public AgentCANotificationCancellationRequestV01 setCorporateActionGeneralInformation(CorporateActionInformation2 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = Objects.requireNonNull(corporateActionGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnNtfctnDtls")
-	public CorporateActionNotificationAdvice1 getCorporateActionNotificationDetails() {
-		return corporateActionNotificationDetails;
+	public Optional<CorporateActionNotificationAdvice1> getCorporateActionNotificationDetails() {
+		return corporateActionNotificationDetails == null ? Optional.empty() : Optional.of(corporateActionNotificationDetails);
 	}
 
-	public void setCorporateActionNotificationDetails(CorporateActionNotificationAdvice1 corporateActionNotificationDetails) {
+	public AgentCANotificationCancellationRequestV01 setCorporateActionNotificationDetails(CorporateActionNotificationAdvice1 corporateActionNotificationDetails) {
 		this.corporateActionNotificationDetails = corporateActionNotificationDetails;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.010.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.010.001.01")
 	static public class Document {
 		@XmlElement(name = "AgtCANtfctnCxlReq", required = true)
 		public AgentCANotificationCancellationRequestV01 messageBody;

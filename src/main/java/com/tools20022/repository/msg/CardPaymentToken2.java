@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * CardPaymentToken1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardPaymentToken2", propOrder = {"tokenCharacteristic", "tokenAssuranceLevel"})
 public class CardPaymentToken2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TknChrtc")
 	protected List<Max35Text> tokenCharacteristic;
 	/**
-	 * Additional token payment information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +109,7 @@ public class CardPaymentToken2 {
 	 */
 	public static final MMMessageAttribute mmTokenCharacteristic = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardPaymentToken2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentToken2.mmObject();
 			isDerived = false;
 			xmlTag = "TknChrtc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,11 +119,11 @@ public class CardPaymentToken2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TknAssrncLvl")
 	protected Number tokenAssuranceLevel;
 	/**
-	 * Level of confidence resulting of the identification and authentication of
-	 * the cardholder performed and the entity that performed it.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +160,7 @@ public class CardPaymentToken2 {
 	 */
 	public static final MMMessageAttribute mmTokenAssuranceLevel = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardPaymentToken2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentToken2.mmObject();
 			isDerived = false;
 			xmlTag = "TknAssrncLvl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,8 +176,8 @@ public class CardPaymentToken2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardPaymentToken2.mmTokenCharacteristic, CardPaymentToken2.mmTokenAssuranceLevel);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentToken2.mmTokenCharacteristic, com.tools20022.repository.msg.CardPaymentToken2.mmTokenAssuranceLevel);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentToken2";
 				definition = "Payment token information.";
@@ -188,21 +188,21 @@ public class CardPaymentToken2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TknChrtc")
 	public List<Max35Text> getTokenCharacteristic() {
-		return tokenCharacteristic;
+		return tokenCharacteristic == null ? tokenCharacteristic = new ArrayList<>() : tokenCharacteristic;
 	}
 
-	public void setTokenCharacteristic(List<Max35Text> tokenCharacteristic) {
-		this.tokenCharacteristic = tokenCharacteristic;
+	public CardPaymentToken2 setTokenCharacteristic(List<Max35Text> tokenCharacteristic) {
+		this.tokenCharacteristic = Objects.requireNonNull(tokenCharacteristic);
+		return this;
 	}
 
-	@XmlElement(name = "TknAssrncLvl")
-	public Number getTokenAssuranceLevel() {
-		return tokenAssuranceLevel;
+	public Optional<Number> getTokenAssuranceLevel() {
+		return tokenAssuranceLevel == null ? Optional.empty() : Optional.of(tokenAssuranceLevel);
 	}
 
-	public void setTokenAssuranceLevel(Number tokenAssuranceLevel) {
+	public CardPaymentToken2 setTokenAssuranceLevel(Number tokenAssuranceLevel) {
 		this.tokenAssuranceLevel = tokenAssuranceLevel;
+		return this;
 	}
 }

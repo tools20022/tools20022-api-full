@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +28,8 @@ import com.tools20022.repository.choice.References31Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information related to a linked transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Linkages28", propOrder = {"processingPosition", "messageNumber", "reference", "referenceOwner"})
 public class Linkages28 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrcgPos")
 	protected ProcessingPosition6Choice processingPosition;
 	/**
-	 * When the transaction is to be executed relative to a linked transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -88,6 +92,9 @@ public class Linkages28 {
 	 * Linkages28}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrcgPos"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::LINK</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -103,9 +110,10 @@ public class Linkages28 {
 	 */
 	public static final MMMessageAssociationEnd mmProcessingPosition = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Linkages28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages28.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgPos";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::LINK"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingPosition";
 			definition = "When the transaction is to be executed relative to a linked transaction.";
@@ -115,11 +123,11 @@ public class Linkages28 {
 			type_lazy = () -> ProcessingPosition6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgNb")
 	protected DocumentNumber3Choice messageNumber;
 	/**
-	 * Message type number/message identifier of the message referenced in the
-	 * linkage sequence.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -132,6 +140,9 @@ public class Linkages28 {
 	 * Linkages28}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MsgNb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13a::LINK</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -147,9 +158,10 @@ public class Linkages28 {
 	 */
 	public static final MMMessageAssociationEnd mmMessageNumber = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Linkages28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages28.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13a::LINK"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumber";
 			definition = "Message type number/message identifier of the message referenced in the linkage sequence.";
@@ -159,10 +171,11 @@ public class Linkages28 {
 			type_lazy = () -> DocumentNumber3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Ref", required = true)
 	protected References31Choice reference;
 	/**
-	 * Reference to the linked transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -174,6 +187,9 @@ public class Linkages28 {
 	 * Linkages28}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Ref"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -187,9 +203,10 @@ public class Linkages28 {
 	 */
 	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Linkages28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages28.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the linked transaction.";
@@ -199,10 +216,11 @@ public class Linkages28 {
 			type_lazy = () -> References31Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RefOwnr")
 	protected PartyIdentification51Choice referenceOwner;
 	/**
-	 * Party that generates the reference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -228,7 +246,7 @@ public class Linkages28 {
 	 */
 	public static final MMMessageAssociationEnd mmReferenceOwner = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Linkages28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages28.mmObject();
 			isDerived = false;
 			xmlTag = "RefOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,8 +262,9 @@ public class Linkages28 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Linkages28.mmProcessingPosition, Linkages28.mmMessageNumber, Linkages28.mmReference, Linkages28.mmReferenceOwner);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages28.mmProcessingPosition, com.tools20022.repository.msg.Linkages28.mmMessageNumber, com.tools20022.repository.msg.Linkages28.mmReference,
+						com.tools20022.repository.msg.Linkages28.mmReferenceOwner);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Linkages28";
 				definition = "Information related to a linked transaction.";
@@ -254,39 +273,39 @@ public class Linkages28 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrcgPos")
-	public ProcessingPosition6Choice getProcessingPosition() {
-		return processingPosition;
+	public Optional<ProcessingPosition6Choice> getProcessingPosition() {
+		return processingPosition == null ? Optional.empty() : Optional.of(processingPosition);
 	}
 
-	public void setProcessingPosition(ProcessingPosition6Choice processingPosition) {
+	public Linkages28 setProcessingPosition(ProcessingPosition6Choice processingPosition) {
 		this.processingPosition = processingPosition;
+		return this;
 	}
 
-	@XmlElement(name = "MsgNb")
-	public DocumentNumber3Choice getMessageNumber() {
-		return messageNumber;
+	public Optional<DocumentNumber3Choice> getMessageNumber() {
+		return messageNumber == null ? Optional.empty() : Optional.of(messageNumber);
 	}
 
-	public void setMessageNumber(DocumentNumber3Choice messageNumber) {
+	public Linkages28 setMessageNumber(DocumentNumber3Choice messageNumber) {
 		this.messageNumber = messageNumber;
+		return this;
 	}
 
-	@XmlElement(name = "Ref", required = true)
 	public References31Choice getReference() {
 		return reference;
 	}
 
-	public void setReference(References31Choice reference) {
-		this.reference = reference;
+	public Linkages28 setReference(References31Choice reference) {
+		this.reference = Objects.requireNonNull(reference);
+		return this;
 	}
 
-	@XmlElement(name = "RefOwnr")
-	public PartyIdentification51Choice getReferenceOwner() {
-		return referenceOwner;
+	public Optional<PartyIdentification51Choice> getReferenceOwner() {
+		return referenceOwner == null ? Optional.empty() : Optional.of(referenceOwner);
 	}
 
-	public void setReferenceOwner(PartyIdentification51Choice referenceOwner) {
+	public Linkages28 setReferenceOwner(PartyIdentification51Choice referenceOwner) {
 		this.referenceOwner = referenceOwner;
+		return this;
 	}
 }

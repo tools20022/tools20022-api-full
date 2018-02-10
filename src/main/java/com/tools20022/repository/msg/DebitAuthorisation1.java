@@ -29,9 +29,8 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.DebitAuthorisation;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +72,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,15 +93,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DebitAuthorisation1", propOrder = {"cancellationReason", "amountToDebit", "valueDateToDebit", "additionalCancellationReasonInformation"})
 public class DebitAuthorisation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CxlRsn", required = true)
 	protected CancellationReason14Choice cancellationReason;
 	/**
-	 * Specifies the reason for the cancellation request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -143,7 +143,7 @@ public class DebitAuthorisation1 {
 	public static final MMMessageAssociationEnd mmCancellationReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmCancellationReason;
-			componentContext_lazy = () -> DebitAuthorisation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DebitAuthorisation1.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +156,11 @@ public class DebitAuthorisation1 {
 			type_lazy = () -> CancellationReason14Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtToDbt")
 	protected ActiveOrHistoricCurrencyAndAmount amountToDebit;
 	/**
-	 * Amount of money requested for debit authorisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,7 +202,7 @@ public class DebitAuthorisation1 {
 	public static final MMMessageAttribute mmAmountToDebit = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DebitAuthorisation.mmAmountToDebit;
-			componentContext_lazy = () -> DebitAuthorisation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DebitAuthorisation1.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToDbt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,10 +214,11 @@ public class DebitAuthorisation1 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ValDtToDbt")
 	protected ISODate valueDateToDebit;
 	/**
-	 * Value date for debiting the amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -257,7 +259,7 @@ public class DebitAuthorisation1 {
 	public static final MMMessageAttribute mmValueDateToDebit = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DebitAuthorisation.mmValueDateToDebit;
-			componentContext_lazy = () -> DebitAuthorisation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DebitAuthorisation1.mmObject();
 			isDerived = false;
 			xmlTag = "ValDtToDbt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,10 +271,11 @@ public class DebitAuthorisation1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlCxlRsnInf")
 	protected List<Max105Text> additionalCancellationReasonInformation;
 	/**
-	 * Further details on the cancellation request reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -307,7 +310,7 @@ public class DebitAuthorisation1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalCancellationReasonInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DebitAuthorisation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DebitAuthorisation1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlCxlRsnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -322,9 +325,10 @@ public class DebitAuthorisation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DebitAuthorisation1.mmCancellationReason, DebitAuthorisation1.mmAmountToDebit, DebitAuthorisation1.mmValueDateToDebit, DebitAuthorisation1.mmAdditionalCancellationReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebitAuthorisation1.mmCancellationReason, com.tools20022.repository.msg.DebitAuthorisation1.mmAmountToDebit,
+						com.tools20022.repository.msg.DebitAuthorisation1.mmValueDateToDebit, com.tools20022.repository.msg.DebitAuthorisation1.mmAdditionalCancellationReasonInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(DebitAuthorisationRequestV04.mmDetail);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DebitAuthorisation1";
 				definition = "Provides the reason for requesting a debit authorisation as well as the amount of the requested debit.";
@@ -334,39 +338,39 @@ public class DebitAuthorisation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CxlRsn", required = true)
 	public CancellationReason14Choice getCancellationReason() {
 		return cancellationReason;
 	}
 
-	public void setCancellationReason(CancellationReason14Choice cancellationReason) {
-		this.cancellationReason = cancellationReason;
+	public DebitAuthorisation1 setCancellationReason(CancellationReason14Choice cancellationReason) {
+		this.cancellationReason = Objects.requireNonNull(cancellationReason);
+		return this;
 	}
 
-	@XmlElement(name = "AmtToDbt")
-	public ActiveOrHistoricCurrencyAndAmount getAmountToDebit() {
-		return amountToDebit;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getAmountToDebit() {
+		return amountToDebit == null ? Optional.empty() : Optional.of(amountToDebit);
 	}
 
-	public void setAmountToDebit(ActiveOrHistoricCurrencyAndAmount amountToDebit) {
+	public DebitAuthorisation1 setAmountToDebit(ActiveOrHistoricCurrencyAndAmount amountToDebit) {
 		this.amountToDebit = amountToDebit;
+		return this;
 	}
 
-	@XmlElement(name = "ValDtToDbt")
-	public ISODate getValueDateToDebit() {
-		return valueDateToDebit;
+	public Optional<ISODate> getValueDateToDebit() {
+		return valueDateToDebit == null ? Optional.empty() : Optional.of(valueDateToDebit);
 	}
 
-	public void setValueDateToDebit(ISODate valueDateToDebit) {
+	public DebitAuthorisation1 setValueDateToDebit(ISODate valueDateToDebit) {
 		this.valueDateToDebit = valueDateToDebit;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlCxlRsnInf")
 	public List<Max105Text> getAdditionalCancellationReasonInformation() {
-		return additionalCancellationReasonInformation;
+		return additionalCancellationReasonInformation == null ? additionalCancellationReasonInformation = new ArrayList<>() : additionalCancellationReasonInformation;
 	}
 
-	public void setAdditionalCancellationReasonInformation(List<Max105Text> additionalCancellationReasonInformation) {
-		this.additionalCancellationReasonInformation = additionalCancellationReasonInformation;
+	public DebitAuthorisation1 setAdditionalCancellationReasonInformation(List<Max105Text> additionalCancellationReasonInformation) {
+		this.additionalCancellationReasonInformation = Objects.requireNonNull(additionalCancellationReasonInformation);
+		return this;
 	}
 }

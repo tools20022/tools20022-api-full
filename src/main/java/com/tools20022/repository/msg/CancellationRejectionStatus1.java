@@ -32,6 +32,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -45,8 +47,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationRejectionStatus1#mmReasonOrExtendedReasonRule
- * CancellationRejectionStatus1.mmReasonOrExtendedReasonRule}</li>
+ * {@linkplain com.tools20022.repository.msg.CancellationRejectionStatus1#ReasonOrExtendedReasonRule
+ * CancellationRejectionStatus1.ReasonOrExtendedReasonRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -70,8 +72,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -84,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CancellationRejectionStatus1", propOrder = {"reason", "extendedReason", "additionalInformation"})
 public class CancellationRejectionStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rsn", required = true)
 	protected RejectionReason2Code reason;
 	/**
-	 * Reason advising the rejection of the instruction cancellation request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -127,7 +130,7 @@ public class CancellationRejectionStatus1 {
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatusReason.mmInstructionRejectionReason;
-			componentContext_lazy = () -> CancellationRejectionStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationRejectionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,10 +141,11 @@ public class CancellationRejectionStatus1 {
 			simpleType_lazy = () -> RejectionReason2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedRsn", required = true)
 	protected Extended350Code extendedReason;
 	/**
-	 * This code can be used in case another reason is required.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,7 +174,7 @@ public class CancellationRejectionStatus1 {
 	 */
 	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CancellationRejectionStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationRejectionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,10 +185,11 @@ public class CancellationRejectionStatus1 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected Max350Text additionalInformation;
 	/**
-	 * Additional information about the reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,7 +222,7 @@ public class CancellationRejectionStatus1 {
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> CancellationRejectionStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationRejectionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -260,22 +265,23 @@ public class CancellationRejectionStatus1 {
 	 * "Either Reason or ExtendedReason must be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmReasonOrExtendedReasonRule = new MMXor() {
+	public static final MMXor ReasonOrExtendedReasonRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonOrExtendedReasonRule";
 			definition = "Either Reason or ExtendedReason must be present, but not both.";
-			messageComponent_lazy = () -> CancellationRejectionStatus1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(CancellationRejectionStatus1.mmReason, CancellationRejectionStatus1.mmExtendedReason);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.CancellationRejectionStatus1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationRejectionStatus1.mmReason, com.tools20022.repository.msg.CancellationRejectionStatus1.mmExtendedReason);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CancellationRejectionStatus1.mmReason, CancellationRejectionStatus1.mmExtendedReason, CancellationRejectionStatus1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationRejectionStatus1.mmReason, com.tools20022.repository.msg.CancellationRejectionStatus1.mmExtendedReason,
+						com.tools20022.repository.msg.CancellationRejectionStatus1.mmAdditionalInformation);
 				trace_lazy = () -> MeetingStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -286,36 +292,36 @@ public class CancellationRejectionStatus1 {
 				})).get();
 				name = "CancellationRejectionStatus1";
 				definition = "Status advising on the rejection of the cancellation request.";
-				xors_lazy = () -> Arrays.asList(CancellationRejectionStatus1.mmReasonOrExtendedReasonRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationRejectionStatus1.ReasonOrExtendedReasonRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public RejectionReason2Code getReason() {
 		return reason;
 	}
 
-	public void setReason(RejectionReason2Code reason) {
-		this.reason = reason;
+	public CancellationRejectionStatus1 setReason(RejectionReason2Code reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedRsn", required = true)
 	public Extended350Code getExtendedReason() {
 		return extendedReason;
 	}
 
-	public void setExtendedReason(Extended350Code extendedReason) {
-		this.extendedReason = extendedReason;
+	public CancellationRejectionStatus1 setExtendedReason(Extended350Code extendedReason) {
+		this.extendedReason = Objects.requireNonNull(extendedReason);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public Max350Text getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<Max350Text> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(Max350Text additionalInformation) {
+	public CancellationRejectionStatus1 setAdditionalInformation(Max350Text additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 }

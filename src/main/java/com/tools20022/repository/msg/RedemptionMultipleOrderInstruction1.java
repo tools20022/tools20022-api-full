@@ -24,9 +24,8 @@ import com.tools20022.repository.area.setr.RedemptionMultipleOrderCancellationIn
 import com.tools20022.repository.entity.RedemptionOrder;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about a redemption multiple order."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RedemptionMultipleOrderInstruction1", propOrder = {"multipleOrderDetails", "intermediaryDetails", "copyDetails", "extension"})
 public class RedemptionMultipleOrderInstruction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MltplOrdrDtls", required = true)
 	protected RedemptionMultipleOrder2 multipleOrderDetails;
 	/**
-	 * General information related to the order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -123,7 +123,7 @@ public class RedemptionMultipleOrderInstruction1 {
 	public static final MMMessageAssociationEnd mmMultipleOrderDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RedemptionOrder.mmObject();
-			componentContext_lazy = () -> RedemptionMultipleOrderInstruction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrderInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "MltplOrdrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +135,11 @@ public class RedemptionMultipleOrderInstruction1 {
 			type_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder2.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrmyDtls")
 	protected List<com.tools20022.repository.msg.Intermediary4> intermediaryDetails;
 	/**
-	 * Information related to an intermediary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -170,7 +171,7 @@ public class RedemptionMultipleOrderInstruction1 {
 	public static final MMMessageAssociationEnd mmIntermediaryDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
-			componentContext_lazy = () -> RedemptionMultipleOrderInstruction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrderInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,10 +183,11 @@ public class RedemptionMultipleOrderInstruction1 {
 			type_lazy = () -> com.tools20022.repository.msg.Intermediary4.mmObject();
 		}
 	};
+	@XmlElement(name = "CpyDtls")
 	protected CopyInformation1 copyDetails;
 	/**
-	 * Message is a copy.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -211,7 +213,7 @@ public class RedemptionMultipleOrderInstruction1 {
 	 */
 	public static final MMMessageAssociationEnd mmCopyDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RedemptionMultipleOrderInstruction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrderInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "CpyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,11 +225,11 @@ public class RedemptionMultipleOrderInstruction1 {
 			type_lazy = () -> com.tools20022.repository.msg.CopyInformation1.mmObject();
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -254,7 +256,7 @@ public class RedemptionMultipleOrderInstruction1 {
 	 */
 	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RedemptionMultipleOrderInstruction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrderInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,11 +271,11 @@ public class RedemptionMultipleOrderInstruction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RedemptionMultipleOrderInstruction1.mmMultipleOrderDetails, RedemptionMultipleOrderInstruction1.mmIntermediaryDetails, RedemptionMultipleOrderInstruction1.mmCopyDetails,
-						RedemptionMultipleOrderInstruction1.mmExtension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionMultipleOrderInstruction1.mmMultipleOrderDetails, com.tools20022.repository.msg.RedemptionMultipleOrderInstruction1.mmIntermediaryDetails,
+						com.tools20022.repository.msg.RedemptionMultipleOrderInstruction1.mmCopyDetails, com.tools20022.repository.msg.RedemptionMultipleOrderInstruction1.mmExtension);
 				messageBuildingBlock_lazy = () -> Arrays.asList(RedemptionMultipleOrderCancellationInstructionV02.mmOrderToBeCancelled);
 				trace_lazy = () -> RedemptionOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionMultipleOrderInstruction1";
 				definition = "Information about a redemption multiple order.";
@@ -282,39 +284,39 @@ public class RedemptionMultipleOrderInstruction1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MltplOrdrDtls", required = true)
 	public RedemptionMultipleOrder2 getMultipleOrderDetails() {
 		return multipleOrderDetails;
 	}
 
-	public void setMultipleOrderDetails(com.tools20022.repository.msg.RedemptionMultipleOrder2 multipleOrderDetails) {
-		this.multipleOrderDetails = multipleOrderDetails;
+	public RedemptionMultipleOrderInstruction1 setMultipleOrderDetails(com.tools20022.repository.msg.RedemptionMultipleOrder2 multipleOrderDetails) {
+		this.multipleOrderDetails = Objects.requireNonNull(multipleOrderDetails);
+		return this;
 	}
 
-	@XmlElement(name = "IntrmyDtls")
 	public List<Intermediary4> getIntermediaryDetails() {
-		return intermediaryDetails;
+		return intermediaryDetails == null ? intermediaryDetails = new ArrayList<>() : intermediaryDetails;
 	}
 
-	public void setIntermediaryDetails(List<com.tools20022.repository.msg.Intermediary4> intermediaryDetails) {
-		this.intermediaryDetails = intermediaryDetails;
+	public RedemptionMultipleOrderInstruction1 setIntermediaryDetails(List<com.tools20022.repository.msg.Intermediary4> intermediaryDetails) {
+		this.intermediaryDetails = Objects.requireNonNull(intermediaryDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CpyDtls")
-	public CopyInformation1 getCopyDetails() {
-		return copyDetails;
+	public Optional<CopyInformation1> getCopyDetails() {
+		return copyDetails == null ? Optional.empty() : Optional.of(copyDetails);
 	}
 
-	public void setCopyDetails(com.tools20022.repository.msg.CopyInformation1 copyDetails) {
+	public RedemptionMultipleOrderInstruction1 setCopyDetails(com.tools20022.repository.msg.CopyInformation1 copyDetails) {
 		this.copyDetails = copyDetails;
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
-		this.extension = extension;
+	public RedemptionMultipleOrderInstruction1 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 }

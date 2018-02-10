@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -76,8 +78,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,17 +96,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Transfer5", propOrder = {"masterReference", "transferReference", "clientReference", "transferDate", "totalUnitsNumber", "ownAccountTransferIndicator", "nonStandardSettlementInformation"})
 public class Transfer5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MstrRef")
 	protected Max35Text masterReference;
 	/**
-	 * Unique and unambiguous identifier for a group of individual transfers as
-	 * assigned by the instructing party. This identifier links the individual
-	 * transfers together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -138,7 +139,7 @@ public class Transfer5 {
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
-			componentContext_lazy = () -> Transfer5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer5.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,11 +150,11 @@ public class Transfer5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfRef", required = true)
 	protected Max35Text transferReference;
 	/**
-	 * Unique and unambiguous identifier for a transfer instruction, as assigned
-	 * by the instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,7 +188,7 @@ public class Transfer5 {
 	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmIdentification;
-			componentContext_lazy = () -> Transfer5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer5.mmObject();
 			isDerived = false;
 			xmlTag = "TrfRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,12 +199,11 @@ public class Transfer5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntRef")
 	protected Max35Text clientReference;
 	/**
-	 * Unique and unambiguous investor's identification of a transfer. This
-	 * reference can typically be used in a hub scenario to give the reference
-	 * of the transfer as assigned by the underlying client.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -237,7 +237,7 @@ public class Transfer5 {
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
-			componentContext_lazy = () -> Transfer5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer5.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,10 +248,11 @@ public class Transfer5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfDt")
 	protected DateFormat1Choice transferDate;
 	/**
-	 * Date at which the instructing party places the transfer instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -285,7 +286,7 @@ public class Transfer5 {
 	public static final MMMessageAttribute mmTransferDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesDeliveryObligation.mmTransferInstructionDate;
-			componentContext_lazy = () -> Transfer5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer5.mmObject();
 			isDerived = false;
 			xmlTag = "TrfDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -296,10 +297,11 @@ public class Transfer5 {
 			complexType_lazy = () -> DateFormat1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlUnitsNb", required = true)
 	protected FinancialInstrumentQuantity1 totalUnitsNumber;
 	/**
-	 * Total quantity of securities to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -332,7 +334,7 @@ public class Transfer5 {
 	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
-			componentContext_lazy = () -> Transfer5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer5.mmObject();
 			isDerived = false;
 			xmlTag = "TtlUnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -343,10 +345,11 @@ public class Transfer5 {
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	@XmlElement(name = "OwnAcctTrfInd")
 	protected YesNoIndicator ownAccountTransferIndicator;
 	/**
-	 * Indicates whether the transfer results in a change of beneficial owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -381,7 +384,7 @@ public class Transfer5 {
 	public static final MMMessageAttribute mmOwnAccountTransferIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmOwnAccountTransferIndicator;
-			componentContext_lazy = () -> Transfer5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer5.mmObject();
 			isDerived = false;
 			xmlTag = "OwnAcctTrfInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -392,11 +395,11 @@ public class Transfer5 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "NonStdSttlmInf")
 	protected Max350Text nonStandardSettlementInformation;
 	/**
-	 * Additional specific settlement information for non-regulated traded
-	 * funds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -430,7 +433,7 @@ public class Transfer5 {
 	public static final MMMessageAttribute mmNonStandardSettlementInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmNonStandardSettlementInformation;
-			componentContext_lazy = () -> Transfer5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer5.mmObject();
 			isDerived = false;
 			xmlTag = "NonStdSttlmInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -445,11 +448,12 @@ public class Transfer5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Transfer5.mmMasterReference, Transfer5.mmTransferReference, Transfer5.mmClientReference, Transfer5.mmTransferDate, Transfer5.mmTotalUnitsNumber,
-						Transfer5.mmOwnAccountTransferIndicator, Transfer5.mmNonStandardSettlementInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer5.mmMasterReference, com.tools20022.repository.msg.Transfer5.mmTransferReference, com.tools20022.repository.msg.Transfer5.mmClientReference,
+						com.tools20022.repository.msg.Transfer5.mmTransferDate, com.tools20022.repository.msg.Transfer5.mmTotalUnitsNumber, com.tools20022.repository.msg.Transfer5.mmOwnAccountTransferIndicator,
+						com.tools20022.repository.msg.Transfer5.mmNonStandardSettlementInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInInstructionV02.mmTransferDetails);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Transfer5";
 				definition = "Parameters applied to the settlement of a security transfer.";
@@ -459,66 +463,66 @@ public class Transfer5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MstrRef")
-	public Max35Text getMasterReference() {
-		return masterReference;
+	public Optional<Max35Text> getMasterReference() {
+		return masterReference == null ? Optional.empty() : Optional.of(masterReference);
 	}
 
-	public void setMasterReference(Max35Text masterReference) {
+	public Transfer5 setMasterReference(Max35Text masterReference) {
 		this.masterReference = masterReference;
+		return this;
 	}
 
-	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
 
-	public void setTransferReference(Max35Text transferReference) {
-		this.transferReference = transferReference;
+	public Transfer5 setTransferReference(Max35Text transferReference) {
+		this.transferReference = Objects.requireNonNull(transferReference);
+		return this;
 	}
 
-	@XmlElement(name = "ClntRef")
-	public Max35Text getClientReference() {
-		return clientReference;
+	public Optional<Max35Text> getClientReference() {
+		return clientReference == null ? Optional.empty() : Optional.of(clientReference);
 	}
 
-	public void setClientReference(Max35Text clientReference) {
+	public Transfer5 setClientReference(Max35Text clientReference) {
 		this.clientReference = clientReference;
+		return this;
 	}
 
-	@XmlElement(name = "TrfDt")
-	public DateFormat1Choice getTransferDate() {
-		return transferDate;
+	public Optional<DateFormat1Choice> getTransferDate() {
+		return transferDate == null ? Optional.empty() : Optional.of(transferDate);
 	}
 
-	public void setTransferDate(DateFormat1Choice transferDate) {
+	public Transfer5 setTransferDate(DateFormat1Choice transferDate) {
 		this.transferDate = transferDate;
+		return this;
 	}
 
-	@XmlElement(name = "TtlUnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
 		return totalUnitsNumber;
 	}
 
-	public void setTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsNumber) {
-		this.totalUnitsNumber = totalUnitsNumber;
+	public Transfer5 setTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsNumber) {
+		this.totalUnitsNumber = Objects.requireNonNull(totalUnitsNumber);
+		return this;
 	}
 
-	@XmlElement(name = "OwnAcctTrfInd")
-	public YesNoIndicator getOwnAccountTransferIndicator() {
-		return ownAccountTransferIndicator;
+	public Optional<YesNoIndicator> getOwnAccountTransferIndicator() {
+		return ownAccountTransferIndicator == null ? Optional.empty() : Optional.of(ownAccountTransferIndicator);
 	}
 
-	public void setOwnAccountTransferIndicator(YesNoIndicator ownAccountTransferIndicator) {
+	public Transfer5 setOwnAccountTransferIndicator(YesNoIndicator ownAccountTransferIndicator) {
 		this.ownAccountTransferIndicator = ownAccountTransferIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "NonStdSttlmInf")
-	public Max350Text getNonStandardSettlementInformation() {
-		return nonStandardSettlementInformation;
+	public Optional<Max350Text> getNonStandardSettlementInformation() {
+		return nonStandardSettlementInformation == null ? Optional.empty() : Optional.of(nonStandardSettlementInformation);
 	}
 
-	public void setNonStandardSettlementInformation(Max350Text nonStandardSettlementInformation) {
+	public Transfer5 setNonStandardSettlementInformation(Max350Text nonStandardSettlementInformation) {
 		this.nonStandardSettlementInformation = nonStandardSettlementInformation;
+		return this;
 	}
 }

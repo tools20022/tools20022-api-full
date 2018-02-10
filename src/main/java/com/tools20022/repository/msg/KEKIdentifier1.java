@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Min5Max16Binary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "KEKIdentifier1", propOrder = {"keyIdentification", "keyVersion", "derivationIdentification"})
 public class KEKIdentifier1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "KeyId", required = true)
 	protected Max140Text keyIdentification;
 	/**
-	 * Identification of the cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +119,7 @@ public class KEKIdentifier1 {
 	 */
 	public static final MMMessageAttribute mmKeyIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> KEKIdentifier1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier1.mmObject();
 			isDerived = false;
 			xmlTag = "KeyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +131,11 @@ public class KEKIdentifier1 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "KeyVrsn", required = true)
 	protected Exact10Text keyVersion;
 	/**
-	 * Version of the cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +169,7 @@ public class KEKIdentifier1 {
 	 */
 	public static final MMMessageAttribute mmKeyVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> KEKIdentifier1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier1.mmObject();
 			isDerived = false;
 			xmlTag = "KeyVrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,11 +181,11 @@ public class KEKIdentifier1 {
 			simpleType_lazy = () -> Exact10Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DerivtnId")
 	protected Min5Max16Binary derivationIdentification;
 	/**
-	 * Identification used for derivation of a unique key from a master key
-	 * provided for the data protection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,7 +222,7 @@ public class KEKIdentifier1 {
 	 */
 	public static final MMMessageAttribute mmDerivationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> KEKIdentifier1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier1.mmObject();
 			isDerived = false;
 			xmlTag = "DerivtnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,8 +238,9 @@ public class KEKIdentifier1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(KEKIdentifier1.mmKeyIdentification, KEKIdentifier1.mmKeyVersion, KEKIdentifier1.mmDerivationIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KEKIdentifier1.mmKeyIdentification, com.tools20022.repository.msg.KEKIdentifier1.mmKeyVersion,
+						com.tools20022.repository.msg.KEKIdentifier1.mmDerivationIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "KEKIdentifier1";
 				definition = "Identification of a key encryption key (KEK), using previously distributed symmetric key.";
@@ -245,30 +250,30 @@ public class KEKIdentifier1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "KeyId", required = true)
 	public Max140Text getKeyIdentification() {
 		return keyIdentification;
 	}
 
-	public void setKeyIdentification(Max140Text keyIdentification) {
-		this.keyIdentification = keyIdentification;
+	public KEKIdentifier1 setKeyIdentification(Max140Text keyIdentification) {
+		this.keyIdentification = Objects.requireNonNull(keyIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "KeyVrsn", required = true)
 	public Exact10Text getKeyVersion() {
 		return keyVersion;
 	}
 
-	public void setKeyVersion(Exact10Text keyVersion) {
-		this.keyVersion = keyVersion;
+	public KEKIdentifier1 setKeyVersion(Exact10Text keyVersion) {
+		this.keyVersion = Objects.requireNonNull(keyVersion);
+		return this;
 	}
 
-	@XmlElement(name = "DerivtnId")
-	public Min5Max16Binary getDerivationIdentification() {
-		return derivationIdentification;
+	public Optional<Min5Max16Binary> getDerivationIdentification() {
+		return derivationIdentification == null ? Optional.empty() : Optional.of(derivationIdentification);
 	}
 
-	public void setDerivationIdentification(Min5Max16Binary derivationIdentification) {
+	public KEKIdentifier1 setDerivationIdentification(Min5Max16Binary derivationIdentification) {
 		this.derivationIdentification = derivationIdentification;
+		return this;
 	}
 }

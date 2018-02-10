@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DeliveryReceiptTypeCode;
+import com.tools20022.repository.codeset.DeliveryReceiptType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies how the transaction is to be settled.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptTypeCode
- * DeliveryReceiptTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType2Code#mmSeparateSettlement
- * DeliveryReceiptType2Code.mmSeparateSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType2Code#SeparateSettlement
+ * DeliveryReceiptType2Code.SeparateSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType2Code#mmAgainstPaymentSettlement
- * DeliveryReceiptType2Code.mmAgainstPaymentSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptType2Code#AgainstPaymentSettlement
+ * DeliveryReceiptType2Code.AgainstPaymentSettlement}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DeliveryReceiptTypeCode
+ * DeliveryReceiptTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies how the transaction is to be settled."</li>
  * </ul>
  */
-public class DeliveryReceiptType2Code extends DeliveryReceiptTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DeliveryReceiptType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class DeliveryReceiptType2Code extends DeliveryReceiptTypeCode {
 	 * name} = "SeparateSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSeparateSettlement = new MMCode() {
+	public static final DeliveryReceiptType2Code SeparateSettlement = new DeliveryReceiptType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SeparateSettlement";
-			owner_lazy = () -> DeliveryReceiptType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DeliveryReceiptType2Code.mmObject();
+			codeName = DeliveryReceiptTypeCode.SeparateSettlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class DeliveryReceiptType2Code extends DeliveryReceiptTypeCode {
 	 * name} = "AgainstPaymentSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgainstPaymentSettlement = new MMCode() {
+	public static final DeliveryReceiptType2Code AgainstPaymentSettlement = new DeliveryReceiptType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgainstPaymentSettlement";
-			owner_lazy = () -> DeliveryReceiptType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DeliveryReceiptType2Code.mmObject();
+			codeName = DeliveryReceiptTypeCode.AgainstPaymentSettlement.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DeliveryReceiptType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DeliveryReceiptType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FREE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliveryReceiptType2Code";
 				definition = "Specifies how the transaction is to be settled.";
-				code_lazy = () -> Arrays.asList(DeliveryReceiptType2Code.mmSeparateSettlement, DeliveryReceiptType2Code.mmAgainstPaymentSettlement);
 				trace_lazy = () -> DeliveryReceiptTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryReceiptType2Code.SeparateSettlement, com.tools20022.repository.codeset.DeliveryReceiptType2Code.AgainstPaymentSettlement);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SeparateSettlement.getCodeName().get(), SeparateSettlement);
+		codesByName.put(AgainstPaymentSettlement.getCodeName().get(), AgainstPaymentSettlement);
+	}
+
+	public static DeliveryReceiptType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DeliveryReceiptType2Code[] values() {
+		DeliveryReceiptType2Code[] values = new DeliveryReceiptType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DeliveryReceiptType2Code> {
+		@Override
+		public DeliveryReceiptType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DeliveryReceiptType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -26,6 +26,8 @@ import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Report information about securities reference data."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesAuditTrailReport1", propOrder = {"securitiesAuditTrailOrError", "datePeriod", "financialInstrumentIdentification"})
 public class SecuritiesAuditTrailReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesAudtTrlOrErr", required = true)
 	protected AuditTrailOrBusinessError1Choice securitiesAuditTrailOrError;
 	/**
-	 * Identifies the returned securities reference data or error information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -103,7 +106,7 @@ public class SecuritiesAuditTrailReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAuditTrailOrError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAuditTrailReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAuditTrailReport1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAudtTrlOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +118,11 @@ public class SecuritiesAuditTrailReport1 {
 			type_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DtPrd")
 	protected DateSearchChoice datePeriod;
 	/**
-	 * Period in dates for which the audit trail is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +150,7 @@ public class SecuritiesAuditTrailReport1 {
 	 */
 	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAuditTrailReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAuditTrailReport1.mmObject();
 			isDerived = false;
 			xmlTag = "DtPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,10 +161,11 @@ public class SecuritiesAuditTrailReport1 {
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmId", required = true)
 	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
-	 * Identifies the securities for which the audit trail is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,7 +194,7 @@ public class SecuritiesAuditTrailReport1 {
 	 */
 	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAuditTrailReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAuditTrailReport1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,8 +209,9 @@ public class SecuritiesAuditTrailReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesAuditTrailReport1.mmSecuritiesAuditTrailOrError, SecuritiesAuditTrailReport1.mmDatePeriod, SecuritiesAuditTrailReport1.mmFinancialInstrumentIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAuditTrailReport1.mmSecuritiesAuditTrailOrError, com.tools20022.repository.msg.SecuritiesAuditTrailReport1.mmDatePeriod,
+						com.tools20022.repository.msg.SecuritiesAuditTrailReport1.mmFinancialInstrumentIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAuditTrailReport1";
 				definition = "Report information about securities reference data.";
@@ -214,30 +220,30 @@ public class SecuritiesAuditTrailReport1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesAudtTrlOrErr", required = true)
 	public AuditTrailOrBusinessError1Choice getSecuritiesAuditTrailOrError() {
 		return securitiesAuditTrailOrError;
 	}
 
-	public void setSecuritiesAuditTrailOrError(AuditTrailOrBusinessError1Choice securitiesAuditTrailOrError) {
-		this.securitiesAuditTrailOrError = securitiesAuditTrailOrError;
+	public SecuritiesAuditTrailReport1 setSecuritiesAuditTrailOrError(AuditTrailOrBusinessError1Choice securitiesAuditTrailOrError) {
+		this.securitiesAuditTrailOrError = Objects.requireNonNull(securitiesAuditTrailOrError);
+		return this;
 	}
 
-	@XmlElement(name = "DtPrd")
-	public DateSearchChoice getDatePeriod() {
-		return datePeriod;
+	public Optional<DateSearchChoice> getDatePeriod() {
+		return datePeriod == null ? Optional.empty() : Optional.of(datePeriod);
 	}
 
-	public void setDatePeriod(DateSearchChoice datePeriod) {
+	public SecuritiesAuditTrailReport1 setDatePeriod(DateSearchChoice datePeriod) {
 		this.datePeriod = datePeriod;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
 
-	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
-		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	public SecuritiesAuditTrailReport1 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
+		return this;
 	}
 }

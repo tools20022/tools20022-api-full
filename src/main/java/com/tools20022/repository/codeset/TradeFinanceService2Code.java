@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TradeFinanceServiceCode;
+import com.tools20022.repository.codeset.TradeFinanceService2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the level of service offered.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TradeFinanceServiceCode
- * TradeFinanceServiceCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeFinanceService2Code#mmLevel1Services
- * TradeFinanceService2Code.mmLevel1Services}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeFinanceService2Code#Level1Services
+ * TradeFinanceService2Code.Level1Services}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeFinanceService2Code#mmLevel2Services
- * TradeFinanceService2Code.mmLevel2Services}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeFinanceService2Code#Level2Services
+ * TradeFinanceService2Code.Level2Services}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeFinanceService2Code#mmLevel3Services
- * TradeFinanceService2Code.mmLevel3Services}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeFinanceService2Code#Level3Services
+ * TradeFinanceService2Code.Level3Services}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TradeFinanceServiceCode
+ * TradeFinanceServiceCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the level of service offered."</li>
  * </ul>
  */
-public class TradeFinanceService2Code extends TradeFinanceServiceCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TradeFinanceService2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class TradeFinanceService2Code extends TradeFinanceServiceCode {
 	 * name} = "Level1Services"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLevel1Services = new MMCode() {
+	public static final TradeFinanceService2Code Level1Services = new TradeFinanceService2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level1Services";
-			owner_lazy = () -> TradeFinanceService2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeFinanceService2Code.mmObject();
+			codeName = TradeFinanceServiceCode.Level1Services.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class TradeFinanceService2Code extends TradeFinanceServiceCode {
 	 * name} = "Level2Services"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLevel2Services = new MMCode() {
+	public static final TradeFinanceService2Code Level2Services = new TradeFinanceService2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level2Services";
-			owner_lazy = () -> TradeFinanceService2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeFinanceService2Code.mmObject();
+			codeName = TradeFinanceServiceCode.Level2Services.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class TradeFinanceService2Code extends TradeFinanceServiceCode {
 	 * name} = "Level3Services"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLevel3Services = new MMCode() {
+	public static final TradeFinanceService2Code Level3Services = new TradeFinanceService2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level3Services";
-			owner_lazy = () -> TradeFinanceService2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeFinanceService2Code.mmObject();
+			codeName = TradeFinanceServiceCode.Level3Services.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TradeFinanceService2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TradeFinanceService2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("LEV1");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeFinanceService2Code";
 				definition = "Specifies the level of service offered.";
-				code_lazy = () -> Arrays.asList(TradeFinanceService2Code.mmLevel1Services, TradeFinanceService2Code.mmLevel2Services, TradeFinanceService2Code.mmLevel3Services);
 				trace_lazy = () -> TradeFinanceServiceCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeFinanceService2Code.Level1Services, com.tools20022.repository.codeset.TradeFinanceService2Code.Level2Services,
+						com.tools20022.repository.codeset.TradeFinanceService2Code.Level3Services);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Level1Services.getCodeName().get(), Level1Services);
+		codesByName.put(Level2Services.getCodeName().get(), Level2Services);
+		codesByName.put(Level3Services.getCodeName().get(), Level3Services);
+	}
+
+	public static TradeFinanceService2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TradeFinanceService2Code[] values() {
+		TradeFinanceService2Code[] values = new TradeFinanceService2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TradeFinanceService2Code> {
+		@Override
+		public TradeFinanceService2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TradeFinanceService2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

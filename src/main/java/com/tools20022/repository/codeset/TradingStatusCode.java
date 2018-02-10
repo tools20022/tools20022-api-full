@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.TradingStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the trading status.
@@ -31,18 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TradingStatusCode#mmHalted
- * TradingStatusCode.mmHalted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradingStatusCode#Halted
+ * TradingStatusCode.Halted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingStatusCode#mmSuspended
- * TradingStatusCode.mmSuspended}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingStatusCode#Suspended
+ * TradingStatusCode.Suspended}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -58,7 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the trading status."</li>
  * </ul>
  */
-public class TradingStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TradingStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,12 +88,12 @@ public class TradingStatusCode {
 	 * definition} = "The trading status is halted."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHalted = new MMCode() {
+	public static final TradingStatusCode Halted = new TradingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Halted";
 			definition = "The trading status is halted.";
-			owner_lazy = () -> TradingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingStatusCode.mmObject();
 			codeName = "HALT";
 		}
 	};
@@ -112,27 +118,57 @@ public class TradingStatusCode {
 	 * definition} = "The trading status is suspended."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuspended = new MMCode() {
+	public static final TradingStatusCode Suspended = new TradingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Suspended";
 			definition = "The trading status is suspended.";
-			owner_lazy = () -> TradingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingStatusCode.mmObject();
 			codeName = "SUSP";
 		}
 	};
+	final static private LinkedHashMap<String, TradingStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TradingStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("HALT");
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "TradingStatusCode";
 				definition = "Specifies the trading status.";
-				code_lazy = () -> Arrays.asList(TradingStatusCode.mmHalted, TradingStatusCode.mmSuspended);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingStatusCode.Halted, com.tools20022.repository.codeset.TradingStatusCode.Suspended);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Halted.getCodeName().get(), Halted);
+		codesByName.put(Suspended.getCodeName().get(), Suspended);
+	}
+
+	public static TradingStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TradingStatusCode[] values() {
+		TradingStatusCode[] values = new TradingStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TradingStatusCode> {
+		@Override
+		public TradingStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TradingStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

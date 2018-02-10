@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.CashSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +62,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementMethodAgentRule#forSettlementInformation14
+ * ConstraintSettlementMethodAgentRule.forSettlementInformation14}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementMethodClearingRule#forSettlementInformation14
+ * ConstraintSettlementMethodClearingRule.forSettlementInformation14}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementInformation14", propOrder = {"settlementMethod", "settlementAccount", "clearingSystem"})
 public class SettlementInformation14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SttlmMtd", required = true)
 	protected SettlementMethod2Code settlementMethod;
 	/**
-	 * Method used to settle the (batch of) payment instructions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +131,7 @@ public class SettlementInformation14 {
 	public static final MMMessageAttribute mmSettlementMethod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmSettlementMethod;
-			componentContext_lazy = () -> SettlementInformation14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInformation14.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,11 +142,11 @@ public class SettlementInformation14 {
 			simpleType_lazy = () -> SettlementMethod2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmAcct")
 	protected CashAccount16 settlementAccount;
 	/**
-	 * A specific purpose account used to post debit and credit entries as a
-	 * result of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -166,7 +180,7 @@ public class SettlementInformation14 {
 	public static final MMMessageAssociationEnd mmSettlementAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmSettlementAccount;
-			componentContext_lazy = () -> SettlementInformation14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInformation14.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,11 +192,11 @@ public class SettlementInformation14 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
 		}
 	};
+	@XmlElement(name = "ClrSys")
 	protected ClearingSystemIdentification3Choice clearingSystem;
 	/**
-	 * Specification of a pre-agreed offering between clearing agents or the
-	 * channel through which the payment instruction is processed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -217,7 +231,7 @@ public class SettlementInformation14 {
 	public static final MMMessageAssociationEnd mmClearingSystem = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashClearingSystem.mmObject();
-			componentContext_lazy = () -> SettlementInformation14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInformation14.mmObject();
 			isDerived = false;
 			xmlTag = "ClrSys";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,9 +247,12 @@ public class SettlementInformation14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementInformation14.mmSettlementMethod, SettlementInformation14.mmSettlementAccount, SettlementInformation14.mmClearingSystem);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInformation14.mmSettlementMethod, com.tools20022.repository.msg.SettlementInformation14.mmSettlementAccount,
+						com.tools20022.repository.msg.SettlementInformation14.mmClearingSystem);
 				trace_lazy = () -> CashSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementMethodAgentRule.forSettlementInformation14,
+						com.tools20022.repository.constraints.ConstraintSettlementMethodClearingRule.forSettlementInformation14);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementInformation14";
 				definition = "Set of elements used to provide information on the settlement of the instruction.";
@@ -244,30 +261,30 @@ public class SettlementInformation14 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SttlmMtd", required = true)
 	public SettlementMethod2Code getSettlementMethod() {
 		return settlementMethod;
 	}
 
-	public void setSettlementMethod(SettlementMethod2Code settlementMethod) {
-		this.settlementMethod = settlementMethod;
+	public SettlementInformation14 setSettlementMethod(SettlementMethod2Code settlementMethod) {
+		this.settlementMethod = Objects.requireNonNull(settlementMethod);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmAcct")
-	public CashAccount16 getSettlementAccount() {
-		return settlementAccount;
+	public Optional<CashAccount16> getSettlementAccount() {
+		return settlementAccount == null ? Optional.empty() : Optional.of(settlementAccount);
 	}
 
-	public void setSettlementAccount(com.tools20022.repository.msg.CashAccount16 settlementAccount) {
+	public SettlementInformation14 setSettlementAccount(com.tools20022.repository.msg.CashAccount16 settlementAccount) {
 		this.settlementAccount = settlementAccount;
+		return this;
 	}
 
-	@XmlElement(name = "ClrSys")
-	public ClearingSystemIdentification3Choice getClearingSystem() {
-		return clearingSystem;
+	public Optional<ClearingSystemIdentification3Choice> getClearingSystem() {
+		return clearingSystem == null ? Optional.empty() : Optional.of(clearingSystem);
 	}
 
-	public void setClearingSystem(ClearingSystemIdentification3Choice clearingSystem) {
+	public SettlementInformation14 setClearingSystem(ClearingSystemIdentification3Choice clearingSystem) {
 		this.clearingSystem = clearingSystem;
+		return this;
 	}
 }

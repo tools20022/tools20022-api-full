@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.InvoiceFinancingStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Information about the business status of a cancellation request message."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CancellationStatusInformation1", propOrder = {"status", "statusReason", "additionalStatusReasonInformation"})
 public class CancellationStatusInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts", required = true)
 	protected CancellationStatus4Code status;
 	/**
-	 * Information on the business status of the cancellation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +115,7 @@ public class CancellationStatusInformation1 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingStatus.mmCancellationStatus;
-			componentContext_lazy = () -> CancellationStatusInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +126,11 @@ public class CancellationStatusInformation1 {
 			simpleType_lazy = () -> CancellationStatus4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StsRsn")
 	protected StatusReason4Choice statusReason;
 	/**
-	 * The reason for the cancellation status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +164,7 @@ public class CancellationStatusInformation1 {
 	public static final MMMessageAttribute mmStatusReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingStatus.mmCancellationStatusReason;
-			componentContext_lazy = () -> CancellationStatusInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +175,11 @@ public class CancellationStatusInformation1 {
 			complexType_lazy = () -> StatusReason4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlStsRsnInf")
 	protected List<Max105Text> additionalStatusReasonInformation;
 	/**
-	 * Further details on the cancellation status reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,7 +212,7 @@ public class CancellationStatusInformation1 {
 	public static final MMMessageAttribute mmAdditionalStatusReasonInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDescription;
-			componentContext_lazy = () -> CancellationStatusInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlStsRsnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,9 +226,10 @@ public class CancellationStatusInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CancellationStatusInformation1.mmStatus, CancellationStatusInformation1.mmStatusReason, CancellationStatusInformation1.mmAdditionalStatusReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationStatusInformation1.mmStatus, com.tools20022.repository.msg.CancellationStatusInformation1.mmStatusReason,
+						com.tools20022.repository.msg.CancellationStatusInformation1.mmAdditionalStatusReasonInformation);
 				trace_lazy = () -> InvoiceFinancingStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationStatusInformation1";
 				definition = "Information about the business status of a cancellation request message.";
@@ -235,30 +238,30 @@ public class CancellationStatusInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public CancellationStatus4Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(CancellationStatus4Code status) {
-		this.status = status;
+	public CancellationStatusInformation1 setStatus(CancellationStatus4Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "StsRsn")
-	public StatusReason4Choice getStatusReason() {
-		return statusReason;
+	public Optional<StatusReason4Choice> getStatusReason() {
+		return statusReason == null ? Optional.empty() : Optional.of(statusReason);
 	}
 
-	public void setStatusReason(StatusReason4Choice statusReason) {
+	public CancellationStatusInformation1 setStatusReason(StatusReason4Choice statusReason) {
 		this.statusReason = statusReason;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlStsRsnInf")
 	public List<Max105Text> getAdditionalStatusReasonInformation() {
-		return additionalStatusReasonInformation;
+		return additionalStatusReasonInformation == null ? additionalStatusReasonInformation = new ArrayList<>() : additionalStatusReasonInformation;
 	}
 
-	public void setAdditionalStatusReasonInformation(List<Max105Text> additionalStatusReasonInformation) {
-		this.additionalStatusReasonInformation = additionalStatusReasonInformation;
+	public CancellationStatusInformation1 setAdditionalStatusReasonInformation(List<Max105Text> additionalStatusReasonInformation) {
+		this.additionalStatusReasonInformation = Objects.requireNonNull(additionalStatusReasonInformation);
+		return this;
 	}
 }

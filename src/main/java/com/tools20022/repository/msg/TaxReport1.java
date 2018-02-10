@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.auth.InvoiceTaxReportV01;
 import com.tools20022.repository.entity.BuyerRole;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -77,8 +76,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,15 +97,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TaxReport1", propOrder = {"taxReportHeader", "seller", "buyer", "tradeSettlement", "otherParty", "additionalInformation", "additionalReference", "supplementaryData"})
 public class TaxReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TaxRptHdr", required = true)
 	protected GroupHeader69 taxReportHeader;
 	/**
-	 * Basic report details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -131,7 +131,7 @@ public class TaxReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmTaxReportHeader = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TaxReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReport1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxRptHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,11 +143,11 @@ public class TaxReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 		}
 	};
+	@XmlElement(name = "Sellr", required = true)
 	protected PartyIdentification72 seller;
 	/**
-	 * Tax reporting agent, for example seller.<br>
-	 * Responsible to issue tax reporting to tax authority.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -174,7 +174,7 @@ public class TaxReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TaxReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReport1.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,10 +186,11 @@ public class TaxReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification72.mmObject();
 		}
 	};
+	@XmlElement(name = "Buyr")
 	protected PartyIdentification72 buyer;
 	/**
-	 * Specifies the buyer of goods/service reported in this message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -220,7 +221,7 @@ public class TaxReport1 {
 	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> BuyerRole.mmObject();
-			componentContext_lazy = () -> TaxReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReport1.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,11 +233,11 @@ public class TaxReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification72.mmObject();
 		}
 	};
+	@XmlElement(name = "TradSttlm", required = true)
 	protected TradeSettlement2 tradeSettlement;
 	/**
-	 * Contains the details of the business transactions reported in the
-	 * message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -263,7 +264,7 @@ public class TaxReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmTradeSettlement = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TaxReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReport1.mmObject();
 			isDerived = false;
 			xmlTag = "TradSttlm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -275,10 +276,11 @@ public class TaxReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.TradeSettlement2.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrPty")
 	protected List<com.tools20022.repository.msg.PartyIdentification72> otherParty;
 	/**
-	 * Reserved for parties that may be required by a specific tax authority.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -304,7 +306,7 @@ public class TaxReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmOtherParty = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TaxReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReport1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -315,10 +317,11 @@ public class TaxReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification72.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected List<com.tools20022.repository.msg.AdditionalInformation1> additionalInformation;
 	/**
-	 * Additional reference like site key or identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -343,7 +346,7 @@ public class TaxReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TaxReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReport1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -354,11 +357,11 @@ public class TaxReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.AdditionalInformation1.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRef")
 	protected List<com.tools20022.repository.msg.DocumentGeneralInformation2> additionalReference;
 	/**
-	 * Structure to deliver link to external attachment or deliver base64-coded
-	 * attachment inside message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -386,7 +389,7 @@ public class TaxReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TaxReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReport1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -397,11 +400,11 @@ public class TaxReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmObject();
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -428,7 +431,7 @@ public class TaxReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TaxReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReport1.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -443,11 +446,12 @@ public class TaxReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TaxReport1.mmTaxReportHeader, TaxReport1.mmSeller, TaxReport1.mmBuyer, TaxReport1.mmTradeSettlement, TaxReport1.mmOtherParty, TaxReport1.mmAdditionalInformation,
-						TaxReport1.mmAdditionalReference, TaxReport1.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxReport1.mmTaxReportHeader, com.tools20022.repository.msg.TaxReport1.mmSeller, com.tools20022.repository.msg.TaxReport1.mmBuyer,
+						com.tools20022.repository.msg.TaxReport1.mmTradeSettlement, com.tools20022.repository.msg.TaxReport1.mmOtherParty, com.tools20022.repository.msg.TaxReport1.mmAdditionalInformation,
+						com.tools20022.repository.msg.TaxReport1.mmAdditionalReference, com.tools20022.repository.msg.TaxReport1.mmSupplementaryData);
 				messageBuildingBlock_lazy = () -> Arrays.asList(InvoiceTaxReportV01.mmTaxReport);
 				trace_lazy = () -> BuyerRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxReport1";
 				definition = "Contains all needed party details for tax agency (sender of the TaxReport) and tax authority (receiver of the TaxReport) and the details of the reported sales transaction and calculated tax related that specific business transaction.";
@@ -457,75 +461,75 @@ public class TaxReport1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TaxRptHdr", required = true)
 	public GroupHeader69 getTaxReportHeader() {
 		return taxReportHeader;
 	}
 
-	public void setTaxReportHeader(com.tools20022.repository.msg.GroupHeader69 taxReportHeader) {
-		this.taxReportHeader = taxReportHeader;
+	public TaxReport1 setTaxReportHeader(com.tools20022.repository.msg.GroupHeader69 taxReportHeader) {
+		this.taxReportHeader = Objects.requireNonNull(taxReportHeader);
+		return this;
 	}
 
-	@XmlElement(name = "Sellr", required = true)
 	public PartyIdentification72 getSeller() {
 		return seller;
 	}
 
-	public void setSeller(com.tools20022.repository.msg.PartyIdentification72 seller) {
-		this.seller = seller;
+	public TaxReport1 setSeller(com.tools20022.repository.msg.PartyIdentification72 seller) {
+		this.seller = Objects.requireNonNull(seller);
+		return this;
 	}
 
-	@XmlElement(name = "Buyr")
-	public PartyIdentification72 getBuyer() {
-		return buyer;
+	public Optional<PartyIdentification72> getBuyer() {
+		return buyer == null ? Optional.empty() : Optional.of(buyer);
 	}
 
-	public void setBuyer(com.tools20022.repository.msg.PartyIdentification72 buyer) {
+	public TaxReport1 setBuyer(com.tools20022.repository.msg.PartyIdentification72 buyer) {
 		this.buyer = buyer;
+		return this;
 	}
 
-	@XmlElement(name = "TradSttlm", required = true)
 	public TradeSettlement2 getTradeSettlement() {
 		return tradeSettlement;
 	}
 
-	public void setTradeSettlement(com.tools20022.repository.msg.TradeSettlement2 tradeSettlement) {
-		this.tradeSettlement = tradeSettlement;
+	public TaxReport1 setTradeSettlement(com.tools20022.repository.msg.TradeSettlement2 tradeSettlement) {
+		this.tradeSettlement = Objects.requireNonNull(tradeSettlement);
+		return this;
 	}
 
-	@XmlElement(name = "OthrPty")
 	public List<PartyIdentification72> getOtherParty() {
-		return otherParty;
+		return otherParty == null ? otherParty = new ArrayList<>() : otherParty;
 	}
 
-	public void setOtherParty(List<com.tools20022.repository.msg.PartyIdentification72> otherParty) {
-		this.otherParty = otherParty;
+	public TaxReport1 setOtherParty(List<com.tools20022.repository.msg.PartyIdentification72> otherParty) {
+		this.otherParty = Objects.requireNonNull(otherParty);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
 	public List<AdditionalInformation1> getAdditionalInformation() {
-		return additionalInformation;
+		return additionalInformation == null ? additionalInformation = new ArrayList<>() : additionalInformation;
 	}
 
-	public void setAdditionalInformation(List<com.tools20022.repository.msg.AdditionalInformation1> additionalInformation) {
-		this.additionalInformation = additionalInformation;
+	public TaxReport1 setAdditionalInformation(List<com.tools20022.repository.msg.AdditionalInformation1> additionalInformation) {
+		this.additionalInformation = Objects.requireNonNull(additionalInformation);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRef")
 	public List<DocumentGeneralInformation2> getAdditionalReference() {
-		return additionalReference;
+		return additionalReference == null ? additionalReference = new ArrayList<>() : additionalReference;
 	}
 
-	public void setAdditionalReference(List<com.tools20022.repository.msg.DocumentGeneralInformation2> additionalReference) {
-		this.additionalReference = additionalReference;
+	public TaxReport1 setAdditionalReference(List<com.tools20022.repository.msg.DocumentGeneralInformation2> additionalReference) {
+		this.additionalReference = Objects.requireNonNull(additionalReference);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public TaxReport1 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 }

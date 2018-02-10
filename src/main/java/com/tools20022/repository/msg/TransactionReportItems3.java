@@ -26,9 +26,8 @@ import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -106,8 +105,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -120,18 +119,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionReportItems3", propOrder = {"transactionIdentification", "establishedBaselineIdentification", "transactionStatus", "userTransactionReference", "purchaseOrderReference", "buyer", "seller", "buyerBank",
 		"buyerBankCountry", "sellerBank", "sellerBankCountry", "obligorBank", "submittingBank", "outstandingAmount", "totalNetAmount", "pendingRequestForAction"})
 public class TransactionReportItems3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId", required = true)
 	protected Max35Text transactionIdentification;
 	/**
-	 * Unique identification assigned by the matching application to the
-	 * transaction. This identification is to be used in any communication
-	 * between the parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +158,7 @@ public class TransactionReportItems3 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionReportItems3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,11 +169,11 @@ public class TransactionReportItems3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "EstblishdBaselnId")
 	protected DocumentIdentification3 establishedBaselineIdentification;
 	/**
-	 * Unique identification assigned by the matching application to the
-	 * baseline when it is established.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -204,7 +202,7 @@ public class TransactionReportItems3 {
 	 */
 	public static final MMMessageAssociationEnd mmEstablishedBaselineIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionReportItems3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,10 +214,11 @@ public class TransactionReportItems3 {
 			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification3.mmObject();
 		}
 	};
+	@XmlElement(name = "TxSts", required = true)
 	protected TransactionStatus4 transactionStatus;
 	/**
-	 * Identifies the status of the transaction by means of a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -246,7 +245,7 @@ public class TransactionReportItems3 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionReportItems3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "TxSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,11 +257,11 @@ public class TransactionReportItems3 {
 			type_lazy = () -> com.tools20022.repository.msg.TransactionStatus4.mmObject();
 		}
 	};
+	@XmlElement(name = "UsrTxRef")
 	protected List<com.tools20022.repository.msg.DocumentIdentification5> userTransactionReference;
 	/**
-	 * Reference to the transaction for each financial institution which is a
-	 * party to the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -291,7 +290,7 @@ public class TransactionReportItems3 {
 	 */
 	public static final MMMessageAssociationEnd mmUserTransactionReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionReportItems3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "UsrTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -303,10 +302,11 @@ public class TransactionReportItems3 {
 			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "PurchsOrdrRef", required = true)
 	protected DocumentIdentification7 purchaseOrderReference;
 	/**
-	 * Reference to the purchase order of the underlying transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -334,7 +334,7 @@ public class TransactionReportItems3 {
 	 */
 	public static final MMMessageAssociationEnd mmPurchaseOrderReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionReportItems3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "PurchsOrdrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -346,10 +346,11 @@ public class TransactionReportItems3 {
 			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();
 		}
 	};
+	@XmlElement(name = "Buyr", required = true)
 	protected PartyIdentification26 buyer;
 	/**
-	 * Party that buys goods or services, or a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -376,7 +377,7 @@ public class TransactionReportItems3 {
 	 */
 	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionReportItems3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -388,10 +389,11 @@ public class TransactionReportItems3 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
 		}
 	};
+	@XmlElement(name = "Sellr", required = true)
 	protected PartyIdentification26 seller;
 	/**
-	 * Party that sells goods or services, or a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -418,7 +420,7 @@ public class TransactionReportItems3 {
 	 */
 	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionReportItems3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -430,10 +432,11 @@ public class TransactionReportItems3 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
 		}
 	};
+	@XmlElement(name = "BuyrBk", required = true)
 	protected BICIdentification1 buyerBank;
 	/**
-	 * Financial institution of the buyer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -459,7 +462,7 @@ public class TransactionReportItems3 {
 	 */
 	public static final MMMessageAssociationEnd mmBuyerBank = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionReportItems3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -471,10 +474,11 @@ public class TransactionReportItems3 {
 			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "BuyrBkCtry", required = true)
 	protected CountryCode buyerBankCountry;
 	/**
-	 * Country of the buyer bank.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -501,7 +505,7 @@ public class TransactionReportItems3 {
 	 */
 	public static final MMMessageAttribute mmBuyerBankCountry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionReportItems3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrBkCtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -512,10 +516,11 @@ public class TransactionReportItems3 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "SellrBk", required = true)
 	protected BICIdentification1 sellerBank;
 	/**
-	 * Financial institution of the seller.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -541,7 +546,7 @@ public class TransactionReportItems3 {
 	 */
 	public static final MMMessageAssociationEnd mmSellerBank = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionReportItems3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "SellrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -553,10 +558,11 @@ public class TransactionReportItems3 {
 			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "SellrBkCtry", required = true)
 	protected CountryCode sellerBankCountry;
 	/**
-	 * Country of the seller bank.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -583,7 +589,7 @@ public class TransactionReportItems3 {
 	 */
 	public static final MMMessageAttribute mmSellerBankCountry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionReportItems3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "SellrBkCtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -594,10 +600,11 @@ public class TransactionReportItems3 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "OblgrBk")
 	protected List<com.tools20022.repository.msg.BICIdentification1> obligorBank;
 	/**
-	 * Financial institution that is an obligor bank to the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -624,7 +631,7 @@ public class TransactionReportItems3 {
 	 */
 	public static final MMMessageAssociationEnd mmObligorBank = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionReportItems3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "OblgrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -635,11 +642,11 @@ public class TransactionReportItems3 {
 			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "SubmitgBk")
 	protected List<com.tools20022.repository.msg.BICIdentification1> submittingBank;
 	/**
-	 * Financial institution that is a data set submitting bank to the
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -667,7 +674,7 @@ public class TransactionReportItems3 {
 	 */
 	public static final MMMessageAssociationEnd mmSubmittingBank = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionReportItems3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "SubmitgBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -678,10 +685,11 @@ public class TransactionReportItems3 {
 			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "OutsdngAmt", required = true)
 	protected CurrencyAndAmount outstandingAmount;
 	/**
-	 * Amount of baseline not yet utilised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -709,7 +717,7 @@ public class TransactionReportItems3 {
 	 */
 	public static final MMMessageAttribute mmOutstandingAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionReportItems3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "OutsdngAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -720,10 +728,11 @@ public class TransactionReportItems3 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNetAmt", required = true)
 	protected CurrencyAndAmount totalNetAmount;
 	/**
-	 * Total net amount as specified in the baseline.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -751,7 +760,7 @@ public class TransactionReportItems3 {
 	 */
 	public static final MMMessageAttribute mmTotalNetAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionReportItems3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNetAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -762,10 +771,11 @@ public class TransactionReportItems3 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "PdgReqForActn")
 	protected List<com.tools20022.repository.msg.PendingActivity2> pendingRequestForAction;
 	/**
-	 * Next processing step required.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -791,7 +801,7 @@ public class TransactionReportItems3 {
 	 */
 	public static final MMMessageAssociationEnd mmPendingRequestForAction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionReportItems3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportItems3.mmObject();
 			isDerived = false;
 			xmlTag = "PdgReqForActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -806,12 +816,15 @@ public class TransactionReportItems3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionReportItems3.mmTransactionIdentification, TransactionReportItems3.mmEstablishedBaselineIdentification, TransactionReportItems3.mmTransactionStatus,
-						TransactionReportItems3.mmUserTransactionReference, TransactionReportItems3.mmPurchaseOrderReference, TransactionReportItems3.mmBuyer, TransactionReportItems3.mmSeller, TransactionReportItems3.mmBuyerBank,
-						TransactionReportItems3.mmBuyerBankCountry, TransactionReportItems3.mmSellerBank, TransactionReportItems3.mmSellerBankCountry, TransactionReportItems3.mmObligorBank, TransactionReportItems3.mmSubmittingBank,
-						TransactionReportItems3.mmOutstandingAmount, TransactionReportItems3.mmTotalNetAmount, TransactionReportItems3.mmPendingRequestForAction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReportItems3.mmTransactionIdentification, com.tools20022.repository.msg.TransactionReportItems3.mmEstablishedBaselineIdentification,
+						com.tools20022.repository.msg.TransactionReportItems3.mmTransactionStatus, com.tools20022.repository.msg.TransactionReportItems3.mmUserTransactionReference,
+						com.tools20022.repository.msg.TransactionReportItems3.mmPurchaseOrderReference, com.tools20022.repository.msg.TransactionReportItems3.mmBuyer, com.tools20022.repository.msg.TransactionReportItems3.mmSeller,
+						com.tools20022.repository.msg.TransactionReportItems3.mmBuyerBank, com.tools20022.repository.msg.TransactionReportItems3.mmBuyerBankCountry, com.tools20022.repository.msg.TransactionReportItems3.mmSellerBank,
+						com.tools20022.repository.msg.TransactionReportItems3.mmSellerBankCountry, com.tools20022.repository.msg.TransactionReportItems3.mmObligorBank, com.tools20022.repository.msg.TransactionReportItems3.mmSubmittingBank,
+						com.tools20022.repository.msg.TransactionReportItems3.mmOutstandingAmount, com.tools20022.repository.msg.TransactionReportItems3.mmTotalNetAmount,
+						com.tools20022.repository.msg.TransactionReportItems3.mmPendingRequestForAction);
 				messageBuildingBlock_lazy = () -> Arrays.asList(TransactionReportV03.mmReportedItems);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionReportItems3";
 				definition = "Detailed description of the items that correspond to the parameters set in a request and for which a report has been generated.";
@@ -820,147 +833,147 @@ public class TransactionReportItems3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public TransactionReportItems3 setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "EstblishdBaselnId")
-	public DocumentIdentification3 getEstablishedBaselineIdentification() {
-		return establishedBaselineIdentification;
+	public Optional<DocumentIdentification3> getEstablishedBaselineIdentification() {
+		return establishedBaselineIdentification == null ? Optional.empty() : Optional.of(establishedBaselineIdentification);
 	}
 
-	public void setEstablishedBaselineIdentification(com.tools20022.repository.msg.DocumentIdentification3 establishedBaselineIdentification) {
+	public TransactionReportItems3 setEstablishedBaselineIdentification(com.tools20022.repository.msg.DocumentIdentification3 establishedBaselineIdentification) {
 		this.establishedBaselineIdentification = establishedBaselineIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TxSts", required = true)
 	public TransactionStatus4 getTransactionStatus() {
 		return transactionStatus;
 	}
 
-	public void setTransactionStatus(com.tools20022.repository.msg.TransactionStatus4 transactionStatus) {
-		this.transactionStatus = transactionStatus;
+	public TransactionReportItems3 setTransactionStatus(com.tools20022.repository.msg.TransactionStatus4 transactionStatus) {
+		this.transactionStatus = Objects.requireNonNull(transactionStatus);
+		return this;
 	}
 
-	@XmlElement(name = "UsrTxRef")
 	public List<DocumentIdentification5> getUserTransactionReference() {
-		return userTransactionReference;
+		return userTransactionReference == null ? userTransactionReference = new ArrayList<>() : userTransactionReference;
 	}
 
-	public void setUserTransactionReference(List<com.tools20022.repository.msg.DocumentIdentification5> userTransactionReference) {
-		this.userTransactionReference = userTransactionReference;
+	public TransactionReportItems3 setUserTransactionReference(List<com.tools20022.repository.msg.DocumentIdentification5> userTransactionReference) {
+		this.userTransactionReference = Objects.requireNonNull(userTransactionReference);
+		return this;
 	}
 
-	@XmlElement(name = "PurchsOrdrRef", required = true)
 	public DocumentIdentification7 getPurchaseOrderReference() {
 		return purchaseOrderReference;
 	}
 
-	public void setPurchaseOrderReference(com.tools20022.repository.msg.DocumentIdentification7 purchaseOrderReference) {
-		this.purchaseOrderReference = purchaseOrderReference;
+	public TransactionReportItems3 setPurchaseOrderReference(com.tools20022.repository.msg.DocumentIdentification7 purchaseOrderReference) {
+		this.purchaseOrderReference = Objects.requireNonNull(purchaseOrderReference);
+		return this;
 	}
 
-	@XmlElement(name = "Buyr", required = true)
 	public PartyIdentification26 getBuyer() {
 		return buyer;
 	}
 
-	public void setBuyer(com.tools20022.repository.msg.PartyIdentification26 buyer) {
-		this.buyer = buyer;
+	public TransactionReportItems3 setBuyer(com.tools20022.repository.msg.PartyIdentification26 buyer) {
+		this.buyer = Objects.requireNonNull(buyer);
+		return this;
 	}
 
-	@XmlElement(name = "Sellr", required = true)
 	public PartyIdentification26 getSeller() {
 		return seller;
 	}
 
-	public void setSeller(com.tools20022.repository.msg.PartyIdentification26 seller) {
-		this.seller = seller;
+	public TransactionReportItems3 setSeller(com.tools20022.repository.msg.PartyIdentification26 seller) {
+		this.seller = Objects.requireNonNull(seller);
+		return this;
 	}
 
-	@XmlElement(name = "BuyrBk", required = true)
 	public BICIdentification1 getBuyerBank() {
 		return buyerBank;
 	}
 
-	public void setBuyerBank(com.tools20022.repository.msg.BICIdentification1 buyerBank) {
-		this.buyerBank = buyerBank;
+	public TransactionReportItems3 setBuyerBank(com.tools20022.repository.msg.BICIdentification1 buyerBank) {
+		this.buyerBank = Objects.requireNonNull(buyerBank);
+		return this;
 	}
 
-	@XmlElement(name = "BuyrBkCtry", required = true)
 	public CountryCode getBuyerBankCountry() {
 		return buyerBankCountry;
 	}
 
-	public void setBuyerBankCountry(CountryCode buyerBankCountry) {
-		this.buyerBankCountry = buyerBankCountry;
+	public TransactionReportItems3 setBuyerBankCountry(CountryCode buyerBankCountry) {
+		this.buyerBankCountry = Objects.requireNonNull(buyerBankCountry);
+		return this;
 	}
 
-	@XmlElement(name = "SellrBk", required = true)
 	public BICIdentification1 getSellerBank() {
 		return sellerBank;
 	}
 
-	public void setSellerBank(com.tools20022.repository.msg.BICIdentification1 sellerBank) {
-		this.sellerBank = sellerBank;
+	public TransactionReportItems3 setSellerBank(com.tools20022.repository.msg.BICIdentification1 sellerBank) {
+		this.sellerBank = Objects.requireNonNull(sellerBank);
+		return this;
 	}
 
-	@XmlElement(name = "SellrBkCtry", required = true)
 	public CountryCode getSellerBankCountry() {
 		return sellerBankCountry;
 	}
 
-	public void setSellerBankCountry(CountryCode sellerBankCountry) {
-		this.sellerBankCountry = sellerBankCountry;
+	public TransactionReportItems3 setSellerBankCountry(CountryCode sellerBankCountry) {
+		this.sellerBankCountry = Objects.requireNonNull(sellerBankCountry);
+		return this;
 	}
 
-	@XmlElement(name = "OblgrBk")
 	public List<BICIdentification1> getObligorBank() {
-		return obligorBank;
+		return obligorBank == null ? obligorBank = new ArrayList<>() : obligorBank;
 	}
 
-	public void setObligorBank(List<com.tools20022.repository.msg.BICIdentification1> obligorBank) {
-		this.obligorBank = obligorBank;
+	public TransactionReportItems3 setObligorBank(List<com.tools20022.repository.msg.BICIdentification1> obligorBank) {
+		this.obligorBank = Objects.requireNonNull(obligorBank);
+		return this;
 	}
 
-	@XmlElement(name = "SubmitgBk")
 	public List<BICIdentification1> getSubmittingBank() {
-		return submittingBank;
+		return submittingBank == null ? submittingBank = new ArrayList<>() : submittingBank;
 	}
 
-	public void setSubmittingBank(List<com.tools20022.repository.msg.BICIdentification1> submittingBank) {
-		this.submittingBank = submittingBank;
+	public TransactionReportItems3 setSubmittingBank(List<com.tools20022.repository.msg.BICIdentification1> submittingBank) {
+		this.submittingBank = Objects.requireNonNull(submittingBank);
+		return this;
 	}
 
-	@XmlElement(name = "OutsdngAmt", required = true)
 	public CurrencyAndAmount getOutstandingAmount() {
 		return outstandingAmount;
 	}
 
-	public void setOutstandingAmount(CurrencyAndAmount outstandingAmount) {
-		this.outstandingAmount = outstandingAmount;
+	public TransactionReportItems3 setOutstandingAmount(CurrencyAndAmount outstandingAmount) {
+		this.outstandingAmount = Objects.requireNonNull(outstandingAmount);
+		return this;
 	}
 
-	@XmlElement(name = "TtlNetAmt", required = true)
 	public CurrencyAndAmount getTotalNetAmount() {
 		return totalNetAmount;
 	}
 
-	public void setTotalNetAmount(CurrencyAndAmount totalNetAmount) {
-		this.totalNetAmount = totalNetAmount;
+	public TransactionReportItems3 setTotalNetAmount(CurrencyAndAmount totalNetAmount) {
+		this.totalNetAmount = Objects.requireNonNull(totalNetAmount);
+		return this;
 	}
 
-	@XmlElement(name = "PdgReqForActn")
 	public List<PendingActivity2> getPendingRequestForAction() {
-		return pendingRequestForAction;
+		return pendingRequestForAction == null ? pendingRequestForAction = new ArrayList<>() : pendingRequestForAction;
 	}
 
-	public void setPendingRequestForAction(List<com.tools20022.repository.msg.PendingActivity2> pendingRequestForAction) {
-		this.pendingRequestForAction = pendingRequestForAction;
+	public TransactionReportItems3 setPendingRequestForAction(List<com.tools20022.repository.msg.PendingActivity2> pendingRequestForAction) {
+		this.pendingRequestForAction = Objects.requireNonNull(pendingRequestForAction);
+		return this;
 	}
 }

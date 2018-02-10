@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.entity.UnderlyingRatio;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Related financial instrument into which the security can be converted."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnderlyingRatio1", propOrder = {"underlyingQuantityDenominator", "underlyingQuantityNumerator", "relatedFinancialInstrumentIdentification"})
 public class UnderlyingRatio1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UndrlygQtyDnmtr", required = true)
 	protected FinancialInstrumentQuantity1Choice underlyingQuantityDenominator;
 	/**
-	 * Number of held securities for the exercise.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,7 +114,7 @@ public class UnderlyingRatio1 {
 	public static final MMMessageAssociationEnd mmUnderlyingQuantityDenominator = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> UnderlyingRatio.mmUnderlyingQuantityDenominator;
-			componentContext_lazy = () -> UnderlyingRatio1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingRatio1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygQtyDnmtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +126,11 @@ public class UnderlyingRatio1 {
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygQtyNmrtr", required = true)
 	protected FinancialInstrumentQuantity1Choice underlyingQuantityNumerator;
 	/**
-	 * Number of related securities for the exercise.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -159,7 +163,7 @@ public class UnderlyingRatio1 {
 	public static final MMMessageAssociationEnd mmUnderlyingQuantityNumerator = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> UnderlyingRatio.mmUnderlyingQuantityNumerator;
-			componentContext_lazy = () -> UnderlyingRatio1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingRatio1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygQtyNmrtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +175,11 @@ public class UnderlyingRatio1 {
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdFinInstrmId")
 	protected List<com.tools20022.repository.msg.SecurityIdentification14> relatedFinancialInstrumentIdentification;
 	/**
-	 * Related security into which the security can be converted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -208,7 +213,7 @@ public class UnderlyingRatio1 {
 	public static final MMMessageAssociationEnd mmRelatedFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> UnderlyingRatio.mmSecuritiesConversion;
-			componentContext_lazy = () -> UnderlyingRatio1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingRatio1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdFinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,9 +228,10 @@ public class UnderlyingRatio1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnderlyingRatio1.mmUnderlyingQuantityDenominator, UnderlyingRatio1.mmUnderlyingQuantityNumerator, UnderlyingRatio1.mmRelatedFinancialInstrumentIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingRatio1.mmUnderlyingQuantityDenominator, com.tools20022.repository.msg.UnderlyingRatio1.mmUnderlyingQuantityNumerator,
+						com.tools20022.repository.msg.UnderlyingRatio1.mmRelatedFinancialInstrumentIdentification);
 				trace_lazy = () -> UnderlyingRatio.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingRatio1";
 				definition = "Related financial instrument into which the security can be converted.";
@@ -234,30 +240,30 @@ public class UnderlyingRatio1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UndrlygQtyDnmtr", required = true)
 	public FinancialInstrumentQuantity1Choice getUnderlyingQuantityDenominator() {
 		return underlyingQuantityDenominator;
 	}
 
-	public void setUnderlyingQuantityDenominator(FinancialInstrumentQuantity1Choice underlyingQuantityDenominator) {
-		this.underlyingQuantityDenominator = underlyingQuantityDenominator;
+	public UnderlyingRatio1 setUnderlyingQuantityDenominator(FinancialInstrumentQuantity1Choice underlyingQuantityDenominator) {
+		this.underlyingQuantityDenominator = Objects.requireNonNull(underlyingQuantityDenominator);
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygQtyNmrtr", required = true)
 	public FinancialInstrumentQuantity1Choice getUnderlyingQuantityNumerator() {
 		return underlyingQuantityNumerator;
 	}
 
-	public void setUnderlyingQuantityNumerator(FinancialInstrumentQuantity1Choice underlyingQuantityNumerator) {
-		this.underlyingQuantityNumerator = underlyingQuantityNumerator;
+	public UnderlyingRatio1 setUnderlyingQuantityNumerator(FinancialInstrumentQuantity1Choice underlyingQuantityNumerator) {
+		this.underlyingQuantityNumerator = Objects.requireNonNull(underlyingQuantityNumerator);
+		return this;
 	}
 
-	@XmlElement(name = "RltdFinInstrmId")
 	public List<SecurityIdentification14> getRelatedFinancialInstrumentIdentification() {
-		return relatedFinancialInstrumentIdentification;
+		return relatedFinancialInstrumentIdentification == null ? relatedFinancialInstrumentIdentification = new ArrayList<>() : relatedFinancialInstrumentIdentification;
 	}
 
-	public void setRelatedFinancialInstrumentIdentification(List<com.tools20022.repository.msg.SecurityIdentification14> relatedFinancialInstrumentIdentification) {
-		this.relatedFinancialInstrumentIdentification = relatedFinancialInstrumentIdentification;
+	public UnderlyingRatio1 setRelatedFinancialInstrumentIdentification(List<com.tools20022.repository.msg.SecurityIdentification14> relatedFinancialInstrumentIdentification) {
+		this.relatedFinancialInstrumentIdentification = Objects.requireNonNull(relatedFinancialInstrumentIdentification);
+		return this;
 	}
 }

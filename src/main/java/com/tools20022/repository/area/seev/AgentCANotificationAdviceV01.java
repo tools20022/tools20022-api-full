@@ -25,9 +25,8 @@ import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -57,22 +56,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
- * SecuritiesEventsLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
- * IssuersAgentsCommunicationISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AgtCANtfctnAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -103,9 +86,33 @@ import javax.xml.bind.annotation.*;
  * AgentCANotificationAdviceV01.mmAdditionalInformation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
+ * IssuersAgentsCommunicationISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AgtCANtfctnAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
+ * SecuritiesEventsLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.009.001.01}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDefaultOptionRule#forAgentCANotificationAdviceV01
+ * ConstraintDefaultOptionRule.forAgentCANotificationAdviceV01}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -118,17 +125,17 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AgentCANotificationAdviceV01", propOrder = {"identification", "notificationTypeAndLinkage", "notificationGeneralInformation", "corporateActionGeneralInformation", "corporateActionDetails", "corporateActionOptionDetails",
 		"contactDetails", "additionalInformation"})
 public class AgentCANotificationAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected DocumentIdentification8 identification;
 	/**
-	 * Identification assigned by the Sender to unambiguously identify the
-	 * advice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,11 +177,11 @@ public class AgentCANotificationAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "NtfctnTpAndLkg", required = true)
 	protected LinkedCorporateAction1 notificationTypeAndLinkage;
 	/**
-	 * Provides information about the type of notification advice and linked
-	 * message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -216,10 +223,11 @@ public class AgentCANotificationAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "NtfctnGnlInf", required = true)
 	protected CorporateActionNotification1 notificationGeneralInformation;
 	/**
-	 * Provides general information about the notification advice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -260,10 +268,11 @@ public class AgentCANotificationAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	protected CorporateActionInformation2 corporateActionGeneralInformation;
 	/**
-	 * General information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -303,10 +312,11 @@ public class AgentCANotificationAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnDtls", required = true)
 	protected CorporateAction2 corporateActionDetails;
 	/**
-	 * Provides details information about the CA event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -346,10 +356,11 @@ public class AgentCANotificationAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnOptnDtls")
 	protected List<CorporateActionOption1> corporateActionOptionDetails;
 	/**
-	 * Provides detailed information about the option of the CA event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -389,11 +400,11 @@ public class AgentCANotificationAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CtctDtls")
 	protected List<ContactPerson1> contactDetails;
 	/**
-	 * Provides information about the contact responsible for the transaction
-	 * identified in the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -433,10 +444,11 @@ public class AgentCANotificationAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected CorporateActionNarrative2 additionalInformation;
 	/**
-	 * Provides additional information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -480,6 +492,7 @@ public class AgentCANotificationAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDefaultOptionRule.forAgentCANotificationAdviceV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentCANotificationAdviceV01";
 				definition = "Scope\r\nThis message is sent by an issuer (or its agent) to a CSD to:\r\n- Provide a CSD with the details of a corporate action along with the possible options available to the clients of that CSD; and\r\n- to update a corporate action notification. A notification advice can be initially sent as a preliminary advice and subsequently replaced by another notification advice with updated information.\r\nUsage\r\nThis message is used:\r\n- to provide a CSD with the details of a corporate action along with the possible options available to the clients of that CSD. The information can be complete or incomplete.\r\n- to update a corporate action notification advice. A notification advice can be initially sent as a preliminary advice and subsequently replaced by another notification advice with updated information. As per SMPG recommendation, all the information should be provided in the update, not only updated information.\r\nAn Agent Corporate Action Notification Status Advice is sent in reply to the Agent Corporate Action Notification Advice.\r\nNote: The amendment of a corporate action notification is done through a replacement mechanism in line with both the ISO 15022 messages used in the flow between the CSD and its clients, and the ISO 20022 proxy voting messages.";
@@ -510,79 +523,79 @@ public class AgentCANotificationAdviceV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(DocumentIdentification8 identification) {
-		this.identification = identification;
+	public AgentCANotificationAdviceV01 setIdentification(DocumentIdentification8 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "NtfctnTpAndLkg", required = true)
 	public LinkedCorporateAction1 getNotificationTypeAndLinkage() {
 		return notificationTypeAndLinkage;
 	}
 
-	public void setNotificationTypeAndLinkage(LinkedCorporateAction1 notificationTypeAndLinkage) {
-		this.notificationTypeAndLinkage = notificationTypeAndLinkage;
+	public AgentCANotificationAdviceV01 setNotificationTypeAndLinkage(LinkedCorporateAction1 notificationTypeAndLinkage) {
+		this.notificationTypeAndLinkage = Objects.requireNonNull(notificationTypeAndLinkage);
+		return this;
 	}
 
-	@XmlElement(name = "NtfctnGnlInf", required = true)
 	public CorporateActionNotification1 getNotificationGeneralInformation() {
 		return notificationGeneralInformation;
 	}
 
-	public void setNotificationGeneralInformation(CorporateActionNotification1 notificationGeneralInformation) {
-		this.notificationGeneralInformation = notificationGeneralInformation;
+	public AgentCANotificationAdviceV01 setNotificationGeneralInformation(CorporateActionNotification1 notificationGeneralInformation) {
+		this.notificationGeneralInformation = Objects.requireNonNull(notificationGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionInformation2 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
 
-	public void setCorporateActionGeneralInformation(CorporateActionInformation2 corporateActionGeneralInformation) {
-		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	public AgentCANotificationAdviceV01 setCorporateActionGeneralInformation(CorporateActionInformation2 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = Objects.requireNonNull(corporateActionGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnDtls", required = true)
 	public CorporateAction2 getCorporateActionDetails() {
 		return corporateActionDetails;
 	}
 
-	public void setCorporateActionDetails(CorporateAction2 corporateActionDetails) {
-		this.corporateActionDetails = corporateActionDetails;
+	public AgentCANotificationAdviceV01 setCorporateActionDetails(CorporateAction2 corporateActionDetails) {
+		this.corporateActionDetails = Objects.requireNonNull(corporateActionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnOptnDtls")
 	public List<CorporateActionOption1> getCorporateActionOptionDetails() {
-		return corporateActionOptionDetails;
+		return corporateActionOptionDetails == null ? corporateActionOptionDetails = new ArrayList<>() : corporateActionOptionDetails;
 	}
 
-	public void setCorporateActionOptionDetails(List<CorporateActionOption1> corporateActionOptionDetails) {
-		this.corporateActionOptionDetails = corporateActionOptionDetails;
+	public AgentCANotificationAdviceV01 setCorporateActionOptionDetails(List<CorporateActionOption1> corporateActionOptionDetails) {
+		this.corporateActionOptionDetails = Objects.requireNonNull(corporateActionOptionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CtctDtls")
 	public List<ContactPerson1> getContactDetails() {
-		return contactDetails;
+		return contactDetails == null ? contactDetails = new ArrayList<>() : contactDetails;
 	}
 
-	public void setContactDetails(List<ContactPerson1> contactDetails) {
-		this.contactDetails = contactDetails;
+	public AgentCANotificationAdviceV01 setContactDetails(List<ContactPerson1> contactDetails) {
+		this.contactDetails = Objects.requireNonNull(contactDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public CorporateActionNarrative2 getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<CorporateActionNarrative2> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(CorporateActionNarrative2 additionalInformation) {
+	public AgentCANotificationAdviceV01 setAdditionalInformation(CorporateActionNarrative2 additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.009.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.009.001.01")
 	static public class Document {
 		@XmlElement(name = "AgtCANtfctnAdvc", required = true)
 		public AgentCANotificationAdviceV01 messageBody;

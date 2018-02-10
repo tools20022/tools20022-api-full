@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max52Text;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,19 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * UniqueTransactionIdentifier1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UniqueTransactionIdentifier2", propOrder = {"uniqueTransactionIdentifier", "priorUniqueTransactionIdentifier"})
 public class UniqueTransactionIdentifier2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UnqTxIdr", required = true)
 	protected Max52Text uniqueTransactionIdentifier;
 	/**
-	 * Unique transaction identifier will be created at the time a transaction
-	 * is first executed, shared with all registered entities and counterparties
-	 * involved in the transaction, and used to track that particular
-	 * transaction during its lifetime. This identifier can also be known as the
-	 * Unique Swap Identifier (USI).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -129,7 +128,7 @@ public class UniqueTransactionIdentifier2 {
 	public static final MMMessageAttribute mmUniqueTransactionIdentifier = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
-			componentContext_lazy = () -> UniqueTransactionIdentifier2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UniqueTransactionIdentifier2.mmObject();
 			isDerived = false;
 			xmlTag = "UnqTxIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,13 +140,11 @@ public class UniqueTransactionIdentifier2 {
 			simpleType_lazy = () -> Max52Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrrUnqTxIdr")
 	protected List<Max52Text> priorUniqueTransactionIdentifier;
 	/**
-	 * Prior unique transaction identifier specifies the previous unique
-	 * transaction identifier (UTI) that was created at the time the transaction
-	 * was executed. This identifier can also be known as the Prior Unique Swap
-	 * Identifier (PUSI).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,7 +184,7 @@ public class UniqueTransactionIdentifier2 {
 	public static final MMMessageAttribute mmPriorUniqueTransactionIdentifier = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
-			componentContext_lazy = () -> UniqueTransactionIdentifier2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UniqueTransactionIdentifier2.mmObject();
 			isDerived = false;
 			xmlTag = "PrrUnqTxIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,9 +199,10 @@ public class UniqueTransactionIdentifier2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UniqueTransactionIdentifier2.mmUniqueTransactionIdentifier, UniqueTransactionIdentifier2.mmPriorUniqueTransactionIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UniqueTransactionIdentifier2.mmUniqueTransactionIdentifier,
+						com.tools20022.repository.msg.UniqueTransactionIdentifier2.mmPriorUniqueTransactionIdentifier);
 				trace_lazy = () -> TradeIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UniqueTransactionIdentifier2";
 				definition = "Specifies the unique transaction identifier (UTI) that was created at the time a transaction was first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction during its lifetime and optionally, the prior unique transaction identifier (PUTI). These identifiers can also be known as the Unique Swap Identifier (USI) or the Prior Unique Swap Identifier (PUSI). ";
@@ -214,21 +212,21 @@ public class UniqueTransactionIdentifier2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UnqTxIdr", required = true)
 	public Max52Text getUniqueTransactionIdentifier() {
 		return uniqueTransactionIdentifier;
 	}
 
-	public void setUniqueTransactionIdentifier(Max52Text uniqueTransactionIdentifier) {
-		this.uniqueTransactionIdentifier = uniqueTransactionIdentifier;
+	public UniqueTransactionIdentifier2 setUniqueTransactionIdentifier(Max52Text uniqueTransactionIdentifier) {
+		this.uniqueTransactionIdentifier = Objects.requireNonNull(uniqueTransactionIdentifier);
+		return this;
 	}
 
-	@XmlElement(name = "PrrUnqTxIdr")
 	public List<Max52Text> getPriorUniqueTransactionIdentifier() {
-		return priorUniqueTransactionIdentifier;
+		return priorUniqueTransactionIdentifier == null ? priorUniqueTransactionIdentifier = new ArrayList<>() : priorUniqueTransactionIdentifier;
 	}
 
-	public void setPriorUniqueTransactionIdentifier(List<Max52Text> priorUniqueTransactionIdentifier) {
-		this.priorUniqueTransactionIdentifier = priorUniqueTransactionIdentifier;
+	public UniqueTransactionIdentifier2 setPriorUniqueTransactionIdentifier(List<Max52Text> priorUniqueTransactionIdentifier) {
+		this.priorUniqueTransactionIdentifier = Objects.requireNonNull(priorUniqueTransactionIdentifier);
+		return this;
 	}
 }

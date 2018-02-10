@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -28,6 +29,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,16 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Account to or from which a securities entry is made."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesAccount4", propOrder = {"identification", "name", "financialInstrumentSupplementaryIdentification", "financialInstrumentIdentification", "financialInstrumentName", "status"})
 public class SecuritiesAccount4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected AccountIdentification1 identification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +126,7 @@ public class SecuritiesAccount4 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> SecuritiesAccount4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount4.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,12 +137,11 @@ public class SecuritiesAccount4 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm", required = true)
 	protected Max35Text name;
 	/**
-	 * Name of the account. It provides an additional means of identification,
-	 * and is designated by the account servicer in agreement with the account
-	 * owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,7 +176,7 @@ public class SecuritiesAccount4 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
-			componentContext_lazy = () -> SecuritiesAccount4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount4.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,11 +187,11 @@ public class SecuritiesAccount4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmSplmtryId")
 	protected Max35Text financialInstrumentSupplementaryIdentification;
 	/**
-	 * Additional information about a financial instrument to help identify the
-	 * instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,7 +220,7 @@ public class SecuritiesAccount4 {
 	 */
 	public static final MMMessageAttribute mmFinancialInstrumentSupplementaryIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccount4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount4.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmSplmtryId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,11 +231,11 @@ public class SecuritiesAccount4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmId")
 	protected SecurityIdentification3Choice financialInstrumentIdentification;
 	/**
-	 * Identification of a security, as assigned under a formal or proprietary
-	 * identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -269,7 +271,7 @@ public class SecuritiesAccount4 {
 	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> SecuritiesAccount4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount4.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,10 +282,11 @@ public class SecuritiesAccount4 {
 			complexType_lazy = () -> SecurityIdentification3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmNm")
 	protected Max350Text financialInstrumentName;
 	/**
-	 * Name of the financial instrument in free format text.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -303,6 +306,9 @@ public class SecuritiesAccount4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FinInstrmNm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70a::FIAN</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -316,9 +322,10 @@ public class SecuritiesAccount4 {
 	public static final MMMessageAttribute mmFinancialInstrumentName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmName;
-			componentContext_lazy = () -> SecuritiesAccount4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount4.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmNm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70a::FIAN"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentName";
 			definition = "Name of the financial instrument in free format text.";
@@ -327,10 +334,11 @@ public class SecuritiesAccount4 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts", required = true)
 	protected AccountStatus1Code status;
 	/**
-	 * Specifies the current state of an account, eg, enabled or deleted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -365,7 +373,7 @@ public class SecuritiesAccount4 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmStatus;
-			componentContext_lazy = () -> SecuritiesAccount4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount4.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -380,10 +388,11 @@ public class SecuritiesAccount4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesAccount4.mmIdentification, SecuritiesAccount4.mmName, SecuritiesAccount4.mmFinancialInstrumentSupplementaryIdentification,
-						SecuritiesAccount4.mmFinancialInstrumentIdentification, SecuritiesAccount4.mmFinancialInstrumentName, SecuritiesAccount4.mmStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount4.mmIdentification, com.tools20022.repository.msg.SecuritiesAccount4.mmName,
+						com.tools20022.repository.msg.SecuritiesAccount4.mmFinancialInstrumentSupplementaryIdentification, com.tools20022.repository.msg.SecuritiesAccount4.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.msg.SecuritiesAccount4.mmFinancialInstrumentName, com.tools20022.repository.msg.SecuritiesAccount4.mmStatus);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAccount4";
 				definition = "Account to or from which a securities entry is made.";
@@ -392,57 +401,57 @@ public class SecuritiesAccount4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public AccountIdentification1 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.AccountIdentification1 identification) {
-		this.identification = identification;
+	public SecuritiesAccount4 setIdentification(com.tools20022.repository.msg.AccountIdentification1 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Nm", required = true)
 	public Max35Text getName() {
 		return name;
 	}
 
-	public void setName(Max35Text name) {
-		this.name = name;
+	public SecuritiesAccount4 setName(Max35Text name) {
+		this.name = Objects.requireNonNull(name);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmSplmtryId")
-	public Max35Text getFinancialInstrumentSupplementaryIdentification() {
-		return financialInstrumentSupplementaryIdentification;
+	public Optional<Max35Text> getFinancialInstrumentSupplementaryIdentification() {
+		return financialInstrumentSupplementaryIdentification == null ? Optional.empty() : Optional.of(financialInstrumentSupplementaryIdentification);
 	}
 
-	public void setFinancialInstrumentSupplementaryIdentification(Max35Text financialInstrumentSupplementaryIdentification) {
+	public SecuritiesAccount4 setFinancialInstrumentSupplementaryIdentification(Max35Text financialInstrumentSupplementaryIdentification) {
 		this.financialInstrumentSupplementaryIdentification = financialInstrumentSupplementaryIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmId")
-	public SecurityIdentification3Choice getFinancialInstrumentIdentification() {
-		return financialInstrumentIdentification;
+	public Optional<SecurityIdentification3Choice> getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification == null ? Optional.empty() : Optional.of(financialInstrumentIdentification);
 	}
 
-	public void setFinancialInstrumentIdentification(SecurityIdentification3Choice financialInstrumentIdentification) {
+	public SecuritiesAccount4 setFinancialInstrumentIdentification(SecurityIdentification3Choice financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmNm")
-	public Max350Text getFinancialInstrumentName() {
-		return financialInstrumentName;
+	public Optional<Max350Text> getFinancialInstrumentName() {
+		return financialInstrumentName == null ? Optional.empty() : Optional.of(financialInstrumentName);
 	}
 
-	public void setFinancialInstrumentName(Max350Text financialInstrumentName) {
+	public SecuritiesAccount4 setFinancialInstrumentName(Max350Text financialInstrumentName) {
 		this.financialInstrumentName = financialInstrumentName;
+		return this;
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public AccountStatus1Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(AccountStatus1Code status) {
-		this.status = status;
+	public SecuritiesAccount4 setStatus(AccountStatus1Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 }

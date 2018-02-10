@@ -27,6 +27,7 @@ import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -40,21 +41,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
- * TreasuryArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ForexNotificationsISOArchive
- * ForexNotificationsISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "WdrwlNtfctnV01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -64,6 +50,21 @@ import javax.xml.bind.annotation.*;
  * WithdrawalNotificationV01.mmMatchingSystemUniqueReference}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ForexNotificationsISOArchive
+ * ForexNotificationsISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "WdrwlNtfctnV01"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
+ * TreasuryArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code trea.013.001.01}</li>
@@ -79,16 +80,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "WithdrawalNotificationV01", propOrder = "matchingSystemUniqueReference")
 public class WithdrawalNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MtchgSysUnqRef", required = true)
 	protected MessageReference matchingSystemUniqueReference;
 	/**
-	 * Reference assigned by the central matching system which is notifying the
-	 * deletion of a previously reported trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,16 +161,16 @@ public class WithdrawalNotificationV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MtchgSysUnqRef", required = true)
 	public MessageReference getMatchingSystemUniqueReference() {
 		return matchingSystemUniqueReference;
 	}
 
-	public void setMatchingSystemUniqueReference(MessageReference matchingSystemUniqueReference) {
-		this.matchingSystemUniqueReference = matchingSystemUniqueReference;
+	public WithdrawalNotificationV01 setMatchingSystemUniqueReference(MessageReference matchingSystemUniqueReference) {
+		this.matchingSystemUniqueReference = Objects.requireNonNull(matchingSystemUniqueReference);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:trea.013.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:trea.013.001.01")
 	static public class Document {
 		@XmlElement(name = "WdrwlNtfctnV01", required = true)
 		public WithdrawalNotificationV01 messageBody;

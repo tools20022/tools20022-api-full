@@ -19,8 +19,12 @@ package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMQuantity;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.datatype.Max1Number.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.math.BigDecimal;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Number (max 9) of objects represented as an integer.
@@ -30,8 +34,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -42,14 +46,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Number (max 9) of objects represented as an integer."</li>
  * </ul>
  */
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
 public class Max1Number {
 
 	final static private AtomicReference<MMQuantity> mmObject_lazy = new AtomicReference<>();
+	protected BigDecimal value;
 
 	final static public MMQuantity mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMQuantity() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max1Number";
 				definition = "Number (max 9) of objects represented as an integer.";
@@ -58,5 +64,25 @@ public class Max1Number {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Max1Number(BigDecimal value) {
+		this.value = value;
+	}
+
+	public BigDecimal toBigDecimal() {
+		return value;
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<BigDecimal, Max1Number> {
+		@Override
+		public Max1Number unmarshal(BigDecimal value) {
+			return new Max1Number(value);
+		}
+
+		@Override
+		public BigDecimal marshal(Max1Number typedData) {
+			return typedData.value;
+		}
 	}
 }

@@ -20,73 +20,72 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.QualifierCode;
+import com.tools20022.repository.codeset.Qualifier1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Qualifies the use of the quote or the indication of interest.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.QualifierCode QualifierCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#mmAllOrNone
- * Qualifier1Code.mmAllOrNone}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#AllOrNone
+ * Qualifier1Code.AllOrNone}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Qualifier1Code#mmMarketOnClose
- * Qualifier1Code.mmMarketOnClose}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#mmAtClose
- * Qualifier1Code.mmAtClose}</li>
+ * {@linkplain com.tools20022.repository.codeset.Qualifier1Code#MarketOnClose
+ * Qualifier1Code.MarketOnClose}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#AtClose
+ * Qualifier1Code.AtClose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Qualifier1Code#mmVolumeWeightedAveragePrice
- * Qualifier1Code.mmVolumeWeightedAveragePrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.Qualifier1Code#VolumeWeightedAveragePrice
+ * Qualifier1Code.VolumeWeightedAveragePrice}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#InTouchWith
+ * Qualifier1Code.InTouchWith}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#Limit
+ * Qualifier1Code.Limit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#MoreBehind
+ * Qualifier1Code.MoreBehind}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#AtOpen
+ * Qualifier1Code.AtOpen}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Qualifier1Code#mmInTouchWith
- * Qualifier1Code.mmInTouchWith}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#mmLimit
- * Qualifier1Code.mmLimit}</li>
+ * {@linkplain com.tools20022.repository.codeset.Qualifier1Code#TakingPosition
+ * Qualifier1Code.TakingPosition}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#AtMarket
+ * Qualifier1Code.AtMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Qualifier1Code#mmMoreBehind
- * Qualifier1Code.mmMoreBehind}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#mmAtOpen
- * Qualifier1Code.mmAtOpen}</li>
+ * {@linkplain com.tools20022.repository.codeset.Qualifier1Code#ReadyToTrade
+ * Qualifier1Code.ReadyToTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Qualifier1Code#mmTakingPosition
- * Qualifier1Code.mmTakingPosition}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#mmAtMarket
- * Qualifier1Code.mmAtMarket}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Qualifier1Code#mmReadyToTrade
- * Qualifier1Code.mmReadyToTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Qualifier1Code#mmPortfolioShown
- * Qualifier1Code.mmPortfolioShown}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Qualifier1Code#mmThroughDay
- * Qualifier1Code.mmThroughDay}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#mmVersus
- * Qualifier1Code.mmVersus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Qualifier1Code#mmWorkingAway
- * Qualifier1Code.mmWorkingAway}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#mmCrossing
- * Qualifier1Code.mmCrossing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Qualifier1Code#mmAtMidpoint
- * Qualifier1Code.mmAtMidpoint}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#mmPreOpen
- * Qualifier1Code.mmPreOpen}</li>
+ * {@linkplain com.tools20022.repository.codeset.Qualifier1Code#PortfolioShown
+ * Qualifier1Code.PortfolioShown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#ThroughDay
+ * Qualifier1Code.ThroughDay}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#Versus
+ * Qualifier1Code.Versus}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#WorkingAway
+ * Qualifier1Code.WorkingAway}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#Crossing
+ * Qualifier1Code.Crossing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#AtMidpoint
+ * Qualifier1Code.AtMidpoint}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Qualifier1Code#PreOpen
+ * Qualifier1Code.PreOpen}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.QualifierCode QualifierCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -104,7 +103,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class Qualifier1Code extends QualifierCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Qualifier1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -123,11 +123,12 @@ public class Qualifier1Code extends QualifierCode {
 	 * name} = "AllOrNone"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAllOrNone = new MMCode() {
+	public static final Qualifier1Code AllOrNone = new Qualifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllOrNone";
-			owner_lazy = () -> Qualifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Qualifier1Code.mmObject();
+			codeName = QualifierCode.AllOrNone.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -146,11 +147,12 @@ public class Qualifier1Code extends QualifierCode {
 	 * name} = "MarketOnClose"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarketOnClose = new MMCode() {
+	public static final Qualifier1Code MarketOnClose = new Qualifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketOnClose";
-			owner_lazy = () -> Qualifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Qualifier1Code.mmObject();
+			codeName = QualifierCode.MarketOnClose.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -169,11 +171,12 @@ public class Qualifier1Code extends QualifierCode {
 	 * name} = "AtClose"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAtClose = new MMCode() {
+	public static final Qualifier1Code AtClose = new Qualifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtClose";
-			owner_lazy = () -> Qualifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Qualifier1Code.mmObject();
+			codeName = QualifierCode.AtClose.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -192,11 +195,12 @@ public class Qualifier1Code extends QualifierCode {
 	 * name} = "VolumeWeightedAveragePrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVolumeWeightedAveragePrice = new MMCode() {
+	public static final Qualifier1Code VolumeWeightedAveragePrice = new Qualifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VolumeWeightedAveragePrice";
-			owner_lazy = () -> Qualifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Qualifier1Code.mmObject();
+			codeName = QualifierCode.VolumeWeightedAveragePrice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -215,11 +219,12 @@ public class Qualifier1Code extends QualifierCode {
 	 * name} = "InTouchWith"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInTouchWith = new MMCode() {
+	public static final Qualifier1Code InTouchWith = new Qualifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InTouchWith";
-			owner_lazy = () -> Qualifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Qualifier1Code.mmObject();
+			codeName = QualifierCode.InTouchWith.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -238,11 +243,12 @@ public class Qualifier1Code extends QualifierCode {
 	 * name} = "Limit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLimit = new MMCode() {
+	public static final Qualifier1Code Limit = new Qualifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
-			owner_lazy = () -> Qualifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Qualifier1Code.mmObject();
+			codeName = QualifierCode.Limit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -261,11 +267,12 @@ public class Qualifier1Code extends QualifierCode {
 	 * name} = "MoreBehind"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMoreBehind = new MMCode() {
+	public static final Qualifier1Code MoreBehind = new Qualifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoreBehind";
-			owner_lazy = () -> Qualifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Qualifier1Code.mmObject();
+			codeName = QualifierCode.MoreBehind.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -284,11 +291,12 @@ public class Qualifier1Code extends QualifierCode {
 	 * name} = "AtOpen"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAtOpen = new MMCode() {
+	public static final Qualifier1Code AtOpen = new Qualifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtOpen";
-			owner_lazy = () -> Qualifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Qualifier1Code.mmObject();
+			codeName = QualifierCode.AtOpen.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -307,11 +315,12 @@ public class Qualifier1Code extends QualifierCode {
 	 * name} = "TakingPosition"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTakingPosition = new MMCode() {
+	public static final Qualifier1Code TakingPosition = new Qualifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TakingPosition";
-			owner_lazy = () -> Qualifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Qualifier1Code.mmObject();
+			codeName = QualifierCode.TakingPosition.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -330,11 +339,12 @@ public class Qualifier1Code extends QualifierCode {
 	 * name} = "AtMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAtMarket = new MMCode() {
+	public static final Qualifier1Code AtMarket = new Qualifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtMarket";
-			owner_lazy = () -> Qualifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Qualifier1Code.mmObject();
+			codeName = QualifierCode.AtMarket.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -353,11 +363,12 @@ public class Qualifier1Code extends QualifierCode {
 	 * name} = "ReadyToTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReadyToTrade = new MMCode() {
+	public static final Qualifier1Code ReadyToTrade = new Qualifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReadyToTrade";
-			owner_lazy = () -> Qualifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Qualifier1Code.mmObject();
+			codeName = QualifierCode.ReadyToTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -376,11 +387,12 @@ public class Qualifier1Code extends QualifierCode {
 	 * name} = "PortfolioShown"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPortfolioShown = new MMCode() {
+	public static final Qualifier1Code PortfolioShown = new Qualifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortfolioShown";
-			owner_lazy = () -> Qualifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Qualifier1Code.mmObject();
+			codeName = QualifierCode.PortfolioShown.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -399,11 +411,12 @@ public class Qualifier1Code extends QualifierCode {
 	 * name} = "ThroughDay"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmThroughDay = new MMCode() {
+	public static final Qualifier1Code ThroughDay = new Qualifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThroughDay";
-			owner_lazy = () -> Qualifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Qualifier1Code.mmObject();
+			codeName = QualifierCode.ThroughDay.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -422,11 +435,12 @@ public class Qualifier1Code extends QualifierCode {
 	 * name} = "Versus"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVersus = new MMCode() {
+	public static final Qualifier1Code Versus = new Qualifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Versus";
-			owner_lazy = () -> Qualifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Qualifier1Code.mmObject();
+			codeName = QualifierCode.Versus.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -445,11 +459,12 @@ public class Qualifier1Code extends QualifierCode {
 	 * name} = "WorkingAway"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWorkingAway = new MMCode() {
+	public static final Qualifier1Code WorkingAway = new Qualifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WorkingAway";
-			owner_lazy = () -> Qualifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Qualifier1Code.mmObject();
+			codeName = QualifierCode.WorkingAway.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -468,11 +483,12 @@ public class Qualifier1Code extends QualifierCode {
 	 * name} = "Crossing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCrossing = new MMCode() {
+	public static final Qualifier1Code Crossing = new Qualifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Crossing";
-			owner_lazy = () -> Qualifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Qualifier1Code.mmObject();
+			codeName = QualifierCode.Crossing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -491,11 +507,12 @@ public class Qualifier1Code extends QualifierCode {
 	 * name} = "AtMidpoint"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAtMidpoint = new MMCode() {
+	public static final Qualifier1Code AtMidpoint = new Qualifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtMidpoint";
-			owner_lazy = () -> Qualifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Qualifier1Code.mmObject();
+			codeName = QualifierCode.AtMidpoint.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -514,28 +531,78 @@ public class Qualifier1Code extends QualifierCode {
 	 * name} = "PreOpen"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreOpen = new MMCode() {
+	public static final Qualifier1Code PreOpen = new Qualifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreOpen";
-			owner_lazy = () -> Qualifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Qualifier1Code.mmObject();
+			codeName = QualifierCode.PreOpen.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Qualifier1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Qualifier1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ALNO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Qualifier1Code";
 				definition = "Qualifies the use of the quote or the indication of interest.";
-				code_lazy = () -> Arrays.asList(Qualifier1Code.mmAllOrNone, Qualifier1Code.mmMarketOnClose, Qualifier1Code.mmAtClose, Qualifier1Code.mmVolumeWeightedAveragePrice, Qualifier1Code.mmInTouchWith, Qualifier1Code.mmLimit,
-						Qualifier1Code.mmMoreBehind, Qualifier1Code.mmAtOpen, Qualifier1Code.mmTakingPosition, Qualifier1Code.mmAtMarket, Qualifier1Code.mmReadyToTrade, Qualifier1Code.mmPortfolioShown, Qualifier1Code.mmThroughDay,
-						Qualifier1Code.mmVersus, Qualifier1Code.mmWorkingAway, Qualifier1Code.mmCrossing, Qualifier1Code.mmAtMidpoint, Qualifier1Code.mmPreOpen);
 				trace_lazy = () -> QualifierCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Qualifier1Code.AllOrNone, com.tools20022.repository.codeset.Qualifier1Code.MarketOnClose, com.tools20022.repository.codeset.Qualifier1Code.AtClose,
+						com.tools20022.repository.codeset.Qualifier1Code.VolumeWeightedAveragePrice, com.tools20022.repository.codeset.Qualifier1Code.InTouchWith, com.tools20022.repository.codeset.Qualifier1Code.Limit,
+						com.tools20022.repository.codeset.Qualifier1Code.MoreBehind, com.tools20022.repository.codeset.Qualifier1Code.AtOpen, com.tools20022.repository.codeset.Qualifier1Code.TakingPosition,
+						com.tools20022.repository.codeset.Qualifier1Code.AtMarket, com.tools20022.repository.codeset.Qualifier1Code.ReadyToTrade, com.tools20022.repository.codeset.Qualifier1Code.PortfolioShown,
+						com.tools20022.repository.codeset.Qualifier1Code.ThroughDay, com.tools20022.repository.codeset.Qualifier1Code.Versus, com.tools20022.repository.codeset.Qualifier1Code.WorkingAway,
+						com.tools20022.repository.codeset.Qualifier1Code.Crossing, com.tools20022.repository.codeset.Qualifier1Code.AtMidpoint, com.tools20022.repository.codeset.Qualifier1Code.PreOpen);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AllOrNone.getCodeName().get(), AllOrNone);
+		codesByName.put(MarketOnClose.getCodeName().get(), MarketOnClose);
+		codesByName.put(AtClose.getCodeName().get(), AtClose);
+		codesByName.put(VolumeWeightedAveragePrice.getCodeName().get(), VolumeWeightedAveragePrice);
+		codesByName.put(InTouchWith.getCodeName().get(), InTouchWith);
+		codesByName.put(Limit.getCodeName().get(), Limit);
+		codesByName.put(MoreBehind.getCodeName().get(), MoreBehind);
+		codesByName.put(AtOpen.getCodeName().get(), AtOpen);
+		codesByName.put(TakingPosition.getCodeName().get(), TakingPosition);
+		codesByName.put(AtMarket.getCodeName().get(), AtMarket);
+		codesByName.put(ReadyToTrade.getCodeName().get(), ReadyToTrade);
+		codesByName.put(PortfolioShown.getCodeName().get(), PortfolioShown);
+		codesByName.put(ThroughDay.getCodeName().get(), ThroughDay);
+		codesByName.put(Versus.getCodeName().get(), Versus);
+		codesByName.put(WorkingAway.getCodeName().get(), WorkingAway);
+		codesByName.put(Crossing.getCodeName().get(), Crossing);
+		codesByName.put(AtMidpoint.getCodeName().get(), AtMidpoint);
+		codesByName.put(PreOpen.getCodeName().get(), PreOpen);
+	}
+
+	public static Qualifier1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Qualifier1Code[] values() {
+		Qualifier1Code[] values = new Qualifier1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Qualifier1Code> {
+		@Override
+		public Qualifier1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Qualifier1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

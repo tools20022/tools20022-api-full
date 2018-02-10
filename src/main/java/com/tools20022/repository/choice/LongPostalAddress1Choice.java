@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.StructuredLongPostalAddress1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LongPostalAddress1Choice", propOrder = {"unstructured", "structured"})
 public class LongPostalAddress1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ustrd", required = true)
 	protected Max140Text unstructured;
 	/**
-	 * Information that locates and identifies a specific address, as defined by
-	 * postal services, that is presented in free format text.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +114,7 @@ public class LongPostalAddress1Choice {
 	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
-			componentContext_lazy = () -> LongPostalAddress1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.LongPostalAddress1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ustrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,11 +125,11 @@ public class LongPostalAddress1Choice {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Strd", required = true)
 	protected StructuredLongPostalAddress1 structured;
 	/**
-	 * Information that locates and identifies a specific address, as defined by
-	 * postal services, that is presented in a formal structure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +165,7 @@ public class LongPostalAddress1Choice {
 	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
-			componentContext_lazy = () -> LongPostalAddress1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.LongPostalAddress1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Strd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,9 +180,9 @@ public class LongPostalAddress1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LongPostalAddress1Choice.mmUnstructured, LongPostalAddress1Choice.mmStructured);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LongPostalAddress1Choice.mmUnstructured, com.tools20022.repository.choice.LongPostalAddress1Choice.mmStructured);
 				trace_lazy = () -> PostalAddress.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LongPostalAddress1Choice";
 				definition = "Information that locates and identifies a specific address, as defined by postal services.";
@@ -190,21 +191,21 @@ public class LongPostalAddress1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ustrd", required = true)
 	public Max140Text getUnstructured() {
 		return unstructured;
 	}
 
-	public void setUnstructured(Max140Text unstructured) {
-		this.unstructured = unstructured;
+	public LongPostalAddress1Choice setUnstructured(Max140Text unstructured) {
+		this.unstructured = Objects.requireNonNull(unstructured);
+		return this;
 	}
 
-	@XmlElement(name = "Strd", required = true)
 	public StructuredLongPostalAddress1 getStructured() {
 		return structured;
 	}
 
-	public void setStructured(StructuredLongPostalAddress1 structured) {
-		this.structured = structured;
+	public LongPostalAddress1Choice setStructured(StructuredLongPostalAddress1 structured) {
+		this.structured = Objects.requireNonNull(structured);
+		return this;
 	}
 }

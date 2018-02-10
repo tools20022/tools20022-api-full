@@ -30,6 +30,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Basic good used in commerce that is interchangeable with other commodities of
@@ -45,6 +47,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -57,8 +61,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * Commodity.mmSubProduct}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransparencyDataReport10#mmEmissionAllowanceType
+ * TransparencyDataReport10.mmEmissionAllowanceType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DerivativeCommodity2#mmProduct
+ * DerivativeCommodity2.mmProduct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommodityDerivate4#mmClassSpecific
+ * CommodityDerivate4.mmClassSpecific}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CommodityDerivate2Choice#mmFreight
+ * CommodityDerivate2Choice.mmFreight}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CommodityDerivate2Choice#mmEnergy
+ * CommodityDerivate2Choice.mmEnergy}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -185,30 +207,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransparencyDataReport10#mmEmissionAllowanceType
- * TransparencyDataReport10.mmEmissionAllowanceType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DerivativeCommodity2#mmProduct
- * DerivativeCommodity2.mmProduct}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CommodityDerivate4#mmClassSpecific
- * CommodityDerivate4.mmClassSpecific}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.CommodityDerivate2Choice#mmFreight
- * CommodityDerivate2Choice.mmFreight}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.CommodityDerivate2Choice#mmEnergy
- * CommodityDerivate2Choice.mmEnergy}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -226,8 +228,8 @@ public class Commodity extends Asset {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected AssetClassProductTypeCode baseProduct;
 	/**
-	 * Basic category of the commodity, such as agricultural or metal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -436,8 +438,8 @@ public class Commodity extends Asset {
 					AssetClassCommodity3Choice.mmFreight, AssetClassCommodity3Choice.mmIndustrialProduct, AssetClassCommodity3Choice.mmMetal, AssetClassCommodity3Choice.mmOtherC10, AssetClassCommodity3Choice.mmPaper,
 					AssetClassCommodity3Choice.mmPolypropylene, AssetClassCommodity3Choice.mmInflation, AssetClassCommodity3Choice.mmMultiCommodityExotic, AssetClassCommodity3Choice.mmOfficialEconomicStatistics,
 					AssetClassCommodity3Choice.mmOther, OtherC10CommodityNonDeliverable2.mmBaseProduct);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Commodity.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commodity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BaseProduct";
 			definition = "Basic category of the commodity, such as agricultural or metal.  ";
@@ -456,9 +458,8 @@ public class Commodity extends Asset {
 	};
 	protected AssetClassDetailedSubProductTypeCode detailedSubProduct;
 	/**
-	 * Further detailed description of the basic resources, such as aluminium,
-	 * iron ore or wheat
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -494,8 +495,8 @@ public class Commodity extends Asset {
 	public static final MMBusinessAttribute mmDetailedSubProduct = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AgriculturalCommoditySoft1.mmAdditionalSubProduct);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Commodity.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commodity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DetailedSubProduct";
 			definition = "Further detailed description of the basic resources, such as aluminium,  iron ore or wheat";
@@ -514,9 +515,8 @@ public class Commodity extends Asset {
 	};
 	protected AssetClassSubProductTypeCode subProduct;
 	/**
-	 * Basic resources and agricultural products such as non-precious metal or
-	 * grain.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -787,8 +787,8 @@ public class Commodity extends Asset {
 					AssetClassCommodityFertilizer1Choice.mmUreaAndAmmoniumNitrate, AssetClassCommodityIndustrialProduct1Choice.mmConstruction, AssetClassCommodityIndustrialProduct1Choice.mmManufacturing,
 					AssetClassCommodityPolypropylene1Choice.mmPlastic, FertilizerCommodityPotash1.mmSubProduct, FertilizerCommodityUrea1.mmSubProduct, ForeignExchangeDerivative2.mmContractSubType,
 					OtherC10CommodityDeliverable2.mmSubProduct, AssetClassCommodityOtherC102Choice.mmDeliverable, AssetClassCommodityOtherC102Choice.mmNonDeliverable, OtherC10CommodityNonDeliverable2.mmSubProduct);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Commodity.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Commodity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubProduct";
 			definition = "Basic resources and agricultural products such as non-precious metal or grain.";
@@ -809,7 +809,7 @@ public class Commodity extends Asset {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Commodity";
 				definition = "Basic good used in commerce that is interchangeable with other commodities of the same type. Commodities are most often used as inputs in the production of other goods or services. The quality of a given commodity may differ slightly, but it is essentially uniform across producers. When they are traded on an exchange, commodities must also meet specified minimum standards, also known as a basis grade.";
@@ -843,23 +843,26 @@ public class Commodity extends Asset {
 		return baseProduct;
 	}
 
-	public void setBaseProduct(AssetClassProductTypeCode baseProduct) {
-		this.baseProduct = baseProduct;
+	public Commodity setBaseProduct(AssetClassProductTypeCode baseProduct) {
+		this.baseProduct = Objects.requireNonNull(baseProduct);
+		return this;
 	}
 
-	public AssetClassDetailedSubProductTypeCode getDetailedSubProduct() {
-		return detailedSubProduct;
+	public Optional<AssetClassDetailedSubProductTypeCode> getDetailedSubProduct() {
+		return detailedSubProduct == null ? Optional.empty() : Optional.of(detailedSubProduct);
 	}
 
-	public void setDetailedSubProduct(AssetClassDetailedSubProductTypeCode detailedSubProduct) {
+	public Commodity setDetailedSubProduct(AssetClassDetailedSubProductTypeCode detailedSubProduct) {
 		this.detailedSubProduct = detailedSubProduct;
+		return this;
 	}
 
-	public AssetClassSubProductTypeCode getSubProduct() {
-		return subProduct;
+	public Optional<AssetClassSubProductTypeCode> getSubProduct() {
+		return subProduct == null ? Optional.empty() : Optional.of(subProduct);
 	}
 
-	public void setSubProduct(AssetClassSubProductTypeCode subProduct) {
+	public Commodity setSubProduct(AssetClassSubProductTypeCode subProduct) {
 		this.subProduct = subProduct;
+		return this;
 	}
 }

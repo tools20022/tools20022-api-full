@@ -26,9 +26,8 @@ import com.tools20022.repository.choice.PartyIdentification70Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -55,22 +54,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestVersion
- * SecuritiesSettlementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOLatestversion
- * InvestmentFundsISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "PrtflTrfInstr"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -131,9 +114,48 @@ import javax.xml.bind.annotation.*;
  * PortfolioTransferInstructionV07.mmExtension}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOLatestversion
+ * InvestmentFundsISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "PrtflTrfInstr"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestVersion
+ * SecuritiesSettlementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.012.001.07}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPortfolioTransferInstructionV07
+ * ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPortfolioRule#forPortfolioTransferInstructionV07
+ * ConstraintPortfolioRule.forPortfolioTransferInstructionV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPortfolioTransferInstructionV07
+ * ConstraintInvestorRule.forPortfolioTransferInstructionV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateRule#forPortfolioTransferInstructionV07
+ * ConstraintCorporateRule.forPortfolioTransferInstructionV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forPortfolioTransferInstructionV07
+ * ConstraintDesignationRule.forPortfolioTransferInstructionV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintISARule#forPortfolioTransferInstructionV07
+ * ConstraintISARule.forPortfolioTransferInstructionV07}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -150,17 +172,18 @@ import javax.xml.bind.annotation.*;
  * PortfolioTransferInstructionV06}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PortfolioTransferInstructionV07", propOrder = {"messageReference", "poolReference", "previousReference", "relatedReference", "primaryIndividualInvestor", "secondaryIndividualInvestor", "otherIndividualInvestor",
 		"primaryCorporateInvestor", "secondaryCorporateInvestor", "otherCorporateInvestor", "transferorAccount", "nomineeAccount", "transferee", "intermediaryInformation", "cashAccount", "productTransfer", "marketPracticeVersion",
 		"extension"})
 public class PortfolioTransferInstructionV07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgRef", required = true)
 	protected MessageIdentification1 messageReference;
 	/**
-	 * Identifies the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,10 +229,11 @@ public class PortfolioTransferInstructionV07 {
 			}
 		}
 	};
+	@XmlElement(name = "PoolRef")
 	protected AdditionalReference6 poolReference;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -255,10 +279,11 @@ public class PortfolioTransferInstructionV07 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsRef")
 	protected AdditionalReference6 previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -304,10 +329,11 @@ public class PortfolioTransferInstructionV07 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdRef")
 	protected AdditionalReference6 relatedReference;
 	/**
-	 * Reference to a linked message that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -354,11 +380,11 @@ public class PortfolioTransferInstructionV07 {
 			}
 		}
 	};
+	@XmlElement(name = "PmryIndvInvstr")
 	protected IndividualPerson8 primaryIndividualInvestor;
 	/**
-	 * Information identifying the primary individual investor, for example,
-	 * name, address, social security number and date of birth.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -406,11 +432,11 @@ public class PortfolioTransferInstructionV07 {
 			}
 		}
 	};
+	@XmlElement(name = "ScndryIndvInvstr")
 	protected IndividualPerson8 secondaryIndividualInvestor;
 	/**
-	 * Information identifying the secondary individual investor, for example,
-	 * name, address, social security number and date of birth.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -458,11 +484,11 @@ public class PortfolioTransferInstructionV07 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrIndvInvstr")
 	protected List<IndividualPerson8> otherIndividualInvestor;
 	/**
-	 * Information identifying the other individual investors, for example,
-	 * name, address, social security number and date of birth.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -509,11 +535,11 @@ public class PortfolioTransferInstructionV07 {
 			}
 		}
 	};
+	@XmlElement(name = "PmryCorpInvstr")
 	protected Organisation21 primaryCorporateInvestor;
 	/**
-	 * Information identifying the primary corporate investor, for example, name
-	 * and address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -560,11 +586,11 @@ public class PortfolioTransferInstructionV07 {
 			}
 		}
 	};
+	@XmlElement(name = "ScndryCorpInvstr")
 	protected Organisation21 secondaryCorporateInvestor;
 	/**
-	 * Information identifying the secondary corporate investor, for example,
-	 * name and address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -611,11 +637,11 @@ public class PortfolioTransferInstructionV07 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrCorpInvstr")
 	protected List<Organisation21> otherCorporateInvestor;
 	/**
-	 * Information identifying the other corporate investors, for example, name
-	 * and address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -661,11 +687,11 @@ public class PortfolioTransferInstructionV07 {
 			}
 		}
 	};
+	@XmlElement(name = "TrfrAcct", required = true)
 	protected Account19 transferorAccount;
 	/**
-	 * Identification of an account owned by the investor at the old plan
-	 * manager (account servicer).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -712,11 +738,11 @@ public class PortfolioTransferInstructionV07 {
 			}
 		}
 	};
+	@XmlElement(name = "NmneeAcct")
 	protected Account19 nomineeAccount;
 	/**
-	 * Account held in the name of a party that is not the name of the
-	 * beneficial owner of the shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -763,11 +789,11 @@ public class PortfolioTransferInstructionV07 {
 			}
 		}
 	};
+	@XmlElement(name = "Trfee", required = true)
 	protected PartyIdentification70Choice transferee;
 	/**
-	 * Information related to the institution to which the financial instrument
-	 * is to be transferred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -815,10 +841,11 @@ public class PortfolioTransferInstructionV07 {
 			}
 		}
 	};
+	@XmlElement(name = "IntrmyInf")
 	protected List<Intermediary34> intermediaryInformation;
 	/**
-	 * Identification of a related party or intermediary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -856,11 +883,11 @@ public class PortfolioTransferInstructionV07 {
 			}
 		}
 	};
+	@XmlElement(name = "CshAcct")
 	protected CashAccount34 cashAccount;
 	/**
-	 * Identification of an account owned by the investor to which a cash entry
-	 * is made based on the transfer of asset(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -907,10 +934,11 @@ public class PortfolioTransferInstructionV07 {
 			}
 		}
 	};
+	@XmlElement(name = "PdctTrf", required = true)
 	protected List<ISATransfer22> productTransfer;
 	/**
-	 * Provides information related to the asset(s) transferred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -955,10 +983,11 @@ public class PortfolioTransferInstructionV07 {
 			}
 		}
 	};
+	@XmlElement(name = "MktPrctcVrsn")
 	protected MarketPracticeVersion1 marketPracticeVersion;
 	/**
-	 * Identifies the market practice to which the message conforms.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1005,11 +1034,11 @@ public class PortfolioTransferInstructionV07 {
 			}
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1059,6 +1088,10 @@ public class PortfolioTransferInstructionV07 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV07,
+						com.tools20022.repository.constraints.ConstraintPortfolioRule.forPortfolioTransferInstructionV07, com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferInstructionV07,
+						com.tools20022.repository.constraints.ConstraintCorporateRule.forPortfolioTransferInstructionV07, com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferInstructionV07,
+						com.tools20022.repository.constraints.ConstraintISARule.forPortfolioTransferInstructionV07);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PortfolioTransferInstructionV07";
 				definition = "Scope\r\nAn instructing party, for example, a (new) plan manager (Transferee), sends the PortfolioTransferInstruction message to the executing party, for example, a (old) plan manager (Transferor), on behalf of the initiating party, for example, an investor (client), to instruct the transfer of financial instruments from the clients account at the old plan manager (Transferor) to the clients account at the new plan manager (Transferee) through a nominee account.\r\nUsage\r\nThe PortfolioTransferInstruction message is used to instruct the withdrawal of one or more ISA or portfolio products from one account and deliver them to another account.\r\nThe PortfolioTransferInstruction message is used to instruct one or more transfers for one client. Each transfer is for delivery to the same account. The account may be owned by one or more individual investors or one or more corporate investors. Each transfer is identified in TransferIdentification.\r\nIf the instructing party does not have enough information to instruct the transfer, then it must first send a AccountHoldingInformationRequest message to the executing party in order to receive a AccountHoldingInformation message.";
@@ -1094,169 +1127,169 @@ public class PortfolioTransferInstructionV07 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgRef", required = true)
 	public MessageIdentification1 getMessageReference() {
 		return messageReference;
 	}
 
-	public void setMessageReference(MessageIdentification1 messageReference) {
-		this.messageReference = messageReference;
+	public PortfolioTransferInstructionV07 setMessageReference(MessageIdentification1 messageReference) {
+		this.messageReference = Objects.requireNonNull(messageReference);
+		return this;
 	}
 
-	@XmlElement(name = "PoolRef")
-	public AdditionalReference6 getPoolReference() {
-		return poolReference;
+	public Optional<AdditionalReference6> getPoolReference() {
+		return poolReference == null ? Optional.empty() : Optional.of(poolReference);
 	}
 
-	public void setPoolReference(AdditionalReference6 poolReference) {
+	public PortfolioTransferInstructionV07 setPoolReference(AdditionalReference6 poolReference) {
 		this.poolReference = poolReference;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef")
-	public AdditionalReference6 getPreviousReference() {
-		return previousReference;
+	public Optional<AdditionalReference6> getPreviousReference() {
+		return previousReference == null ? Optional.empty() : Optional.of(previousReference);
 	}
 
-	public void setPreviousReference(AdditionalReference6 previousReference) {
+	public PortfolioTransferInstructionV07 setPreviousReference(AdditionalReference6 previousReference) {
 		this.previousReference = previousReference;
+		return this;
 	}
 
-	@XmlElement(name = "RltdRef")
-	public AdditionalReference6 getRelatedReference() {
-		return relatedReference;
+	public Optional<AdditionalReference6> getRelatedReference() {
+		return relatedReference == null ? Optional.empty() : Optional.of(relatedReference);
 	}
 
-	public void setRelatedReference(AdditionalReference6 relatedReference) {
+	public PortfolioTransferInstructionV07 setRelatedReference(AdditionalReference6 relatedReference) {
 		this.relatedReference = relatedReference;
+		return this;
 	}
 
-	@XmlElement(name = "PmryIndvInvstr")
-	public IndividualPerson8 getPrimaryIndividualInvestor() {
-		return primaryIndividualInvestor;
+	public Optional<IndividualPerson8> getPrimaryIndividualInvestor() {
+		return primaryIndividualInvestor == null ? Optional.empty() : Optional.of(primaryIndividualInvestor);
 	}
 
-	public void setPrimaryIndividualInvestor(IndividualPerson8 primaryIndividualInvestor) {
+	public PortfolioTransferInstructionV07 setPrimaryIndividualInvestor(IndividualPerson8 primaryIndividualInvestor) {
 		this.primaryIndividualInvestor = primaryIndividualInvestor;
+		return this;
 	}
 
-	@XmlElement(name = "ScndryIndvInvstr")
-	public IndividualPerson8 getSecondaryIndividualInvestor() {
-		return secondaryIndividualInvestor;
+	public Optional<IndividualPerson8> getSecondaryIndividualInvestor() {
+		return secondaryIndividualInvestor == null ? Optional.empty() : Optional.of(secondaryIndividualInvestor);
 	}
 
-	public void setSecondaryIndividualInvestor(IndividualPerson8 secondaryIndividualInvestor) {
+	public PortfolioTransferInstructionV07 setSecondaryIndividualInvestor(IndividualPerson8 secondaryIndividualInvestor) {
 		this.secondaryIndividualInvestor = secondaryIndividualInvestor;
+		return this;
 	}
 
-	@XmlElement(name = "OthrIndvInvstr")
 	public List<IndividualPerson8> getOtherIndividualInvestor() {
-		return otherIndividualInvestor;
+		return otherIndividualInvestor == null ? otherIndividualInvestor = new ArrayList<>() : otherIndividualInvestor;
 	}
 
-	public void setOtherIndividualInvestor(List<IndividualPerson8> otherIndividualInvestor) {
-		this.otherIndividualInvestor = otherIndividualInvestor;
+	public PortfolioTransferInstructionV07 setOtherIndividualInvestor(List<IndividualPerson8> otherIndividualInvestor) {
+		this.otherIndividualInvestor = Objects.requireNonNull(otherIndividualInvestor);
+		return this;
 	}
 
-	@XmlElement(name = "PmryCorpInvstr")
-	public Organisation21 getPrimaryCorporateInvestor() {
-		return primaryCorporateInvestor;
+	public Optional<Organisation21> getPrimaryCorporateInvestor() {
+		return primaryCorporateInvestor == null ? Optional.empty() : Optional.of(primaryCorporateInvestor);
 	}
 
-	public void setPrimaryCorporateInvestor(Organisation21 primaryCorporateInvestor) {
+	public PortfolioTransferInstructionV07 setPrimaryCorporateInvestor(Organisation21 primaryCorporateInvestor) {
 		this.primaryCorporateInvestor = primaryCorporateInvestor;
+		return this;
 	}
 
-	@XmlElement(name = "ScndryCorpInvstr")
-	public Organisation21 getSecondaryCorporateInvestor() {
-		return secondaryCorporateInvestor;
+	public Optional<Organisation21> getSecondaryCorporateInvestor() {
+		return secondaryCorporateInvestor == null ? Optional.empty() : Optional.of(secondaryCorporateInvestor);
 	}
 
-	public void setSecondaryCorporateInvestor(Organisation21 secondaryCorporateInvestor) {
+	public PortfolioTransferInstructionV07 setSecondaryCorporateInvestor(Organisation21 secondaryCorporateInvestor) {
 		this.secondaryCorporateInvestor = secondaryCorporateInvestor;
+		return this;
 	}
 
-	@XmlElement(name = "OthrCorpInvstr")
 	public List<Organisation21> getOtherCorporateInvestor() {
-		return otherCorporateInvestor;
+		return otherCorporateInvestor == null ? otherCorporateInvestor = new ArrayList<>() : otherCorporateInvestor;
 	}
 
-	public void setOtherCorporateInvestor(List<Organisation21> otherCorporateInvestor) {
-		this.otherCorporateInvestor = otherCorporateInvestor;
+	public PortfolioTransferInstructionV07 setOtherCorporateInvestor(List<Organisation21> otherCorporateInvestor) {
+		this.otherCorporateInvestor = Objects.requireNonNull(otherCorporateInvestor);
+		return this;
 	}
 
-	@XmlElement(name = "TrfrAcct", required = true)
 	public Account19 getTransferorAccount() {
 		return transferorAccount;
 	}
 
-	public void setTransferorAccount(Account19 transferorAccount) {
-		this.transferorAccount = transferorAccount;
+	public PortfolioTransferInstructionV07 setTransferorAccount(Account19 transferorAccount) {
+		this.transferorAccount = Objects.requireNonNull(transferorAccount);
+		return this;
 	}
 
-	@XmlElement(name = "NmneeAcct")
-	public Account19 getNomineeAccount() {
-		return nomineeAccount;
+	public Optional<Account19> getNomineeAccount() {
+		return nomineeAccount == null ? Optional.empty() : Optional.of(nomineeAccount);
 	}
 
-	public void setNomineeAccount(Account19 nomineeAccount) {
+	public PortfolioTransferInstructionV07 setNomineeAccount(Account19 nomineeAccount) {
 		this.nomineeAccount = nomineeAccount;
+		return this;
 	}
 
-	@XmlElement(name = "Trfee", required = true)
 	public PartyIdentification70Choice getTransferee() {
 		return transferee;
 	}
 
-	public void setTransferee(PartyIdentification70Choice transferee) {
-		this.transferee = transferee;
+	public PortfolioTransferInstructionV07 setTransferee(PartyIdentification70Choice transferee) {
+		this.transferee = Objects.requireNonNull(transferee);
+		return this;
 	}
 
-	@XmlElement(name = "IntrmyInf")
 	public List<Intermediary34> getIntermediaryInformation() {
-		return intermediaryInformation;
+		return intermediaryInformation == null ? intermediaryInformation = new ArrayList<>() : intermediaryInformation;
 	}
 
-	public void setIntermediaryInformation(List<Intermediary34> intermediaryInformation) {
-		this.intermediaryInformation = intermediaryInformation;
+	public PortfolioTransferInstructionV07 setIntermediaryInformation(List<Intermediary34> intermediaryInformation) {
+		this.intermediaryInformation = Objects.requireNonNull(intermediaryInformation);
+		return this;
 	}
 
-	@XmlElement(name = "CshAcct")
-	public CashAccount34 getCashAccount() {
-		return cashAccount;
+	public Optional<CashAccount34> getCashAccount() {
+		return cashAccount == null ? Optional.empty() : Optional.of(cashAccount);
 	}
 
-	public void setCashAccount(CashAccount34 cashAccount) {
+	public PortfolioTransferInstructionV07 setCashAccount(CashAccount34 cashAccount) {
 		this.cashAccount = cashAccount;
+		return this;
 	}
 
-	@XmlElement(name = "PdctTrf", required = true)
 	public List<ISATransfer22> getProductTransfer() {
-		return productTransfer;
+		return productTransfer == null ? productTransfer = new ArrayList<>() : productTransfer;
 	}
 
-	public void setProductTransfer(List<ISATransfer22> productTransfer) {
-		this.productTransfer = productTransfer;
+	public PortfolioTransferInstructionV07 setProductTransfer(List<ISATransfer22> productTransfer) {
+		this.productTransfer = Objects.requireNonNull(productTransfer);
+		return this;
 	}
 
-	@XmlElement(name = "MktPrctcVrsn")
-	public MarketPracticeVersion1 getMarketPracticeVersion() {
-		return marketPracticeVersion;
+	public Optional<MarketPracticeVersion1> getMarketPracticeVersion() {
+		return marketPracticeVersion == null ? Optional.empty() : Optional.of(marketPracticeVersion);
 	}
 
-	public void setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
+	public PortfolioTransferInstructionV07 setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
 		this.marketPracticeVersion = marketPracticeVersion;
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<Extension1> extension) {
-		this.extension = extension;
+	public PortfolioTransferInstructionV07 setExtension(List<Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.012.07.07")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.012.001.07")
 	static public class Document {
 		@XmlElement(name = "PrtflTrfInstr", required = true)
 		public PortfolioTransferInstructionV07 messageBody;

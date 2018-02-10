@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -33,6 +34,8 @@ import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -107,8 +110,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,17 +124,18 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionInstructedBalanceOptionInstructionDetailsSD1", propOrder = {"placeAndName", "optionNumber", "transactionIdentification", "transactionSequenceNumber", "transactionIdentificationDate",
 		"transactionContraCUSIP", "transactionIdentificationQuantity", "transactionIdentificationOversubscriptionQuantity", "transactionIdentificationStatus", "transactionIdentificationProtectDate",
 		"transactionIdentificationCoverProtectDate", "transactionConditionalQuantity", "transactionTenderBidPrice", "customerReferenceIdentification"})
 public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +162,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,10 +173,11 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnNb", required = true)
 	protected OptionNumber1Choice optionNumber;
 	/**
-	 * Number identifying the available corporate action options.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -191,6 +196,9 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OptnNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13A::CAON</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -205,9 +213,10 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	public static final MMMessageAssociationEnd mmOptionNumber = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13A::CAON"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
@@ -217,13 +226,11 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			type_lazy = () -> OptionNumber1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TxId", required = true)
 	protected Max15Text transactionIdentification;
 	/**
-	 * Unique number assigned by the Depository. Transaction identification will
-	 * be either the DTC Instruction Reference Number for reorganisation
-	 * instructions (VOI) or the DAM Reference Number for custody /
-	 * reorganisation deposits.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -252,7 +259,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,11 +270,11 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			simpleType_lazy = () -> Max15Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TxSeqNb")
 	protected Max3NumericText transactionSequenceNumber;
 	/**
-	 * Number which further identifies DTC intsruction reference number. Not
-	 * applicable to reorganisation / custody deposits.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -297,7 +304,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmTransactionSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TxSeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -308,11 +315,11 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "TxIdDt", required = true)
 	protected ISODateTime transactionIdentificationDate;
 	/**
-	 * Instruction date and time for reorganisation instructions or the deposit
-	 * date for reorganisation / custody deposits.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -341,7 +348,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentificationDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TxIdDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -352,10 +359,11 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "TxContraCUSIP")
 	protected OtherIdentification2 transactionContraCUSIP;
 	/**
-	 * Contra CUSIP Identification of the option instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -381,7 +389,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionContraCUSIP = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TxContraCUSIP";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -393,11 +401,11 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			type_lazy = () -> com.tools20022.repository.msg.OtherIdentification2.mmObject();
 		}
 	};
+	@XmlElement(name = "TxIdQty", required = true)
 	protected FinancialInstrumentQuantity15Choice transactionIdentificationQuantity;
 	/**
-	 * Instructed quantity for reorganisation instructions or the deposit
-	 * quantity for reorganisation / custody deposits.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -426,7 +434,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionIdentificationQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TxIdQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -438,10 +446,11 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TxIdOvrsbcptQty")
 	protected FinancialInstrumentQuantity15Choice transactionIdentificationOversubscriptionQuantity;
 	/**
-	 * Quantity relating only to the oversubscription.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -468,7 +477,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionIdentificationOversubscriptionQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TxIdOvrsbcptQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -480,10 +489,11 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TxIdSts", required = true)
 	protected DTCInstructionStatus2Code transactionIdentificationStatus;
 	/**
-	 * Status of the instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -511,7 +521,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentificationStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TxIdSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -522,10 +532,11 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			simpleType_lazy = () -> DTCInstructionStatus2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TxIdPrtctDt")
 	protected ISODateTime transactionIdentificationProtectDate;
 	/**
-	 * Date and time of the protect instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -552,7 +563,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentificationProtectDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TxIdPrtctDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -563,10 +574,11 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "TxIdCoverPrtctDt")
 	protected ISODateTime transactionIdentificationCoverProtectDate;
 	/**
-	 * Date and time of the cover protect.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -593,7 +605,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentificationCoverProtectDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TxIdCoverPrtctDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -604,10 +616,11 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "TxCondlQty")
 	protected FinancialInstrumentQuantity15Choice transactionConditionalQuantity;
 	/**
-	 * Conditional quantity on the instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -634,7 +647,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionConditionalQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TxCondlQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -646,10 +659,11 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TxTndrBidPric")
 	protected PriceFormat57Choice transactionTenderBidPrice;
 	/**
-	 * Tender bid price of the instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -675,7 +689,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionTenderBidPrice = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TxTndrBidPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -687,10 +701,11 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			type_lazy = () -> PriceFormat57Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CstmrRefId")
 	protected Max15Text customerReferenceIdentification;
 	/**
-	 * Customer identification entered by client upon instruction submission.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -718,7 +733,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmCustomerReferenceIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrRefId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -733,14 +748,21 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmPlaceAndName, CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmOptionNumber,
-						CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionIdentification, CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionSequenceNumber,
-						CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionIdentificationDate, CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionContraCUSIP,
-						CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionIdentificationQuantity, CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionIdentificationOversubscriptionQuantity,
-						CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionIdentificationStatus, CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionIdentificationProtectDate,
-						CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionIdentificationCoverProtectDate, CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionConditionalQuantity,
-						CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionTenderBidPrice, CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmCustomerReferenceIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmPlaceAndName,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmOptionNumber,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionIdentification,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionSequenceNumber,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionIdentificationDate,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionContraCUSIP,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionIdentificationQuantity,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionIdentificationOversubscriptionQuantity,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionIdentificationStatus,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionIdentificationProtectDate,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionIdentificationCoverProtectDate,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionConditionalQuantity,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmTransactionTenderBidPrice,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmCustomerReferenceIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionInstructedBalanceOptionInstructionDetailsSD1";
 				definition = "Provides additional information regarding corporate action instructed balance details at option level.";
@@ -749,129 +771,129 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionInstructedBalanceOptionInstructionDetailsSD1 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "OptnNb", required = true)
 	public OptionNumber1Choice getOptionNumber() {
 		return optionNumber;
 	}
 
-	public void setOptionNumber(OptionNumber1Choice optionNumber) {
-		this.optionNumber = optionNumber;
+	public CorporateActionInstructedBalanceOptionInstructionDetailsSD1 setOptionNumber(OptionNumber1Choice optionNumber) {
+		this.optionNumber = Objects.requireNonNull(optionNumber);
+		return this;
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public Max15Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(Max15Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public CorporateActionInstructedBalanceOptionInstructionDetailsSD1 setTransactionIdentification(Max15Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TxSeqNb")
-	public Max3NumericText getTransactionSequenceNumber() {
-		return transactionSequenceNumber;
+	public Optional<Max3NumericText> getTransactionSequenceNumber() {
+		return transactionSequenceNumber == null ? Optional.empty() : Optional.of(transactionSequenceNumber);
 	}
 
-	public void setTransactionSequenceNumber(Max3NumericText transactionSequenceNumber) {
+	public CorporateActionInstructedBalanceOptionInstructionDetailsSD1 setTransactionSequenceNumber(Max3NumericText transactionSequenceNumber) {
 		this.transactionSequenceNumber = transactionSequenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "TxIdDt", required = true)
 	public ISODateTime getTransactionIdentificationDate() {
 		return transactionIdentificationDate;
 	}
 
-	public void setTransactionIdentificationDate(ISODateTime transactionIdentificationDate) {
-		this.transactionIdentificationDate = transactionIdentificationDate;
+	public CorporateActionInstructedBalanceOptionInstructionDetailsSD1 setTransactionIdentificationDate(ISODateTime transactionIdentificationDate) {
+		this.transactionIdentificationDate = Objects.requireNonNull(transactionIdentificationDate);
+		return this;
 	}
 
-	@XmlElement(name = "TxContraCUSIP")
-	public OtherIdentification2 getTransactionContraCUSIP() {
-		return transactionContraCUSIP;
+	public Optional<OtherIdentification2> getTransactionContraCUSIP() {
+		return transactionContraCUSIP == null ? Optional.empty() : Optional.of(transactionContraCUSIP);
 	}
 
-	public void setTransactionContraCUSIP(com.tools20022.repository.msg.OtherIdentification2 transactionContraCUSIP) {
+	public CorporateActionInstructedBalanceOptionInstructionDetailsSD1 setTransactionContraCUSIP(com.tools20022.repository.msg.OtherIdentification2 transactionContraCUSIP) {
 		this.transactionContraCUSIP = transactionContraCUSIP;
+		return this;
 	}
 
-	@XmlElement(name = "TxIdQty", required = true)
 	public FinancialInstrumentQuantity15Choice getTransactionIdentificationQuantity() {
 		return transactionIdentificationQuantity;
 	}
 
-	public void setTransactionIdentificationQuantity(FinancialInstrumentQuantity15Choice transactionIdentificationQuantity) {
-		this.transactionIdentificationQuantity = transactionIdentificationQuantity;
+	public CorporateActionInstructedBalanceOptionInstructionDetailsSD1 setTransactionIdentificationQuantity(FinancialInstrumentQuantity15Choice transactionIdentificationQuantity) {
+		this.transactionIdentificationQuantity = Objects.requireNonNull(transactionIdentificationQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "TxIdOvrsbcptQty")
-	public FinancialInstrumentQuantity15Choice getTransactionIdentificationOversubscriptionQuantity() {
-		return transactionIdentificationOversubscriptionQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getTransactionIdentificationOversubscriptionQuantity() {
+		return transactionIdentificationOversubscriptionQuantity == null ? Optional.empty() : Optional.of(transactionIdentificationOversubscriptionQuantity);
 	}
 
-	public void setTransactionIdentificationOversubscriptionQuantity(FinancialInstrumentQuantity15Choice transactionIdentificationOversubscriptionQuantity) {
+	public CorporateActionInstructedBalanceOptionInstructionDetailsSD1 setTransactionIdentificationOversubscriptionQuantity(FinancialInstrumentQuantity15Choice transactionIdentificationOversubscriptionQuantity) {
 		this.transactionIdentificationOversubscriptionQuantity = transactionIdentificationOversubscriptionQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "TxIdSts", required = true)
 	public DTCInstructionStatus2Code getTransactionIdentificationStatus() {
 		return transactionIdentificationStatus;
 	}
 
-	public void setTransactionIdentificationStatus(DTCInstructionStatus2Code transactionIdentificationStatus) {
-		this.transactionIdentificationStatus = transactionIdentificationStatus;
+	public CorporateActionInstructedBalanceOptionInstructionDetailsSD1 setTransactionIdentificationStatus(DTCInstructionStatus2Code transactionIdentificationStatus) {
+		this.transactionIdentificationStatus = Objects.requireNonNull(transactionIdentificationStatus);
+		return this;
 	}
 
-	@XmlElement(name = "TxIdPrtctDt")
-	public ISODateTime getTransactionIdentificationProtectDate() {
-		return transactionIdentificationProtectDate;
+	public Optional<ISODateTime> getTransactionIdentificationProtectDate() {
+		return transactionIdentificationProtectDate == null ? Optional.empty() : Optional.of(transactionIdentificationProtectDate);
 	}
 
-	public void setTransactionIdentificationProtectDate(ISODateTime transactionIdentificationProtectDate) {
+	public CorporateActionInstructedBalanceOptionInstructionDetailsSD1 setTransactionIdentificationProtectDate(ISODateTime transactionIdentificationProtectDate) {
 		this.transactionIdentificationProtectDate = transactionIdentificationProtectDate;
+		return this;
 	}
 
-	@XmlElement(name = "TxIdCoverPrtctDt")
-	public ISODateTime getTransactionIdentificationCoverProtectDate() {
-		return transactionIdentificationCoverProtectDate;
+	public Optional<ISODateTime> getTransactionIdentificationCoverProtectDate() {
+		return transactionIdentificationCoverProtectDate == null ? Optional.empty() : Optional.of(transactionIdentificationCoverProtectDate);
 	}
 
-	public void setTransactionIdentificationCoverProtectDate(ISODateTime transactionIdentificationCoverProtectDate) {
+	public CorporateActionInstructedBalanceOptionInstructionDetailsSD1 setTransactionIdentificationCoverProtectDate(ISODateTime transactionIdentificationCoverProtectDate) {
 		this.transactionIdentificationCoverProtectDate = transactionIdentificationCoverProtectDate;
+		return this;
 	}
 
-	@XmlElement(name = "TxCondlQty")
-	public FinancialInstrumentQuantity15Choice getTransactionConditionalQuantity() {
-		return transactionConditionalQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getTransactionConditionalQuantity() {
+		return transactionConditionalQuantity == null ? Optional.empty() : Optional.of(transactionConditionalQuantity);
 	}
 
-	public void setTransactionConditionalQuantity(FinancialInstrumentQuantity15Choice transactionConditionalQuantity) {
+	public CorporateActionInstructedBalanceOptionInstructionDetailsSD1 setTransactionConditionalQuantity(FinancialInstrumentQuantity15Choice transactionConditionalQuantity) {
 		this.transactionConditionalQuantity = transactionConditionalQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "TxTndrBidPric")
-	public PriceFormat57Choice getTransactionTenderBidPrice() {
-		return transactionTenderBidPrice;
+	public Optional<PriceFormat57Choice> getTransactionTenderBidPrice() {
+		return transactionTenderBidPrice == null ? Optional.empty() : Optional.of(transactionTenderBidPrice);
 	}
 
-	public void setTransactionTenderBidPrice(PriceFormat57Choice transactionTenderBidPrice) {
+	public CorporateActionInstructedBalanceOptionInstructionDetailsSD1 setTransactionTenderBidPrice(PriceFormat57Choice transactionTenderBidPrice) {
 		this.transactionTenderBidPrice = transactionTenderBidPrice;
+		return this;
 	}
 
-	@XmlElement(name = "CstmrRefId")
-	public Max15Text getCustomerReferenceIdentification() {
-		return customerReferenceIdentification;
+	public Optional<Max15Text> getCustomerReferenceIdentification() {
+		return customerReferenceIdentification == null ? Optional.empty() : Optional.of(customerReferenceIdentification);
 	}
 
-	public void setCustomerReferenceIdentification(Max15Text customerReferenceIdentification) {
+	public CorporateActionInstructedBalanceOptionInstructionDetailsSD1 setCustomerReferenceIdentification(Max15Text customerReferenceIdentification) {
 		this.customerReferenceIdentification = customerReferenceIdentification;
+		return this;
 	}
 }

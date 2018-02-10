@@ -26,9 +26,11 @@ import com.tools20022.repository.entity.AccountService;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Services linked to an account which are available to the account owner or to
@@ -41,6 +43,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.AccountService
+ * AccountService}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -68,52 +73,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CashAccountService#mmCashAccount
  * CashAccountService.mmCashAccount}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashManagementService
- * CashManagementService}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BankOperation BankOperation}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.DebitCreditFacility
- * DebitCreditFacility}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.AccountService
- * AccountService}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BillingCompensation1
- * BillingCompensation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingServiceIdentification1
- * BillingServiceIdentification1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingServiceParameters1
- * BillingServiceParameters1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingServicesAmount1
- * BillingServicesAmount1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingServicesAmount2
- * BillingServicesAmount2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingService1
- * BillingService1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingServiceIdentification2
- * BillingServiceIdentification2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingServiceParameters2
- * BillingServiceParameters2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingServicesAmount3
- * BillingServicesAmount3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingServiceAdjustment1
- * BillingServiceAdjustment1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingServiceIdentification3
- * BillingServiceIdentification3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingServiceParameters3
- * BillingServiceParameters3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingService2
- * BillingService2}</li>
  * </ul>
  * </li>
  * <li>
@@ -197,11 +156,54 @@ import java.util.List;
  * BillingStatement2.mmServiceAdjustment}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CashManagementService
+ * CashManagementService}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BankOperation BankOperation}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.DebitCreditFacility
+ * DebitCreditFacility}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingCompensation1
+ * BillingCompensation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingServiceIdentification1
+ * BillingServiceIdentification1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingServiceParameters1
+ * BillingServiceParameters1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingServicesAmount1
+ * BillingServicesAmount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingServicesAmount2
+ * BillingServicesAmount2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingService1
+ * BillingService1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingServiceIdentification2
+ * BillingServiceIdentification2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingServiceParameters2
+ * BillingServiceParameters2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingServicesAmount3
+ * BillingServicesAmount3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingServiceAdjustment1
+ * BillingServiceAdjustment1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingServiceIdentification3
+ * BillingServiceIdentification3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingServiceParameters3
+ * BillingServiceParameters3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingService2
+ * BillingService2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -219,9 +221,8 @@ public class CashAccountService extends AccountService {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.CashAccountMandate> cashAccountMandate;
 	/**
-	 * Mandate which specifies the services that can be operated by the mandate
-	 * holder.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -268,8 +269,8 @@ public class CashAccountService extends AccountService {
 	public static final MMBusinessAssociationEnd mmCashAccountMandate = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountReport1.mmMandate, AccountReport15.mmMandate, AccountReport14.mmMandate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccountMandate";
 			definition = "Mandate which specifies the services that can be operated by the mandate holder.";
@@ -281,9 +282,8 @@ public class CashAccountService extends AccountService {
 	};
 	protected CompensationMethodCode compensationMethod;
 	/**
-	 * Defines if and how charges and taxes due are paid to the account
-	 * servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -323,8 +323,8 @@ public class CashAccountService extends AccountService {
 	public static final MMBusinessAttribute mmCompensationMethod = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashAccountCharacteristics1.mmCompensationMethod, CashAccountCharacteristics2.mmCompensationMethod);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CompensationMethod";
 			definition = "Defines if and how charges and taxes due are paid to the account servicer.";
@@ -343,8 +343,8 @@ public class CashAccountService extends AccountService {
 	};
 	protected BillingCurrencyTypeCode billingCurrency;
 	/**
-	 * Currency used for billing the services related to the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -383,8 +383,8 @@ public class CashAccountService extends AccountService {
 	public static final MMBusinessAttribute mmBillingCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingBalance1.mmCurrencyType, BillingCompensation1.mmCurrencyType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BillingCurrency";
 			definition = "Currency used for billing the services related to the account.";
@@ -403,8 +403,8 @@ public class CashAccountService extends AccountService {
 	};
 	protected BillingChargeMethodCode billingChargeMethod;
 	/**
-	 * Defines how the billing charge is calculated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -438,8 +438,8 @@ public class CashAccountService extends AccountService {
 	public static final MMBusinessAttribute mmBillingChargeMethod = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingPrice1.mmMethod);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BillingChargeMethod";
 			definition = "Defines how the billing charge is calculated.";
@@ -458,8 +458,8 @@ public class CashAccountService extends AccountService {
 	};
 	protected ServicePaymentMethodCode paymentMethod;
 	/**
-	 * Specifies the different payment methods for an account service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -501,8 +501,8 @@ public class CashAccountService extends AccountService {
 	public static final MMBusinessAttribute mmPaymentMethod = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingService1.mmPaymentMethod, InvoiceLegalIssue1.mmPaymentMethod, BillingService2.mmPaymentMethod);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentMethod";
 			definition = "Specifies the different payment methods for an account service.";
@@ -521,10 +521,8 @@ public class CashAccountService extends AccountService {
 	};
 	protected CashAccountContract cashAccountContract;
 	/**
-	 * Cash account contract which specifies the services linked to a cash
-	 * account. It is derived from the association between AccountService and
-	 * AccountContract.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -559,8 +557,8 @@ public class CashAccountService extends AccountService {
 	 */
 	public static final MMBusinessAssociationEnd mmCashAccountContract = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccountContract";
 			definition = "Cash account contract which specifies the services linked to a cash account. It is derived from the association between AccountService and AccountContract.";
@@ -573,8 +571,8 @@ public class CashAccountService extends AccountService {
 	};
 	protected GenericIdentification identification;
 	/**
-	 * Identifies the bank operation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -608,8 +606,8 @@ public class CashAccountService extends AccountService {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identifies the bank operation.";
@@ -622,9 +620,8 @@ public class CashAccountService extends AccountService {
 	};
 	protected CashAccount cashAccount;
 	/**
-	 * Cash account for which services are specified. It is derived from the
-	 * association between AccountService and Account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -659,8 +656,8 @@ public class CashAccountService extends AccountService {
 	 */
 	public static final MMBusinessAssociationEnd mmCashAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
 			definition = "Cash account for which services are specified. It is derived from the association between AccountService and Account.";
@@ -675,7 +672,7 @@ public class CashAccountService extends AccountService {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccountService";
 				definition = "Services linked to an account which are available to the account owner or to the holder of a mandate. The exercise of these services may be submitted to a limit.";
@@ -705,66 +702,74 @@ public class CashAccountService extends AccountService {
 	}
 
 	public List<CashAccountMandate> getCashAccountMandate() {
-		return cashAccountMandate;
+		return cashAccountMandate == null ? cashAccountMandate = new ArrayList<>() : cashAccountMandate;
 	}
 
-	public void setCashAccountMandate(List<com.tools20022.repository.entity.CashAccountMandate> cashAccountMandate) {
-		this.cashAccountMandate = cashAccountMandate;
+	public CashAccountService setCashAccountMandate(List<com.tools20022.repository.entity.CashAccountMandate> cashAccountMandate) {
+		this.cashAccountMandate = Objects.requireNonNull(cashAccountMandate);
+		return this;
 	}
 
 	public CompensationMethodCode getCompensationMethod() {
 		return compensationMethod;
 	}
 
-	public void setCompensationMethod(CompensationMethodCode compensationMethod) {
-		this.compensationMethod = compensationMethod;
+	public CashAccountService setCompensationMethod(CompensationMethodCode compensationMethod) {
+		this.compensationMethod = Objects.requireNonNull(compensationMethod);
+		return this;
 	}
 
 	public BillingCurrencyTypeCode getBillingCurrency() {
 		return billingCurrency;
 	}
 
-	public void setBillingCurrency(BillingCurrencyTypeCode billingCurrency) {
-		this.billingCurrency = billingCurrency;
+	public CashAccountService setBillingCurrency(BillingCurrencyTypeCode billingCurrency) {
+		this.billingCurrency = Objects.requireNonNull(billingCurrency);
+		return this;
 	}
 
 	public BillingChargeMethodCode getBillingChargeMethod() {
 		return billingChargeMethod;
 	}
 
-	public void setBillingChargeMethod(BillingChargeMethodCode billingChargeMethod) {
-		this.billingChargeMethod = billingChargeMethod;
+	public CashAccountService setBillingChargeMethod(BillingChargeMethodCode billingChargeMethod) {
+		this.billingChargeMethod = Objects.requireNonNull(billingChargeMethod);
+		return this;
 	}
 
 	public ServicePaymentMethodCode getPaymentMethod() {
 		return paymentMethod;
 	}
 
-	public void setPaymentMethod(ServicePaymentMethodCode paymentMethod) {
-		this.paymentMethod = paymentMethod;
+	public CashAccountService setPaymentMethod(ServicePaymentMethodCode paymentMethod) {
+		this.paymentMethod = Objects.requireNonNull(paymentMethod);
+		return this;
 	}
 
 	public CashAccountContract getCashAccountContract() {
 		return cashAccountContract;
 	}
 
-	public void setCashAccountContract(com.tools20022.repository.entity.CashAccountContract cashAccountContract) {
-		this.cashAccountContract = cashAccountContract;
+	public CashAccountService setCashAccountContract(com.tools20022.repository.entity.CashAccountContract cashAccountContract) {
+		this.cashAccountContract = Objects.requireNonNull(cashAccountContract);
+		return this;
 	}
 
 	public GenericIdentification getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.entity.GenericIdentification identification) {
-		this.identification = identification;
+	public CashAccountService setIdentification(com.tools20022.repository.entity.GenericIdentification identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
 	public CashAccount getCashAccount() {
 		return cashAccount;
 	}
 
-	public void setCashAccount(com.tools20022.repository.entity.CashAccount cashAccount) {
-		this.cashAccount = cashAccount;
+	public CashAccountService setCashAccount(com.tools20022.repository.entity.CashAccount cashAccount) {
+		this.cashAccount = Objects.requireNonNull(cashAccount);
+		return this;
 	}
 }

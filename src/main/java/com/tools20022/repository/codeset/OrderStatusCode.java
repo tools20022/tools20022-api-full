@@ -17,12 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.OrderStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the current status of the order.
@@ -31,85 +37,77 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmNew
- * OrderStatusCode.mmNew}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#New
+ * OrderStatusCode.New}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmPartialFill
- * OrderStatusCode.mmPartialFill}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmFilled
- * OrderStatusCode.mmFilled}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#PartialFill
+ * OrderStatusCode.PartialFill}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#Filled
+ * OrderStatusCode.Filled}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#DoneForDay
+ * OrderStatusCode.DoneForDay}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#Cancelled
+ * OrderStatusCode.Cancelled}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#Replaced
+ * OrderStatusCode.Replaced}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmDoneForDay
- * OrderStatusCode.mmDoneForDay}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#PendingCancel
+ * OrderStatusCode.PendingCancel}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#Stopped
+ * OrderStatusCode.Stopped}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#Rejected
+ * OrderStatusCode.Rejected}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#Suspended
+ * OrderStatusCode.Suspended}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#PendingNew
+ * OrderStatusCode.PendingNew}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#Calculated
+ * OrderStatusCode.Calculated}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#Expired
+ * OrderStatusCode.Expired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmCancelled
- * OrderStatusCode.mmCancelled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmReplaced
- * OrderStatusCode.mmReplaced}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#AcceptedForBidding
+ * OrderStatusCode.AcceptedForBidding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmPendingCancel
- * OrderStatusCode.mmPendingCancel}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmStopped
- * OrderStatusCode.mmStopped}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmRejected
- * OrderStatusCode.mmRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#PendingReplace
+ * OrderStatusCode.PendingReplace}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#Completed
+ * OrderStatusCode.Completed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#Accepted
+ * OrderStatusCode.Accepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmSuspended
- * OrderStatusCode.mmSuspended}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#AlreadyExecuted
+ * OrderStatusCode.AlreadyExecuted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmPendingNew
- * OrderStatusCode.mmPendingNew}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#SentToNextParty
+ * OrderStatusCode.SentToNextParty}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#Received
+ * OrderStatusCode.Received}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#Settled
+ * OrderStatusCode.Settled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmCalculated
- * OrderStatusCode.mmCalculated}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmExpired
- * OrderStatusCode.mmExpired}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#CommunicationProblemNextParty
+ * OrderStatusCode.CommunicationProblemNextParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmAcceptedForBidding
- * OrderStatusCode.mmAcceptedForBidding}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#ConfirmationAmendment
+ * OrderStatusCode.ConfirmationAmendment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmPendingReplace
- * OrderStatusCode.mmPendingReplace}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#PartiallyDone
+ * OrderStatusCode.PartiallyDone}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#Open
+ * OrderStatusCode.Open}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmCompleted
- * OrderStatusCode.mmCompleted}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmAccepted
- * OrderStatusCode.mmAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#InvalidAgentConfirmation
+ * OrderStatusCode.InvalidAgentConfirmation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmAlreadyExecuted
- * OrderStatusCode.mmAlreadyExecuted}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmSentToNextParty
- * OrderStatusCode.mmSentToNextParty}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmReceived
- * OrderStatusCode.mmReceived}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmSettled
- * OrderStatusCode.mmSettled}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmCommunicationProblemNextParty
- * OrderStatusCode.mmCommunicationProblemNextParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmConfirmationAmendment
- * OrderStatusCode.mmConfirmationAmendment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmPartiallyDone
- * OrderStatusCode.mmPartiallyDone}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmOpen
- * OrderStatusCode.mmOpen}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmInvalidAgentConfirmation
- * OrderStatusCode.mmInvalidAgentConfirmation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmCashSettledOrderNotExecuted
- * OrderStatusCode.mmCashSettledOrderNotExecuted}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmExecuting
- * OrderStatusCode.mmExecuting}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmCancelling
- * OrderStatusCode.mmCancelling}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#mmAlert
- * OrderStatusCode.mmAlert}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatusCode#CashSettledOrderNotExecuted
+ * OrderStatusCode.CashSettledOrderNotExecuted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#Executing
+ * OrderStatusCode.Executing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#Cancelling
+ * OrderStatusCode.Cancelling}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatusCode#Alert
+ * OrderStatusCode.Alert}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -136,8 +134,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = FIXSynonym: FIX 39</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -154,7 +155,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the current status of the order."</li>
  * </ul>
  */
-public class OrderStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OrderStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -168,6 +170,9 @@ public class OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "NEWW"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -178,12 +183,13 @@ public class OrderStatusCode {
 	 * definition} = "Outstanding order with no executions."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNew = new MMCode() {
+	public static final OrderStatusCode New = new OrderStatusCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "New";
 			definition = "Outstanding order with no executions.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "NEWW";
 		}
 	};
@@ -198,6 +204,9 @@ public class OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PARF"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -209,12 +218,13 @@ public class OrderStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialFill = new MMCode() {
+	public static final OrderStatusCode PartialFill = new OrderStatusCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartialFill";
 			definition = "Outstanding order with executions and remaining quantity.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "PARF";
 		}
 	};
@@ -229,6 +239,9 @@ public class OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FILL"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -239,12 +252,13 @@ public class OrderStatusCode {
 	 * definition} = "Order completely filled, no remaining quantity."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFilled = new MMCode() {
+	public static final OrderStatusCode Filled = new OrderStatusCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Filled";
 			definition = "Order completely filled, no remaining quantity.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "FILL";
 		}
 	};
@@ -260,6 +274,9 @@ public class OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "DONE"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -272,12 +289,13 @@ public class OrderStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDoneForDay = new MMCode() {
+	public static final OrderStatusCode DoneForDay = new OrderStatusCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DoneForDay";
 			definition = "Order has been partially filled, and is done for the day, ie, no further executions will take place today.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "DONE";
 		}
 	};
@@ -292,6 +310,9 @@ public class OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CANC"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -302,12 +323,13 @@ public class OrderStatusCode {
 	 * definition} = "Cancelled order with or without executions."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelled = new MMCode() {
+	public static final OrderStatusCode Cancelled = new OrderStatusCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cancelled";
 			definition = "Cancelled order with or without executions.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "CANC";
 		}
 	};
@@ -322,6 +344,9 @@ public class OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "REPL"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -332,12 +357,13 @@ public class OrderStatusCode {
 	 * definition} = "Order has been replaced."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReplaced = new MMCode() {
+	public static final OrderStatusCode Replaced = new OrderStatusCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Replaced";
 			definition = "Order has been replaced.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "REPL";
 		}
 	};
@@ -354,6 +380,9 @@ public class OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CANP"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -366,12 +395,13 @@ public class OrderStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingCancel = new MMCode() {
+	public static final OrderStatusCode PendingCancel = new OrderStatusCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PendingCancel";
 			definition = "Order with an Order Cancel Request pending, used to confirm receipt of an Order Cancel Request.  Does not indicate that the order has been cancelled.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "CANP";
 		}
 	};
@@ -387,6 +417,9 @@ public class OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "STOP"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -399,12 +432,13 @@ public class OrderStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmStopped = new MMCode() {
+	public static final OrderStatusCode Stopped = new OrderStatusCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Stopped";
 			definition = "Order has been stopped at the exchange. Used when guaranteeing or protecting a price and quantity.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "STOP";
 		}
 	};
@@ -421,6 +455,9 @@ public class OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "REJT"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -433,12 +470,13 @@ public class OrderStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRejected = new MMCode() {
+	public static final OrderStatusCode Rejected = new OrderStatusCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rejected";
 			definition = "Order has been rejected by sell-side.  NOTE:  An order can be rejected subsequent to order acknowledgment, i.e. an order can pass from New to Rejected status.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "REJT";
 		}
 	};
@@ -453,6 +491,9 @@ public class OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SUSP"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -464,12 +505,13 @@ public class OrderStatusCode {
 	 * "Order has been placed in suspended state at the request of the client."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuspended = new MMCode() {
+	public static final OrderStatusCode Suspended = new OrderStatusCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Suspended";
 			definition = "Order has been placed in suspended state at the request of the client.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "SUSP";
 		}
 	};
@@ -486,6 +528,9 @@ public class OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PENN"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -498,12 +543,13 @@ public class OrderStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingNew = new MMCode() {
+	public static final OrderStatusCode PendingNew = new OrderStatusCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PendingNew";
 			definition = "Order has been received by sell-side system but not yet accepted for execution.  An execution message with this status will only be sent in response to a Status Request message.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "PENN";
 		}
 	};
@@ -520,6 +566,9 @@ public class OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CALC"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -532,12 +581,13 @@ public class OrderStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCalculated = new MMCode() {
+	public static final OrderStatusCode Calculated = new OrderStatusCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Calculated";
 			definition = "Order has been completed for the day (either filled or done for day).  Commission or currency settlement details have been calculated and reported in this execution message.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "CALC";
 		}
 	};
@@ -553,6 +603,9 @@ public class OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "EXPI"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -565,12 +618,13 @@ public class OrderStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmExpired = new MMCode() {
+	public static final OrderStatusCode Expired = new OrderStatusCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Expired";
 			definition = "Order has been cancelled in the broker's system due to time in force instructions.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "EXPI";
 		}
 	};
@@ -585,6 +639,9 @@ public class OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "ACBI"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -596,12 +653,13 @@ public class OrderStatusCode {
 	 * "Order has been received and is being evaluated for pricing."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedForBidding = new MMCode() {
+	public static final OrderStatusCode AcceptedForBidding = new OrderStatusCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AcceptedForBidding";
 			definition = "Order has been received and is being evaluated for pricing.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "ACBI";
 		}
 	};
@@ -618,6 +676,9 @@ public class OrderStatusCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PENR"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: FIX 39</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -630,12 +691,13 @@ public class OrderStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingReplace = new MMCode() {
+	public static final OrderStatusCode PendingReplace = new OrderStatusCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PendingReplace";
 			definition = "Order with an Order Cancel/Replace Request pending, used to confirm receipt of an Order Cancel/Replace Request. Does not indicate that the order has been replaced.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "PENR";
 		}
 	};
@@ -663,12 +725,12 @@ public class OrderStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompleted = new MMCode() {
+	public static final OrderStatusCode Completed = new OrderStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Completed";
 			definition = "Request for cancellation instruction for the order has been accepted and processed; the order has been cancelled.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "CAND";
 		}
 	};
@@ -696,12 +758,12 @@ public class OrderStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final OrderStatusCode Accepted = new OrderStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Accepted";
 			definition = "Order is accepted and is ready for execution (execution is the moment when pricing is applied).";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "PACK";
 		}
 	};
@@ -727,12 +789,12 @@ public class OrderStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAlreadyExecuted = new MMCode() {
+	public static final OrderStatusCode AlreadyExecuted = new OrderStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AlreadyExecuted";
 			definition = "Order is already executed and confirmation has been sent.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "COSE";
 		}
 	};
@@ -758,12 +820,12 @@ public class OrderStatusCode {
 	 * "Order has been sent to the next party, eg, the next intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSentToNextParty = new MMCode() {
+	public static final OrderStatusCode SentToNextParty = new OrderStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SentToNextParty";
 			definition = "Order has been sent to the next party, eg, the next intermediary.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "STNP";
 		}
 	};
@@ -791,12 +853,12 @@ public class OrderStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceived = new MMCode() {
+	public static final OrderStatusCode Received = new OrderStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Received";
 			definition = "Order has been received, ie, technical validation of the message is ok, and the message is now at the receiving side.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "RECE";
 		}
 	};
@@ -821,12 +883,12 @@ public class OrderStatusCode {
 	 * definition} = "Order is settled. The cash is credited or debited."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettled = new MMCode() {
+	public static final OrderStatusCode Settled = new OrderStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			definition = "Order is settled. The cash is credited or debited.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "SETT";
 		}
 	};
@@ -851,12 +913,12 @@ public class OrderStatusCode {
 	 * definition} = "Communication problems with the next party."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommunicationProblemNextParty = new MMCode() {
+	public static final OrderStatusCode CommunicationProblemNextParty = new OrderStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommunicationProblemNextParty";
 			definition = "Communication problems with the next party.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "CPNP";
 		}
 	};
@@ -884,12 +946,12 @@ public class OrderStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmConfirmationAmendment = new MMCode() {
+	public static final OrderStatusCode ConfirmationAmendment = new OrderStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationAmendment";
 			definition = "Order confirmation cancellation has been sent and will be followed by a confirmation amendment, or a confirmation amendment has been sent.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "CNFC";
 		}
 	};
@@ -915,12 +977,12 @@ public class OrderStatusCode {
 	 * "Order has been partially filled and will not be filled further."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartiallyDone = new MMCode() {
+	public static final OrderStatusCode PartiallyDone = new OrderStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyDone";
 			definition = "Order has been partially filled and will not be filled further.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "DONF";
 		}
 	};
@@ -945,12 +1007,12 @@ public class OrderStatusCode {
 	 * definition} = "Order is open."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOpen = new MMCode() {
+	public static final OrderStatusCode Open = new OrderStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Open";
 			definition = "Order is open.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "OPOD";
 		}
 	};
@@ -975,12 +1037,12 @@ public class OrderStatusCode {
 	 * definition} = "Order confirmation received from agent is invalid."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalidAgentConfirmation = new MMCode() {
+	public static final OrderStatusCode InvalidAgentConfirmation = new OrderStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidAgentConfirmation";
 			definition = "Order confirmation received from agent is invalid.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "IACO";
 		}
 	};
@@ -1008,12 +1070,12 @@ public class OrderStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashSettledOrderNotExecuted = new MMCode() {
+	public static final OrderStatusCode CashSettledOrderNotExecuted = new OrderStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettledOrderNotExecuted";
 			definition = "Order is accepted and is ready for execution (execution is the moment when pricing is applied). Cash is settled, but the order is not executed.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "CSNE";
 		}
 	};
@@ -1040,12 +1102,12 @@ public class OrderStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmExecuting = new MMCode() {
+	public static final OrderStatusCode Executing = new OrderStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Executing";
 			definition = "Indicates that a list has been received and the sell side is working it.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "EXEC";
 		}
 	};
@@ -1075,12 +1137,12 @@ public class OrderStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelling = new MMCode() {
+	public static final OrderStatusCode Cancelling = new OrderStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelling";
 			definition = "Indicates that a cancellation request has been received and the sell side is in the process of pulling any orders that were being worked. The status of individual order can be found out from the detail repeating group.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "CACE";
 		}
 	};
@@ -1110,33 +1172,98 @@ public class OrderStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAlert = new MMCode() {
+	public static final OrderStatusCode Alert = new OrderStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Alert";
 			definition = "Used whenever any of the individual orders have a status that requires something to be done. For instance, an alert would be used when a buy-side firm has submitted a list that has individual stock reject that have not been addressed.";
-			owner_lazy = () -> OrderStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "ALER";
 		}
 	};
+	final static private LinkedHashMap<String, OrderStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OrderStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 				example = Arrays.asList("NEWW");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderStatusCode";
 				definition = "Specifies the current status of the order.";
-				code_lazy = () -> Arrays.asList(OrderStatusCode.mmNew, OrderStatusCode.mmPartialFill, OrderStatusCode.mmFilled, OrderStatusCode.mmDoneForDay, OrderStatusCode.mmCancelled, OrderStatusCode.mmReplaced,
-						OrderStatusCode.mmPendingCancel, OrderStatusCode.mmStopped, OrderStatusCode.mmRejected, OrderStatusCode.mmSuspended, OrderStatusCode.mmPendingNew, OrderStatusCode.mmCalculated, OrderStatusCode.mmExpired,
-						OrderStatusCode.mmAcceptedForBidding, OrderStatusCode.mmPendingReplace, OrderStatusCode.mmCompleted, OrderStatusCode.mmAccepted, OrderStatusCode.mmAlreadyExecuted, OrderStatusCode.mmSentToNextParty,
-						OrderStatusCode.mmReceived, OrderStatusCode.mmSettled, OrderStatusCode.mmCommunicationProblemNextParty, OrderStatusCode.mmConfirmationAmendment, OrderStatusCode.mmPartiallyDone, OrderStatusCode.mmOpen,
-						OrderStatusCode.mmInvalidAgentConfirmation, OrderStatusCode.mmCashSettledOrderNotExecuted, OrderStatusCode.mmExecuting, OrderStatusCode.mmCancelling, OrderStatusCode.mmAlert);
 				derivation_lazy = () -> Arrays.asList(OrderStatus3Code.mmObject(), OrderStatus2Code.mmObject(), OrderStatus4Code.mmObject(), OrderStatus5Code.mmObject(), OrderStatus1Code.mmObject(), OrderStatus6Code.mmObject(),
 						OrderStatus7Code.mmObject(), OrderStatus8Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderStatusCode.New, com.tools20022.repository.codeset.OrderStatusCode.PartialFill, com.tools20022.repository.codeset.OrderStatusCode.Filled,
+						com.tools20022.repository.codeset.OrderStatusCode.DoneForDay, com.tools20022.repository.codeset.OrderStatusCode.Cancelled, com.tools20022.repository.codeset.OrderStatusCode.Replaced,
+						com.tools20022.repository.codeset.OrderStatusCode.PendingCancel, com.tools20022.repository.codeset.OrderStatusCode.Stopped, com.tools20022.repository.codeset.OrderStatusCode.Rejected,
+						com.tools20022.repository.codeset.OrderStatusCode.Suspended, com.tools20022.repository.codeset.OrderStatusCode.PendingNew, com.tools20022.repository.codeset.OrderStatusCode.Calculated,
+						com.tools20022.repository.codeset.OrderStatusCode.Expired, com.tools20022.repository.codeset.OrderStatusCode.AcceptedForBidding, com.tools20022.repository.codeset.OrderStatusCode.PendingReplace,
+						com.tools20022.repository.codeset.OrderStatusCode.Completed, com.tools20022.repository.codeset.OrderStatusCode.Accepted, com.tools20022.repository.codeset.OrderStatusCode.AlreadyExecuted,
+						com.tools20022.repository.codeset.OrderStatusCode.SentToNextParty, com.tools20022.repository.codeset.OrderStatusCode.Received, com.tools20022.repository.codeset.OrderStatusCode.Settled,
+						com.tools20022.repository.codeset.OrderStatusCode.CommunicationProblemNextParty, com.tools20022.repository.codeset.OrderStatusCode.ConfirmationAmendment,
+						com.tools20022.repository.codeset.OrderStatusCode.PartiallyDone, com.tools20022.repository.codeset.OrderStatusCode.Open, com.tools20022.repository.codeset.OrderStatusCode.InvalidAgentConfirmation,
+						com.tools20022.repository.codeset.OrderStatusCode.CashSettledOrderNotExecuted, com.tools20022.repository.codeset.OrderStatusCode.Executing, com.tools20022.repository.codeset.OrderStatusCode.Cancelling,
+						com.tools20022.repository.codeset.OrderStatusCode.Alert);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(New.getCodeName().get(), New);
+		codesByName.put(PartialFill.getCodeName().get(), PartialFill);
+		codesByName.put(Filled.getCodeName().get(), Filled);
+		codesByName.put(DoneForDay.getCodeName().get(), DoneForDay);
+		codesByName.put(Cancelled.getCodeName().get(), Cancelled);
+		codesByName.put(Replaced.getCodeName().get(), Replaced);
+		codesByName.put(PendingCancel.getCodeName().get(), PendingCancel);
+		codesByName.put(Stopped.getCodeName().get(), Stopped);
+		codesByName.put(Rejected.getCodeName().get(), Rejected);
+		codesByName.put(Suspended.getCodeName().get(), Suspended);
+		codesByName.put(PendingNew.getCodeName().get(), PendingNew);
+		codesByName.put(Calculated.getCodeName().get(), Calculated);
+		codesByName.put(Expired.getCodeName().get(), Expired);
+		codesByName.put(AcceptedForBidding.getCodeName().get(), AcceptedForBidding);
+		codesByName.put(PendingReplace.getCodeName().get(), PendingReplace);
+		codesByName.put(Completed.getCodeName().get(), Completed);
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+		codesByName.put(AlreadyExecuted.getCodeName().get(), AlreadyExecuted);
+		codesByName.put(SentToNextParty.getCodeName().get(), SentToNextParty);
+		codesByName.put(Received.getCodeName().get(), Received);
+		codesByName.put(Settled.getCodeName().get(), Settled);
+		codesByName.put(CommunicationProblemNextParty.getCodeName().get(), CommunicationProblemNextParty);
+		codesByName.put(ConfirmationAmendment.getCodeName().get(), ConfirmationAmendment);
+		codesByName.put(PartiallyDone.getCodeName().get(), PartiallyDone);
+		codesByName.put(Open.getCodeName().get(), Open);
+		codesByName.put(InvalidAgentConfirmation.getCodeName().get(), InvalidAgentConfirmation);
+		codesByName.put(CashSettledOrderNotExecuted.getCodeName().get(), CashSettledOrderNotExecuted);
+		codesByName.put(Executing.getCodeName().get(), Executing);
+		codesByName.put(Cancelling.getCodeName().get(), Cancelling);
+		codesByName.put(Alert.getCodeName().get(), Alert);
+	}
+
+	public static OrderStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OrderStatusCode[] values() {
+		OrderStatusCode[] values = new OrderStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OrderStatusCode> {
+		@Override
+		public OrderStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OrderStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -25,9 +25,8 @@ import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -58,22 +57,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
- * SecuritiesEventsLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
- * IssuersAgentsCommunicationISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AgtCAMvmntInstr"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -101,9 +84,36 @@ import javax.xml.bind.annotation.*;
  * AgentCAMovementInstructionV01.mmProceedsMovementDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
+ * IssuersAgentsCommunicationISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AgtCAMvmntInstr"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
+ * SecuritiesEventsLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.019.001.01}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOptionRule1#forAgentCAMovementInstructionV01
+ * ConstraintOptionRule1.forAgentCAMovementInstructionV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOptionRule2#forAgentCAMovementInstructionV01
+ * ConstraintOptionRule2.forAgentCAMovementInstructionV01}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -116,17 +126,17 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AgentCAMovementInstructionV01", propOrder = {"identification", "agentCAElectionAdviceIdentification", "corporateActionGeneralInformation", "movementGeneralInformation", "underlyingSecuritiesMovementDetails",
 		"underlyingCashMovementDetails", "proceedsMovementDetails"})
 public class AgentCAMovementInstructionV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected DocumentIdentification8 identification;
 	/**
-	 * Identification assigned by the Sender to unambiguously identify the
-	 * instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,11 +178,11 @@ public class AgentCAMovementInstructionV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AgtCAElctnAdvcId")
 	protected DocumentIdentification8 agentCAElectionAdviceIdentification;
 	/**
-	 * Identification of the Agent CA ElectionAdvice when the movements are the
-	 * result of an ElectionAdvice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -214,10 +224,11 @@ public class AgentCAMovementInstructionV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
-	 * General information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -257,10 +268,11 @@ public class AgentCAMovementInstructionV01 {
 			}
 		}
 	};
+	@XmlElement(name = "MvmntGnlInf", required = true)
 	protected CorporateActionMovement1 movementGeneralInformation;
 	/**
-	 * Provides general information about the movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -300,10 +312,11 @@ public class AgentCAMovementInstructionV01 {
 			}
 		}
 	};
+	@XmlElement(name = "UndrlygSctiesMvmntDtls")
 	protected List<UnderlyingSecurityMovement1> underlyingSecuritiesMovementDetails;
 	/**
-	 * Information related to the movement of the underlying securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -343,10 +356,11 @@ public class AgentCAMovementInstructionV01 {
 			}
 		}
 	};
+	@XmlElement(name = "UndrlygCshMvmntDtls")
 	protected List<CashMovement2> underlyingCashMovementDetails;
 	/**
-	 * Information related to the movement of the underlying cash.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -385,10 +399,11 @@ public class AgentCAMovementInstructionV01 {
 			}
 		}
 	};
+	@XmlElement(name = "PrcdsMvmntDtls")
 	protected ProceedsMovement1 proceedsMovementDetails;
 	/**
-	 * Information related to the movement of the CA proceeds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -432,6 +447,8 @@ public class AgentCAMovementInstructionV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionRule1.forAgentCAMovementInstructionV01,
+						com.tools20022.repository.constraints.ConstraintOptionRule2.forAgentCAMovementInstructionV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentCAMovementInstructionV01";
 				definition = "Scope\r\nThis message is sent by an issuer (or its agent) to a CSD to order:\r\n- the global or individual debit of exercised resources (cash and/or securities), per event and optionally per option and per resource for all or individual CSD client's accounts;\r\n- and/or the individual credits of the outturn resources per event and optionally per option and per resource for a given CSD client's account.\r\nUsage\r\nThis message is used to instruct:\r\n- the global debit of the exercised resources from the CSD client's available or sequestered balance, in which case, the order type must be 'global debit order';\r\n- the individual debits and credits:\r\n- the individual debit of the exercised resources from the CSD client's available or sequestered balance and/or\r\n- the individual credit of the outturn resources to the CSD client's account.\r\nThe order type must be 'individual order';\r\n- a return order, in the case of a scaleback, i.e. the return of the exercised resources to the CSD client's account. The order type must be either 'global return order' or 'individual return order'; and\r\nchange of option, e.g. in the case of the closure of an option, by moving the exercised resources from one option to another option within the sequestered balances in accordance to the new option conditions. The order type must be 'option change order'.";
@@ -461,70 +478,70 @@ public class AgentCAMovementInstructionV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(DocumentIdentification8 identification) {
-		this.identification = identification;
+	public AgentCAMovementInstructionV01 setIdentification(DocumentIdentification8 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "AgtCAElctnAdvcId")
-	public DocumentIdentification8 getAgentCAElectionAdviceIdentification() {
-		return agentCAElectionAdviceIdentification;
+	public Optional<DocumentIdentification8> getAgentCAElectionAdviceIdentification() {
+		return agentCAElectionAdviceIdentification == null ? Optional.empty() : Optional.of(agentCAElectionAdviceIdentification);
 	}
 
-	public void setAgentCAElectionAdviceIdentification(DocumentIdentification8 agentCAElectionAdviceIdentification) {
+	public AgentCAMovementInstructionV01 setAgentCAElectionAdviceIdentification(DocumentIdentification8 agentCAElectionAdviceIdentification) {
 		this.agentCAElectionAdviceIdentification = agentCAElectionAdviceIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
 
-	public void setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
-		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	public AgentCAMovementInstructionV01 setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = Objects.requireNonNull(corporateActionGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "MvmntGnlInf", required = true)
 	public CorporateActionMovement1 getMovementGeneralInformation() {
 		return movementGeneralInformation;
 	}
 
-	public void setMovementGeneralInformation(CorporateActionMovement1 movementGeneralInformation) {
-		this.movementGeneralInformation = movementGeneralInformation;
+	public AgentCAMovementInstructionV01 setMovementGeneralInformation(CorporateActionMovement1 movementGeneralInformation) {
+		this.movementGeneralInformation = Objects.requireNonNull(movementGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygSctiesMvmntDtls")
 	public List<UnderlyingSecurityMovement1> getUnderlyingSecuritiesMovementDetails() {
-		return underlyingSecuritiesMovementDetails;
+		return underlyingSecuritiesMovementDetails == null ? underlyingSecuritiesMovementDetails = new ArrayList<>() : underlyingSecuritiesMovementDetails;
 	}
 
-	public void setUnderlyingSecuritiesMovementDetails(List<UnderlyingSecurityMovement1> underlyingSecuritiesMovementDetails) {
-		this.underlyingSecuritiesMovementDetails = underlyingSecuritiesMovementDetails;
+	public AgentCAMovementInstructionV01 setUnderlyingSecuritiesMovementDetails(List<UnderlyingSecurityMovement1> underlyingSecuritiesMovementDetails) {
+		this.underlyingSecuritiesMovementDetails = Objects.requireNonNull(underlyingSecuritiesMovementDetails);
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygCshMvmntDtls")
 	public List<CashMovement2> getUnderlyingCashMovementDetails() {
-		return underlyingCashMovementDetails;
+		return underlyingCashMovementDetails == null ? underlyingCashMovementDetails = new ArrayList<>() : underlyingCashMovementDetails;
 	}
 
-	public void setUnderlyingCashMovementDetails(List<CashMovement2> underlyingCashMovementDetails) {
-		this.underlyingCashMovementDetails = underlyingCashMovementDetails;
+	public AgentCAMovementInstructionV01 setUnderlyingCashMovementDetails(List<CashMovement2> underlyingCashMovementDetails) {
+		this.underlyingCashMovementDetails = Objects.requireNonNull(underlyingCashMovementDetails);
+		return this;
 	}
 
-	@XmlElement(name = "PrcdsMvmntDtls")
-	public ProceedsMovement1 getProceedsMovementDetails() {
-		return proceedsMovementDetails;
+	public Optional<ProceedsMovement1> getProceedsMovementDetails() {
+		return proceedsMovementDetails == null ? Optional.empty() : Optional.of(proceedsMovementDetails);
 	}
 
-	public void setProceedsMovementDetails(ProceedsMovement1 proceedsMovementDetails) {
+	public AgentCAMovementInstructionV01 setProceedsMovementDetails(ProceedsMovement1 proceedsMovementDetails) {
 		this.proceedsMovementDetails = proceedsMovementDetails;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.019.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.019.001.01")
 	static public class Document {
 		@XmlElement(name = "AgtCAMvmntInstr", required = true)
 		public AgentCAMovementInstructionV01 messageBody;

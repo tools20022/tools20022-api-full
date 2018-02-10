@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,16 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Set of elements used to provide security position details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesPosition1", propOrder = {"type", "quantity"})
 public class SecuritiesPosition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected Max4AlphaNumericText type;
 	/**
-	 * Specifies the type of a position or a balance, such as earmarked or
-	 * delivered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +101,7 @@ public class SecuritiesPosition1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesPosition1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesPosition1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +112,11 @@ public class SecuritiesPosition1 {
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Qty", required = true)
 	protected SubBalanceQuantity2Choice quantity;
 	/**
-	 * Specifies the quantity of a position or a balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -141,7 +143,7 @@ public class SecuritiesPosition1 {
 	 */
 	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesPosition1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesPosition1.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,8 +159,8 @@ public class SecuritiesPosition1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesPosition1.mmType, SecuritiesPosition1.mmQuantity);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesPosition1.mmType, com.tools20022.repository.msg.SecuritiesPosition1.mmQuantity);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesPosition1";
 				definition = "Set of elements used to provide security position details.";
@@ -167,21 +169,21 @@ public class SecuritiesPosition1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public Max4AlphaNumericText getType() {
 		return type;
 	}
 
-	public void setType(Max4AlphaNumericText type) {
-		this.type = type;
+	public SecuritiesPosition1 setType(Max4AlphaNumericText type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public SubBalanceQuantity2Choice getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(SubBalanceQuantity2Choice quantity) {
-		this.quantity = quantity;
+	public SecuritiesPosition1 setQuantity(SubBalanceQuantity2Choice quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 }

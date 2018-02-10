@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.UnrealisedCode;
+import com.tools20022.repository.codeset.Unrealised1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies unrealised gain and loss.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.UnrealisedCode UnrealisedCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Unrealised1Code#mmGain
- * Unrealised1Code.mmGain}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Unrealised1Code#mmLoss
- * Unrealised1Code.mmLoss}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Unrealised1Code#Gain
+ * Unrealised1Code.Gain}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Unrealised1Code#Loss
+ * Unrealised1Code.Loss}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.UnrealisedCode UnrealisedCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies unrealised gain and loss."</li>
  * </ul>
  */
-public class Unrealised1Code extends UnrealisedCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Unrealised1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,11 +85,12 @@ public class Unrealised1Code extends UnrealisedCode {
 	 * name} = "Gain"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGain = new MMCode() {
+	public static final Unrealised1Code Gain = new Unrealised1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gain";
-			owner_lazy = () -> Unrealised1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Unrealised1Code.mmObject();
+			codeName = UnrealisedCode.Gain.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -103,26 +109,57 @@ public class Unrealised1Code extends UnrealisedCode {
 	 * name} = "Loss"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLoss = new MMCode() {
+	public static final Unrealised1Code Loss = new Unrealised1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loss";
-			owner_lazy = () -> Unrealised1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Unrealised1Code.mmObject();
+			codeName = UnrealisedCode.Loss.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Unrealised1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Unrealised1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("GAIN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Unrealised1Code";
 				definition = "Specifies unrealised gain and loss.";
-				code_lazy = () -> Arrays.asList(Unrealised1Code.mmGain, Unrealised1Code.mmLoss);
 				trace_lazy = () -> UnrealisedCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Unrealised1Code.Gain, com.tools20022.repository.codeset.Unrealised1Code.Loss);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Gain.getCodeName().get(), Gain);
+		codesByName.put(Loss.getCodeName().get(), Loss);
+	}
+
+	public static Unrealised1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Unrealised1Code[] values() {
+		Unrealised1Code[] values = new Unrealised1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Unrealised1Code> {
+		@Override
+		public Unrealised1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Unrealised1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

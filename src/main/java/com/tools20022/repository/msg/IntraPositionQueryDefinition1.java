@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.MovementResponseType1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IntraPositionQueryDefinition1", propOrder = {"queryType", "searchCriteria"})
 public class IntraPositionQueryDefinition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QryTp", required = true)
 	protected MovementResponseType1Code queryType;
 	/**
-	 * Defines the type of query.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,7 +103,7 @@ public class IntraPositionQueryDefinition1 {
 	 */
 	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraPositionQueryDefinition1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionQueryDefinition1.mmObject();
 			isDerived = false;
 			xmlTag = "QryTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,11 +114,11 @@ public class IntraPositionQueryDefinition1 {
 			simpleType_lazy = () -> MovementResponseType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SchCrit", required = true)
 	protected IntraPositionQueryCriteria1 searchCriteria;
 	/**
-	 * Defines the criteria to extract the intra-position movement instruction
-	 * information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -145,7 +147,7 @@ public class IntraPositionQueryDefinition1 {
 	 */
 	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraPositionQueryDefinition1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionQueryDefinition1.mmObject();
 			isDerived = false;
 			xmlTag = "SchCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,8 +163,8 @@ public class IntraPositionQueryDefinition1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IntraPositionQueryDefinition1.mmQueryType, IntraPositionQueryDefinition1.mmSearchCriteria);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraPositionQueryDefinition1.mmQueryType, com.tools20022.repository.msg.IntraPositionQueryDefinition1.mmSearchCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraPositionQueryDefinition1";
 				definition = "Defines the information that is searched through the definition of specific criteria.";
@@ -171,21 +173,21 @@ public class IntraPositionQueryDefinition1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QryTp", required = true)
 	public MovementResponseType1Code getQueryType() {
 		return queryType;
 	}
 
-	public void setQueryType(MovementResponseType1Code queryType) {
-		this.queryType = queryType;
+	public IntraPositionQueryDefinition1 setQueryType(MovementResponseType1Code queryType) {
+		this.queryType = Objects.requireNonNull(queryType);
+		return this;
 	}
 
-	@XmlElement(name = "SchCrit", required = true)
 	public IntraPositionQueryCriteria1 getSearchCriteria() {
 		return searchCriteria;
 	}
 
-	public void setSearchCriteria(com.tools20022.repository.msg.IntraPositionQueryCriteria1 searchCriteria) {
-		this.searchCriteria = searchCriteria;
+	public IntraPositionQueryDefinition1 setSearchCriteria(com.tools20022.repository.msg.IntraPositionQueryCriteria1 searchCriteria) {
+		this.searchCriteria = Objects.requireNonNull(searchCriteria);
+		return this;
 	}
 }

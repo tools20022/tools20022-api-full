@@ -25,9 +25,11 @@ import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryPrice2;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,20 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Specifies the price information related to the underlying transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionPrice2Choice", propOrder = {"dealPrice", "proprietary"})
 public class TransactionPrice2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DealPric", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount dealPrice;
 	/**
-	 * Specifies the price of the traded financial instrument. This is the deal
-	 * price of the individual trade transaction. If there is only one trade
-	 * transaction for the execution of the trade, then the deal price could
-	 * equal the executed trade price (unless, for example, the price includes
-	 * commissions or rounding, or some other factor has been applied to the
-	 * deal price or the executed trade price, or both).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +116,7 @@ public class TransactionPrice2Choice {
 	public static final MMMessageAttribute mmDealPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
-			componentContext_lazy = () -> TransactionPrice2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionPrice2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DealPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,10 +127,11 @@ public class TransactionPrice2Choice {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected List<ProprietaryPrice2> proprietary;
 	/**
-	 * Proprietary price specification related to the underlying transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -165,7 +164,7 @@ public class TransactionPrice2Choice {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
-			componentContext_lazy = () -> TransactionPrice2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionPrice2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,9 +179,9 @@ public class TransactionPrice2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionPrice2Choice.mmDealPrice, TransactionPrice2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionPrice2Choice.mmDealPrice, com.tools20022.repository.choice.TransactionPrice2Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionPrice2Choice";
 				definition = "Specifies the price information related to the underlying transaction.";
@@ -191,21 +190,21 @@ public class TransactionPrice2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DealPric", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getDealPrice() {
 		return dealPrice;
 	}
 
-	public void setDealPrice(ActiveOrHistoricCurrencyAndAmount dealPrice) {
-		this.dealPrice = dealPrice;
+	public TransactionPrice2Choice setDealPrice(ActiveOrHistoricCurrencyAndAmount dealPrice) {
+		this.dealPrice = Objects.requireNonNull(dealPrice);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public List<ProprietaryPrice2> getProprietary() {
-		return proprietary;
+		return proprietary == null ? proprietary = new ArrayList<>() : proprietary;
 	}
 
-	public void setProprietary(List<ProprietaryPrice2> proprietary) {
-		this.proprietary = proprietary;
+	public TransactionPrice2Choice setProprietary(List<ProprietaryPrice2> proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

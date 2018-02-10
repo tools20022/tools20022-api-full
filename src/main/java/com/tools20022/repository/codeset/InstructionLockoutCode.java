@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.InstructionLockoutCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies status of the instruction lock (for elections).
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionLockoutCode#mmSystemicLocked
- * InstructionLockoutCode.mmSystemicLocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionLockoutCode#SystemicLocked
+ * InstructionLockoutCode.SystemicLocked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionLockoutCode#mmManualLocked
- * InstructionLockoutCode.mmManualLocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionLockoutCode#ManualLocked
+ * InstructionLockoutCode.ManualLocked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionLockoutCode#mmNotLocked
- * InstructionLockoutCode.mmNotLocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionLockoutCode#NotLocked
+ * InstructionLockoutCode.NotLocked}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies status of the instruction lock (for elections)."</li>
  * </ul>
  */
-public class InstructionLockoutCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InstructionLockoutCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,12 +101,12 @@ public class InstructionLockoutCode {
 	 * "System suspended elections processing based on business rules."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSystemicLocked = new MMCode() {
+	public static final InstructionLockoutCode SystemicLocked = new InstructionLockoutCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemicLocked";
 			definition = "System suspended elections processing based on business rules.";
-			owner_lazy = () -> InstructionLockoutCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionLockoutCode.mmObject();
 			codeName = "SYLK";
 		}
 	};
@@ -128,12 +134,12 @@ public class InstructionLockoutCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmManualLocked = new MMCode() {
+	public static final InstructionLockoutCode ManualLocked = new InstructionLockoutCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualLocked";
 			definition = "DTC (the Depository Trust Company) personnel suspended elections processing.";
-			owner_lazy = () -> InstructionLockoutCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionLockoutCode.mmObject();
 			codeName = "MALK";
 		}
 	};
@@ -158,28 +164,60 @@ public class InstructionLockoutCode {
 	 * definition} = "Eligible for elections processing."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotLocked = new MMCode() {
+	public static final InstructionLockoutCode NotLocked = new InstructionLockoutCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotLocked";
 			definition = "Eligible for elections processing.";
-			owner_lazy = () -> InstructionLockoutCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionLockoutCode.mmObject();
 			codeName = "NOLO";
 		}
 	};
+	final static private LinkedHashMap<String, InstructionLockoutCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InstructionLockoutCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SYLK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionLockoutCode";
 				definition = "Specifies status of the instruction lock (for elections).";
-				code_lazy = () -> Arrays.asList(InstructionLockoutCode.mmSystemicLocked, InstructionLockoutCode.mmManualLocked, InstructionLockoutCode.mmNotLocked);
 				derivation_lazy = () -> Arrays.asList(InstructionLockout1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionLockoutCode.SystemicLocked, com.tools20022.repository.codeset.InstructionLockoutCode.ManualLocked,
+						com.tools20022.repository.codeset.InstructionLockoutCode.NotLocked);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SystemicLocked.getCodeName().get(), SystemicLocked);
+		codesByName.put(ManualLocked.getCodeName().get(), ManualLocked);
+		codesByName.put(NotLocked.getCodeName().get(), NotLocked);
+	}
+
+	public static InstructionLockoutCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InstructionLockoutCode[] values() {
+		InstructionLockoutCode[] values = new InstructionLockoutCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InstructionLockoutCode> {
+		@Override
+		public InstructionLockoutCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InstructionLockoutCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

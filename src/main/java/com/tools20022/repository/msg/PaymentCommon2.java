@@ -29,9 +29,8 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * PaymentCommon1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentCommon2", propOrder = {"paymentFrom", "paymentTo", "commonStatus", "requestedExecutionDate", "entryDate", "creditDebitIndicator", "paymentMethod"})
 public class PaymentCommon2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmtFr")
 	protected System1 paymentFrom;
 	/**
-	 * Origin of the payment (be it a member or a system or both).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -123,7 +123,7 @@ public class PaymentCommon2 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentFrom = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentCommon2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCommon2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtFr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +136,11 @@ public class PaymentCommon2 {
 			type_lazy = () -> com.tools20022.repository.msg.System1.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtTo")
 	protected System1 paymentTo;
 	/**
-	 * Destination of the payment (be it a member or a system or both).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -169,7 +170,7 @@ public class PaymentCommon2 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentTo = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentCommon2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCommon2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,10 +183,11 @@ public class PaymentCommon2 {
 			type_lazy = () -> com.tools20022.repository.msg.System1.mmObject();
 		}
 	};
+	@XmlElement(name = "CmonSts")
 	protected List<com.tools20022.repository.msg.PaymentStatus2> commonStatus;
 	/**
-	 * Status of a transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -221,7 +223,7 @@ public class PaymentCommon2 {
 	public static final MMMessageAssociationEnd mmCommonStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentStatus;
-			componentContext_lazy = () -> PaymentCommon2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCommon2.mmObject();
 			isDerived = false;
 			xmlTag = "CmonSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,11 +235,11 @@ public class PaymentCommon2 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentStatus2.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdExctnDt")
 	protected DateAndDateTimeChoice requestedExecutionDate;
 	/**
-	 * Date and time at which the cash is at the disposal of the credit account
-	 * owner, or ceases to be at the disposal of the debit account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -277,7 +279,7 @@ public class PaymentCommon2 {
 	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRequestedExecutionDate;
-			componentContext_lazy = () -> PaymentCommon2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCommon2.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -289,11 +291,11 @@ public class PaymentCommon2 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "NtryDt")
 	protected DateAndDateTimeChoice entryDate;
 	/**
-	 * Date and time at which an entry is posted to an account on the account
-	 * servicer's books.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -333,7 +335,7 @@ public class PaymentCommon2 {
 	public static final MMMessageAttribute mmEntryDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
-			componentContext_lazy = () -> PaymentCommon2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCommon2.mmObject();
 			isDerived = false;
 			xmlTag = "NtryDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -345,10 +347,11 @@ public class PaymentCommon2 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd")
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Indicates whether the payment instruction is a debit or a credit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -387,7 +390,7 @@ public class PaymentCommon2 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmCreditDebitIndicator;
-			componentContext_lazy = () -> PaymentCommon2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCommon2.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -399,11 +402,11 @@ public class PaymentCommon2 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtMtd")
 	protected PaymentOrigin1Choice paymentMethod;
 	/**
-	 * Indicates the message or event from which an instruction has been
-	 * initiated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -442,7 +445,7 @@ public class PaymentCommon2 {
 	public static final MMMessageAssociationEnd mmPaymentMethod = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmPayment;
-			componentContext_lazy = () -> PaymentCommon2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCommon2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -459,10 +462,11 @@ public class PaymentCommon2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentCommon2.mmPaymentFrom, PaymentCommon2.mmPaymentTo, PaymentCommon2.mmCommonStatus, PaymentCommon2.mmRequestedExecutionDate, PaymentCommon2.mmEntryDate,
-						PaymentCommon2.mmCreditDebitIndicator, PaymentCommon2.mmPaymentMethod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCommon2.mmPaymentFrom, com.tools20022.repository.msg.PaymentCommon2.mmPaymentTo, com.tools20022.repository.msg.PaymentCommon2.mmCommonStatus,
+						com.tools20022.repository.msg.PaymentCommon2.mmRequestedExecutionDate, com.tools20022.repository.msg.PaymentCommon2.mmEntryDate, com.tools20022.repository.msg.PaymentCommon2.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.PaymentCommon2.mmPaymentMethod);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentCommon2";
 				definition = "Common details for all payment instruction.";
@@ -472,66 +476,66 @@ public class PaymentCommon2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmtFr")
-	public System1 getPaymentFrom() {
-		return paymentFrom;
+	public Optional<System1> getPaymentFrom() {
+		return paymentFrom == null ? Optional.empty() : Optional.of(paymentFrom);
 	}
 
-	public void setPaymentFrom(com.tools20022.repository.msg.System1 paymentFrom) {
+	public PaymentCommon2 setPaymentFrom(com.tools20022.repository.msg.System1 paymentFrom) {
 		this.paymentFrom = paymentFrom;
+		return this;
 	}
 
-	@XmlElement(name = "PmtTo")
-	public System1 getPaymentTo() {
-		return paymentTo;
+	public Optional<System1> getPaymentTo() {
+		return paymentTo == null ? Optional.empty() : Optional.of(paymentTo);
 	}
 
-	public void setPaymentTo(com.tools20022.repository.msg.System1 paymentTo) {
+	public PaymentCommon2 setPaymentTo(com.tools20022.repository.msg.System1 paymentTo) {
 		this.paymentTo = paymentTo;
+		return this;
 	}
 
-	@XmlElement(name = "CmonSts")
 	public List<PaymentStatus2> getCommonStatus() {
-		return commonStatus;
+		return commonStatus == null ? commonStatus = new ArrayList<>() : commonStatus;
 	}
 
-	public void setCommonStatus(List<com.tools20022.repository.msg.PaymentStatus2> commonStatus) {
-		this.commonStatus = commonStatus;
+	public PaymentCommon2 setCommonStatus(List<com.tools20022.repository.msg.PaymentStatus2> commonStatus) {
+		this.commonStatus = Objects.requireNonNull(commonStatus);
+		return this;
 	}
 
-	@XmlElement(name = "ReqdExctnDt")
-	public DateAndDateTimeChoice getRequestedExecutionDate() {
-		return requestedExecutionDate;
+	public Optional<DateAndDateTimeChoice> getRequestedExecutionDate() {
+		return requestedExecutionDate == null ? Optional.empty() : Optional.of(requestedExecutionDate);
 	}
 
-	public void setRequestedExecutionDate(DateAndDateTimeChoice requestedExecutionDate) {
+	public PaymentCommon2 setRequestedExecutionDate(DateAndDateTimeChoice requestedExecutionDate) {
 		this.requestedExecutionDate = requestedExecutionDate;
+		return this;
 	}
 
-	@XmlElement(name = "NtryDt")
-	public DateAndDateTimeChoice getEntryDate() {
-		return entryDate;
+	public Optional<DateAndDateTimeChoice> getEntryDate() {
+		return entryDate == null ? Optional.empty() : Optional.of(entryDate);
 	}
 
-	public void setEntryDate(DateAndDateTimeChoice entryDate) {
+	public PaymentCommon2 setEntryDate(DateAndDateTimeChoice entryDate) {
 		this.entryDate = entryDate;
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd")
-	public CreditDebitCode getCreditDebitIndicator() {
-		return creditDebitIndicator;
+	public Optional<CreditDebitCode> getCreditDebitIndicator() {
+		return creditDebitIndicator == null ? Optional.empty() : Optional.of(creditDebitIndicator);
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+	public PaymentCommon2 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
 		this.creditDebitIndicator = creditDebitIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PmtMtd")
-	public PaymentOrigin1Choice getPaymentMethod() {
-		return paymentMethod;
+	public Optional<PaymentOrigin1Choice> getPaymentMethod() {
+		return paymentMethod == null ? Optional.empty() : Optional.of(paymentMethod);
 	}
 
-	public void setPaymentMethod(PaymentOrigin1Choice paymentMethod) {
+	public PaymentCommon2 setPaymentMethod(PaymentOrigin1Choice paymentMethod) {
 		this.paymentMethod = paymentMethod;
+		return this;
 	}
 }

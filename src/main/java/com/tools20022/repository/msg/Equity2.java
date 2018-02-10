@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Equity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,18 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Equity2", propOrder = {"preferenceToIncome", "maturityDate", "nonPaidAmount", "parValue", "votingRightsPerShare"})
 public class Equity2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrefToIncm", required = true)
 	protected PreferenceToIncome4Choice preferenceToIncome;
 	/**
-	 * Indicates the level of priority to claim on income and assets of the
-	 * company in case of the payment of dividends and in the event of a
-	 * bankruptcy, for example, ordinary/common stocks, preferred stocks,
-	 * subordinated debt, etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +124,7 @@ public class Equity2 {
 	public static final MMMessageAttribute mmPreferenceToIncome = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmPreferenceToIncome;
-			componentContext_lazy = () -> Equity2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Equity2.mmObject();
 			isDerived = false;
 			xmlTag = "PrefToIncm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,11 +135,11 @@ public class Equity2 {
 			complexType_lazy = () -> PreferenceToIncome4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MtrtyDt")
 	protected ISODateTime maturityDate;
 	/**
-	 * Date/time at which the security will no longer exist, for example,
-	 * redeemable preference shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +173,7 @@ public class Equity2 {
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
-			componentContext_lazy = () -> Equity2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Equity2.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,10 +184,11 @@ public class Equity2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "NonPdAmt")
 	protected ActiveCurrencyAndAmount nonPaidAmount;
 	/**
-	 * Nominal amount which is not paid yet.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -220,7 +221,7 @@ public class Equity2 {
 	public static final MMMessageAttribute mmNonPaidAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmNonPaidAmount;
-			componentContext_lazy = () -> Equity2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Equity2.mmObject();
 			isDerived = false;
 			xmlTag = "NonPdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,10 +232,11 @@ public class Equity2 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ParVal")
 	protected ActiveCurrencyAndAmount parValue;
 	/**
-	 * Nominal value of an equity security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -267,7 +269,7 @@ public class Equity2 {
 	public static final MMMessageAttribute mmParValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmParValue;
-			componentContext_lazy = () -> Equity2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Equity2.mmObject();
 			isDerived = false;
 			xmlTag = "ParVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -278,10 +280,11 @@ public class Equity2 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "VtngRghtsPerShr")
 	protected Number votingRightsPerShare;
 	/**
-	 * Number of voting rights per share.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -313,7 +316,7 @@ public class Equity2 {
 	public static final MMMessageAttribute mmVotingRightsPerShare = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmVotingRightsPerShare;
-			componentContext_lazy = () -> Equity2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Equity2.mmObject();
 			isDerived = false;
 			xmlTag = "VtngRghtsPerShr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -328,8 +331,9 @@ public class Equity2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Equity2.mmPreferenceToIncome, Equity2.mmMaturityDate, Equity2.mmNonPaidAmount, Equity2.mmParValue, Equity2.mmVotingRightsPerShare);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Equity2.mmPreferenceToIncome, com.tools20022.repository.msg.Equity2.mmMaturityDate, com.tools20022.repository.msg.Equity2.mmNonPaidAmount,
+						com.tools20022.repository.msg.Equity2.mmParValue, com.tools20022.repository.msg.Equity2.mmVotingRightsPerShare);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Equity2";
 				definition = "Financial instrument which represents a title of ownership  in a company, ie,  the shareholder is entitled to a part of the company's profit - usually by payment of a dividend - and to voting rights, if any. Each company issues generally different classes of shares, eg, ordinary or common shares, which have no guaranteed amount of dividend but carry voting rights, or preferred shares, which receive dividends before ordinary shares but have no voting right.";
@@ -338,48 +342,48 @@ public class Equity2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrefToIncm", required = true)
 	public PreferenceToIncome4Choice getPreferenceToIncome() {
 		return preferenceToIncome;
 	}
 
-	public void setPreferenceToIncome(PreferenceToIncome4Choice preferenceToIncome) {
-		this.preferenceToIncome = preferenceToIncome;
+	public Equity2 setPreferenceToIncome(PreferenceToIncome4Choice preferenceToIncome) {
+		this.preferenceToIncome = Objects.requireNonNull(preferenceToIncome);
+		return this;
 	}
 
-	@XmlElement(name = "MtrtyDt")
-	public ISODateTime getMaturityDate() {
-		return maturityDate;
+	public Optional<ISODateTime> getMaturityDate() {
+		return maturityDate == null ? Optional.empty() : Optional.of(maturityDate);
 	}
 
-	public void setMaturityDate(ISODateTime maturityDate) {
+	public Equity2 setMaturityDate(ISODateTime maturityDate) {
 		this.maturityDate = maturityDate;
+		return this;
 	}
 
-	@XmlElement(name = "NonPdAmt")
-	public ActiveCurrencyAndAmount getNonPaidAmount() {
-		return nonPaidAmount;
+	public Optional<ActiveCurrencyAndAmount> getNonPaidAmount() {
+		return nonPaidAmount == null ? Optional.empty() : Optional.of(nonPaidAmount);
 	}
 
-	public void setNonPaidAmount(ActiveCurrencyAndAmount nonPaidAmount) {
+	public Equity2 setNonPaidAmount(ActiveCurrencyAndAmount nonPaidAmount) {
 		this.nonPaidAmount = nonPaidAmount;
+		return this;
 	}
 
-	@XmlElement(name = "ParVal")
-	public ActiveCurrencyAndAmount getParValue() {
-		return parValue;
+	public Optional<ActiveCurrencyAndAmount> getParValue() {
+		return parValue == null ? Optional.empty() : Optional.of(parValue);
 	}
 
-	public void setParValue(ActiveCurrencyAndAmount parValue) {
+	public Equity2 setParValue(ActiveCurrencyAndAmount parValue) {
 		this.parValue = parValue;
+		return this;
 	}
 
-	@XmlElement(name = "VtngRghtsPerShr")
-	public Number getVotingRightsPerShare() {
-		return votingRightsPerShare;
+	public Optional<Number> getVotingRightsPerShare() {
+		return votingRightsPerShare == null ? Optional.empty() : Optional.of(votingRightsPerShare);
 	}
 
-	public void setVotingRightsPerShare(Number votingRightsPerShare) {
+	public Equity2 setVotingRightsPerShare(Number votingRightsPerShare) {
 		this.votingRightsPerShare = votingRightsPerShare;
+		return this;
 	}
 }

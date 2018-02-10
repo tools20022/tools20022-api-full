@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -28,6 +29,8 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +60,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalReasonInforrmationRule#forCancelledStatusReason14
+ * ConstraintAdditionalReasonInforrmationRule.forCancelledStatusReason14}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies reasons for the cancelled status."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CancelledStatusReason14", propOrder = {"reasonCode", "additionalReasonInformation"})
 public class CancelledStatusReason14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RsnCd", required = true)
 	protected CancelledReason11Choice reasonCode;
 	/**
-	 * Specifies the reason why the instruction or instruction cancellation has
-	 * been cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -98,6 +109,9 @@ public class CancelledStatusReason14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RsnCd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :24B::CAND//4!c</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -113,9 +127,10 @@ public class CancelledStatusReason14 {
 	public static final MMMessageAssociationEnd mmReasonCode = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
-			componentContext_lazy = () -> CancelledStatusReason14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancelledStatusReason14.mmObject();
 			isDerived = false;
 			xmlTag = "RsnCd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":24B::CAND//4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonCode";
 			definition = "Specifies the reason why the instruction or instruction cancellation has been cancelled.";
@@ -125,10 +140,11 @@ public class CancelledStatusReason14 {
 			type_lazy = () -> CancelledReason11Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRsnInf")
 	protected RestrictedFINXMax210Text additionalReasonInformation;
 	/**
-	 * Provides additional information about the processed instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,6 +165,9 @@ public class CancelledStatusReason14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlRsnInf"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70D::REAS</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -163,9 +182,10 @@ public class CancelledStatusReason14 {
 	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> CancelledStatusReason14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancelledStatusReason14.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70D::REAS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Provides additional information about the processed instruction.";
@@ -178,9 +198,10 @@ public class CancelledStatusReason14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CancelledStatusReason14.mmReasonCode, CancelledStatusReason14.mmAdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancelledStatusReason14.mmReasonCode, com.tools20022.repository.msg.CancelledStatusReason14.mmAdditionalReasonInformation);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalReasonInforrmationRule.forCancelledStatusReason14);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancelledStatusReason14";
 				definition = "Specifies reasons for the cancelled status.";
@@ -189,21 +210,21 @@ public class CancelledStatusReason14 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RsnCd", required = true)
 	public CancelledReason11Choice getReasonCode() {
 		return reasonCode;
 	}
 
-	public void setReasonCode(CancelledReason11Choice reasonCode) {
-		this.reasonCode = reasonCode;
+	public CancelledStatusReason14 setReasonCode(CancelledReason11Choice reasonCode) {
+		this.reasonCode = Objects.requireNonNull(reasonCode);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRsnInf")
-	public RestrictedFINXMax210Text getAdditionalReasonInformation() {
-		return additionalReasonInformation;
+	public Optional<RestrictedFINXMax210Text> getAdditionalReasonInformation() {
+		return additionalReasonInformation == null ? Optional.empty() : Optional.of(additionalReasonInformation);
 	}
 
-	public void setAdditionalReasonInformation(RestrictedFINXMax210Text additionalReasonInformation) {
+	public CancelledStatusReason14 setAdditionalReasonInformation(RestrictedFINXMax210Text additionalReasonInformation) {
 		this.additionalReasonInformation = additionalReasonInformation;
+		return this;
 	}
 }

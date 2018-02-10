@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Status is rejected."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RejectedStatus8", propOrder = {"extendedReason", "additionalInformation"})
 public class RejectedStatus8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "XtndedRsn", required = true)
 	protected Max350Text extendedReason;
 	/**
-	 * Reason for the rejected status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +105,7 @@ public class RejectedStatus8 {
 	 */
 	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RejectedStatus8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatus8.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +116,11 @@ public class RejectedStatus8 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected RestrictedFINMax210Text additionalInformation;
 	/**
-	 * Additional information about the rejected status reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,7 +154,7 @@ public class RejectedStatus8 {
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> RejectedStatus8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatus8.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,9 +169,9 @@ public class RejectedStatus8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RejectedStatus8.mmExtendedReason, RejectedStatus8.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedStatus8.mmExtendedReason, com.tools20022.repository.msg.RejectedStatus8.mmAdditionalInformation);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectedStatus8";
 				definition = "Status is rejected.";
@@ -176,21 +180,21 @@ public class RejectedStatus8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "XtndedRsn", required = true)
 	public Max350Text getExtendedReason() {
 		return extendedReason;
 	}
 
-	public void setExtendedReason(Max350Text extendedReason) {
-		this.extendedReason = extendedReason;
+	public RejectedStatus8 setExtendedReason(Max350Text extendedReason) {
+		this.extendedReason = Objects.requireNonNull(extendedReason);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public RestrictedFINMax210Text getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<RestrictedFINMax210Text> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(RestrictedFINMax210Text additionalInformation) {
+	public RejectedStatus8 setAdditionalInformation(RestrictedFINMax210Text additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 }

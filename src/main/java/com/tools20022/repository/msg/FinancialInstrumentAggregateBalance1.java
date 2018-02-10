@@ -27,9 +27,11 @@ import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrumentAggregateBalance1", propOrder = {"itemDate", "holdings", "price"})
 public class FinancialInstrumentAggregateBalance1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ItmDt", required = true)
 	protected ISODate itemDate;
 	/**
-	 * Date of the line of holding in the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +120,7 @@ public class FinancialInstrumentAggregateBalance1 {
 	public static final MMMessageAttribute mmItemDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmValueDate;
-			componentContext_lazy = () -> FinancialInstrumentAggregateBalance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "ItmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +131,11 @@ public class FinancialInstrumentAggregateBalance1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "Hldgs", required = true)
 	protected FinancialInstrumentAggregateBalance1Choice holdings;
 	/**
-	 * Balances and sub-balances attributed to the holding.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -163,7 +167,7 @@ public class FinancialInstrumentAggregateBalance1 {
 	public static final MMMessageAssociationEnd mmHoldings = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> AssetHolding.mmObject();
-			componentContext_lazy = () -> FinancialInstrumentAggregateBalance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "Hldgs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,10 +179,11 @@ public class FinancialInstrumentAggregateBalance1 {
 			type_lazy = () -> FinancialInstrumentAggregateBalance1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Pric")
 	protected List<com.tools20022.repository.msg.Price6> price;
 	/**
-	 * Details on the price value, type and source.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -209,7 +214,7 @@ public class FinancialInstrumentAggregateBalance1 {
 	public static final MMMessageAssociationEnd mmPrice = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
-			componentContext_lazy = () -> FinancialInstrumentAggregateBalance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,9 +229,10 @@ public class FinancialInstrumentAggregateBalance1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentAggregateBalance1.mmItemDate, FinancialInstrumentAggregateBalance1.mmHoldings, FinancialInstrumentAggregateBalance1.mmPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.mmItemDate, com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.mmHoldings,
+						com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.mmPrice);
 				trace_lazy = () -> AssetHolding.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAggregateBalance1";
 				definition = "Aggregated position of holdings held in a securities account for a specified financial instrument.";
@@ -235,30 +241,30 @@ public class FinancialInstrumentAggregateBalance1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ItmDt", required = true)
 	public ISODate getItemDate() {
 		return itemDate;
 	}
 
-	public void setItemDate(ISODate itemDate) {
-		this.itemDate = itemDate;
+	public FinancialInstrumentAggregateBalance1 setItemDate(ISODate itemDate) {
+		this.itemDate = Objects.requireNonNull(itemDate);
+		return this;
 	}
 
-	@XmlElement(name = "Hldgs", required = true)
 	public FinancialInstrumentAggregateBalance1Choice getHoldings() {
 		return holdings;
 	}
 
-	public void setHoldings(FinancialInstrumentAggregateBalance1Choice holdings) {
-		this.holdings = holdings;
+	public FinancialInstrumentAggregateBalance1 setHoldings(FinancialInstrumentAggregateBalance1Choice holdings) {
+		this.holdings = Objects.requireNonNull(holdings);
+		return this;
 	}
 
-	@XmlElement(name = "Pric")
 	public List<Price6> getPrice() {
-		return price;
+		return price == null ? price = new ArrayList<>() : price;
 	}
 
-	public void setPrice(List<com.tools20022.repository.msg.Price6> price) {
-		this.price = price;
+	public FinancialInstrumentAggregateBalance1 setPrice(List<com.tools20022.repository.msg.Price6> price) {
+		this.price = Objects.requireNonNull(price);
+		return this;
 	}
 }

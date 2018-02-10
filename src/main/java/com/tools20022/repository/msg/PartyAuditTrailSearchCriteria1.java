@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Describes search criteria for party audit trail query."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyAuditTrailSearchCriteria1", propOrder = {"partyIdentification", "datePeriod"})
 public class PartyAuditTrailSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PtyId")
 	protected SystemPartyIdentification3 partyIdentification;
 	/**
-	 * Describes party to be queried.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -97,7 +99,7 @@ public class PartyAuditTrailSearchCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyAuditTrailSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAuditTrailSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,10 +111,11 @@ public class PartyAuditTrailSearchCriteria1 {
 			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
 		}
 	};
+	@XmlElement(name = "DtPrd")
 	protected DateSearchChoice datePeriod;
 	/**
-	 * Describes date period for querying information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,7 +143,7 @@ public class PartyAuditTrailSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyAuditTrailSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAuditTrailSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "DtPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,8 +158,8 @@ public class PartyAuditTrailSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyAuditTrailSearchCriteria1.mmPartyIdentification, PartyAuditTrailSearchCriteria1.mmDatePeriod);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyAuditTrailSearchCriteria1.mmPartyIdentification, com.tools20022.repository.msg.PartyAuditTrailSearchCriteria1.mmDatePeriod);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyAuditTrailSearchCriteria1";
 				definition = "Describes search criteria for party audit trail query.";
@@ -165,21 +168,21 @@ public class PartyAuditTrailSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PtyId")
-	public SystemPartyIdentification3 getPartyIdentification() {
-		return partyIdentification;
+	public Optional<SystemPartyIdentification3> getPartyIdentification() {
+		return partyIdentification == null ? Optional.empty() : Optional.of(partyIdentification);
 	}
 
-	public void setPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 partyIdentification) {
+	public PartyAuditTrailSearchCriteria1 setPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 partyIdentification) {
 		this.partyIdentification = partyIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "DtPrd")
-	public DateSearchChoice getDatePeriod() {
-		return datePeriod;
+	public Optional<DateSearchChoice> getDatePeriod() {
+		return datePeriod == null ? Optional.empty() : Optional.of(datePeriod);
 	}
 
-	public void setDatePeriod(DateSearchChoice datePeriod) {
+	public PartyAuditTrailSearchCriteria1 setDatePeriod(DateSearchChoice datePeriod) {
 		this.datePeriod = datePeriod;
+		return this;
 	}
 }

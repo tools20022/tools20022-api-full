@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,9 +25,11 @@ import com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV04;
 import com.tools20022.repository.choice.DocumentNumber5Choice;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReferenceRule#forDocumentNumber12
+ * ConstraintReferenceRule.forDocumentNumber12}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * DocumentNumber9}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DocumentNumber12", propOrder = {"number", "references"})
 public class DocumentNumber12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nb", required = true)
 	protected DocumentNumber5Choice number;
 	/**
-	 * Number used to identify a message or document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -98,6 +110,9 @@ public class DocumentNumber12 {
 	 * DocumentNumber12}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Nb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13a:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -116,9 +131,10 @@ public class DocumentNumber12 {
 	 */
 	public static final MMMessageAssociationEnd mmNumber = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DocumentNumber12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentNumber12.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Number used to identify a message or document.";
@@ -129,10 +145,11 @@ public class DocumentNumber12 {
 			type_lazy = () -> DocumentNumber5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Refs", required = true)
 	protected List<com.tools20022.repository.msg.Identification15> references;
 	/**
-	 * References of transaction for which the status is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -145,6 +162,9 @@ public class DocumentNumber12 {
 	 * DocumentNumber12}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Refs"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -164,9 +184,10 @@ public class DocumentNumber12 {
 	 */
 	public static final MMMessageAssociationEnd mmReferences = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DocumentNumber12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentNumber12.mmObject();
 			isDerived = false;
 			xmlTag = "Refs";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "References of transaction for which the status is requested.";
@@ -180,10 +201,11 @@ public class DocumentNumber12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DocumentNumber12.mmNumber, DocumentNumber12.mmReferences);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentNumber12.mmNumber, com.tools20022.repository.msg.DocumentNumber12.mmReferences);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTransactionStatusQueryV04.mmStatusAdviceRequested);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReferenceRule.forDocumentNumber12);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentNumber12";
 				definition = "Identification of the status being requested.";
@@ -193,21 +215,21 @@ public class DocumentNumber12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nb", required = true)
 	public DocumentNumber5Choice getNumber() {
 		return number;
 	}
 
-	public void setNumber(DocumentNumber5Choice number) {
-		this.number = number;
+	public DocumentNumber12 setNumber(DocumentNumber5Choice number) {
+		this.number = Objects.requireNonNull(number);
+		return this;
 	}
 
-	@XmlElement(name = "Refs", required = true)
 	public List<Identification15> getReferences() {
-		return references;
+		return references == null ? references = new ArrayList<>() : references;
 	}
 
-	public void setReferences(List<com.tools20022.repository.msg.Identification15> references) {
-		this.references = references;
+	public DocumentNumber12 setReferences(List<com.tools20022.repository.msg.Identification15> references) {
+		this.references = Objects.requireNonNull(references);
+		return this;
 	}
 }

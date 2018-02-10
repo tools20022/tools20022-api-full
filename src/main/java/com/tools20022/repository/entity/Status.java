@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
@@ -25,9 +26,11 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * The status of an instruction, advice or request.
@@ -65,6 +68,264 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.Status#mmModificationProcessingStatus
  * Status.mmModificationProcessingStatus}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.DateTimePeriod#mmStatus
+ * DateTimePeriod.mmStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.StatusReason#mmStatus
+ * StatusReason.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestigationPartyRole#mmStatus
+ * InvestigationPartyRole.mmStatus}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason1#mmProprietaryStatus
+ * ProprietaryStatusAndReason1.mmProprietaryStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus2Choice#mmProprietary
+ * ModificationProcessingStatus2Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail2#mmProcessingStatus
+ * StatusTrail2.mmProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail2#mmModificationProcessingStatus
+ * StatusTrail2.mmModificationProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail2#mmCancellationStatus
+ * StatusTrail2.mmCancellationStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusTrail2#mmSettled
+ * StatusTrail2.mmSettled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason2#mmProprietaryStatus
+ * ProprietaryStatusAndReason2.mmProprietaryStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus3Choice#mmProprietary
+ * ModificationProcessingStatus3Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail3#mmProcessingStatus
+ * StatusTrail3.mmProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail3#mmModificationProcessingStatus
+ * StatusTrail3.mmModificationProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail3#mmCancellationStatus
+ * StatusTrail3.mmCancellationStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusTrail3#mmSettled
+ * StatusTrail3.mmSettled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason12#mmProcessingStatus
+ * StatusAndReason12.mmProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason14#mmProcessingStatus
+ * StatusAndReason14.mmProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason1#mmStatusAndReason
+ * StatusAndReason1.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason2#mmStatusAndReason
+ * StatusAndReason2.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason4#mmStatusAndReason
+ * StatusAndReason4.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason5#mmStatusAndReason
+ * StatusAndReason5.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason7#mmStatusAndReason
+ * StatusAndReason7.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason8#mmStatusAndReason
+ * StatusAndReason8.mmStatusAndReason}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Status9Choice#mmProprietary
+ * Status9Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason9#mmStatusAndReason
+ * StatusAndReason9.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.Status11Choice#mmProprietary
+ * Status11Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason13#mmStatusAndReason
+ * StatusAndReason13.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason16#mmStatusAndReason
+ * StatusAndReason16.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason17#mmStatusAndReason
+ * StatusAndReason17.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionInstructionProcessingStatus1#mmStatus
+ * CorporateActionInstructionProcessingStatus1.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ResponseStatus3Choice#mmRejected
+ * ResponseStatus3Choice.mmRejected}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ResponseStatus3Choice#mmPending
+ * ResponseStatus3Choice.mmPending}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ResponseStatus4Choice#mmRejected
+ * ResponseStatus4Choice.mmRejected}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ResponseStatus4Choice#mmPending
+ * ResponseStatus4Choice.mmPending}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.StatusOrStatement5Choice#mmStatusAdvice
+ * StatusOrStatement5Choice.mmStatusAdvice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.StatusOrStatement6Choice#mmStatusAdvice
+ * StatusOrStatement6Choice.mmStatusAdvice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryStatus1#mmType
+ * IntraBalanceQueryStatus1.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason3#mmProprietaryStatus
+ * ProprietaryStatusAndReason3.mmProprietaryStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason18#mmStatusAndReason
+ * StatusAndReason18.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.Status15Choice#mmProprietary
+ * Status15Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason19#mmProcessingStatus
+ * StatusAndReason19.mmProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason20#mmProcessingStatus
+ * StatusAndReason20.mmProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason21#mmStatusAndReason
+ * StatusAndReason21.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.Status16Choice#mmProprietary
+ * Status16Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason25#mmStatusAndReason
+ * StatusAndReason25.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail4#mmProcessingStatus
+ * StatusTrail4.mmProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail4#mmModificationProcessingStatus
+ * StatusTrail4.mmModificationProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail4#mmCancellationStatus
+ * StatusTrail4.mmCancellationStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusTrail4#mmSettled
+ * StatusTrail4.mmSettled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus4Choice#mmProprietary
+ * ModificationProcessingStatus4Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus6Choice#mmProprietary
+ * ModificationProcessingStatus6Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason26#mmStatusAndReason
+ * StatusAndReason26.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail5#mmProcessingStatus
+ * StatusTrail5.mmProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail5#mmModificationProcessingStatus
+ * StatusTrail5.mmModificationProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail5#mmCancellationStatus
+ * StatusTrail5.mmCancellationStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusTrail5#mmSettled
+ * StatusTrail5.mmSettled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus5Choice#mmProprietary
+ * ModificationProcessingStatus5Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericValidationRuleIdentification1#mmIdentification
+ * GenericValidationRuleIdentification1.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason27#mmStatusAndReason
+ * StatusAndReason27.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyControlPackageStatus1#mmRecordStatus
+ * CurrencyControlPackageStatus1.mmRecordStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ResponseStatus6Choice#mmRejected
+ * ResponseStatus6Choice.mmRejected}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ResponseStatus6Choice#mmPending
+ * ResponseStatus6Choice.mmPending}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.StatusOrStatement7Choice#mmStatusAdvice
+ * StatusOrStatement7Choice.mmStatusAdvice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason28#mmProcessingStatus
+ * StatusAndReason28.mmProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail6#mmProcessingStatus
+ * StatusTrail6.mmProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail6#mmModificationProcessingStatus
+ * StatusTrail6.mmModificationProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail6#mmCancellationStatus
+ * StatusTrail6.mmCancellationStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusTrail6#mmSettled
+ * StatusTrail6.mmSettled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus7Choice#mmProprietary
+ * ModificationProcessingStatus7Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason6#mmProprietaryStatus
+ * ProprietaryStatusAndReason6.mmProprietaryStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.Status18Choice#mmProprietary
+ * Status18Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason7#mmProprietaryStatus
+ * ProprietaryStatusAndReason7.mmProprietaryStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason30#mmStatusAndReason
+ * StatusAndReason30.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ResponseStatus8Choice#mmRejected
+ * ResponseStatus8Choice.mmRejected}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ResponseStatus8Choice#mmPending
+ * ResponseStatus8Choice.mmPending}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason29#mmProcessingStatus
+ * StatusAndReason29.mmProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.StatusOrStatement8Choice#mmStatusAdvice
+ * StatusOrStatement8Choice.mmStatusAdvice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail7#mmProcessingStatus
+ * StatusTrail7.mmProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail7#mmModificationProcessingStatus
+ * StatusTrail7.mmModificationProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusTrail7#mmCancellationStatus
+ * StatusTrail7.mmCancellationStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusTrail7#mmSettled
+ * StatusTrail7.mmSettled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus8Choice#mmProprietary
+ * ModificationProcessingStatus8Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.Status23Choice#mmProprietary
+ * Status23Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason32#mmStatusAndReason
+ * StatusAndReason32.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason33#mmStatusAndReason
+ * StatusAndReason33.mmStatusAndReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -343,268 +604,10 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.DateTimePeriod#mmStatus
- * DateTimePeriod.mmStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.StatusReason#mmStatus
- * StatusReason.mmStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestigationPartyRole#mmStatus
- * InvestigationPartyRole.mmStatus}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason1#mmProprietaryStatus
- * ProprietaryStatusAndReason1.mmProprietaryStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus2Choice#mmProprietary
- * ModificationProcessingStatus2Choice.mmProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail2#mmProcessingStatus
- * StatusTrail2.mmProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail2#mmModificationProcessingStatus
- * StatusTrail2.mmModificationProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail2#mmCancellationStatus
- * StatusTrail2.mmCancellationStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusTrail2#mmSettled
- * StatusTrail2.mmSettled}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason2#mmProprietaryStatus
- * ProprietaryStatusAndReason2.mmProprietaryStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus3Choice#mmProprietary
- * ModificationProcessingStatus3Choice.mmProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail3#mmProcessingStatus
- * StatusTrail3.mmProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail3#mmModificationProcessingStatus
- * StatusTrail3.mmModificationProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail3#mmCancellationStatus
- * StatusTrail3.mmCancellationStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusTrail3#mmSettled
- * StatusTrail3.mmSettled}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason12#mmProcessingStatus
- * StatusAndReason12.mmProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason14#mmProcessingStatus
- * StatusAndReason14.mmProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason1#mmStatusAndReason
- * StatusAndReason1.mmStatusAndReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason2#mmStatusAndReason
- * StatusAndReason2.mmStatusAndReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason4#mmStatusAndReason
- * StatusAndReason4.mmStatusAndReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason5#mmStatusAndReason
- * StatusAndReason5.mmStatusAndReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason7#mmStatusAndReason
- * StatusAndReason7.mmStatusAndReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason8#mmStatusAndReason
- * StatusAndReason8.mmStatusAndReason}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Status9Choice#mmProprietary
- * Status9Choice.mmProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason9#mmStatusAndReason
- * StatusAndReason9.mmStatusAndReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.Status11Choice#mmProprietary
- * Status11Choice.mmProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason13#mmStatusAndReason
- * StatusAndReason13.mmStatusAndReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason16#mmStatusAndReason
- * StatusAndReason16.mmStatusAndReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason17#mmStatusAndReason
- * StatusAndReason17.mmStatusAndReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionInstructionProcessingStatus1#mmStatus
- * CorporateActionInstructionProcessingStatus1.mmStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ResponseStatus3Choice#mmRejected
- * ResponseStatus3Choice.mmRejected}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ResponseStatus3Choice#mmPending
- * ResponseStatus3Choice.mmPending}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ResponseStatus4Choice#mmRejected
- * ResponseStatus4Choice.mmRejected}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ResponseStatus4Choice#mmPending
- * ResponseStatus4Choice.mmPending}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.StatusOrStatement5Choice#mmStatusAdvice
- * StatusOrStatement5Choice.mmStatusAdvice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.StatusOrStatement6Choice#mmStatusAdvice
- * StatusOrStatement6Choice.mmStatusAdvice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryStatus1#mmType
- * IntraBalanceQueryStatus1.mmType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason3#mmProprietaryStatus
- * ProprietaryStatusAndReason3.mmProprietaryStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason18#mmStatusAndReason
- * StatusAndReason18.mmStatusAndReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.Status15Choice#mmProprietary
- * Status15Choice.mmProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason19#mmProcessingStatus
- * StatusAndReason19.mmProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason20#mmProcessingStatus
- * StatusAndReason20.mmProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason21#mmStatusAndReason
- * StatusAndReason21.mmStatusAndReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.Status16Choice#mmProprietary
- * Status16Choice.mmProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason25#mmStatusAndReason
- * StatusAndReason25.mmStatusAndReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail4#mmProcessingStatus
- * StatusTrail4.mmProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail4#mmModificationProcessingStatus
- * StatusTrail4.mmModificationProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail4#mmCancellationStatus
- * StatusTrail4.mmCancellationStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusTrail4#mmSettled
- * StatusTrail4.mmSettled}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus4Choice#mmProprietary
- * ModificationProcessingStatus4Choice.mmProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus6Choice#mmProprietary
- * ModificationProcessingStatus6Choice.mmProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason26#mmStatusAndReason
- * StatusAndReason26.mmStatusAndReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail5#mmProcessingStatus
- * StatusTrail5.mmProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail5#mmModificationProcessingStatus
- * StatusTrail5.mmModificationProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail5#mmCancellationStatus
- * StatusTrail5.mmCancellationStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusTrail5#mmSettled
- * StatusTrail5.mmSettled}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus5Choice#mmProprietary
- * ModificationProcessingStatus5Choice.mmProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.GenericValidationRuleIdentification1#mmIdentification
- * GenericValidationRuleIdentification1.mmIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason27#mmStatusAndReason
- * StatusAndReason27.mmStatusAndReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CurrencyControlPackageStatus1#mmRecordStatus
- * CurrencyControlPackageStatus1.mmRecordStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ResponseStatus6Choice#mmRejected
- * ResponseStatus6Choice.mmRejected}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ResponseStatus6Choice#mmPending
- * ResponseStatus6Choice.mmPending}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.StatusOrStatement7Choice#mmStatusAdvice
- * StatusOrStatement7Choice.mmStatusAdvice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason28#mmProcessingStatus
- * StatusAndReason28.mmProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail6#mmProcessingStatus
- * StatusTrail6.mmProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail6#mmModificationProcessingStatus
- * StatusTrail6.mmModificationProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail6#mmCancellationStatus
- * StatusTrail6.mmCancellationStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusTrail6#mmSettled
- * StatusTrail6.mmSettled}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus7Choice#mmProprietary
- * ModificationProcessingStatus7Choice.mmProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason6#mmProprietaryStatus
- * ProprietaryStatusAndReason6.mmProprietaryStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.Status18Choice#mmProprietary
- * Status18Choice.mmProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ProprietaryStatusAndReason7#mmProprietaryStatus
- * ProprietaryStatusAndReason7.mmProprietaryStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason30#mmStatusAndReason
- * StatusAndReason30.mmStatusAndReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ResponseStatus8Choice#mmRejected
- * ResponseStatus8Choice.mmRejected}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ResponseStatus8Choice#mmPending
- * ResponseStatus8Choice.mmPending}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason29#mmProcessingStatus
- * StatusAndReason29.mmProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.StatusOrStatement8Choice#mmStatusAdvice
- * StatusOrStatement8Choice.mmStatusAdvice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail7#mmProcessingStatus
- * StatusTrail7.mmProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail7#mmModificationProcessingStatus
- * StatusTrail7.mmModificationProcessingStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusTrail7#mmCancellationStatus
- * StatusTrail7.mmCancellationStatus}</li>
- * <li>{@linkplain com.tools20022.repository.msg.StatusTrail7#mmSettled
- * StatusTrail7.mmSettled}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus8Choice#mmProprietary
- * ModificationProcessingStatus8Choice.mmProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.Status23Choice#mmProprietary
- * Status23Choice.mmProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason32#mmStatusAndReason
- * StatusAndReason32.mmStatusAndReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.StatusAndReason33#mmStatusAndReason
- * StatusAndReason33.mmStatusAndReason}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -620,8 +623,8 @@ public class Status {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.StatusReason> statusReason;
 	/**
-	 * Specifies the reasons for the status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1132,8 +1135,8 @@ public class Status {
 					OriginalPaymentInstruction23.mmStatusReasonInformation, OriginalPaymentInstruction21.mmReversalReasonInformation, MandateAmendment5.mmAmendmentReason, OriginalPaymentInstruction24.mmStatusReasonInformation,
 					OriginalGroupInformation28.mmStatusReasonInformation, PaymentTransaction76.mmReturnReasonInformation, OriginalPaymentInstruction20.mmCancellationReasonInformation, PaymentTransaction83.mmStatusReasonInformation,
 					PaymentTransaction77.mmReversalReasonInformation, PaymentTransaction82.mmStatusReasonInformation, MandateSuspensionReason1.mmReason);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StatusReason";
 			definition = "Specifies the reasons for the status.";
@@ -1145,8 +1148,8 @@ public class Status {
 	};
 	protected ISODateTime statusDateTime;
 	/**
-	 * Date and time at which the status was assigned.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1305,8 +1308,8 @@ public class Status {
 					CurrencyControlGroupStatus1.mmStatusDateTime, CurrencyControlPackageStatus1.mmStatusDateTime, RegisteredContractJournal1.mmClosureDate, CurrencyControlRecordStatus1.mmStatusDateTime, StatusTrail6.mmStatusDate,
 					InvestmentAccount50.mmStatusDate, StatusTrail7.mmStatusDate, InvestmentAccount62.mmStatusDate, TradeData14.mmCurrentStatusDateTime, TradeData12.mmCurrentStatusDateTime, TradeData15.mmCurrentStatusDateTime,
 					TradeData15.mmPreviousStatusDateTime, TradeData16.mmCurrentStatusDateTime);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StatusDateTime";
 			definition = "Date and time at which the status was assigned.";
@@ -1325,8 +1328,8 @@ public class Status {
 	};
 	protected DateTimePeriod validityTime;
 	/**
-	 * Period of time during which the status is valid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1363,6 +1366,17 @@ public class Status {
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Status
 	 * Status}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=SampleData, SampleData=<?xml version="1.0"
+	 * encoding="UTF-8"?> <InstanceInfo> <key KeyValue="Sample1"/> <key
+	 * KeyValue="Sample2"/> <key KeyValue="Sample3"/> <key KeyValue="Sample4"/>
+	 * <key KeyValue="Sample5"/> <key KeyValue="Sample6"/> <key
+	 * KeyValue="Sample7"/> <key KeyValue="Sample8"/> <key KeyValue="Sample9"/>
+	 * <key KeyValue="Sample10"/> </InstanceInfo>
+	 * 
+	 * 
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1376,8 +1390,15 @@ public class Status {
 	public static final MMBusinessAssociationEnd mmValidityTime = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SystemStatusDetails1.mmValidityTime, SystemStatus1.mmValidityTime, IntraPositionQueryStatus1.mmDatePeriod, SystemStatus2.mmValidityTime);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
+			semanticMarkup_lazy = () -> Arrays
+					.asList(new OtherSemanticMarkup(
+							this,
+							"SampleData",
+							new String[]{
+									"SampleData",
+									"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<InstanceInfo>\n<key KeyValue=\"Sample1\"/>\n<key KeyValue=\"Sample2\"/>\n<key KeyValue=\"Sample3\"/>\n<key KeyValue=\"Sample4\"/>\n<key KeyValue=\"Sample5\"/>\n<key KeyValue=\"Sample6\"/>\n<key KeyValue=\"Sample7\"/>\n<key KeyValue=\"Sample8\"/>\n<key KeyValue=\"Sample9\"/>\n<key KeyValue=\"Sample10\"/>\n</InstanceInfo>\n\n\n"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidityTime";
 			definition = "Period of time during which the status is valid.";
@@ -1390,8 +1411,8 @@ public class Status {
 	};
 	protected Max350Text statusDescription;
 	/**
-	 * Specifies the state or the condition.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1532,8 +1553,8 @@ public class Status {
 					CorporateActionDeactivationCancellationProcessingStatus1.mmAdditionalInformation, CorporateActionDeactivationCancellationRejectionStatus1.mmAdditionalInformation,
 					CancellationStatusInformation1.mmAdditionalStatusReasonInformation, CollateralCancellationStatus1.mmAdditionalInformation, GenericValidationRuleIdentification1.mmDescription, CurrencyControlGroupStatus1.mmStatus,
 					ValidationStatusReason1.mmValidationRule, ValidationStatusReason1.mmAdditionalInformation, CurrencyControlRecordStatus1.mmStatus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StatusDescription";
 			definition = "Specifies the state or the condition.";
@@ -1552,8 +1573,8 @@ public class Status {
 	};
 	protected StatusCode instructionProcessingStatus;
 	/**
-	 * Status of the processing of an instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1670,8 +1691,8 @@ public class Status {
 					CollateralStatusReason1.mmStatus, AccountLinkStatus1.mmStatus, TradeLeg8.mmStatus, InstructionTypeStatus2Choice.mmInstructionStatus, InstructionStatus5Choice.mmGlobalInstructionStatus,
 					InstructionStatus5Choice.mmDetailedInstructionStatus, InstructionStatus6Choice.mmProcessingStatus, DetailedInstructionStatus11.mmInstructionStatus, InstructionProcessingStatus3.mmStatus,
 					CurrencyControlPackageStatus1.mmStatus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InstructionProcessingStatus";
 			definition = "Status of the processing of an instruction.";
@@ -1690,8 +1711,8 @@ public class Status {
 	};
 	protected InvestigationPartyRole partyRole;
 	/**
-	 * Role played by a party in the context of assigning a status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1725,8 +1746,8 @@ public class Status {
 	 */
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
 			definition = "Role played by a party in the context of assigning a status.";
@@ -1739,8 +1760,8 @@ public class Status {
 	};
 	protected SecuritiesSettlementStatusCode settlementStatus;
 	/**
-	 * Status of settlement of a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1910,8 +1931,8 @@ public class Status {
 					StatusAndReason19.mmSettlementStatus, StatusAndReason20.mmSettlementStatus, Status16Choice.mmSettlementStatus, StatusTrail4.mmSettlementStatus, StatusTrail5.mmSettlementStatus, StatusAndReason28.mmSettlementStatus,
 					StatusTrail6.mmSettlementStatus, Status18Choice.mmSettlementStatus, Status19Choice.mmSettlementStatus, SettlementStatus19Choice.mmCode, SettlementStatus19Choice.mmProprietary, StatusAndReason29.mmSettlementStatus,
 					StatusTrail7.mmSettlementStatus, Status22Choice.mmSettlementStatus, SettlementStatus25Choice.mmCode, SettlementStatus25Choice.mmProprietary, Status23Choice.mmSettlementStatus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementStatus";
 			definition = "Status of settlement of a transaction.";
@@ -1930,8 +1951,8 @@ public class Status {
 	};
 	protected CancellationProcessingStatusCode cancellationProcessingStatus;
 	/**
-	 * Specifies the status of a cancellation request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2013,8 +2034,8 @@ public class Status {
 					CancellationProcessingStatus2Choice.mmCode, CancellationProcessingStatus2Choice.mmProprietary, Status3Choice.mmCancellationProcessingStatus, Status10Choice.mmCancellationProcessingStatus,
 					CancellationProcessingStatus3Choice.mmCode, CancellationProcessingStatus3Choice.mmProprietary, Status19Choice.mmCancellationProcessingStatus, CancellationProcessingStatus7Choice.mmCode,
 					CancellationProcessingStatus7Choice.mmProprietary, CancellationProcessingStatus8Choice.mmCode, CancellationProcessingStatus8Choice.mmProprietary, Status22Choice.mmCancellationProcessingStatus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CancellationProcessingStatus";
 			definition = "Specifies the status of a cancellation request.";
@@ -2033,8 +2054,8 @@ public class Status {
 	};
 	protected InstructionProcessingStatusCode transactionProcessingStatus;
 	/**
-	 * Status of processing of a transaction at account servicer level.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2260,8 +2281,8 @@ public class Status {
 					InstructionProcessingStatus23Choice.mmProprietary, Status19Choice.mmInstructionProcessingStatus, Status19Choice.mmRegistrationProcessingStatus, Status19Choice.mmReplacementProcessingStatus,
 					AdditionalInformation12.mmProcessingStatus, Status22Choice.mmInstructionProcessingStatus, Status22Choice.mmRegistrationProcessingStatus, Status22Choice.mmReplacementProcessingStatus,
 					InstructionProcessingStatus26Choice.mmCode, InstructionProcessingStatus26Choice.mmProprietary, Status23Choice.mmInstructionProcessingStatus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionProcessingStatus";
 			definition = "Status of processing of a transaction at account servicer level.";
@@ -2280,8 +2301,8 @@ public class Status {
 	};
 	protected ModificationProcessingStatusCode modificationProcessingStatus;
 	/**
-	 * Provides the status of a modification request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2318,8 +2339,8 @@ public class Status {
 	public static final MMBusinessAttribute mmModificationProcessingStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ModificationProcessingStatus1Choice.mmCode, ModificationProcessingStatus1Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationProcessingStatus";
 			definition = "Provides the status of a modification request.";
@@ -2340,7 +2361,7 @@ public class Status {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status";
 				definition = "The status of an instruction, advice or request.";
@@ -2400,82 +2421,92 @@ public class Status {
 	}
 
 	public List<StatusReason> getStatusReason() {
-		return statusReason;
+		return statusReason == null ? statusReason = new ArrayList<>() : statusReason;
 	}
 
-	public void setStatusReason(List<com.tools20022.repository.entity.StatusReason> statusReason) {
-		this.statusReason = statusReason;
+	public Status setStatusReason(List<com.tools20022.repository.entity.StatusReason> statusReason) {
+		this.statusReason = Objects.requireNonNull(statusReason);
+		return this;
 	}
 
 	public ISODateTime getStatusDateTime() {
 		return statusDateTime;
 	}
 
-	public void setStatusDateTime(ISODateTime statusDateTime) {
-		this.statusDateTime = statusDateTime;
+	public Status setStatusDateTime(ISODateTime statusDateTime) {
+		this.statusDateTime = Objects.requireNonNull(statusDateTime);
+		return this;
 	}
 
 	public DateTimePeriod getValidityTime() {
 		return validityTime;
 	}
 
-	public void setValidityTime(com.tools20022.repository.entity.DateTimePeriod validityTime) {
-		this.validityTime = validityTime;
+	public Status setValidityTime(com.tools20022.repository.entity.DateTimePeriod validityTime) {
+		this.validityTime = Objects.requireNonNull(validityTime);
+		return this;
 	}
 
 	public Max350Text getStatusDescription() {
 		return statusDescription;
 	}
 
-	public void setStatusDescription(Max350Text statusDescription) {
-		this.statusDescription = statusDescription;
+	public Status setStatusDescription(Max350Text statusDescription) {
+		this.statusDescription = Objects.requireNonNull(statusDescription);
+		return this;
 	}
 
 	public StatusCode getInstructionProcessingStatus() {
 		return instructionProcessingStatus;
 	}
 
-	public void setInstructionProcessingStatus(StatusCode instructionProcessingStatus) {
-		this.instructionProcessingStatus = instructionProcessingStatus;
+	public Status setInstructionProcessingStatus(StatusCode instructionProcessingStatus) {
+		this.instructionProcessingStatus = Objects.requireNonNull(instructionProcessingStatus);
+		return this;
 	}
 
 	public InvestigationPartyRole getPartyRole() {
 		return partyRole;
 	}
 
-	public void setPartyRole(com.tools20022.repository.entity.InvestigationPartyRole partyRole) {
-		this.partyRole = partyRole;
+	public Status setPartyRole(com.tools20022.repository.entity.InvestigationPartyRole partyRole) {
+		this.partyRole = Objects.requireNonNull(partyRole);
+		return this;
 	}
 
 	public SecuritiesSettlementStatusCode getSettlementStatus() {
 		return settlementStatus;
 	}
 
-	public void setSettlementStatus(SecuritiesSettlementStatusCode settlementStatus) {
-		this.settlementStatus = settlementStatus;
+	public Status setSettlementStatus(SecuritiesSettlementStatusCode settlementStatus) {
+		this.settlementStatus = Objects.requireNonNull(settlementStatus);
+		return this;
 	}
 
 	public CancellationProcessingStatusCode getCancellationProcessingStatus() {
 		return cancellationProcessingStatus;
 	}
 
-	public void setCancellationProcessingStatus(CancellationProcessingStatusCode cancellationProcessingStatus) {
-		this.cancellationProcessingStatus = cancellationProcessingStatus;
+	public Status setCancellationProcessingStatus(CancellationProcessingStatusCode cancellationProcessingStatus) {
+		this.cancellationProcessingStatus = Objects.requireNonNull(cancellationProcessingStatus);
+		return this;
 	}
 
 	public InstructionProcessingStatusCode getTransactionProcessingStatus() {
 		return transactionProcessingStatus;
 	}
 
-	public void setTransactionProcessingStatus(InstructionProcessingStatusCode transactionProcessingStatus) {
-		this.transactionProcessingStatus = transactionProcessingStatus;
+	public Status setTransactionProcessingStatus(InstructionProcessingStatusCode transactionProcessingStatus) {
+		this.transactionProcessingStatus = Objects.requireNonNull(transactionProcessingStatus);
+		return this;
 	}
 
 	public ModificationProcessingStatusCode getModificationProcessingStatus() {
 		return modificationProcessingStatus;
 	}
 
-	public void setModificationProcessingStatus(ModificationProcessingStatusCode modificationProcessingStatus) {
-		this.modificationProcessingStatus = modificationProcessingStatus;
+	public Status setModificationProcessingStatus(ModificationProcessingStatusCode modificationProcessingStatus) {
+		this.modificationProcessingStatus = Objects.requireNonNull(modificationProcessingStatus);
+		return this;
 	}
 }

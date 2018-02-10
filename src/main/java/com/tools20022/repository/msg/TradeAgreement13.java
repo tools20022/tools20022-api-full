@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * TradeAgreement6}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TradeAgreement13", propOrder = {"buyer", "seller", "quotationDocumentIdentification", "contractDocumentIdentification", "buyerOrderIdentificationDocument", "additionalReferenceDocument", "incoterms"})
 public class TradeAgreement13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Buyr", required = true)
 	protected TradeParty3 buyer;
 	/**
-	 * Party that is specified as the buyer for this trade agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -126,7 +126,7 @@ public class TradeAgreement13 {
 	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> BuyerRole.mmObject();
-			componentContext_lazy = () -> TradeAgreement13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement13.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,10 +139,11 @@ public class TradeAgreement13 {
 			type_lazy = () -> com.tools20022.repository.msg.TradeParty3.mmObject();
 		}
 	};
+	@XmlElement(name = "Sellr", required = true)
 	protected TradeParty3 seller;
 	/**
-	 * Party that is specified as the seller for this trade agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -179,7 +180,7 @@ public class TradeAgreement13 {
 	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SellerRole.mmObject();
-			componentContext_lazy = () -> TradeAgreement13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement13.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,10 +193,11 @@ public class TradeAgreement13 {
 			type_lazy = () -> com.tools20022.repository.msg.TradeParty3.mmObject();
 		}
 	};
+	@XmlElement(name = "QtnDocId")
 	protected DocumentIdentification22 quotationDocumentIdentification;
 	/**
-	 * Quotation document referenced from this trade agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,7 +236,7 @@ public class TradeAgreement13 {
 	public static final MMMessageAttribute mmQuotationDocumentIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> TradeAgreement13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement13.mmObject();
 			isDerived = false;
 			xmlTag = "QtnDocId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -246,10 +248,11 @@ public class TradeAgreement13 {
 			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification22.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrctDocId")
 	protected DocumentIdentification22 contractDocumentIdentification;
 	/**
-	 * Contract document referenced from this trade agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -288,7 +291,7 @@ public class TradeAgreement13 {
 	public static final MMMessageAttribute mmContractDocumentIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> TradeAgreement13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement13.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctDocId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -300,10 +303,11 @@ public class TradeAgreement13 {
 			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification22.mmObject();
 		}
 	};
+	@XmlElement(name = "BuyrOrdrIdDoc")
 	protected DocumentIdentification22 buyerOrderIdentificationDocument;
 	/**
-	 * Buyer order document referenced from this trade agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -343,7 +347,7 @@ public class TradeAgreement13 {
 	public static final MMMessageAttribute mmBuyerOrderIdentificationDocument = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> TradeAgreement13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement13.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrOrdrIdDoc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -355,10 +359,11 @@ public class TradeAgreement13 {
 			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification22.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRefDoc")
 	protected List<com.tools20022.repository.msg.DocumentGeneralInformation2> additionalReferenceDocument;
 	/**
-	 * Additional document referenced from this trade agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -396,7 +401,7 @@ public class TradeAgreement13 {
 	public static final MMMessageAssociationEnd mmAdditionalReferenceDocument = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
-			componentContext_lazy = () -> TradeAgreement13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement13.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRefDoc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -408,10 +413,11 @@ public class TradeAgreement13 {
 			type_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmObject();
 		}
 	};
+	@XmlElement(name = "Incotrms")
 	protected Incoterms3 incoterms;
 	/**
-	 * Specifies the applicable Incoterm and associated location.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -448,7 +454,7 @@ public class TradeAgreement13 {
 	public static final MMMessageAssociationEnd mmIncoterms = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmIncoterms;
-			componentContext_lazy = () -> TradeAgreement13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement13.mmObject();
 			isDerived = false;
 			xmlTag = "Incotrms";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -465,10 +471,12 @@ public class TradeAgreement13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TradeAgreement13.mmBuyer, TradeAgreement13.mmSeller, TradeAgreement13.mmQuotationDocumentIdentification, TradeAgreement13.mmContractDocumentIdentification,
-						TradeAgreement13.mmBuyerOrderIdentificationDocument, TradeAgreement13.mmAdditionalReferenceDocument, TradeAgreement13.mmIncoterms);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement13.mmBuyer, com.tools20022.repository.msg.TradeAgreement13.mmSeller,
+						com.tools20022.repository.msg.TradeAgreement13.mmQuotationDocumentIdentification, com.tools20022.repository.msg.TradeAgreement13.mmContractDocumentIdentification,
+						com.tools20022.repository.msg.TradeAgreement13.mmBuyerOrderIdentificationDocument, com.tools20022.repository.msg.TradeAgreement13.mmAdditionalReferenceDocument,
+						com.tools20022.repository.msg.TradeAgreement13.mmIncoterms);
 				trace_lazy = () -> Agreement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeAgreement13";
 				definition = "Contractual details related to the agreement between parties.";
@@ -478,66 +486,66 @@ public class TradeAgreement13 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Buyr", required = true)
 	public TradeParty3 getBuyer() {
 		return buyer;
 	}
 
-	public void setBuyer(com.tools20022.repository.msg.TradeParty3 buyer) {
-		this.buyer = buyer;
+	public TradeAgreement13 setBuyer(com.tools20022.repository.msg.TradeParty3 buyer) {
+		this.buyer = Objects.requireNonNull(buyer);
+		return this;
 	}
 
-	@XmlElement(name = "Sellr", required = true)
 	public TradeParty3 getSeller() {
 		return seller;
 	}
 
-	public void setSeller(com.tools20022.repository.msg.TradeParty3 seller) {
-		this.seller = seller;
+	public TradeAgreement13 setSeller(com.tools20022.repository.msg.TradeParty3 seller) {
+		this.seller = Objects.requireNonNull(seller);
+		return this;
 	}
 
-	@XmlElement(name = "QtnDocId")
-	public DocumentIdentification22 getQuotationDocumentIdentification() {
-		return quotationDocumentIdentification;
+	public Optional<DocumentIdentification22> getQuotationDocumentIdentification() {
+		return quotationDocumentIdentification == null ? Optional.empty() : Optional.of(quotationDocumentIdentification);
 	}
 
-	public void setQuotationDocumentIdentification(com.tools20022.repository.msg.DocumentIdentification22 quotationDocumentIdentification) {
+	public TradeAgreement13 setQuotationDocumentIdentification(com.tools20022.repository.msg.DocumentIdentification22 quotationDocumentIdentification) {
 		this.quotationDocumentIdentification = quotationDocumentIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CtrctDocId")
-	public DocumentIdentification22 getContractDocumentIdentification() {
-		return contractDocumentIdentification;
+	public Optional<DocumentIdentification22> getContractDocumentIdentification() {
+		return contractDocumentIdentification == null ? Optional.empty() : Optional.of(contractDocumentIdentification);
 	}
 
-	public void setContractDocumentIdentification(com.tools20022.repository.msg.DocumentIdentification22 contractDocumentIdentification) {
+	public TradeAgreement13 setContractDocumentIdentification(com.tools20022.repository.msg.DocumentIdentification22 contractDocumentIdentification) {
 		this.contractDocumentIdentification = contractDocumentIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "BuyrOrdrIdDoc")
-	public DocumentIdentification22 getBuyerOrderIdentificationDocument() {
-		return buyerOrderIdentificationDocument;
+	public Optional<DocumentIdentification22> getBuyerOrderIdentificationDocument() {
+		return buyerOrderIdentificationDocument == null ? Optional.empty() : Optional.of(buyerOrderIdentificationDocument);
 	}
 
-	public void setBuyerOrderIdentificationDocument(com.tools20022.repository.msg.DocumentIdentification22 buyerOrderIdentificationDocument) {
+	public TradeAgreement13 setBuyerOrderIdentificationDocument(com.tools20022.repository.msg.DocumentIdentification22 buyerOrderIdentificationDocument) {
 		this.buyerOrderIdentificationDocument = buyerOrderIdentificationDocument;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRefDoc")
 	public List<DocumentGeneralInformation2> getAdditionalReferenceDocument() {
-		return additionalReferenceDocument;
+		return additionalReferenceDocument == null ? additionalReferenceDocument = new ArrayList<>() : additionalReferenceDocument;
 	}
 
-	public void setAdditionalReferenceDocument(List<com.tools20022.repository.msg.DocumentGeneralInformation2> additionalReferenceDocument) {
-		this.additionalReferenceDocument = additionalReferenceDocument;
+	public TradeAgreement13 setAdditionalReferenceDocument(List<com.tools20022.repository.msg.DocumentGeneralInformation2> additionalReferenceDocument) {
+		this.additionalReferenceDocument = Objects.requireNonNull(additionalReferenceDocument);
+		return this;
 	}
 
-	@XmlElement(name = "Incotrms")
-	public Incoterms3 getIncoterms() {
-		return incoterms;
+	public Optional<Incoterms3> getIncoterms() {
+		return incoterms == null ? Optional.empty() : Optional.of(incoterms);
 	}
 
-	public void setIncoterms(com.tools20022.repository.msg.Incoterms3 incoterms) {
+	public TradeAgreement13 setIncoterms(com.tools20022.repository.msg.Incoterms3 incoterms) {
 		this.incoterms = incoterms;
+		return this;
 	}
 }

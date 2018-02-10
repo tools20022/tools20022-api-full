@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * NetworkParameters3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NetworkParameters4", propOrder = {"networkType", "addressValue"})
 public class NetworkParameters4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NtwkTp", required = true)
 	protected NetworkType1Code networkType;
 	/**
-	 * Type of communication network.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +104,7 @@ public class NetworkParameters4 {
 	 */
 	public static final MMMessageAttribute mmNetworkType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NetworkParameters4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "NtwkTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,14 +115,11 @@ public class NetworkParameters4 {
 			simpleType_lazy = () -> NetworkType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AdrVal", required = true)
 	protected Max70Text addressValue;
 	/**
-	 * Value of the address. The value of an internet protocol address contains
-	 * the IP address or the DNS (Domain Name Server) address, followed by the
-	 * character ':' and the port number if the default port is not used. The
-	 * value of a public telephone address contains the phone number with
-	 * possible prefix and extensions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,7 +148,7 @@ public class NetworkParameters4 {
 	 */
 	public static final MMMessageAttribute mmAddressValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NetworkParameters4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "AdrVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,8 +163,8 @@ public class NetworkParameters4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NetworkParameters4.mmNetworkType, NetworkParameters4.mmAddressValue);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters4.mmNetworkType, com.tools20022.repository.msg.NetworkParameters4.mmAddressValue);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetworkParameters4";
 				definition = "Parameters to communicate with a host.";
@@ -175,21 +174,21 @@ public class NetworkParameters4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NtwkTp", required = true)
 	public NetworkType1Code getNetworkType() {
 		return networkType;
 	}
 
-	public void setNetworkType(NetworkType1Code networkType) {
-		this.networkType = networkType;
+	public NetworkParameters4 setNetworkType(NetworkType1Code networkType) {
+		this.networkType = Objects.requireNonNull(networkType);
+		return this;
 	}
 
-	@XmlElement(name = "AdrVal", required = true)
 	public Max70Text getAddressValue() {
 		return addressValue;
 	}
 
-	public void setAddressValue(Max70Text addressValue) {
-		this.addressValue = addressValue;
+	public NetworkParameters4 setAddressValue(Max70Text addressValue) {
+		this.addressValue = Objects.requireNonNull(addressValue);
+		return this;
 	}
 }

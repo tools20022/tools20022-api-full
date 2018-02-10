@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.Max500Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * TransactionVerificationResult3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionVerificationResult4", propOrder = {"method", "verificationEntity", "result", "additionalResult"})
 public class TransactionVerificationResult4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Mtd", required = true)
 	protected AuthenticationMethod6Code method;
 	/**
-	 * Method of verification that has been performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +133,7 @@ public class TransactionVerificationResult4 {
 	 */
 	public static final MMMessageAttribute mmMethod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionVerificationResult4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult4.mmObject();
 			isDerived = false;
 			xmlTag = "Mtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,10 +146,11 @@ public class TransactionVerificationResult4 {
 			simpleType_lazy = () -> AuthenticationMethod6Code.mmObject();
 		}
 	};
+	@XmlElement(name = "VrfctnNtty")
 	protected AuthenticationEntity2Code verificationEntity;
 	/**
-	 * Entity or device that has performed the verification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,7 +191,7 @@ public class TransactionVerificationResult4 {
 	 */
 	public static final MMMessageAttribute mmVerificationEntity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionVerificationResult4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult4.mmObject();
 			isDerived = false;
 			xmlTag = "VrfctnNtty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,10 +204,11 @@ public class TransactionVerificationResult4 {
 			simpleType_lazy = () -> AuthenticationEntity2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Rslt")
 	protected Verification1Code result;
 	/**
-	 * Result of the verification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,7 +249,7 @@ public class TransactionVerificationResult4 {
 	 */
 	public static final MMMessageAttribute mmResult = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionVerificationResult4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult4.mmObject();
 			isDerived = false;
 			xmlTag = "Rslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,10 +262,11 @@ public class TransactionVerificationResult4 {
 			simpleType_lazy = () -> Verification1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRslt")
 	protected Max500Text additionalResult;
 	/**
-	 * Additional result of the verification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -300,7 +306,7 @@ public class TransactionVerificationResult4 {
 	 */
 	public static final MMMessageAttribute mmAdditionalResult = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionVerificationResult4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult4.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -317,9 +323,9 @@ public class TransactionVerificationResult4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionVerificationResult4.mmMethod, TransactionVerificationResult4.mmVerificationEntity, TransactionVerificationResult4.mmResult,
-						TransactionVerificationResult4.mmAdditionalResult);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionVerificationResult4.mmMethod, com.tools20022.repository.msg.TransactionVerificationResult4.mmVerificationEntity,
+						com.tools20022.repository.msg.TransactionVerificationResult4.mmResult, com.tools20022.repository.msg.TransactionVerificationResult4.mmAdditionalResult);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionVerificationResult4";
 				definition = "Result of performed verifications for the transaction.";
@@ -330,39 +336,39 @@ public class TransactionVerificationResult4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Mtd", required = true)
 	public AuthenticationMethod6Code getMethod() {
 		return method;
 	}
 
-	public void setMethod(AuthenticationMethod6Code method) {
-		this.method = method;
+	public TransactionVerificationResult4 setMethod(AuthenticationMethod6Code method) {
+		this.method = Objects.requireNonNull(method);
+		return this;
 	}
 
-	@XmlElement(name = "VrfctnNtty")
-	public AuthenticationEntity2Code getVerificationEntity() {
-		return verificationEntity;
+	public Optional<AuthenticationEntity2Code> getVerificationEntity() {
+		return verificationEntity == null ? Optional.empty() : Optional.of(verificationEntity);
 	}
 
-	public void setVerificationEntity(AuthenticationEntity2Code verificationEntity) {
+	public TransactionVerificationResult4 setVerificationEntity(AuthenticationEntity2Code verificationEntity) {
 		this.verificationEntity = verificationEntity;
+		return this;
 	}
 
-	@XmlElement(name = "Rslt")
-	public Verification1Code getResult() {
-		return result;
+	public Optional<Verification1Code> getResult() {
+		return result == null ? Optional.empty() : Optional.of(result);
 	}
 
-	public void setResult(Verification1Code result) {
+	public TransactionVerificationResult4 setResult(Verification1Code result) {
 		this.result = result;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRslt")
-	public Max500Text getAdditionalResult() {
-		return additionalResult;
+	public Optional<Max500Text> getAdditionalResult() {
+		return additionalResult == null ? Optional.empty() : Optional.of(additionalResult);
 	}
 
-	public void setAdditionalResult(Max500Text additionalResult) {
+	public TransactionVerificationResult4 setAdditionalResult(Max500Text additionalResult) {
 		this.additionalResult = additionalResult;
+		return this;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.ReportSortedType1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SortCriteria1Choice", propOrder = {"predefined", "userDefined"})
 public class SortCriteria1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Prdfnd", required = true)
 	protected ReportSortedType1Code predefined;
 	/**
-	 * Pre-defined way of indicating how the information is broken down.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,7 +101,7 @@ public class SortCriteria1Choice {
 	 */
 	public static final MMMessageAttribute mmPredefined = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SortCriteria1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SortCriteria1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prdfnd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,10 +112,11 @@ public class SortCriteria1Choice {
 			simpleType_lazy = () -> ReportSortedType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "UsrDfnd", required = true)
 	protected DataFormat1Choice userDefined;
 	/**
-	 * User-defined way of indicating how the information is broken down.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +145,7 @@ public class SortCriteria1Choice {
 	 */
 	public static final MMMessageAttribute mmUserDefined = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SortCriteria1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SortCriteria1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UsrDfnd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,8 +160,8 @@ public class SortCriteria1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SortCriteria1Choice.mmPredefined, SortCriteria1Choice.mmUserDefined);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SortCriteria1Choice.mmPredefined, com.tools20022.repository.choice.SortCriteria1Choice.mmUserDefined);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SortCriteria1Choice";
 				definition = "Choice between pre-defined and user-defined sorting criteria.";
@@ -167,21 +170,21 @@ public class SortCriteria1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Prdfnd", required = true)
 	public ReportSortedType1Code getPredefined() {
 		return predefined;
 	}
 
-	public void setPredefined(ReportSortedType1Code predefined) {
-		this.predefined = predefined;
+	public SortCriteria1Choice setPredefined(ReportSortedType1Code predefined) {
+		this.predefined = Objects.requireNonNull(predefined);
+		return this;
 	}
 
-	@XmlElement(name = "UsrDfnd", required = true)
 	public DataFormat1Choice getUserDefined() {
 		return userDefined;
 	}
 
-	public void setUserDefined(com.tools20022.repository.choice.DataFormat1Choice userDefined) {
-		this.userDefined = userDefined;
+	public SortCriteria1Choice setUserDefined(com.tools20022.repository.choice.DataFormat1Choice userDefined) {
+		this.userDefined = Objects.requireNonNull(userDefined);
+		return this;
 	}
 }

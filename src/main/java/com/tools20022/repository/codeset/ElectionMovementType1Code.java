@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ElectionMovementTypeCode;
+import com.tools20022.repository.codeset.ElectionMovementType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the effect on the holdings of electing a Corporate Action option.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ElectionMovementTypeCode
- * ElectionMovementTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ElectionMovementType1Code#mmRestricted
- * ElectionMovementType1Code.mmRestricted}</li>
+ * {@linkplain com.tools20022.repository.codeset.ElectionMovementType1Code#Restricted
+ * ElectionMovementType1Code.Restricted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ElectionMovementType1Code#mmDirect
- * ElectionMovementType1Code.mmDirect}</li>
+ * {@linkplain com.tools20022.repository.codeset.ElectionMovementType1Code#Direct
+ * ElectionMovementType1Code.Direct}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ElectionMovementTypeCode
+ * ElectionMovementTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -66,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ElectionMovementType1Code extends ElectionMovementTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ElectionMovementType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,11 +90,12 @@ public class ElectionMovementType1Code extends ElectionMovementTypeCode {
 	 * name} = "Restricted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRestricted = new MMCode() {
+	public static final ElectionMovementType1Code Restricted = new ElectionMovementType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
-			owner_lazy = () -> ElectionMovementType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ElectionMovementType1Code.mmObject();
+			codeName = ElectionMovementTypeCode.Restricted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -108,26 +114,57 @@ public class ElectionMovementType1Code extends ElectionMovementTypeCode {
 	 * name} = "Direct"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDirect = new MMCode() {
+	public static final ElectionMovementType1Code Direct = new ElectionMovementType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Direct";
-			owner_lazy = () -> ElectionMovementType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ElectionMovementType1Code.mmObject();
+			codeName = ElectionMovementTypeCode.Direct.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ElectionMovementType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ElectionMovementType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("REST");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ElectionMovementType1Code";
 				definition = "Specifies the effect on the holdings of electing a Corporate Action option.";
-				code_lazy = () -> Arrays.asList(ElectionMovementType1Code.mmRestricted, ElectionMovementType1Code.mmDirect);
 				trace_lazy = () -> ElectionMovementTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ElectionMovementType1Code.Restricted, com.tools20022.repository.codeset.ElectionMovementType1Code.Direct);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Restricted.getCodeName().get(), Restricted);
+		codesByName.put(Direct.getCodeName().get(), Direct);
+	}
+
+	public static ElectionMovementType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ElectionMovementType1Code[] values() {
+		ElectionMovementType1Code[] values = new ElectionMovementType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ElectionMovementType1Code> {
+		@Override
+		public ElectionMovementType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ElectionMovementType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

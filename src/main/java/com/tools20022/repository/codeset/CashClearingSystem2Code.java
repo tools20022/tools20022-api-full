@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CashClearingSystemCode;
+import com.tools20022.repository.codeset.CashClearingSystem2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies a type of payment system.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystemCode
- * CashClearingSystemCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem2Code#mmRTGS
- * CashClearingSystem2Code.mmRTGS}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem2Code#RTGS
+ * CashClearingSystem2Code.RTGS}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem2Code#mmACH
- * CashClearingSystem2Code.mmACH}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem2Code#ACH
+ * CashClearingSystem2Code.ACH}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem2Code#mmUSChips
- * CashClearingSystem2Code.mmUSChips}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem2Code#USChips
+ * CashClearingSystem2Code.USChips}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CashClearingSystem2Code#mmFedNet
- * CashClearingSystem2Code.mmFedNet}</li>
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystem2Code#FedNet
+ * CashClearingSystem2Code.FedNet}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CashClearingSystemCode
+ * CashClearingSystemCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies a type of payment system."</li>
  * </ul>
  */
-public class CashClearingSystem2Code extends CashClearingSystemCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CashClearingSystem2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class CashClearingSystem2Code extends CashClearingSystemCode {
 	 * name} = "RTGS"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRTGS = new MMCode() {
+	public static final CashClearingSystem2Code RTGS = new CashClearingSystem2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RTGS";
-			owner_lazy = () -> CashClearingSystem2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem2Code.mmObject();
+			codeName = CashClearingSystemCode.RTGS.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class CashClearingSystem2Code extends CashClearingSystemCode {
 	 * name} = "ACH"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmACH = new MMCode() {
+	public static final CashClearingSystem2Code ACH = new CashClearingSystem2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ACH";
-			owner_lazy = () -> CashClearingSystem2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem2Code.mmObject();
+			codeName = CashClearingSystemCode.ACH.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class CashClearingSystem2Code extends CashClearingSystemCode {
 	 * name} = "USChips"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSChips = new MMCode() {
+	public static final CashClearingSystem2Code USChips = new CashClearingSystem2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USChips";
-			owner_lazy = () -> CashClearingSystem2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem2Code.mmObject();
+			codeName = CashClearingSystemCode.USChips.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,26 +166,60 @@ public class CashClearingSystem2Code extends CashClearingSystemCode {
 	 * name} = "FedNet"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFedNet = new MMCode() {
+	public static final CashClearingSystem2Code FedNet = new CashClearingSystem2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FedNet";
-			owner_lazy = () -> CashClearingSystem2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystem2Code.mmObject();
+			codeName = CashClearingSystemCode.FedNet.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CashClearingSystem2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CashClearingSystem2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RTG");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashClearingSystem2Code";
 				definition = "Specifies a type of payment system.";
-				code_lazy = () -> Arrays.asList(CashClearingSystem2Code.mmRTGS, CashClearingSystem2Code.mmACH, CashClearingSystem2Code.mmUSChips, CashClearingSystem2Code.mmFedNet);
 				trace_lazy = () -> CashClearingSystemCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashClearingSystem2Code.RTGS, com.tools20022.repository.codeset.CashClearingSystem2Code.ACH,
+						com.tools20022.repository.codeset.CashClearingSystem2Code.USChips, com.tools20022.repository.codeset.CashClearingSystem2Code.FedNet);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(RTGS.getCodeName().get(), RTGS);
+		codesByName.put(ACH.getCodeName().get(), ACH);
+		codesByName.put(USChips.getCodeName().get(), USChips);
+		codesByName.put(FedNet.getCodeName().get(), FedNet);
+	}
+
+	public static CashClearingSystem2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CashClearingSystem2Code[] values() {
+		CashClearingSystem2Code[] values = new CashClearingSystem2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CashClearingSystem2Code> {
+		@Override
+		public CashClearingSystem2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CashClearingSystem2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

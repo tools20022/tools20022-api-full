@@ -24,6 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.other.ExtensionContents1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ExtensionEnvelope1", propOrder = "extensionContents")
 public class ExtensionEnvelope1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "XtnsnCnts", required = true)
 	protected ExtensionContents1 extensionContents;
 	/**
-	 * Technical element that specifies the extension.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +100,7 @@ public class ExtensionEnvelope1 {
 	 */
 	public static final MMMessageAttribute mmExtensionContents = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ExtensionEnvelope1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExtensionEnvelope1.mmObject();
 			isDerived = false;
 			xmlTag = "XtnsnCnts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,8 +115,8 @@ public class ExtensionEnvelope1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ExtensionEnvelope1.mmExtensionContents);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExtensionEnvelope1.mmExtensionContents);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExtensionEnvelope1";
 				definition = "Technical component that contains the validated extension information. This technical envelope allows to segregate the extension information from any other information.";
@@ -123,12 +125,12 @@ public class ExtensionEnvelope1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "XtnsnCnts", required = true)
 	public ExtensionContents1 getExtensionContents() {
 		return extensionContents;
 	}
 
-	public void setExtensionContents(ExtensionContents1 extensionContents) {
-		this.extensionContents = extensionContents;
+	public ExtensionEnvelope1 setExtensionContents(ExtensionContents1 extensionContents) {
+		this.extensionContents = Objects.requireNonNull(extensionContents);
+		return this;
 	}
 }

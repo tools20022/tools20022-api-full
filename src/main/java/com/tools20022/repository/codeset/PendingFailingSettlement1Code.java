@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PendingFailingSettlementCode;
+import com.tools20022.repository.codeset.PendingFailingSettlement1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason the transaction/instruction is pending failing
@@ -32,154 +36,154 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlementCode
- * PendingFailingSettlementCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmAwaitingMoney
- * PendingFailingSettlement1Code.mmAwaitingMoney}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#AwaitingMoney
+ * PendingFailingSettlement1Code.AwaitingMoney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmAwaitingSecuritiesFromCounterparty
- * PendingFailingSettlement1Code.mmAwaitingSecuritiesFromCounterparty}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#AwaitingSecuritiesFromCounterparty
+ * PendingFailingSettlement1Code.AwaitingSecuritiesFromCounterparty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmAwaitingOtherTransaction
- * PendingFailingSettlement1Code.mmAwaitingOtherTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#AwaitingOtherTransaction
+ * PendingFailingSettlement1Code.AwaitingOtherTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmAwaitingDocumentsOrEndorsementsFromYou
- * PendingFailingSettlement1Code.mmAwaitingDocumentsOrEndorsementsFromYou}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#AwaitingDocumentsOrEndorsementsFromYou
+ * PendingFailingSettlement1Code.AwaitingDocumentsOrEndorsementsFromYou}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmCounterpartyTooLateForSettlement
- * PendingFailingSettlement1Code.mmCounterpartyTooLateForSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#CounterpartyTooLateForSettlement
+ * PendingFailingSettlement1Code.CounterpartyTooLateForSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmWrongCertificateNumbers
- * PendingFailingSettlement1Code.mmWrongCertificateNumbers}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#WrongCertificateNumbers
+ * PendingFailingSettlement1Code.WrongCertificateNumbers}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmMinimumSettlementAmount
- * PendingFailingSettlement1Code.mmMinimumSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#MinimumSettlementAmount
+ * PendingFailingSettlement1Code.MinimumSettlementAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmPhysicalDeliveryDelay
- * PendingFailingSettlement1Code.mmPhysicalDeliveryDelay}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#PhysicalDeliveryDelay
+ * PendingFailingSettlement1Code.PhysicalDeliveryDelay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmSecuritiesBlocked
- * PendingFailingSettlement1Code.mmSecuritiesBlocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#SecuritiesBlocked
+ * PendingFailingSettlement1Code.SecuritiesBlocked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmCounterpartyReturnedSecurities
- * PendingFailingSettlement1Code.mmCounterpartyReturnedSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#CounterpartyReturnedSecurities
+ * PendingFailingSettlement1Code.CounterpartyReturnedSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmConfirmationDiscrepancy
- * PendingFailingSettlement1Code.mmConfirmationDiscrepancy}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#ConfirmationDiscrepancy
+ * PendingFailingSettlement1Code.ConfirmationDiscrepancy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmBeneficialOwnershipDisagreement
- * PendingFailingSettlement1Code.mmBeneficialOwnershipDisagreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#BeneficialOwnershipDisagreement
+ * PendingFailingSettlement1Code.BeneficialOwnershipDisagreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmLackOfSecurities
- * PendingFailingSettlement1Code.mmLackOfSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#LackOfSecurities
+ * PendingFailingSettlement1Code.LackOfSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmTooLateForSettlement
- * PendingFailingSettlement1Code.mmTooLateForSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#TooLateForSettlement
+ * PendingFailingSettlement1Code.TooLateForSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmCancellationConfirmationRequest
- * PendingFailingSettlement1Code.mmCancellationConfirmationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#CancellationConfirmationRequest
+ * PendingFailingSettlement1Code.CancellationConfirmationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmMoneyTooLateForSettlement
- * PendingFailingSettlement1Code.mmMoneyTooLateForSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#MoneyTooLateForSettlement
+ * PendingFailingSettlement1Code.MoneyTooLateForSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmUnderObjection
- * PendingFailingSettlement1Code.mmUnderObjection}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#UnderObjection
+ * PendingFailingSettlement1Code.UnderObjection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmAwaitingDocumentsOrEndorsementsFromCounterparty
- * PendingFailingSettlement1Code.
- * mmAwaitingDocumentsOrEndorsementsFromCounterparty}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#AwaitingDocumentsOrEndorsementsFromCounterparty
+ * PendingFailingSettlement1Code.AwaitingDocumentsOrEndorsementsFromCounterparty
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmAccountBlocked
- * PendingFailingSettlement1Code.mmAccountBlocked}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#AccountBlocked
+ * PendingFailingSettlement1Code.AccountBlocked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmEnquirySent
- * PendingFailingSettlement1Code.mmEnquirySent}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#EnquirySent
+ * PendingFailingSettlement1Code.EnquirySent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmNewIssues
- * PendingFailingSettlement1Code.mmNewIssues}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#NewIssues
+ * PendingFailingSettlement1Code.NewIssues}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmCounterpartyInsufficientSecurities
- * PendingFailingSettlement1Code.mmCounterpartyInsufficientSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#CounterpartyInsufficientSecurities
+ * PendingFailingSettlement1Code.CounterpartyInsufficientSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmTradeSettlesInPartials
- * PendingFailingSettlement1Code.mmTradeSettlesInPartials}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#TradeSettlesInPartials
+ * PendingFailingSettlement1Code.TradeSettlesInPartials}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmCounterpartyInsufficientMoney
- * PendingFailingSettlement1Code.mmCounterpartyInsufficientMoney}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#CounterpartyInsufficientMoney
+ * PendingFailingSettlement1Code.CounterpartyInsufficientMoney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmSecuritiesPledgedAsCollateral
- * PendingFailingSettlement1Code.mmSecuritiesPledgedAsCollateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#SecuritiesPledgedAsCollateral
+ * PendingFailingSettlement1Code.SecuritiesPledgedAsCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmRefusedDepositForIssueOfDepositaryReceipts
- * PendingFailingSettlement1Code.mmRefusedDepositForIssueOfDepositaryReceipts}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#RefusedDepositForIssueOfDepositaryReceipts
+ * PendingFailingSettlement1Code.RefusedDepositForIssueOfDepositaryReceipts}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmMaximumForeignLimitReached
- * PendingFailingSettlement1Code.mmMaximumForeignLimitReached}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#MaximumForeignLimitReached
+ * PendingFailingSettlement1Code.MaximumForeignLimitReached}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmNoForeignExchangeInstruction
- * PendingFailingSettlement1Code.mmNoForeignExchangeInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#NoForeignExchangeInstruction
+ * PendingFailingSettlement1Code.NoForeignExchangeInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmIncomeAdjustementRequired
- * PendingFailingSettlement1Code.mmIncomeAdjustementRequired}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#IncomeAdjustementRequired
+ * PendingFailingSettlement1Code.IncomeAdjustementRequired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmPendingLinkedInstruction
- * PendingFailingSettlement1Code.mmPendingLinkedInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#PendingLinkedInstruction
+ * PendingFailingSettlement1Code.PendingLinkedInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmBuyInProcedure
- * PendingFailingSettlement1Code.mmBuyInProcedure}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#BuyInProcedure
+ * PendingFailingSettlement1Code.BuyInProcedure}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmAwaitingSecurities
- * PendingFailingSettlement1Code.mmAwaitingSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#AwaitingSecurities
+ * PendingFailingSettlement1Code.AwaitingSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmSecuritiesLoanedOut
- * PendingFailingSettlement1Code.mmSecuritiesLoanedOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#SecuritiesLoanedOut
+ * PendingFailingSettlement1Code.SecuritiesLoanedOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmInsufficientMoney
- * PendingFailingSettlement1Code.mmInsufficientMoney}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#InsufficientMoney
+ * PendingFailingSettlement1Code.InsufficientMoney}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmConfirmationNotReceived
- * PendingFailingSettlement1Code.mmConfirmationNotReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#ConfirmationNotReceived
+ * PendingFailingSettlement1Code.ConfirmationNotReceived}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmCollateralShortage
- * PendingFailingSettlement1Code.mmCollateralShortage}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#CollateralShortage
+ * PendingFailingSettlement1Code.CollateralShortage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmNotInGoodOrder
- * PendingFailingSettlement1Code.mmNotInGoodOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#NotInGoodOrder
+ * PendingFailingSettlement1Code.NotInGoodOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmLackOfStampDutyInformation
- * PendingFailingSettlement1Code.mmLackOfStampDutyInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#LackOfStampDutyInformation
+ * PendingFailingSettlement1Code.LackOfStampDutyInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmAwaitingNextSettlementCycle
- * PendingFailingSettlement1Code.mmAwaitingNextSettlementCycle}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#AwaitingNextSettlementCycle
+ * PendingFailingSettlement1Code.AwaitingNextSettlementCycle}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmProcessingBatchDifference
- * PendingFailingSettlement1Code.mmProcessingBatchDifference}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#ProcessingBatchDifference
+ * PendingFailingSettlement1Code.ProcessingBatchDifference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmGuaranteedDeliveryIndicatorDifference
- * PendingFailingSettlement1Code.mmGuaranteedDeliveryIndicatorDifference}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#GuaranteedDeliveryIndicatorDifference
+ * PendingFailingSettlement1Code.GuaranteedDeliveryIndicatorDifference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmPreadviceInstructed
- * PendingFailingSettlement1Code.mmPreadviceInstructed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#PreadviceInstructed
+ * PendingFailingSettlement1Code.PreadviceInstructed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmGlobalFormSecurities
- * PendingFailingSettlement1Code.mmGlobalFormSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#GlobalFormSecurities
+ * PendingFailingSettlement1Code.GlobalFormSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmCounterpartyInReceivership
- * PendingFailingSettlement1Code.mmCounterpartyInReceivership}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#CounterpartyInReceivership
+ * PendingFailingSettlement1Code.CounterpartyInReceivership}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#mmMultipleSettlementAmount
- * PendingFailingSettlement1Code.mmMultipleSettlementAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlement1Code#MultipleSettlementAmount
+ * PendingFailingSettlement1Code.MultipleSettlementAmount}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingSettlementCode
+ * PendingFailingSettlementCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -198,7 +202,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PendingFailingSettlement1Code extends PendingFailingSettlementCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PendingFailingSettlement1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -217,11 +222,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "AwaitingMoney"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingMoney = new MMCode() {
+	public static final PendingFailingSettlement1Code AwaitingMoney = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingMoney";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.AwaitingMoney.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -240,11 +246,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "AwaitingSecuritiesFromCounterparty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingSecuritiesFromCounterparty = new MMCode() {
+	public static final PendingFailingSettlement1Code AwaitingSecuritiesFromCounterparty = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSecuritiesFromCounterparty";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.AwaitingSecuritiesFromCounterparty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -263,11 +270,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "AwaitingOtherTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingOtherTransaction = new MMCode() {
+	public static final PendingFailingSettlement1Code AwaitingOtherTransaction = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingOtherTransaction";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.AwaitingOtherTransaction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -286,11 +294,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "AwaitingDocumentsOrEndorsementsFromYou"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingDocumentsOrEndorsementsFromYou = new MMCode() {
+	public static final PendingFailingSettlement1Code AwaitingDocumentsOrEndorsementsFromYou = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingDocumentsOrEndorsementsFromYou";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.AwaitingDocumentsOrEndorsementsFromYou.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -309,11 +318,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "CounterpartyTooLateForSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCounterpartyTooLateForSettlement = new MMCode() {
+	public static final PendingFailingSettlement1Code CounterpartyTooLateForSettlement = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyTooLateForSettlement";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.CounterpartyTooLateForSettlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -332,11 +342,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "WrongCertificateNumbers"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWrongCertificateNumbers = new MMCode() {
+	public static final PendingFailingSettlement1Code WrongCertificateNumbers = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongCertificateNumbers";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.WrongCertificateNumbers.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -355,11 +366,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "MinimumSettlementAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMinimumSettlementAmount = new MMCode() {
+	public static final PendingFailingSettlement1Code MinimumSettlementAmount = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumSettlementAmount";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.MinimumSettlementAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -378,11 +390,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "PhysicalDeliveryDelay"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPhysicalDeliveryDelay = new MMCode() {
+	public static final PendingFailingSettlement1Code PhysicalDeliveryDelay = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDelay";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.PhysicalDeliveryDelay.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -401,11 +414,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "SecuritiesBlocked"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesBlocked = new MMCode() {
+	public static final PendingFailingSettlement1Code SecuritiesBlocked = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesBlocked";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.SecuritiesBlocked.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -424,11 +438,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "CounterpartyReturnedSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCounterpartyReturnedSecurities = new MMCode() {
+	public static final PendingFailingSettlement1Code CounterpartyReturnedSecurities = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyReturnedSecurities";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.CounterpartyReturnedSecurities.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -447,11 +462,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "ConfirmationDiscrepancy"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConfirmationDiscrepancy = new MMCode() {
+	public static final PendingFailingSettlement1Code ConfirmationDiscrepancy = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationDiscrepancy";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.ConfirmationDiscrepancy.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -470,11 +486,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "BeneficialOwnershipDisagreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBeneficialOwnershipDisagreement = new MMCode() {
+	public static final PendingFailingSettlement1Code BeneficialOwnershipDisagreement = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnershipDisagreement";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.BeneficialOwnershipDisagreement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -493,11 +510,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "LackOfSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLackOfSecurities = new MMCode() {
+	public static final PendingFailingSettlement1Code LackOfSecurities = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfSecurities";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.LackOfSecurities.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -516,11 +534,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "TooLateForSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTooLateForSettlement = new MMCode() {
+	public static final PendingFailingSettlement1Code TooLateForSettlement = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TooLateForSettlement";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.TooLateForSettlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -539,11 +558,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "CancellationConfirmationRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellationConfirmationRequest = new MMCode() {
+	public static final PendingFailingSettlement1Code CancellationConfirmationRequest = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationConfirmationRequest";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.CancellationConfirmationRequest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -562,11 +582,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "MoneyTooLateForSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMoneyTooLateForSettlement = new MMCode() {
+	public static final PendingFailingSettlement1Code MoneyTooLateForSettlement = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyTooLateForSettlement";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.MoneyTooLateForSettlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -585,11 +606,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "UnderObjection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnderObjection = new MMCode() {
+	public static final PendingFailingSettlement1Code UnderObjection = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderObjection";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.UnderObjection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -608,11 +630,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "AwaitingDocumentsOrEndorsementsFromCounterparty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingDocumentsOrEndorsementsFromCounterparty = new MMCode() {
+	public static final PendingFailingSettlement1Code AwaitingDocumentsOrEndorsementsFromCounterparty = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingDocumentsOrEndorsementsFromCounterparty";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.AwaitingDocumentsOrEndorsementsFromCounterparty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -631,11 +654,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "AccountBlocked"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountBlocked = new MMCode() {
+	public static final PendingFailingSettlement1Code AccountBlocked = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBlocked";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.AccountBlocked.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -654,11 +678,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "EnquirySent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEnquirySent = new MMCode() {
+	public static final PendingFailingSettlement1Code EnquirySent = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnquirySent";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.EnquirySent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -677,11 +702,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "NewIssues"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNewIssues = new MMCode() {
+	public static final PendingFailingSettlement1Code NewIssues = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewIssues";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.NewIssues.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -700,11 +726,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "CounterpartyInsufficientSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCounterpartyInsufficientSecurities = new MMCode() {
+	public static final PendingFailingSettlement1Code CounterpartyInsufficientSecurities = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyInsufficientSecurities";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.CounterpartyInsufficientSecurities.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -723,11 +750,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "TradeSettlesInPartials"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradeSettlesInPartials = new MMCode() {
+	public static final PendingFailingSettlement1Code TradeSettlesInPartials = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeSettlesInPartials";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.TradeSettlesInPartials.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -746,11 +774,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "CounterpartyInsufficientMoney"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCounterpartyInsufficientMoney = new MMCode() {
+	public static final PendingFailingSettlement1Code CounterpartyInsufficientMoney = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyInsufficientMoney";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.CounterpartyInsufficientMoney.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -769,11 +798,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "SecuritiesPledgedAsCollateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesPledgedAsCollateral = new MMCode() {
+	public static final PendingFailingSettlement1Code SecuritiesPledgedAsCollateral = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesPledgedAsCollateral";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.SecuritiesPledgedAsCollateral.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -792,11 +822,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "RefusedDepositForIssueOfDepositaryReceipts"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRefusedDepositForIssueOfDepositaryReceipts = new MMCode() {
+	public static final PendingFailingSettlement1Code RefusedDepositForIssueOfDepositaryReceipts = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefusedDepositForIssueOfDepositaryReceipts";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.RefusedDepositForIssueOfDepositaryReceipts.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -815,11 +846,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "MaximumForeignLimitReached"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMaximumForeignLimitReached = new MMCode() {
+	public static final PendingFailingSettlement1Code MaximumForeignLimitReached = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumForeignLimitReached";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.MaximumForeignLimitReached.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -838,11 +870,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "NoForeignExchangeInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoForeignExchangeInstruction = new MMCode() {
+	public static final PendingFailingSettlement1Code NoForeignExchangeInstruction = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoForeignExchangeInstruction";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.NoForeignExchangeInstruction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -861,11 +894,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "IncomeAdjustementRequired"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncomeAdjustementRequired = new MMCode() {
+	public static final PendingFailingSettlement1Code IncomeAdjustementRequired = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomeAdjustementRequired";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.IncomeAdjustementRequired.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -884,11 +918,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "PendingLinkedInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingLinkedInstruction = new MMCode() {
+	public static final PendingFailingSettlement1Code PendingLinkedInstruction = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingLinkedInstruction";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.PendingLinkedInstruction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -907,11 +942,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "BuyInProcedure"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBuyInProcedure = new MMCode() {
+	public static final PendingFailingSettlement1Code BuyInProcedure = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyInProcedure";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.BuyInProcedure.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -930,11 +966,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "AwaitingSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingSecurities = new MMCode() {
+	public static final PendingFailingSettlement1Code AwaitingSecurities = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSecurities";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.AwaitingSecurities.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -953,11 +990,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "SecuritiesLoanedOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesLoanedOut = new MMCode() {
+	public static final PendingFailingSettlement1Code SecuritiesLoanedOut = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesLoanedOut";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.SecuritiesLoanedOut.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -976,11 +1014,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "InsufficientMoney"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInsufficientMoney = new MMCode() {
+	public static final PendingFailingSettlement1Code InsufficientMoney = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientMoney";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.InsufficientMoney.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -999,11 +1038,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "ConfirmationNotReceived"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConfirmationNotReceived = new MMCode() {
+	public static final PendingFailingSettlement1Code ConfirmationNotReceived = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationNotReceived";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.ConfirmationNotReceived.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1022,11 +1062,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "CollateralShortage"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateralShortage = new MMCode() {
+	public static final PendingFailingSettlement1Code CollateralShortage = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralShortage";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.CollateralShortage.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1045,11 +1086,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "NotInGoodOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotInGoodOrder = new MMCode() {
+	public static final PendingFailingSettlement1Code NotInGoodOrder = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotInGoodOrder";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.NotInGoodOrder.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1068,11 +1110,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "LackOfStampDutyInformation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLackOfStampDutyInformation = new MMCode() {
+	public static final PendingFailingSettlement1Code LackOfStampDutyInformation = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfStampDutyInformation";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.LackOfStampDutyInformation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1091,11 +1134,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "AwaitingNextSettlementCycle"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingNextSettlementCycle = new MMCode() {
+	public static final PendingFailingSettlement1Code AwaitingNextSettlementCycle = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingNextSettlementCycle";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.AwaitingNextSettlementCycle.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1114,11 +1158,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "ProcessingBatchDifference"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProcessingBatchDifference = new MMCode() {
+	public static final PendingFailingSettlement1Code ProcessingBatchDifference = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingBatchDifference";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.ProcessingBatchDifference.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1137,11 +1182,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "GuaranteedDeliveryIndicatorDifference"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGuaranteedDeliveryIndicatorDifference = new MMCode() {
+	public static final PendingFailingSettlement1Code GuaranteedDeliveryIndicatorDifference = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteedDeliveryIndicatorDifference";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.GuaranteedDeliveryIndicatorDifference.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1160,11 +1206,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "PreadviceInstructed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreadviceInstructed = new MMCode() {
+	public static final PendingFailingSettlement1Code PreadviceInstructed = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreadviceInstructed";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.PreadviceInstructed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1183,11 +1230,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "GlobalFormSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGlobalFormSecurities = new MMCode() {
+	public static final PendingFailingSettlement1Code GlobalFormSecurities = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalFormSecurities";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.GlobalFormSecurities.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1206,11 +1254,12 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "CounterpartyInReceivership"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCounterpartyInReceivership = new MMCode() {
+	public static final PendingFailingSettlement1Code CounterpartyInReceivership = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyInReceivership";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.CounterpartyInReceivership.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1229,40 +1278,122 @@ public class PendingFailingSettlement1Code extends PendingFailingSettlementCode 
 	 * name} = "MultipleSettlementAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMultipleSettlementAmount = new MMCode() {
+	public static final PendingFailingSettlement1Code MultipleSettlementAmount = new PendingFailingSettlement1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSettlementAmount";
-			owner_lazy = () -> PendingFailingSettlement1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingSettlement1Code.mmObject();
+			codeName = PendingFailingSettlementCode.MultipleSettlementAmount.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PendingFailingSettlement1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PendingFailingSettlement1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AWMO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingFailingSettlement1Code";
 				definition = "Specifies the reason the transaction/instruction is pending failing settlement, and the settlement at the instruction settlement date is no longer possible.";
-				code_lazy = () -> Arrays.asList(PendingFailingSettlement1Code.mmAwaitingMoney, PendingFailingSettlement1Code.mmAwaitingSecuritiesFromCounterparty, PendingFailingSettlement1Code.mmAwaitingOtherTransaction,
-						PendingFailingSettlement1Code.mmAwaitingDocumentsOrEndorsementsFromYou, PendingFailingSettlement1Code.mmCounterpartyTooLateForSettlement, PendingFailingSettlement1Code.mmWrongCertificateNumbers,
-						PendingFailingSettlement1Code.mmMinimumSettlementAmount, PendingFailingSettlement1Code.mmPhysicalDeliveryDelay, PendingFailingSettlement1Code.mmSecuritiesBlocked,
-						PendingFailingSettlement1Code.mmCounterpartyReturnedSecurities, PendingFailingSettlement1Code.mmConfirmationDiscrepancy, PendingFailingSettlement1Code.mmBeneficialOwnershipDisagreement,
-						PendingFailingSettlement1Code.mmLackOfSecurities, PendingFailingSettlement1Code.mmTooLateForSettlement, PendingFailingSettlement1Code.mmCancellationConfirmationRequest,
-						PendingFailingSettlement1Code.mmMoneyTooLateForSettlement, PendingFailingSettlement1Code.mmUnderObjection, PendingFailingSettlement1Code.mmAwaitingDocumentsOrEndorsementsFromCounterparty,
-						PendingFailingSettlement1Code.mmAccountBlocked, PendingFailingSettlement1Code.mmEnquirySent, PendingFailingSettlement1Code.mmNewIssues, PendingFailingSettlement1Code.mmCounterpartyInsufficientSecurities,
-						PendingFailingSettlement1Code.mmTradeSettlesInPartials, PendingFailingSettlement1Code.mmCounterpartyInsufficientMoney, PendingFailingSettlement1Code.mmSecuritiesPledgedAsCollateral,
-						PendingFailingSettlement1Code.mmRefusedDepositForIssueOfDepositaryReceipts, PendingFailingSettlement1Code.mmMaximumForeignLimitReached, PendingFailingSettlement1Code.mmNoForeignExchangeInstruction,
-						PendingFailingSettlement1Code.mmIncomeAdjustementRequired, PendingFailingSettlement1Code.mmPendingLinkedInstruction, PendingFailingSettlement1Code.mmBuyInProcedure,
-						PendingFailingSettlement1Code.mmAwaitingSecurities, PendingFailingSettlement1Code.mmSecuritiesLoanedOut, PendingFailingSettlement1Code.mmInsufficientMoney, PendingFailingSettlement1Code.mmConfirmationNotReceived,
-						PendingFailingSettlement1Code.mmCollateralShortage, PendingFailingSettlement1Code.mmNotInGoodOrder, PendingFailingSettlement1Code.mmLackOfStampDutyInformation,
-						PendingFailingSettlement1Code.mmAwaitingNextSettlementCycle, PendingFailingSettlement1Code.mmProcessingBatchDifference, PendingFailingSettlement1Code.mmGuaranteedDeliveryIndicatorDifference,
-						PendingFailingSettlement1Code.mmPreadviceInstructed, PendingFailingSettlement1Code.mmGlobalFormSecurities, PendingFailingSettlement1Code.mmCounterpartyInReceivership,
-						PendingFailingSettlement1Code.mmMultipleSettlementAmount);
 				trace_lazy = () -> PendingFailingSettlementCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingFailingSettlement1Code.AwaitingMoney, com.tools20022.repository.codeset.PendingFailingSettlement1Code.AwaitingSecuritiesFromCounterparty,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.AwaitingOtherTransaction, com.tools20022.repository.codeset.PendingFailingSettlement1Code.AwaitingDocumentsOrEndorsementsFromYou,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.CounterpartyTooLateForSettlement, com.tools20022.repository.codeset.PendingFailingSettlement1Code.WrongCertificateNumbers,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.MinimumSettlementAmount, com.tools20022.repository.codeset.PendingFailingSettlement1Code.PhysicalDeliveryDelay,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.SecuritiesBlocked, com.tools20022.repository.codeset.PendingFailingSettlement1Code.CounterpartyReturnedSecurities,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.ConfirmationDiscrepancy, com.tools20022.repository.codeset.PendingFailingSettlement1Code.BeneficialOwnershipDisagreement,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.LackOfSecurities, com.tools20022.repository.codeset.PendingFailingSettlement1Code.TooLateForSettlement,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.CancellationConfirmationRequest, com.tools20022.repository.codeset.PendingFailingSettlement1Code.MoneyTooLateForSettlement,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.UnderObjection, com.tools20022.repository.codeset.PendingFailingSettlement1Code.AwaitingDocumentsOrEndorsementsFromCounterparty,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.AccountBlocked, com.tools20022.repository.codeset.PendingFailingSettlement1Code.EnquirySent,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.NewIssues, com.tools20022.repository.codeset.PendingFailingSettlement1Code.CounterpartyInsufficientSecurities,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.TradeSettlesInPartials, com.tools20022.repository.codeset.PendingFailingSettlement1Code.CounterpartyInsufficientMoney,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.SecuritiesPledgedAsCollateral, com.tools20022.repository.codeset.PendingFailingSettlement1Code.RefusedDepositForIssueOfDepositaryReceipts,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.MaximumForeignLimitReached, com.tools20022.repository.codeset.PendingFailingSettlement1Code.NoForeignExchangeInstruction,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.IncomeAdjustementRequired, com.tools20022.repository.codeset.PendingFailingSettlement1Code.PendingLinkedInstruction,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.BuyInProcedure, com.tools20022.repository.codeset.PendingFailingSettlement1Code.AwaitingSecurities,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.SecuritiesLoanedOut, com.tools20022.repository.codeset.PendingFailingSettlement1Code.InsufficientMoney,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.ConfirmationNotReceived, com.tools20022.repository.codeset.PendingFailingSettlement1Code.CollateralShortage,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.NotInGoodOrder, com.tools20022.repository.codeset.PendingFailingSettlement1Code.LackOfStampDutyInformation,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.AwaitingNextSettlementCycle, com.tools20022.repository.codeset.PendingFailingSettlement1Code.ProcessingBatchDifference,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.GuaranteedDeliveryIndicatorDifference, com.tools20022.repository.codeset.PendingFailingSettlement1Code.PreadviceInstructed,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.GlobalFormSecurities, com.tools20022.repository.codeset.PendingFailingSettlement1Code.CounterpartyInReceivership,
+						com.tools20022.repository.codeset.PendingFailingSettlement1Code.MultipleSettlementAmount);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AwaitingMoney.getCodeName().get(), AwaitingMoney);
+		codesByName.put(AwaitingSecuritiesFromCounterparty.getCodeName().get(), AwaitingSecuritiesFromCounterparty);
+		codesByName.put(AwaitingOtherTransaction.getCodeName().get(), AwaitingOtherTransaction);
+		codesByName.put(AwaitingDocumentsOrEndorsementsFromYou.getCodeName().get(), AwaitingDocumentsOrEndorsementsFromYou);
+		codesByName.put(CounterpartyTooLateForSettlement.getCodeName().get(), CounterpartyTooLateForSettlement);
+		codesByName.put(WrongCertificateNumbers.getCodeName().get(), WrongCertificateNumbers);
+		codesByName.put(MinimumSettlementAmount.getCodeName().get(), MinimumSettlementAmount);
+		codesByName.put(PhysicalDeliveryDelay.getCodeName().get(), PhysicalDeliveryDelay);
+		codesByName.put(SecuritiesBlocked.getCodeName().get(), SecuritiesBlocked);
+		codesByName.put(CounterpartyReturnedSecurities.getCodeName().get(), CounterpartyReturnedSecurities);
+		codesByName.put(ConfirmationDiscrepancy.getCodeName().get(), ConfirmationDiscrepancy);
+		codesByName.put(BeneficialOwnershipDisagreement.getCodeName().get(), BeneficialOwnershipDisagreement);
+		codesByName.put(LackOfSecurities.getCodeName().get(), LackOfSecurities);
+		codesByName.put(TooLateForSettlement.getCodeName().get(), TooLateForSettlement);
+		codesByName.put(CancellationConfirmationRequest.getCodeName().get(), CancellationConfirmationRequest);
+		codesByName.put(MoneyTooLateForSettlement.getCodeName().get(), MoneyTooLateForSettlement);
+		codesByName.put(UnderObjection.getCodeName().get(), UnderObjection);
+		codesByName.put(AwaitingDocumentsOrEndorsementsFromCounterparty.getCodeName().get(), AwaitingDocumentsOrEndorsementsFromCounterparty);
+		codesByName.put(AccountBlocked.getCodeName().get(), AccountBlocked);
+		codesByName.put(EnquirySent.getCodeName().get(), EnquirySent);
+		codesByName.put(NewIssues.getCodeName().get(), NewIssues);
+		codesByName.put(CounterpartyInsufficientSecurities.getCodeName().get(), CounterpartyInsufficientSecurities);
+		codesByName.put(TradeSettlesInPartials.getCodeName().get(), TradeSettlesInPartials);
+		codesByName.put(CounterpartyInsufficientMoney.getCodeName().get(), CounterpartyInsufficientMoney);
+		codesByName.put(SecuritiesPledgedAsCollateral.getCodeName().get(), SecuritiesPledgedAsCollateral);
+		codesByName.put(RefusedDepositForIssueOfDepositaryReceipts.getCodeName().get(), RefusedDepositForIssueOfDepositaryReceipts);
+		codesByName.put(MaximumForeignLimitReached.getCodeName().get(), MaximumForeignLimitReached);
+		codesByName.put(NoForeignExchangeInstruction.getCodeName().get(), NoForeignExchangeInstruction);
+		codesByName.put(IncomeAdjustementRequired.getCodeName().get(), IncomeAdjustementRequired);
+		codesByName.put(PendingLinkedInstruction.getCodeName().get(), PendingLinkedInstruction);
+		codesByName.put(BuyInProcedure.getCodeName().get(), BuyInProcedure);
+		codesByName.put(AwaitingSecurities.getCodeName().get(), AwaitingSecurities);
+		codesByName.put(SecuritiesLoanedOut.getCodeName().get(), SecuritiesLoanedOut);
+		codesByName.put(InsufficientMoney.getCodeName().get(), InsufficientMoney);
+		codesByName.put(ConfirmationNotReceived.getCodeName().get(), ConfirmationNotReceived);
+		codesByName.put(CollateralShortage.getCodeName().get(), CollateralShortage);
+		codesByName.put(NotInGoodOrder.getCodeName().get(), NotInGoodOrder);
+		codesByName.put(LackOfStampDutyInformation.getCodeName().get(), LackOfStampDutyInformation);
+		codesByName.put(AwaitingNextSettlementCycle.getCodeName().get(), AwaitingNextSettlementCycle);
+		codesByName.put(ProcessingBatchDifference.getCodeName().get(), ProcessingBatchDifference);
+		codesByName.put(GuaranteedDeliveryIndicatorDifference.getCodeName().get(), GuaranteedDeliveryIndicatorDifference);
+		codesByName.put(PreadviceInstructed.getCodeName().get(), PreadviceInstructed);
+		codesByName.put(GlobalFormSecurities.getCodeName().get(), GlobalFormSecurities);
+		codesByName.put(CounterpartyInReceivership.getCodeName().get(), CounterpartyInReceivership);
+		codesByName.put(MultipleSettlementAmount.getCodeName().get(), MultipleSettlementAmount);
+	}
+
+	public static PendingFailingSettlement1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PendingFailingSettlement1Code[] values() {
+		PendingFailingSettlement1Code[] values = new PendingFailingSettlement1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PendingFailingSettlement1Code> {
+		@Override
+		public PendingFailingSettlement1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PendingFailingSettlement1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

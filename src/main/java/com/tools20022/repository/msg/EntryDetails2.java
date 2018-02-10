@@ -22,9 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "EntryDetails2", propOrder = {"batch", "transactionDetails"})
 public class EntryDetails2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Btch")
 	protected BatchInformation2 batch;
 	/**
-	 * Provides details on batched transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -103,7 +103,7 @@ public class EntryDetails2 {
 	 */
 	public static final MMMessageAssociationEnd mmBatch = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> EntryDetails2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "Btch";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +115,11 @@ public class EntryDetails2 {
 			type_lazy = () -> com.tools20022.repository.msg.BatchInformation2.mmObject();
 		}
 	};
+	@XmlElement(name = "TxDtls")
 	protected List<com.tools20022.repository.msg.EntryTransaction3> transactionDetails;
 	/**
-	 * Provides information on the underlying transaction(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -148,7 +149,7 @@ public class EntryDetails2 {
 	public static final MMMessageAssociationEnd mmTransactionDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashEntry.mmObject();
-			componentContext_lazy = () -> EntryDetails2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "TxDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,9 +164,9 @@ public class EntryDetails2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EntryDetails2.mmBatch, EntryDetails2.mmTransactionDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntryDetails2.mmBatch, com.tools20022.repository.msg.EntryDetails2.mmTransactionDetails);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EntryDetails2";
 				definition = "Identifies the underlying transaction(s) and/or batched entries.";
@@ -175,21 +176,21 @@ public class EntryDetails2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Btch")
-	public BatchInformation2 getBatch() {
-		return batch;
+	public Optional<BatchInformation2> getBatch() {
+		return batch == null ? Optional.empty() : Optional.of(batch);
 	}
 
-	public void setBatch(com.tools20022.repository.msg.BatchInformation2 batch) {
+	public EntryDetails2 setBatch(com.tools20022.repository.msg.BatchInformation2 batch) {
 		this.batch = batch;
+		return this;
 	}
 
-	@XmlElement(name = "TxDtls")
 	public List<EntryTransaction3> getTransactionDetails() {
-		return transactionDetails;
+		return transactionDetails == null ? transactionDetails = new ArrayList<>() : transactionDetails;
 	}
 
-	public void setTransactionDetails(List<com.tools20022.repository.msg.EntryTransaction3> transactionDetails) {
-		this.transactionDetails = transactionDetails;
+	public EntryDetails2 setTransactionDetails(List<com.tools20022.repository.msg.EntryTransaction3> transactionDetails) {
+		this.transactionDetails = Objects.requireNonNull(transactionDetails);
+		return this;
 	}
 }

@@ -26,9 +26,11 @@ import com.tools20022.repository.choice.SystemPartyIdentification1Choice;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Role played by a party in a system.
@@ -39,12 +41,31 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
  * <li>
  * {@linkplain com.tools20022.repository.entity.SystemPartyRole#mmRelatedSystem
  * SystemPartyRole.mmRelatedSystem}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.System#mmPartyRole
+ * System.mmPartyRole}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SystemPartyIdentification1Choice#mmCombinedIdentification
+ * SystemPartyIdentification1Choice.mmCombinedIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -69,8 +90,6 @@ import java.util.List;
  * ClearingMemberRole}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -99,27 +118,10 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.System#mmPartyRole
- * System.mmPartyRole}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.SystemPartyIdentification1Choice#mmCombinedIdentification
- * SystemPartyIdentification1Choice.mmCombinedIdentification}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -135,8 +137,8 @@ public class SystemPartyRole extends Role {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.System> relatedSystem;
 	/**
-	 * Specifies the system for which a party plays a role
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,8 +170,8 @@ public class SystemPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemPartyRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSystem";
 			definition = "Specifies the system for which a party plays a role";
@@ -183,7 +185,7 @@ public class SystemPartyRole extends Role {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemPartyRole";
 				definition = "Role played by a party in a system.";
@@ -207,10 +209,11 @@ public class SystemPartyRole extends Role {
 	}
 
 	public List<System> getRelatedSystem() {
-		return relatedSystem;
+		return relatedSystem == null ? relatedSystem = new ArrayList<>() : relatedSystem;
 	}
 
-	public void setRelatedSystem(List<com.tools20022.repository.entity.System> relatedSystem) {
-		this.relatedSystem = relatedSystem;
+	public SystemPartyRole setRelatedSystem(List<com.tools20022.repository.entity.System> relatedSystem) {
+		this.relatedSystem = Objects.requireNonNull(relatedSystem);
+		return this;
 	}
 }

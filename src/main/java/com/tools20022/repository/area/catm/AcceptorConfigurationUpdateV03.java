@@ -30,6 +30,7 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -38,23 +39,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TerminalManagementPreviousVersion
- * TerminalManagementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20132014
- * CAPETerminalManagementMaintenance20132014}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AccptrCfgtnUpd"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -70,6 +54,23 @@ import javax.xml.bind.annotation.*;
  * AcceptorConfigurationUpdateV03.mmSecurityTrailer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20132014
+ * CAPETerminalManagementMaintenance20132014}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AccptrCfgtnUpd"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TerminalManagementPreviousVersion
+ * TerminalManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code catm.003.001.03}</li>
@@ -97,16 +98,16 @@ import javax.xml.bind.annotation.*;
  * AcceptorConfigurationUpdateV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcceptorConfigurationUpdateV03", propOrder = {"header", "acceptorConfiguration", "securityTrailer"})
 public class AcceptorConfigurationUpdateV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header4 header;
 	/**
-	 * Set of characteristics related to the transfer of the acceptor
-	 * parameters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,11 +163,11 @@ public class AcceptorConfigurationUpdateV03 {
 			}
 		}
 	};
+	@XmlElement(name = "AccptrCfgtn", required = true)
 	protected AcceptorConfiguration3 acceptorConfiguration;
 	/**
-	 * Acceptor configuration to be downloaded from the terminal management
-	 * system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -223,10 +224,11 @@ public class AcceptorConfigurationUpdateV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SctyTrlr", required = true)
 	protected ContentInformationType9 securityTrailer;
 	/**
-	 * Trailer of the message containing a MAC or a digital signature.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -315,34 +317,34 @@ public class AcceptorConfigurationUpdateV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header4 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header4 header) {
-		this.header = header;
+	public AcceptorConfigurationUpdateV03 setHeader(Header4 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "AccptrCfgtn", required = true)
 	public AcceptorConfiguration3 getAcceptorConfiguration() {
 		return acceptorConfiguration;
 	}
 
-	public void setAcceptorConfiguration(AcceptorConfiguration3 acceptorConfiguration) {
-		this.acceptorConfiguration = acceptorConfiguration;
+	public AcceptorConfigurationUpdateV03 setAcceptorConfiguration(AcceptorConfiguration3 acceptorConfiguration) {
+		this.acceptorConfiguration = Objects.requireNonNull(acceptorConfiguration);
+		return this;
 	}
 
-	@XmlElement(name = "SctyTrlr", required = true)
 	public ContentInformationType9 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
-	public void setSecurityTrailer(ContentInformationType9 securityTrailer) {
-		this.securityTrailer = securityTrailer;
+	public AcceptorConfigurationUpdateV03 setSecurityTrailer(ContentInformationType9 securityTrailer) {
+		this.securityTrailer = Objects.requireNonNull(securityTrailer);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catm.003.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:catm.003.001.03")
 	static public class Document {
 		@XmlElement(name = "AccptrCfgtnUpd", required = true)
 		public AcceptorConfigurationUpdateV03 messageBody;

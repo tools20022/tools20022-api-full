@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DisruptionFallbackCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies the method used to determine a settlement rate when a disruption
@@ -33,45 +38,45 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#mmAssignmentOfClaim
- * DisruptionFallbackCode.mmAssignmentOfClaim}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#AssignmentOfClaim
+ * DisruptionFallbackCode.AssignmentOfClaim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#mmCalculationAgentDeterminationOfSettlementRate
- * DisruptionFallbackCode.mmCalculationAgentDeterminationOfSettlementRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#CalculationAgentDeterminationOfSettlementRate
+ * DisruptionFallbackCode.CalculationAgentDeterminationOfSettlementRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#mmDeliverableSubstitute
- * DisruptionFallbackCode.mmDeliverableSubstitute}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#DeliverableSubstitute
+ * DisruptionFallbackCode.DeliverableSubstitute}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#mmEscrowArrangement
- * DisruptionFallbackCode.mmEscrowArrangement}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#EscrowArrangement
+ * DisruptionFallbackCode.EscrowArrangement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#mmFallbackReferencePrice
- * DisruptionFallbackCode.mmFallbackReferencePrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#FallbackReferencePrice
+ * DisruptionFallbackCode.FallbackReferencePrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#mmLocalAssetSubstituteGross
- * DisruptionFallbackCode.mmLocalAssetSubstituteGross}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#LocalAssetSubstituteGross
+ * DisruptionFallbackCode.LocalAssetSubstituteGross}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#mmLocalAssetSubstituteNet
- * DisruptionFallbackCode.mmLocalAssetSubstituteNet}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#LocalAssetSubstituteNet
+ * DisruptionFallbackCode.LocalAssetSubstituteNet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#mmLocalCurrencySubstitute
- * DisruptionFallbackCode.mmLocalCurrencySubstitute}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#LocalCurrencySubstitute
+ * DisruptionFallbackCode.LocalCurrencySubstitute}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#mmNoFaultTermination
- * DisruptionFallbackCode.mmNoFaultTermination}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#NoFaultTermination
+ * DisruptionFallbackCode.NoFaultTermination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#mmNonDeliverableSubstitute
- * DisruptionFallbackCode.mmNonDeliverableSubstitute}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#NonDeliverableSubstitute
+ * DisruptionFallbackCode.NonDeliverableSubstitute}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#mmSettlementPostponement
- * DisruptionFallbackCode.mmSettlementPostponement}</li>
+ * {@linkplain com.tools20022.repository.codeset.DisruptionFallbackCode#SettlementPostponement
+ * DisruptionFallbackCode.SettlementPostponement}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -90,7 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class DisruptionFallbackCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DisruptionFallbackCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -118,12 +124,12 @@ public class DisruptionFallbackCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAssignmentOfClaim = new MMCode() {
+	public static final DisruptionFallbackCode AssignmentOfClaim = new DisruptionFallbackCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssignmentOfClaim";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
-			owner_lazy = () -> DisruptionFallbackCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisruptionFallbackCode.mmObject();
 			codeName = "AOCL";
 		}
 	};
@@ -152,12 +158,12 @@ public class DisruptionFallbackCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCalculationAgentDeterminationOfSettlementRate = new MMCode() {
+	public static final DisruptionFallbackCode CalculationAgentDeterminationOfSettlementRate = new DisruptionFallbackCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculationAgentDeterminationOfSettlementRate";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
-			owner_lazy = () -> DisruptionFallbackCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisruptionFallbackCode.mmObject();
 			codeName = "CADS";
 		}
 	};
@@ -186,12 +192,12 @@ public class DisruptionFallbackCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeliverableSubstitute = new MMCode() {
+	public static final DisruptionFallbackCode DeliverableSubstitute = new DisruptionFallbackCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliverableSubstitute";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
-			owner_lazy = () -> DisruptionFallbackCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisruptionFallbackCode.mmObject();
 			codeName = "DLVS";
 		}
 	};
@@ -220,12 +226,12 @@ public class DisruptionFallbackCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEscrowArrangement = new MMCode() {
+	public static final DisruptionFallbackCode EscrowArrangement = new DisruptionFallbackCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EscrowArrangement";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
-			owner_lazy = () -> DisruptionFallbackCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisruptionFallbackCode.mmObject();
 			codeName = "ESCA";
 		}
 	};
@@ -254,12 +260,12 @@ public class DisruptionFallbackCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFallbackReferencePrice = new MMCode() {
+	public static final DisruptionFallbackCode FallbackReferencePrice = new DisruptionFallbackCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FallbackReferencePrice";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
-			owner_lazy = () -> DisruptionFallbackCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisruptionFallbackCode.mmObject();
 			codeName = "FBRP";
 		}
 	};
@@ -288,12 +294,12 @@ public class DisruptionFallbackCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmLocalAssetSubstituteGross = new MMCode() {
+	public static final DisruptionFallbackCode LocalAssetSubstituteGross = new DisruptionFallbackCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LocalAssetSubstituteGross";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
-			owner_lazy = () -> DisruptionFallbackCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisruptionFallbackCode.mmObject();
 			codeName = "LASG";
 		}
 	};
@@ -322,12 +328,12 @@ public class DisruptionFallbackCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmLocalAssetSubstituteNet = new MMCode() {
+	public static final DisruptionFallbackCode LocalAssetSubstituteNet = new DisruptionFallbackCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LocalAssetSubstituteNet";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
-			owner_lazy = () -> DisruptionFallbackCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisruptionFallbackCode.mmObject();
 			codeName = "LASN";
 		}
 	};
@@ -356,12 +362,12 @@ public class DisruptionFallbackCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmLocalCurrencySubstitute = new MMCode() {
+	public static final DisruptionFallbackCode LocalCurrencySubstitute = new DisruptionFallbackCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LocalCurrencySubstitute";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
-			owner_lazy = () -> DisruptionFallbackCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisruptionFallbackCode.mmObject();
 			codeName = "LCYS";
 		}
 	};
@@ -390,12 +396,12 @@ public class DisruptionFallbackCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoFaultTermination = new MMCode() {
+	public static final DisruptionFallbackCode NoFaultTermination = new DisruptionFallbackCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoFaultTermination";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
-			owner_lazy = () -> DisruptionFallbackCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisruptionFallbackCode.mmObject();
 			codeName = "NFTR";
 		}
 	};
@@ -424,12 +430,12 @@ public class DisruptionFallbackCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonDeliverableSubstitute = new MMCode() {
+	public static final DisruptionFallbackCode NonDeliverableSubstitute = new DisruptionFallbackCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonDeliverableSubstitute";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
-			owner_lazy = () -> DisruptionFallbackCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisruptionFallbackCode.mmObject();
 			codeName = "NDLS";
 		}
 	};
@@ -458,29 +464,71 @@ public class DisruptionFallbackCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementPostponement = new MMCode() {
+	public static final DisruptionFallbackCode SettlementPostponement = new DisruptionFallbackCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementPostponement";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
-			owner_lazy = () -> DisruptionFallbackCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DisruptionFallbackCode.mmObject();
 			codeName = "STPP";
 		}
 	};
+	final static private LinkedHashMap<String, DisruptionFallbackCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DisruptionFallbackCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AOCL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DisruptionFallbackCode";
 				definition = "Identifies the method used to determine a settlement rate when a disruption event has occurred.";
-				code_lazy = () -> Arrays.asList(DisruptionFallbackCode.mmAssignmentOfClaim, DisruptionFallbackCode.mmCalculationAgentDeterminationOfSettlementRate, DisruptionFallbackCode.mmDeliverableSubstitute,
-						DisruptionFallbackCode.mmEscrowArrangement, DisruptionFallbackCode.mmFallbackReferencePrice, DisruptionFallbackCode.mmLocalAssetSubstituteGross, DisruptionFallbackCode.mmLocalAssetSubstituteNet,
-						DisruptionFallbackCode.mmLocalCurrencySubstitute, DisruptionFallbackCode.mmNoFaultTermination, DisruptionFallbackCode.mmNonDeliverableSubstitute, DisruptionFallbackCode.mmSettlementPostponement);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DisruptionFallbackCode.AssignmentOfClaim, com.tools20022.repository.codeset.DisruptionFallbackCode.CalculationAgentDeterminationOfSettlementRate,
+						com.tools20022.repository.codeset.DisruptionFallbackCode.DeliverableSubstitute, com.tools20022.repository.codeset.DisruptionFallbackCode.EscrowArrangement,
+						com.tools20022.repository.codeset.DisruptionFallbackCode.FallbackReferencePrice, com.tools20022.repository.codeset.DisruptionFallbackCode.LocalAssetSubstituteGross,
+						com.tools20022.repository.codeset.DisruptionFallbackCode.LocalAssetSubstituteNet, com.tools20022.repository.codeset.DisruptionFallbackCode.LocalCurrencySubstitute,
+						com.tools20022.repository.codeset.DisruptionFallbackCode.NoFaultTermination, com.tools20022.repository.codeset.DisruptionFallbackCode.NonDeliverableSubstitute,
+						com.tools20022.repository.codeset.DisruptionFallbackCode.SettlementPostponement);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AssignmentOfClaim.getCodeName().get(), AssignmentOfClaim);
+		codesByName.put(CalculationAgentDeterminationOfSettlementRate.getCodeName().get(), CalculationAgentDeterminationOfSettlementRate);
+		codesByName.put(DeliverableSubstitute.getCodeName().get(), DeliverableSubstitute);
+		codesByName.put(EscrowArrangement.getCodeName().get(), EscrowArrangement);
+		codesByName.put(FallbackReferencePrice.getCodeName().get(), FallbackReferencePrice);
+		codesByName.put(LocalAssetSubstituteGross.getCodeName().get(), LocalAssetSubstituteGross);
+		codesByName.put(LocalAssetSubstituteNet.getCodeName().get(), LocalAssetSubstituteNet);
+		codesByName.put(LocalCurrencySubstitute.getCodeName().get(), LocalCurrencySubstitute);
+		codesByName.put(NoFaultTermination.getCodeName().get(), NoFaultTermination);
+		codesByName.put(NonDeliverableSubstitute.getCodeName().get(), NonDeliverableSubstitute);
+		codesByName.put(SettlementPostponement.getCodeName().get(), SettlementPostponement);
+	}
+
+	public static DisruptionFallbackCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DisruptionFallbackCode[] values() {
+		DisruptionFallbackCode[] values = new DisruptionFallbackCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DisruptionFallbackCode> {
+		@Override
+		public DisruptionFallbackCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DisruptionFallbackCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

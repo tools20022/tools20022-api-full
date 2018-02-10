@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OvernightIndexSwapTypeCode;
+import com.tools20022.repository.codeset.OvernightIndexSwapType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of overnight index swap transaction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.OvernightIndexSwapTypeCode
- * OvernightIndexSwapTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OvernightIndexSwapType1Code#mmPaid
- * OvernightIndexSwapType1Code.mmPaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.OvernightIndexSwapType1Code#Paid
+ * OvernightIndexSwapType1Code.Paid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OvernightIndexSwapType1Code#mmReceived
- * OvernightIndexSwapType1Code.mmReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.OvernightIndexSwapType1Code#Received
+ * OvernightIndexSwapType1Code.Received}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.OvernightIndexSwapTypeCode
+ * OvernightIndexSwapTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of overnight index swap transaction."</li>
  * </ul>
  */
-public class OvernightIndexSwapType1Code extends OvernightIndexSwapTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OvernightIndexSwapType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class OvernightIndexSwapType1Code extends OvernightIndexSwapTypeCode {
 	 * name} = "Paid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPaid = new MMCode() {
+	public static final OvernightIndexSwapType1Code Paid = new OvernightIndexSwapType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Paid";
-			owner_lazy = () -> OvernightIndexSwapType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OvernightIndexSwapType1Code.mmObject();
+			codeName = OvernightIndexSwapTypeCode.Paid.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class OvernightIndexSwapType1Code extends OvernightIndexSwapTypeCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceived = new MMCode() {
+	public static final OvernightIndexSwapType1Code Received = new OvernightIndexSwapType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
-			owner_lazy = () -> OvernightIndexSwapType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OvernightIndexSwapType1Code.mmObject();
+			codeName = OvernightIndexSwapTypeCode.Received.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OvernightIndexSwapType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OvernightIndexSwapType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OvernightIndexSwapType1Code";
 				definition = "Specifies the type of overnight index swap transaction.";
-				code_lazy = () -> Arrays.asList(OvernightIndexSwapType1Code.mmPaid, OvernightIndexSwapType1Code.mmReceived);
 				trace_lazy = () -> OvernightIndexSwapTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OvernightIndexSwapType1Code.Paid, com.tools20022.repository.codeset.OvernightIndexSwapType1Code.Received);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Paid.getCodeName().get(), Paid);
+		codesByName.put(Received.getCodeName().get(), Received);
+	}
+
+	public static OvernightIndexSwapType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OvernightIndexSwapType1Code[] values() {
+		OvernightIndexSwapType1Code[] values = new OvernightIndexSwapType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OvernightIndexSwapType1Code> {
+		@Override
+		public OvernightIndexSwapType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OvernightIndexSwapType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

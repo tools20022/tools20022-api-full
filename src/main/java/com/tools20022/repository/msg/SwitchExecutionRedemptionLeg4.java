@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.SwitchExecutionRedemptionLeg;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,16 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SwitchExecutionRedemptionLeg4", propOrder = {"legExecutionIdentification", "legIdentification", "investmentAccountDetails", "financialInstrumentDetails", "financialInstrumentQuantity"})
 public class SwitchExecutionRedemptionLeg4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LegExctnId")
 	protected Max35Text legExecutionIdentification;
 	/**
-	 * Unique identifier for an instance of a leg execution within a switch
-	 * confirmation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +120,7 @@ public class SwitchExecutionRedemptionLeg4 {
 	 */
 	public static final MMMessageAttribute mmLegExecutionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SwitchExecutionRedemptionLeg4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4.mmObject();
 			isDerived = false;
 			xmlTag = "LegExctnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +131,11 @@ public class SwitchExecutionRedemptionLeg4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "LegId")
 	protected Max35Text legIdentification;
 	/**
-	 * Unique technical identifier for an instance of a leg within a switch.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +163,7 @@ public class SwitchExecutionRedemptionLeg4 {
 	 */
 	public static final MMMessageAttribute mmLegIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SwitchExecutionRedemptionLeg4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4.mmObject();
 			isDerived = false;
 			xmlTag = "LegId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,11 +174,11 @@ public class SwitchExecutionRedemptionLeg4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstmtAcctDtls")
 	protected InvestmentAccount30 investmentAccountDetails;
 	/**
-	 * Account information of the switch order / switch order confirmation for
-	 * which the advice is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -210,7 +212,7 @@ public class SwitchExecutionRedemptionLeg4 {
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
-			componentContext_lazy = () -> SwitchExecutionRedemptionLeg4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,11 +224,11 @@ public class SwitchExecutionRedemptionLeg4 {
 			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount30.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmDtls")
 	protected FinancialInstrument18 financialInstrumentDetails;
 	/**
-	 * Financial instrument information of the redemption leg of the switch
-	 * order /switch order confirmation for which the advice is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -260,7 +262,7 @@ public class SwitchExecutionRedemptionLeg4 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
-			componentContext_lazy = () -> SwitchExecutionRedemptionLeg4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,10 +274,11 @@ public class SwitchExecutionRedemptionLeg4 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument18.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmQty")
 	protected FinancialInstrumentQuantity3 financialInstrumentQuantity;
 	/**
-	 * Quantity of an order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -308,7 +311,7 @@ public class SwitchExecutionRedemptionLeg4 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmUnitsNumber;
-			componentContext_lazy = () -> SwitchExecutionRedemptionLeg4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -324,10 +327,11 @@ public class SwitchExecutionRedemptionLeg4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SwitchExecutionRedemptionLeg4.mmLegExecutionIdentification, SwitchExecutionRedemptionLeg4.mmLegIdentification, SwitchExecutionRedemptionLeg4.mmInvestmentAccountDetails,
-						SwitchExecutionRedemptionLeg4.mmFinancialInstrumentDetails, SwitchExecutionRedemptionLeg4.mmFinancialInstrumentQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4.mmLegExecutionIdentification, com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4.mmLegIdentification,
+						com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4.mmInvestmentAccountDetails, com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4.mmFinancialInstrumentDetails,
+						com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4.mmFinancialInstrumentQuantity);
 				trace_lazy = () -> SwitchExecutionRedemptionLeg.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SwitchExecutionRedemptionLeg4";
 				definition = "Execution of the redemption part, in a switch between investment funds or investment fund classes.";
@@ -336,48 +340,48 @@ public class SwitchExecutionRedemptionLeg4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LegExctnId")
-	public Max35Text getLegExecutionIdentification() {
-		return legExecutionIdentification;
+	public Optional<Max35Text> getLegExecutionIdentification() {
+		return legExecutionIdentification == null ? Optional.empty() : Optional.of(legExecutionIdentification);
 	}
 
-	public void setLegExecutionIdentification(Max35Text legExecutionIdentification) {
+	public SwitchExecutionRedemptionLeg4 setLegExecutionIdentification(Max35Text legExecutionIdentification) {
 		this.legExecutionIdentification = legExecutionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "LegId")
-	public Max35Text getLegIdentification() {
-		return legIdentification;
+	public Optional<Max35Text> getLegIdentification() {
+		return legIdentification == null ? Optional.empty() : Optional.of(legIdentification);
 	}
 
-	public void setLegIdentification(Max35Text legIdentification) {
+	public SwitchExecutionRedemptionLeg4 setLegIdentification(Max35Text legIdentification) {
 		this.legIdentification = legIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtAcctDtls")
-	public InvestmentAccount30 getInvestmentAccountDetails() {
-		return investmentAccountDetails;
+	public Optional<InvestmentAccount30> getInvestmentAccountDetails() {
+		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public void setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount30 investmentAccountDetails) {
+	public SwitchExecutionRedemptionLeg4 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount30 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmDtls")
-	public FinancialInstrument18 getFinancialInstrumentDetails() {
-		return financialInstrumentDetails;
+	public Optional<FinancialInstrument18> getFinancialInstrumentDetails() {
+		return financialInstrumentDetails == null ? Optional.empty() : Optional.of(financialInstrumentDetails);
 	}
 
-	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument18 financialInstrumentDetails) {
+	public SwitchExecutionRedemptionLeg4 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument18 financialInstrumentDetails) {
 		this.financialInstrumentDetails = financialInstrumentDetails;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmQty")
-	public FinancialInstrumentQuantity3 getFinancialInstrumentQuantity() {
-		return financialInstrumentQuantity;
+	public Optional<FinancialInstrumentQuantity3> getFinancialInstrumentQuantity() {
+		return financialInstrumentQuantity == null ? Optional.empty() : Optional.of(financialInstrumentQuantity);
 	}
 
-	public void setFinancialInstrumentQuantity(com.tools20022.repository.msg.FinancialInstrumentQuantity3 financialInstrumentQuantity) {
+	public SwitchExecutionRedemptionLeg4 setFinancialInstrumentQuantity(com.tools20022.repository.msg.FinancialInstrumentQuantity3 financialInstrumentQuantity) {
 		this.financialInstrumentQuantity = financialInstrumentQuantity;
+		return this;
 	}
 }

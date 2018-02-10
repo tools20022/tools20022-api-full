@@ -25,9 +25,8 @@ import com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentifica
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Participant profile participant information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ParticipantInformation1", propOrder = {"profileDeletionDate", "bankBranch", "terminalIdentification", "restrictions", "externalPaymentSystemInformation", "migration"})
 public class ParticipantInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrflDeltnDt")
 	protected ISODateTime profileDeletionDate;
 	/**
-	 * Date the profile was deleted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +112,7 @@ public class ParticipantInformation1 {
 	 */
 	public static final MMMessageAttribute mmProfileDeletionDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ParticipantInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PrflDeltnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +123,11 @@ public class ParticipantInformation1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "BkBrnch")
 	protected CentralisedAndAuthorisedBranchIdentification1Choice bankBranch;
 	/**
-	 * National BIC identifiers for authorised and central branches.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -154,7 +155,7 @@ public class ParticipantInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmBankBranch = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ParticipantInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "BkBrnch";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,10 +167,11 @@ public class ParticipantInformation1 {
 			type_lazy = () -> CentralisedAndAuthorisedBranchIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TermnlId")
 	protected Max35Text terminalIdentification;
 	/**
-	 * CBRF identification of the terminal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,7 +198,7 @@ public class ParticipantInformation1 {
 	 */
 	public static final MMMessageAttribute mmTerminalIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ParticipantInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "TermnlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,10 +209,11 @@ public class ParticipantInformation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Rstrctns")
 	protected List<Max35Text> restrictions;
 	/**
-	 * Intraday restrictions details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -237,7 +240,7 @@ public class ParticipantInformation1 {
 	 */
 	public static final MMMessageAttribute mmRestrictions = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ParticipantInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Rstrctns";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -247,10 +250,11 @@ public class ParticipantInformation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "XtrnlPmtSysInf")
 	protected ExternalPaymentSystemDetails1 externalPaymentSystemInformation;
 	/**
-	 * External payment system details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -277,7 +281,7 @@ public class ParticipantInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmExternalPaymentSystemInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ParticipantInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "XtrnlPmtSysInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -289,10 +293,11 @@ public class ParticipantInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.ExternalPaymentSystemDetails1.mmObject();
 		}
 	};
+	@XmlElement(name = "Mgrtn", required = true)
 	protected SystemMigration1 migration;
 	/**
-	 * Information related for participant migration process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -318,7 +323,7 @@ public class ParticipantInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmMigration = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ParticipantInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Mgrtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -334,9 +339,10 @@ public class ParticipantInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ParticipantInformation1.mmProfileDeletionDate, ParticipantInformation1.mmBankBranch, ParticipantInformation1.mmTerminalIdentification, ParticipantInformation1.mmRestrictions,
-						ParticipantInformation1.mmExternalPaymentSystemInformation, ParticipantInformation1.mmMigration);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParticipantInformation1.mmProfileDeletionDate, com.tools20022.repository.msg.ParticipantInformation1.mmBankBranch,
+						com.tools20022.repository.msg.ParticipantInformation1.mmTerminalIdentification, com.tools20022.repository.msg.ParticipantInformation1.mmRestrictions,
+						com.tools20022.repository.msg.ParticipantInformation1.mmExternalPaymentSystemInformation, com.tools20022.repository.msg.ParticipantInformation1.mmMigration);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ParticipantInformation1";
 				definition = "Participant profile participant information.";
@@ -345,57 +351,57 @@ public class ParticipantInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrflDeltnDt")
-	public ISODateTime getProfileDeletionDate() {
-		return profileDeletionDate;
+	public Optional<ISODateTime> getProfileDeletionDate() {
+		return profileDeletionDate == null ? Optional.empty() : Optional.of(profileDeletionDate);
 	}
 
-	public void setProfileDeletionDate(ISODateTime profileDeletionDate) {
+	public ParticipantInformation1 setProfileDeletionDate(ISODateTime profileDeletionDate) {
 		this.profileDeletionDate = profileDeletionDate;
+		return this;
 	}
 
-	@XmlElement(name = "BkBrnch")
-	public CentralisedAndAuthorisedBranchIdentification1Choice getBankBranch() {
-		return bankBranch;
+	public Optional<CentralisedAndAuthorisedBranchIdentification1Choice> getBankBranch() {
+		return bankBranch == null ? Optional.empty() : Optional.of(bankBranch);
 	}
 
-	public void setBankBranch(CentralisedAndAuthorisedBranchIdentification1Choice bankBranch) {
+	public ParticipantInformation1 setBankBranch(CentralisedAndAuthorisedBranchIdentification1Choice bankBranch) {
 		this.bankBranch = bankBranch;
+		return this;
 	}
 
-	@XmlElement(name = "TermnlId")
-	public Max35Text getTerminalIdentification() {
-		return terminalIdentification;
+	public Optional<Max35Text> getTerminalIdentification() {
+		return terminalIdentification == null ? Optional.empty() : Optional.of(terminalIdentification);
 	}
 
-	public void setTerminalIdentification(Max35Text terminalIdentification) {
+	public ParticipantInformation1 setTerminalIdentification(Max35Text terminalIdentification) {
 		this.terminalIdentification = terminalIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Rstrctns")
 	public List<Max35Text> getRestrictions() {
-		return restrictions;
+		return restrictions == null ? restrictions = new ArrayList<>() : restrictions;
 	}
 
-	public void setRestrictions(List<Max35Text> restrictions) {
-		this.restrictions = restrictions;
+	public ParticipantInformation1 setRestrictions(List<Max35Text> restrictions) {
+		this.restrictions = Objects.requireNonNull(restrictions);
+		return this;
 	}
 
-	@XmlElement(name = "XtrnlPmtSysInf")
-	public ExternalPaymentSystemDetails1 getExternalPaymentSystemInformation() {
-		return externalPaymentSystemInformation;
+	public Optional<ExternalPaymentSystemDetails1> getExternalPaymentSystemInformation() {
+		return externalPaymentSystemInformation == null ? Optional.empty() : Optional.of(externalPaymentSystemInformation);
 	}
 
-	public void setExternalPaymentSystemInformation(com.tools20022.repository.msg.ExternalPaymentSystemDetails1 externalPaymentSystemInformation) {
+	public ParticipantInformation1 setExternalPaymentSystemInformation(com.tools20022.repository.msg.ExternalPaymentSystemDetails1 externalPaymentSystemInformation) {
 		this.externalPaymentSystemInformation = externalPaymentSystemInformation;
+		return this;
 	}
 
-	@XmlElement(name = "Mgrtn", required = true)
 	public SystemMigration1 getMigration() {
 		return migration;
 	}
 
-	public void setMigration(com.tools20022.repository.msg.SystemMigration1 migration) {
-		this.migration = migration;
+	public ParticipantInformation1 setMigration(com.tools20022.repository.msg.SystemMigration1 migration) {
+		this.migration = Objects.requireNonNull(migration);
+		return this;
 	}
 }

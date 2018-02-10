@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of the non extension request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UndertakingNonExtensionRequest1", propOrder = {"requestingParty", "undertakingIdentification"})
 public class UndertakingNonExtensionRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RqstngPty", required = true)
 	protected PartyIdentification43 requestingParty;
 	/**
-	 * Details related to the requesting party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -115,7 +117,7 @@ public class UndertakingNonExtensionRequest1 {
 	public static final MMMessageAssociationEnd mmRequestingParty = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> UndertakingNonExtensionRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingNonExtensionRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "RqstngPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +129,11 @@ public class UndertakingNonExtensionRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	@XmlElement(name = "UdrtkgId", required = true)
 	protected Undertaking9 undertakingIdentification;
 	/**
-	 * Details related to the identification of the undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -162,7 +165,7 @@ public class UndertakingNonExtensionRequest1 {
 	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Undertaking.mmObject();
-			componentContext_lazy = () -> UndertakingNonExtensionRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingNonExtensionRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +181,10 @@ public class UndertakingNonExtensionRequest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UndertakingNonExtensionRequest1.mmRequestingParty, UndertakingNonExtensionRequest1.mmUndertakingIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingNonExtensionRequest1.mmRequestingParty, com.tools20022.repository.msg.UndertakingNonExtensionRequest1.mmUndertakingIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingNonExtensionRequestV01.mmUndertakingNonExtensionRequestDetails);
 				trace_lazy = () -> Undertaking.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingNonExtensionRequest1";
 				definition = "Details of the non extension request.";
@@ -190,21 +193,21 @@ public class UndertakingNonExtensionRequest1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RqstngPty", required = true)
 	public PartyIdentification43 getRequestingParty() {
 		return requestingParty;
 	}
 
-	public void setRequestingParty(com.tools20022.repository.msg.PartyIdentification43 requestingParty) {
-		this.requestingParty = requestingParty;
+	public UndertakingNonExtensionRequest1 setRequestingParty(com.tools20022.repository.msg.PartyIdentification43 requestingParty) {
+		this.requestingParty = Objects.requireNonNull(requestingParty);
+		return this;
 	}
 
-	@XmlElement(name = "UdrtkgId", required = true)
 	public Undertaking9 getUndertakingIdentification() {
 		return undertakingIdentification;
 	}
 
-	public void setUndertakingIdentification(com.tools20022.repository.msg.Undertaking9 undertakingIdentification) {
-		this.undertakingIdentification = undertakingIdentification;
+	public UndertakingNonExtensionRequest1 setUndertakingIdentification(com.tools20022.repository.msg.Undertaking9 undertakingIdentification) {
+		this.undertakingIdentification = Objects.requireNonNull(undertakingIdentification);
+		return this;
 	}
 }

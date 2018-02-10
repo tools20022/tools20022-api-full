@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.ContentType1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ContentInformationType2", propOrder = {"contentType", "envelopedData"})
 public class ContentInformationType2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CnttTp", required = true)
 	protected ContentType1Code contentType;
 	/**
-	 * Type of data protection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +108,7 @@ public class ContentInformationType2 {
 	 */
 	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ContentInformationType2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType2.mmObject();
 			isDerived = false;
 			xmlTag = "CnttTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +119,11 @@ public class ContentInformationType2 {
 			simpleType_lazy = () -> ContentType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "EnvlpdData", required = true)
 	protected EnvelopedData1 envelopedData;
 	/**
-	 * Data protection by encryption, with a session key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -146,7 +149,7 @@ public class ContentInformationType2 {
 	 */
 	public static final MMMessageAssociationEnd mmEnvelopedData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ContentInformationType2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType2.mmObject();
 			isDerived = false;
 			xmlTag = "EnvlpdData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,8 +165,8 @@ public class ContentInformationType2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ContentInformationType2.mmContentType, ContentInformationType2.mmEnvelopedData);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType2.mmContentType, com.tools20022.repository.msg.ContentInformationType2.mmEnvelopedData);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType2";
 				definition = "General cryptographic message syntax (CMS) containing encrypted data.";
@@ -173,21 +176,21 @@ public class ContentInformationType2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CnttTp", required = true)
 	public ContentType1Code getContentType() {
 		return contentType;
 	}
 
-	public void setContentType(ContentType1Code contentType) {
-		this.contentType = contentType;
+	public ContentInformationType2 setContentType(ContentType1Code contentType) {
+		this.contentType = Objects.requireNonNull(contentType);
+		return this;
 	}
 
-	@XmlElement(name = "EnvlpdData", required = true)
 	public EnvelopedData1 getEnvelopedData() {
 		return envelopedData;
 	}
 
-	public void setEnvelopedData(com.tools20022.repository.msg.EnvelopedData1 envelopedData) {
-		this.envelopedData = envelopedData;
+	public ContentInformationType2 setEnvelopedData(com.tools20022.repository.msg.EnvelopedData1 envelopedData) {
+		this.envelopedData = Objects.requireNonNull(envelopedData);
+		return this;
 	}
 }

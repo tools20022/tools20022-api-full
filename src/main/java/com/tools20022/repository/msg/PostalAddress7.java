@@ -27,9 +27,8 @@ import com.tools20022.repository.datatype.RestrictedFINMax8Text;
 import com.tools20022.repository.entity.Country;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,16 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PostalAddress7", propOrder = {"addressLine", "postCode", "townName", "country"})
 public class PostalAddress7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AdrLine")
 	protected List<RestrictedFINMax35Text> addressLine;
 	/**
-	 * Information that locates and identifies a specific address, as defined by
-	 * postal services, that is presented in free format text.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +112,7 @@ public class PostalAddress7 {
 	 */
 	public static final MMMessageAttribute mmAddressLine = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PostalAddress7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress7.mmObject();
 			isDerived = false;
 			xmlTag = "AdrLine";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,11 +123,11 @@ public class PostalAddress7 {
 			simpleType_lazy = () -> RestrictedFINMax35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PstCd")
 	protected RestrictedFINMax8Text postCode;
 	/**
-	 * Identifier consisting of a group of letters and/or numbers that is added
-	 * to a postal address to assist the sorting of mail.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +162,7 @@ public class PostalAddress7 {
 	public static final MMMessageAttribute mmPostCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmPostCodeIdentification;
-			componentContext_lazy = () -> PostalAddress7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress7.mmObject();
 			isDerived = false;
 			xmlTag = "PstCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +173,11 @@ public class PostalAddress7 {
 			simpleType_lazy = () -> RestrictedFINMax8Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TwnNm")
 	protected RestrictedFINMax23Text townName;
 	/**
-	 * Name of a built-up area, with defined boundaries, and a local government.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -212,7 +212,7 @@ public class PostalAddress7 {
 	public static final MMMessageAttribute mmTownName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmTownName;
-			componentContext_lazy = () -> PostalAddress7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress7.mmObject();
 			isDerived = false;
 			xmlTag = "TwnNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,10 +223,11 @@ public class PostalAddress7 {
 			simpleType_lazy = () -> RestrictedFINMax23Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Ctry", required = true)
 	protected CountryCode country;
 	/**
-	 * Nation with its own government.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -258,7 +259,7 @@ public class PostalAddress7 {
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> PostalAddress7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress7.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,9 +274,10 @@ public class PostalAddress7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PostalAddress7.mmAddressLine, PostalAddress7.mmPostCode, PostalAddress7.mmTownName, PostalAddress7.mmCountry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress7.mmAddressLine, com.tools20022.repository.msg.PostalAddress7.mmPostCode, com.tools20022.repository.msg.PostalAddress7.mmTownName,
+						com.tools20022.repository.msg.PostalAddress7.mmCountry);
 				trace_lazy = () -> PostalAddress.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PostalAddress7";
 				definition = "Information that locates and identifies a specific address, as defined by postal services.";
@@ -284,39 +286,39 @@ public class PostalAddress7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AdrLine")
 	public List<RestrictedFINMax35Text> getAddressLine() {
-		return addressLine;
+		return addressLine == null ? addressLine = new ArrayList<>() : addressLine;
 	}
 
-	public void setAddressLine(List<RestrictedFINMax35Text> addressLine) {
-		this.addressLine = addressLine;
+	public PostalAddress7 setAddressLine(List<RestrictedFINMax35Text> addressLine) {
+		this.addressLine = Objects.requireNonNull(addressLine);
+		return this;
 	}
 
-	@XmlElement(name = "PstCd")
-	public RestrictedFINMax8Text getPostCode() {
-		return postCode;
+	public Optional<RestrictedFINMax8Text> getPostCode() {
+		return postCode == null ? Optional.empty() : Optional.of(postCode);
 	}
 
-	public void setPostCode(RestrictedFINMax8Text postCode) {
+	public PostalAddress7 setPostCode(RestrictedFINMax8Text postCode) {
 		this.postCode = postCode;
+		return this;
 	}
 
-	@XmlElement(name = "TwnNm")
-	public RestrictedFINMax23Text getTownName() {
-		return townName;
+	public Optional<RestrictedFINMax23Text> getTownName() {
+		return townName == null ? Optional.empty() : Optional.of(townName);
 	}
 
-	public void setTownName(RestrictedFINMax23Text townName) {
+	public PostalAddress7 setTownName(RestrictedFINMax23Text townName) {
 		this.townName = townName;
+		return this;
 	}
 
-	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
 
-	public void setCountry(CountryCode country) {
-		this.country = country;
+	public PostalAddress7 setCountry(CountryCode country) {
+		this.country = Objects.requireNonNull(country);
+		return this;
 	}
 }

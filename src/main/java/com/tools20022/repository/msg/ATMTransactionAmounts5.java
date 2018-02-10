@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * ATMTransactionAmounts4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMTransactionAmounts5", propOrder = {"displayFlag", "maximumAmount"})
 public class ATMTransactionAmounts5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DispFlg")
 	protected TrueFalseIndicator displayFlag;
 	/**
-	 * True if limits may be displayed on the ATM to the customer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +110,7 @@ public class ATMTransactionAmounts5 {
 	 */
 	public static final MMMessageAttribute mmDisplayFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMTransactionAmounts5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts5.mmObject();
 			isDerived = false;
 			xmlTag = "DispFlg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +122,11 @@ public class ATMTransactionAmounts5 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxAmt")
 	protected ImpliedCurrencyAndAmount maximumAmount;
 	/**
-	 * Maximum amount allowed for deposit on the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +159,7 @@ public class ATMTransactionAmounts5 {
 	 */
 	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMTransactionAmounts5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts5.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,8 +175,8 @@ public class ATMTransactionAmounts5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMTransactionAmounts5.mmDisplayFlag, ATMTransactionAmounts5.mmMaximumAmount);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts5.mmDisplayFlag, com.tools20022.repository.msg.ATMTransactionAmounts5.mmMaximumAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTransactionAmounts5";
 				definition = "Deposit limits for the account.";
@@ -183,21 +186,21 @@ public class ATMTransactionAmounts5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DispFlg")
-	public TrueFalseIndicator getDisplayFlag() {
-		return displayFlag;
+	public Optional<TrueFalseIndicator> getDisplayFlag() {
+		return displayFlag == null ? Optional.empty() : Optional.of(displayFlag);
 	}
 
-	public void setDisplayFlag(TrueFalseIndicator displayFlag) {
+	public ATMTransactionAmounts5 setDisplayFlag(TrueFalseIndicator displayFlag) {
 		this.displayFlag = displayFlag;
+		return this;
 	}
 
-	@XmlElement(name = "MaxAmt")
-	public ImpliedCurrencyAndAmount getMaximumAmount() {
-		return maximumAmount;
+	public Optional<ImpliedCurrencyAndAmount> getMaximumAmount() {
+		return maximumAmount == null ? Optional.empty() : Optional.of(maximumAmount);
 	}
 
-	public void setMaximumAmount(ImpliedCurrencyAndAmount maximumAmount) {
+	public ATMTransactionAmounts5 setMaximumAmount(ImpliedCurrencyAndAmount maximumAmount) {
 		this.maximumAmount = maximumAmount;
+		return this;
 	}
 }

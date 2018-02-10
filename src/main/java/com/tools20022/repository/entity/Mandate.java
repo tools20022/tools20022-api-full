@@ -27,9 +27,8 @@ import com.tools20022.repository.entity.Contract;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Authorisation given by an issuing party to a holder party to act on the
@@ -41,6 +40,8 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Contract Contract}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -68,49 +69,6 @@ import java.util.List;
  * Mandate.mmTrackingIndicator}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Mandate#mmRate
  * Mandate.mmRate}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashAccountMandate
- * CashAccountMandate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.DirectDebitMandate
- * DirectDebitMandate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PowerOfAttorney
- * PowerOfAttorney}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Contract Contract}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.MandateTypeInformation1
- * MandateTypeInformation1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.OriginalMandate1Choice
- * OriginalMandate1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.OriginalMandate2Choice
- * OriginalMandate2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MandateAmendment1
- * MandateAmendment1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MandateAmendment2
- * MandateAmendment2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MandateAmendment3
- * MandateAmendment3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MandateAmendment4
- * MandateAmendment4}</li>
- * <li>{@linkplain com.tools20022.repository.choice.OriginalMandate3Choice
- * OriginalMandate3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MandateAmendment5
- * MandateAmendment5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MandateTypeInformation2
- * MandateTypeInformation2}</li>
- * <li>{@linkplain com.tools20022.repository.choice.OriginalMandate4Choice
- * OriginalMandate4Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.OriginalMandate5Choice
- * OriginalMandate5Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -156,11 +114,52 @@ import java.util.List;
  * MandateAmendment5.mmOriginalMandate}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CashAccountMandate
+ * CashAccountMandate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.DirectDebitMandate
+ * DirectDebitMandate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PowerOfAttorney
+ * PowerOfAttorney}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateTypeInformation1
+ * MandateTypeInformation1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.OriginalMandate1Choice
+ * OriginalMandate1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.OriginalMandate2Choice
+ * OriginalMandate2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateAmendment1
+ * MandateAmendment1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateAmendment2
+ * MandateAmendment2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateAmendment3
+ * MandateAmendment3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateAmendment4
+ * MandateAmendment4}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.OriginalMandate3Choice
+ * OriginalMandate3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateAmendment5
+ * MandateAmendment5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateTypeInformation2
+ * MandateTypeInformation2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.OriginalMandate4Choice
+ * OriginalMandate4Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.OriginalMandate5Choice
+ * OriginalMandate5Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -178,8 +177,8 @@ public class Mandate extends Contract {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.SignatureCondition> signatureConditions;
 	/**
-	 * Specifies the signature requirements related to the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -221,8 +220,8 @@ public class Mandate extends Contract {
 	public static final MMBusinessAssociationEnd mmSignatureConditions = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(OperationMandate1.mmRequiredSignatureNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SignatureConditions";
 			definition = "Specifies the signature requirements related to the document.";
@@ -234,8 +233,8 @@ public class Mandate extends Contract {
 	};
 	protected Max35Text mandateIdentification;
 	/**
-	 * Unique and unambiguous identification of the mandate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -351,8 +350,8 @@ public class Mandate extends Contract {
 					AmendmentInformationDetails10.mmOriginalMandateIdentification, OriginalMandate3Choice.mmOriginalMandateIdentification, MandateRelatedInformation10.mmMandateIdentification,
 					OriginalMandate4Choice.mmOriginalMandateIdentification, MandateRelatedInformation11.mmMandateIdentification, OriginalMandate5Choice.mmOriginalMandateIdentification,
 					AmendmentInformationDetails11.mmOriginalMandateIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MandateIdentification";
 			definition = "Unique and unambiguous identification of the mandate.";
@@ -371,8 +370,8 @@ public class Mandate extends Contract {
 	};
 	protected Mandate originalMandate;
 	/**
-	 * Mandate which is amended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -424,8 +423,8 @@ public class Mandate extends Contract {
 	public static final MMBusinessAssociationEnd mmOriginalMandate = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(MandateAcceptance1.mmOriginalMandate, MandateAcceptance2.mmOriginalMandate, MandateAcceptance3.mmOriginalMandate, MandateAcceptance4.mmOriginalMandate, MandateAcceptance5.mmOriginalMandate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OriginalMandate";
 			definition = "Mandate which is amended.";
@@ -438,8 +437,8 @@ public class Mandate extends Contract {
 	};
 	protected Mandate amendment;
 	/**
-	 * Improvement on a mandate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -513,8 +512,8 @@ public class Mandate extends Contract {
 			derivation_lazy = () -> Arrays.asList(MandateRelatedInformation1.mmAmendmentIndicator, MandateRelatedInformation6.mmAmendmentIndicator, MandateRelatedInformation7.mmAmendmentIndicator,
 					MandateRelatedInformation8.mmAmendmentIndicator, MandateRelatedInformation9.mmAmendmentIndicator, MandateRelatedInformation4.mmAmendmentIndicator, MandateRelatedInformation5.mmAmendmentIndicator,
 					MandateRelatedInformation10.mmAmendmentIndicator, Mandate10.mmAdjustment, Mandate9.mmAdjustment, MandateRelatedInformation11.mmAmendmentIndicator, Mandate11.mmAdjustment, Mandate8.mmAdjustment);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amendment";
 			definition = "Improvement on a mandate.";
@@ -527,9 +526,8 @@ public class Mandate extends Contract {
 	};
 	protected List<com.tools20022.repository.entity.MandatePartyRole> mandatePartyRole;
 	/**
-	 * Specifies each role linked to a mandate and played by a party in that
-	 * context.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -563,8 +561,8 @@ public class Mandate extends Contract {
 	 */
 	public static final MMBusinessAssociationEnd mmMandatePartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MandatePartyRole";
 			definition = "Specifies each role linked to a mandate and played by a party in that context.";
@@ -576,8 +574,8 @@ public class Mandate extends Contract {
 	};
 	protected List<com.tools20022.repository.entity.MandateStatus> mandateStatus;
 	/**
-	 * Specifies the status of a mandate
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -631,8 +629,8 @@ public class Mandate extends Contract {
 		{
 			derivation_lazy = () -> Arrays.asList(MandateAcceptance1.mmAcceptanceResult, MandateAcceptance2.mmAcceptanceResult, MandateAcceptance3.mmAcceptanceResult, MandateAcceptance4.mmAcceptanceResult,
 					MandateAcceptance5.mmAcceptanceResult);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MandateStatus";
 			definition = "Specifies the status of a mandate";
@@ -644,8 +642,8 @@ public class Mandate extends Contract {
 	};
 	protected AccountContract accountContract;
 	/**
-	 * Contract on which a mandate applies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -677,8 +675,8 @@ public class Mandate extends Contract {
 	 */
 	public static final MMBusinessAssociationEnd mmAccountContract = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountContract";
 			definition = "Contract on which a mandate applies.";
@@ -691,8 +689,8 @@ public class Mandate extends Contract {
 	};
 	protected Authentication authentication;
 	/**
-	 * Specifies the transport authentication details related to the mandate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -739,8 +737,8 @@ public class Mandate extends Contract {
 	public static final MMBusinessAssociationEnd mmAuthentication = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Mandate10.mmAuthentication, Mandate9.mmAuthentication, Mandate11.mmAuthentication, Mandate8.mmAuthentication);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authentication";
 			definition = "Specifies the transport authentication details related to the mandate.";
@@ -753,8 +751,8 @@ public class Mandate extends Contract {
 	};
 	protected Max35NumericText trackingDays;
 	/**
-	 * Specifies the number of days the mandate must be tracked.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -792,8 +790,8 @@ public class Mandate extends Contract {
 	public static final MMBusinessAttribute mmTrackingDays = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(MandateRelatedInformation11.mmTrackingDays, AmendmentInformationDetails11.mmOriginalTrackingDays);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TrackingDays";
 			definition = "Specifies the number of days the mandate must be tracked.";
@@ -812,9 +810,8 @@ public class Mandate extends Contract {
 	};
 	protected TrueFalseIndicator trackingIndicator;
 	/**
-	 * Specifies whether the direct debit instructions should be automatically
-	 * re-submitted periodically when bilaterally agreed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -859,8 +856,8 @@ public class Mandate extends Contract {
 	public static final MMBusinessAttribute mmTrackingIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Mandate10.mmTrackingIndicator, Mandate9.mmTrackingIndicator, Mandate11.mmTrackingIndicator, Mandate8.mmTrackingIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TrackingIndicator";
 			definition = "Specifies whether the direct debit instructions should be automatically re-submitted periodically when bilaterally agreed.";
@@ -879,9 +876,8 @@ public class Mandate extends Contract {
 	};
 	protected PercentageRate rate;
 	/**
-	 * Pre-agreed increase or decrease rate that will be applied to the
-	 * collection amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -916,8 +912,8 @@ public class Mandate extends Contract {
 	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(MandateAdjustment1.mmRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
 			definition = "Pre-agreed increase or decrease rate that will be applied to the collection amount.";
@@ -938,7 +934,7 @@ public class Mandate extends Contract {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Mandate";
 				definition = "Authorisation given by an issuing party to a holder party to act on the issuer's behalf.";
@@ -967,90 +963,101 @@ public class Mandate extends Contract {
 	}
 
 	public List<SignatureCondition> getSignatureConditions() {
-		return signatureConditions;
+		return signatureConditions == null ? signatureConditions = new ArrayList<>() : signatureConditions;
 	}
 
-	public void setSignatureConditions(List<com.tools20022.repository.entity.SignatureCondition> signatureConditions) {
-		this.signatureConditions = signatureConditions;
+	public Mandate setSignatureConditions(List<com.tools20022.repository.entity.SignatureCondition> signatureConditions) {
+		this.signatureConditions = Objects.requireNonNull(signatureConditions);
+		return this;
 	}
 
 	public Max35Text getMandateIdentification() {
 		return mandateIdentification;
 	}
 
-	public void setMandateIdentification(Max35Text mandateIdentification) {
-		this.mandateIdentification = mandateIdentification;
+	public Mandate setMandateIdentification(Max35Text mandateIdentification) {
+		this.mandateIdentification = Objects.requireNonNull(mandateIdentification);
+		return this;
 	}
 
 	public Mandate getOriginalMandate() {
 		return originalMandate;
 	}
 
-	public void setOriginalMandate(com.tools20022.repository.entity.Mandate originalMandate) {
-		this.originalMandate = originalMandate;
+	public Mandate setOriginalMandate(com.tools20022.repository.entity.Mandate originalMandate) {
+		this.originalMandate = Objects.requireNonNull(originalMandate);
+		return this;
 	}
 
 	public Mandate getAmendment() {
 		return amendment;
 	}
 
-	public void setAmendment(com.tools20022.repository.entity.Mandate amendment) {
-		this.amendment = amendment;
+	public Mandate setAmendment(com.tools20022.repository.entity.Mandate amendment) {
+		this.amendment = Objects.requireNonNull(amendment);
+		return this;
 	}
 
 	public List<MandatePartyRole> getMandatePartyRole() {
-		return mandatePartyRole;
+		return mandatePartyRole == null ? mandatePartyRole = new ArrayList<>() : mandatePartyRole;
 	}
 
-	public void setMandatePartyRole(List<com.tools20022.repository.entity.MandatePartyRole> mandatePartyRole) {
-		this.mandatePartyRole = mandatePartyRole;
+	public Mandate setMandatePartyRole(List<com.tools20022.repository.entity.MandatePartyRole> mandatePartyRole) {
+		this.mandatePartyRole = Objects.requireNonNull(mandatePartyRole);
+		return this;
 	}
 
 	public List<MandateStatus> getMandateStatus() {
-		return mandateStatus;
+		return mandateStatus == null ? mandateStatus = new ArrayList<>() : mandateStatus;
 	}
 
-	public void setMandateStatus(List<com.tools20022.repository.entity.MandateStatus> mandateStatus) {
-		this.mandateStatus = mandateStatus;
+	public Mandate setMandateStatus(List<com.tools20022.repository.entity.MandateStatus> mandateStatus) {
+		this.mandateStatus = Objects.requireNonNull(mandateStatus);
+		return this;
 	}
 
-	public AccountContract getAccountContract() {
-		return accountContract;
+	public Optional<AccountContract> getAccountContract() {
+		return accountContract == null ? Optional.empty() : Optional.of(accountContract);
 	}
 
-	public void setAccountContract(com.tools20022.repository.entity.AccountContract accountContract) {
+	public Mandate setAccountContract(com.tools20022.repository.entity.AccountContract accountContract) {
 		this.accountContract = accountContract;
+		return this;
 	}
 
 	public Authentication getAuthentication() {
 		return authentication;
 	}
 
-	public void setAuthentication(com.tools20022.repository.entity.Authentication authentication) {
-		this.authentication = authentication;
+	public Mandate setAuthentication(com.tools20022.repository.entity.Authentication authentication) {
+		this.authentication = Objects.requireNonNull(authentication);
+		return this;
 	}
 
 	public Max35NumericText getTrackingDays() {
 		return trackingDays;
 	}
 
-	public void setTrackingDays(Max35NumericText trackingDays) {
-		this.trackingDays = trackingDays;
+	public Mandate setTrackingDays(Max35NumericText trackingDays) {
+		this.trackingDays = Objects.requireNonNull(trackingDays);
+		return this;
 	}
 
 	public TrueFalseIndicator getTrackingIndicator() {
 		return trackingIndicator;
 	}
 
-	public void setTrackingIndicator(TrueFalseIndicator trackingIndicator) {
-		this.trackingIndicator = trackingIndicator;
+	public Mandate setTrackingIndicator(TrueFalseIndicator trackingIndicator) {
+		this.trackingIndicator = Objects.requireNonNull(trackingIndicator);
+		return this;
 	}
 
 	public PercentageRate getRate() {
 		return rate;
 	}
 
-	public void setRate(PercentageRate rate) {
-		this.rate = rate;
+	public Mandate setRate(PercentageRate rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 }

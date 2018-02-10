@@ -28,6 +28,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Specifies an item in the agenda of the meeting. Some resolutions are
@@ -72,15 +74,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Resolution1 Resolution1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Resolution2 Resolution2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Resolution3 Resolution3}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -91,10 +84,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Resolution1 Resolution1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Resolution2 Resolution2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Resolution3 Resolution3}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,8 +114,8 @@ public class Resolution {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Max35Text issuerLabel;
 	/**
-	 * Numbering of the resolution as specified by the issuer or its agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,8 +171,8 @@ public class Resolution {
 		{
 			derivation_lazy = () -> Arrays.asList(Resolution1.mmIssuerLabel, Resolution2.mmIssuerLabel, Vote1.mmIssuerLabel, Vote3.mmIssuerLabel, Vote4.mmIssuerLabel, Vote2.mmIssuerLabel, Vote5.mmIssuerLabel, Vote7.mmIssuerLabel,
 					Resolution3.mmIssuerLabel, Vote6.mmIssuerLabel, Vote9.mmIssuerLabel, Vote8.mmIssuerLabel);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssuerLabel";
 			definition = "Numbering of the resolution as specified by the issuer or  its agent.";
@@ -189,8 +191,8 @@ public class Resolution {
 	};
 	protected Max350Text description;
 	/**
-	 * Free text description of the resolution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -226,8 +228,8 @@ public class Resolution {
 	public static final MMBusinessAttribute mmDescription = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Resolution1.mmDescription, Resolution2.mmDescription, Resolution3.mmDescription);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Description";
 			definition = "Free text description of the resolution.";
@@ -246,8 +248,8 @@ public class Resolution {
 	};
 	protected Max350Text title;
 	/**
-	 * Abbreviated description of the resolution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -283,8 +285,8 @@ public class Resolution {
 	public static final MMBusinessAttribute mmTitle = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Resolution1.mmTitle, Resolution2.mmTitle, Resolution3.mmTitle);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Title";
 			definition = "Abbreviated description of the resolution.";
@@ -303,8 +305,8 @@ public class Resolution {
 	};
 	protected ResolutionTypeCode type;
 	/**
-	 * Indicates whether a resolution is ordinary, extraordinary or special.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -342,8 +344,8 @@ public class Resolution {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Resolution1.mmType, Resolution2.mmType, Resolution3.mmType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Indicates whether a resolution is ordinary, extraordinary or special.";
@@ -362,8 +364,8 @@ public class Resolution {
 	};
 	protected YesNoIndicator forInformationOnly;
 	/**
-	 * Indicates whether the resolution is listed for information or for voting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -405,8 +407,8 @@ public class Resolution {
 	public static final MMBusinessAttribute mmForInformationOnly = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Resolution1.mmForInformationOnly, Resolution2.mmForInformationOnly, Resolution3.mmForInformationOnly);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForInformationOnly";
 			definition = "Indicates whether the resolution is listed for information or for voting.";
@@ -425,9 +427,8 @@ public class Resolution {
 	};
 	protected YesNoIndicator submittedBySecurityHolder;
 	/**
-	 * Indicates whether the resolution has been submitted by the security
-	 * holder.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -469,8 +470,8 @@ public class Resolution {
 	public static final MMBusinessAttribute mmSubmittedBySecurityHolder = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Resolution1.mmSubmittedBySecurityHolder, Resolution2.mmSubmittedBySecurityHolder, Resolution3.mmSubmittedBySecurityHolder);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubmittedBySecurityHolder";
 			definition = "Indicates whether the resolution has been submitted by the security holder.";
@@ -489,9 +490,8 @@ public class Resolution {
 	};
 	protected VoteInstructionCode managementRecommendation;
 	/**
-	 * Indicates how the management of the issuing company wishes the security
-	 * holders to vote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -533,8 +533,8 @@ public class Resolution {
 	public static final MMBusinessAttribute mmManagementRecommendation = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Resolution1.mmManagementRecommendation, Resolution2.mmManagementRecommendation, Resolution3.mmManagementRecommendation);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ManagementRecommendation";
 			definition = "Indicates how the management of the issuing company wishes the security holders to vote.";
@@ -553,9 +553,8 @@ public class Resolution {
 	};
 	protected VoteInstructionCode notifyingPartyRecommendation;
 	/**
-	 * Indicates how the notifying party recommends that the security holders
-	 * vote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -597,8 +596,8 @@ public class Resolution {
 	public static final MMBusinessAttribute mmNotifyingPartyRecommendation = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Resolution1.mmNotifyingPartyRecommendation, Resolution2.mmNotifyingPartyRecommendation, Resolution3.mmNotifyingPartyRecommendation);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotifyingPartyRecommendation";
 			definition = "Indicates how the notifying party recommends that the security holders vote.";
@@ -617,9 +616,8 @@ public class Resolution {
 	};
 	protected Vote castVotes;
 	/**
-	 * Specifies whether a resolution is accepted or not and details the number
-	 * of votes and their status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -652,8 +650,8 @@ public class Resolution {
 	 */
 	public static final MMBusinessAssociationEnd mmCastVotes = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CastVotes";
 			definition = "Specifies whether a resolution is accepted or not and details the number of votes and their status.";
@@ -666,8 +664,8 @@ public class Resolution {
 	};
 	protected Meeting meeting;
 	/**
-	 * Meeting for which an agenda item is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -698,8 +696,8 @@ public class Resolution {
 	 */
 	public static final MMBusinessAssociationEnd mmMeeting = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Meeting";
 			definition = "Meeting for which an agenda item is specified.";
@@ -712,9 +710,8 @@ public class Resolution {
 	};
 	protected VoteInstructionCode voteOptions;
 	/**
-	 * Vote options allowed at the resolution level. When specified, it
-	 * supersedes the vote options given for the meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -741,8 +738,8 @@ public class Resolution {
 	 */
 	public static final MMBusinessAttribute mmVoteOptions = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VoteOptions";
 			definition = "Vote options allowed at the resolution level. When specified, it supersedes the vote options given for the meeting.";
@@ -763,7 +760,7 @@ public class Resolution {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Resolution";
 				definition = "Specifies an item in the agenda of the meeting. Some resolutions are submitted to the vote of the security holders, some are presented for information only.";
@@ -787,87 +784,98 @@ public class Resolution {
 		return issuerLabel;
 	}
 
-	public void setIssuerLabel(Max35Text issuerLabel) {
-		this.issuerLabel = issuerLabel;
+	public Resolution setIssuerLabel(Max35Text issuerLabel) {
+		this.issuerLabel = Objects.requireNonNull(issuerLabel);
+		return this;
 	}
 
 	public Max350Text getDescription() {
 		return description;
 	}
 
-	public void setDescription(Max350Text description) {
-		this.description = description;
+	public Resolution setDescription(Max350Text description) {
+		this.description = Objects.requireNonNull(description);
+		return this;
 	}
 
 	public Max350Text getTitle() {
 		return title;
 	}
 
-	public void setTitle(Max350Text title) {
-		this.title = title;
+	public Resolution setTitle(Max350Text title) {
+		this.title = Objects.requireNonNull(title);
+		return this;
 	}
 
 	public ResolutionTypeCode getType() {
 		return type;
 	}
 
-	public void setType(ResolutionTypeCode type) {
-		this.type = type;
+	public Resolution setType(ResolutionTypeCode type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
 	public YesNoIndicator getForInformationOnly() {
 		return forInformationOnly;
 	}
 
-	public void setForInformationOnly(YesNoIndicator forInformationOnly) {
-		this.forInformationOnly = forInformationOnly;
+	public Resolution setForInformationOnly(YesNoIndicator forInformationOnly) {
+		this.forInformationOnly = Objects.requireNonNull(forInformationOnly);
+		return this;
 	}
 
 	public YesNoIndicator getSubmittedBySecurityHolder() {
 		return submittedBySecurityHolder;
 	}
 
-	public void setSubmittedBySecurityHolder(YesNoIndicator submittedBySecurityHolder) {
-		this.submittedBySecurityHolder = submittedBySecurityHolder;
+	public Resolution setSubmittedBySecurityHolder(YesNoIndicator submittedBySecurityHolder) {
+		this.submittedBySecurityHolder = Objects.requireNonNull(submittedBySecurityHolder);
+		return this;
 	}
 
 	public VoteInstructionCode getManagementRecommendation() {
 		return managementRecommendation;
 	}
 
-	public void setManagementRecommendation(VoteInstructionCode managementRecommendation) {
-		this.managementRecommendation = managementRecommendation;
+	public Resolution setManagementRecommendation(VoteInstructionCode managementRecommendation) {
+		this.managementRecommendation = Objects.requireNonNull(managementRecommendation);
+		return this;
 	}
 
 	public VoteInstructionCode getNotifyingPartyRecommendation() {
 		return notifyingPartyRecommendation;
 	}
 
-	public void setNotifyingPartyRecommendation(VoteInstructionCode notifyingPartyRecommendation) {
-		this.notifyingPartyRecommendation = notifyingPartyRecommendation;
+	public Resolution setNotifyingPartyRecommendation(VoteInstructionCode notifyingPartyRecommendation) {
+		this.notifyingPartyRecommendation = Objects.requireNonNull(notifyingPartyRecommendation);
+		return this;
 	}
 
 	public Vote getCastVotes() {
 		return castVotes;
 	}
 
-	public void setCastVotes(com.tools20022.repository.entity.Vote castVotes) {
-		this.castVotes = castVotes;
+	public Resolution setCastVotes(com.tools20022.repository.entity.Vote castVotes) {
+		this.castVotes = Objects.requireNonNull(castVotes);
+		return this;
 	}
 
-	public Meeting getMeeting() {
-		return meeting;
+	public Optional<Meeting> getMeeting() {
+		return meeting == null ? Optional.empty() : Optional.of(meeting);
 	}
 
-	public void setMeeting(com.tools20022.repository.entity.Meeting meeting) {
+	public Resolution setMeeting(com.tools20022.repository.entity.Meeting meeting) {
 		this.meeting = meeting;
+		return this;
 	}
 
 	public VoteInstructionCode getVoteOptions() {
 		return voteOptions;
 	}
 
-	public void setVoteOptions(VoteInstructionCode voteOptions) {
-		this.voteOptions = voteOptions;
+	public Resolution setVoteOptions(VoteInstructionCode voteOptions) {
+		this.voteOptions = Objects.requireNonNull(voteOptions);
+		return this;
 	}
 }

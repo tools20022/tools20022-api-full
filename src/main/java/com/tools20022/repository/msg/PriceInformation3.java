@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.SourceOfPrice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Amount of money for which goods or services are offered, sold, or bought."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PriceInformation3", propOrder = {"value", "priceType", "sourceOfPrice", "quotationDate", "yieldedIndicator"})
 public class PriceInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Val", required = true)
 	protected PriceRateOrAmountOrUnknownChoice value;
 	/**
-	 * Value of the price, eg, as a currency and value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +124,7 @@ public class PriceInformation3 {
 	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
-			componentContext_lazy = () -> PriceInformation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +135,11 @@ public class PriceInformation3 {
 			complexType_lazy = () -> PriceRateOrAmountOrUnknownChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "PricTp", required = true)
 	protected UnitPriceType1Choice priceType;
 	/**
-	 * Amount of money for which goods or services are offered, sold, or bought.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -170,7 +174,7 @@ public class PriceInformation3 {
 	public static final MMMessageAssociationEnd mmPriceType = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
-			componentContext_lazy = () -> PriceInformation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "PricTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,10 +186,11 @@ public class PriceInformation3 {
 			type_lazy = () -> UnitPriceType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SrcOfPric")
 	protected PriceSourceFormatChoice sourceOfPrice;
 	/**
-	 * Place from which the price was obtained.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -219,7 +224,7 @@ public class PriceInformation3 {
 	public static final MMMessageAttribute mmSourceOfPrice = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SourceOfPrice.mmObject();
-			componentContext_lazy = () -> PriceInformation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "SrcOfPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,11 +235,11 @@ public class PriceInformation3 {
 			complexType_lazy = () -> PriceSourceFormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "QtnDt")
 	protected DateAndDateTimeChoice quotationDate;
 	/**
-	 * Date on which the price is obtained. With an investment fund, this is as
-	 * stated in the prospectus.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -270,7 +275,7 @@ public class PriceInformation3 {
 	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmQuotationDate;
-			componentContext_lazy = () -> PriceInformation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "QtnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,11 +286,11 @@ public class PriceInformation3 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "YlddInd")
 	protected YesNoIndicator yieldedIndicator;
 	/**
-	 * Indicates whether the price is expressed as a yield. The absence of
-	 * Yielded means it is not applicable.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -321,7 +326,7 @@ public class PriceInformation3 {
 	public static final MMMessageAttribute mmYieldedIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmYielded;
-			componentContext_lazy = () -> PriceInformation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "YlddInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -336,9 +341,10 @@ public class PriceInformation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PriceInformation3.mmValue, PriceInformation3.mmPriceType, PriceInformation3.mmSourceOfPrice, PriceInformation3.mmQuotationDate, PriceInformation3.mmYieldedIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceInformation3.mmValue, com.tools20022.repository.msg.PriceInformation3.mmPriceType,
+						com.tools20022.repository.msg.PriceInformation3.mmSourceOfPrice, com.tools20022.repository.msg.PriceInformation3.mmQuotationDate, com.tools20022.repository.msg.PriceInformation3.mmYieldedIndicator);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PriceInformation3";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
@@ -347,48 +353,48 @@ public class PriceInformation3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Val", required = true)
 	public PriceRateOrAmountOrUnknownChoice getValue() {
 		return value;
 	}
 
-	public void setValue(PriceRateOrAmountOrUnknownChoice value) {
-		this.value = value;
+	public PriceInformation3 setValue(PriceRateOrAmountOrUnknownChoice value) {
+		this.value = Objects.requireNonNull(value);
+		return this;
 	}
 
-	@XmlElement(name = "PricTp", required = true)
 	public UnitPriceType1Choice getPriceType() {
 		return priceType;
 	}
 
-	public void setPriceType(UnitPriceType1Choice priceType) {
-		this.priceType = priceType;
+	public PriceInformation3 setPriceType(UnitPriceType1Choice priceType) {
+		this.priceType = Objects.requireNonNull(priceType);
+		return this;
 	}
 
-	@XmlElement(name = "SrcOfPric")
-	public PriceSourceFormatChoice getSourceOfPrice() {
-		return sourceOfPrice;
+	public Optional<PriceSourceFormatChoice> getSourceOfPrice() {
+		return sourceOfPrice == null ? Optional.empty() : Optional.of(sourceOfPrice);
 	}
 
-	public void setSourceOfPrice(PriceSourceFormatChoice sourceOfPrice) {
+	public PriceInformation3 setSourceOfPrice(PriceSourceFormatChoice sourceOfPrice) {
 		this.sourceOfPrice = sourceOfPrice;
+		return this;
 	}
 
-	@XmlElement(name = "QtnDt")
-	public DateAndDateTimeChoice getQuotationDate() {
-		return quotationDate;
+	public Optional<DateAndDateTimeChoice> getQuotationDate() {
+		return quotationDate == null ? Optional.empty() : Optional.of(quotationDate);
 	}
 
-	public void setQuotationDate(DateAndDateTimeChoice quotationDate) {
+	public PriceInformation3 setQuotationDate(DateAndDateTimeChoice quotationDate) {
 		this.quotationDate = quotationDate;
+		return this;
 	}
 
-	@XmlElement(name = "YlddInd")
-	public YesNoIndicator getYieldedIndicator() {
-		return yieldedIndicator;
+	public Optional<YesNoIndicator> getYieldedIndicator() {
+		return yieldedIndicator == null ? Optional.empty() : Optional.of(yieldedIndicator);
 	}
 
-	public void setYieldedIndicator(YesNoIndicator yieldedIndicator) {
+	public PriceInformation3 setYieldedIndicator(YesNoIndicator yieldedIndicator) {
 		this.yieldedIndicator = yieldedIndicator;
+		return this;
 	}
 }

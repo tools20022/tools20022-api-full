@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Execution of a redemption order.
@@ -39,6 +40,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
+ * InvestmentFundOrderExecution}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -53,6 +58,43 @@ import java.util.concurrent.atomic.AtomicReference;
  * RedemptionExecution.mmSettlementDate}</li>
  * </ul>
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#mmIndividualExecutionDetails
+ * RedemptionBulkExecution2.mmIndividualExecutionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution3#mmIndividualExecutionDetails
+ * RedemptionBulkExecution3.mmIndividualExecutionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OrderConfirmationDetails1#mmBulkExecutionDetails
+ * OrderConfirmationDetails1.mmBulkExecutionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution2#mmIndividualExecutionDetails
+ * RedemptionMultipleExecution2.mmIndividualExecutionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution3#mmIndividualExecutionDetails
+ * RedemptionMultipleExecution3.mmIndividualExecutionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionOrderConfirmation1#mmMultipleExecutionDetails
+ * RedemptionOrderConfirmation1.mmMultipleExecutionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice#mmRedemptionDetails
+ * SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmRedemptionDetails}
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution4#mmIndividualExecutionDetails
+ * RedemptionMultipleExecution4.mmIndividualExecutionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution5#mmIndividualExecutionDetails
+ * RedemptionBulkExecution5.mmIndividualExecutionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution5#mmIndividualExecutionDetails
+ * RedemptionMultipleExecution5.mmIndividualExecutionDetails}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -61,10 +103,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SwitchExecutionRedemptionLeg}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.InvestmentFundOrderExecution
- * InvestmentFundOrderExecution}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -106,47 +144,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution2#mmIndividualExecutionDetails
- * RedemptionBulkExecution2.mmIndividualExecutionDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution3#mmIndividualExecutionDetails
- * RedemptionBulkExecution3.mmIndividualExecutionDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OrderConfirmationDetails1#mmBulkExecutionDetails
- * OrderConfirmationDetails1.mmBulkExecutionDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution2#mmIndividualExecutionDetails
- * RedemptionMultipleExecution2.mmIndividualExecutionDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution3#mmIndividualExecutionDetails
- * RedemptionMultipleExecution3.mmIndividualExecutionDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionOrderConfirmation1#mmMultipleExecutionDetails
- * RedemptionOrderConfirmation1.mmMultipleExecutionDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice#mmRedemptionDetails
- * SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmRedemptionDetails}
- * </li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution4#mmIndividualExecutionDetails
- * RedemptionMultipleExecution4.mmIndividualExecutionDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution5#mmIndividualExecutionDetails
- * RedemptionBulkExecution5.mmIndividualExecutionDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RedemptionMultipleExecution5#mmIndividualExecutionDetails
- * RedemptionMultipleExecution5.mmIndividualExecutionDetails}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -162,8 +163,8 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyAndAmount redeemedNetAmount;
 	/**
-	 * Net amount of money paid to the investor as a result of the redemption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,8 +229,8 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 		{
 			derivation_lazy = () -> Arrays.asList(RedemptionExecution3.mmNetAmount, RedemptionExecution5.mmNetAmount, RedemptionExecution4.mmNetAmount, RedemptionExecution6.mmNetAmount, SwitchRedemptionLegExecution2.mmNetAmount,
 					SwitchRedemptionLegExecution3.mmNetAmount, RedemptionExecution12.mmNetAmount, RedemptionExecution16.mmNetAmount, RedemptionExecution15.mmNetAmount, SwitchRedemptionLegExecution4.mmNetAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.RedemptionExecution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RedemptionExecution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RedeemedNetAmount";
 			definition = "Net amount of money paid to the investor as a result of the redemption.";
@@ -248,9 +249,8 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 	};
 	protected CurrencyAndAmount partialRedemptionWithholdingAmount;
 	/**
-	 * Amount retained by the Fund and paid out later at a time decided by the
-	 * Fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -300,8 +300,8 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 		{
 			derivation_lazy = () -> Arrays.asList(RedemptionExecution5.mmPartialRedemptionWithholdingAmount, RedemptionExecution6.mmPartialRedemptionWithholdingAmount, RedemptionExecution12.mmPartialRedemptionWithholdingAmount,
 					RedemptionExecution16.mmPartialRedemptionWithholdingAmount, RedemptionExecution15.mmPartialRedemptionWithholdingAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.RedemptionExecution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RedemptionExecution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartialRedemptionWithholdingAmount";
 			definition = "Amount retained by the Fund and paid out later at a time decided by the Fund.";
@@ -320,8 +320,8 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 	};
 	protected ISODate settlementDate;
 	/**
-	 * Date on which the amount of money for the redemption is paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -347,8 +347,8 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 	 */
 	public static final MMBusinessAttribute mmSettlementDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.RedemptionExecution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RedemptionExecution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementDate";
 			definition = "Date on which the amount of money for the redemption is paid.";
@@ -369,7 +369,7 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionExecution";
 				definition = "Execution of a redemption order.";
@@ -399,23 +399,26 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 		return redeemedNetAmount;
 	}
 
-	public void setRedeemedNetAmount(CurrencyAndAmount redeemedNetAmount) {
-		this.redeemedNetAmount = redeemedNetAmount;
+	public RedemptionExecution setRedeemedNetAmount(CurrencyAndAmount redeemedNetAmount) {
+		this.redeemedNetAmount = Objects.requireNonNull(redeemedNetAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getPartialRedemptionWithholdingAmount() {
 		return partialRedemptionWithholdingAmount;
 	}
 
-	public void setPartialRedemptionWithholdingAmount(CurrencyAndAmount partialRedemptionWithholdingAmount) {
-		this.partialRedemptionWithholdingAmount = partialRedemptionWithholdingAmount;
+	public RedemptionExecution setPartialRedemptionWithholdingAmount(CurrencyAndAmount partialRedemptionWithholdingAmount) {
+		this.partialRedemptionWithholdingAmount = Objects.requireNonNull(partialRedemptionWithholdingAmount);
+		return this;
 	}
 
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
 
-	public void setSettlementDate(ISODate settlementDate) {
-		this.settlementDate = settlementDate;
+	public RedemptionExecution setSettlementDate(ISODate settlementDate) {
+		this.settlementDate = Objects.requireNonNull(settlementDate);
+		return this;
 	}
 }

@@ -20,49 +20,53 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CryptographicKeyTypeCode;
+import com.tools20022.repository.codeset.CryptographicKeyType4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Category of the cryptographic key.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode
- * CryptographicKeyTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType4Code#mmApplication
- * CryptographicKeyType4Code.mmApplication}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType4Code#Application
+ * CryptographicKeyType4Code.Application}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType4Code#mmData
- * CryptographicKeyType4Code.mmData}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType4Code#Data
+ * CryptographicKeyType4Code.Data}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType4Code#mmDynamic
- * CryptographicKeyType4Code.mmDynamic}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType4Code#Dynamic
+ * CryptographicKeyType4Code.Dynamic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType4Code#mmKeyEncryption
- * CryptographicKeyType4Code.mmKeyEncryption}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType4Code#KeyEncryption
+ * CryptographicKeyType4Code.KeyEncryption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType4Code#mmMAC
- * CryptographicKeyType4Code.mmMAC}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType4Code#MAC
+ * CryptographicKeyType4Code.MAC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType4Code#mmPIN
- * CryptographicKeyType4Code.mmPIN}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType4Code#PIN
+ * CryptographicKeyType4Code.PIN}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType4Code#mmWorking
- * CryptographicKeyType4Code.mmWorking}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType4Code#Working
+ * CryptographicKeyType4Code.Working}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode
+ * CryptographicKeyTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Category of the cryptographic key."</li>
  * </ul>
  */
-public class CryptographicKeyType4Code extends CryptographicKeyTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CryptographicKeyType4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class CryptographicKeyType4Code extends CryptographicKeyTypeCode {
 	 * name} = "Application"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmApplication = new MMCode() {
+	public static final CryptographicKeyType4Code Application = new CryptographicKeyType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Application";
-			owner_lazy = () -> CryptographicKeyType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType4Code.mmObject();
+			codeName = CryptographicKeyTypeCode.Application.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class CryptographicKeyType4Code extends CryptographicKeyTypeCode {
 	 * name} = "Data"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmData = new MMCode() {
+	public static final CryptographicKeyType4Code Data = new CryptographicKeyType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Data";
-			owner_lazy = () -> CryptographicKeyType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType4Code.mmObject();
+			codeName = CryptographicKeyTypeCode.Data.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class CryptographicKeyType4Code extends CryptographicKeyTypeCode {
 	 * name} = "Dynamic"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDynamic = new MMCode() {
+	public static final CryptographicKeyType4Code Dynamic = new CryptographicKeyType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dynamic";
-			owner_lazy = () -> CryptographicKeyType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType4Code.mmObject();
+			codeName = CryptographicKeyTypeCode.Dynamic.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +169,12 @@ public class CryptographicKeyType4Code extends CryptographicKeyTypeCode {
 	 * name} = "KeyEncryption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmKeyEncryption = new MMCode() {
+	public static final CryptographicKeyType4Code KeyEncryption = new CryptographicKeyType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyEncryption";
-			owner_lazy = () -> CryptographicKeyType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType4Code.mmObject();
+			codeName = CryptographicKeyTypeCode.KeyEncryption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,11 +193,12 @@ public class CryptographicKeyType4Code extends CryptographicKeyTypeCode {
 	 * name} = "MAC"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMAC = new MMCode() {
+	public static final CryptographicKeyType4Code MAC = new CryptographicKeyType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MAC";
-			owner_lazy = () -> CryptographicKeyType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType4Code.mmObject();
+			codeName = CryptographicKeyTypeCode.MAC.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -207,11 +217,12 @@ public class CryptographicKeyType4Code extends CryptographicKeyTypeCode {
 	 * name} = "PIN"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPIN = new MMCode() {
+	public static final CryptographicKeyType4Code PIN = new CryptographicKeyType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PIN";
-			owner_lazy = () -> CryptographicKeyType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType4Code.mmObject();
+			codeName = CryptographicKeyTypeCode.PIN.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -230,26 +241,63 @@ public class CryptographicKeyType4Code extends CryptographicKeyTypeCode {
 	 * name} = "Working"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWorking = new MMCode() {
+	public static final CryptographicKeyType4Code Working = new CryptographicKeyType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Working";
-			owner_lazy = () -> CryptographicKeyType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType4Code.mmObject();
+			codeName = CryptographicKeyTypeCode.Working.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CryptographicKeyType4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CryptographicKeyType4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CryptographicKeyType4Code";
 				definition = "Category of the cryptographic key.";
-				code_lazy = () -> Arrays.asList(CryptographicKeyType4Code.mmApplication, CryptographicKeyType4Code.mmData, CryptographicKeyType4Code.mmDynamic, CryptographicKeyType4Code.mmKeyEncryption, CryptographicKeyType4Code.mmMAC,
-						CryptographicKeyType4Code.mmPIN, CryptographicKeyType4Code.mmWorking);
 				trace_lazy = () -> CryptographicKeyTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CryptographicKeyType4Code.Application, com.tools20022.repository.codeset.CryptographicKeyType4Code.Data,
+						com.tools20022.repository.codeset.CryptographicKeyType4Code.Dynamic, com.tools20022.repository.codeset.CryptographicKeyType4Code.KeyEncryption, com.tools20022.repository.codeset.CryptographicKeyType4Code.MAC,
+						com.tools20022.repository.codeset.CryptographicKeyType4Code.PIN, com.tools20022.repository.codeset.CryptographicKeyType4Code.Working);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Application.getCodeName().get(), Application);
+		codesByName.put(Data.getCodeName().get(), Data);
+		codesByName.put(Dynamic.getCodeName().get(), Dynamic);
+		codesByName.put(KeyEncryption.getCodeName().get(), KeyEncryption);
+		codesByName.put(MAC.getCodeName().get(), MAC);
+		codesByName.put(PIN.getCodeName().get(), PIN);
+		codesByName.put(Working.getCodeName().get(), Working);
+	}
+
+	public static CryptographicKeyType4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CryptographicKeyType4Code[] values() {
+		CryptographicKeyType4Code[] values = new CryptographicKeyType4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CryptographicKeyType4Code> {
+		@Override
+		public CryptographicKeyType4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CryptographicKeyType4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

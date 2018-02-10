@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.StandingOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,16 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "New standing order values."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StandingOrder1", propOrder = {"amount", "creditorAccount", "debtorAccount", "executionType", "frequency", "validityPeriod", "zeroSweepIndicator"})
 public class StandingOrder1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt")
 	protected Amount2Choice amount;
 	/**
-	 * Amount of money and currency to be transferred when a payment instruction
-	 * is created as a result of a standing order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,7 +127,7 @@ public class StandingOrder1 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmAmount;
-			componentContext_lazy = () -> StandingOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,10 +138,11 @@ public class StandingOrder1 {
 			complexType_lazy = () -> Amount2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtrAcct")
 	protected CashAccount24 creditorAccount;
 	/**
-	 * Cash account credited from a standing order mechanism.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -171,7 +173,7 @@ public class StandingOrder1 {
 	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashStandingOrder.mmObject();
-			componentContext_lazy = () -> StandingOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,10 +185,11 @@ public class StandingOrder1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "DbtrAcct")
 	protected CashAccount24 debtorAccount;
 	/**
-	 * Cash account debited from a standing order mechanism.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -217,7 +220,7 @@ public class StandingOrder1 {
 	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashStandingOrder.mmObject();
-			componentContext_lazy = () -> StandingOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,11 +232,11 @@ public class StandingOrder1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "ExctnTp")
 	protected ExecutionType1Choice executionType;
 	/**
-	 * Defines whether the standing order is executed through a time-based or an
-	 * event-based trigger.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -267,7 +270,7 @@ public class StandingOrder1 {
 	public static final MMMessageAssociationEnd mmExecutionType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmType;
-			componentContext_lazy = () -> StandingOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "ExctnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,12 +282,11 @@ public class StandingOrder1 {
 			type_lazy = () -> ExecutionType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Frqcy")
 	protected Frequency2Code frequency;
 	/**
-	 * Regularity with which payment instructions are to be created and
-	 * processed as a result of the standing order, such as daily, weekly, or
-	 * monthly.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -319,7 +321,7 @@ public class StandingOrder1 {
 	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmFrequency;
-			componentContext_lazy = () -> StandingOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -330,10 +332,11 @@ public class StandingOrder1 {
 			simpleType_lazy = () -> Frequency2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "VldtyPrd")
 	protected DatePeriodDetails2Choice validityPeriod;
 	/**
-	 * Dates during which the standing order is in effect.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -365,7 +368,7 @@ public class StandingOrder1 {
 	public static final MMMessageAssociationEnd mmValidityPeriod = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmValidityPeriod;
-			componentContext_lazy = () -> StandingOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtyPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -377,12 +380,11 @@ public class StandingOrder1 {
 			type_lazy = () -> DatePeriodDetails2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ZeroSweepInd")
 	protected TrueFalseIndicator zeroSweepIndicator;
 	/**
-	 * Indicates whether the standing order is defined as a zero sweeping order.
-	 * When true, the liquidity transfer standing order will transfer all amount
-	 * of money out of the account so the resulting balance is zero.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -417,7 +419,7 @@ public class StandingOrder1 {
 	public static final MMMessageAttribute mmZeroSweepIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashStandingOrder.mmZeroSweepIndicator;
-			componentContext_lazy = () -> StandingOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "ZeroSweepInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -432,10 +434,11 @@ public class StandingOrder1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StandingOrder1.mmAmount, StandingOrder1.mmCreditorAccount, StandingOrder1.mmDebtorAccount, StandingOrder1.mmExecutionType, StandingOrder1.mmFrequency,
-						StandingOrder1.mmValidityPeriod, StandingOrder1.mmZeroSweepIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrder1.mmAmount, com.tools20022.repository.msg.StandingOrder1.mmCreditorAccount, com.tools20022.repository.msg.StandingOrder1.mmDebtorAccount,
+						com.tools20022.repository.msg.StandingOrder1.mmExecutionType, com.tools20022.repository.msg.StandingOrder1.mmFrequency, com.tools20022.repository.msg.StandingOrder1.mmValidityPeriod,
+						com.tools20022.repository.msg.StandingOrder1.mmZeroSweepIndicator);
 				trace_lazy = () -> CashStandingOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrder1";
 				definition = "New standing order values.";
@@ -444,66 +447,66 @@ public class StandingOrder1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt")
-	public Amount2Choice getAmount() {
-		return amount;
+	public Optional<Amount2Choice> getAmount() {
+		return amount == null ? Optional.empty() : Optional.of(amount);
 	}
 
-	public void setAmount(Amount2Choice amount) {
+	public StandingOrder1 setAmount(Amount2Choice amount) {
 		this.amount = amount;
+		return this;
 	}
 
-	@XmlElement(name = "CdtrAcct")
-	public CashAccount24 getCreditorAccount() {
-		return creditorAccount;
+	public Optional<CashAccount24> getCreditorAccount() {
+		return creditorAccount == null ? Optional.empty() : Optional.of(creditorAccount);
 	}
 
-	public void setCreditorAccount(com.tools20022.repository.msg.CashAccount24 creditorAccount) {
+	public StandingOrder1 setCreditorAccount(com.tools20022.repository.msg.CashAccount24 creditorAccount) {
 		this.creditorAccount = creditorAccount;
+		return this;
 	}
 
-	@XmlElement(name = "DbtrAcct")
-	public CashAccount24 getDebtorAccount() {
-		return debtorAccount;
+	public Optional<CashAccount24> getDebtorAccount() {
+		return debtorAccount == null ? Optional.empty() : Optional.of(debtorAccount);
 	}
 
-	public void setDebtorAccount(com.tools20022.repository.msg.CashAccount24 debtorAccount) {
+	public StandingOrder1 setDebtorAccount(com.tools20022.repository.msg.CashAccount24 debtorAccount) {
 		this.debtorAccount = debtorAccount;
+		return this;
 	}
 
-	@XmlElement(name = "ExctnTp")
-	public ExecutionType1Choice getExecutionType() {
-		return executionType;
+	public Optional<ExecutionType1Choice> getExecutionType() {
+		return executionType == null ? Optional.empty() : Optional.of(executionType);
 	}
 
-	public void setExecutionType(ExecutionType1Choice executionType) {
+	public StandingOrder1 setExecutionType(ExecutionType1Choice executionType) {
 		this.executionType = executionType;
+		return this;
 	}
 
-	@XmlElement(name = "Frqcy")
-	public Frequency2Code getFrequency() {
-		return frequency;
+	public Optional<Frequency2Code> getFrequency() {
+		return frequency == null ? Optional.empty() : Optional.of(frequency);
 	}
 
-	public void setFrequency(Frequency2Code frequency) {
+	public StandingOrder1 setFrequency(Frequency2Code frequency) {
 		this.frequency = frequency;
+		return this;
 	}
 
-	@XmlElement(name = "VldtyPrd")
-	public DatePeriodDetails2Choice getValidityPeriod() {
-		return validityPeriod;
+	public Optional<DatePeriodDetails2Choice> getValidityPeriod() {
+		return validityPeriod == null ? Optional.empty() : Optional.of(validityPeriod);
 	}
 
-	public void setValidityPeriod(DatePeriodDetails2Choice validityPeriod) {
+	public StandingOrder1 setValidityPeriod(DatePeriodDetails2Choice validityPeriod) {
 		this.validityPeriod = validityPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "ZeroSweepInd")
-	public TrueFalseIndicator getZeroSweepIndicator() {
-		return zeroSweepIndicator;
+	public Optional<TrueFalseIndicator> getZeroSweepIndicator() {
+		return zeroSweepIndicator == null ? Optional.empty() : Optional.of(zeroSweepIndicator);
 	}
 
-	public void setZeroSweepIndicator(TrueFalseIndicator zeroSweepIndicator) {
+	public StandingOrder1 setZeroSweepIndicator(TrueFalseIndicator zeroSweepIndicator) {
 		this.zeroSweepIndicator = zeroSweepIndicator;
+		return this;
 	}
 }

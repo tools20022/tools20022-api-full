@@ -25,9 +25,11 @@ import com.tools20022.repository.entity.SecuritiesTradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecuritiesTransactionReport2;
 import com.tools20022.repository.msg.SecuritiesTransactionReport4;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Trader that executes a trade for an organisation.
@@ -38,6 +40,10 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradePartyRole
+ * SecuritiesTradePartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -46,10 +52,6 @@ import java.util.List;
  * ExecutingTrader.mmExecutingBroker}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradePartyRole
- * SecuritiesTradePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -74,8 +76,8 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,8 +93,8 @@ public class ExecutingTrader extends SecuritiesTradePartyRole {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.ExecutingBrokerRole> executingBroker;
 	/**
-	 * Executing broker which employs the trade
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,8 +127,8 @@ public class ExecutingTrader extends SecuritiesTradePartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmExecutingBroker = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ExecutingTrader.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExecutingTrader.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExecutingBroker";
 			definition = "Executing broker which employs the trade";
@@ -140,7 +142,7 @@ public class ExecutingTrader extends SecuritiesTradePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExecutingTrader";
 				definition = "Trader that executes a trade for an organisation.";
@@ -159,10 +161,11 @@ public class ExecutingTrader extends SecuritiesTradePartyRole {
 	}
 
 	public List<ExecutingBrokerRole> getExecutingBroker() {
-		return executingBroker;
+		return executingBroker == null ? executingBroker = new ArrayList<>() : executingBroker;
 	}
 
-	public void setExecutingBroker(List<com.tools20022.repository.entity.ExecutingBrokerRole> executingBroker) {
-		this.executingBroker = executingBroker;
+	public ExecutingTrader setExecutingBroker(List<com.tools20022.repository.entity.ExecutingBrokerRole> executingBroker) {
+		this.executingBroker = Objects.requireNonNull(executingBroker);
+		return this;
 	}
 }

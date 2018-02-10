@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ActionTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of action to be performed by the POI system (Point Of Interaction).
@@ -32,65 +37,59 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmDisplayMessage
- * ActionTypeCode.mmDisplayMessage}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#DisplayMessage
+ * ActionTypeCode.DisplayMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmPrintMessage
- * ActionTypeCode.mmPrintMessage}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmReferral
- * ActionTypeCode.mmReferral}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#PrintMessage
+ * ActionTypeCode.PrintMessage}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionTypeCode#Referral
+ * ActionTypeCode.Referral}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionTypeCode#CaptureCard
+ * ActionTypeCode.CaptureCard}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionTypeCode#PINRetry
+ * ActionTypeCode.PINRetry}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionTypeCode#PINLastTry
+ * ActionTypeCode.PINLastTry}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionTypeCode#RequestData
+ * ActionTypeCode.RequestData}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionTypeCode#Busy
+ * ActionTypeCode.Busy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmCaptureCard
- * ActionTypeCode.mmCaptureCard}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmPINRetry
- * ActionTypeCode.mmPINRetry}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#IdentificationRequired
+ * ActionTypeCode.IdentificationRequired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmPINLastTry
- * ActionTypeCode.mmPINLastTry}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#ForbidOverride
+ * ActionTypeCode.ForbidOverride}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmRequestData
- * ActionTypeCode.mmRequestData}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmBusy
- * ActionTypeCode.mmBusy}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#AcceptCurrencyConversion
+ * ActionTypeCode.AcceptCurrencyConversion}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionTypeCode#Decline
+ * ActionTypeCode.Decline}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionTypeCode#UpdateTrack
+ * ActionTypeCode.UpdateTrack}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmIdentificationRequired
- * ActionTypeCode.mmIdentificationRequired}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#AcceptHigherAmount
+ * ActionTypeCode.AcceptHigherAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmForbidOverride
- * ActionTypeCode.mmForbidOverride}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#AcceptLowerAmount
+ * ActionTypeCode.AcceptLowerAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionTypeCode#AcceptFees
+ * ActionTypeCode.AcceptFees}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmAcceptCurrencyConversion
- * ActionTypeCode.mmAcceptCurrencyConversion}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmDecline
- * ActionTypeCode.mmDecline}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#DistributeCoupon
+ * ActionTypeCode.DistributeCoupon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmUpdateTrack
- * ActionTypeCode.mmUpdateTrack}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#PerformRequest
+ * ActionTypeCode.PerformRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmAcceptHigherAmount
- * ActionTypeCode.mmAcceptHigherAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmAcceptLowerAmount
- * ActionTypeCode.mmAcceptLowerAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmAcceptFees
- * ActionTypeCode.mmAcceptFees}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmDistributeCoupon
- * ActionTypeCode.mmDistributeCoupon}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmPerformRequest
- * ActionTypeCode.mmPerformRequest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmNoReasonForDecline
- * ActionTypeCode.mmNoReasonForDecline}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmBlockCard
- * ActionTypeCode.mmBlockCard}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmApprove
- * ActionTypeCode.mmApprove}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#mmFallForward
- * ActionTypeCode.mmFallForward}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionTypeCode#NoReasonForDecline
+ * ActionTypeCode.NoReasonForDecline}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionTypeCode#BlockCard
+ * ActionTypeCode.BlockCard}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionTypeCode#Approve
+ * ActionTypeCode.Approve}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionTypeCode#FallForward
+ * ActionTypeCode.FallForward}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -115,8 +114,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -134,7 +133,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Type of action to be performed by the POI system (Point Of Interaction)."</li>
  * </ul>
  */
-public class ActionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ActionTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -158,12 +158,12 @@ public class ActionTypeCode {
 	 * definition} = "Message to display, print or log."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisplayMessage = new MMCode() {
+	public static final ActionTypeCode DisplayMessage = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisplayMessage";
 			definition = "Message to display, print or log.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "DISP";
 		}
 	};
@@ -188,12 +188,12 @@ public class ActionTypeCode {
 	 * definition} = "Print a message."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrintMessage = new MMCode() {
+	public static final ActionTypeCode PrintMessage = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PrintMessage";
 			definition = "Print a message.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "PRNT";
 		}
 	};
@@ -218,12 +218,12 @@ public class ActionTypeCode {
 	 * definition} = "Referral has to be performed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReferral = new MMCode() {
+	public static final ActionTypeCode Referral = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Referral";
 			definition = "Referral has to be performed.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "RFRL";
 		}
 	};
@@ -248,12 +248,12 @@ public class ActionTypeCode {
 	 * definition} = "Capture the card."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCaptureCard = new MMCode() {
+	public static final ActionTypeCode CaptureCard = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CaptureCard";
 			definition = "Capture the card.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "CPTR";
 		}
 	};
@@ -280,12 +280,12 @@ public class ActionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPINRetry = new MMCode() {
+	public static final ActionTypeCode PINRetry = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PINRetry";
 			definition = "PIN (Personal Identification Number) is wrong, retry a PIN verification.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "PINR";
 		}
 	};
@@ -310,12 +310,12 @@ public class ActionTypeCode {
 	 * definition} = "Last PIN (Personal Identification Number) try."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPINLastTry = new MMCode() {
+	public static final ActionTypeCode PINLastTry = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PINLastTry";
 			definition = "Last PIN (Personal Identification Number) try.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "PINL";
 		}
 	};
@@ -343,12 +343,12 @@ public class ActionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRequestData = new MMCode() {
+	public static final ActionTypeCode RequestData = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestData";
 			definition = "Request additional data through a displayed text and request confirmation by an attendant.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "RQDT";
 		}
 	};
@@ -373,12 +373,12 @@ public class ActionTypeCode {
 	 * definition} = "Server busy, try later."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBusy = new MMCode() {
+	public static final ActionTypeCode Busy = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Busy";
 			definition = "Server busy, try later.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "BUSY";
 		}
 	};
@@ -404,12 +404,12 @@ public class ActionTypeCode {
 	 * "Additional identification required (passport, ID card, etc.)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIdentificationRequired = new MMCode() {
+	public static final ActionTypeCode IdentificationRequired = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationRequired";
 			definition = "Additional identification required (passport, ID card, etc.).";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "RQID";
 		}
 	};
@@ -437,12 +437,12 @@ public class ActionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmForbidOverride = new MMCode() {
+	public static final ActionTypeCode ForbidOverride = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForbidOverride";
 			definition = "Payment application cannot propose to the merchant an override of the payment transaction.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "NOVR";
 		}
 	};
@@ -467,12 +467,12 @@ public class ActionTypeCode {
 	 * definition} = "Ask the cardholder to accept the currency conversion."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptCurrencyConversion = new MMCode() {
+	public static final ActionTypeCode AcceptCurrencyConversion = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptCurrencyConversion";
 			definition = "Ask the cardholder to accept the currency conversion.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "DCCQ";
 		}
 	};
@@ -497,12 +497,12 @@ public class ActionTypeCode {
 	 * definition} = "Decline the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDecline = new MMCode() {
+	public static final ActionTypeCode Decline = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Decline";
 			definition = "Decline the transaction.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "DCLN";
 		}
 	};
@@ -528,12 +528,12 @@ public class ActionTypeCode {
 	 * "Track provided in the response must be updated on the card."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUpdateTrack = new MMCode() {
+	public static final ActionTypeCode UpdateTrack = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateTrack";
 			definition = "Track provided in the response must be updated on the card.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "TRCK";
 		}
 	};
@@ -558,12 +558,12 @@ public class ActionTypeCode {
 	 * definition} = "MinimumAmount must be accepted."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptHigherAmount = new MMCode() {
+	public static final ActionTypeCode AcceptHigherAmount = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptHigherAmount";
 			definition = "MinimumAmount must be accepted.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "HAMT";
 		}
 	};
@@ -588,12 +588,12 @@ public class ActionTypeCode {
 	 * definition} = "MaximumAuthorisedAmount must be accepted."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptLowerAmount = new MMCode() {
+	public static final ActionTypeCode AcceptLowerAmount = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptLowerAmount";
 			definition = "MaximumAuthorisedAmount must be accepted.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "LAMT";
 		}
 	};
@@ -618,12 +618,12 @@ public class ActionTypeCode {
 	 * definition} = "Fees must be accepted."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptFees = new MMCode() {
+	public static final ActionTypeCode AcceptFees = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptFees";
 			definition = "Fees must be accepted.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "FEES";
 		}
 	};
@@ -648,12 +648,12 @@ public class ActionTypeCode {
 	 * definition} = "Distribute a coupon from the cassette of coupon."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDistributeCoupon = new MMCode() {
+	public static final ActionTypeCode DistributeCoupon = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistributeCoupon";
 			definition = "Distribute a coupon from the cassette of coupon.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "CPNS";
 		}
 	};
@@ -678,12 +678,12 @@ public class ActionTypeCode {
 	 * definition} = "Request to be performed by the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPerformRequest = new MMCode() {
+	public static final ActionTypeCode PerformRequest = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerformRequest";
 			definition = "Request to be performed by the ATM.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "RQST";
 		}
 	};
@@ -708,12 +708,12 @@ public class ActionTypeCode {
 	 * definition} = "No reason for declining the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoReasonForDecline = new MMCode() {
+	public static final ActionTypeCode NoReasonForDecline = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoReasonForDecline";
 			definition = "No reason for declining the transaction.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "NDCL";
 		}
 	};
@@ -738,12 +738,12 @@ public class ActionTypeCode {
 	 * definition} = "Block the card."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBlockCard = new MMCode() {
+	public static final ActionTypeCode BlockCard = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockCard";
 			definition = "Block the card.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "BLCK";
 		}
 	};
@@ -768,12 +768,12 @@ public class ActionTypeCode {
 	 * definition} = "Approve the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmApprove = new MMCode() {
+	public static final ActionTypeCode Approve = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Approve";
 			definition = "Approve the transaction.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "APPV";
 		}
 	};
@@ -799,32 +799,86 @@ public class ActionTypeCode {
 	 * "Fall-forward from contactless to chip card transaction required."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFallForward = new MMCode() {
+	public static final ActionTypeCode FallForward = new ActionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FallForward";
 			definition = "Fall-forward from contactless to chip card transaction required.";
-			owner_lazy = () -> ActionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionTypeCode.mmObject();
 			codeName = "FLFW";
 		}
 	};
+	final static private LinkedHashMap<String, ActionTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ActionTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DISP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ActionTypeCode";
 				definition = "Type of action to be performed by the POI system (Point Of Interaction).";
-				code_lazy = () -> Arrays.asList(ActionTypeCode.mmDisplayMessage, ActionTypeCode.mmPrintMessage, ActionTypeCode.mmReferral, ActionTypeCode.mmCaptureCard, ActionTypeCode.mmPINRetry, ActionTypeCode.mmPINLastTry,
-						ActionTypeCode.mmRequestData, ActionTypeCode.mmBusy, ActionTypeCode.mmIdentificationRequired, ActionTypeCode.mmForbidOverride, ActionTypeCode.mmAcceptCurrencyConversion, ActionTypeCode.mmDecline,
-						ActionTypeCode.mmUpdateTrack, ActionTypeCode.mmAcceptHigherAmount, ActionTypeCode.mmAcceptLowerAmount, ActionTypeCode.mmAcceptFees, ActionTypeCode.mmDistributeCoupon, ActionTypeCode.mmPerformRequest,
-						ActionTypeCode.mmNoReasonForDecline, ActionTypeCode.mmBlockCard, ActionTypeCode.mmApprove, ActionTypeCode.mmFallForward);
 				derivation_lazy = () -> Arrays.asList(ActionType1Code.mmObject(), ActionType2Code.mmObject(), ActionType3Code.mmObject(), ActionType4Code.mmObject(), ActionType5Code.mmObject(), ActionType6Code.mmObject(),
 						ActionType7Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionTypeCode.DisplayMessage, com.tools20022.repository.codeset.ActionTypeCode.PrintMessage, com.tools20022.repository.codeset.ActionTypeCode.Referral,
+						com.tools20022.repository.codeset.ActionTypeCode.CaptureCard, com.tools20022.repository.codeset.ActionTypeCode.PINRetry, com.tools20022.repository.codeset.ActionTypeCode.PINLastTry,
+						com.tools20022.repository.codeset.ActionTypeCode.RequestData, com.tools20022.repository.codeset.ActionTypeCode.Busy, com.tools20022.repository.codeset.ActionTypeCode.IdentificationRequired,
+						com.tools20022.repository.codeset.ActionTypeCode.ForbidOverride, com.tools20022.repository.codeset.ActionTypeCode.AcceptCurrencyConversion, com.tools20022.repository.codeset.ActionTypeCode.Decline,
+						com.tools20022.repository.codeset.ActionTypeCode.UpdateTrack, com.tools20022.repository.codeset.ActionTypeCode.AcceptHigherAmount, com.tools20022.repository.codeset.ActionTypeCode.AcceptLowerAmount,
+						com.tools20022.repository.codeset.ActionTypeCode.AcceptFees, com.tools20022.repository.codeset.ActionTypeCode.DistributeCoupon, com.tools20022.repository.codeset.ActionTypeCode.PerformRequest,
+						com.tools20022.repository.codeset.ActionTypeCode.NoReasonForDecline, com.tools20022.repository.codeset.ActionTypeCode.BlockCard, com.tools20022.repository.codeset.ActionTypeCode.Approve,
+						com.tools20022.repository.codeset.ActionTypeCode.FallForward);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(DisplayMessage.getCodeName().get(), DisplayMessage);
+		codesByName.put(PrintMessage.getCodeName().get(), PrintMessage);
+		codesByName.put(Referral.getCodeName().get(), Referral);
+		codesByName.put(CaptureCard.getCodeName().get(), CaptureCard);
+		codesByName.put(PINRetry.getCodeName().get(), PINRetry);
+		codesByName.put(PINLastTry.getCodeName().get(), PINLastTry);
+		codesByName.put(RequestData.getCodeName().get(), RequestData);
+		codesByName.put(Busy.getCodeName().get(), Busy);
+		codesByName.put(IdentificationRequired.getCodeName().get(), IdentificationRequired);
+		codesByName.put(ForbidOverride.getCodeName().get(), ForbidOverride);
+		codesByName.put(AcceptCurrencyConversion.getCodeName().get(), AcceptCurrencyConversion);
+		codesByName.put(Decline.getCodeName().get(), Decline);
+		codesByName.put(UpdateTrack.getCodeName().get(), UpdateTrack);
+		codesByName.put(AcceptHigherAmount.getCodeName().get(), AcceptHigherAmount);
+		codesByName.put(AcceptLowerAmount.getCodeName().get(), AcceptLowerAmount);
+		codesByName.put(AcceptFees.getCodeName().get(), AcceptFees);
+		codesByName.put(DistributeCoupon.getCodeName().get(), DistributeCoupon);
+		codesByName.put(PerformRequest.getCodeName().get(), PerformRequest);
+		codesByName.put(NoReasonForDecline.getCodeName().get(), NoReasonForDecline);
+		codesByName.put(BlockCard.getCodeName().get(), BlockCard);
+		codesByName.put(Approve.getCodeName().get(), Approve);
+		codesByName.put(FallForward.getCodeName().get(), FallForward);
+	}
+
+	public static ActionTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ActionTypeCode[] values() {
+		ActionTypeCode[] values = new ActionTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ActionTypeCode> {
+		@Override
+		public ActionTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ActionTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

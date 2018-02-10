@@ -25,9 +25,11 @@ import com.tools20022.repository.entity.FinancialDocument;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Negotiable instrument instructing a financial institution to pay a specific
@@ -40,6 +42,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.FinancialDocument
+ * FinancialDocument}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -66,9 +71,6 @@ import java.util.List;
  * Cheque.mmCashAccount}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.FinancialDocument
- * FinancialDocument}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -86,8 +88,8 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -105,8 +107,8 @@ public class Cheque extends FinancialDocument {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected ChequeIssue chequeDelivery;
 	/**
-	 * Specifies the parameters related to the delivery of the cheque.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,8 +141,8 @@ public class Cheque extends FinancialDocument {
 	 */
 	public static final MMBusinessAssociationEnd mmChequeDelivery = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChequeDelivery";
 			definition = "Specifies the parameters related to the delivery of the cheque.";
@@ -153,9 +155,8 @@ public class Cheque extends FinancialDocument {
 	};
 	protected Max35Text number;
 	/**
-	 * Unique and unambiguous identifier for a cheque as assigned by the
-	 * financial institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,8 +197,8 @@ public class Cheque extends FinancialDocument {
 	public static final MMBusinessAttribute mmNumber = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionReferences1.mmChequeNumber, TransactionReferences2.mmChequeNumber, TransactionReferences3.mmChequeNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Number";
 			definition = "Unique and unambiguous identifier for a cheque as assigned by the financial institution.";
@@ -216,8 +217,8 @@ public class Cheque extends FinancialDocument {
 	};
 	protected ChequeTypeCode chequeType;
 	/**
-	 * Specifies the type of cheque.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -254,8 +255,8 @@ public class Cheque extends FinancialDocument {
 	public static final MMBusinessAttribute mmChequeType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Cheque5.mmChequeType, Cheque6.mmChequeType, Cheque7.mmChequeType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChequeType";
 			definition = "Specifies the type of cheque.";
@@ -274,8 +275,8 @@ public class Cheque extends FinancialDocument {
 	};
 	protected ISODate maturityDate;
 	/**
-	 * Date when the draft becomes payable and the debtor's account is debited.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -316,8 +317,8 @@ public class Cheque extends FinancialDocument {
 	public static final MMBusinessAttribute mmMaturityDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Cheque5.mmChequeMaturityDate, Cheque6.mmChequeMaturityDate, Cheque7.mmChequeMaturityDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaturityDate";
 			definition = "Date when the draft becomes payable and the debtor's account is debited.";
@@ -336,10 +337,8 @@ public class Cheque extends FinancialDocument {
 	};
 	protected Max35Text formsCode;
 	/**
-	 * Code agreed between the initiating party and the debtor's agent, that
-	 * specifies the cheque layout, company logo and digitised signature to be
-	 * used to print the cheque.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -377,8 +376,8 @@ public class Cheque extends FinancialDocument {
 	public static final MMBusinessAttribute mmFormsCode = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Cheque5.mmFormsCode, Cheque6.mmFormsCode, Cheque7.mmFormsCode);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FormsCode";
 			definition = "Code agreed between the initiating party and the debtor's agent, that specifies the cheque layout, company logo and digitised signature to be used to print the cheque.";
@@ -397,9 +396,8 @@ public class Cheque extends FinancialDocument {
 	};
 	protected Max35Text memoField;
 	/**
-	 * Information that needs to be printed on a cheque, used by the payer to
-	 * add miscellaneous information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -437,8 +435,8 @@ public class Cheque extends FinancialDocument {
 	public static final MMBusinessAttribute mmMemoField = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Cheque5.mmMemoField, Cheque6.mmMemoField, Cheque7.mmMemoField);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MemoField";
 			definition = "Information that needs to be printed on a cheque, used by the payer to add miscellaneous information.";
@@ -457,9 +455,8 @@ public class Cheque extends FinancialDocument {
 	};
 	protected Max35Text regionalClearingZone;
 	/**
-	 * Regional area in which the cheque can be cleared, when a country has no
-	 * nation-wide cheque clearing organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -500,8 +497,8 @@ public class Cheque extends FinancialDocument {
 	public static final MMBusinessAttribute mmRegionalClearingZone = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Cheque5.mmRegionalClearingZone, Cheque6.mmRegionalClearingZone, Cheque7.mmRegionalClearingZone);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegionalClearingZone";
 			definition = "Regional area in which the cheque can be cleared, when a country has no nation-wide cheque clearing organisation.";
@@ -520,8 +517,8 @@ public class Cheque extends FinancialDocument {
 	};
 	protected List<com.tools20022.repository.entity.ChequePayment> relatedPayment;
 	/**
-	 * Payment which uses a cheque.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -553,8 +550,8 @@ public class Cheque extends FinancialDocument {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPayment";
 			definition = "Payment which uses a cheque.";
@@ -566,8 +563,8 @@ public class Cheque extends FinancialDocument {
 	};
 	protected List<com.tools20022.repository.entity.ChequePartyRole> chequePartyRole;
 	/**
-	 * Specifies each role played by a party in the process of paying by cheque.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -601,8 +598,8 @@ public class Cheque extends FinancialDocument {
 	 */
 	public static final MMBusinessAssociationEnd mmChequePartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChequePartyRole";
 			definition = "Specifies each role played by a party in the process of paying by cheque.";
@@ -614,8 +611,8 @@ public class Cheque extends FinancialDocument {
 	};
 	protected CashAccount cashAccount;
 	/**
-	 * Cash account on which a cheque is drawn.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -647,8 +644,8 @@ public class Cheque extends FinancialDocument {
 	 */
 	public static final MMBusinessAssociationEnd mmCashAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Cash account on which a cheque is drawn.";
@@ -663,7 +660,7 @@ public class Cheque extends FinancialDocument {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Cheque";
 				definition = "Negotiable instrument instructing a financial institution to pay a specific amount of a specific currency from the account of the drawer with that institution.";
@@ -688,79 +685,89 @@ public class Cheque extends FinancialDocument {
 		return chequeDelivery;
 	}
 
-	public void setChequeDelivery(com.tools20022.repository.entity.ChequeIssue chequeDelivery) {
-		this.chequeDelivery = chequeDelivery;
+	public Cheque setChequeDelivery(com.tools20022.repository.entity.ChequeIssue chequeDelivery) {
+		this.chequeDelivery = Objects.requireNonNull(chequeDelivery);
+		return this;
 	}
 
 	public Max35Text getNumber() {
 		return number;
 	}
 
-	public void setNumber(Max35Text number) {
-		this.number = number;
+	public Cheque setNumber(Max35Text number) {
+		this.number = Objects.requireNonNull(number);
+		return this;
 	}
 
 	public ChequeTypeCode getChequeType() {
 		return chequeType;
 	}
 
-	public void setChequeType(ChequeTypeCode chequeType) {
-		this.chequeType = chequeType;
+	public Cheque setChequeType(ChequeTypeCode chequeType) {
+		this.chequeType = Objects.requireNonNull(chequeType);
+		return this;
 	}
 
 	public ISODate getMaturityDate() {
 		return maturityDate;
 	}
 
-	public void setMaturityDate(ISODate maturityDate) {
-		this.maturityDate = maturityDate;
+	public Cheque setMaturityDate(ISODate maturityDate) {
+		this.maturityDate = Objects.requireNonNull(maturityDate);
+		return this;
 	}
 
 	public Max35Text getFormsCode() {
 		return formsCode;
 	}
 
-	public void setFormsCode(Max35Text formsCode) {
-		this.formsCode = formsCode;
+	public Cheque setFormsCode(Max35Text formsCode) {
+		this.formsCode = Objects.requireNonNull(formsCode);
+		return this;
 	}
 
 	public Max35Text getMemoField() {
 		return memoField;
 	}
 
-	public void setMemoField(Max35Text memoField) {
-		this.memoField = memoField;
+	public Cheque setMemoField(Max35Text memoField) {
+		this.memoField = Objects.requireNonNull(memoField);
+		return this;
 	}
 
 	public Max35Text getRegionalClearingZone() {
 		return regionalClearingZone;
 	}
 
-	public void setRegionalClearingZone(Max35Text regionalClearingZone) {
-		this.regionalClearingZone = regionalClearingZone;
+	public Cheque setRegionalClearingZone(Max35Text regionalClearingZone) {
+		this.regionalClearingZone = Objects.requireNonNull(regionalClearingZone);
+		return this;
 	}
 
 	public List<ChequePayment> getRelatedPayment() {
-		return relatedPayment;
+		return relatedPayment == null ? relatedPayment = new ArrayList<>() : relatedPayment;
 	}
 
-	public void setRelatedPayment(List<com.tools20022.repository.entity.ChequePayment> relatedPayment) {
-		this.relatedPayment = relatedPayment;
+	public Cheque setRelatedPayment(List<com.tools20022.repository.entity.ChequePayment> relatedPayment) {
+		this.relatedPayment = Objects.requireNonNull(relatedPayment);
+		return this;
 	}
 
 	public List<ChequePartyRole> getChequePartyRole() {
-		return chequePartyRole;
+		return chequePartyRole == null ? chequePartyRole = new ArrayList<>() : chequePartyRole;
 	}
 
-	public void setChequePartyRole(List<com.tools20022.repository.entity.ChequePartyRole> chequePartyRole) {
-		this.chequePartyRole = chequePartyRole;
+	public Cheque setChequePartyRole(List<com.tools20022.repository.entity.ChequePartyRole> chequePartyRole) {
+		this.chequePartyRole = Objects.requireNonNull(chequePartyRole);
+		return this;
 	}
 
 	public CashAccount getCashAccount() {
 		return cashAccount;
 	}
 
-	public void setCashAccount(com.tools20022.repository.entity.CashAccount cashAccount) {
-		this.cashAccount = cashAccount;
+	public Cheque setCashAccount(com.tools20022.repository.entity.CashAccount cashAccount) {
+		this.cashAccount = Objects.requireNonNull(cashAccount);
+		return this;
 	}
 }

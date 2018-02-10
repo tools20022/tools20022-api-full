@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information about the securities account."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesAccount6", propOrder = {"securityIdentification", "securitiesAccountIdentification", "accountOwnerIdentification", "safekeepingPlace", "registrationDetails"})
 public class SecuritiesAccount6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctyId", required = true)
 	protected SecurityIdentification7 securityIdentification;
 	/**
-	 * Identification of the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +124,7 @@ public class SecuritiesAccount6 {
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> SecuritiesAccount6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount6.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +135,11 @@ public class SecuritiesAccount6 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesAcctId", required = true)
 	protected Max35Text securitiesAccountIdentification;
 	/**
-	 * Idenfitication of the account where financial instruments are maintained.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,7 +174,7 @@ public class SecuritiesAccount6 {
 	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> SecuritiesAccount6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount6.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,10 +185,11 @@ public class SecuritiesAccount6 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnrId")
 	protected PartyIdentification2Choice accountOwnerIdentification;
 	/**
-	 * Identification of the party that owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,7 +223,7 @@ public class SecuritiesAccount6 {
 	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SecuritiesAccount6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount6.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,10 +234,11 @@ public class SecuritiesAccount6 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgPlc", required = true)
 	protected PartyIdentification2Choice safekeepingPlace;
 	/**
-	 * Identification of the place of safekeeping.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -266,7 +272,7 @@ public class SecuritiesAccount6 {
 	public static final MMMessageAttribute mmSafekeepingPlace = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SecuritiesAccount6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount6.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -277,10 +283,11 @@ public class SecuritiesAccount6 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RegnDtls")
 	protected Max350Text registrationDetails;
 	/**
-	 * Provides information required for the registration of the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -314,7 +321,7 @@ public class SecuritiesAccount6 {
 	public static final MMMessageAttribute mmRegistrationDetails = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistration;
-			componentContext_lazy = () -> SecuritiesAccount6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount6.mmObject();
 			isDerived = false;
 			xmlTag = "RegnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -329,10 +336,11 @@ public class SecuritiesAccount6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesAccount6.mmSecurityIdentification, SecuritiesAccount6.mmSecuritiesAccountIdentification, SecuritiesAccount6.mmAccountOwnerIdentification,
-						SecuritiesAccount6.mmSafekeepingPlace, SecuritiesAccount6.mmRegistrationDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount6.mmSecurityIdentification, com.tools20022.repository.msg.SecuritiesAccount6.mmSecuritiesAccountIdentification,
+						com.tools20022.repository.msg.SecuritiesAccount6.mmAccountOwnerIdentification, com.tools20022.repository.msg.SecuritiesAccount6.mmSafekeepingPlace,
+						com.tools20022.repository.msg.SecuritiesAccount6.mmRegistrationDetails);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAccount6";
 				definition = "Provides information about the securities account.";
@@ -341,48 +349,48 @@ public class SecuritiesAccount6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification7 getSecurityIdentification() {
 		return securityIdentification;
 	}
 
-	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
-		this.securityIdentification = securityIdentification;
+	public SecuritiesAccount6 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
+		this.securityIdentification = Objects.requireNonNull(securityIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesAcctId", required = true)
 	public Max35Text getSecuritiesAccountIdentification() {
 		return securitiesAccountIdentification;
 	}
 
-	public void setSecuritiesAccountIdentification(Max35Text securitiesAccountIdentification) {
-		this.securitiesAccountIdentification = securitiesAccountIdentification;
+	public SecuritiesAccount6 setSecuritiesAccountIdentification(Max35Text securitiesAccountIdentification) {
+		this.securitiesAccountIdentification = Objects.requireNonNull(securitiesAccountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnrId")
-	public PartyIdentification2Choice getAccountOwnerIdentification() {
-		return accountOwnerIdentification;
+	public Optional<PartyIdentification2Choice> getAccountOwnerIdentification() {
+		return accountOwnerIdentification == null ? Optional.empty() : Optional.of(accountOwnerIdentification);
 	}
 
-	public void setAccountOwnerIdentification(PartyIdentification2Choice accountOwnerIdentification) {
+	public SecuritiesAccount6 setAccountOwnerIdentification(PartyIdentification2Choice accountOwnerIdentification) {
 		this.accountOwnerIdentification = accountOwnerIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgPlc", required = true)
 	public PartyIdentification2Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
 
-	public void setSafekeepingPlace(PartyIdentification2Choice safekeepingPlace) {
-		this.safekeepingPlace = safekeepingPlace;
+	public SecuritiesAccount6 setSafekeepingPlace(PartyIdentification2Choice safekeepingPlace) {
+		this.safekeepingPlace = Objects.requireNonNull(safekeepingPlace);
+		return this;
 	}
 
-	@XmlElement(name = "RegnDtls")
-	public Max350Text getRegistrationDetails() {
-		return registrationDetails;
+	public Optional<Max350Text> getRegistrationDetails() {
+		return registrationDetails == null ? Optional.empty() : Optional.of(registrationDetails);
 	}
 
-	public void setRegistrationDetails(Max350Text registrationDetails) {
+	public SecuritiesAccount6 setRegistrationDetails(Max350Text registrationDetails) {
 		this.registrationDetails = registrationDetails;
+		return this;
 	}
 }

@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.StatusSubTypeCode;
+import com.tools20022.repository.codeset.StatusSubType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the sub status of the trade notification.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.StatusSubTypeCode
- * StatusSubTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StatusSubType2Code#mmOnlySameDayFlagTrue
- * StatusSubType2Code.mmOnlySameDayFlagTrue}</li>
+ * {@linkplain com.tools20022.repository.codeset.StatusSubType2Code#OnlySameDayFlagTrue
+ * StatusSubType2Code.OnlySameDayFlagTrue}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.StatusSubTypeCode
+ * StatusSubTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * StatusSubType1Code}</li>
  * </ul>
  */
-public class StatusSubType2Code extends StatusSubTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class StatusSubType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,32 +90,62 @@ public class StatusSubType2Code extends StatusSubTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.StatusSubType1Code#mmOnlySameDayFlagTrue
-	 * StatusSubType1Code.mmOnlySameDayFlagTrue}</li>
+	 * {@linkplain com.tools20022.repository.codeset.StatusSubType1Code#OnlySameDayFlagTrue
+	 * StatusSubType1Code.OnlySameDayFlagTrue}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOnlySameDayFlagTrue = new MMCode() {
+	public static final StatusSubType2Code OnlySameDayFlagTrue = new StatusSubType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnlySameDayFlagTrue";
-			previousVersion_lazy = () -> StatusSubType1Code.mmOnlySameDayFlagTrue;
-			owner_lazy = () -> StatusSubType2Code.mmObject();
+			previousVersion_lazy = () -> StatusSubType1Code.OnlySameDayFlagTrue;
+			owner_lazy = () -> com.tools20022.repository.codeset.StatusSubType2Code.mmObject();
+			codeName = StatusSubTypeCode.OnlySameDayFlagTrue.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, StatusSubType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected StatusSubType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SMDY");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusSubType2Code";
 				definition = "Indicates the sub status of the trade notification.";
 				previousVersion_lazy = () -> StatusSubType1Code.mmObject();
-				code_lazy = () -> Arrays.asList(StatusSubType2Code.mmOnlySameDayFlagTrue);
 				trace_lazy = () -> StatusSubTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatusSubType2Code.OnlySameDayFlagTrue);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(OnlySameDayFlagTrue.getCodeName().get(), OnlySameDayFlagTrue);
+	}
+
+	public static StatusSubType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static StatusSubType2Code[] values() {
+		StatusSubType2Code[] values = new StatusSubType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, StatusSubType2Code> {
+		@Override
+		public StatusSubType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(StatusSubType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

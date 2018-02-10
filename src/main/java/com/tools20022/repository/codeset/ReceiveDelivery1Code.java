@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ReceiveDeliveryCode;
+import com.tools20022.repository.codeset.ReceiveDelivery1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the settlement transaction is a delivery or receipt.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ReceiveDeliveryCode
- * ReceiveDeliveryCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReceiveDelivery1Code#mmDelivery
- * ReceiveDelivery1Code.mmDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReceiveDelivery1Code#Delivery
+ * ReceiveDelivery1Code.Delivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReceiveDelivery1Code#mmReceive
- * ReceiveDelivery1Code.mmReceive}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReceiveDelivery1Code#Receive
+ * ReceiveDelivery1Code.Receive}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ReceiveDeliveryCode
+ * ReceiveDeliveryCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies whether the settlement transaction is a delivery or receipt."</li>
  * </ul>
  */
-public class ReceiveDelivery1Code extends ReceiveDeliveryCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ReceiveDelivery1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +89,12 @@ public class ReceiveDelivery1Code extends ReceiveDeliveryCode {
 	 * name} = "Delivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDelivery = new MMCode() {
+	public static final ReceiveDelivery1Code Delivery = new ReceiveDelivery1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delivery";
-			owner_lazy = () -> ReceiveDelivery1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReceiveDelivery1Code.mmObject();
+			codeName = ReceiveDeliveryCode.Delivery.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,26 +113,57 @@ public class ReceiveDelivery1Code extends ReceiveDeliveryCode {
 	 * name} = "Receive"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceive = new MMCode() {
+	public static final ReceiveDelivery1Code Receive = new ReceiveDelivery1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Receive";
-			owner_lazy = () -> ReceiveDelivery1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReceiveDelivery1Code.mmObject();
+			codeName = ReceiveDeliveryCode.Receive.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ReceiveDelivery1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ReceiveDelivery1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DELI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReceiveDelivery1Code";
 				definition = "Specifies whether the settlement transaction is a delivery or receipt.";
-				code_lazy = () -> Arrays.asList(ReceiveDelivery1Code.mmDelivery, ReceiveDelivery1Code.mmReceive);
 				trace_lazy = () -> ReceiveDeliveryCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReceiveDelivery1Code.Delivery, com.tools20022.repository.codeset.ReceiveDelivery1Code.Receive);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Delivery.getCodeName().get(), Delivery);
+		codesByName.put(Receive.getCodeName().get(), Receive);
+	}
+
+	public static ReceiveDelivery1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ReceiveDelivery1Code[] values() {
+		ReceiveDelivery1Code[] values = new ReceiveDelivery1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ReceiveDelivery1Code> {
+		@Override
+		public ReceiveDelivery1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ReceiveDelivery1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

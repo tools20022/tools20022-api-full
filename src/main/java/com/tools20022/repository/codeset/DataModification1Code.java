@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DataModificationCode;
+import com.tools20022.repository.codeset.DataModification1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specified the type of modification to be applied on a data set.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DataModificationCode
- * DataModificationCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataModification1Code#mmInsertNewDataSet
- * DataModification1Code.mmInsertNewDataSet}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataModification1Code#InsertNewDataSet
+ * DataModification1Code.InsertNewDataSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataModification1Code#mmUpdateDataSetDetails
- * DataModification1Code.mmUpdateDataSetDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataModification1Code#UpdateDataSetDetails
+ * DataModification1Code.UpdateDataSetDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataModification1Code#mmDeleteDataSet
- * DataModification1Code.mmDeleteDataSet}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataModification1Code#DeleteDataSet
+ * DataModification1Code.DeleteDataSet}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DataModificationCode
+ * DataModificationCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specified the type of modification to be applied on a data set."</li>
  * </ul>
  */
-public class DataModification1Code extends DataModificationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DataModification1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,11 +92,12 @@ public class DataModification1Code extends DataModificationCode {
 	 * name} = "InsertNewDataSet"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInsertNewDataSet = new MMCode() {
+	public static final DataModification1Code InsertNewDataSet = new DataModification1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsertNewDataSet";
-			owner_lazy = () -> DataModification1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataModification1Code.mmObject();
+			codeName = DataModificationCode.InsertNewDataSet.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +116,12 @@ public class DataModification1Code extends DataModificationCode {
 	 * name} = "UpdateDataSetDetails"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUpdateDataSetDetails = new MMCode() {
+	public static final DataModification1Code UpdateDataSetDetails = new DataModification1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDataSetDetails";
-			owner_lazy = () -> DataModification1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataModification1Code.mmObject();
+			codeName = DataModificationCode.UpdateDataSetDetails.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,26 +140,59 @@ public class DataModification1Code extends DataModificationCode {
 	 * name} = "DeleteDataSet"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeleteDataSet = new MMCode() {
+	public static final DataModification1Code DeleteDataSet = new DataModification1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeleteDataSet";
-			owner_lazy = () -> DataModification1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataModification1Code.mmObject();
+			codeName = DataModificationCode.DeleteDataSet.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DataModification1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DataModification1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("INSE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DataModification1Code";
 				definition = "Specified the type of modification to be applied on a data set.";
-				code_lazy = () -> Arrays.asList(DataModification1Code.mmInsertNewDataSet, DataModification1Code.mmUpdateDataSetDetails, DataModification1Code.mmDeleteDataSet);
 				trace_lazy = () -> DataModificationCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataModification1Code.InsertNewDataSet, com.tools20022.repository.codeset.DataModification1Code.UpdateDataSetDetails,
+						com.tools20022.repository.codeset.DataModification1Code.DeleteDataSet);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(InsertNewDataSet.getCodeName().get(), InsertNewDataSet);
+		codesByName.put(UpdateDataSetDetails.getCodeName().get(), UpdateDataSetDetails);
+		codesByName.put(DeleteDataSet.getCodeName().get(), DeleteDataSet);
+	}
+
+	public static DataModification1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DataModification1Code[] values() {
+		DataModification1Code[] values = new DataModification1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DataModification1Code> {
+		@Override
+		public DataModification1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DataModification1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

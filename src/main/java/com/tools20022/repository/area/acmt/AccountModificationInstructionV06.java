@@ -26,9 +26,8 @@ import com.tools20022.repository.choice.AccountSelection1Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -59,22 +58,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AccountManagementPreviousVersion
- * AccountManagementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
- * InvestmentFundsISOPreviousversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AcctModInstr"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -129,9 +112,33 @@ import javax.xml.bind.annotation.*;
  * AccountModificationInstructionV06.mmExtension}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
+ * InvestmentFundsISOPreviousversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AcctModInstr"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AccountManagementPreviousVersion
+ * AccountManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code acmt.003.001.06}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUnit1Rule#forAccountModificationInstructionV06
+ * ConstraintUnit1Rule.forAccountModificationInstructionV06}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -156,18 +163,18 @@ import javax.xml.bind.annotation.*;
  * AccountModificationInstructionV05}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountModificationInstructionV06", propOrder = {"messageIdentification", "previousReference", "instructionDetails", "investmentAccountSelection", "modifiedInvestmentAccount", "modifiedAccountParties",
 		"modifiedIntermediaries", "modifiedPlacement", "modifiedIssueAllocation", "modifiedSavingsInvestmentPlan", "modifiedWithdrawalInvestmentPlan", "modifiedCashSettlement", "modifiedServiceLevelAgreement",
 		"modifiedAdditionalInformation", "marketPracticeVersion", "extension"})
 public class AccountModificationInstructionV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Reference that uniquely identifies the message from a business
-	 * application standpoint.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -224,10 +231,11 @@ public class AccountModificationInstructionV06 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsRef")
 	protected AdditionalReference6 previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -282,10 +290,11 @@ public class AccountModificationInstructionV06 {
 			}
 		}
 	};
+	@XmlElement(name = "InstrDtls")
 	protected InvestmentAccountModification2 instructionDetails;
 	/**
-	 * Information about the modification instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -340,10 +349,11 @@ public class AccountModificationInstructionV06 {
 			}
 		}
 	};
+	@XmlElement(name = "InvstmtAcctSelctn", required = true)
 	protected AccountSelection1Choice investmentAccountSelection;
 	/**
-	 * Identifies the account for which the information is modified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -399,11 +409,11 @@ public class AccountModificationInstructionV06 {
 			}
 		}
 	};
+	@XmlElement(name = "ModfdInvstmtAcct")
 	protected InvestmentAccount51 modifiedInvestmentAccount;
 	/**
-	 * Information related to general characteristics of the account to be
-	 * inserted, updated or deleted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -460,11 +470,11 @@ public class AccountModificationInstructionV06 {
 			}
 		}
 	};
+	@XmlElement(name = "ModfdAcctPties")
 	protected List<AccountParties14> modifiedAccountParties;
 	/**
-	 * Information related to an account party to be inserted, updated or
-	 * deleted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -521,10 +531,11 @@ public class AccountModificationInstructionV06 {
 			}
 		}
 	};
+	@XmlElement(name = "ModfdIntrmies")
 	protected List<ModificationScope26> modifiedIntermediaries;
 	/**
-	 * Information related to intermediaries to be inserted, updated or deleted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -581,11 +592,11 @@ public class AccountModificationInstructionV06 {
 			}
 		}
 	};
+	@XmlElement(name = "ModfdPlcmnt")
 	protected ModificationScope33 modifiedPlacement;
 	/**
-	 * Information related to referral information to be inserted, updated or
-	 * deleted
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -642,11 +653,11 @@ public class AccountModificationInstructionV06 {
 			}
 		}
 	};
+	@XmlElement(name = "ModfdIsseAllcn")
 	protected ModificationScope21 modifiedIssueAllocation;
 	/**
-	 * Eligibility conditions related to allocation of new issues to be
-	 * inserted, updated or deleted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -703,11 +714,11 @@ public class AccountModificationInstructionV06 {
 			}
 		}
 	};
+	@XmlElement(name = "ModfdSvgsInvstmtPlan")
 	protected List<ModificationScope28> modifiedSavingsInvestmentPlan;
 	/**
-	 * Information related to a savings plan to be either inserted, updated or
-	 * deleted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -764,11 +775,11 @@ public class AccountModificationInstructionV06 {
 			}
 		}
 	};
+	@XmlElement(name = "ModfdWdrwlInvstmtPlan")
 	protected List<ModificationScope28> modifiedWithdrawalInvestmentPlan;
 	/**
-	 * Information related to a withdrawal plan to be either inserted, updated
-	 * or deleted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -825,10 +836,11 @@ public class AccountModificationInstructionV06 {
 			}
 		}
 	};
+	@XmlElement(name = "ModfdCshSttlm")
 	protected List<CashSettlement2> modifiedCashSettlement;
 	/**
-	 * Cash settlement standing instruction to be either inserted or deleted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -883,10 +895,11 @@ public class AccountModificationInstructionV06 {
 			}
 		}
 	};
+	@XmlElement(name = "ModfdSvcLvlAgrmt")
 	protected List<ModificationScope31> modifiedServiceLevelAgreement;
 	/**
-	 * Information related to documents to be added, deleted or updated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -942,11 +955,11 @@ public class AccountModificationInstructionV06 {
 			}
 		}
 	};
+	@XmlElement(name = "ModfdAddtlInf")
 	protected List<ModificationScope30> modifiedAdditionalInformation;
 	/**
-	 * Additional information concerning limitations and restrictions on the
-	 * account to be inserted, updated or deleted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -996,10 +1009,11 @@ public class AccountModificationInstructionV06 {
 			}
 		}
 	};
+	@XmlElement(name = "MktPrctcVrsn")
 	protected MarketPracticeVersion1 marketPracticeVersion;
 	/**
-	 * Identifies the market practice to which the message conforms.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1055,11 +1069,11 @@ public class AccountModificationInstructionV06 {
 			}
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1118,6 +1132,7 @@ public class AccountModificationInstructionV06 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintUnit1Rule.forAccountModificationInstructionV06);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountModificationInstructionV06";
 				definition = "Scope\r\nAn account owner, for example, an investor or its designated agent, sends the AccountModificationInstruction message to the account servicer, for example, a registrar, transfer agent, custodian bank or securities depository to modify, that is, create, update or delete specific details of an existing account.\r\nUsage\r\nThe AccountModificationInstruction message is used to modify the details of an existing account.\r\nThe AccountModificationInstruction message has three specific uses:\r\n- to maintain/update any of the existing account details, for example, to update the address of the beneficiary or modify the preference to income from distribution to capitalisation, or,\r\n- to add/create specific details to the existing account when these details were not yet recorded at the time of account creation, for example, to add a second address or to establish new cash settlement standing instructions, or,\r\n- to delete specific account details, for example, delete cash standing instructions.\r\nThis message cannot be used to delete an entire account, as institution specific and regulatory rules pertaining to account deletion are diverse.\r\nThe usage of this message may be subject to service level agreement (SLA) between the counterparties.\r\nExecution of the AccountModificationInstruction is confirmed via an AccountDetailsConfirmation message.";
@@ -1154,151 +1169,151 @@ public class AccountModificationInstructionV06 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public AccountModificationInstructionV06 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef")
-	public AdditionalReference6 getPreviousReference() {
-		return previousReference;
+	public Optional<AdditionalReference6> getPreviousReference() {
+		return previousReference == null ? Optional.empty() : Optional.of(previousReference);
 	}
 
-	public void setPreviousReference(AdditionalReference6 previousReference) {
+	public AccountModificationInstructionV06 setPreviousReference(AdditionalReference6 previousReference) {
 		this.previousReference = previousReference;
+		return this;
 	}
 
-	@XmlElement(name = "InstrDtls")
-	public InvestmentAccountModification2 getInstructionDetails() {
-		return instructionDetails;
+	public Optional<InvestmentAccountModification2> getInstructionDetails() {
+		return instructionDetails == null ? Optional.empty() : Optional.of(instructionDetails);
 	}
 
-	public void setInstructionDetails(InvestmentAccountModification2 instructionDetails) {
+	public AccountModificationInstructionV06 setInstructionDetails(InvestmentAccountModification2 instructionDetails) {
 		this.instructionDetails = instructionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtAcctSelctn", required = true)
 	public AccountSelection1Choice getInvestmentAccountSelection() {
 		return investmentAccountSelection;
 	}
 
-	public void setInvestmentAccountSelection(AccountSelection1Choice investmentAccountSelection) {
-		this.investmentAccountSelection = investmentAccountSelection;
+	public AccountModificationInstructionV06 setInvestmentAccountSelection(AccountSelection1Choice investmentAccountSelection) {
+		this.investmentAccountSelection = Objects.requireNonNull(investmentAccountSelection);
+		return this;
 	}
 
-	@XmlElement(name = "ModfdInvstmtAcct")
-	public InvestmentAccount51 getModifiedInvestmentAccount() {
-		return modifiedInvestmentAccount;
+	public Optional<InvestmentAccount51> getModifiedInvestmentAccount() {
+		return modifiedInvestmentAccount == null ? Optional.empty() : Optional.of(modifiedInvestmentAccount);
 	}
 
-	public void setModifiedInvestmentAccount(InvestmentAccount51 modifiedInvestmentAccount) {
+	public AccountModificationInstructionV06 setModifiedInvestmentAccount(InvestmentAccount51 modifiedInvestmentAccount) {
 		this.modifiedInvestmentAccount = modifiedInvestmentAccount;
+		return this;
 	}
 
-	@XmlElement(name = "ModfdAcctPties")
 	public List<AccountParties14> getModifiedAccountParties() {
-		return modifiedAccountParties;
+		return modifiedAccountParties == null ? modifiedAccountParties = new ArrayList<>() : modifiedAccountParties;
 	}
 
-	public void setModifiedAccountParties(List<AccountParties14> modifiedAccountParties) {
-		this.modifiedAccountParties = modifiedAccountParties;
+	public AccountModificationInstructionV06 setModifiedAccountParties(List<AccountParties14> modifiedAccountParties) {
+		this.modifiedAccountParties = Objects.requireNonNull(modifiedAccountParties);
+		return this;
 	}
 
-	@XmlElement(name = "ModfdIntrmies")
 	public List<ModificationScope26> getModifiedIntermediaries() {
-		return modifiedIntermediaries;
+		return modifiedIntermediaries == null ? modifiedIntermediaries = new ArrayList<>() : modifiedIntermediaries;
 	}
 
-	public void setModifiedIntermediaries(List<ModificationScope26> modifiedIntermediaries) {
-		this.modifiedIntermediaries = modifiedIntermediaries;
+	public AccountModificationInstructionV06 setModifiedIntermediaries(List<ModificationScope26> modifiedIntermediaries) {
+		this.modifiedIntermediaries = Objects.requireNonNull(modifiedIntermediaries);
+		return this;
 	}
 
-	@XmlElement(name = "ModfdPlcmnt")
-	public ModificationScope33 getModifiedPlacement() {
-		return modifiedPlacement;
+	public Optional<ModificationScope33> getModifiedPlacement() {
+		return modifiedPlacement == null ? Optional.empty() : Optional.of(modifiedPlacement);
 	}
 
-	public void setModifiedPlacement(ModificationScope33 modifiedPlacement) {
+	public AccountModificationInstructionV06 setModifiedPlacement(ModificationScope33 modifiedPlacement) {
 		this.modifiedPlacement = modifiedPlacement;
+		return this;
 	}
 
-	@XmlElement(name = "ModfdIsseAllcn")
-	public ModificationScope21 getModifiedIssueAllocation() {
-		return modifiedIssueAllocation;
+	public Optional<ModificationScope21> getModifiedIssueAllocation() {
+		return modifiedIssueAllocation == null ? Optional.empty() : Optional.of(modifiedIssueAllocation);
 	}
 
-	public void setModifiedIssueAllocation(ModificationScope21 modifiedIssueAllocation) {
+	public AccountModificationInstructionV06 setModifiedIssueAllocation(ModificationScope21 modifiedIssueAllocation) {
 		this.modifiedIssueAllocation = modifiedIssueAllocation;
+		return this;
 	}
 
-	@XmlElement(name = "ModfdSvgsInvstmtPlan")
 	public List<ModificationScope28> getModifiedSavingsInvestmentPlan() {
-		return modifiedSavingsInvestmentPlan;
+		return modifiedSavingsInvestmentPlan == null ? modifiedSavingsInvestmentPlan = new ArrayList<>() : modifiedSavingsInvestmentPlan;
 	}
 
-	public void setModifiedSavingsInvestmentPlan(List<ModificationScope28> modifiedSavingsInvestmentPlan) {
-		this.modifiedSavingsInvestmentPlan = modifiedSavingsInvestmentPlan;
+	public AccountModificationInstructionV06 setModifiedSavingsInvestmentPlan(List<ModificationScope28> modifiedSavingsInvestmentPlan) {
+		this.modifiedSavingsInvestmentPlan = Objects.requireNonNull(modifiedSavingsInvestmentPlan);
+		return this;
 	}
 
-	@XmlElement(name = "ModfdWdrwlInvstmtPlan")
 	public List<ModificationScope28> getModifiedWithdrawalInvestmentPlan() {
-		return modifiedWithdrawalInvestmentPlan;
+		return modifiedWithdrawalInvestmentPlan == null ? modifiedWithdrawalInvestmentPlan = new ArrayList<>() : modifiedWithdrawalInvestmentPlan;
 	}
 
-	public void setModifiedWithdrawalInvestmentPlan(List<ModificationScope28> modifiedWithdrawalInvestmentPlan) {
-		this.modifiedWithdrawalInvestmentPlan = modifiedWithdrawalInvestmentPlan;
+	public AccountModificationInstructionV06 setModifiedWithdrawalInvestmentPlan(List<ModificationScope28> modifiedWithdrawalInvestmentPlan) {
+		this.modifiedWithdrawalInvestmentPlan = Objects.requireNonNull(modifiedWithdrawalInvestmentPlan);
+		return this;
 	}
 
-	@XmlElement(name = "ModfdCshSttlm")
 	public List<CashSettlement2> getModifiedCashSettlement() {
-		return modifiedCashSettlement;
+		return modifiedCashSettlement == null ? modifiedCashSettlement = new ArrayList<>() : modifiedCashSettlement;
 	}
 
-	public void setModifiedCashSettlement(List<CashSettlement2> modifiedCashSettlement) {
-		this.modifiedCashSettlement = modifiedCashSettlement;
+	public AccountModificationInstructionV06 setModifiedCashSettlement(List<CashSettlement2> modifiedCashSettlement) {
+		this.modifiedCashSettlement = Objects.requireNonNull(modifiedCashSettlement);
+		return this;
 	}
 
-	@XmlElement(name = "ModfdSvcLvlAgrmt")
 	public List<ModificationScope31> getModifiedServiceLevelAgreement() {
-		return modifiedServiceLevelAgreement;
+		return modifiedServiceLevelAgreement == null ? modifiedServiceLevelAgreement = new ArrayList<>() : modifiedServiceLevelAgreement;
 	}
 
-	public void setModifiedServiceLevelAgreement(List<ModificationScope31> modifiedServiceLevelAgreement) {
-		this.modifiedServiceLevelAgreement = modifiedServiceLevelAgreement;
+	public AccountModificationInstructionV06 setModifiedServiceLevelAgreement(List<ModificationScope31> modifiedServiceLevelAgreement) {
+		this.modifiedServiceLevelAgreement = Objects.requireNonNull(modifiedServiceLevelAgreement);
+		return this;
 	}
 
-	@XmlElement(name = "ModfdAddtlInf")
 	public List<ModificationScope30> getModifiedAdditionalInformation() {
-		return modifiedAdditionalInformation;
+		return modifiedAdditionalInformation == null ? modifiedAdditionalInformation = new ArrayList<>() : modifiedAdditionalInformation;
 	}
 
-	public void setModifiedAdditionalInformation(List<ModificationScope30> modifiedAdditionalInformation) {
-		this.modifiedAdditionalInformation = modifiedAdditionalInformation;
+	public AccountModificationInstructionV06 setModifiedAdditionalInformation(List<ModificationScope30> modifiedAdditionalInformation) {
+		this.modifiedAdditionalInformation = Objects.requireNonNull(modifiedAdditionalInformation);
+		return this;
 	}
 
-	@XmlElement(name = "MktPrctcVrsn")
-	public MarketPracticeVersion1 getMarketPracticeVersion() {
-		return marketPracticeVersion;
+	public Optional<MarketPracticeVersion1> getMarketPracticeVersion() {
+		return marketPracticeVersion == null ? Optional.empty() : Optional.of(marketPracticeVersion);
 	}
 
-	public void setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
+	public AccountModificationInstructionV06 setMarketPracticeVersion(MarketPracticeVersion1 marketPracticeVersion) {
 		this.marketPracticeVersion = marketPracticeVersion;
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<Extension1> extension) {
-		this.extension = extension;
+	public AccountModificationInstructionV06 setExtension(List<Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.003.06.06")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.003.001.06")
 	static public class Document {
 		@XmlElement(name = "AcctModInstr", required = true)
 		public AccountModificationInstructionV06 messageBody;

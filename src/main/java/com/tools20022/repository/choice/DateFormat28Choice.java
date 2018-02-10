@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
@@ -25,6 +26,7 @@ import com.tools20022.repository.codeset.DateType8Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Choice between an ISODate or ISODateTime format or a date code."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DateFormat28Choice", propOrder = {"date", "dateCode"})
 public class DateFormat28Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dt", required = true)
 	protected DateAndDateTimeChoice date;
 	/**
-	 * Date expressed as a calendar date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -85,6 +88,9 @@ public class DateFormat28Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Dt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98A::4!c//8!n</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -97,9 +103,10 @@ public class DateFormat28Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DateFormat28Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat28Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98A::4!c//8!n"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date expressed as a calendar date.";
@@ -109,10 +116,11 @@ public class DateFormat28Choice {
 			type_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "DtCd", required = true)
 	protected DateType8Code dateCode;
 	/**
-	 * Specifies the type of date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,6 +136,9 @@ public class DateFormat28Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DtCd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98B::4!c//4!c</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -140,9 +151,10 @@ public class DateFormat28Choice {
 	 */
 	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateFormat28Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat28Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DtCd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98B::4!c//4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Specifies the type of date.";
@@ -155,8 +167,8 @@ public class DateFormat28Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DateFormat28Choice.mmDate, DateFormat28Choice.mmDateCode);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat28Choice.mmDate, com.tools20022.repository.choice.DateFormat28Choice.mmDateCode);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateFormat28Choice";
 				definition = "Choice between an ISODate or ISODateTime format or a date code.";
@@ -165,21 +177,21 @@ public class DateFormat28Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dt", required = true)
 	public DateAndDateTimeChoice getDate() {
 		return date;
 	}
 
-	public void setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
-		this.date = date;
+	public DateFormat28Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+		this.date = Objects.requireNonNull(date);
+		return this;
 	}
 
-	@XmlElement(name = "DtCd", required = true)
 	public DateType8Code getDateCode() {
 		return dateCode;
 	}
 
-	public void setDateCode(DateType8Code dateCode) {
-		this.dateCode = dateCode;
+	public DateFormat28Choice setDateCode(DateType8Code dateCode) {
+		this.dateCode = Objects.requireNonNull(dateCode);
+		return this;
 	}
 }

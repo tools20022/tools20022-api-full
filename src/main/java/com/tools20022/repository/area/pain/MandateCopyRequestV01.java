@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PaymentsMandatesISOLatestversion;
 import com.tools20022.repository.msgset.PaymentsMandatesMaintenance20162017;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -53,25 +55,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsInitiationLatestVersion
- * PaymentsInitiationLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PaymentsMandatesISOLatestversion
- * PaymentsMandatesISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PaymentsMandatesMaintenance20162017
- * PaymentsMandatesMaintenance20162017}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "MndtCpyReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -87,9 +70,36 @@ import javax.xml.bind.annotation.*;
  * MandateCopyRequestV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PaymentsMandatesISOLatestversion
+ * PaymentsMandatesISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PaymentsMandatesMaintenance20162017
+ * PaymentsMandatesMaintenance20162017}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "MndtCpyReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.PaymentsInitiationLatestVersion
+ * PaymentsInitiationLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pain.017.001.01}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#forMandateCopyRequestV01
+ * ConstraintSupplementaryDataRule.forMandateCopyRequestV01}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,16 +112,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MandateCopyRequestV01", propOrder = {"groupHeader", "underlyingCopyRequestDetails", "supplementaryData"})
 public class MandateCopyRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader47 groupHeader;
 	/**
-	 * Set of characteristics to identify the message and parties playing a role
-	 * in the mandate copy request, but which are not part of the mandate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,11 +162,11 @@ public class MandateCopyRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "UndrlygCpyReqDtls", required = true)
 	protected List<MandateCopy1> underlyingCopyRequestDetails;
 	/**
-	 * Set of information used to identify the mandate for which a copy is
-	 * requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,11 +206,11 @@ public class MandateCopyRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,6 +255,7 @@ public class MandateCopyRequestV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forMandateCopyRequestV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MandateCopyRequestV01";
 				definition = "Scope\r\nThe MandateCopyRequest message is sent by the initiator of the request to his agent. The initiator can either be the debtor or the creditor.\r\nThe MandateCopyRequest message is forwarded by the agent of the initiator to the agent of the counterparty.\r\nA MandateCopyRequest message is used to request a copy of an existing mandate. If accepted, the mandate copy can be sent using the MandateAcceptanceReport message.\r\nUsage\r\nThe MandateCopyRequest message can contain one or more copy requests.\r\nThe messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.\r\nThe message can also be used by an initiating party that has authority to send the message on behalf of the creditor or debtor.\r\nThe MandateCopyRequest message can be used in domestic and cross-border scenarios.\r\n";
@@ -272,34 +283,34 @@ public class MandateCopyRequestV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader47 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader47 groupHeader) {
-		this.groupHeader = groupHeader;
+	public MandateCopyRequestV01 setGroupHeader(GroupHeader47 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygCpyReqDtls", required = true)
 	public List<MandateCopy1> getUnderlyingCopyRequestDetails() {
-		return underlyingCopyRequestDetails;
+		return underlyingCopyRequestDetails == null ? underlyingCopyRequestDetails = new ArrayList<>() : underlyingCopyRequestDetails;
 	}
 
-	public void setUnderlyingCopyRequestDetails(List<MandateCopy1> underlyingCopyRequestDetails) {
-		this.underlyingCopyRequestDetails = underlyingCopyRequestDetails;
+	public MandateCopyRequestV01 setUnderlyingCopyRequestDetails(List<MandateCopy1> underlyingCopyRequestDetails) {
+		this.underlyingCopyRequestDetails = Objects.requireNonNull(underlyingCopyRequestDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public MandateCopyRequestV01 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.017.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:pain.017.001.01")
 	static public class Document {
 		@XmlElement(name = "MndtCpyReq", required = true)
 		public MandateCopyRequestV01 messageBody;

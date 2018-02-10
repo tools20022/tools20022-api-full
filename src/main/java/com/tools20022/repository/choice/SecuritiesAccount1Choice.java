@@ -24,9 +24,11 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecuritiesAccount13;
 import com.tools20022.repository.msg.SecuritiesAccountRange1;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies one or a range of securities accounts."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesAccount1Choice", propOrder = {"range", "account"})
 public class SecuritiesAccount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rg", required = true)
 	protected SecuritiesAccountRange1 range;
 	/**
-	 * Range of identifications of the securities accounts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -102,7 +105,7 @@ public class SecuritiesAccount1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRange = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAccount1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,10 +117,11 @@ public class SecuritiesAccount1Choice {
 			type_lazy = () -> SecuritiesAccountRange1.mmObject();
 		}
 	};
+	@XmlElement(name = "Acct", required = true)
 	protected List<SecuritiesAccount13> account;
 	/**
-	 * Unique identification of the securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -149,7 +153,7 @@ public class SecuritiesAccount1Choice {
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
-			componentContext_lazy = () -> SecuritiesAccount1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,9 +168,9 @@ public class SecuritiesAccount1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesAccount1Choice.mmRange, SecuritiesAccount1Choice.mmAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesAccount1Choice.mmRange, com.tools20022.repository.choice.SecuritiesAccount1Choice.mmAccount);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccount1Choice";
 				definition = "Specifies one or a range of securities accounts.";
@@ -175,21 +179,21 @@ public class SecuritiesAccount1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rg", required = true)
 	public SecuritiesAccountRange1 getRange() {
 		return range;
 	}
 
-	public void setRange(SecuritiesAccountRange1 range) {
-		this.range = range;
+	public SecuritiesAccount1Choice setRange(SecuritiesAccountRange1 range) {
+		this.range = Objects.requireNonNull(range);
+		return this;
 	}
 
-	@XmlElement(name = "Acct", required = true)
 	public List<SecuritiesAccount13> getAccount() {
-		return account;
+		return account == null ? account = new ArrayList<>() : account;
 	}
 
-	public void setAccount(List<SecuritiesAccount13> account) {
-		this.account = account;
+	public SecuritiesAccount1Choice setAccount(List<SecuritiesAccount13> account) {
+		this.account = Objects.requireNonNull(account);
+		return this;
 	}
 }

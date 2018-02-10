@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Event to start a terminal management action by the point of interaction
@@ -33,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTriggerCode#mmDateTime
- * TerminalManagementActionTriggerCode.mmDateTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTriggerCode#DateTime
+ * TerminalManagementActionTriggerCode.DateTime}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTriggerCode#mmHostEvent
- * TerminalManagementActionTriggerCode.mmHostEvent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTriggerCode#HostEvent
+ * TerminalManagementActionTriggerCode.HostEvent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTriggerCode#mmManual
- * TerminalManagementActionTriggerCode.mmManual}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTriggerCode#Manual
+ * TerminalManagementActionTriggerCode.Manual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTriggerCode#mmSaleEvent
- * TerminalManagementActionTriggerCode.mmSaleEvent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionTriggerCode#SaleEvent
+ * TerminalManagementActionTriggerCode.SaleEvent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -57,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TerminalManagementActionTriggerCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TerminalManagementActionTriggerCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -101,12 +107,12 @@ public class TerminalManagementActionTriggerCode {
 	 * definition} = "Date and time trigger the terminal management action."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDateTime = new MMCode() {
+	public static final TerminalManagementActionTriggerCode DateTime = new TerminalManagementActionTriggerCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DateTime";
 			definition = "Date and time trigger the terminal management action.";
-			owner_lazy = () -> TerminalManagementActionTriggerCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.mmObject();
 			codeName = "DATE";
 		}
 	};
@@ -131,12 +137,12 @@ public class TerminalManagementActionTriggerCode {
 	 * definition} = "Acquirer triggers the terminal management action."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHostEvent = new MMCode() {
+	public static final TerminalManagementActionTriggerCode HostEvent = new TerminalManagementActionTriggerCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HostEvent";
 			definition = "Acquirer triggers the terminal management action.";
-			owner_lazy = () -> TerminalManagementActionTriggerCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.mmObject();
 			codeName = "HOST";
 		}
 	};
@@ -161,12 +167,12 @@ public class TerminalManagementActionTriggerCode {
 	 * definition} = "Acceptor triggers the terminal management action."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmManual = new MMCode() {
+	public static final TerminalManagementActionTriggerCode Manual = new TerminalManagementActionTriggerCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Manual";
 			definition = "Acceptor triggers the terminal management action.";
-			owner_lazy = () -> TerminalManagementActionTriggerCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.mmObject();
 			codeName = "MANU";
 		}
 	};
@@ -191,28 +197,61 @@ public class TerminalManagementActionTriggerCode {
 	 * definition} = "Sale system triggers the terminal management action."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSaleEvent = new MMCode() {
+	public static final TerminalManagementActionTriggerCode SaleEvent = new TerminalManagementActionTriggerCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SaleEvent";
 			definition = "Sale system triggers the terminal management action.";
-			owner_lazy = () -> TerminalManagementActionTriggerCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.mmObject();
 			codeName = "SALE";
 		}
 	};
+	final static private LinkedHashMap<String, TerminalManagementActionTriggerCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TerminalManagementActionTriggerCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DATE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementActionTriggerCode";
 				definition = "Event to start a terminal management action by the point of interaction (POI).";
-				code_lazy = () -> Arrays.asList(TerminalManagementActionTriggerCode.mmDateTime, TerminalManagementActionTriggerCode.mmHostEvent, TerminalManagementActionTriggerCode.mmManual, TerminalManagementActionTriggerCode.mmSaleEvent);
 				derivation_lazy = () -> Arrays.asList(TerminalManagementActionTrigger1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.DateTime, com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.HostEvent,
+						com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.Manual, com.tools20022.repository.codeset.TerminalManagementActionTriggerCode.SaleEvent);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(DateTime.getCodeName().get(), DateTime);
+		codesByName.put(HostEvent.getCodeName().get(), HostEvent);
+		codesByName.put(Manual.getCodeName().get(), Manual);
+		codesByName.put(SaleEvent.getCodeName().get(), SaleEvent);
+	}
+
+	public static TerminalManagementActionTriggerCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TerminalManagementActionTriggerCode[] values() {
+		TerminalManagementActionTriggerCode[] values = new TerminalManagementActionTriggerCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TerminalManagementActionTriggerCode> {
+		@Override
+		public TerminalManagementActionTriggerCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TerminalManagementActionTriggerCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

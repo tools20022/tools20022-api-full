@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.SenderTriggerCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the trigger code used by the sender to generate the file.
@@ -31,16 +36,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SenderTriggerCode#DateTime
+ * SenderTriggerCode.DateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SenderTriggerCode#Forced
+ * SenderTriggerCode.Forced}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SenderTriggerCode#Manual
+ * SenderTriggerCode.Manual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SenderTriggerCode#mmDateTime
- * SenderTriggerCode.mmDateTime}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SenderTriggerCode#mmForced
- * SenderTriggerCode.mmForced}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SenderTriggerCode#mmManual
- * SenderTriggerCode.mmManual}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SenderTriggerCode#mmSufficientlySigned
- * SenderTriggerCode.mmSufficientlySigned}</li>
+ * {@linkplain com.tools20022.repository.codeset.SenderTriggerCode#SufficientlySigned
+ * SenderTriggerCode.SufficientlySigned}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the trigger code used by the sender to generate the file."</li>
  * </ul>
  */
-public class SenderTriggerCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SenderTriggerCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,12 +95,12 @@ public class SenderTriggerCode {
 	 * definition} = "File generated based on a date/time event."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDateTime = new MMCode() {
+	public static final SenderTriggerCode DateTime = new SenderTriggerCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "File generated based on a date/time event.";
-			owner_lazy = () -> SenderTriggerCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SenderTriggerCode.mmObject();
 			codeName = "DTTM";
 		}
 	};
@@ -122,12 +127,12 @@ public class SenderTriggerCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmForced = new MMCode() {
+	public static final SenderTriggerCode Forced = new SenderTriggerCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Forced";
 			definition = "File generated based on a forced event (file generation has been forced).";
-			owner_lazy = () -> SenderTriggerCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SenderTriggerCode.mmObject();
 			codeName = "FRCD";
 		}
 	};
@@ -155,12 +160,12 @@ public class SenderTriggerCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmManual = new MMCode() {
+	public static final SenderTriggerCode Manual = new SenderTriggerCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Manual";
 			definition = "File generated based on a manual event (file has been\r\ngenerated manually).";
-			owner_lazy = () -> SenderTriggerCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SenderTriggerCode.mmObject();
 			codeName = "MANL";
 		}
 	};
@@ -188,27 +193,60 @@ public class SenderTriggerCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSufficientlySigned = new MMCode() {
+	public static final SenderTriggerCode SufficientlySigned = new SenderTriggerCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SufficientlySigned";
 			definition = "File generated based on a signature event (file has the minimum required signature from the sender).";
-			owner_lazy = () -> SenderTriggerCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SenderTriggerCode.mmObject();
 			codeName = "SFSG";
 		}
 	};
+	final static private LinkedHashMap<String, SenderTriggerCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SenderTriggerCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SenderTriggerCode";
 				definition = "Specifies the trigger code used by the sender to generate the file.";
-				code_lazy = () -> Arrays.asList(SenderTriggerCode.mmDateTime, SenderTriggerCode.mmForced, SenderTriggerCode.mmManual, SenderTriggerCode.mmSufficientlySigned);
 				derivation_lazy = () -> Arrays.asList(SenderTrigger1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SenderTriggerCode.DateTime, com.tools20022.repository.codeset.SenderTriggerCode.Forced, com.tools20022.repository.codeset.SenderTriggerCode.Manual,
+						com.tools20022.repository.codeset.SenderTriggerCode.SufficientlySigned);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(DateTime.getCodeName().get(), DateTime);
+		codesByName.put(Forced.getCodeName().get(), Forced);
+		codesByName.put(Manual.getCodeName().get(), Manual);
+		codesByName.put(SufficientlySigned.getCodeName().get(), SufficientlySigned);
+	}
+
+	public static SenderTriggerCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SenderTriggerCode[] values() {
+		SenderTriggerCode[] values = new SenderTriggerCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SenderTriggerCode> {
+		@Override
+		public SenderTriggerCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SenderTriggerCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

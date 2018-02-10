@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * CardTransactionEnvironment2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardTransactionEnvironment4", propOrder = {"acquirerIdentification", "cardSchemeIdentification", "acceptorIdentification", "terminalIdentification", "card", "paymentToken"})
 public class CardTransactionEnvironment4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcqrrId", required = true)
 	protected Max35Text acquirerIdentification;
 	/**
-	 * Acquirer identification of the card transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,7 +128,7 @@ public class CardTransactionEnvironment4 {
 	 */
 	public static final MMMessageAttribute mmAcquirerIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardTransactionEnvironment4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment4.mmObject();
 			isDerived = false;
 			xmlTag = "AcqrrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,11 +140,11 @@ public class CardTransactionEnvironment4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CardSchmeId")
 	protected Max35Text cardSchemeIdentification;
 	/**
-	 * Identification of the interconnected card scheme from which the request
-	 * is coming.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,7 +173,7 @@ public class CardTransactionEnvironment4 {
 	 */
 	public static final MMMessageAttribute mmCardSchemeIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardTransactionEnvironment4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment4.mmObject();
 			isDerived = false;
 			xmlTag = "CardSchmeId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,10 +184,11 @@ public class CardTransactionEnvironment4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AccptrId")
 	protected Max35Text acceptorIdentification;
 	/**
-	 * Identification of the card acceptor performing the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,7 +221,7 @@ public class CardTransactionEnvironment4 {
 	 */
 	public static final MMMessageAttribute mmAcceptorIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardTransactionEnvironment4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment4.mmObject();
 			isDerived = false;
 			xmlTag = "AccptrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,10 +233,11 @@ public class CardTransactionEnvironment4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TermnlId")
 	protected Max35Text terminalIdentification;
 	/**
-	 * Identification of the card terminal performing the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -265,7 +270,7 @@ public class CardTransactionEnvironment4 {
 	 */
 	public static final MMMessageAttribute mmTerminalIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardTransactionEnvironment4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment4.mmObject();
 			isDerived = false;
 			xmlTag = "TermnlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -277,10 +282,11 @@ public class CardTransactionEnvironment4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Card", required = true)
 	protected PaymentCard15 card;
 	/**
-	 * Card performing the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -311,7 +317,7 @@ public class CardTransactionEnvironment4 {
 	 */
 	public static final MMMessageAssociationEnd mmCard = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardTransactionEnvironment4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment4.mmObject();
 			isDerived = false;
 			xmlTag = "Card";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -324,10 +330,11 @@ public class CardTransactionEnvironment4 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentCard15.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtTkn")
 	protected CardPaymentToken2 paymentToken;
 	/**
-	 * Payment token information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -358,7 +365,7 @@ public class CardTransactionEnvironment4 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentToken = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardTransactionEnvironment4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment4.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTkn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -375,9 +382,10 @@ public class CardTransactionEnvironment4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardTransactionEnvironment4.mmAcquirerIdentification, CardTransactionEnvironment4.mmCardSchemeIdentification, CardTransactionEnvironment4.mmAcceptorIdentification,
-						CardTransactionEnvironment4.mmTerminalIdentification, CardTransactionEnvironment4.mmCard, CardTransactionEnvironment4.mmPaymentToken);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionEnvironment4.mmAcquirerIdentification, com.tools20022.repository.msg.CardTransactionEnvironment4.mmCardSchemeIdentification,
+						com.tools20022.repository.msg.CardTransactionEnvironment4.mmAcceptorIdentification, com.tools20022.repository.msg.CardTransactionEnvironment4.mmTerminalIdentification,
+						com.tools20022.repository.msg.CardTransactionEnvironment4.mmCard, com.tools20022.repository.msg.CardTransactionEnvironment4.mmPaymentToken);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransactionEnvironment4";
 				definition = "Environment of the transaction.";
@@ -388,57 +396,57 @@ public class CardTransactionEnvironment4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcqrrId", required = true)
 	public Max35Text getAcquirerIdentification() {
 		return acquirerIdentification;
 	}
 
-	public void setAcquirerIdentification(Max35Text acquirerIdentification) {
-		this.acquirerIdentification = acquirerIdentification;
+	public CardTransactionEnvironment4 setAcquirerIdentification(Max35Text acquirerIdentification) {
+		this.acquirerIdentification = Objects.requireNonNull(acquirerIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CardSchmeId")
-	public Max35Text getCardSchemeIdentification() {
-		return cardSchemeIdentification;
+	public Optional<Max35Text> getCardSchemeIdentification() {
+		return cardSchemeIdentification == null ? Optional.empty() : Optional.of(cardSchemeIdentification);
 	}
 
-	public void setCardSchemeIdentification(Max35Text cardSchemeIdentification) {
+	public CardTransactionEnvironment4 setCardSchemeIdentification(Max35Text cardSchemeIdentification) {
 		this.cardSchemeIdentification = cardSchemeIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AccptrId")
-	public Max35Text getAcceptorIdentification() {
-		return acceptorIdentification;
+	public Optional<Max35Text> getAcceptorIdentification() {
+		return acceptorIdentification == null ? Optional.empty() : Optional.of(acceptorIdentification);
 	}
 
-	public void setAcceptorIdentification(Max35Text acceptorIdentification) {
+	public CardTransactionEnvironment4 setAcceptorIdentification(Max35Text acceptorIdentification) {
 		this.acceptorIdentification = acceptorIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TermnlId")
-	public Max35Text getTerminalIdentification() {
-		return terminalIdentification;
+	public Optional<Max35Text> getTerminalIdentification() {
+		return terminalIdentification == null ? Optional.empty() : Optional.of(terminalIdentification);
 	}
 
-	public void setTerminalIdentification(Max35Text terminalIdentification) {
+	public CardTransactionEnvironment4 setTerminalIdentification(Max35Text terminalIdentification) {
 		this.terminalIdentification = terminalIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Card", required = true)
 	public PaymentCard15 getCard() {
 		return card;
 	}
 
-	public void setCard(com.tools20022.repository.msg.PaymentCard15 card) {
-		this.card = card;
+	public CardTransactionEnvironment4 setCard(com.tools20022.repository.msg.PaymentCard15 card) {
+		this.card = Objects.requireNonNull(card);
+		return this;
 	}
 
-	@XmlElement(name = "PmtTkn")
-	public CardPaymentToken2 getPaymentToken() {
-		return paymentToken;
+	public Optional<CardPaymentToken2> getPaymentToken() {
+		return paymentToken == null ? Optional.empty() : Optional.of(paymentToken);
 	}
 
-	public void setPaymentToken(com.tools20022.repository.msg.CardPaymentToken2 paymentToken) {
+	public CardTransactionEnvironment4 setPaymentToken(com.tools20022.repository.msg.CardPaymentToken2 paymentToken) {
 		this.paymentToken = paymentToken;
+		return this;
 	}
 }

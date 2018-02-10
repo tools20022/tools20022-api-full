@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TransactionEnvironmentCode;
+import com.tools20022.repository.codeset.TransactionEnvironment2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the environment of the transaction location.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TransactionEnvironmentCode
- * TransactionEnvironmentCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment2Code#mmPrivate
- * TransactionEnvironment2Code.mmPrivate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment2Code#Private
+ * TransactionEnvironment2Code.Private}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment2Code#mmPublic
- * TransactionEnvironment2Code.mmPublic}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionEnvironment2Code#Public
+ * TransactionEnvironment2Code.Public}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TransactionEnvironmentCode
+ * TransactionEnvironmentCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates the environment of the transaction location."</li>
  * </ul>
  */
-public class TransactionEnvironment2Code extends TransactionEnvironmentCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransactionEnvironment2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class TransactionEnvironment2Code extends TransactionEnvironmentCode {
 	 * name} = "Private"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrivate = new MMCode() {
+	public static final TransactionEnvironment2Code Private = new TransactionEnvironment2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Private";
-			owner_lazy = () -> TransactionEnvironment2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionEnvironment2Code.mmObject();
+			codeName = TransactionEnvironmentCode.Private.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class TransactionEnvironment2Code extends TransactionEnvironmentCode {
 	 * name} = "Public"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPublic = new MMCode() {
+	public static final TransactionEnvironment2Code Public = new TransactionEnvironment2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Public";
-			owner_lazy = () -> TransactionEnvironment2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionEnvironment2Code.mmObject();
+			codeName = TransactionEnvironmentCode.Public.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TransactionEnvironment2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransactionEnvironment2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionEnvironment2Code";
 				definition = "Indicates the environment of the transaction location.";
-				code_lazy = () -> Arrays.asList(TransactionEnvironment2Code.mmPrivate, TransactionEnvironment2Code.mmPublic);
 				trace_lazy = () -> TransactionEnvironmentCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionEnvironment2Code.Private, com.tools20022.repository.codeset.TransactionEnvironment2Code.Public);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Private.getCodeName().get(), Private);
+		codesByName.put(Public.getCodeName().get(), Public);
+	}
+
+	public static TransactionEnvironment2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransactionEnvironment2Code[] values() {
+		TransactionEnvironment2Code[] values = new TransactionEnvironment2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransactionEnvironment2Code> {
+		@Override
+		public TransactionEnvironment2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransactionEnvironment2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

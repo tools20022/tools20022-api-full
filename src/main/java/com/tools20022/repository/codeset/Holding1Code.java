@@ -20,35 +20,39 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.HoldingCode;
+import com.tools20022.repository.codeset.Holding1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies how the holding is blocked.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.HoldingCode HoldingCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Holding1Code#mmCertificate
- * Holding1Code.mmCertificate}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Holding1Code#Certificate
+ * Holding1Code.Certificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Holding1Code#mmNonPartialHolding
- * Holding1Code.mmNonPartialHolding}</li>
+ * {@linkplain com.tools20022.repository.codeset.Holding1Code#NonPartialHolding
+ * Holding1Code.NonPartialHolding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Holding1Code#mmPartialHolding
- * Holding1Code.mmPartialHolding}</li>
+ * {@linkplain com.tools20022.repository.codeset.Holding1Code#PartialHolding
+ * Holding1Code.PartialHolding}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.HoldingCode HoldingCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies how the holding is blocked."</li>
  * </ul>
  */
-public class Holding1Code extends HoldingCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Holding1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class Holding1Code extends HoldingCode {
 	 * name} = "Certificate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertificate = new MMCode() {
+	public static final Holding1Code Certificate = new Holding1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
-			owner_lazy = () -> Holding1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Holding1Code.mmObject();
+			codeName = HoldingCode.Certificate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -105,11 +111,12 @@ public class Holding1Code extends HoldingCode {
 	 * name} = "NonPartialHolding"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonPartialHolding = new MMCode() {
+	public static final Holding1Code NonPartialHolding = new Holding1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonPartialHolding";
-			owner_lazy = () -> Holding1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Holding1Code.mmObject();
+			codeName = HoldingCode.NonPartialHolding.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -127,26 +134,58 @@ public class Holding1Code extends HoldingCode {
 	 * name} = "PartialHolding"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialHolding = new MMCode() {
+	public static final Holding1Code PartialHolding = new Holding1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialHolding";
-			owner_lazy = () -> Holding1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Holding1Code.mmObject();
+			codeName = HoldingCode.PartialHolding.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Holding1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Holding1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CERT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Holding1Code";
 				definition = "Specifies how the holding is blocked.";
-				code_lazy = () -> Arrays.asList(Holding1Code.mmCertificate, Holding1Code.mmNonPartialHolding, Holding1Code.mmPartialHolding);
 				trace_lazy = () -> HoldingCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Holding1Code.Certificate, com.tools20022.repository.codeset.Holding1Code.NonPartialHolding, com.tools20022.repository.codeset.Holding1Code.PartialHolding);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Certificate.getCodeName().get(), Certificate);
+		codesByName.put(NonPartialHolding.getCodeName().get(), NonPartialHolding);
+		codesByName.put(PartialHolding.getCodeName().get(), PartialHolding);
+	}
+
+	public static Holding1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Holding1Code[] values() {
+		Holding1Code[] values = new Holding1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Holding1Code> {
+		@Override
+		public Holding1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Holding1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

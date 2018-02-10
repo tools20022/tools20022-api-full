@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMServiceType9Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * ATMService15}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "ATMService22", propOrder = {"serviceReference", "ATMServiceCode", "serviceType", "serviceVariantIdentification"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "ATMService22", propOrder = {"serviceReference", "aTMServiceCode", "serviceType", "serviceVariantIdentification"})
 public class ATMService22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SvcRef")
 	protected Max35Text serviceReference;
 	/**
-	 * Unique identification of the customer session in which the transfer is
-	 * performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,7 +125,7 @@ public class ATMService22 {
 	 */
 	public static final MMMessageAttribute mmServiceReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMService22.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService22.mmObject();
 			isDerived = false;
 			xmlTag = "SvcRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,10 +138,11 @@ public class ATMService22 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ATMSvcCd")
 	protected Max35Text aTMServiceCode;
 	/**
-	 * Codification of the type of service for the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -181,7 +181,7 @@ public class ATMService22 {
 	 */
 	public static final MMMessageAttribute mmATMServiceCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMService22.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService22.mmObject();
 			isDerived = false;
 			xmlTag = "ATMSvcCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,10 +194,11 @@ public class ATMService22 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SvcTp", required = true)
 	protected ATMServiceType9Code serviceType;
 	/**
-	 * Describes the type of fund transfer selected by the customer or the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -238,7 +239,7 @@ public class ATMService22 {
 	 */
 	public static final MMMessageAttribute mmServiceType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMService22.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService22.mmObject();
 			isDerived = false;
 			xmlTag = "SvcTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,10 +252,11 @@ public class ATMService22 {
 			simpleType_lazy = () -> ATMServiceType9Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SvcVarntId")
 	protected List<Max35Text> serviceVariantIdentification;
 	/**
-	 * Identification of the variant of the service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -293,7 +295,7 @@ public class ATMService22 {
 	 */
 	public static final MMMessageAttribute mmServiceVariantIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMService22.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService22.mmObject();
 			isDerived = false;
 			xmlTag = "SvcVarntId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -309,8 +311,9 @@ public class ATMService22 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMService22.mmServiceReference, ATMService22.mmATMServiceCode, ATMService22.mmServiceType, ATMService22.mmServiceVariantIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService22.mmServiceReference, com.tools20022.repository.msg.ATMService22.mmATMServiceCode, com.tools20022.repository.msg.ATMService22.mmServiceType,
+						com.tools20022.repository.msg.ATMService22.mmServiceVariantIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMService22";
 				definition = "Inquiry service provided by the ATM inside the session.";
@@ -321,39 +324,39 @@ public class ATMService22 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SvcRef")
-	public Max35Text getServiceReference() {
-		return serviceReference;
+	public Optional<Max35Text> getServiceReference() {
+		return serviceReference == null ? Optional.empty() : Optional.of(serviceReference);
 	}
 
-	public void setServiceReference(Max35Text serviceReference) {
+	public ATMService22 setServiceReference(Max35Text serviceReference) {
 		this.serviceReference = serviceReference;
+		return this;
 	}
 
-	@XmlElement(name = "ATMSvcCd")
-	public Max35Text getATMServiceCode() {
-		return aTMServiceCode;
+	public Optional<Max35Text> getATMServiceCode() {
+		return aTMServiceCode == null ? Optional.empty() : Optional.of(aTMServiceCode);
 	}
 
-	public void setATMServiceCode(Max35Text aTMServiceCode) {
+	public ATMService22 setATMServiceCode(Max35Text aTMServiceCode) {
 		this.aTMServiceCode = aTMServiceCode;
+		return this;
 	}
 
-	@XmlElement(name = "SvcTp", required = true)
 	public ATMServiceType9Code getServiceType() {
 		return serviceType;
 	}
 
-	public void setServiceType(ATMServiceType9Code serviceType) {
-		this.serviceType = serviceType;
+	public ATMService22 setServiceType(ATMServiceType9Code serviceType) {
+		this.serviceType = Objects.requireNonNull(serviceType);
+		return this;
 	}
 
-	@XmlElement(name = "SvcVarntId")
 	public List<Max35Text> getServiceVariantIdentification() {
-		return serviceVariantIdentification;
+		return serviceVariantIdentification == null ? serviceVariantIdentification = new ArrayList<>() : serviceVariantIdentification;
 	}
 
-	public void setServiceVariantIdentification(List<Max35Text> serviceVariantIdentification) {
-		this.serviceVariantIdentification = serviceVariantIdentification;
+	public ATMService22 setServiceVariantIdentification(List<Max35Text> serviceVariantIdentification) {
+		this.serviceVariantIdentification = Objects.requireNonNull(serviceVariantIdentification);
+		return this;
 	}
 }

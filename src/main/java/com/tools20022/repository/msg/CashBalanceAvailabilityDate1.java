@@ -31,6 +31,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -44,8 +45,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CashBalanceAvailabilityDate1#mmNumberOfDaysOrActualDate
- * CashBalanceAvailabilityDate1.mmNumberOfDaysOrActualDate}</li>
+ * {@linkplain com.tools20022.repository.msg.CashBalanceAvailabilityDate1#NumberOfDaysOrActualDate
+ * CashBalanceAvailabilityDate1.NumberOfDaysOrActualDate}</li>
  * </ul>
  * </li>
  * <li>
@@ -66,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -86,15 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashBalanceAvailabilityDate1", propOrder = {"numberOfDays", "actualDate"})
 public class CashBalanceAvailabilityDate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NbOfDays", required = true)
 	protected Max15PlusSignedNumericText numberOfDays;
 	/**
-	 * Indicates the number of float days attached to the balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,7 +139,7 @@ public class CashBalanceAvailabilityDate1 {
 	public static final MMMessageAttribute mmNumberOfDays = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashAvailability.mmNumberOfDays;
-			componentContext_lazy = () -> CashBalanceAvailabilityDate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfDays";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,10 +151,11 @@ public class CashBalanceAvailabilityDate1 {
 			simpleType_lazy = () -> Max15PlusSignedNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "ActlDt", required = true)
 	protected ISODate actualDate;
 	/**
-	 * Identifies the actual availability date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,7 +196,7 @@ public class CashBalanceAvailabilityDate1 {
 	public static final MMMessageAttribute mmActualDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashAvailability.mmDate;
-			componentContext_lazy = () -> CashBalanceAvailabilityDate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmObject();
 			isDerived = false;
 			xmlTag = "ActlDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,21 +236,21 @@ public class CashBalanceAvailabilityDate1 {
 	 * name} = "NumberOfDaysOrActualDate"</li>
 	 * </ul>
 	 */
-	public static final MMXor mmNumberOfDaysOrActualDate = new MMXor() {
+	public static final MMXor NumberOfDaysOrActualDate = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDaysOrActualDate";
-			messageComponent_lazy = () -> CashBalanceAvailabilityDate1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(CashBalanceAvailabilityDate1.mmNumberOfDays, CashBalanceAvailabilityDate1.mmActualDate);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmNumberOfDays, com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmActualDate);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashBalanceAvailabilityDate1.mmNumberOfDays, CashBalanceAvailabilityDate1.mmActualDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmNumberOfDays, com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmActualDate);
 				trace_lazy = () -> CashAvailability.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -259,27 +262,27 @@ public class CashBalanceAvailabilityDate1 {
 				name = "CashBalanceAvailabilityDate1";
 				definition = "Indicates when the amount of money will become available.";
 				nextVersions_lazy = () -> Arrays.asList(CashAvailabilityDate1Choice.mmObject());
-				xors_lazy = () -> Arrays.asList(CashBalanceAvailabilityDate1.mmNumberOfDaysOrActualDate);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceAvailabilityDate1.NumberOfDaysOrActualDate);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NbOfDays", required = true)
 	public Max15PlusSignedNumericText getNumberOfDays() {
 		return numberOfDays;
 	}
 
-	public void setNumberOfDays(Max15PlusSignedNumericText numberOfDays) {
-		this.numberOfDays = numberOfDays;
+	public CashBalanceAvailabilityDate1 setNumberOfDays(Max15PlusSignedNumericText numberOfDays) {
+		this.numberOfDays = Objects.requireNonNull(numberOfDays);
+		return this;
 	}
 
-	@XmlElement(name = "ActlDt", required = true)
 	public ISODate getActualDate() {
 		return actualDate;
 	}
 
-	public void setActualDate(ISODate actualDate) {
-		this.actualDate = actualDate;
+	public CashBalanceAvailabilityDate1 setActualDate(ISODate actualDate) {
+		this.actualDate = Objects.requireNonNull(actualDate);
+		return this;
 	}
 }

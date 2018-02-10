@@ -24,9 +24,11 @@ import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CashAccount23;
 import com.tools20022.repository.msg.ErrorHandling3;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountOrBusinessError1Choice", propOrder = {"account", "businessError"})
 public class AccountOrBusinessError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Acct", required = true)
 	protected CashAccount23 account;
 	/**
-	 * Requested information on the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -125,7 +128,7 @@ public class AccountOrBusinessError1Choice {
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
-			componentContext_lazy = () -> AccountOrBusinessError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountOrBusinessError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,10 +141,11 @@ public class AccountOrBusinessError1Choice {
 			type_lazy = () -> CashAccount23.mmObject();
 		}
 	};
+	@XmlElement(name = "BizErr", required = true)
 	protected List<ErrorHandling3> businessError;
 	/**
-	 * Reason the requested business information is not given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -175,7 +179,7 @@ public class AccountOrBusinessError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountOrBusinessError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountOrBusinessError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,9 +195,9 @@ public class AccountOrBusinessError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountOrBusinessError1Choice.mmAccount, AccountOrBusinessError1Choice.mmBusinessError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountOrBusinessError1Choice.mmAccount, com.tools20022.repository.choice.AccountOrBusinessError1Choice.mmBusinessError);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountOrBusinessError1Choice";
 				definition = "Choice between account details or a business error when the requested data cannot be retrieved.";
@@ -203,21 +207,21 @@ public class AccountOrBusinessError1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Acct", required = true)
 	public CashAccount23 getAccount() {
 		return account;
 	}
 
-	public void setAccount(CashAccount23 account) {
-		this.account = account;
+	public AccountOrBusinessError1Choice setAccount(CashAccount23 account) {
+		this.account = Objects.requireNonNull(account);
+		return this;
 	}
 
-	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling3> getBusinessError() {
-		return businessError;
+		return businessError == null ? businessError = new ArrayList<>() : businessError;
 	}
 
-	public void setBusinessError(List<ErrorHandling3> businessError) {
-		this.businessError = businessError;
+	public AccountOrBusinessError1Choice setBusinessError(List<ErrorHandling3> businessError) {
+		this.businessError = Objects.requireNonNull(businessError);
+		return this;
 	}
 }

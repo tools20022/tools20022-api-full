@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.VoteInstructionRequest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,15 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "Vote4", propOrder = {"issuerLabel", "for", "against", "abstain", "withhold", "withManagement", "againstManagement", "discretionary", "noAction"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "Vote4", propOrder = {"issuerLabel", "for_", "against", "abstain", "withhold", "withManagement", "againstManagement", "discretionary", "noAction"})
 public class Vote4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IssrLabl", required = true)
 	protected Max35Text issuerLabel;
 	/**
-	 * Numbering of the resolution as specified by the issuer or its agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -138,7 +141,7 @@ public class Vote4 {
 	public static final MMMessageAttribute mmIssuerLabel = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmIssuerLabel;
-			componentContext_lazy = () -> Vote4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Vote4.mmObject();
 			isDerived = false;
 			xmlTag = "IssrLabl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -150,10 +153,11 @@ public class Vote4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "For")
 	protected Number for_;
 	/**
-	 * Number of votes in favour of one resolution
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,7 +195,7 @@ public class Vote4 {
 	public static final MMMessageAttribute mmFor = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Vote.mmFor;
-			componentContext_lazy = () -> Vote4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Vote4.mmObject();
 			isDerived = false;
 			xmlTag = "For";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,10 +207,11 @@ public class Vote4 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Agnst")
 	protected Number against;
 	/**
-	 * Number of votes against one resolution
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -247,7 +252,7 @@ public class Vote4 {
 	public static final MMMessageAttribute mmAgainst = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Vote.mmAgainst;
-			componentContext_lazy = () -> Vote4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Vote4.mmObject();
 			isDerived = false;
 			xmlTag = "Agnst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -259,10 +264,11 @@ public class Vote4 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Abstn")
 	protected Number abstain;
 	/**
-	 * Number of votes expressed as abstain for one resolution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -303,7 +309,7 @@ public class Vote4 {
 	public static final MMMessageAttribute mmAbstain = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Vote.mmAbstain;
-			componentContext_lazy = () -> Vote4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Vote4.mmObject();
 			isDerived = false;
 			xmlTag = "Abstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -315,10 +321,11 @@ public class Vote4 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Wthhld")
 	protected Number withhold;
 	/**
-	 * Number of votes withheld for one resolution
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -359,7 +366,7 @@ public class Vote4 {
 	public static final MMMessageAttribute mmWithhold = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Vote.mmWithhold;
-			componentContext_lazy = () -> Vote4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Vote4.mmObject();
 			isDerived = false;
 			xmlTag = "Wthhld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -371,10 +378,11 @@ public class Vote4 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "WthMgmt")
 	protected Number withManagement;
 	/**
-	 * Number of votes in line with the votes of the management.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -416,7 +424,7 @@ public class Vote4 {
 	public static final MMMessageAttribute mmWithManagement = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Vote.mmWithManagement;
-			componentContext_lazy = () -> Vote4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Vote4.mmObject();
 			isDerived = false;
 			xmlTag = "WthMgmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -428,10 +436,11 @@ public class Vote4 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "AgnstMgmt")
 	protected Number againstManagement;
 	/**
-	 * Number of votes against the voting recommendation of the management.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -473,7 +482,7 @@ public class Vote4 {
 	public static final MMMessageAttribute mmAgainstManagement = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Vote.mmAgainstManagement;
-			componentContext_lazy = () -> Vote4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Vote4.mmObject();
 			isDerived = false;
 			xmlTag = "AgnstMgmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -485,11 +494,11 @@ public class Vote4 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Dscrtnry")
 	protected Number discretionary;
 	/**
-	 * Number of votes for which decision is left to the party that will
-	 * exercise the voting right.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -532,7 +541,7 @@ public class Vote4 {
 	public static final MMMessageAttribute mmDiscretionary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmDiscretionary;
-			componentContext_lazy = () -> Vote4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Vote4.mmObject();
 			isDerived = false;
 			xmlTag = "Dscrtnry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -544,10 +553,11 @@ public class Vote4 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "NoActn")
 	protected Number noAction;
 	/**
-	 * Number of votes for which no action has been taken.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -588,7 +598,7 @@ public class Vote4 {
 	public static final MMMessageAttribute mmNoAction = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Vote.mmNoAction;
-			componentContext_lazy = () -> Vote4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Vote4.mmObject();
 			isDerived = false;
 			xmlTag = "NoActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -604,9 +614,11 @@ public class Vote4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Vote4.mmIssuerLabel, Vote4.mmFor, Vote4.mmAgainst, Vote4.mmAbstain, Vote4.mmWithhold, Vote4.mmWithManagement, Vote4.mmAgainstManagement, Vote4.mmDiscretionary, Vote4.mmNoAction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote4.mmIssuerLabel, com.tools20022.repository.msg.Vote4.mmFor, com.tools20022.repository.msg.Vote4.mmAgainst,
+						com.tools20022.repository.msg.Vote4.mmAbstain, com.tools20022.repository.msg.Vote4.mmWithhold, com.tools20022.repository.msg.Vote4.mmWithManagement, com.tools20022.repository.msg.Vote4.mmAgainstManagement,
+						com.tools20022.repository.msg.Vote4.mmDiscretionary, com.tools20022.repository.msg.Vote4.mmNoAction);
 				trace_lazy = () -> Vote.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Vote4";
 				definition = "Decision of the voting party for one resolution. Several types of decisions can be indicated to allow for split vote specification.";
@@ -616,84 +628,84 @@ public class Vote4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IssrLabl", required = true)
 	public Max35Text getIssuerLabel() {
 		return issuerLabel;
 	}
 
-	public void setIssuerLabel(Max35Text issuerLabel) {
-		this.issuerLabel = issuerLabel;
+	public Vote4 setIssuerLabel(Max35Text issuerLabel) {
+		this.issuerLabel = Objects.requireNonNull(issuerLabel);
+		return this;
 	}
 
-	@XmlElement(name = "For")
-	public Number getFor() {
-		return for_;
+	public Optional<Number> getFor() {
+		return for_ == null ? Optional.empty() : Optional.of(for_);
 	}
 
-	public void setFor(Number for_) {
+	public Vote4 setFor(Number for_) {
 		this.for_ = for_;
+		return this;
 	}
 
-	@XmlElement(name = "Agnst")
-	public Number getAgainst() {
-		return against;
+	public Optional<Number> getAgainst() {
+		return against == null ? Optional.empty() : Optional.of(against);
 	}
 
-	public void setAgainst(Number against) {
+	public Vote4 setAgainst(Number against) {
 		this.against = against;
+		return this;
 	}
 
-	@XmlElement(name = "Abstn")
-	public Number getAbstain() {
-		return abstain;
+	public Optional<Number> getAbstain() {
+		return abstain == null ? Optional.empty() : Optional.of(abstain);
 	}
 
-	public void setAbstain(Number abstain) {
+	public Vote4 setAbstain(Number abstain) {
 		this.abstain = abstain;
+		return this;
 	}
 
-	@XmlElement(name = "Wthhld")
-	public Number getWithhold() {
-		return withhold;
+	public Optional<Number> getWithhold() {
+		return withhold == null ? Optional.empty() : Optional.of(withhold);
 	}
 
-	public void setWithhold(Number withhold) {
+	public Vote4 setWithhold(Number withhold) {
 		this.withhold = withhold;
+		return this;
 	}
 
-	@XmlElement(name = "WthMgmt")
-	public Number getWithManagement() {
-		return withManagement;
+	public Optional<Number> getWithManagement() {
+		return withManagement == null ? Optional.empty() : Optional.of(withManagement);
 	}
 
-	public void setWithManagement(Number withManagement) {
+	public Vote4 setWithManagement(Number withManagement) {
 		this.withManagement = withManagement;
+		return this;
 	}
 
-	@XmlElement(name = "AgnstMgmt")
-	public Number getAgainstManagement() {
-		return againstManagement;
+	public Optional<Number> getAgainstManagement() {
+		return againstManagement == null ? Optional.empty() : Optional.of(againstManagement);
 	}
 
-	public void setAgainstManagement(Number againstManagement) {
+	public Vote4 setAgainstManagement(Number againstManagement) {
 		this.againstManagement = againstManagement;
+		return this;
 	}
 
-	@XmlElement(name = "Dscrtnry")
-	public Number getDiscretionary() {
-		return discretionary;
+	public Optional<Number> getDiscretionary() {
+		return discretionary == null ? Optional.empty() : Optional.of(discretionary);
 	}
 
-	public void setDiscretionary(Number discretionary) {
+	public Vote4 setDiscretionary(Number discretionary) {
 		this.discretionary = discretionary;
+		return this;
 	}
 
-	@XmlElement(name = "NoActn")
-	public Number getNoAction() {
-		return noAction;
+	public Optional<Number> getNoAction() {
+		return noAction == null ? Optional.empty() : Optional.of(noAction);
 	}
 
-	public void setNoAction(Number noAction) {
+	public Vote4 setNoAction(Number noAction) {
 		this.noAction = noAction;
+		return this;
 	}
 }

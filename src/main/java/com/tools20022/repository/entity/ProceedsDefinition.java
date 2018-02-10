@@ -33,6 +33,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Definition of exchanges of cash and/or securities available in the processing
@@ -78,6 +80,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * ProceedsDefinition.mmCountryOfIncomeSource}</li>
  * </ul>
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmProceedsDefinition
+ * CorporateActionEvent.mmProceedsDefinition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmProceedsDefinition
+ * CorporateActionOption.mmProceedsDefinition}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -107,22 +121,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmProceedsDefinition
- * CorporateActionEvent.mmProceedsDefinition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmProceedsDefinition
- * CorporateActionOption.mmProceedsDefinition}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -140,9 +142,8 @@ public class ProceedsDefinition {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyAndAmount specialConcessionAmount;
 	/**
-	 * Amount of drawdown or other reduction from or in addition to the deal
-	 * price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,8 +250,8 @@ public class ProceedsDefinition {
 					OtherAmounts18.mmSpecialConcession, OtherAmounts24.mmSpecialConcession, OtherAmounts13.mmSpecialConcession, OtherAmounts1.mmSpecialConcession, OtherAmounts16.mmSpecialConcession,
 					CorporateActionAmounts1.mmSpecialConcessionAmount, OtherAmounts28.mmSpecialConcession, OtherAmounts30.mmSpecialConcession, OtherAmounts31.mmSpecialConcession, OtherAmounts35.mmSpecialConcession,
 					OtherAmounts34.mmSpecialConcession, OtherAmounts38.mmSpecialConcession);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpecialConcessionAmount";
 			definition = "Amount of drawdown or other reduction from or in addition to the deal price.";
@@ -269,8 +270,8 @@ public class ProceedsDefinition {
 	};
 	protected DebitCreditCode creditDebitIndicator;
 	/**
-	 * Specifies whether the value is a debit or credit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -609,8 +610,8 @@ public class ProceedsDefinition {
 					SecuritiesOption58.mmCreditDebitIndicator, CashOption48.mmCreditDebitIndicator, CashOption52.mmCreditDebitIndicator, SecuritiesOption60.mmCreditDebitIndicator, CashOption51.mmCreditDebitIndicator,
 					SecuritiesOption59.mmCreditDebitIndicator, CashOption50.mmCreditDebitIndicator, CashOption53.mmCreditDebitIndicator, SecuritiesOption61.mmCreditDebitIndicator, SecuritiesOption63.mmCreditDebitIndicator,
 					CashOption54.mmCreditDebitIndicator, CashOption55.mmCreditDebitIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies whether the value is a debit or credit.";
@@ -629,9 +630,8 @@ public class ProceedsDefinition {
 	};
 	protected ISODateTime earliestPaymentDate;
 	/**
-	 * Date on which a payment can be made, eg, if payment date is a
-	 * non-business day or to indicate the first payment date of an offer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -750,8 +750,8 @@ public class ProceedsDefinition {
 					CorporateActionDate23.mmEarliestPaymentDate, CorporateActionDate26.mmEarliestPaymentDate, SecurityDate9.mmEarliestPaymentDate, SecurityDate10.mmEarliestPaymentDate, CorporateActionDate4.mmEarliestPaymentDate,
 					CorporateActionDate3.mmEarliestPaymentDate, CorporateActionDate5.mmEarliestPaymentDate, SecurityDate12.mmEarliestPaymentDate, CorporateActionDate47.mmEarliestPaymentDate, SecurityDate11.mmEarliestPaymentDate,
 					CorporateActionDate56.mmEarliestPaymentDate, SecurityDate14.mmEarliestPaymentDate, SecurityDate13.mmEarliestPaymentDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarliestPaymentDate";
 			definition = "Date on which a payment can be made, eg, if payment date is a non-business day or to indicate the first payment date of an offer.";
@@ -770,10 +770,8 @@ public class ProceedsDefinition {
 	};
 	protected ISODateTime valueDate;
 	/**
-	 * Date/time at which assets become available to the account owner (in a
-	 * credit entry), or cease to be available to the account owner (in a debit
-	 * entry).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -853,8 +851,8 @@ public class ProceedsDefinition {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate7.mmValueDate, CorporateActionDate24.mmValueDate, CorporateActionDate9.mmValueDate, CorporateActionDate12.mmValueDate, CorporateActionDate17.mmValueDate,
 					CorporateActionDate20.mmValueDate, CorporateActionDate23.mmValueDate, CorporateActionDate26.mmValueDate, CashOption5.mmValueDate, CashOption7.mmValueDate, CashOption19.mmValueDate, CashOption23.mmValueDate,
 					CorporateActionDate5.mmValueDate, CorporateActionDate47.mmValueDate, CashOption45.mmValueDate, CorporateActionDate56.mmValueDate, CashOption48.mmValueDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValueDate";
 			definition = "Date/time at which assets become available to the account owner (in a credit entry), or cease to be available to the account owner (in a debit entry).";
@@ -873,10 +871,8 @@ public class ProceedsDefinition {
 	};
 	protected NonEligibleProceedsIndicatorCode nonEligibleProceedsIndicator;
 	/**
-	 * Specifies information regarding outturn resources that cannot be
-	 * processed by the CSD. Special delivery instruction is required from the
-	 * account owner for the CA outcome to be credited.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1098,8 +1094,8 @@ public class ProceedsDefinition {
 					NonEligibleProceedsIndicator4Choice.mmCode, NonEligibleProceedsIndicator4Choice.mmProprietary, CashOption47.mmNonEligibleProceedsIndicator, SecuritiesOption57.mmNonEligibleProceedsIndicator,
 					CashOption51.mmNonEligibleProceedsIndicator, SecuritiesOption59.mmNonEligibleProceedsIndicator, CashOption50.mmNonEligibleProceedsIndicator, CashOption53.mmNonEligibleProceedsIndicator,
 					SecuritiesOption61.mmNonEligibleProceedsIndicator, CashOption54.mmNonEligibleProceedsIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonEligibleProceedsIndicator";
 			definition = "Specifies information regarding outturn resources that cannot be processed by the CSD. Special delivery instruction is required from the account owner for the CA outcome to be credited.";
@@ -1118,9 +1114,8 @@ public class ProceedsDefinition {
 	};
 	protected Max35Text issuerOfferorTaxabilityIndicator;
 	/**
-	 * Proceeds are taxable according to the information provided by the issuer
-	 * / offeror.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1289,8 +1284,8 @@ public class ProceedsDefinition {
 					SecuritiesOption57.mmIssuerOfferorTaxabilityIndicator, CashOption52.mmIssuerOfferorTaxabilityIndicator, SecuritiesOption60.mmIssuerOfferorTaxabilityIndicator, CashOption51.mmIssuerOfferorTaxabilityIndicator,
 					SecuritiesOption59.mmIssuerOfferorTaxabilityIndicator, CashOption50.mmIssuerOfferorTaxabilityIndicator, CashOption53.mmIssuerOfferorTaxabilityIndicator, SecuritiesOption61.mmIssuerOfferorTaxabilityIndicator,
 					SecuritiesOption63.mmIssuerOfferorTaxabilityIndicator, CashOption54.mmIssuerOfferorTaxabilityIndicator, CashOption55.mmIssuerOfferorTaxabilityIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssuerOfferorTaxabilityIndicator";
 			definition = "Proceeds are taxable according to the information provided by the issuer / offeror.";
@@ -1309,9 +1304,8 @@ public class ProceedsDefinition {
 	};
 	protected ISODateTime offerPriceFixingDate;
 	/**
-	 * Date/time at which an offer price is determined (as compared to its reset
-	 * date if applicable).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1363,8 +1357,8 @@ public class ProceedsDefinition {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate22.mmFixingDate, CorporateActionDate25.mmFixingDate, CorporateActionDate27.mmFixingDate, CorporateActionDate28.mmFixingDate, CorporateActionDate44.mmFixingDate,
 					CorporateActionDate58.mmFixingDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfferPriceFixingDate";
 			definition = "Date/time at which an offer price is determined (as compared to its reset date if applicable).";
@@ -1383,8 +1377,8 @@ public class ProceedsDefinition {
 	};
 	protected CorporateActionOption option;
 	/**
-	 * Option for which proceeds are specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1418,8 +1412,8 @@ public class ProceedsDefinition {
 	 */
 	public static final MMBusinessAssociationEnd mmOption = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Option";
 			definition = "Option for which proceeds are specified.";
@@ -1432,8 +1426,8 @@ public class ProceedsDefinition {
 	};
 	protected CorporateActionEvent corporateAction;
 	/**
-	 * Corporate action for which the proceeds are specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1467,8 +1461,8 @@ public class ProceedsDefinition {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateAction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateAction";
 			definition = "Corporate action for which the proceeds are specified.";
@@ -1481,8 +1475,8 @@ public class ProceedsDefinition {
 	};
 	protected CountryCode countryOfIncomeSource;
 	/**
-	 * Indicates the country from which the income originates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1564,8 +1558,8 @@ public class ProceedsDefinition {
 					CashOption46.mmCountryOfIncomeSource, SecuritiesOption55.mmCountryOfIncomeSource, CashOption49.mmCountryOfIncomeSource, SecuritiesOption57.mmCountryOfIncomeSource, CashOption52.mmCountryOfIncomeSource,
 					SecuritiesOption60.mmCountryOfIncomeSource, SecuritiesOption59.mmCountryOfIncomeSource, CashOption50.mmCountryOfIncomeSource, CashOption53.mmCountryOfIncomeSource, SecuritiesOption61.mmCountryOfIncomeSource,
 					SecuritiesOption63.mmCountryOfIncomeSource, CashOption55.mmCountryOfIncomeSource);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CountryOfIncomeSource";
 			definition = "Indicates the country from which the income originates.";
@@ -1586,7 +1580,7 @@ public class ProceedsDefinition {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProceedsDefinition";
 				definition = "Definition of exchanges of cash and/or securities available in the processing of corporate actions.";
@@ -1613,79 +1607,89 @@ public class ProceedsDefinition {
 		return specialConcessionAmount;
 	}
 
-	public void setSpecialConcessionAmount(CurrencyAndAmount specialConcessionAmount) {
-		this.specialConcessionAmount = specialConcessionAmount;
+	public ProceedsDefinition setSpecialConcessionAmount(CurrencyAndAmount specialConcessionAmount) {
+		this.specialConcessionAmount = Objects.requireNonNull(specialConcessionAmount);
+		return this;
 	}
 
 	public DebitCreditCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
 
-	public void setCreditDebitIndicator(DebitCreditCode creditDebitIndicator) {
-		this.creditDebitIndicator = creditDebitIndicator;
+	public ProceedsDefinition setCreditDebitIndicator(DebitCreditCode creditDebitIndicator) {
+		this.creditDebitIndicator = Objects.requireNonNull(creditDebitIndicator);
+		return this;
 	}
 
 	public ISODateTime getEarliestPaymentDate() {
 		return earliestPaymentDate;
 	}
 
-	public void setEarliestPaymentDate(ISODateTime earliestPaymentDate) {
-		this.earliestPaymentDate = earliestPaymentDate;
+	public ProceedsDefinition setEarliestPaymentDate(ISODateTime earliestPaymentDate) {
+		this.earliestPaymentDate = Objects.requireNonNull(earliestPaymentDate);
+		return this;
 	}
 
 	public ISODateTime getValueDate() {
 		return valueDate;
 	}
 
-	public void setValueDate(ISODateTime valueDate) {
-		this.valueDate = valueDate;
+	public ProceedsDefinition setValueDate(ISODateTime valueDate) {
+		this.valueDate = Objects.requireNonNull(valueDate);
+		return this;
 	}
 
 	public NonEligibleProceedsIndicatorCode getNonEligibleProceedsIndicator() {
 		return nonEligibleProceedsIndicator;
 	}
 
-	public void setNonEligibleProceedsIndicator(NonEligibleProceedsIndicatorCode nonEligibleProceedsIndicator) {
-		this.nonEligibleProceedsIndicator = nonEligibleProceedsIndicator;
+	public ProceedsDefinition setNonEligibleProceedsIndicator(NonEligibleProceedsIndicatorCode nonEligibleProceedsIndicator) {
+		this.nonEligibleProceedsIndicator = Objects.requireNonNull(nonEligibleProceedsIndicator);
+		return this;
 	}
 
 	public Max35Text getIssuerOfferorTaxabilityIndicator() {
 		return issuerOfferorTaxabilityIndicator;
 	}
 
-	public void setIssuerOfferorTaxabilityIndicator(Max35Text issuerOfferorTaxabilityIndicator) {
-		this.issuerOfferorTaxabilityIndicator = issuerOfferorTaxabilityIndicator;
+	public ProceedsDefinition setIssuerOfferorTaxabilityIndicator(Max35Text issuerOfferorTaxabilityIndicator) {
+		this.issuerOfferorTaxabilityIndicator = Objects.requireNonNull(issuerOfferorTaxabilityIndicator);
+		return this;
 	}
 
 	public ISODateTime getOfferPriceFixingDate() {
 		return offerPriceFixingDate;
 	}
 
-	public void setOfferPriceFixingDate(ISODateTime offerPriceFixingDate) {
-		this.offerPriceFixingDate = offerPriceFixingDate;
+	public ProceedsDefinition setOfferPriceFixingDate(ISODateTime offerPriceFixingDate) {
+		this.offerPriceFixingDate = Objects.requireNonNull(offerPriceFixingDate);
+		return this;
 	}
 
-	public CorporateActionOption getOption() {
-		return option;
+	public Optional<CorporateActionOption> getOption() {
+		return option == null ? Optional.empty() : Optional.of(option);
 	}
 
-	public void setOption(com.tools20022.repository.entity.CorporateActionOption option) {
+	public ProceedsDefinition setOption(com.tools20022.repository.entity.CorporateActionOption option) {
 		this.option = option;
+		return this;
 	}
 
 	public CorporateActionEvent getCorporateAction() {
 		return corporateAction;
 	}
 
-	public void setCorporateAction(com.tools20022.repository.entity.CorporateActionEvent corporateAction) {
-		this.corporateAction = corporateAction;
+	public ProceedsDefinition setCorporateAction(com.tools20022.repository.entity.CorporateActionEvent corporateAction) {
+		this.corporateAction = Objects.requireNonNull(corporateAction);
+		return this;
 	}
 
 	public CountryCode getCountryOfIncomeSource() {
 		return countryOfIncomeSource;
 	}
 
-	public void setCountryOfIncomeSource(CountryCode countryOfIncomeSource) {
-		this.countryOfIncomeSource = countryOfIncomeSource;
+	public ProceedsDefinition setCountryOfIncomeSource(CountryCode countryOfIncomeSource) {
+		this.countryOfIncomeSource = Objects.requireNonNull(countryOfIncomeSource);
+		return this;
 	}
 }

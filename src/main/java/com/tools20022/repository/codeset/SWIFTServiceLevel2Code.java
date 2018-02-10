@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SWIFTServiceLevelCode;
+import com.tools20022.repository.codeset.SWIFTServiceLevel2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Code identifying which SWIFT service level applies to the payment
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SWIFTServiceLevelCode
- * SWIFTServiceLevelCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SWIFTServiceLevel2Code#mmSWIFTPay
- * SWIFTServiceLevel2Code.mmSWIFTPay}</li>
+ * {@linkplain com.tools20022.repository.codeset.SWIFTServiceLevel2Code#SWIFTPay
+ * SWIFTServiceLevel2Code.SWIFTPay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SWIFTServiceLevel2Code#mmStandard
- * SWIFTServiceLevel2Code.mmStandard}</li>
+ * {@linkplain com.tools20022.repository.codeset.SWIFTServiceLevel2Code#Standard
+ * SWIFTServiceLevel2Code.Standard}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SWIFTServiceLevelCode
+ * SWIFTServiceLevelCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class SWIFTServiceLevel2Code extends SWIFTServiceLevelCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SWIFTServiceLevel2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class SWIFTServiceLevel2Code extends SWIFTServiceLevelCode {
 	 * name} = "SWIFTPay"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSWIFTPay = new MMCode() {
+	public static final SWIFTServiceLevel2Code SWIFTPay = new SWIFTServiceLevel2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SWIFTPay";
-			owner_lazy = () -> SWIFTServiceLevel2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SWIFTServiceLevel2Code.mmObject();
+			codeName = SWIFTServiceLevelCode.SWIFTPay.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,57 @@ public class SWIFTServiceLevel2Code extends SWIFTServiceLevelCode {
 	 * name} = "Standard"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStandard = new MMCode() {
+	public static final SWIFTServiceLevel2Code Standard = new SWIFTServiceLevel2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Standard";
-			owner_lazy = () -> SWIFTServiceLevel2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SWIFTServiceLevel2Code.mmObject();
+			codeName = SWIFTServiceLevelCode.Standard.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SWIFTServiceLevel2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SWIFTServiceLevel2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SPAY");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SWIFTServiceLevel2Code";
 				definition = "Code identifying which SWIFT service level applies to the payment instruction.";
-				code_lazy = () -> Arrays.asList(SWIFTServiceLevel2Code.mmSWIFTPay, SWIFTServiceLevel2Code.mmStandard);
 				trace_lazy = () -> SWIFTServiceLevelCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SWIFTServiceLevel2Code.SWIFTPay, com.tools20022.repository.codeset.SWIFTServiceLevel2Code.Standard);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SWIFTPay.getCodeName().get(), SWIFTPay);
+		codesByName.put(Standard.getCodeName().get(), Standard);
+	}
+
+	public static SWIFTServiceLevel2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SWIFTServiceLevel2Code[] values() {
+		SWIFTServiceLevel2Code[] values = new SWIFTServiceLevel2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SWIFTServiceLevel2Code> {
+		@Override
+		public SWIFTServiceLevel2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SWIFTServiceLevel2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

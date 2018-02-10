@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * SecurityParameters4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecurityParameters5", propOrder = {"hostChallenge", "key", "digitalSignature"})
 public class SecurityParameters5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "HstChllng")
 	protected Max140Binary hostChallenge;
 	/**
-	 * Random value from the host.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +110,7 @@ public class SecurityParameters5 {
 	 */
 	public static final MMMessageAttribute mmHostChallenge = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityParameters5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters5.mmObject();
 			isDerived = false;
 			xmlTag = "HstChllng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +122,11 @@ public class SecurityParameters5 {
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "Key")
 	protected List<com.tools20022.repository.msg.CryptographicKey8> key;
 	/**
-	 * Cryptographic key used to store in the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +159,7 @@ public class SecurityParameters5 {
 	 */
 	public static final MMMessageAttribute mmKey = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityParameters5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters5.mmObject();
 			isDerived = false;
 			xmlTag = "Key";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,11 +170,11 @@ public class SecurityParameters5 {
 			complexType_lazy = () -> com.tools20022.repository.msg.CryptographicKey8.mmObject();
 		}
 	};
+	@XmlElement(name = "DgtlSgntr")
 	protected ContentInformationType14 digitalSignature;
 	/**
-	 * Digital signature of implicit data depending on the security scheme
-	 * download procedure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -207,7 +208,7 @@ public class SecurityParameters5 {
 	 */
 	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecurityParameters5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters5.mmObject();
 			isDerived = false;
 			xmlTag = "DgtlSgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,8 +225,9 @@ public class SecurityParameters5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityParameters5.mmHostChallenge, SecurityParameters5.mmKey, SecurityParameters5.mmDigitalSignature);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityParameters5.mmHostChallenge, com.tools20022.repository.msg.SecurityParameters5.mmKey,
+						com.tools20022.repository.msg.SecurityParameters5.mmDigitalSignature);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityParameters5";
 				definition = "Security parameters of the host downloading the key.";
@@ -235,30 +237,30 @@ public class SecurityParameters5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "HstChllng")
-	public Max140Binary getHostChallenge() {
-		return hostChallenge;
+	public Optional<Max140Binary> getHostChallenge() {
+		return hostChallenge == null ? Optional.empty() : Optional.of(hostChallenge);
 	}
 
-	public void setHostChallenge(Max140Binary hostChallenge) {
+	public SecurityParameters5 setHostChallenge(Max140Binary hostChallenge) {
 		this.hostChallenge = hostChallenge;
+		return this;
 	}
 
-	@XmlElement(name = "Key")
 	public List<CryptographicKey8> getKey() {
-		return key;
+		return key == null ? key = new ArrayList<>() : key;
 	}
 
-	public void setKey(List<com.tools20022.repository.msg.CryptographicKey8> key) {
-		this.key = key;
+	public SecurityParameters5 setKey(List<com.tools20022.repository.msg.CryptographicKey8> key) {
+		this.key = Objects.requireNonNull(key);
+		return this;
 	}
 
-	@XmlElement(name = "DgtlSgntr")
-	public ContentInformationType14 getDigitalSignature() {
-		return digitalSignature;
+	public Optional<ContentInformationType14> getDigitalSignature() {
+		return digitalSignature == null ? Optional.empty() : Optional.of(digitalSignature);
 	}
 
-	public void setDigitalSignature(com.tools20022.repository.msg.ContentInformationType14 digitalSignature) {
+	public SecurityParameters5 setDigitalSignature(com.tools20022.repository.msg.ContentInformationType14 digitalSignature) {
 		this.digitalSignature = digitalSignature;
+		return this;
 	}
 }

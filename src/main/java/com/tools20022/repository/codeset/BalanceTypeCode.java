@@ -17,12 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.BalanceTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the nature of the balance.
@@ -32,330 +38,323 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmReceivables
- * BalanceTypeCode.mmReceivables}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmPayables
- * BalanceTypeCode.mmPayables}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmOther
- * BalanceTypeCode.mmOther}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmExpenses
- * BalanceTypeCode.mmExpenses}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCashAndCashEquivalents
- * BalanceTypeCode.mmCashAndCashEquivalents}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmInvestorInflowOutflow
- * BalanceTypeCode.mmInvestorInflowOutflow}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmRevenues
- * BalanceTypeCode.mmRevenues}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmBorrowings
- * BalanceTypeCode.mmBorrowings}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmInvestments
- * BalanceTypeCode.mmInvestments}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmOpening
- * BalanceTypeCode.mmOpening}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmInterim
- * BalanceTypeCode.mmInterim}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmClosing
- * BalanceTypeCode.mmClosing}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmBook
- * BalanceTypeCode.mmBook}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCurrent
- * BalanceTypeCode.mmCurrent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmPending
- * BalanceTypeCode.mmPending}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmLimitRelated
- * BalanceTypeCode.mmLimitRelated}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmAvailable
- * BalanceTypeCode.mmAvailable}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmLiquidityTransfer
- * BalanceTypeCode.mmLiquidityTransfer}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCredit
- * BalanceTypeCode.mmCredit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmEligibleAssets
- * BalanceTypeCode.mmEligibleAssets}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmPayment
- * BalanceTypeCode.mmPayment}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmBlocked
- * BalanceTypeCode.mmBlocked}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmExpected
- * BalanceTypeCode.mmExpected}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmDaylightOverdraft
- * BalanceTypeCode.mmDaylightOverdraft}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmExpectedCredit
- * BalanceTypeCode.mmExpectedCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Receivables
+ * BalanceTypeCode.Receivables}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Payables
+ * BalanceTypeCode.Payables}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Other
+ * BalanceTypeCode.Other}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Expenses
+ * BalanceTypeCode.Expenses}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#CashAndCashEquivalents
+ * BalanceTypeCode.CashAndCashEquivalents}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#InvestorInflowOutflow
+ * BalanceTypeCode.InvestorInflowOutflow}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Revenues
+ * BalanceTypeCode.Revenues}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Borrowings
+ * BalanceTypeCode.Borrowings}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Investments
+ * BalanceTypeCode.Investments}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Opening
+ * BalanceTypeCode.Opening}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Interim
+ * BalanceTypeCode.Interim}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Closing
+ * BalanceTypeCode.Closing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Book
+ * BalanceTypeCode.Book}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Current
+ * BalanceTypeCode.Current}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Pending
+ * BalanceTypeCode.Pending}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#LimitRelated
+ * BalanceTypeCode.LimitRelated}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Available
+ * BalanceTypeCode.Available}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#LiquidityTransfer
+ * BalanceTypeCode.LiquidityTransfer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Credit
+ * BalanceTypeCode.Credit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#EligibleAssets
+ * BalanceTypeCode.EligibleAssets}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Payment
+ * BalanceTypeCode.Payment}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Blocked
+ * BalanceTypeCode.Blocked}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Expected
+ * BalanceTypeCode.Expected}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#DaylightOverdraft
+ * BalanceTypeCode.DaylightOverdraft}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#ExpectedCredit
+ * BalanceTypeCode.ExpectedCredit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#ExpectedDebit
+ * BalanceTypeCode.ExpectedDebit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Adjustment
+ * BalanceTypeCode.Adjustment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#ProgressiveAverage
+ * BalanceTypeCode.ProgressiveAverage}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Debit
+ * BalanceTypeCode.Debit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Threshold
+ * BalanceTypeCode.Threshold}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Noted
+ * BalanceTypeCode.Noted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Self
+ * BalanceTypeCode.Self}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Master
+ * BalanceTypeCode.Master}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#ForecastSettlement
+ * BalanceTypeCode.ForecastSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#BlockedTrades
+ * BalanceTypeCode.BlockedTrades}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#OtherBlockedTrades
+ * BalanceTypeCode.OtherBlockedTrades}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Custody
+ * BalanceTypeCode.Custody}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#CashForecast
+ * BalanceTypeCode.CashForecast}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#DividendsCollection
+ * BalanceTypeCode.DividendsCollection}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#NetFunding
+ * BalanceTypeCode.NetFunding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmExpectedDebit
- * BalanceTypeCode.mmExpectedDebit}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#PayInPayOut
+ * BalanceTypeCode.PayInPayOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmAdjustment
- * BalanceTypeCode.mmAdjustment}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#ExchangeForecast
+ * BalanceTypeCode.ExchangeForecast}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmProgressiveAverage
- * BalanceTypeCode.mmProgressiveAverage}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmDebit
- * BalanceTypeCode.mmDebit}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#CentralCounterparty
+ * BalanceTypeCode.CentralCounterparty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmThreshold
- * BalanceTypeCode.mmThreshold}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmNoted
- * BalanceTypeCode.mmNoted}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmSelf
- * BalanceTypeCode.mmSelf}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmMaster
- * BalanceTypeCode.mmMaster}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#TotalOnHold
+ * BalanceTypeCode.TotalOnHold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmForecastSettlement
- * BalanceTypeCode.mmForecastSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#CreditOnHold
+ * BalanceTypeCode.CreditOnHold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmBlockedTrades
- * BalanceTypeCode.mmBlockedTrades}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#DebitOnHold
+ * BalanceTypeCode.DebitOnHold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmOtherBlockedTrades
- * BalanceTypeCode.mmOtherBlockedTrades}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCustody
- * BalanceTypeCode.mmCustody}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#TotalProcessed
+ * BalanceTypeCode.TotalProcessed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCashForecast
- * BalanceTypeCode.mmCashForecast}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#CreditProcessed
+ * BalanceTypeCode.CreditProcessed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmDividendsCollection
- * BalanceTypeCode.mmDividendsCollection}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#DebitProcessed
+ * BalanceTypeCode.DebitProcessed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmNetFunding
- * BalanceTypeCode.mmNetFunding}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#TotalFuture
+ * BalanceTypeCode.TotalFuture}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmPayInPayOut
- * BalanceTypeCode.mmPayInPayOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#TotalRejected
+ * BalanceTypeCode.TotalRejected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmExchangeForecast
- * BalanceTypeCode.mmExchangeForecast}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#OpeningAvailable
+ * BalanceTypeCode.OpeningAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCentralCounterparty
- * BalanceTypeCode.mmCentralCounterparty}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#InterimAvailable
+ * BalanceTypeCode.InterimAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmTotalOnHold
- * BalanceTypeCode.mmTotalOnHold}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#ClosingAvailable
+ * BalanceTypeCode.ClosingAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCreditOnHold
- * BalanceTypeCode.mmCreditOnHold}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#ForwardAvailable
+ * BalanceTypeCode.ForwardAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmDebitOnHold
- * BalanceTypeCode.mmDebitOnHold}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#ClosingBooked
+ * BalanceTypeCode.ClosingBooked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmTotalProcessed
- * BalanceTypeCode.mmTotalProcessed}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#InterimBooked
+ * BalanceTypeCode.InterimBooked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCreditProcessed
- * BalanceTypeCode.mmCreditProcessed}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#OpeningBooked
+ * BalanceTypeCode.OpeningBooked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmDebitProcessed
- * BalanceTypeCode.mmDebitProcessed}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#PreviouslyClosedBooked
+ * BalanceTypeCode.PreviouslyClosedBooked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmTotalFuture
- * BalanceTypeCode.mmTotalFuture}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#InvestmentOpeningAvailable
+ * BalanceTypeCode.InvestmentOpeningAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmTotalRejected
- * BalanceTypeCode.mmTotalRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#InvestmentInterimAvailable
+ * BalanceTypeCode.InvestmentInterimAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmOpeningAvailable
- * BalanceTypeCode.mmOpeningAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#InvestmentClosingAvailable
+ * BalanceTypeCode.InvestmentClosingAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmInterimAvailable
- * BalanceTypeCode.mmInterimAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#InvestmentForwardAvailable
+ * BalanceTypeCode.InvestmentForwardAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmClosingAvailable
- * BalanceTypeCode.mmClosingAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#InvestmentClosingBooked
+ * BalanceTypeCode.InvestmentClosingBooked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmForwardAvailable
- * BalanceTypeCode.mmForwardAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#InvestmentInterimBooked
+ * BalanceTypeCode.InvestmentInterimBooked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmClosingBooked
- * BalanceTypeCode.mmClosingBooked}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#InvestmentOpeningBooked
+ * BalanceTypeCode.InvestmentOpeningBooked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmInterimBooked
- * BalanceTypeCode.mmInterimBooked}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#InvestmentExpected
+ * BalanceTypeCode.InvestmentExpected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmOpeningBooked
- * BalanceTypeCode.mmOpeningBooked}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#DisbursementOpeningAvailable
+ * BalanceTypeCode.DisbursementOpeningAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmPreviouslyClosedBooked
- * BalanceTypeCode.mmPreviouslyClosedBooked}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#DisbursementInterimAvailable
+ * BalanceTypeCode.DisbursementInterimAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmInvestmentOpeningAvailable
- * BalanceTypeCode.mmInvestmentOpeningAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#DisbursementClosingAvailable
+ * BalanceTypeCode.DisbursementClosingAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmInvestmentInterimAvailable
- * BalanceTypeCode.mmInvestmentInterimAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#DisbursementForwardAvailable
+ * BalanceTypeCode.DisbursementForwardAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmInvestmentClosingAvailable
- * BalanceTypeCode.mmInvestmentClosingAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#DisbursementClosingBooked
+ * BalanceTypeCode.DisbursementClosingBooked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmInvestmentForwardAvailable
- * BalanceTypeCode.mmInvestmentForwardAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#DisbursementInterimBooked
+ * BalanceTypeCode.DisbursementInterimBooked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmInvestmentClosingBooked
- * BalanceTypeCode.mmInvestmentClosingBooked}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#DisbursementOpeningBooked
+ * BalanceTypeCode.DisbursementOpeningBooked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmInvestmentInterimBooked
- * BalanceTypeCode.mmInvestmentInterimBooked}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#DisbursementExpected
+ * BalanceTypeCode.DisbursementExpected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmInvestmentOpeningBooked
- * BalanceTypeCode.mmInvestmentOpeningBooked}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#CollectionOpeningAvailable
+ * BalanceTypeCode.CollectionOpeningAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmInvestmentExpected
- * BalanceTypeCode.mmInvestmentExpected}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#CollectionInterimAvailable
+ * BalanceTypeCode.CollectionInterimAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmDisbursementOpeningAvailable
- * BalanceTypeCode.mmDisbursementOpeningAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#CollectionClosingAvailable
+ * BalanceTypeCode.CollectionClosingAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmDisbursementInterimAvailable
- * BalanceTypeCode.mmDisbursementInterimAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#CollectionForwardAvailable
+ * BalanceTypeCode.CollectionForwardAvailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmDisbursementClosingAvailable
- * BalanceTypeCode.mmDisbursementClosingAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#CollectionClosingBooked
+ * BalanceTypeCode.CollectionClosingBooked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmDisbursementForwardAvailable
- * BalanceTypeCode.mmDisbursementForwardAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#CollectionInterimBooked
+ * BalanceTypeCode.CollectionInterimBooked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmDisbursementClosingBooked
- * BalanceTypeCode.mmDisbursementClosingBooked}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#CollectionOpeningBooked
+ * BalanceTypeCode.CollectionOpeningBooked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmDisbursementInterimBooked
- * BalanceTypeCode.mmDisbursementInterimBooked}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#CollectionExpected
+ * BalanceTypeCode.CollectionExpected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmDisbursementOpeningBooked
- * BalanceTypeCode.mmDisbursementOpeningBooked}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#FirmCollateralisation
+ * BalanceTypeCode.FirmCollateralisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmDisbursementExpected
- * BalanceTypeCode.mmDisbursementExpected}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#UsedAmountsFirmCollateralisation
+ * BalanceTypeCode.UsedAmountsFirmCollateralisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCollectionOpeningAvailable
- * BalanceTypeCode.mmCollectionOpeningAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#SelfCollateralisation
+ * BalanceTypeCode.SelfCollateralisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCollectionInterimAvailable
- * BalanceTypeCode.mmCollectionInterimAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#UsedAmountsSelfCollateralisation
+ * BalanceTypeCode.UsedAmountsSelfCollateralisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCollectionClosingAvailable
- * BalanceTypeCode.mmCollectionClosingAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#CustodyActual
+ * BalanceTypeCode.CustodyActual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCollectionForwardAvailable
- * BalanceTypeCode.mmCollectionForwardAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#CCPGuaranteedForecasting
+ * BalanceTypeCode.CCPGuaranteedForecasting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCollectionClosingBooked
- * BalanceTypeCode.mmCollectionClosingBooked}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#NonCCPGuaranteedForecasting
+ * BalanceTypeCode.NonCCPGuaranteedForecasting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCollectionInterimBooked
- * BalanceTypeCode.mmCollectionInterimBooked}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#DefinitiveSettledSecurities
+ * BalanceTypeCode.DefinitiveSettledSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCollectionOpeningBooked
- * BalanceTypeCode.mmCollectionOpeningBooked}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#LackOfHoldingsTransactions
+ * BalanceTypeCode.LackOfHoldingsTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCollectionExpected
- * BalanceTypeCode.mmCollectionExpected}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#NonSettledSecurities
+ * BalanceTypeCode.NonSettledSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmFirmCollateralisation
- * BalanceTypeCode.mmFirmCollateralisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#CCPGuaranteedOTCTransactions
+ * BalanceTypeCode.CCPGuaranteedOTCTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmUsedAmountsFirmCollateralisation
- * BalanceTypeCode.mmUsedAmountsFirmCollateralisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#ForecastOTCTransactions
+ * BalanceTypeCode.ForecastOTCTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmSelfCollateralisation
- * BalanceTypeCode.mmSelfCollateralisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#NonCCPGuaranteedOTCTransactions
+ * BalanceTypeCode.NonCCPGuaranteedOTCTransactions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmUsedAmountsSelfCollateralisation
- * BalanceTypeCode.mmUsedAmountsSelfCollateralisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#SAPDirectDebitAmount
+ * BalanceTypeCode.SAPDirectDebitAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCustodyActual
- * BalanceTypeCode.mmCustodyActual}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#SAPDirectCreditAmount
+ * BalanceTypeCode.SAPDirectCreditAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCCPGuaranteedForecasting
- * BalanceTypeCode.mmCCPGuaranteedForecasting}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#CMUPRepoDebit
+ * BalanceTypeCode.CMUPRepoDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmNonCCPGuaranteedForecasting
- * BalanceTypeCode.mmNonCCPGuaranteedForecasting}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#CMUPRepoCredit
+ * BalanceTypeCode.CMUPRepoCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmDefinitiveSettledSecurities
- * BalanceTypeCode.mmDefinitiveSettledSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#BulkSettlementCMUPDebit
+ * BalanceTypeCode.BulkSettlementCMUPDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmLackOfHoldingsTransactions
- * BalanceTypeCode.mmLackOfHoldingsTransactions}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#BulkSettlementCMUPCredit
+ * BalanceTypeCode.BulkSettlementCMUPCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmNonSettledSecurities
- * BalanceTypeCode.mmNonSettledSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#SAPQueueAmount
+ * BalanceTypeCode.SAPQueueAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCCPGuaranteedOTCTransactions
- * BalanceTypeCode.mmCCPGuaranteedOTCTransactions}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#IntradayRepoLimit
+ * BalanceTypeCode.IntradayRepoLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmForecastOTCTransactions
- * BalanceTypeCode.mmForecastOTCTransactions}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#IntradayRepoDrawings
+ * BalanceTypeCode.IntradayRepoDrawings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmNonCCPGuaranteedOTCTransactions
- * BalanceTypeCode.mmNonCCPGuaranteedOTCTransactions}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#DiscountWindowRepoDrawings
+ * BalanceTypeCode.DiscountWindowRepoDrawings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmSAPDirectDebitAmount
- * BalanceTypeCode.mmSAPDirectDebitAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#AvailableDMVForDiscountWindowRepo
+ * BalanceTypeCode.AvailableDMVForDiscountWindowRepo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmSAPDirectCreditAmount
- * BalanceTypeCode.mmSAPDirectCreditAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#AvailableDMVForIntradayRepo
+ * BalanceTypeCode.AvailableDMVForIntradayRepo}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Elected
+ * BalanceTypeCode.Elected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCMUPRepoDebit
- * BalanceTypeCode.mmCMUPRepoDebit}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#ReservedForDistribution
+ * BalanceTypeCode.ReservedForDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmCMUPRepoCredit
- * BalanceTypeCode.mmCMUPRepoCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#ReservedForRemoval
+ * BalanceTypeCode.ReservedForRemoval}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Restricted
+ * BalanceTypeCode.Restricted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmBulkSettlementCMUPDebit
- * BalanceTypeCode.mmBulkSettlementCMUPDebit}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#TotalEntitled
+ * BalanceTypeCode.TotalEntitled}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Unelected
+ * BalanceTypeCode.Unelected}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmBulkSettlementCMUPCredit
- * BalanceTypeCode.mmBulkSettlementCMUPCredit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmSAPQueueAmount
- * BalanceTypeCode.mmSAPQueueAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmIntradayRepoLimit
- * BalanceTypeCode.mmIntradayRepoLimit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmIntradayRepoDrawings
- * BalanceTypeCode.mmIntradayRepoDrawings}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmDiscountWindowRepoDrawings
- * BalanceTypeCode.mmDiscountWindowRepoDrawings}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmAvailableDMVForDiscountWindowRepo
- * BalanceTypeCode.mmAvailableDMVForDiscountWindowRepo}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmAvailableDMVForIntradayRepo
- * BalanceTypeCode.mmAvailableDMVForIntradayRepo}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmElected
- * BalanceTypeCode.mmElected}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmReservedForDistribution
- * BalanceTypeCode.mmReservedForDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmReservedForRemoval
- * BalanceTypeCode.mmReservedForRemoval}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmRestricted
- * BalanceTypeCode.mmRestricted}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmTotalEntitled
- * BalanceTypeCode.mmTotalEntitled}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmUnelected
- * BalanceTypeCode.mmUnelected}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#mmInformation
- * BalanceTypeCode.mmInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode#Information
+ * BalanceTypeCode.Information}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -395,8 +394,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -413,7 +412,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the nature of the balance."</li>
  * </ul>
  */
-public class BalanceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BalanceTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -437,12 +437,12 @@ public class BalanceTypeCode {
 	 * definition} = "Balance attributed to receivables."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceivables = new MMCode() {
+	public static final BalanceTypeCode Receivables = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Receivables";
 			definition = "Balance attributed to receivables.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "RECE";
 		}
 	};
@@ -467,12 +467,12 @@ public class BalanceTypeCode {
 	 * definition} = "Balance attributed to payables."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPayables = new MMCode() {
+	public static final BalanceTypeCode Payables = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payables";
 			definition = "Balance attributed to payables.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "PAYA";
 		}
 	};
@@ -500,12 +500,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final BalanceTypeCode Other = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Other";
 			definition = "Balance attributed according to a different classification, which is not explictly defined.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "OTHR";
 		}
 	};
@@ -530,12 +530,12 @@ public class BalanceTypeCode {
 	 * definition} = "Balance attributed to expenses."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExpenses = new MMCode() {
+	public static final BalanceTypeCode Expenses = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Expenses";
 			definition = "Balance attributed to expenses.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "EXPN";
 		}
 	};
@@ -560,12 +560,12 @@ public class BalanceTypeCode {
 	 * definition} = "Balance attributed to cash and cash equivalents."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashAndCashEquivalents = new MMCode() {
+	public static final BalanceTypeCode CashAndCashEquivalents = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAndCashEquivalents";
 			definition = "Balance attributed to cash and cash equivalents.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "CASE";
 		}
 	};
@@ -593,12 +593,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestorInflowOutflow = new MMCode() {
+	public static final BalanceTypeCode InvestorInflowOutflow = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestorInflowOutflow";
 			definition = "Balance attributed to investor inflow/outflow (creations, cancellations, income distributions).";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "IIOF";
 		}
 	};
@@ -626,12 +626,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRevenues = new MMCode() {
+	public static final BalanceTypeCode Revenues = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Revenues";
 			definition = "Balance attributed to revenues; including dividends, interest, net realised gains/losses etc.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "REVE";
 		}
 	};
@@ -656,12 +656,12 @@ public class BalanceTypeCode {
 	 * definition} = "Balance attributed to borrowings."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBorrowings = new MMCode() {
+	public static final BalanceTypeCode Borrowings = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Borrowings";
 			definition = "Balance attributed to borrowings.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "BORR";
 		}
 	};
@@ -686,12 +686,12 @@ public class BalanceTypeCode {
 	 * definition} = "Balance attributed to investments at value."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestments = new MMCode() {
+	public static final BalanceTypeCode Investments = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Investments";
 			definition = "Balance attributed to investments at value.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "INVE";
 		}
 	};
@@ -710,6 +710,9 @@ public class BalanceTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "OPNG"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B::FIOP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -722,12 +725,13 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOpening = new MMCode() {
+	public static final BalanceTypeCode Opening = new BalanceTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::FIOP"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Opening";
 			definition = "Book balance of the account at the beginning of the account servicer's business day. It always equals the closing book balance from the previous business day. Note: the available balance at the beginning of the account servicer's business day may be different from the closing book balance from the previous business day.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "OPNG";
 		}
 	};
@@ -745,6 +749,9 @@ public class BalanceTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "INTM"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B::INOP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -757,12 +764,13 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterim = new MMCode() {
+	public static final BalanceTypeCode Interim = new BalanceTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::INOP"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interim";
 			definition = "Balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "INTM";
 		}
 	};
@@ -779,6 +787,9 @@ public class BalanceTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CLSG"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B::FICL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -791,12 +802,13 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmClosing = new MMCode() {
+	public static final BalanceTypeCode Closing = new BalanceTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::FICL"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Closing";
 			definition = "Balance of the account at the end of the account servicer's business day. It is the sum of the opening balance at the beginning of the day and all entries booked to the account during the account servicer's business day.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "CLSG";
 		}
 	};
@@ -822,12 +834,12 @@ public class BalanceTypeCode {
 	 * "Balance that is registered in the books of the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBook = new MMCode() {
+	public static final BalanceTypeCode Book = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Book";
 			definition = "Balance that is registered in the books of the account servicer.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "BOOK";
 		}
 	};
@@ -852,12 +864,12 @@ public class BalanceTypeCode {
 	 * definition} = "Balance of the account at a precise moment in time."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrent = new MMCode() {
+	public static final BalanceTypeCode Current = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Current";
 			definition = "Balance of the account at a precise moment in time.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "CRRT";
 		}
 	};
@@ -874,6 +886,9 @@ public class BalanceTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PDNG"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93C::PEND</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -886,12 +901,13 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPending = new MMCode() {
+	public static final BalanceTypeCode Pending = new BalanceTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93C::PEND"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Pending";
 			definition = "Balance of securities pending delivery, eg, orders to sell securities have been executed but settlement of the open transactions has not been confirmed.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "PDNG";
 		}
 	};
@@ -919,12 +935,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmLimitRelated = new MMCode() {
+	public static final BalanceTypeCode LimitRelated = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LimitRelated";
 			definition = "Balance of a specific limit value, eg, a bilateral balance is calculated in relation to a given bilateral limit.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "LRLD";
 		}
 	};
@@ -952,12 +968,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAvailable = new MMCode() {
+	public static final BalanceTypeCode Available = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Available";
 			definition = "Balance of money or securities that is at the disposal of the account owner on the date specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "AVLB";
 		}
 	};
@@ -985,12 +1001,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmLiquidityTransfer = new MMCode() {
+	public static final BalanceTypeCode LiquidityTransfer = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LiquidityTransfer";
 			definition = "Balance composed of the sum of all liquidity transfers made to or from an account.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "LTSF";
 		}
 	};
@@ -1017,12 +1033,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCredit = new MMCode() {
+	public static final BalanceTypeCode Credit = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Credit";
 			definition = "Balance representing the sum of all credit entries booked to an account.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "CRDT";
 		}
 	};
@@ -1051,12 +1067,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEligibleAssets = new MMCode() {
+	public static final BalanceTypeCode EligibleAssets = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EligibleAssets";
 			definition = "Balance representing the potential loan a Central Bank would make in cash if the collateral is pledged, eg, securities available and eligible as collateral with the Central Bank.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "EAST";
 		}
 	};
@@ -1086,12 +1102,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPayment = new MMCode() {
+	public static final BalanceTypeCode Payment = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
 			definition = "Balance representing the sum of entries as a result of payments processing.  Entries relating to fees,  interest, or other movements not a result of payments sent or received by the account owner are not included.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "PYMT";
 		}
 	};
@@ -1122,12 +1138,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBlocked = new MMCode() {
+	public static final BalanceTypeCode Blocked = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Blocked";
 			definition = "Balance representing the regulatory reserve that a financial institution must have with the account servicing institution, eg, the minimum credit balance a financial institution is to keep with its Central Bank for mandatory reserve purposes.  In some countries, a blocked balance is known as a 'reserve' balance.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "BLCK";
 		}
 	};
@@ -1156,12 +1172,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmExpected = new MMCode() {
+	public static final BalanceTypeCode Expected = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Expected";
 			definition = "Balance, composed of booked entries and pending items known at the time of calculation , which projects the end of day balance if everything is booked on the account and no other entry is posted.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "XPCD";
 		}
 	};
@@ -1190,12 +1206,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDaylightOverdraft = new MMCode() {
+	public static final BalanceTypeCode DaylightOverdraft = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DaylightOverdraft";
 			definition = "Balance representing the intra day overdraft granted by the Central Bank to financial institutions participating in a RTGS system. This balance may vary over time and shall be offset at the end of the day.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "DLOD";
 		}
 	};
@@ -1224,12 +1240,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmExpectedCredit = new MMCode() {
+	public static final BalanceTypeCode ExpectedCredit = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpectedCredit";
 			definition = "Balance, composed of booked entries and pending items known at the time of calculation, which projects the end of day credit balance if everything books to the account and no other credit entry is posted.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "XCRD";
 		}
 	};
@@ -1258,12 +1274,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmExpectedDebit = new MMCode() {
+	public static final BalanceTypeCode ExpectedDebit = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpectedDebit";
 			definition = "Balance, composed of booked entries and pending items known at the time of calculation, which projects the end of day debit balance if everything books to the account and no other debit entry is posted.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "XDBT";
 		}
 	};
@@ -1292,12 +1308,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAdjustment = new MMCode() {
+	public static final BalanceTypeCode Adjustment = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Adjustment";
 			definition = "Balance to be held in the settlement account in order to comply with the average reserve due, in the event that the bank's balance is equal to the reserve due during the remaining days of the maintenance period.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "ADJT";
 		}
 	};
@@ -1325,12 +1341,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmProgressiveAverage = new MMCode() {
+	public static final BalanceTypeCode ProgressiveAverage = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProgressiveAverage";
 			definition = "Average of the daily balances on the account used to fulfil the reserve requirements calculated from the beginning of the maintenance period.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "PRAV";
 		}
 	};
@@ -1357,12 +1373,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDebit = new MMCode() {
+	public static final BalanceTypeCode Debit = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Debit";
 			definition = "Balance representing the sum of all debit entries booked to an account.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "DBIT";
 		}
 	};
@@ -1390,12 +1406,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmThreshold = new MMCode() {
+	public static final BalanceTypeCode Threshold = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Threshold";
 			definition = "Balance representing the amount that will be destined for investment. Difference between available balance and threshold for investment limit.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "THRE";
 		}
 	};
@@ -1423,12 +1439,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoted = new MMCode() {
+	public static final BalanceTypeCode Noted = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Noted";
 			definition = "Balance representing the amount that a financial institution has set aside for a specific reason and which is therefore not available.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "NOTE";
 		}
 	};
@@ -1454,12 +1470,12 @@ public class BalanceTypeCode {
 	 * "Balance of the account identified (as opposed to Master Balance)"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSelf = new MMCode() {
+	public static final BalanceTypeCode Self = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Self";
 			definition = "Balance of the account identified (as opposed to Master Balance)";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "SELF";
 		}
 	};
@@ -1487,12 +1503,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMaster = new MMCode() {
+	public static final BalanceTypeCode Master = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Master";
 			definition = "Balance of the identified account plus the balance of all of its subaccounts.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "MSTR";
 		}
 	};
@@ -1521,12 +1537,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmForecastSettlement = new MMCode() {
+	public static final BalanceTypeCode ForecastSettlement = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForecastSettlement";
 			definition = "Balance representing the forecast of total of all cash legs for trades that are ready to settle via CSD. Amounts shown are still subject to processing of the securities settlement.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "FSET";
 		}
 	};
@@ -1564,12 +1580,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBlockedTrades = new MMCode() {
+	public static final BalanceTypeCode BlockedTrades = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BlockedTrades";
 			definition = "Balance representing the projected total of all cash legs for trades settling via CSD that have been matched but blocked in order to not settle. These blocked trades are included in the calculation for settlement (eg, to avoid overdrafts).\nUsage rule: Blocking can be done by account owner or its counterparties. Usually this is done to chain transactions or to prioritise other trades. Blocked trades have an indicator that prevents the transactions from settling. Once matched, they can settle whenever the freeze is lifted. In this case they will move to FSET. Lifting the freeze can happen anytime during the day and the transaction will be settling in the next settlement cycle which can be the same day if the (I)CSD's operates several settlements cycles per day.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "BLOC";
 		}
 	};
@@ -1599,12 +1615,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherBlockedTrades = new MMCode() {
+	public static final BalanceTypeCode OtherBlockedTrades = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OtherBlockedTrades";
 			definition = "Balance representing the projected total of all cash legs for trades settling via CSD that have been matched but blocked in order to not settle. These blocked transactions are not included in the calculation for settlement.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "OTHB";
 		}
 	};
@@ -1633,12 +1649,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustody = new MMCode() {
+	public static final BalanceTypeCode Custody = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Custody";
 			definition = "Balance representing the projected total of all asset servicing transactions such as dividends, income corporate actions equivalents, tax returns, etc.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "CUST";
 		}
 	};
@@ -1666,12 +1682,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashForecast = new MMCode() {
+	public static final BalanceTypeCode CashForecast = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashForecast";
 			definition = "Balance representing the total of all balance types representing transactions to settle, blocked items and custody transactions.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "FORC";
 		}
 	};
@@ -1700,12 +1716,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividendsCollection = new MMCode() {
+	public static final BalanceTypeCode DividendsCollection = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendsCollection";
 			definition = "Balance representing the projected total amount of all payment obligations to the participant (bank), based on their role as main paying agent.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "COLC";
 		}
 	};
@@ -1733,12 +1749,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNetFunding = new MMCode() {
+	public static final BalanceTypeCode NetFunding = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetFunding";
 			definition = "Balance representing the net amount to be funded resulting from all transactions which have an impact on the funding requirement.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "FUND";
 		}
 	};
@@ -1769,12 +1785,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPayInPayOut = new MMCode() {
+	public static final BalanceTypeCode PayInPayOut = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PayInPayOut";
 			definition = "Balance representing the fictive forecast of automated direct debits or payment based on standing arrangements between the CSD and the user.\n\nUsage: Pay-Ins and Pay-Outs can be different based on individual payment instructions or available funds.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "PIPO";
 		}
 	};
@@ -1802,12 +1818,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmExchangeForecast = new MMCode() {
+	public static final BalanceTypeCode ExchangeForecast = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExchangeForecast";
 			definition = "Balance representing the forecast of the total of all cash legs of transactions traded in exchanges.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "XCHG";
 		}
 	};
@@ -1836,12 +1852,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCentralCounterparty = new MMCode() {
+	public static final BalanceTypeCode CentralCounterparty = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CentralCounterparty";
 			definition = "Balance representing the forecast of the total of all cash legs of transactions traded in exchanges that operate a central counterparty functionality.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "CCPS";
 		}
 	};
@@ -1869,12 +1885,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTotalOnHold = new MMCode() {
+	public static final BalanceTypeCode TotalOnHold = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalOnHold";
 			definition = "Balance representing the total of the payments that were put on hold because the limits have been exceeded.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "TOHB";
 		}
 	};
@@ -1902,12 +1918,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreditOnHold = new MMCode() {
+	public static final BalanceTypeCode CreditOnHold = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditOnHold";
 			definition = "Balance representing the total incoming payments that were put on hold because the credit limit has been exceeded.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "COHB";
 		}
 	};
@@ -1935,12 +1951,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDebitOnHold = new MMCode() {
+	public static final BalanceTypeCode DebitOnHold = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitOnHold";
 			definition = "Balance representing the total outgoing payments that were put on hold because the debit limit has been exceeded.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "DOHB";
 		}
 	};
@@ -1968,12 +1984,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTotalProcessed = new MMCode() {
+	public static final BalanceTypeCode TotalProcessed = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalProcessed";
 			definition = "Balance representing the total of the payments that have been processed and are waiting for settlement during the day.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "TPBL";
 		}
 	};
@@ -2001,12 +2017,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreditProcessed = new MMCode() {
+	public static final BalanceTypeCode CreditProcessed = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditProcessed";
 			definition = "Balance representing the total incoming payments that have been processed and are waiting for settlement.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "CPBL";
 		}
 	};
@@ -2034,12 +2050,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDebitProcessed = new MMCode() {
+	public static final BalanceTypeCode DebitProcessed = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitProcessed";
 			definition = "Balance representing the total outgoing payments that have been processed and are waiting for settlement.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "DPBL";
 		}
 	};
@@ -2067,12 +2083,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTotalFuture = new MMCode() {
+	public static final BalanceTypeCode TotalFuture = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalFuture";
 			definition = "Balance representing the total of the payments with a processing date in the future.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "FUTB";
 		}
 	};
@@ -2099,12 +2115,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTotalRejected = new MMCode() {
+	public static final BalanceTypeCode TotalRejected = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalRejected";
 			definition = "Balance representing the total of the payments that have been rejected.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "REJB";
 		}
 	};
@@ -2132,12 +2148,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOpeningAvailable = new MMCode() {
+	public static final BalanceTypeCode OpeningAvailable = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OpeningAvailable";
 			definition = "Opening balance of amount of money that is at the disposal of the account owner on the date specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "OPAV";
 		}
 	};
@@ -2168,12 +2184,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterimAvailable = new MMCode() {
+	public static final BalanceTypeCode InterimAvailable = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterimAvailable";
 			definition = "Available balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "ITAV";
 		}
 	};
@@ -2201,12 +2217,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmClosingAvailable = new MMCode() {
+	public static final BalanceTypeCode ClosingAvailable = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosingAvailable";
 			definition = "Closing balance of amount of money that is at the disposal of the account owner on the date specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "CLAV";
 		}
 	};
@@ -2234,12 +2250,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmForwardAvailable = new MMCode() {
+	public static final BalanceTypeCode ForwardAvailable = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForwardAvailable";
 			definition = "Forward available balance of money that is at the disposal of the account owner on the date specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "FWAV";
 		}
 	};
@@ -2269,12 +2285,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmClosingBooked = new MMCode() {
+	public static final BalanceTypeCode ClosingBooked = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosingBooked";
 			definition = "Balance of the account at the end of the pre-agreed account reporting period. It is the sum of the opening booked balance at the beginning of the period and all entries booked to the account during the pre-agreed account reporting period.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "CLBD";
 		}
 	};
@@ -2304,12 +2320,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterimBooked = new MMCode() {
+	public static final BalanceTypeCode InterimBooked = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterimBooked";
 			definition = "Balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "ITBD";
 		}
 	};
@@ -2338,12 +2354,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOpeningBooked = new MMCode() {
+	public static final BalanceTypeCode OpeningBooked = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OpeningBooked";
 			definition = "Book balance of the account at the beginning of the account reporting period.  It always equals the closing book balance from the previous report.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "OPBD";
 		}
 	};
@@ -2376,12 +2392,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreviouslyClosedBooked = new MMCode() {
+	public static final BalanceTypeCode PreviouslyClosedBooked = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreviouslyClosedBooked";
 			definition = "Balance of the account at the previously closed account reporting period. The opening booked balance for the new period has to be equal to this balance. \n\nUsage: the previously booked closing balance should equal (inclusive date) the booked closing balance of the date it references and equal the actual booked opening balance of the current date.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "PRCD";
 		}
 	};
@@ -2409,12 +2425,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestmentOpeningAvailable = new MMCode() {
+	public static final BalanceTypeCode InvestmentOpeningAvailable = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentOpeningAvailable";
 			definition = "Investment opening balance of amount of money that is at the disposal of the account owner on the date specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "IOPA";
 		}
 	};
@@ -2445,12 +2461,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestmentInterimAvailable = new MMCode() {
+	public static final BalanceTypeCode InvestmentInterimAvailable = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentInterimAvailable";
 			definition = "Investment available balance for calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "IITA";
 		}
 	};
@@ -2478,12 +2494,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestmentClosingAvailable = new MMCode() {
+	public static final BalanceTypeCode InvestmentClosingAvailable = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentClosingAvailable";
 			definition = "Investment closing balance of an amount of money that is at the disposal of the account owner on the date specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "ICLA";
 		}
 	};
@@ -2511,12 +2527,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestmentForwardAvailable = new MMCode() {
+	public static final BalanceTypeCode InvestmentForwardAvailable = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentForwardAvailable";
 			definition = "Investment forward available balance of money that is at the disposal of the account owner on the date specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "IFWA";
 		}
 	};
@@ -2546,12 +2562,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestmentClosingBooked = new MMCode() {
+	public static final BalanceTypeCode InvestmentClosingBooked = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentClosingBooked";
 			definition = "Investment (mutual funds) balance of the account at the end of the pre-agreed account reporting period. It is the sum of the opening booked balance at the beginning of the period and all entries booked to the account during the pre-agreed account reporting period.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "ICLB";
 		}
 	};
@@ -2582,12 +2598,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestmentInterimBooked = new MMCode() {
+	public static final BalanceTypeCode InvestmentInterimBooked = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentInterimBooked";
 			definition = "Investment balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "IITB";
 		}
 	};
@@ -2616,12 +2632,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestmentOpeningBooked = new MMCode() {
+	public static final BalanceTypeCode InvestmentOpeningBooked = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentOpeningBooked";
 			definition = "Investment book balance of the account at the beginning of the account reporting period.  It always equals the closing book balance from the previous report.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "IOPB";
 		}
 	};
@@ -2650,12 +2666,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestmentExpected = new MMCode() {
+	public static final BalanceTypeCode InvestmentExpected = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentExpected";
 			definition = "Investment balance, composed of booked entries and pending items known at the time of calculation , which projects the end of day balance if everything is booked on the account and no other entry is posted.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "IXPC";
 		}
 	};
@@ -2683,12 +2699,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisbursementOpeningAvailable = new MMCode() {
+	public static final BalanceTypeCode DisbursementOpeningAvailable = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisbursementOpeningAvailable";
 			definition = "Disbursement opening balance of amount of money that is at the disposal of the account owner on the date specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "DOPA";
 		}
 	};
@@ -2719,12 +2735,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisbursementInterimAvailable = new MMCode() {
+	public static final BalanceTypeCode DisbursementInterimAvailable = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisbursementInterimAvailable";
 			definition = "Disbursement available balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "DITA";
 		}
 	};
@@ -2752,12 +2768,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisbursementClosingAvailable = new MMCode() {
+	public static final BalanceTypeCode DisbursementClosingAvailable = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisbursementClosingAvailable";
 			definition = "Disbursement closing balance of amount of money that is at the disposal of the account owner on the date specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "DCLA";
 		}
 	};
@@ -2785,12 +2801,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisbursementForwardAvailable = new MMCode() {
+	public static final BalanceTypeCode DisbursementForwardAvailable = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisbursementForwardAvailable";
 			definition = "Disbursement forward available balance of money that is at the disposal of the account owner on the date specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "DFWA";
 		}
 	};
@@ -2820,12 +2836,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisbursementClosingBooked = new MMCode() {
+	public static final BalanceTypeCode DisbursementClosingBooked = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisbursementClosingBooked";
 			definition = "Disbursement balance of the account at the end of the pre-agreed account reporting period. It is the sum of the opening booked balance at the beginning of the period and all entries booked to the account during the pre-agreed account reporting period.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "DCLB";
 		}
 	};
@@ -2856,12 +2872,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisbursementInterimBooked = new MMCode() {
+	public static final BalanceTypeCode DisbursementInterimBooked = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisbursementInterimBooked";
 			definition = "Disbursement balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "DITB";
 		}
 	};
@@ -2890,12 +2906,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisbursementOpeningBooked = new MMCode() {
+	public static final BalanceTypeCode DisbursementOpeningBooked = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisbursementOpeningBooked";
 			definition = "Disbursement book balance of the account at the beginning of the account reporting period.  It always equals the closing book balance from the previous report.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "DOPB";
 		}
 	};
@@ -2924,12 +2940,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisbursementExpected = new MMCode() {
+	public static final BalanceTypeCode DisbursementExpected = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisbursementExpected";
 			definition = "Disbursement balance, composed of booked entries and pending items known at the time of calculation , which projects the end of day balance if everything is booked on the account and no other entry is posted.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "DXPC";
 		}
 	};
@@ -2957,12 +2973,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollectionOpeningAvailable = new MMCode() {
+	public static final BalanceTypeCode CollectionOpeningAvailable = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionOpeningAvailable";
 			definition = "Collection opening balance of amount of money that is at the disposal of the account owner on the date specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "COPA";
 		}
 	};
@@ -2993,12 +3009,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollectionInterimAvailable = new MMCode() {
+	public static final BalanceTypeCode CollectionInterimAvailable = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionInterimAvailable";
 			definition = "Collection available balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "CITA";
 		}
 	};
@@ -3026,12 +3042,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollectionClosingAvailable = new MMCode() {
+	public static final BalanceTypeCode CollectionClosingAvailable = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionClosingAvailable";
 			definition = "Collection closing balance of amount of money that is at the disposal of the account owner on the date specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "CCLA";
 		}
 	};
@@ -3059,12 +3075,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollectionForwardAvailable = new MMCode() {
+	public static final BalanceTypeCode CollectionForwardAvailable = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionForwardAvailable";
 			definition = "Collection forward available balance of money that is at the disposal of the account owner on the date specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "CFWA";
 		}
 	};
@@ -3094,12 +3110,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollectionClosingBooked = new MMCode() {
+	public static final BalanceTypeCode CollectionClosingBooked = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionClosingBooked";
 			definition = "Collection balance of the account at the end of the pre-agreed account reporting period. It is the sum of the opening booked balance at the beginning of the period and all entries booked to the account during the pre-agreed account reporting period.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "CCLB";
 		}
 	};
@@ -3130,12 +3146,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollectionInterimBooked = new MMCode() {
+	public static final BalanceTypeCode CollectionInterimBooked = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionInterimBooked";
 			definition = "Collection balance calculated in the course of the account servicer's business day, at the time specified, and subject to further changes during the business day. The interim balance is calculated on the basis of booked credit and debit items during the calculation time/period specified.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "CITB";
 		}
 	};
@@ -3164,12 +3180,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollectionOpeningBooked = new MMCode() {
+	public static final BalanceTypeCode CollectionOpeningBooked = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionOpeningBooked";
 			definition = "Collection book balance of the account at the beginning of the account reporting period.  It always equals the closing book balance from the previous report.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "COPB";
 		}
 	};
@@ -3198,12 +3214,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollectionExpected = new MMCode() {
+	public static final BalanceTypeCode CollectionExpected = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionExpected";
 			definition = "Collection balance, composed of booked entries and pending items known at the time of calculation , which projects the end of day balance if everything is booked on the account and no other entry is posted.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "CXPC";
 		}
 	};
@@ -3232,12 +3248,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFirmCollateralisation = new MMCode() {
+	public static final BalanceTypeCode FirmCollateralisation = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirmCollateralisation";
 			definition = "Balance representing the forecast of the cash-equivalent resulting from evaluation of existing holdings at CSD that are qualified to serve as collateral";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "FCOL";
 		}
 	};
@@ -3266,12 +3282,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmUsedAmountsFirmCollateralisation = new MMCode() {
+	public static final BalanceTypeCode UsedAmountsFirmCollateralisation = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UsedAmountsFirmCollateralisation";
 			definition = "Balance representing the cash equivalent resulting from evaluation of existing holdings at CSD that are qualified to serve as collateral and have been used as collateral.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "FCOU";
 		}
 	};
@@ -3300,12 +3316,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSelfCollateralisation = new MMCode() {
+	public static final BalanceTypeCode SelfCollateralisation = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SelfCollateralisation";
 			definition = "Balance representing the forecast of the cash-equivalent resulting from evaluation of the net incoming balance of securities qualified to serve as collateral for which settlement instructions are held at.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "SCOL";
 		}
 	};
@@ -3334,12 +3350,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmUsedAmountsSelfCollateralisation = new MMCode() {
+	public static final BalanceTypeCode UsedAmountsSelfCollateralisation = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UsedAmountsSelfCollateralisation";
 			definition = "Balance representing the cash-equivalent resulting from evaluation of incoming securities, qualified to serve as collateral and actually used as collateral, which have been settled during the settlement process.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "SCOU";
 		}
 	};
@@ -3368,12 +3384,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustodyActual = new MMCode() {
+	public static final BalanceTypeCode CustodyActual = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CustodyActual";
 			definition = "Balance representing the actual total of all asset servicing transactions such as dividends, income corporate actions equivalents, tax returns, redemptions, etc.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "CUSA";
 		}
 	};
@@ -3401,12 +3417,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCCPGuaranteedForecasting = new MMCode() {
+	public static final BalanceTypeCode CCPGuaranteedForecasting = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CCPGuaranteedForecasting";
 			definition = "Balance representing the forecast of the total of all cash legs of transactions in exchanges, going through CCP functions.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "XCHC";
 		}
 	};
@@ -3434,12 +3450,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonCCPGuaranteedForecasting = new MMCode() {
+	public static final BalanceTypeCode NonCCPGuaranteedForecasting = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonCCPGuaranteedForecasting";
 			definition = "Balance representing the forecast of the total of all cash legs of transactions traded in exchanges not going through CCP functions.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "XCHN";
 		}
 	};
@@ -3467,12 +3483,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDefinitiveSettledSecurities = new MMCode() {
+	public static final BalanceTypeCode DefinitiveSettledSecurities = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DefinitiveSettledSecurities";
 			definition = "Balance representing the cash equivalent of all settled securities transactions";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "DSET";
 		}
 	};
@@ -3500,12 +3516,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmLackOfHoldingsTransactions = new MMCode() {
+	public static final BalanceTypeCode LackOfHoldingsTransactions = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LackOfHoldingsTransactions";
 			definition = "Balance representing the cash equivalent of transactions with a lack of holdings.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "LACK";
 		}
 	};
@@ -3533,12 +3549,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonSettledSecurities = new MMCode() {
+	public static final BalanceTypeCode NonSettledSecurities = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonSettledSecurities";
 			definition = "Balance representing the cash equivalent of all non-settled securities transactions.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "NSET";
 		}
 	};
@@ -3566,12 +3582,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCCPGuaranteedOTCTransactions = new MMCode() {
+	public static final BalanceTypeCode CCPGuaranteedOTCTransactions = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CCPGuaranteedOTCTransactions";
 			definition = "Balance representing the Forecast of the total of all cash-legs of transactions 'over the counter' (OTC), going through CCP functions.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "OTCC";
 		}
 	};
@@ -3599,12 +3615,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmForecastOTCTransactions = new MMCode() {
+	public static final BalanceTypeCode ForecastOTCTransactions = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForecastOTCTransactions";
 			definition = "Balance representing the forecast of the total of all cash legs of transactions traded 'over the counter' (OTC).";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "OTCG";
 		}
 	};
@@ -3633,12 +3649,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonCCPGuaranteedOTCTransactions = new MMCode() {
+	public static final BalanceTypeCode NonCCPGuaranteedOTCTransactions = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonCCPGuaranteedOTCTransactions";
 			definition = "Balance representing the forecast of the total of all cash legs of transactions traded 'over the counter' (OTC) not going through CCP functions.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "OTCN";
 		}
 	};
@@ -3665,12 +3681,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSAPDirectDebitAmount = new MMCode() {
+	public static final BalanceTypeCode SAPDirectDebitAmount = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SAPDirectDebitAmount";
 			definition = "Balance represents the settlement account processor direct debit amount.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "SAPD";
 		}
 	};
@@ -3697,12 +3713,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSAPDirectCreditAmount = new MMCode() {
+	public static final BalanceTypeCode SAPDirectCreditAmount = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SAPDirectCreditAmount";
 			definition = "Balance represents the settlement account processor direct credit amount.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "SAPC";
 		}
 	};
@@ -3730,12 +3746,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCMUPRepoDebit = new MMCode() {
+	public static final BalanceTypeCode CMUPRepoDebit = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CMUPRepoDebit";
 			definition = "Balance represents the total of the central moneymarkets unit processor repo debits.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "REPD";
 		}
 	};
@@ -3763,12 +3779,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCMUPRepoCredit = new MMCode() {
+	public static final BalanceTypeCode CMUPRepoCredit = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CMUPRepoCredit";
 			definition = "Balance represents the total of the central moneymarkets unit processor repo credits.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "REPC";
 		}
 	};
@@ -3796,12 +3812,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBulkSettlementCMUPDebit = new MMCode() {
+	public static final BalanceTypeCode BulkSettlementCMUPDebit = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BulkSettlementCMUPDebit";
 			definition = "Balance represents the total of the bulk settlement and central moneymarkets unit processor debit.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "BSCD";
 		}
 	};
@@ -3829,12 +3845,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBulkSettlementCMUPCredit = new MMCode() {
+	public static final BalanceTypeCode BulkSettlementCMUPCredit = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BulkSettlementCMUPCredit";
 			definition = "Balance represents the total of the bulk settlement and central moneymarkets unit processor credit.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "BSCC";
 		}
 	};
@@ -3860,12 +3876,12 @@ public class BalanceTypeCode {
 	 * "Balance represents the settlement account processor queue amount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSAPQueueAmount = new MMCode() {
+	public static final BalanceTypeCode SAPQueueAmount = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SAPQueueAmount";
 			definition = "Balance represents the settlement account processor queue amount";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "SAPP";
 		}
 	};
@@ -3890,12 +3906,12 @@ public class BalanceTypeCode {
 	 * definition} = "Balance represents the intraday repo limit."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntradayRepoLimit = new MMCode() {
+	public static final BalanceTypeCode IntradayRepoLimit = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IntradayRepoLimit";
 			definition = "Balance represents the intraday repo limit.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "IRLT";
 		}
 	};
@@ -3920,12 +3936,12 @@ public class BalanceTypeCode {
 	 * definition} = "Balance represents the intraday repo drawings."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntradayRepoDrawings = new MMCode() {
+	public static final BalanceTypeCode IntradayRepoDrawings = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IntradayRepoDrawings";
 			definition = "Balance represents the intraday repo drawings.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "IRDR";
 		}
 	};
@@ -3950,12 +3966,12 @@ public class BalanceTypeCode {
 	 * definition} = "Balance represents the discount window repo drawings."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiscountWindowRepoDrawings = new MMCode() {
+	public static final BalanceTypeCode DiscountWindowRepoDrawings = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DiscountWindowRepoDrawings";
 			definition = "Balance represents the discount window repo drawings.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "DWRD";
 		}
 	};
@@ -3983,12 +3999,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAvailableDMVForDiscountWindowRepo = new MMCode() {
+	public static final BalanceTypeCode AvailableDMVForDiscountWindowRepo = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AvailableDMVForDiscountWindowRepo";
 			definition = "Balance represents the available discounted market value for discount window repo.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "ADWR";
 		}
 	};
@@ -4016,12 +4032,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAvailableDMVForIntradayRepo = new MMCode() {
+	public static final BalanceTypeCode AvailableDMVForIntradayRepo = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AvailableDMVForIntradayRepo";
 			definition = "Balance represents the available discounted market value for intraday repo.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "AIDR";
 		}
 	};
@@ -4046,12 +4062,12 @@ public class BalanceTypeCode {
 	 * definition} = "Balance of instructed position."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmElected = new MMCode() {
+	public static final BalanceTypeCode Elected = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Elected";
 			definition = "Balance of instructed position.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "ELEC";
 		}
 	};
@@ -4079,12 +4095,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmReservedForDistribution = new MMCode() {
+	public static final BalanceTypeCode ReservedForDistribution = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReservedForDistribution";
 			definition = "Balance of financial instruments that are reserved for the distribution of the proceeds.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "RDIS";
 		}
 	};
@@ -4112,12 +4128,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmReservedForRemoval = new MMCode() {
+	public static final BalanceTypeCode ReservedForRemoval = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReservedForRemoval";
 			definition = "Balance of securities which are reserved  temporarily in the SPA account before they will effectively be exchanged.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "RREM";
 		}
 	};
@@ -4150,12 +4166,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRestricted = new MMCode() {
+	public static final BalanceTypeCode Restricted = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Restricted";
 			definition = "Balance of cash that may only be used under certain conditions.\n\nBalance type is used to block securities/cash in the client account e.g., in relation to elections relating to certain corporate actions. The holding is under the direct control of the system paying agent, who us the only one who can transfer securities out of this balance type.\nAlso known as the \"escrow balance\" or \"sequestered balance\".";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "REST";
 		}
 	};
@@ -4183,12 +4199,12 @@ public class BalanceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTotalEntitled = new MMCode() {
+	public static final BalanceTypeCode TotalEntitled = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalEntitled";
 			definition = "Total quantity of financial instruments  entitled to the account owner based on the terms of the corporate action event.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "TENT";
 		}
 	};
@@ -4213,12 +4229,12 @@ public class BalanceTypeCode {
 	 * definition} = "Balance of uninstructed position."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnelected = new MMCode() {
+	public static final BalanceTypeCode Unelected = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Unelected";
 			definition = "Balance of uninstructed position.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "UNEL";
 		}
 	};
@@ -4243,51 +4259,218 @@ public class BalanceTypeCode {
 	 * definition} = "Balance for informational purposes."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInformation = new MMCode() {
+	public static final BalanceTypeCode Information = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Information";
 			definition = "Balance for informational purposes.";
-			owner_lazy = () -> BalanceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "INFO";
 		}
 	};
+	final static private LinkedHashMap<String, BalanceTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BalanceTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RECE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceTypeCode";
 				definition = "Specifies the nature of the balance.";
-				code_lazy = () -> Arrays.asList(BalanceTypeCode.mmReceivables, BalanceTypeCode.mmPayables, BalanceTypeCode.mmOther, BalanceTypeCode.mmExpenses, BalanceTypeCode.mmCashAndCashEquivalents,
-						BalanceTypeCode.mmInvestorInflowOutflow, BalanceTypeCode.mmRevenues, BalanceTypeCode.mmBorrowings, BalanceTypeCode.mmInvestments, BalanceTypeCode.mmOpening, BalanceTypeCode.mmInterim, BalanceTypeCode.mmClosing,
-						BalanceTypeCode.mmBook, BalanceTypeCode.mmCurrent, BalanceTypeCode.mmPending, BalanceTypeCode.mmLimitRelated, BalanceTypeCode.mmAvailable, BalanceTypeCode.mmLiquidityTransfer, BalanceTypeCode.mmCredit,
-						BalanceTypeCode.mmEligibleAssets, BalanceTypeCode.mmPayment, BalanceTypeCode.mmBlocked, BalanceTypeCode.mmExpected, BalanceTypeCode.mmDaylightOverdraft, BalanceTypeCode.mmExpectedCredit,
-						BalanceTypeCode.mmExpectedDebit, BalanceTypeCode.mmAdjustment, BalanceTypeCode.mmProgressiveAverage, BalanceTypeCode.mmDebit, BalanceTypeCode.mmThreshold, BalanceTypeCode.mmNoted, BalanceTypeCode.mmSelf,
-						BalanceTypeCode.mmMaster, BalanceTypeCode.mmForecastSettlement, BalanceTypeCode.mmBlockedTrades, BalanceTypeCode.mmOtherBlockedTrades, BalanceTypeCode.mmCustody, BalanceTypeCode.mmCashForecast,
-						BalanceTypeCode.mmDividendsCollection, BalanceTypeCode.mmNetFunding, BalanceTypeCode.mmPayInPayOut, BalanceTypeCode.mmExchangeForecast, BalanceTypeCode.mmCentralCounterparty, BalanceTypeCode.mmTotalOnHold,
-						BalanceTypeCode.mmCreditOnHold, BalanceTypeCode.mmDebitOnHold, BalanceTypeCode.mmTotalProcessed, BalanceTypeCode.mmCreditProcessed, BalanceTypeCode.mmDebitProcessed, BalanceTypeCode.mmTotalFuture,
-						BalanceTypeCode.mmTotalRejected, BalanceTypeCode.mmOpeningAvailable, BalanceTypeCode.mmInterimAvailable, BalanceTypeCode.mmClosingAvailable, BalanceTypeCode.mmForwardAvailable, BalanceTypeCode.mmClosingBooked,
-						BalanceTypeCode.mmInterimBooked, BalanceTypeCode.mmOpeningBooked, BalanceTypeCode.mmPreviouslyClosedBooked, BalanceTypeCode.mmInvestmentOpeningAvailable, BalanceTypeCode.mmInvestmentInterimAvailable,
-						BalanceTypeCode.mmInvestmentClosingAvailable, BalanceTypeCode.mmInvestmentForwardAvailable, BalanceTypeCode.mmInvestmentClosingBooked, BalanceTypeCode.mmInvestmentInterimBooked,
-						BalanceTypeCode.mmInvestmentOpeningBooked, BalanceTypeCode.mmInvestmentExpected, BalanceTypeCode.mmDisbursementOpeningAvailable, BalanceTypeCode.mmDisbursementInterimAvailable,
-						BalanceTypeCode.mmDisbursementClosingAvailable, BalanceTypeCode.mmDisbursementForwardAvailable, BalanceTypeCode.mmDisbursementClosingBooked, BalanceTypeCode.mmDisbursementInterimBooked,
-						BalanceTypeCode.mmDisbursementOpeningBooked, BalanceTypeCode.mmDisbursementExpected, BalanceTypeCode.mmCollectionOpeningAvailable, BalanceTypeCode.mmCollectionInterimAvailable,
-						BalanceTypeCode.mmCollectionClosingAvailable, BalanceTypeCode.mmCollectionForwardAvailable, BalanceTypeCode.mmCollectionClosingBooked, BalanceTypeCode.mmCollectionInterimBooked,
-						BalanceTypeCode.mmCollectionOpeningBooked, BalanceTypeCode.mmCollectionExpected, BalanceTypeCode.mmFirmCollateralisation, BalanceTypeCode.mmUsedAmountsFirmCollateralisation, BalanceTypeCode.mmSelfCollateralisation,
-						BalanceTypeCode.mmUsedAmountsSelfCollateralisation, BalanceTypeCode.mmCustodyActual, BalanceTypeCode.mmCCPGuaranteedForecasting, BalanceTypeCode.mmNonCCPGuaranteedForecasting,
-						BalanceTypeCode.mmDefinitiveSettledSecurities, BalanceTypeCode.mmLackOfHoldingsTransactions, BalanceTypeCode.mmNonSettledSecurities, BalanceTypeCode.mmCCPGuaranteedOTCTransactions,
-						BalanceTypeCode.mmForecastOTCTransactions, BalanceTypeCode.mmNonCCPGuaranteedOTCTransactions, BalanceTypeCode.mmSAPDirectDebitAmount, BalanceTypeCode.mmSAPDirectCreditAmount, BalanceTypeCode.mmCMUPRepoDebit,
-						BalanceTypeCode.mmCMUPRepoCredit, BalanceTypeCode.mmBulkSettlementCMUPDebit, BalanceTypeCode.mmBulkSettlementCMUPCredit, BalanceTypeCode.mmSAPQueueAmount, BalanceTypeCode.mmIntradayRepoLimit,
-						BalanceTypeCode.mmIntradayRepoDrawings, BalanceTypeCode.mmDiscountWindowRepoDrawings, BalanceTypeCode.mmAvailableDMVForDiscountWindowRepo, BalanceTypeCode.mmAvailableDMVForIntradayRepo, BalanceTypeCode.mmElected,
-						BalanceTypeCode.mmReservedForDistribution, BalanceTypeCode.mmReservedForRemoval, BalanceTypeCode.mmRestricted, BalanceTypeCode.mmTotalEntitled, BalanceTypeCode.mmUnelected, BalanceTypeCode.mmInformation);
 				derivation_lazy = () -> Arrays.asList(BalanceType4Code.mmObject(), BalanceType6Code.mmObject(), BalanceType10Code.mmObject(), BalanceType5Code.mmObject(), BalanceType7Code.mmObject(), BalanceType11Code.mmObject(),
 						BalanceType8Code.mmObject(), BalanceType12Code.mmObject(), BalanceType9Code.mmObject(), SecuritiesBalanceType10Code.mmObject(), SecuritiesBalanceType6Code.mmObject(), CashBalanceType1Code.mmObject(),
 						SecuritiesBalanceType9Code.mmObject(), BalanceType13Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BalanceTypeCode.Receivables, com.tools20022.repository.codeset.BalanceTypeCode.Payables, com.tools20022.repository.codeset.BalanceTypeCode.Other,
+						com.tools20022.repository.codeset.BalanceTypeCode.Expenses, com.tools20022.repository.codeset.BalanceTypeCode.CashAndCashEquivalents, com.tools20022.repository.codeset.BalanceTypeCode.InvestorInflowOutflow,
+						com.tools20022.repository.codeset.BalanceTypeCode.Revenues, com.tools20022.repository.codeset.BalanceTypeCode.Borrowings, com.tools20022.repository.codeset.BalanceTypeCode.Investments,
+						com.tools20022.repository.codeset.BalanceTypeCode.Opening, com.tools20022.repository.codeset.BalanceTypeCode.Interim, com.tools20022.repository.codeset.BalanceTypeCode.Closing,
+						com.tools20022.repository.codeset.BalanceTypeCode.Book, com.tools20022.repository.codeset.BalanceTypeCode.Current, com.tools20022.repository.codeset.BalanceTypeCode.Pending,
+						com.tools20022.repository.codeset.BalanceTypeCode.LimitRelated, com.tools20022.repository.codeset.BalanceTypeCode.Available, com.tools20022.repository.codeset.BalanceTypeCode.LiquidityTransfer,
+						com.tools20022.repository.codeset.BalanceTypeCode.Credit, com.tools20022.repository.codeset.BalanceTypeCode.EligibleAssets, com.tools20022.repository.codeset.BalanceTypeCode.Payment,
+						com.tools20022.repository.codeset.BalanceTypeCode.Blocked, com.tools20022.repository.codeset.BalanceTypeCode.Expected, com.tools20022.repository.codeset.BalanceTypeCode.DaylightOverdraft,
+						com.tools20022.repository.codeset.BalanceTypeCode.ExpectedCredit, com.tools20022.repository.codeset.BalanceTypeCode.ExpectedDebit, com.tools20022.repository.codeset.BalanceTypeCode.Adjustment,
+						com.tools20022.repository.codeset.BalanceTypeCode.ProgressiveAverage, com.tools20022.repository.codeset.BalanceTypeCode.Debit, com.tools20022.repository.codeset.BalanceTypeCode.Threshold,
+						com.tools20022.repository.codeset.BalanceTypeCode.Noted, com.tools20022.repository.codeset.BalanceTypeCode.Self, com.tools20022.repository.codeset.BalanceTypeCode.Master,
+						com.tools20022.repository.codeset.BalanceTypeCode.ForecastSettlement, com.tools20022.repository.codeset.BalanceTypeCode.BlockedTrades, com.tools20022.repository.codeset.BalanceTypeCode.OtherBlockedTrades,
+						com.tools20022.repository.codeset.BalanceTypeCode.Custody, com.tools20022.repository.codeset.BalanceTypeCode.CashForecast, com.tools20022.repository.codeset.BalanceTypeCode.DividendsCollection,
+						com.tools20022.repository.codeset.BalanceTypeCode.NetFunding, com.tools20022.repository.codeset.BalanceTypeCode.PayInPayOut, com.tools20022.repository.codeset.BalanceTypeCode.ExchangeForecast,
+						com.tools20022.repository.codeset.BalanceTypeCode.CentralCounterparty, com.tools20022.repository.codeset.BalanceTypeCode.TotalOnHold, com.tools20022.repository.codeset.BalanceTypeCode.CreditOnHold,
+						com.tools20022.repository.codeset.BalanceTypeCode.DebitOnHold, com.tools20022.repository.codeset.BalanceTypeCode.TotalProcessed, com.tools20022.repository.codeset.BalanceTypeCode.CreditProcessed,
+						com.tools20022.repository.codeset.BalanceTypeCode.DebitProcessed, com.tools20022.repository.codeset.BalanceTypeCode.TotalFuture, com.tools20022.repository.codeset.BalanceTypeCode.TotalRejected,
+						com.tools20022.repository.codeset.BalanceTypeCode.OpeningAvailable, com.tools20022.repository.codeset.BalanceTypeCode.InterimAvailable, com.tools20022.repository.codeset.BalanceTypeCode.ClosingAvailable,
+						com.tools20022.repository.codeset.BalanceTypeCode.ForwardAvailable, com.tools20022.repository.codeset.BalanceTypeCode.ClosingBooked, com.tools20022.repository.codeset.BalanceTypeCode.InterimBooked,
+						com.tools20022.repository.codeset.BalanceTypeCode.OpeningBooked, com.tools20022.repository.codeset.BalanceTypeCode.PreviouslyClosedBooked,
+						com.tools20022.repository.codeset.BalanceTypeCode.InvestmentOpeningAvailable, com.tools20022.repository.codeset.BalanceTypeCode.InvestmentInterimAvailable,
+						com.tools20022.repository.codeset.BalanceTypeCode.InvestmentClosingAvailable, com.tools20022.repository.codeset.BalanceTypeCode.InvestmentForwardAvailable,
+						com.tools20022.repository.codeset.BalanceTypeCode.InvestmentClosingBooked, com.tools20022.repository.codeset.BalanceTypeCode.InvestmentInterimBooked,
+						com.tools20022.repository.codeset.BalanceTypeCode.InvestmentOpeningBooked, com.tools20022.repository.codeset.BalanceTypeCode.InvestmentExpected,
+						com.tools20022.repository.codeset.BalanceTypeCode.DisbursementOpeningAvailable, com.tools20022.repository.codeset.BalanceTypeCode.DisbursementInterimAvailable,
+						com.tools20022.repository.codeset.BalanceTypeCode.DisbursementClosingAvailable, com.tools20022.repository.codeset.BalanceTypeCode.DisbursementForwardAvailable,
+						com.tools20022.repository.codeset.BalanceTypeCode.DisbursementClosingBooked, com.tools20022.repository.codeset.BalanceTypeCode.DisbursementInterimBooked,
+						com.tools20022.repository.codeset.BalanceTypeCode.DisbursementOpeningBooked, com.tools20022.repository.codeset.BalanceTypeCode.DisbursementExpected,
+						com.tools20022.repository.codeset.BalanceTypeCode.CollectionOpeningAvailable, com.tools20022.repository.codeset.BalanceTypeCode.CollectionInterimAvailable,
+						com.tools20022.repository.codeset.BalanceTypeCode.CollectionClosingAvailable, com.tools20022.repository.codeset.BalanceTypeCode.CollectionForwardAvailable,
+						com.tools20022.repository.codeset.BalanceTypeCode.CollectionClosingBooked, com.tools20022.repository.codeset.BalanceTypeCode.CollectionInterimBooked,
+						com.tools20022.repository.codeset.BalanceTypeCode.CollectionOpeningBooked, com.tools20022.repository.codeset.BalanceTypeCode.CollectionExpected,
+						com.tools20022.repository.codeset.BalanceTypeCode.FirmCollateralisation, com.tools20022.repository.codeset.BalanceTypeCode.UsedAmountsFirmCollateralisation,
+						com.tools20022.repository.codeset.BalanceTypeCode.SelfCollateralisation, com.tools20022.repository.codeset.BalanceTypeCode.UsedAmountsSelfCollateralisation,
+						com.tools20022.repository.codeset.BalanceTypeCode.CustodyActual, com.tools20022.repository.codeset.BalanceTypeCode.CCPGuaranteedForecasting,
+						com.tools20022.repository.codeset.BalanceTypeCode.NonCCPGuaranteedForecasting, com.tools20022.repository.codeset.BalanceTypeCode.DefinitiveSettledSecurities,
+						com.tools20022.repository.codeset.BalanceTypeCode.LackOfHoldingsTransactions, com.tools20022.repository.codeset.BalanceTypeCode.NonSettledSecurities,
+						com.tools20022.repository.codeset.BalanceTypeCode.CCPGuaranteedOTCTransactions, com.tools20022.repository.codeset.BalanceTypeCode.ForecastOTCTransactions,
+						com.tools20022.repository.codeset.BalanceTypeCode.NonCCPGuaranteedOTCTransactions, com.tools20022.repository.codeset.BalanceTypeCode.SAPDirectDebitAmount,
+						com.tools20022.repository.codeset.BalanceTypeCode.SAPDirectCreditAmount, com.tools20022.repository.codeset.BalanceTypeCode.CMUPRepoDebit, com.tools20022.repository.codeset.BalanceTypeCode.CMUPRepoCredit,
+						com.tools20022.repository.codeset.BalanceTypeCode.BulkSettlementCMUPDebit, com.tools20022.repository.codeset.BalanceTypeCode.BulkSettlementCMUPCredit,
+						com.tools20022.repository.codeset.BalanceTypeCode.SAPQueueAmount, com.tools20022.repository.codeset.BalanceTypeCode.IntradayRepoLimit, com.tools20022.repository.codeset.BalanceTypeCode.IntradayRepoDrawings,
+						com.tools20022.repository.codeset.BalanceTypeCode.DiscountWindowRepoDrawings, com.tools20022.repository.codeset.BalanceTypeCode.AvailableDMVForDiscountWindowRepo,
+						com.tools20022.repository.codeset.BalanceTypeCode.AvailableDMVForIntradayRepo, com.tools20022.repository.codeset.BalanceTypeCode.Elected, com.tools20022.repository.codeset.BalanceTypeCode.ReservedForDistribution,
+						com.tools20022.repository.codeset.BalanceTypeCode.ReservedForRemoval, com.tools20022.repository.codeset.BalanceTypeCode.Restricted, com.tools20022.repository.codeset.BalanceTypeCode.TotalEntitled,
+						com.tools20022.repository.codeset.BalanceTypeCode.Unelected, com.tools20022.repository.codeset.BalanceTypeCode.Information);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Receivables.getCodeName().get(), Receivables);
+		codesByName.put(Payables.getCodeName().get(), Payables);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(Expenses.getCodeName().get(), Expenses);
+		codesByName.put(CashAndCashEquivalents.getCodeName().get(), CashAndCashEquivalents);
+		codesByName.put(InvestorInflowOutflow.getCodeName().get(), InvestorInflowOutflow);
+		codesByName.put(Revenues.getCodeName().get(), Revenues);
+		codesByName.put(Borrowings.getCodeName().get(), Borrowings);
+		codesByName.put(Investments.getCodeName().get(), Investments);
+		codesByName.put(Opening.getCodeName().get(), Opening);
+		codesByName.put(Interim.getCodeName().get(), Interim);
+		codesByName.put(Closing.getCodeName().get(), Closing);
+		codesByName.put(Book.getCodeName().get(), Book);
+		codesByName.put(Current.getCodeName().get(), Current);
+		codesByName.put(Pending.getCodeName().get(), Pending);
+		codesByName.put(LimitRelated.getCodeName().get(), LimitRelated);
+		codesByName.put(Available.getCodeName().get(), Available);
+		codesByName.put(LiquidityTransfer.getCodeName().get(), LiquidityTransfer);
+		codesByName.put(Credit.getCodeName().get(), Credit);
+		codesByName.put(EligibleAssets.getCodeName().get(), EligibleAssets);
+		codesByName.put(Payment.getCodeName().get(), Payment);
+		codesByName.put(Blocked.getCodeName().get(), Blocked);
+		codesByName.put(Expected.getCodeName().get(), Expected);
+		codesByName.put(DaylightOverdraft.getCodeName().get(), DaylightOverdraft);
+		codesByName.put(ExpectedCredit.getCodeName().get(), ExpectedCredit);
+		codesByName.put(ExpectedDebit.getCodeName().get(), ExpectedDebit);
+		codesByName.put(Adjustment.getCodeName().get(), Adjustment);
+		codesByName.put(ProgressiveAverage.getCodeName().get(), ProgressiveAverage);
+		codesByName.put(Debit.getCodeName().get(), Debit);
+		codesByName.put(Threshold.getCodeName().get(), Threshold);
+		codesByName.put(Noted.getCodeName().get(), Noted);
+		codesByName.put(Self.getCodeName().get(), Self);
+		codesByName.put(Master.getCodeName().get(), Master);
+		codesByName.put(ForecastSettlement.getCodeName().get(), ForecastSettlement);
+		codesByName.put(BlockedTrades.getCodeName().get(), BlockedTrades);
+		codesByName.put(OtherBlockedTrades.getCodeName().get(), OtherBlockedTrades);
+		codesByName.put(Custody.getCodeName().get(), Custody);
+		codesByName.put(CashForecast.getCodeName().get(), CashForecast);
+		codesByName.put(DividendsCollection.getCodeName().get(), DividendsCollection);
+		codesByName.put(NetFunding.getCodeName().get(), NetFunding);
+		codesByName.put(PayInPayOut.getCodeName().get(), PayInPayOut);
+		codesByName.put(ExchangeForecast.getCodeName().get(), ExchangeForecast);
+		codesByName.put(CentralCounterparty.getCodeName().get(), CentralCounterparty);
+		codesByName.put(TotalOnHold.getCodeName().get(), TotalOnHold);
+		codesByName.put(CreditOnHold.getCodeName().get(), CreditOnHold);
+		codesByName.put(DebitOnHold.getCodeName().get(), DebitOnHold);
+		codesByName.put(TotalProcessed.getCodeName().get(), TotalProcessed);
+		codesByName.put(CreditProcessed.getCodeName().get(), CreditProcessed);
+		codesByName.put(DebitProcessed.getCodeName().get(), DebitProcessed);
+		codesByName.put(TotalFuture.getCodeName().get(), TotalFuture);
+		codesByName.put(TotalRejected.getCodeName().get(), TotalRejected);
+		codesByName.put(OpeningAvailable.getCodeName().get(), OpeningAvailable);
+		codesByName.put(InterimAvailable.getCodeName().get(), InterimAvailable);
+		codesByName.put(ClosingAvailable.getCodeName().get(), ClosingAvailable);
+		codesByName.put(ForwardAvailable.getCodeName().get(), ForwardAvailable);
+		codesByName.put(ClosingBooked.getCodeName().get(), ClosingBooked);
+		codesByName.put(InterimBooked.getCodeName().get(), InterimBooked);
+		codesByName.put(OpeningBooked.getCodeName().get(), OpeningBooked);
+		codesByName.put(PreviouslyClosedBooked.getCodeName().get(), PreviouslyClosedBooked);
+		codesByName.put(InvestmentOpeningAvailable.getCodeName().get(), InvestmentOpeningAvailable);
+		codesByName.put(InvestmentInterimAvailable.getCodeName().get(), InvestmentInterimAvailable);
+		codesByName.put(InvestmentClosingAvailable.getCodeName().get(), InvestmentClosingAvailable);
+		codesByName.put(InvestmentForwardAvailable.getCodeName().get(), InvestmentForwardAvailable);
+		codesByName.put(InvestmentClosingBooked.getCodeName().get(), InvestmentClosingBooked);
+		codesByName.put(InvestmentInterimBooked.getCodeName().get(), InvestmentInterimBooked);
+		codesByName.put(InvestmentOpeningBooked.getCodeName().get(), InvestmentOpeningBooked);
+		codesByName.put(InvestmentExpected.getCodeName().get(), InvestmentExpected);
+		codesByName.put(DisbursementOpeningAvailable.getCodeName().get(), DisbursementOpeningAvailable);
+		codesByName.put(DisbursementInterimAvailable.getCodeName().get(), DisbursementInterimAvailable);
+		codesByName.put(DisbursementClosingAvailable.getCodeName().get(), DisbursementClosingAvailable);
+		codesByName.put(DisbursementForwardAvailable.getCodeName().get(), DisbursementForwardAvailable);
+		codesByName.put(DisbursementClosingBooked.getCodeName().get(), DisbursementClosingBooked);
+		codesByName.put(DisbursementInterimBooked.getCodeName().get(), DisbursementInterimBooked);
+		codesByName.put(DisbursementOpeningBooked.getCodeName().get(), DisbursementOpeningBooked);
+		codesByName.put(DisbursementExpected.getCodeName().get(), DisbursementExpected);
+		codesByName.put(CollectionOpeningAvailable.getCodeName().get(), CollectionOpeningAvailable);
+		codesByName.put(CollectionInterimAvailable.getCodeName().get(), CollectionInterimAvailable);
+		codesByName.put(CollectionClosingAvailable.getCodeName().get(), CollectionClosingAvailable);
+		codesByName.put(CollectionForwardAvailable.getCodeName().get(), CollectionForwardAvailable);
+		codesByName.put(CollectionClosingBooked.getCodeName().get(), CollectionClosingBooked);
+		codesByName.put(CollectionInterimBooked.getCodeName().get(), CollectionInterimBooked);
+		codesByName.put(CollectionOpeningBooked.getCodeName().get(), CollectionOpeningBooked);
+		codesByName.put(CollectionExpected.getCodeName().get(), CollectionExpected);
+		codesByName.put(FirmCollateralisation.getCodeName().get(), FirmCollateralisation);
+		codesByName.put(UsedAmountsFirmCollateralisation.getCodeName().get(), UsedAmountsFirmCollateralisation);
+		codesByName.put(SelfCollateralisation.getCodeName().get(), SelfCollateralisation);
+		codesByName.put(UsedAmountsSelfCollateralisation.getCodeName().get(), UsedAmountsSelfCollateralisation);
+		codesByName.put(CustodyActual.getCodeName().get(), CustodyActual);
+		codesByName.put(CCPGuaranteedForecasting.getCodeName().get(), CCPGuaranteedForecasting);
+		codesByName.put(NonCCPGuaranteedForecasting.getCodeName().get(), NonCCPGuaranteedForecasting);
+		codesByName.put(DefinitiveSettledSecurities.getCodeName().get(), DefinitiveSettledSecurities);
+		codesByName.put(LackOfHoldingsTransactions.getCodeName().get(), LackOfHoldingsTransactions);
+		codesByName.put(NonSettledSecurities.getCodeName().get(), NonSettledSecurities);
+		codesByName.put(CCPGuaranteedOTCTransactions.getCodeName().get(), CCPGuaranteedOTCTransactions);
+		codesByName.put(ForecastOTCTransactions.getCodeName().get(), ForecastOTCTransactions);
+		codesByName.put(NonCCPGuaranteedOTCTransactions.getCodeName().get(), NonCCPGuaranteedOTCTransactions);
+		codesByName.put(SAPDirectDebitAmount.getCodeName().get(), SAPDirectDebitAmount);
+		codesByName.put(SAPDirectCreditAmount.getCodeName().get(), SAPDirectCreditAmount);
+		codesByName.put(CMUPRepoDebit.getCodeName().get(), CMUPRepoDebit);
+		codesByName.put(CMUPRepoCredit.getCodeName().get(), CMUPRepoCredit);
+		codesByName.put(BulkSettlementCMUPDebit.getCodeName().get(), BulkSettlementCMUPDebit);
+		codesByName.put(BulkSettlementCMUPCredit.getCodeName().get(), BulkSettlementCMUPCredit);
+		codesByName.put(SAPQueueAmount.getCodeName().get(), SAPQueueAmount);
+		codesByName.put(IntradayRepoLimit.getCodeName().get(), IntradayRepoLimit);
+		codesByName.put(IntradayRepoDrawings.getCodeName().get(), IntradayRepoDrawings);
+		codesByName.put(DiscountWindowRepoDrawings.getCodeName().get(), DiscountWindowRepoDrawings);
+		codesByName.put(AvailableDMVForDiscountWindowRepo.getCodeName().get(), AvailableDMVForDiscountWindowRepo);
+		codesByName.put(AvailableDMVForIntradayRepo.getCodeName().get(), AvailableDMVForIntradayRepo);
+		codesByName.put(Elected.getCodeName().get(), Elected);
+		codesByName.put(ReservedForDistribution.getCodeName().get(), ReservedForDistribution);
+		codesByName.put(ReservedForRemoval.getCodeName().get(), ReservedForRemoval);
+		codesByName.put(Restricted.getCodeName().get(), Restricted);
+		codesByName.put(TotalEntitled.getCodeName().get(), TotalEntitled);
+		codesByName.put(Unelected.getCodeName().get(), Unelected);
+		codesByName.put(Information.getCodeName().get(), Information);
+	}
+
+	public static BalanceTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BalanceTypeCode[] values() {
+		BalanceTypeCode[] values = new BalanceTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BalanceTypeCode> {
+		@Override
+		public BalanceTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BalanceTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

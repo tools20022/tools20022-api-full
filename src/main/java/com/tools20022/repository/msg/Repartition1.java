@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Repartition1", propOrder = {"percentage", "financialInstrument"})
 public class Repartition1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pctg", required = true)
 	protected PercentageRate percentage;
 	/**
-	 * Percentage of amount invested in a funds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +107,7 @@ public class Repartition1 {
 	 */
 	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Repartition1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Repartition1.mmObject();
 			isDerived = false;
 			xmlTag = "Pctg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,11 +118,11 @@ public class Repartition1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrm", required = true)
 	protected FinancialInstrument10 financialInstrument;
 	/**
-	 * Security that is a sub-set of an investment fund, and is governed by the
-	 * same investment fund policy, eg, dividend option or valuation currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -153,7 +155,7 @@ public class Repartition1 {
 	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
-			componentContext_lazy = () -> Repartition1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Repartition1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,8 +171,8 @@ public class Repartition1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Repartition1.mmPercentage, Repartition1.mmFinancialInstrument);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Repartition1.mmPercentage, com.tools20022.repository.msg.Repartition1.mmFinancialInstrument);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Repartition1";
 				definition = "Indicates how the amount of the investment plan is split amongst the funds.";
@@ -180,21 +182,21 @@ public class Repartition1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pctg", required = true)
 	public PercentageRate getPercentage() {
 		return percentage;
 	}
 
-	public void setPercentage(PercentageRate percentage) {
-		this.percentage = percentage;
+	public Repartition1 setPercentage(PercentageRate percentage) {
+		this.percentage = Objects.requireNonNull(percentage);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrm", required = true)
 	public FinancialInstrument10 getFinancialInstrument() {
 		return financialInstrument;
 	}
 
-	public void setFinancialInstrument(com.tools20022.repository.msg.FinancialInstrument10 financialInstrument) {
-		this.financialInstrument = financialInstrument;
+	public Repartition1 setFinancialInstrument(com.tools20022.repository.msg.FinancialInstrument10 financialInstrument) {
+		this.financialInstrument = Objects.requireNonNull(financialInstrument);
+		return this;
 	}
 }

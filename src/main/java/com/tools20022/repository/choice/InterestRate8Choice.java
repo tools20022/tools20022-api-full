@@ -28,6 +28,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FloatingInterestRate8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between a fixed rate and a variable rate."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InterestRate8Choice", propOrder = {"fixed", "floating"})
 public class InterestRate8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Fxd", required = true)
 	protected PercentageRate fixed;
 	/**
-	 * Interest Rate is fixed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +110,7 @@ public class InterestRate8Choice {
 	public static final MMMessageAttribute mmFixed = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
-			componentContext_lazy = () -> InterestRate8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRate8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Fxd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +121,11 @@ public class InterestRate8Choice {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "Fltg", required = true)
 	protected FloatingInterestRate8 floating;
 	/**
-	 * Interest rate is a variable / floating rate, based on an index.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +158,7 @@ public class InterestRate8Choice {
 	public static final MMMessageAssociationEnd mmFloating = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> VariableInterest.mmObject();
-			componentContext_lazy = () -> InterestRate8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRate8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Fltg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,9 +174,9 @@ public class InterestRate8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InterestRate8Choice.mmFixed, InterestRate8Choice.mmFloating);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRate8Choice.mmFixed, com.tools20022.repository.choice.InterestRate8Choice.mmFloating);
 				trace_lazy = () -> Interest.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestRate8Choice";
 				definition = "Choice between a fixed rate and a variable rate.";
@@ -182,21 +185,21 @@ public class InterestRate8Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Fxd", required = true)
 	public PercentageRate getFixed() {
 		return fixed;
 	}
 
-	public void setFixed(PercentageRate fixed) {
-		this.fixed = fixed;
+	public InterestRate8Choice setFixed(PercentageRate fixed) {
+		this.fixed = Objects.requireNonNull(fixed);
+		return this;
 	}
 
-	@XmlElement(name = "Fltg", required = true)
 	public FloatingInterestRate8 getFloating() {
 		return floating;
 	}
 
-	public void setFloating(FloatingInterestRate8 floating) {
-		this.floating = floating;
+	public InterestRate8Choice setFloating(FloatingInterestRate8 floating) {
+		this.floating = Objects.requireNonNull(floating);
+		return this;
 	}
 }

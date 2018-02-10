@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,8 +48,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,15 +60,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Additional references linked to the quote status request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Reference6", propOrder = "quoteIdentification")
 public class Reference6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QtId")
 	protected Max35Text quoteIdentification;
 	/**
-	 * Unique identifier for quote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -80,6 +83,9 @@ public class Reference6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 117</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -92,9 +98,10 @@ public class Reference6 {
 	 */
 	public static final MMMessageAttribute mmQuoteIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference6.mmObject();
 			isDerived = false;
 			xmlTag = "QtId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "117"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteIdentification";
 			definition = "Unique identifier for quote.";
@@ -107,8 +114,8 @@ public class Reference6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Reference6.mmQuoteIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference6.mmQuoteIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference6";
 				definition = "Additional references linked to the quote status request.";
@@ -117,12 +124,12 @@ public class Reference6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QtId")
-	public Max35Text getQuoteIdentification() {
-		return quoteIdentification;
+	public Optional<Max35Text> getQuoteIdentification() {
+		return quoteIdentification == null ? Optional.empty() : Optional.of(quoteIdentification);
 	}
 
-	public void setQuoteIdentification(Max35Text quoteIdentification) {
+	public Reference6 setQuoteIdentification(Max35Text quoteIdentification) {
 		this.quoteIdentification = quoteIdentification;
+		return this;
 	}
 }

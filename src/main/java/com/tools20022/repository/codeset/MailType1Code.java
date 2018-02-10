@@ -20,35 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.MailTypeCode;
+import com.tools20022.repository.codeset.MailType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of mail service.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.MailTypeCode MailTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MailType1Code#mmAirMail
- * MailType1Code.mmAirMail}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MailType1Code#AirMail
+ * MailType1Code.AirMail}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MailType1Code#OrdinaryMail
+ * MailType1Code.OrdinaryMail}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MailType1Code#mmOrdinaryMail
- * MailType1Code.mmOrdinaryMail}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.MailType1Code#mmRegisteredMail
- * MailType1Code.mmRegisteredMail}</li>
+ * {@linkplain com.tools20022.repository.codeset.MailType1Code#RegisteredMail
+ * MailType1Code.RegisteredMail}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.MailTypeCode MailTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of mail service."</li>
  * </ul>
  */
-public class MailType1Code extends MailTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MailType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -78,11 +82,12 @@ public class MailType1Code extends MailTypeCode {
 	 * name} = "AirMail"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAirMail = new MMCode() {
+	public static final MailType1Code AirMail = new MailType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AirMail";
-			owner_lazy = () -> MailType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MailType1Code.mmObject();
+			codeName = MailTypeCode.AirMail.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -101,11 +106,12 @@ public class MailType1Code extends MailTypeCode {
 	 * name} = "OrdinaryMail"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOrdinaryMail = new MMCode() {
+	public static final MailType1Code OrdinaryMail = new MailType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrdinaryMail";
-			owner_lazy = () -> MailType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MailType1Code.mmObject();
+			codeName = MailTypeCode.OrdinaryMail.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -124,25 +130,57 @@ public class MailType1Code extends MailTypeCode {
 	 * name} = "RegisteredMail"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegisteredMail = new MMCode() {
+	public static final MailType1Code RegisteredMail = new MailType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredMail";
-			owner_lazy = () -> MailType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MailType1Code.mmObject();
+			codeName = MailTypeCode.RegisteredMail.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, MailType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MailType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MailType1Code";
 				definition = "Specifies the type of mail service.";
-				code_lazy = () -> Arrays.asList(MailType1Code.mmAirMail, MailType1Code.mmOrdinaryMail, MailType1Code.mmRegisteredMail);
 				trace_lazy = () -> MailTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MailType1Code.AirMail, com.tools20022.repository.codeset.MailType1Code.OrdinaryMail, com.tools20022.repository.codeset.MailType1Code.RegisteredMail);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AirMail.getCodeName().get(), AirMail);
+		codesByName.put(OrdinaryMail.getCodeName().get(), OrdinaryMail);
+		codesByName.put(RegisteredMail.getCodeName().get(), RegisteredMail);
+	}
+
+	public static MailType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MailType1Code[] values() {
+		MailType1Code[] values = new MailType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MailType1Code> {
+		@Override
+		public MailType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MailType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

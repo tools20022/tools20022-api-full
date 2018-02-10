@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +76,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,15 +89,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides information about a corporate action election amendment request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionElection2", propOrder = {"optionType", "optionNumber", "newInstructedQuantity", "reason"})
 public class CorporateActionElection2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OptnTp", required = true)
 	protected CorporateActionOption1FormatChoice optionType;
 	/**
-	 * Specifies the corporate action options available to the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +133,7 @@ public class CorporateActionElection2 {
 	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
-			componentContext_lazy = () -> CorporateActionElection2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionElection2.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,10 +144,11 @@ public class CorporateActionElection2 {
 			complexType_lazy = () -> CorporateActionOption1FormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnNb", required = true)
 	protected Exact3NumericText optionNumber;
 	/**
-	 * Number identifying the available corporate action options.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,7 +183,7 @@ public class CorporateActionElection2 {
 	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
-			componentContext_lazy = () -> CorporateActionElection2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionElection2.mmObject();
 			isDerived = false;
 			xmlTag = "OptnNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,10 +194,11 @@ public class CorporateActionElection2 {
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "NewInstdQty", required = true)
 	protected UnitOrFaceAmount1Choice newInstructedQuantity;
 	/**
-	 * New instructed securities quantity after the amendment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -227,7 +232,7 @@ public class CorporateActionElection2 {
 	public static final MMMessageAttribute mmNewInstructedQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionElection.mmQuantity;
-			componentContext_lazy = () -> CorporateActionElection2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionElection2.mmObject();
 			isDerived = false;
 			xmlTag = "NewInstdQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -238,10 +243,11 @@ public class CorporateActionElection2 {
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn")
 	protected Max350Text reason;
 	/**
-	 * The reason for the amendment request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -274,7 +280,7 @@ public class CorporateActionElection2 {
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionElection.mmAmendmentReason;
-			componentContext_lazy = () -> CorporateActionElection2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionElection2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -289,10 +295,11 @@ public class CorporateActionElection2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionElection2.mmOptionType, CorporateActionElection2.mmOptionNumber, CorporateActionElection2.mmNewInstructedQuantity, CorporateActionElection2.mmReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionElection2.mmOptionType, com.tools20022.repository.msg.CorporateActionElection2.mmOptionNumber,
+						com.tools20022.repository.msg.CorporateActionElection2.mmNewInstructedQuantity, com.tools20022.repository.msg.CorporateActionElection2.mmReason);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAElectionAmendmentRequestV01.mmAmendedElectionDetails);
 				trace_lazy = () -> CorporateActionElection.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionElection2";
 				definition = "Provides information about a corporate action election amendment request.";
@@ -301,39 +308,39 @@ public class CorporateActionElection2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OptnTp", required = true)
 	public CorporateActionOption1FormatChoice getOptionType() {
 		return optionType;
 	}
 
-	public void setOptionType(CorporateActionOption1FormatChoice optionType) {
-		this.optionType = optionType;
+	public CorporateActionElection2 setOptionType(CorporateActionOption1FormatChoice optionType) {
+		this.optionType = Objects.requireNonNull(optionType);
+		return this;
 	}
 
-	@XmlElement(name = "OptnNb", required = true)
 	public Exact3NumericText getOptionNumber() {
 		return optionNumber;
 	}
 
-	public void setOptionNumber(Exact3NumericText optionNumber) {
-		this.optionNumber = optionNumber;
+	public CorporateActionElection2 setOptionNumber(Exact3NumericText optionNumber) {
+		this.optionNumber = Objects.requireNonNull(optionNumber);
+		return this;
 	}
 
-	@XmlElement(name = "NewInstdQty", required = true)
 	public UnitOrFaceAmount1Choice getNewInstructedQuantity() {
 		return newInstructedQuantity;
 	}
 
-	public void setNewInstructedQuantity(UnitOrFaceAmount1Choice newInstructedQuantity) {
-		this.newInstructedQuantity = newInstructedQuantity;
+	public CorporateActionElection2 setNewInstructedQuantity(UnitOrFaceAmount1Choice newInstructedQuantity) {
+		this.newInstructedQuantity = Objects.requireNonNull(newInstructedQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "Rsn")
-	public Max350Text getReason() {
-		return reason;
+	public Optional<Max350Text> getReason() {
+		return reason == null ? Optional.empty() : Optional.of(reason);
 	}
 
-	public void setReason(Max350Text reason) {
+	public CorporateActionElection2 setReason(Max350Text reason) {
 		this.reason = reason;
+		return this;
 	}
 }

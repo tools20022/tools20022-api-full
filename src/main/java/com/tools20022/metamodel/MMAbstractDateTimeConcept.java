@@ -52,6 +52,8 @@ public interface MMAbstractDateTimeConcept extends MMDataType {
 	 */
 	public final static MetamodelAttribute<MMAbstractDateTimeConcept, Optional<String>> patternAttribute = newAttribute();
 
+	
+	
 	public static MetamodelType<MMAbstractDateTimeConcept> metaType() {
 		return StandardMetamodel2013.metamodel().getTypeByClass(MMAbstractDateTimeConcept.class);
 	}

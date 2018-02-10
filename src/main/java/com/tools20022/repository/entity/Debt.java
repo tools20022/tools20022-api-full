@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
@@ -26,9 +27,11 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Financial instruments evidencing moneys owed by the issuer to the holder on
@@ -40,6 +43,8 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -184,28 +189,6 @@ import java.util.List;
  * Debt.mmDebtSeniority}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Loan Loan}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Debt1 Debt1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Debt2 Debt2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument2
- * DebtInstrument2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument4
- * DebtInstrument4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument5
- * DebtInstrument5}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -276,11 +259,31 @@ import java.util.List;
  * SecurityInstrumentDescription13.mmDebtInstrumentAttributes}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Loan Loan}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Debt1 Debt1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Debt2 Debt2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument2
+ * DebtInstrument2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument4
+ * DebtInstrument4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument5
+ * DebtInstrument5}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -298,10 +301,8 @@ public class Debt extends Security {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected PaymentDirectionIndicator paymentDirectionIndicator;
 	/**
-	 * Indicates the direction of payment for asset or mortgage backed
-	 * securities, ie, whether the repaid capital is distributed (payment
-	 * direction is down) or capitalized (payment direction is up).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -402,8 +403,8 @@ public class Debt extends Security {
 					FinancialInstrumentAttributes27.mmPaymentDirection, FinancialInstrumentAttributes14.mmPaymentDirection, FinancialInstrumentAttributes30.mmPaymentDirection, FinancialInstrumentAttributes28.mmPaymentDirection,
 					Debt1.mmPaymentDirectionIndicator, FinancialInstrumentAttributes15.mmPaymentDirection, FinancialInstrumentAttributes29.mmPaymentDirection, Debt2.mmPaymentDirectionIndicator,
 					FinancialInstrumentAttributes2.mmPaymentDirection);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentDirectionIndicator";
 			definition = "Indicates the direction of payment for asset or mortgage backed securities, ie, whether the repaid capital is distributed (payment direction is down) or capitalized (payment direction is up).";
@@ -422,9 +423,8 @@ public class Debt extends Security {
 	};
 	protected ISODateTime nextCallableDate;
 	/**
-	 * Next date/time at which the issuer has the right to pay the securitiy
-	 * prior to maturity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -658,8 +658,8 @@ public class Debt extends Security {
 					FinancialInstrumentAttributes67.mmNextCallableDate, FinancialInstrumentAttributes70.mmNextCallableDate, FinancialInstrumentAttributes69.mmNextCallableDate, FinancialInstrumentAttributes71.mmNextCallableDate,
 					FinancialInstrumentAttributes75.mmNextCallableDate, FinancialInstrumentAttributes78.mmNextCallableDate, FinancialInstrumentAttributes79.mmNextCallableDate, FinancialInstrumentAttributes81.mmNextCallableDate,
 					FinancialInstrumentAttributes80.mmNextCallableDate, FinancialInstrumentAttributes85.mmNextCallableDate, FinancialInstrumentAttributes84.mmNextCallableDate, FinancialInstrumentAttributes83.mmNextCallableDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NextCallableDate";
 			definition = "Next date/time at which the issuer has the right to pay the securitiy prior to maturity.";
@@ -678,9 +678,8 @@ public class Debt extends Security {
 	};
 	protected ISODateTime putableDate;
 	/**
-	 * Date at which the holder has the right to ask for redemption of the
-	 * security prior to final maturity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -914,8 +913,8 @@ public class Debt extends Security {
 					FinancialInstrumentAttributes71.mmPutableDate, FinancialInstrumentAttributes75.mmPutableDate, FinancialInstrumentAttributes78.mmPutableDate, FinancialInstrumentAttributes79.mmPutableDate,
 					FinancialInstrumentAttributes81.mmPutableDate, FinancialInstrumentAttributes80.mmPutableDate, FinancialInstrumentAttributes85.mmPutableDate, FinancialInstrumentAttributes84.mmPutableDate,
 					FinancialInstrumentAttributes83.mmPutableDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PutableDate";
 			definition = "Date at which the holder has the right to ask for redemption of the security prior to final maturity.";
@@ -934,8 +933,8 @@ public class Debt extends Security {
 	};
 	protected ISODateTime datedDate;
 	/**
-	 * First date/time at which a security begins to accrue interest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1168,8 +1167,8 @@ public class Debt extends Security {
 					FinancialInstrumentAttributes71.mmDatedDate, FinancialInstrumentAttributes75.mmDatedDate, FinancialInstrumentAttributes78.mmDatedDate, FinancialInstrumentAttributes79.mmDatedDate,
 					FinancialInstrumentAttributes81.mmDatedDate, FinancialInstrumentAttributes80.mmDatedDate, FinancialInstrumentAttributes85.mmDatedDate, FinancialInstrumentAttributes84.mmDatedDate,
 					FinancialInstrumentAttributes83.mmDatedDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DatedDate";
 			definition = "First date/time at which a security begins to accrue interest.";
@@ -1188,9 +1187,8 @@ public class Debt extends Security {
 	};
 	protected ISODateTime firstPaymentDate;
 	/**
-	 * Date/time at which the first interest payment is due to holders of the
-	 * security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1301,8 +1299,8 @@ public class Debt extends Security {
 					FinancialInstrumentAttributes31.mmFirstPaymentDate, FinancialInstrumentAttributes44.mmFirstPaymentDate, FinancialInstrumentAttributes15.mmFirstPaymentDate, FinancialInstrumentAttributes29.mmFirstPaymentDate,
 					Debt2.mmFirstPaymentDate, FinancialInstrumentAttributes2.mmFirstPaymentDate, FinancialInstrumentAttributes63.mmFirstPaymentDate, FinancialInstrumentAttributes64.mmFirstPaymentDate,
 					FinancialInstrumentAttributes75.mmFirstPaymentDate, FinancialInstrumentAttributes78.mmFirstPaymentDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirstPaymentDate";
 			definition = "Date/time at which the first interest payment is due to holders of the security.";
@@ -1321,16 +1319,8 @@ public class Debt extends Security {
 	};
 	protected PercentageRate factor;
 	/**
-	 * Rate that defines the outstanding principal of the factored security.<br>
-	 * Factored securities are debt instruments that have a factor that is used
-	 * in the calculation of net money and market value. <br>
-	 * Factors can be specified as current, next, previous or end factors.<br>
-	 * End factor: portion of principal that is still due at the end of the
-	 * financing period.<br>
-	 * Previous factor: portion of principal that is still due before the
-	 * current factor becomes applicable.<br>
-	 * Next factor: rate that will be applicable as of the next factor date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1930,8 +1920,8 @@ public class Debt extends Security {
 					FinancialInstrumentAttributes81.mmPreviousFactor, FinancialInstrumentAttributes81.mmNextFactor, FinancialInstrumentAttributes80.mmPreviousFactor, FinancialInstrumentAttributes80.mmNextFactor,
 					FinancialInstrumentAttributes85.mmPreviousFactor, FinancialInstrumentAttributes85.mmNextFactor, FinancialInstrumentAttributes84.mmPreviousFactor, FinancialInstrumentAttributes84.mmNextFactor,
 					FinancialInstrumentAttributes83.mmPreviousFactor, FinancialInstrumentAttributes83.mmNextFactor);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Factor";
 			definition = "Rate that defines the outstanding principal of the factored security.\r\nFactored securities are debt instruments that have a factor that is used in the calculation of net money and market value. \r\nFactors can be specified as current, next, previous or end factors.\r\nEnd factor: portion of principal that is still due at the end of the financing period.\r\nPrevious factor: portion of principal that is still due before the current factor becomes applicable.\r\nNext factor: rate that will be applicable as of the next factor date.";
@@ -1950,9 +1940,8 @@ public class Debt extends Security {
 	};
 	protected Max15NumericText poolNumber;
 	/**
-	 * Number identifying a group of underlying assets assigned by the issuer of
-	 * a factored security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2066,8 +2055,8 @@ public class Debt extends Security {
 					FinancialInstrumentAttributes44.mmPoolNumber, FinancialInstrumentAttributes15.mmPoolNumber, FinancialInstrumentAttributes29.mmPoolNumber, CommonFinancialInstrumentAttributes1.mmPoolNumber,
 					FinancialInstrumentAttributes2.mmPoolNumber, FinancialInstrumentAttributes63.mmPoolNumber, FinancialInstrumentAttributes64.mmPoolNumber, FinancialInstrumentAttributes75.mmPoolNumber,
 					FinancialInstrumentAttributes78.mmPoolNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PoolNumber";
 			definition = "Number identifying a group of underlying assets assigned by the issuer of a factored security.";
@@ -2086,9 +2075,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator variableRateIndicator;
 	/**
-	 * Indicates whether the interest rate of an interest bearing instrument is
-	 * reset periodically.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2203,8 +2191,8 @@ public class Debt extends Security {
 					FinancialInstrumentAttributes44.mmVariableRateIndicator, FinancialInstrumentAttributes15.mmVariableRateIndicator, FinancialInstrumentAttributes29.mmVariableRateIndicator, Debt2.mmVariableRateIndicator,
 					FinancialInstrumentAttributes2.mmVariableRateIndicator, FinancialInstrumentAttributes63.mmVariableRateIndicator, FinancialInstrumentAttributes64.mmVariableRateIndicator,
 					FinancialInstrumentAttributes75.mmVariableRateIndicator, FinancialInstrumentAttributes78.mmVariableRateIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VariableRateIndicator";
 			definition = "Indicates whether the interest rate of an interest bearing instrument is reset periodically.";
@@ -2223,9 +2211,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator callableIndicator;
 	/**
-	 * Indicates whether the issuer has the right to pay the security prior to
-	 * maturity. Also called RetractableIndicator.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2343,8 +2330,8 @@ public class Debt extends Security {
 					FinancialInstrumentStipulations.mmCallableIndicator, FinancialInstrumentAttributes31.mmCallableIndicator, FinancialInstrumentStipulations2.mmCallableIndicator, FinancialInstrumentAttributes44.mmCallableIndicator,
 					FinancialInstrumentAttributes15.mmCallableIndicator, FinancialInstrumentAttributes29.mmCallableIndicator, Debt2.mmCallableIndicator, FinancialInstrumentAttributes2.mmCallableIndicator,
 					FinancialInstrumentAttributes63.mmCallableIndicator, FinancialInstrumentAttributes64.mmCallableIndicator, FinancialInstrumentAttributes75.mmCallableIndicator, FinancialInstrumentAttributes78.mmCallableIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CallableIndicator";
 			definition = "Indicates whether the issuer has the right to pay the security prior to maturity. Also called RetractableIndicator.";
@@ -2363,9 +2350,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator putableIndicator;
 	/**
-	 * Indicates whether the holder has the right to ask for redemption of the
-	 * security prior to final maturity. Also called RedeemableIndicator.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2483,8 +2469,8 @@ public class Debt extends Security {
 					FinancialInstrumentStipulations.mmPutableIndicator, FinancialInstrumentAttributes31.mmPutableIndicator, FinancialInstrumentStipulations2.mmPutableIndicator, FinancialInstrumentAttributes44.mmPutableIndicator,
 					FinancialInstrumentAttributes15.mmPutableIndicator, FinancialInstrumentAttributes29.mmPutableIndicator, Debt2.mmPutableIndicator, FinancialInstrumentAttributes2.mmPutableIndicator,
 					FinancialInstrumentAttributes63.mmPutableIndicator, FinancialInstrumentAttributes64.mmPutableIndicator, FinancialInstrumentAttributes75.mmPutableIndicator, FinancialInstrumentAttributes78.mmPutableIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PutableIndicator";
 			definition = "Indicates whether the holder has the right to ask for redemption of the security prior to final maturity. Also called RedeemableIndicator.";
@@ -2503,8 +2489,8 @@ public class Debt extends Security {
 	};
 	protected PercentageRate yieldToMaturityRate;
 	/**
-	 * Rate of return anticipated on a bond when held until maturity date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2562,8 +2548,8 @@ public class Debt extends Security {
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes35.mmYieldToMaturityRate, FinancialInstrumentAttributes41.mmYieldToMaturityRate, FinancialInstrumentAttributes36.mmYieldToMaturityRate,
 					FinancialInstrumentAttributes42.mmYieldToMaturityRate, FinancialInstrumentAttributes63.mmYieldToMaturityRate, FinancialInstrumentAttributes64.mmYieldToMaturityRate, FinancialInstrumentAttributes75.mmYieldToMaturityRate,
 					FinancialInstrumentAttributes78.mmYieldToMaturityRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "YieldToMaturityRate";
 			definition = "Rate of return anticipated on a bond when held until maturity date.";
@@ -2582,10 +2568,8 @@ public class Debt extends Security {
 	};
 	protected CurrencyAndAmount accruedCapitalisationAmount;
 	/**
-	 * Amount of unpaid interest (on bonds which have defaulted and have
-	 * subsequently restructured), which is capitalized and added to the
-	 * original principal amount of the bond.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2687,6 +2671,9 @@ public class Debt extends Security {
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Debt Debt}
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::ACRU</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2708,8 +2695,9 @@ public class Debt extends Security {
 					OtherAmounts2.mmAccruedCapitalisationAmount, OtherAmounts6.mmAccruedCapitalisationAmount, OtherAmounts15.mmAccruedCapitalisationAmount, OtherAmounts22.mmAccruedCapitalisationAmount,
 					OtherAmounts28.mmAccruedCapitalisationAmount, OtherAmounts30.mmAccruedCapitalisationAmount, OtherAmounts31.mmAccruedCapitalisationAmount, OtherAmounts29.mmAccruedCapitalisationAmount,
 					OtherAmounts35.mmAccruedCapitalisationAmount, OtherAmounts34.mmAccruedCapitalisationAmount, OtherAmounts38.mmAccruedCapitalisationAmount, OtherAmounts33.mmAccruedCapitalisationAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::ACRU"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccruedCapitalisationAmount";
 			definition = "Amount of unpaid interest (on bonds which have defaulted and have subsequently restructured), which is capitalized and added to the original principal amount of the bond.";
@@ -2728,8 +2716,8 @@ public class Debt extends Security {
 	};
 	protected ISODateTime nextCouponDate;
 	/**
-	 * Next payment date of an interest bearing financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2860,6 +2848,9 @@ public class Debt extends Security {
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Debt Debt}
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::COUP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2883,8 +2874,9 @@ public class Debt extends Security {
 					FinancialInstrumentAttributes65.mmNextCouponDate, FinancialInstrumentAttributes67.mmNextCouponDate, FinancialInstrumentAttributes70.mmNextCouponDate, FinancialInstrumentAttributes69.mmNextCouponDate,
 					FinancialInstrumentAttributes71.mmNextCouponDate, FinancialInstrumentAttributes79.mmNextCouponDate, FinancialInstrumentAttributes81.mmNextCouponDate, FinancialInstrumentAttributes80.mmNextCouponDate,
 					FinancialInstrumentAttributes85.mmNextCouponDate, FinancialInstrumentAttributes84.mmNextCouponDate, FinancialInstrumentAttributes83.mmNextCouponDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::COUP"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NextCouponDate";
 			definition = "Next payment date of an interest bearing financial instrument.";
@@ -2903,8 +2895,8 @@ public class Debt extends Security {
 	};
 	protected ISODateTime nextFactorDate;
 	/**
-	 * The date that the current factor will be changed to a new factor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2949,8 +2941,8 @@ public class Debt extends Security {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmNextFactorDate, FinancialInstrumentAttributes31.mmNextFactorDate, FinancialInstrumentAttributes44.mmNextFactorDate, Debt2.mmNextFactorDate,
 					FinancialInstrumentAttributes2.mmNextFactorDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NextFactorDate";
 			definition = "The date that the current factor will be changed to a new factor.";
@@ -2969,9 +2961,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator oddCouponIndicator;
 	/**
-	 * Specifies whether the payment of the coupon (interest) on a bond is off
-	 * the normal schedule.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3018,8 +3009,8 @@ public class Debt extends Security {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmOddCouponIndicator, FinancialInstrumentAttributes31.mmOddCouponIndicator, FinancialInstrumentAttributes44.mmOddCouponIndicator, Debt2.mmOddCouponIndicator,
 					FinancialInstrumentAttributes2.mmOddCouponIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OddCouponIndicator";
 			definition = "Specifies whether the payment of the coupon (interest) on a bond is off the normal schedule.";
@@ -3038,10 +3029,8 @@ public class Debt extends Security {
 	};
 	protected Number cPProgram;
 	/**
-	 * The program under which a commercial paper is issued. The values that are
-	 * most used are: 0 = N/A 1 = 3(a)3 2 = 4(2) 3 = 3(a)4 4 = 3(c)7 5 = 144A 6
-	 * = 3(a)2 99 = Other
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3077,8 +3066,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmCPProgram = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmCPProgram, Debt2.mmCPProgram);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CPProgram";
 			definition = "The program under which a commercial paper is issued. The values that are most used are:\n0 = N/A\n1 = 3(a)3\n2 = 4(2)\n3 = 3(a)4\n4 = 3(c)7\n5 = 144A\n6 = 3(a)2\n99 = Other";
@@ -3097,8 +3086,8 @@ public class Debt extends Security {
 	};
 	protected Max350Text cPRegistrationType;
 	/**
-	 * Registration type of a commercial paper issuance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3132,8 +3121,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmCPRegistrationType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmCPRegistrationType, Debt2.mmCPRegistrationType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CPRegistrationType";
 			definition = "Registration type of a commercial paper issuance.";
@@ -3152,9 +3141,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator convertibleIndicator;
 	/**
-	 * Indicates whether the interest bearing security is convertible into
-	 * another type of security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3208,8 +3196,8 @@ public class Debt extends Security {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmConvertibleIndicator, FinancialInstrumentStipulations.mmConvertibleIndicator, FinancialInstrumentAttributes31.mmConvertibleIndicator,
 					FinancialInstrumentStipulations2.mmConvertibleIndicator, FinancialInstrumentAttributes44.mmConvertibleIndicator, Debt2.mmCouponRange, FinancialInstrumentAttributes2.mmConvertibleIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConvertibleIndicator";
 			definition = "Indicates whether the interest bearing security is convertible into another type of security.";
@@ -3228,9 +3216,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator preFundedIndicator;
 	/**
-	 * Indicates whether an interest bearing instrument is deposited in a fund
-	 * that will be used to pay debt service on refunded securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3273,8 +3260,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmPreFundedIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmPreFundedIndicator, FinancialInstrumentStipulations.mmPreFundedIndicator, FinancialInstrumentStipulations2.mmPreFundedIndicator, Debt2.mmPreFundedIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreFundedIndicator";
 			definition = "Indicates whether an interest bearing instrument is deposited in a fund that will be used to pay debt service on refunded securities.";
@@ -3293,13 +3280,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator escrowedIndicator;
 	/**
-	 * Indicates whether an interest bearing instrument is being escrowed or
-	 * collateralized either by direct obligations guaranteed by the US
-	 * government, or by other types of securities. The maturity schedules of
-	 * the securities in the escrow fund are determined in such a way to pay the
-	 * maturity value, coupon, and premium payments (if any) of the refunded
-	 * bonds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3342,8 +3324,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmEscrowedIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmEscrowedIndicator, FinancialInstrumentStipulations.mmEscrowedIndicator, FinancialInstrumentStipulations2.mmEscrowedIndicator, Debt2.mmEscrowedIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EscrowedIndicator";
 			definition = "Indicates whether an interest bearing instrument is being escrowed or collateralized either by direct obligations guaranteed by the US government, or by other types of securities. The maturity schedules of the securities in the escrow fund are determined in such a way to pay the maturity value, coupon, and premium payments (if any) of the refunded bonds.";
@@ -3362,8 +3344,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator perpetualIndicator;
 	/**
-	 * Indicates whether the security has no maturity date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3404,8 +3386,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmPerpetualIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmPerpetualIndicator, FinancialInstrumentStipulations.mmPerpetualIndicator, FinancialInstrumentStipulations2.mmPerpetualIndicator, Debt2.mmPerpetualIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PerpetualIndicator";
 			definition = "Indicates whether the security has no maturity date.";
@@ -3424,8 +3406,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator subordinatedIndicator;
 	/**
-	 * Indicates whether the security is a subordinated security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3463,8 +3445,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmSubordinatedIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmSubordinatedIndicator, Debt2.mmSubordinatedIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubordinatedIndicator";
 			definition = "Indicates whether the security is a subordinated security.";
@@ -3483,9 +3465,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator extendibleIndicator;
 	/**
-	 * Indicates whether the security is extendible,eg, repayment may be
-	 * extended or maturity changed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3524,8 +3505,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmExtendibleIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmExtendibleIndicator, Debt2.mmExtendibleIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExtendibleIndicator";
 			definition = "Indicates whether the security is extendible,eg, repayment may be extended or maturity changed.";
@@ -3544,8 +3525,8 @@ public class Debt extends Security {
 	};
 	protected DateTimePeriod extendiblePeriod;
 	/**
-	 * Period during which a date might be extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3587,8 +3568,8 @@ public class Debt extends Security {
 	public static final MMBusinessAssociationEnd mmExtendiblePeriod = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmExtendiblePeriod, Debt2.mmExtendiblePeriod);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExtendiblePeriod";
 			definition = "Period during which a date might be extended.";
@@ -3601,8 +3582,8 @@ public class Debt extends Security {
 	};
 	protected CurrencyAndAmount overAllotmentAmount;
 	/**
-	 * Amount for which a security can be overalloted (as in greenshoe option).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3647,8 +3628,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmOverAllotmentAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmOverAllotmentAmount, FinancialInstrumentStipulations.mmOverAllotmentAmount, FinancialInstrumentStipulations2.mmOverAllotmentAmount, Debt2.mmOverAllotmentAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OverAllotmentAmount";
 			definition = "Amount for which a security can be overalloted (as in greenshoe option).";
@@ -3667,9 +3648,8 @@ public class Debt extends Security {
 	};
 	protected PercentageRate overAllotmentRate;
 	/**
-	 * Percentage for which a security can be overalloted (as in greenshoe
-	 * option).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3712,8 +3692,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmOverAllotmentRate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmOverAllotmentRate, FinancialInstrumentStipulations.mmOverAllotmentRate, FinancialInstrumentStipulations2.mmOverAllotmentRate, Debt2.mmOverAllotmentRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OverAllotmentRate";
 			definition = "Percentage for which a security can be overalloted (as in greenshoe option).";
@@ -3732,9 +3712,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator amortisableIndicator;
 	/**
-	 * Indicates whether repayment is made via regular principal and interest
-	 * payments over time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3783,8 +3762,8 @@ public class Debt extends Security {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmAmortisableIndicator, FinancialInstrumentStipulations.mmAmortisableIndicator, FinancialInstrumentStipulations.mmAlternativeMinimumTaxIndicator,
 					FinancialInstrumentStipulations2.mmAmortisableIndicator, Debt2.mmAmortisableIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AmortisableIndicator";
 			definition = "Indicates whether repayment is made via regular principal and interest payments over time.";
@@ -3803,9 +3782,8 @@ public class Debt extends Security {
 	};
 	protected DistributionPolicyCode capitalisedInterest;
 	/**
-	 * Specifies whether the interest amount is capitalised until maturity date
-	 * or paid out at each interest payment date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3844,8 +3822,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmCapitalisedInterest = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmCapitalisedInterest, Debt2.mmCapitalisedInterest);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CapitalisedInterest";
 			definition = "Specifies whether the interest amount is capitalised until maturity date or paid out at each interest payment date.";
@@ -3864,8 +3842,8 @@ public class Debt extends Security {
 	};
 	protected List<CurrencyAndAmount> actualDenominationAmount;
 	/**
-	 * Nominal value per security unit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3902,8 +3880,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmActualDenominationAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmActualDenominationAmount, Debt2.mmActualDenominationAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ActualDenominationAmount";
 			definition = "Nominal value per security unit.";
@@ -3921,8 +3899,8 @@ public class Debt extends Security {
 	};
 	protected DecimalNumber pieces;
 	/**
-	 * Number of pieces composing a pool of financial assets.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3957,8 +3935,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmPieces = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmPieces, Debt2.mmPieces);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Pieces";
 			definition = "Number of pieces composing a pool of financial assets.";
@@ -3977,8 +3955,8 @@ public class Debt extends Security {
 	};
 	protected DecimalNumber poolsMaximum;
 	/**
-	 * Collection of assets by which a security is backed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4013,8 +3991,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmPoolsMaximum = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsMaximum, Debt2.mmPoolsMaximum);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PoolsMaximum";
 			definition = "Collection of assets by which a security is backed.";
@@ -4033,9 +4011,8 @@ public class Debt extends Security {
 	};
 	protected DecimalNumber poolsPerMillion;
 	/**
-	 * Indicates per million the collection of loans, mortgages or other assets
-	 * assembled by an originator as the basis for a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4072,8 +4049,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmPoolsPerMillion = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsPerMillion, Debt2.mmPoolsPerMillion);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PoolsPerMillion";
 			definition = "Indicates per million the collection of loans, mortgages or other assets assembled by an originator as the basis for a security.";
@@ -4092,9 +4069,8 @@ public class Debt extends Security {
 	};
 	protected DecimalNumber poolsPerLot;
 	/**
-	 * Indicates per lot the collection of loans, mortgages or other assets
-	 * assembled by an originator as the basis for a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4131,8 +4107,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmPoolsPerLot = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsPerLot, Debt2.mmPoolsPerLot);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PoolsPerLot";
 			definition = "Indicates per lot the collection of loans, mortgages or other assets assembled by an originator as the basis for a security.";
@@ -4151,9 +4127,8 @@ public class Debt extends Security {
 	};
 	protected DecimalNumber poolsPerTrade;
 	/**
-	 * Indicates per trade the collection of loans, mortgages or other assets
-	 * assembled by an originator as the basis for a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4190,8 +4165,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmPoolsPerTrade = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsPerTrade, Debt2.mmPoolsPerTrade);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PoolsPerTrade";
 			definition = "Indicates per trade the collection of loans, mortgages or other assets assembled by an originator as the basis for a security.";
@@ -4210,9 +4185,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator constantPrePaymentPenalty;
 	/**
-	 * Indicates whether a penalty might be imposed to the borrower of a
-	 * mortgage in case of prepayments occurring during the lockout period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4251,8 +4225,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmConstantPrePaymentPenalty = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmConstantPrePaymentPenaltyIndicator, Debt2.mmConstantPrePaymentPenaltyIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConstantPrePaymentPenalty";
 			definition = "Indicates whether a penalty might be imposed to the borrower of a mortgage in case of prepayments occurring during the lockout period.";
@@ -4271,9 +4245,8 @@ public class Debt extends Security {
 	};
 	protected PrePaymentSpeedCode prePaymentSpeed;
 	/**
-	 * Speed of unscheduled partial or complete payment of the principal amount
-	 * outstanding on a debt obligation before its due date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4308,8 +4281,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmPrePaymentSpeed = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmPrePaymentSpeed);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PrePaymentSpeed";
 			definition = "Speed of unscheduled partial or complete payment of the principal amount outstanding on a debt obligation before its due date.";
@@ -4328,8 +4301,8 @@ public class Debt extends Security {
 	};
 	protected PercentageRate constantPrePaymentYield;
 	/**
-	 * Measure of prepayment as a yield of the current outstanding loan balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4368,8 +4341,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmConstantPrePaymentYield = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmConstantPrePaymentYield, Debt2.mmConstantPrePaymentYield);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConstantPrePaymentYield";
 			definition = "Measure of prepayment as a yield of the current outstanding loan balance.";
@@ -4388,9 +4361,8 @@ public class Debt extends Security {
 	};
 	protected PercentageRate weightedAverageCoupon;
 	/**
-	 * Contains the weighted average coupon of the fixed income instrument
-	 * (expressed as a percentage).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4429,8 +4401,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmWeightedAverageCoupon = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageCoupon, Debt2.mmWeightedAverageCoupon);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WeightedAverageCoupon";
 			definition = "Contains the weighted average coupon of the fixed income instrument (expressed as a percentage).";
@@ -4449,9 +4421,8 @@ public class Debt extends Security {
 	};
 	protected DecimalNumber weightedAverageLife;
 	/**
-	 * Contains the weighted average life of the fixed income instrument
-	 * (expressed in months).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4490,8 +4461,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmWeightedAverageLife = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageLife, Debt2.mmWeightedAverageLife);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WeightedAverageLife";
 			definition = "Contains the weighted average life of the fixed income instrument (expressed in months).";
@@ -4510,9 +4481,8 @@ public class Debt extends Security {
 	};
 	protected DecimalNumber weightedAverageLoan;
 	/**
-	 * Contains the weighted average loan of the fixed income instrument
-	 * (expressed in months).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4551,8 +4521,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmWeightedAverageLoan = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageLoan, Debt2.mmWeightedAverageLoan);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WeightedAverageLoan";
 			definition = "Contains the weighted average loan of the fixed income instrument (expressed in months).";
@@ -4571,9 +4541,8 @@ public class Debt extends Security {
 	};
 	protected DecimalNumber weightedAverageMaturity;
 	/**
-	 * Contains the weighted average maturity of the fixed income instrument
-	 * (expressed in months).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4612,8 +4581,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmWeightedAverageMaturity = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageMaturity, Debt2.mmWeightedAverageMaturity);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WeightedAverageMaturity";
 			definition = "Contains the weighted average maturity of the fixed income instrument (expressed in months).";
@@ -4632,8 +4601,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator insuredIndicator;
 	/**
-	 * Indicates whether the instruments is backed by any kind of asset or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4676,8 +4645,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmInsuredIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmInsuredIndicator, FinancialInstrumentStipulations.mmInsuredIndicator, FinancialInstrumentStipulations2.mmInsuredIndicator, Debt2.mmInsuredIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InsuredIndicator";
 			definition = "Indicates whether the instruments is backed by any kind of asset or not.";
@@ -4696,9 +4665,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator bankQualified;
 	/**
-	 * Indicates whether the security is bank qualified (usually applies to loan
-	 * products).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4737,8 +4705,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmBankQualified = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmBankQualifiedIndicator, Debt2.mmBankQualifiedIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BankQualified";
 			definition = "Indicates whether the security is bank qualified (usually applies to loan products).";
@@ -4757,10 +4725,8 @@ public class Debt extends Security {
 	};
 	protected PercentageRate autoReinvestment;
 	/**
-	 * Indicates an instruction to reinvest dividends in the underlying security
-	 * (or proceeds at maturity in a similar instrument) if the current rate
-	 * equals the rate specified or better.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4801,8 +4767,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmAutoReinvestment = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmAutoReinvestment, FinancialInstrumentStipulations2.mmAutoReinvestment, Debt2.mmAutoReinvestment);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AutoReinvestment";
 			definition = "Indicates an instruction to reinvest dividends in the underlying security (or proceeds at maturity in a similar instrument) if the current rate equals the rate specified or better.";
@@ -4821,9 +4787,8 @@ public class Debt extends Security {
 	};
 	protected DateTimePeriod customDate;
 	/**
-	 * Indicates an instruction to override an investment's default start and/or
-	 * end date with a custom date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4869,8 +4834,8 @@ public class Debt extends Security {
 	public static final MMBusinessAssociationEnd mmCustomDate = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmCustomDate, FinancialInstrumentStipulations2.mmCustomDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CustomDate";
 			definition = "Indicates an instruction to override an investment's default start and/or end date with a custom date.";
@@ -4883,11 +4848,8 @@ public class Debt extends Security {
 	};
 	protected Number lookBack;
 	/**
-	 * Indicates an instruction or attribute giving the number of days to be
-	 * included in the look-back period for the investment. Some options allow
-	 * exercise based on the underlying asset's optimal value over the look-back
-	 * period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4912,6 +4874,9 @@ public class Debt extends Security {
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Debt Debt}
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::TTCO//GTDL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -4927,8 +4892,9 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmLookBack = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmLookBack, FinancialInstrumentStipulations2.mmLookBack, Debt2.mmLookBack);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::TTCO//GTDL"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LookBack";
 			definition = "Indicates an instruction or attribute giving the number of days to be included in the look-back period for the investment. Some options allow exercise based on the underlying asset's optimal value over the look-back period.";
@@ -4947,8 +4913,8 @@ public class Debt extends Security {
 	};
 	protected SecuritiesQuantity minimumDenomination;
 	/**
-	 * Indicates the minimum denomination of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4992,8 +4958,8 @@ public class Debt extends Security {
 	public static final MMBusinessAssociationEnd mmMinimumDenomination = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmMinimumDenomination, FinancialInstrumentStipulations2.mmMinimumDenomination);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumDenomination";
 			definition = "Indicates the minimum denomination of a security.";
@@ -5006,8 +4972,8 @@ public class Debt extends Security {
 	};
 	protected Number maximumSubstitution;
 	/**
-	 * Maximum number of time the collateral can be substitute.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5046,8 +5012,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmMaximumSubstitution = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmMaximumSubstitution, FinancialInstrumentStipulations2.mmMaximumSubstitution, Debt2.mmMaximumSubstitution);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumSubstitution";
 			definition = "Maximum number of time the collateral can be substitute.";
@@ -5066,8 +5032,8 @@ public class Debt extends Security {
 	};
 	protected SecuritiesQuantity minimumIncrement;
 	/**
-	 * Indicates the minimum tradable increments of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5113,8 +5079,8 @@ public class Debt extends Security {
 	public static final MMBusinessAssociationEnd mmMinimumIncrement = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmMinimumIncrement, FinancialInstrumentStipulations2.mmMinimumIncrement, Debt2.mmMinimumIncrement);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumIncrement";
 			definition = "Indicates the minimum tradable increments of a security.";
@@ -5127,10 +5093,8 @@ public class Debt extends Security {
 	};
 	protected Max350Text production;
 	/**
-	 * Indicates a search criterion used when looking to buy a bond,
-	 * particularly an mortgage back security (MBS), issued in a particular
-	 * year.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5168,8 +5132,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmProduction = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmProduction, FinancialInstrumentStipulations2.mmProduction);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Production";
 			definition = "Indicates a search criterion used when looking to buy a bond, particularly an mortgage back security (MBS), issued in a particular year.";
@@ -5188,8 +5152,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator restricted;
 	/**
-	 * Identifies if the securities is restricted or not (as per Rule 144).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5227,8 +5191,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmRestricted = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmRestrictedIndicator, FinancialInstrumentStipulations2.mmRestrictedIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Restricted";
 			definition = "Identifies if the securities is restricted or not (as per Rule 144).";
@@ -5247,10 +5211,8 @@ public class Debt extends Security {
 	};
 	protected FrequencyCode priceFrequency;
 	/**
-	 * Indicates the frequency at which the bond is re-rated and therefore
-	 * re-priced (bond attribute, particularly of floating rate and index linked
-	 * instruments).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5291,8 +5253,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmPriceFrequency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmPriceFrequency, FinancialInstrumentStipulations2.mmPriceFrequency, Debt2.mmPriceFrequency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceFrequency";
 			definition = "Indicates the frequency at which the bond is re-rated and therefore re-priced (bond attribute, particularly of floating rate and index linked instruments).";
@@ -5311,8 +5273,8 @@ public class Debt extends Security {
 	};
 	protected FrequencyCode substitutionFrequency;
 	/**
-	 * Indicates the maximum number of times collateral can be substituted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5353,8 +5315,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmSubstitutionFrequency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmSubstitutionFrequency, FinancialInstrumentStipulations2.mmSubstitutionFrequency, Debt2.mmSubstitutionFrequency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubstitutionFrequency";
 			definition = "Indicates the maximum number of times collateral can be substituted.";
@@ -5373,8 +5335,8 @@ public class Debt extends Security {
 	};
 	protected Number substitutionLeft;
 	/**
-	 * Number of remaining times the collateral can be substitute.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5413,8 +5375,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmSubstitutionLeft = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmSubstitutionLeft, FinancialInstrumentStipulations2.mmSubstitutionLeft, Debt2.mmSubstitutionLeft);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubstitutionLeft";
 			definition = "Number of remaining times the collateral can be substitute.";
@@ -5433,9 +5395,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator wholePool;
 	/**
-	 * Indicates a search criterion when looking to buy an mortgage back
-	 * security (MBS) that either is [yes] or is not [no] an entire pool.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5474,8 +5435,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmWholePool = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmWholePoolIndicator, FinancialInstrumentStipulations2.mmWholePoolIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WholePool";
 			definition = "Indicates a search criterion when looking to buy an mortgage back security (MBS) that either is [yes] or is not [no] an entire pool.";
@@ -5494,9 +5455,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator alternativeMinimumTax;
 	/**
-	 * Identifies whether the issue is subject to alternative minimum taxation
-	 * (used for municipal bonds).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5535,8 +5495,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmAlternativeMinimumTax = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations2.mmAlternativeMinimumTaxIndicator, Debt2.mmAlternativeMinimumTaxIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AlternativeMinimumTax";
 			definition = "Identifies whether the issue is subject to alternative minimum taxation (used for municipal bonds).";
@@ -5555,8 +5515,8 @@ public class Debt extends Security {
 	};
 	protected InterestCalculation nextInterest;
 	/**
-	 * Specifies the interest applicable to the next interest payment period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5576,6 +5536,9 @@ public class Debt extends Security {
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Debt Debt}
 	 * </li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92A::NXRT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -5589,8 +5552,9 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAssociationEnd mmNextInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92A::NXRT"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NextInterest";
 			definition = "Specifies the interest applicable to the next interest payment period.";
@@ -5603,8 +5567,8 @@ public class Debt extends Security {
 	};
 	protected ISODateTime extendibleDate;
 	/**
-	 * Date/time to which a date might be extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5628,8 +5592,8 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmExtendibleDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExtendibleDate";
 			definition = "Date/time to which a date might be extended.";
@@ -5648,10 +5612,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator sinkableIndicator;
 	/**
-	 * Indicates whether the security is a sinkung fund. A sinking fund is a
-	 * bond in which part of the total principal amount is repaid according to
-	 * agreed schedules of dates, amounts and prices.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5678,8 +5640,8 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmSinkableIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SinkableIndicator";
 			definition = "Indicates whether the security is a sinkung fund. A sinking fund is a bond in which part of the total principal amount is repaid according to agreed schedules of dates, amounts and prices.";
@@ -5698,9 +5660,8 @@ public class Debt extends Security {
 	};
 	protected YesNoIndicator insured;
 	/**
-	 * Identifies whether the lender is assured partial or full payment by a
-	 * third party if the borrower defaults.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5727,8 +5688,8 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmInsured = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Insured";
 			definition = "Identifies whether the lender is assured partial or full payment by a third party if the borrower defaults.";
@@ -5747,11 +5708,8 @@ public class Debt extends Security {
 	};
 	protected Max35Text geographics;
 	/**
-	 * Type of stipulation expressing geographical constraints on a fixed income
-	 * instrument. It is expressed with a state or country abbreviation and a
-	 * minimum or maximum percentage. Example: CA 0-80 (minimum of 80 percent in
-	 * Californian assets).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5785,8 +5743,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmGeographics = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt2.mmGeographics);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Geographics";
 			definition = "Type of stipulation expressing geographical constraints on a fixed income instrument. It is expressed with a state or country abbreviation and a minimum or maximum percentage. Example: CA 0-80 (minimum of 80 percent in Californian assets).";
@@ -5805,8 +5763,8 @@ public class Debt extends Security {
 	};
 	protected CurrencyCode paymentCurrency;
 	/**
-	 * Currency of the payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5838,8 +5796,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmPaymentCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt2.mmPaymentCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentCurrency";
 			definition = "Currency of the payment.";
@@ -5858,9 +5816,8 @@ public class Debt extends Security {
 	};
 	protected SecuritiesPricing dirtyPrice;
 	/**
-	 * Price that includes interest that has accrued since issue of the most
-	 * recent coupon payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5899,8 +5856,8 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmDirtyPrice = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingAttributes.mmDirtyPrice, UnderlyingAttributes2.mmDirtyPrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirtyPrice";
 			definition = "Price that includes interest that has accrued since issue of the most recent coupon payment.";
@@ -5919,9 +5876,8 @@ public class Debt extends Security {
 	};
 	protected DebtInstrumentSeniorityTypeCode debtSeniority;
 	/**
-	 * Seniority of a specific debt instrument, that is the order of repayment
-	 * in the event of a sale or bankruptcy of the issuer of the debt.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5948,8 +5904,8 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmDebtSeniority = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebtSeniority";
 			definition = "Seniority of a specific debt instrument, that is the order of repayment in the event of a sale or bankruptcy of the issuer of the debt.";
@@ -5970,7 +5926,7 @@ public class Debt extends Security {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Debt";
 				definition = "Financial instruments evidencing moneys owed by the issuer to the holder on terms as specified.";
@@ -6019,511 +5975,575 @@ public class Debt extends Security {
 		return paymentDirectionIndicator;
 	}
 
-	public void setPaymentDirectionIndicator(com.tools20022.repository.datatype.PaymentDirectionIndicator paymentDirectionIndicator) {
-		this.paymentDirectionIndicator = paymentDirectionIndicator;
+	public Debt setPaymentDirectionIndicator(com.tools20022.repository.datatype.PaymentDirectionIndicator paymentDirectionIndicator) {
+		this.paymentDirectionIndicator = Objects.requireNonNull(paymentDirectionIndicator);
+		return this;
 	}
 
 	public ISODateTime getNextCallableDate() {
 		return nextCallableDate;
 	}
 
-	public void setNextCallableDate(ISODateTime nextCallableDate) {
-		this.nextCallableDate = nextCallableDate;
+	public Debt setNextCallableDate(ISODateTime nextCallableDate) {
+		this.nextCallableDate = Objects.requireNonNull(nextCallableDate);
+		return this;
 	}
 
 	public ISODateTime getPutableDate() {
 		return putableDate;
 	}
 
-	public void setPutableDate(ISODateTime putableDate) {
-		this.putableDate = putableDate;
+	public Debt setPutableDate(ISODateTime putableDate) {
+		this.putableDate = Objects.requireNonNull(putableDate);
+		return this;
 	}
 
 	public ISODateTime getDatedDate() {
 		return datedDate;
 	}
 
-	public void setDatedDate(ISODateTime datedDate) {
-		this.datedDate = datedDate;
+	public Debt setDatedDate(ISODateTime datedDate) {
+		this.datedDate = Objects.requireNonNull(datedDate);
+		return this;
 	}
 
 	public ISODateTime getFirstPaymentDate() {
 		return firstPaymentDate;
 	}
 
-	public void setFirstPaymentDate(ISODateTime firstPaymentDate) {
-		this.firstPaymentDate = firstPaymentDate;
+	public Debt setFirstPaymentDate(ISODateTime firstPaymentDate) {
+		this.firstPaymentDate = Objects.requireNonNull(firstPaymentDate);
+		return this;
 	}
 
 	public PercentageRate getFactor() {
 		return factor;
 	}
 
-	public void setFactor(PercentageRate factor) {
-		this.factor = factor;
+	public Debt setFactor(PercentageRate factor) {
+		this.factor = Objects.requireNonNull(factor);
+		return this;
 	}
 
 	public Max15NumericText getPoolNumber() {
 		return poolNumber;
 	}
 
-	public void setPoolNumber(Max15NumericText poolNumber) {
-		this.poolNumber = poolNumber;
+	public Debt setPoolNumber(Max15NumericText poolNumber) {
+		this.poolNumber = Objects.requireNonNull(poolNumber);
+		return this;
 	}
 
 	public YesNoIndicator getVariableRateIndicator() {
 		return variableRateIndicator;
 	}
 
-	public void setVariableRateIndicator(YesNoIndicator variableRateIndicator) {
-		this.variableRateIndicator = variableRateIndicator;
+	public Debt setVariableRateIndicator(YesNoIndicator variableRateIndicator) {
+		this.variableRateIndicator = Objects.requireNonNull(variableRateIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getCallableIndicator() {
 		return callableIndicator;
 	}
 
-	public void setCallableIndicator(YesNoIndicator callableIndicator) {
-		this.callableIndicator = callableIndicator;
+	public Debt setCallableIndicator(YesNoIndicator callableIndicator) {
+		this.callableIndicator = Objects.requireNonNull(callableIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getPutableIndicator() {
 		return putableIndicator;
 	}
 
-	public void setPutableIndicator(YesNoIndicator putableIndicator) {
-		this.putableIndicator = putableIndicator;
+	public Debt setPutableIndicator(YesNoIndicator putableIndicator) {
+		this.putableIndicator = Objects.requireNonNull(putableIndicator);
+		return this;
 	}
 
 	public PercentageRate getYieldToMaturityRate() {
 		return yieldToMaturityRate;
 	}
 
-	public void setYieldToMaturityRate(PercentageRate yieldToMaturityRate) {
-		this.yieldToMaturityRate = yieldToMaturityRate;
+	public Debt setYieldToMaturityRate(PercentageRate yieldToMaturityRate) {
+		this.yieldToMaturityRate = Objects.requireNonNull(yieldToMaturityRate);
+		return this;
 	}
 
 	public CurrencyAndAmount getAccruedCapitalisationAmount() {
 		return accruedCapitalisationAmount;
 	}
 
-	public void setAccruedCapitalisationAmount(CurrencyAndAmount accruedCapitalisationAmount) {
-		this.accruedCapitalisationAmount = accruedCapitalisationAmount;
+	public Debt setAccruedCapitalisationAmount(CurrencyAndAmount accruedCapitalisationAmount) {
+		this.accruedCapitalisationAmount = Objects.requireNonNull(accruedCapitalisationAmount);
+		return this;
 	}
 
 	public ISODateTime getNextCouponDate() {
 		return nextCouponDate;
 	}
 
-	public void setNextCouponDate(ISODateTime nextCouponDate) {
-		this.nextCouponDate = nextCouponDate;
+	public Debt setNextCouponDate(ISODateTime nextCouponDate) {
+		this.nextCouponDate = Objects.requireNonNull(nextCouponDate);
+		return this;
 	}
 
 	public ISODateTime getNextFactorDate() {
 		return nextFactorDate;
 	}
 
-	public void setNextFactorDate(ISODateTime nextFactorDate) {
-		this.nextFactorDate = nextFactorDate;
+	public Debt setNextFactorDate(ISODateTime nextFactorDate) {
+		this.nextFactorDate = Objects.requireNonNull(nextFactorDate);
+		return this;
 	}
 
 	public YesNoIndicator getOddCouponIndicator() {
 		return oddCouponIndicator;
 	}
 
-	public void setOddCouponIndicator(YesNoIndicator oddCouponIndicator) {
-		this.oddCouponIndicator = oddCouponIndicator;
+	public Debt setOddCouponIndicator(YesNoIndicator oddCouponIndicator) {
+		this.oddCouponIndicator = Objects.requireNonNull(oddCouponIndicator);
+		return this;
 	}
 
 	public Number getCPProgram() {
 		return cPProgram;
 	}
 
-	public void setCPProgram(Number cPProgram) {
-		this.cPProgram = cPProgram;
+	public Debt setCPProgram(Number cPProgram) {
+		this.cPProgram = Objects.requireNonNull(cPProgram);
+		return this;
 	}
 
 	public Max350Text getCPRegistrationType() {
 		return cPRegistrationType;
 	}
 
-	public void setCPRegistrationType(Max350Text cPRegistrationType) {
-		this.cPRegistrationType = cPRegistrationType;
+	public Debt setCPRegistrationType(Max350Text cPRegistrationType) {
+		this.cPRegistrationType = Objects.requireNonNull(cPRegistrationType);
+		return this;
 	}
 
 	public YesNoIndicator getConvertibleIndicator() {
 		return convertibleIndicator;
 	}
 
-	public void setConvertibleIndicator(YesNoIndicator convertibleIndicator) {
-		this.convertibleIndicator = convertibleIndicator;
+	public Debt setConvertibleIndicator(YesNoIndicator convertibleIndicator) {
+		this.convertibleIndicator = Objects.requireNonNull(convertibleIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getPreFundedIndicator() {
 		return preFundedIndicator;
 	}
 
-	public void setPreFundedIndicator(YesNoIndicator preFundedIndicator) {
-		this.preFundedIndicator = preFundedIndicator;
+	public Debt setPreFundedIndicator(YesNoIndicator preFundedIndicator) {
+		this.preFundedIndicator = Objects.requireNonNull(preFundedIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getEscrowedIndicator() {
 		return escrowedIndicator;
 	}
 
-	public void setEscrowedIndicator(YesNoIndicator escrowedIndicator) {
-		this.escrowedIndicator = escrowedIndicator;
+	public Debt setEscrowedIndicator(YesNoIndicator escrowedIndicator) {
+		this.escrowedIndicator = Objects.requireNonNull(escrowedIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getPerpetualIndicator() {
 		return perpetualIndicator;
 	}
 
-	public void setPerpetualIndicator(YesNoIndicator perpetualIndicator) {
-		this.perpetualIndicator = perpetualIndicator;
+	public Debt setPerpetualIndicator(YesNoIndicator perpetualIndicator) {
+		this.perpetualIndicator = Objects.requireNonNull(perpetualIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getSubordinatedIndicator() {
 		return subordinatedIndicator;
 	}
 
-	public void setSubordinatedIndicator(YesNoIndicator subordinatedIndicator) {
-		this.subordinatedIndicator = subordinatedIndicator;
+	public Debt setSubordinatedIndicator(YesNoIndicator subordinatedIndicator) {
+		this.subordinatedIndicator = Objects.requireNonNull(subordinatedIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getExtendibleIndicator() {
 		return extendibleIndicator;
 	}
 
-	public void setExtendibleIndicator(YesNoIndicator extendibleIndicator) {
-		this.extendibleIndicator = extendibleIndicator;
+	public Debt setExtendibleIndicator(YesNoIndicator extendibleIndicator) {
+		this.extendibleIndicator = Objects.requireNonNull(extendibleIndicator);
+		return this;
 	}
 
 	public DateTimePeriod getExtendiblePeriod() {
 		return extendiblePeriod;
 	}
 
-	public void setExtendiblePeriod(com.tools20022.repository.entity.DateTimePeriod extendiblePeriod) {
-		this.extendiblePeriod = extendiblePeriod;
+	public Debt setExtendiblePeriod(com.tools20022.repository.entity.DateTimePeriod extendiblePeriod) {
+		this.extendiblePeriod = Objects.requireNonNull(extendiblePeriod);
+		return this;
 	}
 
 	public CurrencyAndAmount getOverAllotmentAmount() {
 		return overAllotmentAmount;
 	}
 
-	public void setOverAllotmentAmount(CurrencyAndAmount overAllotmentAmount) {
-		this.overAllotmentAmount = overAllotmentAmount;
+	public Debt setOverAllotmentAmount(CurrencyAndAmount overAllotmentAmount) {
+		this.overAllotmentAmount = Objects.requireNonNull(overAllotmentAmount);
+		return this;
 	}
 
 	public PercentageRate getOverAllotmentRate() {
 		return overAllotmentRate;
 	}
 
-	public void setOverAllotmentRate(PercentageRate overAllotmentRate) {
-		this.overAllotmentRate = overAllotmentRate;
+	public Debt setOverAllotmentRate(PercentageRate overAllotmentRate) {
+		this.overAllotmentRate = Objects.requireNonNull(overAllotmentRate);
+		return this;
 	}
 
 	public YesNoIndicator getAmortisableIndicator() {
 		return amortisableIndicator;
 	}
 
-	public void setAmortisableIndicator(YesNoIndicator amortisableIndicator) {
-		this.amortisableIndicator = amortisableIndicator;
+	public Debt setAmortisableIndicator(YesNoIndicator amortisableIndicator) {
+		this.amortisableIndicator = Objects.requireNonNull(amortisableIndicator);
+		return this;
 	}
 
 	public DistributionPolicyCode getCapitalisedInterest() {
 		return capitalisedInterest;
 	}
 
-	public void setCapitalisedInterest(DistributionPolicyCode capitalisedInterest) {
-		this.capitalisedInterest = capitalisedInterest;
+	public Debt setCapitalisedInterest(DistributionPolicyCode capitalisedInterest) {
+		this.capitalisedInterest = Objects.requireNonNull(capitalisedInterest);
+		return this;
 	}
 
 	public List<CurrencyAndAmount> getActualDenominationAmount() {
-		return actualDenominationAmount;
+		return actualDenominationAmount == null ? actualDenominationAmount = new ArrayList<>() : actualDenominationAmount;
 	}
 
-	public void setActualDenominationAmount(List<CurrencyAndAmount> actualDenominationAmount) {
-		this.actualDenominationAmount = actualDenominationAmount;
+	public Debt setActualDenominationAmount(List<CurrencyAndAmount> actualDenominationAmount) {
+		this.actualDenominationAmount = Objects.requireNonNull(actualDenominationAmount);
+		return this;
 	}
 
 	public DecimalNumber getPieces() {
 		return pieces;
 	}
 
-	public void setPieces(DecimalNumber pieces) {
-		this.pieces = pieces;
+	public Debt setPieces(DecimalNumber pieces) {
+		this.pieces = Objects.requireNonNull(pieces);
+		return this;
 	}
 
 	public DecimalNumber getPoolsMaximum() {
 		return poolsMaximum;
 	}
 
-	public void setPoolsMaximum(DecimalNumber poolsMaximum) {
-		this.poolsMaximum = poolsMaximum;
+	public Debt setPoolsMaximum(DecimalNumber poolsMaximum) {
+		this.poolsMaximum = Objects.requireNonNull(poolsMaximum);
+		return this;
 	}
 
 	public DecimalNumber getPoolsPerMillion() {
 		return poolsPerMillion;
 	}
 
-	public void setPoolsPerMillion(DecimalNumber poolsPerMillion) {
-		this.poolsPerMillion = poolsPerMillion;
+	public Debt setPoolsPerMillion(DecimalNumber poolsPerMillion) {
+		this.poolsPerMillion = Objects.requireNonNull(poolsPerMillion);
+		return this;
 	}
 
 	public DecimalNumber getPoolsPerLot() {
 		return poolsPerLot;
 	}
 
-	public void setPoolsPerLot(DecimalNumber poolsPerLot) {
-		this.poolsPerLot = poolsPerLot;
+	public Debt setPoolsPerLot(DecimalNumber poolsPerLot) {
+		this.poolsPerLot = Objects.requireNonNull(poolsPerLot);
+		return this;
 	}
 
 	public DecimalNumber getPoolsPerTrade() {
 		return poolsPerTrade;
 	}
 
-	public void setPoolsPerTrade(DecimalNumber poolsPerTrade) {
-		this.poolsPerTrade = poolsPerTrade;
+	public Debt setPoolsPerTrade(DecimalNumber poolsPerTrade) {
+		this.poolsPerTrade = Objects.requireNonNull(poolsPerTrade);
+		return this;
 	}
 
 	public YesNoIndicator getConstantPrePaymentPenalty() {
 		return constantPrePaymentPenalty;
 	}
 
-	public void setConstantPrePaymentPenalty(YesNoIndicator constantPrePaymentPenalty) {
-		this.constantPrePaymentPenalty = constantPrePaymentPenalty;
+	public Debt setConstantPrePaymentPenalty(YesNoIndicator constantPrePaymentPenalty) {
+		this.constantPrePaymentPenalty = Objects.requireNonNull(constantPrePaymentPenalty);
+		return this;
 	}
 
 	public PrePaymentSpeedCode getPrePaymentSpeed() {
 		return prePaymentSpeed;
 	}
 
-	public void setPrePaymentSpeed(PrePaymentSpeedCode prePaymentSpeed) {
-		this.prePaymentSpeed = prePaymentSpeed;
+	public Debt setPrePaymentSpeed(PrePaymentSpeedCode prePaymentSpeed) {
+		this.prePaymentSpeed = Objects.requireNonNull(prePaymentSpeed);
+		return this;
 	}
 
 	public PercentageRate getConstantPrePaymentYield() {
 		return constantPrePaymentYield;
 	}
 
-	public void setConstantPrePaymentYield(PercentageRate constantPrePaymentYield) {
-		this.constantPrePaymentYield = constantPrePaymentYield;
+	public Debt setConstantPrePaymentYield(PercentageRate constantPrePaymentYield) {
+		this.constantPrePaymentYield = Objects.requireNonNull(constantPrePaymentYield);
+		return this;
 	}
 
 	public PercentageRate getWeightedAverageCoupon() {
 		return weightedAverageCoupon;
 	}
 
-	public void setWeightedAverageCoupon(PercentageRate weightedAverageCoupon) {
-		this.weightedAverageCoupon = weightedAverageCoupon;
+	public Debt setWeightedAverageCoupon(PercentageRate weightedAverageCoupon) {
+		this.weightedAverageCoupon = Objects.requireNonNull(weightedAverageCoupon);
+		return this;
 	}
 
 	public DecimalNumber getWeightedAverageLife() {
 		return weightedAverageLife;
 	}
 
-	public void setWeightedAverageLife(DecimalNumber weightedAverageLife) {
-		this.weightedAverageLife = weightedAverageLife;
+	public Debt setWeightedAverageLife(DecimalNumber weightedAverageLife) {
+		this.weightedAverageLife = Objects.requireNonNull(weightedAverageLife);
+		return this;
 	}
 
 	public DecimalNumber getWeightedAverageLoan() {
 		return weightedAverageLoan;
 	}
 
-	public void setWeightedAverageLoan(DecimalNumber weightedAverageLoan) {
-		this.weightedAverageLoan = weightedAverageLoan;
+	public Debt setWeightedAverageLoan(DecimalNumber weightedAverageLoan) {
+		this.weightedAverageLoan = Objects.requireNonNull(weightedAverageLoan);
+		return this;
 	}
 
 	public DecimalNumber getWeightedAverageMaturity() {
 		return weightedAverageMaturity;
 	}
 
-	public void setWeightedAverageMaturity(DecimalNumber weightedAverageMaturity) {
-		this.weightedAverageMaturity = weightedAverageMaturity;
+	public Debt setWeightedAverageMaturity(DecimalNumber weightedAverageMaturity) {
+		this.weightedAverageMaturity = Objects.requireNonNull(weightedAverageMaturity);
+		return this;
 	}
 
 	public YesNoIndicator getInsuredIndicator() {
 		return insuredIndicator;
 	}
 
-	public void setInsuredIndicator(YesNoIndicator insuredIndicator) {
-		this.insuredIndicator = insuredIndicator;
+	public Debt setInsuredIndicator(YesNoIndicator insuredIndicator) {
+		this.insuredIndicator = Objects.requireNonNull(insuredIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getBankQualified() {
 		return bankQualified;
 	}
 
-	public void setBankQualified(YesNoIndicator bankQualified) {
-		this.bankQualified = bankQualified;
+	public Debt setBankQualified(YesNoIndicator bankQualified) {
+		this.bankQualified = Objects.requireNonNull(bankQualified);
+		return this;
 	}
 
 	public PercentageRate getAutoReinvestment() {
 		return autoReinvestment;
 	}
 
-	public void setAutoReinvestment(PercentageRate autoReinvestment) {
-		this.autoReinvestment = autoReinvestment;
+	public Debt setAutoReinvestment(PercentageRate autoReinvestment) {
+		this.autoReinvestment = Objects.requireNonNull(autoReinvestment);
+		return this;
 	}
 
 	public DateTimePeriod getCustomDate() {
 		return customDate;
 	}
 
-	public void setCustomDate(com.tools20022.repository.entity.DateTimePeriod customDate) {
-		this.customDate = customDate;
+	public Debt setCustomDate(com.tools20022.repository.entity.DateTimePeriod customDate) {
+		this.customDate = Objects.requireNonNull(customDate);
+		return this;
 	}
 
 	public Number getLookBack() {
 		return lookBack;
 	}
 
-	public void setLookBack(Number lookBack) {
-		this.lookBack = lookBack;
+	public Debt setLookBack(Number lookBack) {
+		this.lookBack = Objects.requireNonNull(lookBack);
+		return this;
 	}
 
 	public SecuritiesQuantity getMinimumDenomination() {
 		return minimumDenomination;
 	}
 
-	public void setMinimumDenomination(com.tools20022.repository.entity.SecuritiesQuantity minimumDenomination) {
-		this.minimumDenomination = minimumDenomination;
+	public Debt setMinimumDenomination(com.tools20022.repository.entity.SecuritiesQuantity minimumDenomination) {
+		this.minimumDenomination = Objects.requireNonNull(minimumDenomination);
+		return this;
 	}
 
 	public Number getMaximumSubstitution() {
 		return maximumSubstitution;
 	}
 
-	public void setMaximumSubstitution(Number maximumSubstitution) {
-		this.maximumSubstitution = maximumSubstitution;
+	public Debt setMaximumSubstitution(Number maximumSubstitution) {
+		this.maximumSubstitution = Objects.requireNonNull(maximumSubstitution);
+		return this;
 	}
 
 	public SecuritiesQuantity getMinimumIncrement() {
 		return minimumIncrement;
 	}
 
-	public void setMinimumIncrement(com.tools20022.repository.entity.SecuritiesQuantity minimumIncrement) {
-		this.minimumIncrement = minimumIncrement;
+	public Debt setMinimumIncrement(com.tools20022.repository.entity.SecuritiesQuantity minimumIncrement) {
+		this.minimumIncrement = Objects.requireNonNull(minimumIncrement);
+		return this;
 	}
 
 	public Max350Text getProduction() {
 		return production;
 	}
 
-	public void setProduction(Max350Text production) {
-		this.production = production;
+	public Debt setProduction(Max350Text production) {
+		this.production = Objects.requireNonNull(production);
+		return this;
 	}
 
 	public YesNoIndicator getRestricted() {
 		return restricted;
 	}
 
-	public void setRestricted(YesNoIndicator restricted) {
-		this.restricted = restricted;
+	public Debt setRestricted(YesNoIndicator restricted) {
+		this.restricted = Objects.requireNonNull(restricted);
+		return this;
 	}
 
 	public FrequencyCode getPriceFrequency() {
 		return priceFrequency;
 	}
 
-	public void setPriceFrequency(FrequencyCode priceFrequency) {
-		this.priceFrequency = priceFrequency;
+	public Debt setPriceFrequency(FrequencyCode priceFrequency) {
+		this.priceFrequency = Objects.requireNonNull(priceFrequency);
+		return this;
 	}
 
 	public FrequencyCode getSubstitutionFrequency() {
 		return substitutionFrequency;
 	}
 
-	public void setSubstitutionFrequency(FrequencyCode substitutionFrequency) {
-		this.substitutionFrequency = substitutionFrequency;
+	public Debt setSubstitutionFrequency(FrequencyCode substitutionFrequency) {
+		this.substitutionFrequency = Objects.requireNonNull(substitutionFrequency);
+		return this;
 	}
 
 	public Number getSubstitutionLeft() {
 		return substitutionLeft;
 	}
 
-	public void setSubstitutionLeft(Number substitutionLeft) {
-		this.substitutionLeft = substitutionLeft;
+	public Debt setSubstitutionLeft(Number substitutionLeft) {
+		this.substitutionLeft = Objects.requireNonNull(substitutionLeft);
+		return this;
 	}
 
 	public YesNoIndicator getWholePool() {
 		return wholePool;
 	}
 
-	public void setWholePool(YesNoIndicator wholePool) {
-		this.wholePool = wholePool;
+	public Debt setWholePool(YesNoIndicator wholePool) {
+		this.wholePool = Objects.requireNonNull(wholePool);
+		return this;
 	}
 
 	public YesNoIndicator getAlternativeMinimumTax() {
 		return alternativeMinimumTax;
 	}
 
-	public void setAlternativeMinimumTax(YesNoIndicator alternativeMinimumTax) {
-		this.alternativeMinimumTax = alternativeMinimumTax;
+	public Debt setAlternativeMinimumTax(YesNoIndicator alternativeMinimumTax) {
+		this.alternativeMinimumTax = Objects.requireNonNull(alternativeMinimumTax);
+		return this;
 	}
 
 	public InterestCalculation getNextInterest() {
 		return nextInterest;
 	}
 
-	public void setNextInterest(com.tools20022.repository.entity.InterestCalculation nextInterest) {
-		this.nextInterest = nextInterest;
+	public Debt setNextInterest(com.tools20022.repository.entity.InterestCalculation nextInterest) {
+		this.nextInterest = Objects.requireNonNull(nextInterest);
+		return this;
 	}
 
 	public ISODateTime getExtendibleDate() {
 		return extendibleDate;
 	}
 
-	public void setExtendibleDate(ISODateTime extendibleDate) {
-		this.extendibleDate = extendibleDate;
+	public Debt setExtendibleDate(ISODateTime extendibleDate) {
+		this.extendibleDate = Objects.requireNonNull(extendibleDate);
+		return this;
 	}
 
 	public YesNoIndicator getSinkableIndicator() {
 		return sinkableIndicator;
 	}
 
-	public void setSinkableIndicator(YesNoIndicator sinkableIndicator) {
-		this.sinkableIndicator = sinkableIndicator;
+	public Debt setSinkableIndicator(YesNoIndicator sinkableIndicator) {
+		this.sinkableIndicator = Objects.requireNonNull(sinkableIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getInsured() {
 		return insured;
 	}
 
-	public void setInsured(YesNoIndicator insured) {
-		this.insured = insured;
+	public Debt setInsured(YesNoIndicator insured) {
+		this.insured = Objects.requireNonNull(insured);
+		return this;
 	}
 
 	public Max35Text getGeographics() {
 		return geographics;
 	}
 
-	public void setGeographics(Max35Text geographics) {
-		this.geographics = geographics;
+	public Debt setGeographics(Max35Text geographics) {
+		this.geographics = Objects.requireNonNull(geographics);
+		return this;
 	}
 
 	public CurrencyCode getPaymentCurrency() {
 		return paymentCurrency;
 	}
 
-	public void setPaymentCurrency(CurrencyCode paymentCurrency) {
-		this.paymentCurrency = paymentCurrency;
+	public Debt setPaymentCurrency(CurrencyCode paymentCurrency) {
+		this.paymentCurrency = Objects.requireNonNull(paymentCurrency);
+		return this;
 	}
 
 	public SecuritiesPricing getDirtyPrice() {
 		return dirtyPrice;
 	}
 
-	public void setDirtyPrice(com.tools20022.repository.entity.SecuritiesPricing dirtyPrice) {
-		this.dirtyPrice = dirtyPrice;
+	public Debt setDirtyPrice(com.tools20022.repository.entity.SecuritiesPricing dirtyPrice) {
+		this.dirtyPrice = Objects.requireNonNull(dirtyPrice);
+		return this;
 	}
 
 	public DebtInstrumentSeniorityTypeCode getDebtSeniority() {
 		return debtSeniority;
 	}
 
-	public void setDebtSeniority(DebtInstrumentSeniorityTypeCode debtSeniority) {
-		this.debtSeniority = debtSeniority;
+	public Debt setDebtSeniority(DebtInstrumentSeniorityTypeCode debtSeniority) {
+		this.debtSeniority = Objects.requireNonNull(debtSeniority);
+		return this;
 	}
 }

@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PendingFailingReasonCode;
+import com.tools20022.repository.codeset.PendingCancellationReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason why a cancellation request sent for the related
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PendingFailingReasonCode
- * PendingFailingReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason1Code#mmAccountServicerDeadlineMissed
- * PendingCancellationReason1Code.mmAccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason1Code#AccountServicerDeadlineMissed
+ * PendingCancellationReason1Code.AccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason1Code#mmAwaitingConfirmation
- * PendingCancellationReason1Code.mmAwaitingConfirmation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingCancellationReason1Code#AwaitingConfirmation
+ * PendingCancellationReason1Code.AwaitingConfirmation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingReasonCode
+ * PendingFailingReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PendingCancellationReason1Code extends PendingFailingReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PendingCancellationReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class PendingCancellationReason1Code extends PendingFailingReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
+	public static final PendingCancellationReason1Code AccountServicerDeadlineMissed = new PendingCancellationReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
-			owner_lazy = () -> PendingCancellationReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingCancellationReason1Code.mmObject();
+			codeName = PendingFailingReasonCode.AccountServicerDeadlineMissed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,57 @@ public class PendingCancellationReason1Code extends PendingFailingReasonCode {
 	 * name} = "AwaitingConfirmation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingConfirmation = new MMCode() {
+	public static final PendingCancellationReason1Code AwaitingConfirmation = new PendingCancellationReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingConfirmation";
-			owner_lazy = () -> PendingCancellationReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingCancellationReason1Code.mmObject();
+			codeName = PendingFailingReasonCode.AwaitingConfirmation.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PendingCancellationReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PendingCancellationReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingCancellationReason1Code";
 				definition = "Specifies the reason why a cancellation request sent for the related instruction is pending.";
-				code_lazy = () -> Arrays.asList(PendingCancellationReason1Code.mmAccountServicerDeadlineMissed, PendingCancellationReason1Code.mmAwaitingConfirmation);
 				trace_lazy = () -> PendingFailingReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingCancellationReason1Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingCancellationReason1Code.AwaitingConfirmation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccountServicerDeadlineMissed.getCodeName().get(), AccountServicerDeadlineMissed);
+		codesByName.put(AwaitingConfirmation.getCodeName().get(), AwaitingConfirmation);
+	}
+
+	public static PendingCancellationReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PendingCancellationReason1Code[] values() {
+		PendingCancellationReason1Code[] values = new PendingCancellationReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PendingCancellationReason1Code> {
+		@Override
+		public PendingCancellationReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PendingCancellationReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

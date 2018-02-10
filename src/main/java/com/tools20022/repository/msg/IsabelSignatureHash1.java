@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max50Binary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,17 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the hash data for the file signature."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IsabelSignatureHash1", propOrder = {"hash", "algorithm"})
 public class IsabelSignatureHash1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hash", required = true)
 	protected Max50Binary hash;
 	/**
-	 * Arbitrary block of data defined as a fixed-size bit string, the
-	 * (cryptographic) hash value, that allows the detection of an accidental or
-	 * intentional change to the data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +100,7 @@ public class IsabelSignatureHash1 {
 	 */
 	public static final MMMessageAttribute mmHash = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelSignatureHash1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSignatureHash1.mmObject();
 			isDerived = false;
 			xmlTag = "Hash";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,11 +111,11 @@ public class IsabelSignatureHash1 {
 			simpleType_lazy = () -> Max50Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "Algo", required = true)
 	protected Max105Text algorithm;
 	/**
-	 * Effective method for calculating the signature hash using a finite
-	 * sequence of instructions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,7 +144,7 @@ public class IsabelSignatureHash1 {
 	 */
 	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelSignatureHash1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSignatureHash1.mmObject();
 			isDerived = false;
 			xmlTag = "Algo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,8 +159,8 @@ public class IsabelSignatureHash1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IsabelSignatureHash1.mmHash, IsabelSignatureHash1.mmAlgorithm);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignatureHash1.mmHash, com.tools20022.repository.msg.IsabelSignatureHash1.mmAlgorithm);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelSignatureHash1";
 				definition = "Specifies the hash data for the file signature.";
@@ -169,21 +169,21 @@ public class IsabelSignatureHash1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hash", required = true)
 	public Max50Binary getHash() {
 		return hash;
 	}
 
-	public void setHash(Max50Binary hash) {
-		this.hash = hash;
+	public IsabelSignatureHash1 setHash(Max50Binary hash) {
+		this.hash = Objects.requireNonNull(hash);
+		return this;
 	}
 
-	@XmlElement(name = "Algo", required = true)
 	public Max105Text getAlgorithm() {
 		return algorithm;
 	}
 
-	public void setAlgorithm(Max105Text algorithm) {
-		this.algorithm = algorithm;
+	public IsabelSignatureHash1 setAlgorithm(Max105Text algorithm) {
+		this.algorithm = Objects.requireNonNull(algorithm);
+		return this;
 	}
 }

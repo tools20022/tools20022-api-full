@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Financial instrument that gives the holder the right to purchase shares or
@@ -39,6 +40,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -50,18 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Warrant.mmStyle}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Warrant#mmWarrantParity
  * Warrant.mmWarrantParity}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Warrant1 Warrant1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.WarrantStyle2Choice
- * WarrantStyle2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Warrant2 Warrant2}</li>
  * </ul>
  * </li>
  * <li>
@@ -88,10 +79,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Warrant1 Warrant1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.WarrantStyle2Choice
+ * WarrantStyle2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Warrant2 Warrant2}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -109,9 +110,8 @@ public class Warrant extends Security {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected SecuritiesPricing subscriptionPrice;
 	/**
-	 * Pre-determined price at which the holder of a warrant is entitled to buy
-	 * the underlying instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -232,8 +232,8 @@ public class Warrant extends Security {
 					FinancialInstrumentAttributes31.mmSubscriptionPrice, FinancialInstrumentAttributes44.mmSubscriptionPrice, FinancialInstrumentAttributes15.mmSubscriptionPrice, FinancialInstrumentAttributes29.mmSubscriptionPrice,
 					Warrant2.mmSubscriptionPrice, FinancialInstrumentAttributes2.mmSubscriptionPrice, FinancialInstrumentAttributes63.mmSubscriptionPrice, FinancialInstrumentAttributes64.mmSubscriptionPrice,
 					FinancialInstrumentAttributes75.mmSubscriptionPrice, FinancialInstrumentAttributes78.mmSubscriptionPrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubscriptionPrice";
 			definition = "Pre-determined price at which the holder of a warrant is entitled to buy the underlying instrument.";
@@ -246,9 +246,8 @@ public class Warrant extends Security {
 	};
 	protected BaseOneRate multiplier;
 	/**
-	 * Specifies the ratio or multiply factor used to convert from contracts to
-	 * shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -284,8 +283,8 @@ public class Warrant extends Security {
 	public static final MMBusinessAttribute mmMultiplier = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Warrant1.mmMultiplier, Warrant2.mmMultiplier);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Multiplier";
 			definition = "Specifies the ratio or multiply factor used to convert from contracts to shares.";
@@ -304,8 +303,8 @@ public class Warrant extends Security {
 	};
 	protected WarrantStyleCode style;
 	/**
-	 * Specifies the expiration style of the warrant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -344,8 +343,8 @@ public class Warrant extends Security {
 	public static final MMBusinessAttribute mmStyle = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(WarrantStyle2Choice.mmCode, WarrantStyle2Choice.mmProprietary, Warrant2.mmType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Style";
 			definition = "Specifies the expiration style of the warrant.";
@@ -364,9 +363,8 @@ public class Warrant extends Security {
 	};
 	protected QuantityRatio warrantParity;
 	/**
-	 * Provides the ratio between the quantity of warrants and the quantity of
-	 * underlying securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -425,8 +423,8 @@ public class Warrant extends Security {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes48.mmWarrantParity, FinancialInstrumentAttributes55.mmWarrantParity, FinancialInstrumentAttributes66.mmWarrantParity,
 					FinancialInstrumentAttributes70.mmWarrantParity, FinancialInstrumentAttributes79.mmWarrantParity, FinancialInstrumentAttributes85.mmWarrantParity);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarrantParity";
 			definition = "Provides the ratio between the quantity of warrants and the quantity of underlying securities. ";
@@ -441,7 +439,7 @@ public class Warrant extends Security {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Warrant";
 				definition = "Financial instrument that gives the holder the right to purchase shares or bonds at a given price within a specified time.";
@@ -465,31 +463,35 @@ public class Warrant extends Security {
 		return subscriptionPrice;
 	}
 
-	public void setSubscriptionPrice(com.tools20022.repository.entity.SecuritiesPricing subscriptionPrice) {
-		this.subscriptionPrice = subscriptionPrice;
+	public Warrant setSubscriptionPrice(com.tools20022.repository.entity.SecuritiesPricing subscriptionPrice) {
+		this.subscriptionPrice = Objects.requireNonNull(subscriptionPrice);
+		return this;
 	}
 
 	public BaseOneRate getMultiplier() {
 		return multiplier;
 	}
 
-	public void setMultiplier(BaseOneRate multiplier) {
-		this.multiplier = multiplier;
+	public Warrant setMultiplier(BaseOneRate multiplier) {
+		this.multiplier = Objects.requireNonNull(multiplier);
+		return this;
 	}
 
 	public WarrantStyleCode getStyle() {
 		return style;
 	}
 
-	public void setStyle(WarrantStyleCode style) {
-		this.style = style;
+	public Warrant setStyle(WarrantStyleCode style) {
+		this.style = Objects.requireNonNull(style);
+		return this;
 	}
 
 	public QuantityRatio getWarrantParity() {
 		return warrantParity;
 	}
 
-	public void setWarrantParity(com.tools20022.repository.entity.QuantityRatio warrantParity) {
-		this.warrantParity = warrantParity;
+	public Warrant setWarrantParity(com.tools20022.repository.entity.QuantityRatio warrantParity) {
+		this.warrantParity = Objects.requireNonNull(warrantParity);
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -30,9 +31,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -82,8 +82,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,16 +94,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information regarding custodian service record."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CustodianDetailsSD1", propOrder = {"placeAndName", "custodianCorporateActionRecordIdentification", "agreeIndicator", "completenessIndicator", "custodianActionIndicator", "GCAActionIndicator", "receivingBIC",
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CustodianDetailsSD1", propOrder = {"placeAndName", "custodianCorporateActionRecordIdentification", "agreeIndicator", "completenessIndicator", "custodianActionIndicator", "gCAActionIndicator", "receivingBIC",
 		"originatingBIC", "compositeNotInSubscriptionFlag", "relatedCustodianMessageDetails"})
 public class CustodianDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +131,7 @@ public class CustodianDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,11 +142,11 @@ public class CustodianDetailsSD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CtdnCorpActnRcrdId", required = true)
 	protected Max35Text custodianCorporateActionRecordIdentification;
 	/**
-	 * Unique identifier of a custodian corporate action record. Applicable to
-	 * custodian service only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,6 +160,9 @@ public class CustodianDetailsSD1 {
 	 * CustodianDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtdnCorpActnRcrdId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Custodian CA ID</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -174,9 +178,10 @@ public class CustodianDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmCustodianCorporateActionRecordIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CtdnCorpActnRcrdId";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Custodian CA ID"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodianCorporateActionRecordIdentification";
 			definition = "Unique identifier of a custodian corporate action record. Applicable to custodian service only.";
@@ -185,11 +190,11 @@ public class CustodianDetailsSD1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AgrInd", required = true)
 	protected CustodianRecordAgreementType1Code agreeIndicator;
 	/**
-	 * Indicates the state of the agreement of the custodian record when
-	 * compared to composite record. Applicable to custodian service only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -205,6 +210,9 @@ public class CustodianDetailsSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AgrInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Agrees Indicator</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -219,9 +227,10 @@ public class CustodianDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmAgreeIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AgrInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Agrees Indicator "));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreeIndicator";
 			definition = "Indicates the state of the agreement of the custodian record when compared to composite record. Applicable to custodian service only.";
@@ -230,11 +239,11 @@ public class CustodianDetailsSD1 {
 			simpleType_lazy = () -> CustodianRecordAgreementType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "CmpltnsInd", required = true)
 	protected CustodianRecordCompletenessType1Code completenessIndicator;
 	/**
-	 * Indicates state of the details of the custodian record on the system.
-	 * Applicable to custodian service only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -250,6 +259,9 @@ public class CustodianDetailsSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CmpltnsInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Completeness Indicator</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -264,9 +276,10 @@ public class CustodianDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmCompletenessIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CmpltnsInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Completeness Indicator"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletenessIndicator";
 			definition = "Indicates state of the details of the custodian record on the system. Applicable to custodian service only.";
@@ -275,10 +288,11 @@ public class CustodianDetailsSD1 {
 			simpleType_lazy = () -> CustodianRecordCompletenessType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "CtdnActnInd")
 	protected CustodianAction1Code custodianActionIndicator;
 	/**
-	 * Represents the status of custodian activity when applicable.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -294,6 +308,9 @@ public class CustodianDetailsSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtdnActnInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Custodian Action Indicator</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -307,9 +324,10 @@ public class CustodianDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmCustodianActionIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CtdnActnInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Custodian Action Indicator"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodianActionIndicator";
 			definition = "Represents the status of custodian activity when applicable.";
@@ -318,12 +336,11 @@ public class CustodianDetailsSD1 {
 			simpleType_lazy = () -> CustodianAction1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "GCAActnInd")
 	protected GCAActionType1Code gCAActionIndicator;
 	/**
-	 * Indicates what action needs to be taken by the GCA (Global Corporate
-	 * Action) validation service for this particular record. Applicable to
-	 * custodian service only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -339,6 +356,9 @@ public class CustodianDetailsSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "GCAActnInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: GCA Action Indicator</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -353,9 +373,10 @@ public class CustodianDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmGCAActionIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "GCAActnInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "GCA Action Indicator "));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GCAActionIndicator";
 			definition = "Indicates what action needs to be taken by the GCA (Global Corporate Action) validation service for this particular record. Applicable to custodian service only.";
@@ -364,11 +385,11 @@ public class CustodianDetailsSD1 {
 			simpleType_lazy = () -> GCAActionType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvgBIC", required = true)
 	protected AnyBICIdentifier receivingBIC;
 	/**
-	 * BIC which is configured as a recipient of the custodian record.
-	 * Applicable to custodian service only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -384,6 +405,9 @@ public class CustodianDetailsSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RcvgBIC"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Receiving BIC Code</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -398,9 +422,10 @@ public class CustodianDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmReceivingBIC = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgBIC";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Receiving BIC Code"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingBIC";
 			definition = "BIC which is configured as a recipient of the custodian record. Applicable to custodian service only.";
@@ -409,11 +434,11 @@ public class CustodianDetailsSD1 {
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgtgBIC", required = true)
 	protected AnyBICIdentifier originatingBIC;
 	/**
-	 * BIC which is configured as a sender of the custodian record. Applicable
-	 * to custodian service only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -429,6 +454,9 @@ public class CustodianDetailsSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrgtgBIC"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Originating BIC Code</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -443,9 +471,10 @@ public class CustodianDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmOriginatingBIC = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgtgBIC";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Originating BIC Code"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatingBIC";
 			definition = "BIC which is configured as a sender of the custodian record. Applicable to custodian service only.";
@@ -454,12 +483,11 @@ public class CustodianDetailsSD1 {
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "CmpsitNotInSbcptFlg", required = true)
 	protected YesNoIndicator compositeNotInSubscriptionFlag;
 	/**
-	 * Indicates whether the event security of the corresponding composite
-	 * record is on SOI (security of interest) subscription. Applicable to
-	 * custodian service only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -475,6 +503,9 @@ public class CustodianDetailsSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CmpsitNotInSbcptFlg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Composite not in Subscription Flag</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -489,9 +520,10 @@ public class CustodianDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmCompositeNotInSubscriptionFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CmpsitNotInSbcptFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Composite not in Subscription Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompositeNotInSubscriptionFlag";
 			definition = "Indicates whether the event security of the  corresponding composite record is on SOI (security of interest) subscription. Applicable to custodian service only.";
@@ -500,12 +532,11 @@ public class CustodianDetailsSD1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdCtdnMsgDtls")
 	protected List<com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1> relatedCustodianMessageDetails;
 	/**
-	 * Provides selected corporate action events message details extracted from
-	 * the related custodian messages received. Applicable to custodian service
-	 * only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -519,6 +550,9 @@ public class CustodianDetailsSD1 {
 	 * CustodianDetailsSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RltdCtdnMsgDtls"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Related Custodian Message Details</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -534,9 +568,10 @@ public class CustodianDetailsSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedCustodianMessageDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CustodianDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdCtdnMsgDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Related Custodian Message Details"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedCustodianMessageDetails";
 			definition = "Provides selected corporate action events message details extracted from the related custodian messages received. Applicable to custodian service only.";
@@ -549,10 +584,12 @@ public class CustodianDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CustodianDetailsSD1.mmPlaceAndName, CustodianDetailsSD1.mmCustodianCorporateActionRecordIdentification, CustodianDetailsSD1.mmAgreeIndicator,
-						CustodianDetailsSD1.mmCompletenessIndicator, CustodianDetailsSD1.mmCustodianActionIndicator, CustodianDetailsSD1.mmGCAActionIndicator, CustodianDetailsSD1.mmReceivingBIC, CustodianDetailsSD1.mmOriginatingBIC,
-						CustodianDetailsSD1.mmCompositeNotInSubscriptionFlag, CustodianDetailsSD1.mmRelatedCustodianMessageDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustodianDetailsSD1.mmPlaceAndName, com.tools20022.repository.msg.CustodianDetailsSD1.mmCustodianCorporateActionRecordIdentification,
+						com.tools20022.repository.msg.CustodianDetailsSD1.mmAgreeIndicator, com.tools20022.repository.msg.CustodianDetailsSD1.mmCompletenessIndicator,
+						com.tools20022.repository.msg.CustodianDetailsSD1.mmCustodianActionIndicator, com.tools20022.repository.msg.CustodianDetailsSD1.mmGCAActionIndicator, com.tools20022.repository.msg.CustodianDetailsSD1.mmReceivingBIC,
+						com.tools20022.repository.msg.CustodianDetailsSD1.mmOriginatingBIC, com.tools20022.repository.msg.CustodianDetailsSD1.mmCompositeNotInSubscriptionFlag,
+						com.tools20022.repository.msg.CustodianDetailsSD1.mmRelatedCustodianMessageDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CustodianDetailsSD1";
 				definition = "Provides information regarding custodian service record.";
@@ -561,93 +598,93 @@ public class CustodianDetailsSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CustodianDetailsSD1 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "CtdnCorpActnRcrdId", required = true)
 	public Max35Text getCustodianCorporateActionRecordIdentification() {
 		return custodianCorporateActionRecordIdentification;
 	}
 
-	public void setCustodianCorporateActionRecordIdentification(Max35Text custodianCorporateActionRecordIdentification) {
-		this.custodianCorporateActionRecordIdentification = custodianCorporateActionRecordIdentification;
+	public CustodianDetailsSD1 setCustodianCorporateActionRecordIdentification(Max35Text custodianCorporateActionRecordIdentification) {
+		this.custodianCorporateActionRecordIdentification = Objects.requireNonNull(custodianCorporateActionRecordIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AgrInd", required = true)
 	public CustodianRecordAgreementType1Code getAgreeIndicator() {
 		return agreeIndicator;
 	}
 
-	public void setAgreeIndicator(CustodianRecordAgreementType1Code agreeIndicator) {
-		this.agreeIndicator = agreeIndicator;
+	public CustodianDetailsSD1 setAgreeIndicator(CustodianRecordAgreementType1Code agreeIndicator) {
+		this.agreeIndicator = Objects.requireNonNull(agreeIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "CmpltnsInd", required = true)
 	public CustodianRecordCompletenessType1Code getCompletenessIndicator() {
 		return completenessIndicator;
 	}
 
-	public void setCompletenessIndicator(CustodianRecordCompletenessType1Code completenessIndicator) {
-		this.completenessIndicator = completenessIndicator;
+	public CustodianDetailsSD1 setCompletenessIndicator(CustodianRecordCompletenessType1Code completenessIndicator) {
+		this.completenessIndicator = Objects.requireNonNull(completenessIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "CtdnActnInd")
-	public CustodianAction1Code getCustodianActionIndicator() {
-		return custodianActionIndicator;
+	public Optional<CustodianAction1Code> getCustodianActionIndicator() {
+		return custodianActionIndicator == null ? Optional.empty() : Optional.of(custodianActionIndicator);
 	}
 
-	public void setCustodianActionIndicator(CustodianAction1Code custodianActionIndicator) {
+	public CustodianDetailsSD1 setCustodianActionIndicator(CustodianAction1Code custodianActionIndicator) {
 		this.custodianActionIndicator = custodianActionIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "GCAActnInd")
-	public GCAActionType1Code getGCAActionIndicator() {
-		return gCAActionIndicator;
+	public Optional<GCAActionType1Code> getGCAActionIndicator() {
+		return gCAActionIndicator == null ? Optional.empty() : Optional.of(gCAActionIndicator);
 	}
 
-	public void setGCAActionIndicator(GCAActionType1Code gCAActionIndicator) {
+	public CustodianDetailsSD1 setGCAActionIndicator(GCAActionType1Code gCAActionIndicator) {
 		this.gCAActionIndicator = gCAActionIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "RcvgBIC", required = true)
 	public AnyBICIdentifier getReceivingBIC() {
 		return receivingBIC;
 	}
 
-	public void setReceivingBIC(AnyBICIdentifier receivingBIC) {
-		this.receivingBIC = receivingBIC;
+	public CustodianDetailsSD1 setReceivingBIC(AnyBICIdentifier receivingBIC) {
+		this.receivingBIC = Objects.requireNonNull(receivingBIC);
+		return this;
 	}
 
-	@XmlElement(name = "OrgtgBIC", required = true)
 	public AnyBICIdentifier getOriginatingBIC() {
 		return originatingBIC;
 	}
 
-	public void setOriginatingBIC(AnyBICIdentifier originatingBIC) {
-		this.originatingBIC = originatingBIC;
+	public CustodianDetailsSD1 setOriginatingBIC(AnyBICIdentifier originatingBIC) {
+		this.originatingBIC = Objects.requireNonNull(originatingBIC);
+		return this;
 	}
 
-	@XmlElement(name = "CmpsitNotInSbcptFlg", required = true)
 	public YesNoIndicator getCompositeNotInSubscriptionFlag() {
 		return compositeNotInSubscriptionFlag;
 	}
 
-	public void setCompositeNotInSubscriptionFlag(YesNoIndicator compositeNotInSubscriptionFlag) {
-		this.compositeNotInSubscriptionFlag = compositeNotInSubscriptionFlag;
+	public CustodianDetailsSD1 setCompositeNotInSubscriptionFlag(YesNoIndicator compositeNotInSubscriptionFlag) {
+		this.compositeNotInSubscriptionFlag = Objects.requireNonNull(compositeNotInSubscriptionFlag);
+		return this;
 	}
 
-	@XmlElement(name = "RltdCtdnMsgDtls")
 	public List<RelatedCustodianMessageDetailsSD1> getRelatedCustodianMessageDetails() {
-		return relatedCustodianMessageDetails;
+		return relatedCustodianMessageDetails == null ? relatedCustodianMessageDetails = new ArrayList<>() : relatedCustodianMessageDetails;
 	}
 
-	public void setRelatedCustodianMessageDetails(List<com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1> relatedCustodianMessageDetails) {
-		this.relatedCustodianMessageDetails = relatedCustodianMessageDetails;
+	public CustodianDetailsSD1 setRelatedCustodianMessageDetails(List<com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1> relatedCustodianMessageDetails) {
+		this.relatedCustodianMessageDetails = Objects.requireNonNull(relatedCustodianMessageDetails);
+		return this;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.CollateralMovement7;
 import com.tools20022.repository.msg.CollateralProposal5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,16 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * CollateralProposal3Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CollateralProposal4Choice", propOrder = {"collateralProposalDetails", "segregatedIndependentAmount"})
 public class CollateralProposal4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CollPrpslDtls", required = true)
 	protected CollateralProposal5 collateralProposalDetails;
 	/**
-	 * Provides details about the proposal for the variation margin and
-	 * optionaly the segregated independent amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -137,7 +138,7 @@ public class CollateralProposal4Choice {
 	public static final MMMessageAssociationEnd mmCollateralProposalDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
-			componentContext_lazy = () -> CollateralProposal4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralProposal4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollPrpslDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,11 +152,11 @@ public class CollateralProposal4Choice {
 			type_lazy = () -> CollateralProposal5.mmObject();
 		}
 	};
+	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
 	protected CollateralMovement7 segregatedIndependentAmount;
 	/**
-	 * Provides details about the proposal for the segregated independent
-	 * amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -202,7 +203,7 @@ public class CollateralProposal4Choice {
 	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CollateralMovement.mmSegregatedIndependentAmount;
-			componentContext_lazy = () -> CollateralProposal4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralProposal4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,9 +221,9 @@ public class CollateralProposal4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CollateralProposal4Choice.mmCollateralProposalDetails, CollateralProposal4Choice.mmSegregatedIndependentAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralProposal4Choice.mmCollateralProposalDetails, com.tools20022.repository.choice.CollateralProposal4Choice.mmSegregatedIndependentAmount);
 				trace_lazy = () -> CollateralProposal.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralProposal4Choice";
 				definition = "Provides details about the proposal for the variation margin and optionaly the segregated independent amount, or the segregated independent amount only.";
@@ -233,21 +234,21 @@ public class CollateralProposal4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CollPrpslDtls", required = true)
 	public CollateralProposal5 getCollateralProposalDetails() {
 		return collateralProposalDetails;
 	}
 
-	public void setCollateralProposalDetails(CollateralProposal5 collateralProposalDetails) {
-		this.collateralProposalDetails = collateralProposalDetails;
+	public CollateralProposal4Choice setCollateralProposalDetails(CollateralProposal5 collateralProposalDetails) {
+		this.collateralProposalDetails = Objects.requireNonNull(collateralProposalDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
 	public CollateralMovement7 getSegregatedIndependentAmount() {
 		return segregatedIndependentAmount;
 	}
 
-	public void setSegregatedIndependentAmount(CollateralMovement7 segregatedIndependentAmount) {
-		this.segregatedIndependentAmount = segregatedIndependentAmount;
+	public CollateralProposal4Choice setSegregatedIndependentAmount(CollateralMovement7 segregatedIndependentAmount) {
+		this.segregatedIndependentAmount = Objects.requireNonNull(segregatedIndependentAmount);
+		return this;
 	}
 }

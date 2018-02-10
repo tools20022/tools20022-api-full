@@ -24,6 +24,7 @@ import com.tools20022.repository.area.catp.ATMPINManagementResponseV01;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMPINManagementResponse1", propOrder = {"environment", "context", "transaction"})
 public class ATMPINManagementResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Envt", required = true)
 	protected ATMEnvironment2 environment;
 	/**
-	 * Environment of the PIN management transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -110,7 +112,7 @@ public class ATMPINManagementResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMPINManagementResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMPINManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class ATMPINManagementResponse1 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment2.mmObject();
 		}
 	};
+	@XmlElement(name = "Cntxt", required = true)
 	protected ATMContext4 context;
 	/**
-	 * Context in which the transaction is performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -151,7 +154,7 @@ public class ATMPINManagementResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMPINManagementResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMPINManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Cntxt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,10 +166,11 @@ public class ATMPINManagementResponse1 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMContext4.mmObject();
 		}
 	};
+	@XmlElement(name = "Tx", required = true)
 	protected ATMTransaction10 transaction;
 	/**
-	 * Response to the PIN management transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -192,7 +196,7 @@ public class ATMPINManagementResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMPINManagementResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMPINManagementResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,9 +212,10 @@ public class ATMPINManagementResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMPINManagementResponse1.mmEnvironment, ATMPINManagementResponse1.mmContext, ATMPINManagementResponse1.mmTransaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMPINManagementResponse1.mmEnvironment, com.tools20022.repository.msg.ATMPINManagementResponse1.mmContext,
+						com.tools20022.repository.msg.ATMPINManagementResponse1.mmTransaction);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ATMPINManagementResponseV01.mmATMPINManagementResponse);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMPINManagementResponse1";
 				definition = "Information related to the response of an ATM PIN Management from an ATM manager.";
@@ -219,30 +224,30 @@ public class ATMPINManagementResponse1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Envt", required = true)
 	public ATMEnvironment2 getEnvironment() {
 		return environment;
 	}
 
-	public void setEnvironment(com.tools20022.repository.msg.ATMEnvironment2 environment) {
-		this.environment = environment;
+	public ATMPINManagementResponse1 setEnvironment(com.tools20022.repository.msg.ATMEnvironment2 environment) {
+		this.environment = Objects.requireNonNull(environment);
+		return this;
 	}
 
-	@XmlElement(name = "Cntxt", required = true)
 	public ATMContext4 getContext() {
 		return context;
 	}
 
-	public void setContext(com.tools20022.repository.msg.ATMContext4 context) {
-		this.context = context;
+	public ATMPINManagementResponse1 setContext(com.tools20022.repository.msg.ATMContext4 context) {
+		this.context = Objects.requireNonNull(context);
+		return this;
 	}
 
-	@XmlElement(name = "Tx", required = true)
 	public ATMTransaction10 getTransaction() {
 		return transaction;
 	}
 
-	public void setTransaction(com.tools20022.repository.msg.ATMTransaction10 transaction) {
-		this.transaction = transaction;
+	public ATMPINManagementResponse1 setTransaction(com.tools20022.repository.msg.ATMTransaction10 transaction) {
+		this.transaction = Objects.requireNonNull(transaction);
+		return this;
 	}
 }

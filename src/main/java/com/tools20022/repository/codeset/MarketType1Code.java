@@ -20,39 +20,43 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.MarketTypeCode;
+import com.tools20022.repository.codeset.MarketType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of market in which transactions take place, eg, primary.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.MarketTypeCode MarketTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType1Code#mmPrimaryMarket
- * MarketType1Code.mmPrimaryMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType1Code#PrimaryMarket
+ * MarketType1Code.PrimaryMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType1Code#mmSecondaryMarket
- * MarketType1Code.mmSecondaryMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType1Code#SecondaryMarket
+ * MarketType1Code.SecondaryMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType1Code#mmThirdMarket
- * MarketType1Code.mmThirdMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType1Code#ThirdMarket
+ * MarketType1Code.ThirdMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarketType1Code#mmFourthMarket
- * MarketType1Code.mmFourthMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarketType1Code#FourthMarket
+ * MarketType1Code.FourthMarket}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.MarketTypeCode MarketTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class MarketType1Code extends MarketTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MarketType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,11 +95,12 @@ public class MarketType1Code extends MarketTypeCode {
 	 * name} = "PrimaryMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrimaryMarket = new MMCode() {
+	public static final MarketType1Code PrimaryMarket = new MarketType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryMarket";
-			owner_lazy = () -> MarketType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarketType1Code.mmObject();
+			codeName = MarketTypeCode.PrimaryMarket.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -113,11 +119,12 @@ public class MarketType1Code extends MarketTypeCode {
 	 * name} = "SecondaryMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecondaryMarket = new MMCode() {
+	public static final MarketType1Code SecondaryMarket = new MarketType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryMarket";
-			owner_lazy = () -> MarketType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarketType1Code.mmObject();
+			codeName = MarketTypeCode.SecondaryMarket.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -136,11 +143,12 @@ public class MarketType1Code extends MarketTypeCode {
 	 * name} = "ThirdMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmThirdMarket = new MMCode() {
+	public static final MarketType1Code ThirdMarket = new MarketType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdMarket";
-			owner_lazy = () -> MarketType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarketType1Code.mmObject();
+			codeName = MarketTypeCode.ThirdMarket.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -159,26 +167,60 @@ public class MarketType1Code extends MarketTypeCode {
 	 * name} = "FourthMarket"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFourthMarket = new MMCode() {
+	public static final MarketType1Code FourthMarket = new MarketType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FourthMarket";
-			owner_lazy = () -> MarketType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarketType1Code.mmObject();
+			codeName = MarketTypeCode.FourthMarket.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, MarketType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MarketType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PRIM");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketType1Code";
 				definition = "Specifies the type of market in which transactions take place, eg, primary.";
-				code_lazy = () -> Arrays.asList(MarketType1Code.mmPrimaryMarket, MarketType1Code.mmSecondaryMarket, MarketType1Code.mmThirdMarket, MarketType1Code.mmFourthMarket);
 				trace_lazy = () -> MarketTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketType1Code.PrimaryMarket, com.tools20022.repository.codeset.MarketType1Code.SecondaryMarket,
+						com.tools20022.repository.codeset.MarketType1Code.ThirdMarket, com.tools20022.repository.codeset.MarketType1Code.FourthMarket);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PrimaryMarket.getCodeName().get(), PrimaryMarket);
+		codesByName.put(SecondaryMarket.getCodeName().get(), SecondaryMarket);
+		codesByName.put(ThirdMarket.getCodeName().get(), ThirdMarket);
+		codesByName.put(FourthMarket.getCodeName().get(), FourthMarket);
+	}
+
+	public static MarketType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MarketType1Code[] values() {
+		MarketType1Code[] values = new MarketType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MarketType1Code> {
+		@Override
+		public MarketType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MarketType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

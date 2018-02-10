@@ -25,9 +25,11 @@ import com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02;
 import com.tools20022.repository.area.setr.OrderInstructionStatusReportV04;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AdditionalReference8;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,15 +94,16 @@ import javax.xml.bind.annotation.XmlType;
  * References49Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "References61Choice", propOrder = {"relatedReference", "otherReference"})
 public class References61Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RltdRef", required = true)
 	protected List<AdditionalReference8> relatedReference;
 	/**
-	 * Reference to a linked message that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -140,7 +143,7 @@ public class References61Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> References61Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.References61Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,11 +157,11 @@ public class References61Choice {
 			type_lazy = () -> AdditionalReference8.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrRef", required = true)
 	protected List<AdditionalReference8> otherReference;
 	/**
-	 * Reference to a linked proprietary message or reference of a system that
-	 * was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -199,7 +202,7 @@ public class References61Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOtherReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> References61Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.References61Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,9 +220,9 @@ public class References61Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(References61Choice.mmRelatedReference, References61Choice.mmOtherReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References61Choice.mmRelatedReference, com.tools20022.repository.choice.References61Choice.mmOtherReference);
 				messageBuildingBlock_lazy = () -> Arrays.asList(OrderCancellationStatusReportV04.mmReference, OrderInstructionStatusReportV04.mmReference, OrderConfirmationStatusReportV02.mmReference);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "References61Choice";
 				definition = "Choice of references used to reference a previous transaction.";
@@ -230,21 +233,21 @@ public class References61Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RltdRef", required = true)
 	public List<AdditionalReference8> getRelatedReference() {
-		return relatedReference;
+		return relatedReference == null ? relatedReference = new ArrayList<>() : relatedReference;
 	}
 
-	public void setRelatedReference(List<AdditionalReference8> relatedReference) {
-		this.relatedReference = relatedReference;
+	public References61Choice setRelatedReference(List<AdditionalReference8> relatedReference) {
+		this.relatedReference = Objects.requireNonNull(relatedReference);
+		return this;
 	}
 
-	@XmlElement(name = "OthrRef", required = true)
 	public List<AdditionalReference8> getOtherReference() {
-		return otherReference;
+		return otherReference == null ? otherReference = new ArrayList<>() : otherReference;
 	}
 
-	public void setOtherReference(List<AdditionalReference8> otherReference) {
-		this.otherReference = otherReference;
+	public References61Choice setOtherReference(List<AdditionalReference8> otherReference) {
+		this.otherReference = Objects.requireNonNull(otherReference);
+		return this;
 	}
 }

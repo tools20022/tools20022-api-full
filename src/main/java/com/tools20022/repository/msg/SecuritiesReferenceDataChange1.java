@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesReferenceDataChange1", propOrder = {"financialInstrumentIdentification", "fieldName", "oldFieldValue", "newFieldValue", "operationTimeStamp"})
 public class SecuritiesReferenceDataChange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FinInstrmId", required = true)
 	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
-	 * Identifies the financial instrument for which the changes are listed in
-	 * the advice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -114,7 +115,7 @@ public class SecuritiesReferenceDataChange1 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesReferenceDataChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataChange1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,11 +127,11 @@ public class SecuritiesReferenceDataChange1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	@XmlElement(name = "FldNm", required = true)
 	protected Max35Text fieldName;
 	/**
-	 * Name of the element, as specified in the short tag name for the field in
-	 * the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +160,7 @@ public class SecuritiesReferenceDataChange1 {
 	 */
 	public static final MMMessageAttribute mmFieldName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesReferenceDataChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataChange1.mmObject();
 			isDerived = false;
 			xmlTag = "FldNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,10 +171,11 @@ public class SecuritiesReferenceDataChange1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OdFldVal", required = true)
 	protected Max350Text oldFieldValue;
 	/**
-	 * Value of the related field before the change was applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,7 +203,7 @@ public class SecuritiesReferenceDataChange1 {
 	 */
 	public static final MMMessageAttribute mmOldFieldValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesReferenceDataChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataChange1.mmObject();
 			isDerived = false;
 			xmlTag = "OdFldVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,10 +214,11 @@ public class SecuritiesReferenceDataChange1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NewFldVal", required = true)
 	protected Max350Text newFieldValue;
 	/**
-	 * Value of the related field after the change was applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -242,7 +245,7 @@ public class SecuritiesReferenceDataChange1 {
 	 */
 	public static final MMMessageAttribute mmNewFieldValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesReferenceDataChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataChange1.mmObject();
 			isDerived = false;
 			xmlTag = "NewFldVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -253,10 +256,11 @@ public class SecuritiesReferenceDataChange1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OprTmStmp", required = true)
 	protected ISODateTime operationTimeStamp;
 	/**
-	 * Specifies the timestamp of the operation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -283,7 +287,7 @@ public class SecuritiesReferenceDataChange1 {
 	 */
 	public static final MMMessageAttribute mmOperationTimeStamp = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesReferenceDataChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataChange1.mmObject();
 			isDerived = false;
 			xmlTag = "OprTmStmp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -298,9 +302,10 @@ public class SecuritiesReferenceDataChange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesReferenceDataChange1.mmFinancialInstrumentIdentification, SecuritiesReferenceDataChange1.mmFieldName, SecuritiesReferenceDataChange1.mmOldFieldValue,
-						SecuritiesReferenceDataChange1.mmNewFieldValue, SecuritiesReferenceDataChange1.mmOperationTimeStamp);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesReferenceDataChange1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.SecuritiesReferenceDataChange1.mmFieldName,
+						com.tools20022.repository.msg.SecuritiesReferenceDataChange1.mmOldFieldValue, com.tools20022.repository.msg.SecuritiesReferenceDataChange1.mmNewFieldValue,
+						com.tools20022.repository.msg.SecuritiesReferenceDataChange1.mmOperationTimeStamp);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesReferenceDataChange1";
 				definition = "Describes the comparison between the currently established baseline elements and the proposed ones.";
@@ -309,48 +314,48 @@ public class SecuritiesReferenceDataChange1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
 
-	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
-		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	public SecuritiesReferenceDataChange1 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "FldNm", required = true)
 	public Max35Text getFieldName() {
 		return fieldName;
 	}
 
-	public void setFieldName(Max35Text fieldName) {
-		this.fieldName = fieldName;
+	public SecuritiesReferenceDataChange1 setFieldName(Max35Text fieldName) {
+		this.fieldName = Objects.requireNonNull(fieldName);
+		return this;
 	}
 
-	@XmlElement(name = "OdFldVal", required = true)
 	public Max350Text getOldFieldValue() {
 		return oldFieldValue;
 	}
 
-	public void setOldFieldValue(Max350Text oldFieldValue) {
-		this.oldFieldValue = oldFieldValue;
+	public SecuritiesReferenceDataChange1 setOldFieldValue(Max350Text oldFieldValue) {
+		this.oldFieldValue = Objects.requireNonNull(oldFieldValue);
+		return this;
 	}
 
-	@XmlElement(name = "NewFldVal", required = true)
 	public Max350Text getNewFieldValue() {
 		return newFieldValue;
 	}
 
-	public void setNewFieldValue(Max350Text newFieldValue) {
-		this.newFieldValue = newFieldValue;
+	public SecuritiesReferenceDataChange1 setNewFieldValue(Max350Text newFieldValue) {
+		this.newFieldValue = Objects.requireNonNull(newFieldValue);
+		return this;
 	}
 
-	@XmlElement(name = "OprTmStmp", required = true)
 	public ISODateTime getOperationTimeStamp() {
 		return operationTimeStamp;
 	}
 
-	public void setOperationTimeStamp(ISODateTime operationTimeStamp) {
-		this.operationTimeStamp = operationTimeStamp;
+	public SecuritiesReferenceDataChange1 setOperationTimeStamp(ISODateTime operationTimeStamp) {
+		this.operationTimeStamp = Objects.requireNonNull(operationTimeStamp);
+		return this;
 	}
 }

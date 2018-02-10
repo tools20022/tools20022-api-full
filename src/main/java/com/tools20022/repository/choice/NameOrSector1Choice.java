@@ -28,6 +28,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SectorAndLocation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,16 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * SectorAndLocation1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NameOrSector1Choice", propOrder = {"name", "sector"})
 public class NameOrSector1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nm", required = true)
 	protected Max70Text name;
 	/**
-	 * Internal name of the counterparty of the reporting agent used by the
-	 * reporting agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +119,7 @@ public class NameOrSector1Choice {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Sector.mmIdentification;
-			componentContext_lazy = () -> NameOrSector1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.NameOrSector1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,11 +130,11 @@ public class NameOrSector1Choice {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Sctr", required = true)
 	protected SNA2008SectorIdentifier sector;
 	/**
-	 * Represents the counterparty institutional section (such as non-financial
-	 * corporation, central bank, ...).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,7 +175,7 @@ public class NameOrSector1Choice {
 	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Sector.mmIdentification;
-			componentContext_lazy = () -> NameOrSector1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.NameOrSector1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Sctr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,9 +191,9 @@ public class NameOrSector1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NameOrSector1Choice.mmName, NameOrSector1Choice.mmSector);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NameOrSector1Choice.mmName, com.tools20022.repository.choice.NameOrSector1Choice.mmSector);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NameOrSector1Choice";
 				definition = "Provides the identification of the reported party through the name or the sector.";
@@ -202,21 +203,21 @@ public class NameOrSector1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nm", required = true)
 	public Max70Text getName() {
 		return name;
 	}
 
-	public void setName(Max70Text name) {
-		this.name = name;
+	public NameOrSector1Choice setName(Max70Text name) {
+		this.name = Objects.requireNonNull(name);
+		return this;
 	}
 
-	@XmlElement(name = "Sctr", required = true)
 	public SNA2008SectorIdentifier getSector() {
 		return sector;
 	}
 
-	public void setSector(SNA2008SectorIdentifier sector) {
-		this.sector = sector;
+	public NameOrSector1Choice setSector(SNA2008SectorIdentifier sector) {
+		this.sector = Objects.requireNonNull(sector);
+		return this;
 	}
 }

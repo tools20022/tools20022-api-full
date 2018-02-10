@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of format for the auto extend period."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AutoExtend1Choice", propOrder = {"days", "months", "years", "date"})
 public class AutoExtend1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Days", required = true)
 	protected Number days;
 	/**
-	 * Number of days.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,7 +101,7 @@ public class AutoExtend1Choice {
 	 */
 	public static final MMMessageAttribute mmDays = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutoExtend1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AutoExtend1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Days";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,10 +112,11 @@ public class AutoExtend1Choice {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Mnths", required = true)
 	protected Number months;
 	/**
-	 * Number of months
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,7 +143,7 @@ public class AutoExtend1Choice {
 	 */
 	public static final MMMessageAttribute mmMonths = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutoExtend1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AutoExtend1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Mnths";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,10 +154,11 @@ public class AutoExtend1Choice {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Yrs", required = true)
 	protected Number years;
 	/**
-	 * Number of years.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -181,7 +185,7 @@ public class AutoExtend1Choice {
 	 */
 	public static final MMMessageAttribute mmYears = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutoExtend1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AutoExtend1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Yrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,10 +196,11 @@ public class AutoExtend1Choice {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Dt", required = true)
 	protected ISODate date;
 	/**
-	 * Auto extension end date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,7 +227,7 @@ public class AutoExtend1Choice {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutoExtend1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AutoExtend1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,8 +242,9 @@ public class AutoExtend1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AutoExtend1Choice.mmDays, AutoExtend1Choice.mmMonths, AutoExtend1Choice.mmYears, AutoExtend1Choice.mmDate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AutoExtend1Choice.mmDays, com.tools20022.repository.choice.AutoExtend1Choice.mmMonths, com.tools20022.repository.choice.AutoExtend1Choice.mmYears,
+						com.tools20022.repository.choice.AutoExtend1Choice.mmDate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AutoExtend1Choice";
 				definition = "Choice of format for the auto extend period.";
@@ -247,39 +253,39 @@ public class AutoExtend1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Days", required = true)
 	public Number getDays() {
 		return days;
 	}
 
-	public void setDays(Number days) {
-		this.days = days;
+	public AutoExtend1Choice setDays(Number days) {
+		this.days = Objects.requireNonNull(days);
+		return this;
 	}
 
-	@XmlElement(name = "Mnths", required = true)
 	public Number getMonths() {
 		return months;
 	}
 
-	public void setMonths(Number months) {
-		this.months = months;
+	public AutoExtend1Choice setMonths(Number months) {
+		this.months = Objects.requireNonNull(months);
+		return this;
 	}
 
-	@XmlElement(name = "Yrs", required = true)
 	public Number getYears() {
 		return years;
 	}
 
-	public void setYears(Number years) {
-		this.years = years;
+	public AutoExtend1Choice setYears(Number years) {
+		this.years = Objects.requireNonNull(years);
+		return this;
 	}
 
-	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
 
-	public void setDate(ISODate date) {
-		this.date = date;
+	public AutoExtend1Choice setDate(ISODate date) {
+		this.date = Objects.requireNonNull(date);
+		return this;
 	}
 }

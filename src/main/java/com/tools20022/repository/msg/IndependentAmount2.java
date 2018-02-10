@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.IndependentAmountTerm;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,16 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IndependentAmount2", propOrder = {"description", "amount", "convention"})
 public class IndependentAmount2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Desc")
 	protected Max140Text description;
 	/**
-	 * Description of the other amount used in the calculation of the
-	 * independent amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class IndependentAmount2 {
 	 */
 	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IndependentAmount2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndependentAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class IndependentAmount2 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * Provides the independant amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +162,7 @@ public class IndependentAmount2 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> IndependentAmount.mmObject();
-			componentContext_lazy = () -> IndependentAmount2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndependentAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,16 +173,11 @@ public class IndependentAmount2 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Cnvntn", required = true)
 	protected IndependentAmountConventionType1Code convention;
 	/**
-	 * Determines how the independent amount was applied in the calculation. <br>
-	 * It is either:<br>
-	 * - before threshold, effectively acting as an add on to exposure, <br>
-	 * - after threshold where the amount is an add on to the credit support
-	 * amount and forms part of the variation margin requirement,<br>
-	 * - segregated where it is treated independently of variation margin for
-	 * segregation purposes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,7 +213,7 @@ public class IndependentAmount2 {
 	public static final MMMessageAttribute mmConvention = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> IndependentAmountTerm.mmConvention;
-			componentContext_lazy = () -> IndependentAmount2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndependentAmount2.mmObject();
 			isDerived = false;
 			xmlTag = "Cnvntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,9 +228,10 @@ public class IndependentAmount2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IndependentAmount2.mmDescription, IndependentAmount2.mmAmount, IndependentAmount2.mmConvention);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndependentAmount2.mmDescription, com.tools20022.repository.msg.IndependentAmount2.mmAmount,
+						com.tools20022.repository.msg.IndependentAmount2.mmConvention);
 				trace_lazy = () -> IndependentAmount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndependentAmount2";
 				definition = "Indicates the independent amount and how it was applied in the calculation. It also provides a description of the amount type.";
@@ -241,30 +240,30 @@ public class IndependentAmount2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Desc")
-	public Max140Text getDescription() {
-		return description;
+	public Optional<Max140Text> getDescription() {
+		return description == null ? Optional.empty() : Optional.of(description);
 	}
 
-	public void setDescription(Max140Text description) {
+	public IndependentAmount2 setDescription(Max140Text description) {
 		this.description = description;
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
-		this.amount = amount;
+	public IndependentAmount2 setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "Cnvntn", required = true)
 	public IndependentAmountConventionType1Code getConvention() {
 		return convention;
 	}
 
-	public void setConvention(IndependentAmountConventionType1Code convention) {
-		this.convention = convention;
+	public IndependentAmount2 setConvention(IndependentAmountConventionType1Code convention) {
+		this.convention = Objects.requireNonNull(convention);
+		return this;
 	}
 }

@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ResolutionStatusCode;
+import com.tools20022.repository.codeset.ResolutionStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether a resolution in an agenda is still active or has been
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ResolutionStatusCode
- * ResolutionStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResolutionStatus1Code#mmActive
- * ResolutionStatus1Code.mmActive}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResolutionStatus1Code#Active
+ * ResolutionStatus1Code.Active}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResolutionStatus1Code#mmWithdrawn
- * ResolutionStatus1Code.mmWithdrawn}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResolutionStatus1Code#Withdrawn
+ * ResolutionStatus1Code.Withdrawn}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ResolutionStatusCode
+ * ResolutionStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ResolutionStatus1Code extends ResolutionStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ResolutionStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class ResolutionStatus1Code extends ResolutionStatusCode {
 	 * name} = "Active"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmActive = new MMCode() {
+	public static final ResolutionStatus1Code Active = new ResolutionStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
-			owner_lazy = () -> ResolutionStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResolutionStatus1Code.mmObject();
+			codeName = ResolutionStatusCode.Active.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,57 @@ public class ResolutionStatus1Code extends ResolutionStatusCode {
 	 * name} = "Withdrawn"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithdrawn = new MMCode() {
+	public static final ResolutionStatus1Code Withdrawn = new ResolutionStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withdrawn";
-			owner_lazy = () -> ResolutionStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResolutionStatus1Code.mmObject();
+			codeName = ResolutionStatusCode.Withdrawn.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ResolutionStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ResolutionStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACTV");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResolutionStatus1Code";
 				definition = "Specifies whether a resolution in an agenda is still active or has been deleted.";
-				code_lazy = () -> Arrays.asList(ResolutionStatus1Code.mmActive, ResolutionStatus1Code.mmWithdrawn);
 				trace_lazy = () -> ResolutionStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResolutionStatus1Code.Active, com.tools20022.repository.codeset.ResolutionStatus1Code.Withdrawn);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Active.getCodeName().get(), Active);
+		codesByName.put(Withdrawn.getCodeName().get(), Withdrawn);
+	}
+
+	public static ResolutionStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ResolutionStatus1Code[] values() {
+		ResolutionStatus1Code[] values = new ResolutionStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ResolutionStatus1Code> {
+		@Override
+		public ResolutionStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ResolutionStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

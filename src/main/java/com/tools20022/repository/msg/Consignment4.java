@@ -24,9 +24,8 @@ import com.tools20022.repository.entity.Consignee;
 import com.tools20022.repository.entity.Consignor;
 import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * Consignment2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Consignment4", propOrder = {"consignor", "consignee", "transportMeans"})
 public class Consignment4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Consgnr")
 	protected TradeParty3 consignor;
 	/**
-	 * Party consigning goods as stipulated in the transport contract by the
-	 * party ordering transport.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -118,7 +117,7 @@ public class Consignment4 {
 	public static final MMMessageAssociationEnd mmConsignor = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Consignor.mmObject();
-			componentContext_lazy = () -> Consignment4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Consignment4.mmObject();
 			isDerived = false;
 			xmlTag = "Consgnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +130,11 @@ public class Consignment4 {
 			type_lazy = () -> com.tools20022.repository.msg.TradeParty3.mmObject();
 		}
 	};
+	@XmlElement(name = "Consgn")
 	protected TradeParty3 consignee;
 	/**
-	 * Party to which goods are consigned.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -169,7 +169,7 @@ public class Consignment4 {
 	public static final MMMessageAssociationEnd mmConsignee = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Consignee.mmObject();
-			componentContext_lazy = () -> Consignment4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Consignment4.mmObject();
 			isDerived = false;
 			xmlTag = "Consgn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,11 +182,11 @@ public class Consignment4 {
 			type_lazy = () -> com.tools20022.repository.msg.TradeParty3.mmObject();
 		}
 	};
+	@XmlElement(name = "TrnsprtMeans")
 	protected List<com.tools20022.repository.msg.TransportMeans3> transportMeans;
 	/**
-	 * Particular aircraft, vehicle, vessel or other device used for the
-	 * transport of a consignment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -223,7 +223,7 @@ public class Consignment4 {
 	public static final MMMessageAssociationEnd mmTransportMeans = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Transport.mmObject();
-			componentContext_lazy = () -> Consignment4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Consignment4.mmObject();
 			isDerived = false;
 			xmlTag = "TrnsprtMeans";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,9 +239,9 @@ public class Consignment4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Consignment4.mmConsignor, Consignment4.mmConsignee, Consignment4.mmTransportMeans);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment4.mmConsignor, com.tools20022.repository.msg.Consignment4.mmConsignee, com.tools20022.repository.msg.Consignment4.mmTransportMeans);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Consignment4";
 				definition = "Specifies the arrangement of the transport of goods and services and the parties involved in this process.";
@@ -251,30 +251,30 @@ public class Consignment4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Consgnr")
-	public TradeParty3 getConsignor() {
-		return consignor;
+	public Optional<TradeParty3> getConsignor() {
+		return consignor == null ? Optional.empty() : Optional.of(consignor);
 	}
 
-	public void setConsignor(com.tools20022.repository.msg.TradeParty3 consignor) {
+	public Consignment4 setConsignor(com.tools20022.repository.msg.TradeParty3 consignor) {
 		this.consignor = consignor;
+		return this;
 	}
 
-	@XmlElement(name = "Consgn")
-	public TradeParty3 getConsignee() {
-		return consignee;
+	public Optional<TradeParty3> getConsignee() {
+		return consignee == null ? Optional.empty() : Optional.of(consignee);
 	}
 
-	public void setConsignee(com.tools20022.repository.msg.TradeParty3 consignee) {
+	public Consignment4 setConsignee(com.tools20022.repository.msg.TradeParty3 consignee) {
 		this.consignee = consignee;
+		return this;
 	}
 
-	@XmlElement(name = "TrnsprtMeans")
 	public List<TransportMeans3> getTransportMeans() {
-		return transportMeans;
+		return transportMeans == null ? transportMeans = new ArrayList<>() : transportMeans;
 	}
 
-	public void setTransportMeans(List<com.tools20022.repository.msg.TransportMeans3> transportMeans) {
-		this.transportMeans = transportMeans;
+	public Consignment4 setTransportMeans(List<com.tools20022.repository.msg.TransportMeans3> transportMeans) {
+		this.transportMeans = Objects.requireNonNull(transportMeans);
+		return this;
 	}
 }

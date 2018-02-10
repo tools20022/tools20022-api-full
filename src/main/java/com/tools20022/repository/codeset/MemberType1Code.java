@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.MemberTypeCode;
+import com.tools20022.repository.codeset.MemberType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the nature of the membership of a party in a system. A system may
@@ -32,27 +36,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.MemberTypeCode MemberTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#mmDirect
- * MemberType1Code.mmDirect}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#mmIndirect
- * MemberType1Code.mmIndirect}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#mmRemote
- * MemberType1Code.mmRemote}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#mmEURO1
- * MemberType1Code.mmEURO1}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#mmSTEP1
- * MemberType1Code.mmSTEP1}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#Direct
+ * MemberType1Code.Direct}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#Indirect
+ * MemberType1Code.Indirect}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#Remote
+ * MemberType1Code.Remote}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#EURO1
+ * MemberType1Code.EURO1}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberType1Code#STEP1
+ * MemberType1Code.STEP1}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.MemberTypeCode MemberTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class MemberType1Code extends MemberTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MemberType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,11 +95,12 @@ public class MemberType1Code extends MemberTypeCode {
 	 * name} = "Direct"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDirect = new MMCode() {
+	public static final MemberType1Code Direct = new MemberType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Direct";
-			owner_lazy = () -> MemberType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MemberType1Code.mmObject();
+			codeName = MemberTypeCode.Direct.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -113,11 +119,12 @@ public class MemberType1Code extends MemberTypeCode {
 	 * name} = "Indirect"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIndirect = new MMCode() {
+	public static final MemberType1Code Indirect = new MemberType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indirect";
-			owner_lazy = () -> MemberType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MemberType1Code.mmObject();
+			codeName = MemberTypeCode.Indirect.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -136,11 +143,12 @@ public class MemberType1Code extends MemberTypeCode {
 	 * name} = "Remote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRemote = new MMCode() {
+	public static final MemberType1Code Remote = new MemberType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Remote";
-			owner_lazy = () -> MemberType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MemberType1Code.mmObject();
+			codeName = MemberTypeCode.Remote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -159,11 +167,12 @@ public class MemberType1Code extends MemberTypeCode {
 	 * name} = "EURO1"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEURO1 = new MMCode() {
+	public static final MemberType1Code EURO1 = new MemberType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EURO1";
-			owner_lazy = () -> MemberType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MemberType1Code.mmObject();
+			codeName = MemberTypeCode.EURO1.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -182,26 +191,61 @@ public class MemberType1Code extends MemberTypeCode {
 	 * name} = "STEP1"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSTEP1 = new MMCode() {
+	public static final MemberType1Code STEP1 = new MemberType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "STEP1";
-			owner_lazy = () -> MemberType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MemberType1Code.mmObject();
+			codeName = MemberTypeCode.STEP1.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, MemberType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MemberType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DRCT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MemberType1Code";
 				definition = "Specifies the nature of the membership of a party in a system. A system may recognise different types of membership, with different related rights and obligations.";
-				code_lazy = () -> Arrays.asList(MemberType1Code.mmDirect, MemberType1Code.mmIndirect, MemberType1Code.mmRemote, MemberType1Code.mmEURO1, MemberType1Code.mmSTEP1);
 				trace_lazy = () -> MemberTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MemberType1Code.Direct, com.tools20022.repository.codeset.MemberType1Code.Indirect, com.tools20022.repository.codeset.MemberType1Code.Remote,
+						com.tools20022.repository.codeset.MemberType1Code.EURO1, com.tools20022.repository.codeset.MemberType1Code.STEP1);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Direct.getCodeName().get(), Direct);
+		codesByName.put(Indirect.getCodeName().get(), Indirect);
+		codesByName.put(Remote.getCodeName().get(), Remote);
+		codesByName.put(EURO1.getCodeName().get(), EURO1);
+		codesByName.put(STEP1.getCodeName().get(), STEP1);
+	}
+
+	public static MemberType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MemberType1Code[] values() {
+		MemberType1Code[] values = new MemberType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MemberType1Code> {
+		@Override
+		public MemberType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MemberType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

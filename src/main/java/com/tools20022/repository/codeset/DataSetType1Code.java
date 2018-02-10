@@ -20,37 +20,40 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DataSetTypeCode;
+import com.tools20022.repository.codeset.DataSetType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of data set that is matched.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DataSetType1Code#Baseline
+ * DataSetType1Code.Baseline}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetType1Code#TransportDataSet
+ * DataSetType1Code.TransportDataSet}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetType1Code#CommercialDataSet
+ * DataSetType1Code.CommercialDataSet}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.DataSetTypeCode
  * DataSetTypeCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetType1Code#mmBaseline
- * DataSetType1Code.mmBaseline}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetType1Code#mmTransportDataSet
- * DataSetType1Code.mmTransportDataSet}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetType1Code#mmCommercialDataSet
- * DataSetType1Code.mmCommercialDataSet}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of data set that is matched."</li>
  * </ul>
  */
-public class DataSetType1Code extends DataSetTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DataSetType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +90,12 @@ public class DataSetType1Code extends DataSetTypeCode {
 	 * name} = "Baseline"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBaseline = new MMCode() {
+	public static final DataSetType1Code Baseline = new DataSetType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Baseline";
-			owner_lazy = () -> DataSetType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetType1Code.mmObject();
+			codeName = DataSetTypeCode.Baseline.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +114,12 @@ public class DataSetType1Code extends DataSetTypeCode {
 	 * name} = "TransportDataSet"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransportDataSet = new MMCode() {
+	public static final DataSetType1Code TransportDataSet = new DataSetType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportDataSet";
-			owner_lazy = () -> DataSetType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetType1Code.mmObject();
+			codeName = DataSetTypeCode.TransportDataSet.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +138,59 @@ public class DataSetType1Code extends DataSetTypeCode {
 	 * name} = "CommercialDataSet"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommercialDataSet = new MMCode() {
+	public static final DataSetType1Code CommercialDataSet = new DataSetType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialDataSet";
-			owner_lazy = () -> DataSetType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetType1Code.mmObject();
+			codeName = DataSetTypeCode.CommercialDataSet.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DataSetType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DataSetType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BASE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DataSetType1Code";
 				definition = "Specifies the type of data set that is matched.";
-				code_lazy = () -> Arrays.asList(DataSetType1Code.mmBaseline, DataSetType1Code.mmTransportDataSet, DataSetType1Code.mmCommercialDataSet);
 				trace_lazy = () -> DataSetTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataSetType1Code.Baseline, com.tools20022.repository.codeset.DataSetType1Code.TransportDataSet,
+						com.tools20022.repository.codeset.DataSetType1Code.CommercialDataSet);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Baseline.getCodeName().get(), Baseline);
+		codesByName.put(TransportDataSet.getCodeName().get(), TransportDataSet);
+		codesByName.put(CommercialDataSet.getCodeName().get(), CommercialDataSet);
+	}
+
+	public static DataSetType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DataSetType1Code[] values() {
+		DataSetType1Code[] values = new DataSetType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DataSetType1Code> {
+		@Override
+		public DataSetType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DataSetType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

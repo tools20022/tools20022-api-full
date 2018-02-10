@@ -32,6 +32,7 @@ import com.tools20022.repository.entity.PremiumCalculation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +75,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,15 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * PremiumAmount2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PremiumAmount3", propOrder = {"premiumQuote", "premiumCurrency", "amount", "decimalPlaces", "premiumSettlementDate", "payerPartyReference", "receiverPartyReference"})
 public class PremiumAmount3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrmQt", required = true)
 	protected PremiumQuote1Choice premiumQuote;
 	/**
-	 * Specifies the calculation method of the premium amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -129,7 +131,7 @@ public class PremiumAmount3 {
 	 */
 	public static final MMMessageAssociationEnd mmPremiumQuote = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PremiumAmount3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PremiumAmount3.mmObject();
 			isDerived = false;
 			xmlTag = "PrmQt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,10 +144,11 @@ public class PremiumAmount3 {
 			type_lazy = () -> PremiumQuote1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrmCcy", required = true)
 	protected ActiveOrHistoricCurrencyCode premiumCurrency;
 	/**
-	 * Identification of the premium currency in which the option is held. <br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,7 +183,7 @@ public class PremiumAmount3 {
 	public static final MMMessageAttribute mmPremiumCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
-			componentContext_lazy = () -> PremiumAmount3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PremiumAmount3.mmObject();
 			isDerived = false;
 			xmlTag = "PrmCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,12 +194,11 @@ public class PremiumAmount3 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * Result of the calculation of the premium amount on the basis of the
-	 * premium quote and one of the amounts of the underlying foreign exchange
-	 * trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -230,7 +232,7 @@ public class PremiumAmount3 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PremiumAmount3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PremiumAmount3.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -242,10 +244,11 @@ public class PremiumAmount3 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "DcmlPlcs", required = true)
 	protected Number decimalPlaces;
 	/**
-	 * Number of decimal places to which quantities of units/shares are rounded.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -273,7 +276,7 @@ public class PremiumAmount3 {
 	 */
 	public static final MMMessageAttribute mmDecimalPlaces = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PremiumAmount3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PremiumAmount3.mmObject();
 			isDerived = false;
 			xmlTag = "DcmlPlcs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,10 +287,11 @@ public class PremiumAmount3 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "PrmSttlmDt", required = true)
 	protected ISODate premiumSettlementDate;
 	/**
-	 * Date on which the premium must be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -313,7 +317,7 @@ public class PremiumAmount3 {
 	 */
 	public static final MMMessageAttribute mmPremiumSettlementDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PremiumAmount3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PremiumAmount3.mmObject();
 			isDerived = false;
 			xmlTag = "PrmSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -324,10 +328,11 @@ public class PremiumAmount3 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "PyerPtyRef", required = true)
 	protected Max35Text payerPartyReference;
 	/**
-	 * Premium fee payer related information
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -353,7 +358,7 @@ public class PremiumAmount3 {
 	 */
 	public static final MMMessageAttribute mmPayerPartyReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PremiumAmount3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PremiumAmount3.mmObject();
 			isDerived = false;
 			xmlTag = "PyerPtyRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -364,10 +369,11 @@ public class PremiumAmount3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvrPtyRef", required = true)
 	protected Max35Text receiverPartyReference;
 	/**
-	 * Premium fee receiver related information
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -393,7 +399,7 @@ public class PremiumAmount3 {
 	 */
 	public static final MMMessageAttribute mmReceiverPartyReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PremiumAmount3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PremiumAmount3.mmObject();
 			isDerived = false;
 			xmlTag = "RcvrPtyRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -408,10 +414,11 @@ public class PremiumAmount3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PremiumAmount3.mmPremiumQuote, PremiumAmount3.mmPremiumCurrency, PremiumAmount3.mmAmount, PremiumAmount3.mmDecimalPlaces, PremiumAmount3.mmPremiumSettlementDate,
-						PremiumAmount3.mmPayerPartyReference, PremiumAmount3.mmReceiverPartyReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PremiumAmount3.mmPremiumQuote, com.tools20022.repository.msg.PremiumAmount3.mmPremiumCurrency, com.tools20022.repository.msg.PremiumAmount3.mmAmount,
+						com.tools20022.repository.msg.PremiumAmount3.mmDecimalPlaces, com.tools20022.repository.msg.PremiumAmount3.mmPremiumSettlementDate, com.tools20022.repository.msg.PremiumAmount3.mmPayerPartyReference,
+						com.tools20022.repository.msg.PremiumAmount3.mmReceiverPartyReference);
 				trace_lazy = () -> PremiumCalculation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PremiumAmount3";
 				definition = "Commercial agreement in which the buyer agrees to pay the seller an amount of cash. Some aspects of the payment may be defined in the agreement, for example, the method of the payment";
@@ -421,66 +428,66 @@ public class PremiumAmount3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrmQt", required = true)
 	public PremiumQuote1Choice getPremiumQuote() {
 		return premiumQuote;
 	}
 
-	public void setPremiumQuote(PremiumQuote1Choice premiumQuote) {
-		this.premiumQuote = premiumQuote;
+	public PremiumAmount3 setPremiumQuote(PremiumQuote1Choice premiumQuote) {
+		this.premiumQuote = Objects.requireNonNull(premiumQuote);
+		return this;
 	}
 
-	@XmlElement(name = "PrmCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getPremiumCurrency() {
 		return premiumCurrency;
 	}
 
-	public void setPremiumCurrency(ActiveOrHistoricCurrencyCode premiumCurrency) {
-		this.premiumCurrency = premiumCurrency;
+	public PremiumAmount3 setPremiumCurrency(ActiveOrHistoricCurrencyCode premiumCurrency) {
+		this.premiumCurrency = Objects.requireNonNull(premiumCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
-		this.amount = amount;
+	public PremiumAmount3 setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "DcmlPlcs", required = true)
 	public Number getDecimalPlaces() {
 		return decimalPlaces;
 	}
 
-	public void setDecimalPlaces(Number decimalPlaces) {
-		this.decimalPlaces = decimalPlaces;
+	public PremiumAmount3 setDecimalPlaces(Number decimalPlaces) {
+		this.decimalPlaces = Objects.requireNonNull(decimalPlaces);
+		return this;
 	}
 
-	@XmlElement(name = "PrmSttlmDt", required = true)
 	public ISODate getPremiumSettlementDate() {
 		return premiumSettlementDate;
 	}
 
-	public void setPremiumSettlementDate(ISODate premiumSettlementDate) {
-		this.premiumSettlementDate = premiumSettlementDate;
+	public PremiumAmount3 setPremiumSettlementDate(ISODate premiumSettlementDate) {
+		this.premiumSettlementDate = Objects.requireNonNull(premiumSettlementDate);
+		return this;
 	}
 
-	@XmlElement(name = "PyerPtyRef", required = true)
 	public Max35Text getPayerPartyReference() {
 		return payerPartyReference;
 	}
 
-	public void setPayerPartyReference(Max35Text payerPartyReference) {
-		this.payerPartyReference = payerPartyReference;
+	public PremiumAmount3 setPayerPartyReference(Max35Text payerPartyReference) {
+		this.payerPartyReference = Objects.requireNonNull(payerPartyReference);
+		return this;
 	}
 
-	@XmlElement(name = "RcvrPtyRef", required = true)
 	public Max35Text getReceiverPartyReference() {
 		return receiverPartyReference;
 	}
 
-	public void setReceiverPartyReference(Max35Text receiverPartyReference) {
-		this.receiverPartyReference = receiverPartyReference;
+	public PremiumAmount3 setReceiverPartyReference(Max35Text receiverPartyReference) {
+		this.receiverPartyReference = Objects.requireNonNull(receiverPartyReference);
+		return this;
 	}
 }

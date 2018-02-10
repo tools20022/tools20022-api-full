@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AssetClassProductTypeCode;
+import com.tools20022.repository.codeset.AssetClassProductType6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Commodity derivative base product code list for Industrial Product.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode
- * AssetClassProductTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductType6Code#mmIndustrialProduct
- * AssetClassProductType6Code.mmIndustrialProduct}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductType6Code#IndustrialProduct
+ * AssetClassProductType6Code.IndustrialProduct}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode
+ * AssetClassProductTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -56,7 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Commodity derivative base product code list for Industrial Product."</li>
  * </ul>
  */
-public class AssetClassProductType6Code extends AssetClassProductTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AssetClassProductType6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -75,25 +80,55 @@ public class AssetClassProductType6Code extends AssetClassProductTypeCode {
 	 * name} = "IndustrialProduct"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIndustrialProduct = new MMCode() {
+	public static final AssetClassProductType6Code IndustrialProduct = new AssetClassProductType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndustrialProduct";
-			owner_lazy = () -> AssetClassProductType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassProductType6Code.mmObject();
+			codeName = AssetClassProductTypeCode.IndustrialProduct.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AssetClassProductType6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AssetClassProductType6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassProductType6Code";
 				definition = "Commodity derivative base product code list for Industrial Product.";
-				code_lazy = () -> Arrays.asList(AssetClassProductType6Code.mmIndustrialProduct);
 				trace_lazy = () -> AssetClassProductTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassProductType6Code.IndustrialProduct);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(IndustrialProduct.getCodeName().get(), IndustrialProduct);
+	}
+
+	public static AssetClassProductType6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AssetClassProductType6Code[] values() {
+		AssetClassProductType6Code[] values = new AssetClassProductType6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AssetClassProductType6Code> {
+		@Override
+		public AssetClassProductType6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AssetClassProductType6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

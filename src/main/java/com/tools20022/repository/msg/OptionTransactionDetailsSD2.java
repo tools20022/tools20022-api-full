@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -27,6 +28,8 @@ import com.tools20022.repository.entity.CorporateActionCashEntitlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -102,8 +105,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -116,17 +119,18 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OptionTransactionDetailsSD2", propOrder = {"placeAndName", "transactionIdentification", "transactionSequenceNumber", "transactionIdentificationDate", "transactionIdentificationQuantity",
 		"transactionIdentificationOversubscriptionQuantity", "acceptedQuantity", "unacceptedQuantity", "entitledAmount", "entitledQuantity", "entitledOversubscriptionQuantity", "refundedOversubscriptionAmount", "subscriptionAmount",
 		"oversubscriptionAmount", "finalSubscriptionAdjustmentAmount", "cashInLieuOfShare", "customerReferenceIdentification", "agentEnteredQuantity"})
 public class OptionTransactionDetailsSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,7 +157,7 @@ public class OptionTransactionDetailsSD2 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OptionTransactionDetailsSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,13 +168,11 @@ public class OptionTransactionDetailsSD2 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TxId", required = true)
 	protected Max15Text transactionIdentification;
 	/**
-	 * Unique number assigned by the Depository. Transaction identification will
-	 * be either the DTC Instruction Reference Number for reorganisation
-	 * instructions (VOI) or the DAM Reference Number for custody /
-	 * reorganisation deposits.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,7 +201,7 @@ public class OptionTransactionDetailsSD2 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OptionTransactionDetailsSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,11 +212,11 @@ public class OptionTransactionDetailsSD2 {
 			simpleType_lazy = () -> Max15Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TxSeqNb")
 	protected Max3NumericText transactionSequenceNumber;
 	/**
-	 * Number which further identifies DTC intsruction reference number. Not
-	 * applicable to reorganisation / custody deposits.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,7 +246,7 @@ public class OptionTransactionDetailsSD2 {
 	 */
 	public static final MMMessageAttribute mmTransactionSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OptionTransactionDetailsSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
 			xmlTag = "TxSeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -255,11 +257,11 @@ public class OptionTransactionDetailsSD2 {
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "TxIdDt", required = true)
 	protected ISODateTime transactionIdentificationDate;
 	/**
-	 * Instruction date and time for reorganisation instructions or the deposit
-	 * date for reorganisation / custody deposits.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -288,7 +290,7 @@ public class OptionTransactionDetailsSD2 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentificationDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OptionTransactionDetailsSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
 			xmlTag = "TxIdDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -299,11 +301,11 @@ public class OptionTransactionDetailsSD2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "TxIdQty", required = true)
 	protected FinancialInstrumentQuantity15Choice transactionIdentificationQuantity;
 	/**
-	 * Instructed quantity for reorganisation instructions or the deposit
-	 * quantity for reorganisation / custody deposits.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -332,7 +334,7 @@ public class OptionTransactionDetailsSD2 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionIdentificationQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OptionTransactionDetailsSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
 			xmlTag = "TxIdQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -344,10 +346,11 @@ public class OptionTransactionDetailsSD2 {
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TxIdOvrsbcptQty")
 	protected FinancialInstrumentQuantity15Choice transactionIdentificationOversubscriptionQuantity;
 	/**
-	 * Oversubscribed quantity of the instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -374,7 +377,7 @@ public class OptionTransactionDetailsSD2 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionIdentificationOversubscriptionQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OptionTransactionDetailsSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
 			xmlTag = "TxIdOvrsbcptQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -386,11 +389,11 @@ public class OptionTransactionDetailsSD2 {
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AccptdQty")
 	protected FinancialInstrumentQuantity15Choice acceptedQuantity;
 	/**
-	 * For prorated events, portion of the instructed units that was accepted by
-	 * the Issuer / Agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -419,7 +422,7 @@ public class OptionTransactionDetailsSD2 {
 	 */
 	public static final MMMessageAssociationEnd mmAcceptedQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OptionTransactionDetailsSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
 			xmlTag = "AccptdQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -431,11 +434,11 @@ public class OptionTransactionDetailsSD2 {
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "UaccptdQty")
 	protected FinancialInstrumentQuantity15Choice unacceptedQuantity;
 	/**
-	 * For prorated events, the portion of the instructed quantity that was not
-	 * accepted by the Issuer / Agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -464,7 +467,7 @@ public class OptionTransactionDetailsSD2 {
 	 */
 	public static final MMMessageAssociationEnd mmUnacceptedQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OptionTransactionDetailsSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
 			xmlTag = "UaccptdQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -476,10 +479,11 @@ public class OptionTransactionDetailsSD2 {
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "EntitldAmt")
 	protected RestrictedFINActiveCurrencyAndAmount entitledAmount;
 	/**
-	 * Amount based upon the DTC cash rate per instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -507,7 +511,7 @@ public class OptionTransactionDetailsSD2 {
 	 */
 	public static final MMMessageAttribute mmEntitledAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OptionTransactionDetailsSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
 			xmlTag = "EntitldAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -518,10 +522,11 @@ public class OptionTransactionDetailsSD2 {
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "EntitldQty")
 	protected FinancialInstrumentQuantity15Choice entitledQuantity;
 	/**
-	 * Quantity based upon the DTC security rate per instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -549,7 +554,7 @@ public class OptionTransactionDetailsSD2 {
 	 */
 	public static final MMMessageAssociationEnd mmEntitledQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OptionTransactionDetailsSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
 			xmlTag = "EntitldQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -561,10 +566,11 @@ public class OptionTransactionDetailsSD2 {
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "EntitldOvrsbcptQty")
 	protected FinancialInstrumentQuantity15Choice entitledOversubscriptionQuantity;
 	/**
-	 * Entitled units for the oversubscription.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -591,7 +597,7 @@ public class OptionTransactionDetailsSD2 {
 	 */
 	public static final MMMessageAssociationEnd mmEntitledOversubscriptionQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OptionTransactionDetailsSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
 			xmlTag = "EntitldOvrsbcptQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -603,11 +609,11 @@ public class OptionTransactionDetailsSD2 {
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RfnddOvrsbcptAmt")
 	protected RestrictedFINActiveCurrencyAndAmount refundedOversubscriptionAmount;
 	/**
-	 * Amount to be refunded for oversubscribed shares not accepted by the
-	 * issuer / agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -637,7 +643,7 @@ public class OptionTransactionDetailsSD2 {
 	 */
 	public static final MMMessageAttribute mmRefundedOversubscriptionAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OptionTransactionDetailsSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
 			xmlTag = "RfnddOvrsbcptAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -648,10 +654,11 @@ public class OptionTransactionDetailsSD2 {
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SbcptAmt")
 	protected RestrictedFINActiveCurrencyAndAmount subscriptionAmount;
 	/**
-	 * Amount paid to the issuer / agent for subscription cost.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -679,7 +686,7 @@ public class OptionTransactionDetailsSD2 {
 	 */
 	public static final MMMessageAttribute mmSubscriptionAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OptionTransactionDetailsSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -690,10 +697,11 @@ public class OptionTransactionDetailsSD2 {
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "OvrsbcptAmt")
 	protected RestrictedFINActiveCurrencyAndAmount oversubscriptionAmount;
 	/**
-	 * Amount paid to the issuer / agent for the oversubscription cost.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -722,7 +730,7 @@ public class OptionTransactionDetailsSD2 {
 	 */
 	public static final MMMessageAttribute mmOversubscriptionAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OptionTransactionDetailsSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
 			xmlTag = "OvrsbcptAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -733,11 +741,11 @@ public class OptionTransactionDetailsSD2 {
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "FnlSbcptAdjstmntAmt")
 	protected RestrictedFINActiveCurrencyAndAmount finalSubscriptionAdjustmentAmount;
 	/**
-	 * Adjustment related to the difference between the estimated and final
-	 * price for the subscription cost.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -767,7 +775,7 @@ public class OptionTransactionDetailsSD2 {
 	 */
 	public static final MMMessageAttribute mmFinalSubscriptionAdjustmentAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OptionTransactionDetailsSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
 			xmlTag = "FnlSbcptAdjstmntAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -778,11 +786,11 @@ public class OptionTransactionDetailsSD2 {
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CshInLieuOfShr")
 	protected RestrictedFINActiveCurrencyAndAmount cashInLieuOfShare;
 	/**
-	 * Cash disbursement in lieu of a fractional quantity of, for example,
-	 * equity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -803,6 +811,9 @@ public class OptionTransactionDetailsSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CshInLieuOfShr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19B:CINL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -818,9 +829,10 @@ public class OptionTransactionDetailsSD2 {
 	public static final MMMessageAttribute mmCashInLieuOfShare = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmCashInLieuOfShare;
-			componentContext_lazy = () -> OptionTransactionDetailsSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
 			xmlTag = "CshInLieuOfShr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19B:CINL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfShare";
 			definition = "Cash disbursement in lieu of a fractional quantity of, for example, equity.";
@@ -829,10 +841,11 @@ public class OptionTransactionDetailsSD2 {
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CstmrRefId")
 	protected Max15Text customerReferenceIdentification;
 	/**
-	 * Customer identification entered by client upon instruction submission.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -860,7 +873,7 @@ public class OptionTransactionDetailsSD2 {
 	 */
 	public static final MMMessageAttribute mmCustomerReferenceIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OptionTransactionDetailsSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrRefId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -871,11 +884,11 @@ public class OptionTransactionDetailsSD2 {
 			simpleType_lazy = () -> Max15Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AgtNtrdQty")
 	protected FinancialInstrumentQuantity15Choice agentEnteredQuantity;
 	/**
-	 * Quantity entered by the Agent on PUT (Mortgage Backed) instructions to be
-	 * paid. This quantity can be for the full or partial instructed quantity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -904,7 +917,7 @@ public class OptionTransactionDetailsSD2 {
 	 */
 	public static final MMMessageAssociationEnd mmAgentEnteredQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OptionTransactionDetailsSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
 			xmlTag = "AgtNtrdQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -920,13 +933,16 @@ public class OptionTransactionDetailsSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OptionTransactionDetailsSD2.mmPlaceAndName, OptionTransactionDetailsSD2.mmTransactionIdentification, OptionTransactionDetailsSD2.mmTransactionSequenceNumber,
-						OptionTransactionDetailsSD2.mmTransactionIdentificationDate, OptionTransactionDetailsSD2.mmTransactionIdentificationQuantity, OptionTransactionDetailsSD2.mmTransactionIdentificationOversubscriptionQuantity,
-						OptionTransactionDetailsSD2.mmAcceptedQuantity, OptionTransactionDetailsSD2.mmUnacceptedQuantity, OptionTransactionDetailsSD2.mmEntitledAmount, OptionTransactionDetailsSD2.mmEntitledQuantity,
-						OptionTransactionDetailsSD2.mmEntitledOversubscriptionQuantity, OptionTransactionDetailsSD2.mmRefundedOversubscriptionAmount, OptionTransactionDetailsSD2.mmSubscriptionAmount,
-						OptionTransactionDetailsSD2.mmOversubscriptionAmount, OptionTransactionDetailsSD2.mmFinalSubscriptionAdjustmentAmount, OptionTransactionDetailsSD2.mmCashInLieuOfShare,
-						OptionTransactionDetailsSD2.mmCustomerReferenceIdentification, OptionTransactionDetailsSD2.mmAgentEnteredQuantity);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmPlaceAndName, com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmTransactionIdentification,
+						com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmTransactionSequenceNumber, com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmTransactionIdentificationDate,
+						com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmTransactionIdentificationQuantity, com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmTransactionIdentificationOversubscriptionQuantity,
+						com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmAcceptedQuantity, com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmUnacceptedQuantity,
+						com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmEntitledAmount, com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmEntitledQuantity,
+						com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmEntitledOversubscriptionQuantity, com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmRefundedOversubscriptionAmount,
+						com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmSubscriptionAmount, com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmOversubscriptionAmount,
+						com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmFinalSubscriptionAdjustmentAmount, com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmCashInLieuOfShare,
+						com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmCustomerReferenceIdentification, com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmAgentEnteredQuantity);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OptionTransactionDetailsSD2";
 				definition = "Provides additional information regarding corporate action movement option details.";
@@ -935,165 +951,165 @@ public class OptionTransactionDetailsSD2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public OptionTransactionDetailsSD2 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public Max15Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(Max15Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public OptionTransactionDetailsSD2 setTransactionIdentification(Max15Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TxSeqNb")
-	public Max3NumericText getTransactionSequenceNumber() {
-		return transactionSequenceNumber;
+	public Optional<Max3NumericText> getTransactionSequenceNumber() {
+		return transactionSequenceNumber == null ? Optional.empty() : Optional.of(transactionSequenceNumber);
 	}
 
-	public void setTransactionSequenceNumber(Max3NumericText transactionSequenceNumber) {
+	public OptionTransactionDetailsSD2 setTransactionSequenceNumber(Max3NumericText transactionSequenceNumber) {
 		this.transactionSequenceNumber = transactionSequenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "TxIdDt", required = true)
 	public ISODateTime getTransactionIdentificationDate() {
 		return transactionIdentificationDate;
 	}
 
-	public void setTransactionIdentificationDate(ISODateTime transactionIdentificationDate) {
-		this.transactionIdentificationDate = transactionIdentificationDate;
+	public OptionTransactionDetailsSD2 setTransactionIdentificationDate(ISODateTime transactionIdentificationDate) {
+		this.transactionIdentificationDate = Objects.requireNonNull(transactionIdentificationDate);
+		return this;
 	}
 
-	@XmlElement(name = "TxIdQty", required = true)
 	public FinancialInstrumentQuantity15Choice getTransactionIdentificationQuantity() {
 		return transactionIdentificationQuantity;
 	}
 
-	public void setTransactionIdentificationQuantity(FinancialInstrumentQuantity15Choice transactionIdentificationQuantity) {
-		this.transactionIdentificationQuantity = transactionIdentificationQuantity;
+	public OptionTransactionDetailsSD2 setTransactionIdentificationQuantity(FinancialInstrumentQuantity15Choice transactionIdentificationQuantity) {
+		this.transactionIdentificationQuantity = Objects.requireNonNull(transactionIdentificationQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "TxIdOvrsbcptQty")
-	public FinancialInstrumentQuantity15Choice getTransactionIdentificationOversubscriptionQuantity() {
-		return transactionIdentificationOversubscriptionQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getTransactionIdentificationOversubscriptionQuantity() {
+		return transactionIdentificationOversubscriptionQuantity == null ? Optional.empty() : Optional.of(transactionIdentificationOversubscriptionQuantity);
 	}
 
-	public void setTransactionIdentificationOversubscriptionQuantity(FinancialInstrumentQuantity15Choice transactionIdentificationOversubscriptionQuantity) {
+	public OptionTransactionDetailsSD2 setTransactionIdentificationOversubscriptionQuantity(FinancialInstrumentQuantity15Choice transactionIdentificationOversubscriptionQuantity) {
 		this.transactionIdentificationOversubscriptionQuantity = transactionIdentificationOversubscriptionQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "AccptdQty")
-	public FinancialInstrumentQuantity15Choice getAcceptedQuantity() {
-		return acceptedQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getAcceptedQuantity() {
+		return acceptedQuantity == null ? Optional.empty() : Optional.of(acceptedQuantity);
 	}
 
-	public void setAcceptedQuantity(FinancialInstrumentQuantity15Choice acceptedQuantity) {
+	public OptionTransactionDetailsSD2 setAcceptedQuantity(FinancialInstrumentQuantity15Choice acceptedQuantity) {
 		this.acceptedQuantity = acceptedQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "UaccptdQty")
-	public FinancialInstrumentQuantity15Choice getUnacceptedQuantity() {
-		return unacceptedQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getUnacceptedQuantity() {
+		return unacceptedQuantity == null ? Optional.empty() : Optional.of(unacceptedQuantity);
 	}
 
-	public void setUnacceptedQuantity(FinancialInstrumentQuantity15Choice unacceptedQuantity) {
+	public OptionTransactionDetailsSD2 setUnacceptedQuantity(FinancialInstrumentQuantity15Choice unacceptedQuantity) {
 		this.unacceptedQuantity = unacceptedQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "EntitldAmt")
-	public RestrictedFINActiveCurrencyAndAmount getEntitledAmount() {
-		return entitledAmount;
+	public Optional<RestrictedFINActiveCurrencyAndAmount> getEntitledAmount() {
+		return entitledAmount == null ? Optional.empty() : Optional.of(entitledAmount);
 	}
 
-	public void setEntitledAmount(RestrictedFINActiveCurrencyAndAmount entitledAmount) {
+	public OptionTransactionDetailsSD2 setEntitledAmount(RestrictedFINActiveCurrencyAndAmount entitledAmount) {
 		this.entitledAmount = entitledAmount;
+		return this;
 	}
 
-	@XmlElement(name = "EntitldQty")
-	public FinancialInstrumentQuantity15Choice getEntitledQuantity() {
-		return entitledQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getEntitledQuantity() {
+		return entitledQuantity == null ? Optional.empty() : Optional.of(entitledQuantity);
 	}
 
-	public void setEntitledQuantity(FinancialInstrumentQuantity15Choice entitledQuantity) {
+	public OptionTransactionDetailsSD2 setEntitledQuantity(FinancialInstrumentQuantity15Choice entitledQuantity) {
 		this.entitledQuantity = entitledQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "EntitldOvrsbcptQty")
-	public FinancialInstrumentQuantity15Choice getEntitledOversubscriptionQuantity() {
-		return entitledOversubscriptionQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getEntitledOversubscriptionQuantity() {
+		return entitledOversubscriptionQuantity == null ? Optional.empty() : Optional.of(entitledOversubscriptionQuantity);
 	}
 
-	public void setEntitledOversubscriptionQuantity(FinancialInstrumentQuantity15Choice entitledOversubscriptionQuantity) {
+	public OptionTransactionDetailsSD2 setEntitledOversubscriptionQuantity(FinancialInstrumentQuantity15Choice entitledOversubscriptionQuantity) {
 		this.entitledOversubscriptionQuantity = entitledOversubscriptionQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "RfnddOvrsbcptAmt")
-	public RestrictedFINActiveCurrencyAndAmount getRefundedOversubscriptionAmount() {
-		return refundedOversubscriptionAmount;
+	public Optional<RestrictedFINActiveCurrencyAndAmount> getRefundedOversubscriptionAmount() {
+		return refundedOversubscriptionAmount == null ? Optional.empty() : Optional.of(refundedOversubscriptionAmount);
 	}
 
-	public void setRefundedOversubscriptionAmount(RestrictedFINActiveCurrencyAndAmount refundedOversubscriptionAmount) {
+	public OptionTransactionDetailsSD2 setRefundedOversubscriptionAmount(RestrictedFINActiveCurrencyAndAmount refundedOversubscriptionAmount) {
 		this.refundedOversubscriptionAmount = refundedOversubscriptionAmount;
+		return this;
 	}
 
-	@XmlElement(name = "SbcptAmt")
-	public RestrictedFINActiveCurrencyAndAmount getSubscriptionAmount() {
-		return subscriptionAmount;
+	public Optional<RestrictedFINActiveCurrencyAndAmount> getSubscriptionAmount() {
+		return subscriptionAmount == null ? Optional.empty() : Optional.of(subscriptionAmount);
 	}
 
-	public void setSubscriptionAmount(RestrictedFINActiveCurrencyAndAmount subscriptionAmount) {
+	public OptionTransactionDetailsSD2 setSubscriptionAmount(RestrictedFINActiveCurrencyAndAmount subscriptionAmount) {
 		this.subscriptionAmount = subscriptionAmount;
+		return this;
 	}
 
-	@XmlElement(name = "OvrsbcptAmt")
-	public RestrictedFINActiveCurrencyAndAmount getOversubscriptionAmount() {
-		return oversubscriptionAmount;
+	public Optional<RestrictedFINActiveCurrencyAndAmount> getOversubscriptionAmount() {
+		return oversubscriptionAmount == null ? Optional.empty() : Optional.of(oversubscriptionAmount);
 	}
 
-	public void setOversubscriptionAmount(RestrictedFINActiveCurrencyAndAmount oversubscriptionAmount) {
+	public OptionTransactionDetailsSD2 setOversubscriptionAmount(RestrictedFINActiveCurrencyAndAmount oversubscriptionAmount) {
 		this.oversubscriptionAmount = oversubscriptionAmount;
+		return this;
 	}
 
-	@XmlElement(name = "FnlSbcptAdjstmntAmt")
-	public RestrictedFINActiveCurrencyAndAmount getFinalSubscriptionAdjustmentAmount() {
-		return finalSubscriptionAdjustmentAmount;
+	public Optional<RestrictedFINActiveCurrencyAndAmount> getFinalSubscriptionAdjustmentAmount() {
+		return finalSubscriptionAdjustmentAmount == null ? Optional.empty() : Optional.of(finalSubscriptionAdjustmentAmount);
 	}
 
-	public void setFinalSubscriptionAdjustmentAmount(RestrictedFINActiveCurrencyAndAmount finalSubscriptionAdjustmentAmount) {
+	public OptionTransactionDetailsSD2 setFinalSubscriptionAdjustmentAmount(RestrictedFINActiveCurrencyAndAmount finalSubscriptionAdjustmentAmount) {
 		this.finalSubscriptionAdjustmentAmount = finalSubscriptionAdjustmentAmount;
+		return this;
 	}
 
-	@XmlElement(name = "CshInLieuOfShr")
-	public RestrictedFINActiveCurrencyAndAmount getCashInLieuOfShare() {
-		return cashInLieuOfShare;
+	public Optional<RestrictedFINActiveCurrencyAndAmount> getCashInLieuOfShare() {
+		return cashInLieuOfShare == null ? Optional.empty() : Optional.of(cashInLieuOfShare);
 	}
 
-	public void setCashInLieuOfShare(RestrictedFINActiveCurrencyAndAmount cashInLieuOfShare) {
+	public OptionTransactionDetailsSD2 setCashInLieuOfShare(RestrictedFINActiveCurrencyAndAmount cashInLieuOfShare) {
 		this.cashInLieuOfShare = cashInLieuOfShare;
+		return this;
 	}
 
-	@XmlElement(name = "CstmrRefId")
-	public Max15Text getCustomerReferenceIdentification() {
-		return customerReferenceIdentification;
+	public Optional<Max15Text> getCustomerReferenceIdentification() {
+		return customerReferenceIdentification == null ? Optional.empty() : Optional.of(customerReferenceIdentification);
 	}
 
-	public void setCustomerReferenceIdentification(Max15Text customerReferenceIdentification) {
+	public OptionTransactionDetailsSD2 setCustomerReferenceIdentification(Max15Text customerReferenceIdentification) {
 		this.customerReferenceIdentification = customerReferenceIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AgtNtrdQty")
-	public FinancialInstrumentQuantity15Choice getAgentEnteredQuantity() {
-		return agentEnteredQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getAgentEnteredQuantity() {
+		return agentEnteredQuantity == null ? Optional.empty() : Optional.of(agentEnteredQuantity);
 	}
 
-	public void setAgentEnteredQuantity(FinancialInstrumentQuantity15Choice agentEnteredQuantity) {
+	public OptionTransactionDetailsSD2 setAgentEnteredQuantity(FinancialInstrumentQuantity15Choice agentEnteredQuantity) {
 		this.agentEnteredQuantity = agentEnteredQuantity;
+		return this;
 	}
 }

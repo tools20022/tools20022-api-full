@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.BuyIn;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * previousVersion} = {@linkplain com.tools20022.repository.msg.BuyIn1 BuyIn1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BuyIn4", propOrder = {"warningIndicator", "expectedBuyInDate", "cancellationLimitDate", "buyInReversionDate"})
 public class BuyIn4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "WrngInd")
 	protected YesNoIndicator warningIndicator;
 	/**
-	 * Indicates whether the message is a warning only or a notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +127,7 @@ public class BuyIn4 {
 	 */
 	public static final MMMessageAttribute mmWarningIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BuyIn4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn4.mmObject();
 			isDerived = false;
 			xmlTag = "WrngInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +139,11 @@ public class BuyIn4 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "XpctdBuyInDt", required = true)
 	protected DateFormat15Choice expectedBuyInDate;
 	/**
-	 * Provides the date at which the buy-in will occur.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,7 +181,7 @@ public class BuyIn4 {
 	public static final MMMessageAttribute mmExpectedBuyInDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> BuyIn.mmBuyinDate;
-			componentContext_lazy = () -> BuyIn4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn4.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdBuyInDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,11 +193,11 @@ public class BuyIn4 {
 			complexType_lazy = () -> DateFormat15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CxlLmtDt")
 	protected ISODate cancellationLimitDate;
 	/**
-	 * Identifies the latest date by which the buy-in operation can be
-	 * cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -221,7 +225,7 @@ public class BuyIn4 {
 	 */
 	public static final MMMessageAttribute mmCancellationLimitDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BuyIn4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn4.mmObject();
 			isDerived = false;
 			xmlTag = "CxlLmtDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,10 +236,11 @@ public class BuyIn4 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "BuyInRvrsnDt")
 	protected ISODate buyInReversionDate;
 	/**
-	 * Identifies the date by which the buy-in operation is reversed by the CCP.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -263,7 +268,7 @@ public class BuyIn4 {
 	 */
 	public static final MMMessageAttribute mmBuyInReversionDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BuyIn4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn4.mmObject();
 			isDerived = false;
 			xmlTag = "BuyInRvrsnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -278,10 +283,11 @@ public class BuyIn4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BuyIn4.mmWarningIndicator, BuyIn4.mmExpectedBuyInDate, BuyIn4.mmCancellationLimitDate, BuyIn4.mmBuyInReversionDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn4.mmWarningIndicator, com.tools20022.repository.msg.BuyIn4.mmExpectedBuyInDate, com.tools20022.repository.msg.BuyIn4.mmCancellationLimitDate,
+						com.tools20022.repository.msg.BuyIn4.mmBuyInReversionDate);
 				messageBuildingBlock_lazy = () -> Arrays.asList(BuyInNotificationV03.mmNotificationDetails);
 				trace_lazy = () -> BuyIn.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BuyIn4";
 				definition = "Specifies elements related to the notification (or warn) sent by the central counterparty to the clearing member in the context of the buy in process.";
@@ -291,39 +297,39 @@ public class BuyIn4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "WrngInd")
-	public YesNoIndicator getWarningIndicator() {
-		return warningIndicator;
+	public Optional<YesNoIndicator> getWarningIndicator() {
+		return warningIndicator == null ? Optional.empty() : Optional.of(warningIndicator);
 	}
 
-	public void setWarningIndicator(YesNoIndicator warningIndicator) {
+	public BuyIn4 setWarningIndicator(YesNoIndicator warningIndicator) {
 		this.warningIndicator = warningIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "XpctdBuyInDt", required = true)
 	public DateFormat15Choice getExpectedBuyInDate() {
 		return expectedBuyInDate;
 	}
 
-	public void setExpectedBuyInDate(DateFormat15Choice expectedBuyInDate) {
-		this.expectedBuyInDate = expectedBuyInDate;
+	public BuyIn4 setExpectedBuyInDate(DateFormat15Choice expectedBuyInDate) {
+		this.expectedBuyInDate = Objects.requireNonNull(expectedBuyInDate);
+		return this;
 	}
 
-	@XmlElement(name = "CxlLmtDt")
-	public ISODate getCancellationLimitDate() {
-		return cancellationLimitDate;
+	public Optional<ISODate> getCancellationLimitDate() {
+		return cancellationLimitDate == null ? Optional.empty() : Optional.of(cancellationLimitDate);
 	}
 
-	public void setCancellationLimitDate(ISODate cancellationLimitDate) {
+	public BuyIn4 setCancellationLimitDate(ISODate cancellationLimitDate) {
 		this.cancellationLimitDate = cancellationLimitDate;
+		return this;
 	}
 
-	@XmlElement(name = "BuyInRvrsnDt")
-	public ISODate getBuyInReversionDate() {
-		return buyInReversionDate;
+	public Optional<ISODate> getBuyInReversionDate() {
+		return buyInReversionDate == null ? Optional.empty() : Optional.of(buyInReversionDate);
 	}
 
-	public void setBuyInReversionDate(ISODate buyInReversionDate) {
+	public BuyIn4 setBuyInReversionDate(ISODate buyInReversionDate) {
 		this.buyInReversionDate = buyInReversionDate;
+		return this;
 	}
 }

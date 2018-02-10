@@ -32,9 +32,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -110,8 +109,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -135,16 +134,17 @@ import javax.xml.bind.annotation.XmlType;
  * InvestmentAccount40}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvestmentAccount54", propOrder = {"ownerIdentification", "accountIdentification", "accountName", "accountDesignation", "intermediaryInformation", "securitiesForm", "dematerialisedIndicator", "incomePreference",
 		"beneficiaryCertificationCompletion", "safekeepingPlace", "accountServicer", "subAccountDetails", "settlementPartiesDetails"})
 public class InvestmentAccount54 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OwnrId")
 	protected List<PartyIdentification70Choice> ownerIdentification;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,7 +191,7 @@ public class InvestmentAccount54 {
 	public static final MMMessageAttribute mmOwnerIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> InvestmentAccount54.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount54.mmObject();
 			isDerived = false;
 			xmlTag = "OwnrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,11 +203,11 @@ public class InvestmentAccount54 {
 			complexType_lazy = () -> PartyIdentification70Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctId", required = true)
 	protected Max35Text accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -255,7 +255,7 @@ public class InvestmentAccount54 {
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> InvestmentAccount54.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount54.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -268,12 +268,11 @@ public class InvestmentAccount54 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctNm")
 	protected Max35Text accountName;
 	/**
-	 * Name of the account. It provides an additional means of identification,
-	 * and is designated by the account servicer in agreement with the account
-	 * owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -321,7 +320,7 @@ public class InvestmentAccount54 {
 	public static final MMMessageAttribute mmAccountName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
-			componentContext_lazy = () -> InvestmentAccount54.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount54.mmObject();
 			isDerived = false;
 			xmlTag = "AcctNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -334,14 +333,11 @@ public class InvestmentAccount54 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctDsgnt")
 	protected Max35Text accountDesignation;
 	/**
-	 * Supplementary registration information applying to a specific block of
-	 * units for dealing and reporting purposes. The supplementary registration
-	 * information may be used when all the units are registered, for example,
-	 * to a funds supermarket, but holdings for each investor have to reconciled
-	 * individually.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -389,7 +385,7 @@ public class InvestmentAccount54 {
 	public static final MMMessageAttribute mmAccountDesignation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmDesignation;
-			componentContext_lazy = () -> InvestmentAccount54.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount54.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDsgnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -402,10 +398,11 @@ public class InvestmentAccount54 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrmyInf")
 	protected List<com.tools20022.repository.msg.Intermediary34> intermediaryInformation;
 	/**
-	 * Identification of a related party or intermediary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -450,7 +447,7 @@ public class InvestmentAccount54 {
 	public static final MMMessageAssociationEnd mmIntermediaryInformation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> IntermediaryRole.mmObject();
-			componentContext_lazy = () -> InvestmentAccount54.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount54.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -463,10 +460,11 @@ public class InvestmentAccount54 {
 			type_lazy = () -> com.tools20022.repository.msg.Intermediary34.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesForm")
 	protected FormOfSecurity1Code securitiesForm;
 	/**
-	 * Form, that is, ownership, of the security, that is, registered or bearer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -515,7 +513,7 @@ public class InvestmentAccount54 {
 	public static final MMMessageAttribute mmSecuritiesForm = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
-			componentContext_lazy = () -> InvestmentAccount54.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount54.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesForm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -528,11 +526,11 @@ public class InvestmentAccount54 {
 			simpleType_lazy = () -> FormOfSecurity1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DmtrlsdInd")
 	protected YesNoIndicator dematerialisedIndicator;
 	/**
-	 * Indicates whether a security exists only as an electronic record, that
-	 * is, there is no physical document representing the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -581,7 +579,7 @@ public class InvestmentAccount54 {
 	public static final MMMessageAttribute mmDematerialisedIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmDematerialisedIndicator;
-			componentContext_lazy = () -> InvestmentAccount54.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount54.mmObject();
 			isDerived = false;
 			xmlTag = "DmtrlsdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -594,11 +592,11 @@ public class InvestmentAccount54 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "IncmPref")
 	protected IncomePreference2Code incomePreference;
 	/**
-	 * Dividend option chosen by the account owner based on the options offered
-	 * in the prospectus.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -647,7 +645,7 @@ public class InvestmentAccount54 {
 	public static final MMMessageAttribute mmIncomePreference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountService.mmIncomePreference;
-			componentContext_lazy = () -> InvestmentAccount54.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount54.mmObject();
 			isDerived = false;
 			xmlTag = "IncmPref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -660,11 +658,11 @@ public class InvestmentAccount54 {
 			simpleType_lazy = () -> IncomePreference2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "BnfcryCertfctnCmpltn")
 	protected BeneficiaryCertificationCompletion1Code beneficiaryCertificationCompletion;
 	/**
-	 * Beneficial owner or its designated agent certifies that it complies with
-	 * any holding or investment restrictions or requirements of the fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -713,7 +711,7 @@ public class InvestmentAccount54 {
 	public static final MMMessageAttribute mmBeneficiaryCertificationCompletion = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountService.mmBeneficiaryCertificationCompletion;
-			componentContext_lazy = () -> InvestmentAccount54.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount54.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryCertfctnCmpltn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -726,10 +724,11 @@ public class InvestmentAccount54 {
 			simpleType_lazy = () -> BeneficiaryCertificationCompletion1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgPlc")
 	protected SafekeepingPlaceFormat8Choice safekeepingPlace;
 	/**
-	 * Place requested as the place of safekeeping.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -776,7 +775,7 @@ public class InvestmentAccount54 {
 	public static final MMMessageAttribute mmSafekeepingPlace = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
-			componentContext_lazy = () -> InvestmentAccount54.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount54.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -789,10 +788,11 @@ public class InvestmentAccount54 {
 			complexType_lazy = () -> SafekeepingPlaceFormat8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcr")
 	protected PartyIdentification70Choice accountServicer;
 	/**
-	 * Institution that maintains the records where the account is held.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -840,7 +840,7 @@ public class InvestmentAccount54 {
 	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> InvestmentAccount54.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount54.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -853,10 +853,11 @@ public class InvestmentAccount54 {
 			complexType_lazy = () -> PartyIdentification70Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SubAcctDtls")
 	protected SubAccount5 subAccountDetails;
 	/**
-	 * Sub-accounts that are grouped in a master or omnibus account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -902,7 +903,7 @@ public class InvestmentAccount54 {
 	public static final MMMessageAssociationEnd mmSubAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmSubAccount;
-			componentContext_lazy = () -> InvestmentAccount54.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount54.mmObject();
 			isDerived = false;
 			xmlTag = "SubAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -916,10 +917,11 @@ public class InvestmentAccount54 {
 			type_lazy = () -> com.tools20022.repository.msg.SubAccount5.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmPtiesDtls")
 	protected DeliveringPartiesAndAccount14 settlementPartiesDetails;
 	/**
-	 * Chain of parties involved in the settlement of a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -953,7 +955,7 @@ public class InvestmentAccount54 {
 	public static final MMMessageAssociationEnd mmSettlementPartiesDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
-			componentContext_lazy = () -> InvestmentAccount54.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount54.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPtiesDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -969,13 +971,15 @@ public class InvestmentAccount54 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InvestmentAccount54.mmOwnerIdentification, InvestmentAccount54.mmAccountIdentification, InvestmentAccount54.mmAccountName, InvestmentAccount54.mmAccountDesignation,
-						InvestmentAccount54.mmIntermediaryInformation, InvestmentAccount54.mmSecuritiesForm, InvestmentAccount54.mmDematerialisedIndicator, InvestmentAccount54.mmIncomePreference,
-						InvestmentAccount54.mmBeneficiaryCertificationCompletion, InvestmentAccount54.mmSafekeepingPlace, InvestmentAccount54.mmAccountServicer, InvestmentAccount54.mmSubAccountDetails,
-						InvestmentAccount54.mmSettlementPartiesDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount54.mmOwnerIdentification, com.tools20022.repository.msg.InvestmentAccount54.mmAccountIdentification,
+						com.tools20022.repository.msg.InvestmentAccount54.mmAccountName, com.tools20022.repository.msg.InvestmentAccount54.mmAccountDesignation, com.tools20022.repository.msg.InvestmentAccount54.mmIntermediaryInformation,
+						com.tools20022.repository.msg.InvestmentAccount54.mmSecuritiesForm, com.tools20022.repository.msg.InvestmentAccount54.mmDematerialisedIndicator, com.tools20022.repository.msg.InvestmentAccount54.mmIncomePreference,
+						com.tools20022.repository.msg.InvestmentAccount54.mmBeneficiaryCertificationCompletion, com.tools20022.repository.msg.InvestmentAccount54.mmSafekeepingPlace,
+						com.tools20022.repository.msg.InvestmentAccount54.mmAccountServicer, com.tools20022.repository.msg.InvestmentAccount54.mmSubAccountDetails,
+						com.tools20022.repository.msg.InvestmentAccount54.mmSettlementPartiesDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(TransferOutConfirmationV07.mmAccountDetails, TransferOutInstructionV07.mmAccountDetails);
 				trace_lazy = () -> InvestmentAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentAccount54";
 				definition = "Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.";
@@ -986,120 +990,120 @@ public class InvestmentAccount54 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OwnrId")
 	public List<PartyIdentification70Choice> getOwnerIdentification() {
-		return ownerIdentification;
+		return ownerIdentification == null ? ownerIdentification = new ArrayList<>() : ownerIdentification;
 	}
 
-	public void setOwnerIdentification(List<PartyIdentification70Choice> ownerIdentification) {
-		this.ownerIdentification = ownerIdentification;
+	public InvestmentAccount54 setOwnerIdentification(List<PartyIdentification70Choice> ownerIdentification) {
+		this.ownerIdentification = Objects.requireNonNull(ownerIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public Max35Text getAccountIdentification() {
 		return accountIdentification;
 	}
 
-	public void setAccountIdentification(Max35Text accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public InvestmentAccount54 setAccountIdentification(Max35Text accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctNm")
-	public Max35Text getAccountName() {
-		return accountName;
+	public Optional<Max35Text> getAccountName() {
+		return accountName == null ? Optional.empty() : Optional.of(accountName);
 	}
 
-	public void setAccountName(Max35Text accountName) {
+	public InvestmentAccount54 setAccountName(Max35Text accountName) {
 		this.accountName = accountName;
+		return this;
 	}
 
-	@XmlElement(name = "AcctDsgnt")
-	public Max35Text getAccountDesignation() {
-		return accountDesignation;
+	public Optional<Max35Text> getAccountDesignation() {
+		return accountDesignation == null ? Optional.empty() : Optional.of(accountDesignation);
 	}
 
-	public void setAccountDesignation(Max35Text accountDesignation) {
+	public InvestmentAccount54 setAccountDesignation(Max35Text accountDesignation) {
 		this.accountDesignation = accountDesignation;
+		return this;
 	}
 
-	@XmlElement(name = "IntrmyInf")
 	public List<Intermediary34> getIntermediaryInformation() {
-		return intermediaryInformation;
+		return intermediaryInformation == null ? intermediaryInformation = new ArrayList<>() : intermediaryInformation;
 	}
 
-	public void setIntermediaryInformation(List<com.tools20022.repository.msg.Intermediary34> intermediaryInformation) {
-		this.intermediaryInformation = intermediaryInformation;
+	public InvestmentAccount54 setIntermediaryInformation(List<com.tools20022.repository.msg.Intermediary34> intermediaryInformation) {
+		this.intermediaryInformation = Objects.requireNonNull(intermediaryInformation);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesForm")
-	public FormOfSecurity1Code getSecuritiesForm() {
-		return securitiesForm;
+	public Optional<FormOfSecurity1Code> getSecuritiesForm() {
+		return securitiesForm == null ? Optional.empty() : Optional.of(securitiesForm);
 	}
 
-	public void setSecuritiesForm(FormOfSecurity1Code securitiesForm) {
+	public InvestmentAccount54 setSecuritiesForm(FormOfSecurity1Code securitiesForm) {
 		this.securitiesForm = securitiesForm;
+		return this;
 	}
 
-	@XmlElement(name = "DmtrlsdInd")
-	public YesNoIndicator getDematerialisedIndicator() {
-		return dematerialisedIndicator;
+	public Optional<YesNoIndicator> getDematerialisedIndicator() {
+		return dematerialisedIndicator == null ? Optional.empty() : Optional.of(dematerialisedIndicator);
 	}
 
-	public void setDematerialisedIndicator(YesNoIndicator dematerialisedIndicator) {
+	public InvestmentAccount54 setDematerialisedIndicator(YesNoIndicator dematerialisedIndicator) {
 		this.dematerialisedIndicator = dematerialisedIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "IncmPref")
-	public IncomePreference2Code getIncomePreference() {
-		return incomePreference;
+	public Optional<IncomePreference2Code> getIncomePreference() {
+		return incomePreference == null ? Optional.empty() : Optional.of(incomePreference);
 	}
 
-	public void setIncomePreference(IncomePreference2Code incomePreference) {
+	public InvestmentAccount54 setIncomePreference(IncomePreference2Code incomePreference) {
 		this.incomePreference = incomePreference;
+		return this;
 	}
 
-	@XmlElement(name = "BnfcryCertfctnCmpltn")
-	public BeneficiaryCertificationCompletion1Code getBeneficiaryCertificationCompletion() {
-		return beneficiaryCertificationCompletion;
+	public Optional<BeneficiaryCertificationCompletion1Code> getBeneficiaryCertificationCompletion() {
+		return beneficiaryCertificationCompletion == null ? Optional.empty() : Optional.of(beneficiaryCertificationCompletion);
 	}
 
-	public void setBeneficiaryCertificationCompletion(BeneficiaryCertificationCompletion1Code beneficiaryCertificationCompletion) {
+	public InvestmentAccount54 setBeneficiaryCertificationCompletion(BeneficiaryCertificationCompletion1Code beneficiaryCertificationCompletion) {
 		this.beneficiaryCertificationCompletion = beneficiaryCertificationCompletion;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgPlc")
-	public SafekeepingPlaceFormat8Choice getSafekeepingPlace() {
-		return safekeepingPlace;
+	public Optional<SafekeepingPlaceFormat8Choice> getSafekeepingPlace() {
+		return safekeepingPlace == null ? Optional.empty() : Optional.of(safekeepingPlace);
 	}
 
-	public void setSafekeepingPlace(SafekeepingPlaceFormat8Choice safekeepingPlace) {
+	public InvestmentAccount54 setSafekeepingPlace(SafekeepingPlaceFormat8Choice safekeepingPlace) {
 		this.safekeepingPlace = safekeepingPlace;
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcr")
-	public PartyIdentification70Choice getAccountServicer() {
-		return accountServicer;
+	public Optional<PartyIdentification70Choice> getAccountServicer() {
+		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public void setAccountServicer(PartyIdentification70Choice accountServicer) {
+	public InvestmentAccount54 setAccountServicer(PartyIdentification70Choice accountServicer) {
 		this.accountServicer = accountServicer;
+		return this;
 	}
 
-	@XmlElement(name = "SubAcctDtls")
-	public SubAccount5 getSubAccountDetails() {
-		return subAccountDetails;
+	public Optional<SubAccount5> getSubAccountDetails() {
+		return subAccountDetails == null ? Optional.empty() : Optional.of(subAccountDetails);
 	}
 
-	public void setSubAccountDetails(com.tools20022.repository.msg.SubAccount5 subAccountDetails) {
+	public InvestmentAccount54 setSubAccountDetails(com.tools20022.repository.msg.SubAccount5 subAccountDetails) {
 		this.subAccountDetails = subAccountDetails;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmPtiesDtls")
-	public DeliveringPartiesAndAccount14 getSettlementPartiesDetails() {
-		return settlementPartiesDetails;
+	public Optional<DeliveringPartiesAndAccount14> getSettlementPartiesDetails() {
+		return settlementPartiesDetails == null ? Optional.empty() : Optional.of(settlementPartiesDetails);
 	}
 
-	public void setSettlementPartiesDetails(com.tools20022.repository.msg.DeliveringPartiesAndAccount14 settlementPartiesDetails) {
+	public InvestmentAccount54 setSettlementPartiesDetails(com.tools20022.repository.msg.DeliveringPartiesAndAccount14 settlementPartiesDetails) {
 		this.settlementPartiesDetails = settlementPartiesDetails;
+		return this;
 	}
 }

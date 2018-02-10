@@ -27,6 +27,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Name by which a person is known and that is usually used to identify that
@@ -38,6 +40,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.PartyName
+ * PartyName}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -55,9 +60,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * PersonName.mmIdentification}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.PartyName
- * PartyName}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PersonIdentification#mmPersonName
+ * PersonIdentification.mmPersonName}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -69,19 +80,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PersonIdentification#mmPersonName
- * PersonIdentification.mmPersonName}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,8 +101,8 @@ public class PersonName extends PartyName {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Max35Text birthName;
 	/**
-	 * Name received at birth, eg, maiden name.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,8 +210,8 @@ public class PersonName extends PartyName {
 					IndividualPerson13.mmBirthName, IndividualPerson17.mmBirthName, IndividualPerson15.mmName, IndividualPerson21.mmName, IndividualPerson22.mmName, IndividualPerson23.mmName, IndividualPerson24.mmName,
 					IndividualPerson25.mmBirthName, IndividualPerson26.mmBirthName, IndividualPerson30.mmName, IndividualPerson28.mmName, IndividualPerson27.mmName, PersonalInformation1.mmNameOfFather, IndividualPerson29.mmName,
 					IndividualPerson32.mmName, IndividualPerson31.mmName, IndividualPerson33.mmName, IndividualPerson35.mmName, IndividualPerson34.mmName);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BirthName";
 			definition = "Name received at birth, eg, maiden name.";
@@ -228,8 +230,8 @@ public class PersonName extends PartyName {
 	};
 	protected NamePrefix1Code namePrefix;
 	/**
-	 * Specifies the terms used to formally address a person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -350,8 +352,8 @@ public class PersonName extends PartyName {
 					IndividualPerson11.mmNamePrefix, IndividualPerson11.mmExtendedNamePrefix, ContactDetails2.mmNamePrefix, ContactIdentification2.mmNamePrefix, ContactIdentification1.mmNamePrefix, Contacts3.mmNamePrefix,
 					ContactIdentification4.mmNamePrefix, ContactIdentification3.mmNamePrefix, ContactDetails3.mmNamePrefix, IndividualPerson21.mmNamePrefix, IndividualPerson22.mmNamePrefix, IndividualPerson23.mmNamePrefix,
 					IndividualPerson24.mmNamePrefix, IndividualPerson28.mmNamePrefix, IndividualPerson27.mmNamePrefix, IndividualPerson29.mmNamePrefix, IndividualPerson33.mmNamePrefix, IndividualPerson34.mmNamePrefix);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NamePrefix";
 			definition = "Specifies the terms used to formally address a person.";
@@ -370,8 +372,8 @@ public class PersonName extends PartyName {
 	};
 	protected Max35Text givenName;
 	/**
-	 * First name of a person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -527,8 +529,8 @@ public class PersonName extends PartyName {
 					IndividualPerson25.mmGivenName, IndividualPerson26.mmGivenName, Cardholder8.mmName, Cardholder7.mmName, Cardholder9.mmName, PersonIdentification10.mmFirstName, IndividualPerson30.mmGivenName,
 					IndividualPerson28.mmGivenName, IndividualPerson27.mmGivenName, PersonalInformation1.mmNameOfPartner, IndividualPerson29.mmGivenName, Cardholder11.mmName, Cardholder10.mmName, IndividualPerson33.mmGivenName,
 					IndividualPerson35.mmGivenName, IndividualPerson34.mmGivenName, Cardholder12.mmName);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GivenName";
 			definition = "First name of a person.";
@@ -547,8 +549,8 @@ public class PersonName extends PartyName {
 	};
 	protected Max35Text middleName;
 	/**
-	 * Second name of a person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -631,8 +633,8 @@ public class PersonName extends PartyName {
 			derivation_lazy = () -> Arrays.asList(IndividualPerson5.mmMiddleName, IndividualPerson10.mmMiddleName, IndividualPerson20.mmMiddleName, IndividualPerson4.mmMiddleName, IndividualPerson6.mmMiddleName,
 					IndividualPerson11.mmMiddleName, IndividualPerson21.mmMiddleName, IndividualPerson22.mmMiddleName, IndividualPerson23.mmMiddleName, IndividualPerson24.mmMiddleName, IndividualPerson30.mmMiddleName,
 					IndividualPerson28.mmMiddleName, IndividualPerson27.mmMiddleName, IndividualPerson29.mmMiddleName, IndividualPerson33.mmMiddleName, IndividualPerson35.mmMiddleName, IndividualPerson34.mmMiddleName);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MiddleName";
 			definition = "Second name of a person.";
@@ -651,9 +653,8 @@ public class PersonName extends PartyName {
 	};
 	protected Max35Text nameSuffix;
 	/**
-	 * Additional information about a person that follows a person's name, eg,
-	 * qualification such as Doctor of Philosophy (PhD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -732,8 +733,8 @@ public class PersonName extends PartyName {
 			derivation_lazy = () -> Arrays.asList(IndividualPerson5.mmNameSuffix, IndividualPerson10.mmNameSuffix, IndividualPerson20.mmNameSuffix, IndividualPerson3.mmNameSuffix, IndividualPerson8.mmNameSuffix,
 					IndividualPerson6.mmNameSuffix, IndividualPerson11.mmNameSuffix, IndividualPerson21.mmNameSuffix, IndividualPerson22.mmNameSuffix, IndividualPerson23.mmNameSuffix, IndividualPerson24.mmNameSuffix,
 					IndividualPerson28.mmNameSuffix, IndividualPerson27.mmNameSuffix, IndividualPerson33.mmNameSuffix, IndividualPerson34.mmNameSuffix);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NameSuffix";
 			definition = "Additional information about a person that follows a person's name, eg, qualification such as Doctor of Philosophy (PhD).";
@@ -752,8 +753,8 @@ public class PersonName extends PartyName {
 	};
 	protected PersonIdentification identification;
 	/**
-	 * Person identification which contains a name.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -786,8 +787,8 @@ public class PersonName extends PartyName {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Person identification which contains a name.";
@@ -802,7 +803,7 @@ public class PersonName extends PartyName {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PersonName";
 				definition = "Name by which a person is known and that is usually used to identify that person.";
@@ -825,47 +826,53 @@ public class PersonName extends PartyName {
 		return birthName;
 	}
 
-	public void setBirthName(Max35Text birthName) {
-		this.birthName = birthName;
+	public PersonName setBirthName(Max35Text birthName) {
+		this.birthName = Objects.requireNonNull(birthName);
+		return this;
 	}
 
 	public NamePrefix1Code getNamePrefix() {
 		return namePrefix;
 	}
 
-	public void setNamePrefix(NamePrefix1Code namePrefix) {
-		this.namePrefix = namePrefix;
+	public PersonName setNamePrefix(NamePrefix1Code namePrefix) {
+		this.namePrefix = Objects.requireNonNull(namePrefix);
+		return this;
 	}
 
 	public Max35Text getGivenName() {
 		return givenName;
 	}
 
-	public void setGivenName(Max35Text givenName) {
-		this.givenName = givenName;
+	public PersonName setGivenName(Max35Text givenName) {
+		this.givenName = Objects.requireNonNull(givenName);
+		return this;
 	}
 
 	public Max35Text getMiddleName() {
 		return middleName;
 	}
 
-	public void setMiddleName(Max35Text middleName) {
-		this.middleName = middleName;
+	public PersonName setMiddleName(Max35Text middleName) {
+		this.middleName = Objects.requireNonNull(middleName);
+		return this;
 	}
 
 	public Max35Text getNameSuffix() {
 		return nameSuffix;
 	}
 
-	public void setNameSuffix(Max35Text nameSuffix) {
-		this.nameSuffix = nameSuffix;
+	public PersonName setNameSuffix(Max35Text nameSuffix) {
+		this.nameSuffix = Objects.requireNonNull(nameSuffix);
+		return this;
 	}
 
-	public PersonIdentification getIdentification() {
-		return identification;
+	public Optional<PersonIdentification> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(com.tools20022.repository.entity.PersonIdentification identification) {
+	public PersonName setIdentification(com.tools20022.repository.entity.PersonIdentification identification) {
 		this.identification = identification;
+		return this;
 	}
 }

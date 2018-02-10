@@ -25,6 +25,8 @@ import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,16 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BreakdownByParty2", propOrder = {"party", "additionalParameters"})
 public class BreakdownByParty2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pty", required = true)
 	protected PartyIdentification2Choice party;
 	/**
-	 * Party, eg, fund management company, for which the cash flow is being
-	 * reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -103,7 +105,7 @@ public class BreakdownByParty2 {
 	 */
 	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BreakdownByParty2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByParty2.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,10 +116,11 @@ public class BreakdownByParty2 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlParams")
 	protected AdditionalParameters1 additionalParameters;
 	/**
-	 * Additional parameter/s applied to the cash flow by party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -144,7 +147,7 @@ public class BreakdownByParty2 {
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalParameters = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BreakdownByParty2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByParty2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,8 +163,8 @@ public class BreakdownByParty2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BreakdownByParty2.mmParty, BreakdownByParty2.mmAdditionalParameters);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByParty2.mmParty, com.tools20022.repository.msg.BreakdownByParty2.mmAdditionalParameters);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BreakdownByParty2";
 				definition = "Specifies the party for which the cash-in and cash-out flows are to be reported.";
@@ -170,21 +173,21 @@ public class BreakdownByParty2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pty", required = true)
 	public PartyIdentification2Choice getParty() {
 		return party;
 	}
 
-	public void setParty(PartyIdentification2Choice party) {
-		this.party = party;
+	public BreakdownByParty2 setParty(PartyIdentification2Choice party) {
+		this.party = Objects.requireNonNull(party);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlParams")
-	public AdditionalParameters1 getAdditionalParameters() {
-		return additionalParameters;
+	public Optional<AdditionalParameters1> getAdditionalParameters() {
+		return additionalParameters == null ? Optional.empty() : Optional.of(additionalParameters);
 	}
 
-	public void setAdditionalParameters(com.tools20022.repository.msg.AdditionalParameters1 additionalParameters) {
+	public BreakdownByParty2 setAdditionalParameters(com.tools20022.repository.msg.AdditionalParameters1 additionalParameters) {
 		this.additionalParameters = additionalParameters;
+		return this;
 	}
 }

@@ -28,9 +28,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Plan that allows investors to schedule periodical investments or divestments,
@@ -73,44 +72,6 @@ import java.util.List;
  * InvestmentPlan.mmInvestmentPeriod}</li>
  * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmPlanStatus
  * InvestmentPlan.mmPlanStatus}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan2
- * InvestmentPlan2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan4
- * InvestmentPlan4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan6
- * InvestmentPlan6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan5
- * InvestmentPlan5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan3
- * InvestmentPlan3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan7
- * InvestmentPlan7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan9
- * InvestmentPlan9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan8
- * InvestmentPlan8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan10
- * InvestmentPlan10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan11
- * InvestmentPlan11}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PlanStatus1Choice
- * PlanStatus1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan12
- * InvestmentPlan12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan13
- * InvestmentPlan13}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PlanStatus2Choice
- * PlanStatus2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan14
- * InvestmentPlan14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan15
- * InvestmentPlan15}</li>
  * </ul>
  * </li>
  * <li>
@@ -164,10 +125,48 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan2
+ * InvestmentPlan2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan4
+ * InvestmentPlan4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan6
+ * InvestmentPlan6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan5
+ * InvestmentPlan5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan3
+ * InvestmentPlan3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan7
+ * InvestmentPlan7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan9
+ * InvestmentPlan9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan8
+ * InvestmentPlan8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan10
+ * InvestmentPlan10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan11
+ * InvestmentPlan11}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PlanStatus1Choice
+ * PlanStatus1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan12
+ * InvestmentPlan12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan13
+ * InvestmentPlan13}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PlanStatus2Choice
+ * PlanStatus2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan14
+ * InvestmentPlan14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan15
+ * InvestmentPlan15}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -185,8 +184,8 @@ public class InvestmentPlan {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected FrequencyCode frequency;
 	/**
-	 * Frequency of the investment or divestment, eg, daily, weekly, or monthly.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -276,8 +275,8 @@ public class InvestmentPlan {
 			derivation_lazy = () -> Arrays.asList(InvestmentPlan2.mmFrequency, InvestmentPlan2.mmExtendedFrequency, InvestmentPlan4.mmFrequency, InvestmentPlan4.mmExtendedFrequency, InvestmentPlan6.mmFrequency, InvestmentPlan5.mmFrequency,
 					InvestmentPlan5.mmExtendedFrequency, InvestmentPlan3.mmFrequency, InvestmentPlan3.mmExtendedFrequency, InvestmentPlan7.mmFrequency, InvestmentPlan9.mmFrequency, InvestmentPlan8.mmFrequency, InvestmentPlan10.mmFrequency,
 					InvestmentPlan11.mmFrequency, InvestmentPlan12.mmFrequency, InvestmentPlan13.mmFrequency, InvestmentPlan14.mmFrequency, InvestmentPlan15.mmFrequency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the investment or divestment, eg, daily, weekly, or monthly.";
@@ -296,10 +295,8 @@ public class InvestmentPlan {
 	};
 	protected CurrencyAndAmount amount;
 	/**
-	 * Currency and amount of the periodical payments. When the standing order
-	 * is related to a fund investment plan, this is the cash part of the
-	 * invested amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -341,8 +338,8 @@ public class InvestmentPlan {
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentPlan2.mmAmount, InvestmentPlan4.mmAmount, InvestmentPlan5.mmAmount, InvestmentPlan3.mmAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Currency and amount of the periodical payments. When the standing order is related to a fund investment plan, this is the cash part of the invested amount.";
@@ -361,9 +358,8 @@ public class InvestmentPlan {
 	};
 	protected Asset asset;
 	/**
-	 * Security that an investment plan invests in, or from which the investment
-	 * plan divests.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -406,8 +402,8 @@ public class InvestmentPlan {
 	public static final MMBusinessAssociationEnd mmAsset = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentPlan2.mmSecurityDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Asset";
 			definition = "Security that an investment plan invests in, or from which the investment plan divests.";
@@ -420,8 +416,8 @@ public class InvestmentPlan {
 	};
 	protected List<com.tools20022.repository.entity.Instalment> instalment;
 	/**
-	 * Specifies information on the successive payments in an investment plan.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -474,8 +470,8 @@ public class InvestmentPlan {
 	public static final MMBusinessAssociationEnd mmInstalment = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentPlan12.mmInitialAmount, InvestmentPlan13.mmInitialAmount, InvestmentPlan14.mmInitialAmount, InvestmentPlan15.mmInitialAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Instalment";
 			definition = "Specifies information on the successive payments in an investment plan.";
@@ -487,8 +483,8 @@ public class InvestmentPlan {
 	};
 	protected InvestmentAccountService relatedService;
 	/**
-	 * Service which provides a systematic investment plan.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -522,8 +518,8 @@ public class InvestmentPlan {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedService = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedService";
 			definition = "Service which provides a systematic investment plan.";
@@ -536,8 +532,8 @@ public class InvestmentPlan {
 	};
 	protected List<com.tools20022.repository.entity.InsuranceCertificate> insurance;
 	/**
-	 * Insurance contract which covers the investment plan.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -571,8 +567,8 @@ public class InvestmentPlan {
 	 */
 	public static final MMBusinessAssociationEnd mmInsurance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Insurance";
 			definition = "Insurance contract which covers the investment plan.";
@@ -584,9 +580,8 @@ public class InvestmentPlan {
 	};
 	protected List<com.tools20022.repository.entity.InvestmentFundOrder> standingOrder;
 	/**
-	 * Order generated automatically, according to the terms of the investment
-	 * plan.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -621,8 +616,8 @@ public class InvestmentPlan {
 	 */
 	public static final MMBusinessAssociationEnd mmStandingOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StandingOrder";
 			definition = "Order generated automatically, according to the terms of the investment plan.";
@@ -634,8 +629,8 @@ public class InvestmentPlan {
 	};
 	protected YesNoIndicator multiCurrency;
 	/**
-	 * Specifies whether the investment plan is multi currency or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -662,8 +657,8 @@ public class InvestmentPlan {
 	 */
 	public static final MMBusinessAttribute mmMultiCurrency = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MultiCurrency";
 			definition = "Specifies whether the investment plan is multi currency or not.";
@@ -682,8 +677,8 @@ public class InvestmentPlan {
 	};
 	protected CurrencyCode currency;
 	/**
-	 * Currency of the investment plan.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -708,8 +703,8 @@ public class InvestmentPlan {
 	 */
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
 			definition = "Currency of the investment plan.";
@@ -728,8 +723,8 @@ public class InvestmentPlan {
 	};
 	protected Portfolio portfolio;
 	/**
-	 * Portfolio for which the investment plan invests or divests.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -763,8 +758,8 @@ public class InvestmentPlan {
 	 */
 	public static final MMBusinessAssociationEnd mmPortfolio = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Portfolio";
 			definition = "Portfolio for which the investment plan invests or divests.";
@@ -777,8 +772,8 @@ public class InvestmentPlan {
 	};
 	protected DateTimePeriod investmentPeriod;
 	/**
-	 * Period during which an investment plan has to be executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -812,8 +807,8 @@ public class InvestmentPlan {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPeriod";
 			definition = "Period during which an investment plan has to be executed.";
@@ -826,8 +821,8 @@ public class InvestmentPlan {
 	};
 	protected PlanStatusCode planStatus;
 	/**
-	 * Status of the savings or withdrawal investment plan.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -884,8 +879,8 @@ public class InvestmentPlan {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentPlan10.mmPlanStatus, InvestmentPlan11.mmPlanStatus, PlanStatus1Choice.mmCode, InvestmentPlan12.mmPlanStatus, InvestmentPlan13.mmPlanStatus, PlanStatus2Choice.mmCode,
 					InvestmentPlan14.mmPlanStatus, InvestmentPlan15.mmPlanStatus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlanStatus";
 			definition = "Status of the savings or withdrawal investment plan. ";
@@ -906,7 +901,7 @@ public class InvestmentPlan {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentPlan";
 				definition = "Plan that allows investors to schedule periodical investments or divestments, according to pre-defined criteria.";
@@ -936,95 +931,107 @@ public class InvestmentPlan {
 		return frequency;
 	}
 
-	public void setFrequency(FrequencyCode frequency) {
-		this.frequency = frequency;
+	public InvestmentPlan setFrequency(FrequencyCode frequency) {
+		this.frequency = Objects.requireNonNull(frequency);
+		return this;
 	}
 
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
-		this.amount = amount;
+	public InvestmentPlan setAmount(CurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
 	public Asset getAsset() {
 		return asset;
 	}
 
-	public void setAsset(com.tools20022.repository.entity.Asset asset) {
-		this.asset = asset;
+	public InvestmentPlan setAsset(com.tools20022.repository.entity.Asset asset) {
+		this.asset = Objects.requireNonNull(asset);
+		return this;
 	}
 
 	public List<Instalment> getInstalment() {
-		return instalment;
+		return instalment == null ? instalment = new ArrayList<>() : instalment;
 	}
 
-	public void setInstalment(List<com.tools20022.repository.entity.Instalment> instalment) {
-		this.instalment = instalment;
+	public InvestmentPlan setInstalment(List<com.tools20022.repository.entity.Instalment> instalment) {
+		this.instalment = Objects.requireNonNull(instalment);
+		return this;
 	}
 
-	public InvestmentAccountService getRelatedService() {
-		return relatedService;
+	public Optional<InvestmentAccountService> getRelatedService() {
+		return relatedService == null ? Optional.empty() : Optional.of(relatedService);
 	}
 
-	public void setRelatedService(com.tools20022.repository.entity.InvestmentAccountService relatedService) {
+	public InvestmentPlan setRelatedService(com.tools20022.repository.entity.InvestmentAccountService relatedService) {
 		this.relatedService = relatedService;
+		return this;
 	}
 
 	public List<InsuranceCertificate> getInsurance() {
-		return insurance;
+		return insurance == null ? insurance = new ArrayList<>() : insurance;
 	}
 
-	public void setInsurance(List<com.tools20022.repository.entity.InsuranceCertificate> insurance) {
-		this.insurance = insurance;
+	public InvestmentPlan setInsurance(List<com.tools20022.repository.entity.InsuranceCertificate> insurance) {
+		this.insurance = Objects.requireNonNull(insurance);
+		return this;
 	}
 
 	public List<InvestmentFundOrder> getStandingOrder() {
-		return standingOrder;
+		return standingOrder == null ? standingOrder = new ArrayList<>() : standingOrder;
 	}
 
-	public void setStandingOrder(List<com.tools20022.repository.entity.InvestmentFundOrder> standingOrder) {
-		this.standingOrder = standingOrder;
+	public InvestmentPlan setStandingOrder(List<com.tools20022.repository.entity.InvestmentFundOrder> standingOrder) {
+		this.standingOrder = Objects.requireNonNull(standingOrder);
+		return this;
 	}
 
 	public YesNoIndicator getMultiCurrency() {
 		return multiCurrency;
 	}
 
-	public void setMultiCurrency(YesNoIndicator multiCurrency) {
-		this.multiCurrency = multiCurrency;
+	public InvestmentPlan setMultiCurrency(YesNoIndicator multiCurrency) {
+		this.multiCurrency = Objects.requireNonNull(multiCurrency);
+		return this;
 	}
 
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
 
-	public void setCurrency(CurrencyCode currency) {
-		this.currency = currency;
+	public InvestmentPlan setCurrency(CurrencyCode currency) {
+		this.currency = Objects.requireNonNull(currency);
+		return this;
 	}
 
 	public Portfolio getPortfolio() {
 		return portfolio;
 	}
 
-	public void setPortfolio(com.tools20022.repository.entity.Portfolio portfolio) {
-		this.portfolio = portfolio;
+	public InvestmentPlan setPortfolio(com.tools20022.repository.entity.Portfolio portfolio) {
+		this.portfolio = Objects.requireNonNull(portfolio);
+		return this;
 	}
 
 	public DateTimePeriod getInvestmentPeriod() {
 		return investmentPeriod;
 	}
 
-	public void setInvestmentPeriod(com.tools20022.repository.entity.DateTimePeriod investmentPeriod) {
-		this.investmentPeriod = investmentPeriod;
+	public InvestmentPlan setInvestmentPeriod(com.tools20022.repository.entity.DateTimePeriod investmentPeriod) {
+		this.investmentPeriod = Objects.requireNonNull(investmentPeriod);
+		return this;
 	}
 
 	public PlanStatusCode getPlanStatus() {
 		return planStatus;
 	}
 
-	public void setPlanStatus(PlanStatusCode planStatus) {
-		this.planStatus = planStatus;
+	public InvestmentPlan setPlanStatus(PlanStatusCode planStatus) {
+		this.planStatus = Objects.requireNonNull(planStatus);
+		return this;
 	}
 }

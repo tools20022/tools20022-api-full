@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.InstitutionalClassificationCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * TSE/JASDEC extension codes for mergers
@@ -32,27 +37,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#mmSurvivingCompany
- * InstitutionalClassificationCode.mmSurvivingCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#SurvivingCompany
+ * InstitutionalClassificationCode.SurvivingCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#mmDiscontinuedCompany
- * InstitutionalClassificationCode.mmDiscontinuedCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#DiscontinuedCompany
+ * InstitutionalClassificationCode.DiscontinuedCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#mmSubsidiary
- * InstitutionalClassificationCode.mmSubsidiary}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#Subsidiary
+ * InstitutionalClassificationCode.Subsidiary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#mmUnknown
- * InstitutionalClassificationCode.mmUnknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#Unknown
+ * InstitutionalClassificationCode.Unknown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#mmParent
- * InstitutionalClassificationCode.mmParent}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstitutionalClassificationCode#Parent
+ * InstitutionalClassificationCode.Parent}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "TSE/JASDEC extension codes for mergers"</li>
  * </ul>
  */
-public class InstitutionalClassificationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InstitutionalClassificationCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,12 +96,12 @@ public class InstitutionalClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSurvivingCompany = new MMCode() {
+	public static final InstitutionalClassificationCode SurvivingCompany = new InstitutionalClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SurvivingCompany";
 			definition = "In the case of a merger, the Issuer or the Counterparty is the surviving company.";
-			owner_lazy = () -> InstitutionalClassificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstitutionalClassificationCode.mmObject();
 			codeName = "SURV";
 		}
 	};
@@ -123,12 +129,12 @@ public class InstitutionalClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiscontinuedCompany = new MMCode() {
+	public static final InstitutionalClassificationCode DiscontinuedCompany = new InstitutionalClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscontinuedCompany";
 			definition = "In the case of a merger, the Issuer or the Counterparty is the discontinued company.";
-			owner_lazy = () -> InstitutionalClassificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstitutionalClassificationCode.mmObject();
 			codeName = "DISC";
 		}
 	};
@@ -155,12 +161,12 @@ public class InstitutionalClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubsidiary = new MMCode() {
+	public static final InstitutionalClassificationCode Subsidiary = new InstitutionalClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subsidiary";
 			definition = "In the case of a merger, the Issuer or the Counterparty is a subsidiary.";
-			owner_lazy = () -> InstitutionalClassificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstitutionalClassificationCode.mmObject();
 			codeName = "SUBS";
 		}
 	};
@@ -188,12 +194,12 @@ public class InstitutionalClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknown = new MMCode() {
+	public static final InstitutionalClassificationCode Unknown = new InstitutionalClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			definition = "In the case of a merger, the classification of the Issuer or the Counterparty is unknown.";
-			owner_lazy = () -> InstitutionalClassificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstitutionalClassificationCode.mmObject();
 			codeName = "UKWN";
 		}
 	};
@@ -221,27 +227,61 @@ public class InstitutionalClassificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmParent = new MMCode() {
+	public static final InstitutionalClassificationCode Parent = new InstitutionalClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parent";
 			definition = "In the case of a merger, the Issuer or the Counterparty is a parent company.";
-			owner_lazy = () -> InstitutionalClassificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstitutionalClassificationCode.mmObject();
 			codeName = "PRNT";
 		}
 	};
+	final static private LinkedHashMap<String, InstitutionalClassificationCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InstitutionalClassificationCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstitutionalClassificationCode";
 				definition = "TSE/JASDEC extension codes for mergers";
-				code_lazy = () -> Arrays.asList(InstitutionalClassificationCode.mmSurvivingCompany, InstitutionalClassificationCode.mmDiscontinuedCompany, InstitutionalClassificationCode.mmSubsidiary,
-						InstitutionalClassificationCode.mmUnknown, InstitutionalClassificationCode.mmParent);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstitutionalClassificationCode.SurvivingCompany, com.tools20022.repository.codeset.InstitutionalClassificationCode.DiscontinuedCompany,
+						com.tools20022.repository.codeset.InstitutionalClassificationCode.Subsidiary, com.tools20022.repository.codeset.InstitutionalClassificationCode.Unknown,
+						com.tools20022.repository.codeset.InstitutionalClassificationCode.Parent);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SurvivingCompany.getCodeName().get(), SurvivingCompany);
+		codesByName.put(DiscontinuedCompany.getCodeName().get(), DiscontinuedCompany);
+		codesByName.put(Subsidiary.getCodeName().get(), Subsidiary);
+		codesByName.put(Unknown.getCodeName().get(), Unknown);
+		codesByName.put(Parent.getCodeName().get(), Parent);
+	}
+
+	public static InstitutionalClassificationCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InstitutionalClassificationCode[] values() {
+		InstitutionalClassificationCode[] values = new InstitutionalClassificationCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InstitutionalClassificationCode> {
+		@Override
+		public InstitutionalClassificationCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InstitutionalClassificationCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

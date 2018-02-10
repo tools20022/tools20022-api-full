@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max35Binary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * KEKIdentifier2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "KEKIdentifier3", propOrder = {"name", "identification", "version", "keyCheckValue"})
 public class KEKIdentifier3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nm")
 	protected Max140Text name;
 	/**
-	 * Name or label of the key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +120,7 @@ public class KEKIdentifier3 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> KEKIdentifier3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier3.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,10 +132,11 @@ public class KEKIdentifier3 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected Max140Text identification;
 	/**
-	 * Identification of the cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +175,7 @@ public class KEKIdentifier3 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> KEKIdentifier3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,10 +188,11 @@ public class KEKIdentifier3 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Vrsn")
 	protected Max140Text version;
 	/**
-	 * Version of the cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -226,7 +231,7 @@ public class KEKIdentifier3 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> KEKIdentifier3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier3.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,11 +244,11 @@ public class KEKIdentifier3 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "KeyChckVal")
 	protected Max35Binary keyCheckValue;
 	/**
-	 * Value to check the key, for instance, result of the encryption of the
-	 * null binary string.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -271,7 +276,7 @@ public class KEKIdentifier3 {
 	 */
 	public static final MMMessageAttribute mmKeyCheckValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> KEKIdentifier3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier3.mmObject();
 			isDerived = false;
 			xmlTag = "KeyChckVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,8 +291,9 @@ public class KEKIdentifier3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(KEKIdentifier3.mmName, KEKIdentifier3.mmIdentification, KEKIdentifier3.mmVersion, KEKIdentifier3.mmKeyCheckValue);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KEKIdentifier3.mmName, com.tools20022.repository.msg.KEKIdentifier3.mmIdentification, com.tools20022.repository.msg.KEKIdentifier3.mmVersion,
+						com.tools20022.repository.msg.KEKIdentifier3.mmKeyCheckValue);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "KEKIdentifier3";
 				definition = "Key that must be created and sent in the response, or that must be verified..";
@@ -298,39 +304,39 @@ public class KEKIdentifier3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nm")
-	public Max140Text getName() {
-		return name;
+	public Optional<Max140Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max140Text name) {
+	public KEKIdentifier3 setName(Max140Text name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max140Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max140Text identification) {
-		this.identification = identification;
+	public KEKIdentifier3 setIdentification(Max140Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Vrsn")
-	public Max140Text getVersion() {
-		return version;
+	public Optional<Max140Text> getVersion() {
+		return version == null ? Optional.empty() : Optional.of(version);
 	}
 
-	public void setVersion(Max140Text version) {
+	public KEKIdentifier3 setVersion(Max140Text version) {
 		this.version = version;
+		return this;
 	}
 
-	@XmlElement(name = "KeyChckVal")
-	public Max35Binary getKeyCheckValue() {
-		return keyCheckValue;
+	public Optional<Max35Binary> getKeyCheckValue() {
+		return keyCheckValue == null ? Optional.empty() : Optional.of(keyCheckValue);
 	}
 
-	public void setKeyCheckValue(Max35Binary keyCheckValue) {
+	public KEKIdentifier3 setKeyCheckValue(Max35Binary keyCheckValue) {
 		this.keyCheckValue = keyCheckValue;
+		return this;
 	}
 }

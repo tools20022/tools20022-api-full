@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -26,9 +28,8 @@ import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -138,8 +139,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -150,7 +151,7 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the criteria based on which information is included."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementInstructionQueryCriteria1", propOrder = {"references", "status", "securitiesMovementType", "payment", "securitiesTransactionType", "financialInstrumentIdentification", "priority", "safekeepingAccount",
 		"cashAccount", "tradeDate", "settlementQuantity", "settledQuantity", "settlementAmount", "settledAmount", "intendedSettlementDate", "effectiveSettlementDate", "settlementCurrency", "safekeepingAccountOwner", "messageOriginator",
 		"counterpartSettlementParties", "deliveringSettlementParties", "receivingSettlementParties", "tradeTransactionCondition", "securitiesTransactionCondition", "partialSettlementIndicator", "conditionalSecuritiesDelivery",
@@ -158,10 +159,11 @@ import javax.xml.bind.annotation.XmlType;
 public class SettlementInstructionQueryCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Refs")
 	protected List<References35Choice> references;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,6 +179,9 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Refs"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::POOL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -189,9 +194,10 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAttribute mmReferences = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Refs";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::POOL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "Collective reference identifying a set of messages.";
@@ -199,10 +205,11 @@ public class SettlementInstructionQueryCriteria1 {
 			complexType_lazy = () -> References35Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts")
 	protected List<com.tools20022.repository.msg.SettlementInstructionQueryStatus1> status;
 	/**
-	 * Provides the status of settlement of a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -230,7 +237,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,11 +247,11 @@ public class SettlementInstructionQueryCriteria1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryStatus1.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesMvmntTp")
 	protected List<ReceiveDelivery1Code> securitiesMovementType;
 	/**
-	 * Specifies if the movement on a securities account results from a deliver
-	 * or a receive instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -260,6 +267,10 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesMvmntTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22H::REDE, ISO15022Synonym: MT 540-1
+	 * or 542-3</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -274,9 +285,10 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAttribute mmSecuritiesMovementType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesMvmntTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22H::REDE"), new ISO15022Synonym(this, "MT 540-1 or 542-3"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovementType";
 			definition = "Specifies if the movement on a securities account results from a deliver or a receive instruction.";
@@ -284,11 +296,11 @@ public class SettlementInstructionQueryCriteria1 {
 			simpleType_lazy = () -> ReceiveDelivery1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Pmt")
 	protected List<DeliveryReceiptType2Code> payment;
 	/**
-	 * Specifies how the transaction is to be settled, for example, against
-	 * payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -304,6 +316,10 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Pmt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22H::PAYM, ISO15022Synonym: MT
+	 * 541-543 or 540-542</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -318,9 +334,10 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Pmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22H::PAYM"), new ISO15022Synonym(this, "MT 541-543 or 540-542"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Specifies how the transaction is to be settled, for example, against payment.";
@@ -328,10 +345,11 @@ public class SettlementInstructionQueryCriteria1 {
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesTxTp")
 	protected List<SecuritiesTransactionType10Choice> securitiesTransactionType;
 	/**
-	 * Identifies the type of securities transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -346,6 +364,9 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesTxTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::SETR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -358,9 +379,10 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesTransactionType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesTxTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::SETR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTransactionType";
 			definition = "Identifies the type of securities transaction.";
@@ -369,11 +391,11 @@ public class SettlementInstructionQueryCriteria1 {
 			type_lazy = () -> SecuritiesTransactionType10Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmId")
 	protected List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification;
 	/**
-	 * Financial instruments representing a sum of rights of the investor
-	 * vis-a-vis the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -387,6 +409,9 @@ public class SettlementInstructionQueryCriteria1 {
 	 * SettlementInstructionQueryCriteria1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FinInstrmId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :35B:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -402,9 +427,10 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":35B:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
@@ -413,10 +439,11 @@ public class SettlementInstructionQueryCriteria1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	@XmlElement(name = "Prty")
 	protected List<PriorityNumeric1Choice> priority;
 	/**
-	 * Specifies whether the transaction is to be executed with a high priority.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -432,6 +459,9 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Prty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::PRIR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -446,9 +476,10 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Prty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PRIR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Specifies whether the transaction is to be executed with a high priority.";
@@ -456,10 +487,11 @@ public class SettlementInstructionQueryCriteria1 {
 			complexType_lazy = () -> PriorityNumeric1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgAcct")
 	protected List<com.tools20022.repository.msg.SecuritiesAccount13> safekeepingAccount;
 	/**
-	 * Account where financial instruments are maintained.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -487,7 +519,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -497,10 +529,11 @@ public class SettlementInstructionQueryCriteria1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAcct")
 	protected List<AccountIdentificationSearchCriteria2Choice> cashAccount;
 	/**
-	 * Account in which cash is maintained.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -528,7 +561,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAttribute mmCashAccount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -538,10 +571,11 @@ public class SettlementInstructionQueryCriteria1 {
 			complexType_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDt")
 	protected DateAndDateTimeSearch2Choice tradeDate;
 	/**
-	 * Specifies the date/time on which the trade was executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -557,6 +591,9 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::TRAD</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -569,9 +606,10 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::TRAD"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
@@ -580,10 +618,11 @@ public class SettlementInstructionQueryCriteria1 {
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmQty")
 	protected QuantitySearch1Choice settlementQuantity;
 	/**
-	 * Total quantity of securities to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -599,6 +638,9 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::SETT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -611,9 +653,10 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAttribute mmSettlementQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::SETT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementQuantity";
 			definition = "Total quantity of securities to be settled.";
@@ -622,10 +665,11 @@ public class SettlementInstructionQueryCriteria1 {
 			complexType_lazy = () -> QuantitySearch1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttldQty")
 	protected QuantitySearch1Choice settledQuantity;
 	/**
-	 * Total quantity of securities settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -641,6 +685,9 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttldQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::SETT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -653,9 +700,10 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAttribute mmSettledQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SttldQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::SETT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledQuantity";
 			definition = "Total quantity of securities settled.";
@@ -664,11 +712,11 @@ public class SettlementInstructionQueryCriteria1 {
 			complexType_lazy = () -> QuantitySearch1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmAmt")
 	protected ActiveCurrencyAndAmountRange1 settlementAmount;
 	/**
-	 * Total amount of money to be paid or received in exchange for the
-	 * securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -682,6 +730,9 @@ public class SettlementInstructionQueryCriteria1 {
 	 * SettlementInstructionQueryCriteria1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttlmAmt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::SETT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -697,9 +748,10 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::SETT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money to be paid or received in exchange for the securities.";
@@ -709,10 +761,11 @@ public class SettlementInstructionQueryCriteria1 {
 			type_lazy = () -> com.tools20022.repository.msg.ActiveCurrencyAndAmountRange1.mmObject();
 		}
 	};
+	@XmlElement(name = "SttldAmt")
 	protected ActiveCurrencyAndAmountRange1 settledAmount;
 	/**
-	 * Total amount of money paid or received in exchange for the securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -727,6 +780,9 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SttldAmt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::SETT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -740,9 +796,10 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmSettledAmount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SttldAmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::SETT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmount";
 			definition = "Total amount of money paid or received in exchange for the securities.";
@@ -752,11 +809,11 @@ public class SettlementInstructionQueryCriteria1 {
 			type_lazy = () -> com.tools20022.repository.msg.ActiveCurrencyAndAmountRange1.mmObject();
 		}
 	};
+	@XmlElement(name = "IntnddSttlmDt")
 	protected DateAndDateTimeSearch2Choice intendedSettlementDate;
 	/**
-	 * Date on which a transaction is expected to settle. That is, the intended
-	 * day on which transfer of cash or assets is completed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -772,6 +829,9 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IntnddSttlmDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::SETT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -786,9 +846,10 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAttribute mmIntendedSettlementDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "IntnddSttlmDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::SETT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntendedSettlementDate";
 			definition = "Date on which a transaction is expected to settle. That is, the intended day on which transfer of cash or assets is completed.";
@@ -797,11 +858,11 @@ public class SettlementInstructionQueryCriteria1 {
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FctvSttlmDt")
 	protected DateAndDateTimeSearch2Choice effectiveSettlementDate;
 	/**
-	 * Date and time at which a transaction is completed and cleared, that is a
-	 * payment is effected and securities are delivered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -817,6 +878,9 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FctvSttlmDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::EXSE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -831,9 +895,10 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAttribute mmEffectiveSettlementDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "FctvSttlmDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::EXSE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDate";
 			definition = "Date and time at which a transaction is completed and cleared, that is a payment is effected and securities are delivered.";
@@ -842,10 +907,11 @@ public class SettlementInstructionQueryCriteria1 {
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmCcy")
 	protected List<ActiveOrHistoricCurrencyCode> settlementCurrency;
 	/**
-	 * Currency in which the instructed amount is expressed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -873,7 +939,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -883,10 +949,11 @@ public class SettlementInstructionQueryCriteria1 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgAcctOwnr")
 	protected List<com.tools20022.repository.msg.PartyIdentification46> safekeepingAccountOwner;
 	/**
-	 * Party that owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -912,7 +979,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmSafekeepingAccountOwner = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -923,10 +990,11 @@ public class SettlementInstructionQueryCriteria1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification46.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgOrgtr")
 	protected List<com.tools20022.repository.msg.SystemPartyIdentification5> messageOriginator;
 	/**
-	 * Party that originated the message, if other than the sender.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -954,7 +1022,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgOrgtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -965,10 +1033,11 @@ public class SettlementInstructionQueryCriteria1 {
 			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "CntrptSttlmPties")
 	protected List<com.tools20022.repository.msg.SettlementParties13> counterpartSettlementParties;
 	/**
-	 * Identifies the chain of counterparty settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -994,7 +1063,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmCounterpartSettlementParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CntrptSttlmPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1005,10 +1074,11 @@ public class SettlementInstructionQueryCriteria1 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementParties13.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvrgSttlmPties")
 	protected List<com.tools20022.repository.msg.SettlementParties13> deliveringSettlementParties;
 	/**
-	 * Identifies the chain of delivering settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1022,6 +1092,9 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DlvrgSttlmPties"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :16R:SETPRTY</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1034,9 +1107,10 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":16R:SETPRTY"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Identifies the chain of delivering settlement parties.";
@@ -1045,10 +1119,11 @@ public class SettlementInstructionQueryCriteria1 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementParties13.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvgSttlmPties")
 	protected List<com.tools20022.repository.msg.SettlementParties13> receivingSettlementParties;
 	/**
-	 * Identifies the chain of receiving settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1062,6 +1137,9 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RcvgSttlmPties"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :16R:SETPRTY</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1074,9 +1152,10 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":16R:SETPRTY"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Identifies the chain of receiving settlement parties.";
@@ -1085,11 +1164,11 @@ public class SettlementInstructionQueryCriteria1 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementParties13.mmObject();
 		}
 	};
+	@XmlElement(name = "TradTxCond")
 	protected List<TradeTransactionCondition1Code> tradeTransactionCondition;
 	/**
-	 * Provides the conditions under which the order/trade is to be/was
-	 * executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1119,7 +1198,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAttribute mmTradeTransactionCondition = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "TradTxCond";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1129,11 +1208,11 @@ public class SettlementInstructionQueryCriteria1 {
 			simpleType_lazy = () -> TradeTransactionCondition1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesTxCond")
 	protected List<SettlementTransactionCondition12Choice> securitiesTransactionCondition;
 	/**
-	 * Indicates the conditions under which the order/trade is to be/was
-	 * executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1162,7 +1241,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesTransactionCondition = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesTxCond";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1173,10 +1252,11 @@ public class SettlementInstructionQueryCriteria1 {
 			type_lazy = () -> SettlementTransactionCondition12Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtlSttlmInd")
 	protected SettlementTransactionCondition5Code partialSettlementIndicator;
 	/**
-	 * Specifies whether partial settlement is allowed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1210,7 +1290,7 @@ public class SettlementInstructionQueryCriteria1 {
 	public static final MMMessageAttribute mmPartialSettlementIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlSttlmInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1221,11 +1301,11 @@ public class SettlementInstructionQueryCriteria1 {
 			simpleType_lazy = () -> SettlementTransactionCondition5Code.mmObject();
 		}
 	};
+	@XmlElement(name = "CondlSctiesDlvry")
 	protected YesNoIndicator conditionalSecuritiesDelivery;
 	/**
-	 * Specifies whether the transaction is under Conditional Securities
-	 * Delivery (CoSD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1255,7 +1335,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAttribute mmConditionalSecuritiesDelivery = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CondlSctiesDlvry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1266,11 +1346,11 @@ public class SettlementInstructionQueryCriteria1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CtryOfIsse")
 	protected List<CountryCode> countryOfIssue;
 	/**
-	 * Primary market or country where a security is issued by the issuer or its
-	 * agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1284,6 +1364,9 @@ public class SettlementInstructionQueryCriteria1 {
 	 * SettlementInstructionQueryCriteria1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtryOfIsse"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 470</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1299,9 +1382,10 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAttribute mmCountryOfIssue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfIsse";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "470"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIssue";
 			definition = "Primary market or country where a security is issued by the issuer or its agent.";
@@ -1309,13 +1393,11 @@ public class SettlementInstructionQueryCriteria1 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "IssrCSD")
 	protected List<PartyIdentification71Choice> issuerCSD;
 	/**
-	 * Central securities depository (CSD) in which financial instruments are
-	 * issued (or immobilised). The issuer CSD opens accounts allowing investors
-	 * (in a direct holding system) and/or intermediaries (including investor
-	 * CSDs) to hold these financial instruments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1344,7 +1426,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmIssuerCSD = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "IssrCSD";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1355,10 +1437,11 @@ public class SettlementInstructionQueryCriteria1 {
 			type_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "HldInd")
 	protected List<Registration3Choice> holdIndicator;
 	/**
-	 * Specifies whether the transaction is on hold, blocked or frozen.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1387,7 +1470,7 @@ public class SettlementInstructionQueryCriteria1 {
 	 */
 	public static final MMMessageAttribute mmHoldIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SettlementInstructionQueryCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "HldInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1401,18 +1484,23 @@ public class SettlementInstructionQueryCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria1.mmReferences, SettlementInstructionQueryCriteria1.mmStatus, SettlementInstructionQueryCriteria1.mmSecuritiesMovementType,
-						SettlementInstructionQueryCriteria1.mmPayment, SettlementInstructionQueryCriteria1.mmSecuritiesTransactionType, SettlementInstructionQueryCriteria1.mmFinancialInstrumentIdentification,
-						SettlementInstructionQueryCriteria1.mmPriority, SettlementInstructionQueryCriteria1.mmSafekeepingAccount, SettlementInstructionQueryCriteria1.mmCashAccount, SettlementInstructionQueryCriteria1.mmTradeDate,
-						SettlementInstructionQueryCriteria1.mmSettlementQuantity, SettlementInstructionQueryCriteria1.mmSettledQuantity, SettlementInstructionQueryCriteria1.mmSettlementAmount,
-						SettlementInstructionQueryCriteria1.mmSettledAmount, SettlementInstructionQueryCriteria1.mmIntendedSettlementDate, SettlementInstructionQueryCriteria1.mmEffectiveSettlementDate,
-						SettlementInstructionQueryCriteria1.mmSettlementCurrency, SettlementInstructionQueryCriteria1.mmSafekeepingAccountOwner, SettlementInstructionQueryCriteria1.mmMessageOriginator,
-						SettlementInstructionQueryCriteria1.mmCounterpartSettlementParties, SettlementInstructionQueryCriteria1.mmDeliveringSettlementParties, SettlementInstructionQueryCriteria1.mmReceivingSettlementParties,
-						SettlementInstructionQueryCriteria1.mmTradeTransactionCondition, SettlementInstructionQueryCriteria1.mmSecuritiesTransactionCondition, SettlementInstructionQueryCriteria1.mmPartialSettlementIndicator,
-						SettlementInstructionQueryCriteria1.mmConditionalSecuritiesDelivery, SettlementInstructionQueryCriteria1.mmCountryOfIssue, SettlementInstructionQueryCriteria1.mmIssuerCSD,
-						SettlementInstructionQueryCriteria1.mmHoldIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmReferences, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmStatus,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmPayment,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSecuritiesTransactionType, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmPriority, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSafekeepingAccount,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmCashAccount, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmTradeDate,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSettlementQuantity, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSettledQuantity,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSettlementAmount, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSettledAmount,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmIntendedSettlementDate, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmEffectiveSettlementDate,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSettlementCurrency, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSafekeepingAccountOwner,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmMessageOriginator, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmCounterpartSettlementParties,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmDeliveringSettlementParties, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmReceivingSettlementParties,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmTradeTransactionCondition, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmSecuritiesTransactionCondition,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmPartialSettlementIndicator, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmConditionalSecuritiesDelivery,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmCountryOfIssue, com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmIssuerCSD,
+						com.tools20022.repository.msg.SettlementInstructionQueryCriteria1.mmHoldIndicator);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementInstructionQueryCriteria1";
 				definition = "Defines the criteria based on which information is included.";
@@ -1421,264 +1509,264 @@ public class SettlementInstructionQueryCriteria1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Refs")
 	public List<References35Choice> getReferences() {
-		return references;
+		return references == null ? references = new ArrayList<>() : references;
 	}
 
-	public void setReferences(List<References35Choice> references) {
-		this.references = references;
+	public SettlementInstructionQueryCriteria1 setReferences(List<References35Choice> references) {
+		this.references = Objects.requireNonNull(references);
+		return this;
 	}
 
-	@XmlElement(name = "Sts")
 	public List<SettlementInstructionQueryStatus1> getStatus() {
-		return status;
+		return status == null ? status = new ArrayList<>() : status;
 	}
 
-	public void setStatus(List<com.tools20022.repository.msg.SettlementInstructionQueryStatus1> status) {
-		this.status = status;
+	public SettlementInstructionQueryCriteria1 setStatus(List<com.tools20022.repository.msg.SettlementInstructionQueryStatus1> status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesMvmntTp")
 	public List<ReceiveDelivery1Code> getSecuritiesMovementType() {
-		return securitiesMovementType;
+		return securitiesMovementType == null ? securitiesMovementType = new ArrayList<>() : securitiesMovementType;
 	}
 
-	public void setSecuritiesMovementType(List<ReceiveDelivery1Code> securitiesMovementType) {
-		this.securitiesMovementType = securitiesMovementType;
+	public SettlementInstructionQueryCriteria1 setSecuritiesMovementType(List<ReceiveDelivery1Code> securitiesMovementType) {
+		this.securitiesMovementType = Objects.requireNonNull(securitiesMovementType);
+		return this;
 	}
 
-	@XmlElement(name = "Pmt")
 	public List<DeliveryReceiptType2Code> getPayment() {
-		return payment;
+		return payment == null ? payment = new ArrayList<>() : payment;
 	}
 
-	public void setPayment(List<DeliveryReceiptType2Code> payment) {
-		this.payment = payment;
+	public SettlementInstructionQueryCriteria1 setPayment(List<DeliveryReceiptType2Code> payment) {
+		this.payment = Objects.requireNonNull(payment);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesTxTp")
 	public List<SecuritiesTransactionType10Choice> getSecuritiesTransactionType() {
-		return securitiesTransactionType;
+		return securitiesTransactionType == null ? securitiesTransactionType = new ArrayList<>() : securitiesTransactionType;
 	}
 
-	public void setSecuritiesTransactionType(List<SecuritiesTransactionType10Choice> securitiesTransactionType) {
-		this.securitiesTransactionType = securitiesTransactionType;
+	public SettlementInstructionQueryCriteria1 setSecuritiesTransactionType(List<SecuritiesTransactionType10Choice> securitiesTransactionType) {
+		this.securitiesTransactionType = Objects.requireNonNull(securitiesTransactionType);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmId")
 	public List<SecurityIdentification14> getFinancialInstrumentIdentification() {
-		return financialInstrumentIdentification;
+		return financialInstrumentIdentification == null ? financialInstrumentIdentification = new ArrayList<>() : financialInstrumentIdentification;
 	}
 
-	public void setFinancialInstrumentIdentification(List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification) {
-		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	public SettlementInstructionQueryCriteria1 setFinancialInstrumentIdentification(List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Prty")
 	public List<PriorityNumeric1Choice> getPriority() {
-		return priority;
+		return priority == null ? priority = new ArrayList<>() : priority;
 	}
 
-	public void setPriority(List<PriorityNumeric1Choice> priority) {
-		this.priority = priority;
+	public SettlementInstructionQueryCriteria1 setPriority(List<PriorityNumeric1Choice> priority) {
+		this.priority = Objects.requireNonNull(priority);
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct")
 	public List<SecuritiesAccount13> getSafekeepingAccount() {
-		return safekeepingAccount;
+		return safekeepingAccount == null ? safekeepingAccount = new ArrayList<>() : safekeepingAccount;
 	}
 
-	public void setSafekeepingAccount(List<com.tools20022.repository.msg.SecuritiesAccount13> safekeepingAccount) {
-		this.safekeepingAccount = safekeepingAccount;
+	public SettlementInstructionQueryCriteria1 setSafekeepingAccount(List<com.tools20022.repository.msg.SecuritiesAccount13> safekeepingAccount) {
+		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "CshAcct")
 	public List<AccountIdentificationSearchCriteria2Choice> getCashAccount() {
-		return cashAccount;
+		return cashAccount == null ? cashAccount = new ArrayList<>() : cashAccount;
 	}
 
-	public void setCashAccount(List<AccountIdentificationSearchCriteria2Choice> cashAccount) {
-		this.cashAccount = cashAccount;
+	public SettlementInstructionQueryCriteria1 setCashAccount(List<AccountIdentificationSearchCriteria2Choice> cashAccount) {
+		this.cashAccount = Objects.requireNonNull(cashAccount);
+		return this;
 	}
 
-	@XmlElement(name = "TradDt")
-	public DateAndDateTimeSearch2Choice getTradeDate() {
-		return tradeDate;
+	public Optional<DateAndDateTimeSearch2Choice> getTradeDate() {
+		return tradeDate == null ? Optional.empty() : Optional.of(tradeDate);
 	}
 
-	public void setTradeDate(DateAndDateTimeSearch2Choice tradeDate) {
+	public SettlementInstructionQueryCriteria1 setTradeDate(DateAndDateTimeSearch2Choice tradeDate) {
 		this.tradeDate = tradeDate;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmQty")
-	public QuantitySearch1Choice getSettlementQuantity() {
-		return settlementQuantity;
+	public Optional<QuantitySearch1Choice> getSettlementQuantity() {
+		return settlementQuantity == null ? Optional.empty() : Optional.of(settlementQuantity);
 	}
 
-	public void setSettlementQuantity(QuantitySearch1Choice settlementQuantity) {
+	public SettlementInstructionQueryCriteria1 setSettlementQuantity(QuantitySearch1Choice settlementQuantity) {
 		this.settlementQuantity = settlementQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "SttldQty")
-	public QuantitySearch1Choice getSettledQuantity() {
-		return settledQuantity;
+	public Optional<QuantitySearch1Choice> getSettledQuantity() {
+		return settledQuantity == null ? Optional.empty() : Optional.of(settledQuantity);
 	}
 
-	public void setSettledQuantity(QuantitySearch1Choice settledQuantity) {
+	public SettlementInstructionQueryCriteria1 setSettledQuantity(QuantitySearch1Choice settledQuantity) {
 		this.settledQuantity = settledQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmAmt")
-	public ActiveCurrencyAndAmountRange1 getSettlementAmount() {
-		return settlementAmount;
+	public Optional<ActiveCurrencyAndAmountRange1> getSettlementAmount() {
+		return settlementAmount == null ? Optional.empty() : Optional.of(settlementAmount);
 	}
 
-	public void setSettlementAmount(com.tools20022.repository.msg.ActiveCurrencyAndAmountRange1 settlementAmount) {
+	public SettlementInstructionQueryCriteria1 setSettlementAmount(com.tools20022.repository.msg.ActiveCurrencyAndAmountRange1 settlementAmount) {
 		this.settlementAmount = settlementAmount;
+		return this;
 	}
 
-	@XmlElement(name = "SttldAmt")
-	public ActiveCurrencyAndAmountRange1 getSettledAmount() {
-		return settledAmount;
+	public Optional<ActiveCurrencyAndAmountRange1> getSettledAmount() {
+		return settledAmount == null ? Optional.empty() : Optional.of(settledAmount);
 	}
 
-	public void setSettledAmount(com.tools20022.repository.msg.ActiveCurrencyAndAmountRange1 settledAmount) {
+	public SettlementInstructionQueryCriteria1 setSettledAmount(com.tools20022.repository.msg.ActiveCurrencyAndAmountRange1 settledAmount) {
 		this.settledAmount = settledAmount;
+		return this;
 	}
 
-	@XmlElement(name = "IntnddSttlmDt")
-	public DateAndDateTimeSearch2Choice getIntendedSettlementDate() {
-		return intendedSettlementDate;
+	public Optional<DateAndDateTimeSearch2Choice> getIntendedSettlementDate() {
+		return intendedSettlementDate == null ? Optional.empty() : Optional.of(intendedSettlementDate);
 	}
 
-	public void setIntendedSettlementDate(DateAndDateTimeSearch2Choice intendedSettlementDate) {
+	public SettlementInstructionQueryCriteria1 setIntendedSettlementDate(DateAndDateTimeSearch2Choice intendedSettlementDate) {
 		this.intendedSettlementDate = intendedSettlementDate;
+		return this;
 	}
 
-	@XmlElement(name = "FctvSttlmDt")
-	public DateAndDateTimeSearch2Choice getEffectiveSettlementDate() {
-		return effectiveSettlementDate;
+	public Optional<DateAndDateTimeSearch2Choice> getEffectiveSettlementDate() {
+		return effectiveSettlementDate == null ? Optional.empty() : Optional.of(effectiveSettlementDate);
 	}
 
-	public void setEffectiveSettlementDate(DateAndDateTimeSearch2Choice effectiveSettlementDate) {
+	public SettlementInstructionQueryCriteria1 setEffectiveSettlementDate(DateAndDateTimeSearch2Choice effectiveSettlementDate) {
 		this.effectiveSettlementDate = effectiveSettlementDate;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmCcy")
 	public List<ActiveOrHistoricCurrencyCode> getSettlementCurrency() {
-		return settlementCurrency;
+		return settlementCurrency == null ? settlementCurrency = new ArrayList<>() : settlementCurrency;
 	}
 
-	public void setSettlementCurrency(List<ActiveOrHistoricCurrencyCode> settlementCurrency) {
-		this.settlementCurrency = settlementCurrency;
+	public SettlementInstructionQueryCriteria1 setSettlementCurrency(List<ActiveOrHistoricCurrencyCode> settlementCurrency) {
+		this.settlementCurrency = Objects.requireNonNull(settlementCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcctOwnr")
 	public List<PartyIdentification46> getSafekeepingAccountOwner() {
-		return safekeepingAccountOwner;
+		return safekeepingAccountOwner == null ? safekeepingAccountOwner = new ArrayList<>() : safekeepingAccountOwner;
 	}
 
-	public void setSafekeepingAccountOwner(List<com.tools20022.repository.msg.PartyIdentification46> safekeepingAccountOwner) {
-		this.safekeepingAccountOwner = safekeepingAccountOwner;
+	public SettlementInstructionQueryCriteria1 setSafekeepingAccountOwner(List<com.tools20022.repository.msg.PartyIdentification46> safekeepingAccountOwner) {
+		this.safekeepingAccountOwner = Objects.requireNonNull(safekeepingAccountOwner);
+		return this;
 	}
 
-	@XmlElement(name = "MsgOrgtr")
 	public List<SystemPartyIdentification5> getMessageOriginator() {
-		return messageOriginator;
+		return messageOriginator == null ? messageOriginator = new ArrayList<>() : messageOriginator;
 	}
 
-	public void setMessageOriginator(List<com.tools20022.repository.msg.SystemPartyIdentification5> messageOriginator) {
-		this.messageOriginator = messageOriginator;
+	public SettlementInstructionQueryCriteria1 setMessageOriginator(List<com.tools20022.repository.msg.SystemPartyIdentification5> messageOriginator) {
+		this.messageOriginator = Objects.requireNonNull(messageOriginator);
+		return this;
 	}
 
-	@XmlElement(name = "CntrptSttlmPties")
 	public List<SettlementParties13> getCounterpartSettlementParties() {
-		return counterpartSettlementParties;
+		return counterpartSettlementParties == null ? counterpartSettlementParties = new ArrayList<>() : counterpartSettlementParties;
 	}
 
-	public void setCounterpartSettlementParties(List<com.tools20022.repository.msg.SettlementParties13> counterpartSettlementParties) {
-		this.counterpartSettlementParties = counterpartSettlementParties;
+	public SettlementInstructionQueryCriteria1 setCounterpartSettlementParties(List<com.tools20022.repository.msg.SettlementParties13> counterpartSettlementParties) {
+		this.counterpartSettlementParties = Objects.requireNonNull(counterpartSettlementParties);
+		return this;
 	}
 
-	@XmlElement(name = "DlvrgSttlmPties")
 	public List<SettlementParties13> getDeliveringSettlementParties() {
-		return deliveringSettlementParties;
+		return deliveringSettlementParties == null ? deliveringSettlementParties = new ArrayList<>() : deliveringSettlementParties;
 	}
 
-	public void setDeliveringSettlementParties(List<com.tools20022.repository.msg.SettlementParties13> deliveringSettlementParties) {
-		this.deliveringSettlementParties = deliveringSettlementParties;
+	public SettlementInstructionQueryCriteria1 setDeliveringSettlementParties(List<com.tools20022.repository.msg.SettlementParties13> deliveringSettlementParties) {
+		this.deliveringSettlementParties = Objects.requireNonNull(deliveringSettlementParties);
+		return this;
 	}
 
-	@XmlElement(name = "RcvgSttlmPties")
 	public List<SettlementParties13> getReceivingSettlementParties() {
-		return receivingSettlementParties;
+		return receivingSettlementParties == null ? receivingSettlementParties = new ArrayList<>() : receivingSettlementParties;
 	}
 
-	public void setReceivingSettlementParties(List<com.tools20022.repository.msg.SettlementParties13> receivingSettlementParties) {
-		this.receivingSettlementParties = receivingSettlementParties;
+	public SettlementInstructionQueryCriteria1 setReceivingSettlementParties(List<com.tools20022.repository.msg.SettlementParties13> receivingSettlementParties) {
+		this.receivingSettlementParties = Objects.requireNonNull(receivingSettlementParties);
+		return this;
 	}
 
-	@XmlElement(name = "TradTxCond")
 	public List<TradeTransactionCondition1Code> getTradeTransactionCondition() {
-		return tradeTransactionCondition;
+		return tradeTransactionCondition == null ? tradeTransactionCondition = new ArrayList<>() : tradeTransactionCondition;
 	}
 
-	public void setTradeTransactionCondition(List<TradeTransactionCondition1Code> tradeTransactionCondition) {
-		this.tradeTransactionCondition = tradeTransactionCondition;
+	public SettlementInstructionQueryCriteria1 setTradeTransactionCondition(List<TradeTransactionCondition1Code> tradeTransactionCondition) {
+		this.tradeTransactionCondition = Objects.requireNonNull(tradeTransactionCondition);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesTxCond")
 	public List<SettlementTransactionCondition12Choice> getSecuritiesTransactionCondition() {
-		return securitiesTransactionCondition;
+		return securitiesTransactionCondition == null ? securitiesTransactionCondition = new ArrayList<>() : securitiesTransactionCondition;
 	}
 
-	public void setSecuritiesTransactionCondition(List<SettlementTransactionCondition12Choice> securitiesTransactionCondition) {
-		this.securitiesTransactionCondition = securitiesTransactionCondition;
+	public SettlementInstructionQueryCriteria1 setSecuritiesTransactionCondition(List<SettlementTransactionCondition12Choice> securitiesTransactionCondition) {
+		this.securitiesTransactionCondition = Objects.requireNonNull(securitiesTransactionCondition);
+		return this;
 	}
 
-	@XmlElement(name = "PrtlSttlmInd")
-	public SettlementTransactionCondition5Code getPartialSettlementIndicator() {
-		return partialSettlementIndicator;
+	public Optional<SettlementTransactionCondition5Code> getPartialSettlementIndicator() {
+		return partialSettlementIndicator == null ? Optional.empty() : Optional.of(partialSettlementIndicator);
 	}
 
-	public void setPartialSettlementIndicator(SettlementTransactionCondition5Code partialSettlementIndicator) {
+	public SettlementInstructionQueryCriteria1 setPartialSettlementIndicator(SettlementTransactionCondition5Code partialSettlementIndicator) {
 		this.partialSettlementIndicator = partialSettlementIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "CondlSctiesDlvry")
-	public YesNoIndicator getConditionalSecuritiesDelivery() {
-		return conditionalSecuritiesDelivery;
+	public Optional<YesNoIndicator> getConditionalSecuritiesDelivery() {
+		return conditionalSecuritiesDelivery == null ? Optional.empty() : Optional.of(conditionalSecuritiesDelivery);
 	}
 
-	public void setConditionalSecuritiesDelivery(YesNoIndicator conditionalSecuritiesDelivery) {
+	public SettlementInstructionQueryCriteria1 setConditionalSecuritiesDelivery(YesNoIndicator conditionalSecuritiesDelivery) {
 		this.conditionalSecuritiesDelivery = conditionalSecuritiesDelivery;
+		return this;
 	}
 
-	@XmlElement(name = "CtryOfIsse")
 	public List<CountryCode> getCountryOfIssue() {
-		return countryOfIssue;
+		return countryOfIssue == null ? countryOfIssue = new ArrayList<>() : countryOfIssue;
 	}
 
-	public void setCountryOfIssue(List<CountryCode> countryOfIssue) {
-		this.countryOfIssue = countryOfIssue;
+	public SettlementInstructionQueryCriteria1 setCountryOfIssue(List<CountryCode> countryOfIssue) {
+		this.countryOfIssue = Objects.requireNonNull(countryOfIssue);
+		return this;
 	}
 
-	@XmlElement(name = "IssrCSD")
 	public List<PartyIdentification71Choice> getIssuerCSD() {
-		return issuerCSD;
+		return issuerCSD == null ? issuerCSD = new ArrayList<>() : issuerCSD;
 	}
 
-	public void setIssuerCSD(List<PartyIdentification71Choice> issuerCSD) {
-		this.issuerCSD = issuerCSD;
+	public SettlementInstructionQueryCriteria1 setIssuerCSD(List<PartyIdentification71Choice> issuerCSD) {
+		this.issuerCSD = Objects.requireNonNull(issuerCSD);
+		return this;
 	}
 
-	@XmlElement(name = "HldInd")
 	public List<Registration3Choice> getHoldIndicator() {
-		return holdIndicator;
+		return holdIndicator == null ? holdIndicator = new ArrayList<>() : holdIndicator;
 	}
 
-	public void setHoldIndicator(List<Registration3Choice> holdIndicator) {
-		this.holdIndicator = holdIndicator;
+	public SettlementInstructionQueryCriteria1 setHoldIndicator(List<Registration3Choice> holdIndicator) {
+		this.holdIndicator = Objects.requireNonNull(holdIndicator);
+		return this;
 	}
 }

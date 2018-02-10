@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,17 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the party fields used to search for a payment."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentTransactionParty", propOrder = {"debtor", "firstAgent", "instructingAgentCorrespondent", "instructedAgentCorrespondent", "intermediary", "finalAgent", "creditor"})
 public class PaymentTransactionParty {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dbtr")
 	protected BICIdentifier debtor;
 	/**
-	 * Party that owes assets to the creditor, eg, as a result of receipt of
-	 * goods or services, gifts, or charity payments. The debtor may also be the
-	 * debit account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -127,7 +127,7 @@ public class PaymentTransactionParty {
 	public static final MMMessageAttribute mmDebtor = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,11 +138,11 @@ public class PaymentTransactionParty {
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "FrstAgt")
 	protected BICIdentifier firstAgent;
 	/**
-	 * Financial institution that receives the payment transaction from the
-	 * account owner, or other authorised party, and processes the instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,7 +178,7 @@ public class PaymentTransactionParty {
 	public static final MMMessageAttribute mmFirstAgent = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty.mmObject();
 			isDerived = false;
 			xmlTag = "FrstAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,11 +189,11 @@ public class PaymentTransactionParty {
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "InstgAgtCrspdt")
 	protected BICIdentifier instructingAgentCorrespondent;
 	/**
-	 * Correspondent of the Instructing Agent that sends the payment
-	 * instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -229,7 +229,7 @@ public class PaymentTransactionParty {
 	public static final MMMessageAttribute mmInstructingAgentCorrespondent = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty.mmObject();
 			isDerived = false;
 			xmlTag = "InstgAgtCrspdt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,11 +240,11 @@ public class PaymentTransactionParty {
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "InstdAgtCrspdt")
 	protected BICIdentifier instructedAgentCorrespondent;
 	/**
-	 * Correspondent of the Instructed Agent that receives the payment
-	 * instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -280,7 +280,7 @@ public class PaymentTransactionParty {
 	public static final MMMessageAttribute mmInstructedAgentCorrespondent = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAgtCrspdt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -291,10 +291,11 @@ public class PaymentTransactionParty {
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Intrmy")
 	protected BICIdentifier intermediary;
 	/**
-	 * Party within the settlement chain between the first and final agents.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -329,7 +330,7 @@ public class PaymentTransactionParty {
 	public static final MMMessageAttribute mmIntermediary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty.mmObject();
 			isDerived = false;
 			xmlTag = "Intrmy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -340,11 +341,11 @@ public class PaymentTransactionParty {
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "FnlAgt")
 	protected BICIdentifier finalAgent;
 	/**
-	 * Financial institution that receives the payment transaction on behalf of
-	 * an account owner, or other nominated party, and credits the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -380,7 +381,7 @@ public class PaymentTransactionParty {
 	public static final MMMessageAttribute mmFinalAgent = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty.mmObject();
 			isDerived = false;
 			xmlTag = "FnlAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -391,11 +392,11 @@ public class PaymentTransactionParty {
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Cdtr")
 	protected BICIdentifier creditor;
 	/**
-	 * Party that receives an amount of money from the debtor. In the context of
-	 * the payment model, the creditor is also the credit account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -431,7 +432,7 @@ public class PaymentTransactionParty {
 	public static final MMMessageAttribute mmCreditor = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> PaymentTransactionParty.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty.mmObject();
 			isDerived = false;
 			xmlTag = "Cdtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -446,10 +447,11 @@ public class PaymentTransactionParty {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentTransactionParty.mmDebtor, PaymentTransactionParty.mmFirstAgent, PaymentTransactionParty.mmInstructingAgentCorrespondent,
-						PaymentTransactionParty.mmInstructedAgentCorrespondent, PaymentTransactionParty.mmIntermediary, PaymentTransactionParty.mmFinalAgent, PaymentTransactionParty.mmCreditor);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransactionParty.mmDebtor, com.tools20022.repository.msg.PaymentTransactionParty.mmFirstAgent,
+						com.tools20022.repository.msg.PaymentTransactionParty.mmInstructingAgentCorrespondent, com.tools20022.repository.msg.PaymentTransactionParty.mmInstructedAgentCorrespondent,
+						com.tools20022.repository.msg.PaymentTransactionParty.mmIntermediary, com.tools20022.repository.msg.PaymentTransactionParty.mmFinalAgent, com.tools20022.repository.msg.PaymentTransactionParty.mmCreditor);
 				trace_lazy = () -> PaymentPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentTransactionParty";
 				definition = "Defines the party fields used to search for a payment.";
@@ -458,66 +460,66 @@ public class PaymentTransactionParty {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dbtr")
-	public BICIdentifier getDebtor() {
-		return debtor;
+	public Optional<BICIdentifier> getDebtor() {
+		return debtor == null ? Optional.empty() : Optional.of(debtor);
 	}
 
-	public void setDebtor(BICIdentifier debtor) {
+	public PaymentTransactionParty setDebtor(BICIdentifier debtor) {
 		this.debtor = debtor;
+		return this;
 	}
 
-	@XmlElement(name = "FrstAgt")
-	public BICIdentifier getFirstAgent() {
-		return firstAgent;
+	public Optional<BICIdentifier> getFirstAgent() {
+		return firstAgent == null ? Optional.empty() : Optional.of(firstAgent);
 	}
 
-	public void setFirstAgent(BICIdentifier firstAgent) {
+	public PaymentTransactionParty setFirstAgent(BICIdentifier firstAgent) {
 		this.firstAgent = firstAgent;
+		return this;
 	}
 
-	@XmlElement(name = "InstgAgtCrspdt")
-	public BICIdentifier getInstructingAgentCorrespondent() {
-		return instructingAgentCorrespondent;
+	public Optional<BICIdentifier> getInstructingAgentCorrespondent() {
+		return instructingAgentCorrespondent == null ? Optional.empty() : Optional.of(instructingAgentCorrespondent);
 	}
 
-	public void setInstructingAgentCorrespondent(BICIdentifier instructingAgentCorrespondent) {
+	public PaymentTransactionParty setInstructingAgentCorrespondent(BICIdentifier instructingAgentCorrespondent) {
 		this.instructingAgentCorrespondent = instructingAgentCorrespondent;
+		return this;
 	}
 
-	@XmlElement(name = "InstdAgtCrspdt")
-	public BICIdentifier getInstructedAgentCorrespondent() {
-		return instructedAgentCorrespondent;
+	public Optional<BICIdentifier> getInstructedAgentCorrespondent() {
+		return instructedAgentCorrespondent == null ? Optional.empty() : Optional.of(instructedAgentCorrespondent);
 	}
 
-	public void setInstructedAgentCorrespondent(BICIdentifier instructedAgentCorrespondent) {
+	public PaymentTransactionParty setInstructedAgentCorrespondent(BICIdentifier instructedAgentCorrespondent) {
 		this.instructedAgentCorrespondent = instructedAgentCorrespondent;
+		return this;
 	}
 
-	@XmlElement(name = "Intrmy")
-	public BICIdentifier getIntermediary() {
-		return intermediary;
+	public Optional<BICIdentifier> getIntermediary() {
+		return intermediary == null ? Optional.empty() : Optional.of(intermediary);
 	}
 
-	public void setIntermediary(BICIdentifier intermediary) {
+	public PaymentTransactionParty setIntermediary(BICIdentifier intermediary) {
 		this.intermediary = intermediary;
+		return this;
 	}
 
-	@XmlElement(name = "FnlAgt")
-	public BICIdentifier getFinalAgent() {
-		return finalAgent;
+	public Optional<BICIdentifier> getFinalAgent() {
+		return finalAgent == null ? Optional.empty() : Optional.of(finalAgent);
 	}
 
-	public void setFinalAgent(BICIdentifier finalAgent) {
+	public PaymentTransactionParty setFinalAgent(BICIdentifier finalAgent) {
 		this.finalAgent = finalAgent;
+		return this;
 	}
 
-	@XmlElement(name = "Cdtr")
-	public BICIdentifier getCreditor() {
-		return creditor;
+	public Optional<BICIdentifier> getCreditor() {
+		return creditor == null ? Optional.empty() : Optional.of(creditor);
 	}
 
-	public void setCreditor(BICIdentifier creditor) {
+	public PaymentTransactionParty setCreditor(BICIdentifier creditor) {
 		this.creditor = creditor;
+		return this;
 	}
 }

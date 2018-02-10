@@ -28,6 +28,8 @@ import com.tools20022.repository.msgset.TotalPortfolioValuationReportISOLatestve
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -50,22 +52,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestVersion
- * SecuritiesManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.TotalPortfolioValuationReportISOLatestversion
- * TotalPortfolioValuationReportISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "TtlPrtflValtnRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -90,6 +76,22 @@ import javax.xml.bind.annotation.*;
  * TotalPortfolioValuationReportV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.TotalPortfolioValuationReportISOLatestversion
+ * TotalPortfolioValuationReportISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "TtlPrtflValtnRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesManagementLatestVersion
+ * SecuritiesManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code semt.024.001.01}</li>
@@ -105,17 +107,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TotalPortfolioValuationReportV01", propOrder = {"pagination", "reportGeneralDetails", "accountDetails", "totalPortfolioValuation", "balance", "supplementaryData"})
 public class TotalPortfolioValuationReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pgntn", required = true)
 	protected Pagination pagination;
 	/**
-	 * Page number of the message (within the report) and continuation indicator
-	 * to indicate that the report is to continue or that the message is the
-	 * last page of the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,10 +157,11 @@ public class TotalPortfolioValuationReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "RptGnlDtls", required = true)
 	protected Report4 reportGeneralDetails;
 	/**
-	 * General information related to the total portfolio valuation report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,11 +201,11 @@ public class TotalPortfolioValuationReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctDtls", required = true)
 	protected SecuritiesAccount21 accountDetails;
 	/**
-	 * Details of the account. The account may represent an investment portfolio
-	 * or a fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,11 +247,11 @@ public class TotalPortfolioValuationReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "TtlPrtflValtn", required = true)
 	protected TotalPortfolioValuation1 totalPortfolioValuation;
 	/**
-	 * Valuation information of the portfolio. In some markets a fund of funds
-	 * or an investment fund is regarded as a portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -291,10 +293,11 @@ public class TotalPortfolioValuationReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "Bal")
 	protected PortfolioBalance1 balance;
 	/**
-	 * Balance breakdown information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -334,11 +337,11 @@ public class TotalPortfolioValuationReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected SupplementaryData1 supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -412,61 +415,61 @@ public class TotalPortfolioValuationReportV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
 
-	public void setPagination(Pagination pagination) {
-		this.pagination = pagination;
+	public TotalPortfolioValuationReportV01 setPagination(Pagination pagination) {
+		this.pagination = Objects.requireNonNull(pagination);
+		return this;
 	}
 
-	@XmlElement(name = "RptGnlDtls", required = true)
 	public Report4 getReportGeneralDetails() {
 		return reportGeneralDetails;
 	}
 
-	public void setReportGeneralDetails(Report4 reportGeneralDetails) {
-		this.reportGeneralDetails = reportGeneralDetails;
+	public TotalPortfolioValuationReportV01 setReportGeneralDetails(Report4 reportGeneralDetails) {
+		this.reportGeneralDetails = Objects.requireNonNull(reportGeneralDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AcctDtls", required = true)
 	public SecuritiesAccount21 getAccountDetails() {
 		return accountDetails;
 	}
 
-	public void setAccountDetails(SecuritiesAccount21 accountDetails) {
-		this.accountDetails = accountDetails;
+	public TotalPortfolioValuationReportV01 setAccountDetails(SecuritiesAccount21 accountDetails) {
+		this.accountDetails = Objects.requireNonNull(accountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "TtlPrtflValtn", required = true)
 	public TotalPortfolioValuation1 getTotalPortfolioValuation() {
 		return totalPortfolioValuation;
 	}
 
-	public void setTotalPortfolioValuation(TotalPortfolioValuation1 totalPortfolioValuation) {
-		this.totalPortfolioValuation = totalPortfolioValuation;
+	public TotalPortfolioValuationReportV01 setTotalPortfolioValuation(TotalPortfolioValuation1 totalPortfolioValuation) {
+		this.totalPortfolioValuation = Objects.requireNonNull(totalPortfolioValuation);
+		return this;
 	}
 
-	@XmlElement(name = "Bal")
-	public PortfolioBalance1 getBalance() {
-		return balance;
+	public Optional<PortfolioBalance1> getBalance() {
+		return balance == null ? Optional.empty() : Optional.of(balance);
 	}
 
-	public void setBalance(PortfolioBalance1 balance) {
+	public TotalPortfolioValuationReportV01 setBalance(PortfolioBalance1 balance) {
 		this.balance = balance;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
-	public SupplementaryData1 getSupplementaryData() {
-		return supplementaryData;
+	public Optional<SupplementaryData1> getSupplementaryData() {
+		return supplementaryData == null ? Optional.empty() : Optional.of(supplementaryData);
 	}
 
-	public void setSupplementaryData(SupplementaryData1 supplementaryData) {
+	public TotalPortfolioValuationReportV01 setSupplementaryData(SupplementaryData1 supplementaryData) {
 		this.supplementaryData = supplementaryData;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:semt.024.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:semt.024.001.01")
 	static public class Document {
 		@XmlElement(name = "TtlPrtflValtnRpt", required = true)
 		public TotalPortfolioValuationReportV01 messageBody;

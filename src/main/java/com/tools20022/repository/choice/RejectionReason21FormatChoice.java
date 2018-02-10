@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RejectionReason21FormatChoice", propOrder = {"code", "proprietary"})
 public class RejectionReason21FormatChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected InterestRejectionReason1Code code;
 	/**
-	 * Provides the interest rejection reason using an ISO 20022 code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +111,7 @@ public class RejectionReason21FormatChoice {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CollateralStatus.mmInterestRejectionReason;
-			componentContext_lazy = () -> RejectionReason21FormatChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionReason21FormatChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +122,11 @@ public class RejectionReason21FormatChoice {
 			simpleType_lazy = () -> InterestRejectionReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification30 proprietary;
 	/**
-	 * Provides the interest rejection reason using a proprietary code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +161,7 @@ public class RejectionReason21FormatChoice {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CollateralStatus.mmInterestRejectionReason;
-			componentContext_lazy = () -> RejectionReason21FormatChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionReason21FormatChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,8 +176,8 @@ public class RejectionReason21FormatChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RejectionReason21FormatChoice.mmCode, RejectionReason21FormatChoice.mmProprietary);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectionReason21FormatChoice.mmCode, com.tools20022.repository.choice.RejectionReason21FormatChoice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason21FormatChoice";
 				definition = "Choice of formats to express the reason of a rejection of the interest request.";
@@ -183,21 +186,21 @@ public class RejectionReason21FormatChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public InterestRejectionReason1Code getCode() {
 		return code;
 	}
 
-	public void setCode(InterestRejectionReason1Code code) {
-		this.code = code;
+	public RejectionReason21FormatChoice setCode(InterestRejectionReason1Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification30 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification30 proprietary) {
-		this.proprietary = proprietary;
+	public RejectionReason21FormatChoice setProprietary(GenericIdentification30 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

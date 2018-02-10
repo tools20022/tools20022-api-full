@@ -20,30 +20,34 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.EntryStatusCode;
+import com.tools20022.repository.codeset.EntryStatus3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of an entry.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus3Code#Booked
+ * EntryStatus3Code.Booked}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.EntryStatusCode
  * EntryStatusCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus3Code#mmBooked
- * EntryStatus3Code.mmBooked}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -60,7 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of an entry."</li>
  * </ul>
  */
-public class EntryStatus3Code extends EntryStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EntryStatus3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -79,26 +84,56 @@ public class EntryStatus3Code extends EntryStatusCode {
 	 * name} = "Booked"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBooked = new MMCode() {
+	public static final EntryStatus3Code Booked = new EntryStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Booked";
-			owner_lazy = () -> EntryStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EntryStatus3Code.mmObject();
+			codeName = EntryStatusCode.Booked.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, EntryStatus3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EntryStatus3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BOOK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EntryStatus3Code";
 				definition = "Specifies the status of an entry.";
-				code_lazy = () -> Arrays.asList(EntryStatus3Code.mmBooked);
 				trace_lazy = () -> EntryStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EntryStatus3Code.Booked);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Booked.getCodeName().get(), Booked);
+	}
+
+	public static EntryStatus3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EntryStatus3Code[] values() {
+		EntryStatus3Code[] values = new EntryStatus3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EntryStatus3Code> {
+		@Override
+		public EntryStatus3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EntryStatus3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

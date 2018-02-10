@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,15 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about code and number of event of fund transfer."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransferEvent1", propOrder = {"eventCode", "eventNumber"})
 public class TransferEvent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "EvtCd", required = true)
 	protected Max4Text eventCode;
 	/**
-	 * Code of fund transfer event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -94,7 +97,7 @@ public class TransferEvent1 {
 	 */
 	public static final MMMessageAttribute mmEventCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransferEvent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferEvent1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -105,10 +108,11 @@ public class TransferEvent1 {
 			simpleType_lazy = () -> Max4Text.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtNb")
 	protected Max3NumericText eventNumber;
 	/**
-	 * Event number related to the event code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,7 +139,7 @@ public class TransferEvent1 {
 	 */
 	public static final MMMessageAttribute mmEventNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransferEvent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferEvent1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -150,8 +154,8 @@ public class TransferEvent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransferEvent1.mmEventCode, TransferEvent1.mmEventNumber);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferEvent1.mmEventCode, com.tools20022.repository.msg.TransferEvent1.mmEventNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransferEvent1";
 				definition = "Information about code and number of event of fund transfer.";
@@ -160,21 +164,21 @@ public class TransferEvent1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "EvtCd", required = true)
 	public Max4Text getEventCode() {
 		return eventCode;
 	}
 
-	public void setEventCode(Max4Text eventCode) {
-		this.eventCode = eventCode;
+	public TransferEvent1 setEventCode(Max4Text eventCode) {
+		this.eventCode = Objects.requireNonNull(eventCode);
+		return this;
 	}
 
-	@XmlElement(name = "EvtNb")
-	public Max3NumericText getEventNumber() {
-		return eventNumber;
+	public Optional<Max3NumericText> getEventNumber() {
+		return eventNumber == null ? Optional.empty() : Optional.of(eventNumber);
 	}
 
-	public void setEventNumber(Max3NumericText eventNumber) {
+	public TransferEvent1 setEventNumber(Max3NumericText eventNumber) {
 		this.eventNumber = eventNumber;
+		return this;
 	}
 }

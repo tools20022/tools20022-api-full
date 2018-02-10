@@ -25,9 +25,11 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Detailed description of the differences."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ValidationResult5", propOrder = {"sequenceNumber", "ruleIdentification", "ruleDescription", "misMatchedElement"})
 public class ValidationResult5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SeqNb", required = true)
 	protected Number sequenceNumber;
 	/**
-	 * Sequential number assigned to the mismatch.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +109,7 @@ public class ValidationResult5 {
 	 */
 	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ValidationResult5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValidationResult5.mmObject();
 			isDerived = false;
 			xmlTag = "SeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +120,11 @@ public class ValidationResult5 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "RuleId", required = true)
 	protected Max35Text ruleIdentification;
 	/**
-	 * Coded identification of the matching rule that is violated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,7 +152,7 @@ public class ValidationResult5 {
 	 */
 	public static final MMMessageAttribute mmRuleIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ValidationResult5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValidationResult5.mmObject();
 			isDerived = false;
 			xmlTag = "RuleId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,10 +163,11 @@ public class ValidationResult5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RuleDesc", required = true)
 	protected Max350Text ruleDescription;
 	/**
-	 * Detailed description of the rule.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,7 +194,7 @@ public class ValidationResult5 {
 	 */
 	public static final MMMessageAttribute mmRuleDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ValidationResult5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValidationResult5.mmObject();
 			isDerived = false;
 			xmlTag = "RuleDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,10 +205,11 @@ public class ValidationResult5 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MisMtchdElmt")
 	protected List<com.tools20022.repository.msg.ElementIdentification1> misMatchedElement;
 	/**
-	 * Description of the element that creates the mismatch.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -229,7 +235,7 @@ public class ValidationResult5 {
 	 */
 	public static final MMMessageAssociationEnd mmMisMatchedElement = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ValidationResult5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValidationResult5.mmObject();
 			isDerived = false;
 			xmlTag = "MisMtchdElmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,8 +250,9 @@ public class ValidationResult5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ValidationResult5.mmSequenceNumber, ValidationResult5.mmRuleIdentification, ValidationResult5.mmRuleDescription, ValidationResult5.mmMisMatchedElement);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValidationResult5.mmSequenceNumber, com.tools20022.repository.msg.ValidationResult5.mmRuleIdentification,
+						com.tools20022.repository.msg.ValidationResult5.mmRuleDescription, com.tools20022.repository.msg.ValidationResult5.mmMisMatchedElement);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ValidationResult5";
 				definition = "Detailed description of the differences.";
@@ -254,39 +261,39 @@ public class ValidationResult5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SeqNb", required = true)
 	public Number getSequenceNumber() {
 		return sequenceNumber;
 	}
 
-	public void setSequenceNumber(Number sequenceNumber) {
-		this.sequenceNumber = sequenceNumber;
+	public ValidationResult5 setSequenceNumber(Number sequenceNumber) {
+		this.sequenceNumber = Objects.requireNonNull(sequenceNumber);
+		return this;
 	}
 
-	@XmlElement(name = "RuleId", required = true)
 	public Max35Text getRuleIdentification() {
 		return ruleIdentification;
 	}
 
-	public void setRuleIdentification(Max35Text ruleIdentification) {
-		this.ruleIdentification = ruleIdentification;
+	public ValidationResult5 setRuleIdentification(Max35Text ruleIdentification) {
+		this.ruleIdentification = Objects.requireNonNull(ruleIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RuleDesc", required = true)
 	public Max350Text getRuleDescription() {
 		return ruleDescription;
 	}
 
-	public void setRuleDescription(Max350Text ruleDescription) {
-		this.ruleDescription = ruleDescription;
+	public ValidationResult5 setRuleDescription(Max350Text ruleDescription) {
+		this.ruleDescription = Objects.requireNonNull(ruleDescription);
+		return this;
 	}
 
-	@XmlElement(name = "MisMtchdElmt")
 	public List<ElementIdentification1> getMisMatchedElement() {
-		return misMatchedElement;
+		return misMatchedElement == null ? misMatchedElement = new ArrayList<>() : misMatchedElement;
 	}
 
-	public void setMisMatchedElement(List<com.tools20022.repository.msg.ElementIdentification1> misMatchedElement) {
-		this.misMatchedElement = misMatchedElement;
+	public ValidationResult5 setMisMatchedElement(List<com.tools20022.repository.msg.ElementIdentification1> misMatchedElement) {
+		this.misMatchedElement = Objects.requireNonNull(misMatchedElement);
+		return this;
 	}
 }

@@ -20,208 +20,212 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode;
+import com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies balances of assets and other balances.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode
- * FinancialAssetBalanceTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmAccruedIncome
- * FinancialAssetBalanceType1Code.mmAccruedIncome}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#AccruedIncome
+ * FinancialAssetBalanceType1Code.AccruedIncome}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmOtherFinancialInstruments
- * FinancialAssetBalanceType1Code.mmOtherFinancialInstruments}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#OtherFinancialInstruments
+ * FinancialAssetBalanceType1Code.OtherFinancialInstruments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmSettledCash
- * FinancialAssetBalanceType1Code.mmSettledCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#SettledCash
+ * FinancialAssetBalanceType1Code.SettledCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmFXTransaction
- * FinancialAssetBalanceType1Code.mmFXTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#FXTransaction
+ * FinancialAssetBalanceType1Code.FXTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmCash
- * FinancialAssetBalanceType1Code.mmCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#Cash
+ * FinancialAssetBalanceType1Code.Cash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmTreasuryInflatedProtectedSecurity
- * FinancialAssetBalanceType1Code.mmTreasuryInflatedProtectedSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#TreasuryInflatedProtectedSecurity
+ * FinancialAssetBalanceType1Code.TreasuryInflatedProtectedSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmEquity
- * FinancialAssetBalanceType1Code.mmEquity}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#Equity
+ * FinancialAssetBalanceType1Code.Equity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmCommonStock
- * FinancialAssetBalanceType1Code.mmCommonStock}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#CommonStock
+ * FinancialAssetBalanceType1Code.CommonStock}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmPreferredStock
- * FinancialAssetBalanceType1Code.mmPreferredStock}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#PreferredStock
+ * FinancialAssetBalanceType1Code.PreferredStock}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmMutualFund
- * FinancialAssetBalanceType1Code.mmMutualFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#MutualFund
+ * FinancialAssetBalanceType1Code.MutualFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmExchangeTradedFund
- * FinancialAssetBalanceType1Code.mmExchangeTradedFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#ExchangeTradedFund
+ * FinancialAssetBalanceType1Code.ExchangeTradedFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmRights
- * FinancialAssetBalanceType1Code.mmRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#Rights
+ * FinancialAssetBalanceType1Code.Rights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmWarrant
- * FinancialAssetBalanceType1Code.mmWarrant}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#Warrant
+ * FinancialAssetBalanceType1Code.Warrant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmBond
- * FinancialAssetBalanceType1Code.mmBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#Bond
+ * FinancialAssetBalanceType1Code.Bond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmConvertibleBond
- * FinancialAssetBalanceType1Code.mmConvertibleBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#ConvertibleBond
+ * FinancialAssetBalanceType1Code.ConvertibleBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmCorporateBond
- * FinancialAssetBalanceType1Code.mmCorporateBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#CorporateBond
+ * FinancialAssetBalanceType1Code.CorporateBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmGovernmentBond
- * FinancialAssetBalanceType1Code.mmGovernmentBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#GovernmentBond
+ * FinancialAssetBalanceType1Code.GovernmentBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmOption
- * FinancialAssetBalanceType1Code.mmOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#Option
+ * FinancialAssetBalanceType1Code.Option}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmFuture
- * FinancialAssetBalanceType1Code.mmFuture}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#Future
+ * FinancialAssetBalanceType1Code.Future}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmSwap
- * FinancialAssetBalanceType1Code.mmSwap}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#Swap
+ * FinancialAssetBalanceType1Code.Swap}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmCurrencyExchange
- * FinancialAssetBalanceType1Code.mmCurrencyExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#CurrencyExchange
+ * FinancialAssetBalanceType1Code.CurrencyExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmForeignInvestment
- * FinancialAssetBalanceType1Code.mmForeignInvestment}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#ForeignInvestment
+ * FinancialAssetBalanceType1Code.ForeignInvestment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmGold
- * FinancialAssetBalanceType1Code.mmGold}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#Gold
+ * FinancialAssetBalanceType1Code.Gold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmProperty
- * FinancialAssetBalanceType1Code.mmProperty}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#Property
+ * FinancialAssetBalanceType1Code.Property}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmBankersAcceptance
- * FinancialAssetBalanceType1Code.mmBankersAcceptance}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#BankersAcceptance
+ * FinancialAssetBalanceType1Code.BankersAcceptance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmSyndicatedBankLoan
- * FinancialAssetBalanceType1Code.mmSyndicatedBankLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#SyndicatedBankLoan
+ * FinancialAssetBalanceType1Code.SyndicatedBankLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmCollateralisedBondObligation
- * FinancialAssetBalanceType1Code.mmCollateralisedBondObligation}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#CollateralisedBondObligation
+ * FinancialAssetBalanceType1Code.CollateralisedBondObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmCertificateOfDeposit
- * FinancialAssetBalanceType1Code.mmCertificateOfDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#CertificateOfDeposit
+ * FinancialAssetBalanceType1Code.CertificateOfDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmCollateralisedDebtObligation
- * FinancialAssetBalanceType1Code.mmCollateralisedDebtObligation}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#CollateralisedDebtObligation
+ * FinancialAssetBalanceType1Code.CollateralisedDebtObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmCollateralisedLoanObligation
- * FinancialAssetBalanceType1Code.mmCollateralisedLoanObligation}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#CollateralisedLoanObligation
+ * FinancialAssetBalanceType1Code.CollateralisedLoanObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmCollateralisedMortgageObligation
- * FinancialAssetBalanceType1Code.mmCollateralisedMortgageObligation}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#CollateralisedMortgageObligation
+ * FinancialAssetBalanceType1Code.CollateralisedMortgageObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmCommericalPaper
- * FinancialAssetBalanceType1Code.mmCommericalPaper}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#CommericalPaper
+ * FinancialAssetBalanceType1Code.CommericalPaper}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmCorporatePrivatePlacement
- * FinancialAssetBalanceType1Code.mmCorporatePrivatePlacement}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#CorporatePrivatePlacement
+ * FinancialAssetBalanceType1Code.CorporatePrivatePlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmDiscountNote
- * FinancialAssetBalanceType1Code.mmDiscountNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#DiscountNote
+ * FinancialAssetBalanceType1Code.DiscountNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmFederalAgencyDiscountNote
- * FinancialAssetBalanceType1Code.mmFederalAgencyDiscountNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#FederalAgencyDiscountNote
+ * FinancialAssetBalanceType1Code.FederalAgencyDiscountNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmFederalHousingAuthority
- * FinancialAssetBalanceType1Code.mmFederalHousingAuthority}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#FederalHousingAuthority
+ * FinancialAssetBalanceType1Code.FederalHousingAuthority}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmFederalHomeLoan
- * FinancialAssetBalanceType1Code.mmFederalHomeLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#FederalHomeLoan
+ * FinancialAssetBalanceType1Code.FederalHomeLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmFederalNationalMortgageAssociation
- * FinancialAssetBalanceType1Code.mmFederalNationalMortgageAssociation}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#FederalNationalMortgageAssociation
+ * FinancialAssetBalanceType1Code.FederalNationalMortgageAssociation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmFloatingRateNote
- * FinancialAssetBalanceType1Code.mmFloatingRateNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#FloatingRateNote
+ * FinancialAssetBalanceType1Code.FloatingRateNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmGovernmentNationalMortgageAssociation
- * FinancialAssetBalanceType1Code.mmGovernmentNationalMortgageAssociation}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#GovernmentNationalMortgageAssociation
+ * FinancialAssetBalanceType1Code.GovernmentNationalMortgageAssociation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmTreasuriesAndAgenciesDebentures
- * FinancialAssetBalanceType1Code.mmTreasuriesAndAgenciesDebentures}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#TreasuriesAndAgenciesDebentures
+ * FinancialAssetBalanceType1Code.TreasuriesAndAgenciesDebentures}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmIOETTEMortgage
- * FinancialAssetBalanceType1Code.mmIOETTEMortgage}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#IOETTEMortgage
+ * FinancialAssetBalanceType1Code.IOETTEMortgage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmMortgagePrivatePlacement
- * FinancialAssetBalanceType1Code.mmMortgagePrivatePlacement}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#MortgagePrivatePlacement
+ * FinancialAssetBalanceType1Code.MortgagePrivatePlacement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmMunicipalBond
- * FinancialAssetBalanceType1Code.mmMunicipalBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#MunicipalBond
+ * FinancialAssetBalanceType1Code.MunicipalBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmStudentLoanMarketingAssociation
- * FinancialAssetBalanceType1Code.mmStudentLoanMarketingAssociation}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#StudentLoanMarketingAssociation
+ * FinancialAssetBalanceType1Code.StudentLoanMarketingAssociation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmShortTermInvestmentFund
- * FinancialAssetBalanceType1Code.mmShortTermInvestmentFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#ShortTermInvestmentFund
+ * FinancialAssetBalanceType1Code.ShortTermInvestmentFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmTreasuryStrips
- * FinancialAssetBalanceType1Code.mmTreasuryStrips}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#TreasuryStrips
+ * FinancialAssetBalanceType1Code.TreasuryStrips}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmTimeDeposit
- * FinancialAssetBalanceType1Code.mmTimeDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#TimeDeposit
+ * FinancialAssetBalanceType1Code.TimeDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmUnitizedBondsAndWarrants
- * FinancialAssetBalanceType1Code.mmUnitizedBondsAndWarrants}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#UnitizedBondsAndWarrants
+ * FinancialAssetBalanceType1Code.UnitizedBondsAndWarrants}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmUnitizedBonds
- * FinancialAssetBalanceType1Code.mmUnitizedBonds}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#UnitizedBonds
+ * FinancialAssetBalanceType1Code.UnitizedBonds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmVariableRateDiscountNote
- * FinancialAssetBalanceType1Code.mmVariableRateDiscountNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#VariableRateDiscountNote
+ * FinancialAssetBalanceType1Code.VariableRateDiscountNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmCatsTigersLions
- * FinancialAssetBalanceType1Code.mmCatsTigersLions}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#CatsTigersLions
+ * FinancialAssetBalanceType1Code.CatsTigersLions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmForwardBonds
- * FinancialAssetBalanceType1Code.mmForwardBonds}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#ForwardBonds
+ * FinancialAssetBalanceType1Code.ForwardBonds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmForwardRateAgreement
- * FinancialAssetBalanceType1Code.mmForwardRateAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#ForwardRateAgreement
+ * FinancialAssetBalanceType1Code.ForwardRateAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmRepurchaseAgreement
- * FinancialAssetBalanceType1Code.mmRepurchaseAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#RepurchaseAgreement
+ * FinancialAssetBalanceType1Code.RepurchaseAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmReverseRepurchaseAgreement
- * FinancialAssetBalanceType1Code.mmReverseRepurchaseAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#ReverseRepurchaseAgreement
+ * FinancialAssetBalanceType1Code.ReverseRepurchaseAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmTripartyRepurchaseAgreement
- * FinancialAssetBalanceType1Code.mmTripartyRepurchaseAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#TripartyRepurchaseAgreement
+ * FinancialAssetBalanceType1Code.TripartyRepurchaseAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmTripartyReverseRepurchaseAgreement
- * FinancialAssetBalanceType1Code.mmTripartyReverseRepurchaseAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#TripartyReverseRepurchaseAgreement
+ * FinancialAssetBalanceType1Code.TripartyReverseRepurchaseAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmFXForward
- * FinancialAssetBalanceType1Code.mmFXForward}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#FXForward
+ * FinancialAssetBalanceType1Code.FXForward}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#mmFXSpot
- * FinancialAssetBalanceType1Code.mmFXSpot}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceType1Code#FXSpot
+ * FinancialAssetBalanceType1Code.FXSpot}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.FinancialAssetBalanceTypeCode
+ * FinancialAssetBalanceTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -238,7 +242,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies balances of assets and other balances."</li>
  * </ul>
  */
-public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FinancialAssetBalanceType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -257,11 +262,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "AccruedIncome"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccruedIncome = new MMCode() {
+	public static final FinancialAssetBalanceType1Code AccruedIncome = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedIncome";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.AccruedIncome.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -280,11 +286,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "OtherFinancialInstruments"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherFinancialInstruments = new MMCode() {
+	public static final FinancialAssetBalanceType1Code OtherFinancialInstruments = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherFinancialInstruments";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.OtherFinancialInstruments.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -303,11 +310,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "SettledCash"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettledCash = new MMCode() {
+	public static final FinancialAssetBalanceType1Code SettledCash = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledCash";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.SettledCash.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -326,11 +334,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "FXTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFXTransaction = new MMCode() {
+	public static final FinancialAssetBalanceType1Code FXTransaction = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXTransaction";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.FXTransaction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -349,11 +358,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "Cash"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCash = new MMCode() {
+	public static final FinancialAssetBalanceType1Code Cash = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.Cash.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -372,11 +382,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "TreasuryInflatedProtectedSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTreasuryInflatedProtectedSecurity = new MMCode() {
+	public static final FinancialAssetBalanceType1Code TreasuryInflatedProtectedSecurity = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TreasuryInflatedProtectedSecurity";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.TreasuryInflatedProtectedSecurity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -395,11 +406,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "Equity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEquity = new MMCode() {
+	public static final FinancialAssetBalanceType1Code Equity = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.Equity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -418,11 +430,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "CommonStock"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommonStock = new MMCode() {
+	public static final FinancialAssetBalanceType1Code CommonStock = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonStock";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.CommonStock.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -441,11 +454,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "PreferredStock"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreferredStock = new MMCode() {
+	public static final FinancialAssetBalanceType1Code PreferredStock = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreferredStock";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.PreferredStock.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -464,11 +478,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "MutualFund"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMutualFund = new MMCode() {
+	public static final FinancialAssetBalanceType1Code MutualFund = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MutualFund";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.MutualFund.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -487,11 +502,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "ExchangeTradedFund"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExchangeTradedFund = new MMCode() {
+	public static final FinancialAssetBalanceType1Code ExchangeTradedFund = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeTradedFund";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.ExchangeTradedFund.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -510,11 +526,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "Rights"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRights = new MMCode() {
+	public static final FinancialAssetBalanceType1Code Rights = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rights";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.Rights.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -533,11 +550,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "Warrant"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWarrant = new MMCode() {
+	public static final FinancialAssetBalanceType1Code Warrant = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Warrant";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.Warrant.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -556,11 +574,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "Bond"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBond = new MMCode() {
+	public static final FinancialAssetBalanceType1Code Bond = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bond";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.Bond.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -579,11 +598,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "ConvertibleBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConvertibleBond = new MMCode() {
+	public static final FinancialAssetBalanceType1Code ConvertibleBond = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConvertibleBond";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.ConvertibleBond.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -602,11 +622,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "CorporateBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateBond = new MMCode() {
+	public static final FinancialAssetBalanceType1Code CorporateBond = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateBond";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.CorporateBond.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -625,11 +646,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "GovernmentBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGovernmentBond = new MMCode() {
+	public static final FinancialAssetBalanceType1Code GovernmentBond = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentBond";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.GovernmentBond.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -648,11 +670,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "Option"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOption = new MMCode() {
+	public static final FinancialAssetBalanceType1Code Option = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Option";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.Option.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -671,11 +694,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "Future"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFuture = new MMCode() {
+	public static final FinancialAssetBalanceType1Code Future = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Future";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.Future.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -694,11 +718,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "Swap"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSwap = new MMCode() {
+	public static final FinancialAssetBalanceType1Code Swap = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Swap";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.Swap.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -717,11 +742,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "CurrencyExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrencyExchange = new MMCode() {
+	public static final FinancialAssetBalanceType1Code CurrencyExchange = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyExchange";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.CurrencyExchange.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -740,11 +766,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "ForeignInvestment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignInvestment = new MMCode() {
+	public static final FinancialAssetBalanceType1Code ForeignInvestment = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignInvestment";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.ForeignInvestment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -763,11 +790,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "Gold"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGold = new MMCode() {
+	public static final FinancialAssetBalanceType1Code Gold = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gold";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.Gold.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -786,11 +814,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "Property"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProperty = new MMCode() {
+	public static final FinancialAssetBalanceType1Code Property = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Property";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.Property.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -809,11 +838,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "BankersAcceptance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBankersAcceptance = new MMCode() {
+	public static final FinancialAssetBalanceType1Code BankersAcceptance = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankersAcceptance";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.BankersAcceptance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -832,11 +862,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "SyndicatedBankLoan"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSyndicatedBankLoan = new MMCode() {
+	public static final FinancialAssetBalanceType1Code SyndicatedBankLoan = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SyndicatedBankLoan";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.SyndicatedBankLoan.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -855,11 +886,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "CollateralisedBondObligation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateralisedBondObligation = new MMCode() {
+	public static final FinancialAssetBalanceType1Code CollateralisedBondObligation = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralisedBondObligation";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.CollateralisedBondObligation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -878,11 +910,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "CertificateOfDeposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertificateOfDeposit = new MMCode() {
+	public static final FinancialAssetBalanceType1Code CertificateOfDeposit = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateOfDeposit";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.CertificateOfDeposit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -901,11 +934,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "CollateralisedDebtObligation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateralisedDebtObligation = new MMCode() {
+	public static final FinancialAssetBalanceType1Code CollateralisedDebtObligation = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralisedDebtObligation";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.CollateralisedDebtObligation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -924,11 +958,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "CollateralisedLoanObligation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateralisedLoanObligation = new MMCode() {
+	public static final FinancialAssetBalanceType1Code CollateralisedLoanObligation = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralisedLoanObligation";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.CollateralisedLoanObligation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -947,11 +982,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "CollateralisedMortgageObligation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateralisedMortgageObligation = new MMCode() {
+	public static final FinancialAssetBalanceType1Code CollateralisedMortgageObligation = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralisedMortgageObligation";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.CollateralisedMortgageObligation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -970,11 +1006,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "CommericalPaper"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommericalPaper = new MMCode() {
+	public static final FinancialAssetBalanceType1Code CommericalPaper = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommericalPaper";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.CommericalPaper.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -993,11 +1030,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "CorporatePrivatePlacement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporatePrivatePlacement = new MMCode() {
+	public static final FinancialAssetBalanceType1Code CorporatePrivatePlacement = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporatePrivatePlacement";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.CorporatePrivatePlacement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1016,11 +1054,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "DiscountNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiscountNote = new MMCode() {
+	public static final FinancialAssetBalanceType1Code DiscountNote = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountNote";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.DiscountNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1039,11 +1078,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "FederalAgencyDiscountNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFederalAgencyDiscountNote = new MMCode() {
+	public static final FinancialAssetBalanceType1Code FederalAgencyDiscountNote = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FederalAgencyDiscountNote";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.FederalAgencyDiscountNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1062,11 +1102,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "FederalHousingAuthority"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFederalHousingAuthority = new MMCode() {
+	public static final FinancialAssetBalanceType1Code FederalHousingAuthority = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FederalHousingAuthority";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.FederalHousingAuthority.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1085,11 +1126,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "FederalHomeLoan"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFederalHomeLoan = new MMCode() {
+	public static final FinancialAssetBalanceType1Code FederalHomeLoan = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FederalHomeLoan";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.FederalHomeLoan.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1108,11 +1150,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "FederalNationalMortgageAssociation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFederalNationalMortgageAssociation = new MMCode() {
+	public static final FinancialAssetBalanceType1Code FederalNationalMortgageAssociation = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FederalNationalMortgageAssociation";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.FederalNationalMortgageAssociation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1131,11 +1174,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "FloatingRateNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFloatingRateNote = new MMCode() {
+	public static final FinancialAssetBalanceType1Code FloatingRateNote = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatingRateNote";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.FloatingRateNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1154,11 +1198,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "GovernmentNationalMortgageAssociation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGovernmentNationalMortgageAssociation = new MMCode() {
+	public static final FinancialAssetBalanceType1Code GovernmentNationalMortgageAssociation = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentNationalMortgageAssociation";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.GovernmentNationalMortgageAssociation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1177,11 +1222,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "TreasuriesAndAgenciesDebentures"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTreasuriesAndAgenciesDebentures = new MMCode() {
+	public static final FinancialAssetBalanceType1Code TreasuriesAndAgenciesDebentures = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TreasuriesAndAgenciesDebentures";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.TreasuriesAndAgenciesDebentures.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1200,11 +1246,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "IOETTEMortgage"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIOETTEMortgage = new MMCode() {
+	public static final FinancialAssetBalanceType1Code IOETTEMortgage = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IOETTEMortgage";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.IOETTEMortgage.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1223,11 +1270,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "MortgagePrivatePlacement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMortgagePrivatePlacement = new MMCode() {
+	public static final FinancialAssetBalanceType1Code MortgagePrivatePlacement = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MortgagePrivatePlacement";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.MortgagePrivatePlacement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1246,11 +1294,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "MunicipalBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMunicipalBond = new MMCode() {
+	public static final FinancialAssetBalanceType1Code MunicipalBond = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalBond";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.MunicipalBond.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1269,11 +1318,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "StudentLoanMarketingAssociation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStudentLoanMarketingAssociation = new MMCode() {
+	public static final FinancialAssetBalanceType1Code StudentLoanMarketingAssociation = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StudentLoanMarketingAssociation";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.StudentLoanMarketingAssociation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1292,11 +1342,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "ShortTermInvestmentFund"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmShortTermInvestmentFund = new MMCode() {
+	public static final FinancialAssetBalanceType1Code ShortTermInvestmentFund = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortTermInvestmentFund";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.ShortTermInvestmentFund.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1315,11 +1366,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "TreasuryStrips"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTreasuryStrips = new MMCode() {
+	public static final FinancialAssetBalanceType1Code TreasuryStrips = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TreasuryStrips";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.TreasuryStrips.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1338,11 +1390,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "TimeDeposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTimeDeposit = new MMCode() {
+	public static final FinancialAssetBalanceType1Code TimeDeposit = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeDeposit";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.TimeDeposit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1361,11 +1414,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "UnitizedBondsAndWarrants"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnitizedBondsAndWarrants = new MMCode() {
+	public static final FinancialAssetBalanceType1Code UnitizedBondsAndWarrants = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitizedBondsAndWarrants";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.UnitizedBondsAndWarrants.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1384,11 +1438,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "UnitizedBonds"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnitizedBonds = new MMCode() {
+	public static final FinancialAssetBalanceType1Code UnitizedBonds = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitizedBonds";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.UnitizedBonds.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1407,11 +1462,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "VariableRateDiscountNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVariableRateDiscountNote = new MMCode() {
+	public static final FinancialAssetBalanceType1Code VariableRateDiscountNote = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateDiscountNote";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.VariableRateDiscountNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1430,11 +1486,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "CatsTigersLions"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCatsTigersLions = new MMCode() {
+	public static final FinancialAssetBalanceType1Code CatsTigersLions = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CatsTigersLions";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.CatsTigersLions.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1453,11 +1510,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "ForwardBonds"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForwardBonds = new MMCode() {
+	public static final FinancialAssetBalanceType1Code ForwardBonds = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardBonds";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.ForwardBonds.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1476,11 +1534,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "ForwardRateAgreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForwardRateAgreement = new MMCode() {
+	public static final FinancialAssetBalanceType1Code ForwardRateAgreement = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardRateAgreement";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.ForwardRateAgreement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1499,11 +1558,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "RepurchaseAgreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRepurchaseAgreement = new MMCode() {
+	public static final FinancialAssetBalanceType1Code RepurchaseAgreement = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseAgreement";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.RepurchaseAgreement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1522,11 +1582,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "ReverseRepurchaseAgreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReverseRepurchaseAgreement = new MMCode() {
+	public static final FinancialAssetBalanceType1Code ReverseRepurchaseAgreement = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReverseRepurchaseAgreement";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.ReverseRepurchaseAgreement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1545,11 +1606,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "TripartyRepurchaseAgreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTripartyRepurchaseAgreement = new MMCode() {
+	public static final FinancialAssetBalanceType1Code TripartyRepurchaseAgreement = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyRepurchaseAgreement";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.TripartyRepurchaseAgreement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1568,11 +1630,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "TripartyReverseRepurchaseAgreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTripartyReverseRepurchaseAgreement = new MMCode() {
+	public static final FinancialAssetBalanceType1Code TripartyReverseRepurchaseAgreement = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyReverseRepurchaseAgreement";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.TripartyReverseRepurchaseAgreement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1591,11 +1654,12 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "FXForward"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFXForward = new MMCode() {
+	public static final FinancialAssetBalanceType1Code FXForward = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXForward";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.FXForward.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1614,42 +1678,144 @@ public class FinancialAssetBalanceType1Code extends FinancialAssetBalanceTypeCod
 	 * name} = "FXSpot"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFXSpot = new MMCode() {
+	public static final FinancialAssetBalanceType1Code FXSpot = new FinancialAssetBalanceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXSpot";
-			owner_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.mmObject();
+			codeName = FinancialAssetBalanceTypeCode.FXSpot.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, FinancialAssetBalanceType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FinancialAssetBalanceType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACRU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialAssetBalanceType1Code";
 				definition = "Specifies balances of assets and other balances.";
-				code_lazy = () -> Arrays.asList(FinancialAssetBalanceType1Code.mmAccruedIncome, FinancialAssetBalanceType1Code.mmOtherFinancialInstruments, FinancialAssetBalanceType1Code.mmSettledCash,
-						FinancialAssetBalanceType1Code.mmFXTransaction, FinancialAssetBalanceType1Code.mmCash, FinancialAssetBalanceType1Code.mmTreasuryInflatedProtectedSecurity, FinancialAssetBalanceType1Code.mmEquity,
-						FinancialAssetBalanceType1Code.mmCommonStock, FinancialAssetBalanceType1Code.mmPreferredStock, FinancialAssetBalanceType1Code.mmMutualFund, FinancialAssetBalanceType1Code.mmExchangeTradedFund,
-						FinancialAssetBalanceType1Code.mmRights, FinancialAssetBalanceType1Code.mmWarrant, FinancialAssetBalanceType1Code.mmBond, FinancialAssetBalanceType1Code.mmConvertibleBond,
-						FinancialAssetBalanceType1Code.mmCorporateBond, FinancialAssetBalanceType1Code.mmGovernmentBond, FinancialAssetBalanceType1Code.mmOption, FinancialAssetBalanceType1Code.mmFuture,
-						FinancialAssetBalanceType1Code.mmSwap, FinancialAssetBalanceType1Code.mmCurrencyExchange, FinancialAssetBalanceType1Code.mmForeignInvestment, FinancialAssetBalanceType1Code.mmGold,
-						FinancialAssetBalanceType1Code.mmProperty, FinancialAssetBalanceType1Code.mmBankersAcceptance, FinancialAssetBalanceType1Code.mmSyndicatedBankLoan, FinancialAssetBalanceType1Code.mmCollateralisedBondObligation,
-						FinancialAssetBalanceType1Code.mmCertificateOfDeposit, FinancialAssetBalanceType1Code.mmCollateralisedDebtObligation, FinancialAssetBalanceType1Code.mmCollateralisedLoanObligation,
-						FinancialAssetBalanceType1Code.mmCollateralisedMortgageObligation, FinancialAssetBalanceType1Code.mmCommericalPaper, FinancialAssetBalanceType1Code.mmCorporatePrivatePlacement,
-						FinancialAssetBalanceType1Code.mmDiscountNote, FinancialAssetBalanceType1Code.mmFederalAgencyDiscountNote, FinancialAssetBalanceType1Code.mmFederalHousingAuthority, FinancialAssetBalanceType1Code.mmFederalHomeLoan,
-						FinancialAssetBalanceType1Code.mmFederalNationalMortgageAssociation, FinancialAssetBalanceType1Code.mmFloatingRateNote, FinancialAssetBalanceType1Code.mmGovernmentNationalMortgageAssociation,
-						FinancialAssetBalanceType1Code.mmTreasuriesAndAgenciesDebentures, FinancialAssetBalanceType1Code.mmIOETTEMortgage, FinancialAssetBalanceType1Code.mmMortgagePrivatePlacement,
-						FinancialAssetBalanceType1Code.mmMunicipalBond, FinancialAssetBalanceType1Code.mmStudentLoanMarketingAssociation, FinancialAssetBalanceType1Code.mmShortTermInvestmentFund,
-						FinancialAssetBalanceType1Code.mmTreasuryStrips, FinancialAssetBalanceType1Code.mmTimeDeposit, FinancialAssetBalanceType1Code.mmUnitizedBondsAndWarrants, FinancialAssetBalanceType1Code.mmUnitizedBonds,
-						FinancialAssetBalanceType1Code.mmVariableRateDiscountNote, FinancialAssetBalanceType1Code.mmCatsTigersLions, FinancialAssetBalanceType1Code.mmForwardBonds, FinancialAssetBalanceType1Code.mmForwardRateAgreement,
-						FinancialAssetBalanceType1Code.mmRepurchaseAgreement, FinancialAssetBalanceType1Code.mmReverseRepurchaseAgreement, FinancialAssetBalanceType1Code.mmTripartyRepurchaseAgreement,
-						FinancialAssetBalanceType1Code.mmTripartyReverseRepurchaseAgreement, FinancialAssetBalanceType1Code.mmFXForward, FinancialAssetBalanceType1Code.mmFXSpot);
 				trace_lazy = () -> FinancialAssetBalanceTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.AccruedIncome, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.OtherFinancialInstruments,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.SettledCash, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.FXTransaction,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.Cash, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.TreasuryInflatedProtectedSecurity,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.Equity, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.CommonStock,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.PreferredStock, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.MutualFund,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.ExchangeTradedFund, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.Rights,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.Warrant, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.Bond,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.ConvertibleBond, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.CorporateBond,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.GovernmentBond, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.Option,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.Future, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.Swap,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.CurrencyExchange, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.ForeignInvestment,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.Gold, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.Property,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.BankersAcceptance, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.SyndicatedBankLoan,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.CollateralisedBondObligation, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.CertificateOfDeposit,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.CollateralisedDebtObligation, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.CollateralisedLoanObligation,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.CollateralisedMortgageObligation, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.CommericalPaper,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.CorporatePrivatePlacement, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.DiscountNote,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.FederalAgencyDiscountNote, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.FederalHousingAuthority,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.FederalHomeLoan, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.FederalNationalMortgageAssociation,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.FloatingRateNote, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.GovernmentNationalMortgageAssociation,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.TreasuriesAndAgenciesDebentures, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.IOETTEMortgage,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.MortgagePrivatePlacement, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.MunicipalBond,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.StudentLoanMarketingAssociation, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.ShortTermInvestmentFund,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.TreasuryStrips, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.TimeDeposit,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.UnitizedBondsAndWarrants, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.UnitizedBonds,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.VariableRateDiscountNote, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.CatsTigersLions,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.ForwardBonds, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.ForwardRateAgreement,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.RepurchaseAgreement, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.ReverseRepurchaseAgreement,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.TripartyRepurchaseAgreement, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.TripartyReverseRepurchaseAgreement,
+						com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.FXForward, com.tools20022.repository.codeset.FinancialAssetBalanceType1Code.FXSpot);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccruedIncome.getCodeName().get(), AccruedIncome);
+		codesByName.put(OtherFinancialInstruments.getCodeName().get(), OtherFinancialInstruments);
+		codesByName.put(SettledCash.getCodeName().get(), SettledCash);
+		codesByName.put(FXTransaction.getCodeName().get(), FXTransaction);
+		codesByName.put(Cash.getCodeName().get(), Cash);
+		codesByName.put(TreasuryInflatedProtectedSecurity.getCodeName().get(), TreasuryInflatedProtectedSecurity);
+		codesByName.put(Equity.getCodeName().get(), Equity);
+		codesByName.put(CommonStock.getCodeName().get(), CommonStock);
+		codesByName.put(PreferredStock.getCodeName().get(), PreferredStock);
+		codesByName.put(MutualFund.getCodeName().get(), MutualFund);
+		codesByName.put(ExchangeTradedFund.getCodeName().get(), ExchangeTradedFund);
+		codesByName.put(Rights.getCodeName().get(), Rights);
+		codesByName.put(Warrant.getCodeName().get(), Warrant);
+		codesByName.put(Bond.getCodeName().get(), Bond);
+		codesByName.put(ConvertibleBond.getCodeName().get(), ConvertibleBond);
+		codesByName.put(CorporateBond.getCodeName().get(), CorporateBond);
+		codesByName.put(GovernmentBond.getCodeName().get(), GovernmentBond);
+		codesByName.put(Option.getCodeName().get(), Option);
+		codesByName.put(Future.getCodeName().get(), Future);
+		codesByName.put(Swap.getCodeName().get(), Swap);
+		codesByName.put(CurrencyExchange.getCodeName().get(), CurrencyExchange);
+		codesByName.put(ForeignInvestment.getCodeName().get(), ForeignInvestment);
+		codesByName.put(Gold.getCodeName().get(), Gold);
+		codesByName.put(Property.getCodeName().get(), Property);
+		codesByName.put(BankersAcceptance.getCodeName().get(), BankersAcceptance);
+		codesByName.put(SyndicatedBankLoan.getCodeName().get(), SyndicatedBankLoan);
+		codesByName.put(CollateralisedBondObligation.getCodeName().get(), CollateralisedBondObligation);
+		codesByName.put(CertificateOfDeposit.getCodeName().get(), CertificateOfDeposit);
+		codesByName.put(CollateralisedDebtObligation.getCodeName().get(), CollateralisedDebtObligation);
+		codesByName.put(CollateralisedLoanObligation.getCodeName().get(), CollateralisedLoanObligation);
+		codesByName.put(CollateralisedMortgageObligation.getCodeName().get(), CollateralisedMortgageObligation);
+		codesByName.put(CommericalPaper.getCodeName().get(), CommericalPaper);
+		codesByName.put(CorporatePrivatePlacement.getCodeName().get(), CorporatePrivatePlacement);
+		codesByName.put(DiscountNote.getCodeName().get(), DiscountNote);
+		codesByName.put(FederalAgencyDiscountNote.getCodeName().get(), FederalAgencyDiscountNote);
+		codesByName.put(FederalHousingAuthority.getCodeName().get(), FederalHousingAuthority);
+		codesByName.put(FederalHomeLoan.getCodeName().get(), FederalHomeLoan);
+		codesByName.put(FederalNationalMortgageAssociation.getCodeName().get(), FederalNationalMortgageAssociation);
+		codesByName.put(FloatingRateNote.getCodeName().get(), FloatingRateNote);
+		codesByName.put(GovernmentNationalMortgageAssociation.getCodeName().get(), GovernmentNationalMortgageAssociation);
+		codesByName.put(TreasuriesAndAgenciesDebentures.getCodeName().get(), TreasuriesAndAgenciesDebentures);
+		codesByName.put(IOETTEMortgage.getCodeName().get(), IOETTEMortgage);
+		codesByName.put(MortgagePrivatePlacement.getCodeName().get(), MortgagePrivatePlacement);
+		codesByName.put(MunicipalBond.getCodeName().get(), MunicipalBond);
+		codesByName.put(StudentLoanMarketingAssociation.getCodeName().get(), StudentLoanMarketingAssociation);
+		codesByName.put(ShortTermInvestmentFund.getCodeName().get(), ShortTermInvestmentFund);
+		codesByName.put(TreasuryStrips.getCodeName().get(), TreasuryStrips);
+		codesByName.put(TimeDeposit.getCodeName().get(), TimeDeposit);
+		codesByName.put(UnitizedBondsAndWarrants.getCodeName().get(), UnitizedBondsAndWarrants);
+		codesByName.put(UnitizedBonds.getCodeName().get(), UnitizedBonds);
+		codesByName.put(VariableRateDiscountNote.getCodeName().get(), VariableRateDiscountNote);
+		codesByName.put(CatsTigersLions.getCodeName().get(), CatsTigersLions);
+		codesByName.put(ForwardBonds.getCodeName().get(), ForwardBonds);
+		codesByName.put(ForwardRateAgreement.getCodeName().get(), ForwardRateAgreement);
+		codesByName.put(RepurchaseAgreement.getCodeName().get(), RepurchaseAgreement);
+		codesByName.put(ReverseRepurchaseAgreement.getCodeName().get(), ReverseRepurchaseAgreement);
+		codesByName.put(TripartyRepurchaseAgreement.getCodeName().get(), TripartyRepurchaseAgreement);
+		codesByName.put(TripartyReverseRepurchaseAgreement.getCodeName().get(), TripartyReverseRepurchaseAgreement);
+		codesByName.put(FXForward.getCodeName().get(), FXForward);
+		codesByName.put(FXSpot.getCodeName().get(), FXSpot);
+	}
+
+	public static FinancialAssetBalanceType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FinancialAssetBalanceType1Code[] values() {
+		FinancialAssetBalanceType1Code[] values = new FinancialAssetBalanceType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FinancialAssetBalanceType1Code> {
+		@Override
+		public FinancialAssetBalanceType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FinancialAssetBalanceType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

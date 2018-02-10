@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -81,8 +83,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,16 +97,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InterestCalculation1", propOrder = {"calculationDate", "effectivePrincipalAmount", "principalAmount", "movementAmount", "movementDirection", "effectiveRate", "interestRate", "spread", "accruedInterestAmount",
 		"aggregatedInterestAmount"})
 public class InterestCalculation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ClctnDt", required = true)
 	protected ISODate calculationDate;
 	/**
-	 * Calculation date of the interest amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,7 +140,7 @@ public class InterestCalculation1 {
 	public static final MMMessageAttribute mmCalculationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmCalculationDate;
-			componentContext_lazy = () -> InterestCalculation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestCalculation1.mmObject();
 			isDerived = false;
 			xmlTag = "ClctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,10 +151,11 @@ public class InterestCalculation1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "FctvPrncplAmt", required = true)
 	protected ActiveCurrencyAndAmount effectivePrincipalAmount;
 	/**
-	 * Provides the collateral amount used to calculate the interest amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,7 +190,7 @@ public class InterestCalculation1 {
 	public static final MMMessageAttribute mmEffectivePrincipalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalCollateralCurrentValue;
-			componentContext_lazy = () -> InterestCalculation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestCalculation1.mmObject();
 			isDerived = false;
 			xmlTag = "FctvPrncplAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,11 +201,11 @@ public class InterestCalculation1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "PrncplAmt")
 	protected ActiveCurrencyAndAmount principalAmount;
 	/**
-	 * Provides the collateral amount posted before taking into account the
-	 * collateral movement amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -237,7 +241,7 @@ public class InterestCalculation1 {
 	public static final MMMessageAttribute mmPrincipalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CollateralBalance.mmHeldAmount;
-			componentContext_lazy = () -> InterestCalculation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestCalculation1.mmObject();
 			isDerived = false;
 			xmlTag = "PrncplAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,11 +252,11 @@ public class InterestCalculation1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "MvmntAmt")
 	protected ActiveCurrencyAndAmount movementAmount;
 	/**
-	 * Provides the additional amount of collateral posted between two
-	 * calculation dates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -288,7 +292,7 @@ public class InterestCalculation1 {
 	public static final MMMessageAttribute mmMovementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CollateralBalance.mmPriorAgreed;
-			componentContext_lazy = () -> InterestCalculation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestCalculation1.mmObject();
 			isDerived = false;
 			xmlTag = "MvmntAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -299,11 +303,11 @@ public class InterestCalculation1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "MvmntDrctn")
 	protected CreditDebitCode movementDirection;
 	/**
-	 * Indicates if the movement in the collateral posted is a debit or a credit
-	 * amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -333,7 +337,7 @@ public class InterestCalculation1 {
 	 */
 	public static final MMMessageAttribute mmMovementDirection = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InterestCalculation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestCalculation1.mmObject();
 			isDerived = false;
 			xmlTag = "MvmntDrctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -344,13 +348,11 @@ public class InterestCalculation1 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "FctvRate", required = true)
 	protected PercentageRate effectiveRate;
 	/**
-	 * Percentage charged for the use of an amount of money, usually expressed
-	 * at an annual rate. The interest rate is the ratio of the amount of
-	 * interest paid during a certain period of time compared to the principal
-	 * amount of the interest bearing financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -386,7 +388,7 @@ public class InterestCalculation1 {
 	public static final MMMessageAttribute mmEffectiveRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
-			componentContext_lazy = () -> InterestCalculation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestCalculation1.mmObject();
 			isDerived = false;
 			xmlTag = "FctvRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -397,13 +399,11 @@ public class InterestCalculation1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstRate")
 	protected PercentageRate interestRate;
 	/**
-	 * Percentage charged for the use of an amount of money, usually expressed
-	 * at an annual rate. The interest rate is the ratio of the amount of
-	 * interest paid during a certain period of time compared to the principal
-	 * amount of the interest bearing financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -439,7 +439,7 @@ public class InterestCalculation1 {
 	public static final MMMessageAttribute mmInterestRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
-			componentContext_lazy = () -> InterestCalculation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestCalculation1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -450,10 +450,11 @@ public class InterestCalculation1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "Sprd")
 	protected PercentageRate spread;
 	/**
-	 * Used to express differences in interest rates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -487,7 +488,7 @@ public class InterestCalculation1 {
 	public static final MMMessageAttribute mmSpread = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Spread.mmSpreadRate;
-			componentContext_lazy = () -> InterestCalculation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestCalculation1.mmObject();
 			isDerived = false;
 			xmlTag = "Sprd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -498,10 +499,11 @@ public class InterestCalculation1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "AcrdIntrstAmt", required = true)
 	protected ActiveCurrencyAndAmount accruedInterestAmount;
 	/**
-	 * Amount of money representing an interest payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -535,7 +537,7 @@ public class InterestCalculation1 {
 	public static final MMMessageAttribute mmAccruedInterestAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
-			componentContext_lazy = () -> InterestCalculation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestCalculation1.mmObject();
 			isDerived = false;
 			xmlTag = "AcrdIntrstAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -546,10 +548,11 @@ public class InterestCalculation1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "AggtdIntrstAmt")
 	protected ActiveCurrencyAndAmount aggregatedInterestAmount;
 	/**
-	 * Amount of money representing an interest payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -583,7 +586,7 @@ public class InterestCalculation1 {
 	public static final MMMessageAttribute mmAggregatedInterestAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
-			componentContext_lazy = () -> InterestCalculation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestCalculation1.mmObject();
 			isDerived = false;
 			xmlTag = "AggtdIntrstAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -598,11 +601,12 @@ public class InterestCalculation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InterestCalculation1.mmCalculationDate, InterestCalculation1.mmEffectivePrincipalAmount, InterestCalculation1.mmPrincipalAmount, InterestCalculation1.mmMovementAmount,
-						InterestCalculation1.mmMovementDirection, InterestCalculation1.mmEffectiveRate, InterestCalculation1.mmInterestRate, InterestCalculation1.mmSpread, InterestCalculation1.mmAccruedInterestAmount,
-						InterestCalculation1.mmAggregatedInterestAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestCalculation1.mmCalculationDate, com.tools20022.repository.msg.InterestCalculation1.mmEffectivePrincipalAmount,
+						com.tools20022.repository.msg.InterestCalculation1.mmPrincipalAmount, com.tools20022.repository.msg.InterestCalculation1.mmMovementAmount, com.tools20022.repository.msg.InterestCalculation1.mmMovementDirection,
+						com.tools20022.repository.msg.InterestCalculation1.mmEffectiveRate, com.tools20022.repository.msg.InterestCalculation1.mmInterestRate, com.tools20022.repository.msg.InterestCalculation1.mmSpread,
+						com.tools20022.repository.msg.InterestCalculation1.mmAccruedInterestAmount, com.tools20022.repository.msg.InterestCalculation1.mmAggregatedInterestAmount);
 				trace_lazy = () -> InterestCalculation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InterestCalculation1";
 				definition = "Consideration, such as amount of money,  paid or received in exchange for an amount of money that has been invested, loaned or borrowed for a certain period.";
@@ -611,93 +615,93 @@ public class InterestCalculation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ClctnDt", required = true)
 	public ISODate getCalculationDate() {
 		return calculationDate;
 	}
 
-	public void setCalculationDate(ISODate calculationDate) {
-		this.calculationDate = calculationDate;
+	public InterestCalculation1 setCalculationDate(ISODate calculationDate) {
+		this.calculationDate = Objects.requireNonNull(calculationDate);
+		return this;
 	}
 
-	@XmlElement(name = "FctvPrncplAmt", required = true)
 	public ActiveCurrencyAndAmount getEffectivePrincipalAmount() {
 		return effectivePrincipalAmount;
 	}
 
-	public void setEffectivePrincipalAmount(ActiveCurrencyAndAmount effectivePrincipalAmount) {
-		this.effectivePrincipalAmount = effectivePrincipalAmount;
+	public InterestCalculation1 setEffectivePrincipalAmount(ActiveCurrencyAndAmount effectivePrincipalAmount) {
+		this.effectivePrincipalAmount = Objects.requireNonNull(effectivePrincipalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "PrncplAmt")
-	public ActiveCurrencyAndAmount getPrincipalAmount() {
-		return principalAmount;
+	public Optional<ActiveCurrencyAndAmount> getPrincipalAmount() {
+		return principalAmount == null ? Optional.empty() : Optional.of(principalAmount);
 	}
 
-	public void setPrincipalAmount(ActiveCurrencyAndAmount principalAmount) {
+	public InterestCalculation1 setPrincipalAmount(ActiveCurrencyAndAmount principalAmount) {
 		this.principalAmount = principalAmount;
+		return this;
 	}
 
-	@XmlElement(name = "MvmntAmt")
-	public ActiveCurrencyAndAmount getMovementAmount() {
-		return movementAmount;
+	public Optional<ActiveCurrencyAndAmount> getMovementAmount() {
+		return movementAmount == null ? Optional.empty() : Optional.of(movementAmount);
 	}
 
-	public void setMovementAmount(ActiveCurrencyAndAmount movementAmount) {
+	public InterestCalculation1 setMovementAmount(ActiveCurrencyAndAmount movementAmount) {
 		this.movementAmount = movementAmount;
+		return this;
 	}
 
-	@XmlElement(name = "MvmntDrctn")
-	public CreditDebitCode getMovementDirection() {
-		return movementDirection;
+	public Optional<CreditDebitCode> getMovementDirection() {
+		return movementDirection == null ? Optional.empty() : Optional.of(movementDirection);
 	}
 
-	public void setMovementDirection(CreditDebitCode movementDirection) {
+	public InterestCalculation1 setMovementDirection(CreditDebitCode movementDirection) {
 		this.movementDirection = movementDirection;
+		return this;
 	}
 
-	@XmlElement(name = "FctvRate", required = true)
 	public PercentageRate getEffectiveRate() {
 		return effectiveRate;
 	}
 
-	public void setEffectiveRate(PercentageRate effectiveRate) {
-		this.effectiveRate = effectiveRate;
+	public InterestCalculation1 setEffectiveRate(PercentageRate effectiveRate) {
+		this.effectiveRate = Objects.requireNonNull(effectiveRate);
+		return this;
 	}
 
-	@XmlElement(name = "IntrstRate")
-	public PercentageRate getInterestRate() {
-		return interestRate;
+	public Optional<PercentageRate> getInterestRate() {
+		return interestRate == null ? Optional.empty() : Optional.of(interestRate);
 	}
 
-	public void setInterestRate(PercentageRate interestRate) {
+	public InterestCalculation1 setInterestRate(PercentageRate interestRate) {
 		this.interestRate = interestRate;
+		return this;
 	}
 
-	@XmlElement(name = "Sprd")
-	public PercentageRate getSpread() {
-		return spread;
+	public Optional<PercentageRate> getSpread() {
+		return spread == null ? Optional.empty() : Optional.of(spread);
 	}
 
-	public void setSpread(PercentageRate spread) {
+	public InterestCalculation1 setSpread(PercentageRate spread) {
 		this.spread = spread;
+		return this;
 	}
 
-	@XmlElement(name = "AcrdIntrstAmt", required = true)
 	public ActiveCurrencyAndAmount getAccruedInterestAmount() {
 		return accruedInterestAmount;
 	}
 
-	public void setAccruedInterestAmount(ActiveCurrencyAndAmount accruedInterestAmount) {
-		this.accruedInterestAmount = accruedInterestAmount;
+	public InterestCalculation1 setAccruedInterestAmount(ActiveCurrencyAndAmount accruedInterestAmount) {
+		this.accruedInterestAmount = Objects.requireNonNull(accruedInterestAmount);
+		return this;
 	}
 
-	@XmlElement(name = "AggtdIntrstAmt")
-	public ActiveCurrencyAndAmount getAggregatedInterestAmount() {
-		return aggregatedInterestAmount;
+	public Optional<ActiveCurrencyAndAmount> getAggregatedInterestAmount() {
+		return aggregatedInterestAmount == null ? Optional.empty() : Optional.of(aggregatedInterestAmount);
 	}
 
-	public void setAggregatedInterestAmount(ActiveCurrencyAndAmount aggregatedInterestAmount) {
+	public InterestCalculation1 setAggregatedInterestAmount(ActiveCurrencyAndAmount aggregatedInterestAmount) {
 		this.aggregatedInterestAmount = aggregatedInterestAmount;
+		return this;
 	}
 }

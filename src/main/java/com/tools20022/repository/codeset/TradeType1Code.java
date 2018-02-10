@@ -20,45 +20,46 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TradeTypeCode;
+import com.tools20022.repository.codeset.TradeType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of executed order.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TradeTypeCode TradeTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType1Code#mmOnOrderBookTrade
- * TradeType1Code.mmOnOrderBookTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeType1Code#OnOrderBookTrade
+ * TradeType1Code.OnOrderBookTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType1Code#mmOffOrderBookTrade
- * TradeType1Code.mmOffOrderBookTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeType1Code#OffOrderBookTrade
+ * TradeType1Code.OffOrderBookTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType1Code#BackUpTrade
+ * TradeType1Code.BackUpTrade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType1Code#mmBackUpTrade
- * TradeType1Code.mmBackUpTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType1Code#mmCorrectiveTrade
- * TradeType1Code.mmCorrectiveTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType1Code#mmTradeGiveUp
- * TradeType1Code.mmTradeGiveUp}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeType1Code#mmLinkedTrade
- * TradeType1Code.mmLinkedTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeType1Code#CorrectiveTrade
+ * TradeType1Code.CorrectiveTrade}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType1Code#TradeGiveUp
+ * TradeType1Code.TradeGiveUp}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeType1Code#LinkedTrade
+ * TradeType1Code.LinkedTrade}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TradeTypeCode TradeTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -75,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of executed order."</li>
  * </ul>
  */
-public class TradeType1Code extends TradeTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TradeType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -94,11 +96,12 @@ public class TradeType1Code extends TradeTypeCode {
 	 * name} = "OnOrderBookTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOnOrderBookTrade = new MMCode() {
+	public static final TradeType1Code OnOrderBookTrade = new TradeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnOrderBookTrade";
-			owner_lazy = () -> TradeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeType1Code.mmObject();
+			codeName = TradeTypeCode.OnOrderBookTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -117,11 +120,12 @@ public class TradeType1Code extends TradeTypeCode {
 	 * name} = "OffOrderBookTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOffOrderBookTrade = new MMCode() {
+	public static final TradeType1Code OffOrderBookTrade = new TradeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffOrderBookTrade";
-			owner_lazy = () -> TradeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeType1Code.mmObject();
+			codeName = TradeTypeCode.OffOrderBookTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -140,11 +144,12 @@ public class TradeType1Code extends TradeTypeCode {
 	 * name} = "BackUpTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBackUpTrade = new MMCode() {
+	public static final TradeType1Code BackUpTrade = new TradeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackUpTrade";
-			owner_lazy = () -> TradeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeType1Code.mmObject();
+			codeName = TradeTypeCode.BackUpTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -163,11 +168,12 @@ public class TradeType1Code extends TradeTypeCode {
 	 * name} = "CorrectiveTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorrectiveTrade = new MMCode() {
+	public static final TradeType1Code CorrectiveTrade = new TradeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrectiveTrade";
-			owner_lazy = () -> TradeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeType1Code.mmObject();
+			codeName = TradeTypeCode.CorrectiveTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -186,11 +192,12 @@ public class TradeType1Code extends TradeTypeCode {
 	 * name} = "TradeGiveUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradeGiveUp = new MMCode() {
+	public static final TradeType1Code TradeGiveUp = new TradeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeGiveUp";
-			owner_lazy = () -> TradeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeType1Code.mmObject();
+			codeName = TradeTypeCode.TradeGiveUp.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -209,27 +216,63 @@ public class TradeType1Code extends TradeTypeCode {
 	 * name} = "LinkedTrade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLinkedTrade = new MMCode() {
+	public static final TradeType1Code LinkedTrade = new TradeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedTrade";
-			owner_lazy = () -> TradeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeType1Code.mmObject();
+			codeName = TradeTypeCode.LinkedTrade.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TradeType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TradeType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("OOBK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeType1Code";
 				definition = "Specifies the type of executed order.";
-				code_lazy = () -> Arrays.asList(TradeType1Code.mmOnOrderBookTrade, TradeType1Code.mmOffOrderBookTrade, TradeType1Code.mmBackUpTrade, TradeType1Code.mmCorrectiveTrade, TradeType1Code.mmTradeGiveUp,
-						TradeType1Code.mmLinkedTrade);
 				trace_lazy = () -> TradeTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeType1Code.OnOrderBookTrade, com.tools20022.repository.codeset.TradeType1Code.OffOrderBookTrade,
+						com.tools20022.repository.codeset.TradeType1Code.BackUpTrade, com.tools20022.repository.codeset.TradeType1Code.CorrectiveTrade, com.tools20022.repository.codeset.TradeType1Code.TradeGiveUp,
+						com.tools20022.repository.codeset.TradeType1Code.LinkedTrade);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(OnOrderBookTrade.getCodeName().get(), OnOrderBookTrade);
+		codesByName.put(OffOrderBookTrade.getCodeName().get(), OffOrderBookTrade);
+		codesByName.put(BackUpTrade.getCodeName().get(), BackUpTrade);
+		codesByName.put(CorrectiveTrade.getCodeName().get(), CorrectiveTrade);
+		codesByName.put(TradeGiveUp.getCodeName().get(), TradeGiveUp);
+		codesByName.put(LinkedTrade.getCodeName().get(), LinkedTrade);
+	}
+
+	public static TradeType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TradeType1Code[] values() {
+		TradeType1Code[] values = new TradeType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TradeType1Code> {
+		@Override
+		public TradeType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TradeType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

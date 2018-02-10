@@ -29,9 +29,8 @@ import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -46,28 +45,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.ForeignExchangeTradeLatestVersion
- * ForeignExchangeTradeLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
- * PostTradeForeignExchangeISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017
- * PostTradeForeignExchangeMaintenance20162017}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement
- * PostTradeForeignExchangeMaintenance20162017andSupplement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "FXTradStsNtfctn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -83,6 +60,28 @@ import javax.xml.bind.annotation.*;
  * ForeignExchangeTradeStatusNotificationV06.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
+ * PostTradeForeignExchangeISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017
+ * PostTradeForeignExchangeMaintenance20162017}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement
+ * PostTradeForeignExchangeMaintenance20162017andSupplement}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "FXTradStsNtfctn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.ForeignExchangeTradeLatestVersion
+ * ForeignExchangeTradeLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code fxtr.008.001.06}</li>
@@ -98,15 +97,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ForeignExchangeTradeStatusNotificationV06", propOrder = {"tradeData", "regulatoryReporting", "supplementaryData"})
 public class ForeignExchangeTradeStatusNotificationV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradData", required = true)
 	protected TradeData15 tradeData;
 	/**
-	 * Provides information on the status of a trade in a system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,12 +146,11 @@ public class ForeignExchangeTradeStatusNotificationV06 {
 			}
 		}
 	};
+	@XmlElement(name = "RgltryRptg")
 	protected RegulatoryReporting6 regulatoryReporting;
 	/**
-	 * Information that is to be provided to trade repositories in the context
-	 * of the regulatory standards around over-the-counter (OTC) derivatives,
-	 * central counterparties and trade repositories.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,11 +192,11 @@ public class ForeignExchangeTradeStatusNotificationV06 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -269,34 +268,34 @@ public class ForeignExchangeTradeStatusNotificationV06 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradData", required = true)
 	public TradeData15 getTradeData() {
 		return tradeData;
 	}
 
-	public void setTradeData(TradeData15 tradeData) {
-		this.tradeData = tradeData;
+	public ForeignExchangeTradeStatusNotificationV06 setTradeData(TradeData15 tradeData) {
+		this.tradeData = Objects.requireNonNull(tradeData);
+		return this;
 	}
 
-	@XmlElement(name = "RgltryRptg")
-	public RegulatoryReporting6 getRegulatoryReporting() {
-		return regulatoryReporting;
+	public Optional<RegulatoryReporting6> getRegulatoryReporting() {
+		return regulatoryReporting == null ? Optional.empty() : Optional.of(regulatoryReporting);
 	}
 
-	public void setRegulatoryReporting(RegulatoryReporting6 regulatoryReporting) {
+	public ForeignExchangeTradeStatusNotificationV06 setRegulatoryReporting(RegulatoryReporting6 regulatoryReporting) {
 		this.regulatoryReporting = regulatoryReporting;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public ForeignExchangeTradeStatusNotificationV06 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:fxtr.008.06.06")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:fxtr.008.001.06")
 	static public class Document {
 		@XmlElement(name = "FXTradStsNtfctn", required = true)
 		public ForeignExchangeTradeStatusNotificationV06 messageBody;

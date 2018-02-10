@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ResponseLevelCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the level of response requested from the receiver of the message.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResponseLevelCode#mmNoAcknowledgement
- * ResponseLevelCode.mmNoAcknowledgement}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResponseLevelCode#NoAcknowledgement
+ * ResponseLevelCode.NoAcknowledgement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResponseLevelCode#mmAcknowledgementNegativeError
- * ResponseLevelCode.mmAcknowledgementNegativeError}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResponseLevelCode#AcknowledgementNegativeError
+ * ResponseLevelCode.AcknowledgementNegativeError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResponseLevelCode#mmAcknowledgementEach
- * ResponseLevelCode.mmAcknowledgementEach}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResponseLevelCode#AcknowledgementEach
+ * ResponseLevelCode.AcknowledgementEach}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -72,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ResponseLevelCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ResponseLevelCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -96,12 +102,12 @@ public class ResponseLevelCode {
 	 * definition} = "No acknowledgement is requested."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoAcknowledgement = new MMCode() {
+	public static final ResponseLevelCode NoAcknowledgement = new ResponseLevelCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAcknowledgement";
 			definition = "No acknowledgement is requested.";
-			owner_lazy = () -> ResponseLevelCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResponseLevelCode.mmObject();
 			codeName = "NACK";
 		}
 	};
@@ -127,12 +133,12 @@ public class ResponseLevelCode {
 	 * "Acknowledgement of only negative or erroneous messages is requested."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcknowledgementNegativeError = new MMCode() {
+	public static final ResponseLevelCode AcknowledgementNegativeError = new ResponseLevelCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementNegativeError";
 			definition = "Acknowledgement of only negative or erroneous messages is requested.";
-			owner_lazy = () -> ResponseLevelCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResponseLevelCode.mmObject();
 			codeName = "ACNE";
 		}
 	};
@@ -157,28 +163,60 @@ public class ResponseLevelCode {
 	 * definition} = "Acknowledgement of each message is requested."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcknowledgementEach = new MMCode() {
+	public static final ResponseLevelCode AcknowledgementEach = new ResponseLevelCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementEach";
 			definition = "Acknowledgement of each message is requested.";
-			owner_lazy = () -> ResponseLevelCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResponseLevelCode.mmObject();
 			codeName = "ACEA";
 		}
 	};
+	final static private LinkedHashMap<String, ResponseLevelCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ResponseLevelCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NACK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResponseLevelCode";
 				definition = "Specifies the level of response requested from the receiver of the message.";
-				code_lazy = () -> Arrays.asList(ResponseLevelCode.mmNoAcknowledgement, ResponseLevelCode.mmAcknowledgementNegativeError, ResponseLevelCode.mmAcknowledgementEach);
 				derivation_lazy = () -> Arrays.asList(ResponseLevel1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResponseLevelCode.NoAcknowledgement, com.tools20022.repository.codeset.ResponseLevelCode.AcknowledgementNegativeError,
+						com.tools20022.repository.codeset.ResponseLevelCode.AcknowledgementEach);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NoAcknowledgement.getCodeName().get(), NoAcknowledgement);
+		codesByName.put(AcknowledgementNegativeError.getCodeName().get(), AcknowledgementNegativeError);
+		codesByName.put(AcknowledgementEach.getCodeName().get(), AcknowledgementEach);
+	}
+
+	public static ResponseLevelCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ResponseLevelCode[] values() {
+		ResponseLevelCode[] values = new ResponseLevelCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ResponseLevelCode> {
+		@Override
+		public ResponseLevelCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ResponseLevelCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

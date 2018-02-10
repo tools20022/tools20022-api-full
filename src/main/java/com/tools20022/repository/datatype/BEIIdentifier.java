@@ -19,12 +19,16 @@ package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMIdentifierSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.datatype.BEIIdentifier.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Code allocated to a non-financial institution by the ISO 9362 Registration
@@ -42,8 +46,16 @@ import java.util.function.Supplier;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBEI#forBEIIdentifier
+ * ConstraintBEI.forBEIIdentifier}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -63,14 +75,17 @@ import java.util.function.Supplier;
  * </li>
  * </ul>
  */
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
 public class BEIIdentifier {
 
 	final static private AtomicReference<MMIdentifierSet> mmObject_lazy = new AtomicReference<>();
+	protected String value;
 
 	final static public MMIdentifierSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMIdentifierSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBEI.forBEIIdentifier);
 				example = Arrays.asList("USINFRPP");
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
@@ -87,5 +102,26 @@ public class BEIIdentifier {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public BEIIdentifier(String value) {
+		this.value = value;
+	}
+
+	@Override
+	public String toString() {
+		return value;
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BEIIdentifier> {
+		@Override
+		public BEIIdentifier unmarshal(String value) {
+			return new BEIIdentifier(value);
+		}
+
+		@Override
+		public String marshal(BEIIdentifier typedData) {
+			return typedData.value;
+		}
 	}
 }

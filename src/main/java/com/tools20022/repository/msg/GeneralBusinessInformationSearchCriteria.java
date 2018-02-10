@@ -25,9 +25,11 @@ import com.tools20022.repository.choice.CharacterSearchChoice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SystemBusinessInformation;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,16 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GeneralBusinessInformationSearchCriteria", propOrder = {"reference", "subject", "qualifier"})
 public class GeneralBusinessInformationSearchCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ref")
 	protected List<Max35Text> reference;
 	/**
-	 * Unique and unambiguous reference assigned to a general business
-	 * information system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +119,7 @@ public class GeneralBusinessInformationSearchCriteria {
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemBusinessInformation.mmReference;
-			componentContext_lazy = () -> GeneralBusinessInformationSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,11 +129,11 @@ public class GeneralBusinessInformationSearchCriteria {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Sbjt")
 	protected List<CharacterSearchChoice> subject;
 	/**
-	 * Subject line of an item of general business information, summarizing the
-	 * topic and intended destination of the information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +169,7 @@ public class GeneralBusinessInformationSearchCriteria {
 	public static final MMMessageAttribute mmSubject = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemBusinessInformation.mmSubject;
-			componentContext_lazy = () -> GeneralBusinessInformationSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "Sbjt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,11 +179,11 @@ public class GeneralBusinessInformationSearchCriteria {
 			complexType_lazy = () -> CharacterSearchChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Qlfr")
 	protected List<com.tools20022.repository.msg.InformationQualifierType> qualifier;
 	/**
-	 * Further information about the criticality or importance of a general
-	 * business information system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -216,7 +218,7 @@ public class GeneralBusinessInformationSearchCriteria {
 	public static final MMMessageAssociationEnd mmQualifier = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SystemBusinessInformation.mmQualifier;
-			componentContext_lazy = () -> GeneralBusinessInformationSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "Qlfr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,9 +233,10 @@ public class GeneralBusinessInformationSearchCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GeneralBusinessInformationSearchCriteria.mmReference, GeneralBusinessInformationSearchCriteria.mmSubject, GeneralBusinessInformationSearchCriteria.mmQualifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.mmReference, com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.mmSubject,
+						com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.mmQualifier);
 				trace_lazy = () -> SystemBusinessInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GeneralBusinessInformationSearchCriteria";
 				definition = "Defines the criteria used to search for business information.";
@@ -242,30 +245,30 @@ public class GeneralBusinessInformationSearchCriteria {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ref")
 	public List<Max35Text> getReference() {
-		return reference;
+		return reference == null ? reference = new ArrayList<>() : reference;
 	}
 
-	public void setReference(List<Max35Text> reference) {
-		this.reference = reference;
+	public GeneralBusinessInformationSearchCriteria setReference(List<Max35Text> reference) {
+		this.reference = Objects.requireNonNull(reference);
+		return this;
 	}
 
-	@XmlElement(name = "Sbjt")
 	public List<CharacterSearchChoice> getSubject() {
-		return subject;
+		return subject == null ? subject = new ArrayList<>() : subject;
 	}
 
-	public void setSubject(List<CharacterSearchChoice> subject) {
-		this.subject = subject;
+	public GeneralBusinessInformationSearchCriteria setSubject(List<CharacterSearchChoice> subject) {
+		this.subject = Objects.requireNonNull(subject);
+		return this;
 	}
 
-	@XmlElement(name = "Qlfr")
 	public List<InformationQualifierType> getQualifier() {
-		return qualifier;
+		return qualifier == null ? qualifier = new ArrayList<>() : qualifier;
 	}
 
-	public void setQualifier(List<com.tools20022.repository.msg.InformationQualifierType> qualifier) {
-		this.qualifier = qualifier;
+	public GeneralBusinessInformationSearchCriteria setQualifier(List<com.tools20022.repository.msg.InformationQualifierType> qualifier) {
+		this.qualifier = Objects.requireNonNull(qualifier);
+		return this;
 	}
 }

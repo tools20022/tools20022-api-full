@@ -24,6 +24,8 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Defines the criteria which are used to report on the payment status."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InstructionStatusReturnCriteria", propOrder = {"paymentInstructionStatusIndicator", "paymentInstructionStatusDateTimeIndicator", "paymentInstructionStatusReasonIndicator"})
 public class InstructionStatusReturnCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmtInstrStsInd", required = true)
 	protected RequestedIndicator paymentInstructionStatusIndicator;
 	/**
-	 * Indicates if the instruction status is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,7 +104,7 @@ public class InstructionStatusReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmPaymentInstructionStatusIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InstructionStatusReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionStatusReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrStsInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +115,11 @@ public class InstructionStatusReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtInstrStsDtTmInd")
 	protected RequestedIndicator paymentInstructionStatusDateTimeIndicator;
 	/**
-	 * Indicates if the status date and time are requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +147,7 @@ public class InstructionStatusReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmPaymentInstructionStatusDateTimeIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InstructionStatusReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionStatusReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrStsDtTmInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,10 +158,11 @@ public class InstructionStatusReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtInstrStsRsnInd")
 	protected RequestedIndicator paymentInstructionStatusReasonIndicator;
 	/**
-	 * Indicates if the status reason is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -185,7 +190,7 @@ public class InstructionStatusReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmPaymentInstructionStatusReasonIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InstructionStatusReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionStatusReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrStsRsnInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,9 +205,9 @@ public class InstructionStatusReturnCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InstructionStatusReturnCriteria.mmPaymentInstructionStatusIndicator, InstructionStatusReturnCriteria.mmPaymentInstructionStatusDateTimeIndicator,
-						InstructionStatusReturnCriteria.mmPaymentInstructionStatusReasonIndicator);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionStatusReturnCriteria.mmPaymentInstructionStatusIndicator,
+						com.tools20022.repository.msg.InstructionStatusReturnCriteria.mmPaymentInstructionStatusDateTimeIndicator, com.tools20022.repository.msg.InstructionStatusReturnCriteria.mmPaymentInstructionStatusReasonIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionStatusReturnCriteria";
 				definition = "Defines the criteria which are used to report on the payment status.";
@@ -211,30 +216,30 @@ public class InstructionStatusReturnCriteria {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmtInstrStsInd", required = true)
 	public RequestedIndicator getPaymentInstructionStatusIndicator() {
 		return paymentInstructionStatusIndicator;
 	}
 
-	public void setPaymentInstructionStatusIndicator(RequestedIndicator paymentInstructionStatusIndicator) {
-		this.paymentInstructionStatusIndicator = paymentInstructionStatusIndicator;
+	public InstructionStatusReturnCriteria setPaymentInstructionStatusIndicator(RequestedIndicator paymentInstructionStatusIndicator) {
+		this.paymentInstructionStatusIndicator = Objects.requireNonNull(paymentInstructionStatusIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "PmtInstrStsDtTmInd")
-	public RequestedIndicator getPaymentInstructionStatusDateTimeIndicator() {
-		return paymentInstructionStatusDateTimeIndicator;
+	public Optional<RequestedIndicator> getPaymentInstructionStatusDateTimeIndicator() {
+		return paymentInstructionStatusDateTimeIndicator == null ? Optional.empty() : Optional.of(paymentInstructionStatusDateTimeIndicator);
 	}
 
-	public void setPaymentInstructionStatusDateTimeIndicator(RequestedIndicator paymentInstructionStatusDateTimeIndicator) {
+	public InstructionStatusReturnCriteria setPaymentInstructionStatusDateTimeIndicator(RequestedIndicator paymentInstructionStatusDateTimeIndicator) {
 		this.paymentInstructionStatusDateTimeIndicator = paymentInstructionStatusDateTimeIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PmtInstrStsRsnInd")
-	public RequestedIndicator getPaymentInstructionStatusReasonIndicator() {
-		return paymentInstructionStatusReasonIndicator;
+	public Optional<RequestedIndicator> getPaymentInstructionStatusReasonIndicator() {
+		return paymentInstructionStatusReasonIndicator == null ? Optional.empty() : Optional.of(paymentInstructionStatusReasonIndicator);
 	}
 
-	public void setPaymentInstructionStatusReasonIndicator(RequestedIndicator paymentInstructionStatusReasonIndicator) {
+	public InstructionStatusReturnCriteria setPaymentInstructionStatusReasonIndicator(RequestedIndicator paymentInstructionStatusReasonIndicator) {
 		this.paymentInstructionStatusReasonIndicator = paymentInstructionStatusReasonIndicator;
+		return this;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max50Binary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,18 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IsabelLRCIPaymentInformation1", propOrder = {"imageHash", "paymentHash"})
 public class IsabelLRCIPaymentInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ImgHash", required = true)
 	protected Max50Binary imageHash;
 	/**
-	 * Arbitrary block of data defined as a fixed-size bit string, the
-	 * (cryptographic) hash value, which allows the detection of an accidental
-	 * or intentional change to the visual representation of a particular
-	 * payment file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -103,7 +102,7 @@ public class IsabelLRCIPaymentInformation1 {
 	 */
 	public static final MMMessageAttribute mmImageHash = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelLRCIPaymentInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelLRCIPaymentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ImgHash";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,12 +113,11 @@ public class IsabelLRCIPaymentInformation1 {
 			simpleType_lazy = () -> Max50Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtHash", required = true)
 	protected Max50Binary paymentHash;
 	/**
-	 * Arbitrary block of data defined as a fixed-size bit string, the
-	 * (cryptographic) hash value, which allows the detection of an accidental
-	 * or intentional change to a particular payment file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,7 +146,7 @@ public class IsabelLRCIPaymentInformation1 {
 	 */
 	public static final MMMessageAttribute mmPaymentHash = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelLRCIPaymentInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelLRCIPaymentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtHash";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,8 +161,8 @@ public class IsabelLRCIPaymentInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IsabelLRCIPaymentInformation1.mmImageHash, IsabelLRCIPaymentInformation1.mmPaymentHash);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelLRCIPaymentInformation1.mmImageHash, com.tools20022.repository.msg.IsabelLRCIPaymentInformation1.mmPaymentHash);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelLRCIPaymentInformation1";
 				definition = "Specifies a record holding the LRCI required data related to a payment file.";
@@ -173,21 +171,21 @@ public class IsabelLRCIPaymentInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ImgHash", required = true)
 	public Max50Binary getImageHash() {
 		return imageHash;
 	}
 
-	public void setImageHash(Max50Binary imageHash) {
-		this.imageHash = imageHash;
+	public IsabelLRCIPaymentInformation1 setImageHash(Max50Binary imageHash) {
+		this.imageHash = Objects.requireNonNull(imageHash);
+		return this;
 	}
 
-	@XmlElement(name = "PmtHash", required = true)
 	public Max50Binary getPaymentHash() {
 		return paymentHash;
 	}
 
-	public void setPaymentHash(Max50Binary paymentHash) {
-		this.paymentHash = paymentHash;
+	public IsabelLRCIPaymentInformation1 setPaymentHash(Max50Binary paymentHash) {
+		this.paymentHash = Objects.requireNonNull(paymentHash);
+		return this;
 	}
 }

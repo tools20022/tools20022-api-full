@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Discount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between a type of discount or a type of charge."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DiscountOrChargeType1Choice", propOrder = {"chargeType", "discountType"})
 public class DiscountOrChargeType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ChrgTp", required = true)
 	protected ChargeTypeFormat3Choice chargeType;
 	/**
-	 * Type of charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -106,7 +108,7 @@ public class DiscountOrChargeType1Choice {
 	public static final MMMessageAssociationEnd mmChargeType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
-			componentContext_lazy = () -> DiscountOrChargeType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DiscountOrChargeType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +120,11 @@ public class DiscountOrChargeType1Choice {
 			type_lazy = () -> com.tools20022.repository.choice.ChargeTypeFormat3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DscntTp", required = true)
 	protected DiscountTypeFormat1Choice discountType;
 	/**
-	 * Type of discount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -154,7 +157,7 @@ public class DiscountOrChargeType1Choice {
 	public static final MMMessageAssociationEnd mmDiscountType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Discount.mmDiscountType;
-			componentContext_lazy = () -> DiscountOrChargeType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DiscountOrChargeType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DscntTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,9 +173,9 @@ public class DiscountOrChargeType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DiscountOrChargeType1Choice.mmChargeType, DiscountOrChargeType1Choice.mmDiscountType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DiscountOrChargeType1Choice.mmChargeType, com.tools20022.repository.choice.DiscountOrChargeType1Choice.mmDiscountType);
 				trace_lazy = () -> Adjustment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DiscountOrChargeType1Choice";
 				definition = "Choice between a type of discount or a type of charge.";
@@ -181,21 +184,21 @@ public class DiscountOrChargeType1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ChrgTp", required = true)
 	public ChargeTypeFormat3Choice getChargeType() {
 		return chargeType;
 	}
 
-	public void setChargeType(com.tools20022.repository.choice.ChargeTypeFormat3Choice chargeType) {
-		this.chargeType = chargeType;
+	public DiscountOrChargeType1Choice setChargeType(com.tools20022.repository.choice.ChargeTypeFormat3Choice chargeType) {
+		this.chargeType = Objects.requireNonNull(chargeType);
+		return this;
 	}
 
-	@XmlElement(name = "DscntTp", required = true)
 	public DiscountTypeFormat1Choice getDiscountType() {
 		return discountType;
 	}
 
-	public void setDiscountType(com.tools20022.repository.choice.DiscountTypeFormat1Choice discountType) {
-		this.discountType = discountType;
+	public DiscountOrChargeType1Choice setDiscountType(com.tools20022.repository.choice.DiscountTypeFormat1Choice discountType) {
+		this.discountType = Objects.requireNonNull(discountType);
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,8 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -85,8 +88,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,16 +102,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CorporateActionMovementDetailsExtension1", propOrder = {"placeAndName", "DTCCOptionType", "DTCPositionCaptureDate", "depositDate", "DTCGeneratedDepositReferenceIdentification", "participantDepositReferenceIdentification",
-		"participantCrossReferenceIdentification", "custodyCustomerIdentification", "contraParticipantNumber", "payoutNumber", "DTCSecurityRate", "projectedCashValue", "DTCCashRate"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CorporateActionMovementDetailsExtension1", propOrder = {"placeAndName", "dTCCOptionType", "dTCPositionCaptureDate", "depositDate", "dTCGeneratedDepositReferenceIdentification", "participantDepositReferenceIdentification",
+		"participantCrossReferenceIdentification", "custodyCustomerIdentification", "contraParticipantNumber", "payoutNumber", "dTCSecurityRate", "projectedCashValue", "dTCCashRate"})
 public class CorporateActionMovementDetailsExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,7 +139,7 @@ public class CorporateActionMovementDetailsExtension1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionMovementDetailsExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,14 +150,11 @@ public class CorporateActionMovementDetailsExtension1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCCOptnTp")
 	protected Max4AlphaNumericText dTCCOptionType;
 	/**
-	 * Used for the option types that cannot be classified in ISO and marked as
-	 * Option Type: OTHR. Options like convert and dividend reinvestment, or DTC
-	 * (The Depository Trust Corporation) special option types for the instances
-	 * where the event and security are eligible for DTC (The Depository Trust
-	 * Corporation) services like Foreign Tax, Foreign Currency Payments, etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,6 +170,9 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCCOptnTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Option Type</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -183,9 +187,10 @@ public class CorporateActionMovementDetailsExtension1 {
 	 */
 	public static final MMMessageAttribute mmDTCCOptionType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionMovementDetailsExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCCOptnTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Option Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCOptionType";
 			definition = "Used for the option types that cannot be classified in ISO and marked as Option Type: OTHR. Options like convert and dividend reinvestment, or DTC (The Depository Trust Corporation)  special option types for the instances where the event and security are eligible for DTC (The Depository Trust Corporation) services like Foreign Tax, Foreign Currency Payments, etc.";
@@ -194,11 +199,11 @@ public class CorporateActionMovementDetailsExtension1 {
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCPosCaptrDt")
 	protected ISODate dTCPositionCaptureDate;
 	/**
-	 * Date when DTC positions are captured and entitlements are calculated in
-	 * the system at DTC (The Depository Trust Corporation).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -212,6 +217,9 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * CorporateActionMovementDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCPosCaptrDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Position Capture Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -227,9 +235,10 @@ public class CorporateActionMovementDetailsExtension1 {
 	 */
 	public static final MMMessageAttribute mmDTCPositionCaptureDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionMovementDetailsExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCPosCaptrDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Position Capture Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPositionCaptureDate";
 			definition = "Date when DTC positions are captured and entitlements are calculated in the system at DTC (The Depository Trust Corporation).";
@@ -238,10 +247,11 @@ public class CorporateActionMovementDetailsExtension1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DpstDt")
 	protected ISODate depositDate;
 	/**
-	 * Date at which the reorganisation deposit was made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -256,6 +266,9 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DpstDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Deposit Date</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -268,9 +281,10 @@ public class CorporateActionMovementDetailsExtension1 {
 	 */
 	public static final MMMessageAttribute mmDepositDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionMovementDetailsExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "DpstDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Deposit Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositDate";
 			definition = "Date at which the reorganisation deposit was made.";
@@ -279,11 +293,11 @@ public class CorporateActionMovementDetailsExtension1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCGnrtdDpstRefId")
 	protected Max16Text dTCGeneratedDepositReferenceIdentification;
 	/**
-	 * Unique identification issued by DTC (The Depository Trust Corporation)
-	 * for reorganisation deposit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -297,6 +311,10 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * CorporateActionMovementDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCGnrtdDpstRefId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Generated Deposit Reference
+	 * Identification</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -312,9 +330,10 @@ public class CorporateActionMovementDetailsExtension1 {
 	 */
 	public static final MMMessageAttribute mmDTCGeneratedDepositReferenceIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionMovementDetailsExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCGnrtdDpstRefId";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Generated Deposit Reference Identification"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCGeneratedDepositReferenceIdentification";
 			definition = "Unique identification issued by DTC (The Depository Trust Corporation) for reorganisation deposit.";
@@ -323,10 +342,11 @@ public class CorporateActionMovementDetailsExtension1 {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PtcptDpstRefId")
 	protected Max16Text participantDepositReferenceIdentification;
 	/**
-	 * Unique identifier issued by a participant for the reorganisation deposit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -340,6 +360,10 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * CorporateActionMovementDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PtcptDpstRefId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Participant Deposit Reference
+	 * Identification</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -355,9 +379,10 @@ public class CorporateActionMovementDetailsExtension1 {
 	 */
 	public static final MMMessageAttribute mmParticipantDepositReferenceIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionMovementDetailsExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptDpstRefId";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Participant Deposit Reference Identification"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantDepositReferenceIdentification";
 			definition = "Unique identifier issued by a participant for the reorganisation deposit.";
@@ -366,11 +391,11 @@ public class CorporateActionMovementDetailsExtension1 {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PtcptCrossRefId")
 	protected Max16Text participantCrossReferenceIdentification;
 	/**
-	 * Transaction identification that the participant provides on the
-	 * reorganisation deposit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -384,6 +409,10 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * CorporateActionMovementDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PtcptCrossRefId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Participant Cross Reference Identification
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -399,9 +428,10 @@ public class CorporateActionMovementDetailsExtension1 {
 	 */
 	public static final MMMessageAttribute mmParticipantCrossReferenceIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionMovementDetailsExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptCrossRefId";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Participant Cross Reference Identification"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantCrossReferenceIdentification";
 			definition = "Transaction identification that the participant provides on the reorganisation deposit.";
@@ -410,10 +440,11 @@ public class CorporateActionMovementDetailsExtension1 {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CtdyCstmrId")
 	protected Max35Text custodyCustomerIdentification;
 	/**
-	 * Participant generated account number for custody deposits.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -428,6 +459,9 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtdyCstmrId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Custody Customer Identification</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -441,9 +475,10 @@ public class CorporateActionMovementDetailsExtension1 {
 	 */
 	public static final MMMessageAttribute mmCustodyCustomerIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionMovementDetailsExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "CtdyCstmrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Custody Customer Identification"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyCustomerIdentification";
 			definition = "Participant generated account number for custody deposits.";
@@ -452,11 +487,11 @@ public class CorporateActionMovementDetailsExtension1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ContraPtcptNb")
 	protected Max8Text contraParticipantNumber;
 	/**
-	 * Transaction contra participant identification when shares are distributed
-	 * to another participant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -470,6 +505,9 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * CorporateActionMovementDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ContraPtcptNb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Contra Participant Number</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -485,9 +523,10 @@ public class CorporateActionMovementDetailsExtension1 {
 	 */
 	public static final MMMessageAttribute mmContraParticipantNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionMovementDetailsExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "ContraPtcptNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Contra Participant Number"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraParticipantNumber";
 			definition = "Transaction contra participant identification when shares are distributed to another participant.";
@@ -496,10 +535,11 @@ public class CorporateActionMovementDetailsExtension1 {
 			simpleType_lazy = () -> Max8Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PyoutNb", required = true)
 	protected Exact3NumericText payoutNumber;
 	/**
-	 * Unique number associated with a payout within an option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -515,6 +555,9 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PyoutNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Payout Number</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -527,9 +570,10 @@ public class CorporateActionMovementDetailsExtension1 {
 	 */
 	public static final MMMessageAttribute mmPayoutNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionMovementDetailsExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "PyoutNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Payout Number"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutNumber";
 			definition = "Unique number associated with a payout within an option.";
@@ -538,11 +582,11 @@ public class CorporateActionMovementDetailsExtension1 {
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCSctyRate")
 	protected DecimalNumber dTCSecurityRate;
 	/**
-	 * Rate of the dividend payable in stock rather than in cash at DTC (The
-	 * Depository Trust Corporation).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -558,6 +602,9 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCSctyRate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Security Rate</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -572,9 +619,10 @@ public class CorporateActionMovementDetailsExtension1 {
 	 */
 	public static final MMMessageAttribute mmDTCSecurityRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionMovementDetailsExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCSctyRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Security Rate"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCSecurityRate";
 			definition = "Rate of the dividend payable in stock rather than in cash at DTC (The Depository Trust Corporation).";
@@ -583,10 +631,11 @@ public class CorporateActionMovementDetailsExtension1 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "PrjctdCshVal")
 	protected DecimalNumber projectedCashValue;
 	/**
-	 * Projected cash value based on entitlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -602,6 +651,9 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrjctdCshVal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Projected Cash Value</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -614,9 +666,10 @@ public class CorporateActionMovementDetailsExtension1 {
 	 */
 	public static final MMMessageAttribute mmProjectedCashValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionMovementDetailsExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "PrjctdCshVal";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Projected Cash Value"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProjectedCashValue";
 			definition = "Projected cash value based on entitlement.";
@@ -625,11 +678,11 @@ public class CorporateActionMovementDetailsExtension1 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCCshRate")
 	protected DecimalNumber dTCCashRate;
 	/**
-	 * Rate of the dividend payable in cash at DTC (The Depository Trust
-	 * Corporation).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -645,6 +698,9 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCCshRate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Cash Rate</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -659,9 +715,10 @@ public class CorporateActionMovementDetailsExtension1 {
 	 */
 	public static final MMMessageAttribute mmDTCCashRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionMovementDetailsExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCCshRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Cash Rate "));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCashRate";
 			definition = "Rate of the dividend payable in cash at DTC (The Depository Trust Corporation).";
@@ -674,12 +731,15 @@ public class CorporateActionMovementDetailsExtension1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionMovementDetailsExtension1.mmPlaceAndName, CorporateActionMovementDetailsExtension1.mmDTCCOptionType,
-						CorporateActionMovementDetailsExtension1.mmDTCPositionCaptureDate, CorporateActionMovementDetailsExtension1.mmDepositDate, CorporateActionMovementDetailsExtension1.mmDTCGeneratedDepositReferenceIdentification,
-						CorporateActionMovementDetailsExtension1.mmParticipantDepositReferenceIdentification, CorporateActionMovementDetailsExtension1.mmParticipantCrossReferenceIdentification,
-						CorporateActionMovementDetailsExtension1.mmCustodyCustomerIdentification, CorporateActionMovementDetailsExtension1.mmContraParticipantNumber, CorporateActionMovementDetailsExtension1.mmPayoutNumber,
-						CorporateActionMovementDetailsExtension1.mmDTCSecurityRate, CorporateActionMovementDetailsExtension1.mmProjectedCashValue, CorporateActionMovementDetailsExtension1.mmDTCCashRate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmDTCCOptionType,
+						com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmDTCPositionCaptureDate, com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmDepositDate,
+						com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmDTCGeneratedDepositReferenceIdentification,
+						com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmParticipantDepositReferenceIdentification,
+						com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmParticipantCrossReferenceIdentification,
+						com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmCustodyCustomerIdentification, com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmContraParticipantNumber,
+						com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmPayoutNumber, com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmDTCSecurityRate,
+						com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmProjectedCashValue, com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmDTCCashRate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionMovementDetailsExtension1";
 				definition = "Provides additional information regarding corporate action movement details.";
@@ -688,120 +748,120 @@ public class CorporateActionMovementDetailsExtension1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionMovementDetailsExtension1 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "DTCCOptnTp")
-	public Max4AlphaNumericText getDTCCOptionType() {
-		return dTCCOptionType;
+	public Optional<Max4AlphaNumericText> getDTCCOptionType() {
+		return dTCCOptionType == null ? Optional.empty() : Optional.of(dTCCOptionType);
 	}
 
-	public void setDTCCOptionType(Max4AlphaNumericText dTCCOptionType) {
+	public CorporateActionMovementDetailsExtension1 setDTCCOptionType(Max4AlphaNumericText dTCCOptionType) {
 		this.dTCCOptionType = dTCCOptionType;
+		return this;
 	}
 
-	@XmlElement(name = "DTCPosCaptrDt")
-	public ISODate getDTCPositionCaptureDate() {
-		return dTCPositionCaptureDate;
+	public Optional<ISODate> getDTCPositionCaptureDate() {
+		return dTCPositionCaptureDate == null ? Optional.empty() : Optional.of(dTCPositionCaptureDate);
 	}
 
-	public void setDTCPositionCaptureDate(ISODate dTCPositionCaptureDate) {
+	public CorporateActionMovementDetailsExtension1 setDTCPositionCaptureDate(ISODate dTCPositionCaptureDate) {
 		this.dTCPositionCaptureDate = dTCPositionCaptureDate;
+		return this;
 	}
 
-	@XmlElement(name = "DpstDt")
-	public ISODate getDepositDate() {
-		return depositDate;
+	public Optional<ISODate> getDepositDate() {
+		return depositDate == null ? Optional.empty() : Optional.of(depositDate);
 	}
 
-	public void setDepositDate(ISODate depositDate) {
+	public CorporateActionMovementDetailsExtension1 setDepositDate(ISODate depositDate) {
 		this.depositDate = depositDate;
+		return this;
 	}
 
-	@XmlElement(name = "DTCGnrtdDpstRefId")
-	public Max16Text getDTCGeneratedDepositReferenceIdentification() {
-		return dTCGeneratedDepositReferenceIdentification;
+	public Optional<Max16Text> getDTCGeneratedDepositReferenceIdentification() {
+		return dTCGeneratedDepositReferenceIdentification == null ? Optional.empty() : Optional.of(dTCGeneratedDepositReferenceIdentification);
 	}
 
-	public void setDTCGeneratedDepositReferenceIdentification(Max16Text dTCGeneratedDepositReferenceIdentification) {
+	public CorporateActionMovementDetailsExtension1 setDTCGeneratedDepositReferenceIdentification(Max16Text dTCGeneratedDepositReferenceIdentification) {
 		this.dTCGeneratedDepositReferenceIdentification = dTCGeneratedDepositReferenceIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PtcptDpstRefId")
-	public Max16Text getParticipantDepositReferenceIdentification() {
-		return participantDepositReferenceIdentification;
+	public Optional<Max16Text> getParticipantDepositReferenceIdentification() {
+		return participantDepositReferenceIdentification == null ? Optional.empty() : Optional.of(participantDepositReferenceIdentification);
 	}
 
-	public void setParticipantDepositReferenceIdentification(Max16Text participantDepositReferenceIdentification) {
+	public CorporateActionMovementDetailsExtension1 setParticipantDepositReferenceIdentification(Max16Text participantDepositReferenceIdentification) {
 		this.participantDepositReferenceIdentification = participantDepositReferenceIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PtcptCrossRefId")
-	public Max16Text getParticipantCrossReferenceIdentification() {
-		return participantCrossReferenceIdentification;
+	public Optional<Max16Text> getParticipantCrossReferenceIdentification() {
+		return participantCrossReferenceIdentification == null ? Optional.empty() : Optional.of(participantCrossReferenceIdentification);
 	}
 
-	public void setParticipantCrossReferenceIdentification(Max16Text participantCrossReferenceIdentification) {
+	public CorporateActionMovementDetailsExtension1 setParticipantCrossReferenceIdentification(Max16Text participantCrossReferenceIdentification) {
 		this.participantCrossReferenceIdentification = participantCrossReferenceIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CtdyCstmrId")
-	public Max35Text getCustodyCustomerIdentification() {
-		return custodyCustomerIdentification;
+	public Optional<Max35Text> getCustodyCustomerIdentification() {
+		return custodyCustomerIdentification == null ? Optional.empty() : Optional.of(custodyCustomerIdentification);
 	}
 
-	public void setCustodyCustomerIdentification(Max35Text custodyCustomerIdentification) {
+	public CorporateActionMovementDetailsExtension1 setCustodyCustomerIdentification(Max35Text custodyCustomerIdentification) {
 		this.custodyCustomerIdentification = custodyCustomerIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ContraPtcptNb")
-	public Max8Text getContraParticipantNumber() {
-		return contraParticipantNumber;
+	public Optional<Max8Text> getContraParticipantNumber() {
+		return contraParticipantNumber == null ? Optional.empty() : Optional.of(contraParticipantNumber);
 	}
 
-	public void setContraParticipantNumber(Max8Text contraParticipantNumber) {
+	public CorporateActionMovementDetailsExtension1 setContraParticipantNumber(Max8Text contraParticipantNumber) {
 		this.contraParticipantNumber = contraParticipantNumber;
+		return this;
 	}
 
-	@XmlElement(name = "PyoutNb", required = true)
 	public Exact3NumericText getPayoutNumber() {
 		return payoutNumber;
 	}
 
-	public void setPayoutNumber(Exact3NumericText payoutNumber) {
-		this.payoutNumber = payoutNumber;
+	public CorporateActionMovementDetailsExtension1 setPayoutNumber(Exact3NumericText payoutNumber) {
+		this.payoutNumber = Objects.requireNonNull(payoutNumber);
+		return this;
 	}
 
-	@XmlElement(name = "DTCSctyRate")
-	public DecimalNumber getDTCSecurityRate() {
-		return dTCSecurityRate;
+	public Optional<DecimalNumber> getDTCSecurityRate() {
+		return dTCSecurityRate == null ? Optional.empty() : Optional.of(dTCSecurityRate);
 	}
 
-	public void setDTCSecurityRate(DecimalNumber dTCSecurityRate) {
+	public CorporateActionMovementDetailsExtension1 setDTCSecurityRate(DecimalNumber dTCSecurityRate) {
 		this.dTCSecurityRate = dTCSecurityRate;
+		return this;
 	}
 
-	@XmlElement(name = "PrjctdCshVal")
-	public DecimalNumber getProjectedCashValue() {
-		return projectedCashValue;
+	public Optional<DecimalNumber> getProjectedCashValue() {
+		return projectedCashValue == null ? Optional.empty() : Optional.of(projectedCashValue);
 	}
 
-	public void setProjectedCashValue(DecimalNumber projectedCashValue) {
+	public CorporateActionMovementDetailsExtension1 setProjectedCashValue(DecimalNumber projectedCashValue) {
 		this.projectedCashValue = projectedCashValue;
+		return this;
 	}
 
-	@XmlElement(name = "DTCCshRate")
-	public DecimalNumber getDTCCashRate() {
-		return dTCCashRate;
+	public Optional<DecimalNumber> getDTCCashRate() {
+		return dTCCashRate == null ? Optional.empty() : Optional.of(dTCCashRate);
 	}
 
-	public void setDTCCashRate(DecimalNumber dTCCashRate) {
+	public CorporateActionMovementDetailsExtension1 setDTCCashRate(DecimalNumber dTCCashRate) {
 		this.dTCCashRate = dTCCashRate;
+		return this;
 	}
 }

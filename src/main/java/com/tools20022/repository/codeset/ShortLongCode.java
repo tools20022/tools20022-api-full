@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ShortLongCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the securities position is short or long, that is, whether
@@ -32,10 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ShortLongCode#mmShort
- * ShortLongCode.mmShort}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ShortLongCode#mmLong
- * ShortLongCode.mmLong}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ShortLongCode#Short
+ * ShortLongCode.Short}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ShortLongCode#Long
+ * ShortLongCode.Long}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ShortLongCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ShortLongCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,12 +98,12 @@ public class ShortLongCode {
 	 * definition} = "Position is short, that is, the balance is negative."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmShort = new MMCode() {
+	public static final ShortLongCode Short = new ShortLongCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Short";
 			definition = "Position is short, that is, the balance is negative.";
-			owner_lazy = () -> ShortLongCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ShortLongCode.mmObject();
 			codeName = "SHOR";
 		}
 	};
@@ -122,28 +128,58 @@ public class ShortLongCode {
 	 * definition} = "Position is long, that is, the balance is positive."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLong = new MMCode() {
+	public static final ShortLongCode Long = new ShortLongCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Long";
 			definition = "Position is long, that is, the balance is positive.";
-			owner_lazy = () -> ShortLongCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ShortLongCode.mmObject();
 			codeName = "LONG";
 		}
 	};
+	final static private LinkedHashMap<String, ShortLongCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ShortLongCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SHOR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ShortLongCode";
 				definition = "Specifies whether the securities position is short or long, that is, whether the balance is a negative or positive balance.";
-				code_lazy = () -> Arrays.asList(ShortLongCode.mmShort, ShortLongCode.mmLong);
 				derivation_lazy = () -> Arrays.asList(ShortLong1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ShortLongCode.Short, com.tools20022.repository.codeset.ShortLongCode.Long);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Short.getCodeName().get(), Short);
+		codesByName.put(Long.getCodeName().get(), Long);
+	}
+
+	public static ShortLongCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ShortLongCode[] values() {
+		ShortLongCode[] values = new ShortLongCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ShortLongCode> {
+		@Override
+		public ShortLongCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ShortLongCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

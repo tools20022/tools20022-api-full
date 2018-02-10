@@ -25,9 +25,8 @@ import com.tools20022.repository.codeset.PartyType15Code;
 import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,15 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * TerminalManagementDataSet19}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "TerminalManagementDataSet20", propOrder = {"identification", "sequenceCounter", "POIIdentification", "configurationScope", "content"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "TerminalManagementDataSet20", propOrder = {"identification", "sequenceCounter", "pOIIdentification", "configurationScope", "content"})
 public class TerminalManagementDataSet20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected DataSetIdentification6 identification;
 	/**
-	 * Identification of the data set transferred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -122,7 +122,7 @@ public class TerminalManagementDataSet20 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TerminalManagementDataSet20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet20.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +135,11 @@ public class TerminalManagementDataSet20 {
 			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification6.mmObject();
 		}
 	};
+	@XmlElement(name = "SeqCntr")
 	protected Max9NumericText sequenceCounter;
 	/**
-	 * Counter to identify a single data set within the whole transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,7 +173,7 @@ public class TerminalManagementDataSet20 {
 	 */
 	public static final MMMessageAttribute mmSequenceCounter = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TerminalManagementDataSet20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet20.mmObject();
 			isDerived = false;
 			xmlTag = "SeqCntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,11 +185,11 @@ public class TerminalManagementDataSet20 {
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "POIId")
 	protected List<com.tools20022.repository.msg.GenericIdentification71> pOIIdentification;
 	/**
-	 * Identification of the point of interactions involved by the configuration
-	 * data set.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -222,7 +223,7 @@ public class TerminalManagementDataSet20 {
 	 */
 	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TerminalManagementDataSet20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet20.mmObject();
 			isDerived = false;
 			xmlTag = "POIId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,10 +235,11 @@ public class TerminalManagementDataSet20 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
 		}
 	};
+	@XmlElement(name = "CfgtnScp")
 	protected PartyType15Code configurationScope;
 	/**
-	 * Scope of the configuration contained in the data set.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -270,7 +272,7 @@ public class TerminalManagementDataSet20 {
 	 */
 	public static final MMMessageAttribute mmConfigurationScope = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TerminalManagementDataSet20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet20.mmObject();
 			isDerived = false;
 			xmlTag = "CfgtnScp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -282,10 +284,11 @@ public class TerminalManagementDataSet20 {
 			simpleType_lazy = () -> PartyType15Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Cntt", required = true)
 	protected AcceptorConfigurationContent6 content;
 	/**
-	 * Content of the acceptor parameters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -317,7 +320,7 @@ public class TerminalManagementDataSet20 {
 	 */
 	public static final MMMessageAssociationEnd mmContent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TerminalManagementDataSet20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet20.mmObject();
 			isDerived = false;
 			xmlTag = "Cntt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -334,10 +337,11 @@ public class TerminalManagementDataSet20 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TerminalManagementDataSet20.mmIdentification, TerminalManagementDataSet20.mmSequenceCounter, TerminalManagementDataSet20.mmPOIIdentification,
-						TerminalManagementDataSet20.mmConfigurationScope, TerminalManagementDataSet20.mmContent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet20.mmIdentification, com.tools20022.repository.msg.TerminalManagementDataSet20.mmSequenceCounter,
+						com.tools20022.repository.msg.TerminalManagementDataSet20.mmPOIIdentification, com.tools20022.repository.msg.TerminalManagementDataSet20.mmConfigurationScope,
+						com.tools20022.repository.msg.TerminalManagementDataSet20.mmContent);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementDataSet20";
 				definition = "Data set containing the acceptor parameters of a point of interaction (POI).";
@@ -347,48 +351,48 @@ public class TerminalManagementDataSet20 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DataSetIdentification6 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.DataSetIdentification6 identification) {
-		this.identification = identification;
+	public TerminalManagementDataSet20 setIdentification(com.tools20022.repository.msg.DataSetIdentification6 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "SeqCntr")
-	public Max9NumericText getSequenceCounter() {
-		return sequenceCounter;
+	public Optional<Max9NumericText> getSequenceCounter() {
+		return sequenceCounter == null ? Optional.empty() : Optional.of(sequenceCounter);
 	}
 
-	public void setSequenceCounter(Max9NumericText sequenceCounter) {
+	public TerminalManagementDataSet20 setSequenceCounter(Max9NumericText sequenceCounter) {
 		this.sequenceCounter = sequenceCounter;
+		return this;
 	}
 
-	@XmlElement(name = "POIId")
 	public List<GenericIdentification71> getPOIIdentification() {
-		return pOIIdentification;
+		return pOIIdentification == null ? pOIIdentification = new ArrayList<>() : pOIIdentification;
 	}
 
-	public void setPOIIdentification(List<com.tools20022.repository.msg.GenericIdentification71> pOIIdentification) {
-		this.pOIIdentification = pOIIdentification;
+	public TerminalManagementDataSet20 setPOIIdentification(List<com.tools20022.repository.msg.GenericIdentification71> pOIIdentification) {
+		this.pOIIdentification = Objects.requireNonNull(pOIIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CfgtnScp")
-	public PartyType15Code getConfigurationScope() {
-		return configurationScope;
+	public Optional<PartyType15Code> getConfigurationScope() {
+		return configurationScope == null ? Optional.empty() : Optional.of(configurationScope);
 	}
 
-	public void setConfigurationScope(PartyType15Code configurationScope) {
+	public TerminalManagementDataSet20 setConfigurationScope(PartyType15Code configurationScope) {
 		this.configurationScope = configurationScope;
+		return this;
 	}
 
-	@XmlElement(name = "Cntt", required = true)
 	public AcceptorConfigurationContent6 getContent() {
 		return content;
 	}
 
-	public void setContent(com.tools20022.repository.msg.AcceptorConfigurationContent6 content) {
-		this.content = content;
+	public TerminalManagementDataSet20 setContent(com.tools20022.repository.msg.AcceptorConfigurationContent6 content) {
+		this.content = Objects.requireNonNull(content);
+		return this;
 	}
 }

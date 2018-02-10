@@ -20,67 +20,71 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ReportingWaiverTypeCode;
+import com.tools20022.repository.codeset.ReportingWaiverType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of regulatory reporting pre-trade waiver.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverTypeCode
- * ReportingWaiverTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#mmBenchmarkTransaction
- * ReportingWaiverType3Code.mmBenchmarkTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#BenchmarkTransaction
+ * ReportingWaiverType3Code.BenchmarkTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#mmAgencyCrossTransaction
- * ReportingWaiverType3Code.mmAgencyCrossTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#AgencyCrossTransaction
+ * ReportingWaiverType3Code.AgencyCrossTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#mmIlliquidInstrumentTransaction
- * ReportingWaiverType3Code.mmIlliquidInstrumentTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#IlliquidInstrumentTransaction
+ * ReportingWaiverType3Code.IlliquidInstrumentTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#mmAboveSpecificSizeTransaction
- * ReportingWaiverType3Code.mmAboveSpecificSizeTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#AboveSpecificSizeTransaction
+ * ReportingWaiverType3Code.AboveSpecificSizeTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#mmCancellations
- * ReportingWaiverType3Code.mmCancellations}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#Cancellations
+ * ReportingWaiverType3Code.Cancellations}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#mmAmendments
- * ReportingWaiverType3Code.mmAmendments}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#Amendments
+ * ReportingWaiverType3Code.Amendments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#mmSpecialDividendTransaction
- * ReportingWaiverType3Code.mmSpecialDividendTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#SpecialDividendTransaction
+ * ReportingWaiverType3Code.SpecialDividendTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#mmTransactionWithPriceImprovment
- * ReportingWaiverType3Code.mmTransactionWithPriceImprovment}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#TransactionWithPriceImprovment
+ * ReportingWaiverType3Code.TransactionWithPriceImprovment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#mmDuplicativeTradeReport
- * ReportingWaiverType3Code.mmDuplicativeTradeReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#DuplicativeTradeReport
+ * ReportingWaiverType3Code.DuplicativeTradeReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#mmLargeInScale
- * ReportingWaiverType3Code.mmLargeInScale}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#LargeInScale
+ * ReportingWaiverType3Code.LargeInScale}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#mmTransactionNotContributingToPriceDiscovery
- * ReportingWaiverType3Code.mmTransactionNotContributingToPriceDiscovery}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#TransactionNotContributingToPriceDiscovery
+ * ReportingWaiverType3Code.TransactionNotContributingToPriceDiscovery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#mmPackageTransaction
- * ReportingWaiverType3Code.mmPackageTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#PackageTransaction
+ * ReportingWaiverType3Code.PackageTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#mmExchangeForPhysical
- * ReportingWaiverType3Code.mmExchangeForPhysical}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverType3Code#ExchangeForPhysical
+ * ReportingWaiverType3Code.ExchangeForPhysical}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ReportingWaiverTypeCode
+ * ReportingWaiverTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,7 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of regulatory reporting pre-trade waiver."</li>
  * </ul>
  */
-public class ReportingWaiverType3Code extends ReportingWaiverTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ReportingWaiverType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -110,11 +115,12 @@ public class ReportingWaiverType3Code extends ReportingWaiverTypeCode {
 	 * name} = "BenchmarkTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBenchmarkTransaction = new MMCode() {
+	public static final ReportingWaiverType3Code BenchmarkTransaction = new ReportingWaiverType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BenchmarkTransaction";
-			owner_lazy = () -> ReportingWaiverType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportingWaiverType3Code.mmObject();
+			codeName = ReportingWaiverTypeCode.BenchmarkTransaction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,11 +139,12 @@ public class ReportingWaiverType3Code extends ReportingWaiverTypeCode {
 	 * name} = "AgencyCrossTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgencyCrossTransaction = new MMCode() {
+	public static final ReportingWaiverType3Code AgencyCrossTransaction = new ReportingWaiverType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgencyCrossTransaction";
-			owner_lazy = () -> ReportingWaiverType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportingWaiverType3Code.mmObject();
+			codeName = ReportingWaiverTypeCode.AgencyCrossTransaction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -156,11 +163,12 @@ public class ReportingWaiverType3Code extends ReportingWaiverTypeCode {
 	 * name} = "IlliquidInstrumentTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIlliquidInstrumentTransaction = new MMCode() {
+	public static final ReportingWaiverType3Code IlliquidInstrumentTransaction = new ReportingWaiverType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IlliquidInstrumentTransaction";
-			owner_lazy = () -> ReportingWaiverType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportingWaiverType3Code.mmObject();
+			codeName = ReportingWaiverTypeCode.IlliquidInstrumentTransaction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -179,11 +187,12 @@ public class ReportingWaiverType3Code extends ReportingWaiverTypeCode {
 	 * name} = "AboveSpecificSizeTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAboveSpecificSizeTransaction = new MMCode() {
+	public static final ReportingWaiverType3Code AboveSpecificSizeTransaction = new ReportingWaiverType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AboveSpecificSizeTransaction";
-			owner_lazy = () -> ReportingWaiverType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportingWaiverType3Code.mmObject();
+			codeName = ReportingWaiverTypeCode.AboveSpecificSizeTransaction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -202,11 +211,12 @@ public class ReportingWaiverType3Code extends ReportingWaiverTypeCode {
 	 * name} = "Cancellations"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellations = new MMCode() {
+	public static final ReportingWaiverType3Code Cancellations = new ReportingWaiverType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellations";
-			owner_lazy = () -> ReportingWaiverType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportingWaiverType3Code.mmObject();
+			codeName = ReportingWaiverTypeCode.Cancellations.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -225,11 +235,12 @@ public class ReportingWaiverType3Code extends ReportingWaiverTypeCode {
 	 * name} = "Amendments"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAmendments = new MMCode() {
+	public static final ReportingWaiverType3Code Amendments = new ReportingWaiverType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amendments";
-			owner_lazy = () -> ReportingWaiverType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportingWaiverType3Code.mmObject();
+			codeName = ReportingWaiverTypeCode.Amendments.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -248,11 +259,12 @@ public class ReportingWaiverType3Code extends ReportingWaiverTypeCode {
 	 * name} = "SpecialDividendTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialDividendTransaction = new MMCode() {
+	public static final ReportingWaiverType3Code SpecialDividendTransaction = new ReportingWaiverType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialDividendTransaction";
-			owner_lazy = () -> ReportingWaiverType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportingWaiverType3Code.mmObject();
+			codeName = ReportingWaiverTypeCode.SpecialDividendTransaction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -271,11 +283,12 @@ public class ReportingWaiverType3Code extends ReportingWaiverTypeCode {
 	 * name} = "TransactionWithPriceImprovment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransactionWithPriceImprovment = new MMCode() {
+	public static final ReportingWaiverType3Code TransactionWithPriceImprovment = new ReportingWaiverType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionWithPriceImprovment";
-			owner_lazy = () -> ReportingWaiverType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportingWaiverType3Code.mmObject();
+			codeName = ReportingWaiverTypeCode.TransactionWithPriceImprovment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -294,11 +307,12 @@ public class ReportingWaiverType3Code extends ReportingWaiverTypeCode {
 	 * name} = "DuplicativeTradeReport"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDuplicativeTradeReport = new MMCode() {
+	public static final ReportingWaiverType3Code DuplicativeTradeReport = new ReportingWaiverType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplicativeTradeReport";
-			owner_lazy = () -> ReportingWaiverType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportingWaiverType3Code.mmObject();
+			codeName = ReportingWaiverTypeCode.DuplicativeTradeReport.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -317,11 +331,12 @@ public class ReportingWaiverType3Code extends ReportingWaiverTypeCode {
 	 * name} = "LargeInScale"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLargeInScale = new MMCode() {
+	public static final ReportingWaiverType3Code LargeInScale = new ReportingWaiverType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LargeInScale";
-			owner_lazy = () -> ReportingWaiverType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportingWaiverType3Code.mmObject();
+			codeName = ReportingWaiverTypeCode.LargeInScale.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -340,11 +355,12 @@ public class ReportingWaiverType3Code extends ReportingWaiverTypeCode {
 	 * name} = "TransactionNotContributingToPriceDiscovery"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransactionNotContributingToPriceDiscovery = new MMCode() {
+	public static final ReportingWaiverType3Code TransactionNotContributingToPriceDiscovery = new ReportingWaiverType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionNotContributingToPriceDiscovery";
-			owner_lazy = () -> ReportingWaiverType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportingWaiverType3Code.mmObject();
+			codeName = ReportingWaiverTypeCode.TransactionNotContributingToPriceDiscovery.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -363,11 +379,12 @@ public class ReportingWaiverType3Code extends ReportingWaiverTypeCode {
 	 * name} = "PackageTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPackageTransaction = new MMCode() {
+	public static final ReportingWaiverType3Code PackageTransaction = new ReportingWaiverType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PackageTransaction";
-			owner_lazy = () -> ReportingWaiverType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportingWaiverType3Code.mmObject();
+			codeName = ReportingWaiverTypeCode.PackageTransaction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -386,28 +403,73 @@ public class ReportingWaiverType3Code extends ReportingWaiverTypeCode {
 	 * name} = "ExchangeForPhysical"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExchangeForPhysical = new MMCode() {
+	public static final ReportingWaiverType3Code ExchangeForPhysical = new ReportingWaiverType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeForPhysical";
-			owner_lazy = () -> ReportingWaiverType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportingWaiverType3Code.mmObject();
+			codeName = ReportingWaiverTypeCode.ExchangeForPhysical.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ReportingWaiverType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ReportingWaiverType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportingWaiverType3Code";
 				definition = "Specifies the type of regulatory reporting pre-trade waiver.";
-				code_lazy = () -> Arrays.asList(ReportingWaiverType3Code.mmBenchmarkTransaction, ReportingWaiverType3Code.mmAgencyCrossTransaction, ReportingWaiverType3Code.mmIlliquidInstrumentTransaction,
-						ReportingWaiverType3Code.mmAboveSpecificSizeTransaction, ReportingWaiverType3Code.mmCancellations, ReportingWaiverType3Code.mmAmendments, ReportingWaiverType3Code.mmSpecialDividendTransaction,
-						ReportingWaiverType3Code.mmTransactionWithPriceImprovment, ReportingWaiverType3Code.mmDuplicativeTradeReport, ReportingWaiverType3Code.mmLargeInScale,
-						ReportingWaiverType3Code.mmTransactionNotContributingToPriceDiscovery, ReportingWaiverType3Code.mmPackageTransaction, ReportingWaiverType3Code.mmExchangeForPhysical);
 				trace_lazy = () -> ReportingWaiverTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportingWaiverType3Code.BenchmarkTransaction, com.tools20022.repository.codeset.ReportingWaiverType3Code.AgencyCrossTransaction,
+						com.tools20022.repository.codeset.ReportingWaiverType3Code.IlliquidInstrumentTransaction, com.tools20022.repository.codeset.ReportingWaiverType3Code.AboveSpecificSizeTransaction,
+						com.tools20022.repository.codeset.ReportingWaiverType3Code.Cancellations, com.tools20022.repository.codeset.ReportingWaiverType3Code.Amendments,
+						com.tools20022.repository.codeset.ReportingWaiverType3Code.SpecialDividendTransaction, com.tools20022.repository.codeset.ReportingWaiverType3Code.TransactionWithPriceImprovment,
+						com.tools20022.repository.codeset.ReportingWaiverType3Code.DuplicativeTradeReport, com.tools20022.repository.codeset.ReportingWaiverType3Code.LargeInScale,
+						com.tools20022.repository.codeset.ReportingWaiverType3Code.TransactionNotContributingToPriceDiscovery, com.tools20022.repository.codeset.ReportingWaiverType3Code.PackageTransaction,
+						com.tools20022.repository.codeset.ReportingWaiverType3Code.ExchangeForPhysical);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BenchmarkTransaction.getCodeName().get(), BenchmarkTransaction);
+		codesByName.put(AgencyCrossTransaction.getCodeName().get(), AgencyCrossTransaction);
+		codesByName.put(IlliquidInstrumentTransaction.getCodeName().get(), IlliquidInstrumentTransaction);
+		codesByName.put(AboveSpecificSizeTransaction.getCodeName().get(), AboveSpecificSizeTransaction);
+		codesByName.put(Cancellations.getCodeName().get(), Cancellations);
+		codesByName.put(Amendments.getCodeName().get(), Amendments);
+		codesByName.put(SpecialDividendTransaction.getCodeName().get(), SpecialDividendTransaction);
+		codesByName.put(TransactionWithPriceImprovment.getCodeName().get(), TransactionWithPriceImprovment);
+		codesByName.put(DuplicativeTradeReport.getCodeName().get(), DuplicativeTradeReport);
+		codesByName.put(LargeInScale.getCodeName().get(), LargeInScale);
+		codesByName.put(TransactionNotContributingToPriceDiscovery.getCodeName().get(), TransactionNotContributingToPriceDiscovery);
+		codesByName.put(PackageTransaction.getCodeName().get(), PackageTransaction);
+		codesByName.put(ExchangeForPhysical.getCodeName().get(), ExchangeForPhysical);
+	}
+
+	public static ReportingWaiverType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ReportingWaiverType3Code[] values() {
+		ReportingWaiverType3Code[] values = new ReportingWaiverType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ReportingWaiverType3Code> {
+		@Override
+		public ReportingWaiverType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ReportingWaiverType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

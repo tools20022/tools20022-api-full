@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AffirmationStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the affirmation status of a trade.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AffirmationStatusCode#mmAffirmed
- * AffirmationStatusCode.mmAffirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.AffirmationStatusCode#Affirmed
+ * AffirmationStatusCode.Affirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AffirmationStatusCode#mmUnaffirmed
- * AffirmationStatusCode.mmUnaffirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.AffirmationStatusCode#Unaffirmed
+ * AffirmationStatusCode.Unaffirmed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the affirmation status of a trade."</li>
  * </ul>
  */
-public class AffirmationStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AffirmationStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,12 +97,12 @@ public class AffirmationStatusCode {
 	 * definition} = "Status of the transaction is affirmed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAffirmed = new MMCode() {
+	public static final AffirmationStatusCode Affirmed = new AffirmationStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Affirmed";
 			definition = "Status of the transaction is affirmed.";
-			owner_lazy = () -> AffirmationStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AffirmationStatusCode.mmObject();
 			codeName = "AFFI";
 		}
 	};
@@ -121,28 +127,58 @@ public class AffirmationStatusCode {
 	 * definition} = "Status of the transaction is unaffirmed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnaffirmed = new MMCode() {
+	public static final AffirmationStatusCode Unaffirmed = new AffirmationStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unaffirmed";
 			definition = "Status of the transaction is unaffirmed.";
-			owner_lazy = () -> AffirmationStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AffirmationStatusCode.mmObject();
 			codeName = "NAFI";
 		}
 	};
+	final static private LinkedHashMap<String, AffirmationStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AffirmationStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AFFI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AffirmationStatusCode";
 				definition = "Specifies the affirmation status of a trade.";
-				code_lazy = () -> Arrays.asList(AffirmationStatusCode.mmAffirmed, AffirmationStatusCode.mmUnaffirmed);
 				derivation_lazy = () -> Arrays.asList(AffirmationStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AffirmationStatusCode.Affirmed, com.tools20022.repository.codeset.AffirmationStatusCode.Unaffirmed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Affirmed.getCodeName().get(), Affirmed);
+		codesByName.put(Unaffirmed.getCodeName().get(), Unaffirmed);
+	}
+
+	public static AffirmationStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AffirmationStatusCode[] values() {
+		AffirmationStatusCode[] values = new AffirmationStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AffirmationStatusCode> {
+		@Override
+		public AffirmationStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AffirmationStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

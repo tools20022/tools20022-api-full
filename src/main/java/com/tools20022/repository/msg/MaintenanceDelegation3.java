@@ -28,9 +28,8 @@ import com.tools20022.repository.datatype.Max3000Binary;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -84,8 +83,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -109,16 +108,17 @@ import javax.xml.bind.annotation.XmlType;
  * MaintenanceDelegation1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "MaintenanceDelegation3", propOrder = {"delegationType", "maintenanceService", "partialDelegation", "POISubset", "delegatedAction", "delegationScopeIdentification", "delegationScopeDefinition", "certificate",
-		"POIIdentificationAssociation", "symmetricKey", "parameterDataSet"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "MaintenanceDelegation3", propOrder = {"delegationType", "maintenanceService", "partialDelegation", "pOISubset", "delegatedAction", "delegationScopeIdentification", "delegationScopeDefinition", "certificate",
+		"pOIIdentificationAssociation", "symmetricKey", "parameterDataSet"})
 public class MaintenanceDelegation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DlgtnTp", required = true)
 	protected TerminalManagementAction3Code delegationType;
 	/**
-	 * Type of delegation action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -154,7 +154,7 @@ public class MaintenanceDelegation3 {
 	 */
 	public static final MMMessageAttribute mmDelegationType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MaintenanceDelegation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation3.mmObject();
 			isDerived = false;
 			xmlTag = "DlgtnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,10 +166,11 @@ public class MaintenanceDelegation3 {
 			simpleType_lazy = () -> TerminalManagementAction3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MntncSvc", required = true)
 	protected List<DataSetCategory11Code> maintenanceService;
 	/**
-	 * Maintenance service to be delegated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,7 +211,7 @@ public class MaintenanceDelegation3 {
 	 */
 	public static final MMMessageAttribute mmMaintenanceService = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MaintenanceDelegation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation3.mmObject();
 			isDerived = false;
 			xmlTag = "MntncSvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,11 +223,11 @@ public class MaintenanceDelegation3 {
 			simpleType_lazy = () -> DataSetCategory11Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtlDlgtn")
 	protected TrueFalseIndicator partialDelegation;
 	/**
-	 * Flag to indicate that the delegated maintenance must be performed on a
-	 * subset of the terminal estate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -269,7 +270,7 @@ public class MaintenanceDelegation3 {
 	 */
 	public static final MMMessageAttribute mmPartialDelegation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MaintenanceDelegation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation3.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlDlgtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -282,12 +283,11 @@ public class MaintenanceDelegation3 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "POISubset")
 	protected List<Max35Text> pOISubset;
 	/**
-	 * Subset of the terminal estate for the delegated actions, for instance for
-	 * pilot or key deactivation). The subset may be expressed as a list of POI
-	 * or terminal estate subset identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -329,7 +329,7 @@ public class MaintenanceDelegation3 {
 	 */
 	public static final MMMessageAttribute mmPOISubset = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MaintenanceDelegation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation3.mmObject();
 			isDerived = false;
 			xmlTag = "POISubset";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -341,11 +341,11 @@ public class MaintenanceDelegation3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DlgtdActn")
 	protected MaintenanceDelegateAction2 delegatedAction;
 	/**
-	 * Information for the MTM to build or include delegated actions in the
-	 * management plan of the POI.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -387,7 +387,7 @@ public class MaintenanceDelegation3 {
 	 */
 	public static final MMMessageAssociationEnd mmDelegatedAction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MaintenanceDelegation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation3.mmObject();
 			isDerived = false;
 			xmlTag = "DlgtdActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -401,10 +401,11 @@ public class MaintenanceDelegation3 {
 			type_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegateAction2.mmObject();
 		}
 	};
+	@XmlElement(name = "DlgtnScpId")
 	protected Max35Text delegationScopeIdentification;
 	/**
-	 * Identification of the delegation scope assigned by the MTM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -445,7 +446,7 @@ public class MaintenanceDelegation3 {
 	 */
 	public static final MMMessageAttribute mmDelegationScopeIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MaintenanceDelegation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation3.mmObject();
 			isDerived = false;
 			xmlTag = "DlgtnScpId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -458,12 +459,11 @@ public class MaintenanceDelegation3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DlgtnScpDef")
 	protected Max3000Binary delegationScopeDefinition;
 	/**
-	 * Definition of the delegation scope, for instance inside the payment
-	 * application parameters the range of application profiles, the RID
-	 * (registered application provider identification).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -506,7 +506,7 @@ public class MaintenanceDelegation3 {
 	 */
 	public static final MMMessageAttribute mmDelegationScopeDefinition = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MaintenanceDelegation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation3.mmObject();
 			isDerived = false;
 			xmlTag = "DlgtnScpDef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -519,10 +519,11 @@ public class MaintenanceDelegation3 {
 			simpleType_lazy = () -> Max3000Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "Cert")
 	protected List<Max10KBinary> certificate;
 	/**
-	 * Certificate path of the terminal manager.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -563,7 +564,7 @@ public class MaintenanceDelegation3 {
 	 */
 	public static final MMMessageAttribute mmCertificate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MaintenanceDelegation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation3.mmObject();
 			isDerived = false;
 			xmlTag = "Cert";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -575,10 +576,11 @@ public class MaintenanceDelegation3 {
 			simpleType_lazy = () -> Max10KBinary.mmObject();
 		}
 	};
+	@XmlElement(name = "POIIdAssoctn")
 	protected List<com.tools20022.repository.msg.MaintenanceIdentificationAssociation1> pOIIdentificationAssociation;
 	/**
-	 * Association of the TM identifier and the MTM identifier of a POI.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -619,7 +621,7 @@ public class MaintenanceDelegation3 {
 	 */
 	public static final MMMessageAssociationEnd mmPOIIdentificationAssociation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MaintenanceDelegation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation3.mmObject();
 			isDerived = false;
 			xmlTag = "POIIdAssoctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -632,10 +634,11 @@ public class MaintenanceDelegation3 {
 			type_lazy = () -> com.tools20022.repository.msg.MaintenanceIdentificationAssociation1.mmObject();
 		}
 	};
+	@XmlElement(name = "SmmtrcKey")
 	protected List<com.tools20022.repository.msg.KEKIdentifier5> symmetricKey;
 	/**
-	 * Identification of the key to manage or to download.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -674,7 +677,7 @@ public class MaintenanceDelegation3 {
 	 */
 	public static final MMMessageAssociationEnd mmSymmetricKey = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MaintenanceDelegation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation3.mmObject();
 			isDerived = false;
 			xmlTag = "SmmtrcKey";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -687,10 +690,11 @@ public class MaintenanceDelegation3 {
 			type_lazy = () -> com.tools20022.repository.msg.KEKIdentifier5.mmObject();
 		}
 	};
+	@XmlElement(name = "ParamDataSet")
 	protected TerminalManagementDataSet19 parameterDataSet;
 	/**
-	 * Configuration parameters of the terminal manager to be sent by the MTM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -732,7 +736,7 @@ public class MaintenanceDelegation3 {
 	 */
 	public static final MMMessageAssociationEnd mmParameterDataSet = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MaintenanceDelegation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation3.mmObject();
 			isDerived = false;
 			xmlTag = "ParamDataSet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -750,10 +754,12 @@ public class MaintenanceDelegation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MaintenanceDelegation3.mmDelegationType, MaintenanceDelegation3.mmMaintenanceService, MaintenanceDelegation3.mmPartialDelegation, MaintenanceDelegation3.mmPOISubset,
-						MaintenanceDelegation3.mmDelegatedAction, MaintenanceDelegation3.mmDelegationScopeIdentification, MaintenanceDelegation3.mmDelegationScopeDefinition, MaintenanceDelegation3.mmCertificate,
-						MaintenanceDelegation3.mmPOIIdentificationAssociation, MaintenanceDelegation3.mmSymmetricKey, MaintenanceDelegation3.mmParameterDataSet);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MaintenanceDelegation3.mmDelegationType, com.tools20022.repository.msg.MaintenanceDelegation3.mmMaintenanceService,
+						com.tools20022.repository.msg.MaintenanceDelegation3.mmPartialDelegation, com.tools20022.repository.msg.MaintenanceDelegation3.mmPOISubset, com.tools20022.repository.msg.MaintenanceDelegation3.mmDelegatedAction,
+						com.tools20022.repository.msg.MaintenanceDelegation3.mmDelegationScopeIdentification, com.tools20022.repository.msg.MaintenanceDelegation3.mmDelegationScopeDefinition,
+						com.tools20022.repository.msg.MaintenanceDelegation3.mmCertificate, com.tools20022.repository.msg.MaintenanceDelegation3.mmPOIIdentificationAssociation,
+						com.tools20022.repository.msg.MaintenanceDelegation3.mmSymmetricKey, com.tools20022.repository.msg.MaintenanceDelegation3.mmParameterDataSet);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MaintenanceDelegation3";
 				definition = "Information on the delegation of a maintenance action or maintenance function.";
@@ -764,102 +770,102 @@ public class MaintenanceDelegation3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DlgtnTp", required = true)
 	public TerminalManagementAction3Code getDelegationType() {
 		return delegationType;
 	}
 
-	public void setDelegationType(TerminalManagementAction3Code delegationType) {
-		this.delegationType = delegationType;
+	public MaintenanceDelegation3 setDelegationType(TerminalManagementAction3Code delegationType) {
+		this.delegationType = Objects.requireNonNull(delegationType);
+		return this;
 	}
 
-	@XmlElement(name = "MntncSvc", required = true)
 	public List<DataSetCategory11Code> getMaintenanceService() {
-		return maintenanceService;
+		return maintenanceService == null ? maintenanceService = new ArrayList<>() : maintenanceService;
 	}
 
-	public void setMaintenanceService(List<DataSetCategory11Code> maintenanceService) {
-		this.maintenanceService = maintenanceService;
+	public MaintenanceDelegation3 setMaintenanceService(List<DataSetCategory11Code> maintenanceService) {
+		this.maintenanceService = Objects.requireNonNull(maintenanceService);
+		return this;
 	}
 
-	@XmlElement(name = "PrtlDlgtn")
-	public TrueFalseIndicator getPartialDelegation() {
-		return partialDelegation;
+	public Optional<TrueFalseIndicator> getPartialDelegation() {
+		return partialDelegation == null ? Optional.empty() : Optional.of(partialDelegation);
 	}
 
-	public void setPartialDelegation(TrueFalseIndicator partialDelegation) {
+	public MaintenanceDelegation3 setPartialDelegation(TrueFalseIndicator partialDelegation) {
 		this.partialDelegation = partialDelegation;
+		return this;
 	}
 
-	@XmlElement(name = "POISubset")
 	public List<Max35Text> getPOISubset() {
-		return pOISubset;
+		return pOISubset == null ? pOISubset = new ArrayList<>() : pOISubset;
 	}
 
-	public void setPOISubset(List<Max35Text> pOISubset) {
-		this.pOISubset = pOISubset;
+	public MaintenanceDelegation3 setPOISubset(List<Max35Text> pOISubset) {
+		this.pOISubset = Objects.requireNonNull(pOISubset);
+		return this;
 	}
 
-	@XmlElement(name = "DlgtdActn")
-	public MaintenanceDelegateAction2 getDelegatedAction() {
-		return delegatedAction;
+	public Optional<MaintenanceDelegateAction2> getDelegatedAction() {
+		return delegatedAction == null ? Optional.empty() : Optional.of(delegatedAction);
 	}
 
-	public void setDelegatedAction(com.tools20022.repository.msg.MaintenanceDelegateAction2 delegatedAction) {
+	public MaintenanceDelegation3 setDelegatedAction(com.tools20022.repository.msg.MaintenanceDelegateAction2 delegatedAction) {
 		this.delegatedAction = delegatedAction;
+		return this;
 	}
 
-	@XmlElement(name = "DlgtnScpId")
-	public Max35Text getDelegationScopeIdentification() {
-		return delegationScopeIdentification;
+	public Optional<Max35Text> getDelegationScopeIdentification() {
+		return delegationScopeIdentification == null ? Optional.empty() : Optional.of(delegationScopeIdentification);
 	}
 
-	public void setDelegationScopeIdentification(Max35Text delegationScopeIdentification) {
+	public MaintenanceDelegation3 setDelegationScopeIdentification(Max35Text delegationScopeIdentification) {
 		this.delegationScopeIdentification = delegationScopeIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "DlgtnScpDef")
-	public Max3000Binary getDelegationScopeDefinition() {
-		return delegationScopeDefinition;
+	public Optional<Max3000Binary> getDelegationScopeDefinition() {
+		return delegationScopeDefinition == null ? Optional.empty() : Optional.of(delegationScopeDefinition);
 	}
 
-	public void setDelegationScopeDefinition(Max3000Binary delegationScopeDefinition) {
+	public MaintenanceDelegation3 setDelegationScopeDefinition(Max3000Binary delegationScopeDefinition) {
 		this.delegationScopeDefinition = delegationScopeDefinition;
+		return this;
 	}
 
-	@XmlElement(name = "Cert")
 	public List<Max10KBinary> getCertificate() {
-		return certificate;
+		return certificate == null ? certificate = new ArrayList<>() : certificate;
 	}
 
-	public void setCertificate(List<Max10KBinary> certificate) {
-		this.certificate = certificate;
+	public MaintenanceDelegation3 setCertificate(List<Max10KBinary> certificate) {
+		this.certificate = Objects.requireNonNull(certificate);
+		return this;
 	}
 
-	@XmlElement(name = "POIIdAssoctn")
 	public List<MaintenanceIdentificationAssociation1> getPOIIdentificationAssociation() {
-		return pOIIdentificationAssociation;
+		return pOIIdentificationAssociation == null ? pOIIdentificationAssociation = new ArrayList<>() : pOIIdentificationAssociation;
 	}
 
-	public void setPOIIdentificationAssociation(List<com.tools20022.repository.msg.MaintenanceIdentificationAssociation1> pOIIdentificationAssociation) {
-		this.pOIIdentificationAssociation = pOIIdentificationAssociation;
+	public MaintenanceDelegation3 setPOIIdentificationAssociation(List<com.tools20022.repository.msg.MaintenanceIdentificationAssociation1> pOIIdentificationAssociation) {
+		this.pOIIdentificationAssociation = Objects.requireNonNull(pOIIdentificationAssociation);
+		return this;
 	}
 
-	@XmlElement(name = "SmmtrcKey")
 	public List<KEKIdentifier5> getSymmetricKey() {
-		return symmetricKey;
+		return symmetricKey == null ? symmetricKey = new ArrayList<>() : symmetricKey;
 	}
 
-	public void setSymmetricKey(List<com.tools20022.repository.msg.KEKIdentifier5> symmetricKey) {
-		this.symmetricKey = symmetricKey;
+	public MaintenanceDelegation3 setSymmetricKey(List<com.tools20022.repository.msg.KEKIdentifier5> symmetricKey) {
+		this.symmetricKey = Objects.requireNonNull(symmetricKey);
+		return this;
 	}
 
-	@XmlElement(name = "ParamDataSet")
-	public TerminalManagementDataSet19 getParameterDataSet() {
-		return parameterDataSet;
+	public Optional<TerminalManagementDataSet19> getParameterDataSet() {
+		return parameterDataSet == null ? Optional.empty() : Optional.of(parameterDataSet);
 	}
 
-	public void setParameterDataSet(com.tools20022.repository.msg.TerminalManagementDataSet19 parameterDataSet) {
+	public MaintenanceDelegation3 setParameterDataSet(com.tools20022.repository.msg.TerminalManagementDataSet19 parameterDataSet) {
 		this.parameterDataSet = parameterDataSet;
+		return this;
 	}
 }

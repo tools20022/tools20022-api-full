@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.TreasuryTrade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -79,8 +81,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,15 +103,16 @@ import javax.xml.bind.annotation.XmlType;
  * TradeAgreement3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TradeAgreement7", propOrder = {"tradeDate", "originatorReference", "commonReference", "operationType", "operationScope", "settlementSessionIdentifier"})
 public class TradeAgreement7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradDt", required = true)
 	protected ISODate tradeDate;
 	/**
-	 * Date on which the trading parties agreed on the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,7 +153,7 @@ public class TradeAgreement7 {
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> TradeAgreement7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement7.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,12 +165,11 @@ public class TradeAgreement7 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgtrRef", required = true)
 	protected Max35Text originatorReference;
 	/**
-	 * Reference of the present instruction assigned by the party issuing the
-	 * message. This reference must be unique amongst all messages of same type
-	 * sent by the same party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,7 +206,7 @@ public class TradeAgreement7 {
 	 */
 	public static final MMMessageAttribute mmOriginatorReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradeAgreement7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement7.mmObject();
 			isDerived = false;
 			xmlTag = "OrgtrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,10 +218,11 @@ public class TradeAgreement7 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CmonRef")
 	protected Max35Text commonReference;
 	/**
-	 * Reference common to both parties of the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -260,7 +263,7 @@ public class TradeAgreement7 {
 	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
-			componentContext_lazy = () -> TradeAgreement7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement7.mmObject();
 			isDerived = false;
 			xmlTag = "CmonRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,11 +275,11 @@ public class TradeAgreement7 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OprTp")
 	protected Max4Text operationType;
 	/**
-	 * Specifies the type of underlying transaction, for example cancellation
-	 * (CANC).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -313,7 +316,7 @@ public class TradeAgreement7 {
 	 */
 	public static final MMMessageAttribute mmOperationType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradeAgreement7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement7.mmObject();
 			isDerived = false;
 			xmlTag = "OprTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,11 +328,11 @@ public class TradeAgreement7 {
 			simpleType_lazy = () -> Max4Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OprScp")
 	protected Max4Text operationScope;
 	/**
-	 * Specifies the business role between the submitter and the trade party,
-	 * for example Agent (AGNT).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -366,7 +369,7 @@ public class TradeAgreement7 {
 	 */
 	public static final MMMessageAttribute mmOperationScope = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradeAgreement7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement7.mmObject();
 			isDerived = false;
 			xmlTag = "OprScp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -378,11 +381,11 @@ public class TradeAgreement7 {
 			simpleType_lazy = () -> Max4Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmSsnIdr")
 	protected Exact4AlphaNumericText settlementSessionIdentifier;
 	/**
-	 * To indicate the requested CLS Settlement Session that the related trade
-	 * is part of.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -420,7 +423,7 @@ public class TradeAgreement7 {
 	 */
 	public static final MMMessageAttribute mmSettlementSessionIdentifier = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TradeAgreement7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement7.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSsnIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -436,11 +439,12 @@ public class TradeAgreement7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TradeAgreement7.mmTradeDate, TradeAgreement7.mmOriginatorReference, TradeAgreement7.mmCommonReference, TradeAgreement7.mmOperationType, TradeAgreement7.mmOperationScope,
-						TradeAgreement7.mmSettlementSessionIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeAgreement7.mmTradeDate, com.tools20022.repository.msg.TradeAgreement7.mmOriginatorReference,
+						com.tools20022.repository.msg.TradeAgreement7.mmCommonReference, com.tools20022.repository.msg.TradeAgreement7.mmOperationType, com.tools20022.repository.msg.TradeAgreement7.mmOperationScope,
+						com.tools20022.repository.msg.TradeAgreement7.mmSettlementSessionIdentifier);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeInstructionV02.mmTradeInformation);
 				trace_lazy = () -> TreasuryTrade.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TradeAgreement7";
 				definition = "Date and identification of a trade.";
@@ -451,57 +455,57 @@ public class TradeAgreement7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradDt", required = true)
 	public ISODate getTradeDate() {
 		return tradeDate;
 	}
 
-	public void setTradeDate(ISODate tradeDate) {
-		this.tradeDate = tradeDate;
+	public TradeAgreement7 setTradeDate(ISODate tradeDate) {
+		this.tradeDate = Objects.requireNonNull(tradeDate);
+		return this;
 	}
 
-	@XmlElement(name = "OrgtrRef", required = true)
 	public Max35Text getOriginatorReference() {
 		return originatorReference;
 	}
 
-	public void setOriginatorReference(Max35Text originatorReference) {
-		this.originatorReference = originatorReference;
+	public TradeAgreement7 setOriginatorReference(Max35Text originatorReference) {
+		this.originatorReference = Objects.requireNonNull(originatorReference);
+		return this;
 	}
 
-	@XmlElement(name = "CmonRef")
-	public Max35Text getCommonReference() {
-		return commonReference;
+	public Optional<Max35Text> getCommonReference() {
+		return commonReference == null ? Optional.empty() : Optional.of(commonReference);
 	}
 
-	public void setCommonReference(Max35Text commonReference) {
+	public TradeAgreement7 setCommonReference(Max35Text commonReference) {
 		this.commonReference = commonReference;
+		return this;
 	}
 
-	@XmlElement(name = "OprTp")
-	public Max4Text getOperationType() {
-		return operationType;
+	public Optional<Max4Text> getOperationType() {
+		return operationType == null ? Optional.empty() : Optional.of(operationType);
 	}
 
-	public void setOperationType(Max4Text operationType) {
+	public TradeAgreement7 setOperationType(Max4Text operationType) {
 		this.operationType = operationType;
+		return this;
 	}
 
-	@XmlElement(name = "OprScp")
-	public Max4Text getOperationScope() {
-		return operationScope;
+	public Optional<Max4Text> getOperationScope() {
+		return operationScope == null ? Optional.empty() : Optional.of(operationScope);
 	}
 
-	public void setOperationScope(Max4Text operationScope) {
+	public TradeAgreement7 setOperationScope(Max4Text operationScope) {
 		this.operationScope = operationScope;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmSsnIdr")
-	public Exact4AlphaNumericText getSettlementSessionIdentifier() {
-		return settlementSessionIdentifier;
+	public Optional<Exact4AlphaNumericText> getSettlementSessionIdentifier() {
+		return settlementSessionIdentifier == null ? Optional.empty() : Optional.of(settlementSessionIdentifier);
 	}
 
-	public void setSettlementSessionIdentifier(Exact4AlphaNumericText settlementSessionIdentifier) {
+	public TradeAgreement7 setSettlementSessionIdentifier(Exact4AlphaNumericText settlementSessionIdentifier) {
 		this.settlementSessionIdentifier = settlementSessionIdentifier;
+		return this;
 	}
 }

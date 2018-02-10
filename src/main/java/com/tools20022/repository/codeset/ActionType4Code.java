@@ -20,43 +20,46 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ActionTypeCode;
+import com.tools20022.repository.codeset.ActionType4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Recommended action for the issuer.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ActionTypeCode ActionTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType4Code#mmCaptureCard
- * ActionType4Code.mmCaptureCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType4Code#CaptureCard
+ * ActionType4Code.CaptureCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType4Code#mmIdentificationRequired
- * ActionType4Code.mmIdentificationRequired}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType4Code#mmReferral
- * ActionType4Code.mmReferral}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ActionType4Code#mmApprove
- * ActionType4Code.mmApprove}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType4Code#IdentificationRequired
+ * ActionType4Code.IdentificationRequired}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType4Code#Referral
+ * ActionType4Code.Referral}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType4Code#Approve
+ * ActionType4Code.Approve}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ActionType4Code#BlockCard
+ * ActionType4Code.BlockCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType4Code#mmBlockCard
- * ActionType4Code.mmBlockCard}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ActionType4Code#mmNoReasonForDecline
- * ActionType4Code.mmNoReasonForDecline}</li>
+ * {@linkplain com.tools20022.repository.codeset.ActionType4Code#NoReasonForDecline
+ * ActionType4Code.NoReasonForDecline}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ActionTypeCode ActionTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Recommended action for the issuer."</li>
  * </ul>
  */
-public class ActionType4Code extends ActionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ActionType4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +90,12 @@ public class ActionType4Code extends ActionTypeCode {
 	 * name} = "CaptureCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCaptureCard = new MMCode() {
+	public static final ActionType4Code CaptureCard = new ActionType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaptureCard";
-			owner_lazy = () -> ActionType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionType4Code.mmObject();
+			codeName = ActionTypeCode.CaptureCard.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +114,12 @@ public class ActionType4Code extends ActionTypeCode {
 	 * name} = "IdentificationRequired"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIdentificationRequired = new MMCode() {
+	public static final ActionType4Code IdentificationRequired = new ActionType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationRequired";
-			owner_lazy = () -> ActionType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionType4Code.mmObject();
+			codeName = ActionTypeCode.IdentificationRequired.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,11 +138,12 @@ public class ActionType4Code extends ActionTypeCode {
 	 * name} = "Referral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReferral = new MMCode() {
+	public static final ActionType4Code Referral = new ActionType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Referral";
-			owner_lazy = () -> ActionType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionType4Code.mmObject();
+			codeName = ActionTypeCode.Referral.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -155,11 +162,12 @@ public class ActionType4Code extends ActionTypeCode {
 	 * name} = "Approve"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmApprove = new MMCode() {
+	public static final ActionType4Code Approve = new ActionType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Approve";
-			owner_lazy = () -> ActionType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionType4Code.mmObject();
+			codeName = ActionTypeCode.Approve.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -178,11 +186,12 @@ public class ActionType4Code extends ActionTypeCode {
 	 * name} = "BlockCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBlockCard = new MMCode() {
+	public static final ActionType4Code BlockCard = new ActionType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockCard";
-			owner_lazy = () -> ActionType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionType4Code.mmObject();
+			codeName = ActionTypeCode.BlockCard.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -201,26 +210,62 @@ public class ActionType4Code extends ActionTypeCode {
 	 * name} = "NoReasonForDecline"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoReasonForDecline = new MMCode() {
+	public static final ActionType4Code NoReasonForDecline = new ActionType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoReasonForDecline";
-			owner_lazy = () -> ActionType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ActionType4Code.mmObject();
+			codeName = ActionTypeCode.NoReasonForDecline.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ActionType4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ActionType4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ActionType4Code";
 				definition = "Recommended action for the issuer.";
-				code_lazy = () -> Arrays.asList(ActionType4Code.mmCaptureCard, ActionType4Code.mmIdentificationRequired, ActionType4Code.mmReferral, ActionType4Code.mmApprove, ActionType4Code.mmBlockCard,
-						ActionType4Code.mmNoReasonForDecline);
 				trace_lazy = () -> ActionTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType4Code.CaptureCard, com.tools20022.repository.codeset.ActionType4Code.IdentificationRequired,
+						com.tools20022.repository.codeset.ActionType4Code.Referral, com.tools20022.repository.codeset.ActionType4Code.Approve, com.tools20022.repository.codeset.ActionType4Code.BlockCard,
+						com.tools20022.repository.codeset.ActionType4Code.NoReasonForDecline);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CaptureCard.getCodeName().get(), CaptureCard);
+		codesByName.put(IdentificationRequired.getCodeName().get(), IdentificationRequired);
+		codesByName.put(Referral.getCodeName().get(), Referral);
+		codesByName.put(Approve.getCodeName().get(), Approve);
+		codesByName.put(BlockCard.getCodeName().get(), BlockCard);
+		codesByName.put(NoReasonForDecline.getCodeName().get(), NoReasonForDecline);
+	}
+
+	public static ActionType4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ActionType4Code[] values() {
+		ActionType4Code[] values = new ActionType4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ActionType4Code> {
+		@Override
+		public ActionType4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ActionType4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

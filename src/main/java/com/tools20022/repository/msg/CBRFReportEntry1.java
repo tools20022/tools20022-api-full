@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Report entry details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CBRFReportEntry1", propOrder = {"messageName", "totalNumberOfEntries", "messageDetails"})
 public class CBRFReportEntry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgNm", required = true)
 	protected Max35Text messageName;
 	/**
-	 * Name of the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,7 +104,7 @@ public class CBRFReportEntry1 {
 	 */
 	public static final MMMessageAttribute mmMessageName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CBRFReportEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CBRFReportEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +115,11 @@ public class CBRFReportEntry1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNbOfNtries", required = true)
 	protected Max9NumericText totalNumberOfEntries;
 	/**
-	 * Total number of entries in the group.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +147,7 @@ public class CBRFReportEntry1 {
 	 */
 	public static final MMMessageAttribute mmTotalNumberOfEntries = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CBRFReportEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CBRFReportEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfNtries";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,10 +158,11 @@ public class CBRFReportEntry1 {
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgDtls", required = true)
 	protected List<com.tools20022.repository.msg.ElectronicMessageDetails1> messageDetails;
 	/**
-	 * Information identifying electronic messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -184,7 +189,7 @@ public class CBRFReportEntry1 {
 	 */
 	public static final MMMessageAssociationEnd mmMessageDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CBRFReportEntry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CBRFReportEntry1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,8 +204,9 @@ public class CBRFReportEntry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CBRFReportEntry1.mmMessageName, CBRFReportEntry1.mmTotalNumberOfEntries, CBRFReportEntry1.mmMessageDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CBRFReportEntry1.mmMessageName, com.tools20022.repository.msg.CBRFReportEntry1.mmTotalNumberOfEntries,
+						com.tools20022.repository.msg.CBRFReportEntry1.mmMessageDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CBRFReportEntry1";
 				definition = "Report entry details.";
@@ -209,30 +215,30 @@ public class CBRFReportEntry1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgNm", required = true)
 	public Max35Text getMessageName() {
 		return messageName;
 	}
 
-	public void setMessageName(Max35Text messageName) {
-		this.messageName = messageName;
+	public CBRFReportEntry1 setMessageName(Max35Text messageName) {
+		this.messageName = Objects.requireNonNull(messageName);
+		return this;
 	}
 
-	@XmlElement(name = "TtlNbOfNtries", required = true)
 	public Max9NumericText getTotalNumberOfEntries() {
 		return totalNumberOfEntries;
 	}
 
-	public void setTotalNumberOfEntries(Max9NumericText totalNumberOfEntries) {
-		this.totalNumberOfEntries = totalNumberOfEntries;
+	public CBRFReportEntry1 setTotalNumberOfEntries(Max9NumericText totalNumberOfEntries) {
+		this.totalNumberOfEntries = Objects.requireNonNull(totalNumberOfEntries);
+		return this;
 	}
 
-	@XmlElement(name = "MsgDtls", required = true)
 	public List<ElectronicMessageDetails1> getMessageDetails() {
-		return messageDetails;
+		return messageDetails == null ? messageDetails = new ArrayList<>() : messageDetails;
 	}
 
-	public void setMessageDetails(List<com.tools20022.repository.msg.ElectronicMessageDetails1> messageDetails) {
-		this.messageDetails = messageDetails;
+	public CBRFReportEntry1 setMessageDetails(List<com.tools20022.repository.msg.ElectronicMessageDetails1> messageDetails) {
+		this.messageDetails = Objects.requireNonNull(messageDetails);
+		return this;
 	}
 }

@@ -28,9 +28,8 @@ import com.tools20022.repository.entity.CashSettlement;
 import com.tools20022.repository.entity.FundsCashFlow;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalBalanceRule#forCashInForecast5
+ * ConstraintAdditionalBalanceRule.forCashInForecast5}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,15 +96,16 @@ import javax.xml.bind.annotation.XmlType;
  * CashInForecast3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashInForecast5", propOrder = {"cashSettlementDate", "subTotalAmount", "subTotalUnitsNumber", "exceptionalCashFlowIndicator", "cashInBreakdownDetails", "additionalBalance"})
 public class CashInForecast5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CshSttlmDt", required = true)
 	protected ISODate cashSettlementDate;
 	/**
-	 * Date on which cash is available.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,7 +143,7 @@ public class CashInForecast5 {
 	public static final MMMessageAttribute mmCashSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
-			componentContext_lazy = () -> CashInForecast5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashInForecast5.mmObject();
 			isDerived = false;
 			xmlTag = "CshSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,10 +155,11 @@ public class CashInForecast5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SubTtlAmt")
 	protected ActiveOrHistoricCurrencyAndAmount subTotalAmount;
 	/**
-	 * Sub-total amount of the cash flow in, expressed as an amount of money.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +199,7 @@ public class CashInForecast5 {
 	public static final MMMessageAttribute mmSubTotalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAmount;
-			componentContext_lazy = () -> CashInForecast5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashInForecast5.mmObject();
 			isDerived = false;
 			xmlTag = "SubTtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,10 +211,11 @@ public class CashInForecast5 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SubTtlUnitsNb")
 	protected FinancialInstrumentQuantity1 subTotalUnitsNumber;
 	/**
-	 * Sub-total amount of the cash flow in, expressed as a number of units.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,7 +255,7 @@ public class CashInForecast5 {
 	public static final MMMessageAttribute mmSubTotalUnitsNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
-			componentContext_lazy = () -> CashInForecast5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashInForecast5.mmObject();
 			isDerived = false;
 			xmlTag = "SubTtlUnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,10 +267,11 @@ public class CashInForecast5 {
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	@XmlElement(name = "XcptnlCshFlowInd")
 	protected YesNoIndicator exceptionalCashFlowIndicator;
 	/**
-	 * Indicates whether the estimated cash flow in is exceptional.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -300,7 +311,7 @@ public class CashInForecast5 {
 	public static final MMMessageAttribute mmExceptionalCashFlowIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> FundsCashFlow.mmExceptionalCashFlowIndicator;
-			componentContext_lazy = () -> CashInForecast5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashInForecast5.mmObject();
 			isDerived = false;
 			xmlTag = "XcptnlCshFlowInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -312,10 +323,11 @@ public class CashInForecast5 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CshInBrkdwnDtls")
 	protected List<com.tools20022.repository.msg.FundCashInBreakdown3> cashInBreakdownDetails;
 	/**
-	 * Breakdown of cash in amounts by transaction and order type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -347,7 +359,7 @@ public class CashInForecast5 {
 	 */
 	public static final MMMessageAssociationEnd mmCashInBreakdownDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CashInForecast5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashInForecast5.mmObject();
 			isDerived = false;
 			xmlTag = "CshInBrkdwnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -359,14 +371,11 @@ public class CashInForecast5 {
 			type_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown3.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlBal")
 	protected FundBalance1 additionalBalance;
 	/**
-	 * Additional balances for cash amounts and number of units. <br>
-	 * In an estimated report, the total cash derived from orders placed as a
-	 * number of units is an estimated cash amount and the total number of units
-	 * derived from orders placed as a cash amount is an estimated number of
-	 * units.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -394,7 +403,7 @@ public class CashInForecast5 {
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CashInForecast5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashInForecast5.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -410,10 +419,12 @@ public class CashInForecast5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashInForecast5.mmCashSettlementDate, CashInForecast5.mmSubTotalAmount, CashInForecast5.mmSubTotalUnitsNumber, CashInForecast5.mmExceptionalCashFlowIndicator,
-						CashInForecast5.mmCashInBreakdownDetails, CashInForecast5.mmAdditionalBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashInForecast5.mmCashSettlementDate, com.tools20022.repository.msg.CashInForecast5.mmSubTotalAmount,
+						com.tools20022.repository.msg.CashInForecast5.mmSubTotalUnitsNumber, com.tools20022.repository.msg.CashInForecast5.mmExceptionalCashFlowIndicator,
+						com.tools20022.repository.msg.CashInForecast5.mmCashInBreakdownDetails, com.tools20022.repository.msg.CashInForecast5.mmAdditionalBalance);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalBalanceRule.forCashInForecast5);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashInForecast5";
 				definition = "Cash movements into a fund as a result of investment funds transactions, eg, subscriptions or switch-in.";
@@ -423,57 +434,57 @@ public class CashInForecast5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CshSttlmDt", required = true)
 	public ISODate getCashSettlementDate() {
 		return cashSettlementDate;
 	}
 
-	public void setCashSettlementDate(ISODate cashSettlementDate) {
-		this.cashSettlementDate = cashSettlementDate;
+	public CashInForecast5 setCashSettlementDate(ISODate cashSettlementDate) {
+		this.cashSettlementDate = Objects.requireNonNull(cashSettlementDate);
+		return this;
 	}
 
-	@XmlElement(name = "SubTtlAmt")
-	public ActiveOrHistoricCurrencyAndAmount getSubTotalAmount() {
-		return subTotalAmount;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getSubTotalAmount() {
+		return subTotalAmount == null ? Optional.empty() : Optional.of(subTotalAmount);
 	}
 
-	public void setSubTotalAmount(ActiveOrHistoricCurrencyAndAmount subTotalAmount) {
+	public CashInForecast5 setSubTotalAmount(ActiveOrHistoricCurrencyAndAmount subTotalAmount) {
 		this.subTotalAmount = subTotalAmount;
+		return this;
 	}
 
-	@XmlElement(name = "SubTtlUnitsNb")
-	public FinancialInstrumentQuantity1 getSubTotalUnitsNumber() {
-		return subTotalUnitsNumber;
+	public Optional<FinancialInstrumentQuantity1> getSubTotalUnitsNumber() {
+		return subTotalUnitsNumber == null ? Optional.empty() : Optional.of(subTotalUnitsNumber);
 	}
 
-	public void setSubTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 subTotalUnitsNumber) {
+	public CashInForecast5 setSubTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 subTotalUnitsNumber) {
 		this.subTotalUnitsNumber = subTotalUnitsNumber;
+		return this;
 	}
 
-	@XmlElement(name = "XcptnlCshFlowInd")
-	public YesNoIndicator getExceptionalCashFlowIndicator() {
-		return exceptionalCashFlowIndicator;
+	public Optional<YesNoIndicator> getExceptionalCashFlowIndicator() {
+		return exceptionalCashFlowIndicator == null ? Optional.empty() : Optional.of(exceptionalCashFlowIndicator);
 	}
 
-	public void setExceptionalCashFlowIndicator(YesNoIndicator exceptionalCashFlowIndicator) {
+	public CashInForecast5 setExceptionalCashFlowIndicator(YesNoIndicator exceptionalCashFlowIndicator) {
 		this.exceptionalCashFlowIndicator = exceptionalCashFlowIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "CshInBrkdwnDtls")
 	public List<FundCashInBreakdown3> getCashInBreakdownDetails() {
-		return cashInBreakdownDetails;
+		return cashInBreakdownDetails == null ? cashInBreakdownDetails = new ArrayList<>() : cashInBreakdownDetails;
 	}
 
-	public void setCashInBreakdownDetails(List<com.tools20022.repository.msg.FundCashInBreakdown3> cashInBreakdownDetails) {
-		this.cashInBreakdownDetails = cashInBreakdownDetails;
+	public CashInForecast5 setCashInBreakdownDetails(List<com.tools20022.repository.msg.FundCashInBreakdown3> cashInBreakdownDetails) {
+		this.cashInBreakdownDetails = Objects.requireNonNull(cashInBreakdownDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlBal")
-	public FundBalance1 getAdditionalBalance() {
-		return additionalBalance;
+	public Optional<FundBalance1> getAdditionalBalance() {
+		return additionalBalance == null ? Optional.empty() : Optional.of(additionalBalance);
 	}
 
-	public void setAdditionalBalance(com.tools20022.repository.msg.FundBalance1 additionalBalance) {
+	public CashInForecast5 setAdditionalBalance(com.tools20022.repository.msg.FundBalance1 additionalBalance) {
 		this.additionalBalance = additionalBalance;
+		return this;
 	}
 }

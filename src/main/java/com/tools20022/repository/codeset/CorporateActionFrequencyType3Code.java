@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateActionFrequencyTypeV2Code;
+import com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Automatic Reinvestment of Cash distributed by accumulating funds.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyTypeV2Code
- * CorporateActionFrequencyTypeV2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#mmFinal
- * CorporateActionFrequencyType3Code.mmFinal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#Final
+ * CorporateActionFrequencyType3Code.Final}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#mmInterim
- * CorporateActionFrequencyType3Code.mmInterim}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#Interim
+ * CorporateActionFrequencyType3Code.Interim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#mmReinvestment
- * CorporateActionFrequencyType3Code.mmReinvestment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#Reinvestment
+ * CorporateActionFrequencyType3Code.Reinvestment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#mmRegular
- * CorporateActionFrequencyType3Code.mmRegular}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#Regular
+ * CorporateActionFrequencyType3Code.Regular}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#mmSpecial
- * CorporateActionFrequencyType3Code.mmSpecial}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType3Code#Special
+ * CorporateActionFrequencyType3Code.Special}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyTypeV2Code
+ * CorporateActionFrequencyTypeV2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CorporateActionFrequencyType3Code extends CorporateActionFrequencyTypeV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionFrequencyType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,18 +102,19 @@ public class CorporateActionFrequencyType3Code extends CorporateActionFrequencyT
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#mmFinal
-	 * CorporateActionFrequencyType5Code.mmFinal}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#Final
+	 * CorporateActionFrequencyType5Code.Final}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinal = new MMCode() {
+	public static final CorporateActionFrequencyType3Code Final = new CorporateActionFrequencyType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
-			nextVersions_lazy = () -> Arrays.asList(CorporateActionFrequencyType5Code.mmFinal);
-			owner_lazy = () -> CorporateActionFrequencyType3Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionFrequencyType5Code.Final);
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.mmObject();
+			codeName = CorporateActionFrequencyTypeV2Code.Final.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -129,18 +135,19 @@ public class CorporateActionFrequencyType3Code extends CorporateActionFrequencyT
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#mmInterim
-	 * CorporateActionFrequencyType5Code.mmInterim}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#Interim
+	 * CorporateActionFrequencyType5Code.Interim}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterim = new MMCode() {
+	public static final CorporateActionFrequencyType3Code Interim = new CorporateActionFrequencyType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
-			nextVersions_lazy = () -> Arrays.asList(CorporateActionFrequencyType5Code.mmInterim);
-			owner_lazy = () -> CorporateActionFrequencyType3Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionFrequencyType5Code.Interim);
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.mmObject();
+			codeName = CorporateActionFrequencyTypeV2Code.Interim.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,18 +168,19 @@ public class CorporateActionFrequencyType3Code extends CorporateActionFrequencyT
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#mmReinvestment
-	 * CorporateActionFrequencyType5Code.mmReinvestment}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#Reinvestment
+	 * CorporateActionFrequencyType5Code.Reinvestment}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmReinvestment = new MMCode() {
+	public static final CorporateActionFrequencyType3Code Reinvestment = new CorporateActionFrequencyType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reinvestment";
-			nextVersions_lazy = () -> Arrays.asList(CorporateActionFrequencyType5Code.mmReinvestment);
-			owner_lazy = () -> CorporateActionFrequencyType3Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionFrequencyType5Code.Reinvestment);
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.mmObject();
+			codeName = CorporateActionFrequencyTypeV2Code.Reinvestment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -193,18 +201,19 @@ public class CorporateActionFrequencyType3Code extends CorporateActionFrequencyT
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#mmRegular
-	 * CorporateActionFrequencyType5Code.mmRegular}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#Regular
+	 * CorporateActionFrequencyType5Code.Regular}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegular = new MMCode() {
+	public static final CorporateActionFrequencyType3Code Regular = new CorporateActionFrequencyType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Regular";
-			nextVersions_lazy = () -> Arrays.asList(CorporateActionFrequencyType5Code.mmRegular);
-			owner_lazy = () -> CorporateActionFrequencyType3Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionFrequencyType5Code.Regular);
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.mmObject();
+			codeName = CorporateActionFrequencyTypeV2Code.Regular.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -225,34 +234,69 @@ public class CorporateActionFrequencyType3Code extends CorporateActionFrequencyT
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#mmSpecial
-	 * CorporateActionFrequencyType5Code.mmSpecial}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionFrequencyType5Code#Special
+	 * CorporateActionFrequencyType5Code.Special}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecial = new MMCode() {
+	public static final CorporateActionFrequencyType3Code Special = new CorporateActionFrequencyType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Special";
-			nextVersions_lazy = () -> Arrays.asList(CorporateActionFrequencyType5Code.mmSpecial);
-			owner_lazy = () -> CorporateActionFrequencyType3Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionFrequencyType5Code.Special);
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.mmObject();
+			codeName = CorporateActionFrequencyTypeV2Code.Special.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionFrequencyType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionFrequencyType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionFrequencyType3Code";
 				definition = "Automatic Reinvestment of Cash distributed by accumulating funds.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionFrequencyType5Code.mmObject());
-				code_lazy = () -> Arrays.asList(CorporateActionFrequencyType3Code.mmFinal, CorporateActionFrequencyType3Code.mmInterim, CorporateActionFrequencyType3Code.mmReinvestment, CorporateActionFrequencyType3Code.mmRegular,
-						CorporateActionFrequencyType3Code.mmSpecial);
 				trace_lazy = () -> CorporateActionFrequencyTypeV2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.Final, com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.Interim,
+						com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.Reinvestment, com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.Regular,
+						com.tools20022.repository.codeset.CorporateActionFrequencyType3Code.Special);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Final.getCodeName().get(), Final);
+		codesByName.put(Interim.getCodeName().get(), Interim);
+		codesByName.put(Reinvestment.getCodeName().get(), Reinvestment);
+		codesByName.put(Regular.getCodeName().get(), Regular);
+		codesByName.put(Special.getCodeName().get(), Special);
+	}
+
+	public static CorporateActionFrequencyType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionFrequencyType3Code[] values() {
+		CorporateActionFrequencyType3Code[] values = new CorporateActionFrequencyType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionFrequencyType3Code> {
+		@Override
+		public CorporateActionFrequencyType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionFrequencyType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

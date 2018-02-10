@@ -25,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Defines commodity attributes of a derivative where the type is energy."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AssetClassCommodityEnergy1Choice", propOrder = {"electricity", "naturalGas", "oil", "coal", "interEnergy", "renewableEnergy", "lightEnd", "distillates"})
 public class AssetClassCommodityEnergy1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Elctrcty", required = true)
 	protected EnergyCommodityElectricity1 electricity;
 	/**
-	 * Definition of Electricity energy commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -124,7 +126,7 @@ public class AssetClassCommodityEnergy1Choice {
 	public static final MMMessageAssociationEnd mmElectricity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityEnergy1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Elctrcty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +138,11 @@ public class AssetClassCommodityEnergy1Choice {
 			type_lazy = () -> EnergyCommodityElectricity1.mmObject();
 		}
 	};
+	@XmlElement(name = "NtrlGas", required = true)
 	protected EnergyCommodityNaturalGas1 naturalGas;
 	/**
-	 * Definition of Natural Gas energy commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -172,7 +175,7 @@ public class AssetClassCommodityEnergy1Choice {
 	public static final MMMessageAssociationEnd mmNaturalGas = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
-			componentContext_lazy = () -> AssetClassCommodityEnergy1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NtrlGas";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,10 +187,11 @@ public class AssetClassCommodityEnergy1Choice {
 			type_lazy = () -> EnergyCommodityNaturalGas1.mmObject();
 		}
 	};
+	@XmlElement(name = "Oil", required = true)
 	protected EnergyCommodityOil1 oil;
 	/**
-	 * Definition of Oil energy commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -219,7 +223,7 @@ public class AssetClassCommodityEnergy1Choice {
 	public static final MMMessageAssociationEnd mmOil = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityEnergy1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Oil";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,10 +235,11 @@ public class AssetClassCommodityEnergy1Choice {
 			type_lazy = () -> EnergyCommodityOil1.mmObject();
 		}
 	};
+	@XmlElement(name = "Coal", required = true)
 	protected EnergyCommodityCoal1 coal;
 	/**
-	 * Definition of Coal energy commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -266,7 +271,7 @@ public class AssetClassCommodityEnergy1Choice {
 	public static final MMMessageAssociationEnd mmCoal = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityEnergy1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Coal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -278,10 +283,11 @@ public class AssetClassCommodityEnergy1Choice {
 			type_lazy = () -> EnergyCommodityCoal1.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrNrgy", required = true)
 	protected EnergyCommodityInterEnergy1 interEnergy;
 	/**
-	 * Inter energy commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -314,7 +320,7 @@ public class AssetClassCommodityEnergy1Choice {
 	public static final MMMessageAssociationEnd mmInterEnergy = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityEnergy1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntrNrgy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -326,10 +332,11 @@ public class AssetClassCommodityEnergy1Choice {
 			type_lazy = () -> EnergyCommodityInterEnergy1.mmObject();
 		}
 	};
+	@XmlElement(name = "RnwblNrgy", required = true)
 	protected EnergyCommodityRenewableEnergy1 renewableEnergy;
 	/**
-	 * Renewable energy commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -362,7 +369,7 @@ public class AssetClassCommodityEnergy1Choice {
 	public static final MMMessageAssociationEnd mmRenewableEnergy = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityEnergy1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RnwblNrgy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -374,10 +381,11 @@ public class AssetClassCommodityEnergy1Choice {
 			type_lazy = () -> EnergyCommodityRenewableEnergy1.mmObject();
 		}
 	};
+	@XmlElement(name = "LghtEnd", required = true)
 	protected EnergyCommodityLightEnd1 lightEnd;
 	/**
-	 * Light end energy commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -410,7 +418,7 @@ public class AssetClassCommodityEnergy1Choice {
 	public static final MMMessageAssociationEnd mmLightEnd = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityEnergy1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LghtEnd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -422,10 +430,11 @@ public class AssetClassCommodityEnergy1Choice {
 			type_lazy = () -> EnergyCommodityLightEnd1.mmObject();
 		}
 	};
+	@XmlElement(name = "Dstllts", required = true)
 	protected EnergyCommodityDistillates1 distillates;
 	/**
-	 * Distillates energy commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -458,7 +467,7 @@ public class AssetClassCommodityEnergy1Choice {
 	public static final MMMessageAssociationEnd mmDistillates = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityEnergy1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dstllts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -474,10 +483,12 @@ public class AssetClassCommodityEnergy1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AssetClassCommodityEnergy1Choice.mmElectricity, AssetClassCommodityEnergy1Choice.mmNaturalGas, AssetClassCommodityEnergy1Choice.mmOil, AssetClassCommodityEnergy1Choice.mmCoal,
-						AssetClassCommodityEnergy1Choice.mmInterEnergy, AssetClassCommodityEnergy1Choice.mmRenewableEnergy, AssetClassCommodityEnergy1Choice.mmLightEnd, AssetClassCommodityEnergy1Choice.mmDistillates);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmElectricity, com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmNaturalGas,
+						com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmOil, com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmCoal,
+						com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmInterEnergy, com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmRenewableEnergy,
+						com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmLightEnd, com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmDistillates);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityEnergy1Choice";
 				definition = "Defines commodity attributes of a derivative where the type is energy.";
@@ -486,75 +497,75 @@ public class AssetClassCommodityEnergy1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Elctrcty", required = true)
 	public EnergyCommodityElectricity1 getElectricity() {
 		return electricity;
 	}
 
-	public void setElectricity(EnergyCommodityElectricity1 electricity) {
-		this.electricity = electricity;
+	public AssetClassCommodityEnergy1Choice setElectricity(EnergyCommodityElectricity1 electricity) {
+		this.electricity = Objects.requireNonNull(electricity);
+		return this;
 	}
 
-	@XmlElement(name = "NtrlGas", required = true)
 	public EnergyCommodityNaturalGas1 getNaturalGas() {
 		return naturalGas;
 	}
 
-	public void setNaturalGas(EnergyCommodityNaturalGas1 naturalGas) {
-		this.naturalGas = naturalGas;
+	public AssetClassCommodityEnergy1Choice setNaturalGas(EnergyCommodityNaturalGas1 naturalGas) {
+		this.naturalGas = Objects.requireNonNull(naturalGas);
+		return this;
 	}
 
-	@XmlElement(name = "Oil", required = true)
 	public EnergyCommodityOil1 getOil() {
 		return oil;
 	}
 
-	public void setOil(EnergyCommodityOil1 oil) {
-		this.oil = oil;
+	public AssetClassCommodityEnergy1Choice setOil(EnergyCommodityOil1 oil) {
+		this.oil = Objects.requireNonNull(oil);
+		return this;
 	}
 
-	@XmlElement(name = "Coal", required = true)
 	public EnergyCommodityCoal1 getCoal() {
 		return coal;
 	}
 
-	public void setCoal(EnergyCommodityCoal1 coal) {
-		this.coal = coal;
+	public AssetClassCommodityEnergy1Choice setCoal(EnergyCommodityCoal1 coal) {
+		this.coal = Objects.requireNonNull(coal);
+		return this;
 	}
 
-	@XmlElement(name = "IntrNrgy", required = true)
 	public EnergyCommodityInterEnergy1 getInterEnergy() {
 		return interEnergy;
 	}
 
-	public void setInterEnergy(EnergyCommodityInterEnergy1 interEnergy) {
-		this.interEnergy = interEnergy;
+	public AssetClassCommodityEnergy1Choice setInterEnergy(EnergyCommodityInterEnergy1 interEnergy) {
+		this.interEnergy = Objects.requireNonNull(interEnergy);
+		return this;
 	}
 
-	@XmlElement(name = "RnwblNrgy", required = true)
 	public EnergyCommodityRenewableEnergy1 getRenewableEnergy() {
 		return renewableEnergy;
 	}
 
-	public void setRenewableEnergy(EnergyCommodityRenewableEnergy1 renewableEnergy) {
-		this.renewableEnergy = renewableEnergy;
+	public AssetClassCommodityEnergy1Choice setRenewableEnergy(EnergyCommodityRenewableEnergy1 renewableEnergy) {
+		this.renewableEnergy = Objects.requireNonNull(renewableEnergy);
+		return this;
 	}
 
-	@XmlElement(name = "LghtEnd", required = true)
 	public EnergyCommodityLightEnd1 getLightEnd() {
 		return lightEnd;
 	}
 
-	public void setLightEnd(EnergyCommodityLightEnd1 lightEnd) {
-		this.lightEnd = lightEnd;
+	public AssetClassCommodityEnergy1Choice setLightEnd(EnergyCommodityLightEnd1 lightEnd) {
+		this.lightEnd = Objects.requireNonNull(lightEnd);
+		return this;
 	}
 
-	@XmlElement(name = "Dstllts", required = true)
 	public EnergyCommodityDistillates1 getDistillates() {
 		return distillates;
 	}
 
-	public void setDistillates(EnergyCommodityDistillates1 distillates) {
-		this.distillates = distillates;
+	public AssetClassCommodityEnergy1Choice setDistillates(EnergyCommodityDistillates1 distillates) {
+		this.distillates = Objects.requireNonNull(distillates);
+		return this;
 	}
 }

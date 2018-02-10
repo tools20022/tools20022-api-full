@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ValuationTimingCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies how the price valuation timing is done based on the timeline
@@ -33,14 +38,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValuationTimingCode#mmExceptional
- * ValuationTimingCode.mmExceptional}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValuationTimingCode#Exceptional
+ * ValuationTimingCode.Exceptional}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ValuationTimingCode#Usual
+ * ValuationTimingCode.Usual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValuationTimingCode#mmUsual
- * ValuationTimingCode.mmUsual}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ValuationTimingCode#mmParticular
- * ValuationTimingCode.mmParticular}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValuationTimingCode#Particular
+ * ValuationTimingCode.Particular}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ValuationTimingCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ValuationTimingCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -100,12 +105,12 @@ public class ValuationTimingCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmExceptional = new MMCode() {
+	public static final ValuationTimingCode Exceptional = new ValuationTimingCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Exceptional";
 			definition = "Price valuation is done exceptionally, outside the timeframe specified in the prospectus.";
-			owner_lazy = () -> ValuationTimingCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ValuationTimingCode.mmObject();
 			codeName = "EXCP";
 		}
 	};
@@ -132,12 +137,12 @@ public class ValuationTimingCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmUsual = new MMCode() {
+	public static final ValuationTimingCode Usual = new ValuationTimingCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Usual";
 			definition = "Price valuation is done within the timeframe specified in the prospectus.";
-			owner_lazy = () -> ValuationTimingCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ValuationTimingCode.mmObject();
 			codeName = "USUA";
 		}
 	};
@@ -166,28 +171,60 @@ public class ValuationTimingCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmParticular = new MMCode() {
+	public static final ValuationTimingCode Particular = new ValuationTimingCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Particular";
 			definition = "Price valuation that is done outside the usual timeframe, but in conformance with a case specified in the prospectus, eg, market closing day.";
-			owner_lazy = () -> ValuationTimingCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ValuationTimingCode.mmObject();
 			codeName = "PATC";
 		}
 	};
+	final static private LinkedHashMap<String, ValuationTimingCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ValuationTimingCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("EXCP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ValuationTimingCode";
 				definition = "Specifies how the price valuation timing is done based on the timeline defined in the prospectus.";
-				code_lazy = () -> Arrays.asList(ValuationTimingCode.mmExceptional, ValuationTimingCode.mmUsual, ValuationTimingCode.mmParticular);
 				derivation_lazy = () -> Arrays.asList(ValuationTiming1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ValuationTimingCode.Exceptional, com.tools20022.repository.codeset.ValuationTimingCode.Usual,
+						com.tools20022.repository.codeset.ValuationTimingCode.Particular);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Exceptional.getCodeName().get(), Exceptional);
+		codesByName.put(Usual.getCodeName().get(), Usual);
+		codesByName.put(Particular.getCodeName().get(), Particular);
+	}
+
+	public static ValuationTimingCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ValuationTimingCode[] values() {
+		ValuationTimingCode[] values = new ValuationTimingCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ValuationTimingCode> {
+		@Override
+		public ValuationTimingCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ValuationTimingCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

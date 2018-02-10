@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -81,8 +80,53 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDebtorRule#forOriginalNotificationReference3
+ * ConstraintDebtorRule.forOriginalNotificationReference3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDebtorAgentRule#forOriginalNotificationReference3
+ * ConstraintDebtorAgentRule.forOriginalNotificationReference3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediaryAgentRule#forOriginalNotificationReference3
+ * ConstraintIntermediaryAgentRule.forOriginalNotificationReference3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMandatoryDebtorRule#forOriginalNotificationReference3
+ * ConstraintMandatoryDebtorRule.forOriginalNotificationReference3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediaryAgentAndDebtorAgentRule#forOriginalNotificationReference3
+ * ConstraintIntermediaryAgentAndDebtorAgentRule.
+ * forOriginalNotificationReference3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalAmountAndAmount1Rule#forOriginalNotificationReference3
+ * ConstraintTotalAmountAndAmount1Rule.forOriginalNotificationReference3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountAndCurrencyRule#forOriginalNotificationReference3
+ * ConstraintAccountAndCurrencyRule.forOriginalNotificationReference3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalAmountAndAmount2Rule#forOriginalNotificationReference3
+ * ConstraintTotalAmountAndAmount2Rule.forOriginalNotificationReference3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountRule#forOriginalNotificationReference3
+ * ConstraintAccountRule.forOriginalNotificationReference3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountOwnerRule#forOriginalNotificationReference3
+ * ConstraintAccountOwnerRule.forOriginalNotificationReference3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountServicerRule#forOriginalNotificationReference3
+ * ConstraintAccountServicerRule.forOriginalNotificationReference3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintExpectedValueDateRule#forOriginalNotificationReference3
+ * ConstraintExpectedValueDateRule.forOriginalNotificationReference3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRelatedAccountRule#forOriginalNotificationReference3
+ * ConstraintRelatedAccountRule.forOriginalNotificationReference3}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,15 +144,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OriginalNotificationReference3", propOrder = {"account", "accountOwner", "accountServicer", "relatedAccount", "totalAmount", "expectedValueDate", "debtor", "debtorAgent", "intermediaryAgent", "originalItemAndStatus"})
 public class OriginalNotificationReference3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Acct")
 	protected CashAccount24 account;
 	/**
-	 * Identifies the account to be credited with the incoming amount of money.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -150,7 +195,7 @@ public class OriginalNotificationReference3 {
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
-			componentContext_lazy = () -> OriginalNotificationReference3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalNotificationReference3.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,10 +208,11 @@ public class OriginalNotificationReference3 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected Party12Choice accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -206,7 +252,7 @@ public class OriginalNotificationReference3 {
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> OriginalNotificationReference3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalNotificationReference3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,13 +265,11 @@ public class OriginalNotificationReference3 {
 			type_lazy = () -> Party12Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcr")
 	protected BranchAndFinancialInstitutionIdentification5 accountServicer;
 	/**
-	 * Party that manages the account on behalf of the account owner, that is
-	 * manages the registration and booking of entries on the account,
-	 * calculates balances on the account and provides information about the
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -268,7 +312,7 @@ public class OriginalNotificationReference3 {
 	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> OriginalNotificationReference3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalNotificationReference3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,11 +325,11 @@ public class OriginalNotificationReference3 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdAcct")
 	protected CashAccount24 relatedAccount;
 	/**
-	 * Identifies the parent account of the account to be credited with the
-	 * incoming amount of money.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -326,7 +370,7 @@ public class OriginalNotificationReference3 {
 	public static final MMMessageAssociationEnd mmRelatedAccount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
-			componentContext_lazy = () -> OriginalNotificationReference3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalNotificationReference3.mmObject();
 			isDerived = false;
 			xmlTag = "RltdAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -339,10 +383,11 @@ public class OriginalNotificationReference3 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlAmt")
 	protected ActiveOrHistoricCurrencyAndAmount totalAmount;
 	/**
-	 * Sum of the amounts in all the Item entries.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -378,7 +423,7 @@ public class OriginalNotificationReference3 {
 	 */
 	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OriginalNotificationReference3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalNotificationReference3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -390,11 +435,11 @@ public class OriginalNotificationReference3 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "XpctdValDt")
 	protected ISODate expectedValueDate;
 	/**
-	 * Date on which the first agent expects the cash to be available to the
-	 * final agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -437,7 +482,7 @@ public class OriginalNotificationReference3 {
 	public static final MMMessageAttribute mmExpectedValueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
-			componentContext_lazy = () -> OriginalNotificationReference3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalNotificationReference3.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdValDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -449,10 +494,11 @@ public class OriginalNotificationReference3 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "Dbtr")
 	protected Party12Choice debtor;
 	/**
-	 * Party that owes an amount of money to the (ultimate) creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -493,7 +539,7 @@ public class OriginalNotificationReference3 {
 	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> OriginalNotificationReference3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalNotificationReference3.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -506,10 +552,11 @@ public class OriginalNotificationReference3 {
 			type_lazy = () -> Party12Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DbtrAgt")
 	protected BranchAndFinancialInstitutionIdentification5 debtorAgent;
 	/**
-	 * Financial institution servicing an account for the debtor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -551,7 +598,7 @@ public class OriginalNotificationReference3 {
 	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> OriginalNotificationReference3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalNotificationReference3.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -564,10 +611,11 @@ public class OriginalNotificationReference3 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrmyAgt")
 	protected BranchAndFinancialInstitutionIdentification5 intermediaryAgent;
 	/**
-	 * Agent between the debtor's agent and the creditor's agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -609,7 +657,7 @@ public class OriginalNotificationReference3 {
 	public static final MMMessageAssociationEnd mmIntermediaryAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> OriginalNotificationReference3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalNotificationReference3.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -622,11 +670,11 @@ public class OriginalNotificationReference3 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlItmAndSts", required = true)
 	protected List<com.tools20022.repository.msg.OriginalItemAndStatus3> originalItemAndStatus;
 	/**
-	 * Provides details of the expected amount on the account serviced by the
-	 * account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -668,7 +716,7 @@ public class OriginalNotificationReference3 {
 	public static final MMMessageAssociationEnd mmOriginalItemAndStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmPayment;
-			componentContext_lazy = () -> OriginalNotificationReference3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalNotificationReference3.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlItmAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -684,11 +732,21 @@ public class OriginalNotificationReference3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OriginalNotificationReference3.mmAccount, OriginalNotificationReference3.mmAccountOwner, OriginalNotificationReference3.mmAccountServicer,
-						OriginalNotificationReference3.mmRelatedAccount, OriginalNotificationReference3.mmTotalAmount, OriginalNotificationReference3.mmExpectedValueDate, OriginalNotificationReference3.mmDebtor,
-						OriginalNotificationReference3.mmDebtorAgent, OriginalNotificationReference3.mmIntermediaryAgent, OriginalNotificationReference3.mmOriginalItemAndStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalNotificationReference3.mmAccount, com.tools20022.repository.msg.OriginalNotificationReference3.mmAccountOwner,
+						com.tools20022.repository.msg.OriginalNotificationReference3.mmAccountServicer, com.tools20022.repository.msg.OriginalNotificationReference3.mmRelatedAccount,
+						com.tools20022.repository.msg.OriginalNotificationReference3.mmTotalAmount, com.tools20022.repository.msg.OriginalNotificationReference3.mmExpectedValueDate,
+						com.tools20022.repository.msg.OriginalNotificationReference3.mmDebtor, com.tools20022.repository.msg.OriginalNotificationReference3.mmDebtorAgent,
+						com.tools20022.repository.msg.OriginalNotificationReference3.mmIntermediaryAgent, com.tools20022.repository.msg.OriginalNotificationReference3.mmOriginalItemAndStatus);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDebtorRule.forOriginalNotificationReference3,
+						com.tools20022.repository.constraints.ConstraintDebtorAgentRule.forOriginalNotificationReference3, com.tools20022.repository.constraints.ConstraintIntermediaryAgentRule.forOriginalNotificationReference3,
+						com.tools20022.repository.constraints.ConstraintMandatoryDebtorRule.forOriginalNotificationReference3,
+						com.tools20022.repository.constraints.ConstraintIntermediaryAgentAndDebtorAgentRule.forOriginalNotificationReference3,
+						com.tools20022.repository.constraints.ConstraintTotalAmountAndAmount1Rule.forOriginalNotificationReference3, com.tools20022.repository.constraints.ConstraintAccountAndCurrencyRule.forOriginalNotificationReference3,
+						com.tools20022.repository.constraints.ConstraintTotalAmountAndAmount2Rule.forOriginalNotificationReference3, com.tools20022.repository.constraints.ConstraintAccountRule.forOriginalNotificationReference3,
+						com.tools20022.repository.constraints.ConstraintAccountOwnerRule.forOriginalNotificationReference3, com.tools20022.repository.constraints.ConstraintAccountServicerRule.forOriginalNotificationReference3,
+						com.tools20022.repository.constraints.ConstraintExpectedValueDateRule.forOriginalNotificationReference3, com.tools20022.repository.constraints.ConstraintRelatedAccountRule.forOriginalNotificationReference3);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalNotificationReference3";
 				definition = "Provides details on the account notification.";
@@ -698,93 +756,93 @@ public class OriginalNotificationReference3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Acct")
-	public CashAccount24 getAccount() {
-		return account;
+	public Optional<CashAccount24> getAccount() {
+		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public void setAccount(com.tools20022.repository.msg.CashAccount24 account) {
+	public OriginalNotificationReference3 setAccount(com.tools20022.repository.msg.CashAccount24 account) {
 		this.account = account;
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public Party12Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<Party12Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(Party12Choice accountOwner) {
+	public OriginalNotificationReference3 setAccountOwner(Party12Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcr")
-	public BranchAndFinancialInstitutionIdentification5 getAccountServicer() {
-		return accountServicer;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getAccountServicer() {
+		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public void setAccountServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountServicer) {
+	public OriginalNotificationReference3 setAccountServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountServicer) {
 		this.accountServicer = accountServicer;
+		return this;
 	}
 
-	@XmlElement(name = "RltdAcct")
-	public CashAccount24 getRelatedAccount() {
-		return relatedAccount;
+	public Optional<CashAccount24> getRelatedAccount() {
+		return relatedAccount == null ? Optional.empty() : Optional.of(relatedAccount);
 	}
 
-	public void setRelatedAccount(com.tools20022.repository.msg.CashAccount24 relatedAccount) {
+	public OriginalNotificationReference3 setRelatedAccount(com.tools20022.repository.msg.CashAccount24 relatedAccount) {
 		this.relatedAccount = relatedAccount;
+		return this;
 	}
 
-	@XmlElement(name = "TtlAmt")
-	public ActiveOrHistoricCurrencyAndAmount getTotalAmount() {
-		return totalAmount;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getTotalAmount() {
+		return totalAmount == null ? Optional.empty() : Optional.of(totalAmount);
 	}
 
-	public void setTotalAmount(ActiveOrHistoricCurrencyAndAmount totalAmount) {
+	public OriginalNotificationReference3 setTotalAmount(ActiveOrHistoricCurrencyAndAmount totalAmount) {
 		this.totalAmount = totalAmount;
+		return this;
 	}
 
-	@XmlElement(name = "XpctdValDt")
-	public ISODate getExpectedValueDate() {
-		return expectedValueDate;
+	public Optional<ISODate> getExpectedValueDate() {
+		return expectedValueDate == null ? Optional.empty() : Optional.of(expectedValueDate);
 	}
 
-	public void setExpectedValueDate(ISODate expectedValueDate) {
+	public OriginalNotificationReference3 setExpectedValueDate(ISODate expectedValueDate) {
 		this.expectedValueDate = expectedValueDate;
+		return this;
 	}
 
-	@XmlElement(name = "Dbtr")
-	public Party12Choice getDebtor() {
-		return debtor;
+	public Optional<Party12Choice> getDebtor() {
+		return debtor == null ? Optional.empty() : Optional.of(debtor);
 	}
 
-	public void setDebtor(Party12Choice debtor) {
+	public OriginalNotificationReference3 setDebtor(Party12Choice debtor) {
 		this.debtor = debtor;
+		return this;
 	}
 
-	@XmlElement(name = "DbtrAgt")
-	public BranchAndFinancialInstitutionIdentification5 getDebtorAgent() {
-		return debtorAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getDebtorAgent() {
+		return debtorAgent == null ? Optional.empty() : Optional.of(debtorAgent);
 	}
 
-	public void setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtorAgent) {
+	public OriginalNotificationReference3 setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtorAgent) {
 		this.debtorAgent = debtorAgent;
+		return this;
 	}
 
-	@XmlElement(name = "IntrmyAgt")
-	public BranchAndFinancialInstitutionIdentification5 getIntermediaryAgent() {
-		return intermediaryAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getIntermediaryAgent() {
+		return intermediaryAgent == null ? Optional.empty() : Optional.of(intermediaryAgent);
 	}
 
-	public void setIntermediaryAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 intermediaryAgent) {
+	public OriginalNotificationReference3 setIntermediaryAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 intermediaryAgent) {
 		this.intermediaryAgent = intermediaryAgent;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlItmAndSts", required = true)
 	public List<OriginalItemAndStatus3> getOriginalItemAndStatus() {
-		return originalItemAndStatus;
+		return originalItemAndStatus == null ? originalItemAndStatus = new ArrayList<>() : originalItemAndStatus;
 	}
 
-	public void setOriginalItemAndStatus(List<com.tools20022.repository.msg.OriginalItemAndStatus3> originalItemAndStatus) {
-		this.originalItemAndStatus = originalItemAndStatus;
+	public OriginalNotificationReference3 setOriginalItemAndStatus(List<com.tools20022.repository.msg.OriginalItemAndStatus3> originalItemAndStatus) {
+		this.originalItemAndStatus = Objects.requireNonNull(originalItemAndStatus);
+		return this;
 	}
 }

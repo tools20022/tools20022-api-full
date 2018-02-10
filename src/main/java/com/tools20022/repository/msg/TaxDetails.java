@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCertificateIdentificationAndOrTaxTypeRule#forTaxDetails
+ * ConstraintCertificateIdentificationAndOrTaxTypeRule.forTaxDetails}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,16 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Set of characteristics defining the type of tax."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TaxDetails", propOrder = {"certificateIdentification", "taxType"})
 public class TaxDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CertId")
 	protected Max35Text certificateIdentification;
 	/**
-	 * Document issued by first agent on behalf of debtor to report withholding
-	 * tax to taxing authority.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +116,7 @@ public class TaxDetails {
 	public static final MMMessageAttribute mmCertificateIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmCertificateIdentification;
-			componentContext_lazy = () -> TaxDetails.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxDetails.mmObject();
 			isDerived = false;
 			xmlTag = "CertId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +127,11 @@ public class TaxDetails {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxTp")
 	protected TaxType taxType;
 	/**
-	 * Information on the type of tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -150,7 +160,7 @@ public class TaxDetails {
 	public static final MMMessageAssociationEnd mmTaxType = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Tax.mmObject();
-			componentContext_lazy = () -> TaxDetails.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxDetails.mmObject();
 			isDerived = false;
 			xmlTag = "TaxTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,9 +176,10 @@ public class TaxDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TaxDetails.mmCertificateIdentification, TaxDetails.mmTaxType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxDetails.mmCertificateIdentification, com.tools20022.repository.msg.TaxDetails.mmTaxType);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCertificateIdentificationAndOrTaxTypeRule.forTaxDetails);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxDetails";
 				definition = "Set of characteristics defining the type of tax.";
@@ -177,21 +188,21 @@ public class TaxDetails {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CertId")
-	public Max35Text getCertificateIdentification() {
-		return certificateIdentification;
+	public Optional<Max35Text> getCertificateIdentification() {
+		return certificateIdentification == null ? Optional.empty() : Optional.of(certificateIdentification);
 	}
 
-	public void setCertificateIdentification(Max35Text certificateIdentification) {
+	public TaxDetails setCertificateIdentification(Max35Text certificateIdentification) {
 		this.certificateIdentification = certificateIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TaxTp")
-	public TaxType getTaxType() {
-		return taxType;
+	public Optional<TaxType> getTaxType() {
+		return taxType == null ? Optional.empty() : Optional.of(taxType);
 	}
 
-	public void setTaxType(com.tools20022.repository.msg.TaxType taxType) {
+	public TaxDetails setTaxType(com.tools20022.repository.msg.TaxType taxType) {
 		this.taxType = taxType;
+		return this;
 	}
 }

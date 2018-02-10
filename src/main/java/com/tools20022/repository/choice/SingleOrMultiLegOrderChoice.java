@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.MultiLegOrder1;
 import com.tools20022.repository.msg.SingleOrder1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between a single order or a multileg order."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SingleOrMultiLegOrderChoice", propOrder = {"singleOrderDetails", "multilegOrderDetails"})
 public class SingleOrMultiLegOrderChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SnglOrdrDtls", required = true)
 	protected SingleOrder1 singleOrderDetails;
 	/**
-	 * Provides details about the single order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -103,7 +105,7 @@ public class SingleOrMultiLegOrderChoice {
 	public static final MMMessageAssociationEnd mmSingleOrderDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrder.mmObject();
-			componentContext_lazy = () -> SingleOrMultiLegOrderChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SingleOrMultiLegOrderChoice.mmObject();
 			isDerived = false;
 			xmlTag = "SnglOrdrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +117,11 @@ public class SingleOrMultiLegOrderChoice {
 			type_lazy = () -> SingleOrder1.mmObject();
 		}
 	};
+	@XmlElement(name = "MltlgOrdrDtls", required = true)
 	protected MultiLegOrder1 multilegOrderDetails;
 	/**
-	 * Provides details about the multileg order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -150,7 +153,7 @@ public class SingleOrMultiLegOrderChoice {
 	public static final MMMessageAssociationEnd mmMultilegOrderDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrder.mmObject();
-			componentContext_lazy = () -> SingleOrMultiLegOrderChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SingleOrMultiLegOrderChoice.mmObject();
 			isDerived = false;
 			xmlTag = "MltlgOrdrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,8 +169,8 @@ public class SingleOrMultiLegOrderChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SingleOrMultiLegOrderChoice.mmSingleOrderDetails, SingleOrMultiLegOrderChoice.mmMultilegOrderDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SingleOrMultiLegOrderChoice.mmSingleOrderDetails, com.tools20022.repository.choice.SingleOrMultiLegOrderChoice.mmMultilegOrderDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SingleOrMultiLegOrderChoice";
 				definition = "Choice between a single order or a multileg order.";
@@ -176,21 +179,21 @@ public class SingleOrMultiLegOrderChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SnglOrdrDtls", required = true)
 	public SingleOrder1 getSingleOrderDetails() {
 		return singleOrderDetails;
 	}
 
-	public void setSingleOrderDetails(SingleOrder1 singleOrderDetails) {
-		this.singleOrderDetails = singleOrderDetails;
+	public SingleOrMultiLegOrderChoice setSingleOrderDetails(SingleOrder1 singleOrderDetails) {
+		this.singleOrderDetails = Objects.requireNonNull(singleOrderDetails);
+		return this;
 	}
 
-	@XmlElement(name = "MltlgOrdrDtls", required = true)
 	public MultiLegOrder1 getMultilegOrderDetails() {
 		return multilegOrderDetails;
 	}
 
-	public void setMultilegOrderDetails(MultiLegOrder1 multilegOrderDetails) {
-		this.multilegOrderDetails = multilegOrderDetails;
+	public SingleOrMultiLegOrderChoice setMultilegOrderDetails(MultiLegOrder1 multilegOrderDetails) {
+		this.multilegOrderDetails = Objects.requireNonNull(multilegOrderDetails);
+		return this;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.QueryType2Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionQuery1", propOrder = {"queryType", "transactionCriteria"})
 public class TransactionQuery1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QryTp")
 	protected QueryType2Code queryType;
 	/**
-	 * Specifies the type of matching items to be returned in the response to
-	 * the query.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +117,7 @@ public class TransactionQuery1 {
 	 */
 	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionQuery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionQuery1.mmObject();
 			isDerived = false;
 			xmlTag = "QryTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +129,11 @@ public class TransactionQuery1 {
 			simpleType_lazy = () -> QueryType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TxCrit")
 	protected TransactionCriteria1Choice transactionCriteria;
 	/**
-	 * Defines the payment transaction query criteria.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -166,7 +168,7 @@ public class TransactionQuery1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionQuery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionQuery1.mmObject();
 			isDerived = false;
 			xmlTag = "TxCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,8 +185,8 @@ public class TransactionQuery1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionQuery1.mmQueryType, TransactionQuery1.mmTransactionCriteria);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionQuery1.mmQueryType, com.tools20022.repository.msg.TransactionQuery1.mmTransactionCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionQuery1";
 				definition = "Defines the query criteria.";
@@ -194,21 +196,21 @@ public class TransactionQuery1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QryTp")
-	public QueryType2Code getQueryType() {
-		return queryType;
+	public Optional<QueryType2Code> getQueryType() {
+		return queryType == null ? Optional.empty() : Optional.of(queryType);
 	}
 
-	public void setQueryType(QueryType2Code queryType) {
+	public TransactionQuery1 setQueryType(QueryType2Code queryType) {
 		this.queryType = queryType;
+		return this;
 	}
 
-	@XmlElement(name = "TxCrit")
-	public TransactionCriteria1Choice getTransactionCriteria() {
-		return transactionCriteria;
+	public Optional<TransactionCriteria1Choice> getTransactionCriteria() {
+		return transactionCriteria == null ? Optional.empty() : Optional.of(transactionCriteria);
 	}
 
-	public void setTransactionCriteria(TransactionCriteria1Choice transactionCriteria) {
+	public TransactionQuery1 setTransactionCriteria(TransactionCriteria1Choice transactionCriteria) {
 		this.transactionCriteria = transactionCriteria;
+		return this;
 	}
 }

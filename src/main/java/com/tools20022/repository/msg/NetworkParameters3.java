@@ -27,9 +27,8 @@ import com.tools20022.repository.datatype.Max35Binary;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.NetworkAccess;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,15 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * NetworkParameters1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NetworkParameters3", propOrder = {"address", "userName", "accessCode", "serverCertificate", "serverCertificateIdentifier"})
 public class NetworkParameters3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Adr", required = true)
 	protected List<com.tools20022.repository.msg.NetworkParameters4> address;
 	/**
-	 * Network addresses of the host.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -134,7 +134,7 @@ public class NetworkParameters3 {
 	 */
 	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> NetworkParameters3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,10 +146,11 @@ public class NetworkParameters3 {
 			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters4.mmObject();
 		}
 	};
+	@XmlElement(name = "UsrNm")
 	protected Max35Text userName;
 	/**
-	 * User name identifying the client.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,7 +196,7 @@ public class NetworkParameters3 {
 	public static final MMMessageAttribute mmUserName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmUserName;
-			componentContext_lazy = () -> NetworkParameters3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "UsrNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,10 +209,11 @@ public class NetworkParameters3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AccsCd")
 	protected Max35Binary accessCode;
 	/**
-	 * Password authenticating the client.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -260,7 +262,7 @@ public class NetworkParameters3 {
 	public static final MMMessageAttribute mmAccessCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmAccessCode;
-			componentContext_lazy = () -> NetworkParameters3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "AccsCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,10 +275,11 @@ public class NetworkParameters3 {
 			simpleType_lazy = () -> Max35Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "SvrCert")
 	protected List<Max3000Binary> serverCertificate;
 	/**
-	 * X.509 Certificate required to authenticate the server.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -312,7 +315,7 @@ public class NetworkParameters3 {
 	 */
 	public static final MMMessageAttribute mmServerCertificate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NetworkParameters3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "SvrCert";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -323,11 +326,11 @@ public class NetworkParameters3 {
 			simpleType_lazy = () -> Max3000Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "SvrCertIdr")
 	protected List<Max140Binary> serverCertificateIdentifier;
 	/**
-	 * Identification of the X.509 Certificate required to authenticate the
-	 * server, for instance a digest of the certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -365,7 +368,7 @@ public class NetworkParameters3 {
 	 */
 	public static final MMMessageAttribute mmServerCertificateIdentifier = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NetworkParameters3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "SvrCertIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -380,10 +383,10 @@ public class NetworkParameters3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NetworkParameters3.mmAddress, NetworkParameters3.mmUserName, NetworkParameters3.mmAccessCode, NetworkParameters3.mmServerCertificate,
-						NetworkParameters3.mmServerCertificateIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters3.mmAddress, com.tools20022.repository.msg.NetworkParameters3.mmUserName,
+						com.tools20022.repository.msg.NetworkParameters3.mmAccessCode, com.tools20022.repository.msg.NetworkParameters3.mmServerCertificate, com.tools20022.repository.msg.NetworkParameters3.mmServerCertificateIdentifier);
 				trace_lazy = () -> NetworkAccess.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetworkParameters3";
 				definition = "Parameters to communicate with a host.";
@@ -394,48 +397,48 @@ public class NetworkParameters3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Adr", required = true)
 	public List<NetworkParameters4> getAddress() {
-		return address;
+		return address == null ? address = new ArrayList<>() : address;
 	}
 
-	public void setAddress(List<com.tools20022.repository.msg.NetworkParameters4> address) {
-		this.address = address;
+	public NetworkParameters3 setAddress(List<com.tools20022.repository.msg.NetworkParameters4> address) {
+		this.address = Objects.requireNonNull(address);
+		return this;
 	}
 
-	@XmlElement(name = "UsrNm")
-	public Max35Text getUserName() {
-		return userName;
+	public Optional<Max35Text> getUserName() {
+		return userName == null ? Optional.empty() : Optional.of(userName);
 	}
 
-	public void setUserName(Max35Text userName) {
+	public NetworkParameters3 setUserName(Max35Text userName) {
 		this.userName = userName;
+		return this;
 	}
 
-	@XmlElement(name = "AccsCd")
-	public Max35Binary getAccessCode() {
-		return accessCode;
+	public Optional<Max35Binary> getAccessCode() {
+		return accessCode == null ? Optional.empty() : Optional.of(accessCode);
 	}
 
-	public void setAccessCode(Max35Binary accessCode) {
+	public NetworkParameters3 setAccessCode(Max35Binary accessCode) {
 		this.accessCode = accessCode;
+		return this;
 	}
 
-	@XmlElement(name = "SvrCert")
 	public List<Max3000Binary> getServerCertificate() {
-		return serverCertificate;
+		return serverCertificate == null ? serverCertificate = new ArrayList<>() : serverCertificate;
 	}
 
-	public void setServerCertificate(List<Max3000Binary> serverCertificate) {
-		this.serverCertificate = serverCertificate;
+	public NetworkParameters3 setServerCertificate(List<Max3000Binary> serverCertificate) {
+		this.serverCertificate = Objects.requireNonNull(serverCertificate);
+		return this;
 	}
 
-	@XmlElement(name = "SvrCertIdr")
 	public List<Max140Binary> getServerCertificateIdentifier() {
-		return serverCertificateIdentifier;
+		return serverCertificateIdentifier == null ? serverCertificateIdentifier = new ArrayList<>() : serverCertificateIdentifier;
 	}
 
-	public void setServerCertificateIdentifier(List<Max140Binary> serverCertificateIdentifier) {
-		this.serverCertificateIdentifier = serverCertificateIdentifier;
+	public NetworkParameters3 setServerCertificateIdentifier(List<Max140Binary> serverCertificateIdentifier) {
+		this.serverCertificateIdentifier = Objects.requireNonNull(serverCertificateIdentifier);
+		return this;
 	}
 }

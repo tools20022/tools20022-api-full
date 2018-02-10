@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Restriction information details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RestrictionDetailsSD1", propOrder = {"restrictionType", "fiscalDomicile", "identification"})
 public class RestrictionDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RstrctnTp", required = true)
 	protected GenericIdentification36 restrictionType;
 	/**
-	 * Type of restriction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -101,7 +103,7 @@ public class RestrictionDetailsSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmRestrictionType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RestrictionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RestrictionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +115,11 @@ public class RestrictionDetailsSD1 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification36.mmObject();
 		}
 	};
+	@XmlElement(name = "FsclDmcl", required = true)
 	protected CountryCode fiscalDomicile;
 	/**
-	 * Country in which the account owner has one's fiscal domicile.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,7 +147,7 @@ public class RestrictionDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmFiscalDomicile = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RestrictionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RestrictionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FsclDmcl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,10 +158,11 @@ public class RestrictionDetailsSD1 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Reference to the applicable restriction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -185,7 +189,7 @@ public class RestrictionDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RestrictionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RestrictionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,8 +204,9 @@ public class RestrictionDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RestrictionDetailsSD1.mmRestrictionType, RestrictionDetailsSD1.mmFiscalDomicile, RestrictionDetailsSD1.mmIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RestrictionDetailsSD1.mmRestrictionType, com.tools20022.repository.msg.RestrictionDetailsSD1.mmFiscalDomicile,
+						com.tools20022.repository.msg.RestrictionDetailsSD1.mmIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RestrictionDetailsSD1";
 				definition = "Restriction information details.";
@@ -210,30 +215,30 @@ public class RestrictionDetailsSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RstrctnTp", required = true)
 	public GenericIdentification36 getRestrictionType() {
 		return restrictionType;
 	}
 
-	public void setRestrictionType(com.tools20022.repository.msg.GenericIdentification36 restrictionType) {
-		this.restrictionType = restrictionType;
+	public RestrictionDetailsSD1 setRestrictionType(com.tools20022.repository.msg.GenericIdentification36 restrictionType) {
+		this.restrictionType = Objects.requireNonNull(restrictionType);
+		return this;
 	}
 
-	@XmlElement(name = "FsclDmcl", required = true)
 	public CountryCode getFiscalDomicile() {
 		return fiscalDomicile;
 	}
 
-	public void setFiscalDomicile(CountryCode fiscalDomicile) {
-		this.fiscalDomicile = fiscalDomicile;
+	public RestrictionDetailsSD1 setFiscalDomicile(CountryCode fiscalDomicile) {
+		this.fiscalDomicile = Objects.requireNonNull(fiscalDomicile);
+		return this;
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public RestrictionDetailsSD1 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 }

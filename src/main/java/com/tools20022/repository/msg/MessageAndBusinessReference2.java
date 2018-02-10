@@ -26,11 +26,9 @@ import com.tools20022.repository.entity.SecuritiesTradeIdentification;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -45,8 +43,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference2#mmPreviousReferenceOrOtherReferenceRule
- * MessageAndBusinessReference2.mmPreviousReferenceOrOtherReferenceRule}</li>
+ * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference2#PreviousReferenceOrOtherReferenceRule
+ * MessageAndBusinessReference2.PreviousReferenceOrOtherReferenceRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -83,8 +81,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#forMessageAndBusinessReference2
+ * ConstraintOtherReferenceGuideline.forMessageAndBusinessReference2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline#forMessageAndBusinessReference2
+ * ConstraintPreviousReferenceGuideline.forMessageAndBusinessReference2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -98,16 +107,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MessageAndBusinessReference2", propOrder = {"otherReference", "previousReference", "individualOrderReference", "investmentAccount"})
 public class MessageAndBusinessReference2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OthrRef", required = true)
 	protected AdditionalReference3 otherReference;
 	/**
-	 * Reference to a linked message sent in a proprietary way or reference of a
-	 * system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -141,7 +150,7 @@ public class MessageAndBusinessReference2 {
 	public static final MMMessageAssociationEnd mmOtherReference = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
-			componentContext_lazy = () -> MessageAndBusinessReference2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,10 +162,11 @@ public class MessageAndBusinessReference2 {
 			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsRef", required = true)
 	protected AdditionalReference3 previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -188,7 +198,7 @@ public class MessageAndBusinessReference2 {
 	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
-			componentContext_lazy = () -> MessageAndBusinessReference2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference2.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,11 +210,11 @@ public class MessageAndBusinessReference2 {
 			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
 		}
 	};
+	@XmlElement(name = "IndvOrdrRef")
 	protected List<Max35Text> individualOrderReference;
 	/**
-	 * Unique and unambiguous identifier for an order, as assigned by the
-	 * instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -239,7 +249,7 @@ public class MessageAndBusinessReference2 {
 	public static final MMMessageAttribute mmIndividualOrderReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
-			componentContext_lazy = () -> MessageAndBusinessReference2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference2.mmObject();
 			isDerived = false;
 			xmlTag = "IndvOrdrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -249,11 +259,11 @@ public class MessageAndBusinessReference2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstmtAcct")
 	protected InvestmentAccount13 investmentAccount;
 	/**
-	 * Account information of the order message for which the status is
-	 * requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -287,7 +297,7 @@ public class MessageAndBusinessReference2 {
 	public static final MMMessageAssociationEnd mmInvestmentAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
-			componentContext_lazy = () -> MessageAndBusinessReference2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference2.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -333,24 +343,26 @@ public class MessageAndBusinessReference2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmPreviousReferenceOrOtherReferenceRule = new MMXor() {
+	public static final MMXor PreviousReferenceOrOtherReferenceRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceOrOtherReferenceRule";
 			definition = "Either PreviousReference or Other Reference must be present, but not both.";
-			messageComponent_lazy = () -> MessageAndBusinessReference2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(MessageAndBusinessReference2.mmOtherReference, MessageAndBusinessReference2.mmPreviousReference);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageAndBusinessReference2.mmOtherReference, com.tools20022.repository.msg.MessageAndBusinessReference2.mmPreviousReference);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MessageAndBusinessReference2.mmOtherReference, MessageAndBusinessReference2.mmPreviousReference, MessageAndBusinessReference2.mmIndividualOrderReference,
-						MessageAndBusinessReference2.mmInvestmentAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageAndBusinessReference2.mmOtherReference, com.tools20022.repository.msg.MessageAndBusinessReference2.mmPreviousReference,
+						com.tools20022.repository.msg.MessageAndBusinessReference2.mmIndividualOrderReference, com.tools20022.repository.msg.MessageAndBusinessReference2.mmInvestmentAccount);
 				messageBuildingBlock_lazy = () -> Arrays.asList(RequestForOrderStatusReportV02.mmRequestDetails);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forMessageAndBusinessReference2,
+						com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline.forMessageAndBusinessReference2);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -361,45 +373,45 @@ public class MessageAndBusinessReference2 {
 				})).get();
 				name = "MessageAndBusinessReference2";
 				definition = "Information about the message reference of the message for which the status is requested and the business reference of the order.";
-				xors_lazy = () -> Arrays.asList(MessageAndBusinessReference2.mmPreviousReferenceOrOtherReferenceRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageAndBusinessReference2.PreviousReferenceOrOtherReferenceRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OthrRef", required = true)
 	public AdditionalReference3 getOtherReference() {
 		return otherReference;
 	}
 
-	public void setOtherReference(com.tools20022.repository.msg.AdditionalReference3 otherReference) {
-		this.otherReference = otherReference;
+	public MessageAndBusinessReference2 setOtherReference(com.tools20022.repository.msg.AdditionalReference3 otherReference) {
+		this.otherReference = Objects.requireNonNull(otherReference);
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef", required = true)
 	public AdditionalReference3 getPreviousReference() {
 		return previousReference;
 	}
 
-	public void setPreviousReference(com.tools20022.repository.msg.AdditionalReference3 previousReference) {
-		this.previousReference = previousReference;
+	public MessageAndBusinessReference2 setPreviousReference(com.tools20022.repository.msg.AdditionalReference3 previousReference) {
+		this.previousReference = Objects.requireNonNull(previousReference);
+		return this;
 	}
 
-	@XmlElement(name = "IndvOrdrRef")
 	public List<Max35Text> getIndividualOrderReference() {
-		return individualOrderReference;
+		return individualOrderReference == null ? individualOrderReference = new ArrayList<>() : individualOrderReference;
 	}
 
-	public void setIndividualOrderReference(List<Max35Text> individualOrderReference) {
-		this.individualOrderReference = individualOrderReference;
+	public MessageAndBusinessReference2 setIndividualOrderReference(List<Max35Text> individualOrderReference) {
+		this.individualOrderReference = Objects.requireNonNull(individualOrderReference);
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtAcct")
-	public InvestmentAccount13 getInvestmentAccount() {
-		return investmentAccount;
+	public Optional<InvestmentAccount13> getInvestmentAccount() {
+		return investmentAccount == null ? Optional.empty() : Optional.of(investmentAccount);
 	}
 
-	public void setInvestmentAccount(com.tools20022.repository.msg.InvestmentAccount13 investmentAccount) {
+	public MessageAndBusinessReference2 setInvestmentAccount(com.tools20022.repository.msg.InvestmentAccount13 investmentAccount) {
 		this.investmentAccount = investmentAccount;
+		return this;
 	}
 }

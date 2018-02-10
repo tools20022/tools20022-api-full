@@ -20,34 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AmountDirectionCode;
+import com.tools20022.repository.codeset.ReversalCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies if an operation is the result of a reversal operation.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AmountDirectionCode
- * AmountDirectionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReversalCode#mmReversalCredit
- * ReversalCode.mmReversalCredit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ReversalCode#mmReversalDebit
- * ReversalCode.mmReversalDebit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReversalCode#ReversalCredit
+ * ReversalCode.ReversalCredit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ReversalCode#ReversalDebit
+ * ReversalCode.ReversalDebit}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AmountDirectionCode
+ * AmountDirectionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies if an operation is the result of a reversal operation."</li>
  * </ul>
  */
-public class ReversalCode extends AmountDirectionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ReversalCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +87,12 @@ public class ReversalCode extends AmountDirectionCode {
 	 * name} = "ReversalCredit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReversalCredit = new MMCode() {
+	public static final ReversalCode ReversalCredit = new ReversalCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalCredit";
-			owner_lazy = () -> ReversalCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReversalCode.mmObject();
+			codeName = AmountDirectionCode.ReversalCredit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -105,26 +110,57 @@ public class ReversalCode extends AmountDirectionCode {
 	 * name} = "ReversalDebit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReversalDebit = new MMCode() {
+	public static final ReversalCode ReversalDebit = new ReversalCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalDebit";
-			owner_lazy = () -> ReversalCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReversalCode.mmObject();
+			codeName = AmountDirectionCode.ReversalDebit.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ReversalCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ReversalCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RVCD");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReversalCode";
 				definition = "Specifies if an operation is the result of a reversal operation.";
-				code_lazy = () -> Arrays.asList(ReversalCode.mmReversalCredit, ReversalCode.mmReversalDebit);
 				trace_lazy = () -> AmountDirectionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReversalCode.ReversalCredit, com.tools20022.repository.codeset.ReversalCode.ReversalDebit);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ReversalCredit.getCodeName().get(), ReversalCredit);
+		codesByName.put(ReversalDebit.getCodeName().get(), ReversalDebit);
+	}
+
+	public static ReversalCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ReversalCode[] values() {
+		ReversalCode[] values = new ReversalCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ReversalCode> {
+		@Override
+		public ReversalCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ReversalCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

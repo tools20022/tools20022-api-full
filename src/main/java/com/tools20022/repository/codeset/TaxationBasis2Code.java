@@ -20,33 +20,36 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TaxationBasisCode;
+import com.tools20022.repository.codeset.TaxationBasis2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the tax basis.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis2Code#Flat
+ * TaxationBasis2Code.Flat}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis2Code#PerUnit
+ * TaxationBasis2Code.PerUnit}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode
  * TaxationBasisCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis2Code#mmFlat
- * TaxationBasis2Code.mmFlat}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxationBasis2Code#mmPerUnit
- * TaxationBasis2Code.mmPerUnit}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -63,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the tax basis."</li>
  * </ul>
  */
-public class TaxationBasis2Code extends TaxationBasisCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TaxationBasis2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,11 +86,12 @@ public class TaxationBasis2Code extends TaxationBasisCode {
 	 * name} = "Flat"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFlat = new MMCode() {
+	public static final TaxationBasis2Code Flat = new TaxationBasis2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Flat";
-			owner_lazy = () -> TaxationBasis2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxationBasis2Code.mmObject();
+			codeName = TaxationBasisCode.Flat.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -105,26 +110,57 @@ public class TaxationBasis2Code extends TaxationBasisCode {
 	 * name} = "PerUnit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPerUnit = new MMCode() {
+	public static final TaxationBasis2Code PerUnit = new TaxationBasis2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
-			owner_lazy = () -> TaxationBasis2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxationBasis2Code.mmObject();
+			codeName = TaxationBasisCode.PerUnit.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TaxationBasis2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TaxationBasis2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FLAT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxationBasis2Code";
 				definition = "Specifies the tax basis.";
-				code_lazy = () -> Arrays.asList(TaxationBasis2Code.mmFlat, TaxationBasis2Code.mmPerUnit);
 				trace_lazy = () -> TaxationBasisCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxationBasis2Code.Flat, com.tools20022.repository.codeset.TaxationBasis2Code.PerUnit);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Flat.getCodeName().get(), Flat);
+		codesByName.put(PerUnit.getCodeName().get(), PerUnit);
+	}
+
+	public static TaxationBasis2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TaxationBasis2Code[] values() {
+		TaxationBasis2Code[] values = new TaxationBasis2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TaxationBasis2Code> {
+		@Override
+		public TaxationBasis2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TaxationBasis2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

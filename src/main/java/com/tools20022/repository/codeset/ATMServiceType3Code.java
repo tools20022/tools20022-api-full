@@ -20,52 +20,56 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ATMServiceTypeCode;
+import com.tools20022.repository.codeset.ATMServiceType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Describes the type of inquiry selected by the customer or the ATM.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode
- * ATMServiceTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType3Code#mmAccountStatements
- * ATMServiceType3Code.mmAccountStatements}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType3Code#AccountStatements
+ * ATMServiceType3Code.AccountStatements}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType3Code#mmCardVerification
- * ATMServiceType3Code.mmCardVerification}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType3Code#CardVerification
+ * ATMServiceType3Code.CardVerification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType3Code#mmDynamicCurrencyConversion
- * ATMServiceType3Code.mmDynamicCurrencyConversion}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType3Code#DynamicCurrencyConversion
+ * ATMServiceType3Code.DynamicCurrencyConversion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType3Code#mmExchangeRateDeposit
- * ATMServiceType3Code.mmExchangeRateDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType3Code#ExchangeRateDeposit
+ * ATMServiceType3Code.ExchangeRateDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType3Code#mmExchangeRateWithdrawal
- * ATMServiceType3Code.mmExchangeRateWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType3Code#ExchangeRateWithdrawal
+ * ATMServiceType3Code.ExchangeRateWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType3Code#mmSelectEMVApplication
- * ATMServiceType3Code.mmSelectEMVApplication}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType3Code#SelectEMVApplication
+ * ATMServiceType3Code.SelectEMVApplication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType3Code#mmCustomerProfile
- * ATMServiceType3Code.mmCustomerProfile}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType3Code#CustomerProfile
+ * ATMServiceType3Code.CustomerProfile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType3Code#mmBalanceInquiry
- * ATMServiceType3Code.mmBalanceInquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType3Code#BalanceInquiry
+ * ATMServiceType3Code.BalanceInquiry}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode
+ * ATMServiceTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,7 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Describes the type of inquiry selected by the customer or the ATM."</li>
  * </ul>
  */
-public class ATMServiceType3Code extends ATMServiceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ATMServiceType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -96,11 +101,12 @@ public class ATMServiceType3Code extends ATMServiceTypeCode {
 	 * name} = "AccountStatements"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountStatements = new MMCode() {
+	public static final ATMServiceType3Code AccountStatements = new ATMServiceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountStatements";
-			owner_lazy = () -> ATMServiceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMServiceType3Code.mmObject();
+			codeName = ATMServiceTypeCode.AccountStatements.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -119,11 +125,12 @@ public class ATMServiceType3Code extends ATMServiceTypeCode {
 	 * name} = "CardVerification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardVerification = new MMCode() {
+	public static final ATMServiceType3Code CardVerification = new ATMServiceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardVerification";
-			owner_lazy = () -> ATMServiceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMServiceType3Code.mmObject();
+			codeName = ATMServiceTypeCode.CardVerification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -142,11 +149,12 @@ public class ATMServiceType3Code extends ATMServiceTypeCode {
 	 * name} = "DynamicCurrencyConversion"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDynamicCurrencyConversion = new MMCode() {
+	public static final ATMServiceType3Code DynamicCurrencyConversion = new ATMServiceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DynamicCurrencyConversion";
-			owner_lazy = () -> ATMServiceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMServiceType3Code.mmObject();
+			codeName = ATMServiceTypeCode.DynamicCurrencyConversion.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -165,11 +173,12 @@ public class ATMServiceType3Code extends ATMServiceTypeCode {
 	 * name} = "ExchangeRateDeposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExchangeRateDeposit = new MMCode() {
+	public static final ATMServiceType3Code ExchangeRateDeposit = new ATMServiceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRateDeposit";
-			owner_lazy = () -> ATMServiceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMServiceType3Code.mmObject();
+			codeName = ATMServiceTypeCode.ExchangeRateDeposit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -188,11 +197,12 @@ public class ATMServiceType3Code extends ATMServiceTypeCode {
 	 * name} = "ExchangeRateWithdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExchangeRateWithdrawal = new MMCode() {
+	public static final ATMServiceType3Code ExchangeRateWithdrawal = new ATMServiceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRateWithdrawal";
-			owner_lazy = () -> ATMServiceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMServiceType3Code.mmObject();
+			codeName = ATMServiceTypeCode.ExchangeRateWithdrawal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -211,11 +221,12 @@ public class ATMServiceType3Code extends ATMServiceTypeCode {
 	 * name} = "SelectEMVApplication"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSelectEMVApplication = new MMCode() {
+	public static final ATMServiceType3Code SelectEMVApplication = new ATMServiceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelectEMVApplication";
-			owner_lazy = () -> ATMServiceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMServiceType3Code.mmObject();
+			codeName = ATMServiceTypeCode.SelectEMVApplication.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -234,11 +245,12 @@ public class ATMServiceType3Code extends ATMServiceTypeCode {
 	 * name} = "CustomerProfile"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustomerProfile = new MMCode() {
+	public static final ATMServiceType3Code CustomerProfile = new ATMServiceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerProfile";
-			owner_lazy = () -> ATMServiceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMServiceType3Code.mmObject();
+			codeName = ATMServiceTypeCode.CustomerProfile.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -257,26 +269,65 @@ public class ATMServiceType3Code extends ATMServiceTypeCode {
 	 * name} = "BalanceInquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBalanceInquiry = new MMCode() {
+	public static final ATMServiceType3Code BalanceInquiry = new ATMServiceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceInquiry";
-			owner_lazy = () -> ATMServiceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMServiceType3Code.mmObject();
+			codeName = ATMServiceTypeCode.BalanceInquiry.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ATMServiceType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ATMServiceType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMServiceType3Code";
 				definition = "Describes the type of inquiry selected by the customer or the ATM.";
-				code_lazy = () -> Arrays.asList(ATMServiceType3Code.mmAccountStatements, ATMServiceType3Code.mmCardVerification, ATMServiceType3Code.mmDynamicCurrencyConversion, ATMServiceType3Code.mmExchangeRateDeposit,
-						ATMServiceType3Code.mmExchangeRateWithdrawal, ATMServiceType3Code.mmSelectEMVApplication, ATMServiceType3Code.mmCustomerProfile, ATMServiceType3Code.mmBalanceInquiry);
 				trace_lazy = () -> ATMServiceTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceType3Code.AccountStatements, com.tools20022.repository.codeset.ATMServiceType3Code.CardVerification,
+						com.tools20022.repository.codeset.ATMServiceType3Code.DynamicCurrencyConversion, com.tools20022.repository.codeset.ATMServiceType3Code.ExchangeRateDeposit,
+						com.tools20022.repository.codeset.ATMServiceType3Code.ExchangeRateWithdrawal, com.tools20022.repository.codeset.ATMServiceType3Code.SelectEMVApplication,
+						com.tools20022.repository.codeset.ATMServiceType3Code.CustomerProfile, com.tools20022.repository.codeset.ATMServiceType3Code.BalanceInquiry);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccountStatements.getCodeName().get(), AccountStatements);
+		codesByName.put(CardVerification.getCodeName().get(), CardVerification);
+		codesByName.put(DynamicCurrencyConversion.getCodeName().get(), DynamicCurrencyConversion);
+		codesByName.put(ExchangeRateDeposit.getCodeName().get(), ExchangeRateDeposit);
+		codesByName.put(ExchangeRateWithdrawal.getCodeName().get(), ExchangeRateWithdrawal);
+		codesByName.put(SelectEMVApplication.getCodeName().get(), SelectEMVApplication);
+		codesByName.put(CustomerProfile.getCodeName().get(), CustomerProfile);
+		codesByName.put(BalanceInquiry.getCodeName().get(), BalanceInquiry);
+	}
+
+	public static ATMServiceType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ATMServiceType3Code[] values() {
+		ATMServiceType3Code[] values = new ATMServiceType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ATMServiceType3Code> {
+		@Override
+		public ATMServiceType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ATMServiceType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

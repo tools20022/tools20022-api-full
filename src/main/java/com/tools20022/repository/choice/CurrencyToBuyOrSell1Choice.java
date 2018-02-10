@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,7 @@ import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of counterparty type."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CurrencyToBuyOrSell1Choice", propOrder = {"currencyToBuy", "currencyToSell"})
 public class CurrencyToBuyOrSell1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CcyToBuy", required = true)
 	protected ActiveCurrencyCode currencyToBuy;
 	/**
-	 * Account servicer is instructed to buy the indicated currency after the
-	 * receipt of cash proceeds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -95,6 +97,9 @@ public class CurrencyToBuyOrSell1Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CcyToBuy"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :11A::FXIB</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -110,9 +115,10 @@ public class CurrencyToBuyOrSell1Choice {
 	public static final MMMessageAttribute mmCurrencyToBuy = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmCurrencyToBuy;
-			componentContext_lazy = () -> CurrencyToBuyOrSell1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CurrencyToBuyOrSell1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CcyToBuy";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":11A::FXIB"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToBuy";
 			definition = "Account servicer is instructed to buy the indicated currency after the receipt of cash proceeds.";
@@ -121,11 +127,11 @@ public class CurrencyToBuyOrSell1Choice {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CcyToSell", required = true)
 	protected ActiveCurrencyCode currencyToSell;
 	/**
-	 * Account servicer is instructed to sell the indicated currency in order to
-	 * obtain the necessary currency to fund the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,6 +152,9 @@ public class CurrencyToBuyOrSell1Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CcyToSell"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :11A::FXIS</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -161,9 +170,10 @@ public class CurrencyToBuyOrSell1Choice {
 	public static final MMMessageAttribute mmCurrencyToSell = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmCurrencyToSell;
-			componentContext_lazy = () -> CurrencyToBuyOrSell1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CurrencyToBuyOrSell1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CcyToSell";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":11A::FXIS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSell";
 			definition = "Account servicer is instructed to sell the indicated currency in order to obtain the necessary currency to fund the transaction.";
@@ -176,9 +186,9 @@ public class CurrencyToBuyOrSell1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CurrencyToBuyOrSell1Choice.mmCurrencyToBuy, CurrencyToBuyOrSell1Choice.mmCurrencyToSell);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CurrencyToBuyOrSell1Choice.mmCurrencyToBuy, com.tools20022.repository.choice.CurrencyToBuyOrSell1Choice.mmCurrencyToSell);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyToBuyOrSell1Choice";
 				definition = "Choice of counterparty type.";
@@ -187,21 +197,21 @@ public class CurrencyToBuyOrSell1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CcyToBuy", required = true)
 	public ActiveCurrencyCode getCurrencyToBuy() {
 		return currencyToBuy;
 	}
 
-	public void setCurrencyToBuy(ActiveCurrencyCode currencyToBuy) {
-		this.currencyToBuy = currencyToBuy;
+	public CurrencyToBuyOrSell1Choice setCurrencyToBuy(ActiveCurrencyCode currencyToBuy) {
+		this.currencyToBuy = Objects.requireNonNull(currencyToBuy);
+		return this;
 	}
 
-	@XmlElement(name = "CcyToSell", required = true)
 	public ActiveCurrencyCode getCurrencyToSell() {
 		return currencyToSell;
 	}
 
-	public void setCurrencyToSell(ActiveCurrencyCode currencyToSell) {
-		this.currencyToSell = currencyToSell;
+	public CurrencyToBuyOrSell1Choice setCurrencyToSell(ActiveCurrencyCode currencyToSell) {
+		this.currencyToSell = Objects.requireNonNull(currencyToSell);
+		return this;
 	}
 }

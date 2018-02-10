@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.EntryCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of an entry in a report.
@@ -31,12 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryCode#mmTrial
- * EntryCode.mmTrial}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryCode#mmOfficial
- * EntryCode.mmOfficial}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryCode#mmRequested
- * EntryCode.mmRequested}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryCode#Trial
+ * EntryCode.Trial}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryCode#Official
+ * EntryCode.Official}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryCode#Requested
+ * EntryCode.Requested}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -66,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of an entry in a report."</li>
  * </ul>
  */
-public class EntryCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EntryCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,12 +95,12 @@ public class EntryCode {
 	 * definition} = "Trial pay-in schedule."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTrial = new MMCode() {
+	public static final EntryCode Trial = new EntryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trial";
 			definition = "Trial pay-in schedule.";
-			owner_lazy = () -> EntryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EntryCode.mmObject();
 			codeName = "TRIA";
 		}
 	};
@@ -118,12 +124,12 @@ public class EntryCode {
 	 * definition} = "Official pay-in schedule."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOfficial = new MMCode() {
+	public static final EntryCode Official = new EntryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Official";
 			definition = "Official pay-in schedule.";
-			owner_lazy = () -> EntryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EntryCode.mmObject();
 			codeName = "OFFI";
 		}
 	};
@@ -147,28 +153,59 @@ public class EntryCode {
 	 * definition} = "Pay-in schedule on request."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRequested = new MMCode() {
+	public static final EntryCode Requested = new EntryCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Requested";
 			definition = "Pay-in schedule on request.";
-			owner_lazy = () -> EntryCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EntryCode.mmObject();
 			codeName = "REQU";
 		}
 	};
+	final static private LinkedHashMap<String, EntryCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EntryCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("TRIA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EntryCode";
 				definition = "Specifies the type of an entry in a report.";
-				code_lazy = () -> Arrays.asList(EntryCode.mmTrial, EntryCode.mmOfficial, EntryCode.mmRequested);
 				derivation_lazy = () -> Arrays.asList(Entry2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EntryCode.Trial, com.tools20022.repository.codeset.EntryCode.Official, com.tools20022.repository.codeset.EntryCode.Requested);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Trial.getCodeName().get(), Trial);
+		codesByName.put(Official.getCodeName().get(), Official);
+		codesByName.put(Requested.getCodeName().get(), Requested);
+	}
+
+	public static EntryCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EntryCode[] values() {
+		EntryCode[] values = new EntryCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EntryCode> {
+		@Override
+		public EntryCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EntryCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

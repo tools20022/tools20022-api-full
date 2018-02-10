@@ -32,9 +32,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -112,8 +111,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -137,16 +136,17 @@ import javax.xml.bind.annotation.XmlType;
  * IndividualPerson27}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IndividualPerson28", propOrder = {"namePrefix", "givenName", "middleName", "name", "nameSuffix", "gender", "birthDate", "countryOfBirth", "provinceOfBirth", "cityOfBirth", "profession", "modifiedPostalAddress",
 		"modifiedCitizenship", "employingCompany", "businessFunction", "politicallyExposedPersonType", "deathDate", "civilStatus", "educationLevel", "familyInformation"})
 public class IndividualPerson28 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NmPrfx")
 	protected NamePrefix1Choice namePrefix;
 	/**
-	 * Term used to address the person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,7 +193,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAttribute mmNamePrefix = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmNamePrefix;
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "NmPrfx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,10 +206,11 @@ public class IndividualPerson28 {
 			complexType_lazy = () -> NamePrefix1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "GvnNm")
 	protected Max35Text givenName;
 	/**
-	 * First name of the person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -255,7 +256,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAttribute mmGivenName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmGivenName;
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "GvnNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -268,10 +269,11 @@ public class IndividualPerson28 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MddlNm")
 	protected Max35Text middleName;
 	/**
-	 * Second name of the person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -317,7 +319,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAttribute mmMiddleName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmMiddleName;
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "MddlNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -330,11 +332,11 @@ public class IndividualPerson28 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm", required = true)
 	protected Max350Text name;
 	/**
-	 * Name by which the party is known and which is usually used to identify
-	 * that person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -381,7 +383,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmBirthName;
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -394,11 +396,11 @@ public class IndividualPerson28 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NmSfx")
 	protected Max35Text nameSuffix;
 	/**
-	 * Additional information about the person that follows a person's name, for
-	 * example, qualification such as Doctor of Philosophy (PhD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -446,7 +448,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAttribute mmNameSuffix = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmNameSuffix;
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "NmSfx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -459,10 +461,11 @@ public class IndividualPerson28 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Gndr")
 	protected GenderCode gender;
 	/**
-	 * Gender of the person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -508,7 +511,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAttribute mmGender = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Person.mmGender;
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "Gndr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -521,10 +524,11 @@ public class IndividualPerson28 {
 			simpleType_lazy = () -> GenderCode.mmObject();
 		}
 	};
+	@XmlElement(name = "BirthDt")
 	protected ISODate birthDate;
 	/**
-	 * Date on which the person was born.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -570,7 +574,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAttribute mmBirthDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Person.mmBirthDate;
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "BirthDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -583,10 +587,11 @@ public class IndividualPerson28 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "CtryOfBirth")
 	protected CountryCode countryOfBirth;
 	/**
-	 * Country where the person was born.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -632,7 +637,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAttribute mmCountryOfBirth = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Person.mmPlaceOfBirth;
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfBirth";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -645,10 +650,11 @@ public class IndividualPerson28 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvcOfBirth")
 	protected Max35Text provinceOfBirth;
 	/**
-	 * Province where the person was born.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -694,7 +700,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAttribute mmProvinceOfBirth = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Person.mmPlaceOfBirth;
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "PrvcOfBirth";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -707,10 +713,11 @@ public class IndividualPerson28 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CityOfBirth")
 	protected Max35Text cityOfBirth;
 	/**
-	 * City where the person was born.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -756,7 +763,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAttribute mmCityOfBirth = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Person.mmPlaceOfBirth;
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "CityOfBirth";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -769,10 +776,11 @@ public class IndividualPerson28 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Prfssn")
 	protected Max35Text profession;
 	/**
-	 * Name of the occupation or job of the person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -818,7 +826,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAttribute mmProfession = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Person.mmProfession;
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "Prfssn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -831,10 +839,11 @@ public class IndividualPerson28 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ModfdPstlAdr")
 	protected List<com.tools20022.repository.msg.ModificationScope34> modifiedPostalAddress;
 	/**
-	 * Information related to an address to be inserted, updated or deleted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -875,7 +884,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAssociationEnd mmModifiedPostalAddress = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Location.mmAddress;
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "ModfdPstlAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -888,10 +897,11 @@ public class IndividualPerson28 {
 			type_lazy = () -> com.tools20022.repository.msg.ModificationScope34.mmObject();
 		}
 	};
+	@XmlElement(name = "ModfdCtznsh")
 	protected List<com.tools20022.repository.msg.ModificationScope3> modifiedCitizenship;
 	/**
-	 * Citizenship information to be inserted or deleted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -931,7 +941,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAssociationEnd mmModifiedCitizenship = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Person.mmNationality;
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "ModfdCtznsh";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -944,10 +954,11 @@ public class IndividualPerson28 {
 			type_lazy = () -> com.tools20022.repository.msg.ModificationScope3.mmObject();
 		}
 	};
+	@XmlElement(name = "EmplngCpny")
 	protected Max140Text employingCompany;
 	/**
-	 * Organisation represented by a person, or for which a person works.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -994,7 +1005,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAttribute mmEmployingCompany = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> EmployingPartyRole.mmObject();
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "EmplngCpny";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1007,10 +1018,11 @@ public class IndividualPerson28 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BizFctn")
 	protected Max35Text businessFunction;
 	/**
-	 * Title of the function.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1056,7 +1068,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAttribute mmBusinessFunction = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Person.mmBusinessFunctionTitle;
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "BizFctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1069,14 +1081,11 @@ public class IndividualPerson28 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PltclyXpsdPrsnTp")
 	protected PoliticalExposureType1Choice politicallyExposedPersonType;
 	/**
-	 * Specifies if due diligence checks on the political exposure of the
-	 * investor or account servicer have been carried out and whether these
-	 * checks are national or foreign. (A politically exposed person is someone
-	 * who has been entrusted with a prominent public function, or an individual
-	 * who is closely related to such a person.)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1124,7 +1133,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAssociationEnd mmPoliticallyExposedPersonType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PersonProfile.mmPoliticalExposureType;
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "PltclyXpsdPrsnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1138,10 +1147,11 @@ public class IndividualPerson28 {
 			type_lazy = () -> PoliticalExposureType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DthDt")
 	protected ISODate deathDate;
 	/**
-	 * Date of death.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1187,7 +1197,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAttribute mmDeathDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Person.mmDeathDate;
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "DthDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1200,10 +1210,11 @@ public class IndividualPerson28 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "CvlSts")
 	protected CivilStatus1Choice civilStatus;
 	/**
-	 * Civil status of the individual person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1248,7 +1259,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAssociationEnd mmCivilStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Person.mmCivilStatus;
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "CvlSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1262,10 +1273,11 @@ public class IndividualPerson28 {
 			type_lazy = () -> CivilStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "EdctnLvl")
 	protected Max35Text educationLevel;
 	/**
-	 * Highest level of education reached by the individual person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1306,7 +1318,7 @@ public class IndividualPerson28 {
 	 */
 	public static final MMMessageAttribute mmEducationLevel = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "EdctnLvl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1319,10 +1331,11 @@ public class IndividualPerson28 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FmlyInf")
 	protected PersonalInformation1 familyInformation;
 	/**
-	 * Information related to the person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1366,7 +1379,7 @@ public class IndividualPerson28 {
 	public static final MMMessageAssociationEnd mmFamilyInformation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
-			componentContext_lazy = () -> IndividualPerson28.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson28.mmObject();
 			isDerived = false;
 			xmlTag = "FmlyInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1384,12 +1397,15 @@ public class IndividualPerson28 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IndividualPerson28.mmNamePrefix, IndividualPerson28.mmGivenName, IndividualPerson28.mmMiddleName, IndividualPerson28.mmName, IndividualPerson28.mmNameSuffix,
-						IndividualPerson28.mmGender, IndividualPerson28.mmBirthDate, IndividualPerson28.mmCountryOfBirth, IndividualPerson28.mmProvinceOfBirth, IndividualPerson28.mmCityOfBirth, IndividualPerson28.mmProfession,
-						IndividualPerson28.mmModifiedPostalAddress, IndividualPerson28.mmModifiedCitizenship, IndividualPerson28.mmEmployingCompany, IndividualPerson28.mmBusinessFunction, IndividualPerson28.mmPoliticallyExposedPersonType,
-						IndividualPerson28.mmDeathDate, IndividualPerson28.mmCivilStatus, IndividualPerson28.mmEducationLevel, IndividualPerson28.mmFamilyInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson28.mmNamePrefix, com.tools20022.repository.msg.IndividualPerson28.mmGivenName,
+						com.tools20022.repository.msg.IndividualPerson28.mmMiddleName, com.tools20022.repository.msg.IndividualPerson28.mmName, com.tools20022.repository.msg.IndividualPerson28.mmNameSuffix,
+						com.tools20022.repository.msg.IndividualPerson28.mmGender, com.tools20022.repository.msg.IndividualPerson28.mmBirthDate, com.tools20022.repository.msg.IndividualPerson28.mmCountryOfBirth,
+						com.tools20022.repository.msg.IndividualPerson28.mmProvinceOfBirth, com.tools20022.repository.msg.IndividualPerson28.mmCityOfBirth, com.tools20022.repository.msg.IndividualPerson28.mmProfession,
+						com.tools20022.repository.msg.IndividualPerson28.mmModifiedPostalAddress, com.tools20022.repository.msg.IndividualPerson28.mmModifiedCitizenship, com.tools20022.repository.msg.IndividualPerson28.mmEmployingCompany,
+						com.tools20022.repository.msg.IndividualPerson28.mmBusinessFunction, com.tools20022.repository.msg.IndividualPerson28.mmPoliticallyExposedPersonType, com.tools20022.repository.msg.IndividualPerson28.mmDeathDate,
+						com.tools20022.repository.msg.IndividualPerson28.mmCivilStatus, com.tools20022.repository.msg.IndividualPerson28.mmEducationLevel, com.tools20022.repository.msg.IndividualPerson28.mmFamilyInformation);
 				trace_lazy = () -> Person.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndividualPerson28";
 				definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
@@ -1400,183 +1416,183 @@ public class IndividualPerson28 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NmPrfx")
-	public NamePrefix1Choice getNamePrefix() {
-		return namePrefix;
+	public Optional<NamePrefix1Choice> getNamePrefix() {
+		return namePrefix == null ? Optional.empty() : Optional.of(namePrefix);
 	}
 
-	public void setNamePrefix(NamePrefix1Choice namePrefix) {
+	public IndividualPerson28 setNamePrefix(NamePrefix1Choice namePrefix) {
 		this.namePrefix = namePrefix;
+		return this;
 	}
 
-	@XmlElement(name = "GvnNm")
-	public Max35Text getGivenName() {
-		return givenName;
+	public Optional<Max35Text> getGivenName() {
+		return givenName == null ? Optional.empty() : Optional.of(givenName);
 	}
 
-	public void setGivenName(Max35Text givenName) {
+	public IndividualPerson28 setGivenName(Max35Text givenName) {
 		this.givenName = givenName;
+		return this;
 	}
 
-	@XmlElement(name = "MddlNm")
-	public Max35Text getMiddleName() {
-		return middleName;
+	public Optional<Max35Text> getMiddleName() {
+		return middleName == null ? Optional.empty() : Optional.of(middleName);
 	}
 
-	public void setMiddleName(Max35Text middleName) {
+	public IndividualPerson28 setMiddleName(Max35Text middleName) {
 		this.middleName = middleName;
+		return this;
 	}
 
-	@XmlElement(name = "Nm", required = true)
 	public Max350Text getName() {
 		return name;
 	}
 
-	public void setName(Max350Text name) {
-		this.name = name;
+	public IndividualPerson28 setName(Max350Text name) {
+		this.name = Objects.requireNonNull(name);
+		return this;
 	}
 
-	@XmlElement(name = "NmSfx")
-	public Max35Text getNameSuffix() {
-		return nameSuffix;
+	public Optional<Max35Text> getNameSuffix() {
+		return nameSuffix == null ? Optional.empty() : Optional.of(nameSuffix);
 	}
 
-	public void setNameSuffix(Max35Text nameSuffix) {
+	public IndividualPerson28 setNameSuffix(Max35Text nameSuffix) {
 		this.nameSuffix = nameSuffix;
+		return this;
 	}
 
-	@XmlElement(name = "Gndr")
-	public GenderCode getGender() {
-		return gender;
+	public Optional<GenderCode> getGender() {
+		return gender == null ? Optional.empty() : Optional.of(gender);
 	}
 
-	public void setGender(GenderCode gender) {
+	public IndividualPerson28 setGender(GenderCode gender) {
 		this.gender = gender;
+		return this;
 	}
 
-	@XmlElement(name = "BirthDt")
-	public ISODate getBirthDate() {
-		return birthDate;
+	public Optional<ISODate> getBirthDate() {
+		return birthDate == null ? Optional.empty() : Optional.of(birthDate);
 	}
 
-	public void setBirthDate(ISODate birthDate) {
+	public IndividualPerson28 setBirthDate(ISODate birthDate) {
 		this.birthDate = birthDate;
+		return this;
 	}
 
-	@XmlElement(name = "CtryOfBirth")
-	public CountryCode getCountryOfBirth() {
-		return countryOfBirth;
+	public Optional<CountryCode> getCountryOfBirth() {
+		return countryOfBirth == null ? Optional.empty() : Optional.of(countryOfBirth);
 	}
 
-	public void setCountryOfBirth(CountryCode countryOfBirth) {
+	public IndividualPerson28 setCountryOfBirth(CountryCode countryOfBirth) {
 		this.countryOfBirth = countryOfBirth;
+		return this;
 	}
 
-	@XmlElement(name = "PrvcOfBirth")
-	public Max35Text getProvinceOfBirth() {
-		return provinceOfBirth;
+	public Optional<Max35Text> getProvinceOfBirth() {
+		return provinceOfBirth == null ? Optional.empty() : Optional.of(provinceOfBirth);
 	}
 
-	public void setProvinceOfBirth(Max35Text provinceOfBirth) {
+	public IndividualPerson28 setProvinceOfBirth(Max35Text provinceOfBirth) {
 		this.provinceOfBirth = provinceOfBirth;
+		return this;
 	}
 
-	@XmlElement(name = "CityOfBirth")
-	public Max35Text getCityOfBirth() {
-		return cityOfBirth;
+	public Optional<Max35Text> getCityOfBirth() {
+		return cityOfBirth == null ? Optional.empty() : Optional.of(cityOfBirth);
 	}
 
-	public void setCityOfBirth(Max35Text cityOfBirth) {
+	public IndividualPerson28 setCityOfBirth(Max35Text cityOfBirth) {
 		this.cityOfBirth = cityOfBirth;
+		return this;
 	}
 
-	@XmlElement(name = "Prfssn")
-	public Max35Text getProfession() {
-		return profession;
+	public Optional<Max35Text> getProfession() {
+		return profession == null ? Optional.empty() : Optional.of(profession);
 	}
 
-	public void setProfession(Max35Text profession) {
+	public IndividualPerson28 setProfession(Max35Text profession) {
 		this.profession = profession;
+		return this;
 	}
 
-	@XmlElement(name = "ModfdPstlAdr")
 	public List<ModificationScope34> getModifiedPostalAddress() {
-		return modifiedPostalAddress;
+		return modifiedPostalAddress == null ? modifiedPostalAddress = new ArrayList<>() : modifiedPostalAddress;
 	}
 
-	public void setModifiedPostalAddress(List<com.tools20022.repository.msg.ModificationScope34> modifiedPostalAddress) {
-		this.modifiedPostalAddress = modifiedPostalAddress;
+	public IndividualPerson28 setModifiedPostalAddress(List<com.tools20022.repository.msg.ModificationScope34> modifiedPostalAddress) {
+		this.modifiedPostalAddress = Objects.requireNonNull(modifiedPostalAddress);
+		return this;
 	}
 
-	@XmlElement(name = "ModfdCtznsh")
 	public List<ModificationScope3> getModifiedCitizenship() {
-		return modifiedCitizenship;
+		return modifiedCitizenship == null ? modifiedCitizenship = new ArrayList<>() : modifiedCitizenship;
 	}
 
-	public void setModifiedCitizenship(List<com.tools20022.repository.msg.ModificationScope3> modifiedCitizenship) {
-		this.modifiedCitizenship = modifiedCitizenship;
+	public IndividualPerson28 setModifiedCitizenship(List<com.tools20022.repository.msg.ModificationScope3> modifiedCitizenship) {
+		this.modifiedCitizenship = Objects.requireNonNull(modifiedCitizenship);
+		return this;
 	}
 
-	@XmlElement(name = "EmplngCpny")
-	public Max140Text getEmployingCompany() {
-		return employingCompany;
+	public Optional<Max140Text> getEmployingCompany() {
+		return employingCompany == null ? Optional.empty() : Optional.of(employingCompany);
 	}
 
-	public void setEmployingCompany(Max140Text employingCompany) {
+	public IndividualPerson28 setEmployingCompany(Max140Text employingCompany) {
 		this.employingCompany = employingCompany;
+		return this;
 	}
 
-	@XmlElement(name = "BizFctn")
-	public Max35Text getBusinessFunction() {
-		return businessFunction;
+	public Optional<Max35Text> getBusinessFunction() {
+		return businessFunction == null ? Optional.empty() : Optional.of(businessFunction);
 	}
 
-	public void setBusinessFunction(Max35Text businessFunction) {
+	public IndividualPerson28 setBusinessFunction(Max35Text businessFunction) {
 		this.businessFunction = businessFunction;
+		return this;
 	}
 
-	@XmlElement(name = "PltclyXpsdPrsnTp")
-	public PoliticalExposureType1Choice getPoliticallyExposedPersonType() {
-		return politicallyExposedPersonType;
+	public Optional<PoliticalExposureType1Choice> getPoliticallyExposedPersonType() {
+		return politicallyExposedPersonType == null ? Optional.empty() : Optional.of(politicallyExposedPersonType);
 	}
 
-	public void setPoliticallyExposedPersonType(PoliticalExposureType1Choice politicallyExposedPersonType) {
+	public IndividualPerson28 setPoliticallyExposedPersonType(PoliticalExposureType1Choice politicallyExposedPersonType) {
 		this.politicallyExposedPersonType = politicallyExposedPersonType;
+		return this;
 	}
 
-	@XmlElement(name = "DthDt")
-	public ISODate getDeathDate() {
-		return deathDate;
+	public Optional<ISODate> getDeathDate() {
+		return deathDate == null ? Optional.empty() : Optional.of(deathDate);
 	}
 
-	public void setDeathDate(ISODate deathDate) {
+	public IndividualPerson28 setDeathDate(ISODate deathDate) {
 		this.deathDate = deathDate;
+		return this;
 	}
 
-	@XmlElement(name = "CvlSts")
-	public CivilStatus1Choice getCivilStatus() {
-		return civilStatus;
+	public Optional<CivilStatus1Choice> getCivilStatus() {
+		return civilStatus == null ? Optional.empty() : Optional.of(civilStatus);
 	}
 
-	public void setCivilStatus(CivilStatus1Choice civilStatus) {
+	public IndividualPerson28 setCivilStatus(CivilStatus1Choice civilStatus) {
 		this.civilStatus = civilStatus;
+		return this;
 	}
 
-	@XmlElement(name = "EdctnLvl")
-	public Max35Text getEducationLevel() {
-		return educationLevel;
+	public Optional<Max35Text> getEducationLevel() {
+		return educationLevel == null ? Optional.empty() : Optional.of(educationLevel);
 	}
 
-	public void setEducationLevel(Max35Text educationLevel) {
+	public IndividualPerson28 setEducationLevel(Max35Text educationLevel) {
 		this.educationLevel = educationLevel;
+		return this;
 	}
 
-	@XmlElement(name = "FmlyInf")
-	public PersonalInformation1 getFamilyInformation() {
-		return familyInformation;
+	public Optional<PersonalInformation1> getFamilyInformation() {
+		return familyInformation == null ? Optional.empty() : Optional.of(familyInformation);
 	}
 
-	public void setFamilyInformation(com.tools20022.repository.msg.PersonalInformation1 familyInformation) {
+	public IndividualPerson28 setFamilyInformation(com.tools20022.repository.msg.PersonalInformation1 familyInformation) {
 		this.familyInformation = familyInformation;
+		return this;
 	}
 }
